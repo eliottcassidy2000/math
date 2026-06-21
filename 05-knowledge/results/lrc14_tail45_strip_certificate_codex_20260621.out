@@ -1,0 +1,90 @@
+HYP-2731 tail45 strip certificate scout
+Exact Fraction arithmetic; generated frontier imported from HYP-2722/S71.
+
+  loading coordinate frontier for size=3...
+    size=3 context=[4]: added=56 cumulative=56
+    size=3 context=[3+1]: added=56 cumulative=112
+    size=3 context=[2+2]: added=56 cumulative=168
+    size=3 context=[2+1+1]: added=56 cumulative=224
+    size=3 context=[1+1+1+1]: added=56 cumulative=280
+  loading coordinate frontier for size=4...
+    size=4 context=[3]: added=7 cumulative=287
+    size=4 context=[2+1]: added=7 cumulative=294
+    size=4 context=[1+1+1]: added=7 cumulative=301
+  loading coordinate frontier for size=5...
+    size=5 context=[2]: added=8 cumulative=309
+    size=5 context=[1+1]: added=8 cumulative=317
+  loading coordinate frontier for size=6...
+    size=6 context=[1]: added=1 cumulative=318
+
+GLOBAL STRIP
+  claimed floor=182/2005 (0.090773067)
+  claimed ceiling=10910/21539 (0.506523051)
+  rows=318
+  below_floor=0 above_ceiling=0
+  floor witness:
+    size=3 shape=(0, 1, 3) context=[3+1] q0=2005/172872 (0.011598177) tail45=182/2005 (0.090773067) lower_slack=0 (0.000000000) upper_slack=17954452/43185695 (0.415749984) U4=2187/2005 (1.090773067) B2=10164/2005 (5.069326683)
+  ceiling witness:
+    size=3 shape=(0, 1, 13) context=[4] q0=3077/113568 (0.027093900) tail45=10910/21539 (0.506523051) lower_slack=17954452/43185695 (0.415749984) upper_slack=0 (0.000000000) U4=32449/21539 (1.506523051) B2=388489/64617 (6.012179457)
+
+BY SIZE
+  size=3           count=280 min_tail=182/2005 (0.090773067) at (0, 1, 3)/[3+1] max_tail=10910/21539 (0.506523051) at (0, 1, 13)/[4]
+  size=4           count= 21 min_tail=21/188 (0.111702128) at (0, 1, 3, 4)/[1+1+1] max_tail=143/444 (0.322072072) at (0, 1, 2, 4)/[1+1+1]
+  size=5           count= 16 min_tail=8269/61661 (0.134104215) at (0, 1, 2, 3, 5)/[2] max_tail=15749/37082 (0.424707405) at (0, 1, 2, 3, 6)/[2]
+  size=6           count=  1 min_tail=62/207 (0.299516908) at (0, 1, 2, 3, 4, 6)/[1] max_tail=62/207 (0.299516908) at (0, 1, 2, 3, 4, 6)/[1]
+
+BY CONTEXT
+  [1+1+1+1]        count= 56 min_tail=19/168 (0.113095238) at (0, 1, 3)/[1+1+1+1] max_tail=19/168 (0.113095238) at (0, 1, 3)/[1+1+1+1]
+  [1+1+1]          count=  7 min_tail=21/188 (0.111702128) at (0, 1, 3, 4)/[1+1+1] max_tail=143/444 (0.322072072) at (0, 1, 2, 4)/[1+1+1]
+  [1+1]            count=  8 min_tail=55/398 (0.138190955) at (0, 1, 2, 3, 5)/[1+1] max_tail=7/36 (0.194444444) at (0, 1, 2, 4, 6)/[1+1]
+  [1]              count=  1 min_tail=62/207 (0.299516908) at (0, 1, 2, 3, 4, 6)/[1] max_tail=62/207 (0.299516908) at (0, 1, 2, 3, 4, 6)/[1]
+  [2+1+1]          count= 56 min_tail=697/6156 (0.113222872) at (0, 1, 3)/[2+1+1] max_tail=1243321/4772619 (0.260511262) at (0, 5, 13)/[2+1+1]
+  [2+1]            count=  7 min_tail=939/6739 (0.139338181) at (0, 1, 3, 4)/[2+1] max_tail=6109/24392 (0.250450968) at (0, 1, 2, 5)/[2+1]
+  [2+2]            count= 56 min_tail=75/604 (0.124172185) at (0, 1, 3)/[2+2] max_tail=147216625/330373574 (0.445606539) at (0, 1, 13)/[2+2]
+  [2]              count=  8 min_tail=8269/61661 (0.134104215) at (0, 1, 2, 3, 5)/[2] max_tail=15749/37082 (0.424707405) at (0, 1, 2, 3, 6)/[2]
+  [3+1]            count= 56 min_tail=182/2005 (0.090773067) at (0, 1, 3)/[3+1] max_tail=124922/374667 (0.333421412) at (0, 1, 13)/[3+1]
+  [3]              count=  7 min_tail=211/1733 (0.121754183) at (0, 1, 3, 4)/[3] max_tail=4161/20662 (0.201384184) at (0, 1, 2, 5)/[3]
+  [4]              count= 56 min_tail=53/307 (0.172638436) at (0, 1, 3)/[4] max_tail=10910/21539 (0.506523051) at (0, 1, 13)/[4]
+
+BY SIGN PROFILE (W1,W2,B2,tail)
+  ('+', '+', '+', '+') count= 85 min_tail=386/2479 (0.155707947) at (0, 1, 2, 4)/[3] max_tail=10910/21539 (0.506523051) at (0, 1, 13)/[4]
+  ('-', '+', '+', '+') count=163 min_tail=182/2005 (0.090773067) at (0, 1, 3)/[3+1] max_tail=147216625/330373574 (0.445606539) at (0, 1, 13)/[2+2]
+  ('-', '-', '+', '+') count=  9 min_tail=939/6739 (0.139338181) at (0, 1, 3, 4)/[2+1] max_tail=5223/14704 (0.355209467) at (0, 1, 2, 5, 6)/[2]
+  ('-', '-', '-', '+') count= 59 min_tail=21/188 (0.111702128) at (0, 1, 3, 4)/[1+1+1] max_tail=71/444 (0.159909910) at (0, 2, 3, 5)/[1+1+1]
+  ('0', '+', '+', '+') count=  2 min_tail=143/444 (0.322072072) at (0, 1, 2, 4)/[1+1+1] max_tail=143/444 (0.322072072) at (0, 1, 2, 4)/[1+1+1]
+
+TOURNAMENT ANALYSIS
+  vertices: context partitions
+  observable: tighter generated strip = larger floor and smaller ceiling;
+  tie Hamiltonian path: context name.
+  vertices=11
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+  directed_3cycles=0
+  pressure path:
+    [1]       score=10 floor=62/207 (0.299516908) ceil=62/207 (0.299516908) width=0 (0.000000000)
+    [4]       score=9 floor=53/307 (0.172638436) ceil=10910/21539 (0.506523051) width=2207803/6612473 (0.333884615)
+    [2+1]     score=8 floor=939/6739 (0.139338181) ceil=6109/24392 (0.250450968) width=18264463/164377688 (0.111112787)
+    [1+1]     score=7 floor=55/398 (0.138190955) ceil=7/36 (0.194444444) width=403/7164 (0.056253490)
+    [2]       score=6 floor=8269/61661 (0.134104215) ceil=15749/37082 (0.424707405) width=664468031/2286513202 (0.290603190)
+    [2+2]     score=5 floor=75/604 (0.124172185) ceil=147216625/330373574 (0.445606539) width=32070411725/99772819348 (0.321434354)
+    [3]       score=4 floor=211/1733 (0.121754183) ceil=4161/20662 (0.201384184) width=2851331/35807246 (0.079630000)
+    [2+1+1]   score=3 floor=697/6156 (0.113222872) ceil=1243321/4772619 (0.260511262) width=480818737/3264471396 (0.147288390)
+    [1+1+1+1] score=2 floor=19/168 (0.113095238) ceil=19/168 (0.113095238) width=0 (0.000000000)
+    [1+1+1]   score=1 floor=21/188 (0.111702128) ceil=143/444 (0.322072072) width=2195/10434 (0.210369944)
+    [3+1]     score=0 floor=182/2005 (0.090773067) ceil=124922/374667 (0.333421412) width=182279216/751207335 (0.242648344)
+
+CHEAP DIRECTION SIDE
+  normalized tail45 values from HYP-2721:
+  r=1: tail45=1 (1.000000000) above_ceiling margin=10629/21539 (0.493476949)
+  r=2: tail45=-1 (-1.000000000) below_floor margin=2187/2005 (1.090773067)
+  r=3: tail45=3/2 (1.500000000) above_ceiling margin=42797/43078 (0.993476949)
+  r=4: tail45=-1 (-1.000000000) below_floor margin=2187/2005 (1.090773067)
+  r=5: tail45=-1 (-1.000000000) below_floor margin=2187/2005 (1.090773067)
+
+SYNTHESIS
+  The tail45 strip is a finite frontier theorem with two named witnesses:
+  floor at size=3 shape=(0,1,3) context=[3+1], and ceiling at
+  size=3 shape=(0,1,13) context=[4].
+  The hand-proof target is now context-local: prove these two rows are the
+  tail45 extrema of the generated sparse-tail automaton, then use the Lean
+  cheap-side theorem to exclude the abstract atom-cone directions.

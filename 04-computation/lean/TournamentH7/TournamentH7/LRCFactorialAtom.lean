@@ -117,6 +117,31 @@ def cheapTailTarget (r : Fin 5) : Int :=
   | 3 => -2
   | _ => -1
 
+/-- Lower numerator of the generated tail45 strip from HYP-2731. -/
+def tailFloorNum : Int := 182
+
+/-- Lower denominator of the generated tail45 strip from HYP-2731. -/
+def tailFloorDen : Int := 2005
+
+/-- Upper numerator of the generated tail45 strip from HYP-2731. -/
+def tailCeilNum : Int := 10910
+
+/-- Upper denominator of the generated tail45 strip from HYP-2731. -/
+def tailCeilDen : Int := 21539
+
+/-- Cross-multiplied statement that a scaled packet is below the tail strip. -/
+def belowTailFloor (q : Atom) (scale : Int) : Prop :=
+  tail45 q * tailFloorDen < tailFloorNum * scale
+
+/-- Cross-multiplied statement that a scaled packet is above the tail strip. -/
+def aboveTailCeil (q : Atom) (scale : Int) : Prop :=
+  tailCeilNum * scale < tail45 q * tailCeilDen
+
+/-- Boolean form of the cheap-side tail-strip exclusion check. -/
+def outsideTailStripBool (q : Atom) (scale : Int) : Bool :=
+  (tail45 q * tailFloorDen < tailFloorNum * scale) ||
+    (tailCeilNum * scale < tail45 q * tailCeilDen)
+
 /-- The finite-difference packets are exactly dual to the factorial moments. -/
 theorem basis_moment_delta :
     ∀ i j : Fin atomCount, moment (basis j) i = if i = j then 1 else 0 := by
@@ -208,7 +233,7 @@ the dual covector: `L_y(q) = 10*q0 + q3 + 10*q6`. -/
 theorem LyK8_readout (q : Atom) :
     LyK8 q = 10 * q ⟨0, by decide⟩ + q ⟨3, by decide⟩ + 10 * q ⟨6, by decide⟩ := by
   simp only [LyK8, moment, sum7, atomCount, yK8, chooseInt, choose,
-    Nat.reduceLT, Nat.reduceLeDiff, reduceDIte, reduceIte, Nat.reduceAdd, Nat.reduceMul]
+    Nat.reduceLT, Nat.reduceLeDiff, reduceDIte, reduceIte, Nat.reduceAdd]
   omega
 
 /-- **The per-shape Delsarte / moment-LP bound (THM-534, HYP-2726).**  For any
@@ -221,6 +246,14 @@ theorem delsarte_bound_k8 (q : Atom) (hq : ∀ t : Fin atomCount, 0 <= q t) :
   have h6 : 0 <= q ⟨6, by decide⟩ := hq _
   unfold q0
   omega
+
+/-- Every scaled cheap direction is outside the generated tail45 strip.
+
+This is a Boolean audit theorem so the module remains self-contained without
+extra order/typeclass imports. -/
+theorem cheapScaled_outside_tailStrip_bool :
+    ∀ r : Fin 5, outsideTailStripBool (cheapScaled r) (cheapScale r) = true := by
+  native_decide
 
 /-! ### Axiom audit
 
@@ -239,6 +272,7 @@ environment, the axiom output should be empty or contain only Lean foundations.
 #print axioms gK8_dominates
 #print axioms LyK8_readout
 #print axioms delsarte_bound_k8
+#print axioms cheapScaled_outside_tailStrip_bool
 
 end FactorialAtom
 end LonelyRunner

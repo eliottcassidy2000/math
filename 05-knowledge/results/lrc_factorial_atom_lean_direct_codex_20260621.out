@@ -5,3 +5,8 @@
 'LonelyRunner.FactorialAtom.low12_basis' depends on axioms: [low12_basis._native.native_decide.ax_1_1]
 'LonelyRunner.FactorialAtom.cheapScaled_q0' depends on axioms: [cheapScaled_q0._native.native_decide.ax_1_1]
 'LonelyRunner.FactorialAtom.cheapScaled_tail45' depends on axioms: [cheapScaled_tail45._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.gK8_values' depends on axioms: [gK8_values._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.gK8_dominates' depends on axioms: [gK8_dominates._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.LyK8_readout' depends on axioms: [propext, Quot.sound]
+'LonelyRunner.FactorialAtom.delsarte_bound_k8' depends on axioms: [propext, Quot.sound]
+'LonelyRunner.FactorialAtom.cheapScaled_outside_tailStrip_bool' depends on axioms: [cheapScaled_outside_tailStrip_bool._native.native_decide.ax_1_1]

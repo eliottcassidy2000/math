@@ -55,6 +55,19 @@ generated miss-zeta words.  Extended the Lean module with integral
 `cheapScaled_tail45`; the remaining formal target is the generated tail-strip
 lemma.
 
+Next-session continuation added HYP-2731:
+`04-computation/lrc14_tail45_strip_certificate_codex_20260621.py` turns the
+strip into a finite frontier certificate.  The floor witness is
+`size=3, shape=(0,1,3), context=[3+1]`, and the ceiling witness is
+`size=3, shape=(0,1,13), context=[4]`; all sizes 4, 5, and 6 are strictly
+internal.  Lean now also proves the Boolean audit
+`cheapScaled_outside_tailStrip_bool`, so once the generated-side strip is
+proved, the cheap abstract atom directions are formally excluded by
+cross-multiplied integer inequalities.
+
+This changes the next proof obligation from "find a separator" to "prove two
+context-local endpoint inequalities in the 64-mask miss-zeta automaton."
+
 ## mac-mini-2026-06-21-S11 -- LRC(14): the cover bound IS a DELSARTE LINEAR PROGRAM (unifies MDS-relation-code + even-Krawtchouk + moment-LP) -- HYP-2726
 User: long session toward the LRC proof; pull/push often, keep workflows fresh; inspiration = MDS codes/arcs/projective geometry + 56-coincidence. Convergent with kps HYP-2723 (MDS/arc lens). Tight 4-thread workflow + main-loop derivation; pulled/pushed ~10x.
 **MAIN RESULT (HYP-2726, VERIFIED exact):** THM-534's moment-LP IS a DELSARTE LP. Its dual g(t) (g>=1[t=0] => measS7(E)<=L_y(E) per E) expands in the binary KRAWTCHOUK basis K_j(t;6) with ALL-NONNEGATIVE coeffs = Delsarte dual feasibility. k=8: c=[1/16,0,1/40,0,3/80,0,0] (EVEN-only -> why HYP-2724 even band clean at k=8); k=9,10: [1/12,1/72,1/36,1/48,0,0,0]; k=11,12,13: [1/8,1/24,1/24,0,0,0,0]. Delsarte-positive at every binding k. UNIFIES: relation code Lambda(E) (kps HYP-2723) = the Delsarte SCHEME (consec=anti-MDS=LP-tight; Sidon/arcs=MDS=slack); depth law pi_E (HYP-2724) = distance distribution; moment-LP (THM-534) = the LP.

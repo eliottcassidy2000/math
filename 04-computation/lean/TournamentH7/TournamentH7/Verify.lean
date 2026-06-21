@@ -96,6 +96,14 @@ theorem lrc_factorial_cheapScaled_tail45_audit :
   LonelyRunner.FactorialAtom.cheapScaled_tail45
 #print axioms lrc_factorial_cheapScaled_tail45_audit
 
+theorem lrc_factorial_cheapScaled_outside_tailStrip_bool_audit :
+    ∀ r : Fin 5,
+      LonelyRunner.FactorialAtom.outsideTailStripBool
+          (LonelyRunner.FactorialAtom.cheapScaled r)
+          (LonelyRunner.FactorialAtom.cheapScale r) = true :=
+  LonelyRunner.FactorialAtom.cheapScaled_outside_tailStrip_bool
+#print axioms lrc_factorial_cheapScaled_outside_tailStrip_bool_audit
+
 /-! ### LRC14 death-chain/live-depth quotient -/
 
 theorem lrc_cover_oneFar_live_iff_audit (t : Nat) (ht : t <= 6) :
