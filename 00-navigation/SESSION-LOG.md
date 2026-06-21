@@ -39,6 +39,22 @@ Proof-order refinement: formal `B_j` boundary first, generated-word exclusion
 second, relation-code/Delsarte classification third, factorial odd-`L1` tail
 envelope fourth, then evaluate `q0`.
 
+Follow-up before the next checkpoint:
+`04-computation/lrc14_generated_separator_certificates_codex_20260621.py`
+found the sharper exact separator.  The normalized generated frontier sits in
+the `tail45=q5+5q6` strip
+
+```text
+182/2005 <= tail45 <= 10910/21539,
+```
+
+whereas the cheap abstract directions have tail45 values
+`1,-1,3/2,-1,-1`.  Thus tail45 alone separates every cheap direction from
+generated miss-zeta words.  Extended the Lean module with integral
+`cheapScaled` directions and proved `cheapScaled_q0` and
+`cheapScaled_tail45`; the remaining formal target is the generated tail-strip
+lemma.
+
 ## mac-mini-2026-06-21-S11 -- LRC(14): the cover bound IS a DELSARTE LINEAR PROGRAM (unifies MDS-relation-code + even-Krawtchouk + moment-LP) -- HYP-2726
 User: long session toward the LRC proof; pull/push often, keep workflows fresh; inspiration = MDS codes/arcs/projective geometry + 56-coincidence. Convergent with kps HYP-2723 (MDS/arc lens). Tight 4-thread workflow + main-loop derivation; pulled/pushed ~10x.
 **MAIN RESULT (HYP-2726, VERIFIED exact):** THM-534's moment-LP IS a DELSARTE LP. Its dual g(t) (g>=1[t=0] => measS7(E)<=L_y(E) per E) expands in the binary KRAWTCHOUK basis K_j(t;6) with ALL-NONNEGATIVE coeffs = Delsarte dual feasibility. k=8: c=[1/16,0,1/40,0,3/80,0,0] (EVEN-only -> why HYP-2724 even band clean at k=8); k=9,10: [1/12,1/72,1/36,1/48,0,0,0]; k=11,12,13: [1/8,1/24,1/24,0,0,0,0]. Delsarte-positive at every binding k. UNIFIES: relation code Lambda(E) (kps HYP-2723) = the Delsarte SCHEME (consec=anti-MDS=LP-tight; Sidon/arcs=MDS=slack); depth law pi_E (HYP-2724) = distance distribution; moment-LP (THM-534) = the LP.

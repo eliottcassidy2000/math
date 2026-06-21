@@ -94,6 +94,47 @@ r=3 distance 528924/61661
 This is evidence that generated-word compatibility is a real structural
 constraint, not a numerical accident.
 
+## Follow-Up: Tail45 Strip Certificate
+
+Follow-up script:
+`04-computation/lrc14_generated_separator_certificates_codex_20260621.py`.
+
+Stored output:
+`05-knowledge/results/lrc14_generated_separator_certificates_codex_20260621.out`.
+
+The normalized generated frontier lives in an exact `tail45=q5+5q6` strip:
+
+```text
+min generated tail45 = 182/2005
+max generated tail45 = 10910/21539
+```
+
+The HYP-2721 cheap abstract directions have normalized tail45 values
+
+```text
+r=1:  1
+r=2: -1
+r=3:  3/2
+r=4: -1
+r=5: -1
+```
+
+Therefore a single covector separates all five cheap directions from the
+generated frontier.  Directions `r=2,4,5` are below the generated tail floor;
+directions `r=1,3` are above the generated tail ceiling.  This is sharper than
+the earlier witness hierarchy: generated-word exclusion can be attacked as a
+bounded `tail45` strip lemma before invoking relation-code/Delsarte packet
+classification.
+
+The same run confirms why signed low moments are not the certificate:
+
+```text
+W1, W2, and B2 fail on every cheap direction as one-sided named separators.
+```
+
+The sign-profile ledger has only five generated profiles for
+`(W1,W2,B2,tail45)`, and all have positive tail45.
+
 ## Lean Formalization
 
 Lean source:
@@ -109,6 +150,8 @@ originCoeff_delta
 basis_q0_sign
 U4_basis
 low12_basis
+cheapScaled_q0
+cheapScaled_tail45
 ```
 
 Direct `lean` checking succeeds in this shell.  `lake build` is still blocked
@@ -129,6 +172,14 @@ classification -> factorial odd-L1 tail envelope -> q0 evaluation.
 
 The cheap atom cone contains directions invisible to `W1+W2` and `U4`; the
 generated frontier does not.  This is the current sharp target.
+
+Follow-up target after the separator scout:
+
+```text
+prove every generated miss-zeta frontier move satisfies
+    0 < 182/2005 <= tail45 <= 10910/21539 < 1,
+then classify the leftover row-level packets by Delsarte/relation-code data.
+```
 
 ## Tournament Analysis
 

@@ -1,0 +1,120 @@
+HYP-2728 generated separator certificate scout
+Exact Fraction arithmetic; generated frontier imported from HYP-2722/S71.
+
+  loading coordinate frontier for size=3...
+    size=3 context=[4]: added=56 cumulative=56
+    size=3 context=[3+1]: added=56 cumulative=112
+    size=3 context=[2+2]: added=56 cumulative=168
+    size=3 context=[2+1+1]: added=56 cumulative=224
+    size=3 context=[1+1+1+1]: added=56 cumulative=280
+  loading coordinate frontier for size=4...
+    size=4 context=[3]: added=7 cumulative=287
+    size=4 context=[2+1]: added=7 cumulative=294
+    size=4 context=[1+1+1]: added=7 cumulative=301
+  loading coordinate frontier for size=5...
+    size=5 context=[2]: added=8 cumulative=309
+    size=5 context=[1+1]: added=8 cumulative=317
+  loading coordinate frontier for size=6...
+    size=6 context=[1]: added=1 cumulative=318
+
+generated_rows=318
+SIGN PROFILE LEDGER
+  profiles use signs of W1, W2, B2, tail45 on normalized generated rows.
+  profile_count=5
+  W1,W2,B2,tail=('-', '+', '+', '+'): count=163 min_absW12=144154/63487 (2.270606581) min_U4=2187/2005 (1.090773067) min_tail45=182/2005 (0.090773067) min_B2=144154/63487 (2.270606581)
+  W1,W2,B2,tail=('+', '+', '+', '+'): count= 85 min_absW12=10274/2479 (4.144413070) min_U4=2865/2479 (1.155707947) min_tail45=386/2479 (0.155707947) min_B2=8786/2479 (3.544171037)
+  W1,W2,B2,tail=('-', '-', '-', '+'): count= 59 min_absW12=26687/1368 (19.508040936) min_U4=209/188 (1.111702128) min_tail45=21/188 (0.111702128) min_B2=-1135/282 (-4.024822695)
+  W1,W2,B2,tail=('-', '-', '+', '+'): count=  9 min_absW12=21349/6739 (3.167977445) min_U4=7678/6739 (1.139338181) min_tail45=939/6739 (0.139338181) min_B2=907/684 (1.326023392)
+  W1,W2,B2,tail=('0', '+', '+', '+'): count=  2 min_absW12=625/74 (8.445945946) min_U4=587/444 (1.322072072) min_tail45=143/444 (0.322072072) min_B2=625/74 (8.445945946)
+
+NAMED FUNCTIONAL CHECK
+  Values are min over generated rows minus value on cheap direction.
+  cheap r=1:
+    tail45        separates_reversed margin=10629/21539 (0.493476949)
+    W1            fails              margin=-40/23 (-1.739130435)
+    W2            fails              margin=-1129/207 (-5.454106280)
+    B2=-W1+W2     fails              margin=-403/74 (-5.445945946)
+    q6            separates_reversed margin=59257/323085 (0.183409939)
+    -q1           separates_reversed margin=7534/12395 (0.607825736)
+  cheap r=2:
+    tail45        separates          margin=2187/2005 (1.090773067)
+    W1            fails              margin=-40/23 (-1.739130435)
+    W2            fails              margin=-1750/207 (-8.454106280)
+    B2=-W1+W2     fails              margin=-1135/282 (-4.024822695)
+    q6            separates          margin=403/2005 (0.200997506)
+    -q1           separates_reversed margin=14971/12395 (1.207825736)
+  cheap r=3:
+    tail45        separates_reversed margin=42797/43078 (0.993476949)
+    W1            fails              margin=-40/23 (-1.739130435)
+    W2            fails              margin=-1750/207 (-8.454106280)
+    B2=-W1+W2     fails              margin=-1135/282 (-4.024822695)
+    q6            separates_reversed margin=62473/129234 (0.483409939)
+    -q1           separates_reversed margin=5969/2479 (2.407825736)
+  cheap r=4:
+    tail45        separates          margin=2187/2005 (1.090773067)
+    W1            fails              margin=-40/23 (-1.739130435)
+    W2            fails              margin=-1750/207 (-8.454106280)
+    B2=-W1+W2     fails              margin=-1135/282 (-4.024822695)
+    q6            separates          margin=2009/4010 (0.500997506)
+    -q1           separates_reversed margin=19375/4958 (3.907825736)
+  cheap r=5:
+    tail45        separates          margin=2187/2005 (1.090773067)
+    W1            fails              margin=-40/23 (-1.739130435)
+    W2            fails              margin=-1750/207 (-8.454106280)
+    B2=-W1+W2     fails              margin=-1135/282 (-4.024822695)
+    q6            separates_reversed margin=63545/64617 (0.983409939)
+    -q1           separates_reversed margin=13406/2479 (5.407825736)
+
+SMALL INTEGER SEPARATOR SEARCH
+  Primitive covectors on q1..q6 with coefficients in [-1,1].
+  covectors=364
+  cheap r=1: separators=201
+    c=(0, 1, -1, 0, 0, 0, 0) l1= 2 margin=507156/308305 (1.644981431) score=253578/308305 (0.822490715) spread=5993/740 (8.098648649)
+    c=(0, 0, -1, 0, 0, 0, 0) l1= 1 margin=46786/61661 (0.758761616) score=46786/61661 (0.758761616) spread=687/148 (4.641891892)
+    c=(0, 1, -1, 0, 1, 0, 0) l1= 3 margin=658616/308305 (2.136248196) score=658616/924915 (0.712082732) spread=7653/740 (10.341891892)
+    c=(0, 1, -1, 0, 0, 0, -1) l1= 3 margin=567422/308305 (1.840456691) score=567422/924915 (0.613485564) spread=9209/1110 (8.296396396)
+    c=(0, 1, 0, 0, 0, 0, 0) l1= 1 margin=7534/12395 (0.607825736) score=7534/12395 (0.607825736) spread=2699/470 (5.742553191)
+  cheap r=2: separators=227
+    c=(0, 1, 0, 0, 0, 0, 0) l1= 1 margin=14971/12395 (1.207825736) score=14971/12395 (1.207825736) spread=2981/470 (6.342553191)
+    c=(0, 1, -1, 0, 0, 0, 0) l1= 2 margin=692139/308305 (2.244981431) score=692139/616610 (1.122490715) spread=6437/740 (8.698648649)
+    c=(0, 1, -1, -1, 0, 0, 0) l1= 3 margin=39176/12395 (3.160629286) score=39176/37185 (1.053543095) spread=13993/1110 (12.606306306)
+    c=(0, 0, -1, -1, 0, 0, 0) l1= 2 margin=4841/2479 (1.952803550) score=4841/4958 (0.976401775) spread=3025/444 (6.813063063)
+    c=(0, 1, -1, 0, 1, 0, 0) l1= 3 margin=843599/308305 (2.736248196) score=843599/924915 (0.912082732) spread=8097/740 (10.941891892)
+  cheap r=3: separators=247
+    c=(0, 0, -1, 0, 0, 0, 0) l1= 1 margin=401877/123322 (3.258761616) score=401877/123322 (3.258761616) spread=1057/148 (7.141891892)
+    c=(0, 1, -1, 0, 0, 0, 0) l1= 2 margin=733147/123322 (5.944981431) score=733147/246644 (2.972490715) spread=1835/148 (12.398648649)
+    c=(0, 1, 0, 0, 0, 0, 0) l1= 1 margin=5969/2479 (2.407825736) score=5969/2479 (2.407825736) spread=709/94 (7.542553191)
+    c=(0, 1, -1, 0, 0, 1, 0) l1= 3 margin=870217/123322 (7.056461945) score=870217/369966 (2.352153982) spread=2029/148 (13.709459459)
+    c=(0, 0, -1, 0, 0, 1, 0) l1= 2 margin=538947/123322 (4.370242130) score=538947/246644 (2.185121065) spread=1251/148 (8.452702703)
+  cheap r=4: separators=277
+    c=(0, 0, -1, 0, 0, 0, 0) l1= 1 margin=1018487/123322 (8.258761616) score=1018487/123322 (8.258761616) spread=1797/148 (12.141891892)
+    c=(0, 1, -1, 0, 0, 0, 0) l1= 2 margin=767370/61661 (12.444981431) score=383685/61661 (6.222490715) spread=2797/148 (18.898648649)
+    c=(0, 1, -1, 1, 0, 0, 0) l1= 3 margin=1042703/61661 (16.910251212) score=1042703/184983 (5.636750404) spread=10091/444 (22.727477477)
+    c=(0, 0, -1, 0, 0, -1, 0) l1= 2 margin=594861/61661 (9.647281102) score=594861/123322 (4.823640551) spread=1973/148 (13.331081081)
+    c=(0, 1, -1, 0, 0, -1, 0) l1= 3 margin=1705975/123322 (13.833500916) score=1705975/369966 (4.611166972) spread=2973/148 (20.087837838)
+  cheap r=5: separators=328
+    c=(0, 0, -1, 0, 0, 0, 0) l1= 1 margin=971701/61661 (15.758761616) score=971701/61661 (15.758761616) spread=2907/148 (19.641891892)
+    c=(0, 0, -1, 1, 0, 0, 0) l1= 2 margin=5887/188 (31.313829787) score=5887/376 (15.656914894) spread=8219/207 (39.705314010)
+    c=(0, 0, -1, 1, -1, 0, 0) l1= 3 margin=26345/564 (46.710992908) score=26345/1692 (15.570330969) spread=11119/207 (53.714975845)
+    c=(0, 0, 0, 1, 0, 0, 0) l1= 1 margin=730/47 (15.531914894) score=730/47 (15.531914894) spread=4376/207 (21.140096618)
+    c=(0, 0, 0, 1, -1, 0, 0) l1= 2 margin=13685/444 (30.822072072) score=13685/888 (15.411036036) spread=61099/1733 (35.256203116)
+
+CONTEXT MINIMA
+  Weakest exact witnesses by generated context partition.
+  [1+1+1+1] count= 56 min_absW12=5717/280 (20.417857143) min_U4=187/168 (1.113095238) min_tail45=19/168 (0.113095238)
+  [1+1+1]   count=  7 min_absW12=9651/1748 (5.521167048) min_U4=209/188 (1.111702128) min_tail45=21/188 (0.111702128)
+  [1+1]     count=  8 min_absW12=4013/1194 (3.360971524) min_U4=453/398 (1.138190955) min_tail45=55/398 (0.138190955)
+  [1]       count=  1 min_absW12=2110/207 (10.193236715) min_U4=269/207 (1.299516908) min_tail45=62/207 (0.299516908)
+  [2+1+1]   count= 56 min_absW12=397064/90201 (4.401991109) min_U4=6853/6156 (1.113222872) min_tail45=697/6156 (0.113222872)
+  [2+1]     count=  7 min_absW12=21349/6739 (3.167977445) min_U4=7678/6739 (1.139338181) min_tail45=939/6739 (0.139338181)
+  [2+2]     count= 56 min_absW12=25448/5889 (4.321276957) min_U4=679/604 (1.124172185) min_tail45=75/604 (0.124172185)
+  [2]       count=  8 min_absW12=144154/63487 (2.270606581) min_U4=69930/61661 (1.134104215) min_tail45=8269/61661 (0.134104215)
+  [3+1]     count= 56 min_absW12=59900/12011 (4.987095163) min_U4=2187/2005 (1.090773067) min_tail45=182/2005 (0.090773067)
+  [3]       count=  7 min_absW12=5551/1733 (3.203115984) min_U4=1944/1733 (1.121754183) min_tail45=211/1733 (0.121754183)
+  [4]       count= 56 min_absW12=2199/614 (3.581433225) min_U4=360/307 (1.172638436) min_tail45=53/307 (0.172638436)
+
+SYNTHESIS
+  The single tail45 covector separates every cheap abstract direction:
+  r=2,4,5 lie below the generated tail floor, while r=1,3 lie above the
+  generated tail ceiling.  This turns generated-word exclusion into a
+  bounded tail45 strip target before relation-code/Delsarte refinement.

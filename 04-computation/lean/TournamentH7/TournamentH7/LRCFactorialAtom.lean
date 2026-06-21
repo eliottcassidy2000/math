@@ -53,13 +53,69 @@ def originCoeff (t : Fin atomCount) : Int :=
   sum7 fun j =>
     if j <= t.val then altSign j * chooseInt t.val j else 0
 
+/-- The high-tail readout `q5+5q6`. -/
+def tail45 (q : Atom) : Int :=
+  q ⟨5, by decide⟩ + 5 * q ⟨6, by decide⟩
+
 /-- The Bonferroni4 high-tail readout `U4=q0+q5+5q6`. -/
 def U4 (q : Atom) : Int :=
-  q ⟨0, by decide⟩ + q ⟨5, by decide⟩ + 5 * q ⟨6, by decide⟩
+  q ⟨0, by decide⟩ + tail45 q
 
 /-- Low leakage readout `W1+W2` used by HYP-2722/HYP-2726. -/
 def low12 (q : Atom) : Int :=
   moment q ⟨1, by decide⟩ + moment q ⟨2, by decide⟩
+
+/-- HYP-2721 cheap directions, scaled to integral atom vectors.
+
+The index `0..4` represents cheap directions `r=1..5`; denominators are cleared
+by `cheapScale`. -/
+def cheapScaled (r : Fin 5) : Atom :=
+  fun t =>
+    match r.val, t.val with
+    | 0, 0 => 5
+    | 0, 1 => -6
+    | 0, 6 => 1
+    | 1, 0 => 5
+    | 1, 1 => -9
+    | 1, 3 => 5
+    | 1, 6 => -1
+    | 2, 0 => 2
+    | 2, 1 => -6
+    | 2, 2 => 5
+    | 2, 5 => -2
+    | 2, 6 => 1
+    | 3, 0 => 2
+    | 3, 1 => -9
+    | 3, 2 => 15
+    | 3, 3 => -10
+    | 3, 5 => 3
+    | 3, 6 => -1
+    | 4, 0 => 1
+    | 4, 1 => -6
+    | 4, 2 => 15
+    | 4, 3 => -20
+    | 4, 4 => 15
+    | 4, 5 => -6
+    | 4, 6 => 1
+    | _, _ => 0
+
+/-- Denominator-clearing scale for `cheapScaled`. -/
+def cheapScale (r : Fin 5) : Int :=
+  match r.val with
+  | 0 => 5
+  | 1 => 5
+  | 2 => 2
+  | 3 => 2
+  | _ => 1
+
+/-- Integral tail45 target for the scaled cheap directions. -/
+def cheapTailTarget (r : Fin 5) : Int :=
+  match r.val with
+  | 0 => 5
+  | 1 => -5
+  | 2 => 3
+  | 3 => -2
+  | _ => -1
 
 /-- The finite-difference packets are exactly dual to the factorial moments. -/
 theorem basis_moment_delta :
@@ -87,6 +143,17 @@ theorem low12_basis :
       if j.val = 1 ∨ j.val = 2 then 1 else 0 := by
   native_decide
 
+/-- The scaled cheap directions have the declared positive origin scale. -/
+theorem cheapScaled_q0 :
+    ∀ r : Fin 5, q0 (cheapScaled r) = cheapScale r := by
+  native_decide
+
+/-- The tail45 covector separates the scaled cheap directions into
+`5,-5,3,-2,-1`; after normalization these are `1,-1,3/2,-1,-1`. -/
+theorem cheapScaled_tail45 :
+    ∀ r : Fin 5, tail45 (cheapScaled r) = cheapTailTarget r := by
+  native_decide
+
 /-! ### Axiom audit
 
 These are closed finite identities over seven coordinates.  In a working Lean
@@ -98,6 +165,8 @@ environment, the axiom output should be empty or contain only Lean foundations.
 #print axioms basis_q0_sign
 #print axioms U4_basis
 #print axioms low12_basis
+#print axioms cheapScaled_q0
+#print axioms cheapScaled_tail45
 
 end FactorialAtom
 end LonelyRunner

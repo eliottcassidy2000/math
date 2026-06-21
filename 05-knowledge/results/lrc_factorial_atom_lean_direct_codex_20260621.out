@@ -3,3 +3,5 @@
 'LonelyRunner.FactorialAtom.basis_q0_sign' depends on axioms: [basis_q0_sign._native.native_decide.ax_1_1]
 'LonelyRunner.FactorialAtom.U4_basis' depends on axioms: [U4_basis._native.native_decide.ax_1_1]
 'LonelyRunner.FactorialAtom.low12_basis' depends on axioms: [low12_basis._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.cheapScaled_q0' depends on axioms: [cheapScaled_q0._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.cheapScaled_tail45' depends on axioms: [cheapScaled_tail45._native.native_decide.ax_1_1]

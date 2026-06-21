@@ -45,6 +45,12 @@ with robust witnesses `|W1|+|W2|`, `U4`, and `tail45`; signed `W1/W2/B2` are
 not enough.  I also added a self-contained Lean finite identity module
 `TournamentH7.LRCFactorialAtom` and Verify wrappers.
 
+Follow-up: `lrc14_generated_separator_certificates_codex_20260621.py` finds
+the sharp next lemma.  Generated frontier rows satisfy the exact tail strip
+`182/2005 <= q5+5q6 <= 10910/21539`; cheap abstract directions have tail
+values `1,-1,3/2,-1,-1`, so `tail45` alone separates all five.  Lean now also
+formalizes the cheap-side `cheapScaled_tail45` values.
+
 ## kind-pasteur update: HYP-2724 MDS/Arc Coding Lens & Support-3 Driver
 
 The latest push (SHA 0e30) by **Eliott Cassidy** (kind-pasteur-2026-06-21) introduces the **MDS/Arc Coding Lens**, a major structural reframing of the LRC(14) proof that confirms the **Support-3 Driver** and adjudicates a critical recurring error in the support-6 floor logic.

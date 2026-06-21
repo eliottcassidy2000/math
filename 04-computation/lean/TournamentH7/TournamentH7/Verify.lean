@@ -82,6 +82,20 @@ theorem lrc_factorial_low12_basis_audit :
   LonelyRunner.FactorialAtom.low12_basis
 #print axioms lrc_factorial_low12_basis_audit
 
+theorem lrc_factorial_cheapScaled_q0_audit :
+    ∀ r : Fin 5,
+      LonelyRunner.FactorialAtom.q0 (LonelyRunner.FactorialAtom.cheapScaled r) =
+        LonelyRunner.FactorialAtom.cheapScale r :=
+  LonelyRunner.FactorialAtom.cheapScaled_q0
+#print axioms lrc_factorial_cheapScaled_q0_audit
+
+theorem lrc_factorial_cheapScaled_tail45_audit :
+    ∀ r : Fin 5,
+      LonelyRunner.FactorialAtom.tail45 (LonelyRunner.FactorialAtom.cheapScaled r) =
+        LonelyRunner.FactorialAtom.cheapTailTarget r :=
+  LonelyRunner.FactorialAtom.cheapScaled_tail45
+#print axioms lrc_factorial_cheapScaled_tail45_audit
+
 /-! ### LRC14 death-chain/live-depth quotient -/
 
 theorem lrc_cover_oneFar_live_iff_audit (t : Nat) (ht : t <= 6) :
