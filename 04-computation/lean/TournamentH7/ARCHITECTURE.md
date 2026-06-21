@@ -90,6 +90,7 @@ et al.).
 | `SCFraction.lean` | SC tiling fractions (THM-330 cor) | axioms |
 | `IsomorphismClasses.lean` | `IsoClass n`, A000568 | axioms |
 | `SmallTournaments.lean` | `transitiveTournament`, `threeCycle` | **PROVED** |
+| `LRCDeathChain.lean` | finite LRC14 death-chain/live-depth quotient for direct cover and survival currencies | pending local build; decidable finite target |
 | `Verify.lean` | Audit ledger | reports |
 
 ## Axiom hierarchy

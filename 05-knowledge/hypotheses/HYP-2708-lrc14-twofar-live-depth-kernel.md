@@ -263,3 +263,87 @@ seven depths -> four live depths.
 
 The next proof should bound these four live-depth signed kernel debts against
 the already-positive HYP-2701 boundary margins.
+
+## Lean Formalization Addendum (codex-2026-06-21)
+
+The finite quotient above has now been promoted into the Lean project as
+
+```text
+04-computation/lean/TournamentH7/TournamentH7/LRCDeathChain.lean
+```
+
+with audit wrappers in
+
+```text
+04-computation/lean/TournamentH7/TournamentH7/Verify.lean
+```
+
+The formalized objects are deliberately pre-analytic:
+
+```lean
+Currency      := Nat -> Int
+coverCurrency := 1[t=0]
+survivalCurrency(t) := 1 for 1<=t<=4, -4 for t=6, 0 otherwise
+LiveDepth C r t := some reachable hit count h<=min(r,t) changes C(t)
+```
+
+The named theorem targets are:
+
+```text
+cover_oneFar_live_iff          : live iff t=1
+survival_oneFar_live_iff       : live iff t in {1,5,6}
+survival_twoFar_live_iff       : live iff t in {1,2,5,6}
+survival_threeFar_live_iff     : live iff t in {1,2,3,5,6}
+survival_fourFar_live_iff      : live iff 1<=t, for t<=6
+survival_twoFar_middle_silent  : depths 3 and 4 are silent for two far hits
+liveDepth_mono                 : live depths are monotone in far-hit count
+```
+
+The local machine used for this addendum had no `lake`, `lean`, or `elan`
+binary available, so this is a Lean source/checklist update rather than a
+completed build audit.  Still, the rigor forced the main proof-order decision:
+do not scalarize the survival row before the live-depth quotient.  The most
+fundamental object is the finite currency-preservation relation
+
+```text
+(r,t) -> { C(t-h)-C(t) : 0<=h<=min(r,t) }.
+```
+
+For LRC14, the next analytic obligation should therefore estimate only the
+four live two-far debts `{1,2,5,6}` and treat `t=3,4` as exact kernel.
+
+## Integration with KPS S23 Single-Far Domination
+
+After this formalization pass, a fresh KPS S23 update landed:
+
+```text
+05-knowledge/results/lrc_q108_three-distance-coloring_kps-Sx-wf.out
+```
+
+That update says the direct `p0` wide branch should be attacked through
+single-far maximality and base-size domination, not through the abstract
+small-`R` cone.  It also reports that the direct multi-far rows are
+comfortable below the single-far envelope.  This does not invalidate the
+Lean live-depth quotient; it clarifies its role.
+
+For direct `p0`, the proof order is now:
+
+```text
+span<=14 finite check
+single-far p0 closure at depth {1}
+base-size / product-cover domination for r>=2
+```
+
+For the survival-currency gate, HYP-2708 remains the first place where a
+two-far branch turns on shallow depth `2` debt:
+
+```text
+survival one-far: {1,5,6}
+survival two-far: {1,2,5,6}
+```
+
+So the Lean target should be read as the finite invariant shared by these
+routes: choose the currency first, then identify the live depths, then attach
+the relevant analytic envelope.  In the direct wide `p0` route, S23 suggests
+the envelope is base-size domination; in the survival route, the envelope is
+the signed four-depth debt bound.

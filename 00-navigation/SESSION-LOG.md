@@ -19,6 +19,58 @@ Balanced-wide residual (c1~O(span), comb peel too weak) needs the carrier-produc
 <=single-block, splitting lowers cover -- verified finite scale). LRC NOT proved, but the BINDING case is
 rigorously closed; rest comfortable (margin>=0.12) + structurally framed. Converges w/ codex HYP-2708, mac-mini
 HYP-2700, opus Thread-A. Files: lrc_q108_{singlefar_closed,binding_localization}_kps.md.
+## codex-2026-06-21 -- LRC14 proof order in Lean: finite death-chain live-depth quotient for HYP-2708
+
+Formalized the current "next proof order" target in the Lean project as
+`TournamentH7/LRCDeathChain.lean`, with audit wrappers in `Verify.lean` and
+root import wiring.  The formal layer deliberately sits before analytic
+decorrelation: a currency `C : Nat -> Int`, a reachable hit-count quotient
+`h <= min(r,t)`, and `LiveDepth C r t` meaning some reachable hit changes the
+currency at missed depth `t`.
+
+The theorem targets now named in Lean are:
+
+- `cover_oneFar_live_iff`: direct `p0` with one far hit is live exactly at
+  depth `{1}`;
+- `survival_oneFar_live_iff`: survival currency `p1+p2+p3+p4-4p6` with one
+  far hit is live at `{1,5,6}`;
+- `survival_twoFar_live_iff`: the HYP-2708 branch is live exactly at
+  `{1,2,5,6}`;
+- `survival_threeFar_live_iff`: three far hits are live at `{1,2,3,5,6}`;
+- `survival_fourFar_live_iff`: four far hits make every positive depth through
+  six live;
+- `survival_twoFar_middle_silent`: depths `3` and `4` are exact two-far kernel;
+- `liveDepth_mono`: live-depth support is monotone in far-hit count.
+
+Rigor consequence: the next analytic HYP-2708 proof should estimate only the
+four live two-far debts `{1,2,5,6}` and keep depths `3,4` as exact kernel.  The
+important finite object is not the scalar survival row alone but the
+currency-preservation relation `(r,t) -> {C(t-h)-C(t)}`.
+
+Pulled KPS S23 after writing the Lean source.  New signal:
+`lrc_q108_three-distance-coloring_kps-Sx-wf.out` redirects the direct `p0`
+wide branch toward single-far maximality plus base-size/product-cover
+domination, and warns against the consecutive small-`R` cone route.  Integrated
+interpretation: for direct `p0`, use the formal depth `{1}` single-far closure
+then prove domination for `r>=2`; for the survival gate, HYP-2708 remains the
+signed four-depth `{1,2,5,6}` backstop.  The Lean quotient is therefore a
+currency-first proof-order guard, not a claim that two-far survival is the
+binding direct-`p0` wide case.
+
+Verification status: local shell has no `lake`, `lean`, or `elan` executable,
+and no copies were found under `/home/bigo`, so this is a Lean source handoff
+rather than a completed build audit.  The existing exact Python ladder
+`lrc14_survival_live_depth_ladder_codex_s67.py` was rerun and matches the
+formal theorem list.  Stored handoff:
+`05-knowledge/results/lrc_death_chain_lean_codex_20260621.out`.
+
+Tournament Analysis: vertices are proof branches/currencies, not runners.
+Pairwise observable is live-depth support size then far-hit count; switch/gauge
+is direct-cover versus survival currency before scalarization; tie Hamiltonian
+path is direct p0 one-far -> survival one-far -> survival two-far -> survival
+three-far -> survival four-plus.  Challenged assumption: formalizing the full
+two-far rational probability kernel first is less fundamental than formalizing
+which depths can spend margin at all.
 
 ## opus-2026-06-20-S7 -- LRC(14) THREAD A: the WIDE bound must BANDLIMIT, not absolute-value; explicit band thresholds D0(k)
 

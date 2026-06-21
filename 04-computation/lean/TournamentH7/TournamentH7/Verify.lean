@@ -41,8 +41,45 @@ import TournamentH7.ScoreSequence
 import TournamentH7.Paley3
 import TournamentH7.TransitiveH
 import TournamentH7.ProductSum
+import TournamentH7.LRCDeathChain
 
 open Tournament
+
+/-! ### LRC14 death-chain/live-depth quotient -/
+
+theorem lrc_cover_oneFar_live_iff_audit (t : Nat) (ht : t <= 6) :
+    LonelyRunner.LiveDepth LonelyRunner.coverCurrency 1 t <-> t = 1 :=
+  LonelyRunner.cover_oneFar_live_iff t ht
+#print axioms lrc_cover_oneFar_live_iff_audit
+
+theorem lrc_survival_oneFar_live_iff_audit (t : Nat) (ht : t <= 6) :
+    LonelyRunner.LiveDepth LonelyRunner.survivalCurrency 1 t <->
+      t = 1 \/ t = 5 \/ t = 6 :=
+  LonelyRunner.survival_oneFar_live_iff t ht
+#print axioms lrc_survival_oneFar_live_iff_audit
+
+theorem lrc_survival_twoFar_live_iff_audit (t : Nat) (ht : t <= 6) :
+    LonelyRunner.LiveDepth LonelyRunner.survivalCurrency 2 t <->
+      t = 1 \/ t = 2 \/ t = 5 \/ t = 6 :=
+  LonelyRunner.survival_twoFar_live_iff t ht
+#print axioms lrc_survival_twoFar_live_iff_audit
+
+theorem lrc_survival_threeFar_live_iff_audit (t : Nat) (ht : t <= 6) :
+    LonelyRunner.LiveDepth LonelyRunner.survivalCurrency 3 t <->
+      t = 1 \/ t = 2 \/ t = 3 \/ t = 5 \/ t = 6 :=
+  LonelyRunner.survival_threeFar_live_iff t ht
+#print axioms lrc_survival_threeFar_live_iff_audit
+
+theorem lrc_survival_fourFar_live_iff_audit (t : Nat) (ht : t <= 6) :
+    LonelyRunner.LiveDepth LonelyRunner.survivalCurrency 4 t <-> 1 <= t :=
+  LonelyRunner.survival_fourFar_live_iff t ht
+#print axioms lrc_survival_fourFar_live_iff_audit
+
+theorem lrc_survival_twoFar_middle_silent_audit :
+    LonelyRunner.SilentDepth LonelyRunner.survivalCurrency 2 3 /\
+      LonelyRunner.SilentDepth LonelyRunner.survivalCurrency 2 4 :=
+  LonelyRunner.survival_twoFar_middle_silent
+#print axioms lrc_survival_twoFar_middle_silent_audit
 
 /-! ### Product-sum defect normal form (THM-361 list core) -/
 

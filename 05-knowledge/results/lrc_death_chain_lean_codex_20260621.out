@@ -1,0 +1,78 @@
+LRC death-chain Lean formalization handoff
+Session: codex-2026-06-21
+
+FILES
+  04-computation/lean/TournamentH7/TournamentH7/LRCDeathChain.lean
+  04-computation/lean/TournamentH7/TournamentH7/Verify.lean
+  04-computation/lean/TournamentH7/TournamentH7.lean
+
+LOCAL LEAN TOOLING
+  command -v lake  -> not found
+  command -v elan  -> not found
+  find /home/bigo -name lake -type f -perm -111 -> no results
+  find /home/bigo -name lean -type f -perm -111 -> no results
+  find /home/bigo -name elan -type f -perm -111 -> no results
+
+  Therefore this session could not run `lake build`.
+
+EXACT CROSS-CHECK RUN
+  python3 04-computation/lrc14_survival_live_depth_ladder_codex_s67.py
+
+  Confirmed computational ladder:
+    direct p0, one far:    live_depths=(1,)
+    survival, one far:     live_depths=(1,5,6)
+    survival, two far:     live_depths=(1,2,5,6)
+    survival, three far:   live_depths=(1,2,3,5,6)
+    survival, four far:    live_depths=(1,2,3,4,5,6)
+
+LEAN THEOREM TARGETS ADDED
+  liveDepth_mono
+  cover_oneFar_live_iff
+  survival_oneFar_live_iff
+  survival_twoFar_live_iff
+  survival_threeFar_live_iff
+  survival_fourFar_live_iff
+  survival_twoFar_middle_silent
+
+PROOF-ORDER CONSEQUENCE
+  The finite quotient says HYP-2708 is exactly a four-live-depth problem:
+  for the survival currency C=p1+p2+p3+p4-4p6 and two far hits, depths
+  3 and 4 are exact kernel.  The analytic bound should only pay debts at
+  depths 1, 2, 5, and 6.
+
+INCOMING KPS S23 INTEGRATION
+  A later pull brought
+
+    05-knowledge/results/lrc_q108_three-distance-coloring_kps-Sx-wf.out
+
+  That update redirects the direct p0 wide branch toward single-far
+  maximality plus base-size/product-cover domination.  The Lean quotient
+  remains useful because it separates currency choice from analytic envelope:
+
+    direct p0 route:       one-far depth {1}, then base-size domination
+    survival route:        two-far depths {1,2,5,6}, signed debt bound
+
+  Thus HYP-2708 is no longer being presented as the binding direct-p0 wide
+  route; it is the survival-currency backstop and a formal proof-order guard.
+
+TOURNAMENT ANALYSIS
+  vertices: proof branches/currencies, not runners
+  pairwise observable: live-depth support size, then far-hit count
+  switch/gauge: choose direct cover vs survival currency before scalarizing
+  tie Hamiltonian path:
+    direct p0 one-far
+    survival one-far
+    survival two-far
+    survival three-far
+    survival four-plus
+
+ASSUMPTION CHALLENGE
+  Challenged assumption: the first Lean formalization should target the real
+  LRC inequality or the full two-far rational kernel.  The more fundamental
+  object is the finite currency-preservation quotient
+
+    (r,t) -> {C(t-h)-C(t) : 0<=h<=min(r,t)}.
+
+  This preserves the proof predicate "can this depth spend boundary margin?"
+  and destroys actual phase probabilities, which are deliberately deferred to
+  the later analytic estimates.

@@ -33,6 +33,7 @@ TournamentH7/
     ├── BucketBalance.lean    abstract finite bucket half-line and unordered balance
     ├── StaircaseBucketTransport.lean
     │                          concrete staircase transport checksums
+    ├── LRCDeathChain.lean    finite LRC death-chain/live-depth quotient
     └── Verify.lean           #print axioms audit
 ```
 

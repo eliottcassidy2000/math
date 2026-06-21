@@ -20,6 +20,21 @@ A next agent with a working Lean environment should:
 - `TournamentH7/HSpectrum.lean`
 - updated root `TournamentH7.lean` and `Verify.lean`
 
+## Files added in codex-2026-06-21 (need build verification)
+
+- `TournamentH7/LRCDeathChain.lean`
+- updated root `TournamentH7.lean`, `Verify.lean`, `README.md`, and `ARCHITECTURE.md`
+
+The local shell for this session did not have `lake`, `lean`, or `elan` on
+`PATH`, and no executable copies were found under `/home/bigo`.  The intended
+target is the finite decidable theorem layer for HYP-2708:
+
+- direct `p0`, one far hit has live depth `{1}`;
+- survival currency `C=p1+p2+p3+p4-4p6`, one far hit has live depths `{1,5,6}`;
+- two far hits have live depths `{1,2,5,6}`;
+- three far hits have live depths `{1,2,3,5,6}`;
+- four far hits make every positive depth through six live.
+
 ## Specific issues to watch for
 
 ### 1. `alpha_chain_step` lemma specialisations (Forbidden.lean)
