@@ -1,0 +1,3 @@
+consec base. err+ = max positive (p0 - p0_decorr) over commensurable far pairs.
+
+k | margin | p0_decorr(consec) | max(err+) | worst ratio | err+/margin | lossiness
