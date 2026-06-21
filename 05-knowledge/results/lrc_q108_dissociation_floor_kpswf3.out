@@ -1,0 +1,23 @@
+##############################################################################
+# DISSOCIATION FLOOR: is measS7 monotone in additive energy / Schur triples?
+##############################################################################
+
+=== k=8: coupon floor C(k)=0.02448, consec measS7=0.34490 ===
+   consec[1..k]   AE=  344 Schur= 16 measS7=0.34490
+   AP d=2         AE=  344 Schur=  0 measS7=0.30882
+   primes         AE=  204 Schur=  4 measS7=0.05852
+   powers2        AE=  120 Schur=  7 measS7=0.02455
+   Sidon-ish      AE=  160 Schur=  7 measS7=0.05368
+   [250 random k-sets] corr(measS7, Schur#)=-0.160   corr(measS7, AddEnergy)=+0.581
+   strict monotone (Schur# up => measS7 up)? violations 13709/25894  => NON-MONOTONE (Schur# alone does not order measS7)
+
+=== k=9: coupon floor C(k)=0.05770, consec measS7=0.43821 ===
+   consec[1..k]   AE=  489 Schur= 20 measS7=0.43821
+   AP d=2         AE=  489 Schur=  0 measS7=0.40382
+   primes         AE=  285 Schur=  4 measS7=0.11286
+   powers2        AE=  153 Schur=  8 measS7=0.05915
+   Sidon-ish      AE=  233 Schur= 10 measS7=0.15974
+   [250 random k-sets] corr(measS7, Schur#)=+0.012   corr(measS7, AddEnergy)=+0.553
+   strict monotone (Schur# up => measS7 up)? violations 13216/26691  => NON-MONOTONE (Schur# alone does not order measS7)
+
+DONE.
