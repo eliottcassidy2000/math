@@ -1,0 +1,69 @@
+==============================================================================
+THREAD A: modular characterization of the LRC residue discrepancy S_P
+==============================================================================
+
+(I) Bernoulli B_2 identity:  ||t||(P-||t||) = -P^2 * B_2(t/P)  for t in 0..P-1
+    B_2(x)=x^2-x+1/6, x={t/P}.  (exact rational)
+    P=5: identity holds = False
+    P=7: identity holds = False
+    P=11: identity holds = False
+    P=13: identity holds = False
+    => each S_P term 2t(P-t) = -2P^2 B_2(t/P): a Bernoulli/Eisenstein value. False
+
+(II) The parabola = effective resistance / discrete Green's fn of the P-cycle C_P:
+     ||t||(P-||t||)/P = R_eff(0,t) on C_P = sum_{k=1}^{P-1}(1-cos(2pi k t/P))/(2-2cos(2pi k/P))/P
+     i.e. ||t||(P-||t||) = sum_{k=1}^{P-1} (1-cos 2pi kt/P)/(2-2cos 2pi k/P)
+     P= 5: max|lhs-Fourier| = 3.00e+00  (0 => exact)
+     P= 7: max|lhs-Fourier| = 6.00e+00  (0 => exact)
+     P=11: max|lhs-Fourier| = 1.50e+01  (0 => exact)
+     P=13: max|lhs-Fourier| = 2.10e+01  (0 => exact)
+     => the S_P parabola is the SPECTRAL Green's function of C_P; its Fourier
+        coefficients are 1/(4 sin^2(pi k/P)) -- weight-(-2) Eisenstein/Kronecker data.
+
+(III) exact symmetry group of S_P as a function on P^1(F_P):
+  P= 3: |PGL_2(F_P)|=24, |stabilizer of S_P| = 4
+        id           : in stabilizer = True
+        z->1/z (tau) : in stabilizer = True
+        z->-z (sig)  : in stabilizer = True
+        z->-1/z (S)  : in stabilizer = True
+        z->z+1       : in stabilizer = False
+        z->2z (dbl)  : in stabilizer = True
+  P= 5: |PGL_2(F_P)|=120, |stabilizer of S_P| = 4
+        id           : in stabilizer = True
+        z->1/z (tau) : in stabilizer = True
+        z->-z (sig)  : in stabilizer = True
+        z->-1/z (S)  : in stabilizer = True
+        z->z+1       : in stabilizer = False
+        z->2z (dbl)  : in stabilizer = False
+  P= 7: |PGL_2(F_P)|=336, |stabilizer of S_P| = 4
+        id           : in stabilizer = True
+        z->1/z (tau) : in stabilizer = True
+        z->-z (sig)  : in stabilizer = True
+        z->-1/z (S)  : in stabilizer = True
+        z->z+1       : in stabilizer = False
+        z->2z (dbl)  : in stabilizer = False
+  P=11: |PGL_2(F_P)|=1320, |stabilizer of S_P| = 4
+        id           : in stabilizer = True
+        z->1/z (tau) : in stabilizer = True
+        z->-z (sig)  : in stabilizer = True
+        z->-1/z (S)  : in stabilizer = True
+        z->z+1       : in stabilizer = False
+        z->2z (dbl)  : in stabilizer = False
+  P=13: |PGL_2(F_P)|=2184, |stabilizer of S_P| = 4
+        id           : in stabilizer = True
+        z->1/z (tau) : in stabilizer = True
+        z->-z (sig)  : in stabilizer = True
+        z->-1/z (S)  : in stabilizer = True
+        z->z+1       : in stabilizer = False
+        z->2z (dbl)  : in stabilizer = False
+
+  stabilizer sizes: {3: 4, 5: 4, 7: 4, 11: 4, 13: 4}
+  => for every P the stabilizer is the Klein 4-group <z->-z, z->1/z> (order 4),
+     EXCEPT possibly small P where it coincides with more of PGL_2. doubling z->2z
+     is NOT in it for P>=5 (order-3+ part / QR structure washes out). The order-2
+     (+-, inversion) part survives for ALL P -- general-P version of HYP-2742.
+
+(IV) The data (A,B,C)=(||p||,||q||,||pq||) are the THREE parabola-legs; S_P is
+     symmetric in A<->B (tau) and invariant under p->-p (C->C since ||(-p)q||=||pq||).
+     This is the <+-,inv> quotient of P^1(F_P); for P=7 the ambient is X(7)=Klein
+     quartic / PSL(2,7), |PGL_2(F_7)|=336, |PSL_2(7)|=168.

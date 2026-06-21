@@ -1,3 +1,78 @@
+## kind-pasteur-2026-06-21 -- THREAD B-Tanner: HYP-2746, the Tanner graph of the relation code Λ(E) gives NO expansion bound on corr (girth degenerate, spectral gap inverted, absolute enumerator vacuous)
+
+Worked the owner's Tanner/unit-distance/weakly-regular lead on the relation code
+Λ(E)={n: Σn_i e_i=0} (the LRC cycle space). Built its Tanner graph (vars=k offsets,
+checks=primitive low-weight relations) -- DISTINCT from codex's Delsarte-dual Tanner
+carrier. Answer to all three prompt questions: the expansion lens does NOT yield a
+usable bound.
+
+(1) GIRTH IS DEGENERATE: always 4 (any two support-2/3 relations sharing 2 vars =>
+    4-cycle), AP=Sidon=dyadic=random alike. Girth does not separate hard from easy.
+(2) SPECTRAL GAP GOES BACKWARDS: Pearson(corr, sigma_2)=-0.65. The HARD case (AP) has
+    a DENSE relation code (313 checks vs Sidon's 55) that MIXES BETTER. Classical
+    sparse-expander frame inapplicable. Real predictors: #checks (+0.75..0.95),
+    A3/support-3 (+0.67..0.90), W3 height enumerator (+0.78). dmin weak (only in {2,3}).
+(3) ABSOLUTE ENUMERATOR VACUOUS: with the CORRECT zero-padded MEASURE kernel Kk
+    (caught+corrected the THM-538/MISTAKE-078 K_factored trap mid-session), W_L=Sum|K|
+    GROWS (W3/W2~3-6) while the signed sum slowly -> corr; |corr|/W_L decreases
+    monotonically. Sum|K| diverges; corr is a SIGNED sum (the R6 tail).
+(E) QR7/Paley: corr({1,2,4})=corr({2,4,1})=0 exactly (dilation-invariance, MDS/easy
+    side); Tanner NOT biregular once observer 0 is pinned.
+
+NET: the Tanner lens CONFIRMS the HYP-2723/2724 extremal dichotomy via the weight-
+DISTRIBUTION (AP=anti-MDS, dmin=2, support-3-heavy=additive energy) but gives no
+bound. Binding quantity stays the signed support-3 sum = HYP-2602/HYP-2724-FINAL nut.
+A clarifying reframe. Files lrc_lambda_tanner_{,expansion_,kernelbound_}kpswf5.py.
+NEXT: the genuine open content is unchanged (the conditionally-convergent height tail);
+do NOT pursue a Tanner-expander theorem for this code.
+
+---
+
+## kind-pasteur-2026-06-21 -- THREAD A: HYP-2745, the LRC residue discrepancy is two cycle-graph resistances (modular characterization, general-P closed form)
+
+THREAD A (the owner's modular/X(7) lead) is resolved. I found the FULL uniform
+general-P closed form of the L7 sector cell-discrepancy, completing the explicit
+PROGRAM that HYP-2743 left open (HYP-2743 had only the first ROW; I have the whole
+table), and gave it a clean, EXACT modular characterization.
+
+THE LAW (verified exact, primes P=3..43, 0 failures):
+   G_P(p,q) = [ 2 A B (P-A)(P-B) + 2 C (P-C) ] / P,
+   A=||p||_P, B=||q||_P, C=||pq||_P,  ||x||=min(x%P,P-x%P);  D_{p,q}=G_P/(P p q).
+G_P is canon HYP-2739's 'S'=4f (max 44 at P=7); full-matrix defect = P*G_P. Reproduces
+the literal HYP-2742 7x7 table, the published P=7 f=ab+3 / ab+4-2|a-2|, HYP-2743's
+first-row T(M)-T(M-b) and diag-max {1,4,11,42,69}.
+
+MODULAR HOME (made EXACT, the owner's question answered):
+ - each leg g(t)=2t(P-t) = -2P^2 B_2(t/P) + P^2/3 (2nd Bernoulli, weight-2 Eisenstein/E_2
+   seed) = P * R_eff(0,t), the effective RESISTANCE / discrete Green's function of the
+   P-cycle C_P (Chung-Yau), Fourier coeffs 1/(2-2cos 2pi k/P).  So G_P = a SUM OF TWO
+   CYCLE-GRAPH RESISTANCES, in legs (||p||,||q||) and (||pq||).
+ - Honest: NO holomorphic weight-2 form exists; the L1 (absolute) discrepancy lives at
+   the quasimodular E_2 / real-analytic Eisenstein s=1; the signed Dedekind sum is its
+   Fourier shadow (matches HYP-2743 / MISTAKE-082).
+
+SYMMETRY PROVED for ALL P (not conjectured): the stabilizer of G_P in PGL_2(F_P) acting
+on PAIRS (p,q) is EXACTLY the Klein 4-group <(p,q)->(-p,q), (p,q)->(q,p)> (order 4) for
+every P>=5; doubling z->cz (c!=+-1) is never a symmetry. Order-2 survives, order-3+
+(QR/cubic) washes out -- uniform in P. This is the general theorem behind HYP-2742/2657.
+
+HONEST CORRECTION to HYP-2742: G_P is NOT a function of the slope z=p/q. Every interior
+slope is G-multivalued (3rd leg ||pq|| is a PRODUCT coord, invisible to the slope). G_P
+lives on the PAIR torus (Z/P)^2 / <+-,swap>, finer than P^1(F_P); the <+-,inv> Mobius
+group is the SYMMETRY but not the DOMAIN. For P=7 the ambient PSL(2,7) quotient is the
+Klein quartic X(7); the order-3 of X(7) does NOT act -- G_7 is its hyperelliptic shadow,
+a dessin with 3 cells {apex, edge, bulk} over {0,1,inf}, not a full level-7 form.
+
+Scripts: 04-computation/lrc_threadA_{modular_residue,closed_form,sawtooth,exact2,
+reconcile,modforms,synthesis,FINAL}_kpswf5.py.  Authoritative check: ...FINAL... prints
+TOTAL FAILURES: 0.  Outputs in 05-knowledge/results/.  Canon: HYP-2745 added; reflection
+07-reflections/the-lrc-discrepancy-is-a-cycle-resistance.md.
+
+NEXT: (a) PROVE the closed form analytically from the cov-sawtooth (currently exact-verified
+P<=43, not symbolic-for-all-P); (b) does the cycle-resistance form give a sharper L7 window
+bound than the elementary one? (c) the dessin/X(P) story for the LRC cover -- is the 3-cell
+structure the Belyi map the owner's Gamma(2)-over-{0,1,inf} picture predicts?
+
 ## codex-2026-06-21 -- HYP-2744: Boolean-Möbius hierarchy for LRC sector atoms
 
 User prompted with the complete LP hierarchy for linear codes (higher-order

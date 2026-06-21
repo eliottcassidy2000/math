@@ -1,0 +1,56 @@
+==============================================================================
+THREAD A synthesis: the modular structure of the LRC residue discrepancy
+==============================================================================
+
+LAW:  S_P(p,q) = [2 A B (P-A)(P-B) + 2 C (P-C)]/P, A=||p||,B=||q||,C=||pq||.
+
+Klein-4 orbit decomposition of P^1(F_P) and S-value per orbit (= the dessin cells):
+
+  P=5:  #slopes=6, #Klein-4 orbits=3  (predicted (P+3)/4 *2-ish)
+     orbit size  2: [0, 'inf']  -> S-values [0] APEX(S=0)
+     orbit size  2: [1, 4]  -> S-values [8] 
+     orbit size  2: [2, 3]  -> S-values [12] 
+
+  P=7:  #slopes=8, #Klein-4 orbits=3  (predicted (P+3)/4 *2-ish)
+     orbit size  2: [0, 'inf']  -> S-values [0] APEX(S=0)
+     orbit size  2: [1, 6]  -> S-values [12] 
+     orbit size  4: [2, 3, 4, 5]  -> S-values [20, 24] 
+
+  P=11:  #slopes=12, #Klein-4 orbits=4  (predicted (P+3)/4 *2-ish)
+     orbit size  2: [0, 'inf']  -> S-values [0] APEX(S=0)
+     orbit size  2: [1, 10]  -> S-values [20] 
+     orbit size  4: [2, 5, 6, 9]  -> S-values [36, 60] 
+     orbit size  4: [3, 4, 7, 8]  -> S-values [48, 56] 
+
+  P=13:  #slopes=14, #Klein-4 orbits=5  (predicted (P+3)/4 *2-ish)
+     orbit size  2: [0, 'inf']  -> S-values [0] APEX(S=0)
+     orbit size  2: [1, 12]  -> S-values [24] 
+     orbit size  2: [5, 8]  -> S-values [80] 
+     orbit size  4: [10, 3, 4, 9]  -> S-values [60, 72] 
+     orbit size  4: [11, 2, 6, 7]  -> S-values [44, 84] 
+
+  # non-apex Klein-4 orbits (the 'inner cells' of the dessin):
+     P= 5: total orbits 3, non-apex 2  (orbit sizes [2, 2, 2])
+     P= 7: total orbits 3, non-apex 2  (orbit sizes [2, 2, 4])
+     P=11: total orbits 4, non-apex 3  (orbit sizes [2, 2, 4, 4])
+     P=13: total orbits 5, non-apex 4  (orbit sizes [2, 2, 2, 4, 4])
+     P=17: total orbits 6, non-apex 5  (orbit sizes [2, 2, 2, 4, 4, 4])
+     P=19: total orbits 6, non-apex 5  (orbit sizes [2, 2, 4, 4, 4, 4])
+     P=23: total orbits 7, non-apex 6  (orbit sizes [2, 2, 4, 4, 4, 4, 4])
+
+LRC-type sharp face for general P (window 1<p/q<P, in-window coprime ratios):
+  sup over the window of S_P/(P q) [= D*p side] and S_P/(P p) need the SPECIFIC
+  small-denominator ratios; we report the dominant residue cell maxima:
+   P= 5: max S_P=16; S_P(3,2)=16  (P=7: this is the 36 giving 12/7 face)
+   P= 7: max S_P=44; S_P(3,2)=36  (P=7: this is the 36 giving 12/7 face)
+   P=11: max S_P=168; S_P(3,2)=84  (P=7: this is the 36 giving 12/7 face)
+   P=13: max S_P=276; S_P(3,2)=108  (P=7: this is the 36 giving 12/7 face)
+
+=> CLEANEST MODULAR CHARACTERIZATION:
+   S_P is a sum of two CYCLE-GRAPH GREEN'S FUNCTIONS (= weight-2 Bernoulli/Eisenstein
+   B_2 values) of the P-cycle, in the variables (||p||,||q||) and (||pq||); it is a
+   class function on P^1(F_P)/<+-,inversion> (Klein-4, ALL P>=5), the +- hyperelliptic
+   x modular-inversion quotient.  For P=7 the ambient P^1(F_7)/PSL(2,7) is the Klein
+   quartic X(7); the Klein-4 quotient has 3 cells {apex 0/inf, edge, bulk} = a dessin
+   over {0,1,inf}.  The order-3 (doubling/QR/cubic) structure of X(7) does NOT act on
+   S_P -- only the order-2 part survives, exactly as HYP-2742 found, now for all P.

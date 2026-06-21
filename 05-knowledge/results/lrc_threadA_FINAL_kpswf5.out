@@ -1,0 +1,30 @@
+THREAD A FINAL verification (kind-pasteur kpswf5)
+======================================================================
+
+[1] closed form == direct grid defect (coprime, window 1<p/q<P):
+    P= 3: 239 ratios, mismatches=0
+    P= 5: 479 ratios, mismatches=0
+    P= 7: 719 ratios, mismatches=0
+    P=11: 1199 ratios, mismatches=0
+    P=13: 1439 ratios, mismatches=0
+    P=17: 1919 ratios, mismatches=0
+[1b] HYP-2739/2742 P=7 7x7 table reproduced: mismatches=0
+[1c] HYP-2743 first-row G(1,b)/4=T(M)-T(M-b): mismatches=0
+
+[2] each leg = Bernoulli B_2 value = cycle-C_P Green's fn:
+    2t(P-t) = -2P^2 B_2(t/P) + P^2/3 : exact mismatches=0
+    t(P-t)/P = R_eff(0,t) on C_P (Fourier): max num err=6.22e-15
+
+[3] stabilizer of G_P in PGL_2(F_P) acting on pairs = Klein-4 (order 4):
+    P= 5: |stabilizer| = 4  (expect 4 for P>=5)
+    P= 7: |stabilizer| = 4  (expect 4 for P>=5)
+    P=11: |stabilizer| = 4  (expect 4 for P>=5)
+    P=13: |stabilizer| = 4  (expect 4 for P>=5)
+
+[4] G_P is NOT a function of slope z=p/q (3rd leg ||pq|| is a product coord):
+    P= 7: 6/6 interior slopes are G-multivalued (=> genuinely pair-space)
+    P=11: 10/10 interior slopes are G-multivalued (=> genuinely pair-space)
+    P=13: 12/12 interior slopes are G-multivalued (=> genuinely pair-space)
+
+======================================================================
+TOTAL FAILURES: 0   (ALL CLAIMS CERTIFIED)

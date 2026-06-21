@@ -1,0 +1,74 @@
+========================================================================================
+THREAD B Q2: does the relation-code (Tanner) structure give a USABLE bound on corr?
+Test the ONLY rigorous form: the kernel-magnitude weight enumerator W_L=Sum|K(n)|.
+========================================================================================
+
+(1)(2)(3) Truncated enumerator W_L (=Sum|K|) and signed partial sum vs exact corr:
+set                     corr(exact)  L   #rel   signedSum    W_L(abs) |corr|/W_L
+consec/AP {0..7}            0.30273  1    258     0.03371     0.08569     3.5331
+consec/AP {0..7}            0.30273  2   8930     0.07740     0.56622     0.5347
+consec/AP {0..7}            0.30273  3  93324     0.12261     1.68263     0.1799
+
+Sidon (Mian-Chowla)        -0.01236  1     36    -0.00350     0.00617     2.0018
+Sidon (Mian-Chowla)        -0.01236  2   1720    -0.02371     0.09591     0.1289
+Sidon (Mian-Chowla)        -0.01236  3  18060    -0.01119     0.32829     0.0376
+
+two-block consec            0.09062  1    156     0.02799     0.05907     1.5341
+two-block consec            0.09062  2   3160     0.05983     0.26084     0.3474
+two-block consec            0.09062  3  23394     0.08750     0.55726     0.1626
+
+random wide                 0.01376  1     54     0.00793     0.02048     0.6716
+random wide                 0.01376  2   1270     0.01507     0.08144     0.1689
+random wide                 0.01376  3  14182     0.01920     0.25219     0.0545
+
+dyadic                      0.04472  1      0     0.00000     0.00000        nan
+dyadic                      0.04472  2   1190     0.03235     0.09681     0.4619
+dyadic                      0.04472  3  11816     0.04924     0.26939     0.1660
+
+OBSERVATIONS:
+  - signedSum -> corr as L grows (the Fourier sum reconstructs corr).
+  - W_L (absolute) GROWS with L: the absolute enumerator does NOT converge
+    fast; sum|K| is the conditionally-convergent tail (HYP-2724-FINAL).
+  - ratio |corr|/W_L shrinks as L grows => the absolute bound is increasingly
+    SLACK; the signed cancellation is doing the work, not the enumerator.
+
+(3) Absolute-enumerator GROWTH W_L (does Sum|K| converge?):
+set                          W_1       W_2       W_3   W3/W2   W2/W1
+consec/AP {0..7}         0.08569   0.56622   1.68263   2.972   6.608
+Sidon (Mian-Chowla)      0.00617   0.09591   0.32829   3.423  15.535
+two-block consec         0.05907   0.26084   0.55726   2.136   4.416
+random wide              0.02048   0.08144   0.25219   3.097   3.976
+dyadic                   0.00000   0.09681   0.26939   2.783     inf
+  Ratios W_{L+1}/W_L stay >1 (often ~ growing) => the box-truncated |K| mass
+  keeps accumulating; the ABSOLUTE (triangle-inequality) Tanner bound is VACUOUS
+  in the limit. This is the honest answer to Q2: expansion does NOT give an
+  absolute bound -- the corr is controlled by SIGNED cancellation across the
+  relation code, exactly the conditionally-convergent R6 tail.
+
+(4) Support breakdown of the |K| enumerator mass at L=2 (fraction by support s):
+set                        s=2     s=3     s=4    s>=5
+consec/AP {0..7}         0.014   0.121   0.267   0.598
+Sidon (Mian-Chowla)      0.000   0.032   0.208   0.761
+two-block consec         0.010   0.135   0.335   0.520
+random wide              0.000   0.083   0.324   0.593
+dyadic                   0.167   0.265   0.110   0.458
+  AP concentrates more mass on LOW support (s=2,3 = the cut/Schur layers) than
+  Sidon; this IS the anti-MDS signature (low min-distance => low-weight codewords
+  carry the mass). But low support != small mass: it's where the SIGNED
+  cancellation must be exploited, not bounded absolutely.
+
+========================================================================================
+VERDICT (Thread B Q2): The Tanner/relation-code EXPANSION does NOT yield a usable
+ABSOLUTE bound on corr. Three concrete reasons, all verified above:
+ (i)  girth is degenerate (=4 for all E) -- no girth separation;
+ (ii) the unweighted spectral gap sigma_2 goes the WRONG way (dense AP mixes
+      better) -- the classical sparse-expander frame is inapplicable;
+ (iii) the kernel-magnitude enumerator W_L = Sum|K| does not converge (the
+      absolute/triangle bound is vacuous); corr is a SIGNED sum.
+The relation code's ONE genuine, correct contribution (HYP-2723/2724) is the
+WEIGHT-DISTRIBUTION SHAPE: AP = anti-MDS = min-distance d=2, many low-weight
+codewords, mass on support-3 (A3/additive energy) = the canonical support-3
+driver. The Tanner graph CONFIRMS the extremal dichotomy (AP densest relation
+code <=> hardest) but the BINDING quantity is the signed support-3 sum, i.e.
+the SAME conditionally-convergent nut as HYP-2602/HYP-2724-FINAL -- the reframe
+is clarifying, not a new bound.
