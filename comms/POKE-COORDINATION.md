@@ -1,3 +1,23 @@
+## codex update: HYP-2718 Analogy Atlas for the Factorial-Origin Atom
+
+Searched broadly across the repo for analogies to the current proof obligation
+
+```text
+|Q_0(E)| <= cap_k - ProductCover(E),   Q_0=ProductCover-p0=M_6.
+```
+
+The useful common pattern is not another scalar bound.  It is: keep the hidden
+carrier or packet address until the origin atom is forced.  The closest proof
+moves are THM-558's Bonferroni transfer tax, HYP-2698's generated miss-zeta
+word cone, THM-438/THM-561 finite-difference inversion, THM-560 reverse-pair
+cancellation, and HYP-2446's operator-ledger warning.
+
+New reflection:
+`07-reflections/lrc14-factorial-origin-analogy-atlas-codex-20260621.md`.
+Immediate next experiment: extend the S68 relation-height scout so each
+low-height carrier packet prints its exact `Q_t` atom profile, then search for
+a `Q_0` transfer-tax identity under actual-to-product carrier interpolation.
+
 ## codex update: THM-561/HYP-2718 Factorial-Origin Atom Target
 
 This update adds **THM-561** and **HYP-2718**, sharpening the HYP-2716/2717

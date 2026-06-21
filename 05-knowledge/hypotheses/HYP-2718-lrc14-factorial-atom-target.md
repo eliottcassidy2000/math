@@ -151,6 +151,34 @@ negative examples such as `-27973/352800` to positive examples such as
 `2423/44100` in the top-row bank), reinforcing that product is not an
 envelope.  The proof needs a signed scalar error bound for the cover atom.
 
+## Analogy Atlas Addendum
+
+The repo-wide analogy pass in
+`07-reflections/lrc14-factorial-origin-analogy-atlas-codex-20260621.md`
+reinforces the proof discipline for this target:
+
+```text
+preserve generated carrier words and relation packets until Q_0 is forced;
+only then take the scalar bound.
+```
+
+The closest reusable mechanisms are:
+
+- THM-558's Bonferroni transfer tax, suggesting a `Q_0` tax identity under an
+  actual-to-product carrier interpolation;
+- HYP-2698's generated miss-zeta words, suggesting a singleton-product base
+  lemma before context merging;
+- THM-438's finite-difference handoff, suggesting a cofactor search for the
+  admissible `Q_t` profiles;
+- THM-560's reverse-pair cancellation, suggesting a carrier mode pairing
+  `n <-> -n` before absolute values;
+- HYP-2446's operator-ledger warning, suggesting that raw gap, raw height, and
+  raw atom size are only scalar shadows.
+
+The immediate computational refinement is to extend the S68 relation-height
+scout so that each low-height carrier packet reports its exact `Q_t` profile,
+not only `ProductCover-p0`.
+
 ## Proof Route
 
 Combine THM-561 with HYP-2717 as follows.

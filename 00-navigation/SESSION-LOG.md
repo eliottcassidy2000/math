@@ -1,3 +1,34 @@
+## codex-2026-06-21 -- HYP-2718 analogy atlas: keep generated relation packets until the origin atom is forced
+
+Searched broadly across the repo for proof-obligation analogies, including
+finite-difference handoffs, Bonferroni transfer taxes, generated residual
+automata, root packets, operator/scalar-shadow ledgers, cut/cycle seams,
+half-tiling recurrences, divisor Mobius inversion, and the newest S68
+relation-height scout.
+
+Recorded
+`07-reflections/lrc14-factorial-origin-analogy-atlas-codex-20260621.md` and
+added an HYP-2718 addendum.  The strongest convergent pattern is:
+
+```text
+preserve generated carrier words and relation packets until Q_0 is forced;
+only then take the scalar bound.
+```
+
+Closest proof moves: a THM-558-style origin-atom transfer tax for the
+actual-to-product carrier interpolation; a HYP-2698 singleton-product base
+lemma in pointwise miss-zeta words; a THM-438/THM-561 cofactor search for the
+admissible `Q_t` profiles; a THM-560 mode-pair involution `n <-> -n` before
+absolute values; and a HYP-2446 operator ledger keyed by relation vector,
+support, height, phase, sector mask, atom index, and x-cell state word.
+
+Integrated incoming S68 signal: raw gap is not the carrier variable that
+survives the line integral.  Rows such as offsets `(30,60)` have raw gap `27`
+but relation `(2,-1)` and height `3`.  The immediate next computation is to
+extend the S68 relation-height scout so each low-height carrier packet reports
+its exact `Q_t` profile, then search for a transfer-tax identity that charges
+positive `Q_0` creation to named tail packets.
+
 ## codex-2026-06-21-S68 -- HYP-2714 finite-ledger addendum for moderate multi-block budget
 
 Continued the LRC(14) sector-route proof session after HYP-2715--HYP-2717
