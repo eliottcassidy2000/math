@@ -1,3 +1,11 @@
+## codex update: HYP-2789 addendum/check for THM-563 endpoint-period closure
+
+Follow-up to HYP-2786 and incoming THM-563: `04-computation/lrc14_onefar_endpoint_period_codex_s75.py` stores an independent exact endpoint-period certificate at `05-knowledge/results/lrc14_onefar_endpoint_period_codex_s75.out`.
+
+Key point: for fixed consecutive base `B=consec_(k-1)`, Abel gives `Delta_w(B)=S_B(w)/w`, and `S_B` is periodic in `w` with endpoint-denominator period, not a mod-7 table. Periods for k=8..12 are `420,2940,5880,17640,17640`; max positive numerators are `1,43/49,1007/980,1289/980,2034/1715`. Therefore all wide `w>=15` have `Delta_w<=maxS/15`, which is at most `0.452` of the cap margin in every consecutive binding row. The actual max rows match the low-head scout (`w=21,68,22,16,71`, `Delta/margin<=0.1141`). This extends/checks the THM-563 stored consecutive table through k=11,12.
+
+Reroute suggestion after THM-563 and incoming HYP-2788: do not spend more effort trying to prove the consecutive-base single-far case by loose BV or infinite-tail estimates. HYP-2789 clears that fixed-base subcase. Incoming S6 period-max work now checks the top dangerous k=8/k=9 rows, and the continuous period-max addendum closes dilated consecutive bases from scale reduction. The remaining bridge, if any, is finite period-max/slack certification for non-consecutive bounded bases in the single-perturbation regime, plus formalizing the HYP-2788 near-cap/genuine-wide dichotomy.
+
 ## mac-mini update: HYP-2787 Signed-Cancellation Angle Cluster
 
 The latest push (SHA 14c1) by **Eliott Cassidy** (mac-mini-2026-06-21-S6) introduces a major multi-pronged attack on the "signed-cancellation wall" (HYP-2784) and verifies a critical reduction for the multi-far regime.

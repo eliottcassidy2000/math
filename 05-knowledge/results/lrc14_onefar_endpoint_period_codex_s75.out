@@ -1,0 +1,57 @@
+HYP-2789/S75 one-far endpoint-period certificate
+Binding rows: B=consec_(k-1), k=8..12, all wide w>=15.
+Exact identity: Delta_w = S_B(w)/w, with S_B periodic in w.
+The period is the lcm of Abel endpoint denominators, not a mod-7 table.
+
+cap and plateau context:
+  k=8: cap=0.381463, Q(k-1)=0.196599, margin=0.184864
+  k=9: cap=0.494256, Q(k-1)=0.362099, margin=0.132157
+  k=10: cap=0.604396, Q(k-1)=0.447886, margin=0.156509
+  k=11: cap=0.725275, Q(k-1)=0.531252, margin=0.194023
+  k=12: cap=0.857143, Q(k-1)=0.602243, margin=0.254900
+
+================================================================================================
+EXACT ONE-PERIOD CERTIFICATE
+  Reading: maxS is the maximum positive endpoint numerator S_B(w)=w*Delta_w over one complete period.
+  Since S_B(w+L)=S_B(w), all w>=15 satisfy Delta_w <= maxS/15.
+ k  period pack   V         maxS   maxS/(15m)  cut best_w   bestDelta    best/m
+ 8     420   28  43            1     0.360626    6     21  0.02108844  0.114075
+ 9    2940   40  45        43/49     0.442682    7     68  0.01073001  0.081192
+10    5880   38  45     1007/980     0.437695    7     22  0.01632211  0.104288
+11   17640   41  43     1289/980     0.451942    7     16  0.01628199  0.083918
+12   17640   34  39    2034/1715     0.310189    5     71  0.01090945  0.042799
+
+endpoint numerator extremes:
+  k=8: maxS=1 at w=175; minS=-39/49 at w=116; max|S|=1 at w=175 (signed 1)
+  k=9: maxS=43/49 at w=1659; minS=-363/343 at w=384; max|S|=363/343 at w=384 (signed -363/343)
+  k=10: maxS=1007/980 at w=231; minS=-429/343 at w=956; max|S|=429/343 at w=956 (signed -429/343)
+  k=11: maxS=1289/980 at w=11991; minS=-1819/1470 at w=13678; max|S|=1289/980 at w=11991 (signed 1289/980)
+  k=12: maxS=2034/1715 at w=14796; minS=-2192/1715 at w=3084; max|S|=2192/1715 at w=3084 (signed -2192/1715)
+
+================================================================================================
+SYNTHESIS
+  1. The exact all-w>=15 maxima match the short low-head scout rows:
+       k=8 w=21, k=9 w=68, k=10 w=22, k=11 w=16, k=12 w=71.
+  2. The positive endpoint numerator satisfies maxS <= 1289/980 < 1.316
+     across k=8..12.  Therefore maxS/15 is below 0.453 of the cap margin
+     in every consecutive binding row.
+  3. This gives an exact finite certificate for the consec-base single-far
+     branch.  It is compatible with HYP-2785: the modulus is endpoint-period
+     sized, not residue-only mod 7.
+  4. Remaining proof work: prove near-cap bases reduce to this consecutive
+     endpoint-period certificate, or give each non-consec base a plateau-slack
+     ledger against its own endpoint numerator.
+
+================================================================================================
+TOURNAMENT ANALYSIS
+  vertices: consecutive one-far binding rows k=8..12
+  pairwise observable: larger maxS/(15*margin), then larger maxDelta/margin
+  switch/gauge: compare endpoint-period numerators before scalarizing by 1/w
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
+  directed_3cycles=0
+  Hamiltonian pressure path:
+    k=11: maxS/(15*margin)=0.451942, maxDelta/margin=0.083918, period=17640
+    k=9: maxS/(15*margin)=0.442682, maxDelta/margin=0.081192, period=2940
+    k=10: maxS/(15*margin)=0.437695, maxDelta/margin=0.104288, period=5880
+    k=8: maxS/(15*margin)=0.360626, maxDelta/margin=0.114075, period=420
+    k=12: maxS/(15*margin)=0.310189, maxDelta/margin=0.042799, period=17640
