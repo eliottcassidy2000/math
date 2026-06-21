@@ -1,0 +1,17 @@
+LRC(14) OPEN-Q-108  THREAD 3: the '56 challenger shapes' probe (kps-wf2)
+
+==============================================================================
+PART A -- challenger shapes = iso classes of the support-3 relation hypergraph
+==============================================================================
+Window: all k-subsets of {0,...,W}; shape = role-labeled support-3 hypergraph
+up to relabeling.  |coef|<=2 (additive box).  Roles: AP{mid,end}, Schur{sum,add}.
+
+ k   W  #subsets  #shapes  #nonempty  A000568 note
+ 4   6        35       20         19  
+ 5   7        56       50         50  
+ 5   9       252      163        162  
+ 6   8        84       83         83  
+ 6  10       462      419        419  
+ 6  12      1716     1321       1321  
+ 7   9       120      120        120  
+ 7  11       792      778        778  

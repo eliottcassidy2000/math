@@ -1,0 +1,31 @@
+#sets=140  #patterns=18  design rank=18
+LINEAR FIT corr ~ pattern-counts:  R^2 = 0.572814   max|residual| = 0.14488
+
+Fitted coefficient per pattern (=predicted K(pattern)); |coef|>1e-4:
+   support 2  pattern (-2, 1)             K_fit = -0.02668
+   support 3  pattern (-2, -1, 1)         K_fit = +0.01590
+   support 4  pattern (-2, -2, -2, 1)     K_fit = +0.00948
+   support 3  pattern (-2, 1, 1)          K_fit = +0.00769
+   support 3  pattern (-2, -1, 2)         K_fit = +0.00734
+   support 4  pattern (-2, -1, -1, 1)     K_fit = -0.00642
+   support 3  pattern (-2, -2, 1)         K_fit = +0.00594
+   support 4  pattern (-1, -1, 1, 1)      K_fit = +0.00405
+   support 4  pattern (-2, -2, 1, 2)      K_fit = -0.00394
+   support 4  pattern (-2, -2, -1, 1)     K_fit = -0.00374
+   support 4  pattern (-1, -1, -1, 1)     K_fit = +0.00333
+   support 4  pattern (-2, -1, 1, 1)      K_fit = -0.00276
+   support 3  pattern (-1, -1, 1)         K_fit = +0.00121
+   support 4  pattern (-2, -1, 1, 2)      K_fit = -0.00100
+   support 4  pattern (-2, 1, 1, 1)       K_fit = +0.00055
+   support 4  pattern (-2, -2, 1, 1)      K_fit = +0.00054
+   support 4  pattern (-2, -2, -1, 2)     K_fit = -0.00034
+   support 4  pattern (-2, -1, -1, 2)     K_fit = +0.00023
+
+DOMINANT support-3 counts across sets (does AP top them?):
+   AP{0..7}         corr=+0.3027  total support-3 = 57
+   Sidon            corr=-0.0124  total support-3 = 6
+   random sample    corr=+0.0262  total support-3 = 14
+
+INTERPRETATION: R^2~1 ==> corr is (to truncation) a FIXED linear form in
+pattern counts ==> wide bound is COMBINATORIAL; AP maximizes the dominant counts.
+DONE.

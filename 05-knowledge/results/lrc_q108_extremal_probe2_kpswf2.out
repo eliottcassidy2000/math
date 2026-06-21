@@ -1,0 +1,36 @@
+LRC(14) OPEN-Q-108 THREAD 2 -- PROBE 2 (argmax convention + box convergence)
+
+
+==================================================================================
+PROBE 1 (k=7, window [0,11]) -- true argmax; is 0 special; is the extremiser an AP
+==================================================================================
+  argmax over ALL k-subsets:        corr=0.257826  E=(1, 2, 3, 4, 5, 6, 7)
+  argmax with 0 PINNED:             corr=0.141499  E=(0, 1, 2, 3, 4, 5, 6)
+  best consecutive block (any shift): corr=0.257826  E=(1, 2, 3, 4, 5, 6, 7)
+  consec_7 = [0..6]:              corr=0.141499
+  free argmax gap-multiset = [1, 1, 1, 1, 1, 1]  -> single-step AP? True
+  NOTE: corr is dilation-invariant but NOT translation-invariant; 0 is a
+        degenerate speed (always in sector 0). The genuine extremiser is the
+        consecutive block placed to AVOID 0 (offset 0 wastes a speed).
+
+==================================================================================
+PROBE 1 (k=8, window [0,12]) -- true argmax; is 0 special; is the extremiser an AP
+==================================================================================
+  argmax over ALL k-subsets:        corr=0.320418  E=(1, 2, 3, 4, 5, 6, 7, 8)
+  argmax with 0 PINNED:             corr=0.302731  E=(0, 1, 2, 3, 4, 5, 6, 7)
+  best consecutive block (any shift): corr=0.320418  E=(1, 2, 3, 4, 5, 6, 7, 8)
+  consec_8 = [0..7]:              corr=0.302731
+  free argmax gap-multiset = [1, 1, 1, 1, 1, 1, 1]  -> single-step AP? True
+  NOTE: corr is dilation-invariant but NOT translation-invariant; 0 is a
+        degenerate speed (always in sector 0). The genuine extremiser is the
+        consecutive block placed to AVOID 0 (offset 0 wastes a speed).
+
+==================================================================================
+PROBE 2 (k=7) -- does W>=6 over a widening box converge to the EXACT corr?
+==================================================================================
+
+  consec [0..k-1] = [0, 1, 2, 3, 4, 5, 6]   exact corr = 0.141499
+      L   sumK(box)  support<=5 part  support>=6 part  box vs corr
+      2    0.009143         9.74e-17         0.009143    -0.132356
+      3    0.001035         8.35e-18         0.001035    -0.140465
+      4    0.017382         2.58e-16         0.017382    -0.124118
