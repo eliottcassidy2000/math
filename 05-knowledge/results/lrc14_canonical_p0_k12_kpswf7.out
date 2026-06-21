@@ -1,0 +1,25 @@
+========================================================================================
+CANONICAL p0=measS7_full over [0,1]: does consec maximize? does wall hold?
+========================================================================================
+k=8: p0_full(consec) = 0.327211
+k=9: p0_full(consec) = 0.416156
+k=10: p0_full(consec) = 0.504478
+k=11: p0_full(consec) = 0.581463
+k=12: p0_full(consec) = 0.624114
+
+--- E* k=12 canonical check ---
+  p0_full(E*=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)) = 11381/17640 = 0.64518141
+  p0_full(consec)  = 121103/194040 = 0.62411358
+  E* beats consec on CANONICAL p0? True  delta=+0.02106782
+
+--- global argmax + wall check, CANONICAL p0, full-residue/primitive ---
+  k=8 box14: |strat|= 319 | consec p0=0.32721 | argmax=CONSEC
+        max p0=0.32721 | #rivals>consec=0 (worst +0.00000) | cap_k~0.51221 | #cap-violations=0
+  k=9 box14: |strat|= 688 | consec p0=0.41616 | argmax=CONSEC
+        max p0=0.41616 | #rivals>consec=0 (worst +0.00000) | cap_k~0.54816 | #cap-violations=0
+  k=10 box14: |strat|= 832 | consec p0=0.50448 | argmax=CONSEC
+        max p0=0.50448 | #rivals>consec=0 (worst +0.00000) | cap_k~0.66148 | #cap-violations=0
+  k=11 box14: |strat|= 620 | consec p0=0.58146 | argmax=CONSEC
+        max p0=0.58146 | #rivals>consec=0 (worst +0.00000) | cap_k~0.77546 | #cap-violations=0
+  k=12 box14: |strat|= 292 | consec p0=0.62411 | argmax=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)
+        max p0=0.64518 | #rivals>consec=4 (worst +0.02107) | cap_k~0.87911 | #cap-violations=0

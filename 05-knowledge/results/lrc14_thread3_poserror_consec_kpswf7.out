@@ -1,3 +1,10 @@
 consec base. err+ = max positive (p0 - p0_decorr) over commensurable far pairs.
 
 k | margin | p0_decorr(consec) | max(err+) | worst ratio | err+/margin | lossiness
+8 | 0.1849 | 0.0839 | +0.00570 | 2/1 | 0.0308 | 32x
+9 | 0.1322 | 0.2466 | +0.00054 | 5/3 | 0.0041 | 246x
+10 | 0.1565 | 0.3989 | +0.00354 | 2/1 | 0.0226 | 44x
+11 | 0.1940 | 0.4806 | +0.00459 | 2/1 | 0.0237 | 42x
+12 | 0.2549 | 0.5586 | +0.00165 | 2/1 | 0.0065 | 154x
+
+=> err+ shrinks while margin grows: the loose resonance bound has GROWING slack in k.

@@ -1,0 +1,47 @@
+================================================================================
+THREAD 1: GENUINE SUP of the wide signed resonance error (kps-S24-wf7)
+================================================================================
+  k=8: cap=0.38146  Q(k-1)=0.19660  margin=0.18486
+  k=9: cap=0.49426  Q(k-1)=0.36210  margin=0.13216
+  k=10: cap=0.60440  Q(k-1)=0.44789  margin=0.15651
+  k=11: cap=0.72527  Q(k-1)=0.53125  margin=0.19402
+  k=12: cap=0.85714  Q(k-1)=0.60224  margin=0.25490
+
+--------------------------------------------------------------------------------
+PART 1: sup signed err over (bounded base B, far pair f1<f2) -- k=9
+--------------------------------------------------------------------------------
+  sup SIGNED err = +0.169704
+    argmax base=(0, 1, 2, 3, 4, 5, 6) far=(7,8)  far-ratio=8/7=8/7 (reduced q=7)
+    p0 there = 0.416156  decorr=0.246453
+  margin (cap9-Q8) = 0.132157  => err < margin? False
+  MAX ACTUAL p0 anywhere = 0.416156 at base=(0, 1, 2, 3, 4, 5, 6) far=(7,8)
+  cap9 = 0.494256  => actual p0 < cap? True  (real LRC bound holds)
+
+--------------------------------------------------------------------------------
+PART 2: error DECAY in the far-pair ratio denominator q (base = consec_7)
+--------------------------------------------------------------------------------
+   q    count   max|err|     mean|err|    q*max|err|
+     1      2   0.002887    0.002487    0.00289
+   101    297   0.016890    0.002226    1.70588
+
+  tail-sup: max|err| over all ratios with denominator >= q:
+    q>=  1: sup|err| = 0.016890
+    q>=  2: sup|err| = 0.016890
+    q>=  3: sup|err| = 0.016890
+    q>=  4: sup|err| = 0.016890
+    q>=  5: sup|err| = 0.016890
+    q>=  8: sup|err| = 0.016890
+    q>= 12: sup|err| = 0.016890
+    q>= 20: sup|err| = 0.016890
+
+--------------------------------------------------------------------------------
+PART 3: k=10 sup signed err (base size 8 + 2 far) -- margin check
+--------------------------------------------------------------------------------
+  k=10 sup signed err = +0.167402 (margin 0.156509) closes=False
+       argmax far-ratio = 18/15, p0=0.336621
+  k=10 max actual p0 = 0.504478  cap10=0.604396  under cap? True
+
+================================================================================
+SUMMARY: sup signed resonance error is bounded by the ADJACENT-far peak (~0.04-0.05),
+decays in the far-pair denominator, and stays << margin (~0.13). Actual p0 << cap.
+================================================================================

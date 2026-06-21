@@ -1,0 +1,46 @@
+================================================================================
+THREAD 1 v2: SUP wide signed error WITH span>14 enforced (kps-S24-wf7)
+================================================================================
+  k=8: cap=0.38146 Q(k-1)=0.19660 margin(cap-Q)=0.18486
+  k=9: cap=0.49426 Q(k-1)=0.36210 margin(cap-Q)=0.13216
+  k=10: cap=0.60440 Q(k-1)=0.44789 margin(cap-Q)=0.15651
+  k=11: cap=0.72527 Q(k-1)=0.53125 margin(cap-Q)=0.19402
+  k=12: cap=0.85714 Q(k-1)=0.60224 margin(cap-Q)=0.25490
+
+--------------------------------------------------------------------------------
+k=8: scan WIDE configs (span>14, |E|=8, primitive, 0 in E)
+--------------------------------------------------------------------------------
+  scanned 3197 wide configs
+  (A) sup ACTUAL p0 = 0.214796  cap=0.381463  margin_to_cap=0.166667  over_cap=0
+      argmax p0 E=(0, 2, 4, 6, 8, 10, 12, 21)
+  (B) sup signed err (p0 - decorr) = 0.107985
+      at E=(0, 2, 4, 13, 14, 15, 17, 19) base=(0, 2, 4, 13, 14) far=(15, 17, 19)
+      available room (cap - decorr) there = 0.354283  => err < room? True
+      err < fixed Q-margin 0.18486? True
+
+--------------------------------------------------------------------------------
+k=9: scan WIDE configs (span>14, |E|=9, primitive, 0 in E)
+--------------------------------------------------------------------------------
+  scanned 3198 wide configs
+  (A) sup ACTUAL p0 = 0.372408  cap=0.494256  margin_to_cap=0.121848  over_cap=0
+      argmax p0 E=(0, 2, 4, 6, 8, 10, 12, 14, 29)
+  (B) sup signed err (p0 - decorr) = 0.121298
+      at E=(0, 4, 5, 9, 10, 11, 13, 14, 15) base=(0, 4, 5, 9, 10, 11, 13, 14) far=(15,)
+      available room (cap - decorr) there = 0.396667  => err < room? True
+      err < fixed Q-margin 0.13216? True
+
+--------------------------------------------------------------------------------
+k=10: scan WIDE configs (span>14, |E|=10, primitive, 0 in E)
+--------------------------------------------------------------------------------
+  scanned 3217 wide configs
+  (A) sup ACTUAL p0 = 0.464208  cap=0.604396  margin_to_cap=0.140187  over_cap=0
+      argmax p0 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 22)
+  (B) sup signed err (p0 - decorr) = 0.170045
+      at E=(0, 5, 6, 10, 11, 12, 14, 15, 16, 17) base=(0, 5, 6, 10, 11, 12, 14) far=(15, 16, 17)
+      available room (cap - decorr) there = 0.469651  => err < room? True
+      err < fixed Q-margin 0.15651? False
+
+================================================================================
+KEY: the REAL bound is (A) sup p0 < cap. (B)'s error can exceed the FIXED Q-margin
+but the relevant comparison is err < (cap - decorr) for the actual split <=> p0 < cap.
+================================================================================

@@ -1,0 +1,21 @@
+=== ANGLE 7b: simplest UPPER-bound majorant measS7 <= min_r meas(hit r) ===
+
+k | consec measS7 | min_r meas(hit r) UPPER bound | cap | bound<cap?
+8 | 0.3272 | 0.6653 | 0.3815 | NO -- bound too weak
+9 | 0.4162 | 0.7068 | 0.4943 | NO -- bound too weak
+10 | 0.5045 | 0.7475 | 0.6044 | NO -- bound too weak
+  (the trivial single-sector majorant: is it already below cap? If yes, near-proof for consec.)
+
+Worst-case over configs: max_E min_r meas(hit r) vs cap (does the majorant CAP everything?)
+  k=8: max_E (min_r meas hit_r) = 0.7137 vs cap=0.3815 | 200/200 configs exceed cap
+     worst E=[0, 1, 3, 4, 5, 7, 9, 13]
+  k=9: max_E (min_r meas hit_r) = 0.7537 vs cap=0.4943 | 200/200 configs exceed cap
+     worst E=[0, 3, 5, 6, 7, 8, 9, 11, 13]
+  => if max single-sector majorant <= cap, then measS7 <= cap for ALL (1-line proof!).
+     if some config's single-sector hit-meas > cap, the majorant is too weak (expected).
+
+=== ANGLE 4: transference error = resonance error (framing confirmation) ===
+  The dense model (iid residues) = p0_decorr; transference error = |measS7 - dense| = resonance err.
+  Already measured <=0.006 at consec base (poserror_consec). So transference IS the wide route,
+  not a new mechanism -- it RE-NAMES the resonance error. The Gowers-norm bound on the error
+  would be the rigorous version of the 32x-lossy resonance bound.

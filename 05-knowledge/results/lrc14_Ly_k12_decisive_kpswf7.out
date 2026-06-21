@@ -1,0 +1,11 @@
+========================================================================================
+DECISIVE: does consec maximize L_y=U4 (the cap-proof functional) where p0 fails?
+========================================================================================
+k=8 L_y(consec)=2633/7350=0.358231 (canon: 2633/7350=0.358231); p0=0.327211
+
+--- k=12: consec vs E* on L_y ---
+  L_y(consec) = 624359/970200 = 0.643536   p0(consec)=0.624114
+  L_y(E*)     = 29287/44100 = 0.664104   p0(E*)    =0.645181
+  consec maximizes L_y vs E*? False   (delta L_y = -0.020568)
+
+--- full L_y argmax scan k=8..13 (full-residue/primitive/span<=14) ---

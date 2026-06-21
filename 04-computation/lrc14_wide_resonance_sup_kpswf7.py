@@ -19,7 +19,8 @@ This script:
 Exact rationals throughout.
 """
 from __future__ import annotations
-import sys, random
+import sys, random, functools
+print = functools.partial(print, flush=True)  # incremental output through tee/pipe
 from fractions import Fraction as F
 from functools import reduce
 from itertools import combinations
@@ -82,7 +83,7 @@ def main():
     random.seed(11)
     # bases: consec_7, even-AP, and random bounded primitive bases of size 7
     bases9 = [tuple(range(7)), tuple([0] + [2 * i for i in range(1, 7)])]
-    while len(bases9) < 80:
+    while len(bases9) < 60:
         B = tuple(sorted(set([0] + random.sample(range(1, 15), 6))))
         if len(B) == 7 and primitive(B):
             bases9.append(B)
@@ -91,8 +92,8 @@ def main():
         d2 = float(decorr(B, 2))
         bmax = max(B)
         # far pair: f1 just past the base, f2 nearby (adjacent up to moderate gap) -- where resonance peaks
-        for f1 in range(bmax + 1, bmax + 40):
-            for f2 in range(f1 + 1, f1 + 40):
+        for f1 in range(bmax + 1, bmax + 30):
+            for f2 in range(f1 + 1, f1 + 30):
                 E = sorted(set(list(B) + [f1, f2]))
                 if len(E) != 9:
                     continue
