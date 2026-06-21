@@ -247,6 +247,78 @@ theorem delsarte_bound_k8 (q : Atom) (hq : ∀ t : Fin atomCount, 0 <= q t) :
   unfold q0
   omega
 
+/-! #### The other binding rows: `k=9,10` and `k=11,12,13`
+
+Same Delsarte structure at every binding row, with THM-534 duals
+`y(9,10)=(1,-13/18,4/9,-1/6,0,0,0)` (×18 → `(18,-13,8,-3,0,0,0)`) and
+`y(11,12,13)=(1,-1/2,1/6,0,0,0,0)` (×6 → `(6,-3,1,0,0,0,0)`).  Readouts:
+`L_y(9)=18*q0+5*q1+2*q4+3*q5`, `L_y(11)=6*q0+3*q1+q2+q5+3*q6`. -/
+
+/-- ×18 integer moment-LP dual for `k=9,10` (THM-534). -/
+def yK9 : Fin atomCount -> Int := fun r =>
+  match r.val with
+  | 0 => 18 | 1 => -13 | 2 => 8 | 3 => -3 | _ => 0
+
+/-- Scaled Delsarte functional for `k=9,10`. -/
+def LyK9 (q : Atom) : Int :=
+  (yK9 ⟨0, by decide⟩) * moment q ⟨0, by decide⟩
+  + (yK9 ⟨1, by decide⟩) * moment q ⟨1, by decide⟩
+  + (yK9 ⟨2, by decide⟩) * moment q ⟨2, by decide⟩
+  + (yK9 ⟨3, by decide⟩) * moment q ⟨3, by decide⟩
+  + (yK9 ⟨4, by decide⟩) * moment q ⟨4, by decide⟩
+  + (yK9 ⟨5, by decide⟩) * moment q ⟨5, by decide⟩
+  + (yK9 ⟨6, by decide⟩) * moment q ⟨6, by decide⟩
+
+theorem LyK9_readout (q : Atom) :
+    LyK9 q = 18 * q ⟨0, by decide⟩ + 5 * q ⟨1, by decide⟩
+      + 2 * q ⟨4, by decide⟩ + 3 * q ⟨5, by decide⟩ := by
+  simp only [LyK9, moment, sum7, atomCount, yK9, chooseInt, choose,
+    Nat.reduceLT, Nat.reduceLeDiff, reduceDIte, reduceIte, Nat.reduceAdd, Nat.reduceMul]
+  omega
+
+/-- Delsarte / moment-LP bound at `k=9,10`: `18 * q0 <= L_y(q)` for nonnegative `q`. -/
+theorem delsarte_bound_k9 (q : Atom) (hq : ∀ t : Fin atomCount, 0 <= q t) :
+    18 * q0 q <= LyK9 q := by
+  rw [LyK9_readout]
+  have h1 : 0 <= q ⟨1, by decide⟩ := hq _
+  have h4 : 0 <= q ⟨4, by decide⟩ := hq _
+  have h5 : 0 <= q ⟨5, by decide⟩ := hq _
+  unfold q0
+  omega
+
+/-- ×6 integer moment-LP dual for `k=11,12,13` (THM-534). -/
+def yK11 : Fin atomCount -> Int := fun r =>
+  match r.val with
+  | 0 => 6 | 1 => -3 | 2 => 1 | _ => 0
+
+/-- Scaled Delsarte functional for `k=11,12,13`. -/
+def LyK11 (q : Atom) : Int :=
+  (yK11 ⟨0, by decide⟩) * moment q ⟨0, by decide⟩
+  + (yK11 ⟨1, by decide⟩) * moment q ⟨1, by decide⟩
+  + (yK11 ⟨2, by decide⟩) * moment q ⟨2, by decide⟩
+  + (yK11 ⟨3, by decide⟩) * moment q ⟨3, by decide⟩
+  + (yK11 ⟨4, by decide⟩) * moment q ⟨4, by decide⟩
+  + (yK11 ⟨5, by decide⟩) * moment q ⟨5, by decide⟩
+  + (yK11 ⟨6, by decide⟩) * moment q ⟨6, by decide⟩
+
+theorem LyK11_readout (q : Atom) :
+    LyK11 q = 6 * q ⟨0, by decide⟩ + 3 * q ⟨1, by decide⟩
+      + q ⟨2, by decide⟩ + q ⟨5, by decide⟩ + 3 * q ⟨6, by decide⟩ := by
+  simp only [LyK11, moment, sum7, atomCount, yK11, chooseInt, choose,
+    Nat.reduceLT, Nat.reduceLeDiff, reduceDIte, reduceIte, Nat.reduceAdd, Nat.reduceMul]
+  omega
+
+/-- Delsarte / moment-LP bound at `k=11,12,13`: `6 * q0 <= L_y(q)` for nonnegative `q`. -/
+theorem delsarte_bound_k11 (q : Atom) (hq : ∀ t : Fin atomCount, 0 <= q t) :
+    6 * q0 q <= LyK11 q := by
+  rw [LyK11_readout]
+  have h1 : 0 <= q ⟨1, by decide⟩ := hq _
+  have h2 : 0 <= q ⟨2, by decide⟩ := hq _
+  have h5 : 0 <= q ⟨5, by decide⟩ := hq _
+  have h6 : 0 <= q ⟨6, by decide⟩ := hq _
+  unfold q0
+  omega
+
 /-- Every scaled cheap direction is outside the generated tail45 strip.
 
 This is a Boolean audit theorem so the module remains self-contained without

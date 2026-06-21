@@ -1,0 +1,30 @@
+
+================================================================================================
+(M4) k=8: L_y = p_0 + (1/10)p_3 + p_6.  Are p_0, p_3, p_6 EACH consec-max?
+================================================================================================
+  p_0 (=meas S7): kps-S9 LEMMA B PROVED consec-max.   p_6=1/(7(k-1)): LEMMA A PROVED consec-max.
+  Remaining: is p_3 consec-max?  Sweep the exhaustive window.
+  k=8 (maxE<=16, 11440 sets): p_0-beaters=0  p_3-beaters=10500  p_6-beaters=0  L_y-beaters=0
+       p_3(consec)=0.10612  max p_3 in window=0.28503 at [0, 10, 11, 12, 13, 14, 15, 16]
+  k=9 (maxE<=14, 3003 sets): p_0-beaters=0  p_3-beaters=648  p_6-beaters=0
+       p_3(consec)=0.09388  max p_3 in window=0.20510 at [0, 7, 8, 9, 10, 11, 12, 13, 14]
+
+================================================================================================
+(M2/M3) M_2 = 2[9p_0+4p_1+p_2+p_4+4p_5+9p_6]-3.  Endpoint (9p_0+9p_6) domination?
+================================================================================================
+  k=8 (maxE<=13, 1716 sets): M_2-beaters=0
+     tightest: (M2c-M2)/2=0.00000  endpoint-surplus 9*(p0,p6 gap)=0.00000  middle-change=0.00000  at [0, 1, 2, 3, 4, 5, 6, 7]
+     => endpoints DOMINATE (endpoint surplus >= middle deficit)
+  k=9 (maxE<=13, 1287 sets): M_2-beaters=0
+     tightest: (M2c-M2)/2=0.00000  endpoint-surplus 9*(p0,p6 gap)=0.00000  middle-change=0.00000  at [0, 1, 2, 3, 4, 5, 6, 7, 8]
+     => endpoints DOMINATE (endpoint surplus >= middle deficit)
+
+================================================================================================
+(M1) Convex order of N about its mean?  Centered comparison consec vs competitors.
+================================================================================================
+  Pure convex order needs equal means; means differ.  We report mean & E[(N-3)^2] per set.
+  k=8 consec: mean=1.6041  E[(N-3)^2]=4.5605  (M_2=2*that-3=6.1211)
+     [0, 1, 2, 3, 4, 5, 6, 7]: mean=1.6041 E[(N-3)^2]=4.5605 >=consec
+     [0, 2, 3, 4, 5, 6, 7, 8]: mean=1.6583 E[(N-3)^2]=4.1505 <consec
+
+DONE.
