@@ -1,0 +1,135 @@
+========================================================================================
+S79 exact q6 boundary-contraction scout for gK8 concentration
+========================================================================================
+Finite target: quantify the small-f correction to the asymptotic q6 -> q6/7 story.
+Risk reading: larger q6 ratio is worse for pure concentration, smaller 10cap-L is worse for gK8.
+Validation against full miss_dist q6:
+  E=(0, 1, 2, 3, 4, 5, 6, 7, 17, 18): q6_grid=1/126, miss_dist_q6=1/126, ok=True
+  E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17): q6_grid=1/119, miss_dist_q6=1/119, ok=True
+  E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18): q6_grid=1/126, miss_dist_q6=1/126, ok=True
+
+########################################################################################
+k=10: frontier packet scan, f/M<= 60, gaps<= 8
+########################################################################################
+Packet tournament Hamiltonian path by risk (min margin, then max q6 ratio):
+  1. single_consecutive count=46
+     max_ratio: packet=single_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7, 8) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 15) q6B=1/56 q6E=1/105 ratio=8/15 L_yK8=1909/420 10cap-L=1169/780
+     max_Ly   : packet=single_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7, 8) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 22) q6B=1/56 q6E=1/154 ratio=4/11 L_yK8=62267/12936 10cap-L=206929/168168
+  2. double_even_ap count=276
+     max_ratio: packet=double_even_ap B=(0, 2, 4, 6, 8, 10, 12, 14) E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 16) q6B=1/49 q6E=1/112 ratio=7/16 L_yK8=7871/1680 10cap-L=29677/21840
+     max_Ly   : packet=double_even_ap B=(0, 2, 4, 6, 8, 10, 12, 14) E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 16) q6B=1/49 q6E=1/112 ratio=7/16 L_yK8=7871/1680 10cap-L=29677/21840
+  3. double_s78_leader_base count=368
+     max_ratio: packet=double_s78_leader_base B=(0, 1, 3, 5, 7, 9, 11, 13) E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 16) q6B=1/91 q6E=1/112 ratio=13/16 L_yK8=113765/28028 10cap-L=55635/28028
+     max_Ly   : packet=double_s78_leader_base B=(0, 1, 3, 5, 7, 9, 11, 13) E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17) q6B=1/91 q6E=1/119 ratio=13/17 L_yK8=393157/85085 10cap-L=17299/12155
+  4. double_consecutive count=368
+     max_ratio: packet=double_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7) E=(0, 1, 2, 3, 4, 5, 6, 7, 15, 16) q6B=1/49 q6E=1/112 ratio=7/16 L_yK8=47009/11760 10cap-L=312883/152880
+     max_Ly   : packet=double_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7) E=(0, 1, 2, 3, 4, 5, 6, 7, 21, 22) q6B=1/49 q6E=1/154 ratio=7/22 L_yK8=37159/8085 10cap-L=152183/105105
+  5. single_top_cluster count=46
+     max_ratio: packet=single_top_cluster B=(0, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=11281937/2522520 10cap-L=3964063/2522520
+     max_Ly   : packet=single_top_cluster B=(0, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=11281937/2522520 10cap-L=3964063/2522520
+  6. single_top14 count=46
+     max_ratio: packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=204/49 10cap-L=1198/637
+     max_Ly   : packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 14, 21) q6B=1/98 q6E=1/147 ratio=2/3 L_yK8=929/210 10cap-L=4423/2730
+  7. double_top_cluster count=368
+     max_ratio: packet=double_top_cluster B=(0, 8, 9, 10, 11, 12, 13, 14) E=(0, 8, 9, 10, 11, 12, 13, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=4374529/1009008 10cap-L=1723871/1009008
+     max_Ly   : packet=double_top_cluster B=(0, 8, 9, 10, 11, 12, 13, 14) E=(0, 8, 9, 10, 11, 12, 13, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=4374529/1009008 10cap-L=1723871/1009008
+  8. double_top14 count=368
+     max_ratio: packet=double_top14 B=(0, 1, 2, 3, 4, 5, 6, 14) E=(0, 1, 2, 3, 4, 5, 6, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=2747/735 10cap-L=22039/9555
+     max_Ly   : packet=double_top14 B=(0, 1, 2, 3, 4, 5, 6, 14) E=(0, 1, 2, 3, 4, 5, 6, 14, 15, 17) q6B=1/98 q6E=1/119 ratio=14/17 L_yK8=96431/24990 10cap-L=709897/324870
+Top q6-ratio rows in packet bank:
+   packet=single_top_cluster B=(0, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=11281937/2522520 10cap-L=3964063/2522520
+   packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=204/49 10cap-L=1198/637
+   packet=double_top_cluster B=(0, 8, 9, 10, 11, 12, 13, 14) E=(0, 8, 9, 10, 11, 12, 13, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=4374529/1009008 10cap-L=1723871/1009008
+   packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 14, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=1237/294 10cap-L=7019/3822
+   packet=single_top_cluster B=(0, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 7, 8, 9, 10, 11, 12, 13, 14, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=2394011/630630 10cap-L=1417489/630630
+   packet=double_top14 B=(0, 1, 2, 3, 4, 5, 6, 14) E=(0, 1, 2, 3, 4, 5, 6, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=2747/735 10cap-L=22039/9555
+   packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 14, 17) q6B=1/98 q6E=1/119 ratio=14/17 L_yK8=18041/4165 10cap-L=92717/54145
+   packet=double_top_cluster B=(0, 8, 9, 10, 11, 12, 13, 14) E=(0, 8, 9, 10, 11, 12, 13, 14, 15, 17) q6B=1/98 q6E=1/119 ratio=14/17 L_yK8=3035351/779688 10cap-L=1677049/779688
+
+########################################################################################
+k=11: frontier packet scan, f/M<= 60, gaps<= 8
+########################################################################################
+Packet tournament Hamiltonian path by risk (min margin, then max q6 ratio):
+  1. single_consecutive count=46
+     max_ratio: packet=single_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15) q6B=1/63 q6E=1/105 ratio=3/5 L_yK8=93553/17640 10cap-L=447011/229320
+     max_Ly   : packet=single_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 16) q6B=1/63 q6E=1/112 ratio=9/16 L_yK8=13247/2352 10cap-L=49549/30576
+  2. double_s78_leader_base count=368
+     max_ratio: packet=double_s78_leader_base B=(0, 2, 4, 6, 7, 8, 10, 12, 14) E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=20141/3920 10cap-L=107767/50960
+     max_Ly   : packet=double_s78_leader_base B=(0, 2, 4, 6, 7, 8, 10, 12, 14) E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 16, 20) q6B=1/98 q6E=1/140 ratio=7/10 L_yK8=13177/2352 10cap-L=50459/30576
+  3. double_consecutive count=368
+     max_ratio: packet=double_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7, 8) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 15, 16) q6B=1/56 q6E=1/112 ratio=1/2 L_yK8=58699/11760 10cap-L=345713/152880
+     max_Ly   : packet=double_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7, 8) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 21, 22) q6B=1/56 q6E=1/154 ratio=4/11 L_yK8=11569/2156 10cap-L=52883/28028
+  4. single_top14 count=46
+     max_ratio: packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=29933/5880 10cap-L=165271/76440
+     max_Ly   : packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14, 21) q6B=1/98 q6E=1/147 ratio=2/3 L_yK8=2053/392 10cap-L=10271/5096
+  5. double_top_cluster count=368
+     max_ratio: packet=double_top_cluster B=(0, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=8769641/1681680 10cap-L=3427159/1681680
+     max_Ly   : packet=double_top_cluster B=(0, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=8769641/1681680 10cap-L=3427159/1681680
+  6. single_top_cluster count=46
+     max_ratio: packet=single_top_cluster B=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=6563731/1261260 10cap-L=2583869/1261260
+     max_Ly   : packet=single_top_cluster B=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=6563731/1261260 10cap-L=2583869/1261260
+  7. double_top14 count=368
+     max_ratio: packet=double_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=10895/2352 10cap-L=80125/30576
+     max_Ly   : packet=double_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 14, 21, 22) q6B=1/98 q6E=1/154 ratio=7/11 L_yK8=41159/8085 10cap-L=227233/105105
+Top q6-ratio rows in packet bank:
+   packet=single_top_cluster B=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=6563731/1261260 10cap-L=2583869/1261260
+   packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=29933/5880 10cap-L=165271/76440
+   packet=double_top_cluster B=(0, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=8769641/1681680 10cap-L=3427159/1681680
+   packet=double_s78_leader_base B=(0, 2, 4, 6, 7, 8, 10, 12, 14) E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=20141/3920 10cap-L=107767/50960
+   packet=single_top_cluster B=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=1276967/252252 10cap-L=552553/252252
+   packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=1471/294 10cap-L=8597/3822
+   packet=double_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=10895/2352 10cap-L=80125/30576
+   packet=double_s78_leader_base B=(0, 2, 4, 6, 7, 8, 10, 12, 14) E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 16, 17) q6B=1/98 q6E=1/119 ratio=14/17 L_yK8=51529/9996 10cap-L=272603/129948
+
+########################################################################################
+k=12: frontier packet scan, f/M<= 60, gaps<= 8
+########################################################################################
+Packet tournament Hamiltonian path by risk (min margin, then max q6 ratio):
+  1. double_s78_leader_base count=368
+     max_ratio: packet=double_s78_leader_base B=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14) E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=2234761/388080 10cap-L=1091639/388080
+     max_Ly   : packet=double_s78_leader_base B=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14) E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18) q6B=1/98 q6E=1/126 ratio=7/9 L_yK8=30494/4851 10cap-L=11086/4851
+  2. single_consecutive count=46
+     max_ratio: packet=single_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15) q6B=1/70 q6E=1/105 ratio=2/3 L_yK8=6077/980 10cap-L=2323/980
+     max_Ly   : packet=single_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 26) q6B=1/70 q6E=1/182 ratio=5/13 L_yK8=102619/16380 10cap-L=37781/16380
+  3. double_consecutive count=368
+     max_ratio: packet=double_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16) q6B=1/63 q6E=1/112 ratio=9/16 L_yK8=207677/35280 10cap-L=94723/35280
+     max_Ly   : packet=double_consecutive B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 21, 22) q6B=1/63 q6E=1/154 ratio=9/22 L_yK8=234307/38808 10cap-L=98333/38808
+  4. single_top_cluster count=46
+     max_ratio: packet=single_top_cluster B=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=379829/63063 10cap-L=160711/63063
+     max_Ly   : packet=single_top_cluster B=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=379829/63063 10cap-L=160711/63063
+  5. double_top_cluster count=368
+     max_ratio: packet=double_top_cluster B=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=631783/105105 10cap-L=269117/105105
+     max_Ly   : packet=double_top_cluster B=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=631783/105105 10cap-L=269117/105105
+  6. single_top14 count=46
+     max_ratio: packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=7361/1260 10cap-L=3439/1260
+     max_Ly   : packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 27) q6B=1/98 q6E=1/189 ratio=14/27 L_yK8=31463/5292 10cap-L=13897/5292
+  7. double_top14 count=368
+     max_ratio: packet=double_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=4317/784 10cap-L=2403/784
+     max_Ly   : packet=double_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14, 21, 22) q6B=1/98 q6E=1/154 ratio=7/11 L_yK8=75055/12936 10cap-L=35825/12936
+Top q6-ratio rows in packet bank:
+   packet=single_top_cluster B=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=379829/63063 10cap-L=160711/63063
+   packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=7361/1260 10cap-L=3439/1260
+   packet=double_top_cluster B=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=631783/105105 10cap-L=269117/105105
+   packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=41911/7056 10cap-L=18569/7056
+   packet=double_s78_leader_base B=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14) E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=2234761/388080 10cap-L=1091639/388080
+   packet=single_top_cluster B=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=3565291/630630 10cap-L=1840109/630630
+   packet=double_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14, 15, 16) q6B=1/98 q6E=1/112 ratio=7/8 L_yK8=4317/784 10cap-L=2403/784
+   packet=single_top14 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 17) q6B=1/98 q6E=1/119 ratio=14/17 L_yK8=19451/3332 10cap-L=9109/3332
+
+########################################################################################
+EXHAUSTIVE bounded-base single-far q6-ratio scan
+########################################################################################
+k=10: rows=138138 seconds=87.68
+  best: packet=single_exhaustive B=(0, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=11281937/2522520 10cap-L=3964063/2522520
+k=11: rows=92092 seconds=63.14
+  best: packet=single_exhaustive B=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=6563731/1261260 10cap-L=2583869/1261260
+k=12: rows=46046 seconds=33.95
+  best: packet=single_exhaustive B=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14) E=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) q6B=1/98 q6E=1/105 ratio=14/15 L_yK8=379829/63063 10cap-L=160711/63063
+
+========================================================================================
+Interpretation:
+  The boundary correction is not a uniform 1/7.  In the checked frontier
+  and the exhaustive single-far scan, the exact worst ratio is 14/15,
+  attained by a bounded base whose q6 interval is controlled by speed 14
+  and a new far speed f=15.  The adjacent two-far frontier has worst
+  ratio 7/8.  Both worst packet rows still have large positive gK8 margin.
