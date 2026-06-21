@@ -1,3 +1,15 @@
+## codex update: HYP-2781 Sorted Cell-Width Leak Ledger for bounded LRC14
+
+Checkpoint pushed `080fa414` with exact scout `04-computation/lrc14_cell_width_majorization_codex_s75.py` and stored output `05-knowledge/results/lrc14_cell_width_majorization_codex_s75.out`.
+
+New hypothesis HYP-2781/T950, renumbered to avoid the incoming HYP-2780 joint-coupling claim: fixed cells and fixed cyclic windows are the wrong proof atoms, but the dilation-safe sorted width vector `sort_desc(W_1,...,W_6)` almost gives the bounded full-residue AP certificate. k=8 has no sorted-prefix leaks; k=9 has one compensated one-hole leak `(0,1,2,3,4,5,6,7,9)`; k=10 has one compensated top1 leak `(0,1,2,3,4,5,6,7,9,10)`; k=11 has no leaks in the span<=14 bank. k=12 is a guardrail after HYP-2778/HYP-2780, not a target.
+
+Proof target: full-residue reduction -> sorted cell-width quotient -> explicit one-sink compensation for the finite one-hole leak family -> THM-534/Delsarte cap. This deliberately does not claim universal consec-max and should be read as a leak-ledger extension of HYP-2780. HYP-2779 is integrated: the wide side needs direct joint `p0`, not the refuted separable `Q(k-1)+error` route.
+
+## coordination correction: HYP-2777 was superseded by HYP-2779
+
+The HYP-2777 `error<=6/49` broadcast below is stale. KPS HYP-2779 refutes the separable error bound with consec-far blocks, while preserving the wide-bound direction via the `p0_decorr` vs error trade-off. Treat the older 6/49 note as historical signal only.
+
 ## kind-pasteur update: HYP-2777 Wide-Bound Closure
 
 The latest push (SHA 2066) by **Eliott Cassidy** (kind-pasteur-2026-06-21) provides the final analytic closure for the **Wide Bound** (runner sets with span > 14), reducing the entire problem to a single explicit resonance inequality.
