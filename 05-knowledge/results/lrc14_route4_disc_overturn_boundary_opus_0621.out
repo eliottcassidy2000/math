@@ -1,0 +1,25 @@
+============================================================================================
+ROUTE 4 -- DISCONNECTED-REMAINDER OVERTURN BOUNDARY (balanced full-residue stratum)
+============================================================================================
+ k | maxWIN | maxmeasS7 | #measS7-beaters | first measS7-beater
+  8 |  Y    |   Y      |   0             | -
+  9 |  Y    |   Y      |   0             | -
+ 10 |  Y    |   Y      |   0             | -
+ 11 |  Y    |   Y      |   0             | -
+ 12 |  Y    |   N      |   1             | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+ 13 |  Y    |   Y      |   0             | -
+ 14 |  Y    |   Y      |   0             | -
+ 15 |  N    |   Y      |   0             | -
+ 16 |  N    |   N      |  12             | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 17]
+ 17 |  N    |   N      |  79             | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17]
+
+--- THE k=12 WITNESS (exact) ---
+  consec_12        measS7=119843/194040 = 0.617620
+  E*=[..10,12]     measS7=11171/17640 = 0.633277
+  surplus E*-consec = 31/1980 = +0.015657  (E* WINS)
+  WIN: consec=0.423645 > E*=0.413039  (consec wins windows)
+  DISC: E*=0.220238 > consec=0.193975  (E* wins disconnected)
+  ratio DISCdef/WINlead = 52/21 = 2.4762  > 1  => DISC OVERTURNS WIN
+
+ROUTE 4 closes LAYER 3 for k<=11 only; the disconnected remainder OVERTURNS
+the WIN lead at k=12 -> LAYER 3 (consec max measS7) is FALSE at k=12 and k>=16.

@@ -1,0 +1,32 @@
+ROUTE 5 part 8: confirm obstruction halves
+======================================================================
+
+(A) TOURNAMENT crossover fugacity x*(p):
+    p=7  : x* = 3.000  (level diffs aP-aI = {1:+21, 2:-7})
+    p=11 : x* = 2.608  (level diffs = {1:+2772, 2:-231, 3:-319})
+    DECREASING. H lives at fugacity x=2.
+    THM-135: Paley loses H at p=19 => x*(19) < 2.
+    THM-137 spectral reason: interval dominant eigenvalue ~ p/pi
+    grows faster than Paley's flat sqrt(p)/2 => high-level alpha_j
+    (interval-favored) dominate ever more, pushing x* below 2.
+
+(B) LRC: G_x argmax over ALL 319 full-residue k=8 shapes
+  x=   -1: argmax = (0, 1, 2, 3, 4, 5, 6, 7)  (value 0.327211, ties=1);  consec rank = 1/319  <-- consec
+  x= -1/2: argmax = (0, 1, 2, 3, 4, 5, 6, 7)  (value 0.501552, ties=1);  consec rank = 1/319  <-- consec
+  x=  1/2: argmax = (0, 3, 5, 6, 8, 9, 11, 14)  (value 1.985338, ties=1);  consec rank = 319/319
+  x=    1: argmax = (0, 3, 5, 6, 8, 9, 11, 14)  (value 4.294331, ties=1);  consec rank = 316/319
+  x=    2: argmax = (0, 3, 5, 6, 8, 9, 11, 14)  (value 16.209287, ties=1);  consec rank = 220/319
+
+  CONCLUSION:
+  - At x=-1 (measS7): consec is the UNIQUE argmax (rank 1).
+  - At x>0 (positive fugacity): a DIFFERENT shape wins; consec drops.
+  => LRC consec-optimality is SPECIFIC to the alternating x=-1.
+     The AP wins the LOW-order coverage that x=-1 rewards.
+
+  CONTRAST WITH TOURNAMENT:
+  - Tournament AP (interval) wins at HIGH fugacity x>x* (and x=2 for
+    large p): the AP wins the HIGH-order packing that +2 amplifies.
+  - Same 'AP extremal' surface, OPPOSITE level + OPPOSITE fugacity sign.
+  => NOT one c_k theorem. The unification (HYP-2762) is at the level
+     of 'additive AP extremizes a signed subset-complex level-sum',
+     but the SIGN of the fugacity and the DRIVING level are reversed.

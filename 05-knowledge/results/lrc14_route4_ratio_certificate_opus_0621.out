@@ -1,0 +1,39 @@
+====================================================================================
+ROUTE-4 RATIO CERTIFICATE: DISCdef(E) <= rho_k * WINlead(E), rho_k < 1
+====================================================================================
+
+k=8  (stratum span<=16)
+  AUTO-SAFE rivals (DISCdef<=0): 694   DANGER rivals (DISCdef>0): 169
+  worst ratio rho_8 = 65/83 = 0.783133  at [0, 2, 4, 6, 8, 10, 12, 14]
+  closure margin 1-rho_8 = 18/83 = 0.216867  > 0
+  => for every rival: lead >= (1-rho_8)*WINlead > 0  [LAYER 3 closed at this k]
+  min measS7 lead = 3/98 = 0.030612 at [0, 2, 4, 6, 8, 10, 12, 14]  (>0: True)
+
+k=9  (stratum span<=16)
+  AUTO-SAFE rivals (DISCdef<=0): 1749   DANGER rivals (DISCdef>0): 578
+  worst ratio rho_9 = 274/379 = 0.722955  at [0, 2, 4, 6, 8, 10, 12, 14, 16]
+  closure margin 1-rho_9 = 105/379 = 0.277045  > 0
+  => for every rival: lead >= (1-rho_9)*WINlead > 0  [LAYER 3 closed at this k]
+  min measS7 lead = 17/1176 = 0.014456 at [0, 1, 2, 3, 4, 5, 6, 7, 9]  (>0: True)
+
+k=10  (stratum span<=15)
+  AUTO-SAFE rivals (DISCdef<=0): 881   DANGER rivals (DISCdef>0): 918
+  worst ratio rho_10 = 2033/3188 = 0.637704  at [0, 2, 4, 6, 7, 8, 9, 10, 12, 14]
+  closure margin 1-rho_10 = 1155/3188 = 0.362296  > 0
+  => for every rival: lead >= (1-rho_10)*WINlead > 0  [LAYER 3 closed at this k]
+  min measS7 lead = 187/17640 = 0.010601 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]  (>0: True)
+
+====================================================================================
+[T5] DILATION 2*consec ratio sequence (the governing competitor):
+     k :  WINlead        DISCdef        ratio          measLead
+     7 : 1/14          5/84          5/6           =0.83333  0.011905>0=True
+     8 : 83/588        65/588        65/83         =0.78313  0.030612>0=True
+     9 : 379/2352      137/1176      274/379       =0.72296  0.044643>0=True
+    10 : 641/3528      445/3528      445/641       =0.69423  0.055556>0=True
+    11 : 442/2205      1201/8820     1201/1768     =0.67930  0.064286>0=True
+    12 : 5059/24255    3484/24255    3484/5059     =0.68867  0.064935>0=True
+
+  CONCLUSION: ROUTE 4 closes LAYER 3 for k=8,9,10 (conditional on HYP-2761).
+  The disconnected remainder DISCdef is bounded by rho_k<1 times the WIN margin;
+  it provably cannot overturn consec's unique WIN lead. Unconditional all-k
+  proof reduces to: rho_k<1, governed by the dilation 2*consec (sequence above).
