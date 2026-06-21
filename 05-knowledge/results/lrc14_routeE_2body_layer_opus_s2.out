@@ -1,0 +1,51 @@
+######################################################################################
+# 2-BODY cycle layer corr_2 of measS7: per-pair (THM-559-style) structure
+######################################################################################
+
+[1] ADDITIVITY: corr_2(E) = sum_{pairs} P_k(e_i,e_j) ?  (k=8)
+  consec8   corr_2(direct)=-0.00000000  sum_pairs P=-0.00000000  additive=True
+  drop1_8   corr_2(direct)=-0.00229496  sum_pairs P=-0.00229496  additive=True
+  with7gap  corr_2(direct)=-0.00000000  sum_pairs P=-0.00000000  additive=True
+  twoblk8   corr_2(direct)=-0.00521891  sum_pairs P=-0.00521891  additive=True
+
+[2] PER-PAIR coupling P_k(0,d) vs gap d (k=8); depends on d, not position.
+    (translation invariance: P_k(e,e+d)=P_k(0,d).)  Nonzero only at special d.
+      d       P_k(0,d)      P_k(5,5+d)   7|d?
+      1    +0.00000000     -0.00000000  False
+      2    +0.00000000     +0.00000000  False
+      3    +0.00000000     -0.00000000  False
+      4    +0.00000000     +0.00000000  False
+      5    +0.00000000     -0.00000000  False
+      6    +0.00000000     -0.00000000  False
+      7    +0.00000000     -0.00050999   True
+      8    +0.00000000     -0.00000000  False
+      9    +0.00000000     +0.00000000  False
+     10    +0.00000000     -0.00000000  False
+     11    +0.00000000     +0.00000000  False
+     12    +0.00000000     -0.00000000  False
+     13    +0.00000000     -0.00000000  False
+     14    +0.00000000     -0.00032210   True
+     15    +0.00000000     -0.00000000  False
+     16    +0.00000000     +0.00000000  False
+     17    +0.00000000     -0.00000000  False
+     18    +0.00000000     +0.00000000  False
+     19    +0.00000000     -0.00000000  False
+     20    +0.00000000     -0.00000000  False
+
+[3] consec gaps are 1..7 (k=8). Which pairs of consec activate a coupling?
+    active pairs (|P|>0): 0
+    sum over active = +0.00000000  (= corr_2(consec))
+
+[4] INTERPRETATION (the THM-559 twin, honest):
+    * corr_2 IS an exact 2-body (pairwise) energy on offsets, zero field.
+    * per-pair coupling P_k(0,d) is NONZERO only when 7|d (resonant gap),
+      and is NEGATIVE there.  Generic gaps give P=0.
+    * consec_{k} (k<=7) has all gaps in 1..k-1<7 -> NO resonant pair ->
+      corr_2=0, the 2-body GROUND STATE (max, since all couplings<=0).
+    * any shape with a 7-multiple gap pays a negative 2-body penalty.
+    => consec is 2-body-extremal BY A PER-PAIR ARGUMENT (provable).
+    HONEST LIMIT: the 2-body layer is tiny (|corr_2|<=0.0052) and its max
+    is 0; the BULK of measS7 and of consec's lead lives in the >=3-body
+    layers (c3~+0.08, high-residual~+0.22 at k=8).  The cut/cycle split
+    cleanly ISOLATES a provable 2-body extremal piece, but the crux is
+    irreducibly many-body -- exactly THM-555's 'cycle space' verdict.

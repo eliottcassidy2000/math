@@ -1,0 +1,57 @@
+============================================================================================
+THREAD D (part iv): LEADING-SHELL domination & the inversion mechanism
+============================================================================================
+
+############################################################################################
+### k=8 span[0..11] |pool|=330 iid=0.02448 cap=0.3815
+############################################################################################
+
+consec: measS7=0.32721 corr=+0.30273 add=20 halve=3 r3=31 span=7
+
+[S1] corr ~ slope*add :  slope=0.00959  R^2=0.104  (add-triple count explains 10% of corr variance)
+
+[S2] one-sided bound corr <= w*add holds for w = max ratio = 0.01673 (at (0, 5, 6, 7, 8, 9, 10, 11))
+     consec ratio corr/add = 0.01514  (tight at consec? False)
+     using w=consec-ratio: # shapes with corr> w*add = 2/330 (NOT an upper envelope)
+
+[S3] consec maximizes add (20==20? True) and r3 (31==32? False).
+     ALL shapes inside cone {add<=A0, r3<=R0}: False (=> cone is TRIVIAL: every shape is dominated coordinatewise; the cone alone does NOT order measS7).
+
+[S4] high-leading-shell but LOW measS7 shapes (the inversion cause):
+     (0, 1, 2, 3, 4, 5, 7, 8) add=19 r3=31 span=8 measS7=0.0997
+     (0, 1, 2, 3, 4, 6, 7, 8) add=19 r3=31 span=8 measS7=0.1199
+     (0, 1, 2, 3, 4, 5, 6, 11) add=18 r3=31 span=11 measS7=0.1632
+     (0, 1, 2, 3, 4, 5, 7, 9) add=18 r3=32 span=9 measS7=0.1041
+     (0, 1, 2, 3, 4, 5, 7, 10) add=18 r3=31 span=10 measS7=0.0850
+     => these have HIGH additive-triple count but the triples are CLUSTERED
+        (large span, few effective sector-covering resonances): leading-shell
+        count is necessary-not-sufficient. corr needs the FULL lattice, not N_2.
+
+############################################################################################
+### k=9 span[0..11] |pool|=165 iid=0.05770 cap=0.4943
+############################################################################################
+
+consec: measS7=0.41616 corr=+0.35845 add=25 halve=4 r3=41 span=8
+
+[S1] corr ~ slope*add :  slope=0.01329  R^2=0.109  (add-triple count explains 11% of corr variance)
+
+[S2] one-sided bound corr <= w*add holds for w = max ratio = 0.01587 (at (0, 4, 5, 6, 7, 8, 9, 10, 11))
+     consec ratio corr/add = 0.01434  (tight at consec? False)
+     using w=consec-ratio: # shapes with corr> w*add = 3/165 (NOT an upper envelope)
+
+[S3] consec maximizes add (25==25? True) and r3 (41==43? False).
+     ALL shapes inside cone {add<=A0, r3<=R0}: False (=> cone is TRIVIAL: every shape is dominated coordinatewise; the cone alone does NOT order measS7).
+
+[S4] high-leading-shell but LOW measS7 shapes (the inversion cause):
+     (0, 1, 2, 3, 4, 5, 7, 8, 9) add=23 r3=41 span=9 measS7=0.1758
+     (0, 1, 2, 3, 4, 5, 7, 8, 10) add=23 r3=41 span=10 measS7=0.1616
+     (0, 1, 2, 3, 4, 6, 7, 8, 9) add=23 r3=40 span=9 measS7=0.1993
+     (0, 1, 2, 3, 4, 5, 7, 8, 11) add=22 r3=41 span=11 measS7=0.1665
+     (0, 1, 2, 3, 4, 5, 7, 9, 10) add=22 r3=41 span=10 measS7=0.1803
+     => these have HIGH additive-triple count but the triples are CLUSTERED
+        (large span, few effective sector-covering resonances): leading-shell
+        count is necessary-not-sufficient. corr needs the FULL lattice, not N_2.
+
+============================================================================================
+READOUT (Thread D part iv): is the leading shell a working inequality?
+============================================================================================

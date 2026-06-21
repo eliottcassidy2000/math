@@ -1,3 +1,35 @@
+## mac-mini-2026-06-20-S8 -- LRC(14) Thread C: measS7(consec_k) closed form + the k=12 extremality BREAK (consec is NOT the maximizer for k>=12)
+
+Thread C of the LRC(14) sector route: closed form for the extremal value measS7(consec_k) and extremality on the finite family.
+
+**REPARAMETRIZATION (re-confirmed S7b).** theta=7x in [0,7); measS7(consec_k) = (1/7) sum_{j=0..6} M_j(k) where, writing theta=j+s,
+M_j(k)=meas{s in [0,1): {(e*j+floor(e*s)) mod 7 : e=0..k-1}=Z/7}. The walk p_{e+1}=p_e+(j+b_e) mod 7, b_e Sturmian slope-s word.
+
+**PROVED CLOSED FORMS (the two monotone strips):** M_0(k)=(k-7)/(k-1) and M_6(k)=(k-6)/(k-1) (the only strips where the
+walk is monotone: steps {0,1} and {0,-1}). Hence M_0+M_6 = 2 - 11/(k-1) EXACTLY (verified all k=7..30). The middle strips
+TELESCOPE in a Farey fan around a strip-specific bad slope (e.g. j=3: on [1/2-1/n,1/2-1/(n+1)) tau=2(n+1) exactly).
+Exact finite algorithm: M_j(k)=sum over order-(k-1) Farey intervals (cover automaton = 626 states to depth 13) -> exact
+ledger reproduces the canon table (31/210, 481/1470, 2447/5880, 8899/17640, 3419/5880, 121103/194040, 14573/21560,...).
+
+**THE CORRECTION (load-bearing).** consec is NOT the measS7-maximizer over span<=13 for k>=12:
+  k=12 maximizer = {0..10,12}, measS7 = 11381/17640 ~ 0.645182 > consec 0.624114;
+  k=13 maximizer = {0..10,12,13}, measS7 = 19492/28665 ~ 0.679993 > consec 0.675928.
+consec IS the maximizer for k=8,9,10,11 (verified even on the wider THM-535 windows span<=17/16/15). The maximizer keeps
+the prefix {0..10} and pushes the rest to the top (skips 11). This EXACTLY mirrors HYP-2699's k=12 U4-anomaly (same beater
+{0..10,12}) and THM-534's "consec not L_y-max at k=11,12,13" -- three functionals break consec-extremality at the same
+shape. So CLAUDE.md's "consec_k MAXIMIZES measS7" is correct only for k<=11; FALSE at k=12,13.
+
+**THE S3 GATE STILL HOLDS** via the corrected justification true-max < cap_k (NOT "consec is extremal"): exhaustive exact
+over all 4095 sets (span<=13), true_max(measS7) < cap_k for every k=8..13, slack GROWS +0.054/+0.078/+0.100/+0.144/
++0.212/+0.320. Dangerous row is the smallest k=8. Feasible (<25 s).
+
+**DEAD (re-confirmed):** no per-strip / per-band / majorization proof -- consec doesn't maximize each strip M_j; when it
+wins the aggregate (k<=11) it does so as a mixed-sign sum over strips. Extremality is irreducibly aggregate even per-strip.
+
+Files: 04-computation/lrc14_threadC_closedform_strips_macmini_0620.py, lrc14_threadC_truemax_gate_macmini_0620.py
+(+ .out in 05-knowledge/results/); reflection 07-reflections/lrc14-threadC-measS7-extremal-value-macmini-0620.md.
+NEXT: the wide-spread bound (HYP-2608/2611) is still the open LRC(14) crux, untouched here.
+
 ## kind-pasteur-2026-06-20-S22 -- External-ideas mining: tournaments ARE quantum circuits (cut/cycle = Clifford/magic); THM-560 OCF degree ladder PROVED
 
 Dispatch: ~10 external ideas (Gibbs+Arnold cat map, Clifford/T-gate, road coloring, Hopfield vs 2-layer NN, crossing

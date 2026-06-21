@@ -1,0 +1,14 @@
+##################################################################################
+# THREAD B stage 4 -- FINITENESS + exhaustive measS7<=cap of low-height family
+##################################################################################
+
+==================================================================================
+PART A -- STRANGER sub-family {0..k-2, N}: lambda_max(N) and the max N per H0
+==================================================================================
+  {1..k-2} are the small speeds; N is the stranger.  lambda_max grows ~ N/21 (k=8).
+  Find the LARGEST N with lambda_max <= H0 (=> the stranger family is span-bounded).
+
+  k=8, small speeds [1, 2, 3, 4, 5, 6], sum=21:
+    H0=1: max stranger N with lambda_max<=H0 = 21  (predicted ~21*H0=21)
+    H0=2: max stranger N with lambda_max<=H0 = 42  (predicted ~21*H0=42)
+    H0=3: max stranger N with lambda_max<=H0 = 63  (predicted ~21*H0=63)
