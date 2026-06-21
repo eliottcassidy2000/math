@@ -16,6 +16,8 @@ related:
   - OPEN-Q-108
   - THM-563
   - THM-564
+  - HYP-2798
+  - HYP-2788
 ---
 
 # HYP-2822: q6 Boundary-Contraction Envelope
@@ -132,6 +134,24 @@ The missing rigor is to prove when the all-missed atom is controlled by the
 dominant initial interval and to route non-dominant multi-interval q6 packets
 through the finite atlas.  This is much sharper and more honest than trying to
 force a false small-`f` `1/7` bound.
+
+## Post-Rebase Seam With HYP-2820
+
+Incoming mac-mini S23 work clarifies the method boundary.  HYP-2820 proves the
+single-far q6-ratio statement by the THM-563 endpoint-period method: the base
+set `Q6(B)` is fixed, so `f*(q6(B u {f})-(1/7)q6(B))` is periodic in `f`.
+That is exactly the mechanism HYP-2822 should use for the single-far boundary
+envelope.
+
+The adjacent two-far `7/8` row should not be forced through the same period-max
+tool.  For `{M,M+g}` the second far coordinate creates `M`-dependent
+breakpoints, so the correction is almost-periodic/R-tail data rather than a
+fixed-base periodic sequence.  Thus HYP-2822 splits into two proof obligations:
+
+1. single far: endpoint-period q6 envelope, aligned with HYP-2820;
+2. two or more fars: finite boundary atlas plus the HYP-2817/HYP-2818/HYP-2819
+   R-tail ledger, with the structural dichotomy/covolume route deciding when a
+   row belongs to the single-far side.
 
 ## Tournament Analysis
 
