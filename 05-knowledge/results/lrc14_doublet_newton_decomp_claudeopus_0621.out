@@ -1,0 +1,41 @@
+================================================================================
+EXACT NEWTON DECOMPOSITION of the doublet error  (claude-opus 2026-06-21)
+error(M) = Delta_M + Delta_{M+1} + (C(M)-C_sat);  base B = consec {0,...,k-3}
+================================================================================
+
+k=8  B=consec(0, 1, 2, 3, 4, 5)
+  identity max residual |err - (DM+DM1+(C-Csat))| = 2.33e-05 (0 iff plateaus consistent; Phi2 vs pred diff = -2.33e-05)
+  Csat (saturated joint curvature) = +0.03122   (mac-mini Thread-B sup|C|~0.029)
+  sup_M |M*Delta_M| (single-far)        = 0.7321   (THM-563 period-max ~1)
+  sup_M |M*(C(M)-Csat)| (curv approach)  = 0.7339
+  => bound 2*sup|M*Delta| + sup|M*curv|  = 2.1981
+     measured sup_M |M*error|            = 1.3779  (decomposition consistent)
+
+k=9  B=consec(0, 1, 2, 3, 4, 5, 6)
+  identity max residual |err - (DM+DM1+(C-Csat))| = 5.94e-06 (0 iff plateaus consistent; Phi2 vs pred diff = 5.94e-06)
+  Csat (saturated joint curvature) = +0.01614   (mac-mini Thread-B sup|C|~0.029)
+  sup_M |M*Delta_M| (single-far)        = 0.9993   (THM-563 period-max ~1)
+  sup_M |M*(C(M)-Csat)| (curv approach)  = 0.5657
+  => bound 2*sup|M*Delta| + sup|M*curv|  = 2.5643
+     measured sup_M |M*error|            = 1.2609  (decomposition consistent)
+
+k=10  B=consec(0, 1, 2, 3, 4, 5, 6, 7)
+  identity max residual |err - (DM+DM1+(C-Csat))| = 1.07e-05 (0 iff plateaus consistent; Phi2 vs pred diff = 1.07e-05)
+  Csat (saturated joint curvature) = +0.01402   (mac-mini Thread-B sup|C|~0.029)
+  sup_M |M*Delta_M| (single-far)        = 1.0561   (THM-563 period-max ~1)
+  sup_M |M*(C(M)-Csat)| (curv approach)  = 0.5086
+  => bound 2*sup|M*Delta| + sup|M*curv|  = 2.6208
+     measured sup_M |M*error|            = 1.3390  (decomposition consistent)
+
+k=11  B=consec(0, 1, 2, 3, 4, 5, 6, 7, 8)
+  identity max residual |err - (DM+DM1+(C-Csat))| = 3.28e-08 (0 iff plateaus consistent; Phi2 vs pred diff = 3.28e-08)
+  Csat (saturated joint curvature) = +0.01092   (mac-mini Thread-B sup|C|~0.029)
+  sup_M |M*Delta_M| (single-far)        = 1.1060   (THM-563 period-max ~1)
+  sup_M |M*(C(M)-Csat)| (curv approach)  = 0.6246
+  => bound 2*sup|M*Delta| + sup|M*curv|  = 2.8366
+     measured sup_M |M*error|            = 1.3069  (decomposition consistent)
+
+================================================================================
+READING: the doublet |M*error| is pinned to (single-far period-max, THM-563/known)
+plus a curvature-approach residual. If the latter is bounded (signed Dedekind),
+the genuine-wide doublet closes by existing single-far machinery + a curvature lemma.
