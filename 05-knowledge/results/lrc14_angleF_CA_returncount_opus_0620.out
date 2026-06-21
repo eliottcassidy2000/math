@@ -1,0 +1,33 @@
+==============================================================================
+ANGLE F (II) -- CA return-count / dwell decomposition extremality
+==============================================================================
+
+=== k=8, full box max(E)<=13 ===
+consec_8: measS7=0.327211  n_runs=10  longest=0.061224  ao_atoms=27  atoms=126
+  scanning 883 deduped primitive shapes...
+  measS7 violators (>consec):     0  [expect 0]
+  n_runs violators (>consec):     338
+  longest-dwell violators:        0
+  ao_atoms violators:             6
+  distinct mean-dwell values:     829  (H-MD invariance => 1)
+    n_runs viol examples: [((0, 1, 2, 3, 4, 5, 6, 8), 12, 0.20833333333333334), ((0, 1, 2, 3, 4, 5, 6, 9), 11, 0.1880952380952381), ((0, 1, 2, 3, 4, 5, 6, 12), 12, 0.20238095238095238), ((0, 1, 2, 3, 4, 5, 6, 13), 13, 0.18424908424908426), ((0, 1, 2, 3, 4, 5, 7, 9), 11, 0.10408163265306122)]
+
+=== k=9, full box max(E)<=13 ===
+consec_9: measS7=0.416156  n_runs=12  longest=0.073980  ao_atoms=56  atoms=154
+  scanning 651 deduped primitive shapes...
+  measS7 violators (>consec):     0  [expect 0]
+  n_runs violators (>consec):     635
+  longest-dwell violators:        0
+  ao_atoms violators:             12
+  distinct mean-dwell values:     649  (H-MD invariance => 1)
+    n_runs viol examples: [((0, 1, 2, 3, 4, 5, 6, 7, 9), 17, 0.40170068027210887), ((0, 1, 2, 3, 4, 5, 6, 7, 10), 14, 0.38095238095238093), ((0, 1, 2, 3, 4, 5, 6, 7, 12), 14, 0.3717687074829932), ((0, 1, 2, 3, 4, 5, 6, 7, 13), 15, 0.3575614861329147), ((0, 1, 2, 3, 4, 5, 6, 8, 9), 18, 0.2861111111111111)]
+
+=== k=10, full box max(E)<=13 ===
+consec_10: measS7=0.504478  n_runs=15  longest=0.083900  ao_atoms=92  atoms=196
+  scanning 371 deduped primitive shapes...
+  measS7 violators (>consec):     0  [expect 0]
+  n_runs violators (>consec):     369
+  longest-dwell violators:        0
+  ao_atoms violators:             16
+  distinct mean-dwell values:     370  (H-MD invariance => 1)
+    n_runs viol examples: [((0, 1, 2, 3, 4, 5, 6, 7, 8, 10), 16, 0.49387755102040815), ((0, 1, 2, 3, 4, 5, 6, 7, 8, 11), 17, 0.44650587507730366), ((0, 1, 2, 3, 4, 5, 6, 7, 8, 13), 17, 0.4360413396127682), ((0, 1, 2, 3, 4, 5, 6, 7, 9, 10), 20, 0.47879818594104306), ((0, 1, 2, 3, 4, 5, 6, 7, 9, 11), 21, 0.44179550608122037)]

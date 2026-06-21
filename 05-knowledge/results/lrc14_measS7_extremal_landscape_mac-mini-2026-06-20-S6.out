@@ -1,0 +1,7 @@
+k | consec measS7 | cap_k | iid surj | residual(non-consec,span<=13) max | margin
+8 | 0.3272 | 0.3815 | 0.0245 | 0.2736 [0, 2, 3, 4, 5, 6, 7, 8] | cap-resid=0.108
+9 | 0.4162 | 0.4943 | 0.0577 | 0.4017 [0, 1, 2, 3, 4, 5, 6, 7, 9] | cap-resid=0.093
+10 | 0.5045 | 0.6044 | 0.1049 | 0.4939 [0, 1, 2, 3, 4, 5, 6, 7, 8, 10] | cap-resid=0.111
+
+consec is the global max (k=8,9,10); residual (non-consec) max is the NEAREST perturbation,
+well under cap. Wide span -> iid << cap. The two halves (finite check + contraction) cover all E.

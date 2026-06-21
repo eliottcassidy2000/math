@@ -1,0 +1,33 @@
+================================================================================================
+ANGLE C single-hole FLOOR certificate  (opus-2026-06-20)
+Certificate: measS7(E=full\H) <= measS7(full) - max_{h in H} Delta_h(full)
+Adversary minimises by holing the lowest-criticality positions =>
+  guaranteed_drop(N, nholes) = (nholes)-th smallest full-board criticality.
+================================================================================================
+
+--- k=8, cap_k=2243/5880=0.38146 ---
+  N= 8 holes=1: req_drop=0.03469  guaranteed_drop=0.14252  bound on measS7=0.27364  true worst=0.27364  cert CLOSES
+  N= 9 holes=2: req_drop=0.12302  guaranteed_drop=0.14422  bound on measS7=0.36026  true worst=0.23707  cert CLOSES
+  N=10 holes=3: req_drop=0.20000  guaranteed_drop=0.12698  bound on measS7=0.45448  true worst=0.22007  cert FAILS
+  N=11 holes=4: req_drop=0.24265  guaranteed_drop=0.11444  bound on measS7=0.50967  true worst=0.20915  cert FAILS
+  N=12 holes=5: req_drop=0.29447  guaranteed_drop=0.07758  bound on measS7=0.59835  true worst=0.25578  cert FAILS
+  N=13 holes=6: req_drop=0.32328  guaranteed_drop=0.06051  bound on measS7=0.64423  true worst=0.23796  cert FAILS
+
+--- k=9, cap_k=1979/4004=0.49426 ---
+  N= 9 holes=1: req_drop=0.01022  guaranteed_drop=0.10278  bound on measS7=0.40170  true worst=0.40170  cert CLOSES
+  N=10 holes=2: req_drop=0.08721  guaranteed_drop=0.10266  bound on measS7=0.47880  true worst=0.38095  cert CLOSES
+  N=11 holes=3: req_drop=0.12986  guaranteed_drop=0.09959  bound on measS7=0.52452  true worst=0.33537  cert FAILS
+  N=12 holes=4: req_drop=0.18167  guaranteed_drop=0.06509  bound on measS7=0.61084  true worst=0.37177  cert FAILS
+  N=13 holes=5: req_drop=0.21049  guaranteed_drop=0.05807  bound on measS7=0.64668  true worst=0.35756  cert FAILS
+
+--- k=10, cap_k=55/91=0.60440 ---
+  N=10 holes=1: req_drop=-0.02293  guaranteed_drop=0.08759  bound on measS7=0.49388  true worst=0.49388  cert CLOSES
+  N=11 holes=2: req_drop=0.01972  guaranteed_drop=0.08627  bound on measS7=0.53785  true worst=0.44651  cert CLOSES
+  N=12 holes=3: req_drop=0.07153  guaranteed_drop=0.06346  bound on measS7=0.61247  true worst=0.46463  cert FAILS
+  N=13 holes=4: req_drop=0.10035  guaranteed_drop=0.05428  bound on measS7=0.65047  true worst=0.44200  cert FAILS
+
+================================================================================================
+SINGLE-HOLE FLOOR certificate closes ALL residual (k=8,9,10) spans: False
+================================================================================================
+If FAILS anywhere, the single-hole monotonicity floor is too weak there;
+a 2-hole (pair) monotonicity floor or direct enumeration is needed for that span.

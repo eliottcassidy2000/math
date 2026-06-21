@@ -1,0 +1,28 @@
+==============================================================================
+ANGLE F -- CA dwell-time invariant for measS7 (full Z/7 cover)
+==============================================================================
+
+[1] consec measS7 vs tabulated + cross-check + dwell stats
+  k         measS7  tab?  xcheck?  n_runs      longest   mean_dwell  atoms
+  8 481/1470 (0.327211)  FAIL       OK      10     0.061224     0.032721    126
+  9 2447/5880 (0.416156)  FAIL       OK      12     0.073980     0.034680    154
+ 10 8899/17640 (0.504478)  FAIL       OK      15     0.083900     0.033632    196
+ 11 3419/5880 (0.581463)  FAIL       OK      14     0.091837     0.041533    224
+ 12 121103/194040 (0.624114)  FAIL       OK      14     0.098330     0.044580    294
+
+[2] CA invariant (a): is the all-ones set a single interval?
+    (W strictly increasing => x-order = winding-order)
+  consec_8: single-interval=False  (n_runs=10)
+  consec_9: single-interval=False  (n_runs=12)
+  consec_10: single-interval=False  (n_runs=15)
+
+[3] CA invariant (d): #ENTER == #LEAVE (winding conservation)
+  consec_8: enters=10 leaves=10 balanced=True
+  consec_9: enters=12 leaves=12 balanced=True
+  consec_10: enters=15 leaves=15 balanced=True
+
+[4] deficit-charge integral int(7-N)dx and mean N (full Z/7)
+  k      int_deficit       mean_N
+  8 393/245 (1.604082)     5.395918
+  9 4061/2940 (1.381293)     5.618707
+ 10 10523/8820 (1.193084)     5.806916

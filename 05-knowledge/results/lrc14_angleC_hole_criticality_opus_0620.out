@@ -1,0 +1,200 @@
+================================================================================================
+ANGLE C: HOLE-REMOVAL CRITICALITY  (opus-2026-06-20)
+================================================================================================
+cap_k: {8: '2243/5880=0.38146', 9: '1979/4004=0.49426', 10: '55/91=0.60440', 11: '66/91=0.72527', 12: '6/7=0.85714', 13: '1=1.00000'}
+consec measS7: {7: 0.14761904761904762, 8: 0.3272108843537415, 9: 0.416156462585034, 10: 0.5044784580498867, 11: 0.5814625850340136, 12: 0.6241135848278705, 13: 0.6759276437847866, 14: 0.7047452547452547}
+
+================================================================================================
+(1) PER-CLOCK CRITICALITY  Delta_h(consec_{N+1}) = measS7(full) - measS7(full minus h)
+    h ranges over 1..N (0 is pinned, removing it always destroys residue 0 -> trivial).
+================================================================================================
+  N= 7 (full=consec_8, measS7=0.32721):
+      Delta_0  =         31/490 = 0.063265  <-- e=0 pinned
+      Delta_1  =         69/245 = 0.281633
+      Delta_2  =         44/147 = 0.299320
+      Delta_3  =        283/980 = 0.288776
+      Delta_4  =        214/735 = 0.291156
+      Delta_5  =       817/2940 = 0.277891
+      Delta_6  =         69/245 = 0.281633
+      Delta_7  =         44/245 = 0.179592
+      sum_h Delta_h (h=1..N) = 1.900000   (vs measS7(full)=0.327211)
+
+  N= 8 (full=consec_9, measS7=0.41616):
+      Delta_0  =       419/5880 = 0.071259  <-- e=0 pinned
+      Delta_1  =       419/2940 = 0.142517
+      Delta_2  =      1991/5880 = 0.338605
+      Delta_3  =        311/980 = 0.317347
+      Delta_4  =       491/1470 = 0.334014
+      Delta_5  =       871/2940 = 0.296259
+      Delta_6  =      1861/5880 = 0.316497
+      Delta_7  =       611/2940 = 0.207823
+      Delta_8  =       523/5880 = 0.088946
+      sum_h Delta_h (h=1..N) = 2.042007   (vs measS7(full)=0.416156)
+
+  N= 9 (full=consec_10, measS7=0.50448):
+      Delta_0  =       167/2520 = 0.066270  <-- e=0 pinned
+      Delta_1  =        106/735 = 0.144218
+      Delta_2  =         53/252 = 0.210317
+      Delta_3  =      2719/8820 = 0.308277
+      Delta_4  =        295/882 = 0.334467
+      Delta_5  =       673/2205 = 0.305215
+      Delta_6  =      2899/8820 = 0.328685
+      Delta_7  =        107/490 = 0.218367
+      Delta_8  =         37/360 = 0.102778
+      Delta_9  =       779/8820 = 0.088322
+      sum_h Delta_h (h=1..N) = 2.040646   (vs measS7(full)=0.504478)
+
+  N=10 (full=consec_11, measS7=0.58146):
+      Delta_0  =     1291/17640 = 0.073186  <-- e=0 pinned
+      Delta_1  =           8/63 = 0.126984
+      Delta_2  =      1451/8820 = 0.164512
+      Delta_3  =       307/1764 = 0.174036
+      Delta_4  =        232/735 = 0.315646
+      Delta_5  =     4867/17640 = 0.275907
+      Delta_6  =      2801/8820 = 0.317574
+      Delta_7  =     3649/17640 = 0.206859
+      Delta_8  =     1811/17640 = 0.102664
+      Delta_9  =       103/1176 = 0.087585
+      Delta_10 =        97/1260 = 0.076984
+      sum_h Delta_h (h=1..N) = 1.848753   (vs measS7(full)=0.581463)
+
+  N=11 (full=consec_12, measS7=0.62411):
+      Delta_0  =      619/12936 = 0.047851  <-- e=0 pinned
+      Delta_1  =     3701/32340 = 0.114440
+      Delta_2  =       559/4851 = 0.115234
+      Delta_3  =   25229/194040 = 0.130020
+      Delta_4  =        127/735 = 0.172789
+      Delta_5  =     9613/38808 = 0.247707
+      Delta_6  =    26497/97020 = 0.273109
+      Delta_7  =     7555/38808 = 0.194676
+      Delta_8  =     3865/38808 = 0.099593
+      Delta_9  =   16739/194040 = 0.086266
+      Delta_10 =         50/693 = 0.072150
+      Delta_11 =     2069/48510 = 0.042651
+      sum_h Delta_h (h=1..N) = 1.548634   (vs measS7(full)=0.624114)
+
+  N=12 (full=consec_13, measS7=0.67593):
+      Delta_0  =     1019/17640 = 0.057766  <-- e=0 pinned
+      Delta_1  =       512/8085 = 0.063327
+      Delta_2  =       167/1764 = 0.094671
+      Delta_3  =   15053/194040 = 0.077577
+      Delta_4  =     2059/16170 = 0.127335
+      Delta_5  =     4531/38808 = 0.116754
+      Delta_6  =    24187/97020 = 0.249299
+      Delta_7  =     5993/38808 = 0.154427
+      Delta_8  =     3601/38808 = 0.092790
+      Delta_9  =       421/6468 = 0.065090
+      Delta_10 =     6157/97020 = 0.063461
+      Delta_11 =     2983/97020 = 0.030746
+      Delta_12 =       457/8820 = 0.051814
+      sum_h Delta_h (h=1..N) = 1.187291   (vs measS7(full)=0.675928)
+
+  N=13 (full=consec_14, measS7=0.70475):
+      Delta_0  =    7361/180180 = 0.040854  <-- e=0 pinned
+      Delta_1  =    6103/105105 = 0.058066
+      Delta_2  =   13691/252252 = 0.054275
+      Delta_3  =   37105/504504 = 0.073547
+      Delta_4  =   20947/252252 = 0.083040
+      Delta_5  =       422/4851 = 0.086992
+      Delta_6  = 161971/1261260 = 0.128420
+      Delta_7  =     1493/10296 = 0.145008
+      Delta_8  =    7981/126126 = 0.063278
+      Delta_9  =       424/7007 = 0.060511
+      Delta_10 =       431/9009 = 0.047841
+      Delta_11 =  31219/1261260 = 0.024752
+      Delta_12 =       233/5390 = 0.043228
+      Delta_13 =    8077/280280 = 0.028818
+      sum_h Delta_h (h=1..N) = 0.897776   (vs measS7(full)=0.704745)
+
+================================================================================================
+(2) EXHAUSTIVE bounded-span residual: for each k and span N, the worst (max measS7)
+    shape E = consec_{N+1} minus holes H (|H|=N+1-k, 0 not in H), and its margin to cap.
+================================================================================================
+  --- k=8, cap_k=2243/5880=0.38146 ---
+    N= 7: shapes=    1  holes=0  worst measS7=0.32721 margin=+0.05425  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7)
+    N= 8: shapes=    7  holes=1  worst measS7=0.27364 margin=+0.10782  viol=0  OK
+           worst E=(0, 2, 3, 4, 5, 6, 7, 8)
+    N= 9: shapes=   28  holes=2  worst measS7=0.23707 margin=+0.14439  viol=0  OK
+           worst E=(0, 1, 3, 4, 5, 6, 7, 9)
+    N=10: shapes=   84  holes=3  worst measS7=0.22007 margin=+0.16139  viol=0  OK
+           worst E=(0, 1, 2, 4, 5, 6, 7, 10)
+    N=11: shapes=  210  holes=4  worst measS7=0.20915 margin=+0.17231  viol=0  OK
+           worst E=(0, 1, 2, 5, 6, 7, 10, 11)
+    N=12: shapes=  462  holes=5  worst measS7=0.25578 margin=+0.12568  viol=0  OK
+           worst E=(0, 2, 4, 6, 7, 8, 10, 12)
+    N=13: shapes=  924  holes=6  worst measS7=0.23796 margin=+0.14351  viol=0  OK
+           worst E=(0, 1, 3, 5, 7, 9, 11, 13)
+    >>> k=8 overall worst over residual spans: measS7=0.32721 at (0, 1, 2, 3, 4, 5, 6, 7), margin to cap=+0.05425
+
+  --- k=9, cap_k=1979/4004=0.49426 ---
+    N= 8: shapes=    1  holes=0  worst measS7=0.41616 margin=+0.07810  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+    N= 9: shapes=    8  holes=1  worst measS7=0.40170 margin=+0.09256  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+    N=10: shapes=   36  holes=2  worst measS7=0.38095 margin=+0.11330  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 10)
+    N=11: shapes=  120  holes=3  worst measS7=0.33537 margin=+0.15888  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 11)
+    N=12: shapes=  330  holes=4  worst measS7=0.37177 margin=+0.12249  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 12)
+    N=13: shapes=  792  holes=5  worst measS7=0.35756 margin=+0.13669  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 13)
+    >>> k=9 overall worst over residual spans: measS7=0.41616 at (0, 1, 2, 3, 4, 5, 6, 7, 8), margin to cap=+0.07810
+
+  --- k=10, cap_k=55/91=0.60440 ---
+    N= 9: shapes=    1  holes=0  worst measS7=0.50448 margin=+0.09992  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+    N=10: shapes=    9  holes=1  worst measS7=0.49388 margin=+0.11052  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)
+    N=11: shapes=   45  holes=2  worst measS7=0.44651 margin=+0.15789  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 11)
+    N=12: shapes=  165  holes=3  worst measS7=0.46463 margin=+0.13977  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12)
+    N=13: shapes=  495  holes=4  worst measS7=0.44200 margin=+0.16239  viol=0  OK
+           worst E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 13)
+    >>> k=10 overall worst over residual spans: measS7=0.50448 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9), margin to cap=+0.09992
+
+================================================================================================
+(3) ADDITIVE HOLE-COUNTING certificate test.
+    Joint loss L(H) = measS7(full) - measS7(full minus H).
+    Additive estimate L_add(H) = sum_{h in H} Delta_h(full).
+    Need L(H) >= measS7(full) - cap_k  for ALL H to certify measS7(E)<=cap.
+    Question: is L_add a valid LOWER bound on L (supermodular loss)?
+================================================================================================
+  --- k=8, cap_k=0.38146 ---
+    N= 8 holes=1: req_drop=0.03469  min L_add=0.14252  min L_true=0.14252
+           L_add a valid LOWER bound on L (supermodular)? True   additive cert closes? True   true cert holds? True
+    N= 9 holes=2: req_drop=0.12302  min L_add=0.24700  min L_true=0.26740
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+    N=10 holes=3: req_drop=0.20000  min L_add=0.31723  min L_true=0.36139
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+    N=11 holes=4: req_drop=0.24265  min L_add=0.37245  min L_true=0.41496
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+    N=12 holes=5: req_drop=0.29447  min L_add=0.30020  min L_true=0.42015
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+    N=13 holes=6: req_drop=0.32328  min L_add=0.28867  min L_true=0.46679
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? False   true cert holds? True
+  --- k=9, cap_k=0.49426 ---
+    N= 9 holes=1: req_drop=0.01022  min L_add=0.10278  min L_true=0.10278
+           L_add a valid LOWER bound on L (supermodular)? True   additive cert closes? True   true cert holds? True
+    N=10 holes=2: req_drop=0.08721  min L_add=0.19025  min L_true=0.20051
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+    N=11 holes=3: req_drop=0.12986  min L_add=0.25801  min L_true=0.28874
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+    N=12 holes=4: req_drop=0.18167  min L_add=0.22262  min L_true=0.30416
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+    N=13 holes=5: req_drop=0.21049  min L_add=0.22816  min L_true=0.34718
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+  --- k=10, cap_k=0.60440 ---
+    N=10 holes=1: req_drop=-0.02293  min L_add=0.08759  min L_true=0.08759
+           L_add a valid LOWER bound on L (supermodular)? True   additive cert closes? True   true cert holds? True
+    N=11 holes=2: req_drop=0.01972  min L_add=0.15842  min L_true=0.17761
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+    N=12 holes=3: req_drop=0.07153  min L_add=0.15753  min L_true=0.21130
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+    N=13 holes=4: req_drop=0.10035  min L_add=0.17010  min L_true=0.26274
+           L_add a valid LOWER bound on L (supermodular)? False   additive cert closes? True   true cert holds? True
+
+INTERPRETATION printed by the assembling agent.
+DONE.
