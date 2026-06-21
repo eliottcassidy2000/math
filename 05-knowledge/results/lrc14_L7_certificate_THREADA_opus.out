@@ -1,0 +1,10 @@
+##############################################################################
+# L7 BALANCED 2-CLUSTER CERTIFICATE (THREAD A) -- exact Fractions
+##############################################################################
+
+=== k=8,  cap_8 = 2243/5880 = 0.381463 ===
+  REGIME I (MERGED = AP = consec):  measS7 = 169/490 = 0.344898
+     margin to cap = 43/1176 = +0.036565   [this is L1/THM-534, NOT a 2-cluster]
+  REGIME II (SEPARATED non-AP), cluster sizes (4, 4):
+     worst measS7 = 1936/9555 = 0.202616   E=[1, 2, 3, 4, 12, 13, 14, 15]
+     margin to cap = 93/520 = +0.178846   (< consec by +0.142282)

@@ -1,3 +1,60 @@
+## opus-2026-06-21-S1 -- THREAD B: Delsarte-LP saturation via Krawtchouk moments (HYP-2726)
+
+Worked THREAD B: prove "consec maximizes L_y = the Delsarte LP optimum" for the
+LRC(14) seven-sector cover (THM-534, HYP-2726). All exact (Fractions). Pulled
+mac-mini's `lrc_delsarte_lp_macwilliams` as the starting point. Findings:
+
+KRAWTCHOUK-MOMENT REFRAME (the clean basis). L_y(E) = Sum_j c_j M_j(E),
+M_j(E)=E[K_j(N)] (binary Krawtchouk on 6 inner sectors), c_j>=0 (VERIFIED
+Delsarte-positive at every binding k). "consec maximizes L_y" then reduces to
+per-Krawtchouk-moment extremality.
+- k=8 dual is PURELY EVEN (c_1=c_3=c_5=0): binding moments are M_2, M_4 ONLY.
+  VERIFIED: consec maximizes BOTH M_2 and M_4 -- 0 beaters over 11440 sets
+  (maxE<=16) AND over all adversarial families (Sidon, geometric, AP-dilates,
+  random wide, perturbations). The Krawtchouk basis ABSORBS the conflicting
+  -S_3 term of the factorial form: in K-basis k=8 is clean even-band.
+- k=9,10: binding M_1,M_2,M_3. M_2,M_3 consec-max (0 beaters); M_1=6-2S_1 NOT
+  (M_1-beaters == S_1-beaters EXACTLY). Yet full L_y has 0 beaters over
+  12870/5005 sets. k=11: 3 harmless L_y-beaters, ALL driven by the odd M_1
+  deficit (even part +0.00003, odd part -0.00814). The odd Krawtchouk band is
+  the precise obstruction.
+
+EXACT ALGEBRA. M_1=6-2S_1; M_2=15-10S_1+4S_2; M_3=20-20S_1+16S_2-8S_3;
+M_4=15-20S_1+24S_2-24S_3+16S_4. And M_2 = 2*E[(N-3)^2] - 3 = 2(E[N]-3)^2-3+2Var(N):
+consec maximizes the 2nd moment of N about the center 3. CORRECTION to canon:
+the simple "consec MIN S_1, MAX S_2" story is FALSE (S_2 has 6 beaters at k=8,
+S_1 has 10 beaters at k=9); the Krawtchouk COMBINATION M_2 is consec-extremal
+where the raw factorial moments are not (the S_2-beaters all have much larger
+S_1, and -10 S_1 dominates +4 S_2 in M_2).
+
+ENDPOINT DOMINATION (the proof route). k=8 dual g=(1,0,0,1/10,0,0,1), so
+L_y = p_0 + (1/10)p_3 + p_6 -- THREE cells. p_0=meas(S7) (kps-S9 LEMMA B PROVED
+consec-max) and p_6=1/(7(k-1)) (LEMMA A PROVED consec-max) are the two endpoints.
+p_3 is NOT consec-max (10500/11440 beaters) but carries weight only 1/10. The
+SINGLE remaining k=8 inequality:
+   (p_0(consec)-p_0(E)) + (p_6(consec)-p_6(E)) >= (1/10)(p_3(E)-p_3(consec)),
+i.e. the proved endpoint surplus covers the p_3 deficit. Tightest margin = 0
+(consec/dilates only). In M_2's weighted form M_2=2[9p_0+...+9p_6]-3 the
+heaviest weight (9) sits on the two PROVED-extremal endpoints; endpoint surplus
+>= middle deficit on every tested window (0 M_2-beaters).
+
+ANTI-MDS (quantified). Relation min-distance d(E): consec=2 (anti-MDS), and
+d=2 attains max L_y=0.358/max M_2=6.12 vs best d=3 (MDS-like) L_y=0.140/M_2=2.28.
+The Delsarte LP optimum over the realizable region EQUALS L_y(consec)=2633/7350
+for k=8 (since M_2 AND M_4 are SIMULTANEOUSLY consec-max and c_2,c_4>0, the
+separable bound c_0+c_2 max M_2 + c_4 max M_4 is attained at consec).
+M_j = Sum_r m_jr S_r is relation-supported (VERIFIED incl dissociated Sidon set).
+
+STATUS: per-E bound measS7<=L_y PROVED (Krawtchouk-nonneg, unchanged). The open
+"max_E L_y = L_y(consec)" is now NARROWED to: (k=8) one inequality bounding the
+p_3 excess by 10x the proved endpoint surplus; (general) the EVEN Krawtchouk
+moments M_2,M_4 consec-max (VERIFIED, not proved) with the ODD M_1 the lone
+non-extremal binding moment. Scripts:
+lrc14_threadB_krawtchouk_saturation_opus_0621.py,
+lrc14_threadB_even_moment_extremality_opus_0621.py,
+lrc14_threadB_macwilliams_bridge_opus_0621.py,
+lrc14_threadB_M2_proof_probe_opus_0621.py (+ .out in 05-knowledge/results/).
+
 ## codex-2026-06-21 -- HYP-2728: formal factorial boundary plus generated witness hierarchy
 
 User asked for another long LRC proof session with formalization, broad idea

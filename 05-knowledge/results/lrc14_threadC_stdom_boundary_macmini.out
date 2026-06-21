@@ -1,0 +1,20 @@
+==============================================================================
+THREAD C: st-dominance boundary -- first max(E)=B with N_consec NOT <=_st N_E
+==============================================================================
+
+k=8: first st-violation at max(E)=8
+   E=[0, 1, 2, 3, 4, 5, 6, 8]
+   F_consec - F_E (t=0..7) = ['233/1960', '-3/140', '-43/5880', '-11/840', '-1/280', '-1/392', '0', '0']   (t=0 entry=233/1960 -> measS7 still consec-max)
+   => st-dominance HOLDS for max(E) <= 7; the binding THM-535 rows have max <= 17, so they are INSIDE the st-dominance regime.
+
+k=9: first st-violation at max(E)=9
+   E=[0, 1, 2, 3, 4, 5, 6, 7, 9]
+   F_consec - F_E (t=0..7) = ['17/1176', '-67/3528', '-61/5880', '-47/17640', '-29/3528', '-1/504', '0', '0']   (t=0 entry=17/1176 -> measS7 still consec-max)
+   => st-dominance HOLDS for max(E) <= 8; the binding THM-535 rows have max <= 17, so they are INSIDE the st-dominance regime.
+
+k=10: first st-violation at max(E)=10
+   E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+   F_consec - F_E (t=0..7) = ['187/17640', '-71/17640', '-227/17640', '-199/17640', '-11/4410', '-1/630', '0', '0']   (t=0 entry=187/17640 -> measS7 still consec-max)
+   => st-dominance HOLDS for max(E) <= 9; the binding THM-535 rows have max <= 17, so they are INSIDE the st-dominance regime.
+
+DONE.

@@ -1,0 +1,7 @@
+(A) rho -> 1+ diagonal limit, separated 2-cluster, k=8 (cap=0.38146, consec=0.34490):
+   near-diagonal (rho<1.15) worst separated: measS7=0.12160 (55362864098/455298250323) rho=1.1488 E=[59, 60, 61, 62, 68, 69, 70, 71] margin=+0.25987
+(B) rho<->1/rho symmetry: measS7 same=True val=0.10779
+(C) imbalanced 2-cluster, k=8 (does imbalance help adversary vs balanced/consec?):
+   (3,5) worst separated: measS7=0.19775 margin=+0.18371 E=[1, 2, 3, 10, 11, 12, 13, 14]
+   (2,6) worst separated: measS7=0.18335 margin=+0.19811 E=[1, 2, 9, 10, 11, 12, 13, 14]
+   (1,7) worst separated: measS7=0.24932 margin=+0.13214 E=[2, 4, 5, 6, 7, 8, 9, 10]
