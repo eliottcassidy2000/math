@@ -1,5 +1,5 @@
 ---
-id: HYP-2719
+id: HYP-2720
 title: LRC14 Weyl error is odd-support-envelope dominated, not a signed odd cone
 status: OPEN; exact scout evidence
 source: codex-2026-06-21-S69
@@ -10,13 +10,14 @@ depends_on:
   - HYP-2716
   - HYP-2715
 related:
+  - HYP-2719
   - HYP-2698
   - THM-558
   - HYP-2676
   - OPEN-Q-108
 ---
 
-# HYP-2719 - Odd-Support Weyl Error Envelope
+# HYP-2720 - Odd-Support Weyl Error Envelope
 
 ## Claim
 
@@ -151,7 +152,9 @@ zero directed 3-cycles.
 
 ## Status
 
-This is not an LRC(14) proof.  It corrects the phrase "odd support dominated"
-into a proof-shaped split: odd-support envelope for the tail, finite ledger for
-signed-even-led packets, then the HYP-2718 origin-atom bound.
-
+This is not an LRC(14) proof.  It is compatible with mac-mini's HYP-2719
+support-size/cycle-space lever: that work refutes the OCF-style signed
+odd-cycle cancellation transfer, while this note keeps the narrower
+factorial-basis observation that odd support can still supply the unsigned
+envelope.  The proof-shaped split is: odd-support envelope for the tail, finite
+ledger for signed-even-led packets, then the HYP-2718 origin-atom bound.

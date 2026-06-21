@@ -29,7 +29,7 @@ extend the S68 relation-height scout so each low-height carrier packet reports
 its exact `Q_t` profile, then search for a transfer-tax identity that charges
 positive `Q_0` creation to named tail packets.
 
-## codex-2026-06-21-S69 -- HYP-2719: odd-support envelope for the factorial-origin Weyl error
+## codex-2026-06-21-S69 -- HYP-2720: odd-support envelope for the factorial-origin Weyl error
 
 User asked to keep pushing the idea that the Weyl error is odd-support
 dominated.  Pulled and integrated the incoming HYP-2718/THM-561 origin-atom
@@ -43,7 +43,7 @@ Q_0 = ProductCover - ActualCover
 
 where `W_j=Delta E[binom(T,j)]` and `T` is the number of missed inner sectors.
 
-Claimed HYP-2719 and added
+Claimed HYP-2720 and added
 `04-computation/lrc14_odd_support_weyl_error_codex_s69.py` with stored output
 `05-knowledge/results/lrc14_odd_support_weyl_error_codex_s69.out`.  The exact
 bank combines the HYP-2715 split rows with the S68 relation-height two-carrier
@@ -55,8 +55,11 @@ negative `Q_0` rows are signed-even-led after cancellation.
 Proof-state update: keep the user's odd-support intuition, but formulate it as
 an odd-support `L1` envelope for the high-height HYP-2717 carrier tail, plus a
 finite ledger for signed-even-led low-height packets, then evaluate the
-HYP-2718 origin atom.  New detail file:
-`05-knowledge/hypotheses/HYP-2719-lrc14-odd-support-weyl-error-envelope.md`.
+HYP-2718 origin atom.  After pulling mac-mini S9, this was renumbered from the
+initial local HYP-2719 claim to HYP-2720 because HYP-2719 is the broader
+support-size/cycle-space lever and refutes the naive OCF-style signed odd-cycle
+transfer.  New detail file:
+`05-knowledge/hypotheses/HYP-2720-lrc14-odd-support-weyl-error-envelope.md`.
 
 ## codex-2026-06-21-S68 -- HYP-2714 finite-ledger addendum for moderate multi-block budget
 
