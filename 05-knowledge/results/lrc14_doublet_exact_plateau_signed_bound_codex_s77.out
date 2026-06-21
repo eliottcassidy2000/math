@@ -1,7 +1,7 @@
 ================================================================================================
 LRC14 actual-size doublet exact plateau signed-tail audit (codex-S77)
 ================================================================================================
-Family: E_N(M)={0,...,N-3} union {M,M+1}, scanned 15<=M<=600.
+Family: E_N(M)={0,...,N-3} union {M,M+1}, scanned 15<=M<=1200.
 Plateau: corrected HYP-2799 D7({0,...,N-3}, gap=1).
 
 Exact scan maxima:
@@ -14,23 +14,33 @@ Exact scan maxima:
 
 Signed-tail constants C+ = max M*(p0-D7), Cabs = max |M*(p0-D7)|:
   N  M_C+                 C+ M_min         min scaled M_abs               Cabs
-  8   426      206431/149450   396     -370894/486325   426      206431/149450
-  9   259      826621/655200   536   -7884727/7893900   259      826621/655200
- 10    91     1265857/946680   485   -5793575/4667544    91     1265857/946680
- 11   235        74483/57624   447     -543863/384160   447      543863/384160
- 12    67 2317980841/2115953280    69  -12227071/8297856    69   12227071/8297856
+  8   846      409611/296450   816    -763664/1000825   846      409611/296450
+  9  1099      699899/554400   956     -969431/970200  1099      699899/554400
+ 10  1071      352529/229810  1073 -21347979/17191160  1071      352529/229810
+ 11   235        74483/57624   956 -33877787/22977570   956  33877787/22977570
+ 12  1126 1949643791/1431380160    69  -12227071/8297856    69   12227071/8297856
+
+Direct cap-room audit at the scanned p0 maximizer:
+  N  M_p0              p0-D7           cap_N-D7         room/error
+  8    20           283/7350          2699/9800          8097/1132
+  9    21     108791/3880800  11730923/50450400   11730923/1414283
+ 10    21        9073/288120       48285/249704      724275/117949
+ 11    21        8053/264110      146519/624260     1611709/209378
+ 12    21 32595841/1369146240   7251463/24893568 398830465/32595841
 
 Tail closure if the scanned C+ is proved for all M>=lo:
   N           cap_N-D7          Q(N-1)-D7 cap from M>=  Q from M>=  cap@lo  Q@lo
   8          2699/9800         1331/14700            6          16    True False
   9  11730923/50450400     247867/2469600            6          13    True  True
- 10       48285/249704           177/4802            7          37    True False
+ 10       48285/249704           177/4802            8          42    True False
  11      146519/624260       35167/864360            6          32    True False
- 12   7251463/24893568    906103/24893568            4          31    True False
+ 12   7251463/24893568    906103/24893568            5          38    True False
 
 Interpretation:
-  * The actual-size cap_N margins are wide; C+ closes cap_N from M=15 for N=8..12.
-  * Q(N-1) is much tighter.  N=10 has the live razor margin, but the signed tail
-    still suggests only a tiny finite prefix once a uniform C+ bound is proved.
+  * HYP-2798 reframes the cap branch correctly: bound the direct positive
+    error p0-D7 below cap_N-D7, not the scaled quantity M*(p0-D7).
+  * The scanned direct room/error ratios are comfortably > 6 for N=8..12.
+    C+ remains useful as a finite-window/Q-prefix diagnostic, not as the
+    primary cap proof obligation.
   * This is a cap-branch tool for genuine-wide LRC14; it does not replace the
     corrected frozen-gap extremality and finite low-f obligations in HYP-2799.

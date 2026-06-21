@@ -165,7 +165,7 @@ scan
 05-knowledge/results/lrc14_doublet_exact_plateau_signed_bound_codex_s77.out
 ```
 
-computes `M*(p0(E_N(M))-D7)` for `15<=M<=600`.  The actual-size p0 maxima
+computes `M*(p0(E_N(M))-D7)` for `15<=M<=1200`.  The actual-size p0 maxima
 are:
 
 ```text
@@ -181,11 +181,11 @@ The positive signed constants
 ```text
 C+ = max_M M*(p0-D7)
 
-N=8:  206431/149450
-N=9:  826621/655200
-N=10: 1265857/946680
+N=8:  409611/296450
+N=9:  699899/554400
+N=10: 352529/229810
 N=11: 74483/57624
-N=12: 2317980841/2115953280
+N=12: 1949643791/1431380160
 ```
 
 are already small relative to the actual cap margins.  If the displayed `C+`
@@ -200,13 +200,38 @@ still finite-prefix sized rather than asymptotic:
 
 ```text
 suggested Q cutoffs from the scanned C+:
-N=8,9,10,11,12 -> M>=16,13,37,32,31.
+N=8,9,10,11,12 -> M>=16,13,42,32,38.
 ```
 
-This addendum separates two proof targets that were previously being mixed:
-the genuine-wide cap branch should use the wide actual-size cap margins, while
-the sharper `Q` branch only needs a short exact doublet prefix after a uniform
-signed endpoint/Dedekind constant is proved.
+After pulling KPS HYP-2798, the cap branch should be read even more directly.
+The plateau `D7` here is the same object as HYP-2798's `Phi_2=bvd(base,2)`.
+For proving `p0<cap_N`, the right next theorem is not boundedness of
+`M*(p0-D7)`; it is a direct positive-error estimate
+
+```text
+sup_M (p0(E_N(M))-D7)_+ < cap_N-D7.
+```
+
+At the scanned p0 maximizers, the exact direct errors and room ratios are:
+
+```text
+N=8:  p0-D7 = 283/7350,                (cap-D7)/(p0-D7) = 8097/1132
+N=9:  p0-D7 = 108791/3880800,          (cap-D7)/(p0-D7) = 11730923/1414283
+N=10: p0-D7 = 9073/288120,             (cap-D7)/(p0-D7) = 724275/117949
+N=11: p0-D7 = 8053/264110,             (cap-D7)/(p0-D7) = 1611709/209378
+N=12: p0-D7 = 32595841/1369146240,     (cap-D7)/(p0-D7) = 398830465/32595841
+```
+
+So the exact scanned cap slack is comfortably larger than a factor of six in
+every actual-size doublet row.  The scaled `C+` table remains useful as a
+finite-window and `Q(N-1)` prefix diagnostic, but HYP-2798 correctly lowers the
+cap proof obligation to the direct almost-periodic positive-error supremum.
+
+This addendum separates three proof targets that were previously being mixed:
+the genuine-wide cap branch should use the wide actual-size cap margins and the
+direct HYP-2798 error; the sharper `Q` branch needs the short exact doublet
+prefix suggested by `C+`; and arbitrary two-far gaps still require HYP-2799's
+frozen gap extremality/no-large-gap-beater theorem.
 
 ## Proof Route
 
@@ -289,5 +314,7 @@ No proof of LRC(14) is claimed here.  The concrete progress is:
 - produced a corrected exact frozen value matching finite large-f averages;
 - verified all bounded bases with `g<=24` at `k=10,11,12` have frozen tail
   below `Q(k-1)`;
+- aligned the actual-size doublet with HYP-2798's direct-error cap route, where
+  scanned room/error ratios are all greater than six;
 - reduced the remaining r=2 proof to frozen gap extremality plus a finite
   low-f exact window.

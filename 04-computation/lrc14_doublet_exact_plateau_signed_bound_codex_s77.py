@@ -91,6 +91,10 @@ def scan_size(size: int, lo: int, hi: int) -> dict[str, object]:
         "q_room": q_room,
         "best_p0_M": best_p0_M,
         "best_p0": best_p0,
+        "best_direct_error": best_p0 - plateau,
+        "direct_room_ratio": cap_room / (best_p0 - plateau)
+        if best_p0 > plateau
+        else None,
         "cap_gap_at_best": CAP[size] - best_p0,
         "q_gap_at_best": QVAL[size] - best_p0,
         "max_pos_M": max_pos_M,
@@ -115,7 +119,7 @@ def fmt_fraction(x: object) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--lo", type=int, default=15)
-    parser.add_argument("--hi", type=int, default=600)
+    parser.add_argument("--hi", type=int, default=1200)
     args = parser.parse_args()
 
     print("=" * 96)
@@ -150,6 +154,20 @@ def main() -> None:
             f"{row['max_abs_M']:>5} {fmt_fraction(row['max_abs']):>18}"
         )
     print()
+    print("Direct cap-room audit at the scanned p0 maximizer:")
+    print(
+        f"{'N':>3} {'M_p0':>5} {'p0-D7':>18} {'cap_N-D7':>18} "
+        f"{'room/error':>18}"
+    )
+    for row in rows:
+        ratio = row["direct_room_ratio"]
+        ratio_text = "inf" if ratio is None else fmt_fraction(ratio)
+        print(
+            f"{row['size']:>3} {row['best_p0_M']:>5} "
+            f"{fmt_fraction(row['best_direct_error']):>18} "
+            f"{fmt_fraction(row['cap_room']):>18} {ratio_text:>18}"
+        )
+    print()
     print("Tail closure if the scanned C+ is proved for all M>=lo:")
     print(
         f"{'N':>3} {'cap_N-D7':>18} {'Q(N-1)-D7':>18} "
@@ -164,9 +182,11 @@ def main() -> None:
         )
     print()
     print("Interpretation:")
-    print("  * The actual-size cap_N margins are wide; C+ closes cap_N from M=15 for N=8..12.")
-    print("  * Q(N-1) is much tighter.  N=10 has the live razor margin, but the signed tail")
-    print("    still suggests only a tiny finite prefix once a uniform C+ bound is proved.")
+    print("  * HYP-2798 reframes the cap branch correctly: bound the direct positive")
+    print("    error p0-D7 below cap_N-D7, not the scaled quantity M*(p0-D7).")
+    print("  * The scanned direct room/error ratios are comfortably > 6 for N=8..12.")
+    print("    C+ remains useful as a finite-window/Q-prefix diagnostic, not as the")
+    print("    primary cap proof obligation.")
     print("  * This is a cap-branch tool for genuine-wide LRC14; it does not replace the")
     print("    corrected frozen-gap extremality and finite low-f obligations in HYP-2799.")
 

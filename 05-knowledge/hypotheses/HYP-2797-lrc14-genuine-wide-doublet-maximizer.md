@@ -180,7 +180,7 @@ sector). Both are **double-sawtooth (Asano multiple Dedekind) sums** in (M, M+1)
 (M+1)φ = Mφ+φ, on each base miss-arc this is a genuine double Dedekind sum. Measured: `+` part
 ≈ 0.004–0.032 dominates, `−` part ≈ 0.000–0.003 small; base 2-miss arc measure ≈ 0.17–0.35.
 
-**This pins codex HYP-2796's curvature-approach to a concrete object:** `C(M)−C_sat` is the
+**This pins codex HYP-2799's curvature-approach to a concrete object:** `C(M)−C_sat` is the
 deviation of a signed double Dedekind sum from its mean, and **Dedekind–Rademacher reciprocity /
 equidistribution of (Mφ,(M+1)φ) on the fixed base miss-arcs gives the `O(1/M)` rate** ⟹
 `sup_M|M·(C−C_sat)| ≲ 0.7`. So the FULL genuine-wide binding structure is:
