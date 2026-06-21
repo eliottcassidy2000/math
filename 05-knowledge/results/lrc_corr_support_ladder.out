@@ -1,0 +1,76 @@
+============================================================================================
+(1) corr by SUPPORT layer, validate vs exact (k=7,8)
+============================================================================================
+  consec7            B=3  exact_corr=+0.14150  lattice(trunc)=+0.04344  diff=-0.09806
+      support 1: sum W = -0.000000  (cumulative -0.000000)
+      support 2: sum W = +0.000000  (cumulative -0.000000)
+      support 3: sum W = +0.010954  (cumulative +0.010954)
+      support 4: sum W = +0.016173  (cumulative +0.027127)
+      support 5: sum W = -0.004615  (cumulative +0.022512)
+      support 6: sum W = +0.011520  (cumulative +0.034032)
+      support 7: sum W = +0.009408  (cumulative +0.043440)
+
+  consec8            B=2  exact_corr=+0.30273  lattice(trunc)=+0.06707  diff=-0.23566
+      support 1: sum W = -0.000000  (cumulative -0.000000)
+      support 2: sum W = -0.000000  (cumulative -0.000000)
+      support 3: sum W = +0.019929  (cumulative +0.019929)
+      support 4: sum W = +0.057526  (cumulative +0.077455)
+      support 5: sum W = -0.038178  (cumulative +0.039277)
+      support 6: sum W = +0.027756  (cumulative +0.067033)
+      support 7: sum W = +0.000035  (cumulative +0.067069)
+      support 8: sum W = +0.000000  (cumulative +0.067069)
+
+  [0,1,2,3,4,5,7]    B=3  exact_corr=+0.03946  lattice(trunc)=+0.02150  diff=-0.01796
+      support 1: sum W = -0.000000  (cumulative -0.000000)
+      support 2: sum W = -0.000000  (cumulative -0.000000)
+      support 3: sum W = +0.009792  (cumulative +0.009792)
+      support 4: sum W = +0.013148  (cumulative +0.022940)
+      support 5: sum W = -0.006667  (cumulative +0.016273)
+      support 6: sum W = +0.007762  (cumulative +0.024035)
+      support 7: sum W = -0.002532  (cumulative +0.021502)
+
+============================================================================================
+(2/3) TWO-BLOCK: within vs cross-block contribution by support, as M grows (k=7)
+============================================================================================
+  M=  10  E=[0, 1, 2, 10, 11, 12, 13]
+      exact_corr=+0.07205  lattice=+0.02216  within=+0.00444  cross=+0.01772
+        support 1: within=-0.000000  cross=+0.000000
+        support 2: within=-0.000000  cross=+0.000000
+        support 3: within=+0.002988  cross=+0.000000
+        support 4: within=+0.001457  cross=+0.011707
+        support 5: within=+0.000000  cross=-0.001313
+        support 6: within=+0.000000  cross=+0.003966
+        support 7: within=+0.000000  cross=+0.003356
+
+  M=  30  E=[0, 1, 2, 30, 31, 32, 33]
+      exact_corr=+0.02356  lattice=+0.02016  within=+0.00444  cross=+0.01572
+        support 1: within=-0.000000  cross=+0.000000
+        support 2: within=-0.000000  cross=+0.000000
+        support 3: within=+0.002988  cross=+0.000000
+        support 4: within=+0.001457  cross=+0.011901
+        support 5: within=+0.000000  cross=-0.002196
+        support 6: within=+0.000000  cross=+0.005419
+        support 7: within=+0.000000  cross=+0.000594
+
+  M= 100  E=[0, 1, 2, 100, 101, 102, 103]
+      exact_corr=+0.02785  lattice=+0.02016  within=+0.00444  cross=+0.01572
+        support 1: within=-0.000000  cross=+0.000000
+        support 2: within=-0.000000  cross=+0.000000
+        support 3: within=+0.002988  cross=+0.000000
+        support 4: within=+0.001457  cross=+0.011901
+        support 5: within=+0.000000  cross=-0.002196
+        support 6: within=+0.000000  cross=+0.005419
+        support 7: within=+0.000000  cross=+0.000594
+
+  M= 300  E=[0, 1, 2, 300, 301, 302, 303]
+      exact_corr=+0.02966  lattice=+0.02016  within=+0.00444  cross=+0.01572
+        support 1: within=-0.000000  cross=+0.000000
+        support 2: within=-0.000000  cross=+0.000000
+        support 3: within=+0.002988  cross=+0.000000
+        support 4: within=+0.001457  cross=+0.011901
+        support 5: within=+0.000000  cross=-0.002196
+        support 6: within=+0.000000  cross=+0.005419
+        support 7: within=+0.000000  cross=+0.000594
+
+  LEVER TEST: if 'cross' total -> 0 as M->inf, dominated by the SUPPORT-3 (Schur) cross
+  layer, then |corr - within| <= (Schur-cross bound) closes the multi-block case.

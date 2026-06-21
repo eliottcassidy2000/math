@@ -1,0 +1,49 @@
+============================================================================================
+THREAD C-b -- the dissociation dichotomy: even-support corr -> 0 for
+dissociated speeds, making corr an ODD-SUPPORT (OCF-type) object.
+opus-2026-06-20-S2
+============================================================================================
+
+P1 -- unit-relation census (Schur triples=odd supp3; quads=even supp4)
+      vs the even/odd corr ratio.  Sidon (B_2) => 0 quads => even kills.
+  shape                            Sidon? #tri(odd3) #quad(ev4)       odd      even even/odd
+  consec {0..7}                     False         12         13   0.09619   0.03570    0.371
+  AP3 {0,3,..21}                    False         12         13   0.09619   0.03570    0.371
+  dilated x5 {0,5,..35}             False         12         13   0.09619   0.03570    0.371
+  two-block {0,1,2,3,40..43}        False          8          9   0.03957   0.01913    0.483
+  Schur {0,1,2,3,4,5,64,65}         False          7          7   0.02724   0.02684    0.985
+  Sidon {0,1,3,7,12,20,30,44}        True          0          0  -0.00954  -0.00588    0.616
+  dissoc {0,1,3,7,15,31,63,127}      True          0          0   0.01646   0.00037    0.022
+
+  READ: Sidon/dissoc sets (no additive quadruples) have even/odd << 1;
+  structured sets (many quads) have even/odd ~ 1.  The even-support corr
+  is carried by additive QUADRUPLES e_a+e_b=e_c+e_d; killing them (Sidon)
+  kills the even part and leaves corr as an ODD-support (OCF-type) sum.
+
+P2 -- dilation/jitter interpolation: even/odd as a dissociation order param
+  description                         #quad       odd      even  even/odd
+  consec (d=1)                           13   0.09497   0.03555     0.374
+  dilate x2                              13   0.09497   0.03555     0.374
+  dilate x2 +jitter                       5   0.03031  -0.00327    -0.108
+  geometric-ish                           0   0.00413   0.00036     0.087
+  powers-of-2 (dissoc)                    0   0.01406   0.02828     2.012
+
+P3 -- does the ODD-support sum alone reconstruct corr for dissociated E?
+  (if even ~ 0 and odd converges to exact corr, corr IS an OCF-type object)
+  E = [0, 1, 2, 4, 8, 16, 32, 64]   exact corr = +0.044717
+    N0    odd-supp   even-supp    odd+even  odd/exact
+     4    0.014241    0.026268    0.040509      0.318
+     6    0.014057    0.028277    0.042334      0.314
+     8    0.015292    0.025941    0.041233      0.342
+    10    0.023140    0.027193    0.050333      0.517
+
+SUMMARY
+  * EVEN-support corr is carried by additive quadruples e_a+e_b=e_c+e_d.
+  * A Sidon/dissociated set has none -> even-support -> 0, odd dominates.
+  * For dissociated speeds the Weyl error IS (to leading order) a signed
+    sum over ODD-support additive relations = an OCF-type object on the
+    offset relation lattice.  For structured speeds parity is mixed.
+  * This is a structural ANALOGY (parity selection under dissociation), not
+    yet a bound-improving TOOL: the leading carrier error is the SUPPORT-3
+    Schur layer either way, so dropping even support does not shrink the
+    binding term.  See write-up for the lever assessment.

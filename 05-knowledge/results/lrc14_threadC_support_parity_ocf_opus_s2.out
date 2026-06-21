@@ -1,0 +1,151 @@
+============================================================================================
+THREAD C -- does the LRC Weyl error have OCF (odd-support) structure?
+opus-2026-06-20-S2; exact corr; complex truncated lattice sums.
+============================================================================================
+
+### k = 7  (6 nonzero speeds) ###
+PART 1 -- exact corr(E) = measS7 - iid_7   (iid_7 = 0.006120)
+  shape                                   measS7    corr (exact)  sign
+  consec      {0..6}                    0.147619        0.141499     +
+  near-consec {0..5,7}                  0.045578        0.039458     +
+  AP step2    {0,2..12}                 0.147619        0.141499     +
+  two-block   {0,1,2,3,40,41,42}        0.039580        0.033460     +
+  Schur-rich  {0,1,2,3,4,64,65}         0.037431        0.031311     +
+  dissoc      {0,1,3,7,15,31,63}        0.009100        0.002980     +
+
+PART 2/3 -- support + parity stratification of corr  (|coeff|<=10, supp<=6)
+  support 1 impossible (primitive); lowest is 2 = '2-body / cut' term.
+  shape                    corr_trunc   odd-supp  even-supp|odd|/|tot| lead supp
+  consec                     0.098416   0.042046   0.056370      0.427         6
+  near-consec                0.028418   0.020500   0.007918      0.721         3
+  AP                         0.098416   0.042046   0.056370      0.427         6
+  two-block                  0.029371   0.015055   0.014316      0.513         5
+  Schur-rich                 0.026228   0.007820   0.018408      0.298         6
+  dissoc                     0.005260   0.003916   0.001344      0.745         3
+
+PART 4 -- per-support breakdown (Re K, count, 1/height weight)
+  consec      {0..6}   corr_trunc=+0.098416   odd=+0.042046 even=+0.056370
+      supp=2 [EVEN]  ReK=+0.005587  |K|=0.005587  count=     82  Wsum=9.3881
+      supp=3 [ODD ]  ReK=+0.014669  |K|=0.014669  count=   1470  Wsum=63.2856
+      supp=4 [EVEN]  ReK=+0.013833  |K|=0.013833  count=  18842  Wsum=218.3673
+      supp=5 [ODD ]  ReK=+0.027377  |K|=0.027377  count= 134834  Wsum=455.2079
+      supp=6 [EVEN]  ReK=+0.036949  |K|=0.036949  count= 410464  Wsum=388.0476
+
+  near-consec {0..5,7}   corr_trunc=+0.028418   odd=+0.020500 even=+0.007918
+      supp=2 [EVEN]  ReK=+0.003758  |K|=0.003758  count=     66  Wsum=6.8157
+      supp=3 [ODD ]  ReK=+0.011717  |K|=0.011717  count=   1348  Wsum=66.7471
+      supp=4 [EVEN]  ReK=+0.006071  |K|=0.006071  count=  17558  Wsum=207.4325
+      supp=5 [ODD ]  ReK=+0.008783  |K|=0.008783  count= 125038  Wsum=420.6768
+      supp=6 [EVEN]  ReK=-0.001911  |K|=0.001911  count= 379202  Wsum=371.1844
+
+  AP step2    {0,2..12}   corr_trunc=+0.098416   odd=+0.042046 even=+0.056370
+      supp=2 [EVEN]  ReK=+0.005587  |K|=0.005587  count=     82  Wsum=9.3881
+      supp=3 [ODD ]  ReK=+0.014669  |K|=0.014669  count=   1470  Wsum=63.2856
+      supp=4 [EVEN]  ReK=+0.013833  |K|=0.013833  count=  18842  Wsum=218.3673
+      supp=5 [ODD ]  ReK=+0.027377  |K|=0.027377  count= 134834  Wsum=455.2079
+      supp=6 [EVEN]  ReK=+0.036949  |K|=0.036949  count= 410464  Wsum=388.0476
+
+  two-block   {0,1,2,3,40,41,42}   corr_trunc=+0.029371   odd=+0.015055 even=+0.014316
+      supp=2 [EVEN]  ReK=+0.001868  |K|=0.001868  count=     22  Wsum=2.8247
+      supp=3 [ODD ]  ReK=+0.005979  |K|=0.005979  count=    260  Wsum=17.7777
+      supp=4 [EVEN]  ReK=+0.004648  |K|=0.004648  count=   2248  Wsum=41.3246
+      supp=5 [ODD ]  ReK=+0.009076  |K|=0.009076  count=  19056  Wsum=79.4622
+      supp=6 [EVEN]  ReK=+0.007800  |K|=0.007800  count=  53212  Wsum=54.0101
+
+  Schur-rich  {0,1,2,3,4,64,65}   corr_trunc=+0.026228   odd=+0.007820 even=+0.018408
+      supp=2 [EVEN]  ReK=+0.003251  |K|=0.003251  count=     40  Wsum=5.1217
+      supp=3 [ODD ]  ReK=+0.006208  |K|=0.006208  count=    440  Wsum=20.8160
+      supp=4 [EVEN]  ReK=+0.005469  |K|=0.005469  count=   2630  Wsum=40.4113
+      supp=5 [ODD ]  ReK=+0.001613  |K|=0.001613  count=  10856  Wsum=54.6122
+      supp=6 [EVEN]  ReK=+0.009688  |K|=0.009688  count=  48280  Wsum=62.7067
+
+  dissoc      {0,1,3,7,15,31,63}   corr_trunc=+0.005260   odd=+0.003916 even=+0.001344
+      supp=2 [EVEN]  ReK=+0.000649  |K|=0.000649  count=     16  Wsum=2.0106
+      supp=3 [ODD ]  ReK=+0.002709  |K|=0.002709  count=    238  Wsum=12.6291
+      supp=4 [EVEN]  ReK=+0.000705  |K|=0.000705  count=   2466  Wsum=33.3994
+      supp=5 [ODD ]  ReK=+0.001207  |K|=0.001207  count=  15994  Wsum=68.3343
+      supp=6 [EVEN]  ReK=-0.000011  |K|=0.000011  count=  46112  Wsum=54.6379
+
+PART 5 -- 7-vanishing (apex prime) filter per support  (|coeff|<=8, supp<=5)
+  a relation is 7-KILLED iff some coord is a nonzero multiple of 7
+  (chat_T(7m)=0 for all T zeroes the whole product).
+  shape                  supp    total 7-killed   alive   alive ReK
+  consec                    2       60        0      60    0.005032
+                            3      918      220     698    0.013868
+                            4     9536     3326    6210    0.012519
+                            5    54116    23824   30292    0.023894
+
+  near-consec               2       50       10      40    0.003338
+                            3      854      186     668    0.011644
+                            4     8806     3230    5576    0.005761
+                            5    50286    22246   28040    0.008476
+
+  AP                        2       60        0      60    0.005032
+                            3      918      220     698    0.013868
+                            4     9536     3326    6210    0.012519
+                            5    54116    23824   30292    0.023894
+
+  two-block                 2       16        0      16    0.001732
+                            3      174       30     144    0.005995
+                            4     1114      360     754    0.004450
+                            5     7586     3202    4384    0.008743
+
+  Schur-rich                2       32        0      32    0.003076
+                            3      284       64     220    0.005937
+                            4     1322      432     890    0.005329
+                            5     4300     1642    2658    0.001401
+
+  dissoc                    2       10        4       6    0.000270
+                            3      148       30     118    0.002943
+                            4     1186      390     796   -0.000055
+                            5     6500     2868    3632    0.002398
+
+### k = 8  (7 nonzero speeds) ###
+PART 1 -- exact corr(E) = measS7 - iid_8   (iid_8 = 0.024480)
+  shape                                   measS7    corr (exact)  sign
+  consec      {0..7}                    0.327211        0.302731     +
+  near-consec {0..6,8}                  0.208333        0.183854     +
+  two-block   {0,1,2,3,40,41,42,43}     0.115099        0.090620     +
+  Schur-rich  {0,1,2,3,4,5,64,65}       0.106113        0.081633     +
+  dissoc      {0,1,3,7,15,31,63,127}    0.034733        0.010254     +
+
+PART 2/3 -- support + parity stratification of corr  (|coeff|<=8, supp<=5)
+  support 1 impossible (primitive); lowest is 2 = '2-body / cut' term.
+  shape                    corr_trunc   odd-supp  even-supp|odd|/|tot| lead supp
+  consec                     0.131885   0.096187   0.035699      0.729         5
+  near-consec                0.125244   0.082727   0.042517      0.661         3
+  two-block                  0.058701   0.039570   0.019131      0.674         3
+  Schur-rich                 0.054079   0.027242   0.026837      0.504         3
+  dissoc                     0.016824   0.016457   0.000367      0.978         3
+
+PART 4 -- per-support breakdown (Re K, count, 1/height weight)
+  consec      {0..7}   corr_trunc=+0.131885   odd=+0.096187 even=+0.035699
+      supp=2 [EVEN]  ReK=+0.012579  |K|=0.012579  count=     72  Wsum=9.5375
+      supp=3 [ODD ]  ReK=+0.047175  |K|=0.047175  count=   1390  Wsum=92.0338
+      supp=4 [EVEN]  ReK=+0.023120  |K|=0.023120  count=  19458  Wsum=389.4268
+      supp=5 [ODD ]  ReK=+0.049012  |K|=0.049012  count= 166202  Wsum=1111.9324
+
+  near-consec {0..6,8}   corr_trunc=+0.125244   odd=+0.082727 even=+0.042517
+      supp=2 [EVEN]  ReK=+0.015318  |K|=0.015318  count=     82  Wsum=11.4778
+      supp=3 [ODD ]  ReK=+0.044522  |K|=0.044522  count=   1422  Wsum=87.7436
+      supp=4 [EVEN]  ReK=+0.027199  |K|=0.027199  count=  18914  Wsum=370.4861
+      supp=5 [ODD ]  ReK=+0.038206  |K|=0.038206  count= 157244  Wsum=1050.1984
+
+  two-block   {0,1,2,3,40,41,42,43}   corr_trunc=+0.058701   odd=+0.039570 even=+0.019131
+      supp=2 [EVEN]  ReK=+0.004329  |K|=0.004329  count=     16  Wsum=2.6736
+      supp=3 [ODD ]  ReK=+0.024957  |K|=0.024957  count=    270  Wsum=29.3281
+      supp=4 [EVEN]  ReK=+0.014801  |K|=0.014801  count=   2580  Wsum=83.6271
+      supp=5 [ODD ]  ReK=+0.014613  |K|=0.014613  count=  24456  Wsum=224.5431
+
+  Schur-rich  {0,1,2,3,4,5,64,65}   corr_trunc=+0.054079   odd=+0.027242 even=+0.026837
+      supp=2 [EVEN]  ReK=+0.008345  |K|=0.008345  count=     40  Wsum=5.7639
+      supp=3 [ODD ]  ReK=+0.022940  |K|=0.022940  count=    570  Wsum=39.9100
+      supp=4 [EVEN]  ReK=+0.018492  |K|=0.018492  count=   4482  Wsum=101.1807
+      supp=5 [ODD ]  ReK=+0.004302  |K|=0.004302  count=  22942  Wsum=174.3068
+
+  dissoc      {0,1,3,7,15,31,63,127}   corr_trunc=+0.016824   odd=+0.016457 even=+0.000367
+      supp=2 [EVEN]  ReK=+0.000674  |K|=0.000674  count=     10  Wsum=1.6143
+      supp=3 [ODD ]  ReK=+0.009086  |K|=0.009086  count=    180  Wsum=13.9616
+      supp=4 [EVEN]  ReK=-0.000306  |K|=0.000306  count=   1650  Wsum=37.5558
+      supp=5 [ODD ]  ReK=+0.007371  |K|=0.007371  count=  12950  Wsum=104.8903
+

@@ -1,0 +1,110 @@
+============================================================================================
+(i) CORRELATION  |corr(E)|  vs  additive energy E_+  and Schur-triples  (k=8)
+============================================================================================
+  population size = 128
+  Pearson  r(|corr|, E_+)        = +0.9292
+  Spearman rho(|corr|, E_+)      = +0.5382
+  Pearson  r(|corr|, Schur)      = +0.8394
+  Spearman rho(|corr|, Schur)    = +0.4289
+  Spearman rho(|corr|, SchurDst) = +0.3415
+
+  Top 6 by |corr| (largest carrier error):
+    consec         |corr|=0.3027  E_+=  344  Schur=  36  E=[0, 1, 2, 3, 4, 5, 6, 7]
+    AP_step2       |corr|=0.3027  E_+=  344  Schur=  36  E=[0, 2, 4, 6, 8, 10, 12, 14]
+    AP_step3       |corr|=0.3027  E_+=  344  Schur=  36  E=[0, 3, 6, 9, 12, 15, 18, 21]
+    twoblock_M200  |corr|=0.0965  E_+=  264  Schur=  30  E=[0, 1, 2, 3, 200, 201, 202, 203]
+    twoblock_M1000 |corr|=0.0928  E_+=  264  Schur=  30  E=[0, 1, 2, 3, 1000, 1001, 1002, 1003]
+    twoblock_M50   |corr|=0.0880  E_+=  264  Schur=  30  E=[0, 1, 2, 3, 50, 51, 52, 53]
+  Bottom 6 by |corr| (smallest carrier error):
+    rand           |corr|=0.0007  E_+=  144  Schur=  15  E=[0, 5, 8, 22, 25, 37, 38, 40]
+    rand           |corr|=0.0007  E_+=  140  Schur=  17  E=[0, 2, 15, 26, 28, 29, 34, 35]
+    rand           |corr|=0.0006  E_+=  148  Schur=  17  E=[0, 2, 15, 16, 17, 21, 26, 40]
+    rand           |corr|=0.0006  E_+=  140  Schur=  17  E=[0, 8, 14, 23, 25, 27, 32, 37]
+    rand           |corr|=0.0005  E_+=  156  Schur=  15  E=[0, 6, 7, 11, 24, 29, 33, 34]
+    rand           |corr|=0.0001  E_+=  136  Schur=  17  E=[0, 4, 23, 27, 28, 34, 36, 39]
+
+============================================================================================
+(i) CORRELATION  |corr(E)|  vs  additive energy E_+  and Schur-triples  (k=9)
+============================================================================================
+  population size = 128
+  Pearson  r(|corr|, E_+)        = +0.9278
+  Spearman rho(|corr|, E_+)      = +0.4842
+  Pearson  r(|corr|, Schur)      = +0.8023
+  Spearman rho(|corr|, Schur)    = +0.2267
+  Spearman rho(|corr|, SchurDst) = +0.1328
+
+  Top 6 by |corr| (largest carrier error):
+    consec         |corr|=0.3585  E_+=  489  Schur=  45  E=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+    AP_step2       |corr|=0.3585  E_+=  489  Schur=  45  E=[0, 2, 4, 6, 8, 10, 12, 14, 16]
+    AP_step3       |corr|=0.3585  E_+=  489  Schur=  45  E=[0, 3, 6, 9, 12, 15, 18, 21, 24]
+    twoblock_M200  |corr|=0.1481  E_+=  369  Schur=  38  E=[0, 1, 2, 3, 200, 201, 202, 203, 204]
+    twoblock_M1000 |corr|=0.1451  E_+=  369  Schur=  38  E=[0, 1, 2, 3, 1000, 1001, 1002, 1003, 1004]
+    twoblock_M50   |corr|=0.1394  E_+=  369  Schur=  38  E=[0, 1, 2, 3, 50, 51, 52, 53, 54]
+  Bottom 6 by |corr| (smallest carrier error):
+    rand           |corr|=0.0012  E_+=  197  Schur=  21  E=[0, 9, 11, 21, 26, 28, 29, 32, 40]
+    rand           |corr|=0.0010  E_+=  217  Schur=  21  E=[0, 7, 10, 19, 21, 23, 31, 32, 33]
+    rand           |corr|=0.0009  E_+=  237  Schur=  23  E=[0, 8, 11, 18, 19, 21, 30, 31, 32]
+    rand           |corr|=0.0008  E_+=  217  Schur=  19  E=[0, 5, 16, 17, 28, 29, 30, 35, 36]
+    rand           |corr|=0.0004  E_+=  185  Schur=  21  E=[0, 5, 6, 12, 14, 17, 33, 34, 37]
+    rand           |corr|=0.0004  E_+=  205  Schur=  25  E=[0, 3, 4, 6, 10, 14, 28, 31, 33]
+
+============================================================================================
+(ii) EXTREMALITY: does consec maximize E_+ AND |corr|?  (parallel: regular=max c3)  k=8
+============================================================================================
+  consec E=[0, 1, 2, 3, 4, 5, 6, 7]
+    E_+(consec)   = 344
+    Schur(consec) = 36
+    |corr|(consec)= 0.302731   measS7=0.327211
+  searched 330 subsets of [0,11] containing 0:
+    MAX E_+   = 344 at E=[0, 1, 2, 3, 4, 5, 6, 7]  (consec? True)
+    MAX |corr|= 0.302731 at E=[0, 1, 2, 3, 4, 5, 6, 7]  (consec? True)
+
+============================================================================================
+(ii) EXTREMALITY: does consec maximize E_+ AND |corr|?  (parallel: regular=max c3)  k=9
+============================================================================================
+  consec E=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+    E_+(consec)   = 489
+    Schur(consec) = 45
+    |corr|(consec)= 0.358455   measS7=0.416156
+  searched 165 subsets of [0,11] containing 0:
+    MAX E_+   = 489 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8]  (consec? True)
+    MAX |corr|= 0.358455 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8]  (consec? True)
+
+============================================================================================
+(iii) MULTI-BLOCK: cross-block additive energy vs |corr| as blocks separate  (k=8)
+============================================================================================
+  base block = [0, 1, 2, 3] (size 4); far block = M + range(4)
+       M  crossE_+    |corr|    measS7       iid
+       4       256   0.30273   0.32721   0.02448
+       5       208   0.05766   0.08214   0.02448
+       7       176   0.06662   0.09110   0.02448
+      10       176   0.11676   0.14124   0.02448
+      30       176   0.08258   0.10706   0.02448
+     100       176   0.08945   0.11393   0.02448
+     300       176   0.09249   0.11697   0.02448
+    1000       176   0.09281   0.11729   0.02448
+    5000       176   0.09281   0.11729   0.02448
+   50000       176   0.09287   0.11734   0.02448
+
+  INTERPRETATION: if |corr| -> a LIMIT as M->inf governed by cross-block E_+ shrinking,
+  then a bound |corr| <= f(cross-E_+) closes the multi-block case when cross-E_+ is low.
+
+============================================================================================
+(iii) MULTI-BLOCK: cross-block additive energy vs |corr| as blocks separate  (k=9)
+============================================================================================
+  base block = [0, 1, 2, 3] (size 4); far block = M + range(5)
+       M  crossE_+    |corr|    measS7       iid
+       4       360   0.35845   0.41616   0.05770
+       5       296   0.11231   0.17001   0.05770
+       7       244   0.09140   0.14910   0.05770
+      10       240   0.20311   0.26081   0.05770
+      30       240   0.14835   0.20606   0.05770
+     100       240   0.14357   0.20127   0.05770
+     300       240   0.14462   0.20232   0.05770
+    1000       240   0.14512   0.20282   0.05770
+    5000       240   0.14525   0.20295   0.05770
+   50000       240   0.14524   0.20294   0.05770
+
+  INTERPRETATION: if |corr| -> a LIMIT as M->inf governed by cross-block E_+ shrinking,
+  then a bound |corr| <= f(cross-E_+) closes the multi-block case when cross-E_+ is low.
+

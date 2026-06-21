@@ -1,0 +1,105 @@
+##############################################################################################
+# THREAD D (the LEVER): cross-block carrier error via cross-block cycle/triangle counting
+##############################################################################################
+
+[D1/D2] EXACT corr = corr_intra + corr_cross by block-support, separated blocks.
+        Two-block E = {0}+block1  U  (M + block2). Vary separation M.
+----------------------------------------------------------------------------------------------
+
+  separation M=7:
+  E=[0, 1, 2, 3, 7, 8, 9, 10]
+    blocks=[[0, 1, 2, 3], [7, 8, 9, 10]]
+    measS7=0.091100 = iid 0.02448 + corr +0.066620   (cap=0.3815, budget cap-iid=+0.35698)
+    corr split (|n|<= 6):  intra=+0.016042  cross=+0.046219   sum_low=+0.062261  high-resid=+0.004360
+    #cross relations (height<= 6, effective)=193362   ABS cross Fourier mass=37.872881
+    cross-block short generators: additive-triples(T+)=10  same-diff-quads(T=)=28
+    LEVER CHECK: |corr_cross|=0.046219  vs  ABS-cross-mass=37.872881  vs  budget 0.35698
+               cross part needs cancellation ; |cross|<budget: True
+
+  separation M=14:
+  E=[0, 1, 2, 3, 14, 15, 16, 17]
+    blocks=[[0, 1, 2, 3], [14, 15, 16, 17]]
+    measS7=0.110914 = iid 0.02448 + corr +0.086435   (cap=0.3815, budget cap-iid=+0.35698)
+    corr split (|n|<= 6):  intra=+0.017338  cross=+0.067345   sum_low=+0.084683  high-resid=+0.001752
+    #cross relations (height<= 6, effective)=107806   ABS cross Fourier mass=21.128281
+    cross-block short generators: additive-triples(T+)=10  same-diff-quads(T=)=28
+    LEVER CHECK: |corr_cross|=0.067345  vs  ABS-cross-mass=21.128281  vs  budget 0.35698
+               cross part needs cancellation ; |cross|<budget: True
+
+  separation M=21:
+  E=[0, 1, 2, 3, 21, 22, 23, 24]
+    blocks=[[0, 1, 2, 3], [21, 22, 23, 24]]
+    measS7=0.105654 = iid 0.02448 + corr +0.081174   (cap=0.3815, budget cap-iid=+0.35698)
+    corr split (|n|<= 6):  intra=+0.017509  cross=+0.061185   sum_low=+0.078694  high-resid=+0.002481
+    #cross relations (height<= 6, effective)=74596   ABS cross Fourier mass=14.927862
+    cross-block short generators: additive-triples(T+)=10  same-diff-quads(T=)=28
+    LEVER CHECK: |corr_cross|=0.061185  vs  ABS-cross-mass=14.927862  vs  budget 0.35698
+               cross part needs cancellation ; |cross|<budget: True
+
+  separation M=30:
+  E=[0, 1, 2, 3, 30, 31, 32, 33]
+    blocks=[[0, 1, 2, 3], [30, 31, 32, 33]]
+    measS7=0.107064 = iid 0.02448 + corr +0.082585   (cap=0.3815, budget cap-iid=+0.35698)
+    corr split (|n|<= 6):  intra=+0.017511  cross=+0.058777   sum_low=+0.076288  high-resid=+0.006297
+    #cross relations (height<= 6, effective)=52782   ABS cross Fourier mass=12.248838
+    cross-block short generators: additive-triples(T+)=10  same-diff-quads(T=)=28
+    LEVER CHECK: |corr_cross|=0.058777  vs  ABS-cross-mass=12.248838  vs  budget 0.35698
+               cross part needs cancellation ; |cross|<budget: True
+
+  separation M=49:
+  E=[0, 1, 2, 3, 49, 50, 51, 52]
+    blocks=[[0, 1, 2, 3], [49, 50, 51, 52]]
+    measS7=0.113415 = iid 0.02448 + corr +0.088936   (cap=0.3815, budget cap-iid=+0.35698)
+    corr split (|n|<= 6):  intra=+0.017511  cross=+0.060427   sum_low=+0.077938  high-resid=+0.010998
+    #cross relations (height<= 6, effective)=39746   ABS cross Fourier mass=11.862373
+    cross-block short generators: additive-triples(T+)=10  same-diff-quads(T=)=28
+    LEVER CHECK: |corr_cross|=0.060427  vs  ABS-cross-mass=11.862373  vs  budget 0.35698
+               cross part needs cancellation ; |cross|<budget: True
+
+  separation M=70:
+  E=[0, 1, 2, 3, 70, 71, 72, 73]
+    blocks=[[0, 1, 2, 3], [70, 71, 72, 73]]
+    measS7=0.114731 = iid 0.02448 + corr +0.090252   (cap=0.3815, budget cap-iid=+0.35698)
+    corr split (|n|<= 6):  intra=+0.017511  cross=+0.060427   sum_low=+0.077938  high-resid=+0.012314
+    #cross relations (height<= 6, effective)=39582   ABS cross Fourier mass=11.862310
+    cross-block short generators: additive-triples(T+)=10  same-diff-quads(T=)=28
+    LEVER CHECK: |corr_cross|=0.060427  vs  ABS-cross-mass=11.862310  vs  budget 0.35698
+               cross part needs cancellation ; |cross|<budget: True
+
+
+[D4] DECAY of cross part with separation M (two equal 4-blocks):
+----------------------------------------------------------------------------------------------
+      M | #cross-rel |   corr_cross | ABS-cross-mass |   corr_total
+      7 |     193362 |    +0.046219 |      37.872881 |    +0.066620
+     14 |     107806 |    +0.067345 |      21.128281 |    +0.086435
+     21 |      74596 |    +0.061185 |      14.927862 |    +0.081174
+     30 |      52782 |    +0.058777 |      12.248838 |    +0.082585
+     49 |      39746 |    +0.060427 |      11.862373 |    +0.088936
+     70 |      39582 |    +0.060427 |      11.862310 |    +0.090252
+   READ: if #cross-rel and ABS-cross-mass -> 0 as M grows, multi-block -> single-block (EASY).
+
+
+[D3] THE BOUND across several block geometries (k=8): does the cross part fit budget 0.18?
+----------------------------------------------------------------------------------------------
+
+  2x4 @7: 
+  E=[0, 1, 2, 3, 7, 8, 9, 10]
+    blocks=[[0, 1, 2, 3], [7, 8, 9, 10]]
+    measS7=0.091100 = iid 0.02448 + corr +0.066620   (cap=0.3815, budget cap-iid=+0.35698)
+    corr split (|n|<= 6):  intra=+0.016042  cross=+0.046219   sum_low=+0.062261  high-resid=+0.004360
+    #cross relations (height<= 6, effective)=193362   ABS cross Fourier mass=37.872881
+    cross-block short generators: additive-triples(T+)=10  same-diff-quads(T=)=28
+    LEVER CHECK: |corr_cross|=0.046219  vs  ABS-cross-mass=37.872881  vs  budget 0.35698
+               cross part needs cancellation ; |cross|<budget: True
+
+  2x4 @14: 
+  E=[0, 1, 2, 3, 14, 15, 16, 17]
+    blocks=[[0, 1, 2, 3], [14, 15, 16, 17]]
+    measS7=0.110914 = iid 0.02448 + corr +0.086435   (cap=0.3815, budget cap-iid=+0.35698)
+    corr split (|n|<= 6):  intra=+0.017338  cross=+0.067345   sum_low=+0.084683  high-resid=+0.001752
+    #cross relations (height<= 6, effective)=107806   ABS cross Fourier mass=21.128281
+    cross-block short generators: additive-triples(T+)=10  same-diff-quads(T=)=28
+    LEVER CHECK: |corr_cross|=0.067345  vs  ABS-cross-mass=21.128281  vs  budget 0.35698
+               cross part needs cancellation ; |cross|<budget: True
+
+  2x4 @30: 

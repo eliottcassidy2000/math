@@ -1,0 +1,40 @@
+============================================================================================
+THREAD C-c -- ROBUSTNESS: the parity (odd-support) hypothesis is REFUTED.
+opus-2026-06-20-S2
+============================================================================================
+
+T1 -- reverse symmetry of the cover kernel  (PROVED identity, checked):
+   chat_T(-n) = conj(chat_T(n))  =>  K(-n) = conj(K(n))  =>  Re K(-n)=Re K(n).
+   So a relation n and its reverse -n ADD (2 Re K).  There is NO
+   reverse-cancellation, unlike directed cycle vs reverse in the OCF.
+   max |K(-n) - conj(K(n))| over 200 random n = 0.00e+00  (=0 confirms)
+
+T2 -- population of random primitive 8-speed sets (span<=80, N0=6):
+   sampled 60 primitive sets.
+   even-support DOMINATES (|even|>|odd|): 20/60 (33%)
+   odd,even OPPOSITE signs:               33/60 (55%)
+   truncated corr < 0:                    18/60
+   examples (E, odd, even):
+      [0, 7, 10, 13, 20, 42, 51, 69]  odd=+0.00702 even=+0.00274
+      [0, 5, 8, 12, 28, 47, 65, 75]  odd=-0.00089 even=-0.00236
+      [0, 9, 12, 31, 54, 55, 56, 71]  odd=+0.00146 even=-0.00268
+      [0, 8, 16, 29, 73, 74, 75, 80]  odd=-0.00041 even=-0.00034
+      [0, 6, 7, 18, 29, 51, 72, 75]  odd=+0.00496 even=+0.00211
+      [0, 16, 19, 38, 40, 54, 70, 74]  odd=+0.00724 even=+0.00191
+   => NO stable parity selection.  Even-support is NOT subdominant in
+      general and does NOT cancel.  The OCF 'drop even cycles' has no LRC
+      analog at the level of relation-support parity.  HYPOTHESIS REFUTED.
+
+T3 -- the real seam is SUPPORT (2-body cut vs >=3-body cycle), NOT parity:
+   shape                          supp2(cut) supp>=3(cyc) supp2>0?
+   consec {0..7}                    0.012579     0.119306     True
+   two-block                        0.004329     0.054371     True
+   Sidon                            0.002988    -0.018415     True
+   powers                           0.012692     0.028541     True
+   dissoc                           0.000674     0.016151     True
+   support-2 (cut/2-body) layer always >= 0 : True
+   This is the LRC image of THM-559 (c3 = 2-body line-graph Ising energy,
+   cut space cheap).  The cut/cycle = support 2 / support>=3 seam is REAL
+   and matches the tournament cut/cycle seam -- but it is a SUPPORT seam,
+   not an EVEN/ODD seam.  The OCF parity (odd cycles only) does NOT cross
+   over: LRC keeps BOTH parities of additive cycle.
