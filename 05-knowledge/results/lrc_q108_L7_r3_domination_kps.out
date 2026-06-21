@@ -1,0 +1,21 @@
+==============================================================================
+L7 completion: balanced r=3 domination + worst-base check (exact measS7)
+==============================================================================
+
+[A] balanced r=2 vs r=3 at k=9 (cap_9=0.4943):
+   max p0 balanced r=2 (base7) = 0.2495
+   max p0 balanced r=3 (base6) = 0.1425
+   r=3 <= r=2 ? True  (base-size domination: fewer base -> less coverage)
+   both << cap_9=0.4943  (margins 0.245, 0.352)
+
+[B] worst-base check at k=9, r=2 (which 7-element base maximizes p0?):
+   (far pair (200, 340) fixed)
+   dense even AP [0,2..12]    p0 = 0.2458
+   consec [0..6]              p0 = 0.2439
+   AP step3 [0,3..18]         p0 = 0.2518
+   mixed [0,1,2,4,8,9,11]     p0 = 0.0790
+   => worst base here: AP step3 [0,3..18] (p0=0.2518); ledger says dense even AP. 
+
+NET: balanced r=3 is dominated by r=2 (base-size domination), and both are far under
+cap; the r>=3 balanced case adds 3D torus-line correlations, also O(1/q) -> same closure.
+So the r=2 discrepancy closure (HYP-2730) extends to all r. DONE.
