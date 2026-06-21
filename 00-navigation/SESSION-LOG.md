@@ -1,3 +1,50 @@
+## codex-2026-06-21 -- HYP-2717: top-character carrier relation filter replaces naive full-torus Weyl
+
+Followed the HYP-2716 Krawtchouk top-character reformulation into the analytic
+proof order.  Read the older subtorus relation-lattice, colored resonance, and
+BV-Fourier decorrelation notes alongside Route E.  The important correction is:
+for multiple integer carriers `M=(M_1,...,M_g)`, the line
+`x -> (M_1x,...,M_gx)` never equidistributes on the full torus `T^g`; it has
+exact carrier relations `n.M=0` of rank `g-1`.  Therefore the phrase "independent
+carriers" must mean a carrier-relation tail bound, not literal full-torus Weyl.
+
+Recorded HYP-2717.  For the all-six-sector cover indicator
+`F(x,theta_1,...,theta_g)`, the exact carrier Fourier shape is
+
+```text
+p0(E)-Product(E)
+  = sum_{n != 0} int_0^1 Fhat_n(x) exp(2*pi*i*(n.M)*x) dx.
+```
+
+The proof split is now:
+
+```text
+exact carrier relations n.M=0
+  -> high-height Fourier tail, low-height finite ledger;
+nonrelations n.M != 0
+  -> one-dimensional oscillation/BV denominator 1/|n.M|,
+     small denominators finite ledger.
+```
+
+Paired with HYP-2716, the target is `|M_6(E)| <= cap_k-Product(E)` after this
+relation filter.  Product is a main term, not an upper envelope, which explains
+why HYP-2715 found product underestimates actual cover in the anchor-separated
+gauge.
+
+Assumption challenge: tried runners, blocks, carrier phases, residual masks,
+Krawtchouk weights, Fourier modes, exact relations, nonresonances, and proof
+obligations.  HYP-2717 chooses carrier resonance classes as vertices; it
+preserves top-character cover error and relation-height budget but destroys
+sector ownership, which belongs in the HYP-2714 finite ledger.  Proof-pressure
+tournament: `low-height exact relations > small |n.M| nonrelations >
+high-height exact-relation tail > high-denominator nonrelation tail`.
+
+New detail file:
+`05-knowledge/hypotheses/HYP-2717-lrc14-top-character-carrier-relation-filter.md`.
+LRC(14) remains open, but the final analytic target is now much more precise:
+explicit Fourier/BV budgets `A_n,B_n` for coherent block shapes in the
+Krawtchouk top character.
+
 ## codex-2026-06-21 -- HYP-2716: miss-zeta product error is the top Krawtchouk character, not residual L1
 
 Continued the HYP-2715 multi-block carrier-product route after more repo

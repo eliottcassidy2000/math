@@ -10,6 +10,7 @@ depends_on:
   - THM-351
   - THM-352
 related:
+  - HYP-2717
   - HYP-2676
   - HYP-2707
   - HYP-2710
@@ -116,6 +117,13 @@ A reasonable split is:
 This lines up HYP-2715 with HYP-2676: both say that the dangerous term is a
 signed packet/character after quotienting, and both lose too much if absolute
 values are taken before the correct quotient.
+
+HYP-2717 gives the next analytic refinement: expand this same `M_6` character
+in carrier Fourier modes, then split exact carrier relations `n.M=0` from
+nonresonant modes `n.M!=0`.  The exact relation modes are unavoidable for
+integer carrier vectors, so the missing proof is a high-height Fourier tail
+bound plus a finite low-height resonance ledger, not literal full-torus
+equidistribution.
 
 ## Assumption Challenge and Tournament Analysis
 

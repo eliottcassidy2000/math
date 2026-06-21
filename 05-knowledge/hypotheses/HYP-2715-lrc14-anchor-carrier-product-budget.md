@@ -10,6 +10,7 @@ depends_on:
   - HYP-2694
   - THM-557
 related:
+  - HYP-2717
   - HYP-2716
   - HYP-2704
   - HYP-2708
@@ -149,6 +150,12 @@ h=2 > h=0 > h=4 > h=1 > h=3 > h=5 > h=6.
 
 Thus the next proof should bound the top character after quotienting, not the
 coordinate `L1` discrepancy before quotienting.
+
+HYP-2717 then expands this top character in carrier Fourier modes.  In that
+view the multi-block product is a main term, not an envelope: exact carrier
+relations `n.M=0` survive whenever there is more than one integer carrier, and
+the proof must show that separated carriers force those exact relations to have
+large enough height for Fourier decay to fit inside `cap-product`.
 
 ## Proposed Proof Obligation
 
