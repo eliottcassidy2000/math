@@ -97,3 +97,11 @@ miss-zeta generated-context words look tractable.  Here raw Bonferroni language
 was too opaque, but survival middle mass exposes the proof currency.  In both
 branches, the work is less about discovering another scalar and more about
 choosing the coordinate system before scalarizing.
+
+The later HYP-2703 slope-band work says the same thing from the `measS7`
+side.  It proves a clean seven-band decomposition, but also shows that consec
+does not win band-by-band and that greedy index compression is not monotone.
+The win is aggregate and signed.  For the true-wide cap route, the analogue is:
+do not try to prove the boundary value and the two-far deviation in quotients
+that have forgotten their signs.  Keep the signed decomposition intact until
+the final margin comparison.

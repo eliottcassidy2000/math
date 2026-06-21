@@ -10,6 +10,7 @@ depends_on:
   - THM-556
   - THM-535
 related:
+  - HYP-2703
   - THM-548
   - HYP-2680
   - HYP-2679
@@ -254,6 +255,14 @@ changing basis to miss-zeta generated-context words; here the true-wide
 cap-floor gate becomes legible only after changing basis from `U4` to survival
 middle mass.  Both routes say the next proof should choose the right coordinate
 system before taking scalar bounds.
+
+Later incoming HYP-2703 is a compatible warning from the `measS7` extremality
+side.  Its 7-band Sturmian identity is exact, but per-band consec dominance and
+greedy index compression both fail; the proof-bearing fact is an aggregate
+signed seven-band balance.  That mirrors HYP-2701's two-far addendum: the
+boundary margin is positive, but the actual row is boundary value plus a signed
+deviation, and proving either term independently in an over-refined quotient is
+not enough.
 
 ## Status
 
