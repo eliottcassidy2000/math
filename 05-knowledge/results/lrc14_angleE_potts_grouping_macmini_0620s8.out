@@ -6,3 +6,17 @@ k=8: measS7(consec)=481/1470=0.327211
   adversary pool size (0..11, |E|=8): 330
 
   (G1) group by |M| (Bonferroni levels):
+    consec level contributions: L0=+1.0000, L1=-1.6041, L2=+1.7905, L3=-1.3483, L4=+0.6422, L5=-0.1735, L6=+0.0204
+    G1 group-wise dominance FAILS for 329/330 adversaries
+      worst at level 2: E=(0, 1, 2, 3, 7, 8, 9, 10) excess=+0.19240
+      worst at level 3: E=(0, 1, 2, 3, 4, 7, 10, 11) excess=+0.47622
+
+  (G2) group by (Z/7)^* multiplicative orbit of M:
+    #orbits = 14
+    G2 group-wise dominance FAILS for 329/330 adversaries
+      worst: E=(0, 1, 4, 7, 8, 9, 10, 11) orbit=(1, 2, 3) excess=+0.15745
+
+  (G4) group by #contiguous arc-runs of M:
+    consec run contributions: r0=+1.0000, r1=-1.1932, r2=+0.6531, r3=-0.1327
+    G4 group-wise dominance FAILS for 328/330 adversaries
+      worst: E=(0, 1, 2, 3, 8, 9, 10, 11) #runs=2 excess=+0.18796

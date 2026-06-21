@@ -1,0 +1,53 @@
+LRC(14) Angle A — Sturmian slope-band decomposition  (opus-2026-06-20-S2)
+========================================================================
+(P1) band identity:  measS7 == (1/7) sum_s bandcover_s   [+ theta-form]
+========================================================================
+   checked 72 shapes; mismatches = 0
+   => band identity holds exactly (PROVED by floor(e*(s+f))=e*s+floor(e*f)).
+
+========================================================================
+(V1) full-box VERIFY: consec maximizes measS7, k in {8,9,10}, max(E)<=13
+========================================================================
+   k=8: consec=0.327211  #subsets=1716  violators=0  residual_max=0.273639  arg=[0, 2, 3, 4, 5, 6, 7, 8]
+   k=9: consec=0.416156  #subsets=1287  violators=0  residual_max=0.401701  arg=[0, 1, 2, 3, 4, 5, 6, 7, 9]
+   k=10: consec=0.504478  #subsets=715  violators=0  residual_max=0.493878  arg=[0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+
+========================================================================
+(R1) per-band consec maximality is FALSE (slow bands s=0,1 lose)
+========================================================================
+   band s=0: consec=0.14286  violators=  5  worst=0.25000 [0, 2, 3, 4, 5, 6, 7, 8]  [FAIL]
+   band s=1: consec=0.30952  violators=  2  worst=0.34048 [0, 2, 3, 4, 5, 6, 7, 8]  [FAIL]
+   band s=2: consec=0.42381  violators=  0  worst=0.00000 None  [ok]
+   band s=3: consec=0.30952  violators=  0  worst=0.00000 None  [ok]
+   band s=4: consec=0.40476  violators=  0  worst=0.00000 None  [ok]
+   band s=5: consec=0.41429  violators=  0  worst=0.00000 None  [ok]
+   band s=6: consec=0.28571  violators=  0  worst=0.00000 None  [ok]
+
+========================================================================
+(M1) signed slope-band table: consec_8 vs residual adversary [0,2..8]
+========================================================================
+   band :   consec      adv     consec-adv
+   s=0 :  0.14286   0.25000  -0.10714
+   s=1 :  0.30952   0.34048  -0.03095
+   s=2 :  0.42381   0.29762  +0.12619
+   s=3 :  0.30952   0.25000  +0.05952
+   s=4 :  0.40476   0.29762  +0.10714
+   s=5 :  0.41429   0.35476  +0.05952
+   s=6 :  0.28571   0.12500  +0.16071
+   net (consec-adv)/7 = 3/56 = 0.053571  (>0: consec wins overall)
+   MECHANISM: consec LOSES slow bands s=0,1, WINS fast bands s=2..6 by more.
+
+========================================================================
+(R2) index-compression monotonicity is FALSE (no greedy descent path)
+========================================================================
+   move A (down-shift-into-gap): 392/840 moves DECREASE measS7; worst drop 0.19609 ([0, 2, 3, 4, 5, 6, 7, 8], [0, 1, 3, 4, 5, 6, 7, 8])
+   move B (max -> smallest hole): 56/329 moves DECREASE measS7; worst drop 0.15278 ([0, 4, 5, 6, 7, 8, 9, 10], [0, 1, 4, 5, 6, 7, 8, 9])
+   => no monotone compression to consec; extremality is irreducibly aggregate.
+
+========================================================================
+VERDICT: Angle A index-compression is a DEAD-END for a clean proof
+(per-band R1 + no-monotone-move R2). NET YIELD = the PROVED 7-band
+identity (P1): measS7 = (1/7) sum_{s=0}^{6} bandcover_s, reducing the
+64-term IE certificate to a 7-term signed slope sum. Consec-maximality
+remains VERIFIED (box, k=8,9,10) but NOT PROVED.
+========================================================================

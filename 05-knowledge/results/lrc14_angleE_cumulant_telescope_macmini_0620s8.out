@@ -1,0 +1,21 @@
+================================================================================================
+ANGLE E part 2: occupation-measure / absent-count telescoping, k=8
+================================================================================================
+
+measS7(consec)=481/1470=0.327211
+
+(T4) absent-color count distribution N=0..7 for consec:
+   N=0:0.3272, N=1:0.2442, N=2:0.1701, N=3:0.1061, N=4:0.0810, N=5:0.0510, N=6:0.0204, N=7:0.0000
+
+(T3) per-residue absent measure A_j (consec), want consec to MINIMIZE these:
+   A_0=0.0000, A_1=0.2718, A_2=0.2435, A_3=0.2388, A_4=0.2435, A_5=0.2718, A_6=0.3347
+   Sum_j A_j (level-1 Bonferroni for uncovered) = 1.60408
+   1-measS7 (true uncovered) = 0.67279
+
+adversary pool (0..11): 330 sets
+
+(T3a) adversaries with SMALLER Sum_j A_j than consec: 0/330
+(crux) adversaries with LARGER measS7 than consec (should be 0): 0/330
+
+(T4) adversaries NOT stochastically dominated by consec on absent-count N: 329/330
+      e.g. E=(0, 1, 2, 3, 4, 5, 6, 8) has more mass at N<=1 by +0.02143  (so consec does NOT stoch-dominate)

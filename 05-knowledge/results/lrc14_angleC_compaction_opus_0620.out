@@ -1,0 +1,27 @@
+================================================================================================
+ANGLE C HOLE-COMPACTION (defect annihilation)  (opus-2026-06-20)
+================================================================================================
+(1) single-step left-slide monotonicity:  E' = E with one clock slid left by 1
+    into an adjacent hole.  Check measS7(E') >= measS7(E) (compaction increases).
+  k=8: tested 5544 slides; compaction-DECREASES (violations) = 2709
+        worst violation: (0, 2, 4, 6, 7, 8, 10, 12)(0.25578) -> (0, 2, 3, 6, 7, 8, 10, 12)(0.05782) DROP 0.19796
+  k=9: tested 3960 slides; compaction-DECREASES (violations) = 1922
+        worst violation: (0, 1, 2, 4, 6, 7, 8, 10, 12)(0.32840) -> (0, 1, 2, 3, 6, 7, 8, 10, 12)(0.12517) DROP 0.20323
+  k=10: tested 1980 slides; compaction-DECREASES (violations) = 976
+        worst violation: (0, 1, 3, 5, 6, 7, 8, 9, 11, 13)(0.37884) -> (0, 1, 2, 5, 6, 7, 8, 9, 11, 13)(0.18496) DROP 0.19388
+
+(2) DIRECT crux re-verify: consec_k = argmax measS7 over ALL k-subsets, box max(E)<=13
+  k=8: consec measS7=0.327211  global max in box=0.327211 at (0, 1, 2, 3, 4, 5, 6, 7)  #strictly-beating-consec=0  #ties=0
+  k=9: consec measS7=0.416156  global max in box=0.416156 at (0, 1, 2, 3, 4, 5, 6, 7, 8)  #strictly-beating-consec=0  #ties=0
+  k=10: consec measS7=0.504478  global max in box=0.504478 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  #strictly-beating-consec=0  #ties=0
+
+(3) BLOCK-SLIDE: slide entire trailing block left to close the FIRST gap.
+    E = [0..a-1] gap [g..] ... ; move the whole tail left by gap size.
+  k=8: block-slide tested 1715; DECREASES = 556
+        worst: (0, 1, 4, 5, 7, 9, 10, 13)(0.17538) -> (0, 1, 2, 3, 5, 7, 8, 11)(0.03278) DROP 0.14260
+  k=9: block-slide tested 1286; DECREASES = 395
+        worst: (0, 1, 2, 5, 6, 7, 10, 11, 12)(0.29861) -> (0, 1, 2, 3, 4, 5, 8, 9, 10)(0.14246) DROP 0.15615
+  k=10: block-slide tested 714; DECREASES = 199
+        worst: (0, 1, 2, 5, 6, 7, 10, 11, 12, 13)(0.35544) -> (0, 1, 2, 3, 4, 5, 8, 9, 10, 11)(0.22067) DROP 0.13477
+
+DONE.
