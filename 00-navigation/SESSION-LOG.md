@@ -1,3 +1,10 @@
+## mac-mini-2026-06-21-S13b -- CORRECTION: L7 'CLOSED' was OVERSTATED; gap #1 (finite-f1 rate) now FIXED rigorously -- HYP-2741, MISTAKE logged
+The S13 rigor-audit workflow (Thread A, completed after the S13 close-out) found that S13's "L7 CLOSED / sector route closed / audit ALL PASS" was OVERSTATED. HONEST CORRECTION:
+**The real gap (L7 Step 4):** the closure cited finite-f1 |p0(B u {f1,f2})-p0_inf|=O(1/f1) as "THM-546 (PROVED)" -- INVALID. THM-546 peels ONE far element with the remainder BOUNDED; in the L7 limit BOTH f1,f2 grow (f2=gamma f1), so a single peel of f2 leaves E'=B u {f1} UNBOUNDED => O(1) bound, not O(1/f1). D<=14/p bounds the LIMIT-LAW discrepancy (a DIFFERENT object), not the convergence RATE. Logged in MISTAKES.md.
+**FIX (HYP-2741, rigorous):** the correct decomposition peels the BOUNDED BASE from the FAST FAR-PAIR. |p0(E)-p0_inf| <= C(B,q)/f1, C(B,q)=M*q*(2/7), M=#base-cells, via 1D Koksma-Hlawka on the (q,p)-geodesic sweep within each base-cell. VERIFIED |err|*f1<=C(B,q) (~100x room). So the rate IS rigorously O(1/f1); the finite-f1 window is finite. Gap #1 (the PRIMARY gap) fixed.
+**REMAINING honest gaps:** #2 r>=3->pairwise (verified-not-proved), #3 base-size domination (verified-not-proved), #4 "consec maximizes meas(S7)" / HYP-2602 (open as a theorem). Lean caveat: delsarte_bound_* formalizes the per-shape q0<=L_y (readout identity is the content); does NOT formalize L_y<=cap (extremality).
+**TRUE STATUS:** the elementary D<=14/p IS rigorous; caps correct; L3/finite checks exact; gap #1 now fixed. But L7 is REDUCED (finite atlas + 2 verified-not-proved combinatorial reductions + open upstream extremality), NOT gap-free "closed". This is the most reduced LRC(14) has been, with the analytic rate gap genuinely resolved -- but it is NOT a proof. NEW: HYP-2741; MISTAKE entry; script lrc_L7_finite_f1_rate_bounded_base_koksma. @kps messaged the overstatement + the fix.
+
 ## kind-pasteur-2026-06-21 (overnight, THREAD C) -- HYP-2739: L7 cell-discrepancy EXACT residue closed form; sharp 12/(7q) PROVED combinatorially
 
 User: LRC(14) overnight, RIGOR + new leads. THREAD C = prove the SHARP integer-grid discrepancy
