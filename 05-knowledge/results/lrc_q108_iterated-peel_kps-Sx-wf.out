@@ -1,0 +1,22 @@
+==============================================================================
+STEP 0.  Engine sanity + exact V(E') vs crude 42-sigma majorant.
+==============================================================================
+  E=[0, 1, 2]: p0=0.0000 p1=0.0000  V_exact=0  V_crude(42sigma)=126
+  E=[0, 1, 2, 3]: p0=0.0000 p1=0.0000  V_exact=0  V_crude(42sigma)=252
+  E=[0, 1, 2, 3, 4, 5, 6, 7]: p0=0.3272 p1=0.2442  V_exact=28  V_crude(42sigma)=1176
+  E=[0, 1, 2, 30, 31, 32, 60]: p0=0.0369 p1=0.2220  V_exact=130  V_crude(42sigma)=6552
+
+  margins mu_k = cap_k - Q(k-1): mu_8=0.18486, mu_9=0.13216, mu_10=0.15651, mu_11=0.19402, mu_12=0.25490
+  min margin = 0.13216 (at k=9).  all>0? True
+
+==============================================================================
+STEP 1.  EXACT unrolled-peel chain identity (no rounding).
+==============================================================================
+
+  CLAIM (algebraic identity, telescoping):  for E with far elements peeled
+  largest-first E = E_r > E_{r-1} > ... > E_0 = core,
+      p0(E) = p0(core) + sum_{i=1}^{r} (1/7) p1(E_{i-1}) + sum_{i=1}^{r} Delta_{w_i},
+  where Delta_{w_i} := p0(E_i) - p0(E_{i-1}) - (1/7) p1(E_{i-1}) and E_i = E_{i-1} u {w_i}.
+  This is a pure telescoping of p0(E_i) - p0(E_{i-1}); the identity is TRIVIALLY
+  exact.  We verify lhs - rhs = 0 exactly on adversarial multi-far sets.
+

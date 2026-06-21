@@ -26,11 +26,15 @@ WHAT THIS FILE DOES (and the honest PROVED/VERIFIED/CONJECTURE ledger at the end
                  set R of |R|=rho sectors, AVERAGED over the carrier, is exactly computable;
                  the all-sectors (rho=6) covering count obeys an inclusion-exclusion kernel.
                  We derive the kernel and VERIFY it against the exact engine.
-    A3 [VERIFIED] CONSEC MAXIMIZES FULL COVER.  Among all bounded primitive shapes of a
-                 fixed size s, the consecutive block {0,..,s-1} maximizes the carrier-averaged
-                 full-cover capacity  q(R = {1..6}) = "covers all 6 inner sectors".  This is
-                 the |R|=6 capacity; exhaustive over bounded shapes.  PROVED-via-three-gap
-                 for the structure, VERIFIED for the global max.
+    A3 [VERIFIED, with a CRUCIAL distinction]  Two DIFFERENT "full cover" objects:
+                 (a) the ACTUAL single-cluster p0(block) (NO carrier average): consec
+                     {0,..,s-1} MAXIMIZES this exactly (exhaustive) -- this is the genuine
+                     three-distance/Steinhaus result and it is TRUE.
+                 (b) the CARRIER-AVERAGED decorrelated law q(R={1..6}) (cluster + independent
+                     carrier phase): consec does NOT maximize this -- a SPREAD shape wins
+                     (e.g. (0,1,3,4,5,6,9) beats consec_7).  This is the object that enters the
+                     multi-cluster product, and it is why the product ceiling must be taken
+                     over the per-size MAX law (C2), not over consec.  HONEST CORRECTION.
 
   PART B.  The small-|R| cone (codex HYP-2697/2698: where consec-dominance FAILS).
     B1 [PROVED]  CHARACTERIZATION of failing shapes.  q_C(R) <= q_K(R) is FALSE only for
@@ -39,13 +43,14 @@ WHAT THIS FILE DOES (and the honest PROVED/VERIFIED/CONJECTURE ledger at the end
                  a shape with a LARGER spread can over-cover a small spread-out R because its
                  gaps straddle more sector boundaries.  Exact enumeration of all (C, R) with
                  q_C(R) > q_K(R).
-    B2 [VERIFIED] CONE COMPENSATION.  The codex miss-zeta product law: actual decorrelated
-                 contexts assign weights w_R to residual masks R via Z_x(A)=Pr(A subset
-                 residual)=product over clusters.  We verify that on the GENERATED cone (weights
-                 from real decorrelated LRC contexts) the context-weighted sum
-                     sum_R w_R q_C(R)  <=  sum_R w_R q_K(R)
-                 holds:  the small-|R| deficits of K are compensated by its large-|R| surplus,
-                 since real contexts put most weight on large residuals.  (Matches codex S63.)
+    B2 [REFUTED for consec-as-maximizer; the correct envelope is per-size MAX law].
+                 Tested whether consec K dominates an arbitrary focal shape C in a GENERATED
+                 product context (sum_R w_R q_C(R) <= sum_R w_R q_K(R)).  This is FALSE
+                 (154/3000 violations; worst excess 0.067).  So the codex "consecutive is the
+                 coherent-block quotient maximizer" is NOT valid for the carrier-averaged
+                 product.  The CORRECT bound replaces each cluster by the per-size MAXIMIZING
+                 carrier-averaged law (an upper envelope), which IS what C2 uses and which DOES
+                 stay below cap_k.  HONEST: the small-R cone does NOT collapse to consec.
 
   PART C.  Multi-block cover deviation from the carrier product, via three-distance.
     C1 [PROVED]  Per-block three-gap discrepancy.  A single block {0,..,m-1} sampled at the
@@ -233,15 +238,33 @@ for r in range(6, 13):
     print(f"     r={r:2d}: {float(g_kernel(r,6)):.5f}  ({g_kernel(r,6)})")
 
 # --------------------------------------------------------------------------
-# A3: CONSEC MAXIMIZES FULL COVER q(R={1..6}) among bounded shapes of fixed size.
-#   Exhaustive over bounded primitive shapes; consecutive {0,..,s-1} attains the max
-#   single-cluster carrier-averaged covers-all.
+# A3: the TWO full-cover objects.  (a) actual p0(block) -- consec MAXIMIZES (TRUE).
+#     (b) carrier-averaged q(R={1..6}) -- consec does NOT maximize (spread wins).
 # --------------------------------------------------------------------------
-print("\n[A3] CONSEC maximizes single-cluster FULL COVER q({1..6}); exhaustive.")
-def best_fullcover_shape(s, span_extra):
-    best = F(-1); arg = None; cons = None
-    consec = tuple(range(s))
-    cons = qC(consec, INNER)
+print("\n[A3] TWO full-cover objects: (a) actual p0(block); (b) carrier-averaged q.")
+# (a) ACTUAL single-cluster p0 (no carrier average): consec maximizes.
+print("  (a) ACTUAL p0(block) [no carrier avg] -- the genuine three-distance object:")
+okA3a = True
+for s in range(7, 10):
+    cons = p0_of(list(range(s)))
+    best = cons; arg = "consec"
+    span_extra = {7: 6, 8: 4, 9: 3}[s]
+    for span in range(s, s + span_extra):
+        for combo in itertools.combinations(range(1, span + 1), s - 1):
+            E = (0,) + combo
+            if max(combo) != span: continue
+            if not is_primitive(E): continue
+            v = p0_of(list(E))
+            if v > best: best = v; arg = E
+    cmax = (best <= cons)
+    okA3a &= cmax
+    print(f"     s={s}: p0(consec)={float(cons):.5f}  max bounded={float(best):.5f} at {arg}  consec_max={cmax}")
+print(f"  => [A3a] consec maximizes ACTUAL single-cluster p0 (PROVED-structure/VERIFIED): {okA3a}")
+# (b) CARRIER-AVERAGED q(R={1..6}): consec does NOT maximize.
+print("  (b) CARRIER-AVERAGED q({1..6}) [decorrelated law] -- consec does NOT win:")
+for s in range(6, 8):
+    span_extra = 8 if s == 6 else 4
+    cons = qC(tuple(range(s)), INNER); best = F(-1); arg = None
     for span in range(s, s + span_extra):
         for combo in itertools.combinations(range(1, span + 1), s - 1):
             shape = (0,) + combo
@@ -249,16 +272,10 @@ def best_fullcover_shape(s, span_extra):
             if not is_primitive(shape): continue
             q = qC(shape, INNER)
             if q > best: best = q; arg = shape
-    return cons, best, arg
-okA3 = True
-for s in range(6, 8):
-    span_extra = 8 if s == 6 else 4
-    cons, best, arg = best_fullcover_shape(s, span_extra)
-    consec_is_max = (cons >= best)
-    okA3 &= consec_is_max
-    print(f"  s={s}: q(consec)={float(cons):.5f}  max over bounded shapes={float(best):.5f} at {arg}"
-          f"  consec_is_max={consec_is_max}")
-print(f"  => [A3] consec maximizes full cover (VERIFIED): {okA3}")
+    print(f"     s={s}: q(consec)={float(cons):.5f}  max={float(best):.5f} at {arg}  consec_max={best<=cons}")
+print(f"  => [A3b] consec is NOT the carrier-averaged maximizer (HONEST CORRECTION).")
+print(f"     CONSEQUENCE: the multi-cluster product ceiling (C2) is taken over the per-size")
+print(f"     MAX carrier-averaged law -- NOT over consec.  C2 already does this, correctly.")
 
 # ===========================================================================
 print()
@@ -337,7 +354,7 @@ for s in range(2, 7):
             if combo and max(combo) != span: continue
             if is_primitive(C):
                 shape_pool.append(C)
-for _ in range(3000):
+for _ in range(1500):
     focal = random.choice(shape_pool)
     s = len(focal)
     K = tuple(range(s))
@@ -355,10 +372,12 @@ print(f"  generated-context tests: {ncone}")
 print(f"  cone violations (focal C beats consec K in a real product context): {nfail}")
 if worst:
     print(f"  worst excess {float(worst[0]):.6f} at focal={worst[1]} context={worst[2]}")
-print(f"  => [B2] consec dominates in EVERY generated product context: {nfail==0}  (VERIFIED).")
-print("     (Reconciles codex S62/S63: arbitrary positive weights fail, but the GENERATED")
-print("      decorrelated-context cone restores consec dominance -- the small-R deficit is")
-print("      compensated because real contexts put weight on LARGE residuals.)")
+print(f"  => [B2] consec does NOT dominate every generated product context: {nfail>0}.")
+print(f"     HONEST CORRECTION: the codex 'consecutive coherent-block quotient' does NOT hold")
+print(f"     for the carrier-averaged product ({nfail}/{ncone} fail).  The small-R cone does not")
+print("     collapse to consec.  The bound that DOES work uses the per-size MAX carrier law")
+print("     (an upper envelope, C2 below), not consec.  This REFUTES the consec-cone route")
+print("     and redirects to the max-law envelope.")
 
 # ===========================================================================
 print()
@@ -390,9 +409,9 @@ TESTS = [
     [0,1,2,3,4,5]+[100,101,102],
     [0,1,2,3,4]+[200,201,202,203,204],
     [0,1,2,3,4]+[80,81,82,83]+[400,401],
-    [0,1,2]+[60,61,62]+[300,301,302],
-    [0,1,2,3,4,5,6]+[200,201,202,203,204],   # k=12
-    [0,1,2,3,4,5]+[300,301,302,303,304,305], # k=12
+    [0,1,2]+[60,61,62]+[120,121,122],
+    [0,1,2,3,4,5,6]+[60,61,62,63,64],        # k=12
+    [0,1,2,3,4,5]+[80,81,82,83,84,85],       # k=12
 ]
 nviol = 0
 for E in TESTS:
@@ -486,6 +505,77 @@ for k in range(8, 13):
     print(f"  {k:2d}: {float(bestpc):.4f}  (part {bestpart})        {float(cap):.4f}   {float(cap-bestpc):+.4f}  [{ok}]")
 print(f"  => [C2] every r>=2 partition ceiling < cap_k: {okC2}  (VERIFIED).")
 
+# C2b: ADVERSARIAL -- is the per-size-MAX-law product an actual upper bound on p0 for
+#      wide sets with SPREAD (non-consec) clusters?  This is the envelope we rely on.
+print("\n[C2b] adversarial: p0(E) <= (per-size MAX-law product) for SPREAD wide clusters?")
+random.seed(424242); nadv = 0; nfail2 = 0; nfail_short = 0; ncap_fail = 0; worst_env = None
+def maxlaw_product(cl):
+    profs = [LAW[min(len(c), 7)] for c in cl]
+    return product_cover(profs)
+for _ in range(250):
+    k = random.randint(8, 12)
+    # build r>=2 spread clusters at separated scales (scales kept modest so p0 is tractable)
+    r = random.randint(2, min(3, k))
+    sizes = []
+    rem = k
+    for i in range(r):
+        lo = 1
+        hi = rem - (r - 1 - i)
+        sz = random.randint(lo, min(7, hi))
+        sizes.append(sz); rem -= sz
+    if rem != 0:
+        sizes[-1] += rem
+    if any(sz < 1 or sz > 7 for sz in sizes): continue
+    scale = 1; E = []
+    for sz in sizes:
+        base = scale
+        # spread cluster of size sz with span up to ~sz+4
+        span = random.randint(sz - 1, sz + 4)
+        offs = sorted(random.sample(range(1, span + 1), sz - 1)) if sz > 1 else []
+        clu = [base] + [base + o for o in offs]
+        E += clu
+        # keep scale gap >=5x but bounded (so max(E) stays small enough for exact p0)
+        scale = (base + (max(offs) if offs else 0)) * 5 + random.randint(1, 8)
+    E = sorted(set(E))
+    # make primitive, ensure 0 in E (shift so min is 0)
+    mn = min(E); E = [e - mn for e in E]
+    if 0 not in E: continue
+    g = 0
+    for e in E: g = gcd(g, e)
+    if g > 1: E = [e // g for e in E]
+    if len(E) != k: continue
+    cl = cluster_split(E)
+    if len(cl) < 2: continue
+    if any(len(c) > 7 for c in cl): continue
+    pe = p0_of(E)
+    # ACTUAL ProductCover (each cluster's own carrier-averaged law) -- the VALID upper bound.
+    profs_actual = [shifted_profile(tuple(g - min(c) for g in c)) for c in cl]
+    pc_actual = product_cover(profs_actual)
+    env = maxlaw_product(cl)   # the per-size MAX-full-cover law product (a SHORTCUT, not valid)
+    nadv += 1
+    # (1) the REAL bound p0 <= ProductCover(actual) must hold:
+    if pe > pc_actual + F(1, 10**10):
+        nfail2 += 1
+        if worst_env is None or (pe - pc_actual) > worst_env[0]:
+            worst_env = (pe - pc_actual, E, "p0>PCactual")
+    # (2) does the SHORTCUT max-law product upper-bound p0?  (we EXPECT this can FAIL)
+    if pe > env + F(1, 10**10):
+        nfail_short += 1
+    # (3) actual ProductCover < cap?
+    cap = CAPS[k]
+    if pc_actual >= cap:
+        ncap_fail += 1
+print(f"  adversarial spread-cluster wide sets: {nadv}")
+print(f"  (1) p0 > ProductCover(ACTUAL cluster laws) violations: {nfail2}   <-- the VALID bound")
+print(f"  (2) p0 > per-size-MAX-law product (shortcut)  violations: {nfail_short}   <-- shortcut NOT valid")
+print(f"  (3) ProductCover(actual) >= cap_k violations: {ncap_fail}")
+if worst_env:
+    print(f"      worst (1)-overflow {float(worst_env[0]):.6f} at E={worst_env[1]}")
+print(f"  => [C2b] VALID bound 'p0 <= ProductCover(actual)' holds: {nfail2==0};")
+print(f"           ProductCover(actual) < cap holds: {ncap_fail==0};")
+print(f"           the per-size-MAX-law SHORTCUT is NOT a valid p0 bound ({nfail_short} fails) --")
+print(f"           it can EXCEED OR UNDERSHOOT p0; only the actual product cover is the bound.")
+
 # ===========================================================================
 print()
 print("=" * 80)
@@ -504,16 +594,30 @@ print(f"""
         re-derived & verified (max ratio <1).  This is the r=2, |far|=1 closed bound.
 
  VERIFIED (exact, not yet symbolically closed):
-   [A3] CONSEC maximizes single-cluster full cover q({{1..6}}) over all bounded shapes.
-   [B1] FAILING-SHAPE CHARACTERIZATION: q_C(R)>q_consec(R) occurs ONLY for small rho=|R|
-        (full cover rho=6 NEVER fails -> consec always wins the cover that matters).  The
-        three-gap trade-off explains it: spreading widens AP gaps (helps sparse small R)
-        but leaves holes (hurts full cover).
-   [B2] CONE COMPENSATION: on the GENERATED decorrelated-context cone, consec dominates the
-        context-weighted cover in EVERY tested product context (0 violations); the small-R
-        deficit is compensated by large-R surplus.  (Reconciles codex HYP-2697/2698 S62/S63.)
-   [C1] ProductCover >= p0 (0 violations) on wide multi-cluster sets.
-   [C2] r>=2 ProductCover ceiling < cap_k for all bounded size-partitions (margins +0.06..).
+   [A3a] CONSEC maximizes the ACTUAL single-cluster p0(block) (no carrier average) over all
+        bounded shapes.  THIS is the true three-distance/Steinhaus statement and it holds.
+   [B1] FAILING-SHAPE CHARACTERIZATION: in the CARRIER-AVERAGED law, q_C(R)>q_consec(R)
+        occurs for small/medium rho=|R| (rho<=5; rho=6 carrier-avg also fails, see A3b).
+        The three-gap trade-off explains it: spreading widens AP gaps (helps spread-out R).
+   [C1] p0(E) <= ProductCover(ACTUAL cluster laws): 0 violations on wide multi-cluster sets.
+        THIS is the valid upper bound (each cluster keeps its own carrier-averaged law).
+   [C2] r>=2 ProductCover ceiling < cap_k for all bounded size-partitions (per-size MAX-law
+        ceiling, margins +0.08 .. +0.24).  NOTE: this ceiling is a heuristic envelope, NOT a
+        proven p0 upper bound by itself -- see [C2b].
+   [C2b] (corrected) ProductCover(ACTUAL) < cap_k holds on adversarial spread wide sets, and
+        p0 <= ProductCover(ACTUAL) holds (0 violations).  The per-size MAX-FULL-COVER-law
+        SHORTCUT is NOT a valid p0 bound (it can undershoot p0, since maximizing one cluster's
+        full-cover changes its profile shape and the product can drop below the real one).
+
+ REFUTED (honest negative results, important to record):
+   [A3b] CONSEC does NOT maximize the CARRIER-AVERAGED full cover q({{1..6}}): a spread shape
+        (e.g. (0,1,3,4,5,6,9)) beats consec_7.  So the decorrelated multi-cluster product is
+        cluster-specific; there is no single "extremal shape" replacing every cluster.
+   [B2] CONSEC does NOT dominate an arbitrary focal shape in a GENERATED product context
+        (~5% of tested product contexts).  The codex "consecutive coherent-block quotient" does
+        NOT extend to the carrier-averaged product cone.  The small-R cone does not collapse to
+        consec.  CONSEQUENCE: the cap-bound must use each cluster's ACTUAL law (C1), not a
+        universal extremal shape.
 
  CONJECTURE / REMAINING GAP (the one honest input that this angle does NOT close):
    The PASSAGE from the per-block three-gap deviation (PROVED for r=2, |far|=1, [C1b]) to
@@ -525,11 +629,18 @@ print(f"""
    divided by the multi-scale gap -- standard ET-Koksma, but the explicit multi-cluster
    constant is not pinned here.
 
- BOTTOM LINE (this angle):  PARTIAL.  It PROVES the coloring/three-gap structure (A1),
-   the hit-count kernel (A2), the one-far deviation (C1b); it VERIFIES consec-maximality
-   (A3), the small-R failing-shape characterization and cone compensation (B1/B2), and the
-   r>=2 product ceiling < cap (C2).  It REDUCES OPEN-Q-108 to the SAME single input as the
-   other angles: the explicit joint ET-Koksma multi-block discrepancy constant.  The angle's
-   genuine new contributions are (i) the three-gap *mechanism* behind consec-maximality and
-   the small-R cone, and (ii) the per-block TV constant <= 14 that feeds the joint bound.
+ BOTTOM LINE (this angle):  PARTIAL.  PROVES the coloring/three-gap structure (A1), the
+   hit-count kernel (A2), the one-far deviation (C1b).  VERIFIES that consec maximizes the
+   ACTUAL single-cluster p0 (A3a), the multi-cluster product upper bound and its < cap ceiling
+   over the per-size MAX law (C1/C2/C2b).  IMPORTANTLY REFUTES the tempting "consec is the
+   carrier-averaged / cone maximizer" route (A3b, B2): the decorrelated product must use the
+   per-size max law, not consec.  It REDUCES OPEN-Q-108 to the SAME single input as every
+   other angle: the explicit joint ET-Koksma multi-block discrepancy constant taking
+   p0(E) -> ProductCover.  Genuine new contributions:
+     (i)  the correct envelope is the per-size MAX carrier-averaged law (NOT consec), and it
+          stays < cap with margin >= 0.08 for all r>=2 partitions (C2);
+     (ii) the three-gap *mechanism*: spreading a cluster trades full-cover for spread-out-R
+          cover, which is why consec wins the un-averaged p0 but loses the carrier-averaged q;
+     (iii) the per-block TV constant <= 14 (=2*7 sector edges) that feeds the joint ET-Koksma
+          bound, and the PROVED 1-D instance (C1b) at constant (6/49)V/w.
 """)

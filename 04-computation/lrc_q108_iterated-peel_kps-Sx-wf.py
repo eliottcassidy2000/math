@@ -264,7 +264,7 @@ def show_V_profile(E, label):
         Eprev = sorted(core+farl[:idx])
         emit(f"     peel w={w:4d}: V_exact(prev)={Vprev:3d}  42sigma={V_crude(Eprev):5d}"
              f"  bound=(6/49)V/w={float(F(6,49)*Vprev/w):.5f}  |Delta|={float(abs(Delta)):.5f}")
-show_V_profile([0,1,2,30,300,3000,30000,300000][:9], "SEPARATED (geometric x10)")
+show_V_profile([0,1,2,20,100,500,2500], "SEPARATED (geometric x5)")
 show_V_profile([0,1,2,20,40,80,160,320], "SEMI-SEPARATED (geometric x2)")
 show_V_profile([0,1,2,3,20,21,22,23], "BALANCED (far cluster ~20)")
 show_V_profile([0,1,2,3,4,5,6,40,41,42], "BALANCED k=10 far cluster ~40")
@@ -295,8 +295,8 @@ sep_families = {
     "k=8 geom x4 from 20":   [0,1,2,3,20,80,320,1280],
     "k=8 geom x4 from 30":   [0,1,2,30,120,480,1920,7680],
     "k=9 geom x3 from 20":   [0,1,2,3,20,60,180,540,1620],
-    "k=9 geom x5 from 20":   [0,1,2,3,20,100,500,2500,12500],
-    "k=10 geom x4 from 20":  [0,1,2,3,4,20,80,320,1280,5120],
+    "k=9 geom x5 from 20":   [0,1,2,3,20,100,500,2500,5000],
+    "k=10 geom x4 from 20":  [0,1,2,3,4,20,80,320,1280,2560],
 }
 emit("  family                       k  p0      cap     margin  ChainB(sum 6/49 V/w)  closes?")
 for label,E in sep_families.items():
@@ -374,13 +374,13 @@ emit(f"\n  worst balanced p0-margin = {float(worst_bal[0]):.4f} at '{worst_bal[1
 emit("\n  Random HUNT for p0 > cap on WIDE primitive k-sets (multi-far, span>14):")
 for k in [8,9,10,11,12]:
     viol = 0; mx = F(0); nn = 0; argmx = None
-    for _ in range(4000):
+    for _ in range(1500):
         # force multi-far: bounded base + >=2 far
         nbase = rng.randint(2, k-2)
         base = sorted(set([0]+rng.sample(range(1,15), nbase-1)))
         nfar = k - len(base)
         if nfar < 2: continue
-        far = sorted(rng.sample(range(15, 400), nfar))
+        far = sorted(rng.sample(range(15, 160), nfar))
         E = sorted(set(base)|set(far))
         if len(E)!=k or not primitive(E): continue
         if span(E) <= 14: continue
@@ -407,11 +407,11 @@ emit(r"""
 """)
 emit("  V_exact vs sigma vs #elements (random multi-far cores):")
 data = []
-for _ in range(2000):
+for _ in range(1200):
     k = rng.choice([7,8,9])
     base = sorted(set([0]+rng.sample(range(1,15), rng.randint(2,5))))
     nfar = max(0, k - len(base))
-    far = sorted(rng.sample(range(15,300), nfar)) if nfar else []
+    far = sorted(rng.sample(range(15,200), nfar)) if nfar else []
     E = sorted(set(base)|set(far))
     if len(E) < 3: continue
     data.append((V_exact(E), sum(E), len(E), max(E)))

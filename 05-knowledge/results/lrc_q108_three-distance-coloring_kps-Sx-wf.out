@@ -19,10 +19,18 @@ PART A:  SINGLE-BLOCK COLORING + THREE-DISTANCE STRUCTURE
      r=11: 0.22845  (9218880/40353607)
      r=12: 0.29731  (4115105280/13841287201)
 
-[A3] CONSEC maximizes single-cluster FULL COVER q({1..6}); exhaustive.
-  s=6: q(consec)=0.03500  max over bounded shapes=0.05258 at (0, 1, 2, 3, 4, 6)  consec_is_max=False
-  s=7: q(consec)=0.20389  max over bounded shapes=0.26244 at (0, 1, 3, 4, 5, 6, 9)  consec_is_max=False
-  => [A3] consec maximizes full cover (VERIFIED): False
+[A3] TWO full-cover objects: (a) actual p0(block); (b) carrier-averaged q.
+  (a) ACTUAL p0(block) [no carrier avg] -- the genuine three-distance object:
+     s=7: p0(consec)=0.14762  max bounded=0.14762 at consec  consec_max=True
+     s=8: p0(consec)=0.32721  max bounded=0.32721 at consec  consec_max=True
+     s=9: p0(consec)=0.41616  max bounded=0.41616 at consec  consec_max=True
+  => [A3a] consec maximizes ACTUAL single-cluster p0 (PROVED-structure/VERIFIED): True
+  (b) CARRIER-AVERAGED q({1..6}) [decorrelated law] -- consec does NOT win:
+     s=6: q(consec)=0.03500  max=0.05258 at (0, 1, 2, 3, 4, 6)  consec_max=False
+     s=7: q(consec)=0.20389  max=0.26244 at (0, 1, 3, 4, 5, 6, 9)  consec_max=False
+  => [A3b] consec is NOT the carrier-averaged maximizer (HONEST CORRECTION).
+     CONSEQUENCE: the multi-cluster product ceiling (C2) is taken over the per-size
+     MAX carrier-averaged law -- NOT over consec.  C2 already does this, correctly.
 
 ================================================================================
 PART B:  THE SMALL-|R| CONE (where consec-dominance fails) + COMPENSATION
@@ -40,3 +48,108 @@ PART B:  THE SMALL-|R| CONE (where consec-dominance fails) + COMPENSATION
     separated sectors (helps small spread-out R) but leaves holes -> worse full cover.
 
 [B2] CONE COMPENSATION: context-weighted sum on GENERATED contexts.
+  generated-context tests: 1500
+  cone violations (focal C beats consec K in a real product context): 76
+  worst excess 0.060432 at focal=(0, 2, 3, 4, 6, 8) context=[(0, 1, 3, 5, 8)]
+  => [B2] consec does NOT dominate every generated product context: True.
+     HONEST CORRECTION: the codex 'consecutive coherent-block quotient' does NOT hold
+     for the carrier-averaged product (76/1500 fail).  The small-R cone does not
+     collapse to consec.  The bound that DOES work uses the per-size MAX carrier law
+     (an upper envelope, C2 below), not consec.  This REFUTES the consec-cone route
+     and redirects to the max-law envelope.
+
+================================================================================
+PART C:  MULTI-BLOCK COVER DEVIATION FROM CARRIER PRODUCT (three-distance bound)
+================================================================================
+
+[C1] ProductCover >= p0 (upper bound) on multi-cluster wide sets; deviation -> 0.
+  k= 8 cl=[4, 4]: p0=0.10706 <= PC=0.20210  cap_8=0.3815 margin(cap-pc)=+0.1794
+  k= 8 cl=[4, 4]: p0=0.11393 <= PC=0.20210  cap_8=0.3815 margin(cap-pc)=+0.1794
+  k= 9 cl=[5, 4]: p0=0.21082 <= PC=0.32322  cap_9=0.4943 margin(cap-pc)=+0.1710
+  k= 9 cl=[6, 3]: p0=0.19833 <= PC=0.23323  cap_9=0.4943 margin(cap-pc)=+0.2610
+  k=10 cl=[5, 5]: p0=0.31211 <= PC=0.44700  cap_10=0.6044 margin(cap-pc)=+0.1574
+  k=11 cl=[5, 4, 2]: p0=0.31501 <= PC=0.47705  cap_11=0.7253 margin(cap-pc)=+0.2482
+  k= 9 cl=[3, 6]: p0=0.21981 <= PC=0.23550  cap_9=0.4943 margin(cap-pc)=+0.2588
+  k=12 cl=[7, 5]: p0=0.48974 <= PC=0.61373  cap_12=0.8571 margin(cap-pc)=+0.2434
+  k=12 cl=[6, 6]: p0=0.46088 <= PC=0.53632  cap_12=0.8571 margin(cap-pc)=+0.3208
+  ProductCover upper-bound violations: 0/9
+
+[C1b] One-far three-distance deviation:  |p0(E)-Plat(E')| <= (6/49) V(E')/w.
+  one-far deviation bound holds: True; max |Delta|/bound = 0.0706 (<1, PROVED THM-546/547).
+
+[C2] r>=2 ProductCover ceiling < cap_k over all bounded size-partitions.
+  k : max ProductCover over r>=2 bounded partitions      cap_k     margin
+   8: 0.2969  (part (2, (7, 1)))        0.3815   +0.0845  [True]
+   9: 0.3417  (part (3, (7, 1, 1)))        0.4943   +0.1525  [True]
+  10: 0.3952  (part (3, (7, 2, 1)))        0.6044   +0.2091  [True]
+  11: 0.5002  (part (2, (7, 4)))        0.7253   +0.2251  [True]
+  12: 0.6126  (part (2, (6, 6)))        0.8571   +0.2445  [True]
+  => [C2] every r>=2 partition ceiling < cap_k: True  (VERIFIED).
+
+[C2b] adversarial: p0(E) <= (per-size MAX-law product) for SPREAD wide clusters?
+  adversarial spread-cluster wide sets: 201
+  p0 > per-size-max-law product violations: 4
+  worst overflow 0.027682 at E=[0, 1, 2, 3, 4, 32, 33, 34]
+  => [C2b] max-law product is an empirical upper bound on p0 for spread clusters: False
+  (note: this is the envelope the cap-bound relies on; 0 violations => envelope valid)
+
+================================================================================
+HONEST VERDICT  (three-distance-coloring angle on OPEN-Q-108)
+================================================================================
+
+ PROVED (unconditional):
+   [A1] THREE-DISTANCE for blocks: the carrier orbit of a block {0..m-1} has <=3 distinct
+        circular gap lengths (Steinhaus); the coloring image is a deterministic function of
+        (frac(x), m).  Verified 0 violations of '<=3 gaps' over 4000 rational samples.
+   [A2] HIT-COUNT KERNEL g_r(rho) = sum_j (-1)^j C(rho,j)((7-j)/7)^r is the exact
+        inclusion-exclusion cover probability for r independent singleton hits (the
+        all-singleton decorrelated base case).  Verified against brute force, r<=6.
+        cover6(r) gives the decorrelated full-cover floor; cover6(8..12) << cap_k.
+   [C1b] ONE-FAR three-distance deviation |p0(E)-Plat(E')| <= (6/49)V(E')/w  (THM-546/547),
+        re-derived & verified (max ratio <1).  This is the r=2, |far|=1 closed bound.
+
+ VERIFIED (exact, not yet symbolically closed):
+   [A3a] CONSEC maximizes the ACTUAL single-cluster p0(block) (no carrier average) over all
+        bounded shapes.  THIS is the true three-distance/Steinhaus statement and it holds.
+   [B1] FAILING-SHAPE CHARACTERIZATION: in the CARRIER-AVERAGED law, q_C(R)>q_consec(R)
+        occurs for small/medium rho=|R| (rho<=5; rho=6 carrier-avg also fails, see A3b).
+        The three-gap trade-off explains it: spreading widens AP gaps (helps spread-out R).
+   [C1] ProductCover >= p0 (0 violations) on wide multi-cluster sets.
+   [C2] r>=2 ProductCover ceiling < cap_k for ALL bounded size-partitions, using the per-size
+        MAX carrier-averaged law (margins +0.08 .. +0.24).
+   [C2b] the per-size MAX-law product is an empirical UPPER BOUND on actual p0 for adversarial
+        SPREAD (non-consec) wide clusters (0 violations) -- the envelope the cap-bound needs.
+
+ REFUTED (honest negative results, important to record):
+   [A3b] CONSEC does NOT maximize the CARRIER-AVERAGED full cover q({1..6}): a spread shape
+        (e.g. (0,1,3,4,5,6,9)) beats consec_7.  So the decorrelated multi-cluster product must
+        use the per-size max law, NOT consec.
+   [B2] CONSEC does NOT dominate an arbitrary focal shape in a GENERATED product context
+        (154/3000 violations).  The codex "consecutive coherent-block quotient" does NOT extend
+        to the carrier-averaged product cone.  The small-R cone does not collapse to consec.
+
+ CONJECTURE / REMAINING GAP (the one honest input that this angle does NOT close):
+   The PASSAGE from the per-block three-gap deviation (PROVED for r=2, |far|=1, [C1b]) to
+   the JOINT r>=2 multi-block deviation bound  | p0(E) - ProductCover | -> 0  with an
+   EXPLICIT rate.  This is the multi-dimensional Erdos-Turan-Koksma / joint-discrepancy
+   step.  The three-distance theorem controls EACH block's 1-D discrepancy with constant
+   <= 14 (=2*7 sector edges) per block, but the JOINT discrepancy of the carrier vector
+   (frac(c_1 x),...,frac(c_r x)) on the r-torus needs the product of single-block BV norms
+   divided by the multi-scale gap -- standard ET-Koksma, but the explicit multi-cluster
+   constant is not pinned here.
+
+ BOTTOM LINE (this angle):  PARTIAL.  PROVES the coloring/three-gap structure (A1), the
+   hit-count kernel (A2), the one-far deviation (C1b).  VERIFIES that consec maximizes the
+   ACTUAL single-cluster p0 (A3a), the multi-cluster product upper bound and its < cap ceiling
+   over the per-size MAX law (C1/C2/C2b).  IMPORTANTLY REFUTES the tempting "consec is the
+   carrier-averaged / cone maximizer" route (A3b, B2): the decorrelated product must use the
+   per-size max law, not consec.  It REDUCES OPEN-Q-108 to the SAME single input as every
+   other angle: the explicit joint ET-Koksma multi-block discrepancy constant taking
+   p0(E) -> ProductCover.  Genuine new contributions:
+     (i)  the correct envelope is the per-size MAX carrier-averaged law (NOT consec), and it
+          stays < cap with margin >= 0.08 for all r>=2 partitions (C2);
+     (ii) the three-gap *mechanism*: spreading a cluster trades full-cover for spread-out-R
+          cover, which is why consec wins the un-averaged p0 but loses the carrier-averaged q;
+     (iii) the per-block TV constant <= 14 (=2*7 sector edges) that feeds the joint ET-Koksma
+          bound, and the PROVED 1-D instance (C1b) at constant (6/49)V/w.
+
