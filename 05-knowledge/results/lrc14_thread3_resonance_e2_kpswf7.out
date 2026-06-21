@@ -1,0 +1,28 @@
+=== ANGLE 2: resonance error structure (sign, harmonic decay) ===
+
+ratios p/q: ['7/6', '6/5', '5/4', '4/3', '7/5', '3/2', '8/5', '5/3', '7/4', '9/5', '11/6', '2/1', '13/6', '11/5']
+
+k=8 consec base=[0, 1, 2, 3, 4, 5]  p0_decorr=0.0840
+   err range: [-0.0019, +0.0044]   (|err| max = 0.0044)
+   sign: 8 negative, 6 positive (out of 14)  => mixed sign
+   harmonic-decay check (|err| vs 1/lcm(p,q)):
+     2/1: true=0.0884 err=+0.0044 lcm=2 |err|*lcm=0.009
+     4/3: true=0.0862 err=+0.0022 lcm=12 |err|*lcm=0.027
+     3/2: true=0.0821 err=-0.0019 lcm=6 |err|*lcm=0.011
+     13/6: true=0.0832 err=-0.0008 lcm=78 |err|*lcm=0.062
+     5/3: true=0.0846 err=+0.0007 lcm=15 |err|*lcm=0.010
+     5/4: true=0.0833 err=-0.0007 lcm=20 |err|*lcm=0.013
+
+k=9 consec base=[0, 1, 2, 3, 4, 5, 6]  p0_decorr=0.2467
+   err range: [-0.0031, +0.0008]   (|err| max = 0.0031)
+   sign: 12 negative, 2 positive (out of 14)  => mixed sign
+   harmonic-decay check (|err| vs 1/lcm(p,q)):
+     3/2: true=0.2435 err=-0.0031 lcm=6 |err|*lcm=0.019
+     4/3: true=0.2452 err=-0.0015 lcm=12 |err|*lcm=0.018
+     13/6: true=0.2457 err=-0.0010 lcm=78 |err|*lcm=0.079
+     2/1: true=0.2475 err=+0.0008 lcm=2 |err|*lcm=0.002
+     11/5: true=0.2460 err=-0.0007 lcm=55 |err|*lcm=0.038
+     5/4: true=0.2460 err=-0.0006 lcm=20 |err|*lcm=0.013
+
+VERDICT: if err<=0 always => decorrelated IS an upper bound (error term unneeded!).
+         if |err|*lcm bounded => E_2/harmonic tail bound closes it.
