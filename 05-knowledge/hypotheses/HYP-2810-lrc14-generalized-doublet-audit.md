@@ -4,6 +4,7 @@ title: LRC14 generalized-doublet audit as a gK8 concentration guardrail
 status: OPEN guardrail; exact bounded-span evidence supports gK8 concentration and generalized-doublet fallback; proof not claimed
 source: codex-2026-06-22-S78
 depends_on:
+  - HYP-2828
   - HYP-2822
   - HYP-2820
   - HYP-2817
@@ -159,6 +160,43 @@ The first packages the full bounded `gK8` finite-check table for k=8..13; the
 second records the exact q6-ratio reductions.  These do not prove the final
 concentration theorem: q0/q3 movement under generated-profile smoothing remains
 the live structural lemma.
+
+## S80 Relation-Depth Update
+
+HYP-2828 adds a sharper structural interpretation of the S78 generalized-
+doublet audit.  The failed one-peel dichotomy should not be repaired by a raw
+absolute covolume bound; it should be replaced by a relation-depth separator.
+
+In exact `span<=18` normalized primitive genuine-wide banks, S80 finds:
+
+```text
+k=10: 27484 genuine-wide rows, over_Q=0.
+k=11: 29724 genuine-wide rows, over_Q=0.
+k=12: 24816 genuine-wide rows, over_Q=4.
+```
+
+All four positive k=12 rows have peel depth `2`, and after two deletions
+affine-reduce to span `<=14`.  The seven positive k=12 rows from the larger
+S78 `span<=20` witness bank have the same profile:
+
+```text
+depth histogram: d2:7.
+two-peel span: le14:7.
+```
+
+This suggests a better proof split:
+
+```text
+depth 1 -> THM-563 / HYP-2820 / HYP-2822 single-far endpoint-period lane;
+depth 2 -> generalized-doublet frozen-room plus R-tail finite atlas;
+depth >=3 -> prove p0<=Q(k-1), or directly p0<cap_k with slack.
+```
+
+The key diagnostic is not full saturated covolume.  Across all rows, the
+two-peel normalized norm correlates better with `p0-Q` than full or one-peel
+norm at every audited `k` (`+0.2736`, `+0.3307`, `+0.3630`).  This refines the
+older HYP-2606 lesson: relation-lattice structure matters, but only after the
+right peel/address quotient has been retained.
 
 ## Exact S78 Evidence
 
@@ -427,6 +465,8 @@ No LRC14 proof is claimed.  HYP-2810 contributes:
 
 - an exact finite-window audit supporting generalized-doublet dominance at
   `span<=18` and `span<=20`;
+- an S80 relation-depth refinement: every positive audited `p0-Q` witness is
+  two-peel bounded, making depth>=3 the next separator target;
 - an exact `span<=18` gK8 overlay showing the same genuine-wide window has
   zero `L_yK8` cap violations, with r=2 leaders;
 - a post-rebase proof-order refinement: the live concentration lemma should

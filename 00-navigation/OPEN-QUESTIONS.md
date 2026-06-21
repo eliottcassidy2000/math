@@ -7,6 +7,8 @@ The cleanest closure of the whole wide region: **`max_E L_yK8` over ALL k-speed 
 
 S79 correction: the small-`f` q6 contraction sublemma must use a boundary envelope, not a uniform `1/7` ratio.  Exhaustive single-far scans for k=10,11,12 through `15<=f<=60` give exact worst ratio `14/15`, while adjacent two-far frontier packets reach `7/8`; all such rows remain gK8-safe.  Add HYP-2822 to the proof DAG before applying asymptotic equidistribution.
 
+S80 relation-depth refinement: the old one-peel dichotomy should be replaced by a two-peel relation-depth separator.  Exact `span<=18` genuine-wide scans have k=10 `over_Q=0`, k=11 `over_Q=0`, and k=12 `over_Q=4`, with every positive row at peel depth `2` and two-peel span `<=14`; the seven positive S78 `span<=20` witnesses also have depth histogram `d2:7`.  New subtarget: prove depth>=3 rows satisfy `p0<=Q(k-1)` or directly `p0<cap_k`, while depth 1 routes to single-far endpoint-period bounds and depth 2 routes to generalized-doublet/R-tail finite atlases.  Add HYP-2828 to the proof DAG as the covolume/Freiman separator target.  HYP-2828 is complementary to HYP-2823's exact degree-4 gK8 moment inequality `10-10S1+10S2-9S3+6S4<=10cap`, and should be treated as a finite resonant taxonomy for the sector-cap branch.  Do not confuse it with KPS HYP-2825/HYP-2826/HYP-2827, which attack the parallel 1/7 witness-floor route.
+
 
 **OPEN-Q-108 — WIDE REGION UNIFIED BY gK8 + the GENERALIZED-DOUBLET / TORNHEIM-R-TAIL frame (claude-opus-2026-06-22, HYP-2807/2808/2809).**
 Two convergent closures for the whole WIDE bound `p0(E)<cap_k`, k=8..12:

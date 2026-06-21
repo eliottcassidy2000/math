@@ -1,0 +1,103 @@
+============================================================================================
+S80 covolume/peel-depth bridge for the LRC14 dichotomy seam
+============================================================================================
+Exact finite audit only.  Positive p0-Q rows are the structural test cases.
+
+--------------------------------------------------------------------------------------------
+k=10, span<=18: total=48620, primitive=48619, genuine_wide=27484, over_Q=0, seconds=79.77
+cap=55/91, Q(k-1)=1229/2744, cap-Q=5583/35672
+Pearson over all rows: p0-Q vs 1/full_norm=+0.1236, 1/one_peel_norm=+0.1646, 1/two_peel_norm=+0.2736
+Depth histogram all: d1:1, d2:23353, d3:4075, d4:55
+Depth histogram over_Q: none
+Over_Q two-peel span: none
+Top rows by p0:
+  1. E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17), p0=52685/119119, p0-Q=-37339/6670664, cap-p0=19310/119119, far=(15, 17), depth=1, rem=(0,), span1=8, span2=7, norm_full=969, norm1=204, norm2=140, bucket=('depth1', 'two_span_le10', 'r2')
+  2. E=(0, 1, 2, 3, 4, 5, 6, 7, 17, 18), p0=947/2205, p0-Q=-2273/123480, cap-p0=5014/28665, far=(17, 18), depth=2, rem=(17, 18), span1=17, span2=7, norm_full=753, norm1=429, norm2=140, bucket=('depth2', 'two_span_le10', 'r2')
+  3. E=(0, 1, 2, 3, 4, 5, 6, 7, 16, 18), p0=409/980, p0-Q=-419/13720, cap-p0=2383/12740, far=(16, 18), depth=2, rem=(16, 18), span1=16, span2=7, norm_full=720, norm1=396, norm2=140, bucket=('depth2', 'two_span_le10', 'r2')
+  4. E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 17), p0=41669/99960, p0-Q=-2714/87465, cap-p0=243703/1299480, far=(15, 17), depth=2, rem=(15, 17), span1=15, span2=7, norm_full=1074, norm1=758, norm2=140, bucket=('depth2', 'two_span_le10', 'r2')
+  5. E=(0, 1, 2, 3, 4, 5, 6, 7, 16, 17), p0=1021/2499, p0-Q=-5503/139944, cap-p0=6362/32487, far=(16, 17), depth=2, rem=(16, 17), span1=16, span2=7, norm_full=685, norm1=396, norm2=140, bucket=('depth2', 'two_span_le10', 'r2')
+  6. E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 18), p0=35449/90090, p0-Q=-960611/17657640, cap-p0=19001/90090, far=(15, 18), depth=2, rem=(0, 18), span1=15, span2=7, norm_full=1004, norm1=680, norm2=140, bucket=('depth2', 'two_span_le10', 'r2')
+  7. E=(0, 1, 2, 3, 4, 5, 6, 7, 15, 17), p0=19633/49980, p0-Q=-38533/699720, cap-p0=137471/649740, far=(15, 17), depth=2, rem=(15, 17), span1=15, span2=7, norm_full=654, norm1=365, norm2=140, bucket=('depth2', 'two_span_le10', 'r2')
+  8. E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 16), p0=488881/1261260, p0-Q=-1064281/17657640, cap-p0=273419/1261260, far=(15, 16), depth=2, rem=(0, 16), span1=15, span2=7, norm_full=936, norm1=680, norm2=140, bucket=('depth2', 'two_span_le10', 'r2')
+Bucket tournament Hamiltonian path by max p0:
+  1. ('depth1', 'two_span_le10', 'r2'): E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17), p0=52685/119119, p0-Q=-37339/6670664, cap-p0=19310/119119, far=(15, 17), depth=1, rem=(0,), span1=8, span2=7, norm_full=969, norm1=204, norm2=140, bucket=('depth1', 'two_span_le10', 'r2')
+  2. ('depth2', 'two_span_le10', 'r2'): E=(0, 1, 2, 3, 4, 5, 6, 7, 17, 18), p0=947/2205, p0-Q=-2273/123480, cap-p0=5014/28665, far=(17, 18), depth=2, rem=(17, 18), span1=17, span2=7, norm_full=753, norm1=429, norm2=140, bucket=('depth2', 'two_span_le10', 'r2')
+  3. ('depth2', 'two_span_11_14', 'r2'): E=(0, 3, 6, 8, 9, 11, 12, 14, 15, 18), p0=12343/32340, p0-Q=-29983/452760, cap-p0=93641/420420, far=(15, 18), depth=2, rem=(0, 3), span1=15, span2=12, norm_full=1200, norm1=705, norm2=363, bucket=('depth2', 'two_span_11_14', 'r2')
+  4. ('depth2', 'two_span_11_14', 'r3'): E=(0, 3, 6, 7, 9, 12, 13, 15, 16, 18), p0=8143/21840, p0-Q=-80303/1070160, cap-p0=389/1680, far=(15, 16, 18), depth=2, rem=(0, 3), span1=15, span2=12, norm_full=1293, norm1=780, norm2=420, bucket=('depth2', 'two_span_11_14', 'r3')
+  5. ('depth2', 'two_span_le10', 'r3'): E=(0, 3, 5, 7, 9, 11, 13, 15, 17, 18), p0=77177/210210, p0-Q=-475249/5885880, cap-p0=49873/210210, far=(15, 17, 18), depth=2, rem=(0, 18), span1=15, span2=7, norm_full=1292, norm1=785, norm2=140, bucket=('depth2', 'two_span_le10', 'r3')
+  6. ('depth2', 'two_span_le10', 'r4plus'): E=(0, 1, 11, 12, 13, 14, 15, 16, 17, 18), p0=7709813/21441420, p0-Q=-26509073/300179880, cap-p0=5249287/21441420, far=(15, 16, 17, 18), depth=2, rem=(0, 1), span1=17, span2=7, norm_full=1725, norm1=1401, norm2=140, bucket=('depth2', 'two_span_le10', 'r4plus')
+  7. ('depth3plus', 'two_span_15_18', 'r3'): E=(0, 1, 2, 3, 4, 5, 6, 16, 17, 18), p0=2003/5712, p0-Q=-27211/279888, cap-p0=18841/74256, far=(16, 17, 18), depth=3, rem=(16, 17, 18), span1=17, span2=16, norm_full=960, norm1=636, norm2=347, bucket=('depth3plus', 'two_span_15_18', 'r3')
+  8. ('depth3plus', 'two_span_15_18', 'r4plus'): E=(0, 1, 2, 12, 13, 14, 15, 16, 17, 18), p0=865279/2598960, p0-Q=-2091317/18192720, cap-p0=705521/2598960, far=(15, 16, 17, 18), depth=3, rem=(0, 1, 2), span1=17, span2=16, norm_full=1608, norm1=1284, norm2=995, bucket=('depth3plus', 'two_span_15_18', 'r4plus')
+Bucket tournament score histogram: score0:1, score1:1, score2:1, score3:1, score4:1, score5:1, score6:1, score7:1, score8:1
+
+--------------------------------------------------------------------------------------------
+k=11, span<=18: total=43758, primitive=43758, genuine_wide=29724, over_Q=0, seconds=132.37
+cap=66/91, Q(k-1)=65599/123480, cap-Q=311453/1605240
+Pearson over all rows: p0-Q vs 1/full_norm=+0.1625, 1/one_peel_norm=+0.2109, 1/two_peel_norm=+0.3307
+Depth histogram all: d2:23110, d3:6449, d4:165
+Depth histogram over_Q: none
+Over_Q two-peel span: none
+Top rows by p0:
+  1. E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 18), p0=2257/4410, p0-Q=-267/13720, cap-p0=12239/57330, far=(15, 18), depth=2, rem=(7, 15), span1=15, span2=9, norm_full=1158, norm1=834, norm2=221, bucket=('depth2', 'two_span_le10', 'r2')
+  2. E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 17, 18), p0=7625/14994, p0-Q=-47683/2099160, cap-p0=42247/194922, far=(17, 18), depth=2, rem=(17, 18), span1=17, span2=9, norm_full=834, norm1=510, norm2=221, bucket=('depth2', 'two_span_le10', 'r2')
+  3. E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 17, 18), p0=2537/4998, p0-Q=-49643/2099160, cap-p0=14143/64974, far=(17, 18), depth=2, rem=(7, 17), span1=16, span2=9, norm_full=1222, norm1=870, norm2=221, bucket=('depth2', 'two_span_le10', 'r2')
+  4. E=(0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16), p0=373/735, p0-Q=-587/24696, cap-p0=2081/9555, far=(15, 16), depth=2, rem=(1, 15), span1=15, span2=8, norm_full=1042, norm1=786, norm2=204, bucket=('depth2', 'two_span_le10', 'r2')
+  5. E=(0, 2, 3, 4, 6, 8, 10, 12, 14, 17, 18), p0=12667/24990, p0-Q=-10231/419832, cap-p0=70949/324870, far=(17, 18), depth=2, rem=(3, 17), span1=16, span2=9, norm_full=1182, norm1=846, norm2=221, bucket=('depth2', 'two_span_le10', 'r2')
+  6. E=(0, 2, 3, 4, 6, 8, 10, 12, 14, 15, 18), p0=223/441, p0-Q=-351/13720, cap-p0=1259/5733, far=(15, 18), depth=2, rem=(3, 15), span1=15, span2=9, norm_full=1118, norm1=794, norm2=221, bucket=('depth2', 'two_span_le10', 'r2')
+  7. E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 16, 18), p0=1273/2520, p0-Q=-179/6860, cap-p0=7211/32760, far=(16, 18), depth=2, rem=(16, 18), span1=16, span2=9, norm_full=801, norm1=477, norm2=221, bucket=('depth2', 'two_span_le10', 'r2')
+  8. E=(0, 2, 4, 6, 8, 10, 11, 12, 14, 15, 18), p0=4661/9240, p0-Q=-18211/679140, cap-p0=26527/120120, far=(15, 18), depth=2, rem=(11, 15), span1=15, span2=9, norm_full=1230, norm1=906, norm2=221, bucket=('depth2', 'two_span_le10', 'r2')
+Bucket tournament Hamiltonian path by max p0:
+  1. ('depth2', 'two_span_le10', 'r2'): E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 18), p0=2257/4410, p0-Q=-267/13720, cap-p0=12239/57330, far=(15, 18), depth=2, rem=(7, 15), span1=15, span2=9, norm_full=1158, norm1=834, norm2=221, bucket=('depth2', 'two_span_le10', 'r2')
+  2. ('depth2', 'two_span_le10', 'r3'): E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 16, 17), p0=98089/199920, p0-Q=-170497/4198320, cap-p0=609803/2598960, far=(15, 16, 17), depth=2, rem=(15, 17), span1=15, span2=8, norm_full=1330, norm1=954, norm2=204, bucket=('depth2', 'two_span_le10', 'r3')
+  3. ('depth2', 'two_span_11_14', 'r2'): E=(0, 2, 3, 6, 8, 9, 10, 12, 14, 15, 18), p0=103/210, p0-Q=-1007/24696, cap-p0=641/2730, far=(15, 18), depth=2, rem=(0, 18), span1=15, span2=13, norm_full=1183, norm1=859, norm2=579, bucket=('depth2', 'two_span_11_14', 'r2')
+  4. ('depth3plus', 'two_span_15_18', 'r3'): E=(0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18), p0=58553/119952, p0-Q=-60337/1399440, cap-p0=369787/1559376, far=(16, 17, 18), depth=3, rem=(16, 17, 18), span1=17, span2=16, norm_full=1009, norm1=685, norm2=396, bucket=('depth3plus', 'two_span_15_18', 'r3')
+  5. ('depth2', 'two_span_11_14', 'r3'): E=(0, 3, 6, 8, 9, 10, 12, 14, 15, 16, 18), p0=2063/4410, p0-Q=-1567/24696, cap-p0=14761/57330, far=(15, 16, 18), depth=2, rem=(0, 3), span1=15, span2=12, norm_full=1435, norm1=859, norm2=454, bucket=('depth2', 'two_span_11_14', 'r3')
+  6. ('depth2', 'two_span_le10', 'r4plus'): E=(0, 3, 10, 11, 12, 13, 14, 15, 16, 17, 18), p0=2248009/5045040, p0-Q=-336139/3923920, cap-p0=1411031/5045040, far=(15, 16, 17, 18), depth=2, rem=(0, 3), span1=15, span2=8, norm_full=1833, norm1=1149, norm2=204, bucket=('depth2', 'two_span_le10', 'r4plus')
+  7. ('depth2', 'two_span_11_14', 'r4plus'): E=(0, 3, 6, 9, 12, 13, 14, 15, 16, 17, 18), p0=1690687/3898440, p0-Q=-266257/2728908, cap-p0=1136753/3898440, far=(15, 16, 17, 18), depth=2, rem=(0, 3), span1=15, span2=12, norm_full=1729, norm1=1081, norm2=604, bucket=('depth2', 'two_span_11_14', 'r4plus')
+  8. ('depth3plus', 'two_span_15_18', 'r4plus'): E=(0, 1, 2, 3, 12, 13, 14, 15, 16, 17, 18), p0=1096643/2598960, p0-Q=-1193051/10915632, cap-p0=788317/2598960, far=(15, 16, 17, 18), depth=4, rem=(0, 1, 2, 3), span1=17, span2=16, norm_full=1617, norm1=1293, norm2=1004, bucket=('depth3plus', 'two_span_15_18', 'r4plus')
+Bucket tournament score histogram: score0:1, score1:1, score2:1, score3:1, score4:1, score5:1, score6:1, score7:1
+
+--------------------------------------------------------------------------------------------
+k=12, span<=18: total=31824, primitive=31824, genuine_wide=24816, over_Q=4, seconds=138.21
+cap=6/7, Q(k-1)=14873/24696, cap-Q=6295/24696
+Pearson over all rows: p0-Q vs 1/full_norm=+0.2044, 1/one_peel_norm=+0.2639, 1/two_peel_norm=+0.3630
+Pearson over positive p0-Q rows: p0-Q vs 1/full_norm=-0.9649, 1/one_peel_norm=-0.9928, 1/two_peel_norm=+0.4604
+Depth histogram all: d2:17097, d3:7389, d4:330
+Depth histogram over_Q: d2:4
+Over_Q two-peel span: le14:4
+Top rows by p0:
+  1. E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18), p0=238949/388080, p0-Q=36613/2716560, cap-p0=93691/388080, far=(16, 18), depth=2, rem=(9, 11), span1=16, span2=9, norm_full=1342, norm1=946, norm2=285, bucket=('depth2', 'two_span_le10', 'r2')
+  2. E=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16, 18), p0=4301/7056, p0-Q=361/49392, cap-p0=1747/7056, far=(16, 18), depth=2, rem=(7, 9), span1=16, span2=9, norm_full=1270, norm1=890, norm2=285, bucket=('depth2', 'two_span_le10', 'r2')
+  3. E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 18), p0=10697/17640, p0-Q=257/61740, cap-p0=4423/17640, far=(15, 18), depth=2, rem=(0, 18), span1=15, span2=13, norm_full=1199, norm1=875, norm2=583, bucket=('depth2', 'two_span_11_14', 'r2')
+  4. E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 16, 18), p0=7129/11760, p0-Q=979/246960, cap-p0=2951/11760, far=(16, 18), depth=2, rem=(3, 9), span1=16, span2=9, norm_full=1230, norm1=866, norm2=285, bucket=('depth2', 'two_span_le10', 'r2')
+  5. E=(0, 2, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18), p0=5227/8820, p0-Q=-1187/123480, cap-p0=2333/8820, far=(15, 16, 18), depth=2, rem=(9, 15), span1=16, span2=9, norm_full=1446, norm1=1034, norm2=285, bucket=('depth2', 'two_span_le10', 'r3')
+  6. E=(0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 16, 18), p0=76579/129360, p0-Q=-27871/2716560, cap-p0=34301/129360, far=(16, 18), depth=2, rem=(7, 11), span1=16, span2=9, norm_full=1310, norm1=922, norm2=285, bucket=('depth2', 'two_span_le10', 'r2')
+  7. E=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14, 16, 18), p0=20821/35280, p0-Q=-2983/246960, cap-p0=9419/35280, far=(16, 18), depth=2, rem=(5, 7), span1=16, span2=9, norm_full=1214, norm1=850, norm2=285, bucket=('depth2', 'two_span_le10', 'r2')
+  8. E=(0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 15, 18), p0=114451/194040, p0-Q=-8429/679140, cap-p0=51869/194040, far=(15, 18), depth=2, rem=(0, 18), span1=15, span2=13, norm_full=1279, norm1=955, norm2=639, bucket=('depth2', 'two_span_11_14', 'r2')
+Bucket tournament Hamiltonian path by max p0:
+  1. ('depth2', 'two_span_le10', 'r2'): E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18), p0=238949/388080, p0-Q=36613/2716560, cap-p0=93691/388080, far=(16, 18), depth=2, rem=(9, 11), span1=16, span2=9, norm_full=1342, norm1=946, norm2=285, bucket=('depth2', 'two_span_le10', 'r2')
+  2. ('depth2', 'two_span_11_14', 'r2'): E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 18), p0=10697/17640, p0-Q=257/61740, cap-p0=4423/17640, far=(15, 18), depth=2, rem=(0, 18), span1=15, span2=13, norm_full=1199, norm1=875, norm2=583, bucket=('depth2', 'two_span_11_14', 'r2')
+  3. ('depth2', 'two_span_le10', 'r3'): E=(0, 2, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18), p0=5227/8820, p0-Q=-1187/123480, cap-p0=2333/8820, far=(15, 16, 18), depth=2, rem=(9, 15), span1=16, span2=9, norm_full=1446, norm1=1034, norm2=285, bucket=('depth2', 'two_span_le10', 'r3')
+  4. ('depth3plus', 'two_span_15_18', 'r3'): E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 16, 17, 18), p0=43339/74970, p0-Q=-50713/2099160, cap-p0=20921/74970, far=(16, 17, 18), depth=3, rem=(16, 17, 18), span1=17, span2=16, norm_full=1090, norm1=766, norm2=477, bucket=('depth3plus', 'two_span_15_18', 'r3')
+  5. ('depth2', 'two_span_11_14', 'r3'): E=(0, 3, 6, 8, 9, 11, 12, 13, 14, 15, 16, 18), p0=480751/840840, p0-Q=-67303/2207205, cap-p0=239969/840840, far=(15, 16, 18), depth=2, rem=(0, 3), span1=15, span2=12, norm_full=1625, norm1=974, norm2=512, bucket=('depth2', 'two_span_11_14', 'r3')
+  6. ('depth2', 'two_span_le10', 'r4plus'): E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 16, 17, 18), p0=112811/199920, p0-Q=-159379/4198320, cap-p0=58549/199920, far=(15, 16, 17, 18), depth=2, rem=(15, 17), span1=16, span2=9, norm_full=1654, norm1=1210, norm2=285, bucket=('depth2', 'two_span_le10', 'r4plus')
+  7. ('depth2', 'two_span_11_14', 'r4plus'): E=(0, 3, 6, 9, 10, 12, 13, 14, 15, 16, 17, 18), p0=64847/119952, p0-Q=-17251/279888, cap-p0=37969/119952, far=(15, 16, 17, 18), depth=2, rem=(0, 3), span1=15, span2=12, norm_full=1829, norm1=1130, norm2=620, bucket=('depth2', 'two_span_11_14', 'r4plus')
+  8. ('depth3plus', 'two_span_15_18', 'r4plus'): E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 16, 17, 18), p0=22492399/42882840, p0-Q=-3889087/50029980, cap-p0=14264321/42882840, far=(15, 16, 17, 18), depth=3, rem=(0, 16, 18), span1=17, span2=15, norm_full=1549, norm1=1225, norm2=954, bucket=('depth3plus', 'two_span_15_18', 'r4plus')
+Bucket tournament score histogram: score0:1, score1:1, score2:1, score3:1, score4:1, score5:1, score6:1, score7:1
+
+Interpretation target:
+If every positive p0-Q row has depth<=2 or two-peel span<=14, the failed one-peel dichotomy can be replaced by a relation-depth dichotomy: single-far periodicity handles depth 1, while depth 2 belongs to the generalized-doublet/R-tail atlas.
+
+============================================================================================
+S78 span<=20 k=12 positive p0-Q witness-bank peel audit
+============================================================================================
+These are the seven over-Q rows reported by the S78 span<=20 exact audit; this targeted bank avoids rerunning the larger span<=20 covolume scan.
+Witness depth histogram: d2:7
+Witness two-peel span: le14:7
+  1. E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18), p0=238949/388080, p0-Q=36613/2716560, cap-p0=93691/388080, far=(16, 18), depth=2, rem=(9, 11), span1=16, span2=9, norm_full=1342, norm1=946, norm2=285, bucket=('depth2', 'two_span_le10', 'r2')
+  2. E=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16, 18), p0=4301/7056, p0-Q=361/49392, cap-p0=1747/7056, far=(16, 18), depth=2, rem=(7, 9), span1=16, span2=9, norm_full=1270, norm1=890, norm2=285, bucket=('depth2', 'two_span_le10', 'r2')
+  3. E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 18), p0=10697/17640, p0-Q=257/61740, cap-p0=4423/17640, far=(15, 18), depth=2, rem=(0, 18), span1=15, span2=13, norm_full=1199, norm1=875, norm2=583, bucket=('depth2', 'two_span_11_14', 'r2')
+  4. E=(0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 18, 20), p0=117647/194040, p0-Q=919/226380, cap-p0=48673/194040, far=(18, 20), depth=2, rem=(7, 11), span1=18, span2=10, norm_full=1454, norm1=1050, norm2=321, bucket=('depth2', 'two_span_le10', 'r2')
+  5. E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 16, 18), p0=7129/11760, p0-Q=979/246960, cap-p0=2951/11760, far=(16, 18), depth=2, rem=(3, 9), span1=16, span2=9, norm_full=1230, norm1=866, norm2=285, bucket=('depth2', 'two_span_le10', 'r2')
+  6. E=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14, 16, 20), p0=1423/2352, p0-Q=137/49392, cap-p0=593/2352, far=(16, 20), depth=2, rem=(5, 7), span1=16, span2=10, norm_full=1290, norm1=890, norm2=304, bucket=('depth2', 'two_span_le10', 'r2')
+  7. E=(0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 16, 20), p0=11141/18480, p0-Q=1697/2716560, cap-p0=4699/18480, far=(16, 20), depth=2, rem=(7, 11), span1=16, span2=10, norm_full=1386, norm1=986, norm2=304, bucket=('depth2', 'two_span_le10', 'r2')
