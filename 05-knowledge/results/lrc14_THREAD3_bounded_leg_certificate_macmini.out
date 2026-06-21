@@ -1,0 +1,133 @@
+############################################################################################
+# THREAD 3 -- BOUNDED-SPAN LEG: exhaustive-exact certificate + split completeness
+############################################################################################
+
+============================================================================================
+STEP A: three independent engines agree on every 0-in-E shape (no engine bug).
+============================================================================================
+  127 shapes tested; mismatches = 0  (must be 0)
+  => all three engines agree. The certified quantity is unambiguous.
+
+============================================================================================
+STEP B: invariance audit (the split's correctness rests on these).
+============================================================================================
+  (I1) SCALE-invariance measS7(d*E)=measS7(E): fails=0 (must be 0)
+  (I0) TRANSLATION sensitivity: 84/180 shifts changed measS7
+        => translation is NOT a symmetry; 0-in-E is a genuine constraint, kept.
+  (I2) diff_gcd(E)=gcd(E) for 0-in-E: fails=0 (must be 0)
+        => the wide leg's reduce-by-diff_gcd = reduce-to-primitive; SAME criterion.
+
+============================================================================================
+STEP C: EXHAUSTIVE-EXACT certificate -- max measS7 over S_k (span<=14), k=8..12.
+  S_k = { {0} U R : R subset {1..14}, |R|=k-1, gcd=1 }  (each primitive class once).
+============================================================================================
+
+  --- k=8 (cap_k = 2243/5880 = 0.381463) ---
+     box (k-1)-subsets of {1..14} : C(14,7) = 3432
+     primitive shapes (gcd=1)      : 3431
+        full-residue (Z/7 hit)     : 319
+        non-full-residue           : 3112
+     MAX measS7 = 481/1470 = 0.327211   at E = [0, 1, 2, 3, 4, 5, 6, 7]
+        argmax == consec_8?       : True
+     cap_k      = 2243/5880 = 0.381463
+     MARGIN cap - max = 319/5880 = +0.054252   -> OK
+     shapes over cap : 0
+
+  --- k=9 (cap_k = 1979/4004 = 0.494256) ---
+     box (k-1)-subsets of {1..14} : C(14,8) = 3003
+     primitive shapes (gcd=1)      : 3003
+        full-residue (Z/7 hit)     : 688
+        non-full-residue           : 2315
+     MAX measS7 = 2447/5880 = 0.416156   at E = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        argmax == consec_9?       : True
+     cap_k      = 1979/4004 = 0.494256
+     MARGIN cap - max = 65669/840840 = +0.078099   -> OK
+     shapes over cap : 0
+
+  --- k=10 (cap_k = 55/91 = 0.604396) ---
+     box (k-1)-subsets of {1..14} : C(14,9) = 2002
+     primitive shapes (gcd=1)      : 2002
+        full-residue (Z/7 hit)     : 832
+        non-full-residue           : 1170
+     MAX measS7 = 8899/17640 = 0.504478   at E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        argmax == consec_10?       : True
+     cap_k      = 55/91 = 0.604396
+     MARGIN cap - max = 22913/229320 = +0.099917   -> OK
+     shapes over cap : 0
+
+  --- k=11 (cap_k = 66/91 = 0.725275) ---
+     box (k-1)-subsets of {1..14} : C(14,10) = 1001
+     primitive shapes (gcd=1)      : 1001
+        full-residue (Z/7 hit)     : 620
+        non-full-residue           : 381
+     MAX measS7 = 3419/5880 = 0.581463   at E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        argmax == consec_11?       : True
+     cap_k      = 66/91 = 0.725275
+     MARGIN cap - max = 10993/76440 = +0.143812   -> OK
+     shapes over cap : 0
+
+  --- k=12 (cap_k = 6/7 = 0.857143) ---
+     box (k-1)-subsets of {1..14} : C(14,11) = 364
+     primitive shapes (gcd=1)      : 364
+        full-residue (Z/7 hit)     : 292
+        non-full-residue           : 72
+     MAX measS7 = 11381/17640 = 0.645181   at E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+        argmax == consec_12?       : False
+     cap_k      = 6/7 = 0.857143
+     MARGIN cap - max = 3739/17640 = +0.211961   -> OK
+     shapes over cap : 0
+
+============================================================================================
+STEP D: SPLIT COMPLETENESS -- the bounded/wide partition is total on the primitive span.
+============================================================================================
+  Routing rule (matches wide leg lrc14_threadA_k1112_scalereduce):
+     E -> E0 = (E - min)/diff_gcd(E);  span(E0) <= 14  => BOUNDED (this leg)
+                                       span(E0) >  14  => WIDE (dichotomy leg)
+  Partition test: every shape routes to exactly one leg; measS7(E)=measS7(E0).
+  routed: {'BOUNDED': 5000, 'WIDE': 1499};  total tested = 6499;  mis-routes/mismatches = 0
+  Boundary witnesses (primitive span 14 vs 15 -- the exact cut):
+    k=8: (0, 1, 2, 3, 4, 5, 6, 14) span14->BOUNDED ; (0, 1, 2, 3, 4, 5, 6, 15) span15->WIDE
+    k=9: (0, 1, 2, 3, 4, 5, 6, 7, 14) span14->BOUNDED ; (0, 1, 2, 3, 4, 5, 6, 7, 15) span15->WIDE
+    k=10: (0, 1, 2, 3, 4, 5, 6, 7, 8, 14) span14->BOUNDED ; (0, 1, 2, 3, 4, 5, 6, 7, 8, 15) span15->WIDE
+    k=11: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14) span14->BOUNDED ; (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15) span15->WIDE
+    k=12: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14) span14->BOUNDED ; (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15) span15->WIDE
+
+============================================================================================
+STEP E: boundary no-gap + k-range completeness.
+============================================================================================
+  k=8: max primitive span inside bounded box = 14  (cut = 14, OK=True)
+  k=9: max primitive span inside bounded box = 14  (cut = 14, OK=True)
+  k=10: max primitive span inside bounded box = 14  (cut = 14, OK=True)
+  k=11: max primitive span inside bounded box = 14  (cut = 14, OK=True)
+  k=12: max primitive span inside bounded box = 14  (cut = 14, OK=True)
+  k-range for n=14: |P|+|E|=13, 0 in E => k=|E| in 3..13.
+    k<=7  : pigeonhole (THM-530), measS7 forced; not in this leg.
+    k=8..12: certified above (span<=14 bounded leg + wide leg span>14).
+    k=13  : cap_13 = 1 (|P|=0), trivially measS7<=1. No obligation.
+
+############################################################################################
+# VERDICT
+############################################################################################
+  Bounded-leg exhaustive-exact certificate (span<=14, k=8..12): ALL PASS
+    k= 8: max=481/1470 (0.327211)  cap=2243/5880  margin=319/5880 (+0.054252)  prim=3431 (full=319,nonfull=3112)  over=0
+    k= 9: max=2447/5880 (0.416156)  cap=1979/4004  margin=65669/840840 (+0.078099)  prim=3003 (full=688,nonfull=2315)  over=0
+    k=10: max=8899/17640 (0.504478)  cap=55/91  margin=22913/229320 (+0.099917)  prim=2002 (full=832,nonfull=1170)  over=0
+    k=11: max=3419/5880 (0.581463)  cap=66/91  margin=10993/76440 (+0.143812)  prim=1001 (full=620,nonfull=381)  over=0
+    k=12: max=11381/17640 (0.645181)  cap=6/7  margin=3739/17640 (+0.211961)  prim=364 (full=292,nonfull=72)  over=0
+
+  EXHAUSTIVENESS: S_k enumerates every primitive 0-in-E shape with span<=14 exactly once
+    (itertools.combinations over {1..14}); both full- and non-full-residue covered.
+  SPLIT COMPLETENESS: routing on span(primitive)<=14 (= wide leg's diff_gcd reduction)
+    is a TOTAL partition -- every shape is BOUNDED xor WIDE, boundary exactly at 14,
+    no gap, no overlap; measS7 preserved under the reduction (scale invariance).
+  binding row = k=8 (smallest margin 319/5880 ~ +0.0543).
+
+============================================================================================
+ADDENDUM: worst measS7 by EXACT span band (confirms no span breaches cap up to the cut=14)
+============================================================================================
+k=8  cap=0.38146: sp7:0.3272 sp8:0.2736 sp9:0.2371 sp10:0.2201 sp11:0.2092 sp12:0.2558 sp13:0.2380 sp14:0.2323
+k=9  cap=0.49426: sp8:0.4162 sp9:0.4017 sp10:0.3810 sp11:0.3354 sp12:0.3718 sp13:0.3576 sp14:0.4041
+k=10 cap=0.60440: sp9:0.5045 sp10:0.4939 sp11:0.4465 sp12:0.4646 sp13:0.4420 sp14:0.4798
+k=11 cap=0.72527: sp10:0.5815 sp11:0.5520 sp12:0.5675 sp13:0.5361 sp14:0.5663
+k=12 cap=0.85714: sp11:0.6241 sp12:0.6452 sp13:0.6182 sp14:0.6414
+Global max over span<=14 is at consec span for k=8..11, at span 12 for k=12. No band breaches cap.
