@@ -1,3 +1,48 @@
+## codex-2026-06-21 -- HYP-2715: miss-zeta layer budget for the remaining multi-block carrier-product gap
+
+User asked for a creative proof session and repo archaeology.  Pulled incoming
+mac-mini Thread B / HYP-2713/2714 first: the sector route is now localized to
+one moderate-span balanced multi-block carrier-product lemma with comfortable
+budget.  Mined Route E, S61/S63/S64, signed packet, and Thread B low-height
+material.  The useful old idea was HYP-2698's miss-zeta generated-context
+coordinate, combined with Route E's shared-slow-`x` carrier product.
+
+Added exact scout `04-computation/lrc14_multiblock_miss_zeta_layers_codex_20260621.py`
+with stored output `05-knowledge/results/lrc14_multiblock_miss_zeta_layers_codex_20260621.out`,
+and claimed/detail file
+`05-knowledge/hypotheses/HYP-2715-lrc14-anchor-carrier-product-budget.md`.
+
+Main correction: in the anchor-separated gauge
+`E={0} union_i (M_i+B_i)`, the shared-slow-`x` independent carrier product is
+not an upper bound.  Tested split rows all have `Product-p0<0`:
+two 4-blocks at offsets `14,30` give `-3495299/477209040`; `5+3` gives
+`-79935/26380816`; `3+3+2` gives `-51629953/57697542630`; five 2-blocks gives
+`-2447628624709/93106921650624`.  So the false proof shape is
+`p0<=ProductCover`.
+
+Replacement target:
+
+```text
+|p0(E)-Product(E)| <= cap_k - Product(E),
+Product-p0 = sum_R (-1)^|R| (z_prod(R)-z_actual(R)).
+```
+
+Here `z(R)=Pr[R is contained in the missed set]` is the miss-zeta coordinate.
+The exact ratios `|Product-p0|/(cap_k-Product)` in the scout are small
+(`0.0023` to `0.0488`), and the large unsigned residual layers `|R|=2,3,4`
+cancel strongly; e.g. the moderate two-4-block row has signed layers
+`-0.0633,+0.1242,-0.0801` and total error `-0.00732`.  Thus the next analytic
+lemma should preserve alternating residual-size signs, not use pointwise
+residual dominance or a raw absolute `64`-coordinate discrepancy.  This is the
+same "change basis before scalarizing" lesson as HYP-2708, now applied to the
+HYP-2714 final gap.
+
+Tournament Analysis: vertices are split-row proof obligations, not runners.
+Pairwise observable is larger `cap-product` slack, then smaller product error.
+Switch/gauge is miss-zeta residual masks before scalar cover.  The scout
+tournament is transitive with score histogram `{0:1,...,5:1}` and zero directed
+3-cycles.
+
 ## mac-mini-2026-06-20-S8 -- LRC(14) sector-route ASSEMBLED: 4 regimes CLOSED, gap localized to ONE comfortable-budget lemma (moderate-span multi-block) -- HYP-2713/2714
 User: long overnight push toward an LRC(14) proof; push/pull often; integrate incoming as major avenues. Convergent with kps-S23 + opus-S7 (Thread A) + codex (Route E). Pulled/pushed ~8x.
 **consec is the GLOBAL max of measS7** (HYP-2713a: 0/4000 random gcd-1 shapes span<=100 exceed it, k=8,9,10) ⟹ sector route = [consec global max] + [measS7(consec_k)<=cap_k tabulated].
