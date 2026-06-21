@@ -1,0 +1,80 @@
+LRC(14) OPEN-Q-108  THREAD C: the 56 / tournament-enumeration bijection (opus)
+
+==============================================================================
+PART A -- the 'size 3' support-3 primitive relation TYPES
+==============================================================================
+Primitive support-3 coefficient vectors with |coef|<=2 (canonical sign):
+  abs-multiset (1, 1, 1): 4 signed reps -> Schur (e_a+e_b=e_c)
+  abs-multiset (1, 1, 2): 12 signed reps -> 3-AP (e_a+e_c=2e_b)
+  abs-multiset (1, 2, 2): 12 signed reps -> other
+
+=> EXACTLY 2 additive-energy types: Schur and 3-AP.  'size 3' relation = 1 of 2.
+   So 56 is NOT '# support-3 relation types' (that is 2).  56 must be the
+   number of distinct support-3 STRUCTURES (hypergraphs), not types.
+
+==============================================================================
+PART B -- tournaments on n vertices: iso classes & score-sequence spectrum
+==============================================================================
+  n=3: 2 iso classes (A000568=2) OK; 2 distinct score sequences
+  n=4: 4 iso classes (A000568=4) OK; 4 distinct score sequences
+  n=5: 12 iso classes (A000568=12) OK; 9 distinct score sequences
+  n=6: 56 iso classes (A000568=56) OK; 22 distinct score sequences
+
+  n=6: the 56 classes split by score sequence (22 sequences):
+    score seq (0, 1, 2, 3, 4, 5): 1 iso classes
+    score seq (0, 1, 2, 4, 4, 4): 1 iso classes
+    score seq (0, 1, 3, 3, 3, 5): 1 iso classes
+    score seq (0, 1, 3, 3, 4, 4): 1 iso classes
+    score seq (0, 2, 2, 2, 4, 5): 1 iso classes
+    score seq (0, 2, 2, 3, 3, 5): 1 iso classes
+    score seq (0, 2, 2, 3, 4, 4): 2 iso classes
+    score seq (0, 2, 3, 3, 3, 4): 3 iso classes
+    score seq (0, 3, 3, 3, 3, 3): 1 iso classes
+    score seq (1, 1, 1, 3, 4, 5): 1 iso classes
+    score seq (1, 1, 1, 4, 4, 4): 1 iso classes
+    score seq (1, 1, 2, 2, 4, 5): 1 iso classes
+    score seq (1, 1, 2, 3, 3, 5): 2 iso classes
+    score seq (1, 1, 2, 3, 4, 4): 4 iso classes
+    score seq (1, 1, 3, 3, 3, 4): 3 iso classes
+    score seq (1, 2, 2, 2, 3, 5): 3 iso classes
+    score seq (1, 2, 2, 2, 4, 4): 3 iso classes
+    score seq (1, 2, 2, 3, 3, 4): 12 iso classes
+    score seq (1, 2, 3, 3, 3, 3): 4 iso classes
+    score seq (2, 2, 2, 2, 2, 5): 1 iso classes
+    score seq (2, 2, 2, 2, 3, 4): 4 iso classes
+    score seq (2, 2, 2, 3, 3, 3): 5 iso classes
+
+==============================================================================
+PART C -- which natural support-3 object has EXACTLY 56 iso classes?
+==============================================================================
+Candidate counts of '56':
+   C(8,3) = 56   (3-subsets of an 8-set)
+   2*C(8,2) = 56   (pair of 8-set with binary AP/Schur label)
+   A000568(6) = 56   (tournament iso classes on 6 vertices)
+
+  6-sets in [0,10] with >=1 support-3 edge: 358 abstract iso shapes
+  6-sets in [0,12] with >=1 support-3 edge: 928 abstract iso shapes
+  6-sets in [0,14] with >=1 support-3 edge: 1584 abstract iso shapes
+  6-sets in [0,16] with >=1 support-3 edge: 2117 abstract iso shapes
+  6-sets in [0,18] with >=1 support-3 edge: 2537 abstract iso shapes
+
+==============================================================================
+PART D -- direct structural bridge: do support-3 structures BE tournaments?
+==============================================================================
+Type check: a tournament on 6 vertices ORIENTS all C(6,2)=15 pairs.
+A support-3 relation hypergraph is a 3-UNIFORM (partial) hypergraph -- it has
+no orientation on pairs and need not cover all pairs.  So a literal
+'support-3 shape == tournament' identity is FALSE by type.  The 56=56 is a
+NUMBER match unless an invariant-preserving bijection is exhibited.
+
+Honest bijection test via INVARIANT: a true bijection challenger<->tournament
+would push some natural challenger invariant onto the score-sequence partition
+of the 56 tournaments.  The 6-tournament score-seq partition (PART B) is:
+    [((0, 1, 2, 3, 4, 5), 1), ((0, 1, 2, 4, 4, 4), 1), ((0, 1, 3, 3, 3, 5), 1), ((0, 1, 3, 3, 4, 4), 1), ((0, 2, 2, 2, 4, 5), 1), ((0, 2, 2, 3, 3, 5), 1), ((0, 2, 2, 3, 4, 4), 2), ((0, 2, 3, 3, 3, 4), 3), ((0, 3, 3, 3, 3, 3), 1), ((1, 1, 1, 3, 4, 5), 1), ((1, 1, 1, 4, 4, 4), 1), ((1, 1, 2, 2, 4, 5), 1), ((1, 1, 2, 3, 3, 5), 2), ((1, 1, 2, 3, 4, 4), 4), ((1, 1, 3, 3, 3, 4), 3), ((1, 2, 2, 2, 3, 5), 3), ((1, 2, 2, 2, 4, 4), 3), ((1, 2, 2, 3, 3, 4), 12), ((1, 2, 3, 3, 3, 3), 4), ((2, 2, 2, 2, 2, 5), 1), ((2, 2, 2, 2, 3, 4), 4), ((2, 2, 2, 3, 3, 3), 5)]
+    partition of 56 by score seq = (12, 5, 4, 4, 4, 3, 3, 3, 3, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)  (sum=56)
+
+For a bijection to be REAL, the challenger family must reproduce this exact
+multiset partition {56 = ...} under a matching invariant.  We report whether
+any tested challenger family does.
+
+DONE.

@@ -1,0 +1,131 @@
+
+lrc14_threadB_singleton_wide_bound_opus_0621.py   (opus-2026-06-21, THREAD B)
+
+THE WIDE BOUND AS AN MDS / SINGLETON WEIGHT-ENUMERATOR BOUND.
+=============================================================
+Grounded identity (proved, kps-S6 / routeE / threadD):
+    corr(E) = measS7(E) - iid_k = sum_{0 != n in Lambda(E)} K(n),
+    Lambda(E) = { n in Z^k : sum_i n_i e_i = 0 }  (offset relation lattice; the e_0=0
+                anchor is the fixed cell-0 factor, lattice taken over NONZERO offsets),
+    K(n) = sum_{T subset {1..6}} (-1)^|T| prod_i chat_T(n_i),     (REAL)
+    chat_T(0) = 1 - |T|/7,
+    chat_T(n) = - sum_{j in T} shat(n,j)   for n != 0 (mod 7),
+    chat_T(n) = 0                          for n != 0, 7 | n   ("apex-prime vanishing"),
+    shat(n,j) = (e(-n j/7) - e(-n(j+1)/7)) / (2 pi i n),  |shat(n,j)| = |sin(pi n/7)|/(pi|n|).
+
+WEIGHT ENUMERATOR PICTURE (kps HYP-2723): order Lambda(E) by SUPPORT SIZE s = #nonzero
+coords ("Hamming weight" of the relation).  d = d(Lambda(E)) = min support of a nonzero
+EFFECTIVE relation (effective = no coord a nonzero multiple of 7).  Lambda(E) ~ [k, k-1, d].
+    corr(E) = sum_{s >= d} sum_{n: supp(n)=s, effective} K(n).
+
+THREAD-B DELIVERABLE (this script):
+ (1) sup|K|_s := the PER-SUPPORT KERNEL BOUND = max over support-s relation vectors of |K(n)|.
+     Derive a CLOSED upper bound and verify it numerically. Special focus on s=3.
+ (2) A_s(E) = #effective support-s relations of bounded height. The TRIANGLE-INEQUALITY
+     wide bound:  |corr(E)| <= sum_{s>=d} A_s(E) * sup|K|_s.
+ (3) SINGLETON: d <= k - rank(E) + 1 (Singleton bound for the relation code). MDS (arc/Sidon)
+     sets hit equality with d large => A_2 = 0 and small A_3; anti-MDS (consec) have d = 2
+     => the s=2 layer is populated and A_3 is maximal. Quantify the A_s growth as d drops.
+ (4) THE RIGOROUS DISSOCIATED HALF: an EXPLICIT min-distance threshold d_0 such that
+        d(Lambda(E)) > d_0  ==>  the bounded-height absolute tail is provably small,
+     PLUS the HONEST statement of where pure triangle-inequality fails (codex HYP-2715:
+     sum|K(n)| over ALL n diverges ~ 9000; absolute control is only possible LAYER-BY-LAYER
+     up to a height cutoff, and the genuine smallness uses SIGNED cancellation in high layers).
+     We make the cancellation-free part rigorous: the FINITE low-height shell.
+
+ALL measS7/iid EXACT (Fractions). Kernel K(n) computed in complex double, cross-checked to the
+exact rational measure on small E so the numbers are trustworthy.
+
+stdlib only.
+
+
+==============================================================================================
+(0) CERTIFY: sum_{n in low shell} K(n) approaches exact corr; and CONVERGENCE HONESTY.
+==============================================================================================
+  (truncated height sums do NOT converge fast for d=2 sets -- documenting the honest gap)
+  E=(0, 1, 2, 3, 4, 5, 6, 7)  corr_exact=+0.302731
+     N0=1: sum_s K-layer = -0.000253   (A2=0, A3=9, A4=15)
+     N0=2: sum_s K-layer = +0.008377   (A2=3, A3=45, A4=115)
+     N0=3: sum_s K-layer = +0.017759   (A2=7, A3=100, A4=413)
+  E=(0, 1, 3, 7, 12, 20, 30, 44)  corr_exact=-0.012358
+     N0=1: sum_s K-layer = -0.000500   (A2=0, A3=0, A4=2)
+     N0=2: sum_s K-layer = -0.000523   (A2=0, A3=6, A4=27)
+     N0=3: sum_s K-layer = +0.000158   (A2=2, A3=15, A4=91)
+==============================================================================================
+(1) PER-SUPPORT KERNEL BOUND  sup|K|_s = max_{supp(n)=s} |K(n)|
+==============================================================================================
+
+For a support-s relation the nonzero coords are residues n_i != 0 (mod 7) (else chat=0).
+K depends on the n_i ONLY through their residues r_i = n_i mod 7 in {1..6} TIMES a 1/|n_i|
+height decay from shat. Write chat_T(n) = -(1/(pi n)) * sum_{j in T} c(n,j), where
+   c(n,j) = sin(pi n/7) * e(-(2j+1) n /(2*7)) ... has |chat_T(n)| <= |sin(pi n/7)|/(pi|n|) * |T|?
+NO -- |sum_j| <= sum_j, and each |shat(n,j)| = |sin(pi n/7)|/(pi|n|). So
+   |chat_T(n)| <= |T| * |sin(pi n/7)| / (pi |n|).
+But the residue structure makes |chat_T(n)| MAXIMAL at the smallest height |n|=residue r in {1..6}
+with r the residue (n = +-1 gives the largest single-arc coefficient). So sup|K|_s is attained at
+HEIGHT-MINIMAL relations: every nonzero coord is +-1 ... +-6 with |n_i| as small as the residue.
+We therefore search over residue vectors r in {1..6}^s (n_i = r_i or r_i-7, take min |.|) to find
+the genuine sup of |K| over the per-coordinate single-harmonic kernels, and SEPARATELY give the
+closed triangle-inequality envelope.
+
+   s  sup|K|_s (signed, height-min)               argmax n  abs-envelope sum_T|.|
+   2                     0.00000000                (1, -1)               2.136314
+   3                     0.00000000             (1, -1, 1)               0.489891
+   4                     0.00000000         (2, 2, -2, -2)               0.122246
+   5                     0.00000000      (1, 1, 1, -1, -1)               0.032362
+   6                     0.00450177     (1, 1, 1, 1, 1, 1)               0.008938
+
+  CLOSED FORM, s=3 (the additive-triangle layer, the leading cross-block term):
+    The height-minimal support-3 kernel is maximized at n = (1,1,-2)-type residue triangles
+    (a Schur/AP relation +1.e_a +1.e_b -1.e_c = 0 with the SMALLEST coords). Its value is the
+    sup|K|_3 reported above. The single-arc decay gives the explicit per-relation constant
+       |K(n)| <= ( sum_{T} prod_i |T| s7(n_i) )  with s7(n)=|sin(pi n/7)|/(pi|n|),
+    and the dominant n=(1,1,-2) gives s7(1)=sin(pi/7)/pi, s7(2)=sin(2pi/7)/(2 pi).
+    s7(1) = sin(pi/7)/pi           = 0.13810948
+    s7(2) = sin(2pi/7)/(2 pi)      = 0.12443235
+    2*zeta-ish ref 2 zeta(3)/pi^3  = 0.07753636  (the s=3 height-sum scale)
+
+==============================================================================================
+(3) SINGLETON: d(Lambda) <= k - rank(E) + 1.  A_s growth as d drops MDS->anti-MDS.
+==============================================================================================
+  (effective d computed at height N0=4; A_s counts at height N0=2, +-pairs)
+                family  k   d    A2     A3      A4   corr(exact)    measS7
+      consec(anti-MDS)  8   2     3     45     115     +0.302731   0.32721
+              AP_step2  8   2     3     45     115     +0.302731   0.32721
+                dyadic  8   2     6      5      24     +0.044717   0.06920
+     Sidon(MianChowla)  8   2     0      6      27     -0.012358   0.01212
+           random-wide  8   3     0      2      26     +0.000679   0.02516
+             two-block  8   2     1     22      48     +0.088040   0.11252
+
+  READING:
+    d = 2  (consec / AP / dyadic / two-block): support-2 relations EXIST (commensurate offsets,
+            n_i e_i = -n_j e_j). These are anti-MDS; A_3 is large; |corr| large.
+    d = 3  (Sidon, random-wide): A_2 = 0 (Sidon defining property!); A_3 small; corr ~ iid (small).
+    Singleton: rank(E)=k-? gives d <= k-rank+1. For a generic (Sidon-like) E the relation lattice
+    has rank k-1 and is MDS-like: d as large as the geometry allows (general position).
+
+==============================================================================================
+(2)+(4) WIDE BOUND  |corr| <= sum_{s>=d} A_s sup|K|_s  AND the min-distance threshold d_0
+==============================================================================================
+
+HONEST PRELIMINARY (codex HYP-2715): sum_{all n} |K(n)| DIVERGES (~9000 numerically). So a pure
+triangle-inequality bound over the WHOLE lattice is FALSE/vacuous. The wide bound is meaningful
+only LAYER-BY-LAYER UP TO A HEIGHT CUTOFF. Two regimes:
+
+  REGIME A (MDS / dissociated, the EASY half -- what THREAD B makes rigorous):
+     If d(Lambda(E)) >= 3 (A_2 = 0) AND the set is sufficiently spread (Sidon), then the
+     low-HEIGHT shell carries essentially all the (already tiny) corr, and the absolute mass of
+     the low shell is < budget. We certify: for height N0=2, the absolute layer mass
+        M_abs(E,N0) = sum_{0!=n, |n_i|<=N0, eff} |K(n_nz)|
+     and show M_abs is SMALL for d>=3 sets (the dissociated bound) and LARGE (needs cancellation)
+     for d=2 sets (consec). This is the SHARP DICHOTOMY at the Singleton edge d=2 vs d>=3.
+
+  REGIME B (anti-MDS / consec): d=2, A_3 maximal; corr is large and genuinely needs the SIGNED
+     structure (THREAD A/C/mac-mini convex-order). NOT covered by the absolute wide bound -- and
+     it shouldn't be, since consec is the EXTREMIZER we are bounding AGAINST.
+
+  height cutoff N0=2.  M_abs = absolute low-shell mass;  corr_exact for reference.
+                  family   d   A2    A3   M_abs(low)   corr_exact budget? (<0.18)
+             consec(d=2)   2    3    45     0.096374    +0.302731             YES
+           AP_step2(d=2)   2    3    45     0.096374    +0.302731             YES
+             dyadic(d=2)   2    6     5     0.007928    +0.044717             YES

@@ -1,0 +1,13 @@
+THM-534 moment-LP duals as DELSARTE certificates (Krawtchouk-nonnegative):
+  k=8       (deg4): g=['1', '0', '0', '1/10', '0', '0', '1']
+       Krawtchouk coeffs c=['1/16', '0', '1/40', '0', '3/80', '0', '0']
+       g>=1[t=0]:True  Delsarte(all c>=0):True  even-only:True
+  k=9,10    (deg3): g=['1', '5/18', '0', '0', '1/9', '1/6', '0']
+       Krawtchouk coeffs c=['1/12', '1/72', '1/36', '1/48', '0', '0', '0']
+       g>=1[t=0]:True  Delsarte(all c>=0):True  even-only:False
+  k=11,12,13(deg2): g=['1', '1/2', '1/6', '0', '0', '1/6', '1/2']
+       Krawtchouk coeffs c=['1/8', '1/24', '1/24', '0', '0', '0', '0']
+       g>=1[t=0]:True  Delsarte(all c>=0):True  even-only:False
+
+=> the LRC cover bound is a DELSARTE LP; the dual is Krawtchouk-nonnegative at every binding k.
+   Relation code Lambda(E)=Delsarte scheme (HYP-2723); even-band (HYP-2724) = k=8 even-only case.
