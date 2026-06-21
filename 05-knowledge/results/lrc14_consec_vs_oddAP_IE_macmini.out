@@ -1,0 +1,50 @@
+################################################################################
+# IE FINGERPRINT: consec vs equal-AE odd-AP
+################################################################################
+
+consec[1..8]:  p0 (reconstructed) = 169/490 = 0.344898
+  S_j (measure with >= the j named sectors empty):
+    S_0 =              1 = 1.000000
+    S_1 =       1641/980 = 1.674490
+    S_2 =       2013/980 = 2.054082
+    S_3 =        237/140 = 1.692857
+    S_4 =          25/28 = 0.892857
+    S_5 =         53/196 = 0.270408
+    S_6 =           1/28 = 0.035714
+    S_7 =              0 = 0.000000
+
+oddAP[1,3,..,15]:  p0 (reconstructed) = 97376/315315 = 0.308821
+  S_j (measure with >= the j named sectors empty):
+    S_0 =              1 = 1.000000
+    S_1 =    49376/28665 = 1.722519
+    S_2 =  208531/105105 = 1.984025
+    S_3 =      2894/1911 = 1.514390
+    S_4 =        323/429 = 0.752914
+    S_5 =          20/91 = 0.219780
+    S_6 =           1/35 = 0.028571
+    S_7 =              0 = 0.000000
+
+=== TERM-BY-TERM DIFFERENCE (consec - oddAP), signed contribution (-1)^j*dS_j ===
+  j=0: dS_j=+0.000000  (-1)^j dS_j=+0.000000  running p0-gap=+0.000000
+  j=1: dS_j=-0.048029  (-1)^j dS_j=+0.048029  running p0-gap=+0.048029
+  j=2: dS_j=+0.070056  (-1)^j dS_j=+0.070056  running p0-gap=+0.118085
+  j=3: dS_j=+0.178467  (-1)^j dS_j=-0.178467  running p0-gap=-0.060382
+  j=4: dS_j=+0.139943  (-1)^j dS_j=+0.139943  running p0-gap=+0.079562
+  j=5: dS_j=+0.050628  (-1)^j dS_j=-0.050628  running p0-gap=+0.028934
+  j=6: dS_j=+0.007143  (-1)^j dS_j=+0.007143  running p0-gap=+0.036077
+  j=7: dS_j=+0.000000  (-1)^j dS_j=+0.000000  running p0-gap=+0.036077
+
+  total p0 gap (consec - oddAP) = 0.036077
+  (sanity) p0_consec - p0_oddAP = +0.036077
+
+=== which j carries the consec advantage? ===
+  j=4: signed gap contribution = +0.139943
+  j=2: signed gap contribution = +0.070056
+  j=1: signed gap contribution = +0.048029
+  j=6: signed gap contribution = +0.007143
+  j=0: signed gap contribution = +0.000000
+  j=7: signed gap contribution = +0.000000
+  j=5: signed gap contribution = -0.050628
+  j=3: signed gap contribution = -0.178467
+
+DONE.

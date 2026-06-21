@@ -1,0 +1,36 @@
+=== joint rate probe ===
+f1=20: single-peel THM-546 bound (6/49)V(B u f1)/f2 = 1.3286
+f1=40: single-peel THM-546 bound (6/49)V(B u f1)/f2 = 0.8786
+f1=80: single-peel THM-546 bound (6/49)V(B u f1)/f2 = 0.6536
+f1=160: single-peel THM-546 bound (6/49)V(B u f1)/f2 = 0.5411
+f1=320: single-peel THM-546 bound (6/49)V(B u f1)/f2 = 0.4848
+
+=> a SINGLE THM-546 peel of f2 gives an O(1) error (~0.74), NOT O(1/f1).
+   The O(1/f1) rate is the EMPIRICAL convergence, not what one THM-546 peel proves.
+=== worst base exhaustive k=10 ratio 2/1 ===
+k=10 (base size 8, B subset 0..14), ratio 2/1: scanned 3432 bases
+  worst base = (0, 1, 2, 3, 4, 5, 6, 7)  p0_inf=16489/41160=0.40061  cap_10=0.60440  below cap:True
+  dense even AP [0,2,4,6,8,10,12,14] p0_inf = 0.40061
+=== block-pair case k=9 ===
+k=9 block-pair far={f1,f1+1,f2,f2+1}, B=[0,2,4,6,8]; cap_9=0.49426
+  f1=30 ratio=2/1 f2=60 E=[0, 2, 4, 6, 8, 30, 31, 60, 61] prim=True: p0=0.10525 <=cap:True
+  f1=30 ratio=3/2 f2=45 E=[0, 2, 4, 6, 8, 30, 31, 45, 46] prim=True: p0=0.08459 <=cap:True
+  f1=30 ratio=5/3 f2=50 E=[0, 2, 4, 6, 8, 30, 31, 50, 51] prim=True: p0=0.07583 <=cap:True
+  f1=30 ratio=7/4 f2=52 E=[0, 2, 4, 6, 8, 30, 31, 52, 53] prim=True: p0=0.09135 <=cap:True
+  f1=50 ratio=2/1 f2=100 E=[0, 2, 4, 6, 8, 50, 51, 100, 101] prim=True: p0=0.09849 <=cap:True
+  f1=50 ratio=3/2 f2=75 E=[0, 2, 4, 6, 8, 50, 51, 75, 76] prim=True: p0=0.08678 <=cap:True
+  f1=50 ratio=5/3 f2=83 E=[0, 2, 4, 6, 8, 50, 51, 83, 84] prim=True: p0=0.08938 <=cap:True
+  f1=50 ratio=7/4 f2=87 E=[0, 2, 4, 6, 8, 50, 51, 87, 88] prim=True: p0=0.08913 <=cap:True
+  f1=80 ratio=2/1 f2=160 E=[0, 2, 4, 6, 8, 80, 81, 160, 161] prim=True: p0=0.10474 <=cap:True
+  f1=80 ratio=3/2 f2=120 E=[0, 2, 4, 6, 8, 80, 81, 120, 121] prim=True: p0=0.07832 <=cap:True
+  f1=80 ratio=5/3 f2=133 E=[0, 2, 4, 6, 8, 80, 81, 133, 134] prim=True: p0=0.08857 <=cap:True
+  f1=80 ratio=7/4 f2=140 E=[0, 2, 4, 6, 8, 80, 81, 140, 141] prim=True: p0=0.09524 <=cap:True
+  f1=120 ratio=2/1 f2=240 E=[0, 2, 4, 6, 8, 120, 121, 240, 241] prim=True: p0=0.09670 <=cap:True
+  f1=120 ratio=3/2 f2=180 E=[0, 2, 4, 6, 8, 120, 121, 180, 181] prim=True: p0=0.08307 <=cap:True
+  f1=120 ratio=5/3 f2=200 E=[0, 2, 4, 6, 8, 120, 121, 200, 201] prim=True: p0=0.08844 <=cap:True
+  f1=120 ratio=7/4 f2=210 E=[0, 2, 4, 6, 8, 120, 121, 210, 211] prim=True: p0=0.08316 <=cap:True
+worst p0 = 0.10525 at (30, (2, 1), True)  (cap_9=0.49426)
+=== L3 k=8 exhaustive re-run ===
+k=8 max(E)<=15: 6434 primitive sets; consec meas(S7)=481/1470=0.32721; cap_8=0.38146
+  over_cap count = 0
+  best non-consec = (0, 2, 3, 4, 5, 6, 7, 8) val=0.27364 (<consec:True)

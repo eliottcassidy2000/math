@@ -1,0 +1,22 @@
+################################################################################
+# APEX D=0 LAW AUDIT (HYP-2733)
+################################################################################
+
+=== 1) law D=0 <=> 7|pq, EXTENDED box p,q in [1,60] ===
+  checked 2203 coprime pairs; violations of (D=0 <=> 7|pq): 0
+
+=== 2) random LARGE coprime pairs (p,q up to ~500) ===
+  random large pairs: violations = 0
+
+=== 3) D=0 <=> mu factorizes to uniform 1/49 (equivalence claim) ===
+  D=0 <=> factorizes mismatches: 0
+
+=== 4) asymmetric form: 7|p (7nmid q) => D=0 across q ===
+  confirmed 7|p => D=0 cases: 68
+
+=== 5) sup D*p and D*q over 7nmid pq, p,q<=50 (ledger: sup D*p=20/7) ===
+  sup D*p = 24/7 = 3.42857 at (3, 1)  (ledger 20/7=2.85714)
+  sup D*q = 24/7 = 3.42857 at (1, 3)  (ledger 12/7=1.71429)
+  D <= 14/p violations over p,q<=50: 0
+
+DONE.

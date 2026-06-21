@@ -1,0 +1,35 @@
+################################################################################
+# CLEAN-SCALAR HUNT for consec-max (THREAD D)
+################################################################################
+
+=== the honest-gap pair ===
+  consec[1..8]                     p0=0.34490 AE=344 DiffE=344 span=7
+  AP-d2[2..16]                     p0=0.34490 AE=344 DiffE=344 span=14
+  AP-d2 prim[1,3,5,7,9,11,13,15]   p0=0.30882 AE=344 DiffE=344 span=14
+
+  (dilation check) measS7([2,4..16]) == measS7([1..8])?  True
+
+=== building population (primitive 8-sets, min=1, max<=15) ===
+  population size = 3432
+
+=== concordance (Kendall-style) of each scalar with measS7 (1.0=perfect order) ===
+  DiffE    dir=+1  concordance=0.7162
+  AE       dir=+1  concordance=0.7162
+  Ndiff    dir=-1  concordance=0.6838
+  cov_m2   dir=+1  concordance=0.6440
+  cov_m1   dir=+1  concordance=0.6116
+  span     dir=-1  concordance=0.6079
+  rel3     dir=+1  concordance=0.5753
+  sumlog   dir=-1  concordance=0.5542
+  invE     dir=+1  concordance=0.5311
+  MultE    dir=+1  concordance=0.5276
+
+=== top of population by measS7 (is consec #1? what scalar predicts it?) ===
+  p0=0.34490 AE=344 DiffE=344 cov_m2=31.3398 rel3=376 span=7 E=(1, 2, 3, 4, 5, 6, 7, 8)
+  p0=0.32857 AE=320 DiffE=320 cov_m2=31.5138 rel3=388 span=8 E=(1, 2, 3, 4, 5, 6, 7, 9)
+  p0=0.30882 AE=344 DiffE=344 cov_m2=30.5753 rel3=172 span=14 E=(1, 3, 5, 7, 9, 11, 13, 15)
+  p0=0.29796 AE=260 DiffE=260 cov_m2=30.9667 rel3=324 span=13 E=(1, 2, 3, 4, 5, 6, 7, 14)
+  p0=0.28802 AE=264 DiffE=264 cov_m2=31.2582 rel3=324 span=12 E=(1, 2, 3, 4, 5, 6, 7, 13)
+  p0=0.28503 AE=300 DiffE=300 cov_m2=31.1218 rel3=348 span=9 E=(1, 2, 3, 4, 5, 6, 7, 10)
+
+DONE.

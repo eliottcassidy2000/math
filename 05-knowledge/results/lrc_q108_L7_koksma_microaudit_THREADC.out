@@ -1,0 +1,13 @@
+==============================================================================
+ADVERSARIAL micro-audit of the elementary D<=14/p Koksma proof steps
+==============================================================================
+  EQSP FAIL p/q=2/1: (0, [Fraction(0, 1)], {Fraction(0, 1)})
+
+  checked 229 ratios p/q in (1,43/20], q<=25
+  (A) equal-spacing failures        : 1
+  (C) Var(h_j)!=2/7 failures         : 0
+  (E) integral!=L/7 failures         : 0
+  (B) mu reconstruction mismatches  : 0
+  per-cell |mu-1/49|<=2/(7p) violations: 0
+  worst per-cell tightness ratio = 0.3571 at p/q=2/1 cell=(0,0)
+  (ratio<=1 means the per-cell bound 2/(7p) holds; ratio close to 1 means tight)

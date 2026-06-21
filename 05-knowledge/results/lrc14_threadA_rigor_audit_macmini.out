@@ -1,0 +1,64 @@
+=== (1) caps cap_k = min_{|P|=13-k} meas(G_P) ===
+  cap_8 = 2243/5880 = 0.38146  canon 2243/5880  [OK]
+  cap_9 = 1979/4004 = 0.49426  canon 1979/4004  [OK]
+  cap_10 = 55/91 = 0.60440  canon 55/91  [OK]
+  cap_11 = 66/91 = 0.72527  canon 66/91  [OK]
+  cap_12 = 6/7 = 0.85714  canon 6/7  [OK]
+  cap_13 = 1 = 1.00000  canon 1  [OK]
+
+=== (2/L3) consec argmax of meas(S7), small finite check ===
+  k=8 maxE=13: meas(S7(consec))=481/1470=0.32721  cap_8=0.38146  consec<=cap:True  beater:None
+  k=9 maxE=12: meas(S7(consec))=2447/5880=0.41616  cap_9=0.49426  consec<=cap:True  beater:None
+  k=10 maxE=12: meas(S7(consec))=8899/17640=0.50448  cap_10=0.60440  consec<=cap:True  beater:None
+
+=== (3) discrepancy D_{p,q}, bounds 14/p and 12/(7q) ===
+  p/q=2/1: D=10/7=1.42857  14/p=7.0000[True]  D*p=2.8571  D*q=1.4286  7|pq:False  D=0:False
+  p/q=3/2: D=6/7=0.85714  14/p=4.6667[True]  D*p=2.5714  D*q=1.7143  7|pq:False  D=0:False
+  p/q=4/3: D=11/21=0.52381  14/p=3.5000[True]  D*p=2.0952  D*q=1.5714  7|pq:False  D=0:False
+  p/q=5/3: D=12/35=0.34286  14/p=2.8000[True]  D*p=1.7143  D*q=1.0286  7|pq:False  D=0:False
+  p/q=5/4: D=9/35=0.25714  14/p=2.8000[True]  D*p=1.2857  D*q=1.0286  7|pq:False  D=0:False
+  p/q=7/4: D=0=0.00000  14/p=2.0000[True]  D*p=0.0000  D*q=0.0000  7|pq:True  D=0:True
+  p/q=7/6: D=0=0.00000  14/p=2.0000[True]  D*p=0.0000  D*q=0.0000  7|pq:True  D=0:True
+  p/q=8/5: D=1/14=0.07143  14/p=1.7500[True]  D*p=0.5714  D*q=0.3571  7|pq:False  D=0:False
+  p/q=9/5: D=32/315=0.10159  14/p=1.5556[True]  D*p=0.9143  D*q=0.5079  7|pq:False  D=0:False
+  p/q=15/7: D=0=0.00000  14/p=0.9333[True]  D*p=0.0000  D*q=0.0000  7|pq:True  D=0:True
+  p/q=28/25: D=0=0.00000  14/p=0.5000[True]  D*p=0.0000  D*q=0.0000  7|pq:True  D=0:True
+  p/q=7/5: D=0=0.00000  14/p=2.0000[True]  D*p=0.0000  D*q=0.0000  7|pq:True  D=0:True
+  p/q=6/5: D=2/21=0.09524  14/p=2.3333[True]  D*p=0.5714  D*q=0.4762  7|pq:False  D=0:False
+  p/q=8/7: D=0=0.00000  14/p=1.7500[True]  D*p=0.0000  D*q=0.0000  7|pq:True  D=0:True
+  violations of D<=14/p: 0
+  sup(D*p) over sample = 20/7=2.85714 (canon claim 20/7=2.85714)
+  sup(D*q) over sample = 12/7=1.71429 (canon claim 12/7=1.71429)
+
+=== (3b) exhaustive D<=14/p over all coprime 1<p/q<=43/20, q<=40 ===
+  tested 563 coprime ratios q<=40 in (1,43/20]; D<=14/p violations: 0
+  sup(D*p)=20/7=2.85714; sup(D*q)=12/7=1.71429
+
+=== (4) plateau P2(B) and resonance R(p/q)=p0_inf-P2, |R|<=D ===
+  k=8 B=[0, 2, 4, 6, 8, 10]: P2=863/10290=0.08387  cap_8=0.38146  margin cap-P2=0.29759
+     p/q=2/1: p0_inf=0.08895 R=0.00508 |R|<=D(1.4286):True p0_inf<=cap:True
+     p/q=3/2: p0_inf=0.08192 R=-0.00195 |R|<=D(0.8571):True p0_inf<=cap:True
+     p/q=4/3: p0_inf=0.08645 R=0.00258 |R|<=D(0.5238):True p0_inf<=cap:True
+     p/q=5/3: p0_inf=0.08458 R=0.00071 |R|<=D(0.3429):True p0_inf<=cap:True
+     p/q=5/4: p0_inf=0.08328 R=-0.00059 |R|<=D(0.2571):True p0_inf<=cap:True
+     p/q=7/4: p0_inf=0.08387 R=0.00000 |R|<=D(0.0000):True p0_inf<=cap:True
+     p/q=7/6: p0_inf=0.08387 R=0.00000 |R|<=D(0.0000):True p0_inf<=cap:True
+     worst |R| = 0.00508
+  k=9 B=[0, 2, 4, 6, 8, 10, 12]: P2=1268/5145=0.24645  cap_9=0.49426  margin cap-P2=0.24780
+     p/q=2/1: p0_inf=0.24660 R=0.00015 |R|<=D(1.4286):True p0_inf<=cap:True
+     p/q=3/2: p0_inf=0.24354 R=-0.00292 |R|<=D(0.8571):True p0_inf<=cap:True
+     p/q=4/3: p0_inf=0.24504 R=-0.00141 |R|<=D(0.5238):True p0_inf<=cap:True
+     p/q=5/3: p0_inf=0.24676 R=0.00030 |R|<=D(0.3429):True p0_inf<=cap:True
+     p/q=5/4: p0_inf=0.24558 R=-0.00087 |R|<=D(0.2571):True p0_inf<=cap:True
+     p/q=7/4: p0_inf=0.24645 R=0.00000 |R|<=D(0.0000):True p0_inf<=cap:True
+     p/q=7/6: p0_inf=0.24645 R=0.00000 |R|<=D(0.0000):True p0_inf<=cap:True
+     worst |R| = 0.00292
+  k=10 B=[0, 2, 4, 6, 8, 10, 12, 14]: P2=14368/36015=0.39894  cap_10=0.60440  margin cap-P2=0.20545
+     p/q=2/1: p0_inf=0.40061 R=0.00166 |R|<=D(1.4286):True p0_inf<=cap:True
+     p/q=3/2: p0_inf=0.39851 R=-0.00044 |R|<=D(0.8571):True p0_inf<=cap:True
+     p/q=4/3: p0_inf=0.39869 R=-0.00025 |R|<=D(0.5238):True p0_inf<=cap:True
+     p/q=5/3: p0_inf=0.39989 R=0.00094 |R|<=D(0.3429):True p0_inf<=cap:True
+     p/q=5/4: p0_inf=0.39881 R=-0.00013 |R|<=D(0.2571):True p0_inf<=cap:True
+     p/q=7/4: p0_inf=0.39894 R=0.00000 |R|<=D(0.0000):True p0_inf<=cap:True
+     p/q=7/6: p0_inf=0.39894 R=0.00000 |R|<=D(0.0000):True p0_inf<=cap:True
+     worst |R| = 0.00166

@@ -1,0 +1,12 @@
+==============================================================================
+Koksma constant audit: |Riemann-sum-error| <= Var(h_j)*(1/q) ?
+==============================================================================
+
+  checked 545 ratios; 49 cells each
+  Koksma |err| <= Var*(1/q) VIOLATIONS: 0  (0 == the Koksma step is valid as stated)
+  worst LHS/RHS ratio = 0.3571 at p/q=2/1 cell=(0,0)
+  (ratio<=1 => the proof's Koksma bound holds with constant 1/q; ratio<1 => slack)
+
+  Independent stress of 'equally-spaced Riemann sum error <= V/N' with random shifts:
+    random-shift equally-spaced violations: 0 (0 == general fact holds)
+    worst random-shift ratio = 0.3571
