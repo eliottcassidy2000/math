@@ -41,3 +41,22 @@ thousands of wide primitive k-sets (k=8..12), thinnest margin 0.12 (single-far).
 (p0 decreasing in #far) + the iterated-peel dichotomy localize everything to L7. Converges w/ codex HYP-2708
 (two-far live-depth = the r=2 instance), mac-mini HYP-2700 (Z/7-coloring), opus Thread-A (bandlimit).
 -> OPEN-Q-108, THM-546/547 (single-far), THM-557 (single-block), THM-531 (dilation, AP-only), MISTAKE-082.
+
+## L7 NARROWED (kps-S23): the gap is a BOUNDED ratio window, not an infinite regime
+The geometric chain L6 (separated) closes r=2 once `f_2/f_1 >= rho` (rho=2.15 at k=9). Near `f_2/f_1 ~ 1` the
+two far elements merge into a single cluster (THM-557). So the ACTUAL gap L7 is the **bounded window
+`f_2/f_1 in (1, 2.15)`**. Worst balanced r=2 (k=9, base [0,2,..,12]): max p0 = 0.285 (generic close ratio 28/25),
+resonant maxima 0.276/0.276/0.271 at ratios 2/1, 7/4, 7/6 -- all < cap_9=0.494 (**margin >= 0.21, comfortable**)
+and < the single-far sup 0.372. So L7's worst cases are comfortable; the missing piece is only the BOUND.
+
+**L7 = [finite resonance atlas] + [non-resonant bounded-ratio bound]:**
+- RESONANT: `f_2/f_1 = p/q` small-denom in (1,2.15) (5/4,4/3,7/5,3/2,5/3,7/4,2/1,...): {f_1,f_2} commensurable
+  (q f_2 = p f_1) => the set has a short relation => reduces (scale-normalize by the relation) to a BOUNDED
+  model => finite check. FINITE atlas.
+- NON-RESONANT: `f_2/f_1` irrational-ish in (1,2.15) => the joint orbit (frac(f_1 x),frac(f_2 x)) decorrelates;
+  with the ratio BOUNDED in (1,2.15) the relevant 2D ET-Koksma frequencies are bounded => an explicit (even
+  lossy) joint discrepancy constant suffices (margin 0.21).
+This converts L7 from "infinite two-free-scale regime" to a BOUNDED-window problem (finite resonance atlas +
+one bounded-ratio 2D discrepancy constant) -- the same shape as the single-far closure (finite window + comb
+bound), one dimension up. The r=2 case (codex HYP-2708) is the first instance; r>=3 separates pairwise into
+r-1 such windows. -> OPEN-Q-108, L7, codex HYP-2708.
