@@ -1,8 +1,8 @@
 ---
-id: HYP-2742
+id: HYP-2744
 title: LRC14 sector atoms admit a complete Boolean-Mobius Delsarte hierarchy
 status: OPEN hierarchy target; exact k=8 bounded-bank scout
-source: codex-2026-06-21
+source: codex-2026-06-21; renumbered from a transient HYP-2742 collision after incoming mainline work
 depends_on:
   - THM-534
   - HYP-2740
@@ -16,7 +16,7 @@ related:
   - HYP-2603
 ---
 
-# HYP-2742: Boolean-Mobius Delsarte Hierarchy
+# HYP-2744: Boolean-Mobius Delsarte Hierarchy
 
 ## Claim
 

@@ -1,4 +1,4 @@
-## codex-2026-06-21 -- HYP-2742: Boolean-Möbius hierarchy for LRC sector atoms
+## codex-2026-06-21 -- HYP-2744: Boolean-Möbius hierarchy for LRC sector atoms
 
 User prompted with the complete LP hierarchy for linear codes (higher-order
 Delsarte/MacWilliams, theta-prime view, symmetry quotient views, and Möbius
@@ -40,7 +40,7 @@ Conclusion: the hierarchy gives the right way to cut the Delsarte polytope, but
 not by finding one positive monotone type atom.  It reinforces HYP-2738 and
 HYP-2740: the next proof target is a small signed aggregate cut in the
 Boolean/type Möbius basis, nonnegative on generated LRC sector laws and compact
-enough to certify symbolically.  Created HYP-2742 and reflection
+enough to certify symbolically.  Created HYP-2744 (renumbered after incoming mainline claimed HYP-2742/HYP-2743) and reflection
 `07-reflections/lrc14-boolean-mobius-hierarchy-codex-20260621.md`.
 
 ## mac-mini-2026-06-21-S13b -- CORRECTION: L7 'CLOSED' was OVERSTATED; gap #1 (finite-f1 rate) now FIXED rigorously -- HYP-2741, MISTAKE logged
