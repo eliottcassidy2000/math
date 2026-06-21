@@ -1,0 +1,39 @@
+================================================================================================
+DOUBLET SYNTHESIS VERIFICATION (kind-pasteur kpswf9)
+================================================================================================
+
+cap_10 = 55/91 = 0.604396
+
+(1) CONSEC doublet consec_8 u {f,f+1}, k=10, tight end f=15..21:
+    f=15: p0=    641/1680=0.381548  (indep 0.381548)
+    f=16: p0=   1021/2499=0.408563  (indep 0.408563)
+    f=17: p0=    947/2205=0.429478  (indep 0.429478)
+    f=18: p0=     241/570=0.422807  (indep 0.422807)
+    f=19: p0=  4469/11172=0.400018  (indep 0.400018)
+    f=20: p0=    599/1470=0.407483  (indep 0.407483)
+    f=21: p0=   1301/2940=0.442517  (indep 0.442517)
+  consec-doublet sup over f>=15 = 1301/2940 = 0.442517 at f=21
+  cap - consec_sup = 6187/38220 = 0.161879  (THREAD A's 'binding' margin 0.16188)
+
+(2) DILATED-base maximizer {0,2,4,6,8,10,12,14,15,16}:
+    p0_fast      = 265/588 = 0.450680
+    p0_independent = 265/588 = 0.450680   match=True
+    is_genuine=True  primitive(full)=True  primitive(base)=False
+    cap - p0 = 1175/7644 = 0.153715
+    BEATS consec doublet by 0.008163; robust 0.16 FAILS (margin 0.15372); < cap holds
+
+(3) BROADER k=10 genuine-wide search (non-adjacent far pairs, far range [15,30],
+    all 8-element bases from [0,14] with 0, gcd-1 full set):
+    searched 3432 bases x 120 far pairs
+    BROADER max p0 = 154283/341040 = 0.452390  at (0, 2, 4, 6, 8, 10, 12, 14, 16, 29)
+    cap - max = 0.152006
+    beats 265/588? True   ( 265/588 = 0.450680 )
+    any p0 >= cap (LRC FAIL)? False  (0 configs)
+
+================================================================================================
+VERDICT:
+  consec-doublet sup (THM-564 family) k=10 : 0.442517  margin 0.16188 (>=0.16)
+  TRUE genuine-wide max k=10 (this search)  : 0.452390  margin 0.15201
+  robust margin >= 0.16 at k=10 ? False   (binding config (0, 2, 4, 6, 8, 10, 12, 14, 16, 29))
+  p0 < cap at k=10 (the LRC requirement)   ? True
+================================================================================================

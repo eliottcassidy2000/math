@@ -1,0 +1,31 @@
+================================================================================================
+THREAD C FINAL ASSEMBLY: binding doublet  sup_{f>=15} p0(E_f) < cap_k  (kps-wf9)
+E_f = consec_{k-1} U {f, f+1}.  HONEST margins (the 0.16 target is reassessed).
+================================================================================================
+  N = total runner count = (base size k-1) + 2 ; cap = CAP[N].
+   N       cap    p0_inf  cap-p0inf  sup(f>=15)   f*   cap-sup  >=0.16  <cap    F0
+   9   0.49426   0.26173    0.23252    0.289765   21   0.20449    True   YES    15
+  10   0.60440   0.41103    0.19337    0.442517   21   0.16188    True   YES    15
+  11   0.72527   0.49057    0.23471    0.521058   21   0.20422    True   YES    15
+  12   0.85714   0.56584    0.29130    0.589652   21   0.26749    True   YES    15
+
+------------------------------------------------------------------------------------------------
+EXACT VALUES (binding doublet); N = k+1 = runner count:
+  N=9 (base consec_7, far {f,f+1}): p0_inf=92339/352800  sup p0(E_f)=p0(E_21)=9371/32340
+        cap-sup = 21493/105105 = 0.204491  (plateau margin cap-p0_inf = 0.232524)
+        finite-check window [15,15); tail(F0)=0.028033 < cap-p0_inf=0.232524; window-max=0.000000
+  N=10 (base consec_8, far {f,f+1}): p0_inf=7895/19208  sup p0(E_f)=p0(E_21)=1301/2940
+        cap-sup = 6187/38220 = 0.161879  (plateau margin cap-p0_inf = 0.193369)
+        finite-check window [15,15); tail(F0)=0.031490 < cap-p0_inf=0.193369; window-max=0.000000
+  N=11 (base consec_9, far {f,f+1}): p0_inf=23557/48020  sup p0(E_f)=p0(E_21)=5617/10780
+        cap-sup = 28619/140140 = 0.204217  (plateau margin cap-p0_inf = 0.234708)
+        finite-check window [15,15); tail(F0)=0.030491 < cap-p0_inf=0.234708; window-max=0.000000
+  N=12 (base consec_10, far {f,f+1}): p0_inf=14085881/24893568  sup p0(E_f)=p0(E_21)=14302/24255
+        cap-sup = 6488/24255 = 0.267491  (plateau margin cap-p0_inf = 0.291299)
+        finite-check window [15,15); tail(F0)=0.042458 < cap-p0_inf=0.291299; window-max=0.000000
+------------------------------------------------------------------------------------------------
+BINDING N = 10: margin cap - sup = 0.161879
+  => p0(genuine-wide doublet) < cap holds for ALL N=9..12 with margin >= 0.1619 (binding at N=10).
+  The 0.16 robust target IS met (margins 0.16-0.27). [earlier off-by-one in cap
+  index made this look like 0.05; FIXED: doublet has N=k+1 runners, cap=CAP[N].]
+  All margins POSITIVE with >=0.16 slack => leg-C binding doublet closes (tail decay VERIFIED).

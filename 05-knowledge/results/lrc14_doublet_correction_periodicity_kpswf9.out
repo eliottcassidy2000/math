@@ -17,3 +17,17 @@ k=8
         => asymptotic sup p0(E_f) ~ p0_inf+max_cper = 0.262305; cap=0.381463; margin=+0.119157
 
 k=9
+  P=7*lcm=2940  p0_inf=7895/19208=0.411027
+  TEST1 f*c(f) exactly periodic? False  (worst 2nd-diff of f*p0 = 1692/71825=0.023557)
+        slope == P*p0_inf exactly? False  (#distinct slopes=2939)
+  TEST2 2nd-diff DECAY (window base_f, worst|2nd-diff|, base_f*worst):
+        f~15: |2nd-diff|=0.023557  f*that=0.3534
+        f~65: |2nd-diff|=0.012655  f*that=0.8226
+        f~115: |2nd-diff|=0.007715  f*that=0.8873
+        f~165: |2nd-diff|=0.006457  f*that=1.0655
+        f~215: |2nd-diff|=0.004692  f*that=1.0088
+        f~265: |2nd-diff|=0.002599  f*that=0.6888
+  TEST3 asymptotic periodic envelope of c(f): max=+0.000581 min=-0.000593
+        => asymptotic sup p0(E_f) ~ p0_inf+max_cper = 0.411608; cap=0.494256; margin=+0.082648
+
+k=10

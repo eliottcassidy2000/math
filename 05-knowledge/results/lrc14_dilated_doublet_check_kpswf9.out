@@ -1,0 +1,24 @@
+============================================================================================
+DILATED-base DOUBLET analysis (k=10), kind-pasteur kpswf9
+============================================================================================
+cap_10 = 55/91 = 0.604396
+
+dilated base = (0, 2, 4, 6, 8, 10, 12, 14) = 2*consec_8  (gcd 2)
+k=10 maximizer E = (0, 2, 4, 6, 8, 10, 12, 14, 15, 16)
+  p0(E) = 265/588 = 0.450680; cap-p0 = 0.153715
+  Under x->x/2 scale-invariance, far {15,16} -> speeds {7.5, 8.0} (7.5 NON-INTEGER):
+  => the dilated doublet is NOT a dilated SINGLE-far config; THM-563's dilated
+     single-far extension does NOT close it. It needs THM-564 (P/R) with base=2*consec_8,
+     OR the frozen-law route (HYP-2806), applied to the DILATED base.
+
+CHECK 2: dilated doublet (2*consec_8) u {f,f+1}, f=15..40:
+  sup p0 over f=15..40 = 265/588 = 0.450680 at f=15
+  cap - sup = 0.153715  (< cap: True)
+  tight end f=15: p0=0.450680 (the maximizer)
+
+CHECK 3: true binding genuine-wide margin at k=10:
+  dilated tight doublet (0, 2, 4, 6, 8, 10, 12, 14, 15, 16): margin 0.153715
+  split-pair (0, 2, 4, 6, 8, 10, 12, 14, 16, 29): p0=0.452390, margin 0.152006
+  WORST (binding) margin = 0.152006
+  => robust 0.16 FAILS; < cap holds (margin > 0)
+============================================================================================

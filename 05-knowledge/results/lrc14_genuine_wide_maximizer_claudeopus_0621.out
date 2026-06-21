@@ -1,3 +1,5 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_genuine_wide_maximizer_claudeopus_0621.py:12: SyntaxWarning: invalid escape sequence '\{'
+  span(primitive(E\{e})) > 14  (removing any single element keeps it wide; so it is
 ==============================================================================
 GENUINE-WIDE EXACT MAXIMIZER + CLOSED-FORM HUNT  (LRC14 leg C)
 claude-opus 2026-06-21

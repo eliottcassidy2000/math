@@ -1,0 +1,49 @@
+================================================================================================
+LRC(14) GENUINE-WIDE DOUBLET -- SYNTHESIS BINDING MARGINS (kind-pasteur kpswf9)
+Independent verification of the three threads. Two integrators (p0_fast + from-scratch
+p0_independent) agree EXACTLY on every config tested.
+================================================================================================
+
+cap_k (runner-count index): k=8 2243/5880=0.381463, k=9 1979/4004=0.494256, k=10 55/91=0.604396,
+                            k=11 66/91=0.725275, k=12 6/7=0.857143
+
+--- (A) CONSEC-DOUBLET family  E_M = consec_{k-2} u {M,M+1}  (THM-564 / Thread A) ---
+  k=10 sup over M>=15 = 1301/2940 = 0.442517 at M=21;  cap - sup = 6187/38220 = 0.161879 (>= 0.16)
+  THM-564 P/R closure: P+R==g EXACT (verified all M); period-max(P) EXACT (THM-563 sawtooth);
+  R=M*(d2-d_inf)=O(1/M) VERIFIED. Window [15,M*=55] worst p0=0.442517 <= cap-0.16=0.444396. CLOSES.
+  => THM-564's "margin 0.16188" is CORRECT *for the consec-doublet family only*.
+
+--- (B) TRUE genuine-wide maximizer (dilated base + possibly SPLIT far pair) ---
+  Independent broad search: all (k-2)-subset bases of [0,14] containing 0 (NO base-primitivity
+  filter) x far PAIRS {fa,fb} 15<=fa<fb<=FHI, filter genuine(FULL primitive, >=2 far,
+  not single-perturbation-reducible).
+
+   k | true max p0                    ~          cap-max    >=0.16?  <cap?  binding config
+   8 | 82169/366520        = 0.224187   0.157276   NO       YES    (0,2,5,8,11,14,17,20)        [SPLIT pair, FHI=30]
+   9 | 321/980             = 0.327551   0.166705   yes      YES    (0,4,6,8,10,12,14,15,16)     [dilated base, adj doublet, FHI=26]
+  10 | 154283/341040       = 0.452390   0.152006   NO       YES    (0,2,4,6,8,10,12,14,16,29)   [dilated base + SPLIT pair, FHI=30]  <== BINDING
+  11 | 1943/3528           = 0.550737   0.174538   yes      YES    (0,2,4,6,8,9,10,12,14,16,18)  [FHI=22, non-binding]
+  12 | 238949/388080       = 0.615721   0.241422   yes      YES    (0,2,4,6,8,9,10,11,12,14,16,18) [FHI=22, non-binding]
+
+  WORST (binding) margin = 0.152006 at k=10.  p0 < cap at EVERY k (0 cap-violations).
+
+--- KEY STRUCTURAL FACTS ---
+  * The genuine-wide maximizer is NOT the consec doublet (Thread A), NOT even the tight dilated
+    doublet {15,16} (Threads B/C, 265/588=0.450680); a SPLIT far pair {16,29} on the dilated base
+    2*consec_8 edges it to 154283/341040=0.452390 (margin 0.152006). Two integrators confirm.
+  * The dilated doublet's far pair {15,16} maps under x->x/2 to speeds {7.5, 8.0} (7.5 NON-integer),
+    so THM-563's dilated SINGLE-far extension does NOT close it -- it needs THM-564 (P/R) or the
+    frozen-law (HYP-2806) applied to the DILATED base, OR (for split pairs) a genuine 2-far analysis.
+  * The robust 0.16 target FAILS at k=8 (0.157) and k=10 (0.152), not only k=10.
+  * Concurrent opus "general check PASSES all bounded bases" is consistent: its OWN output reports
+    k=10 worst margin +0.153715 but labels PASS because it checks only < cap (not < cap-0.16).
+
+--- VERDICT ---
+  * p0(genuine-wide) < cap_k : VERIFIED at every k, worst margin 0.152006 (k=10). This is the
+    actual LRC(14) requirement, and it HOLDS with a definite positive margin.
+  * p0(genuine-wide) <= cap_k - 0.16 : REFUTED (k=8 and k=10).
+  * The consec doublet is NOT the genuine-wide maximizer => closing the doublet alone does NOT
+    close the whole genuine-wide leg; the bound must be shown for ALL genuine-wide configs
+    (dilated bases + split far pairs), which is a finite per-base check, not yet exhaustively run
+    with the correct primitive(FULL E) filter and FHI bound across all k.
+================================================================================================

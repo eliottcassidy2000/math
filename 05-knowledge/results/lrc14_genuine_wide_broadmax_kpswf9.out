@@ -1,0 +1,17 @@
+====================================================================================================
+BROADENED genuine-wide maximizer: split far PAIRS, dilated bases  (kind-pasteur kpswf9)
+====================================================================================================
+    k     broad max p0         ~       cap    margin  >=.16  <cap |  adj-doublet max         ~ adj margin  binding-config
+    8     82169/366520  0.224187  0.381463  0.157276  False  True |   348487/1681680  0.207226   0.174237  (0, 2, 5, 8, 11, 14, 17, 20)  [SPLIT pair]
+    9          321/980  0.327551  0.494256  0.166705   True  True |          321/980  0.327551   0.166705  (0, 4, 6, 8, 10, 12, 14, 15, 16)  [adjacent]
+   10    154283/341040  0.452390  0.604396  0.152006  False  True |          265/588  0.450680   0.153715  (0, 2, 4, 6, 8, 10, 12, 14, 16, 29)  [SPLIT pair]
+   11        1943/3528  0.550737  0.725275  0.174538   True  True |       5617/10780  0.521058   0.204217  (0, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18)  [SPLIT pair]
+   12    238949/388080  0.615721  0.857143  0.241422   True  True |          347/588  0.590136   0.267007  (0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18)  [SPLIT pair]
+
+  p0 < cap at EVERY k (LRC requirement), 0 cap-violations? True
+  WORST robust margin = 0.152006 at k=10  (< 0.16, but > 0 => < cap holds)
+
+  KEY: at k=10 the binding config is a DILATED base + (possibly SPLIT) far pair.
+  The adjacent doublet (THM-564 family) is NOT the genuine-wide max; the true
+  binding margin is even tighter than the adjacent-doublet 0.1537.
+====================================================================================================

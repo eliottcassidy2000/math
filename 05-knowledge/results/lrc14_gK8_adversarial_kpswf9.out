@@ -1,0 +1,30 @@
+============================================================================================
+ADVERSARIAL gK8 stress-test  L_yK8 = 10q0+q3+10q6 <= 10*cap_k ?  (kps-wf9)
+============================================================================================
+
+[1] SHARP genuine-wide maximizers (HYP-2805 dilated doublets, margin<0.16 cases):
+  k=8 E=(0, 10, 11, 12, 13, 14, 15, 16)
+     p0=0.207226 (cap-p0=+0.174237)  L_yK8=2.345167  10cap=3.814626  slack=+1.469459  OK
+  k=9 E=(0, 4, 6, 8, 10, 12, 14, 15, 16)
+     p0=0.327551 (cap-p0=+0.166705)  L_yK8=3.467772  10cap=4.942557  slack=+1.474785  OK
+  k=10 E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 16)
+     p0=0.450680 (cap-p0=+0.153715)  L_yK8=4.685119  10cap=6.043956  slack=+1.358837  OK
+  k=12 E=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14, 20, 21)
+     p0=0.590136 (cap-p0=+0.267007)  L_yK8=6.012245  10cap=8.571429  slack=+2.559184  OK
+
+[2] BROAD genuine-wide search: maximize L_yK8 (adversarial). VIOLATION if slack<0.
+  k=8: max L_yK8 = 1.703265 at E=(0, 2, 4, 13, 15, 17, 19, 21)
+        10cap=3.814626  min slack=+2.111361  (ALL OK); checked 5614 genuine-wide
+  k=9: max L_yK8 = 3.150939 at E=(0, 3, 5, 7, 9, 11, 13, 15, 19)
+        10cap=4.942557  min slack=+1.791618  (ALL OK); checked 5833 genuine-wide
+  k=10: max L_yK8 = 3.788288 at E=(0, 4, 6, 7, 8, 10, 12, 14, 16, 19)
+        10cap=6.043956  min slack=+2.255668  (ALL OK); checked 5884 genuine-wide
+
+[3] doublet L_yK8 as f->inf (consec base): does L_yK8 stay < 10cap at all f?
+  k=9: max L_yK8 over sampled f = 4.596042 at f=21  10cap=4.942557  slack=+0.346515
+  k=10: max L_yK8 over sampled f = 5.365955 at f=21  10cap=6.043956  slack=+0.678001
+
+============================================================================================
+If slack >= 0 EVERYWHERE (esp. on the sharp dilated maximizers where the 0.16 margin
+fails): gK8 holds as a candidate wide-closure certificate with the noted slack. Any
+negative slack REFUTES gK8 and the closure must use the doublet P/R route (THM-564).
