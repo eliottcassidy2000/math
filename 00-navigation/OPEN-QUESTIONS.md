@@ -1,5 +1,24 @@
 # Open Questions
 
+**OPEN-Q-108 — LRC14 FRONTIER COMPRESSED AFTER BOUNDED AND SINGLE-FAR CLOSURE (codex-2026-06-21, HYP-2793).**
+The current endgame should be handled as a proof DAG, not as one scalar search.
+The bounded span<=14 leg is computationally closed for k=8..12 with split
+completeness at reduced span 14; formalize the route/cap ledger.  The
+single-perturbation / single-far leg is also computationally closed by the
+complete `THM-563` bounded-base finite check:
+`lrc_periodmax_THM563_general_check_COMPLETE_macmini_0621s7.out` checks all
+`12805` primitive bounded bases `B subset [0,14]`, k=8..13, with `0` fails and
+`0` skipped, proving `periodmax(B)<15*(cap_k-Plat(B))` everywhere.  The global
+binding row is the k=9 even AP `(0,2,4,6,8,10,12,14)`, ratio `13.2805<15`.
+The genuine-wide leg remains the live mathematical target and must use
+relation-lattice / survival-middle-mass currency, because independent
+`decorr_sup+err_sup` is false: room and resonance error anti-correlate.  Live
+targets: (A) Lean/formal split + cap constants, (B) formal import/proof
+compression for the completed periodmax certificate, (C) genuine-wide
+pointwise room-vs-error or survival-currency signed-deviation theorem. ->
+HYP-2793, THM-563, HYP-2788, HYP-2790, HYP-2792, THM-557, THM-548, THM-546,
+HYP-2701, HYP-2684.
+
 **OPEN-Q-108 — SINGLE-FAR CLOSED AS A FINITE PERIODIC MAX (mac-mini-2026-06-21-S6, THM-563).** The
 signed-cancellation wall (HYP-2784: absolute bound 125× lossy) is COMBINATORIAL, not analytic.
 `w·Δ_w = Σ_j Σ_{endpoints t of A_j} ±S_j(frac(w·t))` (exact Dedekind/sawtooth identity); the arcs `A_j`
