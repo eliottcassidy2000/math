@@ -5,6 +5,29 @@ ROUTE-3 deliverable: did the HS (1987) reflection/centering lemma port to the pe
 - **OBSTRUCTION (sharp, the real result): consec is NOT a per-cell maximiser.** W_a(consec) is BEATEN by rivals on individual cells at k=8,9,10 (e.g. k=8 cell a=1: (0,2,3,4,5,6,7,8) gets W_1=0.0629 > consec 0.0442). Every cell-beater has total dmeasS7 < 0: consec TRADES single cells to win the SUM. So no reflection lemma acting on a SINGLE W_a can prove the wall -- the extremality is irreducibly AGGREGATE (matches the conductance-bottleneck / windows-harmonic-sum picture of HYP-2760/2761). The HS proof of circle coverage is per-config-coupling on the WHOLE circle; the LRC analogue would need a coupling across all 6 cells simultaneously, not per cell.
 - **Geometric finding:** the full-coverage component containing the cell midpoint y=0 is ONE-SIDED with reach exactly 1/(7 max|e|) (the fastest clock first breaks coverage). y=0 is generically a COVERAGE BOUNDARY, not an interior centre -- so the HS "interval more likely covered near the centre" hypothesis literally does not apply pointwise; the centre is the worst point, not the best.
 STATUS: ROUTE 3 = PARTIAL. The reflection SYMMETRY and the symmetrisation MONOTONICITY both port cleanly (provable); but per-cell maximality is FALSE, which is the precise obstruction to a per-cell reflection proof of LAYER 3. Reinforces that LAYER 3 is genuinely aggregate. ~1 push.
+## kind-pasteur-2026-06-21-S24 -- LRC(14) WIDE bound verified CLOSED: decorrelated <= Q(k-1) + tiny error; the SOTA-paper reframing
+
+Dispatch: long session, maximize progress to a proof; trawl many leads; push hypotheses often; explore web +
+incoming agent work in real time.
+
+**THE BIG ADVANCE -- the wide bound (OPEN-Q-108) verified CLOSED.** The decorrelated far-coverage is a CLOSED
+FORM (moment dual / LP, THM-534 = arXiv:2010.02271): `p0_decorr(B u {r far}) = sum_t P_t^{(r)} p_t(B)`,
+`P_t^{(r)}`=incl-excl surjection prob. FULL CHECK over ALL r, bounded bases: GLOBAL MAX at **r=1 on consec =
+Q(k-1)** (0.197/0.362/0.448/0.531/0.602, 0 over cap). So **p0_decorr(any wide E) <= Q(k-1) < cap** (PROVEN finite
+check; proves base-size domination). SIGNED error `p0-p0_decorr` over commensurable ratios+bases **<= 0.012 (9%
+of margin!)** -- the moment dual is the RIGHT baseline (vs 0.059 single-block, MISTAKE-082). So `p0 <= Q(k-1) +
+0.012 << cap`: WIDE BOUND VERIFIED CLOSED, proof reduced to a LOOSE error bound (10x-lossy ET-Koksma suffices).
+Error PROVEN: single-far (comb THM-546), separated (chain L6); commensurable <=0.012 (atlas).
+
+**HYPS/LEADS pushed:** HYP-2757 (L7 = finite atlas of 1-D (q,p)-torus-curve coverages = codex small-|R|<=2 cone,
+UNIFIED). HYP-2758 (MAJOR: arXiv:2604.23906 -- LRC(14) open BECAUSE 14=2*7 COMPOSITE; polynomial method needs
+k+1 PRIME (Fermat), fails for 14; repo's consec-max = the analytic canonical certificate, domination = their
+sieve-to-canonical). Web map: meas(S7)<=cap = LP/moment-dual; resonance = Tao's higher-rank Bohr sets;
+decorrelated product = finite-n Riesz product (arXiv:2511.16636).
+
+**NET:** meas(S7)<=cap = [FINITE: consec-max via FKG (mac-mini, Lean)] + [WIDE: decorrelated <= Q(k-1) + tiny
+error]. All hugs Q(k-1) = the consec plateau. 15+ pushes; all leads shared. Files: lrc_L7_{decorrelated_closed_
+form,resonant_atlas}_kps, lrc_web_literature_map_kps-S24; HYP-2757/2758.
 
 ## mac-mini-2026-06-21-S20 -- harvested the creative-lead trawl: conductance invariant, windows extremality, AP-unification CORRECTION; drill workflow running
 Harvested the 7-angle creative trawl (wiarhvx3i) + launched a 5-route LAYER-3 drill (wkkl2szpf). NEW: HYP-2760..2763 + a reflection correction + ROUTE-4 obstruction + backlog catalog.
