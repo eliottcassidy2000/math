@@ -1,3 +1,30 @@
+## Eliott Cassidy update: LRC(14) Sector Route Assembled
+
+The latest push (SHA 585dad) by **Eliott Cassidy** (mac-mini-S8) represents a major structural milestone in the LRC(14) proof, assembling the final **Sector Route** and localizing the remaining gap to a single analytic lemma with a comfortable margin.
+
+### **1. The Four Closed Regimes**
+The global proof that the consecutive block `consec_k` maximizes the coverage measure ($\text{meas } S_7$) is now partitioned into four distinct regimes, all of which are considered **closed**:
+
+*   **Bounded Small Span (≤14):** Confirmed via finite exact checks. For $k=12$ and $k=13$, the i.i.d. surjection rate already exceeds the cap, meaning no "wide" regime danger exists.
+*   **Single Far Point:** This is the *universal wide supremum*. Since the coverage measure is monotone decreasing in the number of far points, a single far point is the worst-case scenario. It is closed by a "comb bound" ($|\Delta_w| \le 2c_1(E')/7w$), providing a finite verification window ($W^* \le 48$) with margins $\ge 0.12$.
+*   **Multiple Far Points / Fully Dissociated:** These cases are strictly easier than the single-far point, as coverage decreases with each added far point, eventually bottoming at the i.i.d. surjection rate which is much lower than the Sector Cap ($cap_k$).
+*   **Consecutive Block Tabulation:** The consecutive block itself is verified to satisfy the Sector Cap ($cap_k$) for all relevant $k$, with a remaining slack of 0.023.
+
+### **2. The Comfortable-Budget Multi-Block Lemma**
+The remaining gap in the proof has been localized to the **Moderate-Span Balanced** regime (gcd-1 shapes of span between ~15 and a few hundred with no large gaps). 
+
+*   **Localization:** In this regime, the single-far point "peeling" is too weak, and the number of configurations is too large to enumerate. The proof relies on the **Carrier-Product Bound**: well-separated sub-clusters decouple their colorings, and because "splitting strictly costs cover" (codex's Route E), the single block dominates.
+*   **The Lemma:** The final proof obligation is to make the finite-separation carrier error rigorous using a multi-dimensional Weyl / Erdős–Turán estimate. 
+*   **The "Comfortable Budget":** Crucially, the worst moderate-span shape sampled covers only 0.197 against a cap of 0.381, leaving a **slack of 0.184**. This wide margin means the remaining lemma does not need to be sharp; a relatively crude bound will suffice to close the proof.
+
+### **3. HYP-2713 & HYP-2714**
+These hypotheses formalize the assembly of the sector route:
+*   **HYP-2713 (Sector Route Assembly):** Bridges the local and global domains by identifying the consecutive block as the global extremizer for coverage measure across all True-Wide regimes.
+*   **HYP-2714 (Multi-Block Carrier Margin):** Targets the localized gap in the moderate-span balanced regime. It asserts that the carrier error for multiple sub-clusters is contained within the available 0.18 margin, ensuring the consecutive block remains the global maximum.
+
+### **Status: Finish Line in Sight**
+While the Lonely Runner Conjecture at $n=14$ is not yet fully proved, the problem has been reduced from an opaque, irreducible "wall" to a single analytic lemma. The project has moved from a research frontier to a localized "finish line," where the remaining task is to rigorously bound the multi-block error within a generous margin.
+
 ## mac-mini update: HYP-2713 Single-Far Closer & Consec Global-Max
 
 The latest push (SHA 46b0) by **Eliott Cassidy** (mac-mini-S8) provides the structural closer for the "Single-Far" branch of the True-Wide proof and formalizes the **consecutive global maximum** for coverage measure. This update assembles the final route for the LRC(14) certificate.
@@ -12,7 +39,7 @@ The latest push (SHA 46b0) by **Eliott Cassidy** (mac-mini-S8) provides the stru
     - **Proof Structure:** It proves that the "comfortable" margins (0.13–0.18) between these limits and the **Sector Cap** ($cap_k$) remove the need for a tight floor gate analysis for single-far rows. The finite window for verification ($W^*$) is reduced to approximately 30 configurations due to $O(1/w)$ error decay from the transfer operator's non-zero modes.
 
 - **Consecutive Global-Max (Sector Route Assembly):**
-    - The "sector route assembly" constructs the final proof by identifying the **consecutive block** as the global extremizer for coverage probability across all True-Wide regimes.
+    - The "sector route assembly" constructs the final proof by identifying the **consecutive block** as the global extremizer for coverage measure across all True-Wide regimes.
     - **Bridging Domains:** It bridges the local discrete checks (for $k=8$ and tight prefixes) with the global analytic bounds. By showing that 0/4000 random gcd-1 shapes (span $\le 100$) exceed the consecutive block's coverage, it establishes a "consec-max" baseline.
     - **Final Route:** The proof is assembled into two stages:
         1. **Consecutive Global Max:** Prove the consecutive block is the supremum for all True-Wide shapes.
