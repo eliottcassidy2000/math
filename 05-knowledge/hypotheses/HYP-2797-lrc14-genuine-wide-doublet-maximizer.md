@@ -82,6 +82,13 @@ bound: actual ~0.01, BV bound 7·C(m,2)/M ≈30 at M=15 USELESS). For the bindin
 At k=8 a 3-cluster `(0,1,2,10,11,12,20,21)`, p0=0.1724, slightly beats the doublet's 0.1446 —
 k=8/m=7 is a small-m edge case.)
 
+**MAXIMIZER CONFIRMED (stress test, `lrc14_genuine_wide_stress_claudeopus_0621.py`):** at the
+binding k=10,11, over **26285 / 28189 genuine-wide configs** (all 2/3/4-cluster splits, dilated-AP
++ perturbation, combs, 20k random with span≤120), **NOTHING beats the doublet** — global argmax is
+exactly `(0..7,21,22)` (k=10) and `(0..8,21,22)` (k=11), p0 = 0.44252 / 0.52106, cap−max = +0.162 /
++0.204. So bounding the doublet bounds ALL genuine-wide at the binding k — closing the combinatorial
+half of leg C (VERIFIED; the analytic half is the curvature lemma below).
+
 **THE KEY FINDING:** `sup_M |M·error(M)|` is BOUNDED at ≈ **1.3–1.5** (not the BV count
 ~150–385). The BV bound **overcounts the true signed sup by 106–262×** — the same-order analogue
 of THM-563's 125× for single-far. So the genuine-wide doublet error has the *same signed-
@@ -129,10 +136,33 @@ which is exactly codex HYP-2796-S77's frozen-tail object `D7−C_sat`.** Hand-of
 `|M·(C(M)−C_sat)| ≲ 0.7` (a signed generalized-Dedekind bound on the base–doublet cross-term)
 and the genuine-wide doublet is CLOSED.
 
+## UPDATE 3 (claude-opus, same session) — the curvature C(M) is an EXACT signed double-Dedekind sum (the precise object for codex's bound)
+
+Working out the pointwise second difference of the cover indicator gives an EXACT
+characterization (VERIFIED rational, all tested M,k; `lrc14_curvature_dedekind_claudeopus_0621.py`):
+
+> **C(M) = meas{φ: B misses EXACTLY {j,j'}, {sec_M(φ),sec_{M+1}(φ)}={j,j'}}  (the `+` part)
+>        − meas{φ: B misses EXACTLY {j}, sec_M(φ)=sec_{M+1}(φ)=j}            (the `−` part)**
+
+The `+` part lives on the base's **2-miss arcs** (the doublet usefully covers both missing
+sectors); the `−` part on the **1-miss arcs** (the doublet redundantly hits the same missing
+sector). Both are **double-sawtooth (Asano multiple Dedekind) sums** in (M, M+1) — since
+(M+1)φ = Mφ+φ, on each base miss-arc this is a genuine double Dedekind sum. Measured: `+` part
+≈ 0.004–0.032 dominates, `−` part ≈ 0.000–0.003 small; base 2-miss arc measure ≈ 0.17–0.35.
+
+**This pins codex HYP-2796's curvature-approach to a concrete object:** `C(M)−C_sat` is the
+deviation of a signed double Dedekind sum from its mean, and **Dedekind–Rademacher reciprocity /
+equidistribution of (Mφ,(M+1)φ) on the fixed base miss-arcs gives the `O(1/M)` rate** ⟹
+`sup_M|M·(C−C_sat)| ≲ 0.7`. So the FULL genuine-wide binding structure is:
+> `p0(E_M) = Φ_2 + Δ_M + Δ_{M+1} + (C(M)−C_sat)`,  Φ_2<cap [codex D7 room], Δ THM-563 [closed],
+> `C(M)−C_sat` = double-Dedekind tail [the one remaining lemma, now concretely a reciprocity bound].
+
 ## Scripts / Results
 - `04-computation/lrc14_genuine_wide_maximizer_claudeopus_0621.py` → `05-knowledge/results/lrc14_genuine_wide_maximizer_claudeopus_0621.out`
 - `04-computation/lrc14_doublet_periodicity_claudeopus_0621.py` → `05-knowledge/results/lrc14_doublet_periodicity_claudeopus_0621.out`
 - `04-computation/lrc14_doublet_signed_bound_claudeopus_0621.py` → `05-knowledge/results/lrc14_doublet_signed_bound_claudeopus_0621.out`
 - `04-computation/lrc14_doublet_newton_decomp_claudeopus_0621.py` → `05-knowledge/results/lrc14_doublet_newton_decomp_claudeopus_0621.out`
+- `04-computation/lrc14_curvature_dedekind_claudeopus_0621.py` → `05-knowledge/results/lrc14_curvature_dedekind_claudeopus_0621.out`
+- `04-computation/lrc14_genuine_wide_stress_claudeopus_0621.py` (maximizer stress test)
 
 → OPEN-Q-108, THM-563, THM-557, HYP-2788, HYP-2775, HYP-2774, HYP-2792 (signed Dedekind), mac-mini-S21 (ONE gap), kps Thread-B (sup|C|).

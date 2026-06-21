@@ -1,0 +1,32 @@
+==============================================================================
+EXACT curvature C(M) = signed double-Dedekind sum  (claude-opus 2026-06-21)
+C(M) = [2-miss arcs: doublet covers both] - [1-miss arcs: doublet redundant]
+==============================================================================
+
+k=8  B=consec(0, 1, 2, 3, 4, 5)
+  base 1-miss arc measure = 0.26190  2-miss arc measure = 0.35238
+   M= 15: C_direct=+0.026786  C_via_arcs=+0.026786 (+0.02857 / -0.00179)  match=True
+   M= 21: C_direct=+0.025417  C_via_arcs=+0.025417 (+0.02604 / -0.00062)  match=True
+   M= 40: C_direct=+0.024710  C_via_arcs=+0.024710 (+0.02532 / -0.00061)  match=True
+   M= 91: C_direct=+0.031497  C_via_arcs=+0.031497 (+0.03196 / -0.00046)  match=True
+  => characterization VERIFIED exact
+
+k=9  B=consec(0, 1, 2, 3, 4, 5, 6)
+  base 1-miss arc measure = 0.34286  2-miss arc measure = 0.19286
+   M= 15: C_direct=+0.005357  C_via_arcs=+0.005357 (+0.00833 / -0.00298)  match=True
+   M= 21: C_direct=+0.019481  C_via_arcs=+0.019481 (+0.01979 / -0.00031)  match=True
+   M= 40: C_direct=+0.010482  C_via_arcs=+0.010482 (+0.01161 / -0.00113)  match=True
+   M= 91: C_direct=+0.017911  C_via_arcs=+0.017911 (+0.01950 / -0.00159)  match=True
+  => characterization VERIFIED exact
+
+k=10  B=consec(0, 1, 2, 3, 4, 5, 6, 7)
+  base 1-miss arc measure = 0.24422  2-miss arc measure = 0.17007
+   M= 15: C_direct=+0.004082  C_via_arcs=+0.004082 (+0.00408 / -0.00000)  match=True
+   M= 21: C_direct=+0.028015  C_via_arcs=+0.028015 (+0.03080 / -0.00278)  match=True
+   M= 40: C_direct=+0.011162  C_via_arcs=+0.011162 (+0.01290 / -0.00174)  match=True
+   M= 91: C_direct=+0.017279  C_via_arcs=+0.017279 (+0.01905 / -0.00177)  match=True
+  => characterization VERIFIED exact
+
+==============================================================================
+If VERIFIED: codex's curvature-approach bound = bound a SIGNED double Dedekind sum
+on the base 2-miss/1-miss arcs; Dedekind-Rademacher reciprocity gives the O(1/M) rate.
