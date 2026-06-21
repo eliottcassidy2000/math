@@ -96,6 +96,18 @@ Summing the `49` cells:
   (`p* <= 68` for `k = 8..12`, binding `k = 10`); the finite window `p <= p*` is the exact atlas
   (exhaustively `0` violations, k=8..12).
 
+## Formalization status (Lean, mathlib-free)
+
+`04-computation/lean/TournamentH7/TournamentH7/LRCL7Discrepancy.lean` (builds, sorry-free):
+- `cell_apex_necessity`, `matrix_apex_necessity` (`Ddef c S = 0 -> 7 | S` for any occupancy
+  matrix) -- the easy half of the apex law HYP-2733 -- depend on **only `[propext, Quot.sound]`**
+  (the standard Lean axioms; no `native_decide`, no `sorry`).
+- Concrete `native_decide` instances verify the apex law and marginal balance on real atlas
+  ratios: `(q,p)=(7,8)` apex-aligned `Ddef=0`; `(2,3)` `Ddef=252`; `(1,2)` `Ddef=140`; all
+  row/col sums `= p*q`.
+The analytic bound `D <= 14/p` (Koksma) and the finite atlas await a mathlib Koksma + a
+`native_decide` atlas sweep; the apex-prime integer law is now machine-checked.
+
 ## How this closes L7
 
 `L7 = ` [finite atlas `p <= p*`, exact `p0_inf < cap`] `+` [tail `p > p*`: this Theorem, elementary]
