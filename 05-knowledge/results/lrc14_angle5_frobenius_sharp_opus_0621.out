@@ -1,0 +1,15 @@
+##############################################################################
+# ANGLE 5 SHARPENED: FROBENIUS-MINIMALITY MECHANISM
+##############################################################################
+
+consec(8): measS7=481/1470  velgap_frob=-1
+
+H1: measS7 distribution by velocity-gap Frobenius number (span<=16):
+   velgap_frob=-1: n=859  max measS7=0.327211  min=0.064502
+   velgap_frob=1: n=2  max measS7=0.226697  min=0.203571
+
+   consec measS7=0.327211; best measS7 among velgap_frob!=-1: 0.226697
+   => Frobenius-minimal (=-1) NECESSARY for being max? True
+
+   shapes with velgap_frob=-1: 859 ; their measS7 range [0.064502,0.327211]
+   (so velgap_frob=-1 is NECESSARY but NOT SUFFICIENT -- the wall is finer)

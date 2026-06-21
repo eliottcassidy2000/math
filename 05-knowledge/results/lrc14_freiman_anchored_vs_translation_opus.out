@@ -1,0 +1,42 @@
+##############################################################################
+# ANCHORED LEG-PROFILE vs measS7 -- is leg profile sufficient?
+##############################################################################
+
+======================================================================
+k=8 span<= 13: 256 shapes  (consec legs=(0, 1, 2, 3, 4, 5, 6))
+  leg-profile classes: 64  (constant measS7: 1, varying: 63)
+  => leg profile SUFFICIENT statistic? False
+  worst within-class measS7 spread = 0.164007, leg profile (0, 1, 2, 3, 4, 5, 6), 7 shapes:
+      [0, 1, 2, 3, 4, 5, 6, 7]  measS7=0.327211  2nd-profile=(-1, -1, -1, -1, -1, -1, 7)
+      [0, 1, 2, 3, 4, 5, 6, 8]  measS7=0.208333  2nd-profile=(-1, -1, -1, -1, -1, -1, 8)
+      [0, 1, 2, 3, 4, 5, 6, 12]  measS7=0.202381  2nd-profile=(-1, -1, -1, -1, -1, -1, 12)
+      [0, 1, 2, 3, 4, 5, 6, 10]  measS7=0.190476  2nd-profile=(-1, -1, -1, -1, -1, -1, 10)
+  consec leg-sum=21; leg-sums in stratum range 21..63; consec minimal-sum? True
+  among leg-sum==21 shapes (7): measS7-max = consec (=0.327211)
+  GLOBAL measS7-max = consec
+
+======================================================================
+k=9 span<= 13: 432 shapes  (consec legs=(0, 1, 2, 3, 4, 5, 6))
+  leg-profile classes: 63  (constant measS7: 6, varying: 57)
+  => leg profile SUFFICIENT statistic? False
+  worst within-class measS7 spread = 0.206499, leg profile (0, 1, 2, 3, 4, 5, 6), 21 shapes:
+      [0, 1, 2, 3, 4, 5, 6, 7, 8]  measS7=0.416156  2nd-profile=(-1, -1, -1, -1, -1, 7, 8)
+      [0, 1, 2, 3, 4, 5, 6, 7, 9]  measS7=0.401701  2nd-profile=(-1, -1, -1, -1, -1, 7, 9)
+      [0, 1, 2, 3, 4, 5, 6, 7, 10]  measS7=0.380952  2nd-profile=(-1, -1, -1, -1, -1, 7, 10)
+      [0, 1, 2, 3, 4, 5, 6, 7, 12]  measS7=0.371769  2nd-profile=(-1, -1, -1, -1, -1, 7, 12)
+  consec leg-sum=21; leg-sums in stratum range 21..56; consec minimal-sum? True
+  among leg-sum==21 shapes (21): measS7-max = consec (=0.416156)
+  GLOBAL measS7-max = consec
+
+======================================================================
+k=10 span<= 14: 832 shapes  (consec legs=(0, 1, 2, 3, 4, 5, 6))
+  leg-profile classes: 63  (constant measS7: 6, varying: 57)
+  => leg profile SUFFICIENT statistic? False
+  worst within-class measS7 spread = 0.237712, leg profile (0, 1, 2, 3, 4, 5, 6), 56 shapes:
+      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  measS7=0.504478  2nd-profile=(-1, -1, -1, -1, 7, 8, 9)
+      [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]  measS7=0.493878  2nd-profile=(-1, -1, -1, -1, 7, 8, 10)
+      [0, 1, 2, 3, 4, 5, 6, 7, 9, 10]  measS7=0.478798  2nd-profile=(-1, -1, -1, -1, 7, 9, 10)
+      [0, 1, 2, 3, 4, 5, 6, 7, 8, 12]  measS7=0.464626  2nd-profile=(-1, -1, -1, -1, 7, 8, 12)
+  consec leg-sum=21; leg-sums in stratum range 21..56; consec minimal-sum? True
+  among leg-sum==21 shapes (56): measS7-max = consec (=0.504478)
+  GLOBAL measS7-max = consec
