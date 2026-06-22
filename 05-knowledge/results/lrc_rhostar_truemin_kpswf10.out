@@ -1,0 +1,22 @@
+==============================================================================
+THM-527 Thread A: TRUE integer min rho*(P,E)  (min lives at bounded spread)
+==============================================================================
+
+--- k=7 (|P|=6, Wmax=20) cumulative min rho* by spread<=W ---
+    spread<= 6: min rho* = 0.079454 = 1193/15015
+    spread<= 7: min rho* = 0.074197 = 5199/70070
+    spread<= 8: min rho* = 0.068127 = 14321/210210
+    spread<= 9: min rho* = 0.068127 = 14321/210210
+    spread<=10: min rho* = 0.063781 = 221/3465
+    spread<=11: min rho* = 0.060303 = 10141/168168
+    spread<=12: min rho* = 0.060303 = 10141/168168
+    spread<=13: min rho* = 0.060303 = 10141/168168
+    spread<=14: min rho* = 0.060303 = 10141/168168
+    spread<=15: min rho* = 0.060303 = 10141/168168
+    spread<=16: min rho* = 0.058469 = 301/5148
+    spread<=17: min rho* = 0.058469 = 301/5148
+    spread<=18: min rho* = 0.049119 = 1408/28665
+    spread<=19: min rho* = 0.049119 = 1408/28665
+    spread<=20: min rho* = 0.049119 = 1408/28665
+  => k=7 GLOBAL min rho* = 1408/28665 = 0.049119
+     argmin E=[0, 4, 5, 9, 13, 14, 18] (spread 18, relation min-support d=2)  P=[1, 4, 5, 7, 9, 13]

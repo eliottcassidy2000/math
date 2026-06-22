@@ -1,0 +1,43 @@
+==============================================================================
+THM-527 Thread A: rho* = 0 PROBE (the decisive due-diligence)
+==============================================================================
+
+E = [0, 3, 4, 5, 7, 8, 9, 10, 11]  (k=9)
+P = [1, 2, 3, 12]  (|P|=4)
+
+(a) EXACT rho* = 0  (ZERO)
+    # GOOD cells inside G_P: 0
+
+(b) max over x in G_P of maxgap{e_i x} = 43/154 = 0.279221
+    attained at x = 43/154 = 0.279221
+    2/7 = 2/7 = 0.285714
+    => on ALL of G_P the cluster max-gap is <= 2/7: YES (rho*=0 confirmed)
+    phases at that x: ['0', '1/14', '9/77', '18/77', '61/154', '79/154', '61/77', '129/154', '21/22']
+
+(c) Is this shape an admissible S3 co-offset set?
+    spread = 11; needs Vmax > 13 + spread = 24 for u_i>13.
+    |P|+k = 4+9 = 13 (must be 13 for a 13-set).
+    => |S| = 13 == 13 OK
+
+(d) nearby shapes (perturb one offset) -- is rho*=0 isolated or a basin?
+    perturbations tested: 6; also rho*=0: 0
+
+(e) census: how common is rho*=0 over k=9 shapes (spread<=14) x worst P?
+    rho*=0 cases: 38 / 9009 (k=9, spread<=14, 3 worst P)
+      E=[0, 1, 2, 3, 4, 5, 6, 7, 9] P=[1, 2, 3, 13]
+      E=[0, 1, 2, 3, 4, 5, 6, 8, 9] P=[1, 2, 3, 13]
+      E=[0, 1, 2, 3, 4, 5, 6, 8, 10] P=[1, 2, 3, 13]
+      E=[0, 1, 2, 3, 4, 5, 6, 8, 11] P=[1, 2, 3, 12]
+      E=[0, 1, 2, 3, 4, 5, 6, 8, 11] P=[1, 2, 3, 13]
+      E=[0, 1, 2, 3, 4, 5, 7, 8, 9] P=[1, 2, 3, 13]
+
+==============================================================================
+VERDICT (honest):
+  rho*=0 shapes EXIST.  THM-527 part D's 'no rho*=0' claim is FALSE.
+  Meaning: for such (P,E) the Vmax-criterion-C route yields NO witness;
+  the compactness-floor program (inf rho* > 0) DOES NOT hold as posed.
+  LRC(14) for these S must come from a DIFFERENT certificate (another
+  v != Vmax, or these shapes are excluded as primitive covering sets).
+==============================================================================
+
+DONE.

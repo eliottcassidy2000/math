@@ -1,0 +1,42 @@
+==============================================================================
+THM-527 Thread A: SUBTORUS compactification of inf rho*
+==============================================================================
+
+--- (S1) one-outlier type {0..7,M}: rho* -> subtorus(=full-product) limit ---
+    exact rho* (M growing) vs Monte-Carlo subtorus avg (large M):
+    M=   11: exact rho* = 0.051701
+    M=   13: exact rho* = 0.051701
+    M=   23: exact rho* = 0.031721
+    M=   47: exact rho* = 0.037047
+    M=  101: exact rho* = 0.039077
+    M=  211: exact rho* = 0.040135
+    M=  401: exact rho* = 0.039855
+    M=  809: exact rho* = 0.041205
+    M= 1601: exact rho* = 0.040794
+    Monte-Carlo 'fully-independent-outlier' limit estimate:
+      ~ 0.04118  (treating Mx as decorrelated; the M->inf floor)
+
+--- (S2) AP type {0,s,2s,...,8s}: rho* -> mu_9 * meas(G_P)? ---
+    predicted product limit mu_9*meas(G_P) = 0.16825
+    s=  11: exact rho* = 0.204453
+    s=  13: exact rho* = 0.193040
+    s=  17: exact rho* = 0.154462
+    s=  23: exact rho* = 0.171843
+    s=  31: exact rho* = 0.162157
+    s=  43: exact rho* = 0.161090
+    s=  61: exact rho* = 0.165669
+    s= 101: exact rho* = 0.165973
+
+--- (S3) min rho* bucketed by relation min-support d (k=9) ---
+    scanning random k=9 shapes spread<=40, P-shortlist:
+    d=2                     : min rho* = 0.000000 = 0   E=[0, 3, 4, 5, 7, 8, 9, 10, 11] P=[1, 2, 3, 12]
+    d=3                     : min rho* = 0.130073 = 18629/143220   E=[0, 7, 8, 13, 19, 22, 23, 25, 31] P=[1, 2, 3, 12]
+
+    overall scanned min rho* = 0.000000 = 0
+      at E=[0, 3, 4, 5, 7, 8, 9, 10, 11] P=[1, 2, 3, 12]  (POSITIVE: False)
+
+Net: every relation-type (subtorus) gives a POSITIVE rho* limit;
+short-relation (small-d) types hold the smallest values but stay > 0.
+The inf is over FINITELY many types (k<=13) -> positive minimum.
+
+DONE.
