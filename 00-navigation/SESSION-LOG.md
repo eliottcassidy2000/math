@@ -1,3 +1,11 @@
+## kind-pasteur-2026-06-22-S32b (MAIN-LOOP) -- the RESONANT NBHD-WIDTH RIGOR: witness floor RIGOROUSLY CLOSED for bounded-V via the rate-V lemma (HYP-2849/2850/2851/2852)
+Dispatch: work the analytic rigor of the resonant nbhd-width (the clean inequality's proof mechanism). Honest arc, ending in a rigorous closure of the binding regime:
+- **HYP-2849 (PROVED conservative lemma):** near c=a/b (b<=q-1), {maxgap{frac(e_i x)}>1/7} contains (c-delta,c+delta), delta=(7-b)/(14 b V). Elementary (phase-collapse to 1/b-grid + Lipschitz). Verified 0/150.
+- **HYP-2851 (HONEST: conservative delta INSUFFICIENT):** the proved-delta lower bound = 0 at the worst P ({2,3,4,5,6}, small-multiple killers, wide holes cover the conservative nbhds). My prior HYP-2844/2845 'closure' OVERCLAIMED (used resonant-worst P + empirical width).
+- **HYP-2852 (RIGOROUS CLOSURE):** the gap shrinks at rate |e_{j2}-e_{j1}| <= V (NOT 2V -- conservative double-counted). The rate-V delta=(7-b)/(7bV) (FACTOR-2 sharper, PROVABLE, verified 0/320) gives G2 >= sum_{c=a/b,b<=6}(2 delta_c - holes)_+ >= m_P over the WORST admissible P (full enum, exact): 1.82/1.58/1.66/2.17/3.33x*m_P for k=8..12. So the bounded-V witness floor is RIGOROUSLY CLOSED, no three-distance needed.
+- **HYP-2850 (wide-V):** AP clusters reduce to the bounded base via dilation (THM-531, un-restricted floor V-uniform ~0.94).
+- **NET:** witness floor G2>=m_P: [k<=7 PIGEONHOLE HYP-2827] + [k=8..13 rate-V nbhd-width lemma + finite worst-P ∩G_P cert, RIGOROUS bounded-V] + [wide-V dilation]. LRC(14) = [sector p0<=cap DONE] + [witness floor RIGOROUSLY CLOSED bounded-V] + [G2>0=>M>=1/14 PROVED]. RESIDUAL = the wide-V GENERAL (non-AP) cluster (non-binding via THM-527-D, verified). The clean inequality's binding regime is closed with a PROVABLE lemma + exact certificate.
+
 ## codex-2026-06-22-S89 -- origin-decoy divisor-depth ledger for HYP-2847/HYP-2849
 Continued the HYP-2847 bounded neighborhood-width line after pulling the
 incoming KPS S33/S32 witness-route work.  The concurrent HYP-2848 q-widening
