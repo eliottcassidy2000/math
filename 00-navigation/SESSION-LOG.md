@@ -5,6 +5,27 @@ Owner: derive more necessary conditions, focus on AP/GW shared DNA, get abstract
 - **HYP-2919 (three convoluted):** (A) JACOBSTHAL gate: accel site v <=> doubling-window in a coprime-gap of v (g_Jac(12)=4, window [2,3] in gap (1,5)). (B) recurring 41 = FAREY NEIGHBOR of 1/14 (det[[1,3],[14,41]]=-1) = first near-miss hiding spot. (C) AP = Z/14\{0} = PERFECT 1-HOLE TILING.
 - **REFLECTION (the animal):** a tight set = the canonical perfect 1-hole ℤ/14 tiling (AP) + its orbit under the Jacobsthal-gated Goddyn-Wong doubling operad x->2x; for 14=2*7 the gate opens at exactly v=12 => {AP,GW}. The 8 conditions are ONE fact (AP-tiling 2-adically rigid except at the Jacobsthal site) seen 8 ways. CONJECTURE: LRC(n) census = AP + p-adic doubling orbits gated by Jacobsthal(n).
 NET: 8 layered necessary conditions, the abstract object named (Jacobsthal-gated doubling operad on the 2*7 clock), bounded census {AP,GW} fully explained. Open core (unbounded/non-doubling-child) = LRC(13) = mac-mini's g(14)<=3. NOT finished. NEXT: prove no animal of this kind beyond {AP,GW} (the operad-completeness).
+## codex-2026-06-22-S124 -- AP/GW common-condition stack and top-petal audit
+
+User asked for more necessary conditions shared by AP and Goddyn-Wong, with
+creative abstractions.  Pulled concurrent S54/S38 work: mac-mini's "kind"
+battery (`q` almost-covering, unit cover, cofinite residues, maximal zsum) and
+KPS's divisor-threshold/doubling-operad framing.  Added exact script
+`04-computation/lrc14_ap_gw_common_conditions_codex_s124.py` and stored output
+`05-knowledge/results/lrc14_ap_gw_common_conditions_codex_s124.out`.
+
+The stack separates theorem-level filters from speculative fingerprints:
+punctured `q=14` divisor cover, apex unit cover, exact odd skeleton/gcd shell,
+cofinite nonzero residue support, maximal antipodal `zsum`, literal AP
+complement sums, single even dipole, one-petal/minimal-petal/top-petal gates.
+AP and GW pass all filters with exact `M=1/14`; `{1,...,11,13,36}` passes the
+coarse residue/even-dipole stack but fails one-petal and has `M=3/41`.
+Single replacements `v<=300` and two-replacements `<=40` both collapse to
+exactly AP/GW under the full top-petal stack; bounded `[1,19]` leaves AP alone.
+The penultimate minimal petals are AP, GW, `8->16`, and `10->20`, with the
+last two loose off apex.  Registered HYP-2920.  LRC14 remains open; this names
+the next sharp lemma as top-petal rigidity / off-apex escape for every
+non-AP/GW q=14 petal or multi-dipole.
 
 ## mac-mini-2026-06-22-S54 -- the LRC tight "kind": a convoluted battery of necessary conditions (AP-skip-double with divisibility compensation)
 Owner: derive more necessary conditions, what AP & GW & any of their kind share; abstract/convoluted/creative/fun. HYP-2914.

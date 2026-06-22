@@ -1,0 +1,86 @@
+S124 AP/GW COMMON NECESSARY-CONDITION ATLAS
+==============================================================================
+Known tight rows:
+  AP           S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), M=1/14, denoms=[14], defect=zero, missing=(), extra=()
+    passes: punctured_q_cover, unit_cover, exact_unit_shell, exact_odd_skeleton, gcd_shell_profile, cofinite_residue_set, zsum_max, complement_sum14, even_dipole_or_zero, one_petal_or_ap, minimal_one_petal, top_petal_or_ap
+  GW           S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), M=1/14, denoms=[14], defect=single_even_dipole, missing=(12,), extra=(10,)
+    passes: punctured_q_cover, unit_cover, exact_unit_shell, exact_odd_skeleton, gcd_shell_profile, cofinite_residue_set, zsum_max, complement_sum14, even_dipole_or_zero, one_petal_or_ap, minimal_one_petal, top_petal_or_ap
+  near_miss_36 S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36), M=3/41, denoms=[41], defect=single_even_dipole, missing=(12,), extra=(8,)
+    passes: punctured_q_cover, unit_cover, exact_unit_shell, exact_odd_skeleton, gcd_shell_profile, cofinite_residue_set, zsum_max, complement_sum14, even_dipole_or_zero
+
+[AP single replacements v<=300]
+  total primitive rows=3732
+  after punctured_q_cover   :  1770  (drop  1962)
+  after unit_cover          :   963  (drop   807)
+  after exact_unit_shell    :   594  (drop   369)
+  after exact_odd_skeleton  :   534  (drop    60)
+  after gcd_shell_profile   :   534  (drop     0)
+  after cofinite_residue_set:   534  (drop     0)
+  after zsum_max            :   462  (drop    72)
+  after complement_sum14    :   395  (drop    67)
+  after even_dipole_or_zero :   395  (drop     0)
+  after one_petal_or_ap     :    99  (drop   296)
+  after minimal_one_petal   :     4  (drop    95)
+  after top_petal_or_ap     :     2  (drop     2)
+  final survivors=2
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), M=1/14, denoms=[14], defect=zero, missing=(), extra=()
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), M=1/14, denoms=[14], defect=single_even_dipole, missing=(12,), extra=(10,)
+  final exact M: tight=2, loose=0, below=0
+
+[AP two replacements values<=40]
+  total primitive rows=27730
+  after punctured_q_cover   :  7359  (drop 20371)
+  after unit_cover          :  2374  (drop  4985)
+  after exact_unit_shell    :  1143  (drop  1231)
+  after exact_odd_skeleton  :   965  (drop   178)
+  after gcd_shell_profile   :   965  (drop     0)
+  after cofinite_residue_set:   720  (drop   245)
+  after zsum_max            :   616  (drop   104)
+  after complement_sum14    :   332  (drop   284)
+  after even_dipole_or_zero :   332  (drop     0)
+  after one_petal_or_ap     :    68  (drop   264)
+  after minimal_one_petal   :     4  (drop    64)
+  after top_petal_or_ap     :     2  (drop     2)
+  final survivors=2
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), M=1/14, denoms=[14], defect=zero, missing=(), extra=()
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), M=1/14, denoms=[14], defect=single_even_dipole, missing=(12,), extra=(10,)
+  final exact M: tight=2, loose=0, below=0
+
+[bounded primitive 13-subsets [1,19]]
+  total primitive rows=27132
+  after punctured_q_cover   :   966  (drop 26166)
+  after unit_cover          :   360  (drop   606)
+  after exact_unit_shell    :   112  (drop   248)
+  after exact_odd_skeleton  :   112  (drop     0)
+  after gcd_shell_profile   :   112  (drop     0)
+  after cofinite_residue_set:   104  (drop     8)
+  after zsum_max            :   104  (drop     0)
+  after complement_sum14    :    13  (drop    91)
+  after even_dipole_or_zero :    13  (drop     0)
+  after one_petal_or_ap     :     6  (drop     7)
+  after minimal_one_petal   :     2  (drop     4)
+  after top_petal_or_ap     :     1  (drop     1)
+  final survivors=1
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), M=1/14, denoms=[14], defect=zero, missing=(), extra=()
+  final exact M: tight=1, loose=0, below=0
+
+[Tournament Analysis: condition-strength carrier]
+  vertices: punctured_q_cover, unit_cover, exact_unit_shell, exact_odd_skeleton, gcd_shell_profile, cofinite_residue_set, zsum_max, complement_sum14, even_dipole_or_zero, one_petal_or_ap, minimal_one_petal, top_petal_or_ap
+  observable: pass-set inclusion over single-swap bank v<=300
+  switch: stronger condition -> weaker condition; ties use listed path
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+  directed_3cycles=0, incomparable_pairs=24, opposite_to_list_flips=50
+
+[Derived necessary-condition stack]
+  Theorem-level: q=2..13 covered and q=14 omitted; otherwise a q-grid witness
+  gives M>1/14, or the denominator-14 apex is blocked.
+  Theorem-level: unit residues must be represented; otherwise some a/14 is
+  strictly lonely.
+  AP/GW fingerprint: cofinite nonzero residue support, maximal antipodal
+  zsum, exact odd skeleton, AP complement sums 14, and all residue defect
+  lives as zero or one even-shell dipole.
+  Strong speculative fingerprint: residue representatives are minimal except
+  for one acceleration petal m -> 2m; the only tight petal seen is the top
+  one, 12 -> 24.  Other petals survive coarse filters but escape off apex.
+  In these banks the full top-petal stack leaves only AP/GW (or AP alone
+  when 24 is outside the bank), with no below-threshold row.
