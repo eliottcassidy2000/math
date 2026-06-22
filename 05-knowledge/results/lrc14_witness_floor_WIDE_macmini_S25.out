@@ -1,0 +1,27 @@
+WIDE-E witness floor: G2(worstP, wide E) >= m_P? and >= bounded consec G2?
+  m_P = 0.05649
+
+k=10  worstP=[1, 11, 12]  bounded-consec G2=0.38776 (=19/49)
+   single-far {15}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 15] G2=0.44805  >=m_P:True >=consec:True  (7.93x m_P)
+   single-far {18}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 18] G2=0.44012  >=m_P:True >=consec:True  (7.79x m_P)
+   single-far {22}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 22] G2=0.44295  >=m_P:True >=consec:True  (7.84x m_P)
+   single-far {30}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 30] G2=0.43785  >=m_P:True >=consec:True  (7.75x m_P)
+   spread             E=[0, 2, 4, 6, 8, 10, 12, 15, 18, 21] G2=0.59246  >=m_P:True >=consec:True  (10.49x m_P)
+   => worst wide G2/m_P at k=10: 7.75x
+
+k=11  worstP=[1, 12]  bounded-consec G2=0.36202 (=3193/8820)
+   single-far {15}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15] G2=0.49218  >=m_P:True >=consec:True  (8.71x m_P)
+   single-far {18}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 18] G2=0.49099  >=m_P:True >=consec:True  (8.69x m_P)
+   single-far {22}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 22] G2=0.49773  >=m_P:True >=consec:True  (8.81x m_P)
+   single-far {30}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 30] G2=0.49326  >=m_P:True >=consec:True  (8.73x m_P)
+   => worst wide G2/m_P at k=11: 8.69x
+
+k=12  worstP=[1]  bounded-consec G2=0.42705 (=10358/24255)
+   single-far {15}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15] G2=0.48345  >=m_P:True >=consec:True  (8.56x m_P)
+   single-far {18}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 18] G2=0.46304  >=m_P:True >=consec:True  (8.20x m_P)
+   single-far {22}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22] G2=0.48085  >=m_P:True >=consec:True  (8.51x m_P)
+   single-far {30}    E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30] G2=0.47337  >=m_P:True >=consec:True  (8.38x m_P)
+   => worst wide G2/m_P at k=12: 8.20x
+
+=> if every wide G2 >= consec bounded G2 (>> m_P), the WIDE case reduces to the
+   bounded compact floor (HYP-2830): wide is SAFER, binding is bounded consec.
