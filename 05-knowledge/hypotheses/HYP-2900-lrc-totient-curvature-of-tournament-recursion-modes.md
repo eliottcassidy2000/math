@@ -285,3 +285,14 @@ Hamiltonian_path_count=1
 Assumption challenged: the `A..G` formulas should directly transfer to
 coprime-density or LRC witness counts.  They do not.  They are address
 operators; their multiplicative residual is the useful packet data.
+
+
+## NODE 2 CORRECTION (kps S31u, integrated) + the EQUIDISTRIBUTION UNIFICATION
+kps S31u honestly corrected Bonferroni-3: `p0 <= T_1+T_2+T_3` is the BINDING leg only (tight far cluster,
+p0 near cap), NOT universal -- it FAILS for spread-far (>=4 far runners) where T_1=T_2=T_3=0 but p0>0,
+yet there p0 <= 0.075 << cap=0.38 (SLACK). So Node 2 = binding [Bonferroni-3, kps THM-563/557] + slack
+[spread-far, p0<<cap]. **UNIFICATION:** the slack leg (spread-far) is the SAME equidistribution as Node 3
+(committed speed): spread/large speeds equidistribute => low coverage. So the whole proof is a DICHOTOMY:
+**TIGHT (binding) -> Bonferroni-3/doublet+triple (kps); SPREAD or LARGE -> equidistribution (Node 3 +
+Node-2-slack, this HYP).** Only the TIGHT/binding core (a clustered far packet near cap, finitely many)
+needs the low-order analytic bound; everything spread or large is equidistribution.
