@@ -1,3 +1,15 @@
+## codex-2026-06-22-S86g -- LRCGapReach is root/Verify audited; p0 lane is positive-margin only
+
+Pulled the S27 correction: the p0 simplification is too weak to prove the
+`m_P` witness floor at k=8, so the full floor should use the NU/spreading route.
+The p0 split theorem remains useful as a finite-error positive-margin lane.
+
+Also root-imported and `Verify`-audited `LRCGapReach.lean`, after cleaning its
+`push_neg` warning.  The geometric Part-A core is now audited: a `>1/7` free
+gap gives a midpoint phase with `nearInt` distance `>1/14` from every tooth.
+Remaining hard Part-A work is the slow-fast/rhoK ruler approximation, not this
+interval geometry.
+
 ## codex-2026-06-22-S86g -- branch-budget Part-A route is root/Verify audited
 
 Added the quantitative concrete floor `witness_margin_from_wide_bound`: from
@@ -11,7 +23,8 @@ warnings/no `sorryAx`.
 Remaining useful work for this lane is now concrete: instantiate the p0 margin,
 instantiate `cap <= meas(G_P)`, define/prove the actual `arcCount` and finite
 `rho_K` error inequality, and finish the `GOOD/witnessG2` readouts.  No more
-abstract branch-budget glue is needed unless the analytic route changes.
+abstract branch-budget glue is needed unless the analytic route changes.  After
+MISTAKE-084, do not use this as the `m_P` floor proof at k=8; use the NU route.
 
 ## codex-2026-06-22-S86g -- concrete witness-floor module is root-audited
 

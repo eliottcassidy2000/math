@@ -50,6 +50,7 @@ import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCMreachConcrete
+import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
@@ -148,6 +149,50 @@ theorem lrc_concrete_lonely_of_mreach_ge_audit
     ∃ t : ℝ, LonelyRunner.Lonely 14 v t :=
   LonelyRunner.LRC14Concrete.lonely_of_Mreach_ge v hv hM
 #print axioms lrc_concrete_lonely_of_mreach_ge_audit
+
+/-! ### LRC14 geometric gap-to-reach core -/
+
+theorem lrc_gapreach_margin_ge_of_free_interval_audit
+    (C : Finset ℝ) (a g : ℝ)
+    (hfree : ∀ c ∈ C, ∀ n : ℤ,
+      (c + (n : ℝ)) ∉ Set.Ioo a (a + g)) :
+    ∀ c ∈ C, ∀ n : ℤ,
+      g / 2 ≤ |(a + g / 2) - (c + (n : ℝ))| :=
+  LonelyRunner.GapReach.margin_ge_of_free_interval C a g hfree
+#print axioms lrc_gapreach_margin_ge_of_free_interval_audit
+
+theorem lrc_gapreach_margin_gt_one_div_14_of_gap_audit
+    (C : Finset ℝ) (a g : ℝ) (hg : 1 / 7 < g)
+    (hfree : ∀ c ∈ C, ∀ n : ℤ,
+      (c + (n : ℝ)) ∉ Set.Ioo a (a + g)) :
+    ∀ c ∈ C, ∀ n : ℤ,
+      1 / 14 < |(a + g / 2) - (c + (n : ℝ))| :=
+  LonelyRunner.GapReach.margin_gt_one_div_14_of_gap C a g hg hfree
+#print axioms lrc_gapreach_margin_gt_one_div_14_of_gap_audit
+
+theorem lrc_gapreach_exists_lonely_phase_of_gap_audit
+    (C : Finset ℝ) (a g : ℝ) (hg : 1 / 7 < g)
+    (hfree : ∀ c ∈ C, ∀ n : ℤ,
+      (c + (n : ℝ)) ∉ Set.Ioo a (a + g)) :
+    ∃ φ : ℝ, ∀ c ∈ C, ∀ n : ℤ,
+      1 / 14 < |φ - (c + (n : ℝ))| :=
+  LonelyRunner.GapReach.exists_lonely_phase_of_gap C a g hg hfree
+#print axioms lrc_gapreach_exists_lonely_phase_of_gap_audit
+
+theorem lrc_gapreach_nearInt_gt_of_forall_int_audit {y r : ℝ}
+    (h : ∀ n : ℤ, r < |y - (n : ℝ)|) :
+    r < LonelyRunner.LRC14Concrete.nearInt y :=
+  LonelyRunner.GapReach.nearInt_gt_of_forall_int h
+#print axioms lrc_gapreach_nearInt_gt_of_forall_int_audit
+
+theorem lrc_gapreach_exists_nearInt_margin_of_gap_audit
+    (C : Finset ℝ) (a g : ℝ) (hg : 1 / 7 < g)
+    (hfree : ∀ c ∈ C, ∀ n : ℤ,
+      (c + (n : ℝ)) ∉ Set.Ioo a (a + g)) :
+    ∃ φ : ℝ, ∀ c ∈ C,
+      1 / 14 < LonelyRunner.LRC14Concrete.nearInt (φ - c) :=
+  LonelyRunner.GapReach.exists_nearInt_margin_of_gap C a g hg hfree
+#print axioms lrc_gapreach_exists_nearInt_margin_of_gap_audit
 
 /-! ### LRC14 witness-attainment margin/Mreach bridge -/
 

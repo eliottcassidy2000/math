@@ -30,7 +30,7 @@ theorem margin_ge_of_free_interval (C : Finset ℝ) (a g : ℝ)
     ∀ c ∈ C, ∀ n : ℤ, g / 2 ≤ |(a + g / 2) - (c + (n : ℝ))| := by
   intro c hc n
   by_contra h
-  push_neg at h
+  push Not at h
   rw [abs_lt] at h
   obtain ⟨h1, h2⟩ := h
   exact hfree c hc n ⟨by linarith, by linarith⟩

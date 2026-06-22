@@ -39,7 +39,7 @@ either route. What remains is discharging the nodes.
 | `hbonf` | `nuShape + measGP − 1 ≤ witnessG2` (Bonferroni) | **DONE** — `LRCBonferroniMeasure`, `LRCWitnessFloorConcrete` (sorry-free) |
 | `hDp0` | `1 − nuShape ≤ p0Shape` (dense-cover `D ≤ p0`) | **DONE** — `LRCDenseCovers.dense_covers_all_inner` (sorry-free) |
 | `hsize` | `clusterSize (shapeOf v) ≤ 13` | **structural** — provable once `shapeOf` is concrete |
-| `hδm` | `8≤k≤13 ⟹ witnessMP ≤ delta` (margin `δ ≥ m_P`) | **DONE (table)** — `native_decide` floor `cap−p0 ≥ m_P` |
+| `hδm` | p0-route margin `8≤k≤13 ⟹ witnessMP ≤ delta` | **FALSE for p0 route at k=8** — `cap−p0 < m_P`; do not use as witness-floor route |
 | `hsmall` | `k ≤ 7 ⟹ witnessMP ≤ witnessG2` (small cluster) | **supported** — `LRCMaxGapPigeonhole` (≤6 ⟹ maxgap>1/7 always) + `goodSet`; k=7 boundary isolated |
 | `hA` (NU route only) | spreading: `nu(E) ≥ nuConsec(k)` (consec minimizes nu) | **verified** — HYP-2835 (consec strict-min, 0 beaters); needs Lean formalization. Avoidable via p0 route. |
 | `hp0cap` (p0 route only) | `p0 ≤ cap − delta` (any positive `delta`) | **holds** — `cap − p0 ≥ 0.0543 > 0` for all binding k; replaces `hA` |
@@ -66,6 +66,8 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
 
 - `LRCWitnessAttainment` + `…Bridge` — margin continuous/periodic, attains max on
   `[0,1]`, `margin ≥ 1/n ⟹ Lonely`; `Mreach = sSup margin` (HYP-2833).
+- `LRCGapReach` — geometric Part-A core: a `>1/7` free gap gives a phase whose
+  `nearInt` distance from every tooth is `>1/14`; root/`Verify`-audited by S86g.
 - `LRCMaxGapPigeonhole` — `≤6` gaps summing to 1 ⟹ one `>1/7`; the k=7 boundary
   split (HYP-2836).
 - `LRCGoodSet` — concrete `goodSet(E) = {maxgap{frac(e·x)} > 1/7}` + measurability;
@@ -83,11 +85,13 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
 
 ## 4. The remaining integration (in progress, kps/codex)
 
-The 8 nodes are stated on the **opaque** `shapeOf`/`witnessG2`. To produce an
+The nodes are stated on the **opaque** `shapeOf`/`witnessG2`. To produce an
 *unconditional* `lrc14 : LRC14Statement`, instantiate these with the concrete
 carriers (`witnessG2 := μ(GOOD ∩ safeSet)`, etc.) and discharge the formalizable
-nodes (`hbonf, hDp0, hsize, hsmall, hδm`). Then only the deep analytic axioms
-`hp0cap, hmeasGP, hpartA` remain — the honest classical-input boundary.
+nodes (`hbonf, hDp0, hsize, hsmall`). The viable NU route then needs the spreading
+lemma `hA`, the cap floor `hmeasGP`, and finite-ruler Part A `hpartA`; the p0-only
+`hp0cap` margin is useful for positive finite-error lanes but is too lossy for
+the `m_P` witness floor at k=8.
 
 ## 5. The analytic-proof side (parallel track)
 

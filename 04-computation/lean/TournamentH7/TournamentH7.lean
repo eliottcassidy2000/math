@@ -136,6 +136,7 @@ import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCMreachConcrete
+import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCMaxGapPigeonhole

@@ -5,6 +5,34 @@ Continued the formalized-LRC(14) push, frequent pull/push with kps (S30/S31 meas
 - **#arcs(GOOD(E)) PERIOD-BOUNDED (HYP-2838):** consec plateaus ~13, single-far <=15, independent of Vmax => THM-527 Part A finite-Vmax correction -> 0 uniformly for the binding family. Wide #arcs/delta bounded (<=72 moderate-wide). Closes my Part A residual (kps MSG-238).
 - Built/verified kps's LRCDenseCovers, LRCWitnessFloorConcrete (both sorry-free). My LRCGoodSet verified correct (arc-char==maxgap, 0/1050).
 HANDOFF: team should target the NU route (lrc14_from_bonferroni_split_nodes); formalize hA (spreading, now load-bearing); carry hmeasGP + hpartA as the deep axioms. NEW: HYP-2838, MISTAKE-084, CASE-p0-route-insufficiency, status doc.
+
+## codex-2026-06-22-S86g -- LRCGapReach root-audited; p0 split theorem reframed after k=8 correction
+
+Pulled the mac-mini S27 route correction and KPS S31 reach-core work.  The
+important new signal is that p0 positivity is real but too weak to supply the
+`m_P` floor at k=8; the viable `m_P` witness-floor route is the NU/spreading
+route.  The split finite-Part-A theorem from this session remains useful in the
+weaker but still relevant form: if a branch has any positive margin larger than
+the finite-ruler error, it gives positive finite witness density and can feed the
+finite Part-A handoff.
+
+Cleaned the incoming `LRCGapReach.lean` deprecation warning (`push Not`) and put
+the module on the root and `Verify` surfaces.  New audit wrappers cover
+`margin_ge_of_free_interval`, `margin_gt_one_div_14_of_gap`,
+`exists_lonely_phase_of_gap`, `nearInt_gt_of_forall_int`, and
+`exists_nearInt_margin_of_gap`.  Focused, aggregate `Verify`, and root builds
+pass with transcripts `lrc_gap_reach_clean_verify_codex_s86g.out`,
+`tournamenth7_verify_lrc_gap_reach_codex_s86g.out`, and
+`tournamenth7_root_lrc_gap_reach_codex_s86g.out`; scans found no warnings, no
+`sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{free gap, midpoint phase, integer
+translates, absolute distance margin, nearInt margin, finite-ruler embedding,
+PartA}`.  Edges are interval exclusion, midpoint distance, nearest-integer
+conversion, and the later slow-fast realization.  Challenged assumption: Part A
+is entirely analytic; its geometric `>1/7 -> >1/14` core is now a sorry-free
+Lean theorem, leaving the actual rhoK/ruler approximation as the hard part.
+
 ## codex-2026-06-22-S86g -- concrete margin floor + split finite-Part-A budget route
 
 Extended the concrete witness-floor and Part-A formal interfaces over the latest
@@ -12,8 +40,9 @@ S31/S27 work.  `LRCWitnessFloorConcrete.lean` now proves the quantitative margin
 form `witness_margin_from_wide_bound`: if
 `slowμ(coverSet E) <= cap_k - delta` and `cap_k <= slowμ(safeSet P)`, then
 `delta <= slowμ((coverSet E)^c ∩ safeSet P)`, plus the positive-margin corollary.
-This is the exact concrete form of the p0 wide-bound floor needed by the LRC14
-large branch, not just the earlier strict-positivity wrapper.
+After the later S27 correction, this should be read as a positive-margin
+finite-error lane rather than an `m_P` witness-floor proof: at k=8 the p0 margin
+is positive but smaller than `m_P`.
 
 `LRCWitnessPartA.lean` now has
 `lrc14_from_finite_partA_p0_margin_split_shapes`, a sorry-free top-level
