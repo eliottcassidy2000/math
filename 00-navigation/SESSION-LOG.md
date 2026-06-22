@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S49 -- PROVE the FORWARD half of crux (star): M(S)=1/14 forces an apex-7 BINDING PAIR (14 | s_i+s_j)
+Owner: finish LRC(14) via the THM-079 (H=21) template; prove tightness forces the apex-7 point. HYP-2909.
+- **THEOREM (star-forward), rigorous:** M(S)=1/14 at a local max t* (1/14<1/2 => a crossing, not a peak) => an active runner s_i on the INCREASING side (frac(s_i t*)=1/14) and s_j on the DECREASING side (frac=13/14); (s_i+s_j)t*=0 mod 1 + s_i t*=1/14 force **14 | (s_i+s_j)**. So tightness FORCES a binding pair in antipodal residues mod 14 = the apex-7 antipode. This is exactly Move B (the Moon/cycle-forcing step) of the THM-079 template.
+- **Verified:** AP {1..13} binding pairs {1,13},{5,9},{3,11} (all sum 14, at t*=1/14,3/14,5/14); GW {1..11,13,24} pair {1,13}; non-tight {1..11,13,38} (M=1/12) has NO binding pair. Consistent.
+- **Connects:** 14=2*7 apex (S48 diameter-ties), H=7=I(K_3,2) forbidden (THM-029/200), codex H7 state-lift (HYP-2908), kps census. The forward direction of (star) is DONE.
+- **Remaining of (star) (honest):** (ii) s_i+s_j=14 exactly (L=1/denom-14); (iii) covering => M!=1/14 (apex-7 floor, needs ii); (iv) tight locus = {AP,GW} (census); (v) covering => M>1/14 not < (Node 2 min=1/12 + Node 3). Given these + the forward theorem, (star) closes, LRC(14) follows.
+- DISCIPLINE: caught a heredoc backtick bug that emptied the HYP file; rewrote via Write.
+NEW: HYP-2909. NEXT: (ii) the L=1 refinement (does M=1/14 force s_i+s_j=14 exactly?) -- then (iii) apex-7 floor closes covering.
+
 ## mac-mini-2026-06-22-S48 -- LRC(14) is IMPOSSIBLE TO DISPROVE: the apex-7 order-2 obstruction (14 = 2 x 7)
 Owner: '7 is a forbidden H value, arcs have 2 states -- these are all you need to disprove LRC(14) OR prove it impossible to disprove.' Disciplined reading: both are OBSTRUCTIONS => impossible to disprove (NOT a disproof). Reflection: lrc14-impossible-to-disprove-the-apex7-order2-obstruction.md.
 - **14 = 2 x 7 = (arc states) x (forbidden H) = (the extremal's order-2 symmetry) x (its 7 orbits).** VERIFIED: at the extremal (consec {0..13}, t=1/14, M=1/14), the winding tournament has EXACTLY 7 undecided arcs = the diameters (i,i+7), distance 1/2, the 2 states TIED. The 14-grid carries an order-2 antipodal symmetry x->x+1/2 with 7 orbits.
