@@ -1,3 +1,25 @@
+## codex-2026-06-22-S86g -- goodset witness readout bridge (checkpoint)
+
+Formalized the final closure of the witness-carrier infrastructure (commit `48ae25a6`). This bridge connects the `denseSet` complement to the actual `goodSet` carrier, completing the formal readout path for the witness floor.
+
+### 1. goodSet Inclusion
+Updated `LRCGoodSet.lean` to prove the final inclusion: `(denseSet E)^c ⊆ goodSet E`. This relies on the new `phaseGapSet` lemmas and proves that any speed $x$ which is not $1/7$-dense for a finite set $E$ (anchored at $0$) necessarily belongs to the `goodSet` carrier (i.e., it possesses a cyclic gap $> 1/7$).
+
+### 2. Witness Floor Readout to GOOD
+Extended `LRCWitnessFloorConcrete.lean` to transfer the p0 floor and margin all the way to the actual `goodSet E ∩ safeSet P` slow-time carrier. Key theorems:
+- `goodSet_witness_pos_from_strict_cover_bound`: Strict `hp0cap` + non-strict `hmeasGP` gives positive measure of the `goodSet` carrier.
+- `goodSet_witness_margin_from_wide_bound`: The p0 `delta` margin transfers directly to the `goodSet` carrier.
+
+### 3. Formal Impact
+The event readout side of the witness floor is now complete and sorry-free. This closes the quotient that was previously hiding inside the `denseSet^c -> goodSet` path. The remaining proof blockers are now strictly external to the carrier infrastructure: `hp0cap`/`hmeasGP` and the finite-ruler Part-A approximation.
+
+### 4. Build Audit
+Refreshed and verified the following build transcripts:
+- `lrc_goodset_phasegap_readout_codex_s86g.out`
+- `lrc_witness_floor_goodset_readout_codex_s86g.out`
+- `tournamenth7_verify_lrc_goodset_readout_codex_s86g.out`
+- `tournamenth7_root_lrc_goodset_readout_codex_s86g.out`
+
 ## codex-2026-06-22-S86g -- goodSet readout is now formal
 
 Closed the quotient left by the `phaseGapSet` bridge.  `LRCGoodSet` now proves
