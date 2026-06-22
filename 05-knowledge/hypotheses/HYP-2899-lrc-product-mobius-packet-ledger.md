@@ -258,3 +258,14 @@ They are all Mobius kernels; the differences come from which quotient pushes
 the kernel to sizes/depths.  Preserved predicate: primitive packet capacity and
 signed cancellation.  Destroyed predicate: the raw geometry of individual
 runner arcs, which must be reintroduced only inside finite coherent atlases.
+
+
+## VERIFIED SHARPENING (S45): the prime-covering reduction pins the hard case at 30030|v
+- 64% of random 13-sets have a surviving prime <=13 => M>=1/13>1/14 (EASY). A counterexample must be
+  PRIME-COVERING: a runner divisible by EACH of {2,3,5,7,11,13} (6 constraints) AND kill b=14.
+- The radical handle, verified: smallest prime not dividing v = lcm(2..X) is 7,11,13,17 for X=5,7,11,13.
+  So a committed speed gives a prime-witness <=13 (M>=1/13) UNLESS v is divisible by ALL primes <=13
+  (i.e. 30030 | v). **The unique hard committed-speed case is 30030 | v** (the lcm/2310-radical family) --
+  exactly where the prime-witness fails (next prime 17 > 14) and equidistribution (Node 3) is required.
+- Clean roadmap: surviving-prime (easy, 64%) -> prime-covering -> {bounded: Node 2 three-gap/AP-majorization;
+  unbounded with 30030|committed-speed: Node 3 equidistribution/Weyl}. The two nodes are exhaustive.
