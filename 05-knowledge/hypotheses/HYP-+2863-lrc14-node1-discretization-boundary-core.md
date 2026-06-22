@@ -45,3 +45,21 @@ The "2/7" threshold + 12-point cluster: the V/t>12 cutoff = #(cluster runners). 
 the analog should be V/t > 2q-2 (= cluster size). A cheap test of q-uniformity. -> THM-527, HYP-2841, HYP-2852.
 
 Script: lrc14_node1_discretization_macmini_S30.py (to save).
+
+
+## RIGOROUS closure of the boundary core (the widest-arc / s≈0 argument)
+The good set in the orbit parameter s (good <=> maxgap{0, frac(1/2-is): i=1..12} > 2/7) has a
+MAXIMAL arc of cyclic width ~0.130 around s=0: as s->0 the 12 cluster teeth frac(1/2-is) all
+-> 1/2, so the teeth collapse to {0, 1/2} with maxgap = 1/2 > 2/7 (GOOD). The arc persists until
+the teeth spread enough to drop maxgap to 2/7 (width ~0.065 each side, ~0.130 cyclic; computed
+arcs: (0,.065),(.327,.339),(.476,.524),(.661,.673),(.935,1)).
+PROOF that rho_K>0: the sample AP is s_j=(j+1/2)/q, q=V/t. The j=0 sample s_0=1/(2q). For q>7.7
+(so 1/(2q)<0.065) s_0 lies in the s≈0 good arc => period j=0 is good => rho_K >= 1/V > 0.
+Since V (observer) > 12t, q=V/t > 12 > 7.7 ALWAYS. Hence rho_K>0 for EVERY boundary-core config
+{t,..,12t,V}. RIGOROUS (modulo the finite arc-width computation 0.065>1/(2·12)).
+KEY INTUITION: at the first ruler period the cluster is maximally collapsed (all teeth near 1/2),
+leaving a 1/2-gap -- a guaranteed lonely period -- as long as the observer outpaces the cluster
+(V>12t, automatic). The user's "V/t -> inf" worry dissolves: V/t>12 is automatic AND sufficient.
+NB: this boundary core has NO separate far-runner set P (all 12 runners are the cluster relative
+to observer V); the criterion reduces to maxgap>2/7. GENERAL Node 1 (nontrivial G_P) needs the
+G_P-aware version: the good arc must also be far-runner-safe (x_0≈0 fails G_P if a far p<V/7).
