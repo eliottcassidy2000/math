@@ -164,13 +164,23 @@ theorem denseSet_subset_coverSet (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
   obtain ⟨e, heE, he⟩ := mem_phaseFinset.mp hsS
   exact ⟨e, heE, he ▸ hs1, he ▸ hs2⟩
 
-/-- **The measure-level inclusion `D(E) ≤ p0(E)`.**  `volume(denseSet) ≤
-volume(coverSet)` — the slow-time measure form of `D(E) ≤ p0(E)`, the elementary
+/-- **The measure-level inclusion `D(E) ≤ p0(E)`.**  Restricted to ONE period
+`[0,1)` (the sets are 1-periodic, so the unrestricted `volume` is infinite and
+vacuous): `volume(denseSet ∩ [0,1)) ≤ volume(coverSet ∩ [0,1))`.  This is the
+genuine slow-time measure form of `D(E) ≤ p0(E)` (`D, p0 ∈ [0,1]`), the elementary
 inclusion behind the witness/p0 unification (HYP-2832).  Proved by monotonicity of
 Lebesgue measure on the pointwise inclusion (no measurability of `denseSet` needed). -/
 theorem volume_denseSet_le_coverSet (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
-    volume (denseSet E) ≤ volume (coverSet E) :=
-  measure_mono (denseSet_subset_coverSet E hE)
+    volume (denseSet E ∩ Set.Ico (0 : ℝ) 1) ≤ volume (coverSet E ∩ Set.Ico (0 : ℝ) 1) :=
+  measure_mono (Set.inter_subset_inter_left _ (denseSet_subset_coverSet E hE))
+
+/-- Sanity: the restricted cover measure is a genuine probability mass in `[0,1]`
+(`p0 ≤ 1`), so the inclusion above is a non-vacuous bound. -/
+theorem volume_coverSet_inter_le_one (E : List ℤ) :
+    volume (coverSet E ∩ Set.Ico (0 : ℝ) 1) ≤ 1 := by
+  calc volume (coverSet E ∩ Set.Ico (0 : ℝ) 1)
+      ≤ volume (Set.Ico (0 : ℝ) 1) := measure_mono (Set.inter_subset_right)
+    _ = 1 := by rw [Real.volume_Ico]; norm_num
 
 /-! ## Axiom audit -/
 
