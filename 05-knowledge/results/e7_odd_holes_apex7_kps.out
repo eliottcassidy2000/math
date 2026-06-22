@@ -1,0 +1,7 @@
+=== E_n construction + validation (expect V=3,7,16,54 ; omega=3,5,10,28) ===
+n=5: V(E_n)=7  E(E_n)=16  omega=5  greedy_chi<=5
+n=6: V(E_n)=16  E(E_n)=90  omega=10  greedy_chi<=10
+=== E_7: the apex prime -- odd holes ===
+n=7: V(E_n)=54  E(E_n)=951  omega=28  greedy_chi<=28
+  odd holes (chordless odd cycles >=5): count=1692  length spectrum={5: 1496, 7: 196}
+  C_5 holes=1496  C_7 holes=196
