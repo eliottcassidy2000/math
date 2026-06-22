@@ -156,3 +156,22 @@ Assumption challenged: once the leading additive-energy coefficient is
 positive, summing its frequency tail should close the proof.  It does not.  The
 frequency tail is clean and positive, but it exposes the real constant as a
 residual-leak inequality over labelled Fourier/sector packets.
+
+## Post-pull synthesis with KPS S31l
+
+The incoming KPS S31l moment-coefficient audit is exactly the missing warning
+label for `R_sf`.  S104 proves the same-frequency `s=2` additive-energy packet
+is positive and has a clean `1/m^4` tail.  S31l checks higher additive moments
+at frequency `1`:
+
+```text
+k=9:  s=2 +8.910e-04, s=3 -7.138e-05, s=4 -4.448e-05
+k=12: s=2 +4.457e-04, s=3 +3.689e-05, s=4 -9.843e-06, ...
+```
+
+So the residual after the positive same-frequency energy packet is genuinely
+signed.  This rules out a Savchenko-style "every term is maximized by the
+regular/AP object" proof.  The surviving analogy is the H-max/Jensen template:
+keep the signs, prove the AP-facing convexity/majorization inequality for the
+whole labelled functional, and use the residual-leak inequality above as the
+finite quantitative form of that convexity.

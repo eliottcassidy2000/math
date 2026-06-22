@@ -50,3 +50,11 @@ negative correction appear.
 So the session did not finish LRC14, but it sharpened the open constant.  The
 live inequality is now a residual-leak bound, with an explicit worst family to
 attack first.
+
+Post-pull KPS S31l makes the same point from the next moment layer.  The
+`s=2` same-frequency packet is positive, but `s>=3` moment coefficients are
+mixed and often negative.  That means the residual is not an error term to take
+in absolute value.  It is the signed convexity content of the problem.  The
+right tournament analogy is therefore not term-by-term cycle maximization; it
+is the Jensen proof of the H-maximizer, where the whole signed functional is
+controlled by the extremal score/difference profile.

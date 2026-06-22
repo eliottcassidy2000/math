@@ -36,6 +36,14 @@ rows should go to a finite AP/Freiman atlas; high relation-depth rows should go
 to HYP-2636 Abel/L2 cancellation; repeated-packet rows should use the HYP-2887
 octahedral current/Hodge decomposition.
 
+Post-push rebase exposed incoming KPS S31l directly under this commit.  It
+checks higher additive moment coefficients and finds mixed signs (`k=9`:
+`s=2 +8.910e-04`, `s=3 -7.138e-05`, `s=4 -4.448e-05`; k=12 has negative
+`s>=4`).  This reinforces HYP-2890 rather than replacing it: S104 isolates the
+positive `s=2` same-frequency tail, and S31l identifies the residual as a
+signed Jensen/convexity object.  The proof should keep signs and prove the
+AP-facing labelled functional inequality, not chase term-by-term positivity.
+
 ## mac-mini-2026-06-22-S39 -- LRC realizability: coverage != additive energy; the exact-coverage extremal is SCALING-invariant {1..13}*d (creative + disciplined; one idea refuted, one finding)
 Owner: creative realizability arguments (like tournament analysis but "slightly different"); aim to finish LRC. HYP-2888 + reflection (lrc-realizability-is-scaling-invariant-tiling-not-combinatorial-forcing.md).
 - **Realizability framing:** LRC(14) <=> safe set nonempty <=> the open arc-systems U_s={||s t||<1/14} (total meas 13/7~1.857) don't cover the closed circle. A counterexample OVER-covers. Same shape as tournament Omega=K_3 (non-realizable), but the LRC forcing is continuous/arithmetic.
