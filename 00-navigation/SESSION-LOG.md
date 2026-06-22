@@ -1,3 +1,35 @@
+## codex-2026-06-22-S108 -- sub-14 LRC covering/tiler training atlas
+
+User asked to keep aiming at the LRC proof and to apply the most comprehensive
+techniques to smaller cases.  Pulled current main after parking/reapplying the
+generated `agents/.session-state.json` reset.  Read HYP-2649, THM-523,
+THM-524, and HYP-2893, then extended the below-14 ladder with q-witness
+covering, binding-pair exact maximization, and Goddyn-Wong acceleration atoms.
+
+Added `04-computation/lrc_sub14_covering_training_codex_s108.py` and stored
+`05-knowledge/results/lrc_sub14_covering_training_codex_s108.out`.
+
+Exact findings:
+- AP rows `{1,...,N-1}` are tight for `N=3..14`.
+- Goddyn-Wong/Jacobsthal acceleration atoms in this range appear at `N=8`
+  (`n=7,v=6`, `M=1/8`, safe measure `0`) and `N=14` (`n=13,v=12`,
+  `M=1/14`, safe measure `0`).
+- In the AP-drop q-covering repair slice, every best repair row is loose once
+  THM-523's easy `t=1/q` witness is disabled.  For `N=9..14`, the best repair
+  has closed form `drop N-1, add N(N-1)`, active pair `(1,N(N-1))`, and
+  `M=N/(N(N-1)+1)`.
+- The `N=14` AP-drop line is a comparison slice, not a global covering-set
+  minimization; it shows that AP-facing covering rows can already be discharged
+  by THM-524 binding-pair margins.
+
+New HYP-2895/T1009: smaller cases separate the proof objects cleanly.  Exact
+tilers live on AP equal-spacing or Goddyn-Wong acceleration boundary data;
+q-witness-disabled AP-facing rows have binding-pair margins; the first genuinely
+new analytic burden at 14 is the support-six HYP-2890 residual packet.  Next
+proof obligation: show every AP-facing q-covering LRC14 row either collapses to
+AP/GW boundary data, has a binding-pair margin, or enters the support-six
+Clebsch/Bruhat/octahedral residual-cancellation route.
+
 ## mac-mini-2026-06-22-S41 -- THREE observer-categories (fineness hierarchy under affine group); tiling=observer-relative, tournament=observer-blind; resolves the broken H-analogy
 Owner: observer-relative vs independent + a third category; tournament vs tiling models. Reflection: three-observer-categories-tiling-is-relative-tournament-is-blind.md.
 - **THREE categories under the affine group (translation=move observer, scaling=units), VERIFIED:**
