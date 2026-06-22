@@ -55,6 +55,7 @@ import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCCoverBound
+import TournamentH7.LRCArcComplexity
 import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge
@@ -524,6 +525,27 @@ theorem lrc_cover_bound_slowμ_coverSet_lt_cap_audit
   LonelyRunner.DenseCovers.slowμ_coverSet_lt_cap
     E p0decorr Q capv hcap hbig
 #print axioms lrc_cover_bound_slowμ_coverSet_lt_cap_audit
+
+theorem lrc_arc_complexity_occupiedCount_le_cells_audit
+    {ι α : Type*} [DecidableEq α]
+    (I : Finset ι) (cells : Finset α) (B : ι → Finset α)
+    (hsub : ∀ i ∈ I, B i ⊆ cells)
+    (hdisj : (I : Set ι).PairwiseDisjoint B) :
+    LonelyRunner.ArcComplexity.FiniteCell.occupiedCount I B ≤ cells.card :=
+  LonelyRunner.ArcComplexity.FiniteCell.occupiedCount_le_cells
+    I cells B hsub hdisj
+#print axioms lrc_arc_complexity_occupiedCount_le_cells_audit
+
+theorem lrc_arc_complexity_occupiedCount_le_seven_mul_sum_audit
+    {ι α : Type*} [DecidableEq α]
+    (I : Finset ι) (cells : Finset α) (B : ι → Finset α) (sumE : ℕ)
+    (hsub : ∀ i ∈ I, B i ⊆ cells)
+    (hdisj : (I : Set ι).PairwiseDisjoint B)
+    (hcells : cells.card ≤ 7 * sumE) :
+    LonelyRunner.ArcComplexity.FiniteCell.occupiedCount I B ≤ 7 * sumE :=
+  LonelyRunner.ArcComplexity.FiniteCell.occupiedCount_le_seven_mul_sum
+    I cells B sumE hsub hdisj hcells
+#print axioms lrc_arc_complexity_occupiedCount_le_seven_mul_sum_audit
 
 /-! ### LRC14 concrete slow-time witness floor -/
 

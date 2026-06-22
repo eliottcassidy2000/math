@@ -64,6 +64,8 @@
                                       behind `D(E) <= p0(E)`.
     · TournamentH7.LRCCoverBound — elementary cover-bound cores:
                                       coverSet monotonicity and small-k vanishing.
+    · TournamentH7.LRCArcComplexity — disjoint-cell arc-complexity support
+                                      for the THM-546/HYP-2840 hp0cap route.
     · TournamentH7.LRCGoodSet — concrete measurable `GOOD` event carrier.
     · TournamentH7.LRCBonferroniMeasure — probability-measure Bonferroni
                                       inequality for `GOOD(E) ∩ G_P`.
@@ -144,6 +146,7 @@ import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCCoverBound
+import TournamentH7.LRCArcComplexity
 import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge

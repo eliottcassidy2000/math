@@ -19247,3 +19247,41 @@ implies Mreach/LRC14 through Part A" and destroys speed ownership, wall location
 and runner-pair geometry.  Remaining hard nodes are concrete hp0cap, hmeasGP,
 the actual `rho_K/arcCount` definitions, and the finite-ruler approximation
 inequality.
+
+## codex-2026-06-22-S87 -- LRC14 arc-complexity finite disjoint-cell core formalized
+
+Continued the LRC14 Lean formalization after pulling current `origin/main` and
+integrating the incoming THM-546/HYP-2840 arc-complexity signal.  The relevant
+new observation is the factor-six saving in the far-peel variation ledger:
+exactly-one-miss sector regions `B_j` are disjoint, so their cells should be
+counted once against a common breakpoint partition rather than six times.
+During pre-commit sync, KPS S31 added `LRCMarginalUniform.lean`, the marginal
+one-speed sector-measure atom for the same HYP-2840 route; this checkpoint is
+the complementary finite disjoint-cell counting atom.
+
+Added `TournamentH7.LRCArcComplexity` and wired it into the root import and
+`Verify`.  The new sorry-free finite lemmas prove that a pairwise-disjoint
+family of occupied cell sets has occupied count equal to the union cardinality,
+that this count is bounded by the common cell partition, and therefore that it
+is bounded by `7*sumE` once the concrete sector-crossing partition bound is
+supplied.  This is not yet the analytic `B_j(E')` theorem; it is the formal
+support lemma ready for that instantiation.
+
+Verification: `lake build TournamentH7.LRCArcComplexity TournamentH7.Verify`
+completed successfully and the transcript was saved in
+`05-knowledge/results/lrc14_arc_complexity_lean_codex_s87.out`.  Grepping the
+transcript for `warning:`, `error:`, `sorryAx`, `declaration uses .sorry`, and
+`failed` returned no matches.  The new declarations use only the standard
+Mathlib/classical axioms reported by `#print axioms`.
+
+Assumption challenge / Tournament Analysis: the vertices here are
+proof-obligation/cell-family states, not runners or arcs:
+`common breakpoint partition > occupied cells > exactly-one-miss sector cells >
+component readout > far-peel error budget`.  This quotient preserves the LRC
+predicate that every exactly-one-miss cell is counted at most once in the
+variation ledger; it destroys speed ownership, interval adjacency, component
+geometry, phase values, and sector labels except as disjoint cell membership.
+The challenged assumption is that the six sector ledgers must be summed
+independently.  Remaining hard nodes are the concrete `B_j(E')` construction,
+pairwise disjointness over sector-crossing cells, `#cells<=7*sumE`, and the
+component/readout bridge to THM-546's `V(E')`.

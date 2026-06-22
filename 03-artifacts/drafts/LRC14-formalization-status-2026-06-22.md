@@ -82,6 +82,14 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   small-cardinality vanishing, monotonicity, and the decorrelation-reduction
   wrapper for hp0cap.  KPS S31b wired `LRCFourteenSkeleton.p0` to this
   definition, so p0-route hypotheses now refer to the actual `coverSet` event.
+- `LRCArcComplexity` — finite support lemma for the THM-546/HYP-2840
+  arc-complexity sharpening: pairwise disjoint exactly-one-miss cell families
+  subordinate to a common breakpoint partition have total occupied count at
+  most the partition size, hence at most `7*sumE` once the concrete partition
+  bound is supplied.  This formalizes the factor-six bookkeeping saving; the
+  analytic `B_j(E')` construction and component readout are still open.  This
+  complements the incoming `LRCMarginalUniform` atom for one-speed sector
+  measure bounds in the same HYP-2840 hp0cap/far-peel route.
 - `LRCWitnessFloorConcrete` — `measGP − p0 ≤ μ(coverSetᶜ ∩ safeSet)`, with the
   carrier inside `safeSet`.  Codex S86g adds the verified margin form:
   `p0≤cap−delta` and `cap≤measGP` imply
@@ -134,3 +142,8 @@ positivity rather than the placeholder `m_P` floor.
 - **Part A residual** (#arcs): `#arcs(GOOD(E))` is period-bounded — consec plateaus
   at ~13, single-far ≤15, independent of Vmax (HYP-2838) ⟹ finite-Vmax correction
   `#arcs/Vmax → 0` uniformly for the binding family. Wide family delta-controlled.
+- **Far-peel arc-complexity residual**: the finite disjoint-cell core of the
+  THM-546 sharpening is now Lean (`LRCArcComplexity`), giving the formal
+  bookkeeping path from disjoint `B_j` cells to `V<=7*sumE`.  The remaining work
+  is the concrete breakpoint partition, actual `B_j(E')` cell representation,
+  and component/readout bridge.
