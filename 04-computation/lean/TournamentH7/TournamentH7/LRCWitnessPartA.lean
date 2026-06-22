@@ -462,6 +462,144 @@ theorem lrc14_from_finite_partA_p0_margin_split_shapes
         hfloor (herror (shapeOf v)) (hlargeBudget (shapeOf v) h8 h13)
   exact lonely_of_Mreach_ge v hv (hfinitePartA v hv hpos)
 
+/-- Multiplicative-budget version of
+`lrc14_from_finite_partA_p0_margin_shapes`, avoiding a division-side hypothesis
+when the finite arc count is bounded as `#arcs < delta * Vmax`. -/
+theorem lrc14_from_finite_partA_p0_margin_shapes_mul
+    (nuShape measGP p0Shape cap delta finiteRho : Shape → ℝ)
+    (arcCount vmax : Shape → ℕ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, cap s ≤ measGP s)
+    (hvmax : ∀ s, 0 < vmax s)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) < delta s * (vmax s : ℝ))
+    (hfinitePartA : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      0 < finiteRho (shapeOf v) → (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement := by
+  intro v hv
+  have hpos : 0 < finiteRho (shapeOf v) :=
+    finite_witness_pos_from_p0_margin_shapes_mul
+      nuShape measGP p0Shape cap delta finiteRho arcCount vmax
+      hbonf hDp0 hp0cap hmeasGP hvmax herror hbudget (shapeOf v)
+  exact lonely_of_Mreach_ge v hv (hfinitePartA v hv hpos)
+
+/-- Finite-ruler positivity from the full Bonferroni split floor.  This composes
+the small-cluster pigeonhole leg and the large-cluster Bonferroni/Lemma-A/Lemma-B
+leg with the Part-A approximation inequality, using the uniform `m_P` margin as
+the finite error budget. -/
+theorem finite_witness_pos_from_bonferroni_nodes_all_clusters
+    (nuShape measGP finiteRho : Shape → ℝ)
+    (arcCount vmax : Shape → ℕ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hnu1 : ∀ s, clusterSize s ≤ 7 → nuShape s = 1)
+    (hA : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (Bonferroni.nuConsec (clusterSize s) : ℝ) ≤ nuShape s)
+    (hBsmall : ∀ s, clusterSize s ≤ 7 → (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hBlarge : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) / (vmax s : ℝ) < (witnessMP : ℝ))
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) :
+    0 < finiteRho (shapeOf v) := by
+  have hfloor : (witnessMP : ℝ) ≤ witnessG2 (shapeOf v) :=
+    Bonferroni.witness_floor_from_bonferroni_nodes_all_clusters
+      nuShape measGP hbonf hnu1 hA hBsmall hBlarge hsize v hv
+  exact finite_witness_pos_from_arc_error
+    (finiteRho (shapeOf v)) (witnessG2 (shapeOf v)) (witnessMP : ℝ)
+    (arcCount (shapeOf v)) (vmax (shapeOf v))
+    hfloor (herror (shapeOf v)) (hbudget (shapeOf v))
+
+/-- Multiplicative-budget version of
+`finite_witness_pos_from_bonferroni_nodes_all_clusters`. -/
+theorem finite_witness_pos_from_bonferroni_nodes_all_clusters_mul
+    (nuShape measGP finiteRho : Shape → ℝ)
+    (arcCount vmax : Shape → ℕ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hnu1 : ∀ s, clusterSize s ≤ 7 → nuShape s = 1)
+    (hA : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (Bonferroni.nuConsec (clusterSize s) : ℝ) ≤ nuShape s)
+    (hBsmall : ∀ s, clusterSize s ≤ 7 → (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hBlarge : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13)
+    (hvmax : ∀ s, 0 < vmax s)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) < (witnessMP : ℝ) * (vmax s : ℝ))
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0) :
+    0 < finiteRho (shapeOf v) := by
+  have hfloor : (witnessMP : ℝ) ≤ witnessG2 (shapeOf v) :=
+    Bonferroni.witness_floor_from_bonferroni_nodes_all_clusters
+      nuShape measGP hbonf hnu1 hA hBsmall hBlarge hsize v hv
+  exact finite_witness_pos_from_arc_error_mul
+    (finiteRho (shapeOf v)) (witnessG2 (shapeOf v)) (witnessMP : ℝ)
+    (arcCount (shapeOf v)) (vmax (shapeOf v)) (hvmax (shapeOf v))
+    hfloor (herror (shapeOf v)) (hbudget (shapeOf v))
+
+/-- Conditional LRC14 assembly from the Bonferroni split floor plus an explicit
+finite-ruler error budget.  Compared with
+`Bonferroni.lrc14_from_bonferroni_nodes_given_partA`, the Part-A hypothesis now
+consumes the finite density `finiteRho`, matching the finite-Vmax statement. -/
+theorem lrc14_from_finite_partA_bonferroni_nodes
+    (nuShape measGP finiteRho : Shape → ℝ)
+    (arcCount vmax : Shape → ℕ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hnu1 : ∀ s, clusterSize s ≤ 7 → nuShape s = 1)
+    (hA : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (Bonferroni.nuConsec (clusterSize s) : ℝ) ≤ nuShape s)
+    (hBsmall : ∀ s, clusterSize s ≤ 7 → (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hBlarge : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) / (vmax s : ℝ) < (witnessMP : ℝ))
+    (hfinitePartA : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      0 < finiteRho (shapeOf v) → (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement := by
+  intro v hv
+  have hpos : 0 < finiteRho (shapeOf v) :=
+    finite_witness_pos_from_bonferroni_nodes_all_clusters
+      nuShape measGP finiteRho arcCount vmax hbonf hnu1 hA hBsmall hBlarge
+      hsize herror hbudget v hv
+  exact lonely_of_Mreach_ge v hv (hfinitePartA v hv hpos)
+
+/-- Multiplicative-budget version of
+`lrc14_from_finite_partA_bonferroni_nodes`. -/
+theorem lrc14_from_finite_partA_bonferroni_nodes_mul
+    (nuShape measGP finiteRho : Shape → ℝ)
+    (arcCount vmax : Shape → ℕ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hnu1 : ∀ s, clusterSize s ≤ 7 → nuShape s = 1)
+    (hA : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (Bonferroni.nuConsec (clusterSize s) : ℝ) ≤ nuShape s)
+    (hBsmall : ∀ s, clusterSize s ≤ 7 → (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hBlarge : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13)
+    (hvmax : ∀ s, 0 < vmax s)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) < (witnessMP : ℝ) * (vmax s : ℝ))
+    (hfinitePartA : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      0 < finiteRho (shapeOf v) → (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement := by
+  intro v hv
+  have hpos : 0 < finiteRho (shapeOf v) :=
+    finite_witness_pos_from_bonferroni_nodes_all_clusters_mul
+      nuShape measGP finiteRho arcCount vmax hbonf hnu1 hA hBsmall hBlarge
+      hsize hvmax herror hbudget v hv
+  exact lonely_of_Mreach_ge v hv (hfinitePartA v hv hpos)
+
 /-! ## Axiom audit -/
 
 #print axioms finite_witness_pos_from_abs_error
@@ -484,6 +622,11 @@ theorem lrc14_from_finite_partA_p0_margin_split_shapes
 #print axioms lrc14_from_finite_partA_goodSet_margin_shapes
 #print axioms lrc14_from_finite_partA_goodSet_p0_margin_shapes
 #print axioms lrc14_from_finite_partA_p0_margin_split_shapes
+#print axioms lrc14_from_finite_partA_p0_margin_shapes_mul
+#print axioms finite_witness_pos_from_bonferroni_nodes_all_clusters
+#print axioms finite_witness_pos_from_bonferroni_nodes_all_clusters_mul
+#print axioms lrc14_from_finite_partA_bonferroni_nodes
+#print axioms lrc14_from_finite_partA_bonferroni_nodes_mul
 
 end PartA
 end LRC14

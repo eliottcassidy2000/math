@@ -909,6 +909,42 @@ needed a second compactness route to make progress.  The compactness route is
 now redundant and bridged; the remaining mathlib-blocking proof work is still
 semantic/analytic: define the event measures and prove the witness-floor and
 finite Part-A inequalities.
+## codex-2026-06-22-S86 -- finite PartA composed with Bonferroni/p0 floors
+
+Pulled the S85/S85b Bonferroni and finite-Vmax Part-A modules into one Lean
+boundary and added the next sorry-free composition layer in
+`TournamentH7.LRCWitnessPartA`.  New theorems:
+`lrc14_from_finite_partA_p0_margin_shapes_mul`,
+`finite_witness_pos_from_bonferroni_nodes_all_clusters`,
+`finite_witness_pos_from_bonferroni_nodes_all_clusters_mul`,
+`lrc14_from_finite_partA_bonferroni_nodes`, and
+`lrc14_from_finite_partA_bonferroni_nodes_mul`.
+
+The new wrappers let the formal LRC14 route consume a finite density
+`finiteRho` directly: Bonferroni/p0 supplies either a shape-dependent margin or
+the uniform `m_P` witness floor, the explicit arc-count budget proves
+`finiteRho > 0`, and the finite Part-A criterion then feeds concrete
+`Mreach >= 1/14` and `LRC14Statement`.  Added `Verify` audit wrappers for the
+p0 multiplicative route and the Bonferroni finite-budget route, so the axiom
+transcript covers the new endpoints.
+
+Pulled mac-mini S25 during the final rebase and integrated it as directly
+relevant proof signal.  Root-imported `TournamentH7.LRCWitnessAttainment` and
+added the `Verify` wrapper `lrc_witness_attainment_exists_lonely_audit`, exposing
+the generic Mathlib theorem that a time with loneliness margin at least `1/n`
+gives an actual lonely witness.  This sits beside `LRCMreachConcrete`: it does
+not change the finite `rho_K` proof boundary, but it gives a smaller topological
+handoff target for future wiring from the witness-floor/supremum side.
+Tightened the S25 file's imports from broad `Mathlib` to the exact topology
+modules it uses (`HausdorffDistance`, `Order.Compact`, and `Order.Lattice` plus
+tactics), removing the local linter warnings and reducing the focused build
+surface from the full-library 8476-job run to a 2943-job replay.
+
+Tournament Analysis: vertices = `{p0 margin, Bonferroni split floor, m_P,
+arc-count error, Vmax scale, finiteRho positivity, finite PartA, margin
+attainment, Mreach}`.
+Edges are implication/error-budget transfers; the tie Hamiltonian path is
+`Bonferroni/p0 floor -> m_P/delta margin -> #arcs<Vmax*margin -> finiteRho>0 -> finite PartA -> Mreach/margin attainment -> lonely`.  This quotient preserves the LRC sufficiency predicate and the exact inequality flow, but destroys the geometry of GOOD arcs and the Lebesgue-event definitions.  Challenged assumption: it is enough to state Part A as `G2>0 -> Mreach`; the finite-Vmax correction should instead be a first-class formal obligation involving `finiteRho`, `arcCount`, and `Vmax`.
 
 ## codex-2026-06-22-S85b -- finite-Vmax Part-A error budget formalized
 
@@ -975,15 +1011,20 @@ floor theorem is the main large-cluster bottleneck.  The better Lean boundary is
 now the event-level definitions/inclusions (`D <= p0`, `p0 <= cap-delta`,
 `cap <= measGP`) plus Part A.
 
-## codex-2026-06-22-S84 -- LRC14 skeleton made sorry-free by replacing open analytic claims with obligations
+## codex-2026-06-22-S84 -- LRC14 skeleton sorry-free; Bonferroni/p0 witness bridge wired
 
-Pulled `origin/main` through `e45d60b5` before editing and absorbed S83's key signal: concrete `Mreach` is closed, so the remaining Lean risk is not compactness but the way the open analytic frontiers are represented. Updated `TournamentH7.LRCFourteenSkeleton` so THM-527 Part A, the doublet R-tail uniform bound, and the gK8 concentration-extremality frontier are named `Prop` obligations rather than theorem declarations proved by `sorry`. The old 2/7 rho-star route is now explicitly conditional on both `thm527_partA_density_pos_implies_reach` and `obsoleteRhoStarUniformFloor`, and the unused `rhoStar_nonneg` axiom became `rhoStar_nonneg_obligation`.
+Pulled `origin/main` repeatedly through KPS S30 and the S84 sorry-free skeleton work, then resolved the overlapping formalization lines into one Lean state. `TournamentH7.LRCFourteenSkeleton` now carries the remaining analytic frontiers as named `Prop` obligations/hypotheses rather than theorem declarations proved by `sorry`: `thm527_partA_density_pos_implies_reach`, parameterized `doublet_Rtail_uniform_bound`, and parameterized `gK8_concentration_extremality`. The old 2/7 rho-star route is explicitly conditional on both Part A and `obsoleteRhoStarUniformFloor`; the live 1/7 witness route remains the active proof path.
 
-This is not a completed LRC14 proof: `rhoStar`, `shapeOf`, `witnessG2`, and `p0` remain abstract, and the live 1/7 route still needs the measure definition of `witnessG2`, the per-k lower-bound theorem `rhoGlobFloorRat k <= rhoGlob(shape)`, and the direct implication `G2>0 -> concrete Mreach>=1/14`. It is, however, a cleaner mathlib-facing state: the skeleton no longer asserts unproved analysis, and focused `lake build TournamentH7.LRCFourteenSkeleton` reports no `sorryAx` for the conditional top-level glue or the named obligations. The umbrella `TournamentH7.lean` now imports the skeleton because it is no longer a `sorry`-carrying module.
+Integrated the incoming `LRCWitnessBonferroni` module as proof signal and extended it into the skeleton. The module now has no-sorry small/large/all-cluster bridge theorems (`witness_small_floor_from_bonferroni_nodes`, `witness_large_floor_from_bonferroni_nodes`, `witness_floor_from_bonferroni_nodes_all_clusters`) and the conditional top-level assembly `lrc14_from_bonferroni_nodes_given_partA`. The global witness-floor hypothesis is decomposed into Bonferroni, the `k<=7` full-measure fact, the `8..13` three-distance `nuConsec` floor, small/large `G_P` floors, cluster-size bookkeeping, and the direct witness implication `G2>0 -> Mreach>=1/14`.
 
-Tournament Analysis for this formalization pass used vertices = proof obligations (`concrete Mreach`, `PartA`, `rhoGlob floor`, `R-tail`, `gK8 concentration`, `top conditional glue`) and directed edges = conditional implication/use in the DAG. This quotient preserves dependency pressure and destroys geometric measure content; the challenged assumption is that keeping open analytic statements as theorem-level `sorry`s helps mathlib-readiness. It does not: the right edge orientation is from explicit obligations into conditional theorems until the measure objects are defined.
+Pulled again over the KPS `D<=p0` unification and added the shape-wise Lean theorem `witnessG2_pos_from_p0_wide_bound_shapes` plus the conditional top-level theorem `lrc14_from_p0_wide_bound_given_partA`: a positive p0 wide-bound margin gives `G2>0` through Bonferroni and `D<=p0`, after which direct witness Part A and the concrete `Mreach` theorem finish LRC14. `Verify` now audits both the Bonferroni `m_P` floor route and the p0-unification route.
 
-Post-commit rebase pulled KPS S30 before push: `LRCWitnessBonferroni.lean` gives a sorry-free structural reduction of the `witnessG2` floor via Bonferroni and the p0 wide-bound margin. Treated as strong signal and root-imported it after the skeleton became sorry-free. This sharpens the live frontier again: the large-cluster witness floor is no longer best viewed as a standalone compactness theorem; it is now routed through Bonferroni measure inclusion, cap/`measGP` duality, and the p0 wide-bound margin, with the remaining work concentrated in defining those measures and proving the analytic inclusions.
+Post-commit rebase pulled the KPS reflection `07-reflections/witness-floor-is-the-p0-wide-bound.md`; it exactly matches the Lean bridge now in tree. Treated as confirmation that the witness-floor node should be discharged from the p0 wide-bound margin, with the remaining analytic convergence centered on the event inclusion/measure definitions and the witness-to-`Mreach` Part-A implication.
+
+Tournament Analysis for this formalization pass used vertices = proof obligations (`concrete Mreach`, `PartA`, `rhoGlob floor`, `Bonferroni`, `D<=p0`, `p0 margin`, `G_P cap`, `R-tail`, `gK8 concentration`, `top conditional glue`) and directed edges = conditional implication/use in the DAG. This quotient preserves dependency pressure and destroys geometric measure content; the challenged assumption is that open analytic facts should remain theorem-level `sorry`s. The better mathlib-facing orientation is explicit obligations feeding conditional theorems until the measure objects are defined.
+
+Verification: `lake build TournamentH7.LRCFourteenSkeleton`, `lake build TournamentH7.LRCWitnessBonferroni`, `lake build TournamentH7.Verify`, and `lake build TournamentH7` all succeed. Stored transcripts: `lrc14_sorryfree_obligations_codex_s84.out`, `lrc_witness_bonferroni_bridge_codex_s84.out`, `lrc_verify_bonferroni_codex_s84.out`, and `tournamenth7_root_bonferroni_codex_s84.out`.
+
 ## kind-pasteur-2026-06-22-S30 -- WITNESS FLOOR closed: ELEMENTARY Bonferroni + UNIFICATION with the p0 wide bound (sorry-free Lean)
 
 Worked the THM-527 witness-floor crux (the "genuine remaining compactness crux") and dissolved it. TWO results. (1) ELEMENTARY Bonferroni closure: `rho*_glob(P,E) >= nu(E) + meas(G_P) - 1`, reducing positivity to Lemma A `nu(E)>=nu_consec(k)` [scale-invariant `nu(cE)=nu(E)`; consec is the STRICT minimizer, exact-exhaustive spread<=2k; wide shapes decorrelate `nu->1`, the SAFE direction] + Lemma B `cap_k=min meas(G_P)` [EXACT finite rational, minimizer P={1}u{largest}] + finite floor table `nu_consec+cap-1>0` (worst `1891/5880~0.3216`). No compactness/Vmax. (2) THE UNIFICATION (headline): the witness floor is IMPLIED by the team's already-closed `p0<=cap` wide bound. Proved `D(E)<=p0(E)` (1/7-dense => all 6 inner sectors hit; half-open argument, anchor phase 0 rules out the edge case), so `rho*_glob >= meas(G_P) - p0(E)`. With the exact DUALITY `cap_k=min meas(G_P)=p0 Q-plateau capRat(k)` (k=8..13) and `p0<=cap`, `rho*_glob >= cap_k-max p0 = delta_k>0` = the wide-bound margin. The 1/7-witness route and the p0 sector route UNIFY (dual readings of one inequality). Found+fixed a wrapping bug in the cap computation; duality then matched exactly.
