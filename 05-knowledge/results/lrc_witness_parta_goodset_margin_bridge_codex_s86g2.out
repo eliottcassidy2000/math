@@ -1,0 +1,39 @@
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_abs_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_arc_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.LRC14.PartA.arc_div_lt_delta_of_lt_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_arc_error_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.PartA.arc_div_lt_delta_of_le_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_arc_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.LRC14.PartA.p0_margin_le_witnessG2_shapes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_floor_shapes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_uniform_arc_bound_shapes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_p0_margin_shapes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_p0_margin_shapes_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_goodSet_margin_shapes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.PartA.finite_witness_pos_from_goodSet_margin_uniform_arc_bound_shapes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.PartA.lrc14_from_finite_partA_p0_margin_shapes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.PartA.lrc14_from_finite_partA_goodSet_margin_shapes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.PartA.lrc14_from_finite_partA_p0_margin_split_shapes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

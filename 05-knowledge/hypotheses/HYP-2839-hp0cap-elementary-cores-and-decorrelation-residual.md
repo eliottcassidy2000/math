@@ -88,6 +88,16 @@ lists `Eof/Pof` and the readout equality
 hp0cap proof itself, the cap floor, and finite-ruler Part A; it is no longer a
 slow-time event quotient problem.
 
+The finite Part-A handoff now consumes that shape-level readout directly.
+`LRCWitnessPartA.finite_witness_pos_from_goodSet_margin_shapes` and its uniform
+arc-bound variant combine the readout equality, anchored `Eof`, p0 margin,
+cap floor, and the `rhoK/arcCount/Vmax` error budget to produce positive
+finite witness density.  The companion
+`lrc14_from_finite_partA_goodSet_margin_shapes` packages this into the
+conditional LRC14 assembly.  This does not prove hp0cap, hmeasGP, or the
+finite-ruler approximation; it removes the extra abstract `delta<=witnessG2`
+glue between those nodes and Part A.
+
 ## The residual (the genuinely analytic part, NOT elementary)
 The binding cases k=8..12 route through the decorrelated closed form (THM-534, kps-S24):
 > `p0(E) <= p0_decorr(E) = sum_t P_t^{(r)} p_t(B)`  [RESONANCE BOUND -- the residual]

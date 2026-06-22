@@ -31,10 +31,12 @@
         - the doublet R-tail (Mordell-Tornheim) uniform bound (THM-564);
         - the top-level assembly into `M(S) >= 1/14` for every covering 13-set.
 
-  DESIGN.  To keep the skeleton lightweight and buildable, the measure-theoretic
-  quantities (`p0`, the miss-distribution `q`, `rho*`) are treated ABSTRACTLY:
-  as real-valued functions / opaque data given to the theorems, with the analytic
-  content stated as hypotheses or named obligations.  The max-min reach `M`
+  DESIGN.  To keep the skeleton lightweight and buildable, the remaining
+  measure-theoretic quantities (the miss-distribution `q`, `rho*`, and the
+  decorrelation residuals) are treated ABSTRACTLY: as real-valued functions /
+  opaque data given to the theorems, with the analytic content stated as
+  hypotheses or named obligations.  The cover atom `p0` is now concrete via
+  `DenseCovers.p0 = (slowμ (coverSet E)).toReal`.  The max-min reach `M`
   is now concrete: it is the supremum of the finite min-reach function over
   `[0,1]`, imported from `LRCMreachConcrete`.  This is the honest boundary --
   the finite combinatorial core and compactness handoff are real Lean, while the
@@ -348,7 +350,8 @@ theorem lrc14_from_witness_floor_cases_given_nodes
 cover atom (`= q0`, the origin coordinate of the missed-count distribution `q`).
 The "wide bound" is `p0(E) ≤ cap_k` for every `k`-speed configuration, split into
 three legs (bounded / single-far / genuine-wide), OR closed in one shot by the
-gK8 concentration cert.  We carry `p0` and the miss-distribution `q` abstractly. -/
+gK8 concentration cert.  We carry the miss-distribution `q` abstractly, while
+`p0` is now the concrete `DenseCovers.p0`. -/
 
 /-- The cover atom `p0(E) = measS7(E)`.  **Concrete** (kps-S31b): the Lebesgue
 measure of the all-6-inner-sectors-hit event `coverSet E` on the slow-time

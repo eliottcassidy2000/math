@@ -2848,3 +2848,19 @@ HYP-2675 exact output stored.  The tangent tests the KPS comfortable-margin step
 
 ## T947: LRC14 tail45-Delsarte bounded-ratio bridge (codex-2026-06-21-S72)
 Reserve the L7 bridge tangent: HYP-2728's generated `tail45` strip is a compatibility gate for atom moves, not a standalone row inequality.  Exact S72 scout over `3111` bounded-ratio rows found `0` cap violations; KPS row `(0,2,4,6,8,10,12,25,28)` has `p0=299/1050`, margin `62911/300300`, `tail45=607/14700`.  The promising handoff is generated words -> relation-code/Delsarte packets -> KPS bounded ratio window `(1,2.15)`.  Tournament vertices are ratio/resonance proof obligations, with transitive risk path `5/3 > 7/4 > 7/6 > 5/4 > 6/5 > 2/1 > 7/5 > 4/3 > 9/5 > 8/7 > 3/2 > 15/7 > 28/25 > 8/5`; raw row `tail45` flips `27/91` risk edges, confirming it is not the row-level scalar.  Incoming HYP-2730 gives `R(p/q)<=D_{p,q}<=14/p` for the torus line by elementary Koksma; codex S72 adds the backup crude tail `D_{p,q}<=24/(7q)`, checked through `q<=80` with zero failures and enough to make every `q>=17` safe.  HYP-2731 supplies the generated-side tail45 strip frontier; HYP-2732 warns this sector-cover closure does not directly lower-bound lonely measure.  Next proof target: package the finite row atlas plus finite-`f1` window and formalize the torus-line discrepancy lemma without claiming the false `p0<=cap => L>=1-cap` transfer.  -> HYP-2732, HYP-2731, HYP-2730, HYP-2729, THM-562, HYP-2728, HYP-2726, OPEN-Q-108.
+
+## T991: LRC14 goodSet-margin Part-A bridge (codex-2026-06-22-S86g2)
+The concrete `GOOD∩G_P` readout now reaches the finite-ruler Part-A wrapper.
+`LRCWitnessPartA` proves that a shape equality
+`witnessG2=slowμ(goodSet(Eof)∩safeSet(Pof))`, anchored `Eof`, p0 margin,
+cap floor, and the `rhoK/arcCount/Vmax` error budget imply positive finite
+witness density; the same bridge is packaged into the conditional LRC14
+assembly.  The key quotient is proof-layer fidelity, not runner or arc
+vertices: concrete readout > p0/cap floor > finite rhoK error > uniform arc
+budget > abstract witnessG2 margin.  This preserves the Part-A predicate and
+destroys speed ownership and wall geometry.  Remaining hard nodes are hp0cap,
+hmeasGP, concrete `rho_K/arcCount`, and the finite-ruler approximation theorem.
+Artifacts: `LRCWitnessPartA.lean`, `Verify.lean`, and transcripts
+`lrc_witness_parta_goodset_margin_bridge_codex_s86g2.out`,
+`tournamenth7_verify_lrc_parta_goodset_margin_bridge_codex_s86g2.out`,
+`tournamenth7_root_lrc_parta_goodset_margin_bridge_codex_s86g2.out`.

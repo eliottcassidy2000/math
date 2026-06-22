@@ -1,3 +1,30 @@
+## codex-2026-06-22-S86g2 -- goodSet margin now reaches finite Part A
+
+Pushed the shape-level goodSet readout one layer farther into `LRCWitnessPartA`.
+New wrappers compose the concrete carrier equality
+`witnessG2 s = slowμ(goodSet(Eof s) ∩ safeSet(Pof s))` with the finite-ruler
+arc/error budget:
+
+- `LRCWitnessPartA.finite_witness_pos_from_goodSet_margin_shapes`
+- `LRCWitnessPartA.finite_witness_pos_from_goodSet_margin_uniform_arc_bound_shapes`
+- `LRCWitnessPartA.lrc14_from_finite_partA_goodSet_margin_shapes`
+
+Interpretation: a large-branch shape no longer has to separately prove an
+abstract `delta<=witnessG2` before entering Part A.  It can supply the concrete
+goodSet/safeSet readout, anchored `Eof`, p0 margin, cap floor, and the finite
+arc approximation/budget, and the theorem yields the finite witness positivity
+or the conditional LRC14 assembly directly.  Remaining hard nodes are still
+hp0cap, hmeasGP, concrete `arcCount/rhoK` readout, and the finite-ruler error
+inequality.
+
+Post-pull signal integrated from KPS S31b (`ce0b8af6`): `LRCFourteenSkeleton.p0`
+is now concrete, `DenseCovers.p0 E = (slowμ (coverSet E)).toReal`, with
+`LRCP0Concrete` supplying probability bounds, small-cardinality vanishing,
+monotonicity, and the decorrelation-reduction package.  This dovetails with the
+new Part-A bridge: the p0 margin hypothesis now points at an actual cover event,
+while these wrappers push the resulting goodSet/safeSet witness floor into the
+finite-ruler witness.
+
 ## codex-2026-06-22-S86g2 -- shape-level goodSet witnessG2 bridge
 
 Pulled the S87 coordination summary for commit `48ae25a6`; no conflicting Lean

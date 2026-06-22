@@ -77,6 +77,11 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   `phaseGapSet E⊆goodSet E` and `(denseSet E)ᶜ⊆goodSet E`.
 - `LRCDenseCovers` — `coverSet`, `safeSet` (= G_P), `measurable_phase`, `D ≤ p0`,
   plus the phase-gap bridge `(denseSet E)ᶜ⊆phaseGapSet E`.
+- `LRCP0Concrete` — concrete skeleton cover atom
+  `p0(E)=(slowμ(coverSet E)).toReal`, with probability bounds,
+  small-cardinality vanishing, monotonicity, and the decorrelation-reduction
+  wrapper for hp0cap.  KPS S31b wired `LRCFourteenSkeleton.p0` to this
+  definition, so p0-route hypotheses now refer to the actual `coverSet` event.
 - `LRCWitnessFloorConcrete` — `measGP − p0 ≤ μ(coverSetᶜ ∩ safeSet)`, with the
   carrier inside `safeSet`.  Codex S86g adds the verified margin form:
   `p0≤cap−delta` and `cap≤measGP` imply
@@ -96,16 +101,23 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   gives positivity or `delta≤witnessG2` directly.
 - `LRCWitnessPartA` — finite-ruler error-budget glue.  Codex S86g adds the
   verified split assembly where `k≤7` uses the `m_P` budget and `8≤k≤13` uses
-  the p0 margin `delta`.
+  the p0 margin `delta`.  Codex S86g2 then composes the concrete
+  `goodSet/safeSet` shape readout with that finite-ruler budget, so a large
+  branch can go directly from `p0(Eof)≤cap−delta`,
+  `cap≤slowμ(safeSet Pof)`, and
+  `witnessG2=slowμ(goodSet Eof∩safeSet Pof)` to positive finite witness
+  density, and to the conditional LRC14 assembly, once `rhoK/arcCount/Vmax`
+  approximation data is supplied.
 - `LRCMreachConcrete` — `Mreach`, `lonely_of_Mreach_ge` (concrete).
 
 ## 4. The remaining integration (in progress, kps/codex)
 
 The nodes are stated on the **opaque** `shapeOf`/`witnessG2`. The concrete
 `witnessG2 := μ(goodSet E ∩ safeSet P)` readout is now bridged for the p0
-strict/margin route; an unconditional `lrc14 : LRC14Statement` still needs the
-actual `shapeOf` to `Eof/Pof` instantiation and the branch nodes (`hsize`,
-`hsmall`, plus concrete hypotheses). The NU route then needs the spreading
+strict/margin route and for the Part-A finite witness wrappers; an unconditional
+`lrc14 : LRC14Statement` still needs the actual `shapeOf` to `Eof/Pof`
+instantiation and the branch nodes (`hsize`, `hsmall`, plus concrete
+hypotheses). The NU route then needs the spreading
 lemma `hA`, the cap floor `hmeasGP`, and finite-ruler Part A `hpartA`. The p0
 route instead needs `hp0cap` plus a positive margin `hδpos`, the same cap floor
 `hmeasGP`, and the same `hpartA`; it bypasses `hA` because Part A consumes

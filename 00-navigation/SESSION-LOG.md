@@ -19155,3 +19155,48 @@ Pulled incoming S21 period-max work while the bridge scout was running.  Signal 
 Added `04-computation/lrc14_periodmax_boolean_bridge_codex_s76.py` and stored `05-knowledge/results/lrc14_periodmax_boolean_bridge_codex_s76.out`.  The overlay attaches `Phi_low=21*T1+57*T2sep+2*T2adj`, `q0`, AP/dilation type, endpoint period, and canonical/strict margins to the S6/S7 bounded-base frontier.  Main result: the naive transfer of HYP-2791's three-term `Phi_low` cut to the one-far bounded-base ledger is FALSE at k=8.  Frontier witnesses include `(0,2,3,5,6,8,11)` with `Phi_low` gap `-4153/3080`, `(0,1,2,10,11,12,13)` with `-33499/60060`, and `(0,1,3,5,9,11,13)` with `-7669/16380`.  In contrast, every non-AP frontier row in the overlay has positive `q0` gap; global min `71/5880`, k=8 min `1/40`, k=9 min `3/56`, k=10 min `71/5880`.  The S6 broad-scan worst checked row `(0,4,6,8,10,12,14)` has `Phi_low` gap `493/294` and `q0` gap `5/49`.
 
 Updated HYP-2790 from a claimed bridge to a PARTIALLY-TRUE corrected bridge.  Corrected proof order: exact period-max scan / THM-563 -> AP/dilation filter -> q0 cover-atom slack on bases -> skipped-period audit -> reserve `Phi_low` for final-row Boolean laws or a possible size-shifted k>=9 subledger.  Added reflection `07-reflections/lrc14-periodmax-boolean-bridge-codex-s76.md`, T955, and results/hypothesis index entries.  Tournament vertices are proof lenses rather than runners: `periodmax_direct_scan > ap_dilation_filter > q0_slack > skipped_period_audit > boolean_low_depth_slack > cap_normalization_guard > raw_plateau_margin`.
+
+## codex-2026-06-22-S86g2 -- goodSet shape margin reaches Part-A finite witness bridge
+
+Continued the Lean LRC14 formalization after the shape-level `goodSet`/`safeSet`
+readout bridge.  Pulled current `origin/main` before the checkpoint and found no
+new conflicting Lean work.  A later pre-push pull brought in KPS S31b
+(`LRCP0Concrete.lean` and `LRCFourteenSkeleton.p0 := DenseCovers.p0`), which is
+direct signal for this route: p0 margins now refer to the concrete
+`slowμ(coverSet E)` atom, while this checkpoint pushes the resulting
+goodSet/safeSet witness floor into finite Part A.  Added
+`TournamentH7.LRCEventMeasureBridge` as an
+import of `LRCWitnessPartA` and proved the direct composition from concrete
+shape readout to finite witness positivity:
+
+- `finite_witness_pos_from_goodSet_margin_shapes`
+- `finite_witness_pos_from_goodSet_margin_uniform_arc_bound_shapes`
+- `lrc14_from_finite_partA_goodSet_margin_shapes`
+
+These theorems consume the equality
+`witnessG2 s = slowμ(goodSet(Eof s) ∩ safeSet(Pof s))`, anchored `0∈Eof s`,
+the p0 margin `p0(Eof s)≤cap s−delta s`, the cap floor
+`cap s≤slowμ(safeSet(Pof s))`, and the finite `rhoK/arcCount/Vmax` approximation
+budget.  The output is positive finite witness density, or the conditional
+`LRC14Statement` assembly through the existing Part-A route.
+
+Verification: focused `lake env lean TournamentH7/LRCWitnessPartA.lean`, focused
+`lake build TournamentH7.LRCWitnessPartA TournamentH7.Verify`, aggregate
+`lake env lean TournamentH7/Verify.lean`, and root `lake env lean TournamentH7.lean`
+were captured in:
+`lrc_witness_parta_goodset_margin_bridge_codex_s86g2.out`,
+`tournamenth7_verify_lrc_parta_goodset_margin_bridge_codex_s86g2.out`, and
+`tournamenth7_root_lrc_parta_goodset_margin_bridge_codex_s86g2.out`.  Grepping
+the new transcripts found no `warning:`, `error:`, `sorryAx`, or
+`declaration uses .sorry`.
+
+Assumption challenge / Tournament Analysis: the proof-bearing vertices in this
+formal layer are not runners or arcs.  They are proof obligations and readout
+layers ordered by predicate fidelity:
+`concrete goodSet/safeSet readout > p0 margin/cap floor > finite rhoK error >
+uniform arc budget > abstract witnessG2 margin > runner-level intuition`.
+This quotient preserves the LRC predicate "positive finite witness density
+implies Mreach/LRC14 through Part A" and destroys speed ownership, wall location,
+and runner-pair geometry.  Remaining hard nodes are concrete hp0cap, hmeasGP,
+the actual `rho_K/arcCount` definitions, and the finite-ruler approximation
+inequality.
