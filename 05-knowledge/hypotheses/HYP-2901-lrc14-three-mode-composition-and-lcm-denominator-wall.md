@@ -18,6 +18,10 @@ related:
 results:
   - 04-computation/lrc_lcm_committed_denominator_wall_codex_s114.py
   - 05-knowledge/results/lrc_lcm_committed_denominator_wall_codex_s114.out
+  - 04-computation/lrc_venn_bonferroni_wide_kps.py
+  - 05-knowledge/results/lrc_venn_bonferroni_wide_kps.out
+  - 04-computation/lrc_rfar_convergent_tail_kps.py
+  - 05-knowledge/results/lrc_rfar_convergent_tail_kps.out
 ---
 
 # HYP-2901: three-mode composition splits the finite Venn node from the analytic denominator wall
@@ -156,6 +160,45 @@ above the wall is not governed by primes alone: `D=121=11^2` appears first for
 `X=110,120`.  The effective Node-3 theorem should therefore be stated over
 exact-period prime-power packets, with the radical filter as the first easy
 branch and torus equidistribution as the saturated branch.
+
+## Incoming S31t integration: the Venn gives a Bonferroni-3 wide target
+
+KPS S31t applies the same corrected Venn geometry to the wide p0/cap branch.
+For a bounded base `B` and far runners, the cover expansion is the Newton /
+Mobius expansion in the far runners:
+
+```text
+p0(B union far) = T_1 + T_2 + T_3 + T_4 + ...
+```
+
+where the corrected Venn identifies:
+
+```text
+T_1  corners       one-far packet
+T_2  edges         two-far / doublet packet
+T_3  center        three-far packet
+```
+
+The verified pattern is:
+
+```text
+T_1 = 0 or small in genuine-wide rows,
+T_2 is the binding doublet edge,
+T_3 is the first subdominant correction,
+T_4,T_5,... alternate with decreasing size in sampled rows.
+```
+
+If the uniform sign/decrease statement is proved, then the wide branch has the
+Bonferroni upper bound
+
+```text
+p0(B union far) <= T_1 + T_2 + T_3,
+```
+
+so the corrected Venn reduces the unbounded multi-far cap problem to a
+third-order target: doublet plus triple, with the `r>=4` tail nonpositive.  This
+fits HYP-2901's split: the Venn supplies the finite packet names, while the
+uniform decay/sign theorem is still analytic Dedekind/equidistribution content.
 
 ## Proof implication
 

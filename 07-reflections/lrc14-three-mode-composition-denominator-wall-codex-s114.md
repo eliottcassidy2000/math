@@ -49,12 +49,23 @@ proof.  The S114 composite-denominator data adds the second warning: once the
 small-prime branch is saturated, exact first witnesses live in prime-power
 packets, not in a prime-only list.
 
+Incoming KPS S31t pushes the Venn correction into the wide cap branch.  The
+multi-far cover has a Newton expansion in the far runners: `T_1` is the
+one-far corner packet, `T_2` is the two-far/doublet edge packet, `T_3` is the
+three-far center packet, and higher `T_r` are the deeper far intersections.
+The sampled pattern is exactly what the Venn suggests: the doublet edge binds,
+the triple is the first correction, and the `r>=4` tail alternates downward.
+If that sign/decrease statement is proved uniformly, the wide cap reduces to a
+Bonferroni-3 target `p0 <= T_1+T_2+T_3`.  This is not a new finite-only proof;
+the uniform tail sign is still analytic Dedekind/equidistribution content.
+
 The practical proof split I would keep:
 
 1. Node 2 finite cap: prove AP/consecutive extremality using the Legendre Venn
    labels.  Do not collapse `D` and `C` just because they have the same size.
    One is a corner, one is an overlap, and that is the finite realizability
-   information.
+   information.  For wide rows, try the S31t Bonferroni-3 target: doublet edge
+   plus triple center below cap, with higher far packets nonpositive.
 2. Node 3 / Part A: first apply the radical filter (`p<=13` surviving gives
    `t=1/p`), then prove an effective equidistribution lemma for denominators
    just beyond the committed wall.  This should be stated over exact-period
