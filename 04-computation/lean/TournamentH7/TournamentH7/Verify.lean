@@ -46,6 +46,8 @@ import TournamentH7.LRCFactorialAtom
 import TournamentH7.LRCBooleanTypeCut
 import TournamentH7.LRCPeriodmaxCertificate
 import TournamentH7.LRCGenuineWideCorrection
+import TournamentH7.LRCQ6Contraction
+import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCL7Discrepancy
 
 open Tournament
@@ -142,6 +144,29 @@ theorem lrc_periodmax_k8_periodmax_is_two_audit :
       LonelyRunner.PeriodmaxCertificate.k8.pmDen = 1 :=
   LonelyRunner.PeriodmaxCertificate.k8_periodmax_is_two
 #print axioms lrc_periodmax_k8_periodmax_is_two_audit
+
+/-! ### LRC14 HYP-2829 gK8 single-far arithmetic kernel -/
+
+theorem lrc_gk8_singlefar_arithmetic_audit :
+    ((2633 : Nat) * 588 < 2243 * 735) ∧
+    ((3259 : Nat) * 2002 < 9895 * 735) ∧
+    ((37 : Nat) * 7 < 40 * 7) ∧
+    ((2323 : Nat) * 588 < 2243 * 980) ∧
+    ((2876 : Nat) * 2002 < 9895 * 735) ∧
+    ((62267 : Nat) * 7 < 40 * 12936) ∧
+    ((2323 : Nat) * 735 < 2633 * 980) ∧
+    ((2876 : Nat) < 3259) ∧
+    ((62267 : Nat) * 7 < 37 * 12936) :=
+  ⟨LonelyRunner.Gk8SingleFar.bounded_k8_below_cap,
+   LonelyRunner.Gk8SingleFar.bounded_k9_below_cap,
+   LonelyRunner.Gk8SingleFar.bounded_k10_below_cap,
+   LonelyRunner.Gk8SingleFar.singlefar_k8_below_cap,
+   LonelyRunner.Gk8SingleFar.singlefar_k9_below_cap,
+   LonelyRunner.Gk8SingleFar.singlefar_k10_below_cap,
+   LonelyRunner.Gk8SingleFar.singlefar_k8_below_bounded,
+   LonelyRunner.Gk8SingleFar.singlefar_k9_below_bounded,
+   LonelyRunner.Gk8SingleFar.singlefar_k10_below_bounded⟩
+#print axioms lrc_gk8_singlefar_arithmetic_audit
 
 /-! ### LRC14 Boolean/type signed aggregate cut -/
 

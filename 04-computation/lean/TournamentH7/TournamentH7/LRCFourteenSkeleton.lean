@@ -23,8 +23,7 @@
           (measure -> witness);
         - the 1/7 witness floor `G2 >= m_P` over the remaining k=8..13 shapes
           (the new easier witness route; k<=7 is pigeonhole-elementary);
-        - the parallel 2/7 `rhoStar` floor route (KPS Thread A now has exact
-          compact/asymptotic evidence, but it is not Lean-formalized here);
+        - the corrected global-witness/rho-glob floor route at threshold 1/7;
         - the gK8 concentration-extremality  `max_E L_yK8 <= 10*cap`;
         - the doublet R-tail (Mordell-Tornheim) uniform bound (THM-564);
         - the top-level assembly into `M(S) >= 1/14` for every covering 13-set.
@@ -45,6 +44,7 @@ import TournamentH7.LonelyRunner
 import TournamentH7.LRCFactorialAtom
 import TournamentH7.LRCPeriodmaxCertificate
 import TournamentH7.LRCGenuineWideCorrection
+import TournamentH7.LRCGk8SingleFar
 
 namespace LonelyRunner
 namespace LRC14
@@ -96,15 +96,16 @@ theorem lonely_of_Mreach_ge (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
 
 There are now two related density routes:
 
-* the older `rho*` route at the `2/7` max-gap threshold;
-* the newer `G2` witness route at the `1/7` max-gap threshold.
+* the older via-`Vmax` `rho*` route at the `2/7` max-gap threshold;
+* the corrected global-witness/rho-glob route at the `1/7` max-gap threshold,
+  represented here by `G2`.
 
 The current repo canon treats the `G2` route as the sharper final target.  The
 k<=7 binding cases are pigeonhole-elementary; the remaining `k=8..13` floor has
-large computational slack.  After KPS Thread A's exact compact/asymptotic
-rho-star engine, the older `rho*` route should also be kept as a live parallel
-route, not merely as historical scaffold.  This file records both DAGs, while
-only the new `G2` wiring below is added as no-sorry Lean glue in this session.
+large computational slack.  KPS Thread A later found admissible zeros for the
+old via-`Vmax` `rho*` object, so its uniform positive floor is recorded only as
+an obsolete conditional proposition below, not as a theorem.  The corrected
+object is the global 1/7 witness density.
 
 We carry `rho*` abstractly as a nonnegative real attached to the data `(P, E)`
 (small part `P ⊆ {1,…,13}` and cluster co-offsets `E`). -/
@@ -139,19 +140,14 @@ theorem thm527_partA_density_pos_implies_reach (v : Fin 13 → ℤ)
   -- ρ* > 0 ⟹ a good period exists (finite-Vmax: ρ_K = ρ* + O(#arcs/Vmax)).
   sorry
 
-/-- **THM-527 PART G -- THE CRUX (OPEN, = OPEN-Q-108).**  A uniform positive floor
-for the good-period density over all covering shapes: `inf rho* = c0 > 0`.  The
-canon reduces this to a COMPACT problem (bounded-spread, `k ≤ 13`), proves the
-`k = 3` end (margin `4/3`) and the exact consecutive floor `1/84`, and verifies
-positivity on broad scans -- but the uniform compactness floor is not yet a
-theorem.  This is THE one remaining inequality of the whole conjecture (this
-route). -/
-theorem thm527_partG_uniform_floor :
+/-- **OBSOLETE THM-527 PART G candidate.**  A uniform positive floor for the
+via-`Vmax` 2/7 good-period density.  KPS Thread A now gives admissible
+counterexamples with this density equal to zero, so this proposition is retained
+only to keep the failed route explicit.  It must not be used as an asserted
+theorem in the current proof DAG. -/
+def obsoleteRhoStarUniformFloor : Prop :=
     ∃ c0 : ℝ, 0 < c0 ∧ ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
-      c0 ≤ rhoStar (shapeOf v) := by
-  -- bounded-spread compact reduction (Part D) + continuity + positivity (Part E)
-  -- + integer-vs-real passage + Vmax ≤ V0 finite check.  OPEN.
-  sorry
+      c0 ≤ rhoStar (shapeOf v)
 
 /-- **THM-527 k=3 leg (PROVED unconditional in canon).**  As a Lean obligation:
 when the cluster has size 3, three phases always leave a max-gap `≥ 1/3 > 2/7`, so
@@ -172,6 +168,13 @@ pigeonhole bound `maxgap >= 1/k >= 1/7`; only k=8..13 remains, with large slack.
 `G2(P,E)=meas{x in G_P : maxgap(frac(e_i*x)) > 1/7}`.  Abstract here; a full
 formalization will define it as a Lebesgue measure. -/
 opaque witnessG2 : Shape → ℝ
+
+/-- Current cluster size parameter: the number of co-offsets in the shape. -/
+def clusterSize (s : Shape) : ℕ := s.2.length
+
+/-- Alias for KPS's corrected `rho*_glob` notation: the global-witness density is
+the same 1/7 object called `witnessG2` in this skeleton. -/
+abbrev rhoGlob : Shape → ℝ := witnessG2
 
 /-- The exact admissible small-part floor from THM-530/KPS witness route:
 `m_P = 14249/252252`. -/
@@ -199,6 +202,27 @@ the exact threshold arithmetic. -/
 theorem one_seventh_le_inv_of_pos_le_seven (k : ℕ) (hkpos : 0 < k) (hk : k ≤ 7) :
     (1 : ℝ) / 7 ≤ (1 : ℝ) / k := by
   interval_cases k <;> norm_num at hkpos ⊢
+
+/-- No-sorry bookkeeping for the corrected witness-floor proof split.  If the
+small cluster cases `k<=7` have the pigeonhole floor, and the remaining
+`8<=k<=13` cases have the computational/analytic floor, then the global
+`G2>=m_P` floor follows. -/
+theorem witness_floor_from_cluster_cases
+    (hsmall : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 7 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
+    (hlarge : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      8 ≤ clusterSize (shapeOf v) → clusterSize (shapeOf v) ≤ 13 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v) := by
+  intro v hv
+  by_cases hle : clusterSize (shapeOf v) ≤ 7
+  · exact hsmall v hv hle
+  · have h8 : 8 ≤ clusterSize (shapeOf v) := by omega
+    exact hlarge v hv h8 (hsize v hv)
 
 /-- Sorry-free logical glue for the new witness route, parameterized by the two
 analysis nodes: the uniform `G2>=m_P` floor and the direct-witness implication
@@ -228,6 +252,25 @@ theorem lrc14_from_witness_floor
       (1 : ℝ) / 14 ≤ Mreach v) :
     LRC14Statement :=
   lrc14_from_witness_floor_given_nodes hfloor hpartA lonely_of_Mreach_ge
+
+/-- Same top-level witness-route glue, but with the floor split into the current
+two proof obligations: `k<=7` pigeonhole and `8<=k<=13` floor. -/
+theorem lrc14_from_witness_floor_cases_given_nodes
+    (hsmall : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 7 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
+    (hlarge : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      8 ≤ clusterSize (shapeOf v) → clusterSize (shapeOf v) ≤ 13 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13)
+    (hpartA : ∀ v : Fin 13 → ℤ, 0 < witnessG2 (shapeOf v) →
+      (1 : ℝ) / 14 ≤ Mreach v)
+    (hR0 : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      (1 : ℝ) / 14 ≤ Mreach v → ∃ t : ℝ, Lonely 14 v t) :
+    LRC14Statement :=
+  lrc14_from_witness_floor_given_nodes
+    (witness_floor_from_cluster_cases hsmall hlarge hsize) hpartA hR0
 
 /-! ## 3. The sector / p0 route (L0 layer): the wide bound `p0(E) ≤ cap_k`
 
@@ -369,6 +412,31 @@ theorem gK8_dual_feasible :
       (if t.val = 0 then (10 : Int) else 0) ≤ FactorialAtom.gK8 t :=
   FactorialAtom.gK8_dominates
 
+/-- **DAG node L3a' (HYP-2829 single-far arithmetic, PROVED sorry-free).**
+The exact rational inequalities for the bounded and single-far gK8 binding rows
+at k=8,9,10.  This is the arithmetic checksum under the planned period-max
+proof of the single-far sup; it does not by itself prove the analytic
+periodicity/window reduction. -/
+theorem gK8_singlefar_arithmetic_kernel :
+    ((2633 : Nat) * 588 < 2243 * 735) ∧
+    ((3259 : Nat) * 2002 < 9895 * 735) ∧
+    ((37 : Nat) * 7 < 40 * 7) ∧
+    ((2323 : Nat) * 588 < 2243 * 980) ∧
+    ((2876 : Nat) * 2002 < 9895 * 735) ∧
+    ((62267 : Nat) * 7 < 40 * 12936) ∧
+    ((2323 : Nat) * 735 < 2633 * 980) ∧
+    ((2876 : Nat) < 3259) ∧
+    ((62267 : Nat) * 7 < 37 * 12936) :=
+  ⟨Gk8SingleFar.bounded_k8_below_cap,
+   Gk8SingleFar.bounded_k9_below_cap,
+   Gk8SingleFar.bounded_k10_below_cap,
+   Gk8SingleFar.singlefar_k8_below_cap,
+   Gk8SingleFar.singlefar_k9_below_cap,
+   Gk8SingleFar.singlefar_k10_below_cap,
+   Gk8SingleFar.singlefar_k8_below_bounded,
+   Gk8SingleFar.singlefar_k9_below_bounded,
+   Gk8SingleFar.singlefar_k10_below_bounded⟩
+
 /-- **DAG node L3b (gK8 concentration-extremality, OPEN).**  The scalar content:
 the maximum of the moment functional `L_yK8` over ALL `k`-speed configs is below
 `10·cap_k`.  HYP-2829's preferred split is:
@@ -404,28 +472,26 @@ theorem wide_bound_from_gK8 (E : List ℤ) (k : ℕ) (LyE : ℝ)
   have h : 10 * p0 E ≤ 10 * (capRat k : ℝ) := le_trans hshape hconc
   linarith
 
-/-! ## 5. The two routes to the top, and the top-level statement
+/-! ## 5. The routes to the top, and the top-level statement
 
-Both the sector route (wide bound `p0 ≤ cap` ⟹ via THM-526 criterion C ⟹
-`M(S) ≥ 1/14`) and the lonely-density route (THM-527: `rho* > 0` ⟹ `M ≥ 1/14`,
-with `rho* > 0` from the Part-G floor) converge on `M(S) ≥ 1/14`, hence on
-LRC(14).  We record the THM-527 route as the cleanest assembly: Part G gives a
-positive floor, Part A turns it into the reach bound, R0 turns that into a lonely
-time. -/
+The sector route (wide bound `p0 ≤ cap` ⟹ via THM-526 criterion C ⟹
+`M(S) ≥ 1/14`) and the corrected global-witness route (`G2>0 ⟹ M ≥ 1/14`, with
+`G2>0` from the 1/7 floor) converge on `M(S) ≥ 1/14`, hence on LRC(14).
 
-/-- **TOP-LEVEL ASSEMBLY (THM-527 route).**  Combining the Part-G uniform floor
-(`rho* ≥ c0 > 0`), Part A (`rho* > 0 ⟹ M ≥ 1/14`), and R0 (`M ≥ 1/14 ⟹ lonely`)
-proves LRC(14).  This theorem is `sorry`-free GIVEN the three nodes -- i.e. it is
-the genuine logical glue, and the only `sorry`s it transitively depends on are the
-three flagged open obligations (Part G, Part A, R0). -/
-theorem lrc14_from_thm527 : LRC14Statement := by
+For auditability we also keep the logical glue for the obsolete 2/7 `rhoStar`
+route as a **conditional theorem**: if the now-refuted uniform floor were true,
+then the old route would imply LRC(14).  No theorem below asserts that floor. -/
+
+/-- **CONDITIONAL OLD ROUTE.**  If the obsolete 2/7 via-`Vmax` uniform floor were
+available, Part A plus R0 would imply LRC(14).  The incoming KPS zero probes show
+that this hypothesis is false for the intended object, so the current proof
+should use `lrc14_from_witness_floor_cases_given_nodes` instead. -/
+theorem lrc14_from_obsolete_rhoStar_floor
+    (hobsolete : obsoleteRhoStarUniformFloor) : LRC14Statement := by
   intro v hv
-  -- Part G: a uniform positive floor c0 ≤ ρ*(shapeOf v).
-  obtain ⟨c0, hc0pos, hfloor⟩ := thm527_partG_uniform_floor
+  obtain ⟨c0, hc0pos, hfloor⟩ := hobsolete
   have hrho : 0 < rhoStar (shapeOf v) := lt_of_lt_of_le hc0pos (hfloor v hv)
-  -- Part A: ρ* > 0 ⟹ M(S) ≥ 1/14.
   have hM : (1 : ℝ) / 14 ≤ Mreach v := thm527_partA_density_pos_implies_reach v hrho
-  -- R0: M(S) ≥ 1/14 ⟹ a lonely time.
   exact lonely_of_Mreach_ge v hv hM
 
 /-! ## 6. Sieve sanity checks (PROVED sorry-free upstream)
@@ -456,9 +522,9 @@ theorem lrc14_counterexample_saturated (v : Fin 13 → ℤ)
 
 The PROVED-upstream nodes (sieve specializations, gK8 per-shape bound, finite
 kernels) should report only Lean foundations (+ `native_decide` axioms).  The
-OPEN nodes (`*_partA_*`, `*_partG_*`, `lonely_of_Mreach_ge`,
+OPEN nodes (`*_partA_*`, `lonely_of_Mreach_ge`,
 `doublet_Rtail_uniform_bound`, `gK8_concentration_extremality`) and anything
-depending on them (`lrc14_from_thm527`) will additionally report `sorryAx` --
+depending on them (`lrc14_from_obsolete_rhoStar_floor`) will additionally report `sorryAx` --
 which is the precise machine-checkable statement of "these are the open
 obligations." -/
 
@@ -467,6 +533,7 @@ obligations." -/
 #print axioms lrc14_counterexample_saturated
 #print axioms gK8_per_shape_bound
 #print axioms gK8_dual_feasible
+#print axioms gK8_singlefar_arithmetic_kernel
 #print axioms single_far_periodmax_headroom
 #print axioms genuine_wide_rows_below_cap
 #print axioms sampleBoundedRows_ok
@@ -475,14 +542,15 @@ obligations." -/
 #print axioms witnessMP_pos_real
 #print axioms witness_floor_positive
 #print axioms one_seventh_le_inv_of_pos_le_seven
+#print axioms witness_floor_from_cluster_cases
 #print axioms lrc14_from_witness_floor_given_nodes
+#print axioms lrc14_from_witness_floor_cases_given_nodes
 -- The following SHOULD report `sorryAx` (open obligations):
 #print axioms thm527_partA_density_pos_implies_reach
-#print axioms thm527_partG_uniform_floor
 #print axioms lonely_of_Mreach_ge
 #print axioms doublet_Rtail_uniform_bound
 #print axioms gK8_concentration_extremality
-#print axioms lrc14_from_thm527
+#print axioms lrc14_from_obsolete_rhoStar_floor
 #print axioms lrc14_from_witness_floor
 
 end LRC14
