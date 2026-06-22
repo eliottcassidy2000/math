@@ -231,3 +231,31 @@ AP_diff_majorization
 Assumption challenged: additive energy is not a scalar monotone sufficient
 statistic for LRC coverage.  It is a Fejer/interval extremal carrier whose
 labels must be retained until after the THM-534 sector functional is applied.
+
+## S104 addendum: exact tail target for the labelled remainder
+
+HYP-2890 gives a concrete analytic version of the "labelled signed sector
+remainder" above.  The full same-frequency additive-energy packet is positive
+and absolutely convergent:
+
+```text
+Gamma_k(m)=C_{k,r}/m^4,  all C_{k,r}>0 for k=8..13.
+```
+
+But it overpredicts AP, so the signed sector/Fourier remainder is not small
+noise.  With
+
+```text
+R_sf(E)=p0(E)-p0_decorr(k)-Gamma_k^sf A*(E),
+```
+
+AP-facing extremality becomes the residual-leak bound
+
+```text
+R_sf(E)-R_sf(AP) <= Gamma_k^sf(A*(AP)-A*(E)).
+```
+
+S104 exact anchored scans found no violations for k=8 (`3432` rows) or k=9
+(`3003` rows); the worst k=9 ratio `0.933` occurs at the scaling-like row
+`(0,2,4,6,7,8,10,12,14)`.  This is the first finite target for the labelled
+remainder lemma proposed here.

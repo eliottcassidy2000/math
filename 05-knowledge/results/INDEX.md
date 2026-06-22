@@ -10,6 +10,8 @@ python3 04-computation/SCRIPT.py 2>&1 | tee 05-knowledge/results/SCRIPT.out
 
 ---
 
+| `lrc14_gamma_frequency_tail_codex_s104.py` | [STORED] | HYP-2890 same-frequency additive-energy tail and residual-leak target.  Extends KPS S31k from `m=1` to all same-frequency additive quadruple modes, with `Gamma_k(m)=C_{k,r}/m^4` on residues `r mod 7`; all constants are positive for k=8..13 and `H=12` leaves absolute tail `<=1.084e-6` at k=8/9.  The full packet overpredicts AP, so the live inequality is the residual leak `R_sf(E)-R_sf(AP)<=Gamma_sf(A*(AP)-A*(E))`; exact anchored scans have 0 violations for k=8 (`3432` rows, worst ratio `0.469`) and k=9 (`3003` rows, worst ratio `0.933`, row `(0,2,4,6,7,8,10,12,14)`). | `lrc14_gamma_frequency_tail_codex_s104.out` |
+
 ## Lean build and audit outputs
 
 | Target | Status | Key finding | Result file |

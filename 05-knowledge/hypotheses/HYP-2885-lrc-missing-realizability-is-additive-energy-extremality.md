@@ -109,6 +109,29 @@ the MEASURE-ZERO boundary `t=1/14`. So the wide bound factors into the two conve
 - Connect to mac-mini's covering-system route (HYP-+2878): over-covering = covering system = also
   realizability-obstructed (Hough). -> THM-534, HYP-2873, HYP-2879, OPEN-Q-108.
 
+## S104 refinement: the frequency tail is positive, but the closing lemma is residual leak
+
+Codex S104 (HYP-2890) extends the positive `m=1` coefficient to the full
+same-frequency additive-energy packet:
+
+```text
+Gamma_k^sf = sum_{m>=1,7∤m} Gamma_k(m),  Gamma_k(m)=C_{k,r}/m^4.
+```
+
+All residue constants are positive for `k=8..13`, and the explicit `1/m^4`
+tail after `H=12` is tiny.  However, the full packet overpredicts AP by about a
+factor of two, so the proof cannot be a scalar `p0<=G(A*)` theorem.  The live
+constant is now the residual-leak inequality
+
+```text
+R_sf(E)-R_sf(AP) <= Gamma_k^sf (A*(AP)-A*(E)),
+R_sf = p0-p0_decorr-Gamma_k^sf A*.
+```
+
+Exact anchored scans found `0` violations for k=8 and k=9.  This refines the
+route here: additive energy supplies the positive AP-facing carrier, while the
+remaining work is a labelled hidden-fold/support-cycle residual bound.
+
 ## S103 correction: use AP-facing majorization, not scalar monotonicity
 
 Codex S103 (`lrc_additive_energy_majorization_codex_s103.py`, HYP-2889)

@@ -1,3 +1,41 @@
+## codex-2026-06-22-S104 -- same-frequency additive-energy tail and residual-leak target
+
+User asked to attack the single leading-order-proved extremality plus a
+convergent tail bound, searching prior work and incoming ideas.  Pulled new
+S39/S103 work during the session and integrated the relevant HYP-2889 warning:
+additive energy is AP-facing but not a scalar monotone, and strict LRC coverage
+is scaling-invariant exact tiling rather than translation-invariant energy.
+
+Added `04-computation/lrc14_gamma_frequency_tail_codex_s104.py` and stored
+`05-knowledge/results/lrc14_gamma_frequency_tail_codex_s104.out`.  The script
+extends KPS S31k's positive `m=1` coefficient to the full same-frequency
+additive-energy packet.  For fixed residue `r mod 7`,
+`Gamma_k(m)=C_{k,r}/m^4`; all six constants are positive for `k=8..13`.
+The `H=12` partial already certifies positivity with tiny absolute tails:
+`<=1.084e-6` at k=8/9 and decreasing to `<=3.602e-7` at k=13.  The full packet
+is `2.098724...` times the `m=1` coefficient.
+
+Guardrail: summing this positive packet overpredicts AP rather than closing the
+proof.  For k=9, actual `p0-p0_decorr` at AP is `+0.311244`, while the
+same-frequency packet predicts `+0.628310`; the residual
+`R_sf=p0-p0_decorr-Gamma_sf A*` is `-0.317066`.  Thus the open constant is a
+negative hidden-fold/support-cycle correction, not another positive
+same-frequency term.
+
+New HYP-2890/T1004: AP extremality should be attacked through the residual-leak
+inequality
+`R_sf(E)-R_sf(AP)<=Gamma_sf(A*(AP)-A*(E))`.  Exact bounded scans found no
+violations in anchored banks k=8 (`3432` rows, worst leak ratio `0.469`) and
+k=9 (`3003` rows, worst ratio `0.933`).  The k=9 pressure row is
+`(0,2,4,6,7,8,10,12,14)`, the even AP plus midpoint bridge, matching the
+incoming scaling/tiling signal from HYP-+2888.
+
+Proof order: positive same-frequency packet + HYP-2889 AP-facing Fejer
+majorization + residual-leak bound.  Low relation-depth / near-scale-reducible
+rows should go to a finite AP/Freiman atlas; high relation-depth rows should go
+to HYP-2636 Abel/L2 cancellation; repeated-packet rows should use the HYP-2887
+octahedral current/Hodge decomposition.
+
 ## mac-mini-2026-06-22-S39 -- LRC realizability: coverage != additive energy; the exact-coverage extremal is SCALING-invariant {1..13}*d (creative + disciplined; one idea refuted, one finding)
 Owner: creative realizability arguments (like tournament analysis but "slightly different"); aim to finish LRC. HYP-2888 + reflection (lrc-realizability-is-scaling-invariant-tiling-not-combinatorial-forcing.md).
 - **Realizability framing:** LRC(14) <=> safe set nonempty <=> the open arc-systems U_s={||s t||<1/14} (total meas 13/7~1.857) don't cover the closed circle. A counterexample OVER-covers. Same shape as tournament Omega=K_3 (non-realizable), but the LRC forcing is continuous/arithmetic.
