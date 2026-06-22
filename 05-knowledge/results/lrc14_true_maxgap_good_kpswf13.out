@@ -1,0 +1,84 @@
+################################################################################################
+# THREAD 2 -- THE TRUE max-gap GOOD set (kind-pasteur kpswf13)
+#   GOOD_true = {maxgap{frac(e_i x)} > 1/7}.  Genuinely x->-x symmetric => ghat REAL.
+################################################################################################
+
+================================================================================================
+(A) GOOD_true reflection symmetry (sym-diff with its x->-x reflection = 0 EXACTLY?)
+    and meas(GOOD_true) vs meas(cover^c proxy).
+================================================================================================
+  case                 meas(GOOD_true)  meas(cover^c)  symdiff(true)  sineE(true)
+  k=8 consec                  0.940136       0.672789       0.00e+00     6.42e-33
+  k=8 consec smallP           0.940136       0.672789       0.00e+00     6.42e-33
+  k=10 consec                 0.775510       0.495522       0.00e+00     3.84e-32
+  killer P                    0.940136       0.672789       0.00e+00     6.42e-33
+  coprime P                   0.775510       0.495522       0.00e+00     3.84e-32
+  wide                        0.989011       0.641822       0.00e+00     2.56e-33
+  asym cluster                1.000000       0.984014       0.00e+00     0.00e+00
+  => symdiff(true)=0 EXACTLY: GOOD_true IS reflection-symmetric, ghat_true REAL
+     (sineE ~ 1e-30).  The cover^c proxy was asymmetric (sineE ~ 1.6e-2); meas differs too.
+
+================================================================================================
+(B) SPEC_true and R'_true on the CORRECT GOOD (compare to kpswf12 proxy R')
+================================================================================================
+  case                  baseTrue  interTrue  SPEC_true   R_true
+  k=8 consec             0.45715    0.43006  -0.027091  0.94074
+  k=8 consec smallP      0.47454    0.44490  -0.029647  0.93753
+  k=10 consec            0.53547    0.46599  -0.069485  0.87024
+  killer P               0.49693    0.46871  -0.028222  0.94321
+  coprime P              0.47883    0.46036  -0.018472  0.96142
+  wide                   0.68289    0.69048   0.007588  1.01111
+  asym cluster           0.48626    0.48626   0.000000  1.00000
+
+================================================================================================
+(C) cluster complement invariance:  GOOD_true(E)=GOOD_true(-E)=GOOD_true(N-E)?  (EXACT)
+================================================================================================
+  k=8 consec           N=  7:  GOOD(-E)==GOOD(E)? True   GOOD(N-E)==GOOD(E)? True
+  k=8 consec smallP    N=  7:  GOOD(-E)==GOOD(E)? True   GOOD(N-E)==GOOD(E)? True
+  k=10 consec          N=  9:  GOOD(-E)==GOOD(E)? True   GOOD(N-E)==GOOD(E)? True
+  killer P             N=  7:  GOOD(-E)==GOOD(E)? True   GOOD(N-E)==GOOD(E)? True
+  coprime P            N=  9:  GOOD(-E)==GOOD(E)? True   GOOD(N-E)==GOOD(E)? True
+  wide                 N= 17:  GOOD(-E)==GOOD(E)? True   GOOD(N-E)==GOOD(E)? True
+  asym cluster         N= 31:  GOOD(-E)==GOOD(E)? True   GOOD(N-E)==GOOD(E)? True
+  => GOOD_true(-E)==GOOD_true(E) EXACTLY (true x->-x symmetry, no boundary artifact).
+
+================================================================================================
+(D) frequency Z_2 grading of SPEC_true:  even-n/odd-n, 7|n / 7-nmid-n
+================================================================================================
+
+  k=8 consec:  P=[1, 2, 3, 12, 13]
+    SPEC_true(spec) = -0.027092  (exact -0.027091, |d|=5.9e-07)
+    even-n=-0.028911  odd-n=+0.001819    7|n=-0.004627  7nmid=-0.022464
+    top: n=12:-0.0118, n=4:-0.0085, n=11:+0.0038, n=3:-0.0035, n=7:-0.0035, n=26:-0.0031, n=8:-0.0026, n=16:-0.0024
+
+  k=8 consec smallP:  P=[1, 2, 3, 4, 5]
+    SPEC_true(spec) = -0.029647  (exact -0.029647, |d|=4.6e-08)
+    even-n=-0.029634  odd-n=-0.000013    7|n=-0.008753  7nmid=-0.020894
+    top: n=4:-0.0160, n=12:-0.0070, n=15:+0.0060, n=20:-0.0053, n=7:-0.0051, n=11:+0.0048, n=3:-0.0039, n=14:-0.0035
+
+  k=10 consec:  P=[1, 2, 3]
+    SPEC_true(spec) = -0.069485  (exact -0.069485, |d|=1.4e-07)
+    even-n=-0.049077  odd-n=-0.020408    7|n=-0.013605  7nmid=-0.055879
+    top: n=6:-0.0167, n=4:-0.0130, n=7:-0.0121, n=3:-0.0115, n=12:-0.0101, n=15:-0.0074, n=2:-0.0071, n=5:+0.0063
+
+  killer P:  P=[2, 3, 4, 5, 6]
+    SPEC_true(spec) = -0.028222  (exact -0.028222, |d|=4.7e-08)
+    even-n=-0.028209  odd-n=-0.000013    7|n=-0.007619  7nmid=-0.020603
+    top: n=12:-0.0143, n=4:-0.0114, n=8:+0.0060, n=14:-0.0043, n=15:+0.0036, n=22:-0.0032, n=6:+0.0029, n=25:-0.0029
+
+  coprime P:  P=[5, 7, 11]
+    SPEC_true(spec) = -0.018446  (exact -0.018472, |d|=2.6e-05)
+    even-n=+0.014540  odd-n=-0.032986    7|n=+0.021249  7nmid=-0.039694
+    top: n=7:+0.0143, n=5:-0.0130, n=15:-0.0107, n=33:-0.0083, n=14:+0.0082, n=10:+0.0068, n=12:+0.0066, n=4:+0.0053
+
+  wide:  P=[1, 2, 6]
+    SPEC_true(spec) = +0.007562  (exact +0.007588, |d|=2.5e-05)
+    even-n=+0.002080  odd-n=+0.005482    7|n=-0.000262  7nmid=+0.007824
+    top: n=6:-0.0031, n=2:+0.0021, n=1:+0.0013, n=22:+0.0011, n=7:+0.0010, n=9:+0.0010, n=30:+0.0009, n=14:-0.0008
+
+  asym cluster:  P=[1, 2, 3, 12, 13]
+    SPEC_true(spec) = +0.000000  (exact +0.000000, |d|=0.0e+00)
+    even-n=+0.000000  odd-n=+0.000000    7|n=+0.000000  7nmid=+0.000000
+    top: 
+
+DONE.

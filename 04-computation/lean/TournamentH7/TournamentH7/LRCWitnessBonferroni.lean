@@ -295,6 +295,45 @@ theorem large_witness_pos_from_p0_wide_bound_shapes
     linarith
   exact lt_of_lt_of_le (hδpos (shapeOf v) h8 h13) hmargin
 
+/-- Shape-wise positivity version of the p0-wide-bound route.  This is weaker
+than `witness_floor_from_p0_wide_bound_shapes`, but it is the natural endpoint
+when the wide-bound margin is known only as a positive shape-wise quantity. -/
+theorem witnessG2_pos_from_p0_wide_bound_shapes
+    (nuShape measGP p0Shape capShape deltaShape : Shape → ℝ)
+    (hδ : ∀ s, 0 < deltaShape s)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ capShape s - deltaShape s)
+    (hmeasGP : ∀ s, capShape s ≤ measGP s)
+    (s : Shape) :
+    0 < witnessG2 s := by
+  have h1 : nuShape s + measGP s - 1 ≤ witnessG2 s := hbonf s
+  have h2 : (1 - nuShape s) ≤ p0Shape s := hDp0 s
+  have h3 : p0Shape s ≤ capShape s - deltaShape s := hp0cap s
+  have h4 : capShape s ≤ measGP s := hmeasGP s
+  have hδs : 0 < deltaShape s := hδ s
+  linarith
+
+/-- Top-level conditional LRC14 assembly through the positive p0/witness
+unification route.  This formulation records the weakest endpoint needed by
+Part A: `G2 > 0`, rather than the stronger uniform `m_P` floor. -/
+theorem lrc14_from_p0_wide_bound_given_partA
+    (nuShape measGP p0Shape capShape deltaShape : Shape → ℝ)
+    (hδ : ∀ s, 0 < deltaShape s)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ capShape s - deltaShape s)
+    (hmeasGP : ∀ s, capShape s ≤ measGP s)
+    (hpartA : ∀ v : Fin 13 → ℤ, 0 < witnessG2 (shapeOf v) →
+      (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement := by
+  intro v hv
+  have hpos : 0 < witnessG2 (shapeOf v) :=
+    witnessG2_pos_from_p0_wide_bound_shapes
+      nuShape measGP p0Shape capShape deltaShape hδ hbonf hDp0 hp0cap hmeasGP
+      (shapeOf v)
+  exact lonely_of_Mreach_ge v hv (hpartA v hpos)
+
 /-! ## The `k <= 7` pigeonhole leg (no Lemma A needed)
 
 For `k <= 7` the cluster has `<= 7` phases, so `maxgap >= 1/k >= 1/7` for EVERY
@@ -353,6 +392,50 @@ theorem small_witness_floor_from_pigeonhole_nodes
   exact witness_floor_pigeonhole_leg_ge_mP nuShape measGP hbonf hnu1 hB
     (shapeOf v) h7
 
+/-- Compatibility name for the small-cluster Bonferroni feeder. -/
+theorem witness_small_floor_from_bonferroni_nodes
+    (nuShape measGP : Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hnu1 : ∀ s, clusterSize s ≤ 7 → nuShape s = 1)
+    (hB : ∀ s, clusterSize s ≤ 7 → (capRat (clusterSize s) : ℝ) ≤ measGP s) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 7 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v) :=
+  small_witness_floor_from_pigeonhole_nodes nuShape measGP hbonf hnu1 hB
+
+/-- Compatibility name for the large-cluster Bonferroni feeder. -/
+theorem witness_large_floor_from_bonferroni_nodes
+    (nuShape measGP : Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hA : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (nuConsec (clusterSize s) : ℝ) ≤ nuShape s)
+    (hB : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      8 ≤ clusterSize (shapeOf v) → clusterSize (shapeOf v) ≤ 13 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v) :=
+  large_witness_floor_from_bonferroni_nodes nuShape measGP hbonf hA hB
+
+/-- Full all-cluster witness-floor bridge from the small and large Bonferroni
+nodes, in the monolithic floor shape expected by `lrc14_from_witness_floor`. -/
+theorem witness_floor_from_bonferroni_nodes_all_clusters
+    (nuShape measGP : Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hnu1 : ∀ s, clusterSize s ≤ 7 → nuShape s = 1)
+    (hA : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (nuConsec (clusterSize s) : ℝ) ≤ nuShape s)
+    (hBsmall : ∀ s, clusterSize s ≤ 7 → (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hBlarge : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v) :=
+  witness_floor_from_cluster_cases
+    (witness_small_floor_from_bonferroni_nodes nuShape measGP hbonf hnu1 hBsmall)
+    (witness_large_floor_from_bonferroni_nodes nuShape measGP hbonf hA hBlarge)
+    hsize
+
 /-! ## LRC14 assembly from the Bonferroni / p0 floor nodes -/
 
 /-- **Top-level LRC14 assembly from the Bonferroni split floor.**  The remaining
@@ -378,6 +461,28 @@ theorem lrc14_from_bonferroni_split_nodes
     (small_witness_floor_from_pigeonhole_nodes nuShape measGP hbonf hnu1 hBsmall)
     (large_witness_floor_from_bonferroni_nodes nuShape measGP hbonf hA hBlarge)
     hsize hpartA lonely_of_Mreach_ge
+
+/-- Compatibility top-level assembly through the all-cluster Bonferroni floor
+node.  This is logically the same route as `lrc14_from_bonferroni_split_nodes`,
+but exposes the monolithic floor theorem for downstream audits. -/
+theorem lrc14_from_bonferroni_nodes_given_partA
+    (nuShape measGP : Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hnu1 : ∀ s, clusterSize s ≤ 7 → nuShape s = 1)
+    (hA : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (nuConsec (clusterSize s) : ℝ) ≤ nuShape s)
+    (hBsmall : ∀ s, clusterSize s ≤ 7 → (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hBlarge : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13)
+    (hpartA : ∀ v : Fin 13 → ℤ, 0 < witnessG2 (shapeOf v) →
+      (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement :=
+  lrc14_from_witness_floor
+    (witness_floor_from_bonferroni_nodes_all_clusters
+      nuShape measGP hbonf hnu1 hA hBsmall hBlarge hsize)
+    hpartA
 
 /-- **Top-level LRC14 assembly from an all-shapes p0 wide-bound margin.**  This
 is the cleanest formal reading of HYP-2832: a positive p0 margin at least `m_P`,
@@ -474,12 +579,18 @@ theorem lrc14_from_p0_positive_wide_bound_split_nodes
 #print axioms large_witness_floor_from_p0_wide_bound_shapes
 #print axioms witness_margin_from_p0_wide_bound_shapes
 #print axioms large_witness_pos_from_p0_wide_bound_shapes
+#print axioms witnessG2_pos_from_p0_wide_bound_shapes
+#print axioms lrc14_from_p0_wide_bound_given_partA
 #print axioms nuConsec_eq_one_of_le_seven
 #print axioms witness_floor_pigeonhole_leg
 #print axioms witnessMP_le_capRat_of_le_seven
 #print axioms witness_floor_pigeonhole_leg_ge_mP
 #print axioms small_witness_floor_from_pigeonhole_nodes
+#print axioms witness_small_floor_from_bonferroni_nodes
+#print axioms witness_large_floor_from_bonferroni_nodes
+#print axioms witness_floor_from_bonferroni_nodes_all_clusters
 #print axioms lrc14_from_bonferroni_split_nodes
+#print axioms lrc14_from_bonferroni_nodes_given_partA
 #print axioms lrc14_from_p0_wide_bound_shapes
 #print axioms lrc14_from_p0_wide_bound_split_nodes
 #print axioms lrc14_from_p0_positive_wide_bound_split_nodes

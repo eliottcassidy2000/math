@@ -1,0 +1,35 @@
+LRC14 perturbed sheet-discrepancy bridge (Codex S92)
+
+Exact one-runner sheet discrepancy
+  danger count <= b/7 + gcd(r,b)
+  randomized exact checks: failures=0
+  tightest sampled row: b=217, r=528, gcd=1, theta=4627/5000, count=31, bound=32
+
+Multi-parked-runner floor over an exact base bE
+  surviving sheet fraction >= 1 - h/7 - sum gcd(r_i,b)/b
+    b residues                      floor       actual_survive/killed
+   43 [1, 5, 11, 17, 23, 29]            1/301   18/25  
+   35 [1, 6, 11, 16, 21]                -1/35   15/20  
+   30 [2, 4, 8, 14, 22]                 -1/21   12/18  
+   84 [6, 10, 14, 22, 26]               -1/42   40/44  
+  210 [30, 42, 70, 105]              -157/210   72/138 
+
+Bounded-quotient fallback when the sheet floor is not positive
+  h=1: if 1-h/7-sum(g_i)/b <= 0, some quotient b/g_i <= 7/6 = 1.167
+  h=2: if 1-h/7-sum(g_i)/b <= 0, some quotient b/g_i <= 14/5 = 2.800
+  h=3: if 1-h/7-sum(g_i)/b <= 0, some quotient b/g_i <= 21/4 = 5.250
+  h=4: if 1-h/7-sum(g_i)/b <= 0, some quotient b/g_i <= 28/3 = 9.333
+  h=5: if 1-h/7-sum(g_i)/b <= 0, some quotient b/g_i <= 35/2 = 17.500
+  h=6: if 1-h/7-sum(g_i)/b <= 0, some quotient b/g_i <= 42 = 42.000
+
+Proof interface
+  Large quotient / small gcd: sheet discrepancy gives a positive finite-V floor.
+  Small quotient / large gcd: route to a bounded residue atlas; if actual
+  speed ratio is <=13, THM-405 closes immediately, otherwise use the
+  existing bounded-ratio/finitary LRC<=13 handoff.
+
+Tournament Analysis
+  vertices: sheet_discrepancy > bounded_quotient_gate > THM405_first_window
+            > finite_residue_atlas > raw_Erdos_Turan_bound > runner_vertices
+  pairwise observable: surviving sheet fraction after parked-runner damage
+  challenged assumption: finite-V requires a continuous equidistribution limit.

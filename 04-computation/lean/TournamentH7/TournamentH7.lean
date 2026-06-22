@@ -83,7 +83,8 @@
     · TournamentH7.LRCFourteenSkeleton — sorry-free conditional LRC14 proof DAG
                                       with named analytic obligations.
     · TournamentH7.LRCWitnessBonferroni — sorry-free Bonferroni/p0 reduction
-                                      for the LRC14 witness-floor obligation.
+                                      of the global witness floor to measure
+                                      nodes plus exact arithmetic.
     · TournamentH7.LRCWitnessPartA — finite-Vmax error-budget glue for the
                                       LRC14 direct witness implication.
     · TournamentH7.LRCL7Discrepancy — Finite integer core of the L7 discrepancy.

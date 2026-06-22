@@ -1,5 +1,7 @@
 # Tangents, Rabbit Holes & Novel Ideas
 
+**T992** [codex-2026-06-22-S93] #lrc14 #covering-sets #bounded-denominator #sieve #THM-566 #HYP-2865.  The bounded-denominator witness route is false as a fixed-cap theorem even inside THM-523's covering hard core.  For any `B`, `S_B={1,...,11,13,84*lcm(1,...,B)}` is primitive and covering, but no `a/D` with `D<=B` can witness loneliness because the last runner is divisible by every such `D`.  This upgrades the older HYP-2052 no-finite-sieve warning to the exact covering residual targeted by the new idea.  The positive evidence remains diagnostic, not global: `{1..11,13,84}` has `17/41`, the same tower first needs `D>41` at `m=6` (`22/53`), all `m<=5000` need only `D<=67`, AP repairs through `m<=500` max at `55`, and random covering-obligation rows to `10^6` max at `32`.  Corrected route: denominator atlases must scale with the first unblocked modulus/divisor-loading profile and then hand off to THM-524 binding switches, HYP-2864 sheet-gcd quotients, or THM-565 finite-ruler sampling.  Tournament vertices are proof carriers, not runners; the transitive path starts with `covering_denominator_no_go > scaled_denominator_or_speed_bound > THM523_covering_reduction`. -> THM-566, HYP-2865, HYP-2052, THM-523, THM-524, HYP-2864, THM-565, OPEN-Q-108.
+
 **T991** [codex-2026-06-22-S86g2] #lrc14 #lean #p0 #partA #goodset #formalization.  Added the concrete-p0 surface to the goodSet finite-PartA bridge.  `LRCWitnessPartA.lean` now imports `LRCP0Concrete` and proves `finite_witness_pos_from_goodSet_p0_margin_shapes`, `finite_witness_pos_from_goodSet_p0_margin_uniform_arc_bound_shapes`, and `lrc14_from_finite_partA_goodSet_p0_margin_shapes`, where the large-branch margin is stated as `DenseCovers.p0(Eof s)≤cap s−delta s` instead of the unfolded `slowμ(coverSet(Eof s))` expression.  Added `Verify` audits and clean focused/root transcripts.  Post-pull HYP-2840 supplies a new hp0cap signal through `p0≤L_y` and scalar `L_y` extremality; the Lean bridge is deliberately route-neutral and consumes either that margin or the decorrelation margin.  Tournament vertices are `{DenseCovers.p0, coverSet, goodSet, safeSet, witnessG2, cap floor, finite rhoK, arc budget, PartA}`; edges are definitional p0 unfolding, readout equality, margin transport, and finite approximation.  Challenged assumption: concrete p0 had to be unfolded before Part A could use it; the named atom now preserves the skeleton interface while retaining the actual cover-event content. -> HYP-2832, HYP-2838, HYP-2839, HYP-2840, THM-527, OPEN-Q-108.
 
 **T990** [codex-2026-06-22-S86g2] #lrc14 #lean #event-bridge #goodset #witnessG2 #formalization.  Pulled S87's coordination summary of the goodSet carrier bridge, then added the next shape-level readout wrappers.  `LRCEventMeasureBridge.lean` now proves `shape_bonferroni_goodSet_safeSet_handoff`, `shape_goodSet_witness_pos_from_strict_cover_bound`, and `shape_goodSet_witness_margin_from_wide_bound`, identifying `witnessG2 s` with `slowμ(goodSet (Eof s) ∩ safeSet (Pof s))` and transporting strict hp0cap positivity or the p0 `delta` margin directly to `witnessG2`.  Added `Verify` wrappers and refreshed focused/root transcripts cleanly.  Tournament vertices are `{shape witnessG2, goodSet E, safeSet P, strict hp0cap, p0 delta margin, cap floor, finite PartA rhoK, arc budget}`; edges are event readout equality, concrete carrier inclusion, measure monotonicity, and margin/positivity transport.  Challenged assumption: after the goodSet carrier is concrete, the shape layer still has to route through abstract `nuShape/DShape/p0Shape`; the p0 margin can now feed the shape-level `witnessG2` readout directly. -> HYP-2832, HYP-2837, HYP-2838, HYP-2839, THM-527, OPEN-Q-108.
@@ -2866,3 +2868,23 @@ Artifacts: `LRCWitnessPartA.lean`, `Verify.lean`, and transcripts
 `lrc_witness_parta_goodset_margin_bridge_codex_s86g2.out`,
 `tournamenth7_verify_lrc_parta_goodset_margin_bridge_codex_s86g2.out`,
 `tournamenth7_root_lrc_parta_goodset_margin_bridge_codex_s86g2.out`.
+
+## T992: LRC14 denominator-prefix majorization is the `nu` score ledger (codex-2026-06-22-S95)
+After the bounded-denominator witness route was refuted by THM-566, the useful
+denominator object reappears as component neighborhoods for Lemma A.  Exact
+audit `lrc14_nu_denom_center_budget_codex_s95.py` decomposes the dense set
+`D(E)=meas{x:maxgap(frac(e*x))<=1/7}` into components labelled by least
+interior rational denominator.  In the bounded primitive bank `[0,14]` for
+`k=8..13`, consecutive uniquely maximizes total `D`; tightest displayed slack
+is `k=13`, `77/2695`.  The important correction is negative: local runner
+compression fails, and individual q-bucket domination fails.  The positive
+survivor is prefix majorization: every tested cumulative low-denominator
+ledger `B_Q=sum_{q<=Q}` is dominated by consecutive, while high-q compression
+dead ends have small Farey tails.  Tournament analogy: this is Landau
+score-sequence control rather than pointwise score control; a row can beat one
+later bucket but pays earlier prefix mass.  Next theorem target: prove
+low-q prefix majorization over residue patterns for `q<=k`, then prove a
+Farey/three-gap tail packing bound for `q>k`.  S94's THM-567/HYP-2867
+resonance-channel work is the Fourier-side analogue: finite low carriers need
+aggregate balance, not pointwise bucket dominance.  -> HYP-2866, THM-530,
+THM-531, THM-567, HYP-2832, HYP-2867, OPEN-Q-108.

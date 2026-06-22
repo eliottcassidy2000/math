@@ -52,6 +52,7 @@ import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCLowerThresholdNeighborhood
 import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCGapReach
+import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
@@ -1003,6 +1004,97 @@ theorem lrc_bonferroni_lrc14_from_p0_positive_wide_bound_split_nodes_audit
     hsize hpartA
 #print axioms lrc_bonferroni_lrc14_from_p0_positive_wide_bound_split_nodes_audit
 
+theorem lrc_witness_attainment_exists_lonely_audit
+    (v : Fin 13 → ℤ)
+    (h : ∃ t : ℝ,
+      (1 : ℝ) / 14 ≤ TournamentH7.LRCWitness.margin v t) :
+    ∃ t : ℝ, LonelyRunner.Lonely 14 v t :=
+  TournamentH7.LRCWitness.exists_lonely_of_margin_ge v 14 h
+#print axioms lrc_witness_attainment_exists_lonely_audit
+
+/-! ### LRC14 Bonferroni witness-route bridge -/
+
+theorem lrc_bonferroni_floor_ge_mP_audit :
+    ∀ k ∈ [8, 9, 10, 11, 12, 13],
+      LonelyRunner.LRC14.witnessMP ≤
+        LonelyRunner.LRC14.Bonferroni.nuConsec k +
+          LonelyRunner.LRC14.capRat k - 1 :=
+  LonelyRunner.LRC14.Bonferroni.bonferroni_floor_ge_mP
+#print axioms lrc_bonferroni_floor_ge_mP_audit
+
+theorem lrc_bonferroni_witnessG2_pos_from_p0_wide_bound_shapes_audit
+    (nuShape measGP p0Shape capShape deltaShape : LonelyRunner.LRC14.Shape → ℝ)
+    (hδ : ∀ s, 0 < deltaShape s)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s)
+    (hDp0 : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ capShape s - deltaShape s)
+    (hmeasGP : ∀ s, capShape s ≤ measGP s)
+    (s : LonelyRunner.LRC14.Shape) :
+    0 < LonelyRunner.LRC14.witnessG2 s :=
+  LonelyRunner.LRC14.Bonferroni.witnessG2_pos_from_p0_wide_bound_shapes
+    nuShape measGP p0Shape capShape deltaShape hδ hbonf hDp0 hp0cap hmeasGP s
+#print axioms lrc_bonferroni_witnessG2_pos_from_p0_wide_bound_shapes_audit
+
+theorem lrc14_from_p0_wide_bound_given_partA_audit
+    (nuShape measGP p0Shape capShape deltaShape : LonelyRunner.LRC14.Shape → ℝ)
+    (hδ : ∀ s, 0 < deltaShape s)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s)
+    (hDp0 : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ capShape s - deltaShape s)
+    (hmeasGP : ∀ s, capShape s ≤ measGP s)
+    (hpartA : ∀ v : Fin 13 → ℤ,
+      0 < LonelyRunner.LRC14.witnessG2 (LonelyRunner.LRC14.shapeOf v) →
+      (1 : ℝ) / 14 ≤ LonelyRunner.LRC14.Mreach v) :
+    LonelyRunner.LRC14.LRC14Statement :=
+  LonelyRunner.LRC14.Bonferroni.lrc14_from_p0_wide_bound_given_partA
+    nuShape measGP p0Shape capShape deltaShape hδ hbonf hDp0 hp0cap hmeasGP hpartA
+#print axioms lrc14_from_p0_wide_bound_given_partA_audit
+
+theorem lrc_bonferroni_witness_floor_all_clusters_audit
+    (nuShape measGP : LonelyRunner.LRC14.Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s)
+    (hnu1 : ∀ s, LonelyRunner.LRC14.clusterSize s ≤ 7 → nuShape s = 1)
+    (hA : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      (LonelyRunner.LRC14.Bonferroni.nuConsec
+        (LonelyRunner.LRC14.clusterSize s) : ℝ) ≤ nuShape s)
+    (hBsmall : ∀ s, LonelyRunner.LRC14.clusterSize s ≤ 7 →
+      (LonelyRunner.LRC14.capRat (LonelyRunner.LRC14.clusterSize s) : ℝ) ≤ measGP s)
+    (hBlarge : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      (LonelyRunner.LRC14.capRat (LonelyRunner.LRC14.clusterSize s) : ℝ) ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      LonelyRunner.LRC14.clusterSize (LonelyRunner.LRC14.shapeOf v) ≤ 13) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      (LonelyRunner.LRC14.witnessMP : ℝ) ≤
+        LonelyRunner.LRC14.witnessG2 (LonelyRunner.LRC14.shapeOf v) :=
+  LonelyRunner.LRC14.Bonferroni.witness_floor_from_bonferroni_nodes_all_clusters
+    nuShape measGP hbonf hnu1 hA hBsmall hBlarge hsize
+#print axioms lrc_bonferroni_witness_floor_all_clusters_audit
+
+theorem lrc14_from_bonferroni_nodes_given_partA_audit
+    (nuShape measGP : LonelyRunner.LRC14.Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s)
+    (hnu1 : ∀ s, LonelyRunner.LRC14.clusterSize s ≤ 7 → nuShape s = 1)
+    (hA : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      (LonelyRunner.LRC14.Bonferroni.nuConsec
+        (LonelyRunner.LRC14.clusterSize s) : ℝ) ≤ nuShape s)
+    (hBsmall : ∀ s, LonelyRunner.LRC14.clusterSize s ≤ 7 →
+      (LonelyRunner.LRC14.capRat (LonelyRunner.LRC14.clusterSize s) : ℝ) ≤ measGP s)
+    (hBlarge : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      (LonelyRunner.LRC14.capRat (LonelyRunner.LRC14.clusterSize s) : ℝ) ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      LonelyRunner.LRC14.clusterSize (LonelyRunner.LRC14.shapeOf v) ≤ 13)
+    (hpartA : ∀ v : Fin 13 → ℤ,
+      0 < LonelyRunner.LRC14.witnessG2 (LonelyRunner.LRC14.shapeOf v) →
+      (1 : ℝ) / 14 ≤ LonelyRunner.LRC14.Mreach v) :
+    LonelyRunner.LRC14.LRC14Statement :=
+  LonelyRunner.LRC14.Bonferroni.lrc14_from_bonferroni_nodes_given_partA
+    nuShape measGP hbonf hnu1 hA hBsmall hBlarge hsize hpartA
+#print axioms lrc14_from_bonferroni_nodes_given_partA_audit
+
 /-! ### LRC14 Part-A finite-ruler arc-bound budgets -/
 
 theorem lrc_partA_arc_div_lt_delta_of_le_bound_audit
@@ -1252,6 +1344,56 @@ theorem lrc_partA_lrc14_from_finite_partA_p0_margin_split_shapes_audit
     nuShape measGP p0Shape cap delta finiteRho arcCount vmax hsmall hbonf
     hDp0 hp0cap hmeasGP herror hsmallBudget hlargeBudget hsize hfinitePartA
 #print axioms lrc_partA_lrc14_from_finite_partA_p0_margin_split_shapes_audit
+
+theorem lrc14_partA_p0_margin_shapes_mul_audit
+    (nuShape measGP p0Shape cap delta finiteRho : LonelyRunner.LRC14.Shape → ℝ)
+    (arcCount vmax : LonelyRunner.LRC14.Shape → ℕ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s)
+    (hDp0 : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, cap s ≤ measGP s)
+    (hvmax : ∀ s, 0 < vmax s)
+    (herror : ∀ s, |finiteRho s - LonelyRunner.LRC14.witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) < delta s * (vmax s : ℝ))
+    (hfinitePartA : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      0 < finiteRho (LonelyRunner.LRC14.shapeOf v) →
+      (1 : ℝ) / 14 ≤ LonelyRunner.LRC14.Mreach v) :
+    LonelyRunner.LRC14.LRC14Statement :=
+  LonelyRunner.LRC14.PartA.lrc14_from_finite_partA_p0_margin_shapes_mul
+    nuShape measGP p0Shape cap delta finiteRho arcCount vmax
+    hbonf hDp0 hp0cap hmeasGP hvmax herror hbudget hfinitePartA
+#print axioms lrc14_partA_p0_margin_shapes_mul_audit
+
+theorem lrc14_partA_finite_bonferroni_nodes_mul_audit
+    (nuShape measGP finiteRho : LonelyRunner.LRC14.Shape → ℝ)
+    (arcCount vmax : LonelyRunner.LRC14.Shape → ℕ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s)
+    (hnu1 : ∀ s, LonelyRunner.LRC14.clusterSize s ≤ 7 → nuShape s = 1)
+    (hA : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      (LonelyRunner.LRC14.Bonferroni.nuConsec
+        (LonelyRunner.LRC14.clusterSize s) : ℝ) ≤ nuShape s)
+    (hBsmall : ∀ s, LonelyRunner.LRC14.clusterSize s ≤ 7 →
+      (LonelyRunner.LRC14.capRat (LonelyRunner.LRC14.clusterSize s) : ℝ) ≤ measGP s)
+    (hBlarge : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      (LonelyRunner.LRC14.capRat (LonelyRunner.LRC14.clusterSize s) : ℝ) ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      LonelyRunner.LRC14.clusterSize (LonelyRunner.LRC14.shapeOf v) ≤ 13)
+    (hvmax : ∀ s, 0 < vmax s)
+    (herror : ∀ s, |finiteRho s - LonelyRunner.LRC14.witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) <
+      (LonelyRunner.LRC14.witnessMP : ℝ) * (vmax s : ℝ))
+    (hfinitePartA : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      0 < finiteRho (LonelyRunner.LRC14.shapeOf v) →
+      (1 : ℝ) / 14 ≤ LonelyRunner.LRC14.Mreach v) :
+    LonelyRunner.LRC14.LRC14Statement :=
+  LonelyRunner.LRC14.PartA.lrc14_from_finite_partA_bonferroni_nodes_mul
+    nuShape measGP finiteRho arcCount vmax hbonf hnu1 hA hBsmall hBlarge
+    hsize hvmax herror hbudget hfinitePartA
+#print axioms lrc14_partA_finite_bonferroni_nodes_mul_audit
 
 /-! ### LRC14 THM-563 period-max certificate kernel -/
 
