@@ -9,24 +9,30 @@ on the current `origin/main`, not asserted.
 
 ---
 
-## 1. The headline theorem (VERIFIED sorry-free)
+## 1. The headline theorem (VERIFIED sorry-free) — USE THE NU ROUTE
+
+⚠️ **Route correction (mac-mini-S27, MISTAKE-084):** there are TWO sorry-free
+conditional assemblies. The `p0_wide_bound` route has the cleanest axioms but its
+nodes are **UNSATISFIABLE at k=8** (see §2a) — do NOT build the unconditional proof on
+it. The **viable** route is the NU route:
 
 ```
-theorem lrc14_from_p0_wide_bound_split_nodes
-    (nuShape measGP p0Shape cap delta : Shape → ℝ)
-    (hsmall …) (hδm …) (hbonf …) (hDp0 …) (hp0cap …) (hmeasGP …) (hsize …) (hpartA …) :
+theorem lrc14_from_bonferroni_split_nodes
+    (… nuShape measGP …) (hbonf …) (hnu1 …) (hA spreading …) (hmeasGP …) (hpartA …) … :
     LRC14Statement
 ```
-(`LRCWitnessBonferroni.lean:~360`)
+(`LRCWitnessBonferroni.lean`)
 
-**`#print axioms lrc14_from_p0_wide_bound_split_nodes` →
-`[propext, Classical.choice, Quot.sound]`** — the three standard Lean axioms ONLY
-(no `sorryAx`, not even `native_decide`). The sibling route
-`lrc14_from_bonferroni_split_nodes` adds only the `native_decide` axioms of the
-floor table. Build: `0` occurrences of `sorryAx`.
+Both are VERIFIED sorry-free (`0` occurrences of `sorryAx`):
+- **`#print axioms lrc14_from_bonferroni_split_nodes` (NU route, VIABLE)** →
+  `[propext, Classical.choice, Quot.sound, + native_decide axioms]` (the nuConsec/floor
+  table). Margin at the tight k=8 cluster: `nu + cap - 1 = 1891/5880 = 0.322 >> m_P`.
+- `#print axioms lrc14_from_p0_wide_bound_split_nodes` (p0 route) →
+  `[propext, Classical.choice, Quot.sound]` only — BUT its floor `cap - p0 = 319/5880
+  = 0.0543 < m_P = 0.0565` fails at k=8 (§2a). Sorry-free but undischargeable.
 
-So: **the reduction of LRC(14) to the 8 explicit node-hypotheses below is fully
-machine-checked.** What remains is discharging those 8 nodes.
+So: **the reduction of LRC(14) to the NU-route node-hypotheses is fully machine-checked.**
+What remains is discharging those nodes (the spreading lemma `hA` is REQUIRED).
 
 ---
 
@@ -39,15 +45,21 @@ machine-checked.** What remains is discharging those 8 nodes.
 | `hsize` | `clusterSize (shapeOf v) ≤ 13` | **structural** — provable once `shapeOf` is concrete |
 | `hδm` | `8≤k≤13 ⟹ witnessMP ≤ delta` (margin `δ ≥ m_P`) | **DONE (table)** — `native_decide` floor `cap−p0 ≥ m_P` |
 | `hsmall` | `k ≤ 7 ⟹ witnessMP ≤ witnessG2` (small cluster) | **supported** — `LRCMaxGapPigeonhole` (≤6 ⟹ maxgap>1/7 always) + `goodSet`; k=7 boundary isolated |
-| `hp0cap` | `p0Shape ≤ cap − delta` (the **wide cover bound**) | **DEEP axiom** — gK8 / leg-C wide bound (canon, prior sessions) |
+| `hA` (NU route) | spreading: `nu(E) ≥ nuConsec(k)` (consec minimizes nu) | **REQUIRED, verified** — HYP-2835 (consec strict-min, 0 beaters); needs Lean formalization |
 | `hmeasGP` | `cap ≤ measGP` (the **cap floor**) | **DEEP axiom** — THM-530, `cap = min meas(G_P)` |
 | `hpartA` | `0 < witnessG2 ⟹ 1/14 ≤ Mreach` (**THM-527 Part A**) | **DEEP axiom** — slow-fast witness reduction; #arcs-supported (HYP-2838) |
 
-**Bottom line:** LRC(14) is machine-checked **modulo 3–4 deep analytic inputs**
-— `hp0cap` (wide cover bound), `hmeasGP` (cap floor), `hpartA` (Part A) — each of
-which is independently proved/verified in canon, plus the small-cluster `hsmall`
-which is essentially formalized (pigeonhole + goodSet). The entire combinatorial,
-measure-theoretic, and Bonferroni scaffolding is sorry-free.
+### 2a. ⚠️ Why the p0 route fails (MISTAKE-084)
+The p0 route replaces `hA` with `hp0cap: p0 ≤ cap − delta`. But the floor it yields,
+`cap − p0`, is **below `m_P` at k=8**: `cap_8 − p0(consec_8) = 2243/5880 − 481/1470 =
+319/5880 = 0.05425 < m_P = 0.05649`. The loss is the `D ≤ p0` step (`nu ≥ 1−p0 = 0.673`
+vs actual `nu = 0.940`). The tight Bonferroni `measGP + nu − 1` (NU route) keeps the
+full `nu` and gives `0.322`. **The spreading lemma `hA` is therefore not bypassable.**
+
+**Bottom line:** via the NU route, LRC(14) is machine-checked **modulo 2 deep analytic
+inputs** — `hmeasGP` (cap floor) and `hpartA` (Part A) — plus the **spreading lemma
+`hA`** (verified true, needs Lean formalization) and the `nuConsec` floor table
+(native_decide). The combinatorial / measure / Bonferroni scaffolding is sorry-free.
 
 ---
 
@@ -75,8 +87,10 @@ nodes (`hbonf, hDp0, hsize, hsmall, hδm`). Then only the deep analytic axioms
 
 ## 5. The analytic-proof side (parallel track)
 
-- **Witness floor** (`G2 ≥ m_P`): unified via `G2 ≥ measGP − p0 ≥ cap − (cap−δ) = δ`
-  (D≤p0 + p0≤cap + measGP≥cap), the spreading lemma bypassed (kps HYP-2832).
+- **Witness floor** (`G2 ≥ m_P`): the TIGHT Bonferroni `G2 ≥ measGP + nu − 1 ≥
+  cap + nuConsec(k) − 1` (needs `hmeasGP` + the actual nu via nuConsec + spreading `hA`).
+  Margin `1891/5880 = 0.322` at k=8. The `measGP − p0` simplification (HYP-2832) is too
+  lossy (`0.054 < m_P`, MISTAKE-084) — do NOT use it for the floor.
 - **Part A residual** (#arcs): `#arcs(GOOD(E))` is period-bounded — consec plateaus
   at ~13, single-far ≤15, independent of Vmax (HYP-2838) ⟹ finite-Vmax correction
   `#arcs/Vmax → 0` uniformly for the binding family. Wide family delta-controlled.

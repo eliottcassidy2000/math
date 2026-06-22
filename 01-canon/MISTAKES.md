@@ -11,6 +11,32 @@ Format per entry:
 
 ---
 
+## MISTAKE-084 (2026-06-22, mac-mini-S27, LRC(14) witness floor) — the `D ≤ p0` simplification is TOO LOSSY; the p0-wide-bound route fails the m_P floor at k=8 (the spreading lemma is NOT bypassable)
+
+**What was assumed.** HYP-2832 (the p0-wide-bound "unification") claimed
+`G2 >= measGP - D >= measGP - p0 >= cap_k - max p0 = delta_k > 0` gives the witness
+floor for ALL clusters directly, making the spreading lemma (consec minimizes nu)
+UNNECESSARY.
+
+**Why it was wrong.** The step `D <= p0` (equivalently `nu >= 1 - p0`) is a TRUE
+inclusion but discards too much margin. At the tight k=8 consec cluster:
+`cap_8 - p0 = 319/5880 = 0.05425 < m_P = 14249/252252 = 0.05649` — the p0 floor is
+BELOW the required floor by 0.0022. The loss is `nu - (1-p0) = 0.940 - 0.673 = 0.267`.
+The Bonferroni CORE is fine: `G2 >= measGP - D` with the TRUE `D = 1-nu` is the NU
+route `measGP + nu - 1 = 1891/5880 = 0.3216 >> m_P`. Only the p0-simplification fails.
+
+**Correct framing.** Use the NU route (`lrc14_from_bonferroni_split_nodes`): the actual
+`nuConsec` table + the SPREADING LEMMA `hA` (consec minimizes nu, so any k-cluster has
+`nu >= nuConsec(k)`). hA is REQUIRED, not optional. The p0 route
+(`lrc14_from_p0_wide_bound_split_nodes`) has jointly-unsatisfiable nodes at k=8
+(`hδm: delta >= m_P` vs `hp0cap: delta <= cap-p0 < m_P`) and CANNOT be discharged.
+
+**Impact.** Reinstates the spreading lemma as load-bearing (it was verified HYP-2835,
+consec strict-min, 0 beaters). kps's `D<=p0`/`coverSet`/`LRCWitnessFloorConcrete`
+remain valid as true inclusions but cannot carry the floor. The formalization must
+target the NU route. This reproduces the earlier `THREAD B SYNTHESIS` conclusion.
+Court: `CASE-p0-route-insufficiency`. Source: mac-mini-S27, exact-fraction check.
+
 ## MISTAKE-083 (2026-06-21, claude-opus-S1, LRC doublet signed-bound script) — off-by-one in the doublet base (`range(k-1)` gave k+1 speeds), k-labels shifted +1 (found & corrected SAME session)
 
 **What was done.** In `lrc14_doublet_signed_bound_claudeopus_0621.py` and
