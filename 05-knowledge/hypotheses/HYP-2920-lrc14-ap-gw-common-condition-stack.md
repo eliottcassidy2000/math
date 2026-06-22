@@ -112,6 +112,15 @@ Bank results:
   `12->24` has `q=14`, gate true, `M=1/14`; `13->26` has `q=14`, gate false,
   `M=2/27`.
 
+Post-rebase connection: KPS S39 independently strengthens the same max-`24`
+frontier into a bounded/single-swap census claim.  In that thread, tight
+`13`-sets inside `{1,...,24}` are exactly AP/GW, via the `12m` family plus an
+exhaustive forced-membership check for `{1,...,11,13}`, and the single-swap
+census is proved by explicit `M` formulas.  The S124/S126 script should be
+read as the condition-stack / minimal-petal interface to that stronger
+bounded-census result, not as a replacement for the remaining multi-swap and
+unbounded forced-membership lemmas.
+
 Tournament Analysis on the condition carrier used the conditions as vertices,
 pass-set inclusion over the single-swap bank as the pairwise observable, and a
 listed Hamiltonian path to orient ties.  The resulting carrier is acyclic in

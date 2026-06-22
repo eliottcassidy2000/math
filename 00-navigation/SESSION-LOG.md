@@ -31,6 +31,12 @@ necessary filters and near-miss modes.  LRC14 remains open outside this branch:
 the missing lemma is still rigidity/off-apex escape for non-AP/GW petals,
 multi-dipoles, or genuinely unbounded top-balanced rows.
 
+Post-rebase integration: KPS S39 landed concurrently and strengthens the same
+frontier into a bounded `{1,...,24}` plus single-swap census claim for AP/GW,
+with the residual isolated as multi-swap plus unbounded forced-membership.  The
+S126 shrink is the minimal-petal condition-stack interface to that stronger
+max-`24` bounded-census thread.
+
 ## mac-mini-2026-06-22-S55 -- census/proof: the necessary-condition BATTERY is NOT SUFFICIENT; census not completable by it; LRC(14) remains open
 Owner: complete the census and the proof. Disciplined result: cannot, by the present methods. HYP-2914 updated.
 - **DECISIVE:** the swaps 12->36,48,60 satisfy the ENTIRE battery (kill b=12, residues miss only 12, ±units, zsum=MAX, <=3-gap) but M=3/41,3/41,4/53 > 1/14 -- NOT tight. Only 12->24 (GW) is tight. So the necessary conditions are NECESSARY-NOT-SUFFICIENT; the census {AP,GW} is NOT determined by the battery -- the M=1/14 distinction (24 vs 36) IS the consec-maximizes / Steinhaus rigidity, the open core.
