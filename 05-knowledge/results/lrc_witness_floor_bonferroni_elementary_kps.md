@@ -159,8 +159,30 @@ scale-invariant pure-shape lemma and the proven small-part floor. The one remain
 rigorous step is Lemma A's decorrelation tail bound — a loose, safe-direction
 Weyl/ET estimate.
 
+## How the UNIFORM floor feeds THM-527 Part A (the convergence node)
+
+The whole proof now converges on **THM-527 Part A**: `rho*_glob(P,E) > 0 ⟹ M(S) ≥ 1/14`
+(the slow-fast witness implication). Part A is proved in the limit `Vmax → ∞`; the
+soft spot is the finite-`Vmax` correction `rho_K = rho* + O(#arcs / Vmax)`, where
+`rho_K` is the good-period *count*/`Vmax` and `rho*` the *measure*. A witness needs
+`rho_K > 0`, i.e. `Vmax > C·#arcs / rho*`.
+
+**The unification's uniform floor is exactly what this needs.** Before, `rho*` had
+no positive floor (THM-527 Part G's compactness crux), so the threshold
+`C·#arcs/rho*` was non-uniform — the limit could not be made effective. Now
+`rho*_glob ≥ δ_k > 0` *uniformly* (`δ_k = cap_k − max p0`, the wide-bound margin),
+so the threshold is the **uniform** `Vmax > C·#arcs / δ_k`, and `Vmax` below it is a
+**finite check**. The uniform floor converts Part A's non-effective limit into an
+effective finite-`Vmax` statement. **Residual:** `#arcs` (components of `GOOD(E)∩G_P`)
+must be bounded for wide clusters to make the threshold fully uniform — the one
+remaining quantitative item in Part A, now isolated and small (the measure side is
+done; only the arc-count discrepancy for wide `E` is open). This is the precise
+remaining analytic node, and it is much narrower than the original compactness crux.
+
 Scripts: `04-computation/lrc_nu_universal_minimizer_kps.py` (wide stress, k=8,9 to
 spread 80), `04-computation/lrc_nu_floor_and_tail_kps.py` (exact core k=8..13 +
-float tail scan). Outputs in `05-knowledge/results/`.
+float tail scan), `04-computation/lrc_capGP_exact_kps.py` (Lemma B + duality),
+`04-computation/lrc_witness_p0_unification_kps.py` (the unification). Outputs in
+`05-knowledge/results/`. Lean: `04-computation/lean/.../LRCWitnessBonferroni.lean`.
 External: Lonely Runner Conjecture; Steinhaus three-gap; Weyl equidistribution;
 Erdős–Turán–Koksma discrepancy.
