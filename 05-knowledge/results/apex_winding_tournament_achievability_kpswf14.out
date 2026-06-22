@@ -1,0 +1,4 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\apex_winding_tournament_achievability_kpswf14.py:18: SyntaxWarning: invalid escape sequence '\ '
+  13-element multiset of residues drawn from Z/14 \ {0} (the "14-free"
+C:\Users\Eliott\Documents\GitHub\math\04-computation\apex_winding_tournament_achievability_kpswf14.py:548: SyntaxWarning: invalid escape sequence '\{'
+  (A) ALL 13 residues DISTINCT => the multiset IS {1,...,13} = Z/14\{0}

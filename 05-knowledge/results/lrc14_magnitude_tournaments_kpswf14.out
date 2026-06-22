@@ -1,0 +1,98 @@
+==============================================================================
+(a) FAREY-NEIGHBOR WINDING  T(3/41)   [det[[1,3],[14,41]] = 1*41-3*14 = -1]
+    arc i->j iff frac((s_i-s_j)*3/41) in (0,1/2). Sees magnitude mod 41.
+==============================================================================
+  AP         | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 ties=0  [TIGHT]
+  GW         | tourn=True | scores=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7) | c3=  89 | H=   3351471 ties=0  [TIGHT]
+  12->26     | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 ties=0  [loose M=1/12]
+  12->36     | tourn=True | scores=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7) | c3=  87 | H=   2941087 ties=0  [loose M=3/41]
+  12->96     | tourn=True | scores=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7) | c3=  89 | H=   3351471 ties=0  [loose large]
+
+  -- other scales near 1/14 for contrast --
+   scale t=1/41:
+  AP         | tourn=True | scores=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) | c3=   0 | H=         1 ties=0
+  GW         | tourn=True | scores=(1, 2, 3, 3, 4, 5, 6, 7, 8, 9, 9, 10, 11) | c3=  27 | H=      3579 ties=0
+  12->26     | tourn=True | scores=(1, 2, 3, 4, 5, 5, 6, 7, 7, 8, 9, 10, 11) | c3=  35 | H=      3939 ties=0
+  12->36     | tourn=True | scores=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) | c3=   0 | H=         1 ties=0
+  12->96     | tourn=True | scores=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) | c3=   0 | H=         1 ties=0
+   scale t=2/27:
+  AP         | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 ties=0
+  GW         | tourn=True | scores=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7) | c3=  89 | H=   3351471 ties=0
+  12->26     | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 ties=0
+  12->36     | tourn=True | scores=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7) | c3=  88 | H=   3139599 ties=2
+  12->96     | tourn=True | scores=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7) | c3=  88 | H=   3139599 ties=0
+   scale t=1/13:
+  AP         | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 ties=0
+  GW         | tourn=True | scores=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7) | c3=  90 | H=   3551083 ties=2
+  12->26     | tourn=True | scores=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7) | c3=  90 | H=   3551083 ties=2
+  12->36     | tourn=True | scores=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7) | c3=  89 | H=   3351471 ties=2
+  12->96     | tourn=True | scores=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7) | c3=  85 | H=   2641713 ties=2
+   scale t=1/14:
+  AP         | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 ties=12
+  GW         | tourn=True | scores=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7) | c3=  89 | H=   3351471 ties=14
+  12->26     | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 ties=12
+  12->36     | tourn=True | scores=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7) | c3=  87 | H=   2941087 ties=14
+  12->96     | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 ties=12
+   scale t=1/15:
+  AP         | tourn=True | scores=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7) | c3=  85 | H=   2641713 ties=0
+  GW         | tourn=True | scores=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8) | c3=  76 | H=   1462721 ties=2
+  12->26     | tourn=True | scores=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8) | c3=  82 | H=   2190653 ties=2
+  12->36     | tourn=True | scores=(4, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8) | c3=  73 | H=   1236275 ties=2
+  12->96     | tourn=True | scores=(4, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8) | c3=  73 | H=   1236275 ties=2
+   scale t=4/55:
+  AP         | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 ties=0
+  GW         | tourn=True | scores=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7) | c3=  89 | H=   3351471 ties=0
+  12->26     | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 ties=0
+  12->36     | tourn=True | scores=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7) | c3=  87 | H=   2941087 ties=0
+  12->96     | tourn=True | scores=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7) | c3=  90 | H=   3551083 ties=0
+
+==============================================================================
+(b) MULTI-SCALE STACKED winding over Farey scales of 1/14 (coarse->fine)
+    scales = [1/14, 3/41, 1/13, 1/41, 1/97, ...]; first separating scale orients arc
+==============================================================================
+
+  scales = 14 then 41-neighbors:
+  AP         | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 unresolved=0  [TIGHT]
+  GW         | tourn=True | scores=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7) | c3=  89 | H=   3351471 unresolved=0  [TIGHT]
+  12->26     | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 unresolved=0  [loose M=1/12]
+  12->36     | tourn=True | scores=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7) | c3=  87 | H=   2941087 unresolved=0  [loose M=3/41]
+  12->96     | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 unresolved=0  [loose large]
+
+  scales = Farey tower of 1/14 :
+  AP         | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 unresolved=0  [TIGHT]
+  GW         | tourn=True | scores=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7) | c3=  89 | H=   3351471 unresolved=0  [TIGHT]
+  12->26     | tourn=True | scores=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6) | c3=  91 | H=   3711175 unresolved=0  [loose M=1/12]
+  12->36     | tourn=True | scores=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7) | c3=  87 | H=   2941087 unresolved=0  [loose M=3/41]
+  12->96     | tourn=True | scores=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7) | c3=  90 | H=   3551083 unresolved=0  [loose large]
+
+  scales = denominators 14..50 :
+  AP         | tourn=True | scores=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7) | c3=  85 | H=   2641713 unresolved=0  [TIGHT]
+  GW         | tourn=True | scores=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8) | c3=  79 | H=   1780425 unresolved=0  [TIGHT]
+  12->26     | tourn=True | scores=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7) | c3=  85 | H=   2641713 unresolved=0  [loose M=1/12]
+  12->36     | tourn=True | scores=(4, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8) | c3=  73 | H=   1236275 unresolved=0  [loose M=3/41]
+  12->96     | tourn=True | scores=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7) | c3=  85 | H=   2641713 unresolved=0  [loose large]
+
+==============================================================================
+(c) DIVISIBILITY-CUTOFF  arc i->j iff (s_i mod s_j) < s_j/2  (tie->smaller speed)
+==============================================================================
+  AP         | tourn=True | scores=(2, 3, 4, 4, 4, 5, 5, 6, 6, 8, 9, 11, 11) | c3=  40 | H=     72267 clean=38 mutual=26 empty=14  [TIGHT]
+  GW         | tourn=True | scores=(0, 3, 4, 4, 5, 5, 5, 6, 7, 8, 9, 11, 11) | c3=  31 | H=     15511 clean=35 mutual=30 empty=13  [TIGHT]
+  12->26     | tourn=True | scores=(1, 3, 3, 4, 5, 5, 5, 6, 7, 8, 9, 11, 11) | c3=  34 | H=     38857 clean=39 mutual=27 empty=12  [loose M=1/12]
+  12->36     | tourn=True | scores=(0, 3, 4, 4, 5, 5, 5, 6, 7, 8, 9, 11, 11) | c3=  31 | H=     15511 clean=36 mutual=30 empty=12  [loose M=3/41]
+  12->96     | tourn=True | scores=(0, 3, 4, 4, 5, 5, 5, 6, 7, 8, 9, 11, 11) | c3=  31 | H=     15511 clean=37 mutual=29 empty=12  [loose large]
+
+==============================================================================
+(c') p-ADIC ORDER (valuation then unit-residue) -- transitive control, H should be 1
+==============================================================================
+  p=2:
+  AP         | tourn=False | scores=(0, 1, 1, 3, 3, 3, 6, 6, 6, 6, 6, 6, 6) | c3=   0 | H=         0 [TIGHT]
+  GW         | tourn=False | scores=(0, 0, 2, 3, 3, 3, 6, 6, 6, 6, 6, 6, 6) | c3=   0 | H=         0 [TIGHT]
+  12->26     | tourn=False | scores=(0, 1, 2, 2, 2, 2, 6, 6, 6, 6, 6, 6, 6) | c3=   0 | H=         0 [loose M=1/12]
+  12->36     | tourn=False | scores=(0, 1, 1, 3, 3, 3, 6, 6, 6, 6, 6, 6, 6) | c3=   0 | H=         0 [loose M=3/41]
+  12->96     | tourn=False | scores=(0, 1, 2, 3, 3, 3, 6, 6, 6, 6, 6, 6, 6) | c3=   0 | H=         0 [loose large]
+  p=7:
+  AP         | tourn=False | scores=(0, 1, 1, 3, 3, 5, 5, 7, 7, 9, 9, 11, 11) | c3=   0 | H=         0 [TIGHT]
+  GW         | tourn=False | scores=(0, 1, 1, 3, 4, 4, 6, 6, 6, 9, 9, 11, 11) | c3=   0 | H=         0 [TIGHT]
+  12->26     | tourn=False | scores=(0, 1, 1, 3, 3, 5, 5, 7, 7, 9, 9, 11, 11) | c3=   0 | H=         0 [loose M=1/12]
+  12->36     | tourn=False | scores=(0, 1, 1, 3, 4, 4, 6, 6, 8, 8, 10, 10, 10) | c3=   0 | H=         0 [loose M=3/41]
+  12->96     | tourn=False | scores=(0, 1, 1, 3, 3, 5, 5, 7, 7, 9, 9, 11, 11) | c3=   0 | H=         0 [loose large]
