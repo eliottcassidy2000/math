@@ -296,3 +296,22 @@ yet there p0 <= 0.075 << cap=0.38 (SLACK). So Node 2 = binding [Bonferroni-3, kp
 **TIGHT (binding) -> Bonferroni-3/doublet+triple (kps); SPREAD or LARGE -> equidistribution (Node 3 +
 Node-2-slack, this HYP).** Only the TIGHT/binding core (a clustered far packet near cap, finitely many)
 needs the low-order analytic bound; everything spread or large is equidistribution.
+
+## GW CORRECTION (S46, discipline): rigidity is NOT the full threshold; the tight-locus is consec + GW
+Verified: the Goddyn-Wong sporadics are TIGHT (meas-safe=0, M=1/n) but NOT three-gap-rigid (#gaps=4,5
+vs consec's 3): {1,3,4,7}/n=5 has 4 gaps, {1,3,4,5,9}/n=6 has 5, {1,2,3,4,5,7,12}/n=8 has 5. So
+"rigid <=> tight" is FALSE: rigid => tight (consec), but tight =/=> rigid (GW). The honest dichotomy:
+- **TIGHT-LOCUS** (meas-safe=0): = consec/dilations (rigid) + GW sporadics (non-rigid), FINITE per THM-560
+  + the GW single-swap census (kps). All safe: M=1/n via the boundary witness t=1/n (verified n<=8).
+- **SLACK** (meas-safe>0): spread (>=4 gaps) OR large/committed speed -> EQUIDISTRIBUTION -> M>1/14
+  (verified: spread-far meas-safe in [0.10,0.14]; committed v removes exactly 1/7).
+Three-gap rigidity characterizes the CONSEC part of the tight-locus only; the GW sporadics are the
+non-rigid tight points. Monotone slack: meas-safe grows with #gaps (0, 0.024, 0.041, 0.099, 0.140).
+
+## THE ASSEMBLED SKELETON (honest)
+LRC(14) <= [easy: surviving prime<=13 => M>=1/13, 64%] + [SLACK: equidistribution => M>1/14, this HYP]
++ [TIGHT-LOCUS: consec (M=1/14, t=1/14) + GW sporadics (M=1/14), FINITE + all safe].
+Remaining cruxes: (1) TIGHT-LOCUS FINITENESS -- consec + GW are the ONLY tight configs (OPEN-Q-108,
+THM-560 has the difference-closed half + GW single-swap census); (2) GW safety at n=14 (finite check,
+S42 sufficient condition: GW values avoid multiples of 14 => t=1/14 witnesses); (3) effective
+equidistribution (Erdos-Turan) for the SLACK rigor. kps owns (1)+(2) analytic core; I own (3) + SLACK.
