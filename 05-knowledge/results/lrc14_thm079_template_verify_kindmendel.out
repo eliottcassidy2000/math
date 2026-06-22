@@ -1,0 +1,11 @@
+MOVE B linchpins (the LRC Moon/forcing step):
+1) tight locus {AP, GW}: M=1/14, optimum at denom-14, NON-covering
+   AP {1..13}: M=1/14 optimum-denoms=[14] covering=False
+   GW {1..11,13,24}: M=1/14 optimum-denoms=[14] covering=False
+2) apex-7 floor: covering forces a mult of 14 -> sits on observer at every t=a/14
+   (||14k * a/14|| = 0 < 1/14 for all a) => covering excluded from denom-14 optima
+3) bounded covering core has M>1/14 (the value):
+   1956 bounded covering sets in [1,22]: min M = 1/12=0.08333 > 1/14=0.07143: True
+
+CRUX (*): tight (M=1/14) => optimum at apex-blocked (denom-14) point => covering forces M>1/14.
+VERIFIED for {AP,GW}; (*) in general = the three-gap tight-locus characterization = the open Moon step.
