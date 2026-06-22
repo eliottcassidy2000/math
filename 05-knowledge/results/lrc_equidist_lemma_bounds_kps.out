@@ -1,0 +1,21 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_equidist_lemma_bounds_kps.py:4: SyntaxWarning: invalid escape sequence '\ '
+  Want: meas(G_C \ union U_{v_i}) > 0. Toolbox:
+core C=[1, 2, 3, 4, 5]: meas(G_C)=0.50476, arcCount=10
+
+(1) EQUIDISTRIBUTION meas(G_C n U_v)/meas(G_C) -> 1/7=0.1429:
+   v=    20: ratio=0.1132  err=0.0296  bound arcCount/(7v)=0.0714
+   v=    50: ratio=0.1585  err=0.0156  bound arcCount/(7v)=0.0286
+   v=   100: ratio=0.1425  err=0.0004  bound arcCount/(7v)=0.0143
+   v=   500: ratio=0.1426  err=0.0002  bound arcCount/(7v)=0.0029
+   v=  2000: ratio=0.1432  err=0.0003  bound arcCount/(7v)=0.0007
+   v= 10000: ratio=0.1429  err=0.0001  bound arcCount/(7v)=0.0001
+
+(3) PAIRWISE meas(G_C n U_v1 n U_v2)/meas(G_C) -> (1/7)^2=0.0204:
+   v1=101,v2=103 (indep): ratio=0.0041  vs 1/49=0.0204
+   v1=101,v2=202 (RESONANT): ratio=0.0673  vs 1/49=0.0204
+   v1=500,v2=1000 (RESONANT): ratio=0.0713  vs 1/49=0.0204
+   v1=733,v2=1009 (indep): ratio=0.0209  vs 1/49=0.0204
+
+=> (1) equidist err ~ arcCount/(7v) (Erdos-Turan) => each comb covers ~1/7 of G_C for v large.
+   (2) UNION BOUND: r<=6 large speeds => uncovered >= (1-r/7)meas(G_C)>0 (CLEAN, rigorous via ET).
+   (3) pairwise ->1/49 (independent) => r>=7 closes by 2nd-moment/(6/7)^r modulo bounded resonances.
