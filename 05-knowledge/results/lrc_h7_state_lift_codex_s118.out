@@ -1,0 +1,39 @@
+S118 H=7 / BINARY-ARC STATE-LIFT AUDIT
+========================================================================
+
+1. Connected graph preimage of I(G,2)=7
+   n=1: connected labelled graphs=1, I(G,2)=7 count=0
+   n=2: connected labelled graphs=1, I(G,2)=7 count=0
+   n=3: connected labelled graphs=4, I(G,2)=7 count=1
+   n=4: connected labelled graphs=38, I(G,2)=7 count=0
+   n=5: connected labelled graphs=728, I(G,2)=7 count=0
+   n=6: connected labelled graphs=26704, I(G,2)=7 count=0
+   witnesses: [(3, ((0, 1), (0, 2), (1, 2)))]
+   proof shortcut: if n>=4, I(G,2)>=1+2n>=9;
+   for n=3, the only connected graph with no independent pair is K3.
+
+2. Tournament Hamiltonian-path spectra for complete binary orientations
+   n=1: H-values=[1]; H=7 labelled count=0
+   n=2: H-values=[1]; H=7 labelled count=0
+   n=3: H-values=[1, 3]; H=7 labelled count=0
+   n=4: H-values=[1, 3, 5]; H=7 labelled count=0
+   n=5: H-values=[1, 3, 5, 9, 11, 13, 15]; H=7 labelled count=0
+   n=6: H-values=[1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]; H=7 labelled count=0
+   This finite audit is only a checksum; the project theorem is the all-n
+   obstruction H(T)=I(Omega(T),2), with the K3 conflict atom forbidden.
+
+3. Guardrail: arbitrary digraphs do realize H=7
+   first 4-vertex present/absent digraph with H=7 has arcs=[(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 0), (2, 1), (3, 0)]
+   Therefore the LRC transfer cannot use 'digraph' in the loose sense.
+   It needs a complete binary orientation / tournament-realizable packet.
+
+4. LRC14 state-lift theorem shape
+   If a primitive top-balanced LRC14 counterexample yields a connected
+   binary packet graph G_LRC with partition function I(G_LRC,2)=7, then
+   G_LRC=K3.  If the packet graph is a tournament odd-cycle conflict
+   graph, THM-201/THM-343 forbid it as a whole atom or component.
+   So that lift would prove the counterexample impossible.  The missing
+   work is the lift from apex-7 over-cover cells to the
+   tournament-realizable conflict packet, not the H=7 obstruction.
+   Caveat: K3 is not forbidden as an arbitrary subgraph; n=8 realizes
+   H=63 with Omega=K31.
