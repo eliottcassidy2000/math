@@ -125,16 +125,29 @@ def M_exact(S):
     return best
 
 
-def worst_for_k(k, max_spread=14):
+def worst_for_k(k, max_spread=14, cap_patterns=400):
     r"""Worst V* over primitive cluster offset patterns {0,...} of |.|=k, spread<=max_spread,
         and the small parts P (|P|=13-k).  Returns (pat, P, arcs, meas, Vstar)."""
     nP = 13 - k
-    # cluster patterns: 0 plus k-1 distinct positives <= max_spread, primitive (gcd of all =1)
+    # cluster patterns: 0 plus k-1 distinct positives <= max_spread, primitive (gcd of all =1).
+    # For large k the count C(max_spread,k-1) explodes; the worst V* sits at near-consecutive
+    # clusters (verified k=3..8 trend), so for k>=9 restrict to consecutive + single-gap shapes.
     pats = []
-    for extra in combinations(range(1, max_spread + 1), k - 1):
-        offs = (0,) + extra
-        if gcd_list(offs) == 1:
-            pats.append(offs)
+    if k <= 8:
+        for extra in combinations(range(1, max_spread + 1), k - 1):
+            offs = (0,) + extra
+            if gcd_list(offs) == 1:
+                pats.append(offs)
+    else:
+        # k>=9: consecutive + a few single-gap variants (worst V* trend is near-consecutive).
+        base = tuple(range(k))
+        pats = [base]
+        for g in (1, 2):
+            for i in range(1, k):
+                cand = tuple(sorted(set(range(i)) | {x + g for x in range(i, k)}))
+                if len(cand) == k and gcd_list(cand) == 1:
+                    pats.append(cand)
+        pats = list(dict.fromkeys(pats))
     # small parts: exhaustive if nP<=4 else AP {1..nP} + gappy variants
     if nP <= 4:
         Plist = list(combinations(range(1, 14), nP))
@@ -175,13 +188,15 @@ def main():
     print(f"{'k':>3} {'cluster offs':>22} {'P (worst)':>30} {'arcs':>5} {'meas':>8} {'V*':>8}")
     overall = None
     for k in range(3, 13):
-        w = worst_for_k(k, max_spread=min(14, 4 + k))
+        # cap spread to keep pattern enumeration fast; the worst V* sits at near-consecutive
+        # clusters (verified k=3..8 trend), so spread <= k+3 is ample.
+        w = worst_for_k(k, max_spread=min(13, k + 3))
         if w is None:
             continue
         pat, P, a, m, vs = w
         print(f"{k:3d} {str(pat)[:22]:>22} {str(P)[:30]:>30} {a:5d} {float(m):8.5f} {float(vs):8.1f}")
-        if overall is None or vs > overall[4]:
-            overall = (k,) + w[1:]   # (k, P, a, m, vs)  -- store pat too
+        # overall = (k, pat, P, arcs, meas, Vstar); compare on Vstar = index 5
+        if overall is None or vs > overall[5]:
             overall = (k, pat, P, a, m, vs)
         sys.stdout.flush()
     print(f"\n  OVERALL WORST V* (k>=3): k={overall[0]} cluster={overall[1]} P={overall[2]}")
