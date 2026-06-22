@@ -1,0 +1,10 @@
+(1) PRIMITIVE 14-COVERING sets (AP/GW with a speed replaced by a multiple of 14): min M?
+   min M over primitive 14-covering perturbations = 1/13 = 0.07692 (vs 1/14=0.07143)
+   any TIGHT (M=1/14)? 0 => 14-covering primitive NOT tight (residual holds)
+   (worst case: AP swap 13->14, M=1/13, D=13)
+
+(2) ANY primitive tight set with optimum D>14? Scan tight locus + perturbations:
+   primitive tight sets with D!=14 found: 0 => all primitive tight have D=14 ((star) holds empirically)
+
+=> If both empty: 14-covering primitive NOT tight + primitive tight => D=14. With THM-568 (14|D),
+   this is the STRUCTURAL half of (star) confirmed; tight => 14-free => optimum at apex denom 14.
