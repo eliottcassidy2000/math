@@ -14,6 +14,7 @@ depends_on:
   - KPS-S31z
 related:
   - HYP-2885
+  - HYP-2908
   - HYP-2903
   - HYP-2904
   - HYP-+2880

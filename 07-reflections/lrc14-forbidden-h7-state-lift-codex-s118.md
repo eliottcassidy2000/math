@@ -29,7 +29,7 @@ OCF keeps: conflict incidence plus two side states per primitive packet.
 This ties into HYP-2906 and HYP-2905 cleanly.  HYP-2906 peels any one speed
 larger than `13` times the second speed, so a counterexample entering this
 finite atom is top-balanced.  HYP-2905 says the remaining object is a boundary
-state, not a runner set.  HYP-2907 now says what a successful finite atom
+state, not a runner set.  HYP-2908 now says what a successful finite atom
 theorem should look like: convert the apex-7 over-cover boundary state into
 the forbidden connected `I=7` conflict atom.
 

@@ -1,11 +1,12 @@
 ---
-id: HYP-2907
+id: HYP-2908
 status: PROOF-TARGET / transfer guardrail; graph atom exact, LRC state-lift open
 source: codex-2026-06-22-S118
 tags: [lrc14, tournaments, digraphs, forbidden-H, binary-arcs, state-lift, conflict-graphs, open-q-108]
 depends_on:
   - HYP-2905
   - HYP-2906
+  - HYP-2907
   - HYP-2881
   - HYP-2882
   - HYP-2883
@@ -26,7 +27,7 @@ results:
   - 05-knowledge/results/lrc_h7_state_lift_codex_s118.out
 ---
 
-# HYP-2907: LRC14's forbidden-H7 route needs a state lift, not just a digraph
+# HYP-2908: LRC14's forbidden-H7 route needs a state lift, not just a digraph
 
 The owner's prompt is almost a proof, but only after one missing functor is
 made rigorous.
@@ -118,7 +119,7 @@ v_max <= 13 * v_second.
 ```
 
 After HYP-2905/HYP-2904, the remaining non-descending object is the bounded or
-top-balanced covering atom.  HYP-2907 proposes that the right vertices of the
+top-balanced covering atom.  HYP-2908 builds on HYP-2907 and proposes that the right vertices of the
 finite atom are not runners.  Candidate vertices are:
 
 ```text
