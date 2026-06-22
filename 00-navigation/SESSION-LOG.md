@@ -1,3 +1,11 @@
+## mac-mini-2026-06-22-S53 -- three-gap (Steinhaus) characterization of the LRC tight locus (verified n=4..7); the rigidity g(n)<=3 is the open core
+Owner: work on the three-gap rigidity characterization of the Steinhaus tight locus; finish LRC(14); creative LRC sequences. HYP-2913.
+- **CHARACTERIZATION (verified n=4..7):** at the optimum t* (denom-n), a tight set's phases have <=3 distinct gaps -- the residues {s mod n} form a <=3-gap (Steinhaus) config on Z/n. g(n)=max #gaps@opt = 1,1,2,1 (all <=2<=3). AP=full grid (1 gap); GW=missing/doubled residue (2 gaps); e.g. GW {1,3,4,7}@n=5 has residues {1,2,3,4}=AP mod 5.
+- **NECESSARY CONDITION (derived, rigorous):** M=1/n => for every unit a' mod n, some runner s*a'≡±1 (else t=a'/n gives min>1/n). So the residues COVER ALL ±units mod n. For n=14: units {1,3,5,9,11,13} (themselves <=3-gap). AP, GW both cover them.
+- **LRC SEQUENCES (creative):** a(n)=census size=1,2,2,1 (n=4-7), a(8)=3; s(n)=#sporadics=0,1,1,0,2 (NB s(7)=0: apex prime 7 has clean census=only AP); g(n)=1,1,2,1 (Steinhaus bound); u(n)=#±units. To extend/OEIS.
+- **PROOF STRUCTURE + OPEN CORE:** GIVEN g(n)<=3 (rigidity), tight locus = finite <=3-gap configs covering ±units, non-covering => for n=14 = {AP,GW} => apex floor excludes covering => LRC(14). So LRC(14) reduces to PROVE g(14)<=3. VERIFIED n=4..7; OPEN in general -- it's a Steinhaus-type theorem for GENERAL speeds (phases NOT {frac(k a)}), does NOT follow from classical three-gap. The irreducible open core. NOT claimed proved.
+NET: right frame, verified through n=7, ±units condition rigorous, census sequence computed; rigidity proof open => LRC(14) NOT finished. NEW: HYP-2913. NEXT: prove the Steinhaus rigidity g(n)<=3 (the open core).
+
 ## mac-mini-2026-06-22-S52 -- HONEST assessment: the gamma-trick is a real partial advance but does NOT complete LRC(14)
 Owner: leverage the gamma-trick (kps S31ad) to complete LRC(14). I leveraged it (analyzed + verified its reach) and the disciplined result is: it does NOT complete the proof. HYP-2912.
 - **What it proves (verified):** r=|mult of 14|>=7 with R coprime to 14 (14-point pigeonhole, |R|<=6, each marks <=2) + r<=6 (union bound, with the meas(safe(R))>r/7 condition). Real, correct, clever (apex-periodicity decoupling).
