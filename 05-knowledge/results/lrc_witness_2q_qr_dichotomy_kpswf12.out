@@ -1,0 +1,39 @@
+==========================================================================================
+THE QR(-1) DICHOTOMY for the Fourier-correlation constant c^F_q  (kpswf12)
+  refines HYP-2854 'through Z/q' -> the EXACT q==3 mod 4 quadratic-character gate
+==========================================================================================
+
+(1) PREDICTION vs OBSERVATION across primes q, two symmetric clusters:
+    q  q%4  (-1|q)   consec 50/50   bdry 50/50          verdict
+  ------------------------------------------------------------------
+    3    3      -1           True         True         BALANCED  OK
+    5    1      +1          False        False       unbalanced  OK
+    7    3      -1           True         True         BALANCED  OK
+   11    3      -1           True         True         BALANCED  OK
+   13    1      +1          False        False       unbalanced  OK
+   17    1      +1          False        False       unbalanced  OK
+   19    3      -1           True         True         BALANCED  OK
+   23    3      -1           True         True         BALANCED  OK
+   29    1      +1          False        False       unbalanced  OK
+   31    3      -1           True         True         BALANCED  OK
+
+  prediction (50/50 <=> q==3 mod 4) matches observation on ALL tested primes: True
+
+(2) THE LRC FAMILY q=3,5,7,9 (n=6,10,14,18); consec-q cluster:
+    q    n     QR-shell    NQR-shell          split  q mod 4
+  ------------------------------------------------------------
+    3    6        50.0%        50.0%    EXACT 50/50        3
+    5   10        54.8%        45.2%     unbalanced        1
+    7   14        50.0%        50.0%    EXACT 50/50        3
+    9   18        38.5%        61.5%     unbalanced        1 (q not prime)
+
+  => q=7 (n=14, the LRC prime, 7==3 mod 4) is EXACTLY QR(7)-balanced.
+     QR(7) = {1,2,4} = Fano line {1,2,4} = the Hamming(7,4) cyclic shift set.
+
+(3) the q|m shell is identically 0 (ghat vanishes on q|m) -- sanity:
+    q=3: q|m shell mass = 0.00e+00  (must be ~0)
+    q=5: q|m shell mass = 0.00e+00  (must be ~0)
+    q=7: q|m shell mass = 0.00e+00  (must be ~0)
+    q=9: q|m shell mass = 0.00e+00  (must be ~0)
+
+DONE.
