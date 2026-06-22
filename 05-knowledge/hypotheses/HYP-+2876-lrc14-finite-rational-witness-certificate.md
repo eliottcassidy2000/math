@@ -1,16 +1,43 @@
 ---
 id: HYP-+2876
-title: LRC(14) = a FINITE rational-witness residue check (RS payoff) -- every 13-set has a witness a/D with D<=41; N(S,D)=#{a:||sa/D||>=1/14}=(6/7)^13 phi(D) + resonances (=Node-3 spectrum); D=14 never certifies (apex-7, PROVED); unifies floor+Node-3+V*+apex-7
-status: VERIFIED (the user's tested Ideas 1/2/3, independently confirmed + connected to my floor/Node-3/V* work). The finite-certificate PROOF (every covering S has a basis witness) reduces to a resonance/sieve bound.
+title: LRC(14) finite rational-witness residue check lead -- character-count and apex fragments survive, fixed finite denominator closure is refuted
+status: REFUTED as a global finite-certificate claim by THM-566/HYP-2876; retained as a sampled residue-atlas lead
 source: mac-mini-2026-06-22-S34 (user inspo: finite certificate basis + character-sum + apex-7 fragment)
 related:
   - HYP-2869   # the assembled proof (rho*>0 + finite V*); this is the SHARPER rational-witness form
   - HYP-2860   # kps Node-3 spectrum = the resonances {sum k_s s = 0 mod D}
   - HYP-2856   # the floor 3/pi^2 = the continuous main-term analog
   - THM-565    # Node-1 V* atlas (V*<=234); this sharpens to witness D<=41
+  - HYP-2876   # correction: finite denominator bases are atlases, not closures
 ---
 
-# HYP-+2876 -- LRC(14) as a finite rational-witness certificate
+# HYP-+2876 -- finite rational-witness certificate lead
+
+## Correction after codex S98
+
+The global finite-certificate reading below is false.  HYP-2876 proves the
+stronger finite-basis obstruction:
+
+```text
+for any finite denominator list B,
+S_B = {1,2,...,11,13,84*lcm(B)}
+```
+
+is primitive and covering, but has `N(S_B,D)=0` for every `D in B`, because
+the tail speed is divisible by each such `D` and sits at the observer for
+every numerator.  In particular, no fixed `D<=41` certificate and no fixed
+finite basis such as `{83,89,21}` can prove LRC(14) globally.
+
+What survives from this note is valuable but local:
+
+- the exact count `N(S,D)` and its character/resonance expansion;
+- the apex obstruction, strengthened in HYP-2876 from `D=14` to every reduced
+  denominator `2..14` for covering rows;
+- the idea of finite residue bases as adaptive or scaled atlases for sampled
+  and non-divisor-loaded families.
+
+The text below is retained as a historical sampled lead, not as a current
+theorem-level claim.
 
 ## The framework (verified, user Ideas 1/2/3)
 A **rational witness** for S={s_1..s_13} is a/D with ||s a/D||>=1/14 for all s (a lonely time at

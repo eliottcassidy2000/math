@@ -1,0 +1,68 @@
+==============================================================================
+PROMPT BASIS SAMPLE
+  basis=(83, 89, 21), samples=602, max_speed=10000
+  certified rows: 591/602
+  first-positive denominator histogram: {83: 523, 89: 67, 21: 1}
+  sample failures: 11
+  first failure: (1, 85, 108, 810, 1212, 2739, 5258, 5278, 6720, 6879, 7654, 7856, 8190)
+  first failure least D<=160: (19, 4)
+
+==============================================================================
+APEX / COVERING FLOOR
+  Covering means: for every D in {2,...,14}, some speed is divisible by D.
+  Therefore no denominator D<=14 can certify a covering row.
+  champion row counts for D=2..14: [(2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0), (11, 0), (12, 0), (13, 0), (14, 0)]
+  This strengthens the D=14 apex fragment: covering gives q-death for all q<=14.
+
+==============================================================================
+FINITE BASIS KILLER
+  basis=(83, 89, 21)
+  lcm(basis)=155127
+  killer tail=84*lcm(basis)=13030668
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 13030668)
+  basis counts=[(83, 0), (89, 0), (21, 0)]
+  reason: the tail is divisible by every denominator in the basis,
+  so that runner is exactly at the observer for every numerator.
+
+==============================================================================
+CHARACTER-SUM COUNT SCOUT
+  N(S,D) is counted over unit numerators.
+  main67 is phi(D)*(6/7)^13; main_unit uses the exact unit safe density.
+  The error is exactly the character/resonance sum over sum k_s s = 0 mod D.
+champion tower m=1
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+  covering=True primitive=True
+  D= 21: N_units=  0, N_all=  0, main67~  1.618, main_unit~  1.122, divisible_runner=True
+  D= 41: N_units=  2, N_all=  2, main67~  5.392, main_unit~ 10.167, divisible_runner=False
+  D= 83: N_units=  2, N_all=  2, main67~ 11.054, main_unit~ 15.120, divisible_runner=False
+  D= 89: N_units=  2, N_all=  2, main67~ 11.862, main_unit~ 13.085, divisible_runner=False
+prompt-basis killer
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 13030668)
+  covering=True primitive=True
+  D= 21: N_units=  0, N_all=  0, main67~  1.618, main_unit~  1.122, divisible_runner=True
+  D= 41: N_units=  2, N_all=  2, main67~  5.392, main_unit~ 10.167, divisible_runner=False
+  D= 83: N_units=  0, N_all=  0, main67~ 11.054, main_unit~ 15.120, divisible_runner=True
+  D= 89: N_units=  0, N_all=  0, main67~ 11.862, main_unit~ 13.085, divisible_runner=True
+tower row m=6
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 504)
+  covering=True primitive=True
+  D= 21: N_units=  0, N_all=  0, main67~  1.618, main_unit~  1.122, divisible_runner=True
+  D= 41: N_units=  0, N_all=  0, main67~  5.392, main_unit~ 10.167, divisible_runner=False
+  D= 83: N_units=  2, N_all=  2, main67~ 11.054, main_unit~ 15.120, divisible_runner=False
+  D= 89: N_units=  2, N_all=  2, main67~ 11.862, main_unit~ 13.085, divisible_runner=False
+known S* C-failure row
+  row=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42)
+  covering=True primitive=True
+  D= 21: N_units=  0, N_all=  0, main67~  1.618, main_unit~  1.122, divisible_runner=True
+  D= 41: N_units=  0, N_all=  0, main67~  5.392, main_unit~ 10.167, divisible_runner=False
+  D= 83: N_units=  4, N_all=  4, main67~ 11.054, main_unit~ 15.120, divisible_runner=False
+  D= 89: N_units=  0, N_all=  0, main67~ 11.862, main_unit~ 13.085, divisible_runner=False
+
+==============================================================================
+TOURNAMENT ANALYSIS
+  vertices: proof carriers / residue atlases, not runners
+  observable: (rules out false route, preserves witness predicate, finite-atlas value, formal clarity)
+  Hamiltonian path: THM566_divisor_loaded_no_go > scaled_residue_basis > character_sum_resonance_count > finite_sample_basis > single_denominator_certificate > speed_subset_minor_order
+  score histogram: [0, 1, 2, 3, 4, 5]
+  directed 3-cycles: 0; SCCs: singleton; Hamiltonian-path count: 1
+  challenged assumption: loneliness should be minor-closed under runner deletion

@@ -13,6 +13,13 @@ Per user inspo (finite certificate basis + character-sum + apex-7 fragment + dee
 - **Deep leads (for the team):** codex HYP-2872 REFUTED the graph-minor closure for H (it's the MULTIPLICATIVE structure, not minors -- the Kuratowski analog is forbidden-generators {7,21}). Remaining: winding-tournament T(x) conflict-graph <-> {7,21}/K5 (LRC non-loneliness as a forbidden-H class); E_7 odd holes (apex-7 non-chordality) <-> LRC(14) obstruction (codex even-graph audit).
 NEW: HYP-2876. Clean session (verified before claiming). NEXT: the Node-3 deficit bound at {83,89} (the finite-certificate proof) = the same floor crux, rational form.
 
+CORRECTION (codex-2026-06-22-S98): the global finite-certificate claim in this
+block is refuted by THM-566/HYP-2876.  For any finite denominator list `B`,
+`{1,...,11,13,84*lcm(B)}` is primitive and covering but has `N(S,D)=0` for
+every `D in B`; in particular fixed `D<=41` and the fixed basis `{83,89,21}`
+cannot be theorem-level closures.  The character-count formulation and apex
+obstruction survive as an adaptive/scaled residue-atlas lead.
+
 ## mac-mini-2026-06-22-S33 -- BROAD idea session (Kuratowski/Wagner/Robertson-Seymour + {7,21} + Beurling-Selberg + equinumerosity): batch of 7 ideas shared + 2 grounded
 Per directive (explore tangents, many ideas, share concurrently). Broadcast a 7-idea batch (HYP-2873 + the broadcast):
 - **IDEA 4 CONFIRMED EXACT:** A(E)=#{a+b=c+d} = integral|E^(t)|^4 (spectral 4th moment, Parseval); INTERVAL (consec) maximizes = Fejer spectral concentration; Paley FLAT. So "consec maximizes L_y" (HYP-2852) IS "interval is most spectrally concentrated" -- grounds the L_y extremality in Beurling-Selberg/Fejer.
@@ -19885,3 +19892,47 @@ complement-odd L2 fluctuation` is the Fourier-side analogue of HYP-2866's
 same proof discipline: keep aggregate low carriers until the cancellation or
 majorization has acted, then route coherent structured packets to finite
 AP/Freiman atlases and incoherent tails to L2/Farey bounds.
+
+## codex-2026-06-22-S98 -- finite residue bases are atlases, not closures
+
+User prompt supplied the tested basis `{83,89,21}`, the character-sum count
+`N(S,D)`, and the apex-7 floor.  Added
+`04-computation/lrc14_residue_basis_character_sum_codex_s98.py` and stored
+`05-knowledge/results/lrc14_residue_basis_character_sum_codex_s98.out`.
+
+Main correction: a fixed finite denominator basis cannot be global, even when
+it is excellent on samples.  In a deterministic broad sample of `602`
+primitive covering rows up to speed `10000`, `{83,89,21}` certified `591`
+rows; the `11` misses are not failures of LRC, and the first has a small
+replacement certificate `D=19` with `4` unit witnesses.  Exact theorem-level
+guardrail: for any finite denominator list `B`, the primitive covering row
+`{1,...,11,13,84*lcm(B)}` kills every denominator in `B`.  For the prompt
+basis the tail is `13030668`, with counts `[(83,0),(89,0),(21,0)]`.  This
+extends THM-566 from interval caps to arbitrary finite sparse lists.
+
+The apex fragment also sharpened: covering kills every reduced denominator
+`2..14`, not just `14`, because for each such `D` some speed is divisible by
+`D` and therefore sits at the observer for every numerator.  This is the exact
+split between THM-523's non-covering easy witnesses and the covering hard core.
+
+Character-count reading: `N(S,D)` has a main term plus the exact resonance
+packet `sum_s k_s s == 0 mod D`.  Individual moduli can dip to zero by
+divisibility or resonance even when the main term is positive.  So finite
+bases should be treated as adaptive/scaled residue atlases for coherent
+divisor-resonance packets, while incoherent packets route to the HYP-2875
+bandlimited L2 tail.  Created HYP-2876 and reflection
+`07-reflections/lrc14-finite-residue-bases-are-atlases-not-closures-codex-s98.md`.
+
+Assumption challenge / Tournament Analysis: considered runners, denominators,
+numerator residues, character modes, divisor-loaded tails, covering
+obligations, even-graph holes, and proof obligations.  Selected carrier:
+scaled residue/character-count atlas.  Challenged assumption: loneliness is
+not minor-closed under runner deletion, so `{7,21}` / `E_7` odd-hole analogies
+must live on residue/even-graph addresses or proof obligations, not raw speed
+subset deletion.
+
+Post-pull integration: incoming `HYP-+2876` asserted the stronger finite
+rational-witness closure (`D<=41` and fixed basis coverage).  The S98
+finite-basis killer directly refutes the global form while preserving its
+useful parts: `N(S,D)` as character/resonance count, the apex obstruction, and
+large-denominator bases as sampled/scaled atlases.
