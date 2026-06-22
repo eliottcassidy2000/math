@@ -1,12 +1,16 @@
-⚠ [2942/2942] Replayed TournamentH7.LRCGapReach
-warning: TournamentH7/LRCGapReach.lean:32:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+info: TournamentH7/LRCMreachConcrete.lean:265:0: 'LonelyRunner.LRC14Concrete.Mreach_eq_global_sSup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:266:0: 'LonelyRunner.LRC14Concrete.lonely_of_Mreach_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2948/2948] Replayed TournamentH7.LRCGapReach
+warning: TournamentH7/LRCGapReach.lean:33:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
 If you'd rather continue using `push_neg` in your project, you can implement it as follows:
 ```
 open Lean.Parser.Tactic in
 macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
   `(tactic| push $cfg:optConfig Not $[$loc]?)
 ```
-info: TournamentH7/LRCGapReach.lean:57:0: 'LonelyRunner.GapReach.margin_ge_of_free_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCGapReach.lean:58:0: 'LonelyRunner.GapReach.margin_gt_one_div_14_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCGapReach.lean:59:0: 'LonelyRunner.GapReach.exists_lonely_phase_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
-Build completed successfully (2942 jobs).
+info: TournamentH7/LRCGapReach.lean:89:0: 'LonelyRunner.GapReach.margin_ge_of_free_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCGapReach.lean:90:0: 'LonelyRunner.GapReach.margin_gt_one_div_14_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCGapReach.lean:91:0: 'LonelyRunner.GapReach.exists_lonely_phase_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCGapReach.lean:92:0: 'LonelyRunner.GapReach.nearInt_gt_of_forall_int' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCGapReach.lean:93:0: 'LonelyRunner.GapReach.exists_nearInt_margin_of_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2948 jobs).

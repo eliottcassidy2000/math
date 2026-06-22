@@ -16,6 +16,7 @@
 -/
 
 import Mathlib.Tactic
+import TournamentH7.LRCMreachConcrete
 
 namespace LonelyRunner
 namespace GapReach
@@ -52,11 +53,44 @@ theorem exists_lonely_phase_of_gap (C : Finset ℝ) (a g : ℝ) (hg : 1 / 7 < g)
     ∃ φ : ℝ, ∀ c ∈ C, ∀ n : ℤ, 1 / 14 < |φ - (c + (n : ℝ))| :=
   ⟨a + g / 2, margin_gt_one_div_14_of_gap C a g hg hfree⟩
 
+/-- Bridge to the skeleton's loneliness norm `nearInt y = min(fract y, 1-fract y)`
+(the distance to the nearest integer): `(∀ n, r < |y - n|) → r < nearInt y`.  So a
+free-interval margin is literally a `nearInt` loneliness margin. -/
+theorem nearInt_gt_of_forall_int {y r : ℝ} (h : ∀ n : ℤ, r < |y - (n : ℝ)|) :
+    r < LRC14Concrete.nearInt y := by
+  have hyf : y - (⌊y⌋ : ℝ) = Int.fract y := by rw [Int.fract]
+  have hfr : (0 : ℝ) ≤ Int.fract y := Int.fract_nonneg y
+  have h1 : r < Int.fract y := by
+    have hh := h ⌊y⌋
+    rwa [hyf, abs_of_nonneg hfr] at hh
+  have h2 : r < 1 - Int.fract y := by
+    have hh := h (⌊y⌋ + 1)
+    have hrw : y - (((⌊y⌋ + 1 : ℤ)) : ℝ) = Int.fract y - 1 := by push_cast; rw [← hyf]; ring
+    rw [hrw, abs_of_nonpos (by linarith [Int.fract_lt_one y])] at hh
+    linarith
+  rw [LRC14Concrete.nearInt]
+  exact lt_min h1 h2
+
+/-- **The reach core in the skeleton's loneliness norm.**  A `> 1/7` free gap gives
+a fast phase `φ` with `nearInt (φ - c) > 1/14` for every tooth `c` — the exact
+`‖·‖ ≥ 1/14` loneliness margin (this is what the `Vmax`-ruler embedding then
+realizes at a real time `τ` to certify `M(S) ≥ 1/14`). -/
+theorem exists_nearInt_margin_of_gap (C : Finset ℝ) (a g : ℝ) (hg : 1 / 7 < g)
+    (hfree : ∀ c ∈ C, ∀ n : ℤ, (c + (n : ℝ)) ∉ Set.Ioo a (a + g)) :
+    ∃ φ : ℝ, ∀ c ∈ C, 1 / 14 < LRC14Concrete.nearInt (φ - c) := by
+  refine ⟨a + g / 2, fun c hc => ?_⟩
+  apply nearInt_gt_of_forall_int
+  intro n
+  have := margin_gt_one_div_14_of_gap C a g hg hfree c hc n
+  rwa [show (a + g / 2) - c - (n : ℝ) = (a + g / 2) - (c + (n : ℝ)) by ring]
+
 /-! ## Axiom audit -/
 
 #print axioms margin_ge_of_free_interval
 #print axioms margin_gt_one_div_14_of_gap
 #print axioms exists_lonely_phase_of_gap
+#print axioms nearInt_gt_of_forall_int
+#print axioms exists_nearInt_margin_of_gap
 
 end GapReach
 end LonelyRunner
