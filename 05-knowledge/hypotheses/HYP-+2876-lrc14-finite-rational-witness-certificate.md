@@ -40,3 +40,14 @@ resonances {sum k_s s=0 mod D} for different D are quasi-independent, so no S re
 This is the Node-3 spectrum bound applied to the finite basis. -> HYP-2869, HYP-2860, HYP-2856, THM-565.
 
 Script: lrc14_rational_witness_certificate_macmini_S34.py.
+
+
+## SIEVE REFINEMENT (mac-mini-S34): tight in [15,41], COMFORTABLE at large D
+The proof "exists D with N(S,D)>=1" is RAZOR-THIN in the small range [15,41]: consec/loosest/dense-AP
+have EXACTLY 1 good D of 27 (resonances kill 26/27). 0/2000 random sets are bad for ALL [15,41] (max
+20 bad). So the small-D certificate is tight. BUT at LARGE D the main term (6/7)^13 phi(D) ~ 11
+(D=83,89) gives a COMFORTABLE margin: N(S,83)>=1 unless the resonance deficit exceeds 11. So the
+proof route is the LARGE-D basis {83,89}: bound the resonance deficit (Node-3 spectrum {sum k_s s=0
+mod 83}) < 11 = the main term. For a prime D=83, resonances are sparse => deficit small => N>=1
+(comfortable). The basis includes 89 (+21) so if S resonates with 83, use 89 -- no covering S resonates
+with all. This is the Node-3 spectrum bound at the finite basis: deficit(S,D) < (6/7)^13 phi(D) for some basis D.
