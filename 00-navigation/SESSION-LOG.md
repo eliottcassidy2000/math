@@ -19831,6 +19831,27 @@ carrier is the route/approach-class tournament
 guardrail`, transitive with one Hamiltonian path.  It preserves the `H` gap
 predicate exactly on the strong-component/OCF side and explicitly records that
 even-graph minor quotients destroy it.
+
+## codex-2026-06-22-S97b -- corrected Beurling-Selberg handoff for the LRC14 floor
+
+Second-pass lead after reading the pulled S33 broadcast and older THM-537 /
+THM-548 boundary work.  Created HYP-2875.  The useful S33 Beurling-Selberg
+prompt should not mean "retry a literal pointwise majorant/minorant for the
+sharp event indicator": THM-537 and earlier Angle-A work already show that
+route is too weak or impossible in the signed inclusion-exclusion setting.
+
+Corrected target: an admissible bandlimited boundary certificate for the
+spectrum sum
+`meas(G_P cap GOOD_E)=meas(G_P)meas(GOOD_E)+SPEC(P,E)`.  Keep modes
+`0<|n|<=H` exactly, bound the high tail by the sharper of L2
+Cauchy-Schwarz and Abel/Dirichlet signed cancellation, then prove uniformly
+`low_H - TailBound_H >= -(1-c)baseline` after HYP-2871's complement-even
+cluster reduction.  HYP-2871's reported bank certificate `R'>=0.434` at
+`H=42` is the model; HYP-2875 asks to make that structural.  Coherent low
+packets route to AP/Freiman/GAP finite atlases; incoherent packets route to
+Parseval/energy cancellation.  This also imports S33's additive-energy =
+spectral-fourth-moment clue as a classifier for coherent low packets, not as
+a standalone scalar proof.
 S95b stress addendum: added
 `04-computation/lrc14_nu_prefix_stress_codex_s95b.py`, reusing the exact S95
 component engine to search beyond `[0,14]`.  The stored run
