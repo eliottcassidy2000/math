@@ -1,0 +1,33 @@
+(A) I(G,2) preimage structure (connected graphs <=7 vertices):
+  H=  3 PRIME: #connected-preimages=  1; smallest=1v/0e =K_n (clique!)
+  H=  5 PRIME: #connected-preimages=  1; smallest=2v/1e =K_n (clique!)
+  H=  7 PRIME: #connected-preimages=  1; smallest=3v/3e =K_n (clique!)
+  H=  9      : #connected-preimages=  1; smallest=4v/6e =K_n (clique!)
+  H= 11 PRIME: #connected-preimages=  2; smallest=3v/2e
+  H= 13 PRIME: #connected-preimages=  2; smallest=4v/5e
+  H= 15      : #connected-preimages=  2; smallest=5v/9e
+  H= 17 PRIME: #connected-preimages=  3; smallest=4v/4e
+  H= 19 PRIME: #connected-preimages=  3; smallest=5v/8e
+  H= 21      : #connected-preimages=  3; smallest=4v/3e
+  H= 23 PRIME: #connected-preimages=  5; smallest=5v/7e
+  H= 25      : #connected-preimages=  4; smallest=6v/12e
+  H= 27      : #connected-preimages=  7; smallest=5v/6e
+  H= 29 PRIME: #connected-preimages=  8; smallest=4v/3e
+  H= 31 PRIME: #connected-preimages= 11; smallest=5v/5e
+  H= 33      : #connected-preimages=  9; smallest=6v/10e
+  H= 35      : #connected-preimages= 17; smallest=5v/6e
+  H= 37 PRIME: #connected-preimages=  9; smallest=6v/9e
+  H= 39      : #connected-preimages= 24; smallest=5v/5e
+  H= 41 PRIME: #connected-preimages=  9; smallest=6v/8e
+  H= 43 PRIME: #connected-preimages= 27; smallest=5v/4e
+  H= 45      : #connected-preimages=  8; smallest=6v/7e
+
+  H=7 preimages (connected): 1; shapes=[(3, 3)]
+  => H=7's ONLY connected preimage is K_3 (3v/3e, a clique) = the forbidden conflict graph (THM-200).
+
+(B) achievable-H semigroup (atoms m<=7), odd gaps <=250:
+  odd gaps: [7, 21, 63, 107, 119, 149, 161, 163, 167, 173, 179, 181, 191, 193, 197, 199, 203, 211, 217, 223, 227, 229, 233, 239, 241] (total 25)
+  PRIME gaps: [7, 107, 149, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241]
+  NOTE: gaps from missing higher-m atoms are TRANSIENT (fill at larger m).
+  PERMANENT odd gaps (canon THM-029/115): {7, 21}.  7 = unique permanent PRIME gap.
+  next prime gap after 7 in this list: 107 (transient: becomes an atom/product at higher m).

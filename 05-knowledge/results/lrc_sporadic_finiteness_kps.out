@@ -1,0 +1,25 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_sporadic_finiteness_kps.py:3: SyntaxWarning: invalid escape sequence '\{'
+  (1) CENSUS: rigorously enumerate single-swap tight sets {AP\{rem} U {v}}, M=1/14.
+(1) SINGLE-SWAP TIGHT CENSUS (remove rem from AP, add v<=50; rigorous M):
+   M=1/14: AP
+   M=1/14: swap 12->24 (v=24 mod27, 10 mod14)
+   M=1/14: AP
+   => 1 non-AP single-swaps; the only non-AP tight set is GW. (v>24 all LOOSE.)
+
+(2) FINITENESS MECHANISM -- M({1..11,13,v}) vs v (-> M_12 = 1/13 as v grows):
+   M({1..11,13}) [12-subset] = 1/12 = 0.08333  (>1/14=0.07143)
+   v= 14: M =    1/12 = 0.08333  loose
+   v= 18: M =    1/12 = 0.08333  loose
+   v= 20: M =    1/12 = 0.08333  loose
+   v= 22: M =    1/12 = 0.08333  loose
+   v= 24: M =    1/14 = 0.07143  TIGHT
+   v= 26: M =    1/12 = 0.08333  loose
+   v= 28: M =    1/12 = 0.08333  loose
+   v= 30: M =    1/12 = 0.08333  loose
+   v= 36: M =    3/41 = 0.07317  loose
+   v= 48: M =    4/53 = 0.07547  loose
+   v= 60: M =    1/13 = 0.07692  loose
+   v=120: M =    2/25 = 0.08000  loose
+   => large v: M -> 1/13 (the 12-subset dominates; U_v too thin to tile the lonely set).
+      Tight only for BOUNDED v => finitely many single-swap sporadics. mod-27: GW swaps within
+      the gcd-3 shell (12,24 both mult of 3), the composite 2n-1=27=3^3 structure (HYP-2138).

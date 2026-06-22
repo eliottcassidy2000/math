@@ -1,0 +1,82 @@
+LRC14 additive-energy majorization attack (codex S103)
+==============================================================================
+
+--- k=8, primitive bank E=(0 plus 7 from 1..13), rows=1716
+AP p0=0.327211 (481/1470)  Ly=0.358231 (2633/7350)  A=344
+AP diff profile=(7, 6, 5, 4, 3, 2, 1)
+AP diff-profile majorizes all rows: failures=0
+AP p0 max in bank: over_AP=0
+AP Ly max in bank: over_AP=0
+scalar A monotonicity inversions for p0: 1686
+  worst p0: lower-A (0, 2, 4, 6, 7, 8, 10, 12) A=272 p0=0.255782 (188/735)
+                 higher-A (0, 2, 3, 4, 5, 7, 8, 9) A=280 p0=0.057993 (341/5880)
+                 gap=0.197789 (1163/5880)
+scalar A monotonicity inversions for Ly: 1683
+  worst Ly: lower-A (0, 2, 4, 6, 7, 8, 10, 12) A=272 Ly=0.278895 (16399/58800)
+                 higher-A (0, 1, 4, 5, 6, 7, 8, 9) A=276 Ly=0.086338 (1523/17640)
+                 gap=0.192557 (33967/176400)
+pairwise diff-profile majorization => p0 monotone violations: 351261
+  diff-majorized row (0, 1, 2, 3, 4, 5, 6, 8) p0=0.208333 (5/24) < (0, 1, 2, 4, 5, 6, 7, 10) p0=0.220068 (647/2940); gap=0.011735 (23/1960)
+  diff-majorized row (0, 1, 2, 3, 4, 5, 6, 8) p0=0.208333 (5/24) < (0, 1, 2, 5, 6, 7, 10, 11) p0=0.209153 (1691/8085); gap=0.000819 (53/64680)
+  diff-majorized row (0, 1, 2, 3, 4, 5, 6, 8) p0=0.208333 (5/24) < (0, 1, 3, 4, 5, 6, 7, 9) p0=0.237075 (697/2940); gap=0.028741 (169/5880)
+one-step compression audit: checked=5544 energy_up=2586 energy_up_p0_down=654 profile_up=2383 profile_up_p0_down=572
+  compression (0, 1, 2, 3, 4, 5, 6, 10) -> (0, 1, 2, 3, 4, 5, 6, 9): A 284->300, p0 0.190476 (4/21)->0.188095 (79/420), down=0.002381 (1/420)
+  compression (0, 1, 2, 3, 4, 5, 6, 10) -> (0, 1, 2, 3, 4, 5, 6, 9): A 284->300, p0 0.190476 (4/21)->0.188095 (79/420), down=0.002381 (1/420)
+  compression (0, 1, 2, 3, 4, 5, 6, 12) -> (0, 1, 2, 3, 4, 5, 6, 11): A 264->272, p0 0.202381 (17/84)->0.163203 (377/2310), down=0.039177 (181/4620)
+
+--- k=9, primitive bank E=(0 plus 8 from 1..13), rows=1287
+AP p0=0.416156 (2447/5880)  Ly=0.492876 (26083/52920)  A=489
+AP diff profile=(8, 7, 6, 5, 4, 3, 2, 1)
+AP diff-profile majorizes all rows: failures=0
+AP p0 max in bank: over_AP=0
+AP Ly max in bank: over_AP=0
+scalar A monotonicity inversions for p0: 1254
+  worst p0: lower-A (0, 1, 2, 3, 4, 5, 6, 7, 12) A=401 p0=0.371769 (1093/2940)
+                 higher-A (0, 2, 3, 4, 5, 7, 8, 9, 10) A=405 p0=0.117177 (689/5880)
+                 gap=0.254592 (499/1960)
+scalar A monotonicity inversions for Ly: 1251
+  worst Ly: lower-A (0, 1, 2, 4, 6, 7, 8, 10, 12) A=361 Ly=0.420578 (2473/5880)
+                 higher-A (0, 2, 3, 4, 7, 8, 9, 10, 11) A=365 Ly=0.226722 (22625/99792)
+                 gap=0.193857 (677087/3492720)
+pairwise diff-profile majorization => p0 monotone violations: 199693
+  diff-majorized row (0, 1, 2, 3, 4, 5, 6, 7, 11) p0=0.335374 (493/1470) < (0, 1, 2, 3, 4, 5, 6, 7, 12) p0=0.371769 (1093/2940); gap=0.036395 (107/2940)
+  diff-majorized row (0, 1, 2, 3, 4, 5, 6, 7, 11) p0=0.335374 (493/1470) < (0, 1, 2, 3, 4, 5, 6, 7, 13) p0=0.357561 (6833/19110); gap=0.022187 (212/9555)
+  diff-majorized row (0, 1, 2, 3, 4, 5, 6, 8, 9) p0=0.286111 (103/360) < (0, 1, 2, 3, 4, 5, 6, 7, 10) p0=0.380952 (8/21); gap=0.094841 (239/2520)
+one-step compression audit: checked=3960 energy_up=1924 energy_up_p0_down=611 profile_up=1684 profile_up_p0_down=520
+  compression (0, 1, 2, 3, 4, 5, 6, 7, 12) -> (0, 1, 2, 3, 4, 5, 6, 7, 11): A 401->417, p0 0.371769 (1093/2940)->0.335374 (493/1470), down=0.036395 (107/2940)
+  compression (0, 1, 2, 3, 4, 5, 6, 7, 12) -> (0, 1, 2, 3, 4, 5, 6, 7, 11): A 401->417, p0 0.371769 (1093/2940)->0.335374 (493/1470), down=0.036395 (107/2940)
+  compression (0, 1, 2, 3, 4, 5, 6, 8, 12) -> (0, 1, 2, 3, 4, 5, 6, 8, 11): A 385->401, p0 0.273810 (23/84)->0.237338 (731/3080), down=0.036472 (337/9240)
+
+--- k=10, primitive bank E=(0 plus 9 from 1..12), rows=220
+AP p0=0.504478 (8899/17640)  Ly=0.570081 (45253/79380)  A=670
+AP diff profile=(9, 8, 7, 6, 5, 4, 3, 2, 1)
+AP diff-profile majorizes all rows: failures=0
+AP p0 max in bank: over_AP=0
+AP Ly max in bank: over_AP=0
+scalar A monotonicity inversions for p0: 197
+  worst p0: lower-A (0, 1, 2, 3, 4, 5, 6, 7, 10, 12) A=546 p0=0.438776 (43/98)
+                 higher-A (0, 2, 3, 4, 5, 7, 8, 9, 10, 11) A=562 p0=0.205782 (121/588)
+                 gap=0.232993 (137/588)
+scalar A monotonicity inversions for Ly: 200
+  worst Ly: lower-A (0, 1, 2, 3, 4, 5, 6, 7, 10, 12) A=546 Ly=0.529460 (28019/52920)
+                 higher-A (0, 2, 3, 4, 5, 7, 8, 9, 10, 11) A=562 Ly=0.358377 (1016/2835)
+                 gap=0.171082 (27161/158760)
+pairwise diff-profile majorization => p0 monotone violations: 5798
+  diff-majorized row (0, 1, 2, 3, 4, 5, 6, 7, 8, 11) p0=0.446506 (722/1617) < (0, 1, 2, 3, 4, 5, 6, 7, 8, 12) p0=0.464626 (683/1470); gap=0.018120 (293/16170)
+  diff-majorized row (0, 1, 2, 3, 4, 5, 6, 7, 8, 11) p0=0.446506 (722/1617) < (0, 1, 2, 3, 4, 5, 6, 7, 9, 12) p0=0.459524 (193/420); gap=0.013018 (421/32340)
+  diff-majorized row (0, 1, 2, 3, 4, 5, 6, 7, 8, 11) p0=0.446506 (722/1617) < (0, 2, 3, 4, 5, 6, 7, 8, 9, 12) p0=0.452098 (1595/3528); gap=0.005592 (31/5544)
+one-step compression audit: checked=495 energy_up=244 energy_up_p0_down=94 profile_up=225 profile_up_p0_down=85
+  compression (0, 1, 2, 3, 4, 5, 6, 7, 8, 12) -> (0, 1, 2, 3, 4, 5, 6, 7, 8, 11): A 586->610, p0 0.464626 (683/1470)->0.446506 (722/1617), down=0.018120 (293/16170)
+  compression (0, 1, 2, 3, 4, 5, 6, 7, 8, 12) -> (0, 1, 2, 3, 4, 5, 6, 7, 8, 11): A 586->610, p0 0.464626 (683/1470)->0.446506 (722/1617), down=0.018120 (293/16170)
+  compression (0, 1, 2, 3, 4, 5, 6, 7, 9, 12) -> (0, 1, 2, 3, 4, 5, 6, 7, 9, 11): A 566->590, p0 0.459524 (193/420)->0.441796 (42863/97020), down=0.017728 (86/4851)
+
+Tournament Analysis over proof carriers
+==============================================================================
+counterexample/obligation scores (lower is better):
+  AP_diff_majorization           0
+  Ly_certificate                 0
+  local_profile_compression      1177
+  scalar_additive_energy         3137
+  pairwise_diff_majorization     556752
+orientation: AP_diff_majorization -> Ly_certificate -> pairwise_diff_majorization -> local_profile_compression -> scalar_additive_energy
+readout: scalar A is a correlation heuristic, not a monotone theorem. The live proof object is AP-facing difference-profile/Fejer majorization plus labelled sector/Fourier packets to handle p0 signs.

@@ -45,6 +45,550 @@ Owner: "pull main, use as inspo to attempt all 3 nodes, be creative, report ALL 
 - **SWING 2 (TOOL not closure):** Beurling-Selberg minorant of 1_{G_P} (band-limited deg N, exact defect r_P/(N+1)) gives a rigorous PER-CONFIG finite floor certificate meas(G_P∩cover^c) >= finite sum; cleaner one-sided bound than the team's L2-CS/Abel, but still per-config (not uniform).
 - **NOT DEVELOPED (honest):** F_7 character/Fano decorrelation (apex prime); 2nd-moment/Paley-Zygmund (circular); LRC(14)->LRC(7) via 14=2*7 doubling (no traction); geometry-of-numbers (overlaps HYP-2606).
 - META: team's ζ(2)/√-cancellation/three-gap = real progress, floor robustly TRUE; uniform rigor of Nodes 2/3 still open. Best next bet = Swing 3 (bounded-denominator witness). Files: 04-computation/lrc14_{creative_swings,bounded_witness_conjecture,crt_witness_stress}_kindmendel.py; reflection lrc14-creative-swings-all-nodes-kindmendel-S4.md. -> HYP-2864, HYP-2847, OPEN-Q-108.
+## mac-mini-2026-06-22-S43 -- LRC proof<->disproof dialectic: covering sets are FORCED LONELY (M~0.097>>1/14); M({1..11,13})=1/12 is the adversarial seed; measure inequality REFUTED as insufficient
+Owner: M({1..11,13})=1/12 & zeta(-1)=-1/12; prove AND disprove LRC(14), go back and forth; in/finite families. HYP-2897.
+- **Premise = the SEED:** M({1..11,13})=1/12 because the set OMITS a multiple of 12 => t=1/12 witnesses it (= q=12 case of kps THM-523 = my S42 t=1/n witness, generalized to all q<=14). It is the seed of kps's adversarial THM-566 family (add a large mult of 12 to make it covering).
+- **DIALECTIC:** Disproof1 (mults of 14) too weak. Proof: a counterexample must be a COVERING set (a mult of EVERY q in 2..14), over-determined (13 runners, 13 constraints). Disproof2 (search covering sets): min M = 0.097 >> 1/14 over 3867 exact sets -- the over-determination FORCES loneliness. No counterexample. Disproof3 (seed+large N): I claimed my MEASURE INEQUALITY [meas(Safe(B))>|L|*2/14 => safe] defeats it; REFUTED -- meas(Safe(seed)@1/14)=426/35035=0.0122 < 2/14, so the union bound fails; EQUIDISTRIBUTION (THM-566) is the real defense.
+- **SYNTHESIS:** LRC(14) <=> covering sets have M>=1/14. Non-covering sets are witnessed by t=1/q (M>=1/q>=1/14); the tight M=1/14 instances (consec, GW; THM-560) are the NON-covering boundary (omit q=14). Covering sets are over-determined => lonely (M~0.097). Residual: bounded (compactness THM-527) + unbounded (equidistribution THM-566).
+- **zeta(-1)=-1/12 (thematic, honest):** functional-equation partner of the zeta(2) Farey floor (3/pi^2=1/(2 zeta(2))); shares the number 12 with the seed M=1/12; the "1+2+3+...=-1/12" is the large-N->infinity limit of the adversarial family. Inspiration, not a rigorous tool.
+DISCIPLINE: corrected my own measure-inequality over-claim mid-session. NEW: HYP-2897, lrc_proof_disproof_dialectic_macmini_S43.py. NEXT: prove covering sets have M>=1/14 (over-determination => spread => lonely) -- the bounded-compactness + equidistribution split (with kps).
+
+## codex-2026-06-22-S109 -- zeta -1/12 core dialectic closes the one-tail disproof branch
+
+Owner asked to work back and forth between proof and disproof around
+`M({1..11,13})=1/12` and `1+2+3+...=zeta(-1)=-1/12`, with emphasis on finite
+and infinite families of discrete objects.  Pulled incoming KPS S31p, which
+introduced the resonance-killing game and the zeta-duality reflection, then
+made the first missing-killer core exact.  After a later rebase, integrated
+KPS S31p's sharper `{1,...,12,v}` killing-budget branch: one speed kills `13`
+or `14` cheaply, but killing both forces the large `182` lcm killer, while the
+minimum remains the AP value `1/14` at `v=13`.
+
+Added `04-computation/lrc_zeta12_core_dialectic_codex_s109.py` and stored
+`05-knowledge/results/lrc_zeta12_core_dialectic_codex_s109.out`.  New
+HYP-2896/T1010:
+
+- Let `C={1,...,11,13}`.  Then `M(C)=1/12` at `t=5/12`, active `(5,7)`.
+- Every one-tail row `C∪{w}` is LRC14-safe.
+- If `12∤w`, q=12 survives and gives `M>=1/12`.
+- If `12|w` but `14∤w`, q=14 survives and gives `M>=1/14`.
+- If `w=84m`, the q-covering branch has exact witness
+  `t=(35m+2)/(84m+5)` and exact value `M=7m/(84m+5)>1/14`, active `(5,84m)`.
+
+This closes the one-tail disproof attempt: killing the `1/12` and `1/14`
+resonances by one finite positive speed forces `84|w`, and that same
+divisibility produces a positive binding-pair margin.  The zeta `-1/12`
+constant is therefore a Bernoulli boundary/regularized infinite-AP signal, not
+a finite negative runner.  Remaining target: multi-large or moderate resonant
+covering rows where several divisibility killers interact before
+equidistribution, i.e. HYP-2890/HYP-+2878 support-six residual packets.
+
+## mac-mini-2026-06-22-S42 -- small-n validation of the coverage technique: exact-tiler uniqueness FALSE (sporadics), all tight-safe, the t=1/n witness + clean sufficient condition for LRC
+Owner: apply our comprehensive techniques to n<14 to understand them; keep aiming to finish. Applied the coverage/exact-tiler technique (S39/S41) to LRC(n), n=5,6,7,8 (LRC PROVEN for n<=7).
+- **CORRECTION (discipline):** my S39/S41 "only d*{1..13} tiles exactly" is FALSE -- exhaustive small-n search finds SPORADIC exact-tilers: {1,3,4,7}(n=5), {1,3,4,5,9}(n=6), 2 at n=8. My "0/5668" was a SAMPLING artifact. Matches kps THM-560 (PROVED difference-closed exact-tilers = d*{1..n-1}; the rest are Goddyn-Wong single-replacement sporadics).
+- **ALL exact-tilers are TIGHT-SAFE:** M(S)=1/n EXACTLY for every exact-tiler (consec + sporadic) at n=5,6,8, with explicit witnesses (often t=1/n). LRC holds at these n; the technique reproduces the known tight instances.
+- **The t=1/n WITNESS (new):** t=1/n safe <=> no runner == 0 mod n. Every PRIMITIVE exact-tiler found avoids multiples of n, so t=1/n witnesses it; non-primitive = d*(primitive), witnessed at t=1/(nd) (scaling-inv). Verified: NO primitive exact-tiler has a multiple of n at n=5,6,7.
+- **CLEAN SUFFICIENT CONDITION:** *every primitive exact-tiler avoids multiples of n* ==> LRC(n) (airtight: t=1/n witnesses each primitive exact-tiler, scaling handles the rest, non-tilers have positive safe measure). VERIFIED n=5,6,7. The crux is now the COMPLETENESS of the structured(THM-560)+GW-sporadic tight-instance classification (OPEN-Q-108), and that all GW values avoid multiples of n (verified small n).
+- Concurrent: kps THM-560 (structured proof + GW), codex s106/107 (GW tiler classification, unital guardrail) -- my small-n validation + t=1/n witness complement their classification.
+NEW: lrc_small_n_exact_tilers_macmini_S42.py; HYP-2888 updated. NEXT: confirm GW sporadics at n=14 avoid multiples of 14 (then t=1/14 witnesses them) -- a finite check closing the sufficient condition.
+
+## codex-2026-06-22-S108 -- sub-14 LRC covering/tiler training atlas
+
+User asked to keep aiming at the LRC proof and to apply the most comprehensive
+techniques to smaller cases.  Pulled current main after parking/reapplying the
+generated `agents/.session-state.json` reset.  Read HYP-2649, THM-523,
+THM-524, and HYP-2893, then extended the below-14 ladder with q-witness
+covering, binding-pair exact maximization, and Goddyn-Wong acceleration atoms.
+
+Added `04-computation/lrc_sub14_covering_training_codex_s108.py` and stored
+`05-knowledge/results/lrc_sub14_covering_training_codex_s108.out`.
+
+Exact findings:
+- AP rows `{1,...,N-1}` are tight for `N=3..14`.
+- Goddyn-Wong/Jacobsthal acceleration atoms in this range appear at `N=8`
+  (`n=7,v=6`, `M=1/8`, safe measure `0`) and `N=14` (`n=13,v=12`,
+  `M=1/14`, safe measure `0`).
+- In the AP-drop q-covering repair slice, every best repair row is loose once
+  THM-523's easy `t=1/q` witness is disabled.  For `N=9..14`, the best repair
+  has closed form `drop N-1, add N(N-1)`, active pair `(1,N(N-1))`, and
+  `M=N/(N(N-1)+1)`.
+- The `N=14` AP-drop line is a comparison slice, not a global covering-set
+  minimization; it shows that AP-facing covering rows can already be discharged
+  by THM-524 binding-pair margins.
+
+New HYP-2895/T1009: smaller cases separate the proof objects cleanly.  Exact
+tilers live on AP equal-spacing or Goddyn-Wong acceleration boundary data;
+q-witness-disabled AP-facing rows have binding-pair margins; the first genuinely
+new analytic burden at 14 is the support-six HYP-2890 residual packet.  Next
+proof obligation: show every AP-facing q-covering LRC14 row either collapses to
+AP/GW boundary data, has a binding-pair margin, or enters the support-six
+Clebsch/Bruhat/octahedral residual-cancellation route.
+## kps-2026-06-22-S31o -- HYP-2895: the covering crux DECOMPOSES (bounded compactness + unbounded equidistribution); explains THM-566
+Owner: bound the sporadic finiteness creatively; if stuck, search old threads for the missing reframe. The search (Explore agent) surfaced the reframe = THM-523.
+- **REFRAME (search payoff, THM-523 q-witness lemma):** my tight-locus/tiling line is the TRIVIAL boundary -- any set omitting all multiples of some q<=14 is lonely at t=1/q, so the tight sets (AP, GW; both omit 14) are trivially lonely at t=1/14. The REAL crux = COVERING sets (contain a multiple of every q in {2..14}).
+- **Sporadic finiteness (the ask):** single-swap census RIGOROUS -- only GW (12->24) tight among all AP single-replacements (v<=50). M({1..11,13})=1/12; only tuned v=24 (=2*12, kills t=1/12 witness, lands exactly at 1/14) is tight; large v give M in [1/13,1/12]>1/14. Equidistribution bounds tight speeds => finite (gap: recursive tightness). mod-27=3^3 shell (HYP-2138).
+- **HYP-2895 (covering crux decomposition):** (A) BOUNDED covering lonely with MARGIN ({2..14}: M=1/8 at t=1/16; compactness THM-527). (B) UNBOUNDED (one huge speed) lonely by EQUIDISTRIBUTION: U_v covers only ~1/7 of core lonely set, loneliness survives at large-denominator witness. VERIFIED on THM-566 adversarial: {1..11,13,5040} (covering, 14|5040) has M=84/1009=0.083, witness t=2102/5045.
+- **Explains THM-566:** witness EXISTS, just unbounded denominator; the finite-denominator obstruction is NOT a loneliness obstruction. Multi-large-speed reduces to mac-mini resonance/atom over-determination (HYP-+2878); equidistribution gives the "why." Connects to mac-mini-S41 affine observer categories.
+NEW: HYP-2895, THM-560 finiteness section, lrc_sporadic_finiteness/equidistribution_covering/small_covering scripts. NEXT: moderate/resonant middle + recursive-tightness gap (= OPEN-Q-108).
+
+Post-checkpoint S31o integration / S108b extension: incoming THM-560/S31o
+proved the LRC14 AP single-swap tight locus has only the Goddyn-Wong non-AP
+row and that large replacement speeds are loose.  Added
+`04-computation/lrc_sub14_single_swap_boundary_codex_s108b.py` and stored
+`05-knowledge/results/lrc_sub14_single_swap_boundary_codex_s108b.out`.  Exact
+THM-524-window scan `v<=2(N-1)` finds non-AP tight rows only at:
+`N=5` (`2->7`), `N=6` (`2->9`), `N=8` (`6->12`), and `N=14` (`12->24`).
+All four have safe measure `0` and q-deficit exactly `(N,)`.  This sharpens
+the lesson: small single-swap sporadics are apex-denominator boundary tilers,
+not q-covering prototypes.  Mac-mini S42's broader bounded search may find
+additional small-`n` sporadics outside the S108b window, but its useful
+condition is the same: primitive exact tilers found avoid multiples of `N`,
+so the apex witness survives.  Once q-covering forces a multiple of every
+`q<=N`, the exact-tiler mechanism is removed and the proof target is bounded
+compactness/equidistribution at the extremes plus support-six residual
+cancellation in the moderate resonant middle.
+
+## mac-mini-2026-06-22-S41 -- THREE observer-categories (fineness hierarchy under affine group); tiling=observer-relative, tournament=observer-blind; resolves the broken H-analogy
+Owner: observer-relative vs independent + a third category; tournament vs tiling models. Reflection: three-observer-categories-tiling-is-relative-tournament-is-blind.md.
+- **THREE categories under the affine group (translation=move observer, scaling=units), VERIFIED:**
+  1. OBSERVER-RELATIVE (scale-inv, translation-SENS): meas(safe)/coverage -> TILING model (anchored), FINEST.
+  2. METRIC-DIFFERENCE (translation-inv, scale-SENS): the gap multiset / winding metric -> the THIRD category, middle.
+  3. OBSERVER-BLIND/AFFINE (both inv): additive energy, H=I(Omega,2), the order -> TOURNAMENT model, COARSEST.
+- **Tournament vs tiling = observer-blind vs observer-relative:** the tiling FIXES a base path = an anchor = the observer (S38: fixing base path chooses the cut); the tournament is anchor-free/S_n-symmetric. The LRC observer IS the tiling anchor.
+- **Resolves S39 + kps S31m:** coverage != additive energy because they are categories 1 vs 3. kps's 'H-level analogy breaks' (S31m) because H is category 3 (observer-blind, coarsest) while LRC coverage is category 1 (observer-relative, finest) -- H literally cannot see the observer the LRC is defined against.
+- **FINISHING REDIRECT:** attack the LRC in category 1 (tiling rigidity, the S39 exact-tiler crux), with category 2 (gap widths / three-gap, kps THM-565) as the tool -- NOT category 3 (H/additive-energy, provably too coarse). Safe at t <=> the observer sits in a gap of {frac(s_i t)} with both neighbors >= 1/14 away = couples cat 1 (placement) + cat 2 (gap widths). The right object is the METRIC winding tournament (order+gaps, anchored), not the bare tournament (order, cat 3).
+- Concurrent: kps S31m (REFUTED Jensen/score-variance + 13=PG(2,3); coverage finer than H), codex HYP-2891 (Clebsch/Bruhat/unital carriers, cut=observer-relative side). All consistent.
+NEW: reflection + three_observer_categories_macmini_S41.py. NEXT: cat-1 exact-tiler characterization (with kps), using cat-2 three-gap metric.
+## kps-2026-06-22-S31n -- THM-560: structured (difference-closed) LRC tilers = d*{1..13}, PROVED; sporadic = GW only (corrects mac-mini)
+Owner: attack the complete-residue-system tiling rigidity (mac-mini's exact-tiling crux). Direct attack, several self-corrections.
+- **THM-560 PROVED (elementary):** the difference-closed 13-sets are EXACTLY the dilated intervals d*{1..13}, each an exact tiler (M=1/14, Safe={j/(14d):gcd(j,14)=1}, measure 0). One-paragraph proof: difference-closure => every element a multiple of d=min (descending chain) => d*{1..13}; then for safe t, the 14 points {k(dt)} have PAIRWISE distances ||k(dt)||>=1/14 (differences are speeds), and 14 points pairwise>=1/14 on a unit circle FORCE equal spacing => dt=j/14 => meas-0. Resolves the STRUCTURED half of the crux with NO additive energy / convexity / measure-LP.
+- **This answers mac-mini-S40's caveat:** for difference-closed S the pairwise-order resonances t=k/(s_i-s_j) ARE per-speed safe cuts (differences are speeds), so the observer-safe condition controls them => equal-spacing. The two subdivisions coincide exactly on the structured locus.
+- **CORRECTS mac-mini HYP-+2888 "only d*{1..13} tile":** GW-type {1..11,13,24} ALSO tiles (M=1/14 EXACT, witness t=5/14, NOT diff-closed). Tight locus = {AP-dilates} U {GW-type}.
+- **Sporadic mechanism:** at the witness the speed->residue map is a near-bijection onto {1..13}/14; AP = bijection (equal spacing); GW = balanced GAP (missing residue 4) + COLLISION (residue 8 doubled, since 24==10 mod14). GW = AP with 12->24. Diophantine, not mod-14.
+- **GW is ISOLATED (supports finiteness):** among AP single-replacements (v<=60), ONLY GW is tight; the tempting family {1..11,13,12j} is LOOSE for j>=3 (M=3/41,4/53,1/13 > 1/14). [Self-corrected a coarse-search false positive with exact critical points t=k/(s_i+-s_j).]
+- Refuted earlier this session: Jensen/score-variance route (p0 finer than score structure); 13=PG(2,3) design (exact tiler is full residue system, not sparse).
+NEW: THM-560, reflection (S31m), lrc_tiling_rigidity / tight_vs_counterexample / sporadic_mechanism / sporadic_verify scripts. NEXT: sporadic finiteness (OPEN-Q-108) = bound GW-type balanced gap+collision sets preserving M=1/14 over all t.
+## codex-2026-06-22-S106 -- Goddyn-Wong sporadic tilers as Jacobsthal AP-tail accelerations
+
+User asked to understand sporadic tilers like Goddyn-Wong, their structure, and
+families.  Stashed generated `agents/.session-state.json`, pulled current
+main, and immediately integrated incoming THM-560 from KPS S31n: the
+difference-closed exact tilers are exactly AP dilates `d*{1,...,13}`, so the
+remaining exact-tiler classification is genuinely the non-difference-closed
+sporadic branch.
+
+External check: Tao's LRC remarks state the Goddyn-Wong acceleration criterion:
+starting with `{1,...,n}`, replacing a velocity `v` by `2v` remains tight when
+`gcd(v,j)>1` for every `j in [n-v+1, 2n-2v+1]`.  This turns the apparent
+sporadic into a Jacobsthal/nonunit interval problem.
+
+Added `04-computation/lrc_goddyn_wong_sporadic_tilers_codex_s106.py` and
+stored `05-knowledge/results/lrc_goddyn_wong_sporadic_tilers_codex_s106.out`.
+Exact rational envelope checks verify:
+
+- `n=7, q=8`, acceleration `v=6`, row `{1,2,3,4,5,7,12}`: `M=1/8`, safe
+  measure `0`.
+- `n=13, q=14`, acceleration `v=12`, row `{1,...,11,13,24}`: `M=1/14`,
+  safe measure `0`.  This is the LRC14 Goddyn-Wong atom.
+- `n=19, q=20`, acceleration `v=18`, row `{1,...,17,19,36}`: `M=1/20`,
+  safe measure `0`.
+- `n=32, q=33`, acceleration `v=30`, row `{1,...,29,31,32,60}`: `M=1/33`,
+  safe measure `0`.
+- `n=73, q=74`, accelerations `v=70,72`, tail `...,69,71,73,140,144`:
+  `M=1/74`, verifying the multi-acceleration example.
+
+New HYP-2893/T1007: AP dilates are the difference-closed/equal-spacing branch
+(THM-560), while Goddyn-Wong rows are accelerated-tail/Jacobsthal atoms.  The
+infinite one-speed subfamily is `n≡1 mod 6`,
+`S_n={1,...,n-2,n,2n-2}`.  The LRC14 row is the first nontrivial `v=n-1`
+case: `n=13`, window `[2,3]`, gcds `[2,3]`.
+
+Assumption challenge / Tournament Analysis: considered runners, residues,
+q-grid witnesses, deleted AP tail speeds, accelerated speeds, nonunit
+intervals, cover petals, exact-tiler branches, and proof obligations.  Selected
+vertices are proof carriers:
+`jacobsthal_window > single_acceleration > multi_acceleration >
+difference_closed_AP > arbitrary_sporadic_search`.  This preserves the AP
+tail/acceleration/nonunit-window data and destroys generic speed magnitude away
+from the tail, so it must be coupled to THM-560 and the HYP-2890 residual/cap
+machinery.
+
+## codex-2026-06-22-S107 -- q=3 unital pair-slot realizability guardrail
+
+Pulled KPS S31n before recording this checkpoint; that incoming result proved
+the structured difference-closed exact tilers are exactly AP-dilates and
+isolated Goddyn-Wong as the sporadic gap/collision tight row.  A later incoming
+S106/HYP-2893 sharpened that sporadic branch into Goddyn-Wong acceleration
+atoms.  S107 tests the most tempting literal use of HYP-2892: identify the
+`q=3` unital `2-(28,4,1)` with the `28=C(8,2)` pair slots of an AP8 layer.
+
+Added `04-computation/lrc14_unital_pair_slot_realizability_codex_s107.py` and
+stored `05-knowledge/results/lrc14_unital_pair_slot_realizability_codex_s107.out`.
+The script enumerates all 11 `S8` orbit types of four-edge subsets of `K8` and
+checks every invariant union.  Result: zero invariant unions realize a
+`2-(28,4,1)` design on the edge slots; there is no canonical `S8`-symmetric
+AP8 pair-slot version of the q=3 unital.
+
+AP8 sum/difference packet stats are also nonuniform (`sum` size histogram
+`{1:4,2:4,3:4,4:1}`, `diff` histogram `{1:1,...,7:1}`), so the unital should
+be kept as a weighted tight frame only after a category-1 labelling is chosen.
+The carrier tournament now prioritizes LRC faithfulness before symmetry:
+`AP/GW exact-tiling > AP8 sum/diff packets > unital weighted frame > scalar
+energy > S8-invariant unital identification`.
+
+New HYP-2894/T1008: the missing proof obligation is a labelled or weighted map
+from the AP-dilate plus Goddyn-Wong tight-locus atlas into pair-frame
+coordinates for the HYP-2890 residual leak, not a canonical design
+identification.  No LRC14 proof claimed; this prunes a false high-symmetry
+route and makes the category-1 realizability target sharper.
+
+## mac-mini-2026-06-22-S40 -- the CUT side is CLASSICAL: Clebsch = cut-space Cayley(K_5), truncated octahedron = permutohedron(S_4)
+Owner: explore Unital/Clebsch/Truncated-Octahedral as inspiration; keep aiming to finish LRC; weight team work equally. Reflection: the-cut-side-is-classical-clebsch-and-the-permutohedron.md.
+- **VERIFIED:** Clebsch graph SRG(16,5,0,2) = the cut-space Cayley graph of K_5 (folded 5-cube; the 5 vertex-stars delta_v, sum=0, are exactly its generators). Generally cut-space Cayley(K_n) = folded n-cube.
+- **VERIFIED:** Truncated octahedron = permutohedron of S_4 = transitive tournaments at n=4 (adjacent transpositions, the score-ordering level).
+- **SYNTHESIS (builds on S38 Cut(+)Cycle):** the CUT side has two classical resolutions -- ORDERINGS (permutohedra, fine) and BIPARTITIONS (folded cubes/Clebsch, coarse) -- complementing the CYCLE side (even graphs / Omega / H=I(Omega,2)). Both sides of E(K_n)=Cut(+)Cycle now have classical realizations. Score=cut-side (SRG/permutohedron); H/apex-7=cycle-side.
+- **LRC connection (honest reframing, NOT a finish):** the winding tournament T(t) (HYP-2605) walks on the permutohedron of S_13 = its cut-side state space; its odd cycles/H = cycle side. CAVEAT: the LRC SAFE condition is observer-relative (cuts at t=k/s_i +- 1/(14 s_i)), a DIFFERENT subdivision than the pairwise-order resonances t=k/(s_i-s_j); the open question is whether the cycle-side H controls the observer-safe set.
+- Unital (2-(q^3+1,q+1,1)) logged as a lead: q=13 gives block size 14 = LRC(14); the perfect-covering-design vs LRC-covering-system connection unexplored. Also: cut space of K_14 = (Z/2)^13, dim 13 = #runners (suggestive, no map yet).
+- Concurrent: kps S31l + codex s104 on the SIGNED moment tail (analytic/cycle-side route) -- complementary to my structural/cut-side work.
+NEW: reflection + cut_side_classical_macmini_S40.py. NEXT: does winding-tournament H control the observer-safe set? + crux(1) exact-tiling (S39).
+## codex-2026-06-22-S105 -- Clebsch/Bruhat/unital carriers for the signed LRC residual
+
+User prompted a similar creative proof session with MathWorld unital, Clebsch
+graph, and truncated octahedral graph.  Used the web links as finite carrier
+prompts and pulled current main first; incoming S103/S31l/S104 had already
+sharpened the additive-energy route to anchored AP-facing Jensen/convexity plus
+signed residual leakage.
+
+Added `04-computation/lrc14_clebsch_bruhat_unital_carriers_codex_s105.py` and
+stored `05-knowledge/results/lrc14_clebsch_bruhat_unital_carriers_codex_s105.out`.
+The script verifies Clebsch as the folded 5-cube with strongly regular
+parameters `(16,5,0,2)`.  Its closed neighborhoods form a pair-balanced
+`2-(16,6,2)` design: 16 blocks of size 6, every point in 6 blocks, every pair
+in exactly 2 blocks.
+
+LRC transfer: choose one tangent sector and fold the remaining five residual
+mask coordinates by complement.  The 64 residual masks map to 16 Clebsch
+classes, four masks each, but all 16 classes mix missed-depth values.  Thus
+Clebsch is not a scalar missed-depth quotient; it is a signed pair-covariance
+carrier, exactly the kind of labelled object S31l/HYP-2890 require.
+
+The truncated-octahedral prompt becomes the Bruhat `S4` adjacent-swap carrier.
+The script verifies 24 vertices, 36 edges, degree 3, inversion-rank histogram
+`1,3,5,6,5,3,1`, 6 commutation squares, 8 braid hexagons, automorphism group
+size 48, and two edge orbits: outer swaps `s1/s3` of size 24 and middle swaps
+`s2` of size 12.  This is HYP-2889's local-compression failure in graph form:
+compression edges are labelled, and the middle swap cannot be erased.
+
+New HYP-2891/T1005: decompose the HYP-2890 residual leak over tangent Clebsch
+classes and Bruhat `S4` compression faces.  Candidate proof shape: square /
+commuting-face components are nonpositive by Clebsch design balance; braid
+hexagon components are finite AP/Freiman low-depth packets; high-depth packets
+route to HYP-2636/HYP-2887 signed cancellation.  No LRC14 proof claimed.
+## codex-2026-06-22-S105 -- design/Hodge carriers for the LRC14 residual leak
+
+User asked for another creative synthesis session toward LRC14, using
+MathWorld prompts on unital, Clebsch graph, and truncated octahedral graph.
+Pulled current main, stashed only generated `agents/.session-state.json`, read
+HYP-2890/S104 and HYP-2887, and treated incoming S104 residual-leak work as
+the main target.
+
+Added `04-computation/lrc14_design_hodge_carriers_codex_s105.py` and stored
+`05-knowledge/results/lrc14_design_hodge_carriers_codex_s105.out`.  Exact
+findings:
+
+- Hermitian unital `q=3` over `GF(9)`: `28` points, `63` four-point secant
+  blocks, line intersections `{1:28,4:63}`, point replication `9`, pair
+  replication `1`.  Since `28=C(8,2)`, this is an exact tight frame for k=8 AP
+  pair slots with `N^T N=8I+J`.
+- Clebsch folded-cube carrier: SRG `(16,5,0,2)`; closed neighborhoods form a
+  `2-(16,6,2)` frame with `N^T N=4I+2J`, likely useful for folded parity/sign
+  packets rather than literal AP pair slots.
+- Truncated-octahedral/Bruhat `S4` graph: `24` vertices, `36` adjacent-swap
+  edges, `6` square commutation faces, `8` hex braid faces, cycle rank `13`.
+  This reframes HYP-2889's failed one-step compression as a curl problem on
+  Coxeter square/hex faces.
+- Existing HYP-2887 octahedral `L(K4)` carrier remains the support-six
+  repeated-packet subcarrier: cycle rank `7`, triangular face-curl module.
+
+Created HYP-2892/T1006 and reflection
+`07-reflections/lrc14-design-hodge-carriers-codex-s105.md`.  Proposed proof
+split: unital/Clebsch block averages for pair packets, Bruhat/octahedral
+face-curl ledgers for labelled residuals, and HYP-2636 Abel/L2 cancellation for
+the analytic tail.  A post-checkpoint rebase revealed the concurrent S105
+HYP-2891/T1005 Clebsch/Bruhat residual-carrier claim, so this note was
+renumbered as the q=3 unital pair-frame refinement.  It also absorbs the KPS
+S31m guardrail: exact threshold tilers are full `Z_14 \ {0}` residue systems
+and dilates, so the unital is an averaging frame, not a sparse-design tiling
+proof.  No LRC14 proof claimed.
+
+Assumption challenge / Tournament Analysis: considered runners, gaps, fixed
+sectors, sector boundaries, wall events, residues, cover arcs, Fourier modes,
+pair slots, folded parity packets, adjacent-swap orderings, Coxeter faces, and
+proof obligations.  Selected vertices are proof carriers.  Pairwise observable
+is live proof-obligation coverage; gauge orients toward more obligations, with
+ties broken toward direct connection to HYP-2890.  Hamiltonian path:
+`bruhat_truncated_octahedron > clebsch_closed_neighborhood >
+octahedral_current > unital_q3_pair_frame > scalar_additive_energy`.  The
+quotient preserves pair-incidence and curl/divergence data, but destroys speed
+magnitude, so it must be coupled to HYP-+2888 anchored scaling and HYP-2636
+tails.
+
+Post-push incoming integration: KPS S31m refutes the score-variance/Jensen
+coverage route and identifies the exact tiler as the complete residue system
+`Z_14 \ {0}` up to dilation; mac-mini S40 places Clebsch/Bruhat on the cut-side
+state-space axis.  Updated S105 accordingly: the top carrier is now
+`AP_exact_tiling_labelled_functional`, and Clebsch/Bruhat are labelled residual
+atlases feeding exact-tiling rigidity, not standalone invariants.
+
+## codex-2026-06-22-S104 -- same-frequency additive-energy tail and residual-leak target
+
+User asked to attack the single leading-order-proved extremality plus a
+convergent tail bound, searching prior work and incoming ideas.  Pulled new
+S39/S103 work during the session and integrated the relevant HYP-2889 warning:
+additive energy is AP-facing but not a scalar monotone, and strict LRC coverage
+is scaling-invariant exact tiling rather than translation-invariant energy.
+
+Added `04-computation/lrc14_gamma_frequency_tail_codex_s104.py` and stored
+`05-knowledge/results/lrc14_gamma_frequency_tail_codex_s104.out`.  The script
+extends KPS S31k's positive `m=1` coefficient to the full same-frequency
+additive-energy packet.  For fixed residue `r mod 7`,
+`Gamma_k(m)=C_{k,r}/m^4`; all six constants are positive for `k=8..13`.
+The `H=12` partial already certifies positivity with tiny absolute tails:
+`<=1.084e-6` at k=8/9 and decreasing to `<=3.602e-7` at k=13.  The full packet
+is `2.098724...` times the `m=1` coefficient.
+
+Guardrail: summing this positive packet overpredicts AP rather than closing the
+proof.  For k=9, actual `p0-p0_decorr` at AP is `+0.311244`, while the
+same-frequency packet predicts `+0.628310`; the residual
+`R_sf=p0-p0_decorr-Gamma_sf A*` is `-0.317066`.  Thus the open constant is a
+negative hidden-fold/support-cycle correction, not another positive
+same-frequency term.
+
+New HYP-2890/T1004: AP extremality should be attacked through the residual-leak
+inequality
+`R_sf(E)-R_sf(AP)<=Gamma_sf(A*(AP)-A*(E))`.  Exact bounded scans found no
+violations in anchored banks k=8 (`3432` rows, worst leak ratio `0.469`) and
+k=9 (`3003` rows, worst ratio `0.933`).  The k=9 pressure row is
+`(0,2,4,6,7,8,10,12,14)`, the even AP plus midpoint bridge, matching the
+incoming scaling/tiling signal from HYP-+2888.
+
+Proof order: positive same-frequency packet + HYP-2889 AP-facing Fejer
+majorization + residual-leak bound.  Low relation-depth / near-scale-reducible
+rows should go to a finite AP/Freiman atlas; high relation-depth rows should go
+to HYP-2636 Abel/L2 cancellation; repeated-packet rows should use the HYP-2887
+octahedral current/Hodge decomposition.
+
+Post-push rebase exposed incoming KPS S31l directly under this commit.  It
+checks higher additive moment coefficients and finds mixed signs (`k=9`:
+`s=2 +8.910e-04`, `s=3 -7.138e-05`, `s=4 -4.448e-05`; k=12 has negative
+`s>=4`).  This reinforces HYP-2890 rather than replacing it: S104 isolates the
+positive `s=2` same-frequency tail, and S31l identifies the residual as a
+signed Jensen/convexity object.  The proof should keep signs and prove the
+AP-facing labelled functional inequality, not chase term-by-term positivity.
+
+## mac-mini-2026-06-22-S39 -- LRC realizability: coverage != additive energy; the exact-coverage extremal is SCALING-invariant {1..13}*d (creative + disciplined; one idea refuted, one finding)
+Owner: creative realizability arguments (like tournament analysis but "slightly different"); aim to finish LRC. HYP-2888 + reflection (lrc-realizability-is-scaling-invariant-tiling-not-combinatorial-forcing.md).
+- **Realizability framing:** LRC(14) <=> safe set nonempty <=> the open arc-systems U_s={||s t||<1/14} (total meas 13/7~1.857) don't cover the closed circle. A counterexample OVER-covers. Same shape as tournament Omega=K_3 (non-realizable), but the LRC forcing is continuous/arithmetic.
+- **REFUTED (discipline):** my forced-overlap / positive-measure idea -- the extremal sets have meas(safe)=0 (exactly covered) at the strict 1/14. The witness is a measure-ZERO boundary point, not positive measure.
+- **KEY FINDING:** **coverage != additive energy.** Exact coverage (meas safe=0) holds ONLY for consecutive-multiples d*{1,...,13} (SCALING-invariant). Translates {2..14},{3..15} have the SAME max A=1469 (translation-invariant) but POSITIVE safe measure (0.061,0.098). 0/5668 non-multiple sets reached exact coverage. Sharpens kps HYP-2885 (A tracks coverage only as a trend).
+- **FINISHING STRUCTURE:** LRC(14) <= [(2) RIGOROUS: every d*{1..13} safe at t=1/(14d), since ||jd/(14d)||=||j/14||>=1/14] + [(1) OPEN CRUX: every non-(d*{1..13}) set has meas(safe)>0]. Crux (1) = the LRC extremal-UNIQUENESS, now cleanly reframed as scaling-invariant exact-TILING rigidity. Complementary route: HYP-2876 rational-witness (extremality-free, crux=covering over-determination).
+- Apex-7 both sides: H=7=I(K_3,2) (combinatorial forcing); 1/14=1/(2*7), tight on consec-multiples, boundary witness at D=14d (tiling rigidity).
+NEW: HYP-2888, reflection, lrc14_exact_coverage_macmini_S39.py. Msg to kps (coverage scaling- not translation-invariant). NEXT: crux (1) exact-tiling characterization, OR the rational-witness over-determination.
+
+## codex-2026-06-22-S103 -- octahedral current realizability for the LRC repeated-packet lift
+
+User asked to look for creative realizability arguments beyond ordinary
+Tournament Analysis and aim at the LRC proof.  Continued from S102's lifted
+packet-divergence defect and KPS S31i's cyclic/no-sink scar signal.  New
+finding: the HYP-2632/HYP-2883 repeated-packet graph is not just a signed graph
+and not naturally a tournament.  Its nonzero edge graph is `K6` minus the
+affine-zero matching `(0,2),(3,6),(4,5)`, hence the octahedron graph
+`L(K4)`.  Residues are tetrahedron edges `0->12`, `2->34`, `3->13`,
+`6->24`, `4->14`, `5->23`; affine-zero means opposite tetrahedron edges.
+
+Added exact scout `lrc14_octahedral_current_realizability_codex_s103.py`.
+It verifies the `L(K4)` incidence and enumerates all `729` small integer layer
+cochains at `H=10` over core `(1,8,15,22)`, needing only `126` lifted packet
+supports.  Best gauge `210210` has `L1 div=0.00225361`, versus constant
+`000000` `0.0219283`, `111111` `0.00754806`, and `222222` `0.00954186`.
+Wall max correlates with L1 divergence (`+0.467`, `+0.451` within fixed
+layer-sum), while mixed positive/negative vertex divergence correlates with
+smaller L1 (`-0.442`).
+
+New HYP-2887/T1002: the proof target should be an octahedral Hodge lemma,
+complementary to incoming HYP-2885 additive-energy extremality and HYP-2886
+exact-period packet atlases.
+The octahedron has cycle rank `12-6+1=7`, equivalently eight triangular face
+curls with one dependence.  Coherent face curl should be charged to the finite
+low-height wall ledger; incoherent spread current should be HYP-2636
+additive-channel Abel-summable; no independent harmonic one-current remains on
+the spherical carrier.  This is the likely missing realizability structure for
+the repeated-packet tail.
+
+Post-rebase synthesis: HYP-2885 is the global cap branch (`p0/L_y` extremized
+by interval via additive energy), HYP-2886 is the exact-period witness-packet
+atlas, and HYP-2887 is the local support-six current-realizability branch.
+Low additive energy should close by HYP-2885; high additive energy compresses
+to near-AP/Freiman structure, where HYP-2886 preserves mod-7/affine packet
+addresses and HYP-2887 supplies the octahedral Hodge carrier for the remaining
+reciprocal divergence.
+
+Face-curl rerun: updated the S103 scout/output to compute canonical curl
+fingerprints on the eight octahedral triangles.  Curl pressure is real but
+weaker than wall/sign predictors (`face_curl_L1` correlation `+0.202`,
+`face_curl_max` `+0.158`; wall max `+0.467`; negative vertex count `-0.442`).
+So face curl should be the decomposition coordinate, while the analytic
+estimate still needs wall maxima, vertex sign mixing, and HYP-2636 channel
+summation.
+
+Incoming KPS S31k sharpens the energy branch: `Gamma_k>0` for the leading
+additive-energy resonance coefficient, and at k=9 the leading
+`Gamma_k A*(E)` term explains about `96%` of the AP deviation.  Updated the
+S103 read: octahedral current realizability should target the higher-order
+resonance tail `R_high = p0-p0_decorr-Gamma_k A*`, not the whole interval
+extremality theorem.  Low additive-energy rows should have enough energy gap
+to absorb `R_high`; high-energy near-AP rows route to exact-period mod-7
+packets and the octahedral Hodge/current lemma.
+
+## codex-2026-06-22-S102 -- applying packet balance to LRC reciprocal lifts: divergence defect lemma
+User asked to apply and extend the even-graph/packet-balance ideas to LRC
+creatively.  Synced main (already up to date) and pushed HYP-2883's exact
+finite packet balance into the actual support-six reciprocal hyperplane sums.
+
+Added `04-computation/lrc14_packet_balance_lift_probe_codex_s102.py` and
+stored output `05-knowledge/results/lrc14_packet_balance_lift_probe_codex_s102.out`.
+The script fixes the four residue-`1` core `(1,8,15,22)` and compares two
+integer lift gauges for the HYP-2632/HYP-2883 packet graph.  In finite packet
+units the local current is exactly balanced at every residue vertex, but after
+reciprocal lifting it becomes a measurable divergence defect
+`div_H(a)=loop_H(a)+sum_b edge_H(a,b)`.
+
+At `H=12`, the start-aligned lift has `max|div|=0.00512112`, `L1 div=0.0193444`,
+and `sum div=0.0193444`; the raised-pair lift has `max|div|=0.00191161`,
+`L1 div=0.00610376`, and `sum div=0.00430821`.  Thus raising the pair cuts
+the measured L1 defect by about `3.17x`, matching HYP-2634's warning that the
+finite/lift mismatch is heavily integer-height-placement driven.  Low-height
+wall counts also narrow from start-aligned `62..86` to raised-pair `58..68`.
+
+New hypothesis HYP-2884: the next LRC proof lemma should be a local-current
+lemma, not a packetwise sign lemma.  Delete the finite coefficient-height
+`<=2` wall ledger, then prove the remaining lifted divergence is Abel-summable
+inside HYP-2636 additive-frequency shells.  This refines HYP-2633's
+residue-lift equidistribution gap and gives OPEN-Q-108 a local object:
+divergence defects of packet vertices rather than a raw wide-cluster census.
+After pulling KPS S31i, connected this to the winding-tournament scar reading:
+non-lonely phases have about `1.22..1.25x` higher directed-3-cycle content, so
+lifted packet divergence is the reciprocal-tail shadow of cyclic/no-sink
+excess.  Coherent cyclic excess should be a finite low-height wall; incoherent
+cyclic excess should be Abel-summable packet current.
+Added reflection `07-reflections/lrc14-lifted-packet-divergence-codex-s102.md`,
+T1000, HYP/result index updates, and refreshed the S101 output after the
+HYP-2883 renumbering.
+
+## mac-mini-2026-06-22-S38 -- SYNTHESIS: the even graph IS the tournament's CYCLE half (Cut(+)Cycle unifies every lens)
+Owner: synthesize the even-graph<->tournament lenses, understand how the structure shines through frames. Reflection: the-even-graph-is-the-tournaments-cycle-half.md.
+- **THE ONE FRAME:** E(K_n) = Cut(n-1) (+) Cycle(C(n-1,2)). Fixing the base path CHOOSES the cut summand: base-path arcs = cut/score/hierarchy; the C(n-1,2) tiles = cycle space = even-graph generators. **The even graph is precisely the tournament's cycle half** (cut forgotten). VERIFIED dims for n=3..7.
+- **H = I(Omega,2) reads the CYCLE side** (Omega=odd-cycle conflict graph): VERIFIED on ALL 1096 tournaments n=3,4,5. Score/Redei = cut side; H/OCF/even-graph/LRC-apex-7 = cycle side.
+- **Every lens is one angle on Cut(+)Cycle:** OCF (H=I(Omega,2)), metagraph (E_n = cycle quotient, DUAL of G_n), nowhere-zero flows/Tutte (cut=tension/score, cycle=flow; LRC lives on the flow=cycle side), spectral, perfect-graph.
+- **The apex-7 seam (C_5<->K_3), two-sided:** cycle side C_5 = XOR of 3 vertex-conflicting triangles (my S37); conflict side H=7<=>Omega=K_3 FORBIDDEN because K_3 forces a directed C_5 (kps THM-200). Pentagon & triangle = two faces of ONE apex-7 obstruction along the Cut(+)Cycle seam. {7,21}, E_7 non-chordality, H=7, LRC(14) = the same odd obstruction in 4 coordinates.
+- **DISCIPLINE:** corrected the 'H is cut-blind / E_n loses nothing' OVERCLAIM -> VERIFIED H is NOT an E_n invariant (n=5: 64 tilings -> 7 even-graph classes, 5 carry multiple H, one |E|=4 class spans H in {5,9,11,13,15}); the cycle half carries H only with the cut FIXED. Also fixed V(G_n) numbers (2,4,12,56,456). NO new HYP (synthesis). NEXT: LRC apex-7 as a cycle/flow-side (5-flow?) obstruction -- the open deep lead.
+## codex-2026-06-22-S101 -- even graphs as parity-dual cycle-space addresses for the LRC packet graph
+User asked for another concurrent exploration session focused on past
+even-graph work, tournament/even-graph lenses, and how that structure might
+help finish the LRC proof.  Pulled current mainline, resolved the usual
+`agents/.session-state.json` autostash conflict by keeping upstream state, and
+read the incoming even-graph spectrum scar note plus HYP-2872/S96 guardrails
+against naive even-graph minors.
+
+Main synthesis: even graphs are not an `H`-obstruction closure.  They are a
+parity-dual cycle-space address.  The latest scar calculation makes this
+precise: tournaments miss clique value `7` because the `K_3` conflict packet is
+orientation-unrealizable, while even graphs realize `7` because `K_3` is
+degree-even and instead miss even-clique values `5,9,13,...`.  Thus the
+even-graph projection can heal the scalar scar while preserving the support
+incidence where the scar was born.
+
+LRC translation: the proof should not import the scalar tournament gap into
+the LRC residual.  It should build a support-six signed packet graph after
+exact-period expansion and coimage quotienting.  Added
+`04-computation/lrc14_repeated_packet_graph_codex_s101.py` as the first exact
+finite instance.  For HYP-2632's repeated-residue kernel, vertices are residues
+`{0,2,3,4,5,6}`, negative loops are the `4+2` packets
+`-4,-25,-18,-25,-18,-18`, and edges are the `4+1+1` packets of weight
+`0,1,8`.  The zero edges are exactly the affine matching `a+b=2 mod 7`, and
+the script verifies the local conservation law
+`loop(a)+sum_b edge(a,b)=0` at every vertex, with no failures.  Thus the finite
+kernel is a signed-current graph, not merely a smaller signed scalar total.
+
+The proposed closing split is now sharper: lift the local packet balance
+through reciprocal hyperplane sums after low-height wall deletion, then route
+full residuals into parity-null packet graphs, relation-depth `<=2`
+finite-atlas packets, or relation-depth `>=3` spread-cycle packets handled by
+Freiman/Parseval decorrelation.  This sharpens the genuine-wide branch into a
+packet-incidence compression target rather than a raw-cluster census.
+
+Added HYP-2883, script/output
+`04-computation/lrc14_repeated_packet_graph_codex_s101.py` /
+`05-knowledge/results/lrc14_repeated_packet_graph_codex_s101.out`, and
+reflection
+`07-reflections/even-graphs-as-parity-dual-addresses-codex-s101.md`; added
+T999 and index updates.  Assumption challenge: considered runners, fixed-path
+free arcs, even-graph edges/classes, E7 metagraph classes, odd-cycle conflict
+packets, strong atoms, exact-denominator packets, support-six relation
+vectors, Fourier shells, affine lanes, relation-depth buckets, and proof
+obligations.  Chosen quotient is the support-six signed packet graph; it
+preserves exact-period multiplicity, relation support, mod-7 coimage, signed
+kernel, and additive-energy incidence, while destroying raw runner identity
+and scalar `H`.
+
+## codex-2026-06-22-S100 -- primitive packets before quotients: odd clique/hole, H-atoms, and totient copies
+User asked to search back through tournament-structure work and Euler-totient
+threads for creative reframes, especially one odd clique / odd hole duality.
+Pulled incoming mac-mini S37 and KPS S31g work, then searched/read the recent
+HYP-+2880/HYP-2878/HYP-2879/HYP-2880 tournament files plus the older
+HYP-2523/HYP-2628/HYP-2630/HYP-2632 totient-copy and repeated-character-kernel
+work.
+
+Main synthesis: the shared carrier is a quotient-order law, not direct
+numerology.  Primitive packets must be retained before scalar quotients:
+odd-cycle conflict packets before `H=I(Omega,2)`, strong atoms / ear insertion
+profiles before scalar `H`, and exact-denominator `phi` packets before
+squarefree/coimage/character projection in LRC.  The `H=7` side has unique
+connected `I(G,2)` preimage `K_3`; this is not literally a Strong Perfect
+Graph Theorem forbidden odd clique, but the unique conflict-packet preimage
+whose three pairwise vertex-conflicting triangles force a cycle-space `C_5`.
+The LRC analogue is HYP-2630/HYP-2632: Euler-copy capacity is uniform on
+`F_7^*`, while the actual split is the later `chi_7` phase and affine zero
+lane `a+b=2`.  New proof target: build an exact-period packet-conflict graph
+from HYP-2632 and test whether its affine zero lane / Legendre selector appear
+as odd-hole or odd-clique fingerprints, analogous to `K_3 -> C_5`.
+
+Added HYP-2882 and reflection
+`07-reflections/primitive-packets-before-quotients-codex-s100.md`; added T998
+and index updates.  Assumption challenge: considered runners, tournament
+vertices, free arcs, odd cycles, strong components, ears, exact-denominator
+packets, divisor masks, unit residues, additive Fourier shells, quadratic
+characters, affine lanes, and proof obligations.  Chosen quotient is primitive
+packet before scalar quotient; raw row identity, raw runner identity, raw cut
+weight, and raw divisor count are addresses, not proof carriers.
+
+## mac-mini-2026-06-22-S37 -- the LITERAL pentagon match: C_5 = H=7 K_3 (cycle space, VERIFIED) + H-multiplicative/totient
+Per user (E_7 C_5 holes <-> H=7 K_3 bijection; H-multiplicative <-> totient). Concurrent w/ kps (E_7, 7-adic atoms), codex (ear atoms). HYP-2880:
+- **THREAD A VERIFIED -- the pentagon match is LITERAL:** in the cycle space (GF(2)), **C_5 = XOR of 3 pairwise-VERTEX-CONFLICTING triangles** (fan {123}+{134}+{145} = the 5-cycle; ALL 5 triangle-decompositions of C_5 in K_5 are vertex-conflicting K_3's). The H=7 obstruction = 3 pairwise-vertex-conflicting cycles = K_3 (THM-029). The even-graph<->tournament bijection (even-graph = XOR of fundamental cycles) thus sends a C_5 even-graph (E_7 vertex) to the H=7 K_3 configuration. So C_5 (E_7/even-graph side) = H=7 K_3 (H/tournament side) = the apex-7 odd-cycle obstruction. ONE phenomenon under {7,21}, E_7 non-chordality, (thematically) LRC q=7.
+  HONEST: verified at the cycle-space level (C_5 even-graph); whether kps's E_7 METAGRAPH holes (chordless C_5 in the iso-class adjacency, S31e) are these same C_5 is the connecting step (shared with kps).
+- **THREAD B:** H multiplicative over strong-component ATOMS (Moon); achievable-H = atom-semigroup; atoms by n verified ({3},{5},{9,11,13,15},...); {7,21} = the ONLY forbidden values (finite Kuratowski gaps). TOTIENT analogy: H is a multiplicative function (atoms = irreducibles) like phi; the prior LRC Mertens/ze(2) totient work is the same machinery; apex 7 special in both. CORRECTED my 'ramified-prime' instinct (35=5*7, 49=7^2 ARE atoms, so 7|atoms -- not a 7-power rule).
+DISCIPLINE: corrected 2 instincts (singular L(K_n) map; ramified-prime-7); verified C_5=K_3 cleanly (5/5). NEW: HYP-2880. NEXT: kps connect E_7 metagraph holes to C_5=K_3; the LRC winding-tournament <-> H=7 K_3 (the deep lead).
+## codex-2026-06-22-S100 -- E7 metagraph C5 holes live above the directed H=7 C5 support
+User asked to keep the concurrent discipline and test whether E7's C5 holes map, through the even-graph/tournament-cycle bijection, onto the H=7 K3 obstruction, while also connecting the result to the older Euler-totient/multiplicative-function work.
+
+Pulled current mainline first and integrated S36's correction that `49` and `75` are single irreducible strong atoms, while S99's `w` is cut weight, not atom-count weight.  Added `e7_c5_h7_obstruction_map_codex_s100.py`, a dependency-free exact audit of the strongest literal map: fixed Hamiltonian path `0->1->...->6`, with each reversed free arc `(i,j)` mapped to the path-fundamental even cycle `i,i+1,...,j,i`.
+
+The script rebuilds the E7 quotient and reproduces the KPS checksums: `54` classes, `951` metagraph edges, and `1496` chordless C5 holes.  It then computes directed triangle/pentagon/heptagon OCF packets in the fixed-path cube.  Result: the literal H=7 point `alpha=(3,0)` has `0` masks/classes; the near-H7 P3 replacement has `0` masks/classes in this gauge; `k3_forces_pentagon` has `54` masks in `5` classes.  Those five classes touch `835/1496` E7 C5 holes, with `1180/7480` vertex incidences, but no E7 C5 hole is entirely made of them.  The directed pentagon support itself maps to a single E7 class (class 3, edge_count `5`, C5-hole incidence `209`), not to a five-class metagraph hole.
+
+Conclusion recorded as HYP-2881 after incoming HYP-2880 claimed the apex-cut ID, and then rebased over S37's support-level verification.  The clean synthesis is two-level: S37 verifies directed C5 support = H=7 K3 support in the cycle space; S100 shows an E7 metagraph C5 hole is not that single support object, but a five-class quotient cycle.  The Euler/totient synthesis is that LRC exact-denominator packets use `phi(D)` before scalarizing, while tournaments use the strong-component product `H(T)=prod H(C_i)`.  The right multiplicative function is therefore a strong-H atom ledger, explaining why `49` and `75` can be single atoms despite composite integer factorization and why `21` is absent because the atom `7` is absent.
+
+Artifacts: HYP-2881, reflection `e7-c5-h7-obstruction-layer-and-euler-totient-atoms-codex-s100.md`, result/output, T997, and a broadcast to the team.  Updated HYP-2878 and HYP-2879 so the next target is incidence-profile comparison in the exposed-slot / E7 odd-hole layers rather than object equality.
+
 ## mac-mini-2026-06-22-S36 -- 'weight'=atom-count interpretation + the LRC prime-basis AP/covering split (discipline: refuted 3 readings, verified)
 Extended the strong-atom thread (user: balanced cuts w=3 / unbalanced w=1 apex tile supplies 49,75). HYP-2879 + HYP-2878 update:
 - **'weight w' = NUMBER of strong components (atoms)** (reconstructed after refuting 2 readings): 49=7^2, 75=3*5^2 are SINGLE irreducible atoms (verified n=7, 5-7 back-arcs); w=1 = a single atom = the apex/irreducible obstruction unit. Mirrors the LRC hard case = single resonance atom (HYP-2878). Single-TILE-flip is the SEPARATE H=1+2^d hypotenuse formula (apex tile -> 1+2^(n-2)=65, n=8), NOT 49,75.
@@ -20028,3 +20572,160 @@ rational-witness closure (`D<=41` and fixed basis coverage).  The S98
 finite-basis killer directly refutes the global form while preserving its
 useful parts: `N(S,D)` as character/resonance count, the apex obstruction, and
 large-denominator bases as sampled/scaled atlases.
+
+## codex-2026-06-22-S99 -- apex-cut insertion defects supply n=8 strong values
+
+User prompt: balanced cuts supply `w=3` strong `n=8` values, and a single
+unbalanced weight `w=1` supplies `49` and `75`; this likely corresponds to the
+apex tile in the tiling model.  Pulled first and integrated incoming S35/S31e:
+HYP-+2878's strong-atom covering route and HYP-2878's E_7 odd-hole apex-prime
+thread.
+
+Added `04-computation/tournament_apex_cut_weight_ledger_codex_s99.py` and
+stored `05-knowledge/results/tournament_apex_cut_weight_ledger_codex_s99.out`.
+The script represents every rooted `n=8` fixed-path row as a rooted `n=7`
+base plus an apex row (`6 -> 7` fixed, six free apex bits), then computes
+`H(T+apex)` exactly by summing legal apex insertion slots over old Hamiltonian
+paths.  It audits all `32768` rooted `n=7` bases and all `64` apex cuts,
+hence all `2097152` rooted `n=8` rows.
+
+Main finding/correction: raw cut size is an address, not the proof carrier.
+Balanced raw `w=3` cuts are broad suppliers (`645112` strong rows, `463`
+distinct strong `H` values, max `513`, gaps in `[1,100]` only
+`1,5,7,20,21`), but raw rooted `w=3` does not isolate the `49/75` phenomenon:
+`w=1` also supplies both values, and rooted `w=3` can supply both.  This
+complements HYP-2879 rather than contradicting it: after the non-isomorphic
+strong-ear quotient, balanced `w=3` misses exactly `49,75` and boundary `w=1`
+fills them.  The sharper invariant is the apex insertion-weight profile.
+Single-unbalanced `w=1` witnesses from strong `n=7` bases give: `49=2*25-1`
+with distribution `{1:1,2:24}` and `75=2*39-3` with distribution
+`{1:3,2:36}`.  So one apex row almost doubles an old strong atom and subtracts
+a small odd source-sink defect.
+
+Pulled KPS S31f during closeout and integrated the useful correction:
+`apex_tile_H49_75_kps.py` shows the literal longest tile `(n-1,0)` is not
+required for `H=49` or `H=75` at `n=7` (`apex_NOT` witnesses exist).  Thus the
+live "apex tile" object is the boundary-row/insertion-defect operation, not a
+literal fixed-base tile.  `strong_atom_7adic_kps.py` supports the atom side:
+`49=7^2` and `75` are irreducible `m=7` strong atoms, while `7` and `21`
+remain forbidden and 7-multiple atoms first appear at the apex index `m=7`.
+
+Created HYP-2880 and reflection
+`07-reflections/tournament-apex-cut-defect-supplies-n8-values-codex-s99.md`.
+Proof target: classify apex operations `H -> cH-d` with near-constant insertion
+profile and finite odd defect set.  This is a constructive companion to
+HYP-2877's labelled strong-atom semigroup, HYP-2879's strong-ear calculus, and
+a concrete tiling-model reading of S530's source-sink apex tile.  Assumption
+challenge: considered runners, free arcs, raw cut size, balanced/unbalanced
+cuts, insertion slots, strong components, old `H` atoms, apex tile orientation,
+even-graph holes, and proof obligations; selected carrier is insertion profile
+because it preserves `H`
+exactly under apex extension.
+
+## codex-2026-06-22-S102 -- LRC14 exact-period packet atlas after S101 signed-current balance
+
+User prompt: creatively apply the strong-component atom / E7 C5 / totient
+packet ideas to LRC14, with the latest focus on exact-period packets and the
+HYP-2883 signed-current graph.  Pulled first and integrated incoming S101:
+`lrc14_repeated_packet_graph_codex_s101.py` and HYP-2883 already prove the
+HYP-2632 repeated-residue finite kernel is locally balanced as a signed graph.
+
+Added `04-computation/lrc14_exact_period_packet_atlas_codex_s102.py` and
+stored `05-knowledge/results/lrc14_exact_period_packet_atlas_codex_s102.out`.
+The script moves from the abstract HYP-2632 packet to actual rational witness
+packets: for denominator `D`, keep units `a mod D`; `a/D` is safe iff
+`14*min(sa mod D,D-sa mod D)>=D` for every speed.  This keeps the exact-period
+`phi(D)` packet law before scalarizing to `N(S,D)`.
+
+Main findings:
+
+- Fixed finite denominator bases are charts, not closures.  The divisor-loaded
+  row `divload_B90={1,...,11,13,84*lcm(1,...,90)}` kills the prompt-like basis
+  `(21,41,53,83,89)` completely and first opens at `D=97`.
+- Tested first exact-period witnesses include `cover_84:D=41`, `tower_m6:D=53`,
+  `tower_m53:D=55`, `AP12_182:D=27`, `floor_star:D=23`, and
+  `divload_B60:D=67`.
+- Safe packets retain mod-7/affine signal before scalarization.  Aggregate
+  mixed-case lens strength is
+  `mod14 > mod7 > chi_7 x affine_pair > affine_pair > chi_7 > parity`.
+  `mod14` winning is just the `2*7` band; the proof-relevant signal is that
+  the HYP-2632/HYP-2883/HYP-2884 mod-7/affine signed-current layer is visible
+  in real denominator packets.
+- Scaled `q=14V` witnesses decompose into many exact denominators, not one
+  bounded-D certificate.  For example `cover_84` at `q=1176` has `12` good
+  residues with top exact denominators `1176:4,392:4,147:2,98:2`; `tower_m53`
+  at `q=62328` has `706` good residues with top exact denominators
+  `62328:212,31164:110,20776:104,...`.
+- `phi` is CRT-multiplicative, but LRC safety is not.  Example:
+  `cover_84` has `rate(7*13)=1/36` while `rate(7)*rate(13)=0`.  This defect is
+  the LRC analogue of a labelled strong-component/ear atom.
+
+Created HYP-2886 and reflection
+`07-reflections/lrc14-exact-period-packet-atlas-codex-s102.md`.  Proof target:
+delete denominators killed by divisibility, lift the HYP-2883/HYP-2884 local
+signed-current balance on exact-period residue fibers, retain CRT defects as
+labelled atoms, and route incoherent high-denominator packets to the existing
+spectrum/L2/Part-A floor.  No LRC14 proof claimed.
+
+Assumption challenge / Tournament Analysis: considered runners, denominators,
+exact-period units, reduced denominators in `q=14V`, mod-7 residues, `chi_7`,
+affine-pair classes, CRT factors, support-six classes, and proof obligations.
+Selected vertices are quotient lenses on exact-period packets.  Pairwise
+observable is aggregate weighted variance explained for packet safety; gauge
+orients toward greater explained variance; fingerprint is transitive
+(`score_histogram={0:1,1:1,2:1,3:1,4:1,5:1}`, no directed 3-cycles, one
+Hamiltonian path).  Challenged assumption: successful sampled finite bases
+should become a universal certificate basis; the corrected upgrade is an
+adaptive exact-period atlas plus a proof that the atlas cannot be covered.
+
+Follow-up after pulling kind-pasteur-S31j: the incoming additive-energy
+extremality result already claimed HYP-2885, so the exact-period packet atlas
+was renumbered to HYP-2886.  The two nodes are complementary rather than
+conflicting: HYP-2885 attacks the cap/extremality branch through Fejer and
+additive energy, while HYP-2886 attacks the witness/finite-denominator branch
+by retaining exact-period packets, mod-7 affine data, and CRT defects before
+scalarization.
+
+## codex-2026-06-22-S103 -- additive-energy majorization correction
+
+User: attack additive energy majorization creatively.  Pulled current main
+after stashing only the generated `agents/.session-state.json` change.
+
+Added `04-computation/lrc_additive_energy_majorization_codex_s103.py` and
+stored `05-knowledge/results/lrc_additive_energy_majorization_codex_s103.out`.
+The script tests exact primitive banks:
+
+- k=8: `1716` rows, `E=(0 plus 7 from 1..13)`;
+- k=9: `1287` rows, `E=(0 plus 8 from 1..13)`;
+- k=10: `220` rows, `E=(0 plus 9 from 1..12)`.
+
+Main finding: HYP-2885's additive-energy carrier is right, but the monotone
+statement must be AP-facing.  In all three banks, AP difference-profile
+majorization has `0` failures, and AP has `0` p0 or L_y over-beaters.  But
+scalar additive energy has `3137` p0 monotonicity inversions, pairwise
+difference-profile majorization has `556752` p0 monotonicity violations, and
+one-step profile-up compression lowers p0 in `1177` cases.
+
+Created HYP-2889 and reflection
+`07-reflections/lrc-additive-energy-majorization-codex-s103.md`.  New theorem
+shape: prove interval difference-profile/Fejer majorization, then split the
+THM-534 `L_y` certificate into an AP-facing Fejer component plus a labelled
+signed sector/Fourier remainder controlled by finite AP/Freiman packets and
+HYP-2636/HYP-2884 cancellation.  No LRC14 proof claimed.
+
+Follow-up after rebase over concurrent S103/S39 work: octahedral current had
+already claimed HYP-2887/T1002, so this additive-energy correction was
+renumbered to HYP-2889/T1003.  Integrated mac-mini HYP-+2888 as signal: AP
+strict-threshold coverage is exactly measure `1` with a boundary rational
+witness, so the AP-facing Fejer branch should prove no non-AP row over-covers
+past that boundary value, not a positive-measure safe floor at threshold.
+
+Second follow-up after pulling mac-mini S39 and KPS S31l: the endpoint is even
+more anchored than "AP-like."  Exact threshold tiling is scaling-invariant
+`d*{1,...,13}` with witness `t=1/(14d)`, while AP translates have the same
+maximum additive energy but positive safe measure.  KPS S31l also shows the
+higher additive-moment coefficients are mixed-sign after the positive dominant
+`s=2` term.  Updated HYP-2889/T1003, HYP-2885, concept map, open questions, and
+result index accordingly: the proof target is anchored AP-facing Fejer
+majorization plus labelled signed cancellation, not scalar additive-energy
+monotonicity or affine-translation-invariant exact tiling.

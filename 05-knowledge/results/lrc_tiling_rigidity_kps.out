@@ -1,0 +1,15 @@
+THE AP {1..13} and dilates (should be exactly 0 = exact tiling):
+  1*{1..13}: safe = 0.000000
+  2*{1..13}: safe = 0.000000
+  3*{1..13}: safe = 0.000000
+  5*{1..13}: safe = 0.000000
+
+PERTURBATIONS (should be > 0 = NOT tiling => the rigidity):
+  {1..12,14}            : safe = 0.023897
+  {2..14}               : safe = 0.061224
+  {1..11,13,14}         : safe = 0.012159
+  {1..13} swap 7->15    : safe = 0.075563
+  {1..13} swap 1->14    : safe = 0.061224
+
+Goddyn-Wong-type {1..11,13,24} (other tight family, expect ~0):
+  {1..11,13,24}: safe = 0.000000

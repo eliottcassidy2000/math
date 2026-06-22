@@ -6,6 +6,7 @@ tags: [tournaments, h-spectrum, strong-components, ears, insertion, forbidden-H,
 related:
   - HYP-2877
   - HYP-2878
+  - HYP-2881
   - HYP-+2878
   - HYP-+2879
   - HYP-2874
@@ -165,15 +166,20 @@ miss.
 
 KPS S31e's HYP-2878 gives the concrete odd-cycle target for this transfer.
 The even-graph metagraph `E_7` has exactly `1496` chordless `C_5` holes and
-`196 = 14^2` chordless `C_7` holes.  Since this ear calculus routes `{7,21}` to
-cut-polynomial failures rather than even-graph minors, the next single-object
-test is not minor containment.  It is whether the exposed-slot graph encoded by
-`Q_T` has canonical odd cycles corresponding to the E7 `C_5` pentagon
-obstruction and the apex-prime `C_7` heptagon family.  The S31e enrichment
-narrows the target further: the E7 heptagons are concentrated on `34/54`
-classes, complement-paired, and centered on `9`-edge classes rather than the
-naive `7`-edge cycle.  Thus the `Q_T` test should look for complement-symmetric
-central exposed-slot classes, not merely any chordless heptagon.
+`196 = 14^2` chordless `C_7` holes.  S37/HYP-+2880 verifies the support-level
+identity `directed C5 = H=7 K3` in cycle space.  HYP-2881 adds the quotient
+guardrail: under the fixed-path path-fundamental cycle-space map, the THM-200
+directed pentagon support is a single E7 class, while an E7 C5 metagraph hole
+is a five-class quotient cycle.  The useful target for the exposed-slot graph
+encoded by `Q_T` is therefore incidence profile: do the `Q_T` odd cycles mark
+the same obstruction layer, especially the
+`k3_forces_pentagon` classes that hit many E7 C5 holes without defining them?
+
+The S31e enrichment still narrows the apex-prime side: the E7 heptagons are
+concentrated on `34/54` classes, complement-paired, and centered on `9`-edge
+classes rather than the naive `7`-edge cycle.  Thus the `Q_T` test should look
+for complement-symmetric central exposed-slot classes and C5/C7 incidence
+profiles, not merely any chordless heptagon.
 
 ## Artifacts
 

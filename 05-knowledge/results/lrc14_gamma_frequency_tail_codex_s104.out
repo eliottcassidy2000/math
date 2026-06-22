@@ -1,0 +1,116 @@
+=== Same-frequency additive-energy packet Gamma_k(m) ===
+Gamma_k(m) = C_{k,r}/m^4 for m == r mod 7; all constants below are signed.
+
+k=8
+  C_{k,r}, r=1..6:
+    +8.910030114e-04 +9.393734752e-03 +2.271306234e-02 +2.271306234e-02 +9.393734752e-03 +8.910030114e-04
+  Gamma(1)=+8.910030114e-04
+  partial H=12=+1.868884926e-03; abs tail <= 1.084e-06; positivity cert >= +1.867800707e-03
+  series H=5000=+1.869969145e-03; abs tail <= 2.516e-14; ratio series/Gamma1=2.098724
+
+k=9
+  C_{k,r}, r=1..6:
+    +8.910030114e-04 +9.393734752e-03 +2.271306234e-02 +2.271306234e-02 +9.393734752e-03 +8.910030114e-04
+  Gamma(1)=+8.910030114e-04
+  partial H=12=+1.868884926e-03; abs tail <= 1.084e-06; positivity cert >= +1.867800707e-03
+  series H=5000=+1.869969145e-03; abs tail <= 2.516e-14; ratio series/Gamma1=2.098724
+
+k=10
+  C_{k,r}, r=1..6:
+    +7.772247843e-04 +8.194184950e-03 +1.981267712e-02 +1.981267712e-02 +8.194184950e-03 +7.772247843e-04
+  Gamma(1)=+7.772247843e-04
+  partial H=12=+1.630234315e-03; abs tail <= 9.458e-07; positivity cert >= +1.629288547e-03
+  series H=5000=+1.631180083e-03; abs tail <= 2.194e-14; ratio series/Gamma1=2.098724
+
+k=11
+  C_{k,r}, r=1..6:
+    +6.140907053e-04 +6.474282494e-03 +1.565413393e-02 +1.565413393e-02 +6.474282494e-03 +6.140907053e-04
+  Gamma(1)=+6.140907053e-04
+  partial H=12=+1.288059465e-03; abs tail <= 7.473e-07; positivity cert >= +1.287312208e-03
+  series H=5000=+1.288806723e-03; abs tail <= 1.734e-14; ratio series/Gamma1=2.098724
+
+k=12
+  C_{k,r}, r=1..6:
+    +4.457324944e-04 +4.699302662e-03 +1.136241943e-02 +1.136241943e-02 +4.699302662e-03 +4.457324944e-04
+  Gamma(1)=+4.457324944e-04
+  partial H=12=+9.349269636e-04; abs tail <= 5.424e-07; positivity cert >= +9.343845730e-04
+  series H=5000=+9.354693542e-04; abs tail <= 1.258e-14; ratio series/Gamma1=2.098724
+
+k=13
+  C_{k,r}, r=1..6:
+    +2.959912171e-04 +3.120598860e-03 +7.545279734e-03 +7.545279734e-03 +3.120598860e-03 +2.959912171e-04
+  Gamma(1)=+2.959912171e-04
+  partial H=12=+6.208436075e-04; abs tail <= 3.602e-07; positivity cert >= +6.204834299e-04
+  series H=5000=+6.212037851e-04; abs tail <= 8.357e-15; ratio series/Gamma1=2.098724
+
+=== Exact p0 validation against additive-energy packet ===
+label                 k  A*     p0             dev        lead       samefreq   resid_sf   sf/dev
+AP-k8                 8   224 481/1470     +0.269509 +0.199585 +0.418873 -0.149364 +1.554
+nearAP-k8-gap         8   200 5/24       +0.150631 +0.178201 +0.373994 -0.223362 +2.483
+sidon-k8              8     0 2/165      -0.045581 +0.000000 +0.000000 -0.045581 -0.000
+AP-k9                 9   336 2447/5880     +0.311244 +0.299377 +0.628310 -0.317066 +2.019
+nearAP-k9-gap         9   308 1181/2940     +0.296788 +0.274429 +0.575950 -0.279162 +1.941
+dilate2-AP-k9         9   336 2447/5880     +0.311244 +0.299377 +0.628310 -0.317066 +2.019
+sidon-k9              9     4 151/2156     -0.034875 +0.003564 +0.007480 -0.042355 -0.214
+AP-k10               10   480 8899/17640    +0.341382 +0.373068 +0.782966 -0.441584 +2.294
+nearAP-k10-gap       10   448 121/245      +0.330781 +0.348197 +0.730769 -0.399987 +2.209
+AP-k11               11   660 3419/5880     +0.353010 +0.405300 +0.850612 -0.497602 +2.410
+AP-k12               12   880 121103/194040   +0.326807 +0.392245 +0.823213 -0.496406 +2.519
+AP-k13               13  1144 14573/21560    +0.309353 +0.338614 +0.710657 -0.401304 +2.297
+
+=== Exact bounded residual-leak scan: k=8, anchored max<= 14 ===
+rows=3432  AP_A*=224  AP_p0=0.327210884  AP_Rsf=-0.149364109
+corr(A*, p0)=+0.5603  corr(A*, residual_after_sf)=-0.4502
+top p0 rows:
+  p0=0.327210884 A*= 224 R=-0.149364109 E=(0, 1, 2, 3, 4, 5, 6, 7)
+  p0=0.327210884 A*= 224 R=-0.149364109 E=(0, 2, 4, 6, 8, 10, 12, 14)
+  p0=0.273639456 A*= 200 R=-0.158056278 E=(0, 2, 3, 4, 5, 6, 7, 8)
+  p0=0.255782313 A*= 152 R=-0.086154902 E=(0, 2, 4, 6, 7, 8, 10, 12)
+  p0=0.237955695 A*= 140 R=-0.081541890 E=(0, 1, 3, 5, 7, 9, 11, 13)
+  p0=0.237074830 A*= 168 R=-0.134781892 E=(0, 1, 3, 4, 5, 6, 7, 9)
+largest residual-leak / same-frequency-energy-gap ratios:
+  ratio=0.469476 AP-p0=+0.071428571 Egap=0.134637778 Rleak=0.063209207 A*= 152 E=(0, 2, 4, 6, 7, 8, 10, 12)
+  ratio=0.431776 AP-p0=+0.089255189 Egap=0.157077408 Rleak=0.067822219 A*= 140 E=(0, 1, 3, 5, 7, 9, 11, 13)
+  ratio=0.422280 AP-p0=+0.129638219 Egap=0.224396297 Rleak=0.094758079 A*= 104 E=(0, 2, 5, 6, 8, 10, 11, 14)
+  ratio=0.416740 AP-p0=+0.152694924 Egap=0.261795680 Rleak=0.109100756 A*=  84 E=(0, 2, 3, 4, 8, 12, 13, 14)
+  ratio=0.410312 AP-p0=+0.136734694 Egap=0.231876174 Rleak=0.095141480 A*= 100 E=(0, 1, 2, 3, 4, 6, 12, 14)
+  ratio=0.395852 AP-p0=+0.094897959 Egap=0.157077408 Rleak=0.062179449 A*= 140 E=(0, 1, 2, 3, 4, 5, 6, 14)
+  ratio=0.393753 AP-p0=+0.158712716 Egap=0.261795680 Rleak=0.103082965 A*=  84 E=(0, 1, 2, 4, 7, 10, 12, 13)
+  ratio=0.386108 AP-p0=+0.123979592 Egap=0.201956668 Rleak=0.077977076 A*= 116 E=(0, 2, 3, 4, 6, 8, 12, 14)
+residual-leak violations of AP dominance inequality: 0
+
+=== Exact bounded residual-leak scan: k=9, anchored max<= 14 ===
+rows=3003  AP_A*=336  AP_p0=0.416156463  AP_Rsf=-0.317065725
+corr(A*, p0)=+0.5433  corr(A*, residual_after_sf)=-0.3518
+top p0 rows:
+  p0=0.416156463 A*= 336 R=-0.317065725 E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+  p0=0.404081633 A*= 240 R=-0.149623517 E=(0, 2, 4, 6, 7, 8, 10, 12, 14)
+  p0=0.401700680 A*= 308 R=-0.279162371 E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+  p0=0.380952381 A*= 284 R=-0.255031411 E=(0, 1, 2, 3, 4, 5, 6, 7, 10)
+  p0=0.372959184 A*= 232 R=-0.165786213 E=(0, 2, 3, 4, 6, 8, 10, 12, 14)
+  p0=0.371768707 A*= 248 R=-0.196896195 E=(0, 1, 2, 3, 4, 5, 6, 7, 12)
+largest residual-leak / same-frequency-energy-gap ratios:
+  ratio=0.932737 AP-p0=+0.012074830 Egap=0.179517038 Rleak=0.167442208 A*= 240 E=(0, 2, 4, 6, 7, 8, 10, 12, 14)
+  ratio=0.777880 AP-p0=+0.043197279 Egap=0.194476791 Rleak=0.151279512 A*= 232 E=(0, 2, 3, 4, 6, 8, 10, 12, 14)
+  ratio=0.760001 AP-p0=+0.048469388 Egap=0.201956668 Rleak=0.153487280 A*= 228 E=(0, 1, 2, 3, 4, 5, 6, 7, 14)
+  ratio=0.739892 AP-p0=+0.048639456 Egap=0.186996915 Rleak=0.138357459 A*= 236 E=(0, 2, 4, 5, 6, 8, 10, 12, 14)
+  ratio=0.730260 AP-p0=+0.044387755 Egap=0.164557285 Rleak=0.120169530 A*= 248 E=(0, 1, 2, 3, 4, 5, 6, 7, 12)
+  ratio=0.723911 AP-p0=+0.014455782 Egap=0.052359136 Rleak=0.037903354 A*= 308 E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+  ratio=0.701896 AP-p0=+0.060204082 Egap=0.201956668 Rleak=0.141752586 A*= 228 E=(0, 1, 2, 4, 6, 8, 10, 12, 14)
+  ratio=0.698857 AP-p0=+0.058565244 Egap=0.194476791 Rleak=0.135911547 A*= 232 E=(0, 2, 4, 6, 8, 10, 11, 12, 14)
+residual-leak violations of AP dominance inequality: 0
+
+=== Tournament-analysis lens ranking ===
+vertices: lens, explained_AP, monotonicity, remaining_residual, formal_tail_cost
+  m=1_lead             (3, 3, 1, 1)
+  same_frequency_tail  (3, 3, 1, 2)
+  hidden_fold_shape    (2, 2, 3, 3)
+  support_cycle_tail   (1, 1, 3, 4)
+Hamiltonian path: m=1_lead -> same_frequency_tail -> hidden_fold_shape -> support_cycle_tail
+challenged assumption: additive energy alone is not enough; shifted/hidden-fold rows keep shape data.
+
+Interpretation:
+  The same-frequency additive-energy packet is positive for k=8..13 with a tiny explicit
+  1/m^4 tail after H=12.  It strengthens the KPS m=1 monotonicity signal.
+  However, AP residuals after this packet are not zero; the remaining proof obligation
+  lives in hidden-fold / support-cycle shape terms, not in scalar additive energy alone.

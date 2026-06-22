@@ -1,0 +1,6 @@
+AP {1..13}          : M_exact=1/14=0.071429 at t=3/14;  grid M=0.071425 at 0.21429
+                      vs 1/14=0.071429  =>  TIGHT (witness exists, LRC holds)
+GW {1..11,13,24}    : M_exact=1/14=0.071429 at t=5/14;  grid M=0.071425 at 0.21429
+                      vs 1/14=0.071429  =>  TIGHT (witness exists, LRC holds)
+2*AP                : M_exact=1/14=0.071429 at t=27/28;  grid M=0.071420 at 0.17857
+                      vs 1/14=0.071429  =>  TIGHT (witness exists, LRC holds)

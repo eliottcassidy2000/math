@@ -1,0 +1,91 @@
+codex-S108 exact sub-14 LRC covering/tiler training atlas
+Convention: LRC(N) has N-1 speeds and target 1/N.
+================================================================================================
+A. AP tight rows and Goddyn-Wong acceleration atoms for N<=14
+================================================================================================
+  N  target     AP_M       GW acc velocities        GW_M / safe measure
+  3      1/3       1/3   ()                       -
+  4      1/4       1/4   ()                       -
+  5      1/5       1/5   ()                       -
+  6      1/6       1/6   ()                       -
+  7      1/7       1/7   ()                       -
+  8      1/8       1/8   (6,)                     M=1/8, t=1/8, active=(1, 7), safe=0
+  9      1/9       1/9   ()                       -
+ 10     1/10      1/10   ()                       -
+ 11     1/11      1/11   ()                       -
+ 12     1/12      1/12   ()                       -
+ 13     1/13      1/13   ()                       -
+ 14     1/14      1/14   (12,)                    M=1/14, t=5/14, active=(3, 11), safe=0
+
+================================================================================================
+B. q-witness covering repairs of AP_N: drop d, add minimal repair w
+================================================================================================
+Rows cover every q=2..N, so THM-523's easy witness is disabled.
+The comparison line N=14 is included to show the first-open contrast.
+This is an AP-drop repair slice, not a global covering-set minimization.
+
+N= 4 target=  1/4 best_drop= 2->w=4    deficits=(2, 4)           M=     2/7 margin=      1/28 safe=        1/24 t=     3/7 active=(3, 4)
+     row=(1, 3, 4)
+N= 5 target=  1/5 best_drop= 2->w=5    deficits=(5,)             M=     2/9 margin=      1/45 safe=        1/50 t=     4/9 active=(4, 5)
+     row=(1, 3, 4, 5)
+N= 6 target=  1/6 best_drop= 5->w=30   deficits=(5, 6)           M=    6/31 margin=     5/186 safe=        1/12 t=    6/31 active=(1, 30)
+     row=(1, 2, 3, 4, 30)
+N= 7 target=  1/7 best_drop= 6->w=42   deficits=(6, 7)           M=    7/43 margin=     6/301 safe=       9/245 t=    7/43 active=(1, 42)
+     row=(1, 2, 3, 4, 5, 42)
+N= 8 target=  1/8 best_drop= 6->w=24   deficits=(6, 8)           M=    4/29 margin=     3/232 safe=     13/1680 t=    5/29 active=(5, 24)
+     row=(1, 2, 3, 4, 5, 7, 24)
+N= 9 target=  1/9 best_drop= 8->w=72   deficits=(8, 9)           M=    9/73 margin=     8/657 safe=   353/11340 t=    9/73 active=(1, 72)
+     row=(1, 2, 3, 4, 5, 6, 7, 72)
+N=10 target= 1/10 best_drop= 9->w=90   deficits=(9, 10)          M=   10/91 margin=     9/910 safe=      17/504 t=   10/91 active=(1, 90)
+     row=(1, 2, 3, 4, 5, 6, 7, 8, 90)
+N=11 target= 1/11 best_drop=10->w=110  deficits=(10, 11)         M=  11/111 margin=   10/1221 safe=    157/7623 t=  11/111 active=(1, 110)
+     row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 110)
+N=12 target= 1/12 best_drop=11->w=132  deficits=(11, 12)         M=  12/133 margin=   11/1596 safe=   461/15120 t=  12/133 active=(1, 132)
+     row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 132)
+N=13 target= 1/13 best_drop=12->w=156  deficits=(12, 13)         M=  13/157 margin=   12/2041 safe= 5251/390390 t=  13/157 active=(1, 156)
+     row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 156)
+N=14 target= 1/14 best_drop=13->w=182  deficits=(13, 14)         M=  14/183 margin=   13/2562 safe= 4637/194040 t=  14/183 active=(1, 182)
+     row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182)
+
+================================================================================================
+C. What smaller N teaches
+================================================================================================
+Covering-repair rows are the finite lab where the q-witness route is disabled.
+  N   N*(M-1/N)       active switch type           repair reading
+  4              1/7   (3, 4)                     drop 2->w=4: loose training row
+  5              1/9   (4, 5)                     drop 2->w=5: loose training row
+  6             5/31   (1, 30)                    drop 5->w=30: loose training row
+  7             6/43   (1, 42)                    drop 6->w=42: loose training row
+  8             3/29   (5, 24)                    drop 6->w=24: loose training row
+  9             8/73   (1, 72)                    drop 8->w=72: loose training row
+ 10             9/91   (1, 90)                    drop 9->w=90: loose training row
+ 11           10/111   (1, 110)                   drop 10->w=110: loose training row
+ 12           11/133   (1, 132)                   drop 11->w=132: loose training row
+ 13           12/157   (1, 156)                   drop 12->w=156: loose training row
+ 14           13/183   (1, 182)                   drop 13->w=182: LRC14 AP-drop covering comparison
+
+Observation: AP and GW rows are exact tilers, but they are not covering rows.
+Once q-witness covering is forced, every AP-drop repair in this atlas is loose.
+The AP-drop N=14 line is not a new phenomenon in kind; it is the first line where the
+support-six signed tail can coexist with a still-small covering margin.
+
+================================================================================================
+D. Even-denominator support floor
+================================================================================================
+N= 4: q=2, support floor=1, below support-six
+N= 6: q=3, support floor=2, below support-six
+N= 8: q=4, support floor=3, below support-six
+N=10: q=5, support floor=4, below support-six
+N=12: q=6, support floor=5, below support-six
+N=14: q=7, support floor=6, first support-six
+
+================================================================================================
+Tournament Analysis
+================================================================================================
+Vertices are proof carriers rather than runners.
+Observable: how much LRC proof structure survives before scalarizing.
+Hamiltonian path:
+  q_witness_covering_reduction > binding_pair_covering_margin > AP_tight_equal_spacing > Goddyn_Wong_acceleration_atom > support_floor_q_minus_1 > raw_speed_search
+Challenged assumption: below-14 proof should be learned from raw finite
+enumeration.  The useful training objects are q-cover deficits, binding
+switches, acceleration windows, and the support floor.

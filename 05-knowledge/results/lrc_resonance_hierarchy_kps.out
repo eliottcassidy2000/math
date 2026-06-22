@@ -1,0 +1,26 @@
+RESONANCE HIERARCHY -- top witnesses (lonely value, t=a/b), b=denominator:
+
+ AP {1..13}:  M = 1/14
+   witness t=  5/14 (b=14): lonely value  1/14=0.0714;  speeds==0 mod 14: []
+   witness t=  7/15 (b=15): lonely value  1/15=0.0667;  speeds==0 mod 15: []
+   witness t=  7/16 (b=16): lonely value  1/16=0.0625;  speeds==0 mod 16: []
+   witness t=  8/17 (b=17): lonely value  1/17=0.0588;  speeds==0 mod 17: []
+   witness t=  7/18 (b=18): lonely value  1/18=0.0556;  speeds==0 mod 18: []
+
+ 1/12-core {1..11,13}:  M = 1/12
+   witness t=  5/12 (b=12): lonely value  1/12=0.0833;  speeds==0 mod 12: []
+   witness t=  5/14 (b=14): lonely value  1/14=0.0714;  speeds==0 mod 14: []
+   witness t=  7/15 (b=15): lonely value  1/15=0.0667;  speeds==0 mod 15: []
+   witness t=  7/16 (b=16): lonely value  1/16=0.0625;  speeds==0 mod 16: []
+   witness t=  8/17 (b=17): lonely value  1/17=0.0588;  speeds==0 mod 17: []
+
+ GW {1..11,13,24}:  M = 1/14
+   witness t=  5/14 (b=14): lonely value  1/14=0.0714;  speeds==0 mod 14: []
+   witness t= 12/29 (b=29): lonely value  2/29=0.0690;  speeds==0 mod 29: []
+   witness t=  7/15 (b=15): lonely value  1/15=0.0667;  speeds==0 mod 15: []
+   witness t= 13/31 (b=31): lonely value  2/31=0.0645;  speeds==0 mod 31: []
+   witness t= 15/32 (b=32): lonely value  1/16=0.0625;  speeds==0 mod 32: []
+
+=> M = 1/(smallest b with NO speed ==0 mod b AND a speed at +-1 mod b). The 1/12-core's b=12
+   peak is killed by v=24 (24==0 mod 12) => M drops to the b=14 peak (1/14). To go BELOW 1/14
+   one must kill b=14 too (a speed ==0 mod 14) AND every smaller resonance -- the COVERING case.

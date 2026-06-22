@@ -1,0 +1,5 @@
+n=7: 15 tiles, apex tile = (6, 0) (index 4), enumerating 2^15=32768 configs
+  achievable H values: 77; sample max H = 189
+  H=49: count=343  apex_flipped=112  apex_NOT=231  => APEX REQUIRED? False;  min tile-weight=3
+  H=75: count=425  apex_flipped=203  apex_NOT=222  => APEX REQUIRED? False;  min tile-weight=4
+  H values REQUIRING the apex tile flipped (apex_no==0): []

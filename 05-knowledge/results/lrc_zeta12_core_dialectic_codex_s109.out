@@ -1,0 +1,93 @@
+codex-S109 zeta -1/12 / LRC 1/12 core dialectic
+================================================================================================
+A. The formal -1/12 anchor
+================================================================================================
+Exact formal expansion:
+  sum_{n>=1} n*exp(-epsilon*n) = epsilon^-2 + c0 + c2*epsilon^2 + ...
+  c0 = -1/12
+  c2 = 1/240
+  c4 = -1/6048
+Readout: the zeta-regularized negative mass is a Bernoulli boundary
+constant.  It is not a finite negative runner; a finite LRC row has to
+realize any cancellation through divisibility and binding pairs.
+
+================================================================================================
+B. The positive 1/12 core
+================================================================================================
+C = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+M(C) = 1/12 (0.083333333), attained at t=5/12, active=(5, 7)
+Proof sketch for the upper bound: speeds 1..11 make the 12 points
+{0,t,2t,...,11t}; if all distances were >1/12, twelve circle gaps
+would sum to >1.  The witness t=5/12 gives the lower bound, and speed
+13 also lands at distance 5/12.
+
+================================================================================================
+C. Prove/disprove dialectic for one added integer speed
+================================================================================================
+Disproof pressure: add one speed w to kill the 1/12 core witness.
+Proof response: the q-witness split is exhaustive.
+
+  if 12 does not divide w:  q=12 witness remains, M>=1/12.
+  if 14 does not divide w:  q=14 witness remains, M>=1/14.
+  only if 84 divides w:     the row is genuinely q-covering.
+
+For the covering tail w=84m there is an exact binding-pair formula:
+  t_m = (35m+2)/(84m+5)
+  M(C union {84m}) = 7m/(84m+5), active pair (5,84m)
+
+Finite affine residue proof table at t_m.  Each numerator distance is
+measured modulo D=84m+5 and is >=7m; equality occurs for speed 5.
+  speed   1: distance numerator 35m+2
+  speed   2: distance numerator 14m+1
+  speed   3: distance numerator 21m+1
+  speed   4: distance numerator 28m+2
+  speed   5: distance numerator 7m
+  speed   6: distance numerator 42m+2
+  speed   7: distance numerator 7m+1
+  speed   8: distance numerator 28m+1
+  speed   9: distance numerator 21m+2
+  speed  10: distance numerator 14m
+  speed  11: distance numerator 35m+3
+  speed  13: distance numerator 35m+1
+  speed 84m: distance numerator 7m
+Thus the infinite covering one-tail family is strictly lonely:
+  7m/(84m+5) > 1/14  <=>  98m > 84m+5  <=>  14m>5.
+
+================================================================================================
+D. Finite/discrete families: counterexample search versus proof split
+================================================================================================
+Classification of all one-tail rows C union {w}, 1<=w<=336:
+  q=12 witness survives: 296 rows, examples [14, 15, 16, 17, 18, 19, 20, 21]
+  q=14 witness survives:  24 rows, examples [12, 24, 36, 48, 60, 72, 96, 108]
+  covering tail w=84m:     4 rows, examples [84, 168, 252, 336]
+This is a proof split, not a heuristic scan: every one-tail integer is
+in exactly one of the three rows above, and each row has a certified
+lower bound >=1/14.
+
+Exact envelope audit on representative disproof/proof rows:
+  w= 12: M=   1/14, t=   5/14, active=(3, 11)   , deficits=(14,)      TIGHT
+  w= 24: M=   1/14, t=   5/14, active=(3, 11)   , deficits=(14,)      TIGHT
+  w= 36: M=   3/41, t=  17/41, active=(5, 36)   , deficits=(14,)      loose
+  w= 84: M=   7/89, t=  37/89, active=(5, 84)   , deficits=()        , formula=7/89 loose
+  w=168: M= 14/173, t= 72/173, active=(5, 168)  , deficits=()        , formula=14/173 loose
+  w=252: M= 21/257, t=107/257, active=(5, 252)  , deficits=()        , formula=21/257 loose
+  w=336: M= 28/341, t=142/341, active=(5, 336)  , deficits=()        , formula=28/341 loose
+
+Discrete zeta-flavored tails.  Triangular/Faulhaber choices do not
+create negative mass; only their divisibility class matters.
+  T_k     : best k= 8, w=   36, certified M>=1/14 via q=14
+  12*T_k  : best k= 1, w=   12, certified M>=1/14 via q=14
+  14*T_k  : best k= 3, w=   84, certified M>=7/89 via 84m formula
+  84*T_k  : best k= 1, w=   84, certified M>=7/89 via 84m formula
+
+================================================================================================
+Tournament Analysis
+================================================================================================
+Vertices are proof/disproof mechanisms, not runners.
+Hamiltonian path:
+  formal_zeta_negative_constant > finite_divisibility_realization > q12_witness > q14_witness > covering_tail_84m > binding_pair_formula > multi_large_resonant_middle
+Observable: whether a formal cancellation survives as a finite integer
+counterexample.  The switch is q-covering: non-covering rows are killed
+by q-witnesses; the one-tail covering quotient has a positive formula.
+Destroyed information: arbitrary multi-tail resonance geometry.  That is
+the remaining OPEN-Q-108 middle, not this one-tail zeta boundary.

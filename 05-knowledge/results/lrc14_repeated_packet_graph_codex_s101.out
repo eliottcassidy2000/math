@@ -1,0 +1,88 @@
+
+========================================================================================
+LRC14 REPEATED PACKET GRAPH - CODEX S101
+========================================================================================
+
+========================================================================================
+SIGNED PACKET TABLE
+========================================================================================
+Vertex packets are 4+2 repeated residues; edge packets are 4+1+1 residues.
+ v chi7(v)   loop incident  balance
+ 0       0     -4        4        0
+ 2       1    -25       25        0
+ 3      -1    -18       18        0
+ 4       1    -25       25        0
+ 5      -1    -18       18        0
+ 6      -1    -18       18        0
+balance failures: []
+
+Edges:
+    edge   a+b   Q  chi7(Q) weight   kind
+  (0, 2)     2   6       -1      0   zero
+  (0, 3)     3   6       -1      1    low
+  (0, 4)     4   6       -1      1    low
+  (0, 5)     5   6       -1      1    low
+  (0, 6)     6   6       -1      1    low
+  (2, 3)     5   4        1      8   high
+  (2, 4)     6   4        1      8   high
+  (2, 5)     0   2        1      8   high
+  (2, 6)     1   5       -1      1    low
+  (3, 4)     0   4        1      8   high
+  (3, 5)     1   3       -1      1    low
+  (3, 6)     2   6       -1      0   zero
+  (4, 5)     2   6       -1      0   zero
+  (4, 6)     3   1        1      8   high
+  (5, 6)     4   4        1      8   high
+
+========================================================================================
+GRAPH FINGERPRINTS
+========================================================================================
+loop sum: -108
+edge sum: 54
+loop + edge: -54
+loop + 2*edge incidence balance: 0
+Readout: scalar edge-counting leaves net -54 U, but incidence-counting gives exact zero.  The support-six packet graph is locally balanced.
+
+zero edges: [(0, 2), (3, 6), (4, 5)]
+  degree_hist: {1: 6}
+  components: [[0, 2], [3, 6], [4, 5]]
+  triangles: 0
+  c4_cycles: 0
+
+low edges: [(0, 3), (0, 4), (0, 5), (0, 6), (2, 6), (3, 5)]
+  degree_hist: {1: 2, 2: 3, 4: 1}
+  components: [[0, 3, 4, 5, 6, 2]]
+  triangles: 1
+  c4_cycles: 0
+
+high edges: [(2, 3), (2, 4), (2, 5), (3, 4), (4, 6), (5, 6)]
+  degree_hist: {0: 1, 2: 3, 3: 2}
+  components: [[0], [2, 3, 4, 5, 6]]
+  triangles: 1
+  c4_cycles: 1
+
+nonzero graph:
+  degree_hist: {4: 6}
+  components: [[0, 3, 4, 5, 6, 2]]
+  triangles: 8
+  c4_cycles: 15
+
+========================================================================================
+TOURNAMENT ANALYSIS NOTE
+========================================================================================
+Pairwise observable:
+  W(a,b) = S_9(1,1,1,1,a,b)/U in {0,1,8}.
+Switch/gauge:
+  first split by affine zero lane a+b=2 mod 7; off that lane split by chi7(Q).
+Tie Hamiltonian path:
+  additive_fourier_kernel > affine_zero_matching > Legendre_Q_edges >
+  local_balance_identity > reciprocal_lift > raw_runner_labels
+Why this is not forced into an orientation tournament: W(a,b) is a symmetric packet coupling.  Orienting it would destroy the affine zero matching, which is the point of the audit.  The correct object is a signed graph plus a proof-order tournament on quotient stages.
+Challenged assumption:
+  The repeated-residue tail should be bounded by absolute packet mass.   The exact local balance says the finite kernel is already a signed-current graph; the analytic tail should preserve this incidence before applying triangle inequalities.
+
+========================================================================================
+S101 READING
+========================================================================================
+The HYP-2632 finite kernel is a perfectly balanced signed graph: every negative 4+2 vertex packet is exactly cancelled by the positive 4+1+1 edge packets incident to that residue.
+This gives HYP-2883 a concrete proof object.  The remaining analytic task is to lift this local finite balance through the reciprocal hyperplane sums after finite low-height wall deletion.

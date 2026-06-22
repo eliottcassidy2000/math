@@ -1,0 +1,61 @@
+=== E7 C5 holes vs H=7/K3 obstruction audit (codex S100) ===
+E7 classes: 54
+E7 metagraph edges: 951
+Chordless C5 holes: 1496
+C5 holes touch classes: 48/54
+
+Fixed-path tournament flags over all 2^15 masks:
+  forbidden_h7_point: 0 masks
+  near_h7_p3: 0 masks
+  k3_forces_pentagon: 54 masks
+  classes with forbidden_h7_point: 0
+  classes with near_h7_p3: 0
+  classes with k3_forces_pentagon: 5
+
+C5-hole alignment with obstruction flags:
+  forbidden_h7_point:
+    flagged classes touched by C5 holes: 0/1
+    C5 holes fully inside flagged classes: 0/1496 (0.00%)
+    C5 holes with at least one flagged class: 0/1496 (0.00%)
+    flagged vertex incidences in C5 holes: 0/7480 (0.00%)
+  near_h7_p3:
+    flagged classes touched by C5 holes: 0/1
+    C5 holes fully inside flagged classes: 0/1496 (0.00%)
+    C5 holes with at least one flagged class: 0/1496 (0.00%)
+    flagged vertex incidences in C5 holes: 0/7480 (0.00%)
+  k3_forces_pentagon:
+    flagged classes touched by C5 holes: 5/5
+    C5 holes fully inside flagged classes: 0/1496 (0.00%)
+    C5 holes with at least one flagged class: 835/1496 (55.82%)
+    flagged vertex incidences in C5 holes: 1180/7480 (15.78%)
+
+Directed pentagon support under the cycle-space map:
+  undirected 5-cycle support classes: [3]
+  class 3: edge_count=5, C5-hole incidence=209, any_k3_forces_pentagon=True, any_near_h7_p3=False
+
+Top C5-hole class incidences:
+  class 11: incidence= 395, edges= 7, alpha1=[4,50], c3=[3,12], c5=[1,28], k3_forces=True
+  class 41: incidence= 395, edges=14, alpha1=[9,54], c3=[5,13], c5=[3,29], k3_forces=False
+  class 47: incidence= 324, edges=14, alpha1=[23,65], c3=[8,14], c5=[11,36], k3_forces=False
+  class  7: incidence= 324, edges= 7, alpha1=[9,61], c3=[5,13], c5=[3,33], k3_forces=False
+  class 33: incidence= 284, edges=10, alpha1=[4,55], c3=[3,13], c5=[1,27], k3_forces=True
+  class 32: incidence= 284, edges=11, alpha1=[14,46], c3=[5,12], c5=[6,25], k3_forces=False
+  class 43: incidence= 271, edges=12, alpha1=[6,80], c3=[4,14], c5=[2,42], k3_forces=False
+  class 10: incidence= 271, edges= 9, alpha1=[12,65], c3=[5,13], c5=[6,35], k3_forces=False
+  class 28: incidence= 258, edges= 8, alpha1=[8,50], c3=[4,12], c5=[4,28], k3_forces=False
+  class 36: incidence= 258, edges=13, alpha1=[10,57], c3=[5,13], c5=[4,32], k3_forces=False
+
+Verdict:
+  The literal H=7 point alpha=(3,0) has zero masks and zero classes, as expected.
+  E7 C5 metagraph holes are not the same object as the directed pentagon support:
+  the directed C5 support maps to a single E7 vertex class, while a metagraph C5
+  is a five-class quotient cycle.  The useful bridge is therefore not an exact
+  identification of E7 C5 holes with Omega=K3.  It is an obstruction-layer
+  analogy: both are first odd cycles created by cycle-space closure after scalar
+  data forgets incidence.
+
+Tournament Analysis:
+  vertices = {E7_C5_hole_classes, directed_C5_support_class, near_h7_P3,
+              k3_forces_pentagon, strong_component_atom, euler_totient_packet}
+  challenged assumption = the E7 C5 hole and the H=7 pentagon are the same
+  object under the bijection; audit says they live at different quotient levels.

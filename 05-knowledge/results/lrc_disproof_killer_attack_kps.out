@@ -1,0 +1,12 @@
+DISPROOF ATTEMPTS -- aggressive resonance-killers (want M<1/14):  1/14 = 0.07142857142857142
+  {2..14} (b=2..14)                                 : M=    1/8=0.1250 OK (b_kill 1..14=14/14, witness b=16)
+  divisible spread {2,4,6,8,10,12,14,3,9,5,7,11,13} : M=    1/8=0.1250 OK (b_kill 1..14=14/14, witness b=16)
+  highly-div {12,24,36,8,9,5,7,11,13,14,10,6,4}     : M=    1/5=0.2000 OK (b_kill 1..14=14/14, witness b=20)
+  lcm-killers {4,8,9,5,7,11,13,12,10,14,6,3,2}      : M=    1/8=0.1250 OK (b_kill 1..14=14/14, witness b=16)
+  big-killers {28,40,72,90,11,13,84,120,126,110,130,: M=  16/83=0.1928 OK (b_kill 1..14=14/14, witness b=83)
+  mixed small+div {1,2,3,12,24,8,9,5,7,11,13,14,10} : M=   2/19=0.1053 OK (b_kill 1..14=14/14, witness b=19)
+
+  MIN over attempts = 0.1053  vs 1/14=0.0714  => NO counterexample -- floor holds
+  => killing exact resonance points a/b does NOT lower M: a large divisible speed has a THIN
+     danger zone that misses the lonely NEIGHBORHOOD. The surviving witness is a resonance the
+     killers cannot cover. The disproof FAILS exactly where the ZETA(2) neighborhood floor lives.

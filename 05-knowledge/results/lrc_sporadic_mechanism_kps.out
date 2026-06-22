@@ -1,0 +1,16 @@
+AP {1..13}: t=3/14
+  points (x14): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  occupied k/14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  MISSING k/14 : []   COLLISIONS (k/14 with >1 speed): []
+  min ||s t|| = 1/14 = 1/14? True
+
+GW {1..11,13,24}: t=5/14
+  points (x14): [1, 2, 3, 5, 6, 7, 8, 8, 9, 10, 11, 12, 13]
+  occupied k/14: [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  MISSING k/14 : [4]   COLLISIONS (k/14 with >1 speed): [8]
+  min ||s t|| = 1/14 = 1/14? True
+
+=> AP: all 13 residues 1..13 occupied, equally spaced, NO gap/collision (difference-closed).
+   GW: a GAP (missing residue) compensated by a COLLISION (two speeds same residue).
+   The sporadic mechanism trades equal-spacing for a balanced gap+collision that still
+   isolates 0 at exactly 1/14. Finiteness of such patterns = OPEN-Q-108 (sporadic residue).

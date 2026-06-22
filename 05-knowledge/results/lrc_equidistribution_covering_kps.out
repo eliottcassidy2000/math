@@ -1,0 +1,9 @@
+EQUIDISTRIBUTION test -- does a LARGE committed speed keep M>1/14 (lonely)?
+1/14 = 0.07142857142857142
+  {1..11,13,60}: M=1/13=0.07692 >1/14 LONELY; covering(all q<=14)? False; 14|60? False; witness t=38/65
+  {1..11,13,840}: M=14/169=0.08284 >1/14 LONELY; covering(all q<=14)? True; 14|840? True; witness t=493/845
+  {1..11,13,5040}: M=84/1009=0.08325 >1/14 LONELY; covering(all q<=14)? True; 14|5040? True; witness t=2102/5045
+
+=> THM-566 adversarial {1..11,13,5040} is COVERING (no easy t=1/q witness, 14|5040 so t=1/14 fails)
+   yet M stays at the 12-subset's 1/12 >> 1/14: the huge speed EQUIDISTRIBUTES, its danger zone
+   covers only ~1/7 of the subset lonely set, so loneliness SURVIVES (witness at large denominator).
