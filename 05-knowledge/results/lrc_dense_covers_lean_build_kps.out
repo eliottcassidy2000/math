@@ -1,20 +1,6 @@
-warning: TournamentH7/LRCDenseCovers.lean:83:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
-If you'd rather continue using `push_neg` in your project, you can implement it as follows:
-```
-open Lean.Parser.Tactic in
-macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
-  `(tactic| push $cfg:optConfig Not $[$loc]?)
-```
-warning: TournamentH7/LRCDenseCovers.lean:94:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
-If you'd rather continue using `push_neg` in your project, you can implement it as follows:
-```
-open Lean.Parser.Tactic in
-macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
-  `(tactic| push $cfg:optConfig Not $[$loc]?)
-```
-warning: TournamentH7/LRCDenseCovers.lean:40:20: unused variable `hsub`
-
-Note: This linter can be disabled with `set_option linter.unusedVariables false`
-info: TournamentH7/LRCDenseCovers.lean:116:0: 'LonelyRunner.DenseCovers.inner_sector_covered' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCDenseCovers.lean:117:0: 'LonelyRunner.DenseCovers.dense_covers_all_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
-Build completed successfully (2942 jobs).
+ℹ [3104/3104] Replayed TournamentH7.LRCDenseCovers
+info: TournamentH7/LRCDenseCovers.lean:177:0: 'LonelyRunner.DenseCovers.inner_sector_covered' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:178:0: 'LonelyRunner.DenseCovers.dense_covers_all_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:179:0: 'LonelyRunner.DenseCovers.denseSet_subset_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:180:0: 'LonelyRunner.DenseCovers.volume_denseSet_le_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3104 jobs).

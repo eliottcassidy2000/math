@@ -19,11 +19,12 @@
 -/
 
 import Mathlib.Tactic
+import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
 
 namespace LonelyRunner
 namespace DenseCovers
 
-open Finset
+open Finset MeasureTheory
 
 /-- `S` is **1/7-dense**: every adjacent circular gap is `≤ 1/7`.  First clause:
 each consecutive pair `a < b` with no phase strictly between has `b - a ≤ 1/7`.
@@ -111,10 +112,72 @@ theorem dense_covers_all_inner
   intro j hj1 hj6
   exact inner_sector_covered S hsub h0 hdense j hj1 hj6
 
+/-! ## The measure-level inclusion `D(E) ≤ p0(E)`
+
+Lifting the pointwise inclusion to slow-time measure.  `E : List ℤ` is the cluster
+co-offsets; the phase set at slow time `x` is `{frac(e x) : e ∈ E}`.  The dense set
+`{x : phases 1/7-dense}` is contained in the cover set `{x : all inner sectors hit}`,
+so `volume(dense) ≤ volume(cover)` — the measure form of `D(E) ≤ p0(E)`.  Only the
+*inclusion* is needed (`measure_mono` is monotone on arbitrary sets), so no
+measurability of the dense set is required. -/
+
+/-- The phase finset of `E` at slow time `x`: `{frac(e x) : e ∈ E}`. -/
+noncomputable def phaseFinset (E : List ℤ) (x : ℝ) : Finset ℝ :=
+  (E.map (fun e => Int.fract ((e : ℝ) * x))).toFinset
+
+/-- The **cover set** `{x : the phases hit every inner sector}` (`= measS7` support). -/
+def coverSet (E : List ℤ) : Set ℝ :=
+  {x | ∀ j : ℕ, 1 ≤ j → j ≤ 6 →
+      ∃ e ∈ E, (j : ℝ) / 7 ≤ Int.fract ((e : ℝ) * x) ∧
+        Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7}
+
+/-- The **dense set** `{x : the phases are 1/7-dense}`. -/
+def denseSet (E : List ℤ) : Set ℝ := {x | Dense17 (phaseFinset E x)}
+
+/-- Membership in the phase finset is "is the fractional part of some `e*x`". -/
+theorem mem_phaseFinset {E : List ℤ} {x s : ℝ} :
+    s ∈ phaseFinset E x ↔ ∃ e ∈ E, Int.fract ((e : ℝ) * x) = s := by
+  simp [phaseFinset]
+
+/-- The anchor `0 ∈ E` puts the phase `0` in every phase finset. -/
+theorem zero_mem_phaseFinset {E : List ℤ} (hE : (0 : ℤ) ∈ E) (x : ℝ) :
+    (0 : ℝ) ∈ phaseFinset E x := by
+  rw [mem_phaseFinset]
+  refine ⟨0, hE, ?_⟩
+  rw [Int.cast_zero, zero_mul, Int.fract_zero]
+
+/-- Every phase lies in `[0,1)`. -/
+theorem phaseFinset_mem_Ico {E : List ℤ} {x s : ℝ} (hs : s ∈ phaseFinset E x) :
+    0 ≤ s ∧ s < 1 := by
+  rw [mem_phaseFinset] at hs
+  obtain ⟨e, _, he⟩ := hs
+  exact ⟨he ▸ Int.fract_nonneg _, he ▸ Int.fract_lt_one _⟩
+
+/-- **Pointwise `D ⊆ p0`.**  If the phases are 1/7-dense at `x` (and `0 ∈ E`), every
+inner sector is hit at `x`. -/
+theorem denseSet_subset_coverSet (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    denseSet E ⊆ coverSet E := by
+  intro x hx j hj1 hj6
+  obtain ⟨s, hsS, hs1, hs2⟩ :=
+    inner_sector_covered (phaseFinset E x)
+      (fun s hs => phaseFinset_mem_Ico hs) (zero_mem_phaseFinset hE x) hx j hj1 hj6
+  obtain ⟨e, heE, he⟩ := mem_phaseFinset.mp hsS
+  exact ⟨e, heE, he ▸ hs1, he ▸ hs2⟩
+
+/-- **The measure-level inclusion `D(E) ≤ p0(E)`.**  `volume(denseSet) ≤
+volume(coverSet)` — the slow-time measure form of `D(E) ≤ p0(E)`, the elementary
+inclusion behind the witness/p0 unification (HYP-2832).  Proved by monotonicity of
+Lebesgue measure on the pointwise inclusion (no measurability of `denseSet` needed). -/
+theorem volume_denseSet_le_coverSet (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    volume (denseSet E) ≤ volume (coverSet E) :=
+  measure_mono (denseSet_subset_coverSet E hE)
+
 /-! ## Axiom audit -/
 
 #print axioms inner_sector_covered
 #print axioms dense_covers_all_inner
+#print axioms denseSet_subset_coverSet
+#print axioms volume_denseSet_le_coverSet
 
 end DenseCovers
 end LonelyRunner
