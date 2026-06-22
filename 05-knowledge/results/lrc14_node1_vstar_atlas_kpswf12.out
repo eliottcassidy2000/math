@@ -26,3 +26,29 @@ P={1..4} offs {0,7,14,..} wideAP       101    38   0.513411     0
   6    7 [0, 1, 2, 3, 4,     18   0.334694     53.8
   7    6 [0, 1, 2, 3, 4,     12   0.457143     26.2
   8    5 [0, 1, 2, 3, 4,     14   0.444898     31.5
+  9    4 [0, 1, 2, 3, 4,     30   0.340476     88.1
+ 10    3 [0, 1, 2, 3, 4,     26   0.387755     67.1
+ 11    2 [0, 1, 2, 3, 4,     24   0.429025     55.9
+ 12    1 [0, 1, 2, 3, 4,     18   0.475964     37.8
+
+  WORST V* (consec cluster): k=1,P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  arcs=12  meas=0.03410  V*=351.9
+
+--- (4c) boundary core S={1..12,V}: k=1 cluster, offs={0}, G=G_P{1..12} ---
+  arcs=12, meas(G_P{1..12})=6617/194040=0.034101, V*=351.9
+  (S33 INDEX V*=958 used loose arcCount=7*sumE=546 & meas~0.57 from framing B;
+   the TRUE framing-A V* for the boundary core is 351.9.)
+
+--- (4d) FINITE-CHECK feasibility ---
+  For V > V* the lemma gives #good>0 RIGOROUSLY. For V <= V* a FINITE check suffices.
+  Dilation (THM-531): a cluster d*{0,1,..} reduces to the base {0,1,..} (gcd=1),
+  so the cluster-offset pattern is WLOG primitive; #patterns of bounded spread is finite.
+  The small part P ranges over the 2^13-1 nonempty subsets of [1,13] (finite).
+  => the finite check is over {primitive cluster patterns} x {P-subsets} x {V<=V*},
+     each an EXACT-rational M(S) evaluation. Feasible (V* <= few hundred).
+
+  spot-check worst shape k=1,P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]: M(S) over V from 14..200 (every prime V)
+    checked 187 primitive V<=200, M(S)<1/14 failures: 0
+
+================================================================================
+DONE.
+================================================================================
