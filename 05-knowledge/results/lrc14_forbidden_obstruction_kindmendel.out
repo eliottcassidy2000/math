@@ -1,0 +1,23 @@
+bank: 602 primitive covering 13-sets
+
+minimal witness-D distribution (D : #sets):
+  D=15: 112
+  D=16: 105
+  D=17: 154
+  D=18: 49
+  D=19: 81
+  D=20: 25
+  D=21: 26
+  D=22: 18
+  D=23: 14
+  D=24: 7
+  D=25: 8
+  D=27: 2
+  D=41: 1
+
+=== Greedy minimal denominator-basis (finite certificate set) ===
+  +D=83 covers 555 more; remaining=47
+  +D=89 covers 45 more; remaining=2
+  +D=21 covers 2 more; remaining=0
+FINITE CERTIFICATE BASIS: [83, 89, 21]  (size 3)
+Interpretation: every covering set in the bank is lonely via a/D for one of these few D.

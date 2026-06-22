@@ -1,0 +1,30 @@
+Main term (6/7)^13 = 0.1348
+
+=== covering sets: witness count N vs main term (6/7)^13*phi(D) ===
+  [13, 56, 59, 97]..         D=41:N=6(main5.4)  D=71:N=18(main9.4)  D=83:N=14(main11.1)  D=89:N=4(main11.9)  D=97:N=0(main12.9)
+  [25, 31, 37, 65]..         D=41:N=12(main5.4)  D=71:N=8(main9.4)  D=83:N=14(main11.1)  D=89:N=12(main11.9)  D=97:N=22(main12.9)
+  [9, 10, 81, 103]..         D=41:N=10(main5.4)  D=71:N=4(main9.4)  D=83:N=16(main11.1)  D=89:N=18(main11.9)  D=97:N=14(main12.9)
+  [22, 96, 117, 158]..         D=41:N=10(main5.4)  D=71:N=18(main9.4)  D=83:N=14(main11.1)  D=89:N=18(main11.9)  D=97:N=10(main12.9)
+  [10, 32, 65, 71]..         D=41:N=6(main5.4)  D=71:N=0(main9.4)  D=83:N=14(main11.1)  D=89:N=10(main11.9)  D=97:N=16(main12.9)
+  [1, 2, 3, 4]..  loosest  D=41:N=2(main5.4)  D=71:N=0(main9.4)  D=83:N=2(main11.1)  D=89:N=2(main11.9)  D=97:N=2(main12.9)
+
+=== contrast: the TIGHT AP {1..13} (non-covering, M=1/14) needs D|14 ===
+  AP: D=14: N=6 (main 0.8)  [witness only when 14|D]
+  AP: D=28: N=0 (main 1.6)  [witness only when 14|D]
+  AP: D=41: N=0 (main 5.4)  [witness only when 14|D]
+  AP: D=42: N=0 (main 1.6)  [witness only when 14|D]
+  AP: D=83: N=0 (main 11.1)  [witness only when 14|D]
+  AP: D=89: N=0 (main 11.9)  [witness only when 14|D]
+
+=== why covering helps: N>0 robustly for covering; track growth with D ===
+  D= 15: N=  0  main=  1.1  ratio N/main=0.00
+  D= 23: N= 10  main=  3.0  ratio N/main=3.37
+  D= 31: N=  4  main=  4.0  ratio N/main=0.99
+  D= 39: N=  6  main=  3.2  ratio N/main=1.85
+  D= 47: N=  8  main=  6.2  ratio N/main=1.29
+  D= 55: N= 14  main=  5.4  ratio N/main=2.60
+  D= 63: N=  8  main=  4.9  ratio N/main=1.65
+  D= 71: N= 18  main=  9.4  ratio N/main=1.91
+  D= 79: N= 20  main= 10.5  ratio N/main=1.90
+  D= 87: N=  4  main=  7.5  ratio N/main=0.53
+  D= 95: N= 16  main=  9.7  ratio N/main=1.65
