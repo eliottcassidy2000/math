@@ -1,7 +1,7 @@
 ---
 id: HYP-2839
 title: hp0cap (the wide cover bound p0(E)<=cap) -- elementary Lean cores formalized; the binding bound = the analytic decorrelation residual
-status: CORES FORMALIZED (sorry-free); binding k=8..12 = analytic residual (resonance bound p0<=p0_decorr), isolated
+status: CORES FORMALIZED (sorry-free) + p0 WIRED CONCRETE INTO SKELETON (LRC14.p0 := slowμ(coverSet), full skeleton builds sorry-free); binding k=8..12 = analytic residual (resonance bound p0<=p0_decorr), isolated
 source: kind-pasteur-2026-06-22-S31
 related:
   - OPEN-Q-108
