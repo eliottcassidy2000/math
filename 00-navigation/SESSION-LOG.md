@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S57 -- LRC as TOURNAMENT ANALYSIS: the winding realization; the metric lives at the optimum iso class (= the residue census)
+Owner: employ tournament analysis -- realize the LRC as tournament iso classes, which subset is achievable. Reflection: lrc-as-tournament-analysis-the-winding-realization-and-where-the-metric-lives.md.
+- **EXACT realization (winding tournament):** n vertices = observer + runners; cutoff 1/2: u->v iff frac((s_u-s_v)t) in (0,1/2). Discretizes continuous t. Achievable set A(S)={iso[T(t)]}.
+- **H=7 NEVER appears** in A(S) (forbidden, THM-029) -- the apex iso class, from the order side (= S48).
+- **A(S) over t does NOT distinguish tight (verified):** n=5 AP, GW, AND non-tight [0,1,2,4,8] all hit the SAME 4 classes (H=1,9,11,15). The metric M=1/14 is a DISTANCE the cyclic order forgets.
+- **The metric lives at the OPTIMUM iso class** T(t*=a/n) = the n-grid CIRCULANT C_n({1..floor((n-1)/2)}) (antipodal ties at apex n/2 for even n). For AP = the rotational tournament; GW = circulant w/ one residue doubled+skipped. => the census = the achievable OPTIMUM iso classes = the <=3-gap residue configs (HYP-2913). Tournament analysis RECOVERS the three-gap/residue census, reframed.
+- HONEST: a REFRAMING (recovers HYP-2913, doesn't transcend); the open core (achievable optimum classes = {AP-circulant, GW-single-swap}) = the same Steinhaus/consec-maximizes rigidity. VALUE: the census is now visibly a tournament-iso-class REALIZABILITY problem (which iso classes arise at the optimum for integer speeds), the project's native object; H=7 the forbidden apex on both sides.
+NEW: reflection. The LRC census = a tournament-iso-class realizability question (achievable optimum classes).
+
 ## mac-mini-2026-06-22-S56 -- bounded census TIGHTENED: tight speeds <= 2(n-1); census = O(n^2) search (169 candidates for n=14)
 Owner: make the bounded finite census even more bounded. HYP-2915.
 - **TIGHTENED BOUND (verified n=5,6,7,8,14):** every tight single-swap speed <= 2(n-1). Maxes: 7,9,6,12,24 vs 2(n-1)=8,10,12,14,26. Tight sets: n=5 skip2->7, n=6 skip2->9, n=7 only AP, n=8 skip6->12, n=14 skip12->24=GW.
