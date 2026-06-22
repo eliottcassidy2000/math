@@ -1,0 +1,229 @@
+==============================================================================
+LRC14 Lemma A denominator-center budget audit (exact rational)
+==============================================================================
+theta=1/7; bounded scan windows={8: 14, 9: 14, 10: 14, 11: 14, 12: 14, 13: 14}; top_n=8
+Lead being tested: consecutive dense mass is carried by low least-denominator components q=8..k; nonconsecutive local optima leak to high-q tails.
+
+[scan] starting k=8, W=14
+
+--- k=8, primitive anchored shapes in [0,14] ---
+checked=3431
+consec D=44/735 (0.059863946)
+consec denominator widths: q8:44/735(0.059863946)
+best D=44/735 (0.059863946) at E=(0, 1, 2, 3, 4, 5, 6, 7)
+bounded verdict: consecutive remains the unique dense-mass leader in this bank
+nonconsec budget maxima: low(q<=k)=62/2205 (0.028117914) at (0, 1, 3, 4, 5, 6, 7, 10); tail(q>k/None)=40/1617 (0.024737168) at (0, 1, 2, 3, 11, 12, 13, 14)
+top nonconsecutive dense shapes:
+   1. D=62/2205 (0.028117914), ratio=0.469696970, E=(0, 2, 3, 4, 5, 6, 7, 9), complete_q=[8], widths=q8:62/2205(0.028117914)
+   2. D=62/2205 (0.028117914), ratio=0.469696970, E=(0, 1, 3, 4, 5, 6, 7, 10), complete_q=[8], widths=q8:62/2205(0.028117914)
+   3. D=62/2205 (0.028117914), ratio=0.469696970, E=(0, 3, 4, 5, 6, 7, 9, 10), complete_q=[8], widths=q8:62/2205(0.028117914)
+   4. D=62/2205 (0.028117914), ratio=0.469696970, E=(0, 2, 3, 5, 6, 7, 9, 12), complete_q=[8], widths=q8:62/2205(0.028117914)
+   5. D=62/2205 (0.028117914), ratio=0.469696970, E=(0, 3, 5, 6, 7, 9, 10, 12), complete_q=[8], widths=q8:62/2205(0.028117914)
+   6. D=1643/63063 (0.026053312), ratio=0.435208731, E=(0, 2, 4, 6, 7, 9, 11, 13), complete_q=[8], widths=q8:950/63063(0.015064301) q15:1/91(0.010989011)
+   7. D=40/1617 (0.024737168), ratio=0.413223140, E=(0, 1, 2, 3, 11, 12, 13, 14), complete_q=[], widths=q15:1/49(0.020408163) q23:1/231(0.004329004)
+   8. D=136/5733 (0.023722309), ratio=0.396270396, E=(0, 1, 3, 4, 6, 7, 10, 13), complete_q=[8], widths=q8:136/5733(0.023722309)
+per-q nonconsecutive max vs consecutive mass:
+  q= 8: consec=44/735 (0.059863946), bank_max=44/735 (0.059863946) at (0, 1, 2, 3, 4, 5, 6, 7) [OK]
+  q=15: consec=0 (0.000000000), bank_max=1/49 (0.020408163) at (0, 1, 2, 3, 4, 5, 6, 14) [beats-consec-q]
+prefix q<=Q nonconsecutive max vs consecutive prefix:
+  Q= 7: consec_prefix=0 (0.000000000), nonconsec_max=0 (0.000000000) at () [OK]
+  Q= 8: consec_prefix=44/735 (0.059863946), nonconsec_max=62/2205 (0.028117914) at (0, 1, 3, 4, 5, 6, 7, 10) [OK]
+sample one-step-left compression dead ends:
+  D=40/1617 (0.024737168), E=(0, 1, 2, 3, 11, 12, 13, 14), verified_dead_end=True, widths=q15:1/49(0.020408163) q23:1/231(0.004329004)
+  D=1/91 (0.010989011), E=(0, 1, 3, 5, 7, 9, 11, 13), verified_dead_end=True, widths=q15:1/91(0.010989011)
+  D=1/154 (0.006493506), E=(0, 1, 3, 4, 7, 8, 11, 12), verified_dead_end=True, widths=q15:1/154(0.006493506)
+  D=1/196 (0.005102041), E=(0, 1, 2, 3, 7, 8, 9, 10), verified_dead_end=True, widths=q15:1/196(0.005102041)
+  D=1/196 (0.005102041), E=(0, 1, 2, 6, 7, 8, 9, 14), verified_dead_end=True, widths=q15:1/196(0.005102041)
+
+[scan] starting k=9, W=14
+
+--- k=9, primitive anchored shapes in [0,14] ---
+checked=3003
+consec D=47/294 (0.159863946)
+consec denominator widths: q8:19/210(0.090476190) q9:17/245(0.069387755)
+best D=47/294 (0.159863946) at E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+bounded verdict: consecutive remains the unique dense-mass leader in this bank
+nonconsec budget maxima: low(q<=k)=41/490 (0.083673469) at (0, 2, 3, 4, 5, 6, 7, 8, 10); tail(q>k/None)=44/735 (0.059863946) at (0, 1, 2, 4, 6, 8, 10, 12, 14)
+top nonconsecutive dense shapes:
+   1. D=169/1470 (0.114965986), ratio=0.719148936, E=(0, 2, 4, 6, 7, 8, 10, 12, 14), complete_q=[9], widths=q9:37/490(0.075510204) q15:1/49(0.020408163) q16:2/105(0.019047619)
+   2. D=41/490 (0.083673469), ratio=0.523404255, E=(0, 2, 3, 4, 5, 6, 7, 8, 10), complete_q=[9], widths=q9:41/490(0.083673469)
+   3. D=41/490 (0.083673469), ratio=0.523404255, E=(0, 2, 4, 5, 6, 7, 8, 10, 12), complete_q=[9], widths=q9:41/490(0.083673469)
+   4. D=1087/16170 (0.067223253), ratio=0.420502901, E=(0, 1, 2, 5, 6, 7, 10, 11, 12), complete_q=[8], widths=q8:138/2695(0.051205937) q15:1/154(0.006493506) q16:1/105(0.009523810)
+   5. D=173/2695 (0.064192950), ratio=0.401547389, E=(0, 1, 4, 5, 6, 7, 8, 11, 12), complete_q=[9], widths=q9:311/5390(0.057699443) q15:1/154(0.006493506)
+   6. D=2567/42042 (0.061057990), ratio=0.381937212, E=(0, 1, 2, 6, 7, 8, 12, 13, 14), complete_q=[9], widths=q9:2701/70070(0.038547167) q16:1/105(0.009523810) q17:1/77(0.012987013)
+   7. D=44/735 (0.059863946), ratio=0.374468085, E=(0, 1, 2, 3, 4, 5, 6, 7, 9), complete_q=[8], widths=q8:44/735(0.059863946)
+   8. D=44/735 (0.059863946), ratio=0.374468085, E=(0, 2, 3, 4, 5, 6, 7, 8, 9), complete_q=[8], widths=q8:44/735(0.059863946)
+per-q nonconsecutive max vs consecutive mass:
+  q= 8: consec=19/210 (0.090476190), bank_max=19/210 (0.090476190) at (0, 1, 2, 3, 4, 5, 6, 7, 8) [OK]
+  q= 9: consec=17/245 (0.069387755), bank_max=41/490 (0.083673469) at (0, 2, 3, 4, 5, 6, 7, 8, 10) [beats-consec-q]
+  q=15: consec=0 (0.000000000), bank_max=29/1078 (0.026901670) at (0, 1, 4, 5, 6, 9, 10, 11, 14) [beats-consec-q]
+prefix q<=Q nonconsecutive max vs consecutive prefix:
+  Q= 7: consec_prefix=0 (0.000000000), nonconsec_max=0 (0.000000000) at () [OK]
+  Q= 8: consec_prefix=19/210 (0.090476190), nonconsec_max=44/735 (0.059863946) at (0, 1, 2, 3, 4, 5, 6, 7, 9) [OK]
+  Q= 9: consec_prefix=47/294 (0.159863946), nonconsec_max=41/490 (0.083673469) at (0, 2, 3, 4, 5, 6, 7, 8, 10) [OK]
+sample one-step-left compression dead ends:
+
+[scan] starting k=10, W=14
+
+--- k=10, primitive anchored shapes in [0,14] ---
+checked=2002
+consec D=11/49 (0.224489796)
+consec denominator widths: q8:4/35(0.114285714) q9:17/245(0.069387755) q10:2/49(0.040816327)
+best D=11/49 (0.224489796) at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+bounded verdict: consecutive remains the unique dense-mass leader in this bank
+nonconsec budget maxima: low(q<=k)=47/294 (0.159863946) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10); tail(q>k/None)=137/1617 (0.084724799) at (0, 2, 3, 5, 6, 8, 9, 11, 12, 14)
+top nonconsecutive dense shapes:
+   1. D=47/294 (0.159863946), ratio=0.712121212, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10), complete_q=[8, 9], widths=q8:19/210(0.090476190) q9:17/245(0.069387755)
+   2. D=47/294 (0.159863946), ratio=0.712121212, E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10), complete_q=[8, 9], widths=q8:19/210(0.090476190) q9:17/245(0.069387755)
+   3. D=47/294 (0.159863946), ratio=0.712121212, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 11), complete_q=[8, 9], widths=q8:19/210(0.090476190) q9:17/245(0.069387755)
+   4. D=47/294 (0.159863946), ratio=0.712121212, E=(0, 3, 4, 5, 6, 7, 8, 9, 10, 11), complete_q=[8, 9], widths=q8:19/210(0.090476190) q9:17/245(0.069387755)
+   5. D=47/294 (0.159863946), ratio=0.712121212, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12), complete_q=[8, 9], widths=q8:19/210(0.090476190) q9:17/245(0.069387755)
+   6. D=47/294 (0.159863946), ratio=0.712121212, E=(0, 4, 5, 6, 7, 8, 9, 10, 11, 12), complete_q=[8, 9], widths=q8:19/210(0.090476190) q9:17/245(0.069387755)
+   7. D=47/294 (0.159863946), ratio=0.712121212, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 13), complete_q=[8, 9], widths=q8:19/210(0.090476190) q9:17/245(0.069387755)
+   8. D=47/294 (0.159863946), ratio=0.712121212, E=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13), complete_q=[8, 9], widths=q8:19/210(0.090476190) q9:17/245(0.069387755)
+per-q nonconsecutive max vs consecutive mass:
+  q= 8: consec=4/35 (0.114285714), bank_max=4/35 (0.114285714) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) [OK]
+  q= 9: consec=17/245 (0.069387755), bank_max=41/490 (0.083673469) at (0, 1, 2, 4, 5, 6, 7, 8, 10, 12) [beats-consec-q]
+  q=10: consec=2/49 (0.040816327), bank_max=94/1617 (0.058132344) at (0, 1, 3, 4, 5, 6, 7, 8, 9, 12) [beats-consec-q]
+  q=15: consec=0 (0.000000000), bank_max=113/2156 (0.052411874) at (0, 2, 3, 5, 6, 8, 9, 11, 12, 14) [beats-consec-q]
+  q=16: consec=0 (0.000000000), bank_max=29/735 (0.039455782) at (0, 1, 2, 3, 4, 6, 8, 10, 12, 14) [beats-consec-q]
+prefix q<=Q nonconsecutive max vs consecutive prefix:
+  Q= 7: consec_prefix=0 (0.000000000), nonconsec_max=0 (0.000000000) at () [OK]
+  Q= 8: consec_prefix=4/35 (0.114285714), nonconsec_max=19/210 (0.090476190) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10) [OK]
+  Q= 9: consec_prefix=9/49 (0.183673469), nonconsec_max=47/294 (0.159863946) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10) [OK]
+  Q=10: consec_prefix=11/49 (0.224489796), nonconsec_max=47/294 (0.159863946) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10) [OK]
+sample one-step-left compression dead ends:
+
+[scan] starting k=11, W=14
+
+--- k=11, primitive anchored shapes in [0,14] ---
+checked=1001
+consec D=824/2205 (0.373696145)
+consec denominator widths: q7:4/49(0.081632653) q8:17/105(0.161904762) q9:29/315(0.092063492) q11:4/105(0.038095238)
+best D=824/2205 (0.373696145) at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+bounded verdict: consecutive remains the unique dense-mass leader in this bank
+nonconsec budget maxima: low(q<=k)=1363/4410 (0.309070295) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12); tail(q>k/None)=74/735 (0.100680272) at (0, 2, 3, 4, 5, 6, 8, 9, 10, 12, 14)
+top nonconsecutive dense shapes:
+   1. D=1363/4410 (0.309070295), ratio=0.827063107, E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), complete_q=[8, 9, 11], widths=q8:5/42(0.119047619) q9:29/315(0.092063492) q11:24/245(0.097959184)
+   2. D=1123/4410 (0.254648526), ratio=0.681432039, E=(0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14), complete_q=[9, 11], widths=q9:67/630(0.106349206) q11:29/245(0.118367347) q15:1/49(0.020408163) q16:1/105(0.009523810)
+   3. D=45/196 (0.229591837), ratio=0.614381068, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14), complete_q=[8, 9, 10], widths=q8:4/35(0.114285714) q9:17/245(0.069387755) q10:2/49(0.040816327) q15:1/196(0.005102041)
+   4. D=45/196 (0.229591837), ratio=0.614381068, E=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14), complete_q=[8, 9, 10], widths=q8:4/35(0.114285714) q9:17/245(0.069387755) q10:2/49(0.040816327) q15:1/196(0.005102041)
+   5. D=11/49 (0.224489796), ratio=0.600728155, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11), complete_q=[8, 9, 10], widths=q8:4/35(0.114285714) q9:17/245(0.069387755) q10:2/49(0.040816327)
+   6. D=11/49 (0.224489796), ratio=0.600728155, E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), complete_q=[8, 9, 10], widths=q8:4/35(0.114285714) q9:17/245(0.069387755) q10:2/49(0.040816327)
+   7. D=11/49 (0.224489796), ratio=0.600728155, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12), complete_q=[8, 9, 10], widths=q8:4/35(0.114285714) q9:17/245(0.069387755) q10:2/49(0.040816327)
+   8. D=11/49 (0.224489796), ratio=0.600728155, E=(0, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), complete_q=[8, 9, 10], widths=q8:4/35(0.114285714) q9:17/245(0.069387755) q10:2/49(0.040816327)
+per-q nonconsecutive max vs consecutive mass:
+  q= 7: consec=4/49 (0.081632653), bank_max=4/49 (0.081632653) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) [OK]
+  q= 8: consec=17/105 (0.161904762), bank_max=17/105 (0.161904762) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) [OK]
+  q= 9: consec=29/315 (0.092063492), bank_max=79/735 (0.107482993) at (0, 1, 3, 4, 5, 6, 7, 8, 9, 11, 12) [beats-consec-q]
+  q=10: consec=0 (0.000000000), bank_max=94/1617 (0.058132344) at (0, 1, 2, 3, 5, 6, 7, 8, 9, 11, 14) [beats-consec-q]
+  q=11: consec=4/105 (0.038095238), bank_max=3953/28665 (0.137903366) at (0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 14) [beats-consec-q]
+  q=15: consec=0 (0.000000000), bank_max=113/2156 (0.052411874) at (0, 1, 2, 3, 5, 6, 8, 9, 11, 12, 14) [beats-consec-q]
+  q=16: consec=0 (0.000000000), bank_max=29/735 (0.039455782) at (0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 14) [beats-consec-q]
+  q=17: consec=0 (0.000000000), bank_max=1201/32340 (0.037136673) at (0, 1, 2, 3, 4, 5, 9, 10, 11, 12, 13) [beats-consec-q]
+prefix q<=Q nonconsecutive max vs consecutive prefix:
+  Q= 7: consec_prefix=4/49 (0.081632653), nonconsec_max=2/49 (0.040816327) at (0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 14) [OK]
+  Q= 8: consec_prefix=179/735 (0.243537415), nonconsec_max=5/42 (0.119047619) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) [OK]
+  Q= 9: consec_prefix=148/441 (0.335600907), nonconsec_max=19/90 (0.211111111) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) [OK]
+  Q=10: consec_prefix=148/441 (0.335600907), nonconsec_max=11/49 (0.224489796) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11) [OK]
+  Q=11: consec_prefix=824/2205 (0.373696145), nonconsec_max=1363/4410 (0.309070295) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) [OK]
+sample one-step-left compression dead ends:
+
+[scan] starting k=12, W=14
+
+--- k=12, primitive anchored shapes in [0,14] ---
+checked=364
+consec D=10432/24255 (0.430096887)
+consec denominator widths: q7:82/441(0.185941043) q8:41/231(0.177489177) q9:1/35(0.028571429) q11:4/105(0.038095238)
+best D=10432/24255 (0.430096887) at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+bounded verdict: consecutive remains the unique dense-mass leader in this bank
+nonconsec budget maxima: low(q<=k)=824/2205 (0.373696145) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12); tail(q>k/None)=3742/24255 (0.154277469) at (0, 1, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14)
+top nonconsecutive dense shapes:
+   1. D=824/2205 (0.373696145), ratio=0.868865031, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), complete_q=[8, 9, 10, 11], widths=q7:4/49(0.081632653) q8:17/105(0.161904762) q9:29/315(0.092063492) q11:4/105(0.038095238)
+   2. D=824/2205 (0.373696145), ratio=0.868865031, E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), complete_q=[8, 9, 10, 11], widths=q7:4/49(0.081632653) q8:17/105(0.161904762) q9:29/315(0.092063492) q11:4/105(0.038095238)
+   3. D=824/2205 (0.373696145), ratio=0.868865031, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13), complete_q=[8, 9, 10, 11], widths=q7:4/49(0.081632653) q8:17/105(0.161904762) q9:29/315(0.092063492) q11:4/105(0.038095238)
+   4. D=824/2205 (0.373696145), ratio=0.868865031, E=(0, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), complete_q=[8, 9, 10, 11], widths=q7:4/49(0.081632653) q8:17/105(0.161904762) q9:29/315(0.092063492) q11:4/105(0.038095238)
+   5. D=824/2205 (0.373696145), ratio=0.868865031, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14), complete_q=[8, 9, 10, 11], widths=q7:4/49(0.081632653) q8:17/105(0.161904762) q9:29/315(0.092063492) q11:4/105(0.038095238)
+   6. D=824/2205 (0.373696145), ratio=0.868865031, E=(0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14), complete_q=[8, 9, 10, 11], widths=q7:4/49(0.081632653) q8:17/105(0.161904762) q9:29/315(0.092063492) q11:4/105(0.038095238)
+   7. D=299/882 (0.339002268), ratio=0.788199770, E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14), complete_q=[8, 9, 11], widths=q8:5/42(0.119047619) q9:29/315(0.092063492) q11:24/245(0.097959184) q15:1/49(0.020408163) q16:1/105(0.009523810)
+   8. D=299/882 (0.339002268), ratio=0.788199770, E=(0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14), complete_q=[8, 9, 11], widths=q8:5/42(0.119047619) q9:29/315(0.092063492) q11:24/245(0.097959184) q15:1/49(0.020408163) q16:1/105(0.009523810)
+per-q nonconsecutive max vs consecutive mass:
+  q= 7: consec=82/441 (0.185941043), bank_max=82/441 (0.185941043) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) [OK]
+  q= 8: consec=41/231 (0.177489177), bank_max=41/231 (0.177489177) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) [OK]
+  q= 9: consec=1/35 (0.028571429), bank_max=79/735 (0.107482993) at (0, 1, 2, 3, 5, 6, 7, 8, 9, 11, 13, 14) [beats-consec-q]
+  q=10: consec=0 (0.000000000), bank_max=94/1617 (0.058132344) at (0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 14) [beats-consec-q]
+  q=11: consec=4/105 (0.038095238), bank_max=29/245 (0.118367347) at (0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14) [beats-consec-q]
+  q=12: consec=0 (0.000000000), bank_max=20/1001 (0.019980020) at (0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14) [beats-consec-q]
+  q=15: consec=0 (0.000000000), bank_max=2061/28028 (0.073533609) at (0, 1, 2, 3, 5, 6, 8, 9, 11, 12, 13, 14) [beats-consec-q]
+  q=16: consec=0 (0.000000000), bank_max=29/735 (0.039455782) at (0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 14) [beats-consec-q]
+  q=17: consec=0 (0.000000000), bank_max=1663/32340 (0.051422387) at (0, 1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13) [beats-consec-q]
+  q=18: consec=0 (0.000000000), bank_max=1/49 (0.020408163) at (0, 1, 2, 4, 5, 6, 8, 9, 10, 11, 12, 14) [beats-consec-q]
+prefix q<=Q nonconsecutive max vs consecutive prefix:
+  Q= 7: consec_prefix=82/441 (0.185941043), nonconsec_max=4/49 (0.081632653) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) [OK]
+  Q= 8: consec_prefix=1763/4851 (0.363430221), nonconsec_max=179/735 (0.243537415) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) [OK]
+  Q= 9: consec_prefix=9508/24255 (0.392001649), nonconsec_max=148/441 (0.335600907) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) [OK]
+  Q=10: consec_prefix=9508/24255 (0.392001649), nonconsec_max=148/441 (0.335600907) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) [OK]
+  Q=11: consec_prefix=10432/24255 (0.430096887), nonconsec_max=824/2205 (0.373696145) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) [OK]
+  Q=12: consec_prefix=10432/24255 (0.430096887), nonconsec_max=824/2205 (0.373696145) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) [OK]
+sample one-step-left compression dead ends:
+
+[scan] starting k=13, W=14
+
+--- k=13, primitive anchored shapes in [0,14] ---
+checked=91
+consec D=601/1078 (0.557513915)
+consec denominator widths: q7:1079/2695(0.400371058) q8:1/14(0.071428571) q9:1/21(0.047619048) q11:4/105(0.038095238)
+best D=601/1078 (0.557513915) at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+bounded verdict: consecutive remains the unique dense-mass leader in this bank
+nonconsec budget maxima: low(q<=k)=2851/5390 (0.528942486) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14); tail(q>k/None)=107687/630630 (0.170760985) at (0, 1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 13, 14)
+top nonconsecutive dense shapes:
+   1. D=2851/5390 (0.528942486), ratio=0.948752080, E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14), complete_q=[8, 9, 10, 11, 13], widths=q7:62/245(0.253061224) q8:1/14(0.071428571) q9:29/231(0.125541126) q11:4/105(0.038095238) q13:2/49(0.040816327)
+   2. D=139081/315315 (0.441085898), ratio=0.791165721, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13), complete_q=[8, 9, 10, 11, 12], widths=q7:82/441(0.185941043) q8:41/231(0.177489177) q9:1/35(0.028571429) q11:4/105(0.038095238) q15:1/91(0.010989011)
+   3. D=139081/315315 (0.441085898), ratio=0.791165721, E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), complete_q=[8, 9, 10, 11, 12], widths=q7:82/441(0.185941043) q8:41/231(0.177489177) q9:1/35(0.028571429) q11:4/105(0.038095238) q15:1/91(0.010989011)
+   4. D=21179/48510 (0.436590394), ratio=0.783102237, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14), complete_q=[8, 9, 10, 11, 12], widths=q7:82/441(0.185941043) q8:41/231(0.177489177) q9:1/35(0.028571429) q11:4/105(0.038095238) q15:1/154(0.006493506)
+   5. D=21179/48510 (0.436590394), ratio=0.783102237, E=(0, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14), complete_q=[8, 9, 10, 11, 12], widths=q7:82/441(0.185941043) q8:41/231(0.177489177) q9:1/35(0.028571429) q11:4/105(0.038095238) q15:1/154(0.006493506)
+   6. D=178/441 (0.403628118), ratio=0.723978554, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14), complete_q=[8, 9, 10, 11], widths=q7:4/49(0.081632653) q8:17/105(0.161904762) q9:29/315(0.092063492) q11:4/105(0.038095238) q15:1/49(0.020408163) ...
+   7. D=178/441 (0.403628118), ratio=0.723978554, E=(0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14), complete_q=[8, 9, 10, 11], widths=q7:4/49(0.081632653) q8:17/105(0.161904762) q9:29/315(0.092063492) q11:4/105(0.038095238) q15:1/49(0.020408163) ...
+   8. D=126871/315315 (0.402362717), ratio=0.721708833, E=(0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14), complete_q=[8, 9, 11, 12], widths=q7:46/441(0.104308390) q8:5/42(0.119047619) q9:1/35(0.028571429) q11:306/2695(0.113543599) q15:47/1274(0.036891680)
+per-q nonconsecutive max vs consecutive mass:
+  q= 7: consec=1079/2695 (0.400371058), bank_max=1079/2695 (0.400371058) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) [OK]
+  q= 8: consec=1/14 (0.071428571), bank_max=41/231 (0.177489177) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) [beats-consec-q]
+  q= 9: consec=1/21 (0.047619048), bank_max=47/315 (0.149206349) at (0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14) [beats-consec-q]
+  q=10: consec=0 (0.000000000), bank_max=94/1617 (0.058132344) at (0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 14) [beats-consec-q]
+  q=11: consec=4/105 (0.038095238), bank_max=306/2695 (0.113543599) at (0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14) [beats-consec-q]
+  q=12: consec=0 (0.000000000), bank_max=20/1001 (0.019980020) at (0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) [beats-consec-q]
+  q=13: consec=0 (0.000000000), bank_max=2/49 (0.040816327) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) [beats-consec-q]
+  q=15: consec=0 (0.000000000), bank_max=2061/28028 (0.073533609) at (0, 1, 2, 3, 4, 5, 6, 8, 9, 11, 12, 13, 14) [beats-consec-q]
+  q=16: consec=0 (0.000000000), bank_max=29/735 (0.039455782) at (0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 13, 14) [beats-consec-q]
+  q=17: consec=0 (0.000000000), bank_max=1663/32340 (0.051422387) at (0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13) [beats-consec-q]
+  q=18: consec=0 (0.000000000), bank_max=1/70 (0.014285714) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14) [beats-consec-q]
+  q=19: consec=0 (0.000000000), bank_max=29/882 (0.032879819) at (0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13) [beats-consec-q]
+prefix q<=Q nonconsecutive max vs consecutive prefix:
+  Q= 7: consec_prefix=1079/2695 (0.400371058), nonconsec_max=62/245 (0.253061224) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) [OK]
+  Q= 8: consec_prefix=2543/5390 (0.471799629), nonconsec_max=1763/4851 (0.363430221) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) [OK]
+  Q= 9: consec_prefix=8399/16170 (0.519418677), nonconsec_max=7277/16170 (0.450030921) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) [OK]
+  Q=10: consec_prefix=8399/16170 (0.519418677), nonconsec_max=7277/16170 (0.450030921) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) [OK]
+  Q=11: consec_prefix=601/1078 (0.557513915), nonconsec_max=2631/5390 (0.488126160) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) [OK]
+  Q=12: consec_prefix=601/1078 (0.557513915), nonconsec_max=2631/5390 (0.488126160) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) [OK]
+  Q=13: consec_prefix=601/1078 (0.557513915), nonconsec_max=2851/5390 (0.528942486) at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) [OK]
+sample one-step-left compression dead ends:
+
+Cross-k summary:
+  k=8: best-minus-consec=0 (0.000000000), consec_uniqueness=yes
+  k=9: best-minus-consec=0 (0.000000000), consec_uniqueness=yes
+  k=10: best-minus-consec=0 (0.000000000), consec_uniqueness=yes
+  k=11: best-minus-consec=0 (0.000000000), consec_uniqueness=yes
+  k=12: best-minus-consec=0 (0.000000000), consec_uniqueness=yes
+  k=13: best-minus-consec=0 (0.000000000), consec_uniqueness=yes
+
+Interpretation:
+  The bounded data support a denominator-budget proof, not a raw compression proof.   The exact local dead ends have dense mass at higher least denominators and stay far   below consecutive.  Individual q-buckets are not monotone; the plausible Lemma A   split is cumulative: prove prefix low-denominator budget inequalities and bound   the high-q tail by Farey/three-gap width packing.
+
+Tournament Analysis: proof-carrier routing
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed 3-cycles: 0
+  SCC sizes: [1, 1, 1, 1, 1, 1]
+  Hamiltonian path count: 1
+  leading Hamiltonian path: denominator-center -> EWLB-window -> finite-atlas -> Fourier-spectrum -> runner-compression -> raw-gap-moment
+
+DONE.

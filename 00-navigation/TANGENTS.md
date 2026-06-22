@@ -2868,3 +2868,23 @@ Artifacts: `LRCWitnessPartA.lean`, `Verify.lean`, and transcripts
 `lrc_witness_parta_goodset_margin_bridge_codex_s86g2.out`,
 `tournamenth7_verify_lrc_parta_goodset_margin_bridge_codex_s86g2.out`,
 `tournamenth7_root_lrc_parta_goodset_margin_bridge_codex_s86g2.out`.
+
+## T992: LRC14 denominator-prefix majorization is the `nu` score ledger (codex-2026-06-22-S95)
+After the bounded-denominator witness route was refuted by THM-566, the useful
+denominator object reappears as component neighborhoods for Lemma A.  Exact
+audit `lrc14_nu_denom_center_budget_codex_s95.py` decomposes the dense set
+`D(E)=meas{x:maxgap(frac(e*x))<=1/7}` into components labelled by least
+interior rational denominator.  In the bounded primitive bank `[0,14]` for
+`k=8..13`, consecutive uniquely maximizes total `D`; tightest displayed slack
+is `k=13`, `77/2695`.  The important correction is negative: local runner
+compression fails, and individual q-bucket domination fails.  The positive
+survivor is prefix majorization: every tested cumulative low-denominator
+ledger `B_Q=sum_{q<=Q}` is dominated by consecutive, while high-q compression
+dead ends have small Farey tails.  Tournament analogy: this is Landau
+score-sequence control rather than pointwise score control; a row can beat one
+later bucket but pays earlier prefix mass.  Next theorem target: prove
+low-q prefix majorization over residue patterns for `q<=k`, then prove a
+Farey/three-gap tail packing bound for `q>k`.  S94's THM-567/HYP-2867
+resonance-channel work is the Fourier-side analogue: finite low carriers need
+aggregate balance, not pointwise bucket dominance.  -> HYP-2866, THM-530,
+THM-531, THM-567, HYP-2832, HYP-2867, OPEN-Q-108.

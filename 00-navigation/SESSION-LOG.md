@@ -19661,3 +19661,53 @@ The challenged assumption is that the six sector ledgers must be summed
 independently.  Remaining hard nodes are the concrete `B_j(E')` construction,
 pairwise disjointness over sector-crossing cells, `#cells<=7*sumE`, and the
 component/readout bridge to THM-546's `V(E')`.
+
+## codex-2026-06-22-S95 -- LRC14 `nu` denominator-prefix route for Lemma A
+
+Continued the LRC14 proof session after pulling the S86/S94 frontier.  The
+incoming Lean bridge made Lemma A concrete: prove that the 1/7-dense measure
+`D(E)=meas{x:maxgap(frac(e*x))<=1/7}` is maximized by consecutive `k`-sets, so
+`nu(E)=1-D(E)` is minimized there and the Bonferroni floor closes.  The new
+exact audit `04-computation/lrc14_nu_denom_center_budget_codex_s95.py` computes
+dense intervals by affine gap inequalities on phase-order cells, labels each
+component by the least denominator of an interior reduced rational, and stores
+the output at
+`05-knowledge/results/lrc14_nu_denom_center_budget_codex_s95.out`.
+
+Bounded primitive anchored scan in `[0,14]` for `k=8..13` found consecutive
+uniquely maximizes total dense mass in all six banks.  The tightest displayed
+nonconsecutive slack is `k=13`: `601/1078 - 2851/5390 = 77/2695`.  The audit
+also refutes two tempting shortcuts.  Raw one-step compression has real local
+dead ends, for example `(0,1,2,3,11,12,13,14)` with only q15/q23 dense mass.
+Pointwise denominator-bucket domination is false (`q=9`, `q=10`, `q=11`, and
+`q=13` beaters appear).  The surviving invariant is cumulative:
+every tested prefix `B_Q=sum_{q<=Q}` is dominated by consecutive.
+
+Created HYP-2866 for the resulting proof target: a Landau-style
+denominator-prefix majorization theorem for `q<=k`, plus Farey/three-gap
+packing for the high-q tail.  This connects THM-530's denominator-net
+characterization, THM-531 AP invariance, HYP-2832's Bonferroni bridge, and the
+EWLB/arc-complexity tail work.  The tournament analogy is literal at the proof
+carrier level: individual "scores" can improve in a nonconsecutive row, but
+the cumulative prefix ledger is the robust object, just as tournament score
+sequences are controlled by Landau prefix inequalities.
+
+Assumption challenge / Tournament Analysis: considered runners, gaps, fixed
+circle sections, section boundaries, wall-crossing events, residues, cover
+arcs, Fourier modes, rational denominator buckets, local slope pairs, matroid
+circuit-like relations, and proof obligations.  The chosen quotient is
+denominator-center component budgets plus proof carriers.  It preserves the
+exact `D(E)` measure by partitioning it into interval widths, but destroys
+runner identity and full cyclic phase order.  The proof-carrier tournament is
+transitive with leader path
+`denominator-center > EWLB-window > finite-atlas > Fourier-spectrum >
+runner-compression > raw-gap-moment`, no directed 3-cycles, singleton SCCs,
+and one Hamiltonian path.
+
+Post-pull integration: S94 landed THM-567 and HYP-2867 while this work was in
+progress.  Those files attack the `R'` decorrelation floor through low Fourier
+resonance channels; HYP-2866 attacks Lemma A through low denominator
+components.  The nodes are distinct, but the proof architecture matches:
+finite low carrier, aggregate balance/prefix control, and analytic tail.  The
+S94 correction to the Paley-7 overclaim reinforces the S95 warning: do not
+promote a single bucket/channel to the theorem.  Use cumulative ledgers.
