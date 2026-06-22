@@ -12,6 +12,32 @@ Owner: work on the three-gap rigidity characterization of the Steinhaus tight lo
 - **LRC SEQUENCES (creative):** a(n)=census size=1,2,2,1 (n=4-7), a(8)=3; s(n)=#sporadics=0,1,1,0,2 (NB s(7)=0: apex prime 7 has clean census=only AP); g(n)=1,1,2,1 (Steinhaus bound); u(n)=#±units. To extend/OEIS.
 - **PROOF STRUCTURE + OPEN CORE:** GIVEN g(n)<=3 (rigidity), tight locus = finite <=3-gap configs covering ±units, non-covering => for n=14 = {AP,GW} => apex floor excludes covering => LRC(14). So LRC(14) reduces to PROVE g(14)<=3. VERIFIED n=4..7; OPEN in general -- it's a Steinhaus-type theorem for GENERAL speeds (phases NOT {frac(k a)}), does NOT follow from classical three-gap. The irreducible open core. NOT claimed proved.
 NET: right frame, verified through n=7, ±units condition rigorous, census sequence computed; rigidity proof open => LRC(14) NOT finished. NEW: HYP-2913. NEXT: prove the Steinhaus rigidity g(n)<=3 (the open core).
+## codex-2026-06-22-S123 -- apex-lock Steinhaus sequences sharpen the tight-locus census target
+
+User asked to work on the three-gap rigidity characterization of the Steinhaus
+tight locus.  Added exact sequence probe
+`04-computation/lrc14_steinhaus_tight_locus_sequences_codex_s123.py` with
+stored output `05-knowledge/results/lrc14_steinhaus_tight_locus_sequences_codex_s123.out`.
+
+The script keeps the observer on the denominator-14 clock and records cyclic
+gap words with collisions as zero gaps.  AP has uniform partition `((1,14))`;
+Goddyn-Wong `{1,...,11,13,24}` has the one-collision/one-missing partition
+`((0,1),(1,12),(2,1))`.  The decisive warning is
+`{1,...,11,13,36}`: it has the same coarse GW partition and is apex-locked, but
+escapes off apex with exact `M=3/41`.  So the missing theorem is not a
+residue-only classification; it is the off-apex escape theorem for every
+non-AP/GW apex-locked reduced row.
+
+Exact banks: single AP replacements `v<=80` checked `884` records with unique
+tight sets AP/GW, no below-threshold rows, and `805` apex-locked loose rows.
+Local two-swaps with replacement values `<=18` checked `1638` rows, found no
+non-AP tight rows and no below-threshold rows.  Bounded q-covering rows in
+`[1,19]` have minimum `M=1/12`.  Incoming S37/S53 already claimed HYP-2913
+for the broader three-gap characterization, so I registered this refinement as
+HYP-2917 and updated HYP-2910, OPEN-Q-108, and the result/hypothesis indexes.
+LRC14 remains open; this sharpens the Node-2 census into `apex-lock filter +
+off-apex escape`, while covering/apex-blocked rows still route to comb/Weyl
+machinery.
 
 ## mac-mini-2026-06-22-S52 -- HONEST assessment: the gamma-trick is a real partial advance but does NOT complete LRC(14)
 Owner: leverage the gamma-trick (kps S31ad) to complete LRC(14). I leveraged it (analyzed + verified its reach) and the disciplined result is: it does NOT complete the proof. HYP-2912.

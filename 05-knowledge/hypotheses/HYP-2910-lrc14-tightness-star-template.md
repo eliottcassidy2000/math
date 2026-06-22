@@ -187,6 +187,35 @@ This supports Move B and is now consistent with THM-568's sharper reduction:
 the finite window is an exact checksum for 14-covering slack, not the source of
 the apex-denominator theorem.
 
+## S123 Steinhaus sequence addendum
+
+HYP-2917 adds a useful exact sequence split for the three-gap/tight-locus route,
+refining incoming HYP-2913/HYP-2914/HYP-2915 rather than replacing them.
+For each denominator-14 unit `a`, retain the observer and all runner residues on
+`Z/14Z`, with residue collisions recorded as zero cyclic gaps.  The AP row has
+gap partition `((1,14))`; GW has the one-collision/one-missing partition
+`((0,1),(1,12),(2,1))`.
+
+The key correction is that this residue/gap partition is only a filter.  The row
+`{1,...,11,13,36}` has the same coarse GW partition and is apex-locked, but
+escapes off apex with
+
+```text
+M({1,...,11,13,36}) = 3/41 > 1/14.
+```
+
+Thus the missing Node-2 theorem should now be stated as:
+
+```text
+every non-AP/GW apex-locked reduced row has an off-apex escape M(S)>1/14.
+```
+
+S123 exact banks support this formulation: single AP replacements `v<=80` have
+unique tight sets AP/GW and `805` apex-locked loose rows; local two-swaps
+`<=18` have no non-AP tight row; bounded q-covering rows in `[1,19]` have
+minimum `M=1/12`.  This does not close the global census, but it prevents a
+false residue-only proof and gives a sharper finite sequence target.
+
 ## The necessary correction
 
 The implication `M(S)=1/14 => AP/GW` alone does not logically rule out a
