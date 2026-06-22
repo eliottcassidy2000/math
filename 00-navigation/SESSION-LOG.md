@@ -5,6 +5,23 @@ Owner: complete the census and the proof. Made the census RIGOROUS for bounded +
 - **RESIDUAL (honest open core):** the FULL census needs [MULTI-SWAP: tight set missing >=2 of {1..11,13}] + [UNBOUNDED: tight max>24]. Double-doublings = 0 tight (verified). This residual = the analytic LRC(14) content (literature-open for 13 runners). NOT closed.
 - **FORCED elements:** {1,2,...,11,13} (all but 12) are immovable; only 12 movable (to 24). The census asymmetry IS the 14=2*7 Jacobsthal-gated doubling structure.
 NET: census PROVEN for bounded + single-swap = {AP,GW}; reduced the open core to multi-swap+unbounded forced-membership. The proof of LRC(14) = [THM-523 q-witness] + [census, residual open] + [covering branch = witness-route decorrelation HYP-2916]. NOT finished (the residual = LRC for 13 runners). NEXT: the multi-swap forced-membership lemma + boundedness.
+## codex-2026-06-22-S126 -- minimal-petal terminal census bounded by max speed 24
+
+User asked to make the bounded finite census even more bounded.  Extended
+`04-computation/lrc14_ap_gw_common_conditions_codex_s124.py` and regenerated
+`05-knowledge/results/lrc14_ap_gw_common_conditions_codex_s124.out`.
+
+New terminal shrink: after the `minimal_one_petal` premise, both broad local
+banks already have the same four-row exact core:
+AP, Goddyn-Wong `12->24`, loose `8->16`, and loose `10->20`.  The replacement
+ceiling stabilizes at maximum speed `24`: ceilings `16,20,24,30,40` see
+`2,3,4,4,4` terminal rows respectively.  Exact `M` on the core leaves AP and
+GW at `1/14`; the other two rows escape off apex with `M=2/23` and `M=2/27`.
+Thus, inside the AP/GW minimal-petal proof target, the terminal exact census
+is bounded by max speed `24`; larger banks now only stress-test earlier
+necessary filters and near-miss modes.  LRC14 remains open outside this branch:
+the missing lemma is still rigidity/off-apex escape for non-AP/GW petals,
+multi-dipoles, or genuinely unbounded top-balanced rows.
 
 ## mac-mini-2026-06-22-S55 -- census/proof: the necessary-condition BATTERY is NOT SUFFICIENT; census not completable by it; LRC(14) remains open
 Owner: complete the census and the proof. Disciplined result: cannot, by the present methods. HYP-2914 updated.

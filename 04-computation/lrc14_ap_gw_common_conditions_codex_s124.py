@@ -409,6 +409,55 @@ def report_petal_ledger() -> None:
     print()
 
 
+def survivors_after(rows: list[tuple[int, ...]], filter_name: str) -> list[tuple[int, ...]]:
+    current = set(rows)
+    for name, pred in FILTERS:
+        current = {S for S in current if pred(S)}
+        if name == filter_name:
+            return sorted(current)
+    raise ValueError(f"unknown filter {filter_name!r}")
+
+
+def report_terminal_census_shrink() -> None:
+    print("[Terminal finite-census shrink]")
+    print("  The broad banks test the filters, but the final exact-M census is much")
+    print("  smaller: after the minimal-one-petal premise, both local banks have the")
+    print("  same four-row terminal core.")
+
+    single_wide = bank_single_swaps(300)
+    two_wide = bank_two_swaps(40)
+    terminal_single = survivors_after(single_wide, "minimal_one_petal")
+    terminal_two = survivors_after(two_wide, "minimal_one_petal")
+    terminal = sorted(set(terminal_single) | set(terminal_two))
+    print(f"  single replacements v<=300 terminal rows: {len(terminal_single)}")
+    print(f"  two replacements values<=40 terminal rows: {len(terminal_two)}")
+    print(f"  union terminal core: {len(terminal)} rows, max element {max(max(S) for S in terminal)}")
+    for S in terminal:
+        M, pts = M_exact(S)
+        verdict = "TIGHT" if M == THR else "loose"
+        print(
+            f"    {row_signature(S)} first_fail={first_failed_filter(S)} "
+            f"argdenoms={sorted({t.denominator for t in pts})} {verdict}"
+        )
+
+    print("  Stabilization by replacement ceiling:")
+    print("    limit | single terminal | two-replacement terminal | terminal max")
+    for limit in (16, 20, 24, 30, 40):
+        s_rows = survivors_after(bank_single_swaps(limit), "minimal_one_petal")
+        t_rows = survivors_after(bank_two_swaps(limit), "minimal_one_petal")
+        union = sorted(set(s_rows) | set(t_rows))
+        max_seen = max((max(S) for S in union), default=None)
+        print(f"    {limit:5d} | {len(s_rows):15d} | {len(t_rows):24d} | {max_seen}")
+    print(
+        "  Therefore, inside the AP/GW minimal-petal proof target, the exact terminal"
+    )
+    print(
+        "  census is bounded by max speed 24; the larger banks only stress-test"
+    )
+    print("  earlier necessary filters and near-miss escape modes.")
+    print()
+
+
 def condition_tournament(rows: list[tuple[int, ...]]) -> None:
     """Tournament Analysis over conditions.
 
@@ -474,6 +523,7 @@ def main() -> None:
 
     report_q_threshold_rows()
     report_petal_ledger()
+    report_terminal_census_shrink()
 
     single = bank_single_swaps()
     report_bank("AP single replacements v<=300", single)

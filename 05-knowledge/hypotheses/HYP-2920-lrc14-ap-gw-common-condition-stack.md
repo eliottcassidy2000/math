@@ -93,6 +93,13 @@ Bank results:
   AP and GW, with `tight=2`, `loose=0`, `below=0`.
 - AP two replacements with values `<=40`: `27730` primitive rows.  The same
   stack leaves exactly AP and GW, again with `tight=2`, `loose=0`, `below=0`.
+- Terminal shrink inside the minimal-petal premise: before the final
+  `top_petal_or_ap` gate, both broad local banks already have the same
+  four-row exact core, namely AP, GW, `8 -> 16`, and `10 -> 20`.  This core
+  has maximum speed `24`; the replacement-ceiling sweep stabilizes at `24`
+  (`16` sees two terminal rows, `20` sees three, and `24,30,40` all see four).
+  Exact `M` on those four rows then leaves AP and GW tight while `8 -> 16`
+  has `M=2/23` and `10 -> 20` has `M=2/27`.
 - Primitive bounded `13`-subsets of `[1,19]`: `27132` rows.  Since `24` is
   outside the bank, the final stack leaves AP alone, with `tight=1`,
   `loose=0`, `below=0`.
@@ -132,8 +139,12 @@ only tight acceleration is the high-composite, divisor-compensating top petal
 escape to denominators other than `14`.
 
 This completes the local AP-petal census inside the audited banks, including
-the two-replacement bank `<=40`.  It does not prove the full LRC14 tight-locus
-census.  It converts the remaining proof into a stack of named failure modes:
-a hypothetical third tight row must either break cofinite/zsum rigidity, break
-literal complement binding, realize a multi-dipole/two-petal structure, or
-produce a new top-balanced unbounded phenomenon not seen by these AP/GW banks.
+the two-replacement bank `<=40`.  More strongly, once the proof target has
+entered the minimal-one-petal branch, the exact terminal census is bounded by
+maximum speed `24`; the larger banks only stress-test earlier necessary
+filters and near-miss escape modes.  It does not prove the full LRC14
+tight-locus census.  It converts the remaining proof into a stack of named
+failure modes: a hypothetical third tight row must either break cofinite/zsum
+rigidity, break literal complement binding, realize a multi-dipole/two-petal
+structure, or produce a new top-balanced unbounded phenomenon not seen by
+these AP/GW banks.

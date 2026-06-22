@@ -33,6 +33,28 @@ Known tight rows:
   13  26 14 False    (1, 1)                (1,)    2/27       [27] unit_cover
   Only v=12 passes the Jacobsthal/Goddyn-Wong gate and has M=1/14.
 
+[Terminal finite-census shrink]
+  The broad banks test the filters, but the final exact-M census is much
+  smaller: after the minimal-one-petal premise, both local banks have the
+  same four-row terminal core.
+  single replacements v<=300 terminal rows: 4
+  two replacements values<=40 terminal rows: 4
+  union terminal core: 4 rows, max element 24
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), q=14, M=1/14, denoms=[14], defect=zero, missing=(), extra=() first_fail=PASS argdenoms=[14] TIGHT
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), q=14, M=1/14, denoms=[14], defect=single_even_dipole, missing=(12,), extra=(10,) first_fail=PASS argdenoms=[14] TIGHT
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20), q=14, M=2/27, denoms=[27], defect=single_even_dipole, missing=(10,), extra=(6,) first_fail=top_petal_or_ap argdenoms=[27] loose
+    S=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 16), q=14, M=2/23, denoms=[23], defect=single_even_dipole, missing=(8,), extra=(2,) first_fail=top_petal_or_ap argdenoms=[23] loose
+  Stabilization by replacement ceiling:
+    limit | single terminal | two-replacement terminal | terminal max
+       16 |               2 |                        2 | 16
+       20 |               3 |                        3 | 20
+       24 |               4 |                        4 | 24
+       30 |               4 |                        4 | 24
+       40 |               4 |                        4 | 24
+  Therefore, inside the AP/GW minimal-petal proof target, the exact terminal
+  census is bounded by max speed 24; the larger banks only stress-test
+  earlier necessary filters and near-miss escape modes.
+
 [AP single replacements v<=300]
   total primitive rows=3732
   after punctured_q_cover   :  1770  (drop  1962)
