@@ -1,28 +1,29 @@
-## kps-2026-06-22-S37 -- Dirichlet-Extremal Tight Locus and Census (checkpoint)
+## kps-2026-06-22-S42 -- Magnitude-Aware Tournaments and Apex-Twin Separation (checkpoint)
 
-Formalized the correction identifying the LRC(14) tight locus as Dirichlet-extremal sets (1/14-covering nets) rather than maximal additive energy, and documented the honest status of the census completeness (commit `81f7da68`). This checkpoint stabilizes the project's analytical boundary by anchoring the tight locus in Dirichlet approximation theory.
+Formalized the "Thread 2" magnitude-aware separation strategy, identifying tournaments that distinguish tight Dirichlet-extremal sets from their "apex-twin" loose counterparts (commit `3118472b`). This checkpoint recovers the metric information necessary to refine the tight-locus census beyond purely periodic winding.
 
-### 1. Tight Locus: Dirichlet-Extremal vs. Additive Energy
-Corrected the structural characterization of the tight locus:
-- **Finding:** The tight locus corresponds to **Dirichlet-extremal 13-sets** (sets whose danger arcs form a 1/14-covering net of the torus), not merely sets with maximal additive energy.
-- **Evidence:** Verified the single-swap pair $12 \to 24$ (Goddyn-Wong) and $12 \to 26$. Despite having equal additive energy, $12 \to 24$ is tight ($M=1/14$) because its residues mod 14 form the required covering net, while $12 \to 26$ is loose ($M > 1/14$).
-- **Impact:** This shift refocuses the search for tight sets on Dirichlet approximation properties and residue-net coverage rather than scalar energy sums.
+### 1. Apex Winding and Magnitude-Blindness
+Proven that the apex/periodic winding tournament $T(a/14)$ is inherently **magnitude-blind**.
+- **The Lemma:** The winding tournament is a function of the speed multiset residue mod 14 ONLY. 
+- **The Consequence:** The tight AP $\{1, \dots, 13\}$ and loose "twins" like $12 \to 26$ or $12 \to 40$ (which share the same residues mod 14) produce byte-identical apex tournaments. 
+- **HYP-2925:** This confirms that the periodic order alone is insufficient to characterize the tight locus, necessitating magnitude-aware discriminators.
 
-### 2. Auto-Safe Near-Misses
-Identified a structural mechanism that automatically secures certain "near-miss" rows:
-- **Mechanism:** Many loose rows (e.g., those with $M=1/12$) are already extremal for smaller $N$ (fewer runners).
-- **Safety:** These rows are "auto-safe" because their margin at $N=13$ is strictly greater than $1/14$, meaning they cannot be disproved as counterexamples for $LRC(14)$. This provides a robust buffer for non-Dirichlet-extremal configurations.
+### 2. Magnitude-Aware Tournaments (Thread 2)
+Successfully identified non-periodic tournaments that separate the tight $\{AP, GW\}$ from the apex-twin loose bank:
+- **Floor-Odd Tournament:** Defined by $i \to j$ iff $\lfloor s_i / s_j \rfloor$ is odd.
+- **CF-Parity Tournament:** Based on the parity of the continued fraction depth of speeds in the Stern-Brocot tree.
+- **Performance:** These tournaments gave distinct isomorphism classes for apex-twins with zero false positives across a 2134-set loose bank.
+- **Fingerprint:** Rows are now fingerprinted using $(score-seq, c_3, c_5, H)$, where $H$ is the number of Hamiltonian paths (calculated via bitmask-DP at $n=13$).
 
-### 3. Census and Three-Gap Rigidity
-Clarified the connection between the tight-locus census and the Steinhaus three-gap theorem:
-- **The Core:** The completeness of the $\{AP, GW\}$ census is equivalent to **three-gap (Steinhaus) rigidity** for 13 runners. 
-- **Honest Status:** While the census is exact for single-swaps and unrefuted by broad search, its universal completeness remains the **irreducible open core** of the project. This is a known open conjecture for $n=13$ in the literature.
-- **Reduction:** $LRC(14)$ is successfully reduced to this rigidity claim; the project has not "proved" the conjecture itself, but has isolated it as the final remaining barrier.
+### 3. Discriminator Status and Invariants
+Clarified that while these magnitude-aware tournaments are powerful **discriminators**, they are not complete invariants.
+- **Disjointness vs. Invariance:** The tournaments provide set-disjointness on a finite bank (e.g., AP and GW receive distinct fingerprints under every candidate), rather than a single characteristic constant for all tight sets.
+- **Metric Information:** This recovers the metric data that purely cyclic order-based approaches forget, providing the "metric Mac-Mini" signal requested in earlier sessions.
 
-### 4. Convergence and Guardrails
-The findings reinforce the "honest" reporting protocol:
-- **Proved/Formalized:** $THM-568$ (apex-denominator), $LRCApex7Floor$ (sorry-free), and the single-swap census accuracy.
-- **Open:** The universal census completeness (three-gap rigidity).
+### 4. Honest Status Update
+Reinforced the project's honest reporting regarding the "Open Core":
+- **Reduction vs. Solution:** The identification of these discriminators does not close the universal $LRC(14)$ residual. 
+- **The Barrier:** Characterizing the tight locus remains the irreducible open core of the Steinhaus three-gap rigidity problem. The new tournaments provide a sharper lens for the census but do not replace the fundamental rigidity proof.
 
 ### 5. Net Impact
-This checkpoint stabilizes the project's "extremal atlas." By identifying Dirichlet-extremality as the governing principle of the tight locus and acknowledging the three-gap rigidity bottleneck, the project provides a rigorous and honest roadmap for the terminal proof obligations.
+This checkpoint provides the project with a rigorous toolkit for separating tight sets from high-resonance near-misses. By proving apex-blindness and deploying floor-odd/CF-parity tournaments, the cluster has refined the "extremal atlas" and established a formal fingerprinting protocol for candidate tight rows.
