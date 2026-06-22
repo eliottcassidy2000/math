@@ -68,6 +68,22 @@ theorem witness_carrier_subset_safe (E P : List ℤ) :
     (coverSet E)ᶜ ∩ safeSet P ⊆ safeSet P :=
   Set.inter_subset_right
 
+/-- The concrete lower carrier also lies in the complement of the dense event:
+if the anchored phases fail to cover all six inner sectors, they cannot be
+1/7-dense.  This is a formal proxy for the max-gap `GOOD` readout that avoids
+sorted cyclic-gap infrastructure. -/
+theorem witness_carrier_subset_dense_compl (E P : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    (coverSet E)ᶜ ∩ safeSet P ⊆ (denseSet E)ᶜ ∩ safeSet P :=
+  Set.inter_subset_inter_left _ (coverSet_compl_subset_denseSet_compl E hE)
+
+/-- Measure form of `witness_carrier_subset_dense_compl`: the Bonferroni carrier
+lower-bounds the dense-complement witness carrier. -/
+theorem witness_carrier_le_dense_compl_measure (E P : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    (slowμ ((coverSet E)ᶜ ∩ safeSet P)).toReal ≤
+      (slowμ ((denseSet E)ᶜ ∩ safeSet P)).toReal :=
+  ENNReal.toReal_mono (measure_ne_top slowμ ((denseSet E)ᶜ ∩ safeSet P))
+    (measure_mono (witness_carrier_subset_dense_compl E P hE))
+
 /-- **Witness-floor positivity reduces EXACTLY to the wide bound `p0 ≤ cap`.**
 Given the wide bound `p0(E) ≤ cap_k` (`hwide`) and the duality strictness
 `cap_k < meas(G_P)` (`hdual`, from `cap_k = min_P meas(G_P)`), the concrete witness
@@ -90,6 +106,17 @@ theorem witness_pos_from_strict_cover_bound (E P : List ℤ) (capk : ℝ)
     (hdual : capk ≤ (slowμ (safeSet P)).toReal) :
     0 < (slowμ ((coverSet E)ᶜ ∩ safeSet P)).toReal :=
   witness_pos_of_p0_lt_measGP E P (lt_of_lt_of_le hwide hdual)
+
+/-- Strict-cover positivity transferred to the dense-complement witness carrier.
+This plugs `LRCCoverBound.slowμ_coverSet_lt_cap` into a concrete max-gap proxy:
+`(denseSet E)^c ∩ safeSet P`. -/
+theorem dense_compl_witness_pos_from_strict_cover_bound
+    (E P : List ℤ) (capk : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hwide : (slowμ (coverSet E)).toReal < capk)
+    (hdual : capk ≤ (slowμ (safeSet P)).toReal) :
+    0 < (slowμ ((denseSet E)ᶜ ∩ safeSet P)).toReal :=
+  lt_of_lt_of_le (witness_pos_from_strict_cover_bound E P capk hwide hdual)
+    (witness_carrier_le_dense_compl_measure E P hE)
 
 /-- **Concrete margin version of the witness floor.**  The exact top-level p0
 route needs a quantitative margin, not only positivity: if the wide bound proves
@@ -116,8 +143,11 @@ theorem witness_pos_from_wide_bound_margin (E P : List ℤ) (capk delta : ℝ)
 #print axioms slowμ_compl_toReal
 #print axioms witness_floor_concrete
 #print axioms witness_pos_of_p0_lt_measGP
+#print axioms witness_carrier_subset_dense_compl
+#print axioms witness_carrier_le_dense_compl_measure
 #print axioms witness_pos_from_wide_bound
 #print axioms witness_pos_from_strict_cover_bound
+#print axioms dense_compl_witness_pos_from_strict_cover_bound
 #print axioms witness_margin_from_wide_bound
 #print axioms witness_pos_from_wide_bound_margin
 

@@ -44,6 +44,21 @@ concrete carrier layer.  The quantitative margin theorem remains useful for
 finite-ruler error budgets, but the positive-PartA route can now use the strict
 hp0cap residual plus non-strict `hmeasGP` exactly as stated.
 
+## Codex S86g dense-complement proxy handoff
+The same strict-cover output now feeds the formal max-gap proxy.  For anchored
+`0 ∈ E`, `LRCDenseCovers.coverSet_compl_subset_denseSet_compl` proves
+`(coverSet E)^c ⊆ (denseSet E)^c`, and
+`LRCWitnessFloorConcrete.dense_compl_witness_pos_from_strict_cover_bound`
+combines this with measure monotonicity:
+
+> `p0(E) < cap_k`, `cap_k <= meas(G_P)`, and `0 ∈ E` imply
+> `0 < meas((denseSet E)^c ∩ safeSet P)`.
+
+This is deliberately weaker than claiming the full `goodSet` readout.  It
+records the proved lower-carrier path from hp0cap to a `Dense17`-complement
+event, leaving the sorted cyclic-gap equivalence with `goodSet`/`witnessG2` as
+the next formal node.
+
 ## The residual (the genuinely analytic part, NOT elementary)
 The binding cases k=8..12 route through the decorrelated closed form (THM-534, kps-S24):
 > `p0(E) <= p0_decorr(E) = sum_t P_t^{(r)} p_t(B)`  [RESONANCE BOUND -- the residual]

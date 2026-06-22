@@ -165,6 +165,15 @@ theorem denseSet_subset_coverSet (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
   obtain ⟨e, heE, he⟩ := mem_phaseFinset.mp hsS
   exact ⟨e, heE, he ▸ hs1, he ▸ hs2⟩
 
+/-- Contrapositive of `denseSet_subset_coverSet`: an anchored phase set that
+fails to hit all six inner sectors is not 1/7-dense, hence has a witness-scale
+gap in the `Dense17` complement.  This is the formal lower-carrier bridge used
+by the concrete witness floor. -/
+theorem coverSet_compl_subset_denseSet_compl (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    (coverSet E)ᶜ ⊆ (denseSet E)ᶜ := by
+  intro x hx hdx
+  exact hx (denseSet_subset_coverSet E hE hdx)
+
 /-- **The measure-level inclusion `D(E) ≤ p0(E)`.**  Restricted to ONE period
 `[0,1)` (the sets are 1-periodic, so the unrestricted `volume` is infinite and
 vacuous): `volume(denseSet ∩ [0,1)) ≤ volume(coverSet ∩ [0,1))`.  This is the
@@ -296,6 +305,7 @@ theorem slowμ_denseSet_le_coverSet (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
 #print axioms inner_sector_covered
 #print axioms dense_covers_all_inner
 #print axioms denseSet_subset_coverSet
+#print axioms coverSet_compl_subset_denseSet_compl
 #print axioms measurableSet_coverSet
 #print axioms measurableSet_safeSet
 #print axioms volume_denseSet_le_coverSet

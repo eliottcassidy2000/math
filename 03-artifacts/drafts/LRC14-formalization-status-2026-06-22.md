@@ -75,13 +75,15 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
 - `LRCGoodSet` — concrete `goodSet(E) = {maxgap{frac(e·x)} > 1/7}` + measurability;
   verified arc-characterization `==` maxgap (HYP-2837).
 - `LRCDenseCovers` — `coverSet`, `safeSet` (= G_P), `measurable_phase`, `D ≤ p0`.
-- `LRCWitnessFloorConcrete` — `measGP − p0 ≤ μ(coverSetᶜ ∩ safeSet) ≤ witnessG2`
-  (concrete Bonferroni; `coverSetᶜ ⊆ goodSet`).  Codex S86g adds the verified
-  margin form: `p0≤cap−delta` and `cap≤measGP` imply
-  `delta≤μ(coverSetᶜ ∩ safeSet)`, and the strict-cover positivity handoff:
+- `LRCWitnessFloorConcrete` — `measGP − p0 ≤ μ(coverSetᶜ ∩ safeSet)`, with the
+  carrier inside `safeSet`.  Codex S86g adds the verified margin form:
+  `p0≤cap−delta` and `cap≤measGP` imply
+  `delta≤μ(coverSetᶜ ∩ safeSet)`, the strict-cover positivity handoff:
   `p0<cap` plus `cap≤measGP` implies
-  `0<μ(coverSetᶜ ∩ safeSet)`.  This is the exact shape produced by
-  `LRCCoverBound.slowμ_coverSet_lt_cap`.
+  `0<μ(coverSetᶜ ∩ safeSet)`, and the dense-complement bridge:
+  anchored `0∈E` transfers this positivity to
+  `0<μ((denseSet E)ᶜ ∩ safeSet)`.  The remaining readout is the sorted-gap
+  bridge from `(denseSet E)ᶜ` to the concrete `goodSet`/`witnessG2` carrier.
 - `LRCBonferroniMeasure`, `LRCEventMeasureBridge` — measure inequalities + handoffs.
 - `LRCWitnessPartA` — finite-ruler error-budget glue.  Codex S86g adds the
   verified split assembly where `k≤7` uses the `m_P` budget and `8≤k≤13` uses

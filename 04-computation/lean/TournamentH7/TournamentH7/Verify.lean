@@ -267,6 +267,13 @@ theorem lrc_denseSet_subset_coverSet_audit
   LonelyRunner.DenseCovers.denseSet_subset_coverSet E hE
 #print axioms lrc_denseSet_subset_coverSet_audit
 
+theorem lrc_coverSet_compl_subset_denseSet_compl_audit
+    (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    (LonelyRunner.DenseCovers.coverSet E)ᶜ ⊆
+      (LonelyRunner.DenseCovers.denseSet E)ᶜ :=
+  LonelyRunner.DenseCovers.coverSet_compl_subset_denseSet_compl E hE
+#print axioms lrc_coverSet_compl_subset_denseSet_compl_audit
+
 theorem lrc_volume_denseSet_le_coverSet_audit
     (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
     MeasureTheory.volume
@@ -471,6 +478,26 @@ theorem lrc_witness_carrier_subset_safe_audit (E P : List ℤ) :
   LonelyRunner.DenseCovers.witness_carrier_subset_safe E P
 #print axioms lrc_witness_carrier_subset_safe_audit
 
+theorem lrc_witness_carrier_subset_dense_compl_audit
+    (E P : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    (LonelyRunner.DenseCovers.coverSet E)ᶜ ∩
+        LonelyRunner.DenseCovers.safeSet P ⊆
+      (LonelyRunner.DenseCovers.denseSet E)ᶜ ∩
+        LonelyRunner.DenseCovers.safeSet P :=
+  LonelyRunner.DenseCovers.witness_carrier_subset_dense_compl E P hE
+#print axioms lrc_witness_carrier_subset_dense_compl_audit
+
+theorem lrc_witness_carrier_le_dense_compl_measure_audit
+    (E P : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.coverSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal ≤
+      (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.denseSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.witness_carrier_le_dense_compl_measure E P hE
+#print axioms lrc_witness_carrier_le_dense_compl_measure_audit
+
 theorem lrc_witness_pos_from_wide_bound_audit (E P : List ℤ) (capk : ℝ)
     (hwide :
       (LonelyRunner.DenseCovers.slowμ
@@ -500,6 +527,23 @@ theorem lrc_witness_pos_from_strict_cover_bound_audit (E P : List ℤ) (capk : �
           LonelyRunner.DenseCovers.safeSet P)).toReal :=
   LonelyRunner.DenseCovers.witness_pos_from_strict_cover_bound E P capk hwide hdual
 #print axioms lrc_witness_pos_from_strict_cover_bound_audit
+
+theorem lrc_dense_compl_witness_pos_from_strict_cover_bound_audit
+    (E P : List ℤ) (capk : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hwide :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal < capk)
+    (hdual :
+      capk ≤
+        (LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    0 <
+      (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.denseSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.dense_compl_witness_pos_from_strict_cover_bound
+    E P capk hE hwide hdual
+#print axioms lrc_dense_compl_witness_pos_from_strict_cover_bound_audit
 
 theorem lrc_witness_margin_from_wide_bound_audit
     (E P : List ℤ) (capk delta : ℝ)

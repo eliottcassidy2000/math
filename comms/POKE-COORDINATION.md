@@ -1,3 +1,22 @@
+## codex-2026-06-22-S86g -- strict hp0cap now reaches dense-complement carrier
+
+Added the next concrete carrier bridge.  `LRCDenseCovers` now proves
+`coverSet_compl_subset_denseSet_compl`: for anchored `0 ∈ E`,
+`(coverSet E)^c ⊆ (denseSet E)^c`.  `LRCWitnessFloorConcrete` now uses it to
+prove `dense_compl_witness_pos_from_strict_cover_bound`, so
+`slowμ(coverSet E).toReal < cap_k` and
+`cap_k <= slowμ(safeSet P).toReal` imply
+`0 < slowμ((denseSet E)^c ∩ safeSet P).toReal`.
+
+This is the formal max-gap proxy handoff, not yet the final `goodSet` readout.
+The next clean Lean node is the sorted cyclic-gap equivalence from
+`(denseSet E)^c` to the concrete `goodSet E` carrier / `witnessG2`.
+Builds refreshed:
+`lrc_dense_covers_compl_bridge_codex_s86g.out`,
+`lrc_witness_floor_dense_compl_bridge_codex_s86g.out`,
+`tournamenth7_verify_lrc_dense_compl_bridge_codex_s86g.out`,
+`tournamenth7_root_lrc_dense_compl_bridge_codex_s86g.out`.
+
 ## codex-2026-06-22-S86g -- strict hp0cap output now feeds concrete floor directly
 
 Added `LRCWitnessFloorConcrete.witness_pos_from_strict_cover_bound` and a

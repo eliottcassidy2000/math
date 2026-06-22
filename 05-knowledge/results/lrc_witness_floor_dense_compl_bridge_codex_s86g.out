@@ -1,0 +1,32 @@
+ℹ [3105/3107] Replayed TournamentH7.LRCDenseCovers
+info: TournamentH7/LRCDenseCovers.lean:305:0: 'LonelyRunner.DenseCovers.inner_sector_covered' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:306:0: 'LonelyRunner.DenseCovers.dense_covers_all_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:307:0: 'LonelyRunner.DenseCovers.denseSet_subset_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:308:0: 'LonelyRunner.DenseCovers.coverSet_compl_subset_denseSet_compl' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:309:0: 'LonelyRunner.DenseCovers.measurableSet_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:310:0: 'LonelyRunner.DenseCovers.measurableSet_safeSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:311:0: 'LonelyRunner.DenseCovers.volume_denseSet_le_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:312:0: 'LonelyRunner.DenseCovers.slowμ_denseSet_le_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3106/3107] Replayed TournamentH7.LRCBonferroniMeasure
+info: TournamentH7/LRCBonferroniMeasure.lean:64:0: 'LonelyRunner.BonferroniMeasure.measure_add_le_inter_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCBonferroniMeasure.lean:65:0: 'LonelyRunner.BonferroniMeasure.toReal_bonferroni' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3107/3107] Built TournamentH7.LRCWitnessFloorConcrete (4.9s)
+info: TournamentH7/LRCWitnessFloorConcrete.lean:143:0: 'LonelyRunner.DenseCovers.slowμ_compl_toReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:144:0: 'LonelyRunner.DenseCovers.witness_floor_concrete' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:145:0: 'LonelyRunner.DenseCovers.witness_pos_of_p0_lt_measGP' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:146:0: 'LonelyRunner.DenseCovers.witness_carrier_subset_dense_compl' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:147:0: 'LonelyRunner.DenseCovers.witness_carrier_le_dense_compl_measure' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:148:0: 'LonelyRunner.DenseCovers.witness_pos_from_wide_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:149:0: 'LonelyRunner.DenseCovers.witness_pos_from_strict_cover_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:150:0: 'LonelyRunner.DenseCovers.dense_compl_witness_pos_from_strict_cover_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:151:0: 'LonelyRunner.DenseCovers.witness_margin_from_wide_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:152:0: 'LonelyRunner.DenseCovers.witness_pos_from_wide_bound_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3107 jobs).

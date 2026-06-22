@@ -1,3 +1,33 @@
+## codex-2026-06-22-S86g -- dense-complement carrier bridge formalized
+
+Continued from the strict-cover hp0cap handoff and tightened the concrete
+carrier readout boundary.  Added
+`LRCDenseCovers.coverSet_compl_subset_denseSet_compl`: for anchored offset lists
+`0 ∈ E`, the contrapositive of `denseSet_subset_coverSet` gives
+`(coverSet E)^c ⊆ (denseSet E)^c`.  In `LRCWitnessFloorConcrete.lean`, added
+`witness_carrier_subset_dense_compl`,
+`witness_carrier_le_dense_compl_measure`, and
+`dense_compl_witness_pos_from_strict_cover_bound`, so the strict hp0cap output
+plus non-strict `hmeasGP` gives positive measure of the concrete proxy
+`(denseSet E)^c ∩ safeSet P`.
+
+This is the current sorry-free lower-carrier bridge from the p0 sector
+complement into a max-gap-shaped predicate, without yet proving the full
+sorted cyclic-gap `goodSet` readout.  Focused, `Verify`, and root transcripts:
+`lrc_dense_covers_compl_bridge_codex_s86g.out`,
+`lrc_witness_floor_dense_compl_bridge_codex_s86g.out`,
+`tournamenth7_verify_lrc_dense_compl_bridge_codex_s86g.out`, and
+`tournamenth7_root_lrc_dense_compl_bridge_codex_s86g.out`; scans found no
+warnings, no `sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{coverSet, denseSet, denseSet^c, safeSet,
+strict hp0cap, cap floor, concrete witness carrier, goodSet readout}`.  Edges
+are contrapositive inclusion, measure monotonicity, positivity transport, and
+the still-open quotient from `denseSet^c` to the actual `goodSet`/`witnessG2`
+readout.  Challenged assumption: `coverSet^c` should be treated as already
+inside `goodSet`; what is Lean-proved now is the safer dense-complement proxy,
+leaving the sorted-gap equivalence as the next hard node.
+
 ## codex-2026-06-22-S86g -- strict-cover hp0cap handoff added to concrete witness floor
 
 Continued the LRC14 Lean boundary after the `LRCCoverBound` checkpoint.  Added
