@@ -74,31 +74,49 @@ def maxgap_at(E, x):
 
 def good_true(E):
     """GOOD_true = {x: maxgap{frac(e_i x)} > 1/7} as EXACT arc union.
-       On each elementary interval the order is fixed; maxgap is the upper envelope of finitely
-       many affine gap-functions.  We sample the midpoint to get the order, then within the interval
-       refine by also splitting at all crossing points of gap-functions with the level 1/7 AND with
-       each other (envelope breakpoints).  Simpler robust route: refine breakpoints to include where
-       ANY gap = 1/7; between consecutive refined breakpoints maxgap-1/7 has constant sign -> test
-       midpoint.  Gap=1/7 crossings: for each ordered pair giving a gap alpha+beta x, solve =1/7."""
+
+    EXACT method (no sorting of gaps; track physical affine gaps):
+    Within an order-interval [a,b] (no two phases collide, no phase crosses 0), each phase
+    frac(e_i x) is an AFFINE function  e_i*x - floor(e_i*mid)  of x (the integer part is constant
+    on the interval).  Sorting the phases at the midpoint fixes the cyclic order; consecutive
+    differences (incl. the wrap 1 - top + bottom) are then AFFINE in x with EXACT rational
+    coefficients.  maxgap(x) is the upper envelope of these affine gap-functions; it is piecewise
+    affine and crosses the level 1/7 only at points where SOME individual affine gap = 1/7 (an
+    overcount of envelope breakpoints, which is fine -- we just refine there and sign-test midpoints).
+    All crossings are exact Fractions => GOOD_true is an EXACT arc union."""
     E = sorted(set(int(e) for e in E))
     base_bps = good_breakpoints(E)
     refined = set(base_bps)
-    # add level-crossings: between order-breakpoints, each gap is affine; find where gap hits 1/7.
     for a, b in zip(base_bps, base_bps[1:]):
         mid = (a + b) / 2
-        ph = sorted(set((F(e) * mid) % 1 for e in E))
-        # reconstruct which (e) produces each phase to get affine form; instead sample 2 points
-        # and linearly interpolate each gap (affine on the interval) to solve gap=1/7 exactly.
-        x1 = a + (b - a) / 3; x2 = a + 2 * (b - a) / 3
-        g1 = _gaps_vector(E, x1); g2 = _gaps_vector(E, x2)
-        if g1 is None or g2 is None or len(g1) != len(g2):
+        # affine phase reps on this interval: phase_i(x) = e_i*x - k_i,  k_i = floor(e_i*mid)
+        reps = []
+        for e in E:
+            ke = (F(e) * mid).__floor__()
+            reps.append((F(e), F(ke)))      # phase = e*x - ke, value in [0,1) at mid
+        # cyclic order from midpoint values
+        vals = sorted(range(len(reps)), key=lambda i: (reps[i][0] * mid - reps[i][1]))
+        # dedup identical phases at mid (collisions are at breakpoints, not interior)
+        ordered = []
+        seen = set()
+        for i in vals:
+            v = reps[i][0] * mid - reps[i][1]
+            if v in seen:
+                continue
+            seen.add(v); ordered.append(reps[i])
+        if len(ordered) < 2:
             continue
-        for gv1, gv2 in zip(g1, g2):
-            # affine: g(x) = gv1 + (gv2-gv1)/(x2-x1) * (x-x1); solve = 1/7
-            slope = (gv2 - gv1) / (x2 - x1)
+        # affine gaps: between consecutive ordered phases, plus wrap (1 - top + bottom)
+        gaps_affine = []
+        for t in range(len(ordered) - 1):
+            (s2, c2) = ordered[t + 1]; (s1, c1) = ordered[t]
+            gaps_affine.append((s2 - s1, -(c2 - c1)))      # gap(x) = (s2-s1) x - (c2-c1)
+        (sT, cT) = ordered[-1]; (s0, c0) = ordered[0]
+        gaps_affine.append((s0 - sT, F(1) - (c0 - cT)))    # wrap = 1 + (s0-sT)x -(c0-cT)
+        for (slope, intercept) in gaps_affine:
             if slope == 0:
                 continue
-            xc = x1 + (THRESH - gv1) / slope
+            xc = (THRESH - intercept) / slope
             if a < xc < b:
                 refined.add(xc)
     refined = sorted(refined)
@@ -108,17 +126,6 @@ def good_true(E):
         if maxgap_at(E, mid) > THRESH:
             arcs.append((a, b))
     return merge(arcs)
-
-def _gaps_vector(E, x):
-    """sorted gap vector (to interpolate); returns gaps in the SAME cyclic order if phase order
-       is identical at the two sample points -- we sort gaps to make the per-gap interpolation
-       order-independent (envelope max is symmetric in the gap multiset)."""
-    ph = sorted(set((F(e) * x) % 1 for e in E))
-    if len(ph) < 2:
-        return None
-    gaps = [ph[k + 1] - ph[k] for k in range(len(ph) - 1)]
-    gaps.append(F(1) - ph[-1] + ph[0])
-    return sorted(gaps)
 
 def reflect_arcs(arcs):
     out = []
