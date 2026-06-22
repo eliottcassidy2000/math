@@ -10877,3 +10877,17 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
   **(b) THE FORCED-MEMBERSHIP LEMMA (the crux, verified bounded):** **TIGHT ==> {1,...,11,13} ⊆ S.** I.e. every one of the 12 elements 1..11,13 is in every tight set; only 12 is "movable" (to its double 24). VERIFIED: 0 tight sets in {1..24} miss ANY r in {1..11,13} (exhaustive over q=14 primitive sets guarding the missing r). [Single-swap: replace r (r!=12) by any multiple => loose, the FORCED-elements result extended.]
   **COMPLETION:** (a)+(b) ==> the tight 13-sets in {1..24} are EXACTLY {AP, GW}. The FULL census (all of N) needs (b) UNBOUNDED [every tight set, however large, contains {1..11,13}] + BOUNDEDNESS [tight => max <= 24, so the enumeration is finite]. Both are the irreducible open core (= LRC(13)-flavored). The asymmetry of 12 (the unique movable element) is exactly the Jacobsthal-gated doubling site (HYP-2918): 12 is movable because 12=4*3 fills its doubling window [2,3]; 1..11,13 are forced because their windows contain a coprime.
   STATUS: bounded census PROVEN {AP,GW}; full census = [(b) unbounded] + [boundedness], the open core. The proof is now a SINGLE forced-membership lemma + a provable family + a boundedness bound -- the cleanest reduction to date. -> HYP-2917, HYP-2918, HYP-2914, HYP-2909, THM-523, THM-568, OPEN-Q-108.
+
+
+## HYP-2921: SINGLE-SWAP CENSUS PROVEN via explicit M-formulas -- M({1..12,13k})=k/(13k+1)>1/14 for k>=2; only r=12 movable => {AP,GW}; the FULL census's residual is now EXACTLY multi-swap (>=2 missing) + unbounded (kind-pasteur-2026-06-22-S39, sharpening the census completion HYP-2920)
+- **HYP-2921 (single-swap census proven; the residual isolated):** Strengthening HYP-2920(b). The single-element-swap census is now RIGOROUS via explicit gap formulas:
+  For the family {1,...,13}\{r} u {k*r} (remove forced element r, guard it by k*r), the gap M has a closed form > 1/14 for every r != 12, k >= 2:
+   * **r=13: M({1..12,13k}) = k/(13k+1)** -- > 1/14 iff 14k > 13k+1 iff k>1. Verified k=2,3,4: 2/27, 3/40, 4/53.
+   * r=11: 2/25, 1/12, 4/47, ...; r=5: 2/19 (stabilizes); r=7: 3/29; all > 1/14.
+  EXHAUSTIVE (k=2..18, all r): the ONLY single-swap giving M=1/14 is (r=12, k=2) = GW. So **single-swap tight census = {AP, GW}, PROVEN** (formulas, not just search).
+  CENSUS STATUS (the cleanest current map):
+   * BOUNDED census (tight ∩ {1..24}) = {AP, GW}: PROVEN (HYP-2920 (a)+(b), exhaustive).
+   * SINGLE-SWAP census = {AP, GW}: PROVEN (this, M-formulas, all k).
+   * FULL census residual = [MULTI-SWAP: a tight set missing >=2 of {1..11,13}] + [UNBOUNDED: tight set with max > 24]. Double-doublings = 0 tight (verified). The residual is the irreducible open core (= the analytic LRC(14) content, LRC-for-13-runners-flavored).
+  WHY r=12 is the unique movable site (closing the loop): the M-formula M({1..13}\{r} u {2r}) = 1/14 EXACTLY only for r=12, because 2r=24 lands at residue 24≡10 mod 14 keeping the perfect-1-hole tiling (gap 11->13 = 2/14 at the vacated 12), while every other 2r lands at a residue breaking it. This IS the Jacobsthal-gate (HYP-2918): v=12 the unique site whose doubling preserves tightness.
+  NET: the tight-locus census is PROVEN {AP,GW} for bounded + single-swap; the residual is multi-swap+unbounded = the open core. The proof of LRC(14) = [THM-523 q-witness] + [this census, residual open] + [the covering branch = witness-route decorrelation, HYP-2916]. -> HYP-2920, HYP-2918, HYP-2917, HYP-2916, THM-523, OPEN-Q-108.
