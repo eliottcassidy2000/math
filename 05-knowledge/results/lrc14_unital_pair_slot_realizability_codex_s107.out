@@ -1,0 +1,41 @@
+S107: q=3 unital pair-slot realizability check
+K8 pair slots=28; unordered pair-slot pairs=378
+4-edge S8 orbit types=11
+
+orbit 00: size= 105 sig=((2, 1, (1, 1)), (2, 1, (1, 1)), (2, 1, (1, 1)), (2, 1, (1, 1))) sample=((0, 1), (2, 3), (4, 5), (6, 7)) point_rep=15 lambda_adj=0 lambda_dis=3
+orbit 01: size= 210 sig=((4, 4, (2, 2, 2, 2)),) sample=((0, 1), (0, 2), (1, 3), (2, 3)) point_rep=30 lambda_adj=5 lambda_dis=2
+orbit 02: size= 280 sig=((5, 4, (4, 1, 1, 1, 1)),) sample=((0, 1), (0, 2), (0, 3), (0, 4)) point_rep=40 lambda_adj=10 lambda_dis=0
+orbit 03: size= 560 sig=((2, 1, (1, 1)), (3, 3, (2, 2, 2))) sample=((0, 1), (0, 2), (1, 2), (3, 4)) point_rep=80 lambda_adj=10 lambda_dis=8
+orbit 04: size= 840 sig=((4, 4, (3, 2, 2, 1)),) sample=((0, 1), (0, 2), (0, 3), (1, 2)) point_rep=120 lambda_adj=25 lambda_dis=4
+orbit 05: size=1680 sig=((2, 1, (1, 1)), (4, 3, (3, 1, 1, 1))) sample=((0, 1), (0, 2), (0, 3), (4, 5)) point_rep=240 lambda_adj=30 lambda_dis=24
+orbit 06: size=2520 sig=((2, 1, (1, 1)), (2, 1, (1, 1)), (3, 2, (2, 1, 1))) sample=((0, 1), (0, 2), (3, 4), (5, 6)) point_rep=360 lambda_adj=15 lambda_dis=60
+orbit 07: size=2520 sig=((3, 2, (2, 1, 1)), (3, 2, (2, 1, 1))) sample=((0, 1), (0, 2), (3, 4), (3, 5)) point_rep=360 lambda_adj=30 lambda_dis=48
+orbit 08: size=3360 sig=((5, 4, (2, 2, 2, 1, 1)),) sample=((0, 1), (0, 2), (1, 3), (2, 4)) point_rep=480 lambda_adj=60 lambda_dis=48
+orbit 09: size=3360 sig=((5, 4, (3, 2, 1, 1, 1)),) sample=((0, 1), (0, 2), (0, 3), (1, 4)) point_rep=480 lambda_adj=80 lambda_dis=32
+orbit 10: size=5040 sig=((2, 1, (1, 1)), (4, 3, (2, 2, 1, 1))) sample=((0, 1), (0, 2), (1, 3), (4, 5)) point_rep=720 lambda_adj=60 lambda_dis=96
+
+S8-invariant unions realizing 2-(28,4,1): 0
+readout: no natural S8-invariant 4-edge block system is the q=3 unital.
+
+AP8 natural packet statistics:
+  sum class size hist={1: 4, 2: 4, 3: 4, 4: 1}
+  diff class size hist={1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  equal-sum pair count=22
+  equal-diff pair count=56
+  readout: AP pair packets are highly nonuniform, unlike the unital lambda=1 frame.
+
+Tournament-analysis carrier ranking:
+  score=(LRC_faithfulness, tight_locus_specificity, incidence_strength, canonicality)
+  category1_exact_tiling_AP_plus_GW    score=(4, 4, 3, 4)
+  AP8_sum_difference_packets           score=(3, 3, 2, 4)
+  unital_q3_weighted_pair_frame        score=(2, 1, 4, 2)
+  scalar_additive_energy               score=(1, 0, 1, 3)
+  S8_invariant_unital_block_system     score=(0, 0, 4, 4)
+Hamiltonian path:
+  category1_exact_tiling_AP_plus_GW > AP8_sum_difference_packets > unital_q3_weighted_pair_frame > scalar_additive_energy > S8_invariant_unital_block_system
+
+Conclusion:
+  The q=3 unital is a promising weighted tight frame on 28 coordinates,
+  but it is not a canonical AP8 pair-slot block design.  The missing
+  proof obligation is a category-1 labelling/weighting map tied to the
+  AP/Goddyn-Wong tight locus, not an S8-symmetric design identification.

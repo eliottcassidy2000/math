@@ -4,6 +4,7 @@ status: EVIDENCE / proof-carrier refinement; exact finite carrier audit, no LRC1
 source: codex-2026-06-22-S105
 tags: [lrc14, residual-leak, unital, clebsch, truncated-octahedral, bruhat, hodge, design, tournament-analysis]
 related:
+  - HYP-2894
   - HYP-2891
   - HYP-2890
   - HYP-2889
@@ -44,6 +45,11 @@ full residue system `Z_14 \ {0}` and its dilates, while the Goddyn-Wong
 `{1,...,11,13,24}` row is a sporadic tight tiler outside that class.  The
 `q=3` unital below is only a pair-slot averaging frame for the k=8 residual
 after the HYP-2890 same-frequency packet has been subtracted.
+
+S107/HYP-2894 adds the realizability guardrail: the `q=3` unital cannot be
+realized as a canonical `S8`-invariant four-edge block design on the `K8`
+pair slots.  Any useful unital application therefore needs a labelled or
+weighted category-1 map from the AP-dilate plus Goddyn-Wong tight-locus atlas.
 
 ## Exact carrier audit
 

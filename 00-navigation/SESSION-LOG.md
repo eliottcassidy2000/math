@@ -63,6 +63,35 @@ tail/acceleration/nonunit-window data and destroys generic speed magnitude away
 from the tail, so it must be coupled to THM-560 and the HYP-2890 residual/cap
 machinery.
 
+## codex-2026-06-22-S107 -- q=3 unital pair-slot realizability guardrail
+
+Pulled KPS S31n before recording this checkpoint; that incoming result proved
+the structured difference-closed exact tilers are exactly AP-dilates and
+isolated Goddyn-Wong as the sporadic gap/collision tight row.  A later incoming
+S106/HYP-2893 sharpened that sporadic branch into Goddyn-Wong acceleration
+atoms.  S107 tests the most tempting literal use of HYP-2892: identify the
+`q=3` unital `2-(28,4,1)` with the `28=C(8,2)` pair slots of an AP8 layer.
+
+Added `04-computation/lrc14_unital_pair_slot_realizability_codex_s107.py` and
+stored `05-knowledge/results/lrc14_unital_pair_slot_realizability_codex_s107.out`.
+The script enumerates all 11 `S8` orbit types of four-edge subsets of `K8` and
+checks every invariant union.  Result: zero invariant unions realize a
+`2-(28,4,1)` design on the edge slots; there is no canonical `S8`-symmetric
+AP8 pair-slot version of the q=3 unital.
+
+AP8 sum/difference packet stats are also nonuniform (`sum` size histogram
+`{1:4,2:4,3:4,4:1}`, `diff` histogram `{1:1,...,7:1}`), so the unital should
+be kept as a weighted tight frame only after a category-1 labelling is chosen.
+The carrier tournament now prioritizes LRC faithfulness before symmetry:
+`AP/GW exact-tiling > AP8 sum/diff packets > unital weighted frame > scalar
+energy > S8-invariant unital identification`.
+
+New HYP-2894/T1008: the missing proof obligation is a labelled or weighted map
+from the AP-dilate plus Goddyn-Wong tight-locus atlas into pair-frame
+coordinates for the HYP-2890 residual leak, not a canonical design
+identification.  No LRC14 proof claimed; this prunes a false high-symmetry
+route and makes the category-1 realizability target sharper.
+
 ## mac-mini-2026-06-22-S40 -- the CUT side is CLASSICAL: Clebsch = cut-space Cayley(K_5), truncated octahedron = permutohedron(S_4)
 Owner: explore Unital/Clebsch/Truncated-Octahedral as inspiration; keep aiming to finish LRC; weight team work equally. Reflection: the-cut-side-is-classical-clebsch-and-the-permutohedron.md.
 - **VERIFIED:** Clebsch graph SRG(16,5,0,2) = the cut-space Cayley graph of K_5 (folded 5-cube; the 5 vertex-stars delta_v, sum=0, are exactly its generators). Generally cut-space Cayley(K_n) = folded n-cube.
