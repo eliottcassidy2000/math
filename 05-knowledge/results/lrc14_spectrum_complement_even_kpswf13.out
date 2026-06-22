@@ -1,0 +1,120 @@
+################################################################################################
+# THREAD 2: COMPLEMENT-EVEN REFRAME of the Node-3 spectrum sum (kind-pasteur kpswf13)
+#   e<->N-e (cluster T^op) vs x->-x (circle).  Does the complement-EVEN cluster part
+#   determine SPEC?  Plus the frequency-n Z_2 grading of SPEC.
+################################################################################################
+
+================================================================================================
+(1) CLUSTER REFLECTION INVARIANCE:  cover_set(E) =?= cover_set(N-E) =?= cover_set(-E)
+    (if TRUE for all x, then ghat is UNCHANGED by e->N-e: GOOD only sees the cluster
+     up to speed-reflection.  Tested EXACTLY on the common breakpoint refinement.)
+================================================================================================
+
+  k=8 consec (AP-like, R'~0.73):  E=[0, 1, 2, 3, 4, 5, 6, 7]   meas(cover_set(E))=0.327211
+    cover_set(-E) == cover_set(E)? False   (the x->-x / speed-negation invariance)
+    N=  7: N-E=[0, 1, 2, 3, 4, 5, 6, 7]  cover(N-E)==cover(E)? True  meas=0.327211  (meas eq? True)
+    N=  7: N-E=[0, 1, 2, 3, 4, 5, 6, 7]  cover(N-E)==cover(E)? True  meas=0.327211  (meas eq? True)
+    N= 14: N-E=[7, 8, 9, 10, 11, 12, 13, 14]  cover(N-E)==cover(E)? False  meas=0.276909  (meas eq? False)
+
+  k=8 consec small P (R'~0.63):  E=[0, 1, 2, 3, 4, 5, 6, 7]   meas(cover_set(E))=0.327211
+    cover_set(-E) == cover_set(E)? False   (the x->-x / speed-negation invariance)
+    N=  7: N-E=[0, 1, 2, 3, 4, 5, 6, 7]  cover(N-E)==cover(E)? True  meas=0.327211  (meas eq? True)
+    N=  7: N-E=[0, 1, 2, 3, 4, 5, 6, 7]  cover(N-E)==cover(E)? True  meas=0.327211  (meas eq? True)
+    N= 14: N-E=[7, 8, 9, 10, 11, 12, 13, 14]  cover(N-E)==cover(E)? False  meas=0.276909  (meas eq? False)
+
+  k=10 consec |P|=3 (R'~0.59):  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]   meas(cover_set(E))=0.504478
+    cover_set(-E) == cover_set(E)? False   (the x->-x / speed-negation invariance)
+    N=  9: N-E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  cover(N-E)==cover(E)? True  meas=0.504478  (meas eq? True)
+    N=  9: N-E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  cover(N-E)==cover(E)? True  meas=0.504478  (meas eq? True)
+    N= 18: N-E=[9, 10, 11, 12, 13, 14, 15, 16, 17, 18]  cover(N-E)==cover(E)? False  meas=0.465798  (meas eq? False)
+
+  P={2,3,4,5,6} killer:  E=[0, 1, 2, 3, 4, 5, 6, 7]   meas(cover_set(E))=0.327211
+    cover_set(-E) == cover_set(E)? False   (the x->-x / speed-negation invariance)
+    N=  7: N-E=[0, 1, 2, 3, 4, 5, 6, 7]  cover(N-E)==cover(E)? True  meas=0.327211  (meas eq? True)
+    N=  7: N-E=[0, 1, 2, 3, 4, 5, 6, 7]  cover(N-E)==cover(E)? True  meas=0.327211  (meas eq? True)
+    N= 14: N-E=[7, 8, 9, 10, 11, 12, 13, 14]  cover(N-E)==cover(E)? False  meas=0.276909  (meas eq? False)
+
+  k=10 coprime P (R'~1.21):  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]   meas(cover_set(E))=0.504478
+    cover_set(-E) == cover_set(E)? False   (the x->-x / speed-negation invariance)
+    N=  9: N-E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  cover(N-E)==cover(E)? True  meas=0.504478  (meas eq? True)
+    N=  9: N-E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  cover(N-E)==cover(E)? True  meas=0.504478  (meas eq? True)
+    N= 18: N-E=[9, 10, 11, 12, 13, 14, 15, 16, 17, 18]  cover(N-E)==cover(E)? False  meas=0.465798  (meas eq? False)
+
+  wide d>=2 (R'~0.84):  E=[0, 4, 6, 8, 10, 12, 14, 15, 16, 17]   meas(cover_set(E))=0.358178
+    cover_set(-E) == cover_set(E)? False   (the x->-x / speed-negation invariance)
+    N= 17: N-E=[0, 1, 2, 3, 5, 7, 9, 11, 13, 17]  cover(N-E)==cover(E)? False  meas=0.360729  (meas eq? False)
+    N= 17: N-E=[0, 1, 2, 3, 5, 7, 9, 11, 13, 17]  cover(N-E)==cover(E)? False  meas=0.360729  (meas eq? False)
+    N= 34: N-E=[17, 18, 19, 20, 22, 24, 26, 28, 30, 34]  cover(N-E)==cover(E)? False  meas=0.318149  (meas eq? False)
+
+  complement-ASYMMETRIC cluster:  E=[0, 1, 3, 7, 12, 20, 30, 31]   meas(cover_set(E))=0.015986
+    cover_set(-E) == cover_set(E)? False   (the x->-x / speed-negation invariance)
+    N= 31: N-E=[0, 1, 11, 19, 24, 28, 30, 31]  cover(N-E)==cover(E)? False  meas=0.010401  (meas eq? False)
+    N= 31: N-E=[0, 1, 11, 19, 24, 28, 30, 31]  cover(N-E)==cover(E)? False  meas=0.010401  (meas eq? False)
+    N= 62: N-E=[31, 32, 42, 50, 55, 59, 61, 62]  cover(N-E)==cover(E)? False  meas=0.007405  (meas eq? False)
+
+================================================================================================
+(2) COMPLEMENT-EVEN SYMMETRIZATION:  SPEC(E) vs SPEC(E u (N-E))  [the conjecture]
+    center N = max(E)+min(E).  pairs e<->N-e; fixed: 2e=N; asym: N-e not in E.
+    CONJECTURE (HYP-2867): R'/SPEC controlled by the complement-EVEN part; odd cancels.
+================================================================================================
+
+  k=8 consec (AP-like, R'~0.73):  P=[1, 2, 3, 12, 13]
+    E          = [0, 1, 2, 3, 4, 5, 6, 7]
+    N=7: pairs=[(0, 7), (1, 6), (2, 5), (3, 4)]  fixed=[]  asym(odd)=[]
+    E_evensym  = [0, 1, 2, 3, 4, 5, 6, 7]
+    SPEC(E)        = -0.087331   R'(E)        = 0.733058   base=0.327153
+    SPEC(E_sym)    = -0.087331   R'(E_sym)    = 0.733058   base=0.327153
+    Delta SPEC (sym-E) = +0.000000   Delta R' = +0.000000   [E already even: must be 0]
+
+  k=8 consec small P (R'~0.63):  P=[1, 2, 3, 4, 5]
+    E          = [0, 1, 2, 3, 4, 5, 6, 7]
+    N=7: pairs=[(0, 7), (1, 6), (2, 5), (3, 4)]  fixed=[]  asym(odd)=[]
+    E_evensym  = [0, 1, 2, 3, 4, 5, 6, 7]
+    SPEC(E)        = -0.125653   R'(E)        = 0.629996   base=0.339598
+    SPEC(E_sym)    = -0.125653   R'(E_sym)    = 0.629996   base=0.339598
+    Delta SPEC (sym-E) = +0.000000   Delta R' = +0.000000   [E already even: must be 0]
+
+  k=10 consec |P|=3 (R'~0.59):  P=[1, 2, 3]
+    E          = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    N=9: pairs=[(0, 9), (1, 8), (2, 7), (3, 6), (4, 5)]  fixed=[]  asym(odd)=[]
+    E_evensym  = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    SPEC(E)        = -0.140275   R'(E)        = 0.590014   base=0.342146
+    SPEC(E_sym)    = -0.140275   R'(E_sym)    = 0.590014   base=0.342146
+    Delta SPEC (sym-E) = +0.000000   Delta R' = +0.000000   [E already even: must be 0]
+
+  P={2,3,4,5,6} killer:  P=[2, 3, 4, 5, 6]
+    E          = [0, 1, 2, 3, 4, 5, 6, 7]
+    N=7: pairs=[(0, 7), (1, 6), (2, 5), (3, 4)]  fixed=[]  asym(odd)=[]
+    E_evensym  = [0, 1, 2, 3, 4, 5, 6, 7]
+    SPEC(E)        = -0.092692   R'(E)        = 0.739349   base=0.355617
+    SPEC(E_sym)    = -0.092692   R'(E_sym)    = 0.739349   base=0.355617
+    Delta SPEC (sym-E) = +0.000000   Delta R' = +0.000000   [E already even: must be 0]
+
+  k=10 coprime P (R'~1.21):  P=[5, 7, 11]
+    E          = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    N=9: pairs=[(0, 9), (1, 8), (2, 7), (3, 6), (4, 5)]  fixed=[]  asym(odd)=[]
+    E_evensym  = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    SPEC(E)        = +0.065577   R'(E)        = 1.214336   base=0.305955
+    SPEC(E_sym)    = +0.065577   R'(E_sym)    = 1.214336   base=0.305955
+    Delta SPEC (sym-E) = +0.000000   Delta R' = +0.000000   [E already even: must be 0]
+
+  wide d>=2 (R'~0.84):  P=[1, 2, 6]
+    E          = [0, 4, 6, 8, 10, 12, 14, 15, 16, 17]
+    N=17: pairs=[(0, 17)]  fixed=[]  asym(odd)=[4, 6, 8, 10, 12, 14, 15, 16]
+    E_evensym  = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+    SPEC(E)        = -0.072459   R'(E)        = 0.836495   base=0.443163
+    SPEC(E_sym)    = -0.107527   R'(E_sym)    = 0.303093   base=0.154291
+    Delta SPEC (sym-E) = -0.035067   Delta R' = -0.533402   [E has odd part]
+
+  complement-ASYMMETRIC cluster:  P=[1, 2, 3, 12, 13]
+    E          = [0, 1, 3, 7, 12, 20, 30, 31]
+    N=31: pairs=[(0, 31), (1, 30)]  fixed=[]  asym(odd)=[3, 7, 12, 20]
+    E_evensym  = [0, 1, 3, 7, 11, 12, 19, 20, 24, 28, 30, 31]
+    SPEC(E)        = -0.006704   R'(E)        = 0.985989   base=0.478490
+    SPEC(E_sym)    = -0.019194   R'(E_sym)    = 0.941451   base=0.327829
+    Delta SPEC (sym-E) = -0.012490   Delta R' = -0.044538   [E has odd part]
+
+================================================================================================
+(3) FREQUENCY GRADING:  SPEC = SPEC[even n] + SPEC[odd n] = SPEC[7|n] + SPEC[7 nmid n]
+    Which graded part carries the (negative) deviation; which is ~mean-zero?
+================================================================================================

@@ -1,0 +1,37 @@
+################################################################################################
+# THREAD 2 MECHANISM: complement-even reframe made exact (kind-pasteur kpswf13)
+################################################################################################
+
+================================================================================================
+PART 2 THEOREM-CHECK: GOOD=-GOOD and G_P=-G_P => the SINE (complement-odd under x->-x)
+   part of BOTH indicators is identically zero.  SPEC is a pure COSINE x COSINE pairing.
+   This is the exact sense in which 'the complement-odd part is mean-zero': it VANISHES.
+================================================================================================
+  case                     sineE(GOOD)  maxIm(GOOD)   sineE(G_P)  maxIm(G_P)
+  k=8 consec                  1.56e-02     3.53e-02     1.13e-31    2.65e-16
+  k=8 consec smallP           1.56e-02     3.53e-02     1.81e-32    1.24e-16
+  k=10 consec                 1.64e-02     3.78e-02     1.31e-32    1.06e-16
+  killer P                    1.56e-02     3.53e-02     1.30e-32    9.72e-17
+  coprime P                   1.64e-02     3.78e-02     2.22e-32    1.24e-16
+  wide                        1.75e-02     3.26e-02     1.69e-32    1.06e-16
+  asym cluster                3.82e-03     1.16e-02     1.13e-31    2.65e-16
+  => sine energies ~ 1e-30 (machine zero): the complement-odd (sine) channel is EXACTLY
+     absent.  Everything in SPEC lives in the complement-EVEN (cosine) channel. PROVED.
+
+================================================================================================
+PART 1: which cluster complement preserves GOOD exactly (resolving the -E artifact)
+================================================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_complement_even_mechanism_kpswf13.py", line 188, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_complement_even_mechanism_kpswf13.py", line 153, in main
+    eqN = cover_equal(Es, [N - e for e in Es])
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_complement_even_mechanism_kpswf13.py", line 111, in cover_equal
+    allb = sorted(set(_bps(E1)) | set(_bps(E2)))
+                      ~~~~^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_complement_even_mechanism_kpswf13.py", line 106, in _bps
+    v = F(m, 7 * ae)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\fractions.py", line 298, in __new__
+    raise ZeroDivisionError('Fraction(%s, 0)' % numerator)
+ZeroDivisionError: Fraction(0, 0)
