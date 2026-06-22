@@ -50,3 +50,32 @@ THREAD 1: THE WITNESS ROUTE for LRC(n=2q),  q in {3,5,7}   (kpswf11 v2, correcte
       5    4           93/280   0.332143    0.123968    2.679    True  E=[0, 1, 2, 3, 4] ; P=[1, 7, 8, 9]
       6    3            29/75   0.386667    0.123968    3.119    True  E=[0, 1, 2, 3, 4, 5] ; P=[1, 8, 9]
       7    2           53/150   0.353333    0.123968    2.850    True  E=[0, 1, 2, 3, 4, 5, 6] ; P=[1, 8]
+      8    1          211/525   0.401905    0.123968    3.242    True  E=[0, 1, 2, 3, 4, 5, 6, 7] ; P=[1]
+      9    0          241/525   0.459048    0.123968    3.703    True  E=[0, 1, 2, 3, 4, 5, 6, 7, 8] ; P=[]
+
+    => min G2 over k=q..2q-1: 93/280 = 0.332143;  m_P = 0.123968;  ALL G2>=m_P: True
+       DENSE-k (k>=q+1) slack G2/m_P in [2.85, 3.70]
+
+##########################################################################################
+#  q=7  n=14=2*7   gap thr 1/q=1/7   G_P thr 1/n=1/14   speeds=13   LRC(14) OPEN (first open case)
+##########################################################################################
+
+--- (1) admissible floor m_P^(14) (binding |P|=n-4=k=3 cluster) ---
+    |P|=11 (cluster k=2): min meas(G_P) = 313/9702 = 0.0322614  at P=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)
+    |P|=10 (cluster k=3): min meas(G_P) = 14249/252252 = 0.0564872  at P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)  completable(k=3)=True
+
+  >>> m_P^(14) = 14249/252252 = 0.05648716   at |P|=10, P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+      denominator 252252 = 2^2 * 3^2 * 7^2 * 11 * 13
+
+--- (2) PIGEONHOLE: k<q=7 => maxgap>=1/k>1/q => GOOD=[0,1) => G2=meas(G_P) ---
+    k=2: maxgap>=1/2>1/7 ALWAYS => GOOD=[0,1)  (mu=1 confirmed: True)
+    k=3: maxgap>=1/3>1/7 ALWAYS => GOOD=[0,1)  (mu=1 confirmed: True)
+    k=4: maxgap>=1/4>1/7 ALWAYS => GOOD=[0,1)  (mu=1 confirmed: True)
+    k=5: maxgap>=1/5>1/7 ALWAYS => GOOD=[0,1)  (mu=1 confirmed: True)
+    k=6: maxgap>=1/6>1/7 ALWAYS => GOOD=[0,1)  (mu=1 confirmed: True)
+    k=7: k=q: GOOD=[0,1) a.e. (mu=1 confirmed: True; equality x=a/q meas 0)
+
+--- (3)+(4) WITNESS floor G2 over floor cases k=q..2q-1 ---
+      k  |P|           min G2       =dec         m_P   G2/m_P  >=m_P?  argmin (E ; P)
+    --------------------------------------------------------------------------------------------
+      7    6       3029/10780   0.280983    0.056487    4.974    True  E=[0, 1, 2, 3, 4, 5, 6] ; P=[1, 5, 7, 8, 9, 11]
