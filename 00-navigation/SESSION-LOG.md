@@ -6,6 +6,41 @@ Owner: employ tournament analysis -- realize the LRC as tournament iso classes, 
 - **The metric lives at the OPTIMUM iso class** T(t*=a/n) = the n-grid CIRCULANT C_n({1..floor((n-1)/2)}) (antipodal ties at apex n/2 for even n). For AP = the rotational tournament; GW = circulant w/ one residue doubled+skipped. => the census = the achievable OPTIMUM iso classes = the <=3-gap residue configs (HYP-2913). Tournament analysis RECOVERS the three-gap/residue census, reframed.
 - HONEST: a REFRAMING (recovers HYP-2913, doesn't transcend); the open core (achievable optimum classes = {AP-circulant, GW-single-swap}) = the same Steinhaus/consec-maximizes rigidity. VALUE: the census is now visibly a tournament-iso-class REALIZABILITY problem (which iso classes arise at the optimum for integer speeds), the project's native object; H=7 the forbidden apex on both sides.
 NEW: reflection. The LRC census = a tournament-iso-class realizability question (achievable optimum classes).
+## codex-2026-06-22-S127 -- tournament-realizability summit atlas for the LRC14 apex clock
+
+User asked to work toward the summit using Tournament Analysis: define exact
+pairwise relations, quotient to tournament isomorphism classes, and ask which
+classes are achievable.  Added
+`04-computation/lrc14_tournament_realizability_summit_codex_s127.py` with
+stored output
+`05-knowledge/results/lrc14_tournament_realizability_summit_codex_s127.out`,
+and registered HYP-2924.
+
+Exact carrier A: seven selected points on `Z/14Z`, oriented by the half-clock
+cutoff `0<y-x<7`.  Strict no-diameter rows give `128` labelled rows and `10`
+tournament isomorphism classes; all `7`-subsets with diameter ties broken by
+increasing residue give `3432` labelled rows, still `10` classes, with
+diameter-pair histogram `{0:128,1:1344,2:1680,3:280}`.  Exact carrier B:
+thirteen terminal-row speeds at residues `s mod 14`, with collisions/diameters
+broken by speed order.  AP and the residue-liar `12->26` collapse to the same
+apex-winding tournament class, so tournament isomorphism alone cannot prove
+the census; q-threshold/divisibility must be carried outside the quotient.
+GW, loose `8->16`, loose `10->20`, and near-miss `12->36` land in separate
+exact classes.  Readout: the summit proof should be a state lift
+`bad row -> achieved tournament/OCF class with q/off-apex data -> forbidden
+class absent`, not a raw runner-tournament classification alone.
+
+Post-rebase integration: KPS S40, HYP-2923, and mac-mini S57 landed on the
+same prompt.  S40 reads the AP apex winding tournament as a regular rotational
+`13`-vertex class; HYP-2923 retracts the stronger H-max/H-extremal reading
+because `13 == 1 mod 4` gives no Paley tournament and global maximality is
+unverified.  The apex class is necessary-only and magnitude-blind unless paired
+with q-threshold/Farey/no-sink data, and sink-measure is lonely measure rather
+than tightness.  S57 defines the over-time winding realization and verifies
+that achievable classes over all `t` do not distinguish tight from loose; the
+metric lives at the optimum isomorphism class, which is the HYP-2913
+residue/three-gap census.  S127 is therefore the finite apex/terminal atlas
+feeding that broader state-lift program.
 
 ## mac-mini-2026-06-22-S56 -- bounded census TIGHTENED: tight speeds <= 2(n-1); census = O(n^2) search (169 candidates for n=14)
 Owner: make the bounded finite census even more bounded. HYP-2915.
