@@ -1,3 +1,17 @@
+## codex-2026-06-22-S86f -- mac-mini max-gap pigeonhole is root-audited
+
+Rebased over mac-mini S26's new `LRCMaxGapPigeonhole.lean`, then root-imported
+and `Verify`-audited it.  The module now uses `Mathlib.Tactic` instead of
+aggregate `Mathlib`, has no `push_neg` warning, and prints local axiom audits.
+Wrappers:
+`lrc_maxgap_exists_one_div_card_le_audit` and
+`lrc_maxgap_exists_gap_gt_one_seventh_audit`.  Focused, `Verify`, and root
+builds pass with no warnings/no `sorryAx`.
+
+Important boundary: this proves the everywhere-strict max-gap step for
+`k <= 6`; the `k = 7` hnu1 case still needs an a.e. equal-gap boundary/readout
+before it can be used as `nuShape = 1`.
+
 ## codex-2026-06-22-S86e -- concrete slow-time event bridge is now in `LRCEventMeasureBridge`
 
 Added two sorry-free specializations over `DenseCovers.slowμ`:

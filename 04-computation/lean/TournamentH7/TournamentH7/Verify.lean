@@ -51,6 +51,7 @@ import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCWitnessAttainmentBridge
+import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge
@@ -160,6 +161,22 @@ theorem lrc_witness_attainment_margin_sup_audit
     ∃ t : ℝ, LonelyRunner.Lonely 14 v t :=
   TournamentH7.LRCWitness.exists_lonely_of_margin_sSup_ge v hv hmargin
 #print axioms lrc_witness_attainment_margin_sup_audit
+
+/-! ### LRC14 max-gap pigeonhole hnu1 kernel -/
+
+theorem lrc_maxgap_exists_one_div_card_le_audit
+    {k : ℕ} (hk : 0 < k) (g : Fin k → ℝ)
+    (hsum : ∑ i, g i = 1) :
+    ∃ i, (1 : ℝ) / k ≤ g i :=
+  TournamentH7.MaxGapPigeonhole.exists_one_div_card_le hk g hsum
+#print axioms lrc_maxgap_exists_one_div_card_le_audit
+
+theorem lrc_maxgap_exists_gap_gt_one_seventh_audit
+    {k : ℕ} (hk : 0 < k) (hk6 : k ≤ 6)
+    (g : Fin k → ℝ) (hsum : ∑ i, g i = 1) :
+    ∃ i, (1 : ℝ) / 7 < g i :=
+  TournamentH7.MaxGapPigeonhole.exists_gap_gt_one_seventh hk hk6 g hsum
+#print axioms lrc_maxgap_exists_gap_gt_one_seventh_audit
 
 /-! ### LRC14 witness/p0 event-level elementary inclusions -/
 

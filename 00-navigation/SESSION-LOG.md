@@ -1,3 +1,38 @@
+## codex-2026-06-22-S86f -- root-audited incoming max-gap pigeonhole kernel
+
+After the S86e checkpoint rebased over mac-mini S26, inspected the new
+`TournamentH7.LRCMaxGapPigeonhole` module.  It proves the pure averaging kernel
+for the small-cluster witness-floor leg: if `k` nonnegative cyclic gaps sum to
+`1`, then some gap is at least `1/k`; hence when `0 < k ≤ 6`, some gap is
+strictly bigger than `1/7`.  Root-imported the module, narrowed its import from
+aggregate `Mathlib` to `Mathlib.Tactic`, replaced deprecated `push_neg` with
+`push Not`, added a local axiom-audit section, and added `Verify` wrappers
+`lrc_maxgap_exists_one_div_card_le_audit` and
+`lrc_maxgap_exists_gap_gt_one_seventh_audit`.
+
+Focused `lake build TournamentH7.LRCMaxGapPigeonhole`, aggregate
+`lake build TournamentH7.Verify`, and root `lake build TournamentH7` pass.
+Transcripts:
+`05-knowledge/results/lrc_maxgap_pigeonhole_codex_s86f.out`,
+`05-knowledge/results/tournamenth7_verify_lrc_event_bridge_codex_s86f.out`, and
+`05-knowledge/results/tournamenth7_root_lrc_event_bridge_codex_s86f.out`.
+The max-gap audits use only `propext`, `Classical.choice`, and `Quot.sound`;
+transcript scans found no warnings, no `sorryAx`, and no
+`declaration uses .sorry`.
+
+This is a useful `hnu1` building block, not a completed small-cluster measure
+readout.  It covers the everywhere-strict `k ≤ 6` case.  The `k = 7` boundary
+requires the usual a.e. exclusion of exactly equal `1/7` gaps, and the current
+`LRCWitnessBonferroni` small-leg hypothesis still expects the concrete
+`nuShape = 1` statement as an input.
+
+Tournament Analysis: vertices are `{gap vector, sum=1 certificate, 1/k average
+gap, >1/7 strict gap, hnu1 measure readout, small witness floor}`.  Edges are
+averaging, `k≤6` comparison, and later max-gap-event readout.  Challenged
+assumption: the pigeonhole leg is already fully formalized for `k≤7`; the
+machine-checked strict theorem is `k≤6`, while `k=7` must be routed through an
+a.e. boundary lemma.
+
 ## codex-2026-06-22-S86e -- concrete slow-time event bridge is audited
 
 Extended `TournamentH7.LRCEventMeasureBridge` with two concrete slow-time

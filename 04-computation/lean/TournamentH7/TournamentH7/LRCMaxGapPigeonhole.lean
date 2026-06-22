@@ -9,7 +9,7 @@
   `≥ 1/6 > 1/7` ALWAYS — the clean (non-a.e.) part of `hnu1`.  We state it as a
   pure averaging fact over `Fin k`, ready to feed a concrete max-gap definition.
 -/
-import Mathlib
+import Mathlib.Tactic
 
 namespace TournamentH7.MaxGapPigeonhole
 
@@ -20,7 +20,7 @@ that is `≥ 1/k`. -/
 theorem exists_one_div_card_le {k : ℕ} (hk : 0 < k) (g : Fin k → ℝ)
     (hsum : ∑ i, g i = 1) : ∃ i, (1 : ℝ) / k ≤ g i := by
   by_contra h
-  push_neg at h
+  push Not at h
   have hlt : ∑ i, g i < ∑ _i : Fin k, (1 : ℝ) / k := by
     apply Finset.sum_lt_sum_of_nonempty
     · exact Finset.univ_nonempty_iff.mpr (Fin.pos_iff_nonempty.mp hk)
@@ -40,5 +40,10 @@ theorem exists_gap_gt_one_seventh {k : ℕ} (hk : 0 < k) (hk6 : k ≤ 6)
   have hkpos : (0 : ℝ) < (k : ℝ) := by exact_mod_cast hk
   have hk7 : (k : ℝ) < 7 := by exact_mod_cast Nat.lt_succ_of_le hk6
   exact one_div_lt_one_div_of_lt hkpos hk7
+
+/-! ## Axiom audit -/
+
+#print axioms exists_one_div_card_le
+#print axioms exists_gap_gt_one_seventh
 
 end TournamentH7.MaxGapPigeonhole

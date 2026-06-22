@@ -1,0 +1,2 @@
+'TournamentH7.MaxGapPigeonhole.exists_one_div_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentH7.MaxGapPigeonhole.exists_gap_gt_one_seventh' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -133,6 +133,7 @@ import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
+import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge
