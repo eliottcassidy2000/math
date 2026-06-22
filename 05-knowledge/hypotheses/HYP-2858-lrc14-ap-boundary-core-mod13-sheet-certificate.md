@@ -1,14 +1,19 @@
 ---
-id: HYP-2857
-title: LRC14 AP boundary core has a finite mod-13 certificate -- {t,2t,...,12t,V} does not need V/t -> infinity
-status: PROVED for the AP boundary-core family; exact certificate verified on 387840 rows
-source: codex-2026-06-22-S90
+id: HYP-2858
+title: LRC14 AP boundary core has finite mod-13 and sheet-count certificates -- {t,2t,...,12t,V} does not need V/t -> infinity
+status: PROVED for the AP boundary-core family; mod-13 certificate verified on 387840 rows; sheet constants exact
+source: codex-2026-06-22-S90/S91
 related:
   - HYP-2581
   - HYP-2581d
   - HYP-2581f
   - HYP-2652
   - HYP-2838
+  - HYP-2853
+  - HYP-2855
+  - HYP-2856
+  - HYP-2857
+  - HYP-+2863
   - THM-523
   - THM-524
   - THM-526
@@ -16,7 +21,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2857 -- AP boundary-core mod-13 certificate
+# HYP-2858 -- AP boundary-core mod-13 and sheet-count certificates
 
 ## Claim
 
@@ -107,6 +112,95 @@ so the `V` runner has the same distance `m/(13m+1)`.  This is at least
 
 Therefore every AP boundary core is certified directly.
 
+## Sheet-Count Proof For The Covering-Forced Pure Dilation
+
+The user's follow-up isolates the purest kps-S4 hard core:
+
+```text
+S(b,V) = {b,2b,...,12b,V},   gcd(b,V)=1,   V == 0 mod 14.
+```
+
+This is already covered by the mod-13 proof, but it gives a more transferable
+finite-`V` quotient.  Write
+
+```text
+tau = (n+u)/b,   n=0,...,b-1,   u in [0,1).
+```
+
+The dilated block is lonely exactly when
+
+```text
+u in G_12 = {u : ||j u|| >= 1/14 for j=1,...,12}.
+```
+
+Exact interval decomposition gives
+
+```text
+meas(G_12) = 6617/194040,
+arcCount(G_12) = 12,
+widest arc = [1/14, 13/168].
+```
+
+### Comb Floor
+
+The THM-523/THM-518 comb argument specializes to
+
+```text
+L(S) >= (6/7) meas(G_12) - b*arcCount(G_12)/(7V).
+```
+
+So this lower bound is positive whenever
+
+```text
+V/b > arcCount(G_12)/(6*meas(G_12))
+    = 388080/6617
+    = 58.648935...
+```
+
+This is a good large-`V/b` cash-out, but it deliberately loses the regime where
+the hard core was supposed to be most dangerous.
+
+### Sheet Quotient
+
+For fixed `u in G_12`, the offsets
+
+```text
+frac(V n / b),   n=0,...,b-1,
+```
+
+are exactly the `b` equally spaced points on the circle because `gcd(V,b)=1`.
+The extra runner `V` is unsafe on an interval of length `1/7`, so it can kill
+at most `b/7 + 1` of the `b` sheets.  Hence at least
+
+```text
+6b/7 - 1
+```
+
+sheets survive for every fixed good `u`.  Integrating over `G_12`,
+
+```text
+L(S) >= meas(G_12) * (6/7 - 1/b).
+```
+
+In the covering-forced primitive subcase `b` is odd and nontrivial, so this is
+positive in the hard-core rows.  More importantly, it proves that the apparent
+finite-`V` obstruction is not a `V/b` problem: the sheet coordinate itself
+keeps a positive fraction of witnesses.
+
+### Transferable Lemma Shape
+
+The reusable statement suggested by this proof is:
+
+```text
+For bE plus h parked runners each coprime to b,
+L >= meas(G_E) * (1 - h/7 - h/b)
+```
+
+before any slow-fast `V -> infinity` limiting step, with small `b` left to a
+finite check.  This points at non-AP coordinated-growth clusters: the useful
+vertices are sheet labels and parked-runner damage intervals, not the raw
+growth ratio.
+
 ## Computation
 
 Script:
@@ -119,6 +213,18 @@ Transcript:
 
 ```text
 05-knowledge/results/lrc14_ap_boundary_core_certificate_codex_s90.out
+```
+
+Sheet-count script:
+
+```text
+04-computation/lrc14_pure_dilation_sheet_count_codex_s91.py
+```
+
+Sheet-count transcript:
+
+```text
+05-knowledge/results/lrc14_pure_dilation_sheet_count_codex_s91.out
 ```
 
 The script verifies the constructive certificate over the box
@@ -159,15 +265,19 @@ arc-count/rhoK approximation.  It narrows the target by removing the canonical
 AP hard core.
 
 Post-rebase integration: incoming HYP-2855 identifies the q-uniform
-three-distance floor and incoming HYP-2856 gives an explicit `3/pi^2` Farey
-lower bound for that floor.  This certificate is complementary: it says the
-canonical AP boundary family should be handled by exact modular witnesses,
-leaving the three-distance/Farey machinery for the genuinely non-AP
-coordinated-growth residue.
+three-distance floor, HYP-2856 gives an explicit `3/pi^2` Farey lower bound,
+and HYP-2857 gives the Abel/Dirichlet signed-tail route for the
+quasi-independence floor.  Incoming HYP-+2863 independently closes the same
+boundary-core family through the `rho_K` discretization window
+`V/t > 12`.  This certificate is complementary: it says the canonical AP
+boundary family can be handled by exact modular residues, sheet damage counts,
+or the discretized `rho_K` route.  That leaves the three-distance/Farey/signed
+Fourier machinery for the genuinely non-AP coordinated-growth residue.
 
 ## Tournament Analysis And Assumption Challenge
 
-Pairwise observable: exact certified margin for `S(t,V)`.
+Pairwise observable: exact certified margin or positive lonely measure for the
+AP boundary core.
 
 Switch/gauge: a proof quotient wins if it proves the AP boundary core
 uniformly for all finite ratios.
@@ -175,11 +285,12 @@ uniformly for all finite ratios.
 Hamiltonian path:
 
 ```text
-mod_13t_residue_certificate > tail_13m_exact_witness > scale_invariance_gcd_reduction > slow_fast_arc_error_budget > raw_V_over_t_growth > runner_vertices
+sheet_quotient_damage_count > mod_13t_residue_certificate > tail_13m_exact_witness > scale_invariance_gcd_reduction > comb_floor > slow_fast_arc_error_budget > raw_V_over_t_growth > runner_vertices
 ```
 
 Challenged assumption: the useful vertex is not the raw runner family nor the
 growth ratio `V/t`.  The quotient preserving the LRC predicate is the
 denominator-`13t` residue class with the `13∤a` AP-safety constraint and the
-middle-residue condition for `V`.  It destroys slow-fast geometry and keeps the
-actual finite witness.
+middle-residue condition for `V`, or the sheet label `n` after `tau=(n+u)/b`.
+The sheet quotient preserves actual finite witnesses and destroys only the
+irrelevant raw growth scale.

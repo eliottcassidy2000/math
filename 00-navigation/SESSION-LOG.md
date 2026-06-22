@@ -33,6 +33,28 @@ Dispatch (Thread 3): make the quasi-independence ratio `R' = meas(coverSet^c cap
 - **HYP-2606 + HYP-2840 CONNECTION (clean):** SPEC = {sum_high = Weyl tail = THM-546 single-far comb, ghat's 1/n IS the sawtooth} + {sum_low = finite low resonances on gcd(P)Z cap 7Z = the Vitali/rate-V nbhd patch HYP-2852}. HYP-2606 makes sum_low FINITE (chat support) + gives each term's value (D7(c) singular series, HYP-2646). HONEST GAP = uniformity of the C/sqrt(H) rate (wide regime -> THM-531 scale-invariance to bounded core).
 - **CONVERGENCE w/ concurrent kps-S33:** S33's INDEPENDENT real-space route => rigorous q-uniform floor c_q >= 3/pi^2 = 1/(2 zeta(2)) ~ 0.304 (rate-V Farey + Mertens). My R'-floor 0.53 + S33's witness floor 0.304: different objects, BOTH zeta(2)/Farey-governed, BOTH >> m_P. q-harmonic SPEC term scales smoothly q=3,5,7,9 (HYP-2846).
 NEW: HYP-2860; scripts `lrc14_spectrum_{intersection_sum,routing,L2tail_synthesis,synthesis_VERDICT}_kpswf12.py` + outputs. NOTE: `lrc14_spectrum_routing_kpswf12.py` was auto-committed under an S33-labeled checkpoint (c477899b0) but is THIS session's content -- no collision, S33's real deliverable was the Farey/Mertens floor.
+## codex-2026-06-22-S91 -- pure-dilation sheet quotient integrated into the AP boundary-core certificate
+User supplied the sheet-count proof for the kps-S4 hard core
+`S(b,V)={b,2b,...,12b,V}`, `gcd(b,V)=1`, `V==0 mod 14`.  Pulled the
+incoming S33 Node-1/Node-3 synthesis first; it claimed KPS HYP-2857 for the
+Abel/Dirichlet signed-tail floor, so the AP-boundary certificate is now
+renumbered to HYP-2858.
+
+- Added `04-computation/lrc14_pure_dilation_sheet_count_codex_s91.py` and
+  stored `05-knowledge/results/lrc14_pure_dilation_sheet_count_codex_s91.out`.
+  Exact `G_12={u:||ju||>=1/14, j=1..12}` data: `meas=6617/194040`, `12`
+  arcs, widest arc `[1/14,13/168]`.
+- Integrated the two-proof picture into HYP-2858: mod-13 residue certificates
+  prove every AP boundary core; comb floor proves the pure dilation for
+  `V/b>388080/6617`; sheet counting proves the comparable/small `V/b` regime
+  because one coprime parked runner kills at most `b/7+1` of the `b` sheets.
+- New transfer lead: for `bE` plus `h` coprime parked runners, the same sheet
+  quotient gives the preliminary finite-`V` floor
+  `meas(G_E)*(1-h/7-h/b)` before any slow-fast limiting argument.  This is the
+  reusable connection to non-AP coordinated-growth clusters.
+- Integrated incoming mac-mini HYP-+2863 as complementary signal: it closes the
+  same boundary core through the `rho_K` discretization window `V/t>12`, while
+  this session records the exact residue and sheet-count certificates.
 
 ## mac-mini-2026-06-22-S29 -- hp0cap: multiple pieces via the L_y route (reasoning/computation focus); KEY = sqrt-cancellation in the peel deviation
 Per directive (work on hp0cap, mainly reasoning/computation, frequent git sync). FIVE pieces (HYP-2852):
@@ -53,9 +75,9 @@ coordinated-growth core `{t,2t,...,12t,V}` does not require a slow-fast
   stored `05-knowledge/results/lrc14_ap_boundary_core_certificate_codex_s90.out`.
   Exact verification over `t<=80`, `V<=120t` checked `387840` rows with zero
   failures.
-- Claimed HYP-2857 after pulls revealed KPS had already claimed HYP-2853,
-  HYP-2854, HYP-2855, and then HYP-2856.  Proof: divide by `gcd(t,V)`.
-  Usually choose
+- Claimed what is now HYP-2858 after later pulls revealed KPS had already
+  claimed HYP-2853, HYP-2854, HYP-2855, HYP-2856, and then HYP-2857.  Proof:
+  divide by `gcd(t,V)`.  Usually choose
   `tau=a/(13t)` with `13∤a`; then the AP block is exactly `1/13`-safe, and a
   middle-residue count supplies `a` with `||aV/(13t)||>=1/14`.  The reduced
   exceptional tail `{1,...,12,13m}` uses the explicit witness

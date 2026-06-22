@@ -1,0 +1,52 @@
+LRC14 pure-dilation sheet-count scout (Codex S91)
+Family S(b,V)={b,2b,...,12b,V}, gcd(b,V)=1, V == 0 mod 14
+
+Exact G_12 = {u : ||j u|| >= 1/14 for j=1..12}
+  arcs r12       = 12
+  measure mu12   = 6617/194040 = 0.034101216244
+  widest arc     = [1/14, 13/168] length 1/168
+  all intervals:
+    [1/14, 13/168] length 1/168
+    [15/98, 13/84] length 1/588
+    [29/126, 13/56] length 1/504
+    [43/140, 13/42] length 1/420
+    [43/112, 27/70] length 1/560
+    [71/154, 13/28] length 1/308
+    [15/28, 83/154] length 1/308
+    [43/70, 69/112] length 1/560
+    [29/42, 97/140] length 1/420
+    [43/56, 97/126] length 1/504
+    [71/84, 83/98] length 1/588
+    [155/168, 13/14] length 1/168
+
+Comb floor
+  L(S) >= (6/7) mu12 - b*r12/(7V)
+  positivity threshold V/b > r12/(6 mu12) = 388080/6617 = 58.648935
+
+Sheet-count floor
+  For fixed u in G_12, the offsets frac(V*n/b) are a b-point grid.
+  A danger interval of length 1/7 kills at most b/7+1 sheets.
+  Hence safe sheets >= 6b/7 - 1, and
+  L(S) >= mu12 * (6/7 - 1/b).
+
+Representative exact integrations
+    b     V   V/b       actual_L        sheet_LB        comb_LB   min_safe max_killed
+    3    14    4.67   21467/194040    6617/370440  -76543/226380         2          1
+    5    14    2.80  107621/970200 152191/6791400 -131983/226380         4          1
+   13    14    1.08   15437/229320  36139/1358280 -353743/226380        11          2
+   13    28    2.15   11117/229320  36139/1358280 -173563/226380        11          2
+   13    70    5.38    8417/229320  36139/1358280   -13091/45276        11          2
+    5   294   58.80  62483/1697850 152191/6791400      17/226380         4          1
+
+Proof connection
+  The mod-13 certificate proves every AP boundary core directly.
+  The sheet quotient is the reusable part: for bE plus h coprime parked
+  runners, the same union bound gives a first floor
+      meas(G_E) * (1 - h/7 - h/b),
+  before any slow-fast V->infinity argument.  This is a finite-V bridge
+  for non-AP coordinated-growth clusters with bounded h.
+
+Tournament Analysis
+  vertices: sheet quotient > mod-13 residue > comb floor > raw V/b growth > runner vertices
+  pairwise observable: certified positive lonely measure for S(b,V)
+  challenged assumption: the hard core needs V/b large; sheet counting closes small V/b.
