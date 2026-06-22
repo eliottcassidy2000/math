@@ -20809,3 +20809,34 @@ artifact to HYP-2898/T1012/S111 and interpreted it as the analytic companion:
 once exact-tiler boundary cases and one-tail disproof branches are routed away,
 the remaining cap/floor branch still selects labelled Fejer/residual control,
 not scalar energy.
+
+## codex-2026-06-22-S114 -- three-mode address sheaf and finite/analytic split
+
+User supplied the Legendre slot correction and asked to compose Mobius,
+Legendre, and Eisenstein modes toward LRC14.  Pulled incoming S31s/S45 during
+the run: KPS already formalized the Legendre 3-set Venn correction, and
+mac-mini corrected the finite-certificate claim with the lcm family.
+
+Added `04-computation/lrc_three_mode_address_sheaf_codex_s114.py` and stored
+`05-knowledge/results/lrc_three_mode_address_sheaf_codex_s114.out`.  The script
+records the three modes as local address charts, not scalar alternatives:
+Mobius all sizes; Eisenstein even/pronic; Legendre odd/square.  Corrected
+Legendre geometry keeps `A,B:N-1`, `C,D:N-2`, `E,F:N-3`, `G:N-4`, with corners
+`A,D,B`, edges `A+D-E`, `B+D-F`, `A+B-C`, and center
+`A+B+D-C-E-F+G`; the `C/D` seam cancels only in scalar counts.
+
+For LRC14, the top even recurrence samples child sizes `13,12`, while the
+pronic shape exposes apex coordinate `7`; these are different coordinates and
+must both be retained.  S114 also checks the raw `S_X={1..11,13,lcm(2..X)}`
+family: all `D<=X` are killed, proving `q_min>X`, but the stronger
+`q_min=nextprime(X)` wording is false (`X=14 -> D=41`, `X=24 -> D=53`).
+
+Created HYP-2902 and reflection
+`07-reflections/lrc-three-mode-address-sheaf-and-realizability-split-codex-s114.md`.
+Also patched `lrc_three_modes_parity_composition_kps.py` and its stored output
+so the older S31r script now distinguishes Legendre slot sizes `{1,2,3,4}` from
+net scalar offsets `{1,3,4}`.  Proof-order takeaway: Node 2 is finite/AP-hull
+or three-gap majorization with labels; Node 3 is analytic exact-period/Weyl/L2
+after divisor-killed denominators are removed.  This refines incoming HYP-2901's
+denominator wall.  LRC14 remains open; the sharp
+remaining theorem is the uniform Node-3 floor.

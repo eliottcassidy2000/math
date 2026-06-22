@@ -15,7 +15,8 @@ n  parity  h(n)=floor((n-1)^2/4)   shape          even-rec A+B-C   odd-rec A+B-C
 THE THREE MODES' REDUCTION-SIZE-SETS (subtournament sizes, DIFFERENT per mode):
   MOBIUS (always)  : reduce by {1,2,3} = Modes A,B,C (incl-excl skeleton, char of the 7-term lattice)
   EISENSTEIN (even): reduce by {1,2}   = order-2 (x-1)^2, PRONIC, the complement-halving / binary Z[i]
-  LEGENDRE (odd)   : reduce by {1,3,4} = order-4 (x-1)^3(x+1), SQUARE, skips the binary step -2
+  LEGENDRE (odd)   : slots reduce by {1,2,3,4}: A,B n-1; C,D n-2; E,F n-3; G n-4
+                     net scalar offsets are {1,3,4} only because -C + D cancels at n-2
 
 LRC(14) COMPOSITION = parity factorization 14 = 2 * 7:
   14 EVEN  -> EISENSTEIN: half-tiling = 7*6 = 42 (pronic), k=7=14/2 EXPOSES the apex prime 7

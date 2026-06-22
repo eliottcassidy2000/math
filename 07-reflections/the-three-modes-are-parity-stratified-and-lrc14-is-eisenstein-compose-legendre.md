@@ -25,7 +25,8 @@ VERIFIED: the order-2 Eisenstein recurrence `h(n)=2h(n−1)−h(n−2)` **fails 
 (`5→3, 7→8, 9→15, …`) and holds at every even `n` — exactly "Eisenstein only for evens." The
 order-4 Legendre recurrence holds for all `n` but is the *minimal* form an odd half-tiling admits
 (odd = square = 3-corner; even = pronic = degenerate, gets the extra order-2). So the **sign words and
-the subtournament sizes are different objects per mode** — `{n−1,n−2}` vs `{n−1,n−3,n−4}` vs
+the subtournament sizes are different objects per mode** — Eisenstein slots `{n−1,n−2}`, Legendre
+slots `{n−1,n−2,n−3,n−4}` with net scalar offsets `{n−1,n−3,n−4}`, and Möbius slots
 `{n−1,n−2,n−3}`. The Möbius `+++---+` is the inclusion–exclusion over the three reduction modes
 themselves (Mode A `n→n−1`, Mode B `n→n−2`, Mode C `n→n−3`; `7=2³−1` subsets, 3+3+1, HYP-2689).
 
