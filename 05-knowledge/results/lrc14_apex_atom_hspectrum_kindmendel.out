@@ -1,0 +1,10 @@
+n=7: 77 distinct H sampled (max 189); 49 in spectrum: True (strong:True); 75: True (strong:True)
+   strong-core (atom) H-values divisible by 7, <=200: [35, 49, 77, 91, 105, 133, 147, 175, 189]
+   is 49 a product of smaller H? 7 forbidden so 49=7*7 impossible => atom. (strong-realized:True)
+n=8: 320 distinct H sampled (max 661); 49 in spectrum: True (strong:True); 75: True (strong:True)
+   strong-core (atom) H-values divisible by 7, <=200: [49, 63, 77, 91, 105, 119, 133, 147, 161, 175, 189]
+   is 49 a product of smaller H? 7 forbidden so 49=7*7 impossible => atom. (strong-realized:True)
+
+=== APEX TILE (0,n-1) toggle: transitive vs apex-up (master cycle) ===
+transitive n=8: H=1 strong=False (apex (0,7) is 0<-7, i.e. 7->0 already in transitive)
+apex-flipped: H=65 strong=True
