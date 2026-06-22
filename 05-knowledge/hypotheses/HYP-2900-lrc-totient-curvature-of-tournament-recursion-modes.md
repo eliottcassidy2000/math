@@ -315,3 +315,11 @@ Remaining cruxes: (1) TIGHT-LOCUS FINITENESS -- consec + GW are the ONLY tight c
 THM-560 has the difference-closed half + GW single-swap census); (2) GW safety at n=14 (finite check,
 S42 sufficient condition: GW values avoid multiples of 14 => t=1/14 witnesses); (3) effective
 equidistribution (Erdos-Turan) for the SLACK rigor. kps owns (1)+(2) analytic core; I own (3) + SLACK.
+
+## ALL-r EXTENSION (S46): multiplicative (6/7)^r closes the multi-large case for every r
+kps S31v bounds the multi-large Node-3 lemma: union bound (Bonferroni-1) closes r<=6, second-moment
+(pairwise independence) for r>=7. VERIFIED that the FULL multiplicative independence is cleaner:
+meas(Safe(seed) ∩ ∩_i Safe(v_i)) = meas(Safe(seed))*(6/7)^r for INDEPENDENT large speeds (matched to
+~3 decimals, seed {1..5}, r=1..8, all >0). So equidistribution closes ALL r in one stroke -- (6/7)^r>0
+always. Caveat: requires the v_i mutually non-resonant (joint Weyl on T^r); resonant committed speeds
+(e.g. v_2=2 v_1) need kps's correlation/second-moment handling. The clean independent case is (6/7)^r.
