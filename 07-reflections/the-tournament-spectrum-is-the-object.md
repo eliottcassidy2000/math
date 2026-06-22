@@ -31,14 +31,17 @@ A spectrum is a lot of data; the creative step is reading the one number out of 
 tightness. It is the **binding scale** — the denominator of the phase `t*` at which the spectrum's
 *deepest sink* occurs (the optimum, where `M(S)` is achieved):
 
-> **`S` is tight ⟺ the deepest-sink class of `Σ(S)` sits at binding scale 14** (the apex Farey node).
+> **Candidate invariant:** tight sets should have a deepest-sink class of `Σ(S)` sitting at binding
+> scale 14 (the apex Farey node).
 
 Verified exactly: AP and GW land at 14; every loose set lands elsewhere — `12→26 → 12`, `11→24 → 11`,
-`13→26 → 27`, `12→36 → 41` (the Farey neighbor), `12→96 → 101`. This is THM-568 (a tight optimum has
-denominator 14) re-read on the spectrum — but now it is a *complete* characterization, not a
-necessary-only one, because the spectrum carries **both layers at once**: the deepest-sink *class*
-(the residue layer — `R₁₃` or the GW-dipole) and the *scale* it sits at (the magnitude layer). The
-single apex tournament had only the first; the spectrum has both.
+`13→26 → 27`, `12→36 → 41` (the Farey neighbor), `12→96 → 101`. S120/HYP-2929 corrects the
+theorem status: THM-568 proves the local shell fact `14 | D`, not denominator `D=14` by itself.
+Thus binding scale 14 is the right spectral target, but proving that every primitive tight row
+collapses from shell `D=14h` to `h=1` is still a separate shell-collapse / covering-strictness
+obligation. The spectrum remains the right object because it carries **both layers at once**:
+the deepest-sink *class* (the residue layer — `R₁₃` or the GW-dipole) and the *scale* it sits at
+(the magnitude layer). The single apex tournament had only the first; the spectrum has both.
 
 ## Why this is the natural geometry
 

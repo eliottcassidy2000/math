@@ -22,10 +22,12 @@ multiple of `14`, so every denom-14 point is blocked.  This excludes AP/GW-style
 apex equality rows from the covering core.  It does not by itself prove the
 covering core has no off-apex witness or no sub-tight row.
 
-Post-pull, THM-568 changes the status of the structural half: primitive tight
-rows have apex denominator `D=14` (more generally `D=14*gcd(S)`).  So the
-denom-14 location is now theorem-level; what remains is proving covering rows
-are strict.
+S120 correction: THM-568 changes the status of the structural half, but only
+to the local apex-shell statement.  At a tight opposite-binder point
+`t=a/D`, it proves `14|D` and `D|(u+v)`.  The denom-14 location still needs
+shell collapse `D=14h => h=1`; what remains is proving covering rows are
+strict on every shell, or state-lifting shell height `h>1` to the forbidden
+packet.
 
 The exact audit makes the distinction visible:
 
@@ -55,21 +57,25 @@ with M=1/14.
 Without that second line, equality-locus classification alone did not rule out
 a non-apex sub-tight covering row.
 
-After THM-568, the preferred residual is sharper:
+After the corrected THM-568/HYP-2929 read and incoming THM-571, the preferred
+residual is sharper:
 
 ```text
-S = R union Q, Q subset 14*Z, |Q|>=7, R 14-free and |R|<=6
+S = R union Q, Q subset 14*Z, |Q|<=6, R 14-free
   => M(S) > 1/14.
 ```
 
 The 14-free core has a `1/13` margin by smaller LRC.  The multiples of 14 must
-fail to cover the core's margin interval.  The `|Q|<=6` branch is handled by
-the comb-teeth union bound in the incoming S31aa/S31v line; the `|Q|>=7` branch
-is the remaining apex-localized second-moment/equidistribution problem.
+fail to cover the core's margin interval on every shell `D=14h`.  The
+`|Q|>=7` apex-majority branch is now closed by THM-571 via `14 -> 7` gamma
+descent.  The `|Q|<=6` branch is where the S31aa/S31v comb-teeth union bound
+still needs a uniform finite-core / scale-separation input.  KPS-S31ab is useful
+evidence for the AP/GW-to-multiple-of-14 perturbation family, but not yet a
+general proof of this residual.
 
 There are now three clean attacks.
 
-1. THM-568 residual route: prove the `>=7` multiples-of-14 branch above.
+1. THM-568 residual route: prove the `<=6` multiples-of-14 branch above.
 2. Tight-locus route: prove no reduced non-AP/GW atom has `M<=1/14`, extending
    THM-560 and the Goddyn-Wong census into a full finite Node-2 theorem.
 3. Forbidden-H7 route: prove the reduced covering atom trying to saturate or

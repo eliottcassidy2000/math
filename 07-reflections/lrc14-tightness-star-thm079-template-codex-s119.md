@@ -34,24 +34,26 @@ window `[1,18]`, every row satisfying the necessary q-covering condition
 (a multiple of every `q=2..14`) has slack; the minimum is `M=1/12`, and no row
 is tight or below threshold.
 
-Incoming THM-568 sharpens the state after this audit.  It proves the
-apex-denominator lemma: if a tight optimum is `t=a/D`, then `14|D`, the
-binding runners have sum divisible by `D`, and in fact `D=14*gcd(S)`.  Thus a
-primitive tight row is forced to optimize at denominator `14`.
+S120 correction: incoming THM-568 sharpens the state after this audit, but only
+to the apex-shell lemma.  If a tight opposite-binder optimum is `t=a/D`, then
+`14|D` and the active pair sum is divisible by `D`; the additional conclusion
+`D=14*gcd(S)` is exactly the missing shell-collapse theorem.  Thus a primitive
+tight row is forced onto a shell `D=14h`, not yet forced to optimize at
+denominator `14`.
 
-That means the structural half of the star target is now theorem-level.  The
+That means the local arithmetic half of the star target is theorem-level.  The
 remaining branch is no longer "prove all tight rows are AP/GW" in the broad
 sense; it is the localized statement:
 
 ```text
-if S contains multiples of 14, then S is not tight.
+if S contains multiples of 14, then S is not tight on any shell D=14h.
 ```
 
-The 14-free case is done by THM-523 plus THM-568: a 14-free tight row has a
-denominator-14 survivor and therefore optimizes at the apex.  The case with at
-most six multiples of 14 is also done by the 14-free core's `1/13` margin plus
-the comb-teeth union bound.  What remains is the `>=7` multiples-of-14 branch,
-an apex-localized second-moment/equidistribution problem.
+The 14-free case is routed by THM-523 plus the denominator-14 survivor: a
+14-free tight row can optimize at the apex.  The case with at most six
+multiples of 14 is also done by the 14-free core's `1/13` margin plus the
+comb-teeth union bound.  What remains is the `>=7` multiples-of-14 branch,
+an apex-localized shell-collapse / second-moment / equidistribution problem.
 
 The useful correction remains that the equality theorem alone is not the proof.
 

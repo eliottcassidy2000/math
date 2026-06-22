@@ -1,6 +1,6 @@
 ---
 id: HYP-2910
-status: PROOF-TARGET / tightness-star template; THM-568 proves apex-denominator half, THM-569 formalizes the q=14 unit-grid split, THM-571 closes the apex-majority branch
+status: PROOF-TARGET / tightness-star template; THM-568 proves the local apex-shell arithmetic, THM-569 formalizes the q=14 unit-grid split, THM-571 closes the apex-majority branch, and HYP-2929 records the shell-collapse guardrail
 source: codex-2026-06-22-S119
 tags: [lrc14, tight-locus, thm079-template, goddyn-wong, apex-7, covering-core, tournaments, open-q-108]
 depends_on:
@@ -9,6 +9,8 @@ depends_on:
   - HYP-2906
   - HYP-2907
   - HYP-2908
+  - HYP-2911
+  - HYP-2929
   - HYP-2893
   - HYP-2895
   - THM-079
@@ -61,20 +63,23 @@ The remaining target is the tightness-star theorem:
      => S has no multiple of 14 and is non-covering.
 ```
 
-Incoming THM-568 proves the apex-denominator half of this target:
+Incoming THM-568, corrected by HYP-2929, proves the apex-shell half of this
+target:
 
 ```text
-M(S)=1/14 at t=a/D  =>  14 | D, D | (v_i+v_j) for the binders,
-and D=14*gcd(S).
+M(S)=1/14 at t=a/D  =>  14 | D and D | (v_i+v_j) for the binders.
 ```
 
-So a primitive tight optimum is forced to denominator `14`.  The residual is
-now the 14-covering branch: if `S` contains multiples of `14`, prove
-`M(S)>1/14`.  THM-568 plus S31v closes the scale-separated case with at most
-six multiples of `14`; THM-571 closes the complementary apex-majority case
-with at least seven multiples of `14`.
+So a primitive tight optimum is forced onto an apex shell `D=14h`, but the
+collapse `h=1` is a separate theorem target.  The residual is now the
+14-covering/shell branch: if `S` contains multiples of `14`, prove
+`M(S)>1/14` for every shell height.  THM-571 closes the apex-majority
+subbranch with at least seven multiples of `14`, modulo the accepted LRC<=13
+input.  The remaining branch is the scale-separated / bounded-core case with
+at most six multiples of `14`, where S31v supplies the comb estimate and a
+finite-core compression/census theorem must supply the final uniform margin.
 
-Codex S120/THM-569 now formalizes the exact `q=14` unit-grid split in Lean:
+Incoming THM-569 now formalizes the exact `q=14` unit-grid split in Lean:
 
 ```text
 a in (Z/14Z)^*  =>  Lonely 14 v (a/14) <=> no speed is divisible by 14.
@@ -233,8 +238,9 @@ the atom-forcing theorem are both required.  For LRC14, `(*)` is the atom
 forcing theorem only after the bounded-core reduction carries enough boundary
 state to force equality or a forbidden packet.
 
-THM-568 improves this status: the equality-to-apex-denominator part is proved
-elementarily, so the remaining atom-forcing theorem can be stated as
+THM-568/HYP-2929 improves this status: the equality-to-apex-shell part is
+proved elementarily and formalized in Lean, so the remaining atom-forcing
+theorem can be stated as
 
 ```text
 14-covering bounded atom  =>  not tight, in fact M>1/14.

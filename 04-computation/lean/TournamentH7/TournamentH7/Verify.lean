@@ -53,6 +53,7 @@ import TournamentH7.LRCLowerThresholdNeighborhood
 import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCApex7Floor
 import TournamentH7.LRCUnitGrid14
+import TournamentH7.LRCBindingPair
 import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
@@ -69,8 +70,30 @@ import TournamentH7.LRCWitnessFloorConcrete
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCWitnessPartA
 import TournamentH7.LRCL7Discrepancy
+import TournamentH7.LRCApexShell
 
 open Tournament
+
+/-! ### LRC14 denominator-14 binding-pair arithmetic -/
+
+theorem lrc_binding_pair_dvd_audit (a si sj : ℤ)
+    (ha : IsCoprime (14 : ℤ) a)
+    (hi : si * a ≡ 1 [ZMOD 14])
+    (hj : sj * a ≡ -1 [ZMOD 14]) :
+    (14 : ℤ) ∣ si + sj :=
+  LonelyRunner.BindingPair.binding_pair_dvd a si sj ha hi hj
+#print axioms lrc_binding_pair_dvd_audit
+
+/-! ### LRC14 apex-shell arithmetic kernel -/
+
+theorem lrc_apex_shell_fourteen_dvd_pair_sum_audit (u v a m n D : ℤ)
+    (hcop : IsCoprime D a)
+    (hpos : 14 * (u * a - m * D) = D)
+    (hneg : 14 * (v * a - n * D) = -D) :
+    (14 : ℤ) ∣ u + v :=
+  LonelyRunner.ApexShell.fourteen_dvd_pair_sum_of_opposite_bindings
+    u v a m n D hcop hpos hneg
+#print axioms lrc_apex_shell_fourteen_dvd_pair_sum_audit
 
 /-! ### LRC14 HYP-2805 genuine-wide correction kernel -/
 

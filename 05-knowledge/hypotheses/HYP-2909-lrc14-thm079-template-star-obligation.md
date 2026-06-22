@@ -1,6 +1,6 @@
 ---
 id: HYP-2909
-status: PROOF-TEMPLATE AUDIT / THM-568 integration; residual sharpened
+status: PROOF-TEMPLATE AUDIT / apex-shell correction integrated; residual sharpened
 source: codex-2026-06-22-S119
 tags: [lrc14, thm079, tight-locus, apex7, goddyn-wong, covering-sets, tournaments, open-q-108]
 depends_on:
@@ -26,7 +26,10 @@ related:
   - KPS-S31y
   - KPS-S31z
   - KPS-S31aa
+  - KPS-S31ab
   - HYP-+2909
+  - HYP-2911
+  - HYP-2929
   - mac-mini-S47
   - mac-mini-S48
   - OPEN-Q-108
@@ -47,17 +50,20 @@ The owner's THM-079 analogy is the right proof shape, but it should be stated
 with one extra guardrail.  The analogy does not by itself prove the bounded
 atom; it identifies exactly what theorem about the atom is still missing.
 
-Post-pull integration: incoming THM-568 proves the apex-denominator half of
-the STAR target for tight rows.  So this note should now be read as an audit of
-the THM-079 template plus a handoff to the new residual:
+Post-pull integration plus S120 correction: incoming THM-568 proves the local
+apex-shell half of the STAR target for tight rows (`14|D` and
+`D|(active pair sum)`), but not by itself primitive denominator `D=14`.  So this
+note should now be read as an audit of the THM-079 template plus a handoff to
+the shell-collapse / covering-strictness residual:
 
 ```text
 14-covering primitive reduced atom  =>  M(S) > 1/14.
 ```
 
-THM-568 proves the structural statement "primitive tight implies apex
-denominator `D=14`"; the remaining analytic/combinatorial burden is
-covering-strictness, especially when at least seven runners are multiples of
+The structural statement "primitive tight implies apex denominator `D=14`" is
+therefore still a theorem target unless supplied by an additional shell-collapse
+or covering-strictness argument.  The remaining analytic/combinatorial burden is
+covering strictness, especially when at least seven runners are multiples of
 14.
 
 Final-rebase integration: incoming mac-mini S49 / HYP-+2909 proves the weaker
@@ -67,9 +73,9 @@ forward binding-pair statement
 M(S)=1/14  =>  some active pair satisfies 14 | (s_i+s_j).
 ```
 
-This is compatible with THM-568 and is subsumed by its stronger conclusion
-about the tight optimum denominator.  It is still useful as the local
-min-of-sawteeth proof intuition for the apex forcing step.
+This is exactly the safe local conclusion of THM-568 as corrected in HYP-2929
+and formalized in `LRCApexShell.lean`.  The stronger denominator-`14` conclusion
+requires the separate shell-collapse step.
 
 ## The template
 
@@ -146,26 +152,31 @@ component proof has the forcing theorem inside the tournament category.  LRC14
 still has to prove either STAR+ directly or prove the boundary-forcing bridge
 that makes STAR0 sufficient.
 
-Incoming THM-568 proves the structural apex-denominator half of STAR0:
+Incoming THM-568 proves the local apex-shell half of STAR0:
 
 ```text
-M(S)=1/14 and S primitive  =>  every tight optimum has D=14.
+M(S)=1/14 at t=a/D with opposite binders  =>  14|D and D|(u+v).
 ```
 
-For nonprimitive tight rows the denominator is `14*gcd(S)`.  Thus the pasted
-`M(S)=1/14 => apex denominator` clause is no longer merely a target; it is now
-theorem-level.  The remaining statement is sharper:
+Thus the pasted `M(S)=1/14 => apex denominator` clause should be split into the
+proved shell statement and the still-open shell-collapse statement:
+
+```text
+primitive tight shell D=14h  =>  h=1.
+```
+
+The remaining covering statement is:
 
 ```text
 14-covering primitive reduced atom  =>  M(S) > 1/14.
 ```
 
-For 14-free rows, THM-523 already supplies a denom-14 q-witness, and THM-568
-pins tight optima to that apex denominator.  For 14-covering rows with at most
-six multiples of 14, incoming THM-568/S31aa routes to the S31v comb-teeth union
-bound over the 14-free core's `1/13` margin.  The live residual is therefore
-the case with at least seven multiples of 14 over a small 14-free core: an
-apex-localized second-moment/equidistribution problem.
+For 14-free rows, THM-523 already supplies a denom-14 q-witness, so tightness
+ensures at least one apex-denom-14 optimum.  For 14-covering rows with at most
+six multiples of 14, the S31v comb-teeth union bound over the 14-free core's
+margin handles the row.  The live residual is therefore the case with at least
+seven multiples of 14 over a small 14-free core, or equivalently an apex-shell
+second-moment/equidistribution problem.
 
 ## Exact audit
 

@@ -59,6 +59,7 @@
                                       for the LRC14 reach-to-lonely step.
     · TournamentH7.LRCApex7Floor — apex-7 denominator-14 obstruction.
     · TournamentH7.LRCUnitGrid14 — exact denominator-14 unit-grid sieve.
+    · TournamentH7.LRCBindingPair — denominator-14 binding-pair arithmetic.
     · TournamentH7.LRCWitnessAttainment — general `distZ`/margin witness
                                       attainment on a compact period.
     · TournamentH7.LRCWitnessAttainmentBridge — equivalence between the
@@ -153,6 +154,7 @@ import TournamentH7.LRCLowerThresholdNeighborhood
 import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCApex7Floor
 import TournamentH7.LRCUnitGrid14
+import TournamentH7.LRCBindingPair
 import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
@@ -170,4 +172,5 @@ import TournamentH7.LRCFourteenSkeleton
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCWitnessPartA
 import TournamentH7.LRCL7Discrepancy
+import TournamentH7.LRCApexShell
 import TournamentH7.Verify
