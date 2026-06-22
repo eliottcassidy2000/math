@@ -1,28 +1,24 @@
-## mac-mini-2026-06-22-S38 -- Even Graph as Tournament Cycle-Half Synthesis (checkpoint)
+## codex-s102 -- Handoff of Lifted Packet Divergence for LRC (checkpoint)
 
-Formalized the structural synthesis of the even-graph and tournament lenses, establishing the Cut(+)Cycle unification and the cycle-side nature of the $H$ quantity (commit `fa206ef2`). This checkpoint anchors the project's various graph-theoretic perspectives in a single algebraic framework.
+Formalized the handoff and analysis of lifted packet divergence in LRC configurations, applying finite signed-current balance to support-six reciprocal lifts (commit `d2a0c8a2`). This checkpoint establishes the divergence defect as a structural shadow of cyclic excess in non-lonely phases.
 
-### 1. The One Frame: Cut(+)Cycle Unification
-Established the fundamental decomposition: $E(K_n) = Cut(n-1) \oplus Cycle(C(n-1,2))$.
-- **The Mapping:** Fixing the tournament's base path selects the cut summand (scores/hierarchy), while the $C(n-1,2)$ tiles generate the cycle space (the even graph).
-- **The Result:** The even graph is identified precisely as the tournament's **cycle half**, where the cut information is forgotten. All existing lenses—OCF, metagraph, and Tutte flows—are revealed as different perspectives on this single object.
+### 1. HYP-2884: Packet Divergence in Reciprocal Lifts
+Applied the finite mod-7 current balance (from HYP-2883) to actual LRC reciprocal lifts, identifying a local divergence defect: $div_H(a) = loop_H(a) + \sum_b edge_H(a,b)$.
+- **Lift Optimization:** For a core $(1, 8, 15, 22)$ at $H=12$, a raised-pair lift was found to cut the divergence defect by **3.17x** compared to a standard start-aligned lift (L1 divergence reduced from $0.0193$ to $0.0061$).
+- **Mechanism:** The lifted packet divergence is identified as the "reciprocal-tail shadow" of cyclic/no-sink excess. Non-lonely phases are shown to possess approximately **1.22–1.25x** higher directed 3-cycle content, which correlates with the divergence levels.
 
-### 2. $H$ as a Cycle-Side Quantity
-Confirmed that the tournament complexity $H$ lives on the cycle (flow) side of the decomposition, alongside the apex-7 and odd cycles.
-- **Cycle-Side Validation:** The identity $H = I(\Omega, 2)$ was verified against all 1,096 tournaments for $n \le 5$, proving it consistently reads the cycle-side structure.
-- **Invariant Refutation:** Rigorously refuted the claim that $H$ is an $E_n$ isomorphism invariant. For $n=5$, it was verified that certain even-graph classes carry multiple $H$ values (e.g., one $|E|=4$ class spans $H \in \{5, 9, 11, 13, 15\}$). The cycle half only determines $H$ when the cut is fixed.
+### 2. Synthesis with Cyclic Scars
+Integrated incoming work on winding-cyclic scars, confirming that packet divergence and cyclic content are two sides of the same structural obstruction.
+- **Divergence as Sink-Exclusion:** The divergence defect effectively measures the extent to which the reciprocal lift avoids "sink" states, a necessary condition for maintaining the 1/14-lonely witness window in complex configurations.
 
-### 3. Apex-7 Seam: $C_5 \leftrightarrow K_3$
-Identified the $C_5 = K_3$ "seam" at the apex-7 transition as a dual manifestation of the same obstruction:
-- **Cycle side:** $C_5$ is the XOR of three vertex-conflicting triangles.
-- **Conflict side:** $\Omega=K_3$ ($H=7$) is forbidden because $K_3$ forces a directed $C_5$.
-- **Synthesis:** The pentagon and the triangle are two faces of the same apex-7 obstruction viewed across the Cut(+)Cycle seam.
+### 3. OPEN-Q-108 Target Update
+Defined a new sharp target for the LRC proof:
+- **Directional Deletion:** Systematically delete low-height "wall" directions.
+- **Abel Summation:** Perform an Abel summation of the lifted divergence within HYP-2636 additive-frequency shells.
+- **Impact:** This approach aims to provide a rigorous, bandlimited control over the divergence-driven portions of the witness measure.
 
-### 4. Structural Discipline
-Categorized proof quantities into two orthogonal sets:
-- **Cut Side:** Scores, hierarchy, transitivity, Redei backbone.
-- **Cycle Side:** $H$, odd cycles, even graphs, $\{7, 21\}$ address exclusions, and the LRC apex-7.
-The LRC core is now explicitly recognized as a cycle/flow-side phenomenon, potentially linked to a 5-flow obstruction.
+### 4. Verification and Scout Results
+The `lrc14_packet_balance_lift_probe_codex_s102.py` script provided exact L1 divergence certificates for the $H=12$ test configurations, validating the 3.17x improvement from the raised-pair lift strategy.
 
 ### 5. Net Impact
-This synthesis unifies the owner's even-graph metagraph with the kind-pasteur $H=I(\Omega,2)$ and forbidden-clique work. By isolating the cycle half as the carrier for the project's most critical quantities, it provides a clear geometric target for the final $LRC(14)$ closure.
+This handoff stabilizes the "lifted" state of the proof by converting abstract packet balance into a concrete divergence-minimization problem. By anchoring the divergence defect to the cyclic structure of the tournament, the proof gains a precise mechanism for discharging the non-lonely residuals.
