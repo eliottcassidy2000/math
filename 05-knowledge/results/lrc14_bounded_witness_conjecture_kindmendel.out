@@ -1,0 +1,10 @@
+loosest known covering set {1..11,13,84} (M=7/89): (41, 17)
+
+max witness D over random covering sets, by speed scale:
+  speeds<=    1000: n=50, max D = 25
+  speeds<=   10000: n=50, max D = 25
+  speeds<=  100000: n=50, max D = 23
+  speeds<= 1000000: n=50, max D = 26
+
+CONJECTURE: D0 = 41 suffices for all primitive covering 13-sets (= sharpened HYP-2566).
+Structural reason: tau=a/D depends only on {s mod D}; covering controls residues; magnitude irrelevant.

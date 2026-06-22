@@ -1,0 +1,3 @@
+=== max witness D and min M over adversarial covering 13-sets ===
+speeds<=300                           : n=50 maxD=25 (D<=3000 fails:0); minM=0.18539
+      worst-D set: [10, 69, 102, 117, 126, 160, 223, 236, 243, 247, 264, 269, 272]

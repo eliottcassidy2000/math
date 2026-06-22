@@ -1,0 +1,20 @@
+=== SWING 1: the zeta(2)=3/pi^2 floor (HYP-2856) ===
+3/pi^2 = 1/(2 zeta(2)) = 0.30396
+q=3: cluster {0..4}, c_q = meas(maxgap>1/3) ~ 0.4444
+q=5: cluster {0..8}, c_q = meas(maxgap>1/5) ~ 0.4590
+q=7: cluster {0..12}, c_q = meas(maxgap>1/7) ~ 0.4425
+q=9: cluster {0..16}, c_q = meas(maxgap>1/9) ~ 0.4570
+  (HYP-2855 claims c_q ~ 0.55 actual; rate-V lower bound -> 3/pi^2=0.3040)
+
+=== SWING 1b: does the floor SURVIVE the G_P intersection? (the flagged gap) ===
+    meas(GOOD_E ∩ G_P) for sub-cluster E + small part P (the ACTUAL witness floor)
+E=consec_8 P=[1, 5, 7, 8, 9]: meas(GOOD)~0.9402  meas(GOOD∩G_P)~0.3811  (m_P=0.0565, ratio 6.7x)
+E=consec_8 P=[2, 3, 4, 5, 6]: meas(GOOD)~0.9402  meas(GOOD∩G_P)~0.4687  (m_P=0.0565, ratio 8.3x)
+E=[0, 2, 4, 6, 8, 10, 12] P=[1, 3, 5]: meas(GOOD)~1.0000  meas(GOOD∩G_P)~0.6474  (m_P=0.0565, ratio 11.5x)
+E=[0, 1, 2, 3, 4, 5] P=[1, 2, 3, 5, 7, 8, 9]: meas(GOOD)~1.0000  meas(GOOD∩G_P)~0.2640  (m_P=0.0565, ratio 4.7x)
+
+=== SWING 3: CRT 'constructive witness' tau=a/D for covering sets (sidestep analysis) ===
+    For covering S, search small D and a with ||s a/D||>=1/14 for all s in S (=> M>=1/14 explicitly)
+covering 13-sets tested: 40; CRT witness (D<=70) found: 40; failed: 0
+  S=[1, 2, 3, 4, 5, 6]...: covering=False witness=(14, 1, 0.07142857142857142)
+  S=[1, 2, 3, 4, 5, 6]...: covering=False witness=(14, 1, 0.07142857142857142)
