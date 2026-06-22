@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S29 -- hp0cap: multiple pieces via the L_y route (reasoning/computation focus); KEY = sqrt-cancellation in the peel deviation
+Per directive (work on hp0cap, mainly reasoning/computation, frequent git sync). FIVE pieces (HYP-2852):
+- **p0<=L_y Lean reduction** (LRCMomentDual.lean, WIP unverified): missCount (#missed sectors) measurable via kps's sector-hit; coverSet={missCount=0}; p0<=L_y:=∫g(missCount) via pointwise dual feasibility + integral mono. Machine-checks the THM-534 reduction (hp0cap => "L_y<=cap"). Standalone (no team-build impact); needs one build.
+- **Additive-energy frame (APPROXIMATE):** consec maxes both L_y and additive energy A(E); APs max A (CLASSICAL, rigorous half). BUT L_y is NOT a function of A (same-A configs differ, envelope non-monotone) and consec is not per-moment extremal (mins S3,S4; dual needs +S4) -- the extremality is intrinsically COUPLED (g=[1,0,0,.1,0,0,1] k=8 => L_y≈p_0=cover extremality, hard). Rules out clean reductions.
+- **Closure structure (converges w/ kps HYP-2842):** bounded span<=14 DONE (HYP-2830); WIDE decomposes by #far, ALL CLOSE -- 1far margin 0.035 (binding @ consec_8+far21), 2far 0.112, more-far safer.
+- **SQRT-CANCELLATION breakthrough:** peel deviation |Δ_w·w| ~ C·√V, NOT (6/49)V -- via the mean-zero sawtooth F_j at scattered {w·endpt}; avg_w|Δ_w·w|² <= c·V (Parseval/L2 backbone, VERIFIED RMS~√cells). EXPLAINS THM-546's 5-8x looseness (L2 vs L1). For bounded cores |Δ_w·w|<=~0.5 => peel cutoff ~17 (FEASIBLE).
+- **The convergence:** wide 1far closure = [generic w: √-cancellation, Parseval-provable, MINE] + [resonant w: max|Δw·w| outliers = kps HYP-2842 E-adaptive centers]. Messaged kps; proposed split.
+NEW: HYP-2852 (+breakthrough+L2 updates), LRCMomentDual.lean (WIP), script+notes. Pushed throughout.
+
 ## kind-pasteur-2026-06-22-S32b (MAIN-LOOP) -- the RESONANT NBHD-WIDTH RIGOR: witness floor RIGOROUSLY CLOSED for bounded-V via the rate-V lemma (HYP-2849/2850/2851/2852)
 Dispatch: work the analytic rigor of the resonant nbhd-width (the clean inequality's proof mechanism). Honest arc, ending in a rigorous closure of the binding regime:
 - **HYP-2849 (PROVED conservative lemma):** near c=a/b (b<=q-1), {maxgap{frac(e_i x)}>1/7} contains (c-delta,c+delta), delta=(7-b)/(14 b V). Elementary (phase-collapse to 1/b-grid + Lipschitz). Verified 0/150.
