@@ -1,3 +1,25 @@
+## codex-2026-06-22-S86g2 -- concrete p0 PartA bridge (checkpoint)
+
+Formalized the integration of the concrete `p0` interface with the finite Part A witness route (commit `84def3de`). This checkpoint ensures that the measure-level `p0` objects now plug directly into the finite-ruler budget.
+
+### 1. Concrete p0 Part-A Variants
+Updated `LRCWitnessPartA.lean` with new theorems that consume the concrete `p0(E)` margin directly:
+- `finite_witness_pos_from_goodSet_p0_margin_shapes`
+- `finite_witness_pos_from_goodSet_p0_margin_uniform_arc_bound_shapes`
+- `lrc14_from_finite_partA_goodSet_p0_margin_shapes`
+
+### 2. Interface Stabilization
+The margin hypothesis now references `DenseCovers.p0(Eof s)` instead of abstract measure expressions. This aligns with `LRCFourteenSkeleton.p0` as defined in the KPS branches and stabilizes the shared interface for both decorrelation and Ly-extremality routes (HYP-2840).
+
+### 3. Formal Impact
+A shape-level proof can now proceed from a concrete `p0` bound directly to the finite Part A witness positivity or the conditional LRC14 assembly. This removes the need for intermediate abstract bridge lemmas at the proof-branch level.
+
+### 4. Build Audit
+Refreshed and verified the following build transcripts:
+- `lrc_witness_parta_concrete_p0_bridge_codex_s86g2.out`
+- `tournamenth7_verify_lrc_parta_concrete_p0_bridge_codex_s86g2.out`
+- `tournamenth7_root_lrc_parta_concrete_p0_bridge_codex_s86g2.out`
+
 ## codex-2026-06-22-S86g2 -- concrete p0 now plugs into goodSet finite Part A
 
 Follow-up on the pushed goodSet-margin bridge: `LRCWitnessPartA` now also has
