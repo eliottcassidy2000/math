@@ -30,6 +30,52 @@ Dispatch: work the clean inequality (LRC(14)'s last crux) + prove LRC<14 via our
 - **SMALLER-n / q-UNIFORM (HYP-2846, the LRC<14 answer):** the b<=3 resonant centers give a q-INDEPENDENT lonely floor (maxgap>=1/3>1/q, q>=4), so the SAME [pigeonhole + resonant-nbhd] structure proves LRC(2q) for EVERY q -- VERIFIED LRC(6) (q=3, floor 2/5), LRC(10) (q=5, 93/280), LRC(14) (q=7, ~0.34); floor ~0.33-0.40 q-uniform. This is HOW our witness route handles the COMPOSITE-2q family (HYP-2063 apex zero-divisor) the polynomial method MISSES.
 - **FORMALIZATION:** (workflow Thread C of S29 prior) LRC Lean components sorry-free, skeleton builds EXIT=0, Delsarte cap bounds OMEGA-proved axiom-free.
 - **NET:** LRC(14) = [sector p0<=cap DONE] + [witness G2>=m_P VERIFIED-CLOSED, 3.55-6x slack] + [G2>0=>M>=1/14 PROVED]. REMAINING = the analytic RIGOR of the resonant nbhd-width lemma (comfortable slack). The clean inequality, the owner's target, is CLOSED to a verified floor; the witness route is a q-uniform method validated on LRC(6),(10). NOTE: workflow m_P^(n)=0 was an admissibility bug (|P| must restrict to k>=3 residual); the real floor = min G2 ~0.33-0.40>0.
+## codex-2026-06-22-S88 -- lower-threshold origin-neighborhood width lead for LRC
+
+Pulled the incoming HYP-2842 refutation: exact Farey centers can all be killed
+by composite `P` elements, so the witness floor cannot be proved by exact
+center survival.  Followed the redirect to neighborhood width and wrote the
+exact-rational scout `04-computation/lrc_lower_threshold_nbhd_width_codex_s88.py`
+with stored output `05-knowledge/results/lrc_lower_threshold_nbhd_width_codex_s88.out`.
+
+Main finding (now HYP-2847 after the incoming HYP-2843..2846 namespace claim):
+proper Farey neighborhoods alone still vanish in the deepest bounded dense
+branch for every checked even threshold, but adding the `b=1` origin-collapse
+neighborhood makes the bounded dense residual positive:
+
+| N | proper-only deepest bounded min | origin+proper deepest bounded min |
+|---:|---:|---:|
+| 6 | 0 | `1/15` |
+| 8 | 0 | `5/168` |
+| 10 | 0 | `1/60` |
+| 12 | 0 | `5/264` |
+| 14 | 0 | `2/273` |
+
+Post-fetch integration: KPS S32 independently pushed the stronger HYP-2844 and
+HYP-2846 resonant-neighborhood route, with q-uniform floors for N=6,10,14.
+This S88 note is therefore a narrower bounded-width checksum and Lean handoff:
+it confirms the same HYP-2842 neighborhood-width direction, isolates the
+origin-collapse term, and supplies exact interval-subtraction targets rather
+than claiming the strongest witness floor.
+
+Lean handoff: added `TournamentH7.LRCLowerThresholdNeighborhood`, root-imported
+it, and added `lrc_lower_threshold_neighborhood_readouts_audit` to `Verify`.
+This Lean atom records the exact finite readouts and proves the proper-only
+failure, origin+proper positivity for N=6,8,10,12,14, and that `2/273` is the
+smallest reported origin+proper floor.  Stored transcript:
+`05-knowledge/results/lrc_lower_threshold_neighborhood_lean_codex_s88.out`.
+The remaining formal atom is the real interval-geometry theorem:
+origin/proper neighborhoods are subsets of `goodSet E ∩ safeSet P`, and exact
+interval subtraction lower-bounds the slow-time measure.
+
+Tournament Analysis / assumption challenge: vertices considered were exact
+Farey centers, origin neighborhoods, proper Farey neighborhoods, bounded-width
+certificates, wide-width certificates, raw runners/arcs, and proof obligations.
+The useful quotient is width/proof-obligation vertices.  It preserves interval
+ownership and residual lower bounds while destroying exact center identity,
+speed ownership, and full component geometry.  Pairwise observable: certified
+residual mass after subtracting `G_P` holes.  Hamiltonian path:
+`origin_neighborhood_width > bounded_width > consec_width > wide_width > raw_runner_vertices > exact_farey_points`.
 
 ## kind-pasteur-2026-06-22-S31c -- the RESONANCE BOUND (Vitali); converges with mac-mini's L_y route as its far-element half
 

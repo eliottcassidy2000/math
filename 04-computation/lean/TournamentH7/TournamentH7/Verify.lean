@@ -49,6 +49,7 @@ import TournamentH7.LRCGenuineWideCorrection
 import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
+import TournamentH7.LRCLowerThresholdNeighborhood
 import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainmentBridge
@@ -130,6 +131,38 @@ theorem lrc_doublet_witness_floor_positive_and_separated_audit :
           LonelyRunner.DoubletWitnessFloor.rhoFloorDen :=
   LonelyRunner.DoubletWitnessFloor.audited_doublet_floors_positive_and_separated
 #print axioms lrc_doublet_witness_floor_positive_and_separated_audit
+
+/-! ### LRC lower-threshold Farey-neighborhood arithmetic checksum -/
+
+theorem lrc_lower_threshold_neighborhood_readouts_audit :
+    LonelyRunner.LowerThresholdNeighborhood.properBoundedN6MinNum = 0 ∧
+      LonelyRunner.LowerThresholdNeighborhood.properBoundedN8MinNum = 0 ∧
+      LonelyRunner.LowerThresholdNeighborhood.properBoundedN10MinNum = 0 ∧
+      LonelyRunner.LowerThresholdNeighborhood.properBoundedN12MinNum = 0 ∧
+      LonelyRunner.LowerThresholdNeighborhood.properBoundedN14MinNum = 0 ∧
+      0 < LonelyRunner.LowerThresholdNeighborhood.originBoundedN6MinNum ∧
+      0 < LonelyRunner.LowerThresholdNeighborhood.originBoundedN8MinNum ∧
+      0 < LonelyRunner.LowerThresholdNeighborhood.originBoundedN10MinNum ∧
+      0 < LonelyRunner.LowerThresholdNeighborhood.originBoundedN12MinNum ∧
+      0 < LonelyRunner.LowerThresholdNeighborhood.originBoundedN14MinNum ∧
+      LonelyRunner.LowerThresholdNeighborhood.originBoundedN14MinNum *
+          LonelyRunner.LowerThresholdNeighborhood.originBoundedN6MinDen ≤
+        LonelyRunner.LowerThresholdNeighborhood.originBoundedN6MinNum *
+          LonelyRunner.LowerThresholdNeighborhood.originBoundedN14MinDen ∧
+      LonelyRunner.LowerThresholdNeighborhood.originBoundedN14MinNum *
+          LonelyRunner.LowerThresholdNeighborhood.originBoundedN8MinDen ≤
+        LonelyRunner.LowerThresholdNeighborhood.originBoundedN8MinNum *
+          LonelyRunner.LowerThresholdNeighborhood.originBoundedN14MinDen ∧
+      LonelyRunner.LowerThresholdNeighborhood.originBoundedN14MinNum *
+          LonelyRunner.LowerThresholdNeighborhood.originBoundedN10MinDen ≤
+        LonelyRunner.LowerThresholdNeighborhood.originBoundedN10MinNum *
+          LonelyRunner.LowerThresholdNeighborhood.originBoundedN14MinDen ∧
+      LonelyRunner.LowerThresholdNeighborhood.originBoundedN14MinNum *
+          LonelyRunner.LowerThresholdNeighborhood.originBoundedN12MinDen ≤
+        LonelyRunner.LowerThresholdNeighborhood.originBoundedN12MinNum *
+          LonelyRunner.LowerThresholdNeighborhood.originBoundedN14MinDen :=
+  LonelyRunner.LowerThresholdNeighborhood.audited_lower_threshold_neighborhood_readouts
+#print axioms lrc_lower_threshold_neighborhood_readouts_audit
 
 /-! ### LRC14 HYP-2829 gK8 single-far arithmetic checksum -/
 

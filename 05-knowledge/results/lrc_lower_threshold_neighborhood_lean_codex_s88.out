@@ -1,0 +1,616 @@
+'LonelyRunner.LowerThresholdNeighborhood.proper_bounded_deep_branch_zero_all' depends on axioms: [proper_bounded_deep_branch_zero_all._native.native_decide.ax_1_1]
+'LonelyRunner.LowerThresholdNeighborhood.origin_bounded_dense_positive_all' depends on axioms: [origin_bounded_dense_positive_all._native.native_decide.ax_1_1]
+'LonelyRunner.LowerThresholdNeighborhood.origin_n14_is_smallest_reported_floor' depends on axioms: [origin_n14_is_smallest_reported_floor._native.native_decide.ax_1_1]
+'LonelyRunner.LowerThresholdNeighborhood.audited_lower_threshold_neighborhood_readouts' depends on axioms: [audited_lower_threshold_neighborhood_readouts._native.native_decide.ax_1_1]
+'lrc_genuine_wide_correction_all_reported_rows_below_cap_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.all_reported_rows_below_cap._native.native_decide.ax_1_1]
+'lrc_genuine_wide_correction_k10_smallest_margin_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.k10_is_smallest_reported_margin._native.native_decide.ax_1_1]
+'lrc_genuine_wide_correction_robust_margin_flags_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.robust_margin_flags._native.native_decide.ax_1_1]
+'lrc_genuine_wide_correction_nonprimitive_base_guardrail_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.nonprimitive_base_guardrail._native.native_decide.ax_1_1]
+'lrc_doublet_witness_floor_positive_and_separated_audit' depends on axioms: [LonelyRunner.DoubletWitnessFloor.rhoFloor_above_consecRhoFloor._native.native_decide.ax_1_1,
+ LonelyRunner.DoubletWitnessFloor.rhoFloor_positive._native.native_decide.ax_1_1,
+ LonelyRunner.DoubletWitnessFloor.witnessFloor_above_rhoFloor._native.native_decide.ax_1_1,
+ LonelyRunner.DoubletWitnessFloor.witnessFloor_above_thm530Floor._native.native_decide.ax_1_1,
+ LonelyRunner.DoubletWitnessFloor.witnessFloor_positive._native.native_decide.ax_1_1]
+'lrc_lower_threshold_neighborhood_readouts_audit' depends on axioms: [LonelyRunner.LowerThresholdNeighborhood.audited_lower_threshold_neighborhood_readouts._native.native_decide.ax_1_1]
+'lrc_gk8_singlefar_binding_checks_audit' depends on axioms: [LonelyRunner.Gk8SingleFar.bounded_k10_below_cap._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.bounded_k8_below_cap._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.bounded_k9_below_cap._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k10_below_bounded._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k10_below_cap._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k8_below_bounded._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k8_below_cap._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k9_below_bounded._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k9_below_cap._native.native_decide.ax_1_1]
+'lrc_concrete_lonely_of_mreach_ge_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_gapreach_margin_ge_of_free_interval_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_gapreach_margin_gt_one_div_14_of_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_gapreach_exists_lonely_phase_of_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_gapreach_nearInt_gt_of_forall_int_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_gapreach_exists_nearInt_margin_of_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_attainment_distZ_eq_nearInt_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_attainment_margin_sup_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_maxgap_exists_one_div_card_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_maxgap_exists_gap_gt_one_seventh_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_maxgap_all_eq_one_seventh_of_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_maxgap_exists_gap_gt_or_all_eq_one_seventh_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_goodSet_measurableSet_arc_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_goodSet_measurableSet_goodSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_goodSet_fract_sub_eq_fract_fract_sub_fract_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_goodSet_phaseGapSet_subset_goodSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_goodSet_denseSet_compl_subset_goodSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_dense_covers_all_inner_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_exists_phase_arc_empty_of_not_dense_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_denseSet_subset_coverSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_coverSet_compl_subset_denseSet_compl_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_denseSet_compl_subset_phaseGapSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_volume_denseSet_le_coverSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_volume_coverSet_inter_le_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_measurableSet_coverSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_measurableSet_safeSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_slowμ_denseSet_le_coverSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_bonferroni_toReal_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_event_measure_bridge_bonferroni_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_event_measure_bridge_D_le_p0_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_event_measure_bridge_safeSet_bonferroni_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_event_measure_bridge_denseCovers_D_le_p0_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_event_measure_bridge_goodSet_safeSet_bonferroni_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_event_measure_bridge_goodSet_witness_pos_from_strict_cover_bound_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_event_measure_bridge_goodSet_witness_margin_from_wide_bound_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_cover_bound_coverSet_mono_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_cover_bound_slowμ_coverSet_mono_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_cover_bound_six_le_card_of_coverSet_mem_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_cover_bound_coverSet_eq_empty_of_card_lt_six_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_cover_bound_slowμ_coverSet_eq_zero_of_card_lt_six_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_cover_bound_slowμ_coverSet_lt_cap_of_decorrelation_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_cover_bound_slowμ_coverSet_lt_cap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_marginal_uniform_slowμ_fract_Ico_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_marginal_uniform_slowμ_fract_sector_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_cover_boxes_coverSet_subset_iUnion_sectorBox_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_cover_boxes_slowμ_coverSet_le_tsum_sectorBox_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_arc_complexity_occupiedCount_le_cells_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_arc_complexity_occupiedCount_le_seven_mul_sum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_slowμ_compl_toReal_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_floor_concrete_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_pos_of_p0_lt_measGP_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_carrier_subset_safe_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_carrier_subset_dense_compl_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_carrier_le_dense_compl_measure_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_dense_compl_witness_subset_phaseGap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_dense_compl_witness_le_phaseGap_measure_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_phaseGap_witness_subset_goodSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_phaseGap_witness_le_goodSet_measure_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_pos_from_wide_bound_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_pos_from_strict_cover_bound_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_dense_compl_witness_pos_from_strict_cover_bound_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_phaseGap_witness_pos_from_strict_cover_bound_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_goodSet_witness_pos_from_strict_cover_bound_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_margin_from_wide_bound_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_dense_compl_witness_margin_from_wide_bound_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_phaseGap_witness_margin_from_wide_bound_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_goodSet_witness_margin_from_wide_bound_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_witness_pos_from_wide_bound_margin_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_dense_compl_witness_pos_from_wide_bound_margin_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_phaseGap_witness_pos_from_wide_bound_margin_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_goodSet_witness_pos_from_wide_bound_margin_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_bonferroni_witness_margin_from_p0_wide_bound_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_bonferroni_large_witness_pos_from_p0_wide_bound_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_bonferroni_lrc14_from_p0_positive_wide_bound_split_nodes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_partA_arc_div_lt_delta_of_le_bound_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'lrc_partA_finite_witness_pos_from_uniform_arc_bound_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_partA_finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_partA_finite_witness_pos_from_goodSet_margin_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_partA_finite_witness_pos_from_goodSet_margin_uniform_arc_bound_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_partA_finite_witness_pos_from_goodSet_p0_margin_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_partA_finite_witness_pos_from_goodSet_p0_margin_uniform_arc_bound_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_partA_lrc14_from_finite_partA_goodSet_margin_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_partA_lrc14_from_finite_partA_goodSet_p0_margin_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_partA_lrc14_from_finite_partA_p0_margin_split_shapes_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'lrc_periodmax_all_worst_rows_headroom_positive_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.all_worst_rows_headroom_positive._native.native_decide.ax_1_1]
+'lrc_periodmax_k9_global_worst_among_worst_rows_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.k9_is_global_worst_among_worst_rows._native.native_decide.ax_1_1]
+'lrc_periodmax_count_totals_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.count_totals._native.native_decide.ax_1_1]
+'lrc_periodmax_every_count_row_passes_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.every_count_row_passes._native.native_decide.ax_1_1]
+'lrc_periodmax_k8_periodmax_is_two_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.k8_periodmax_is_two._native.native_decide.ax_1_1]
+'lrc_gk8_singlefar_arithmetic_audit' depends on axioms: [LonelyRunner.Gk8SingleFar.bounded_k10_below_cap._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.bounded_k8_below_cap._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.bounded_k9_below_cap._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k10_below_bounded._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k10_below_cap._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k8_below_bounded._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k8_below_cap._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k9_below_bounded._native.native_decide.ax_1_1,
+ LonelyRunner.Gk8SingleFar.singlefar_k9_below_cap._native.native_decide.ax_1_1]
+'lrc_boolean_type_cut_optimalCoeff_sum_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.optimalCoeff_sum._native.native_decide.ax_1_1]
+'lrc_boolean_type_cut_compactCoeff_sum_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.compactCoeff_sum._native.native_decide.ax_1_1]
+'lrc_boolean_type_cut_optimal_active_rows_equal_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.optimal_active_rows_equal._native.native_decide.ax_1_1]
+'lrc_boolean_type_cut_compact_active_rows_above_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.compact_active_rows_above._native.native_decide.ax_1_1]
+'lrc_boolean_type_cut_compact_active2_equal_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.compact_active2_equal._native.native_decide.ax_1_1]
+'lrc_boolean_type_cut_margins_positive_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.margins_positive._native.native_decide.ax_1_1]
+'lrc_l7_cell_apex_necessity_audit' depends on axioms: [propext, Quot.sound]
+'lrc_l7_matrix_apex_necessity_audit' depends on axioms: [propext, Quot.sound]
+'lrc_l7_c32_disc_audit' depends on axioms: [propext, LonelyRunner.L7Discrepancy.c32_disc._native.native_decide.ax_1_1]
+'lrc_l7_c87_disc_zero_audit' depends on axioms: [propext,
+ LonelyRunner.L7Discrepancy.c87_disc_zero._native.native_decide.ax_1_1]
+'lrc_l7_c21_disc_audit' depends on axioms: [propext, LonelyRunner.L7Discrepancy.c21_disc._native.native_decide.ax_1_1]
+'lrc_l7_c32_rowSums_audit' depends on axioms: [propext]
+'lrc_l7_c32_colSums_audit' depends on axioms: [propext]
+'lrc_factorial_basis_moment_delta_audit' depends on axioms: [LonelyRunner.FactorialAtom.basis_moment_delta._native.native_decide.ax_1_1]
+'lrc_factorial_originCoeff_delta_audit' depends on axioms: [LonelyRunner.FactorialAtom.originCoeff_delta._native.native_decide.ax_1_1]
+'lrc_factorial_basis_q0_sign_audit' depends on axioms: [LonelyRunner.FactorialAtom.basis_q0_sign._native.native_decide.ax_1_1]
+'lrc_factorial_U4_basis_audit' depends on axioms: [LonelyRunner.FactorialAtom.U4_basis._native.native_decide.ax_1_1]
+'lrc_factorial_low12_basis_audit' depends on axioms: [LonelyRunner.FactorialAtom.low12_basis._native.native_decide.ax_1_1]
+'lrc_factorial_cheapScaled_q0_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_q0._native.native_decide.ax_1_1]
+'lrc_factorial_cheapScaled_tail45_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_tail45._native.native_decide.ax_1_1]
+'lrc_factorial_cheapScaled_outside_tailStrip_bool_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_outside_tailStrip_bool._native.native_decide.ax_1_1]
+'lrc_factorial_tailStrip_constants_order_audit' depends on axioms: [LonelyRunner.FactorialAtom.tailStrip_constants_order._native.native_decide.ax_1_1]
+'lrc_factorial_cheapScaled_tailStripSide_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_tailStripSide._native.native_decide.ax_1_1]
+'lrc_factorial_gK8_values_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK8_values._native.native_decide.ax_1_1]
+'lrc_factorial_gK8_dominates_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK8_dominates._native.native_decide.ax_1_1]
+'lrc_factorial_LyK8_readout_audit' depends on axioms: [propext, Quot.sound]
+'lrc_factorial_LyK8_extremeMass_readout_audit' depends on axioms: [propext, Quot.sound]
+'lrc_factorial_LyK8_moment_form_audit' depends on axioms: [propext, Quot.sound]
+'lrc_factorial_LyK8_probability_moment_form_audit' depends on axioms: [propext, Quot.sound]
+'lrc_factorial_LyK8_moment_extremeMass_identity_audit' depends on axioms: [propext, Quot.sound]
+'lrc_factorial_delsarte_bound_k8_audit' depends on axioms: [propext, Quot.sound]
+'lrc_factorial_LyK9_readout_audit' depends on axioms: [propext, Quot.sound]
+'lrc_factorial_gK9_values_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK9_values._native.native_decide.ax_1_1]
+'lrc_factorial_gK9_dominates_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK9_dominates._native.native_decide.ax_1_1]
+'lrc_factorial_delsarte_bound_k9_audit' depends on axioms: [propext, Quot.sound]
+'lrc_factorial_LyK11_readout_audit' depends on axioms: [propext, Quot.sound]
+'lrc_factorial_gK11_values_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK11_values._native.native_decide.ax_1_1]
+'lrc_factorial_gK11_dominates_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK11_dominates._native.native_decide.ax_1_1]
+'lrc_factorial_delsarte_bound_k11_audit' depends on axioms: [propext, Quot.sound]
+'lrc_factorial_gK8_all_binding_rows_audit' depends on axioms: [LonelyRunner.FactorialAtom.capClear_k10._native.native_decide.ax_1_1,
+ LonelyRunner.FactorialAtom.capClear_k11_sharp._native.native_decide.ax_1_1,
+ LonelyRunner.FactorialAtom.capClear_k12._native.native_decide.ax_1_1,
+ LonelyRunner.FactorialAtom.capClear_k13_sharp._native.native_decide.ax_1_1,
+ LonelyRunner.FactorialAtom.capClear_k8._native.native_decide.ax_1_1,
+ LonelyRunner.FactorialAtom.capClear_k9_sharp._native.native_decide.ax_1_1]
+'lrc_q6_consecK9_bound_exact_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK9_bound_exact._native.native_decide.ax_1_1]
+'lrc_q6_consecK10_bound_exact_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK10_bound_exact._native.native_decide.ax_1_1]
+'lrc_q6_consecK9_strict_contraction_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK9_strict_contraction._native.native_decide.ax_1_1]
+'lrc_q6_consecK10_strict_contraction_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK10_strict_contraction._native.native_decide.ax_1_1]
+'lrc_q6_generalScout_strict_contraction_audit' depends on axioms: [LonelyRunner.Q6Contraction.generalScout_strict_contraction._native.native_decide.ax_1_1]
+'lrc_cover_oneFar_live_iff_audit' depends on axioms: [propext,
+ LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_1,
+ LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_2,
+ LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_3,
+ LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_4,
+ LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_5,
+ LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_6,
+ LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_7]
+'lrc_survival_oneFar_live_iff_audit' depends on axioms: [propext,
+ LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_1,
+ LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_2,
+ LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_3,
+ LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_4,
+ LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_5,
+ LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_6,
+ LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_7]
+'lrc_survival_twoFar_live_iff_audit' depends on axioms: [propext,
+ LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_1,
+ LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_2,
+ LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_3,
+ LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_4,
+ LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_5,
+ LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_6,
+ LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_7]
+'lrc_survival_threeFar_live_iff_audit' depends on axioms: [propext,
+ LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_1,
+ LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_2,
+ LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_3,
+ LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_4,
+ LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_5,
+ LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_6,
+ LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_7]
+'lrc_survival_fourFar_live_iff_audit' depends on axioms: [propext,
+ LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_1,
+ LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_2,
+ LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_3,
+ LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_4,
+ LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_5,
+ LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_6,
+ LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_7]
+'lrc_survival_twoFar_middle_silent_audit' depends on axioms: [LonelyRunner.survival_twoFar_middle_silent._native.native_decide.ax_1_1]
+'product_sum_iff_core_audit' depends on axioms: [propext, Quot.sound]
+'pad_core_product_sum_audit' depends on axioms: [propext]
+'core_defect_eq_ones_of_product_sum_audit' depends on axioms: [propext, Quot.sound]
+'two_entry_product_sum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'no_three_ge_two_product_sum_audit' depends on axioms: [propext, Quot.sound]
+'one_cons_two_entry_product_sum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'three_entry_distinct_product_sum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'typeA_root_self_audit' depends on axioms: [propext, Quot.sound]
+'typeA_root_swap_audit' depends on axioms: [propext, Quot.sound]
+'typeA_root_add_root_audit' depends on axioms: [propext, Quot.sound]
+'typeA_root_eq_zero_iff_audit' depends on axioms: [propext, Quot.sound]
+'typeA_root_cycle_sum_audit' depends on axioms: [propext, Quot.sound]
+'typeA_walkRootSum_append_single_audit' depends on axioms: [propext, Quot.sound]
+'typeA_walkRootSum_closed_audit' depends on axioms: [propext, Quot.sound]
+'typeA_rootWalk_rootTotal_audit' depends on axioms: [propext, Quot.sound]
+'typeA_rootPacket_rootTotal_audit' depends on axioms: [propext, Quot.sound]
+'directedCycle_toRootPacket_rootTotal_audit' depends on axioms: [propext, Quot.sound]
+'natOperation_addShadow_iff_lt_audit' depends on axioms: [propext, Quot.sound]
+'natOperation_mulUnitShadow_iff_dvd_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'natOperation_mulShadow_iff_dvd_and_lt_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'natOperation_shifted_binary_collision_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'natOperation_twoFactor_productSum_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'natOperation_trivial_twoFactor_productSum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_ne_seven_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ ocf,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'H_ne_twentyone_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf_extended]
+'H_ne_sixtythree_le_seven_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ H_ne_sixtythree_le_seven_axiom]
+'H_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, redei_existence]
+'forbidden_pair_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'forbidden_trio_le_seven_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ H_ne_sixtythree_le_seven_axiom,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'regular_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+'thm330_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'thm330_easy_audit' depends on axioms: [propext, Quot.sound]
+'reaches_descent_audit' depends on axioms: [propext, Quot.sound]
+'reaches_zero_audit' depends on axioms: [propext, Quot.sound]
+'apex_implies_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'isSelfComplementary_iff_iso_op_audit' depends on axioms: [Quot.sound]
+'regular_not_SF_id_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+'paleyLike_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+'hp_ip_truncated_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+'abstract_anti_palindrome_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'epStart_sum_eq_H_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'epEnd_sum_eq_H_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'outDegree_iso_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'isRegular_iso_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_iso_invariant_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'alphaCount_iso_invariant_audit' depends on axioms: [Quot.sound, alphaCount_iso_invariant]
+'bucketBalance_halfLine_balance_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCuts_empty_iff_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCuts_nonempty_iff_exists_upward_tile_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_eq_zero_iff_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_pos_iff_exists_upward_tile_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_pos_iff_not_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'two_le_goodCutCount_of_upward_tile_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_ne_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_eq_zero_or_two_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCuts_empty_or_two_le_card_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_reflect_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'isGoodCut_interval_union_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'mem_goodCuts_interval_union_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'cutInterval_subset_goodCuts_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_mono_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_bucket_bounds_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_eq_top_iff_all_cuts_good_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'exists_crossesCut_of_mem_cutSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCuts_singleUp_eq_cutInterval_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'exists_goodCutCount_eq_of_allowed_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_spectrum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_allUp_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_complement_of_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'staircase_toTournament_hasBasePath_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'isGoodCut_iff_crossesUpward_toTournament_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'goodCutCount_eq_top_iff_toTournament_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'allUp_toTournament_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'allDown_toTournament_not_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'apexTile_cutInterval_eq_cutSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'singleUp_apex_goodCuts_eq_cutSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'singleUp_apex_goodCutCount_top_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_halfLine_balance_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_crossHalf_card_eq_zero_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_crossHalf_card_le_total_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_pairHalf_mem_selfHalf_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_pairHalf_ne_of_fixedPointFree_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_even_card_of_fixedPointFree_involutiveOn_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_selfHalf_card_even_of_involutive_fixedPointFree_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'bucket_unordered_balance_of_even_selfHalf_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_unordered_balance_of_involutive_fixedPointFree_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'boolCube_xorMask_involutive_audit' depends on axioms: [propext, Quot.sound]
+'boolCube_xorMask_fixedPointFree_audit' depends on axioms: [propext]
+'bucket_unordered_balance_boolCube_masks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_transport_offdiag_eq_crossHalf_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_transport_row_balance_fixedPointFree_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_transport_row_balance_boolCube_masks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_fiber_eq_empty_iff_audit' depends on axioms: [propext, Quot.sound]
+'bucket_incidentHalf_empty_of_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_transportHalf_empty_of_source_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_transportHalf_empty_of_target_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_transportHalf_card_zero_of_source_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_transportHalf_card_zero_of_target_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_transportHalf_row_sum_zero_of_source_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'bucket_transportHalf_column_sum_zero_of_target_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTile_gapPair_roundtrip_audit' does not depend on any axioms
+'stTiling_singleUp_isNonzeroMask_audit' depends on axioms: [propext]
+'stTiling_allUp_isNonzeroMask_audit' depends on axioms: [propext, Quot.sound]
+'stTiling_transport_row_balance_allNonzeroMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_transport_row_balance_singleTileMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_transport_row_balance_complementMask_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_goodCutBucket_zero_iff_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_goodCutBucket_top_iff_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_goodCutBucket_image_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_goodCutBucket_ne_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_goodCutBucket_ne_overTop_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_goodCutBucket_fiber_one_empty_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_goodCutBucket_fiber_overTop_empty_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_goodCutBucket_transport_row_singleTileMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_goodCutBucket_transport_row_allNonzeroMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'stTiling_goodCutBucket_transport_row_complementMask_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'transitive_4_hasBasePath' depends on axioms: [propext, Quot.sound]
+'threeCycle_regular_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'transitive_not_regular_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_ge_three_pow_k_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+'H_lt_27_no_alpha3_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+'H_lt_81_no_alpha4_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+'paley_7_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, paley_7, tilde_score_sink]
+'paley_7_max_audit' depends on axioms: [propext, Classical.choice, Quot.sound, paley_7_maximises_H]
+'stTile_reflect_reflect_audit' depends on axioms: [propext, Quot.sound]
+'stTiling_reflect_reflect_audit' depends on axioms: [propext, Quot.sound]
+'stTiling_complement_complement_audit' depends on axioms: [propext, Quot.sound]
+'stTiling_reflect_complement_commute_audit' depends on axioms: [propext, Quot.sound]
+'alpha_solution_H3_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+'alpha_solution_H5_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+'H_ge_243_of_alpha5_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf_extended]
+'H_ge_729_of_alpha6_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf_extended]
+'H_spectrum_n7_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ H_ne_sixtythree_le_seven_axiom,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises,
+ paley_7_maximises_H]
+'H_spectrum_n3_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'numNS_eq_audit' does not depend on any axioms
+'numNS_plus_numSC_3_audit' depends on axioms: [propext, numIsoClasses_3, numSC_3]
+'numNS_plus_numSC_7_audit' depends on axioms: [propext, numIsoClasses_7, numSC_7]
+'pascal_row_sum_general_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_ge_three_pow_k_general_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_descent,
+ ocf_truncated]
+'singleUp_apex_toTournament_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_ge_one_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+'H_ne_zero_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+'H_odd_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+'H_mod_two_eq_one_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+'H_not_even_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+'H_spectrum_universal_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'alpha_solution_H1_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+'H_in_forbidden_set_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'H_n3_eq_one_or_three_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_chain_step,
+ alpha_subset_bound,
+ maxH_3,
+ moonCamion_oddSize,
+ moonMoser,
+ no_alpha_10_0,
+ no_alpha_4_3,
+ no_alpha_6_2,
+ no_alpha_8_1,
+ ocf,
+ ocf_extended,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'H_n4_eq_135_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_subset_bound,
+ maxH_4,
+ moonCamion_oddSize,
+ moonMoser,
+ ocf,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'H_n5_in_spectrum_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_subset_bound,
+ maxH_5,
+ moonCamion_oddSize,
+ moonMoser,
+ ocf,
+ oddCyclesIn_size3,
+ oddCyclesIn_size4,
+ omegaTriangleLocalises]
+'alpha_solution_H9_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+'alpha_solution_H11_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+'alpha_solution_H13_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_descent,
+ ocf]
+'alpha_solution_H15_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_descent,
+ ocf]
+'small_H_alpha34_zero_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+'alpha_solution_H17_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_descent,
+ ocf]
+'alpha_solution_H19_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_descent,
+ ocf]
+'alpha_solution_H23_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha_binomial_bound,
+ alpha_descent,
+ ocf]
+'base_path_sink_outDegree_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'outDegree_le_n_minus_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'base_path_source_outDegree_ge_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'regular_basepath_n_ge_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_eq_one_iff_transitive_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ alpha1_zero_iff_transitive,
+ ocf,
+ transitive_alphaCount_zero]
+'H_transitive_3_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_transitive_4_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_transitive_5_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_threeCycle_eq_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'threeCycle_alpha1_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+'regular_implies_n_odd_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'regular_basepath_n_odd_ge_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'regular_basepath_n_in_odd_ge_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'paley_3_H_eq_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_transitive_ge_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'H_transitive_eq_one_general_audit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ ocf,
+ transitive_alphaCount_zero]

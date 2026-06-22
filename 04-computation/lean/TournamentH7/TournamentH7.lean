@@ -52,6 +52,9 @@
                                       gK8 single-far margin.
     · TournamentH7.LRCDoubletWitnessFloor — arithmetic checksum for the
                                       genuine-wide doublet rho*/witness scout.
+    · TournamentH7.LRCLowerThresholdNeighborhood — arithmetic checksum for the
+                                      HYP-2847 lower-threshold neighborhood
+                                      width scout.
     · TournamentH7.LRCMreachConcrete — concrete Mreach compactness bridge
                                       for the LRC14 reach-to-lonely step.
     · TournamentH7.LRCWitnessAttainment — general `distZ`/margin witness
@@ -143,6 +146,7 @@ import TournamentH7.LRCGenuineWideCorrection
 import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
+import TournamentH7.LRCLowerThresholdNeighborhood
 import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainment
