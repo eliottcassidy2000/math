@@ -74,3 +74,25 @@ LRC(14) <= the conjunction of:
   tiling extremality (only {1..13}*d tiles [0,1) by its U_s arcs), with the tight case explicitly
   witnessed -- complementing kps's additive-energy route and bypassing the translation-invariant A.
   The crux (1) is now CLEANLY stated: characterize the exact tilers of [0,1) by arc-systems U_s.
+
+## SMALL-n VALIDATION (S42): exact-tiler uniqueness is FALSE; the t=1/n witness; the clean sufficient condition
+Applying the technique to LRC(n) for small n (where LRC is PROVEN, n<=7), per the owner's strategy:
+- **CORRECTION (discipline):** my "only d*{1..13} tiles exactly" is INCOMPLETE. Exhaustive small-n
+  search finds SPORADIC non-consecutive exact-tilers: {1,3,4,7} (n=5), {1,3,4,5,9} (n=6), two at n=8.
+  My S39 "0/5668" was a SAMPLING artifact (random n=14 search missed them). kps THM-560 PROVED the
+  DIFFERENCE-CLOSED exact-tilers are exactly d*{1..n-1}, and identified the sporadic (Goddyn-Wong,
+  single-replacement) exception. So: exact-tilers = structured d*{1..n-1} + GW-sporadic.
+- **ALL exact-tilers are TIGHT-SAFE:** verified M(S)=1/n EXACTLY for every exact-tiler at n=5,6,8
+  (consecutive AND sporadic), each with an explicit witness (strikingly, often t=1/n itself). So LRC
+  holds at these n -- the coverage technique reproduces the known tight instances.
+- **The t=1/n WITNESS:** t=1/n is safe (||s/n||>=1/n for all s) <=> no runner == 0 mod n. Every
+  PRIMITIVE exact-tiler found avoids multiples of n, so **t=1/n witnesses every primitive exact-tiler**;
+  non-primitive ones are d*(primitive) and inherit the scaled witness t=1/(n*d) (meas-safe is scaling-
+  invariant, S39). Verified: NO primitive exact-tiler contains a multiple of n at n=5,6,7 (B=3n).
+- **CLEAN SUFFICIENT CONDITION:** *every primitive exact-tiler avoids multiples of n* ==> LRC(n)
+  (t=1/n witnesses each primitive exact-tiler; scaling handles the rest; non-tilers have positive
+  safe measure). VERIFIED n=5,6,7. This is the sharpened, concrete finish target -- arguably stronger
+  than needed (LRC only needs each exact-tiler safe, not specifically via t=1/n), but clean and
+  checkable. The crux is now: do primitive exact-tilers always avoid multiples of n? = the
+  completeness of the structured+GW (THM-560) tight-instance classification, the residual SPORADIC
+  case (OPEN-Q-108).
