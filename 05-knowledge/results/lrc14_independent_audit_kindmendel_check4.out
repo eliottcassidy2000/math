@@ -1,0 +1,5 @@
+=== CHECK 4 (fixed): max_E p0(E) over primitive E=0+(k-1)-subset of {1..S} ===
+k=8 spread<=16: prim sets= 11432  MAX p0=0.32721 at [0, 1, 2, 3, 4, 5, 6, 7]  cap=0.38146  margin=+0.05425  #(p0>=cap)=0  argmax_is_consec:True
+k=9 spread<=16: prim sets= 12869  MAX p0=0.41616 at [0, 1, 2, 3, 4, 5, 6, 7, 8]  cap=0.49426  margin=+0.07810  #(p0>=cap)=0  argmax_is_consec:True
+k=10 spread<=16: prim sets= 11440  MAX p0=0.50448 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  cap=0.60440  margin=+0.09992  #(p0>=cap)=0  argmax_is_consec:True
+k=8 spread<=20: prim sets= 77400  MAX p0=0.32721 at [0, 1, 2, 3, 4, 5, 6, 7]  cap=0.38146  margin=+0.05425  #(p0>=cap)=0  argmax_is_consec:True

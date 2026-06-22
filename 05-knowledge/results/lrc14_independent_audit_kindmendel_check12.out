@@ -1,0 +1,11 @@
+=== CHECK 1: min meas(G_P) over |P|=psz, P subset {1..13} ===
+psz=1: min=6/7=0.857143 at P=(1,)  published=6/7  OK
+psz=2: min=66/91=0.725275 at P=(1, 13)  published=66/91  OK
+psz=3: min=55/91=0.604396 at P=(1, 12, 13)  published=55/91  OK
+psz=4: min=1979/4004=0.494256 at P=(1, 11, 12, 13)  published=1979/4004  OK
+psz=5: min=2243/5880=0.381463 at P=(1, 5, 7, 8, 9)  published=2243/5880  OK
+psz=6: min=3029/10780=0.280983 at P=(1, 5, 7, 8, 9, 11)  published=3029/10780  OK
+CHECK 1 PASS
+
+=== CHECK 2: p0(consec_k) ===
+p0(consec_8)=481/1470=0.327211  published=481/1470=0.327211  OK

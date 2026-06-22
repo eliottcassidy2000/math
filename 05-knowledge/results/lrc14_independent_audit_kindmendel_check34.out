@@ -1,0 +1,13 @@
+=== CHECK 3: positivity linchpin  cap_k vs p0(consec_k) ===
+m_P = 14249/252252 = 0.056487
+k= 8: cap=0.38146  p0(consec)=0.32721  cap-p0=+0.05425  >0:True  >=m_P:False
+k= 9: cap=0.49426  p0(consec)=0.41616  cap-p0=+0.07810  >0:True  >=m_P:True
+k=10: cap=0.60440  p0(consec)=0.50448  cap-p0=+0.09992  >0:True  >=m_P:True
+k=11: cap=0.72527  p0(consec)=0.58146  cap-p0=+0.14381  >0:True  >=m_P:True
+k=12: cap=0.85714  p0(consec)=0.62411  cap-p0=+0.23303  >0:True  >=m_P:True
+k=13: cap=1.00000  p0(consec)=0.67593  cap-p0=+0.32407  >0:True  >=m_P:True
+
+=== CHECK 4: cap-bound search  max_E p0(E) vs cap_k (E=0+7-subset, spread<=S) ===
+k=8 spread<=16: primitive sets=0  max p0=-1.00000 at None  cap_8=0.38146  #(p0>=cap)=0  consec_max:False (consec p0=0.32721)
+k=9 spread<=16: primitive sets=0  max p0=-1.00000 at None  cap_9=0.49426  #(p0>=cap)=0  consec_max:False (consec p0=0.41616)
+k=10 spread<=16: primitive sets=0  max p0=-1.00000 at None  cap_10=0.60440  #(p0>=cap)=0  consec_max:False (consec p0=0.50448)

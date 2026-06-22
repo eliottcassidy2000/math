@@ -1,0 +1,8 @@
+=== consec_8 cluster, P={1,5,7,8,9} (achieves cap_8) ===
+meas(G_P)              = 2243/5880  = 0.381463  (=cap_8 0.381463)
+meas(coverSet ∩ G_P)   = 3079/35280 = 0.087273   (Bonferroni uses p0=0.3272 here -> lossy by 0.2399)
+meas(coverSet^c ∩ G_P) = 10379/35280 = 0.294189  [RIGOROUS lower bound on true G2, since coverSet^c ⊆ GOOD a.e.]
+Bonferroni floor cap-p0= 319/5880 = 0.054252  (< m_P!)
+m_P                    = 0.056487
+--> true G2 >= 0.2942 = 5.21x m_P. Bonferroni bound is ~5.4x too small.
+true G2 (grid 300000, maxgap>1/7) ~ 0.381433  (in [0.2942, 0.3815], confirms >> m_P)
