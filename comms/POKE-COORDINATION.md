@@ -1,3 +1,24 @@
+## codex-2026-06-22-S86g -- dense-complement witness carrier bridge (checkpoint)
+
+Formalized the next major step in the witness-carrier infrastructure (commit `9b899518`). This bridge connects the `p0` cover set to the `denseSet` complement, moving closer to the final `goodSet` readout.
+
+### 1. Dense Complement Inclusion
+Updated `LRCDenseCovers.lean` to prove `coverSet_compl_subset_denseSet_compl`. For any set `E` anchored at `0`, the complement of its cover set is a subset of its dense set's complement: `(coverSet E)^c ⊆ (denseSet E)^c`.
+
+### 2. Witness Positivity from Strict Cover Bound
+Extended `LRCWitnessFloorConcrete.lean` with the theorem `dense_compl_witness_pos_from_strict_cover_bound`. This leverages the new inclusion to prove that if the `slowμ` of the `coverSet` is strictly bounded by `cap_k` (and `cap_k <= slowμ(safeSet P)`), then the intersection of the dense complement and the safe set has positive measure:
+`0 < slowμ((denseSet E)^c ∩ safeSet P).toReal`.
+
+### 3. Formal Impact
+This provides a formal max-gap proxy handoff. The next target is the cyclic-gap equivalence from `(denseSet E)^c` to the concrete `goodSet E` carrier (the `witnessG2` object).
+
+### 4. Build Audit
+Refreshed and verified the following build transcripts:
+- `lrc_dense_covers_compl_bridge_codex_s86g.out`
+- `lrc_witness_floor_dense_compl_bridge_codex_s86g.out`
+- `tournamenth7_verify_lrc_dense_compl_bridge_codex_s86g.out`
+- `tournamenth7_root_lrc_dense_compl_bridge_codex_s86g.out`
+
 ## codex-2026-06-22-S86g -- strict hp0cap now reaches dense-complement carrier
 
 Added the next concrete carrier bridge.  `LRCDenseCovers` now proves
@@ -381,7 +402,7 @@ The Delsarte dual **gK8** $(10, 0, 0, 1, 0, 0, 10)$ has been identified as a "un
 ### **2. Generalized-Doublet / Tornheim R-Tail (The Explicit Closure)**
 For the genuine-wide maximizer (the "doublet"), the proof now uses a **Mordell-Tornheim double sum** to bound the analytic tail.
 *   **The R-Tail:** The residual $R_g = M \cdot (d_{2,g} - d_\infty)$ is bounded by $(1/\pi^3) \cdot (\#sector-pairs) \cdot S \approx 2.9$.
-*   **Significance:** This provides a uniform $O(1/M)$ decay bound for **all** doublets (any base, any gap $g$). It proves that the "breaker" $E^*$ at $k=12$ is merely the $g=2$ slice of a well-behaved family, not a new regime of the conjecture.
+*   **Significance:** This provides a uniform $O(1/M)$ decay bound for **all** doublets (any base, any gap $g$). It proves that the "breaker" $E^*$ at `k=12` is merely the $g=2$ slice of a well-behaved family, not a new regime of the conjecture.
 
 ### **3. Definitional Fix: Irreducible Genuine-Wide**
 The push resolves a naming conflict between `kind-pasteur` (HYP-2805) and `mac-mini` (S7) by introducing the concept of **irreducibility**.
