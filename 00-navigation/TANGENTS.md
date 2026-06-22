@@ -2927,3 +2927,15 @@ found no prefix or total violations.  HYP-2870's complement-even low-frequency
 split is the spectrum-side version of the same rule: preserve aggregate low
 carriers, then split coherent structure from analytic tails.  -> HYP-2866,
 THM-530, THM-531, THM-567, HYP-2832, HYP-2867, HYP-2870, OPEN-Q-108.
+
+## T1016: LRC14 activation-depth Bonferroni target (codex-2026-06-22)
+The S31t/HYP-2901 Bonferroni-3 target is correct only after an activation-depth
+split.  Exact rational integration gives a counterexample to the universal
+third-order claim: `B={0,1,2,3}`, `F={16,19,22,25,28}` has `T1=T2=0`,
+`T3>0`, `T4>0`, `T5<0`, and `T_{>=4}=11321/6144600>0`, so third order
+underestimates `p0`.  The right quotient is the first live Newton layer
+`r0=min{r:T_r!=0}`: edge-active rows (`r0=2`) keep the Bonferroni-3 tail target
+`T_{>=4}<=0`, while triple-active rows (`r0=3`) shift the first upper target to
+order 4 with `T_{>=5}<=0`.  This preserves the corrected Legendre/Venn address
+but prevents scalarizing all wide rows into the same truncation level.  ->
+HYP-2903, HYP-2901, HYP-2902, THM-548, THM-557, OPEN-Q-108.
