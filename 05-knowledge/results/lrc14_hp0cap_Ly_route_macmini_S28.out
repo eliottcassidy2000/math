@@ -1,0 +1,20 @@
+1. p0 <= L_y and consec maximizes L_y (k=9, tightest):
+       consec: p0=0.41616 L_y=0.49288 p0<=Ly=True Ly<=cap=True
+        AP_d3: p0=0.41616 L_y=0.49288 p0<=Ly=True Ly<=cap=True
+      1far@15: p0=0.34082 L_y=0.42407 p0<=Ly=True Ly<=cap=True
+          gap: p0=0.28611 L_y=0.40593 p0<=Ly=True Ly<=cap=True
+   cap_9=0.49426, consec margin=0.00138
+
+2. arc-complexity V_actual vs 42Σe (consec cores):
+   consec_7: V_actual=23  42Σe=882  ratio=38x  cutoff w*=64
+   consec_8: V_actual=28  42Σe=1176  ratio=42x  cutoff w*=78
+   consec_9: V_actual=29  42Σe=1512  ratio=52x  cutoff w*=81
+   consec_10: V_actual=29  42Σe=1890  ratio=65x  cutoff w*=81
+   consec_11: V_actual=26  42Σe=2310  ratio=89x  cutoff w*=72
+   consec_12: V_actual=26  42Σe=2772  ratio=107x  cutoff w*=72
+
+3. V ~ 4*span (not uniformly bounded):
+     consec_8: span=7 V=28
+        AP_d5: span=35 V=140
+     1far@200: span=200 V=159
+       allbig: span=350 V=1400

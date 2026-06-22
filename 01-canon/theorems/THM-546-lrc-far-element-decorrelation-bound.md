@@ -86,6 +86,17 @@ not just the `n`-cancellation) is `5–76×` below the absolute bound on every t
 extra factor is real but not yet in closed form (it lives in the arc geometry of `B_j`).
 Verified: `|Δ_w| ≤ (6/49)V/w` on all tested cores. → `lrc14_{signed_erdos_turan,abel_sharp_constant}_macmini_0620s2.py`.
 
+## SHARPENING (mac-mini-S28, HYP-2840): V(E') is 40-107x smaller than 42Σe
+
+The recorded arc-complexity bound `V(E') = Σ_j #arcs(B_j) ≤ 42Σe` is MASSIVELY loose.
+Measured `V_actual` (the actual `Σ_j #arcs(B_j(E'))`): consec_8 → 28 (vs 42Σe=1176, **42x**);
+consec_12 → 26 (vs 2772, **107x**). With `V_actual ≈ 26-29` for bounded cores, the gapped
+single-peel cutoff `w* = (6/49)V_actual/μ ≈ 64-81` (μ=0.044 the far-decorrelation margin of
+the cleaner L_y functional, THM-534) — FEASIBLE, vs ~3000 with 42Σe. So the bounded finite
+check need only reach `max(E) ~ 80` before the single far peel closes it. NB `V_actual ~ 4·span`
+(NOT uniformly bounded), so `V/w` is `O(1)` ungapped (→ scale-invariance THM-531) and `→0`
+gapped. See HYP-2840 for the full L_y-route reframing.
+
 ## What it closes — and what remains
 
 - **Gapped configs (`w` large relative to `E'`): CLOSED.** For
