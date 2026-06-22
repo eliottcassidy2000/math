@@ -1,0 +1,58 @@
+S114 lcm committed-speed denominator wall
+Base row B={1,...,11,13}; threshold is inclusive >= 1/14.
+
+Base B first witness denominator: D=12, witnesses=[1, 5, 7, 11]
+
+X= 14 wall_D<=X=True firstD= 41 factor=   41 nextprime= 17 not-nextprime LmodD= 11 witnesses=[17, 24]
+X= 15 wall_D<=X=True firstD= 41 factor=   41 nextprime= 17 not-nextprime LmodD= 11 witnesses=[17, 24]
+X= 16 wall_D<=X=True firstD= 41 factor=   41 nextprime= 17 not-nextprime LmodD= 22 witnesses=[17, 24]
+X= 20 wall_D<=X=True firstD= 41 factor=   41 nextprime= 23 not-nextprime LmodD= 13 witnesses=[17, 24]
+X= 24 wall_D<=X=True firstD= 53 factor=   53 nextprime= 29 not-nextprime LmodD= 22 witnesses=[22, 31]
+X= 30 wall_D<=X=True firstD= 41 factor=   41 nextprime= 31 not-nextprime LmodD= 13 witnesses=[17, 24]
+X= 40 wall_D<=X=True firstD= 41 factor=   41 nextprime= 41 nextprime     LmodD= 15 witnesses=[17, 24]
+X= 50 wall_D<=X=True firstD= 79 factor=   79 nextprime= 53 not-nextprime LmodD=  3 witnesses=[33, 46]
+X= 60 wall_D<=X=True firstD= 67 factor=   67 nextprime= 61 not-nextprime LmodD= 59 witnesses=[28, 39]
+X= 70 wall_D<=X=True firstD= 79 factor=   79 nextprime= 71 not-nextprime LmodD= 50 witnesses=[33, 46]
+X= 80 wall_D<=X=True firstD= 83 factor=   83 nextprime= 83 nextprime     LmodD= 79 witnesses=[7, 76]
+X= 90 wall_D<=X=True firstD= 97 factor=   97 nextprime= 97 nextprime     LmodD=  7 witnesses=[8, 89]
+X=100 wall_D<=X=True firstD=101 factor=  101 nextprime=101 nextprime     LmodD= 37 witnesses=[42, 59]
+X=110 wall_D<=X=True firstD=121 factor= 11^2 nextprime=113 not-nextprime LmodD= 66 witnesses=[10, 111]
+X=120 wall_D<=X=True firstD=121 factor= 11^2 nextprime=127 not-nextprime LmodD= 77 witnesses=[10, 111]
+X=150 wall_D<=X=True firstD=151 factor=  151 nextprime=151 nextprime     LmodD= 54 witnesses=[63, 88]
+X=180 wall_D<=X=True firstD=181 factor=  181 nextprime=181 nextprime     LmodD= 86 witnesses=[15, 75, 106, 166]
+X=200 wall_D<=X=True firstD=223 factor=  223 nextprime=211 not-nextprime LmodD= 32 witnesses=[93, 130]
+
+Exact conclusions
+  1. For every sampled X, no denominator D<=X can witness: lcm(2..X) is 0 mod D.
+  2. Therefore any universal finite denominator basis is impossible.
+  3. firstD=nextprime(X) is not a theorem; mismatches occur often.
+  4. In X=14..140, mismatches with nextprime(X): 72 / 127.
+  5. The first opening can be composite; X=110,120 open at D=121=11^2.
+
+First ten nextprime-rule mismatches
+  X= 14: firstD= 41 (41), nextprime= 17, LmodD= 11, witnesses=[17, 24]
+  X= 15: firstD= 41 (41), nextprime= 17, LmodD= 11, witnesses=[17, 24]
+  X= 16: firstD= 41 (41), nextprime= 17, LmodD= 22, witnesses=[17, 24]
+  X= 17: firstD= 41 (41), nextprime= 19, LmodD=  5, witnesses=[17, 24]
+  X= 18: firstD= 41 (41), nextprime= 19, LmodD=  5, witnesses=[17, 24]
+  X= 19: firstD= 41 (41), nextprime= 23, LmodD= 13, witnesses=[17, 24]
+  X= 20: firstD= 41 (41), nextprime= 23, LmodD= 13, witnesses=[17, 24]
+  X= 21: firstD= 41 (41), nextprime= 23, LmodD= 13, witnesses=[17, 24]
+  X= 22: firstD= 41 (41), nextprime= 23, LmodD= 13, witnesses=[17, 24]
+  X= 23: firstD= 53 (53), nextprime= 29, LmodD= 22, witnesses=[22, 31]
+
+Proof interpretation
+  The rigorous wall is a divisor-lattice statement, not a primality statement.
+  Node 3 cannot be replaced by a finite residue certificate: the committed speed
+  forces witness denominators beyond every fixed bound.  The useful replacement
+  is an effective equidistribution/prime-power-residue lemma for denominators
+  just beyond the lcm wall, composed with the finite Node 2 AP/three-gap cap.
+
+Tournament Analysis
+  vertices: fixed_finite_basis, nextprime_rule, prime_power_wall, radical_plus_residue_control, torus_equidistribution_tail, legendre_venn_finite_node, three_gap_ap_hull_node
+  observable: route score on (unbounded wall, lcm-compatible, node-split preserving, formalizable, data-fit)
+  tie Hamiltonian path: fixed_finite_basis -> nextprime_rule -> prime_power_wall -> radical_plus_residue_control -> torus_equidistribution_tail -> legendre_venn_finite_node -> three_gap_ap_hull_node
+  score histogram by indegree: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed 3-cycle present: False
+  Hamiltonian/topological path: prime_power_wall -> radical_plus_residue_control -> torus_equidistribution_tail -> nextprime_rule -> legendre_venn_finite_node -> three_gap_ap_hull_node -> fixed_finite_basis
+  strongest route: prime_power_wall

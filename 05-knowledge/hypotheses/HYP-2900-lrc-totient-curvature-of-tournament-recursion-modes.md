@@ -12,6 +12,7 @@ depends_on:
   - HYP-2630
   - HYP-2886
 related:
+  - HYP-2901
   - HYP-2899
   - HYP-2898
   - HYP-2897
@@ -183,6 +184,36 @@ additive slot operator to act on multiplicative exact-period packets.
 S31r explains why this exact seam is the right one to inspect: the even
 Eisenstein fold exposes the apex prime `7`, and the residual records the
 Euler-factor cost of passing from the even fold into the odd Legendre channel.
+
+## S114 correction: Legendre is a geometric Venn, not only net coefficients
+
+HYP-2901 incorporates the owner's correction and incoming KPS S31s: the odd
+Legendre mode should be read as the full 3-set Venn
+
+```text
+A+B+D-C-E-F+G,
+```
+
+with corners `A,B` of size `N-1`, corner `D` of size `N-2`, overlaps `C` of
+size `N-2` and `E,F` of size `N-3`, and triple `G` of size `N-4`.  The old
+coefficient tuple `(2,0,-2,1)` is what remains only after the size-`N-2`
+corner `D` and size-`N-2` overlap `C` are scalarized away.  LRC packets should
+not perform that scalarization early: corner-vs-overlap is exactly the label
+that keeps AP/three-gap finite structure distinct from analytic denominator
+survival.
+
+S114 also adds a hard guardrail to the finite-certificate route.  For
+
+```text
+S_X={1,...,11,13,lcm(2,...,X)}
+```
+
+no denominator `D<=X` can witness, because the committed speed is `0 mod D`.
+Thus fixed finite denominator bases are impossible, and even the stronger
+`firstD=nextprime(X)` heuristic is false (`X=110,120` first open at
+`D=121=11^2`).  The curvature residual should therefore be read as a
+prime-power / divisor-lattice opening that must feed an analytic
+equidistribution lemma, not as evidence for a finite residue certificate.
 
 The strengthened proof target is therefore:
 

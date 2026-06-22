@@ -6,6 +6,13 @@ Owner: corrected Legendre recursion (3-set Venn, sizes A=B=h(n-1),C=D=h(n-2),E=F
 - **MODULAR FRAME:** Mobius<->zeta^-1 (S44 totient), Legendre<->quadratic L(chi)/QR/apex-7, Eisenstein<->E_2=1-24*sum sigma_1 q^n where ζ(-1)=-1/12=owner's "1+2+3+..." lives (via B_2). kps S31r: LRC(14)=Eisenstein(even) compose Legendre(odd) on the half-tiling h(n)=floor((n-1)^2/4).
 - Concurrent: kps S31r/s (recursion + parity stratification), codex S113 (totient curvature). Built on them.
 NEW: HYP-2899, refuted HYP-2876. NEXT: Node 2 = AP-hull convex-order majorization (three-gap); Node 3 = effective Weyl/Erdos-Turan for the 30030|v family (radical handle).
+## codex-2026-06-22-S114 -- corrected three-mode composition + lcm committed-denominator wall
+
+User corrected the Legendre recursion slots and asked for a comprehensive proof-pushing synthesis.  Stashed generated session state, pulled incoming KPS S31s, and integrated its Venn correction: Legendre is the odd full 3-set Venn with corners `A,D,B`, edge unions `A+B-C`, `A+D-E`, `B+D-F`, and center `A+B+D-C-E-F+G`; Eisenstein is even-only `A+B-C`; Mobius applies on all sizes.
+
+Added `04-computation/lrc_lcm_committed_denominator_wall_codex_s114.py` and stored `05-knowledge/results/lrc_lcm_committed_denominator_wall_codex_s114.out`.  For `S_X={1,...,11,13,lcm(2,...,X)}`, the script verifies the theorem-level wall: no denominator `D<=X` can witness because the committed speed is `0 mod D`.  This refutes any fixed finite denominator basis for LRC14.  It also corrects the stronger nextprime heuristic: first witness denominators above the wall are not always `nextprime(X)` (`X=60 -> 67`, `X=110,120 -> 121=11^2`; `72/127` mismatches over `X=14..140`).
+
+Created HYP-2901/T1014 and reflection `07-reflections/lrc14-three-mode-composition-denominator-wall-codex-s114.md`.  Proof split recorded: Node 2 is finite Legendre/AP-three-gap Venn extremality; Node 3/finite Part A must be analytic exact-period prime-power/residue equidistribution beyond the lcm wall.  Tournament Analysis used proof routes/denominator packets as vertices rather than runners.
 
 ## mac-mini-2026-06-22-S44 -- the resonance-killing is MULTIPLICATIVE: totient-weighted killing, coprime density 1/zeta(2) floor, the 3 recursion modes = Mobius/IE skeleton
 Owner: coprime density <-> euler-totient <-> multiplicative functions; the 3 tournament recursion modes (A+B+C-D-E-F+G always; A+B-C even; A+B-C+D-E-F+G odd; sizes differ); toward proof/disproof. Reflection: the-resonance-killing-is-multiplicative-totient-mobius-zeta2.md.
