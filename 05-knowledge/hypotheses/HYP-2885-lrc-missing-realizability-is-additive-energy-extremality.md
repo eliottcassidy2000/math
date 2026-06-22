@@ -58,9 +58,11 @@ Rigorous skeleton, three steps (the first and third are DONE):
 
 So the LRC(14) wide bound reduces to ONE realizability inequality (step 2), and the analogue of
 "K_3 is not a conflict graph" is "no integer set exceeds the interval's additive energy" -- a SHARP,
-KNOWN extremal fact. The remaining work is to prove `L_y <= G(A(E))` for monotone `G` (or directly
-that `L_y` is Schur-concave / Fejer-extremized under the interval rearrangement), turning step 2 into
-a corollary of additive combinatorics.
+KNOWN extremal fact.  The S103/S31l correction below narrows the remaining
+work: additive energy gives the dominant Fejer direction, but the theorem must
+be anchored and signed.  Step 2 should be proved as interval/Fejer
+majorization plus labelled sector-tail cancellation, not as a scalar monotone
+`L_y <= G(A(E))` theorem.
 
 ## Why this is the right "slightly different" structure
 - Tournaments: realizability of the CONFLICT GRAPH (Omega); obstruction `K_3` (combinatorial).
@@ -104,8 +106,8 @@ the MEASURE-ZERO boundary `t=1/14`. So the wide bound factors into the two conve
 > `t=1/14`). Generic = my strict additive-energy bound; tight = mac-mini's rational boundary witness.
 
 ## Tests / next
-- Prove `L_y(E) <= L_y(AP)` via `A(E) <= A(AP)` + a spectral majorization `L_y <= G(A)` (the crux).
-- Check Schur-concavity of `L_y` under the interval rearrangement (compress E toward an AP, `L_y` up).
+- Prove `L_y(E) <= L_y(AP)` via anchored AP-facing Fejer majorization plus a signed sector/Fourier tail, not a scalar `L_y <= G(A)` theorem.
+- Check Jensen/Schur-convexity of the anchored sector functional under interval rearrangement (compress E toward the scaled AP stratum, then keep origin labels).
 - Connect to mac-mini's covering-system route (HYP-+2878): over-covering = covering system = also
   realizability-obstructed (Hough). -> THM-534, HYP-2873, HYP-2879, OPEN-Q-108.
 
@@ -163,3 +165,18 @@ Concurrent HYP-+2888 sharpens the endpoint interpretation: the AP extremizer
 covers exactly to measure `1` at the strict threshold, with a boundary rational
 witness rather than a positive-measure safe floor.  So HYP-2889's role is to
 prevent non-AP rows from over-covering past that boundary value.
+
+The S39 refinement makes the warning sharper still.  Additive energy is
+translation-invariant across length-13 APs, but exact strict-threshold tiling is
+scaling-invariant and anchored: the observed exact tilers are the scaled
+consecutive multiples `d*{1,...,13}`, with witness `t=1/(14d)`.  Translates
+such as `{2,...,14}` keep maximum additive energy while gaining positive safe
+measure.  The extremality proof therefore cannot quotient to the scalar energy
+or an affine-translation class; it must retain the anchored sector labels until
+the signed tail is controlled.
+
+The KPS S31l moment-coefficient check is consistent with this correction.  The
+leading `s=2` additive-energy coefficient is positive, but higher additive
+moments have mixed signs (`s=3,4` already negative at k=9, and k=12 turns
+negative from `s=4`).  The finish should be a Jensen/Schur-convexity plus
+signed-cancellation theorem, not a term-by-term positive expansion.

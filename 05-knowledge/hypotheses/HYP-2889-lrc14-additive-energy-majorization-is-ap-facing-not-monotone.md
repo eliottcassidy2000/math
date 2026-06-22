@@ -2,10 +2,11 @@
 id: HYP-2889
 status: EVIDENCE / proof-target; exact finite scout, no LRC14 proof claimed
 source: codex-2026-06-22-S103
-tags: [lrc14, additive-energy, fejer, majorization, p0, Ly, interval-extremality, tournament-analysis]
+tags: [lrc14, additive-energy, fejer, majorization, p0, Ly, interval-extremality, signed-tail, tournament-analysis]
 related:
   - HYP-2885
   - HYP-2886
+  - HYP-2890
   - HYP-+2888
   - HYP-2873
   - THM-534
@@ -13,9 +14,13 @@ related:
 results:
   - 04-computation/lrc_additive_energy_majorization_codex_s103.py
   - 05-knowledge/results/lrc_additive_energy_majorization_codex_s103.out
+  - 04-computation/lrc_additive_moment_coefficients_kps.py
+  - 05-knowledge/results/lrc_additive_moment_coefficients_kps.out
+  - 04-computation/lrc14_gamma_frequency_tail_codex_s104.py
+  - 05-knowledge/results/lrc14_gamma_frequency_tail_codex_s104.out
 ---
 
-# HYP-2889: additive-energy majorization is AP-facing, not a monotone order
+# HYP-2889: additive-energy majorization is anchored AP-facing, not monotone
 
 HYP-2885 correctly identifies additive energy / Fejer concentration as the
 right extremal carrier for the LRC14 cap branch, but the carrier must be used in
@@ -35,17 +40,20 @@ the interval/AP difference profile majorizes every tested row, and the AP is
 still the p0 and L_y maximizer in the same exact banks.
 ```
 
-This also fits the concurrent HYP-+2888 boundary/rational-witness result:
-maximal AP-like energy reaches exact unsafe coverage `1`, not a positive-measure
-over-cover.  Therefore the cap branch only needs to prevent non-AP rows from
-exceeding the AP boundary value; it should not try to prove a universal
+This also fits the concurrent HYP-+2888 boundary/rational-witness result and
+the S39 refinement: maximal AP-like energy reaches exact unsafe coverage `1`,
+but exact tiling is scaling-invariant and anchored, not translation-invariant.
+Length-13 AP translates have the same additive energy as `{1,...,13}` but
+positive safe measure, while `d*{1,...,13}` has the explicit boundary witness
+`t=1/(14d)`.  Therefore the cap branch must prevent non-AP rows from exceeding
+the anchored AP boundary value; it should not try to prove a universal
 positive safe-measure floor at the strict threshold.
 
 Thus the proof route should not be `L_y <= G(A(E))` for a scalar monotone
 function `G`.  It should be:
 
 ```text
-AP-facing Fejer majorization
+anchored AP-facing Fejer majorization
   + signed sector/Fourier remainder lemma
   => L_y(E) <= L_y(AP_k)
   => p0(E) <= cap_k by THM-534.
@@ -93,6 +101,13 @@ This is the finite Fejer object because
 ```text
 |Ehat(x)|^2 = k + 2 sum_h d_E(h) cos(2*pi*h*x).
 ```
+
+The word "anchored" matters.  Difference profiles and additive energy are
+translation-invariant, but LRC coverage at threshold is not: the exact tilers
+are the scaled consecutive multiples `d*{1,...,13}`, not arbitrary AP
+translates with the same energy.  The Fejer layer can control the interval
+profile, but the sector/origin labels must remain available for the final
+coverage inequality.
 
 ## Refuted shortcuts
 
@@ -156,9 +171,19 @@ p0: 1093/2940 -> 493/1470
 So a proof by local compression must carry sector labels or Fourier signs; the
 unlabelled Fejer profile alone loses the information that controls `p0`.
 
+The incoming KPS S31l moment-coefficient check explains why scalarization fails
+without contradicting the additive-energy mechanism.  The frequency-1
+`s=2` coefficient is positive and dominant, but higher additive-moment
+coefficients are signed: for example k=9 has `s=2:+8.910e-04`,
+`s=3:-7.138e-05`, `s=4:-4.448e-05`, and k=12 has negative coefficients from
+`s=4` onward.  Thus additive energy is the leading Fejer term, while the tail is
+a signed cancellation problem.  The right analogy is the H-max Jensen/convexity
+proof, not a term-by-term positive Savchenko-style comparison.
+
 ## Proof target
 
-The next lemma should be stated as an AP-facing signed-majorization theorem.
+The next lemma should be stated as an anchored AP-facing signed-majorization
+theorem.
 
 Candidate form:
 
@@ -178,14 +203,16 @@ specific signed sector kernel defining `L_y` is applied.
 
 A plausible proof split:
 
-1. Prove the Pollard/Karamata-style layer:
+1. Prove the Pollard/Karamata-style interval layer:
 
 ```text
 d_AP^down majorizes d_E^down for every k-set E.
 ```
 
 2. Express the THM-534 `L_y` certificate as a low-support sector Fourier
-functional.  The positive Fejer part is controlled by the previous layer.
+functional while preserving the anchor/origin labels.  The positive Fejer part
+is controlled by the previous layer, but AP translates are not equivalent at
+the strict LRC threshold.
 
 3. Route the signed remainder by labelled sector packets:
 
@@ -230,7 +257,9 @@ AP_diff_majorization
 
 Assumption challenged: additive energy is not a scalar monotone sufficient
 statistic for LRC coverage.  It is a Fejer/interval extremal carrier whose
-labels must be retained until after the THM-534 sector functional is applied.
+labels must be retained until after the THM-534 sector functional is applied;
+the higher-moment tail is signed, and exact threshold tiling is anchored rather
+than affine-translation invariant.
 
 ## S104 addendum: exact tail target for the labelled remainder
 
@@ -249,7 +278,7 @@ noise.  With
 R_sf(E)=p0(E)-p0_decorr(k)-Gamma_k^sf A*(E),
 ```
 
-AP-facing extremality becomes the residual-leak bound
+Anchored AP-facing extremality becomes the residual-leak bound
 
 ```text
 R_sf(E)-R_sf(AP) <= Gamma_k^sf(A*(AP)-A*(E)).

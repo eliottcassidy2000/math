@@ -20354,3 +20354,13 @@ renumbered to HYP-2889/T1003.  Integrated mac-mini HYP-+2888 as signal: AP
 strict-threshold coverage is exactly measure `1` with a boundary rational
 witness, so the AP-facing Fejer branch should prove no non-AP row over-covers
 past that boundary value, not a positive-measure safe floor at threshold.
+
+Second follow-up after pulling mac-mini S39 and KPS S31l: the endpoint is even
+more anchored than "AP-like."  Exact threshold tiling is scaling-invariant
+`d*{1,...,13}` with witness `t=1/(14d)`, while AP translates have the same
+maximum additive energy but positive safe measure.  KPS S31l also shows the
+higher additive-moment coefficients are mixed-sign after the positive dominant
+`s=2` term.  Updated HYP-2889/T1003, HYP-2885, concept map, open questions, and
+result index accordingly: the proof target is anchored AP-facing Fejer
+majorization plus labelled signed cancellation, not scalar additive-energy
+monotonicity or affine-translation-invariant exact tiling.

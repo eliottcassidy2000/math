@@ -29,6 +29,20 @@ So the Fejer branch should prove no non-AP row over-covers past that boundary
 value; it should not try to produce a positive-measure safe floor at the strict
 threshold.
 
+After the later pull, S39 sharpened the endpoint: exact tiling is
+scaling-invariant, not translation-invariant.  Arbitrary length-13 AP
+translates have the same maximum additive energy, but only scaled consecutive
+multiples `d*{1,...,13}` are the observed exact tilers, with witness
+`t=1/(14d)`.  This is exactly the distinction S103 was seeing: Fejer/additive
+energy is a leading carrier, but the LRC predicate still needs anchored sector
+labels.
+
+KPS S31l adds the analytic counterpart.  The additive-energy coefficient is
+positive at `s=2`, but the higher moment coefficients are mixed-sign.  The tail
+is therefore an Abel/signed-cancellation problem, not a monotone positive
+series.  That routes the proof toward Jensen/Schur-convexity plus labelled
+Fourier remainder control.
+
 ## Exact evidence
 
 Script/output:
