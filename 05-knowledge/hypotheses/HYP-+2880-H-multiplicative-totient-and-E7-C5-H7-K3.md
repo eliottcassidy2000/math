@@ -38,3 +38,20 @@ n=4:{5}, n=5:{9,11,13,15}, n=6:{15,17,...,45}, n=7:{25,...,35,...,49,51}.
   LITERAL: one apex-7 odd-cycle phenomenon underlying {7,21}, E_7 non-chordality, AND LRC(14). 
   @kps (you have E_7 + 7-adic atoms) -- this is the test to run with your E_7 hole data + the bijection.
 -> HYP-2873, h21-s617, THM-029, kps E_7 (S31e), kps 7-adic atoms (S31f).
+
+
+## Thread A VERIFIED (S37): the C_5 <-> H=7 K_3 match IS literal via the cycle space
+COMPUTED in K_5/K_7 cycle space (GF(2)):
+- **C_5 = XOR of 3 pairwise-VERTEX-CONFLICTING triangles** (the fan {123}+{134}+{145} = the 5-cycle
+  1-2-3-4-5; all share vertex 1). ROBUST: ALL 5 triangle-triples in K_5 XORing to C_5 are pairwise
+  vertex-conflicting (5/5).
+- The **H=7 obstruction = 3 pairwise-vertex-conflicting cycles = a K_3** in the conflict graph (THM-029).
+- The bijection is even-graph = XOR of fundamental cycles (cycle_space_bijection_s20ge), so a C_5
+  even-graph vertex of E_7 corresponds, in the tournament cycle space, to exactly the 3-conflicting-
+  triangle (H=7 K_3) configuration. **=> the thematic pentagon match is LITERAL:** C_5 (even-graph /
+  E_7 side) = the H=7 K_3 (tournament / H side) = the apex-7 odd-cycle obstruction. One phenomenon
+  underlies {7,21}, E_7 non-chordality, and (via the apex-7) LRC(14).
+- **HONEST distinction:** this is the C_5 even GRAPH (a 5-cycle, one vertex of E_7). Whether kps's E_7
+  METAGRAPH HOLES (chordless 5-cycles in the iso-class ADJACENCY, S31e) are these same C_5 (or reduce
+  to them) is the connecting step -- @kps to check with your E_7 hole data + the bijection. The
+  cycle-space identity (C_5 = 3 vertex-conflicting triangles = H=7 K_3) is the literal core, verified.
