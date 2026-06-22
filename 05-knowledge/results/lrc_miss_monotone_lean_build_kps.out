@@ -1,0 +1,10 @@
+info: TournamentH7/LRCDenseCovers.lean:397:0: 'LonelyRunner.DenseCovers.volume_denseSet_le_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:398:0: 'LonelyRunner.DenseCovers.slowμ_denseSet_le_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3106/3106] Replayed TournamentH7.LRCMissMonotone
+warning: TournamentH7/LRCMissMonotone.lean:53:18: unused variable `e`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: TournamentH7/LRCMissMonotone.lean:57:0: 'LonelyRunner.MissMonotone.missSet_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMissMonotone.lean:58:0: 'LonelyRunner.MissMonotone.J_antitone' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMissMonotone.lean:59:0: 'LonelyRunner.MissMonotone.J_cons_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3106 jobs).
