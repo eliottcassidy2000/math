@@ -1,7 +1,7 @@
 ---
 id: HYP-2840
 title: The resonance bound p0<=p0_decorr -- multi-far residual via VITALI COVERING (geometric, bypasses the divergent Fourier/lattice envelope)
-status: STRATEGY + foundational ATOM FORMALIZED (LRCMarginalUniform, sorry-free); single-far DONE (THM-546), multi-far = the residual where Fourier diverges; Vitali covering = the geometric route, tight step = quasi-independence (open)
+status: STRATEGY + foundational ATOMS FORMALIZED (LRCMarginalUniform, LRCCoverBoxes, sorry-free); single-far DONE (THM-546), multi-far = the residual where Fourier diverges; Vitali covering = the geometric route, tight step = quasi-independence (open)
 source: kind-pasteur-2026-06-22-S31
 related:
   - HYP-2839   # hp0cap cores + the resonance residual isolated
@@ -61,9 +61,12 @@ CONVERGENCE does not apply to the raw indicator. Vitali COVERING (above) is the 
 
 ## Formalizable pieces (sorry-free targets)
 1. **Marginal uniformity** `meas{x in [0,1): frac(w x) in I} = |I|` (the base case; w-fold cover or
-   `AddCircle.measurePreserving_zsmul`). The atom every box measure is built from. -- NEXT.
+   `AddCircle.measurePreserving_zsmul`). The atom every box measure is built from. -- FORMALIZED as
+   `LRCMarginalUniform.slowμ_fract_Ico_le` / `slowμ_fract_sector_le`.
 2. **Union bound** `meas(coverSet) <= sum_sigma meas(Box_sigma)` (subadditivity) -- the loose Vitali
-   skeleton; sorry-free once Box_sigma is defined.
+   skeleton. -- FORMALIZED at the assignment-box level as `LRCCoverBoxes`: `coverSet E` is contained
+   in the union over sector-to-speed assignment boxes, and `slowμ(coverSet E)` is bounded by the
+   corresponding `tsum`. This is intentionally lossy; it is not the tight quasi-independence step.
 3. The max-overlap/quasi-independence refinement (the tight step) -- the genuine residual.
 
 ## CONVERGENCE with mac-mini's L_y route (S28) -- the decorrelation IS the far-element half
@@ -84,6 +87,7 @@ route for the `p0 <= (something)` step. BUT the remaining scalar piece "consec m
 PIVOT: the L_y route (THM-534, mac-mini S28) supersedes the measure-decorrelation for the `p0<=cap`
 backbone (cleaner, exact). The resonance/decorrelation content survives as the FAR-ELEMENT half of
 "consec maximizes L_y" (far elements decorrelate-safe). Formalized: the marginal-uniformity atom
-(`LRCMarginalUniform`, sorry-free) -- the backbone of the far-element L_y drop. Open: the scalar
-consec-extremality (mac-mini's L_y route) + the quasi-independence refinement (this Vitali route).
+(`LRCMarginalUniform`, sorry-free) and the assignment-box union skeleton (`LRCCoverBoxes`,
+sorry-free) -- the backbone of the far-element L_y drop. Open: the scalar consec-extremality
+(mac-mini's L_y route) + the quasi-independence refinement (this Vitali route).
 -> HYP-2839, THM-534 (L_y route), THM-546, HYP-2643, HYP-2757.

@@ -43,6 +43,14 @@ far-element/decorrelation half of "consec maximizes `L_y`" in the THM-534 route:
 `LRCMarginalUniform` supplies one-speed sector measure, while `LRCArcComplexity`
 keeps the exactly-one-miss variation ledger at `7*sumE` rather than `42*sumE`.
 
+S87c addendum: added `LRCCoverBoxes.lean`, the assignment-box skeleton between
+those two atoms. It proves `coverSet E` is contained in the union over choices
+of one speed from `E` for each inner sector, and the corresponding slow-time
+outer-measure bound by `sum'` over those boxes. This is the loose union-bound
+Vitali skeleton only; quasi-independence/overlap tightening is still the open
+analytic step. Transcript:
+`05-knowledge/results/lrc14_hyp2840_support_atoms_lean_codex_s87c.out`.
+
 ## Lean status
 
 New module:

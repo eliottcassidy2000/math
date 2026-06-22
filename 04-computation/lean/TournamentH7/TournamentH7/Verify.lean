@@ -56,6 +56,7 @@ import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCCoverBound
 import TournamentH7.LRCMarginalUniform
+import TournamentH7.LRCCoverBoxes
 import TournamentH7.LRCArcComplexity
 import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
@@ -544,6 +545,23 @@ theorem lrc_marginal_uniform_slowμ_fract_sector_le_audit
       ENNReal.ofReal (1 / 7) :=
   LonelyRunner.MarginalUniform.slowμ_fract_sector_le w hw j hj
 #print axioms lrc_marginal_uniform_slowμ_fract_sector_le_audit
+
+theorem lrc_cover_boxes_coverSet_subset_iUnion_sectorBox_audit
+    (E : List ℤ) :
+    LonelyRunner.DenseCovers.coverSet E ⊆
+      ⋃ σ : LonelyRunner.CoverBoxes.Assignment E,
+        LonelyRunner.CoverBoxes.sectorBox E σ :=
+  LonelyRunner.CoverBoxes.coverSet_subset_iUnion_sectorBox E
+#print axioms lrc_cover_boxes_coverSet_subset_iUnion_sectorBox_audit
+
+theorem lrc_cover_boxes_slowμ_coverSet_le_tsum_sectorBox_audit
+    (E : List ℤ) :
+    LonelyRunner.DenseCovers.slowμ (LonelyRunner.DenseCovers.coverSet E) ≤
+      ∑' σ : LonelyRunner.CoverBoxes.Assignment E,
+        LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.CoverBoxes.sectorBox E σ) :=
+  LonelyRunner.CoverBoxes.slowμ_coverSet_le_tsum_sectorBox E
+#print axioms lrc_cover_boxes_slowμ_coverSet_le_tsum_sectorBox_audit
 
 theorem lrc_arc_complexity_occupiedCount_le_cells_audit
     {ι α : Type*} [DecidableEq α]

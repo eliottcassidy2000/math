@@ -95,6 +95,11 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   atoms are best routed through the far-element/decorrelation half of
   "consec maximizes `L_y`" rather than treated as the whole direct hp0cap
   backbone.
+- `LRCCoverBoxes` — assignment-box cover skeleton for HYP-2840: `coverSet E`
+  is contained in the union over choices of one speed from `E` for each inner
+  sector, and `slowμ(coverSet E)` is bounded by the `tsum` of those box
+  measures.  This formalizes the loose union-bound/Vitali starting point; the
+  tight quasi-independence or overlap refinement remains open.
 - `LRCWitnessFloorConcrete` — `measGP − p0 ≤ μ(coverSetᶜ ∩ safeSet)`, with the
   carrier inside `safeSet`.  Codex S86g adds the verified margin form:
   `p0≤cap−delta` and `cap≤measGP` imply

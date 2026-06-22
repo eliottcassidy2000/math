@@ -19279,6 +19279,14 @@ After the S31c pull, this should be read in the combined route: THM-534's
 `p0<=L_y` remains the cleaner hp0cap backbone, and the marginal-uniformity plus
 arc-complexity atoms support the far-element/decorrelation half of proving
 consecutive rows maximize `L_y`.
+S87c added `TournamentH7.LRCCoverBoxes`, the next skeleton layer: `coverSet E`
+is covered by sector-to-speed assignment boxes, and `slowμ(coverSet E)` is
+bounded by the `sum'` of their slow-time measures.  This is only the loose
+union-bound/Vitali starting point; the tight quasi-independence/overlap
+refinement remains open.  Root and `Verify` audit wrappers build, and the
+combined transcript
+`05-knowledge/results/lrc14_hyp2840_support_atoms_lean_codex_s87c.out` greps
+clean for warnings, errors, `sorryAx`, `declaration uses .sorry`, and `failed`.
 
 Added `TournamentH7.LRCArcComplexity` and wired it into the root import and
 `Verify`.  The new sorry-free finite lemmas prove that a pairwise-disjoint

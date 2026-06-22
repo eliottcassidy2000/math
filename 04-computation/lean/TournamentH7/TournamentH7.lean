@@ -66,6 +66,8 @@
                                       coverSet monotonicity and small-k vanishing.
     · TournamentH7.LRCMarginalUniform — marginal one-speed sector measure
                                       atom for HYP-2840 decorrelation boxes.
+    · TournamentH7.LRCCoverBoxes — assignment-box union skeleton for
+                                      coverSet and the loose union bound.
     · TournamentH7.LRCArcComplexity — disjoint-cell arc-complexity support
                                       for the THM-546/HYP-2840 hp0cap route.
     · TournamentH7.LRCGoodSet — concrete measurable `GOOD` event carrier.
@@ -149,6 +151,7 @@ import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCCoverBound
 import TournamentH7.LRCMarginalUniform
+import TournamentH7.LRCCoverBoxes
 import TournamentH7.LRCArcComplexity
 import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
