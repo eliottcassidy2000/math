@@ -40,6 +40,49 @@ classes and Bruhat `S4` compression faces.  Candidate proof shape: square /
 commuting-face components are nonpositive by Clebsch design balance; braid
 hexagon components are finite AP/Freiman low-depth packets; high-depth packets
 route to HYP-2636/HYP-2887 signed cancellation.  No LRC14 proof claimed.
+## codex-2026-06-22-S105 -- design/Hodge carriers for the LRC14 residual leak
+
+User asked for another creative synthesis session toward LRC14, using
+MathWorld prompts on unital, Clebsch graph, and truncated octahedral graph.
+Pulled current main, stashed only generated `agents/.session-state.json`, read
+HYP-2890/S104 and HYP-2887, and treated incoming S104 residual-leak work as
+the main target.
+
+Added `04-computation/lrc14_design_hodge_carriers_codex_s105.py` and stored
+`05-knowledge/results/lrc14_design_hodge_carriers_codex_s105.out`.  Exact
+findings:
+
+- Hermitian unital `q=3` over `GF(9)`: `28` points, `63` four-point secant
+  blocks, line intersections `{1:28,4:63}`, point replication `9`, pair
+  replication `1`.  Since `28=C(8,2)`, this is an exact tight frame for k=8 AP
+  pair slots with `N^T N=8I+J`.
+- Clebsch folded-cube carrier: SRG `(16,5,0,2)`; closed neighborhoods form a
+  `2-(16,6,2)` frame with `N^T N=4I+2J`, likely useful for folded parity/sign
+  packets rather than literal AP pair slots.
+- Truncated-octahedral/Bruhat `S4` graph: `24` vertices, `36` adjacent-swap
+  edges, `6` square commutation faces, `8` hex braid faces, cycle rank `13`.
+  This reframes HYP-2889's failed one-step compression as a curl problem on
+  Coxeter square/hex faces.
+- Existing HYP-2887 octahedral `L(K4)` carrier remains the support-six
+  repeated-packet subcarrier: cycle rank `7`, triangular face-curl module.
+
+Created HYP-2891/T1005 and reflection
+`07-reflections/lrc14-design-hodge-carriers-codex-s105.md`.  Proposed proof
+split: unital/Clebsch block averages for pair packets, Bruhat/octahedral
+face-curl ledgers for labelled residuals, and HYP-2636 Abel/L2 cancellation for
+the analytic tail.  No LRC14 proof claimed.
+
+Assumption challenge / Tournament Analysis: considered runners, gaps, fixed
+sectors, sector boundaries, wall events, residues, cover arcs, Fourier modes,
+pair slots, folded parity packets, adjacent-swap orderings, Coxeter faces, and
+proof obligations.  Selected vertices are proof carriers.  Pairwise observable
+is live proof-obligation coverage; gauge orients toward more obligations, with
+ties broken toward direct connection to HYP-2890.  Hamiltonian path:
+`bruhat_truncated_octahedron > clebsch_closed_neighborhood >
+octahedral_current > unital_q3_pair_frame > scalar_additive_energy`.  The
+quotient preserves pair-incidence and curl/divergence data, but destroys speed
+magnitude, so it must be coupled to HYP-+2888 anchored scaling and HYP-2636
+tails.
 
 ## codex-2026-06-22-S104 -- same-frequency additive-energy tail and residual-leak target
 

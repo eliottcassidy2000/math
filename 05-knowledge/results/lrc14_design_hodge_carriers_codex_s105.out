@@ -1,0 +1,46 @@
+=== S105 design/Hodge carrier audit for LRC14 residual leak ===
+
+--- Hermitian unital q=3 ---
+points=28  secant_blocks=63  line_intersection_sizes={1: 28, 4: 63}
+expected unital parameters: v=28, block_size=4, b=63, r=9, lambda=1
+point replication histogram={9: 28}
+pair replication histogram={1: 378}
+all points seen=True
+LRC hook: C(8,2)=28 pair slots; unital blocks are 4-slot additive-quadruple frames.
+frame identity: incidence^T incidence = 8I + J on the 28 pair-slot coordinates
+
+--- Clebsch folded-cube carrier ---
+vertices=16  edges=40  degree_hist={5: 16}
+common neighbors on edges={0: 40}  nonedges={2: 80}
+verified SRG parameters: (16,5,0,2)
+closed-neighborhood block sizes={6: 16}
+closed-neighborhood point reps={6: 16}  pair reps={2: 120}
+frame identity: closed_neighborhood^T closed_neighborhood = 4I + 2J
+LRC hook: folded-cube parity quotient is a candidate finite smoother for labelled signed residual packets.
+
+--- Truncated-octahedral / Bruhat B4 carrier ---
+vertices=24  edges=36  degree_hist={3: 24}
+adjacent-transposition color counts={0: 12, 1: 12, 2: 12}
+square_commutation_faces=6  hex_braid_faces=8
+cycle_rank=13; face_count=14 with one sphere relation
+LRC hook: local compression failures should be measured as curl on Coxeter square/hex faces, not as edge monotonicity.
+
+--- Octahedral line graph L(K4) carrier (HYP-2887) ---
+vertices=6  edges=12  degree_hist={4: 6}
+cycle_rank=7; triangular_faces=8 with one sphere relation
+LRC hook: repeated support-six packets already live on this face-curl module.
+
+--- Proof-obligation tournament over carriers ---
+1. bruhat_truncated_octahedron: score=5; obligations=local_adjacent_compression_topology, square_commutation_faces, hex_braid_faces, cycle_rank_13_matches_signed_curl_ledger, formalizable_Coxeter_complex
+2. clebsch_closed_neighborhood: score=4; obligations=folded_cube_parity_quotient, SRG_frame_NtN=4I+2J, triangle_free_pair_uniformity, closed_neighborhood_design
+3. octahedral_current: score=4; obligations=existing_HYP_2887_support6_carrier, face_curl_rank_7, affine_zero_opposite_edges, HYP_2636_tail_route
+4. unital_q3_pair_frame: score=4; obligations=exact_pair_slot_count_C(8,2)=28, BIBD_frame_NtN=8I+J, four_slot_blocks_match_additive_quadruples, k8_formalizable
+5. scalar_additive_energy: score=1; obligations=positive_same_frequency_s2_packet
+Hamiltonian path by obligation coverage:
+  bruhat_truncated_octahedron > clebsch_closed_neighborhood > octahedral_current > unital_q3_pair_frame > scalar_additive_energy
+
+--- Synthesis ---
+1. q=3 unital is not decorative: it exactly matches the 28 pair slots of k=8 AP data.
+2. Clebsch gives a second pair-uniform tight frame, but on folded parity packets rather than AP pair slots.
+3. Truncated octahedral/Bruhat B4 explains why one-step compression is false: edge moves have square/hex curl.
+4. HYP-2890 residual leak should split into: unital/Clebsch frame estimates for pair packets + Bruhat/octahedral curl estimates for labelled signed residuals.
