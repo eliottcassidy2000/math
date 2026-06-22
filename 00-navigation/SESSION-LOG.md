@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S28 -- worked the hp0cap analytic input: L_y-route reframing + PROVED V(E')<=7Σe (6x sharpening of THM-546)
+Per the directive to work on an analytic input, attacked hp0cap (p0(E)<=cap, one of the 2 deep nodes). Findings (HYP-2840):
+- **Reframed via the THM-534 L_y route (cleaner than kps's decorrelation HYP-2839):** THM-534 PROVES p0(E)<=L_y(E) (moment-LP dual Bonferroni). So hp0cap reduces to the SCALAR extremality "consec maximizes L_y" -- a single rearrangement inequality, not a measure decorrelation. Verified k=9 (tightest): p0<=L_y all configs, consec_9 argmax (0.49288), L_y<=cap (margin 0.00138).
+- **PROVED a 6x sharpening of THM-546:** V(E')=Σ_j#arcs(B_j) <= 7Σe (was 42Σe). The B_j (exactly-miss-sector-j) are pairwise DISJOINT => V <= #breakpoints <= 7Σe. Verified 2006 configs, 0 violations. Improves the gapped cutoff 3000->545.
+- **Empirical V_actual ~ 4*span (40-107x below 42Σe):** consec_8->28 vs 1176. => gapped single-peel cutoff w*~80 (feasible). A rigorous V<=C*max would make it fully effective.
+- **Tight margin localized:** the 0.00138 cap-margin lives ONLY at the consec AP-orbit (bounded finite check); ANY far element drops L_y by >=0.044 (decorrelation safe). Dissolves the apparent ~10^5-cutoff obstruction.
+- Honest residual: "consec maximizes L_y" (scalar extremality) + the iterated-peel/Tornheim (HYP-2808=12ζ(3)) + scale-invariance (THM-531) dichotomy = multi-session. Redirected the team to the L_y route.
+NEW: HYP-2840, THM-546 sharpened (V<=7Σe proved), script+out saved. Pushed throughout.
+
 ## codex-2026-06-22-S86g2 -- concrete-p0 goodSet Part-A bridge
 
 Continued the S31b concrete-p0 integration by adding the named `DenseCovers.p0`
