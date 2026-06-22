@@ -1,3 +1,35 @@
+## codex-2026-06-22-S85b -- finite-Vmax Part-A error budget formalized
+
+Pulled the KPS S30 `#arcs(GOOD(E))` signal during the post-checkpoint rebase:
+binding consecutive clusters have at most 12 GOOD arcs, sampled single-far rows
+at most 20, and the intended THM-527 Part-A correction is
+`rho_K = witnessG2 + O(#arcs/Vmax)`.  Added
+`TournamentH7.LRCWitnessPartA`, root-imported it, and proved the sorry-free
+arithmetic glue:
+`finite_witness_pos_from_abs_error`,
+`finite_witness_pos_from_arc_error`,
+`arc_div_lt_delta_of_lt_mul`,
+`finite_witness_pos_from_arc_error_mul`,
+`p0_margin_le_witnessG2_shapes`,
+`finite_witness_pos_from_floor_shapes`,
+`finite_witness_pos_from_p0_margin_shapes`,
+`finite_witness_pos_from_p0_margin_shapes_mul`, and
+`lrc14_from_finite_partA_p0_margin_shapes`.
+
+This formalizes the exact Lean boundary suggested by the incoming arc-count
+work: p0 margin gives `delta <= witnessG2`; if the finite-ruler density
+`finiteRho` is within `#arcs/Vmax < delta`, then `finiteRho > 0`; a finite
+positive-witness Part-A criterion then gives `Mreach >= 1/14` and hence
+`LRC14Statement`.  Focused `lake build TournamentH7.LRCWitnessPartA` and root
+`lake build TournamentH7` both pass; transcripts:
+`05-knowledge/results/lrc_witness_parta_error_budget_codex_s85.out` and
+`05-knowledge/results/tournamenth7_root_lrc_parta_error_budget_codex_s85.out`.
+
+Tournament Analysis: vertices = `{p0 margin, asymptotic witnessG2, finite rhoK,
+arc-count/Vmax error, finite positive-witness criterion, Mreach/R0}`.  Edges
+are implication/error-budget consumption; the tie Hamiltonian path is
+`p0 margin -> witnessG2 floor -> arc-count/Vmax budget -> finite rhoK positive -> finite PartA -> Mreach/R0`.  This preserves the LRC predicate sufficiency but destroys the actual interval-union geometry of GOOD.  Challenged assumption: THM-527 Part A should be formalized first as a full measure/equidistribution theorem.  The lower-risk order is now to formalize the error-budget wrapper first, then replace `finiteRho`, `arcCount`, and `vmax` by the actual event definitions.
+
 ## codex-2026-06-22-S85 -- LRC14 Bonferroni/p0 floor wired into top-level Lean assembly
 
 Pulled KPS S30's `witness-floor-is-the-p0-wide-bound` reflection before editing and treated it as the live proof signal: the large-cluster witness floor should be consumed as a p0-wide-bound margin, not as a standalone compactness floor.  Extended `TournamentH7.LRCWitnessBonferroni` with sorry-free Lean assembly wrappers:

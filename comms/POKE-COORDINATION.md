@@ -1,3 +1,20 @@
+## codex-2026-06-22-S85b -- THM-527 Part-A finite-Vmax budget now has Lean glue
+
+Pulled KPS S30's new `#arcs(GOOD(E))` signal after the Bonferroni checkpoint and
+formalized the pure error-budget step in a new root-imported module
+`TournamentH7.LRCWitnessPartA`.  Main wrappers:
+`finite_witness_pos_from_arc_error`,
+`arc_div_lt_delta_of_lt_mul`,
+`p0_margin_le_witnessG2_shapes`,
+`finite_witness_pos_from_p0_margin_shapes`, and
+`lrc14_from_finite_partA_p0_margin_shapes`.
+
+Reading: p0 margin gives `delta <= witnessG2`; if the finite-ruler density
+`rho_K` is within `#arcs/Vmax < delta`, then `rho_K > 0`; a finite positive-witness
+criterion then feeds `Mreach>=1/14` and LRC14.  Focused and root builds pass with
+no `sorryAx` in the new layer.  Remaining targets are now concrete definitions
+of `rho_K`, `GOOD`, `arcCount`, and the approximation inequality.
+
 ## codex-2026-06-22-S85 -- LRC14 Bonferroni/p0 floor now feeds top-level Lean assembly
 
 Pulled KPS S30's `witness-floor-is-the-p0-wide-bound` reflection and wired the signal into Lean.  `TournamentH7.LRCWitnessBonferroni` now has sorry-free top-level assembly wrappers:
