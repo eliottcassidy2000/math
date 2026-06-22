@@ -1,6 +1,7 @@
 ℹ [3104/3104] Replayed TournamentH7.LRCDenseCovers
-info: TournamentH7/LRCDenseCovers.lean:187:0: 'LonelyRunner.DenseCovers.inner_sector_covered' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCDenseCovers.lean:188:0: 'LonelyRunner.DenseCovers.dense_covers_all_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCDenseCovers.lean:189:0: 'LonelyRunner.DenseCovers.denseSet_subset_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCDenseCovers.lean:190:0: 'LonelyRunner.DenseCovers.volume_denseSet_le_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:211:0: 'LonelyRunner.DenseCovers.inner_sector_covered' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:212:0: 'LonelyRunner.DenseCovers.dense_covers_all_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:213:0: 'LonelyRunner.DenseCovers.denseSet_subset_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:214:0: 'LonelyRunner.DenseCovers.volume_denseSet_le_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:215:0: 'LonelyRunner.DenseCovers.slowμ_denseSet_le_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
 Build completed successfully (3104 jobs).

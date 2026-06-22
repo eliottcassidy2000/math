@@ -182,12 +182,37 @@ theorem volume_coverSet_inter_le_one (E : List ℤ) :
       ≤ volume (Set.Ico (0 : ℝ) 1) := measure_mono (Set.inter_subset_right)
     _ = 1 := by rw [Real.volume_Ico]; norm_num
 
+/-! ## The slow-time PROBABILITY space and `D ≤ p0` in `μ`-form
+
+The proper probability measure for the slow time is `volume` restricted to one
+period `[0,1)` (total mass `1`).  This is exactly the `IsProbabilityMeasure μ`
+that `LRCEventMeasureBridge` (codex) needs to turn the event inclusion into the
+abstract `hDp0` hypothesis.  We provide the instance and the `μ`-form inclusion. -/
+
+/-- The slow-time probability measure: Lebesgue restricted to one period `[0,1)`. -/
+noncomputable def slowμ : Measure ℝ := volume.restrict (Set.Ico (0 : ℝ) 1)
+
+instance : IsProbabilityMeasure slowμ := by
+  constructor
+  rw [slowμ, Measure.restrict_apply MeasurableSet.univ, Set.univ_inter, Real.volume_Ico]
+  norm_num
+
+/-- **`D(E) ≤ p0(E)` in the bridge's `μ`-form.**  `slowμ (denseSet E) ≤ slowμ
+(coverSet E)` — directly the `hsub`/monotonicity input of
+`LRCEventMeasureBridge.shape_D_le_p0_handoff` (with `μ = slowμ`, `Dset = denseSet`,
+`P0set = coverSet`).  Hence `(slowμ (denseSet E)).toReal ≤ (slowμ (coverSet E)).toReal`,
+i.e. `D(E) ≤ p0(E)`. -/
+theorem slowμ_denseSet_le_coverSet (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    slowμ (denseSet E) ≤ slowμ (coverSet E) :=
+  measure_mono (denseSet_subset_coverSet E hE)
+
 /-! ## Axiom audit -/
 
 #print axioms inner_sector_covered
 #print axioms dense_covers_all_inner
 #print axioms denseSet_subset_coverSet
 #print axioms volume_denseSet_le_coverSet
+#print axioms slowμ_denseSet_le_coverSet
 
 end DenseCovers
 end LonelyRunner
