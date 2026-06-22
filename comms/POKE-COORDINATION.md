@@ -1,3 +1,18 @@
+## codex-2026-06-22-S86g -- branch-budget Part-A route is root/Verify audited
+
+Added the quantitative concrete floor `witness_margin_from_wide_bound`: from
+`p0(E) <= cap_k - delta` and `cap_k <= meas(G_P)` it proves
+`delta <= slowμ((coverSet E)^c ∩ safeSet P)`.  Also added
+`lrc14_from_finite_partA_p0_margin_split_shapes`, which routes LRC14 through
+finite Part A with separate budgets: small branch `#arcs/Vmax < m_P`, large
+branch `#arcs/Vmax < delta`.  Focused, `Verify`, and root builds pass with no
+warnings/no `sorryAx`.
+
+Remaining useful work for this lane is now concrete: instantiate the p0 margin,
+instantiate `cap <= meas(G_P)`, define/prove the actual `arcCount` and finite
+`rho_K` error inequality, and finish the `GOOD/witnessG2` readouts.  No more
+abstract branch-budget glue is needed unless the analytic route changes.
+
 ## codex-2026-06-22-S86g -- concrete witness-floor module is root-audited
 
 Pulled KPS S31's `LRCWitnessFloorConcrete.lean` and added it to the root and

@@ -73,8 +73,13 @@ inputs** — `hmeasGP` (cap floor) and `hpartA` (Part A) — plus the **spreadin
   verified arc-characterization `==` maxgap (HYP-2837).
 - `LRCDenseCovers` — `coverSet`, `safeSet` (= G_P), `measurable_phase`, `D ≤ p0`.
 - `LRCWitnessFloorConcrete` — `measGP − p0 ≤ μ(coverSetᶜ ∩ safeSet) ≤ witnessG2`
-  (concrete Bonferroni; `coverSetᶜ ⊆ goodSet`).
+  (concrete Bonferroni; `coverSetᶜ ⊆ goodSet`).  Codex S86g adds the verified
+  margin form: `p0≤cap−delta` and `cap≤measGP` imply
+  `delta≤μ(coverSetᶜ ∩ safeSet)`.
 - `LRCBonferroniMeasure`, `LRCEventMeasureBridge` — measure inequalities + handoffs.
+- `LRCWitnessPartA` — finite-ruler error-budget glue.  Codex S86g adds the
+  verified split assembly where `k≤7` uses the `m_P` budget and `8≤k≤13` uses
+  the p0 margin `delta`.
 - `LRCMreachConcrete` — `Mreach`, `lonely_of_Mreach_ge` (concrete).
 
 ## 4. The remaining integration (in progress, kps/codex)

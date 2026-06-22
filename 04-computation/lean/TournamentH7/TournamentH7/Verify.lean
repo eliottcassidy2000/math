@@ -363,6 +363,56 @@ theorem lrc_witness_carrier_subset_safe_audit (E P : List ℤ) :
   LonelyRunner.DenseCovers.witness_carrier_subset_safe E P
 #print axioms lrc_witness_carrier_subset_safe_audit
 
+theorem lrc_witness_pos_from_wide_bound_audit (E P : List ℤ) (capk : ℝ)
+    (hwide :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal ≤ capk)
+    (hdual :
+      capk <
+        (LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    0 <
+      (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.coverSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.witness_pos_from_wide_bound E P capk hwide hdual
+#print axioms lrc_witness_pos_from_wide_bound_audit
+
+theorem lrc_witness_margin_from_wide_bound_audit
+    (E P : List ℤ) (capk delta : ℝ)
+    (hwide :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal ≤ capk - delta)
+    (hdual :
+      capk ≤
+        (LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    delta ≤
+      (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.coverSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.witness_margin_from_wide_bound
+    E P capk delta hwide hdual
+#print axioms lrc_witness_margin_from_wide_bound_audit
+
+theorem lrc_witness_pos_from_wide_bound_margin_audit
+    (E P : List ℤ) (capk delta : ℝ)
+    (hdelta : 0 < delta)
+    (hwide :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal ≤ capk - delta)
+    (hdual :
+      capk ≤
+        (LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    0 <
+      (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.coverSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.witness_pos_from_wide_bound_margin
+    E P capk delta hdelta hwide hdual
+#print axioms lrc_witness_pos_from_wide_bound_margin_audit
+
 /-! ### LRC14 Part-A finite-ruler arc-bound budgets -/
 
 theorem lrc_partA_arc_div_lt_delta_of_le_bound_audit
@@ -415,6 +465,44 @@ theorem lrc_partA_finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes_aud
     nuShape measGP p0Shape cap delta finiteRho arcCount vmax arcBound deltaFloor
     hbonf hDp0 hp0cap hmeasGP hdelta hvmax harc herror hbudget s
 #print axioms lrc_partA_finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes_audit
+
+theorem lrc_partA_lrc14_from_finite_partA_p0_margin_split_shapes_audit
+    (nuShape measGP p0Shape cap delta finiteRho : LonelyRunner.LRC14.Shape → ℝ)
+    (arcCount vmax : LonelyRunner.LRC14.Shape → ℕ)
+    (hsmall : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      LonelyRunner.LRC14.clusterSize (LonelyRunner.LRC14.shapeOf v) ≤ 7 →
+      (LonelyRunner.LRC14.witnessMP : ℝ) ≤
+        LonelyRunner.LRC14.witnessG2 (LonelyRunner.LRC14.shapeOf v))
+    (hbonf : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s)
+    (hDp0  : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      cap s ≤ measGP s)
+    (herror : ∀ s, |finiteRho s - LonelyRunner.LRC14.witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hsmallBudget : ∀ s, LonelyRunner.LRC14.clusterSize s ≤ 7 →
+      (arcCount s : ℝ) / (vmax s : ℝ) <
+        (LonelyRunner.LRC14.witnessMP : ℝ))
+    (hlargeBudget : ∀ s, 8 ≤ LonelyRunner.LRC14.clusterSize s →
+      LonelyRunner.LRC14.clusterSize s ≤ 13 →
+      (arcCount s : ℝ) / (vmax s : ℝ) < delta s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      LonelyRunner.LRC14.clusterSize (LonelyRunner.LRC14.shapeOf v) ≤ 13)
+    (hfinitePartA : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      0 < finiteRho (LonelyRunner.LRC14.shapeOf v) →
+      (1 : ℝ) / 14 ≤ LonelyRunner.LRC14.Mreach v) :
+    LonelyRunner.LRC14.LRC14Statement :=
+  LonelyRunner.LRC14.PartA.lrc14_from_finite_partA_p0_margin_split_shapes
+    nuShape measGP p0Shape cap delta finiteRho arcCount vmax hsmall hbonf
+    hDp0 hp0cap hmeasGP herror hsmallBudget hlargeBudget hsize hfinitePartA
+#print axioms lrc_partA_lrc14_from_finite_partA_p0_margin_split_shapes_audit
 
 /-! ### LRC14 THM-563 period-max certificate kernel -/
 

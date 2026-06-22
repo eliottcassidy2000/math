@@ -81,12 +81,34 @@ theorem witness_pos_from_wide_bound (E P : List ℤ) (capk : ℝ)
   have hfloor := witness_floor_concrete E P
   linarith
 
+/-- **Concrete margin version of the witness floor.**  The exact top-level p0
+route needs a quantitative margin, not only positivity: if the wide bound proves
+`p0(E) ≤ cap_k - delta` and the dual cap floor proves `cap_k ≤ meas(G_P)`, then
+the concrete witness carrier has measure at least `delta`. -/
+theorem witness_margin_from_wide_bound (E P : List ℤ) (capk delta : ℝ)
+    (hwide : (slowμ (coverSet E)).toReal ≤ capk - delta)
+    (hdual : capk ≤ (slowμ (safeSet P)).toReal) :
+    delta ≤ (slowμ ((coverSet E)ᶜ ∩ safeSet P)).toReal := by
+  have hfloor := witness_floor_concrete E P
+  linarith
+
+/-- Positive-margin corollary of `witness_margin_from_wide_bound`. -/
+theorem witness_pos_from_wide_bound_margin (E P : List ℤ) (capk delta : ℝ)
+    (hdelta : 0 < delta)
+    (hwide : (slowμ (coverSet E)).toReal ≤ capk - delta)
+    (hdual : capk ≤ (slowμ (safeSet P)).toReal) :
+    0 < (slowμ ((coverSet E)ᶜ ∩ safeSet P)).toReal :=
+  lt_of_lt_of_le hdelta
+    (witness_margin_from_wide_bound E P capk delta hwide hdual)
+
 /-! ## Axiom audit -/
 
 #print axioms slowμ_compl_toReal
 #print axioms witness_floor_concrete
 #print axioms witness_pos_of_p0_lt_measGP
 #print axioms witness_pos_from_wide_bound
+#print axioms witness_margin_from_wide_bound
+#print axioms witness_pos_from_wide_bound_margin
 
 end DenseCovers
 end LonelyRunner

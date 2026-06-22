@@ -239,6 +239,64 @@ theorem lrc14_from_finite_partA_p0_margin_shapes
       hbonf hDp0 hp0cap hmeasGP herror hbudget (shapeOf v)
   exact lonely_of_Mreach_ge v hv (hfinitePartA v hv hpos)
 
+/-- Conditional LRC14 assembly through finite-ruler Part A with the current
+small/large branch split.  Small clusters use the already isolated `m_P` witness
+floor; large clusters use the p0-wide-bound margin.  Thus the finite-ruler
+error budget also splits into the two natural thresholds:
+`#arcs/Vmax < m_P` on the small branch and `#arcs/Vmax < delta` on the large
+branch. -/
+theorem lrc14_from_finite_partA_p0_margin_split_shapes
+    (nuShape measGP p0Shape cap delta finiteRho : Shape → ℝ)
+    (arcCount vmax : Shape → ℕ)
+    (hsmall : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 7 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
+    (hbonf : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      cap s ≤ measGP s)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hsmallBudget : ∀ s, clusterSize s ≤ 7 →
+      (arcCount s : ℝ) / (vmax s : ℝ) < (witnessMP : ℝ))
+    (hlargeBudget : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (arcCount s : ℝ) / (vmax s : ℝ) < delta s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13)
+    (hfinitePartA : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      0 < finiteRho (shapeOf v) → (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement := by
+  intro v hv
+  have hpos : 0 < finiteRho (shapeOf v) := by
+    by_cases h7 : clusterSize (shapeOf v) ≤ 7
+    · exact finite_witness_pos_from_arc_error
+        (finiteRho (shapeOf v)) (witnessG2 (shapeOf v)) (witnessMP : ℝ)
+        (arcCount (shapeOf v)) (vmax (shapeOf v))
+        (hsmall v hv h7) (herror (shapeOf v))
+        (hsmallBudget (shapeOf v) h7)
+    · have h8 : 8 ≤ clusterSize (shapeOf v) := by omega
+      have h13 : clusterSize (shapeOf v) ≤ 13 := hsize v hv
+      have hfloor : delta (shapeOf v) ≤ witnessG2 (shapeOf v) := by
+        have h1 : nuShape (shapeOf v) + measGP (shapeOf v) - 1 ≤
+            witnessG2 (shapeOf v) := hbonf (shapeOf v) h8 h13
+        have h2 : (1 - nuShape (shapeOf v)) ≤ p0Shape (shapeOf v) :=
+          hDp0 (shapeOf v) h8 h13
+        have h3 : p0Shape (shapeOf v) ≤
+            cap (shapeOf v) - delta (shapeOf v) :=
+          hp0cap (shapeOf v) h8 h13
+        have h4 : cap (shapeOf v) ≤ measGP (shapeOf v) :=
+          hmeasGP (shapeOf v) h8 h13
+        linarith
+      exact finite_witness_pos_from_arc_error
+        (finiteRho (shapeOf v)) (witnessG2 (shapeOf v)) (delta (shapeOf v))
+        (arcCount (shapeOf v)) (vmax (shapeOf v))
+        hfloor (herror (shapeOf v)) (hlargeBudget (shapeOf v) h8 h13)
+  exact lonely_of_Mreach_ge v hv (hfinitePartA v hv hpos)
+
 /-! ## Axiom audit -/
 
 #print axioms finite_witness_pos_from_abs_error
@@ -254,6 +312,7 @@ theorem lrc14_from_finite_partA_p0_margin_shapes
 #print axioms finite_witness_pos_from_p0_margin_shapes_mul
 #print axioms finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes
 #print axioms lrc14_from_finite_partA_p0_margin_shapes
+#print axioms lrc14_from_finite_partA_p0_margin_split_shapes
 
 end PartA
 end LRC14

@@ -5,6 +5,36 @@ Continued the formalized-LRC(14) push, frequent pull/push with kps (S30/S31 meas
 - **#arcs(GOOD(E)) PERIOD-BOUNDED (HYP-2838):** consec plateaus ~13, single-far <=15, independent of Vmax => THM-527 Part A finite-Vmax correction -> 0 uniformly for the binding family. Wide #arcs/delta bounded (<=72 moderate-wide). Closes my Part A residual (kps MSG-238).
 - Built/verified kps's LRCDenseCovers, LRCWitnessFloorConcrete (both sorry-free). My LRCGoodSet verified correct (arc-char==maxgap, 0/1050).
 HANDOFF: team should target the NU route (lrc14_from_bonferroni_split_nodes); formalize hA (spreading, now load-bearing); carry hmeasGP + hpartA as the deep axioms. NEW: HYP-2838, MISTAKE-084, CASE-p0-route-insufficiency, status doc.
+## codex-2026-06-22-S86g -- concrete margin floor + split finite-Part-A budget route
+
+Extended the concrete witness-floor and Part-A formal interfaces over the latest
+S31/S27 work.  `LRCWitnessFloorConcrete.lean` now proves the quantitative margin
+form `witness_margin_from_wide_bound`: if
+`slowμ(coverSet E) <= cap_k - delta` and `cap_k <= slowμ(safeSet P)`, then
+`delta <= slowμ((coverSet E)^c ∩ safeSet P)`, plus the positive-margin corollary.
+This is the exact concrete form of the p0 wide-bound floor needed by the LRC14
+large branch, not just the earlier strict-positivity wrapper.
+
+`LRCWitnessPartA.lean` now has
+`lrc14_from_finite_partA_p0_margin_split_shapes`, a sorry-free top-level
+conditional assembly through finite-ruler Part A with separate branch budgets:
+small clusters consume the `m_P` margin, large clusters consume the p0 margin
+`delta`, and the finite-ruler error must be below the branch margin.  Added
+`Verify` wrappers for the new concrete margin lemmas and split Part-A assembly.
+Focused builds, aggregate `Verify`, and root `lake build TournamentH7` pass.
+Transcripts: `lrc_witness_floor_concrete_margin_build_codex_s86g.out`,
+`lrc_witness_parta_split_budget_codex_s86g.out`,
+`tournamenth7_verify_lrc_parta_split_budget_codex_s86g.out`, and
+`tournamenth7_root_lrc_parta_split_budget_codex_s86g.out`; scans found no
+warnings, no `sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{small m_P margin, large p0 margin,
+cap<=measGP, concrete witness carrier, finiteRho, arcCount/Vmax error, finite
+PartA, Mreach}`.  Edges are branch selection, margin lower-bound transport,
+error-budget consumption, and positive finite-witness implication.  Challenged
+assumption: Part A must remain a single opaque `0<witnessG2 -> Mreach` node; the
+formal interface is sharper as a branch-budget theorem whose remaining hard
+inputs are concrete arc-count/error estimates.
 
 ## kind-pasteur-2026-06-22-S31 -- CONCRETE witness floor from events; LRC(14) Lean = sorry-free modulo {hp0cap, hpartA}
 

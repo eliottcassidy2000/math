@@ -1,0 +1,17 @@
+ℹ [3105/3107] Replayed TournamentH7.LRCDenseCovers
+info: TournamentH7/LRCDenseCovers.lean:296:0: 'LonelyRunner.DenseCovers.inner_sector_covered' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:297:0: 'LonelyRunner.DenseCovers.dense_covers_all_inner' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:298:0: 'LonelyRunner.DenseCovers.denseSet_subset_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:299:0: 'LonelyRunner.DenseCovers.measurableSet_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:300:0: 'LonelyRunner.DenseCovers.measurableSet_safeSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:301:0: 'LonelyRunner.DenseCovers.volume_denseSet_le_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCDenseCovers.lean:302:0: 'LonelyRunner.DenseCovers.slowμ_denseSet_le_coverSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3106/3107] Replayed TournamentH7.LRCBonferroniMeasure
+info: TournamentH7/LRCBonferroniMeasure.lean:64:0: 'LonelyRunner.BonferroniMeasure.measure_add_le_inter_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCBonferroniMeasure.lean:65:0: 'LonelyRunner.BonferroniMeasure.toReal_bonferroni' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3107/3107] Built TournamentH7.LRCWitnessFloorConcrete (5.2s)
+info: TournamentH7/LRCWitnessFloorConcrete.lean:86:0: 'LonelyRunner.DenseCovers.slowμ_compl_toReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:87:0: 'LonelyRunner.DenseCovers.witness_floor_concrete' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:88:0: 'LonelyRunner.DenseCovers.witness_pos_of_p0_lt_measGP' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCWitnessFloorConcrete.lean:89:0: 'LonelyRunner.DenseCovers.witness_pos_from_wide_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3107 jobs).
