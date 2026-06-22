@@ -82,7 +82,8 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   `p0<cap` plus `cap≤measGP` implies
   `0<μ(coverSetᶜ ∩ safeSet)`, and the dense-complement bridge:
   anchored `0∈E` transfers this positivity to
-  `0<μ((denseSet E)ᶜ ∩ safeSet)`.  The remaining readout is the sorted-gap
+  `0<μ((denseSet E)ᶜ ∩ safeSet)` and the quantitative margin to
+  `delta≤μ((denseSet E)ᶜ ∩ safeSet)`.  The remaining readout is the sorted-gap
   bridge from `(denseSet E)ᶜ` to the concrete `goodSet`/`witnessG2` carrier.
 - `LRCBonferroniMeasure`, `LRCEventMeasureBridge` — measure inequalities + handoffs.
 - `LRCWitnessPartA` — finite-ruler error-budget glue.  Codex S86g adds the

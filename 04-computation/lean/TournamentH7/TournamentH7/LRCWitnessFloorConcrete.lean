@@ -129,6 +129,15 @@ theorem witness_margin_from_wide_bound (E P : List ℤ) (capk delta : ℝ)
   have hfloor := witness_floor_concrete E P
   linarith
 
+/-- Quantitative margin transferred to the dense-complement witness carrier. -/
+theorem dense_compl_witness_margin_from_wide_bound
+    (E P : List ℤ) (capk delta : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hwide : (slowμ (coverSet E)).toReal ≤ capk - delta)
+    (hdual : capk ≤ (slowμ (safeSet P)).toReal) :
+    delta ≤ (slowμ ((denseSet E)ᶜ ∩ safeSet P)).toReal :=
+  le_trans (witness_margin_from_wide_bound E P capk delta hwide hdual)
+    (witness_carrier_le_dense_compl_measure E P hE)
+
 /-- Positive-margin corollary of `witness_margin_from_wide_bound`. -/
 theorem witness_pos_from_wide_bound_margin (E P : List ℤ) (capk delta : ℝ)
     (hdelta : 0 < delta)
@@ -137,6 +146,16 @@ theorem witness_pos_from_wide_bound_margin (E P : List ℤ) (capk delta : ℝ)
     0 < (slowμ ((coverSet E)ᶜ ∩ safeSet P)).toReal :=
   lt_of_lt_of_le hdelta
     (witness_margin_from_wide_bound E P capk delta hwide hdual)
+
+/-- Positive-margin corollary for the dense-complement witness carrier. -/
+theorem dense_compl_witness_pos_from_wide_bound_margin
+    (E P : List ℤ) (capk delta : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hdelta : 0 < delta)
+    (hwide : (slowμ (coverSet E)).toReal ≤ capk - delta)
+    (hdual : capk ≤ (slowμ (safeSet P)).toReal) :
+    0 < (slowμ ((denseSet E)ᶜ ∩ safeSet P)).toReal :=
+  lt_of_lt_of_le hdelta
+    (dense_compl_witness_margin_from_wide_bound E P capk delta hE hwide hdual)
 
 /-! ## Axiom audit -/
 
@@ -149,7 +168,9 @@ theorem witness_pos_from_wide_bound_margin (E P : List ℤ) (capk delta : ℝ)
 #print axioms witness_pos_from_strict_cover_bound
 #print axioms dense_compl_witness_pos_from_strict_cover_bound
 #print axioms witness_margin_from_wide_bound
+#print axioms dense_compl_witness_margin_from_wide_bound
 #print axioms witness_pos_from_wide_bound_margin
+#print axioms dense_compl_witness_pos_from_wide_bound_margin
 
 end DenseCovers
 end LonelyRunner

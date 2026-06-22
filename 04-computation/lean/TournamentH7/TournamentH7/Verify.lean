@@ -562,6 +562,23 @@ theorem lrc_witness_margin_from_wide_bound_audit
     E P capk delta hwide hdual
 #print axioms lrc_witness_margin_from_wide_bound_audit
 
+theorem lrc_dense_compl_witness_margin_from_wide_bound_audit
+    (E P : List ℤ) (capk delta : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hwide :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal ≤ capk - delta)
+    (hdual :
+      capk ≤
+        (LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    delta ≤
+      (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.denseSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.dense_compl_witness_margin_from_wide_bound
+    E P capk delta hE hwide hdual
+#print axioms lrc_dense_compl_witness_margin_from_wide_bound_audit
+
 theorem lrc_witness_pos_from_wide_bound_margin_audit
     (E P : List ℤ) (capk delta : ℝ)
     (hdelta : 0 < delta)
@@ -579,6 +596,24 @@ theorem lrc_witness_pos_from_wide_bound_margin_audit
   LonelyRunner.DenseCovers.witness_pos_from_wide_bound_margin
     E P capk delta hdelta hwide hdual
 #print axioms lrc_witness_pos_from_wide_bound_margin_audit
+
+theorem lrc_dense_compl_witness_pos_from_wide_bound_margin_audit
+    (E P : List ℤ) (capk delta : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hdelta : 0 < delta)
+    (hwide :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal ≤ capk - delta)
+    (hdual :
+      capk ≤
+        (LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    0 <
+      (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.denseSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.dense_compl_witness_pos_from_wide_bound_margin
+    E P capk delta hE hdelta hwide hdual
+#print axioms lrc_dense_compl_witness_pos_from_wide_bound_margin_audit
 
 /-! ### LRC14 Bonferroni positive-p0 route -/
 

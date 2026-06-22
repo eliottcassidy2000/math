@@ -1,3 +1,27 @@
+## codex-2026-06-22-S86g -- dense-complement margin handoff added
+
+Extended the dense-complement proxy from positivity to the quantitative margin
+needed by the finite-ruler Part-A route.  `LRCWitnessFloorConcrete.lean` now
+proves `dense_compl_witness_margin_from_wide_bound`: if
+`p0(E)≤cap_k−delta`, `cap_k≤meas(G_P)`, and `0∈E`, then
+`delta≤slowμ((denseSet E)^c ∩ safeSet P)`.  It also proves
+`dense_compl_witness_pos_from_wide_bound_margin` as the positive-margin
+corollary.  Added aggregate `Verify` wrappers for both.
+
+Focused, `Verify`, and root transcripts:
+`lrc_witness_floor_dense_compl_margin_codex_s86g.out`,
+`tournamenth7_verify_lrc_dense_compl_margin_codex_s86g.out`, and
+`tournamenth7_root_lrc_dense_compl_margin_codex_s86g.out`; scans found no
+warnings, no `sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{p0 margin, cap floor, coverSet carrier,
+denseSet^c carrier, safeSet, finite PartA delta budget, goodSet readout}`.
+Edges are Bonferroni margin transport, carrier inclusion, measure monotonicity,
+and later finite-error consumption.  Challenged assumption: the dense-complement
+bridge is only a positivity convenience; the same bridge also carries the
+quantitative delta needed by the finite approximation budget, while the
+`goodSet` readout remains the open quotient.
+
 ## codex-2026-06-22-S86g -- dense-complement carrier bridge formalized
 
 Continued from the strict-cover hp0cap handoff and tightened the concrete

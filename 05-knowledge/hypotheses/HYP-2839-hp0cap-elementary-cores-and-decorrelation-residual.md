@@ -59,6 +59,11 @@ records the proved lower-carrier path from hp0cap to a `Dense17`-complement
 event, leaving the sorted cyclic-gap equivalence with `goodSet`/`witnessG2` as
 the next formal node.
 
+The quantitative version is also formalized:
+`dense_compl_witness_margin_from_wide_bound` carries the p0 margin itself,
+`delta <= meas((denseSet E)^c ∩ safeSet P)`, from
+`p0(E) <= cap_k - delta`, `cap_k <= meas(G_P)`, and `0 ∈ E`.
+
 ## The residual (the genuinely analytic part, NOT elementary)
 The binding cases k=8..12 route through the decorrelated closed form (THM-534, kps-S24):
 > `p0(E) <= p0_decorr(E) = sum_t P_t^{(r)} p_t(B)`  [RESONANCE BOUND -- the residual]

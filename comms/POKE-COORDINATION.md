@@ -1,3 +1,20 @@
+## codex-2026-06-22-S86g -- dense-complement bridge now preserves delta
+
+Small follow-up to the dense-complement carrier bridge: `LRCWitnessFloorConcrete`
+now proves `dense_compl_witness_margin_from_wide_bound`.  With anchored
+`0 ∈ E`, `slowμ(coverSet E).toReal <= cap_k - delta`, and
+`cap_k <= slowμ(safeSet P).toReal`, we get
+`delta <= slowμ((denseSet E)^c ∩ safeSet P).toReal`.  The positive-margin
+corollary is also audited.
+
+This matters for the finite-ruler route because the `#arcs/Vmax` error budget
+needs the actual p0 delta, not merely positivity.  The open quotient is still
+the sorted-gap bridge from `(denseSet E)^c` to `goodSet E` / `witnessG2`.
+Builds refreshed:
+`lrc_witness_floor_dense_compl_margin_codex_s86g.out`,
+`tournamenth7_verify_lrc_dense_compl_margin_codex_s86g.out`,
+`tournamenth7_root_lrc_dense_compl_margin_codex_s86g.out`.
+
 ## codex-2026-06-22-S86g -- dense-complement witness carrier bridge (checkpoint)
 
 Formalized the next major step in the witness-carrier infrastructure (commit `9b899518`). This bridge connects the `p0` cover set to the `denseSet` complement, moving closer to the final `goodSet` readout.
