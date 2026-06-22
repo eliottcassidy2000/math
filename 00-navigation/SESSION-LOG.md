@@ -51,6 +51,49 @@ bare list of denominators.  Assumption challenge recorded in HYP-2899:
 the relevant tournament vertices are divisor packets, exact-period unit
 classes, tiling recursion modes, product-ledger obligations, and scalarization
 guardrails, not necessarily runners, arcs, or even edges.
+## codex-2026-06-22-S113 -- totient curvature of tournament recursion modes
+
+User asked to continue LRC proof work using coprime density / Euler-totient /
+multiplicative functions and the three tournament recursion modes, with
+attention to the different subtournament sizes in each mode.
+
+Stashed generated session state and pulled; main was current.  Read THM-442,
+THM-550, THM-554, HYP-2685, HYP-2628/2629/2630, and the exact-period packet
+atlas HYP-2886/S102.
+
+Added `04-computation/lrc_tournament_totient_recursion_modes_codex_s113.py`
+and stored `05-knowledge/results/lrc_tournament_totient_recursion_modes_codex_s113.out`.
+The script verifies `n=sum_{d|n}phi(d)` through `n<=120`, verifies
+full/even/odd cell recurrences through `n<=80`, and applies the signed slot
+operators to `phi`, `phi/n`, and `phi/(n-1)`.
+
+Main finding: the recurrences are exact for cell-address carriers but fail
+systematically on multiplicative coprime-density packets.  The failure is useful
+Euler-factor curvature.  At `n=14`, full mode uses three size-13, three
+size-12, one size-11 carriers; even-half uses two size-13 and one size-12
+carrier; at odd `n=15`, odd-half uses two size-14, two size-13, two size-12,
+one size-11 carrier.  So LRC14 is an input to the odd half mode, not its
+output.  The even-half `n=14` residual for `rho=phi/n` is `-296/273`, with
+curvature `{2:3,3:1,7:1,13:-2}`.
+
+Created HYP-2900/T1013 and reflection
+`07-reflections/lrc-totient-curvature-and-tournament-recursion-modes-codex-s113.md`.
+Proof-route takeaway: keep exact-period `phi` packets and their CRT/chi7/coimage
+curvature before scalar cap/floor/Fejer estimates; do not chase a scalar totient
+recurrence.
+
+Later fetch found directly relevant incoming work: S110 had already claimed
+HYP-2899 for the product-Mobius packet ledger, KPS S31q identifies the three
+sign words as Mobius / Legendre `chi_7` / Eisenstein `chi_3` character
+channels, and mac-mini S44 identifies resonance killing as totient-weighted
+Farey killing with `Phi(14)=64`.  Renamed the S113 contribution to HYP-2900 and
+integrated the incoming signal: HYP-2899 names the product ledger, S31q/S44 name
+the character and totient-killing coordinates, while S113 pins the exact
+subtournament sizes and Euler-factor residuals at the LRC14 boundary.
+Final pull added KPS S31r's parity-stratified composition.  Integrated it as
+the third coordinate: LRC14 is the even Eisenstein fold `14 -> 7` followed by
+the odd Legendre apex-7 channel on the Mobius floor, and HYP-2900's
+`rho=-296/273` residual is the exact slot-curvature scar at that seam.
 
 ## mac-mini-2026-06-22-S43 -- LRC proof<->disproof dialectic: covering sets are FORCED LONELY (M~0.097>>1/14); M({1..11,13})=1/12 is the adversarial seed; measure inequality REFUTED as insufficient
 Owner: M({1..11,13})=1/12 & zeta(-1)=-1/12; prove AND disprove LRC(14), go back and forth; in/finite families. HYP-2897.

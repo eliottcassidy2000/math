@@ -1,0 +1,88 @@
+Totient/coprime-density audit for tournament recursion modes
+==============================================================================
+Totient copy law: n = sum_{d|n} phi(d)
+  checked n<= 120: failures=0
+
+Cell-count exactness versus multiplicative curvature
+  full recurrence exact for full cells through 80: True
+  even half exact for half cells through 80: True
+  odd half exact for half cells through 80: True
+  phi residuals nonzero for full sample: 8/8
+  phi residuals nonzero for even_half sample: 5/5
+  phi residuals nonzero for odd_half sample: 5/5
+
+LRC14-adjacent slot tables
+full      n=14: A:13(13) +B:13(13) +C:13(13) -D:12(2^2*3) -E:12(2^2*3) -F:12(2^2*3) +G:11(11)
+  residual phi              : -28 (-28.000000)
+  residual rho=phi/n        : -2252/1001 (-2.249750)
+  residual APdens=phi/(n-1) : -350/143 (-2.447552)
+  prime-exponent curvature: {2: 7, 3: 3, 7: 1, 11: -1, 13: -3}
+even_half n=14: A:13(13) +B:13(13) -C:12(2^2*3)
+  residual phi              : -14 (-14.000000)
+  residual rho=phi/n        : -296/273 (-1.084249)
+  residual APdens=phi/(n-1) : -168/143 (-1.174825)
+  prime-exponent curvature: {2: 3, 3: 1, 7: 1, 13: -2}
+full      n=15: A:14(2*7) +B:14(2*7) +C:14(2*7) -D:13(13) -E:13(13) -F:13(13) +G:12(2^2*3)
+  residual phi              : 22 (+22.000000)
+  residual rho=phi/n        : 766/455 (+1.683516)
+  residual APdens=phi/(n-1) : 1825/1001 (+1.823177)
+  prime-exponent curvature: {2: -5, 5: 1, 7: -3, 13: 3}
+odd_half  n=15: A:14(2*7) +B:14(2*7) -C:13(13) +D:13(13) -E:12(2^2*3) -F:12(2^2*3) +G:11(11)
+  residual phi              : -6 (-6.000000)
+  residual rho=phi/n        : -218/385 (-0.566234)
+  residual APdens=phi/(n-1) : -625/1001 (-0.624376)
+  prime-exponent curvature: {2: 2, 3: 3, 5: 1, 7: -2, 11: -1}
+
+Largest coprime-density residuals, normalized by exact value
+  global top residuals:
+  full      n=30 factor=2*3*5        rho=4/15 residual=-2041/1015 rel=6123/812 curvature={2: 7, 3: -2, 5: 1, 7: 3, 29: -3}
+  full      n=42 factor=2*3*7        rho=2/7 residual=-38364/18655 rel=19182/2665 curvature={2: 10, 5: 3, 7: 1, 13: -1, 41: -3}
+  full      n=60 factor=2^2*3*5      rho=4/15 residual=-909824/487635 rel=227456/32509 curvature={2: 5, 5: 1, 19: -1, 29: 3, 59: -3}
+  full      n=72 factor=2^3*3^2      rho=1/3 residual=-127657/57155 rel=382971/57155 curvature={2: 6, 3: 1, 5: 3, 7: 3, 23: -1, 71: -3}
+  full      n=80 factor=2^4*5        rho=2/5 residual=-956132/395395 rel=478066/79079 curvature={2: 7, 3: 3, 5: 1, 7: -1, 11: -1, 13: 3, 79: -3}
+  full      n=20 factor=2^2*5        rho=2/5 residual=-3849/1615 rel=3849/646 curvature={2: 5, 3: 6, 5: 1, 17: -1, 19: -3}
+  full      n=44 factor=2^2*11       rho=5/11 residual=-352159/135751 rel=352159/61705 curvature={2: 5, 3: 3, 7: 3, 11: 1, 41: -1, 43: -3}
+  full      n=12 factor=2^2*3        rho=1/3 residual=-307/165 rel=307/55 curvature={2: 5, 3: -1, 5: 3, 11: -3}
+  per-mode top residuals:
+    full:
+      n=30 factor=2*3*5        rho=4/15 residual=-2041/1015 rel=6123/812 curvature={2: 7, 3: -2, 5: 1, 7: 3, 29: -3}
+      n=42 factor=2*3*7        rho=2/7 residual=-38364/18655 rel=19182/2665 curvature={2: 10, 5: 3, 7: 1, 13: -1, 41: -3}
+      n=60 factor=2^2*3*5      rho=4/15 residual=-909824/487635 rel=227456/32509 curvature={2: 5, 5: 1, 19: -1, 29: 3, 59: -3}
+      n=72 factor=2^3*3^2      rho=1/3 residual=-127657/57155 rel=382971/57155 curvature={2: 6, 3: 1, 5: 3, 7: 3, 23: -1, 71: -3}
+    even_half:
+      n=30 factor=2*3*5        rho=4/15 residual=-3763/3045 rel=3763/812 curvature={2: 3, 3: 1, 5: 1, 7: 1, 29: -2}
+      n=60 factor=2^2*3*5      rho=4/15 residual=-31226/25665 rel=15613/3422 curvature={2: 3, 3: 1, 5: 1, 29: 1, 59: -2}
+      n=42 factor=2*3*7        rho=2/7 residual=-1816/1435 rel=908/205 curvature={2: 4, 3: 1, 5: 1, 7: 1, 41: -2}
+      n=72 factor=2^3*3^2      rho=1/3 residual=-9659/7455 rel=9659/2485 curvature={2: 4, 3: 2, 5: 1, 7: 1, 71: -2}
+    odd_half:
+      n=63 factor=3^2*7        rho=4/7 residual=-162476/192045 rel=40619/27435 curvature={2: 2, 3: 4, 5: 2, 7: 1, 31: -2, 59: -1}
+      n=45 factor=3^2*5        rho=8/15 residual=-36934/47355 rel=18467/12628 curvature={2: -2, 3: 4, 5: 1, 7: 2, 11: -2, 41: -1}
+      n=75 factor=3*5^2        rho=8/15 residual=-9968/13135 rel=3738/2627 curvature={2: 4, 3: 5, 5: 2, 37: -2, 71: -1}
+      n=33 factor=3*11         rho=20/33 residual=-3953/4785 rel=3953/2900 curvature={2: -8, 3: 3, 5: 2, 11: 1, 29: -1}
+
+Multiplicativity defects for unit-density rho=phi/n
+  coprime multiplicativity failures for a,b<= 40: 0
+  largest non-coprime defects:
+    a=32(2^5   ) b=32(2^5   ) rho(ab)=1/2 rho(a)rho(b)=1/4 defect=1/4
+    a=32(2^5   ) b=16(2^4   ) rho(ab)=1/2 rho(a)rho(b)=1/4 defect=1/4
+    a=32(2^5   ) b= 8(2^3   ) rho(ab)=1/2 rho(a)rho(b)=1/4 defect=1/4
+    a=32(2^5   ) b= 4(2^2   ) rho(ab)=1/2 rho(a)rho(b)=1/4 defect=1/4
+    a=32(2^5   ) b= 2(2     ) rho(ab)=1/2 rho(a)rho(b)=1/4 defect=1/4
+    a=16(2^4   ) b=32(2^5   ) rho(ab)=1/2 rho(a)rho(b)=1/4 defect=1/4
+    a=16(2^4   ) b=16(2^4   ) rho(ab)=1/2 rho(a)rho(b)=1/4 defect=1/4
+    a=16(2^4   ) b= 8(2^3   ) rho(ab)=1/2 rho(a)rho(b)=1/4 defect=1/4
+
+Tournament Analysis over proof carriers
+  vertices are proof carriers, not runners/arcs
+  pairwise observable=(#labels preserved, overlap, declaration order)
+  scores={'exact_period_phi_packets': 6, 'euler_curvature_residual': 5, 'three_recursion_slot_atlas': 4, 'half_tiling_fixed_line': 3, 'scalar_cell_count': 2, 'raw_subtournament_size': 1, 'raw_runner_vertices': 0}
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  Hamiltonian path=exact_period_phi_packets > euler_curvature_residual > three_recursion_slot_atlas > half_tiling_fixed_line > scalar_cell_count > raw_subtournament_size > raw_runner_vertices
+
+Synthesis:
+  The three A..G recurrences are exact address recurrences for cell carriers.
+  Totient and coprime density are multiplicative exact-period packet counts.
+  Their recurrence residual is not error; it is Euler-factor curvature.
+  LRC14 should keep this curvature as labelled CRT/chi7/coimage data before
+  applying scalar cap, floor, or Fejer estimates.
