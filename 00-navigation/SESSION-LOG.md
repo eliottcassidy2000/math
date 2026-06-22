@@ -5,6 +5,54 @@ Owner: synthesize the even-graph<->tournament lenses, understand how the structu
 - **Every lens is one angle on Cut(+)Cycle:** OCF (H=I(Omega,2)), metagraph (E_n = cycle quotient, DUAL of G_n), nowhere-zero flows/Tutte (cut=tension/score, cycle=flow; LRC lives on the flow=cycle side), spectral, perfect-graph.
 - **The apex-7 seam (C_5<->K_3), two-sided:** cycle side C_5 = XOR of 3 vertex-conflicting triangles (my S37); conflict side H=7<=>Omega=K_3 FORBIDDEN because K_3 forces a directed C_5 (kps THM-200). Pentagon & triangle = two faces of ONE apex-7 obstruction along the Cut(+)Cycle seam. {7,21}, E_7 non-chordality, H=7, LRC(14) = the same odd obstruction in 4 coordinates.
 - **DISCIPLINE:** corrected the 'H is cut-blind / E_n loses nothing' OVERCLAIM -> VERIFIED H is NOT an E_n invariant (n=5: 64 tilings -> 7 even-graph classes, 5 carry multiple H, one |E|=4 class spans H in {5,9,11,13,15}); the cycle half carries H only with the cut FIXED. Also fixed V(G_n) numbers (2,4,12,56,456). NO new HYP (synthesis). NEXT: LRC apex-7 as a cycle/flow-side (5-flow?) obstruction -- the open deep lead.
+## codex-2026-06-22-S101 -- even graphs as parity-dual cycle-space addresses for the LRC packet graph
+User asked for another concurrent exploration session focused on past
+even-graph work, tournament/even-graph lenses, and how that structure might
+help finish the LRC proof.  Pulled current mainline, resolved the usual
+`agents/.session-state.json` autostash conflict by keeping upstream state, and
+read the incoming even-graph spectrum scar note plus HYP-2872/S96 guardrails
+against naive even-graph minors.
+
+Main synthesis: even graphs are not an `H`-obstruction closure.  They are a
+parity-dual cycle-space address.  The latest scar calculation makes this
+precise: tournaments miss clique value `7` because the `K_3` conflict packet is
+orientation-unrealizable, while even graphs realize `7` because `K_3` is
+degree-even and instead miss even-clique values `5,9,13,...`.  Thus the
+even-graph projection can heal the scalar scar while preserving the support
+incidence where the scar was born.
+
+LRC translation: the proof should not import the scalar tournament gap into
+the LRC residual.  It should build a support-six signed packet graph after
+exact-period expansion and coimage quotienting.  Added
+`04-computation/lrc14_repeated_packet_graph_codex_s101.py` as the first exact
+finite instance.  For HYP-2632's repeated-residue kernel, vertices are residues
+`{0,2,3,4,5,6}`, negative loops are the `4+2` packets
+`-4,-25,-18,-25,-18,-18`, and edges are the `4+1+1` packets of weight
+`0,1,8`.  The zero edges are exactly the affine matching `a+b=2 mod 7`, and
+the script verifies the local conservation law
+`loop(a)+sum_b edge(a,b)=0` at every vertex, with no failures.  Thus the finite
+kernel is a signed-current graph, not merely a smaller signed scalar total.
+
+The proposed closing split is now sharper: lift the local packet balance
+through reciprocal hyperplane sums after low-height wall deletion, then route
+full residuals into parity-null packet graphs, relation-depth `<=2`
+finite-atlas packets, or relation-depth `>=3` spread-cycle packets handled by
+Freiman/Parseval decorrelation.  This sharpens the genuine-wide branch into a
+packet-incidence compression target rather than a raw-cluster census.
+
+Added HYP-2883, script/output
+`04-computation/lrc14_repeated_packet_graph_codex_s101.py` /
+`05-knowledge/results/lrc14_repeated_packet_graph_codex_s101.out`, and
+reflection
+`07-reflections/even-graphs-as-parity-dual-addresses-codex-s101.md`; added
+T998 and index updates.  Assumption challenge: considered runners, fixed-path
+free arcs, even-graph edges/classes, E7 metagraph classes, odd-cycle conflict
+packets, strong atoms, exact-denominator packets, support-six relation
+vectors, Fourier shells, affine lanes, relation-depth buckets, and proof
+obligations.  Chosen quotient is the support-six signed packet graph; it
+preserves exact-period multiplicity, relation support, mod-7 coimage, signed
+kernel, and additive-energy incidence, while destroying raw runner identity
+and scalar `H`.
 
 ## codex-2026-06-22-S100 -- primitive packets before quotients: odd clique/hole, H-atoms, and totient copies
 User asked to search back through tournament-structure work and Euler-totient
