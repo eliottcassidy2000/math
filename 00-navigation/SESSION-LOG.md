@@ -1,3 +1,36 @@
+## codex-2026-06-22-S85 -- LRC14 Bonferroni/p0 floor wired into top-level Lean assembly
+
+Pulled KPS S30's `witness-floor-is-the-p0-wide-bound` reflection before editing and treated it as the live proof signal: the large-cluster witness floor should be consumed as a p0-wide-bound margin, not as a standalone compactness floor.  Extended `TournamentH7.LRCWitnessBonferroni` with sorry-free Lean assembly wrappers:
+`large_witness_floor_from_bonferroni_nodes`,
+`witness_floor_from_p0_wide_bound_shapes`,
+`large_witness_floor_from_p0_wide_bound_shapes`,
+`witnessMP_le_capRat_of_le_seven`,
+`witness_floor_pigeonhole_leg_ge_mP`,
+`small_witness_floor_from_pigeonhole_nodes`,
+`lrc14_from_bonferroni_split_nodes`,
+`lrc14_from_p0_wide_bound_shapes`, and
+`lrc14_from_p0_wide_bound_split_nodes`.
+
+The new wrappers feed the small-cluster pigeonhole floor plus either the Bonferroni large floor or the p0-margin large floor directly into `lrc14_from_witness_floor_cases_given_nodes`, returning `LRC14Statement` under the explicit remaining analytic inputs.  Focused `lake build TournamentH7.LRCWitnessBonferroni` and root `lake build TournamentH7` both pass; stored transcripts:
+`05-knowledge/results/lrc_witness_bonferroni_assembly_codex_s85.out` and
+`05-knowledge/results/tournamenth7_root_lrc_bonferroni_assembly_codex_s85.out`.
+The new p0 assembly theorems audit with only `propext`, `Classical.choice`, and
+`Quot.sound`; the Bonferroni table route additionally uses the existing
+`native_decide` rational arithmetic.
+
+Tournament Analysis for this formalization pass used vertices = proof obligations
+and measure nodes `{small pigeonhole, Bonferroni inclusion, Lemma A nu floor,
+Lemma B cap/measGP duality, p0 dense-cover inclusion, p0 cap-margin, PartA,
+Mreach->lonely}`.  Directed edges are "discharges/feeds into" dependencies, with
+the tie Hamiltonian path
+`small pigeonhole -> p0 dense-cover inclusion -> p0 cap-margin -> cap/measGP duality -> Bonferroni inclusion -> large witness floor -> PartA -> Mreach->lonely`.
+This quotient preserves the LRC predicate "all inputs sufficient for
+`LRC14Statement`" while destroying the geometry of the underlying circle events.
+Challenged assumption: after HYP-2832, a separate `rhoGlobFloorRat <= rhoGlob`
+floor theorem is the main large-cluster bottleneck.  The better Lean boundary is
+now the event-level definitions/inclusions (`D <= p0`, `p0 <= cap-delta`,
+`cap <= measGP`) plus Part A.
+
 ## codex-2026-06-22-S84 -- LRC14 skeleton made sorry-free by replacing open analytic claims with obligations
 
 Pulled `origin/main` through `e45d60b5` before editing and absorbed S83's key signal: concrete `Mreach` is closed, so the remaining Lean risk is not compactness but the way the open analytic frontiers are represented. Updated `TournamentH7.LRCFourteenSkeleton` so THM-527 Part A, the doublet R-tail uniform bound, and the gK8 concentration-extremality frontier are named `Prop` obligations rather than theorem declarations proved by `sorry`. The old 2/7 rho-star route is now explicitly conditional on both `thm527_partA_density_pos_implies_reach` and `obsoleteRhoStarUniformFloor`, and the unused `rhoStar_nonneg` axiom became `rhoStar_nonneg_obligation`.

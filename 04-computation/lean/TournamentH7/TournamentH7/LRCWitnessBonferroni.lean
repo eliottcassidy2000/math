@@ -39,6 +39,11 @@
       hypotheses, the witness floor `m_P <= witnessG2 s` follows for every shape
       with cluster size 8..13.  This carries NO `sorry`: it isolates exactly the
       three obligations, two of which are essentially settled.
+    * the top-level assembly wrappers
+      `lrc14_from_bonferroni_split_nodes` and
+      `lrc14_from_p0_wide_bound_split_nodes`, which feed those floor reductions
+      into the skeleton's LRC(14) witness-route theorem.  They do not assert the
+      remaining analytic nodes; they make the exact Lean boundary explicit.
 
   This replaces the single opaque `hfloor` obligation by Bonferroni (proved
   measure fact) + Lemma B (proved finite rational) + decidable arithmetic +
@@ -131,6 +136,22 @@ theorem witness_floor_from_bonferroni_nodes
   -- chain
   linarith
 
+/-- The large-cluster (`8..13`) floor node in the exact shape expected by the
+LRC14 skeleton's case-split theorem. -/
+theorem large_witness_floor_from_bonferroni_nodes
+    (nuShape measGP : Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hA : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (nuConsec (clusterSize s) : ℝ) ≤ nuShape s)
+    (hB : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      8 ≤ clusterSize (shapeOf v) → clusterSize (shapeOf v) ≤ 13 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v) := by
+  intro v _hv h8 h13
+  exact witness_floor_from_bonferroni_nodes nuShape measGP hbonf hA hB
+    (shapeOf v) h8 h13
+
 /-! ## ★ The UNIFICATION with the p0 wide bound (the rigorous closure)
 
 The witness floor is IMPLIED by the team's already-closed p0 wide bound, with NO
@@ -177,6 +198,55 @@ theorem witnessG2_pos_from_p0_wide_bound
     (witness_floor_from_p0_wide_bound nuShape measGP p0Shape cap delta
       hbonf hDp0 hp0cap hmeasGP s)
 
+/-- Shape-indexed version of `witness_floor_from_p0_wide_bound`, with the margin
+allowed to depend on the cluster shape.  This is the exact form needed for the
+`k`-dependent wide-bound margins in the LRC14 proof DAG. -/
+theorem witness_floor_from_p0_wide_bound_shapes
+    (nuShape measGP p0Shape cap delta : Shape → ℝ)
+    (hδm : ∀ s, (witnessMP : ℝ) ≤ delta s)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, cap s ≤ measGP s)
+    (s : Shape) :
+    (witnessMP : ℝ) ≤ witnessG2 s := by
+  have h1 : nuShape s + measGP s - 1 ≤ witnessG2 s := hbonf s
+  have h2 : (1 - nuShape s) ≤ p0Shape s := hDp0 s
+  have h3 : p0Shape s ≤ cap s - delta s := hp0cap s
+  have h4 : cap s ≤ measGP s := hmeasGP s
+  have h5 : (witnessMP : ℝ) ≤ delta s := hδm s
+  linarith
+
+/-- Large-cluster p0-unification floor in the shape expected by the skeleton's
+case-split theorem.  The hypotheses are restricted to `8..13`, matching the
+current sector/witness proof split. -/
+theorem large_witness_floor_from_p0_wide_bound_shapes
+    (nuShape measGP p0Shape cap delta : Shape → ℝ)
+    (hδm : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (witnessMP : ℝ) ≤ delta s)
+    (hbonf : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      cap s ≤ measGP s) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      8 ≤ clusterSize (shapeOf v) → clusterSize (shapeOf v) ≤ 13 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v) := by
+  intro v _hv h8 h13
+  have h1 : nuShape (shapeOf v) + measGP (shapeOf v) - 1 ≤
+      witnessG2 (shapeOf v) := hbonf (shapeOf v) h8 h13
+  have h2 : (1 - nuShape (shapeOf v)) ≤ p0Shape (shapeOf v) :=
+    hDp0 (shapeOf v) h8 h13
+  have h3 : p0Shape (shapeOf v) ≤ cap (shapeOf v) - delta (shapeOf v) :=
+    hp0cap (shapeOf v) h8 h13
+  have h4 : cap (shapeOf v) ≤ measGP (shapeOf v) :=
+    hmeasGP (shapeOf v) h8 h13
+  have h5 : (witnessMP : ℝ) ≤ delta (shapeOf v) := hδm (shapeOf v) h8 h13
+  linarith
+
 /-! ## The `k <= 7` pigeonhole leg (no Lemma A needed)
 
 For `k <= 7` the cluster has `<= 7` phases, so `maxgap >= 1/k >= 1/7` for EVERY
@@ -204,16 +274,130 @@ theorem witness_floor_pigeonhole_leg
   have : measGP s ≤ witnessG2 s := by linarith
   linarith
 
+/-- The admissible witness floor `m_P` is below the trivial small-cluster cap
+`capRat k = 1` for `k <= 7`. -/
+theorem witnessMP_le_capRat_of_le_seven (k : ℕ) (hk : k ≤ 7) :
+    (witnessMP : ℝ) ≤ (capRat k : ℝ) := by
+  interval_cases k <;> norm_num [witnessMP, capRat]
+
+/-- The pigeonhole leg promoted to the skeleton's `m_P <= witnessG2` floor. -/
+theorem witness_floor_pigeonhole_leg_ge_mP
+    (nuShape measGP : Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hnu1 : ∀ s, clusterSize s ≤ 7 → nuShape s = 1)
+    (hB : ∀ s, clusterSize s ≤ 7 → (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (s : Shape) (h7 : clusterSize s ≤ 7) :
+    (witnessMP : ℝ) ≤ witnessG2 s :=
+  le_trans (witnessMP_le_capRat_of_le_seven (clusterSize s) h7)
+    (witness_floor_pigeonhole_leg nuShape measGP hbonf hnu1 hB s h7)
+
+/-- Small-cluster (`k <= 7`) floor node in the exact shape expected by the
+LRC14 skeleton's case-split theorem. -/
+theorem small_witness_floor_from_pigeonhole_nodes
+    (nuShape measGP : Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hnu1 : ∀ s, clusterSize s ≤ 7 → nuShape s = 1)
+    (hB : ∀ s, clusterSize s ≤ 7 → (capRat (clusterSize s) : ℝ) ≤ measGP s) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 7 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v) := by
+  intro v _hv h7
+  exact witness_floor_pigeonhole_leg_ge_mP nuShape measGP hbonf hnu1 hB
+    (shapeOf v) h7
+
+/-! ## LRC14 assembly from the Bonferroni / p0 floor nodes -/
+
+/-- **Top-level LRC14 assembly from the Bonferroni split floor.**  The remaining
+inputs are the actual measure facts: Bonferroni, the `k<=7` full-good
+pigeonhole statement, Lemma A, Lemma B, the cluster-size bound, and the direct
+`G2 > 0 -> Mreach >= 1/14` Part-A bridge. -/
+theorem lrc14_from_bonferroni_split_nodes
+    (nuShape measGP : Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hnu1 : ∀ s, clusterSize s ≤ 7 → nuShape s = 1)
+    (hBsmall : ∀ s, clusterSize s ≤ 7 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hA : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (nuConsec (clusterSize s) : ℝ) ≤ nuShape s)
+    (hBlarge : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (capRat (clusterSize s) : ℝ) ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13)
+    (hpartA : ∀ v : Fin 13 → ℤ, 0 < witnessG2 (shapeOf v) →
+      (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement :=
+  lrc14_from_witness_floor_cases_given_nodes
+    (small_witness_floor_from_pigeonhole_nodes nuShape measGP hbonf hnu1 hBsmall)
+    (large_witness_floor_from_bonferroni_nodes nuShape measGP hbonf hA hBlarge)
+    hsize hpartA lonely_of_Mreach_ge
+
+/-- **Top-level LRC14 assembly from an all-shapes p0 wide-bound margin.**  This
+is the cleanest formal reading of HYP-2832: a positive p0 margin at least `m_P`,
+plus `D <= p0`, `p0 <= cap-delta`, and `cap <= measGP`, supplies the witness
+floor needed by the skeleton. -/
+theorem lrc14_from_p0_wide_bound_shapes
+    (nuShape measGP p0Shape cap delta : Shape → ℝ)
+    (hδm : ∀ s, (witnessMP : ℝ) ≤ delta s)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, cap s ≤ measGP s)
+    (hpartA : ∀ v : Fin 13 → ℤ, 0 < witnessG2 (shapeOf v) →
+      (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement :=
+  lrc14_from_witness_floor_given_nodes
+    (fun v _hv =>
+      witness_floor_from_p0_wide_bound_shapes nuShape measGP p0Shape cap delta
+        hδm hbonf hDp0 hp0cap hmeasGP (shapeOf v))
+    hpartA lonely_of_Mreach_ge
+
+/-- **Top-level LRC14 assembly from the current split p0 route.**  Small clusters
+are supplied separately (typically by pigeonhole); large clusters are discharged
+by the p0 wide-bound margin. -/
+theorem lrc14_from_p0_wide_bound_split_nodes
+    (nuShape measGP p0Shape cap delta : Shape → ℝ)
+    (hsmall : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 7 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
+    (hδm : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (witnessMP : ℝ) ≤ delta s)
+    (hbonf : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      cap s ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13)
+    (hpartA : ∀ v : Fin 13 → ℤ, 0 < witnessG2 (shapeOf v) →
+      (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement :=
+  lrc14_from_witness_floor_cases_given_nodes hsmall
+    (large_witness_floor_from_p0_wide_bound_shapes
+      nuShape measGP p0Shape cap delta hδm hbonf hDp0 hp0cap hmeasGP)
+    hsize hpartA lonely_of_Mreach_ge
+
 /-! ## Axiom audit -/
 
 #print axioms bonferroni_floor_pos
 #print axioms bonferroni_floor_ge_mP
 #print axioms floor_ge_mP_of_mem
 #print axioms witness_floor_from_bonferroni_nodes
+#print axioms large_witness_floor_from_bonferroni_nodes
 #print axioms witness_floor_from_p0_wide_bound
 #print axioms witnessG2_pos_from_p0_wide_bound
+#print axioms witness_floor_from_p0_wide_bound_shapes
+#print axioms large_witness_floor_from_p0_wide_bound_shapes
 #print axioms nuConsec_eq_one_of_le_seven
 #print axioms witness_floor_pigeonhole_leg
+#print axioms witnessMP_le_capRat_of_le_seven
+#print axioms witness_floor_pigeonhole_leg_ge_mP
+#print axioms small_witness_floor_from_pigeonhole_nodes
+#print axioms lrc14_from_bonferroni_split_nodes
+#print axioms lrc14_from_p0_wide_bound_shapes
+#print axioms lrc14_from_p0_wide_bound_split_nodes
 
 end Bonferroni
 end LRC14

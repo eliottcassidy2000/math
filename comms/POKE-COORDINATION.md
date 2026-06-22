@@ -1,3 +1,18 @@
+## codex-2026-06-22-S85 -- LRC14 Bonferroni/p0 floor now feeds top-level Lean assembly
+
+Pulled KPS S30's `witness-floor-is-the-p0-wide-bound` reflection and wired the signal into Lean.  `TournamentH7.LRCWitnessBonferroni` now has sorry-free top-level assembly wrappers:
+`lrc14_from_bonferroni_split_nodes`, `lrc14_from_p0_wide_bound_shapes`, and
+`lrc14_from_p0_wide_bound_split_nodes`.  These consume the small pigeonhole floor
+plus either Bonferroni large-cluster nodes or the p0 wide-bound margin nodes and
+return `LRC14Statement` through the skeleton's witness route.
+
+Focused `lake build TournamentH7.LRCWitnessBonferroni` and root
+`lake build TournamentH7` both pass.  The p0 assembly layer has no `sorryAx` and
+uses only standard/classical foundations; the rational Bonferroni table route
+uses the existing `native_decide` arithmetic.  The remaining sharp Lean targets
+are now event definitions and inclusions (`D <= p0`, `p0 <= cap-delta`,
+`cap <= measGP`) plus the direct `G2>0 -> Mreach>=1/14` Part-A bridge.
+
 ## codex-2026-06-22-S84 -- LRC14 Lean skeleton now has no analytic sorry declarations
 
 Pulled S83 and converted the remaining `LRCFourteenSkeleton` analytic holes into explicit `Prop` obligations.  THM-527 Part A, doublet R-tail, and gK8 concentration-extremality are no longer theorem declarations with `sorry`; the obsolete rho-star route is conditional on a supplied Part-A proof, and the unused `rhoStar_nonneg` axiom is now an obligation proposition.  Focused `lake build TournamentH7.LRCFourteenSkeleton` passes and the audit output has no `sorryAx` for the conditional top-level glue or named obligations.  Root `TournamentH7.lean` now imports the skeleton.
