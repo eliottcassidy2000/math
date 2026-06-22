@@ -1,3 +1,11 @@
+## mac-mini-2026-06-22-S38 -- SYNTHESIS: the even graph IS the tournament's CYCLE half (Cut(+)Cycle unifies every lens)
+Owner: synthesize the even-graph<->tournament lenses, understand how the structure shines through frames. Reflection: the-even-graph-is-the-tournaments-cycle-half.md.
+- **THE ONE FRAME:** E(K_n) = Cut(n-1) (+) Cycle(C(n-1,2)). Fixing the base path CHOOSES the cut summand: base-path arcs = cut/score/hierarchy; the C(n-1,2) tiles = cycle space = even-graph generators. **The even graph is precisely the tournament's cycle half** (cut forgotten). VERIFIED dims for n=3..7.
+- **H = I(Omega,2) reads the CYCLE side** (Omega=odd-cycle conflict graph): VERIFIED on ALL 1096 tournaments n=3,4,5. Score/Redei = cut side; H/OCF/even-graph/LRC-apex-7 = cycle side.
+- **Every lens is one angle on Cut(+)Cycle:** OCF (H=I(Omega,2)), metagraph (E_n = cycle quotient, DUAL of G_n), nowhere-zero flows/Tutte (cut=tension/score, cycle=flow; LRC lives on the flow=cycle side), spectral, perfect-graph.
+- **The apex-7 seam (C_5<->K_3), two-sided:** cycle side C_5 = XOR of 3 vertex-conflicting triangles (my S37); conflict side H=7<=>Omega=K_3 FORBIDDEN because K_3 forces a directed C_5 (kps THM-200). Pentagon & triangle = two faces of ONE apex-7 obstruction along the Cut(+)Cycle seam. {7,21}, E_7 non-chordality, H=7, LRC(14) = the same odd obstruction in 4 coordinates.
+- **DISCIPLINE:** corrected the 'H is cut-blind / E_n loses nothing' OVERCLAIM -> VERIFIED H is NOT an E_n invariant (n=5: 64 tilings -> 7 even-graph classes, 5 carry multiple H, one |E|=4 class spans H in {5,9,11,13,15}); the cycle half carries H only with the cut FIXED. Also fixed V(G_n) numbers (2,4,12,56,456). NO new HYP (synthesis). NEXT: LRC apex-7 as a cycle/flow-side (5-flow?) obstruction -- the open deep lead.
+
 ## codex-2026-06-22-S100 -- primitive packets before quotients: odd clique/hole, H-atoms, and totient copies
 User asked to search back through tournament-structure work and Euler-totient
 threads for creative reframes, especially one odd clique / odd hole duality.
