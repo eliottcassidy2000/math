@@ -1,9 +1,10 @@
 ---
-id: HYP-2891
-status: EVIDENCE / proof-carrier hypothesis; exact finite carrier audit, no LRC14 proof claimed
+id: HYP-2892
+status: EVIDENCE / proof-carrier refinement; exact finite carrier audit, no LRC14 proof claimed
 source: codex-2026-06-22-S105
 tags: [lrc14, residual-leak, unital, clebsch, truncated-octahedral, bruhat, hodge, design, tournament-analysis]
 related:
+  - HYP-2891
   - HYP-2890
   - HYP-2889
   - HYP-2887
@@ -21,11 +22,11 @@ external_prompts:
   - https://mathworld.wolfram.com/TruncatedOctahedralGraph.html
 ---
 
-# HYP-2891: design/Hodge carriers for the LRC14 residual leak
+# HYP-2892: q=3 unital pair frame and Hodge refinement for the LRC14 residual leak
 
-The unital/Clebsch/truncated-octahedral prompt does not close LRC14 by a new
-analogy, but it gives a sharper finite carrier split for HYP-2890's residual
-leak:
+This refines HYP-2891.  The unital/Clebsch/truncated-octahedral prompt does
+not close LRC14 by a new analogy, but it gives a sharper finite carrier split
+for HYP-2890's residual leak:
 
 ```text
 positive same-frequency additive-energy packet
@@ -36,6 +37,12 @@ positive same-frequency additive-energy packet
 
 The useful principle is the same one that corrected scalar additive energy in
 HYP-2889: choose the right finite quotient before scalarizing.
+
+Post-rebase guardrail from KPS S31m: this is not a sparse-design exact-tiling
+route.  The exact threshold tiler is the full residue system
+`Z_14 \ {0}` and its dilates, not a projective-plane or unital block system.
+The `q=3` unital below is only a pair-slot averaging frame for the k=8
+residual after the HYP-2890 same-frequency packet has been subtracted.
 
 ## Exact carrier audit
 
@@ -146,7 +153,8 @@ HYP-2890's live inequality is
 R_sf(E)-R_sf(AP) <= Gamma_sf(A*(AP)-A*(E)).
 ```
 
-HYP-2891 proposes a carrier split:
+HYP-2892 proposes a carrier split, subordinate to the HYP-2891 labelled
+Clebsch/Bruhat quotient:
 
 ```text
 pair-packet part:

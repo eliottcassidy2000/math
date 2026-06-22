@@ -11,6 +11,14 @@ q=3 unital and Clebsch = pair-uniform tight frames;
 truncated octahedral and octahedral L(K4) = signed curl complexes.
 ```
 
+Post-rebase namespace and proof guardrail: HYP-2891/T1005 is the primary
+Clebsch/Bruhat labelled-residual quotient from the incoming S105 commit.  This
+note is the HYP-2892/T1006 refinement focused on the `q=3` unital pair frame
+and Hodge split.  KPS S31m also refuted the sparse-design exact-tiler reading:
+the exact threshold tiler is the full residue system `Z_14 \ {0}` and its
+dilates.  Thus the unital is not a tiling model; it is a candidate averaging
+frame on the k=8 pair-slot residual after HYP-2890's same-frequency packet.
+
 The `q=3` unital is the strongest surprise.  The Hermitian construction over
 `GF(9)` gives `28` points and `63` four-point blocks, with every pair of points
 in exactly one block.  Since `28=C(8,2)`, this is exactly sized for the k=8 AP

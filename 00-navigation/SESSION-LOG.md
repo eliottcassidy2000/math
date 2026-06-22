@@ -66,11 +66,16 @@ findings:
 - Existing HYP-2887 octahedral `L(K4)` carrier remains the support-six
   repeated-packet subcarrier: cycle rank `7`, triangular face-curl module.
 
-Created HYP-2891/T1005 and reflection
+Created HYP-2892/T1006 and reflection
 `07-reflections/lrc14-design-hodge-carriers-codex-s105.md`.  Proposed proof
 split: unital/Clebsch block averages for pair packets, Bruhat/octahedral
 face-curl ledgers for labelled residuals, and HYP-2636 Abel/L2 cancellation for
-the analytic tail.  No LRC14 proof claimed.
+the analytic tail.  A post-checkpoint rebase revealed the concurrent S105
+HYP-2891/T1005 Clebsch/Bruhat residual-carrier claim, so this note was
+renumbered as the q=3 unital pair-frame refinement.  It also absorbs the KPS
+S31m guardrail: exact threshold tilers are full `Z_14 \ {0}` residue systems
+and dilates, so the unital is an averaging frame, not a sparse-design tiling
+proof.  No LRC14 proof claimed.
 
 Assumption challenge / Tournament Analysis: considered runners, gaps, fixed
 sectors, sector boundaries, wall events, residues, cover arcs, Fourier modes,
