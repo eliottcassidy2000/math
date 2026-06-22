@@ -20286,9 +20286,16 @@ scalar additive energy has `3137` p0 monotonicity inversions, pairwise
 difference-profile majorization has `556752` p0 monotonicity violations, and
 one-step profile-up compression lowers p0 in `1177` cases.
 
-Created HYP-2887 and reflection
+Created HYP-2889 and reflection
 `07-reflections/lrc-additive-energy-majorization-codex-s103.md`.  New theorem
 shape: prove interval difference-profile/Fejer majorization, then split the
 THM-534 `L_y` certificate into an AP-facing Fejer component plus a labelled
 signed sector/Fourier remainder controlled by finite AP/Freiman packets and
 HYP-2636/HYP-2884 cancellation.  No LRC14 proof claimed.
+
+Follow-up after rebase over concurrent S103/S39 work: octahedral current had
+already claimed HYP-2887/T1002, so this additive-energy correction was
+renumbered to HYP-2889/T1003.  Integrated mac-mini HYP-+2888 as signal: AP
+strict-threshold coverage is exactly measure `1` with a boundary rational
+witness, so the AP-facing Fejer branch should prove no non-AP row over-covers
+past that boundary value, not a positive-measure safe floor at threshold.

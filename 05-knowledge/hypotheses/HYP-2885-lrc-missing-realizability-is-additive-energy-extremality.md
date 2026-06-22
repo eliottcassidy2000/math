@@ -91,7 +91,7 @@ uniformly, the additive-combinatorial analogue of the Tornheim tail.
 
 ## S103 correction: use AP-facing majorization, not scalar monotonicity
 
-Codex S103 (`lrc_additive_energy_majorization_codex_s103.py`, HYP-2887)
+Codex S103 (`lrc_additive_energy_majorization_codex_s103.py`, HYP-2889)
 stress-tested the majorization route.  The scalar theorem
 
 ```text
@@ -115,3 +115,8 @@ AP difference-profile / Fejer majorization
 
 This keeps additive energy as the right extremal carrier but prevents losing
 the sector/Fourier labels that determine LRC coverage.
+
+Concurrent HYP-+2888 sharpens the endpoint interpretation: the AP extremizer
+covers exactly to measure `1` at the strict threshold, with a boundary rational
+witness rather than a positive-measure safe floor.  So HYP-2889's role is to
+prevent non-AP rows from over-covering past that boundary value.

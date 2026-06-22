@@ -21,6 +21,14 @@ AP difference-profile majorization
 
 It should not be stated as `L_y <= G(A(E))` for a scalar monotone `G`.
 
+After rebasing over concurrent S103/S39 work, this note is attached to
+HYP-2889/T1003.  The octahedral-current result owns HYP-2887/T1002, and
+mac-mini's HYP-+2888 adds the boundary endpoint: the strict-threshold AP
+extremizer covers exactly to measure `1`, with a rational boundary witness.
+So the Fejer branch should prove no non-AP row over-covers past that boundary
+value; it should not try to produce a positive-measure safe floor at the strict
+threshold.
+
 ## Exact evidence
 
 Script/output:

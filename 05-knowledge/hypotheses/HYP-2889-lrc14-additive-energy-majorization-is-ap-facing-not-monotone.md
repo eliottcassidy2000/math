@@ -1,11 +1,12 @@
 ---
-id: HYP-2887
+id: HYP-2889
 status: EVIDENCE / proof-target; exact finite scout, no LRC14 proof claimed
 source: codex-2026-06-22-S103
 tags: [lrc14, additive-energy, fejer, majorization, p0, Ly, interval-extremality, tournament-analysis]
 related:
   - HYP-2885
   - HYP-2886
+  - HYP-+2888
   - HYP-2873
   - THM-534
   - OPEN-Q-108
@@ -14,7 +15,7 @@ results:
   - 05-knowledge/results/lrc_additive_energy_majorization_codex_s103.out
 ---
 
-# HYP-2887: additive-energy majorization is AP-facing, not a monotone order
+# HYP-2889: additive-energy majorization is AP-facing, not a monotone order
 
 HYP-2885 correctly identifies additive energy / Fejer concentration as the
 right extremal carrier for the LRC14 cap branch, but the carrier must be used in
@@ -33,6 +34,12 @@ What survives is sharper:
 the interval/AP difference profile majorizes every tested row, and the AP is
 still the p0 and L_y maximizer in the same exact banks.
 ```
+
+This also fits the concurrent HYP-+2888 boundary/rational-witness result:
+maximal AP-like energy reaches exact unsafe coverage `1`, not a positive-measure
+over-cover.  Therefore the cap branch only needs to prevent non-AP rows from
+exceeding the AP boundary value; it should not try to prove a universal
+positive safe-measure floor at the strict threshold.
 
 Thus the proof route should not be `L_y <= G(A(E))` for a scalar monotone
 function `G`.  It should be:
