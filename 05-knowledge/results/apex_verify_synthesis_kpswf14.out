@@ -1,0 +1,149 @@
+==============================================================================
+INDEPENDENT VERIFICATION  (kind-pasteur-2026-06-22, kpswf14)
+==============================================================================
+units mod 14 = [1, 3, 5, 9, 11, 13]
+AP residues mod14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+GW residues mod14 (multiset): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13]
+12->26 residues mod14 (multiset): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+12->96 residues mod14 (multiset): [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+------------------------------------------------------------------------------
+(A) AP apex tournament at a*=1  (claim: regular R_13, H=3711175)
+------------------------------------------------------------------------------
+    score         = (6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6)
+    c3_formula    = 91
+    c3_brute      = 91
+    H             = 3711175
+    regular       = True
+    self_converse = True
+    aut           = 13
+    iso to standard Z/13 'beat next 6' circulant: True
+    c3 formula == brute: True
+    expected c3=(13^3-13)/24 = 91
+
+------------------------------------------------------------------------------
+(B) GW apex tournament at a*=1  (claim: H=3351471, NOT regular)
+------------------------------------------------------------------------------
+    score         = (5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+    c3_formula    = 89
+    c3_brute      = 89
+    H             = 3351471
+    regular       = False
+    self_converse = True
+    aut           = 1
+
+------------------------------------------------------------------------------
+(C) MAGNITUDE BLINDNESS: AP vs 12->26 vs 12->96 (all residues {1..13})
+------------------------------------------------------------------------------
+    AP {1..13}  : H=3711175, regular=True, apex-adj byte-identical to AP: True
+    12->26      : H=3711175, regular=True, apex-adj byte-identical to AP: False
+    12->96      : H=3711175, regular=True, apex-adj byte-identical to AP: False
+
+------------------------------------------------------------------------------
+(D) a-INVARIANCE TEST: AP across all unit phases (claim: 6 DISTINCT,
+    only a*=1 regular -> the 'iso class is a-invariant' claim is FALSE)
+------------------------------------------------------------------------------
+    a*= 1: H=  3711175  regular=True  score=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6)
+    a*= 3: H=  3394355  regular=False  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+    a*= 5: H=  3351471  regular=False  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+    a*= 9: H=  3097953  regular=False  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+    a*=11: H=  3051221  regular=False  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+    a*=13: H=  2641713  regular=False  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+    distinct H values: [2641713, 3051221, 3097953, 3351471, 3394355, 3711175]
+    #regular among the 6 phases: 1
+
+------------------------------------------------------------------------------
+(E) RIGIDITY LEMMA spot-check: every one-missing/one-doubled residue
+    multiset is NON-regular at apex (defect=0 <=> full transversal)
+------------------------------------------------------------------------------
+    one-missing/one-doubled multisets tested: 156
+    NON-regular at apex: 156/156
+    => full transversal is the UNIQUE regular: True
+
+------------------------------------------------------------------------------
+(F) EXACT LONELY MEASURE M(S) (small-denom sweep, confirm tight=1/14)
+------------------------------------------------------------------------------
+    AP {1..13}        : M = 1/14 = 0.071429   at t=(1, 14)
+    GW {1..11,13,24}  : M = 1/14 = 0.071429   at t=(1, 14)
+    12->26            : M = 1/12 = 0.083333   at t=(1, 12)
+    12->96            : M = 8/101 = 0.079208   at t=(42, 101)
+
+==============================================================================
+MACHINE-READABLE
+==============================================================================
+{
+ "AP_apex_a1": {
+  "score": [
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6
+  ],
+  "c3_formula": 91,
+  "c3_brute": 91,
+  "H": 3711175,
+  "regular": true,
+  "self_converse": true,
+  "aut": 13
+ },
+ "GW_apex_a1": {
+  "score": [
+   5,
+   5,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   6,
+   7,
+   7
+  ],
+  "c3_formula": 89,
+  "c3_brute": 89,
+  "H": 3351471,
+  "regular": false,
+  "self_converse": true,
+  "aut": 1
+ },
+ "AP_H_by_unit_phase": {
+  "1": 3711175,
+  "3": 3394355,
+  "5": 3351471,
+  "9": 3097953,
+  "11": 3051221,
+  "13": 2641713
+ },
+ "magnitude_blind_AP_26_96_identical_adj": true,
+ "rigidity_unique_regular": true
+}
+
+==============================================================================
+ADDENDUM: floor-odd iso class is FOOLED by an unbounded loose set (answers Q1)
+==============================================================================
+Thread B's cleanest discriminator was floor-odd [i->j iff floor(s_i/s_j) odd],
+reported "0 false positives over 2134 curated loose rows". UNBOUNDED test breaks it:
+  GENUINE FOOL: S = {1,2,3,4,5,6,7,8,9,10,11,13,360}
+    - floor-odd(S) is the SAME ISO CLASS as floor-odd(GW)  [13 distinct WL colors
+      => forced unique map, verified exact iso; H=1477605 for both]
+    - M(S) = 6/73 = 0.08219... > 1/14 = 0.07142...  (exact, D<=3000)  => LOOSE
+  So a LOOSE set shares the TIGHT GW's floor-odd iso class. floor-odd does NOT
+  characterize tightness.  (A near-fool {2..13,74} matches GW's (WL-sig,H) but is
+  a different full iso class -- WL+H alone is not even a complete invariant.)
+CONCLUSION (Q1): NO fixed-rule 13-vertex tournament iso class can characterize
+tightness. Tightness M(S)=1/14 is a max-over-t functional of the UNBOUNDED integer
+speeds; a tournament has only finitely many (A000568(13)) iso classes, so it cannot
+injectively encode an unbounded magnitude invariant. The Thread-B "0 false positives"
+was a bounded-bank artifact.
