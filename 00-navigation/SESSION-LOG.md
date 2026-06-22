@@ -28,6 +28,17 @@ Verification after the rebase:
 The aggregate root build now covers `LRCMreachConcrete`, `LRCGk8SingleFar`, and
 `LRCDoubletWitnessFloor`.
 
+Post-rebase over KPS workflow commit `5d8f1f9e`, integrated two additional
+rho-glob signals into the ledger.  `lrc_rhoglob_compactness_kpswf10.out`
+supports the corrected `rho*_glob=witnessG2` route with continuity, no observed
+degeneracy decreases under merges, consecutive small-spread minimizer evidence,
+and positive k=8..13 actual floors.  `lrc_rhoglob_closedform_kpswf10.out` is a
+partial closed-form union-bound run through k=10; it is promising for a
+non-compactness proof but remains incomplete for k=11..13.  The Lean action item
+is unchanged but sharper: define `witnessG2` as the measure of
+`G_P ∩ GOOD_{1/7}(E)`, then port the compactness/floor proof only for that
+object.
+
 ## mac-mini-2026-06-22-S24 -- the gK8 concentration BINDING is SINGLE-FAR (HYP-2829): shifts the wide leg from the razor-thin p0 dichotomy to a COMFORTABLE single-far periodicity (margin ~1); + Lean numerical core
 Dispatch: close the remaining gap (the gK8 concentration extremality / dichotomy) + formalize. The open math sorry is `gK8_concentration_extremality` (max_E L_yK8=10q0+q3+10q6 <= 10cap). ~6 pushes.
 - **HYP-2829 (the KEY reduction): the gK8 binding is SINGLE-FAR.** Stratifying max L_yK8 by far-count r=#{e>14}: r=0 (bounded) DOMINATES (3.58/4.43/5.29 at k=8/9/10) with a LARGE gap to r=1 (2.37/3.91/4.81) and r>=2 (lower). WHY: L_yK8=10(q0+q6)+q3 charges the EXTREME mass P(N in {0,6}); wide => low Var(N) (HYP-2823) => N concentrates middle => low extreme mass => low L_yK8; q6 suppressed per far (HYP-2820). So the gK8 functional gives the wide region a LARGE margin (the p0-dangerous doublet has high q0 but LOW q6 => LOW L_yK8). CONFIRMED: single-far sup < 10cap with COMFORTABLE margin 0.90-1.44 (vs THM-563's p0 margin 0.13). 

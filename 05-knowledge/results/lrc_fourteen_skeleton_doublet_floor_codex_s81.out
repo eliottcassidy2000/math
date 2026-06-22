@@ -108,18 +108,17 @@ info: TournamentH7/LRCDoubletWitnessFloor.lean:84:0: 'LonelyRunner.DoubletWitnes
  witnessFloor_above_rhoFloor._native.native_decide.ax_1_1,
  witnessFloor_above_thm530Floor._native.native_decide.ax_1_1,
  witnessFloor_positive._native.native_decide.ax_1_1]
-⚠ [2948/2948] Built TournamentH7.LRCFourteenSkeleton (5.1s)
-warning: TournamentH7/LRCFourteenSkeleton.lean:92:8: declaration uses `sorry`
+⚠ [2948/2948] Built TournamentH7.LRCFourteenSkeleton (5.4s)
+warning: TournamentH7/LRCFourteenSkeleton.lean:91:8: declaration uses `sorry`
 warning: TournamentH7/LRCFourteenSkeleton.lean:138:8: declaration uses `sorry`
-warning: TournamentH7/LRCFourteenSkeleton.lean:152:8: declaration uses `sorry`
-warning: TournamentH7/LRCFourteenSkeleton.lean:362:8: declaration uses `sorry`
-warning: TournamentH7/LRCFourteenSkeleton.lean:423:8: declaration uses `sorry`
-info: TournamentH7/LRCFourteenSkeleton.lean:506:0: 'LonelyRunner.LRC14.lrc14_no_multiple_of_14' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:507:0: 'LonelyRunner.LRC14.lrc14_all_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:508:0: 'LonelyRunner.LRC14.lrc14_counterexample_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:509:0: 'LonelyRunner.LRC14.gK8_per_shape_bound' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:510:0: 'LonelyRunner.LRC14.gK8_dual_feasible' depends on axioms: [FactorialAtom.gK8_dominates._native.native_decide.ax_1_1]
-info: TournamentH7/LRCFourteenSkeleton.lean:511:0: 'LonelyRunner.LRC14.gK8_singlefar_arithmetic_checksum' depends on axioms: [Gk8SingleFar.bounded_k10_below_cap._native.native_decide.ax_1_1,
+warning: TournamentH7/LRCFourteenSkeleton.lean:404:8: declaration uses `sorry`
+warning: TournamentH7/LRCFourteenSkeleton.lean:483:8: declaration uses `sorry`
+info: TournamentH7/LRCFourteenSkeleton.lean:564:0: 'LonelyRunner.LRC14.lrc14_no_multiple_of_14' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:565:0: 'LonelyRunner.LRC14.lrc14_all_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:566:0: 'LonelyRunner.LRC14.lrc14_counterexample_saturated' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:567:0: 'LonelyRunner.LRC14.gK8_per_shape_bound' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:568:0: 'LonelyRunner.LRC14.gK8_dual_feasible' depends on axioms: [FactorialAtom.gK8_dominates._native.native_decide.ax_1_1]
+info: TournamentH7/LRCFourteenSkeleton.lean:569:0: 'LonelyRunner.LRC14.gK8_singlefar_arithmetic_kernel' depends on axioms: [Gk8SingleFar.bounded_k10_below_cap._native.native_decide.ax_1_1,
  Gk8SingleFar.bounded_k8_below_cap._native.native_decide.ax_1_1,
  Gk8SingleFar.bounded_k9_below_cap._native.native_decide.ax_1_1,
  Gk8SingleFar.singlefar_k10_below_bounded._native.native_decide.ax_1_1,
@@ -128,31 +127,46 @@ info: TournamentH7/LRCFourteenSkeleton.lean:511:0: 'LonelyRunner.LRC14.gK8_singl
  Gk8SingleFar.singlefar_k8_below_cap._native.native_decide.ax_1_1,
  Gk8SingleFar.singlefar_k9_below_bounded._native.native_decide.ax_1_1,
  Gk8SingleFar.singlefar_k9_below_cap._native.native_decide.ax_1_1]
-info: TournamentH7/LRCFourteenSkeleton.lean:512:0: 'LonelyRunner.LRC14.single_far_periodmax_headroom' depends on axioms: [PeriodmaxCertificate.all_worst_rows_headroom_positive._native.native_decide.ax_1_1]
-info: TournamentH7/LRCFourteenSkeleton.lean:513:0: 'LonelyRunner.LRC14.genuine_wide_rows_below_cap' depends on axioms: [GenuineWideCorrection.all_reported_rows_below_cap._native.native_decide.ax_1_1]
-info: TournamentH7/LRCFourteenSkeleton.lean:514:0: 'LonelyRunner.LRC14.doublet_witness_floor_checksum' depends on axioms: [DoubletWitnessFloor.rhoFloor_above_consecRhoFloor._native.native_decide.ax_1_1,
+info: TournamentH7/LRCFourteenSkeleton.lean:570:0: 'LonelyRunner.LRC14.gK8_singlefar_arithmetic_checksum' depends on axioms: [Gk8SingleFar.bounded_k10_below_cap._native.native_decide.ax_1_1,
+ Gk8SingleFar.bounded_k8_below_cap._native.native_decide.ax_1_1,
+ Gk8SingleFar.bounded_k9_below_cap._native.native_decide.ax_1_1,
+ Gk8SingleFar.singlefar_k10_below_bounded._native.native_decide.ax_1_1,
+ Gk8SingleFar.singlefar_k10_below_cap._native.native_decide.ax_1_1,
+ Gk8SingleFar.singlefar_k8_below_bounded._native.native_decide.ax_1_1,
+ Gk8SingleFar.singlefar_k8_below_cap._native.native_decide.ax_1_1,
+ Gk8SingleFar.singlefar_k9_below_bounded._native.native_decide.ax_1_1,
+ Gk8SingleFar.singlefar_k9_below_cap._native.native_decide.ax_1_1]
+info: TournamentH7/LRCFourteenSkeleton.lean:571:0: 'LonelyRunner.LRC14.single_far_periodmax_headroom' depends on axioms: [PeriodmaxCertificate.all_worst_rows_headroom_positive._native.native_decide.ax_1_1]
+info: TournamentH7/LRCFourteenSkeleton.lean:572:0: 'LonelyRunner.LRC14.genuine_wide_rows_below_cap' depends on axioms: [GenuineWideCorrection.all_reported_rows_below_cap._native.native_decide.ax_1_1]
+info: TournamentH7/LRCFourteenSkeleton.lean:573:0: 'LonelyRunner.LRC14.doublet_witness_floor_checksum' depends on axioms: [DoubletWitnessFloor.rhoFloor_above_consecRhoFloor._native.native_decide.ax_1_1,
  DoubletWitnessFloor.rhoFloor_positive._native.native_decide.ax_1_1,
  DoubletWitnessFloor.witnessFloor_above_rhoFloor._native.native_decide.ax_1_1,
  DoubletWitnessFloor.witnessFloor_above_thm530Floor._native.native_decide.ax_1_1,
  DoubletWitnessFloor.witnessFloor_positive._native.native_decide.ax_1_1]
-info: TournamentH7/LRCFourteenSkeleton.lean:515:0: 'LonelyRunner.LRC14.sampleBoundedRows_ok' depends on axioms: [sampleBoundedRows_ok._native.native_decide.ax_1_1]
-info: TournamentH7/LRCFourteenSkeleton.lean:516:0: 'LonelyRunner.LRC14.wide_bound_from_gK8' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:517:0: 'LonelyRunner.LRC14.witnessMP_pos_rat' depends on axioms: [propext,
+info: TournamentH7/LRCFourteenSkeleton.lean:574:0: 'LonelyRunner.LRC14.sampleBoundedRows_ok' depends on axioms: [sampleBoundedRows_ok._native.native_decide.ax_1_1]
+info: TournamentH7/LRCFourteenSkeleton.lean:575:0: 'LonelyRunner.LRC14.wide_bound_from_gK8' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:576:0: 'LonelyRunner.LRC14.witnessMP_pos_rat' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  witnessMP_pos_rat._native.native_decide.ax_1_1]
-info: TournamentH7/LRCFourteenSkeleton.lean:518:0: 'LonelyRunner.LRC14.witnessMP_pos_real' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:519:0: 'LonelyRunner.LRC14.witness_floor_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:520:0: 'LonelyRunner.LRC14.one_seventh_le_inv_of_pos_le_seven' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:521:0: 'LonelyRunner.LRC14.lrc14_from_witness_floor_given_nodes' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:523:0: 'LonelyRunner.LRC14.thm527_partA_density_pos_implies_reach' depends on axioms: [propext,
+info: TournamentH7/LRCFourteenSkeleton.lean:577:0: 'LonelyRunner.LRC14.witnessMP_pos_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:578:0: 'LonelyRunner.LRC14.witness_floor_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:579:0: 'LonelyRunner.LRC14.one_seventh_le_inv_of_pos_le_seven' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:580:0: 'LonelyRunner.LRC14.witness_floor_from_cluster_cases' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:581:0: 'LonelyRunner.LRC14.lrc14_from_witness_floor_given_nodes' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:582:0: 'LonelyRunner.LRC14.lrc14_from_witness_floor_cases_given_nodes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:584:0: 'LonelyRunner.LRC14.thm527_partA_density_pos_implies_reach' depends on axioms: [propext,
  sorryAx,
  Classical.choice,
  Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:524:0: 'LonelyRunner.LRC14.thm527_partG_uniform_floor' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:525:0: 'LonelyRunner.LRC14.lonely_of_Mreach_ge' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:526:0: 'LonelyRunner.LRC14.doublet_Rtail_uniform_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:527:0: 'LonelyRunner.LRC14.gK8_concentration_extremality' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:528:0: 'LonelyRunner.LRC14.lrc14_from_thm527' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
-info: TournamentH7/LRCFourteenSkeleton.lean:529:0: 'LonelyRunner.LRC14.lrc14_from_witness_floor' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:585:0: 'LonelyRunner.LRC14.lonely_of_Mreach_ge' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:586:0: 'LonelyRunner.LRC14.doublet_Rtail_uniform_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:587:0: 'LonelyRunner.LRC14.gK8_concentration_extremality' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:588:0: 'LonelyRunner.LRC14.lrc14_from_obsolete_rhoStar_floor' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+info: TournamentH7/LRCFourteenSkeleton.lean:589:0: 'LonelyRunner.LRC14.lrc14_from_witness_floor' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 Build completed successfully (2948 jobs).

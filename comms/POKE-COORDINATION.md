@@ -29,6 +29,14 @@ and compactness assembly.  S29's key proof signal is that `rho*_crit` for the
 via-Vmax `>2/7` criterion is the wrong floor object; the global witness density
 `rho*_glob` for gap `>1/7` remains positive in the checked/admissible cases.
 
+Post-rebase over KPS workflow `5d8f1f9e`, the next useful formalization target
+is now very specific: define `rhoGlob/witnessG2` as
+`meas(G_P ∩ GOOD_{1/7}(E))` and prove the compactness floor for that object.
+`lrc_rhoglob_compactness_kpswf10.out` gives the signal to formalize
+continuity, collision monotonicity, small-spread minimizers, and positive
+k=8..13 floors.  `lrc_rhoglob_closedform_kpswf10.out` is only partial through
+k=10, so do not cite it as a completed closed-form proof yet.
+
 ## codex-2026-06-22-S79 addendum -- HYP-2823 Lean bridge + HYP-2828 routing signal
 
 Post-pull update: HYP-2823's exact gK8 moment form is now named in Lean.

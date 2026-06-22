@@ -23,17 +23,17 @@ info: TournamentH7/LonelyRunner.lean:466:0: 'LonelyRunner.three_term_translation
 info: TournamentH7/LonelyRunner.lean:467:0: 'LonelyRunner.three_term_not_translation_invariant' depends on axioms: [propext, Quot.sound]
 info: TournamentH7/LonelyRunner.lean:468:0: 'LonelyRunner.relation_inherits' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: TournamentH7/LonelyRunner.lean:469:0: 'LonelyRunner.pinch_pair_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [2945/2945] Built TournamentH7.LRCMreachConcrete (5.1s)
-warning: TournamentH7/LRCMreachConcrete.lean:88:8: declaration uses `sorry`
-warning: TournamentH7/LRCMreachConcrete.lean:98:8: declaration uses `sorry`
-warning: TournamentH7/LRCMreachConcrete.lean:110:6: declaration uses `sorry`
-warning: TournamentH7/LRCMreachConcrete.lean:115:8: declaration uses `sorry`
-warning: TournamentH7/LRCMreachConcrete.lean:129:8: declaration uses `sorry`
-warning: TournamentH7/LRCMreachConcrete.lean:142:8: declaration uses `sorry`
-info: TournamentH7/LRCMreachConcrete.lean:171:0: 'LonelyRunner.LRC14Concrete.nearInt_continuous' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
-info: TournamentH7/LRCMreachConcrete.lean:172:0: 'LonelyRunner.LRC14Concrete.minReach_continuous' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
-info: TournamentH7/LRCMreachConcrete.lean:173:0: 'LonelyRunner.LRC14Concrete.minReach_int_periodic' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
-info: TournamentH7/LRCMreachConcrete.lean:174:0: 'LonelyRunner.LRC14Concrete.lonely_iff_minReach_ge' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
-info: TournamentH7/LRCMreachConcrete.lean:175:0: 'LonelyRunner.LRC14Concrete.Mreach_eq_global_sSup' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
-info: TournamentH7/LRCMreachConcrete.lean:176:0: 'LonelyRunner.LRC14Concrete.lonely_of_Mreach_ge' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+⚠ [2945/2945] Built TournamentH7.LRCMreachConcrete (4.9s)
+warning: TournamentH7/LRCMreachConcrete.lean:91:8: declaration uses `sorry`
+warning: TournamentH7/LRCMreachConcrete.lean:101:8: declaration uses `sorry`
+warning: TournamentH7/LRCMreachConcrete.lean:116:6: declaration uses `sorry`
+warning: TournamentH7/LRCMreachConcrete.lean:124:8: declaration uses `sorry`
+warning: TournamentH7/LRCMreachConcrete.lean:141:8: declaration uses `sorry`
+warning: TournamentH7/LRCMreachConcrete.lean:159:8: declaration uses `sorry`
+info: TournamentH7/LRCMreachConcrete.lean:193:0: 'LonelyRunner.LRC14Concrete.nearInt_continuous' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:194:0: 'LonelyRunner.LRC14Concrete.minReach_continuous' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:195:0: 'LonelyRunner.LRC14Concrete.minReach_int_periodic' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:196:0: 'LonelyRunner.LRC14Concrete.lonely_iff_minReach_ge' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:197:0: 'LonelyRunner.LRC14Concrete.Mreach_eq_global_sSup' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:198:0: 'LonelyRunner.LRC14Concrete.lonely_of_Mreach_ge' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
 Build completed successfully (2945 jobs).
