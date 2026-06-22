@@ -39,13 +39,12 @@ which **codex (HYP-2887) identifies as an OCTAHEDRAL HODGE structure on `L(K_4)`
 - **Unital / BIBD**: at the apex prime `7` the H-maximizer (Paley `T_7`) has the BIBD `alpha_2=7`
   (THM-027) -- the design optimality behind `H`-extremality. The unital/Fano family is the apex-7
   design shadow; but since coverage transcends `H`, this is the H-level design, not the coverage one.
-- **STRIKING: `13 = 3^2+3+1` = the number of points of `PG(2,3)`**, the projective plane of order 3.
-  The LRC(14) has exactly `13` speeds; the exact tiler `{1..13}` is a complete nonzero residue system
-  mod `14=2*7`. The exact-tiling rigidity ("only the complete residue system and its dilates tile")
-  has the flavor of a projective-plane / perfect-difference-set uniqueness. This is the most
-  finishing-relevant lead: if the exact tilers are characterized by a `PG(2,3)`-type design rigidity,
-  the crux closes by design uniqueness. (Speculative -- numerical match `13=PG(2,3)` + residue-system
-  structure; not yet a proof.)
+- **`13 = 3^2+3+1` = points of `PG(2,3)` -- TESTED and REFUTED as structural.** The numerical match is
+  real (LRC has 13 speeds), but the exact tiler `{1..13}` is the FULL residue system `Z_14\{0}` (every
+  nonzero difference appears uniformly 12x), NOT a sparse perfect-difference design (PG(2,3)'s set has
+  each difference once). So `13=PG(2,3)` is a COUNT coincidence; the tiling rigidity is a
+  **COMPLETE-RESIDUE-SYSTEM uniqueness** ("only `Z_14\{0}` and its dilates tile"), a number-theoretic
+  complementing-set statement, not a projective-plane design. (Good discipline: tested my own lead, refuted.)
 
 ## Net
 The session's value is corrective + synthetic: the LRC coverage is FINER than the tournament `H`
