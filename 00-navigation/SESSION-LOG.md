@@ -1,3 +1,33 @@
+## codex-2026-06-22-S109 -- zeta -1/12 core dialectic closes the one-tail disproof branch
+
+Owner asked to work back and forth between proof and disproof around
+`M({1..11,13})=1/12` and `1+2+3+...=zeta(-1)=-1/12`, with emphasis on finite
+and infinite families of discrete objects.  Pulled incoming KPS S31p, which
+introduced the resonance-killing game and the zeta-duality reflection, then
+made the first missing-killer core exact.  After a later rebase, integrated
+KPS S31p's sharper `{1,...,12,v}` killing-budget branch: one speed kills `13`
+or `14` cheaply, but killing both forces the large `182` lcm killer, while the
+minimum remains the AP value `1/14` at `v=13`.
+
+Added `04-computation/lrc_zeta12_core_dialectic_codex_s109.py` and stored
+`05-knowledge/results/lrc_zeta12_core_dialectic_codex_s109.out`.  New
+HYP-2896/T1010:
+
+- Let `C={1,...,11,13}`.  Then `M(C)=1/12` at `t=5/12`, active `(5,7)`.
+- Every one-tail row `C∪{w}` is LRC14-safe.
+- If `12∤w`, q=12 survives and gives `M>=1/12`.
+- If `12|w` but `14∤w`, q=14 survives and gives `M>=1/14`.
+- If `w=84m`, the q-covering branch has exact witness
+  `t=(35m+2)/(84m+5)` and exact value `M=7m/(84m+5)>1/14`, active `(5,84m)`.
+
+This closes the one-tail disproof attempt: killing the `1/12` and `1/14`
+resonances by one finite positive speed forces `84|w`, and that same
+divisibility produces a positive binding-pair margin.  The zeta `-1/12`
+constant is therefore a Bernoulli boundary/regularized infinite-AP signal, not
+a finite negative runner.  Remaining target: multi-large or moderate resonant
+covering rows where several divisibility killers interact before
+equidistribution, i.e. HYP-2890/HYP-+2878 support-six residual packets.
+
 ## mac-mini-2026-06-22-S42 -- small-n validation of the coverage technique: exact-tiler uniqueness FALSE (sporadics), all tight-safe, the t=1/n witness + clean sufficient condition for LRC
 Owner: apply our comprehensive techniques to n<14 to understand them; keep aiming to finish. Applied the coverage/exact-tiler technique (S39/S41) to LRC(n), n=5,6,7,8 (LRC PROVEN for n<=7).
 - **CORRECTION (discipline):** my S39/S41 "only d*{1..13} tiles exactly" is FALSE -- exhaustive small-n search finds SPORADIC exact-tilers: {1,3,4,7}(n=5), {1,3,4,5,9}(n=6), 2 at n=8. My "0/5668" was a SAMPLING artifact. Matches kps THM-560 (PROVED difference-closed exact-tilers = d*{1..n-1}; the rest are Goddyn-Wong single-replacement sporadics).
