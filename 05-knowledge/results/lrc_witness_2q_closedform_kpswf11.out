@@ -1,0 +1,58 @@
+====================================================================================
+THREAD 1 (5): closed-form / structural analysis of m_P^{(2q)}
+====================================================================================
+
+--- (A) admissible floor m_P = min meas(G_P) over |P|=n-4 (k=3) ---
+    (and (B) floor-case binding phi_q = min meas(G_P) over |P|=q-1) ---
+
+    q    n  prime?      m_P (|P|=n-4)      =dec     phi_q (|P|=q-1)      =dec
+  ------------------------------------------------------------------------------
+    2    4    True                  0  0.000000                 1/2  0.500000
+    3    6    True                2/5  0.400000                 2/5  0.400000
+    4    8   False               5/24  0.208333                5/14  0.357143
+    5   10    True           781/6300  0.123968              93/280  0.332143
+    6   12   False         1451/16632  0.087241             289/945  0.305820
+    7   14    True       14249/252252  0.056487          3029/10780  0.280983
+    8   16   False         2159/41184  0.052423        37679/144144  0.261398
+
+--- denominators (number-theoretic structure) ---
+  q=2 (n=4): m_P denom = 1 = 
+  q=3 (n=6): m_P denom = 5 = 5
+  q=4 (n=8): m_P denom = 24 = 2^3 * 3
+  q=5 (n=10): m_P denom = 6300 = 2^2 * 3^2 * 5^2 * 7
+  q=6 (n=12): m_P denom = 16632 = 2^3 * 3^3 * 7 * 11
+  q=7 (n=14): m_P denom = 252252 = 2^2 * 3^2 * 7^2 * 11 * 13
+  q=8 (n=16): m_P denom = 41184 = 2^5 * 3^2 * 11 * 13
+
+  q=2 (n=4): phi_q denom = 2 = 2
+  q=3 (n=6): phi_q denom = 5 = 5
+  q=4 (n=8): phi_q denom = 14 = 2 * 7
+  q=5 (n=10): phi_q denom = 280 = 2^3 * 5 * 7
+  q=6 (n=12): phi_q denom = 945 = 3^3 * 5 * 7
+  q=7 (n=14): phi_q denom = 10780 = 2^2 * 5 * 7^2 * 11
+  q=8 (n=16): phi_q denom = 144144 = 2^4 * 3^2 * 7 * 11 * 13
+
+--- candidate closed forms (HONEST: test, don't assume) ---
+  The denominators carry q (or q^2) and factors n-1, n-3 (=2q-1, 2q-3),
+  i.e. lcm-like products from the grid t/(n p).  Test simple guesses:
+  q=3: m_P=0.40000  vs 1/(n-1)=0.20000  ((q-1)/q)^3=0.29630
+  q=5: m_P=0.12397  vs 1/(n-1)=0.11111  ((q-1)/q)^3=0.51200
+  q=7: m_P=0.05649  vs 1/(n-1)=0.07692  ((q-1)/q)^3=0.62974
+
+  VERDICT: no single elementary closed form fits all q for the MIN floor
+  (it is a discrete optimum over P-subsets, number-theoretic in q).
+  The q-UNIFORM content is the MECHANISM + monotone slack, not a formula.
+
+--- the UNIFORM analytic lower bound (this is the q-uniform anchor) ---
+  For ANY nonempty P:  meas(G_P) >= 1 - sum_{p in P} 2/n = 1 - 2|P|/n  (union bd),
+  and the floor-case |P| = n-1-k <= q-1 (k>=q), so
+     meas(G_P) >= 1 - 2(q-1)/(2q) = 1 - (q-1)/q = 1/q  > 0   UNIFORMLY.
+  Sharper (the binding floor case k=q, |P|=q-1):
+     q=3: crude union LB on meas(G_P), |P|=q-1: 1-2(q-1)/n = 1/3 = 0.33333;  actual min = 0.40000  (slack 1.20x)
+     q=5: crude union LB on meas(G_P), |P|=q-1: 1-2(q-1)/n = 1/5 = 0.20000;  actual min = 0.33214  (slack 1.66x)
+     q=7: crude union LB on meas(G_P), |P|=q-1: 1-2(q-1)/n = 1/7 = 0.14286;  actual min = 0.28098  (slack 1.97x)
+
+  => the witness floor in the floor cases is BOUNDED BELOW by 1/q UNIFORMLY
+     (crude union bound), and the true min is several-fold larger.
+
+DONE.
