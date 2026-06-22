@@ -1,0 +1,28 @@
+================================================================================
+NODE-1 three-gap lemma: V* ATLAS (Framing A, scale-separated, V-independent G)
+kind-pasteur-2026-06-22-S34 (THREAD 1 pt 4)
+================================================================================
+
+--- (4a) V-INDEPENDENCE of G in framing A (the uniform-V* enabler) ---
+  S = P u L; teeth = cluster offsets {V-u: u in L} (fixed pattern); G_P fixed.
+shape                                    V  arcs    meas(G)  cert
+P={1,2,3} cluster offs {0,1,2}         101     4   0.690476     0
+P={1..5} cluster offs {0..7}           101    14   0.444898     0
+P={1,5,7,8,9} offs {0..7}              101    18   0.381463     0
+P={1,2,3} offs {0,1,2,..,9}            101    14   0.465986     0
+P={1,2,3,12,13} offs {0,2..8}          101    16   0.486264     0
+P={1..4} offs {0,7,14,..} wideAP       101    38   0.513411     0
+  (arcs, meas are EXACTLY the same for all V -- G does not depend on V in framing A)
+
+--- (4b) V* = arcCount/meas(G) atlas over admissible shapes ---
+  CLUSTER offset patterns: consecutive {0..k-1} (the binding/AP family) for k=1..12,
+  with the complementary small part P = the 'hardest' (smallest meas(G_P)).
+  k  |P|     cluster offs  arcs    meas(G)       V*
+  1   12              [0]    12   0.034101    351.9
+  2   11           [0, 1]    14   0.056334    248.5
+  3   10        [0, 1, 2]    20   0.137982    144.9
+  4    9     [0, 1, 2, 3]    20   0.181066    110.5
+  5    8  [0, 1, 2, 3, 4]    20   0.265816     75.2
+  6    7 [0, 1, 2, 3, 4,     18   0.334694     53.8
+  7    6 [0, 1, 2, 3, 4,     12   0.457143     26.2
+  8    5 [0, 1, 2, 3, 4,     14   0.444898     31.5
