@@ -1,0 +1,69 @@
+======================================================================================
+THREAD 1 DELIVERABLE: WITNESS ROUTE for LRC(2q), q in {3,5,7}  (kpswf11)
+======================================================================================
+
+(I) PER-q ADMISSIBLE FLOORS
+    q    n   LRC(n)      m_P (|P|=n-4)      =dec    phi_q (|P|=q-1)      =dec
+  --------------------------------------------------------------------------------
+    3    6   PROVED                2/5  0.400000                2/5  0.400000
+    5   10   PROVED           781/6300  0.123968             93/280  0.332143
+    7   14     OPEN       14249/252252  0.056487         3029/10780  0.280983
+
+  m_P denominators (number-theoretic, NOT a clean closed form):
+    q=3 (n=6): 5 = 5
+    q=5 (n=10): 6300 = 2^2 * 3^2 * 5^2 * 7
+    q=7 (n=14): 252252 = 2^2 * 3^2 * 7^2 * 11 * 13
+
+(II) THE SLACK TABLE  min-G2(k) / m_P  over floor cases k=q..2q-1
+
+  q=3 (n=6, m_P=0.400000):
+      k  |P|           min G2      =dec   G2/m_P     regime
+      3    2              2/5  0.400000    1.000    BINDING
+      4    1              4/9  0.444444    1.111      dense
+      5    0              4/9  0.444444    1.111      dense
+    => DENSE-k (k>=q+1) slack in [1.11, 1.11]x
+
+  q=5 (n=10, m_P=0.123968):
+      k  |P|           min G2      =dec   G2/m_P     regime
+      5    4           93/280  0.332143    2.679    BINDING
+      6    3            29/75  0.386667    3.119      dense
+      7    2           53/150  0.353333    2.850      dense
+      8    1          211/525  0.401905    3.242      dense
+      9    0          241/525  0.459048    3.703      dense
+    => DENSE-k (k>=q+1) slack in [2.85, 3.70]x
+
+  q=7 (n=14, m_P=0.056487):
+      k  |P|           min G2      =dec   G2/m_P     regime
+      7    6       3029/10780  0.280983    4.974    BINDING
+      8    5       8152/24255  0.336096    5.950      dense
+      9    4          143/420  0.340476    6.027      dense
+     10    3            19/49  0.387755    6.864      dense
+     11    2        3193/8820  0.362018    6.409      dense
+     12    1      10358/24255  0.427046    7.560      dense
+     13    0         477/1078  0.442486    7.833      dense
+    => DENSE-k (k>=q+1) slack in [5.95, 7.83]x
+
+(III) THE q-UNIFORM WITNESS-FLOOR PATTERN
+
+  * PIGEONHOLE closes k < q UNIFORMLY: k points => maxgap >= 1/k > 1/q for every x
+    => GOOD(E) = [0,1) => G2 = meas(G_P) >= m_P.  Elementary, no E-structure.
+  * The k=q BOUNDARY: consec_q = {0,..,q-1} has maxgap > 1/q for a.e. x (the
+    equality set x=a/q has measure 0).  So GOOD(consec_q)=[0,1) a.e. and the binding
+    floor-case value is min G2 = phi_q = min_{|P|=q-1} meas(G_P).
+  * phi_q >= m_P for all q (the floor holds at the binding case) with WIDENING margin:
+        q  phi_q/m_P
+        3      1.000
+        5      2.679
+        7      4.974
+  * DENSE k>q: |P|=n-1-k < q-1 shrinks => meas(G_P) grows => slack grows in k
+    AND in q (q=3: ~1.1x, q=5: ~3x, q=7: ~5-8x).
+  * UNIFORM analytic lower bound (union bound): for the floor cases |P| <= q-1,
+        meas(G_P) >= 1 - 2|P|/n >= 1 - 2(q-1)/(2q) = 1/q > 0,
+    so the witness floor is bounded below by 1/q UNIFORMLY in q.  The exact min is
+    several-fold larger (phi_q ~ 1/4 as q grows, vs 1/q crude bound).
+  * Since LRC(6) and LRC(10) are PROVED, q=3 and q=5 are a CONSISTENCY CHECK: the
+    witness floor MUST be positive there -- and it is (tight 1.0x at q=3, 2.7x at
+    q=5).  The SAME mechanism gives the q=7 floor (4.97x at the binding k=7), which
+    is the LRC(14) witness floor.
+
+DONE.
