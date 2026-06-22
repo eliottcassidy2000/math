@@ -31,6 +31,19 @@ the witness floor needs (`p0 < cap => witnessG2 > 0`, positivity is all hpartA n
   `witness_pos_from_wide_bound`.)
 All axioms propext/Classical/Quot only; lake build EXIT=0.
 
+## Codex S86g strict-cover handoff to the concrete witness floor
+`LRCWitnessFloorConcrete.witness_pos_from_strict_cover_bound` now consumes the
+strict output of `slowμ_coverSet_lt_cap` directly:
+
+> `p0(E) < cap_k` and `cap_k <= meas(G_P)` imply
+> `0 < meas((coverSet E)^c ∩ safeSet P)`.
+
+This removes a small formal mismatch: the p0 positivity route does not need the
+dual cap floor to be strict and does not need an explicit `delta` at the
+concrete carrier layer.  The quantitative margin theorem remains useful for
+finite-ruler error budgets, but the positive-PartA route can now use the strict
+hp0cap residual plus non-strict `hmeasGP` exactly as stated.
+
 ## The residual (the genuinely analytic part, NOT elementary)
 The binding cases k=8..12 route through the decorrelated closed form (THM-534, kps-S24):
 > `p0(E) <= p0_decorr(E) = sum_t P_t^{(r)} p_t(B)`  [RESONANCE BOUND -- the residual]

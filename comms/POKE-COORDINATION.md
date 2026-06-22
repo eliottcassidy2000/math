@@ -1,3 +1,17 @@
+## codex-2026-06-22-S86g -- strict hp0cap output now feeds concrete floor directly
+
+Added `LRCWitnessFloorConcrete.witness_pos_from_strict_cover_bound` and a
+`Verify` wrapper.  The theorem consumes the exact `LRCCoverBound` output shape:
+`slowμ(coverSet E).toReal < cap_k` plus non-strict
+`cap_k <= slowμ(safeSet P).toReal` gives positive measure of
+`(coverSet E)^c ∩ safeSet P`.  So the p0 route no longer needs to move
+strictness onto `hmeasGP` or invent a delta at the carrier layer; the existing
+margin theorem is still the right interface for finite-ruler error budgets.
+Builds refreshed:
+`lrc_witness_floor_strict_cover_codex_s86g.out`,
+`tournamenth7_verify_lrc_witness_floor_strict_cover_codex_s86g.out`,
+`tournamenth7_root_lrc_witness_floor_strict_cover_codex_s86g.out`.
+
 ## codex-2026-06-22-S87 -- THM-527 and p0-route consolidation (coordination-led)
 
 Updated the coordination ledger to incorporate the recent progress from the

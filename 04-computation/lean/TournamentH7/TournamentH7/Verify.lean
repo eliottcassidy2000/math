@@ -486,6 +486,21 @@ theorem lrc_witness_pos_from_wide_bound_audit (E P : List ℤ) (capk : ℝ)
   LonelyRunner.DenseCovers.witness_pos_from_wide_bound E P capk hwide hdual
 #print axioms lrc_witness_pos_from_wide_bound_audit
 
+theorem lrc_witness_pos_from_strict_cover_bound_audit (E P : List ℤ) (capk : ℝ)
+    (hwide :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal < capk)
+    (hdual :
+      capk ≤
+        (LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    0 <
+      (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.coverSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.witness_pos_from_strict_cover_bound E P capk hwide hdual
+#print axioms lrc_witness_pos_from_strict_cover_bound_audit
+
 theorem lrc_witness_margin_from_wide_bound_audit
     (E P : List ℤ) (capk delta : ℝ)
     (hwide :

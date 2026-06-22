@@ -81,6 +81,16 @@ theorem witness_pos_from_wide_bound (E P : List ℤ) (capk : ℝ)
   have hfloor := witness_floor_concrete E P
   linarith
 
+/-- **Witness-floor positivity from a strict p0 cover bound.**  This is the
+strictness placement produced by `LRCCoverBound.slowμ_coverSet_lt_cap`: if
+`p0(E) < cap_k` and the dual floor only gives `cap_k ≤ meas(G_P)`, then the
+concrete witness carrier still has positive measure. -/
+theorem witness_pos_from_strict_cover_bound (E P : List ℤ) (capk : ℝ)
+    (hwide : (slowμ (coverSet E)).toReal < capk)
+    (hdual : capk ≤ (slowμ (safeSet P)).toReal) :
+    0 < (slowμ ((coverSet E)ᶜ ∩ safeSet P)).toReal :=
+  witness_pos_of_p0_lt_measGP E P (lt_of_lt_of_le hwide hdual)
+
 /-- **Concrete margin version of the witness floor.**  The exact top-level p0
 route needs a quantitative margin, not only positivity: if the wide bound proves
 `p0(E) ≤ cap_k - delta` and the dual cap floor proves `cap_k ≤ meas(G_P)`, then
@@ -107,6 +117,7 @@ theorem witness_pos_from_wide_bound_margin (E P : List ℤ) (capk delta : ℝ)
 #print axioms witness_floor_concrete
 #print axioms witness_pos_of_p0_lt_measGP
 #print axioms witness_pos_from_wide_bound
+#print axioms witness_pos_from_strict_cover_bound
 #print axioms witness_margin_from_wide_bound
 #print axioms witness_pos_from_wide_bound_margin
 

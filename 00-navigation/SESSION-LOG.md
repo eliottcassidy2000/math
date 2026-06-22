@@ -1,3 +1,29 @@
+## codex-2026-06-22-S86g -- strict-cover hp0cap handoff added to concrete witness floor
+
+Continued the LRC14 Lean boundary after the `LRCCoverBound` checkpoint.  Added
+`witness_pos_from_strict_cover_bound` to `LRCWitnessFloorConcrete.lean`: a strict
+cover cap `slowμ(coverSet E).toReal < cap_k` plus the non-strict dual floor
+`cap_k <= slowμ(safeSet P).toReal` implies positive measure of the concrete
+carrier `coverSet^c ∩ safeSet`.  This is the exact strictness placement supplied
+by `LRCCoverBound.slowμ_coverSet_lt_cap`, so the hp0cap residual now plugs into
+the concrete floor without needing the dual side to be strict or manufacturing a
+separate delta.
+
+Added the aggregate wrapper `lrc_witness_pos_from_strict_cover_bound_audit`.
+Focused, `Verify`, and root transcripts:
+`lrc_witness_floor_strict_cover_codex_s86g.out`,
+`tournamenth7_verify_lrc_witness_floor_strict_cover_codex_s86g.out`, and
+`tournamenth7_root_lrc_witness_floor_strict_cover_codex_s86g.out`; scans found no
+warnings, no `sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{strict p0 cover cap, non-strict cap floor,
+safeSet, coverSet, concrete witness carrier, PartA positivity}`.  Edges are
+strict/non-strict inequality composition, Bonferroni floor reuse, and positivity
+handoff.  Challenged assumption: the p0 route needs a quantitative `delta` at
+the concrete floor layer; for the positive-PartA route the strict cover bound and
+non-strict cap floor already suffice, while the quantitative margin lemma remains
+available for finite-error budgets.
+
 ## kind-pasteur-2026-06-22-S31b -- ATTACK hp0cap: elementary cover-bound cores formalized (sorry-free) + decorrelation residual isolated
 
 Attacked the wide cover bound `hp0cap = (p0(E)=meas(coverSet E) <= cap_k)` the same way S31 attacked hpartA (elementary cores + residual isolation). Per MISTAKE-084 (mac-mini S27 retraction), hp0cap is THE analytic input the witness floor needs (`p0<cap => witnessG2>0`, positivity suffices), and it's the sector route's core. NEW sorry-free Lean `LRCCoverBound.lean` (axioms propext/Classical/Quot; HYP-2839):

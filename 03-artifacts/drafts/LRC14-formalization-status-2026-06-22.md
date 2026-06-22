@@ -78,7 +78,10 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
 - `LRCWitnessFloorConcrete` — `measGP − p0 ≤ μ(coverSetᶜ ∩ safeSet) ≤ witnessG2`
   (concrete Bonferroni; `coverSetᶜ ⊆ goodSet`).  Codex S86g adds the verified
   margin form: `p0≤cap−delta` and `cap≤measGP` imply
-  `delta≤μ(coverSetᶜ ∩ safeSet)`.
+  `delta≤μ(coverSetᶜ ∩ safeSet)`, and the strict-cover positivity handoff:
+  `p0<cap` plus `cap≤measGP` implies
+  `0<μ(coverSetᶜ ∩ safeSet)`.  This is the exact shape produced by
+  `LRCCoverBound.slowμ_coverSet_lt_cap`.
 - `LRCBonferroniMeasure`, `LRCEventMeasureBridge` — measure inequalities + handoffs.
 - `LRCWitnessPartA` — finite-ruler error-budget glue.  Codex S86g adds the
   verified split assembly where `k≤7` uses the `m_P` budget and `8≤k≤13` uses
