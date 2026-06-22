@@ -1,0 +1,41 @@
+========================================================================
+THM-527 Part A: #arcs of GOOD(E)={maxgap>1/7} vs cluster type
+========================================================================
+
+--- CONSEC clusters E={0,1,...,k-1} (the binding family) ---
+   k   #arcs   measure(GOOD)=nu   (Part C predicts bounded #arcs)
+    8      4    0.94014 = 691/735
+    9      8    0.84014 = 247/294
+   10     10    0.77551 = 38/49
+   11     12    0.62630 = 1381/2205
+   12     12    0.56990 = 13823/24255
+   13     12    0.44249 = 477/1078
+
+--- SINGLE-FAR clusters E={0,1,...,k-2, F} (tight base + one far) ---
+   k   F    #arcs   measure(GOOD)
+    9   14     4    0.94014
+    9   29     6    0.92993
+    9   69     8    0.93526
+   10   15     8    0.84014
+   10   30    12    0.82560
+   10   70    12    0.83475
+   11   16    12    0.76122
+   11   31    12    0.75184
+   11   71    20    0.76283
+
+--- WIDE clusters (spread ~ several*k) ---
+   E                                  #arcs   measure(GOOD)
+  [0, 3, 7, 12, 18, 25, 33, 42]         1    1.00000
+  [0, 5, 11, 17, 23, 29, 35, 41, 47]   28    0.93181
+  [0, 2, 9, 16, 23, 30, 37, 44, 51, 58]   58    0.83630
+
+========================================================================
+  READING: if #arcs is BOUNDED (small, ~const) for consec & single-far
+  (the binding clusters), then #arcs/Vmax -> 0 and THM-527 Part A's
+  finite-Vmax correction is uniform from the floor delta_k => Part A
+  closes effectively for the binding cases. Wide clusters have larger
+  #arcs but also larger nu (safe), so the threshold #arcs/delta is the
+  quantity to watch.
+========================================================================
+
+DONE.
