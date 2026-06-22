@@ -244,6 +244,29 @@ theorem measurableSet_coverSet (E : List ℤ) : MeasurableSet (coverSet E) := by
       intro h1 h6; exact absurd ⟨h1, h6⟩ hj
     rw [huniv]; exact MeasurableSet.univ
 
+/-! ## The small-part safe event `G_P` and its measurability
+
+`G_P = {x : ‖p x‖ ≥ 1/14 ∀ p ∈ P}`.  Since `‖y‖ ≥ 1/14 ⟺ frac y ∈ [1/14, 13/14]`,
+`G_P` is the finite intersection over `p ∈ P` of the measurable sets
+`{x : frac(p x) ∈ [1/14, 13/14]}`.  This is the `MeasurableSet (GP s)` input to
+`LRCEventMeasureBridge.shape_bonferroni_handoff`. -/
+
+/-- The small-part safe event `G_P` (in `frac`-coordinates: `‖p x‖ ≥ 1/14`). -/
+def safeSet (P : List ℤ) : Set ℝ :=
+  {x | ∀ p ∈ P, Int.fract ((p : ℝ) * x) ∈ Set.Icc (1 / 14 : ℝ) (13 / 14)}
+
+/-- **`G_P` is measurable.** -/
+theorem measurableSet_safeSet (P : List ℤ) : MeasurableSet (safeSet P) := by
+  have hrw : safeSet P
+      = ⋂ p ∈ (P.toFinset : Set ℤ),
+          (fun x => Int.fract ((p : ℝ) * x)) ⁻¹' Set.Icc (1 / 14 : ℝ) (13 / 14) := by
+    ext x
+    simp only [safeSet, Set.mem_setOf_eq, Set.mem_iInter₂, Set.mem_preimage,
+      Finset.mem_coe, List.mem_toFinset]
+  rw [hrw]
+  exact (P.toFinset.finite_toSet).measurableSet_biInter
+    (fun p _ => measurable_phase p measurableSet_Icc)
+
 /-! ## The slow-time PROBABILITY space and `D ≤ p0` in `μ`-form
 
 The proper probability measure for the slow time is `volume` restricted to one
@@ -274,6 +297,7 @@ theorem slowμ_denseSet_le_coverSet (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
 #print axioms dense_covers_all_inner
 #print axioms denseSet_subset_coverSet
 #print axioms measurableSet_coverSet
+#print axioms measurableSet_safeSet
 #print axioms volume_denseSet_le_coverSet
 #print axioms slowμ_denseSet_le_coverSet
 
