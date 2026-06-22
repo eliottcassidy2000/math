@@ -1,0 +1,73 @@
+======================================================================================
+THREAD 1: THE WITNESS ROUTE for LRC(n=2q),  q in {3,5,7}   (kpswf11)
+======================================================================================
+
+######################################################################################
+#  q = 3   (n = 6 = 2*3),   gap threshold 1/q = 1/3,   G_P threshold 1/n = 1/6
+#  LRC(6) is PROVED.  Speeds = n-1 = 5.
+######################################################################################
+
+--- (1) m_P^(6) = min over P subset {1..5} of meas(G_P) ---
+    |P|= 1: min meas(G_P) = 2/3 = 0.666667  at P=(1,)
+    |P|= 2: min meas(G_P) = 2/5 = 0.400000  at P=(1, 5)
+    |P|= 3: min meas(G_P) = 1/5 = 0.200000  at P=(1, 4, 5)
+    |P|= 4: min meas(G_P) = 1/20 = 0.050000  at P=(1, 3, 4, 5)
+    |P|= 5: min meas(G_P) = 0 = 0.000000  at P=(1, 2, 3, 4, 5)
+
+  >>> m_P^(6) = 0 = 0.00000000
+      binding |P| = 5 (= all speeds), argmin P = (1, 2, 3, 4, 5)
+      denominator 1 = 
+      numerator   0 = 0
+
+--- (2) PIGEONHOLE: k < q=3 => circular maxgap >= 1/k > 1/q => GOOD(E)=[0,1) ---
+    k=2: mu=1 (all reps)         PIGEONHOLE: maxgap>=1/k=1/2>1/q=1/3 ALWAYS => GOOD=[0,1)
+    k=3: mu=1 (all reps)         k=q: maxgap>=1/q a.e. (equality only on measure-zero x=a/q)
+
+--- (3)+(4) WITNESS floor G2(P,E) over floor cases k=q..2q-1, admissible (P,E) ---
+    For each k, |P| = 5-k.  Search bounded-spread E and worst P.
+      k  |P|           min G2       =dec          m_P   G2/m_P  >=m_P?  argmin (E ; P)
+    ------------------------------------------------------------------------------------------------
+      3    2              2/5   0.400000     0.000000    0.000    True  E=[0, 1, 2] ; P=[1, 5]
+      4    1              4/9   0.444444     0.000000    0.000    True  E=[0, 1, 2, 3] ; P=[1]
+      5    0              4/9   0.444444     0.000000    0.000    True  E=[0, 1, 2, 3, 4] ; P=[]
+
+    => min G2 over floor cases k=q..2q-1: 2/5 = 0.400000
+       m_P^(6) = 0 = 0.000000
+       ALL G2 >= m_P (floor holds): True
+       DENSE-k (k>=q+1) slack G2/m_P in [0.00, 0.00]
+
+######################################################################################
+#  q = 5   (n = 10 = 2*5),   gap threshold 1/q = 1/5,   G_P threshold 1/n = 1/10
+#  LRC(10) is PROVED.  Speeds = n-1 = 9.
+######################################################################################
+
+--- (1) m_P^(10) = min over P subset {1..9} of meas(G_P) ---
+    |P|= 1: min meas(G_P) = 4/5 = 0.800000  at P=(1,)
+    |P|= 2: min meas(G_P) = 28/45 = 0.622222  at P=(1, 9)
+    |P|= 3: min meas(G_P) = 7/15 = 0.466667  at P=(1, 8, 9)
+    |P|= 4: min meas(G_P) = 93/280 = 0.332143  at P=(1, 7, 8, 9)
+    |P|= 5: min meas(G_P) = 107/525 = 0.203810  at P=(1, 3, 4, 5, 7)
+    |P|= 6: min meas(G_P) = 781/6300 = 0.123968  at P=(1, 3, 4, 5, 7, 9)
+    |P|= 7: min meas(G_P) = 151/2100 = 0.071905  at P=(1, 2, 3, 5, 7, 8, 9)
+    |P|= 8: min meas(G_P) = 11/420 = 0.026190  at P=(1, 2, 3, 5, 6, 7, 8, 9)
+    |P|= 9: min meas(G_P) = 0 = 0.000000  at P=(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+  >>> m_P^(10) = 0 = 0.00000000
+      binding |P| = 9 (= all speeds), argmin P = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+      denominator 1 = 
+      numerator   0 = 0
+
+--- (2) PIGEONHOLE: k < q=5 => circular maxgap >= 1/k > 1/q => GOOD(E)=[0,1) ---
+    k=2: mu=1 (all reps)         PIGEONHOLE: maxgap>=1/k=1/2>1/q=1/5 ALWAYS => GOOD=[0,1)
+    k=3: mu=1 (all reps)         PIGEONHOLE: maxgap>=1/k=1/3>1/q=1/5 ALWAYS => GOOD=[0,1)
+    k=4: mu=1 (all reps)         PIGEONHOLE: maxgap>=1/k=1/4>1/q=1/5 ALWAYS => GOOD=[0,1)
+    k=5: mu=1 (all reps)         k=q: maxgap>=1/q a.e. (equality only on measure-zero x=a/q)
+
+--- (3)+(4) WITNESS floor G2(P,E) over floor cases k=q..2q-1, admissible (P,E) ---
+    For each k, |P| = 9-k.  Search bounded-spread E and worst P.
+      k  |P|           min G2       =dec          m_P   G2/m_P  >=m_P?  argmin (E ; P)
+    ------------------------------------------------------------------------------------------------
+      5    4           93/280   0.332143     0.000000    0.000    True  E=[0, 1, 2, 3, 4] ; P=[1, 7, 8, 9]
+      6    3            29/75   0.386667     0.000000    0.000    True  E=[0, 1, 2, 3, 4, 5] ; P=[1, 8, 9]
+      7    2           53/150   0.353333     0.000000    0.000    True  E=[0, 1, 2, 3, 4, 5, 6] ; P=[1, 8]
+      8    1          211/525   0.401905     0.000000    0.000    True  E=[0, 1, 2, 3, 4, 5, 6, 7] ; P=[1]
