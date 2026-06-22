@@ -6,6 +6,42 @@ Per user "think tournaments" hint, worked the floor R' = meas(GOOD cap G_P)/(mea
 - **Tournament routing that HOLDS:** the small part P (<=13 speeds) -> PROVEN LRC(<=13) gives meas(G_P)>0 (Rédei-adjacent proven-case routing, user's guidance).
 - **OVER-CLAIMED then CORRECTED (lesson):** (a) boundary-core closure omitted G_P (MISTAKE-085); (b) the apex-7/Paley-P_7 framing of the floor resonance (only 9.8% at mult-7, so NOT 7-dominated -- corrected in HYP-2866). 3rd over-claim this arc -- pattern: too eager on clean QR/tournament connections; VERIFY first.
 NET: floor R'>=c reduces to the finite LOW-height spectrum sum (kps Node-3 + user lever); R'=1 decorrelation baseline + finite low-freq resonance correction. NEW: HYP-2866 (corrected). 
+## codex-2026-06-22-S94 -- resonance-channel tournament route for the R' floor
+User asked to stop polishing formalization and spend the run on math reasoning,
+rigor, and tournament analogies for the last LRC14 bits.  Pulled current
+mainline and synthesized the active frontier: THM-565 has made Node 1 an
+`arcCount/meas(G)` conversion, while HYP-2861 leaves the shared analytic crux as
+the quasi-independence floor `R' >= c`.
+
+- Added THM-567, the exact QR/NQR even-residue pairing lemma.  For odd prime
+  `q`, every even residue mass on `F_q^*` has equal QR and NQR shell sums iff
+  `q==3 mod 4`; for LRC14, `q=7`, so `{1,2,4}` and `{3,5,6}` are exactly
+  balanced.  This proves the arithmetic half of the observed QR(-1) gate.
+- Incoming mac-mini S31 claimed and then corrected HYP-+2866 during this run:
+  `R'=1` exactly off resonance, but the remaining floor is finite
+  low-frequency resonance, not an apex-7/Paley-7 dominated covariance.
+  Renumbered my route to HYP-2867 and integrated that corrected signal.
+- Claimed HYP-2867 as the next proof route.  The low part of
+  `SPEC=sum chat(n)conj(ghat(n))` should be quotiented by sign-paired resonance
+  channels `{n,-n}`.  The proposed tournament orients channel pairs by whether
+  their combined signed contribution is nonnegative.  The Paley cut `chi_7`
+  is now treated as a residue-balance diagnostic, not the whole obstruction.
+- Added `lrc14_resonance_channel_tournament_codex_s94.py` and stored its
+  output.  First scout correction: in the AP-like negative rows the Paley cut
+  is positive, not the damage source.  The bad low contribution splits between
+  the nonzero-shell mean and the residue-0 trunk (`n=7,14,21`), with the
+  exact consec floor row at `low/base=-0.4382`, `Paley/base=+0.0693`, and
+  `r0/base=-0.1455`.
+- Assumption challenge: runners and arcs are not the right tournament vertices
+  for the decorrelation constant.  The quotient preserves the needed predicate
+  `SPEC_low+SPEC_high>-baseline` and discards exact runner identity; exact
+  phases are delegated either to the finite low-channel atlas or to L2 high-tail
+  control.
+- Proof split recorded: QR/NQR mass balance by THM-567; incoherent/cyclic sign
+  tournaments route to Parseval/L2 cancellation; coherent nearly-transitive
+  all-negative sign tournaments imply high additive energy and should route to
+  Freiman/GAP, THM-531 scale invariance, HYP-2864 sheet-gcd quotients, and the
+  HYP-2840 Vitali/rate-V low-resonance atlas.
 
 ## codex-2026-06-22-S93 -- bounded-denominator covering-atlas no-go
 User asked to synthesize the proposed bounded-denominator witness route with
