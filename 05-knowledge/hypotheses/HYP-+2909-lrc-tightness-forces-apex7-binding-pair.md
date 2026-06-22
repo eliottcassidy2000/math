@@ -49,3 +49,16 @@ s_i + s_j ≡ 0 mod 14 is exactly the speed-space ANTIPODE on the 14 = 2*7 grid 
 Given the forward theorem here + (ii)-(v), (star) closes and LRC(14) follows in the THM-079 template:
 Move A = R1/R2/R3 peel to the single bounded atom; Move B = this apex-7 binding-pair forcing = the
 Moon/cycle-forcing step.
+
+
+## FORMALIZED (S50): LRCBindingPair.lean -- machine-verified, sorry-free
+The arithmetic core of the star-forward theorem is now formalized in Lean and BUILDS (8475 jobs):
+  LonelyRunner.BindingPair.binding_pair_dvd (a si sj : Int) (ha : IsCoprime 14 a)
+    (hi : si*a ≡ 1 [ZMOD 14]) (hj : sj*a ≡ -1 [ZMOD 14]) : (14:Int) ∣ (si + sj)
+  binding_residues_antipodal : si*a + sj*a ≡ 0 [ZMOD 14]
+Both depend ONLY on [propext, Classical.choice, Quot.sound] -- sorry-free. This complements the
+already-formalized LRCApex7Floor.D14_never_certifies (a multiple of 14 sits on the observer at every
+a/14): together, tightness puts a binding pair at a denom-14 point (this file) where any covering
+multiple-of-14 runner is on the observer (apex-7 floor) -- so a covering set cannot bind at denom-14.
+(ii) verified in search: the only tight (M=1/14) primitive 13-sets found are AP {1..13} and
+GW {1..11,13,24}, BOTH with optimum denominator exactly 14 -- consistent with the {AP,GW} census.
