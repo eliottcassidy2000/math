@@ -20659,3 +20659,38 @@ higher additive-moment coefficients are mixed-sign after the positive dominant
 result index accordingly: the proof target is anchored AP-facing Fejer
 majorization plus labelled signed cancellation, not scalar additive-energy
 monotonicity or affine-translation-invariant exact tiling.
+
+## codex-2026-06-22-S111 -- small-q LRC proof lab selects labelled Fejer route
+User asked to work on finishing LRC proof by applying comprehensive techniques
+to cases smaller than 14 runners.
+
+Pulled current main after stashing generated session state; incoming S107
+unital pair-slot guardrail was relevant signal. Added exact audit
+`04-computation/lrc_small_q_proof_lab_codex_s111.py` and stored
+`05-knowledge/results/lrc_small_q_proof_lab_codex_s111.out`.
+
+The script applies LRC14 atoms to even denominators `q=8,10,12,14`, threshold
+`1/q`, cluster gap `2/q`, and primitive bounded banks `max(E)<=q`. It computes
+exact `nu`, dense `D`, q-sector `p0`, cap `min meas(G_P)`, additive energy, and
+AP difference profiles.
+
+Findings: Bonferroni floors positive throughout (min `11/36` at `(q,k)=(12,7)`);
+bounded p0-cap margins positive throughout (min `1/25` at `(q,k)=(10,6)`; q=14
+tight bounded margin `319/5880` at k=8); consecutive/AP is always the `nu`
+minimizer / dense-set maximizer; AP difference-profile failures are zero. But
+p0 has `8` non-AP bounded leaders, all cap-safe, and scalar energy is massively
+non-monotone (`12706` p0 inversions, `12139` D inversions). The q=14,k=9 worst
+scalar inversion is the known HYP-2890 bridge row `(0,2,4,6,7,8,10,12,14)`.
+
+Created HYP-2898 and reflection
+`07-reflections/lrc-small-q-proof-lab-codex-s111.md`. Proof-route takeaway:
+smaller q does not give a shortcut, but it selects the stable proof objects:
+Bonferroni floor + cap-safe p0 + AP-facing difference-profile/Fejer + labelled
+residual leak; scalar additive-energy monotonicity is not viable.
+
+Post-fetch integration: incoming HYP-2895/S108 and HYP-2896/S109 claimed the
+sub-14 covering/tiler atlas and the one-tail zeta dialectic.  Renumbered this
+artifact to HYP-2898/T1012/S111 and interpreted it as the analytic companion:
+once exact-tiler boundary cases and one-tail disproof branches are routed away,
+the remaining cap/floor branch still selects labelled Fejer/residual control,
+not scalar energy.
