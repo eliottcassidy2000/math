@@ -97,11 +97,46 @@ theorem slowμ_coverSet_eq_zero_of_card_lt_six {E : List ℤ} (h : E.toFinset.ca
     slowμ (coverSet E) = 0 := by
   rw [coverSet_eq_empty_of_card_lt_six h, measure_empty]
 
+/-! ## The wide-bound reduction: hp0cap = the analytic decorrelation residual
+
+The binding cases `k = 8..12` are not elementary; the proof routes through the
+decorrelated closed form `p0_decorr = Σ_t P_t^{(r)} p_t(B)` (THM-534 / kps-S24).
+The three pieces: the *resonance bound* `p0 ≤ p0_decorr` (analytic — far phases
+decorrelate, THM-546 comb / Tornheim tail; the RESIDUAL), the *finite check*
+`p0_decorr ≤ Q(k-1)` (combinatorial, verified for all bounded bases), and the
+*rational margin* `Q(k-1) < cap_k` (exact rationals).  The lemma below isolates the
+analytic residual as the single explicit hypothesis (the hp0cap analogue of
+`witness_pos_from_wide_bound`). -/
+
+/-- **hp0cap reduces to the analytic decorrelation bound.**  Given the resonance
+bound `p0 ≤ p0_decorr`, the finite decorrelated check `p0_decorr ≤ Q`, and the
+rational margin `Q < cap`, the wide cover bound `p0(E) < cap` holds. -/
+theorem slowμ_coverSet_lt_cap_of_decorrelation (E : List ℤ) (p0decorr Q capv : ℝ)
+    (hresonance : (slowμ (coverSet E)).toReal ≤ p0decorr)
+    (hfinite : p0decorr ≤ Q)
+    (hmargin : Q < capv) :
+    (slowμ (coverSet E)).toReal < capv := by
+  linarith
+
+/-- **hp0cap, split by cluster size.**  For `< 6` distinct speeds the cover bound is
+trivial (`p0 = 0 < cap`); for `≥ 6` it is the decorrelation residual.  So a single
+analytic input (the resonance bound `p0 ≤ p0_decorr`, valid for the binding family)
+closes the wide cover bound for every `k`. -/
+theorem slowμ_coverSet_lt_cap (E : List ℤ) (p0decorr Q capv : ℝ) (hcap : 0 < capv)
+    (hbig : 6 ≤ E.toFinset.card →
+      (slowμ (coverSet E)).toReal ≤ p0decorr ∧ p0decorr ≤ Q ∧ Q < capv) :
+    (slowμ (coverSet E)).toReal < capv := by
+  rcases lt_or_ge E.toFinset.card 6 with hsmall | hge
+  · rw [slowμ_coverSet_eq_zero_of_card_lt_six hsmall]; simpa using hcap
+  · obtain ⟨hr, hf, hm⟩ := hbig hge
+    exact slowμ_coverSet_lt_cap_of_decorrelation E p0decorr Q capv hr hf hm
+
 /-! ## Axiom audit -/
 
 #print axioms coverSet_mono
 #print axioms six_le_card_of_coverSet_mem
 #print axioms slowμ_coverSet_eq_zero_of_card_lt_six
+#print axioms slowμ_coverSet_lt_cap
 
 end DenseCovers
 end LonelyRunner
