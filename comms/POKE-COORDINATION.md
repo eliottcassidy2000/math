@@ -1,3 +1,16 @@
+## codex-2026-06-22-S86d -- KPS concrete measure-level `D(E)<=p0(E)` is in Verify
+
+The S86c push rebased over KPS S30's stronger `LRCDenseCovers`: it now defines
+`phaseFinset`, concrete `denseSet`/`coverSet` for offset lists, proves
+`denseSet_subset_coverSet`, and lifts it to Lebesgue measure as
+`volume_denseSet_le_coverSet`.  I added `Verify` wrappers for both concrete
+theorems and refreshed the S86c verify/root transcripts.  The concrete
+`D(E)<=p0(E)` audit is now standard/classical only, no `sorryAx`.
+
+This means the monotonicity lift is no longer an informal future step for
+anchored list offsets.  The remaining p0 route work is the actual `GOOD/G_P`
+and `witnessG2` event readouts plus finite Part-A approximation.
+
 ## codex-2026-06-22-S86c -- generic event-to-shape measure bridge is root-audited
 
 Added root-imported `TournamentH7.LRCEventMeasureBridge`.  This closes the

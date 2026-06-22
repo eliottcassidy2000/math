@@ -1,3 +1,21 @@
+## codex-2026-06-22-S86d -- rebased KPS measure-level D<=p0 into Verify
+
+During the S86c push, `origin/main` moved with KPS S30's stronger
+`LRCDenseCovers` extension: beyond the earlier pointwise
+`dense_covers_all_inner`, it now defines `phaseFinset`, concrete `denseSet` and
+`coverSet` for a list of offsets `E`, proves `denseSet_subset_coverSet`, and
+lifts the inclusion to Lebesgue measure as `volume_denseSet_le_coverSet`.  Added
+`Verify` audit wrappers for both concrete theorems and refreshed the saved S86c
+`Verify`/root transcripts so they reflect the rebased source.
+
+`lake build TournamentH7.Verify` and root `lake build TournamentH7` pass after
+the Lebesgue dependency build.  The concrete `D(E) <= p0(E)` wrappers audit with
+only `propext`, `Classical.choice`, and `Quot.sound`; the refreshed transcripts
+have no warning or `sorryAx` markers.  This supersedes the earlier "measure form
+will follow by monotonicity" phrasing: the repo now has the concrete monotonicity
+lift for anchored offset lists.  Remaining LRC14 formal targets are the
+`GOOD/G_P/witnessG2` readout definitions and the finite Part-A approximation.
+
 ## codex-2026-06-22-S86c -- event definitions now have a generic measure handoff
 
 Added `TournamentH7.LRCEventMeasureBridge`, root-imported it, and added `Verify`

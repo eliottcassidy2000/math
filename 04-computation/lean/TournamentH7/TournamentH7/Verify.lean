@@ -171,6 +171,19 @@ theorem lrc_dense_covers_all_inner_audit
   LonelyRunner.DenseCovers.dense_covers_all_inner S hsub h0 hdense
 #print axioms lrc_dense_covers_all_inner_audit
 
+theorem lrc_denseSet_subset_coverSet_audit
+    (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    LonelyRunner.DenseCovers.denseSet E ⊆ LonelyRunner.DenseCovers.coverSet E :=
+  LonelyRunner.DenseCovers.denseSet_subset_coverSet E hE
+#print axioms lrc_denseSet_subset_coverSet_audit
+
+theorem lrc_volume_denseSet_le_coverSet_audit
+    (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    MeasureTheory.volume (LonelyRunner.DenseCovers.denseSet E) ≤
+      MeasureTheory.volume (LonelyRunner.DenseCovers.coverSet E) :=
+  LonelyRunner.DenseCovers.volume_denseSet_le_coverSet E hE
+#print axioms lrc_volume_denseSet_le_coverSet_audit
+
 theorem lrc_bonferroni_toReal_audit
     {α : Type*} [MeasurableSpace α]
     (μ : MeasureTheory.Measure α) [MeasureTheory.IsProbabilityMeasure μ]
