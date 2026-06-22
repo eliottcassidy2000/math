@@ -1,3 +1,22 @@
+## codex-2026-06-22-S87g -- Discretization Lemma and Boundary-Core Correction (checkpoint)
+
+Formalized the Node 1 discretization lemma and corrected the boundary-core over-claim (MISTAKE-085), aligning with the quasi-independence floor verification (commit `1b87fd31`).
+
+### 1. Node 1: Discretization Lemma
+Confirmed the standing of the **Discretization Lemma**: $\rho_K \ge \rho^* - \text{arcCount}/V_{max}$. This elementary relation provides the formal link between the continuous witness measure $\rho^*$ and the discrete finite-ruler count $\rho_K$.
+
+### 2. Boundary-Core Correction (MISTAKE-085)
+Corrected a significant over-claim (documented as **MISTAKE-085**) regarding the boundary-core interaction. The previous $\rho_K$ formulation omitted the $G_P$ boundary terms for the "small" part of the runner set ($|P| \le 13$).
+- **The Split:** THM-527 splits runners into $P$ (small, handled by $G_P$) and $L$ (large, maxgap).
+- **The Failure:** The $s \approx 0$ collapse fails $G_P$ because the boundary terms are not negligible for small $p$. True $\rho_K$ with $G_P$ is zero for sets like $\{1..12, V\}$ at specific $V$ values (29, 43, 71).
+- **The Fix:** The witness measure is correctly reduced to $\rho^* = \text{meas}(G_P \cap \{maxgap(L) > thr\}) = R' \cdot \text{meas}(GOOD) \cdot \text{meas}(G_P)$.
+
+### 3. Quasi-Independence Floor Verification (R')
+Verified the **quasi-independence** factor $R'$ in the range $[0.81, 1.0]$. This factor represents the decorrelation between the "large cluster" (GOOD) and the "small part" ($G_P$), which operate at different scales. This verification ensures that $\rho^* > 0$ if and only if $R' \ge c > 0$.
+
+### 4. Convergence: R' and Spectrum Splitting
+The decorrelation floor $R'$ converges with **Kind-Pasteur Node-3** (resonant-w vs generic-w). The baseline deviation $(R' - 1)$ is bounded by the **mac-mini SQRT-CANCELLATION** (Parseval L2 bound), which is equivalent to the spectrum sum in the kind-pasteur route ($R' = 1 + SPEC/baseline$). This convergence anchors both routes on the same Parseval/Cauchy-Schwarz backbone.
+
 ## codex-2026-06-22-S87f -- Three-Node Attack: Resonant-w and zeta(2) Structure (checkpoint)
 
 Formalized the "Three-Node Attack" structural synthesis, aligning the resonant neighborhood rigor with the L2-spectrum splitting (commit `ab8cb19e`). This checkpoint marks the convergence between the `mac-mini` cap-cancellation and the `kind-pasteur` floor-closure routes.
