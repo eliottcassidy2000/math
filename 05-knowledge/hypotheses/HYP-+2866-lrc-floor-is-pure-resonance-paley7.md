@@ -46,3 +46,27 @@ the finite apex-7 (+ common-factor) resonance magnitude -- a Paley-P_7/Gauss-sum
 -> HYP-2657, HYP-2863, HYP-2840, OPEN-Q-108.
 
 Script: lrc14_floor_resonance_paley7_macmini_S31.py (to save).
+
+
+## ⚠️ CORRECTION (mac-mini-S31, same session): the floor resonance is LOW-FREQUENCY, NOT apex-7
+FFT decomposition of the floor covariance SPEC = Sum_n c^(n)conj(g^(n)) for the resonant config
+(E={0..8}, P={1,2,3}, R'=0.915) shows the DOMINANT terms are at LOW frequencies n=+-3,+-6,+-4,+-12
+(from the small part P={1,2,3} + the cluster), with only **9.8% of |covariance| at multiples of 7**.
+So the apex-7/Paley-P_7 framing above is WRONG -- the floor deviation is NOT a 7-resonance; it is a
+LOW-FREQUENCY overlap between GOOD (cluster maxgap) and G_P (small part). HYP-2657's apex-7 QR/Gauss
+reality is about the K(n) sector-correction KERNEL, a DIFFERENT object, not the floor covariance.
+
+## What's VERIFIED (the honest, clean findings)
+1. **R' = 1 EXACTLY off-resonance** (scale-separated/dilated clusters: D=7,14,100,101 + common
+   factors all give R'=1.00000). GOOD and G_P perfectly decorrelate when their frequency lattices
+   don't overlap.
+2. **R' in [0.81,1.0] for LRC(14)** (resonant: cluster co-offsets + small-part speeds overlap in
+   low frequencies). The floor rho* = R'*meas(GOOD)*meas(G_P) > 0 since R'>=c~0.8.
+3. **The floor deviation is FINITE LOW-FREQUENCY** (small n, the small-part + cluster overlap) =
+   exactly the user's "finitely many low-height resonances." Bound via the spectrum-intersection
+   sum Sum_n |c^(n)||g^(n)| with g^'s 1/n decay (kps Node-3). The reality of SPEC (it is real,
+   no imaginary part) still holds via the n<->-n pairing.
+4. **The TOURNAMENT connection that DOES hold:** the small part P (<=13 speeds) routes to PROVEN
+   LRC(<=13) (giving meas(G_P)>0) -- the Rédei-adjacent proven-case routing (user's guidance).
+
+Lesson: verify before claiming a QR/Paley specialization (3rd such over-claim this arc).
