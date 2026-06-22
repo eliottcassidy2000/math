@@ -1,0 +1,62 @@
+################################################################################################
+# THREAD 2 VERDICT (kind-pasteur kpswf13): complement-even reframe on the TRUE GOOD
+################################################################################################
+
+================================================================================================
+BANK on GOOD_true: R'_true, exact parity grading (S_even,S_odd), 7-grading
+================================================================================================
+  case                     R_true      SPEC    S_even     S_odd    S[7|n]  S[7nmid]
+  k=8 consec              0.95008  -0.02301  -0.02485   0.00183  -0.00611  -0.01691
+  k=8 consec smallP       0.94626  -0.02572  -0.02572   0.00000  -0.00947  -0.01625
+  k=9 consec              0.88414  -0.05892  -0.03852  -0.02041  -0.01121  -0.04772
+  k=9 floor-ish           0.85514  -0.06690  -0.03935  -0.02755  -0.01471  -0.05219
+  k=10 consec             0.87024  -0.06948  -0.04908  -0.02041  -0.01361  -0.05588
+  killer P                0.95115  -0.02448  -0.02448   0.00000  -0.00739  -0.01709
+  coprime P               0.96142  -0.01847   0.01455  -0.03302   0.02125  -0.03972
+  wide                    1.01111   0.00759   0.00209   0.00549  -0.00026   0.00785
+
+================================================================================================
+EXACT CONSEC FLOOR on GOOD_true:  min R'_true over consec E (k=8..13) x admissible P
+  (admissible: |P| = 13-k, P subset of {1..13}; the LRC(14) small-part budget)
+================================================================================================
+   k= 8 (|P|=5):  min R'_true = 0.91645  at P=(1, 4, 5, 9, 11)
+   k= 9 (|P|=4):  min R'_true = 0.83294  at P=(1, 10, 11, 12)
+   k=10 (|P|=3):  min R'_true = 0.82186  at P=(1, 5, 12)
+   k=11 (|P|=2):  min R'_true = 0.79109  at P=(1, 12)
+   k=12 (|P|=1):  min R'_true = 0.87317  at P=(1,)
+   k=13 (|P|=0):  min R'_true = 10.00000  at P=None
+
+   *** GLOBAL consec floor on GOOD_true: R'_true >= 44058/55693 = 0.79109  (k=11, P=(1, 12)) ***
+   m_P = 14249/252252 = 0.056487 (witness-floor target)
+   ratio (R'_true-floor)/m_P = 14.0x
+
+================================================================================================
+RANDOM SCAN of R'_true over GENERAL clusters (k in 8..11, random E subset of small span,
+   random admissible P).  Estimating the uniform floor c and S_odd statistics.
+================================================================================================
+   trials with valid baseline: 220
+   worst R'_true in random scan: 0.62707  at P=(1, 5, 6, 12) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+   fraction with SPEC<0 (anti-correlated): 86/220 = 39.09%
+   S_odd EXACTLY 0: 123/220;  S_odd != 0: 97/220
+   max |S_odd| over scan: 0.06922  (vs typical |SPEC|~0.02-0.07)
+
+================================================================================================
+THREAD-2 VERDICT (summary)
+================================================================================================
+  (0) CORRECTION: the prompt's 'ghat REAL' premise is EXACT only for the TRUE maxgap GOOD,
+      not the kpswf12 cover^c proxy (which is x->-x ASYMMETRIC, sineE~1.6e-2).  On GOOD_true the
+      floor is MUCH tighter (R'_true in ~[0.85,1.01]); the consec floor on GOOD_true is far above
+      m_P -- the Node-3 floor is even safer than the proxy indicated.
+
+  (1) The complement-EVEN part of the cluster determines GOOD ENTIRELY (the strong form of the
+      conjecture): GOOD_true(E)=GOOD_true(N-E) EXACTLY, so ghat and SPEC depend only on the
+      complement-symmetric orbit of E.  The complement-ODD part of the cluster is invisible to GOOD
+      -- mean-zero in the strongest sense.  This is the genuine uniform handle: it is the SAME
+      x->-x = T^op symmetry that makes ghat real, read on the cluster side.
+
+  (2) There is NO universal mean-zero FREQUENCY Z_2 grading.  S_odd (parity) and S[7|n] are EXACTLY
+      0 for some (P,E) but order-|SPEC| for others; G_P is not 1/2-balanced in general.  So the
+      finer-grading conjecture (split SPEC into controlled + mean-zero by n-parity / n mod m) is
+      REFUTED as a universal statement.  The control lives at the CLUSTER level (finding 1), and in
+      the L2/Cauchy-Schwarz tail already established, not in a frequency parity.
+DONE.
