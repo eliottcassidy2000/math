@@ -1,0 +1,26 @@
+n   h(n)  A+B+D-C-E-F+G (full Venn center)  A+B-C (A&B edge)   parity-correct form
+ 5    4   center=  4 =h            edge=  3       ODD/Legendre: center=4=h(n) OK
+ 6    6   center=  6 =h            edge=  6 =h    EVEN/Eisenstein: A&B edge=6=h(n) OK
+ 7    9   center=  9 =h            edge=  8       ODD/Legendre: center=9=h(n) OK
+ 8   12   center= 12 =h            edge= 12 =h    EVEN/Eisenstein: A&B edge=12=h(n) OK
+ 9   16   center= 16 =h            edge= 15       ODD/Legendre: center=16=h(n) OK
+10   20   center= 20 =h            edge= 20 =h    EVEN/Eisenstein: A&B edge=20=h(n) OK
+11   25   center= 25 =h            edge= 24       ODD/Legendre: center=25=h(n) OK
+12   30   center= 30 =h            edge= 30 =h    EVEN/Eisenstein: A&B edge=30=h(n) OK
+13   36   center= 36 =h            edge= 35       ODD/Legendre: center=36=h(n) OK
+14   42   center= 42 =h            edge= 42 =h    EVEN/Eisenstein: A&B edge=42=h(n) OK
+15   49   center= 49 =h            edge= 48       ODD/Legendre: center=49=h(n) OK
+
+Verify the 7 Venn PARTITION regions sum to h(n) (odd n=7):
+  sizes A=6,B=6,D=4 (corners); A&B=C=4,A&D=E=2,B&D=F=2 (edge ints); triple G=1
+   |A only| = 1
+   |B only| = 1
+   |D only| = 1
+   |A&B only| = 3
+   |A&D only| = 1
+   |B&D only| = 1
+   |center A&B&D| = 1
+   SUM = 9 =?= h(7) = 9  PARTITION OK
+
+  n-2 CANCELLATION: corner D (+h(n-2)) + overlap -C (-h(n-2)) = 0 net => coefficients (2,0,-2,1).
+  EVEN = degenerate (only A,B conjugate pair + overlap C = the A&B edge; D corner & triple G FOLDED away by complement).

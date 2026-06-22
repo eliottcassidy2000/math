@@ -18,7 +18,7 @@ not just for tile counts.
 | mode | sign word | char poly / order | holds for | half-tiling shape | reduction sizes (the letters) |
 |---|---|---|---|---|---|
 | **Möbius** | `A+B+C−D−E−F+G` `+++---+` | incl–excl lattice of {A,B,C} | **ALL n** | — (the skeleton) | `{n−1, n−2, n−3}` = Modes A,B,C + overlaps |
-| **Legendre** | `A+B−C+D−E−F+G` `++-+--+` | `(x−1)³(x+1)`, order 4 | **ALL n, but the ONLY form for ODD** | **SQUARE `k²`** (3 corners) | `{n−1, n−3, n−4}` (skips `n−2`) |
+| **Legendre** | `A+B−C+D−E−F+G` `++-+--+` | `(x−1)³(x+1)`, order 4 | **ALL n, but the ONLY form for ODD** | **SQUARE `k²`** (3 corners) | `{n−1×2, n−2×2, n−3×2, n−4}` — 3-set Venn (see correction) |
 | **Eisenstein** | `A+B−C` `++-` | `(x−1)²`, order 2 | **EVEN n ONLY** | **PRONIC `k(k−1)`** (no corner) | `{n−1, n−2}` |
 
 VERIFIED: the order-2 Eisenstein recurrence `h(n)=2h(n−1)−h(n−2)` **fails at every odd `n`**
@@ -28,6 +28,33 @@ order-4 Legendre recurrence holds for all `n` but is the *minimal* form an odd h
 the subtournament sizes are different objects per mode** — `{n−1,n−2}` vs `{n−1,n−3,n−4}` vs
 `{n−1,n−2,n−3}`. The Möbius `+++---+` is the inclusion–exclusion over the three reduction modes
 themselves (Mode A `n→n−1`, Mode B `n→n−2`, Mode C `n→n−3`; `7=2³−1` subsets, 3+3+1, HYP-2689).
+
+## CORRECTION (owner, S31s): the Legendre recursion is a 3-set inclusion–exclusion (Venn)
+The Legendre letters are NOT a sparse `{n−1,n−3,n−4}` — they are a full **3-set Venn** over three
+sub-tilings, with sizes `A,B = n−1`, `C,D = n−2`, `E,F = n−3`, `G = n−4` (`lrc_legendre_venn_correction_kps.py`):
+- **3 corners** (the generating sets): `A, B` (depth `n−1`, the `ω,ω²` conjugate pair) and `D` (depth
+  `n−2`, the lone generator — the `S₃`/Eisenstein cube-root split, HYP-2689).
+- **3 edges** (pairwise *unions* `|X∪Y|`): `A+B−C`, `A+D−E`, `B+D−F` ⟹ the pairwise *intersections* are
+  `A∩B = C` (`n−2`), `A∩D = E` (`n−3`), `B∩D = F` (`n−3`).
+- **center** (full union `|A∪B∪D|`): `A+B+D−C−E−F+G = h(n)`.
+
+VERIFIED: the 7 Venn regions **partition** the odd square (`n=7`: `9 = 1+1+1 (corners) + 3+1+1 (edges)
++ 1 (center)`), and `A+B+D−C−E−F+G = h(n)` for all `n`. So **all four depths `n−1..n−4` are present**;
+the net coefficients `(2,0,−2,1)` arise because the `n−2` corner `D` (+) and the `n−2` overlap `C` (−)
+**cancel** — same size, geometrically distinct (corner vs edge-overlap, THM-549). My earlier
+"Legendre skips `n−2`" was the net-coefficient view, not the geometry.
+
+Two consequences:
+1. **The even (Eisenstein) mode IS the `A∩B` edge of the odd Venn.** `A+B−C = |A∪B|`, the conjugate-pair
+   union, with the lone corner `D` and the triple `G` **folded away** by the complement symmetry (the
+   `(x+1)` factor) — pronic, not square. So Eisenstein (even) = the *degenerate* Legendre, the conjugate
+   pair without the lone generator.
+2. **This Venn IS the LRC coverage recursion (THM-548).** The 3 sub-tilings ↔ the **3 far runners**
+   `{u,v,w}`; corners/edges/center ↔ **one-far / two-far / three-far** Newton packets `Δ_S` (`S⊆{u,v,w}`),
+   `Σ_S Δ_S = p0(B∪{u,v,w})−p0(B)`. So the half-tiling Legendre Venn and the LRC three-far cover are the
+   *same* 3-set inclusion–exclusion — the "relevant structure": **Möbius is the inclusion–exclusion
+   principle; Legendre (odd, full square) and Eisenstein (even, degenerate edge) are its two parity
+   realizations, and the LRC cover is that same Venn with the far runners as the three sets.**
 
 ## Why these three characters, by parity
 - **Möbius (always)** is the combinatorial skeleton — the subset lattice of the three reduction
