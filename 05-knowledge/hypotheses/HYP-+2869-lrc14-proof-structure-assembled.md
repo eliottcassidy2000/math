@@ -46,3 +46,6 @@ wide->1); (c) completing the finite V*<=234 check. Each is in hand or nearly; no
 remains (consec-extremal is bypassed by the universal Farey floor). -> HYP-2856, HYP-2860, THM-565.
 
 Script: lrc14_universal_farey_floor_macmini_S32.py.
+
+## BINDING-CONFIG verification (mac-mini-S32)
+rho* = meas(GOOD cap G_P) > 0 VERIFIED on the binding LRC(14)-residual configs: kps floor (k=9,P={1,3,4,5})=0.381; P={1..5}=0.345; P={1..7}=0.335; dense P={1..12} (k=2 large)=0.034 (smallest, still >0). So the assembled floor rho*>0 holds on the real residual cases.
