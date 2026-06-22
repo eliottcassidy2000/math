@@ -49,3 +49,28 @@ which must prove the AP maximizes coverage).
   same extremality (a); my contribution pins (b) the boundary value is exactly 1 and the witness is
   the rational D=14, making the rational-witness route the extremality-free alternative.
 -> kps HYP-2885 (the other route), HYP-2876 (bounded D), HYP-2878 (covering system).
+
+
+## REFINEMENT (S39): the exact-coverage extremal is SCALING-invariant {1..13}*d, NOT additive energy
+Verified (lrc14_exact_coverage): meas(safe)=0 (exact coverage) holds for **d*{1,...,13}** (consecutive
+multiples) ONLY -- {1..13}, 2*{1..13}, 5*{1..13} all =0. But TRANSLATES/general APs have the SAME max
+additive energy A=1469 yet POSITIVE safe measure: {2..14}->0.061, {3..15}->0.098, AP(a=2,d=3)->0.118.
+- **Coverage != additive energy:** A is TRANSLATION-invariant (all length-13 APs: A=1469); strict-1/14
+  coverage is SCALING-invariant (d*{1..13} only). They disagree -- {2..14} is max-A but not extremal.
+  (Consistent with my S29 'L_y not a function of A'; sharpens kps HYP-2885 from a trend to the exact
+  scaling-invariant extremal.) The right extremal invariant is scaling-, not translation-, invariant.
+
+## THE FINISHING STRUCTURE (clean reduction)
+LRC(14) <= the conjunction of:
+- **(2) VERIFIED, RIGOROUS:** every consecutive-multiple set {d,2d,...,13d} has the explicit safe
+  witness **t = 1/(14d)**: ||jd/(14d)|| = ||j/14|| = min(j,14-j)/14 >= 1/14 for all j=1..13. So the
+  tight sets are explicitly safe (no measure needed).
+- **(1) THE OPEN CRUX (strongly evidenced):** every 13-set that is NOT d*{1,...,13} has meas(safe)>0.
+  Random+perturbation search: 0/5668 non-(consec-multiple) sets reached meas(union)=1 (max 0.998 for
+  near-consec [1..5,7..13,69]). So d*{1..13} is conjecturally the UNIQUE exact-coverer.
+- Combine: the unique tight sets are the consecutive-multiples, resolved explicitly by (2); all other
+  sets have a positive-measure safe set by (1). => safe set always non-empty => LRC(14).
+- **This is the 'slightly different' realizability:** the obstruction is a SCALING-invariant exact-
+  tiling extremality (only {1..13}*d tiles [0,1) by its U_s arcs), with the tight case explicitly
+  witnessed -- complementing kps's additive-energy route and bypassing the translation-invariant A.
+  The crux (1) is now CLEANLY stated: characterize the exact tilers of [0,1) by arc-systems U_s.
