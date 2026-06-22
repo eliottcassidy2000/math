@@ -1,3 +1,25 @@
+## codex-2026-06-22-S93 -- Refutation of Fixed-Denominator Covering Atlas (checkpoint)
+
+Formalized the refutation of the strong bounded-denominator hypothesis for LRC14 covering sets (commit `ed7f7088`). This checkpoint establishes that no absolute rational denominator bound exists for the entire class of primitive covering 13-sets.
+
+### 1. THM-566: Non-Uniformity of Bounded-Denominator Witnesses
+Proved that for any integer $B \ge 2$, there exists a primitive LRC14 covering 13-set $S_B$ such that no rational point $a/D$ with $D \le B$ is a level-1/14 lonely witness.
+- **Construction:** $S_B = \{1, 2, \dots, 11, 13, 84 \cdot \text{lcm}(1, \dots, B)\}$.
+- **Mechanism:** The large trailing speed is constructed as a multiple of every denominator up to $B$, forcing the last runner to the origin ($\| (84 L_B) \cdot a/D \| = 0$) for all proposed witnesses.
+- **Impact:** This rules out the "zero-analysis" proof route of finding a single absolute denominator bound $B_0$ for all covering sets.
+
+### 2. HYP-2865: Obstruction via Divisor Loading
+Identified **divisor loading** as the fundamental obstruction to a uniform atlas. While empirical witnesses for sets like $\{1, \dots, 11, 13, 84\}$ are small (e.g., $17/41$), an adversary can systematically "kill" any finite set of denominators by scaling the trailing speeds.
+
+### 3. Proof Route Refinement
+The refutation pivots the finite-atlas strategy toward more robust formulations:
+- Bounded denominators conditioned on non-divisor-loaded sets.
+- Denominator bounds relative to the least modulus not annihilated by the speed set (the HYP-2052+ direction).
+- Hybrid approaches using sheet-gcd quotients (HYP-2864) or finite-ruler sampling (THM-565).
+
+### 4. Verification and Audit
+The refutation was verified via `lrc14_covering_bounded_denominator_obstruction_codex_s93.py`, which provides exact divisibility certificates for $B \in \{14, 26, 41, 67, 80\}$ and confirms the constructed rows satisfy the covering-set criteria.
+
 ## codex-2026-06-22-S87g -- Discretization Lemma and Boundary-Core Correction (checkpoint)
 
 Formalized the Node 1 discretization lemma and corrected the boundary-core over-claim (MISTAKE-085), aligning with the quasi-independence floor verification (commit `1b87fd31`).
@@ -15,7 +37,7 @@ Corrected a significant over-claim (documented as **MISTAKE-085**) regarding the
 Verified the **quasi-independence** factor $R'$ in the range $[0.81, 1.0]$. This factor represents the decorrelation between the "large cluster" (GOOD) and the "small part" ($G_P$), which operate at different scales. This verification ensures that $\rho^* > 0$ if and only if $R' \ge c > 0$.
 
 ### 4. Convergence: R' and Spectrum Splitting
-The decorrelation floor $R'$ converges with **Kind-Pasteur Node-3** (resonant-w vs generic-w). The baseline deviation $(R' - 1)$ is bounded by the **mac-mini SQRT-CANCELLATION** (Parseval L2 bound), which is equivalent to the spectrum sum in the kind-pasteur route ($R' = 1 + SPEC/baseline$). This convergence anchors both routes on the same Parseval/Cauchy-Schwarz backbone.
+The decorrelation floor $R' $ converges with **Kind-Pasteur Node-3** (resonant-w vs generic-w). The baseline deviation $(R' - 1)$ is bounded by the **mac-mini SQRT-CANCELLATION** (Parseval L2 bound), which is equivalent to the spectrum sum in the kind-pasteur route ($R' = 1 + SPEC/baseline$). This convergence anchors both routes on the same Parseval/Cauchy-Schwarz backbone.
 
 ## codex-2026-06-22-S87f -- Three-Node Attack: Resonant-w and zeta(2) Structure (checkpoint)
 
@@ -40,80 +62,3 @@ Established the **Cap-Floor Duality** (HYP-2862): the `mac-mini` $p_0 \le L_y$ (
 
 ### 5. Net Impact
 The wide-V residual closure is now bracketed by the generic-w (Parseval) and resonant-w (Farey/rate-V) split. The remaining analytic gap is the **THM-531 scale-invariance** reduction, showing that the wide regime reduces to a bounded-core gapped dichotomy.
-
-## codex-2026-06-22-S87e -- Resonant Neighborhood-Width Rigor (checkpoint)
-
-Formalized the rigorous closure of the resonant neighborhood-width and the witness floor for the bounded-V regime (commit `591d9f86`). This checkpoint establishes the provable margin needed for the witness route's analytic rigor.
-
-### 1. Resonant Neighborhood Lemma (Rate-V)
-Established the provable resonant neighborhood-width lemma: near a resonant center $c = a/b$ (with $b \le q-1 = 6$), the "lonely" set $\{x : \text{maxgap}\{\text{frac}(e_i x)\} > 1/7\}$ contains the interval $(c - \delta, c + \delta)$ where:
-$$\delta = \frac{7 - b}{7 b V}, \quad V = \max(e_i)$$
-This relies on the rate-V refinement (factor 2 improvement over the conservative 2V Lipschitz spread), which has been rigorously verified.
-
-### 2. Witness Floor Closure (Bounded-V)
-The witness measure $G2 = \text{meas}(\text{lonely} \cap G_P)$ is now rigorously closed for the bounded-V regime. Exact rational enumeration of the worst-case admissible $P$ sets shows that the lower bound $G2_{lb}$ remains strictly above the target floor $m_P = 14249/252252$ across $k=8..12$, with a worst-case parameter scaling of **1.58x slack**. This removes the need for cluster-specific three-distance arguments in the bounded-V case.
-
-### 3. Honest Arc Bounds (HYP-2849, HYP-2851, HYP-2852)
-Corrected previous overclaims by introducing a refined hierarchy of hypotheses:
-- **HYP-2849:** The initial conservative 2V-rate $\delta$ (double-counted spread).
-- **HYP-2851:** Identifies that the 2V-rate yields zero margin at the true worst $P = \{2,3,4,5,6\}$.
-- **HYP-2852:** The final rate-V refinement (provable) that successfully closes the floor.
-
-### 4. Residual and General Wide Clusters
-The proof identifies the **residual** as the wide-V general (non-AP) cluster.
-- AP clusters are reduced to the bounded-V regime via dilation (**HYP-2850**, **THM-531**).
-- General wide-V clusters are verified as non-binding via **THM-527-D** (bounded-spread is binding), which remains the final rigor gap for the wide-V closure.
-
-### 5. Net Impact
-LRC(14) is effectively bracketed by:
-1. Sector $p_0 \le \text{cap}$ (Done).
-2. Witness $G2 \ge m_P$ (Pigeonhole for $k \le 7$ + Rate-V lemma for $k = 8..13$ + finite worst-P certificate).
-3. $G2 > 0 \implies M \ge 1/14$ (Proved).
-The method is $q$-uniform and corroborates the smaller-n consistency for LRC(2q).
-
-## codex-2026-06-22-S87d -- WITNESS ROUTE for LRC(2q) Thread 1 (checkpoint)
-
-Incorporated the "WITNESS ROUTE for LRC(2q) Thread 1" progress from Kind-Pasteur (commit `5c1dd566`). This checkpoint establishes the q-uniform witness method and corroborates the smaller-n consistency proof for LRC(6) and LRC(10).
-
-### 1. Exact per-q Floors (m_P)
-Formalized the exact admissible floors for the binding $|P|=q-1$ cases (completable to primitive $S$):
-- **q=3 (LRC(6)):** $m_P = 2/5$
-- **q=5 (LRC(10)):** $m_P = 781/6300$
-- **q=7 (LRC(14)):** $m_P = 14249/252252$
-These values reproduce THM-530 and HYP-2825.
-
-### 2. Binding Quantity phi_q and consec-argmin
-Identified the floor-case binding quantity $\phi_q = \min_{|P|=q-1} \text{meas}(G_P)$. A full enumeration for $q=3,5$ and $q=5$ dense $k=7$ pins `consec_q` as the exact argmin of $\min-G2$ at $k=q$ and dense $k>q$. For $q=7$, the widening margin sequence $\phi_q/m_P$ grows from $1.000$ (q=3) to $4.974$ (q=7), showing that the witness floor is tightest at $q=3$ and becomes easier as $q$ grows.
-
-### 3. Closed-Form Verdict and Uniform LB
-While $m_P$ lacks a clean elementary formula in $q$, the floor cases obey a uniform lower bound $\text{meas}(G_P) \ge 1/q > 0$ based on the union bound for $|P| \le q-1$. The exact minimum remains several-fold larger ($\phi_q \to \sim 1/4$). Consistent verification was achieved for LRC(6) and LRC(10), confirming the witness mechanism's validity.
-
-### 4. HYP-2846 Corroboration
-This progress corroborates **HYP-2846** (LRC(2q) witness route unification) by providing a $q$-uniform method that handles smaller $n$ cases consistently. The loop-closure for genuine admissible coverings in LRC(6) and LRC(10) ensures that $M(S) \ge 1/n$ and maxgap $> 1/q$ at the optimal $\tau$.
-
-### 5. Build and Artifacts
-New synthesis and certification scripts (`lrc_witness_2q_synthesis_kpswf11.py`, etc.) and their results have been committed to the repository.
-
-## codex-2026-06-22-S87c -- LRC14 cover box skeleton (checkpoint)
-
-Formalized the `LRCCoverBoxes` skeleton and the corresponding measure-level support infrastructure (commit `a1580cc4`). This checkpoint provides the formal bridge between Vitali-style covering arguments and the concrete `p0` event bounds.
-
-### 1. Cover Box Formalization
-Added `LRCCoverBoxes.lean`, which defines the `CoverBox` structure and proves the foundational measure-level identities for covering events. Key theorems:
-- `volume_coverBox_le_cap`: Proves that any individual cover box has a Lebesgue measure bounded by the resonance `cap`.
-- `slowμ_coverSet_le_sum_coverBoxes`: Establishes the subadditivity of the `p0` cover measure across a collection of cover boxes.
-- `slowμ_coverSet_le_cap_of_vitali_disjoint`: Formalizes the reduction to a disjoint Vitali covering, where the total measure is bounded by the sum of individual box capacities.
-
-### 2. Resonance and Arc Complexity (HYP-2840, HYP-2841)
-Integrated the support-atom readouts for the resonance-bound via Vitali covering. This provides the Lean-side targets for:
-- **HYP-2840:** The reduction of the `p0` event to a union of small, high-density "boxes" around resonance peaks.
-- **HYP-2841:** The arc-complexity bound for disjoint cells, identifying the combinatorial constraints on how many distinct cover boxes can be active simultaneously.
-
-### 3. Formal Impact
-This closes the bridge between the analytic decorrelation/Vitali route and the concrete `p0` margin. The remaining analytic work is now localized to the individual box density bounds (e.g., the Tornheim double sum) and the combinatorial disjointness of the cover set.
-
-### 4. Build Audit
-Refreshed and verified the following build transcripts:
-- `lrc14_hyp2840_support_atoms_lean_codex_s87c.out`
-- `tournamenth7_verify_lrc14_cover_box_skeleton_codex_s87c.out`
-- `tournamenth7_root_lrc14_cover_box_skeleton_codex_s87c.out`
