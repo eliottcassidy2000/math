@@ -6,6 +6,17 @@ Owner: finish LRC(14) via the THM-079 (H=21) template; prove tightness forces th
 - **Remaining of (star) (honest):** (ii) s_i+s_j=14 exactly (L=1/denom-14); (iii) covering => M!=1/14 (apex-7 floor, needs ii); (iv) tight locus = {AP,GW} (census); (v) covering => M>1/14 not < (Node 2 min=1/12 + Node 3). Given these + the forward theorem, (star) closes, LRC(14) follows.
 - DISCIPLINE: caught a heredoc backtick bug that emptied the HYP file; rewrote via Write.
 NEW: HYP-2909. NEXT: (ii) the L=1 refinement (does M=1/14 force s_i+s_j=14 exactly?) -- then (iii) apex-7 floor closes covering.
+## codex-2026-06-22-S119 -- THM-079 template audit: LRC14 now needs STAR+ or a state lift
+
+User supplied the sharpened THM-079 analogy: reduce LRC14 to one atom, then use the apex-7/tournament obstruction to rule out the atom.  Pulled incoming coordination, treated HYP-2908/HYP-2907 as signal, and audited the logical step that was still being compressed.
+
+Added `04-computation/lrc14_thm079_star_audit_codex_s119.py` and stored `05-knowledge/results/lrc14_thm079_star_audit_codex_s119.out`.  Exact checks: AP `{1..13}` and Goddyn-Wong `{1..11,13,24}` are tight with `M=1/14`, non-covering, and denom-14 witnessed; covering rows `{1..11,13,84m}` contain a multiple of 14 and block every denom-14 unit point but still have off-apex binding-pair witnesses (`7/89`, `14/173`, `42/509`).  The audit also verifies the connected `I(G,2)=7` graph atom is uniquely `K_3`.
+
+Created HYP-2909/T1022 and reflection `07-reflections/lrc14-thm079-template-star-obligation-codex-s119.md`.  Main correction: "covering excludes denom-14 apex equality" is necessary but not sufficient.  The proof closes by either STAR+ (every primitive reduced 13-speed atom has `M>=1/14`, equality only AP/GW with apex witness) or STAR0 plus a boundary-forcing lemma that any sub-tight covering family produces an equality atom.  The alternate route remains HYP-2908: state-lift the reduced atom into the tournament OCF category with connected `I=7`, then THM-201/THM-343 forbid the `K_3` atom.
+
+Mid-session rebase brought in KPS-S31aa / THM-568, which proves the structural apex-denominator half: primitive tight rows have `D=14`, nonprimitive rows have `D=14*gcd(S)`.  Integrated this into HYP-2909, T1022, and OPEN-Q-108.  The live residual is now narrower than the original `(star)`: prove 14-covering primitive reduced atoms are strict, with the hard branch `S=R∪Q`, `Q⊂14Z`, `|Q|>=7`, `R` 14-free and `|R|<=6`, so the multiples of 14 cannot cover the core's `1/13` margin.
+
+Final rebase brought in mac-mini S49 / HYP-+2909, proving the compatible weaker forward binding-pair statement `M=1/14 -> 14 | (s_i+s_j)`.  Cross-linked it as the local sawtooth proof intuition, while THM-568 remains the stronger denominator theorem that controls the residual routing.
 
 ## mac-mini-2026-06-22-S48 -- LRC(14) is IMPOSSIBLE TO DISPROVE: the apex-7 order-2 obstruction (14 = 2 x 7)
 Owner: '7 is a forbidden H value, arcs have 2 states -- these are all you need to disprove LRC(14) OR prove it impossible to disprove.' Disciplined reading: both are OBSTRUCTIONS => impossible to disprove (NOT a disproof). Reflection: lrc14-impossible-to-disprove-the-apex7-order2-obstruction.md.

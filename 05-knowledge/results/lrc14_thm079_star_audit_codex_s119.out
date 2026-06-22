@@ -1,0 +1,33 @@
+LRC14 THM-079-template STAR audit (codex S119)
+========================================================================
+Exact M checks
+AP {1..13}               primitive=True  covering=False has14=False denom14_blocked=False M=1/14 = 1/14 tau=5/14
+GW {1..11,13,24}         primitive=True  covering=False has14=False denom14_blocked=False M=1/14 = 1/14 tau=5/14
+cover C_1                primitive=True  covering=True  has14=True  denom14_blocked=True  M=7/89 > 1/14 tau=37/89
+cover C_2                primitive=True  covering=True  has14=True  denom14_blocked=True  M=14/173 > 1/14 tau=72/173
+cover C_6                primitive=True  covering=True  has14=True  denom14_blocked=True  M=42/509 > 1/14 tau=212/509
+
+Apex exclusion is necessary but not sufficient
+- AP and GW are tight, non-covering, and not denom-14 blocked.
+- Covering rows are denom-14 blocked because they contain a multiple of 14.
+- The covering rows above still have M>1/14 at off-apex binding-pair times.
+This was the pre-THM568 gap: apex blocking needed STAR to close.
+
+Connected graph preimage of I(G,2)=7
+  K3
+total connected atoms through n<=5: 1
+
+STAR theorem target
+  Original STAR+: every primitive reduced atom has M(S)>=1/14,
+  equality only on the AP/Goddyn-Wong apex tight locus.
+  Incoming THM-568 proves the structural STAR0 half: primitive
+  tight rows have apex denominator D=14.  The residual is
+  covering strictness: a 14-covering primitive atom cannot be
+  tight, hence M(S)>1/14.
+
+Tournament Analysis / assumption challenge
+  Vertices used here are proof obligations and graph atoms, not runners.
+  Dependency orientation: peel_exhaustive -> THM568 apex denominator
+  -> covering_strictness -> state_lift.  This preserves the LRC predicate 'counterexample
+  impossible' but destroys raw speed identity; the exact-M rows above
+  show why that destruction is acceptable only after THM568 plus covering strictness.
