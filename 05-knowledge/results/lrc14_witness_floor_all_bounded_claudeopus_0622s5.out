@@ -1,0 +1,78 @@
+==========================================================================================
+WITNESS FLOOR G2 >= m_P for ALL BOUNDED E (span<=14), k=8..13
+  m_P = 14249/252252 ~ 0.056487 (THM-530)
+  G2 = meas{x in G_P : maxgap > 1/7}
+==========================================================================================
+
+--- PHASE 1: Find worst-witness P for consecutive E ---
+k=8: scanning 1287 P-subsets ...
+  k=8 worst P=[1, 4, 5, 9, 11]  min witness(consec)=8152/24255 ~ 0.336096  [19.0s]
+k=9: scanning 715 P-subsets ...
+  k=9 worst P=[1, 10, 11, 12]  min witness(consec)=143/420 ~ 0.340476  [11.5s]
+k=10: scanning 286 P-subsets ...
+  k=10 worst P=[1, 11, 12]  min witness(consec)=19/49 ~ 0.387755  [5.4s]
+k=11: scanning 78 P-subsets ...
+  k=11 worst P=[1, 12]  min witness(consec)=3193/8820 ~ 0.362018  [1.8s]
+k=12: scanning 13 P-subsets ...
+  k=12 worst P=[1]  min witness(consec)=10358/24255 ~ 0.427046  [0.4s]
+k=13: scanning 1 P-subsets ...
+  k=13 worst P=[]  min witness(consec)=477/1078 ~ 0.442486  [0.0s]
+
+  Phase 1 global min G2 (consec E) = 8152/24255 ~ 0.336096 @ (8, 'consec', [1, 4, 5, 9, 11])
+  G2 >= m_P for all consec E: True
+
+--- PHASE 2: Check all bounded primitive E with worst-witness P ---
+
+k=8 worst P=[1, 4, 5, 9, 11]
+  k=8 500 configs, min_G2=0.33610, 9.4s
+  k=8 1000 configs, min_G2=0.33610, 19.6s
+  k=8 1500 configs, min_G2=0.33610, 29.9s
+  k=8 2000 configs, min_G2=0.33610, 40.0s
+  k=8 2500 configs, min_G2=0.33610, 50.5s
+  k=8 3000 configs, min_G2=0.33610, 61.4s
+  k=8  PASS  configs=3431  min G2=8152/24255 ~ 0.336096  [70.9s]
+  worst E=(0, 1, 2, 3, 4, 5, 6, 7)  min G2 / m_P = 5.950x
+
+k=9 worst P=[1, 10, 11, 12]
+  k=9 500 configs, min_G2=0.34048, 11.7s
+  k=9 1000 configs, min_G2=0.34048, 24.1s
+  k=9 1500 configs, min_G2=0.34048, 36.7s
+  k=9 2000 configs, min_G2=0.34048, 49.2s
+  k=9 2500 configs, min_G2=0.34048, 62.1s
+  k=9 3000 configs, min_G2=0.34048, 75.1s
+  k=9  PASS  configs=3003  min G2=143/420 ~ 0.340476  [75.2s]
+  worst E=(0, 1, 2, 3, 4, 5, 6, 7, 8)  min G2 / m_P = 6.027x
+
+k=10 worst P=[1, 11, 12]
+  k=10 500 configs, min_G2=0.38776, 14.0s
+  k=10 1000 configs, min_G2=0.38776, 28.1s
+  k=10 1500 configs, min_G2=0.38776, 43.0s
+  k=10 2000 configs, min_G2=0.38776, 58.0s
+  k=10  PASS  configs=2002  min G2=19/49 ~ 0.387755  [58.1s]
+  worst E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  min G2 / m_P = 6.864x
+
+k=11 worst P=[1, 12]
+  k=11 500 configs, min_G2=0.36202, 16.0s
+  k=11 1000 configs, min_G2=0.36202, 32.7s
+  k=11  PASS  configs=1001  min G2=3193/8820 ~ 0.362018  [32.8s]
+  worst E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)  min G2 / m_P = 6.409x
+
+k=12 worst P=[1]
+  k=12  PASS  configs=364  min G2=10358/24255 ~ 0.427046  [13.7s]
+  worst E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)  min G2 / m_P = 7.560x
+
+k=13 worst P=[]
+  k=13  PASS  configs=91  min G2=477/1078 ~ 0.442486  [4.2s]
+  worst E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)  min G2 / m_P = 7.833x
+
+==========================================================================================
+PHASE 2 GLOBAL min G2 (all bounded E, worst-witness P) = 8152/24255 ~ 0.336096
+  @ (8, (0, 1, 2, 3, 4, 5, 6, 7))
+  min G2 / m_P = 5.950x
+  G2 >= m_P everywhere: True
+
+INTERPRETATION:
+  If PASS: the witness floor G2>=m_P holds for ALL (worst-witness-P, bounded E)
+  pairs at k=8..13.  Combined with k<=7 pigeonhole (G2=meas(G_P)>=m_P) and
+  S4 gw-doublet check (witness~0.48>>m_P), this covers ALL LRC(14) config families.
+  (Assumes worst-witness P does not change when E changes from consecutive.)
