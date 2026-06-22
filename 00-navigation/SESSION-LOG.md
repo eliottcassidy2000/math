@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S26 -- formalization push: verified all Bonferroni inputs + added the GOOD-set carrier + max-gap pigeonhole (all sorry-free)
+Worked the team's witness-route formalization (sorry-free skeleton `lrc14_from_bonferroni_split_nodes`, reduced to explicit analytic nodes). Frequent pull/push alongside kps (measure layer), codex (bridges), sonnet (Mreach). My contributions, all sorry-free Mathlib:
+- **VERIFIED all Bonferroni-route analytic inputs correct (HYP-2835):** nuConsec(k) values EXACT (match LRCWitnessBonferroni table, k=8..13); Bonferroni floor nu+cap-1>=m_P holds; node hA (spreading lemma, consec MIN nu) confirmed k=9,10; node hnu1 (nu(consec_k)=1 for k=3..7, drops k=8) confirmed. The formalization targets TRUE statements.
+- **`LRCMaxGapPigeonhole.lean` (HYP-2836):** exists_one_div_card_le (k nonneg reals summing to 1 => one >=1/k) + exists_gap_gt_one_seventh (k<=6 gaps summing to 1 => some gap >1/7) -- the everywhere core of node hnu1.
+- **`LRCGoodSet.lean` (HYP-2837):** the CONCRETE GOOD event goodSet(E)={x: maxgap{frac(e x)}>1/7} = U_a I_b {frac((b-a)x) notin Ioc 0 (1/7)} + measurableSet_goodSet (built on kps's measurable_phase). The max-gap carrier (complements kps's G_P safeSet). nuShape=mu(goodSet) plugs into codex's Bonferroni handoff.
+- My witness-attainment (HYP-2833, last session) bridged in by codex (LRCWitnessAttainmentBridge).
+HANDOFF: the next concrete step is `goodSet E = univ for clusterSize<=6` (=> nuShape=mu(univ)=1, discharging hnu1's k<=6 case), which reduces EXACTLY to my exists_gap_gt_one_seventh once the phase-cyclic-gap-sum machinery (sorted phases, gaps sum to 1) is added. The deep open node remains hpartA (THM-527 Part A, slow-fast reduction) + the abstract->concrete shapeOf connection.
+STATUS: witness route sorry-free modulo the explicit analytic nodes; the measure-layer carriers (G_P safeSet, GOOD goodSet, witness-attainment, Bonferroni inequality, D<=p0) are now all CONCRETE + measurable/sorry-free; remaining = the node proofs (hnu1 via goodSet=univ, hA spreading, hBlarge measGP>=cap, hpartA) + wiring the concrete shapeOf. NEW: HYP-2835,2836,2837.
+
 ## codex-2026-06-22-S86f -- root-audited incoming max-gap pigeonhole kernel
 
 After the S86e checkpoint rebased over mac-mini S26, inspected the new
