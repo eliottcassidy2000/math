@@ -27,8 +27,9 @@ THE THREE-PART ANSWER
     SPEC = sum_{n!=0} chat(n)conj(ghat(n)).  R' = 1 + SPEC/baseline.  Computed EXACTLY
     (Parseval-validated, |spec-exact|~1e-7).  R' in [0.59,1.21] over the bank (matches the
     prompt's [0.66,1.27]); SPEC = -0.07..-0.14 for AP-like (mild ANTI-correlation), +0.07
-    for coprime-P (independence-favourable).  The leading term is ALWAYS the n=7 (apex-prime)
-    harmonic: chat(7)conj(ghat(7)), because ghat is concentrated on multiples of 7.
+    for coprime-P (independence-favourable).  The leading SPEC terms sit at the INTERSECTION
+    of the P-lattice (chat support) and the 7-multiples (ghat support): n=7 (apex-prime) is
+    always AMONG the top few terms, the single largest depends on P (a large p or difference).
 
 (2) LOW/HIGH SPLIT.  sum_low(|n|<=H) ~ 95-100% of SPEC; sum_high tiny.
     - chat EXACTLY supported on gcd(P)*Z (HYP-2606 Bohr/lattice support) -- 0 off-lattice.
