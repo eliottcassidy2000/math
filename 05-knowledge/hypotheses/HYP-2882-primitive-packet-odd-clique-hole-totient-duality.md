@@ -1,5 +1,5 @@
 ---
-id: HYP-2881
+id: HYP-2882
 status: SYNTHESIS / proof-target; supported by HYP-+2880, HYP-2878, HYP-2879, HYP-2628, HYP-2630, HYP-2632
 source: codex-2026-06-22-S100
 tags: [tournaments, lrc14, totient, euler-copy, odd-holes, odd-cliques, strong-atoms, coimage, character-kernel, tournament-analysis]
@@ -8,6 +8,7 @@ related:
   - HYP-2878
   - HYP-2879
   - HYP-2880
+  - HYP-2881
   - HYP-2877
   - HYP-2628
   - HYP-2630
@@ -18,7 +19,7 @@ related:
   - THM-200
 ---
 
-# HYP-2881: primitive packets mediate the odd clique / odd hole and totient bridges
+# HYP-2882: primitive packets mediate the odd clique / odd hole and totient bridges
 
 The common structure behind the recent tournament and LRC threads is not the
 number `7` by itself.  It is the order in which primitive packet information is

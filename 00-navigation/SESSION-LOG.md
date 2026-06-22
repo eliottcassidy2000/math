@@ -20,8 +20,8 @@ lane `a+b=2`.  New proof target: build an exact-period packet-conflict graph
 from HYP-2632 and test whether its affine zero lane / Legendre selector appear
 as odd-hole or odd-clique fingerprints, analogous to `K_3 -> C_5`.
 
-Added HYP-2881 and reflection
-`07-reflections/primitive-packets-before-quotients-codex-s100.md`; added T997
+Added HYP-2882 and reflection
+`07-reflections/primitive-packets-before-quotients-codex-s100.md`; added T998
 and index updates.  Assumption challenge: considered runners, tournament
 vertices, free arcs, odd cycles, strong components, ears, exact-denominator
 packets, divisor masks, unit residues, additive Fourier shells, quadratic
