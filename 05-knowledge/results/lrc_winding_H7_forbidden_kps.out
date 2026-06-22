@@ -1,0 +1,22 @@
+E=[0, 1, 2, 3, 4, 5, 6] (7 runners, LRC(7) AP):  H(T(x)) value distribution over x:
+   H=0: 1 grid pts 
+   H=1: 420 grid pts 
+   H=8: 2 grid pts 
+   H=24: 2 grid pts 
+   H=31: 2 grid pts 
+   H=33: 82 grid pts 
+   H=34: 2 grid pts 
+   H=56: 2 grid pts 
+   H=70: 4 grid pts 
+   H=84: 2 grid pts 
+   H=100: 2 grid pts 
+   H=105: 124 grid pts 
+   H=123: 416 grid pts 
+   H=129: 2 grid pts 
+   H=137: 374 grid pts 
+   H=151: 206 grid pts 
+   H=175: 876 grid pts 
+
+   H=7 occurrences: 0  (Redei: 7 is FORBIDDEN => expect 0)
+   LONELY point (max-min ||.||): x=0.1429, min||.||=0.1429 (=1/7=0.1429?), H there = 175
+   => H avoids 7; the lonely point sits at a specific H. 14=2*7: the apex-7 forbidden value.
