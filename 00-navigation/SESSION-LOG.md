@@ -1,3 +1,35 @@
+## codex-2026-06-22-S120 -- denominator-14 unit-grid Lean bridge
+
+Formalized the exact `q=14` apex-grid split as `TournamentH7.LRCUnitGrid14`
+and canonized it as THM-569.  Lean now proves, sorry-free, that for every unit
+`a mod 14`,
+`Lonely 14 v (a/14) <-> forall i, not (14 | v i)`, with named versions for
+`a=1,3,5,9,11,13`, plus the specialized corollary that any no-lonely-time
+family must contain a multiple of 14.  Added audit hooks in `TournamentH7.Verify`
+and imported `LRCApex7Floor` into the aggregate module so the finite apex split
+is visible beside the Mreach/gap formalization layer.
+
+Assumption challenge recorded: the carrier is the six unit residues modulo 14
+and the divisibility predicate, not a tournament whose vertices are runners.
+It preserves the exact `Lonely 14` predicate on the apex grid and intentionally
+throws away off-grid equidistribution, so it discharges only the finite half of
+the LRC14 template.  The remaining proof obligation is unchanged but cleaner:
+14-covering rows block the apex grid and require the analytic
+covering-strictness/off-grid survival argument.
+
+Verification passed:
+`cd 04-computation/lean/TournamentH7 && lake build TournamentH7.LRCUnitGrid14`;
+`cd 04-computation/lean/TournamentH7 && lake build TournamentH7.Verify`;
+`cd 04-computation/lean/TournamentH7 && lake build TournamentH7`.
+
+Post-rebase signal: KPS-S31ab arrived while closing, claiming the
+14-covering residual is not tight and verifying AP/GW replacement families
+with minimum `M=1/13`.  I integrated it into HYP-2910 and OPEN-Q-108 as the
+next formal target, not as part of THM-569: the Lean theorem closes the apex
+unit-grid predicate; the remaining theorem is the general covering-strictness
+mechanism that turns a smaller-runner `1/13` margin into an uncovered point
+against the multiples-of-14 combs.
+
 ## mac-mini-2026-06-22-S49 -- PROVE the FORWARD half of crux (star): M(S)=1/14 forces an apex-7 BINDING PAIR (14 | s_i+s_j)
 Owner: finish LRC(14) via the THM-079 (H=21) template; prove tightness forces the apex-7 point. HYP-2909.
 - **THEOREM (star-forward), rigorous:** M(S)=1/14 at a local max t* (1/14<1/2 => a crossing, not a peak) => an active runner s_i on the INCREASING side (frac(s_i t*)=1/14) and s_j on the DECREASING side (frac=13/14); (s_i+s_j)t*=0 mod 1 + s_i t*=1/14 force **14 | (s_i+s_j)**. So tightness FORCES a binding pair in antipodal residues mod 14 = the apex-7 antipode. This is exactly Move B (the Moon/cycle-forcing step) of the THM-079 template.

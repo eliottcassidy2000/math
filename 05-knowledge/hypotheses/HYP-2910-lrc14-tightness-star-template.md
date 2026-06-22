@@ -1,6 +1,6 @@
 ---
 id: HYP-2910
-status: PROOF-TARGET / tightness-star template; THM-568 proves apex-denominator half, multiples-of-14 residual open
+status: PROOF-TARGET / tightness-star template; THM-568 proves apex-denominator half, THM-569 formalizes the q=14 unit-grid split, multiples-of-14 covering-strictness remains the formal target
 source: codex-2026-06-22-S119
 tags: [lrc14, tight-locus, thm079-template, goddyn-wong, apex-7, covering-core, tournaments, open-q-108]
 depends_on:
@@ -14,6 +14,7 @@ depends_on:
   - THM-079
   - THM-560
   - THM-568
+  - THM-569
 related:
   - HYP-2909
   - OPEN-Q-108
@@ -24,6 +25,8 @@ related:
 results:
   - 04-computation/lrc14_tightness_star_template_codex_s119.py
   - 05-knowledge/results/lrc14_tightness_star_template_codex_s119.out
+  - 04-computation/lrc_14covering_not_tight_kps.py
+  - 05-knowledge/results/lrc_14covering_not_tight_kps.out
 ---
 
 # HYP-2910: exact tightness-star atlas supporting HYP-2909
@@ -65,6 +68,31 @@ now the 14-covering branch: if `S` contains multiples of `14`, prove
 `14`; the live quantitative target is the `>=7` multiples-of-14
 second-moment/equidistribution branch over the 14-free core's `1/13` margin.
 
+Codex S120/THM-569 now formalizes the exact `q=14` unit-grid split in Lean:
+
+```text
+a in (Z/14Z)^*  =>  Lonely 14 v (a/14) <=> no speed is divisible by 14.
+```
+
+So the finite apex boundary is no longer just a script checksum.  The Lean
+module `TournamentH7.LRCUnitGrid14` exposes named theorems for
+`a=1,3,5,9,11,13` and the specialized corollary that any no-lonely-time family
+must contain a multiple of `14`.
+
+Post-rebase KPS-S31ab is strong incoming signal for the next obligation: it
+claims the 14-covering residual is not tight and verifies the claim on AP/GW
+replacement families, with minimum `M=1/13`.  Read conservatively, the script
+does not by itself replace the still-needed general theorem; it proposes the
+formal mechanism to extract next:
+
+```text
+S = R union M14, R 14-free
+  -> the 1/13-margin supplied by the smaller runner theorem cannot be covered
+     by the 14-multiple danger combs.
+```
+
+That is now the sharp formalization target after THM-569.
+
 Equivalently, in the HYP-2908 language, a remaining bounded apex-7 over-cover
 must state-lift to a tournament-conflict-realizable connected binary packet
 graph with `I(.,2)=7`, hence to the forbidden `K_3` atom.
@@ -95,6 +123,9 @@ for k in {1,3,5,9,11,13}, 14 | v*k  <=>  14 | v.
 
 Thus if `S` has no multiple of `14`, every listed `k/14` survives, so
 `M(S)>=1/14`.  Any strict counterexample must contain a multiple of `14`.
+This exact statement is now proved in Lean as THM-569, in the stronger
+predicate form
+`Lonely 14 v (k/14) <-> forall i, not (14 | v_i)`.
 
 The exact bounded AP single-swap atlas through replacement `v<=80` has only
 one non-AP tight row:

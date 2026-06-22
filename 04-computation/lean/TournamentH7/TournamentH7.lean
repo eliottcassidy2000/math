@@ -57,6 +57,8 @@
                                       width scout.
     · TournamentH7.LRCMreachConcrete — concrete Mreach compactness bridge
                                       for the LRC14 reach-to-lonely step.
+    · TournamentH7.LRCApex7Floor — apex-7 denominator-14 obstruction.
+    · TournamentH7.LRCUnitGrid14 — exact denominator-14 unit-grid sieve.
     · TournamentH7.LRCWitnessAttainment — general `distZ`/margin witness
                                       attainment on a compact period.
     · TournamentH7.LRCWitnessAttainmentBridge — equivalence between the
@@ -149,6 +151,8 @@ import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCLowerThresholdNeighborhood
 import TournamentH7.LRCMreachConcrete
+import TournamentH7.LRCApex7Floor
+import TournamentH7.LRCUnitGrid14
 import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge

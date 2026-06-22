@@ -51,6 +51,8 @@ import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCLowerThresholdNeighborhood
 import TournamentH7.LRCMreachConcrete
+import TournamentH7.LRCApex7Floor
+import TournamentH7.LRCUnitGrid14
 import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
@@ -188,6 +190,28 @@ theorem lrc_concrete_lonely_of_mreach_ge_audit
     ∃ t : ℝ, LonelyRunner.Lonely 14 v t :=
   LonelyRunner.LRC14Concrete.lonely_of_Mreach_ge v hv hM
 #print axioms lrc_concrete_lonely_of_mreach_ge_audit
+
+/-! ### LRC14 denominator-14 unit-grid sieve and apex floor ### -/
+
+theorem lrc14_denom14_unit_lonely_iff_no_multiple_audit
+    {ι : Type*} (a : ℤ) (hcop : IsCoprime (14 : ℤ) a) (v : ι → ℤ) :
+    LonelyRunner.Lonely 14 v ((a : ℝ) / 14) ↔
+      ∀ i, ¬ ((14 : ℤ) ∣ v i) :=
+  LonelyRunner.UnitGrid14.denom14_unit_lonely_iff_no_multiple a hcop v
+#print axioms lrc14_denom14_unit_lonely_iff_no_multiple_audit
+
+theorem lrc14_counterexample_needs_multiple14_audit
+    {ι : Type*} (v : ι → ℤ) (hcex : ∀ t : ℝ, ¬ LonelyRunner.Lonely 14 v t) :
+    ∃ i, (14 : ℤ) ∣ v i :=
+  LonelyRunner.UnitGrid14.counterexample_needs_multiple14 v hcex
+#print axioms lrc14_counterexample_needs_multiple14_audit
+
+theorem lrc14_apex7_D14_never_certifies_audit
+    (S : Finset ℤ) (s : ℤ) (hsS : s ∈ S) (hs : (14 : ℤ) ∣ s) (a : ℤ) :
+    ∃ t ∈ S,
+      LonelyRunner.LRC14Concrete.nearInt ((t : ℝ) * ((a : ℝ) / 14)) < 1 / 14 :=
+  LonelyRunner.Apex7.D14_never_certifies S s hsS hs a
+#print axioms lrc14_apex7_D14_never_certifies_audit
 
 /-! ### LRC14 geometric gap-to-reach core -/
 
