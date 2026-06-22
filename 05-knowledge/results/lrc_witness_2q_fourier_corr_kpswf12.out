@@ -62,3 +62,66 @@ THREAD 2: the q-UNIFORM FOURIER-CORRELATION CONSTANT  (kpswf12, kind-pasteur)
     3    6                  1/5     0.400000   0.666667   0.750000
     5   10               83/360     0.332143   0.783333   0.886144
     7   14           7781/32340     0.280983   0.852381   1.004572
+    9   18     2626157/11027016     0.252575   0.902646   1.044614
+
+  R'_q trend (quasi-independence ~1 means cover^c and G_P decouple):
+    R'_q = ['0.75000', '0.88614', '1.00457', '1.04461']  for q=[3, 5, 7, 9]
+
+############################################################################################
+# (4) THROUGH vs AROUND the Z/q SECTOR STRUCTURE  (the creative question)
+############################################################################################
+
+  (a) ghat(m) = (1-e(-m/q))/(2 pi i m): |ghat(m)| = |sin(pi m/q)|/(pi|m|).
+      VANISHES exactly on q|m; peaks at m == +-1 (mod q). So the sector
+      kernel's spectrum LIVES ON the Z/q grid -- correlation is mediated
+      BY (THROUGH) the q-sector structure, not around it.
+
+  (b) c^F_q decomposed by frequency shell m mod q (consec-q cluster):
+    q=3: total=0.459441
+        |m mod q|=0: 0.000000  (  0.0% of c^F)  <- q|m (MUST be 0: ghat=0)
+        |m mod q|=1: 0.459441  (100.0% of c^F)
+    q=5: total=0.580433
+        |m mod q|=0: 0.000000  (  0.0% of c^F)  <- q|m (MUST be 0: ghat=0)
+        |m mod q|=1: 0.318066  ( 54.8% of c^F)
+        |m mod q|=2: 0.262367  ( 45.2% of c^F)
+    q=7: total=0.634258
+        |m mod q|=0: 0.000000  (  0.0% of c^F)  <- q|m (MUST be 0: ghat=0)
+        |m mod q|=1: 0.243336  ( 38.4% of c^F)
+        |m mod q|=2: 0.206202  ( 32.5% of c^F)
+        |m mod q|=3: 0.184720  ( 29.1% of c^F)
+    q=9: total=0.664648
+        |m mod q|=0: 0.000000  (  0.0% of c^F)  <- q|m (MUST be 0: ghat=0)
+        |m mod q|=1: 0.196568  ( 29.6% of c^F)
+        |m mod q|=2: 0.172129  ( 25.9% of c^F)
+        |m mod q|=3: 0.153147  ( 23.0% of c^F)
+        |m mod q|=4: 0.142805  ( 21.5% of c^F)
+
+  (c) q=7 ONLY: split the cluster autocorrelation over QR/NQR(7) (Fano/Hamming).
+      QR(7) = [1, 2, 4],  NQR(7) = [3, 5, 6]
+      consec-7 {0..6}         : QR-shell=0.317129 (50.0%)  NQR-shell=0.317129 (50.0%)  q|m=0.00e+00
+      boundary core {1..12}   : QR-shell=0.420332 (50.0%)  NQR-shell=0.420332 (50.0%)  q|m=4.64e-18
+
+############################################################################################
+# (5) CAYLEY-DICKSON 14->18->24 : property-loss pattern in c_q and c^F_q
+############################################################################################
+
+    q    n  c_q (witness floor)   c^F_q (consec)    q*c^F_q
+  ------------------------------------------------------------
+    3    6             0.777778        0.4594407    1.37832
+    5   10             0.601905        0.5804330    2.90216
+    7   14             0.569903        0.6342577    4.43980
+    9   18             0.552555        0.6646483    5.98183
+
+  Cayley-Dickson note: q=7 (n=14) = octonion level, q=9->n=18, then n=24=8*3.
+  Look for a DISCONTINUITY at q=7 (octonions lose associativity).
+
+############################################################################################
+# (6) q=9 (n=18) EXACT FLOORS  m_P, phi_q  (closedform stopped at q=8)
+############################################################################################
+
+  --- q=7 (n=14) ---
+    m_P^(14) = 14249/252252 = 0.05648716   |P|=10  P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+    phi_7   = 3029/10780 = 0.28098330   |P|=6  P=(1, 5, 7, 8, 9, 11)
+    phi_7/m_P = 4.97429
+
+  --- q=9 (n=18) ---
