@@ -22,10 +22,11 @@ Two sorry-free conditional assemblies, BOTH valid (`0` occurrences of `sorryAx`)
 - `lrc14_from_bonferroni_split_nodes` (NU route) → `[propext, Classical.choice,
   Quot.sound, + native_decide]` (nuConsec/floor table). Floor `nu + cap − 1 =
   1891/5880 = 0.322 > 0`. Needs the spreading lemma `hA`.
-- `lrc14_from_p0_wide_bound_split_nodes` (p0 route) → `[propext, Classical.choice,
-  Quot.sound]` only. Floor `cap − p0 = 319/5880 = 0.0543 > 0`. No spreading lemma
-  (HYP-2832). NB: its floor is below the *current placeholder* `witnessMP = m_P`, so to
-  use it either prove `0 < witnessG2` directly or lower the placeholder — cosmetic.
+- `lrc14_from_p0_positive_wide_bound_split_nodes` (p0 route) → `[propext,
+  Classical.choice, Quot.sound]` only. Floor `cap − p0 = 319/5880 = 0.0543 > 0`.
+  No spreading lemma (HYP-2832).  Codex S86g formalizes the corrected use: the
+  large branch needs only `0 < delta`, not the false k=8 comparison
+  `witnessMP <= delta`.
 
 So: **the reduction of LRC(14) to the node-hypotheses is fully machine-checked** by
 either route. What remains is discharging the nodes.
@@ -40,6 +41,7 @@ either route. What remains is discharging the nodes.
 | `hDp0` | `1 − nuShape ≤ p0Shape` (dense-cover `D ≤ p0`) | **DONE** — `LRCDenseCovers.dense_covers_all_inner` (sorry-free) |
 | `hsize` | `clusterSize (shapeOf v) ≤ 13` | **structural** — provable once `shapeOf` is concrete |
 | `hδm` | p0-route margin `8≤k≤13 ⟹ witnessMP ≤ delta` | **FALSE for p0 route at k=8** — `cap−p0 < m_P`; do not use as witness-floor route |
+| `hδpos` | positive p0-route margin `8≤k≤13 ⟹ 0 < delta` | **VALID route node** — sufficient for `lrc14_from_p0_positive_wide_bound_split_nodes` |
 | `hsmall` | `k ≤ 7 ⟹ witnessMP ≤ witnessG2` (small cluster) | **supported** — `LRCMaxGapPigeonhole` (≤6 ⟹ maxgap>1/7 always) + `goodSet`; k=7 boundary isolated |
 | `hA` (NU route only) | spreading: `nu(E) ≥ nuConsec(k)` (consec minimizes nu) | **verified** — HYP-2835 (consec strict-min, 0 beaters); needs Lean formalization. Avoidable via p0 route. |
 | `hp0cap` (p0 route only) | `p0 ≤ cap − delta` (any positive `delta`) | **holds** — `cap − p0 ≥ 0.0543 > 0` for all binding k; replaces `hA` |
@@ -88,10 +90,11 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
 The nodes are stated on the **opaque** `shapeOf`/`witnessG2`. To produce an
 *unconditional* `lrc14 : LRC14Statement`, instantiate these with the concrete
 carriers (`witnessG2 := μ(GOOD ∩ safeSet)`, etc.) and discharge the formalizable
-nodes (`hbonf, hDp0, hsize, hsmall`). The viable NU route then needs the spreading
-lemma `hA`, the cap floor `hmeasGP`, and finite-ruler Part A `hpartA`; the p0-only
-`hp0cap` margin is useful for positive finite-error lanes but is too lossy for
-the `m_P` witness floor at k=8.
+nodes (`hbonf, hDp0, hsize, hsmall`). The NU route then needs the spreading
+lemma `hA`, the cap floor `hmeasGP`, and finite-ruler Part A `hpartA`. The p0
+route instead needs `hp0cap` plus a positive margin `hδpos`, the same cap floor
+`hmeasGP`, and the same `hpartA`; it bypasses `hA` because Part A consumes
+positivity rather than the placeholder `m_P` floor.
 
 ## 5. The analytic-proof side (parallel track)
 

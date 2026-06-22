@@ -247,6 +247,54 @@ theorem large_witness_floor_from_p0_wide_bound_shapes
   have h5 : (witnessMP : ℝ) ≤ delta (shapeOf v) := hδm (shapeOf v) h8 h13
   linarith
 
+/-- Shape-indexed p0-unification margin, with no comparison to the placeholder
+`witnessMP`.  This is the positive-floor form needed by Part A: Bonferroni,
+`D <= p0`, the wide p0 margin, and the cap floor give
+`delta s <= witnessG2 s`. -/
+theorem witness_margin_from_p0_wide_bound_shapes
+    (nuShape measGP p0Shape cap delta : Shape → ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, cap s ≤ measGP s)
+    (s : Shape) :
+    delta s ≤ witnessG2 s := by
+  have h1 : nuShape s + measGP s - 1 ≤ witnessG2 s := hbonf s
+  have h2 : (1 - nuShape s) ≤ p0Shape s := hDp0 s
+  have h3 : p0Shape s ≤ cap s - delta s := hp0cap s
+  have h4 : cap s ≤ measGP s := hmeasGP s
+  linarith
+
+/-- Large-cluster p0-unification positivity in the shape expected by the current
+split proof DAG.  Unlike `large_witness_floor_from_p0_wide_bound_shapes`, this
+requires only a positive p0 margin, not `witnessMP <= delta`. -/
+theorem large_witness_pos_from_p0_wide_bound_shapes
+    (nuShape measGP p0Shape cap delta : Shape → ℝ)
+    (hδpos : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 → 0 < delta s)
+    (hbonf : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      cap s ≤ measGP s) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      8 ≤ clusterSize (shapeOf v) → clusterSize (shapeOf v) ≤ 13 →
+      0 < witnessG2 (shapeOf v) := by
+  intro v _hv h8 h13
+  have hmargin : delta (shapeOf v) ≤ witnessG2 (shapeOf v) := by
+    have h1 : nuShape (shapeOf v) + measGP (shapeOf v) - 1 ≤
+        witnessG2 (shapeOf v) := hbonf (shapeOf v) h8 h13
+    have h2 : (1 - nuShape (shapeOf v)) ≤ p0Shape (shapeOf v) :=
+      hDp0 (shapeOf v) h8 h13
+    have h3 : p0Shape (shapeOf v) ≤ cap (shapeOf v) - delta (shapeOf v) :=
+      hp0cap (shapeOf v) h8 h13
+    have h4 : cap (shapeOf v) ≤ measGP (shapeOf v) :=
+      hmeasGP (shapeOf v) h8 h13
+    linarith
+  exact lt_of_lt_of_le (hδpos (shapeOf v) h8 h13) hmargin
+
 /-! ## The `k <= 7` pigeonhole leg (no Lemma A needed)
 
 For `k <= 7` the cluster has `<= 7` phases, so `maxgap >= 1/k >= 1/7` for EVERY
@@ -379,6 +427,40 @@ theorem lrc14_from_p0_wide_bound_split_nodes
       nuShape measGP p0Shape cap delta hδm hbonf hDp0 hp0cap hmeasGP)
     hsize hpartA lonely_of_Mreach_ge
 
+/-- **Top-level LRC14 assembly from the corrected positive-margin p0 route.**
+The p0 route only needs to make `witnessG2` positive before invoking Part A; it
+does not need the p0 margin to dominate the conservative placeholder
+`witnessMP`.  Small clusters may still be supplied by the existing `m_P` floor,
+while large clusters require only `0 < delta`. -/
+theorem lrc14_from_p0_positive_wide_bound_split_nodes
+    (nuShape measGP p0Shape cap delta : Shape → ℝ)
+    (hsmall : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 7 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
+    (hδpos : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 → 0 < delta s)
+    (hbonf : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, 8 ≤ clusterSize s → clusterSize s ≤ 13 →
+      cap s ≤ measGP s)
+    (hsize : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      clusterSize (shapeOf v) ≤ 13)
+    (hpartA : ∀ v : Fin 13 → ℤ, 0 < witnessG2 (shapeOf v) →
+      (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement := by
+  intro v hv
+  have hpos : 0 < witnessG2 (shapeOf v) := by
+    by_cases h7 : clusterSize (shapeOf v) ≤ 7
+    · exact witness_floor_positive (shapeOf v) (hsmall v hv h7)
+    · have h8 : 8 ≤ clusterSize (shapeOf v) := by omega
+      exact large_witness_pos_from_p0_wide_bound_shapes
+        nuShape measGP p0Shape cap delta hδpos hbonf hDp0 hp0cap hmeasGP
+        v hv h8 (hsize v hv)
+  exact lonely_of_Mreach_ge v hv (hpartA v hpos)
+
 /-! ## Axiom audit -/
 
 #print axioms bonferroni_floor_pos
@@ -390,6 +472,8 @@ theorem lrc14_from_p0_wide_bound_split_nodes
 #print axioms witnessG2_pos_from_p0_wide_bound
 #print axioms witness_floor_from_p0_wide_bound_shapes
 #print axioms large_witness_floor_from_p0_wide_bound_shapes
+#print axioms witness_margin_from_p0_wide_bound_shapes
+#print axioms large_witness_pos_from_p0_wide_bound_shapes
 #print axioms nuConsec_eq_one_of_le_seven
 #print axioms witness_floor_pigeonhole_leg
 #print axioms witnessMP_le_capRat_of_le_seven
@@ -398,6 +482,7 @@ theorem lrc14_from_p0_wide_bound_split_nodes
 #print axioms lrc14_from_bonferroni_split_nodes
 #print axioms lrc14_from_p0_wide_bound_shapes
 #print axioms lrc14_from_p0_wide_bound_split_nodes
+#print axioms lrc14_from_p0_positive_wide_bound_split_nodes
 
 end Bonferroni
 end LRC14

@@ -1,8 +1,17 @@
-## codex-2026-06-22-S86g -- LRCGapReach is root/Verify audited; p0 lane is positive-margin only
+## codex-2026-06-22-S86g -- positive-p0 route is now root/Verify audited
 
-Pulled the S27 correction: the p0 simplification is too weak to prove the
-`m_P` witness floor at k=8, so the full floor should use the NU/spreading route.
-The p0 split theorem remains useful as a finite-error positive-margin lane.
+Pulled the S27 retraction and formalized the corrected route.  The p0
+simplification is too weak to prove the conservative `m_P` floor at k=8, but
+that comparison is not load-bearing: Part A only needs `0 < witnessG2`.
+`LRCWitnessBonferroni.lean` now has
+`lrc14_from_p0_positive_wide_bound_split_nodes`, where the large branch consumes
+only `0 < delta` from `p0 <= cap - delta`; the small branch still uses the
+existing `m_P` floor.  `Verify` wrappers are in place.
+
+Remaining p0-route inputs are concrete: instantiate `hp0cap`, instantiate
+`cap <= meas(G_P)`, finish the `GOOD/witnessG2` readouts, and complete the
+slow-fast/rhoK ruler approximation for Part A.  The NU route is still viable
+and stronger, but p0 is no longer just a side lane.
 
 Also root-imported and `Verify`-audited `LRCGapReach.lean`, after cleaning its
 `push_neg` warning.  The geometric Part-A core is now audited: a `>1/7` free
@@ -24,7 +33,8 @@ Remaining useful work for this lane is now concrete: instantiate the p0 margin,
 instantiate `cap <= meas(G_P)`, define/prove the actual `arcCount` and finite
 `rho_K` error inequality, and finish the `GOOD/witnessG2` readouts.  No more
 abstract branch-budget glue is needed unless the analytic route changes.  After
-MISTAKE-084, do not use this as the `m_P` floor proof at k=8; use the NU route.
+the positive-p0 correction, do not use this as the `m_P` floor proof at k=8;
+use it as a positivity route, or use NU when the literal `m_P` floor is needed.
 
 ## codex-2026-06-22-S86g -- concrete witness-floor module is root-audited
 
