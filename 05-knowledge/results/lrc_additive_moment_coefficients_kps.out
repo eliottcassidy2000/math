@@ -1,0 +1,7 @@
+Frequency-1 additive-moment coefficients Gamma_k^(s) (s=2..6); sign => term-by-term direction:
+  k=9: s=2:+8.910e-04  s=3:-7.138e-05  s=4:-4.448e-05  s=5:NA  s=6:NA
+  k=12: s=2:+4.457e-04  s=3:+3.689e-05  s=4:-9.843e-06  s=5:-4.158e-06  s=6:-6.328e-07
+
+Frequency-2 leading (s=2) coefficient (the tail beyond freq 1), for size comparison:
+  k=9: Gamma_k^(2),freq2 = +5.871e-04   vs freq1 +8.910e-04  (ratio 0.659)
+  k=12: Gamma_k^(2),freq2 = +2.937e-04   vs freq1 +4.457e-04  (ratio 0.659)

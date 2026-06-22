@@ -83,6 +83,26 @@ interval maximizes additive energy. The remaining gap is purely the higher-order
 (Fourier freq>=2 and >=6-term resonances; ~4% at the extremal) -- a convergent correction to bound
 uniformly, the additive-combinatorial analogue of the Tornheim tail.
 
+## The TAIL is signed -- the right tournament analogy is H-MAX Jensen, NOT Savchenko (kps-S31l)
+Higher additive-MOMENT coefficients `Gamma_k^(s) = sum_A (-1)^|A| |hat f_{A,1}|^{2s} (1-|A|/7)^{k-2s}`
+(`lrc_additive_moment_coefficients_kps.py`): k=9 gives s=2 `+8.9e-4`, s=3 `-7.1e-5`, s=4 `-4.4e-5`;
+k=12 s=2 `+4.5e-4`, s>=4 negative. **MIXED-SIGN** (s=2 additive energy positive+dominant; s>=3 mostly
+negative, fast-decaying). This MATCHES prior Angle F (HYP-2606): the correction is SIGNED CANCELLATION,
+the absolute bound is `>=5x` too lossy, "any finish must keep the sign."
+> CONSEQUENCE: the clean term-by-term tournament analogy (Savchenko: regular maximizes EVERY `c_m`)
+> BREAKS for the LRC -- coefficients not all positive. The CORRECT template is the H-MAXIMIZER proof
+> (THM-027): the regular tournament maximizes `H` by JENSEN/CONVEXITY on the scores (`c_3=C(n,3)-sum
+> C(s_v,2)`, min score-variance), not term-by-term. LRC analogue (HYP-2605): the AP MINIMIZES the winding
+> tournament's score variance => maximizes coverage by a CONVEX (Jensen) inequality, which KEEPS THE SIGN.
+> So `consec maximizes p0/L_y` is a Schur-convexity/Jensen extremality.
+
+## Convergence with mac-mini HYP-+2888 (boundary witness): the two halves of the wide bound
+mac-mini (S39) found `p0(AP)=cap` EXACTLY -- the extremal AP covers to measure 1, loneliness witness on
+the MEASURE-ZERO boundary `t=1/14`. So the wide bound factors into the two converging routes:
+> `p0(E) <= p0(AP)` [THIS additive-energy extremality] AND `p0(AP) = cap` [mac-mini boundary] =>
+> `p0(E) <= cap` for all E, equality only on the finite tight locus {AP, GW} (exact rational witness
+> `t=1/14`). Generic = my strict additive-energy bound; tight = mac-mini's rational boundary witness.
+
 ## Tests / next
 - Prove `L_y(E) <= L_y(AP)` via `A(E) <= A(AP)` + a spectral majorization `L_y <= G(A)` (the crux).
 - Check Schur-concavity of `L_y` under the interval rearrangement (compress E toward an AP, `L_y` up).
