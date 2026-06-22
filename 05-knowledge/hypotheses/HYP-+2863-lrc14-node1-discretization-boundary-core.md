@@ -63,3 +63,16 @@ leaving a 1/2-gap -- a guaranteed lonely period -- as long as the observer outpa
 NB: this boundary core has NO separate far-runner set P (all 12 runners are the cluster relative
 to observer V); the criterion reduces to maxgap>2/7. GENERAL Node 1 (nontrivial G_P) needs the
 G_P-aware version: the good arc must also be far-runner-safe (x_0≈0 fails G_P if a far p<V/7).
+
+
+## Q-UNIFORMITY: the boundary-core closure ports to the whole 2q family (user's whimsy thread)
+The s≈0 collapse argument is Q-UNIFORM. For LRC(2q) (apex prime q, q sectors, ruler maxgap
+threshold 2/q, cluster of 2q-2 runners + observer V):
+- s≈0 collapse: teeth -> {0,1/2}, maxgap = 1/2 > 2/q FOR ALL q>=5 (2/q <= 2/5 = 0.4 < 0.5). So the
+  s≈0 good arc exists for every q.
+- rho_K > 0 at V/t > 2q-2 (= cluster size), AUTOMATIC since V (observer) > (2q-2)t.
+- VERIFIED q=5 (LRC10): rho_K(V/t=9)=0.333; q=7 (LRC14): 0.231; q=9 (LRC18): 0.176. s≈0 arc
+  widths 0.086, 0.065, 0.052 (shrink with q but stay positive).
+**=> the Node-1 boundary-core argument ports to the WHOLE composite-2q family** (proven THROUGH the
+q-sector structure, not around it), supporting HYP-2846 (q-uniform witness route). The cutoff
+"V/t > cluster-size" and "maxgap 1/2 > 2/q" are the q-uniform mechanism. 14=2·7 -> 18=2·9 etc.
