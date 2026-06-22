@@ -1,0 +1,18 @@
+1. Discretization lemma rho_K >= rho* - arcCount/V (consec_9, thr=2/7):
+   V=50: rho_K=0.2800 >= rho*-#arcs/V=0.1827: True
+   V=200: rho_K=0.2900 >= rho*-#arcs/V=0.2577: True
+   V=1000: rho_K=0.2840 >= rho*-#arcs/V=0.2777: True
+2. Boundary core rho_K>0 for all V/t>12 (q=7, depends only on V/t):
+   t=1 V/t=13: rho_K=0.2308
+   t=1 V/t=15: rho_K=0.2000
+   t=1 V/t=20: rho_K=0.1000
+   t=3 V/t=13: rho_K=0.2308
+   t=3 V/t=15: rho_K=0.2000
+   t=3 V/t=20: rho_K=0.1000
+   t=7 V/t=13: rho_K=0.2308
+   t=7 V/t=15: rho_K=0.2000
+   t=7 V/t=20: rho_K=0.1000
+3. q-uniform (s≈0 collapse, V/t=2q-1):
+   q=5 LRC(10): rho_K=0.3333
+   q=7 LRC(14): rho_K=0.2308
+   q=9 LRC(18): rho_K=0.1765
