@@ -20,8 +20,8 @@
     * FINITE and `decide`/`native_decide`-able NOW (illustrated here with the
       concrete `cap` rationals and a toy bounded-leg decidable predicate);
 
-    * GENUINELY OPEN / needing mathlib analysis (carried as `sorry` with a
-      precise statement):
+    * GENUINELY OPEN / needing mathlib analysis (carried as named `Prop`
+      obligations, not as asserted theorems):
         - THM-527 Part A : positive witness density => M(S) >= 1/14
           (measure -> witness);
         - the 1/7 witness floor `G2 >= m_P` over the remaining k=8..13 shapes
@@ -34,15 +34,17 @@
   DESIGN.  To keep the skeleton lightweight and buildable, the measure-theoretic
   quantities (`p0`, the miss-distribution `q`, `rho*`) are treated ABSTRACTLY:
   as real-valued functions / opaque data given to the theorems, with the analytic
-  content stated as hypotheses or `sorry`-backed lemmas.  The max-min reach `M`
+  content stated as hypotheses or named obligations.  The max-min reach `M`
   is now concrete: it is the supremum of the finite min-reach function over
   `[0,1]`, imported from `LRCMreachConcrete`.  This is the honest boundary --
   the finite combinatorial core and compactness handoff are real Lean, while the
   remaining measure/equidistribution analysis is flagged.  Replacing each
-  remaining `sorry` with a mathlib proof (or each remaining opaque function with
-  its Lebesgue-measure definition) is the remaining formalization work.
+  remaining obligation with a mathlib proof (or each remaining opaque function
+  with its Lebesgue-measure definition) is the remaining formalization work.
 
-  NONE of the `sorry`s below are claimed as theorems.  They mark open obligations.
+  No declaration below asserts an unproved analytic fact.  The open analytic
+  targets are `Prop` definitions consumed only as hypotheses by conditional
+  assembly theorems.
 -/
 
 import Mathlib.Tactic
@@ -125,9 +127,10 @@ circular max-gap > 2/7 }`.  Abstract (a Lebesgue measure of a semialgebraic set)
 nonnegative. -/
 opaque rhoStar : Shape → ℝ
 
-/-- `rho*` is a measure, hence nonnegative.  (Stated; a full formalization would
-derive this from the Lebesgue-measure definition.) -/
-axiom rhoStar_nonneg : ∀ s : Shape, 0 ≤ rhoStar s
+/-- `rho*` is a measure, hence nonnegative.  A full formalization should derive
+this from the Lebesgue-measure definition; here it is only recorded as an
+obligation proposition. -/
+def rhoStar_nonneg_obligation : Prop := ∀ s : Shape, 0 ≤ rhoStar s
 
 /-- The shape attached to a covering speed family (its `(P,E)` decomposition). -/
 opaque shapeOf : (Fin 13 → ℤ) → Shape
@@ -137,13 +140,13 @@ good-period density implies the reach bound `M(S) ≥ 1/14`.  This is the
 slow-fast change of variables + criterion C at `v = Vmax`; the canon proves it
 (unconditional for the limit, with an `O(1/Vmax)` finite-`Vmax` correction).
 Formalization needs: the `Vmax`-ruler period structure, the fast-phase gap
-criterion, and the equidistribution `ρ_K → ρ*`. -/
-theorem thm527_partA_density_pos_implies_reach (v : Fin 13 → ℤ)
-    (hpos : 0 < rhoStar (shapeOf v)) : (1 : ℝ) / 14 ≤ Mreach v := by
-  -- good period at x  ⟺  x ∈ G_P AND cluster max-gap > 2/7  ⟹  criterion C
-  --   ⟹  a sub-arc safe for all of S  ⟹  M(S) ≥ 1/14.
-  -- ρ* > 0 ⟹ a good period exists (finite-Vmax: ρ_K = ρ* + O(#arcs/Vmax)).
-  sorry
+criterion, and the equidistribution `ρ_K → ρ*`.
+
+This is deliberately a `Prop` obligation, not a theorem: the old 2/7
+via-`Vmax` object has admissible zero examples, so downstream code must pass an
+actual Part-A proof if it wants to use this obsolete route. -/
+def thm527_partA_density_pos_implies_reach : Prop :=
+  ∀ v : Fin 13 → ℤ, 0 < rhoStar (shapeOf v) → (1 : ℝ) / 14 ≤ Mreach v
 
 /-- **OBSOLETE THM-527 PART G candidate.**  A uniform positive floor for the
 via-`Vmax` 2/7 good-period density.  KPS Thread A now gives admissible
@@ -308,8 +311,9 @@ theorem lrc14_from_witness_floor_given_nodes
 
 /-- **TOP-LEVEL ASSEMBLY (1/7 witness route).**  This specializes the previous
 glue to the abstract `Mreach` reduction already carried in the skeleton.  It
-still depends on the open analytic nodes through `lonely_of_Mreach_ge`, but the
-witness-floor-to-top logical wiring is explicit and checked. -/
+still depends on the supplied direct-witness implication `G2>0 -> Mreach>=1/14`,
+but the reach-to-lonely and witness-floor-to-top logical wiring are explicit and
+checked. -/
 theorem lrc14_from_witness_floor
     (hfloor : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
       (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
@@ -439,15 +443,12 @@ theorem genuine_wide_rows_below_cap :
 /-- **DAG node L2b (the R-tail bound, OPEN -- needs mathlib analysis).**  The
 doublet interaction correction `R(M) = M·(d2(M) − d_inf)` is uniformly bounded:
 `sup_{M≥15} |R(M)| ≤ 12ζ(3)·N/π³` with `N ≤ 15` the active sector-pair count.
-This is the Mordell-Tornheim / Koksma analytic obligation -- a real-analysis
-statement (`ζ(3)`, Fourier of sector indicators).  OPEN as a Lean obligation. -/
-theorem doublet_Rtail_uniform_bound :
-    ∃ Rsup : ℝ, 0 ≤ Rsup ∧
-      Rsup ≤ 12 * (∑' m : ℕ, (1 : ℝ) / ((m : ℝ) + 1) ^ 3) * 15 / Real.pi ^ 3 := by
-  -- |R(M)| = |M·(d2(M) − d_inf)|, a covariance of two sector indicators at the
-  -- locked far phases; Fourier ⟹ convergent double sum bounded by 12ζ(3)·N/π³,
-  -- N = #active sector-pairs ≤ C(6,2) = 15 (base-independent).  OPEN.
-  sorry
+This is the Mordell-Tornheim / Koksma analytic obligation, parameterized by the
+actual tail function so the statement is not vacuous. -/
+def doublet_Rtail_uniform_bound (Rtail : ℕ → ℝ) : Prop :=
+  ∃ Rsup : ℝ, 0 ≤ Rsup ∧
+    (∀ M : ℕ, 15 ≤ M → |Rtail M| ≤ Rsup) ∧
+    Rsup ≤ 12 * (∑' m : ℕ, (1 : ℝ) / ((m : ℝ) + 1) ^ 3) * 15 / Real.pi ^ 3
 
 /-! ### 3d. The gK8 concentration route -- per-shape half ALREADY PROVED
 
@@ -459,7 +460,7 @@ Mac-mini HYP-2829 now refines this open node into a far-count reduction:
 bounded `r=0` is finite, the binding wide case is single-far `r=1` and should
 route through THM-563 periodicity, and `r>=2` has large decorrelation margin.
 That reduction is not formalized here, but it is the current intended structure
-of this `sorry`. -/
+of this obligation. -/
 
 /-- **DAG node L3a (gK8 per-shape bound, PROVED sorry-free upstream).**  For any
 nonnegative missed-count atom `q` (a genuine row distribution), `10*q0 ≤ L_yK8(q)`.
@@ -519,15 +520,13 @@ the maximum of the moment functional `L_yK8` over ALL `k`-speed configs is below
   case;
 * `r>=2`: decorrelated/far-count margin.
 
-Carried abstractly as a real functional `LyVal` on configs.  OPEN. -/
-theorem gK8_concentration_extremality
-    (LyVal : (List ℤ) → ℝ) (k : ℕ)
-    (boundedMax : ℝ) (hbound : boundedMax < 10 * (capRat k : ℝ)) :
-    (∀ E : List ℤ, E.length = k → LyVal E ≤ boundedMax) := by
-  -- gK8 charges the extreme miss-counts q0, q6; both individually maximized by
-  -- CONCENTRATED (slowest/bounded) configs; decorrelation smooths to the middle.
-  -- ⟹ max_E L_yK8 = max_BOUNDED L_yK8 = boundedMax < 10·cap.  OPEN.
-  sorry
+Carried abstractly as a real functional `LyVal` on configs.  This is an
+obligation `Prop`, not an asserted theorem, because arbitrary `LyVal` cannot be
+bounded without the missing concentration/far-count hypotheses. -/
+def gK8_concentration_extremality
+    (LyVal : (List ℤ) → ℝ) (k : ℕ) (boundedMax : ℝ) : Prop :=
+  boundedMax < 10 * (capRat k : ℝ) ∧
+    ∀ E : List ℤ, E.length = k → LyVal E ≤ boundedMax
 
 /-! ## 4. Assembling the wide bound
 
@@ -555,16 +554,18 @@ For auditability we also keep the logical glue for the obsolete 2/7 `rhoStar`
 route as a **conditional theorem**: if the now-refuted uniform floor were true,
 then the old route would imply LRC(14).  No theorem below asserts that floor. -/
 
-/-- **CONDITIONAL OLD ROUTE.**  If the obsolete 2/7 via-`Vmax` uniform floor were
-available, Part A plus R0 would imply LRC(14).  The incoming KPS zero probes show
-that this hypothesis is false for the intended object, so the current proof
-should use `lrc14_from_witness_floor_cases_given_nodes` instead. -/
+/-- **CONDITIONAL OLD ROUTE.**  If the obsolete 2/7 via-`Vmax` uniform floor and
+the Part-A implication were available, Part A plus R0 would imply LRC(14).  The
+incoming KPS zero probes show that the uniform-floor hypothesis is false for the
+intended object, so the current proof should use
+`lrc14_from_witness_floor_cases_given_nodes` instead. -/
 theorem lrc14_from_obsolete_rhoStar_floor
+    (hpartA : thm527_partA_density_pos_implies_reach)
     (hobsolete : obsoleteRhoStarUniformFloor) : LRC14Statement := by
   intro v hv
   obtain ⟨c0, hc0pos, hfloor⟩ := hobsolete
   have hrho : 0 < rhoStar (shapeOf v) := lt_of_lt_of_le hc0pos (hfloor v hv)
-  have hM : (1 : ℝ) / 14 ≤ Mreach v := thm527_partA_density_pos_implies_reach v hrho
+  have hM : (1 : ℝ) / 14 ≤ Mreach v := hpartA v hrho
   exact lonely_of_Mreach_ge v hv hM
 
 /-! ## 6. Sieve sanity checks (PROVED sorry-free upstream)
@@ -594,12 +595,10 @@ theorem lrc14_counterexample_saturated (v : Fin 13 → ℤ)
 /-! ## 7. Axiom audit
 
 The PROVED-upstream nodes (sieve specializations, gK8 per-shape bound, finite
-kernels) should report only Lean foundations (+ `native_decide` axioms).  The
-OPEN nodes (`*_partA_*`, `lonely_of_Mreach_ge`,
-`doublet_Rtail_uniform_bound`, `gK8_concentration_extremality`) and anything
-depending on them (`lrc14_from_obsolete_rhoStar_floor`) will additionally report `sorryAx` --
-which is the precise machine-checkable statement of "these are the open
-obligations." -/
+kernels, concrete Mreach handoff, and conditional glue) should report only Lean
+foundations (+ `native_decide` axioms).  The analytic frontiers are now named
+`Prop` obligations rather than declarations using `sorry`; future submissions
+should replace their abstract data by definitions and then prove these `Prop`s. -/
 
 #print axioms lrc14_no_multiple_of_14
 #print axioms lrc14_all_odd
@@ -622,13 +621,13 @@ obligations." -/
 #print axioms witness_large_floor_from_rhoGlob_lower_bound
 #print axioms lrc14_from_witness_floor_given_nodes
 #print axioms lrc14_from_witness_floor_cases_given_nodes
--- The following SHOULD report `sorryAx` (open obligations):
+#print axioms lrc14_from_obsolete_rhoStar_floor
+#print axioms lrc14_from_witness_floor
+-- Open obligations, checked as propositions rather than asserted theorems:
 #print axioms thm527_partA_density_pos_implies_reach
 #print axioms lonely_of_Mreach_ge
 #print axioms doublet_Rtail_uniform_bound
 #print axioms gK8_concentration_extremality
-#print axioms lrc14_from_obsolete_rhoStar_floor
-#print axioms lrc14_from_witness_floor
 
 end LRC14
 end LonelyRunner

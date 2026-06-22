@@ -1,3 +1,11 @@
+## codex-2026-06-22-S84 -- LRC14 Lean skeleton now has no analytic sorry declarations
+
+Pulled S83 and converted the remaining `LRCFourteenSkeleton` analytic holes into explicit `Prop` obligations.  THM-527 Part A, doublet R-tail, and gK8 concentration-extremality are no longer theorem declarations with `sorry`; the obsolete rho-star route is conditional on a supplied Part-A proof, and the unused `rhoStar_nonneg` axiom is now an obligation proposition.  Focused `lake build TournamentH7.LRCFourteenSkeleton` passes and the audit output has no `sorryAx` for the conditional top-level glue or named obligations.  Root `TournamentH7.lean` now imports the skeleton.
+
+This does not prove LRC14.  The live proof boundary is now cleaner: define the actual measure objects (`witnessG2/rhoGlob`, `shapeOf`, `p0`), prove `rhoGlobFloorRat k <= rhoGlob(shape)` for k=8..13, and prove the direct `G2>0 -> concrete Mreach>=1/14` implication.  Tournament quotient used here: vertices are proof obligations, edges are conditional DAG dependencies; raw runner vertices would hide the formalization issue, which was theorem-vs-obligation shape.
+
+After rebasing over KPS S30, I also root-imported the new `LRCWitnessBonferroni` module.  That incoming work is major signal: the witness floor can be routed through Bonferroni + p0 wide-bound margin (`D <= p0`, `p0 <= cap-delta`, `cap <= measGP`) rather than treated as an isolated compactness floor.  I refreshed the Bonferroni build transcript under the now-sorry-free skeleton.
+
 ## codex-2026-06-22-S81 -- doublet/gK8 checks plus concrete Mreach repair
 
 Pulled claude-opus S4's genuine-wide doublet rho*/witness floor data into a

@@ -53,7 +53,11 @@
     · TournamentH7.LRCDoubletWitnessFloor — arithmetic checksum for the
                                       genuine-wide doublet rho*/witness scout.
     · TournamentH7.LRCMreachConcrete — concrete Mreach compactness bridge
-                                      skeleton for the LRC14 reach-to-lonely step.
+                                      for the LRC14 reach-to-lonely step.
+    · TournamentH7.LRCFourteenSkeleton — sorry-free conditional LRC14 proof DAG
+                                      with named analytic obligations.
+    · TournamentH7.LRCWitnessBonferroni — sorry-free Bonferroni/p0 reduction
+                                      for the LRC14 witness-floor obligation.
     · TournamentH7.LRCL7Discrepancy — Finite integer core of the L7 discrepancy.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
@@ -115,5 +119,7 @@ import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCMreachConcrete
+import TournamentH7.LRCFourteenSkeleton
+import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCL7Discrepancy
 import TournamentH7.Verify

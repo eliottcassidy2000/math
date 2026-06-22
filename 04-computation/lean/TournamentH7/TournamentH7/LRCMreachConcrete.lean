@@ -2,7 +2,8 @@
   TournamentH7.LRCMreachConcrete -- Concrete Mreach compactness bridge skeleton.
 
   This module provides the mathematically correct proof structure for filling the
-  `lonely_of_Mreach_ge` sorry in `LRCFourteenSkeleton`.
+  `lonely_of_Mreach_ge` handoff that was previously open in
+  `LRCFourteenSkeleton`.
 
   PROOF STRATEGY: The nearest-integer distance `nearInt x = min (fract x) (1 - fract x)`
   is continuous and 1-periodic.  The min-reach function `minReach v t = min_i nearInt(v_i t)`
