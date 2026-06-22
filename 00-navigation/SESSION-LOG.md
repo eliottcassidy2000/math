@@ -6,6 +6,51 @@ Owner: coprime density <-> euler-totient <-> multiplicative functions; the 3 tou
 - **Toward the proof:** the totient/zeta(2) floor is what equidistribution cannot erase -- the bulk killer v=182 (lcm 13,14) equidistributes & misses the neighborhoods (kps S31p), so they survive at 1/zeta(2) density.
 - DISCIPLINE/HONEST GAPS: (1) connected the IE/Mobius STRUCTURE of the 3 modes but did NOT pin their exact subtournament SIZES (open; asked team). (2) the 1/zeta(2) floor is rigorous at the RELAXED threshold 1/7; strict 1/14 needs boundary witnesses (S39).
 NEW: reflection + totient_coprime_resonance_killing_macmini_S44.py. NEXT: pin the exact recursion-mode sizes (kps/codex?); use the multiplicative structure for the strict-threshold floor.
+## codex-2026-06-22-S110 -- product-Mobius packet ledger for totient density and the three tiling recurrences
+
+User asked to continue the LRC proof/disproof synthesis through coprime
+density, Euler-totient/multiplicative functions, and the three tournament
+recursion modes: full `A+B+C-D-E-F+G`, even half `A+B-C`, and odd half
+`A+B-C+D-E-F+G`, with the warning that letters may refer to different `N`
+sizes.  Pulled incoming mac-mini S43 first and integrated its honest
+correction: covering sets look strongly lonely empirically, but the naive safe
+measure union bound is false for `{1,...,11,13}`; the live defense is
+equidistribution and labelled packet structure.
+
+Added `04-computation/lrc_totient_tiling_recursion_s110.py` and stored
+`05-knowledge/results/lrc_totient_tiling_recursion_s110.out`.  New
+HYP-2899/T1011:
+
+- The Euler-copy law `sum_{d|n}c(d)=n` has exact Mobius inverse
+  `c=phi=mu*id`; the script verifies `sum_{d|n}phi(d)=n` and checks totient
+  sums against the exact coprime-density constants `3/pi^2` and `6/pi^2`.
+- The full tiling recurrence is Boolean `B3` inclusion-exclusion.
+- The even half recurrence is Boolean `B2` inclusion-exclusion.
+- The odd half recurrence has two live addresses: incoming S31q reads prompt
+  order `++-+--+` over `A..G=1..7` as the Legendre `chi_7` split with the
+  zero/triple slot positive, while S110 reads the half-tiling corner order
+  `A,B,D` as the same `B3` packet `+++---+`.  What changes in the tiling
+  quotient is the size/depth pushforward:
+  `2h(n-1)-2h(n-3)+h(n-4)`, equivalently coefficients `(2,0,-2,1)` because
+  the `n-2` terms cancel cardinally.
+- S109's one-tail `w=84m` branch illustrates the product-ledger rule: killing
+  q-witnesses moves the witness to unit denominators `D=84m+5`, coprime to
+  `2,3,7`, rather than deleting the coprime-density floor.
+
+The proposed proof target is now a product lattice `Div(D) x B_r`: keep
+denominator Mobius labels and one/two/three-far Boolean signs until CRT
+defects and coherent low-rank packet labels have been separated.  Coherent
+low-depth atoms should route to finite AP/Freiman/packet atlases; incoherent
+high-denominator unit packets route to THM-566 equidistribution and HYP-2890
+same-frequency residual bounds.  Incoming HYP-2898/S111 reinforces this from
+small even q: scalar additive energy fails while labelled Fejer/residual
+control survives.  Incoming mac-mini S44 gives the matching killing ledger:
+`s` kills all `phi(b)` primitive Farey points for each `b|s`, so the small
+denominator covering core is a `Phi(14)=64` survival lattice rather than a
+bare list of denominators.  Assumption challenge recorded in HYP-2899:
+the relevant tournament vertices are divisor packets, exact-period unit
+classes, tiling recursion modes, product-ledger obligations, and scalarization
+guardrails, not necessarily runners, arcs, or even edges.
 
 ## mac-mini-2026-06-22-S43 -- LRC proof<->disproof dialectic: covering sets are FORCED LONELY (M~0.097>>1/14); M({1..11,13})=1/12 is the adversarial seed; measure inequality REFUTED as insufficient
 Owner: M({1..11,13})=1/12 & zeta(-1)=-1/12; prove AND disprove LRC(14), go back and forth; in/finite families. HYP-2897.

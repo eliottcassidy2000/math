@@ -1,0 +1,99 @@
+codex-S110 totient/coprime density and tiling-recursion packet bridge
+================================================================================================
+A. Euler-copy / coprime-density layer
+================================================================================================
+phi is the divisor-Mobius inverse of the copy rule sum_{d|n} c(d)=n:
+  n=  14=2*7            phi=   6, sum_phi_div=  14, mu*id=   6, phi/n=3/7
+  n=  30=2*3*5          phi=   8, sum_phi_div=  30, mu*id=   8, phi/n=4/15
+  n=  84=2^2*3*7        phi=  24, sum_phi_div=  84, mu*id=  24, phi/n=2/7
+  n=  89=89             phi=  88, sum_phi_div=  89, mu*id=  88, phi/n=88/89
+  n= 173=173            phi= 172, sum_phi_div= 173, mu*id= 172, phi/n=172/173
+  n= 210=2*3*5*7        phi=  48, sum_phi_div= 210, mu*id=  48, phi/n=8/35
+  n= 425=5^2*17         phi= 320, sum_phi_div= 425, mu*id= 320, phi/n=64/85
+  n=1260=2^2*3^2*5*7    phi= 288, sum_phi_div=1260, mu*id= 288, phi/n=8/35
+  n=2520=2^3*3^2*5*7    phi= 576, sum_phi_div=2520, mu*id= 576, phi/n=8/35
+
+Mertens/Farey coprime-density approximations:
+  Q=  14: sum_phi/Q^2=0.326531 (target 3/pi^2=0.303964); sum(phi/b)/Q=0.629849 (target 6/pi^2=0.607927)
+  Q=  41: sum_phi/Q^2=0.315289 (target 3/pi^2=0.303964); sum(phi/b)/Q=0.618999 (target 6/pi^2=0.607927)
+  Q=  83: sum_phi/Q^2=0.310930 (target 3/pi^2=0.303964); sum(phi/b)/Q=0.614849 (target 6/pi^2=0.607927)
+  Q= 210: sum_phi/Q^2=0.304172 (target 3/pi^2=0.303964); sum(phi/b)/Q=0.608143 (target 6/pi^2=0.607927)
+  Q=1000: sum_phi/Q^2=0.304192 (target 3/pi^2=0.303964); sum(phi/b)/Q=0.608155 (target 6/pi^2=0.607927)
+
+================================================================================================
+B. The three tiling recurrences as Boolean-Mobius kernels
+================================================================================================
+Letter-level sign packets:
+  full B3 A+B+C-D-E-F+G:          +++---+
+  even half B2 A+B-C:             ++-
+  odd half prompt A+B-C+D-E-F+G:  ++-+--+
+  odd half reordered corners A,B,D: +++---+
+Readout: odd half has two useful addresses.  In prompt order over
+A..G = 1..7 it is chi_7 with the zero/triple slot positive; in corner order A,B,D
+it is B3 inclusion-exclusion with pair-overlaps C,E,F.
+  chi_7 plus zero/triple slot:       ++-+--+
+
+Pushforward by size/depth offset:
+  full staircase:  offsets n-1,n-2,n-3 ->  3, -3, +1
+  even half:       offsets n-1,n-2     ->  2, -1
+  odd half:        offsets n-1..n-4    ->  2,  0, -2, +1
+The zero at n-2 is geometric cancellation (-C + D), not absence of data.
+
+Verification n=5..20: full Delta^3=True, even half=True, odd half=True
+Global half recurrence (x-1)^3(x+1): True
+Half sequence h_n=floor((n-1)^2/4), n=2..14:
+  0, 1, 2, 4, 6, 9, 12, 16, 20, 25, 30, 36, 42
+
+================================================================================================
+C. Product-lattice packet bridge
+================================================================================================
+Independent danger probability x=1/7 through Boolean IE:
+  B2 nonempty packet ++-       = 1-(6/7)^2 = 13/49
+  B3 nonempty packet +++---+   = 1-(6/7)^3 = 127/343
+This is the same Mobius mechanism as phi=mu*id, but on a Boolean
+far/tiling lattice instead of a divisor lattice.
+
+Main-term packet sizes for a 13-speed exact-period witness model:
+  D=  41: phi(D)=  40, (6/7)^13*phi=  5.3920, B3_packet_capacity=  14.810
+  D=  83: phi(D)=  82, (6/7)^13*phi= 11.0536, B3_packet_capacity=  30.362
+  D=  89: phi(D)=  88, (6/7)^13*phi= 11.8625, B3_packet_capacity=  32.583
+  D= 173: phi(D)= 172, (6/7)^13*phi= 23.1857, B3_packet_capacity=  63.685
+  D= 210: phi(D)=  48, (6/7)^13*phi=  6.4704, B3_packet_capacity=  17.773
+  D=1260: phi(D)= 288, (6/7)^13*phi= 38.8226, B3_packet_capacity= 106.636
+Proof readout: the denominator divisor label and the far/tiling subset
+label should live on the product lattice Div(D) x B_r until the residual
+error is bounded.  Scalarizing to phi(D) or to a seven-letter sign too
+early loses the multiplicativity defect and the geometry of cancellations.
+
+================================================================================================
+D. The S109 covering one-tail denominators as coprime packets
+================================================================================================
+For C={1..11,13}, the q-covering one-tail branch is w=84m and
+M=7m/(84m+5).  The witness denominator D=84m+5 is always coprime
+to the killed primes 2,3,7, so the proof escapes through unit packets.
+
+  m= 1, D=  89=89            , gcd(D,84)=1, phi/D=88/89, M-1/14=9/1246
+  m= 2, D= 173=173           , gcd(D,84)=1, phi/D=172/173, M-1/14=23/2422
+  m= 3, D= 257=257           , gcd(D,84)=1, phi/D=256/257, M-1/14=37/3598
+  m= 4, D= 341=11*31         , gcd(D,84)=1, phi/D=300/341, M-1/14=51/4774
+  m= 5, D= 425=5^2*17        , gcd(D,84)=1, phi/D=64/85, M-1/14=13/1190
+  m= 6, D= 509=509           , gcd(D,84)=1, phi/D=508/509, M-1/14=79/7126
+  m= 7, D= 593=593           , gcd(D,84)=1, phi/D=592/593, M-1/14=93/8302
+  m= 8, D= 677=677           , gcd(D,84)=1, phi/D=676/677, M-1/14=107/9478
+  m= 9, D= 761=761           , gcd(D,84)=1, phi/D=760/761, M-1/14=121/10654
+  m=10, D= 845=5*13^2        , gcd(D,84)=1, phi/D=48/65, M-1/14=27/2366
+  m=11, D= 929=929           , gcd(D,84)=1, phi/D=928/929, M-1/14=149/13006
+  m=12, D=1013=1013          , gcd(D,84)=1, phi/D=1012/1013, M-1/14=163/14182
+
+================================================================================================
+Tournament Analysis
+================================================================================================
+Vertices are proof carriers, not runners or arcs.
+Pairwise observable: how much primitive packet/address data survives before
+scalarization.  Switch: carriers preserving both divisor and Boolean
+Mobius labels rank above carriers that collapse them.
+Hamiltonian path:
+  divisor_mobius_phi > exact_period_unit_packets > full_B3_tiling_recursion > even_B2_half_recursion > odd_B3_half_recursion > product_lattice_packet_ledger > scalar_projection_guardrail
+Challenged assumption: the three tiling recurrences are three unrelated
+formulas.  They are all Mobius kernels; the differences come from which
+quotient pushes the kernel to sizes/depths.
