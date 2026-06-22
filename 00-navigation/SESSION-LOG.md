@@ -53,8 +53,40 @@ normalizes.  The non-descending base is exactly the bounded covering core,
 which remains the Node-2 three-gap/AP-hull/Legendre-Venn extremality problem.
 
 ## codex-2026-06-22 -- HYP-2903 activation-depth correction to the wide Bonferroni obligation
+## codex-2026-06-22 -- HYP-2903 activation-depth correction to the wide Bonferroni obligation (refined by S115)
 
-Worked the next sharp obligation after HYP-2901/HYP-2902.  Pulled the incoming S31t Bonferroni target and exact-tested it with rational sector integration.  Result: the universal third-order truncation `p0<=p0(B)+T1+T2+T3` is false.  Counterexample `B={0,1,2,3}`, `F={16,19,22,25,28}` has `T1=T2=0`, `T3=638291/6144600`, `T4=17921/6144600`, `T5=-1/931`, hence `T_{>=4}=11321/6144600>0`; order 3 is a lower bound.  Rebased incoming KPS S31u, which adds the complementary high-depth slack failure `B={0,3,9}`, `F={27,28,42,43,47}` with `T1=T2=T3=0`, `r0=4`, `p0=186437/5347566<<cap`; then rebased mac-mini S46, whose Node-3 equidistribution/induction skeleton makes this a Node-2 scope correction.  The corrected invariant is activation depth `r0=min{r:T_r!=0}`: `r0<=2` keeps the Bonferroni-3 target `T_{>=4}<=0`; `r0=3` shifts the first upper target to order 4 via `T_{>=5}<=0`; `r0>=4` routes to KPS's spread-far slack or finite residual atlases.  Added HYP-2903/T1016, exact script `04-computation/lrc_depth_corrected_bonferroni_codex.py`, result output, and reflection `07-reflections/lrc14-activation-depth-bonferroni-correction-codex.md`.  Tournament Analysis vertices are proof obligations/activation classes, not runners.
+Worked the next sharp obligation after HYP-2901/HYP-2902.  Pulled the incoming S31t Bonferroni target and exact-tested it with rational sector integration.  Result: the universal third-order truncation `p0<=p0(B)+T1+T2+T3` is false.  Counterexample `B={0,1,2,3}`, `F={16,19,22,25,28}` has `T1=T2=0`, `T3=638291/6144600`, `T4=17921/6144600`, `T5=-1/931`, hence `T_{>=4}=11321/6144600>0`; order 3 is a lower bound.  Rebased incoming KPS S31u, which adds the complementary high-depth slack failure `B={0,3,9}`, `F={27,28,42,43,47}` with `T1=T2=T3=0`, `r0=4`, `p0=186437/5347566<<cap`; then rebased mac-mini S46, whose Node-3 equidistribution/induction skeleton makes this a Node-2 scope correction.  First correction: use activation depth `r0=min{r:T_r!=0}` to route `r0<=2`, `r0=3`, and `r0>=4` rows.  S115 below refines this again: activation depth is only a routing variable; the live sign invariant is the missing-depth parity ledger.  Added HYP-2903/T1016, exact script `04-computation/lrc_depth_corrected_bonferroni_codex.py`, result output, and reflection `07-reflections/lrc14-activation-depth-bonferroni-correction-codex.md`.  Tournament Analysis vertices are proof obligations/activation classes, not runners.
+## codex-2026-06-22-S115 -- Bonferroni far-packet target corrected to missing-depth parity
+
+User asked to keep pushing the LRC14 proof now that the right object was
+identified.  Pulled incoming HYP-2903, which had already corrected the raw
+S31t Bonferroni-3 target by activation depth.  Extended it with the exact
+pointwise Newton packet formula:
+
+```text
+T_r(x)=(-1)^(r+d(x)) C_{d,r}(x),
+```
+
+where `d(x)` is the number of base-missed inner sectors and `C_{d,r}` counts
+`r`-far subsets covering those missing sectors.  Thus the high tail is a
+missing-depth parity ledger, not a Venn-containment sign and not merely an
+activation-depth issue.
+
+Added `04-computation/lrc_bonferroni_depth_guard_codex_s115.py` and stored
+`05-knowledge/results/lrc_bonferroni_depth_guard_codex_s115.out`.  The script
+verifies the KPS binding-style sample has negative high tail, then gives exact
+positive-tail counterexamples: k=8 `B={0,1,2,3}`, `F={16,28,29,32}` has tail
+`19/68208`, and the edge-active k=9 row `B={0,1,7,10,13}`,
+`F={15,23,24,31}` has `T2>0` but tail `307/598920`.  Random exact stress found
+`32/80` positive Bonferroni-3 tails.
+
+Updated HYP-2903, T1017, OPEN-Q-108, the results index, and reflection
+`07-reflections/lrc-bonferroni-depth-parity-guard-codex-s115.md`.  New proof
+target: prove positive even-depth high packets are dominated by negative
+odd-depth high packets plus cap slack; route positive-tail activation/depth
+classes to doublet/triple/decorrelation finite atlases.  Assumption challenge:
+tournament vertices are depth-labelled Newton packet carriers, not raw runners
+or first live far-packet depth.
 
 ## mac-mini-2026-06-22-S45 -- owner's Legendre correction + the TWO-STRUCTURE split; REFUTE HYP-2876 (no finite cert); the prime/radical handle pins the hard case at 30030|v
 Owner: corrected Legendre recursion (3-set Venn, sizes A=B=h(n-1),C=D=h(n-2),E=F=h(n-3),G=h(n-4); corners/edges/center); 3 parity-stratified modes (Mobius all, Legendre odd, Eisenstein even); the two-structure split + the lcm refutation. HYP-2899 + HYP-2876 refutation.
