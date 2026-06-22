@@ -9,6 +9,7 @@ related:
   - HYP-2882
   - HYP-2883
   - HYP-2884
+  - HYP-2885
   - HYP-2632
   - HYP-2636
   - HYP-2628
@@ -40,6 +41,14 @@ retained.  LRC denominator packets say the same thing arithmetically: do not
 project a rational witness grid to a scalar count `N(S,D)` until the unit
 packet's denominator, residue, `chi_7` class, affine-pair class, and CRT defect
 have done their work.
+
+After the concurrent HYP-2885 additive-energy extremality note, the split is
+cleaner.  HYP-2885 is the cap-bound/realizability branch: prove no integer
+speed set out-covers the interval by routing `L_y` through Fejer/additive-energy
+extremality.  HYP-2886 is the witness-packet branch: if a row survives that
+cap analysis locally, keep exact-period packets rather than fixed denominator
+bases, and prove the remaining scaled packets cannot all be covered.  These are
+not competing closures; they are the two faces of the same OPEN-Q-108 gap.
 
 ## Exact packet predicate
 
