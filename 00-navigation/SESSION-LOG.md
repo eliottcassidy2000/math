@@ -1,3 +1,11 @@
+## mac-mini-2026-06-22-S30 (cont.) -- Node 1 follow-up: CORRECTED the boundary-core over-claim; floor = quasi-independence R'
+Continued Node 1 with the user's Erdős–Turán / V≲b / route-to-LRC(<=13) inspo. Net (honest):
+- **DISCRETIZATION LEMMA stands** (rho_K >= rho* - arcCount/Vmax, elementary).
+- **CORRECTED the boundary-core "closure" (MISTAKE-085):** my rho_K omitted G_P -- THM-527 splits runners into P=small(<=13, G_P) + L=large(>13, maxgap), and the good period needs `x in G_P AND maxgap(L)>2/7`. The s≈0 collapse FAILS G_P (small p: ||p/(2V)||<1/14). TRUE rho_K(with G_P) for {1..12,V} is 0 at V=29,43,71. So the boundary core does NOT close via maxgap alone.
+- **CORRECTED reduction:** rho* = meas(G_P cap {maxgap(L)>thr}) = R'*meas(GOOD)*meas(G_P), where meas(GOOD)>0 (three-distance), meas(G_P)>0 (PROVEN LRC(|P|<=13) = the user's route!), and R'=quasi-independence VERIFIED in [0.81,1.0] (GOOD/large-cluster & G_P/small-part decorrelate, different scales). So floor rho*>0 reduces to R'>=c>0.
+- **CONVERGENCE:** R'-1 = covariance/baseline is bounded by my S29 SQRT-CANCELLATION (cross-scale deviation) = kps's Node-3 spectrum sum (R'=1+SPEC/baseline). The floor R'>=c is the shared crux gating all nodes.
+Updated HYP-2863 (corrected), MISTAKE-085. Lesson: don't conflate the L-cluster/P-small split (cf MISTAKE-084 pattern). NEXT: R'>=c (the decorrelation floor) = my sqrt-cancellation + kps spectrum.
+
 ## mac-mini-2026-06-22-S30 -- NODE 1 (finite-Vmax, THM-527 Part A) progress: discretization lemma + boundary-core rigorous closure + q-uniformity
 Per user inspo (Node 1 = highest-leverage, least-attacked, gates everything). Attacked Node 1 (rho*>0 => M>=1/14 finite-Vmax). Pieces (HYP-2863):
 - **DISCRETIZATION LEMMA (elementary, rigorous):** rho_K = #{good j}/Vmax >= rho* - arcCount/Vmax. Proof: each of the arcCount arcs of GOOD loses <=1 of the Vmax equally-spaced samples to rounding. (Simpler than the suggested Erdős–Turán/three-gap.) VERIFIED V=50..1000. + codex's arcCount<=7ΣE (HYP-2841) + the floor rho*>=delta => Vmax>7ΣE/delta gives rho_K>0.
