@@ -181,6 +181,35 @@ excess should appear as coherent octahedral face curl.  Coherent face curl is
 finite wall structure; incoherent face curl is spread current and should be
 handled by Abel summation.
 
+## Post-Rebase Synthesis With HYP-2885 And HYP-2886
+
+The incoming HYP-2885 and HYP-2886 split the realizability problem into three
+compatible layers rather than three competing stories.
+
+```text
+HYP-2885: global cap branch
+  no integer set should out-cover the interval/AP;
+  the missing theorem is Fejer/additive-energy extremality for p0 or L_y.
+
+HYP-2886: exact-period witness branch
+  finite denominator bases are only charts;
+  keep exact-period unit packets, phi capacity, mod-7/affine data, and CRT
+  multiplicativity defects before scalarizing.
+
+HYP-2887: local support-six tail branch
+  after exact-period/coimage projection, the repeated-packet residual is a
+  realizable octahedral current on L(K4).
+```
+
+This gives a cleaner proof order.  Low additive energy should already be safe
+by the HYP-2885 extremality route.  High additive energy forces Freiman/AP-like
+structure; inside that branch, the exact-period packets from HYP-2886 retain
+the mod-7/affine addresses, and HYP-2887 supplies the finite current carrier
+for the remaining support-six divergence.  In that sense the octahedral Hodge
+lemma is not a replacement for additive-energy extremality.  It is the local
+realizability lemma needed after the energy argument compresses the problem to
+near-AP / coherent packet structure.
+
 ## Assumption challenge
 
 Candidate vertices considered: runners, residues, finite packets, packet

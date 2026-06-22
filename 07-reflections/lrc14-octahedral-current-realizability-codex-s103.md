@@ -37,3 +37,16 @@ The key topological advantage is that the octahedron is a sphere.  Once vertex
 divergence and triangular face curl are controlled, there is no independent
 harmonic one-current left to hide a global obstruction.  That may be the
 realizability principle the LRC route was missing.
+
+After rebasing over the KPS additive-energy extremality note and the exact-
+period atlas, the stack looks better rather than more crowded.  Additive
+energy is the global realizability obstruction: low-energy sets should not
+come close to the cap, and the interval/AP should be the extremizer.  Exact
+periods are the rational witness atlas: denominator bases move, but unit
+packets retain the mod-7/affine addresses.  The octahedron is the local
+support-six carrier after those two reductions have done their work.
+
+So the next sharp lemma is conditional but concrete: in the high-energy,
+near-AP packet branch, every coherent octahedral face curl must be a
+low-height wall, and the remaining curl-free spread current must be
+HYP-2636-Abel-summable.

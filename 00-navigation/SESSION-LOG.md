@@ -28,6 +28,14 @@ additive-channel Abel-summable; no independent harmonic one-current remains on
 the spherical carrier.  This is the likely missing realizability structure for
 the repeated-packet tail.
 
+Post-rebase synthesis: HYP-2885 is the global cap branch (`p0/L_y` extremized
+by interval via additive energy), HYP-2886 is the exact-period witness-packet
+atlas, and HYP-2887 is the local support-six current-realizability branch.
+Low additive energy should close by HYP-2885; high additive energy compresses
+to near-AP/Freiman structure, where HYP-2886 preserves mod-7/affine packet
+addresses and HYP-2887 supplies the octahedral Hodge carrier for the remaining
+reciprocal divergence.
+
 ## codex-2026-06-22-S102 -- applying packet balance to LRC reciprocal lifts: divergence defect lemma
 User asked to apply and extend the even-graph/packet-balance ideas to LRC
 creatively.  Synced main (already up to date) and pushed HYP-2883's exact
