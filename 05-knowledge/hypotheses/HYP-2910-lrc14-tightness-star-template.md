@@ -1,6 +1,6 @@
 ---
 id: HYP-2910
-status: PROOF-TARGET / tightness-star template; THM-568 proves apex-denominator half, THM-569 formalizes the q=14 unit-grid split, multiples-of-14 covering-strictness remains the formal target
+status: PROOF-TARGET / tightness-star template; THM-568 proves apex-denominator half, THM-569 formalizes the q=14 unit-grid split, THM-570 closes the apex-majority branch except half-step phase collisions
 source: codex-2026-06-22-S119
 tags: [lrc14, tight-locus, thm079-template, goddyn-wong, apex-7, covering-core, tournaments, open-q-108]
 depends_on:
@@ -15,6 +15,7 @@ depends_on:
   - THM-560
   - THM-568
   - THM-569
+  - THM-570
 related:
   - HYP-2909
   - OPEN-Q-108
@@ -27,6 +28,8 @@ results:
   - 05-knowledge/results/lrc14_tightness_star_template_codex_s119.out
   - 04-computation/lrc_14covering_not_tight_kps.py
   - 05-knowledge/results/lrc_14covering_not_tight_kps.out
+  - 04-computation/lrc14_apex_majority_shift_guard_codex_s121.py
+  - 05-knowledge/results/lrc14_apex_majority_shift_guard_codex_s121.out
 ---
 
 # HYP-2910: exact tightness-star atlas supporting HYP-2909
@@ -92,6 +95,29 @@ S = R union M14, R 14-free
 ```
 
 That is now the sharp formalization target after THM-569.
+
+Codex S121/THM-570 narrows the `>=7` multiples-of-14 branch further.  For
+
+```text
+S = 14Q union R, |Q|>=7, |R|<=6,
+```
+
+the below-14 theorem gives a strict safe interval for `Q` in the scaled
+coordinate `u`; all fourteen lifts `t=(u+k)/14` keep the `14Q` block safe.
+The exact shift sieve proves the branch is safe if `R` has at most one speed
+with `gcd(r,14)=7`: ordinary residual speeds forbid at most two shifts and at
+most one per parity, while one half-step speed forbids at most one whole parity
+class.  Thus the broad apex-majority residual has collapsed to HYP-2911:
+
+```text
+R contains at least two speeds divisible by 7 but not by 14,
+and their u-dependent half-step phases cover both parities.
+```
+
+The guardrail is exact: at `u=2/49`, `r=7` forbids all even shifts and
+`r=161` forbids all odd shifts.  So the next proof cannot be residue-only; it
+must use the strict `Q` interval, actual phase labels, or an exact-period /
+equidistribution estimate for half-step packets.
 
 Equivalently, in the HYP-2908 language, a remaining bounded apex-7 over-cover
 must state-lift to a tournament-conflict-realizable connected binary packet

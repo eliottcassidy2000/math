@@ -12,6 +12,49 @@ Owner: keep working to PROVE and FORMALIZE LRC(14). Both tracks advanced.
 - **(ii) verified (search):** the only tight (M=1/14) primitive 13-sets found are AP {1..13} and GW {1..11,13,24}, BOTH optimum denominator exactly 14. Consistent with the {AP,GW} census.
 - **HONEST scope:** the Lean formalizes the ARITHMETIC core (frac/residue => 14|si+sj); the ANALYSIS half (local max => active inc/dec runners => the residue conditions) is NOT yet formalized (real-analysis). The full (star) still needs: the analysis bridge, the census (iv, kps/codex), M>1/14 (v, Node 2+3). LRC(14) NOT finished.
 NEW: LRCBindingPair.lean (verified), HYP-2909 updated. NEXT: formalize the analysis bridge (local-max => binding residues) OR the census completeness.
+## codex-2026-06-22-S121 -- THM-570 shift guard narrows the apex-majority residual to half-step collisions
+
+User asked to focus specifically on completing LRC14.  I pulled the latest
+S120/S31ab state and attacked the live residual from HYP-2910:
+`S = 14Q union R`, `|Q|>=7`, `|R|<=6`, with the below-14 theorem giving a
+strict safe point `u` for the scaled multiple block `Q`.
+
+Added THM-570, HYP-2911, and exact audit
+`04-computation/lrc14_apex_majority_shift_guard_codex_s121.py`, with stored
+output `05-knowledge/results/lrc14_apex_majority_shift_guard_codex_s121.out`.
+The first naive shift pigeonhole was false: a residual speed divisible by `7`
+but not `14` can forbid seven of the fourteen lifts, not two.  The corrected
+finite lemma is:
+
+```text
+ordinary residual speed gcd(r,14)!=7: forbids <=2 shifts, <=1 per parity;
+half-step residual speed gcd(r,14)=7: forbids <=1 whole parity class.
+```
+
+Therefore the apex-majority branch is closed if `R` has at most one half-step
+speed: no half-step gives at most `6*2=12` forbidden shifts; one half-step
+gives at most `7+5=12`.  A surviving shift `t=(u+k)/14`, after a generic
+perturbation inside the strict `Q` interval, gives `M(S)>1/14`.
+
+The exact guardrail is sharp: at `u=2/49`, speeds `7` and `161` forbid the even
+and odd shifts respectively, covering all fourteen lifts.  So the remaining
+apex-majority target is no longer broad equidistribution; it is HYP-2911, the
+two-or-more half-step phase-collision problem.  Assumption challenge recorded:
+residues mod `14` are not enough, because `161=7+14*11` has the same residue as
+`7` but a different `u`-dependent offset.  The useful carrier is the
+phase-labelled half-step packet, not runner vertices or a residue-only
+tournament.
+
+Post-rebase signal: KPS-S31ac formalized THM-568's arithmetic core in
+`TournamentH7.LRCApexDenominator`, and mac-mini S50 formalized the binding-pair
+residue theorem in `TournamentH7.LRCBindingPair`.  These do not alter THM-570's
+shift sieve, but they make its apex-denominator dependencies machine-checked
+rather than just canon-documented.
+
+Second post-rebase signal: mac-mini S51 clarifies that AP/GW single-swap
+census is exact but global census completeness remains the irreducible
+consecutive-maximizes core.  THM-570 is orthogonal: it narrows the
+14-covering/apex-majority branch, not the full tight-locus census.
 
 ## codex-2026-06-22-S120 -- denominator-14 unit-grid Lean bridge
 
