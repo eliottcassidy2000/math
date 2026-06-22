@@ -1,0 +1,10 @@
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TournamentH7/LRCMarginalUniform.lean:29:18: unused variable `hab`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: TournamentH7/LRCMarginalUniform.lean:29:32: unused variable `hb`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: TournamentH7/LRCMarginalUniform.lean:93:0: 'LonelyRunner.MarginalUniform.slowμ_fract_Ico_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMarginalUniform.lean:94:0: 'LonelyRunner.MarginalUniform.slowμ_fract_sector_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3106 jobs).
