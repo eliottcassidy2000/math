@@ -1,3 +1,11 @@
+## mac-mini-2026-06-22-S56 -- bounded census TIGHTENED: tight speeds <= 2(n-1); census = O(n^2) search (169 candidates for n=14)
+Owner: make the bounded finite census even more bounded. HYP-2915.
+- **TIGHTENED BOUND (verified n=5,6,7,8,14):** every tight single-swap speed <= 2(n-1). Maxes: 7,9,6,12,24 vs 2(n-1)=8,10,12,14,26. Tight sets: n=5 skip2->7, n=6 skip2->9, n=7 only AP, n=8 skip6->12, n=14 skip12->24=GW.
+- **WHY 2(n-1):** the only large speed is the killer of a skipped resonance b -- the SECOND multiple 2b (S55: 12->24 tight, 12->36/48/60 NOT). Since b<=n-1, killer 2b<=2(n-1).
+- **CENSUS SHRINKS to O(n^2):** given condition 4 (tight=>single-swap), the census = n*(n-1) candidates, speeds <= 2(n-1). For n=14: 169 candidates, speed <=26 -- vs old D<=300 / R1-Fibonacci (~10^9). Tiny, instantly checkable, yields exactly {AP, GW}.
+- HONEST: bound verified+structural (killer=2nd multiple); the 2nd-vs-3rd-multiple rigor = the equidistribution threshold (verified, not clean theorem). Conditional on condition 4 (the open Steinhaus rigidity). This tightens the SEARCH SPACE, not the open core.
+NEW: HYP-2915. The bounded census is now O(n^2); the open core (condition 4 + the M-rigidity) is unchanged.
+
 ## kind-pasteur-2026-06-22-S39 -- COMPLETE the census: bounded + single-swap PROVEN {AP,GW}; residual = multi-swap + unbounded (the open core)
 Owner: complete the census and the proof. Made the census RIGOROUS for bounded + single-swap; honest that the full thing (multi-swap/unbounded) = the literature-open core. HYP-2920/2921.
 - **BOUNDED CENSUS PROVEN (HYP-2920):** tight 13-sets in {1..24} = EXACTLY {AP,GW}. Via (a) the 12m-family: a tight set containing {1..11,13} is {1..11,13,12m}, tight iff m in {1,2} (M=1/14,1/14,3/41,4/53,1/13,... rising to 1/12); (b) forced-membership: 0 tight sets in {1..24} miss ANY of {1..11,13} (exhaustive).
