@@ -1,0 +1,205 @@
+############################################################################################
+# THREAD 3 / NODE 3 part 2+3: ROUTE the spectrum sum + HYP-2606/2840 connection
+############################################################################################
+
+============================================================================================
+(R1) chat(n)=0 unless gcd(P) | n  [chat lives on the P-lattice, HYP-2606 support]
+============================================================================================
+   P=(1, 2, 3, 12, 13): gcd=1  off-lattice nonzero chat (n=1..300, tol 1e-7) = 0   max|chat| off = 0.00e+00   (on-lattice |chat| mass = 2.948)
+   P=(1, 2, 3, 4, 5): gcd=1  off-lattice nonzero chat (n=1..300, tol 1e-7) = 0   max|chat| off = 0.00e+00   (on-lattice |chat| mass = 2.653)
+   P=(5, 7, 11): gcd=1  off-lattice nonzero chat (n=1..300, tol 1e-7) = 0   max|chat| off = 0.00e+00   (on-lattice |chat| mass = 3.018)
+   P=(2, 4, 6): gcd=2  off-lattice nonzero chat (n=1..300, tol 1e-7) = 0   max|chat| off = 6.77e-17   (on-lattice |chat| mass = 1.782)
+   P=(3, 6, 9): gcd=3  off-lattice nonzero chat (n=1..300, tol 1e-7) = 0   max|chat| off = 1.94e-16   (on-lattice |chat| mass = 1.637)
+   P=(2, 6): gcd=2  off-lattice nonzero chat (n=1..300, tol 1e-7) = 0   max|chat| off = 5.60e-17   (on-lattice |chat| mass = 1.566)
+   => chat is EXACTLY supported on gcd(P)*Z: the Bohr/lattice support of HYP-2606.
+
+============================================================================================
+(R2) ghat(n) (cover^c) decay  n*|ghat(n)| = O(1)  and the 7-vanishing
+============================================================================================
+   E=[0, 1, 2, 3, 4, 5, 6, 7]  (Vg=22 jumps):
+       n=    7: |ghat|=0.201968  n|ghat|=1.4138  envelope Vg/(2pi n)=0.5002
+       n=   14: |ghat|=0.114413  n|ghat|=1.6018  envelope Vg/(2pi n)=0.2501
+       n=   70: |ghat|=0.004243  n|ghat|=0.2970  envelope Vg/(2pi n)=0.0500
+       n=  700: |ghat|=0.001127  n|ghat|=0.7892  envelope Vg/(2pi n)=0.0050
+       7-multiples |ghat(7j)|: 7*1:0.2020, 7*2:0.1144, 7*3:0.0231, 7*4:0.0515, 7*5:0.0412, 7*6:0.0132, 7*7:0.0122
+   E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  (Vg=32 jumps):
+       n=    7: |ghat|=0.138176  n|ghat|=0.9672  envelope Vg/(2pi n)=0.7276
+       n=   14: |ghat|=0.074575  n|ghat|=1.0440  envelope Vg/(2pi n)=0.3638
+       n=   70: |ghat|=0.013481  n|ghat|=0.9437  envelope Vg/(2pi n)=0.0728
+       n=  700: |ghat|=0.001286  n|ghat|=0.9003  envelope Vg/(2pi n)=0.0073
+       7-multiples |ghat(7j)|: 7*1:0.1382, 7*2:0.0746, 7*3:0.0126, 7*4:0.0283, 7*5:0.0427, 7*6:0.0140, 7*7:0.0126
+   E=[0, 2, 3, 4, 5, 6, 7, 8]  (Vg=28 jumps):
+       n=    7: |ghat|=0.183124  n|ghat|=1.2819  envelope Vg/(2pi n)=0.6366
+       n=   14: |ghat|=0.119134  n|ghat|=1.6679  envelope Vg/(2pi n)=0.3183
+       n=   70: |ghat|=0.027643  n|ghat|=1.9350  envelope Vg/(2pi n)=0.0637
+       n=  700: |ghat|=0.001553  n|ghat|=1.0870  envelope Vg/(2pi n)=0.0064
+       7-multiples |ghat(7j)|: 7*1:0.1831, 7*2:0.1191, 7*3:0.0553, 7*4:0.0250, 7*5:0.0390, 7*6:0.0239, 7*7:0.0279
+
+============================================================================================
+(R3-R5) ROUTE SPEC = sum_low + sum_high and decide R'>=c
+============================================================================================
+============================================================================================
+  (k=8 consec)  P=[1, 2, 3, 12, 13]  gcd(P)=1
+            E=[0, 1, 2, 3, 4, 5, 6, 7]
+============================================================================================
+  baseline = G_P*(1-p0) = 0.327153   m_inter = 0.239822
+  R' (exact) = 128324/175053 = 0.733058    SPEC = -0.087331
+  ROUTING split at Hlow=14:
+     sum_low  (|n|<=14)         = -0.095735    (14 active lattice freqs)
+     sum_high (|n|>14)          = +0.008404   (true signed tail)
+     |abs tail| sum|term|, |n|>14 = 0.031709  (signed-cancellation-free envelope)
+     CRUDE tail bound Vc*Vg/(4pi^2)*2/14 = 2.547504  [LOSSY by 80.3x]
+  Low resonances (n, term, mult7?, in-Plattice?):
+       n=   1  term=-0.001906       g|n
+       n=   2  term=-0.012133       g|n
+       n=   3  term=-0.007859       g|n
+       n=   4  term=-0.012233       g|n
+       n=   5  term=+0.001421       g|n
+       n=   6  term=-0.009440       g|n
+       n=   7  term=-0.031074  7|n  g|n
+       n=   8  term=+0.000091       g|n
+       n=   9  term=+0.002001       g|n
+       n=  10  term=+0.001045       g|n
+       n=  11  term=+0.001369       g|n
+       n=  12  term=-0.015821       g|n
+       n=  13  term=-0.002510       g|n
+       n=  14  term=-0.008685  7|n  g|n
+  ROUTED lower bounds on R':
+     crude (abs tail bound):  R' >= -7.0795   USELESS (<0)
+     sharp (signed tail):     R' >= +0.6104   (target the SIGNED tail bound)
+
+============================================================================================
+  (k=9 consec)  P=[1, 2, 3, 12]  gcd(P)=1
+            E=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+============================================================================================
+  baseline = G_P*(1-p0) = 0.347526   m_inter = 0.216156
+  R' (exact) = 53382/85825 = 0.621987    SPEC = -0.131369
+  ROUTING split at Hlow=14:
+     sum_low  (|n|<=14)         = -0.128976    (14 active lattice freqs)
+     sum_high (|n|>14)          = -0.002368   (true signed tail)
+     |abs tail| sum|term|, |n|>14 = 0.038868  (signed-cancellation-free envelope)
+     CRUDE tail bound Vc*Vg/(4pi^2)*2/14 = 2.258015  [LOSSY by 58.1x]
+  Low resonances (n, term, mult7?, in-Plattice?):
+       n=   1  term=-0.002367       g|n
+       n=   2  term=-0.018451       g|n
+       n=   3  term=-0.016215       g|n
+       n=   4  term=-0.014563       g|n
+       n=   5  term=+0.000995       g|n
+       n=   6  term=-0.017030       g|n
+       n=   7  term=-0.023914  7|n  g|n
+       n=   8  term=-0.000894       g|n
+       n=   9  term=-0.000450       g|n
+       n=  10  term=-0.001534       g|n
+       n=  11  term=+0.000875       g|n
+       n=  12  term=-0.028749       g|n
+       n=  13  term=-0.000350       g|n
+       n=  14  term=-0.006330  7|n  g|n
+  ROUTED lower bounds on R':
+     crude (abs tail bound):  R' >= -5.8685   USELESS (<0)
+     sharp (signed tail):     R' >= +0.5170   (target the SIGNED tail bound)
+
+============================================================================================
+  (k=10 consec |P|=3)  P=[1, 2, 3]  gcd(P)=1
+            E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================================================
+  baseline = G_P*(1-p0) = 0.342146   m_inter = 0.201871
+  R' (exact) = 149562/253489 = 0.590014    SPEC = -0.140275
+  ROUTING split at Hlow=14:
+     sum_low  (|n|<=14)         = -0.136432    (14 active lattice freqs)
+     sum_high (|n|>14)          = -0.003843   (true signed tail)
+     |abs tail| sum|term|, |n|>14 = 0.029057  (signed-cancellation-free envelope)
+     CRUDE tail bound Vc*Vg/(4pi^2)*2/14 = 0.926365  [LOSSY by 31.9x]
+  Low resonances (n, term, mult7?, in-Plattice?):
+       n=   1  term=-0.001155       g|n
+       n=   2  term=-0.024602       g|n
+       n=   3  term=-0.026150       g|n
+       n=   4  term=-0.019492       g|n
+       n=   5  term=+0.000706       g|n
+       n=   6  term=-0.023210       g|n
+       n=   7  term=-0.023005  7|n  g|n
+       n=   8  term=+0.000548       g|n
+       n=   9  term=+0.000679       g|n
+       n=  10  term=-0.003129       g|n
+       n=  11  term=-0.005129       g|n
+       n=  12  term=-0.009058       g|n
+       n=  13  term=-0.000498       g|n
+       n=  14  term=-0.002936  7|n  g|n
+  ROUTED lower bounds on R':
+     crude (abs tail bound):  R' >= -2.1063   USELESS (<0)
+     sharp (signed tail):     R' >= +0.5163   (target the SIGNED tail bound)
+
+============================================================================================
+  (k=10 P coprime)  P=[5, 7, 11]  gcd(P)=1
+            E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+============================================================================================
+  baseline = G_P*(1-p0) = 0.305955   m_inter = 0.371532
+  R' (exact) = 4415635/3636256 = 1.214336    SPEC = +0.065577
+  ROUTING split at Hlow=14:
+     sum_low  (|n|<=14)         = +0.083442    (14 active lattice freqs)
+     sum_high (|n|>14)          = -0.017856   (true signed tail)
+     |abs tail| sum|term|, |n|>14 = 0.064304  (signed-cancellation-free envelope)
+     CRUDE tail bound Vc*Vg/(4pi^2)*2/14 = 3.937052  [LOSSY by 61.2x]
+  Low resonances (n, term, mult7?, in-Plattice?):
+       n=   1  term=+0.001987       g|n
+       n=   2  term=+0.003808       g|n
+       n=   3  term=+0.006485       g|n
+       n=   4  term=+0.007960       g|n
+       n=   5  term=-0.001470       g|n
+       n=   6  term=+0.004813       g|n
+       n=   7  term=+0.027256  7|n  g|n
+       n=   8  term=+0.001008       g|n
+       n=   9  term=-0.001616       g|n
+       n=  10  term=+0.007276       g|n
+       n=  11  term=+0.006481       g|n
+       n=  12  term=+0.005888       g|n
+       n=  13  term=-0.000256       g|n
+       n=  14  term=+0.013822  7|n  g|n
+  ROUTED lower bounds on R':
+     crude (abs tail bound):  R' >= -11.5954   USELESS (<0)
+     sharp (signed tail):     R' >= +1.0626   (target the SIGNED tail bound)
+
+============================================================================================
+  (wide d>=2)  P=[1, 2, 6]  gcd(P)=1
+            E=[0, 4, 6, 8, 10, 12, 14, 15, 16, 17]
+============================================================================================
+  baseline = G_P*(1-p0) = 0.443163   m_inter = 0.370703
+  R' (exact) = 1037554/1240359 = 0.836495    SPEC = -0.072459
+  ROUTING split at Hlow=14:
+     sum_low  (|n|<=14)         = -0.064929    (14 active lattice freqs)
+     sum_high (|n|>14)          = -0.007530   (true signed tail)
+     |abs tail| sum|term|, |n|>14 = 0.037586  (signed-cancellation-free envelope)
+     CRUDE tail bound Vc*Vg/(4pi^2)*2/14 = 3.560716  [LOSSY by 94.7x]
+  Low resonances (n, term, mult7?, in-Plattice?):
+       n=   1  term=-0.001088       g|n
+       n=   2  term=-0.009173       g|n
+       n=   3  term=+0.001356       g|n
+       n=   4  term=-0.016454       g|n
+       n=   5  term=+0.000059       g|n
+       n=   6  term=-0.023528       g|n
+       n=   7  term=-0.000959  7|n  g|n
+       n=   8  term=+0.002765       g|n
+       n=   9  term=+0.001923       g|n
+       n=  10  term=-0.000771       g|n
+       n=  11  term=+0.002651       g|n
+       n=  12  term=-0.007270       g|n
+       n=  13  term=-0.000915       g|n
+       n=  14  term=-0.013525  7|n  g|n
+  ROUTED lower bounds on R':
+     crude (abs tail bound):  R' >= -7.1813   USELESS (<0)
+     sharp (signed tail):     R' >= +0.7687   (target the SIGNED tail bound)
+
+============================================================================================
+ROUTING SUMMARY
+============================================================================================
+case                                       R-prime   sum_low  sum_high  |absTail|  crudeBnd
+P=[1, 2, 3, 12, 13]                         0.7331   -0.0957    0.0084     0.0317    2.5475
+P=[1, 2, 3, 12]                             0.6220   -0.1290   -0.0024     0.0389    2.2580
+P=[1, 2, 3]                                 0.5900   -0.1364   -0.0038     0.0291    0.9264
+P=[5, 7, 11]                                1.2143    0.0834   -0.0179     0.0643    3.9371
+P=[1, 2, 6]                                 0.8365   -0.0649   -0.0075     0.0376    3.5607
+
+KEY OBSERVATIONS:
+  * sum_low captures ~95-100% of SPEC; sum_high (signed) is tiny (|.|<0.01).
+  * |absTail| (signed-cancellation-free) is ALREADY << crude Vc*Vg bound (the HYP-2606 F3 loss).
+  * the crude 1/n triangle bound on the tail is USELESS (>baseline); R'>=c needs the SIGNED tail.
+DONE.
