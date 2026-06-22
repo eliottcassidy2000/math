@@ -71,3 +71,50 @@ THREAD 1: THE WITNESS ROUTE for LRC(n=2q),  q in {3,5,7}   (kpswf11)
       6    3            29/75   0.386667     0.000000    0.000    True  E=[0, 1, 2, 3, 4, 5] ; P=[1, 8, 9]
       7    2           53/150   0.353333     0.000000    0.000    True  E=[0, 1, 2, 3, 4, 5, 6] ; P=[1, 8]
       8    1          211/525   0.401905     0.000000    0.000    True  E=[0, 1, 2, 3, 4, 5, 6, 7] ; P=[1]
+      9    0          241/525   0.459048     0.000000    0.000    True  E=[0, 1, 2, 3, 4, 5, 6, 7, 8] ; P=[]
+
+    => min G2 over floor cases k=q..2q-1: 93/280 = 0.332143
+       m_P^(10) = 0 = 0.000000
+       ALL G2 >= m_P (floor holds): True
+       DENSE-k (k>=q+1) slack G2/m_P in [0.00, 0.00]
+
+######################################################################################
+#  q = 7   (n = 14 = 2*7),   gap threshold 1/q = 1/7,   G_P threshold 1/n = 1/14
+#  LRC(14) is OPEN (FIRST OPEN CASE).  Speeds = n-1 = 13.
+######################################################################################
+
+--- (1) m_P^(14) = min over P subset {1..13} of meas(G_P) ---
+    |P|= 1: min meas(G_P) = 6/7 = 0.857143  at P=(1,)
+    |P|= 2: min meas(G_P) = 66/91 = 0.725275  at P=(1, 13)
+    |P|= 3: min meas(G_P) = 55/91 = 0.604396  at P=(1, 12, 13)
+    |P|= 4: min meas(G_P) = 1979/4004 = 0.494256  at P=(1, 11, 12, 13)
+    |P|= 5: min meas(G_P) = 2243/5880 = 0.381463  at P=(1, 5, 7, 8, 9)
+    |P|= 6: min meas(G_P) = 3029/10780 = 0.280983  at P=(1, 5, 7, 8, 9, 11)
+    |P|= 7: min meas(G_P) = 45107/229320 = 0.196699  at P=(1, 5, 7, 8, 9, 11, 13)
+    |P|= 8: min meas(G_P) = 2479/17640 = 0.140533  at P=(1, 3, 5, 7, 8, 9, 11, 13)
+    |P|= 9: min meas(G_P) = 10601/114660 = 0.092456  at P=(1, 2, 3, 5, 7, 8, 9, 11, 13)
+    |P|=10: min meas(G_P) = 14249/252252 = 0.056487  at P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+    |P|=11: min meas(G_P) = 313/9702 = 0.032261  at P=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13)
+    |P|=12: min meas(G_P) = 7/858 = 0.008159  at P=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+    |P|=13: min meas(G_P) = 0 = 0.000000  at P=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+
+  >>> m_P^(14) = 0 = 0.00000000
+      binding |P| = 13 (= all speeds), argmin P = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+      denominator 1 = 
+      numerator   0 = 0
+
+--- (2) PIGEONHOLE: k < q=7 => circular maxgap >= 1/k > 1/q => GOOD(E)=[0,1) ---
+    k=2: mu=1 (all reps)         PIGEONHOLE: maxgap>=1/k=1/2>1/q=1/7 ALWAYS => GOOD=[0,1)
+    k=3: mu=1 (all reps)         PIGEONHOLE: maxgap>=1/k=1/3>1/q=1/7 ALWAYS => GOOD=[0,1)
+    k=4: mu=1 (all reps)         PIGEONHOLE: maxgap>=1/k=1/4>1/q=1/7 ALWAYS => GOOD=[0,1)
+    k=5: mu=1 (all reps)         PIGEONHOLE: maxgap>=1/k=1/5>1/q=1/7 ALWAYS => GOOD=[0,1)
+    k=6: mu=1 (all reps)         PIGEONHOLE: maxgap>=1/k=1/6>1/q=1/7 ALWAYS => GOOD=[0,1)
+    k=7: mu=1 (all reps)         k=q: maxgap>=1/q a.e. (equality only on measure-zero x=a/q)
+
+--- (3)+(4) WITNESS floor G2(P,E) over floor cases k=q..2q-1, admissible (P,E) ---
+    For each k, |P| = 13-k.  Search bounded-spread E and worst P.
+      k  |P|           min G2       =dec          m_P   G2/m_P  >=m_P?  argmin (E ; P)
+    ------------------------------------------------------------------------------------------------
+      7    6       3029/10780   0.280983     0.000000    0.000    True  E=[0, 1, 2, 3, 4, 5, 6] ; P=[1, 5, 7, 8, 9, 11]
+      8    5       8152/24255   0.336096     0.000000    0.000    True  E=[0, 1, 2, 3, 4, 5, 6, 7] ; P=[1, 4, 5, 9, 11]
+      9    4          143/420   0.340476     0.000000    0.000    True  E=[0, 1, 2, 3, 4, 5, 6, 7, 8] ; P=[1, 10, 11, 12]

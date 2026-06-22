@@ -1,0 +1,46 @@
+==============================================================================
+LRC(14) RESONANT-POINT LOWER BOUND on the witness floor G2
+kind-pasteur kpswf11, THREAD 2
+==============================================================================
+m_P = 14249/252252 = 0.056487  (proved admissible floor, THM-530)
+Resonant centers (d<=3): [Fraction(0, 1), Fraction(1, 2), Fraction(1, 3), Fraction(2, 3)]
+
+--- sanity: maxgap at resonant centers (consec E=range(13)) ---
+  x0=0: maxgap=3329/3333
+  x0=1/2: maxgap=1/2
+  x0=1/3: maxgap=1/3
+  x0=2/3: maxgap=1/3
+
+--- consecutive E: resonant bound G2_res vs full G2 vs m_P ---
+  k          P (worst-wit)       G2_res G2_res/m_P
+  8       [1, 4, 5, 9, 11]   2777/13860      3.55x OK>=m_P
+      center    0: nbhd mass cap G_P = 0.000000
+      center  1/2: nbhd mass cap G_P = 0.058081
+      center  1/3: nbhd mass cap G_P = 0.071140
+      center  2/3: nbhd mass cap G_P = 0.071140
+  9        [1, 10, 11, 12]     551/2310      4.22x OK>=m_P
+      center    0: nbhd mass cap G_P = 0.000000
+      center  1/2: nbhd mass cap G_P = 0.102597
+      center  1/3: nbhd mass cap G_P = 0.067965
+      center  2/3: nbhd mass cap G_P = 0.067965
+ 10            [1, 11, 12]     499/1980      4.46x OK>=m_P
+      center    0: nbhd mass cap G_P = 0.000000
+      center  1/2: nbhd mass cap G_P = 0.073232
+      center  1/3: nbhd mass cap G_P = 0.089394
+      center  2/3: nbhd mass cap G_P = 0.089394
+ 11                [1, 12]     347/1260      4.88x OK>=m_P
+      center    0: nbhd mass cap G_P = 0.000000
+      center  1/2: nbhd mass cap G_P = 0.099206
+      center  1/3: nbhd mass cap G_P = 0.088095
+      center  2/3: nbhd mass cap G_P = 0.088095
+ 12                    [1]      173/770      3.98x OK>=m_P
+      center    0: nbhd mass cap G_P = 0.006494
+      center  1/2: nbhd mass cap G_P = 0.090909
+      center  1/3: nbhd mass cap G_P = 0.063636
+      center  2/3: nbhd mass cap G_P = 0.063636
+ 13                     []      223/770      5.13x OK>=m_P
+      center    0: nbhd mass cap G_P = 0.071429
+      center  1/2: nbhd mass cap G_P = 0.090909
+      center  1/3: nbhd mass cap G_P = 0.063636
+      center  2/3: nbhd mass cap G_P = 0.063636
+
