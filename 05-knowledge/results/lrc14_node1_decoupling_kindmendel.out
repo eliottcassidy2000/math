@@ -1,0 +1,68 @@
+mu_12 = L({1..12}@1/14) = 6617/194040 = 0.034101
+r_12  (arc count)        = 12
+kappa = r_12/(6 mu_12)   = 388080/6617 = 58.65   => need V > kappa*b
+limit floor (6/7)mu_12   = 0.029230
+
+  L({1..12})=0.034101 (==mu_12:True) arcs=12 (==12b=12:True)
+  L({2..24})=0.034101 (==mu_12:True) arcs=24 (==12b=24:True)
+  L({3..36})=0.034101 (==mu_12:True) arcs=36 (==12b=36:True)
+
+=== Verify boundary core: L({b,..,12b,V}) >= (6/7)mu_12 - b*r12/(7V),  V>kappa*b => L>0 ===
+ b     V    V/b  V>kb   L_exact  lowerbnd bnd>0  L>0 valid
+ 1    42   42.0 False  0.027298 -0.011587 False True  True
+ 1    56   56.0 False  0.026448 -0.001383 False True  True
+ 1    70   70.0  True  0.030020  0.004740  True True  True
+ 1    84   84.0  True  0.027298  0.008821  True True  True
+ 1    98   98.0  True  0.031186  0.011737  True True  True
+ 1   112  112.0  True  0.028999  0.013923  True True  True
+ 1   126  126.0  True  0.030700  0.015624  True True  True
+ 1   140  140.0  True  0.030020  0.016985  True True  True
+ 1   154  154.0  True  0.032246  0.018098  True True  True
+ 1   168  168.0  True  0.028999  0.019026  True True  True
+ 1   182  182.0  True  0.023897  0.019810  True True  True
+ 1   196  196.0  True  0.030457  0.020483  True True  True
+ 1   210  210.0  True  0.029339  0.021066  True True  True
+ 1   224  224.0  True  0.028999  0.021577  True True  True
+ 1   238  238.0  True  0.029900  0.022027  True True  True
+ 1   252  252.0  True  0.028999  0.022427  True True  True
+ 1   420  420.0  True  0.029339  0.025148  True True  True
+ 1   840  840.0  True  0.029339  0.027189  True True  True
+ 2    98   49.0 False  0.033227 -0.005756 False True  True
+ 2   112   56.0 False  0.026448 -0.001383 False True  True
+ 2   126   63.0  True  0.033277  0.002019  True True  True
+ 2   140   70.0  True  0.030020  0.004740  True True  True
+ 2   154   77.0  True  0.033328  0.006966  True True  True
+ 2   168   84.0  True  0.027298  0.008821  True True  True
+ 2   182   91.0  True  0.017504  0.010391  True True  True
+ 2   196   98.0  True  0.031186  0.011737  True True  True
+ 2   210  105.0  True  0.031380  0.012903  True True  True
+ 2   224  112.0  True  0.028999  0.013923  True True  True
+ 2   238  119.0  True  0.029299  0.014824  True True  True
+ 2   252  126.0  True  0.030700  0.015624  True True  True
+ 2   266  133.0  True  0.029670  0.016340  True True  True
+ 2   280  140.0  True  0.030020  0.016985  True True  True
+ 2   294  147.0  True  0.028270  0.017568  True True  True
+ 2   308  154.0  True  0.032246  0.018098  True True  True
+ 3   154   51.3 False  0.031086 -0.004166 False True  True
+ 3   168   56.0 False  0.026448 -0.001383 False True  True
+ 3   182   60.7  True  0.026441  0.000972  True True  True
+ 3   196   65.3  True  0.030219  0.002991  True True  True
+ 3   210   70.0  True  0.030020  0.004740  True True  True
+ 3   224   74.7  True  0.029042  0.006270  True True  True
+ 3   238   79.3  True  0.029406  0.007621  True True  True
+ 3   252   84.0  True  0.027298  0.008821  True True  True
+ 3   266   88.7  True  0.029163  0.009896  True True  True
+ 3   280   93.3  True  0.029386  0.010862  True True  True
+ 3   294   98.0  True  0.031186  0.011737  True True  True
+ 3   308  102.7  True  0.029862  0.012532  True True  True
+ 3   322  107.3  True  0.029791  0.013258  True True  True
+ 3   336  112.0  True  0.028999  0.013923  True True  True
+ 3   350  116.7  True  0.028727  0.014536  True True  True
+ 3   364  121.3  True  0.027995  0.015101  True True  True
+
+=== The residual GAP: comparable V (V <= kappa*b) makes the elementary bound vacuous ===
+b=1 V= 14 V/b= 14.0: L_exact=0.023897 (>0:True)  bnd=-0.0932 (vacuous:True)
+b=1 V= 28 V/b= 28.0: L_exact=0.023897 (>0:True)  bnd=-0.0320 (vacuous:True)
+b=2 V= 28 V/b= 14.0: L_exact=0.023897 (>0:True)  bnd=-0.0932 (vacuous:True)
+b=3 V= 14 V/b=  4.7: L_exact=0.028999 (>0:True)  bnd=-0.3381 (vacuous:True)
+b=1 V= 42 V/b= 42.0: L_exact=0.027298 (>0:True)  bnd=-0.0116 (vacuous:True)
