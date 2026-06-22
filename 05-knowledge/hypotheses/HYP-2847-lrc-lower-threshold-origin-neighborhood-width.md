@@ -5,6 +5,8 @@ status: FORMALIZATION CHECKSUM; exact-rational scout positive for bounded dense 
 source: codex-2026-06-22-S88
 related:
   - HYP-2842
+  - HYP-2848
+  - HYP-2849
   - HYP-2844
   - HYP-2846
   - HYP-2827
@@ -41,6 +43,15 @@ bounded dense residual for every even lower threshold checked:
 The N=14 row is the tightest reported origin+proper bounded floor.  A Lean
 checksum for these rational readouts is in
 `TournamentH7.LRCLowerThresholdNeighborhood`.
+
+S89 addendum (HYP-2849): the proper-neighborhood part reduces exactly to a
+divisor-depth ledger at bounded span `S=2q-1`; non-divisor `G_P` holes have
+positive separation margin from every proper `a/b` neighborhood, so only the
+smallest selected multiple of each denominator `b` matters.  The origin
+neighborhood is a decoy: if `p=1` is absent, origin mass survives; if `p=1`
+is present, one `P` slot is spent and some proper denominator obligation
+survives.  For the q=7 stress row this gives the compact split
+`1∉P => 11/182` and `1∈P => 2/273`.
 
 ## Method
 

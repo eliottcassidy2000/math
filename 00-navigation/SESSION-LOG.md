@@ -1,3 +1,30 @@
+## codex-2026-06-22-S89 -- origin-decoy divisor-depth ledger for HYP-2847/HYP-2849
+Continued the HYP-2847 bounded neighborhood-width line after pulling the
+incoming KPS S33/S32 witness-route work.  The concurrent HYP-2848 q-widening
+entry is the stronger global route; this session's contribution is a compact
+bounded-stress proof reduction for the HYP-2847 checksum.
+
+- New proof compression: at bounded span `S=2q-1`, proper Farey
+  neighborhoods around reduced `a/b`, `2<=b<q`, are pairwise disjoint, and
+  non-divisor `G_P` holes have positive separation from them.  Therefore the
+  proper residual is exactly a divisor-depth ledger depending only on the
+  smallest selected multiple `p_b` of each denominator `b`.
+- Origin decoy dichotomy: `p=1` kills the origin interval but spends a scarce
+  `P` slot; if `p=1` is absent, origin mass survives.  In the LRC14 stress row
+  (`q=7`, `k=8`, `|P|=5`) this gives the clean split `p=1 absent => 11/182`
+  and `p=1 present => 2/273`.
+- Added `04-computation/lrc_origin_decoy_depth_ledger_codex_s89.py` and stored
+  `05-knowledge/results/lrc_origin_decoy_depth_ledger_codex_s89.out`.
+  Verification is exact/exhaustive for q=3..7, deterministic sampled for
+  q=8..12, with zero mismatches against interval subtraction.  Deepest scans
+  q=3..10 all choose `p=1` at the global minimum.
+- Claimed HYP-2849 (after HYP-2848 was already claimed by concurrent work) and
+  updated HYP-2847, the hypothesis index, and the results index.
+- Tournament Analysis / assumption challenge: denominator obligations and
+  decoy slots are the right vertices for this quotient, not runners, arcs, or
+  exact Farey centers; the quotient preserves exact proper residuals plus the
+  origin/no-origin dichotomy and discards irrelevant center identity.
+
 ## kind-pasteur-2026-06-22-S33 -- WITNESS ROUTE for LRC(2q) THREAD 1: independent reproduction of S32 (BYTE-IDENTICAL) + 4 extensions (exact per-q floors, phi_q binding quantity, consec-argmin proof, closed-form verdict)
 Dispatch: THREAD 1 -- apply the witness route to LRC(2q) for q=3 (n=6), q=5 (n=10), q=7 (n=14); per-q floors, slack table, q-uniform pattern. CONCURRENT-COLLISION with S32 (same prompt, same machine name) -- deferred to S32's first-push (no new HYP), logged as CORROBORATION + EXTENSION on HYP-2846.
 - **CONVERGENCE (the strongest corroboration):** my `lrc_witness_route_2q_kpswf11.py` + `_v2` came out BYTE-IDENTICAL to S32's committed files (incl. the admissibility fix `binding |P|=n-4, completable_k3`). Two independent same-prompt runs produced the SAME engine AND the SAME bug-fix. Brute-validated vs a 100800-pt grid (<3e-3, q=5,7).
