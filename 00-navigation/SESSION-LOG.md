@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S31 -- the LRC witness floor R' (Node 2/3), thinking tournaments: VERIFIED findings + corrected over-claims
+Per user "think tournaments" hint, worked the floor R' = meas(GOOD cap G_P)/(meas(GOOD)*meas(G_P)) (quasi-independence). SOLID verified:
+- **R' = 1 EXACTLY off-resonance** (scale-separated/dilated clusters D=7,14,100,101 + common factors): GOOD (cluster maxgap) and G_P (small part) PERFECTLY decorrelate when frequency lattices don't overlap.
+- **R' in [0.81,1.0] for LRC(14)** (resonant: cluster co-offsets + small-part speeds overlap in low freq). So floor rho* = R'*meas(GOOD)*meas(G_P) > 0.
+- **The floor deviation is FINITE LOW-FREQUENCY** (FFT: dominant n=3,4,6 from small part + cluster; only 9.8% at multiples of 7). = the user's "finitely many low-height resonances" -> bound via spectrum-sum Sum|c^(n)||g^(n)| with g^'s 1/n decay (kps Node-3).
+- **Tournament routing that HOLDS:** the small part P (<=13 speeds) -> PROVEN LRC(<=13) gives meas(G_P)>0 (Rédei-adjacent proven-case routing, user's guidance).
+- **OVER-CLAIMED then CORRECTED (lesson):** (a) boundary-core closure omitted G_P (MISTAKE-085); (b) the apex-7/Paley-P_7 framing of the floor resonance (only 9.8% at mult-7, so NOT 7-dominated -- corrected in HYP-2866). 3rd over-claim this arc -- pattern: too eager on clean QR/tournament connections; VERIFY first.
+NET: floor R'>=c reduces to the finite LOW-height spectrum sum (kps Node-3 + user lever); R'=1 decorrelation baseline + finite low-freq resonance correction. NEW: HYP-2866 (corrected). 
+
 ## codex-2026-06-22-S93 -- bounded-denominator covering-atlas no-go
 User asked to synthesize the proposed bounded-denominator witness route with
 the current LRC14 proof work.  The route has a rigorous obstruction even inside
