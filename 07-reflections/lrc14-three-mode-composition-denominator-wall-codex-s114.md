@@ -40,13 +40,23 @@ script finds many mismatches; for instance `X=60` first opens at `67`, while
 `121=11^2`.  That points to the right analytic object: a prime-power/residue
 opening after the divisor wall, not a prime-only rule.
 
+Incoming mac-mini S45 adds the companion radical filter.  If some prime
+`p<=13` divides no speed, then `t=1/p` is already a witness: every phase is a
+nonzero residue mod `p`, so its distance from the observer is at least
+`1/p >= 1/13 > 1/14`.  Thus a genuinely hard row must kill the primes
+`2,3,5,7,11,13` and also kill `14`.  That is the first branch of the Node-3
+proof.  The S114 composite-denominator data adds the second warning: once the
+small-prime branch is saturated, exact first witnesses live in prime-power
+packets, not in a prime-only list.
+
 The practical proof split I would keep:
 
 1. Node 2 finite cap: prove AP/consecutive extremality using the Legendre Venn
    labels.  Do not collapse `D` and `C` just because they have the same size.
    One is a corner, one is an overlap, and that is the finite realizability
    information.
-2. Node 3 / Part A: prove an effective equidistribution lemma for denominators
+2. Node 3 / Part A: first apply the radical filter (`p<=13` surviving gives
+   `t=1/p`), then prove an effective equidistribution lemma for denominators
    just beyond the committed wall.  This should be stated over exact-period
    unit packets with prime-power labels, then intersected with `GOOD cap G_P`
    and charged the `#arcs/Vmax` loss.
@@ -66,4 +76,3 @@ Files:
 - `04-computation/lrc_lcm_committed_denominator_wall_codex_s114.py`
 - `05-knowledge/results/lrc_lcm_committed_denominator_wall_codex_s114.out`
 - `05-knowledge/hypotheses/HYP-2901-lrc14-three-mode-composition-and-lcm-denominator-wall.md`
-

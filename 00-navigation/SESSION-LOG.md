@@ -14,6 +14,8 @@ Added `04-computation/lrc_lcm_committed_denominator_wall_codex_s114.py` and stor
 
 Created HYP-2901/T1014 and reflection `07-reflections/lrc14-three-mode-composition-denominator-wall-codex-s114.md`.  Proof split recorded: Node 2 is finite Legendre/AP-three-gap Venn extremality; Node 3/finite Part A must be analytic exact-period prime-power/residue equidistribution beyond the lcm wall.  Tournament Analysis used proof routes/denominator packets as vertices rather than runners.
 
+Post-checkpoint rebase brought in mac-mini S45 on the same route; integrated its radical filter into HYP-2901/T1014: if a prime `p<=13` divides no runner, then `t=1/p` is already safe, so hard rows must kill `2,3,5,7,11,13` and `14`.  S114's added correction is that saturated rows still need prime-power exact-period packets, since first witnesses can be composite (`121=11^2`).
+
 ## mac-mini-2026-06-22-S44 -- the resonance-killing is MULTIPLICATIVE: totient-weighted killing, coprime density 1/zeta(2) floor, the 3 recursion modes = Mobius/IE skeleton
 Owner: coprime density <-> euler-totient <-> multiplicative functions; the 3 tournament recursion modes (A+B+C-D-E-F+G always; A+B-C even; A+B-C+D-E-F+G odd; sizes differ); toward proof/disproof. Reflection: the-resonance-killing-is-multiplicative-totient-mobius-zeta2.md.
 - **Totient-weighted killing (grounded):** in kps's resonance-killing (S31p, M=1/(smallest surviving b)), a runner s kills Farey point a/b (b<=14) iff b|s, so s kills ALL phi(b) primitive points of each denominator b|s. Survival lattice = Phi(14)=sum phi(b)=64 Farey points. A counterexample must cover all 64 = kill every b in 2..14 (THM-523, over-determined: 13 runners, 13 denominators).

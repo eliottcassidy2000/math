@@ -10,6 +10,7 @@ depends_on:
   - THM-527
   - THM-549
 related:
+  - HYP-+2876
   - HYP-2886
   - HYP-2890
   - HYP-2898
@@ -128,6 +129,34 @@ Across `X=14..140`, `72/127` tested rows disagree with `nextprime(X)`.
 The right object is a prime-power / divisor-lattice opening plus residue
 compatibility with the base row, not primality alone.
 
+## Incoming S45 integration: radical filter before equidistribution
+
+Mac-mini S45 independently refuted the finite-certificate reading of
+HYP-+2876 with the same lcm family and added the useful small-prime filter.
+If a prime `p<=13` divides no speed in `S`, then `t=1/p` is immediately safe:
+every runner has nonzero residue mod `p`, hence distance at least `1/p`, and
+
+```text
+1/p >= 1/13 > 1/14.
+```
+
+Thus any hard covering row must be prime-covering for
+
+```text
+2,3,5,7,11,13
+```
+
+and must also kill the composite denominator `14`.  In one-committed-speed
+families this says the radical, not the absolute size, is the first filter;
+the radical-saturated case `30030 | v` is where the small-prime witness no
+longer closes the row and equidistribution becomes necessary.
+
+S114's correction to that filter is that the **minimal** witness denominator
+above the wall is not governed by primes alone: `D=121=11^2` appears first for
+`X=110,120`.  The effective Node-3 theorem should therefore be stated over
+exact-period prime-power packets, with the radical filter as the first easy
+branch and torus equidistribution as the saturated branch.
+
 ## Proof implication
 
 This separates the two remaining LRC14 nodes cleanly.
@@ -157,4 +186,3 @@ prime-power openings, cap/floor proof obligations, and scalarization guards.
 This quotient preserves which inclusion-exclusion packet can feed the LRC
 floor/cap proof.  It destroys the actual circle-time geometry and must hand
 that geometry back to the analytic equidistribution/Part-A node.
-
