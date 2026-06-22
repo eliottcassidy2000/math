@@ -46,3 +46,12 @@ weighted energy is exact?); (ii) bound the higher-order relation terms. → THM-
 HYP-2637. Far-element half is kps (resonance/dilation, S32).
 
 Files: lrc14_hp0cap_additive_energy_macmini_S29.py (to save).
+
+
+## REFINEMENT (mac-mini-S29, same session): the additive-energy frame is APPROXIMATE; the residual map
+Deeper computation REFINES the picture:
+- **(b) is FALSE as a strict monotonicity:** L_y is NOT a function of A (28/29 A-values at k=8 have multiple distinct L_y, spread up to 0.13) and the upper envelope max-L_y(A) is NOT monotone in A. So "L_y ↑ A" is only a statistical trend; consec maxes both A and L_y but NOT via A-monotonicity.
+- **Per-moment also fails:** consec MINIMIZES S_3, S_4 (k=8) but is NEITHER min nor max of S_1, S_2. The dual L_y=1-S1+S2-0.9 S3+0.6 S4 needs +S_4 large, yet consec MINIMIZES S_4 -- so the extremality is intrinsically COUPLED, not per-moment (confirms THM-534's note). For k=8, g=[1,0,0,0.1,0,0,1] so L_y = p_0 + 0.1 p_3 + p_6 ≈ p_0: the L_y extremality IS ≈ the cover extremality (HYP-2604), genuinely hard.
+- **CLOSURE STRUCTURE (converges with kps HYP-2842):** bounded span<=14 DONE (HYP-2830 exhaustive); WIDE span>=15 is the residual, needs E-ADAPTIVE equidistribution (kps HYP-2842 refuted fixed-center; the correct route = three-distance = my L_y/decorrelation). 
+- **MIDDLE-residual quantified (k=9):** max L_y over PRIMITIVE span>=15 = 0.4588 (margin 0.035 to cap), BINDING at the **1far config {0..7,21}** (consec core + one far element). The fully-wide configs are far safer (L_y 0.16-0.24). So the binding wide case = 1far.
+- **The gap:** for 1far, L_y_decorr(consec core) ~ 0.44 (margin 0.05) + peel deviation Δ_w; actual Δ_w ~ 0.019 but the bound (6/49)V/w ~ 0.16 is **5-8x too loose**. Closing needs a sharper equidistribution bound on Δ_w (the arc-phase cancellation THM-546 left "not in closed form"). This is the shared crux with kps's resonance/marginal-uniformity work.
