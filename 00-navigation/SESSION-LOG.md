@@ -101,6 +101,13 @@ quotient preserves pair-incidence and curl/divergence data, but destroys speed
 magnitude, so it must be coupled to HYP-+2888 anchored scaling and HYP-2636
 tails.
 
+Post-push incoming integration: KPS S31m refutes the score-variance/Jensen
+coverage route and identifies the exact tiler as the complete residue system
+`Z_14 \ {0}` up to dilation; mac-mini S40 places Clebsch/Bruhat on the cut-side
+state-space axis.  Updated S105 accordingly: the top carrier is now
+`AP_exact_tiling_labelled_functional`, and Clebsch/Bruhat are labelled residual
+atlases feeding exact-tiling rigidity, not standalone invariants.
+
 ## codex-2026-06-22-S104 -- same-frequency additive-energy tail and residual-leak target
 
 User asked to attack the single leading-order-proved extremality plus a

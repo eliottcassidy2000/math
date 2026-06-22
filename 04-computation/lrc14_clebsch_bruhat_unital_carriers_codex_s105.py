@@ -237,7 +237,7 @@ def bruhat_stats() -> dict[str, object]:
 def tournament_lens() -> list[tuple[str, tuple[int, int, int, int]]]:
     """Hand-scored proof-carrier tournament; higher tuple is better."""
     lenses = [
-        ("AP_Jensen_labelled_functional", (4, 4, 4, 3)),
+        ("AP_exact_tiling_labelled_functional", (4, 4, 4, 3)),
         ("Clebsch_tangent_residual_design", (3, 4, 3, 3)),
         ("Bruhat_S4_compression_carrier", (3, 3, 4, 2)),
         ("unital_tangent_secant_incidence", (2, 4, 2, 3)),
@@ -279,8 +279,10 @@ def main() -> None:
     for name, score in tournament_lens():
         print(f"  {name:35s} score={score}")
     print("  Hamiltonian path:")
-    print("    AP_Jensen_labelled_functional > Clebsch_tangent_residual_design >")
+    print("    AP_exact_tiling_labelled_functional > Clebsch_tangent_residual_design >")
     print("    Bruhat_S4_compression_carrier > unital_tangent_secant_incidence > scalar_additive_energy")
+    print("  guardrail: this is not the refuted score-variance/Jensen route; the top")
+    print("             object is the finer scaling-invariant exact-tiling functional.")
 
     print("\nProof target emitted:")
     print("  Decompose the S104 residual leak over tangent Clebsch classes and Bruhat S4")

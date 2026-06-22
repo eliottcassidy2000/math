@@ -29,6 +29,14 @@ truncated octahedral graph -> Bruhat S4 local compression/swap quotient
 unital/design language     -> tangent/secant incidence discipline
 ```
 
+Post-pull correction from KPS S31m and mac-mini S40: the score-variance/Jensen
+route through the winding tournament is refuted as a coverage theorem, and the
+exact tiler is the complete nonzero residue system `Z_14 \ {0}` up to dilation,
+not a sparse projective-plane design.  Thus "Jensen" below means keep the full
+signed labelled functional until the final comparison, not the refuted
+score-level functional.  Clebsch and Bruhat are cut-side state spaces that
+retain labels; they are not the invariant itself.
+
 ## Clebsch as tangent residual quotient
 
 S105 builds the Clebsch graph as the folded 5-cube.  It verifies:
@@ -134,12 +142,29 @@ The concrete next computation is to take the HYP-2890 worst residual-leak rows,
 track compression moves in Bruhat face coordinates, and test whether the
 near-violation mass sits on braid hexagons rather than commutation squares.
 
+## Incoming S31m/S40 integration
+
+S31m gives the negative control this hypothesis needs: scalar score variance,
+unanchored additive energy, and the `PG(2,3)`/13-point design analogy do not
+prove coverage.  The exact coverage object is more rigid: at threshold it is a
+complete residue system `Z_14 \ {0}` up to dilation.  Therefore the useful role
+of S105 is narrower and sharper: provide finite labelled carriers for the
+residual terms that survive after the AP/exact-tiling comparison has already
+been chosen.
+
+S40 gives the positive structural placement.  Clebsch is the cut-space/folded
+cube side; the truncated octahedron is the `S4` permutohedron/order side.  The
+cycle-side information that matters for LRC is observer-relative and finer than
+these cut-side projections.  So HYP-2891 should be used as a label-retention
+and covariance/compression atlas feeding exact-tiling rigidity, not as a
+standalone graph-theoretic LRC invariant.
+
 ## Tournament Analysis
 
 Vertices are proof carriers:
 
 ```text
-AP_Jensen_labelled_functional,
+AP_exact_tiling_labelled_functional,
 Clebsch_tangent_residual_design,
 Bruhat_S4_compression_carrier,
 unital_tangent_secant_incidence,
@@ -150,7 +175,7 @@ The observable is `(preserves signed labels, finite exactness, compression
 relevance, scalar-loss warning)`.  The transitive path is:
 
 ```text
-AP_Jensen_labelled_functional
+AP_exact_tiling_labelled_functional
   > Clebsch_tangent_residual_design
   > Bruhat_S4_compression_carrier
   > unital_tangent_secant_incidence

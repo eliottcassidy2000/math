@@ -24,14 +24,16 @@ S105: Clebsch / Bruhat / unital-style carriers for LRC14 residuals
   tangent/secant labels.
 
 [4] Tournament-analysis proof-lens ranking
-  AP_Jensen_labelled_functional       score=(4, 4, 4, 3)
+  AP_exact_tiling_labelled_functional score=(4, 4, 4, 3)
   Clebsch_tangent_residual_design     score=(3, 4, 3, 3)
   Bruhat_S4_compression_carrier       score=(3, 3, 4, 2)
   unital_tangent_secant_incidence     score=(2, 4, 2, 3)
   scalar_additive_energy              score=(1, 1, 2, 1)
   Hamiltonian path:
-    AP_Jensen_labelled_functional > Clebsch_tangent_residual_design >
+    AP_exact_tiling_labelled_functional > Clebsch_tangent_residual_design >
     Bruhat_S4_compression_carrier > unital_tangent_secant_incidence > scalar_additive_energy
+  guardrail: this is not the refuted score-variance/Jensen route; the top
+             object is the finer scaling-invariant exact-tiling functional.
 
 Proof target emitted:
   Decompose the S104 residual leak over tangent Clebsch classes and Bruhat S4

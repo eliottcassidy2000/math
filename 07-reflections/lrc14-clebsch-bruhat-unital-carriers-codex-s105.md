@@ -9,9 +9,11 @@ missed depths.  So it cannot prove a scalar `q_t` inequality.  Its value is
 different: closed neighborhoods form a pair-balanced `2-(16,6,2)` design, so it
 is a covariance carrier.
 
-That is the right object after S31l and HYP-2890.  The residual is signed; the
-proof needs a Jensen/Schur-convex labelled functional.  Clebsch gives a finite
-way to keep pair labels while quotienting the 64 residual masks.
+That is the right object after S31l and HYP-2890, with the S31m correction
+included.  The score-variance/Jensen route is refuted as a coverage theorem;
+the top object is instead the scaling-invariant exact-tiling functional whose
+extremizers are `d*{1,...,13}`.  The residual is signed, so Clebsch is useful
+only insofar as it keeps pair labels while quotienting the 64 residual masks.
 
 The truncated octahedral graph is the Bruhat graph on `S4`: adjacent swaps of a
 four-slot word.  It has 24 vertices, 36 edges, 6 commutation squares, and 8
@@ -35,3 +37,10 @@ are finite AP/Freiman packets.
 
 No LRC14 proof is claimed, but this gives a sharper local shape for the
 remaining residual-leak lemma.
+
+Post-push incoming-work integration: mac-mini S40 identifies these as cut-side
+state spaces (folded cube/Clebsch and permutohedron/Bruhat).  KPS S31m says not
+to promote them into the final invariant: exact coverage is the complete
+nonzero residue system `Z_14 \ {0}` up to dilation, not a sparse design.  The
+correct use is therefore an atlas for labelled residual cancellation feeding
+exact-tiling rigidity.
