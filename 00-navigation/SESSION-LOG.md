@@ -1,3 +1,39 @@
+## codex-2026-06-22-S86b -- event inclusions root-imported and warning-free
+
+Pulled the concurrent KPS dense-cover and Bonferroni modules into the same
+formalization lane as the witness-attainment bridge.  Root-imported
+`TournamentH7.LRCDenseCovers` and `TournamentH7.LRCBonferroniMeasure`, then
+added `Verify` wrappers for `dense_covers_all_inner` and `toReal_bonferroni`.
+These give sorry-free Lean interfaces for the two event-level facts the p0 route
+keeps asking for: a pointwise `D ⊆ p0` dense-cover inclusion and the probability
+Bonferroni inequality `μ A + μ B - 1 ≤ μ (A ∩ B)`.
+
+Cleaned mathlib-facing warning noise in the refreshed dependency cone:
+`LRCDenseCovers` now uses `push Not` rather than deprecated `push_neg`, and
+older unused-parameter warnings in `BasePathSink`/`TransitiveH` are marked
+intentionally unused.  Focused `lake build TournamentH7.LRCDenseCovers`, aggregate
+`lake build TournamentH7.Verify`, and root `lake build TournamentH7` all pass.
+Stored transcripts:
+`05-knowledge/results/tournamenth7_verify_lrc_event_inclusions_codex_s86.out`
+and
+`05-knowledge/results/tournamenth7_root_lrc_event_inclusions_codex_s86.out`.
+The refreshed transcripts contain no warnings and no `sorryAx` for the new LRC
+event wrappers; each new theorem audits with only `propext`, `Classical.choice`,
+and `Quot.sound`.
+
+Tournament Analysis: vertices are event predicates and formal handoff nodes
+`{dense gap event D, inner-sector p0 event, measurable GOOD event, G_P event,
+Bonferroni intersection, positive witness, Mreach/lonely}`.  Edges are
+pointwise inclusion, measure monotonicity, and Bonferroni consumption rather than
+runner arcs.  The pressure Hamiltonian path is
+`D -> p0 -> measGP/cap margin -> Bonferroni intersection -> witnessG2>0 -> PartA -> Mreach`.
+This preserves the LRC predicate route from event inequalities to a lonely time,
+but destroys phase geometry, finite-ruler arc counts, and the actual definition
+of `GOOD(E)`.  Challenged assumption: root-importing more conditional wrappers
+alone completes LRC14.  It does not; the sharp remaining mathlib targets are the
+actual event definitions plus monotonicity/measure instantiations tying these
+sorry-free inclusions into `LRCWitnessBonferroni` and `LRCWitnessPartA`.
+
 ## mac-mini-2026-06-22-S25 -- FORMALIZED the witness-attainment step (sorry-free Mathlib) + closed the WIDE witness-floor reduction
 Task: finish the analytic closure + formalize everything. Two concrete advances (+ T=12*zeta(3) earlier, HYP-2812, integrated by opus into the R-tail bound).
 - **FORMALIZED (HYP-2833): `LRCWitnessAttainment.lean` -- BUILDS CLEAN, SORRY-FREE** (axioms = [propext, Classical.choice, Quot.sound], no sorryAx, verified by #print axioms). Proves with Mathlib: the loneliness margin L(t)=min_i dist(v_i t, Z) is CONTINUOUS + 1-PERIODIC, ATTAINS its max on the compact [0,1] (IsCompact.exists_isMaxOn), and margin>=1/n => Lonely n v t; exists_lonely_of_margin_ge. This discharges the MATH of the skeleton's previously-`sorry` `lonely_of_Mreach_ge` (the slow-fast / sup-attained witness step) and makes the opaque `Mreach` concrete. The team can import it to wire the skeleton.

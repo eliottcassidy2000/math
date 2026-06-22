@@ -20,7 +20,7 @@ namespace Tournament
 /-! ### Reversal permutation -/
 
 /-- The reversal permutation on Fin n: σ(i) = ⟨n - 1 - i.val, _⟩. -/
-def revPerm (n : ℕ) (hn : 1 ≤ n) : Equiv.Perm (Fin n) where
+def revPerm (n : ℕ) (_hn : 1 ≤ n) : Equiv.Perm (Fin n) where
   toFun i := ⟨n - 1 - i.val, by have := i.is_lt; omega⟩
   invFun i := ⟨n - 1 - i.val, by have := i.is_lt; omega⟩
   left_inv i := by
@@ -76,7 +76,7 @@ axiom transitive_alphaCount_zero (n : ℕ) (k : ℕ) (hk : 1 ≤ k) :
     alphaCount k (transitiveTournament n) = 0
 
 /-- **Theorem.** H(transitiveTournament n) = 1 for all n ≥ 1. -/
-theorem H_transitive_eq_one_from_ocf (n : ℕ) (hn : 1 ≤ n) :
+theorem H_transitive_eq_one_from_ocf (n : ℕ) (_hn : 1 ≤ n) :
     H (transitiveTournament n) = 1 := by
   have hocf := ocf (transitiveTournament n)
   have h1 := transitive_alphaCount_zero n 1 (by omega)

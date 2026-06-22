@@ -51,6 +51,8 @@ import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCWitnessAttainmentBridge
+import TournamentH7.LRCDenseCovers
+import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCL7Discrepancy
 
 open Tournament
@@ -157,6 +159,24 @@ theorem lrc_witness_attainment_margin_sup_audit
     ∃ t : ℝ, LonelyRunner.Lonely 14 v t :=
   TournamentH7.LRCWitness.exists_lonely_of_margin_sSup_ge v hv hmargin
 #print axioms lrc_witness_attainment_margin_sup_audit
+
+/-! ### LRC14 witness/p0 event-level elementary inclusions -/
+
+theorem lrc_dense_covers_all_inner_audit
+    (S : Finset ℝ) (hsub : ∀ s ∈ S, 0 ≤ s ∧ s < 1) (h0 : (0 : ℝ) ∈ S)
+    (hdense : LonelyRunner.DenseCovers.Dense17 S) :
+    ∀ j : ℕ, 1 ≤ j → j ≤ 6 →
+      ∃ s ∈ S, (j : ℝ) / 7 ≤ s ∧ s < ((j : ℝ) + 1) / 7 :=
+  LonelyRunner.DenseCovers.dense_covers_all_inner S hsub h0 hdense
+#print axioms lrc_dense_covers_all_inner_audit
+
+theorem lrc_bonferroni_toReal_audit
+    {α : Type*} [MeasurableSpace α]
+    (μ : MeasureTheory.Measure α) [MeasureTheory.IsProbabilityMeasure μ]
+    (A B : Set α) (hB : MeasurableSet B) :
+    (μ A).toReal + (μ B).toReal - 1 ≤ (μ (A ∩ B)).toReal :=
+  LonelyRunner.BonferroniMeasure.toReal_bonferroni μ A B hB
+#print axioms lrc_bonferroni_toReal_audit
 
 /-! ### LRC14 THM-563 period-max certificate kernel -/
 

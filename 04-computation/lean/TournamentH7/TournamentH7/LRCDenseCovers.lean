@@ -37,7 +37,7 @@ def Dense17 (S : Finset ℝ) : Prop :=
 anchor `0 ∈ S`, then every inner sector `[j/7, (j+1)/7)` (`1 ≤ j ≤ 6`) contains a
 phase of `S`. -/
 theorem inner_sector_covered
-    (S : Finset ℝ) (hsub : ∀ s ∈ S, 0 ≤ s ∧ s < 1) (h0 : (0 : ℝ) ∈ S)
+    (S : Finset ℝ) (_hsub : ∀ s ∈ S, 0 ≤ s ∧ s < 1) (h0 : (0 : ℝ) ∈ S)
     (hdense : Dense17 S) (j : ℕ) (hj1 : 1 ≤ j) (hj6 : j ≤ 6) :
     ∃ s ∈ S, (j : ℝ) / 7 ≤ s ∧ s < ((j : ℝ) + 1) / 7 := by
   obtain ⟨hadj, hwrap⟩ := hdense
@@ -60,7 +60,7 @@ theorem inner_sector_covered
   -- it suffices to show jr ≤ a (then a is in the sector)
   refine ⟨a, haS, ?_, ha_lt_jr1⟩
   by_contra hlt
-  push_neg at hlt          -- hlt : a < jr
+  push Not at hlt          -- hlt : a < jr
   -- CASE on whether some phase exceeds a
   by_cases hU : ∃ c ∈ S, a < c
   · -- let b be the least phase > a; it is the adjacent successor of a
@@ -80,7 +80,7 @@ theorem inner_sector_covered
     -- b ≥ jr1 : since a is the max of {< jr1}, anything > a is ≥ jr1
     have hb_ge : jr1 ≤ b := by
       by_contra hbb
-      push_neg at hbb       -- b < jr1
+      push Not at hbb       -- b < jr1
       have hbL : b ∈ S.filter (· < jr1) := by rw [mem_filter]; exact ⟨hbS, hbb⟩
       have : b ≤ a := le_max' _ b hbL
       linarith
@@ -91,7 +91,7 @@ theorem inner_sector_covered
     have hamax : ∀ c ∈ S, c ≤ a := by
       intro c hcS
       by_contra hc
-      push_neg at hc            -- hc : a < c
+      push Not at hc            -- hc : a < c
       exact hU ⟨c, hcS, hc⟩
     have hwrapa : 1 - a ≤ 1 / 7 := hwrap a haS hamax
     -- so a ≥ 6/7 ≥ jr, contradicting a < jr

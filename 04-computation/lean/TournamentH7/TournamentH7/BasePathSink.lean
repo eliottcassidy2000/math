@@ -40,7 +40,7 @@ theorem base_path_sink_no_out_to_one (T : Tournament n) (hbp : HasBasePath T)
   This is true for ANY tournament — we don't even need HasBasePath. -/
 
 /-- For any tournament T, vertex v has out-degree at most n - 1. -/
-theorem outDegree_le_n_minus_one (T : Tournament n) (hn : 1 ≤ n) (v : Fin n) :
+theorem outDegree_le_n_minus_one (T : Tournament n) (_hn : 1 ≤ n) (v : Fin n) :
     T.outDegree v ≤ n - 1 := by
   unfold Tournament.outDegree
   show (Finset.univ.filter (fun w : Fin n => T.arc v w = true)).card ≤ n - 1
@@ -156,7 +156,7 @@ theorem regular_basepath_n_ge_three (T : Tournament n) (hbp : HasBasePath T)
 /-- For a regular HasBasePath tournament on n vertices, the (n-1)/2
     score at vertex 0 must satisfy (n-1)/2 ≤ n - 2 ⟹ n ≥ 3 (always true
     when n ≥ 3 already). -/
-theorem regular_basepath_sink_bound (T : Tournament n) (hbp : HasBasePath T)
+theorem regular_basepath_sink_bound (T : Tournament n) (_hbp : HasBasePath T)
     (hn : 3 ≤ n) (hreg : IsRegular T) :
     2 * T.outDegree ⟨0, by omega⟩ = n - 1 := by
   exact hreg _

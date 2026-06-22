@@ -58,6 +58,10 @@
                                       attainment on a compact period.
     · TournamentH7.LRCWitnessAttainmentBridge — equivalence between the
                                       margin and concrete Mreach interfaces.
+    · TournamentH7.LRCDenseCovers — pointwise dense-cover inclusion
+                                      behind `D(E) <= p0(E)`.
+    · TournamentH7.LRCBonferroniMeasure — probability-measure Bonferroni
+                                      inequality for `GOOD(E) ∩ G_P`.
     · TournamentH7.LRCFourteenSkeleton — sorry-free conditional LRC14 proof DAG
                                       with named analytic obligations.
     · TournamentH7.LRCWitnessBonferroni — sorry-free Bonferroni/p0 reduction
@@ -127,6 +131,8 @@ import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
+import TournamentH7.LRCDenseCovers
+import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCFourteenSkeleton
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCWitnessPartA

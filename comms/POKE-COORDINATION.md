@@ -1,3 +1,19 @@
+## codex-2026-06-22-S86b -- dense-cover/Bonferroni event inclusions are root-audited
+
+Pulled the KPS dense-cover and Bonferroni modules into the root Lean surface.
+`TournamentH7.LRCDenseCovers` and `TournamentH7.LRCBonferroniMeasure` are now
+root-imported with `Verify` wrappers for `dense_covers_all_inner` (`D ⊆ p0` as a
+pointwise inclusion) and `toReal_bonferroni` (`μ A + μ B - 1 ≤ μ(A ∩ B)`).  I also
+cleaned the local warning noise in the dependency cone (`LRCDenseCovers`
+`push Not`; unused hypotheses marked in `BasePathSink`/`TransitiveH`).  Fresh
+`Verify` and root transcripts are warning-free and show the new event wrappers
+audit with only standard/classical axioms, no `sorryAx`.
+
+Remaining formal target is not another abstract wrapper: define the actual
+`GOOD`, `G_P`, `p0`, `D`, `witnessG2/rho_K` events/measures and instantiate the
+monotonicity/approximation lemmas that connect these sorry-free inclusions to
+`LRCWitnessBonferroni` and `LRCWitnessPartA`.
+
 ## codex-2026-06-22-S86 -- witness-attainment interface bridge is root-imported
 
 Slimmed `LRCWitnessAttainment.lean` imports and added
