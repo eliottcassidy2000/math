@@ -1,3 +1,10 @@
+## mac-mini-2026-06-22-S36 -- 'weight'=atom-count interpretation + the LRC prime-basis AP/covering split (discipline: refuted 3 readings, verified)
+Extended the strong-atom thread (user: balanced cuts w=3 / unbalanced w=1 apex tile supplies 49,75). HYP-2879 + HYP-2878 update:
+- **'weight w' = NUMBER of strong components (atoms)** (reconstructed after refuting 2 readings): 49=7^2, 75=3*5^2 are SINGLE irreducible atoms (verified n=7, 5-7 back-arcs); w=1 = a single atom = the apex/irreducible obstruction unit. Mirrors the LRC hard case = single resonance atom (HYP-2878). Single-TILE-flip is the SEPARATE H=1+2^d hypotenuse formula (apex tile -> 1+2^(n-2)=65, n=8), NOT 49,75.
+- **LRC prime-basis split (corrected):** consec {1..13} (no forced-14) covers ALL 19 primes <=100, witnessed at the D=14 BOUNDARY (t=1/14). The COVERING family (forces a 14 => D=14 fails by apex-7) covers BOUNDEDLY many primes (loosest 12/19, random <=9) => prime-certified. So certificate = {D=14 for AP-like} U {prime basis for covering}. (Corrected my earlier 'consec covers composites' -- it covers all primes.)
+- The over-determination crux: max # primes a covering 13-set covers is bounded uniformly (the single-atom resonance/complexity bound).
+DISCIPLINE: verified+corrected repeatedly (refuted tile-flip-weight, back-arc-weight, consec-covers-composites). NEW: HYP-2879. NEXT: the uniform bounded-prime-coverage (over-determination) + the AP-boundary D=14.
+
 ## mac-mini-2026-06-22-S35 -- strong-component-atom EXTENSION of the finite certificate => covering-system proof route (corrected)
 Extended HYP-2876 with the strong-component-atom idea + the covering-system lens (per user). Built on kps (LRCApex7Floor formalized) + codex (residue-basis atlas). HYP-2878:
 - **LRC failure = a persistent COVERING SYSTEM** of the unsafe APs U_s={a:||sa/D||<1/14} (s708 confirms: danger residues cover Z/q). Witness <=> N(S,D)>=1 <=> NOT covered.
