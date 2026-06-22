@@ -62,6 +62,8 @@
                                       behind `D(E) <= p0(E)`.
     · TournamentH7.LRCBonferroniMeasure — probability-measure Bonferroni
                                       inequality for `GOOD(E) ∩ G_P`.
+    · TournamentH7.LRCEventMeasureBridge — generic event-to-shape measure
+                                      handoffs for Bonferroni and `D <= p0`.
     · TournamentH7.LRCFourteenSkeleton — sorry-free conditional LRC14 proof DAG
                                       with named analytic obligations.
     · TournamentH7.LRCWitnessBonferroni — sorry-free Bonferroni/p0 reduction
@@ -133,6 +135,7 @@ import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCBonferroniMeasure
+import TournamentH7.LRCEventMeasureBridge
 import TournamentH7.LRCFourteenSkeleton
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCWitnessPartA

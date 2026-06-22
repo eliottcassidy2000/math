@@ -53,6 +53,7 @@ import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCBonferroniMeasure
+import TournamentH7.LRCEventMeasureBridge
 import TournamentH7.LRCL7Discrepancy
 
 open Tournament
@@ -177,6 +178,36 @@ theorem lrc_bonferroni_toReal_audit
     (μ A).toReal + (μ B).toReal - 1 ≤ (μ (A ∩ B)).toReal :=
   LonelyRunner.BonferroniMeasure.toReal_bonferroni μ A B hB
 #print axioms lrc_bonferroni_toReal_audit
+
+theorem lrc_event_measure_bridge_bonferroni_audit
+    {α : Type*} [MeasurableSpace α]
+    (μ : MeasureTheory.Measure α) [MeasureTheory.IsProbabilityMeasure μ]
+    (GOOD GP : LonelyRunner.LRC14.Shape → Set α)
+    (hGP : ∀ s, MeasurableSet (GP s))
+    (nuShape measGP : LonelyRunner.LRC14.Shape → ℝ)
+    (hnu : ∀ s, nuShape s = (μ (GOOD s)).toReal)
+    (hgp : ∀ s, measGP s = (μ (GP s)).toReal)
+    (hwitness :
+      ∀ s, LonelyRunner.LRC14.witnessG2 s =
+        (μ ((GOOD s) ∩ (GP s))).toReal) :
+    ∀ s, nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s :=
+  LonelyRunner.LRC14.EventMeasureBridge.shape_bonferroni_handoff
+    μ GOOD GP hGP nuShape measGP hnu hgp hwitness
+#print axioms lrc_event_measure_bridge_bonferroni_audit
+
+theorem lrc_event_measure_bridge_D_le_p0_audit
+    {α : Type*} [MeasurableSpace α]
+    (μ : MeasureTheory.Measure α) [MeasureTheory.IsProbabilityMeasure μ]
+    (Dset P0set : LonelyRunner.LRC14.Shape → Set α)
+    (nuShape DShape p0Shape : LonelyRunner.LRC14.Shape → ℝ)
+    (hsub : ∀ s, Dset s ⊆ P0set s)
+    (hDmeasure : ∀ s, DShape s = (μ (Dset s)).toReal)
+    (hp0measure : ∀ s, p0Shape s = (μ (P0set s)).toReal)
+    (hDdef : ∀ s, DShape s = 1 - nuShape s) :
+    ∀ s, (1 - nuShape s) ≤ p0Shape s :=
+  LonelyRunner.LRC14.EventMeasureBridge.shape_D_le_p0_handoff
+    μ Dset P0set nuShape DShape p0Shape hsub hDmeasure hp0measure hDdef
+#print axioms lrc_event_measure_bridge_D_le_p0_audit
 
 /-! ### LRC14 THM-563 period-max certificate kernel -/
 

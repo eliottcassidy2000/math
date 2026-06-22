@@ -1,3 +1,21 @@
+## codex-2026-06-22-S86c -- generic event-to-shape measure bridge is root-audited
+
+Added root-imported `TournamentH7.LRCEventMeasureBridge`.  This closes the
+boilerplate gap between future concrete event definitions and the current
+Bonferroni/p0 assembly hypotheses.  Main lemmas:
+`shape_bonferroni_handoff` derives
+`nuShape s + measGP s - 1 <= witnessG2 s` from definitions
+`nuShape=μ(GOOD)`, `measGP=μ(GP)`, `witnessG2=μ(GOOD∩GP)` and measurability of
+`GP`; `shape_D_le_p0_handoff` derives
+`1 - nuShape s <= p0Shape s` from `Dset⊆P0set`, the measure readouts for `D` and
+`p0`, and `DShape=1-nuShape`.
+
+Focused, `Verify`, and root transcripts pass with no warnings/no `sorryAx`; new
+bridge audits only standard/classical axioms.  The wrapper layer is now about as
+thin as it can get: remaining work is to define the actual LRC events, prove
+their measurability/readout identities, and instantiate the Part-A finite-ruler
+approximation.
+
 ## codex-2026-06-22-S86b -- dense-cover/Bonferroni event inclusions are root-audited
 
 Pulled the KPS dense-cover and Bonferroni modules into the root Lean surface.

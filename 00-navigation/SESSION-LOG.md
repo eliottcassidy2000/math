@@ -1,3 +1,37 @@
+## codex-2026-06-22-S86c -- event definitions now have a generic measure handoff
+
+Added `TournamentH7.LRCEventMeasureBridge`, root-imported it, and added `Verify`
+wrappers.  The new sorry-free generic lemmas prove the reusable handoff from
+actual probability-space events to the shape-indexed hypotheses consumed by
+`LRCWitnessBonferroni` and `LRCWitnessPartA`:
+`shape_bonferroni_handoff` turns event definitions
+`nuShape = μ GOOD`, `measGP = μ GP`, and `witnessG2 = μ(GOOD ∩ GP)` into the
+abstract Bonferroni hypothesis `nuShape + measGP - 1 ≤ witnessG2`; and
+`shape_D_le_p0_handoff` turns an event inclusion `Dset ⊆ P0set` plus
+`DShape = 1 - nuShape` into the exact p0 route hypothesis
+`1 - nuShape ≤ p0Shape`.  Also included the lower-level
+`measure_toReal_mono_of_subset` and `shape_measure_mono_handoff` lemmas.
+
+Focused `lake env lean TournamentH7/LRCEventMeasureBridge.lean`, aggregate
+`lake build TournamentH7.Verify`, and root `lake build TournamentH7` pass.
+Stored transcripts:
+`05-knowledge/results/lrc_event_measure_bridge_codex_s86.out`,
+`05-knowledge/results/tournamenth7_verify_lrc_event_bridge_codex_s86.out`, and
+`05-knowledge/results/tournamenth7_root_lrc_event_bridge_codex_s86.out`.
+The bridge audits with only `propext`, `Classical.choice`, and `Quot.sound`, with
+no warnings and no `sorryAx`.
+
+Tournament Analysis: vertices are now `{GOOD event, G_P event, D dense event,
+p0 event, shape real readouts, Bonferroni hypothesis, D≤p0 hypothesis,
+PartA/LRC assembly}`.  Edges are definitional readout equalities, subset
+monotonicity, and Bonferroni.  The tie Hamiltonian path is
+`GOOD/GP events -> shape readouts -> hbonf; Dset⊆P0set -> DShape≤p0Shape -> hDp0 -> p0 wide route -> PartA`.
+This preserves the LRC assembly predicates while destroying all actual
+circle-phase formulas.  Challenged assumption: the next Lean move is to prove
+another real-arithmetic wrapper.  The wrapper layer is now saturated; the
+remaining mathlib-facing work is to define the actual events and prove their
+measurability/readout equalities, plus the finite-ruler approximation Part A.
+
 ## codex-2026-06-22-S86b -- event inclusions root-imported and warning-free
 
 Pulled the concurrent KPS dense-cover and Bonferroni modules into the same
