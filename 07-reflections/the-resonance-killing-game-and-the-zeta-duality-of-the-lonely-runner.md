@@ -37,6 +37,21 @@ This is exactly the project's *consec-extremality* (the sector route's consec-ma
 now read as a min–max of the killing game: **the AP minimizes `M` because it is the tightest packing of
 resonance-killers.** The disproof's failure IS the proof's mechanism.
 
+## The killing budget (the sharpest round)
+Sharpen to one free speed: `{1..12, v}` (`lrc_sharpest_disproof_kps.py`). A single `v` kills resonance
+`b=13` (`v≡0 mod 13`) **or** `b=14` (`v≡0 mod 14`), never both cheaply — both needs `v≡0 mod lcm(13,14)=182`.
+The spectrum:
+- `v=13` (AP): `M=1/14` — the unique minimum over `v∈[13,399]`.
+- kill `b=14` only (`v=14,28,42,98`): `b=13` reopens, `M=1/13`.
+- kill **both** (`v=182,364,2366`): `M = 14/183, 28/365, 182/2367 → 1/13` from below — the huge double-killer
+  equidistributes, its thin arc misses the `b=13` neighborhood, which survives at `≈1/13`. **Never `<1/14`.**
+
+So the conjecture is a **budget**: 13 speeds buy 13 *cheap* (small) resonance-killers — exactly enough for
+`b=1,…,13`, and the AP spends them perfectly. Killing `b=14` too is over-budget: you must either drop a
+`b≤13` killer (that resonance reopens at `1/b>1/14`) or buy a *bulk* killer divisible by several `b`
+(large ⇒ equidistributes ⇒ misses the neighborhoods). Either way `M≥1/14`. `13 = 14−1` cheap killers
+is the whole story; `LRC(n)` is "`n−1` speeds, `n−1` cheap killers, first survivor `n`."
+
 ## Why the floor never reaches 0 — the ζ(2) half
 Killing a resonance at the *exact* point `a/b` (a divisible speed) does **not** kill its lonely
 *neighborhood* (width `~1/(bV)`): a large killer has a *thin* danger arc `1/(7s)` that misses the

@@ -1,0 +1,17 @@
+{1..12, v} SPECTRUM -- which resonances does v kill, and resulting M:  1/14 = 0.07142857142857142
+  v=   13 (kills b=[13] of 13,14): M=   1/14=0.0714   witness b=14
+  v=   14 (kills b=[14] of 13,14): M=   1/13=0.0769   witness b=13
+  v=   26 (kills b=[13] of 13,14): M=   2/27=0.0741   witness b=27
+  v=   28 (kills b=[14] of 13,14): M=   1/13=0.0769   witness b=13
+  v=   39 (kills b=[13] of 13,14): M=   3/40=0.0750   witness b=40
+  v=   42 (kills b=[14] of 13,14): M=   1/13=0.0769   witness b=13
+  v=   91 (kills b=[13] of 13,14): M=   7/92=0.0761   witness b=92
+  v=   98 (kills b=[14] of 13,14): M=   1/13=0.0769   witness b=13
+  v=  182 (kills b=[13, 14] of 13,14): M= 14/183=0.0765   witness b=183
+  v=  364 (kills b=[13, 14] of 13,14): M= 28/365=0.0767   witness b=365
+  v= 2366 (kills b=[13, 14] of 13,14): M=182/2367=0.0769   witness b=2367
+
+  MIN over v in [13,399] of M({1..12,v}) = 1/14 = 0.0714  (at v=13 = the AP)
+  => floor 1/14 HOLDS: one speed kills b=13 XOR b=14 cheaply;
+     killing BOTH needs v=182 (huge) which EQUIDISTRIBUTES and misses the neighborhoods (M~1/13).
+     13 speeds give 13 cheap killers -- exactly enough for b=1..13, never b=1..14. The AP is tight.
