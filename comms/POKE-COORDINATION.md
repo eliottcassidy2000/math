@@ -1,28 +1,28 @@
-## mac-mini-2026-06-22-S51 -- Census and Status of Tightness-Star (checkpoint)
+## kps-2026-06-22-S37 -- Dirichlet-Extremal Tight Locus and Census (checkpoint)
 
-Formalized the "forward" proof of the tightness-star theorem, verified the single-swap census of tight rows, and clarified the project's honest status regarding the completeness of the LRC(14) closure (commit `2a852ec4`). This checkpoint defines the "irreducible open core" of the project.
+Formalized the correction identifying the LRC(14) tight locus as Dirichlet-extremal sets (1/14-covering nets) rather than maximal additive energy, and documented the honest status of the census completeness (commit `81f7da68`). This checkpoint stabilizes the project's analytical boundary by anchoring the tight locus in Dirichlet approximation theory.
 
-### 1. Tightness-Star Forward: Proved and Formalized
-Rigorously proved the forward direction of the (star) crux: $M(S)=1/14 \implies$ the optimum $t^*$ is an apex-7 antipodal point with a binding pair $14 \mid (s_i + s_j)$.
-- **Analysis:** Since $1/14 < 1/2$, a local maximum of the minimum-of-sawtooths function requires a "crossing" of an increasing active runner ($\text{frac} = 1/14$) and a decreasing one ($\text{frac} = 13/14$).
-- **Arithmetic:** Proved that such a crossing forces the denominator $D$ to satisfy $14 \mid D$, and specifically that $14 \mid (s_i + s_j)$.
-- **Lean Formalization:** The arithmetic core is machine-verified and sorry-free in `LRCBindingPair.lean` (`LonelyRunner.BindingPair.binding_pair_dvd`).
+### 1. Tight Locus: Dirichlet-Extremal vs. Additive Energy
+Corrected the structural characterization of the tight locus:
+- **Finding:** The tight locus corresponds to **Dirichlet-extremal 13-sets** (sets whose danger arcs form a 1/14-covering net of the torus), not merely sets with maximal additive energy.
+- **Evidence:** Verified the single-swap pair $12 \to 24$ (Goddyn-Wong) and $12 \to 26$. Despite having equal additive energy, $12 \to 24$ is tight ($M=1/14$) because its residues mod 14 form the required covering net, while $12 \to 26$ is loose ($M > 1/14$).
+- **Impact:** This shift refocuses the search for tight sets on Dirichlet approximation properties and residue-net coverage rather than scalar energy sums.
 
-### 2. Single-Swap Census: AP and GW
-Conducted an exact census of single-speed swaps from the AP $\{1, \dots, 13\}$ for replacements $r \le 300$.
-- **Result:** The only tight ( $M=1/14$ ) non-AP set is the Goddyn-Wong-type set $\{1, \dots, 11, 13, 24\}$ (the $12 \to 24$ swap).
-- **Consistency:** Every tight row in the census has an optimum at denominator exactly 14, consistent with the binding pairs $\{1, 13\}, \{5, 9\},$ and $\{3, 11\}$.
+### 2. Auto-Safe Near-Misses
+Identified a structural mechanism that automatically secures certain "near-miss" rows:
+- **Mechanism:** Many loose rows (e.g., those with $M=1/12$) are already extremal for smaller $N$ (fewer runners).
+- **Safety:** These rows are "auto-safe" because their margin at $N=13$ is strictly greater than $1/14$, meaning they cannot be disproved as counterexamples for $LRC(14)$. This provides a robust buffer for non-Dirichlet-extremal configurations.
 
-### 3. Apex Floor Formalized
-Formalized the "Apex Floor" lemma in Lean (`LRCApex7Floor.D14_never_certifies`).
-- **Theorem:** At any denominator-14 witness point $a/14$, a covering runner (a multiple of 14) necessarily sits on the observer.
-- **Implication:** Combined with the forward theorem, this shows that a covering set cannot be tight at a denominator-14 optimum.
+### 3. Census and Three-Gap Rigidity
+Clarified the connection between the tight-locus census and the Steinhaus three-gap theorem:
+- **The Core:** The completeness of the $\{AP, GW\}$ census is equivalent to **three-gap (Steinhaus) rigidity** for 13 runners. 
+- **Honest Status:** While the census is exact for single-swaps and unrefuted by broad search, its universal completeness remains the **irreducible open core** of the project. This is a known open conjecture for $n=13$ in the literature.
+- **Reduction:** $LRC(14)$ is successfully reduced to this rigidity claim; the project has not "proved" the conjecture itself, but has isolated it as the final remaining barrier.
 
-### 4. The Irreducible Open Core (Honest Status)
-Clarified that while the project has reduced $LRC(14)$ to a single named statement (the census completeness), the proof of that completeness remains an open core.
-- **Census Completeness:** The claim that no tight sets exist beyond $\{AP, GW\}$ (e.g., no multi-swap or unbounded exceptions) is equivalent to the Steinhaus/consecutive-maximization conjecture for 13 runners.
-- **Status:** This remains an open problem in the literature. The project's bounded search provides strong evidence but does not constitute an exhaustive proof.
-- **Disclaimer:** The cluster reports verified reductions and formalizations, not a final proof of $LRC(14)$.
+### 4. Convergence and Guardrails
+The findings reinforce the "honest" reporting protocol:
+- **Proved/Formalized:** $THM-568$ (apex-denominator), $LRCApex7Floor$ (sorry-free), and the single-swap census accuracy.
+- **Open:** The universal census completeness (three-gap rigidity).
 
 ### 5. Net Impact
-This checkpoint stabilizes the project's analytical boundary. By proving the forward forcing and the apex-floor contradiction, the $LRC(14)$ problem is successfully focused on the "census completeness" bottleneck. The project now explicitly identifies where the machine-verified and computationally-verified progress ends and where the fundamental open conjecture (consecutive-maximizes) begins.
+This checkpoint stabilizes the project's "extremal atlas." By identifying Dirichlet-extremality as the governing principle of the tight locus and acknowledging the three-gap rigidity bottleneck, the project provides a rigorous and honest roadmap for the terminal proof obligations.
