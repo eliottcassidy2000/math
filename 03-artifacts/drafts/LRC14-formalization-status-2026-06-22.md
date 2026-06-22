@@ -89,7 +89,12 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   bound is supplied.  This formalizes the factor-six bookkeeping saving; the
   analytic `B_j(E')` construction and component readout are still open.  This
   complements the incoming `LRCMarginalUniform` atom for one-speed sector
-  measure bounds in the same HYP-2840 hp0cap/far-peel route.
+  measure bounds in the same HYP-2840 hp0cap/far-peel route.  S87b root-imports
+  and `Verify`-audits both support atoms, with a clean combined transcript at
+  `lrc14_hyp2840_support_atoms_lean_codex_s87b.out`.  After KPS S31c these
+  atoms are best routed through the far-element/decorrelation half of
+  "consec maximizes `L_y`" rather than treated as the whole direct hp0cap
+  backbone.
 - `LRCWitnessFloorConcrete` — `measGP − p0 ≤ μ(coverSetᶜ ∩ safeSet)`, with the
   carrier inside `safeSet`.  Codex S86g adds the verified margin form:
   `p0≤cap−delta` and `cap≤measGP` imply

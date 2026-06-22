@@ -33,6 +33,16 @@ measure atom for HYP-2840; this HYP-2841 module proves the adjacent finite
 disjoint-cell counting atom. They are complementary pieces of the same
 decorrelation/Vitali/far-peel pipeline.
 
+S87b addendum: `LRCMarginalUniform.lean` is now root-imported and `Verify`-
+audited next to `LRCArcComplexity.lean`; its unused-hypothesis warnings were
+removed by marking the unused interval-side assumptions intentionally unused.
+Combined support-atom transcript:
+`05-knowledge/results/lrc14_hyp2840_support_atoms_lean_codex_s87b.out`.
+After KPS S31c, the cleanest interpretation is that these atoms support the
+far-element/decorrelation half of "consec maximizes `L_y`" in the THM-534 route:
+`LRCMarginalUniform` supplies one-speed sector measure, while `LRCArcComplexity`
+keeps the exactly-one-miss variation ledger at `7*sumE` rather than `42*sumE`.
+
 ## Lean status
 
 New module:

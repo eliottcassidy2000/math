@@ -19265,6 +19265,20 @@ counted once against a common breakpoint partition rather than six times.
 During pre-commit sync, KPS S31 added `LRCMarginalUniform.lean`, the marginal
 one-speed sector-measure atom for the same HYP-2840 route; this checkpoint is
 the complementary finite disjoint-cell counting atom.
+S87b then made the KPS atom first-class in the root/audit surface: removed its
+unused-hypothesis warnings by marking the unused interval-side assumptions,
+imported `TournamentH7.LRCMarginalUniform` through the root and `Verify`, and
+added audit wrappers for `slowμ_fract_Ico_le` and `slowμ_fract_sector_le`.
+The combined build
+`lake build TournamentH7.LRCMarginalUniform TournamentH7.LRCArcComplexity TournamentH7.Verify`
+is saved at
+`05-knowledge/results/lrc14_hyp2840_support_atoms_lean_codex_s87b.out` and
+greps clean for warnings, errors, `sorryAx`, `declaration uses .sorry`, and
+`failed`.
+After the S31c pull, this should be read in the combined route: THM-534's
+`p0<=L_y` remains the cleaner hp0cap backbone, and the marginal-uniformity plus
+arc-complexity atoms support the far-element/decorrelation half of proving
+consecutive rows maximize `L_y`.
 
 Added `TournamentH7.LRCArcComplexity` and wired it into the root import and
 `Verify`.  The new sorry-free finite lemmas prove that a pairwise-disjoint

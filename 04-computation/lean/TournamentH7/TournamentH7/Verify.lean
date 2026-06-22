@@ -55,6 +55,7 @@ import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCCoverBound
+import TournamentH7.LRCMarginalUniform
 import TournamentH7.LRCArcComplexity
 import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
@@ -525,6 +526,24 @@ theorem lrc_cover_bound_slowμ_coverSet_lt_cap_audit
   LonelyRunner.DenseCovers.slowμ_coverSet_lt_cap
     E p0decorr Q capv hcap hbig
 #print axioms lrc_cover_bound_slowμ_coverSet_lt_cap_audit
+
+theorem lrc_marginal_uniform_slowμ_fract_Ico_le_audit
+    (w : ℕ) (hw : 1 ≤ w) {a b : ℝ}
+    (ha : 0 ≤ a) (hab : a ≤ b) (hb : b ≤ 1) :
+    LonelyRunner.DenseCovers.slowμ
+        {x | Int.fract ((w : ℝ) * x) ∈ Set.Ico a b} ≤
+      ENNReal.ofReal (b - a) :=
+  LonelyRunner.MarginalUniform.slowμ_fract_Ico_le w hw ha hab hb
+#print axioms lrc_marginal_uniform_slowμ_fract_Ico_le_audit
+
+theorem lrc_marginal_uniform_slowμ_fract_sector_le_audit
+    (w : ℕ) (hw : 1 ≤ w) (j : ℕ) (hj : j ≤ 6) :
+    LonelyRunner.DenseCovers.slowμ
+        {x | Int.fract ((w : ℝ) * x) ∈
+          Set.Ico ((j : ℝ) / 7) (((j : ℝ) + 1) / 7)} ≤
+      ENNReal.ofReal (1 / 7) :=
+  LonelyRunner.MarginalUniform.slowμ_fract_sector_le w hw j hj
+#print axioms lrc_marginal_uniform_slowμ_fract_sector_le_audit
 
 theorem lrc_arc_complexity_occupiedCount_le_cells_audit
     {ι α : Type*} [DecidableEq α]

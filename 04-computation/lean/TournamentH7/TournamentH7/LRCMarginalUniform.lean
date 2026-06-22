@@ -26,7 +26,7 @@ sub-interval `[a,b) ⊆ [0,1)`, the slow-time measure of `{x : frac(w·x) ∈ [a
 at most `b - a`.  Proof: the set (in one period) is contained in the `w`-fold cover
 `⋃_{i<w} [(a+i)/w, (b+i)/w)`, so its measure is `≤ Σ_{i<w} (b-a)/w = b-a`. -/
 theorem slowμ_fract_Ico_le (w : ℕ) (hw : 1 ≤ w) {a b : ℝ}
-    (ha : 0 ≤ a) (hab : a ≤ b) (hb : b ≤ 1) :
+    (_ha : 0 ≤ a) (_hab : a ≤ b) (_hb : b ≤ 1) :
     DenseCovers.slowμ {x | Int.fract ((w : ℝ) * x) ∈ Set.Ico a b} ≤
       ENNReal.ofReal (b - a) := by
   have hwR : (0 : ℝ) < w := by exact_mod_cast hw
