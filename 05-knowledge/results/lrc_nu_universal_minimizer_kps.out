@@ -1,0 +1,13 @@
+==============================================================================
+THM-527 witness route: is nu MINIMIZED at consecutive over ALL
+primitive k-shapes (including WIDE ones)?  (=> elementary closure)
+==============================================================================
+
+[scale-invariance check] nu(consec_8) vs nu(2*consec_8) vs nu(3*..):
+    c=1: nu = 691/735 = 0.940136
+    c=2: nu = 691/735 = 0.940136
+    c=3: nu = 691/735 = 0.940136
+    c=5: nu = 691/735 = 0.940136
+
+--- nu_min(k) over primitive shapes, exhaustive bounded + wide stress ---
+  k= 8 (4861 shapes): nu_min=691/735=0.94014  consec=0.94014

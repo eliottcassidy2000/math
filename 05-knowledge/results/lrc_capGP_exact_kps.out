@@ -1,0 +1,26 @@
+======================================================================
+Lemma B: cap_k = min_{|P|=13-k} meas(G_P), EXACT rational
+======================================================================
+  k= 8 (|P|=5): cap_k = min meas(G_P) = 2243/5880 = 0.381463  at P=(1, 5, 7, 8, 9)   == capRat
+  k= 9 (|P|=4): cap_k = min meas(G_P) = 1979/4004 = 0.494256  at P=(1, 11, 12, 13)   == capRat
+  k=10 (|P|=3): cap_k = min meas(G_P) = 55/91 = 0.604396  at P=(1, 12, 13)   == capRat
+  k=11 (|P|=2): cap_k = min meas(G_P) = 66/91 = 0.725275  at P=(1, 13)   == capRat
+  k=12 (|P|=1): cap_k = min meas(G_P) = 6/7 = 0.857143  at P=(1,)   == capRat
+  k=13 (|P|=0): cap_k = min meas(G_P) = 1 = 1.000000  at P=()   == capRat
+
+--- duality check: does min meas(G_P) == p0-plateau capRat? ---
+  ALL k match: True
+  => the small-part safe-measure floor IS the p0 Q-plateau cap_k.
+     (a genuine duality; same rational both routes.)
+
+--- Bonferroni floor with EXACT capGP ---
+  k= 8: nu_consec + cap - 1 = 691/735 + 2243/5880 - 1 = 1891/5880 = +0.321599
+  k= 9: nu_consec + cap - 1 = 247/294 + 1979/4004 - 1 = 28117/84084 = +0.334392
+  k=10: nu_consec + cap - 1 = 38/49 + 55/91 - 1 = 242/637 = +0.379906
+  k=11: nu_consec + cap - 1 = 1381/2205 + 66/91 - 1 = 10078/28665 = +0.351579
+  k=12: nu_consec + cap - 1 = 13823/24255 + 6/7 - 1 = 10358/24255 = +0.427046
+  k=13: nu_consec + cap - 1 = 477/1078 + 1 - 1 = 477/1078 = +0.442486
+
+  worst exact floor = 1891/5880 = 0.321599  (> 0 for all k=8..13)
+======================================================================
+DONE.

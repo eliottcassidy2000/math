@@ -1,0 +1,53 @@
+==============================================================================
+THM-527 witness route: nu floor (CORE exact + TAIL decorrelation)
+==============================================================================
+
+--- CORE: nu_consec(k) exact, and bounded exhaustive minimizer (W=k+4) ---
+  k= 8: nu_consec=691/735=0.94014  bounded_min=0.94014 (792 prim shapes, W=12)  consec IS min
+  k= 9: nu_consec=247/294=0.84014  bounded_min=0.84014 (1287 prim shapes, W=13)  consec IS min
+  k=10: nu_consec=38/49=0.77551  bounded_min=0.77551 (2002 prim shapes, W=14)  consec IS min
+  k=11: nu_consec=1381/2205=0.62630  bounded_min=0.62630 (3003 prim shapes, W=15)  consec IS min
+  k=12: nu_consec=13823/24255=0.56990  bounded_min=0.56990 (4368 prim shapes, W=16)  consec IS min
+  k=13: nu_consec=477/1078=0.44249  bounded_min=0.44249 (6188 prim shapes, W=17)  consec IS min
+
+--- ELEMENTARY Bonferroni floor: rho*_glob >= nu_consec(k)+cap_k-1 ---
+    k   nu_consec     cap_k       floor=nu+cap-1   >0?
+     8  0.94014     0.38146    +0.32160      YES
+     9  0.84014     0.49426    +0.33439      YES
+    10  0.77551     0.60440    +0.37991      YES
+    11  0.62630     0.72527    +0.35158      YES
+    12  0.56990     0.85714    +0.42705      YES
+    13  0.44249     1.00000    +0.44249      YES
+  k<=7: nu=1 (pigeonhole), rho*_glob=meas(G_P)>0.
+  worst elementary floor = 1891/5880 = 0.32160  (all k=8..13 > 0)
+
+--- TAIL: nu vs spread (float, N=200k); wide => nu -> 1 (SAFE direction) ---
+    For each k: nu_consec, then nu of progressively WIDER primitive shapes.
+  k=8: nu_consec~0.9402, need nu>=0.6185 (=1-cap).  spread-scan:
+      spread<=  11: min nu over 40 shapes = 0.9805  OK
+      spread<=  16: min nu over 40 shapes = 0.9849  OK
+      spread<=  32: min nu over 40 shapes = 0.9940  OK
+      spread<=  64: min nu over 40 shapes = 1.0000  OK
+      spread<= 128: min nu over 40 shapes = 0.9994  OK
+  k=9: nu_consec~0.8401, need nu>=0.5057 (=1-cap).  spread-scan:
+      spread<=  12: min nu over 40 shapes = 0.9401  OK
+      spread<=  18: min nu over 40 shapes = 0.9666  OK
+      spread<=  36: min nu over 40 shapes = 0.9868  OK
+      spread<=  72: min nu over 40 shapes = 0.9958  OK
+      spread<= 144: min nu over 40 shapes = 0.9980  OK
+  k=10: nu_consec~0.7755, need nu>=0.3956 (=1-cap).  spread-scan:
+      spread<=  13: min nu over 40 shapes = 0.9163  OK
+      spread<=  20: min nu over 40 shapes = 0.9455  OK
+      spread<=  40: min nu over 40 shapes = 0.9828  OK
+      spread<=  80: min nu over 40 shapes = 0.9950  OK
+      spread<= 160: min nu over 40 shapes = 0.9958  OK
+
+==============================================================================
+  SUMMARY: consec minimizes nu (exact, bounded); nu GROWS with spread
+  (decorrelation, SAFE).  => nu(E) >= nu_consec(k) for all E, hence the
+  elementary Bonferroni floor rho*_glob >= nu_consec(k)+cap_k-1 > 0 closes
+  the witness density positivity with NO compactness.  Remaining rigor:
+  the decorrelation TAIL bound nu(wide) > 1-cap_k (Weyl/ET, EASY direction).
+==============================================================================
+
+DONE.
