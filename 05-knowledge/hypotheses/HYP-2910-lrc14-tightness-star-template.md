@@ -1,6 +1,6 @@
 ---
 id: HYP-2910
-status: PROOF-TARGET / tightness-star template; THM-568 proves apex-denominator half, THM-569 formalizes the q=14 unit-grid split, THM-570 closes the apex-majority branch except half-step phase collisions
+status: PROOF-TARGET / tightness-star template; THM-568 proves apex-denominator half, THM-569 formalizes the q=14 unit-grid split, THM-571 closes the apex-majority branch
 source: codex-2026-06-22-S119
 tags: [lrc14, tight-locus, thm079-template, goddyn-wong, apex-7, covering-core, tournaments, open-q-108]
 depends_on:
@@ -16,6 +16,7 @@ depends_on:
   - THM-568
   - THM-569
   - THM-570
+  - THM-571
 related:
   - HYP-2909
   - OPEN-Q-108
@@ -30,6 +31,8 @@ results:
   - 05-knowledge/results/lrc_14covering_not_tight_kps.out
   - 04-computation/lrc14_apex_majority_shift_guard_codex_s121.py
   - 05-knowledge/results/lrc14_apex_majority_shift_guard_codex_s121.out
+  - 04-computation/lrc14_apex_majority_gamma_descent_codex_s122.py
+  - 05-knowledge/results/lrc14_apex_majority_gamma_descent_codex_s122.out
 ---
 
 # HYP-2910: exact tightness-star atlas supporting HYP-2909
@@ -67,9 +70,9 @@ and D=14*gcd(S).
 
 So a primitive tight optimum is forced to denominator `14`.  The residual is
 now the 14-covering branch: if `S` contains multiples of `14`, prove
-`M(S)>1/14`.  THM-568 plus S31v closes the case with at most six multiples of
-`14`; the live quantitative target is the `>=7` multiples-of-14
-second-moment/equidistribution branch over the 14-free core's `1/13` margin.
+`M(S)>1/14`.  THM-568 plus S31v closes the scale-separated case with at most
+six multiples of `14`; THM-571 closes the complementary apex-majority case
+with at least seven multiples of `14`.
 
 Codex S120/THM-569 now formalizes the exact `q=14` unit-grid split in Lean:
 
@@ -96,7 +99,7 @@ S = R union M14, R 14-free
 
 That is now the sharp formalization target after THM-569.
 
-Codex S121/THM-570 narrows the `>=7` multiples-of-14 branch further.  For
+Codex S121/THM-570 narrowed the `>=7` multiples-of-14 branch.  For
 
 ```text
 S = 14Q union R, |Q|>=7, |R|<=6,
@@ -118,6 +121,14 @@ The guardrail is exact: at `u=2/49`, `r=7` forbids all even shifts and
 `r=161` forbids all odd shifts.  So the next proof cannot be residue-only; it
 must use the strict `Q` interval, actual phase labels, or an exact-period /
 equidistribution estimate for half-step packets.
+
+Codex S122/THM-571 supplies that missing move for the actual apex-majority
+branch.  If two or more residual half-step speeds exist, then at least nine
+speeds are multiples of `7`.  Scale those by `7`, use the proven below-14 LRC
+input to choose a strict safe `7`-phase, and pigeonhole over the seven lifts.
+At most four speeds are not divisible by `7`, and each forbids at most one of
+the seven lifts.  Hence a lift survives.  Therefore every primitive 13-speed
+row with `|M14|>=7` is LRC14-safe.
 
 Equivalently, in the HYP-2908 language, a remaining bounded apex-7 over-cover
 must state-lift to a tournament-conflict-realizable connected binary packet
@@ -200,9 +211,10 @@ elementarily, so the remaining atom-forcing theorem can be stated as
 14-covering bounded atom  =>  not tight, in fact M>1/14.
 ```
 
-The `<=6` multiples-of-14 subcase is closed by the 14-free core margin and the
-comb-teeth union bound; the `>=7` subcase is the apex-localized Node-3
-second-moment branch.
+The `>=7` multiples-of-14 subcase is closed by THM-571.  The remaining
+template risk is the `<=6` side only insofar as S31v's comb-teeth union bound
+still has to be packaged with the bounded/intermediate finite-core census and
+scale-separation reduction.
 
 ## Tournament Analysis / assumption challenge
 
@@ -248,13 +260,13 @@ Every primitive top-balanced bounded covering LRC14 atom either
   (c) realizes the forbidden connected K3 packet, impossible by THM-201/343.
 ```
 
-After THM-568, the sharpest version is:
+After THM-568/THM-571, the sharpest remaining version is:
 
 ```text
-S = R union M14, where M14 are multiples of 14 and |M14|>=7.
-R is 14-free and has a 1/13-margin interval by LRC(<=13).
-Prove the multiples of 14 cannot cover that interval at threshold 1/14.
+S = C union L, where L contains at most six scale-large multiples of 14.
+Use S31v's comb-teeth union bound plus the bounded/intermediate finite-core
+census to prove the danger combs cannot cover the C-safe interval.
 ```
 
-Proving this localized equidistribution/second-moment theorem would make the
+Packaging this finite-core/scale-separated branch would make the
 THM-079 template genuinely close LRC14.

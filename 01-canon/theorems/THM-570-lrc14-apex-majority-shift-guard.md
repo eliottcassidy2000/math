@@ -1,7 +1,7 @@
 ---
 id: THM-570
-title: LRC(14) apex-majority shift guard -- the >=7 multiples-of-14 branch is closed unless the residual contains two half-step speeds
-status: PROVED for the stated subcase; remaining collision isolated as HYP-2911
+title: LRC(14) apex-majority shift guard -- the 14-phase sieve closes the zero/one half-step subcase
+status: PROVED for the stated subcase; half-step collision later resolved in the apex-majority branch by THM-571
 source: codex-2026-06-22-S121
 depends_on:
   - THM-523   # q-witness / covering-set reduction
@@ -11,6 +11,7 @@ depends_on:
 related:
   - HYP-2910
   - HYP-2911
+  - THM-571
   - OPEN-Q-108
 results:
   - 04-computation/lrc14_apex_majority_shift_guard_codex_s121.py
@@ -121,7 +122,8 @@ at least two r in R have gcd(r,14)=7.
 ```
 
 This is a much smaller Node-3 target than the previous "multiples of 14 cover
-the core margin" formulation.
+the core margin" formulation.  THM-571 resolves that target in the actual
+apex-majority branch by descending from the `14`-phase to the `7`-phase.
 
 ## Tournament Analysis / assumption challenge
 

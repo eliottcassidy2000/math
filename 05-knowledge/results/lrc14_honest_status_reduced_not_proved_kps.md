@@ -48,3 +48,11 @@ rigidity characterization of the tight locus, nothing less.
 
 → THM-568, LRCApexDenominator.lean, LRCApex7Floor.lean, the γ-trick (S31ad), HYP-2885/2906
 (consec-extremality = the open core), [[lrc14-thread]].
+
+## Codex S122 addendum
+
+THM-571 closes the `|M14|>=7` apex-majority branch by a `14 -> 7` gamma
+descent.  This is compatible with the honest verdict: it removes one named
+covering residual, but it does not prove the bounded/comparable core or the
+global tight-locus census.  The remaining open core is still the
+consec-maximizes / three-gap rigidity statement.

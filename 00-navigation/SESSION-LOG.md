@@ -20,6 +20,45 @@ Owner: keep working to PROVE and FORMALIZE LRC(14). Both tracks advanced.
 - **(ii) verified (search):** the only tight (M=1/14) primitive 13-sets found are AP {1..13} and GW {1..11,13,24}, BOTH optimum denominator exactly 14. Consistent with the {AP,GW} census.
 - **HONEST scope:** the Lean formalizes the ARITHMETIC core (frac/residue => 14|si+sj); the ANALYSIS half (local max => active inc/dec runners => the residue conditions) is NOT yet formalized (real-analysis). The full (star) still needs: the analysis bridge, the census (iv, kps/codex), M>1/14 (v, Node 2+3). LRC(14) NOT finished.
 NEW: LRCBindingPair.lean (verified), HYP-2909 updated. NEXT: formalize the analysis bridge (local-max => binding residues) OR the census completeness.
+## codex-2026-06-22-S122 -- THM-571 closes the apex-majority branch by 14 -> 7 gamma descent
+
+User asked to account for the recent proof through 13 total runners and push
+toward completing LRC14.  Web check: arXiv:2604.23906 proves the total-runner
+cases through 13, i.e. the `<=12` moving-speed theorem this repo uses as the
+below-frontier input for LRC14.  It does not automatically classify 13
+moving-speed tight loci.
+
+Pulled KPS-S31ad, which introduced the gamma trick.  I promoted the clean part
+to THM-571 and added exact audit
+`04-computation/lrc14_apex_majority_gamma_descent_codex_s122.py`, with stored
+output `05-knowledge/results/lrc14_apex_majority_gamma_descent_codex_s122.out`.
+The theorem closes every primitive 13-speed row with at least seven multiples
+of `14`, modulo LRC<=13:
+
+```text
+S = 14Q union R, |Q|>=7, |R|<=6.
+```
+
+If `R` has zero or one half-step speed (`gcd(r,14)=7`), THM-570's fourteen-lift
+sieve leaves a survivor.  If `R` has at least two half-step speeds, then at
+least nine speeds are multiples of `7`; scale by `7`, use LRC<=13 for a strict
+safe `7`-phase, and pigeonhole over seven lifts.  At most four speeds are not
+divisible by `7`, and each forbids at most one lift.  So a lift survives.
+
+This resolves HYP-2911 inside the actual apex-majority branch; HYP-2911 remains
+only as a guardrail against raw residue-only fourteen-shift arguments.  The
+remaining LRC14 proof burden is not the `|M14|>=7` residual anymore.  It is the
+`|M14|<=6` side as packaged through S31v: comb-teeth union bound plus the
+bounded/intermediate finite-core census and scale-separation reduction.  That
+is where the "census completeness / consec-maximizes" issue still lives.
+
+Post-rebase signal: mac-mini S52 and KPS S31ae correctly warn that the
+gamma-trick does not complete LRC14 globally; the small-prime descent has a
+counting gap in the bulk bounded/core case.  Added addenda to HYP-++2912 and
+`lrc14_honest_status_reduced_not_proved_kps.md`: THM-571 closes only the
+`|M14|>=7` apex-majority branch, while the bounded/comparable core and
+consec-maximizes census remain open.
+
 ## codex-2026-06-22-S121 -- THM-570 shift guard narrows the apex-majority residual to half-step collisions
 
 User asked to focus specifically on completing LRC14.  I pulled the latest

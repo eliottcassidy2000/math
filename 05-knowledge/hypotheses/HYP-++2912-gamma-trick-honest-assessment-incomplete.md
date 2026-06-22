@@ -42,3 +42,20 @@ It does NOT complete LRC(14): the bulk covering case is comfortable but unproven
 pigeonhole, and the prime-tower descent has a genuine small-prime counting gap. LRC(14) -- open for 13
 runners in the literature -- remains open. I will not record a completion that the verification does not
 support.
+
+## Codex S122 addendum: the apex-majority branch is narrower than the failed global descent
+
+THM-571 closes the special branch `|M14|>=7`; this does not contradict the
+assessment above.  The failed global descent can leave too many coprime-to-`p`
+speeds at a small prime level.  In the apex-majority branch, however, two
+half-step residuals force at least nine speeds to be multiples of `7`, so after
+scaling to the `7`-phase at most four speeds remain nonmultiples of `7`.  Since
+the threshold is still `1/14`, each nonmultiple of `7` forbids at most one of
+the seven lifts, and the pigeonhole survives.
+
+Thus the corrected status is:
+
+- `|M14|>=7`: closed by THM-571, modulo the accepted LRC<=13 input.
+- global LRC14 / bounded covering core / `|M14|<=6`: still open as stated
+  above; requires S31v plus bounded/intermediate census or the three-gap
+  rigidity/consec-maximizes theorem.
