@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S39 -- LRC realizability: coverage != additive energy; the exact-coverage extremal is SCALING-invariant {1..13}*d (creative + disciplined; one idea refuted, one finding)
+Owner: creative realizability arguments (like tournament analysis but "slightly different"); aim to finish LRC. HYP-2888 + reflection (lrc-realizability-is-scaling-invariant-tiling-not-combinatorial-forcing.md).
+- **Realizability framing:** LRC(14) <=> safe set nonempty <=> the open arc-systems U_s={||s t||<1/14} (total meas 13/7~1.857) don't cover the closed circle. A counterexample OVER-covers. Same shape as tournament Omega=K_3 (non-realizable), but the LRC forcing is continuous/arithmetic.
+- **REFUTED (discipline):** my forced-overlap / positive-measure idea -- the extremal sets have meas(safe)=0 (exactly covered) at the strict 1/14. The witness is a measure-ZERO boundary point, not positive measure.
+- **KEY FINDING:** **coverage != additive energy.** Exact coverage (meas safe=0) holds ONLY for consecutive-multiples d*{1,...,13} (SCALING-invariant). Translates {2..14},{3..15} have the SAME max A=1469 (translation-invariant) but POSITIVE safe measure (0.061,0.098). 0/5668 non-multiple sets reached exact coverage. Sharpens kps HYP-2885 (A tracks coverage only as a trend).
+- **FINISHING STRUCTURE:** LRC(14) <= [(2) RIGOROUS: every d*{1..13} safe at t=1/(14d), since ||jd/(14d)||=||j/14||>=1/14] + [(1) OPEN CRUX: every non-(d*{1..13}) set has meas(safe)>0]. Crux (1) = the LRC extremal-UNIQUENESS, now cleanly reframed as scaling-invariant exact-TILING rigidity. Complementary route: HYP-2876 rational-witness (extremality-free, crux=covering over-determination).
+- Apex-7 both sides: H=7=I(K_3,2) (combinatorial forcing); 1/14=1/(2*7), tight on consec-multiples, boundary witness at D=14d (tiling rigidity).
+NEW: HYP-2888, reflection, lrc14_exact_coverage_macmini_S39.py. Msg to kps (coverage scaling- not translation-invariant). NEXT: crux (1) exact-tiling characterization, OR the rational-witness over-determination.
+
 ## codex-2026-06-22-S103 -- octahedral current realizability for the LRC repeated-packet lift
 
 User asked to look for creative realizability arguments beyond ordinary
