@@ -1,0 +1,22 @@
+TIGHT signatures:
+  floor-odd     : AP=(c3=80,H=2205423)  GW=(c3=74,H=1477605)
+  reciprocal-stk: AP=(c3=73,H=1248969)  GW=(c3=79,H=2042115)
+  CF-parity     : AP=(c3=68,H=478493)  GW=(c3=56,H=195217)
+  divis<s/2     : AP=(c3=40,H=72267)  GW=(c3=31,H=15511)
+
+loose bank: 2134 rows
+
+ROBUSTNESS (loose collisions onto a TIGHT value):
+candidate        |  H-coll |  (c3,H)-coll | rate(c3,H)
+floor-odd        |       0 |            0 | 0.0000
+reciprocal-stk   |       2 |            2 | 0.0009
+CF-parity        |       0 |            0 | 0.0000
+divis<s/2        |     137 |          137 | 0.0642
+
+CLEANEST separator by (c3,H)-collision rate: CF-parity (0 collisions / 2134)
+
+sample (c3,H)-collisions:
+  floor-odd     : []
+  reciprocal-stk: [(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 33)]
+  CF-parity     : []
+  divis<s/2     : [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 129), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 106), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 83), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 119), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 96)]

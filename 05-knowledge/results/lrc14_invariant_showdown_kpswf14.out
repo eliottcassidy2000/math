@@ -1,0 +1,66 @@
+============================================================================================
+winding T(1/14) apex [periodic]
+--------------------------------------------------------------------------------------------
+  AP        TIGHT: c3=  91 c5= 1274 H=   3711175  tourn=True
+  GW        TIGHT: c3=  89 c5= 1233 H=   3351471  tourn=True
+  12->26    loose: c3=  91 c5= 1274 H=   3711175  tourn=True
+  12->36    loose: c3=  87 c5= 1212 H=   2941087  tourn=True
+  12->96    loose: c3=  91 c5= 1274 H=   3711175  tourn=True
+  --> H separates 5-row tight/loose: False   full-fp separates: False
+  --> apex-twins AP/12->26/12->96 get DISTINCT iso classes: False
+
+============================================================================================
+winding T(3/41) Farey [periodic]
+--------------------------------------------------------------------------------------------
+  AP        TIGHT: c3=  91 c5= 1274 H=   3711175  tourn=True
+  GW        TIGHT: c3=  89 c5= 1233 H=   3351471  tourn=True
+  12->26    loose: c3=  91 c5= 1274 H=   3711175  tourn=True
+  12->36    loose: c3=  87 c5= 1212 H=   2941087  tourn=True
+  12->96    loose: c3=  89 c5= 1233 H=   3351471  tourn=True
+  --> H separates 5-row tight/loose: False   full-fp separates: False
+  --> apex-twins AP/12->26/12->96 get DISTINCT iso classes: False
+
+============================================================================================
+divis  s_i%s_j<s_j/2  [magnitude]
+--------------------------------------------------------------------------------------------
+  AP        TIGHT: c3=  40 c5=  325 H=     72267  tourn=True
+  GW        TIGHT: c3=  31 c5=  201 H=     15511  tourn=True
+  12->26    loose: c3=  34 c5=  228 H=     38857  tourn=True
+  12->36    loose: c3=  31 c5=  201 H=     15511  tourn=True
+  12->96    loose: c3=  31 c5=  201 H=     15511  tourn=True
+  --> H separates 5-row tight/loose: False   full-fp separates: False
+  --> apex-twins AP/12->26/12->96 get DISTINCT iso classes: True
+
+============================================================================================
+floor(s_i/s_j) odd    [magnitude]
+--------------------------------------------------------------------------------------------
+  AP        TIGHT: c3=  80 c5= 1143 H=   2205423  tourn=True
+  GW        TIGHT: c3=  74 c5= 1021 H=   1477605  tourn=True
+  12->26    loose: c3=  75 c5= 1063 H=   1485699  tourn=True
+  12->36    loose: c3=  82 c5= 1205 H=   2445221  tourn=True
+  12->96    loose: c3=  80 c5= 1173 H=   2079333  tourn=True
+  --> H separates 5-row tight/loose: True   full-fp separates: True
+  --> apex-twins AP/12->26/12->96 get DISTINCT iso classes: True
+
+============================================================================================
+reciprocal-stack 1/s  [magnitude]
+--------------------------------------------------------------------------------------------
+  AP        TIGHT: c3=  73 c5=  965 H=   1248969  tourn=True
+  GW        TIGHT: c3=  79 c5= 1078 H=   2042115  tourn=True
+  12->26    loose: c3=  80 c5= 1088 H=   2170627  tourn=True
+  12->36    loose: c3=  76 c5=  988 H=   1668405  tourn=True
+  12->96    loose: c3=  84 c5= 1156 H=   2711625  tourn=True
+  --> H separates 5-row tight/loose: True   full-fp separates: True
+  --> apex-twins AP/12->26/12->96 get DISTINCT iso classes: True
+
+============================================================================================
+CF-depth parity       [magnitude]
+--------------------------------------------------------------------------------------------
+  AP        TIGHT: c3=  68 c5=  864 H=    478493  tourn=True
+  GW        TIGHT: c3=  56 c5=  614 H=    195217  tourn=True
+  12->26    loose: c3=  64 c5=  777 H=    389141  tourn=True
+  12->36    loose: c3=  67 c5=  839 H=    453369  tourn=True
+  12->96    loose: c3=  64 c5=  782 H=    374631  tourn=True
+  --> H separates 5-row tight/loose: True   full-fp separates: True
+  --> apex-twins AP/12->26/12->96 get DISTINCT iso classes: True
+
