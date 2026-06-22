@@ -1,3 +1,43 @@
+## codex-2026-06-22-S86e -- concrete slow-time event bridge is audited
+
+Extended `TournamentH7.LRCEventMeasureBridge` with two concrete slow-time
+specializations over `LonelyRunner.DenseCovers.slowμ`.  The new
+`shape_bonferroni_safeSet_handoff` specializes the generic Bonferroni bridge to
+the actual small-part event `safeSet P`, using the already-proved
+`measurableSet_safeSet`.  The new
+`shape_D_le_p0_denseCovers_handoff` specializes the generic monotonicity bridge
+to `denseSet E ⊆ coverSet E`, requiring only the anchor `0 ∈ E`.  Added
+`Verify` wrappers:
+`lrc_event_measure_bridge_safeSet_bonferroni_audit` and
+`lrc_event_measure_bridge_denseCovers_D_le_p0_audit`.
+
+Focused `lake build TournamentH7.LRCEventMeasureBridge`, aggregate
+`lake build TournamentH7.Verify`, and root `lake build TournamentH7` pass.  New
+transcripts:
+`05-knowledge/results/lrc_event_measure_bridge_concrete_slowmu_codex_s86e.out`,
+`05-knowledge/results/tournamenth7_verify_lrc_event_bridge_codex_s86e.out`, and
+`05-knowledge/results/tournamenth7_root_lrc_event_bridge_codex_s86e.out`.  The
+new bridge/audit declarations use only `propext`, `Classical.choice`, and
+`Quot.sound`; transcript scans found no `warning:`, no `sorryAx`, and no
+`declaration uses .sorry`.
+
+This still does not prove LRC14 unconditionally.  It removes another abstract
+handoff layer: future work can instantiate the current p0 route with concrete
+`safeSet`, `denseSet`, and `coverSet` events.  The remaining hard nodes are the
+`GOOD/witnessG2` event definition/readout, the p0 margin and cap/`measGP`
+inequalities as actual event measures, and the finite-ruler Part-A
+approximation to `Mreach`.
+
+Tournament Analysis: vertices are concrete event/readout obligations
+`{GOOD, safeSet(G_P), denseSet(D), coverSet(p0), slowμ readouts, hbonf, hDp0,
+finite PartA, Mreach}`.  Edges are measurability, event inclusion, Bonferroni,
+and measure-readout equalities.  The tie Hamiltonian path is
+`safeSet measurability -> Bonferroni hbonf; denseSet⊆coverSet -> slowμ D≤p0 ->
+hDp0 -> p0 margin -> finite PartA -> Mreach`.  Challenged assumption: the
+generic shape bridge was already the best Lean boundary; the concrete
+specialization is a better boundary because it preserves exactly the events the
+remaining proof must define.
+
 ## codex-2026-06-22-S86d -- rebased KPS measure-level D<=p0 into Verify
 
 During the S86c push, `origin/main` moved with KPS S30's stronger

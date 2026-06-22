@@ -179,10 +179,35 @@ theorem lrc_denseSet_subset_coverSet_audit
 
 theorem lrc_volume_denseSet_le_coverSet_audit
     (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
-    MeasureTheory.volume (LonelyRunner.DenseCovers.denseSet E) ≤
-      MeasureTheory.volume (LonelyRunner.DenseCovers.coverSet E) :=
+    MeasureTheory.volume
+        (LonelyRunner.DenseCovers.denseSet E ∩ Set.Ico (0 : ℝ) 1) ≤
+      MeasureTheory.volume
+        (LonelyRunner.DenseCovers.coverSet E ∩ Set.Ico (0 : ℝ) 1) :=
   LonelyRunner.DenseCovers.volume_denseSet_le_coverSet E hE
 #print axioms lrc_volume_denseSet_le_coverSet_audit
+
+theorem lrc_volume_coverSet_inter_le_one_audit (E : List ℤ) :
+    MeasureTheory.volume
+        (LonelyRunner.DenseCovers.coverSet E ∩ Set.Ico (0 : ℝ) 1) ≤ 1 :=
+  LonelyRunner.DenseCovers.volume_coverSet_inter_le_one E
+#print axioms lrc_volume_coverSet_inter_le_one_audit
+
+theorem lrc_measurableSet_coverSet_audit (E : List ℤ) :
+    MeasurableSet (LonelyRunner.DenseCovers.coverSet E) :=
+  LonelyRunner.DenseCovers.measurableSet_coverSet E
+#print axioms lrc_measurableSet_coverSet_audit
+
+theorem lrc_measurableSet_safeSet_audit (P : List ℤ) :
+    MeasurableSet (LonelyRunner.DenseCovers.safeSet P) :=
+  LonelyRunner.DenseCovers.measurableSet_safeSet P
+#print axioms lrc_measurableSet_safeSet_audit
+
+theorem lrc_slowμ_denseSet_le_coverSet_audit
+    (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
+    LonelyRunner.DenseCovers.slowμ (LonelyRunner.DenseCovers.denseSet E) ≤
+      LonelyRunner.DenseCovers.slowμ (LonelyRunner.DenseCovers.coverSet E) :=
+  LonelyRunner.DenseCovers.slowμ_denseSet_le_coverSet E hE
+#print axioms lrc_slowμ_denseSet_le_coverSet_audit
 
 theorem lrc_bonferroni_toReal_audit
     {α : Type*} [MeasurableSpace α]
@@ -221,6 +246,40 @@ theorem lrc_event_measure_bridge_D_le_p0_audit
   LonelyRunner.LRC14.EventMeasureBridge.shape_D_le_p0_handoff
     μ Dset P0set nuShape DShape p0Shape hsub hDmeasure hp0measure hDdef
 #print axioms lrc_event_measure_bridge_D_le_p0_audit
+
+theorem lrc_event_measure_bridge_safeSet_bonferroni_audit
+    (GOOD : LonelyRunner.LRC14.Shape → Set ℝ)
+    (Pof : LonelyRunner.LRC14.Shape → List ℤ)
+    (nuShape measGP : LonelyRunner.LRC14.Shape → ℝ)
+    (hnu : ∀ s, nuShape s =
+      (LonelyRunner.DenseCovers.slowμ (GOOD s)).toReal)
+    (hgp : ∀ s, measGP s =
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.safeSet (Pof s))).toReal)
+    (hwitness :
+      ∀ s, LonelyRunner.LRC14.witnessG2 s =
+        (LonelyRunner.DenseCovers.slowμ
+          ((GOOD s) ∩ LonelyRunner.DenseCovers.safeSet (Pof s))).toReal) :
+    ∀ s, nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s :=
+  LonelyRunner.LRC14.EventMeasureBridge.shape_bonferroni_safeSet_handoff
+    GOOD Pof nuShape measGP hnu hgp hwitness
+#print axioms lrc_event_measure_bridge_safeSet_bonferroni_audit
+
+theorem lrc_event_measure_bridge_denseCovers_D_le_p0_audit
+    (Eof : LonelyRunner.LRC14.Shape → List ℤ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (nuShape DShape p0Shape : LonelyRunner.LRC14.Shape → ℝ)
+    (hDmeasure : ∀ s, DShape s =
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.denseSet (Eof s))).toReal)
+    (hp0measure : ∀ s, p0Shape s =
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet (Eof s))).toReal)
+    (hDdef : ∀ s, DShape s = 1 - nuShape s) :
+    ∀ s, (1 - nuShape s) ≤ p0Shape s :=
+  LonelyRunner.LRC14.EventMeasureBridge.shape_D_le_p0_denseCovers_handoff
+    Eof hanchor nuShape DShape p0Shape hDmeasure hp0measure hDdef
+#print axioms lrc_event_measure_bridge_denseCovers_D_le_p0_audit
 
 /-! ### LRC14 THM-563 period-max certificate kernel -/
 

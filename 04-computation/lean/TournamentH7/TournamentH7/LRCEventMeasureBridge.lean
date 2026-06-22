@@ -19,6 +19,7 @@
 
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCWitnessBonferroni
+import TournamentH7.LRCDenseCovers
 
 namespace LonelyRunner
 namespace LRC14
@@ -81,12 +82,53 @@ theorem shape_D_le_p0_handoff
   rw [← hDdef s]
   exact hmono
 
+/-! ## Concrete slow-time event specializations -/
+
+/-- Bonferroni handoff specialized to the concrete small-part safe event
+`G_P = safeSet P` and the slow-time probability measure on one period.  The
+only remaining abstract event is `GOOD`, the max-gap witness event; `safeSet`
+measurability is supplied by `LRCDenseCovers`. -/
+theorem shape_bonferroni_safeSet_handoff
+    (GOOD : Shape → Set ℝ) (Pof : Shape → List ℤ)
+    (nuShape measGP : Shape → ℝ)
+    (hnu : ∀ s, nuShape s = (DenseCovers.slowμ (GOOD s)).toReal)
+    (hgp : ∀ s, measGP s =
+      (DenseCovers.slowμ (DenseCovers.safeSet (Pof s))).toReal)
+    (hwitness : ∀ s, witnessG2 s =
+      (DenseCovers.slowμ ((GOOD s) ∩ DenseCovers.safeSet (Pof s))).toReal) :
+    ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s :=
+  shape_bonferroni_handoff DenseCovers.slowμ GOOD
+    (fun s => DenseCovers.safeSet (Pof s))
+    (fun s => DenseCovers.measurableSet_safeSet (Pof s))
+    nuShape measGP hnu hgp hwitness
+
+/-- `D <= p0` handoff specialized to the concrete slow-time events
+`D = denseSet E` and `p0 = coverSet E`.  The anchor hypothesis `0 ∈ E` is exactly
+what turns the pointwise dense-cover lemma into the set inclusion. -/
+theorem shape_D_le_p0_denseCovers_handoff
+    (Eof : Shape → List ℤ) (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (nuShape DShape p0Shape : Shape → ℝ)
+    (hDmeasure : ∀ s, DShape s =
+      (DenseCovers.slowμ (DenseCovers.denseSet (Eof s))).toReal)
+    (hp0measure : ∀ s, p0Shape s =
+      (DenseCovers.slowμ (DenseCovers.coverSet (Eof s))).toReal)
+    (hDdef : ∀ s, DShape s = 1 - nuShape s) :
+    ∀ s, (1 - nuShape s) ≤ p0Shape s :=
+  shape_D_le_p0_handoff DenseCovers.slowμ
+    (fun s => DenseCovers.denseSet (Eof s))
+    (fun s => DenseCovers.coverSet (Eof s))
+    nuShape DShape p0Shape
+    (fun s => DenseCovers.denseSet_subset_coverSet (Eof s) (hanchor s))
+    hDmeasure hp0measure hDdef
+
 /-! ## Axiom audit -/
 
 #print axioms measure_toReal_mono_of_subset
 #print axioms shape_bonferroni_handoff
 #print axioms shape_measure_mono_handoff
 #print axioms shape_D_le_p0_handoff
+#print axioms shape_bonferroni_safeSet_handoff
+#print axioms shape_D_le_p0_denseCovers_handoff
 
 end EventMeasureBridge
 end LRC14

@@ -1,3 +1,17 @@
+## codex-2026-06-22-S86e -- concrete slow-time event bridge is now in `LRCEventMeasureBridge`
+
+Added two sorry-free specializations over `DenseCovers.slowμ`:
+`shape_bonferroni_safeSet_handoff` uses concrete `safeSet P` as `G_P`, and
+`shape_D_le_p0_denseCovers_handoff` uses concrete `denseSet E ⊆ coverSet E` to
+produce the exact `hDp0` hypothesis.  `Verify` wrappers are in place:
+`lrc_event_measure_bridge_safeSet_bonferroni_audit` and
+`lrc_event_measure_bridge_denseCovers_D_le_p0_audit`.  Focused, `Verify`, and
+root builds pass; transcripts have no warnings/no `sorryAx`.
+
+This is still not the full LRC14 proof.  The next real nodes are the concrete
+`GOOD/witnessG2` readout and finite Part-A/rhoK approximation, plus the p0
+margin/cap-measGP inequalities as actual event measures.
+
 ## codex-2026-06-22-S86d -- KPS concrete measure-level `D(E)<=p0(E)` is in Verify
 
 The S86c push rebased over KPS S30's stronger `LRCDenseCovers`: it now defines

@@ -231,7 +231,7 @@ theorem measurableSet_coverSet (E : List ℤ) : MeasurableSet (coverSet E) := by
           Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7})
         = ⋃ e ∈ (E.toFinset : Set ℤ), {x : ℝ | (j : ℝ) / 7 ≤ Int.fract ((e : ℝ) * x) ∧
           Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7} := by
-      ext x; simp [List.mem_toFinset]
+      ext x; simp
     rw [hconv]
     exact (E.toFinset.finite_toSet).measurableSet_biUnion
       (fun e _ => measurableSet_sector_hit e j)

@@ -1,0 +1,16 @@
+'LonelyRunner.LRC14.EventMeasureBridge.measure_toReal_mono_of_subset' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.EventMeasureBridge.shape_bonferroni_handoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.EventMeasureBridge.shape_measure_mono_handoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.EventMeasureBridge.shape_D_le_p0_handoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.LRC14.EventMeasureBridge.shape_bonferroni_safeSet_handoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LonelyRunner.LRC14.EventMeasureBridge.shape_D_le_p0_denseCovers_handoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
