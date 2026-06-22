@@ -116,6 +116,27 @@ THREAD 2: the q-UNIFORM FOURIER-CORRELATION CONSTANT  (kpswf12, kind-pasteur)
   Look for a DISCONTINUITY at q=7 (octonions lose associativity).
 
 ############################################################################################
+# (5b) THE QR SHELL SPLIT IS 50/50  <=>  -1 is a NON-residue mod q (q==3 mod 4)
+#      Mechanism (PROVED, elementary): symmetric cluster => a(m)=a(-m); |ghat|
+#      even => terms pair (m,-m); -m = q-m mod q.  q==3 mod 4 => -1 in NQR =>
+#      negation SWAPS QR<->NQR => equal mass.  q==1 mod 4 => -1 in QR =>
+#      negation FIXES QR => no forced balance.  q=7 (LRC14 prime) is BALANCED.
+############################################################################################
+
+    q  q mod 4      -1 status      QR%     NQR%        verdict
+  ------------------------------------------------------------
+    3        3            NQR    50.0%    50.0% 50/50 BALANCED
+    5        1             QR    54.8%    45.2%     unbalanced
+    7        3            NQR    50.0%    50.0% 50/50 BALANCED
+    9        1            NQR    38.5%    61.5%     unbalanced (q not prime)
+   11        3            NQR    50.0%    50.0% 50/50 BALANCED
+   13        1             QR    52.8%    47.2%     unbalanced
+
+  => the Fourier-correlation constant's QR decomposition is GOVERNED BY the
+     quadratic character mod q. The decorrelation goes THROUGH Z/q (and, for
+     q=7, through QR(7)=Fano). This is the rigorous 'through not around' answer.
+
+############################################################################################
 # (6) q=9 (n=18) EXACT FLOORS  m_P, phi_q  (closedform stopped at q=8)
 ############################################################################################
 

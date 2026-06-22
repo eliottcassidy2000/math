@@ -506,6 +506,44 @@ def main():
     print("\n  Cayley-Dickson note: q=7 (n=14) = octonion level, q=9->n=18, then n=24=8*3.")
     print("  Look for a DISCONTINUITY at q=7 (octonions lose associativity).")
 
+    # -------------------------------------- (5b) THE QR/(-1) DICHOTOMY (sharpest)
+    print("\n" + "#" * 92)
+    print("# (5b) THE QR SHELL SPLIT IS 50/50  <=>  -1 is a NON-residue mod q (q==3 mod 4)")
+    print("#      Mechanism (PROVED, elementary): symmetric cluster => a(m)=a(-m); |ghat|")
+    print("#      even => terms pair (m,-m); -m = q-m mod q.  q==3 mod 4 => -1 in NQR =>")
+    print("#      negation SWAPS QR<->NQR => equal mass.  q==1 mod 4 => -1 in QR =>")
+    print("#      negation FIXES QR => no forced balance.  q=7 (LRC14 prime) is BALANCED.")
+    print("#" * 92)
+    print(f"\n  {'q':>3} {'q mod 4':>8} {'-1 status':>14} {'QR%':>8} {'NQR%':>8} {'verdict':>14}")
+    print("  " + "-" * 60)
+    for q in (3, 5, 7, 9, 11, 13):
+        QRset = set(qr_set(q))
+        # only meaningful for prime q (QR theory); 9 is not prime -> mark
+        prime = all(q % d for d in range(2, q)) and q > 1
+        E = list(range(q))
+        ac = cluster_autocorr(E)
+        qm = nm = 0.0
+        for m, cnt in ac.items():
+            if m == 0:
+                continue
+            g = abs(sin(pi * m / q)) / (pi * abs(m))
+            t = (cnt / len(E)) * g
+            r = m % q
+            if r in QRset:
+                qm += t
+            elif r != 0:
+                nm += t
+        tot = qm + nm
+        minus1_qr = ((q - 1) % q) in QRset
+        bal = abs(qm - nm) < 1e-12
+        ptag = "" if prime else " (q not prime)"
+        print(f"  {q:>3} {q % 4:>8} {('NQR' if not minus1_qr else 'QR'):>14} "
+              f"{100*qm/tot:>7.1f}% {100*nm/tot:>7.1f}% "
+              f"{('50/50 BALANCED' if bal else 'unbalanced'):>14}{ptag}")
+    print("\n  => the Fourier-correlation constant's QR decomposition is GOVERNED BY the")
+    print("     quadratic character mod q. The decorrelation goes THROUGH Z/q (and, for")
+    print("     q=7, through QR(7)=Fano). This is the rigorous 'through not around' answer.")
+
     # ----------------------------------------------------- (6) q=9 floors (exact)
     print("\n" + "#" * 92)
     print("# (6) q=9 (n=18) EXACT FLOORS  m_P, phi_q  (closedform stopped at q=8)")
