@@ -1,0 +1,4 @@
+################################################################################################
+# THREAD 3 part 1: UNIFORM CONSTANT in the L2-Cauchy-Schwarz tail |sum_high| <= sqrt(Ec)sqrt(Eg)
+#   tail energies E(H) are EXACT (Parseval: E(0)=meas-meas^2<=1/4 H-FREE cap); rate in H is the Q
+################################################################################################
