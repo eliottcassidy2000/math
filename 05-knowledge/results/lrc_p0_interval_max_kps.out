@@ -1,0 +1,4 @@
+k=8: p0(interval)=0.3272  cap=0.3815  margin=0.0543
+   over 3000 random bounded+wide sets: #beating interval=0; max p0=0.3272 (set interval)
+k=9: p0(interval)=0.4162  cap=0.4943  margin=0.0781
+   over 3000 random bounded+wide sets: #beating interval=0; max p0=0.4162 (set interval)

@@ -1,7 +1,7 @@
 ---
 id: HYP-2885
 title: The LRC's missing realizability is ADDITIVE-ENERGY extremality -- the interval is the unique realizable cover-extremizer (a proof route via the sharp Fejer/additive-energy theorem)
-status: GROUNDED (p0 tracks A(E), interval maximizes both); proof route = [p0<=L_y] + [L_y Fejer-extremized by interval] + [L_y(interval)<=cap]; the middle is the open realizability lemma
+status: STRONGLY GROUNDED -- interval is the GLOBAL p0-maximum (0/3000 random bounded+wide sets beat it, k=8,9), p0 tracks A(E). CLEAN route p0(E)<=p0(AP)<cap (no L_y detour); middle = additive-energy extremality (open as a theorem)
 source: kind-pasteur-2026-06-22-S31j
 related:
   - THM-534    # p0<=L_y (moment-LP dual, PROVED)
@@ -31,6 +31,14 @@ speeds realize over-covering?
 | Sidon [0,1,3,7,12,..] | 0.012 | 120 (min) |
 The **INTERVAL/AP maximizes BOTH** `p0` and `A(E)`; the spread (Sidon, minimal additive energy)
 MINIMIZES `p0`. (Dilation-invariant: `2*interval` gives the same `p0`.)
+
+## The interval is the GLOBAL p0-maximum (strong evidence for the clean route)
+`lrc_p0_interval_max_kps.py`: over 3000 random integer offset sets per k (spreads from `k` up to
+`4k`, i.e. bounded AND wide), **0 sets beat `p0(interval)`** at k=8 AND k=9; the sampled max p0 IS
+the interval's. With `p0(interval) < cap` (k=8: 0.3272<0.3815; k=9: 0.4162<0.4943, margins ~0.05-0.08),
+this gives the CLEANEST route, skipping `L_y` entirely:
+> **`p0(E) <= p0(AP) < cap_k`** -- the interval maximizes `p0`, and the interval is below the cap.
+The single missing theorem is "the interval maximizes `p0`" = the additive-energy extremality below.
 
 ## The realizability argument (a proof route)
 > A LRC(14) over-covering counterexample would require a speed set with `p0 > cap`, hence (since `p0`
