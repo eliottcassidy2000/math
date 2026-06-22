@@ -19958,3 +19958,52 @@ rational-witness closure (`D<=41` and fixed basis coverage).  The S98
 finite-basis killer directly refutes the global form while preserving its
 useful parts: `N(S,D)` as character/resonance count, the apex obstruction, and
 large-denominator bases as sampled/scaled atlases.
+
+## codex-2026-06-22-S99 -- apex-cut insertion defects supply n=8 strong values
+
+User prompt: balanced cuts supply `w=3` strong `n=8` values, and a single
+unbalanced weight `w=1` supplies `49` and `75`; this likely corresponds to the
+apex tile in the tiling model.  Pulled first and integrated incoming S35/S31e:
+HYP-+2878's strong-atom covering route and HYP-2878's E_7 odd-hole apex-prime
+thread.
+
+Added `04-computation/tournament_apex_cut_weight_ledger_codex_s99.py` and
+stored `05-knowledge/results/tournament_apex_cut_weight_ledger_codex_s99.out`.
+The script represents every rooted `n=8` fixed-path row as a rooted `n=7`
+base plus an apex row (`6 -> 7` fixed, six free apex bits), then computes
+`H(T+apex)` exactly by summing legal apex insertion slots over old Hamiltonian
+paths.  It audits all `32768` rooted `n=7` bases and all `64` apex cuts,
+hence all `2097152` rooted `n=8` rows.
+
+Main finding/correction: raw cut size is an address, not the proof carrier.
+Balanced raw `w=3` cuts are broad suppliers (`645112` strong rows, `463`
+distinct strong `H` values, max `513`, gaps in `[1,100]` only
+`1,5,7,20,21`), but raw rooted `w=3` does not isolate the `49/75` phenomenon:
+`w=1` also supplies both values, and rooted `w=3` can supply both.  This
+complements HYP-2879 rather than contradicting it: after the non-isomorphic
+strong-ear quotient, balanced `w=3` misses exactly `49,75` and boundary `w=1`
+fills them.  The sharper invariant is the apex insertion-weight profile.
+Single-unbalanced `w=1` witnesses from strong `n=7` bases give: `49=2*25-1`
+with distribution `{1:1,2:24}` and `75=2*39-3` with distribution
+`{1:3,2:36}`.  So one apex row almost doubles an old strong atom and subtracts
+a small odd source-sink defect.
+
+Pulled KPS S31f during closeout and integrated the useful correction:
+`apex_tile_H49_75_kps.py` shows the literal longest tile `(n-1,0)` is not
+required for `H=49` or `H=75` at `n=7` (`apex_NOT` witnesses exist).  Thus the
+live "apex tile" object is the boundary-row/insertion-defect operation, not a
+literal fixed-base tile.  `strong_atom_7adic_kps.py` supports the atom side:
+`49=7^2` and `75` are irreducible `m=7` strong atoms, while `7` and `21`
+remain forbidden and 7-multiple atoms first appear at the apex index `m=7`.
+
+Created HYP-2880 and reflection
+`07-reflections/tournament-apex-cut-defect-supplies-n8-values-codex-s99.md`.
+Proof target: classify apex operations `H -> cH-d` with near-constant insertion
+profile and finite odd defect set.  This is a constructive companion to
+HYP-2877's labelled strong-atom semigroup, HYP-2879's strong-ear calculus, and
+a concrete tiling-model reading of S530's source-sink apex tile.  Assumption
+challenge: considered runners, free arcs, raw cut size, balanced/unbalanced
+cuts, insertion slots, strong components, old `H` atoms, apex tile orientation,
+even-graph holes, and proof obligations; selected carrier is insertion profile
+because it preserves `H`
+exactly under apex extension.
