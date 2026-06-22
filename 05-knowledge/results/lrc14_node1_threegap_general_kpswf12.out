@@ -1,52 +1,64 @@
-==============================================================================
+================================================================================
 NODE-1 apex-ruler three-gap lemma -- RIGOROUS for GENERAL covering tuples
-kind-pasteur-2026-06-22-S34 (THREAD 1)
-==============================================================================
+kind-pasteur-2026-06-22-S34 (THREAD 1) | offset-teeth framing
+================================================================================
 
---- (1)+(4): arc structure, meas(G), V*=arcCount/meas(G), completeness cert ---
-tuple                                      #cells  arcs    meas(G)       V*  cert
-boundary core {1..12,V} (k=1, |P|=12)         153    12    0.03410    351.9     0
-consec k=8 base, P={1..5}                      78    14    0.44490     31.5     0
-binding P={1,5,7,8,9} k=8                     116    18    0.38146     47.2     0
-perforated P={1,2,3,12,13} k=8                126    16    0.48626     32.9     0
-consec k=10, P={1,2,3}                        100    14    0.46599     30.0     0
-consec k=9, P={1,2,3,13}                      102    14    0.42182     33.2     0
-wide AP k=8 (step3)                           206    18    0.46485     38.7     0
-multiscale k=8                               1072    12    0.50298     23.9     0
-single-far k=9                                608    12    0.54898     21.9     0
-via-max-zero witness k=7                      124    14    0.47161     29.7     0
+--- (1)+(4): arc structure of G, meas(G), V*=arcCount/meas(G), completeness ---
+tuple                                V #cells  arcs     meas(G)       V*  cert
+boundary core {1..12,199}          199   6828    40    0.552052     72.5     0
+boundary core {1..12,53}            53   1624    16    0.559130     28.6     0
+consec k=8 reconstr V=101          101   3290   206    0.724625    284.3     0
+binding P={1,5,7,8,9} V=151        151   6638   194    0.828682    234.1     0
+consec k=10 V=103                  103   3412    86    0.691772    124.3     0
+wide-AP cluster V=200              200  14090   232    0.843549    275.0     0
+multiscale cluster V=240           240  12594   304    0.913080    332.9     0
+single-far k=9 V=120               120   2760    16    0.931886     17.2     0
+perforated V=80                     80   4066    84    0.898294     93.5     0
+  CERTIFICATE cert=0 => no hidden transition in any cell => boundary(G) subset B(offs)
+  => G IS a finite union of <= arcCount intervals. (arcCount << 7*sumE always.)
+  WORST V* among these: multiscale cluster V=240  V*=332.9  arcs=304 meas=0.9131
 
-  CERTIFICATE: 'cert'=0 means no hidden transition detected in any cell
-  => boundary(G) subset B(P,E), so G IS a finite union of <= arcCount intervals.
-
-  WORST tuple (max V*): boundary core {1..12,V} (k=1, |P|=12)  V* = 351.9
-
---- (2) equally-spaced sampling bound  #good in [V*meas - arcs, V*meas + arcs] ---
-  (apex offset a in the ruler period center; we test a=1/2 and a=0)
-tuple                               V  #good    V*meas       LB       UB   ok
-boundary core {1..12,V} (k=1,     200      6      6.82    -5.18    18.82 True
-boundary core {1..12,V} (k=1,     503     20     17.15     5.15    29.15 True
-boundary core {1..12,V} (k=1,    1000     36     34.10    22.10    46.10 True
-boundary core {1..12,V} (k=1,    3001    102    102.34    90.34   114.34 True
-binding P={1,5,7,8,9} k=8         200     76     76.29    58.29    94.29 True
-binding P={1,5,7,8,9} k=8         503    190    191.88   173.88   209.88 True
-binding P={1,5,7,8,9} k=8        1000    384    381.46   363.46   399.46 True
-binding P={1,5,7,8,9} k=8        3001   1150   1144.77  1126.77  1162.77 True
-consec k=10, P={1,2,3}            200     94     93.20    79.20   107.20 True
-consec k=10, P={1,2,3}            503    236    234.39   220.39   248.39 True
-consec k=10, P={1,2,3}           1000    466    465.99   451.99   479.99 True
-consec k=10, P={1,2,3}           3001   1398   1398.43  1384.43  1412.43 True
-wide AP k=8 (step3)               200     92     92.97    74.97   110.97 True
-wide AP k=8 (step3)               503    232    233.82   215.82   251.82 True
-wide AP k=8 (step3)              1000    468    464.85   446.85   482.85 True
-wide AP k=8 (step3)              3001   1398   1395.02  1377.02  1413.02 True
-multiscale k=8                    200    100    100.60    88.60   112.60 True
-multiscale k=8                    503    252    253.00   241.00   265.00 True
-multiscale k=8                   1000    508    502.98   490.98   514.98 True
-multiscale k=8                   3001   1510   1509.43  1497.43  1521.43 True
-
+--- (2) equally-spaced sampling:  #good in [V*meas - arcs, V*meas + arcs] ---
+tuple                         V_rule  #good    V*meas       LB       UB   ok
+boundary core {1..12,199}        200    110    110.41    70.41   150.41 True
+boundary core {1..12,199}        503    279    277.68   237.68   317.68 True
+boundary core {1..12,199}       1000    548    552.05   512.05   592.05 True
+boundary core {1..12,199}       3001   1655   1656.71  1616.71  1696.71 True
+binding P={1,5,7,8,9} V=151      200    166    165.74   -28.26   359.74 True
+binding P={1,5,7,8,9} V=151      503    409    416.83   222.83   610.83 True
+binding P={1,5,7,8,9} V=151     1000    818    828.68   634.68  1022.68 True
+binding P={1,5,7,8,9} V=151     3001   2493   2486.87  2292.87  2680.87 True
+consec k=10 V=103                200    130    138.35    52.35   224.35 True
+consec k=10 V=103                503    345    347.96   261.96   433.96 True
+consec k=10 V=103               1000    692    691.77   605.77   777.77 True
+consec k=10 V=103               3001   2065   2076.01  1990.01  2162.01 True
+wide-AP cluster V=200            200    168    168.71   -63.29   400.71 True
+wide-AP cluster V=200            503    427    424.30   192.30   656.30 True
+wide-AP cluster V=200           1000    846    843.55   611.55  1075.55 True
+wide-AP cluster V=200           3001   2525   2531.49  2299.49  2763.49 True
+multiscale cluster V=240         200    190    182.62  -121.38   486.62 True
+multiscale cluster V=240         503    451    459.28   155.28   763.28 True
+multiscale cluster V=240        1000    912    913.08   609.08  1217.08 True
+multiscale cluster V=240        3001   2747   2740.15  2436.15  3044.15 True
   sampling-bound violations: 0
 
-==============================================================================
-DONE.  See companion script for (3) slow-fast M(S) verification and (4) V* atlas.
-==============================================================================
+--- (3) slow-fast alignment:  #good_slow(x=j/V) >= 1  <=>  M(S) >= 1/14 ---
+tuple                                V good_slow       M(S)  M>=1/14
+boundary core {1..12,199}          199        89    0.07692     True
+boundary core {1..12,53}            53        25    0.07692     True
+consec k=8 reconstr V=101          101        45    0.10784     True
+binding P={1,5,7,8,9} V=151        151       119    0.18644     True
+consec k=10 V=103                  103        47    0.12183     True
+wide-AP cluster V=200              200       160    0.16667     True
+multiscale cluster V=240           240       190    0.16575     True
+single-far k=9 V=120               120       100    0.11111     True
+perforated V=80                     80        74    0.12000     True
+  alignment inconsistencies (good>=1 XOR M>=1/14): 0
+
+================================================================================
+SUMMARY:
+  (1) G = finite union of <= arcCount intervals  [cert=0 on all tuples]
+  (2) #good in [V*meas-arcs, V*meas+arcs]          [0 violations]
+  (3) good_slow>=1 <=> M(S)>=1/14                  [0 inconsistencies]
+  => #good >= V*meas(G) - arcCount,  > 0 for V > arcCount/meas(G) = V*
+================================================================================

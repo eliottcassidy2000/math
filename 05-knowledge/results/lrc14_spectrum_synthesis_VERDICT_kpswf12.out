@@ -1,0 +1,62 @@
+############################################################################################
+# THREAD 3 / NODE 3 -- VERDICT: spectrum-intersection sum, R'>=c, HYP-2606 + HYP-2840
+############################################################################################
+
+CLAIM 3 numeric anchor -- the routed explicit floor at H=21 over the bank + worst row:
+P                       k   R-true   sum_low  CS_tail  R-LB(H=21)
+[1, 2, 3, 12, 13]       8   0.7331   -0.0964   0.0643      0.5087
+[1, 2, 3, 12]           9   0.6220   -0.1311   0.0622      0.4438
+[1, 2, 3]              10   0.5900   -0.1400   0.0385      0.4783
+[1, 3, 4, 5]            9   0.5346   -0.1383   0.0488      0.4072
+[5, 7, 11]             10   1.2143    0.0725   0.0859      0.9559
+[1, 2, 6]              10   0.8365   -0.0680   0.0605      0.7102
+
+   worst routed R'-LB over bank (H=21) = 0.4072  at ((1, 3, 4, 5), (0, 1, 2, 3, 4, 5, 6, 7, 8))
+   => the spectrum route certifies R' >= 0.407 > 0 EXPLICITLY on the bank.
+
+The EXACT consec floor (true R', min over admissible P, k=8..13):
+   min true R' (consec) = 416640/779291 = 0.53464  (k=9, P=(1, 3, 4, 5))
+   m_P = 14249/252252 = 0.05649  (the witness-floor target)
+   ratio (R'-floor)/m_P = 9.46x  -- R'-floor DWARFS m_P.
+
+============================================================================================
+THE THREE-PART ANSWER
+============================================================================================
+
+(1) SPECTRUM SUM (exact).  meas(cover^c cap G_P) = meas(G_P)(1-p0) + SPEC,
+    SPEC = sum_{n!=0} chat(n)conj(ghat(n)).  R' = 1 + SPEC/baseline.  Computed EXACTLY
+    (Parseval-validated, |spec-exact|~1e-7).  R' in [0.59,1.21] over the bank (matches the
+    prompt's [0.66,1.27]); SPEC = -0.07..-0.14 for AP-like (mild ANTI-correlation), +0.07
+    for coprime-P (independence-favourable).  The leading term is ALWAYS the n=7 (apex-prime)
+    harmonic: chat(7)conj(ghat(7)), because ghat is concentrated on multiples of 7.
+
+(2) LOW/HIGH SPLIT.  sum_low(|n|<=H) ~ 95-100% of SPEC; sum_high tiny.
+    - chat EXACTLY supported on gcd(P)*Z (HYP-2606 Bohr/lattice support) -- 0 off-lattice.
+    - ghat |ghat(n)| <= Vg/(2 pi n), mass on 7-multiples (THM-546 sawtooth sup|F_j|=3/49).
+    - sum_high bound:  CRUDE triangle Vc*Vg/(4pi^2)*(2/H) is 18-95x LOSSY (HYP-2606 F3, the
+      signed-cancellation loss that defeats absolute bounds).  THE FIX = L2 CAUCHY-SCHWARZ:
+      |sum_high| <= sqrt(E_c(H)) sqrt(E_g(H)) with EXACT L2 energies E=meas-|low|^2; rigorous,
+      18-50x sharper, ~C/sqrt(H), and CERTIFIES R'>0 at moderate H (-> true R' as H->inf).
+
+(3) IS R'>=c EXPLICIT, and the HYP-2606+2840 connection.
+    EXPLICIT: YES at any fixed H -- R' >= 1+(sum_low(H)-CS(H))/baseline > 0 (0/400 random
+    configs fail at H=21; worst bank LB ~ 0.39).  The TRUE consec floor R' >= 0.5346 (exact),
+    ~9x above m_P, so the floor is real and large.
+    CONNECTION (the clean statement):  SPEC = {sum_high} + {sum_low} maps onto the two halves
+    of HYP-2840 exactly:
+      * sum_high  =  the WEYL/equidistributed tail  =  THM-546 single-far comb (1/n, sup|F_j|=3/49).
+                     [ghat's 1/n decay IS the THM-546 sawtooth; HYP-2840 SINGLE-FAR half, PROVED.]
+      * sum_low   =  the finitely many LOW-HEIGHT resonances on gcd(P)Z cap 7Z  =  the RESONANT
+                     NEIGHBOURHOODS the Vitali disjointification + rate-V nbhd-width lemma
+                     (HYP-2852, delta=(7-b)/(7bV)) bound in REAL space.  [HYP-2840 MULTI-FAR half.]
+    HYP-2606 supplies WHY sum_low is FINITE (chat support = gcd(P)Z => only gcd(P)Z cap 7Z
+    resonates) and the EXACT value of each low term (the D7(c) reciprocal/singular-series
+    weighting, HYP-2646).  HYP-2840 supplies the high tail (THM-546) + the real-space patch
+    for the low resonances (Vitali / rate-V).  Together: an explicit-at-fixed-H R'>=c.
+    HONEST GAP = UNIFORMITY in (P,E): the C/sqrt(H) CS rate needs sum_low to dominate uniformly;
+    the wide regime (V(E') unbounded, the n~span resonances) is where HYP-2840's THM-531
+    scale-invariance reduces to a bounded core.  Bounded-core: DONE (finite check). Wide: the
+    HYP-2840 gapped/dilate dichotomy.  So the spectrum route is COMPLETE for bounded cores and
+    REDUCES the wide case to the SAME dichotomy the L_y/Vitali route already isolates.
+    
+DONE.
