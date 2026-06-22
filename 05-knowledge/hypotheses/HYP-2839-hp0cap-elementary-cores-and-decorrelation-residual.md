@@ -79,6 +79,15 @@ margin to `meas(goodSet E ∩ safeSet P)`.  Thus hp0cap plus `hmeasGP` feeds the
 actual slow-time `GOOD∩G_P` witness carrier; Part A still has to transfer that
 slow-time carrier to the finite-ruler witness.
 
+The shape-level readout is now bridged as well.  `LRCEventMeasureBridge` proves
+`shape_goodSet_witness_margin_from_wide_bound` and
+`shape_goodSet_witness_pos_from_strict_cover_bound`, so once a shape supplies
+lists `Eof/Pof` and the readout equality
+`witnessG2 = meas(goodSet(Eof) ∩ safeSet(Pof))`, the same p0/cap hypotheses give
+`delta <= witnessG2` or `0 < witnessG2` directly.  This leaves the residual
+hp0cap proof itself, the cap floor, and finite-ruler Part A; it is no longer a
+slow-time event quotient problem.
+
 ## The residual (the genuinely analytic part, NOT elementary)
 The binding cases k=8..12 route through the decorrelated closed form (THM-534, kps-S24):
 > `p0(E) <= p0_decorr(E) = sum_t P_t^{(r)} p_t(B)`  [RESONANCE BOUND -- the residual]

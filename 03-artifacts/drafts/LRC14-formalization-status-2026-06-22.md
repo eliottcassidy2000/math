@@ -90,7 +90,10 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   `goodSet E ∩ safeSet` carrier.  The remaining witness-side work is the
   finite-ruler approximation/Part-A readout, not the slow-time `GOOD∩G_P` event
   quotient.
-- `LRCBonferroniMeasure`, `LRCEventMeasureBridge` — measure inequalities + handoffs.
+- `LRCBonferroniMeasure`, `LRCEventMeasureBridge` — measure inequalities +
+  handoffs.  Codex S86g2 adds the concrete shape-level goodSet/safeSet readout:
+  `witnessG2 = μ(goodSet E ∩ safeSet P)` plus p0 strict/margin hypotheses now
+  gives positivity or `delta≤witnessG2` directly.
 - `LRCWitnessPartA` — finite-ruler error-budget glue.  Codex S86g adds the
   verified split assembly where `k≤7` uses the `m_P` budget and `8≤k≤13` uses
   the p0 margin `delta`.
@@ -98,10 +101,11 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
 
 ## 4. The remaining integration (in progress, kps/codex)
 
-The nodes are stated on the **opaque** `shapeOf`/`witnessG2`. To produce an
-*unconditional* `lrc14 : LRC14Statement`, instantiate these with the concrete
-carriers (`witnessG2 := μ(GOOD ∩ safeSet)`, etc.) and discharge the formalizable
-nodes (`hbonf, hDp0, hsize, hsmall`). The NU route then needs the spreading
+The nodes are stated on the **opaque** `shapeOf`/`witnessG2`. The concrete
+`witnessG2 := μ(goodSet E ∩ safeSet P)` readout is now bridged for the p0
+strict/margin route; an unconditional `lrc14 : LRC14Statement` still needs the
+actual `shapeOf` to `Eof/Pof` instantiation and the branch nodes (`hsize`,
+`hsmall`, plus concrete hypotheses). The NU route then needs the spreading
 lemma `hA`, the cap floor `hmeasGP`, and finite-ruler Part A `hpartA`. The p0
 route instead needs `hp0cap` plus a positive margin `hδpos`, the same cap floor
 `hmeasGP`, and the same `hpartA`; it bypasses `hA` because Part A consumes

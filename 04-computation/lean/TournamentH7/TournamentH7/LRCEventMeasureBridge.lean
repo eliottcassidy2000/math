@@ -20,6 +20,7 @@
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCDenseCovers
+import TournamentH7.LRCWitnessFloorConcrete
 
 namespace LonelyRunner
 namespace LRC14
@@ -121,6 +122,67 @@ theorem shape_D_le_p0_denseCovers_handoff
     (fun s => DenseCovers.denseSet_subset_coverSet (Eof s) (hanchor s))
     hDmeasure hp0measure hDdef
 
+/-! ## Concrete goodSet witness readout specializations -/
+
+/-- Bonferroni handoff with both slow-time events specialized: the large witness
+event is the concrete `GoodSet.goodSet (Eof s)` and the small-part event is the
+concrete `safeSet (Pof s)`. -/
+theorem shape_bonferroni_goodSet_safeSet_handoff
+    (Eof Pof : Shape → List ℤ)
+    (nuShape measGP : Shape → ℝ)
+    (hnu : ∀ s, nuShape s =
+      (DenseCovers.slowμ (TournamentH7.GoodSet.goodSet (Eof s))).toReal)
+    (hgp : ∀ s, measGP s =
+      (DenseCovers.slowμ (DenseCovers.safeSet (Pof s))).toReal)
+    (hwitness : ∀ s, witnessG2 s =
+      (DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          DenseCovers.safeSet (Pof s))).toReal) :
+    ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s :=
+  shape_bonferroni_safeSet_handoff
+    (fun s => TournamentH7.GoodSet.goodSet (Eof s))
+    Pof nuShape measGP hnu hgp hwitness
+
+/-- Shape-level strict-cover readout: once `witnessG2` is identified with the
+concrete `goodSet ∩ safeSet` slow-time measure, the strict p0 cover bound and
+the non-strict cap floor give positive `witnessG2` directly. -/
+theorem shape_goodSet_witness_pos_from_strict_cover_bound
+    (Eof Pof : Shape → List ℤ) (cap : Shape → ℝ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (hwitness : ∀ s, witnessG2 s =
+      (DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          DenseCovers.safeSet (Pof s))).toReal)
+    (hwide : ∀ s,
+      (DenseCovers.slowμ (DenseCovers.coverSet (Eof s))).toReal < cap s)
+    (hdual : ∀ s, cap s ≤
+      (DenseCovers.slowμ (DenseCovers.safeSet (Pof s))).toReal) :
+    ∀ s, 0 < witnessG2 s := by
+  intro s
+  rw [hwitness s]
+  exact DenseCovers.goodSet_witness_pos_from_strict_cover_bound
+    (Eof s) (Pof s) (cap s) (hanchor s) (hwide s) (hdual s)
+
+/-- Shape-level quantitative readout: the p0 wide margin is transported through
+the proved concrete carrier chain into `witnessG2 = μ(goodSet E ∩ safeSet P)`. -/
+theorem shape_goodSet_witness_margin_from_wide_bound
+    (Eof Pof : Shape → List ℤ) (cap delta : Shape → ℝ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (hwitness : ∀ s, witnessG2 s =
+      (DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          DenseCovers.safeSet (Pof s))).toReal)
+    (hwide : ∀ s,
+      (DenseCovers.slowμ (DenseCovers.coverSet (Eof s))).toReal ≤
+        cap s - delta s)
+    (hdual : ∀ s, cap s ≤
+      (DenseCovers.slowμ (DenseCovers.safeSet (Pof s))).toReal) :
+    ∀ s, delta s ≤ witnessG2 s := by
+  intro s
+  rw [hwitness s]
+  exact DenseCovers.goodSet_witness_margin_from_wide_bound
+    (Eof s) (Pof s) (cap s) (delta s) (hanchor s) (hwide s) (hdual s)
+
 /-! ## Axiom audit -/
 
 #print axioms measure_toReal_mono_of_subset
@@ -129,6 +191,9 @@ theorem shape_D_le_p0_denseCovers_handoff
 #print axioms shape_D_le_p0_handoff
 #print axioms shape_bonferroni_safeSet_handoff
 #print axioms shape_D_le_p0_denseCovers_handoff
+#print axioms shape_bonferroni_goodSet_safeSet_handoff
+#print axioms shape_goodSet_witness_pos_from_strict_cover_bound
+#print axioms shape_goodSet_witness_margin_from_wide_bound
 
 end EventMeasureBridge
 end LRC14

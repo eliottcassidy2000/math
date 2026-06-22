@@ -407,6 +407,63 @@ theorem lrc_event_measure_bridge_denseCovers_D_le_p0_audit
     Eof hanchor nuShape DShape p0Shape hDmeasure hp0measure hDdef
 #print axioms lrc_event_measure_bridge_denseCovers_D_le_p0_audit
 
+theorem lrc_event_measure_bridge_goodSet_safeSet_bonferroni_audit
+    (Eof Pof : LonelyRunner.LRC14.Shape → List ℤ)
+    (nuShape measGP : LonelyRunner.LRC14.Shape → ℝ)
+    (hnu : ∀ s, nuShape s =
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s))).toReal)
+    (hgp : ∀ s, measGP s =
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.safeSet (Pof s))).toReal)
+    (hwitness : ∀ s, LonelyRunner.LRC14.witnessG2 s =
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          LonelyRunner.DenseCovers.safeSet (Pof s))).toReal) :
+    ∀ s, nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s :=
+  LonelyRunner.LRC14.EventMeasureBridge.shape_bonferroni_goodSet_safeSet_handoff
+    Eof Pof nuShape measGP hnu hgp hwitness
+#print axioms lrc_event_measure_bridge_goodSet_safeSet_bonferroni_audit
+
+theorem lrc_event_measure_bridge_goodSet_witness_pos_from_strict_cover_bound_audit
+    (Eof Pof : LonelyRunner.LRC14.Shape → List ℤ)
+    (cap : LonelyRunner.LRC14.Shape → ℝ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (hwitness : ∀ s, LonelyRunner.LRC14.witnessG2 s =
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          LonelyRunner.DenseCovers.safeSet (Pof s))).toReal)
+    (hwide : ∀ s,
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet (Eof s))).toReal < cap s)
+    (hdual : ∀ s, cap s ≤
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.safeSet (Pof s))).toReal) :
+    ∀ s, 0 < LonelyRunner.LRC14.witnessG2 s :=
+  LonelyRunner.LRC14.EventMeasureBridge.shape_goodSet_witness_pos_from_strict_cover_bound
+    Eof Pof cap hanchor hwitness hwide hdual
+#print axioms lrc_event_measure_bridge_goodSet_witness_pos_from_strict_cover_bound_audit
+
+theorem lrc_event_measure_bridge_goodSet_witness_margin_from_wide_bound_audit
+    (Eof Pof : LonelyRunner.LRC14.Shape → List ℤ)
+    (cap delta : LonelyRunner.LRC14.Shape → ℝ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (hwitness : ∀ s, LonelyRunner.LRC14.witnessG2 s =
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          LonelyRunner.DenseCovers.safeSet (Pof s))).toReal)
+    (hwide : ∀ s,
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet (Eof s))).toReal ≤
+          cap s - delta s)
+    (hdual : ∀ s, cap s ≤
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.safeSet (Pof s))).toReal) :
+    ∀ s, delta s ≤ LonelyRunner.LRC14.witnessG2 s :=
+  LonelyRunner.LRC14.EventMeasureBridge.shape_goodSet_witness_margin_from_wide_bound
+    Eof Pof cap delta hanchor hwitness hwide hdual
+#print axioms lrc_event_measure_bridge_goodSet_witness_margin_from_wide_bound_audit
+
 /-! ### LRC14 p0 cover-bound elementary cores -/
 
 theorem lrc_cover_bound_coverSet_mono_audit {E E' : List ℤ}

@@ -1,3 +1,22 @@
+## codex-2026-06-22-S86g2 -- shape-level goodSet witnessG2 bridge
+
+Pulled the S87 coordination summary for commit `48ae25a6`; no conflicting Lean
+work landed.  Follow-up now pushed the concrete goodSet carrier into the
+shape-indexed interface:
+
+- `LRCEventMeasureBridge.shape_bonferroni_goodSet_safeSet_handoff`
+- `LRCEventMeasureBridge.shape_goodSet_witness_pos_from_strict_cover_bound`
+- `LRCEventMeasureBridge.shape_goodSet_witness_margin_from_wide_bound`
+
+These consume the readout equality
+`witnessG2 s = slowμ(goodSet(Eof s) ∩ safeSet(Pof s))`.  With anchored `Eof`,
+strict `p0(E)<cap` gives `0<witnessG2`; with `p0(E)<=cap-delta` and
+`cap<=meas(safeSet P)`, the shape theorem gives `delta<=witnessG2`.
+
+Interpretation: the slow-time `GOOD∩G_P` event quotient and its shape-level
+readout are now both formal.  Remaining live nodes are hp0cap/hmeasGP and the
+finite-ruler Part-A approximation/arc budget.
+
 ## codex-2026-06-22-S86g -- goodset witness readout bridge (checkpoint)
 
 Formalized the final closure of the witness-carrier infrastructure (commit `48ae25a6`). This bridge connects the `denseSet` complement to the actual `goodSet` carrier, completing the formal readout path for the witness floor.

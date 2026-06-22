@@ -1,3 +1,33 @@
+## codex-2026-06-22-S86g2 -- goodSet shape witnessG2 readout bridge
+
+Pulled S87's coordination note summarizing the prior goodSet carrier bridge,
+then specialized the event-to-shape layer to consume that bridge directly.
+`LRCEventMeasureBridge.lean` now imports the concrete witness-floor carrier and
+adds:
+`shape_bonferroni_goodSet_safeSet_handoff`,
+`shape_goodSet_witness_pos_from_strict_cover_bound`, and
+`shape_goodSet_witness_margin_from_wide_bound`.
+
+These wrappers identify the abstract `witnessG2 s` with the actual slow-time
+measure `slowμ(goodSet (Eof s) ∩ safeSet (Pof s))`, then transport strict
+hp0cap positivity and the p0 `delta` margin to `witnessG2` itself.  This removes
+one more layer of abstract `GOOD` bookkeeping before the finite-ruler Part-A
+interface.
+
+Focused, `Verify`, and root transcripts:
+`lrc_event_goodset_shape_bridge_codex_s86g2.out`,
+`tournamenth7_verify_lrc_event_goodset_shape_bridge_codex_s86g2.out`, and
+`tournamenth7_root_lrc_event_goodset_shape_bridge_codex_s86g2.out`; scans found
+no warnings, no `sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{shape witnessG2, goodSet E, safeSet P,
+strict hp0cap, p0 delta margin, cap floor, finite PartA rhoK, arc budget}`.
+Edges are event readout equality, concrete carrier inclusion, measure
+monotonicity, and positivity/margin transport.  Challenged assumption: the
+shape layer still needs to route through abstract `nuShape`, `DShape`, and
+`p0Shape`; after the concrete goodSet carrier bridge, the p0 margin can feed the
+shape-level `witnessG2` readout directly.
+
 ## codex-2026-06-22-S86g -- goodSet readout bridge closed
 
 Closed the speed-difference quotient left by the phase-gap checkpoint.
