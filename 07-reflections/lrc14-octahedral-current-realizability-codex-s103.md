@@ -50,3 +50,10 @@ So the next sharp lemma is conditional but concrete: in the high-energy,
 near-AP packet branch, every coherent octahedral face curl must be a
 low-height wall, and the remaining curl-free spread current must be
 HYP-2636-Abel-summable.
+
+The rerun with explicit face-curl fingerprints adds a useful caution.  Curl
+L1 correlates positively with divergence (`~0.20` overall), but wall maxima
+and mixed vertex signs are stronger (`~0.47` and `~-0.44`).  So the proof
+should not try to bound a single curl scalar and stop.  It should use face curl
+as the decomposition coordinate, then spend the real estimates on wall maxima,
+vertex divergence signs, and HYP-2636 channel sums.

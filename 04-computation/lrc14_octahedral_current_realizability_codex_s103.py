@@ -210,6 +210,8 @@ class GaugeScore:
     lap_l1: int
     wall_incidence: int
     wall_max: int
+    face_curl_l1: float
+    face_curl_max: float
 
     @property
     def word(self) -> str:
@@ -228,6 +230,33 @@ def divergence(layers: tuple[int, ...]) -> dict[int, float]:
                 total += packet_value(edge_support(layers, a, b))
         divs[v] = total
     return divs
+
+
+def octahedron_triangles() -> list[tuple[int, int, int]]:
+    return [
+        tri
+        for tri in itertools.combinations(VERTICES, 3)
+        if all(edge_weight(*sorted(e)) for e in itertools.combinations(tri, 2))
+    ]
+
+
+def oriented_edge_value(layers: tuple[int, ...], u: int, v: int) -> float:
+    """Use the fixed residue order as a reference orientation for curl fingerprints."""
+    a, b = sorted((u, v))
+    z = packet_value(edge_support(layers, a, b))
+    return z if (u, v) == (a, b) else -z
+
+
+def face_curls(layers: tuple[int, ...]) -> dict[tuple[int, int, int], float]:
+    curls: dict[tuple[int, int, int], float] = {}
+    for a, b, c in octahedron_triangles():
+        # Boundary orientation (a,b) + (b,c) + (c,a) for a<b<c.
+        curls[(a, b, c)] = (
+            oriented_edge_value(layers, a, b)
+            + oriented_edge_value(layers, b, c)
+            + oriented_edge_value(layers, c, a)
+        )
+    return curls
 
 
 def finite_weighted_laplacian_l1(layers: tuple[int, ...]) -> int:
@@ -263,6 +292,7 @@ def wall_incidence(layers: tuple[int, ...]) -> tuple[int, int]:
 def score_gauge(layers: tuple[int, ...]) -> GaugeScore:
     divs = divergence(layers)
     vals = list(divs.values())
+    curls = list(face_curls(layers).values())
     zs = zero_edges()
     es = nonzero_edges()
     wall_total, wall_max = wall_incidence(layers)
@@ -284,6 +314,8 @@ def score_gauge(layers: tuple[int, ...]) -> GaugeScore:
         lap_l1=finite_weighted_laplacian_l1(layers),
         wall_incidence=wall_total,
         wall_max=wall_max,
+        face_curl_l1=sum(abs(x) for x in curls),
+        face_curl_max=max(abs(x) for x in curls),
     )
 
 
@@ -306,7 +338,7 @@ def print_score_table(title: str, rows: list[GaugeScore], limit: int = 12) -> No
     print(
         f"{'word':>8} {'L1div':>11} {'maxdiv':>11} {'net':>11} "
         f"{'+/-':>5} {'sum':>3} {'diam':>4} {'zstr':>4} {'estr':>4} "
-        f"{'wstr':>5} {'lap':>5} {'walls':>6} {'wmax':>5}"
+        f"{'wstr':>5} {'lap':>5} {'walls':>6} {'wmax':>5} {'curl1':>11} {'cmax':>10}"
     )
     for s in rows[:limit]:
         signs = f"{s.positive_vertices}/{s.negative_vertices}"
@@ -314,7 +346,8 @@ def print_score_table(title: str, rows: list[GaugeScore], limit: int = 12) -> No
             f"{s.word:>8} {s.l1_div:>11.6g} {s.max_div:>11.6g} {s.net_div:>11.6g} "
             f"{signs:>5} {s.layer_sum:>3} {s.diameter:>4} {s.zero_stretch:>4} "
             f"{s.edge_stretch:>4} {s.weighted_edge_stretch:>5} {s.lap_l1:>5} "
-            f"{s.wall_incidence:>6} {s.wall_max:>5}"
+            f"{s.wall_incidence:>6} {s.wall_max:>5} {s.face_curl_l1:>11.6g} "
+            f"{s.face_curl_max:>10.6g}"
         )
 
 
@@ -332,12 +365,16 @@ def gauge_scan() -> None:
     print_score_table("Constant-layer gauges (S102 start/raised plus one more)", constants, 3)
 
     print("\nBest gauge at each layer-sum:")
-    print(f"{'sum':>3} {'word':>8} {'L1div':>11} {'maxdiv':>11} {'zero':>5} {'wall':>6}")
+    print(
+        f"{'sum':>3} {'word':>8} {'L1div':>11} {'maxdiv':>11} "
+        f"{'zero':>5} {'wall':>6} {'curl1':>11}"
+    )
     for layer_sum in sorted({s.layer_sum for s in scores}):
         row = min((s for s in scores if s.layer_sum == layer_sum), key=lambda s: s.l1_div)
         print(
             f"{layer_sum:>3} {row.word:>8} {row.l1_div:>11.6g} "
-            f"{row.max_div:>11.6g} {row.zero_stretch:>5} {row.wall_incidence:>6}"
+            f"{row.max_div:>11.6g} {row.zero_stretch:>5} {row.wall_incidence:>6} "
+            f"{row.face_curl_l1:>11.6g}"
         )
 
     section("CORRELATIONS WITH L1 DIVERGENCE")
@@ -350,6 +387,8 @@ def gauge_scan() -> None:
         ("weighted_laplacian_L1", [s.lap_l1 for s in scores]),
         ("wall_incidence", [s.wall_incidence for s in scores]),
         ("wall_max", [s.wall_max for s in scores]),
+        ("face_curl_L1", [s.face_curl_l1 for s in scores]),
+        ("face_curl_max", [s.face_curl_max for s in scores]),
         ("negative_vertices", [s.negative_vertices for s in scores]),
     ]
     ys = [s.l1_div for s in scores]

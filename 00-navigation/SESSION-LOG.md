@@ -36,6 +36,14 @@ to near-AP/Freiman structure, where HYP-2886 preserves mod-7/affine packet
 addresses and HYP-2887 supplies the octahedral Hodge carrier for the remaining
 reciprocal divergence.
 
+Face-curl rerun: updated the S103 scout/output to compute canonical curl
+fingerprints on the eight octahedral triangles.  Curl pressure is real but
+weaker than wall/sign predictors (`face_curl_L1` correlation `+0.202`,
+`face_curl_max` `+0.158`; wall max `+0.467`; negative vertex count `-0.442`).
+So face curl should be the decomposition coordinate, while the analytic
+estimate still needs wall maxima, vertex sign mixing, and HYP-2636 channel
+summation.
+
 ## codex-2026-06-22-S102 -- applying packet balance to LRC reciprocal lifts: divergence defect lemma
 User asked to apply and extend the even-graph/packet-balance ideas to LRC
 creatively.  Synced main (already up to date) and pushed HYP-2883's exact

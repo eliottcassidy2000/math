@@ -120,6 +120,8 @@ The rough correlations across all `729` gauges are also suggestive:
 ```text
 wall_max vs L1 divergence               +0.467
 wall_incidence vs L1 divergence          +0.416
+face_curl_L1 vs L1 divergence            +0.202
+face_curl_max vs L1 divergence           +0.158
 negative_vertices vs L1 divergence       -0.442
 wall_max within fixed layer-sum          +0.451
 ```
@@ -127,6 +129,12 @@ wall_max within fixed layer-sum          +0.451
 The sign-profile correlation is the "opposite bounded signs" signal: gauges
 that create mixed local divergence signs are easier to cancel than gauges with
 all-positive leakage.
+
+Face curl is visible but not the strongest scalar predictor in this first
+gauge scan.  That is an important guardrail for the Hodge route: face curl
+should be treated as the structural carrier to decompose, while the immediate
+analytic pressure is still concentrated in low-height wall maxima and the
+vertex sign-mixing pattern.
 
 ## Proof target
 
@@ -160,7 +168,7 @@ The theorem-shaped target is:
 ```text
 realizable layer cochain on L(K4)
   + coefficient-height <=2 wall deletion
-  + face-curl ledger on the 8 octahedral triangles
+  + face-curl/sign-mixing ledger on the 8 octahedral triangles and 6 vertices
   + HYP-2636 channelwise Abel/Cauchy bound
   => support-six reciprocal divergence <= LRC(14) margin.
 ```
