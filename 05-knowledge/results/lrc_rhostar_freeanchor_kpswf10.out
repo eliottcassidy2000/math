@@ -1,0 +1,80 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_rhostar_freeanchor_kpswf10.py:105: SyntaxWarning: invalid escape sequence '\{'
+  """For each v: margin = 7v*W(S\{v}). Return sorted list (margin, v)."""
+==============================================================================
+THM-527 Thread A: FREE-ANCHOR rescue of the rho*_Vmax=0 admissible sets
+==============================================================================
+
+S = [1, 2, 3, 12, 20, 21, 22, 23, 24, 26, 27, 28, 31]
+  Vmax = 31;  L(S) = lonely measure = 36363011/599518920 = 0.060654  (>0 measure witness)
+  per-anchor C margin 7v*W(S\v), top 5:
+      v= 27: margin=1.6141  RESCUES (C holds)
+      v= 22: margin=1.5916  RESCUES (C holds)
+      v= 23: margin=1.5820  RESCUES (C holds)
+      v= 21: margin=1.5481  RESCUES (C holds)
+      v= 26: margin=1.5046  RESCUES (C holds)
+  => via-Vmax margin = 1.3755 (C via Vmax)
+  => # anchors that rescue (C holds): 9  best at v=27 margin=1.6141
+
+S = [1, 2, 3, 12, 26, 27, 28, 29, 30, 32, 33, 34, 37]
+  Vmax = 37;  L(S) = lonely measure = 5878929493/92026574640 = 0.063883  (>0 measure witness)
+  per-anchor C margin 7v*W(S\v), top 5:
+      v= 30: margin=1.8326  RESCUES (C holds)
+      v= 32: margin=1.6970  RESCUES (C holds)
+      v= 28: margin=1.6728  RESCUES (C holds)
+      v= 33: margin=1.5685  RESCUES (C holds)
+      v= 27: margin=1.3305  RESCUES (C holds)
+  => via-Vmax margin = 0.9716 (Vmax FAILS (consistent with rho*_Vmax=0))
+  => # anchors that rescue (C holds): 8  best at v=30 margin=1.8326
+
+S = [1, 2, 3, 13, 20, 22, 23, 24, 25, 26, 27, 28, 29]
+  Vmax = 29;  L(S) = lonely measure = 22803241/515057400 = 0.044273  (>0 measure witness)
+  per-anchor C margin 7v*W(S\v), top 5:
+      v= 26: margin=1.5648  RESCUES (C holds)
+      v= 24: margin=1.1917  RESCUES (C holds)
+      v= 28: margin=1.1472  RESCUES (C holds)
+      v= 22: margin=0.9804
+      v= 27: margin=0.9716
+  => via-Vmax margin = 0.7250 (Vmax FAILS (consistent with rho*_Vmax=0))
+  => # anchors that rescue (C holds): 3  best at v=26 margin=1.5648
+
+S = [1, 2, 3, 12, 17, 20, 22, 23, 24, 25, 26, 27, 28]
+  Vmax = 28;  L(S) = lonely measure = 21529507/435134700 = 0.049478  (>0 measure witness)
+  per-anchor C margin 7v*W(S\v), top 5:
+      v= 26: margin=1.8605  RESCUES (C holds)
+      v= 24: margin=1.4872  RESCUES (C holds)
+      v= 20: margin=1.4610  RESCUES (C holds)
+      v= 25: margin=1.2581  RESCUES (C holds)
+      v= 28: margin=1.1549  <-- Vmax  RESCUES (C holds)
+  => via-Vmax margin = 1.1549 (C via Vmax)
+  => # anchors that rescue (C holds): 6  best at v=26 margin=1.8605
+
+S = [1, 2, 3, 13, 22, 23, 24, 26, 27, 28, 29, 30, 31]
+  Vmax = 31;  L(S) = lonely measure = 5295076627/78237219060 = 0.067680  (>0 measure witness)
+  per-anchor C margin 7v*W(S\v), top 5:
+      v= 29: margin=2.1843  RESCUES (C holds)
+      v= 30: margin=1.9643  RESCUES (C holds)
+      v= 28: margin=1.8999  RESCUES (C holds)
+      v= 26: margin=1.5046  RESCUES (C holds)
+      v= 27: margin=1.4978  RESCUES (C holds)
+  => via-Vmax margin = 1.0499 (C via Vmax)
+  => # anchors that rescue (C holds): 7  best at v=29 margin=2.1843
+
+==============================================================================
+CENSUS: build admissible covering+primitive S3 with rho*_Vmax=0,
+check free-anchor C-rescue + L(S)>0 rate
+==============================================================================
+  admissible rho*_Vmax=0 sets built: 120
+  sets where NO anchor rescues C (max margin <= 1): 0
+  sets with L(S)=0 (no measure witness): 0
+  worst (smallest) best-anchor margin = 1.5648 (all rescued, margin>1)
+  worst (smallest) L(S) = 0.044273
+
+==============================================================================
+READING:
+  If every rho*_Vmax=0 admissible set is C-rescued by a FREE anchor
+  (max margin > 1) and L(S) > 0, then the CORRECT object is the
+  FREE-ANCHOR density (max over v), and the via-Vmax pin was the bug.
+  The compactness floor should be posed for max_v rho*_v, not rho*_Vmax.
+==============================================================================
+
+DONE.

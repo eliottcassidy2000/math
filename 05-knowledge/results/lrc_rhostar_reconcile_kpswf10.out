@@ -1,0 +1,36 @@
+==============================================================================
+THM-527 Thread A: RECONCILE rho*(maxgap>2/7) vs criterion-C-via-Vmax
+==============================================================================
+
+S = [1, 2, 3, 12, 20, 21, 22, 23, 24, 26, 27, 28, 31]
+  P (small) = [1, 2, 3, 12];  L (cluster>13) = [20, 21, 22, 23, 24, 26, 27, 28, 31]
+  Vmax = 31;  co-offsets E = Vmax-L = [0, 3, 4, 5, 7, 8, 9, 10, 11]
+  NOTE: 0 in E? True  (Vmax itself gives e=0)
+
+  rho*_crit  (maxgap>2/7 cap G_P) = 0 = 0.000000
+  rho*_glob  (maxgap>1/7 cap G_P) = 25/42 = 0.595238
+
+  ACTUAL full-S lonely measure L(S) = 0.060654  (# safe arcs = 30)
+    widest full-S safe arc: (0.275974,0.282313) width 0.006339, center 0.279143
+    witness center is in Vmax-period index k=8 (Vmax*center=8.6534)
+
+  RESOLUTION:
+  The criterion-C margin W(S\Vmax)*7*Vmax uses the WIDEST safe arc of
+  the OTHER 12 runners over the whole circle. rho*_crit measures the
+  MEASURE of P-safe slow-times whose cluster fast-fold leaves a >2/7
+  gap.  These differ when the rescuing arc is NOT P-safe-localised in
+  the slow variable.  KEY CHECK: is the full-S witness arc P-safe?
+    full-S witness center 0.279143: in G_P? True
+    cluster maxgap{e_i*center} = 0.279143 (>2/7? False)
+
+==============================================================================
+  So rho*_crit=0 means: NO P-safe slow-time has cluster-gap > 2/7.
+  But the full-S witness exists because it sits at a slow-time that is
+  P-safe with cluster-gap in (1/7, 2/7] -- a GLOBAL witness (gap>1/7),
+  not a via-Vmax CRITERION witness (which needs >2/7).  i.e. the
+  via-Vmax CRITERION-C-density rho*_crit can be 0 while the GLOBAL
+  witness density rho*_glob > 0 carries M(S)>=1/14.
+    rho*_glob here = 0.595238 > 0 ? True
+==============================================================================
+
+DONE.

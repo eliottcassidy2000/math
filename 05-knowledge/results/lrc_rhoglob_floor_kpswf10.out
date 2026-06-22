@@ -1,0 +1,43 @@
+==============================================================================
+THM-527 Thread A: the CORRECTED floor -- inf rho*_glob (gap>1/7) > 0 ?
+==============================================================================
+
+--- (1) k=9, spread<=14, 3 worst P: census of rho*_crit=0 vs rho*_glob=0 ---
+    rho*_crit=0 cases: 38 / 9009
+    of those, rho*_glob=0 cases: 0
+    min rho*_glob over the rho*_crit=0 cases = 298/637 = 0.467818
+      at E=[0, 2, 3, 4, 5, 6, 7, 8, 10] P=[1, 2, 3, 13]
+
+--- (2) FULL k=9 (spread<=14, 3 worst P): ANY rho*_glob=0? ---
+    rho*_glob=0 cases: 0
+    min rho*_glob (all) = 419/1092 = 0.383700 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8] P=[1, 6, 7, 13]
+
+--- (3) admissibility of the min-rho*_glob shape ---
+    min-rho*_glob shape E=[0, 1, 2, 3, 4, 5, 6, 7, 8] P=[1, 6, 7, 13] (rho*_glob=0.383700):
+    admissible covering+primitive S over Vmax sweep: 69
+    => the min global-witness density is >0 and IS admissible.
+
+--- (4) rho*_glob along spread-growing families (floor positive?) ---
+    F1 {0..7,M}:
+      M=   9: rho*_glob = 0.547619
+      M=  13: rho*_glob = 0.540476
+      M=  23: rho*_glob = 0.540404
+      M=  47: rho*_glob = 0.526791
+      M= 101: rho*_glob = 0.523018
+      M= 401: rho*_glob = 0.524301
+    AP {0,s,..,8s}:
+      s=  11: rho*_glob = 0.500928
+      s=  23: rho*_glob = 0.485507
+      s=  43: rho*_glob = 0.479987
+      s= 101: rho*_glob = 0.481208
+
+==============================================================================
+VERDICT (corrected program):
+  rho*_glob (gap>1/7, the GLOBAL-WITNESS density) is POSITIVE on
+  EVERY k=9 shape scanned -- including all rho*_crit=0 cases.
+  => The CORRECT object to floor is rho*_glob, NOT rho*_crit.
+     The via-Vmax CRITERION (>2/7) was the wrong target; the
+     global-witness density (>1/7) is what LRC needs and it stays >0.
+==============================================================================
+
+DONE.

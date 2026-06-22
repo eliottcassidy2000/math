@@ -1,0 +1,25 @@
+==============================================================================
+THM-527 Thread A: rho*_glob (gap>1/7) at LARGE k -- stays positive?
+==============================================================================
+
+--- pure consecutive nu_k = meas{maxgap{j x:j<k} > 1/7} ---
+    (1/k>1/7 automatic for k<=7; binding for k>=8)
+    k= 3: nu_k = 1 = 1.000000
+    k= 4: nu_k = 1 = 1.000000
+    k= 5: nu_k = 1 = 1.000000
+    k= 6: nu_k = 1 = 1.000000
+    k= 7: nu_k = 1 = 1.000000
+    k= 8: nu_k = 691/735 = 0.940136
+    k= 9: nu_k = 247/294 = 0.840136
+    k=10: nu_k = 38/49 = 0.775510
+    k=11: nu_k = 1381/2205 = 0.626304
+    k=12: nu_k = 13823/24255 = 0.569903
+    k=13: nu_k = 477/1078 = 0.442486
+
+--- per-k min rho*_glob (bounded spread + worst-P), looking for 0 ---
+  k= 7 (|P|=6, W=11, 462 shapes x30 P): min rho*_glob = 3029/10780 = 0.280983  zeros=0
+        argmin E=[0, 1, 2, 3, 4, 5, 6] P=[1, 5, 7, 8, 9, 11]  (admissible covering S: 4)
+  k= 8 (|P|=5, W=12, 792 shapes x30 P): min rho*_glob = 8152/24255 = 0.336096  zeros=0
+        argmin E=[0, 1, 2, 3, 4, 5, 6, 7] P=[1, 4, 5, 9, 11]  (admissible covering S: 10)
+  k= 9 (|P|=4, W=13, 1287 shapes x30 P): min rho*_glob = 143/420 = 0.340476  zeros=0
+        argmin E=[0, 1, 2, 3, 4, 5, 6, 7, 8] P=[1, 10, 11, 12]  (admissible covering S: 43)

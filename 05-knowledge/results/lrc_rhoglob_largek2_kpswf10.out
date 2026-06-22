@@ -1,0 +1,13 @@
+==============================================================================
+THM-527 Thread A: rho*_glob floor at k=10..13 (completing the hard tail)
+==============================================================================
+  k=10 (|P|=3, W=13, 715 shapes x25 P): min rho*_glob = 19/49 = 0.387755  zeros=0
+        argmin E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] P=[1, 11, 12]  admissible covering S: 39
+  k=11 (|P|=2, W=14, 1001 shapes x25 P): min rho*_glob = 3193/8820 = 0.362018  zeros=0
+        argmin E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] P=[1, 12]  admissible covering S: 49
+  k=12 (|P|=1, W=15, 1365 shapes x13 P): min rho*_glob = 10358/24255 = 0.427046  zeros=0
+        argmin E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] P=[1]  admissible covering S: 61
+  k=13 (|P|=0, W=16, 1820 shapes x1 P): min rho*_glob = 477/1078 = 0.442486  zeros=0
+        argmin E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] P=[]  admissible covering S: 74
+
+DONE.
