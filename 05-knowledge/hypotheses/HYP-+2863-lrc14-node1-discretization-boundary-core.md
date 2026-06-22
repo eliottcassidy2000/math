@@ -99,3 +99,18 @@ boundary core does NOT close via the s≈0 maxgap collapse.
 
 **Lesson:** the cluster/far split (L maxgap + P G_P) is essential; conflating them omits the
 real constraint (G_P). The genuine residual is the overlap/decorrelation floor (Node 2/3).
+
+
+## The FLOOR rho* > 0 = quasi-independence R' (verified) -- the corrected residual + sqrt-cancellation link
+With the corrected structure rho* = meas(G_P cap {maxgap(L)>thr}), the floor is the OVERLAP. Write
+> rho* = R' * meas(GOOD) * meas(G_P),   R' := meas(GOOD cap G_P)/(meas(GOOD)*meas(G_P))  [quasi-independence]
+VERIFIED (1/7-threshold, LRC14-style (E,P) splits): R' in [0.81, 1.0] (0.915, 0.813, 0.993, 1.000),
+overlap 0.33-0.58 > 0. R' near 1 because GOOD (large-cluster maxgap) and G_P (small part P) live on
+DIFFERENT SCALES => decorrelate => nearly independent. So:
+- meas(GOOD) > 0 (three-distance, mu-floor), meas(G_P) > 0 (PROVEN LRC(|P|<=13)), R' >= c>0 => rho* > 0.
+- The covariance meas(GOOD cap G_P) - meas(GOOD)meas(G_P) = (R'-1)*product is bounded by the S29
+  SQRT-CANCELLATION (the cross-scale deviation from independence) => R' in [c1,c2] => floor>0.
+- This IS kps's Node-3 spectrum sum R'=1+SPEC/baseline (HYP-2840 two halves). CONVERGENCE confirmed.
+**Net corrected reduction:** Node 1 = [discretization lemma, done] + [arcCount<=7ΣE, done] +
+[rho* = R'*meas(GOOD)*meas(G_P) > 0: meas(GOOD) three-distance + meas(G_P) LRC(<=13) + R'>=c
+quasi-independence (sqrt-cancellation/Node-3 spectrum)]. The floor R'>=c is the shared crux.
