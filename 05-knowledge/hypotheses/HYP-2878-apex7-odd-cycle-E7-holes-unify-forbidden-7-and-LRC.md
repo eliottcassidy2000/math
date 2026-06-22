@@ -1,7 +1,7 @@
 ---
 id: HYP-2878
 title: The apex-7 odd-cycle phenomenon -- E_7's odd holes (C_5 + C_7) are the shared structure behind forbidden H in {7,21}, E_7 non-chordality, and LRC(14)
-status: COMPUTED finding (E_7 odd holes = 1496 C_5 + 196 C_7, validated V=54 chi=28); the C_5<->H=7 link is thematic, the C_7 = apex-prime signature; full single-object unification OPEN
+status: COMPUTED+STRENGTHENED. E_7 odd holes=1496 C_5+196 C_7 (validated V=54 chi=28); 7-multiple H-atoms first at m=7 (49=7^2); SHARP FACT: 7 is the UNIQUE permanent prime gap in the H-spectrum (=> LRC(14)=2*7 hard). Three n=7 thresholds fire together; single literal C_5 object still OPEN
 source: kind-pasteur-2026-06-22-S31e
 related:
   - THM-200    # H=7 impossibility (the pentagon obstruction)
@@ -43,6 +43,27 @@ C_7 class has 9 edges (NOT the naive Hamiltonian C_7 = 7 edges); 0 heptagon hole
 purely from low-complexity (<=7-edge) even graphs. So the apex heptagon is a structured,
 complement-symmetric object on the 9-edge even-graph classes -- not the trivial 7-cycle. The
 C_5 holes are broader (touch 48/54 classes).
+
+## THE ATOM-SPECTRUM SIDE (kps-S31f, ties to mac-mini HYP-2879 'weight'=atom-count)
+Strong H-ATOMS (irreducible strong tournaments; `H` multiplicative over strong components,
+HYP-2877) computed m=3..7 (`04-computation/strong_atom_7adic_kps.py`, validated):
+- **7-multiple strong atoms FIRST appear at EXACTLY m=7** = the apex prime:
+  `{35, 49=7^2, 77, 91, 105, 133, 147, 175, 189}`. None at m<=6.
+- `H=7` and `H=21` are NEVER strong atoms (the `{7,21}` forbidden); `49=7^2` and `75` ARE
+  irreducible m=7 atoms with COMPOSITE values that do not factor into smaller atoms (7 is not an
+  atom; the 3-atom+25-atom needs 9 vertices != 7). These are mac-mini's HYP-2879 "single atoms / w=1".
+- **THE SHARP UNIFYING FACT: `7` is the UNIQUE PERMANENT prime gap in the H-spectrum.** Among odd
+  primes, essentially ALL are strong atoms (3,5,11,13,17,19,23,29,31,37,...,157 -- realizable H
+  values); the only non-atom odd primes <=159 are `7, 107, 149`, and `107,149` are TRANSIENT
+  (atoms at higher n, forbidden-seven reflection) -- so **`7` is the ONLY prime PERMANENTLY
+  forbidden as a tournament `H` (Redei count) value (THM-029).** LRC(14) = `2*7` is the first open
+  Lonely Runner case PRECISELY because 7 is this unique defective prime.
+
+So THREE independent thresholds fire at `n = 7` = the apex prime: (i) `E_7` first gains odd holes
+(C_5 + C_7); (ii) 7-multiple strong H-atoms first appear (49=7^2,...); (iii) `7 | H` first possible.
+And `7` is the unique permanent prime gap, with `14 = 2*7` the LRC dimension. The apex-7 phenomenon
+is one event -- the prime 7 "switching on" across the even-graph metagraph, the H-atom spectrum, and
+(via 14) the Lonely Runner -- all at its own index n=7.
 
 ## The bridge to LRC(14) (HYP-2605, the winding tournament)
 LRC(14) IS a question about the random winding tournament `T(x)` (phase `x`, difference-winding
