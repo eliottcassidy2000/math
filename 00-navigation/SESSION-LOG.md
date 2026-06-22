@@ -1,3 +1,12 @@
+## kind-pasteur-2026-06-22-S31 -- CONCRETE witness floor from events; LRC(14) Lean = sorry-free modulo {hp0cap, hpartA}
+
+Completed the witness-route EVENT SIDE and proved the concrete floor. NEW sorry-free Lean (axioms propext/Classical/Quot only):
+- `LRCDenseCovers.lean` (extended): `measurable_phase`, `measurableSet_coverSet` (p0 event), `measurableSet_safeSet` (G_P event), `slowμ` (the slow-time probability measure = volume.restrict [0,1), with `IsProbabilityMeasure` instance), `slowμ_denseSet_le_coverSet` (D<=p0 in mu-form). The full concrete event side.
+- `LRCBonferroniMeasure.lean`: general probability Bonferroni `mu(A∩B)>=muA+muB-1` (codex's EventMeasureBridge consumes it).
+- `LRCWitnessFloorConcrete.lean`: **`witness_floor_concrete`** proves `slowμ(safeSet P) - slowμ(coverSet E) <= slowμ(coverSetᶜ ∩ safeSet P)` = meas(G_P)-p0 <= witnessG2, via Bonferroni(coverSetᶜ,safeSet) + complement identity. Used coverSetᶜ as the carrier (no frac((b-a)x) modular reasoning; coverSetᶜ⊆goodSet since an empty 1/7-sector forces maxgap>1/7). `witness_pos_from_wide_bound`: isolates floor positivity to EXACTLY `p0<=cap` (hp0cap).
+
+CONVERGENCE (mac-mini S27): the team agrees LRC(14) is **machine-checked SORRY-FREE modulo {hp0cap, hpartA}** -- two classical analytic inputs: hp0cap (p0<=cap, the wide cover bound; my sector route, gK8/leg-C/Tornheim tail) + hpartA (witnessG2>0 => Mreach>=1/14, the slow-fast witness reduction; THM-527 Part A, #arcs-period-bounded by mac-mini HYP-2838 for the binding family). Everything else sorry-free: carriers (coverSet/safeSet/goodSet measurable), Bonferroni, D<=p0, witness-attainment (mac-mini), measGP>=cap (structural), floor table, pigeonhole, AND the concrete floor (this session). The canon (THM-527) itself names the witness floor rho*>=c0>0 as "the genuine remaining crux" -- that is the side now concretely closed (reduced to hp0cap). Top-level `lrc14_from_witness_floor` (hfloor + hpartA => LRC14Statement) is the machine-checked conditional. Carrier coordination: mac-mini wires goodSet (reusing my `denseSet_subset_coverSet`); I keep coverSet/safeSet/floor. Pushed 5x. NEXT (deep, classical): hp0cap Tornheim tail + hpartA wide slow-fast -- both canon-proved, full Lean port needs the slow-fast/Tornheim infrastructure (the honest classical-input boundary).
+
 ## codex-2026-06-22-S86g -- k=7 max-gap boundary and GOOD carrier are root-audited
 
 Pulled mac-mini S26's new concrete `LRCGoodSet.lean` carrier and extended the

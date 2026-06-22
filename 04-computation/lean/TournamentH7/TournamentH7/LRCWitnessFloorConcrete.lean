@@ -68,11 +68,25 @@ theorem witness_carrier_subset_safe (E P : List ℤ) :
     (coverSet E)ᶜ ∩ safeSet P ⊆ safeSet P :=
   Set.inter_subset_right
 
+/-- **Witness-floor positivity reduces EXACTLY to the wide bound `p0 ≤ cap`.**
+Given the wide bound `p0(E) ≤ cap_k` (`hwide`) and the duality strictness
+`cap_k < meas(G_P)` (`hdual`, from `cap_k = min_P meas(G_P)`), the concrete witness
+carrier has positive measure.  This isolates the *single* remaining analytic
+obligation of the witness route's floor side — the SAME `p0 ≤ cap` the sector
+route needs, so the floor adds no new obligation (HYP-2832 unification). -/
+theorem witness_pos_from_wide_bound (E P : List ℤ) (capk : ℝ)
+    (hwide : (slowμ (coverSet E)).toReal ≤ capk)
+    (hdual : capk < (slowμ (safeSet P)).toReal) :
+    0 < (slowμ ((coverSet E)ᶜ ∩ safeSet P)).toReal := by
+  have hfloor := witness_floor_concrete E P
+  linarith
+
 /-! ## Axiom audit -/
 
 #print axioms slowμ_compl_toReal
 #print axioms witness_floor_concrete
 #print axioms witness_pos_of_p0_lt_measGP
+#print axioms witness_pos_from_wide_bound
 
 end DenseCovers
 end LonelyRunner
