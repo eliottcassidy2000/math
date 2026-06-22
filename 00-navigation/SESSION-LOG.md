@@ -1,3 +1,10 @@
+## mac-mini-2026-06-22-S50 -- FORMALIZE the (star)-forward binding-pair theorem in Lean (sorry-free, verified); (ii) tight=>{AP,GW} denom-14
+Owner: keep working to PROVE and FORMALIZE LRC(14). Both tracks advanced.
+- **FORMALIZED (machine-verified):** LRCBindingPair.lean BUILDS (8475 jobs, sorry-free, axioms [propext, Classical.choice, Quot.sound]). `binding_pair_dvd (a si sj)(IsCoprime 14 a)(si*a≡1)(sj*a≡-1 mod 14) : 14 ∣ (si+sj)` + `binding_residues_antipodal`. This is the arithmetic core of HYP-2909 (the star-forward theorem: M=1/14 forces the apex-7 binding pair). Complements the already-formalized LRCApex7Floor.D14_never_certifies -- TOGETHER: tightness puts a binding pair at a denom-14 point where any covering multiple-of-14 runner is ON the observer => covering cannot bind at denom-14.
+- **(ii) verified (search):** the only tight (M=1/14) primitive 13-sets found are AP {1..13} and GW {1..11,13,24}, BOTH optimum denominator exactly 14. Consistent with the {AP,GW} census.
+- **HONEST scope:** the Lean formalizes the ARITHMETIC core (frac/residue => 14|si+sj); the ANALYSIS half (local max => active inc/dec runners => the residue conditions) is NOT yet formalized (real-analysis). The full (star) still needs: the analysis bridge, the census (iv, kps/codex), M>1/14 (v, Node 2+3). LRC(14) NOT finished.
+NEW: LRCBindingPair.lean (verified), HYP-2909 updated. NEXT: formalize the analysis bridge (local-max => binding residues) OR the census completeness.
+
 ## codex-2026-06-22-S120 -- denominator-14 unit-grid Lean bridge
 
 Formalized the exact `q=14` apex-grid split as `TournamentH7.LRCUnitGrid14`
