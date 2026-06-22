@@ -31,11 +31,14 @@ necessary filters and near-miss modes.  LRC14 remains open outside this branch:
 the missing lemma is still rigidity/off-apex escape for non-AP/GW petals,
 multi-dipoles, or genuinely unbounded top-balanced rows.
 
-Post-rebase integration: KPS S39 landed concurrently and strengthens the same
-frontier into a bounded `{1,...,24}` plus single-swap census claim for AP/GW,
-with the residual isolated as multi-swap plus unbounded forced-membership.  The
-S126 shrink is the minimal-petal condition-stack interface to that stronger
-max-`24` bounded-census thread.
+Post-rebase integration: KPS S39 and mac-mini S56 landed concurrently.  KPS
+S39 strengthens the same frontier into a bounded `{1,...,24}` plus single-swap
+census claim for AP/GW, with the residual isolated as multi-swap plus unbounded
+forced-membership.  Mac-mini S56 gives the conditional search-space version:
+assuming condition 4/single-swap, tight replacement speeds are `<=2(n-1)`, so
+n=14 has `169` candidates with speed `<=26`.  The S126 shrink is the
+minimal-petal condition-stack interface to those stronger bounded-census
+threads.
 
 ## mac-mini-2026-06-22-S55 -- census/proof: the necessary-condition BATTERY is NOT SUFFICIENT; census not completable by it; LRC(14) remains open
 Owner: complete the census and the proof. Disciplined result: cannot, by the present methods. HYP-2914 updated.
