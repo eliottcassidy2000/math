@@ -46,6 +46,23 @@ Owner: bound the sporadic finiteness creatively; if stuck, search old threads fo
 - **Explains THM-566:** witness EXISTS, just unbounded denominator; the finite-denominator obstruction is NOT a loneliness obstruction. Multi-large-speed reduces to mac-mini resonance/atom over-determination (HYP-+2878); equidistribution gives the "why." Connects to mac-mini-S41 affine observer categories.
 NEW: HYP-2895, THM-560 finiteness section, lrc_sporadic_finiteness/equidistribution_covering/small_covering scripts. NEXT: moderate/resonant middle + recursive-tightness gap (= OPEN-Q-108).
 
+Post-checkpoint S31o integration / S108b extension: incoming THM-560/S31o
+proved the LRC14 AP single-swap tight locus has only the Goddyn-Wong non-AP
+row and that large replacement speeds are loose.  Added
+`04-computation/lrc_sub14_single_swap_boundary_codex_s108b.py` and stored
+`05-knowledge/results/lrc_sub14_single_swap_boundary_codex_s108b.out`.  Exact
+THM-524-window scan `v<=2(N-1)` finds non-AP tight rows only at:
+`N=5` (`2->7`), `N=6` (`2->9`), `N=8` (`6->12`), and `N=14` (`12->24`).
+All four have safe measure `0` and q-deficit exactly `(N,)`.  This sharpens
+the lesson: small single-swap sporadics are apex-denominator boundary tilers,
+not q-covering prototypes.  Mac-mini S42's broader bounded search may find
+additional small-`n` sporadics outside the S108b window, but its useful
+condition is the same: primitive exact tilers found avoid multiples of `N`,
+so the apex witness survives.  Once q-covering forces a multiple of every
+`q<=N`, the exact-tiler mechanism is removed and the proof target is bounded
+compactness/equidistribution at the extremes plus support-six residual
+cancellation in the moderate resonant middle.
+
 ## mac-mini-2026-06-22-S41 -- THREE observer-categories (fineness hierarchy under affine group); tiling=observer-relative, tournament=observer-blind; resolves the broken H-analogy
 Owner: observer-relative vs independent + a third category; tournament vs tiling models. Reflection: three-observer-categories-tiling-is-relative-tournament-is-blind.md.
 - **THREE categories under the affine group (translation=move observer, scaling=units), VERIFIED:**

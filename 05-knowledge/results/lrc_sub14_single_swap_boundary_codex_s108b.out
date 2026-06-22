@@ -1,0 +1,44 @@
+codex-S108b sub-14 single-swap boundary census
+Convention: LRC(N) has N-1 speeds and target 1/N.
+Window: AP_N single-swap rows with added speed <= 2(N-1).
+Exact method: THM-524 binding-pair critical points.
+
+Non-AP tight rows in the acceleration window:
+  N= 4: 0 rows
+  N= 5: 1 rows
+  N= 6: 1 rows
+  N= 7: 0 rows
+  N= 8: 1 rows
+  N= 9: 0 rows
+  N=10: 0 rows
+  N=11: 0 rows
+  N=12: 0 rows
+  N=13: 0 rows
+  N=14: 1 rows
+
+Detailed rows:
+  N= 5 drop  2 -> add  7; M=1/5 at t=1/5; safe=0; active=(1, 4); deficits=(5,)
+       speeds=(1, 3, 4, 7)
+       residues=[1, 2, 3, 4] missing=[] doubled=[]
+  N= 6 drop  2 -> add  9; M=1/6 at t=1/6; safe=0; active=(1, 5); deficits=(6,)
+       speeds=(1, 3, 4, 5, 9)
+       residues=[1, 3, 3, 4, 5] missing=[2] doubled=[3]
+  N= 8 drop  6 -> add 12; M=1/8 at t=1/8; safe=0; active=(1, 7); deficits=(8,)
+       speeds=(1, 2, 3, 4, 5, 7, 12)
+       residues=[1, 2, 3, 4, 4, 5, 7] missing=[6] doubled=[4]
+  N=14 drop 12 -> add 24; M=1/14 at t=5/14; safe=0; active=(3, 11); deficits=(14,)
+       speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+       residues=[1, 2, 3, 5, 6, 7, 8, 8, 9, 10, 11, 12, 13] missing=[4] doubled=[8]
+
+Synthesis:
+  rows found: 4
+  rows with safe measure zero: 4
+  rows whose only q-witness deficit is the apex q=N: 4
+  Thus every tight non-AP row in this natural sub-14 single-swap window is an apex-denominator boundary tiler, not a covering row.
+  This matches the LRC14 lesson from THM-560/S31o: exact tilers live on the q=N witness boundary; the covering branch must be closed by binding-pair margins and support-six residual control.
+
+Tournament Analysis
+  Vertices are row mechanisms, not runners:
+  apex_q_deficit > complete_residue_lift > one_gap_one_collision > global_single_swap_tightness > q_covering_forced_margin > raw_single_swap_scan
+  Observable: whether a tight row survives after quotienting by q-witness covering.  It does not: the quotient sends every row above to the apex q=N boundary, so it destroys no covering counterexample.
+  Challenged assumption: small sporadic tilers are the prototype for the LRC14 covering obstruction.  In this window they are only the prototype for boundary artifacts; the covering prototype is S108's AP-drop repair slice with positive binding-pair margins.
