@@ -1,0 +1,11 @@
+=== (1) THREE-GAP rigidity: max # distinct gaps over x (AP should be <=3) ===
+  AP/consec {0..7}                           max distinct gaps = 3  hist={1: 11, 2: 834, 3: 1154}
+  perturb {0,1,2,3,4,5,6,8}                  max distinct gaps = 4  hist={1: 7, 2: 8, 3: 1650, 4: 334}
+  spread {0,1,2,4,7,11,16,22}                max distinct gaps = 8  hist={1: 3, 2: 8, 3: 4, 4: 12, 5: 70, 6: 896, 7: 970, 8: 36}
+  dilated 2*{0..7}? primitive {0,2,4,6,8,10,12,14} max distinct gaps = 3  hist={1: 22, 2: 828, 3: 1148}
+
+=== (2) BIMODALITY of N_E (mass at extremes N=0,6) and L_y proxy; AP should be most bimodal ===
+  AP/consec {0..7}                           bimodality=0.3476  p0(N=0)=0.3272  N-dist={0: 0.327, 1: 0.244, 2: 0.17, 3: 0.106, 4: 0.081, 5: 0.051, 6: 0.02}
+  perturb {0,1,2,3,4,5,6,8}                  bimodality=0.2262  p0(N=0)=0.2083  N-dist={0: 0.208, 1: 0.385, 2: 0.156, 3: 0.112, 4: 0.071, 5: 0.05, 6: 0.018}
+  spread {0,1,2,4,7,11,16,22}                bimodality=0.0560  p0(N=0)=0.0495  N-dist={0: 0.05, 1: 0.28, 2: 0.388, 3: 0.222, 4: 0.035, 5: 0.019, 6: 0.006}
+  dilated 2*{0..7}? primitive {0,2,4,6,8,10,12,14} bimodality=0.3476  p0(N=0)=0.3272  N-dist={0: 0.327, 1: 0.244, 2: 0.17, 3: 0.106, 4: 0.081, 5: 0.051, 6: 0.02}

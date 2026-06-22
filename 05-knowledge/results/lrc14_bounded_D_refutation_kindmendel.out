@@ -1,0 +1,10 @@
+S_X = {1..11,13, lcm(2..X)}: primitive covering 13-set, min witness D = nextprime(X):
+  X= 20: covering=True, primitive=True, min witness D=41 (>X: True)
+  X= 30: covering=True, primitive=True, min witness D=41 (>X: True)
+  X= 45: covering=True, primitive=True, min witness D=53 (>X: True)
+  X= 60: covering=True, primitive=True, min witness D=67 (>X: True)
+  X= 80: covering=True, primitive=True, min witness D=83 (>X: True)
+  X=100: covering=True, primitive=True, min witness D=101 (>X: True)
+=> witness D UNBOUNDED over covering 13-sets; NO finite certificate basis.
+=> bounded-D (HYP-2864) and 'D<=41 for all' (HYP-2876) are FALSE; these sets are lonely
+   ONLY via large-D witnesses = equidistribution (the irreducible analytic crux).
