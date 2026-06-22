@@ -1,0 +1,21 @@
+CASE k9 P=[1, 3, 4, 5]
+   d=  1 span=   8  |SPEC_true|=0.07341  R_true=0.83822
+   d=  2 span=  16  |SPEC_true|=0.00457  R_true=0.99028
+   d=  3 span=  24  |SPEC_true|=0.01298  R_true=0.97130
+   d=  4 span=  32  |SPEC_true|=0.02149  R_true=0.95245
+   d=  5 span=  40  |SPEC_true|=0.02194  R_true=0.95178
+   d=  6 span=  48  |SPEC_true|=0.00806  R_true=1.01775
+   d=  7 span=  56  |SPEC_true|=0.00258  R_true=1.00569
+   d=  8 span=  64  |SPEC_true|=0.00929  R_true=1.02080
+   d=  9 span=  72  |SPEC_true|=0.00457  R_true=1.00984
+   d= 10 span=  80  |SPEC_true|=0.01601  R_true=1.03582
+   d= 11 span=  88  |SPEC_true|=0.00247  R_true=1.00553
+   d= 12 span=  96  |SPEC_true|=0.00126  R_true=0.99665
+   d= 13 span= 104  |SPEC_true|=0.00398  R_true=1.00889
+   d= 14 span= 112  |SPEC_true|=0.00150  R_true=0.99670
+   d= 15 span= 120  |SPEC_true|=0.00492  R_true=0.98873
+   d= 16 span= 128  |SPEC_true|=0.00013  R_true=1.00039
+   d= 17 span= 136  |SPEC_true|=0.00518  R_true=0.98852
+   d= 18 span= 144  |SPEC_true|=0.00426  R_true=0.99028
+   d= 19 span= 152  |SPEC_true|=0.00416  R_true=0.99095
+   d= 20 span= 160  |SPEC_true|=0.00054  R_true=0.99882
