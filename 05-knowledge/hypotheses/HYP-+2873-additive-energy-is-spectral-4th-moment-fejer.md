@@ -37,3 +37,15 @@ characterized by a finite set of residue/prime obstructions (apex 7 first).
 Beurling-Selberg/Fejer (spectral concentration, A=spec4) <-> the interval/consec extremality <->
 the apex-7 (sector kernel, QR(7)=Fano/Hamming) <-> the {7,21} forbidden-H ideal. The "21 is where
 everything meets": 21=3·7 is both a forbidden H AND 3x the LRC apex. -> HYP-2852, THM-534, HYP-2869.
+
+
+## IDEA 1 CORRECTED (mac-mini-S33): the forbidden set is FINITE {7,21}, NOT the ideal 7Z -- the TRUE Kuratowski/Wagner analog
+Tested "no strong-H ≡ 0 mod 7": FALSE at n=7. Strong tournaments WITH H divisible by 7 EXIST at n=7:
+H = 35, 49, 133, 147, 175 (residues mod 7 hit 0 first at n=7; n=3..6 never). So {35,49,...} ARE
+achievable (just not at n<=6) -- the forbidden set is NOT 7Z. The PERMANENTLY-forbidden H values are
+a FINITE set {7,21} (+ possibly finitely more), exactly the Kuratowski/Wagner shape (finite forbidden
+set, like {K5,K3,3}), NOT an infinite multiplicative ideal. The achievable-H semigroup is cofinite
+(eventually all odds except the finite forbidden set), since strong-H values proliferate with n
+(67 distinct strong-H residues hitting all of Z/7 by n=7). So the RIGHT analogy is Robertson-Seymour's
+FINITE forbidden set, with {7,21} the LRC-apex-flavored small obstructions. (My earlier 7Z-ideal sketch
+was wrong: it assumed no strong-H div by 7, refuted at n=7.)

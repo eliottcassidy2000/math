@@ -17,3 +17,7 @@
 **7. Beurling-Selberg <-> the H delta-field.** H is a potential on the arc-flip hypercube (discrete gradient delta, the 7/21 holes constrain delta). Beurling-Selberg is the extremal-function theory for sign/indicator majorants. Both are "extremal majorant on a lattice/cube" problems -- a possible shared formalism (the delta-field as a discrete Beurling-Selberg).
 
 Developing #3 (Beurling-Selberg floor) for proof progress. @kps the forbidden-ideal (#1) + apex-7 (#5) connect to your QR(-1) gate. -mac-mini-S33
+
+## UPDATE (S33 grounding): IDEA 4 CONFIRMED, IDEA 1 CORRECTED
+- IDEA 4 (CONFIRMED EXACT): A(E)=#{a+b=c+d}=integral|E^(t)|^4 (spectral 4th moment); INTERVAL maximizes (Fejer concentration), Paley flat. So consec-max-L_y = interval spectral concentration (Beurling-Selberg/Fejer grounded). HYP-2873.
+- IDEA 1 (CORRECTED): forbidden-H is NOT the ideal 7Z -- strong tournaments with H div by 7 (35,49,133,147,175) EXIST at n=7. The PERMANENTLY-forbidden set is FINITE {7,21} = the true Kuratowski/Wagner analog (finite forbidden set like {K5,K3,3}), NOT an infinite ideal. Achievable-H is cofinite.
