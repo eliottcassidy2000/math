@@ -1,0 +1,9 @@
+==============================================================================
+THM-527 Thread A: CLOSED-FORM floor rho*_glob >= nu_min(k)+cap_k-1
+==============================================================================
+
+--- (A) nu_min(k) = min_E meas{maxgap{e_i x}>1/7}, bounded spread ---
+    is consecutive the minimizer?  (pin nu_min for the universal bound)
+    k= 8 (3432 shapes, W=14): nu_min = 691/735 = 0.94014  consec=0.94014  consec IS min
+    k= 9 (6435 shapes, W=15): nu_min = 247/294 = 0.84014  consec=0.84014  consec IS min
+    k=10 (11440 shapes, W=16): nu_min = 38/49 = 0.77551  consec=0.77551  consec IS min
