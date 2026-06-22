@@ -10,8 +10,10 @@ depends_on:
   - HYP-2902
   - HYP-2903
   - HYP-2904
+  - HYP-2900
   - HYP-2899
   - THM-082
+  - THM-079
   - THM-454
   - THM-523
   - THM-560
@@ -20,6 +22,7 @@ depends_on:
   - KPS-S31v
   - KPS-S31w
   - KPS-S31x
+  - mac-mini-S47
 results:
   - 04-computation/lrc_tournament_induction_switchboard_codex.py
   - 05-knowledge/results/lrc_tournament_induction_switchboard_codex.out
@@ -152,6 +155,37 @@ depth, and AP/GW tight-locus data.  If the bounded covering core can be
 realized as an independence-polynomial or Bonferroni polynomial on that
 relation graph, THM-082 becomes the right finite-core reducer.
 
+## S47 Mode-A peel integration
+
+Incoming mac-mini S47 sharpens the same induction map from the tournament
+Mode-A side.  In that language:
+
+```text
+R1 remove-large  = Mode-A peel / vertex deletion after boundary data
+R2 omit-prime    = direct resonance witness
+R3 dilation      = primitive normalization
+```
+
+The point is not that raw deletion proves LRC14.  The point is that after R1,
+R2, and R3 have fired wherever they are allowed, the remaining object is the
+irreducible bounded tight-locus atom.  S47 names that atom as the
+`{consec, GW}` core: the consecutive AP/dilate boundary and the Goddyn-Wong
+sporadic boundary.
+
+This is the LRC analogue of THM-079's `H=21` proof template.  Multiplicativity
+reduces to one strong atom; the final proof is then an atom bound.  For LRC14
+the atom bound is the "Moon step" analogue:
+
+```text
+bounded tight locus = {consec, GW}
+and every bounded covering non-tight row has positive cap slack.
+```
+
+So HYP-2905's bounded-core obligation should now be read in two layers:
+first prove the R1/R2/R3 reduction exhausts all non-atomic rows effectively;
+then prove the single-atom extremality theorem, with three-gap/consec
+maximality and the GW atlas as the finite boundary cases.
+
 ## Tournament Analysis
 
 The script chooses proof carriers as tournament vertices:
@@ -205,11 +239,12 @@ To finish LRC14, the next sharp obligations are now explicit:
    theorem interpolating the HYP-2904 comb bound and the S31x multiplicative
    atom measurement.
 2. Prove the `r>=7` second-moment bound with resonant-pair/divisibility defect.
-3. Prove the bounded covering core theorem:
+3. Prove the bounded covering core theorem, sharpened by S47 to the atom
+   statement:
 
    ```text
    primitive bounded prime-covering 13-set
-   -> AP/GW tight locus or positive cap slack.
+   -> {consec, GW} tight locus or positive cap slack.
    ```
 
 4. In that bounded core theorem, use the missing-depth parity Newton ledger

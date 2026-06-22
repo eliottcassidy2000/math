@@ -52,6 +52,12 @@ multiplicativity.  HYP-2905 now reads this as the scalar product governed by
 the finite-comb boundary-error state, and records S31x's deletion-contraction
 suggestion as a resonance-lattice operation, not a runner-deletion operation.
 
+Second post-rebase integration: incoming mac-mini S47 identifies the same
+proof order as the tournament Mode-A peel.  R1/R2/R3 reduce to the irreducible
+bounded tight-locus atom `{consec, GW}`; the remaining LRC proof is the
+single-atom extremality step, analogous to the Moon/pancyclicity step in the
+THM-079 `H=21` tournament proof.
+
 ## codex-2026-06-22 -- HYP-2904 scale-separated induction reduction
 
 Worked on inductive reductions for LRC to smaller-size cases.  Pulled incoming

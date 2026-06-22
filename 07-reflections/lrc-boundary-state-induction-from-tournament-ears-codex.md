@@ -46,3 +46,11 @@ deletion-contraction, but the transfer should happen on the resonance lattice
 or Bonferroni relation graph after labels are retained.  Deleting a runner is
 still the wrong operation; deleting or contracting a labelled resonance may be
 the right finite-core operation.
+
+Post-rebase S47 sharpens the endpoint.  R1/R2/R3 are the LRC version of the
+tournament Mode-A peel: remove large speeds, use omitted-prime witnesses, and
+normalize by dilation until only the bounded atom remains.  The atom is not an
+annoyance to peel away; it is the actual theorem.  In the current language it
+is `{consec, GW}`, and the remaining proof is the LRC analogue of the H=21
+Moon step: prove that the tight locus is exactly that finite atom and every
+other bounded covering row has positive slack.
