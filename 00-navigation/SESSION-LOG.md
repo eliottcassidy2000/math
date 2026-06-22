@@ -1,3 +1,12 @@
+## kind-pasteur-2026-06-22-S31b -- ATTACK hp0cap: elementary cover-bound cores formalized (sorry-free) + decorrelation residual isolated
+
+Attacked the wide cover bound `hp0cap = (p0(E)=meas(coverSet E) <= cap_k)` the same way S31 attacked hpartA (elementary cores + residual isolation). Per MISTAKE-084 (mac-mini S27 retraction), hp0cap is THE analytic input the witness floor needs (`p0<cap => witnessG2>0`, positivity suffices), and it's the sector route's core. NEW sorry-free Lean `LRCCoverBound.lean` (axioms propext/Classical/Quot; HYP-2839):
+- `coverSet_mono`/`slowμ_coverSet_mono`: p0 MONOTONE in the speed list (worst case = full set).
+- `six_le_card_of_coverSet_mem`: six disjoint inner sectors need six DISTINCT speeds (injective `Fin 6 -> E.toFinset` witness map) -- the genuine elementary GEM (cover analogue of mac-mini's hnu1 max-gap pigeonhole).
+- `slowμ_coverSet_eq_zero_of_card_lt_six`: **|E|<6 => coverSet=empty => p0=0<=cap** (closes hp0cap for k<6).
+- `slowμ_coverSet_lt_cap`: RESIDUAL ISOLATION (split by cluster size) -- hp0cap reduces to the SINGLE analytic hypothesis `p0<=p0_decorr` (the resonance bound). The hp0cap analogue of `witness_pos_from_wide_bound`.
+RESIDUAL (analytic, identified): binding k=8..12 = `p0<=p0_decorr<=Q(k-1)<cap` (THM-534); finite check + rational margins machine-checkable, the resonance bound `p0<=p0_decorr` (THM-546 comb + Tornheim tail) is the genuine residual (analogous to hpartA's Vmax-embedding+equidistribution). Marginal uniformity (mathlib AddCircle.measurePreserving_zsmul) is a building block but only gives a useless union bound -- the binding bound REQUIRES the joint decorrelation, which is the irreducibly-analytic content. Supports codex's p0 route (S86g addendum 4: hp0cap+hmeasGP+readouts+PartA => LRC14). Pushed 3x. NET both deep nodes now have elementary cores formalized + analytic residual cleanly isolated: hpartA (reach core, S31) + hp0cap (cover cores, S31b). -> HYP-2839, OPEN-Q-108.
+
 ## codex-2026-06-22-S86g -- positive-p0 LRC14 assembly formalized after S27 retraction
 
 Pulled the S27 retraction signal and corrected the Lean boundary accordingly.
