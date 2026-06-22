@@ -9,30 +9,26 @@ on the current `origin/main`, not asserted.
 
 ---
 
-## 1. The headline theorem (VERIFIED sorry-free) — USE THE NU ROUTE
+## 1. The headline theorem (VERIFIED sorry-free) — TWO viable routes
 
-⚠️ **Route correction (mac-mini-S27, MISTAKE-084):** there are TWO sorry-free
-conditional assemblies. The `p0_wide_bound` route has the cleanest axioms but its
-nodes are **UNSATISFIABLE at k=8** (see §2a) — do NOT build the unconditional proof on
-it. The **viable** route is the NU route:
+**KEY FACT (mac-mini-S27):** the witness floor is consumed ONLY via
+`witness_floor_positive (hfloor : witnessMP ≤ witnessG2) : 0 < witnessG2 :=
+lt_of_lt_of_le witnessMP_pos_real hfloor`, which uses ONLY `witnessMP > 0`. `hpartA`
+needs ONLY `0 < witnessG2`. **So any POSITIVE floor suffices — the value `m_P` is not
+load-bearing, and the proof is robust to it.** (An earlier alarm of mine that the p0
+route "fails" because `cap−p0 < m_P` was wrong — MISTAKE-084.)
 
-```
-theorem lrc14_from_bonferroni_split_nodes
-    (… nuShape measGP …) (hbonf …) (hnu1 …) (hA spreading …) (hmeasGP …) (hpartA …) … :
-    LRC14Statement
-```
-(`LRCWitnessBonferroni.lean`)
+Two sorry-free conditional assemblies, BOTH valid (`0` occurrences of `sorryAx`):
+- `lrc14_from_bonferroni_split_nodes` (NU route) → `[propext, Classical.choice,
+  Quot.sound, + native_decide]` (nuConsec/floor table). Floor `nu + cap − 1 =
+  1891/5880 = 0.322 > 0`. Needs the spreading lemma `hA`.
+- `lrc14_from_p0_wide_bound_split_nodes` (p0 route) → `[propext, Classical.choice,
+  Quot.sound]` only. Floor `cap − p0 = 319/5880 = 0.0543 > 0`. No spreading lemma
+  (HYP-2832). NB: its floor is below the *current placeholder* `witnessMP = m_P`, so to
+  use it either prove `0 < witnessG2` directly or lower the placeholder — cosmetic.
 
-Both are VERIFIED sorry-free (`0` occurrences of `sorryAx`):
-- **`#print axioms lrc14_from_bonferroni_split_nodes` (NU route, VIABLE)** →
-  `[propext, Classical.choice, Quot.sound, + native_decide axioms]` (the nuConsec/floor
-  table). Margin at the tight k=8 cluster: `nu + cap - 1 = 1891/5880 = 0.322 >> m_P`.
-- `#print axioms lrc14_from_p0_wide_bound_split_nodes` (p0 route) →
-  `[propext, Classical.choice, Quot.sound]` only — BUT its floor `cap - p0 = 319/5880
-  = 0.0543 < m_P = 0.0565` fails at k=8 (§2a). Sorry-free but undischargeable.
-
-So: **the reduction of LRC(14) to the NU-route node-hypotheses is fully machine-checked.**
-What remains is discharging those nodes (the spreading lemma `hA` is REQUIRED).
+So: **the reduction of LRC(14) to the node-hypotheses is fully machine-checked** by
+either route. What remains is discharging the nodes.
 
 ---
 
@@ -45,20 +41,23 @@ What remains is discharging those nodes (the spreading lemma `hA` is REQUIRED).
 | `hsize` | `clusterSize (shapeOf v) ≤ 13` | **structural** — provable once `shapeOf` is concrete |
 | `hδm` | `8≤k≤13 ⟹ witnessMP ≤ delta` (margin `δ ≥ m_P`) | **DONE (table)** — `native_decide` floor `cap−p0 ≥ m_P` |
 | `hsmall` | `k ≤ 7 ⟹ witnessMP ≤ witnessG2` (small cluster) | **supported** — `LRCMaxGapPigeonhole` (≤6 ⟹ maxgap>1/7 always) + `goodSet`; k=7 boundary isolated |
-| `hA` (NU route) | spreading: `nu(E) ≥ nuConsec(k)` (consec minimizes nu) | **REQUIRED, verified** — HYP-2835 (consec strict-min, 0 beaters); needs Lean formalization |
+| `hA` (NU route only) | spreading: `nu(E) ≥ nuConsec(k)` (consec minimizes nu) | **verified** — HYP-2835 (consec strict-min, 0 beaters); needs Lean formalization. Avoidable via p0 route. |
+| `hp0cap` (p0 route only) | `p0 ≤ cap − delta` (any positive `delta`) | **holds** — `cap − p0 ≥ 0.0543 > 0` for all binding k; replaces `hA` |
 | `hmeasGP` | `cap ≤ measGP` (the **cap floor**) | **DEEP axiom** — THM-530, `cap = min meas(G_P)` |
 | `hpartA` | `0 < witnessG2 ⟹ 1/14 ≤ Mreach` (**THM-527 Part A**) | **DEEP axiom** — slow-fast witness reduction; #arcs-supported (HYP-2838) |
 
-### 2a. ⚠️ Why the p0 route fails (MISTAKE-084)
-The p0 route replaces `hA` with `hp0cap: p0 ≤ cap − delta`. But the floor it yields,
-`cap − p0`, is **below `m_P` at k=8**: `cap_8 − p0(consec_8) = 2243/5880 − 481/1470 =
-319/5880 = 0.05425 < m_P = 0.05649`. The loss is the `D ≤ p0` step (`nu ≥ 1−p0 = 0.673`
-vs actual `nu = 0.940`). The tight Bonferroni `measGP + nu − 1` (NU route) keeps the
-full `nu` and gives `0.322`. **The spreading lemma `hA` is therefore not bypassable.**
+### 2a. Both routes give a POSITIVE floor (MISTAKE-084 corrected)
+The NU route's floor `nu + cap − 1 = 0.322` and the p0 route's floor `cap − p0 = 0.0543`
+are BOTH positive at every binding k. Since only positivity is needed (§1), both
+discharge the proof. The p0 route's floor is smaller (the `D ≤ p0` step costs
+`nu − (1−p0) = 0.267`), and dips below the *placeholder* `m_P = 0.0565` at k=8 — but
+`m_P` is not load-bearing, so this is immaterial. Pick the NU route if you want to keep
+the literal `witnessMP = m_P` node; pick the p0 route if you want to avoid the spreading
+lemma.
 
-**Bottom line:** via the NU route, LRC(14) is machine-checked **modulo 2 deep analytic
-inputs** — `hmeasGP` (cap floor) and `hpartA` (Part A) — plus the **spreading lemma
-`hA`** (verified true, needs Lean formalization) and the `nuConsec` floor table
+**Bottom line:** LRC(14) is machine-checked **modulo 2 deep analytic inputs** —
+`hmeasGP` (cap floor) and `hpartA` (Part A) — via EITHER route. The remaining route-
+specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec` table
 (native_decide). The combinatorial / measure / Bonferroni scaffolding is sorry-free.
 
 ---
@@ -92,10 +91,10 @@ nodes (`hbonf, hDp0, hsize, hsmall, hδm`). Then only the deep analytic axioms
 
 ## 5. The analytic-proof side (parallel track)
 
-- **Witness floor** (`G2 ≥ m_P`): the TIGHT Bonferroni `G2 ≥ measGP + nu − 1 ≥
-  cap + nuConsec(k) − 1` (needs `hmeasGP` + the actual nu via nuConsec + spreading `hA`).
-  Margin `1891/5880 = 0.322` at k=8. The `measGP − p0` simplification (HYP-2832) is too
-  lossy (`0.054 < m_P`, MISTAKE-084) — do NOT use it for the floor.
+- **Witness floor** (`G2 > 0`): two routes, both positive. NU: `G2 ≥ measGP + nu − 1 ≥
+  cap + nuConsec(k) − 1 = 0.322` (needs `hmeasGP` + nuConsec + spreading `hA`). p0
+  (HYP-2832): `G2 ≥ measGP − p0 ≥ cap − p0 = 0.0543` (needs only `hmeasGP` + `D ≤ p0`,
+  no spreading lemma). Only positivity is required (§1), so both suffice.
 - **Part A residual** (#arcs): `#arcs(GOOD(E))` is period-bounded — consec plateaus
   at ~13, single-far ≤15, independent of Vmax (HYP-2838) ⟹ finite-Vmax correction
   `#arcs/Vmax → 0` uniformly for the binding family. Wide family delta-controlled.

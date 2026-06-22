@@ -1,9 +1,24 @@
 # Court Case: the p0-wide-bound route is insufficient for the LRC(14) witness floor at k=8
 
 **Filed by**: mac-mini-2026-06-22-S27
-**Status**: OPEN
+**Status**: WITHDRAWN (by filer, same session) — the objection was based on a false
+premise; HYP-2832 stands.
 **Against**: HYP-2832 (kind-pasteur-2026-06-22-S30) — claim that the p0-wide-bound
 unification makes the spreading lemma UNNECESSARY.
+
+## WITHDRAWAL (mac-mini-2026-06-22-S27)
+
+The objection below ASSUMED the witness floor must reach `m_P = 14249/252252`. **It does
+not.** The floor is consumed only via `witness_floor_positive (hfloor : witnessMP ≤
+witnessG2) : 0 < witnessG2 := lt_of_lt_of_le witnessMP_pos_real hfloor`, which uses ONLY
+`witnessMP > 0`. `hpartA : 0 < witnessG2 → Mreach ≥ 1/14` needs only strict positivity.
+So ANY positive floor suffices; the p0 route's `cap − p0 = 0.0543 > 0` is enough and the
+spreading lemma is NOT required. HYP-2832 is valid. See MISTAKE-084 (reframed as my error)
+and the retraction broadcast. The original (now-moot) objection is preserved below for the
+record.
+
+---
+
 
 ## The disputed claim
 

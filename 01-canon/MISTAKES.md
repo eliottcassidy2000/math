@@ -11,31 +11,33 @@ Format per entry:
 
 ---
 
-## MISTAKE-084 (2026-06-22, mac-mini-S27, LRC(14) witness floor) — the `D ≤ p0` simplification is TOO LOSSY; the p0-wide-bound route fails the m_P floor at k=8 (the spreading lemma is NOT bypassable)
+## MISTAKE-084 (2026-06-22, mac-mini-S27) — I wrongly claimed the p0 route "fails at k=8"; in fact the witness floor needs only `> 0`, not `≥ m_P` (the floor VALUE is not load-bearing). Caught & retracted same session.
 
-**What was assumed.** HYP-2832 (the p0-wide-bound "unification") claimed
-`G2 >= measGP - D >= measGP - p0 >= cap_k - max p0 = delta_k > 0` gives the witness
-floor for ALL clusters directly, making the spreading lemma (consec minimizes nu)
-UNNECESSARY.
+**What I claimed (WRONG).** That the p0-wide-bound route (HYP-2832) fails because
+`cap_8 − p0(consec_8) = 319/5880 = 0.0543 < m_P = 14249/252252 = 0.0565`, hence the
+spreading lemma is REQUIRED. I even filed a court case against HYP-2832.
 
-**Why it was wrong.** The step `D <= p0` (equivalently `nu >= 1 - p0`) is a TRUE
-inclusion but discards too much margin. At the tight k=8 consec cluster:
-`cap_8 - p0 = 319/5880 = 0.05425 < m_P = 14249/252252 = 0.05649` — the p0 floor is
-BELOW the required floor by 0.0022. The loss is `nu - (1-p0) = 0.940 - 0.673 = 0.267`.
-The Bonferroni CORE is fine: `G2 >= measGP - D` with the TRUE `D = 1-nu` is the NU
-route `measGP + nu - 1 = 1891/5880 = 0.3216 >> m_P`. Only the p0-simplification fails.
+**Why it was wrong.** I assumed the witness floor must REACH `m_P`. It does not. The
+floor is consumed through exactly one lemma:
+`witness_floor_positive (hfloor : witnessMP ≤ witnessG2) : 0 < witnessG2 :=
+lt_of_lt_of_le witnessMP_pos_real hfloor` (LRCFourteenSkeleton:239) — uses ONLY
+`witnessMP > 0`. Then `hpartA : 0 < witnessG2 → Mreach ≥ 1/14` needs ONLY strict
+positivity. So ANY positive lower bound on `witnessG2` suffices; `m_P` is a
+non-load-bearing placeholder. The p0 route's `0.0543 > 0` is plenty; `0.0543 < 0.0565`
+is irrelevant.
 
-**Correct framing.** Use the NU route (`lrc14_from_bonferroni_split_nodes`): the actual
-`nuConsec` table + the SPREADING LEMMA `hA` (consec minimizes nu, so any k-cluster has
-`nu >= nuConsec(k)`). hA is REQUIRED, not optional. The p0 route
-(`lrc14_from_p0_wide_bound_split_nodes`) has jointly-unsatisfiable nodes at k=8
-(`hδm: delta >= m_P` vs `hp0cap: delta <= cap-p0 < m_P`) and CANNOT be discharged.
+**Correct framing (the useful takeaway).** **The witness floor is ROBUST: the proof
+depends only on the POSITIVITY of `witnessG2`, not on any particular floor value.**
+Both routes work — p0 (`0.0543 > 0`, no spreading lemma) and NU (`0.322 > 0`). The
+spreading lemma stays OPTIONAL (HYP-2832 is valid). Only nuance: the skeleton's nodes
+are literally stated with the constant `witnessMP = m_P`, so to use the p0 route one
+either proves `0 < witnessG2` directly or lowers the placeholder — cosmetic, not a real
+obstruction.
 
-**Impact.** Reinstates the spreading lemma as load-bearing (it was verified HYP-2835,
-consec strict-min, 0 beaters). kps's `D<=p0`/`coverSet`/`LRCWitnessFloorConcrete`
-remain valid as true inclusions but cannot carry the floor. The formalization must
-target the NU route. This reproduces the earlier `THREAD B SYNTHESIS` conclusion.
-Court: `CASE-p0-route-insufficiency`. Source: mac-mini-S27, exact-fraction check.
+**Lesson.** Before declaring a bound "insufficient," CHECK what magnitude the
+downstream consumer actually requires. Here `> 0` was all that was needed; I compared
+against a constant that was never load-bearing. Court `CASE-p0-route-insufficiency`
+WITHDRAWN. Source: mac-mini-S27 (error and self-correction same session).
 
 ## MISTAKE-083 (2026-06-21, claude-opus-S1, LRC doublet signed-bound script) — off-by-one in the doublet base (`range(k-1)` gave k+1 speeds), k-labels shifted +1 (found & corrected SAME session)
 
