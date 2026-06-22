@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S42 -- small-n validation of the coverage technique: exact-tiler uniqueness FALSE (sporadics), all tight-safe, the t=1/n witness + clean sufficient condition for LRC
+Owner: apply our comprehensive techniques to n<14 to understand them; keep aiming to finish. Applied the coverage/exact-tiler technique (S39/S41) to LRC(n), n=5,6,7,8 (LRC PROVEN for n<=7).
+- **CORRECTION (discipline):** my S39/S41 "only d*{1..13} tiles exactly" is FALSE -- exhaustive small-n search finds SPORADIC exact-tilers: {1,3,4,7}(n=5), {1,3,4,5,9}(n=6), 2 at n=8. My "0/5668" was a SAMPLING artifact. Matches kps THM-560 (PROVED difference-closed exact-tilers = d*{1..n-1}; the rest are Goddyn-Wong single-replacement sporadics).
+- **ALL exact-tilers are TIGHT-SAFE:** M(S)=1/n EXACTLY for every exact-tiler (consec + sporadic) at n=5,6,8, with explicit witnesses (often t=1/n). LRC holds at these n; the technique reproduces the known tight instances.
+- **The t=1/n WITNESS (new):** t=1/n safe <=> no runner == 0 mod n. Every PRIMITIVE exact-tiler found avoids multiples of n, so t=1/n witnesses it; non-primitive = d*(primitive), witnessed at t=1/(nd) (scaling-inv). Verified: NO primitive exact-tiler has a multiple of n at n=5,6,7.
+- **CLEAN SUFFICIENT CONDITION:** *every primitive exact-tiler avoids multiples of n* ==> LRC(n) (airtight: t=1/n witnesses each primitive exact-tiler, scaling handles the rest, non-tilers have positive safe measure). VERIFIED n=5,6,7. The crux is now the COMPLETENESS of the structured(THM-560)+GW-sporadic tight-instance classification (OPEN-Q-108), and that all GW values avoid multiples of n (verified small n).
+- Concurrent: kps THM-560 (structured proof + GW), codex s106/107 (GW tiler classification, unital guardrail) -- my small-n validation + t=1/n witness complement their classification.
+NEW: lrc_small_n_exact_tilers_macmini_S42.py; HYP-2888 updated. NEXT: confirm GW sporadics at n=14 avoid multiples of 14 (then t=1/14 witnesses them) -- a finite check closing the sufficient condition.
+
 ## codex-2026-06-22-S108 -- sub-14 LRC covering/tiler training atlas
 
 User asked to keep aiming at the LRC proof and to apply the most comprehensive
