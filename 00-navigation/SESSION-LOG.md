@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S47 -- FLUSH OUT the LRC via the tournament-induction lessons: the induction IS the Mode-A peel; bounded core = irreducible atom = {consec, GW}
+Owner: immerse in tournament-induction work, then flush out the LRC. Reflection: flushing-out-the-lrc-induction-is-the-tournaments-mode-a-peel.md.
+- **The LRC induction = the tournament Mode-A peel:** R1 (remove large, n->n-1) = Mode A (vertex deletion); R2 (omit prime) = resonance witness; R3 (dilation) = normalize. VERIFIED: R1/R2/R3 reduce EVERY 13-set to the IRREDUCIBLE BOUNDED CORE = {consec, GW sporadics} (consec at the R1 boundary: max=13=sum(rest)/6, prime-covering, primitive). = the LRC analog of THM-079's reduction of H=21 to a single strong ATOM.
+- **Lesson 1 (per-path failure, n=6 disjoint 3-cycles):** naive per-element induction breaks at the first homological obstruction. The LRC's irreducible core {consec, GW} IS that obstruction -- the genuine n-runner content, unpeelable.
+- **Lesson 2 (H=21 success, THM-079):** multiplicative reduction to ONE strong atom + inductive bound (m>=9) + Moon pancyclicity. The LRC mirrors A exactly; what remains = bound the atom (consec maximizes / three-gap = the Moon step). The hard part is always the single-atom bound after a clean reduction.
+- **Winding-tournament link:** consec's loneliest moment t=1/14 = the 14-grid (evenly spaced) = the circulant winding tournament (i->j iff (i-j) mod 14 in {1..6}; antipodal tie at 7 = apex). The LRC extremal IS a tournament extremal.
+- **HONEST:** induction mapped + obstruction located at a single finite atom {consec, GW} (M=1/14, verified). Remaining: reduction exhaustiveness (scale separation, codex) + tight-locus finiteness (consec+GW, kps GW census) + the consec-maximizes bound (the H=21-analog Moon step). LRC(14) NOT finished.
+NEW: reflection + lrc_bounded_core_irreducible_macmini_S47.py. NEXT: the single-atom bound (consec maximizes) -- the irreducible Moon-analog crux.
+
 ## mac-mini-2026-06-22-S46 -- concurrent push: Node 3 (equidistribution) VERIFIED + the assembled dichotomy skeleton (TIGHT-LOCUS vs SLACK)
 Concurrent w/ kps (S31t/u/v Bonferroni+multi-large) + codex (S114 sheaf/radical). HYP-2900.
 - **NODE 3 (analytic) VERIFIED:** a committed large speed equidistributes within the seed's safe set, removing EXACTLY 1/7 (meas(Safe(seed) ∩ Safe(v))=meas(seed)*6/7 to 5 decimals; seed {1..11,13}, v=30030,60060,510510). Multi-large: (6/7)^r for r independent large speeds (closes ALL r; kps union bound only r<=6).
