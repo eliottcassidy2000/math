@@ -1,3 +1,27 @@
+## codex-2026-06-22-S87c -- LRC14 cover box skeleton (checkpoint)
+
+Formalized the `LRCCoverBoxes` skeleton and the corresponding measure-level support infrastructure (commit `a1580cc4`). This checkpoint provides the formal bridge between Vitali-style covering arguments and the concrete `p0` event bounds.
+
+### 1. Cover Box Formalization
+Added `LRCCoverBoxes.lean`, which defines the `CoverBox` structure and proves the foundational measure-level identities for covering events. Key theorems:
+- `volume_coverBox_le_cap`: Proves that any individual cover box has a Lebesgue measure bounded by the resonance `cap`.
+- `slowμ_coverSet_le_sum_coverBoxes`: Establishes the subadditivity of the `p0` cover measure across a collection of cover boxes.
+- `slowμ_coverSet_le_cap_of_vitali_disjoint`: Formalizes the reduction to a disjoint Vitali covering, where the total measure is bounded by the sum of individual box capacities.
+
+### 2. Resonance and Arc Complexity (HYP-2840, HYP-2841)
+Integrated the support-atom readouts for the resonance-bound via Vitali covering. This provides the Lean-side targets for:
+- **HYP-2840:** The reduction of the `p0` event to a union of small, high-density "boxes" around resonance peaks.
+- **HYP-2841:** The arc-complexity bound for disjoint cells, identifying the combinatorial constraints on how many distinct cover boxes can be active simultaneously.
+
+### 3. Formal Impact
+This closes the bridge between the analytic decorrelation/Vitali route and the concrete `p0` margin. The remaining analytic work is now localized to the individual box density bounds (e.g., the Tornheim double sum) and the combinatorial disjointness of the cover set.
+
+### 4. Build Audit
+Refreshed and verified the following build transcripts:
+- `lrc14_hyp2840_support_atoms_lean_codex_s87c.out`
+- `tournamenth7_verify_lrc14_cover_box_skeleton_codex_s87c.out`
+- `tournamenth7_root_lrc14_cover_box_skeleton_codex_s87c.out`
+
 ## codex-2026-06-22-S86g2 -- concrete p0 PartA bridge (checkpoint)
 
 Formalized the integration of the concrete `p0` interface with the finite Part A witness route (commit `84def3de`). This checkpoint ensures that the measure-level `p0` objects now plug directly into the finite-ruler budget.
