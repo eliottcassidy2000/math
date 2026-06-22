@@ -1,27 +1,28 @@
-## codex-s119 -- LRC14 Tightness-Star and THM-079 Template (checkpoint)
+## mac-mini-2026-06-22-S51 -- Census and Status of Tightness-Star (checkpoint)
 
-Formalized the "tightness-star" template for the LRC(14) closure, mapping the final proof steps to the THM-079 template (reducing to a bounded atom and forcing its impossibility) and integrating the apex-denominator lemma (commit `90f8283f`). This checkpoint stabilizes the proof's final "Moon step" strategy.
+Formalized the "forward" proof of the tightness-star theorem, verified the single-swap census of tight rows, and clarified the project's honest status regarding the completeness of the LRC(14) closure (commit `2a852ec4`). This checkpoint defines the "irreducible open core" of the project.
 
-### 1. The THM-079 Template Analogy
-Unified the LRC14 proof order with the tournament complexity ($H=21$) template:
-- **Move A (Reduction):** Reduce the problem to a primitive bounded or top-balanced "atom" using the established induction rules (R1/R2/R3 from HYP-2905).
-- **Move B (Forcing):** Prove that the irreducible atom has $M > 1/14$ unless it is the non-covering AP/GW tight boundary.
+### 1. Tightness-Star Forward: Proved and Formalized
+Rigorously proved the forward direction of the (star) crux: $M(S)=1/14 \implies$ the optimum $t^*$ is an apex-7 antipodal point with a binding pair $14 \mid (s_i + s_j)$.
+- **Analysis:** Since $1/14 < 1/2$, a local maximum of the minimum-of-sawtooths function requires a "crossing" of an increasing active runner ($\text{frac} = 1/14$) and a decreasing one ($\text{frac} = 13/14$).
+- **Arithmetic:** Proved that such a crossing forces the denominator $D$ to satisfy $14 \mid D$, and specifically that $14 \mid (s_i + s_j)$.
+- **Lean Formalization:** The arithmetic core is machine-verified and sorry-free in `LRCBindingPair.lean` (`LonelyRunner.BindingPair.binding_pair_dvd`).
 
-### 2. HYP-2910: The Tightness-Star Theorem
-Established the structural target for Move B:
-- **Theorem:** A primitive tight row ($M=1/14$) is forced into the denominator-14 AP/Goddyn-Wong boundary and is necessarily non-covering.
-- **Apex-Denominator (THM-568):** Proved that any tight optimum at $t=a/D$ forces $14 \mid D$ and $D=14 \cdot gcd(S)$. This makes the structural part of the star target theorem-level.
-- **Residual Case:** The remaining challenge is the "14-covering" branch: if $S$ contains multiples of 14, prove $M(S) > 1/14$.
+### 2. Single-Swap Census: AP and GW
+Conducted an exact census of single-speed swaps from the AP $\{1, \dots, 13\}$ for replacements $r \le 300$.
+- **Result:** The only tight ( $M=1/14$ ) non-AP set is the Goddyn-Wong-type set $\{1, \dots, 11, 13, 24\}$ (the $12 \to 24$ swap).
+- **Consistency:** Every tight row in the census has an optimum at denominator exactly 14, consistent with the binding pairs $\{1, 13\}, \{5, 9\},$ and $\{3, 11\}$.
 
-### 3. S119 Audit Findings
-- **Tight Locus Consistency:** The AP $\{1, \dots, 13\}$ and GW $\{1, \dots, 11, 13, 24\}$ families share the same six argmax points on the denominator-14 grid: $k/14$ for $k \in \{1, 3, 5, 9, 11, 13\}$.
-- **Grid Obstruction:** Verified the exact theorem that for these units $k$, $14 \mid v \cdot k \iff 14 \mid v$. This confirms that 14-free rows always retain their apex witnesses and are therefore non-covering.
-- **Covering Window Slack:** Exhaustively verified that for the finite $q$-covering window $[1, 18]$, every row satisfying the necessary $q=2 \dots 14$ covering condition has strict slack ($M \ge 1/12$).
+### 3. Apex Floor Formalized
+Formalized the "Apex Floor" lemma in Lean (`LRCApex7Floor.D14_never_certifies`).
+- **Theorem:** At any denominator-14 witness point $a/14$, a covering runner (a multiple of 14) necessarily sits on the observer.
+- **Implication:** Combined with the forward theorem, this shows that a covering set cannot be tight at a denominator-14 optimum.
 
-### 4. Localized Moon Step
-Refined the final proof obligation to a localized equidistribution problem:
-- **Scenario:** $S = R \cup M14$, where $R$ is a 14-free core with $\le 6$ speeds and $M14$ are $\ge 7$ multiples of 14.
-- **Target:** Prove that the danger combs from the multiples of 14 cannot cover the $1/13$-margin lonely interval of the core $R$. This bridges the structural gap to the tournament $K_3$ conflict-atom impossibility (HYP-2908).
+### 4. The Irreducible Open Core (Honest Status)
+Clarified that while the project has reduced $LRC(14)$ to a single named statement (the census completeness), the proof of that completeness remains an open core.
+- **Census Completeness:** The claim that no tight sets exist beyond $\{AP, GW\}$ (e.g., no multi-swap or unbounded exceptions) is equivalent to the Steinhaus/consecutive-maximization conjecture for 13 runners.
+- **Status:** This remains an open problem in the literature. The project's bounded search provides strong evidence but does not constitute an exhaustive proof.
+- **Disclaimer:** The cluster reports verified reductions and formalizations, not a final proof of $LRC(14)$.
 
 ### 5. Net Impact
-This synthesis stabilizes the "atom-forcing" phase of the proof. By anchoring the tight locus at denominator 14 and verifying the slack in finite covering windows, the project focuses the remaining effort on the second-moment/equidistribution branch for large collections of 14-multiples. The cluster is now synchronized on the three-part "terminal theorem" covering compression, slack, and forbidden packets.
+This checkpoint stabilizes the project's analytical boundary. By proving the forward forcing and the apex-floor contradiction, the $LRC(14)$ problem is successfully focused on the "census completeness" bottleneck. The project now explicitly identifies where the machine-verified and computationally-verified progress ends and where the fundamental open conjecture (consecutive-maximizes) begins.
