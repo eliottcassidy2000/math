@@ -55,6 +55,7 @@ import TournamentH7.LRCPeriodmaxCertificate
 import TournamentH7.LRCGenuineWideCorrection
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
+import TournamentH7.LRCP0Concrete
 
 namespace LonelyRunner
 namespace LRC14
@@ -349,9 +350,12 @@ The "wide bound" is `p0(E) ≤ cap_k` for every `k`-speed configuration, split i
 three legs (bounded / single-far / genuine-wide), OR closed in one shot by the
 gK8 concentration cert.  We carry `p0` and the miss-distribution `q` abstractly. -/
 
-/-- The cover atom `p0(E) = measS7(E)`.  Abstract (Lebesgue measure of the
-all-sectors-hit set); a probability, so in `[0,1]`. -/
-opaque p0 : (List ℤ) → ℝ
+/-- The cover atom `p0(E) = measS7(E)`.  **Concrete** (kps-S31b): the Lebesgue
+measure of the all-6-inner-sectors-hit event `coverSet E` on the slow-time
+probability space, `(slowμ (coverSet E)).toReal` — a probability in `[0,1]`.  The
+elementary cover-bound cores (`p0_nonneg`, `p0_le_one`, `p0_eq_zero_of_card_lt_six`,
+`p0_mono`, `wideBoundConcrete_of_decorrelation`) live in `LRCP0Concrete`. -/
+noncomputable def p0 : (List ℤ) → ℝ := DenseCovers.p0
 
 /-- The cap plateau `cap_k` (the decorrelated `Q`-plateau upper bound).  The exact
 rationals from the canon for `k = 8..12` are recorded below. -/
