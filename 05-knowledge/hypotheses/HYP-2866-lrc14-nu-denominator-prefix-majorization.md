@@ -16,9 +16,11 @@ related:
   - HYP-2830
   - HYP-+2866
   - HYP-2867
+  - HYP-2870
   - OPEN-Q-108
 results:
   - 05-knowledge/results/lrc14_nu_denom_center_budget_codex_s95.out
+  - 05-knowledge/results/lrc14_nu_prefix_stress_codex_s95b.out
 ---
 
 # HYP-2866 -- Denominator-Prefix Majorization For The LRC14 `nu` Lemma
@@ -82,6 +84,49 @@ tightest displayed nonconsecutive gap is at `k=13`:
 The exact prefix audit found no prefix violations for any `7 <= Q <= k` in the
 same banks.  This is stronger and more structured than simply observing that
 the total `D` is smaller.
+
+## Wider Stress Addendum
+
+The follow-up script
+`04-computation/lrc14_nu_prefix_stress_codex_s95b.py` reuses the exact engine
+and tries to falsify the prefix claim outside the first bounded box.
+
+Banks checked:
+
+```text
+exact [0,15] anchored primitive bank: 22697 rows
+one-tail consecutive collars:          243 rows
+two-tail consecutive collars:          1224 rows
+two-block rows:                        1575 rows
+random wide rows up to W=45:           360 rows
+aggregate:                             26099 rows
+```
+
+Result:
+
+```text
+prefix violations = 0
+total D violations = 0
+```
+
+The largest nonconsecutive ratio in the stress run is the same near-consecutive
+`k=13` row as in the first audit:
+
+```text
+D(0,2,3,4,5,6,7,8,9,10,11,12,14) / D(C_13)
+  = 2851/3005 ~= 0.948752080.
+```
+
+The widest one-tail collar found a different tight row at `k=12`:
+
+```text
+E=(0,1,2,3,4,5,6,7,8,9,10,23),
+D(C_12)-D(E)=132918/4004231 ~= 0.03319.
+```
+
+This is still only evidence.  Its value is that the prefix invariant survives
+both exact window growth and the first structured wide families where high-q
+tails could have compensated for missing low-q mass.
 
 ## Negative Findings That Shape The Proof
 
@@ -181,6 +226,23 @@ Paley-7 overclaim is also a warning for this route: do not promote a single
 apex-prime bucket to the full proof.  The exact S95 data already says the same
 thing on the denominator side: individual q-buckets are false, cumulative
 prefixes are the live object.
+
+The later HYP-2870 complement-even low-frequency floor sharpens the analogy.
+Its spectrum-side split
+
+```text
+finite low covariance = complement-even structured packet + complement-odd L2 fluctuation
+```
+
+is the Fourier analogue of this denominator-side split
+
+```text
+dense net = low-q prefix ledger + high-q Farey/three-gap tail.
+```
+
+Both routes now point to aggregate majorization under an involution or sorted
+ledger, followed by an analytic tail, rather than monotonicity of individual
+channels.
 
 ## Tournament Analysis And Assumption Challenge
 

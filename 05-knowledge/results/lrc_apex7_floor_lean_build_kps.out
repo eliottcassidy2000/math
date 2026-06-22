@@ -1,0 +1,10 @@
+info: TournamentH7/LRCMreachConcrete.lean:261:0: 'LonelyRunner.LRC14Concrete.continuous_finset_inf'_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:262:0: 'LonelyRunner.LRC14Concrete.minReach_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:263:0: 'LonelyRunner.LRC14Concrete.minReach_int_periodic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:264:0: 'LonelyRunner.LRC14Concrete.lonely_iff_minReach_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:265:0: 'LonelyRunner.LRC14Concrete.Mreach_eq_global_sSup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:266:0: 'LonelyRunner.LRC14Concrete.lonely_of_Mreach_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2948/2948] Replayed TournamentH7.LRCApex7Floor
+info: TournamentH7/LRCApex7Floor.lean:52:0: 'LonelyRunner.Apex7.nearInt_eq_zero_of_dvd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCApex7Floor.lean:53:0: 'LonelyRunner.Apex7.D14_never_certifies' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (2948 jobs).

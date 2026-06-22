@@ -1,0 +1,38 @@
+############################################################################################
+# THREAD 3 (TRUE GOOD): uniform constants for R'_true>=c.  GOOD={maxgap>1/7}, ghat REAL.
+#   c = min( c_core[bounded atlas, EXACT] , 1 - eta(V*)[wide, SPEC->0] ); C_c chat-tail, C_wide wide-decay
+############################################################################################
+============================================================================================
+(0) CONFIRM GOOD_true is x->-x symmetric (=> ghat REAL), unlike the kpswf12 cover^c proxy.
+============================================================================================
+   E=[0, 1, 2, 3, 4, 5, 6, 7]: meas(GOOD)=0.940136  symdiff(GOOD,reflect)=0.00e+00  sineE(800)=6.41e-33
+   E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]: meas(GOOD)=0.775510  symdiff(GOOD,reflect)=0.00e+00  sineE(800)=3.84e-32
+   E=[0, 3, 7, 11]: meas(GOOD)=1.000000  symdiff(GOOD,reflect)=0.00e+00  sineE(800)=0.00e+00
+   => symdiff = 0 EXACTLY, sineE ~ 0 => ghat_true REAL.  This is the prompt's GOOD.
+
+============================================================================================
+(A) c_core (TRUE maxgap GOOD): min over admissible (P, consec_k), k=8..13, of R'_true  [EXACT]
+============================================================================================
+   k= 8 (|P|=5): min R'_true = 30570/33859 = 0.902862  at P=(1, 4, 5, 9, 11)  [meas(GOOD)=0.94014]
+   k= 9 (|P|=4): min R'_true = 726/893 = 0.812990  at P=(1, 10, 11, 12)  [meas(GOOD)=0.84014]
+   k=10 (|P|=3): min R'_true = 203/247 = 0.821862  at P=(1, 5, 12)  [meas(GOOD)=0.77551]
+   k=11 (|P|=2): min R'_true = 67053/84241 = 0.795966  at P=(1, 12)  [meas(GOOD)=0.62630]
+   k=12 (|P|=1): min R'_true = 36253/41469 = 0.874219  at P=(1,)  [meas(GOOD)=0.56990]
+   k=13 (|P|=0): min R'_true = 1 = 1.000000  at P=()  [meas(GOOD)=0.44249]
+
+   c_core = 67053/84241 = 0.795966  (k=11, P=(1, 12))  -- EXACT rational floor on TRUE GOOD.
+
+============================================================================================
+(B) C_c = sup over P subset {1..13} of E_c(H)*H  (chat tail energy; depends only on G_P).
+============================================================================================
+   scanned 2379 subsets P of {1..13}; sup #jumps(1_{G_P}) = 64 at P=(10, 11, 12, 13)
+   sup_P E_c(14)*14 = 2.70051 at P=(1, 6, 8, 9, 10)
+   sup_P E_c(28)*28 = 3.73826 at P=(10, 11, 12, 13)
+   sup_P E_c(56)*56 = 3.27980 at P=(8, 10, 11, 12, 13)
+   sup_P E_c(112)*112 = 3.58160 at P=(10, 11, 12, 13)
+   => C_c ~ 3.73826 (BOUNDED, uniform over P).  lcm(1..13)=360360 bounds breakpoint denoms.
+
+============================================================================================
+(C) C_wide (TRUE GOOD): sup-envelope of |SPEC_true(dE)| over dilations; |SPEC_true(dE)|<=C_wide/d.
+============================================================================================
+   CASE argmin-ish k9  P=[1, 3, 4, 5]:

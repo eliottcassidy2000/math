@@ -36,6 +36,44 @@ Owner: "pull main, use as inspo to attempt all 3 nodes, be creative, report ALL 
 - **SWING 2 (TOOL not closure):** Beurling-Selberg minorant of 1_{G_P} (band-limited deg N, exact defect r_P/(N+1)) gives a rigorous PER-CONFIG finite floor certificate meas(G_P∩cover^c) >= finite sum; cleaner one-sided bound than the team's L2-CS/Abel, but still per-config (not uniform).
 - **NOT DEVELOPED (honest):** F_7 character/Fano decorrelation (apex prime); 2nd-moment/Paley-Zygmund (circular); LRC(14)->LRC(7) via 14=2*7 doubling (no traction); geometry-of-numbers (overlaps HYP-2606).
 - META: team's ζ(2)/√-cancellation/three-gap = real progress, floor robustly TRUE; uniform rigor of Nodes 2/3 still open. Best next bet = Swing 3 (bounded-denominator witness). Files: 04-computation/lrc14_{creative_swings,bounded_witness_conjecture,crt_witness_stress}_kindmendel.py; reflection lrc14-creative-swings-all-nodes-kindmendel-S4.md. -> HYP-2864, HYP-2847, OPEN-Q-108.
+## mac-mini-2026-06-22-S35 -- strong-component-atom EXTENSION of the finite certificate => covering-system proof route (corrected)
+Extended HYP-2876 with the strong-component-atom idea + the covering-system lens (per user). Built on kps (LRCApex7Floor formalized) + codex (residue-basis atlas). HYP-2878:
+- **LRC failure = a persistent COVERING SYSTEM** of the unsafe APs U_s={a:||sa/D||<1/14} (s708 confirms: danger residues cover Z/q). Witness <=> N(S,D)>=1 <=> NOT covered.
+- **min modulus >= 15** (apex-7, Idea 3, kps-formalized): D=14 always covers.
+- **Strong-component ATOMS:** the hard/covering cases are SINGLE resonance atoms (loosest #atoms=1); H multiplicative over atoms (Moon); q=7 atom = {7,21}/apex-7 obstruction.
+- **OVER-DETERMINATION (the route, CORRECTED):** I first estimated P(cover Z/p)~e^{-0.135p}~1e-5 (large deviation) -- WRONG. Measured ~10% (structured intervals, not random points). The route STILL works via CRT-independence: covering at k primes ~0.1^k; bounded-core M (compact reduction) + M^13*0.1^k<1 (k~30 primes) => no S covers all => witness => LRC(14). Verified <=3 of 5 primes covered (consistent w/ 0.1/prime).
+- CRUX: rigorous CRT-independence of covering across primes for fixed bounded S (over-determines the 13 speeds). Connects covering systems (Hough) + Node-3 + apex-7 + atoms + the compact reduction.
+NEW: HYP-2878, scripts. Clean (tested+corrected the large-deviation estimate). NEXT: the CRT-independence/over-determination rigor + the bounded-core (compact-reduction) M-bound.
+
+## codex-2026-06-22-S98 -- strong-component H atoms are the Wagner-style minor carrier; Beurling-Selberg labels are the LRC analogue
+User asked for a long tangent session inspired by Kuratowski/Wagner/Robertson-Seymour, tournament/even-graph equinumerosity, the finite forbidden values `{7,21}`, graph simplifications, and Beurling-Selberg/trigonometric functions.  Pulled S33/S96 context first.  S96 already refuted the naive even-graph-minor route: degree-2 GF(2) smoothing and arbitrary contraction do not preserve `H`.  This session built the positive replacement: `04-computation/tournament_h_strong_minor_lens_codex_s98.py` audits the labelled strong-component atom ledger.
+
+Main result: in a tournament, strong components are linearly ordered by condensation, every Hamiltonian path must traverse that order, and component Hamiltonian paths concatenate, so `H(T)=prod_i H(C_i)`.  Therefore singleton SCC suppression is safe (`H=1`), but nontrivial SCCs can only be contracted as labelled `H` atoms.  Exact audit through rooted fixed-path `n=7` (`33868` rows) found `0` factorization failures, `0` singleton-suppression failures, and `89` strong-atom signatures with `0` multiple-H collisions.  Observed strong-atom gaps up to `189` equal the rooted odd gaps (`7,21,63,107,119,149,161,163,165,167,169,173,177,179,181,183,185,187`); `{7,21}` are absent from both rooted spectrum and observed atom semigroup closure, while strong atoms divisible by `7` (`35,49,77,91,133,147,175`) confirm S33's correction that the obstruction is not `7Z`.
+
+Added HYP-2877 and reflection `tournament-h-strong-minor-atoms-codex-s98.md`.  Candidate theorem handed off: prove all odd `h notin {7,21}` are attainable in the labelled strong-atom semigroup, ideally by constructive strong atoms except where products are natural.  LRC synthesis: Beurling-Selberg/trig carriers should be handled exactly like labelled atoms, carrying bandlimit, one-sided defect, and low-resonance coefficients; finite low Fourier modes are the analytic analogue of forbidden minors, while Parseval/high-tail control is the closure theorem.  Tournament Analysis used proof carriers as vertices and ranked `strong-component-H-atoms` before OCF packets, even-graph cycle space, GF(2) smoothing, arbitrary contraction, and Beurling-Selberg majorants.  Artifacts: HYP-2877, T993, script + `.out`, reflection, INDEX/SESSION-LOG updates, broadcast.
+## mac-mini-2026-06-22-S34 -- FINITE rational-witness certificate (user Ideas 1/2/3): verified + unified with floor/Node-3/V*/apex-7
+Per user inspo (finite certificate basis + character-sum + apex-7 fragment + deep leads). Pull/push frequent, built on concurrent codex S96.
+- **FINITE CERTIFICATE (RS payoff, HYP-2876):** every 13-set has a rational witness a/D with D<=41 (loosest {1..11,13,84}: D=41; random <=25). N(S,D)=#{a:||sa/D||>=1/14 forall s} = MAIN TERM (6/7)^13 phi(D) + ERROR=resonances {sum k_s s=0 mod D} (= the Node-3 spectrum HYP-2860). VERIFIED Ideas 1/2/3.
+- **D=14 NEVER certifies (Idea 3, PROVED apex-7 fragment):** covering forces a mult of 14; that runner sits on the observer (||14k a/14||=0), N(S,14)=0 => min witness D>=15. Why 14=2*7 is hard. VERIFIED.
+- **SIEVE:** tight in [15,41] (consec/loosest have 1 good D of 27 -- resonances kill 26/27) BUT COMFORTABLE at large D (main term (6/7)^13 phi(83)~11 >> deficit). Proof route: bound the Node-3 resonance deficit < 11 at the basis {83,89}. The basis certifies the COVERING family (16/3000 RANDOM miss it but witnessed elsewhere; ALL 13-sets have a witness, LRC holds empirically).
+- **UNIFICATION:** the finite-certificate IS the sharp/rational form of the assembled proof HYP-2869: main term=meas(G_P) floor (HYP-2856 3/pi^2 continuous), resonances=Node-3, D<=41=sharp V* (THM-565 V*<=234), D=14=apex-7 obstruction.
+- **Deep leads (for the team):** codex HYP-2872 REFUTED the graph-minor closure for H (it's the MULTIPLICATIVE structure, not minors -- the Kuratowski analog is forbidden-generators {7,21}). Remaining: winding-tournament T(x) conflict-graph <-> {7,21}/K5 (LRC non-loneliness as a forbidden-H class); E_7 odd holes (apex-7 non-chordality) <-> LRC(14) obstruction (codex even-graph audit).
+NEW: HYP-2876. Clean session (verified before claiming). NEXT: the Node-3 deficit bound at {83,89} (the finite-certificate proof) = the same floor crux, rational form.
+
+CORRECTION (codex-2026-06-22-S98): the global finite-certificate claim in this
+block is refuted by THM-566/HYP-2876.  For any finite denominator list `B`,
+`{1,...,11,13,84*lcm(B)}` is primitive and covering but has `N(S,D)=0` for
+every `D in B`; in particular fixed `D<=41` and the fixed basis `{83,89,21}`
+cannot be theorem-level closures.  The character-count formulation and apex
+obstruction survive as an adaptive/scaled residue-atlas lead.
+
+## mac-mini-2026-06-22-S33 -- BROAD idea session (Kuratowski/Wagner/Robertson-Seymour + {7,21} + Beurling-Selberg + equinumerosity): batch of 7 ideas shared + 2 grounded
+Per directive (explore tangents, many ideas, share concurrently). Broadcast a 7-idea batch (HYP-2873 + the broadcast):
+- **IDEA 4 CONFIRMED EXACT:** A(E)=#{a+b=c+d} = integral|E^(t)|^4 (spectral 4th moment, Parseval); INTERVAL (consec) maximizes = Fejer spectral concentration; Paley FLAT. So "consec maximizes L_y" (HYP-2852) IS "interval is most spectrally concentrated" -- grounds the L_y extremality in Beurling-Selberg/Fejer.
+- **IDEA 1 CORRECTED:** H-forbidden is NOT the ideal 7Z (strong-H div by 7 EXIST at n=7: 35,49,133,147,175). The PERMANENTLY-forbidden set is FINITE {7,21} = the TRUE Kuratowski/Wagner analog (finite forbidden set like {K5,K3,3}), achievable-H cofinite.
+- Other ideas shared (for the team): forbidden-H minor order (contract=condensation, suppress-deg-2); Beurling-Selberg majorant to RIGORIZE the LRC floor meas(GOOD)>=c0 (HYP-2869 remaining gap); apex-7 unifies forbidden-H(7) + LRC floor (Paley P_7/Fano/Hamming); equinumerosity -> dual forbidden values on even graphs; delta-field as discrete Beurling-Selberg.
+NEW: HYP-2873. Clean session (grounded/corrected via computation). NEXT (for team): Beurling-Selberg floor rigor (#3); the finite forbidden-H set structure (#1); the equinumerosity dual (#6).
+
 ## kind-pasteur-2026-06-22-S36b -- THREAD-2 (complement-even) RE-DERIVED + STALE-OUTPUT FIX (same-prompt collision with S36/faaad948d)
 Dispatched the THREAD-2 complement-even reframe (HYP-2867). SAME-PROMPT COLLISION: a concurrent kind-pasteur-S36 run already pushed (faaad948d) the identical finding and byte-identical kpswf13 scripts (independent convergence). Per the concurrent-collision protocol I deferred to the first-pusher and did NOT duplicate the HYP or scripts. My net contribution = a REAL FIX:
 - **STALE OUTPUTS CORRECTED:** the committed `lrc14_thread2_verdict_kpswf13.out` and `lrc14_spec_grading_kpswf13.out` were generated by a BUGGY earlier `good_true` (k=8 consec R'_true=0.95008) while the committed `.py` already had the FIXED `good_true` (k=8 consec=0.94074). Regenerated both outputs to be consistent with the committed code. Verified `good_true` against a 2e5-point grid (E={0..7}: 0.94014 vs grid 0.94015; E={0..10}: 0.62630 vs grid 0.62633) -- the FIXED version is correct (the bug was sorting the gap-vector, which broke the affine 1/7-crossing interpolation; fix = track physical affine gaps with integer slopes = speeds).
@@ -19796,3 +19834,175 @@ components.  The nodes are distinct, but the proof architecture matches:
 finite low carrier, aggregate balance/prefix control, and analytic tail.  The
 S94 correction to the Paley-7 overclaim reinforces the S95 warning: do not
 promote a single bucket/channel to the theorem.  Use cumulative ledgers.
+
+## codex-2026-06-22-S96 -- even-graph minors are not the H-obstruction closure
+
+Took the Kuratowski/Wagner/Robertson-Seymour prompt literally as a closure
+test for the tournament/even-graph bridge.  Added
+`04-computation/tournament_even_minor_obstruction_codex_s96.py` with output in
+`05-knowledge/results/tournament_even_minor_obstruction_codex_s96.out`.
+The script works in the fixed-Hamiltonian-path cube, maps each free arc
+`(i,j)` to the triangle-basis even-graph coefficient `(0,i+1,j)`, and audits
+degree-2 smoothing plus GF(2) edge contraction through `n=7`.
+
+Main result: the fixed-path/even-graph equinumerosity is a real labelled
+cycle-space bridge but not an `H`-complete minor quotient.  Deterministic
+GF(2) smoothing sends `25414` rooted `n=7` tournaments to the same empty core
+while their `H` values span `77` distinct odd values (`1..189`, with gaps).
+GF(2) contraction preserves even degree in every checked contraction
+(`344064` at `n=7`, zero parity failures) but is not `H`-monotone:
+one witness raises `H=31` to `H=33`, while a triangle contraction lowers
+`H=3` to `H=1`.
+
+Created HYP-2872 and reflection
+`07-reflections/even-graph-minors-are-not-the-h-obstruction-codex-s96.md`.
+Conclusion: do not chase `{7,21}` as Kuratowski-style forbidden minors of the
+even-graph shadow.  The useful analogue is THM-520's split between a
+minor-closed skeleton and a contraction-sensitive correction; for tournament
+`H`, the preservation theorem is strong-component condensation/OCF packets:
+`H(T)=prod_i H(C_i)`.
+
+Assumption challenge / Tournament Analysis: considered free arcs, triangle
+basis bits, even-graph smoothing cores, contraction shadows, strong
+components, OCF conflict-graph components, and proof obligations as possible
+vertices.  The chosen proof-carrier tournament ranks
+`strong-component/OCF packet > fixed-path free-arc cube > even-graph cycle
+space > GF(2) contraction shadow > degree-2 smoothing core`; it is transitive,
+with singleton SCCs and one Hamiltonian path.  The quotient that preserves the
+H-gap predicate is the strong-component/OCF packet quotient; the graph-minor
+quotients preserve parity/cycle-space membership but destroy H data.
+
+Post-pull integration: mac-mini S33 independently proposed two directly
+related ideas: forbidden `H` values as a multiplicative ideal generated by
+missing strong primes, and a possible tournament minor order.  S96 supports the
+first as the right positive abstraction and qualifies the second: a useful
+Wagner-style order must use strong-component condensation or OCF-packet
+reduction with an explicit `H`-factor ledger, not arbitrary GF(2) contraction
+inside the even-graph shadow, because that contraction can raise `H`.
+
+## codex-2026-06-22-S97 -- productive H-closure as admissible boundary closure
+
+Continued the productive-closure line after pulling S33/S96 context.  Added
+`04-computation/h_productive_boundary_closure_codex_s97.py` and stored
+`05-knowledge/results/h_productive_boundary_closure_codex_s97.out`.  The script
+is an arithmetic proof ledger rather than a new exhaustive search: it lists the
+non-unit factor routes for `H=7` and `H=21`, computes the THM-115 Moon boundary
+`alpha1 >= (n-2)+sum ceil(n/L)` over odd lengths, and displays that every
+strong core with `n>=9` has `H>=25`.
+
+Main result: the productive closure is the admissible `H`-preserving closure.
+For `H=7`, the prime target forces a single strong `H=7` component, closed by
+THM-200/THM-343.  For `H=21`, the product route `(3,7)` is closed by the same
+`H=7` theorem, and the single-core route `(21)` is closed by THM-079 for
+`n<=8` plus THM-115 for `n>=9`.  Created HYP-2874 and reflection
+`07-reflections/h-spectrum-admissible-boundary-closure-codex-s97.md`.
+
+Boundary-function analogy: strong-component condensation and OCF packets are
+admissible boundary approaches because they preserve the value being read;
+Moon/Busch-style strong-core lower bounds are regular boundary theorems; the
+fixed-path/even-graph quotient is a wild curvilinear approach because S96 shows
+degree-2 smoothing and GF(2) contraction preserve only parity/cycle-space data,
+not `H`.  Web checks for Bagemihl-Seidel/Kaczynski boundary-function theory and
+Fatou/Lindelof radial/nontangential boundary limits were used as analogy
+scaffolding, not as mathematical dependencies.
+
+Integrated the key S33 correction: do not state a `7Z` ideal.  Strong `n=7`
+tournaments already realize `H` values divisible by `7` (`35,49,133,147,175`).
+So the live Kuratowski/Wagner analogy is a finite low-boundary forbidden set
+with later direct strong-core re-entry.  Also incorporated S33's minor-order
+phrasing in the corrected form: `contract` means strong-component condensation
+with an `H` factor ledger, not arbitrary GF(2) contraction in the even-graph
+shadow.
+
+Assumption challenge / Tournament Analysis: considered runners, free arcs,
+even-graph triangle-basis bits, strong components, OCF conflict components,
+factor routes, Moon-boundary obligations, wild quotient operations, boundary
+approach classes, and proof obligations as vertices.  The selected proof
+carrier is the route/approach-class tournament
+`factor route > single strong core > finite base > Moon boundary > wild quotient
+guardrail`, transitive with one Hamiltonian path.  It preserves the `H` gap
+predicate exactly on the strong-component/OCF side and explicitly records that
+even-graph minor quotients destroy it.
+
+## codex-2026-06-22-S97b -- corrected Beurling-Selberg handoff for the LRC14 floor
+
+Second-pass lead after reading the pulled S33 broadcast and older THM-537 /
+THM-548 boundary work.  Created HYP-2875.  The useful S33 Beurling-Selberg
+prompt should not mean "retry a literal pointwise majorant/minorant for the
+sharp event indicator": THM-537 and earlier Angle-A work already show that
+route is too weak or impossible in the signed inclusion-exclusion setting.
+
+Corrected target: an admissible bandlimited boundary certificate for the
+spectrum sum
+`meas(G_P cap GOOD_E)=meas(G_P)meas(GOOD_E)+SPEC(P,E)`.  Keep modes
+`0<|n|<=H` exactly, bound the high tail by the sharper of L2
+Cauchy-Schwarz and Abel/Dirichlet signed cancellation, then prove uniformly
+`low_H - TailBound_H >= -(1-c)baseline` after HYP-2871's complement-even
+cluster reduction.  HYP-2871's reported bank certificate `R'>=0.434` at
+`H=42` is the model; HYP-2875 asks to make that structural.  Coherent low
+packets route to AP/Freiman/GAP finite atlases; incoherent packets route to
+Parseval/energy cancellation.  This also imports S33's additive-energy =
+spectral-fourth-moment clue as a classifier for coherent low packets, not as
+a standalone scalar proof.
+S95b stress addendum: added
+`04-computation/lrc14_nu_prefix_stress_codex_s95b.py`, reusing the exact S95
+component engine to search beyond `[0,14]`.  The stored run
+`05-knowledge/results/lrc14_nu_prefix_stress_codex_s95b.out` checks `26099`
+rows: exact `[0,15]` anchored primitive bank (`22697`), one-tail collars
+(`243`), two-tail collars (`1224`), two-block rows (`1575`), and random wide
+rows up to `W=45` (`360`).  It found `0` prefix violations and `0` total
+dense-mass violations.  Largest nonconsecutive ratio remains the `k=13`
+near-consecutive row `(0,2,3,4,5,6,7,8,9,10,11,12,14)` at `2851/3005`.
+
+Second post-pull integration: KPS/codex S95 spectrum work landed HYP-2870 and
+the consecutive-channel atlas while this stress pass was open.  HYP-2870's
+split `finite low covariance = complement-even structured packet +
+complement-odd L2 fluctuation` is the Fourier-side analogue of HYP-2866's
+`dense net = low-q prefix ledger + high-q Farey tail`.  Both reinforce the
+same proof discipline: keep aggregate low carriers until the cancellation or
+majorization has acted, then route coherent structured packets to finite
+AP/Freiman atlases and incoherent tails to L2/Farey bounds.
+
+## codex-2026-06-22-S98 -- finite residue bases are atlases, not closures
+
+User prompt supplied the tested basis `{83,89,21}`, the character-sum count
+`N(S,D)`, and the apex-7 floor.  Added
+`04-computation/lrc14_residue_basis_character_sum_codex_s98.py` and stored
+`05-knowledge/results/lrc14_residue_basis_character_sum_codex_s98.out`.
+
+Main correction: a fixed finite denominator basis cannot be global, even when
+it is excellent on samples.  In a deterministic broad sample of `602`
+primitive covering rows up to speed `10000`, `{83,89,21}` certified `591`
+rows; the `11` misses are not failures of LRC, and the first has a small
+replacement certificate `D=19` with `4` unit witnesses.  Exact theorem-level
+guardrail: for any finite denominator list `B`, the primitive covering row
+`{1,...,11,13,84*lcm(B)}` kills every denominator in `B`.  For the prompt
+basis the tail is `13030668`, with counts `[(83,0),(89,0),(21,0)]`.  This
+extends THM-566 from interval caps to arbitrary finite sparse lists.
+
+The apex fragment also sharpened: covering kills every reduced denominator
+`2..14`, not just `14`, because for each such `D` some speed is divisible by
+`D` and therefore sits at the observer for every numerator.  This is the exact
+split between THM-523's non-covering easy witnesses and the covering hard core.
+
+Character-count reading: `N(S,D)` has a main term plus the exact resonance
+packet `sum_s k_s s == 0 mod D`.  Individual moduli can dip to zero by
+divisibility or resonance even when the main term is positive.  So finite
+bases should be treated as adaptive/scaled residue atlases for coherent
+divisor-resonance packets, while incoherent packets route to the HYP-2875
+bandlimited L2 tail.  Created HYP-2876 and reflection
+`07-reflections/lrc14-finite-residue-bases-are-atlases-not-closures-codex-s98.md`.
+
+Assumption challenge / Tournament Analysis: considered runners, denominators,
+numerator residues, character modes, divisor-loaded tails, covering
+obligations, even-graph holes, and proof obligations.  Selected carrier:
+scaled residue/character-count atlas.  Challenged assumption: loneliness is
+not minor-closed under runner deletion, so `{7,21}` / `E_7` odd-hole analogies
+must live on residue/even-graph addresses or proof obligations, not raw speed
+subset deletion.
+
+Post-pull integration: incoming `HYP-+2876` asserted the stronger finite
+rational-witness closure (`D<=41` and fixed basis coverage).  The S98
+finite-basis killer directly refutes the global form while preserving its
+useful parts: `N(S,D)` as character/resonance count, the apex obstruction, and
+large-denominator bases as sampled/scaled atlases.
