@@ -1,0 +1,9 @@
+gamma-trick + pigeonhole on 14-covering sets:
+  r=7, R coprime-14: |R|=6 R-coprime-14? True; multiples safe at gamma*=1/8 (margin 1/8); bad pts=10/14, GOOD pts=[4, 7, 8, 12]; M(S)=1/8=0.1250 >1/14 OK
+  r=8, R coprime-14: |R|=5 R-coprime-14? True; multiples safe at gamma*=5/9 (margin 1/9); bad pts=9/14, GOOD pts=[3, 6, 10, 11, 12]; M(S)=1/9=0.1111 >1/14 OK
+  r=7, R has 7 (mult of 7!): |R|=6 R-coprime-14? False; multiples safe at gamma*=1/8 (margin 1/8); bad pts=12/14, GOOD pts=[1, 7]; M(S)=1/8=0.1250 >1/14 OK
+  r=2 (union bound regime): |R|=11 R-coprime-14? False; multiples safe at gamma*=2/3 (margin 1/3); bad pts=14/14, GOOD pts=[]; M(S)=2/19=0.1053 >1/14 OK
+
+=> R coprime-to-14, |R|<=6 (r>=7): <=2|R|<=12 bad => a GOOD point exists => M>=1/14 (pigeonhole).
+   Union bound closes r<=6. RESIDUAL: R has a multiple of 7 (gcd=7, up to 7 bad) -- the apex-7
+   self-reference (14=2*7, the 7-content recurses). Narrows the 14-covering crux to double-7 sets.
