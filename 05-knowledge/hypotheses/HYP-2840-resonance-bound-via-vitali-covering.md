@@ -1,7 +1,7 @@
 ---
 id: HYP-2840
 title: The resonance bound p0<=p0_decorr -- multi-far residual via VITALI COVERING (geometric, bypasses the divergent Fourier/lattice envelope)
-status: STRATEGY (owner hint "consider Vitali"); single-far DONE (THM-546 Fourier/BV), multi-far = the residual where Fourier diverges; Vitali covering explored
+status: STRATEGY + foundational ATOM FORMALIZED (LRCMarginalUniform, sorry-free); single-far DONE (THM-546), multi-far = the residual where Fourier diverges; Vitali covering = the geometric route, tight step = quasi-independence (open)
 source: kind-pasteur-2026-06-22-S31
 related:
   - HYP-2839   # hp0cap cores + the resonance residual isolated
@@ -66,8 +66,24 @@ CONVERGENCE does not apply to the raw indicator. Vitali COVERING (above) is the 
    skeleton; sorry-free once Box_sigma is defined.
 3. The max-overlap/quasi-independence refinement (the tight step) -- the genuine residual.
 
+## CONVERGENCE with mac-mini's L_y route (S28) -- the decorrelation IS the far-element half
+mac-mini (concurrent) found the CLEANER hp0cap reframing via THM-534: `p0(E) <= L_y(E)` is PROVED
+(moment-LP dual, EXACT Bonferroni -- NO decorrelation needed for this step), so hp0cap reduces to the
+SCALAR extremality **"consec maximizes L_y(E)"**. This is strictly cleaner than the measure-decorrelation
+route for the `p0 <= (something)` step. BUT the remaining scalar piece "consec maximizes L_y" SPLITS:
+- **bounded-spread**: finite exact check (consec argmax over span<=2k), VERIFIED.
+- **far elements drop L_y**: mac-mini measured "ANY far element drops L_y by >=0.044 (decorrelation
+  safe)". THIS half IS the decorrelation -- and the Vitali/marginal-uniformity work here is its
+  rigorous backbone: far phases equidistribute (marginal uniformity, `LRCMarginalUniform`, PROVED) =>
+  the far-element moments S_r decorrelate => L_y drops. So the two routes COMBINE: L_y reduces hp0cap
+  to consec-extremality; its far-element half = this decorrelation (Vitali covering for the multi-far
+  geometric bound where the Fourier envelope diverges). Defer the `p0<=L_y` step to THM-534 (cleaner);
+  keep the Vitali/decorrelation for the far-element L_y drop.
+
 ## Status
-The Vitali covering route is the correct GEOMETRIC response to the multi-far Fourier divergence
-(HYP-2643), convergent by construction; the open part is the quasi-independence (overlap) refinement
-that makes it tight for the binding margin, with the resonant case = the finite curve atlas
-(HYP-2757). -> HYP-2839, THM-546, HYP-2643, HYP-2757, THM-534.
+PIVOT: the L_y route (THM-534, mac-mini S28) supersedes the measure-decorrelation for the `p0<=cap`
+backbone (cleaner, exact). The resonance/decorrelation content survives as the FAR-ELEMENT half of
+"consec maximizes L_y" (far elements decorrelate-safe). Formalized: the marginal-uniformity atom
+(`LRCMarginalUniform`, sorry-free) -- the backbone of the far-element L_y drop. Open: the scalar
+consec-extremality (mac-mini's L_y route) + the quasi-independence refinement (this Vitali route).
+-> HYP-2839, THM-534 (L_y route), THM-546, HYP-2643, HYP-2757.
