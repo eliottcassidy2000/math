@@ -1,0 +1,14 @@
+ q  n=2q   floor(per V)   principal  QR-sum  NQR-sum  chi_q-osc  osc/floor
+  3    6       1.6667     1.6667   1.333   0.333    +1.000   0.600
+  5   10       2.9333     2.9333   1.800   1.133    +0.667   0.227
+  7   14       4.1714     4.1714   2.857   1.314    +1.543   0.370
+ 11   22       6.6294     6.6294   4.539   2.090    +2.449   0.369
+ 13   26       7.8555     7.8555   4.210   3.645    +0.565   0.072
+ 17   34      10.2907    10.2907   5.305   4.986    +0.319   0.031
+ 19   38      11.5146    11.5146   7.225   4.289    +2.936   0.255
+ 23   46      13.9547    13.9547   8.339   5.616    +2.723   0.195
+
+=> floor is a SUM OF POSITIVE totient terms (always >0); the chi_q split is a partition.
+   osc/floor stays well below 1 for all q (principal dominates) => the floor never vanishes,
+   q-uniformly, consistent with the 3/pi^2 limit. The chi_q (apex) correction is the BIAS,
+   not the sign -- the difficulty is in the CAP comparison, where the prime-thin margin bites.
