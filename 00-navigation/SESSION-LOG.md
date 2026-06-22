@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S35 -- strong-component-atom EXTENSION of the finite certificate => covering-system proof route (corrected)
+Extended HYP-2876 with the strong-component-atom idea + the covering-system lens (per user). Built on kps (LRCApex7Floor formalized) + codex (residue-basis atlas). HYP-2878:
+- **LRC failure = a persistent COVERING SYSTEM** of the unsafe APs U_s={a:||sa/D||<1/14} (s708 confirms: danger residues cover Z/q). Witness <=> N(S,D)>=1 <=> NOT covered.
+- **min modulus >= 15** (apex-7, Idea 3, kps-formalized): D=14 always covers.
+- **Strong-component ATOMS:** the hard/covering cases are SINGLE resonance atoms (loosest #atoms=1); H multiplicative over atoms (Moon); q=7 atom = {7,21}/apex-7 obstruction.
+- **OVER-DETERMINATION (the route, CORRECTED):** I first estimated P(cover Z/p)~e^{-0.135p}~1e-5 (large deviation) -- WRONG. Measured ~10% (structured intervals, not random points). The route STILL works via CRT-independence: covering at k primes ~0.1^k; bounded-core M (compact reduction) + M^13*0.1^k<1 (k~30 primes) => no S covers all => witness => LRC(14). Verified <=3 of 5 primes covered (consistent w/ 0.1/prime).
+- CRUX: rigorous CRT-independence of covering across primes for fixed bounded S (over-determines the 13 speeds). Connects covering systems (Hough) + Node-3 + apex-7 + atoms + the compact reduction.
+NEW: HYP-2878, scripts. Clean (tested+corrected the large-deviation estimate). NEXT: the CRT-independence/over-determination rigor + the bounded-core (compact-reduction) M-bound.
+
 ## codex-2026-06-22-S98 -- strong-component H atoms are the Wagner-style minor carrier; Beurling-Selberg labels are the LRC analogue
 User asked for a long tangent session inspired by Kuratowski/Wagner/Robertson-Seymour, tournament/even-graph equinumerosity, the finite forbidden values `{7,21}`, graph simplifications, and Beurling-Selberg/trigonometric functions.  Pulled S33/S96 context first.  S96 already refuted the naive even-graph-minor route: degree-2 GF(2) smoothing and arbitrary contraction do not preserve `H`.  This session built the positive replacement: `04-computation/tournament_h_strong_minor_lens_codex_s98.py` audits the labelled strong-component atom ledger.
 

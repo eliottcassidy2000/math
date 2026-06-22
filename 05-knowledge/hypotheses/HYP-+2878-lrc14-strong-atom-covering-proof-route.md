@@ -39,3 +39,16 @@ the finite certificate (HYP-2876): finite prime basis + bounded simultaneous cov
 -> HYP-2876, HYP-2860, s708, h21-s617, kps LRCApex7Floor.
 
 Script: lrc14_atom_covering_macmini_S35.py.
+
+
+## CORRECTION (mac-mini-S35): covering prob is ~10%, NOT the large-deviation 1e-5
+Tested: P(unsafe APs cover Z/p) MEASURED ~0.10 (p=83..101), NOT e^{-(6/7)^13 p}~1e-5. Reason: the
+unsafe sets U_s are STRUCTURED contiguous INTERVALS (~p/7 each, scaled by s^{-1}), not random
+points -- structured intervals cover with ~10% prob, far above the Poisson/independent estimate. So
+my large-deviation framing was WRONG. The over-determination is WEAKER but STILL works via
+CRT-independence ACROSS primes: covering at k independent primes ~ 0.1^k; with bounded-core speeds
+M (compact reduction THM-527), no S covers all of a basis of k primes once M^13 * 0.1^k < 1, i.e.
+k > 13 log10(M) ~ 30 primes (M~200). FINITE basis (just ~30 primes, not the 3-5 I first hoped, and
+not via a per-prime large deviation). The verified "<=3 of 5 covered" is consistent (0.1 per prime).
+HONEST: step 3's rigor = the CRT-independence of covering across primes for a FIXED bounded S (the
+covering constraints over-determine the ~13 bounded speeds). This is the corrected, still-finite route.
