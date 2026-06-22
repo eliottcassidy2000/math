@@ -1,32 +1,26 @@
-## codex-S114 -- Three-Mode Composition and Committed-Denominator Wall (checkpoint)
+## codex-S114 -- Three-Mode Composition and Bonferroni-3 Wide Target (checkpoint)
 
-Formalized the corrected geometric composition of the three tournament recursion modes and established the "committed-denominator wall" guardrail for the LRC(14) proof (commit `8bc93582`). This checkpoint resolves structural misconceptions about the recursion modes and anchors the proof's split between finite Venn nodes and analytic equidistribution.
+Formalized the integration of the KPS S31t Bonferroni-3 target into the corrected three-mode recursion hierarchy (commit `5ae20446`). This checkpoint unifies the geometric recursion labels with a higher-order cap bound for the wide-runner branch of LRC(14).
 
-### 1. Corrected Three-Mode Composition
-Refined the mapping between tournament recursion modes and their geometric/arithmetic counterparts:
-- **Möbius Mode ($n \to n-1$):** Functions as the always-on inclusion-exclusion skeleton for all sizes.
-- **Eisenstein Mode ($n \to n-3$):** Acts as the even-size fold ($2q \to q$) exposing the apex structure.
-- **Legendre Mode ($n \to n-2$):** Functions as a full 3-set Venn diagram for odd sizes.
-- **Correction:** Clarified that the Legendre mode is a geometric Venn over corners $A, D, B$ (sizes $N-1, N-2, N-1$) and their overlaps. This distinguishes "corner" from "overlap" labels (e.g., $D$ and $C$ both have size $N-2$ but distinct roles), which is critical for finite realizability in Node 2.
+### 1. Bonferroni-3 Wide Target (HYP-2901)
+Integrated the corrected Legendre Venn geometry with a third-order Bonferroni upper bound for the coverage $p_0$.
+- **Packet Expansion:** For a bounded base $B$ plus "far" runners, the coverage $p_0$ is expanded into Newton/Möbius packets: $p_0(B \cup far) = T_1 + T_2 + T_3 + T_4 + \dots$
+- **Venn Mapping:** The terms correspond to the corrected Venn regions: $T_1$ (corners/one-far), $T_2$ (edges/doublets), and $T_3$ (center/triples).
+- **The Target:** Verified that in genuine wide rows, $T_1$ is small or zero and the series oscillates with decreasing magnitude. This reduces the multi-far cap problem to a third-order target: **$p_0 \le T_1 + T_2 + T_3$**, assuming the $r \ge 4$ tail is nonpositive.
 
-### 2. The Committed-Denominator Wall (LCM Family)
-Established a rigorous proof-level guardrail against using fixed finite denominator bases for the LRC(14) closure.
-- **Mechanism:** For any bound $X$, the family $S_X = \{1, \dots, 11, 13, \text{lcm}(2, \dots, X)\}$ "kills" every denominator $D \le X$ simultaneously, as the committed speed forces that runner to phase 0 mod 1.
-- **Refutation:** This proves that the minimal witness denominator must tend to infinity with $X$, refuting every fixed-denominator atlas shortcut.
-- **Opening Behavior:** Probed the first denominators above the wall; the "next-prime" rule is false. The first unblocked witnesses often occur at prime-powers (e.g., $121 = 11^2$ for $X=110, 120$) or specific residue openings.
+### 2. Radical Filter Integration (S45 Synthesis)
+Unified the "committed-denominator wall" findings with the mac-mini S45 radical filter.
+- **Small-Prime Filter:** If a prime $p \le 13$ divides no speed in $S$, then $t=1/p$ provides an immediate lonely witness, as $1/p \ge 1/13 > 1/14$.
+- **Beyond the Filter:** The "radical-saturated" case (e.g., $30,030 \mid v$) is identified as the threshold where simple prime-based witnesses fail and full equidistribution is required.
+- **Refinement:** Confirmed that the first opening above the committed wall is governed by prime-power packets (e.g., $11^2$) and residue compatibility, not just the "next-prime" rule.
 
-### 3. Separation of Proof Nodes (2 vs 3)
-The three-mode composition provides a clean handoff between the two final proof components:
-- **Node 2 (Finite Venn):** Handles the cap/extremality statement within the corrected Legendre Venn geometry, focusing on AP/three-gap rigidity and hull-labels.
-- **Node 3 / Part A (Analytic):** Handles the analytic floor through effective equidistribution beyond the committed wall, using exact-period unit packets with prime-power labels.
+### 3. Structural Path for the Analytic Node
+The analytic closure (Node 3) is now framed as a two-stage process:
+1. **Radical Filter:** Easy-branch closure for rows with unblocked small-prime or prime-power denominators.
+2. **Effective Equidistribution:** Saturated-branch closure using torus equidistribution of prime-power/unit packets to intersect the robust $GOOD \cap G_P$ floor.
 
-### 4. Structural Hierarchy
-Established the unified composition path:
-1. Exact-period packets.
-2. Möbius divisor/IE labels ($\phi = \mu \ast id$).
-3. Eisenstein even fold ($2q \to q$).
-4. Legendre odd Venn (at $q$).
-5. Scalar cap/floor comparison (only after labels survive).
+### 4. Finite Node Discipline (Node 2)
+The corrected Legendre Venn labels (Corner, Edge, Center) are now established as the formal language for the finite realizability proof. By keeping corner and overlap contributions distinct, the proof maintains the geometric information necessary to show AP/three-gap rigidity.
 
 ### 5. Net Impact
-This checkpoint stabilizes the project's proof architecture by replacing abstract scalar recurrences with a labelled geometric and arithmetic hierarchy. By isolating the "committed-denominator wall," it forces the final analytic closure to rely on effective equidistribution rather than heuristic denominator searches.
+This checkpoint stabilizes the project's strategy for the multi-far branch by replacing abstract series with a truncated, geometry-linked Bonferroni bound. By anchoring the analytic node to a radical filter and prime-power openings, it provides a rigorous mechanism for discharging covering rows that attempt to hide behind large denominators.
