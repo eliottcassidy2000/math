@@ -1,0 +1,3 @@
+'LonelyRunner.DenseCovers.slowμ_compl_toReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.DenseCovers.witness_floor_concrete' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.DenseCovers.witness_pos_of_p0_lt_measGP' depends on axioms: [propext, Classical.choice, Quot.sound]

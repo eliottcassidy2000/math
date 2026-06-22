@@ -56,6 +56,7 @@ import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge
+import TournamentH7.LRCWitnessFloorConcrete
 import TournamentH7.LRCWitnessPartA
 import TournamentH7.LRCL7Discrepancy
 
@@ -322,6 +323,45 @@ theorem lrc_event_measure_bridge_denseCovers_D_le_p0_audit
   LonelyRunner.LRC14.EventMeasureBridge.shape_D_le_p0_denseCovers_handoff
     Eof hanchor nuShape DShape p0Shape hDmeasure hp0measure hDdef
 #print axioms lrc_event_measure_bridge_denseCovers_D_le_p0_audit
+
+/-! ### LRC14 concrete slow-time witness floor -/
+
+theorem lrc_slowμ_compl_toReal_audit {A : Set ℝ} (hA : MeasurableSet A) :
+    (LonelyRunner.DenseCovers.slowμ Aᶜ).toReal =
+      1 - (LonelyRunner.DenseCovers.slowμ A).toReal :=
+  LonelyRunner.DenseCovers.slowμ_compl_toReal hA
+#print axioms lrc_slowμ_compl_toReal_audit
+
+theorem lrc_witness_floor_concrete_audit (E P : List ℤ) :
+    (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.safeSet P)).toReal -
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal
+      ≤ (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.coverSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.witness_floor_concrete E P
+#print axioms lrc_witness_floor_concrete_audit
+
+theorem lrc_witness_pos_of_p0_lt_measGP_audit (E P : List ℤ)
+    (h :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal <
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    0 <
+      (LonelyRunner.DenseCovers.slowμ
+        ((LonelyRunner.DenseCovers.coverSet E)ᶜ ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.witness_pos_of_p0_lt_measGP E P h
+#print axioms lrc_witness_pos_of_p0_lt_measGP_audit
+
+theorem lrc_witness_carrier_subset_safe_audit (E P : List ℤ) :
+    (LonelyRunner.DenseCovers.coverSet E)ᶜ ∩
+        LonelyRunner.DenseCovers.safeSet P ⊆
+      LonelyRunner.DenseCovers.safeSet P :=
+  LonelyRunner.DenseCovers.witness_carrier_subset_safe E P
+#print axioms lrc_witness_carrier_subset_safe_audit
 
 /-! ### LRC14 Part-A finite-ruler arc-bound budgets -/
 

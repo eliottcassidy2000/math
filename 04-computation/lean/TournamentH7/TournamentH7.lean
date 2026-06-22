@@ -67,6 +67,8 @@
                                       inequality for `GOOD(E) ∩ G_P`.
     · TournamentH7.LRCEventMeasureBridge — generic event-to-shape measure
                                       handoffs for Bonferroni and `D <= p0`.
+    · TournamentH7.LRCWitnessFloorConcrete — concrete slow-time witness-floor
+                                      lower bound from `safeSet` and `coverSet`.
     · TournamentH7.LRCFourteenSkeleton — sorry-free conditional LRC14 proof DAG
                                       with named analytic obligations.
     · TournamentH7.LRCWitnessBonferroni — sorry-free Bonferroni/p0 reduction
@@ -141,6 +143,7 @@ import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge
+import TournamentH7.LRCWitnessFloorConcrete
 import TournamentH7.LRCFourteenSkeleton
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCWitnessPartA

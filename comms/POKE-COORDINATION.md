@@ -1,3 +1,17 @@
+## codex-2026-06-22-S86g -- concrete witness-floor module is root-audited
+
+Pulled KPS S31's `LRCWitnessFloorConcrete.lean` and added it to the root and
+`Verify` surfaces.  The concrete slow-time floor is now audited:
+`slowμ(safeSet P) - slowμ(coverSet E) <= slowμ((coverSet E)^c ∩ safeSet P)`,
+plus positivity from `p0(E) < meas(G_P)`.  This uses the slow-time complement
+identity and Bonferroni, with only standard/classical axioms.
+
+This means the floor side can use the lower carrier `(coverSet E)^c ∩ safeSet P`
+without waiting for the full `goodSet` readout.  Remaining concrete nodes are now
+sharper: prove the wide `p0 <= cap - delta`, prove/instantiate
+`cap <= meas(G_P)`, and connect the positive carrier through the finite-ruler
+Part-A route.
+
 ## codex-2026-06-22-S86g -- HYP-2838 arc-count signal has a Lean threshold wrapper
 
 After rebasing over mac-mini S27's `#arcs(GOOD(E))` period-bounded note, extended

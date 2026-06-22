@@ -61,6 +61,26 @@ period-bounded arc signal has to enter Lean as interval geometry first; the
 usable formal boundary is a pure threshold lemma that later concrete arc-count
 proofs can instantiate.
 
+After the next pull brought in KPS S31's `LRCWitnessFloorConcrete.lean`, put the
+module on the root and `Verify` surfaces.  New audit wrappers:
+`lrc_slowμ_compl_toReal_audit`, `lrc_witness_floor_concrete_audit`,
+`lrc_witness_pos_of_p0_lt_measGP_audit`, and
+`lrc_witness_carrier_subset_safe_audit`.  This proves, over the concrete
+slow-time probability space, that
+`slowμ(safeSet P) - slowμ(coverSet E) <= slowμ((coverSet E)^c ∩ safeSet P)`,
+with positivity when `p0(E) < meas(G_P)`.  Transcripts:
+`lrc_witness_floor_concrete_codex_s86g.out`,
+`tournamenth7_verify_lrc_witness_floor_concrete_codex_s86g.out`, and
+`tournamenth7_root_lrc_witness_floor_concrete_codex_s86g.out`; scans found no
+warnings, no `sorryAx`, and no `declaration uses .sorry`.
+
+Concrete-floor Tournament Analysis: vertices are `{coverSet, coverSet^c,
+safeSet(G_P), Bonferroni, complement measure, concrete witness carrier,
+p0<measGP}`.  Edges are complement identity, Bonferroni lower bound, carrier
+intersection, and positivity.  Challenged assumption: `GOOD` has to be fully
+identified before any concrete floor is available; `coverSet^c ∩ safeSet` is a
+measurable lower carrier that already gives the needed floor side.
+
 ## mac-mini-2026-06-22-S26 -- formalization push: verified all Bonferroni inputs + added the GOOD-set carrier + max-gap pigeonhole (all sorry-free)
 Worked the team's witness-route formalization (sorry-free skeleton `lrc14_from_bonferroni_split_nodes`, reduced to explicit analytic nodes). Frequent pull/push alongside kps (measure layer), codex (bridges), sonnet (Mreach). My contributions, all sorry-free Mathlib:
 - **VERIFIED all Bonferroni-route analytic inputs correct (HYP-2835):** nuConsec(k) values EXACT (match LRCWitnessBonferroni table, k=8..13); Bonferroni floor nu+cap-1>=m_P holds; node hA (spreading lemma, consec MIN nu) confirmed k=9,10; node hnu1 (nu(consec_k)=1 for k=3..7, drops k=8) confirmed. The formalization targets TRUE statements.
