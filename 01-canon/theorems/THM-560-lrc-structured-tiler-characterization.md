@@ -90,6 +90,36 @@ Disciplinary note: verify apparent extremal families with the exact critical set
 sample.] So the witness-isolation condition (`min=1/14` at one `t`) is FAR from sufficient; global
 tightness over all `t` is what isolates GW. This is real evidence the sporadic locus is small/finite.
 
+## Finiteness of the sporadic locus (kps-S31o -- census + equidistribution mechanism)
+**Single-swap census (RIGOROUS):** among all `{AP\{rem}} U {v}`, `v<=50`, with exact critical points
+`t=k/(s_i+-s_j)`, the ONLY non-AP tight set is GW (`rem=12,v=24`)
+(`lrc_sporadic_finiteness_kps.py`). So GW is the unique single-swap sporadic.
+
+**Why (mechanism):** `M({1..11,13}) = 1/12 > 1/14` (the 12-subset is lonely at `1/12`). Adding `v`
+lands `M` at exactly `1/14` only for tuned `v`: `v=24 = 2*12` kills the subset's `t=1/12` witness
+(`24/12=2 in Z`) and lands precisely at `1/14`; nearby `v` keep `M=1/12` (don't kill the witness) and
+far `v` give intermediate `M in {3/41,4/53,1/13,2/25}` -- ALL `> 1/14`, none equal.
+
+**Finiteness heuristic (with identified gap):** an exact tiler (tight, meas-0 safe) must have BOUNDED
+speeds. If `v=max(S)` is large, `U_v={||vt||<1/14}` (measure `1/7`) EQUIDISTRIBUTES (Weyl), so
+`meas(U_v ∩ L) -> meas(L)/7` for the 1/14-lonely set `L` of `S\{v}`; thus `U_v` covers only `~1/7`
+of `L`, leaving `~6/7 meas(L) > 0` safe -- NOT a tiling. So tilings need `max(S)` bounded => finitely
+many (up to dilation). GAP: this needs `meas(L)` bounded below, which fails if `S\{v}` is itself
+recursively near-tight (its own 1/14-lonely set tiny) -- the recursive-tightness gap is exactly why
+OPEN-Q-108 stays open. **mod-27 = 2n-1 = 3^3 (HYP-2138):** GW swaps `12->24` WITHIN the gcd-3 shell
+(both `≡ 0 mod 3`); sporadics exist iff `2n-1` is composite, finitizing the swaps to the non-unit
+shells of `27`.
+
+## Honest positioning (the search reframe, THM-523)
+This whole tiling/tight-locus line is the **trivial boundary layer** of LRC(14): by THM-523 (q-witness
+lemma) any speed set omitting all multiples of some `q<=14` is safe at `t=1/q`, so the tight sets here
+(AP, GW -- both no multiple of 14) are TRIVIALLY lonely at `t=1/14`. The GENUINE crux is the
+**covering sets** (containing a multiple of every `q in {2..14}`), where the easy witnesses all fail;
+that is mac-mini's covering-system / prime-basis / single-atom over-determination (HYP-+2878). THM-560
+fully resolves the structured boundary and bounds the sporadic boundary; it does not touch the covering
+crux. The value is a clean, complete account of the boundary geometry + isolating where the real
+difficulty is NOT.
+
 ## Significance
 - **Resolves the structured half of mac-mini's crux**: the difference-closed (equivalently
   "interval-like") exact tilers are *completely* pinned down -- exactly the AP-dilates, all tight,
