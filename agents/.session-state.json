@@ -1,10 +1,6 @@
-<<<<<<< Updated upstream
-{}
-=======
 {
   "message_sent": true,
   "session_start": "2026-06-22T10:40:20.582490",
   "start_commit": "e709f9b19b7077301bd6c0335ebdce454067281e",
-  "pushed": false
+  "pushed": true
 }
->>>>>>> Stashed changes
