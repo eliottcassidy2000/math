@@ -1,0 +1,44 @@
+LRC14 AP boundary-core certificate scout (Codex S90)
+Family S(t,V)={t,2t,...,12t,V}; exact rational certificates
+
+Representative certificates
+  S={t..12t,V} t=  1 V=   13: case=tail_13m          tau=        1/14 margin=      1/14 (AP=1/14, V=1/14)
+  S={t..12t,V} t=  1 V=   26: case=tail_13m          tau=        2/27 margin=      2/27 (AP=2/27, V=2/27)
+  S={t..12t,V} t=  1 V=  182: case=tail_13m          tau=      14/183 margin=    14/183 (AP=14/183, V=14/183)
+  S={t..12t,V} t=  7 V=   92: case=denominator_13t   tau=        1/13 margin=      1/13 (AP=1/13, V=1/13)
+  S={t..12t,V} t= 20 V=  261: case=denominator_13t   tau=      19/260 margin=    19/260 (AP=1/13, V=19/260)
+  S={t..12t,V} t= 20 V= 2007: case=denominator_13t   tau=       1/260 margin=      1/13 (AP=1/13, V=73/260)
+  S={t..12t,V} t= 37 V=  482: case=denominator_13t   tau=      35/481 margin=    35/481 (AP=1/13, V=35/481)
+  S={t..12t,V} t= 37 V= 2891: case=denominator_13t   tau=       7/481 margin=    35/481 (AP=1/13, V=35/481)
+  S={t..12t,V} t= 84 V= 1261: case=denominator_13t   tau=      1/1092 margin=      1/13 (AP=1/13, V=13/84)
+
+Verified certificate box: t<=80, V<=120*t, rows=387840, failures=0
+
+Case counts and minimum margins
+  denominator_13t  : count=387120 min_margin=        1/14 at t=14, V=13, reduced=(14,13), tau=1/182, ap=1/13, V=1/14
+  tail_13m         : count=   720 min_margin=        1/14 at t=1, V=13, reduced=(1,13), tau=1/14, ap=1/14, V=1/14
+
+Proof ledger
+  1. Divide by g=gcd(t,V).  Scale invariance sends a reduced witness tau0
+     to tau=tau0/g for the original set.
+  2. If a is not divisible by 13, tau0=a/(13t) makes the AP block
+     {t,2t,...,12t} exactly 1/13-safe.
+  3. It remains to choose a with ||aV/(13t)|| >= 1/14.
+     When gcd(t,V)=1 and 13∤V, multiplication by V permutes Z/(13t),
+     and the middle residues have size 13t-2ceil(13t/14)+1 > t,
+     so one middle residue has preimage a not divisible by 13.
+  4. When gcd(t,V)=1, 13|V, and t>1, the image is 13*Z/tZ; choose
+     a middle residue modulo t and then a representative a mod 13t
+     not divisible by 13.
+  5. The exceptional reduced family {1,...,12,13m} has
+     tau=m/(13m+1), giving every runner distance m/(13m+1) >= 1/14.
+     Equality occurs only at m=1, the tight AP {1,...,13}.
+
+Tournament Analysis
+  pairwise observable: explicit certified margin for S(t,V)
+  switch/gauge: a vertex wins if it proves the AP boundary core uniformly
+  score_hist={7: 1, 6: 1, 5: 1, 3: 1, 2: 1, 1: 1}
+  Hamiltonian path: mod_13t_residue_certificate > tail_13m_exact_witness > scale_invariance_gcd_reduction > slow_fast_arc_error_budget > raw_V_over_t_growth > runner_vertices
+  challenged assumption: the boundary AP core needs V/t->infinity.
+  The residue certificate uses denominator 13t and works at finite ratio;
+  only the non-AP wide clusters still need the slow-fast/decorrelation node.
