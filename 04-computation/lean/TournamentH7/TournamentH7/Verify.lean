@@ -251,6 +251,21 @@ theorem lrc_goodSet_measurableSet_goodSet_audit (E : List ℤ) :
   TournamentH7.GoodSet.measurableSet_goodSet E
 #print axioms lrc_goodSet_measurableSet_goodSet_audit
 
+theorem lrc_goodSet_fract_sub_eq_fract_fract_sub_fract_audit (u v : ℝ) :
+    Int.fract (u - v) = Int.fract (Int.fract u - Int.fract v) :=
+  TournamentH7.GoodSet.fract_sub_eq_fract_fract_sub_fract u v
+#print axioms lrc_goodSet_fract_sub_eq_fract_fract_sub_fract_audit
+
+theorem lrc_goodSet_phaseGapSet_subset_goodSet_audit (E : List ℤ) :
+    LonelyRunner.DenseCovers.phaseGapSet E ⊆ TournamentH7.GoodSet.goodSet E :=
+  TournamentH7.GoodSet.phaseGapSet_subset_goodSet E
+#print axioms lrc_goodSet_phaseGapSet_subset_goodSet_audit
+
+theorem lrc_goodSet_denseSet_compl_subset_goodSet_audit (E : List ℤ) :
+    (LonelyRunner.DenseCovers.denseSet E)ᶜ ⊆ TournamentH7.GoodSet.goodSet E :=
+  TournamentH7.GoodSet.denseSet_compl_subset_goodSet E
+#print axioms lrc_goodSet_denseSet_compl_subset_goodSet_audit
+
 /-! ### LRC14 witness/p0 event-level elementary inclusions -/
 
 theorem lrc_dense_covers_all_inner_audit
@@ -530,6 +545,24 @@ theorem lrc_dense_compl_witness_le_phaseGap_measure_audit (E P : List ℤ) :
   LonelyRunner.DenseCovers.dense_compl_witness_le_phaseGap_measure E P
 #print axioms lrc_dense_compl_witness_le_phaseGap_measure_audit
 
+theorem lrc_phaseGap_witness_subset_goodSet_audit (E P : List ℤ) :
+    LonelyRunner.DenseCovers.phaseGapSet E ∩
+        LonelyRunner.DenseCovers.safeSet P ⊆
+      TournamentH7.GoodSet.goodSet E ∩
+        LonelyRunner.DenseCovers.safeSet P :=
+  LonelyRunner.DenseCovers.phaseGap_witness_subset_goodSet E P
+#print axioms lrc_phaseGap_witness_subset_goodSet_audit
+
+theorem lrc_phaseGap_witness_le_goodSet_measure_audit (E P : List ℤ) :
+    (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.phaseGapSet E ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal ≤
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet E ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.phaseGap_witness_le_goodSet_measure E P
+#print axioms lrc_phaseGap_witness_le_goodSet_measure_audit
+
 theorem lrc_witness_pos_from_wide_bound_audit (E P : List ℤ) (capk : ℝ)
     (hwide :
       (LonelyRunner.DenseCovers.slowμ
@@ -594,6 +627,23 @@ theorem lrc_phaseGap_witness_pos_from_strict_cover_bound_audit
     E P capk hE hwide hdual
 #print axioms lrc_phaseGap_witness_pos_from_strict_cover_bound_audit
 
+theorem lrc_goodSet_witness_pos_from_strict_cover_bound_audit
+    (E P : List ℤ) (capk : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hwide :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal < capk)
+    (hdual :
+      capk ≤
+        (LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    0 <
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet E ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.goodSet_witness_pos_from_strict_cover_bound
+    E P capk hE hwide hdual
+#print axioms lrc_goodSet_witness_pos_from_strict_cover_bound_audit
+
 theorem lrc_witness_margin_from_wide_bound_audit
     (E P : List ℤ) (capk delta : ℝ)
     (hwide :
@@ -644,6 +694,23 @@ theorem lrc_phaseGap_witness_margin_from_wide_bound_audit
   LonelyRunner.DenseCovers.phaseGap_witness_margin_from_wide_bound
     E P capk delta hE hwide hdual
 #print axioms lrc_phaseGap_witness_margin_from_wide_bound_audit
+
+theorem lrc_goodSet_witness_margin_from_wide_bound_audit
+    (E P : List ℤ) (capk delta : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hwide :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal ≤ capk - delta)
+    (hdual :
+      capk ≤
+        (LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    delta ≤
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet E ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.goodSet_witness_margin_from_wide_bound
+    E P capk delta hE hwide hdual
+#print axioms lrc_goodSet_witness_margin_from_wide_bound_audit
 
 theorem lrc_witness_pos_from_wide_bound_margin_audit
     (E P : List ℤ) (capk delta : ℝ)
@@ -698,6 +765,24 @@ theorem lrc_phaseGap_witness_pos_from_wide_bound_margin_audit
   LonelyRunner.DenseCovers.phaseGap_witness_pos_from_wide_bound_margin
     E P capk delta hE hdelta hwide hdual
 #print axioms lrc_phaseGap_witness_pos_from_wide_bound_margin_audit
+
+theorem lrc_goodSet_witness_pos_from_wide_bound_margin_audit
+    (E P : List ℤ) (capk delta : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hdelta : 0 < delta)
+    (hwide :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal ≤ capk - delta)
+    (hdual :
+      capk ≤
+        (LonelyRunner.DenseCovers.slowμ
+          (LonelyRunner.DenseCovers.safeSet P)).toReal) :
+    0 <
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet E ∩
+          LonelyRunner.DenseCovers.safeSet P)).toReal :=
+  LonelyRunner.DenseCovers.goodSet_witness_pos_from_wide_bound_margin
+    E P capk delta hE hdelta hwide hdual
+#print axioms lrc_goodSet_witness_pos_from_wide_bound_margin_audit
 
 /-! ### LRC14 Bonferroni positive-p0 route -/
 

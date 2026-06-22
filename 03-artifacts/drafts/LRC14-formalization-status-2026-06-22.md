@@ -73,7 +73,8 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
 - `LRCMaxGapPigeonhole` — `≤6` gaps summing to 1 ⟹ one `>1/7`; the k=7 boundary
   split (HYP-2836).
 - `LRCGoodSet` — concrete `goodSet(E) = {maxgap{frac(e·x)} > 1/7}` + measurability;
-  verified arc-characterization `==` maxgap (HYP-2837).
+  verified arc-characterization `==` maxgap (HYP-2837).  Codex S86g proves
+  `phaseGapSet E⊆goodSet E` and `(denseSet E)ᶜ⊆goodSet E`.
 - `LRCDenseCovers` — `coverSet`, `safeSet` (= G_P), `measurable_phase`, `D ≤ p0`,
   plus the phase-gap bridge `(denseSet E)ᶜ⊆phaseGapSet E`.
 - `LRCWitnessFloorConcrete` — `measGP − p0 ≤ μ(coverSetᶜ ∩ safeSet)`, with the
@@ -85,8 +86,10 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   anchored `0∈E` transfers this positivity to
   `0<μ((denseSet E)ᶜ ∩ safeSet)` and the quantitative margin to
   `delta≤μ((denseSet E)ᶜ ∩ safeSet)`, then onward to
-  `phaseGapSet E ∩ safeSet`.  The remaining readout is the speed-difference
-  bridge from `phaseGapSet E` to the concrete `goodSet`/`witnessG2` carrier.
+  `phaseGapSet E ∩ safeSet`, and finally to the concrete
+  `goodSet E ∩ safeSet` carrier.  The remaining witness-side work is the
+  finite-ruler approximation/Part-A readout, not the slow-time `GOOD∩G_P` event
+  quotient.
 - `LRCBonferroniMeasure`, `LRCEventMeasureBridge` — measure inequalities + handoffs.
 - `LRCWitnessPartA` — finite-ruler error-budget glue.  Codex S86g adds the
   verified split assembly where `k≤7` uses the `m_P` budget and `8≤k≤13` uses

@@ -1,3 +1,23 @@
+## codex-2026-06-22-S86g -- goodSet readout is now formal
+
+Closed the quotient left by the `phaseGapSet` bridge.  `LRCGoodSet` now proves
+`fract(u-v)=fract(fract u-fract v)`, `phaseGapSet E subset goodSet E`, and
+`(denseSet E)^c subset goodSet E`.  `LRCWitnessFloorConcrete` then transfers the
+p0 floor all the way to the actual `GOOD ∩ G_P` slow-time carrier:
+`goodSet_witness_pos_from_strict_cover_bound`,
+`goodSet_witness_margin_from_wide_bound`, and
+`goodSet_witness_pos_from_wide_bound_margin`.
+
+Impact: strict hp0cap + non-strict `hmeasGP` now gives
+`0 < slowμ(goodSet E ∩ safeSet P)`, and the p0 margin gives
+`delta <= slowμ(goodSet E ∩ safeSet P)`.  The event readout side of the witness
+floor is concrete; remaining blockers are hp0cap/hmeasGP and finite-ruler Part A.
+Builds refreshed:
+`lrc_goodset_phasegap_readout_codex_s86g.out`,
+`lrc_witness_floor_goodset_readout_codex_s86g.out`,
+`tournamenth7_verify_lrc_goodset_readout_codex_s86g.out`,
+`tournamenth7_root_lrc_goodset_readout_codex_s86g.out`.
+
 ## codex-2026-06-22-S86g -- phaseGapSet bridge narrows the goodSet quotient
 
 Formalized the finite cyclic-gap step that was still hiding inside the

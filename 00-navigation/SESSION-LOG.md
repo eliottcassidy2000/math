@@ -1,3 +1,35 @@
+## codex-2026-06-22-S86g -- goodSet readout bridge closed
+
+Closed the speed-difference quotient left by the phase-gap checkpoint.
+`LRCGoodSet.lean` now proves the fractional identity
+`fract(u-v)=fract(fract u - fract v)`, the event inclusion
+`phaseGapSet E ⊆ goodSet E`, and the direct corollary
+`(denseSet E)^c ⊆ goodSet E`.  This turns the formal max-gap/empty-arc proxy
+into the concrete `GOOD` carrier used by the witness-floor route.
+
+`LRCWitnessFloorConcrete.lean` now imports `LRCGoodSet` and transfers both forms
+of the p0 floor all the way to the actual carrier
+`goodSet E ∩ safeSet P`: `goodSet_witness_pos_from_strict_cover_bound`,
+`goodSet_witness_margin_from_wide_bound`, and
+`goodSet_witness_pos_from_wide_bound_margin`.  Thus strict hp0cap plus
+non-strict `hmeasGP` gives positive concrete `GOOD∩G_P` measure, and the
+quantitative p0 margin gives the exact finite-PartA `delta` budget over
+`GOOD∩G_P`.
+
+Focused, `Verify`, and root transcripts:
+`lrc_goodset_phasegap_readout_codex_s86g.out`,
+`lrc_witness_floor_goodset_readout_codex_s86g.out`,
+`tournamenth7_verify_lrc_goodset_readout_codex_s86g.out`, and
+`tournamenth7_root_lrc_goodset_readout_codex_s86g.out`; scans found no
+warnings, no `sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{phaseGapSet, goodSet, fractional-difference
+identity, safeSet, strict hp0cap, p0 delta margin, cap floor, PartA budget}`.
+Edges are algebraic modulo-one rewriting, event inclusion, measure monotonicity,
+and margin/positivity transport.  Challenged assumption: the final GOOD readout
+still required sorted cyclic-gap infrastructure; after the phase-gap theorem,
+the remaining quotient was only the speed-difference identity, now formal.
+
 ## codex-2026-06-22-S86g -- phase-gap bridge toward goodSet formalized
 
 Pushed the `denseSet^c` proxy one step closer to the concrete `goodSet` readout.

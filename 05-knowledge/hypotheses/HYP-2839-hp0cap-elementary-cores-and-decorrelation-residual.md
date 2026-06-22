@@ -72,6 +72,13 @@ The phase-gap version narrows the remaining `goodSet` readout further:
 speed-difference identity into `GoodSet.goodSet`, not the max-gap/empty-arc
 finite geometry.
 
+That quotient is now closed too: `LRCGoodSet.phaseGapSet_subset_goodSet` and
+`denseSet_compl_subset_goodSet` prove the concrete `GOOD` readout, and
+`LRCWitnessFloorConcrete.goodSet_witness_margin_from_wide_bound` carries the p0
+margin to `meas(goodSet E ∩ safeSet P)`.  Thus hp0cap plus `hmeasGP` feeds the
+actual slow-time `GOOD∩G_P` witness carrier; Part A still has to transfer that
+slow-time carrier to the finite-ruler witness.
+
 ## The residual (the genuinely analytic part, NOT elementary)
 The binding cases k=8..12 route through the decorrelated closed form (THM-534, kps-S24):
 > `p0(E) <= p0_decorr(E) = sum_t P_t^{(r)} p_t(B)`  [RESONANCE BOUND -- the residual]

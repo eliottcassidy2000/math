@@ -4,9 +4,9 @@
   (kind-pasteur-2026-06-22-S31, HYP-2832 unification at the measure level).
 
   This is the concrete realization of the witness/p0 unification.  Using the
-  carrier `coverSetᶜ` (slow-times where some inner sector is empty), which is a
-  subset of the genuine GOOD event (an empty length-`1/7` sector forces a cyclic
-  gap `> 1/7`), we prove on the slow-time probability space `slowμ`:
+  carrier `coverSetᶜ` (slow-times where some inner sector is empty), and routing
+  it through `denseSetᶜ`, `phaseGapSet`, and finally the genuine `goodSet`, we
+  prove on the slow-time probability space `slowμ`:
 
       meas(G_P) - p0(E)  ≤  meas(coverSetᶜ ∩ G_P)  ( ≤ witnessG2 = meas(GOOD ∩ G_P) ).
 
@@ -19,7 +19,7 @@
   on the floor side now discharged from concrete events.
 -/
 
-import TournamentH7.LRCDenseCovers
+import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
 
 namespace LonelyRunner
@@ -96,6 +96,19 @@ theorem dense_compl_witness_le_phaseGap_measure (E P : List ℤ) :
   ENNReal.toReal_mono (measure_ne_top slowμ (phaseGapSet E ∩ safeSet P))
     (measure_mono (dense_compl_witness_subset_phaseGap E P))
 
+/-- The phase-level empty-arc carrier lies in the concrete `goodSet` carrier. -/
+theorem phaseGap_witness_subset_goodSet (E P : List ℤ) :
+    phaseGapSet E ∩ safeSet P ⊆ TournamentH7.GoodSet.goodSet E ∩ safeSet P :=
+  Set.inter_subset_inter_left _ (TournamentH7.GoodSet.phaseGapSet_subset_goodSet E)
+
+/-- Measure form of `phaseGap_witness_subset_goodSet`. -/
+theorem phaseGap_witness_le_goodSet_measure (E P : List ℤ) :
+    (slowμ (phaseGapSet E ∩ safeSet P)).toReal ≤
+      (slowμ (TournamentH7.GoodSet.goodSet E ∩ safeSet P)).toReal :=
+  ENNReal.toReal_mono
+    (measure_ne_top slowμ (TournamentH7.GoodSet.goodSet E ∩ safeSet P))
+    (measure_mono (phaseGap_witness_subset_goodSet E P))
+
 /-- **Witness-floor positivity reduces EXACTLY to the wide bound `p0 ≤ cap`.**
 Given the wide bound `p0(E) ≤ cap_k` (`hwide`) and the duality strictness
 `cap_k < meas(G_P)` (`hdual`, from `cap_k = min_P meas(G_P)`), the concrete witness
@@ -139,6 +152,16 @@ theorem phaseGap_witness_pos_from_strict_cover_bound
   lt_of_lt_of_le (dense_compl_witness_pos_from_strict_cover_bound E P capk hE hwide hdual)
     (dense_compl_witness_le_phaseGap_measure E P)
 
+/-- Strict-cover positivity transferred all the way to the concrete `goodSet`
+witness carrier. -/
+theorem goodSet_witness_pos_from_strict_cover_bound
+    (E P : List ℤ) (capk : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hwide : (slowμ (coverSet E)).toReal < capk)
+    (hdual : capk ≤ (slowμ (safeSet P)).toReal) :
+    0 < (slowμ (TournamentH7.GoodSet.goodSet E ∩ safeSet P)).toReal :=
+  lt_of_lt_of_le (phaseGap_witness_pos_from_strict_cover_bound E P capk hE hwide hdual)
+    (phaseGap_witness_le_goodSet_measure E P)
+
 /-- **Concrete margin version of the witness floor.**  The exact top-level p0
 route needs a quantitative margin, not only positivity: if the wide bound proves
 `p0(E) ≤ cap_k - delta` and the dual cap floor proves `cap_k ≤ meas(G_P)`, then
@@ -167,6 +190,16 @@ theorem phaseGap_witness_margin_from_wide_bound
     delta ≤ (slowμ (phaseGapSet E ∩ safeSet P)).toReal :=
   le_trans (dense_compl_witness_margin_from_wide_bound E P capk delta hE hwide hdual)
     (dense_compl_witness_le_phaseGap_measure E P)
+
+/-- Quantitative margin transferred all the way to the concrete `goodSet`
+witness carrier. -/
+theorem goodSet_witness_margin_from_wide_bound
+    (E P : List ℤ) (capk delta : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hwide : (slowμ (coverSet E)).toReal ≤ capk - delta)
+    (hdual : capk ≤ (slowμ (safeSet P)).toReal) :
+    delta ≤ (slowμ (TournamentH7.GoodSet.goodSet E ∩ safeSet P)).toReal :=
+  le_trans (phaseGap_witness_margin_from_wide_bound E P capk delta hE hwide hdual)
+    (phaseGap_witness_le_goodSet_measure E P)
 
 /-- Positive-margin corollary of `witness_margin_from_wide_bound`. -/
 theorem witness_pos_from_wide_bound_margin (E P : List ℤ) (capk delta : ℝ)
@@ -197,6 +230,16 @@ theorem phaseGap_witness_pos_from_wide_bound_margin
   lt_of_lt_of_le hdelta
     (phaseGap_witness_margin_from_wide_bound E P capk delta hE hwide hdual)
 
+/-- Positive-margin corollary for the concrete `goodSet` witness carrier. -/
+theorem goodSet_witness_pos_from_wide_bound_margin
+    (E P : List ℤ) (capk delta : ℝ) (hE : (0 : ℤ) ∈ E)
+    (hdelta : 0 < delta)
+    (hwide : (slowμ (coverSet E)).toReal ≤ capk - delta)
+    (hdual : capk ≤ (slowμ (safeSet P)).toReal) :
+    0 < (slowμ (TournamentH7.GoodSet.goodSet E ∩ safeSet P)).toReal :=
+  lt_of_lt_of_le hdelta
+    (goodSet_witness_margin_from_wide_bound E P capk delta hE hwide hdual)
+
 /-! ## Axiom audit -/
 
 #print axioms slowμ_compl_toReal
@@ -206,16 +249,21 @@ theorem phaseGap_witness_pos_from_wide_bound_margin
 #print axioms witness_carrier_le_dense_compl_measure
 #print axioms dense_compl_witness_subset_phaseGap
 #print axioms dense_compl_witness_le_phaseGap_measure
+#print axioms phaseGap_witness_subset_goodSet
+#print axioms phaseGap_witness_le_goodSet_measure
 #print axioms witness_pos_from_wide_bound
 #print axioms witness_pos_from_strict_cover_bound
 #print axioms dense_compl_witness_pos_from_strict_cover_bound
 #print axioms phaseGap_witness_pos_from_strict_cover_bound
+#print axioms goodSet_witness_pos_from_strict_cover_bound
 #print axioms witness_margin_from_wide_bound
 #print axioms dense_compl_witness_margin_from_wide_bound
 #print axioms phaseGap_witness_margin_from_wide_bound
+#print axioms goodSet_witness_margin_from_wide_bound
 #print axioms witness_pos_from_wide_bound_margin
 #print axioms dense_compl_witness_pos_from_wide_bound_margin
 #print axioms phaseGap_witness_pos_from_wide_bound_margin
+#print axioms goodSet_witness_pos_from_wide_bound_margin
 
 end DenseCovers
 end LonelyRunner
