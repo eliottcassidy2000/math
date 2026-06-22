@@ -56,6 +56,7 @@ import TournamentH7.LRCDenseCovers
 import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge
+import TournamentH7.LRCWitnessPartA
 import TournamentH7.LRCL7Discrepancy
 
 open Tournament
@@ -321,6 +322,59 @@ theorem lrc_event_measure_bridge_denseCovers_D_le_p0_audit
   LonelyRunner.LRC14.EventMeasureBridge.shape_D_le_p0_denseCovers_handoff
     Eof hanchor nuShape DShape p0Shape hDmeasure hp0measure hDdef
 #print axioms lrc_event_measure_bridge_denseCovers_D_le_p0_audit
+
+/-! ### LRC14 Part-A finite-ruler arc-bound budgets -/
+
+theorem lrc_partA_arc_div_lt_delta_of_le_bound_audit
+    (arcCount arcBound vmax : ℕ) (deltaFloor delta : ℝ)
+    (hvmax : 0 < vmax)
+    (harc : arcCount ≤ arcBound)
+    (hdelta : deltaFloor ≤ delta)
+    (hbudget : (arcBound : ℝ) < deltaFloor * (vmax : ℝ)) :
+    (arcCount : ℝ) / (vmax : ℝ) < delta :=
+  LonelyRunner.LRC14.PartA.arc_div_lt_delta_of_le_bound
+    arcCount arcBound vmax deltaFloor delta hvmax harc hdelta hbudget
+#print axioms lrc_partA_arc_div_lt_delta_of_le_bound_audit
+
+theorem lrc_partA_finite_witness_pos_from_uniform_arc_bound_shapes_audit
+    (finiteRho delta : LonelyRunner.LRC14.Shape → ℝ)
+    (arcCount vmax : LonelyRunner.LRC14.Shape → ℕ)
+    (arcBound : ℕ) (deltaFloor : ℝ)
+    (hfloor : ∀ s, delta s ≤ LonelyRunner.LRC14.witnessG2 s)
+    (hdelta : ∀ s, deltaFloor ≤ delta s)
+    (hvmax : ∀ s, 0 < vmax s)
+    (harc : ∀ s, arcCount s ≤ arcBound)
+    (herror : ∀ s, |finiteRho s - LonelyRunner.LRC14.witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcBound : ℝ) < deltaFloor * (vmax s : ℝ))
+    (s : LonelyRunner.LRC14.Shape) :
+    0 < finiteRho s :=
+  LonelyRunner.LRC14.PartA.finite_witness_pos_from_uniform_arc_bound_shapes
+    finiteRho delta arcCount vmax arcBound deltaFloor
+    hfloor hdelta hvmax harc herror hbudget s
+#print axioms lrc_partA_finite_witness_pos_from_uniform_arc_bound_shapes_audit
+
+theorem lrc_partA_finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes_audit
+    (nuShape measGP p0Shape cap delta finiteRho : LonelyRunner.LRC14.Shape → ℝ)
+    (arcCount vmax : LonelyRunner.LRC14.Shape → ℕ)
+    (arcBound : ℕ) (deltaFloor : ℝ)
+    (hbonf :
+      ∀ s, nuShape s + measGP s - 1 ≤ LonelyRunner.LRC14.witnessG2 s)
+    (hDp0  : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, cap s ≤ measGP s)
+    (hdelta : ∀ s, deltaFloor ≤ delta s)
+    (hvmax : ∀ s, 0 < vmax s)
+    (harc : ∀ s, arcCount s ≤ arcBound)
+    (herror : ∀ s, |finiteRho s - LonelyRunner.LRC14.witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcBound : ℝ) < deltaFloor * (vmax s : ℝ))
+    (s : LonelyRunner.LRC14.Shape) :
+    0 < finiteRho s :=
+  LonelyRunner.LRC14.PartA.finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes
+    nuShape measGP p0Shape cap delta finiteRho arcCount vmax arcBound deltaFloor
+    hbonf hDp0 hp0cap hmeasGP hdelta hvmax harc herror hbudget s
+#print axioms lrc_partA_finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes_audit
 
 /-! ### LRC14 THM-563 period-max certificate kernel -/
 

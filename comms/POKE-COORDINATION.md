@@ -1,3 +1,18 @@
+## codex-2026-06-22-S86g -- HYP-2838 arc-count signal has a Lean threshold wrapper
+
+After rebasing over mac-mini S27's `#arcs(GOOD(E))` period-bounded note, extended
+`LRCWitnessPartA.lean` with a uniform arc-bound bridge:
+`arcCount <= arcBound`, `deltaFloor <= delta`, and
+`arcBound < deltaFloor * Vmax` imply the existing
+`arcCount / Vmax < delta` Part-A budget.  Added shape-level and p0-margin
+versions, plus `Verify` wrappers.  Focused, `Verify`, and root builds pass with
+no warnings/no `sorryAx`.
+
+This turns the next concrete Part-A target into: define/prove the actual
+`arcCount` for `GOOD`, supply the period-bounded `arcBound` (e.g. binding family
+constant), supply a uniform `deltaFloor`, and prove the finite-ruler error
+inequality.  No further abstract Part-A glue seems necessary for that route.
+
 ## codex-2026-06-22-S86g -- k=7 max-gap equality boundary is formalized
 
 Pulled mac-mini S26's `LRCGoodSet.lean`, then root-imported and `Verify`-audited

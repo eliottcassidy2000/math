@@ -66,6 +66,39 @@ theorem finite_witness_pos_from_arc_error_mul
   finite_witness_pos_from_arc_error rhoK rho delta arcCount vmax hfloor herror
     (arc_div_lt_delta_of_lt_mul arcCount vmax delta hvmax hbudget)
 
+/-- Uniform-bound form of the arc budget.  If `arcCount ≤ arcBound`, the margin
+`delta` is at least a positive floor `deltaFloor`, and the finite ruler satisfies
+`arcBound < deltaFloor * Vmax`, then the actual error term is below `delta`. -/
+theorem arc_div_lt_delta_of_le_bound
+    (arcCount arcBound vmax : ℕ) (deltaFloor delta : ℝ) (hvmax : 0 < vmax)
+    (harc : arcCount ≤ arcBound)
+    (hdelta : deltaFloor ≤ delta)
+    (hbudget : (arcBound : ℝ) < deltaFloor * (vmax : ℝ)) :
+    (arcCount : ℝ) / (vmax : ℝ) < delta := by
+  have harcR : (arcCount : ℝ) ≤ (arcBound : ℝ) := by exact_mod_cast harc
+  have hbudget' : (arcCount : ℝ) < deltaFloor * (vmax : ℝ) :=
+    lt_of_le_of_lt harcR hbudget
+  have hdiv : (arcCount : ℝ) / (vmax : ℝ) < deltaFloor :=
+    arc_div_lt_delta_of_lt_mul arcCount vmax deltaFloor hvmax hbudget'
+  exact lt_of_lt_of_le hdiv hdelta
+
+/-- Finite witness positivity from a uniform arc bound and a uniform margin
+floor.  This is the algebraic shape suggested by the period-bounded
+`#arcs(GOOD)` signal: once `Vmax` clears the uniform threshold, the finite
+correction cannot erase the asymptotic witness density. -/
+theorem finite_witness_pos_from_arc_bound
+    (rhoK rho delta deltaFloor : ℝ) (arcCount arcBound vmax : ℕ)
+    (hvmax : 0 < vmax)
+    (hfloor : delta ≤ rho)
+    (hdelta : deltaFloor ≤ delta)
+    (harc : arcCount ≤ arcBound)
+    (herror : |rhoK - rho| ≤ (arcCount : ℝ) / (vmax : ℝ))
+    (hbudget : (arcBound : ℝ) < deltaFloor * (vmax : ℝ)) :
+    0 < rhoK :=
+  finite_witness_pos_from_arc_error rhoK rho delta arcCount vmax hfloor herror
+    (arc_div_lt_delta_of_le_bound arcCount arcBound vmax deltaFloor delta
+      hvmax harc hdelta hbudget)
+
 /-- The p0-wide-bound margin itself lower-bounds `witnessG2`, shape by shape.
 This is the margin version of the HYP-2832 unification, before comparing that
 margin with the conservative global `m_P` floor. -/
@@ -95,6 +128,24 @@ theorem finite_witness_pos_from_floor_shapes
     0 < finiteRho s :=
   finite_witness_pos_from_arc_error (finiteRho s) (witnessG2 s) (delta s)
     (arcCount s) (vmax s) (hfloor s) (herror s) (hbudget s)
+
+/-- Shape-indexed finite witness positivity from a uniform arc bound and a
+uniform positive margin floor. -/
+theorem finite_witness_pos_from_uniform_arc_bound_shapes
+    (finiteRho delta : Shape → ℝ) (arcCount vmax : Shape → ℕ)
+    (arcBound : ℕ) (deltaFloor : ℝ)
+    (hfloor : ∀ s, delta s ≤ witnessG2 s)
+    (hdelta : ∀ s, deltaFloor ≤ delta s)
+    (hvmax : ∀ s, 0 < vmax s)
+    (harc : ∀ s, arcCount s ≤ arcBound)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcBound : ℝ) < deltaFloor * (vmax s : ℝ))
+    (s : Shape) :
+    0 < finiteRho s :=
+  finite_witness_pos_from_arc_bound (finiteRho s) (witnessG2 s) (delta s)
+    deltaFloor (arcCount s) arcBound (vmax s) (hvmax s) (hfloor s)
+    (hdelta s) (harc s) (herror s) (hbudget s)
 
 /-- Shape-indexed finite witness positivity directly from the p0-wide-bound
 margin, `D <= p0`, and the arc-count error budget. -/
@@ -137,6 +188,33 @@ theorem finite_witness_pos_from_p0_margin_shapes_mul
     (finiteRho s) (witnessG2 s) (delta s) (arcCount s) (vmax s)
     (hvmax s) hfloor (herror s) (hbudget s)
 
+/-- Direct p0-margin version with a uniform arc bound and a uniform margin
+floor.  This packages the incoming `#arcs(GOOD)` period-bounded signal as a
+Lean-facing threshold obligation: prove `arcCount s ≤ arcBound`, prove
+`deltaFloor ≤ delta s`, then require only
+`arcBound < deltaFloor * vmax s`. -/
+theorem finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes
+    (nuShape measGP p0Shape cap delta finiteRho : Shape → ℝ)
+    (arcCount vmax : Shape → ℕ) (arcBound : ℕ) (deltaFloor : ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ cap s - delta s)
+    (hmeasGP : ∀ s, cap s ≤ measGP s)
+    (hdelta : ∀ s, deltaFloor ≤ delta s)
+    (hvmax : ∀ s, 0 < vmax s)
+    (harc : ∀ s, arcCount s ≤ arcBound)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcBound : ℝ) < deltaFloor * (vmax s : ℝ))
+    (s : Shape) :
+    0 < finiteRho s := by
+  have hfloor : ∀ s, delta s ≤ witnessG2 s :=
+    p0_margin_le_witnessG2_shapes nuShape measGP p0Shape cap delta
+      hbonf hDp0 hp0cap hmeasGP
+  exact finite_witness_pos_from_uniform_arc_bound_shapes
+    finiteRho delta arcCount vmax arcBound deltaFloor hfloor hdelta hvmax
+    harc herror hbudget s
+
 /-- Conditional LRC14 assembly through a finite-ruler Part-A node.  This is the
 formal shape suggested by the S30 arc-count signal: p0 margin plus a
 `#arcs/Vmax` error budget gives positive finite witness density; a finite
@@ -167,10 +245,14 @@ theorem lrc14_from_finite_partA_p0_margin_shapes
 #print axioms finite_witness_pos_from_arc_error
 #print axioms arc_div_lt_delta_of_lt_mul
 #print axioms finite_witness_pos_from_arc_error_mul
+#print axioms arc_div_lt_delta_of_le_bound
+#print axioms finite_witness_pos_from_arc_bound
 #print axioms p0_margin_le_witnessG2_shapes
 #print axioms finite_witness_pos_from_floor_shapes
+#print axioms finite_witness_pos_from_uniform_arc_bound_shapes
 #print axioms finite_witness_pos_from_p0_margin_shapes
 #print axioms finite_witness_pos_from_p0_margin_shapes_mul
+#print axioms finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes
 #print axioms lrc14_from_finite_partA_p0_margin_shapes
 
 end PartA

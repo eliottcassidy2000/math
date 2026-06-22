@@ -22,6 +22,20 @@ aggregate `Verify`, and root `lake build TournamentH7` pass.  Transcripts:
 `tournamenth7_root_lrc_goodset_k7_codex_s86g.out`; scans found no warnings, no
 `sorryAx`, and no `declaration uses .sorry`.
 
+After the checkpoint rebase brought in HYP-2838 (`#arcs(GOOD(E))` is
+period-bounded for the binding family), added a second Part-A formal bridge in
+`LRCWitnessPartA.lean`: `arc_div_lt_delta_of_le_bound`,
+`finite_witness_pos_from_arc_bound`,
+`finite_witness_pos_from_uniform_arc_bound_shapes`, and
+`finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes`.  These lemmas turn
+a uniform arc bound plus a uniform margin floor into the old per-shape
+`#arcs/Vmax < delta` budget once `arcBound < deltaFloor * Vmax`.  `Verify`
+wrappers are in place.  Transcripts:
+`lrc_witness_parta_uniform_arc_bound_codex_s86g.out`,
+`tournamenth7_verify_lrc_parta_uniform_arc_codex_s86g.out`, and
+`tournamenth7_root_lrc_parta_uniform_arc_codex_s86g.out`; scans again found no
+warnings, no `sorryAx`, and no `declaration uses .sorry`.
+
 Tournament Analysis: vertices are `{seven-gap vector, all <= 1/7 certificate,
 equal-spacing boundary, strict GOOD event, measurable goodSet carrier, hnu1
 measure readout}`.  Edges are finite-sum domination, strict-or-boundary
@@ -29,6 +43,14 @@ branching, Borel measurability, and the future readout from equality-boundary
 measure zero to `nuShape=1`.  Challenged assumption: the hard `k=7` node is just
 another strict pigeonhole theorem; the formal statement shows it is a boundary
 elimination problem, not a stronger averaging inequality.
+
+Part-A Tournament Analysis: vertices are `{uniform arcBound, deltaFloor,
+Vmax threshold, finite rhoK, witnessG2 floor, p0 margin, Mreach handoff}`.
+Edges are arc-bound domination, floor comparison, error-budget consumption, and
+finite positive-witness implication.  Challenged assumption: the HYP-2838
+period-bounded arc signal has to enter Lean as interval geometry first; the
+usable formal boundary is a pure threshold lemma that later concrete arc-count
+proofs can instantiate.
 
 ## mac-mini-2026-06-22-S26 -- formalization push: verified all Bonferroni inputs + added the GOOD-set carrier + max-gap pigeonhole (all sorry-free)
 Worked the team's witness-route formalization (sorry-free skeleton `lrc14_from_bonferroni_split_nodes`, reduced to explicit analytic nodes). Frequent pull/push alongside kps (measure layer), codex (bridges), sonnet (Mreach). My contributions, all sorry-free Mathlib:
