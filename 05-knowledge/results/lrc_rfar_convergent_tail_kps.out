@@ -1,0 +1,29 @@
+r-far total contribution T_r (base + 5 far); check geometric decrease => convergent tail:
+
+ base=[0, 1, 2, 3, 4] far=[20, 21, 22, 23, 24]: p0(full)=0.2934 = sum T_r = 0.2934
+   T_1 (1-far) = +0.00000   ratio T_r/T_(r-1) = nan
+   T_2 (2-far) = +0.23470   ratio T_r/T_(r-1) = nan
+   T_3 (3-far) = +0.12058   ratio T_r/T_(r-1) = 0.514
+   T_4 (4-far) = -0.07195   ratio T_r/T_(r-1) = -0.597
+   T_5 (5-far) = +0.01012   ratio T_r/T_(r-1) = -0.141
+   2-far DOMINATES? True;  tail T_3+T_4+T_5 = +0.05874 (20% of full)
+
+ base=[0, 1, 2, 3, 4, 5] far=[30, 31, 32, 33, 34]: p0(full)=0.3819 = sum T_r = 0.3819
+   T_1 (1-far) = +0.18773   ratio T_r/T_(r-1) = nan
+   T_2 (2-far) = +0.20302   ratio T_r/T_(r-1) = 1.081
+   T_3 (3-far) = +0.03358   ratio T_r/T_(r-1) = 0.165
+   T_4 (4-far) = -0.05048   ratio T_r/T_(r-1) = -1.503
+   T_5 (5-far) = +0.00804   ratio T_r/T_(r-1) = -0.159
+   2-far DOMINATES? True;  tail T_3+T_4+T_5 = -0.00885 (-2% of full)
+
+ base=[0, 2, 4, 6, 8] far=[25, 27, 29, 31, 33]: p0(full)=0.3129 = sum T_r = 0.3129
+   T_1 (1-far) = +0.00000   ratio T_r/T_(r-1) = nan
+   T_2 (2-far) = +0.25937   ratio T_r/T_(r-1) = nan
+   T_3 (3-far) = +0.11303   ratio T_r/T_(r-1) = 0.436
+   T_4 (4-far) = -0.06681   ratio T_r/T_(r-1) = -0.591
+   T_5 (5-far) = +0.00731   ratio T_r/T_(r-1) = -0.109
+   2-far DOMINATES? True;  tail T_3+T_4+T_5 = +0.05354 (17% of full)
+
+=> 1-far=0 (single far useless); 2-far = BINDING doublet (Eisenstein A&B edge); T_r decreases
+   => wide cover = doublet (closed) + convergent geometric tail. The Venn containment center<=edge
+   is WHY the higher-far tail converges -- the repo's THM-557/Dedekind-ladder, structurally.
