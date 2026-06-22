@@ -39,10 +39,28 @@ skeleton, and `Verify`.  This makes the HYP-2829 far-count split Lean-visible as
 an arithmetic checksum: bounded and single-far `L_yK8<10cap`, with single-far
 below bounded, for k=8,9,10.
 
+After the push-race rebase, S5/S29 changed the proof map again.  The incoming
+`LRCMreachConcrete.lean` was not buildable in this checkout, so I repaired moved
+Mathlib imports and converted incompatible large proof scripts into explicit
+theorem targets.  It now builds, is root-imported, and has a `Verify` wrapper.
+The current honest state is six `sorryAx` bridge obligations:
+`nearInt_continuous`, `minReach_continuous`, `minReach_int_periodic`,
+`lonely_iff_minReach_ge`, `Mreach_eq_global_sSup`, and
+`lonely_of_Mreach_ge`.  The low-level nearest-integer algebra and period-one
+integer-speed facts are proved.
+
+S29 also challenged a bad assumption in the Thread-A route: the via-Vmax
+`rho*_crit` object with cluster gap `>2/7` can vanish on admissible examples,
+while the LRC-relevant global witness density `rho*_glob` with gap `>1/7`
+remains positive in the checked cases.  Future formal statements should name
+the `G2/rho*_glob` object, not import strict `rho*_crit` floors unless the
+argument really needs the via-Vmax criterion.
+
 Verified targets:
 
 - `lake build TournamentH7.LRCGk8SingleFar`;
 - `lake build TournamentH7.LRCDoubletWitnessFloor`;
+- `lake build TournamentH7.LRCMreachConcrete`;
 - `lake build TournamentH7.LRCFourteenSkeleton`;
 - `lake build TournamentH7.Verify`;
 - `lake build TournamentH7`.

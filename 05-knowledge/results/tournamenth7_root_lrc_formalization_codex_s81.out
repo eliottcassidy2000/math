@@ -1,18 +1,18 @@
-⚠ [2981/3003] Replayed TournamentH7.BasePathSink
+⚠ [2984/3006] Replayed TournamentH7.BasePathSink
 warning: TournamentH7/BasePathSink.lean:43:53: unused variable `hn`
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
 warning: TournamentH7/BasePathSink.lean:159:56: unused variable `hbp`
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [2982/3003] Replayed TournamentH7.TransitiveH
+⚠ [2985/3006] Replayed TournamentH7.TransitiveH
 warning: TournamentH7/TransitiveH.lean:23:21: unused variable `hn`
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
 warning: TournamentH7/TransitiveH.lean:79:46: unused variable `hn`
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-ℹ [2986/3003] Replayed TournamentH7.LonelyRunner
+ℹ [2991/3006] Replayed TournamentH7.LonelyRunner
 info: TournamentH7/LonelyRunner.lean:446:0: 'LonelyRunner.sieve_frac' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: TournamentH7/LonelyRunner.lean:447:0: 'LonelyRunner.lonely_iff_observerTieFree' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: TournamentH7/LonelyRunner.lean:448:0: 'LonelyRunner.sieve_one_div' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -37,7 +37,7 @@ info: TournamentH7/LonelyRunner.lean:466:0: 'LonelyRunner.three_term_translation
 info: TournamentH7/LonelyRunner.lean:467:0: 'LonelyRunner.three_term_not_translation_invariant' depends on axioms: [propext, Quot.sound]
 info: TournamentH7/LonelyRunner.lean:468:0: 'LonelyRunner.relation_inherits' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: TournamentH7/LonelyRunner.lean:469:0: 'LonelyRunner.pinch_pair_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [2987/3003] Replayed TournamentH7.LRCDeathChain
+ℹ [2992/3006] Replayed TournamentH7.LRCDeathChain
 info: TournamentH7/LRCDeathChain.lean:94:0: 'LonelyRunner.liveDepth_mono' depends on axioms: [propext, Quot.sound]
 info: TournamentH7/LRCDeathChain.lean:95:0: 'LonelyRunner.cover_oneFar_live_iff' depends on axioms: [propext,
  cover_oneFar_live_iff._native.native_decide.ax_1_1,
@@ -80,7 +80,7 @@ info: TournamentH7/LRCDeathChain.lean:99:0: 'LonelyRunner.survival_fourFar_live_
  survival_fourFar_live_iff._native.native_decide.ax_1_6,
  survival_fourFar_live_iff._native.native_decide.ax_1_7]
 info: TournamentH7/LRCDeathChain.lean:100:0: 'LonelyRunner.survival_twoFar_middle_silent' depends on axioms: [survival_twoFar_middle_silent._native.native_decide.ax_1_1]
-ℹ [2988/3003] Replayed TournamentH7.LRCFactorialAtom
+ℹ [2993/3006] Replayed TournamentH7.LRCFactorialAtom
 info: TournamentH7/LRCFactorialAtom.lean:591:0: 'LonelyRunner.FactorialAtom.basis_moment_delta' depends on axioms: [basis_moment_delta._native.native_decide.ax_1_1]
 info: TournamentH7/LRCFactorialAtom.lean:592:0: 'LonelyRunner.FactorialAtom.originCoeff_delta' depends on axioms: [originCoeff_delta._native.native_decide.ax_1_1]
 info: TournamentH7/LRCFactorialAtom.lean:593:0: 'LonelyRunner.FactorialAtom.basis_q0_sign' depends on axioms: [basis_q0_sign._native.native_decide.ax_1_1]
@@ -127,14 +127,14 @@ info: TournamentH7/LRCFactorialAtom.lean:628:0: 'LonelyRunner.FactorialAtom.capC
 info: TournamentH7/LRCFactorialAtom.lean:629:0: 'LonelyRunner.FactorialAtom.cheapScaled_outside_tailStrip_bool' depends on axioms: [cheapScaled_outside_tailStrip_bool._native.native_decide.ax_1_1]
 info: TournamentH7/LRCFactorialAtom.lean:630:0: 'LonelyRunner.FactorialAtom.tailStrip_constants_order' depends on axioms: [tailStrip_constants_order._native.native_decide.ax_1_1]
 info: TournamentH7/LRCFactorialAtom.lean:631:0: 'LonelyRunner.FactorialAtom.cheapScaled_tailStripSide' depends on axioms: [cheapScaled_tailStripSide._native.native_decide.ax_1_1]
-ℹ [2989/3003] Replayed TournamentH7.LRCBooleanTypeCut
+ℹ [2994/3006] Replayed TournamentH7.LRCBooleanTypeCut
 info: TournamentH7/LRCBooleanTypeCut.lean:119:0: 'LonelyRunner.BooleanTypeCut.optimalCoeff_sum' depends on axioms: [optimalCoeff_sum._native.native_decide.ax_1_1]
 info: TournamentH7/LRCBooleanTypeCut.lean:120:0: 'LonelyRunner.BooleanTypeCut.compactCoeff_sum' depends on axioms: [compactCoeff_sum._native.native_decide.ax_1_1]
 info: TournamentH7/LRCBooleanTypeCut.lean:121:0: 'LonelyRunner.BooleanTypeCut.optimal_active_rows_equal' depends on axioms: [optimal_active_rows_equal._native.native_decide.ax_1_1]
 info: TournamentH7/LRCBooleanTypeCut.lean:122:0: 'LonelyRunner.BooleanTypeCut.compact_active_rows_above' depends on axioms: [compact_active_rows_above._native.native_decide.ax_1_1]
 info: TournamentH7/LRCBooleanTypeCut.lean:123:0: 'LonelyRunner.BooleanTypeCut.compact_active2_equal' depends on axioms: [compact_active2_equal._native.native_decide.ax_1_1]
 info: TournamentH7/LRCBooleanTypeCut.lean:124:0: 'LonelyRunner.BooleanTypeCut.margins_positive' depends on axioms: [margins_positive._native.native_decide.ax_1_1]
-ℹ [2990/3003] Replayed TournamentH7.LRCPeriodmaxCertificate
+ℹ [2995/3006] Replayed TournamentH7.LRCPeriodmaxCertificate
 info: TournamentH7/LRCPeriodmaxCertificate.lean:166:0: 'LonelyRunner.PeriodmaxCertificate.k8_headroom_positive' depends on axioms: [k8_headroom_positive._native.native_decide.ax_1_1]
 info: TournamentH7/LRCPeriodmaxCertificate.lean:167:0: 'LonelyRunner.PeriodmaxCertificate.k9_headroom_positive' depends on axioms: [k9_headroom_positive._native.native_decide.ax_1_1]
 info: TournamentH7/LRCPeriodmaxCertificate.lean:168:0: 'LonelyRunner.PeriodmaxCertificate.k10_headroom_positive' depends on axioms: [k10_headroom_positive._native.native_decide.ax_1_1]
@@ -146,18 +146,18 @@ info: TournamentH7/LRCPeriodmaxCertificate.lean:173:0: 'LonelyRunner.PeriodmaxCe
 info: TournamentH7/LRCPeriodmaxCertificate.lean:174:0: 'LonelyRunner.PeriodmaxCertificate.count_totals' depends on axioms: [count_totals._native.native_decide.ax_1_1]
 info: TournamentH7/LRCPeriodmaxCertificate.lean:175:0: 'LonelyRunner.PeriodmaxCertificate.every_count_row_passes' depends on axioms: [every_count_row_passes._native.native_decide.ax_1_1]
 info: TournamentH7/LRCPeriodmaxCertificate.lean:176:0: 'LonelyRunner.PeriodmaxCertificate.k8_periodmax_is_two' depends on axioms: [k8_periodmax_is_two._native.native_decide.ax_1_1]
-ℹ [2991/3003] Replayed TournamentH7.LRCGenuineWideCorrection
+ℹ [2996/3006] Replayed TournamentH7.LRCGenuineWideCorrection
 info: TournamentH7/LRCGenuineWideCorrection.lean:102:0: 'LonelyRunner.GenuineWideCorrection.all_reported_rows_below_cap' depends on axioms: [all_reported_rows_below_cap._native.native_decide.ax_1_1]
 info: TournamentH7/LRCGenuineWideCorrection.lean:103:0: 'LonelyRunner.GenuineWideCorrection.k10_is_smallest_reported_margin' depends on axioms: [k10_is_smallest_reported_margin._native.native_decide.ax_1_1]
 info: TournamentH7/LRCGenuineWideCorrection.lean:104:0: 'LonelyRunner.GenuineWideCorrection.robust_margin_flags' depends on axioms: [robust_margin_flags._native.native_decide.ax_1_1]
 info: TournamentH7/LRCGenuineWideCorrection.lean:105:0: 'LonelyRunner.GenuineWideCorrection.nonprimitive_base_guardrail' depends on axioms: [nonprimitive_base_guardrail._native.native_decide.ax_1_1]
-ℹ [2992/3003] Replayed TournamentH7.LRCQ6Contraction
+ℹ [2997/3006] Replayed TournamentH7.LRCQ6Contraction
 info: TournamentH7/LRCQ6Contraction.lean:52:0: 'LonelyRunner.Q6Contraction.consecK9_bound_exact' depends on axioms: [consecK9_bound_exact._native.native_decide.ax_1_1]
 info: TournamentH7/LRCQ6Contraction.lean:53:0: 'LonelyRunner.Q6Contraction.consecK10_bound_exact' depends on axioms: [consecK10_bound_exact._native.native_decide.ax_1_1]
 info: TournamentH7/LRCQ6Contraction.lean:54:0: 'LonelyRunner.Q6Contraction.consecK9_strict_contraction' depends on axioms: [consecK9_strict_contraction._native.native_decide.ax_1_1]
 info: TournamentH7/LRCQ6Contraction.lean:55:0: 'LonelyRunner.Q6Contraction.consecK10_strict_contraction' depends on axioms: [consecK10_strict_contraction._native.native_decide.ax_1_1]
 info: TournamentH7/LRCQ6Contraction.lean:56:0: 'LonelyRunner.Q6Contraction.generalScout_strict_contraction' depends on axioms: [generalScout_strict_contraction._native.native_decide.ax_1_1]
-ℹ [2993/3003] Replayed TournamentH7.LRCGk8SingleFar
+ℹ [2998/3006] Replayed TournamentH7.LRCGk8SingleFar
 info: TournamentH7/LRCGk8SingleFar.lean:87:0: 'LonelyRunner.Gk8SingleFar.all_binding_checks' depends on axioms: [bounded_k10_below_cap._native.native_decide.ax_1_1,
  bounded_k8_below_cap._native.native_decide.ax_1_1,
  bounded_k9_below_cap._native.native_decide.ax_1_1,
@@ -167,7 +167,7 @@ info: TournamentH7/LRCGk8SingleFar.lean:87:0: 'LonelyRunner.Gk8SingleFar.all_bin
  singlefar_k8_below_cap._native.native_decide.ax_1_1,
  singlefar_k9_below_bounded._native.native_decide.ax_1_1,
  singlefar_k9_below_cap._native.native_decide.ax_1_1]
-ℹ [2994/3003] Replayed TournamentH7.LRCDoubletWitnessFloor
+ℹ [2999/3006] Replayed TournamentH7.LRCDoubletWitnessFloor
 info: TournamentH7/LRCDoubletWitnessFloor.lean:79:0: 'LonelyRunner.DoubletWitnessFloor.rhoFloor_positive' depends on axioms: [rhoFloor_positive._native.native_decide.ax_1_1]
 info: TournamentH7/LRCDoubletWitnessFloor.lean:80:0: 'LonelyRunner.DoubletWitnessFloor.witnessFloor_positive' depends on axioms: [witnessFloor_positive._native.native_decide.ax_1_1]
 info: TournamentH7/LRCDoubletWitnessFloor.lean:81:0: 'LonelyRunner.DoubletWitnessFloor.rhoFloor_above_consecRhoFloor' depends on axioms: [rhoFloor_above_consecRhoFloor._native.native_decide.ax_1_1]
@@ -178,17 +178,30 @@ info: TournamentH7/LRCDoubletWitnessFloor.lean:84:0: 'LonelyRunner.DoubletWitnes
  witnessFloor_above_rhoFloor._native.native_decide.ax_1_1,
  witnessFloor_above_thm530Floor._native.native_decide.ax_1_1,
  witnessFloor_positive._native.native_decide.ax_1_1]
-ℹ [2997/3003] Replayed TournamentH7.Verify
-info: TournamentH7/Verify.lean:63:0: 'lrc_genuine_wide_correction_all_reported_rows_below_cap_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.all_reported_rows_below_cap._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:77:0: 'lrc_genuine_wide_correction_k10_smallest_margin_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.k10_is_smallest_reported_margin._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:91:0: 'lrc_genuine_wide_correction_robust_margin_flags_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.robust_margin_flags._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:97:0: 'lrc_genuine_wide_correction_nonprimitive_base_guardrail_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.nonprimitive_base_guardrail._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:117:0: 'lrc_doublet_witness_floor_positive_and_separated_audit' depends on axioms: [LonelyRunner.DoubletWitnessFloor.rhoFloor_above_consecRhoFloor._native.native_decide.ax_1_1,
+⚠ [3002/3006] Replayed TournamentH7.LRCMreachConcrete
+warning: TournamentH7/LRCMreachConcrete.lean:88:8: declaration uses `sorry`
+warning: TournamentH7/LRCMreachConcrete.lean:98:8: declaration uses `sorry`
+warning: TournamentH7/LRCMreachConcrete.lean:110:6: declaration uses `sorry`
+warning: TournamentH7/LRCMreachConcrete.lean:115:8: declaration uses `sorry`
+warning: TournamentH7/LRCMreachConcrete.lean:129:8: declaration uses `sorry`
+warning: TournamentH7/LRCMreachConcrete.lean:142:8: declaration uses `sorry`
+info: TournamentH7/LRCMreachConcrete.lean:171:0: 'LonelyRunner.LRC14Concrete.nearInt_continuous' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:172:0: 'LonelyRunner.LRC14Concrete.minReach_continuous' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:173:0: 'LonelyRunner.LRC14Concrete.minReach_int_periodic' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:174:0: 'LonelyRunner.LRC14Concrete.lonely_iff_minReach_ge' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:175:0: 'LonelyRunner.LRC14Concrete.Mreach_eq_global_sSup' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/LRCMreachConcrete.lean:176:0: 'LonelyRunner.LRC14Concrete.lonely_of_Mreach_ge' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+ℹ [3004/3006] Replayed TournamentH7.Verify
+info: TournamentH7/Verify.lean:64:0: 'lrc_genuine_wide_correction_all_reported_rows_below_cap_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.all_reported_rows_below_cap._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:78:0: 'lrc_genuine_wide_correction_k10_smallest_margin_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.k10_is_smallest_reported_margin._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:92:0: 'lrc_genuine_wide_correction_robust_margin_flags_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.robust_margin_flags._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:98:0: 'lrc_genuine_wide_correction_nonprimitive_base_guardrail_audit' depends on axioms: [LonelyRunner.GenuineWideCorrection.nonprimitive_base_guardrail._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:118:0: 'lrc_doublet_witness_floor_positive_and_separated_audit' depends on axioms: [LonelyRunner.DoubletWitnessFloor.rhoFloor_above_consecRhoFloor._native.native_decide.ax_1_1,
  LonelyRunner.DoubletWitnessFloor.rhoFloor_positive._native.native_decide.ax_1_1,
  LonelyRunner.DoubletWitnessFloor.witnessFloor_above_rhoFloor._native.native_decide.ax_1_1,
  LonelyRunner.DoubletWitnessFloor.witnessFloor_above_thm530Floor._native.native_decide.ax_1_1,
  LonelyRunner.DoubletWitnessFloor.witnessFloor_positive._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:132:0: 'lrc_gk8_singlefar_binding_checks_audit' depends on axioms: [LonelyRunner.Gk8SingleFar.bounded_k10_below_cap._native.native_decide.ax_1_1,
+info: TournamentH7/Verify.lean:133:0: 'lrc_gk8_singlefar_binding_checks_audit' depends on axioms: [LonelyRunner.Gk8SingleFar.bounded_k10_below_cap._native.native_decide.ax_1_1,
  LonelyRunner.Gk8SingleFar.bounded_k8_below_cap._native.native_decide.ax_1_1,
  LonelyRunner.Gk8SingleFar.bounded_k9_below_cap._native.native_decide.ax_1_1,
  LonelyRunner.Gk8SingleFar.singlefar_k10_below_bounded._native.native_decide.ax_1_1,
@@ -197,63 +210,64 @@ info: TournamentH7/Verify.lean:132:0: 'lrc_gk8_singlefar_binding_checks_audit' d
  LonelyRunner.Gk8SingleFar.singlefar_k8_below_cap._native.native_decide.ax_1_1,
  LonelyRunner.Gk8SingleFar.singlefar_k9_below_bounded._native.native_decide.ax_1_1,
  LonelyRunner.Gk8SingleFar.singlefar_k9_below_cap._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:141:0: 'lrc_periodmax_all_worst_rows_headroom_positive_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.all_worst_rows_headroom_positive._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:157:0: 'lrc_periodmax_k9_global_worst_among_worst_rows_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.k9_is_global_worst_among_worst_rows._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:167:0: 'lrc_periodmax_count_totals_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.count_totals._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:176:0: 'lrc_periodmax_every_count_row_passes_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.every_count_row_passes._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:182:0: 'lrc_periodmax_k8_periodmax_is_two_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.k8_periodmax_is_two._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:189:0: 'lrc_boolean_type_cut_optimalCoeff_sum_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.optimalCoeff_sum._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:194:0: 'lrc_boolean_type_cut_compactCoeff_sum_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.compactCoeff_sum._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:204:0: 'lrc_boolean_type_cut_optimal_active_rows_equal_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.optimal_active_rows_equal._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:214:0: 'lrc_boolean_type_cut_compact_active_rows_above_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.compact_active_rows_above._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:223:0: 'lrc_boolean_type_cut_compact_active2_equal_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.compact_active2_equal._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:231:0: 'lrc_boolean_type_cut_margins_positive_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.margins_positive._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:239:0: 'lrc_l7_cell_apex_necessity_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:246:0: 'lrc_l7_matrix_apex_necessity_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:251:0: 'lrc_l7_c32_disc_audit' depends on axioms: [propext, LonelyRunner.L7Discrepancy.c32_disc._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:256:0: 'lrc_l7_c87_disc_zero_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:142:0: 'lrc_concrete_lonely_of_mreach_ge_audit' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:151:0: 'lrc_periodmax_all_worst_rows_headroom_positive_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.all_worst_rows_headroom_positive._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:167:0: 'lrc_periodmax_k9_global_worst_among_worst_rows_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.k9_is_global_worst_among_worst_rows._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:177:0: 'lrc_periodmax_count_totals_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.count_totals._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:186:0: 'lrc_periodmax_every_count_row_passes_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.every_count_row_passes._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:192:0: 'lrc_periodmax_k8_periodmax_is_two_audit' depends on axioms: [LonelyRunner.PeriodmaxCertificate.k8_periodmax_is_two._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:199:0: 'lrc_boolean_type_cut_optimalCoeff_sum_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.optimalCoeff_sum._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:204:0: 'lrc_boolean_type_cut_compactCoeff_sum_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.compactCoeff_sum._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:214:0: 'lrc_boolean_type_cut_optimal_active_rows_equal_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.optimal_active_rows_equal._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:224:0: 'lrc_boolean_type_cut_compact_active_rows_above_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.compact_active_rows_above._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:233:0: 'lrc_boolean_type_cut_compact_active2_equal_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.compact_active2_equal._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:241:0: 'lrc_boolean_type_cut_margins_positive_audit' depends on axioms: [LonelyRunner.BooleanTypeCut.margins_positive._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:249:0: 'lrc_l7_cell_apex_necessity_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:256:0: 'lrc_l7_matrix_apex_necessity_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:261:0: 'lrc_l7_c32_disc_audit' depends on axioms: [propext, LonelyRunner.L7Discrepancy.c32_disc._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:266:0: 'lrc_l7_c87_disc_zero_audit' depends on axioms: [propext,
  LonelyRunner.L7Discrepancy.c87_disc_zero._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:261:0: 'lrc_l7_c21_disc_audit' depends on axioms: [propext, LonelyRunner.L7Discrepancy.c21_disc._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:266:0: 'lrc_l7_c32_rowSums_audit' depends on axioms: [propext]
-info: TournamentH7/Verify.lean:271:0: 'lrc_l7_c32_colSums_audit' depends on axioms: [propext]
-info: TournamentH7/Verify.lean:280:0: 'lrc_factorial_basis_moment_delta_audit' depends on axioms: [LonelyRunner.FactorialAtom.basis_moment_delta._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:286:0: 'lrc_factorial_originCoeff_delta_audit' depends on axioms: [LonelyRunner.FactorialAtom.originCoeff_delta._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:293:0: 'lrc_factorial_basis_q0_sign_audit' depends on axioms: [LonelyRunner.FactorialAtom.basis_q0_sign._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:300:0: 'lrc_factorial_U4_basis_audit' depends on axioms: [LonelyRunner.FactorialAtom.U4_basis._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:307:0: 'lrc_factorial_low12_basis_audit' depends on axioms: [LonelyRunner.FactorialAtom.low12_basis._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:314:0: 'lrc_factorial_cheapScaled_q0_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_q0._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:321:0: 'lrc_factorial_cheapScaled_tail45_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_tail45._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:329:0: 'lrc_factorial_cheapScaled_outside_tailStrip_bool_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_outside_tailStrip_bool._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:335:0: 'lrc_factorial_tailStrip_constants_order_audit' depends on axioms: [LonelyRunner.FactorialAtom.tailStrip_constants_order._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:344:0: 'lrc_factorial_cheapScaled_tailStripSide_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_tailStripSide._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:352:0: 'lrc_factorial_gK8_values_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK8_values._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:358:0: 'lrc_factorial_gK8_dominates_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK8_dominates._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:364:0: 'lrc_factorial_LyK8_readout_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:371:0: 'lrc_factorial_LyK8_extremeMass_readout_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:382:0: 'lrc_factorial_LyK8_moment_form_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:394:0: 'lrc_factorial_LyK8_probability_moment_form_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:405:0: 'lrc_factorial_LyK8_moment_extremeMass_identity_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:412:0: 'lrc_factorial_delsarte_bound_k8_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:419:0: 'lrc_factorial_LyK9_readout_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:427:0: 'lrc_factorial_gK9_values_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK9_values._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:433:0: 'lrc_factorial_gK9_dominates_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK9_dominates._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:440:0: 'lrc_factorial_delsarte_bound_k9_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:447:0: 'lrc_factorial_LyK11_readout_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:456:0: 'lrc_factorial_gK11_values_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK11_values._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:462:0: 'lrc_factorial_gK11_dominates_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK11_dominates._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:469:0: 'lrc_factorial_delsarte_bound_k11_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:479:0: 'lrc_factorial_gK8_all_binding_rows_audit' depends on axioms: [LonelyRunner.FactorialAtom.capClear_k10._native.native_decide.ax_1_1,
+info: TournamentH7/Verify.lean:271:0: 'lrc_l7_c21_disc_audit' depends on axioms: [propext, LonelyRunner.L7Discrepancy.c21_disc._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:276:0: 'lrc_l7_c32_rowSums_audit' depends on axioms: [propext]
+info: TournamentH7/Verify.lean:281:0: 'lrc_l7_c32_colSums_audit' depends on axioms: [propext]
+info: TournamentH7/Verify.lean:290:0: 'lrc_factorial_basis_moment_delta_audit' depends on axioms: [LonelyRunner.FactorialAtom.basis_moment_delta._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:296:0: 'lrc_factorial_originCoeff_delta_audit' depends on axioms: [LonelyRunner.FactorialAtom.originCoeff_delta._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:303:0: 'lrc_factorial_basis_q0_sign_audit' depends on axioms: [LonelyRunner.FactorialAtom.basis_q0_sign._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:310:0: 'lrc_factorial_U4_basis_audit' depends on axioms: [LonelyRunner.FactorialAtom.U4_basis._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:317:0: 'lrc_factorial_low12_basis_audit' depends on axioms: [LonelyRunner.FactorialAtom.low12_basis._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:324:0: 'lrc_factorial_cheapScaled_q0_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_q0._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:331:0: 'lrc_factorial_cheapScaled_tail45_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_tail45._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:339:0: 'lrc_factorial_cheapScaled_outside_tailStrip_bool_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_outside_tailStrip_bool._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:345:0: 'lrc_factorial_tailStrip_constants_order_audit' depends on axioms: [LonelyRunner.FactorialAtom.tailStrip_constants_order._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:354:0: 'lrc_factorial_cheapScaled_tailStripSide_audit' depends on axioms: [LonelyRunner.FactorialAtom.cheapScaled_tailStripSide._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:362:0: 'lrc_factorial_gK8_values_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK8_values._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:368:0: 'lrc_factorial_gK8_dominates_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK8_dominates._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:374:0: 'lrc_factorial_LyK8_readout_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:381:0: 'lrc_factorial_LyK8_extremeMass_readout_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:392:0: 'lrc_factorial_LyK8_moment_form_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:404:0: 'lrc_factorial_LyK8_probability_moment_form_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:415:0: 'lrc_factorial_LyK8_moment_extremeMass_identity_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:422:0: 'lrc_factorial_delsarte_bound_k8_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:429:0: 'lrc_factorial_LyK9_readout_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:437:0: 'lrc_factorial_gK9_values_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK9_values._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:443:0: 'lrc_factorial_gK9_dominates_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK9_dominates._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:450:0: 'lrc_factorial_delsarte_bound_k9_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:457:0: 'lrc_factorial_LyK11_readout_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:466:0: 'lrc_factorial_gK11_values_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK11_values._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:472:0: 'lrc_factorial_gK11_dominates_audit' depends on axioms: [LonelyRunner.FactorialAtom.gK11_dominates._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:479:0: 'lrc_factorial_delsarte_bound_k11_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:489:0: 'lrc_factorial_gK8_all_binding_rows_audit' depends on axioms: [LonelyRunner.FactorialAtom.capClear_k10._native.native_decide.ax_1_1,
  LonelyRunner.FactorialAtom.capClear_k11_sharp._native.native_decide.ax_1_1,
  LonelyRunner.FactorialAtom.capClear_k12._native.native_decide.ax_1_1,
  LonelyRunner.FactorialAtom.capClear_k13_sharp._native.native_decide.ax_1_1,
  LonelyRunner.FactorialAtom.capClear_k8._native.native_decide.ax_1_1,
  LonelyRunner.FactorialAtom.capClear_k9_sharp._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:487:0: 'lrc_q6_consecK9_bound_exact_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK9_bound_exact._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:493:0: 'lrc_q6_consecK10_bound_exact_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK10_bound_exact._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:497:0: 'lrc_q6_consecK9_strict_contraction_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK9_strict_contraction._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:501:0: 'lrc_q6_consecK10_strict_contraction_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK10_strict_contraction._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:505:0: 'lrc_q6_generalScout_strict_contraction_audit' depends on axioms: [LonelyRunner.Q6Contraction.generalScout_strict_contraction._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:512:0: 'lrc_cover_oneFar_live_iff_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:497:0: 'lrc_q6_consecK9_bound_exact_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK9_bound_exact._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:503:0: 'lrc_q6_consecK10_bound_exact_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK10_bound_exact._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:507:0: 'lrc_q6_consecK9_strict_contraction_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK9_strict_contraction._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:511:0: 'lrc_q6_consecK10_strict_contraction_audit' depends on axioms: [LonelyRunner.Q6Contraction.consecK10_strict_contraction._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:515:0: 'lrc_q6_generalScout_strict_contraction_audit' depends on axioms: [LonelyRunner.Q6Contraction.generalScout_strict_contraction._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:522:0: 'lrc_cover_oneFar_live_iff_audit' depends on axioms: [propext,
  LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_1,
  LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_2,
  LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_3,
@@ -261,7 +275,7 @@ info: TournamentH7/Verify.lean:512:0: 'lrc_cover_oneFar_live_iff_audit' depends 
  LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_5,
  LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_6,
  LonelyRunner.cover_oneFar_live_iff._native.native_decide.ax_1_7]
-info: TournamentH7/Verify.lean:518:0: 'lrc_survival_oneFar_live_iff_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:528:0: 'lrc_survival_oneFar_live_iff_audit' depends on axioms: [propext,
  LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_1,
  LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_2,
  LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_3,
@@ -269,7 +283,7 @@ info: TournamentH7/Verify.lean:518:0: 'lrc_survival_oneFar_live_iff_audit' depen
  LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_5,
  LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_6,
  LonelyRunner.survival_oneFar_live_iff._native.native_decide.ax_1_7]
-info: TournamentH7/Verify.lean:524:0: 'lrc_survival_twoFar_live_iff_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:534:0: 'lrc_survival_twoFar_live_iff_audit' depends on axioms: [propext,
  LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_1,
  LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_2,
  LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_3,
@@ -277,7 +291,7 @@ info: TournamentH7/Verify.lean:524:0: 'lrc_survival_twoFar_live_iff_audit' depen
  LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_5,
  LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_6,
  LonelyRunner.survival_twoFar_live_iff._native.native_decide.ax_1_7]
-info: TournamentH7/Verify.lean:530:0: 'lrc_survival_threeFar_live_iff_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:540:0: 'lrc_survival_threeFar_live_iff_audit' depends on axioms: [propext,
  LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_1,
  LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_2,
  LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_3,
@@ -285,7 +299,7 @@ info: TournamentH7/Verify.lean:530:0: 'lrc_survival_threeFar_live_iff_audit' dep
  LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_5,
  LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_6,
  LonelyRunner.survival_threeFar_live_iff._native.native_decide.ax_1_7]
-info: TournamentH7/Verify.lean:535:0: 'lrc_survival_fourFar_live_iff_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:545:0: 'lrc_survival_fourFar_live_iff_audit' depends on axioms: [propext,
  LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_1,
  LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_2,
  LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_3,
@@ -293,31 +307,31 @@ info: TournamentH7/Verify.lean:535:0: 'lrc_survival_fourFar_live_iff_audit' depe
  LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_5,
  LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_6,
  LonelyRunner.survival_fourFar_live_iff._native.native_decide.ax_1_7]
-info: TournamentH7/Verify.lean:541:0: 'lrc_survival_twoFar_middle_silent_audit' depends on axioms: [LonelyRunner.survival_twoFar_middle_silent._native.native_decide.ax_1_1]
-info: TournamentH7/Verify.lean:549:0: 'product_sum_iff_core_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:555:0: 'pad_core_product_sum_audit' depends on axioms: [propext]
-info: TournamentH7/Verify.lean:561:0: 'core_defect_eq_ones_of_product_sum_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:567:0: 'two_entry_product_sum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:573:0: 'no_three_ge_two_product_sum_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:580:0: 'one_cons_two_entry_product_sum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:588:0: 'three_entry_distinct_product_sum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:595:0: 'typeA_root_self_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:600:0: 'typeA_root_swap_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:605:0: 'typeA_root_add_root_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:610:0: 'typeA_root_eq_zero_iff_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:615:0: 'typeA_root_cycle_sum_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:621:0: 'typeA_walkRootSum_append_single_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:627:0: 'typeA_walkRootSum_closed_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:632:0: 'typeA_rootWalk_rootTotal_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:637:0: 'typeA_rootPacket_rootTotal_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:643:0: 'directedCycle_toRootPacket_rootTotal_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:650:0: 'natOperation_addShadow_iff_lt_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:655:0: 'natOperation_mulUnitShadow_iff_dvd_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:660:0: 'natOperation_mulShadow_iff_dvd_and_lt_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:665:0: 'natOperation_shifted_binary_collision_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:670:0: 'natOperation_twoFactor_productSum_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:675:0: 'natOperation_trivial_twoFactor_productSum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:680:0: 'H_ne_seven_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:551:0: 'lrc_survival_twoFar_middle_silent_audit' depends on axioms: [LonelyRunner.survival_twoFar_middle_silent._native.native_decide.ax_1_1]
+info: TournamentH7/Verify.lean:559:0: 'product_sum_iff_core_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:565:0: 'pad_core_product_sum_audit' depends on axioms: [propext]
+info: TournamentH7/Verify.lean:571:0: 'core_defect_eq_ones_of_product_sum_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:577:0: 'two_entry_product_sum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:583:0: 'no_three_ge_two_product_sum_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:590:0: 'one_cons_two_entry_product_sum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:598:0: 'three_entry_distinct_product_sum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:605:0: 'typeA_root_self_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:610:0: 'typeA_root_swap_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:615:0: 'typeA_root_add_root_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:620:0: 'typeA_root_eq_zero_iff_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:625:0: 'typeA_root_cycle_sum_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:631:0: 'typeA_walkRootSum_append_single_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:637:0: 'typeA_walkRootSum_closed_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:642:0: 'typeA_rootWalk_rootTotal_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:647:0: 'typeA_rootPacket_rootTotal_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:653:0: 'directedCycle_toRootPacket_rootTotal_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:660:0: 'natOperation_addShadow_iff_lt_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:665:0: 'natOperation_mulUnitShadow_iff_dvd_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:670:0: 'natOperation_mulShadow_iff_dvd_and_lt_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:675:0: 'natOperation_shifted_binary_collision_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:680:0: 'natOperation_twoFactor_productSum_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:685:0: 'natOperation_trivial_twoFactor_productSum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:690:0: 'H_ne_seven_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_subset_bound,
@@ -327,7 +341,7 @@ info: TournamentH7/Verify.lean:680:0: 'H_ne_seven_audit' depends on axioms: [pro
  oddCyclesIn_size3,
  oddCyclesIn_size4,
  omegaTriangleLocalises]
-info: TournamentH7/Verify.lean:683:0: 'H_ne_twentyone_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:693:0: 'H_ne_twentyone_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
@@ -338,12 +352,12 @@ info: TournamentH7/Verify.lean:683:0: 'H_ne_twentyone_audit' depends on axioms: 
  no_alpha_6_2,
  no_alpha_8_1,
  ocf_extended]
-info: TournamentH7/Verify.lean:687:0: 'H_ne_sixtythree_le_seven_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:697:0: 'H_ne_sixtythree_le_seven_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  H_ne_sixtythree_le_seven_axiom]
-info: TournamentH7/Verify.lean:690:0: 'H_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, redei_existence]
-info: TournamentH7/Verify.lean:694:0: 'forbidden_pair_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:700:0: 'H_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, redei_existence]
+info: TournamentH7/Verify.lean:704:0: 'forbidden_pair_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
@@ -360,7 +374,7 @@ info: TournamentH7/Verify.lean:694:0: 'forbidden_pair_audit' depends on axioms: 
  oddCyclesIn_size3,
  oddCyclesIn_size4,
  omegaTriangleLocalises]
-info: TournamentH7/Verify.lean:698:0: 'forbidden_trio_le_seven_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:708:0: 'forbidden_trio_le_seven_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  H_ne_sixtythree_le_seven_axiom,
@@ -378,112 +392,112 @@ info: TournamentH7/Verify.lean:698:0: 'forbidden_trio_le_seven_audit' depends on
  oddCyclesIn_size3,
  oddCyclesIn_size4,
  omegaTriangleLocalises]
-info: TournamentH7/Verify.lean:715:0: 'regular_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
-info: TournamentH7/Verify.lean:723:0: 'thm330_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:729:0: 'thm330_easy_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:736:0: 'reaches_descent_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:743:0: 'reaches_zero_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:751:0: 'apex_implies_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:759:0: 'isSelfComplementary_iff_iso_op_audit' depends on axioms: [Quot.sound]
-info: TournamentH7/Verify.lean:768:0: 'regular_not_SF_id_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
-info: TournamentH7/Verify.lean:774:0: 'paleyLike_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
-info: TournamentH7/Verify.lean:782:0: 'hp_ip_truncated_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
-info: TournamentH7/Verify.lean:791:0: 'abstract_anti_palindrome_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:797:0: 'epStart_sum_eq_H_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:803:0: 'epEnd_sum_eq_H_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:813:0: 'outDegree_iso_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:820:0: 'isRegular_iso_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:827:0: 'H_iso_invariant_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:834:0: 'alphaCount_iso_invariant_audit' depends on axioms: [Quot.sound, alphaCount_iso_invariant]
-info: TournamentH7/Verify.lean:847:0: 'bucketBalance_halfLine_balance_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:855:0: 'goodCuts_empty_iff_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:861:0: 'goodCuts_nonempty_iff_exists_upward_tile_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:867:0: 'goodCutCount_eq_zero_iff_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:873:0: 'goodCutCount_pos_iff_exists_upward_tile_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:879:0: 'goodCutCount_pos_iff_not_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:886:0: 'two_le_goodCutCount_of_upward_tile_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:892:0: 'goodCutCount_ne_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:898:0: 'goodCutCount_eq_zero_or_two_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:904:0: 'goodCuts_empty_or_two_le_card_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:910:0: 'goodCutCount_reflect_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:917:0: 'isGoodCut_interval_union_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:923:0: 'mem_goodCuts_interval_union_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:929:0: 'cutInterval_subset_goodCuts_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:936:0: 'goodCutCount_mono_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:943:0: 'goodCutCount_bucket_bounds_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:950:0: 'goodCutCount_eq_top_iff_all_cuts_good_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:957:0: 'exists_crossesCut_of_mem_cutSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:963:0: 'goodCuts_singleUp_eq_cutInterval_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:970:0: 'exists_goodCutCount_eq_of_allowed_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:977:0: 'goodCutCount_spectrum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:983:0: 'goodCutCount_allUp_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:990:0: 'goodCutCount_complement_of_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:998:0: 'staircase_toTournament_hasBasePath_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1005:0: 'isGoodCut_iff_crossesUpward_toTournament_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1012:0: 'goodCutCount_eq_top_iff_toTournament_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1019:0: 'allUp_toTournament_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1026:0: 'allDown_toTournament_not_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1034:0: 'apexTile_cutInterval_eq_cutSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1040:0: 'singleUp_apex_goodCuts_eq_cutSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1046:0: 'singleUp_apex_goodCutCount_top_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1060:0: 'bucket_halfLine_balance_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1072:0: 'bucket_crossHalf_card_eq_zero_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1081:0: 'bucket_crossHalf_card_le_total_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1093:0: 'bucket_pairHalf_mem_selfHalf_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1105:0: 'bucket_pairHalf_ne_of_fixedPointFree_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1115:0: 'bucket_even_card_of_fixedPointFree_involutiveOn_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1129:0: 'bucket_selfHalf_card_even_of_involutive_fixedPointFree_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:725:0: 'regular_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+info: TournamentH7/Verify.lean:733:0: 'thm330_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:739:0: 'thm330_easy_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:746:0: 'reaches_descent_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:753:0: 'reaches_zero_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:761:0: 'apex_implies_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:769:0: 'isSelfComplementary_iff_iso_op_audit' depends on axioms: [Quot.sound]
+info: TournamentH7/Verify.lean:778:0: 'regular_not_SF_id_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+info: TournamentH7/Verify.lean:784:0: 'paleyLike_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, tilde_score_sink]
+info: TournamentH7/Verify.lean:792:0: 'hp_ip_truncated_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+info: TournamentH7/Verify.lean:801:0: 'abstract_anti_palindrome_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:807:0: 'epStart_sum_eq_H_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:813:0: 'epEnd_sum_eq_H_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:823:0: 'outDegree_iso_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:830:0: 'isRegular_iso_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:837:0: 'H_iso_invariant_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:844:0: 'alphaCount_iso_invariant_audit' depends on axioms: [Quot.sound, alphaCount_iso_invariant]
+info: TournamentH7/Verify.lean:857:0: 'bucketBalance_halfLine_balance_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:865:0: 'goodCuts_empty_iff_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:871:0: 'goodCuts_nonempty_iff_exists_upward_tile_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:877:0: 'goodCutCount_eq_zero_iff_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:883:0: 'goodCutCount_pos_iff_exists_upward_tile_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:889:0: 'goodCutCount_pos_iff_not_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:896:0: 'two_le_goodCutCount_of_upward_tile_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:902:0: 'goodCutCount_ne_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:908:0: 'goodCutCount_eq_zero_or_two_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:914:0: 'goodCuts_empty_or_two_le_card_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:920:0: 'goodCutCount_reflect_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:927:0: 'isGoodCut_interval_union_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:933:0: 'mem_goodCuts_interval_union_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:939:0: 'cutInterval_subset_goodCuts_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:946:0: 'goodCutCount_mono_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:953:0: 'goodCutCount_bucket_bounds_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:960:0: 'goodCutCount_eq_top_iff_all_cuts_good_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:967:0: 'exists_crossesCut_of_mem_cutSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:973:0: 'goodCuts_singleUp_eq_cutInterval_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:980:0: 'exists_goodCutCount_eq_of_allowed_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:987:0: 'goodCutCount_spectrum_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:993:0: 'goodCutCount_allUp_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1000:0: 'goodCutCount_complement_of_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1008:0: 'staircase_toTournament_hasBasePath_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1015:0: 'isGoodCut_iff_crossesUpward_toTournament_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1022:0: 'goodCutCount_eq_top_iff_toTournament_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1029:0: 'allUp_toTournament_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1036:0: 'allDown_toTournament_not_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1044:0: 'apexTile_cutInterval_eq_cutSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1050:0: 'singleUp_apex_goodCuts_eq_cutSet_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1056:0: 'singleUp_apex_goodCutCount_top_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1070:0: 'bucket_halfLine_balance_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1082:0: 'bucket_crossHalf_card_eq_zero_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1091:0: 'bucket_crossHalf_card_le_total_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1103:0: 'bucket_pairHalf_mem_selfHalf_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1115:0: 'bucket_pairHalf_ne_of_fixedPointFree_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1125:0: 'bucket_even_card_of_fixedPointFree_involutiveOn_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1139:0: 'bucket_selfHalf_card_even_of_involutive_fixedPointFree_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-info: TournamentH7/Verify.lean:1142:0: 'bucket_unordered_balance_of_even_selfHalf_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1158:0: 'bucket_unordered_balance_of_involutive_fixedPointFree_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1165:0: 'boolCube_xorMask_involutive_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:1173:0: 'boolCube_xorMask_fixedPointFree_audit' depends on axioms: [propext]
-info: TournamentH7/Verify.lean:1186:0: 'bucket_unordered_balance_boolCube_masks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1198:0: 'bucket_transport_offdiag_eq_crossHalf_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1216:0: 'bucket_transport_row_balance_fixedPointFree_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1231:0: 'bucket_transport_row_balance_boolCube_masks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1239:0: 'bucket_fiber_eq_empty_iff_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:1247:0: 'bucket_incidentHalf_empty_of_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1256:0: 'bucket_transportHalf_empty_of_source_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1265:0: 'bucket_transportHalf_empty_of_target_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1275:0: 'bucket_transportHalf_card_zero_of_source_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1285:0: 'bucket_transportHalf_card_zero_of_target_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1295:0: 'bucket_transportHalf_row_sum_zero_of_source_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1305:0: 'bucket_transportHalf_column_sum_zero_of_target_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1312:0: 'stTile_gapPair_roundtrip_audit' does not depend on any axioms
-info: TournamentH7/Verify.lean:1317:0: 'stTiling_singleUp_isNonzeroMask_audit' depends on axioms: [propext]
-info: TournamentH7/Verify.lean:1322:0: 'stTiling_allUp_isNonzeroMask_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:1334:0: 'stTiling_transport_row_balance_allNonzeroMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1346:0: 'stTiling_transport_row_balance_singleTileMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1358:0: 'stTiling_transport_row_balance_complementMask_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1365:0: 'stTiling_goodCutBucket_zero_iff_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1372:0: 'stTiling_goodCutBucket_top_iff_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1379:0: 'stTiling_goodCutBucket_image_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1385:0: 'stTiling_goodCutBucket_ne_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1391:0: 'stTiling_goodCutBucket_ne_overTop_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1398:0: 'stTiling_goodCutBucket_fiber_one_empty_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1405:0: 'stTiling_goodCutBucket_fiber_overTop_empty_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1417:0: 'stTiling_goodCutBucket_transport_row_singleTileMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1429:0: 'stTiling_goodCutBucket_transport_row_allNonzeroMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1441:0: 'stTiling_goodCutBucket_transport_row_complementMask_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1453:0: 'transitive_4_hasBasePath' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:1458:0: 'threeCycle_regular_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1464:0: 'transitive_not_regular_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1475:0: 'H_ge_three_pow_k_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
-info: TournamentH7/Verify.lean:1481:0: 'H_lt_27_no_alpha3_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
-info: TournamentH7/Verify.lean:1487:0: 'H_lt_81_no_alpha4_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
-info: TournamentH7/Verify.lean:1492:0: 'paley_7_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, paley_7, tilde_score_sink]
-info: TournamentH7/Verify.lean:1495:0: 'paley_7_max_audit' depends on axioms: [propext, Classical.choice, Quot.sound, paley_7_maximises_H]
-info: TournamentH7/Verify.lean:1501:0: 'stTile_reflect_reflect_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:1505:0: 'stTiling_reflect_reflect_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:1509:0: 'stTiling_complement_complement_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:1514:0: 'stTiling_reflect_complement_commute_audit' depends on axioms: [propext, Quot.sound]
-info: TournamentH7/Verify.lean:1523:0: 'alpha_solution_H3_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
-info: TournamentH7/Verify.lean:1530:0: 'alpha_solution_H5_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
-info: TournamentH7/Verify.lean:1537:0: 'H_ge_243_of_alpha5_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf_extended]
-info: TournamentH7/Verify.lean:1542:0: 'H_ge_729_of_alpha6_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf_extended]
-info: TournamentH7/Verify.lean:1549:0: 'H_spectrum_n7_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1152:0: 'bucket_unordered_balance_of_even_selfHalf_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1168:0: 'bucket_unordered_balance_of_involutive_fixedPointFree_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1175:0: 'boolCube_xorMask_involutive_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:1183:0: 'boolCube_xorMask_fixedPointFree_audit' depends on axioms: [propext]
+info: TournamentH7/Verify.lean:1196:0: 'bucket_unordered_balance_boolCube_masks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1208:0: 'bucket_transport_offdiag_eq_crossHalf_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1226:0: 'bucket_transport_row_balance_fixedPointFree_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1241:0: 'bucket_transport_row_balance_boolCube_masks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1249:0: 'bucket_fiber_eq_empty_iff_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:1257:0: 'bucket_incidentHalf_empty_of_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1266:0: 'bucket_transportHalf_empty_of_source_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1275:0: 'bucket_transportHalf_empty_of_target_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1285:0: 'bucket_transportHalf_card_zero_of_source_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1295:0: 'bucket_transportHalf_card_zero_of_target_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1305:0: 'bucket_transportHalf_row_sum_zero_of_source_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1315:0: 'bucket_transportHalf_column_sum_zero_of_target_gap_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1322:0: 'stTile_gapPair_roundtrip_audit' does not depend on any axioms
+info: TournamentH7/Verify.lean:1327:0: 'stTiling_singleUp_isNonzeroMask_audit' depends on axioms: [propext]
+info: TournamentH7/Verify.lean:1332:0: 'stTiling_allUp_isNonzeroMask_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:1344:0: 'stTiling_transport_row_balance_allNonzeroMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1356:0: 'stTiling_transport_row_balance_singleTileMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1368:0: 'stTiling_transport_row_balance_complementMask_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1375:0: 'stTiling_goodCutBucket_zero_iff_all_down_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1382:0: 'stTiling_goodCutBucket_top_iff_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1389:0: 'stTiling_goodCutBucket_image_iff_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1395:0: 'stTiling_goodCutBucket_ne_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1401:0: 'stTiling_goodCutBucket_ne_overTop_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1408:0: 'stTiling_goodCutBucket_fiber_one_empty_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1415:0: 'stTiling_goodCutBucket_fiber_overTop_empty_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1427:0: 'stTiling_goodCutBucket_transport_row_singleTileMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1439:0: 'stTiling_goodCutBucket_transport_row_allNonzeroMasks_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1451:0: 'stTiling_goodCutBucket_transport_row_complementMask_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1463:0: 'transitive_4_hasBasePath' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:1468:0: 'threeCycle_regular_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1474:0: 'transitive_not_regular_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1485:0: 'H_ge_three_pow_k_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+info: TournamentH7/Verify.lean:1491:0: 'H_lt_27_no_alpha3_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+info: TournamentH7/Verify.lean:1497:0: 'H_lt_81_no_alpha4_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+info: TournamentH7/Verify.lean:1502:0: 'paley_7_not_SF_audit' depends on axioms: [propext, Classical.choice, Quot.sound, paley_7, tilde_score_sink]
+info: TournamentH7/Verify.lean:1505:0: 'paley_7_max_audit' depends on axioms: [propext, Classical.choice, Quot.sound, paley_7_maximises_H]
+info: TournamentH7/Verify.lean:1511:0: 'stTile_reflect_reflect_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:1515:0: 'stTiling_reflect_reflect_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:1519:0: 'stTiling_complement_complement_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:1524:0: 'stTiling_reflect_complement_commute_audit' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/Verify.lean:1533:0: 'alpha_solution_H3_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+info: TournamentH7/Verify.lean:1540:0: 'alpha_solution_H5_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+info: TournamentH7/Verify.lean:1547:0: 'H_ge_243_of_alpha5_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf_extended]
+info: TournamentH7/Verify.lean:1552:0: 'H_ge_729_of_alpha6_pos_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf_extended]
+info: TournamentH7/Verify.lean:1559:0: 'H_spectrum_n7_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  H_ne_sixtythree_le_seven_axiom,
@@ -502,7 +516,7 @@ info: TournamentH7/Verify.lean:1549:0: 'H_spectrum_n7_audit' depends on axioms: 
  oddCyclesIn_size4,
  omegaTriangleLocalises,
  paley_7_maximises_H]
-info: TournamentH7/Verify.lean:1554:0: 'H_spectrum_n3_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1564:0: 'H_spectrum_n3_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
@@ -519,22 +533,22 @@ info: TournamentH7/Verify.lean:1554:0: 'H_spectrum_n3_audit' depends on axioms: 
  oddCyclesIn_size3,
  oddCyclesIn_size4,
  omegaTriangleLocalises]
-info: TournamentH7/Verify.lean:1560:0: 'numNS_eq_audit' does not depend on any axioms
-info: TournamentH7/Verify.lean:1564:0: 'numNS_plus_numSC_3_audit' depends on axioms: [propext, numIsoClasses_3, numSC_3]
-info: TournamentH7/Verify.lean:1568:0: 'numNS_plus_numSC_7_audit' depends on axioms: [propext, numIsoClasses_7, numSC_7]
-info: TournamentH7/Verify.lean:1575:0: 'pascal_row_sum_general_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1585:0: 'H_ge_three_pow_k_general_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1570:0: 'numNS_eq_audit' does not depend on any axioms
+info: TournamentH7/Verify.lean:1574:0: 'numNS_plus_numSC_3_audit' depends on axioms: [propext, numIsoClasses_3, numSC_3]
+info: TournamentH7/Verify.lean:1578:0: 'numNS_plus_numSC_7_audit' depends on axioms: [propext, numIsoClasses_7, numSC_7]
+info: TournamentH7/Verify.lean:1585:0: 'pascal_row_sum_general_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1595:0: 'H_ge_three_pow_k_general_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_descent,
  ocf_truncated]
-info: TournamentH7/Verify.lean:1593:0: 'singleUp_apex_toTournament_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1599:0: 'H_ge_one_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
-info: TournamentH7/Verify.lean:1603:0: 'H_ne_zero_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
-info: TournamentH7/Verify.lean:1607:0: 'H_odd_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
-info: TournamentH7/Verify.lean:1612:0: 'H_mod_two_eq_one_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
-info: TournamentH7/Verify.lean:1616:0: 'H_not_even_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
-info: TournamentH7/Verify.lean:1623:0: 'H_spectrum_universal_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1603:0: 'singleUp_apex_toTournament_SC_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1609:0: 'H_ge_one_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+info: TournamentH7/Verify.lean:1613:0: 'H_ne_zero_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+info: TournamentH7/Verify.lean:1617:0: 'H_odd_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+info: TournamentH7/Verify.lean:1622:0: 'H_mod_two_eq_one_from_ocf_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+info: TournamentH7/Verify.lean:1626:0: 'H_not_even_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+info: TournamentH7/Verify.lean:1633:0: 'H_spectrum_universal_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
@@ -551,8 +565,8 @@ info: TournamentH7/Verify.lean:1623:0: 'H_spectrum_universal_audit' depends on a
  oddCyclesIn_size3,
  oddCyclesIn_size4,
  omegaTriangleLocalises]
-info: TournamentH7/Verify.lean:1629:0: 'alpha_solution_H1_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
-info: TournamentH7/Verify.lean:1637:0: 'H_in_forbidden_set_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1639:0: 'alpha_solution_H1_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+info: TournamentH7/Verify.lean:1647:0: 'H_in_forbidden_set_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
@@ -569,7 +583,7 @@ info: TournamentH7/Verify.lean:1637:0: 'H_in_forbidden_set_audit' depends on axi
  oddCyclesIn_size3,
  oddCyclesIn_size4,
  omegaTriangleLocalises]
-info: TournamentH7/Verify.lean:1643:0: 'H_n3_eq_one_or_three_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1653:0: 'H_n3_eq_one_or_three_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
@@ -587,7 +601,7 @@ info: TournamentH7/Verify.lean:1643:0: 'H_n3_eq_one_or_three_audit' depends on a
  oddCyclesIn_size3,
  oddCyclesIn_size4,
  omegaTriangleLocalises]
-info: TournamentH7/Verify.lean:1647:0: 'H_n4_eq_135_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1657:0: 'H_n4_eq_135_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_subset_bound,
@@ -598,7 +612,7 @@ info: TournamentH7/Verify.lean:1647:0: 'H_n4_eq_135_audit' depends on axioms: [p
  oddCyclesIn_size3,
  oddCyclesIn_size4,
  omegaTriangleLocalises]
-info: TournamentH7/Verify.lean:1652:0: 'H_n5_in_spectrum_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1662:0: 'H_n5_in_spectrum_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_subset_bound,
@@ -609,67 +623,63 @@ info: TournamentH7/Verify.lean:1652:0: 'H_n5_in_spectrum_audit' depends on axiom
  oddCyclesIn_size3,
  oddCyclesIn_size4,
  omegaTriangleLocalises]
-info: TournamentH7/Verify.lean:1662:0: 'alpha_solution_H9_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
-info: TournamentH7/Verify.lean:1670:0: 'alpha_solution_H11_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
-info: TournamentH7/Verify.lean:1678:0: 'alpha_solution_H13_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1672:0: 'alpha_solution_H9_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+info: TournamentH7/Verify.lean:1680:0: 'alpha_solution_H11_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+info: TournamentH7/Verify.lean:1688:0: 'alpha_solution_H13_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
  alpha_descent,
  ocf]
-info: TournamentH7/Verify.lean:1688:0: 'alpha_solution_H15_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1698:0: 'alpha_solution_H15_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
  alpha_descent,
  ocf]
-info: TournamentH7/Verify.lean:1693:0: 'small_H_alpha34_zero_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
-info: TournamentH7/Verify.lean:1703:0: 'alpha_solution_H17_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1703:0: 'small_H_alpha34_zero_audit' depends on axioms: [propext, Classical.choice, Quot.sound, alpha_descent, ocf]
+info: TournamentH7/Verify.lean:1713:0: 'alpha_solution_H17_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
  alpha_descent,
  ocf]
-info: TournamentH7/Verify.lean:1715:0: 'alpha_solution_H19_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1725:0: 'alpha_solution_H19_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
  alpha_descent,
  ocf]
-info: TournamentH7/Verify.lean:1727:0: 'alpha_solution_H23_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1737:0: 'alpha_solution_H23_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha_binomial_bound,
  alpha_descent,
  ocf]
-info: TournamentH7/Verify.lean:1736:0: 'base_path_sink_outDegree_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1741:0: 'outDegree_le_n_minus_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1748:0: 'base_path_source_outDegree_ge_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1755:0: 'regular_basepath_n_ge_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1763:0: 'H_eq_one_iff_transitive_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1746:0: 'base_path_sink_outDegree_le_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1751:0: 'outDegree_le_n_minus_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1758:0: 'base_path_source_outDegree_ge_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1765:0: 'regular_basepath_n_ge_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1773:0: 'H_eq_one_iff_transitive_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  alpha1_zero_iff_transitive,
  ocf,
  transitive_alphaCount_zero]
-info: TournamentH7/Verify.lean:1767:0: 'H_transitive_3_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1771:0: 'H_transitive_4_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1775:0: 'H_transitive_5_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1779:0: 'H_threeCycle_eq_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1783:0: 'threeCycle_alpha1_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
-info: TournamentH7/Verify.lean:1791:0: 'regular_implies_n_odd_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1798:0: 'regular_basepath_n_odd_ge_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1805:0: 'regular_basepath_n_in_odd_ge_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1812:0: 'paley_3_H_eq_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1819:0: 'H_transitive_ge_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
-info: TournamentH7/Verify.lean:1825:0: 'H_transitive_eq_one_general_audit' depends on axioms: [propext,
+info: TournamentH7/Verify.lean:1777:0: 'H_transitive_3_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1781:0: 'H_transitive_4_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1785:0: 'H_transitive_5_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1789:0: 'H_threeCycle_eq_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1793:0: 'threeCycle_alpha1_eq_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound, ocf]
+info: TournamentH7/Verify.lean:1801:0: 'regular_implies_n_odd_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1808:0: 'regular_basepath_n_odd_ge_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1815:0: 'regular_basepath_n_in_odd_ge_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1822:0: 'paley_3_H_eq_three_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1829:0: 'H_transitive_ge_one_audit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/Verify.lean:1835:0: 'H_transitive_eq_one_general_audit' depends on axioms: [propext,
  Classical.choice,
  Quot.sound,
  ocf,
  transitive_alphaCount_zero]
-✔ [2998/3003] Built TournamentH7.Examples (3.4s)
-✔ [2999/3003] Built TournamentH7.SCFraction (3.5s)
-✔ [3000/3003] Built TournamentH7.OpSymmetry (3.0s)
-✔ [3001/3003] Built TournamentH7.ExamplesExtended (2.6s)
-✔ [3002/3003] Built TournamentH7 (3.9s)
-Build completed successfully (3003 jobs).
+✔ [3005/3006] Built TournamentH7 (4.4s)
+Build completed successfully (3006 jobs).

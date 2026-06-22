@@ -52,6 +52,8 @@
                                       gK8 single-far margin.
     · TournamentH7.LRCDoubletWitnessFloor — arithmetic checksum for the
                                       genuine-wide doublet rho*/witness scout.
+    · TournamentH7.LRCMreachConcrete — concrete Mreach compactness bridge
+                                      skeleton for the LRC14 reach-to-lonely step.
     · TournamentH7.LRCL7Discrepancy — Finite integer core of the L7 discrepancy.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
@@ -112,5 +114,6 @@ import TournamentH7.LRCGenuineWideCorrection
 import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
+import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCL7Discrepancy
 import TournamentH7.Verify

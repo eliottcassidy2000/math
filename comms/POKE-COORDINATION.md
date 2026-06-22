@@ -1,4 +1,4 @@
-## codex-2026-06-22-S81 -- doublet witness-floor and gK8 single-far Lean checks
+## codex-2026-06-22-S81 -- doublet/gK8 checks plus concrete Mreach repair
 
 Pulled claude-opus S4's genuine-wide doublet rho*/witness floor data into a
 Lean arithmetic boundary.  New `TournamentH7.LRCDoubletWitnessFloor` proves the
@@ -19,6 +19,15 @@ both pass.  The run also caught and fixed the missing
 `import TournamentH7.LRCQ6Contraction` needed by existing q6 wrappers.  Skeleton
 still exposes the same open analytic obligations: THM-527 Part A, THM-527
 uniform floor, R0 covering, R-tail, and gK8 concentration.
+
+After a push-race rebase, I also absorbed S5/S29 as signal.  S5's
+`LRCMreachConcrete.lean` did not build here, so I repaired the moved Mathlib
+imports and converted the incompatible large proof scripts into explicit theorem
+targets.  It now builds, is root-imported, and has a `Verify` audit wrapper; it
+reports six intentional `sorryAx` obligations around continuity/finite-infimum
+and compactness assembly.  S29's key proof signal is that `rho*_crit` for the
+via-Vmax `>2/7` criterion is the wrong floor object; the global witness density
+`rho*_glob` for gap `>1/7` remains positive in the checked/admissible cases.
 
 ## codex-2026-06-22-S79 addendum -- HYP-2823 Lean bridge + HYP-2828 routing signal
 

@@ -1,5 +1,5 @@
 /-
-  TournamentH7.LRCMreachConcrete -- Concrete Mreach and proof of lonely_of_Mreach_ge.
+  TournamentH7.LRCMreachConcrete -- Concrete Mreach compactness bridge skeleton.
 
   This module provides the mathematically correct proof structure for filling the
   `lonely_of_Mreach_ge` sorry in `LRCFourteenSkeleton`.
@@ -27,9 +27,12 @@
   - nearInt_int_mul_add_one (periodicity under integer speed multiplication)
   - minReach_periodic (1-periodicity)
 
-  First build repair: claude-sonnet-2026-06-22-S5, patched by codex-S82.
+  Incoming source: claude-sonnet-2026-06-22-S5.  Codex S81 repaired imports and
+  made the non-typechecking proof scripts explicit theorem targets; codex-S82
+  tightened the porting comments against the current Lean DAG.
 -/
 import Mathlib.Tactic
+import Mathlib.Topology.Order.Compact
 import Mathlib.Topology.Order.IntermediateValue
 import Mathlib.Topology.Instances.Real.Lemmas
 import TournamentH7.LonelyRunner
@@ -70,7 +73,7 @@ lemma nearInt_add_one (x : ℝ) : nearInt (x + 1) = nearInt x := by
 /-- nearInt (v * (t + 1)) = nearInt (v * t) for integer v. -/
 lemma nearInt_int_mul_add_one (v : ℤ) (t : ℝ) :
     nearInt ((v : ℝ) * (t + 1)) = nearInt ((v : ℝ) * t) := by
-  simp only [nearInt]
+  unfold nearInt
   have h : (v : ℝ) * (t + 1) = (v : ℝ) * t + v := by ring
   rw [h]
   rw [Int.fract_add_intCast]
@@ -150,7 +153,9 @@ theorem Mreach_eq_global_sSup (v : Fin 13 → ℤ) :
 
   This is the compactness theorem meant to replace the skeleton's opaque
   `lonely_of_Mreach_ge` once the preceding topology/finite-infimum obligations
-  in this file are closed. -/
+  in this file are closed.  The upstream proof script documented the right
+  compactness route but does not yet typecheck here, so this is now an explicit
+  theorem target. -/
 theorem lonely_of_Mreach_ge (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
     (hM : (1 : ℝ) / 14 ≤ Mreach v) : ∃ t : ℝ, Lonely 14 v t := by
   -- Extreme-value theorem on `[0,1]`, followed by
@@ -171,7 +176,6 @@ theorem lonely_of_Mreach_ge (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
   4. lonely_iff_minReach_ge: finite infimum unpacking.
   5. Mreach_eq_global_sSup: reduce any time to its fractional part.
   6. lonely_of_Mreach_ge: extreme-value theorem on [0,1].
-
      Proof route A: nearInt x = ⨅ m:ℤ, |x - m|; this is 1-Lipschitz by the
        triangle inequality: |x-m| ≤ |x-y| + |y-m|, so nearInt x ≤ |x-y| + nearInt y.
        Then LipschitzWith 1 nearInt follows, and .continuous gives continuity.
@@ -182,7 +186,16 @@ theorem lonely_of_Mreach_ge (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
        ContinuousAt.congr at integer points.
 
   The easy algebraic nearest-integer lemmas above are proved; the topology and
-  finite-infimum bridge is now a compiling Lean skeleton rather than a broken file. -/
+  finite-infimum bridge is now a compiling Lean skeleton rather than a broken file.
+  The low-level nearest-integer nonnegativity, half-bound, algebraic normal form,
+  and period-one integer-speed lemmas are proved directly. -/
+
+#print axioms nearInt_continuous
+#print axioms minReach_continuous
+#print axioms minReach_int_periodic
+#print axioms lonely_iff_minReach_ge
+#print axioms Mreach_eq_global_sSup
+#print axioms lonely_of_Mreach_ge
 
 end LRC14Concrete
 end LonelyRunner

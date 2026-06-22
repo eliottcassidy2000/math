@@ -3,6 +3,30 @@
 Pulled KPS/Claude/mac-mini updates through `04489ebd0`. The main correction is that the old via-`Vmax` 2/7 `rhoStar` floor has admissible zeros, so `LRCFourteenSkeleton` no longer asserts `thm527_partG_uniform_floor`; it now keeps that route only as `obsoleteRhoStarUniformFloor` and makes the live corrected object the 1/7 global-witness/rho-glob density, aliased to `witnessG2`. Added `clusterSize`, no-sorry `witness_floor_from_cluster_cases`, and no-sorry `lrc14_from_witness_floor_cases_given_nodes` to split the remaining floor into k<=7 pigeonhole and k=8..13.
 
 Integrated mac-mini HYP-2829 by root-importing `LRCGk8SingleFar`, adding a `Verify` audit, and exposing `gK8_singlefar_arithmetic_kernel` inside the skeleton. Also repaired incoming `LRCMreachConcrete`: fixed Mathlib imports/name drift and made it build as a six-sorry concrete compactness skeleton instead of a broken file. Builds: `lake build TournamentH7.LRCFourteenSkeleton`, `lake build TournamentH7.LRCMreachConcrete`, `lake build TournamentH7.Verify`, and `lake build TournamentH7` all succeed; transcripts are stored in the S82 result files.
+## codex-2026-06-22-S81 addendum -- LRCMreachConcrete compile repair and rho*_glob signal integrated
+
+The push race pulled in claude-sonnet S5 and KPS S29 before closeout.  Treated
+both as proof signal rather than noise.  S5 adds the all-bounded `G2>=m_P`
+witness-floor pass for k=8..13 and a concrete `Mreach` compactness module; KPS
+S29 resolves the Thread-A object mismatch by showing `rho*_crit` (the via-Vmax
+`>2/7` criterion) can vanish while the correct global witness density
+`rho*_glob` (`>1/7`) stays positive in the scanned/admissible cases.
+
+`TournamentH7.LRCMreachConcrete` did not build on this checkout: two Mathlib
+imports had moved and several proof scripts used incompatible APIs.  Repaired it
+into a buildable, honest Lean skeleton: the nearest-integer nonnegativity,
+half-bound, algebraic normal form, and period-one integer-speed lemmas are proved;
+six larger compactness/infimum bridge targets are now explicit `sorry`
+obligations with `#print axioms` output.  Wired the module into
+`TournamentH7.lean` and `TournamentH7.Verify` with
+`lrc_concrete_lonely_of_mreach_ge_audit`.
+
+Verification after the rebase:
+`lake build TournamentH7.LRCMreachConcrete`;
+`lake build TournamentH7.Verify`;
+`lake build TournamentH7`.
+The aggregate root build now covers `LRCMreachConcrete`, `LRCGk8SingleFar`, and
+`LRCDoubletWitnessFloor`.
 
 ## mac-mini-2026-06-22-S24 -- the gK8 concentration BINDING is SINGLE-FAR (HYP-2829): shifts the wide leg from the razor-thin p0 dichotomy to a COMFORTABLE single-far periodicity (margin ~1); + Lean numerical core
 Dispatch: close the remaining gap (the gK8 concentration extremality / dichotomy) + formalize. The open math sorry is `gK8_concentration_extremality` (max_E L_yK8=10q0+q3+10q6 <= 10cap). ~6 pushes.

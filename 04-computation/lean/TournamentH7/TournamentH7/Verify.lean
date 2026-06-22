@@ -49,6 +49,7 @@ import TournamentH7.LRCGenuineWideCorrection
 import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
+import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCL7Discrepancy
 
 open Tournament
@@ -130,6 +131,15 @@ theorem lrc_gk8_singlefar_binding_checks_audit :
       (62267 : Nat) * 7 < 37 * 12936 :=
   LonelyRunner.Gk8SingleFar.all_binding_checks
 #print axioms lrc_gk8_singlefar_binding_checks_audit
+
+/-! ### LRC14 concrete Mreach compactness bridge skeleton -/
+
+theorem lrc_concrete_lonely_of_mreach_ge_audit
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
+    (hM : (1 : ℝ) / 14 ≤ LonelyRunner.LRC14Concrete.Mreach v) :
+    ∃ t : ℝ, LonelyRunner.Lonely 14 v t :=
+  LonelyRunner.LRC14Concrete.lonely_of_Mreach_ge v hv hM
+#print axioms lrc_concrete_lonely_of_mreach_ge_audit
 
 /-! ### LRC14 THM-563 period-max certificate kernel -/
 
