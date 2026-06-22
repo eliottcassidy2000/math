@@ -1,3 +1,34 @@
+## codex-2026-06-22-S100 -- primitive packets before quotients: odd clique/hole, H-atoms, and totient copies
+User asked to search back through tournament-structure work and Euler-totient
+threads for creative reframes, especially one odd clique / odd hole duality.
+Pulled incoming mac-mini S37 and KPS S31g work, then searched/read the recent
+HYP-+2880/HYP-2878/HYP-2879/HYP-2880 tournament files plus the older
+HYP-2523/HYP-2628/HYP-2630/HYP-2632 totient-copy and repeated-character-kernel
+work.
+
+Main synthesis: the shared carrier is a quotient-order law, not direct
+numerology.  Primitive packets must be retained before scalar quotients:
+odd-cycle conflict packets before `H=I(Omega,2)`, strong atoms / ear insertion
+profiles before scalar `H`, and exact-denominator `phi` packets before
+squarefree/coimage/character projection in LRC.  The `H=7` side has unique
+connected `I(G,2)` preimage `K_3`; this is not literally a Strong Perfect
+Graph Theorem forbidden odd clique, but the unique conflict-packet preimage
+whose three pairwise vertex-conflicting triangles force a cycle-space `C_5`.
+The LRC analogue is HYP-2630/HYP-2632: Euler-copy capacity is uniform on
+`F_7^*`, while the actual split is the later `chi_7` phase and affine zero
+lane `a+b=2`.  New proof target: build an exact-period packet-conflict graph
+from HYP-2632 and test whether its affine zero lane / Legendre selector appear
+as odd-hole or odd-clique fingerprints, analogous to `K_3 -> C_5`.
+
+Added HYP-2881 and reflection
+`07-reflections/primitive-packets-before-quotients-codex-s100.md`; added T997
+and index updates.  Assumption challenge: considered runners, tournament
+vertices, free arcs, odd cycles, strong components, ears, exact-denominator
+packets, divisor masks, unit residues, additive Fourier shells, quadratic
+characters, affine lanes, and proof obligations.  Chosen quotient is primitive
+packet before scalar quotient; raw row identity, raw runner identity, raw cut
+weight, and raw divisor count are addresses, not proof carriers.
+
 ## mac-mini-2026-06-22-S37 -- the LITERAL pentagon match: C_5 = H=7 K_3 (cycle space, VERIFIED) + H-multiplicative/totient
 Per user (E_7 C_5 holes <-> H=7 K_3 bijection; H-multiplicative <-> totient). Concurrent w/ kps (E_7, 7-adic atoms), codex (ear atoms). HYP-2880:
 - **THREAD A VERIFIED -- the pentagon match is LITERAL:** in the cycle space (GF(2)), **C_5 = XOR of 3 pairwise-VERTEX-CONFLICTING triangles** (fan {123}+{134}+{145} = the 5-cycle; ALL 5 triangle-decompositions of C_5 in K_5 are vertex-conflicting K_3's). The H=7 obstruction = 3 pairwise-vertex-conflicting cycles = K_3 (THM-029). The even-graph<->tournament bijection (even-graph = XOR of fundamental cycles) thus sends a C_5 even-graph (E_7 vertex) to the H=7 K_3 configuration. So C_5 (E_7/even-graph side) = H=7 K_3 (H/tournament side) = the apex-7 odd-cycle obstruction. ONE phenomenon under {7,21}, E_7 non-chordality, (thematically) LRC q=7.
