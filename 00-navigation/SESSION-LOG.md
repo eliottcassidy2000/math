@@ -19787,6 +19787,50 @@ first as the right positive abstraction and qualifies the second: a useful
 Wagner-style order must use strong-component condensation or OCF-packet
 reduction with an explicit `H`-factor ledger, not arbitrary GF(2) contraction
 inside the even-graph shadow, because that contraction can raise `H`.
+
+## codex-2026-06-22-S97 -- productive H-closure as admissible boundary closure
+
+Continued the productive-closure line after pulling S33/S96 context.  Added
+`04-computation/h_productive_boundary_closure_codex_s97.py` and stored
+`05-knowledge/results/h_productive_boundary_closure_codex_s97.out`.  The script
+is an arithmetic proof ledger rather than a new exhaustive search: it lists the
+non-unit factor routes for `H=7` and `H=21`, computes the THM-115 Moon boundary
+`alpha1 >= (n-2)+sum ceil(n/L)` over odd lengths, and displays that every
+strong core with `n>=9` has `H>=25`.
+
+Main result: the productive closure is the admissible `H`-preserving closure.
+For `H=7`, the prime target forces a single strong `H=7` component, closed by
+THM-200/THM-343.  For `H=21`, the product route `(3,7)` is closed by the same
+`H=7` theorem, and the single-core route `(21)` is closed by THM-079 for
+`n<=8` plus THM-115 for `n>=9`.  Created HYP-2874 and reflection
+`07-reflections/h-spectrum-admissible-boundary-closure-codex-s97.md`.
+
+Boundary-function analogy: strong-component condensation and OCF packets are
+admissible boundary approaches because they preserve the value being read;
+Moon/Busch-style strong-core lower bounds are regular boundary theorems; the
+fixed-path/even-graph quotient is a wild curvilinear approach because S96 shows
+degree-2 smoothing and GF(2) contraction preserve only parity/cycle-space data,
+not `H`.  Web checks for Bagemihl-Seidel/Kaczynski boundary-function theory and
+Fatou/Lindelof radial/nontangential boundary limits were used as analogy
+scaffolding, not as mathematical dependencies.
+
+Integrated the key S33 correction: do not state a `7Z` ideal.  Strong `n=7`
+tournaments already realize `H` values divisible by `7` (`35,49,133,147,175`).
+So the live Kuratowski/Wagner analogy is a finite low-boundary forbidden set
+with later direct strong-core re-entry.  Also incorporated S33's minor-order
+phrasing in the corrected form: `contract` means strong-component condensation
+with an `H` factor ledger, not arbitrary GF(2) contraction in the even-graph
+shadow.
+
+Assumption challenge / Tournament Analysis: considered runners, free arcs,
+even-graph triangle-basis bits, strong components, OCF conflict components,
+factor routes, Moon-boundary obligations, wild quotient operations, boundary
+approach classes, and proof obligations as vertices.  The selected proof
+carrier is the route/approach-class tournament
+`factor route > single strong core > finite base > Moon boundary > wild quotient
+guardrail`, transitive with one Hamiltonian path.  It preserves the `H` gap
+predicate exactly on the strong-component/OCF side and explicitly records that
+even-graph minor quotients destroy it.
 S95b stress addendum: added
 `04-computation/lrc14_nu_prefix_stress_codex_s95b.py`, reusing the exact S95
 component engine to search beyond `[0,14]`.  The stored run

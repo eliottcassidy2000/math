@@ -1,0 +1,53 @@
+PRODUCTIVE H-CLOSURE LEDGER
+admissible closure = strong components + OCF/Moon boundary bounds
+
+Moon boundary lower bound for a single strong core:
+  alpha1 >= (n-2) + sum_{odd L, 5<=L<=n} ceil(n/L)
+  H >= 1 + 2*alpha1
+  n= 3: alpha1_lb= 1, H_lb= 3
+  n= 4: alpha1_lb= 2, H_lb= 5
+  n= 5: alpha1_lb= 4, H_lb= 9
+  n= 6: alpha1_lb= 6, H_lb=13
+  n= 7: alpha1_lb= 8, H_lb=17
+  n= 8: alpha1_lb=10, H_lb=21
+  n= 9: alpha1_lb=12, H_lb=25  <-- exceeds 21
+  n=10: alpha1_lb=14, H_lb=29  <-- exceeds 21
+  n=11: alpha1_lb=17, H_lb=35  <-- exceeds 21
+  n=12: alpha1_lb=19, H_lb=39  <-- exceeds 21
+  n=13: alpha1_lb=21, H_lb=43  <-- exceeds 21
+  n=14: alpha1_lb=23, H_lb=47  <-- exceeds 21
+  n=15: alpha1_lb=26, H_lb=53  <-- exceeds 21
+
+For n>=13 the c3 term alone gives alpha1>=n-2>=11, so H>=23.
+The only large-core arithmetic checks needed for H=21 are n=9..12,
+where the displayed pancyclic bound already gives alpha1>10.
+
+Target H=7: factor routes through strong components
+  (7,): closed: contains forbidden factor 7 (THM-200)
+
+Target H=21: factor routes through strong components
+  (3, 7): closed: contains forbidden factor 7 (THM-200)
+  (21,): closed: single strong H=21, base <=8 plus Moon bound >=9 (THM-115)
+
+Exact proof ledger:
+  H=7:
+    - prime, so any product realization needs a strong component with H=7.
+    - THM-200 proves no tournament has H=7.
+  H=21:
+    - nontrivial product route is 3*7, closed by THM-200.
+    - remaining route is one strong component with H=21.
+    - base n<=8 closed by THM-079 Part G.
+    - n>=9 closed by Moon pancyclic odd-cycle bound above.
+
+Boundary-function interpretation:
+  Strong-component condensation is the admissible boundary approach.
+  It has a factor ledger, so limits do not depend on arbitrary graph paths.
+  Even-graph minors are curvilinear/wild approaches: they preserve parity
+  but not H, and can move H nonmonotonically.
+
+Guardrail against the false 7Z ideal:
+  Concurrent S33 reports strong n=7 values divisible by 7:
+    [35, 49, 133, 147, 175]
+  Therefore the permanent forbidden set is not the multiplicative ideal 7Z.
+  The correct closure is finite low-boundary obstruction plus later direct
+  strong-core re-entry.
