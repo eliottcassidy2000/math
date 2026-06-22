@@ -1,30 +1,27 @@
-## codex-S114 -- Boundary-State Induction and the Bounded Atom (checkpoint)
+## codex-S118 -- State Lift Namespace and Forbidden-H7 Guardrail (checkpoint)
 
-Formalized the "boundary-state induction" framework, unifying the project's tournament induction and LRC proof branches by framing the final $LRC(14)$ closure as an induction over labelled states rather than raw runner deletions (commit `8be78d8d`). This checkpoint establishes the "bounded atom" as the irreducible finite target for the proof.
+Stabilized the state-lift framework and the forbidden-H7 guardrail for the LRC(14) proof, repairing the HYP-2908 namespace and clarifying the requirements for the final conflict-graph bridge (commit `c6165a1e`). This checkpoint anchors the proof's conclusion in the structural impossibility of an $H=7$ conflict atom.
 
-### 1. The Boundary-State Switchboard (HYP-2905)
-Identified that productive induction in both tournament complexity ($H$) and the lonely runner problem ($LRC$) requires retaining a **boundary state** rather than a scalar main term.
-- **Tournament Analogy:** In tournament induction ($H(T+x)$), the induction step is only exact when retaining the boundary vector $(start, end, Q)$ from the strong-ear formula.
-- **LRC Application:** Removing a large speed is not a simple size reduction; it is a finite-comb boundary estimate. The induction must retain the boundary state $(mu, c)$—measure and components—or its multi-large refinement $(core\_floor, arc\_count, resonance\_graph)$.
+### 1. HYP-2908: The State-Lift Requirement
+Refined the "forbidden-H7" route to clarify that a scalar identity ($14 = 2 \times 7$) is insufficient. The closure requires a **state-lift theorem** over primitive binary packets.
+- **The Target:** Prove that a primitive LRC(14) counterexample produces a connected packet graph $G_{LRC}$ with $I(G_{LRC}, 2) = 7$.
+- **Atom Rigidity:** Confirmed that the unique connected preimage of $I(G, 2)=7$ is exactly the clique $K_3$. This explains why the obstruction firing at $H=7$ is a singular, low-level structural event.
+- **Guardrail:** Verified that arbitrary binary digraphs (present/absent arcs) easily realize $H=7$. The proof must therefore reside in the category of **complete binary orientations** (tournament odd-cycle conflict graphs), which forbid the $K_3$ atom.
 
-### 2. The Mode-A "Peel" and the Bounded Atom
-Integrated the Mode-A (Möbius) tournament peel with the LRC reduction rules (R1/R2/R3 from mac-mini S47).
-- **Reduction Rules:** 
-    - **R1 (Remove-Large):** Mode-A peel equivalent; removes scale-separated speeds using the finite-comb induction.
-    - **R2 (Omit-Prime):** Direct resonance witness; handles rows where a small prime $p \le 13$ divides no speed.
-    - **R3 (Dilation):** Primitive normalization of the speed set.
-- **The Bounded Atom:** After applying R1, R2, and R3, the remaining non-descending object is the **irreducible bounded covering core** (the atom). This atom is the actual theorem target, identified as the $\{consec, GW\}$ (Arithmetic Progression and Goddyn-Wong) tight locus.
+### 2. Forbidden-H7 Conflict Bridge
+The proof is now framed as a "structural impossibility" argument:
+- **Packet Graph:** The vertices of the finite core are identified as sector-pair obligations, exact-period $\phi$ packets, or support-six relation packets.
+- **Conflict Relation:** Edges represent the incompatibility of packets within a single covering certificate.
+- **The Contradiction:** If an LRC(14) disproof exists, it must realize the $K_3$ ($I=7$) atom. However, the tournament conflict category (THM-200/THM-201) proves that a $K_3$ atom cannot remain isolated; it forces extra odd-cycle mass (e.g., a directed $C_5$ support layer), raising the complexity and contradicting the $H=7$ bound.
 
-### 3. Proof Tree and Structural Partition
-The $LRC(14)$ proof is now organized as a boundary-state induction tree:
-- **Omit-Prime Branch:** Direct $t=1/p$ witnesses for $p \le 13$.
-- **Remove-Large Branch:** Scale-hierarchy descent via finite-comb induction.
-- **Multi-Large ($r \le 6$):** Union bound + comb-teeth estimate (KPS-S31v).
-- **Multi-Large ($r \ge 7$):** Second-moment bound with resonant-pair defect.
-- **Bounded Core Atom:** Final closure via finite structural extremality (AP/GW rigidity, three-gap hull, depth-parity Newton packets).
+### 3. Namespace and Structural Repair
+- **HYP-2908 Repair:** Stabilized the hypothesis namespace following the cluster-wide state lift, ensuring all cross-references to the conflict-realizability functors are consistent.
+- **HYP-2907 Guardrail:** Integrated the digraph realizability audit, confirming that the tournament scar is orientation-born and disappears if the quotient forgets the binary-orientation state.
 
-### 4. S31x Multiplicative Integration
-Connected the scale-separated cluster factorization $meas(Safe(S_1 \cup S_2)) \sim meas(Safe(S_1)) \cdot meas(Safe(S_2))$ to the tournament strong-component multiplicativity. The finite-comb boundary state functions as the error ledger for this cluster product, providing an effective induction step.
+### 4. Integration with Bounded Atom (HYP-2905)
+Connected the state-lift bridge to the "Bounded Core Atom" identified in earlier induction. The final proof step is now the **LRC analogue of the H=21 Moon step**:
+- Proving the reduction rules exhaust all non-atomic rows.
+- Proving the irreducible $\{consec, GW\}$ atom corresponds to the only allowable conflict structures, with all other covering cores forcing forbidden complexity.
 
 ### 5. Net Impact
-This synthesis stabilizes the final proof strategy by framing the "bounded core" as a structural atom rather than a failure of induction. It replaces the pursuit of a "raw" induction with a labelled state-propagation problem, focusing the remaining effort on proving that the $\{consec, GW\}$ atom is the unique tight locus among bounded covering rows.
+This checkpoint stabilizes the project's "terminal node." By framing the LRC(14) closure as the structural impossibility of a $K_3$ conflict atom, the proof gains a precise functorial bridge to the project's most robust tournament theorems. The cluster is now synchronized on the requirements for the final packet-extraction and conflict-realizability proofs.
