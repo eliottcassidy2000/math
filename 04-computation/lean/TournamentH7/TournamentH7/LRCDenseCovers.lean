@@ -35,6 +35,74 @@ def Dense17 (S : Finset ℝ) : Prop :=
   (∀ a ∈ S, ∀ b ∈ S, a < b → (∀ c ∈ S, a < c → b ≤ c) → b - a ≤ 1 / 7) ∧
   (∀ b ∈ S, (∀ c ∈ S, c ≤ b) → 1 - b ≤ 1 / 7)
 
+private lemma fract_not_mem_Ioc_of_pos_gt {y : ℝ} (hy : 1 / 7 < y) (hy1 : y < 1) :
+    Int.fract y ∉ Set.Ioc (0 : ℝ) (1 / 7) := by
+  have hy0 : 0 ≤ y := by linarith
+  rw [Int.fract_eq_self.mpr ⟨hy0, hy1⟩]
+  intro hmem
+  exact (not_le_of_gt hy) (Set.mem_Ioc.mp hmem).2
+
+private lemma fract_sub_eq_add_one {c a : ℝ}
+    (hc0 : 0 ≤ c) (hca : c < a) (ha1 : a < 1) :
+    Int.fract (c - a) = c - a + 1 := by
+  rw [Int.fract_eq_iff]
+  refine ⟨?_, ?_, -1, ?_⟩
+  · linarith
+  · linarith
+  · norm_num
+
+private lemma fract_not_mem_Ioc_of_wrap {c a : ℝ} (hc0 : 0 ≤ c) (hca : c < a)
+    (hgap : 1 / 7 < 1 - a) :
+    Int.fract (c - a) ∉ Set.Ioc (0 : ℝ) (1 / 7) := by
+  have ha1 : a < 1 := by linarith
+  have hfract : Int.fract (c - a) = c - a + 1 :=
+    fract_sub_eq_add_one hc0 hca ha1
+  rw [hfract]
+  intro hmem
+  have hgt : 1 / 7 < c - a + 1 := by linarith
+  exact (not_le_of_gt hgt) (Set.mem_Ioc.mp hmem).2
+
+/-- If a finite phase set in `[0,1)` is not `1/7`-dense, then some phase has an
+empty right arc of length `1/7`, expressed as a fractional displacement
+condition.  This is the finite cyclic-gap bridge behind the future
+`denseSetᶜ -> goodSet` readout. -/
+theorem exists_phase_arc_empty_of_not_dense
+    (S : Finset ℝ) (hsub : ∀ s ∈ S, 0 ≤ s ∧ s < 1) (hnd : ¬ Dense17 S) :
+    ∃ a ∈ S, ∀ c ∈ S, Int.fract (c - a) ∉ Set.Ioc (0 : ℝ) (1 / 7) := by
+  unfold Dense17 at hnd
+  have hsplit := not_and_or.mp hnd
+  rcases hsplit with hbad | hbad
+  · push Not at hbad
+    rcases hbad with ⟨a, haS, b, hbS, hab, hsucc, hgap⟩
+    refine ⟨a, haS, ?_⟩
+    intro c hcS
+    by_cases hca_eq : c = a
+    · rw [hca_eq, sub_self]
+      simp
+    · by_cases hac : a < c
+      · have hbc : b ≤ c := hsucc c hcS hac
+        have hc1 : c < 1 := (hsub c hcS).2
+        have ha0 : 0 ≤ a := (hsub a haS).1
+        exact fract_not_mem_Ioc_of_pos_gt (by linarith) (by linarith)
+      · have hca : c < a := by
+          have hle : c ≤ a := le_of_not_gt hac
+          exact lt_of_le_of_ne hle hca_eq
+        have hc0 : 0 ≤ c := (hsub c hcS).1
+        have hb1 : b < 1 := (hsub b hbS).2
+        exact fract_not_mem_Ioc_of_wrap hc0 hca (by linarith)
+  · push Not at hbad
+    rcases hbad with ⟨a, haS, hamax, hgap⟩
+    refine ⟨a, haS, ?_⟩
+    intro c hcS
+    by_cases hca_eq : c = a
+    · rw [hca_eq, sub_self]
+      simp
+    · have hca : c < a := by
+        have hle : c ≤ a := hamax c hcS
+        exact lt_of_le_of_ne hle hca_eq
+      have hc0 : 0 ≤ c := (hsub c hcS).1
+      exact fract_not_mem_Ioc_of_wrap hc0 hca hgap
+
 /-- **The pointwise inclusion `D ⊆ p0`.**  If `S ⊆ [0,1)` is 1/7-dense and the
 anchor `0 ∈ S`, then every inner sector `[j/7, (j+1)/7)` (`1 ≤ j ≤ 6`) contains a
 phase of `S`. -/
@@ -135,6 +203,14 @@ def coverSet (E : List ℤ) : Set ℝ :=
 /-- The **dense set** `{x : the phases are 1/7-dense}`. -/
 def denseSet (E : List ℤ) : Set ℝ := {x | Dense17 (phaseFinset E x)}
 
+/-- The phase-level empty-arc event: some phase has no other phase in its
+right-hand arc `(0,1/7]` after cyclic displacement.  This is one formal step
+closer to `GoodSet.goodSet`, but still avoids the speed-difference identity
+`fract((b-a)x)=fract(fract(bx)-fract(ax))`. -/
+def phaseGapSet (E : List ℤ) : Set ℝ :=
+  {x | ∃ a ∈ phaseFinset E x, ∀ c ∈ phaseFinset E x,
+      Int.fract (c - a) ∉ Set.Ioc (0 : ℝ) (1 / 7)}
+
 /-- Membership in the phase finset is "is the fractional part of some `e*x`". -/
 theorem mem_phaseFinset {E : List ℤ} {x s : ℝ} :
     s ∈ phaseFinset E x ↔ ∃ e ∈ E, Int.fract ((e : ℝ) * x) = s := by
@@ -153,6 +229,14 @@ theorem phaseFinset_mem_Ico {E : List ℤ} {x s : ℝ} (hs : s ∈ phaseFinset E
   rw [mem_phaseFinset] at hs
   obtain ⟨e, _, he⟩ := hs
   exact ⟨he ▸ Int.fract_nonneg _, he ▸ Int.fract_lt_one _⟩
+
+/-- The complement of the dense event lies in the phase-level empty-arc event.
+This is the set-level version of `exists_phase_arc_empty_of_not_dense`. -/
+theorem denseSet_compl_subset_phaseGapSet (E : List ℤ) :
+    (denseSet E)ᶜ ⊆ phaseGapSet E := by
+  intro x hx
+  exact exists_phase_arc_empty_of_not_dense (phaseFinset E x)
+    (fun s hs => phaseFinset_mem_Ico hs) hx
 
 /-- **Pointwise `D ⊆ p0`.**  If the phases are 1/7-dense at `x` (and `0 ∈ E`), every
 inner sector is hit at `x`. -/
@@ -304,8 +388,10 @@ theorem slowμ_denseSet_le_coverSet (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
 
 #print axioms inner_sector_covered
 #print axioms dense_covers_all_inner
+#print axioms exists_phase_arc_empty_of_not_dense
 #print axioms denseSet_subset_coverSet
 #print axioms coverSet_compl_subset_denseSet_compl
+#print axioms denseSet_compl_subset_phaseGapSet
 #print axioms measurableSet_coverSet
 #print axioms measurableSet_safeSet
 #print axioms volume_denseSet_le_coverSet

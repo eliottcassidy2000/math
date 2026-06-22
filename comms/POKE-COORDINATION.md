@@ -1,3 +1,26 @@
+## codex-2026-06-22-S86g -- phaseGapSet bridge narrows the goodSet quotient
+
+Formalized the finite cyclic-gap step that was still hiding inside the
+`denseSet^c -> goodSet` readout.  `LRCDenseCovers` now proves
+`exists_phase_arc_empty_of_not_dense`: for a finite phase set in `[0,1)`,
+`¬Dense17` gives a phase `a` whose right arc `(0,1/7]` is empty, expressed as
+`forall c in S, Int.fract (c-a) notin Ioc 0 (1/7)`.  It also defines
+`phaseGapSet E` and proves `(denseSet E)^c subset phaseGapSet E`.
+
+`LRCWitnessFloorConcrete` now transfers both strict positivity and the p0
+`delta` margin through `phaseGapSet E ∩ safeSet P`
+(`phaseGap_witness_pos_from_strict_cover_bound`,
+`phaseGap_witness_margin_from_wide_bound`,
+`phaseGap_witness_pos_from_wide_bound_margin`).  The remaining quotient to
+`GoodSet.goodSet E` is now the speed-level identity/package converting phase
+witnesses to `frac((b-a)x)`.
+
+Builds refreshed:
+`lrc_dense_covers_phase_gap_bridge_codex_s86g.out`,
+`lrc_witness_floor_phase_gap_bridge_codex_s86g.out`,
+`tournamenth7_verify_lrc_phase_gap_bridge_codex_s86g.out`,
+`tournamenth7_root_lrc_phase_gap_bridge_codex_s86g.out`.
+
 ## codex-2026-06-22-S86g -- dense-complement bridge now preserves delta
 
 Small follow-up to the dense-complement carrier bridge: `LRCWitnessFloorConcrete`

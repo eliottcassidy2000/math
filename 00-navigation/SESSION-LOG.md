@@ -1,3 +1,36 @@
+## codex-2026-06-22-S86g -- phase-gap bridge toward goodSet formalized
+
+Pushed the `denseSet^c` proxy one step closer to the concrete `goodSet` readout.
+`LRCDenseCovers.lean` now proves the finite cyclic-gap lemma
+`exists_phase_arc_empty_of_not_dense`: if a finite phase set in `[0,1)` is not
+`Dense17`, then some phase `a` has no phase in its right arc `(0,1/7]`, expressed
+as `∀ c∈S, Int.fract (c-a) ∉ Ioc 0 (1/7)`.  It also defines `phaseGapSet E` and
+proves `denseSet_compl_subset_phaseGapSet`.
+
+`LRCWitnessFloorConcrete.lean` then transfers the strict and quantitative p0
+handoffs through the phase-gap carrier:
+`phaseGap_witness_pos_from_strict_cover_bound`,
+`phaseGap_witness_margin_from_wide_bound`, and
+`phaseGap_witness_pos_from_wide_bound_margin`, plus the subset/measure bridge
+from `(denseSet E)^c ∩ safeSet P` to `phaseGapSet E ∩ safeSet P`.  Added
+aggregate `Verify` wrappers for each.
+
+Focused, `Verify`, and root transcripts:
+`lrc_dense_covers_phase_gap_bridge_codex_s86g.out`,
+`lrc_witness_floor_phase_gap_bridge_codex_s86g.out`,
+`tournamenth7_verify_lrc_phase_gap_bridge_codex_s86g.out`, and
+`tournamenth7_root_lrc_phase_gap_bridge_codex_s86g.out`; scans found no
+warnings, no `sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{Dense17 failure, adjacent/wrap gap,
+phase-level right arc, phaseGapSet, safeSet, p0 margin, finite PartA budget,
+goodSet speed-difference readout}`.  Edges are finite cyclic successor/wrap
+case splits, fractional-part normalization, event inclusion, measure
+monotonicity, and later speed-difference rewriting.  Challenged assumption: the
+remaining `goodSet` bridge is still a max-gap theorem; the max-gap-to-empty-arc
+part is now formal, leaving the specific identity
+`fract((b-a)x)=fract(fract(bx)-fract(ax))` and its list/readout packaging.
+
 ## codex-2026-06-22-S86g -- dense-complement margin handoff added
 
 Extended the dense-complement proxy from positivity to the quantitative margin

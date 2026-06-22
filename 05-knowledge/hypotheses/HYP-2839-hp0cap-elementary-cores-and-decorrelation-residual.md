@@ -64,6 +64,14 @@ The quantitative version is also formalized:
 `delta <= meas((denseSet E)^c ∩ safeSet P)`, from
 `p0(E) <= cap_k - delta`, `cap_k <= meas(G_P)`, and `0 ∈ E`.
 
+The phase-gap version narrows the remaining `goodSet` readout further:
+`exists_phase_arc_empty_of_not_dense` proves the finite cyclic-gap step,
+`(denseSet E)^c ⊆ phaseGapSet E`, and
+`phaseGap_witness_margin_from_wide_bound` carries the same p0 margin to
+`meas(phaseGapSet E ∩ safeSet P)`.  The open quotient is now the
+speed-difference identity into `GoodSet.goodSet`, not the max-gap/empty-arc
+finite geometry.
+
 ## The residual (the genuinely analytic part, NOT elementary)
 The binding cases k=8..12 route through the decorrelated closed form (THM-534, kps-S24):
 > `p0(E) <= p0_decorr(E) = sum_t P_t^{(r)} p_t(B)`  [RESONANCE BOUND -- the residual]
