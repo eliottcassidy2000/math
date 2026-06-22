@@ -20146,3 +20146,59 @@ cuts, insertion slots, strong components, old `H` atoms, apex tile orientation,
 even-graph holes, and proof obligations; selected carrier is insertion profile
 because it preserves `H`
 exactly under apex extension.
+
+## codex-2026-06-22-S102 -- LRC14 exact-period packet atlas after S101 signed-current balance
+
+User prompt: creatively apply the strong-component atom / E7 C5 / totient
+packet ideas to LRC14, with the latest focus on exact-period packets and the
+HYP-2883 signed-current graph.  Pulled first and integrated incoming S101:
+`lrc14_repeated_packet_graph_codex_s101.py` and HYP-2883 already prove the
+HYP-2632 repeated-residue finite kernel is locally balanced as a signed graph.
+
+Added `04-computation/lrc14_exact_period_packet_atlas_codex_s102.py` and
+stored `05-knowledge/results/lrc14_exact_period_packet_atlas_codex_s102.out`.
+The script moves from the abstract HYP-2632 packet to actual rational witness
+packets: for denominator `D`, keep units `a mod D`; `a/D` is safe iff
+`14*min(sa mod D,D-sa mod D)>=D` for every speed.  This keeps the exact-period
+`phi(D)` packet law before scalarizing to `N(S,D)`.
+
+Main findings:
+
+- Fixed finite denominator bases are charts, not closures.  The divisor-loaded
+  row `divload_B90={1,...,11,13,84*lcm(1,...,90)}` kills the prompt-like basis
+  `(21,41,53,83,89)` completely and first opens at `D=97`.
+- Tested first exact-period witnesses include `cover_84:D=41`, `tower_m6:D=53`,
+  `tower_m53:D=55`, `AP12_182:D=27`, `floor_star:D=23`, and
+  `divload_B60:D=67`.
+- Safe packets retain mod-7/affine signal before scalarization.  Aggregate
+  mixed-case lens strength is
+  `mod14 > mod7 > chi_7 x affine_pair > affine_pair > chi_7 > parity`.
+  `mod14` winning is just the `2*7` band; the proof-relevant signal is that
+  the HYP-2632/HYP-2883/HYP-2884 mod-7/affine signed-current layer is visible
+  in real denominator packets.
+- Scaled `q=14V` witnesses decompose into many exact denominators, not one
+  bounded-D certificate.  For example `cover_84` at `q=1176` has `12` good
+  residues with top exact denominators `1176:4,392:4,147:2,98:2`; `tower_m53`
+  at `q=62328` has `706` good residues with top exact denominators
+  `62328:212,31164:110,20776:104,...`.
+- `phi` is CRT-multiplicative, but LRC safety is not.  Example:
+  `cover_84` has `rate(7*13)=1/36` while `rate(7)*rate(13)=0`.  This defect is
+  the LRC analogue of a labelled strong-component/ear atom.
+
+Created HYP-2885 and reflection
+`07-reflections/lrc14-exact-period-packet-atlas-codex-s102.md`.  Proof target:
+delete denominators killed by divisibility, lift the HYP-2883/HYP-2884 local
+signed-current balance on exact-period residue fibers, retain CRT defects as
+labelled atoms, and route incoherent high-denominator packets to the existing
+spectrum/L2/Part-A floor.  No LRC14 proof claimed.
+
+Assumption challenge / Tournament Analysis: considered runners, denominators,
+exact-period units, reduced denominators in `q=14V`, mod-7 residues, `chi_7`,
+affine-pair classes, CRT factors, support-six classes, and proof obligations.
+Selected vertices are quotient lenses on exact-period packets.  Pairwise
+observable is aggregate weighted variance explained for packet safety; gauge
+orients toward greater explained variance; fingerprint is transitive
+(`score_histogram={0:1,1:1,2:1,3:1,4:1,5:1}`, no directed 3-cycles, one
+Hamiltonian path).  Challenged assumption: successful sampled finite bases
+should become a universal certificate basis; the corrected upgrade is an
+adaptive exact-period atlas plus a proof that the atlas cannot be covered.
