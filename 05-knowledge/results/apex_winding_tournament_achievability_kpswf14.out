@@ -2,3 +2,176 @@ C:\Users\Eliott\Documents\GitHub\math\04-computation\apex_winding_tournament_ach
   13-element multiset of residues drawn from Z/14 \ {0} (the "14-free"
 C:\Users\Eliott\Documents\GitHub\math\04-computation\apex_winding_tournament_achievability_kpswf14.py:548: SyntaxWarning: invalid escape sequence '\{'
   (A) ALL 13 residues DISTINCT => the multiset IS {1,...,13} = Z/14\{0}
+########################################################################
+# APEX WINDING TOURNAMENT -- ISO-CLASS ACHIEVABILITY (THREAD 1)
+# kind-pasteur-2026-06-22, LRC(14) tight-locus census via tournaments
+########################################################################
+# units mod 14 = [1, 3, 5, 9, 11, 13]
+# Apex rule: i->j iff (r_i - r_j)*a mod 14 in {1..6}; ==7 tie-break by index.
+
+GW speeds  = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+GW residues mod 14 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13]  (multiset)
+GW residue Counter = {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 2, 11: 1, 13: 1}
+  => residue 10 doubled (speeds 10 & 24), residue 12 vacated.
+
+========================================================================
+  AP: {1,...,13}  (arithmetic progression)
+  residues (mod 14) = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+========================================================================
+   !! a=3 gives a NON-isomorphic tournament (iso class NOT a-invariant)
+   !! a=5 gives a NON-isomorphic tournament (iso class NOT a-invariant)
+   !! a=9 gives a NON-isomorphic tournament (iso class NOT a-invariant)
+   !! a=11 gives a NON-isomorphic tournament (iso class NOT a-invariant)
+   !! a=13 gives a NON-isomorphic tournament (iso class NOT a-invariant)
+  iso class a-invariant over units [1, 3, 5, 9, 11, 13]: False
+  score sequence    : (6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6)
+    distinct scores : [6]  (#distinct = 1)
+    REGULAR (all eq): True
+  #3-cycles c3      : 91   (formula == direct: True)
+  H (#Ham paths)    : 3711175
+  self-converse     : True
+  |Aut(T)|          : 13
+
+------------------------------------------------------------------------
+  GW NOTE: residue 10 is DOUBLED, so two vertices coincide on the circle.
+  The pure winding rule gives delta=0 between them (a genuine tie, not
+  antipodal). We resolve the d==0 pair by index tie-break (lower->higher)
+  for a well-defined 13-vertex tournament, and record it explicitly.
+------------------------------------------------------------------------
+
+========================================================================
+  GW: {1,...,11,13,24}  (Goddyn-Wong)
+  residues (mod 14, multiset) = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13]
+========================================================================
+  iso class a-invariant over units (with tie-break): False
+  score sequence    : (5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+    distinct scores : [5, 6, 7]  (#distinct = 3)
+    REGULAR (all eq): False
+  #3-cycles c3      : 89   (formula==direct: True)
+  H (#Ham paths)    : 3351471
+  self-converse     : False
+  |Aut(T)|          : 1
+
+########################################################################
+# (2) ACHIEVABLE APEX ISO CLASSES over size-13 residue MULTISETS
+#     drawn from Z/14 \ {0} = {1,...,13}  (the 14-free residue supports)
+########################################################################
+# A size-13 multiset of residues in {1..13}. The number of such
+# multisets is C(13+13-1,13)=C(25,13)=5,200,300 -- too many to brute all.
+# But the apex tournament only sees residue VALUES, and runs of EQUAL
+# residues collapse to coincident circle points. The distinct cases that
+# matter for a TIGHT candidate are governed by how the 13 residues tile
+# Z/14. We enumerate the structurally relevant families.
+
+[B] 'one-doubled / one-missing' family (156 residue patterns):
+  enumerated 156 patterns
+
+[C] degenerate sample (tripled, multi-missing) -- random 14-free multisets:
+
+------------------------------------------------------------------------
+  TOTAL distinct apex iso classes found: 4145
+------------------------------------------------------------------------
+
+  iso-class #0:   <== REGULAR R_13
+    score (sorted)  : (6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6)
+    #distinct scores: 1   regular=True
+    c3 = 91,  H = 3711175,  self_converse=True,  |Aut|=13
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('ALL-DISTINCT {1..13}', (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13))
+
+  iso-class #13: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3577045,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('missing=2,doubled=1', (1, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13))
+
+  iso-class #26: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3577045,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('missing=3,doubled=2', (1, 2, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13))
+
+  iso-class #39: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3577045,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('missing=4,doubled=3', (1, 2, 3, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13))
+
+  iso-class #52: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3577045,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('missing=5,doubled=4', (1, 2, 3, 4, 4, 6, 7, 8, 9, 10, 11, 12, 13))
+
+  iso-class #65: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3577045,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('missing=6,doubled=5', (1, 2, 3, 4, 5, 5, 7, 8, 9, 10, 11, 12, 13))
+
+  iso-class #78: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3577045,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('missing=7,doubled=6', (1, 2, 3, 4, 5, 6, 6, 8, 9, 10, 11, 12, 13))
+
+  iso-class #12: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3551083,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 2
+    sample witnesses (label, sorted-residues):
+       ('missing=1,doubled=13', (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 13))
+       ('missing=13,doubled=12', (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12))
+
+  iso-class #66: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3551083,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('missing=6,doubled=7', (1, 2, 3, 4, 5, 7, 7, 8, 9, 10, 11, 12, 13))
+
+  iso-class #79: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3551083,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('missing=7,doubled=8', (1, 2, 3, 4, 5, 6, 8, 8, 9, 10, 11, 12, 13))
+
+  iso-class #91: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3551083,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('missing=8,doubled=7', (1, 2, 3, 4, 5, 6, 7, 7, 9, 10, 11, 12, 13))
+
+  iso-class #92: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3551083,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sample witnesses (label, sorted-residues):
+       ('missing=8,doubled=9', (1, 2, 3, 4, 5, 6, 7, 9, 9, 10, 11, 12, 13))
+
+  iso-class #104: 
+    score (sorted)  : (5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    #distinct scores: 3   regular=False
+    c3 = 90,  H = 3551083,  self_converse=False,  |Aut|=1
+    multiplicity in sample: 1
+    sampl

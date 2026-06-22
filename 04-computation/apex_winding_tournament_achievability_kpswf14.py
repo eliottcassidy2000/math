@@ -15,7 +15,7 @@ denominator-14 apex).  The point of this thread is:
         - AP   = {1,...,13}               (the arithmetic progression)
         - GW   = {1,...,11,13,24}         (Goddyn-Wong)
   (2) Enumerate which iso classes are ACHIEVABLE as apex tournaments of *any*
-      13-element multiset of residues drawn from Z/14 \ {0} (the "14-free"
+      13-element multiset of residues drawn from Z/14 minus {0} (the "14-free"
       residue multisets of size 13).  These are exactly the apex tournaments
       that any tight candidate could possibly produce.
   (3) Decide the NECESSARY-but-not-sufficient verdict: is "apex tournament =
@@ -27,7 +27,7 @@ EXACT TOURNAMENT DEFINITION (apex, denominator 14)
 --------------------------------------------------
 Fix a unit a in (Z/14)^* = {1,3,5,9,11,13}.  Vertices = the 13 speeds of S
 (equivalently their residues r_i = s_i mod 14, which for the relevant sets are
-all distinct and nonzero -- a 13-subset of {1..13} = Z/14 \ {0}).  Define
+all distinct and nonzero -- a 13-subset of {1..13} = Z/14 minus {0}).  Define
   delta_{ij} = (r_i - r_j) * a  mod 14   in {0,1,...,13}.
 Arc orientation:
   i -> j  iff  delta_{ij} in {1,2,3,4,5,6}      (the "forward" half-circle)
@@ -35,9 +35,16 @@ Arc orientation:
   if delta_{ij} == 7  (antipodal, exact half): tie-break by index -- lower
       index -> higher index.  (delta==0 only for i==j, no arc.)
 
-Multiplying every residue's *difference* by a unit a is a ROTATION of Z/14, so
-the resulting tournament's iso class is INDEPENDENT of a (and we verify this).
-We therefore canonically use a=1.
+CORRECTION (verified by this script's a-invariance check, and by
+apex_ainvariance_probe / apex_true_optimum_tournament): the prompt's claim that
+"unit mult = rotation => iso class is a-invariant" is FALSE.  Multiplication
+x->a*x by a unit a in (Z/14)^* is the Z/14 group AUTOMORPHISM, NOT a rotation
+(rotation = TRANSLATION x->x+c).  The automorphism permutes residues but does
+NOT preserve the forward half-arc {1..6}.  Result: the AP gives a DIFFERENT iso
+class at each unit phase a (only a=1 yields the regular R_13).  The genuine
+lonely-runner apex is the SPECIFIC optimum phase t*=a*/14; for the AP the
+canonical apex residues {1,...,13} (a*=1) give the regular R_13.  We report all
+six unit phases and flag the a-dependence explicitly.
 
 The score formula and c3 formula are the project's: with k=13,
   c3(T) = C(k,3) - sum_i C(s_i, 2),    (HYP-2605 R4; also tournament_H.py)
@@ -66,7 +73,8 @@ def apex_adj(residues, a=1):
 
     residues: list of integers in {1,...,13} (must be pairwise distinct, all
               nonzero mod 14).  Vertex order = list order (index i for residues[i]).
-    a:        unit mod 14 (rotation); iso class is a-invariant.
+    a:        unit mod 14.  NOTE: x->a*x is the Z/14 AUTOMORPHISM, NOT a rotation;
+              the iso class is a-DEPENDENT (verified false: only a=1 gives R_13).
     Returns adj[i][j] = 1 iff i -> j.
     """
     k = len(residues)
@@ -420,7 +428,7 @@ def main():
     print("# Apex rule: i->j iff (r_i - r_j)*a mod 14 in {1..6}; ==7 tie-break by index.")
 
     # ----- (1) AP and GW apex invariants -----
-    # AP residues = {1,...,13} (already in Z/14\{0}, all distinct)
+    # AP residues = {1,...,13} (already in Z/14 minus {0}, all distinct)
     AP_res = list(range(1, 14))
     # GW speeds {1,...,11,13,24}; residues mod 14: 24 -> 10.  So GW residues =
     #   {1,2,...,11,13,10}  =>  10 appears TWICE (from speed 10 and speed 24),
@@ -545,7 +553,7 @@ def enumerate_achievable(results):
     """Enumerate achievable apex iso classes.
 
     KEY OBSERVATION: A size-13 residue multiset from {1..13}. Two regimes:
-      (A) ALL 13 residues DISTINCT => the multiset IS {1,...,13} = Z/14\{0}
+      (A) ALL 13 residues DISTINCT => the multiset IS {1,...,13} = Z/14 minus {0}
           (the unique 13-subset). This is the AP / one-hole-tiling case.
           => the apex tournament is the REGULAR rotational R_13 (unique).
       (B) NOT all distinct => some residue repeats => at least one residue class

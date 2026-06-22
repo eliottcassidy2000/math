@@ -1,0 +1,176 @@
+########################################################################
+# THREAD 1 (DEFINITIVE): apex winding tournament at the TRUE optimum
+# Fixing the a-invariance error in HYP-2922.
+########################################################################
+# units mod 14 = [1, 3, 5, 9, 11, 13]
+# The winding tournament at t=a*/14 is the literal '(s_i-s_j)*a* mod14
+# in {1..6}' rule for the SPECIFIC optimum unit a*, NOT a-invariant.
+
+========================================================================
+  AP {1..13}: speeds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+========================================================================
+  Loneliness  min_v ||s_v * (a/14)||  at apex phases t=a/14:
+    a= 1:  L = 1/14  <-- = 1/14 (apex optimum)
+    a= 2:  L = 0
+    a= 3:  L = 1/14  <-- = 1/14 (apex optimum)
+    a= 4:  L = 0
+    a= 5:  L = 1/14  <-- = 1/14 (apex optimum)
+    a= 6:  L = 0
+    a= 7:  L = 0
+    a= 8:  L = 0
+    a= 9:  L = 1/14  <-- = 1/14 (apex optimum)
+    a=10:  L = 0
+    a=11:  L = 1/14  <-- = 1/14 (apex optimum)
+    a=12:  L = 0
+    a=13:  L = 1/14  <-- = 1/14 (apex optimum)
+  max loneliness over apex phases = 1/14; attained at a in [1, 3, 5, 9, 11, 13]
+  Global guard sweep (t=b/D, D<=56): confirming max loneliness ...
+    global max loneliness (D<=56) = 1/14 at t=1/14  (== apex 1/14: True)
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=1:
+    score        = (6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6)
+    REGULAR      = True  (distinct scores: [6])
+    c3           = 91
+    H            = 3711175
+    self-converse= True
+    |Aut|        = 13
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=3:
+    score        = (5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+    REGULAR      = False  (distinct scores: [5, 6, 7])
+    c3           = 89
+    H            = 3394355
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=5:
+    score        = (5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+    REGULAR      = False  (distinct scores: [5, 6, 7])
+    c3           = 89
+    H            = 3351471
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=9:
+    score        = (5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+    REGULAR      = False  (distinct scores: [5, 6, 7])
+    c3           = 87
+    H            = 3097953
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=11:
+    score        = (5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+    REGULAR      = False  (distinct scores: [5, 6, 7])
+    c3           = 87
+    H            = 3051221
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=13:
+    score        = (5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+    REGULAR      = False  (distinct scores: [5, 6, 7])
+    c3           = 85
+    H            = 2641713
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+========================================================================
+  GW {1..11,13,24}: speeds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+========================================================================
+  Loneliness  min_v ||s_v * (a/14)||  at apex phases t=a/14:
+    a= 1:  L = 1/14  <-- = 1/14 (apex optimum)
+    a= 2:  L = 0
+    a= 3:  L = 1/14  <-- = 1/14 (apex optimum)
+    a= 4:  L = 0
+    a= 5:  L = 1/14  <-- = 1/14 (apex optimum)
+    a= 6:  L = 0
+    a= 7:  L = 0
+    a= 8:  L = 0
+    a= 9:  L = 1/14  <-- = 1/14 (apex optimum)
+    a=10:  L = 0
+    a=11:  L = 1/14  <-- = 1/14 (apex optimum)
+    a=12:  L = 0
+    a=13:  L = 1/14  <-- = 1/14 (apex optimum)
+  max loneliness over apex phases = 1/14; attained at a in [1, 3, 5, 9, 11, 13]
+  Global guard sweep (t=b/D, D<=56): confirming max loneliness ...
+    global max loneliness (D<=56) = 1/14 at t=1/14  (== apex 1/14: True)
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=1:
+    score        = (5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+    REGULAR      = False  (distinct scores: [5, 6, 7])
+    c3           = 89
+    H            = 3351471
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=3:
+    score        = (5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+    REGULAR      = False  (distinct scores: [5, 6, 7])
+    c3           = 86
+    H            = 2876741
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=5:
+    score        = (5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+    REGULAR      = False  (distinct scores: [5, 6, 7])
+    c3           = 86
+    H            = 2772327
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=9:
+    score        = (4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+    REGULAR      = False  (distinct scores: [4, 5, 6, 7, 8])
+    c3           = 80
+    H            = 2015017
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=11:
+    score        = (5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+    REGULAR      = False  (distinct scores: [5, 6, 7])
+    c3           = 88
+    H            = 3261013
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+  WINDING TOURNAMENT at TRUE OPTIMUM t*=a*/14, a*=13:
+    score        = (4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+    REGULAR      = False  (distinct scores: [4, 5, 6, 7, 8])
+    c3           = 79
+    H            = 1780425
+    self-converse= False
+    |Aut|        = 1
+    residue-rule (s_i-s_j)*a* mod14 in {1..6} matches winding(t*): True
+
+########################################################################
+# VERDICT
+########################################################################
+AP true-optimum tournament REGULAR at some optimal a*: True; regular-H values = [3711175]
+  => AP tight optimum  <->  REGULAR rotational R_13, H = 3711175.
+GW true-optimum tournament(s):
+  a*=1: score-regular=False, c3=89, H=3351471, self-conv=False, |Aut|=1
+  a*=3: score-regular=False, c3=86, H=2876741, self-conv=False, |Aut|=1
+  a*=5: score-regular=False, c3=86, H=2772327, self-conv=False, |Aut|=1
+  a*=9: score-regular=False, c3=80, H=2015017, self-conv=False, |Aut|=1
+  a*=11: score-regular=False, c3=88, H=3261013, self-conv=False, |Aut|=1
+  a*=13: score-regular=False, c3=79, H=1780425, self-conv=False, |Aut|=1
+
+KEY CORRECTION recorded: the apex winding tournament is NOT a-invariant.
+Only the SPECIFIC optimum a* (the unit at which the lonely runner attains
+its max gap 1/14) gives the regular R_13 for the AP. 'unit mult = rotation'
+was the bug: multiplication x->a*x is the Z/14 AUTOMORPHISM, not a
+translation, and it does NOT preserve the forward arc {1..6}.
