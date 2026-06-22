@@ -2933,9 +2933,12 @@ The S31t/HYP-2901 Bonferroni-3 target is correct only after an activation-depth
 split.  Exact rational integration gives a counterexample to the universal
 third-order claim: `B={0,1,2,3}`, `F={16,19,22,25,28}` has `T1=T2=0`,
 `T3>0`, `T4>0`, `T5<0`, and `T_{>=4}=11321/6144600>0`, so third order
-underestimates `p0`.  The right quotient is the first live Newton layer
-`r0=min{r:T_r!=0}`: edge-active rows (`r0=2`) keep the Bonferroni-3 tail target
-`T_{>=4}<=0`, while triple-active rows (`r0=3`) shift the first upper target to
-order 4 with `T_{>=5}<=0`.  This preserves the corrected Legendre/Venn address
-but prevents scalarizing all wide rows into the same truncation level.  ->
+underestimates `p0`.  Incoming KPS S31u adds high-depth spread-far failures
+with `T1=T2=T3=0`, but these are slack (`p0<<cap`).  The right quotient is the
+first live Newton layer `r0=min{r:T_r!=0}`: corner/edge-active rows (`r0<=2`)
+keep the Bonferroni-3 tail target `T_{>=4}<=0`, triple-active rows (`r0=3`)
+shift the first upper target to order 4 with `T_{>=5}<=0`, and `r0>=4` rows
+need a spread-far slack or finite-atlas discharge.  This preserves the
+corrected Legendre/Venn address but prevents scalarizing all wide rows into
+the same truncation level.  ->
 HYP-2903, HYP-2901, HYP-2902, THM-548, THM-557, OPEN-Q-108.
