@@ -75,8 +75,14 @@ at `05-knowledge/results/lrc14_ap_gw_common_conditions_codex_s124.out`.
 Known rows:
 
 - AP and GW pass every filter and have exact `M=1/14`, denominator set `{14}`.
+- The residue liar `{1,...,11,13,26}` has the same mod-14 residue multiset as
+  AP and passes the residue-shell filters, but it fails the divisor threshold:
+  `q(S)=12`, `M=1/12`, and the first failed stack condition is
+  `punctured_q_cover`.  This is the executable version of the rule
+  "residues lie; divisibility tells the truth."
 - The near miss `{1,...,11,13,36}` passes through the single-even-dipole layer
-  but fails the one-petal layer and escapes off apex with exact `M=3/41`.
+  but fails the one-petal layer and escapes off apex with exact `M=3/41`;
+  the output records the Farey check `det[[1,3],[14,41]]=-1`.
 
 Bank results:
 
@@ -90,6 +96,14 @@ Bank results:
 - Primitive bounded `13`-subsets of `[1,19]`: `27132` rows.  Since `24` is
   outside the bank, the final stack leaves AP alone, with `tight=1`,
   `loose=0`, `below=0`.
+- Minimal AP-doubling petals `v -> 2v` for `v=7,...,13`: only `v=12`
+  has no coprime blocker in the Goddyn-Wong window `[14-v,27-2v]`, and it is
+  the only row in the ledger with `M=1/14`.  The full exact list is:
+  `7->14` has `q=15`, gate false, `M=1/11`; `8->16` has `q=14`, gate false,
+  `M=2/23`; `9->18` has `q=14`, gate false, `M=2/23`; `10->20` has `q=14`,
+  gate false, `M=2/27`; `11->22` has `q=14`, gate false, `M=2/25`;
+  `12->24` has `q=14`, gate true, `M=1/14`; `13->26` has `q=14`, gate false,
+  `M=2/27`.
 
 Tournament Analysis on the condition carrier used the conditions as vertices,
 pass-set inclusion over the single-swap bank as the pairwise observable, and a
@@ -117,8 +131,9 @@ only tight acceleration is the high-composite, divisor-compensating top petal
 `12 -> 24`; `8 -> 16`, `10 -> 20`, and higher lifts such as `12 -> 36` all
 escape to denominators other than `14`.
 
-This does not prove the LRC14 tight-locus census.  It converts the census into
-a stack of named failure modes: a hypothetical third tight row must either
-break cofinite/zsum rigidity, break literal complement binding, realize a
-multi-dipole/two-petal structure, or produce a new top-balanced unbounded
-phenomenon not seen by these AP/GW banks.
+This completes the local AP-petal census inside the audited banks, including
+the two-replacement bank `<=40`.  It does not prove the full LRC14 tight-locus
+census.  It converts the remaining proof into a stack of named failure modes:
+a hypothetical third tight row must either break cofinite/zsum rigidity, break
+literal complement binding, realize a multi-dipole/two-petal structure, or
+produce a new top-balanced unbounded phenomenon not seen by these AP/GW banks.

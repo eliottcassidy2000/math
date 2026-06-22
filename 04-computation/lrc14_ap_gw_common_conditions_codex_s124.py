@@ -42,6 +42,8 @@ EVENS = (2, 4, 6, 8, 10, 12)
 ODD_SKELETON = (1, 3, 5, 7, 9, 11, 13)
 AP = tuple(range(1, 14))
 GW = tuple(list(range(1, 12)) + [13, 24])
+RESIDUE_LIAR_26 = tuple(list(range(1, 12)) + [13, 26])
+NEAR_MISS_36 = tuple(list(range(1, 12)) + [13, 36])
 
 
 def norm1(x: F) -> F:
@@ -65,6 +67,22 @@ def residue_counts(S: tuple[int, ...]) -> tuple[int, ...]:
 
 def q_punctured_cover(S: tuple[int, ...]) -> bool:
     return all(any(s % q == 0 for s in S) for q in range(2, 14)) and all(s % 14 for s in S)
+
+
+def q_threshold(S: tuple[int, ...]) -> int:
+    """q(S) = first divisor denominator with no multiple in S."""
+    q = 2
+    while any(s % q == 0 for s in S):
+        q += 1
+    return q
+
+
+def missing_divisors(S: tuple[int, ...], top: int = 14) -> tuple[int, ...]:
+    return tuple(q for q in range(2, top + 1) if not any(s % q == 0 for s in S))
+
+
+def same_residue_multiset_as_ap(S: tuple[int, ...]) -> bool:
+    return residue_counts(S) == residue_counts(AP)
 
 
 def unit_cover(S: tuple[int, ...]) -> bool:
@@ -197,6 +215,27 @@ FILTERS = (
 )
 
 
+def first_failed_filter(S: tuple[int, ...]) -> str:
+    for name, pred in FILTERS:
+        if not pred(S):
+            return name
+    return "PASS"
+
+
+def gw_window(v: int) -> tuple[int, int]:
+    """Goddyn-Wong acceleration window for AP {1,...,13} at site v."""
+    return (N - v, 2 * N - 1 - 2 * v)
+
+
+def gw_window_coprime_blockers(v: int) -> tuple[int, ...]:
+    lo, hi = gw_window(v)
+    return tuple(x for x in range(lo, hi + 1) if gcd(x, v) == 1)
+
+
+def gw_gate_passes(v: int) -> bool:
+    return not gw_window_coprime_blockers(v)
+
+
 def candidate_taus(S: tuple[int, ...]) -> set[F]:
     S = tuple(sorted(set(S)))
     cands: set[F] = {F(1, 2)}
@@ -246,8 +285,9 @@ def M_exact(S: tuple[int, ...]) -> tuple[F, tuple[F, ...]]:
 def row_signature(S: tuple[int, ...]) -> str:
     M, pts = M_exact(S)
     kind, missing, extra = even_dipole_data(S)
+    q = q_threshold(S)
     return (
-        f"S={S}, M={M}, denoms={sorted({t.denominator for t in pts})}, "
+        f"S={S}, q={q}, M={M}, denoms={sorted({t.denominator for t in pts})}, "
         f"defect={kind}, missing={missing}, extra={extra}"
     )
 
@@ -317,6 +357,58 @@ def report_bank(name: str, rows: list[tuple[int, ...]], exact_final: bool = True
     print()
 
 
+def report_q_threshold_rows() -> None:
+    print("[q-threshold / residue-liar audit]")
+    print("  q(S)=min d>=2 with no multiple of d in S; the q-witness gives M(S)>=1/q(S).")
+    print("  rows with the same mod-14 residues can split immediately by divisibility.")
+    rows = (
+        ("AP", AP),
+        ("GW 12->24", GW),
+        ("residue_liar 12->26", RESIDUE_LIAR_26),
+        ("Farey near_miss 12->36", NEAR_MISS_36),
+    )
+    for label, S in rows:
+        M, pts = M_exact(S)
+        q = q_threshold(S)
+        det = 1 * 41 - 3 * 14
+        farey = " yes" if M == F(3, 41) else " no"
+        print(
+            f"  {label:<24} q={q:<2} q_witness=1/{q:<2} M={str(M):<5} "
+            f"same_residues_as_AP={same_residue_multiset_as_ap(S)} "
+            f"missing<=14={missing_divisors(S)} first_fail={first_failed_filter(S)} "
+            f"denoms={sorted({t.denominator for t in pts})} farey_3_41={farey}"
+        )
+        if M == F(3, 41):
+            print(f"    Farey check: det[[1,3],[14,41]]={det}.")
+    print()
+
+
+def report_petal_ledger() -> None:
+    print("[Minimal AP-doubling petal ledger]")
+    print("  Rows are AP with one valid replacement v -> 2v.  The GW gate is the")
+    print("  interval [14-v, 27-2v]; it passes exactly when no integer in the")
+    print("  interval is coprime to v.")
+    print(
+        f"  {'v':>2} {'2v':>3} {'q':>2} {'gate':>5} {'window':>9} "
+        f"{'coprime blockers':>19} {'M':>7} {'denoms':>10} {'first failed filter'}"
+    )
+    for v in AP:
+        new = 2 * v
+        S = tuple(sorted((set(AP) - {v}) | {new}))
+        if len(S) != 13 or new in AP:
+            continue
+        M, pts = M_exact(S)
+        lo, hi = gw_window(v)
+        blockers = gw_window_coprime_blockers(v)
+        print(
+            f"  {v:>2} {new:>3} {q_threshold(S):>2} {str(gw_gate_passes(v)):>5} "
+            f"{str((lo, hi)):>9} {str(blockers):>19} {str(M):>7} "
+            f"{str(sorted({t.denominator for t in pts})):>10} {first_failed_filter(S)}"
+        )
+    print("  Only v=12 passes the Jacobsthal/Goddyn-Wong gate and has M=1/14.")
+    print()
+
+
 def condition_tournament(rows: list[tuple[int, ...]]) -> None:
     """Tournament Analysis over conditions.
 
@@ -369,11 +461,19 @@ def main() -> None:
     print("S124 AP/GW COMMON NECESSARY-CONDITION ATLAS")
     print("=" * 78)
     print("Known tight rows:")
-    for label, S in (("AP", AP), ("GW", GW), ("near_miss_36", tuple(list(range(1, 12)) + [13, 36]))):
+    for label, S in (
+        ("AP", AP),
+        ("GW", GW),
+        ("residue_liar_26", RESIDUE_LIAR_26),
+        ("near_miss_36", NEAR_MISS_36),
+    ):
         flags = ", ".join(name for name, pred in FILTERS if pred(S))
         print(f"  {label:<12} {row_signature(S)}")
         print(f"    passes: {flags}")
     print()
+
+    report_q_threshold_rows()
+    report_petal_ledger()
 
     single = bank_single_swaps()
     report_bank("AP single replacements v<=300", single)

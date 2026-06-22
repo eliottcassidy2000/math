@@ -1,12 +1,37 @@
 S124 AP/GW COMMON NECESSARY-CONDITION ATLAS
 ==============================================================================
 Known tight rows:
-  AP           S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), M=1/14, denoms=[14], defect=zero, missing=(), extra=()
+  AP           S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), q=14, M=1/14, denoms=[14], defect=zero, missing=(), extra=()
     passes: punctured_q_cover, unit_cover, exact_unit_shell, exact_odd_skeleton, gcd_shell_profile, cofinite_residue_set, zsum_max, complement_sum14, even_dipole_or_zero, one_petal_or_ap, minimal_one_petal, top_petal_or_ap
-  GW           S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), M=1/14, denoms=[14], defect=single_even_dipole, missing=(12,), extra=(10,)
+  GW           S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), q=14, M=1/14, denoms=[14], defect=single_even_dipole, missing=(12,), extra=(10,)
     passes: punctured_q_cover, unit_cover, exact_unit_shell, exact_odd_skeleton, gcd_shell_profile, cofinite_residue_set, zsum_max, complement_sum14, even_dipole_or_zero, one_petal_or_ap, minimal_one_petal, top_petal_or_ap
-  near_miss_36 S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36), M=3/41, denoms=[41], defect=single_even_dipole, missing=(12,), extra=(8,)
+  residue_liar_26 S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 26), q=12, M=1/12, denoms=[12], defect=zero, missing=(), extra=()
+    passes: unit_cover, exact_unit_shell, exact_odd_skeleton, gcd_shell_profile, cofinite_residue_set, zsum_max, complement_sum14, even_dipole_or_zero, one_petal_or_ap
+  near_miss_36 S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36), q=14, M=3/41, denoms=[41], defect=single_even_dipole, missing=(12,), extra=(8,)
     passes: punctured_q_cover, unit_cover, exact_unit_shell, exact_odd_skeleton, gcd_shell_profile, cofinite_residue_set, zsum_max, complement_sum14, even_dipole_or_zero
+
+[q-threshold / residue-liar audit]
+  q(S)=min d>=2 with no multiple of d in S; the q-witness gives M(S)>=1/q(S).
+  rows with the same mod-14 residues can split immediately by divisibility.
+  AP                       q=14 q_witness=1/14 M=1/14  same_residues_as_AP=True missing<=14=(14,) first_fail=PASS denoms=[14] farey_3_41= no
+  GW 12->24                q=14 q_witness=1/14 M=1/14  same_residues_as_AP=False missing<=14=(14,) first_fail=PASS denoms=[14] farey_3_41= no
+  residue_liar 12->26      q=12 q_witness=1/12 M=1/12  same_residues_as_AP=True missing<=14=(12, 14) first_fail=punctured_q_cover denoms=[12] farey_3_41= no
+  Farey near_miss 12->36   q=14 q_witness=1/14 M=3/41  same_residues_as_AP=False missing<=14=(14,) first_fail=one_petal_or_ap denoms=[41] farey_3_41= yes
+    Farey check: det[[1,3],[14,41]]=-1.
+
+[Minimal AP-doubling petal ledger]
+  Rows are AP with one valid replacement v -> 2v.  The GW gate is the
+  interval [14-v, 27-2v]; it passes exactly when no integer in the
+  interval is coprime to v.
+   v  2v  q  gate    window    coprime blockers       M     denoms first failed filter
+   7  14 15 False   (7, 13) (8, 9, 10, 11, 12, 13)    1/11       [22] punctured_q_cover
+   8  16 14 False   (6, 11)          (7, 9, 11)    2/23       [23] top_petal_or_ap
+   9  18 14 False    (5, 9)           (5, 7, 8)    2/23       [23] unit_cover
+  10  20 14 False    (4, 7)                (7,)    2/27       [27] top_petal_or_ap
+  11  22 14 False    (3, 5)           (3, 4, 5)    2/25       [25] unit_cover
+  12  24 14  True    (2, 3)                  ()    1/14       [14] PASS
+  13  26 14 False    (1, 1)                (1,)    2/27       [27] unit_cover
+  Only v=12 passes the Jacobsthal/Goddyn-Wong gate and has M=1/14.
 
 [AP single replacements v<=300]
   total primitive rows=3732
@@ -23,8 +48,8 @@ Known tight rows:
   after minimal_one_petal   :     4  (drop    95)
   after top_petal_or_ap     :     2  (drop     2)
   final survivors=2
-    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), M=1/14, denoms=[14], defect=zero, missing=(), extra=()
-    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), M=1/14, denoms=[14], defect=single_even_dipole, missing=(12,), extra=(10,)
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), q=14, M=1/14, denoms=[14], defect=zero, missing=(), extra=()
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), q=14, M=1/14, denoms=[14], defect=single_even_dipole, missing=(12,), extra=(10,)
   final exact M: tight=2, loose=0, below=0
 
 [AP two replacements values<=40]
@@ -42,8 +67,8 @@ Known tight rows:
   after minimal_one_petal   :     4  (drop    64)
   after top_petal_or_ap     :     2  (drop     2)
   final survivors=2
-    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), M=1/14, denoms=[14], defect=zero, missing=(), extra=()
-    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), M=1/14, denoms=[14], defect=single_even_dipole, missing=(12,), extra=(10,)
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), q=14, M=1/14, denoms=[14], defect=zero, missing=(), extra=()
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), q=14, M=1/14, denoms=[14], defect=single_even_dipole, missing=(12,), extra=(10,)
   final exact M: tight=2, loose=0, below=0
 
 [bounded primitive 13-subsets [1,19]]
@@ -61,7 +86,7 @@ Known tight rows:
   after minimal_one_petal   :     2  (drop     4)
   after top_petal_or_ap     :     1  (drop     1)
   final survivors=1
-    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), M=1/14, denoms=[14], defect=zero, missing=(), extra=()
+    S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), q=14, M=1/14, denoms=[14], defect=zero, missing=(), extra=()
   final exact M: tight=1, loose=0, below=0
 
 [Tournament Analysis: condition-strength carrier]

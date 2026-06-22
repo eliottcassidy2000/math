@@ -5,6 +5,32 @@ Owner: complete the census and the proof. Disciplined result: cannot, by the pre
 - **PROOF:** even a complete census doesn't finish LRC(14) -- the covering bound (M>1/14 for covering, the gamma-trick residual) is also open.
 - HONEST CONCLUSION: the census and the proof cannot be completed by the present necessary-condition methods. LRC(14) (open for 13 runners in the literature) remains open. I did NOT fabricate a completion.
 NEW: HYP-2914 sufficiency-failure. The path to a REAL completion: prove the Steinhaus rigidity (tight=>residues miss<=1, AND distinguish tight from near-tight) + the covering bound (effective equidistribution).
+## codex-2026-06-22-S125 -- q-threshold and Jacobsthal petal ledger addendum to the AP/GW census
+
+User asked to keep working toward completing the census and proof, using the
+eight-condition AP/Goddyn-Wong anatomy as inspiration.  Extended
+`04-computation/lrc14_ap_gw_common_conditions_codex_s124.py` and regenerated
+`05-knowledge/results/lrc14_ap_gw_common_conditions_codex_s124.out`.
+
+New exact additions:
+- **Residue-liar audit:** `{1,...,11,13,26}` has the same mod-14 residue
+  multiset as AP and passes the residue-shell filters, but `q(S)=12`,
+  `M=1/12`, and the first failed condition is `punctured_q_cover`.  This
+  makes the "residues lie; divisibility tells the truth" layer executable.
+- **Farey near-miss audit:** `{1,...,11,13,36}` has `q=14`, passes the coarse
+  residue/even-dipole stack, fails `one_petal_or_ap`, has `M=3/41`, and records
+  `det[[1,3],[14,41]]=-1`.
+- **Minimal petal ledger:** for AP replacements `v->2v`, only `v=12` has a
+  coprime-blocker-free Goddyn-Wong window `[14-v,27-2v]`, and only `12->24`
+  has `M=1/14`.  The other petals are loose:
+  `7->14` has `M=1/11`, `8->16` and `9->18` have `M=2/23`, `10->20` and
+  `13->26` have `M=2/27`, and `11->22` has `M=2/25`.
+
+The local AP-petal and two-replacement banks are therefore completely pinned
+inside this atlas: AP/GW are the only top-petal-stack survivors and there are
+no below-threshold rows.  This still does not prove LRC14; the remaining proof
+is the named rigidity/off-apex theorem for non-AP/GW q=14 petals, multi-dipoles,
+or top-balanced unbounded rows.
 
 ## kind-pasteur-2026-06-22-S38 -- the ANATOMY of a tight runner set: 8 abstract necessary conditions distinguishing {AP,GW} (owner: get convoluted, find shared DNA)
 Owner: derive more necessary conditions, focus on AP/GW shared DNA, get abstract/convoluted/creative. Found the DISTINGUISHING DNA (simple invariants -- residues mod14, diffset, +-units -- all FAIL: loose 12->26 has SAME residues as AP). HYP-2917/2918/2919 + reflection anatomy-of-a-tight-runner-set.
