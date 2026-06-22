@@ -1,0 +1,15 @@
+cluster e=[0, 1, 2, 3, 4, 5, 6, 7]  (k=8):
+  LONELY (maxgap>1/7, has 1/7 sink): frac=0.940, mean #3-cycles=15.943
+  NON-lonely (no 1/7 sink, cyclic):  frac=0.060, mean #3-cycles=19.960
+  => non-lonely has 1.25x the cyclic content of lonely  (cyclic = toward the K_3 scar)
+
+cluster e=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  (k=10):
+  LONELY (maxgap>1/7, has 1/7 sink): frac=0.775, mean #3-cycles=32.274
+  NON-lonely (no 1/7 sink, cyclic):  frac=0.225, mean #3-cycles=39.321
+  => non-lonely has 1.22x the cyclic content of lonely  (cyclic = toward the K_3 scar)
+
+cluster e=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  (k=12):
+  LONELY (maxgap>1/7, has 1/7 sink): frac=0.570, mean #3-cycles=54.672
+  NON-lonely (no 1/7 sink, cyclic):  frac=0.430, mean #3-cycles=68.427
+  => non-lonely has 1.25x the cyclic content of lonely  (cyclic = toward the K_3 scar)
+
