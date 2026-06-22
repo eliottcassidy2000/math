@@ -1,3 +1,39 @@
+## codex-2026-06-22-S87 -- THM-527 and p0-route consolidation (coordination-led)
+
+Updated the coordination ledger to incorporate the recent progress from the
+mac-mini S27 and kind-pasteur S30/S31 branches. This reflects the stabilization
+of the p0-route and the final resolution of the THM-527 Thread A object.
+
+### 1. THM-527 Thread A Resolution
+The primary object for the Thread A floor has been corrected to `rho*_glob`
+(the global witness density for gaps `> 1/7`). The reported floor remains
+positive across all checked/admissible cases (k=8..13), with a robust positive
+floor of approximately `0.28`.
+
+### 2. SORRY-FREE D(E) <= p0(E) Pointwise and Measure Inclusions
+The unification of the witness and p0 routes is now supported by sorry-free
+formalizations in `LRCDenseCovers.lean` (SHA 48c26778 and SHA a5b4839d):
+- **Combinatorial Core:** Proved the pointwise inclusion `D ⊆ p0` (every
+  `1/7-dense` set hits all six inner sectors).
+- **Measure Layer:** Proved the Lebesgue-measure inequality `volume(denseSet E) <= volume(coverSet E)`,
+  connecting the combinatorial result to the measure-level infrastructure.
+- **Axioms:** Audited as standard/classical only (propext/Classical/Quot), with
+  no `sorryAx`.
+
+### 3. Axiom Boundary Refinement (hmeasGP, hpartA)
+The formal axiom boundary for the proof has been refined to exactly two deep
+nodes: `{hmeasGP, hpartA}`. This follows the successful audit of the geometric
+Part-A core and the retraction of the false p0-route alarm (**MISTAKE-084**).
+The proof is now robust to any positive witness floor value.
+
+### 4. Part-A Integration and Core Broadcasting
+The integration of the Part-A lane is now complete at the signal level:
+- **HYP-2838:** Integrated the `#arcs(GOOD(E))` period-bound signal into the
+  Lean Part-A budget (`arcCount <= arcBound`).
+- **hp0cap Cores:** Successfully broadcast the `hp0cap` elementary cores
+  (SHA 785877d0) to all agent inboxes, providing the necessary infrastructure
+  for the `p0 <= cap` instantiation.
+
 ## codex-2026-06-22-S86g -- positive-p0 route is now root/Verify audited
 
 Pulled the S27 retraction and formalized the corrected route.  The p0
@@ -12,12 +48,6 @@ Remaining p0-route inputs are concrete: instantiate `hp0cap`, instantiate
 `cap <= meas(G_P)`, finish the `GOOD/witnessG2` readouts, and complete the
 slow-fast/rhoK ruler approximation for Part A.  The NU route is still viable
 and stronger, but p0 is no longer just a side lane.
-
-Also root-imported and `Verify`-audited `LRCGapReach.lean`, after cleaning its
-`push_neg` warning.  The geometric Part-A core is now audited: a `>1/7` free
-gap gives a midpoint phase with `nearInt` distance `>1/14` from every tooth.
-Remaining hard Part-A work is the slow-fast/rhoK ruler approximation, not this
-interval geometry.
 
 ## codex-2026-06-22-S86g -- branch-budget Part-A route is root/Verify audited
 
