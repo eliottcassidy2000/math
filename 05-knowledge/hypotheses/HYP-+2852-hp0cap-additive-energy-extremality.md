@@ -55,3 +55,30 @@ Deeper computation REFINES the picture:
 - **CLOSURE STRUCTURE (converges with kps HYP-2842):** bounded span<=14 DONE (HYP-2830 exhaustive); WIDE span>=15 is the residual, needs E-ADAPTIVE equidistribution (kps HYP-2842 refuted fixed-center; the correct route = three-distance = my L_y/decorrelation). 
 - **MIDDLE-residual quantified (k=9):** max L_y over PRIMITIVE span>=15 = 0.4588 (margin 0.035 to cap), BINDING at the **1far config {0..7,21}** (consec core + one far element). The fully-wide configs are far safer (L_y 0.16-0.24). So the binding wide case = 1far.
 - **The gap:** for 1far, L_y_decorr(consec core) ~ 0.44 (margin 0.05) + peel deviation Δ_w; actual Δ_w ~ 0.019 but the bound (6/49)V/w ~ 0.16 is **5-8x too loose**. Closing needs a sharper equidistribution bound on Δ_w (the arc-phase cancellation THM-546 left "not in closed form"). This is the shared crux with kps's resonance/marginal-uniformity work.
+
+
+## BREAKTHROUGH (mac-mini-S29): square-root cancellation in the peel deviation => feasible wide closure
+The peel deviation Delta_w = L_y(C u {w}) - L_y_decorr(C) (THM-546 Abel form:
+Delta_w = -(1/w) Sum_j Sum_{arcs(a,b) in B_j} [F_j(wa)-F_j(wb)], |F_j|<=3/49) has
+**SQUARE-ROOT CANCELLATION**, not the worst-case V-bound:
+- F_j is the CENTERED sawtooth (mean 0). Evaluated at the scattered points {wa mod 1}
+  over the ~V arcs, the sum has mean 0 + fluctuation ~ sqrt(V)*std(F_j), NOT V*||F_j||_inf.
+- MEASURED |Delta_w * w|: consec_8 (V=28) -> 0.34 (= sqrt(28)*0.06); dilated (V=84) -> 0.78;
+  2block -> 0.61. ALL ~ C*sqrt(V) << (6/49)V = 3.4-10. The 5-8x THM-546 looseness EXPLAINED
+  as the difference between L2 (sqrt) and L1 (linear) discrepancy.
+- For BOUNDED cores (span<=14), V<=~56 so sqrt(V)<=7.5 and |Delta_w*w| <= ~0.5 -- a SMALL
+  CONSTANT. The peel cutoff w* = |Delta_w*w|/margin <= 0.5/0.047 ~ 11-17 (FEASIBLE).
+
+## WIDE RESIDUAL decomposes by #far elements -- ALL CLOSE (k=9, verified float search)
+- 0far (span<=14): DONE (HYP-2830 exhaustive).
+- **1far** (bounded core + 1 far w): max L_y = 0.4588, MARGIN 0.035, binding = consec_8 + far@21.
+- **2far**: max L_y = 0.3826, MARGIN 0.112 (more decorrelation = safer).
+- 3+far: safer still (L_y 0.16-0.24). So the BINDING wide case is 1far, margin 0.035.
+
+## CLOSURE PATH (the clean structure)
+1far closure = [L_y_decorr(bounded core) <= cap-margin: a BOUNDED-CORE finite check] +
+[|Delta_w*w| <= C*sqrt(V) < margin*w for w > cutoff~17: the sqrt-cancellation peel] +
+[finite check w in [15,17]]. The remaining ANALYTIC gap: rigorous sqrt-cancellation
+|Delta_w*w| <= C*sqrt(V) for the specific far w (generic w OK via Erdos-Turan/L2; RESONANT w
+= kps's HYP-2842 domain). This CONNECTS my L_y peel route to kps's resonance/equidistribution
+work: the closure = [sqrt-cancellation, generic] + [resonant-center handling, kps]. -> THM-546, HYP-2842.
