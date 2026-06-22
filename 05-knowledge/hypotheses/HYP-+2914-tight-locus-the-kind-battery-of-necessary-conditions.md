@@ -48,3 +48,17 @@ These are NECESSARY conditions (1-3 rigorous; 4-5 verified n=5,6,8,14), tightly 
 list FORCES the tight locus to be exactly {AP, GW} for n=14 (no other skip-double survives all of 1-5)
 is the remaining open core (the consec-maximizes / Steinhaus rigidity). The battery is a sharp net; the
 catch is the open part.
+
+
+## SUFFICIENCY FAILS (S55) -- the census cannot be completed by the battery; the M-check is irreducible
+DECISIVE test: the single-swaps 12->36 (=3*12), 12->48 (=4*12), 12->60 (=5*12) ALL satisfy the ENTIRE
+battery (kill b=12, residues miss only 12, cover ±units, zsum=MAX, <=3-gap) -- yet M = 3/41, 3/41, 4/53
+~ 0.073..0.076 > 1/14, so they are NOT tight. Only 12->24 is tight (M=1/14). So the necessary
+conditions are NOT sufficient: the census {AP, GW} is NOT determined by the battery; the fine
+distinguisher (24 tight vs 36 not) is the M-value itself = the consec-maximizes / Steinhaus rigidity,
+the irreducible open core. The single-swap census (S51) confirms {AP, GW} COMPUTATIONALLY (only 12->24
+tight among r<=300), but completing it as a PROOF needs (a) condition 4 'residues miss <=1' proven
+(open) and (b) the M=1/14 check that no near-tight battery-set (like 12->36) is actually tight (open).
+And even a complete census does not finish LRC(14): the covering bound (M>1/14 for covering sets, the
+gamma-trick residual) remains open. CONCLUSION: the census and the proof CANNOT be completed by the
+present (necessary-condition) methods; LRC(14) -- open for 13 runners in the literature -- remains open.

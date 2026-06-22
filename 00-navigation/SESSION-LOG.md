@@ -1,3 +1,11 @@
+## mac-mini-2026-06-22-S55 -- census/proof: the necessary-condition BATTERY is NOT SUFFICIENT; census not completable by it; LRC(14) remains open
+Owner: complete the census and the proof. Disciplined result: cannot, by the present methods. HYP-2914 updated.
+- **DECISIVE:** the swaps 12->36,48,60 satisfy the ENTIRE battery (kill b=12, residues miss only 12, ±units, zsum=MAX, <=3-gap) but M=3/41,3/41,4/53 > 1/14 -- NOT tight. Only 12->24 (GW) is tight. So the necessary conditions are NECESSARY-NOT-SUFFICIENT; the census {AP,GW} is NOT determined by the battery -- the M=1/14 distinction (24 vs 36) IS the consec-maximizes / Steinhaus rigidity, the open core.
+- **CENSUS:** {AP, GW} is COMPUTATIONALLY verified (S51 single-swap census exact: only 12->24 tight, r<=300) but NOT proven (condition 4 'residues miss <=1' open + the M-check open).
+- **PROOF:** even a complete census doesn't finish LRC(14) -- the covering bound (M>1/14 for covering, the gamma-trick residual) is also open.
+- HONEST CONCLUSION: the census and the proof cannot be completed by the present necessary-condition methods. LRC(14) (open for 13 runners in the literature) remains open. I did NOT fabricate a completion.
+NEW: HYP-2914 sufficiency-failure. The path to a REAL completion: prove the Steinhaus rigidity (tight=>residues miss<=1, AND distinguish tight from near-tight) + the covering bound (effective equidistribution).
+
 ## kind-pasteur-2026-06-22-S38 -- the ANATOMY of a tight runner set: 8 abstract necessary conditions distinguishing {AP,GW} (owner: get convoluted, find shared DNA)
 Owner: derive more necessary conditions, focus on AP/GW shared DNA, get abstract/convoluted/creative. Found the DISTINGUISHING DNA (simple invariants -- residues mod14, diffset, +-units -- all FAIL: loose 12->26 has SAME residues as AP). HYP-2917/2918/2919 + reflection anatomy-of-a-tight-runner-set.
 - **HYP-2917 (q(S)=14, the distinguisher):** q(S)=min{d: no multiple of d in S}; M(S)>=1/q(S) (=q-witness reread). PRIMITIVE TIGHT <=> q(S)=14 (13-COVERING + 14-AVOIDING). Distinguishes AP/GW (q=14) from loose (q<14, M=1/q EXACTLY: 12->26 q=12 M=1/12, 11->24 q=11 M=1/11). Three regimes: q<14 safe, q=14 boundary, q>14=covering=danger. Tight set = primitive divisor-transversal of {1..13} avoiding 14.
