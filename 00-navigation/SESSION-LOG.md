@@ -6,6 +6,34 @@ Per directive (work on hp0cap, mainly reasoning/computation, frequent git sync).
 - **SQRT-CANCELLATION breakthrough:** peel deviation |Δ_w·w| ~ C·√V, NOT (6/49)V -- via the mean-zero sawtooth F_j at scattered {w·endpt}; avg_w|Δ_w·w|² <= c·V (Parseval/L2 backbone, VERIFIED RMS~√cells). EXPLAINS THM-546's 5-8x looseness (L2 vs L1). For bounded cores |Δ_w·w|<=~0.5 => peel cutoff ~17 (FEASIBLE).
 - **The convergence:** wide 1far closure = [generic w: √-cancellation, Parseval-provable, MINE] + [resonant w: max|Δw·w| outliers = kps HYP-2842 E-adaptive centers]. Messaged kps; proposed split.
 NEW: HYP-2852 (+breakthrough+L2 updates), LRCMomentDual.lean (WIP), script+notes. Pushed throughout.
+## codex-2026-06-22-S90 -- Node-1 AP boundary core removed by a mod-13 certificate
+Took the user's three-node prompt with Node 1 as the priority.  After pulling
+KPS S32b/HYP-2852, separated the bounded-V resonant-floor closure from the
+older finite-V Part-A AP-family warning.  Main result: the named AP
+coordinated-growth core `{t,2t,...,12t,V}` does not require a slow-fast
+`V/t -> infinity` hypothesis.
+
+- Added `04-computation/lrc14_ap_boundary_core_certificate_codex_s90.py` and
+  stored `05-knowledge/results/lrc14_ap_boundary_core_certificate_codex_s90.out`.
+  Exact verification over `t<=80`, `V<=120t` checked `387840` rows with zero
+  failures.
+- Claimed HYP-2857 after pulls revealed KPS had already claimed HYP-2853,
+  HYP-2854, HYP-2855, and then HYP-2856.  Proof: divide by `gcd(t,V)`.
+  Usually choose
+  `tau=a/(13t)` with `13∤a`; then the AP block is exactly `1/13`-safe, and a
+  middle-residue count supplies `a` with `||aV/(13t)||>=1/14`.  The reduced
+  exceptional tail `{1,...,12,13m}` uses the explicit witness
+  `tau=m/(13m+1)`, giving margin `m/(13m+1)`.
+- Consequence: HYP-2581d's infinite AP-family warning is not the live Node-1
+  obstruction.  The remaining finite-V/decorrelation target is genuinely
+  non-AP wide/coordinated-growth clusters plus the concrete `rho_K`/arc-count
+  approximation in HYP-2838.  Incoming HYP-2855/HYP-2856's q-uniform
+  three-distance/Farey floor is the natural complement: it targets the non-AP
+  floor, while this certificate removes the AP boundary core by exact residue
+  arithmetic.
+- Tournament Analysis / assumption challenge: the useful vertices are
+  denominator-`13t` residue certificates, the `13m` tail law, and scale
+  reduction, not raw runner vertices or the growth ratio `V/t`.
 
 ## kind-pasteur-2026-06-22-S32b (MAIN-LOOP) -- the RESONANT NBHD-WIDTH RIGOR: witness floor RIGOROUSLY CLOSED for bounded-V via the rate-V lemma (HYP-2849/2850/2851/2852)
 Dispatch: work the analytic rigor of the resonant nbhd-width (the clean inequality's proof mechanism). Honest arc, ending in a rigorous closure of the binding regime:
