@@ -1,0 +1,8 @@
+SMALL covering sets (all speeds bounded) -- lonely (M>1/14)? 1/14=0.07143
+  {2..14}                                   : cov=True, M=     1/8=0.12500 LONELY t=1/16
+  {2,3,4,5,6,7,8,9,10,11,12,13,14}          : cov=True, M=     1/8=0.12500 LONELY t=1/16
+  even+odd cover {2,4,6,8,10,12,14,9,5,3,11,13,7}: cov=True, M=     1/8=0.12500 LONELY t=1/16
+  {4,6,8,9,10,12,14,5,7,11,13,2,3}          : cov=True, M=     1/8=0.12500 LONELY t=1/16
+
+=> If small covering sets are all LONELY (M>1/14 with margin), the covering crux splits:
+   BOUNDED covering (finite/compactness, THM-527) + UNBOUNDED (equidistribution). Neither is tight.

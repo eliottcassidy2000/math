@@ -29,6 +29,13 @@ new analytic burden at 14 is the support-six HYP-2890 residual packet.  Next
 proof obligation: show every AP-facing q-covering LRC14 row either collapses to
 AP/GW boundary data, has a binding-pair margin, or enters the support-six
 Clebsch/Bruhat/octahedral residual-cancellation route.
+## kps-2026-06-22-S31o -- HYP-2895: the covering crux DECOMPOSES (bounded compactness + unbounded equidistribution); explains THM-566
+Owner: bound the sporadic finiteness creatively; if stuck, search old threads for the missing reframe. The search (Explore agent) surfaced the reframe = THM-523.
+- **REFRAME (search payoff, THM-523 q-witness lemma):** my tight-locus/tiling line is the TRIVIAL boundary -- any set omitting all multiples of some q<=14 is lonely at t=1/q, so the tight sets (AP, GW; both omit 14) are trivially lonely at t=1/14. The REAL crux = COVERING sets (contain a multiple of every q in {2..14}).
+- **Sporadic finiteness (the ask):** single-swap census RIGOROUS -- only GW (12->24) tight among all AP single-replacements (v<=50). M({1..11,13})=1/12; only tuned v=24 (=2*12, kills t=1/12 witness, lands exactly at 1/14) is tight; large v give M in [1/13,1/12]>1/14. Equidistribution bounds tight speeds => finite (gap: recursive tightness). mod-27=3^3 shell (HYP-2138).
+- **HYP-2895 (covering crux decomposition):** (A) BOUNDED covering lonely with MARGIN ({2..14}: M=1/8 at t=1/16; compactness THM-527). (B) UNBOUNDED (one huge speed) lonely by EQUIDISTRIBUTION: U_v covers only ~1/7 of core lonely set, loneliness survives at large-denominator witness. VERIFIED on THM-566 adversarial: {1..11,13,5040} (covering, 14|5040) has M=84/1009=0.083, witness t=2102/5045.
+- **Explains THM-566:** witness EXISTS, just unbounded denominator; the finite-denominator obstruction is NOT a loneliness obstruction. Multi-large-speed reduces to mac-mini resonance/atom over-determination (HYP-+2878); equidistribution gives the "why." Connects to mac-mini-S41 affine observer categories.
+NEW: HYP-2895, THM-560 finiteness section, lrc_sporadic_finiteness/equidistribution_covering/small_covering scripts. NEXT: moderate/resonant middle + recursive-tightness gap (= OPEN-Q-108).
 
 ## mac-mini-2026-06-22-S41 -- THREE observer-categories (fineness hierarchy under affine group); tiling=observer-relative, tournament=observer-blind; resolves the broken H-analogy
 Owner: observer-relative vs independent + a third category; tournament vs tiling models. Reflection: three-observer-categories-tiling-is-relative-tournament-is-blind.md.
