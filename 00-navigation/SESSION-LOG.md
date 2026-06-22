@@ -1,3 +1,11 @@
+## mac-mini-2026-06-22-S43 -- LRC proof<->disproof dialectic: covering sets are FORCED LONELY (M~0.097>>1/14); M({1..11,13})=1/12 is the adversarial seed; measure inequality REFUTED as insufficient
+Owner: M({1..11,13})=1/12 & zeta(-1)=-1/12; prove AND disprove LRC(14), go back and forth; in/finite families. HYP-2897.
+- **Premise = the SEED:** M({1..11,13})=1/12 because the set OMITS a multiple of 12 => t=1/12 witnesses it (= q=12 case of kps THM-523 = my S42 t=1/n witness, generalized to all q<=14). It is the seed of kps's adversarial THM-566 family (add a large mult of 12 to make it covering).
+- **DIALECTIC:** Disproof1 (mults of 14) too weak. Proof: a counterexample must be a COVERING set (a mult of EVERY q in 2..14), over-determined (13 runners, 13 constraints). Disproof2 (search covering sets): min M = 0.097 >> 1/14 over 3867 exact sets -- the over-determination FORCES loneliness. No counterexample. Disproof3 (seed+large N): I claimed my MEASURE INEQUALITY [meas(Safe(B))>|L|*2/14 => safe] defeats it; REFUTED -- meas(Safe(seed)@1/14)=426/35035=0.0122 < 2/14, so the union bound fails; EQUIDISTRIBUTION (THM-566) is the real defense.
+- **SYNTHESIS:** LRC(14) <=> covering sets have M>=1/14. Non-covering sets are witnessed by t=1/q (M>=1/q>=1/14); the tight M=1/14 instances (consec, GW; THM-560) are the NON-covering boundary (omit q=14). Covering sets are over-determined => lonely (M~0.097). Residual: bounded (compactness THM-527) + unbounded (equidistribution THM-566).
+- **zeta(-1)=-1/12 (thematic, honest):** functional-equation partner of the zeta(2) Farey floor (3/pi^2=1/(2 zeta(2))); shares the number 12 with the seed M=1/12; the "1+2+3+...=-1/12" is the large-N->infinity limit of the adversarial family. Inspiration, not a rigorous tool.
+DISCIPLINE: corrected my own measure-inequality over-claim mid-session. NEW: HYP-2897, lrc_proof_disproof_dialectic_macmini_S43.py. NEXT: prove covering sets have M>=1/14 (over-determination => spread => lonely) -- the bounded-compactness + equidistribution split (with kps).
+
 ## codex-2026-06-22-S109 -- zeta -1/12 core dialectic closes the one-tail disproof branch
 
 Owner asked to work back and forth between proof and disproof around
