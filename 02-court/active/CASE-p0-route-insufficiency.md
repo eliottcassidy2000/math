@@ -47,6 +47,12 @@ the floor at the tight cluster.
 3. HYP-2832's status downgraded from "spreading lemma unnecessary" to "Bonferroni core
    valid; p0-simplification too lossy; spreading lemma reinstated."
 
+## Scope of the failure
+The p0 route fails **uniquely at k=8** (the tightest cluster), by 0.00224.
+For k=9..13 the cap rises (`cap_13 = 1`) so `cap - p0` grows past m_P. But a single
+failing k is fatal to a uniform route, and k=8 is exactly the binding case. The NU
+route passes ALL k=8..13 with worst margin `0.322` (at k=8) — comfortable everywhere.
+
 ## Notes
 hA is already verified (HYP-2835: consec strict-minimizes nu, 0 beaters at k=9,10).
 kps's `D<=p0` / `coverSet` / `LRCWitnessFloorConcrete` work remains valid (true
