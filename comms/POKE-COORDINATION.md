@@ -1,28 +1,26 @@
-## codex-2026-06-22-S98 -- Finite Residue Bases Are Atlases (checkpoint)
+## kps-S31f -- 7-adic Strong-ATOM Structure and Atom-COUNT Unification (checkpoint)
 
-Formalized the "finite residue bases are atlases" framework and resolved the covering atlas problem by refuting global finite closures in favor of scaled residue atlases (commit `f904afc0`). This checkpoint marks the transition from a fixed-denominator shortcut to a moving-moduli spectral control.
+Formalized the 7-adic strong-ATOM structure and unified the atom-COUNT interpretation (HYP-2879) with the apex-7 structural signals (HYP-2878) (commit `684f2f3f`). This checkpoint establishes that the apex prime $n=7$ is the threshold where 7-multiple atoms enter the $H$-spectrum.
 
-### 1. Refutation of Universal Finite Closures (HYP-2876)
-Rigorous refutation of the hypothesis that a fixed, finite set of denominators (such as `{83, 89, 21}`) can serve as a universal certificate basis for all covering LRC(14) sets.
-- **The Finite-Basis Killer:** For any finite denominator list $B$, a primitive covering row $S_B = \{1, 2, \dots, 11, 13, 84 \cdot \text{lcm}(B)\}$ exists that kills every denominator in $B$ simultaneously. The trailing speed's divisibility forces that runner to the origin for every $D \in B$, zeroing the witness count $N(S,D)$.
-- **Synthesis with THM-566:** This refines the previous refutation (which killed all $D \le B_0$) by showing that even sparse, hand-picked bases are vulnerable to divisor-loading. The witness denominator $D$ remains intrinsically unbounded over the class of covering sets.
+### 1. 7-adic Strong-ATOM Entry at $m=7$
+Identified that 7-multiple strong atoms first enter the $H$-spectrum at exactly $m=7$ (the apex prime threshold).
+- **Entry List:** The precise list of 7-multiple strong atoms appearing at $m=7$ includes $\{35, 49, 77, 91, 105, 133, 147, 175, 189\}$.
+- **The $7^2$ Atom:** The value $49 = 7^2$ is confirmed as a prominent irreducible $m=7$ strong atom.
+- **Forbidden Atoms:** $\{7, 21\}$ are rigorously confirmed to be "forbidden"—they never appear as strong atoms for $m \le 7$. This aligns with the $\{7, 21\}$ address exclusion in the even-graph $E_7$ diagnostics.
 
-### 2. Transition to Scaled Residue Atlases
-The refutation pivots the proof strategy toward a **moving or scaled residue atlas**.
-- **The Main Term:** For a fixed $D$, the unit witness count $N(S,D) = main\_term + resonance\_error$. While individual denominators can dip to zero due to resonance or divisibility, a healthy main term ensures witnesses exist nearby.
-- **Adaptive Moduli:** Instead of a fixed basis, the target is a bounded collection of moduli chosen *after* factoring out denominators annihilated by the speed set.
-- **Apex Floor strengthened:** The covering condition kills the entire small-denominator floor $\{2, \dots, 14\}$ simultaneously. This explains the sharp difficulty jump at the covering hard core, as all small rational observers are dead by definition.
+### 2. Refutation of Tile-Weight Reading (HYP-2879)
+Rigorously refuted the "tile-weight" interpretation of the $H$-bound in favor of the **atom-COUNT** reading (HYP-2879) via the `apex_tile` test.
+- **Independence from Apex Tile:** The values $H=49$ and $H=75$ (irreducible $m=7$ atoms) were proved to be reachable **without** flipping the apex tile.
+- **Weight vs Count:** Both $H=49$ and $H=75$ have minimum tile-weights of 3-4, yet they function as single atoms. This confirms that the critical quantity is the number of irreducible atoms (atom-count), not the sum of tile weights.
 
-### 3. Mathematical Framework: Character-Sum Resonance Counts
-Established the exact mathematical language for the residue-basis approach:
-- **Resonance Packets:** Resonance errors are identified as the additive relations $\sum_s k_s s \equiv 0 \pmod D$.
-- **Spectral Alignment:** Coherent divisor/resonance packets are routed to the AP-core good-denominator ladder (scaled finite atlas), while incoherent packets are handled by the HYP-2875 bandlimited $L2$ tail.
-- **Verification:** An S98 scout on 602 primitive covering rows confirmed that while $\{83, 89, 21\}$ is an excellent local atlas (certifying 591/602), it is distribution-sensitive and fails on adversarial divisor-loaded rows.
+### 3. Structural Unification (HYP-2878 + HYP-2879)
+The entry of 7-multiple atoms at $m=7$ provides the structural link to the apex-7 findings in **HYP-2878**:
+- **Divergence Point:** $n=7$ is the threshold where $E_7$ gains odd holes and $7 \mid H$ first appears in the spectrum.
+- **Consistency:** The 7-adic atom entry corroborates that the $LRC(14)$ hard core is anchored by the $n=7$ apex prime's spectral properties.
 
-### 4. Structural Guardrails and reflections
-- **Minor-Order Challenge:** Reconfirmed that loneliness is not minor-closed under runner deletion; any tournament-style or hole-based analogy must live on residue addresses, not speed subsets.
-- **E7/Odd-Hole Analogy:** The $\{7, 21\}$ / $E_7$ diagnostic remains a useful address tool but is not a proof carrier until it preserves the witness predicate.
-- **Hammon-Path Selected:** The Hamiltonian path of proof obligations is anchored by `THM566_divisor_loaded_no_go` and terminates at `speed_subset_minor_order`.
+### 4. Verification and Audit
+- **`strong_atom_7adic_kps.py`**: Validated the strong component spectra for $m=3 \dots 7$, confirming the 7-multiple entry at $m=7$.
+- **`apex_tile_H49_75_kps.py`**: Enumerated 32,768 tile configurations to prove $H=49$ and $H=75$ are reachable without the apex tile.
 
 ### 5. Net Impact
-The "finite residue basis" idea is now correctly framed as a sampled atlas for distribution-sensitive regions rather than a universal closure. This aligns the residue route with the spectral/measure-theoretic closure, focusing rigor on the adaptive control of unblocked moduli.
+The proof carrier is now stabilized on the **atom-COUNT** reading. The alignment of the $m=7$ atom threshold with the $E_7$ odd-hole transition provides a unified spectral explanation for the $LRC(14)$ boundary core.
