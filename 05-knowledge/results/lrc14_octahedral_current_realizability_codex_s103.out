@@ -1,0 +1,107 @@
+
+============================================================================================
+LRC14 OCTAHEDRAL CURRENT REALIZABILITY - CODEX S103
+============================================================================================
+
+============================================================================================
+OCTAHEDRAL PACKET GRAPH
+============================================================================================
+Residue vertex -> K4 edge:
+  0: (1, 2)
+  2: (3, 4)
+  3: (1, 3)
+  4: (1, 4)
+  5: (2, 3)
+  6: (2, 4)
+
+affine-zero matching: [(0, 2), (3, 6), (4, 5)]
+nonzero packet edges: [(0, 3), (0, 4), (0, 5), (0, 6), (2, 3), (2, 4), (2, 5), (2, 6), (3, 4), (3, 5), (4, 6), (5, 6)]
+
+L(K4) incidence mismatches: []
+So the finite packet graph is the octahedron graph L(K4), not a free tournament.
+
+Octahedron triangles (4 K4 vertex-stars + 4 K4 faces):
+      triangle     type       edge weights high count
+     (0, 3, 4)   star@1          [1, 1, 8]          1
+     (0, 3, 5)     face          [1, 1, 1]          0
+     (0, 4, 6)     face          [1, 1, 8]          1
+     (0, 5, 6)   star@2          [1, 1, 8]          1
+     (2, 3, 4)     face          [8, 8, 8]          3
+     (2, 3, 5)   star@3          [8, 8, 1]          2
+     (2, 4, 6)   star@4          [8, 1, 8]          2
+     (2, 5, 6)     face          [8, 1, 8]          2
+
+============================================================================================
+REALIZABLE LAYER-COCHAIN SCAN
+============================================================================================
+Enumerated 729 layer cochains V(L(K4)) -> {0,1,2} at H=10.
+unique reciprocal packet supports evaluated: 126
+unique low-height wall supports evaluated: 126
+
+Best gauges by L1 divergence
+    word       L1div      maxdiv         net   +/- sum diam zstr estr  wstr   lap  walls  wmax
+  210210  0.00225361  0.00072254 -0.00204067   1/5   6    2    2   14    63   108   1863    69
+  210201  0.00239583  0.00150314  0.00173737   3/3   6    2    4   12    61    90   1851    70
+  212210   0.0025308   0.0009622 -0.000966203   2/4   8    2    4   10    45    84   1785    68
+  212220  0.00267966 0.000878613 -0.000782029   2/4   9    2    3   10    59   116   1730    68
+  210220  0.00275959  0.00122377 -0.00176983   1/5   7    2    1   16    79   140   1812    69
+  200222  0.00306315  0.00118972  0.00219598   5/1   8    2    4   12    54   108   1765    72
+  202201  0.00340635  0.00148718 0.000431978   5/1   7    2    5   12    54    90   1818    73
+  210211  0.00353191  0.00133086 0.000531335   2/4   7    2    3   10    45    72   1820    69
+  200122  0.00358798  0.00220464  0.00248894   4/2   7    2    5   12    47    76   1800    72
+  210111  0.00359697  0.00136645  0.00156122   3/3   6    2    2    8    22    40   1867    69
+  202211   0.0037233  0.00111234  -0.0012231   3/3   8    2    4   10    52    98   1793    71
+  212121  0.00377045  0.00221413  0.00144246   2/4   9    1    3    6    34    68   1738    65
+
+Worst gauges by L1 divergence
+    word       L1div      maxdiv         net   +/- sum diam zstr estr  wstr   lap  walls  wmax
+  020100   0.0287609  0.00602224   0.0287609   6/0   3    2    3   10    59   102   2017    86
+  020112   0.0253579  0.00565775   0.0253579   6/0   6    2    4   12    61   100   1896    86
+  020000   0.0245298  0.00549268   0.0245298   6/0   2    2    2    8    50   100   2058    86
+  020102   0.0234952  0.00600795   0.0234952   6/0   5    2    5   12    75   132   1903    86
+  010100   0.0233581  0.00602224    0.018704   5/1   2    1    2    6    34    68   2047    86
+  020110   0.0233326  0.00565775   0.0233326   6/0   4    2    2   12    61    90   2010    86
+  000100   0.0226148  0.00602224   0.0226148   6/0   1    1    1    4    25    50   2078    86
+  020212   0.0220902  0.00582088   0.0220902   6/0   7    2    5   12    54   104   1849    86
+
+Constant-layer gauges (S102 start/raised plus one more)
+    word       L1div      maxdiv         net   +/- sum diam zstr estr  wstr   lap  walls  wmax
+  000000   0.0219283   0.0052304   0.0219283   6/0   0    0    0    0     0     0   2121    86
+  111111  0.00754806  0.00193844  0.00562735   5/1   6    0    0    0     0     0   1909    68
+  222222  0.00954186  0.00448482  0.00939837   5/1  12    0    0    0     0     0   1626    64
+
+Best gauge at each layer-sum:
+sum     word       L1div      maxdiv  zero   wall
+  0   000000   0.0219283   0.0052304     0   2121
+  1   100000   0.0126306  0.00421394     1   2078
+  2   100010   0.0078711  0.00318897     2   2061
+  3   100110  0.00598306  0.00224003     1   2014
+  4   210010  0.00420124  0.00136339     2   1941
+  5   002210  0.00379235  0.00229264     3   1928
+  6   210210  0.00225361  0.00072254     2   1863
+  7   210220  0.00275959  0.00122377     1   1812
+  8   212210   0.0025308   0.0009622     4   1785
+  9   212220  0.00267966 0.000878613     3   1730
+ 10   202222  0.00389292  0.00103865     2   1689
+ 11   212222  0.00426011  0.00142576     1   1648
+ 12   222222  0.00954186  0.00448482     0   1626
+
+============================================================================================
+CORRELATIONS WITH L1 DIVERGENCE
+============================================================================================
+                  metric    corr(all)   mean within-sum corr
+               layer_sum      -0.3927                    nan
+                diameter    0.0117334                0.20145
+            zero_stretch     0.071427                0.13339
+            edge_stretch    0.0171338               0.202309
+   weighted_edge_stretch    0.0212928                0.12275
+   weighted_laplacian_L1    0.0272831                0.10182
+          wall_incidence     0.416006               0.150038
+                wall_max     0.467037               0.451133
+       negative_vertices    -0.441736              -0.432448
+
+============================================================================================
+S103 REALIZABILITY READING
+============================================================================================
+The useful object is not an arbitrary tournament orientation.  The six finite packet vertices are the six edges of K4, the affine-zero lane is the opposite-edge matching, and nonzero packet coupling is octahedral incidence.  Integer lifting chooses a height 0-cochain on this octahedron; the reciprocal defect is the divergence of the lifted current after this cochain is applied.
+This suggests the missing LRC structure is an octahedral Hodge problem: finite Kirchhoff balance on L(K4), coherent curl on the eight triangular faces routed to low-height walls, and the remaining spread current routed to HYP-2636 additive-frequency Abel summation.

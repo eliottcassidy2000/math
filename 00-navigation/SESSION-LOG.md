@@ -1,3 +1,33 @@
+## codex-2026-06-22-S103 -- octahedral current realizability for the LRC repeated-packet lift
+
+User asked to look for creative realizability arguments beyond ordinary
+Tournament Analysis and aim at the LRC proof.  Continued from S102's lifted
+packet-divergence defect and KPS S31i's cyclic/no-sink scar signal.  New
+finding: the HYP-2632/HYP-2883 repeated-packet graph is not just a signed graph
+and not naturally a tournament.  Its nonzero edge graph is `K6` minus the
+affine-zero matching `(0,2),(3,6),(4,5)`, hence the octahedron graph
+`L(K4)`.  Residues are tetrahedron edges `0->12`, `2->34`, `3->13`,
+`6->24`, `4->14`, `5->23`; affine-zero means opposite tetrahedron edges.
+
+Added exact scout `lrc14_octahedral_current_realizability_codex_s103.py`.
+It verifies the `L(K4)` incidence and enumerates all `729` small integer layer
+cochains at `H=10` over core `(1,8,15,22)`, needing only `126` lifted packet
+supports.  Best gauge `210210` has `L1 div=0.00225361`, versus constant
+`000000` `0.0219283`, `111111` `0.00754806`, and `222222` `0.00954186`.
+Wall max correlates with L1 divergence (`+0.467`, `+0.451` within fixed
+layer-sum), while mixed positive/negative vertex divergence correlates with
+smaller L1 (`-0.442`).
+
+New HYP-2887/T1002: the proof target should be an octahedral Hodge lemma,
+complementary to incoming HYP-2885 additive-energy extremality and HYP-2886
+exact-period packet atlases.
+The octahedron has cycle rank `12-6+1=7`, equivalently eight triangular face
+curls with one dependence.  Coherent face curl should be charged to the finite
+low-height wall ledger; incoherent spread current should be HYP-2636
+additive-channel Abel-summable; no independent harmonic one-current remains on
+the spherical carrier.  This is the likely missing realizability structure for
+the repeated-packet tail.
+
 ## codex-2026-06-22-S102 -- applying packet balance to LRC reciprocal lifts: divergence defect lemma
 User asked to apply and extend the even-graph/packet-balance ideas to LRC
 creatively.  Synced main (already up to date) and pushed HYP-2883's exact

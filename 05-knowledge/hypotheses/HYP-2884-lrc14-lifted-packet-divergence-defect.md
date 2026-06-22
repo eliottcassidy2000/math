@@ -5,6 +5,7 @@ source: codex-2026-06-22-S102
 tags: [lrc14, coimage, character-kernel, reciprocal-tail, packet-graph, wall-ledger, abel-summation, tournament-analysis]
 related:
   - HYP-2883
+  - HYP-2887
   - HYP-2632
   - HYP-2633
   - HYP-2634
@@ -196,3 +197,24 @@ The challenged assumption is that the exact finite mod-7 balance should lift
 unchanged to integer relation lattices.  The computation refutes that naive
 claim but replaces it with a sharper proof object: divergence plus wall
 filtration.
+
+## HYP-2887 Follow-Up
+
+HYP-2887 identifies the finite topology behind this divergence defect.  The
+nonzero repeated-packet graph is the octahedron `L(K4)`: residues are the six
+edges of a tetrahedron, and the affine-zero lane is the opposite-edge matching.
+Thus an integer lift gauge is a height cochain on an octahedral carrier, not an
+arbitrary packet orientation.
+
+This sharpens the local-current lemma again.  After the height-2 wall ledger is
+deleted, the remaining defect should be decomposed into:
+
+```text
+vertex divergence on L(K4)
++ triangular face curl on the 8 octahedron faces
++ HYP-2636 additive-frequency tails.
+```
+
+Since the octahedron is spherical, there is no independent harmonic
+one-current once divergence and face curl are controlled.  This is the most
+concrete current-realizability route found so far.

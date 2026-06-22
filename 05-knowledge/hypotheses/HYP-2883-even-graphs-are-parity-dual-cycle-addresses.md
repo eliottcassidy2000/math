@@ -14,6 +14,7 @@ related:
   - HYP-2617
   - HYP-2632
   - HYP-2884
+  - HYP-2887
   - HYP-2694
   - HYP-2828
   - OPEN-Q-108
