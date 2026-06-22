@@ -1,0 +1,3 @@
+category 1 OBSERVER-RELATIVE  meas(safe): base=0.0000 +5=0.1377 x3=0.0000  (scale-inv, transl-SENS)
+category 3 AFFINE             A(E)      : base=1469 +5=1469 x3=1469  (transl-inv AND scale-inv)
+category 2 METRIC-DIFFERENCE  diffset== : +5:True x3:False  (transl-inv, scale-SENS)

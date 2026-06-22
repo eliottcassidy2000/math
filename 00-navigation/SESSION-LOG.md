@@ -1,3 +1,15 @@
+## mac-mini-2026-06-22-S41 -- THREE observer-categories (fineness hierarchy under affine group); tiling=observer-relative, tournament=observer-blind; resolves the broken H-analogy
+Owner: observer-relative vs independent + a third category; tournament vs tiling models. Reflection: three-observer-categories-tiling-is-relative-tournament-is-blind.md.
+- **THREE categories under the affine group (translation=move observer, scaling=units), VERIFIED:**
+  1. OBSERVER-RELATIVE (scale-inv, translation-SENS): meas(safe)/coverage -> TILING model (anchored), FINEST.
+  2. METRIC-DIFFERENCE (translation-inv, scale-SENS): the gap multiset / winding metric -> the THIRD category, middle.
+  3. OBSERVER-BLIND/AFFINE (both inv): additive energy, H=I(Omega,2), the order -> TOURNAMENT model, COARSEST.
+- **Tournament vs tiling = observer-blind vs observer-relative:** the tiling FIXES a base path = an anchor = the observer (S38: fixing base path chooses the cut); the tournament is anchor-free/S_n-symmetric. The LRC observer IS the tiling anchor.
+- **Resolves S39 + kps S31m:** coverage != additive energy because they are categories 1 vs 3. kps's 'H-level analogy breaks' (S31m) because H is category 3 (observer-blind, coarsest) while LRC coverage is category 1 (observer-relative, finest) -- H literally cannot see the observer the LRC is defined against.
+- **FINISHING REDIRECT:** attack the LRC in category 1 (tiling rigidity, the S39 exact-tiler crux), with category 2 (gap widths / three-gap, kps THM-565) as the tool -- NOT category 3 (H/additive-energy, provably too coarse). Safe at t <=> the observer sits in a gap of {frac(s_i t)} with both neighbors >= 1/14 away = couples cat 1 (placement) + cat 2 (gap widths). The right object is the METRIC winding tournament (order+gaps, anchored), not the bare tournament (order, cat 3).
+- Concurrent: kps S31m (REFUTED Jensen/score-variance + 13=PG(2,3); coverage finer than H), codex HYP-2891 (Clebsch/Bruhat/unital carriers, cut=observer-relative side). All consistent.
+NEW: reflection + three_observer_categories_macmini_S41.py. NEXT: cat-1 exact-tiler characterization (with kps), using cat-2 three-gap metric.
+
 ## mac-mini-2026-06-22-S40 -- the CUT side is CLASSICAL: Clebsch = cut-space Cayley(K_5), truncated octahedron = permutohedron(S_4)
 Owner: explore Unital/Clebsch/Truncated-Octahedral as inspiration; keep aiming to finish LRC; weight team work equally. Reflection: the-cut-side-is-classical-clebsch-and-the-permutohedron.md.
 - **VERIFIED:** Clebsch graph SRG(16,5,0,2) = the cut-space Cayley graph of K_5 (folded 5-cube; the 5 vertex-stars delta_v, sum=0, are exactly its generators). Generally cut-space Cayley(K_n) = folded n-cube.
