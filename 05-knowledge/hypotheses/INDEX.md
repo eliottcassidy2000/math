@@ -10497,3 +10497,9 @@ Independent verification that the sorry-free Lean witness route (lrc14_from_bonf
   - `exists_one_div_card_le`: k nonneg reals summing to 1 have one >= 1/k (averaging/pigeonhole core).
   - `exists_gap_gt_one_seventh`: for k<=6 cyclic gaps summing to 1, SOME gap > 1/7 (the clean EVERYWHERE part of hnu1: <=6 phases always leave a >1/7 runner-free arc; verified-true input HYP-2835).
 - **Use:** feeds the concrete GOOD-set construction (the team's measure layer, codex LRCEventMeasureBridge): for clusterSize<=6, GOOD={x: maxgap>1/7}=univ, so nuShape=mu(univ)=1, discharging hnu1's k<=6 case (k=7 is the measure-zero-exception a.e. case). Non-conflicting standalone module. -> hnu1, HYP-2835, LRCWitnessBonferroni, LRCEventMeasureBridge.
+
+## HYP-2837: LRC(14) FORMALIZE -- the concrete GOOD event (max-gap side) + measurability, sorry-free Mathlib (mac-mini-2026-06-22-S26)
+- **`LRCGoodSet.lean` -- BUILDS CLEAN, SORRY-FREE.** The concrete witness-floor GOOD carrier (the max-gap side, complementing kps's G_P safeSet + sector coverSet in LRCDenseCovers):
+  - `goodSet (E : List Z) = U_{a in E} I_{b in E} {x : frac((b-a) x) notin Ioc 0 (1/7)}` -- the event 'some phase frac(a x) leaves the half-open length-1/7 arc after it empty', = {x: cyclic maxgap{frac(e x): e in E} > 1/7}.
+  - `measurableSet_goodSet`: GOOD is MEASURABLE (finite biUnion/biInter of preimages of the Borel set (Ioc 0 (1/7))^c under kps's `measurable_phase`).
+- **Use:** nuShape s = mu(goodSet (cluster s)) plugs into codex's `shape_bonferroni_handoff` (nuShape = mu(GOOD)); the Bonferroni node hbonf then applies. My pigeonhole (HYP-2836) gives goodSet = univ for clusterSize <= 6 => nuShape = mu(univ) = 1, the hnu1 node (k<=6 case). Measurable formulation uses the key identity frac(b x) in (frac(a x), frac(a x)+1/7] <=> frac((b-a) x) in (0,1/7]. -> hnu1, hbonf, HYP-2836, LRCDenseCovers, LRCEventMeasureBridge.
