@@ -1,10 +1,11 @@
 ---
 id: HYP-+2880
 title: H multiplicative over strong-component ATOMS (the totient/multiplicative-function analogy; {7,21} the finite forbidden gaps, NOT a 7-ramification -- 35=5*7,49=7^2 ARE atoms); + the E_7 C_5-hole <-> H=7 K_3-obstruction question (apex-7 odd-cycle, perfect-graph odd-hole<->odd-clique)
-status: Thread B VERIFIED (atom H-values by n; {7,21} forbidden gaps; ramified-prime instinct CORRECTED). Thread A grounded (H=7=K_3 of 3 conflicting cycles, THM-029; E_7 has C_5 holes, kps S31e); bijection map is the open literal-test (shared with kps).
+status: Thread B VERIFIED (atom H-values by n; {7,21} forbidden gaps; ramified-prime instinct CORRECTED). Thread A RESOLVED WITH A TWO-LEVEL DISTINCTION: S37 verifies directed C5 support = three vertex-conflicting triangles = H=7 K3 in cycle space; S100/HYP-2881 shows an E7 metagraph C5 hole is not that single support object but a five-class quotient cycle.
 source: mac-mini-2026-06-22-S37 (user: E_7 C_5<->H=7 K_3 bijection + H-multiplicative<->totient)
 related:
   - HYP-2873   # forbidden-H finite {7,21}, achievable cofinite
+  - HYP-2881   # S100 fixed-path audit of E7 C5 vs H=7 K3
   - h21-moon-reduction-s617  # H = prod H(strong components)
   - THM-029    # H=7 impossible; THM-079: H=21 impossible
 ---
@@ -25,22 +26,16 @@ n=4:{5}, n=5:{9,11,13,15}, n=6:{15,17,...,45}, n=7:{25,...,35,...,49,51}.
   special in BOTH (H: {7,21} gaps; LRC: D=14=2*7 obstruction). Both governed by multiplicativity +
   the apex-7. (Open: a sharp Dirichlet-series / Euler-product for the H-distribution via the atoms.)
 
-## Thread A: E_7 C_5 holes <-> H=7 K_3 obstruction (the literal pentagon test, for kps)
+## Thread A: E_7 C_5 holes <-> H=7 K_3 obstruction (literal pentagon test resolved)
 - **H=7 obstruction = K_3 (PROVED, THM-029):** H=7 requires 3 independent odd cycles all pairwise
   CONFLICTING = a triangle (K_3) in the conflict graph -- which cannot exist. The K_3 (3-cycle) of
   conflicting cycles is the obstruction.
 - **E_7 has C_5 holes (kps S31e):** the even-graph metagraph at n=7 loses chordality, gaining
   chordless 5-cycles (C_5 odd holes) -- the apex-prime non-chordality.
-- **THE QUESTION (literal match):** do E_7's C_5 holes map, via the even-graph<->tournament cycle-space
-  bijection (cycle_space_bijection_s20ge), onto the H=7 K_3? The C_5 (odd hole) vs K_3 (odd clique/3-
-  cycle) is the PERFECT-GRAPH odd-hole<->odd-clique duality (C_5 self-complementary; both the minimal
-  'odd' obstruction at apex 7). If the bijection sends C_5 -> K_3, the thematic pentagon match becomes
-  LITERAL: one apex-7 odd-cycle phenomenon underlying {7,21}, E_7 non-chordality, AND LRC(14). 
-  @kps (you have E_7 + 7-adic atoms) -- this is the test to run with your E_7 hole data + the bijection.
--> HYP-2873, h21-s617, THM-029, kps E_7 (S31e), kps 7-adic atoms (S31f).
+- **TWO-LEVEL ANSWER:** the directed pentagon support really is the H=7/K3 cycle-space object,
+  but an E7 metagraph C5 hole is one quotient level higher.
 
-
-## Thread A VERIFIED (S37): the C_5 <-> H=7 K_3 match IS literal via the cycle space
+## Thread A VERIFIED (S37): the directed C_5 <-> H=7 K_3 support match is literal
 COMPUTED in K_5/K_7 cycle space (GF(2)):
 - **C_5 = XOR of 3 pairwise-VERTEX-CONFLICTING triangles** (the fan {123}+{134}+{145} = the 5-cycle
   1-2-3-4-5; all share vertex 1). ROBUST: ALL 5 triangle-triples in K_5 XORing to C_5 are pairwise
@@ -48,10 +43,16 @@ COMPUTED in K_5/K_7 cycle space (GF(2)):
 - The **H=7 obstruction = 3 pairwise-vertex-conflicting cycles = a K_3** in the conflict graph (THM-029).
 - The bijection is even-graph = XOR of fundamental cycles (cycle_space_bijection_s20ge), so a C_5
   even-graph vertex of E_7 corresponds, in the tournament cycle space, to exactly the 3-conflicting-
-  triangle (H=7 K_3) configuration. **=> the thematic pentagon match is LITERAL:** C_5 (even-graph /
-  E_7 side) = the H=7 K_3 (tournament / H side) = the apex-7 odd-cycle obstruction. One phenomenon
-  underlies {7,21}, E_7 non-chordality, and (via the apex-7) LRC(14).
-- **HONEST distinction:** this is the C_5 even GRAPH (a 5-cycle, one vertex of E_7). Whether kps's E_7
-  METAGRAPH HOLES (chordless 5-cycles in the iso-class ADJACENCY, S31e) are these same C_5 (or reduce
-  to them) is the connecting step -- @kps to check with your E_7 hole data + the bijection. The
-  cycle-space identity (C_5 = 3 vertex-conflicting triangles = H=7 K_3) is the literal core, verified.
+  triangle (H=7 K_3) configuration. **=> the directed support match is literal:** C_5 as a cycle-space
+  vector equals the H=7 K3 obstruction support.
+- **S100/HYP-2881 quotient audit:** HYP-2881 then tests the E7 metagraph-hole reading with the same
+  fixed-path fundamental-cycle map: fix
+  `0->1->...->6`; a reversed free arc `(i,j)` maps to the path-fundamental even cycle
+  `i,i+1,...,j,i`.  Under this map, a directed pentagon support is one E7 vertex class
+  (class 3), whereas an E7 C5 hole is a five-class quotient cycle.  The H=7 point
+  `alpha=(3,0)` has zero masks/classes; `k3_forces_pentagon` occupies five classes and
+  hits `835/1496` E7 C5 holes, but no E7 C5 hole is entirely made from those classes.
+  Therefore "C5 = K3" is literal for the directed cycle-space support, while "E7 metagraph C5 hole
+  = H=7 K3" is false as object equality.  The next test is incidence-profile comparison against
+  the E7 C5/C7 hole classes, not rerunning either literal support or metagraph-hole question.
+-> HYP-2873, HYP-2881, h21-s617, THM-029, kps E_7 (S31e), kps 7-adic atoms (S31f).

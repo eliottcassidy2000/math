@@ -1,7 +1,7 @@
 ---
 id: HYP-2878
 title: The apex-7 odd-cycle phenomenon -- E_7's odd holes (C_5 + C_7) are the shared structure behind forbidden H in {7,21}, E_7 non-chordality, and LRC(14)
-status: COMPUTED+STRENGTHENED. E_7 odd holes=1496 C_5+196 C_7 (validated V=54 chi=28); 7-multiple H-atoms first at m=7 (49=7^2); SHARP FACT: 7 is the UNIQUE permanent prime gap in the H-spectrum (=> LRC(14)=2*7 hard). Three n=7 thresholds fire together; single literal C_5 object still OPEN
+status: COMPUTED+STRENGTHENED. E_7 odd holes=1496 C_5+196 C_7 (validated V=54 chi=28); 7-multiple H-atoms first at m=7 (49=7^2); 7 is the unique permanent prime gap in the H-spectrum; S37 verifies directed C5 support = H=7 K3 in cycle space, while S100 shows E7 metagraph C5 holes are five-class quotient cycles, not that single support object
 source: kind-pasteur-2026-06-22-S31e
 related:
   - THM-200    # H=7 impossibility (the pentagon obstruction)
@@ -9,6 +9,7 @@ related:
   - HYP-2876   # the apex-7 floor / finite-certificate (LRC residue route)
   - HYP-2605   # the winding tournament T(x) (LRC <-> tournament bridge)
   - HYP-2758   # LRC(14) open BECAUSE 14=2*7 composite
+  - HYP-2881   # S100 exact fixed-path audit of E7 C5 vs H=7 pentagon
 ---
 
 # HYP-2878 -- the apex-7 odd-cycle phenomenon
@@ -26,11 +27,13 @@ omega=5,10,28 match the canon exactly):
 > No C_9/C_11. E_5, E_6 have NONE (chordal). So the apex prime n=7 is exactly where the
 > even-graph metagraph first admits odd holes, and they come in TWO lengths -- BOTH the apex
 > prime's neighbors:
-- **C_5 (the pentagon), 1496 of them** = the SAME odd cycle as the `H=7` obstruction. THM-200:
-  `H=7` needs the conflict graph `Omega = K_3` (3 mutually-conflicting 3-cycles), which is
-  IMPOSSIBLE because 3 pairwise-sharing triangles FORCE a directed 5-cycle (a C_5) -- the
-  pentagon is the obstruction that makes `H=7` (and `H=21=3*7`) permanently forbidden. The
-  pentagon is ALSO E_7's first odd hole. The C_5 is the shared "first odd-cycle complication".
+- **C_5 (the pentagon), 1496 of them** = the same first-odd-cycle length/signature as the `H=7`
+  obstruction.  S37 verifies the literal cycle-space support identity: a directed pentagon support
+  is the XOR of three pairwise vertex-conflicting triangles, the `H=7` K3 obstruction support.
+  S100 adds the quotient guardrail: an E7 metagraph C5 hole is not that support object but a
+  five-class cycle in the E7 quotient metagraph.
+  THM-200: `H=7` needs the conflict graph `Omega = K_3` (3 mutually-conflicting 3-cycles),
+  which is impossible because 3 pairwise-sharing triangles force a directed 5-cycle.
 - **C_7 (the heptagon), 196 = 14^2 of them** = the APEX-PRIME signature: the length-7 odd hole
   is the prime 7 itself appearing as a chordless cycle in the apex-prime metagraph, and the
   count `196 = 14^2` is the LRC dimension squared.
@@ -76,22 +79,33 @@ the obstruction lives in the odd-cycle (OCF) content of `T(x)` -- the same `c_3,
 ## Honest assessment (what is established vs thematic vs open)
 - **ESTABLISHED (computed):** E_7 is the first non-chordal `E_n`; its odd holes are exactly
   `C_5` and `C_7`; `H in {7,21}` forbidden via the pentagon; LRC=T(x)'s OCF/local-sink (HYP-2605).
-- **THEMATIC (same odd cycle, different graphs):** the pentagon `C_5` is the obstruction in BOTH
-  the conflict graph `Omega` (forbidding H=7) AND the even-graph metagraph `E_7` (non-chordality).
-  These are different graphs; the unification is "the pentagon is the first odd-cycle obstruction
-  at the complexity threshold n=7", not yet a single literal `C_5`.
-- **OPEN (the single-object claim):** whether ONE odd-cycle object simultaneously (i) is E_7's
-  odd hole, (ii) forbids H in {7,21}, (iii) obstructs LRC(14). The C_7=apex-prime heptagon
-  (196=14^2) is the most LRC-suggestive (length 7 = sector count = 14/2) but its literal role in
-  the LRC winding tournament is unproven.
+- **THEMATIC (same obstruction layer, different quotient levels):** the directed pentagon support
+  is literally the H=7/K3 support in the cycle space (S37), and E7 first grows metagraph C5 holes
+  at the same apex prime.  S100 shows these are not the same object: the support is one E7 class,
+  while an E7 C5 hole is a five-class quotient cycle.
+- **OPEN (the remaining single-object claim):** the directed-support identity is closed and the
+  metagraph-hole equality is refuted.  What remains open is whether the C7=apex-prime heptagon
+  (196=14^2, length 7 = sector count = 14/2) or an incidence-profile class in the LRC winding
+  tournament is the single object simultaneously seen by E7, forbidden H, and LRC(14).
 - **PRIOR NEGATIVE (codex-s96):** even-graph MINORS are NOT the H obstruction; loneliness is not
   minor-closed under runner-deletion. So the link is via the odd-hole STRUCTURE (the cycle space),
   not a minor order on speed-subsets.
+- **S100 METAGRAPH-HOLE AUDIT (codex):** the sharp fixed-path cycle-space test separates support
+  equality from quotient-hole equality.
+  A free reversed arc `(i,j)` maps to the path-fundamental even cycle
+  `i,i+1,...,j,i`, so this is the strongest labelled bijection available.  Under it, the
+  H=7 point `alpha=(3,0)` has `0` masks/classes in the fixed-path cube, the directed
+  pentagon support maps to a single E7 class (class 3), and the `k3_forces_pentagon`
+  classes hit `835/1496` E7 C5 holes but no C5 hole is entirely made of those classes.
+  Therefore an E7 metagraph C5 hole is a five-class quotient cycle, not the THM-200
+  directed pentagon support itself.  The surviving refined statement is:
+  directed C5 support = H=7 K3 support, while E7 metagraph C5 holes live one quotient level up.
 
 ## Next tests
 1. Are the 196 C_7 holes a single S_7-orbit / Z/7-symmetric? (a canonical apex heptagon).
-2. Do E_7's C_5 holes correspond, via the cycle-space bijection (even graph <-> tournament cycle
-   part), to the H=7 conflict-graph K_3 obstruction? (the sharpest single-object test).
+2. Redirect the resolved C5 test to incidence profiles: which E7 C5-hole classes are forced by
+   `k3_forces_pentagon`, and does their neighborhood profile match the THM-200 extra-odd-cycle
+   obstruction better than raw object equality did?
 3. Does the LRC winding tournament `T(x)`'s OCF avoid a forbidden conflict-graph class exactly when
    non-lonely? (the owner's `{7,21}<->LRC` claim) -- compute the conflict graph of T(x) for the
    AP cluster across phases.
