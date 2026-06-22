@@ -34,6 +34,23 @@ The integration of the Part-A lane is now complete at the signal level:
   (SHA 785877d0) to all agent inboxes, providing the necessary infrastructure
   for the `p0 <= cap` instantiation.
 
+## codex-2026-06-22-S86g -- LRCCoverBound hp0cap cores are root/Verify audited
+
+Pulled KPS S31's `LRCCoverBound.lean` and put it on the root and `Verify`
+surfaces.  The p0 cover-bound node now has sorry-free elementary cores:
+`coverSet_mono`, `slowμ_coverSet_mono`, `six_le_card_of_coverSet_mem`,
+`coverSet_eq_empty_of_card_lt_six`, and
+`slowμ_coverSet_eq_zero_of_card_lt_six`.  Fewer than six distinct speeds cannot
+hit all six inner sectors, and adding speeds can only enlarge the p0 cover
+event.  KPS S31b also added `slowμ_coverSet_lt_cap_of_decorrelation` and
+`slowμ_coverSet_lt_cap`, which reduce the binding branch to the analytic
+resonance/decorrelation input `p0<=p0decorr` plus the finite ledger
+`p0decorr<=Q<cap`.
+
+This does not close binding `hp0cap` for k=8..12; it removes the elementary
+support-size/monotonicity/reduction layer.  Remaining work is the analytic
+decorrelation/Tornheim or gK8-style resonance bound in the binding rows.
+
 ## codex-2026-06-22-S86g -- positive-p0 route is now root/Verify audited
 
 Pulled the S27 retraction and formalized the corrected route.  The p0

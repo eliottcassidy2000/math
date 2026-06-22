@@ -6,6 +6,32 @@ Attacked the wide cover bound `hp0cap = (p0(E)=meas(coverSet E) <= cap_k)` the s
 - `slowμ_coverSet_eq_zero_of_card_lt_six`: **|E|<6 => coverSet=empty => p0=0<=cap** (closes hp0cap for k<6).
 - `slowμ_coverSet_lt_cap`: RESIDUAL ISOLATION (split by cluster size) -- hp0cap reduces to the SINGLE analytic hypothesis `p0<=p0_decorr` (the resonance bound). The hp0cap analogue of `witness_pos_from_wide_bound`.
 RESIDUAL (analytic, identified): binding k=8..12 = `p0<=p0_decorr<=Q(k-1)<cap` (THM-534); finite check + rational margins machine-checkable, the resonance bound `p0<=p0_decorr` (THM-546 comb + Tornheim tail) is the genuine residual (analogous to hpartA's Vmax-embedding+equidistribution). Marginal uniformity (mathlib AddCircle.measurePreserving_zsmul) is a building block but only gives a useless union bound -- the binding bound REQUIRES the joint decorrelation, which is the irreducibly-analytic content. Supports codex's p0 route (S86g addendum 4: hp0cap+hmeasGP+readouts+PartA => LRC14). Pushed 3x. NET both deep nodes now have elementary cores formalized + analytic residual cleanly isolated: hpartA (reach core, S31) + hp0cap (cover cores, S31b). -> HYP-2839, OPEN-Q-108.
+## codex-2026-06-22-S86g -- LRCCoverBound root/Verify-audited for hp0cap cores
+
+Pulled KPS S31's `LRCCoverBound.lean`, which isolates elementary parts of the
+p0 cover-bound node `hp0cap`.  The file proves `coverSet_mono`,
+`slowμ_coverSet_mono`, `six_le_card_of_coverSet_mem`, `coverSet_eq_empty_of_card_lt_six`,
+and `slowμ_coverSet_eq_zero_of_card_lt_six`: more speeds only enlarge the p0
+cover event, and fewer than six distinct cluster speeds cannot hit all six
+inner sectors, so the p0 cover measure vanishes.
+
+Root-imported the module and added aggregate `Verify` wrappers for those cores.
+After the S31b follow-up, also audited `slowμ_coverSet_lt_cap_of_decorrelation`
+and `slowμ_coverSet_lt_cap`, which isolate `hp0cap` to the analytic
+resonance/decorrelation input `p0<=p0decorr` plus the finite ledger
+`p0decorr<=Q<cap`.  Focused, `Verify`, and root transcripts:
+`lrc_cover_bound_root_import_codex_s86g.out`,
+`tournamenth7_verify_lrc_cover_bound_codex_s86g.out`, and
+`tournamenth7_root_lrc_cover_bound_codex_s86g.out`; scans found no warnings, no
+`sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{speed-list inclusion, coverSet event,
+slowμ p0 measure, six inner sectors, distinct witnesses, small-k vanishing,
+hp0cap}`.  Edges are event monotonicity, measure monotonicity, sector-disjoint
+injectivity, and zero-cover implication.  Challenged assumption: `hp0cap` is
+entirely analytic/Tornheim; the elementary support-size and monotonicity cores
+are now sorry-free Lean, leaving the binding k=8..12 decorrelation/tail bound as
+the hard residue.
 
 ## codex-2026-06-22-S86g -- positive-p0 LRC14 assembly formalized after S27 retraction
 

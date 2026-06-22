@@ -54,6 +54,7 @@ import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
+import TournamentH7.LRCCoverBound
 import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge
@@ -369,6 +370,67 @@ theorem lrc_event_measure_bridge_denseCovers_D_le_p0_audit
   LonelyRunner.LRC14.EventMeasureBridge.shape_D_le_p0_denseCovers_handoff
     Eof hanchor nuShape DShape p0Shape hDmeasure hp0measure hDdef
 #print axioms lrc_event_measure_bridge_denseCovers_D_le_p0_audit
+
+/-! ### LRC14 p0 cover-bound elementary cores -/
+
+theorem lrc_cover_bound_coverSet_mono_audit {E E' : List ℤ}
+    (h : ∀ e ∈ E, e ∈ E') :
+    LonelyRunner.DenseCovers.coverSet E ⊆
+      LonelyRunner.DenseCovers.coverSet E' :=
+  LonelyRunner.DenseCovers.coverSet_mono h
+#print axioms lrc_cover_bound_coverSet_mono_audit
+
+theorem lrc_cover_bound_slowμ_coverSet_mono_audit {E E' : List ℤ}
+    (h : ∀ e ∈ E, e ∈ E') :
+    LonelyRunner.DenseCovers.slowμ (LonelyRunner.DenseCovers.coverSet E) ≤
+      LonelyRunner.DenseCovers.slowμ (LonelyRunner.DenseCovers.coverSet E') :=
+  LonelyRunner.DenseCovers.slowμ_coverSet_mono h
+#print axioms lrc_cover_bound_slowμ_coverSet_mono_audit
+
+theorem lrc_cover_bound_six_le_card_of_coverSet_mem_audit
+    {E : List ℤ} {x : ℝ}
+    (hx : x ∈ LonelyRunner.DenseCovers.coverSet E) :
+    6 ≤ E.toFinset.card :=
+  LonelyRunner.DenseCovers.six_le_card_of_coverSet_mem hx
+#print axioms lrc_cover_bound_six_le_card_of_coverSet_mem_audit
+
+theorem lrc_cover_bound_coverSet_eq_empty_of_card_lt_six_audit
+    {E : List ℤ} (h : E.toFinset.card < 6) :
+    LonelyRunner.DenseCovers.coverSet E = ∅ :=
+  LonelyRunner.DenseCovers.coverSet_eq_empty_of_card_lt_six h
+#print axioms lrc_cover_bound_coverSet_eq_empty_of_card_lt_six_audit
+
+theorem lrc_cover_bound_slowμ_coverSet_eq_zero_of_card_lt_six_audit
+    {E : List ℤ} (h : E.toFinset.card < 6) :
+    LonelyRunner.DenseCovers.slowμ
+      (LonelyRunner.DenseCovers.coverSet E) = 0 :=
+  LonelyRunner.DenseCovers.slowμ_coverSet_eq_zero_of_card_lt_six h
+#print axioms lrc_cover_bound_slowμ_coverSet_eq_zero_of_card_lt_six_audit
+
+theorem lrc_cover_bound_slowμ_coverSet_lt_cap_of_decorrelation_audit
+    (E : List ℤ) (p0decorr Q capv : ℝ)
+    (hresonance :
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal ≤ p0decorr)
+    (hfinite : p0decorr ≤ Q)
+    (hmargin : Q < capv) :
+    (LonelyRunner.DenseCovers.slowμ
+      (LonelyRunner.DenseCovers.coverSet E)).toReal < capv :=
+  LonelyRunner.DenseCovers.slowμ_coverSet_lt_cap_of_decorrelation
+    E p0decorr Q capv hresonance hfinite hmargin
+#print axioms lrc_cover_bound_slowμ_coverSet_lt_cap_of_decorrelation_audit
+
+theorem lrc_cover_bound_slowμ_coverSet_lt_cap_audit
+    (E : List ℤ) (p0decorr Q capv : ℝ) (hcap : 0 < capv)
+    (hbig : 6 ≤ E.toFinset.card →
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.coverSet E)).toReal ≤ p0decorr ∧
+        p0decorr ≤ Q ∧ Q < capv) :
+    (LonelyRunner.DenseCovers.slowμ
+      (LonelyRunner.DenseCovers.coverSet E)).toReal < capv :=
+  LonelyRunner.DenseCovers.slowμ_coverSet_lt_cap
+    E p0decorr Q capv hcap hbig
+#print axioms lrc_cover_bound_slowμ_coverSet_lt_cap_audit
 
 /-! ### LRC14 concrete slow-time witness floor -/
 

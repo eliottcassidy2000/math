@@ -62,6 +62,8 @@
                                       seven-gap equality boundary for `hnu1`.
     · TournamentH7.LRCDenseCovers — pointwise dense-cover inclusion
                                       behind `D(E) <= p0(E)`.
+    · TournamentH7.LRCCoverBound — elementary cover-bound cores:
+                                      coverSet monotonicity and small-k vanishing.
     · TournamentH7.LRCGoodSet — concrete measurable `GOOD` event carrier.
     · TournamentH7.LRCBonferroniMeasure — probability-measure Bonferroni
                                       inequality for `GOOD(E) ∩ G_P`.
@@ -141,6 +143,7 @@ import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
+import TournamentH7.LRCCoverBound
 import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge
