@@ -1,0 +1,14 @@
+AP single-replacements (remove rem, add v<=60) that stay TIGHT (M=1/14 exactly):
+  found 4 sporadic tilers:
+   remove 12, add 24 (v=10 mod14, collides w/ [10]); witness t=3/14; S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+   remove 12, add 36 (v=8 mod14, collides w/ [8]); witness t=3/14; S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]
+   remove 12, add 48 (v=6 mod14, collides w/ [6]); witness t=391/672; S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 48]
+   remove 12, add 60 (v=4 mod14, collides w/ [4]); witness t=3/14; S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 60]
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_sporadic_search_kps.py", line 41, in <module>
+    print("\n=> If ALL are v \u2261 (some speed) mod 14 with a single gap+collision, the mechanism (THM-560c)")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2261' in position 18: character maps to <undefined>

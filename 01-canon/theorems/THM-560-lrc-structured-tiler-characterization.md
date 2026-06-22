@@ -60,6 +60,36 @@ safe set, contradicting `meas(Safe)=0`); therefore `M = 1/14`. ∎
 **(c)** Immediate from (a),(b); `S_GW` checked computationally (not difference-closed: e.g. `24-1=23
 ∉ S_GW`; tight with `M = 1/14`). ∎
 
+## The sporadic mechanism (part c, structural -- guides OPEN-Q-108)
+At a tight witness `t`, the 13 speeds map to residues `||s t|| -> k/14`. Two regimes
+(`lrc_sporadic_mechanism_kps.py`):
+- **AP `{1..13}` at `t=3/14`**: the speed->residue map is a BIJECTION onto `{1,...,13}/14` --
+  equal spacing, no gap, no collision. (The difference-closed case.)
+- **GW `{1..11,13,24}` at `t=5/14`**: residue `4/14` is MISSING (a gap), residue `8/14` is DOUBLED
+  (a collision -- speeds `10` and `24`, since `24 ≡ 10 mod 14`). So GW is exactly the AP with
+  `12 -> 24`: because `24 ≡ 10 (mod 14)` the replaced speed lands on `10`'s residue at the witness,
+  freeing `12`'s old residue `4`. A BALANCED gap+collision (one each) that still isolates `0` at
+  exactly `1/14`.
+
+So the sporadic tilers trade equal-spacing for a balanced gap+collision pattern, realized as an
+AP-perturbation `s -> s'` with `s' ≡ s'' (mod 14)` for another speed `s''`, chosen so the witness
+isolation of `0` survives. Crucially this is a **Diophantine (integer) phenomenon, not mod-14**: the
+integer `24 != 10` supplies coverage at non-witness `t` that the residue `10` alone would not, which
+is why GW tiles even though its residues mod 14 are NOT a complete system (missing `12`, doubling
+`10`). **OPEN-Q-108 = count the balanced gap+collision perturbations that preserve `M = 1/14` over
+ALL `t`** (tightness, not just witness isolation). This is a sharper, finite-combinatorial target
+than the full measure-rigidity.
+
+**GW is ISOLATED among single-replacements (supports finiteness).** Searching all AP single-speed
+replacements `{1..13}\{rem} ∪ {v}`, `v<=60` (`lrc_sporadic_verify_kps.py`, with the RIGOROUS critical
+points `t=k/(s_i +- s_j)`): the ONLY tight one is GW (`rem=12, v=24`). The tempting family
+`{1..11,13,12j}` is LOOSE for `j>=3`: `M({1..11,13,36})=3/41`, `M(..,48)=4/53`, `M(..,60)=1/13`, all
+`> 1/14` (positive safe measure, NOT tilers). [An earlier coarse search wrongly flagged these as tight
+-- its candidate set missed the true argmax, underestimating `M`; the pairwise critical points fix it.
+Disciplinary note: verify apparent extremal families with the exact critical set, not a breakpoint
+sample.] So the witness-isolation condition (`min=1/14` at one `t`) is FAR from sufficient; global
+tightness over all `t` is what isolates GW. This is real evidence the sporadic locus is small/finite.
+
 ## Significance
 - **Resolves the structured half of mac-mini's crux**: the difference-closed (equivalently
   "interval-like") exact tilers are *completely* pinned down -- exactly the AP-dilates, all tight,
