@@ -33,6 +33,23 @@ Dispatch (Thread 3): make the quasi-independence ratio `R' = meas(coverSet^c cap
 - **HYP-2606 + HYP-2840 CONNECTION (clean):** SPEC = {sum_high = Weyl tail = THM-546 single-far comb, ghat's 1/n IS the sawtooth} + {sum_low = finite low resonances on gcd(P)Z cap 7Z = the Vitali/rate-V nbhd patch HYP-2852}. HYP-2606 makes sum_low FINITE (chat support) + gives each term's value (D7(c) singular series, HYP-2646). HONEST GAP = uniformity of the C/sqrt(H) rate (wide regime -> THM-531 scale-invariance to bounded core).
 - **CONVERGENCE w/ concurrent kps-S33:** S33's INDEPENDENT real-space route => rigorous q-uniform floor c_q >= 3/pi^2 = 1/(2 zeta(2)) ~ 0.304 (rate-V Farey + Mertens). My R'-floor 0.53 + S33's witness floor 0.304: different objects, BOTH zeta(2)/Farey-governed, BOTH >> m_P. q-harmonic SPEC term scales smoothly q=3,5,7,9 (HYP-2846).
 NEW: HYP-2860; scripts `lrc14_spectrum_{intersection_sum,routing,L2tail_synthesis,synthesis_VERDICT}_kpswf12.py` + outputs. NOTE: `lrc14_spectrum_routing_kpswf12.py` was auto-committed under an S33-labeled checkpoint (c477899b0) but is THIS session's content -- no collision, S33's real deliverable was the Farey/Mertens floor.
+## codex-2026-06-22-S92 -- perturbed sheet discrepancy bridge for Node 1
+User pointed out that Proof 2's exact equal-spacing is the discrete lossless
+case of the effective-equidistribution bound needed in Node 1.  Made that
+precise for exactly dilated bases plus parked residue runners.
+
+- Added `04-computation/lrc14_perturbed_sheet_discrepancy_codex_s92.py` and
+  stored `05-knowledge/results/lrc14_perturbed_sheet_discrepancy_codex_s92.out`.
+- Claimed HYP-2864.  Lemma: for a parked runner with residue `r mod b` and
+  `g=gcd(r,b)`, the danger sheets among `n=0,...,b-1` are sampled on a
+  repeated `b/g` grid, so `#danger <= b/7+g`.  For `bE` plus `h` parked
+  runners, the surviving sheet fraction is at least
+  `1-h/7-sum gcd(r_i,b)/b`.
+- Dichotomy: if the sheet floor is nonpositive, then some quotient
+  `b/g_i <= 7h/(7-h)`; for `h<=6` this is at most `42`.  That routes the
+  failure branch to a bounded quotient/resonance atlas, and to THM-405 when
+  the actual speed ratio is `<=13`.
+
 ## codex-2026-06-22-S91 -- pure-dilation sheet quotient integrated into the AP boundary-core certificate
 User supplied the sheet-count proof for the kps-S4 hard core
 `S(b,V)={b,2b,...,12b,V}`, `gcd(b,V)=1`, `V==0 mod 14`.  Pulled the
