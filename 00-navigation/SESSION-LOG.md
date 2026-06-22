@@ -6,6 +6,51 @@ Concurrent w/ kps (S31t/u/v Bonferroni+multi-large) + codex (S114 sheaf/radical)
 - **DISCIPLINE: 2 over-claims caught + corrected** -- (1) a wrap-around bug gave seed meas-safe 0.79 (fixed -> 0.0122=S43); (2) 'rigid <=> tight' FALSE (GW sporadics are tight but >=4 gaps). Honest threshold: tight-locus (finite) vs slack (equidistribution); rigidity is the CONSEC part only.
 - **REMAINING CRUXES (honest, LRC(14) NOT finished):** (1) tight-locus FINITENESS (consec+GW only, OPEN-Q-108 / kps THM-560+census); (2) GW safety at n=14 (S42 finite check); (3) effective Erdos-Turan for SLACK (mine). The analytic core (consec-maximizes / tight-locus) stays open.
 NEW: HYP-2900, lrc_node3_equidistribution + slack + dichotomy scripts. NEXT: effective Erdos-Turan (mine); GW census completeness (kps).
+## codex-2026-06-22 -- HYP-2904 scale-separated induction reduction
+
+Worked on inductive reductions for LRC to smaller-size cases.  Pulled incoming
+main after restoring generated session state; incorporated the S46 Node-3
+induction skeleton as a proof obligation rather than a completed size-only
+induction.
+
+Added `04-computation/lrc_scale_separated_induction_codex.py` and stored
+`05-knowledge/results/lrc_scale_separated_induction_codex.out`.  The exact
+finite-comb lemma is:
+
+`meas(Safe_n(B) cap Safe_n({v})) >= (1-2/n)mu - 2c/v`,
+
+where `mu=meas(Safe_n(B))` and `c` is the number of seed-safe interval
+components.  The unsafe set of `v` has density `2/n`; only two boundary
+partials per seed interval contribute the `2c/v` loss.  Therefore any fixed
+seed with positive threshold-`1/n` safe measure admits all sufficiently large
+added speeds.  Since `LRC(n-1)` gives a witness at distance `1/(n-1)>1/n`,
+continuity supplies that positive seed measure for each fixed seed.
+
+Exact AP-core audit for `{1,...,11,13}` at `n=14`: seed measure `426/35035`,
+`4` components, least comb-certified speed `768`; added speeds `30030`,
+`60060`, and `510510` all remain safe with positive exact and comb-certified
+measure.  Sub-14 rows at `n=10` and `n=8` show the same mechanism.
+
+Guardrail: pure runner-count induction is not uniform.  Dilation by `q`
+preserves seed-safe measure but multiplies the component count and the least
+certified speed.  The proof invariant must carry a scale-normalized
+component/arc budget, a bounded Node-2 atlas, or a sharper exact-period Weyl
+packet estimate.  Created HYP-2904/T1017 and reflection
+`07-reflections/lrc-scale-separated-induction-finite-comb-codex.md`.
+
+Fetch during the session brought incoming KPS-S31v on the same Node-3 seam:
+`lrc_equidist_lemma_bounds_kps.py` proves the multi-large Bonferroni-1 version
+of this comb-teeth estimate, closing `r<=6` large speeds over a bounded core
+from a positive floor plus fixed arc budget.  Integrated that as the companion
+to HYP-2904: HYP-2904 is the one-speed induction atom; KPS-S31v is the
+multi-large package; the remaining new target is `r>=7`, where the union bound
+is vacuous and the second-moment resonant-pair defect must be bounded.
+
+Post-rebase incoming KPS-S31w added the global reduction tree.  Integrated it:
+remove-large uses HYP-2904/S31v to peel scale-separated speeds and descend to
+smaller proven LRC seeds; omit-prime gives a direct `t=1/p` witness; dilation
+normalizes.  The non-descending base is exactly the bounded covering core,
+which remains the Node-2 three-gap/AP-hull/Legendre-Venn extremality problem.
 
 ## codex-2026-06-22 -- HYP-2903 activation-depth correction to the wide Bonferroni obligation
 

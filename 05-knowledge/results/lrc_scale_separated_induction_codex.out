@@ -1,0 +1,100 @@
+Scale-separated induction audit for LRC
+==============================================================================
+Lemma audited: if A is the seed safe set at threshold 1/n,
+  mu(A cap Safe_v) >= (1-2/n)mu(A) - 2*components(A)/v.
+Thus adding a sufficiently large speed reduces LRC(n) to a smaller
+seed problem, but the sufficient threshold depends on the seed's
+component budget, not only on n.
+
+S46 AP-core seed with committed 30030 multiples
+------------------------------------------------------------------------------
+  LRC size parameter n=14; threshold=1/14
+  seed=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+  seed safe intervals=4
+  seed safe measure=426/35035 ~= 0.01215927
+  least integer v certified by comb bound=768
+  add v=30030:
+    seed_mu=426/35035 intervals=4
+    exact_after=313/30030 ~= 0.01042291
+    equidist_main=2556/245245 ~= 0.01042223
+    comb_lower=7472/735735 ~= 0.01015583
+    positive_exact=True positive_by_comb=True
+  add v=60060:
+    seed_mu=426/35035 intervals=4
+    exact_after=337/32340 ~= 0.01042053
+    equidist_main=2556/245245 ~= 0.01042223
+    comb_lower=1514/147147 ~= 0.01028903
+    positive_exact=True positive_by_comb=True
+  add v=510510:
+    seed_mu=426/35035 intervals=4
+    exact_after=191/18326 ~= 0.01042235
+    equidist_main=2556/245245 ~= 0.01042223
+    comb_lower=26032/2501499 ~= 0.01040656
+    positive_exact=True positive_by_comb=True
+
+Sub-14 training: AP seed for n=10
+------------------------------------------------------------------------------
+  LRC size parameter n=10; threshold=1/10
+  seed=(1, 2, 3, 4, 5, 6, 7, 8)
+  seed safe intervals=6
+  seed safe measure=69/1400 ~= 0.04928571
+  least integer v certified by comb bound=305
+  add v=210:
+    seed_mu=69/1400 intervals=6
+    exact_after=167/4200 ~= 0.03976190
+    equidist_main=69/1750 ~= 0.03942857
+    comb_lower=-31/1750 ~= -0.01771429
+    positive_exact=True positive_by_comb=False
+  add v=420:
+    seed_mu=69/1400 intervals=6
+    exact_after=11/280 ~= 0.03928571
+    equidist_main=69/1750 ~= 0.03942857
+    comb_lower=19/1750 ~= 0.01085714
+    positive_exact=True positive_by_comb=True
+
+Small induction seed for n=8
+------------------------------------------------------------------------------
+  LRC size parameter n=8; threshold=1/8
+  seed=(1, 2, 3, 4, 5, 6)
+  seed safe intervals=6
+  seed safe measure=7/80 ~= 0.08750000
+  least integer v certified by comb bound=183
+  add v=840:
+    seed_mu=7/80 intervals=6
+    exact_after=221/3360 ~= 0.06577381
+    equidist_main=21/320 ~= 0.06562500
+    comb_lower=23/448 ~= 0.05133929
+    positive_exact=True positive_by_comb=True
+
+Dilation guardrail: pure size-only induction cannot be uniform
+==============================================================================
+  base=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13), n=14; dilation preserves measure but raises component count
+  scale  safe_measure  intervals  least_certified_v
+      1     426/35035          4           768
+      2     426/35035          8          1536
+      5     426/35035         20          3838
+     10     426/35035         40          7676
+     25     426/35035        100         19190
+     50     426/35035        200         38380
+
+  Consequence: LRC(n-1) implies positive seed measure at threshold 1/n,
+  but it does not give a size-only threshold for the next speed.  An
+  induction needs scale normalization, a component/arc budget, or a
+  bounded-core Node-2 reduction.
+
+Tournament Analysis over induction proof carriers
+==============================================================================
+  vertices are proof carriers, not runners
+  observable=(LRC predicate retained, component budget, scale data)
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3cycles=0
+  Hamiltonian path=finite_comb_budget > scale_normalized_seed > node3_large_speed > node2_bounded_core > pure_size_induction > raw_runner_vertices
+
+Proof-route conclusion
+==============================================================================
+  Valid induction branch: LRC(n-1) gives nonempty seed-safe set at
+  threshold 1/n; finite-comb equidistribution adds any sufficiently
+  large next speed.
+  Guardrail: dilation keeps the measure but increases interval count,
+  so pure size-only induction is not uniform.  The missing effective
+  input is a scale-normalized component bound or a bounded Node-2 atlas.
