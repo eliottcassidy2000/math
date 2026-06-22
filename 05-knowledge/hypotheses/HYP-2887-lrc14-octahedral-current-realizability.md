@@ -218,6 +218,29 @@ lemma is not a replacement for additive-energy extremality.  It is the local
 realizability lemma needed after the energy argument compresses the problem to
 near-AP / coherent packet structure.
 
+Incoming S31k strengthens this split.  The direct Fourier expansion of `p0`
+has a positive leading additive-energy coefficient
+
+```text
+p0(E) = p0_decorr(k) + Gamma_k A*(E) + higher resonances,
+Gamma_k > 0 for k=8..12.
+```
+
+The reported `k=9` AP deviation is about `96%` explained by the leading
+`Gamma_k A*(E)` term.  Therefore HYP-2887 should not try to prove global
+interval extremality from scratch.  Its sharper role is to bound the
+higher-order resonance tail:
+
+```text
+R_high(E) = p0(E) - p0_decorr(k) - Gamma_k A*(E).
+```
+
+Low additive-energy rows should have enough `Gamma_k(A*(AP)-A*(E))` room to
+absorb `R_high` by L2/Tornheim/HYP-2636 estimates.  High additive-energy rows
+are near AP/Freiman structured, so their exact-period mod-7 packets should
+land in the octahedral current carrier described here.  The octahedral Hodge
+lemma is therefore a proposed local closure for the `R_high` branch.
+
 ## Assumption challenge
 
 Candidate vertices considered: runners, residues, finite packets, packet

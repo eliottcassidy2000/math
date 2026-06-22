@@ -57,3 +57,11 @@ and mixed vertex signs are stronger (`~0.47` and `~-0.44`).  So the proof
 should not try to bound a single curl scalar and stop.  It should use face curl
 as the decomposition coordinate, then spend the real estimates on wall maxima,
 vertex divergence signs, and HYP-2636 channel sums.
+
+The S31k additive-energy coefficient result makes the role of this branch more
+precise.  Since `Gamma_k>0`, the leading four-term resonance already pushes
+`p0` in the additive-energy direction, and the interval wins that term.  The
+octahedral packet current should be treated as a model for the remaining
+higher-order resonance tail after subtracting `Gamma_k A*(E)`, especially in
+the high-energy near-AP branch where the tail is coherent enough to threaten
+the margin.

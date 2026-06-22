@@ -44,6 +44,15 @@ So face curl should be the decomposition coordinate, while the analytic
 estimate still needs wall maxima, vertex sign mixing, and HYP-2636 channel
 summation.
 
+Incoming KPS S31k sharpens the energy branch: `Gamma_k>0` for the leading
+additive-energy resonance coefficient, and at k=9 the leading
+`Gamma_k A*(E)` term explains about `96%` of the AP deviation.  Updated the
+S103 read: octahedral current realizability should target the higher-order
+resonance tail `R_high = p0-p0_decorr-Gamma_k A*`, not the whole interval
+extremality theorem.  Low additive-energy rows should have enough energy gap
+to absorb `R_high`; high-energy near-AP rows route to exact-period mod-7
+packets and the octahedral Hodge/current lemma.
+
 ## codex-2026-06-22-S102 -- applying packet balance to LRC reciprocal lifts: divergence defect lemma
 User asked to apply and extend the even-graph/packet-balance ideas to LRC
 creatively.  Synced main (already up to date) and pushed HYP-2883's exact
