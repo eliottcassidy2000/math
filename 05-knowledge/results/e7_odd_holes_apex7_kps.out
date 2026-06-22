@@ -5,3 +5,7 @@ n=6: V(E_n)=16  E(E_n)=90  omega=10  greedy_chi<=10
 n=7: V(E_n)=54  E(E_n)=951  omega=28  greedy_chi<=28
   odd holes (chordless odd cycles >=5): count=1692  length spectrum={5: 1496, 7: 196}
   C_5 holes=1496  C_7 holes=196
+  C_7 holes touch 34/54 classes; top class multiplicities [139, 139, 104, 104, 85]
+  C_5 holes touch 48/54 classes
+  most-central C_7 class: edge-count=9 (n=7 Hamiltonian C_7 has 7 edges; empty=0)
+  C_7 holes with all classes <=7 edges (low-complexity 'clean' heptagons): 0

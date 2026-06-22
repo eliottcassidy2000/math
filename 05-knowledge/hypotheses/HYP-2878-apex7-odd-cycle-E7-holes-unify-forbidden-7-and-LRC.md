@@ -35,6 +35,15 @@ omega=5,10,28 match the canon exactly):
   is the prime 7 itself appearing as a chordless cycle in the apex-prime metagraph, and the
   count `196 = 14^2` is the LRC dimension squared.
 
+## C_7 structure (kps-S31e enrichment)
+The 196 C_7 heptagon holes are CONCENTRATED on 34/54 classes (not spread); a few classes are
+highly central (appearing in 139/196 and 104/196 of them), in COMPLEMENT-SYMMETRIC PAIRS
+(139=139, 104=104 -- the Z_2 complement symmetry of the merged metagraph). The most-central
+C_7 class has 9 edges (NOT the naive Hamiltonian C_7 = 7 edges); 0 heptagon holes are built
+purely from low-complexity (<=7-edge) even graphs. So the apex heptagon is a structured,
+complement-symmetric object on the 9-edge even-graph classes -- not the trivial 7-cycle. The
+C_5 holes are broader (touch 48/54 classes).
+
 ## The bridge to LRC(14) (HYP-2605, the winding tournament)
 LRC(14) IS a question about the random winding tournament `T(x)` (phase `x`, difference-winding
 map): `H(T(x)) = I(Omega,2)` (Redei/OCF) and `mu_{1/7} = P_x[T(x) has a scale-1/7 local sink]`

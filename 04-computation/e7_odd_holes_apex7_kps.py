@@ -59,10 +59,10 @@ def build_En(n):
             nb = cls_of[mask ^ (1 << b)]
             if nb != a:
                 meta.add_edge(a, nb)
-    return meta, V
+    return meta, V, rep_graphs
 
 def analyze(n, report_holes=False):
-    meta, V = build_En(n)
+    meta, V, rep_graphs = build_En(n)
     E = meta.number_of_edges()
     # chromatic via clique number lower bound + greedy (exact chi is NP; report omega + greedy)
     omega = max((len(c) for c in nx.find_cliques(meta)), default=0)
@@ -82,6 +82,21 @@ def analyze(n, report_holes=False):
         c7 = [h for h in odd_holes if len(h) == 7]
         c5 = [h for h in odd_holes if len(h) == 5]
         print(f"  C_5 holes={len(c5)}  C_7 holes={len(c7)}")
+        # structural readout: edge-count (even-graph complexity) of the classes in the holes
+        ecount = {cid: g.number_of_edges() for cid, g in enumerate(rep_graphs)}
+        from collections import Counter
+        c7_verts = Counter(v for h in c7 for v in h)
+        c5_verts = Counter(v for h in c5 for v in h)
+        # how many classes participate in C_7 vs C_5 holes; is the heptagon concentrated?
+        print(f"  C_7 holes touch {len(c7_verts)}/{V} classes; top class multiplicities {sorted(c7_verts.values(), reverse=True)[:5]}")
+        print(f"  C_5 holes touch {len(c5_verts)}/{V} classes")
+        # edge-count signature of the most-central C_7 class (apex even graph?)
+        if c7_verts:
+            top = c7_verts.most_common(1)[0][0]
+            print(f"  most-central C_7 class: edge-count={ecount[top]} (n=7 Hamiltonian C_7 has 7 edges; empty=0)")
+        # does any C_7 hole consist ENTIRELY of low-edge (<=7) even graphs (a 'clean' apex heptagon)?
+        clean7 = sum(1 for h in c7 if all(ecount[v] <= 7 for v in h))
+        print(f"  C_7 holes with all classes <=7 edges (low-complexity 'clean' heptagons): {clean7}")
         return odd_holes
     return None
 
