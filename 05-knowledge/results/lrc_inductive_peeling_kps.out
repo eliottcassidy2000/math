@@ -1,0 +1,9 @@
+ITERATED PEELING: bounded core + scale-separated large speeds; ratio per peel -> 6/7:
+  peeled 0: [1, 2, 3, 4, 5, 6, 7]+[200, 2000, 20000]: safe=0.20663
+  peeled 1: [1, 2, 3, 4, 5, 6, 7]+[200, 2000]: safe=0.24282   ratio prev/cur = 0.8510 (target 6/7=0.8571)
+  peeled 2: [1, 2, 3, 4, 5, 6, 7]+[200]: safe=0.28588   ratio prev/cur = 0.8494 (target 6/7=0.8571)
+  peeled 3: [1, 2, 3, 4, 5, 6, 7] (CORE): safe=0.33469   ratio prev/cur = 0.8542 (target 6/7=0.8571)
+
+  => each large peel multiplies safe-measure by ~6/7 (mac-mini exact-1/7 removal).
+     Peeling REDUCES LRC(14) to the bounded core (LRC(8) here, 7 speeds, PROVEN).
+     The induction peels the scale hierarchy down to the all-comparable base.
