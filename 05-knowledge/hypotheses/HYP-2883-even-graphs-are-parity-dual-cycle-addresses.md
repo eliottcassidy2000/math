@@ -13,6 +13,7 @@ related:
   - HYP-2882
   - HYP-2617
   - HYP-2632
+  - HYP-2884
   - HYP-2694
   - HYP-2828
   - OPEN-Q-108
@@ -323,10 +324,13 @@ packet incidence that must be retained before signs and margins are evaluated.
 2. Lift the exact local balance of
    `lrc14_repeated_packet_graph_codex_s101.py` from the finite kernel to the
    reciprocal hyperplane sums after low-height wall deletion.
-3. Compare odd-hole incidence in `P_7(E)` with the E7 metagraph `C_5/C_7`
+3. Use HYP-2884's lifted divergence defect as the local object for that lift:
+   delete low-height walls, then Abel-sum packet-vertex divergence in
+   HYP-2636 additive-frequency shells.
+4. Compare odd-hole incidence in `P_7(E)` with the E7 metagraph `C_5/C_7`
    incidence profiles, not with scalar `H` values.
-4. Test whether the HYP-2828 depth-3 branch has low additive energy after
+5. Test whether the HYP-2828 depth-3 branch has low additive energy after
    quotienting by exact-period packets.
-5. Add a finite packet-compression audit: same packet cycle-support profile,
+6. Add a finite packet-compression audit: same packet cycle-support profile,
    raw cluster varied, measure whether the interval-like representative
    maximizes p0 or the decorrelation error.

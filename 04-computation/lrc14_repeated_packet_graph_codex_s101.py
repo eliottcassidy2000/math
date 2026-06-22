@@ -228,7 +228,7 @@ def main() -> None:
         "4+1+1 edge packets incident to that residue."
     )
     print(
-        "This gives HYP-2882 a concrete proof object.  The remaining analytic "
+        "This gives HYP-2883 a concrete proof object.  The remaining analytic "
         "task is to lift this local finite balance through the reciprocal "
         "hyperplane sums after finite low-height wall deletion."
     )

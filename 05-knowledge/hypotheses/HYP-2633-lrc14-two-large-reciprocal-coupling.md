@@ -129,6 +129,31 @@ finite low-height relation-defect zero sieve
 Equidistribution should not be asked to absorb exact low-height resonances
 that can be isolated in a finite wall ledger.
 
+## HYP-2884 Follow-Up
+
+HYP-2884 sharpens the residue-lift target again.  Instead of asking the finite
+HYP-2632 packet signs to survive packet-by-packet, first use HYP-2883's local
+signed-current graph.  For an integer lift gauge `G`, define
+
+```text
+div_H^G(a) = lift_H(loop a) + sum_b lift_H(edge a,b).
+```
+
+The finite packet graph has `div=0` exactly, but S102 shows the actual
+reciprocal lift has a small, gauge-dependent divergence.  At `H=12`, the
+start-aligned lift has `L1 div=0.0193444`, while raising the pair gives
+`L1 div=0.00610376`.  Therefore the lift-equidistribution lemma should be
+local:
+
+```text
+finite low-height wall deletion
++ Abel summation inside additive-frequency shells
+=> bound on lifted packet divergence.
+```
+
+This is a stricter and more usable target than the scalar signed ledger
+`-108U+54U`.
+
 ## Tournament Analysis
 
 Candidate vertices included runners, gaps, fixed circle sections, section

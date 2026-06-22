@@ -85,4 +85,4 @@ Challenged assumption:
 S101 READING
 ========================================================================================
 The HYP-2632 finite kernel is a perfectly balanced signed graph: every negative 4+2 vertex packet is exactly cancelled by the positive 4+1+1 edge packets incident to that residue.
-This gives HYP-2882 a concrete proof object.  The remaining analytic task is to lift this local finite balance through the reciprocal hyperplane sums after finite low-height wall deletion.
+This gives HYP-2883 a concrete proof object.  The remaining analytic task is to lift this local finite balance through the reciprocal hyperplane sums after finite low-height wall deletion.

@@ -1,3 +1,38 @@
+## codex-2026-06-22-S102 -- applying packet balance to LRC reciprocal lifts: divergence defect lemma
+User asked to apply and extend the even-graph/packet-balance ideas to LRC
+creatively.  Synced main (already up to date) and pushed HYP-2883's exact
+finite packet balance into the actual support-six reciprocal hyperplane sums.
+
+Added `04-computation/lrc14_packet_balance_lift_probe_codex_s102.py` and
+stored output `05-knowledge/results/lrc14_packet_balance_lift_probe_codex_s102.out`.
+The script fixes the four residue-`1` core `(1,8,15,22)` and compares two
+integer lift gauges for the HYP-2632/HYP-2883 packet graph.  In finite packet
+units the local current is exactly balanced at every residue vertex, but after
+reciprocal lifting it becomes a measurable divergence defect
+`div_H(a)=loop_H(a)+sum_b edge_H(a,b)`.
+
+At `H=12`, the start-aligned lift has `max|div|=0.00512112`, `L1 div=0.0193444`,
+and `sum div=0.0193444`; the raised-pair lift has `max|div|=0.00191161`,
+`L1 div=0.00610376`, and `sum div=0.00430821`.  Thus raising the pair cuts
+the measured L1 defect by about `3.17x`, matching HYP-2634's warning that the
+finite/lift mismatch is heavily integer-height-placement driven.  Low-height
+wall counts also narrow from start-aligned `62..86` to raised-pair `58..68`.
+
+New hypothesis HYP-2884: the next LRC proof lemma should be a local-current
+lemma, not a packetwise sign lemma.  Delete the finite coefficient-height
+`<=2` wall ledger, then prove the remaining lifted divergence is Abel-summable
+inside HYP-2636 additive-frequency shells.  This refines HYP-2633's
+residue-lift equidistribution gap and gives OPEN-Q-108 a local object:
+divergence defects of packet vertices rather than a raw wide-cluster census.
+After pulling KPS S31i, connected this to the winding-tournament scar reading:
+non-lonely phases have about `1.22..1.25x` higher directed-3-cycle content, so
+lifted packet divergence is the reciprocal-tail shadow of cyclic/no-sink
+excess.  Coherent cyclic excess should be a finite low-height wall; incoherent
+cyclic excess should be Abel-summable packet current.
+Added reflection `07-reflections/lrc14-lifted-packet-divergence-codex-s102.md`,
+T1000, HYP/result index updates, and refreshed the S101 output after the
+HYP-2883 renumbering.
+
 ## mac-mini-2026-06-22-S38 -- SYNTHESIS: the even graph IS the tournament's CYCLE half (Cut(+)Cycle unifies every lens)
 Owner: synthesize the even-graph<->tournament lenses, understand how the structure shines through frames. Reflection: the-even-graph-is-the-tournaments-cycle-half.md.
 - **THE ONE FRAME:** E(K_n) = Cut(n-1) (+) Cycle(C(n-1,2)). Fixing the base path CHOOSES the cut summand: base-path arcs = cut/score/hierarchy; the C(n-1,2) tiles = cycle space = even-graph generators. **The even graph is precisely the tournament's cycle half** (cut forgotten). VERIFIED dims for n=3..7.
@@ -45,7 +80,7 @@ Added HYP-2883, script/output
 `05-knowledge/results/lrc14_repeated_packet_graph_codex_s101.out`, and
 reflection
 `07-reflections/even-graphs-as-parity-dual-addresses-codex-s101.md`; added
-T998 and index updates.  Assumption challenge: considered runners, fixed-path
+T999 and index updates.  Assumption challenge: considered runners, fixed-path
 free arcs, even-graph edges/classes, E7 metagraph classes, odd-cycle conflict
 packets, strong atoms, exact-denominator packets, support-six relation
 vectors, Fourier shells, affine lanes, relation-depth buckets, and proof

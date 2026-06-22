@@ -1,0 +1,117 @@
+
+============================================================================================
+LRC14 PACKET BALANCE LIFT PROBE - CODEX S102
+============================================================================================
+ambient d=9; Hmax=12; checkpoints=(6, 8, 10, 12)
+finite packet unit U=0.00955648353591
+
+============================================================================================
+FINITE PACKET BALANCE
+============================================================================================
+All weights are in HYP-2632 units U before reciprocal lifting.
+ v   loop incident  balance
+ 0     -4        4        0
+ 2    -25       25        0
+ 3    -18       18        0
+ 4    -25       25        0
+ 5    -18       18        0
+ 6    -18       18        0
+finite balance failures: []
+
+============================================================================================
+INTEGER LIFT GAUGES
+============================================================================================
+
+start_aligned
+    packet                      support  low-height walls
+    loop 0        (1, 7, 8, 14, 15, 22)                86
+    loop 2         (1, 2, 8, 9, 15, 22)                69
+    loop 3        (1, 3, 8, 10, 15, 22)                69
+    loop 4        (1, 4, 8, 11, 15, 22)                65
+    loop 5        (1, 5, 8, 12, 15, 22)                67
+    loop 6        (1, 6, 8, 13, 15, 22)                67
+    (0, 3)         (1, 3, 7, 8, 15, 22)                70
+    (0, 4)         (1, 4, 7, 8, 15, 22)                73
+    (0, 5)         (1, 5, 7, 8, 15, 22)                62
+    (0, 6)         (1, 6, 7, 8, 15, 22)                72
+    (2, 3)         (1, 2, 3, 8, 15, 22)                72
+    (2, 4)         (1, 2, 4, 8, 15, 22)                72
+    (2, 5)         (1, 2, 5, 8, 15, 22)                73
+    (2, 6)         (1, 2, 6, 8, 15, 22)                72
+    (3, 4)         (1, 3, 4, 8, 15, 22)                71
+    (3, 5)         (1, 3, 5, 8, 15, 22)                70
+    (4, 6)         (1, 4, 6, 8, 15, 22)                73
+    (5, 6)         (1, 5, 6, 8, 15, 22)                69
+
+raised_pair
+    packet                      support  low-height walls
+    loop 0       (1, 8, 14, 15, 21, 22)                65
+    loop 2        (1, 8, 9, 15, 16, 22)                62
+    loop 3       (1, 8, 10, 15, 17, 22)                62
+    loop 4       (1, 8, 11, 15, 18, 22)                60
+    loop 5       (1, 8, 12, 15, 19, 22)                60
+    loop 6       (1, 8, 13, 15, 20, 22)                58
+    (0, 3)       (1, 8, 10, 14, 15, 22)                62
+    (0, 4)       (1, 8, 11, 14, 15, 22)                66
+    (0, 5)       (1, 8, 12, 14, 15, 22)                62
+    (0, 6)       (1, 8, 13, 14, 15, 22)                61
+    (2, 3)        (1, 8, 9, 10, 15, 22)                66
+    (2, 4)        (1, 8, 9, 11, 15, 22)                65
+    (2, 5)        (1, 8, 9, 12, 15, 22)                65
+    (2, 6)        (1, 8, 9, 13, 15, 22)                63
+    (3, 4)       (1, 8, 10, 11, 15, 22)                67
+    (3, 5)       (1, 8, 10, 12, 15, 22)                68
+    (4, 6)       (1, 8, 11, 13, 15, 22)                62
+    (5, 6)       (1, 8, 12, 13, 15, 22)                64
+
+============================================================================================
+LIFTED LOCAL DIVERGENCE
+============================================================================================
+For each residue vertex a, compute div_H(a) = lifted_loop_H(a) + sum_b lifted_edge_H(a,b).  Finite packets have div=0 exactly; nonzero values here are the reciprocal-lift defect that a proof must delete or sum by parts.
+
+Gauge: start_aligned
+  H      max|div|        L1 div       sum div            0            2            3            4            5            6
+  6    0.00511941     0.0208391     0.0208391    0.0051194    0.0026871    0.0049138    0.0015657    0.0036009    0.0029522
+  8    0.00510872      0.021009      0.021009    0.0051087     0.003156    0.0045361    0.0014759    0.0034933     0.003239
+ 10     0.0052304     0.0219283     0.0219283    0.0052304    0.0028851    0.0048512    0.0011115      0.00458      0.00327
+ 12    0.00512112     0.0193444     0.0193444    0.0048199    0.0021036    0.0051211    0.0005438    0.0039149    0.0028411
+
+Gauge: raised_pair
+  H      max|div|        L1 div       sum div            0            2            3            4            5            6
+  6    0.00241882     0.0083351    0.00591906   0.00054632    0.0020342    0.0021277   -0.0001942   -0.0010138    0.0024188
+  8    0.00238179    0.00810556    0.00591747   0.00074998    0.0018288    0.0020509  -2.0778e-05   -0.0010733    0.0023818
+ 10    0.00193844    0.00754806    0.00562735    0.0010217    0.0015539    0.0018145   0.00025922  -0.00096035    0.0019384
+ 12    0.00191161    0.00610376    0.00430821   0.00015344    0.0015914    0.0019116   0.00024932  -0.00089778    0.0013002
+
+
+============================================================================================
+GLOBAL INCIDENCE BALANCE
+============================================================================================
+The finite graph has sum(loop)+2*sum(edge)=0.  The lifted analogue tests whether incidence-counting, not scalar edge-counting, is the right analytic invariant.
+         gauge   H      loop sum    2*edge sum         total
+ start_aligned   6     0.0101619     0.0106772     0.0208391
+ start_aligned   8    0.00995183     0.0110571      0.021009
+ start_aligned  10     0.0122928     0.0096355     0.0219283
+ start_aligned  12     0.0120582    0.00728621     0.0193444
+   raised_pair   6    0.00980365   -0.00388459    0.00591906
+   raised_pair   8    0.00976978    -0.0038523    0.00591747
+   raised_pair  10     0.0117256   -0.00609827    0.00562735
+   raised_pair  12     0.0111928   -0.00688464    0.00430821
+
+============================================================================================
+TOURNAMENT ANALYSIS NOTE
+============================================================================================
+Candidate vertices considered:
+  runners, raw speeds, residue packets, integer lifts, finite loops, finite edges, low-height wall motifs, additive-frequency shells, divergence defects, and proof obligations.
+Pairwise observable:
+  whether a quotient preserves local signed-current balance after reciprocal lift.
+Switch/gauge:
+  start-aligned lift versus raised-pair lift; both keep the mod-7 packet graph fixed.
+Tie Hamiltonian path:
+  low_height_wall_deletion > lifted_divergence_defect > additive_frequency_Abel_sum > finite_packet_balance > raw_runner_labels
+Challenged assumption: the exact finite balance automatically survives integer lifting.  The data below measure the defect that must be absorbed by wall deletion and summation by parts.
+
+============================================================================================
+S102 READING
+============================================================================================
+The finite signed-current identity is real, but integer lifts introduce a measurable divergence defect.  This is good news: it turns the vague residue-lift equidistribution gap into a concrete local-divergence lemma.  The LRC proof should delete low-height wall directions, then prove that the remaining lifted divergence is Abel-summable in the additive-frequency shells of HYP-2636.
