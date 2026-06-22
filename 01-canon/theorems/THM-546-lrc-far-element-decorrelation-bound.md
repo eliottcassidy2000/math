@@ -86,7 +86,26 @@ not just the `n`-cancellation) is `5–76×` below the absolute bound on every t
 extra factor is real but not yet in closed form (it lives in the arc geometry of `B_j`).
 Verified: `|Δ_w| ≤ (6/49)V/w` on all tested cores. → `lrc14_{signed_erdos_turan,abel_sharp_constant}_macmini_0620s2.py`.
 
-## SHARPENING (mac-mini-S28, HYP-2840): V(E') is 40-107x smaller than 42Σe
+## SHARPENING (mac-mini-S28, HYP-2840)
+
+### (a) RIGOROUS: V(E') ≤ 7Σe (a proved 6x improvement over the recorded 42Σe)
+The recorded `V(E') = Σ_{j=1}^6 #arcs(B_j) ≤ 42Σe` over-counts by treating the six
+sectors separately. But the `B_j = {x : E' misses EXACTLY sector j}` are **pairwise
+disjoint** (each x has a unique missed-set), so an elementary interval of the breakpoint
+partition lies in at most one B_j. Hence
+> `V(E') = Σ_{j=1}^6 #arcs(B_j) ≤ #{elementary intervals} ≤ #breakpoints
+>        ≤ Σ_{e∈E'} 7e = 7Σe.`   ∎  (PROVED; verified on 2006 configs, 0 violations.)
+The `42 = 6·7` becomes `7` (the factor-6 saving is exactly the disjointness). This
+improves the gapped cutoff `w* = (6/49)V/μ` from ~3000 to ~545 (μ=0.044, L_y margin).
+
+### (b) EMPIRICAL: V_actual is 40-107x below 42Σe (≈ 4·span)
+The actual `Σ_j #arcs(B_j)` is even smaller (the "exactly-one-miss" regions are rare):
+consec_8 → 28 (vs 42Σe=1176, **42x**; vs 7Σe=196, 7x), consec_12 → 26 (vs 2772, **107x**).
+`V_actual ≈ 4·span` (NOT uniformly bounded). With it the gapped single-peel cutoff
+`w* ≈ 64-81` — FEASIBLE. A rigorous `V ≤ C·max(E')` would make the gapped regime fully
+effective; (a) already gives a clean proved 6x. See HYP-2840 for the L_y-route reframing.
+
+## OLD note: V(E') is 40-107x smaller than 42Σe
 
 The recorded arc-complexity bound `V(E') = Σ_j #arcs(B_j) ≤ 42Σe` is MASSIVELY loose.
 Measured `V_actual` (the actual `Σ_j #arcs(B_j(E'))`): consec_8 → 28 (vs 42Σe=1176, **42x**);

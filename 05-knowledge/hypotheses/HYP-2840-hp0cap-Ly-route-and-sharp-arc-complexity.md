@@ -58,6 +58,10 @@ With `V_actual ≈ 26-29` for bounded cores, the **gapped single-peel cutoff**
 `w* = (6/49)V_actual/0.044 ≈ 64-81` — FEASIBLE (vs ~3000 with 42Σe). So the bounded
 finite check need only reach max(E) ~ 80, beyond which the single far peel closes it.
 
+
+### 3b. RIGOROUS sharpening: V(E') <= 7Σe (PROVED)
+The `B_j` (exactly-miss-sector-j) are pairwise DISJOINT, so `V = Σ_j #arcs(B_j) <= #breakpoints <= 7Σe` — a proved 6x improvement over THM-546's `42Σe` (the `42=6·7` over-counted the disjoint sectors). Verified 2006 configs, 0 violations. Cutoff `w*` improves 3000→545 rigorously (→80 with the empirical `V_actual≈4·span`).
+
 ## 4. The honest residual (what remains)
 V(E') is NOT uniformly bounded — it grows ~`4·span` (consec 28→ AP_d13 364→ allbig 2138).
 So `V(E')/w ~ O(1)` in the UNGAPPED regime (`w ~ span(E')`), and `→0` only when GAPPED
