@@ -76,3 +76,26 @@ threshold 2/q, cluster of 2q-2 runners + observer V):
 **=> the Node-1 boundary-core argument ports to the WHOLE composite-2q family** (proven THROUGH the
 q-sector structure, not around it), supporting HYP-2846 (q-uniform witness route). The cutoff
 "V/t > cluster-size" and "maxgap 1/2 > 2/q" are the q-uniform mechanism. 14=2·7 -> 18=2·9 etc.
+
+
+## ⚠️ CORRECTION (mac-mini-2026-06-22-S30, same session): the boundary-core closure OMITTED G_P
+The "rho_K>0 for all V/t>12" closure above is WRONG. THM-527 splits the runners into
+**P = small part (speeds <=13), handled by G_P = {x: ||p x||>=1/14, p in P}** and
+**L = large cluster (speeds >13), handled by maxgap{frac(e_L x)}>2/7**. The good-period
+criterion is `x in G_P AND maxgap(L)>2/7` -- I computed maxgap over ALL co-offsets, omitting
+that the small runners (<=13) live in G_P, NOT maxgap. The s≈0 period (where all teeth -> 1/2)
+FAILS G_P: a small runner p has ||p*x_0|| = ||p/(2V)|| ~ p/(2V) < 1/14, so x_0 is unsafe.
+VERIFIED: the TRUE rho_K (with G_P) for {1,..,12,V} is **0 for V=29,43,71**, only 0.04 at V=100
+(sporadic, when the V-lattice happens to hit the small G_P set, meas(G_{1..12})~0.034). So the
+boundary core does NOT close via the s≈0 maxgap collapse.
+
+## The CORRECT structure (what's salvageable + the real residual)
+- **Discretization lemma rho_K >= rho* - arcCount/Vmax: STILL CORRECT** (elementary). rho* = meas(GOOD), GOOD = G_P cap {maxgap(L)>2/7}.
+- **rho* = meas(G_P cap {maxgap(L)>2/7})** -- the OVERLAP of the small-part safe set and the large-cluster gap event.
+  - meas(G_P) > 0 via PROVEN LRC(|P|<=13) [the user's "route to LRC(<=13)"]. (meas(G_{1..12})~0.034.)
+  - meas{maxgap(L)>2/7} > 0 via three-distance (mu-floor, THM-527 Part C).
+  - rho* = their overlap > 0 = the DECORRELATION of the two scales (P small speeds vs L large speeds, frac decorrelate). This is the FLOOR = Node 3 (R' quasi-independence ~[0.66,1.27]) = my S29 sqrt-cancellation + kps Node-3 spectrum.
+- So Node 1 reduces (correctly) to the OVERLAP floor rho*>0, NOT to the maxgap alone. The q-uniform s≈0 result is the maxgap(L) part only.
+
+**Lesson:** the cluster/far split (L maxgap + P G_P) is essential; conflating them omits the
+real constraint (G_P). The genuine residual is the overlap/decorrelation floor (Node 2/3).

@@ -11,6 +11,25 @@ Format per entry:
 
 ---
 
+## MISTAKE-085 (2026-06-22, mac-mini-S30) -- Node 1 boundary-core "closure" OMITTED G_P (conflated the L-cluster maxgap with the P-small-part safe set). Caught same session.
+
+**What I claimed (WRONG).** That the LRC(14) boundary core {t,..,12t,V} closes via rho_K>0
+for all V/t>12, by the s≈0 "cluster collapse" (teeth -> 1/2, maxgap 1/2 > 2/7).
+
+**Why wrong.** THM-527 splits runners: P = small part (speeds <=13) handled by `G_P = {x:
+||p x||>=1/14}`, L = large cluster (>13) handled by `maxgap{frac(e_L x)}>2/7`. Good period =
+`x in G_P AND maxgap(L)>2/7`. I computed maxgap over ALL co-offsets, omitting that the small
+runners belong to G_P. The s≈0 period FAILS G_P (small p: ||p/(2V)|| < 1/14). VERIFIED the TRUE
+rho_K (with G_P) for {1,..,12,V} is 0 at V=29,43,71 (not >0). 
+
+**Correct framing.** rho* = meas(G_P cap {maxgap(L)>2/7}) = the OVERLAP. meas(G_P)>0 via proven
+LRC(|P|<=13); meas(maxgap(L))>0 via three-distance; the overlap > 0 = the decorrelation floor
+(Node 2/3). The discretization lemma rho_K >= rho* - arcCount/Vmax stands. 
+
+**Lesson.** Don't conflate the cluster/far split; G_P (small part) is the real constraint, not
+the maxgap. Verify the FULL criterion before claiming closure. (Cf. MISTAKE-084, same pattern:
+over-claiming a closure by omitting a constraint.) Source: mac-mini-S30.
+
 ## MISTAKE-084 (2026-06-22, mac-mini-S27) — I wrongly claimed the p0 route "fails at k=8"; in fact the witness floor needs only `> 0`, not `≥ m_P` (the floor VALUE is not load-bearing). Caught & retracted same session.
 
 **What I claimed (WRONG).** That the p0-wide-bound route (HYP-2832) fails because
