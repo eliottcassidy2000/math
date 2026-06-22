@@ -4,6 +4,45 @@ Task: finish the analytic closure + formalize everything. Two concrete advances 
 - **ANALYTIC CLOSURE (HYP-2834): the WIDE witness floor reduces to the BOUNDED compact floor.** Verified (exact, reusing HYP-2830 G2 machinery) k=10,11,12: every wide config (single-far FAR=15..30, spread, dilated) has G2 >= bounded-consec G2 >> m_P (worst 7.75-8.69x m_P); wide G2 (0.44-0.59) STRICTLY EXCEEDS bounded-consec (0.36-0.43). MECHANISM: spread phases => larger maxgap => larger witness set => G2 increases; bounded consec is the global G2-MINIMIZER. So the witness floor over ALL E reduces to the bounded compact family (HYP-2830). Script lrc14_witness_floor_WIDE_macmini_S25.py.
 - **NET analytic status:** LRC(14) (witness route) = [THM-527 reduction] + [witness-attainment, FORMALIZED] + [witness floor G2>=m_P: k<=7 elementary; bounded HYP-2830 exhaustive; WIDE reduces to bounded]. The remaining RIGOROUS gap = a SPREADING LEMMA ('spreading offsets does not decrease G2=meas{maxgap>1/7}', i.e. consec minimizes G2 -- verified, not proved; it is a consec-extremality for the maxgap functional). Plus: formalizing the measure-theoretic THM-527 reduction + the bounded floor (native_decide/axiom) remain the team's flagged Lean obligations.
 NEW: HYP-2833 (Lean witness-attainment), HYP-2834 (wide reduction). The witness-attainment module is a lasting sorry-free piece.
+## codex-2026-06-22-S86 -- witness-attainment bridge made root-imported and import-slimmed
+
+Pulled `origin/main` and integrated the incoming `LRCWitnessAttainment.lean`
+module from mac-mini S25 as a compactness/attainment signal, not as a completed
+LRC14 floor proof.  First tried to build it as received, but the aggregate
+`import Mathlib` began compiling unrelated category-theory/algebraic-homology
+dependencies; stopped that build and replaced the aggregate import with the
+specific finset, metric, topology, and tactic imports actually used.  The focused
+`lake build TournamentH7.LRCWitnessAttainment` now checks quickly and cleanly.
+
+Added `TournamentH7.LRCWitnessAttainmentBridge`, root-imported it, and added
+`Verify` audit wrappers.  New sorry-free bridge theorems:
+`distZ_eq_nearInt`, `margin_eq_minReach`, `Mreach_eq_margin_sSup`, and
+`exists_lonely_of_margin_sSup_ge`.  These prove that the new
+`infDist`-to-integers margin interface is exactly the same as the existing
+concrete `nearInt`/`Mreach` interface for 13 runners, and that a lower bound on
+the margin supremum over `[0,1]` gives a 14-lonely time through the existing
+compactness theorem.
+
+Focused `lake build TournamentH7.LRCWitnessAttainmentBridge`, aggregate
+`lake build TournamentH7.Verify`, and root `lake build TournamentH7` all pass.
+Stored transcripts:
+`05-knowledge/results/lrc_witness_attainment_bridge_codex_s86.out` and
+`05-knowledge/results/tournamenth7_root_lrc_attainment_bridge_codex_s86.out`.
+The new bridge audit reports only `propext`, `Classical.choice`, and
+`Quot.sound`; no `sorryAx`.
+
+Tournament Analysis: vertices are formal interfaces rather than runners:
+`{distZ margin, nearInt minReach, Mreach sSup, margin sSup floor,
+lonely witness}`.  Edges are definitional/equivalence handoffs; the tie
+Hamiltonian path is
+`distZ -> nearInt -> minReach -> Mreach -> margin-sSup floor -> lonely witness`.
+This quotient preserves the LRC predicate handoff from an analytic floor to an
+actual lonely time, but destroys all information about `GOOD(E)`, `G_P`, p0,
+arc counts, and finite-ruler approximations.  Challenged assumption: the repo
+needed a second compactness route to make progress.  The compactness route is
+now redundant and bridged; the remaining mathlib-blocking proof work is still
+semantic/analytic: define the event measures and prove the witness-floor and
+finite Part-A inequalities.
 
 ## codex-2026-06-22-S85b -- finite-Vmax Part-A error budget formalized
 

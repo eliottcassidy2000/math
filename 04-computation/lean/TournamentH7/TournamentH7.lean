@@ -54,6 +54,10 @@
                                       genuine-wide doublet rho*/witness scout.
     · TournamentH7.LRCMreachConcrete — concrete Mreach compactness bridge
                                       for the LRC14 reach-to-lonely step.
+    · TournamentH7.LRCWitnessAttainment — general `distZ`/margin witness
+                                      attainment on a compact period.
+    · TournamentH7.LRCWitnessAttainmentBridge — equivalence between the
+                                      margin and concrete Mreach interfaces.
     · TournamentH7.LRCFourteenSkeleton — sorry-free conditional LRC14 proof DAG
                                       with named analytic obligations.
     · TournamentH7.LRCWitnessBonferroni — sorry-free Bonferroni/p0 reduction
@@ -121,6 +125,8 @@ import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCMreachConcrete
+import TournamentH7.LRCWitnessAttainment
+import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCFourteenSkeleton
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCWitnessPartA

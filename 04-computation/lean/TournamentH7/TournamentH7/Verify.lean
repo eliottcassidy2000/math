@@ -50,6 +50,7 @@ import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCMreachConcrete
+import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCL7Discrepancy
 
 open Tournament
@@ -140,6 +141,22 @@ theorem lrc_concrete_lonely_of_mreach_ge_audit
     ∃ t : ℝ, LonelyRunner.Lonely 14 v t :=
   LonelyRunner.LRC14Concrete.lonely_of_Mreach_ge v hv hM
 #print axioms lrc_concrete_lonely_of_mreach_ge_audit
+
+/-! ### LRC14 witness-attainment margin/Mreach bridge -/
+
+theorem lrc_witness_attainment_distZ_eq_nearInt_audit (x : ℝ) :
+    TournamentH7.LRCWitness.distZ x = LonelyRunner.LRC14Concrete.nearInt x :=
+  TournamentH7.LRCWitness.distZ_eq_nearInt x
+#print axioms lrc_witness_attainment_distZ_eq_nearInt_audit
+
+theorem lrc_witness_attainment_margin_sup_audit
+    (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
+    (hmargin :
+      (1 : ℝ) / 14 ≤
+        sSup (TournamentH7.LRCWitness.margin v '' Set.Icc (0 : ℝ) 1)) :
+    ∃ t : ℝ, LonelyRunner.Lonely 14 v t :=
+  TournamentH7.LRCWitness.exists_lonely_of_margin_sSup_ge v hv hmargin
+#print axioms lrc_witness_attainment_margin_sup_audit
 
 /-! ### LRC14 THM-563 period-max certificate kernel -/
 

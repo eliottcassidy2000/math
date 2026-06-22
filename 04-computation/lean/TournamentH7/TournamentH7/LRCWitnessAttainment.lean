@@ -13,7 +13,11 @@
   (`reach ≥ 1/14`) is the separate analytic obligation; this module supplies the
   (previously `sorry`) attainment half.
 -/
-import Mathlib
+import Mathlib.Data.Finset.Lattice.Fold
+import Mathlib.Tactic
+import Mathlib.Topology.MetricSpace.HausdorffDistance
+import Mathlib.Topology.Order.Compact
+import Mathlib.Topology.Order.Lattice
 import TournamentH7.LonelyRunner
 
 open scoped Topology
@@ -58,16 +62,16 @@ lemma distZ_add_int (y : ℝ) (j : ℤ) : distZ (y + (j : ℝ)) = distZ y := by
     rw [show (y + (j:ℝ)) - (m : ℝ) = y - ((m - j : ℤ) : ℝ) by push_cast; ring]
     exact (le_distZ_iff (distZ y) y).1 le_rfl (m - j)
 
+/-- Each per-runner term is continuous. -/
+lemma continuous_term (v : Fin k → ℤ) (i : Fin k) :
+    Continuous (fun t : ℝ => distZ ((v i : ℝ) * t)) :=
+  continuous_distZ.comp (by fun_prop)
+
 variable [Nonempty (Fin k)]
 
 /-- The loneliness margin `L(t) = min_i dist(v_i t, ℤ)` for `k ≥ 1` speeds. -/
 noncomputable def margin (v : Fin k → ℤ) (t : ℝ) : ℝ :=
   (Finset.univ : Finset (Fin k)).inf' Finset.univ_nonempty (fun i => distZ ((v i : ℝ) * t))
-
-/-- Each per-runner term is continuous. -/
-lemma continuous_term (v : Fin k → ℤ) (i : Fin k) :
-    Continuous (fun t : ℝ => distZ ((v i : ℝ) * t)) :=
-  continuous_distZ.comp (by fun_prop)
 
 /-- `c ≤ margin v t ↔` every speed is `≥ c` from ℤ at time `t` (i.e. `Lonely`-style). -/
 lemma le_margin_iff (v : Fin k → ℤ) (c t : ℝ) :
@@ -83,7 +87,7 @@ lemma margin_periodic (v : Fin k → ℤ) (t : ℝ) : margin v (t + 1) = margin 
   unfold margin
   have hfun : (fun i => distZ ((v i : ℝ) * (t + 1))) = (fun i => distZ ((v i : ℝ) * t)) := by
     funext i
-    rw [show (v i : ℝ) * (t + 1) = (v i : ℝ) * t + ((v i : ℤ) : ℝ) by push_cast; ring,
+    rw [show (v i : ℝ) * (t + 1) = (v i : ℝ) * t + ((v i : ℤ) : ℝ) by ring,
         distZ_add_int]
   rw [hfun]
 

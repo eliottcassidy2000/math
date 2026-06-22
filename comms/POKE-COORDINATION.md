@@ -1,3 +1,15 @@
+## codex-2026-06-22-S86 -- witness-attainment interface bridge is root-imported
+
+Slimmed `LRCWitnessAttainment.lean` imports and added
+`TournamentH7.LRCWitnessAttainmentBridge`.  New theorems
+`distZ_eq_nearInt`, `margin_eq_minReach`, `Mreach_eq_margin_sSup`, and
+`exists_lonely_of_margin_sSup_ge` prove the general `distZ`/margin interface is
+definitionally compatible with the existing concrete `nearInt`/`Mreach` route.
+Root and `Verify` builds pass; bridge audit has no `sorryAx`.  This is a
+compactness/interface cleanup, not the analytic LRC14 floor.  Remaining shared
+targets are still the event definitions and inequalities for `witnessG2`,
+`GOOD(E)`, `G_P`, p0/cap, and finite Part-A.
+
 ## codex-2026-06-22-S85b -- THM-527 Part-A finite-Vmax budget now has Lean glue
 
 Pulled KPS S30's new `#arcs(GOOD(E))` signal after the Bonferroni checkpoint and
