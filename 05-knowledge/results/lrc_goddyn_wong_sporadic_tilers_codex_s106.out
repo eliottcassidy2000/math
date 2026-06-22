@@ -1,0 +1,55 @@
+SELECTED EXACT TIGHTNESS CHECKS
+n=  7 q=  8 acc=[6]        max= 12 M=1/8 target=1/8 arg=1/8 safe=0 tight=True
+n= 13 q= 14 acc=[12]       max= 24 M=1/14 target=1/14 arg=5/14 safe=0 tight=True
+n= 19 q= 20 acc=[18]       max= 36 M=1/20 target=1/20 arg=9/20 safe=0 tight=True
+n= 32 q= 33 acc=[30]       max= 60 M=1/33 target=1/33 arg=13/33 safe=0 tight=True
+n= 73 q= 74 acc=[70, 72]   max=144 M=1/74 target=1/74 arg=31/74 safe=skipped-large tight=True
+
+GODDYN-WONG ACCELERATION CENSUS
+n=  7 q=  8 acc=[6]          tail=[1, 2, 3, 4, 5, 7, 12]                 windows=6:[2,3] gcds=[2, 3]
+n= 13 q= 14 acc=[12]         tail=[5, 6, 7, 8, 9, 10, 11, 13, 24]        windows=12:[2,3] gcds=[2, 3]
+n= 19 q= 20 acc=[18]         tail=[11, 12, 13, 14, 15, 16, 17, 19, 36]   windows=18:[2,3] gcds=[2, 3]
+n= 25 q= 26 acc=[24]         tail=[17, 18, 19, 20, 21, 22, 23, 25, 48]   windows=24:[2,3] gcds=[2, 3]
+n= 31 q= 32 acc=[30]         tail=[23, 24, 25, 26, 27, 28, 29, 31, 60]   windows=30:[2,3] gcds=[2, 3]
+n= 32 q= 33 acc=[30]         tail=[24, 25, 26, 27, 28, 29, 31, 32, 60]   windows=30:[3,5] gcds=[3, 2, 5]
+n= 37 q= 38 acc=[36]         tail=[29, 30, 31, 32, 33, 34, 35, 37, 72]   windows=36:[2,3] gcds=[2, 3]
+n= 43 q= 44 acc=[42]         tail=[35, 36, 37, 38, 39, 40, 41, 43, 84]   windows=42:[2,3] gcds=[2, 3]
+n= 49 q= 50 acc=[48]         tail=[41, 42, 43, 44, 45, 46, 47, 49, 96]   windows=48:[2,3] gcds=[2, 3]
+n= 55 q= 56 acc=[54]         tail=[47, 48, 49, 50, 51, 52, 53, 55, 108]  windows=54:[2,3] gcds=[2, 3]
+n= 61 q= 62 acc=[60]         tail=[53, 54, 55, 56, 57, 58, 59, 61, 120]  windows=60:[2,3] gcds=[2, 3]
+n= 62 q= 63 acc=[60]         tail=[54, 55, 56, 57, 58, 59, 61, 62, 120]  windows=60:[3,5] gcds=[3, 4, 5]
+n= 67 q= 68 acc=[66]         tail=[59, 60, 61, 62, 63, 64, 65, 67, 132]  windows=66:[2,3] gcds=[2, 3]
+n= 73 q= 74 acc=[70, 72]     tail=[65, 66, 67, 68, 69, 71, 73, 140, 144] windows=70:[4,7] gcds=[2, 5, 2, 7] ; 72:[2,3] gcds=[2, 3]
+n= 79 q= 80 acc=[78]         tail=[71, 72, 73, 74, 75, 76, 77, 79, 156]  windows=78:[2,3] gcds=[2, 3]
+n= 85 q= 86 acc=[84]         tail=[77, 78, 79, 80, 81, 82, 83, 85, 168]  windows=84:[2,3] gcds=[2, 3]
+n= 91 q= 92 acc=[90]         tail=[83, 84, 85, 86, 87, 88, 89, 91, 180]  windows=90:[2,3] gcds=[2, 3]
+n= 92 q= 93 acc=[90]         tail=[84, 85, 86, 87, 88, 89, 91, 92, 180]  windows=90:[3,5] gcds=[3, 2, 5]
+n= 97 q= 98 acc=[96]         tail=[89, 90, 91, 92, 93, 94, 95, 97, 192]  windows=96:[2,3] gcds=[2, 3]
+n=103 q=104 acc=[102]        tail=[95, 96, 97, 98, 99, 100, 101, 103, 204] windows=102:[2,3] gcds=[2, 3]
+n=109 q=110 acc=[108]        tail=[101, 102, 103, 104, 105, 106, 107, 109, 216] windows=108:[2,3] gcds=[2, 3]
+n=115 q=116 acc=[114]        tail=[107, 108, 109, 110, 111, 112, 113, 115, 228] windows=114:[2,3] gcds=[2, 3]
+n=121 q=122 acc=[120]        tail=[113, 114, 115, 116, 117, 118, 119, 121, 240] windows=120:[2,3] gcds=[2, 3]
+n=122 q=123 acc=[120]        tail=[114, 115, 116, 117, 118, 119, 121, 122, 240] windows=120:[3,5] gcds=[3, 4, 5]
+n=127 q=128 acc=[126]        tail=[119, 120, 121, 122, 123, 124, 125, 127, 252] windows=126:[2,3] gcds=[2, 3]
+n=133 q=134 acc=[132]        tail=[125, 126, 127, 128, 129, 130, 131, 133, 264] windows=132:[2,3] gcds=[2, 3]
+n=139 q=140 acc=[138]        tail=[131, 132, 133, 134, 135, 136, 137, 139, 276] windows=138:[2,3] gcds=[2, 3]
+n=143 q=144 acc=[140]        tail=[135, 136, 137, 138, 139, 141, 142, 143, 280] windows=140:[4,7] gcds=[4, 5, 2, 7]
+n=145 q=146 acc=[144]        tail=[137, 138, 139, 140, 141, 142, 143, 145, 288] windows=144:[2,3] gcds=[2, 3]
+
+LRC14 GODDYN-WONG ROW
+speeds=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+missing from AP: [12]
+new speeds: [24]
+accelerated v=12 because every j in [2,3] has gcd(12,j)>1: [2, 3]
+q-grid immediate blocker profile (a/q, left blockers, right blockers):
+  a= 1: left=[1] right=[13]
+  a= 3: left=[5] right=[9]
+  a= 5: left=[3] right=[11]
+  a= 9: left=[11] right=[3]
+  a=11: left=[9] right=[5]
+  a=13: left=[13] right=[1]
+
+TOURNAMENT ANALYSIS
+vertices are proof carriers, not runners.
+observable: retained structure for classifying exact tilers.
+Hamiltonian path: jacobsthal_window > single_acceleration > multi_acceleration > difference_closed_AP > arbitrary_sporadic_search

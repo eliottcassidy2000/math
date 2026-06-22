@@ -18,6 +18,50 @@ Owner: attack the complete-residue-system tiling rigidity (mac-mini's exact-tili
 - **GW is ISOLATED (supports finiteness):** among AP single-replacements (v<=60), ONLY GW is tight; the tempting family {1..11,13,12j} is LOOSE for j>=3 (M=3/41,4/53,1/13 > 1/14). [Self-corrected a coarse-search false positive with exact critical points t=k/(s_i+-s_j).]
 - Refuted earlier this session: Jensen/score-variance route (p0 finer than score structure); 13=PG(2,3) design (exact tiler is full residue system, not sparse).
 NEW: THM-560, reflection (S31m), lrc_tiling_rigidity / tight_vs_counterexample / sporadic_mechanism / sporadic_verify scripts. NEXT: sporadic finiteness (OPEN-Q-108) = bound GW-type balanced gap+collision sets preserving M=1/14 over all t.
+## codex-2026-06-22-S106 -- Goddyn-Wong sporadic tilers as Jacobsthal AP-tail accelerations
+
+User asked to understand sporadic tilers like Goddyn-Wong, their structure, and
+families.  Stashed generated `agents/.session-state.json`, pulled current
+main, and immediately integrated incoming THM-560 from KPS S31n: the
+difference-closed exact tilers are exactly AP dilates `d*{1,...,13}`, so the
+remaining exact-tiler classification is genuinely the non-difference-closed
+sporadic branch.
+
+External check: Tao's LRC remarks state the Goddyn-Wong acceleration criterion:
+starting with `{1,...,n}`, replacing a velocity `v` by `2v` remains tight when
+`gcd(v,j)>1` for every `j in [n-v+1, 2n-2v+1]`.  This turns the apparent
+sporadic into a Jacobsthal/nonunit interval problem.
+
+Added `04-computation/lrc_goddyn_wong_sporadic_tilers_codex_s106.py` and
+stored `05-knowledge/results/lrc_goddyn_wong_sporadic_tilers_codex_s106.out`.
+Exact rational envelope checks verify:
+
+- `n=7, q=8`, acceleration `v=6`, row `{1,2,3,4,5,7,12}`: `M=1/8`, safe
+  measure `0`.
+- `n=13, q=14`, acceleration `v=12`, row `{1,...,11,13,24}`: `M=1/14`,
+  safe measure `0`.  This is the LRC14 Goddyn-Wong atom.
+- `n=19, q=20`, acceleration `v=18`, row `{1,...,17,19,36}`: `M=1/20`,
+  safe measure `0`.
+- `n=32, q=33`, acceleration `v=30`, row `{1,...,29,31,32,60}`: `M=1/33`,
+  safe measure `0`.
+- `n=73, q=74`, accelerations `v=70,72`, tail `...,69,71,73,140,144`:
+  `M=1/74`, verifying the multi-acceleration example.
+
+New HYP-2893/T1007: AP dilates are the difference-closed/equal-spacing branch
+(THM-560), while Goddyn-Wong rows are accelerated-tail/Jacobsthal atoms.  The
+infinite one-speed subfamily is `n≡1 mod 6`,
+`S_n={1,...,n-2,n,2n-2}`.  The LRC14 row is the first nontrivial `v=n-1`
+case: `n=13`, window `[2,3]`, gcds `[2,3]`.
+
+Assumption challenge / Tournament Analysis: considered runners, residues,
+q-grid witnesses, deleted AP tail speeds, accelerated speeds, nonunit
+intervals, cover petals, exact-tiler branches, and proof obligations.  Selected
+vertices are proof carriers:
+`jacobsthal_window > single_acceleration > multi_acceleration >
+difference_closed_AP > arbitrary_sporadic_search`.  This preserves the AP
+tail/acceleration/nonunit-window data and destroys generic speed magnitude away
+from the tail, so it must be coupled to THM-560 and the HYP-2890 residual/cap
+machinery.
 
 ## mac-mini-2026-06-22-S40 -- the CUT side is CLASSICAL: Clebsch = cut-space Cayley(K_5), truncated octahedron = permutohedron(S_4)
 Owner: explore Unital/Clebsch/Truncated-Octahedral as inspiration; keep aiming to finish LRC; weight team work equally. Reflection: the-cut-side-is-classical-clebsch-and-the-permutohedron.md.
