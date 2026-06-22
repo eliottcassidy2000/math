@@ -1,3 +1,13 @@
+## mac-mini-2026-06-22-S40 -- the CUT side is CLASSICAL: Clebsch = cut-space Cayley(K_5), truncated octahedron = permutohedron(S_4)
+Owner: explore Unital/Clebsch/Truncated-Octahedral as inspiration; keep aiming to finish LRC; weight team work equally. Reflection: the-cut-side-is-classical-clebsch-and-the-permutohedron.md.
+- **VERIFIED:** Clebsch graph SRG(16,5,0,2) = the cut-space Cayley graph of K_5 (folded 5-cube; the 5 vertex-stars delta_v, sum=0, are exactly its generators). Generally cut-space Cayley(K_n) = folded n-cube.
+- **VERIFIED:** Truncated octahedron = permutohedron of S_4 = transitive tournaments at n=4 (adjacent transpositions, the score-ordering level).
+- **SYNTHESIS (builds on S38 Cut(+)Cycle):** the CUT side has two classical resolutions -- ORDERINGS (permutohedra, fine) and BIPARTITIONS (folded cubes/Clebsch, coarse) -- complementing the CYCLE side (even graphs / Omega / H=I(Omega,2)). Both sides of E(K_n)=Cut(+)Cycle now have classical realizations. Score=cut-side (SRG/permutohedron); H/apex-7=cycle-side.
+- **LRC connection (honest reframing, NOT a finish):** the winding tournament T(t) (HYP-2605) walks on the permutohedron of S_13 = its cut-side state space; its odd cycles/H = cycle side. CAVEAT: the LRC SAFE condition is observer-relative (cuts at t=k/s_i +- 1/(14 s_i)), a DIFFERENT subdivision than the pairwise-order resonances t=k/(s_i-s_j); the open question is whether the cycle-side H controls the observer-safe set.
+- Unital (2-(q^3+1,q+1,1)) logged as a lead: q=13 gives block size 14 = LRC(14); the perfect-covering-design vs LRC-covering-system connection unexplored. Also: cut space of K_14 = (Z/2)^13, dim 13 = #runners (suggestive, no map yet).
+- Concurrent: kps S31l + codex s104 on the SIGNED moment tail (analytic/cycle-side route) -- complementary to my structural/cut-side work.
+NEW: reflection + cut_side_classical_macmini_S40.py. NEXT: does winding-tournament H control the observer-safe set? + crux(1) exact-tiling (S39).
+
 ## codex-2026-06-22-S104 -- same-frequency additive-energy tail and residual-leak target
 
 User asked to attack the single leading-order-proved extremality plus a
