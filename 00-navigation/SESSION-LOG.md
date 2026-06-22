@@ -7,6 +7,39 @@ Owner: explore Unital/Clebsch/Truncated-Octahedral as inspiration; keep aiming t
 - Unital (2-(q^3+1,q+1,1)) logged as a lead: q=13 gives block size 14 = LRC(14); the perfect-covering-design vs LRC-covering-system connection unexplored. Also: cut space of K_14 = (Z/2)^13, dim 13 = #runners (suggestive, no map yet).
 - Concurrent: kps S31l + codex s104 on the SIGNED moment tail (analytic/cycle-side route) -- complementary to my structural/cut-side work.
 NEW: reflection + cut_side_classical_macmini_S40.py. NEXT: does winding-tournament H control the observer-safe set? + crux(1) exact-tiling (S39).
+## codex-2026-06-22-S105 -- Clebsch/Bruhat/unital carriers for the signed LRC residual
+
+User prompted a similar creative proof session with MathWorld unital, Clebsch
+graph, and truncated octahedral graph.  Used the web links as finite carrier
+prompts and pulled current main first; incoming S103/S31l/S104 had already
+sharpened the additive-energy route to anchored AP-facing Jensen/convexity plus
+signed residual leakage.
+
+Added `04-computation/lrc14_clebsch_bruhat_unital_carriers_codex_s105.py` and
+stored `05-knowledge/results/lrc14_clebsch_bruhat_unital_carriers_codex_s105.out`.
+The script verifies Clebsch as the folded 5-cube with strongly regular
+parameters `(16,5,0,2)`.  Its closed neighborhoods form a pair-balanced
+`2-(16,6,2)` design: 16 blocks of size 6, every point in 6 blocks, every pair
+in exactly 2 blocks.
+
+LRC transfer: choose one tangent sector and fold the remaining five residual
+mask coordinates by complement.  The 64 residual masks map to 16 Clebsch
+classes, four masks each, but all 16 classes mix missed-depth values.  Thus
+Clebsch is not a scalar missed-depth quotient; it is a signed pair-covariance
+carrier, exactly the kind of labelled object S31l/HYP-2890 require.
+
+The truncated-octahedral prompt becomes the Bruhat `S4` adjacent-swap carrier.
+The script verifies 24 vertices, 36 edges, degree 3, inversion-rank histogram
+`1,3,5,6,5,3,1`, 6 commutation squares, 8 braid hexagons, automorphism group
+size 48, and two edge orbits: outer swaps `s1/s3` of size 24 and middle swaps
+`s2` of size 12.  This is HYP-2889's local-compression failure in graph form:
+compression edges are labelled, and the middle swap cannot be erased.
+
+New HYP-2891/T1005: decompose the HYP-2890 residual leak over tangent Clebsch
+classes and Bruhat `S4` compression faces.  Candidate proof shape: square /
+commuting-face components are nonpositive by Clebsch design balance; braid
+hexagon components are finite AP/Freiman low-depth packets; high-depth packets
+route to HYP-2636/HYP-2887 signed cancellation.  No LRC14 proof claimed.
 
 ## codex-2026-06-22-S104 -- same-frequency additive-energy tail and residual-leak target
 

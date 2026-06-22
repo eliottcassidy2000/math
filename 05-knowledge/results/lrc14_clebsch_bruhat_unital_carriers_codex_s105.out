@@ -1,0 +1,39 @@
+==============================================================================
+S105: Clebsch / Bruhat / unital-style carriers for LRC14 residuals
+==============================================================================
+
+[1] Clebsch folded-5-cube carrier
+  strongly_regular_(16,5,0,2) verified: True
+  params: {'n': 16, 'm': 40, 'degree_hist': Counter({5: 16}), 'adjacent_common_neighbors': {0: 40}, 'nonadjacent_common_neighbors': {2: 80}}
+  closed-neighborhood design: {'num_blocks': 16, 'block_size_hist': {6: 16}, 'point_rep_hist': {6: 16}, 'pair_rep_hist': {2: 120}}
+  residual-mask quotient by tangent sector 5: {'classes': 16, 'preimage_size_hist': {4: 16}, 'mixed_depth_classes': 16, 'sample_depth_profiles': {0: Counter({0: 1, 5: 1, 1: 1, 6: 1}), 1: Counter({1: 1, 4: 1, 2: 1, 5: 1}), 2: Counter({1: 1, 4: 1, 2: 1, 5: 1}), 3: Counter({3: 2, 2: 1, 4: 1}), 4: Counter({1: 1, 4: 1, 2: 1, 5: 1}), 5: Counter({3: 2, 2: 1, 4: 1})}, 'tangent_refined_classes': 32, 'tangent_refined_preimage_hist': {2: 32}, 'sample_tangent_depth_profiles': {(0, 0): Counter({0: 1, 5: 1}), (0, 1): Counter({1: 1, 4: 1}), (0, 2): Counter({1: 1, 4: 1}), (0, 3): Counter({2: 1, 3: 1}), (0, 4): Counter({1: 1, 4: 1}), (0, 5): Counter({2: 1, 3: 1})}}
+  readout: folded residual classes preserve one-flip adjacency but destroy missed-depth.
+           Therefore Clebsch is a carrier for signed covariance, not a scalar q_t proof.
+
+[2] Truncated-octahedral / Bruhat B4 compression carrier
+  stats: {'vertices': 24, 'edges': 36, 'degree_hist': {3: 24}, 'bipartition_by_inversion_parity': {0: 12, 1: 12}, 'inversion_rank_hist': {0: 1, 1: 3, 2: 5, 3: 6, 4: 5, 5: 3, 6: 1}, 'edge_label_counts': {1: 12, 2: 12, 3: 12}, 'commutation_squares': 6, 'braid_hexagons': 8, 'automorphisms': 48, 'edge_orbit_sizes': [12, 24], 'edge_orbit_label_counts': [{3: 12, 1: 12}, {2: 12}]}
+  readout: adjacent swaps form the S4 permutohedron with square and braid faces.
+           Local compression failures in HYP-2889 should be sorted by face type;
+           vertex-transitive but non-edge-transitive means edge labels cannot be erased.
+
+[3] Unital-style tangent/secant lesson
+  MathWorld's geometric-combinatorics unital is a 2-(q^3+1,q+1,1) design.
+  LRC transfer: choose a tangent sector/anchor, then demand controlled pair incidence
+  before scalarizing.  Clebsch closed neighborhoods give a nearby exact 2-(16,6,2)
+  design; this is the finite covariance object, while scalar additive energy forgets
+  tangent/secant labels.
+
+[4] Tournament-analysis proof-lens ranking
+  AP_Jensen_labelled_functional       score=(4, 4, 4, 3)
+  Clebsch_tangent_residual_design     score=(3, 4, 3, 3)
+  Bruhat_S4_compression_carrier       score=(3, 3, 4, 2)
+  unital_tangent_secant_incidence     score=(2, 4, 2, 3)
+  scalar_additive_energy              score=(1, 1, 2, 1)
+  Hamiltonian path:
+    AP_Jensen_labelled_functional > Clebsch_tangent_residual_design >
+    Bruhat_S4_compression_carrier > unital_tangent_secant_incidence > scalar_additive_energy
+
+Proof target emitted:
+  Decompose the S104 residual leak over tangent Clebsch classes and Bruhat S4
+  compression faces.  Prove square/commuting faces are nonpositive by design
+  balance, then isolate braid hexagons as the finite AP/Freiman atlas.

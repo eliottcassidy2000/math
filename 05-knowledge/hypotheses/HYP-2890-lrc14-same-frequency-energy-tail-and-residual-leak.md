@@ -175,3 +175,13 @@ regular/AP object" proof.  The surviving analogy is the H-max/Jensen template:
 keep the signs, prove the AP-facing convexity/majorization inequality for the
 whole labelled functional, and use the residual-leak inequality above as the
 finite quantitative form of that convexity.
+
+## S105 carrier refinement
+
+HYP-2891 supplies finite quotient objects for this residual-leak inequality.
+After choosing a tangent sector, the 64 residual masks fold to 16 Clebsch
+classes with exact pair design balance, but every class mixes missed depth.
+Thus the residual should be decomposed by signed covariance class, not by scalar
+`q_t`.  Local AP-facing compression should be tracked on the Bruhat `S4`
+carrier: commutation squares are the likely design-balanced components, while
+braid hexagons are the finite low-depth AP/Freiman packets to inspect first.
