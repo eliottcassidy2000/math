@@ -1,0 +1,17 @@
+MULTIPLICATIVITY TEST: meas(safe(S1 u S2)) vs meas(safe(S1))*meas(safe(S2)), S2 scale-separated:
+  S1=[1, 2, 3] S2=[1009, 2011, 3013] (sep~336x):
+     meas(safe S1)=0.69048  meas(safe S2)=0.62245  product=0.42979
+     meas(safe S1uS2)=0.43431  ratio actual/product=1.0105 (->1 = INDEPENDENT/multiplicative)
+  S1=[1, 2, 3, 4, 5] S2=[997, 1999] (sep~199x):
+     meas(safe S1)=0.50476  meas(safe S2)=0.73469  product=0.37085
+     meas(safe S1uS2)=0.36864  ratio actual/product=0.9941 (->1 = INDEPENDENT/multiplicative)
+  S1=[2, 3, 5] S2=[1013, 3017, 5021] (sep~203x):
+     meas(safe S1)=0.64762  meas(safe S2)=0.62245  product=0.40311
+     meas(safe S1uS2)=0.40415  ratio actual/product=1.0026 (->1 = INDEPENDENT/multiplicative)
+  S1=[1, 2, 3] S2=[101, 103, 107] (sep~34x):
+     meas(safe S1)=0.69048  meas(safe S2)=0.62585  product=0.43214
+     meas(safe S1uS2)=0.41753  ratio actual/product=0.9662 (->1 = INDEPENDENT/multiplicative)
+
+=> if ratio -> 1 for scale-separated, safe-measure is MULTIPLICATIVE over independent clusters
+   = the LRC's H=prod(atoms). The IRREDUCIBLE ATOMS = single-scale clusters (bounded cores); the
+   hardest atom = the AP (apex-7), like the tournament's forbidden K_3 atom (H=7).

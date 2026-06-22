@@ -1,0 +1,25 @@
+3-FAR VENN packets for wide configs (base + 3 far runners):  cap_8~0.382
+
+ base=[0, 1, 2, 3, 4] far=[20, 21, 22]:
+   p0(B)=0.0000  p0(full)=0.1160  inc-excl: B+1far-2far+3far=0.1160 OK
+   1-far(corners) sum=+0.0000   2-far(edges) sum=+0.0946   3-far(center)=+0.0214
+   BONFERRONI-1 upper: p0(B)+1far = 0.0000  >= p0(full)=0.1160? False
+   2-far edges negative (sub-additive)? False;  |3-far| << |2-far| (center sub-dom)? True
+
+ base=[0, 1, 2, 3, 4] far=[20, 40, 60]:
+   p0(B)=0.0000  p0(full)=0.0702  inc-excl: B+1far-2far+3far=0.0702 OK
+   1-far(corners) sum=+0.0000   2-far(edges) sum=+0.0655   3-far(center)=+0.0048
+   BONFERRONI-1 upper: p0(B)+1far = 0.0000  >= p0(full)=0.0702? False
+   2-far edges negative (sub-additive)? False;  |3-far| << |2-far| (center sub-dom)? True
+
+ base=[0, 2, 4, 6, 8] far=[25, 26, 27]:
+   p0(B)=0.0000  p0(full)=0.0640  inc-excl: B+1far-2far+3far=0.0640 OK
+   1-far(corners) sum=+0.0000   2-far(edges) sum=+0.0615   3-far(center)=+0.0025
+   BONFERRONI-1 upper: p0(B)+1far = 0.0000  >= p0(full)=0.0640? False
+   2-far edges negative (sub-additive)? False;  |3-far| << |2-far| (center sub-dom)? True
+
+ base=[0, 1, 2, 3, 4, 5] far=[30, 31, 32]:
+   p0(B)=0.0000  p0(full)=0.1891  inc-excl: B+1far-2far+3far=0.1891 OK
+   1-far(corners) sum=+0.1089   2-far(edges) sum=+0.0744   3-far(center)=+0.0057
+   BONFERRONI-1 upper: p0(B)+1far = 0.1089  >= p0(full)=0.1891? False
+   2-far edges negative (sub-additive)? False;  |3-far| << |2-far| (center sub-dom)? True

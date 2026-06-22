@@ -1,0 +1,4 @@
+Phi(14)=sum_{b<=14} phi(b) = 64 (totient-weighted survival lattice)
+surviving-neighborhood density = 3/pi^2 = 1/(2 zeta(2)) = 0.3040
+coprime density = 6/pi^2 = 1/zeta(2) = 0.6079
+phi=mu*id; killing is Mobius IE over the divisor lattice (the 3 recursion modes' signs).

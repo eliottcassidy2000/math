@@ -1,0 +1,203 @@
+Exact small-q proof lab for LRC witness/p0/additive-energy mechanisms
+==============================================================================
+q is the denominator in threshold 1/q; cluster GOOD_q is maxgap > 2/q.
+Banks are primitive anchored shapes E={0,...} with max(E)<=q.
+
+------------------------------------------------------------------------------
+q=8: hard cluster sizes k=5..7
+------------------------------------------------------------------------------
+k= 5 rows=   69 cap=15/28 (0.535714) at P=(1, 7)
+     AP: nu=19/24 (0.791667) D=5/24 (0.208333) p0=23/48 (0.479167) A=85
+     floor nu(AP)+cap-1=55/168 (0.327381) | bounded p0 margin cap-maxp0=19/336 (0.056548)
+     min nu: E=(0, 1, 2, 3, 4) nu=19/24 (0.791667) AP
+     max D : E=(0, 1, 2, 3, 4) D=5/24 (0.208333) AP
+     max p0: E=(0, 1, 2, 3, 4) p0=23/48 (0.479167) AP
+     max additive energy: E=(0, 1, 2, 3, 4) A=85 AP
+     scalar-energy inversions: p0=47 D=32; AP diff-profile failures=0
+       worst p0 inversion: A 57 row (0, 1, 2, 4, 8) p0=3/8 (0.375000) beats A 69 row (0, 1, 3, 4, 5) p0=7/30 (0.233333) by 17/120 (0.141667)
+k= 6 rows=   56 cap=3/4 (0.750000) at P=(1,)
+     AP: nu=43/60 (0.716667) D=17/60 (0.283333) p0=47/80 (0.587500) A=146
+     floor nu(AP)+cap-1=7/15 (0.466667) | bounded p0 margin cap-maxp0=37/240 (0.154167)
+     min nu: E=(0, 1, 2, 3, 4, 5) nu=43/60 (0.716667) AP
+     max D : E=(0, 1, 2, 3, 4, 5) D=17/60 (0.283333) AP
+     max p0: E=(0, 2, 3, 4, 5, 6) p0=143/240 (0.595833) NON-AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5) A=146 AP
+     scalar-energy inversions: p0=44 D=40; AP diff-profile failures=0
+       worst p0 inversion: A 110 row (0, 2, 3, 4, 5, 8) p0=47/80 (0.587500) beats A 114 row (0, 1, 2, 5, 6, 7) p0=83/210 (0.395238) by 323/1680 (0.192262)
+k= 7 rows=   28 cap=1 (1.000000) at P=()
+     AP: nu=19/40 (0.475000) D=21/40 (0.525000) p0=53/80 (0.662500) A=231
+     floor nu(AP)+cap-1=19/40 (0.475000) | bounded p0 margin cap-maxp0=929/3360 (0.276488)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6) nu=19/40 (0.475000) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6) D=21/40 (0.525000) AP
+     max p0: E=(0, 2, 4, 5, 6, 7, 8) p0=2431/3360 (0.723512) NON-AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6) A=231 AP
+     scalar-energy inversions: p0=22 D=21; AP diff-profile failures=0
+       worst p0 inversion: A 187 row (0, 2, 4, 5, 6, 7, 8) p0=2431/3360 (0.723512) beats A 195 row (0, 1, 2, 3, 5, 6, 7) p0=19/35 (0.542857) by 607/3360 (0.180655)
+
+------------------------------------------------------------------------------
+q=10: hard cluster sizes k=6..9
+------------------------------------------------------------------------------
+k= 6 rows=  251 cap=7/15 (0.466667) at P=(1, 8, 9)
+     AP: nu=23/25 (0.920000) D=2/25 (0.080000) p0=32/75 (0.426667) A=146
+     floor nu(AP)+cap-1=29/75 (0.386667) | bounded p0 margin cap-maxp0=1/25 (0.040000)
+     min nu: E=(0, 1, 2, 3, 4, 5) nu=23/25 (0.920000) AP
+     max D : E=(0, 1, 2, 3, 4, 5) D=2/25 (0.080000) AP
+     max p0: E=(0, 1, 2, 3, 4, 5) p0=32/75 (0.426667) AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5) A=146 AP
+     scalar-energy inversions: p0=224 D=133; AP diff-profile failures=0
+       worst p0 inversion: A 106 row (0, 1, 3, 5, 7, 9) p0=547/1575 (0.347302) beats A 110 row (0, 2, 3, 5, 6, 7) p0=71/525 (0.135238) by 334/1575 (0.212063)
+k= 7 rows=  210 cap=28/45 (0.622222) at P=(1, 9)
+     AP: nu=18/25 (0.720000) D=7/25 (0.280000) p0=167/300 (0.556667) A=231
+     floor nu(AP)+cap-1=77/225 (0.342222) | bounded p0 margin cap-maxp0=59/900 (0.065556)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6) nu=18/25 (0.720000) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6) D=7/25 (0.280000) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6) p0=167/300 (0.556667) AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6) A=231 AP
+     scalar-energy inversions: p0=178 D=191; AP diff-profile failures=0
+       worst p0 inversion: A 183 row (0, 2, 4, 5, 6, 8, 10) p0=53/100 (0.530000) beats A 187 row (0, 2, 3, 4, 5, 7, 8) p0=152/525 (0.289524) by 101/420 (0.240476)
+k= 8 rows=  120 cap=4/5 (0.800000) at P=(1,)
+     AP: nu=316/525 (0.601905) D=209/525 (0.398095) p0=67/105 (0.638095) A=344
+     floor nu(AP)+cap-1=211/525 (0.401905) | bounded p0 margin cap-maxp0=97/600 (0.161667)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7) nu=316/525 (0.601905) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7) D=209/525 (0.398095) AP
+     max p0: E=(0, 2, 3, 4, 5, 6, 8, 10) p0=383/600 (0.638333) NON-AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7) A=344 AP
+     scalar-energy inversions: p0=95 D=93; AP diff-profile failures=0
+       worst p0 inversion: A 272 row (0, 1, 2, 3, 4, 5, 7, 10) p0=213/350 (0.608571) beats A 280 row (0, 2, 3, 4, 5, 7, 8, 9) p0=1223/3150 (0.388254) by 347/1575 (0.220317)
+k= 9 rows=   45 cap=1 (1.000000) at P=()
+     AP: nu=241/525 (0.459048) D=284/525 (0.540952) p0=961/1400 (0.686429) A=489
+     floor nu(AP)+cap-1=241/525 (0.459048) | bounded p0 margin cap-maxp0=3/10 (0.300000)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7, 8) nu=241/525 (0.459048) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7, 8) D=284/525 (0.540952) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6, 8, 10) p0=7/10 (0.700000) NON-AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7, 8) A=489 AP
+     scalar-energy inversions: p0=37 D=35; AP diff-profile failures=0
+       worst p0 inversion: A 393 row (0, 1, 2, 3, 4, 5, 7, 9, 10) p0=299/450 (0.664444) beats A 405 row (0, 1, 2, 3, 5, 6, 7, 8, 10) p0=2137/4200 (0.508810) by 1961/12600 (0.155635)
+
+------------------------------------------------------------------------------
+q=12: hard cluster sizes k=7..11
+------------------------------------------------------------------------------
+k= 7 rows=  923 cap=19/45 (0.422222) at P=(1, 5, 6, 7)
+     AP: nu=53/60 (0.883333) D=7/60 (0.116667) p0=3/10 (0.300000) A=231
+     floor nu(AP)+cap-1=11/36 (0.305556) | bounded p0 margin cap-maxp0=11/90 (0.122222)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6) nu=53/60 (0.883333) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6) D=7/60 (0.116667) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6) p0=3/10 (0.300000) AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6) A=231 AP
+     scalar-energy inversions: p0=885 D=717; AP diff-profile failures=0
+       worst p0 inversion: A 151 row (0, 2, 5, 6, 8, 9, 12) p0=407/2160 (0.188426) beats A 155 row (0, 1, 2, 3, 7, 8, 10) p0=17/560 (0.030357) by 239/1512 (0.158069)
+k= 8 rows=  792 cap=6/11 (0.545455) at P=(1, 10, 11)
+     AP: nu=1007/1260 (0.799206) D=253/1260 (0.200794) p0=359/840 (0.427381) A=344
+     floor nu(AP)+cap-1=4777/13860 (0.344661) | bounded p0 margin cap-maxp0=1091/9240 (0.118074)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7) nu=1007/1260 (0.799206) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7) D=253/1260 (0.200794) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6, 7) p0=359/840 (0.427381) AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7) A=344 AP
+     scalar-energy inversions: p0=761 D=746; AP diff-profile failures=0
+       worst p0 inversion: A 252 row (0, 4, 6, 7, 8, 9, 10, 12) p0=535/1512 (0.353836) beats A 256 row (0, 1, 2, 3, 5, 7, 8, 10) p0=11/72 (0.152778) by 38/189 (0.201058)
+k= 9 rows=  495 cap=15/22 (0.681818) at P=(1, 11)
+     AP: nu=1717/2520 (0.681349) D=803/2520 (0.318651) p0=443/840 (0.527381) A=489
+     floor nu(AP)+cap-1=10067/27720 (0.363167) | bounded p0 margin cap-maxp0=1427/9240 (0.154437)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7, 8) nu=1717/2520 (0.681349) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7, 8) D=803/2520 (0.318651) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6, 7, 8) p0=443/840 (0.527381) AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7, 8) A=489 AP
+     scalar-energy inversions: p0=460 D=472; AP diff-profile failures=0
+       worst p0 inversion: A 377 row (0, 2, 3, 4, 6, 7, 8, 10, 12) p0=475/1008 (0.471230) beats A 389 row (0, 1, 2, 3, 6, 7, 8, 9, 10) p0=547/1890 (0.289418) by 2749/15120 (0.181812)
+k=10 rows=  220 cap=5/6 (0.833333) at P=(1,)
+     AP: nu=2353/3780 (0.622487) D=1427/3780 (0.377513) p0=899/1512 (0.594577) A=670
+     floor nu(AP)+cap-1=1723/3780 (0.455820) | bounded p0 margin cap-maxp0=4259/18480 (0.230465)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) nu=2353/3780 (0.622487) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) D=1427/3780 (0.377513) AP
+     max p0: E=(0, 3, 4, 5, 6, 7, 8, 9, 10, 11) p0=11141/18480 (0.602868) NON-AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) A=670 AP
+     scalar-energy inversions: p0=205 D=199; AP diff-profile failures=0
+       worst p0 inversion: A 518 row (0, 1, 4, 6, 7, 8, 9, 10, 11, 12) p0=88901/166320 (0.534518) beats A 522 row (0, 1, 2, 3, 4, 5, 7, 9, 10, 12) p0=359/945 (0.379894) by 25717/166320 (0.154624)
+k=11 rows=   66 cap=1 (1.000000) at P=()
+     AP: nu=3557/7560 (0.470503) D=4003/7560 (0.529497) p0=1201/1890 (0.635450) A=891
+     floor nu(AP)+cap-1=3557/7560 (0.470503) | bounded p0 margin cap-maxp0=839/2520 (0.332937)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) nu=3557/7560 (0.470503) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) D=4003/7560 (0.529497) AP
+     max p0: E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) p0=1681/2520 (0.667063) NON-AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) A=891 AP
+     scalar-energy inversions: p0=53 D=55; AP diff-profile failures=0
+       worst p0 inversion: A 755 row (0, 1, 3, 5, 6, 7, 8, 9, 10, 11, 12) p0=34169/55440 (0.616324) beats A 763 row (0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 12) p0=761/1512 (0.503307) by 18797/166320 (0.113017)
+
+------------------------------------------------------------------------------
+q=14: hard cluster sizes k=8..13
+------------------------------------------------------------------------------
+k= 8 rows= 3431 cap=2243/5880 (0.381463) at P=(1, 5, 7, 8, 9)
+     AP: nu=691/735 (0.940136) D=44/735 (0.059864) p0=481/1470 (0.327211) A=344
+     floor nu(AP)+cap-1=1891/5880 (0.321599) | bounded p0 margin cap-maxp0=319/5880 (0.054252)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7) nu=691/735 (0.940136) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7) D=44/735 (0.059864) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6, 7) p0=481/1470 (0.327211) AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7) A=344 AP
+     scalar-energy inversions: p0=3356 D=3186; AP diff-profile failures=0
+       worst p0 inversion: A 272 row (0, 2, 4, 6, 7, 8, 10, 12) p0=188/735 (0.255782) beats A 280 row (0, 2, 3, 4, 5, 7, 8, 9) p0=341/5880 (0.057993) by 1163/5880 (0.197789)
+k= 9 rows= 3003 cap=1979/4004 (0.494256) at P=(1, 11, 12, 13)
+     AP: nu=247/294 (0.840136) D=47/294 (0.159864) p0=2447/5880 (0.416156) A=489
+     floor nu(AP)+cap-1=28117/84084 (0.334392) | bounded p0 margin cap-maxp0=65669/840840 (0.078099)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7, 8) nu=247/294 (0.840136) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7, 8) D=47/294 (0.159864) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6, 7, 8) p0=2447/5880 (0.416156) AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7, 8) A=489 AP
+     scalar-energy inversions: p0=2973 D=2884; AP diff-profile failures=0
+       worst p0 inversion: A 393 row (0, 2, 4, 6, 7, 8, 10, 12, 14) p0=99/245 (0.404082) beats A 405 row (0, 2, 3, 4, 5, 7, 8, 9, 10) p0=689/5880 (0.117177) by 241/840 (0.286905)
+k=10 rows= 2002 cap=55/91 (0.604396) at P=(1, 12, 13)
+     AP: nu=38/49 (0.775510) D=11/49 (0.224490) p0=8899/17640 (0.504478) A=670
+     floor nu(AP)+cap-1=242/637 (0.379906) | bounded p0 margin cap-maxp0=22913/229320 (0.099917)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) nu=38/49 (0.775510) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) D=11/49 (0.224490) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) p0=8899/17640 (0.504478) AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) A=670 AP
+     scalar-energy inversions: p0=1970 D=1952; AP diff-profile failures=0
+       worst p0 inversion: A 526 row (0, 2, 4, 5, 6, 7, 8, 10, 12, 14) p0=403/840 (0.479762) beats A 562 row (0, 2, 3, 4, 5, 7, 8, 9, 10, 11) p0=121/588 (0.205782) by 537/1960 (0.273980)
+k=11 rows= 1001 cap=66/91 (0.725275) at P=(1, 13)
+     AP: nu=1381/2205 (0.626304) D=824/2205 (0.373696) p0=3419/5880 (0.581463) A=891
+     floor nu(AP)+cap-1=10078/28665 (0.351579) | bounded p0 margin cap-maxp0=10993/76440 (0.143812)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) nu=1381/2205 (0.626304) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) D=824/2205 (0.373696) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) p0=3419/5880 (0.581463) AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) A=891 AP
+     scalar-energy inversions: p0=973 D=976; AP diff-profile failures=0
+       worst p0 inversion: A 651 row (0, 1, 2, 4, 6, 7, 8, 10, 12, 13, 14) p0=3111/6370 (0.488383) beats A 655 row (0, 2, 3, 4, 5, 6, 9, 10, 11, 13, 14) p0=149263/630630 (0.236689) by 79363/315315 (0.251694)
+k=12 rows=  364 cap=6/7 (0.857143) at P=(1,)
+     AP: nu=13823/24255 (0.569903) D=10432/24255 (0.430097) p0=121103/194040 (0.624114) A=1156
+     floor nu(AP)+cap-1=10358/24255 (0.427046) | bounded p0 margin cap-maxp0=3739/17640 (0.211961)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) nu=13823/24255 (0.569903) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) D=10432/24255 (0.430097) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) p0=11381/17640 (0.645181) NON-AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) A=1156 AP
+     scalar-energy inversions: p0=342 D=331; AP diff-profile failures=0
+       worst p0 inversion: A 1028 row (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14) p0=2263/3528 (0.641440) beats A 1036 row (0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12) p0=82783/194040 (0.426629) by 6947/32340 (0.214811)
+k=13 rows=   91 cap=1 (1.000000) at P=()
+     AP: nu=477/1078 (0.442486) D=601/1078 (0.557514) p0=14573/21560 (0.675928) A=1469
+     floor nu(AP)+cap-1=477/1078 (0.442486) | bounded p0 margin cap-maxp0=5617/17640 (0.318424)
+     min nu: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) nu=477/1078 (0.442486) AP
+     max D : E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) D=601/1078 (0.557514) AP
+     max p0: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14) p0=12023/17640 (0.681576) NON-AP
+     max additive energy: E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) A=1469 AP
+     scalar-energy inversions: p0=81 D=76; AP diff-profile failures=0
+       worst p0 inversion: A 1253 row (0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 14) p0=6358/9555 (0.665411) beats A 1289 row (0, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14) p0=157687/315315 (0.500094) by 52127/315315 (0.165317)
+
+==============================================================================
+Cross-q synthesis
+==============================================================================
+smallest Bonferroni floor in this lab: q,k=(12, 7) value=11/36 (0.305556)
+smallest bounded p0-cap margin: q,k=(10, 6) value=1/25 (0.040000)
+carrier failure ledger:
+  p0_AP_not_unique_or_not_max: 8
+  scalar_D_inversions: 12139
+  scalar_p0_inversions: 12706
+
+Tournament Analysis Hamiltonian path over proof carriers:
+  Bonferroni_floor > bounded_nu_minimizer > bounded_p0_cap > AP_difference_profile > scalar_additive_energy
+
+Interpretation:
+  The floor and bounded cap mechanisms survive unchanged below q=14.
+  Consecutive/AP remains the nu/D extremal row in every bounded bank checked.
+  Some non-AP rows have larger p0, but every bounded-bank p0 stays below cap.
+  Scalar additive energy is already non-monotone in easier q, so it is
+  diagnostic only; the durable additive object is AP-facing difference
+  profile majorization plus labelled residual control.

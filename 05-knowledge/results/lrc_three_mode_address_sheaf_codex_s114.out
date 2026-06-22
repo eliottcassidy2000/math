@@ -1,0 +1,109 @@
+Three-mode local slot atlas
+==============================================================================
+Scalar projections by size offset:
+  mobius_full_all       : {1: 3, 2: -3, 3: 1}
+  eisenstein_even_half  : {1: 2, 2: -1}
+  legendre_odd_half     : {1: 2, 2: 0, 3: -2, 4: 1}
+
+Exact cell-count checks on the proper carriers
+  Mobius/full all sizes n=5..39 failures: []
+  Eisenstein/even half n even failures:   []
+  Legendre/odd half n odd failures:       []
+
+Parity carrier versus formula coincidence
+  n  h(n)  even A+B-C  odd A+B-C+D-E-F+G  carrier
+   4     2           2                      2  Eisenstein geometry
+   5     4           3                      4  Legendre geometry
+   6     6           6                      6  Eisenstein geometry
+   7     9           8                      9  Legendre geometry
+   8    12          12                     12  Eisenstein geometry
+   9    16          15                     16  Legendre geometry
+  10    20          20                     20  Eisenstein geometry
+  11    25          24                     25  Legendre geometry
+  12    30          30                     30  Eisenstein geometry
+  13    36          35                     36  Legendre geometry
+  14    42          42                     42  Eisenstein geometry
+  15    49          48                     49  Legendre geometry
+  Note: the seven-term scalar formula also holds at even n, but the
+  three-corner Legendre half-tiling geometry is only present at odd n.
+
+Corrected Legendre odd address geometry at N=15
+==============================================================================
+Slots:
+  A:N-1=14 +B:N-1=14 -C:N-2=13 +D:N-2=13 -E:N-3=12 -F:N-3=12 +G:N-4=11
+Regions:
+  corner_A : A                      sizes={14: 1}
+  corner_D : D                      sizes={13: 1}
+  corner_B : B                      sizes={14: 1}
+  edge_AD  : A +D -E                sizes={14: 1, 13: 1, 12: -1}
+  edge_BD  : B +D -F                sizes={14: 1, 13: 1, 12: -1}
+  edge_AB  : A +B -C                sizes={14: 2, 13: -1}
+  center   : A +B -C +D -E -F +G    sizes={14: 2, 13: 0, 12: -2, 11: 1}
+
+Key point:
+  C and D are both size N-2, so they cancel in scalar cardinality,
+  but they are different addresses: C sits on the AB edge, D is the
+  third corner and feeds both AD and BD edges plus the center.
+
+LRC14 composition: two size coordinates must be kept
+==============================================================================
+At N=14, h(N)=42 = 7*6 is pronic.
+  Mobius skeleton slots:     A:N-1=13 +B:N-1=13 +C:N-1=13 -D:N-2=12 -E:N-2=12 -F:N-2=12 +G:N-3=11
+  Eisenstein even slots:     A:N-1=13 +B:N-1=13 -C:N-2=12
+  Shape/apex coordinate:     k=N/2=7, the odd Legendre character coordinate.
+
+Do not conflate these coordinates:
+  recurrence children of N=14 are sizes 13 and 12;
+  the apex-7 coordinate is the pronic fold parameter k=7;
+  the Legendre chart at apex size 7 has slots
+    A:N-1=6 +B:N-1=6 -C:N-2=5 +D:N-2=5 -E:N-3=4 -F:N-3=4 +G:N-4=3
+  while the odd half chart at N=15 has slots
+    A:N-1=14 +B:N-1=14 -C:N-2=13 +D:N-2=13 -E:N-3=12 -F:N-3=12 +G:N-4=11
+
+Thus composition means a parity-stratified address sheaf:
+  every node carries the Mobius full atlas;
+  even half nodes carry the Eisenstein pronic quotient;
+  odd half nodes carry the Legendre square/three-corner quotient;
+  scalarizing before matching these local addresses loses the C/D seam.
+
+Exact-period obstruction for S_X={1..11,13,lcm(2..X)}
+==============================================================================
+For every D<=X, lcm(2..X) is 0 mod D, so N(S_X,D)=0 exactly.
+The scan below corrects the stronger nextprime wording: q_min>X is
+rigorous and sufficient to refute any finite basis; q_min need not be
+nextprime(X) because the fixed AP-core has its own safe-denominator ladder.
+
+  X   nextprime(X)  first witness D  first safe units
+  14             17 41               [17, 24]
+  15             17 41               [17, 24]
+  16             17 41               [17, 24]
+  20             23 41               [17, 24]
+  24             29 53               [22, 31]
+  27             29 41               [17, 24]
+  30             31 41               [17, 24]
+  41             43 53               [22, 31]
+  60             61 67               [28, 39]
+  90             97 97               [8, 89]
+
+Tournament Analysis over proof carriers
+==============================================================================
+  vertices are proof carriers, not runners or arcs
+  observable=(labels preserved, common labels, declaration order)
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  Hamiltonian path=exact_period_packets > address_sheaf > legendre_CD_seam > eisenstein_pronic_fold > mobius_scalar_skeleton > three_gap_AP_hull > raw_runner_vertices
+
+Assumption challenged:
+  A scalar half-tile recurrence is not enough to preserve the LRC
+  predicate.  The quotient must retain exact-period packets, local
+  slot labels, and parity mode until the final cap/floor scalarization.
+
+Proof-route synthesis
+==============================================================================
+  Node 2 remains finite/algebraic: prove AP-hull or three-gap
+  majorization for the bounded cap side without losing sector labels.
+  Node 3 is analytic: lcm-loaded rows force unbounded witness
+  denominators, so Weyl/equidistribution or exact-period packet
+  density is irreducible.
+  The three recursion modes compose as an address system connecting
+  these branches, not as a closed scalar recurrence for witness counts.

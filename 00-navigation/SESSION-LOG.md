@@ -52,6 +52,265 @@ Owner: "pull main, use as inspo to attempt all 3 nodes, be creative, report ALL 
 - **SWING 2 (TOOL not closure):** Beurling-Selberg minorant of 1_{G_P} (band-limited deg N, exact defect r_P/(N+1)) gives a rigorous PER-CONFIG finite floor certificate meas(G_P∩cover^c) >= finite sum; cleaner one-sided bound than the team's L2-CS/Abel, but still per-config (not uniform).
 - **NOT DEVELOPED (honest):** F_7 character/Fano decorrelation (apex prime); 2nd-moment/Paley-Zygmund (circular); LRC(14)->LRC(7) via 14=2*7 doubling (no traction); geometry-of-numbers (overlaps HYP-2606).
 - META: team's ζ(2)/√-cancellation/three-gap = real progress, floor robustly TRUE; uniform rigor of Nodes 2/3 still open. Best next bet = Swing 3 (bounded-denominator witness). Files: 04-computation/lrc14_{creative_swings,bounded_witness_conjecture,crt_witness_stress}_kindmendel.py; reflection lrc14-creative-swings-all-nodes-kindmendel-S4.md. -> HYP-2864, HYP-2847, OPEN-Q-108.
+## mac-mini-2026-06-22-S47 -- FLUSH OUT the LRC via the tournament-induction lessons: the induction IS the Mode-A peel; bounded core = irreducible atom = {consec, GW}
+Owner: immerse in tournament-induction work, then flush out the LRC. Reflection: flushing-out-the-lrc-induction-is-the-tournaments-mode-a-peel.md.
+- **The LRC induction = the tournament Mode-A peel:** R1 (remove large, n->n-1) = Mode A (vertex deletion); R2 (omit prime) = resonance witness; R3 (dilation) = normalize. VERIFIED: R1/R2/R3 reduce EVERY 13-set to the IRREDUCIBLE BOUNDED CORE = {consec, GW sporadics} (consec at the R1 boundary: max=13=sum(rest)/6, prime-covering, primitive). = the LRC analog of THM-079's reduction of H=21 to a single strong ATOM.
+- **Lesson 1 (per-path failure, n=6 disjoint 3-cycles):** naive per-element induction breaks at the first homological obstruction. The LRC's irreducible core {consec, GW} IS that obstruction -- the genuine n-runner content, unpeelable.
+- **Lesson 2 (H=21 success, THM-079):** multiplicative reduction to ONE strong atom + inductive bound (m>=9) + Moon pancyclicity. The LRC mirrors A exactly; what remains = bound the atom (consec maximizes / three-gap = the Moon step). The hard part is always the single-atom bound after a clean reduction.
+- **Winding-tournament link:** consec's loneliest moment t=1/14 = the 14-grid (evenly spaced) = the circulant winding tournament (i->j iff (i-j) mod 14 in {1..6}; antipodal tie at 7 = apex). The LRC extremal IS a tournament extremal.
+- **HONEST:** induction mapped + obstruction located at a single finite atom {consec, GW} (M=1/14, verified). Remaining: reduction exhaustiveness (scale separation, codex) + tight-locus finiteness (consec+GW, kps GW census) + the consec-maximizes bound (the H=21-analog Moon step). LRC(14) NOT finished.
+NEW: reflection + lrc_bounded_core_irreducible_macmini_S47.py. NEXT: the single-atom bound (consec maximizes) -- the irreducible Moon-analog crux.
+
+## mac-mini-2026-06-22-S46 -- concurrent push: Node 3 (equidistribution) VERIFIED + the assembled dichotomy skeleton (TIGHT-LOCUS vs SLACK)
+Concurrent w/ kps (S31t/u/v Bonferroni+multi-large) + codex (S114 sheaf/radical). HYP-2900.
+- **NODE 3 (analytic) VERIFIED:** a committed large speed equidistributes within the seed's safe set, removing EXACTLY 1/7 (meas(Safe(seed) ∩ Safe(v))=meas(seed)*6/7 to 5 decimals; seed {1..11,13}, v=30030,60060,510510). Multi-large: (6/7)^r for r independent large speeds (closes ALL r; kps union bound only r<=6).
+- **INDUCTION:** Node3-LRC(n) <= LRC(n-1) (peel committed speed; seed positive by LRC(n-1)). Collapses the unbounded case onto the bounded core.
+- **ASSEMBLED DICHOTOMY:** every 13-set is TIGHT (meas-safe=0) or SLACK (>0). SLACK (>=4 gaps spread OR large) -> EQUIDISTRIBUTION -> M>1/14 (mine, verified: spread meas-safe in [0.10,0.14]). TIGHT-LOCUS = consec/dilations (rigid, 3 gaps) + GW sporadics (NOT rigid, 4-5 gaps) -- FINITE per THM-560 + GW census, all M=1/n (kps's analytic core).
+- **DISCIPLINE: 2 over-claims caught + corrected** -- (1) a wrap-around bug gave seed meas-safe 0.79 (fixed -> 0.0122=S43); (2) 'rigid <=> tight' FALSE (GW sporadics are tight but >=4 gaps). Honest threshold: tight-locus (finite) vs slack (equidistribution); rigidity is the CONSEC part only.
+- **REMAINING CRUXES (honest, LRC(14) NOT finished):** (1) tight-locus FINITENESS (consec+GW only, OPEN-Q-108 / kps THM-560+census); (2) GW safety at n=14 (S42 finite check); (3) effective Erdos-Turan for SLACK (mine). The analytic core (consec-maximizes / tight-locus) stays open.
+NEW: HYP-2900, lrc_node3_equidistribution + slack + dichotomy scripts. NEXT: effective Erdos-Turan (mine); GW census completeness (kps).
+## codex-2026-06-22 -- HYP-2905 boundary-state induction from tournament ears to LRC
+
+User asked to immerse in tournament-related induction attempts and use that
+world to flush out the LRC proof.  Read the recent LRC induction tree
+HYP-2904/KPS-S31v/KPS-S31w/S115 and the tournament strong-ear / half-tiling
+threads HYP-2879/HYP-2685/HYP-2901/HYP-2902.
+
+Added `04-computation/lrc_tournament_induction_switchboard_codex.py` and
+stored `05-knowledge/results/lrc_tournament_induction_switchboard_codex.out`.
+The script verifies the tournament strong-ear boundary formula on labelled
+strong parents through `n=5`: `0` formula failures, `0` strongness failures,
+and deletion minimum `2` for `n=4,5`.  It also reuses the HYP-2904 LRC AP-core
+finite-comb constants: seed `{1,...,11,13}`, `mu=426/35035`, `4` components,
+least certified speed `768`, with positive certificates for `30030`, `60060`,
+and `510510`.
+
+Created HYP-2905/T1018 and reflection
+`07-reflections/lrc-boundary-state-induction-from-tournament-ears-codex.md`.
+Main synthesis: successful tournament induction and successful LRC induction
+both preserve a boundary state before scalarizing.  Tournament strong-ear
+growth uses `(start,end,Q)`; LRC remove-large uses `(measure,components)`, and
+multi-large uses `(core floor, arc count, resonant-pair graph)`.
+
+Flushed-out LRC proof tree: omit-prime direct witness; remove-large descent to
+smaller LRC seeds; `r<=6` multi-large union bound; `r>=7` second-moment
+resonant-pair/divisibility defect; bounded covering core by AP/GW tight-locus
+plus HYP-2903 missing-depth parity Newton packets.  Raw runner deletion and
+raw tournament minors are explicitly demoted because they destroy the boundary
+ledger.
+
+Post-rebase integration: incoming KPS-S31x verified scale-separated
+safe-measure multiplicativity and framed the irreducible LRC objects as
+single-scale atoms, exactly parallel to THM-454 tournament strong-component
+multiplicativity.  HYP-2905 now reads this as the scalar product governed by
+the finite-comb boundary-error state, and records S31x's deletion-contraction
+suggestion as a resonance-lattice operation, not a runner-deletion operation.
+
+Second post-rebase integration: incoming mac-mini S47 identifies the same
+proof order as the tournament Mode-A peel.  R1/R2/R3 reduce to the irreducible
+bounded tight-locus atom `{consec, GW}`; the remaining LRC proof is the
+single-atom extremality step, analogous to the Moon/pancyclicity step in the
+THM-079 `H=21` tournament proof.
+
+## codex-2026-06-22 -- HYP-2904 scale-separated induction reduction
+
+Worked on inductive reductions for LRC to smaller-size cases.  Pulled incoming
+main after restoring generated session state; incorporated the S46 Node-3
+induction skeleton as a proof obligation rather than a completed size-only
+induction.
+
+Added `04-computation/lrc_scale_separated_induction_codex.py` and stored
+`05-knowledge/results/lrc_scale_separated_induction_codex.out`.  The exact
+finite-comb lemma is:
+
+`meas(Safe_n(B) cap Safe_n({v})) >= (1-2/n)mu - 2c/v`,
+
+where `mu=meas(Safe_n(B))` and `c` is the number of seed-safe interval
+components.  The unsafe set of `v` has density `2/n`; only two boundary
+partials per seed interval contribute the `2c/v` loss.  Therefore any fixed
+seed with positive threshold-`1/n` safe measure admits all sufficiently large
+added speeds.  Since `LRC(n-1)` gives a witness at distance `1/(n-1)>1/n`,
+continuity supplies that positive seed measure for each fixed seed.
+
+Exact AP-core audit for `{1,...,11,13}` at `n=14`: seed measure `426/35035`,
+`4` components, least comb-certified speed `768`; added speeds `30030`,
+`60060`, and `510510` all remain safe with positive exact and comb-certified
+measure.  Sub-14 rows at `n=10` and `n=8` show the same mechanism.
+
+Guardrail: pure runner-count induction is not uniform.  Dilation by `q`
+preserves seed-safe measure but multiplies the component count and the least
+certified speed.  The proof invariant must carry a scale-normalized
+component/arc budget, a bounded Node-2 atlas, or a sharper exact-period Weyl
+packet estimate.  Created HYP-2904/T1017 and reflection
+`07-reflections/lrc-scale-separated-induction-finite-comb-codex.md`.
+
+Fetch during the session brought incoming KPS-S31v on the same Node-3 seam:
+`lrc_equidist_lemma_bounds_kps.py` proves the multi-large Bonferroni-1 version
+of this comb-teeth estimate, closing `r<=6` large speeds over a bounded core
+from a positive floor plus fixed arc budget.  Integrated that as the companion
+to HYP-2904: HYP-2904 is the one-speed induction atom; KPS-S31v is the
+multi-large package; the remaining new target is `r>=7`, where the union bound
+is vacuous and the second-moment resonant-pair defect must be bounded.
+
+Post-rebase incoming KPS-S31w added the global reduction tree.  Integrated it:
+remove-large uses HYP-2904/S31v to peel scale-separated speeds and descend to
+smaller proven LRC seeds; omit-prime gives a direct `t=1/p` witness; dilation
+normalizes.  The non-descending base is exactly the bounded covering core,
+which remains the Node-2 three-gap/AP-hull/Legendre-Venn extremality problem.
+
+## codex-2026-06-22 -- HYP-2903 activation-depth correction to the wide Bonferroni obligation
+## codex-2026-06-22 -- HYP-2903 activation-depth correction to the wide Bonferroni obligation (refined by S115)
+
+Worked the next sharp obligation after HYP-2901/HYP-2902.  Pulled the incoming S31t Bonferroni target and exact-tested it with rational sector integration.  Result: the universal third-order truncation `p0<=p0(B)+T1+T2+T3` is false.  Counterexample `B={0,1,2,3}`, `F={16,19,22,25,28}` has `T1=T2=0`, `T3=638291/6144600`, `T4=17921/6144600`, `T5=-1/931`, hence `T_{>=4}=11321/6144600>0`; order 3 is a lower bound.  Rebased incoming KPS S31u, which adds the complementary high-depth slack failure `B={0,3,9}`, `F={27,28,42,43,47}` with `T1=T2=T3=0`, `r0=4`, `p0=186437/5347566<<cap`; then rebased mac-mini S46, whose Node-3 equidistribution/induction skeleton makes this a Node-2 scope correction.  First correction: use activation depth `r0=min{r:T_r!=0}` to route `r0<=2`, `r0=3`, and `r0>=4` rows.  S115 below refines this again: activation depth is only a routing variable; the live sign invariant is the missing-depth parity ledger.  Added HYP-2903/T1016, exact script `04-computation/lrc_depth_corrected_bonferroni_codex.py`, result output, and reflection `07-reflections/lrc14-activation-depth-bonferroni-correction-codex.md`.  Tournament Analysis vertices are proof obligations/activation classes, not runners.
+## codex-2026-06-22-S115 -- Bonferroni far-packet target corrected to missing-depth parity
+
+User asked to keep pushing the LRC14 proof now that the right object was
+identified.  Pulled incoming HYP-2903, which had already corrected the raw
+S31t Bonferroni-3 target by activation depth.  Extended it with the exact
+pointwise Newton packet formula:
+
+```text
+T_r(x)=(-1)^(r+d(x)) C_{d,r}(x),
+```
+
+where `d(x)` is the number of base-missed inner sectors and `C_{d,r}` counts
+`r`-far subsets covering those missing sectors.  Thus the high tail is a
+missing-depth parity ledger, not a Venn-containment sign and not merely an
+activation-depth issue.
+
+Added `04-computation/lrc_bonferroni_depth_guard_codex_s115.py` and stored
+`05-knowledge/results/lrc_bonferroni_depth_guard_codex_s115.out`.  The script
+verifies the KPS binding-style sample has negative high tail, then gives exact
+positive-tail counterexamples: k=8 `B={0,1,2,3}`, `F={16,28,29,32}` has tail
+`19/68208`, and the edge-active k=9 row `B={0,1,7,10,13}`,
+`F={15,23,24,31}` has `T2>0` but tail `307/598920`.  Random exact stress found
+`32/80` positive Bonferroni-3 tails.
+
+Updated HYP-2903, T1017, OPEN-Q-108, the results index, and reflection
+`07-reflections/lrc-bonferroni-depth-parity-guard-codex-s115.md`.  New proof
+target: prove positive even-depth high packets are dominated by negative
+odd-depth high packets plus cap slack; route positive-tail activation/depth
+classes to doublet/triple/decorrelation finite atlases.  Assumption challenge:
+tournament vertices are depth-labelled Newton packet carriers, not raw runners
+or first live far-packet depth.
+
+## mac-mini-2026-06-22-S45 -- owner's Legendre correction + the TWO-STRUCTURE split; REFUTE HYP-2876 (no finite cert); the prime/radical handle pins the hard case at 30030|v
+Owner: corrected Legendre recursion (3-set Venn, sizes A=B=h(n-1),C=D=h(n-2),E=F=h(n-3),G=h(n-4); corners/edges/center); 3 parity-stratified modes (Mobius all, Legendre odd, Eisenstein even); the two-structure split + the lcm refutation. HYP-2899 + HYP-2876 refutation.
+- **REFUTED my HYP-2876** (own correction, verified): the lcm family S_X={1..11,13,lcm(2..X)} has witness D->inf (12,12,14,14,14,41,41,... then >41). No finite certificate => a purely finite LRC(14) proof is IMPOSSIBLE; analytic equidistribution irreducibly required.
+- **TWO STRUCTURES (HYP-2899):** (A/Node2 FINITE) three-gap (Steinhaus) rigidity -- only AP has <=3 gaps (VERIFIED consec=3, perturb=4, spread=13) => AP maximizes p0/L_y; (B/Node3 ANALYTIC) torus equidistribution -- committed speed = closed geodesic on T^k, Weyl removes ~1/7. The lcm family lives in B.
+- **PRIME/RADICAL HANDLE (verified):** M >= 1/(smallest surviving prime); surviving prime<=13 => M>=1/13>1/14 (64% of sets, EASY). A counterexample is PRIME-COVERING (kills 2,3,5,7,11,13) + b=14. The committed speed's RADICAL controls the witness: hard case is uniquely **30030|v** (divisible by all primes<=13) -- there the next prime is 17>14, prime-witness fails, equidistribution needed.
+- **MODULAR FRAME:** Mobius<->zeta^-1 (S44 totient), Legendre<->quadratic L(chi)/QR/apex-7, Eisenstein<->E_2=1-24*sum sigma_1 q^n where ζ(-1)=-1/12=owner's "1+2+3+..." lives (via B_2). kps S31r: LRC(14)=Eisenstein(even) compose Legendre(odd) on the half-tiling h(n)=floor((n-1)^2/4).
+- Concurrent: kps S31r/s (recursion + parity stratification), codex S113 (totient curvature). Built on them.
+NEW: HYP-2899, refuted HYP-2876. NEXT: Node 2 = AP-hull convex-order majorization (three-gap); Node 3 = effective Weyl/Erdos-Turan for the 30030|v family (radical handle).
+## codex-2026-06-22-S114 -- corrected three-mode composition + lcm committed-denominator wall
+
+User corrected the Legendre recursion slots and asked for a comprehensive proof-pushing synthesis.  Stashed generated session state, pulled incoming KPS S31s, and integrated its Venn correction: Legendre is the odd full 3-set Venn with corners `A,D,B`, edge unions `A+B-C`, `A+D-E`, `B+D-F`, and center `A+B+D-C-E-F+G`; Eisenstein is even-only `A+B-C`; Mobius applies on all sizes.
+
+Added `04-computation/lrc_lcm_committed_denominator_wall_codex_s114.py` and stored `05-knowledge/results/lrc_lcm_committed_denominator_wall_codex_s114.out`.  For `S_X={1,...,11,13,lcm(2,...,X)}`, the script verifies the theorem-level wall: no denominator `D<=X` can witness because the committed speed is `0 mod D`.  This refutes any fixed finite denominator basis for LRC14.  It also corrects the stronger nextprime heuristic: first witness denominators above the wall are not always `nextprime(X)` (`X=60 -> 67`, `X=110,120 -> 121=11^2`; `72/127` mismatches over `X=14..140`).
+
+Created HYP-2901/T1014 and reflection `07-reflections/lrc14-three-mode-composition-denominator-wall-codex-s114.md`.  Proof split recorded: Node 2 is finite Legendre/AP-three-gap Venn extremality; Node 3/finite Part A must be analytic exact-period prime-power/residue equidistribution beyond the lcm wall.  Tournament Analysis used proof routes/denominator packets as vertices rather than runners.
+
+Post-checkpoint rebase brought in mac-mini S45 on the same route; integrated its radical filter into HYP-2901/T1014: if a prime `p<=13` divides no runner, then `t=1/p` is already safe, so hard rows must kill `2,3,5,7,11,13` and `14`.  S114's added correction is that saturated rows still need prime-power exact-period packets, since first witnesses can be composite (`121=11^2`).
+
+Final close-out pull brought in KPS S31t.  Integrated it into HYP-2901/T1014/reflection as the corrected-Venn wide-cap target: the far-runner Newton packets make the doublet the binding edge `T2`, the triple the first correction `T3`, and the next subtarget is proving a uniform Bonferroni-3 upper bound `p0<=T1+T2+T3` by controlling the alternating `r>=4` tail.
+
+## mac-mini-2026-06-22-S44 -- the resonance-killing is MULTIPLICATIVE: totient-weighted killing, coprime density 1/zeta(2) floor, the 3 recursion modes = Mobius/IE skeleton
+Owner: coprime density <-> euler-totient <-> multiplicative functions; the 3 tournament recursion modes (A+B+C-D-E-F+G always; A+B-C even; A+B-C+D-E-F+G odd; sizes differ); toward proof/disproof. Reflection: the-resonance-killing-is-multiplicative-totient-mobius-zeta2.md.
+- **Totient-weighted killing (grounded):** in kps's resonance-killing (S31p, M=1/(smallest surviving b)), a runner s kills Farey point a/b (b<=14) iff b|s, so s kills ALL phi(b) primitive points of each denominator b|s. Survival lattice = Phi(14)=sum phi(b)=64 Farey points. A counterexample must cover all 64 = kill every b in 2..14 (THM-523, over-determined: 13 runners, 13 denominators).
+- **Coprime density -> totient -> zeta(2):** surviving-neighborhood density = 3/pi^2 = 1/(2 zeta(2)) (Farey floor); = sum_b phi(b)*(point weight) -> coprime density 6/pi^2 = 1/zeta(2). The multiplicative phi is WHY the floor is positive (zeta(2) converges). The lonely runner is lonely because coprimality has positive density.
+- **The 3 recursion modes = the Mobius/IE skeleton:** phi=mu*id (Dirichlet); killing/survival is IE over the divisor lattice. Mode 1 (+++---+) = union IE over a 3-set = squarefree-3-prime Mobius; Mode 2 (++-) = union over a 2-set; Mode 3 = Mode 2 + a different-size tail (odd). Same multiplicative spectrum as opus S291's Euler product V_n over ODD cycle lengths (1/k prime-reciprocals). Even/odd modes <-> Mobius sign <-> Burnside even/odd cycles <-> apex-7.
+- **Toward the proof:** the totient/zeta(2) floor is what equidistribution cannot erase -- the bulk killer v=182 (lcm 13,14) equidistributes & misses the neighborhoods (kps S31p), so they survive at 1/zeta(2) density.
+- DISCIPLINE/HONEST GAPS: (1) connected the IE/Mobius STRUCTURE of the 3 modes but did NOT pin their exact subtournament SIZES (open; asked team). (2) the 1/zeta(2) floor is rigorous at the RELAXED threshold 1/7; strict 1/14 needs boundary witnesses (S39).
+NEW: reflection + totient_coprime_resonance_killing_macmini_S44.py. NEXT: pin the exact recursion-mode sizes (kps/codex?); use the multiplicative structure for the strict-threshold floor.
+## codex-2026-06-22-S110 -- product-Mobius packet ledger for totient density and the three tiling recurrences
+
+User asked to continue the LRC proof/disproof synthesis through coprime
+density, Euler-totient/multiplicative functions, and the three tournament
+recursion modes: full `A+B+C-D-E-F+G`, even half `A+B-C`, and odd half
+`A+B-C+D-E-F+G`, with the warning that letters may refer to different `N`
+sizes.  Pulled incoming mac-mini S43 first and integrated its honest
+correction: covering sets look strongly lonely empirically, but the naive safe
+measure union bound is false for `{1,...,11,13}`; the live defense is
+equidistribution and labelled packet structure.
+
+Added `04-computation/lrc_totient_tiling_recursion_s110.py` and stored
+`05-knowledge/results/lrc_totient_tiling_recursion_s110.out`.  New
+HYP-2899/T1011:
+
+- The Euler-copy law `sum_{d|n}c(d)=n` has exact Mobius inverse
+  `c=phi=mu*id`; the script verifies `sum_{d|n}phi(d)=n` and checks totient
+  sums against the exact coprime-density constants `3/pi^2` and `6/pi^2`.
+- The full tiling recurrence is Boolean `B3` inclusion-exclusion.
+- The even half recurrence is Boolean `B2` inclusion-exclusion.
+- The odd half recurrence has two live addresses: incoming S31q reads prompt
+  order `++-+--+` over `A..G=1..7` as the Legendre `chi_7` split with the
+  zero/triple slot positive, while S110 reads the half-tiling corner order
+  `A,B,D` as the same `B3` packet `+++---+`.  What changes in the tiling
+  quotient is the size/depth pushforward:
+  `2h(n-1)-2h(n-3)+h(n-4)`, equivalently coefficients `(2,0,-2,1)` because
+  the `n-2` terms cancel cardinally.
+- S109's one-tail `w=84m` branch illustrates the product-ledger rule: killing
+  q-witnesses moves the witness to unit denominators `D=84m+5`, coprime to
+  `2,3,7`, rather than deleting the coprime-density floor.
+
+The proposed proof target is now a product lattice `Div(D) x B_r`: keep
+denominator Mobius labels and one/two/three-far Boolean signs until CRT
+defects and coherent low-rank packet labels have been separated.  Coherent
+low-depth atoms should route to finite AP/Freiman/packet atlases; incoherent
+high-denominator unit packets route to THM-566 equidistribution and HYP-2890
+same-frequency residual bounds.  Incoming HYP-2898/S111 reinforces this from
+small even q: scalar additive energy fails while labelled Fejer/residual
+control survives.  Incoming mac-mini S44 gives the matching killing ledger:
+`s` kills all `phi(b)` primitive Farey points for each `b|s`, so the small
+denominator covering core is a `Phi(14)=64` survival lattice rather than a
+bare list of denominators.  Assumption challenge recorded in HYP-2899:
+the relevant tournament vertices are divisor packets, exact-period unit
+classes, tiling recursion modes, product-ledger obligations, and scalarization
+guardrails, not necessarily runners, arcs, or even edges.
+## codex-2026-06-22-S113 -- totient curvature of tournament recursion modes
+
+User asked to continue LRC proof work using coprime density / Euler-totient /
+multiplicative functions and the three tournament recursion modes, with
+attention to the different subtournament sizes in each mode.
+
+Stashed generated session state and pulled; main was current.  Read THM-442,
+THM-550, THM-554, HYP-2685, HYP-2628/2629/2630, and the exact-period packet
+atlas HYP-2886/S102.
+
+Added `04-computation/lrc_tournament_totient_recursion_modes_codex_s113.py`
+and stored `05-knowledge/results/lrc_tournament_totient_recursion_modes_codex_s113.out`.
+The script verifies `n=sum_{d|n}phi(d)` through `n<=120`, verifies
+full/even/odd cell recurrences through `n<=80`, and applies the signed slot
+operators to `phi`, `phi/n`, and `phi/(n-1)`.
+
+Main finding: the recurrences are exact for cell-address carriers but fail
+systematically on multiplicative coprime-density packets.  The failure is useful
+Euler-factor curvature.  At `n=14`, full mode uses three size-13, three
+size-12, one size-11 carriers; even-half uses two size-13 and one size-12
+carrier; at odd `n=15`, odd-half uses two size-14, two size-13, two size-12,
+one size-11 carrier.  So LRC14 is an input to the odd half mode, not its
+output.  The even-half `n=14` residual for `rho=phi/n` is `-296/273`, with
+curvature `{2:3,3:1,7:1,13:-2}`.
+
+Created HYP-2900/T1013 and reflection
+`07-reflections/lrc-totient-curvature-and-tournament-recursion-modes-codex-s113.md`.
+Proof-route takeaway: keep exact-period `phi` packets and their CRT/chi7/coimage
+curvature before scalar cap/floor/Fejer estimates; do not chase a scalar totient
+recurrence.
+
+Later fetch found directly relevant incoming work: S110 had already claimed
+HYP-2899 for the product-Mobius packet ledger, KPS S31q identifies the three
+sign words as Mobius / Legendre `chi_7` / Eisenstein `chi_3` character
+channels, and mac-mini S44 identifies resonance killing as totient-weighted
+Farey killing with `Phi(14)=64`.  Renamed the S113 contribution to HYP-2900 and
+integrated the incoming signal: HYP-2899 names the product ledger, S31q/S44 name
+the character and totient-killing coordinates, while S113 pins the exact
+subtournament sizes and Euler-factor residuals at the LRC14 boundary.
+Final pull added KPS S31r's parity-stratified composition.  Integrated it as
+the third coordinate: LRC14 is the even Eisenstein fold `14 -> 7` followed by
+the odd Legendre apex-7 channel on the Mobius floor, and HYP-2900's
+`rho=-296/273` residual is the exact slot-curvature scar at that seam.
+
 ## mac-mini-2026-06-22-S43 -- LRC proof<->disproof dialectic: covering sets are FORCED LONELY (M~0.097>>1/14); M({1..11,13})=1/12 is the adversarial seed; measure inequality REFUTED as insufficient
 Owner: M({1..11,13})=1/12 & zeta(-1)=-1/12; prove AND disprove LRC(14), go back and forth; in/finite families. HYP-2897.
 - **Premise = the SEED:** M({1..11,13})=1/12 because the set OMITS a multiple of 12 => t=1/12 witnesses it (= q=12 case of kps THM-523 = my S42 t=1/n witness, generalized to all q<=14). It is the seed of kps's adversarial THM-566 family (add a large mult of 12 to make it covering).
@@ -20736,3 +20995,69 @@ higher additive-moment coefficients are mixed-sign after the positive dominant
 result index accordingly: the proof target is anchored AP-facing Fejer
 majorization plus labelled signed cancellation, not scalar additive-energy
 monotonicity or affine-translation-invariant exact tiling.
+
+## codex-2026-06-22-S111 -- small-q LRC proof lab selects labelled Fejer route
+User asked to work on finishing LRC proof by applying comprehensive techniques
+to cases smaller than 14 runners.
+
+Pulled current main after stashing generated session state; incoming S107
+unital pair-slot guardrail was relevant signal. Added exact audit
+`04-computation/lrc_small_q_proof_lab_codex_s111.py` and stored
+`05-knowledge/results/lrc_small_q_proof_lab_codex_s111.out`.
+
+The script applies LRC14 atoms to even denominators `q=8,10,12,14`, threshold
+`1/q`, cluster gap `2/q`, and primitive bounded banks `max(E)<=q`. It computes
+exact `nu`, dense `D`, q-sector `p0`, cap `min meas(G_P)`, additive energy, and
+AP difference profiles.
+
+Findings: Bonferroni floors positive throughout (min `11/36` at `(q,k)=(12,7)`);
+bounded p0-cap margins positive throughout (min `1/25` at `(q,k)=(10,6)`; q=14
+tight bounded margin `319/5880` at k=8); consecutive/AP is always the `nu`
+minimizer / dense-set maximizer; AP difference-profile failures are zero. But
+p0 has `8` non-AP bounded leaders, all cap-safe, and scalar energy is massively
+non-monotone (`12706` p0 inversions, `12139` D inversions). The q=14,k=9 worst
+scalar inversion is the known HYP-2890 bridge row `(0,2,4,6,7,8,10,12,14)`.
+
+Created HYP-2898 and reflection
+`07-reflections/lrc-small-q-proof-lab-codex-s111.md`. Proof-route takeaway:
+smaller q does not give a shortcut, but it selects the stable proof objects:
+Bonferroni floor + cap-safe p0 + AP-facing difference-profile/Fejer + labelled
+residual leak; scalar additive-energy monotonicity is not viable.
+
+Post-fetch integration: incoming HYP-2895/S108 and HYP-2896/S109 claimed the
+sub-14 covering/tiler atlas and the one-tail zeta dialectic.  Renumbered this
+artifact to HYP-2898/T1012/S111 and interpreted it as the analytic companion:
+once exact-tiler boundary cases and one-tail disproof branches are routed away,
+the remaining cap/floor branch still selects labelled Fejer/residual control,
+not scalar energy.
+
+## codex-2026-06-22-S114 -- three-mode address sheaf and finite/analytic split
+
+User supplied the Legendre slot correction and asked to compose Mobius,
+Legendre, and Eisenstein modes toward LRC14.  Pulled incoming S31s/S45 during
+the run: KPS already formalized the Legendre 3-set Venn correction, and
+mac-mini corrected the finite-certificate claim with the lcm family.
+
+Added `04-computation/lrc_three_mode_address_sheaf_codex_s114.py` and stored
+`05-knowledge/results/lrc_three_mode_address_sheaf_codex_s114.out`.  The script
+records the three modes as local address charts, not scalar alternatives:
+Mobius all sizes; Eisenstein even/pronic; Legendre odd/square.  Corrected
+Legendre geometry keeps `A,B:N-1`, `C,D:N-2`, `E,F:N-3`, `G:N-4`, with corners
+`A,D,B`, edges `A+D-E`, `B+D-F`, `A+B-C`, and center
+`A+B+D-C-E-F+G`; the `C/D` seam cancels only in scalar counts.
+
+For LRC14, the top even recurrence samples child sizes `13,12`, while the
+pronic shape exposes apex coordinate `7`; these are different coordinates and
+must both be retained.  S114 also checks the raw `S_X={1..11,13,lcm(2..X)}`
+family: all `D<=X` are killed, proving `q_min>X`, but the stronger
+`q_min=nextprime(X)` wording is false (`X=14 -> D=41`, `X=24 -> D=53`).
+
+Created HYP-2902 and reflection
+`07-reflections/lrc-three-mode-address-sheaf-and-realizability-split-codex-s114.md`.
+Also patched `lrc_three_modes_parity_composition_kps.py` and its stored output
+so the older S31r script now distinguishes Legendre slot sizes `{1,2,3,4}` from
+net scalar offsets `{1,3,4}`.  Proof-order takeaway: Node 2 is finite/AP-hull
+or three-gap majorization with labels; Node 3 is analytic exact-period/Weyl/L2
+after divisor-killed denominators are removed.  This refines incoming HYP-2901's
+denominator wall.  LRC14 remains open; the sharp
+remaining theorem is the uniform Node-3 floor.

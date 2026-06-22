@@ -1,0 +1,26 @@
+n  parity  h(n)=floor((n-1)^2/4)   shape          even-rec A+B-C   odd-rec A+B-C+D-E-F+G
+ 4  EVEN EISENSTEIN   2   PRONIC 2*1=2       2=h OK    2=h OK
+ 5  ODD  LEGENDRE     4   SQUARE 2^2=4       3X        4=h OK
+ 6  EVEN EISENSTEIN   6   PRONIC 3*2=6       6=h OK    6=h OK
+ 7  ODD  LEGENDRE     9   SQUARE 3^2=9       8X        9=h OK
+ 8  EVEN EISENSTEIN  12   PRONIC 4*3=12     12=h OK   12=h OK
+ 9  ODD  LEGENDRE    16   SQUARE 4^2=16     15X       16=h OK
+10  EVEN EISENSTEIN  20   PRONIC 5*4=20     20=h OK   20=h OK
+11  ODD  LEGENDRE    25   SQUARE 5^2=25     24X       25=h OK
+12  EVEN EISENSTEIN  30   PRONIC 6*5=30     30=h OK   30=h OK
+13  ODD  LEGENDRE    36   SQUARE 6^2=36     35X       36=h OK
+14  EVEN EISENSTEIN  42   PRONIC 7*6=42     42=h OK   42=h OK
+15  ODD  LEGENDRE    49   SQUARE 7^2=49     48X       49=h OK
+
+THE THREE MODES' REDUCTION-SIZE-SETS (subtournament sizes, DIFFERENT per mode):
+  MOBIUS (always)  : reduce by {1,2,3} = Modes A,B,C (incl-excl skeleton, char of the 7-term lattice)
+  EISENSTEIN (even): reduce by {1,2}   = order-2 (x-1)^2, PRONIC, the complement-halving / binary Z[i]
+  LEGENDRE (odd)   : slots reduce by {1,2,3,4}: A,B n-1; C,D n-2; E,F n-3; G n-4
+                     net scalar offsets are {1,3,4} only because -C + D cancels at n-2
+
+LRC(14) COMPOSITION = parity factorization 14 = 2 * 7:
+  14 EVEN  -> EISENSTEIN: half-tiling = 7*6 = 42 (pronic), k=7=14/2 EXPOSES the apex prime 7
+   7 ODD   -> LEGENDRE  : half-tiling = 3^2 = 9 (square), the QR(7)={1,2,4} / NQR={3,5,6} character
+  => the even Eisenstein mode FACTORS OUT THE 2 (complement Z/2 = sector-halving x->-x, THM-280/549),
+     leaving the odd apex 7 to the Legendre mode. 14=2*7 is literally Eisenstein(even) o Legendre(odd).
+  Parity ALTERNATES down the tower: 14e 13o 12e 11o 10e 9o 8e 7o ... each step its own mode.

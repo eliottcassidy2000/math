@@ -1,0 +1,31 @@
+(1) The 3 sign patterns over A..G (=1..7):
+   Mobius +++---+ (incl-excl /3 modes): [1, 1, 1, -1, -1, -1, 1]
+   Legendre chi_7 ++-+--+: [1, 1, -1, 1, -1, -1, 1]
+   Legendre check: +on{1,2,4}=QR(7), -on{3,5,6}=NQR(7): [1, 2, 4, 7]
+   Incl-excl 3+3+1: singletons A,B,C(+), pairs(-), triple(+) = subsets of 3 modes
+
+(2) Copy rule phi = mu * id  (HYP-2882, the totient IS Mobius-inversion of identity):
+   n=1: (mu*id)(n)=1, phi(n)=1  OK
+   n=2: (mu*id)(n)=1, phi(n)=1  OK
+   n=3: (mu*id)(n)=2, phi(n)=2  OK
+   n=4: (mu*id)(n)=2, phi(n)=2  OK
+   n=5: (mu*id)(n)=4, phi(n)=4  OK
+   n=6: (mu*id)(n)=2, phi(n)=2  OK
+   n=7: (mu*id)(n)=6, phi(n)=6  OK
+   n=8: (mu*id)(n)=4, phi(n)=4  OK
+
+(3) LRC apex-7 floor = sum_{b=1..6} phi(b)*2*(7-b)/(7b), decomposed by character of b:
+   b=1: phi=1, width 2(7-b)/(7b)=12/7, contrib 12/7  chi7=+1 chi3=+1
+   b=2: phi=1, width 2(7-b)/(7b)=5/7, contrib 5/7  chi7=+1 chi3=-1
+   b=3: phi=2, width 2(7-b)/(7b)=8/21, contrib 16/21  chi7=-1 chi3=+0
+   b=4: phi=2, width 2(7-b)/(7b)=3/14, contrib 3/7  chi7=+1 chi3=+1
+   b=5: phi=4, width 2(7-b)/(7b)=4/35, contrib 16/35  chi7=-1 chi3=-1
+   b=6: phi=2, width 2(7-b)/(7b)=1/21, contrib 2/21  chi7=-1 chi3=+0
+
+   TOTAL floor (per V) = 146/35 = 4.1714
+   by chi_7:  QR(+1)=2.8571  NQR(-1)=1.3143  (b=7n: 0.0000)
+   chi_7 principal = (QR+NQR)/1 = 4.1714;  chi_7 OSCILLATION = QR-NQR = 1.5429
+   by chi_3:  (+1)=2.1429  (-1)=1.1714  (3|b: 0.8571)
+
+   => floor = PRINCIPAL (totient/Mobius, ~4.171) + chi_7 + chi_3 corrections.
+      Principal 4.171 DOMINATES |chi_7 osc| 1.543 => floor stays POSITIVE.

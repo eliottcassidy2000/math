@@ -1,7 +1,7 @@
 ---
 id: HYP-+2876
 title: LRC(14) finite rational-witness residue check lead -- character-count and apex fragments survive, fixed finite denominator closure is refuted
-status: REFUTED as a global finite-certificate claim by THM-566/HYP-2876; retained as a sampled residue-atlas lead
+status: REFUTED (S45, owner+verified) -- captures only BOUNDED covering sets; the lcm family breaks it. (was: GROUNDED)
 source: mac-mini-2026-06-22-S34 (user inspo: finite certificate basis + character-sum + apex-7 fragment)
 related:
   - HYP-2869   # the assembled proof (rho*>0 + finite V*); this is the SHARPER rational-witness form
@@ -78,3 +78,16 @@ proof route is the LARGE-D basis {83,89}: bound the resonance deficit (Node-3 sp
 mod 83}) < 11 = the main term. For a prime D=83, resonances are sparse => deficit small => N>=1
 (comfortable). The basis includes 89 (+21) so if S resonates with 83, use 89 -- no covering S resonates
 with all. This is the Node-3 spectrum bound at the finite basis: deficit(S,D) < (6/7)^13 phi(D) for some basis D.
+
+
+## REFUTED (S45): the lcm family breaks the finite-certificate claim
+Owner's correction + verified (totient_coprime + this session): the committed-speed family
+**S_X = {1,...,11,13, lcm(2..X)}** is a primitive covering 13-set whose minimal witness denominator
+GROWS without bound (computed: 12,12,14,14,14,41,41,... for X=2..8, then exceeds 41). Because every
+D <= X divides lcm(2..X), the committed speed sits EXACTLY on the observer (||v a/D||=0) for all D<=X,
+so no small D certifies it -- a witness appears only above X. So **there is NO finite certificate basis**:
+HYP-2876 (D<=41) and codex's HYP-2864 both capture only the BOUNDED covering sets. The S_X are still
+LONELY, but only via EQUIDISTRIBUTION (a large-D / irrational witness). CONSEQUENCE: a purely
+finite/combinatorial proof of LRC(14) is IMPOSSIBLE; an analytic equidistribution input is irreducibly
+required. (Striking: the bounded-case max D=41 from this HYP is exactly where the lcm family first
+reaches before exceeding it.) See HYP-2899 (the two-structure split) + kps resonance-killing.
