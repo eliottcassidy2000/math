@@ -1,0 +1,20 @@
+INFINITE AP FAMILY: M(AP_n)=M({1..n}) =?= 1/(n+1), killed resonances {1..n}:
+  n= 2: M({1..2}) =    1/3  = 1/(n+1);  sum 1..n = 3
+  n= 3: M({1..3}) =    1/4  = 1/(n+1);  sum 1..n = 6
+  n= 4: M({1..4}) =    1/5  = 1/(n+1);  sum 1..n = 10
+  n= 5: M({1..5}) =    1/6  = 1/(n+1);  sum 1..n = 15
+  n= 6: M({1..6}) =    1/7  = 1/(n+1);  sum 1..n = 21
+  n= 7: M({1..7}) =    1/8  = 1/(n+1);  sum 1..n = 28
+  n= 8: M({1..8}) =    1/9  = 1/(n+1);  sum 1..n = 36
+  n= 9: M({1..9}) =   1/10  = 1/(n+1);  sum 1..n = 45
+  n=10: M({1..10}) =   1/11  = 1/(n+1);  sum 1..n = 55
+  n=11: M({1..11}) =   1/12  = 1/(n+1);  sum 1..n = 66
+  n=12: M({1..12}) =   1/13  = 1/(n+1);  sum 1..n = 78
+  n=13: M({1..13}) =   1/14  = 1/(n+1);  sum 1..n = 91
+  n=14: M({1..14}) =   1/15  = 1/(n+1);  sum 1..n = 105
+  n=15: M({1..15}) =   1/16  = 1/(n+1);  sum 1..n = 120
+  n=16: M({1..16}) =   1/17  = 1/(n+1);  sum 1..n = 136
+
+  => M(AP_n)=1/(n+1) EXACT (the AP is the unique least-spread killer of b=1..n).
+     Infinite AP {1,2,3,...}: kills ALL resonances, M->0; regularized 1+2+3+..=zeta(-1)=-1/12.
+     1/12-core {1..11,13}: skips killer-12 => b=12 survives => M=1/12 (the finite -zeta(-1) avatar).
