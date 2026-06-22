@@ -1,0 +1,69 @@
+FIXED-PATH TOURNAMENT <-> EVEN-GRAPH MINOR AUDIT
+free arc (i,j), j>i+1, maps to triangle-basis bit (0,i+1,j)
+
+n=3
+  rooted tournaments = even graphs = 2^C(n-1,2) = 2
+  H spectrum min/max/count = 1/3/2
+  H=7 count 0; H=21 count 0
+  strong H values <=25 = [3]
+  greedy suppression-core buckets = 1, buckets with >1 H = 1, max distinct H per bucket = 2
+  GF(2) contractions checked = 3, even-degree failures = 0
+
+n=4
+  rooted tournaments = even graphs = 2^C(n-1,2) = 8
+  H spectrum min/max/count = 1/5/3
+  H=7 count 0; H=21 count 0
+  strong H values <=25 = [5]
+  greedy suppression-core buckets = 1, buckets with >1 H = 1, max distinct H per bucket = 3
+  GF(2) contractions checked = 24, even-degree failures = 0
+
+n=5
+  rooted tournaments = even graphs = 2^C(n-1,2) = 64
+  H spectrum min/max/count = 1/15/7
+  H=7 count 0; H=21 count 0
+  strong H values <=25 = [9, 11, 13, 15]
+  greedy suppression-core buckets = 2, buckets with >1 H = 1, max distinct H per bucket = 7
+  GF(2) contractions checked = 320, even-degree failures = 0
+
+n=6
+  rooted tournaments = even graphs = 2^C(n-1,2) = 1024
+  H spectrum min/max/count = 1/45/19
+  H=7 count 0; H=21 count 0
+  strong H values <=25 = [15, 17, 19, 23, 25]
+  greedy suppression-core buckets = 17, buckets with >1 H = 2, max distinct H per bucket = 19
+  GF(2) contractions checked = 7680, even-degree failures = 0
+
+n=7
+  rooted tournaments = even graphs = 2^C(n-1,2) = 32768
+  H spectrum min/max/count = 1/189/77
+  H=7 count 0; H=21 count 0
+  strong H values <=25 = [25]
+  greedy suppression-core buckets = 1365, buckets with >1 H = 17, max distinct H per bucket = 77
+  GF(2) contractions checked = 344064, even-degree failures = 0
+
+EXAMPLE: degree-2 suppression is too coarse for H
+  deterministic terminal GF(2)-suppression core set: {v0:empty}
+  same core bucket contains 25414 rooted tournaments and H-values [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 109, 111, 113, 115, 117, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 151, 153, 155, 157, 159, 171, 175, 189]
+  low-H witness:  n=7 mask=0 bits=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) H=1
+  high-H witness: n=7 mask=9562 bits=(0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0) H=189
+
+EXAMPLE: GF(2) edge contraction is not an H-monotone tournament operation
+  increasing contraction: n=7 mask=191 H=31 contract edge=(2, 3) -> n=6 H=33
+    parent even edges=[(0, 1), (0, 2), (0, 4), (0, 6), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 3), (2, 5)]
+    child even edges =[(0, 1), (0, 2), (0, 3), (0, 5), (1, 3), (1, 4), (1, 5), (2, 4)]
+  decreasing contraction: n=4 mask=1 H=3 contract edge=(0, 1) -> n=3 H=1
+    parent even edges=[(0, 1), (0, 2), (1, 2)]
+    child even edges =[]
+
+INTERPRETATION
+  1. The fixed-path cube is the right labelled bridge: it sees every tournament
+     up to relabelling because every tournament has a Hamiltonian path.
+  2. The even-graph quotient is a GF(2) cycle-space object. Degree-2 smoothing
+     cancels triangles and other cycles modulo 2, so it is not the same data
+     as topological-minor suppression in Kuratowski's theorem.
+  3. GF(2) contraction stays inside even graphs, but the induced tournament H
+     is not monotone. Thus the forbidden values {7,21} are not behaving like
+     forbidden minors of a minor-closed graph family.
+  4. The surviving reduction is the known one: strong-component condensation
+     gives a multiplicative semigroup for H. The {7,21} obstruction lives in
+     irreducible conflict-graph/strong-tournament cores, not in graph minors.
