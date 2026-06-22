@@ -1,3 +1,11 @@
+## mac-mini-2026-06-22-S52 -- HONEST assessment: the gamma-trick is a real partial advance but does NOT complete LRC(14)
+Owner: leverage the gamma-trick (kps S31ad) to complete LRC(14). I leveraged it (analyzed + verified its reach) and the disciplined result is: it does NOT complete the proof. HYP-2912.
+- **What it proves (verified):** r=|mult of 14|>=7 with R coprime to 14 (14-point pigeonhole, |R|<=6, each marks <=2) + r<=6 (union bound, with the meas(safe(R))>r/7 condition). Real, correct, clever (apex-periodicity decoupling).
+- **What it does NOT (verified):** the 14-level pigeonhole bound 2|Codd|+4|Ceven|+7|B| < 14 closes 0 of 566 RANDOM covering sets (the bulk: few mults of 14 => |R| large => bound>=14). The residual (R not coprime to 14) is left to a prime-tower descent 14->7->2->1, which has a COUNTING GAP: at the p-point level the coprime-to-p runners (~13) mark <=2 each, far exceeding p points => pigeonhole fails.
+- **Covering IS true, unproven by the trick:** min M over 1059 covering sets = 1/11 ~ 0.091 > 1/14 (margin 0.0195, 0 counterexamples). So THM-568 holds; proving it uniformly needs the full descent (gaps) or effective equidistribution (Node 3) -- neither complete.
+- **CONCLUSION:** the gamma-trick is the right mechanism + closes special cases, but LRC(14) remains OPEN (open for 13 runners in the literature). I did NOT fabricate a completion.
+NEW: HYP-2912 (honest assessment). The covering case is comfortable but the uniform proof (the open core) is not closed.
+
 ## mac-mini-2026-06-22-S51 -- census + HONEST status of (star): single-swap census EXACT ({AP,GW}); completeness = consec-maximizes = the irreducible open core
 Owner: finish proving the remaining (star) pieces, get creative. Made maximal RIGOROUS progress; honest about the open core. HYP-2909.
 - **SINGLE-SWAP CENSUS EXACT (verified):** among {1..13} with one element k->r (r<=300), the ONLY tight (M=1/14) swap is 12->24 = GW {1..11,13,24}. So {single-swaps} ∩ {tight} = {AP, GW}. Broad search (thousands) finds NO others. Both non-covering, optimum denom EXACTLY 14.
