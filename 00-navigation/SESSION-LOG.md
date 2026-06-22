@@ -45,6 +45,13 @@ plus HYP-2903 missing-depth parity Newton packets.  Raw runner deletion and
 raw tournament minors are explicitly demoted because they destroy the boundary
 ledger.
 
+Post-rebase integration: incoming KPS-S31x verified scale-separated
+safe-measure multiplicativity and framed the irreducible LRC objects as
+single-scale atoms, exactly parallel to THM-454 tournament strong-component
+multiplicativity.  HYP-2905 now reads this as the scalar product governed by
+the finite-comb boundary-error state, and records S31x's deletion-contraction
+suggestion as a resonance-lattice operation, not a runner-deletion operation.
+
 ## codex-2026-06-22 -- HYP-2904 scale-separated induction reduction
 
 Worked on inductive reductions for LRC to smaller-size cases.  Pulled incoming

@@ -37,3 +37,12 @@ analogies and become boundary-state analogies.  Use the half-tiling address,
 AP/Goddyn-Wong tight locus, Fejer/additive-energy labels, and the
 missing-depth parity Newton packets.  Runner deletion is the wrong minor order;
 residue/cut/depth boundary ledgers are the right one.
+
+Post-rebase S31x sharpened this picture.  Scale-separated LRC clusters appear
+to multiply their safe measures, matching tournament multiplicativity over
+strong components; the finite-comb state is then the effective error ledger for
+that product, not a competing proof route.  S31x also points at
+deletion-contraction, but the transfer should happen on the resonance lattice
+or Bonferroni relation graph after labels are retained.  Deleting a runner is
+still the wrong operation; deleting or contracting a labelled resonance may be
+the right finite-core operation.

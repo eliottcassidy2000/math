@@ -11,12 +11,15 @@ depends_on:
   - HYP-2903
   - HYP-2904
   - HYP-2899
+  - THM-082
+  - THM-454
   - THM-523
   - THM-560
   - THM-565
   - THM-566
   - KPS-S31v
   - KPS-S31w
+  - KPS-S31x
 results:
   - 04-computation/lrc_tournament_induction_switchboard_codex.py
   - 05-knowledge/results/lrc_tournament_induction_switchboard_codex.out
@@ -122,6 +125,33 @@ remove the bounded covering core.  That core is not a failure of induction; it
 is the finite boundary atom, analogous to the exceptional single strong atoms
 that survive tournament strong-ear reduction.
 
+## S31x multiplicative atom integration
+
+Incoming KPS-S31x adds the missing product-language around the same proof
+tree.  Its scale-separated measurements support
+
+```text
+meas(Safe(S1 union S2)) ~ meas(Safe(S1)) meas(Safe(S2))
+```
+
+when the two speed clusters live at very different scales.  This is the LRC
+analogue of THM-454 tournament multiplicativity over strong components:
+separated clusters factor, and the irreducible objects are single-scale atoms.
+
+This does not replace the finite-comb boundary state.  It explains what the
+boundary state is measuring: the error term in turning an approximate cluster
+product into an effective induction step.  HYP-2904 gives the one-cluster
+effective inequality with `(mu,c)`; S31v/S31w give the multi-large/scale-tree
+version; S31x identifies the scalar product that should appear once the
+boundary error is controlled.
+
+The other S31x suggestion, deletion-contraction on the resonance lattice, also
+fits the switchboard thesis.  It should not be run on runners.  It should be
+run on a relation graph whose vertices/edges retain the labelled resonance,
+depth, and AP/GW tight-locus data.  If the bounded covering core can be
+realized as an independence-polynomial or Bonferroni polynomial on that
+relation graph, THM-082 becomes the right finite-core reducer.
+
 ## Tournament Analysis
 
 The script chooses proof carriers as tournament vertices:
@@ -171,17 +201,22 @@ that actually controls the induction error.
 
 To finish LRC14, the next sharp obligations are now explicit:
 
-1. Prove the `r>=7` second-moment bound with resonant-pair/divisibility defect.
-2. Prove the bounded covering core theorem:
+1. Make the scale-cluster product effective: prove a uniform boundary-error
+   theorem interpolating the HYP-2904 comb bound and the S31x multiplicative
+   atom measurement.
+2. Prove the `r>=7` second-moment bound with resonant-pair/divisibility defect.
+3. Prove the bounded covering core theorem:
 
    ```text
    primitive bounded prime-covering 13-set
    -> AP/GW tight locus or positive cap slack.
    ```
 
-3. In that bounded core theorem, use the missing-depth parity Newton ledger
+4. In that bounded core theorem, use the missing-depth parity Newton ledger
    from HYP-2903 and the AP/three-gap/Legendre-Venn address sheaf from
-   HYP-2901/HYP-2902.  Do not try to prove it by runner deletion.
+   HYP-2901/HYP-2902, and test whether resonance-lattice
+   deletion-contraction can reduce the finite atom.  Do not try to prove it by
+   runner deletion.
 
 This is the tournament-induction lesson applied to LRC: keep the boundary
 carrier until the last comparison.
