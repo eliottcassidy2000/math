@@ -1,0 +1,45 @@
+Tournament-induction switchboard for LRC14
+==============================================================================
+Principle: successful inductions preserve a boundary state before scalarizing.
+
+Tournament strong-ear boundary audit
+------------------------------------------------------------------------------
+  n  strong_parents  nonconstant_ears  formula_failures  strong_failures
+  3               2                12                 0                0
+  4              24               336                 0                0
+  5             544             16320                 0                0
+  deletion_min_by_n={4: 2, 5: 2}
+  total_formula_failures=0
+  total_strong_failures=0
+  readout: the induction step is exact only after retaining (start,end,Q).
+
+LRC finite-comb peel audit
+------------------------------------------------------------------------------
+  seed=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13), n=14, threshold=1/14
+  seed_measure=426/35035 components=4 least_certified_v=768
+  add v= 30030: exact_after=   313/30030  comb_lower=   7472/735735
+  add v= 60060: exact_after=   337/32340  comb_lower=   1514/147147
+  add v=510510: exact_after=   191/18326  comb_lower= 26032/2501499
+  readout: the induction step is exact only after retaining (measure,components).
+
+Shared reduction tree
+------------------------------------------------------------------------------
+  omit-prime             -> direct witness t=1/p         | state=small-prime cover profile; status=done
+  remove-large           -> descend to smaller LRC seed  | state=safe-set measure + component/arc budget; status=HYP-2904/S31v/S31w
+  multi-large r<=6       -> union-bound survival         | state=core floor + arc budget; status=S31v
+  multi-large r>=7       -> second moment                | state=divisibility/resonant-pair graph; status=open
+  bounded covering core  -> finite extremality           | state=three-gap/AP-GW + depth-parity packets; status=open Node 2
+
+Tournament Analysis over proof carriers
+------------------------------------------------------------------------------
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+  directed_3cycles=0
+  Hamiltonian path=finite_comb_peel > strong_ear_boundary_Q > half_tiling_address > depth_parity_newton > multi_large_union_bound > bounded_covering_core > prime_omission_witness > dilation_normalization > raw_runner_deletion > raw_tournament_minor
+
+Flush-out target
+------------------------------------------------------------------------------
+  The LRC14 proof should now be stated as boundary-state induction:
+  (1) descend all unbounded/non-covering rows by omit-prime and remove-large;
+  (2) close r>=7 by a resonant-pair/divisibility second-moment ledger;
+  (3) close the bounded covering core by AP/GW tight-locus rigidity plus
+      missing-depth parity packets, not by raw runner deletion or scalar minors.

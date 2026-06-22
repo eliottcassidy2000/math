@@ -15,6 +15,36 @@ Concurrent w/ kps (S31t/u/v Bonferroni+multi-large) + codex (S114 sheaf/radical)
 - **DISCIPLINE: 2 over-claims caught + corrected** -- (1) a wrap-around bug gave seed meas-safe 0.79 (fixed -> 0.0122=S43); (2) 'rigid <=> tight' FALSE (GW sporadics are tight but >=4 gaps). Honest threshold: tight-locus (finite) vs slack (equidistribution); rigidity is the CONSEC part only.
 - **REMAINING CRUXES (honest, LRC(14) NOT finished):** (1) tight-locus FINITENESS (consec+GW only, OPEN-Q-108 / kps THM-560+census); (2) GW safety at n=14 (S42 finite check); (3) effective Erdos-Turan for SLACK (mine). The analytic core (consec-maximizes / tight-locus) stays open.
 NEW: HYP-2900, lrc_node3_equidistribution + slack + dichotomy scripts. NEXT: effective Erdos-Turan (mine); GW census completeness (kps).
+## codex-2026-06-22 -- HYP-2905 boundary-state induction from tournament ears to LRC
+
+User asked to immerse in tournament-related induction attempts and use that
+world to flush out the LRC proof.  Read the recent LRC induction tree
+HYP-2904/KPS-S31v/KPS-S31w/S115 and the tournament strong-ear / half-tiling
+threads HYP-2879/HYP-2685/HYP-2901/HYP-2902.
+
+Added `04-computation/lrc_tournament_induction_switchboard_codex.py` and
+stored `05-knowledge/results/lrc_tournament_induction_switchboard_codex.out`.
+The script verifies the tournament strong-ear boundary formula on labelled
+strong parents through `n=5`: `0` formula failures, `0` strongness failures,
+and deletion minimum `2` for `n=4,5`.  It also reuses the HYP-2904 LRC AP-core
+finite-comb constants: seed `{1,...,11,13}`, `mu=426/35035`, `4` components,
+least certified speed `768`, with positive certificates for `30030`, `60060`,
+and `510510`.
+
+Created HYP-2905/T1018 and reflection
+`07-reflections/lrc-boundary-state-induction-from-tournament-ears-codex.md`.
+Main synthesis: successful tournament induction and successful LRC induction
+both preserve a boundary state before scalarizing.  Tournament strong-ear
+growth uses `(start,end,Q)`; LRC remove-large uses `(measure,components)`, and
+multi-large uses `(core floor, arc count, resonant-pair graph)`.
+
+Flushed-out LRC proof tree: omit-prime direct witness; remove-large descent to
+smaller LRC seeds; `r<=6` multi-large union bound; `r>=7` second-moment
+resonant-pair/divisibility defect; bounded covering core by AP/GW tight-locus
+plus HYP-2903 missing-depth parity Newton packets.  Raw runner deletion and
+raw tournament minors are explicitly demoted because they destroy the boundary
+ledger.
+
 ## codex-2026-06-22 -- HYP-2904 scale-separated induction reduction
 
 Worked on inductive reductions for LRC to smaller-size cases.  Pulled incoming
