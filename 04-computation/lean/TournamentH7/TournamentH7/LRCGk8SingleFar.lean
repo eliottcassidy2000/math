@@ -63,5 +63,28 @@ theorem singlefar_k9_below_bounded : (2876 : Nat) < 3259 := by native_decide
 /-- k=10: single-far `62267/12936 < L_yK8(consec_10) = 37/7`. -/
 theorem singlefar_k10_below_bounded : (62267 : Nat) * 7 < 37 * 12936 := by native_decide
 
+/-! ### Packaged checksum -/
+
+/-- All exact arithmetic checks from the HYP-2829 gK8 single-far import
+boundary, packaged for the LRC14 skeleton and aggregate audit. -/
+theorem all_binding_checks :
+    (2633 : Nat) * 588 < 2243 * 735 ∧
+      (3259 : Nat) * 2002 < 9895 * 735 ∧
+      (37 : Nat) * 7 < 40 * 7 ∧
+      (2323 : Nat) * 588 < 2243 * 980 ∧
+      (2876 : Nat) * 2002 < 9895 * 735 ∧
+      (62267 : Nat) * 7 < 40 * 12936 ∧
+      (2323 : Nat) * 735 < 2633 * 980 ∧
+      (2876 : Nat) < 3259 ∧
+      (62267 : Nat) * 7 < 37 * 12936 := by
+  exact ⟨bounded_k8_below_cap, bounded_k9_below_cap, bounded_k10_below_cap,
+    singlefar_k8_below_cap, singlefar_k9_below_cap, singlefar_k10_below_cap,
+    singlefar_k8_below_bounded, singlefar_k9_below_bounded,
+    singlefar_k10_below_bounded⟩
+
+/-! ### Axiom audit -/
+
+#print axioms all_binding_checks
+
 end Gk8SingleFar
 end LonelyRunner

@@ -48,6 +48,7 @@ import TournamentH7.LRCPeriodmaxCertificate
 import TournamentH7.LRCGenuineWideCorrection
 import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCGk8SingleFar
+import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCL7Discrepancy
 
 open Tournament
@@ -94,6 +95,41 @@ theorem lrc_genuine_wide_correction_nonprimitive_base_guardrail_audit :
       LonelyRunner.GenuineWideCorrection.k10.basePrimitive = false :=
   LonelyRunner.GenuineWideCorrection.nonprimitive_base_guardrail
 #print axioms lrc_genuine_wide_correction_nonprimitive_base_guardrail_audit
+
+/-! ### LRC14 doublet rho*/witness floor arithmetic checksum -/
+
+theorem lrc_doublet_witness_floor_positive_and_separated_audit :
+    0 < LonelyRunner.DoubletWitnessFloor.rhoFloorNum ∧
+      0 < LonelyRunner.DoubletWitnessFloor.witnessFloorNum ∧
+      LonelyRunner.DoubletWitnessFloor.consecRhoFloorNum *
+          LonelyRunner.DoubletWitnessFloor.rhoFloorDen <
+        LonelyRunner.DoubletWitnessFloor.rhoFloorNum *
+          LonelyRunner.DoubletWitnessFloor.consecRhoFloorDen ∧
+      LonelyRunner.DoubletWitnessFloor.thm530WitnessFloorNum *
+          LonelyRunner.DoubletWitnessFloor.witnessFloorDen <
+        LonelyRunner.DoubletWitnessFloor.witnessFloorNum *
+          LonelyRunner.DoubletWitnessFloor.thm530WitnessFloorDen ∧
+      LonelyRunner.DoubletWitnessFloor.rhoFloorNum *
+          LonelyRunner.DoubletWitnessFloor.witnessFloorDen <
+        LonelyRunner.DoubletWitnessFloor.witnessFloorNum *
+          LonelyRunner.DoubletWitnessFloor.rhoFloorDen :=
+  LonelyRunner.DoubletWitnessFloor.audited_doublet_floors_positive_and_separated
+#print axioms lrc_doublet_witness_floor_positive_and_separated_audit
+
+/-! ### LRC14 HYP-2829 gK8 single-far arithmetic checksum -/
+
+theorem lrc_gk8_singlefar_binding_checks_audit :
+    (2633 : Nat) * 588 < 2243 * 735 ∧
+      (3259 : Nat) * 2002 < 9895 * 735 ∧
+      (37 : Nat) * 7 < 40 * 7 ∧
+      (2323 : Nat) * 588 < 2243 * 980 ∧
+      (2876 : Nat) * 2002 < 9895 * 735 ∧
+      (62267 : Nat) * 7 < 40 * 12936 ∧
+      (2323 : Nat) * 735 < 2633 * 980 ∧
+      (2876 : Nat) < 3259 ∧
+      (62267 : Nat) * 7 < 37 * 12936 :=
+  LonelyRunner.Gk8SingleFar.all_binding_checks
+#print axioms lrc_gk8_singlefar_binding_checks_audit
 
 /-! ### LRC14 THM-563 period-max certificate kernel -/
 

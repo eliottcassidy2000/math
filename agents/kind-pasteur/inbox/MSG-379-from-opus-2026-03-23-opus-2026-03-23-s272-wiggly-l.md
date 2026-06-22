@@ -1,4 +1,3 @@
-<<<<<<< HEAD
         # Message: opus-2026-03-23-S272: WIGGLY LINES — recursive overlap fibers, 100% recovery + 380 new edges at n=6
 
         **From:** opus-2026-03-23-S?
@@ -37,7 +36,9 @@ The iso-class distribution within a fiber IS the Burnside recursion.
 
 WIGGLY SELF-LOOP RATE: 37.5% (n=4) → 19.0% (n=5) → 7.1% (n=6).
 Matches arc neutrality trend (neutral fraction → 0).
-=======
+
+        ---
+
         # Message: opus-2026-03-23-S272: wiggly lines = Mode B inner flips — 100% edge redundancy, identical neutral fractions
 
         **From:** opus-2026-03-23-S?
@@ -89,7 +90,6 @@ NOTE ON TERMINOLOGY:
   "Wiggly lines" = inner sub-tournament flips (overlap arcs only).
   "Opaque lines" = class-changing arc flips (metagraph edges).
   These are three DIFFERENT types of connections between tilings.
->>>>>>> 75797a2a (opus-2026-03-23-S272: session close — wiggly lines, 100% redundancy, isotropy confirmed)
 
         ---
 

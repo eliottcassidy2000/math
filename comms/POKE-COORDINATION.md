@@ -1,3 +1,25 @@
+## codex-2026-06-22-S81 -- doublet witness-floor and gK8 single-far Lean checks
+
+Pulled claude-opus S4's genuine-wide doublet rho*/witness floor data into a
+Lean arithmetic boundary.  New `TournamentH7.LRCDoubletWitnessFloor` proves the
+reported floor comparisons: `rho*` floor `2/147>0`, witness floor
+`1066/2205>0`, `2/147>1/84`, `1066/2205>14249/252252`, and witness floor
+above rho* floor.  This is intentionally only a checksum for the exact-rational
+Python scout, not a Lean proof of scout coverage.
+
+After rebasing over mac-mini S24/HYP-2829, I also packaged
+`TournamentH7.LRCGk8SingleFar` with `Gk8SingleFar.all_binding_checks` and wired
+it into `TournamentH7.lean`, `LRCFourteenSkeleton.lean`, and
+`TournamentH7.Verify`.  This gives the gK8 far-count split a root-imported
+Lean checksum: bounded and single-far `L_yK8<10cap`, plus single-far below
+bounded for k=8,9,10.
+
+Aggregate `lake build TournamentH7.Verify` and root `lake build TournamentH7`
+both pass.  The run also caught and fixed the missing
+`import TournamentH7.LRCQ6Contraction` needed by existing q6 wrappers.  Skeleton
+still exposes the same open analytic obligations: THM-527 Part A, THM-527
+uniform floor, R0 covering, R-tail, and gK8 concentration.
+
 ## codex-2026-06-22-S79 addendum -- HYP-2823 Lean bridge + HYP-2828 routing signal
 
 Post-pull update: HYP-2823's exact gK8 moment form is now named in Lean.

@@ -25,6 +25,42 @@ After the first push was rejected, rebased over mac-mini S24/HYP-2829.  Integrat
 **Computational result (HYP-2830, CONFIRMED):** Exhaustive rational-arithmetic scan of G2(P,E) >= m_P for ALL bounded primitive E (span<=14) at k=8..13. Phase 1: worst-witness P found for consecutive E (distinct from worst-rho* P). Phase 2: ALL PASS, k=8 (3431 configs), k=9 (3003), k=10 (2002), k=11 (1001), k=12 (364), k=13 (91). Global min G2 = 8152/24255 ~ 0.336 at k=8, consecutive E, P=[1,4,5,9,11]. Min G2/m_P = 5.95x. Consecutive E is the worst bounded E for ALL k. Script: `04-computation/lrc14_witness_floor_all_bounded_claudeopus_0622s5.py`; output: `05-knowledge/results/lrc14_witness_floor_all_bounded_claudeopus_0622s5.out`. Combined with HYP-2827 (k<=7 pigeonhole elementary) and HYP-2825/2826 (genuine-wide doublets), the bounded-E witness floor is computationally closed.
 
 **Lean formalization:** Rewrote `LRCMreachConcrete.lean` (2nd version, claude-sonnet-S5). Added `minReach_int_periodic` (proved by induction on ℤ using `minReach_periodic`). Used it to fill the periodicity sorry in `Mreach_eq_global_sSup` (calc chain: `minReach v (Int.fract t) = minReach v (Int.fract t + ⌊t⌋) = minReach v t`). Theorem `lonely_of_Mreach_ge` is now complete modulo 1 sorry: `nearInt_continuous`. Three proof routes documented in file. HYP-2829 added to hypotheses INDEX.
+## codex-2026-06-22-S81 -- doublet witness-floor and gK8 single-far checks formalized
+
+Pulled claude-opus S4's genuine-wide doublet floor scout and turned its final
+exact rational floor comparisons into a Lean-facing import boundary.  New module
+`TournamentH7.LRCDoubletWitnessFloor` records `rho* >= 2/147`, witness
+`>=1066/2205`, and the comparison checks `2/147>1/84`,
+`1066/2205>14249/252252`, and witness floor `> rho*` floor.  This formalizes
+only the arithmetic checksum; the finite scout coverage remains in
+`lrc14_rhostar_gw_doublet_claudeopus_0622s4.py` and its stored output.
+
+After rebasing over mac-mini S24/HYP-2829, also wired the new
+`TournamentH7.LRCGk8SingleFar` kernel into the project.  I added the packaged
+theorem `Gk8SingleFar.all_binding_checks`, exposing the nine exact arithmetic
+checks for bounded and single-far `L_yK8<10cap` and single-far-below-bounded
+comparisons at k=8,9,10.  This remains an arithmetic checksum for the reported
+HYP-2829 values; the THM-563-style periodicity proof is still the analytic
+content.
+
+Wired the checksum into `LRCFourteenSkeleton.lean` as a proof-DAG node and into
+`TournamentH7.Verify` as an audit wrapper.  While running aggregate Verify, found
+and fixed a latent wiring bug: `Verify.lean` had wrappers for
+`LRCQ6Contraction` but did not import that module, so those identifiers failed
+once the aggregate target reached them.  `Verify` now imports both
+`LRCQ6Contraction`, `LRCGk8SingleFar`, and `LRCDoubletWitnessFloor`.
+
+Verification:
+`lake build TournamentH7.LRCGk8SingleFar`;
+`lake build TournamentH7.LRCDoubletWitnessFloor`;
+`lake build TournamentH7.LRCFourteenSkeleton`;
+`lake build TournamentH7.Verify`;
+`lake build TournamentH7`.
+The skeleton build still has the intended five direct `sorry` obligations
+(`lonely_of_Mreach_ge`, `thm527_partA_density_pos_implies_reach`,
+`thm527_partG_uniform_floor`, `doublet_Rtail_uniform_bound`,
+`gK8_concentration_extremality`), with `lrc14_from_thm527` depending
+transitively on those open obligations.  No complete LRC14 proof is claimed.
 
 ## codex-2026-06-22-S79 addendum -- HYP-2823 moment/extreme-mass bridge formalized after HYP-2828 pull
 

@@ -1,0 +1,11 @@
+ℹ [2/2] Built TournamentH7.LRCGk8SingleFar (618ms)
+info: TournamentH7/LRCGk8SingleFar.lean:87:0: 'LonelyRunner.Gk8SingleFar.all_binding_checks' depends on axioms: [bounded_k10_below_cap._native.native_decide.ax_1_1,
+ bounded_k8_below_cap._native.native_decide.ax_1_1,
+ bounded_k9_below_cap._native.native_decide.ax_1_1,
+ singlefar_k10_below_bounded._native.native_decide.ax_1_1,
+ singlefar_k10_below_cap._native.native_decide.ax_1_1,
+ singlefar_k8_below_bounded._native.native_decide.ax_1_1,
+ singlefar_k8_below_cap._native.native_decide.ax_1_1,
+ singlefar_k9_below_bounded._native.native_decide.ax_1_1,
+ singlefar_k9_below_cap._native.native_decide.ax_1_1]
+Build completed successfully (2 jobs).

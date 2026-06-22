@@ -1,0 +1,12 @@
+ℹ [2/2] Replayed TournamentH7.LRCDoubletWitnessFloor
+info: TournamentH7/LRCDoubletWitnessFloor.lean:79:0: 'LonelyRunner.DoubletWitnessFloor.rhoFloor_positive' depends on axioms: [rhoFloor_positive._native.native_decide.ax_1_1]
+info: TournamentH7/LRCDoubletWitnessFloor.lean:80:0: 'LonelyRunner.DoubletWitnessFloor.witnessFloor_positive' depends on axioms: [witnessFloor_positive._native.native_decide.ax_1_1]
+info: TournamentH7/LRCDoubletWitnessFloor.lean:81:0: 'LonelyRunner.DoubletWitnessFloor.rhoFloor_above_consecRhoFloor' depends on axioms: [rhoFloor_above_consecRhoFloor._native.native_decide.ax_1_1]
+info: TournamentH7/LRCDoubletWitnessFloor.lean:82:0: 'LonelyRunner.DoubletWitnessFloor.witnessFloor_above_thm530Floor' depends on axioms: [witnessFloor_above_thm530Floor._native.native_decide.ax_1_1]
+info: TournamentH7/LRCDoubletWitnessFloor.lean:83:0: 'LonelyRunner.DoubletWitnessFloor.witnessFloor_above_rhoFloor' depends on axioms: [witnessFloor_above_rhoFloor._native.native_decide.ax_1_1]
+info: TournamentH7/LRCDoubletWitnessFloor.lean:84:0: 'LonelyRunner.DoubletWitnessFloor.audited_doublet_floors_positive_and_separated' depends on axioms: [rhoFloor_above_consecRhoFloor._native.native_decide.ax_1_1,
+ rhoFloor_positive._native.native_decide.ax_1_1,
+ witnessFloor_above_rhoFloor._native.native_decide.ax_1_1,
+ witnessFloor_above_thm530Floor._native.native_decide.ax_1_1,
+ witnessFloor_positive._native.native_decide.ax_1_1]
+Build completed successfully (2 jobs).

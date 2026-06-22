@@ -12,7 +12,8 @@
         - the per-shape Delsarte / moment-LP bound `10*q0 <= L_yK8`
           (`FactorialAtom.delsarte_bound_k8`, the gK8 route's per-shape half);
         - the finite period-max / count / cap-clearance kernels
-          (`PeriodmaxCertificate`, `GenuineWideCorrection`, `L7Discrepancy`).
+          (`PeriodmaxCertificate`, `GenuineWideCorrection`,
+          `Gk8SingleFar`, `DoubletWitnessFloor`, `L7Discrepancy`).
 
     * FINITE and `decide`/`native_decide`-able NOW (illustrated here with the
       concrete `cap` rationals and a toy bounded-leg decidable predicate);
@@ -45,6 +46,7 @@ import TournamentH7.LRCFactorialAtom
 import TournamentH7.LRCPeriodmaxCertificate
 import TournamentH7.LRCGenuineWideCorrection
 import TournamentH7.LRCGk8SingleFar
+import TournamentH7.LRCDoubletWitnessFloor
 
 namespace LonelyRunner
 namespace LRC14
@@ -155,6 +157,29 @@ every `x ∈ G_P` is good and `rho* = meas(G_P) > 0`.  Carried as a hypothesis-f
 statement (`G_P` positivity is the proven LRC at 11 speeds). -/
 theorem thm527_k3_unconditional (s : Shape) (_hk3 : True) (hGP : 0 < rhoStar s) :
     0 < rhoStar s := hGP
+
+/-! ### 2a. Doublet rho*/witness scout checksum (finite arithmetic import)
+
+The S4 genuine-wide doublet scout reports exact positive floors over the audited
+doublet bank: `rho* >= 2/147` and witness `>= 1066/2205`.  The measurement engine
+is Python/exact-rational; this Lean node records only the final rational
+comparisons and keeps the coverage claim out of Lean. -/
+
+/-- **DAG node D0 (doublet witness-floor checksum, FINITE arithmetic import).**
+The audited doublet floors are positive, and the reported `rho*`/witness minima
+are above the older comparison floors `1/84` and `14249/252252`. -/
+theorem doublet_witness_floor_checksum :
+    0 < DoubletWitnessFloor.rhoFloorNum ∧
+      0 < DoubletWitnessFloor.witnessFloorNum ∧
+      DoubletWitnessFloor.consecRhoFloorNum * DoubletWitnessFloor.rhoFloorDen <
+        DoubletWitnessFloor.rhoFloorNum * DoubletWitnessFloor.consecRhoFloorDen ∧
+      DoubletWitnessFloor.thm530WitnessFloorNum *
+          DoubletWitnessFloor.witnessFloorDen <
+        DoubletWitnessFloor.witnessFloorNum *
+          DoubletWitnessFloor.thm530WitnessFloorDen ∧
+      DoubletWitnessFloor.rhoFloorNum * DoubletWitnessFloor.witnessFloorDen <
+        DoubletWitnessFloor.witnessFloorNum * DoubletWitnessFloor.rhoFloorDen :=
+  DoubletWitnessFloor.audited_doublet_floors_positive_and_separated
 
 /-! ### 2b. The 1/7 witness route (KPS HYP-2825/HYP-2826/HYP-2827)
 
@@ -427,15 +452,23 @@ theorem gK8_singlefar_arithmetic_kernel :
     ((2323 : Nat) * 735 < 2633 * 980) ∧
     ((2876 : Nat) < 3259) ∧
     ((62267 : Nat) * 7 < 37 * 12936) :=
-  ⟨Gk8SingleFar.bounded_k8_below_cap,
-   Gk8SingleFar.bounded_k9_below_cap,
-   Gk8SingleFar.bounded_k10_below_cap,
-   Gk8SingleFar.singlefar_k8_below_cap,
-   Gk8SingleFar.singlefar_k9_below_cap,
-   Gk8SingleFar.singlefar_k10_below_cap,
-   Gk8SingleFar.singlefar_k8_below_bounded,
-   Gk8SingleFar.singlefar_k9_below_bounded,
-   Gk8SingleFar.singlefar_k10_below_bounded⟩
+  Gk8SingleFar.all_binding_checks
+
+/-- **DAG node L3a' (HYP-2829 single-far arithmetic checksum, FINITE import).**
+Alias kept for S81 handoffs.  The bounded binding values and the reported
+single-far window suprema clear `10*cap` for k=8,9,10, and the single-far
+values are below the bounded values. -/
+theorem gK8_singlefar_arithmetic_checksum :
+    (2633 : Nat) * 588 < 2243 * 735 ∧
+      (3259 : Nat) * 2002 < 9895 * 735 ∧
+      (37 : Nat) * 7 < 40 * 7 ∧
+      (2323 : Nat) * 588 < 2243 * 980 ∧
+      (2876 : Nat) * 2002 < 9895 * 735 ∧
+      (62267 : Nat) * 7 < 40 * 12936 ∧
+      (2323 : Nat) * 735 < 2633 * 980 ∧
+      (2876 : Nat) < 3259 ∧
+      (62267 : Nat) * 7 < 37 * 12936 :=
+  gK8_singlefar_arithmetic_kernel
 
 /-- **DAG node L3b (gK8 concentration-extremality, OPEN).**  The scalar content:
 the maximum of the moment functional `L_yK8` over ALL `k`-speed configs is below
@@ -534,8 +567,10 @@ obligations." -/
 #print axioms gK8_per_shape_bound
 #print axioms gK8_dual_feasible
 #print axioms gK8_singlefar_arithmetic_kernel
+#print axioms gK8_singlefar_arithmetic_checksum
 #print axioms single_far_periodmax_headroom
 #print axioms genuine_wide_rows_below_cap
+#print axioms doublet_witness_floor_checksum
 #print axioms sampleBoundedRows_ok
 #print axioms wide_bound_from_gK8
 #print axioms witnessMP_pos_rat
