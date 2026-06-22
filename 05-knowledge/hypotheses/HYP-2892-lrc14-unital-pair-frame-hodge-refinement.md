@@ -38,11 +38,12 @@ positive same-frequency additive-energy packet
 The useful principle is the same one that corrected scalar additive energy in
 HYP-2889: choose the right finite quotient before scalarizing.
 
-Post-rebase guardrail from KPS S31m: this is not a sparse-design exact-tiling
-route.  The exact threshold tiler is the full residue system
-`Z_14 \ {0}` and its dilates, not a projective-plane or unital block system.
-The `q=3` unital below is only a pair-slot averaging frame for the k=8
-residual after the HYP-2890 same-frequency packet has been subtracted.
+Post-rebase guardrail from KPS S31m/S31n: this is not a sparse-design
+exact-tiling route.  The structured difference-closed threshold tilers are the
+full residue system `Z_14 \ {0}` and its dilates, while the Goddyn-Wong
+`{1,...,11,13,24}` row is a sporadic tight tiler outside that class.  The
+`q=3` unital below is only a pair-slot averaging frame for the k=8 residual
+after the HYP-2890 same-frequency packet has been subtracted.
 
 ## Exact carrier audit
 

@@ -64,8 +64,10 @@ difference / three-gap structure, kps THM-565). The under-used category 2 is the
 tournament order (cat 3) is too coarse, but the order-WITH-gap-widths (cat 2) plus the observer's
 placement (cat 1) is exactly the safe condition. So the right object is the **metric winding tournament**
 (order + gaps), anchored at the observer — not the combinatorial tournament, and not the affine additive
-energy. The S39 crux (only d·{1,…,13} tiles exactly) is a category-1 tiling-rigidity statement; that is
-where to push, with the three-gap metric (cat 2) as the tool. codex's Clebsch/Bruhat/unital carriers
+energy. The S31n correction sharpens the category-1 target: diff-closed tilers are the AP/dilate
+family, but the Goddyn-Wong row is a sporadic tight tiler.  The live rigidity statement is therefore
+classification of the observer-relative tight locus, with the three-gap metric (cat 2) as the tool.
+codex's Clebsch/Bruhat/unital carriers
 (HYP-2891) sit on the cut = observer-relative side, consistent with this placement.
 
 Verified core (S41): the affine-invariance table (the three categories). Synthesis: the fineness

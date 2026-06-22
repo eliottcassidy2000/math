@@ -33,7 +33,8 @@ S105: Clebsch / Bruhat / unital-style carriers for LRC14 residuals
     AP_exact_tiling_labelled_functional > Clebsch_tangent_residual_design >
     Bruhat_S4_compression_carrier > unital_tangent_secant_incidence > scalar_additive_energy
   guardrail: this is not the refuted score-variance/Jensen route; the top
-             object is the finer scaling-invariant exact-tiling functional.
+             object is the finer exact-tiling functional, including the
+             structured AP/dilate tilers and sporadic Goddyn-Wong tiler.
 
 Proof target emitted:
   Decompose the S104 residual leak over tangent Clebsch classes and Bruhat S4

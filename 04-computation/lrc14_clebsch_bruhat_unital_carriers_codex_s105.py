@@ -282,7 +282,8 @@ def main() -> None:
     print("    AP_exact_tiling_labelled_functional > Clebsch_tangent_residual_design >")
     print("    Bruhat_S4_compression_carrier > unital_tangent_secant_incidence > scalar_additive_energy")
     print("  guardrail: this is not the refuted score-variance/Jensen route; the top")
-    print("             object is the finer scaling-invariant exact-tiling functional.")
+    print("             object is the finer exact-tiling functional, including the")
+    print("             structured AP/dilate tilers and sporadic Goddyn-Wong tiler.")
 
     print("\nProof target emitted:")
     print("  Decompose the S104 residual leak over tangent Clebsch classes and Bruhat S4")

@@ -29,13 +29,15 @@ truncated octahedral graph -> Bruhat S4 local compression/swap quotient
 unital/design language     -> tangent/secant incidence discipline
 ```
 
-Post-pull correction from KPS S31m and mac-mini S40: the score-variance/Jensen
-route through the winding tournament is refuted as a coverage theorem, and the
-exact tiler is the complete nonzero residue system `Z_14 \ {0}` up to dilation,
-not a sparse projective-plane design.  Thus "Jensen" below means keep the full
-signed labelled functional until the final comparison, not the refuted
-score-level functional.  Clebsch and Bruhat are cut-side state spaces that
-retain labels; they are not the invariant itself.
+Post-pull correction from KPS S31m/S31n and mac-mini S40: the
+score-variance/Jensen route through the winding tournament is refuted as a
+coverage theorem, and the exact-tiling locus is not a sparse projective-plane
+design.  The difference-closed structured part is the complete nonzero residue
+system `Z_14 \ {0}` up to dilation, but S31n also verifies the sporadic
+Goddyn-Wong tight row `{1,...,11,13,24}`.  Thus "Jensen" below means keep the
+full signed labelled functional until the final category-1 tiling comparison,
+not the refuted score-level functional.  Clebsch and Bruhat are cut-side state
+spaces that retain labels; they are not the invariant itself.
 
 ## Clebsch as tangent residual quotient
 
@@ -144,13 +146,14 @@ near-violation mass sits on braid hexagons rather than commutation squares.
 
 ## Incoming S31m/S40 integration
 
-S31m gives the negative control this hypothesis needs: scalar score variance,
-unanchored additive energy, and the `PG(2,3)`/13-point design analogy do not
-prove coverage.  The exact coverage object is more rigid: at threshold it is a
-complete residue system `Z_14 \ {0}` up to dilation.  Therefore the useful role
-of S105 is narrower and sharper: provide finite labelled carriers for the
-residual terms that survive after the AP/exact-tiling comparison has already
-been chosen.
+S31m/S31n give the negative control this hypothesis needs: scalar score
+variance, unanchored additive energy, and the `PG(2,3)`/13-point design analogy
+do not prove coverage.  The exact coverage object is more rigid and more
+observer-relative: the structured difference-closed tilers are
+`Z_14 \ {0}` up to dilation, but the Goddyn-Wong row is a sporadic tight tiler
+outside that class.  Therefore the useful role of S105 is narrower and sharper:
+provide finite labelled carriers for the residual terms that survive after the
+AP/Goddyn-Wong exact-tiling comparison has already been chosen.
 
 S40 gives the positive structural placement.  Clebsch is the cut-space/folded
 cube side; the truncated octahedron is the `S4` permutohedron/order side.  The
