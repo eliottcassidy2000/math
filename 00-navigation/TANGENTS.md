@@ -2886,5 +2886,9 @@ later bucket but pays earlier prefix mass.  Next theorem target: prove
 low-q prefix majorization over residue patterns for `q<=k`, then prove a
 Farey/three-gap tail packing bound for `q>k`.  S94's THM-567/HYP-2867
 resonance-channel work is the Fourier-side analogue: finite low carriers need
-aggregate balance, not pointwise bucket dominance.  -> HYP-2866, THM-530,
-THM-531, THM-567, HYP-2832, HYP-2867, OPEN-Q-108.
+aggregate balance, not pointwise bucket dominance.  S95b stress over `26099`
+additional exact rows (`[0,15]`, tail collars, two-block rows, random wide)
+found no prefix or total violations.  HYP-2870's complement-even low-frequency
+split is the spectrum-side version of the same rule: preserve aggregate low
+carriers, then split coherent structure from analytic tails.  -> HYP-2866,
+THM-530, THM-531, THM-567, HYP-2832, HYP-2867, HYP-2870, OPEN-Q-108.

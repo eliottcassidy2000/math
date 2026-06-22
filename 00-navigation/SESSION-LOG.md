@@ -19780,3 +19780,21 @@ first as the right positive abstraction and qualifies the second: a useful
 Wagner-style order must use strong-component condensation or OCF-packet
 reduction with an explicit `H`-factor ledger, not arbitrary GF(2) contraction
 inside the even-graph shadow, because that contraction can raise `H`.
+S95b stress addendum: added
+`04-computation/lrc14_nu_prefix_stress_codex_s95b.py`, reusing the exact S95
+component engine to search beyond `[0,14]`.  The stored run
+`05-knowledge/results/lrc14_nu_prefix_stress_codex_s95b.out` checks `26099`
+rows: exact `[0,15]` anchored primitive bank (`22697`), one-tail collars
+(`243`), two-tail collars (`1224`), two-block rows (`1575`), and random wide
+rows up to `W=45` (`360`).  It found `0` prefix violations and `0` total
+dense-mass violations.  Largest nonconsecutive ratio remains the `k=13`
+near-consecutive row `(0,2,3,4,5,6,7,8,9,10,11,12,14)` at `2851/3005`.
+
+Second post-pull integration: KPS/codex S95 spectrum work landed HYP-2870 and
+the consecutive-channel atlas while this stress pass was open.  HYP-2870's
+split `finite low covariance = complement-even structured packet +
+complement-odd L2 fluctuation` is the Fourier-side analogue of HYP-2866's
+`dense net = low-q prefix ledger + high-q Farey tail`.  Both reinforce the
+same proof discipline: keep aggregate low carriers until the cancellation or
+majorization has acted, then route coherent structured packets to finite
+AP/Freiman atlases and incoherent tails to L2/Farey bounds.
