@@ -20,6 +20,7 @@
 
 import Mathlib.Tactic
 import Mathlib.MeasureTheory.Measure.Lebesgue.Basic
+import Mathlib.MeasureTheory.Function.Floor
 
 namespace LonelyRunner
 namespace DenseCovers
@@ -182,6 +183,67 @@ theorem volume_coverSet_inter_le_one (E : List ℤ) :
       ≤ volume (Set.Ico (0 : ℝ) 1) := measure_mono (Set.inter_subset_right)
     _ = 1 := by rw [Real.volume_Ico]; norm_num
 
+/-! ## Measurability of the cover event
+
+`coverSet E` is Borel measurable: the phase map `x ↦ frac(e x)` is measurable, so
+each single-sector-hit set `{x : frac(e x) ∈ [j/7,(j+1)/7)}` is measurable, and
+`coverSet` is a finite intersection (`j = 1..6`) of finite unions (`e ∈ E`) of
+these.  This is the `MeasurableSet (P0set s)` side the Bonferroni handoff needs. -/
+
+/-- The phase map `x ↦ frac(e x)` is measurable. -/
+theorem measurable_phase (e : ℤ) : Measurable (fun x : ℝ => Int.fract ((e : ℝ) * x)) :=
+  measurable_fract.comp (measurable_const.mul measurable_id)
+
+/-- A single "sector `j` hit by speed `e`" set is measurable. -/
+theorem measurableSet_sector_hit (e : ℤ) (j : ℕ) :
+    MeasurableSet {x : ℝ | (j : ℝ) / 7 ≤ Int.fract ((e : ℝ) * x) ∧
+      Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7} := by
+  have : {x : ℝ | (j : ℝ) / 7 ≤ Int.fract ((e : ℝ) * x) ∧
+      Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7}
+      = (fun x => Int.fract ((e : ℝ) * x)) ⁻¹' Set.Ico ((j : ℝ) / 7) (((j : ℝ) + 1) / 7) := by
+    ext x; simp [Set.mem_Ico]
+  rw [this]
+  exact measurable_phase e measurableSet_Ico
+
+/-- **`coverSet E` is measurable.**  (The `MeasurableSet (P0set s)` input to
+`LRCEventMeasureBridge.shape_bonferroni_handoff`.) -/
+theorem measurableSet_coverSet (E : List ℤ) : MeasurableSet (coverSet E) := by
+  have hrw : coverSet E = ⋂ j : ℕ, {x : ℝ | 1 ≤ j → j ≤ 6 →
+      ∃ e ∈ E, (j : ℝ) / 7 ≤ Int.fract ((e : ℝ) * x) ∧
+        Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7} := by
+    ext x; simp only [coverSet, Set.mem_iInter, Set.mem_setOf_eq]
+  rw [hrw]
+  refine MeasurableSet.iInter (fun j => ?_)
+  by_cases hj : 1 ≤ j ∧ j ≤ 6
+  · -- the j-th set equals the finite union over e ∈ E
+    have hset : {x : ℝ | 1 ≤ j → j ≤ 6 →
+        ∃ e ∈ E, (j : ℝ) / 7 ≤ Int.fract ((e : ℝ) * x) ∧
+          Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7}
+        = ⋃ e ∈ E, {x : ℝ | (j : ℝ) / 7 ≤ Int.fract ((e : ℝ) * x) ∧
+          Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7} := by
+      ext x
+      simp only [Set.mem_setOf_eq, Set.mem_iUnion, exists_prop]
+      constructor
+      · intro h; exact h hj.1 hj.2
+      · intro h _ _; exact h
+    rw [hset]
+    have hconv : (⋃ e ∈ E, {x : ℝ | (j : ℝ) / 7 ≤ Int.fract ((e : ℝ) * x) ∧
+          Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7})
+        = ⋃ e ∈ (E.toFinset : Set ℤ), {x : ℝ | (j : ℝ) / 7 ≤ Int.fract ((e : ℝ) * x) ∧
+          Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7} := by
+      ext x; simp [List.mem_toFinset]
+    rw [hconv]
+    exact (E.toFinset.finite_toSet).measurableSet_biUnion
+      (fun e _ => measurableSet_sector_hit e j)
+  · -- vacuous: the set is univ
+    have huniv : {x : ℝ | 1 ≤ j → j ≤ 6 →
+        ∃ e ∈ E, (j : ℝ) / 7 ≤ Int.fract ((e : ℝ) * x) ∧
+          Int.fract ((e : ℝ) * x) < ((j : ℝ) + 1) / 7} = Set.univ := by
+      ext x
+      simp only [Set.mem_setOf_eq, Set.mem_univ, iff_true]
+      intro h1 h6; exact absurd ⟨h1, h6⟩ hj
+    rw [huniv]; exact MeasurableSet.univ
+
 /-! ## The slow-time PROBABILITY space and `D ≤ p0` in `μ`-form
 
 The proper probability measure for the slow time is `volume` restricted to one
@@ -211,6 +273,7 @@ theorem slowμ_denseSet_le_coverSet (E : List ℤ) (hE : (0 : ℤ) ∈ E) :
 #print axioms inner_sector_covered
 #print axioms dense_covers_all_inner
 #print axioms denseSet_subset_coverSet
+#print axioms measurableSet_coverSet
 #print axioms volume_denseSet_le_coverSet
 #print axioms slowμ_denseSet_le_coverSet
 
