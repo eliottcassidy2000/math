@@ -1,6 +1,11 @@
 /-
   TournamentH7.LRCMomentDual  (mac-mini-2026-06-22-S29)
 
+  ⚠️ WIP — NOT YET BUILD-VERIFIED (written, API fixes applied after a first build pass,
+  but the verifying build was interrupted by a full disk).  Standalone module (not yet
+  root-imported), so it does not affect the team build.  Needs one `lake build
+  TournamentH7.LRCMomentDual` + any residual API fixes, then `#print axioms p0_le_Ly`.
+
   The THM-534 moment-LP dual reduction for hp0cap, formalized:
       p0(E) = slowμ(coverSet E)  ≤  L_y(E) := ∫ g(missCount) dslowμ
   whenever the dual polynomial `g` is FEASIBLE: `g(t) ≥ 1[t=0]` for `t ∈ {0,…,6}`.
