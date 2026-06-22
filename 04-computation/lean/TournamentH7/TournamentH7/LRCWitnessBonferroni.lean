@@ -131,6 +131,52 @@ theorem witness_floor_from_bonferroni_nodes
   -- chain
   linarith
 
+/-! ## ★ The UNIFICATION with the p0 wide bound (the rigorous closure)
+
+The witness floor is IMPLIED by the team's already-closed p0 wide bound, with NO
+new analytic lemma.  Writing the 1/7-dense measure `D = 1 - nu`, the elementary
+set inclusion `{1/7-dense} ⊆ {all 6 inner sectors hit}` gives `D(E) ≤ p0(E)`
+(`p0 = measS7`, the repo cover atom).  Hence by Bonferroni
+
+    witnessG2 ≥ nu + measGP - 1 = measGP - D ≥ measGP - p0,
+
+and with `p0 ≤ cap_k - δ_k` (the wide bound, `δ_k > 0` the team's margin) and
+`cap_k ≤ measGP` (Lemma B + the duality `cap_k = min meas(G_P)`), we get
+`witnessG2 ≥ δ_k > 0`.  This carries `p0Shape` as a parameter; `hDp0` is the
+elementary inclusion, `hp0cap` the team's wide bound, `hmeasGP` Lemma B. -/
+
+/-- **The witness floor via the p0 wide bound (UNIFICATION).**  Given Bonferroni,
+the elementary `D ≤ p0` inclusion, the wide bound `p0 ≤ cap - δ`, and the cap floor
+`cap ≤ measGP`, the witness density is at least the wide-bound margin `δ > 0`. -/
+theorem witness_floor_from_p0_wide_bound
+    (nuShape measGP p0Shape : Shape → ℝ) (cap delta : ℝ)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, (1 - nuShape s) ≤ p0Shape s)          -- D = 1 - nu ≤ p0
+    (hp0cap : ∀ s, p0Shape s ≤ cap - delta)             -- team's wide bound, margin δ
+    (hmeasGP : ∀ s, cap ≤ measGP s)                     -- Lemma B + duality
+    (s : Shape) :
+    delta ≤ witnessG2 s := by
+  have h1 : nuShape s + measGP s - 1 ≤ witnessG2 s := hbonf s
+  have h2 : (1 - nuShape s) ≤ p0Shape s := hDp0 s
+  have h3 : p0Shape s ≤ cap - delta := hp0cap s
+  have h4 : cap ≤ measGP s := hmeasGP s
+  -- witnessG2 ≥ nu+measGP-1 = measGP-(1-nu) ≥ measGP-p0 ≥ cap-(cap-δ) = δ
+  linarith
+
+/-- The same conclusion as strict positivity of the witness density, when the
+wide-bound margin `delta` is positive. -/
+theorem witnessG2_pos_from_p0_wide_bound
+    (nuShape measGP p0Shape : Shape → ℝ) (cap delta : ℝ) (hδ : 0 < delta)
+    (hbonf : ∀ s, nuShape s + measGP s - 1 ≤ witnessG2 s)
+    (hDp0  : ∀ s, (1 - nuShape s) ≤ p0Shape s)
+    (hp0cap : ∀ s, p0Shape s ≤ cap - delta)
+    (hmeasGP : ∀ s, cap ≤ measGP s)
+    (s : Shape) :
+    0 < witnessG2 s :=
+  lt_of_lt_of_le hδ
+    (witness_floor_from_p0_wide_bound nuShape measGP p0Shape cap delta
+      hbonf hDp0 hp0cap hmeasGP s)
+
 /-! ## The `k <= 7` pigeonhole leg (no Lemma A needed)
 
 For `k <= 7` the cluster has `<= 7` phases, so `maxgap >= 1/k >= 1/7` for EVERY
@@ -164,6 +210,8 @@ theorem witness_floor_pigeonhole_leg
 #print axioms bonferroni_floor_ge_mP
 #print axioms floor_ge_mP_of_mem
 #print axioms witness_floor_from_bonferroni_nodes
+#print axioms witness_floor_from_p0_wide_bound
+#print axioms witnessG2_pos_from_p0_wide_bound
 #print axioms nuConsec_eq_one_of_le_seven
 #print axioms witness_floor_pigeonhole_leg
 

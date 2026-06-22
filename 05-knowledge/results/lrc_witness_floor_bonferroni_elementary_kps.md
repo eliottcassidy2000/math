@@ -1,15 +1,57 @@
-# The ELEMENTARY Bonferroni closure of the LRC(14) witness floor
+# The ELEMENTARY closure of the LRC(14) witness floor — and its UNIFICATION with the p0 wide bound
 
 **kind-pasteur-2026-06-22-S30** · feeds THM-527 (Part G crux), the `hfloor` Lean node, OPEN-Q-108.
 
 ## Summary
 
 The remaining analytic crux of the LRC(14) witness route — a **uniform positive
-floor** `rho*_glob(P,E) > 0` for the global 1/7-witness density — is reduced to an
-**elementary two-line Bonferroni bound plus one scale-invariant three-distance
-lemma**. This *dissolves the compactness obstruction* that THM-527 Part G called
-"the genuine remaining crux": no compact shape space, no continuity/closure
-argument, no `Vmax ≤ V0` finite check is needed for positivity.
+floor** `rho*_glob(P,E) > 0` for the global 1/7-witness density — is closed by an
+**elementary Bonferroni bound**, and is moreover **IMPLIED by the team's already-closed
+p0 wide bound**. This *dissolves the compactness obstruction* that THM-527 Part G
+called "the genuine remaining crux": no compact shape space, no continuity/closure
+argument, no `Vmax ≤ V0` finite check, and (via the unification) **no new analytic
+lemma** is needed for positivity.
+
+## ★ THE UNIFICATION (headline): the witness floor follows from the p0 wide bound
+
+`GOOD(E)` is the complement of the 1/7-dense set, so `meas(GOOD) = 1 − D(E)`,
+`D(E) = meas{cluster phases 1/7-dense}`. Bonferroni gives
+`rho*_glob = meas(GOOD ∩ G_P) ≥ meas(GOOD) + meas(G_P) − 1 = meas(G_P) − D(E)`.
+
+**Elementary lemma (PROVED, not just a.e.):** `D(E) ≤ p0(E)`, where
+`p0(E) = meas{x : all 6 inner sectors [j/7,(j+1)/7), j=1..6, are hit by some frac(e x)}`
+is *the repo's own cover atom* `measS7`. Proof: if inner sector `S_j` holds no phase,
+the adjacent gap is `≥ 1/7`; if it is `= 1/7` exactly, a phase sits at `j/7 ∈ S_j`
+(half-open sector), contradiction. So `1/7-dense ⟹ all inner sectors hit`, i.e.
+`{dense} ⊆ {S7-cover}` as sets. Hence
+
+```
+   rho*_glob(P,E)  ≥  meas(G_P) − D(E)  ≥  meas(G_P) − p0(E).                 (UNIF)
+```
+
+Now the **DUALITY** (verified exactly, `lrc_capGP_exact_kps.py`):
+`cap_k = min_{|P|=13−k} meas(G_P)` equals the p0 `Q`-plateau `capRat(k)` for every
+`k = 8..13`. The team's **wide bound** `p0(E) ≤ cap_k` (closed exhaustively: Leg-C
+HYP-2817, gK8, single-far THM-563) then gives, with `meas(G_P) ≥ cap_k`,
+
+```
+   rho*_glob(P,E)  ≥  meas(G_P) − p0(E)  ≥  cap_k − max_E p0(E)  =  δ_k  >  0,
+```
+
+where `δ_k = cap_k − max p0` is **exactly the team's wide-bound margin** (≈ 0.05–0.16).
+**So the 1/7-witness route and the p0 sector route UNIFY:** `rho*_glob > 0` is a
+*corollary* of `p0 ≤ cap`, via the elementary `D ≤ p0`. The duality `cap_k = min meas(G_P)`
+is the linchpin — it is *why* `p0(E) ≤ cap_k = min meas(G_P) ≤ meas(G_P)`. Closing the
+p0 wide bound closes the witness floor too, with no extra analytic content.
+
+VERIFIED (`lrc_witness_p0_unification_kps.py`): `D ≤ p0` and `rho*_glob ≥ meas(G_P)−p0`
+on all test `(P,E)` (worst margin `+0.054` at k=8 worst-cap `P=(1,5,7,8,9)`).
+
+## The Bonferroni floor (sharper, alternative — needs Lemma A)
+
+The Bonferroni bound also yields a *larger* explicit floor via the pure witness
+measure `ν(E) = meas(GOOD(E))` (no small part), at the cost of one three-distance
+lemma. This route is recorded below; the UNIFICATION above is the rigorous closure.
 
 ## Setup (the corrected global-witness object)
 

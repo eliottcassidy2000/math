@@ -1,0 +1,60 @@
+==============================================================================
+UNIFICATION CHECK: D<=p0, and rho*_glob >= meas(G_P) - p0(E)
+==============================================================================
+
+  P=[1, 2, 3] E=[0, 1, 2, 3, 4, 5, 6, 7] (k=8)
+    D=0.05986  p0=0.32721  [D<=p0: True]
+    nu=0.94014  meas(G_P)=0.69048  rho*_glob=0.63061
+    Bonferroni nu+gp-1 = +0.63061   [rho>=Bonf: True]
+    unification meas(G_P)-p0 = +0.36327   [rho>=gp-p0: True]
+
+  P=[1, 5, 7, 8, 9] E=[0, 1, 2, 3, 4, 5, 6, 7] (k=8)
+    D=0.05986  p0=0.32721  [D<=p0: True]
+    nu=0.94014  meas(G_P)=0.38146  rho*_glob=0.38146
+    Bonferroni nu+gp-1 = +0.32160   [rho>=Bonf: True]
+    unification meas(G_P)-p0 = +0.05425   [rho>=gp-p0: True]
+
+  P=[1, 2] E=[0, 1, 2, 3, 4, 5, 6, 7, 8] (k=9)
+    D=0.15986  p0=0.41616  [D<=p0: True]
+    nu=0.84014  meas(G_P)=0.78571  rho*_glob=0.62585
+    Bonferroni nu+gp-1 = +0.62585   [rho>=Bonf: True]
+    unification meas(G_P)-p0 = +0.36956   [rho>=gp-p0: True]
+
+  P=[1, 11, 12, 13] E=[0, 1, 2, 3, 4, 5, 6, 7, 8] (k=9)
+    D=0.15986  p0=0.41616  [D<=p0: True]
+    nu=0.84014  meas(G_P)=0.49426  rho*_glob=0.34650
+    Bonferroni nu+gp-1 = +0.33439   [rho>=Bonf: True]
+    unification meas(G_P)-p0 = +0.07810   [rho>=gp-p0: True]
+
+  P=[1, 2, 3] E=[0, 2, 3, 4, 5, 6, 7, 9] (k=8)
+    D=0.02812  p0=0.12370  [D<=p0: True]
+    nu=0.97188  meas(G_P)=0.69048  rho*_glob=0.66236
+    Bonferroni nu+gp-1 = +0.66236   [rho>=Bonf: True]
+    unification meas(G_P)-p0 = +0.56678   [rho>=gp-p0: True]
+
+  P=[1, 2, 3, 4] E=[0, 1, 2, 3, 4, 5, 6, 9] (k=8)
+    D=0.00000  p0=0.18810  [D<=p0: True]
+    nu=1.00000  meas(G_P)=0.61905  rho*_glob=0.61905
+    Bonferroni nu+gp-1 = +0.61905   [rho>=Bonf: True]
+    unification meas(G_P)-p0 = +0.43095   [rho>=gp-p0: True]
+
+  P=[1, 2] E=[0, 1, 2, 4, 5, 6, 7, 11, 13] (k=9)
+    D=0.01946  p0=0.11494  [D<=p0: True]
+    nu=0.98054  meas(G_P)=0.78571  rho*_glob=0.76625
+    Bonferroni nu+gp-1 = +0.76625   [rho>=Bonf: True]
+    unification meas(G_P)-p0 = +0.67077   [rho>=gp-p0: True]
+
+  P=[2, 3, 5] E=[0, 1, 2, 3, 4, 5, 6, 12] (k=8)
+    D=0.00000  p0=0.20238  [D<=p0: True]
+    nu=1.00000  meas(G_P)=0.64762  rho*_glob=0.64762
+    Bonferroni nu+gp-1 = +0.64762   [rho>=Bonf: True]
+    unification meas(G_P)-p0 = +0.44524   [rho>=gp-p0: True]
+
+==============================================================================
+  D<=p0 on ALL tests, and rho*_glob >= Bonferroni floor: True
+  => 1/7-dense ==> all-inner-sectors-hit (D<=p0); the witness floor
+     rho*_glob >= meas(G_P) - p0(E) is IMPLIED by the p0 wide bound.
+     The 1/7-witness route and the p0 sector route UNIFY.
+==============================================================================
+
+DONE.
