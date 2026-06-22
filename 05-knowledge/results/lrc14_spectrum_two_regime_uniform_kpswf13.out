@@ -38,3 +38,77 @@
               5     40      0.004372    1.010882    0.021862
               8     64     -0.000069    0.999829    0.000556
              13    104      0.010097    1.025044    0.131257
+             20    160      0.000037    1.000125    0.000733
+
+   P=[1, 3, 4, 5], base cluster consec_10=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+       dilate d   span          SPEC     R-prime    |SPEC|*d
+              1      9     -0.150118    0.439430    0.150118
+              2     18     -0.053918    0.798531    0.107836
+              3     27     -0.033418    0.875120    0.100255
+              5     45     -0.047616    0.822259    0.238082
+              8     72     -0.001100    0.995888    0.008801
+             13    117      0.014642    1.054645    0.190343
+             20    180     -0.002948    0.989077    0.058952
+
+   P=[1, 3, 4, 5], base cluster consec_9=[0, 1, 2, 3, 4, 5, 6, 7, 8]:
+       dilate d   span          SPEC     R-prime    |SPEC|*d
+              1      8     -0.146808    0.534640    0.146808
+              2     16     -0.050052    0.841303    0.100103
+              3     24     -0.031401    0.900408    0.094202
+              5     40     -0.037916    0.879892    0.189581
+              8     64     -0.000311    0.999014    0.002487
+             13    104      0.015290    1.048509    0.198772
+             20    160     -0.005059    0.984018    0.101187
+
+   P=[2, 3, 5], base cluster consec_10=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+       dilate d   span          SPEC     R-prime    |SPEC|*d
+              1      9     -0.104583    0.674105    0.104583
+              2     18     -0.055448    0.827174    0.110895
+              3     27     -0.052125    0.837567    0.156376
+              5     45     -0.057518    0.820691    0.287592
+              8     72      0.011772    1.036684    0.094176
+             13    117      0.010473    1.032641    0.136150
+             20    180     -0.001260    0.996036    0.025191
+
+   P=[2, 3, 5], base cluster consec_9=[0, 1, 2, 3, 4, 5, 6, 7, 8]:
+       dilate d   span          SPEC     R-prime    |SPEC|*d
+              1      8     -0.110723    0.707065    0.110723
+              2     16     -0.050132    0.867414    0.100263
+              3     24     -0.046462    0.877084    0.139386
+              5     40     -0.040810    0.892107    0.204051
+              8     64      0.009455    1.025008    0.075639
+             13    104      0.010849    1.028766    0.141040
+             20    160     -0.001186    0.996907    0.023716
+
+   OBSERVATION: |SPEC| -> 0 as d grows (R' -> 1).  If |SPEC|*d is bounded, the decay is
+   >= 1/d, i.e. eta(V*) <= C_wide / (V*/span0); the wide side gives R' >= 1 - C_wide*span0/V*.
+
+================================================================================================
+CHAT-SIDE UNIFORM CONSTANT C_c: sup over P subset {1..13} of [E_c(H)*H] and #jumps(1_{G_P}).
+    [the small part P lives in {1..13} (LRC<=13 routing) => FINITELY many 1_{G_P}.]
+================================================================================================
+   scanned 2379 subsets P of {1..13} (|P|=1..5).
+   sup #jumps(1_{G_P}) = 64  at P=(10, 11, 12, 13)  (FINITE => Vc uniform)
+   sup_P E_c(14)*14 = 2.70051  at P=(1, 6, 8, 9, 10)
+   sup_P E_c(28)*28 = 3.73826  at P=(10, 11, 12, 13)
+   sup_P E_c(56)*56 = 3.27980  at P=(8, 10, 11, 12, 13)
+   sup_P E_c(112)*112 = 3.58160  at P=(10, 11, 12, 13)
+
+   => C_c := sup_P sup_H E_c(H)*H ~ 3.73826 (BOUNDED, uniform over P): chat tail energy <= C_c/H.
+      lcm(1..13) = 360360; breakpoints of 1_{G_P} have denom | 14*lcm(P), FINITE.
+
+================================================================================================
+SUMMARY -- THE UNIFORM CONSTANTS
+================================================================================================
+  c_core (bounded atlas, EXACT)  = 416640/779291 = 0.534640  >> m_P (=14249/252252=0.056487)
+  C_c   (chat tail-energy rate)  ~ 3.73826   (E_c(H) <= C_c/H, UNIFORM over P subset {1..13})
+  WIDE side: SPEC -> 0 under dilation => R' -> 1 (eta(V*) -> 0); so wide R' >= 1 - eta(V*).
+  H-FREE cap: Var(1_S) <= 1/4 => |sum_high| <= 1/4 for ALL (P,E), ALL H (trivially uniform).
+
+  THE UNIFORM c:  R' >= c := min( c_core , 1 - eta(V*) ).
+    - bounded core: c_core is an EXACT rational min over a finite atlas (the consec/binding floor).
+    - wide: eta(V*) is the cross-scale decay (SPEC->0 at rate ~span0/V*), -> 0 as V* grows.
+    The CS-tail C/sqrt(H) is uniform ONLY on the finite bounded atlas (sup of finitely many C_g);
+    the wide regime is NOT covered by a single H-rate (E_g(H)*H unbounded) and instead uses
+    scale-separation R'->1 (mac-mini S32).  This is the honest, correct uniform statement.
+DONE.
