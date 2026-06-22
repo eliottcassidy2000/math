@@ -20185,7 +20185,7 @@ Main findings:
   `cover_84` has `rate(7*13)=1/36` while `rate(7)*rate(13)=0`.  This defect is
   the LRC analogue of a labelled strong-component/ear atom.
 
-Created HYP-2885 and reflection
+Created HYP-2886 and reflection
 `07-reflections/lrc14-exact-period-packet-atlas-codex-s102.md`.  Proof target:
 delete denominators killed by divisibility, lift the HYP-2883/HYP-2884 local
 signed-current balance on exact-period residue fibers, retain CRT defects as
@@ -20202,3 +20202,11 @@ orients toward greater explained variance; fingerprint is transitive
 Hamiltonian path).  Challenged assumption: successful sampled finite bases
 should become a universal certificate basis; the corrected upgrade is an
 adaptive exact-period atlas plus a proof that the atlas cannot be covered.
+
+Follow-up after pulling kind-pasteur-S31j: the incoming additive-energy
+extremality result already claimed HYP-2885, so the exact-period packet atlas
+was renumbered to HYP-2886.  The two nodes are complementary rather than
+conflicting: HYP-2885 attacks the cap/extremality branch through Fejer and
+additive energy, while HYP-2886 attacks the witness/finite-denominator branch
+by retaining exact-period packets, mod-7 affine data, and CRT defects before
+scalarization.

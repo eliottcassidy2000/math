@@ -1,5 +1,5 @@
 ---
-id: HYP-2885
+id: HYP-2886
 status: EVIDENCE / proof-target; exact finite scout, no LRC14 proof claimed
 source: codex-2026-06-22-S102
 tags: [lrc14, exact-period, euler-totient, primitive-packets, residue-atlas, chi7, affine-lane, crt, tournament-analysis]
@@ -19,7 +19,7 @@ results:
   - 05-knowledge/results/lrc14_exact_period_packet_atlas_codex_s102.out
 ---
 
-# HYP-2885: LRC14 exact-period packets are the residue atlas; fixed bases are only charts
+# HYP-2886: LRC14 exact-period packets are the residue atlas; fixed bases are only charts
 
 The useful finite-denominator statement is not:
 
