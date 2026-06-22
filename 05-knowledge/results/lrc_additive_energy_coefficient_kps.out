@@ -1,0 +1,12 @@
+Gamma_k = additive-energy coefficient in p0 (sign => direction of extremality):
+  k=8: Gamma_k = +8.910030e-04   (>0 => p0 increases with A(E) => INTERVAL maximizes)   p0_decorr=0.05770
+  k=9: Gamma_k = +8.910030e-04   (>0 => p0 increases with A(E) => INTERVAL maximizes)   p0_decorr=0.10491
+  k=10: Gamma_k = +7.772248e-04   (>0 => p0 increases with A(E) => INTERVAL maximizes)   p0_decorr=0.16310
+  k=11: Gamma_k = +6.140907e-04   (>0 => p0 increases with A(E) => INTERVAL maximizes)   p0_decorr=0.22845
+  k=12: Gamma_k = +4.457325e-04   (>0 => p0 increases with A(E) => INTERVAL maximizes)   p0_decorr=0.29731
+
+Validation: actual p0(E)-p0_decorr vs predicted (additive-energy * Gamma_k):
+  E=[0, 1, 2, 3, 4, 5, 6, 7, 8]: A*=  336  actual dev=+0.3112  pred(lead)=+0.2994
+  E=[0, 1, 2, 3, 4, 5, 6, 7, 9]: A*=  308  actual dev=+0.2968  pred(lead)=+0.2744
+  E=[0, 2, 4, 6, 8, 10, 12, 14, 16]: A*=  336  actual dev=+0.3112  pred(lead)=+0.2994
+  E=[0, 1, 3, 7, 12, 20, 30, 44, 60]: A*=    4  actual dev=-0.0349  pred(lead)=+0.0036
