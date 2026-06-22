@@ -1,0 +1,12 @@
+info: TournamentH7/LRCCoverBound.lean:136:0: 'LonelyRunner.DenseCovers.coverSet_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCCoverBound.lean:137:0: 'LonelyRunner.DenseCovers.six_le_card_of_coverSet_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCCoverBound.lean:138:0: 'LonelyRunner.DenseCovers.slowμ_coverSet_eq_zero_of_card_lt_six' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: TournamentH7/LRCCoverBound.lean:139:0: 'LonelyRunner.DenseCovers.slowμ_coverSet_lt_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3107/3107] Replayed TournamentH7.LRCP0Concrete
+info: TournamentH7/LRCP0Concrete.lean:77:0: 'LonelyRunner.DenseCovers.p0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCP0Concrete.lean:78:0: 'LonelyRunner.DenseCovers.p0_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCP0Concrete.lean:79:0: 'LonelyRunner.DenseCovers.p0_eq_zero_of_card_lt_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: TournamentH7/LRCP0Concrete.lean:80:0: 'LonelyRunner.DenseCovers.wideBoundConcrete_of_decorrelation' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3107 jobs).
