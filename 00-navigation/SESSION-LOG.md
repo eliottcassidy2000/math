@@ -20265,3 +20265,30 @@ conflicting: HYP-2885 attacks the cap/extremality branch through Fejer and
 additive energy, while HYP-2886 attacks the witness/finite-denominator branch
 by retaining exact-period packets, mod-7 affine data, and CRT defects before
 scalarization.
+
+## codex-2026-06-22-S103 -- additive-energy majorization correction
+
+User: attack additive energy majorization creatively.  Pulled current main
+after stashing only the generated `agents/.session-state.json` change.
+
+Added `04-computation/lrc_additive_energy_majorization_codex_s103.py` and
+stored `05-knowledge/results/lrc_additive_energy_majorization_codex_s103.out`.
+The script tests exact primitive banks:
+
+- k=8: `1716` rows, `E=(0 plus 7 from 1..13)`;
+- k=9: `1287` rows, `E=(0 plus 8 from 1..13)`;
+- k=10: `220` rows, `E=(0 plus 9 from 1..12)`.
+
+Main finding: HYP-2885's additive-energy carrier is right, but the monotone
+statement must be AP-facing.  In all three banks, AP difference-profile
+majorization has `0` failures, and AP has `0` p0 or L_y over-beaters.  But
+scalar additive energy has `3137` p0 monotonicity inversions, pairwise
+difference-profile majorization has `556752` p0 monotonicity violations, and
+one-step profile-up compression lowers p0 in `1177` cases.
+
+Created HYP-2887 and reflection
+`07-reflections/lrc-additive-energy-majorization-codex-s103.md`.  New theorem
+shape: prove interval difference-profile/Fejer majorization, then split the
+THM-534 `L_y` certificate into an AP-facing Fejer component plus a labelled
+signed sector/Fourier remainder controlled by finite AP/Freiman packets and
+HYP-2636/HYP-2884 cancellation.  No LRC14 proof claimed.

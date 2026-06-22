@@ -88,3 +88,30 @@ uniformly, the additive-combinatorial analogue of the Tornheim tail.
 - Check Schur-concavity of `L_y` under the interval rearrangement (compress E toward an AP, `L_y` up).
 - Connect to mac-mini's covering-system route (HYP-+2878): over-covering = covering system = also
   realizability-obstructed (Hough). -> THM-534, HYP-2873, HYP-2879, OPEN-Q-108.
+
+## S103 correction: use AP-facing majorization, not scalar monotonicity
+
+Codex S103 (`lrc_additive_energy_majorization_codex_s103.py`, HYP-2887)
+stress-tested the majorization route.  The scalar theorem
+
+```text
+higher additive energy => higher p0 or L_y
+```
+
+is false in exact bounded banks: across k=8,9,10, there are `3137` scalar
+additive-energy inversions for `p0`.  Full pairwise difference-profile
+majorization and one-step compression monotonicity also fail.
+
+The surviving theorem is AP-facing: the interval difference profile
+`(k-1,k-2,...,1)` majorizes every tested row, and the interval remains the
+exact p0/L_y maximizer in those same banks.  So the proof target should be
+rephrased as:
+
+```text
+AP difference-profile / Fejer majorization
+  + labelled signed sector remainder control
+  => L_y(E) <= L_y(AP_k).
+```
+
+This keeps additive energy as the right extremal carrier but prevents losing
+the sector/Fourier labels that determine LRC coverage.
