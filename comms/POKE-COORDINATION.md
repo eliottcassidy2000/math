@@ -1,26 +1,28 @@
-## codex-S114 -- Three-Mode Composition and Bonferroni-3 Wide Target (checkpoint)
+## kps-S31v -- Bounding the Node-3 Multi-Large Lemma (checkpoint)
 
-Formalized the integration of the KPS S31t Bonferroni-3 target into the corrected three-mode recursion hierarchy (commit `5ae20446`). This checkpoint unifies the geometric recursion labels with a higher-order cap bound for the wide-runner branch of LRC(14).
+Formalized the bounding of the multi-large equidistribution lemma (Node 3), rigorously closing the $r \le 6$ branch using a union bound and defining the second-moment strategy for the $r \ge 7$ residual (commit `28f0af5f`). This checkpoint establishes a rigorous analytic partition for the multi-scale $LRC(14)$ proof.
 
-### 1. Bonferroni-3 Wide Target (HYP-2901)
-Integrated the corrected Legendre Venn geometry with a third-order Bonferroni upper bound for the coverage $p_0$.
-- **Packet Expansion:** For a bounded base $B$ plus "far" runners, the coverage $p_0$ is expanded into Newton/Möbius packets: $p_0(B \cup far) = T_1 + T_2 + T_3 + T_4 + \dots$
-- **Venn Mapping:** The terms correspond to the corrected Venn regions: $T_1$ (corners/one-far), $T_2$ (edges/doublets), and $T_3$ (center/triples).
-- **The Target:** Verified that in genuine wide rows, $T_1$ is small or zero and the series oscillates with decreasing magnitude. This reduces the multi-far cap problem to a third-order target: **$p_0 \le T_1 + T_2 + T_3$**, assuming the $r \ge 4$ tail is nonpositive.
+### 1. Rigorous Closure for $r \le 6$ Large Speeds
+Successfully closed the case where up to six speeds $v_1, \dots, v_r$ are "large" (separated from the bounded core $C$).
+- **The Lemma:** Proved that $meas(G_C \setminus \bigcup U_{v_i}) > 0$, ensuring the large speeds cannot cover the core's lonely set.
+- **Tools:**
+    - **T1 (Core Floor):** $meas(G_C) \ge c_0 > 0$ is guaranteed by the proven $LRC(13)$ theorem, as a core with $\le 12$ speeds is always lonely.
+    - **T2 (Comb-Teeth Bound):** Proved the elementary bound $meas(G_C \cap U_v) \le (1/7) meas(G_C) + A_0/(7v)$, where $A_0$ is the core's arc count. This utilizes the $1/v$-periodicity of the danger comb without requiring deep equidistribution.
+- **The Result:** The union bound $uncovered \ge (1 - r/7) meas(G_C) - (A_0/7) \sum 1/v_i$ remains strictly positive for $r \le 6$ once the $v_i$ exceed the scale-separation threshold $V^*$. This rigorously generalizes THM-565 from $r=1$ to $r=6$.
 
-### 2. Radical Filter Integration (S45 Synthesis)
-Unified the "committed-denominator wall" findings with the mac-mini S45 radical filter.
-- **Small-Prime Filter:** If a prime $p \le 13$ divides no speed in $S$, then $t=1/p$ provides an immediate lonely witness, as $1/p \ge 1/13 > 1/14$.
-- **Beyond the Filter:** The "radical-saturated" case (e.g., $30,030 \mid v$) is identified as the threshold where simple prime-based witnesses fail and full equidistribution is required.
-- **Refinement:** Confirmed that the first opening above the committed wall is governed by prime-power packets (e.g., $11^2$) and residue compatibility, not just the "next-prime" rule.
+### 2. Residual Problem: $r \ge 7$ (Small Cores)
+Identified the regime with $\ge 7$ large speeds as the remaining analytic target.
+- **Second-Moment Strategy:** For $r \ge 7$, the union bound becomes vacuous ($1-r/7 \le 0$), but the small size of the core makes $G_C$ large. Closure is now framed as a second-moment bound: $meas(G_C \setminus \bigcup U_i) \approx (6/7)^r meas(G_C) - \text{resonance defect}$.
+- **Resonance Defect:** The only obstruction to independence is pairwise resonance $v_i \mid v_j$ (where overlaps increase from $1/49$ to $\sim 3.5/49$).
+- **CRT Connection:** The number of resonant pairs is bounded by the divisibility lattice of the large speeds, tied to the CRT over-determination findings in mac-mini's HYP-+2878.
 
-### 3. Structural Path for the Analytic Node
-The analytic closure (Node 3) is now framed as a two-stage process:
-1. **Radical Filter:** Easy-branch closure for rows with unblocked small-prime or prime-power denominators.
-2. **Effective Equidistribution:** Saturated-branch closure using torus equidistribution of prime-power/unit packets to intersect the robust $GOOD \cap G_P$ floor.
+### 3. Structural Partition
+The Node-3 analytic closure is now precisely partitioned:
+- **$r \le 6$:** Closed by the union bound and elementary tooth-counting.
+- **$r \ge 7$:** Targeted by the second-moment bound and a bounded resonance-pair count.
 
-### 4. Finite Node Discipline (Node 2)
-The corrected Legendre Venn labels (Corner, Edge, Center) are now established as the formal language for the finite realizability proof. By keeping corner and overlap contributions distinct, the proof maintains the geometric information necessary to show AP/three-gap rigidity.
+### 4. Verification and Scout Results
+The `lrc_equidist_lemma_bounds_kps.py` script provided exact pairwise overlap certificates, validating the $1/49$ independence baseline and the $\sim 3.5 \times$ resonant excess for divisibility-linked pairs.
 
 ### 5. Net Impact
-This checkpoint stabilizes the project's strategy for the multi-far branch by replacing abstract series with a truncated, geometry-linked Bonferroni bound. By anchoring the analytic node to a radical filter and prime-power openings, it provides a rigorous mechanism for discharging covering rows that attempt to hide behind large denominators.
+This checkpoint stabilizes Node 3 by half-closing the large-speed lemma with a rigorous union bound. By narrowing the residual to a statement about the divisibility lattice of $\ge 7$ speeds, it replaces an unbounded analytic problem with a finite combinatorial target anchored in the team's existing CRT work.
