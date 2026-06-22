@@ -1,0 +1,55 @@
+==============================================================================
+A. PROVED NO-GO: covering sets have no uniform bounded denominator
+==============================================================================
+  B=14: m=lcm(1..B) has 6 digits; covering=True primitive=True; no D<=B by divisibility; first witness <=200: 17/41 margin=1/574
+  B=26: m=lcm(1..B) has 11 digits; covering=True primitive=True; no D<=B by divisibility; first witness <=200: 17/41 margin=1/574
+  B=41: m=lcm(1..B) has 18 digits; covering=True primitive=True; no D<=B by divisibility; first witness <=200: 22/53 margin=3/742
+  B=67: m=lcm(1..B) has 29 digits; covering=True primitive=True; no D<=B by divisibility; first witness <=200: 33/79 margin=5/1106
+  B=80: m=lcm(1..B) has 35 digits; covering=True primitive=True; no D<=B by divisibility; first witness <=200: 7/83 margin=1/1162
+
+==============================================================================
+B. WHY THE FALSE CONJECTURE LOOKED PLAUSIBLE
+==============================================================================
+  champion m=1                    : 17/41 margin=1/574
+  first D>41 tower row m=6        : 22/53 margin=3/742
+  closer q-floor row {1..12,182}  : 2/27 margin=1/378
+  drop-6 plus 84                  : 4/23 margin=5/322
+
+TOWER SCOUT: S_m={1..11,13,84m}
+  scanned m<= 5000, denominator search bound=100
+  base-safe candidate fractions <= 100: 40
+  failures within search bound: 0
+  max least denominator observed: 67
+  first row needing D>41: m=6, witness=22/53 margin=3/742
+  high-denominator histogram (D>=35): [(41, 4391), (53, 528), (55, 72), (65, 8), (67, 1)]
+  first D=41: m=1, witness=17/41 margin=1/574
+  first D=53: m=6, witness=22/53 margin=3/742
+  first D=55: m=53, witness=23/55 margin=1/770
+  first D=65: m=416, witness=27/65 margin=5/910
+  first D=67: m=1681, witness=28/67 margin=3/938
+
+AP-REPAIR SCOUT: ({1..13}\{drop}) union {14m}
+  covering primitive rows scanned: 3946
+  failures within D<=100: 0
+  max least denominator: drop=12, m=318, witness=23/55 margin=1/770
+  high-denominator histogram (D>=35): [(37, 9), (39, 1), (40, 6), (41, 73), (52, 2), (53, 8), (55, 2)]
+
+RANDOM OBLIGATION SCOUT
+  samples=300, max_speed=1000000, search D<=120
+  failures within search bound: 0
+  max least denominator: 5/32 margin=10/448
+  row: (1, 6224, 9240, 42935, 138109, 191225, 216245, 247503, 394023, 510194, 705078, 789319, 903032)
+  denominator histogram (D>=20): [(20, 5), (21, 5), (22, 11), (23, 30), (24, 2), (25, 11), (26, 2), (27, 2), (29, 4), (32, 1)]
+
+==============================================================================
+C. PROOF-CARRIER TOURNAMENT
+==============================================================================
+TOURNAMENT ANALYSIS
+  vertices: proof carriers, not runners
+  observable: (rules out false route, preserves LRC witness predicate, finite-check value, formalization readiness)
+  switch: lexicographically larger observable wins; ties use the displayed order
+  Hamiltonian path: covering_denominator_no_go > scaled_denominator_or_speed_bound > THM523_covering_reduction > THM524_binding_pair_switches > HYP2864_sheet_gcd_quotient > THM565_three_gap_floor > fixed_B_residue_atlas > raw_runner_vertices
+  score histogram: [0, 1, 2, 3, 4, 5, 6, 7]
+  directed 3-cycles: 0 (the chosen proof-carrier quotient is transitive)
+  SCCs: singleton; Hamiltonian-path count: 1
+  challenged assumption: covering-set residuals admit a fixed denominator cap

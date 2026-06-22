@@ -1,3 +1,27 @@
+## codex-2026-06-22-S93 -- bounded-denominator covering-atlas no-go
+User asked to synthesize the proposed bounded-denominator witness route with
+the current LRC14 proof work.  The route has a rigorous obstruction even inside
+the THM-523 covering hard core.
+
+- Added THM-566.  For every `B`, the primitive covering 13-set
+  `S_B={1,2,...,11,13,84*lcm(1,...,B)}` has no lonely witness `a/D` with
+  `D<=B`, because the last runner is divisible by every such `D` and sits at
+  the observer.  Thus a fixed denominator cap cannot close LRC14, even after
+  reducing to covering sets.
+- Added `04-computation/lrc14_covering_bounded_denominator_obstruction_codex_s93.py`
+  and stored `05-knowledge/results/lrc14_covering_bounded_denominator_obstruction_codex_s93.out`.
+  The script prints exact no-go certificates for `B=14,26,41,67,80`, verifies
+  the rows are primitive covering sets, and records why the false conjecture
+  looked plausible locally.
+- Local scout data: `{1..11,13,84}` has witness `17/41`, but the same tower
+  first exceeds `41` at `m=6` with `22/53`; for `m<=5000`, all rows have
+  `D<=67`.  AP repairs through `m<=500` have max `D=55`, and 300 random
+  covering-obligation rows up to speed `10^6` have max `D=32`.
+- Claimed HYP-2865 as the corrected synthesis: fixed finite denominator
+  atlases are impossible; the viable residue route must scale with the first
+  unblocked modulus / divisor-loading profile and integrate THM-524 binding
+  crossings, HYP-2864 sheet-gcd quotients, or THM-565 finite-ruler sampling.
+
 ## mac-mini-2026-06-22-S30 (cont.) -- Node 1 follow-up: CORRECTED the boundary-core over-claim; floor = quasi-independence R'
 Continued Node 1 with the user's Erdős–Turán / V≲b / route-to-LRC(<=13) inspo. Net (honest):
 - **DISCRETIZATION LEMMA stands** (rho_K >= rho* - arcCount/Vmax, elementary).
