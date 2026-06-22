@@ -9,6 +9,8 @@
 
     * ALREADY PROVED sorry-free elsewhere in this repo
         - the denominator sieve (`LonelyRunner.sieve_frac` etc.);
+        - the concrete `Mreach` compactness handoff
+          (`LRC14Concrete.lonely_of_Mreach_ge`);
         - the per-shape Delsarte / moment-LP bound `10*q0 <= L_yK8`
           (`FactorialAtom.delsarte_bound_k8`, the gK8 route's per-shape half);
         - the finite period-max / count / cap-clearance kernels
@@ -30,18 +32,22 @@
         - the top-level assembly into `M(S) >= 1/14` for every covering 13-set.
 
   DESIGN.  To keep the skeleton lightweight and buildable, the measure-theoretic
-  quantities (`p0`, the miss-distribution `q`, `rho*`, `M`) are treated
-  ABSTRACTLY: as real-valued functions / opaque data given to the theorems, with
-  the analytic content stated as hypotheses or `sorry`-backed lemmas.  This is the
-  honest boundary -- the finite combinatorial core is real Lean, the analysis is
-  flagged.  Replacing each `sorry` with a mathlib proof (or each opaque function
-  with its Lebesgue-measure definition) is the remaining formalization work.
+  quantities (`p0`, the miss-distribution `q`, `rho*`) are treated ABSTRACTLY:
+  as real-valued functions / opaque data given to the theorems, with the analytic
+  content stated as hypotheses or `sorry`-backed lemmas.  The max-min reach `M`
+  is now concrete: it is the supremum of the finite min-reach function over
+  `[0,1]`, imported from `LRCMreachConcrete`.  This is the honest boundary --
+  the finite combinatorial core and compactness handoff are real Lean, while the
+  remaining measure/equidistribution analysis is flagged.  Replacing each
+  remaining `sorry` with a mathlib proof (or each remaining opaque function with
+  its Lebesgue-measure definition) is the remaining formalization work.
 
   NONE of the `sorry`s below are claimed as theorems.  They mark open obligations.
 -/
 
 import Mathlib.Tactic
 import TournamentH7.LonelyRunner
+import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCFactorialAtom
 import TournamentH7.LRCPeriodmaxCertificate
 import TournamentH7.LRCGenuineWideCorrection
@@ -77,22 +83,19 @@ def LRC14Statement : Prop :=
 
 By the proven LRC reductions, LRC(14) reduces to: every **primitive covering
 13-set** `S` in case **S3** has `M(S) = max_τ min_{v∈S} ‖vτ‖ ≥ 1/14`.  We carry
-`M` and the covering structure abstractly. -/
+`M` concretely and the covering structure abstractly. -/
 
-/-- The "max-min reach" `M(S) = sup_t min_{v∈S} ‖v t‖`.  Carried abstractly as a
-real number attached to a speed family; in a full formalization this is a `sSup`
-over `t` of the `Lonely`-threshold.  (Opaque here.) -/
-opaque Mreach : (Fin 13 → ℤ) → ℝ
+/-- The concrete "max-min reach" `M(S) = sup_t min_{v∈S} ‖v t‖`, formalized as
+the supremum of the finite min-reach function over `[0,1]`. -/
+noncomputable abbrev Mreach : (Fin 13 → ℤ) → ℝ := LRC14Concrete.Mreach
 
-/-- **DAG node R0 (covering reduction, PROVED upstream THM-523/525/526).**  If the
-covering residual bound `M(S) ≥ 1/14` holds for the speed family, then there is a
-lonely time.  Stated as the reduction target; the upstream proof is the
-covering-set machinery (not re-formalized here).  OPEN obligation: port THM-523. -/
+/-- **DAG node R0.**  If the concrete max-min reach `M(S) ≥ 1/14` holds for the
+speed family, then there is a lonely time.  This is discharged by the compactness
+theorem in `LRCMreachConcrete`: the continuous min-reach function attains its
+supremum on `[0,1]`. -/
 theorem lonely_of_Mreach_ge (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
     (hM : (1 : ℝ) / 14 ≤ Mreach v) : ∃ t : ℝ, Lonely 14 v t := by
-  -- Mreach v = sup over t of (min over i of ‖v i t‖); hM says this sup ≥ 1/14,
-  -- and the sup is attained (compactness of the torus) -> a lonely witness.
-  sorry
+  exact LRC14Concrete.lonely_of_Mreach_ge v hv hM
 
 /-! ## 2. THM-527 -- density reformulations
 
@@ -205,6 +208,20 @@ abbrev rhoGlob : Shape → ℝ := witnessG2
 `m_P = 14249/252252`. -/
 def witnessMP : ℚ := 14249 / 252252
 
+/-- Exact lower bounds for the corrected global-witness density `rhoGlob=G2` in
+the k=8..13 branch, as reported by the KPS/Claude exact rational engines.  These
+are not definitions of the measure; they are the Lean-facing arithmetic ledger
+for the remaining witness-floor proof once the measure lower-bound theorem is
+formalized. -/
+def rhoGlobFloorRat : ℕ → ℚ
+  | 8 => 8152 / 24255
+  | 9 => 143 / 420
+  | 10 => 19 / 49
+  | 11 => 3193 / 8820
+  | 12 => 10358 / 24255
+  | 13 => 477 / 1078
+  | _ => 0
+
 /-- The proved floor is strictly positive, as rational arithmetic. -/
 theorem witnessMP_pos_rat : (0 : ℚ) < witnessMP := by
   native_decide
@@ -219,6 +236,13 @@ Part-A input. -/
 theorem witness_floor_positive (s : Shape)
     (hfloor : (witnessMP : ℝ) ≤ witnessG2 s) : 0 < witnessG2 s :=
   lt_of_lt_of_le witnessMP_pos_real hfloor
+
+/-- The exact k=8..13 `rhoGlob` floor ledger is uniformly stronger than the
+admissible `m_P` floor needed by the witness route. -/
+theorem witnessMP_le_rhoGlobFloorRat_real
+    (k : ℕ) (h8 : 8 ≤ k) (h13 : k ≤ 13) :
+    (witnessMP : ℝ) ≤ (rhoGlobFloorRat k : ℝ) := by
+  interval_cases k <;> norm_num [witnessMP, rhoGlobFloorRat]
 
 /-- Pure arithmetic core of the KPS HYP-2827 pigeonhole step: for any nonempty
 cluster of size `k<=7`, the pigeonhole lower bound `maxgap >= 1/k` is already at
@@ -248,6 +272,22 @@ theorem witness_floor_from_cluster_cases
   · exact hsmall v hv hle
   · have h8 : 8 ≤ clusterSize (shapeOf v) := by omega
     exact hlarge v hv h8 (hsize v hv)
+
+/-- No-sorry bridge from the exact `rhoGlobFloorRat` ledger to the abstract
+large-cluster floor obligation.  A future formal proof only has to show that
+each k=8..13 shape has `rhoGlobFloorRat k <= rhoGlob`; the comparison with the
+global `m_P` floor is already checked here by exact rational arithmetic. -/
+theorem witness_large_floor_from_rhoGlob_lower_bound
+    (hlower : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      8 ≤ clusterSize (shapeOf v) → clusterSize (shapeOf v) ≤ 13 →
+      (rhoGlobFloorRat (clusterSize (shapeOf v)) : ℝ) ≤ rhoGlob (shapeOf v)) :
+    ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      8 ≤ clusterSize (shapeOf v) → clusterSize (shapeOf v) ≤ 13 →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v) := by
+  intro v hv h8 h13
+  exact le_trans
+    (witnessMP_le_rhoGlobFloorRat_real (clusterSize (shapeOf v)) h8 h13)
+    (hlower v hv h8 h13)
 
 /-- Sorry-free logical glue for the new witness route, parameterized by the two
 analysis nodes: the uniform `G2>=m_P` floor and the direct-witness implication
@@ -576,8 +616,10 @@ obligations." -/
 #print axioms witnessMP_pos_rat
 #print axioms witnessMP_pos_real
 #print axioms witness_floor_positive
+#print axioms witnessMP_le_rhoGlobFloorRat_real
 #print axioms one_seventh_le_inv_of_pos_le_seven
 #print axioms witness_floor_from_cluster_cases
+#print axioms witness_large_floor_from_rhoGlob_lower_bound
 #print axioms lrc14_from_witness_floor_given_nodes
 #print axioms lrc14_from_witness_floor_cases_given_nodes
 -- The following SHOULD report `sorryAx` (open obligations):

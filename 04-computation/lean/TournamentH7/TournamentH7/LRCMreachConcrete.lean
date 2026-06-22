@@ -10,28 +10,27 @@
   equals the supremum over all of ℝ and is ATTAINED.  If the attained maximum ≥ 1/14,
   the attaining time is 14-lonely.
 
-  REMAINING LEAN OBLIGATIONS (marked sorry in this buildable skeleton):
-  - Continuity of `nearInt` (Lipschitz from quotient metric ℝ/ℤ; needs AddCircle or manual
-    piecewise-continuity argument).  PROOF SKETCH: nearInt x = 1/2 - |fract x - 1/2|.
-    At integer n: both left limit (fract → 1, |1-1/2|=1/2) and right limit (fract → 0,
-    |0-1/2|=1/2) agree with the value 1/2, so |fract x - 1/2| is continuous at integers.
-    Hence nearInt is continuous everywhere.  Equivalently: nearInt x = ⨅ m:ℤ, |x - m| is
-    1-Lipschitz (triangle inequality on the quotient metric ℝ/ℤ), hence continuous.
-  - Port the finite-infimum API for `minReach_continuous` and
-    `lonely_iff_minReach_ge`.
-  - Port integer-periodicity, global-sup reduction to `[0,1]`, and the final
-    extreme-value theorem step.
-
   PROVED (no sorries):
   - nearInt_nonneg, nearInt_le_half, nearInt_eq, nearInt_add_one
+  - nearInt_continuous, via mathlib's endpoint-compatible `ContinuousOn.comp_fract`
   - nearInt_int_mul_add_one (periodicity under integer speed multiplication)
+  - continuous_finset_inf'_real
+  - minReach_continuous
   - minReach_periodic (1-periodicity)
+  - minReach_int_periodic (n-periodicity for any n : ℤ)
+  - minReach_le_half
+  - lonely_iff_minReach_ge
+  - Mreach_eq_global_sSup
+  - lonely_of_Mreach_ge
 
   Incoming source: claude-sonnet-2026-06-22-S5.  Codex S81 repaired imports and
   made the non-typechecking proof scripts explicit theorem targets; codex-S82
-  tightened the porting comments against the current Lean DAG.
+  tightened the porting comments against the current Lean DAG; codex-S83 closed
+  the finite-infimum/algebraic/compactness porting sorries and discharged
+  nearest-integer continuity through `ContinuousOn.comp_fract`.
 -/
 import Mathlib.Tactic
+import Mathlib.Topology.Algebra.Order.Floor
 import Mathlib.Topology.Order.Compact
 import Mathlib.Topology.Order.IntermediateValue
 import Mathlib.Topology.Instances.Real.Lemmas
@@ -78,18 +77,16 @@ lemma nearInt_int_mul_add_one (v : ℤ) (t : ℝ) :
   rw [h]
   rw [Int.fract_add_intCast]
 
-/-- **KEY SORRY**: nearInt is continuous.
-  Proof: nearInt x = 1/2 - |fract x - 1/2|.  At an integer n:
-    - value: Int.fract n = 0, so |0 - 1/2| = 1/2, nearInt n = 0.
-    - left limit (x → n⁻): Int.fract x → 1, so |1 - 1/2| = 1/2, nearInt → 0.
-    - right limit (x → n⁺): Int.fract x → 0, so |0 - 1/2| = 1/2, nearInt → 0.
-  Both limits match; |Int.fract x - 1/2| is continuous everywhere, hence so is nearInt.
-  Alternatively: nearInt x = ⨅ m:ℤ, |x - m| is 1-Lipschitz (triangle inequality on ℝ/ℤ),
-  so nearInt is Lipschitz and hence continuous.
-  In Lean: use ContinuousAt at each integer via the left/right limit argument, and
-  continuity on (n, n+1) from continuity of Int.fract there. -/
+/-- `nearInt` is continuous.
+
+The function `u ↦ min u (1-u)` is continuous on `[0,1]` and has matching
+endpoint values, so it composes continuously with `Int.fract`. -/
 theorem nearInt_continuous : Continuous nearInt := by
-  sorry
+  have hcont : ContinuousOn (fun u : ℝ => min u (1 - u)) (Icc (0 : ℝ) 1) :=
+    (continuous_id.min (continuous_const.sub continuous_id)).continuousOn
+  have hend : (fun u : ℝ => min u (1 - u)) 0 = (fun u : ℝ => min u (1 - u)) 1 := by
+    norm_num
+  simpa [nearInt, Function.comp_def] using hcont.comp_fract'' hend
 
 /-! ## 2. Min-reach function -/
 
@@ -97,12 +94,41 @@ theorem nearInt_continuous : Continuous nearInt := by
 noncomputable def minReach (v : Fin 13 → ℤ) (t : ℝ) : ℝ :=
   ⨅ i : Fin 13, nearInt ((v i : ℝ) * t)
 
+/-- A nonempty finite infimum of continuous real-valued functions is continuous.
+This avoids requiring an artificial `⊤` element for `ℝ`, so it is the right
+finite-minimum API for `minReach`. -/
+lemma continuous_finset_inf'_real {ι : Type*} {s : Finset ι} (hs : s.Nonempty)
+    {f : ι → ℝ → ℝ} (hf : ∀ i ∈ s, Continuous (f i)) :
+    Continuous (fun x => s.inf' hs (fun i => f i x)) := by
+  induction hs using Finset.Nonempty.cons_induction with
+  | singleton a =>
+      simpa [Finset.inf'_singleton] using hf a (by simp)
+  | cons a s ha hs ih =>
+      have hcont : Continuous (fun x => f a x ⊓ s.inf' hs (fun i => f i x)) :=
+        (hf a (by simp)).min (ih (by
+          intro i hi
+          exact hf i (by simp [hi])))
+      convert hcont using 1
+      ext x
+      exact Finset.inf'_cons hs (fun i => f i x)
+
 /-- minReach is continuous in t (finite infimum of continuous functions). -/
 theorem minReach_continuous (v : Fin 13 → ℤ) : Continuous (minReach v) := by
-  -- Finite infimum of continuous functions.  The previous draft used an old
-  -- `continuous_iInf` name; fill this with the current Mathlib finite-inf API
-  -- after `nearInt_continuous` is proved.
-  sorry
+  simpa [minReach, Finset.inf'_univ_eq_ciInf] using
+    (continuous_finset_inf'_real
+      (Finset.univ_nonempty : (Finset.univ : Finset (Fin 13)).Nonempty)
+      (f := fun i t => nearInt ((v i : ℝ) * t)) (by
+        intro i _hi
+        exact nearInt_continuous.comp (continuous_const.mul continuous_id)))
+
+/-- The concrete min-reach function is bounded above by `1/2`. -/
+lemma minReach_le_half (v : Fin 13 → ℤ) (t : ℝ) : minReach v t ≤ 1 / 2 := by
+  unfold minReach
+  have hbdd : BddBelow (Set.range fun i : Fin 13 => nearInt ((v i : ℝ) * t)) := by
+    refine ⟨0, ?_⟩
+    rintro y ⟨i, rfl⟩
+    exact nearInt_nonneg _
+  exact (ciInf_le hbdd (0 : Fin 13)).trans (nearInt_le_half _)
 
 /-- minReach is 1-periodic in t. -/
 theorem minReach_periodic (v : Fin 13 → ℤ) (t : ℝ) :
@@ -115,18 +141,33 @@ theorem minReach_periodic (v : Fin 13 → ℤ) (t : ℝ) :
   Proved by induction on ℤ using minReach_periodic. -/
 lemma minReach_int_periodic (v : Fin 13 → ℤ) (t : ℝ) (n : ℤ) :
     minReach v (t + n) = minReach v t := by
-  -- Integer-periodicity follows from `minReach_periodic` by induction over
-  -- `Int`; the current Mathlib induction eliminator uses `zero/succ/pred`
-  -- branch names, so this is left as a small porting obligation.
-  sorry
+  have hper : Function.Periodic (minReach v) (1 : ℝ) := fun x => minReach_periodic v x
+  have hn : Function.Periodic (minReach v) ((n : ℝ) * (1 : ℝ)) := hper.int_mul n
+  simpa using hn t
 
 /-- Lonely 14 v t ↔ minReach v t ≥ 1/14. -/
 theorem lonely_iff_minReach_ge (v : Fin 13 → ℤ) (t : ℝ) :
     Lonely 14 v t ↔ (1 : ℝ) / 14 ≤ minReach v t := by
-  -- This is a finite-infimum unpacking of `Lonely 14` through `nearInt`.
-  -- The old proof used a brittle `ciInf_le` witness; port after choosing the
-  -- preferred finite-min API for `Fin 13`.
-  sorry
+  rw [lonely_iff_fract_mem]
+  unfold minReach nearInt
+  have hbdd : BddBelow
+      (Set.range fun i : Fin 13 =>
+        min (Int.fract ((v i : ℝ) * t)) (1 - Int.fract ((v i : ℝ) * t))) := by
+    refine ⟨0, ?_⟩
+    rintro y ⟨i, rfl⟩
+    exact le_min (Int.fract_nonneg _)
+      (by linarith [Int.fract_lt_one ((v i : ℝ) * t)])
+  rw [le_ciInf_iff hbdd]
+  constructor
+  · intro h i
+    exact le_min (h i).1 (by linarith [(h i).2])
+  · intro h i
+    have hle := h i
+    refine ⟨?_, ?_⟩
+    · exact le_trans hle (min_le_left _ _)
+    · have hr : (1 : ℝ) / 14 ≤ 1 - Int.fract ((v i : ℝ) * t) :=
+        le_trans hle (min_le_right _ _)
+      linarith
 
 /-! ## 3. Concrete Mreach and compactness theorem -/
 
@@ -140,57 +181,83 @@ noncomputable def Mreach (v : Fin 13 → ℤ) : ℝ :=
   and Int.fract t ∈ [0,1). -/
 theorem Mreach_eq_global_sSup (v : Fin 13 → ℤ) :
     Mreach v = sSup (range (minReach v)) := by
-  -- Reduce any real `t` to `Int.fract t ∈ [0,1]` using
-  -- `minReach_int_periodic`, then compare the two suprema.
-  sorry
+  have hRangeBdd : BddAbove (range (minReach v)) := by
+    refine ⟨1 / 2, ?_⟩
+    rintro y ⟨t, rfl⟩
+    exact minReach_le_half v t
+  have hImageBdd : BddAbove (minReach v '' Icc (0 : ℝ) 1) := by
+    refine ⟨1 / 2, ?_⟩
+    rintro y ⟨t, _ht, rfl⟩
+    exact minReach_le_half v t
+  have hImageNonempty : (minReach v '' Icc (0 : ℝ) 1).Nonempty := by
+    exact ⟨minReach v 0, ⟨0, by norm_num, rfl⟩⟩
+  have hRangeNonempty : (range (minReach v)).Nonempty := by
+    exact ⟨minReach v 0, ⟨0, rfl⟩⟩
+  apply le_antisymm
+  · unfold Mreach
+    exact csSup_le_csSup hRangeBdd hImageNonempty (image_subset_range _ _)
+  · apply csSup_le hRangeNonempty
+    rintro r ⟨t, rfl⟩
+    have ht : t = Int.fract t + ↑⌊t⌋ := by
+      linarith [Int.floor_add_fract t]
+    have heq : minReach v (Int.fract t) = minReach v t :=
+      calc minReach v (Int.fract t)
+          = minReach v (Int.fract t + ↑⌊t⌋) :=
+              (minReach_int_periodic v (Int.fract t) ⌊t⌋).symm
+        _ = minReach v t := by rw [← ht]
+    rw [← heq]
+    exact le_csSup hImageBdd
+      ⟨Int.fract t, ⟨Int.fract_nonneg t, le_of_lt (Int.fract_lt_one t)⟩, rfl⟩
 
 /-- **The key compactness theorem:** If Mreach v ≥ 1/14, there exists a 14-lonely time.
 
-  Proof: minReach v is continuous (from nearInt_continuous) and 1-periodic.  Hence
+  Proof: minReach v is continuous and 1-periodic.  Hence
   Mreach v = sSup (minReach v '' [0,1]).  Since [0,1] is compact and minReach v is
   continuous, the supremum is attained at some t* ∈ [0,1].  Then
   minReach v t* = Mreach v ≥ 1/14, so by lonely_iff_minReach_ge, t* is 14-lonely.
 
   This is the compactness theorem meant to replace the skeleton's opaque
   `lonely_of_Mreach_ge` once the preceding topology/finite-infimum obligations
-  in this file are closed.  The upstream proof script documented the right
-  compactness route but does not yet typecheck here, so this is now an explicit
-  theorem target. -/
-theorem lonely_of_Mreach_ge (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
+  in this file are closed. -/
+theorem lonely_of_Mreach_ge (v : Fin 13 → ℤ) (_hv : ∀ i, v i ≠ 0)
     (hM : (1 : ℝ) / 14 ≤ Mreach v) : ∃ t : ℝ, Lonely 14 v t := by
-  -- Extreme-value theorem on `[0,1]`, followed by
-  -- `lonely_iff_minReach_ge`.  This is the theorem meant to fill the
-  -- skeleton's opaque `lonely_of_Mreach_ge` once the definitions are unified.
-  sorry
+  have hcomp : IsCompact (Icc (0 : ℝ) 1) := isCompact_Icc
+  have hne : (Icc (0 : ℝ) 1).Nonempty := ⟨0, by norm_num⟩
+  have hcont : ContinuousOn (minReach v) (Icc (0 : ℝ) 1) :=
+    (minReach_continuous v).continuousOn
+  obtain ⟨tstar, htstar_mem, htstar_max⟩ := hcomp.exists_isMaxOn hne hcont
+  have hImageBdd : BddAbove (minReach v '' Icc (0 : ℝ) 1) := by
+    refine ⟨1 / 2, ?_⟩
+    rintro y ⟨t, _ht, rfl⟩
+    exact minReach_le_half v t
+  have hImageNonempty : (minReach v '' Icc (0 : ℝ) 1).Nonempty := by
+    exact ⟨minReach v 0, ⟨0, by norm_num, rfl⟩⟩
+  have htstar_eq : minReach v tstar = Mreach v := by
+    apply le_antisymm
+    · unfold Mreach
+      exact le_csSup hImageBdd ⟨tstar, htstar_mem, rfl⟩
+    · unfold Mreach
+      exact csSup_le hImageNonempty (by
+        rintro r ⟨s, hs_mem, rfl⟩
+        exact htstar_max hs_mem)
+  exact ⟨tstar, (lonely_iff_minReach_ge v tstar).mpr (htstar_eq ▸ hM)⟩
 
 /-! ## 4. Connection to the skeleton's opaque Mreach -/
 
-/- NOTE: The skeleton uses `opaque Mreach` which cannot be unfolded.  To fill
-  `lonely_of_Mreach_ge` in the skeleton, replace `opaque Mreach` with
-  `noncomputable def Mreach := LRC14Concrete.Mreach` and use the theorem above.
+/- NOTE: The skeleton now defines `Mreach` as this concrete supremum and uses
+  `lonely_of_Mreach_ge` directly.
 
-  REMAINING SORRIES (current porting skeleton):
-  1. nearInt_continuous: Lipschitz/continuity of the nearest-integer distance.
-  2. minReach_continuous: finite infimum of continuous functions.
-  3. minReach_int_periodic: integer-periodicity from period 1.
-  4. lonely_iff_minReach_ge: finite infimum unpacking.
-  5. Mreach_eq_global_sSup: reduce any time to its fractional part.
-  6. lonely_of_Mreach_ge: extreme-value theorem on [0,1].
-     Proof route A: nearInt x = ⨅ m:ℤ, |x - m|; this is 1-Lipschitz by the
-       triangle inequality: |x-m| ≤ |x-y| + |y-m|, so nearInt x ≤ |x-y| + nearInt y.
-       Then LipschitzWith 1 nearInt follows, and .continuous gives continuity.
-     Proof route B: use AddCircle 1 quotient metric.  The map ℝ → AddCircle 1 is
-       continuous; nearInt = dist · 0 on AddCircle 1 factors continuously.
-     Proof route C: piecewise on [n, n+1].  Int.fract is continuous on (n, n+1) (linear);
-       at endpoints, both one-sided limits of nearInt are 0. Use Continuous.piecewise or
-       ContinuousAt.congr at integer points.
+  The easy algebraic nearest-integer lemmas, finite-infimum continuity bridge,
+  integer-periodicity, global-sup comparison, and extreme-value handoff are now
+  proved without sorries. -/
 
-  The easy algebraic nearest-integer lemmas above are proved; the topology and
-  finite-infimum bridge is now a compiling Lean skeleton rather than a broken file.
-  The low-level nearest-integer nonnegativity, half-bound, algebraic normal form,
-  and period-one integer-speed lemmas are proved directly. -/
+/-! ## 5. Axiom audit
+
+The finite-infimum, periodicity, global-sup, and compactness glue below should
+not inherit `sorryAx`. -/
 
 #print axioms nearInt_continuous
+#print axioms continuous_finset_inf'_real
 #print axioms minReach_continuous
 #print axioms minReach_int_periodic
 #print axioms lonely_iff_minReach_ge
