@@ -1020,6 +1020,56 @@ theorem lrc_partA_finite_witness_pos_from_goodSet_margin_uniform_arc_bound_shape
     hanchor hwitness hwide hdual hdelta hvmax harc herror hbudget s
 #print axioms lrc_partA_finite_witness_pos_from_goodSet_margin_uniform_arc_bound_shapes_audit
 
+theorem lrc_partA_finite_witness_pos_from_goodSet_p0_margin_shapes_audit
+    (Eof Pof : LonelyRunner.LRC14.Shape → List ℤ)
+    (cap delta finiteRho : LonelyRunner.LRC14.Shape → ℝ)
+    (arcCount vmax : LonelyRunner.LRC14.Shape → ℕ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (hwitness : ∀ s, LonelyRunner.LRC14.witnessG2 s =
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          LonelyRunner.DenseCovers.safeSet (Pof s))).toReal)
+    (hp0cap : ∀ s, LonelyRunner.DenseCovers.p0 (Eof s) ≤ cap s - delta s)
+    (hdual : ∀ s, cap s ≤
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.safeSet (Pof s))).toReal)
+    (herror : ∀ s, |finiteRho s - LonelyRunner.LRC14.witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) / (vmax s : ℝ) < delta s)
+    (s : LonelyRunner.LRC14.Shape) :
+    0 < finiteRho s :=
+  LonelyRunner.LRC14.PartA.finite_witness_pos_from_goodSet_p0_margin_shapes
+    Eof Pof cap delta finiteRho arcCount vmax hanchor hwitness
+    hp0cap hdual herror hbudget s
+#print axioms lrc_partA_finite_witness_pos_from_goodSet_p0_margin_shapes_audit
+
+theorem lrc_partA_finite_witness_pos_from_goodSet_p0_margin_uniform_arc_bound_shapes_audit
+    (Eof Pof : LonelyRunner.LRC14.Shape → List ℤ)
+    (cap delta finiteRho : LonelyRunner.LRC14.Shape → ℝ)
+    (arcCount vmax : LonelyRunner.LRC14.Shape → ℕ)
+    (arcBound : ℕ) (deltaFloor : ℝ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (hwitness : ∀ s, LonelyRunner.LRC14.witnessG2 s =
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          LonelyRunner.DenseCovers.safeSet (Pof s))).toReal)
+    (hp0cap : ∀ s, LonelyRunner.DenseCovers.p0 (Eof s) ≤ cap s - delta s)
+    (hdual : ∀ s, cap s ≤
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.safeSet (Pof s))).toReal)
+    (hdelta : ∀ s, deltaFloor ≤ delta s)
+    (hvmax : ∀ s, 0 < vmax s)
+    (harc : ∀ s, arcCount s ≤ arcBound)
+    (herror : ∀ s, |finiteRho s - LonelyRunner.LRC14.witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcBound : ℝ) < deltaFloor * (vmax s : ℝ))
+    (s : LonelyRunner.LRC14.Shape) :
+    0 < finiteRho s :=
+  LonelyRunner.LRC14.PartA.finite_witness_pos_from_goodSet_p0_margin_uniform_arc_bound_shapes
+    Eof Pof cap delta finiteRho arcCount vmax arcBound deltaFloor
+    hanchor hwitness hp0cap hdual hdelta hvmax harc herror hbudget s
+#print axioms lrc_partA_finite_witness_pos_from_goodSet_p0_margin_uniform_arc_bound_shapes_audit
+
 theorem lrc_partA_lrc14_from_finite_partA_goodSet_margin_shapes_audit
     (Eof Pof : LonelyRunner.LRC14.Shape → List ℤ)
     (cap delta finiteRho : LonelyRunner.LRC14.Shape → ℝ)
@@ -1047,6 +1097,31 @@ theorem lrc_partA_lrc14_from_finite_partA_goodSet_margin_shapes_audit
     Eof Pof cap delta finiteRho arcCount vmax hanchor hwitness
     hwide hdual herror hbudget hfinitePartA
 #print axioms lrc_partA_lrc14_from_finite_partA_goodSet_margin_shapes_audit
+
+theorem lrc_partA_lrc14_from_finite_partA_goodSet_p0_margin_shapes_audit
+    (Eof Pof : LonelyRunner.LRC14.Shape → List ℤ)
+    (cap delta finiteRho : LonelyRunner.LRC14.Shape → ℝ)
+    (arcCount vmax : LonelyRunner.LRC14.Shape → ℕ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (hwitness : ∀ s, LonelyRunner.LRC14.witnessG2 s =
+      (LonelyRunner.DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          LonelyRunner.DenseCovers.safeSet (Pof s))).toReal)
+    (hp0cap : ∀ s, LonelyRunner.DenseCovers.p0 (Eof s) ≤ cap s - delta s)
+    (hdual : ∀ s, cap s ≤
+      (LonelyRunner.DenseCovers.slowμ
+        (LonelyRunner.DenseCovers.safeSet (Pof s))).toReal)
+    (herror : ∀ s, |finiteRho s - LonelyRunner.LRC14.witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) / (vmax s : ℝ) < delta s)
+    (hfinitePartA : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      0 < finiteRho (LonelyRunner.LRC14.shapeOf v) →
+      (1 : ℝ) / 14 ≤ LonelyRunner.LRC14.Mreach v) :
+    LonelyRunner.LRC14.LRC14Statement :=
+  LonelyRunner.LRC14.PartA.lrc14_from_finite_partA_goodSet_p0_margin_shapes
+    Eof Pof cap delta finiteRho arcCount vmax hanchor hwitness
+    hp0cap hdual herror hbudget hfinitePartA
+#print axioms lrc_partA_lrc14_from_finite_partA_goodSet_p0_margin_shapes_audit
 
 theorem lrc_partA_lrc14_from_finite_partA_p0_margin_split_shapes_audit
     (nuShape measGP p0Shape cap delta finiteRho : LonelyRunner.LRC14.Shape → ℝ)

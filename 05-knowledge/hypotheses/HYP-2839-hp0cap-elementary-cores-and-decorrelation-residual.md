@@ -98,6 +98,21 @@ conditional LRC14 assembly.  This does not prove hp0cap, hmeasGP, or the
 finite-ruler approximation; it removes the extra abstract `delta<=witnessG2`
 glue between those nodes and Part A.
 
+After S31b made p0 a concrete named atom, the same handoff also has a
+`DenseCovers.p0` surface.  `finite_witness_pos_from_goodSet_p0_margin_shapes`,
+its uniform arc-bound variant, and
+`lrc14_from_finite_partA_goodSet_p0_margin_shapes` accept
+`DenseCovers.p0 (Eof s) <= cap s - delta s` and unfold p0 internally to the
+cover-set measure.  This keeps hp0cap stated in the live skeleton vocabulary
+while still feeding the actual measurable cover event into the goodSet/Part-A
+route.
+
+After the mac-mini S28/HYP-2840 pull, this handoff should be read as neutral
+between hp0cap proof routes.  The older route proves the p0 margin through the
+decorrelation residual; HYP-2840 proposes the cleaner THM-534 `L_y` route
+(`p0 <= L_y` plus scalar extremality).  Either route supplies the same concrete
+`DenseCovers.p0` margin expected by the Part-A wrappers.
+
 ## The residual (the genuinely analytic part, NOT elementary)
 The binding cases k=8..12 route through the decorrelated closed form (THM-534, kps-S24):
 > `p0(E) <= p0_decorr(E) = sum_t P_t^{(r)} p_t(B)`  [RESONANCE BOUND -- the residual]

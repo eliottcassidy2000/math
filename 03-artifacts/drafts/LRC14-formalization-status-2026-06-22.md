@@ -107,7 +107,9 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   `cap≤slowμ(safeSet Pof)`, and
   `witnessG2=slowμ(goodSet Eof∩safeSet Pof)` to positive finite witness
   density, and to the conditional LRC14 assembly, once `rhoK/arcCount/Vmax`
-  approximation data is supplied.
+  approximation data is supplied.  The newest wrappers state this margin with
+  the named atom `DenseCovers.p0(Eof)` from `LRCP0Concrete`, so the downstream
+  Part-A interface matches the concrete skeleton p0 definition.
 - `LRCMreachConcrete` — `Mreach`, `lonely_of_Mreach_ge` (concrete).
 
 ## 4. The remaining integration (in progress, kps/codex)

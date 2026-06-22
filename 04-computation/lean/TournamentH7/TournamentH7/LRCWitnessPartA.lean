@@ -14,6 +14,7 @@
 -/
 
 import Mathlib.Tactic
+import TournamentH7.LRCP0Concrete
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCEventMeasureBridge
 
@@ -274,6 +275,56 @@ theorem finite_witness_pos_from_goodSet_margin_uniform_arc_bound_shapes
       Eof Pof cap delta hanchor hwitness hwide hdual)
     hdelta hvmax harc herror hbudget s
 
+/-- Same as `finite_witness_pos_from_goodSet_margin_shapes`, but the p0 margin
+is stated with the concrete cover atom `DenseCovers.p0`. -/
+theorem finite_witness_pos_from_goodSet_p0_margin_shapes
+    (Eof Pof : Shape → List ℤ) (cap delta finiteRho : Shape → ℝ)
+    (arcCount vmax : Shape → ℕ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (hwitness : ∀ s, witnessG2 s =
+      (DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          DenseCovers.safeSet (Pof s))).toReal)
+    (hp0cap : ∀ s, DenseCovers.p0 (Eof s) ≤ cap s - delta s)
+    (hdual : ∀ s, cap s ≤
+      (DenseCovers.slowμ (DenseCovers.safeSet (Pof s))).toReal)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) / (vmax s : ℝ) < delta s)
+    (s : Shape) :
+    0 < finiteRho s :=
+  finite_witness_pos_from_goodSet_margin_shapes
+    Eof Pof cap delta finiteRho arcCount vmax hanchor hwitness
+    (by intro s; simpa [DenseCovers.p0] using hp0cap s)
+    hdual herror hbudget s
+
+/-- Uniform-arc-bound version using the concrete cover atom
+`DenseCovers.p0`. -/
+theorem finite_witness_pos_from_goodSet_p0_margin_uniform_arc_bound_shapes
+    (Eof Pof : Shape → List ℤ) (cap delta finiteRho : Shape → ℝ)
+    (arcCount vmax : Shape → ℕ) (arcBound : ℕ) (deltaFloor : ℝ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (hwitness : ∀ s, witnessG2 s =
+      (DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          DenseCovers.safeSet (Pof s))).toReal)
+    (hp0cap : ∀ s, DenseCovers.p0 (Eof s) ≤ cap s - delta s)
+    (hdual : ∀ s, cap s ≤
+      (DenseCovers.slowμ (DenseCovers.safeSet (Pof s))).toReal)
+    (hdelta : ∀ s, deltaFloor ≤ delta s)
+    (hvmax : ∀ s, 0 < vmax s)
+    (harc : ∀ s, arcCount s ≤ arcBound)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcBound : ℝ) < deltaFloor * (vmax s : ℝ))
+    (s : Shape) :
+    0 < finiteRho s :=
+  finite_witness_pos_from_goodSet_margin_uniform_arc_bound_shapes
+    Eof Pof cap delta finiteRho arcCount vmax arcBound deltaFloor
+    hanchor hwitness
+    (by intro s; simpa [DenseCovers.p0] using hp0cap s)
+    hdual hdelta hvmax harc herror hbudget s
+
 /-- Conditional LRC14 assembly through a finite-ruler Part-A node.  This is the
 formal shape suggested by the S30 arc-count signal: p0 margin plus a
 `#arcs/Vmax` error budget gives positive finite witness density; a finite
@@ -325,6 +376,32 @@ theorem lrc14_from_finite_partA_goodSet_margin_shapes
     finite_witness_pos_from_goodSet_margin_shapes
       Eof Pof cap delta finiteRho arcCount vmax hanchor hwitness
       hwide hdual herror hbudget (shapeOf v)
+  exact lonely_of_Mreach_ge v hv (hfinitePartA v hv hpos)
+
+/-- Conditional LRC14 assembly through finite-ruler Part A using the concrete
+cover atom `DenseCovers.p0` for the p0 margin. -/
+theorem lrc14_from_finite_partA_goodSet_p0_margin_shapes
+    (Eof Pof : Shape → List ℤ) (cap delta finiteRho : Shape → ℝ)
+    (arcCount vmax : Shape → ℕ)
+    (hanchor : ∀ s, (0 : ℤ) ∈ Eof s)
+    (hwitness : ∀ s, witnessG2 s =
+      (DenseCovers.slowμ
+        (TournamentH7.GoodSet.goodSet (Eof s) ∩
+          DenseCovers.safeSet (Pof s))).toReal)
+    (hp0cap : ∀ s, DenseCovers.p0 (Eof s) ≤ cap s - delta s)
+    (hdual : ∀ s, cap s ≤
+      (DenseCovers.slowμ (DenseCovers.safeSet (Pof s))).toReal)
+    (herror : ∀ s, |finiteRho s - witnessG2 s| ≤
+      (arcCount s : ℝ) / (vmax s : ℝ))
+    (hbudget : ∀ s, (arcCount s : ℝ) / (vmax s : ℝ) < delta s)
+    (hfinitePartA : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      0 < finiteRho (shapeOf v) → (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement := by
+  intro v hv
+  have hpos : 0 < finiteRho (shapeOf v) :=
+    finite_witness_pos_from_goodSet_p0_margin_shapes
+      Eof Pof cap delta finiteRho arcCount vmax hanchor hwitness
+      hp0cap hdual herror hbudget (shapeOf v)
   exact lonely_of_Mreach_ge v hv (hfinitePartA v hv hpos)
 
 /-- Conditional LRC14 assembly through finite-ruler Part A with the current
@@ -401,8 +478,11 @@ theorem lrc14_from_finite_partA_p0_margin_split_shapes
 #print axioms finite_witness_pos_from_p0_margin_uniform_arc_bound_shapes
 #print axioms finite_witness_pos_from_goodSet_margin_shapes
 #print axioms finite_witness_pos_from_goodSet_margin_uniform_arc_bound_shapes
+#print axioms finite_witness_pos_from_goodSet_p0_margin_shapes
+#print axioms finite_witness_pos_from_goodSet_p0_margin_uniform_arc_bound_shapes
 #print axioms lrc14_from_finite_partA_p0_margin_shapes
 #print axioms lrc14_from_finite_partA_goodSet_margin_shapes
+#print axioms lrc14_from_finite_partA_goodSet_p0_margin_shapes
 #print axioms lrc14_from_finite_partA_p0_margin_split_shapes
 
 end PartA

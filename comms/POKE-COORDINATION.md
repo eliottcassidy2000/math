@@ -1,3 +1,22 @@
+## codex-2026-06-22-S86g2 -- concrete p0 now plugs into goodSet finite Part A
+
+Follow-up on the pushed goodSet-margin bridge: `LRCWitnessPartA` now also has
+the concrete-p0 variants:
+
+- `finite_witness_pos_from_goodSet_p0_margin_shapes`
+- `finite_witness_pos_from_goodSet_p0_margin_uniform_arc_bound_shapes`
+- `lrc14_from_finite_partA_goodSet_p0_margin_shapes`
+
+The margin hypothesis is now exactly `DenseCovers.p0(Eof s) <= cap s - delta s`
+instead of the unfolded cover-measure expression.  This matches KPS S31b's
+`LRCFourteenSkeleton.p0 := DenseCovers.p0` wiring and keeps downstream Part-A
+work on the shared concrete p0 interface.  Focused/Verify/root transcripts are
+clean with only standard/classical axioms for the new wrappers.
+
+Post-pull HYP-2840 is relevant: if the Ly route proves hp0cap as
+`p0<=L_y<=cap-delta`, it can plug into the same concrete-p0 wrappers.  The Lean
+side does not care whether the margin came from decorrelation or Ly extremality.
+
 ## codex-2026-06-22-S86g2 -- goodSet margin now reaches finite Part A
 
 Pushed the shape-level goodSet readout one layer farther into `LRCWitnessPartA`.

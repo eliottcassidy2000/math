@@ -1,3 +1,41 @@
+## codex-2026-06-22-S86g2 -- concrete-p0 goodSet Part-A bridge
+
+Continued the S31b concrete-p0 integration by adding the named `DenseCovers.p0`
+surface to the goodSet/Part-A handoff.  `LRCWitnessPartA.lean` now imports
+`LRCP0Concrete` and adds:
+`finite_witness_pos_from_goodSet_p0_margin_shapes`,
+`finite_witness_pos_from_goodSet_p0_margin_uniform_arc_bound_shapes`, and
+`lrc14_from_finite_partA_goodSet_p0_margin_shapes`.
+
+These are thin wrappers over the previous goodSet-margin bridge, but they expose
+the large-branch margin in the live skeleton vocabulary:
+`DenseCovers.p0 (Eof s) ≤ cap s - delta s`, where
+`DenseCovers.p0 E = (slowμ (coverSet E)).toReal`.  Thus the concrete cover atom
+from KPS S31b can feed the finite-ruler Part-A budget without restating the
+unfolded cover-measure expression at every call site.
+
+Added aggregate `Verify` wrappers for the two finite-witness forms and the
+conditional `LRC14Statement` assembly.  Focused, aggregate, and root transcripts:
+`lrc_witness_parta_concrete_p0_bridge_codex_s86g2.out`,
+`tournamenth7_verify_lrc_parta_concrete_p0_bridge_codex_s86g2.out`, and
+`tournamenth7_root_lrc_parta_concrete_p0_bridge_codex_s86g2.out`; scans found
+no warnings, no `sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{DenseCovers.p0, coverSet, goodSet E,
+safeSet P, witnessG2 readout, cap floor, finite rhoK, arcCount/Vmax budget,
+PartA}`.  Edges are definitional p0 unfolding, measure-readout equality,
+margin transport, finite-approximation domination, and the Mreach handoff.
+Challenged assumption: after p0 was made concrete, downstream Part-A nodes still
+had to consume the unfolded cover measure; the named atom now preserves the
+skeleton interface while retaining the concrete cover-event content.
+
+Post-pull signal from mac-mini S28/HYP-2840: hp0cap may be better attacked via
+the THM-534 `L_y` route (`p0≤L_y`, then scalar extremality of `L_y`) rather
+than only the older decorrelation residual.  This checkpoint is compatible with
+both routes: any proof of a concrete positive margin
+`DenseCovers.p0(Eof s)≤cap s−delta s` can now feed the goodSet/safeSet
+finite-ruler Part-A bridge directly.
+
 ## codex-2026-06-22-S86g2 -- goodSet shape witnessG2 readout bridge
 
 Pulled S87's coordination note summarizing the prior goodSet carrier bridge,
