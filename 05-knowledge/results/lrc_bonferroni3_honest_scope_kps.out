@@ -1,0 +1,17 @@
+BINDING configs (large consec base + TIGHT far cluster -- the near-cap/doublet case):
+  base=[0, 1, 2, 3, 4, 5] far=[12, 13]: p0=0.1489 (cap=0.3815) Bonf3 bound=0.1489  p0<=Bonf3? True
+  base=[0, 1, 2, 3, 4, 5] far=[15, 16]: p0=0.0750 (cap=0.3815) Bonf3 bound=0.0750  p0<=Bonf3? True
+  base=[0, 1, 2, 3, 4, 5] far=[20, 21]: p0=0.1446 (cap=0.3815) Bonf3 bound=0.1446  p0<=Bonf3? True
+  base=[0, 1, 2, 3, 4, 5] far=[30, 31]: p0=0.1115 (cap=0.3815) Bonf3 bound=0.1115  p0<=Bonf3? True
+  base=[0, 1, 2, 3, 4, 5] far=[12, 13, 14]: p0=0.2770 (cap=0.3815) Bonf3 bound=0.2770  p0<=Bonf3? True
+  base=[0, 1, 2, 3, 4, 5] far=[20, 21, 22]: p0=0.2342 (cap=0.3815) Bonf3 bound=0.2342  p0<=Bonf3? True
+  base=[0, 1, 2, 3, 4, 5] far=[30, 31, 32]: p0=0.1891 (cap=0.3815) Bonf3 bound=0.1891  p0<=Bonf3? True
+
+SLACK configs (small base + SPREAD far -- p0<<cap):
+  base=[0, 3, 9] far=[27, 28, 42, 43, 47]: p0=0.0349 (cap=0.3815) Bonf3 bound=0.0000  p0<=Bonf3? False
+  base=[0, 3, 7] far=[50, 53, 54, 57, 64]: p0=0.0443 (cap=0.3815) Bonf3 bound=0.0000  p0<=Bonf3? False
+  base=[0, 2, 5] far=[33, 41, 52, 58, 61]: p0=0.0266 (cap=0.3815) Bonf3 bound=0.0000  p0<=Bonf3? False
+
+=> Bonferroni-3 holds on BINDING (tight-far, near-cap) configs -- the dangerous ones; fails only
+   on SLACK (spread-far) where p0<<cap. So it IS a valid handle on the binding doublet leg, but
+   is NOT a standalone universal closure (the slack leg needs the separate p0<<cap argument).

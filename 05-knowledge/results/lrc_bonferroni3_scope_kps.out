@@ -1,0 +1,7 @@
+WIDE BOUND p0<=cap_8=0.3815 holds in ALL 50 configs: True
+Bonferroni-3 HOLDS (29 configs): p0 range [0.014,0.076], mean 0.035
+Bonferroni-3 FAILS (21 configs): p0 range [0.014,0.075], mean 0.033
+  => failures have p0 max 0.075 << cap 0.3815 (SLACK, not binding)
+
+HONEST: Bonferroni-3 is a BINDING-leg handle (p0 near cap), NOT universal. The slack leg
+(small base, high-order coverage) has p0<<cap directly. Wide bound = [binding: <=T1+T2+T3] + [slack].

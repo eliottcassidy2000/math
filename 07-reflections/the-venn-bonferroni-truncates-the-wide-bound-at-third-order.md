@@ -64,6 +64,21 @@ the odd/center mode is the first *correction*, not the leading term.
   order subtracts**" — a Bonferroni-3 truncation that matches and structurally explains the repo's
   doublet-plus-convergent-tail route.
 
+## SCOPE CORRECTION (kps-S31u): Bonferroni-3 is the BINDING leg, NOT universal
+Stress-testing (`lrc_bonferroni3_closure_test/scope/honest_scope_kps.py`) corrects the framing above:
+`p0 ≤ T₁+T₂+T₃` is **NOT universal**. It FAILS for **spread-far configs with ≥4 far runners**, where
+`T₁=T₂=T₃=0` but `p0>0` (the coverage is carried entirely by `r≥4` packets — the `r≥4` tail is NOT
+always negative). **However, every such failure is SLACK**: `p0 ≤ 0.075 ≪ cap = 0.38`. And Bonferroni-3
+**holds on the BINDING configs** — large consec base + tight far cluster, `p0` near cap, the actual
+dangerous doublet case (HYP-2797) — where it is in fact exact (≤3 far ⇒ no higher terms).
+> So Bonferroni-3 is a valid **binding-leg** handle (reducing the *near-cap* wide bound to doublet +
+> triple, structurally re-deriving THM-563), **not a standalone universal closure**. The slack leg
+> (spread far, high-order coverage) is bounded by the *separate* `p0 ≪ cap` argument (the repo's
+> genuine-wide slack, HYP-2788 / THM-557 / the `12ζ(3)` R-tail). My earlier "truncates the wide bound
+> at third order" overclaimed universality from a tight-far sample; the honest statement is **binding =
+> low-order (Bonferroni-3 / doublet+triple); slack = high-order but `p0 ≪ cap`**. This matches and
+> re-derives the repo's binding/slack dichotomy via the Venn, rather than replacing it.
+
 → THM-548 (one/two/three-far), HYP-2797 (binding doublet), THM-557 (three-far sub-dominant), HYP-2817
 (R-tail `12ζ(3)`), THM-563 (single-far periodic-Dedekind),
 `the-three-modes-are-parity-stratified-and-lrc14-is-eisenstein-compose-legendre.md`, [[lrc14-thread]].

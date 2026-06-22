@@ -1,0 +1,9 @@
+Bonferroni-3 (p0 <= T_1+T_2+T_3) holds: 26/40
+r>=4 tail <= 0:                        26/40
+decay |T_3|>=|T_4|>=|T_5|:             20/40
+VIOLATIONS:
+  base=[0, 3, 9] far=[27, 28, 42, 43, 47]: p0=0.0349 > T1+T2+T3=0.0000
+  base=[0, 3, 7] far=[50, 53, 54, 57, 64]: p0=0.0443 > T1+T2+T3=0.0000
+  base=[0, 6, 7] far=[42, 57, 58, 64, 65]: p0=0.0393 > T1+T2+T3=0.0000
+   => multi-large case REDUCES to single-far(THM-565)+doublet(HYP-2797)+triple(THM-557) -- the
+      r>=4 corrections only HELP (subtract). The wide bound closes IF T_1+T_2+T_3 <= cap (next).
