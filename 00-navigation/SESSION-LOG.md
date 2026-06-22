@@ -4,6 +4,41 @@ Owner: '7 is a forbidden H value, arcs have 2 states -- these are all you need t
 - **THE OBSTRUCTION:** a tournament has NO order-2 automorphism (a pair-swap reverses the arc => |Aut| odd, forbidden-seven), so the symmetric extremal is UNREALIZABLE as a tournament; the 7 tied diameter-arcs must break the symmetry, and every 2^7 resolution gives M>=1/14. The 'ideal' over-covering = the forbidden apex (the K_3 that forces C_5, H=7 impossible). So M<1/14 needs the forbidden order-2/H=7 structure => no counterexample => impossible to disprove.
 - **HONEST:** this is the structural OBSTRUCTION (why no counterexample), unifying the apex-7 (H=7, H=21, E_7, LRC = 1/(2x7)). It RELIES ON / EXPLAINS the Node-2 consec-maximizes extremality (the symmetric extremal is unimprovable BECAUSE a tournament can't carry its symmetry) -- it is NOT an independent complete proof, and decidedly NOT a disproof (the facts forbid counterexamples).
 NEW: reflection + lrc14_apex7_order2_obstruction script. NEXT: make the obstruction independent of Node-2 (does 'order-2 symmetric => M=1/14 boundary' close it?).
+## codex-2026-06-22-S118 -- digraph H=7 guardrail for the LRC14 forbidden-clique route
+
+User asked to think digraphs: `7` is forbidden for tournament `H`, arcs have
+two possible states, and these facts might disprove LRC14 or prove disproof is
+impossible.  Pulled incoming KPS-S31y, HYP-2906, and the S31y
+forbidden-clique reflection; treated them as signal but audited the missing
+realizability hypothesis.
+
+Added `04-computation/lrc_digraph_h7_guardrail_codex_s118.py` and stored
+`05-knowledge/results/lrc_digraph_h7_guardrail_codex_s118.out`.  Exact audit:
+tournaments through `n=6` have `H=7` count `0` and all `H` odd; ordinary
+binary ordered-arc digraphs realize `H=7` already on `n=4` with both-direction
+and missing-pair states; incomplete oriented graphs realize `H=7` on `n=5`
+(`1440` examples).  Tie-free AP7 winding-tournament cells avoid `H=7`, all
+have odd `H`, and the exact lonely point `x=1/7` has `H=175`; grid samples on
+walls are not tournaments and can produce even/zero counts.
+
+Created HYP-2907/T1020 and reflection
+`07-reflections/lrc-digraph-h7-realizability-guardrail-codex-s118.md`.  Main
+takeaway: the `14=2*7` forbidden-clique route is plausible but not automatic.
+The missing theorem is `LRC14 apex over-cover -> tournament OCF conflict graph
+Omega=K_3` (or an equivalent labelled packet).  Once that correspondence is
+proved, THM-200/THM-343 block a counterexample; without it, generic binary
+digraphs refute the slogan "two states plus seven is enough."
+
+Post-rebase integration: incoming mac-mini S48 identifies the AP14 boundary
+packet as seven tied diameter comparisons under the antipodal order-2
+symmetry.  Integrated it into HYP-2907 as the next candidate packet, with the
+same guardrail: tied diameter comparisons are wall-time digraph data until
+they are resolved into labelled tournament/OCF conflict data.
+
+Second post-rebase integration: incoming KPS-S31z clarifies logical status.
+LRC14 is `Pi^0_1`, so "impossible to disprove" is equivalent to truth for a
+sound arithmetic theory.  HYP-2907 now states the forbidden-`K_3` route as a
+proof route, not an independence or indeterminacy route.
 
 ## mac-mini-2026-06-22-S47 -- FLUSH OUT the LRC via the tournament-induction lessons: the induction IS the Mode-A peel; bounded core = irreducible atom = {consec, GW}
 Owner: immerse in tournament-induction work, then flush out the LRC. Reflection: flushing-out-the-lrc-induction-is-the-tournaments-mode-a-peel.md.

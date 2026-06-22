@@ -26,6 +26,7 @@ depends_on:
   - mac-mini-S47
 related:
   - HYP-2906
+  - HYP-2907
 results:
   - 04-computation/lrc_tournament_induction_switchboard_codex.py
   - 05-knowledge/results/lrc_tournament_induction_switchboard_codex.out
@@ -231,6 +232,13 @@ as the crux.  It is, however, a strong candidate for the finite atom theorem
 after HYP-2906/HYP-2904 remove the locally large and scale-separated branches:
 the bounded core should either be `{consec,GW}` with exact-wall witnesses, or
 else its over-cover shadow would realize the forbidden `H=7` object.
+
+HYP-2907 adds the necessary digraph guardrail.  The words "two arc states" are
+ambiguous: generic ordered-arc digraphs have binary present/absent states and
+can realize `H=7`, and incomplete oriented graphs can also realize `H=7`.
+The forbidden theorem applies only after the shadow is in the tournament OCF
+image.  Thus the S31y atom target must be stated as a realizability theorem
+inside that image, not as a bare binary-digraph count.
 
 ## Tournament Analysis
 
