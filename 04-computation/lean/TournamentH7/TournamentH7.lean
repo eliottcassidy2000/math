@@ -58,8 +58,11 @@
                                       attainment on a compact period.
     · TournamentH7.LRCWitnessAttainmentBridge — equivalence between the
                                       margin and concrete Mreach interfaces.
+    · TournamentH7.LRCMaxGapPigeonhole — finite max-gap pigeonhole and the
+                                      seven-gap equality boundary for `hnu1`.
     · TournamentH7.LRCDenseCovers — pointwise dense-cover inclusion
                                       behind `D(E) <= p0(E)`.
+    · TournamentH7.LRCGoodSet — concrete measurable `GOOD` event carrier.
     · TournamentH7.LRCBonferroniMeasure — probability-measure Bonferroni
                                       inequality for `GOOD(E) ∩ G_P`.
     · TournamentH7.LRCEventMeasureBridge — generic event-to-shape measure
@@ -135,6 +138,7 @@ import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
+import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge
 import TournamentH7.LRCFourteenSkeleton

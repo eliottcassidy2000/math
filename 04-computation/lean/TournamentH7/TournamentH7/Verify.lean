@@ -53,6 +53,7 @@ import TournamentH7.LRCMreachConcrete
 import TournamentH7.LRCWitnessAttainmentBridge
 import TournamentH7.LRCMaxGapPigeonhole
 import TournamentH7.LRCDenseCovers
+import TournamentH7.LRCGoodSet
 import TournamentH7.LRCBonferroniMeasure
 import TournamentH7.LRCEventMeasureBridge
 import TournamentH7.LRCL7Discrepancy
@@ -177,6 +178,29 @@ theorem lrc_maxgap_exists_gap_gt_one_seventh_audit
     ∃ i, (1 : ℝ) / 7 < g i :=
   TournamentH7.MaxGapPigeonhole.exists_gap_gt_one_seventh hk hk6 g hsum
 #print axioms lrc_maxgap_exists_gap_gt_one_seventh_audit
+
+theorem lrc_maxgap_all_eq_one_seventh_of_le_audit
+    (g : Fin 7 → ℝ) (hsum : ∑ i, g i = 1)
+    (hle : ∀ i, g i ≤ (1 : ℝ) / 7) :
+    ∀ i, g i = (1 : ℝ) / 7 :=
+  TournamentH7.MaxGapPigeonhole.all_eq_one_seventh_of_le g hsum hle
+#print axioms lrc_maxgap_all_eq_one_seventh_of_le_audit
+
+theorem lrc_maxgap_exists_gap_gt_or_all_eq_one_seventh_audit
+    (g : Fin 7 → ℝ) (hsum : ∑ i, g i = 1) :
+    (∃ i, (1 : ℝ) / 7 < g i) ∨ ∀ i, g i = (1 : ℝ) / 7 :=
+  TournamentH7.MaxGapPigeonhole.exists_gap_gt_or_all_eq_one_seventh g hsum
+#print axioms lrc_maxgap_exists_gap_gt_or_all_eq_one_seventh_audit
+
+theorem lrc_goodSet_measurableSet_arc_audit (c : ℤ) :
+    MeasurableSet {x : ℝ | Int.fract ((c : ℝ) * x) ∉ Set.Ioc (0 : ℝ) (1 / 7)} :=
+  TournamentH7.GoodSet.measurableSet_arc c
+#print axioms lrc_goodSet_measurableSet_arc_audit
+
+theorem lrc_goodSet_measurableSet_goodSet_audit (E : List ℤ) :
+    MeasurableSet (TournamentH7.GoodSet.goodSet E) :=
+  TournamentH7.GoodSet.measurableSet_goodSet E
+#print axioms lrc_goodSet_measurableSet_goodSet_audit
 
 /-! ### LRC14 witness/p0 event-level elementary inclusions -/
 

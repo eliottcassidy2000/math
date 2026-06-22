@@ -41,9 +41,40 @@ theorem exists_gap_gt_one_seventh {k : ℕ} (hk : 0 < k) (hk6 : k ≤ 6)
   have hk7 : (k : ℝ) < 7 := by exact_mod_cast Nat.lt_succ_of_le hk6
   exact one_div_lt_one_div_of_lt hkpos hk7
 
+/-- **Seven-gap equality boundary.**  If seven cyclic gaps sum to `1` and every
+gap is at most `1/7`, then every gap is exactly `1/7`.  This isolates the
+remaining `k = 7` `hnu1` obstruction to the equal-spacing event; the strict
+`> 1/7` event follows everywhere off this boundary. -/
+theorem all_eq_one_seventh_of_le (g : Fin 7 → ℝ)
+    (hsum : ∑ i, g i = 1)
+    (hle : ∀ i, g i ≤ (1 : ℝ) / 7) :
+    ∀ i, g i = (1 : ℝ) / 7 := by
+  intro i
+  by_contra hne
+  have hlt_i : g i < (1 : ℝ) / 7 := lt_of_le_of_ne (hle i) hne
+  have hsum_lt : ∑ j, g j < ∑ _j : Fin 7, (1 : ℝ) / 7 := by
+    exact Finset.sum_lt_sum (s := Finset.univ) (fun j _ => hle j)
+      ⟨i, Finset.mem_univ i, hlt_i⟩
+  rw [hsum, Finset.sum_const, Finset.card_univ, Fintype.card_fin] at hsum_lt
+  norm_num at hsum_lt
+
+/-- **Seven-gap strict-or-boundary split.**  Seven cyclic gaps summing to `1`
+either contain a gap strictly larger than `1/7`, or all seven gaps are exactly
+`1/7`.  This is the finite algebraic part of the a.e. `k = 7` `hnu1` node. -/
+theorem exists_gap_gt_or_all_eq_one_seventh (g : Fin 7 → ℝ)
+    (hsum : ∑ i, g i = 1) :
+    (∃ i, (1 : ℝ) / 7 < g i) ∨ ∀ i, g i = (1 : ℝ) / 7 := by
+  by_cases hle : ∀ i, g i ≤ (1 : ℝ) / 7
+  · exact Or.inr (all_eq_one_seventh_of_le g hsum hle)
+  · push Not at hle
+    obtain ⟨i, hi⟩ := hle
+    exact Or.inl ⟨i, hi⟩
+
 /-! ## Axiom audit -/
 
 #print axioms exists_one_div_card_le
 #print axioms exists_gap_gt_one_seventh
+#print axioms all_eq_one_seventh_of_le
+#print axioms exists_gap_gt_or_all_eq_one_seventh
 
 end TournamentH7.MaxGapPigeonhole

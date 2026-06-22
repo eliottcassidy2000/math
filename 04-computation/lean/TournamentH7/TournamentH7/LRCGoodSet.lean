@@ -14,7 +14,6 @@
   codex's `shape_bonferroni_handoff`; my pigeonhole (`LRCMaxGapPigeonhole`) gives
   `goodSet = univ` for cluster size ≤ 6 (the `hnu1` node).
 -/
-import Mathlib
 import TournamentH7.LRCDenseCovers
 
 open MeasureTheory Set
@@ -43,5 +42,10 @@ theorem measurableSet_goodSet (E : List ℤ) : MeasurableSet (goodSet E) := by
   refine Finset.measurableSet_biUnion _ (fun a _ => ?_)
   refine Finset.measurableSet_biInter _ (fun b _ => ?_)
   simpa using measurableSet_arc (b - a)
+
+/-! ## Axiom audit -/
+
+#print axioms measurableSet_arc
+#print axioms measurableSet_goodSet
 
 end TournamentH7.GoodSet

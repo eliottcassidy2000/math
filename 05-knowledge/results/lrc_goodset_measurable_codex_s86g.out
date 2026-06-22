@@ -1,0 +1,2 @@
+'TournamentH7.GoodSet.measurableSet_arc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentH7.GoodSet.measurableSet_goodSet' depends on axioms: [propext, Classical.choice, Quot.sound]

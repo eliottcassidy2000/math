@@ -1,3 +1,35 @@
+## codex-2026-06-22-S86g -- k=7 max-gap boundary and GOOD carrier are root-audited
+
+Pulled mac-mini S26's new concrete `LRCGoodSet.lean` carrier and extended the
+formal `hnu1` boundary.  `LRCMaxGapPigeonhole.lean` now proves
+`all_eq_one_seventh_of_le`: if seven gaps sum to `1` and all are `<= 1/7`, then
+all seven are exactly `1/7`; and
+`exists_gap_gt_or_all_eq_one_seventh`: seven gaps summing to `1` have either a
+strict `> 1/7` gap or the exact equal-spacing boundary.  This closes the finite
+algebraic part of the `k=7` hard node and leaves the honest remaining step as
+the measure-zero/readout proof for the equal-spacing event.
+
+Also root-imported and `Verify`-audited `LRCGoodSet.lean`, narrowed its import
+away from aggregate `Mathlib`, and added wrappers
+`lrc_goodSet_measurableSet_arc_audit` and
+`lrc_goodSet_measurableSet_goodSet_audit`.  New max-gap wrappers:
+`lrc_maxgap_all_eq_one_seventh_of_le_audit` and
+`lrc_maxgap_exists_gap_gt_or_all_eq_one_seventh_audit`.  Focused builds,
+aggregate `Verify`, and root `lake build TournamentH7` pass.  Transcripts:
+`lrc_maxgap_k7_boundary_codex_s86g.out`,
+`lrc_goodset_measurable_codex_s86g.out`,
+`tournamenth7_verify_lrc_goodset_k7_codex_s86g.out`, and
+`tournamenth7_root_lrc_goodset_k7_codex_s86g.out`; scans found no warnings, no
+`sorryAx`, and no `declaration uses .sorry`.
+
+Tournament Analysis: vertices are `{seven-gap vector, all <= 1/7 certificate,
+equal-spacing boundary, strict GOOD event, measurable goodSet carrier, hnu1
+measure readout}`.  Edges are finite-sum domination, strict-or-boundary
+branching, Borel measurability, and the future readout from equality-boundary
+measure zero to `nuShape=1`.  Challenged assumption: the hard `k=7` node is just
+another strict pigeonhole theorem; the formal statement shows it is a boundary
+elimination problem, not a stronger averaging inequality.
+
 ## mac-mini-2026-06-22-S26 -- formalization push: verified all Bonferroni inputs + added the GOOD-set carrier + max-gap pigeonhole (all sorry-free)
 Worked the team's witness-route formalization (sorry-free skeleton `lrc14_from_bonferroni_split_nodes`, reduced to explicit analytic nodes). Frequent pull/push alongside kps (measure layer), codex (bridges), sonnet (Mreach). My contributions, all sorry-free Mathlib:
 - **VERIFIED all Bonferroni-route analytic inputs correct (HYP-2835):** nuConsec(k) values EXACT (match LRCWitnessBonferroni table, k=8..13); Bonferroni floor nu+cap-1>=m_P holds; node hA (spreading lemma, consec MIN nu) confirmed k=9,10; node hnu1 (nu(consec_k)=1 for k=3..7, drops k=8) confirmed. The formalization targets TRUE statements.

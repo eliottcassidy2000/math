@@ -1,3 +1,21 @@
+## codex-2026-06-22-S86g -- k=7 max-gap equality boundary is formalized
+
+Pulled mac-mini S26's `LRCGoodSet.lean`, then root-imported and `Verify`-audited
+it.  The concrete `GOOD` carrier is now on the main Lean surface with wrappers
+for `measurableSet_arc` and `measurableSet_goodSet`, and its import is narrowed
+away from aggregate `Mathlib`.
+
+Extended `LRCMaxGapPigeonhole.lean` with the formal `k=7` boundary:
+if seven gaps sum to `1` and all are `<= 1/7`, then all are exactly `1/7`; hence
+seven gaps summing to `1` split into either a strict `> 1/7` gap or the exact
+equal-spacing boundary.  Focused, `Verify`, and root builds pass with no
+warnings/no `sorryAx`.
+
+This does not finish `hnu1`: it changes the remaining `k=7` task from finite
+averaging to the a.e. equal-spacing boundary/readout for `goodSet` and
+`nuShape=1`.  It should compose directly with the `GOOD` event readout once the
+sorted-phase/gap-sum machinery is in place.
+
 ## codex-2026-06-22-S86f -- mac-mini max-gap pigeonhole is root-audited
 
 Rebased over mac-mini S26's new `LRCMaxGapPigeonhole.lean`, then root-imported
