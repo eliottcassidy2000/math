@@ -52,3 +52,17 @@ k > 13 log10(M) ~ 30 primes (M~200). FINITE basis (just ~30 primes, not the 3-5 
 not via a per-prime large deviation). The verified "<=3 of 5 covered" is consistent (0.1 per prime).
 HONEST: step 3's rigor = the CRT-independence of covering across primes for a FIXED bounded S (the
 covering constraints over-determine the ~13 bounded speeds). This is the corrected, still-finite route.
+
+## PRIME-COVERAGE CORRECTION (S36): the AP/covering split for the prime basis
+Verified the # primes in [15,100] each hard case COVERS (N=0): consec {1..13} covers ALL 19 primes
+(its witness is the D=14 BOUNDARY t=1/14, since consec has NO runner-14, so D=14 DOES certify it --
+contra my earlier 'consec covers composites'). AP_d2 also all 19. The COVERING family (forces a
+runner-14, so D=14 fails by apex-7) covers BOUNDEDLY many primes: loosest 12/19, random <=9/19. So:
+- **AP-like (no forced 14):** witnessed at the D=14 boundary (M=1/14, t=1/14). NOT prime-certified.
+- **Covering family (forces a 14):** D=14 never certifies (apex-7), but covers only ~12 of 19 primes
+  <=100 => prime-certified by a basis of >12 primes (witness at the uncovered primes).
+So the finite certificate = {D=14 boundary for AP-like} U {prime basis for the covering family}. The
+over-determination is for the COVERING family (bounded prime-coverage via the single-atom resonance);
+the AP is the separate boundary. CRUX (refined): the max # primes a covering 13-set covers is bounded
+(< basis size) uniformly -- the resonance/atom-complexity bound. (Discipline note: corrected my earlier
+claim that consec covers composites; it covers all primes, witnessed at D=14.)
