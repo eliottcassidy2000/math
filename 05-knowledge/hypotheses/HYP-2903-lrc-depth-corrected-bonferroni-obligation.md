@@ -16,6 +16,8 @@ related:
   - HYP-2788
   - HYP-2889
   - HYP-2890
+  - HYP-2905
+  - HYP-2906
   - OPEN-Q-108
 results:
   - 04-computation/lrc_depth_corrected_bonferroni_codex.py
@@ -208,6 +210,13 @@ equidistribution/induction skeleton is made effective, then the remaining
 irreducible work is precisely the bounded/binding Node-2 cap side.  So
 HYP-2903 should be read as a Node-2 scope correction, not as a replacement for
 the analytic Node-3 input.
+
+Post-S117b/HYP-2906 makes the routing sharper still.  If a far speed is locally
+peelable (`v_max>13v_second` in LRC14, or better from an explicit seed
+margin), the LRC witness is produced by the one-interval peeler before any
+p0-cap or Bonferroni tail sign is needed.  The missing-depth parity guard is
+therefore a balanced/binding cap obligation, not a one-large-speed existence
+obligation.
 
 ## Assumption challenge
 

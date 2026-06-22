@@ -1,0 +1,53 @@
+ONE-LARGE-SPEED INTERVAL PEELER (codex S117b)
+
+General lemma:
+  If seed max is m and seed witness margin is alpha>1/n,
+  then adding speed v is safe whenever
+      v > m / (n*(alpha-1/n)).
+  The proof only compares one connected seed-safe arc with one
+  connected tooth of the new speed's danger comb.
+
+LRC(n-1) corollary checked for n=4..14:
+  alpha=1/(n-1) gives the sharp symbolic threshold v > (n-1)*m.
+
+LRC14 generic seed from LRC13
+  n=14, alpha=1/13, seed max m=13
+  seed-safe arc length >= 1/1183
+  strict threshold v > 169
+  least integer v certified = 170
+  tooth length at v0 = 1/1190
+  arc > tooth? True
+
+LRC14 AP-core seed {1,...,11,13} using tau=1/12
+  n=14, alpha=1/12, seed max m=13
+  seed-safe arc length >= 1/546
+  strict threshold v > 78
+  least integer v certified = 79
+  tooth length at v0 = 1/553
+  arc > tooth? True
+
+Pure dilation hard core {b,2b,...,12b,V} with b=1
+  n=14, alpha=1/13, seed max m=12
+  seed-safe arc length >= 1/1092
+  strict threshold v > 156
+  least integer v certified = 157
+  tooth length at v0 = 1/1099
+  arc > tooth? True
+
+Committed AP-core lcm speeds:
+  v=30030: certified by local AP-core peeler? True
+  v=60060: certified by local AP-core peeler? True
+  v=510510: certified by local AP-core peeler? True
+
+Tournament Analysis carriers:
+  1. connected_seed_safe_arc
+  2. single_comb_tooth_width
+  3. smaller_LRC_margin
+  4. scale_ratio_gate
+  5. global_component_budget
+  6. runner_count_only_induction
+  7. raw_runner_vertices
+  Hamiltonian path is transitive: the local connected-arc carrier
+  preserves the LRC predicate with less topology than the global
+  component-budget route, while runner-count-only induction forgets
+  the needed scale ratio.

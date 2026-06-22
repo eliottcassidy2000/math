@@ -6,6 +6,37 @@ Owner: immerse in tournament-induction work, then flush out the LRC. Reflection:
 - **Winding-tournament link:** consec's loneliest moment t=1/14 = the 14-grid (evenly spaced) = the circulant winding tournament (i->j iff (i-j) mod 14 in {1..6}; antipodal tie at 7 = apex). The LRC extremal IS a tournament extremal.
 - **HONEST:** induction mapped + obstruction located at a single finite atom {consec, GW} (M=1/14, verified). Remaining: reduction exhaustiveness (scale separation, codex) + tight-locus finiteness (consec+GW, kps GW census) + the consec-maximizes bound (the H=21-analog Moon step). LRC(14) NOT finished.
 NEW: reflection + lrc_bounded_core_irreducible_macmini_S47.py. NEXT: the single-atom bound (consec maximizes) -- the irreducible Moon-analog crux.
+## codex-2026-06-22-S117b -- one-large-speed interval peeler gives the `v>13m` LRC14 gate
+
+User asked to keep working on the proof now that the right object was known.
+Pulled main; no new incoming work.  Built the sharper local version of the
+scale-separated induction atom.
+
+Added `04-computation/lrc_one_large_interval_peel_codex_s117.py` and stored
+`05-knowledge/results/lrc_one_large_interval_peel_codex_s117.out`.  The proof
+fragment is exact: if a seed `B` has max speed `m` and one witness `tau` with
+`||b tau||>=alpha>1/n` for every seed speed, then the seed stays
+threshold-`1/n` safe on a connected interval of length
+`2(alpha-1/n)/m`.  The added speed `v` has danger teeth of length `2/(nv)`;
+if `v>m/(n(alpha-1/n))`, one seed-safe point avoids the new danger comb.
+
+Taking `alpha=1/(n-1)` from `LRC(n-1)` gives `v>(n-1)m`.  For LRC14: if the
+largest speed is greater than `13` times the second largest, the row is safe
+by LRC13.  Therefore every counterexample must be top-balanced before it
+reaches the bounded cap/depth-parity machinery.  For the AP-core
+`{1,...,11,13}`, the explicit seed witness `tau=1/12` improves the local gate
+to `v>78`, certifying committed lcm speeds such as `30030`, `60060`, and
+`510510` without equidistribution.  HYP-2904 remains the density/multi-large
+component-budget object; HYP-2906 is the existence-first one-speed peeler.
+Created HYP-2906/T1019 and reflection
+`07-reflections/lrc-one-large-speed-interval-peeler-codex-s117.md`.
+
+Final rebase brought in KPS-S31y on the bounded atom: the apex-7 over-cover is
+conjecturally the forbidden `K_3`/`H=7` conflict graph, using
+`14=2*I(K_3,2)`.  Integrated this into HYP-2905 as a bounded-core target after
+the local interval peeler and component-budget peels have fired.  Honest
+status preserved: the open crux is proving `apex-7 over-cover <=> K_3`;
+S31y is a candidate finite atom theorem, not a completed LRC14 proof by itself.
 
 ## mac-mini-2026-06-22-S46 -- concurrent push: Node 3 (equidistribution) VERIFIED + the assembled dichotomy skeleton (TIGHT-LOCUS vs SLACK)
 Concurrent w/ kps (S31t/u/v Bonferroni+multi-large) + codex (S114 sheaf/radical). HYP-2900.

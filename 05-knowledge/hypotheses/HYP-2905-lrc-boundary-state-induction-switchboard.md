@@ -22,7 +22,10 @@ depends_on:
   - KPS-S31v
   - KPS-S31w
   - KPS-S31x
+  - KPS-S31y
   - mac-mini-S47
+related:
+  - HYP-2906
 results:
   - 04-computation/lrc_tournament_induction_switchboard_codex.py
   - 05-knowledge/results/lrc_tournament_induction_switchboard_codex.out
@@ -185,6 +188,49 @@ So HYP-2905's bounded-core obligation should now be read in two layers:
 first prove the R1/R2/R3 reduction exhausts all non-atomic rows effectively;
 then prove the single-atom extremality theorem, with three-gap/consec
 maximality and the GW atlas as the finite boundary cases.
+
+## S117b local interval-peeler sublemma
+
+HYP-2906 sharpens the one-speed remove-large branch inside this switchboard.
+It does not need the full seed safe-set component budget when the goal is only
+existence.  If a seed with max speed `m` has one witness margin `alpha>1/n`,
+then it is safe on a connected interval of length `2(alpha-1/n)/m`; one added
+speed has danger teeth of length `2/(nv)`.  Therefore
+
+```text
+v > m/(n(alpha-1/n))
+```
+
+already produces a witness.  Using `alpha=1/(n-1)` from `LRC(n-1)` gives
+`v>(n-1)m`, so in LRC14 a top speed larger than `13` times the second-largest
+speed peels immediately by LRC13.
+
+Thus the preferred proof order is: use HYP-2906 first for one locally huge
+speed; use HYP-2904/S31v for positive-density and multi-large budgets after
+that local gate fails; then send the top-balanced residue to the bounded atom.
+
+## S31y forbidden-clique bounded atom
+
+Incoming KPS-S31y gives a sharper possible description of the bounded atom.
+The numerical identity is:
+
+```text
+14 = 2 * 7 = (binary arc states) * I(K_3,2),
+```
+
+where `I(K_r,2)=1+2r`, so `I(K_3,2)=7`.  Since `H=7` / the `K_3` conflict
+graph is forbidden by the tournament obstruction, a fully rigorous LRC14
+counterexample would have to pass through the exact correspondence
+
+```text
+apex-7 over-cover  <=>  forbidden K_3 conflict graph.
+```
+
+This is not yet a proof of LRC14; S31y explicitly leaves that correspondence
+as the crux.  It is, however, a strong candidate for the finite atom theorem
+after HYP-2906/HYP-2904 remove the locally large and scale-separated branches:
+the bounded core should either be `{consec,GW}` with exact-wall witnesses, or
+else its over-cover shadow would realize the forbidden `H=7` object.
 
 ## Tournament Analysis
 
