@@ -37,6 +37,47 @@ Owner: the mediant of K5,K3,3 edge-densities reproduces disjoint unions mK5+nK3,
 - HONEST: verified pieces + a STRUCTURAL/thematic unification (why 7 governs planarity-style obstructions, the H-spectrum, AND the LRC); a unifying lens, not a new LRC proof step (open core = three-gap rigidity).
 NEW: reflection. The owner's mediant = the graph-theoretic face of the apex-7 / the additive Stern-Brocot thread = the LRC tight locus.
 
+## codex-2026-06-22-S128 -- THM-572 formalizes the tournament-state lift closure endpoint
+
+User asked to aim for a tournament LRC14 proof. Pulled/rebased to `cb9f31da4`
+and treated the incoming tournament-spectrum corrections as signal: raw
+tournament isomorphism is magnitude-blind, but HYP-2908's state-lift route
+remains viable if the LRC atom carries q/off-apex packet data into the actual
+tournament category.
+
+Added Lean module
+`04-computation/lean/TournamentH7/TournamentH7/LRCTournamentStateLift.lean`.
+The new structure `LonelyRunner.TournamentStateLift` carries a tournament
+`T`, a packet value, and proofs that the packet value agrees with `H(T)` and
+equals `7`.  Theorems `no_tournament_state_lift`,
+`not_bad_of_tournament_state_lift`, and
+`not_bad_of_H_eq_seven_lift` close any bad-atom predicate once such a lift is
+constructed, by the existing `Tournament.H_ne_seven` theorem.  `TournamentH7`
+and `Verify` now import and audit this endpoint.
+
+Verification: `lake build TournamentH7.LRCTournamentStateLift
+TournamentH7.Verify` passed.  New canon theorem THM-572 records the result, and
+HYP-2908 now points to it as the machine-checked contradiction side of the
+forbidden-H7 route.  Proof state: the missing theorem is no longer "use
+tournaments somehow"; it is the construction
+
+```text
+remaining LRC14 |M14|<=6 / shell-height bad atom -> TournamentStateLift.
+```
+
+Post-rebase integration: mac-mini S58 and HYP-2930's Farey-mediant tournament
+interface clarify where this endpoint belongs.  The additive
+mediant/Stern-Brocot side controls the tight-locus/binding-scale problem;
+THM-572 is the multiplicative `I(Omega,2)=H` endpoint for the forbidden `7`
+value once the LRC residual is lifted into the tournament-conflict category.
+
+Assumption challenge: vertices need not be runners or one-time winding
+tournament classes.  Viable carriers are sector-state words, wall-crossing
+packets, cover arcs, exact-period packets, support-six relation packets, or
+proof-obligation packets.  The quotient must preserve the activity-two packet
+value and agreement with `H`; raw tournament isomorphism alone is insufficient
+by HYP-2924/HYP-2926.
+
 ## kind-pasteur-2026-06-22-S41 -- the OWNER'S REFRAME: the object is the tournament SPECTRUM (set of iso classes over all phases), not a single tournament; tight <=> binding scale 14
 Owner correction: "a single tournament fixes one phase => the object is a SET of tournament iso classes." VALIDATED + made useful. HYP-2928 + reflection the-tournament-spectrum-is-the-object.
 - **THE SPECTRUM Sigma(S) = {iso(T(S,t)): t in [0,1)}** (each class weighted by t-measure; breakpoints t=k/(s_i-s_j),k/(2s_i) DEPEND ON MAGNITUDES). MAGNITUDE-AWARE where the single apex tournament was BLIND: AP and loose 12->26 have IDENTICAL apex tournaments but DIFFERENT spectra (|Sigma|=14 vs 24; AP concentrated on regular R_13 at measure 0.24 vs 0.011).

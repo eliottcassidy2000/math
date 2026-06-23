@@ -71,6 +71,7 @@ import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCWitnessPartA
 import TournamentH7.LRCL7Discrepancy
 import TournamentH7.LRCApexShell
+import TournamentH7.LRCTournamentStateLift
 
 open Tournament
 
@@ -94,6 +95,23 @@ theorem lrc_apex_shell_fourteen_dvd_pair_sum_audit (u v a m n D : ℤ)
   LonelyRunner.ApexShell.fourteen_dvd_pair_sum_of_opposite_bindings
     u v a m n D hcop hpos hneg
 #print axioms lrc_apex_shell_fourteen_dvd_pair_sum_audit
+
+/-! ### LRC14 tournament-state lift closure endpoint -/
+
+theorem lrc14_no_tournament_state_lift_audit
+    (L : LonelyRunner.TournamentStateLift) : False :=
+  LonelyRunner.no_tournament_state_lift L
+#print axioms lrc14_no_tournament_state_lift_audit
+
+theorem lrc14_not_bad_of_tournament_state_lift_audit {Bad : Prop}
+    (hLift : Bad → LonelyRunner.TournamentStateLift) : ¬ Bad :=
+  LonelyRunner.not_bad_of_tournament_state_lift hLift
+#print axioms lrc14_not_bad_of_tournament_state_lift_audit
+
+theorem lrc14_not_bad_of_H_eq_seven_lift_audit {Bad : Prop}
+    (hLift : Bad → ∃ n : ℕ, ∃ T : Tournament n, H T = 7) : ¬ Bad :=
+  LonelyRunner.not_bad_of_H_eq_seven_lift hLift
+#print axioms lrc14_not_bad_of_H_eq_seven_lift_audit
 
 /-! ### LRC14 HYP-2805 genuine-wide correction kernel -/
 

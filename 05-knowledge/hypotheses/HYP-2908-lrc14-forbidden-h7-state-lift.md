@@ -18,6 +18,7 @@ depends_on:
   - THM-200
   - THM-201
   - THM-343
+  - THM-572
 related:
   - KPS-S31y
   - THM-344
@@ -25,6 +26,7 @@ related:
 results:
   - 04-computation/lrc_h7_state_lift_codex_s118.py
   - 05-knowledge/results/lrc_h7_state_lift_codex_s118.out
+  - 04-computation/lean/TournamentH7/TournamentH7/LRCTournamentStateLift.lean
 ---
 
 # HYP-2908: LRC14's forbidden-H7 route needs a state lift, not just a digraph
@@ -59,6 +61,16 @@ that a connected K3 conflict atom forces extra odd-cycle mass.
 If this lift is proved, LRC14 is impossible to disprove by a counterexample:
 `I(G_LRC,2)=7` forces `G_LRC=K_3`, while the tournament conflict category
 forbids the `K_3` atom.
+
+Codex S128/THM-572 now formalizes this closure endpoint in Lean.  The theorem
+`LonelyRunner.not_bad_of_tournament_state_lift` says that any bad-atom
+predicate is empty once each bad atom constructs a `TournamentStateLift` whose
+activity-two packet value is `7` and agrees with tournament `H`.  Thus the
+tournament route's remaining work is exactly the first arrow:
+
+```text
+LRC14 bad atom  ->  TournamentStateLift.
+```
 
 ## Exact atom
 
@@ -160,6 +172,14 @@ counterexample
   -> contradiction.
 ```
 
+In the Lean endpoint this same closure is packaged as:
+
+```text
+counterexample
+  -> TournamentStateLift with packetValue = H(T) = 7
+  -> contradiction by H_ne_seven.
+```
+
 ## What this does and does not prove
 
 This does not prove LRC14 yet.  It isolates the exact missing bridge in the
@@ -172,6 +192,10 @@ apex-7 over-cover  <=>  forbidden K3 conflict graph.
 The S118 contribution is the guardrail around that slogan.  If the bridge lands
 in arbitrary digraphs or even graphs, `7` is realizable and there is no
 contradiction.  If it lands in tournament conflict packets, `7` is impossible.
+
+After THM-572, the contradiction side is no longer a prose handoff.  The live
+mathematical target is a construction theorem for the `TournamentStateLift`
+object from the remaining `|M14|<=6` finite-core / shell-height atom.
 
 So the route is better read as "prove that an LRC14 disproof is impossible"
 rather than as a construction of a disproof.  A disproof would have to realize
