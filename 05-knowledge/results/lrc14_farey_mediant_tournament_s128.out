@@ -1,0 +1,80 @@
+S128 LRC14 FAREY-MEDIANT TOURNAMENT INTERFACE
+==============================================================================
+[Assumption challenge]
+  considered vertex sets: runners, residues, Farey fractions, row families,
+    optimum witness times, and proof obligations.
+  chosen carriers: runner winding tournaments at t=1/14 and t=M(S), plus
+    a row-level proof-priority tournament by escape height.
+  preserved: Farey excess, achieved winding class, and proof ordering.
+  destroyed: continuous neighborhoods away from the chosen scales.
+
+[Farey algebra around 1/14]
+  threshold floor = 1/14
+  right parent    = 1/13
+  child p=2: 2/27 = mediant(1/14,1/13), gap=1/378, determinant=-1
+  child p=3: 3/41 = mediant(1/14,2/27), gap=1/574, determinant=-1
+  child p=4: 4/55 = mediant(1/14,3/41), gap=1/770, determinant=-1
+  child p=5: 5/69 = mediant(1/14,4/55), gap=1/966, determinant=-1
+  child p=6: 6/83 = mediant(1/14,5/69), gap=1/1162, determinant=-1
+
+  A achieved class groups:
+    A0: AP, residue-liar 12->26, 12m family m=8
+    A1: GW 12->24, 12m family m=7
+    A2: near-miss 12->36
+    A3: petal 8->16, 12m family m=4
+    A4: petal 10->20
+    A5: petal 7->14
+    A6: petal 9->18
+    A7: petal 11->22
+    A8: petal 13->26
+    A9: 12m family m=5
+    A10: 12m family m=6
+  F achieved class groups:
+    F0: AP
+    F1: GW 12->24
+    F2: residue-liar 12->26
+    F3: near-miss 12->36, 12m family m=4, 12m family m=5, 12m family m=6, 12m family m=7, 12m family m=8
+    F4: petal 8->16
+    F5: petal 10->20
+    F6: petal 7->14
+    F7: petal 9->18
+    F8: petal 11->22, petal 13->26
+
+[Rows: exact M, Farey status, apex class, optimum class]
+  row                       q       M   e  apex   opt   c3         hp  Farey status
+  AP                       14    1/14   0 A0    F0      91    3711175  tight floor e=0
+  GW 12->24                14    1/14   0 A1    F1      89    3351471  tight floor e=0
+  residue-liar 12->26      12    1/12   2 A0    F2      84    2504225  nonunit excess e=2
+  near-miss 12->36         14    3/41   1 A2    F3      87    2941087  unit child: med(1/14,2/27)
+  petal 8->16              14    2/23   5 A3    F4      79    1780425  nonunit excess e=5
+  petal 10->20             14    2/27   1 A4    F5      88    3139599  unit child: med(1/14,1/13)
+  petal 7->14              15    1/11   3 A5    F6      73    1236275  nonunit excess e=3
+  petal 9->18              14    2/23   5 A6    F7      86    2772327  nonunit excess e=5
+  petal 11->22             14    2/25   3 A7    F8      90    3551083  nonunit excess e=3
+  petal 13->26             14    2/27   1 A8    F8      90    3551083  unit child: med(1/14,1/13)
+  12m family m=4           14    4/53   3 A3    F3      87    2941087  nonunit excess e=3
+  12m family m=5           14    1/13   1 A9    F3      87    2941087  right Farey parent 1/13
+  12m family m=6           14    6/77   7 A10   F3      87    2941087  nonunit excess e=7
+  12m family m=7           15    7/89   9 A1    F3      87    2941087  nonunit excess e=9
+  12m family m=8           14   8/101  11 A0    F3      87    2941087  nonunit excess e=11
+
+[Row-level proof-priority tournament]
+  vertices: listed candidate rows
+  observable: exact escape height M(S)-1/14
+  switch/gauge: smaller escape beats larger escape; ties follow listed order
+  quotient preserves: proof priority by closeness to the LRC14 floor
+  quotient destroys: runner geometry and exact winding class
+  fingerprint: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1), (14, 1)) c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) hp=1
+
+[Proof readout]
+  Unit excess e=1 is the exact Farey-neighbor condition.
+  The near miss 12->36 has M=3/41, the second iterated mediant child
+  above 1/14: 3/41 = mediant(1/14, 2/27).
+  A tournament-only apex proof cannot work, because apex classes are
+  magnitude-blind.  The plausible tournament proof must be multi-scale:
+    apex class at 1/14 + first Farey-mediant escape class + q-threshold data.
+  Local theorem target:
+    every non-AP/GW q=14 survivor either has nonunit excess, or enters a
+    unit-excess Farey child class outside the tight optimum classes.
+  That would turn the mediant into a certificate M(S)>1/14, not just a
+  numerical near miss.

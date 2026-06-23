@@ -1,3 +1,33 @@
+## codex-2026-06-23-S128 -- Farey-mediant tournament interface for LRC14
+
+User prompted: "The mediant of a farey sequence. a tournament LRC 14 proof."
+Added `04-computation/lrc14_farey_mediant_tournament_s128.py` with stored
+output `05-knowledge/results/lrc14_farey_mediant_tournament_s128.out`, and
+registered HYP-2930.
+
+Exact arithmetic hook: for `M(S)=p/q`, define `e=14p-q`.  Then `e=0` is
+tight at `1/14`, and `e=1` is exactly the Farey-neighbor condition
+`det[[1,p],[14,q]]=-1`.  The unit-excess values are the iterated
+Stern-Brocot mediants above `1/14`: `2/27=mediant(1/14,1/13)` and the
+near-miss `3/41=mediant(1/14,2/27)`, with gap `1/(14*41)`.
+
+Tournament Analysis carriers: runner winding tournaments at the apex `t=1/14`,
+runner winding tournaments at the exact optimizer `t=M(S)`, and a row-level
+proof-priority tournament whose observable is escape height `M(S)-1/14`
+(smaller escape beats larger; listed order breaks ties).  The row-priority
+tournament is transitive (`c3=0`, `hp=1`), so it is a ledger, not geometry.
+
+Readout: apex classes remain magnitude-blind, but optimum/Farey classes split
+the local tight rows.  In the audited set `F0=AP` and `F1=GW`; unit-excess
+loose children `12->36`, `10->20`, `13->26`, and `12m m=5` land outside
+`F0/F1`.  The local theorem target is now sharp: every non-AP/GW `q=14`
+survivor either has nonunit excess `e>1` or enters a unit-excess Farey child
+class outside the tight optimum classes; either certifies `M>1/14`.  This is
+not a proof of LRC14; it is the exact mediant/tournament dictionary a proof
+would need.  Integrated the incoming HYP-2928 guardrail before commit: the
+object cannot be one fixed tournament class, but a Farey-indexed spectrum plus
+binding scale.
+
 ## mac-mini-2026-06-22-S58 -- the obstruction-combining DUALITY: additive mediant (graphs) <-> multiplicative I(Omega,2) (tournaments), meeting at apex 7
 Owner: the mediant of K5,K3,3 edge-densities reproduces disjoint unions mK5+nK3,3 -- the mediant combines obstruction copies. Engaged + gave the tournament counterpart. Reflection: the-obstruction-combining-duality-additive-mediant-vs-multiplicative-I.md.
 - **GRAPH side (verified):** mK5 ⊔ nK3,3 has (v,e)=(5m+6n,10m+9n) = the iterated MEDIANT of (10,5),(9,6) = Stern-Brocot/Farey between 3/2 and 2/1. 6K5+5K3,3 hits 7/4 (apex 7 in numerator).
@@ -45,7 +75,6 @@ Owner: tournament analysis of the LRC(14) tight-locus census; THREAD 1 = apex wi
 - **Achievable apex iso classes:** regular R_13 is achievable ONLY from the all-distinct residue support {1..13} (the AP) -- the UNIQUE regular apex class. The GW family (156 one-doubled/one-missing patterns x 6 phases) yields 842 distinct apex iso classes, ZERO regular. Proven-tight sets {AP, GW} realize exactly {R_13, GW-one-dipole-class}.
 - **Necessary-but-insufficient verdict (refined):** "apex = regular R_13" is necessary+sufficient ONLY for the AP and FAILS as necessary for GW (GW tight, apex NOT regular). Correct necessary condition: apex residues tile Z/14 with one hole at residue 0, allowing one doubled+one missing nonzero class. MAGNITUDE-BLIND (sharpest form): AP, 12->26 (q=12, loose), 12->96 (q=14, loose) have LITERALLY IDENTICAL residues {1..13} (26==96==12 mod14) => byte-identical apex tournament; the tight/loose split is apex-invisible, lives at Farey-neighbor mod-41 scale.
 - HONEST: this RIGOROUSLY VERIFIES + CORRECTS the mac-mini-S57 / HYP-2922 reframing (adds exact H/iso/Aut, kills the a-invariance error). Tournament iso class is NECESSARY-ONLY for the census; magnitude is the open core. Does NOT advance the open LRC(14) residual.
-
 ## mac-mini-2026-06-22-S57 -- LRC as TOURNAMENT ANALYSIS: the winding realization; the metric lives at the optimum iso class (= the residue census)
 Owner: employ tournament analysis -- realize the LRC as tournament iso classes, which subset is achievable. Reflection: lrc-as-tournament-analysis-the-winding-realization-and-where-the-metric-lives.md.
 - **EXACT realization (winding tournament):** n vertices = observer + runners; cutoff 1/2: u->v iff frac((s_u-s_v)t) in (0,1/2). Discretizes continuous t. Achievable set A(S)={iso[T(t)]}.
