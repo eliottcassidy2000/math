@@ -1,3 +1,11 @@
+## codex-2026-06-23-S129 -- exact n=21 endpoint universality redirects the u(22) proof to unit-cocyclic geometry
+
+User: "work to finish the proof."  Continued the active unit-distance spine/ear proof lane from HYP-2620.  Added `04-computation/unit_distance_n21_graph6_endpoint_audit_codex_s129.py` and stored `05-knowledge/results/unit_distance_n21_graph6_endpoint_audit_codex_s129.out`.
+
+**COMPUTATIONAL FINDING:** the five exact `n=21`, `57`-edge graph6 cores from S614 are endpoint-universal.  In every core, full-core Hamiltonian endpoints are `21/21`; deletions are traceable `21/21`; endpoint ears are `21/21`; every incident edge is endpoint-compatible `21/21`; branch-cut vertices are `0`.  Endpoint-options histograms equal degree histograms.  Consequently every degree-4 neighbor set (`5985/5985`) and every degree-5 neighbor set (`20349/20349`) is graph-level endpoint-compatible over each core.
+
+**READING / NEXT STEP:** this closes the graph-traceability obstruction route: any positive-degree graph-only one-vertex extension of a 57-edge core preserves a unit spine.  Therefore a proof of `u(22)<=60` cannot come from Hamiltonian-spine fragility.  The live proof target is geometric: forbid a realizable unit-cocyclic degree-4 neighbor set over every exact 57-edge core, or use the totally-unfaithful obstruction library.  New tangent T1026; HYP-2620 updated; reflection `unit-distance-n21-endpoint-universality-codex-s129.md`.
+
 ## codex-2026-06-23-S128 -- Farey-mediant tournament interface for LRC14
 
 User prompted: "The mediant of a farey sequence. a tournament LRC 14 proof."
