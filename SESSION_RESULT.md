@@ -2,59 +2,62 @@
 
 ## Task Chosen
 
-I chose one small Hamiltonian-path sanity check: re-verify the
-near-transitive single-arc flip formula for the transitive tournament
-`T_n`.
+I chose one small Hamiltonian-path spectrum sanity check from the tournament
+thread: re-verify that labeled tournaments through `n <= 6` have no example
+with exactly `H(T) = 7` Hamiltonian paths, and that all Hamiltonian path counts
+in this finite range are odd.
 
-The checked claim is THM-250:
-
-```text
-H(T_n^(a,b)) = 2^(b-a-1) + 1,  if b-a >= 2
-H(T_n^(a,b)) = 1,              if b-a = 1
-```
-
-where `T_n^(a,b)` is obtained from the transitive tournament by reversing the
-single arc `a -> b`.
+This checks the small guardrail used around the forbidden `H = 7` discussion in
+`00-navigation/OPEN-QUESTIONS.md`.
 
 ## What I Did
 
-I ran a transient exact Held-Karp dynamic program for Hamiltonian path counts.
-For every `n = 3..11` and every single flipped arc `0 <= a < b < n`, I computed
-`H(T_n^(a,b))` and compared it with the formula above.  No floating-point
-arithmetic was used, and no retained script was added.
+I skimmed `00-navigation/OPEN-QUESTIONS.md`,
+`00-navigation/INVESTIGATION-BACKLOG.md`, and the required
+`00-navigation/CONCURRENT-SESSIONS.md`.  There was no `README` or `INDEX` file
+under `00-navigation/`.
+
+I then ran two transient exact enumerations over all labeled tournaments for
+`n = 1..6`:
+
+- a Held-Karp dynamic program over subsets for `H(T)`;
+- an independent brute-force permutation checker for the same range.
+
+No retained research script was added.
 
 ## Concrete Result
 
-There were zero mismatches across all checked flips for `n = 3..11`.
-
-The values depend only on the distance `d = b-a`:
+Both implementations agreed.  The exact labeled spectra and frequencies are:
 
 ```text
-d=1  -> H=1
-d=2  -> H=3
-d=3  -> H=5
-d=4  -> H=9
-d=5  -> H=17
-d=6  -> H=33
-d=7  -> H=65
-d=8  -> H=129
-d=9  -> H=257
-d=10 -> H=513
+n=1: spectrum [1]
+  frequencies: 1:1
+
+n=2: spectrum [1]
+  frequencies: 1:2
+
+n=3: spectrum [1, 3]
+  frequencies: 1:6, 3:2
+
+n=4: spectrum [1, 3, 5]
+  frequencies: 1:24, 3:16, 5:24
+
+n=5: spectrum [1, 3, 5, 9, 11, 13, 15]
+  frequencies: 1:120, 3:120, 5:240, 9:240, 11:120, 13:120, 15:64
+
+n=6: spectrum [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  frequencies: 1:720, 3:960, 5:2160, 9:2960, 11:1440, 13:1440,
+  15:2208, 17:1440, 19:1440, 23:2880, 25:1440, 27:480,
+  29:2880, 31:1440, 33:2640, 37:3600, 41:720, 43:1440, 45:480
 ```
 
-This extends the computational verification range stated in
-`01-canon/theorems/THM-250-flip-formula.md` from `n <= 9` to `n <= 11` for
-this independent DP check.
+Therefore, in this complete labeled range:
 
-One minor documentation issue surfaced: the theorem statement is consistent
-with the computation, but its corollary display includes `2` in the listed set
-of single-flip values.  Under the theorem's own distance convention, no checked
-single flip gives `H=2`; the set through `n` should be
-`{1, 3, 5, 9, 17, ..., 2^(n-2)+1}`.
+- `count(H = 7) = 0` for every `n <= 6`;
+- every observed value of `H(T)` is odd.
 
 ## Confidence Note
 
-Confidence is high for this narrow verification.  The computation used exact
-integer counts and independently checked every single flip through `n=11`.
-This is not a new proof of THM-250; it is a finite audit plus a small corollary
-typo detection.
+Confidence is high for this narrow finite check.  The enumeration covers every
+labeled tournament through `n = 6`, and the Held-Karp counts were independently
+cross-checked by direct permutation enumeration.
