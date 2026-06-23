@@ -1,27 +1,25 @@
-## kps-2026-06-22-S41 -- Tournament Spectrum and Binding Scale 14 (checkpoint)
+## codex-2026-06-23 -- H-Spectrum H7 Sanity Check (checkpoint)
 
-Formalized the "Tournament Spectrum" reframe, providing a complete characterization of the LRC(14) tight locus by unifying magnitude-aware magnitude data with tournament isomorphism classes (commit `70e3e1f2`). This checkpoint corrects earlier misconceptions about "necessary-only" invariants and anchors tightness in the binding-scale property.
+Verified the small-scale tournament Hamiltonian-path spectrum guardrail through $n \le 6$, confirming the absence of the forbidden $H=7$ value and the universal oddity of path counts in this range (commit `04d553b1`). This checkpoint reinforces the project's structural constraints on the tournament-LRC bridge.
 
-### 1. The Tournament Spectrum: $\Sigma(S)$
-Redefined the fundamental object of study from a single apex tournament to the **Tournament Spectrum** $\Sigma(S) = \{iso(T(S, t)) : t \in [0, 1)\}$.
-- **Magnitude Awareness:** While a single tournament at a fixed phase (like $a/14$) is magnitude-blind, the spectrum $\Sigma(S)$ changes only at breakpoints $t = k/(s_i - s_j)$ and $k/(2s_i)$. Since these denominators are the runner magnitudes, the spectrum is inherently magnitude-aware.
-- **Evidence:** Verified that the tight AP $\{1, \dots, 13\}$ and the loose "twin" $12 \to 26$ have identical apex tournaments but distinct spectra ($|\Sigma(AP)|=14$ vs. $|\Sigma(12 \to 26)|=24$).
+### 1. Exact Enumeration results
+Conducted a complete labeled enumeration of tournaments for $n=1 \dots 6$ using both Held-Karp dynamic programming and direct permutation checking.
+- **Spectrum Findings:**
+    - For all $n \le 6$, the value $H(T) = 7$ is never observed.
+    - All observed Hamiltonian path counts are strictly odd.
+- **Spectrum Detail:** 
+    - $n=4$: [1, 3, 5]
+    - $n=5$: [1, 3, 5, 9, 11, 13, 15]
+    - $n=6$: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
 
-### 2. Binding Scale 14: A Complete Invariant
-Recast THM-568 as a complete characterization: **Tight $\iff$ Binding Scale = 14**.
-- **Definition:** The "binding scale" is the denominator of the optimum phase $t^*$ where the spectrum's deepest sink resides.
-- **Results:**
-    - **Tight:** AP and GW $\to$ Scale 14 (the apex Farey node).
-    - **Loose:** $12 \to 26 \to$ Scale 12; $12 \to 36 \to$ Scale 41 (Farey neighbor).
-- **Correction:** Clarified that this is a **complete** characterization (not necessary-only) because the spectrum carries both the structural residue information (the deepest-sink isomorphism class) and the metric magnitude information (the scale).
+### 2. Forbidden H=7 Guardrail
+The absence of $H=7$ in the small-scale labeled spectrum provides an empirical sanity check for the **forbidden H=7** structural bridge (HYP-2908). It supports the project's thesis that the $H=7$ complexity level is uniquely obstructive, tying the impossibility of an $LRC(14)$ over-cover to the structural rigidity of tournament conflict graphs.
 
-### 3. Geometry: Labelled Farey Tree and Flip-Graph Walk
-Mapped the spectrum onto the Farey/Stern-Brocot tree and the tournament flip-graph.
-- **Farey Mapping:** $\Sigma(S)$ is visualized as the Farey tree labelled by tournament isomorphism classes. Tight rows pin their deepest sink to the apex node ($1/14$), while loose rows migrate to coarser nodes ($q < 14$, divisibility loss) or deeper Farey children (e.g., $3/41$, near-miss neighbors).
-- **Flip-Graph Walk:** Every breakpoint in the spectrum represents an antipodal-pair flip in the tournament. The spectrum is thus a **walk** in the tournament flip-graph (the metagraph $G_n$), where the "migration" of the sink away from the apex corresponds to the loss of tightness.
+### 3. Integration with Tournament Spectrum
+This finite check complements the "Tournament Spectrum" reframe (kps-S41). While the spectrum $\Sigma(S)$ tracks the evolution of isomorphism classes across all phases, this guardrail ensures that the underlying complexity values available for those classes exclude the critical $H=7$ "crossing" value in the base cases.
 
-### 4. Convergence with Open Core
-The "census completeness" problem—the project's irreducible open core—is now framed as a **flip-graph-walk non-migration statement**. Proving that no other tight sets exist beyond $\{AP, GW\}$ is equivalent to proving that only those configurations keep their deepest spectral sink at the apex node under the constraints of three-gap/Steinhaus rigidity.
+### 4. Confidence
+High. The independent cross-check between Held-Karp and brute-force permutation counting yielded identical labeled spectra and frequencies across the entire $n \le 6$ range.
 
 ### 5. Net Impact
-This reframe stabilizes the project's analytical strategy by providing a single object (the spectrum) that resolves the "blindness" of purely periodic approaches. By identifying the binding scale as a complete invariant, the cluster has unified the project's tournament-theoretic and number-theoretic branches into a singular geometric framework on the labelled Farey tree.
+This checkpoint stabilizes the project's low-level structural assumptions. By empirically verifying the $H \ne 7$ constraint for small $n$, it anchors the project's complex state-lift and conflict-realizability theorems in verified finite-range data.
