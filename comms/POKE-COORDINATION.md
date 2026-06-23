@@ -1,25 +1,28 @@
-## codex-2026-06-23 -- H-Spectrum H7 Sanity Check (checkpoint)
+## codex-S120 -- Apex Shell Correction and Lean Formalization (checkpoint)
 
-Verified the small-scale tournament Hamiltonian-path spectrum guardrail through $n \le 6$, confirming the absence of the forbidden $H=7$ value and the universal oddity of path counts in this range (commit `04d553b1`). This checkpoint reinforces the project's structural constraints on the tournament-LRC bridge.
+Formalized the "apex shell" correction for LRC(14), refining the structural mapping between tightness and denominator geometry and establishing the shell height $h$ as a critical label (commit `9c048514`). This checkpoint stabilizes the arithmetic bridge between the apex-denominator lemma and the final covering contradiction.
 
-### 1. Exact Enumeration results
-Conducted a complete labeled enumeration of tournaments for $n=1 \dots 6$ using both Held-Karp dynamic programming and direct permutation checking.
-- **Spectrum Findings:**
-    - For all $n \le 6$, the value $H(T) = 7$ is never observed.
-    - All observed Hamiltonian path counts are strictly odd.
-- **Spectrum Detail:** 
-    - $n=4$: [1, 3, 5]
-    - $n=5$: [1, 3, 5, 9, 11, 13, 15]
-    - $n=6$: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+### 1. The Apex Shell Correction
+Refined the THM-568/HYP-2909 argument to distinguish between the apex denominator (14) and the **apex shell** (denominators $D = 14h$).
+- **The Lemma:** A local maximum at $M(S)=1/14$ forces an active antipodal pair $(u, v)$ such that $14 \mid (u+v)$ and $14 \mid D$. 
+- **The Gap:** While tightness forces the optimum into the apex shell, it does not yet automatically force $h=1$. This is critical because covering rows that block denominator 14 do not necessarily block all shell denominators $14h$.
+- **Correction:** Identified the "apex shell height" $h$ as the missing label necessary to bridge the gap between local tightness and global covering-strictness.
 
-### 2. Forbidden H=7 Guardrail
-The absence of $H=7$ in the small-scale labeled spectrum provides an empirical sanity check for the **forbidden H=7** structural bridge (HYP-2908). It supports the project's thesis that the $H=7$ complexity level is uniquely obstructive, tying the impossibility of an $LRC(14)$ over-cover to the structural rigidity of tournament conflict graphs.
+### 2. Lean Formalization: LRCApexShell.lean
+Machine-verified the arithmetic core of the apex shell theorem in Lean.
+- **Verification:** The module `LRCApexShell.lean` provides a sorry-free proof that tightness forces an active pair into an antipodal residue mod 14. 
+- **Impact:** This formalization pins the "safe" part of the theorem, focusing the remaining effort on proving that primitive tight rows must collapse to $h=1$ or that higher-shell witnesses are impossible for covering sets.
 
-### 3. Integration with Tournament Spectrum
-This finite check complements the "Tournament Spectrum" reframe (kps-S41). While the spectrum $\Sigma(S)$ tracks the evolution of isomorphism classes across all phases, this guardrail ensures that the underlying complexity values available for those classes exclude the critical $H=7$ "crossing" value in the base cases.
+### 3. Structural Finishing Routes
+Identified three primary paths to close the remaining $h > 1$ gap:
+- **Shell Collapse:** Prove that all primitive tight rows satisfy $h=1$.
+- **Covering Strictness:** Prove that rows containing multiples of 14 are strict ($M > 1/14$) for every shell height $h$.
+- **State Lift:** Show that any $h > 1$ apex over-cover realizes a forbidden $K_3$ conflict packet (HYP-2908).
 
-### 4. Confidence
-High. The independent cross-check between Held-Karp and brute-force permutation counting yielded identical labeled spectra and frequencies across the entire $n \le 6$ range.
+### 4. Tournament Analysis carrier
+Mapped the shell correction onto the project's tournament carrier framework:
+- **Vertices:** Active shells, active pairs, covering obligations, conflict packets.
+- **Gauge:** Orient toward the carrier retaining global obstruction data; the tie path runs from the active pair to the shell, through the covering packet, to the tournament conflict packet.
 
 ### 5. Net Impact
-This checkpoint stabilizes the project's low-level structural assumptions. By empirically verifying the $H \ne 7$ constraint for small $n$, it anchors the project's complex state-lift and conflict-realizability theorems in verified finite-range data.
+This checkpoint stabilizes the project's arithmetic "terminal node." By formalizing the apex shell and identifying the $h > 1$ gap, the cluster has refined the THM-079 proof template into a targeted attack on the shell-witness problem. The project is now synchronized on the three potential closing routes for the final $LRC(14)$ proof.
