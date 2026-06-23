@@ -1,3 +1,12 @@
+## mac-mini-2026-06-22-S58 -- the obstruction-combining DUALITY: additive mediant (graphs) <-> multiplicative I(Omega,2) (tournaments), meeting at apex 7
+Owner: the mediant of K5,K3,3 edge-densities reproduces disjoint unions mK5+nK3,3 -- the mediant combines obstruction copies. Engaged + gave the tournament counterpart. Reflection: the-obstruction-combining-duality-additive-mediant-vs-multiplicative-I.md.
+- **GRAPH side (verified):** mK5 ⊔ nK3,3 has (v,e)=(5m+6n,10m+9n) = the iterated MEDIANT of (10,5),(9,6) = Stern-Brocot/Farey between 3/2 and 2/1. 6K5+5K3,3 hits 7/4 (apex 7 in numerator).
+- **TOURNAMENT side (verified):** H=I(Omega,2) is MULTIPLICATIVE over conflict-graph ⊔. The forbidden {7,21} = {I(K3,2)=7, I(K3⊔K1,2)=21} -- the K3-conflict values (K3 unrealizable, THM-200 forces C5); 49=7^2 achievable via other Omega.
+- **THE DUALITY:** the SAME operation (disjoint union of obstruction/conflict graphs) reads ADDITIVELY ((v,e) mediant, Stern-Brocot/Farey) for graph data vs MULTIPLICATIVELY (I(.,2), H atom-semigroup) for H-data. Mediant = additive shadow; atom-product = multiplicative shadow.
+- **MEET AT APEX 7:** 7=I(K3,2) (H-atom); 7/4 in the graph Stern-Brocot tree; LRC at 1/14=1/(2*7), tight locus = three-gap = Stern-Brocot/Farey (HYP-2913). The ADDITIVE (mediant/Farey) thread controls the LRC tight locus; the MULTIPLICATIVE (I/H) thread the forbidden values; both pinned at 7.
+- HONEST: verified pieces + a STRUCTURAL/thematic unification (why 7 governs planarity-style obstructions, the H-spectrum, AND the LRC); a unifying lens, not a new LRC proof step (open core = three-gap rigidity).
+NEW: reflection. The owner's mediant = the graph-theoretic face of the apex-7 / the additive Stern-Brocot thread = the LRC tight locus.
+
 ## kind-pasteur-2026-06-22-S41 -- the OWNER'S REFRAME: the object is the tournament SPECTRUM (set of iso classes over all phases), not a single tournament; tight <=> binding scale 14
 Owner correction: "a single tournament fixes one phase => the object is a SET of tournament iso classes." VALIDATED + made useful. HYP-2928 + reflection the-tournament-spectrum-is-the-object.
 - **THE SPECTRUM Sigma(S) = {iso(T(S,t)): t in [0,1)}** (each class weighted by t-measure; breakpoints t=k/(s_i-s_j),k/(2s_i) DEPEND ON MAGNITUDES). MAGNITUDE-AWARE where the single apex tournament was BLIND: AP and loose 12->26 have IDENTICAL apex tournaments but DIFFERENT spectra (|Sigma|=14 vs 24; AP concentrated on regular R_13 at measure 0.24 vs 0.011).
