@@ -1,0 +1,141 @@
+S137 LRC14 OPERATOR SEQUENCE TOURNAMENT
+==============================================================================
+[0] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, gaps, Farey fractions, fraction payloads, C=27 shells,
+    Kpq incidence owners, octahedral packet currents, Clebsch cuts,
+    second-moment events, exact-period packets, and proof obligations.
+  chosen vertices:
+    operator/carrier roles, plus a C=27 shell quotient when the p=2
+    branch is isolated.
+  quotient preserves:
+    exact Farey excess e=14p-q, binding denominator q, additive and
+    product side channels, low-gap shell transfer, and state-lift fit.
+  quotient destroys:
+    exact time geometry and row-specific witnesses; those remain attached
+    through M(S), q-threshold, and the C27 transfer label.
+  challenged assumption:
+    a single runner tournament or scalar payload is enough.  The live
+    predicate needs a labelled operator packet before scalarization.
+
+[1] Unit-excess Farey sequence fingerprints
+  chain: p/q = p/(14p-1), so M-1/14 = 1/(14q)
+       p/q     q   p+q    p*q         gap       Kpq q mod27 p*q mod27
+      1/13    13    14     13       1/182      star      13        13
+      2/27    27    29     54       1/378 two-block       0         0
+      3/41    41    44    123       1/574  K33-wall      14        15
+      4/55    55    59    220       1/770  K33-wall       1         4
+      5/69    69    74    345       1/966  K33-wall      15        21
+      6/83    83    89    498      1/1162  K33-wall       2        12
+      7/97    97   104    679      1/1358  K33-wall      16         4
+     8/111   111   119    888      1/1554  K33-wall       3        24
+     9/125   125   134   1125      1/1750  K33-wall      17        18
+
+  q      : detected polynomial degree 1; Delta=[14, 14, 14, 14, 14, 14]; Delta2=[0, 0, 0, 0, 0, 0]
+  sum    : detected polynomial degree 1; Delta=[15, 15, 15, 15, 15, 15]; Delta2=[0, 0, 0, 0, 0, 0]
+  product: detected polynomial degree 2; Delta=[41, 69, 97, 125, 153, 181]; Delta2=[28, 28, 28, 28, 28, 28]
+  q^p and p^q are intentionally not polynomial lanes; they are
+  magnitude-stress tests for quotients that forget scale.
+
+  Readout:
+    q      is the theorem-level binding scale: +14 on the chain.
+    p+q    is the additive/Stern-Brocot lane: +15 on the chain.
+    p*q    is the product/coimage area lane: quadratic, Delta2=28.
+    q^p,p^q amplify magnitude and should not be used as denominators.
+
+[2] Row-bank bridge: exact Farey branch plus C=27 transfer
+  S130 row bank through replacement 70: 749 rows
+  branch counts:
+    nonunit-excess            690
+    q-parent-star              54
+    tight-floor                 2
+    C27-petal-two-block         2
+    K33-unit-excess             1
+
+  low frontier:
+    M <= 3/41 : 3 rows -> ['AP', 'GW 12->24', 'near-miss 12->36']
+    M <= 2/27 : 5 rows -> ['AP', 'GW 12->24', 'near-miss 12->36', 'swap 10->20', 'swap 13->26']
+
+  named transfer signatures:
+    AP                 M= 1/14 branch=tight-floor             transfer=perfect-transversal
+    GW 12->24          M= 1/14 branch=tight-floor             transfer=H[12:g3] D[3:g3] Z[-]
+    swap 10->20        M= 2/27 branch=C27-petal-two-block     transfer=H[10:g1] D[7:g1] Z[-]
+    swap 13->26        M= 2/27 branch=C27-petal-two-block     transfer=H[13:g1] D[1:g1] Z[-]
+    near-miss 12->36   M= 3/41 branch=K33-unit-excess         transfer=H[12:g3] D[9:g9] Z[-]
+
+  most common transfer labels, including loose repeats:
+    Hg(1,)->Dg(1,);z=0             304
+    Hg(1,)->Dg(3,);z=0             117
+    Hg(3,)->Dg(1,);z=0             114
+    perfect                         58
+    Hg(9,)->Dg(1,);z=0              38
+    Hg(1,)->Dg(9,);z=0              36
+    Hg(3,)->Dg(3,);z=0              28
+    Hg(1,)->Dg-;z=1                 18
+  Guardrail: transfer labels recur, so exact M/Farey branch remains the
+  first coordinate.  The C27 quotient is a router, not a classifier.
+
+[3] Graph and Paley-Zygmund carrier fingerprints
+  octahedron L(K4)   : v= 6 e=12 tri=  8 cycle_rank= 7 deg={4: 6}
+  Clebsch folded Q5  : v=16 e=40 tri=  0 cycle_rank=25 deg={5: 16}
+  halved 5-cube      : v=16 e=80 tri=160 cycle_rank=65 deg={10: 16}
+  halved 5-cube == complement(Clebsch) under even representatives: True
+
+  PZ toy loss on six independent empty-sector indicators:
+    k=8: exact=0.873362 PZ=0.711557 loss=0.161805
+    k=10: exact=0.764310 PZ=0.620372 loss=0.143938
+    k=12: exact=0.641789 PZ=0.528234 loss=0.113555
+  Readout: octahedron carries support-six curl (cycle rank 7),
+  Clebsch/half-cube carry folded covariance/cut data, and PZ is an
+  existence gateway unless upgraded to labelled degree-4 moments.
+
+[4] Tournament Analysis on operator/carrier vertices
+  vertices:
+    q     q binding scale       -- exact LRC gap denominator
+    sum   p+q additive lane     -- Stern-Brocot / n+2 recursion
+    prod  p*q product lane      -- Kpq area / n*2 coimage growth
+    C27   C=27 shell            -- p=2 second-gap transfer router
+    K33   Kpq/K33 incidence     -- p>=3 three-owner packet
+    oct   octahedron L(K4)      -- support-six current/curl
+    cleb  Clebsch/half-cube     -- folded covariance/cut carrier
+    PZ    Paley-Zygmund         -- second-moment existence gateway
+    power power payloads        -- magnitude-leak stress tests
+
+  conservative gauge:
+    observable: theorem scale / proof-router priority
+    fingerprint: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1)) c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1, 1) hp=1
+    path: q binding scale > C=27 shell > p+q additive lane > Kpq/K33 incidence > p*q product lane > octahedron L(K4) > Clebsch/half-cube > Paley-Zygmund > power payloads
+
+  majority-of-criteria gauge:
+    criteria: theorem_scale, sequence_simplicity, branch_separation, state_lift_fit, graph_packet_fit, anti_scalar_guard, magnitude_stress
+    fingerprint: score_hist={0: 1, 1: 1, 3: 2, 4: 2, 6: 1, 7: 1, 8: 1} c3=2 scc=(4, 1, 1, 1, 1, 1) hp=5
+    first Hamiltonian path: q binding scale > C=27 shell > Kpq/K33 incidence > p+q additive lane > p*q product lane > octahedron L(K4) > Clebsch/half-cube > Paley-Zygmund > power payloads
+    directed 3-cycles: 2
+      p+q additive lane > p*q product lane > Clebsch/half-cube > p+q additive lane
+      p+q additive lane > octahedron L(K4) > Clebsch/half-cube > p+q additive lane
+    nontrivial SCCs:
+      Clebsch/half-cube, octahedron L(K4), p*q product lane, p+q additive lane
+
+  Edge-flip lesson:
+    The conservative proof order is clean, but the majority gauge creates
+    a real SCC among p+q, p*q, octahedron, and Clebsch/half-cube.
+    That is useful: it marks the packet layer where no single scalar
+    carrier should be trusted without its side-channel labels.
+
+[5] Proof readout
+  S137 keeps the current best interface and adds one warning.
+  Interface:
+    exact M/Farey branch first; C=27 shell transfer for p=2; Kpq/K33
+    incidence for p>=3; octahedral/Clebsch packet data if a support-six
+    or folded-mask residual remains; PZ only as an existence gateway.
+  Warning:
+    the additive lane and product/packet lanes form a majority-cycle once
+    sequence simplicity, graph fit, state-lift fit, and magnitude stress
+    are all allowed to vote.  This is exactly where scalarization is risky.
+  Candidate lemma shape:
+    after the standard LRC14 finite-core reductions, every low-gap
+    non-AP/GW atom has either a unit-visible C27 hole discharged by
+    petal/two-block rigidity, or a sign-visible K33/octahedral/Clebsch
+    packet whose connected OCF state-lift would have activity-two value 7.
+  This is still not an LRC14 proof.  It narrows the object that a proof
+  must construct before invoking the HYP-2908 / THM-572 forbidden-H end.
