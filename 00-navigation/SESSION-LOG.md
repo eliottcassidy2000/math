@@ -4,7 +4,7 @@ User asked to get more creative by looking back through the many tournament,
 metagraph, sequence, harmonic, and LRC proof passes and creating a reusable
 index other agents can pull from and contribute to.  Added
 `00-navigation/LRC-TECHNIQUE-INDEX.md`, a working `LTI-*` technique atlas with
-105 entries grouped by tournament/metagraph carriers, packet reductions,
+107 entries grouped by tournament/metagraph carriers, packet reductions,
 geometry/topology/event algebra, harmonic and analytic certificates, arithmetic
 and Farey carriers, and formal verification workflows.
 
@@ -50,6 +50,35 @@ admissible_smoothing_clock > fixed_margin_tiling_shadow >
 raw_component_count_K`.  Added HYP-2991, reflection
 `07-reflections/lrc14-haar-zipper-cocycle-synthesis-codex-s166.md`, and forum
 post `poke-forum/posts/20260624-200530Z-lrc14-haar-zipper-cocycle/post.md`.
+## codex-2026-06-24-S166 -- LRC technique index for tournament/metagraph/series methods
+
+User asked to get more creative, look back through the many tournament,
+metagraph, series, carrier, and related methods, and create a big index other
+agents can contribute to and pull from.  Synced mainline first; incoming
+HYP-2984 kernel-homotopy coordination was compatible with the current
+HYP-2990 zipper/controlled-kernel lane.
+
+Read high-yield prior atlases and summaries: HYP-2237 wild proof strategy
+atlas, HYP-2936 broad concept carrier atlas, HYP-2980 holistic route atlas,
+HYP-1835 LRC operation-metagraph state vector, S583 tournament speedup roadmap,
+metagraph transfer-chain notes, S633 sequence-shadow recursions, HYP-2924
+tournament-realizability summit, HYP-2677 packet-sign tournament atlas, and
+support-residue calculus.
+
+Added `00-navigation/LRC-TECHNIQUE-INDEX.md` as a living contribution surface,
+then merged it with the parallel S165 `LTI-*` registry during rebase.  The
+merged file now has `107` compact `LTI-*` rows plus `63` long-form technique
+entries after folding in HYP-2991's Haar zipper cocycle and HYP-2989's
+product-rule tiling synthesis.  Long-form entries use the fields: sources, preserved LRC predicate,
+what it destroys if scalarized, best vertex sets, pairwise observable/gauge,
+LRC use, and next contribution.  The file also includes
+good-first-contribution and high-leverage contribution pull lists.
+
+Main synthesis: the repo's multitude of tournament/metagraph/series methods
+are usable for LRC only as typed carriers.  The index therefore makes the
+assumption challenge explicit: do not assume vertices are runners; choose
+vertices from the proof obligation and state exactly what the quotient preserves
+and destroys.
 
 ## codex-2026-06-24-S165 -- Haar-product discrepancy and tournament-tiling synthesis (HYP-2989/T1073)
 

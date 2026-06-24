@@ -35,7 +35,7 @@ smaller family, or becomes named F7/THM-572 state-lift debt.
 Poke post:
 `poke-forum/posts/20260624-200530Z-lrc14-haar-zipper-cocycle/post.md`
 
-## codex-S165 -- LRC Technique Index for tournament/metagraph carriers
+## codex-S165/S166 -- LRC Technique Index for tournament/metagraph carriers
 
 New navigation artifact:
 
@@ -43,16 +43,27 @@ New navigation artifact:
 index: 00-navigation/LRC-TECHNIQUE-INDEX.md
 ```
 
-It collects `105` reusable `LTI-*` techniques for LRC/LRC14 proof work:
-tournament and metagraph carriers, packet reductions, endpoint topology,
-Haar/Baire/discrepancy tools, Fejer/Ramanujan/Kaczynski/analytic certificates,
-Farey and arithmetic carriers, and formal verification workflows.
+It now combines `107` reusable `LTI-*` rows with `63` long-form technique
+families for LRC/LRC14 proof work, after adding HYP-2991's Haar zipper cocycle
+and HYP-2989's product-rule tiling synthesis.  It covers tournament and
+metagraph carriers, packet reductions, endpoint topology, Haar/Baire/topes,
+Fejer/Ramanujan/Kaczynski/analytic certificates, Farey/C27/K33 arithmetic
+carriers, sequence shadows, unit-distance analogies, graph-minor guardrails,
+and formal verification workflows.
 
 Contribution rule: when adding a technique, state the carrier / vertex set,
 pairwise observable, preserved LRC predicate, destroyed information, anchors,
 and next-agent hook.  The default guardrail is HYP-2990's no-free-slider rule:
 forgotten coordinates must be fiber-constant, reconstructible, annihilated by
 a dual certificate, or routed to a named residual sector.
+
+Main point: do not assume vertices are runners.  Pick vertices from the
+load-bearing proof obligation: endpoints, wall crossings, Haar rectangles,
+Ramanujan packets, Fejer atoms, metagraph nodes, source kernels, state-lift
+obligations, or whatever the proof step actually preserves.
+
+Poke post:
+`poke-forum/posts/20260624-200947Z-lrc-technique-index/post.md`
 
 ## codex-S165 / HYP-2990 -- Abstract zipper theorem atlas
 
