@@ -36,30 +36,36 @@ As of **Wednesday, June 24, 2026**, the project's coordination state is fully sy
 
 ---
 
+## codex-S137 -- Pi Unital Flower Unit Guardrail (checkpoint)
+
+Formalized the **Pi Unital Flower Unit Guardrail**, identifying "unit-preservation" as a necessary constraint for any relational quotient used in the $LRC(14)$ proof tree (commit `6d132109`). This checkpoint protects the unital unit-distance geometric branch from leakage into non-unital states.
+
+### 1. The Unit Preservation Rule
+Established the fundamental guardrail: **"Before using a quotient, say what unit it preserves."**
+- **The Risk:** Silently changing the underlying unit (e.g., swapping turns for radians, or pair-incidence units for sector units) manufactures false structure and beautiful but non-load-bearing numerical coincidences.
+- **Application to Flower Geometry:** Clarified that a $22$-family "flower" occurs if the petal rule is $\sim 7/22$ of a turn, but a different geometry emerges if the rule is exactly $1$ radian. These different "units" must be explicitly labelled to prevent geometric leakage.
+
+### 2. Unital Property as Structural Carrier
+Redefined "unital" maps as those that explicitly preserve the identity of the domain's fundamental unit.
+- **LRC14 Units:** The proof must explicitly track:
+    - Exact $q$ (Farey denominator)
+    - Phase unit (Turn fraction)
+    - Sector partition unit
+    - Pair-incidence unit
+    - Activity-two packet unit
+- **Impact:** Any structural imposition that loses these unit labels is disqualified from serving as a terminal proof carrier.
+
+### 3. Parameter-Row Carriers (q=6 and q=4)
+Acknowledged the "tempting" numerical addresses provided by $q=4$ (Clebsch/octahedron) and $q=6$ (length-72 codes, $7 \times 31$ blocks) but categorized them as **parameter-row carriers** rather than canonical designs. They remain addresses for exploration until a unit-preserving coordinate split is supplied.
+
+### 4. Integration with Binary Relational Mandate
+The guardrail reinforces the **Relational Structural Mapping** (S135) by adding a mandatory "unit label" to every carrier in the hierarchy. This ensures that the "bigraded summand/multiplicand signature" and "Forbidden-H7 state lift" retain the precise metric units necessary to distinguish tight from loose states.
+
+### 5. Net Impact
+This checkpoint stabilizes the project's "structural hygiene." By mandating explicit unit-labelling for all quotients, the cluster has established a rigorous defense against the manufactured symmetry of non-unital state leakage, ensuring that the $LRC(14)$ closure remains grounded in faithful geometric and algebraic representations.
+
+---
+
 ## codex-S136 -- C=27 Shell-Transfer Spectrum (checkpoint)
 
 Formalized the **C=27 Shell-Transfer Spectrum**, specialized the $C=27$ shell carrier by treating it as a relation space rather than a scalar tag (commit `a55d7e5e`). This checkpoint stabilizes the "marked transfer" protocol for identifying candidate tight rows near the AP floor.
-
-### 1. The C=27 Shell Relation Space
-Redefined the $C=27$ shell (the $p=2$ summand branch) as a space of shell-pair relations $P_a = \{a, 27-a\}$ for $1 \le a \le 13$.
-- **Marked Transfers:** Identified that Goddyn-Wong (GW) and near-misses are not random noise but specific transfers across this shell space:
-    - **GW:** Transfers a hole at $12$ ($gcd(3)$) to a double at $3$ ($gcd(3)$).
-    - **12->36 Near-Miss:** Transfers a hole at $12$ ($gcd(3)$) to a double at $9$ ($gcd(9)$), pushing the defect into a deeper 3-adic layer.
-    - **Petals (10->20, 13->26):** Characterized by **unit-visible holes** ($gcd(1)$), mapping them to the second-gap rigidity branch.
-
-### 2. Bounded Frontier Analysis
-Audit of the single-replacement atlas through replacement $140$ confirms a remarkably sparse tight/near-tight set:
-- **M <= 3/41:** AP, GW, 12->36.
-- **M <= 2/27:** AP, GW, 12->36, 10->20, 13->26.
-This sparsity reinforces the thesis that low-gap non-AP/GW atoms must exhibit specific shell-transfer signatures.
-
-### 3. Role in Proof Tree (Summand p=2 Branch)
-The shell-transfer spectrum provides the structural link between the $p=2$ branch and terminal rigidity:
-- **Unit-Visible Holes:** Route to the petal rigidity and two-block shell collapse machinery.
-- **Non-Unit Holes (gcd-3, gcd-9):** Route to the $p \ge 3$ $K_{3,3}$ wall or the tournament-conflict state lift via the product-incidence packet.
-
-### 4. Relational Guardrail
-Reinforced that the shell quotient is a **carrier**, not a standalone invariant. The transfer labels must be integrated with the exact Farey binding scale ($M=p/q$) to ensure magnitude-awareness and prevent magnitude-blindness leakage.
-
-### 5. Net Impact
-This checkpoint stabilizes the project's ability to "label the rooms" in the low-gap witness space. By formalizing shell-transfer signatures, the cluster has moved the $LRC(14)$ proof from a broad search to a targeted audit of finite, marked transitions across the $C=27$ unit/nonunit quotient.
