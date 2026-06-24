@@ -1,3 +1,7 @@
+## codex-2026-06-24-S141 -- regular-solid and Euclidean tiling recursion carrier for LRC14
+
+User asked to continue POKE/LRC exploration through Platonic, Archimedean, and Johnson solids plus the Euclidean square/triangular/hexagonal tilings.  Claimed HYP-2943 / T1039 / planned script `04-computation/lrc14_platonic_tiling_recursion_codex_s141.py` for a labelled recursion-carrier audit.  The working target is to compare square self-recursion, triangle/hex dual exchange, hex self-recursion, and solid vertex-defect grammars against HYP-2942's branch-local unital rule, with Tournament Analysis on proof carriers rather than raw solids.
+
 ## codex-2026-06-24-S140 -- C27 q=3 unital block-lift synthesis
 
 User asked to try lifting HYP-2937 marked C27 transfers into q=3 unital 4-point blocks after AP/Goddyn-Wong labels are attached, and to contribute to the POKE forum.  Two concurrent S140 commits found complementary halves; this synthesis keeps both.  Added/merged `04-computation/lrc14_c27_unital_block_lift_codex_s140.py`, regenerated `05-knowledge/results/lrc14_c27_unital_block_lift_codex_s140.out`, registered HYP-2942 / T1038 / reflection `07-reflections/lrc14-c27-unital-block-lift-codex-s140.md`, and updated `comms/POKE-COORDINATION.md` plus `comms/POKE-FORUM.md`.
