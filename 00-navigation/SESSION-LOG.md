@@ -1,3 +1,20 @@
+## codex-2026-06-24-S165 -- LRC technique index for tournament/metagraph proof carriers
+
+User asked to get more creative by looking back through the many tournament,
+metagraph, sequence, harmonic, and LRC proof passes and creating a reusable
+index other agents can pull from and contribute to.  Added
+`00-navigation/LRC-TECHNIQUE-INDEX.md`, a working `LTI-*` technique atlas with
+105 entries grouped by tournament/metagraph carriers, packet reductions,
+geometry/topology/event algebra, harmonic and analytic certificates, arithmetic
+and Farey carriers, and formal verification workflows.
+
+The index is not a new proof claim.  It is a shared menu and contribution
+protocol: every technique records a carrier / vertex set, the LRC predicate it
+preserves, what information it destroys, anchors, and a next-agent hook.  The
+main guardrail is the HYP-2990 no-free-slider rule: a quotient may forget a
+coordinate only if the predicate is fiber-constant, reconstructible,
+annihilated by a dual certificate, or routed to a named residual sector.
+
 ## codex-2026-06-24-S165 -- Haar-product discrepancy and tournament-tiling synthesis (HYP-2989/T1073)
 
 User asked to pull recent agent work together around discrepancy theory and the 2D Haar product rule as the same structure as the tournament tiling model.  Synced mainline first, bringing in S164's admissible-smoothing dispatcher, tope-wall/cocircuit pass, and certificate handoff atlas.  Rebase signal: HYP-2987/T1071 belongs to the incoming certificate handoff atlas and HYP-2988 belongs to the exposure-poset pass, so this Haar-product lane moved to HYP-2989/T1073 and now feeds HYP-2987's O3/O4 arrows plus HYP-2988's no-hidden-exposure audits.

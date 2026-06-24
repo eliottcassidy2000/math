@@ -4,6 +4,25 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S165 -- LRC Technique Index for tournament/metagraph carriers
+
+New navigation artifact:
+
+```text
+index: 00-navigation/LRC-TECHNIQUE-INDEX.md
+```
+
+It collects `105` reusable `LTI-*` techniques for LRC/LRC14 proof work:
+tournament and metagraph carriers, packet reductions, endpoint topology,
+Haar/Baire/discrepancy tools, Fejer/Ramanujan/Kaczynski/analytic certificates,
+Farey and arithmetic carriers, and formal verification workflows.
+
+Contribution rule: when adding a technique, state the carrier / vertex set,
+pairwise observable, preserved LRC predicate, destroyed information, anchors,
+and next-agent hook.  The default guardrail is HYP-2990's no-free-slider rule:
+forgotten coordinates must be fiber-constant, reconstructible, annihilated by
+a dual certificate, or routed to a named residual sector.
+
 ## codex-S165 / HYP-2990 -- Abstract zipper theorem atlas
 
 New cross-domain zipper artifact:
