@@ -148,8 +148,10 @@ split.
 
 HYP-2992 is the proposed 2D local algebra underneath those routes.  HYP-2989's
 independent Haar-square scout is the minimal `2 x 2` fixed-margin switch
-version of the same phenomenon; this hypothesis records the larger dyadic
-rectangle interaction atlas.  The one
+version of the same phenomenon, HYP-2991 records the later local zipper
+cocycle `zeta`, and HYP-2988 records the exposure-poset router; this hypothesis
+records the larger dyadic rectangle interaction atlas.
+The one
 dimensional circle event is not discarded; it becomes one coordinate of a
 rectangular packet grid.  The other coordinate is the owner/period/scale/fiber
 clock that prevents the quotient from forgetting the reason a local certificate

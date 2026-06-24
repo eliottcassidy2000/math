@@ -1,0 +1,685 @@
+# LRC Tournament Technique Index
+
+**Purpose:** A living catalog of tournament, metagraph, series, and quotient
+techniques that have proved useful, or plausibly useful, for the LRC14 proof
+program.  The immediate use is practical: future agents should be able to pick
+a proof route, see which coordinates it must keep, and avoid rediscovering the
+same quotient failures.
+
+**Relation to the broader index:** `00-navigation/LRC-TECHNIQUE-INDEX.md` is
+the main shared LTI atlas.  This file is a tournament-specific companion with
+longer guardrail notes and pull prompts for agents working directly with
+tournaments, metagraphs, A000568-style quotients, and fixed-path tilings.
+
+**Current proof shape:** the LRC14 problem is no longer just "find a scalar
+that distinguishes AP/Goddyn-Wong from everything else."  The best current
+frame is a labelled packet proof.  A primitive row should route to a q-witness,
+AP/GW equality atom, C27 petal/two-block discharge, K33/F7 state lift,
+covering/boundary-moment positivity, or a rigorous Fejer/Toeplitz certificate.
+Every technique below is a possible tooth in that zipper.
+
+## Contribution Protocol
+
+When adding a technique card, keep these fields:
+
+Use `LTT-*` handles in this companion file.  The broader
+`00-navigation/LRC-TECHNIQUE-INDEX.md` owns the `LTI-*` namespace.
+
+- **Move:** the abstract trick or transformation.
+- **LRC use:** how it could help LRC14 specifically.
+- **Preserves:** the predicate or coordinate that survives the quotient.
+- **Forgets / guardrail:** what is dangerous to discard.
+- **Next pull:** one concrete thing another agent can do.
+- **Pointers:** hypotheses, theorems, tangents, scripts, variables, or
+  reflections.
+
+Do not default tournament vertices to runners.  Before choosing vertices,
+consider runners, gaps, endpoint owners, fixed circle sections, section
+boundaries, wall-crossing events, residue packets, cover arcs, Fourier modes,
+Haar rectangles, matroid topes/cocircuits, Fejer atom banks, state-lift
+obligations, and proof-carrier interfaces.
+
+## Fast Routing Map
+
+- Need to separate strict-open mass from endpoint-only equality:
+  use LTT-018 through LTT-021.
+- Need a rigorous positive-row certificate:
+  use LTT-022, LTT-023, LTT-024, and LTT-026.
+- Need to prevent an unsafe quotient:
+  use LTT-001, LTT-025, LTT-039, and LTT-040.
+- Need tournament enumeration speedups:
+  use LTT-006 through LTT-012, plus LTT-033 and LTT-035.
+- Need the AP/GW residue skeleton:
+  use LTT-003, LTT-013, LTT-014, LTT-027, and LTT-028.
+- Need a route for non-AP/GW zero-open residuals:
+  use LTT-029, LTT-030, LTT-031, and LTT-040.
+- Need cross-domain inspiration without scalarizing it away:
+  use LTT-036 through LTT-044.
+
+## Core Guardrail
+
+A quotient may forget a coordinate only if at least one of these is true:
+
+1. The target LRC predicate is constant on each fiber.
+2. The forgotten coordinate is reconstructible from retained data.
+3. A dual certificate annihilates the coordinate.
+4. The coordinate is routed to a named residual sector.
+
+If none of these hold, the quotient is not a theorem; it is only a diagnostic.
+
+## Technique Cards
+
+### LTT-001: Controlled-Kernel / Zipper Theorem
+
+- **Move:** Treat every proof route as a zipper of controlled quotients, each
+  with a declared kernel and residual sector.
+- **LRC use:** Assemble q-witness, Fejer, Ramanujan, endpoint, C27, K33, and
+  covering lanes without forcing them into one scalar hierarchy.
+- **Preserves:** LRC predicate, exact scale, packet family, endpoint ownership,
+  dual certificate, and residual route.
+- **Forgets / guardrail:** A quotient that forgets phase, scale, or ownership
+  must prove fiber-constancy or emit a named residual.
+- **Next pull:** Convert HYP-2987's F7 bucket into a formal named
+  harmonic/state-lift residual sector.
+- **Pointers:** HYP-2990, HYP-2987, HYP-2984, HYP-2985, HYP-2986, T1074.
+
+### LTT-002: Proof-Carrier Tournament Analysis
+
+- **Move:** Make proof carriers the tournament vertices rather than runners,
+  then orient edges by retention, certifiability, or discharge strength.
+- **LRC use:** Compare Fejer packets, Ramanujan packets, endpoint bridges,
+  Kaczynski approaches, and state lifts as competing but composable carriers.
+- **Preserves:** The proof obligation and the handoff relation.
+- **Forgets / guardrail:** It can hide runner geometry unless the carrier card
+  records which LRC predicate it certifies.
+- **Next pull:** Add a standard fingerprint payload to each future LRC script:
+  score histogram, directed 3-cycles, SCC sizes, and Hamiltonian path count.
+- **Pointers:** AGENTS.md, HYP-2987, HYP-2990, CONCEPT-MAP "Tournament
+  Analysis".
+
+### LTT-003: Multi-Scale Winding Tournament Spectrum
+
+- **Move:** Replace a single phase tournament by the finite weighted spectrum
+  of isomorphism classes swept over all phase intervals.
+- **LRC use:** Repairs magnitude-blind apex tournaments: AP and loose rows can
+  share residues but differ in spectrum size, peak class, and binding scale.
+- **Preserves:** Phase breakpoints, binding denominator, and class measure.
+- **Forgets / guardrail:** A single apex class forgets magnitude and cannot
+  distinguish AP from loose residue twins.
+- **Next pull:** Compute spectrum fingerprints for the latest HYP-2963 packet
+  bank and compare binding-scale migration to Fejer certificate degree.
+- **Pointers:** HYP-2928, HYP-2927, HYP-2605, THM-568, OPEN-Q-108.
+
+### LTT-004: Observer-Source Marked Tournament
+
+- **Move:** Add the stationary observer as a distinguished vertex; orient
+  observer-to-runner edges by whether a runner is outside the danger moat.
+- **LRC use:** Loneliness is exactly the observer being a source; blocker count
+  is observer indegree.
+- **Preserves:** The LRC threshold predicate at a fixed moment.
+- **Forgets / guardrail:** Unmarked tournament class is too coarse; it mixes
+  safe and unsafe moments.
+- **Next pull:** Attach endpoint-owner and exact-period labels to the
+  observer-source cone for LRC14 hard packets.
+- **Pointers:** THM-381, THM-385, HYP-1988, HYP-2486, S511, S517.
+
+### LTT-005: A000568 Source Fiber / Perspective Lift
+
+- **Move:** Project LRC states to source-deleted tournament classes and then to
+  rooted perspective fibers over A000568.
+- **LRC use:** Gives an exact small-n source slice and a warning that unrooted
+  classes are not faithful.
+- **Preserves:** Deleted runner class plus source-cone operation.
+- **Forgets / guardrail:** Full threshold payload and incident word can be lost
+  after unrooting.
+- **Next pull:** Use source-fiber IDs as packet-family keys in LRC14 labelled
+  classifier outputs.
+- **Pointers:** HYP-2486, HYP-2120, HYP-2121, HYP-1977, A000568 scripts.
+
+### LTT-006: Fixed Hamiltonian Path / Staircase Tiling
+
+- **Move:** Fix a Hamiltonian path as the tie spine and encode all other arcs
+  as tiles above or below it.
+- **LRC use:** Supplies a canonical address system for local switches,
+  good-cuts, metagraph moves, and half-tiling parity.
+- **Preserves:** Path order, interval support, and tile range.
+- **Forgets / guardrail:** The fixed path is arbitrary unless its role is
+  declared as a tie Hamiltonian path, not a hidden theorem.
+- **Next pull:** Build a direct dictionary from LRC endpoint-wall order to
+  staircase tile intervals.
+- **Pointers:** fixed-path tiling threads, good-cut variables, T1072, HYP-2992.
+
+### LTT-007: Tournament Metagraph / SC-NS Spine-Ribs-Sea
+
+- **Move:** Study the graph whose vertices are tournament isomorphism classes
+  and whose edges are controlled flips, complement moves, or merged classes.
+- **LRC use:** Gives a language for local deformation, regularity, and
+  self-complementary symmetry; helps ask whether a packet is on a spine,
+  rib, or sea.
+- **Preserves:** Class adjacency and complement/merge structure.
+- **Forgets / guardrail:** Raw blue/black visible edges are not automatically
+  even/odd; parity usually lives in a boundary or line-addressed chain.
+- **Next pull:** Place LRC14 packet-sign classes on the metagraph and measure
+  whether hard rows sit near SC or high-good-cut regions.
+- **Pointers:** COMPLETE_INVARIANT_CATALOG, metagraph parity S675, A000568
+  census work.
+
+### LTT-008: Even-Graph Projection / Projection Defect
+
+- **Move:** Use the equinumerosity of tournaments and even graphs as a second
+  projection lens, then measure where tournament and even-graph projections
+  disagree.
+- **LRC use:** Defects identify coordinates that one projection forgets, a
+  close analogue of LRC quotient leakage.
+- **Preserves:** Edge-flip parity and even-graph class.
+- **Forgets / guardrail:** Even-only and tournament-only defects have different
+  polarity by tile range; do not collapse them.
+- **Next pull:** Test whether AP/GW boundary packets are pure under even-graph
+  projection while K33/petal packets show projection defects.
+- **Pointers:** projection-defect leads, HYP-2245, HYP-2187, S674b, S675.
+
+### LTT-009: Good-Cut / SCC Support Coordinate
+
+- **Move:** Count cuts of the fixed path crossed by at least one upward tile;
+  structurally this equals `n - #SCC(T)`.
+- **LRC use:** A compact support residue for how much strong connectivity a
+  proof-carrier tournament has.
+- **Preserves:** SCC condensation boundaries along the fixed path.
+- **Forgets / guardrail:** Bucket 1 is impossible for interval reasons; other
+  gaps must come from tournament structure, not interval support.
+- **Next pull:** Add good-cut/SCC profiles to packet-sign and spectrum
+  tournaments for named LRC14 rows.
+- **Pointers:** THM-354, good-cut-count variable, INV-237.
+
+### LTT-010: Hamiltonian Path Count H / OCF
+
+- **Move:** Use Hamiltonian path count, OCF activities, and Moon strong atom
+  products as a scalar shadow of tournament structure.
+- **LRC use:** H can flag spread, regularity, and phase entropy, but only after
+  threshold and observer labels are attached.
+- **Preserves:** Directed path richness and some strong-component structure.
+- **Forgets / guardrail:** H alone is not a max-gap meter; apex H is
+  magnitude-blind.
+- **Next pull:** Compare H distributions of LRC spectrum classes at the
+  binding scale, not just at the apex phase.
+- **Pointers:** THM-002, OCF variables, HYP-1970, HYP-2922 through HYP-2928.
+
+### LTT-011: W-Polynomial / Walsh-Fourier Channels
+
+- **Move:** Encode Hamiltonian path data in W-polynomial and Walsh/Fourier
+  channel decompositions.
+- **LRC use:** Separates even and odd channels, useful for midpoint/reversal
+  gates and packet-sign symmetries.
+- **Preserves:** Activity/Fourier channel data above raw H.
+- **Forgets / guardrail:** Evaluation at one scalar can erase the channel that
+  distinguishes AP/GW from nearby deformations.
+- **Next pull:** Pair W-polynomial even/odd channel tests with Haar-product
+  packet coefficients.
+- **Pointers:** W-polynomial variable, OCF Fourier work, HYP-2992, HYP-2989.
+
+### LTT-012: Burnside / CRT / A000568 Enumeration
+
+- **Move:** Count tournament classes by group action, CRT factorization, and
+  odd-divisor profiles.
+- **LRC use:** Speeds exact enumeration of packet fibers and helps decide
+  which quotient layers are feasible to exhaust.
+- **Preserves:** Orbit structure under relabelling or complement.
+- **Forgets / guardrail:** Orbit representatives need rooted/source/endpoint
+  decorations before being used for LRC.
+- **Next pull:** Build an LRC packet enumerator that canonicalizes decorated
+  source-cones rather than raw tournaments.
+- **Pointers:** A000568 scripts, Burnside/CRT reflections, HYP-2486.
+
+### LTT-013: Three-State Tournament Automaton
+
+- **Move:** Coarsen pair states into left, right, and middle, then propagate a
+  small automaton instead of all phase data.
+- **LRC use:** Models safe side, danger side, and boundary/tie as a minimal
+  carrier for wall crossing.
+- **Preserves:** Directional side and middle/boundary state.
+- **Forgets / guardrail:** Middle can hide endpoint ownership and exact-period
+  denominator unless labelled.
+- **Next pull:** Implement a 3-state automaton over endpoint-wall intervals for
+  AP/GW, K33, and petal rows.
+- **Pointers:** tournament automata prompts, observer-source work, HYP-2986.
+
+### LTT-014: Score-Sequence / Landau Prefix Majorization
+
+- **Move:** Compare cumulative score prefixes rather than pointwise winners.
+- **LRC use:** Mirrors the low-denominator prefix-majorization evidence: a row
+  may beat AP in one bucket but pay mass earlier.
+- **Preserves:** Aggregate dominance constraints.
+- **Forgets / guardrail:** Pointwise q-bucket domination is false; use prefix
+  ledgers and Farey tails.
+- **Next pull:** Formalize low-q prefix majorization over residue patterns and
+  combine with a three-gap/Farey tail packing lemma.
+- **Pointers:** T1015, HYP-2866, THM-530, THM-531, HYP-2870.
+
+### LTT-015: Packet-Sign Tournaments / K4 Orientations
+
+- **Move:** Convert signs of packet interactions into small tournaments, often
+  K4 or signed square cells.
+- **LRC use:** Detects hidden orientation in four-term structures and
+  distinguishes diagonal from anti-diagonal fixed-margin packets.
+- **Preserves:** Local sign/cocircuit orientation.
+- **Forgets / guardrail:** Three-term folds do not see every four-term hidden
+  deformation.
+- **Next pull:** Generate packet-sign K4 fingerprints for HYP-2963 packet
+  families and compare with Fejer certificate margins.
+- **Pointers:** HYP-2989, HYP-2992, HYP-2595, summand graph threads.
+
+### LTT-016: Sector-State Transfer DP
+
+- **Move:** Track runner insertion or packet migration by finite sector states
+  rather than continuous phase.
+- **LRC use:** A possible efficient checker for "does this orbit hit the safe
+  box once" after endpoint-wall compression.
+- **Preserves:** Section occupancy, boundary debt, and transition law.
+- **Forgets / guardrail:** A sector DP must record exact endpoint ties or it
+  will misclassify AP/GW equality.
+- **Next pull:** Build a DP whose states are `(section occupancy, endpoint
+  owners, exact-period class, source deficit)`.
+- **Pointers:** LRC section functors, HYP-2570, HYP-2024, HYP-2949.
+
+### LTT-017: Taut Bridge Graph
+
+- **Move:** Treat positive safe intervals as directed bridges between endpoint
+  owner labels; boundary-only equality points are zero-length taut vertices.
+- **LRC use:** Separates AP/GW zero-open equality atoms from positive-open
+  non-AP/GW rows.
+- **Preserves:** Endpoint owners, bridge direction, and point-depth.
+- **Forgets / guardrail:** Safe measure alone forgets owner-current and
+  zero-sum boundary skeletons.
+- **Next pull:** Prove boundary-owner skeleton rigidity: no positive bridge and
+  AP/GW owner-current pattern implies AP/GW.
+- **Pointers:** HYP-2975, HYP-2951, HYP-2949, T1043.
+
+### LTT-018: Tope / Cocircuit Endpoint Arrangement
+
+- **Move:** Cut the time circle by danger endpoints and regard open cells as
+  topes, boundary equality atoms as cocircuits.
+- **LRC use:** Rephrases a strict counterexample as a no-tope/no-cocircuit
+  forbidden wall packet.
+- **Preserves:** Exact endpoint arrangement and boundary owners.
+- **Forgets / guardrail:** Residue-only tournaments miss cocircuit ownership.
+- **Next pull:** Compare cocircuit owner-pair sums with Haar same-tile boundary
+  atoms from HYP-2992.
+- **Pointers:** HYP-2986, T1070, HYP-2975, HYP-2951.
+
+### LTT-019: Haar-Baire Strict-Open Carrier
+
+- **Move:** Split safe sets into regular-open Haar mass, Baire interior, and
+  finite closed boundary support.
+- **LRC use:** AP/GW are boundary-only; K33, petals, splices, and covering rows
+  have positive strict-open mass in audited banks.
+- **Preserves:** Open-vs-boundary topology and measure.
+- **Forgets / guardrail:** Haar zero does not identify ownership unless
+  boundary support is labelled.
+- **Next pull:** Prove every strict-Haar-zero row after reductions has AP/GW
+  boundary-owner skeleton.
+- **Pointers:** HYP-2948, HYP-2949, HYP-2951, T1042.
+
+### LTT-020: Haar Product Square / Fixed-Margin Switch
+
+- **Move:** Use the elementary identity `h_I(x)h_J(y) = [[1,-1],[-1,1]]`
+  on dyadic children.
+- **LRC use:** It is the same local algebra as a 2-by-2 fixed-margin switch in
+  tournament tilings.
+- **Preserves:** Mixed product coefficient and row/column margins.
+- **Forgets / guardrail:** Raw component count and margins alone hide the
+  diagonal versus anti-diagonal sign.
+- **Next pull:** Replace raw discrepancy component count by independent
+  color-compatible mixed Haar switches.
+- **Pointers:** HYP-2989, T1073, HYP-2594, HYP-2595.
+
+### LTT-021: Haar Rectangle Tile Atlas
+
+- **Move:** Enumerate products of dyadic Haar rectangles: orthogonal zero,
+  same-tile atom, owner strip, cross handoff, and nested refinement.
+- **LRC use:** Candidate vanishing lemma for zero-open residuals: some typed
+  coefficient must survive unless the packet is AP/GW or a state-lift atom.
+- **Preserves:** Two-coordinate interaction type and sign balance.
+- **Forgets / guardrail:** Sign-balanced classes need endpoint and packet
+  labels before they become proof data.
+- **Next pull:** Compute typed Haar coefficients for named rows and cluster
+  Fejer atoms by owner-strip/cross/nested class.
+- **Pointers:** HYP-2992, T1072, HYP-2989, HYP-2988.
+
+### LTT-022: Fejer / Toeplitz PSD Dual Certificate
+
+- **Move:** Use trigonometric Fejer/Toeplitz forms as rigorous interval
+  certificates on labelled packet fibers.
+- **LRC use:** Floating audits certify every positive HYP-2963 row by degree
+  at most 280; AP/GW remain the PSD-blind equality atoms.
+- **Preserves:** Packet key, rational center, degree, atom bank, interval sign,
+  and route handoff.
+- **Forgets / guardrail:** A floating scalar evaluation is not enough; the
+  interval certificate must be anchored to packet fibers.
+- **Next pull:** Build a formal interval backend and lift selected row
+  certificates to family templates.
+- **Pointers:** HYP-2981, HYP-2974, T1065, Robbins/Robin guardrails.
+
+### LTT-023: Multiplicity Moment Dual Barriers
+
+- **Move:** Use danger-count moments, Bonferroni/Newton layers, and activation
+  depth to bound covering pressure.
+- **LRC use:** Handles covering/boundary-moment residuals after q-witness and
+  packet routes have removed scalar-easy rows.
+- **Preserves:** Depth parity and moment layer.
+- **Forgets / guardrail:** Third-order truncation fails without activation and
+  missing-depth parity ledgers.
+- **Next pull:** Re-index moment barriers by first live Newton layer and packet
+  family, then compare to Fejer degree.
+- **Pointers:** HYP-2901, HYP-2903, T1016/T1017, HYP-2963.
+
+### LTT-024: Ramanujan Exact-Period Projectors
+
+- **Move:** Use Ramanujan sums and exact-period projectors to split
+  denominator packets before analytic or Fejer certification.
+- **LRC use:** Separates q=14, q=27, q=41, prime-power, and lcm-tail packets
+  that scalar divisor functions mix.
+- **Preserves:** Exact period and primitive root trace.
+- **Forgets / guardrail:** Squarefree weights such as `mu^2/phi` erase
+  prime-power packets like 27, 63, 84, 168, and 4312.
+- **Next pull:** Add endpoint-owner Ramanujan profiles for q in `{14,27,41}`
+  and the Fejer hard denominators.
+- **Pointers:** HYP-2979, HYP-2978, T1062/T1063, HYP-2982.
+
+### LTT-025: Divisor / Totient / Mobius Quotient Guardrails
+
+- **Move:** Use divisor-function identities as packet laws, not final scalar
+  invariants.
+- **LRC use:** Tests which arithmetic quotients mix AP/GW, q-witness, K33,
+  petal, splice, and covering routes.
+- **Preserves:** Dirichlet convolution, unit orbit, Jordan capacity, and
+  Ramanujan trace when labelled.
+- **Forgets / guardrail:** qdiv, mod-14 residue, unit count, and lcm scalar
+  quotients all mix routes in audits.
+- **Next pull:** Turn the controlled-kernel criterion into a reusable quotient
+  admissibility lemma for LRC scripts.
+- **Pointers:** HYP-2978, HYP-2900, divisor-function web crawl, T1062.
+
+### LTT-026: Analytic Sieve / Kaczynski Smoothing
+
+- **Move:** Treat large sieve, Selberg weights, circle-method splits,
+  exponential sums, and smoothing as middle certificates with explicit
+  boundary approach classes.
+- **LRC use:** Potentially handles late-denominator and true-wide packets that
+  are beyond finite local atlases.
+- **Preserves:** Kernel, smoothing transform, major/minor packet, exceptional
+  set, and approach class.
+- **Forgets / guardrail:** `Phi` capacity and `G=sum mu^2/phi` normalizers are
+  scalar shadows unless exact-period and endpoint labels are restored.
+- **Next pull:** Build an "explicit explicit formula" emitter for LRC atom
+  banks with interval trig provenance and smoothing family tags.
+- **Pointers:** HYP-2982, HYP-2983, HYP-2985, THM-548, T1066/T1069.
+
+### LTT-027: Farey Mutation Scheduler / Kpq Wall
+
+- **Move:** Use Farey neighbors and mutations of `p/q` as a branch scheduler:
+  product, sum, denominator power, numerator power.
+- **LRC use:** Splits `2/27` as the C27 petal branch and `3/41` as the first
+  K33 wall beyond C27.
+- **Preserves:** Exact M/Farey branch and product-incidence packet.
+- **Forgets / guardrail:** Product value is not order-safe by itself; exact M
+  and route labels come first.
+- **Next pull:** Use Farey branch to pre-route packet families before Fejer or
+  Ramanujan certificate generation.
+- **Pointers:** HYP-2932 through HYP-2945, HYP-2984, T1030/T1036/T1041.
+
+### LTT-028: C27 Shell Transfer / Unital Pair Completion
+
+- **Move:** Work on antipodal shell pairs `{a,27-a}` and branch-local unital
+  block completions.
+- **LRC use:** Explains GW, K33 near-miss, and p=2 petal rows as typed shell
+  transfers.
+- **Preserves:** Hole/double ownership, unit/nonunit visibility, and branch
+  local pair incidence.
+- **Forgets / guardrail:** Global unital blocks can fail while branch-local
+  charts remain useful; exact M/Farey branch must stay attached.
+- **Next pull:** Formalize the p=2 petal/two-block discharge before invoking
+  broader K33/F7 state lifts.
+- **Pointers:** HYP-2937, HYP-2940, HYP-2942, HYP-2947, T1038.
+
+### LTT-029: K33 / HYP-2908 State-Lift Residual
+
+- **Move:** Treat K33 incidence and F7/HYP-2908 state lift as a named residual,
+  not an error bucket.
+- **LRC use:** The first p>=3 Farey child `12->36` and K33 splices route here.
+- **Preserves:** Incidence wall, state-lift debt, and harmonic residual sector.
+- **Forgets / guardrail:** Calling a row "positive" without explaining the
+  state-lift address loses the main obstruction.
+- **Next pull:** Define the F7 residual as a concrete finite tournament/state
+  construction from zero-open non-AP/GW packets.
+- **Pointers:** HYP-2908, THM-572, HYP-2987, HYP-2990, HYP-2945.
+
+### LTT-030: Boundary-Moment Covering Residual
+
+- **Move:** Route covering rows by boundary-moment charts and cap-cell pressure
+  instead of brute force.
+- **LRC use:** Discharges rows with low packet mass or late covering pressure,
+  such as `12->168`-style families.
+- **Preserves:** Covering cell, moment chart, endpoint pressure, and cap face.
+- **Forgets / guardrail:** A single denominator chart is not an obstruction;
+  covering needs multichart labels.
+- **Next pull:** Tie cap-cell pressure to Fejer packet certificate degrees and
+  Ramanujan exact-period projectors.
+- **Pointers:** HYP-2963, HYP-2961, THM-398, S593, HYP-2976.
+
+### LTT-031: Few-Apex / Exposure Poset
+
+- **Move:** Order packet routes by exposure channels and check for hidden
+  kernel rows not seen by Fejer or boundary atoms.
+- **LRC use:** Current HYP-2988 audit has AP/GW as zero-safe atoms and no
+  unexposed positive rows in the default bank.
+- **Preserves:** Route, exposure channel, and named discharge.
+- **Forgets / guardrail:** Exposure is only useful if every channel has a
+  theorem-facing certificate, not only a label.
+- **Next pull:** Prove no new normalized `p_0=0` wall exists in the Res_27
+  carry/owner fiber.
+- **Pointers:** HYP-2988, HYP-2963, HYP-2974, HYP-2981.
+
+### LTT-032: Euler / Glaisher / Even-Graph Parity Carrier
+
+- **Move:** Read even/odd partition and graph parity identities as quotient
+  tests for which channel survives.
+- **LRC use:** Helps distinguish reversal gates, midpoint gates, and parity
+  address layers.
+- **Preserves:** Parity channel or boundary over GF(2).
+- **Forgets / guardrail:** Raw "black is even, blue is odd" visible-edge
+  slogans are false; parity lives in the right chain complex.
+- **Next pull:** Build parity-boundary tests for packet-sign metagraph layers.
+- **Pointers:** S675 blue/black parity, HYP-2187, HYP-2245, Euler/Glaisher
+  threads.
+
+### LTT-033: Tiling Bucket Balance / Transport Matrix
+
+- **Move:** Use quotient transport identities such as
+  `2*self + incident_cross = |fiber|*|M|`.
+- **LRC use:** Gives exact conservation laws for moving between packet fibers
+  and metagraph classes.
+- **Preserves:** Fiber size, incident transport, and balance row.
+- **Forgets / guardrail:** Transport matrices need class labels; scalar totals
+  can hide biased movement.
+- **Next pull:** Make a transport matrix for HYP-2963 packet routes under
+  one-swap and two-swap moves.
+- **Pointers:** tiling-bucket-balance variable, metagraph transport results.
+
+### LTT-034: Spectral Shadow / Trace / Zeta Gas
+
+- **Move:** Use traces, cycle counts, Ihara/zeta analogues, and spectral gases
+  as high-level shadows of tournament structure.
+- **LRC use:** May find cheap prefilters for packet families before exact
+  interval work.
+- **Preserves:** Cycle/correlation statistics.
+- **Forgets / guardrail:** Trace counts fail at overlap corrections; spectral
+  shadows are not final certificates.
+- **Next pull:** Test whether Fejer-hard packet families have distinctive
+  trace-overlap or zeta signatures.
+- **Pointers:** HYP-2498, tournament trace speedups, Ihara zeta scripts.
+
+### LTT-035: Good-Cut Bucket Polynomial / Interval Gas
+
+- **Move:** Count good-cut buckets by connected-run covers and recurrence
+  rather than enumerating all tilings.
+- **LRC use:** A model for replacing expensive packet enumeration with a gas
+  recurrence over interval support.
+- **Preserves:** Good-cut support count and run-cover structure.
+- **Forgets / guardrail:** Support recurrence does not know endpoint-owner
+  arithmetic by itself.
+- **Next pull:** Derive a packet-support gas for endpoint walls or Haar
+  rectangles and compare to exact bank scans.
+- **Pointers:** good-cut-bucket-polynomial variable, INV-237, THM-349.
+
+### LTT-036: Half-Tiling Parity Address
+
+- **Move:** Split tiling moves by half-plane, anti-diagonal, or hypotenuse
+  parity addresses.
+- **LRC use:** Useful when AP/GW equality lives on a boundary and positive
+  rows move into one side of a symmetric wall.
+- **Preserves:** Side address and parity of crossing.
+- **Forgets / guardrail:** Side labels are coordinate choices unless tied to an
+  endpoint or cocircuit.
+- **Next pull:** Pair half-tiling parity with AP/GW boundary owner skeletons.
+- **Pointers:** half-tiling/parity tangents, HYP-2986, HYP-2992.
+
+### LTT-037: Unit-Distance Spine / Ear Analogy
+
+- **Move:** Translate point-set constraints into tournament edges or ears,
+  asking whether mandatory Hamiltonian spines lie in unit or nonunit pairs.
+- **LRC use:** Cross-domain analogy for when a local mandatory path changes
+  carrier family, like AP/GW to K33/petal.
+- **Preserves:** Spine/ear incidence and unit/nonunit edge status.
+- **Forgets / guardrail:** Unit-distance geometry is not LRC unless the
+  preserved predicate is explicitly mapped.
+- **Next pull:** Use spine-flop language to name when an LRC packet leaves AP
+  and first enters K33 or petal branch.
+- **Pointers:** unit-distance H=21/u(21) threads, HYP-2298, HYP-2990.
+
+### LTT-038: Octahedral Current / Hodge Curl Support
+
+- **Move:** Decompose local support into divergence, curl, and harmonic
+  current packets.
+- **LRC use:** Candidate language for F7 residuals and for detecting hidden
+  state-lift currents after scalar certificates fail.
+- **Preserves:** Local conservation law and harmonic residue.
+- **Forgets / guardrail:** A current without packet route is just a metaphor;
+  it must attach to a wall or endpoint arrangement.
+- **Next pull:** Express K33/C27 handoffs as divergence-free or curl-bearing
+  support packets.
+- **Pointers:** octahedral current threads, HYP-2990, HYP-2969.
+
+### LTT-039: OCF Activity / Coimage / Noise Stability
+
+- **Move:** Use activity polynomials, coimage decompositions, and noise
+  stability as a higher-resolution shadow than H.
+- **LRC use:** May detect when a packet family has the right support but the
+  wrong activity address.
+- **Preserves:** Activity sector and coimage map.
+- **Forgets / guardrail:** Coimage scalarization can erase observer/source
+  marks and endpoint ownership.
+- **Next pull:** Compute OCF activity fingerprints for LRC spectrum classes at
+  binding scales 14, 27, and 41.
+- **Pointers:** OCF variables, THM-002, HYP-2990, HYP-2486.
+
+### LTT-040: Labelled Packet Classifier / Source-Spectrum Unknown
+
+- **Move:** Make every row classify into q-witness, AP/GW, petal, K33,
+  covering moment, Fejer, or unknown source-spectrum route.
+- **LRC use:** Turns the global proof goal into emptiness of a named unknown
+  bucket.
+- **Preserves:** Route, family, q-class, packet state, state lift, and
+  threshold.
+- **Forgets / guardrail:** The classifier is only theorem-facing if each label
+  has a proof obligation attached.
+- **Next pull:** Expand the classifier's packet key to include Haar tile class,
+  Ramanujan projector, and spectrum binding scale.
+- **Pointers:** HYP-2963, HYP-2976, HYP-2987, HYP-2988.
+
+### LTT-041: Midpoint Scalar Gate / Odd-Channel Faulhaber
+
+- **Move:** Center a balance equation at its midpoint so only odd Faulhaber
+  moments survive; contrast with reversal gates where even channels survive.
+- **LRC use:** Gives a clean model for deciding which channel a quotient is
+  allowed to keep under symmetry.
+- **Preserves:** Odd/even channel selected by the gate.
+- **Forgets / guardrail:** The channel is gate-dependent; do not transfer an
+  odd-channel proof through a reversal gate unchanged.
+- **Next pull:** Recast AP/GW boundary equations in a midpoint/reversal channel
+  table and compare to W-polynomial parity.
+- **Pointers:** Faulhaber tower prompts, HYP-2992, W-polynomial variable.
+
+### LTT-042: Prime / Irreducible Polynomial Tournament Bridge
+
+- **Move:** Model reducibility as a convolution-lift tiling problem, or orient
+  residue/sign/factor-capture choices as tournaments or hypertournaments.
+- **LRC use:** Cross-trains the habit of keeping hidden lift coordinates:
+  irreducibility means no coefficient convolution lift exists, like no hidden
+  LRC packet lift may remain.
+- **Preserves:** Factor allocation, residue local obstruction, and hidden lift.
+- **Forgets / guardrail:** Coefficient signs or one witness value cannot decide
+  global factor structure without the lift.
+- **Next pull:** Borrow the convolution-lift infeasibility language for LRC
+  packet handoffs: what hidden 2D lift would make a zero-open residual possible?
+- **Pointers:** irreducibility/Bunyakovsky prompts, Singh witness prefilter,
+  HYP-2990.
+
+### LTT-043: CRT / p-Adic Residual Packet Tree
+
+- **Move:** Split rows by prime-power carries, residue packets, and CRT
+  recombination rather than by denominator alone.
+- **LRC use:** The n=14 wall is `2*7`; q=27/C27 and late prime-power packets
+  show that prime-power side channels matter.
+- **Preserves:** Carry owner, shell height, prime-power period, and recombined
+  CRT address.
+- **Forgets / guardrail:** Squarefree or denominator-only quotients hide shell
+  collapse and owner-carry fibers.
+- **Next pull:** Build a p-adic packet tree for q in `{14,27,41,63,84,168}`
+  with owner labels and route outcomes.
+- **Pointers:** THM-568 correction, HYP-2929, HYP-2979, HYP-2982, Res_27 work.
+
+### LTT-044: Robbins No-Bridge Assembly
+
+- **Move:** Import the graph-theoretic Robbins lesson: a strong orientation is
+  possible exactly when no bridge is forgotten.
+- **LRC use:** A proof assembly is safe only if every bridge between atom bank,
+  center, packet, interval certificate, and route handoff is retained or
+  discharged.
+- **Preserves:** Assembly bridges between local certificate pieces.
+- **Forgets / guardrail:** A quotient that forgets the bridge can turn a true
+  interval certificate into a floating numerical hint.
+- **Next pull:** Add a "bridge checklist" to Fejer manifest generation and to
+  every future packet-family certificate.
+- **Pointers:** HYP-2981, T1065, Robbins theorem notes, HYP-2990.
+
+### LTT-045: Tournament Fingerprint Payload
+
+- **Move:** Standardize lightweight tournament diagnostics across research
+  scripts.
+- **LRC use:** Makes exploratory scripts comparable: even when the proof route
+  fails, the fingerprint can reveal a reusable carrier.
+- **Preserves:** Score histogram, SCC sizes, directed 3-cycles, Hamiltonian
+  path count, complement behavior, and chosen tie path.
+- **Forgets / guardrail:** A fingerprint is not a proof unless its preserved
+  predicate is declared.
+- **Next pull:** Create a small shared helper for score histogram, SCCs,
+  3-cycles, H count for small carriers, and Hamiltonian tie path reporting.
+- **Pointers:** AGENTS.md Tournament Analysis default, HYP-2987, HYP-2990,
+  T1074.
+
+## Immediate Pull List
+
+1. Expand the HYP-2963 labelled packet classifier with three new columns:
+   Haar tile class, Ramanujan exact-period projector, and spectrum binding
+   scale.
+2. Make a Fejer certificate manifest bridge checklist based on LTT-044.
+3. Compute multi-scale tournament spectra for AP, GW, K33, petals, splices,
+   covering rows, and the weakest Fejer-margin rows.
+4. Build a decorated source-cone canonicalizer: observer-source mark,
+   endpoint owners, exact-period class, and Haar tile class.
+5. Prove or refute the vanishing lemma suggested by HYP-2992: no owner-strip,
+   no cross-handoff, no nested-refinement coefficient implies AP/GW boundary or
+   F7 state-lift.
+6. Turn the controlled-kernel rule into a short reusable theorem template in
+   the style of HYP-2990.
+

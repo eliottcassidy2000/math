@@ -23039,3 +23039,46 @@ or nested-refinement coefficient, or else collapse to an AP/GW boundary skeleton
 or emit a new THM-572/F7 state-lift atom.  Namespace repaired after rebase:
 HYP-2988 remains the exposure-poset proof pass, HYP-2989 the minimal Haar-square
 switch, and this rectangle-product lane is HYP-2992.
+or emit a new THM-572/F7 state-lift atom.
+
+## codex-2026-06-24-S166 -- LRC tournament technique index
+
+User asked to get more creative by looking back through the many ways the repo
+has studied tournaments, related series, metagraphs, and quotient techniques,
+then bring as many as possible back onto LRC and create a large index other
+agents can pull from.
+
+First repaired the cut-off session namespace, then rebased over the incoming
+mainline HYP-2991/T1075 Haar zipper cocycle work.  The Haar-product rectangle
+atlas now lives at HYP-2992/T1072, leaving HYP-2988 for the exposure-poset proof
+pass, HYP-2989 for the minimal 2-by-2 Haar-square switch, and HYP-2991 for the
+local zipper cocycle.  Updated hypothesis, results, tangent, concept-map,
+open-question, backlog, and session-log pointers accordingly.
+
+Created `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` and T1078 as a
+tournament-specific companion to the broader incoming
+`00-navigation/LRC-TECHNIQUE-INDEX.md`.  The index
+contains 45 reusable technique cards, each with move, LRC use, preserved
+predicate, forgotten-coordinate guardrail, next pull, and pointers.  It covers
+controlled-kernel zipper theorems, proof-carrier Tournament Analysis,
+multi-scale winding spectra, observer-source/A000568 fibers, fixed-path
+tilings, metagraph/even-graph projections, good-cut/SCC coordinates, H/OCF and
+W-polynomial channels, Burnside/CRT enumeration, three-state automata, Landau
+prefix majorization, packet-sign K4s, sector-state DPs, taut bridges,
+topes/cocircuits, Haar-Baire/Haar-product carriers, Fejer/Toeplitz certificates,
+moment barriers, Ramanujan exact-period projectors, divisor/totient guardrails,
+analytic sieve/Kaczynski smoothing, Farey/Kpq/C27/K33 state lifts, exposure
+posets, parity carriers, transport matrices, spectral shadows, unit-distance
+analogies, octahedral currents, OCF coimages, labelled packet classifiers,
+Faulhaber channel gates, irreducible-polynomial lift analogies, p-adic packet
+trees, Robbins no-bridge assembly, and standard fingerprint payloads.
+
+The proof-order takeaway is procedural: before applying any tournament or
+series quotient to LRC14, declare which coordinate it preserves and which one it
+is allowed to forget.  The default controlled-kernel rule is fiber-constant,
+reconstructible, annihilated by a dual certificate, or routed to a named
+residual sector.  Immediate pulls are to add Haar tile class, Ramanujan
+projector, and spectrum binding scale to the HYP-2963 classifier; add a Robbins
+no-bridge checklist to Fejer manifests; compute multi-scale spectra for named
+and weak-margin rows; build a decorated source-cone canonicalizer; and test the
+HYP-2992 vanishing lemma.
