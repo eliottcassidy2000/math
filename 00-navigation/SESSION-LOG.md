@@ -22300,9 +22300,12 @@ count sectors from labelled non-scalar sectors before comparing local moves.
 ## codex-2026-06-24-S155 -- LRC14 taut bridge graph curvature stub
 
 User asked for a brand new angle on the LRC14 proof.  Reserved HYP-2970 for a
-taut endpoint-transfer graph route: treat positive safe intervals as directed
-bridges between endpoint owners, and treat isolated boundary witnesses as
-zero-length taut vertices.  The goal is to test whether AP/GW are the only
-zero-curvature endpoint-transfer equality atoms, while non-AP/GW labelled
-packets either expose a positive open bridge or route to K33/state-lift debt.
-The computation and reflection are pending in this session.
+taut endpoint-transfer graph route; after rebasing over incoming S156/S157,
+HYP-2970 was already taken for the endpoint-credit winding-cycle dual, so this
+session renumbered the local taut-vertex refinement to HYP-2975.  The route:
+treat positive safe intervals as directed bridges between endpoint owners, and
+treat isolated boundary witnesses as zero-length taut vertices.  The goal is to
+test whether AP/GW are the only zero-curvature endpoint-transfer equality
+atoms, while non-AP/GW labelled packets either expose a positive open bridge,
+violate HYP-2974 Toeplitz PSD, or route to K33/state-lift debt.  The computation
+and reflection are pending in this session.
