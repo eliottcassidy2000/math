@@ -7,7 +7,7 @@ longer searching for "the invariant"; it is trying to prove completeness of a
 labelled source packet.
 
 After the S160, spectral-shadow, and Ramanujan-quotient rebases, this
-reflection is the narrative companion to HYP-2979 and should be read under the
+reflection is the narrative companion to HYP-2980 and should be read under the
 HYP-2976 holistic lineage umbrella.
 
 ## The Earliest Durable Shape

@@ -3,31 +3,31 @@ LRC14 holistic route atlas (codex S159)
 
 Corpus
 ------
-markdown artifacts scanned with LRC signal: 2245
+markdown artifacts scanned with LRC signal: 2251
 canon theorem artifacts: 430
-hypothesis artifacts: 638
-forum post/comment artifacts: 48
+hypothesis artifacts: 639
+forum post/comment artifacts: 50
 
 Route frequency
 ---------------
-endpoint_core                 895
-moon_core_apex                660
-singular_series               607
-raw_tournament_guardrail      371
-fixed_margin_packet           316
-wide_decorrelation            314
-farey_exact_m                 295
-ap_gw_boundary                218
-moment_dual                   206
-c27_unital_k33                181
-qdiv_small_denominator        147
-boundary_moment_gk8           135
-observer_source               112
-haar_baire                     98
-lift_packet                    45
-nork_pinch                     39
-fourier_toeplitz               27
-twist_ladder                   18
+endpoint_core                 901
+moon_core_apex                663
+singular_series               608
+raw_tournament_guardrail      374
+fixed_margin_packet           320
+wide_decorrelation            316
+farey_exact_m                 299
+ap_gw_boundary                224
+moment_dual                   211
+c27_unital_k33                187
+qdiv_small_denominator        154
+boundary_moment_gk8           139
+observer_source               115
+haar_baire                    103
+lift_packet                    47
+nork_pinch                     41
+fourier_toeplitz               33
+twist_ladder                   22
 
 Historical phase density
 ------------------------
@@ -46,31 +46,31 @@ dual-certificate convergence                  5
 
 Top route co-occurrences
 ------------------------
-moon_core_apex + singular_series: 209
-endpoint_core + moon_core_apex: 191
-endpoint_core + fixed_margin_packet: 169
-ap_gw_boundary + endpoint_core: 141
-endpoint_core + raw_tournament_guardrail: 139
-endpoint_core + singular_series: 139
-endpoint_core + farey_exact_m: 135
-ap_gw_boundary + c27_unital_k33: 129
-moon_core_apex + raw_tournament_guardrail: 125
-endpoint_core + wide_decorrelation: 107
-c27_unital_k33 + endpoint_core: 103
-c27_unital_k33 + farey_exact_m: 101
-ap_gw_boundary + farey_exact_m: 100
-fixed_margin_packet + moon_core_apex: 97
-moon_core_apex + wide_decorrelation: 95
-c27_unital_k33 + haar_baire: 89
-endpoint_core + moment_dual: 87
-farey_exact_m + moon_core_apex: 87
-raw_tournament_guardrail + singular_series: 83
-singular_series + wide_decorrelation: 83
-ap_gw_boundary + fixed_margin_packet: 82
-ap_gw_boundary + haar_baire: 77
-endpoint_core + observer_source: 76
-endpoint_core + qdiv_small_denominator: 75
-farey_exact_m + fixed_margin_packet: 75
+moon_core_apex + singular_series: 210
+endpoint_core + moon_core_apex: 194
+endpoint_core + fixed_margin_packet: 173
+ap_gw_boundary + endpoint_core: 147
+endpoint_core + raw_tournament_guardrail: 142
+endpoint_core + singular_series: 140
+endpoint_core + farey_exact_m: 139
+ap_gw_boundary + c27_unital_k33: 135
+moon_core_apex + raw_tournament_guardrail: 127
+endpoint_core + wide_decorrelation: 109
+c27_unital_k33 + endpoint_core: 109
+c27_unital_k33 + farey_exact_m: 105
+ap_gw_boundary + farey_exact_m: 104
+fixed_margin_packet + moon_core_apex: 100
+moon_core_apex + wide_decorrelation: 97
+c27_unital_k33 + haar_baire: 94
+endpoint_core + moment_dual: 92
+farey_exact_m + moon_core_apex: 90
+ap_gw_boundary + fixed_margin_packet: 86
+raw_tournament_guardrail + singular_series: 84
+singular_series + wide_decorrelation: 84
+endpoint_core + qdiv_small_denominator: 82
+ap_gw_boundary + haar_baire: 82
+endpoint_core + observer_source: 79
+farey_exact_m + fixed_margin_packet: 79
 
 Tournament Analysis
 -------------------

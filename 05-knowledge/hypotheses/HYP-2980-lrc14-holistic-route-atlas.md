@@ -1,11 +1,12 @@
 ---
-id: HYP-2979
+id: HYP-2980
 title: LRC14 holistic route atlas and source-kernel convergence
 status: PROOF-SYNTHESIS / historical route atlas and theorem target, not a proof
 source: codex-2026-06-24-S159
 script: 04-computation/lrc14_holistic_route_atlas_codex_s159.py
 result: 05-knowledge/results/lrc14_holistic_route_atlas_codex_s159.out
 related:
+  - HYP-2979
   - HYP-2978
   - HYP-2976
   - HYP-2977
@@ -56,13 +57,15 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2979: LRC14 Holistic Route Atlas And Source-Kernel Convergence
+# HYP-2980: LRC14 Holistic Route Atlas And Source-Kernel Convergence
 
 Integration note after rebasing over codex-2026-06-24-S160, the spectral
-shadow dual route, and the Ramanujan-divisor quotient guardrail lane: HYP-2976
-is now the completed lineage synthesis, HYP-2977 is the spectral-shadow dual
-route, HYP-2978 is the Ramanujan quotient guardrail, and HYP-2975 is the taut
-bridge graph curvature lane.  This HYP-2979 file is the computed
+shadow dual route, the Ramanujan quotient lanes, and the S161 quotient
+guardrail synthesis: HYP-2976 is now the
+completed lineage synthesis, HYP-2977 is the spectral-shadow dual route,
+HYP-2978 is the Ramanujan quotient guardrail, HYP-2979 is the exact-period
+projector packet lane, and HYP-2975 is the taut bridge graph curvature lane.
+This HYP-2980 file is the computed
 route-atlas/proof-kernel complement to that lineage request.
 
 This synthesis looks back across the repo's LRC work and records the current
@@ -99,33 +102,33 @@ It scans theorem, hypothesis, reflection, and forum markdown artifacts with an
 LRC signal.  The main corpus readout is:
 
 ```text
-markdown artifacts scanned with LRC signal: 2245
+markdown artifacts scanned with LRC signal: 2251
 canon theorem artifacts: 430
-hypothesis artifacts: 638
-forum post/comment artifacts: 48
+hypothesis artifacts: 639
+forum post/comment artifacts: 50
 ```
 
 The most frequent route families in the scan are:
 
 ```text
-endpoint_core              895
-moon_core_apex             660
-singular_series            607
-raw_tournament_guardrail   371
-fixed_margin_packet        316
-wide_decorrelation         314
-farey_exact_m              295
-ap_gw_boundary             218
-moment_dual                206
-c27_unital_k33             181
-qdiv_small_denominator     147
-boundary_moment_gk8        135
-observer_source            112
-haar_baire                  98
-lift_packet                 45
-nork_pinch                  39
-fourier_toeplitz            27
-twist_ladder                18
+endpoint_core              901
+moon_core_apex             663
+singular_series            608
+raw_tournament_guardrail   374
+fixed_margin_packet        320
+wide_decorrelation         316
+farey_exact_m              299
+ap_gw_boundary             224
+moment_dual                211
+c27_unital_k33             187
+qdiv_small_denominator     154
+boundary_moment_gk8        139
+observer_source            115
+haar_baire                 103
+lift_packet                 47
+nork_pinch                  41
+fourier_toeplitz            33
+twist_ladder                22
 ```
 
 The top co-occurrences say the same thing qualitatively: endpoint/core,

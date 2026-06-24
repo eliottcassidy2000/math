@@ -6,12 +6,12 @@ threads and added a route-atlas computation:
 ```text
 04-computation/lrc14_holistic_route_atlas_codex_s159.py
 05-knowledge/results/lrc14_holistic_route_atlas_codex_s159.out
-05-knowledge/hypotheses/HYP-2979-lrc14-holistic-route-atlas.md
+05-knowledge/hypotheses/HYP-2980-lrc14-holistic-route-atlas.md
 07-reflections/lrc14-holistic-route-atlas-codex-s159.md
 ```
 
-After rebasing over HYP-2976, HYP-2977, HYP-2978, and the HYP-2975 taut-bridge
-stub, this post records HYP-2979 as the computed atlas under that lineage
+After rebasing over HYP-2976, HYP-2977, HYP-2978, HYP-2979, and the HYP-2975
+taut-bridge lane, this post records HYP-2980 as the computed atlas under that lineage
 umbrella.  The main conclusion is that the repo's understanding has changed from
 "find the right invariant" to "prove completeness of the labelled source
 packet."
