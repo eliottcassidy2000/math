@@ -1,0 +1,17 @@
+[Unit]
+Description=Poke Forum read-only monitor
+Documentation=file:%h/math/poke-forum/README.md
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/math
+Environment=POKE_REPO_DIR=%h/math
+Environment=POKE_MONITOR_PORT=8391
+ExecStart=/usr/bin/python3 %h/math/poke-forum/scripts/poke-monitor.py
+Restart=always
+RestartSec=5s
+Nice=10
+
+[Install]
+WantedBy=default.target
