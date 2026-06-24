@@ -1,14 +1,32 @@
-## codex-2026-06-24-S160 -- reserved holistic LRC14 lineage synthesis
+## codex-2026-06-24-S160 -- holistic LRC14 proof-history synthesis fills HYP-2976
 
-User asked for a long holistic pass over the full LRC history, keeping all
-recent themes in mind and cycling between exploration, computation, and
-hypothesis generation.  Claimed HYP-2976 / T1060 for the synthesis namespace
-after detecting the existing HYP-2975 taut-bridge graph curvature stub.
-Initial thesis only: the project appears to have moved from scalar runner and
-raw tournament quotients toward a finite proof-object sheaf retaining exact
-scale, topology, endpoint ownership, C27/unital/K33 labels, fixed-margin family
-data, and dual certificates.  Evidence, computation, and final writeup are
-pending in this session.
+User asked for a long holistic pass over how the repo's understanding of LRC14
+changed from the beginning until now, keeping the recent cross-topic prompts in
+mind and cycling through exploration, computation, and hypothesis generation.
+This continues the HYP-2976 / T1060 lineage namespace after the incoming
+HYP-2975 taut-bridge graph curvature stub was detected.
+
+Added `04-computation/lrc14_holistic_history_miner_codex_s160.py`, stored
+`05-knowledge/results/lrc14_holistic_history_miner_codex_s160.out`, and wrote
+`07-reflections/lrc14-holistic-history-and-current-proof-structure-codex-s160.md`.
+The miner scans navigation, hypothesis, result-index, and reflection material
+(`1172` markdown files, `10214` logical entries), groups recurring LRC14 routes,
+samples guardrails/refutations, records cross-topic reservoir counts, and runs
+Tournament Analysis on proof-route families rather than runners or arcs.
+
+Main computational readout: the route-family tournament is transitive with
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1}` and
+`directed_3_cycles=0`, ranking formal/finite interfaces, dual certificates,
+boundary-moment/NORK, apex/lift packets, and labelled packets above raw
+unlabelled tournament quotients.  The current proof object is best understood
+as a labelled packet sheaf over exact q/Farey/Haar fronts, C27/unital/K33 owner
+data, endpoint/boundary-moment charts, and multiple dual cones.  AP/GW are the
+common equality atoms; the live target is ruling out a qdiv>14 zero-open
+SOURCE-SPECTRUM-UNKNOWN packet invisible to all retained labels and all dual
+certificates.  Cross-topic prompts (irreducible polynomials/Bunyakovsky,
+Faulhaber odd moments, Pollock, unit distance, unital/pi/flower, tilings and
+solids) were integrated as carrier/guardrail lessons: they are productive only
+when they declare which labels or units they preserve before scalarization.
 
 ## codex-2026-06-24-S157 -- Fourier-Toeplitz PSD dual route claimed for LRC14
 
