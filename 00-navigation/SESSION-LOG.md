@@ -1,3 +1,30 @@
+## codex-2026-06-24-S169 -- Farey-Fibonacci additive-basis carrier (HYP-2998/T1083)
+
+User asked to merge prior work on Fermat polygonal numbers, Goldbach/ternary
+Goldbach, Zeckendorf, the Fibonacci sparse-carry arrangement
+`1,1,1+1,1+2,1+3+1,...`, and Farey numerator/denominator payloads under
+addition, multiplication, and exponentiation.
+
+Added `04-computation/farey_fibonacci_additive_basis_s169.py` and stored
+`05-knowledge/results/farey_fibonacci_additive_basis_s169.out`.  The scout
+records `F_{n+1}=sum_k binom(n-k,k)`, verifies that the golden Farey spine
+`p/q=F_i/F_{i+1}` has additive payload `p+q=F_{i+2}`, reads `p*q` as the
+`K_{p,q}` incidence area, and treats `p^q,q^p` as ordered magnitude-stress
+channels.  In the finite table the power winner flips after `2/3 -> 3/5`.
+
+The synthesis separates four representation economies: Goldbach/ternary
+smoothing, Fermat polygonal bounded arity, Zeckendorf no-adjacent normal form,
+and Farey address retention.  Tournament Analysis over proof carriers is
+transitive with Hamiltonian path `zeckendorf_sparse_normal_form >
+farey_address_vector > fermat_polygonal_bounded_arity >
+farey_product_Kpq_area > ternary_goldbach_smoothing >
+binary_goldbach_pair_graph > farey_power_stress_channel >
+raw_scalar_rep_count`.  Created HYP-2998/T1083 and the reflection
+`07-reflections/farey-fibonacci-additive-basis-carrier-s169.md`.  After
+origin/main advanced with HYP-2997, rebased this lane conceptually as the
+sequence-shadow representation-economy companion to that cocycle normal-form
+atlas.
+
 ## codex-2026-06-24-S168 -- residual section and packet-grid verification started (HYP-2996/T1080)
 
 User asked to work on residual section characterization and packet grid

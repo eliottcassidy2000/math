@@ -15,6 +15,13 @@
 
 ---
 
+## Lead codex-2026-06-24-S169: Farey-Fibonacci additive-basis carrier
+
+**Status:** SYNTHESIS / finite scout and proof-interface carrier complete (HYP-2998/T1083).  User asked to merge previous work on Fermat polygonal numbers, Goldbach/ternary Goldbach, Zeckendorf, the Fibonacci sparse-carry arrangement, and Farey numerator/denominator sum/product/power payloads.  Integrated incoming HYP-2997 as the adjacent cocycle normal-form atlas: this lane supplies the representation-economy label that sequence shadows must carry before HYP-2997-style quotient forgetting is safe.
+**Readout:** `04-computation/farey_fibonacci_additive_basis_s169.py` stores output in `05-knowledge/results/farey_fibonacci_additive_basis_s169.out`.  The scout records `F_{n+1}=sum_k binom(n-k,k)` for rows `1,1,1+1,1+2,1+3+1,...`; on the golden Farey spine `F_i/F_{i+1}`, `p+q=F_{i+2}`, `p*q=|E(K_{p,q})|`, and power payloads are ordered magnitude-stress channels.  Tournament Analysis over proof carriers is transitive with path `zeckendorf_sparse_normal_form > farey_address_vector > fermat_polygonal_bounded_arity > farey_product_Kpq_area > ternary_goldbach_smoothing > binary_goldbach_pair_graph > farey_power_stress_channel > raw_scalar_rep_count`.
+**Next:** add a representation-economy field to sequence-shadow packet classifiers: smoothing, bounded arity, normal form, or Farey address.  A quotient using representation counts is unsafe until it states which economy preserves the target predicate and which coordinate is reconstructed, annihilated, exact, descended, or emitted as residual debt.
+Namespace: HYP-2998 / T1083.
+
 ## Lead codex-2026-06-24-S168: expanded LRC technique index for tournament/metagraph/series carriers
 
 **Status:** NAVIGATION / compact registry expanded.  User asked to get even more
