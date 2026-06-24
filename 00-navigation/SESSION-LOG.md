@@ -24,6 +24,17 @@ must have positive gK8/L_y image or carry a K33/H=7 state-lift label.  LRC14
 remains open, but F6 is now an exact endpoint-collision packet.  HYP-2964 and
 HYP-2965 fit together as shell plus local face: moon-core reduction first,
 then zero bridge-packet exclusion inside the covering face.
+## codex-2026-06-24-nork-pinch -- NORK pinch-template atlas attacks HYP-2956 F6
+
+User asked to "nork" creatively toward an LRC proof, continuing the labelled-packet / gauntlet / boundary-moment route.  I read the current HYP-2956/HYP-2963/HYP-2962 stack and treated NORK as "No Open Residual Kernel": `qdiv>=14`, no strict safe open interval, and not AP/Goddyn-Wong.
+
+Added `04-computation/lrc14_nork_pinch_template_audit_codex_20260624.py`, stored `05-knowledge/results/lrc14_nork_pinch_template_audit_codex_20260624.out`, registered HYP-2966/T1053, wrote the Poke post, and added a reflection.
+
+The default audit extends S150's AP-neighborhood bank: one-swap `add<=420`, two-swap `add<=60`, three-swap `add<=34` (up from `30`), and a first four-swap bank through `add<=24`.  It generated `705940` rows and exactly classified `141351` qdiv>=14 rows.  Result: no non-AP/GW F6/NORK packet.  Only AP and GW are zero-open; all other hard rows are positive-open and split into F2 unit-petal `28762`, F3 K33 `340`, F4 q14 front `78651`, and F5 covering `33596`.
+
+The proof shift is the important part.  Instead of trying to prove a scalar lower bound on safe mass, the script mines the shortest strict safe interval and records endpoint-owner pinch templates with exact endpoints, width, slack, q-class, atom keys, and C27-normalized labels.  Recurrent templates include `13L->12R`, `14L->13R`, `11L->16R`, `7L->20R`, and `5L->36R`.  Tournament Analysis uses proof carriers/pinch templates, not runners, and is transitive with `F6_NORK_sink`, boundary skeletons, pinch templates, fixed-margin packets, C27/K33 labels, qdiv gate, scalar mass, and raw runner set ordered by retained proof content.
+
+New theorem target: prove the NORK pinch theorem.  Every primitive non-AP/GW AP-source-core packet should create a positive endpoint-owner pinch template, unless it constructs HYP-2908/THM-572 or a genuinely new F7 Johnson-harmonic sector.  LRC14 remains open, but F6 is now a local labelled theorem rather than a generic unknown bucket.
 
 ## codex-2026-06-24-S150 -- fixed-margin labelled packet theorem for LRC14 families
 

@@ -4,6 +4,7 @@ The recurring coordinator should add each new post here, newest first.
 
 ## Posts
 
+- [LRC14 NORK Pinch-Template Atlas](posts/20260624-160751Z-lrc14-nork-pinch-template-audit/post.md) - records HYP-2966: a No Open Residual Kernel audit extending the AP-neighborhood gauntlet to 141,351 exact hard rows, finding no non-AP/GW F6 packet and reframing the next theorem as endpoint-owner pinch rigidity.
 - [LRC14 Boundary-Gap Packet Bridge](posts/20260624-160429Z-lrc14-boundary-gap-packet-bridge/post.md) - records HYP-2965: every positive strict safe component is an exact rational boundary bridge with endpoint-owner labels; the HYP-2963-scale audit finds 1,187 qdiv>14 covering rows, all positive-open and zero zero-open, while showing first endpoint current always cancels, forcing a localized/second-moment gK8/L_y bridge.
 - [LRC14 Moon-Core Proof Skeleton](posts/20260624-160331Z-lrc14-moon-core-proof-skeleton/post.md) - uses THM-571 to reclassify the apex-multiple `L1` family as discharged, leaving a smaller Moon core and a conditional proof of LRC14 from gK8 concentration, K33 state lift, fixed-margin packet exhaustiveness, and boundary-moment positivity.
 - [LRC14 Fixed-Margin Labelled Packets](posts/20260624-152804Z-lrc14-fixed-margin-labelled-packets/post.md) - introduces HYP-2962: family means fixed-margin labelled packet class, sporadic means bounded singleton after family parameters are removed; the representative classifier finds `0` strict counterexamples and `0` `qdiv>14` zero-open rows while exposing shared packet signatures such as `12->84/168`.

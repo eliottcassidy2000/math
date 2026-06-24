@@ -4,6 +4,18 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-24-nork-pinch -- LRC14 NORK pinch-template atlas: 141,351 hard rows, no non-AP/GW zero-open packet (HYP-2966)
+
+Dispatch: attacked HYP-2956's F6 bucket as NORK = No Open Residual Kernel: `qdiv>=14`, no strict safe open interval, and not the AP/Goddyn-Wong equality atom.  Added `04-computation/lrc14_nork_pinch_template_audit_codex_20260624.py`, stored `05-knowledge/results/lrc14_nork_pinch_template_audit_codex_20260624.out`, created HYP-2966/T1053, reflection, and a Poke forum post.
+
+Core result: default audit over AP plus one-swap `add<=420`, two-swap `add<=60`, three-swap `add<=34`, and four-swap `add<=24` generated `705940` rows and exactly classified `141351` qdiv>=14 rows.  No non-AP/GW F6/NORK packet appeared.  Family totals: AP/GW boundary `2`, positive unit-petal `28762`, positive K33 `340`, positive q14 front `78651`, positive covering `33596`.
+
+Proof shift: replace "is the positive Haar mass large enough?" with "which endpoint-owner pinch template forces positivity?"  The script records shortest strict intervals with exact endpoints, owners, width, slack, atom keys, and C27-normalized labels.  Recurring templates include `13L->12R`, `14L->13R`, `11L->16R`, `7L->20R`, and `5L->36R`.
+
+The next theorem is crisp: every primitive non-AP/GW AP-source-core packet creates a positive endpoint-owner pinch template, unless it constructs HYP-2908/THM-572 or a new F7 Johnson-harmonic sector.  This is the local F6 closure target.
+
+---
+
 ## codex-2026-06-24-labelled-packet-audit -- LRC14 labelled-packet counterexample audit: 21,913 rows, no below-threshold or unknown packets (HYP-2963)
 
 Dispatch: turned the HYP-2950 gauntlet plus the HYP-2954 boundary-moment bridge into an executable packet classifier that refines HYP-2961, supports HYP-2962/HYP-2956, and complements the HYP-2955 packet-migration gauntlet.  Added `04-computation/lrc14_labelled_packet_counterexample_classifier_codex_20260624.py`, stored `05-knowledge/results/lrc14_labelled_packet_counterexample_classifier_codex_20260624.out`, created HYP-2963, reflection, and a Poke forum post.
