@@ -5,6 +5,37 @@ User asked to pull recent agent work together around discrepancy theory and the 
 Added `04-computation/lrc14_haar_product_discrepancy_tiling_codex_s165.py`, stored `05-knowledge/results/lrc14_haar_product_discrepancy_tiling_codex_s165.out`, and wrote HYP-2989 plus reflection `07-reflections/lrc14-haar-product-discrepancy-tournament-tiling-codex-s165.md`.  Core computed identity: on dyadic children `h_I(x)h_J(y)=[[1,-1],[-1,1]]`, exactly the 2-by-2 fixed-margin switch.  Minimal quotient collision: diagonal and anti-diagonal packets share row/column margins but have mixed Haar coefficients `+2` and `-2`; applying the switch changes `Hxy` by `4`.  Exhaustive 2-by-2 stress through total `6` shows every nontrivial fixed-margin mate changes `Hxy`.
 
 Synthesis: HYP-2594's raw component count `K` is the pre-cancellation boundary shadow; HYP-2595's color-compatible resonance condition is the surviving mixed Haar product mode; HYP-2986's topes/cocircuits are the endpoint geometry of the same switch; HYP-2985's smoothing policies are admissible only when the mixed product label is preserved or routed.  Tournament Analysis over proof carriers is transitive: `labelled_haar_square_packet > fixed_margin_switch_cocircuit > mixed_haar_discrepancy > colored_resonance_congruence > tope_cocircuit_wall_label > row_column_margin_shadow > raw_component_count_K`.  Next theorem target: replace `K` by a bounded count of independent color-compatible mixed Haar switches, aiming at the HYP-2595 `Delta <= C*(k+c_GP)` shape and feeding HYP-2987 O3/O4.
+## codex-2026-06-24-S165 -- abstract zipper theorem atlas across past topics (HYP-2990/T1074)
+
+User asked to look for more zipper theorems and explore past topics freely.
+Read the recent HYP-2987 certificate handoff atlas plus older threads around
+unit-distance endpoint ears, boundary moments, Farey/K33 product carriers,
+perfect products, shell-1/root packets, octahedral currents, C27/unital blocks,
+OCF activity coimages, and good-cut/SCC support.
+
+Added `04-computation/abstract_zipper_theorem_atlas_codex_s165.py` and stored
+`05-knowledge/results/abstract_zipper_theorem_atlas_codex_s165.out`.  The script
+treats proof carriers as Tournament Analysis vertices and scores nine retention
+features: predicate, fiber labels, two-sided transfer, declared kernel, finite
+checkability, family compression, formalizability, anti-scalar guardrail, and
+cross-domain signal.  It compares LRC14 certificate handoff, kernel/tope/smoothing,
+octahedral Hodge current, C27/unital pair completion, Farey/K33 incidence,
+boundary-moment multi-chart, shell-1/root packet, unit-distance endpoint ear,
+OCF activity/coimage, good-cut/SCC support, and raw scalar shadow.
+
+Fingerprint: `score_hist={0:1,1:1,2:1,4:2,5:1,6:1,7:2,9:1,10:1}`,
+`directed_3cycles=4`, `SCC_sizes=[1,1,1,6,1,1]`, and
+`Hamiltonian_path_count=15`.  The six-carrier middle SCC is the signal: the
+octahedral, C27, Farey/K33, boundary-moment, unit-distance, and good-cut/SCC
+carriers should be typed handoffs, not forced into one scalar chain.
+
+Rebased over incoming HYP-2988 exposure/Haar-tile work and HYP-2989
+Haar-product discrepancy synthesis, so this lane moved to HYP-2990/T1074.
+Main theorem templates: labelled packet zipper
+lemma, no-free-slider lemma, alternating gauntlet theorem, and harmonic residual
+theorem.  LRC14 transfer: make HYP-2987's `F7` a named harmonic/state-lift
+residual sector after every zipper tooth either certifies a strict interval or
+emits AP/Goddyn-Wong equality.
 
 ## codex-2026-06-24-S164 -- kernel-homotopy boundary-defect proof pass (HYP-2984/T1068)
 

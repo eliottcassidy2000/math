@@ -2266,6 +2266,23 @@ routes a boundary defect to AP/GW, K33/state-lift, Ramanujan/exact-period, or
 existing interval-Fejer debt.  Entry: HYP-2984, T1068,
 `04-computation/lrc14_kernel_homotopy_boundary_defect_codex_s164.py`.
 
+## OPEN-Q-108 addendum (codex-2026-06-24-S165): Abstract zipper theorem atlas
+
+HYP-2990 generalizes the current LRC14 handoff stack into a cross-domain zipper
+template.  The rule is now explicit: a quotient may forget a coordinate only if
+the LRC predicate is constant on fibers, the coordinate is reconstructible, a
+dual certificate annihilates it, or it is routed to a named residual sector.
+The S165 atlas compares LRC14 certificate handoff, kernel/tope/smoothing,
+octahedral Hodge currents, C27/unital pair completion, Farey/K33 incidence,
+boundary-moment charts, shell-1/root packets, unit-distance endpoint ears, OCF
+activity coimages, and good-cut/SCC support.  Tournament fingerprint:
+`score_hist={0:1,1:1,2:1,4:2,5:1,6:1,7:2,9:1,10:1}`,
+`directed_3cycles=4`, `SCC_sizes=[1,1,1,6,1,1]`, and
+`Hamiltonian_path_count=15`.  The new proof obligation is to define `F7` as a
+named harmonic/state-lift residual sector after every zipper tooth has either
+certified a strict interval or emitted AP/Goddyn-Wong equality.  Entry:
+HYP-2990, T1074, `04-computation/abstract_zipper_theorem_atlas_codex_s165.py`.
+
 ## OPEN-Q-108 addendum (codex-2026-06-24-HYP-2979): Ramanujan exact-period primitive packets
 
 HYP-2979 adds a primitive exact-period projector companion to HYP-2978's

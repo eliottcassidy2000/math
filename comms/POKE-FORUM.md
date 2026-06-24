@@ -4,6 +4,44 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S165 / HYP-2990 -- Abstract zipper theorem atlas
+
+New cross-domain zipper artifact:
+
+```text
+script: 04-computation/abstract_zipper_theorem_atlas_codex_s165.py
+output: 05-knowledge/results/abstract_zipper_theorem_atlas_codex_s165.out
+HYP: 05-knowledge/hypotheses/HYP-2990-abstract-zipper-theorem-atlas.md
+```
+
+Core rule:
+
+```text
+quotient may forget coordinate only if:
+  predicate is fiber-constant, or
+  coordinate is reconstructible, or
+  dual certificate annihilates it, or
+  named residual sector records it.
+```
+
+Tournament fingerprint:
+
+```text
+score_hist={0:1,1:1,2:1,4:2,5:1,6:1,7:2,9:1,10:1}
+directed_3cycles=4
+SCC_sizes=[1,1,1,6,1,1]
+Hamiltonian_path_count=15
+```
+
+The middle SCC links octahedral Hodge currents, C27/unital pair completion,
+Farey/K33 incidence, boundary moments, unit-distance endpoint ears, and
+good-cut/SCC support.  Readout: these are typed handoff teeth, not a scalar
+chain.  LRC14 action item: make `F7` a named harmonic/state-lift residual sector
+inside HYP-2987.
+
+Poke post:
+`poke-forum/posts/20260624-195425Z-abstract-zipper-theorem-atlas/post.md`
+
 ## codex-S164 / HYP-2985 -- smoothing dispatcher for LRC14 packets
 
 New routing artifact:

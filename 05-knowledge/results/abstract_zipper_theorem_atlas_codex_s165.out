@@ -1,0 +1,159 @@
+S165 abstract zipper theorem atlas
+==========================================
+
+retention vector keys:
+  1. predicate
+  2. fiber_label
+  3. two_sided_transfer
+  4. kernel_declared
+  5. finite_check
+  6. family_compression
+  7. formalizable
+  8. anti_scalar_guard
+  9. cross_domain_signal
+
+candidate zipper packets:
+- lrc14_certificate_handoff_zipper [HYP-2987/T1071]
+  domains: LRC14, Fejer, Ramanujan, state-lift
+  left teeth: labelled source packets with qdiv/Farey/Haar/endpoints
+  right teeth: Fejer, Ramanujan, endpoint, twist, moment, and state-lift certificates
+  slider: packet fiber P(S)
+  preserves: strict witness, AP/GW equality, or forbidden THM-572 state lift
+  forbidden forgetting: exact M=p/q and e=14p-q, strict-open versus boundary-only status, endpoint owners and packet route, formal certificate payload
+  open arrow: prove O1-O6: source-kernel, interval backend, family compression, smoothing, state lift, F7
+  template: labelled packet zipper theorem
+  vector: (5, 5, 5, 4, 4, 4, 4, 5, 5)
+- kernel_tope_smoothing_zipper [HYP-2984/HYP-2985/HYP-2986]
+  domains: LRC14, kernel homotopy, oriented topes, smoothing
+  left teeth: open safe topes and boundary cocircuits
+  right teeth: smoothing policies and Fejer/Ramanujan/Kaczynski exits
+  slider: regular-open component or named boundary-defect atom
+  preserves: open-stable packet certificate or AP/GW boundary atom
+  forbidden forgetting: support radius, boundary owner pair sums, smoothing clock, approach class
+  open arrow: lift named-row homotopy/topes into HYP-2963 packet families
+  template: admissible kernel-homotopy zipper
+  vector: (5, 5, 4, 5, 4, 3, 4, 5, 4)
+- octahedral_hodge_current_zipper [HYP-2887]
+  domains: octahedral graph, Hodge, LRC14 currents
+  left teeth: vertex divergence on the L(K4) octahedral support
+  right teeth: face curls plus Abel/Cauchy tail defects
+  slider: octahedral current class after low-height wall deletion
+  preserves: realizability of a repeated-packet lift or named curl obstruction
+  forbidden forgetting: divergence source labels, face-curl owner labels, tail estimate used to kill residual flow
+  open arrow: prove the octahedral Hodge estimate after wall deletion
+  template: divergence-curl zipper theorem
+  vector: (4, 4, 5, 5, 3, 3, 3, 4, 5)
+- c27_unital_pair_completion_zipper [HYP-2942]
+  domains: C27 shell, unital design, AP/GW, K33
+  left teeth: AP/GW calibrated pair-completion slots
+  right teeth: branch-local K33, H12, D9, and petal completion packets
+  slider: unit pair slot with retained branch label
+  preserves: unique branch-local four-point completion or state-lift debt
+  forbidden forgetting: q=3 unital branch, AP/GW calibration, near/K33 versus petal route
+  open arrow: turn positive branch-local lift into a global state-lift discharge
+  template: pair-completion zipper theorem
+  vector: (4, 5, 4, 4, 5, 3, 3, 5, 4)
+- farey_product_k33_zipper [HYP-2932/HYP-2934/HYP-2945]
+  domains: Farey, complete bipartite graphs, perfect products, K33
+  left teeth: exact Farey branch e=14p-q and denominator shell
+  right teeth: K_{p,q} incidence blow-up and product/factor ledger
+  slider: unit-excess route index p after exact M is retained
+  preserves: p=2 C27 petal/two-block branch or p>=3 K33 incidence packet
+  forbidden forgetting: denominator q, summand shell C=27, factor-fiber address, minor label
+  open arrow: prove every remaining q=14 non-AP/GW atom enters C27 or K33 packet lane
+  template: incidence-product zipper theorem
+  vector: (4, 5, 3, 3, 4, 4, 3, 5, 5)
+- boundary_moment_multichart_zipper [HYP-2969]
+  domains: LRC14, boundary moments, fixed-margin packets, gK8
+  left teeth: adaptive exact-period packet boundary charts
+  right teeth: missed-depth sector vector and L_y/gK8 moment readouts
+  slider: labelled packet over multiple denominator charts
+  preserves: positive Haar/moment image, K33 state-lift debt, or named harmonic sector
+  forbidden forgetting: chart identity, packet label, missed-depth sector, K33/TournamentStateLift debt
+  open arrow: replace one-chart all-covered tests by a multi-chart feasible-region theorem
+  template: boundary-moment bridge zipper
+  vector: (5, 5, 4, 4, 3, 3, 3, 5, 4)
+- shell1_root_packet_mouth_zipper [HYP-1815/HYP-2664]
+  domains: LRC14, root packets, shell-1, comb pruning
+  left teeth: shell-1 carry gate on the tower {1,2,4,8}
+  right teeth: root-packet incidence rank and mouth-owner ledger
+  slider: shell-full addressed packet with holes/tails/carry retained
+  preserves: finite AP-tail residue burden after carry gate
+  forbidden forgetting: which shell-1 bit is deleted, root-packet incidence rank, old-mouth owner
+  open arrow: prove shell-1 deletion theorem and then enumerate only shell-full packets
+  template: carry-gate/root-rank zipper theorem
+  vector: (4, 5, 4, 4, 4, 3, 2, 5, 4)
+- unit_distance_spine_ear_zipper [HYP-2620/THM-408]
+  domains: unit distance, Hamiltonian spines, endpoint ears
+  left teeth: traceable unit graph and endpoint masks
+  right teeth: endpoint-compatible deletion ears and geometric cocyclic extensions
+  slider: spine endpoint section over vertex deletion
+  preserves: unit Hamiltonian spine survives extension unless geometry forbids the attachment
+  forbidden forgetting: endpoint option set, deleted-ear identity, unit-cocyclic realizability
+  open arrow: classify degree-4/5 unit-cocyclic attachments over exact n=21 cores
+  template: endpoint-ear zipper theorem
+  vector: (4, 4, 5, 4, 5, 3, 3, 4, 5)
+- ocf_activity_coimage_zipper [HYP-2618]
+  domains: OCF, Condorcet, hard-core activity, LRC coimages
+  left teeth: hard-core activity-2 partition of Omega(T)
+  right teeth: compatible packet address and signed partition evaluation
+  slider: coimage carrier with retained compatibility labels
+  preserves: forbidden H-value/coimage signal without pretending it is raw noise stability
+  forbidden forgetting: compatibility relation, activity parameter, signed versus unsigned partition function
+  open arrow: define the exact LRC packet coimage evaluation, not just its mass shadow
+  template: activity/coimage zipper theorem
+  vector: (3, 4, 4, 3, 4, 3, 2, 4, 5)
+- good_cut_scc_support_zipper [THM-354/INV-237]
+  domains: staircase tilings, tournaments, SCC support, good cuts
+  left teeth: base-path interval good-cut count
+  right teeth: strong-component condensation boundaries
+  slider: support residue g_P(T)=n-#SCC(T)
+  preserves: strong connectivity/top good-cut bucket across the tiling-to-tournament map
+  forbidden forgetting: chosen Hamiltonian base path, component-boundary order, range parity of quotient transport
+  open arrow: use SCC support residue as a quotient-transport coordinate in LRC packet atlases
+  template: support-residue zipper theorem
+  vector: (4, 4, 4, 4, 5, 3, 4, 4, 5)
+- raw_scalar_shadow [negative control]
+  domains: all domains
+  left teeth: one number
+  right teeth: another number
+  slider: unlabelled equality or monotone comparison
+  preserves: usually none unless a separate theorem supplies the kernel
+  forbidden forgetting: route, fiber, endpoint owner, topology, certificate payload
+  open arrow: use only as a diagnostic after the zipper labels have been retained
+  template: anti-template
+  vector: (1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+tournament fingerprint:
+  score_hist={0: 1, 1: 1, 2: 1, 4: 2, 5: 1, 6: 1, 7: 2, 9: 1, 10: 1}
+  directed_3cycles=4
+  SCC_sizes=[1, 1, 1, 6, 1, 1]
+  Hamiltonian_path_count=15
+  top score order:
+    10  lrc14_certificate_handoff_zipper
+     9  kernel_tope_smoothing_zipper
+     7  octahedral_hodge_current_zipper
+     7  c27_unital_pair_completion_zipper
+     6  farey_product_k33_zipper
+     5  boundary_moment_multichart_zipper
+     4  unit_distance_spine_ear_zipper
+     4  good_cut_scc_support_zipper
+     2  shell1_root_packet_mouth_zipper
+     1  ocf_activity_coimage_zipper
+     0  raw_scalar_shadow
+  sample directed 3-cycles:
+    octahedral_hodge_current_zipper -> c27_unital_pair_completion_zipper -> farey_product_k33_zipper -> octahedral_hodge_current_zipper
+    farey_product_k33_zipper -> octahedral_hodge_current_zipper -> good_cut_scc_support_zipper -> farey_product_k33_zipper
+    farey_product_k33_zipper -> boundary_moment_multichart_zipper -> good_cut_scc_support_zipper -> farey_product_k33_zipper
+    farey_product_k33_zipper -> unit_distance_spine_ear_zipper -> good_cut_scc_support_zipper -> farey_product_k33_zipper
+
+theorem templates:
+- Labelled packet zipper lemma: If two carriers L and R map to the same labelled packet base P, the target predicate is constant on P-fibers, and every kernel coordinate is reconstructed, annihilated, or routed to a named residual sector, then local L- and R-certificates glue to a certificate over the fiber product L x_P R.
+- No-free-slider lemma: A proposed zipper fails exactly where the slider forgets a load-bearing label.  A failure certificate should name one of four defects: predicate mixing on a fiber, unreconstructed coordinate, unannihilated kernel, or unnamed residual sector.
+- Alternating gauntlet theorem: Run left teeth and right teeth alternately.  If every failed tooth emits a smaller named packet or a boundary-moment/state-lift debt, and the debt order is well founded, the gauntlet terminates in a certificate, a known equality atom, or a forbidden lift.
+- Harmonic residual theorem: The last bucket cannot be an anonymous exception.  It must be a named representation, homology, cocircuit, curl, Johnson-harmonic, or state-lift sector with an explicit predicate.
+
+LRC14 transfer readout:
+  The strongest next zipper is not another scalar invariant.  It is a labelled-packet theorem saying that the Fejer interval, Ramanujan exact-period, endpoint bridge, tope/cocircuit, boundary-moment, and state-lift carriers are all projections of one packet object.
+  The finite obstruction target is therefore a controlled residual: F7 must name the harmonic/state-lift sector left after every zipper tooth has either certified a strict interval or emitted AP/GW equality.
+  The cross-domain warning is stable: when a quotient forgets endpoint ears, shell bits, C27 branch labels, curl/divergence owners, or exact periods, the theorem does not become false by mystery.  It becomes untyped.
