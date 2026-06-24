@@ -1,3 +1,13 @@
+## codex-2026-06-24-S142 -- affine-depth chain extracts a depth-14 signal from the calibrated unital path
+
+User repeated the triangular/perfect-number and affine-composition prompt.  Treated it as a follow-up rather than duplicating HYP-2941.  Pulled incoming HYP-2942 and HYP-2943 first; HYP-2942 was directly relevant because it supplied the calibrated q=3 unital path `AP/GW --H12-- near/K33 --D9-- petal10` that HYP-2941 needed in order to become a real packet grammar.
+
+Added `04-computation/lrc14_affine_depth_unital_chain_codex_s142.py`, stored `05-knowledge/results/lrc14_affine_depth_unital_chain_codex_s142.out`, and registered HYP-2944 / T1040 / reflection `07-reflections/lrc14-affine-depth-unital-chain-codex-s142.md`.
+
+Depth rule: for a marked C27 transfer `H[h]->D[d]`, set component depth `1+depth_gcd(h)+depth_gcd(d)`, with unit/gcd3/gcd9 strata `0/1/2`.  This gives GW `12->24` depth `3`, near-miss/K33 `12->36` depth `4`, and petal `10->20` depth `1`.  Composing components as affine words `b a^d`, the S138 two-block splices become order-sensitive strips: `P10+GW` has suffix depths `[4,3]`, sum `7`, beta `3/16`; `P10+K33` has suffix depths `[5,4]`, sum `9`, beta `3/32`.
+
+Main signal: the HYP-2942 linked order `GW -> K33 -> P10` has component depths `[3,4,1]`, affine suffix depths `[8,5,1]`, and depth sum exactly `14`.  The other five permutations of `[3,4,1]` give `13,15,17,18,19`, so `14` is not a multiset accident; it is the order-sensitive calibrated path signal.  Tournament Analysis used proof carriers as vertices and was transitive: `exact M/Farey branch > C27 unital calibrated chain > affine depth-14 signature > two-block splice strips > Kpq/K33 owner packet > triangular/perfect product lane > raw scalar equality`.  New target: unit-only splices discharge by C27 petal/two-swap rigidity; depth-14 linked packets route to HYP-2908/THM-572.  LRC14 remains open.
+
 ## codex-2026-06-24-S141 -- regular-solid and Euclidean tiling recursion carrier for LRC14
 
 User asked to continue POKE/LRC exploration through Platonic, Archimedean, and Johnson solids plus the Euclidean square/triangular/hexagonal tilings.  Claimed HYP-2943 / T1039 / planned script `04-computation/lrc14_platonic_tiling_recursion_codex_s141.py` for a labelled recursion-carrier audit.  The working target is to compare square self-recursion, triangle/hex dual exchange, hex self-recursion, and solid vertex-defect grammars against HYP-2942's branch-local unital rule, with Tournament Analysis on proof carriers rather than raw solids.
