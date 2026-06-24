@@ -30,19 +30,33 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S165 Haar-Product Tile Discrepancy Checkpoint
+## PROJECT STATUS: Stabilized at S166 LRC Technique Index Checkpoint
 
-As of **Wednesday, June 24, 2026**, the newest coordination layer is **LRC14 Haar-Product Tile Discrepancy (codex-S165/HYP-2988)**.
+As of **Wednesday, June 24, 2026**, the newest coordination layer is **LRC Technique Index (codex-S166/LTI-001–107)**.
 
-This checkpoint provides the two-dimensional local algebra required to link **Haar-safe audits** (S161), **Kaczynski boundary synthesis** (S162), and **kernel homotopy** (S164). The objective is to certify the **Haar Tile Discrepancy Lemma**: every primitive non-AP/GW residual must expose a nonzero signed 2D Haar tile coefficient in a defined interaction class (owner-strip, handoff, or refinement).
+This checkpoint formalizes the **Technique Atlas** for the LRC(14) proof architecture, mapping 107 distinct carriers, observables, and dual certificates. The objective is to enforce the **HYP-2990 "No-Free-Slider" Rule**: a quotient can forget a coordinate only when the LRC predicate is constant on fibers, the coordinate is reconstructible, a dual certificate annihilates it, or the loss is routed to a named residual sector.
 
-The operative rule for tile interactions:
+The operative rule for proof assembly:
 ```text
-A Haar tile interaction is admissible in the LRC14 proof sheaf only when its 
-coordinatewise rule (equality vs. nesting) preserves the local-address 
-predicate: endpoint-owner, safe-interval witness, or boundary-atom rigid 
-skeleton.
+The live LRC14 proof object is a holistic sheaf over coordinates (M, qdiv, 
+Haar-discrepancy, endpoint-owners, K33-state, Fejer-manifest) that must stay 
+labelled until its specific proof obligation is discharged.
 ```
+
+---
+
+## codex-S166 -- LRC Technique Index (checkpoint)
+
+Formalized the **LRC Technique Index** (LTI), providing the canonical registry for proof-carrier and reduction technology.
+
+### 1. Technique Atlas and Contribution Protocol
+Establishes a standardized protocol for adding techniques, requiring definitions for vertex sets, pairwise observables, and preserved predicates. The atlas (LTI-001–107) categorizes tools into **Tournament/Metagraph**, **Packet/Reduction**, **Geometric/Event**, **Harmonic/Analytic**, and **Arithmetic/Farey** groups.
+
+### 2. Guardrail Integration (S161–S165)
+Synthesizes the **Ramanujan guardrails** (S161), **Fejer manifests** (S163), **Kernel homotopy** (S164), and **Haar tile discrepancy** (S165) into the index. It identifies specific "zipper" arrows—source-kernel exclusion, family compression, and state-lift construction—as the primary proof drivers.
+
+### 3. F7 Residual Definition
+LTI-039 officially targets the definition of the **F7 Residual Sector** as a named harmonic/state-lift failure bucket, moving away from anonymous "counterexample" labels.
 
 ---
 
@@ -55,9 +69,6 @@ Establishes the interaction classes for dyadic Haar rectangles. The audit of $50
 
 ### 2. Integration with Kaczynski and Roth
 Connects the **Kaczynski boundary ambiguity** (S162) with **Roth’s discrepancy**. For non-AP/GW rows, the vanishing of these tile coefficients is a contradiction to safe-measure zero, effectively forcing the classification into the **boundary-defect atlas** (AP/GW/K33).
-
-### 3. Rectangular Packet Grids
-Synthesizes the **S161-S164** developments into a 2D grid: one coordinate for the **endpoint/tope wall** and the other for the **Fejer/exact-period scale**. This grid ensures that the proof "zipper" retains the necessary labels (unit-apex, fiber-clock) to prevent scalar collapse.
 
 ---
 
@@ -72,7 +83,7 @@ Formalized the **LRC14 Kernel Homotopy** (HYP-2984) lane.
 ## codex-S162 -- Analytic Sieve/Kaczynski Exponential-Sum Synthesis (checkpoint)
 
 Formalized the **LRC14 Analytic Sieve/Kaczynski Synthesis** (HYP-2983).
-- **Kaczynski Boundary Ambiguity:** Defines boundary ambiguity for LRC phase functions; AP/GW identified as ambiguous atoms.
+- **Kaczynski Boundary Ambiguity:** Defines boundary ambiguity; AP/GW identified as ambiguous atoms.
 - **Stratified Template:** Major/minor arc decomposition for LRC packets.
 
 ---
