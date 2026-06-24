@@ -52,6 +52,7 @@ Haar / Baire / discrepancy tile coefficients
 boundary-moment chart data
 Kaczynski / analytic smoothing approach class
 state-lift or F7 residual sector
+cochain / cocycle obstruction class
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -209,6 +210,7 @@ the HYP-2990 no-free-slider rule.
 | LTI-107 | Haar product tiling synthesis | Haar rectangles and fixed-path staircase tilings | Treat product-rule descent and Walsh/Haar multiplicativity as quotient guardrails before using tiling shadows | HYP-2989, HYP-2988, HYP-2452, THM-351 | Build a packet grid whose product-rule classes feed color-compatible discrepancy and Fejer handoff arrows. |
 | LTI-108 | Cocycle-sheaf exactness | Cocycle carriers / cochain complex `C0 -> C1 -> C2` | Treat every quotient as retaining a cocycle, cancelling it by exactness/duality, restricting it to a smaller packet, or routing it to named residual cohomology | HYP-2992, HYP-2991, HYP-2990 | Build the finite emitted-cocycle matrix on HYP-2963 packet banks and test exactness at `C1`. |
 | LTI-109 | Packet cocycle atlas | Labelled packet fibers / quotient fiber graphs | Measures the signed coordinate lost by a quotient and demands exact, dual-annihilated, descended, boundary, reconstructed, or residual exits | HYP-2995, HYP-2991, HYP-2990, HYP-2978 | Define `omega_Q` for every HYP-2963 quotient and test the cocycle exits familywise. |
+| LTI-110 | Cocycle obstruction atlas | Cochain carriers / proof obligations | Classify each forgotten coordinate as exact coboundary, closed cocycle, torsion/period class, or named residual | HYP-2994, HYP-2993, HYP-2991, HYP-2988, THM-572 | Emit `C0/C1/C2/H2` fields and sparse preserved-label warnings for every new quotient. |
 
 ## Cross-Cutting Guardrails
 
@@ -245,6 +247,7 @@ the HYP-2990 no-free-slider rule.
 | LTI-TODO-11 | Packet-level Haar zipper cocycle signatures | LTI-046, LTI-047, LTI-048, LTI-106 |
 | LTI-TODO-12 | Product-rule packet grid for fixed-path tilings | LTI-047, LTI-048, LTI-106, LTI-107 |
 | LTI-TODO-13 | Packet cocycle theorem formalization | LTI-037, LTI-040, LTI-056, LTI-061, LTI-109 |
+| LTI-TODO-14 | Executable F7 cocycle residual record | LTI-038, LTI-106, LTI-110 |
 
 ## Minimal Entry Template
 

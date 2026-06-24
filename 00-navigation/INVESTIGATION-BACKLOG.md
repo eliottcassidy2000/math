@@ -17,18 +17,23 @@
 
 ## Lead codex-2026-06-24-S166: cocycle obstruction atlas for LRC14
 
-**Status:** RESERVED / proof-interface pass in progress (HYP-2994/T1077).
-After HYP-2991 identified the local fixed-margin Haar cocycle
-`zeta(T)=T00-T01-T10+T11`, this lane asks for the abstract obstruction atlas
-above it: exact coboundaries, closed cocycles, torsion/period classes, and
-named residual sectors across LRC14 carriers.
-**Planned synthesis:** treat packet labels and owner sections as `0`-cochains,
-handoffs/gauge changes as `1`-cochains, and Haar switches, boundary cocircuits,
-moment curls, color-resonance squares, and octahedral currents as `2`-cochains.
-Tournament Analysis vertices will be proof obligations and carrier coordinates
-rather than assumed runners.
-**Next:** build a deterministic script, store output, compute the carrier
-tournament fingerprint, and update HYP-2992 from this reservation to evidence.
+**Status:** PROOF-INTERFACE / cochain-cocycle atlas complete; not a proof
+(HYP-2994/T1077).  After HYP-2991 identified the local fixed-margin Haar
+cocycle `zeta(T)=T00-T01-T10+T11`, this lane builds the abstract obstruction
+atlas above it: exact coboundaries, closed cocycles, torsion/period classes,
+Cech gluing classes, gauges with boundary stops, harmonic residuals, and raw
+scalar negative controls.
+**Readout:** `04-computation/lrc14_cocycle_obstruction_atlas_codex_s166.py`
+stores output in `05-knowledge/results/lrc14_cocycle_obstruction_atlas_codex_s166.out`.
+The cochain ledger is `C0` packet labels/owner potentials/Fejer centers,
+`C1` handoff arrows/endpoint transfers/smoothing gauges/source pullbacks, `C2`
+Haar switches/tope curls/color-resonance squares/boundary-moment curls, and
+`H2` unpaired mixed modes/no-hidden-kernel survivors/F7/THM-572 residuals.
+The `15`-carrier tournament has one nontrivial `3`-carrier SCC tying
+certificate handoff, local `zeta`, and exposure/Cech gluing.
+**Next:** attach packet-level `zeta` signatures to HYP-2963, tensor Ramanujan
+`c_q` labels with Haar tile classes, group Fejer interval certificates by
+cocycle signature, and define an executable F7 residual record.
 Namespace: HYP-2994 / T1077.
 ## Lead codex-2026-06-24-S167: LRC14 cocycle carrier atlas
 

@@ -23,6 +23,42 @@ edges.  Created HYP-2995/T1079 and a POKE/forum post.  The live theorem target
 is the packet-cocycle theorem: for every quotient `Q:P(S)->Y`, define
 `omega_Q` and discharge it by fiber constancy, reconstruction, exactness, dual
 annihilation, descent, AP/GW boundary equality, or named F7/THM-572 residual.
+## codex-2026-06-24-S166 -- cocycle obstruction atlas for LRC14 (HYP-2994/T1077)
+
+User asked for a long abstract pass seeing LRC in terms of cocycles.  Synced
+mainline first and incorporated incoming HYP-2992/HYP-2993 namespace repairs:
+HYP-2992 is the Haar-tile atlas, HYP-2993 is the zipper-pattern atlas.  Moved
+this pass to HYP-2994/T1077 after an early reservation collision and pushed the
+namespace repair before continuing.
+
+Added `04-computation/lrc14_cocycle_obstruction_atlas_codex_s166.py` and
+stored `05-knowledge/results/lrc14_cocycle_obstruction_atlas_codex_s166.out`.
+The script treats the current LRC14 proof stack as a cochain ledger:
+`C0` packet labels/owner potentials/Fejer centers/exact-period residues,
+`C1` handoff arrows/endpoint transfers/smoothing gauges/source pullbacks,
+`C2` Haar switches/tope curls/color-resonance squares/boundary-moment curls,
+and `H2` unpaired mixed modes/no-hidden-kernel survivors/F7/THM-572 residuals.
+
+It classifies `15` carriers: fixed-margin `zeta`, Haar tile curls, certificate
+handoff, tope/cocircuit boundary, exposure Cech gluing, Fejer dual coboundary,
+Ramanujan torsor, smoothing gauge, boundary-moment curl, color-resonance
+square, source-spectrum pullback, apex sheaf gluing, octahedral current,
+fixed-margin Johnson/F7 residual, and raw scalar shadow.  Sparse preserved
+labels are exact scale (`4` carriers), mixed Haar sign (`3`), and phase period
+(`4`), which are exactly the labels scalar quotients tend to erase.
+
+Tournament Analysis used proof obligations/cocycle carriers as vertices, not
+runners.  Fingerprint: `vertices=15`,
+`score_hist={0:1,1:1,2:1,3:1,4:1,6:3,8:1,9:1,10:1,11:1,12:1,13:1,14:1}`,
+`directed_3cycles=1`, `SCC_sizes=[3,1,1,1,1,1,1,1,1,1,1,1,1]`, and
+`Hamiltonian_path_count=3`.  The nontrivial SCC ties certificate handoff,
+local `zeta`, and exposure/Cech gluing, so those should travel as one packet
+before scalarization.
+
+Added HYP-2994, reflection
+`07-reflections/lrc14-cocycle-obstruction-atlas-codex-s166.md`, and updated
+the hypothesis/result indexes, concept map, open question, backlog, tangents,
+and LRC technique index with `LTI-108`.
 
 ## codex-2026-06-24-S165 -- LRC technique index for tournament/metagraph proof carriers
 
