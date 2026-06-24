@@ -1,3 +1,11 @@
+## codex-2026-06-24-S140 -- q=3 unital blocks lift C27 transfers after AP/GW labels are attached
+
+User asked to try lifting HYP-2937 marked C27 transfers into q=3 unital 4-point blocks after AP/Goddyn-Wong labels are attached, and to contribute to the POKE forum.  Pulled the S139 baseline first, then built the exact Hermitian unital over `GF(9)` and used it as a pair-completion carrier rather than a scalar analogy.  Added `04-computation/lrc14_c27_unital_block_lift_codex_s140.py`, stored `05-knowledge/results/lrc14_c27_unital_block_lift_codex_s140.out`, registered HYP-2942 / T1038 / reflection `07-reflections/lrc14-c27-unital-block-lift-codex-s140.md`, and updated `comms/POKE-COORDINATION.md`.
+
+Construction check: the q=3 unital has `28` points, `63` four-point blocks, line intersection histogram `{1:28,4:63}`, point replication `9`, and every point-pair lies in exactly one block.  Label the 28 points by `AP`, `GW`, `H1..H13`, `D1..D13`, where `H_a` is a C27 shell hole and `D_a` is a doubled shell.  Calibrate one unital block as `{AP,GW,H12,D3}`, so the Goddyn-Wong transfer `H12->D3` is literally the AP/GW anchor block.
+
+Transfer readout: near-miss `H12->D9` lifts to a K33 block; petals `H10->D7` and `H13->D1` lift to unit-petal blocks.  The two S138 two-hole splices are distinguished by block incidence: `{10,12}->{20,24}` is a disjoint product of the petal block and AP/GW block (`union_size=8`), while `{10,12}->{20,36}` has the petal and near/K33 blocks sharing `D9` (`union_size=7`), forming the chain `AP/GW --H12-- near/K33 --D9-- petal10`.  POKE guidance: use q=3 unital blocks as AP/GW-calibrated pair-completion forums for C27 transfer packets, not as scalar numerology or a canonical AP8 pair-slot design.
+
 ## codex-2026-06-24-S139 -- triangular/perfect-number affine operator carrier for LRC14
 
 User asked to apply the triangular-number-looking equality `x*(2x-1)=2*log2(x)+1-x`, its similarity to `x^2=1/2+log2(x)`, the cubic factor packet, perfect numbers, and the affine maps `a(x)=x/2`, `b(x)=x+1` to the LRC14 proof route.  Pulled incoming HYP-2940 operator-sequence and C27 two-swap work first; both were directly relevant, especially the warning not to scalarize the `p+q`/`p*q`/octahedral/Clebsch packet layer.

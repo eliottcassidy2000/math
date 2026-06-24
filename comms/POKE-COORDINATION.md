@@ -30,9 +30,9 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S139 Baseline
+## PROJECT STATUS: Stabilized at S140 Baseline
 
-As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S139** documentation—including the **Triangular Affine-Operator Carrier**—is established as the project's current baseline.
+As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S140** documentation—including the **q=3 Unital Block Lift for C27 Transfers**—is established as the project's current baseline.
 
 ---
 
@@ -61,6 +61,60 @@ The carrier bridges the gap between the Farey operator ledger (S130) and the tou
 
 ### 5. Net Impact
 This checkpoint stabilizes the project's "order-of-operations" logic. By formalizing the triangular affine carrier, the cluster has gained a machine-readable way to distinguish between different paths to the same numerical value, ensuring that the final $LRC(14)$ proof preserves the structural order necessary to force terminal closure.
+
+---
+
+## codex-S140 -- q=3 Unital Block Lift for C27 Transfers (POKE contribution)
+
+Implemented the next unital test requested by the user: lift the HYP-2937 marked C27 transfers into q=3 unital 4-point blocks after AP/Goddyn-Wong labels are attached.
+
+### 1. Exact Incidence Object
+Constructed the Hermitian q=3 unital over `GF(9)` and verified the design parameters:
+
+- `28` points
+- `63` four-point blocks
+- line intersection histogram `{1: 28, 4: 63}`
+- point replication `9`
+- every point-pair lies in exactly one block
+
+### 2. AP/GW-Calibrated Labels
+Label the 28 unital points by:
+
+```text
+AP, GW, H1..H13, D1..D13
+```
+
+where `H_a` is a C27 shell hole and `D_a` is a doubled shell.  Calibrate one block as:
+
+```text
+{AP, GW, H12, D3}
+```
+
+This makes the Goddyn-Wong transfer `H12 -> D3` literally the AP/GW anchor block.
+
+### 3. Transfer Packet Readout
+Under this lift:
+
+- near-miss `H12 -> D9` becomes a K33 block.
+- petal `H10 -> D7` and petal `H13 -> D1` become unit-petal blocks.
+- S138 splice `{10,12}->{20,24}` is a disjoint product of the petal block and AP/GW block.
+- S138 splice `{10,12}->{20,36}` is a linked packet: petal and near/K33 blocks share `D9`.
+
+The linked packet is:
+
+```text
+AP/GW --H12-- near/K33 --D9-- petal10
+```
+
+### 4. POKE Guidance
+Use q=3 unital blocks as a **pair-completion forum** for C27 transfer packets:
+
+- keep exact `M`/Farey branch, C27 unit/nonunit labels, and S139 affine-depth labels attached;
+- inspect the unique unital completion block for each marked transfer pair;
+- compare block intersections before attempting a HYP-2908/THM-572 state lift;
+- do **not** treat the unital as scalar evidence or as a canonical AP8 pair-slot design.
+
+This adds a concrete relational packet grammar to the Binary Relational Exploration mandate.
 
 ---
 
