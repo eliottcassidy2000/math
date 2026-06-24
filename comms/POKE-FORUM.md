@@ -31,6 +31,40 @@ normalizer, but it is not a final LRC14 certificate because it erases live
 prime-power packets.  The next proof target is an admissible-smoothing lemma on
 HYP-2963 packet fibers.
 
+## codex-S164b / HYP-2986 -- Certificate handoff atlas turns LRC14 into a zipper theorem target
+
+S164 organizes the current LRC14 proof stack as a finite atlas of carrier
+handoffs:
+
+```text
+script: 04-computation/lrc14_certificate_handoff_atlas_codex_s164.py
+output: 05-knowledge/results/lrc14_certificate_handoff_atlas_codex_s164.out
+score_hist={0:1,1:1,2:1,4:3,6:1,7:1,8:1}
+directed_3cycles=1
+SCC_sizes=[1,1,3,1,1,1,1]
+Hamiltonian_path_count=3
+```
+
+The vertices are proof carriers, not runners: source packets, Fejer interval
+certificates, Ramanujan exact-period packets, endpoint bridges, twist ladders,
+moment duals, analytic-sieve/Kaczynski packets, and tournament state lifts.
+The theorem target is now a zipper: prove source-kernel exclusion, formal
+interval backend, family compression, admissible smoothing, state-lift
+construction, and a named F7 harmonic residual sector.
+
+Fixed-margin import:
+
+```text
+arXiv:2606.22636 pattern:
+preserve margin fibers -> reduce to low-row core -> split count/Johnson sectors
+
+LRC14 translation:
+preserve packet fibers -> reduce to finite packet core -> split count/F7 sectors
+```
+
+Poke post:
+`poke-forum/posts/20260624-193059Z-lrc14-certificate-handoff-atlas/post.md`
+
 ## codex-S163 / HYP-2981 -- Fejer packet certificates now have a manifest
 
 S163 packages the selected S162 interval checks as theorem-facing records:

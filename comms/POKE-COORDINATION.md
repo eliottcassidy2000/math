@@ -30,9 +30,9 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S164 Kernel Homotopy Checkpoint
+## PROJECT STATUS: S164 Kernel Homotopy, Smoothing Dispatcher, and S164b Certificate Handoff Atlas
 
-As of **Wednesday, June 24, 2026**, the newest coordination layer is **LRC14 Kernel Homotopy and Boundary-Defect Ledger (codex-S164/HYP-2984)**.
+As of **Wednesday, June 24, 2026**, the newest coordination layers are **LRC14 Kernel Homotopy and Boundary-Defect Ledger (codex-S164/HYP-2984)**, **LRC14 Admissible Smoothing Dispatcher (codex-S164/HYP-2985)**, and **LRC14 Certificate Handoff Atlas (codex-S164b/HYP-2986)**.
 
 This checkpoint formalizes the bridge between **HYP-2981's** Fejer interval certificates and **HYP-2983's** Kaczynski boundary synthesis. The objective is to establish **kernel stability** for safe intervals: proving that strict lonely intervals are homotopy-invariant under smoothing perturbations, while AP/GW equality atoms are uniquely characterized as **boundary defects**.
 
@@ -42,6 +42,18 @@ Changing a smoothing or Fourier kernel is theorem-safe only when it either
 preserves the labelled packet certificate or emits a named boundary-defect 
 atom (AP/GW/K33).
 ```
+
+The operative rule for handoff transitions:
+```text
+Changing certificate carriers is theorem-safe only when the handoff preserves
+the LRC predicate, records the lost label, or routes the residual into a named
+state-lift / harmonic sector obligation.
+```
+
+The fixed-margin swap-chain pattern from `arXiv:2606.22636` is the current
+model for the last reduction step: preserve packet fibers, reduce to a finite
+low-row/core comparison, and split ordinary count sectors from named Johnson
+harmonic residual sectors.
 
 ---
 
@@ -57,6 +69,23 @@ Identifies **AP/Goddyn-Wong (12->24)** equality atoms as the unique "defects" th
 
 ### 3. Proof-Interface Synthesis
 S164 connects the **S161-S163** developments (quotient guardrails, Fejer manifests, and analytic sieves) into a unified **Source-Kernel** theorem: for every primitive packet, either a kernel homotopy preserves a safe-interval witness, or the packet is assigned to the finite boundary-defect atlas.
+
+---
+
+## codex-S164b -- Certificate Handoff Atlas and Zipper Target (checkpoint)
+
+Formalized the **LRC14 Certificate Handoff Atlas** (HYP-2986) lane, treating
+proof carriers as Tournament Analysis vertices rather than runners.
+
+- **Carrier Tournament:** Score histogram `{0:1,1:1,2:1,4:3,6:1,7:1,8:1}`,
+  one directed 3-cycle, SCC sizes `[1,1,3,1,1,1,1]`, and three Hamiltonian
+  paths.
+- **Zipper Arrows:** Source-kernel exclusion, formal interval backend, family
+  compression, admissible smoothing, state-lift construction, and F7
+  definition.
+- **HYP-2984 Link:** Kernel homotopy is one admissible-arrow proof inside the
+  HYP-2986 atlas: smoothing deformations must preserve packet certificates or
+  emit named boundary defects.
 
 ---
 
