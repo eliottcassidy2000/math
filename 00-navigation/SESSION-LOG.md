@@ -22359,15 +22359,32 @@ AP/GW boundary, unit-petal, K33/state-lift, or covering boundary-moment
 positivity.  The arXiv:2606.22636 analogy is proof-shape only: split scalar
 count sectors from labelled non-scalar sectors before comparing local moves.
 
-## codex-2026-06-24-S155 -- LRC14 taut bridge graph curvature stub
+## codex-2026-06-24-S155 -- LRC14 taut bridge graph curvature
 
-User asked for a brand new angle on the LRC14 proof.  Reserved HYP-2970 for a
-taut endpoint-transfer graph route; after rebasing over incoming S156/S157,
-HYP-2970 was already taken for the endpoint-credit winding-cycle dual, so this
-session renumbered the local taut-vertex refinement to HYP-2975.  The route:
-treat positive safe intervals as directed bridges between endpoint owners, and
-treat isolated boundary witnesses as zero-length taut vertices.  The goal is to
-test whether AP/GW are the only zero-curvature endpoint-transfer equality
-atoms, while non-AP/GW labelled packets either expose a positive open bridge,
-violate HYP-2974 Toeplitz PSD, or route to K33/state-lift debt.  The computation
-and reflection are pending in this session.
+User asked for a brand new angle on the LRC14 proof.  After rebasing over
+incoming S156/S157, HYP-2970 was already taken for the endpoint-credit
+winding-cycle dual, so this session renumbered the local taut-vertex refinement
+to HYP-2975 and made it explicitly complementary to HYP-2970/HYP-2974.
+
+Added `04-computation/lrc14_taut_bridge_graph_codex_s155.py` and stored
+`05-knowledge/results/lrc14_taut_bridge_graph_codex_s155.out`.  The script
+sweeps exact open danger-arc endpoints.  Positive safe intervals become
+directed bridges between endpoint-owner labels; isolated safe equality points
+become zero-length taut vertices with positive cover depth on both sides and
+zero point-depth.
+
+Named-row audit: AP and GW `12->24` have safe mass `0`, no positive bridges,
+and six taut vertices, each with a mod-14 zero-sum endpoint-owner pair and
+zero owner-current.  Named non-AP/GW rows all have positive bridges:
+`12->36` has `1/1260`, petals have `1/980` and `1/182`, `P10+K33` has
+`4/2205`, and covering rows such as `12->84` and `drop13 add182` are positive.
+
+Default AP-neighborhood bank (`one<=160`, `two<=36`) scans `21645` primitive
+rows: `21644` positive-open and exactly one zero-open row, GW `12->24`; the
+smallest positive safe mass is `1/1260` at `12->36`.  Created HYP-2975 and
+reflection `07-reflections/lrc14-taut-bridge-graph-curvature-codex-s155.md`.
+
+Proof-order takeaway: this does not prove LRC14, but it gives a precise
+boundary-layer falsifier.  A future strict counterexample must have no positive
+bridge, no AP/GW zero-sum taut current, no HYP-2974 Toeplitz-negative harmonic
+exit, and no K33/state-lift debt.

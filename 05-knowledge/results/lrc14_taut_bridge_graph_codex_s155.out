@@ -1,0 +1,89 @@
+S155 LRC14 TAUT BRIDGE GRAPH CURVATURE
+==============================================================================
+[0] Scope
+  This is a HYP-2975 local refinement of HYP-2970 endpoint-credit winding.
+  It keeps exact open intervals and isolated endpoint witnesses before
+  scalarizing to Haar mass or Fourier moments.
+
+[1] Named-row taut bridge audit
+  row                             M qdiv    safe_mu bridges  taut curvature                 route
+  AP                           1/14   14          0       0     6 zero-curvature-taut       AP/GW-TAUT-EQUALITY
+  GW 12->24                    1/14   14          0       0     6 zero-curvature-taut       AP/GW-TAUT-EQUALITY
+  near/K33 12->36              3/41   14     1/1260       2     0 positive-open-bridge      K33-STATE-LIFT
+  petal 10->20                 2/27   14      1/980       2     0 positive-open-bridge      C27-PETAL
+  petal 13->26                 2/27   14      1/182       2     0 positive-open-bridge      C27-PETAL
+  P10+GW                       2/27   14      1/980       2     0 positive-open-bridge      C27-PETAL
+  P10+K33                      2/27   14     4/2205       4     0 positive-open-bridge      K33-STATE-LIFT
+  residue liar 12->26          1/12   12  426/35035       4     0 positive-open-bridge      OPEN-BRIDGE
+  magnitude liar 12->96       8/101   14 5219/840840       8     0 positive-open-bridge      OPEN-BRIDGE
+  covering 12->84              7/89   15 563/105105       8     0 positive-open-bridge      COVERING-POSITIVE
+  covering drop13 add182     14/183   15 4637/194040      24     0 positive-open-bridge      COVERING-POSITIVE
+
+  Taut equality atoms:
+    AP: taut_vertices=6 zero_sum_pairs=6 owner_current_l1=0
+      t= 1/14 left=1:g1                 right=13:g1                pair_mod14=[0]
+      t= 3/14 left=5:g1                 right=9:g1                 pair_mod14=[0]
+      t= 5/14 left=3:g1                 right=11:g1                pair_mod14=[0]
+      t= 9/14 left=11:g1                right=3:g1                 pair_mod14=[0]
+      t=11/14 left=9:g1                 right=5:g1                 pair_mod14=[0]
+      t=13/14 left=13:g1                right=1:g1                 pair_mod14=[0]
+    GW 12->24: taut_vertices=6 zero_sum_pairs=6 owner_current_l1=0
+      t= 1/14 left=1:g1                 right=13:g1                pair_mod14=[0]
+      t= 3/14 left=5:g1                 right=9:g1                 pair_mod14=[0]
+      t= 5/14 left=3:g1                 right=11:g1                pair_mod14=[0]
+      t= 9/14 left=11:g1                right=3:g1                 pair_mod14=[0]
+      t=11/14 left=9:g1                 right=5:g1                 pair_mod14=[0]
+      t=13/14 left=13:g1                right=1:g1                 pair_mod14=[0]
+
+  Smallest positive bridges in named rows:
+    near/K33 12->36: min_bridge=1/2520 29/70->209/504 5:g1 -> 8:g2
+    petal 10->20: min_bridge=1/1960 29/98->83/280 7:g7 -> 6:g2
+    petal 13->26: min_bridge=1/364 1/14->27/364 1:g1 -> 12:g2
+    P10+GW: min_bridge=1/1960 29/98->83/280 7:g7 -> 6:g2
+    P10+K33: min_bridge=1/2520 29/70->209/504 5:g1 -> 8:g2
+    residue liar 12->26: min_bridge=2/1001 15/182->13/154 13:g1 -> 11:g1
+    magnitude liar 12->96: min_bridge=1/5824 15/182->37/448 13:g1 -> 12:g2
+    covering 12->84: min_bridge=1/15288 15/182->97/1176 13:g1 -> 0:g14
+    covering drop13 add182: min_bridge=1/15288 197/2548->13/168 0:g14 -> 12:g2
+
+[2] AP-neighborhood exact open-mass bank
+  rows_scanned=21645
+  curvature_counts={'positive-open-bridge': 21644, 'zero-curvature-taut': 1}
+  zero_open_total=1
+  smallest_positive_safe_mu=1/1260 at single 12->36 row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+  zero-open rows detailed:
+    single 12->24: M=1/14 qdiv=14 taut=6 route=AP/GW-TAUT-EQUALITY row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+
+[3] Tournament Analysis
+  vertices considered:
+    runners, raw endpoints, endpoint-owner labels, positive safe intervals,
+    isolated taut points, boundary-current states, missed-depth sectors,
+    HYP-2970 endpoint-credit cycles, HYP-2974 Toeplitz dual sections,
+    C27/K33 proof obligations.
+  chosen vertices:
+    boundary/proof carriers, especially positive_open_bridge and taut_vertex_current.
+  pairwise observable:
+    retention of open-witness status, boundary equality, endpoint ownership,
+    dual-certifiability, state-lift address, and scalar-decoy resistance.
+  switch/gauge:
+    componentwise majority of the six retention scores; ties follow the
+    Hamiltonian path exact_M -> open bridge -> taut current -> endpoint credit.
+  fingerprint: score_hist={0: 1, 2: 2, 3: 1, 4: 2, 6: 1, 7: 1} directed_3cycles=3 scc_sizes=[5, 1, 1, 1]
+  Hamiltonian order:
+    1. endpoint_credit_winding
+    2. taut_vertex_current
+    3. Toeplitz_PSD_dual
+    4. C27_K33_state_labels
+    5. positive_open_bridge
+    6. exact_M_Farey_scale
+    7. multiplicity_moment_dual
+    8. raw_runner_vertices
+
+[4] Readout
+  HYP-2975 is not a standalone proof.  It contributes a local boundary
+  curvature audit inside HYP-2970's endpoint-credit graph.
+  Positive safe intervals are visible as bridges; AP/GW are zero-open but
+  leave isolated taut vertices with mod-14 zero-sum endpoint transfers.
+  The falsifier to search for is a primitive qdiv>=14 row with no positive
+  bridge, no AP/GW taut current, and no K33/state-lift or Toeplitz-negative
+  exit.  The bounded bank scanned here found none.
