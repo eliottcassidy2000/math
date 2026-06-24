@@ -207,6 +207,7 @@ the HYP-2990 no-free-slider rule.
 | LTI-105 | POKE/forum synthesis | Shared narrative artifacts | Keeps active theorem targets visible to parallel agents | comms/POKE-FORUM.md, comms/POKE-COORDINATION.md | Post a short technique delta when updating this index. |
 | LTI-106 | Haar zipper cocycle | `2 x 2` Haar/fixed-margin packet tables | Retain the mixed cocycle `zeta=T00-T01-T10+T11` when row/column margins collide | HYP-2991, HYP-2990, HYP-2989, HYP-2595 | Compute packet-level `zeta` signatures and route unpaired cocycles to F7/THM-572 debt. |
 | LTI-107 | Haar product tiling synthesis | Haar rectangles and fixed-path staircase tilings | Treat product-rule descent and Walsh/Haar multiplicativity as quotient guardrails before using tiling shadows | HYP-2989, HYP-2988, HYP-2452, THM-351 | Build a packet grid whose product-rule classes feed color-compatible discrepancy and Fejer handoff arrows. |
+| LTI-108 | Cocycle-sheaf exactness | Cocycle carriers / cochain complex `C0 -> C1 -> C2` | Treat every quotient as retaining a cocycle, cancelling it by exactness/duality, restricting it to a smaller packet, or routing it to named residual cohomology | HYP-2992, HYP-2991, HYP-2990 | Build the finite emitted-cocycle matrix on HYP-2963 packet banks and test exactness at `C1`. |
 
 ## Cross-Cutting Guardrails
 
