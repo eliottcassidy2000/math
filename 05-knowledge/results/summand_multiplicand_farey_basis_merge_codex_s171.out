@@ -1,0 +1,126 @@
+S171 summand/multiplicand Farey additive-basis merge
+==============================================================
+
+[1] Fibonacci row arrangement
+-----------------------------
+row formula: row(n,k)=C(n-1-k,k), sum_k row(n,k)=F_n
+n= 1 F_n=  1 row=1
+n= 2 F_n=  1 row=1
+n= 3 F_n=  2 row=1+1
+n= 4 F_n=  3 row=1+2
+n= 5 F_n=  5 row=1+3+1
+n= 6 F_n=  8 row=1+4+3
+n= 7 F_n= 13 row=1+5+6+1
+n= 8 F_n= 21 row=1+6+10+4
+n= 9 F_n= 34 row=1+7+15+10+1
+n=10 F_n= 55 row=1+8+21+20+5
+readout: the scalar F_n is a shadow; the row vector is the packet.
+
+[2] Additive-basis finite checks
+--------------------------------
+binary Goldbach pairs N= 20: count= 2 sample=[(3, 17), (7, 13)]
+binary Goldbach pairs N= 50: count= 4 sample=[(3, 47), (7, 43), (13, 37), (19, 31)]
+binary Goldbach pairs N=100: count= 6 sample=[(3, 97), (11, 89), (17, 83), (29, 71), (41, 59)]
+binary Goldbach pairs N=200: count= 8 sample=[(3, 197), (7, 193), (19, 181), (37, 163), (43, 157)]
+ternary Goldbach triples N=101: count=  38 sample=[(2, 2, 97), (3, 19, 79), (3, 31, 67), (3, 37, 61)]
+ternary Goldbach triples N=501: count= 283 sample=[(3, 7, 491), (3, 11, 487), (3, 19, 479), (3, 31, 467)]
+ternary Goldbach triples N=999: count= 769 sample=[(3, 5, 991), (3, 13, 983), (3, 19, 977), (3, 29, 967)]
+3-gonal bounded arity through 300: max_min_summands=3, first_at_max=5
+4-gonal bounded arity through 300: max_min_summands=4, first_at_max=7
+5-gonal bounded arity through 300: max_min_summands=5, first_at_max=9
+6-gonal bounded arity through 300: max_min_summands=6, first_at_max=11
+7-gonal bounded arity through 300: max_min_summands=7, first_at_max=13
+8-gonal bounded arity through 300: max_min_summands=8, first_at_max=15
+Zeckendorf N= 21: atoms=[21], indices=[8], digits=1
+Zeckendorf N= 42: atoms=[8, 34], indices=[6, 9], digits=2
+Zeckendorf N= 89: atoms=[89], indices=[11], digits=1
+Zeckendorf N=144: atoms=[144], indices=[12], digits=1
+Zeckendorf N=233: atoms=[233], indices=[13], digits=1
+Zeckendorf N=377: atoms=[377], indices=[14], digits=1
+
+[3] Summand and multiplicand graph split
+----------------------------------------
+summand node N: antidiagonal x+y=N; pair count=floor((N-1)/2)
+multiplicand node N: hyperbola xy=N; nonunit factor-pair count is sparse
+N= 14 summand_pairs=  6 factor_pairs= 1 factors=[(2, 7)]
+N= 21 summand_pairs= 10 factor_pairs= 1 factors=[(3, 7)]
+N= 27 summand_pairs= 13 factor_pairs= 1 factors=[(3, 9)]
+N= 41 summand_pairs= 20 factor_pairs= 0 factors=[]
+N= 54 summand_pairs= 26 factor_pairs= 3 factors=[(2, 27), (3, 18), (6, 9)]
+N= 89 summand_pairs= 44 factor_pairs= 0 factors=[]
+N=123 summand_pairs= 61 factor_pairs= 1 factors=[(3, 41)]
+N=377 summand_pairs=188 factor_pairs= 1 factors=[(13, 29)]
+
+[4] Golden Farey spine
+----------------------
+On p/q=F_i/F_{i+1}, p+q is the next Fibonacci number.
+p*q is the K_{p,q} incidence area; powers are order-stress tests.
+F_2/F_3=1/2: p+q=3=F_4, p*q=2, sum_pairs=1, factor_pairs(product)=0, Zeck(p+q)=[3], power_winner=q^p
+F_3/F_4=2/3: p+q=5=F_5, p*q=6, sum_pairs=2, factor_pairs(product)=1, Zeck(p+q)=[5], power_winner=q^p
+F_4/F_5=3/5: p+q=8=F_6, p*q=15, sum_pairs=3, factor_pairs(product)=1, Zeck(p+q)=[8], power_winner=p^q
+F_5/F_6=5/8: p+q=13=F_7, p*q=40, sum_pairs=6, factor_pairs(product)=3, Zeck(p+q)=[13], power_winner=p^q
+F_6/F_7=8/13: p+q=21=F_8, p*q=104, sum_pairs=10, factor_pairs(product)=3, Zeck(p+q)=[21], power_winner=p^q
+F_7/F_8=13/21: p+q=34=F_9, p*q=273, sum_pairs=16, factor_pairs(product)=3, Zeck(p+q)=[34], power_winner=p^q
+F_8/F_9=21/34: p+q=55=F_10, p*q=714, sum_pairs=27, factor_pairs(product)=7, Zeck(p+q)=[55], power_winner=p^q
+F_9/F_10=34/55: p+q=89=F_11, p*q=1870, sum_pairs=44, factor_pairs(product)=7, Zeck(p+q)=[89], power_winner=p^q
+
+[5] LRC14 unit-excess Farey packet
+----------------------------------
+For p/q=p/(14p-1), keep e=14p-q=1 before using sum/product/powers.
+p= 1 q= 13 p+q= 14 p*q=  13 sum_pairs=  6 factor_pairs(product)= 0 route=q-parent/AP-GW
+p= 2 q= 27 p+q= 29 p*q=  54 sum_pairs= 14 factor_pairs(product)= 3 route=C27 petal/two-block
+p= 3 q= 41 p+q= 44 p*q= 123 sum_pairs= 21 factor_pairs(product)= 1 route=Kpq/K33 product wall
+p= 4 q= 55 p+q= 59 p*q= 220 sum_pairs= 29 factor_pairs(product)= 5 route=Kpq/K33 product wall
+p= 5 q= 69 p+q= 74 p*q= 345 sum_pairs= 36 factor_pairs(product)= 3 route=Kpq/K33 product wall
+p= 6 q= 83 p+q= 89 p*q= 498 sum_pairs= 44 factor_pairs(product)= 3 route=Kpq/K33 product wall
+p= 7 q= 97 p+q=104 p*q= 679 sum_pairs= 51 factor_pairs(product)= 1 route=Kpq/K33 product wall
+p= 8 q=111 p+q=119 p*q= 888 sum_pairs= 59 factor_pairs(product)= 7 route=Kpq/K33 product wall
+
+[6] Tournament Analysis
+-----------------------
+vertices: proof currencies / representation fibers, not runners
+pairwise observable: coordinate-wise retention vector
+switch/gauge: majority of better-retained proof coordinates
+tie Hamiltonian path: exact_farey_packet > summand_antidiagonal_fiber > multiplicand_hyperbola_fiber > zeckendorf_path_carry > fibonacci_pascal_row > fermat_polygonal_invoice > ternary_goldbach_smoothing > binary_goldbach_pair_sieve > farey_power_stress
+exact_farey_packet                 score=8 vector=(5, 4, 4, 4, 3, 3, 4, 5, 5)
+  preserves: p/q, q, Farey excess, route labels
+  destroys: nothing intentional; this is the base packet
+summand_antidiagonal_fiber         score=7 vector=(4, 5, 2, 3, 3, 4, 3, 4, 4)
+  preserves: additive lane, pinch denominators, Pascal rows
+  destroys: factor sparsity, ordered magnitude
+multiplicand_hyperbola_fiber       score=6 vector=(4, 2, 5, 2, 2, 2, 4, 4, 4)
+  preserves: product lane, Kpq incidence, factor fibers
+  destroys: additive branch multiplicity, carry order
+zeckendorf_path_carry              score=5 vector=(3, 4, 2, 5, 3, 1, 3, 4, 5)
+  preserves: canonical support, path conflict graph, carry confluence
+  destroys: representation abundance, prime residue smoothing
+fibonacci_pascal_row               score=4 vector=(3, 5, 1, 4, 3, 2, 2, 3, 4)
+  preserves: row fiber, path independent-set ranks, carry width
+  destroys: chosen normal form, multiplicative incidence
+fermat_polygonal_invoice           score=3 vector=(2, 4, 1, 2, 5, 2, 4, 3, 4)
+  preserves: finite summand budget, side-count invoice, local residues
+  destroys: uniqueness, prime smoothing entropy
+ternary_goldbach_smoothing         score=2 vector=(2, 4, 1, 1, 2, 5, 5, 2, 3)
+  preserves: many branches, local residue rank, circle-method shape
+  destroys: canonical support, bounded deterministic invoice
+binary_goldbach_pair_sieve         score=1 vector=(2, 4, 1, 1, 1, 4, 5, 2, 3)
+  preserves: pair graph, singular series hints, prime residue channels
+  destroys: third-variable smoothing, normal form
+farey_power_stress                 score=0 vector=(1, 1, 1, 1, 1, 1, 1, 1, 5)
+  preserves: magnitude flip detector
+  destroys: proof scale, fiber identity, safe quotient data
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+
+[7] Merged packet rule
+----------------------
+A representation/Farey quotient is theorem-safe only after declaring:
+  root Farey packet: p/q, q, excess, route labels
+  summand shadow: p+q as antidiagonal fiber and additive/pinch row
+  multiplicand shadow: p*q as factor/Kpq incidence fiber
+  carry law: Pascal row and Zeckendorf no-adjacent normal form when used
+  proof economy: smoothing, bounded arity, normal form, product incidence, or stress test
+If one of those coordinates is forgotten, it must be reconstructed,
+dual-annihilated, exact/coboundary, descended, or routed to a named residual.

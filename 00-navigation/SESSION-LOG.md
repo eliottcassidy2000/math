@@ -1,3 +1,25 @@
+## codex-2026-06-24-S171 -- Summand/multiplicand Farey additive-basis merge (HYP-3003/T1087)
+
+User asked to merge previous work on Fermat polygonal numbers, Goldbach/ternary
+Goldbach, Zeckendorf, the Fibonacci row arrangement
+`1,1,1+1,1+2,1+3+1,1+4+3,1+5+6+1,...`, Farey mutations, and summand /
+multiplicand graphs.  Started from current mainline, which already had
+HYP-2998/HYP-2999/HYP-3000 for the representation-economy, Pascal-row, and
+Fibonacci path-rank layers.  Added HYP-3003 as the two-operation graph merge:
+for a Farey packet `p/q`, `p+q` is a summand antidiagonal / additive-pinch
+fiber and `p*q` is a multiplicand hyperbola / factor-Kpq incidence fiber.
+
+Script `04-computation/summand_multiplicand_farey_basis_merge_codex_s171.py`
+stores `05-knowledge/results/summand_multiplicand_farey_basis_merge_codex_s171.out`.
+It verifies the Fibonacci/Pascal row `C(n-1-k,k)`, samples binary and ternary
+Goldbach representation counts, checks Fermat polygonal bounded arity through
+`300` for sides `3..8`, lists Zeckendorf normal forms, compares summand-pair
+and factor-pair counts, and records golden Farey spine plus LRC14 unit-excess
+payloads.  LRC14 branch readout: `p=1` gives q-parent/AP-GW side, `p=2` gives
+C27 petal/two-block summand side, and `p>=3` gives product-incidence/Kpq-K33
+side.  Tournament Analysis uses proof currencies / representation fibers as
+vertices and is transitive with path `exact_farey_packet > summand_antidiagonal_fiber > multiplicand_hyperbola_fiber > zeckendorf_path_carry > fibonacci_pascal_row > fermat_polygonal_invoice > ternary_goldbach_smoothing > binary_goldbach_pair_sieve > farey_power_stress`.
+
 ## codex-2026-06-24-S170 -- LRC14 curried packet functional tower (HYP-3002/T1086)
 
 User asked to integrate the Fibonacci/Farey/additive-basis work with LRC by
@@ -23,7 +45,6 @@ runner_movie_tournament_shadow > raw_scalar_evaluation`.
 Added LTI-152, LTT-059, T1086, a reflection, and a POKE forum post.  Next
 classifier fields: `curried_call_signature` and `lost_coordinate_function` in
 HYP-2963 packet records and Fejer/Ramanujan manifests.
-
 ## codex-2026-06-24-S169 -- Farey-Fibonacci additive-basis carrier (HYP-2998/T1083)
 
 User asked to merge prior work on Fermat polygonal numbers, Goldbach/ternary

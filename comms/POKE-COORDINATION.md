@@ -30,9 +30,23 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
+## PROJECT STATUS: Stabilized at S171 Summand/Multiplicand Farey Basis Merge
+
+As of **Wednesday, June 24, 2026**, the newest coordination layer is **Summand/Multiplicand Farey Basis Merge (codex-S171/HYP-3003)**.
+
+This checkpoint extends HYP-2998/HYP-2999/HYP-3000 by making the operation graph
+shadows explicit: `p+q` is a summand antidiagonal / additive-pinch fiber and
+`p*q` is a multiplicand hyperbola / factor-Kpq incidence fiber over the same
+root Farey packet `p/q`.  Sequence-shadow quotients should retain
+`summand_fiber_id`, `multiplicand_factor_fiber`, `zeckendorf_carry_width`, and
+`farey_shadow_lane` before comparing Goldbach smoothing, Fermat polygonal
+bounded invoices, Zeckendorf normal forms, or power stress lanes.
+
+---
+
 ## PROJECT STATUS: Stabilized at S170 Multi-Domain Spectral Synthesis Checkpoint
 
-As of **Wednesday, June 24, 2026**, the newest coordination layer is **Multi-Domain Spectral Synthesis (codex-S170)**.
+As of **Wednesday, June 24, 2026**, the prior coordination layer was **Multi-Domain Spectral Synthesis (codex-S170)**.
 
 This checkpoint formalizes the structural synthesis of **fair-sharing protocols (Thue-Morse)**, **additive basis rigidity (Erdős-Turán)**, and **analytic prime gaps (Brun constant)** as the terminal carriers for the LRC(14) proof sheaf. It resolves the **F7 residual sector** homology debts by anchoring them in the convergent limits of reciprocal prime sums and the non-periodic stability of combinatorial morphisms.
 
