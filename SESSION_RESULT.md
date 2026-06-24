@@ -2,62 +2,73 @@
 
 ## Task Chosen
 
-I chose one small Hamiltonian-path spectrum sanity check from the tournament
-thread: re-verify that labeled tournaments through `n <= 6` have no example
-with exactly `H(T) = 7` Hamiltonian paths, and that all Hamiltonian path counts
-in this finite range are odd.
+I chose one small exact verification already present in the root checkout:
+run `verify_phi2_indep.py` to sanity-check the closed-form two-far curvature
+quantity
 
-This checks the small guardrail used around the forbidden `H = 7` discussion in
-`00-navigation/OPEN-QUESTIONS.md`.
+```text
+Phi_2(B) = (2 p2(B) - p1(B)) / 49
+```
+
+for two finite base sets.
+
+This is a bounded formal-sector computation, not a new theorem namespace or a
+long LRC/tournament search.
 
 ## What I Did
 
-I skimmed `00-navigation/OPEN-QUESTIONS.md`,
-`00-navigation/INVESTIGATION-BACKLOG.md`, and the required
-`00-navigation/CONCURRENT-SESSIONS.md`.  There was no `README` or `INDEX` file
-under `00-navigation/`.
+I skimmed the navigation surface: `00-navigation/OPEN-QUESTIONS.md`,
+`00-navigation/INVESTIGATION-BACKLOG.md`, `00-navigation/CONCEPT-MAP.md`, and
+the required `00-navigation/CONCURRENT-SESSIONS.md`.  There was no `README` or
+`INDEX` file directly under `00-navigation/`; I also checked the repository
+root `README.md` for orientation.
 
-I then ran two transient exact enumerations over all labeled tournaments for
-`n = 1..6`:
+Then I ran:
 
-- a Held-Karp dynamic program over subsets for `H(T)`;
-- an independent brute-force permutation checker for the same range.
+```bash
+python verify_phi2_indep.py
+```
 
-No retained research script was added.
+No retained script was added or changed.
 
 ## Concrete Result
 
-Both implementations agreed.  The exact labeled spectra and frequencies are:
+The exact closed-form checks passed:
 
 ```text
-n=1: spectrum [1]
-  frequencies: 1:1
+B = (0, 1, 2, 3, 4, 5, 6, 7)
+  p1(B) = 359/1470
+  p2(B) = 25/147
+  Phi_2(B) = 47/24010
+  EXPECTED = 47/24010
+  MATCH: True
 
-n=2: spectrum [1]
-  frequencies: 1:2
-
-n=3: spectrum [1, 3]
-  frequencies: 1:6, 3:2
-
-n=4: spectrum [1, 3, 5]
-  frequencies: 1:24, 3:16, 5:24
-
-n=5: spectrum [1, 3, 5, 9, 11, 13, 15]
-  frequencies: 1:120, 3:120, 5:240, 9:240, 11:120, 13:120, 15:64
-
-n=6: spectrum [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
-  frequencies: 1:720, 3:960, 5:2160, 9:2960, 11:1440, 13:1440,
-  15:2208, 17:1440, 19:1440, 23:2880, 25:1440, 27:480,
-  29:2880, 31:1440, 33:2640, 37:3600, 41:720, 43:1440, 45:480
+B = (0, 1, 2, 4, 8)
+  p1(B) = 0
+  p2(B) = 1/4
+  Phi_2(B) = 1/98
+  EXPECTED = 1/98
+  MATCH: True
 ```
 
-Therefore, in this complete labeled range:
+The same run also sampled the finite coprime-pair convergence probe:
 
-- `count(H = 7) = 0` for every `n <= 6`;
-- every observed value of `H(T)` is odd.
+```text
+B = (0, 1, 2, 3, 4, 5, 6, 7)
+  I_B(101,211) - Phi_2 = -260737/511677110
+  I_B(211,401) - Phi_2 = -2033806/1015755055
+
+B = (0, 1, 2, 4, 8)
+  I_B(101,211) - Phi_2 = 14225/4176956
+  I_B(211,401) - Phi_2 = -50373/33167512
+```
+
+The verifiable outcome is the exact pass of the two hard-coded `Phi_2`
+expectations.
 
 ## Confidence Note
 
-Confidence is high for this narrow finite check.  The enumeration covers every
-labeled tournament through `n = 6`, and the Held-Karp counts were independently
-cross-checked by direct permutation enumeration.
+Confidence is high for this narrow check.  The script uses exact rational
+arithmetic over the sector breakpoint partition, and both asserted expected
+values matched exactly.  I did not claim anything new about the asymptotic
+convergence probe beyond recording the sampled differences from this run.
