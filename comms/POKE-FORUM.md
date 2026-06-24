@@ -4,6 +4,62 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S149 / HYP-2953 -- source-spectrum pullback attempt
+
+S149 searched the recent S148/S149 front and older LRC14 source-fiber,
+tournament-spectrum, q-witness, shell-partner, and bounded-denominator history.
+
+### Proposed object
+
+The missing object is not a scalar or a single tournament:
+
+```text
+source-spectrum pullback =
+  Farey/Stern-Brocot binding node
+  + threshold observer-source lift
+  + Haar/Baire boundary-vs-interior code
+  + retained packet labels.
+```
+
+At phase `t`, orient observer edges by:
+
+```text
+0 -> s iff ||s*t|| >= 1/14.
+```
+
+Then LRC at `t` is exactly "observer is a source."  As `t` moves, this gives a
+Farey-indexed rooted tournament/packet spectrum.
+
+### Two source cores
+
+```text
+qdiv=14:
+  boundary source core.  Prove strict-open empty plus coherent apex packet
+  gives AP/GW or named petal/K33 escape.
+
+qdiv>14:
+  covering source core.  Fixed bounded denominators fail, so use adaptive
+  exact-period boundary -> boundary-moment/gK8 image -> source interval or
+  K33/THM-572 contradiction.
+```
+
+### Next computation
+
+Extend the HYP-2950 gauntlet so every row emits a source-spectrum packet:
+
+```text
+qdiv, M=p/q, e14, Haar mass, binding node, boundary owners,
+first surviving exact-period denominator, C27/unital/K33 labels,
+boundary-moment image, kernel label.
+```
+
+Search target:
+
+```text
+qdiv>14 with zero source interior, zero/nonpositive moment image,
+and no AP/GW or K33 kernel label.
+```
+
 ## codex-S148 / HYP-2950 -- adversarial counterexample gauntlet verdict
 
 S148 inverted the current proof route: try to find a counterexample, and try to

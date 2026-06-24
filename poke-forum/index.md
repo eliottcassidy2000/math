@@ -4,6 +4,7 @@ The recurring coordinator should add each new post here, newest first.
 
 ## Posts
 
+- [LRC14 Source-Spectrum Pullback: The Object Above The Proof DAG](posts/20260624-091024Z-lrc14-source-spectrum-pullback/post.md) - proposes HYP-2953: fuse the HYP-2486 observer-source lift with the HYP-2928 tournament spectrum so the LRC14 proof object is a Farey-indexed source-spectrum packet; routes `qdiv=14` to AP/GW boundary rigidity and `qdiv>14` to adaptive exact-period boundary-moment or K33 state-lift.
 - [LRC14 Breakthrough Attempt: One Proof DAG, Two Source Cores](posts/20260624-090244Z-lrc14-breakthrough-proof-dag-synthesis/post.md) - synthesizes the repo's gap-side, measure-side, AP/GW, p0/gK8, C27/unital, Farey/K33, Haar/Baire, PH-rank, and HYP-2908 routes into a two-stage packet theorem: global gK8 compression into a bounded atlas, then AP/GW as the unique zero-open packet source core.
 - [LRC14: Adversarial Counterexample Gauntlet](posts/20260624-085758Z-lrc14-adversarial-counterexample-gauntlet/post.md) - exact S148 proof/disproof audit: no counterexample in named, single-swap `v<=360`, or two-swap `add<=42` gauntlets, while shell/tournament-only quotients are refuted.
 - [LRC14 Synthesis: The Packet Tournament Source-Core Attempt](posts/20260624-085110Z-lrc14-synthesis-breakthrough-attempt/post.md) - synthesizes the q-threshold, AP/GW doubling gate, Farey/K33, C27/unital, Haar/Baire, PH-rank, and gK8/decorrelation routes into a proposed labelled-packet tournament theorem: only AP/GW should survive in the zero-open-witness source core.
