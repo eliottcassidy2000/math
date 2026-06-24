@@ -5,6 +5,15 @@ User supplied the graph reading `p*q=|E(K_{p,q})|`, with ordinary Farey `F_4` fi
 Core finding: the S130 product payload is not a replacement denominator, but it is a product-minor ledger.  Ordinary Farey levels first hit complete-bipartite nonplanarity at `F_4` via `3/4 -> K_{3,4}`.  The LRC14 unit-excess chain `p/(14p-1)` first hits the same wall at `3/41 -> K_{3,41}`, exactly the S128 near-miss row `12->36`; `1/13 -> K_{1,13}` is a star/q-threshold parent, while `2/27 -> K_{2,27}` is the planar two-block strip.
 
 On the S130 `749`-row AP/GW/petal/single-replacement bank, unit-excess rows split cleanly into `54` star rows, `2` two-block rows (`10->20`, `13->26`), and `1` K33-wall row (`12->36`).  Proof-ledger Tournament Analysis is transitive: `q-binding > sum-recursion > Kpq-product > K33-wall > power-stress > raw-iso`.  New proof split: handle `p=2` by petal/two-block rigidity; route `p>=3` to a finite three-owner/K33 obstruction packet, potentially feeding the HYP-2908 forbidden-H state lift.  This is a sharpened interface, not a completed LRC14 proof.
+## codex-2026-06-23-S132 -- Farey graph/PZ carrier synthesis for LRC14
+
+User asked for a long LRC14 proof-working session with Tournament Analysis, the four mutated Farey payloads, the `n*2`/`n+2` recursion analogy, and octahedral/Clebsch/half-cube/Paley-Zygmund probes.  Pulled and integrated the directly related S130/S128 work first, especially HYP-2931 and HYP-2930.
+
+Added `04-computation/lrc14_farey_graph_pz_carriers_codex_s132.py`, stored `05-knowledge/results/lrc14_farey_graph_pz_carriers_codex_s132.out`, and registered HYP-2933 / T1029 / reflection `07-reflections/lrc14-farey-graph-pz-carrier-synthesis-codex-s132.md`.
+
+Main readout: `q` remains the theorem-level binding scale.  Along the unit-excess chain `p/(14p-1)`, `q` moves by `+14`, `p+q` by `+15`, and `p*q` is quadratic with second difference `28`, so `p+q` is the additive `n+2` ledger and `p*q` is the multiplicative/coimage side-channel ledger.  Exact graph fingerprints place octahedron `L(K4)` on the support-six current/curl side (`cycle_rank=7`) and Clebsch/halved-5-cube on the folded residual-mask covariance/cut side.  Paley-Zygmund is an existence gateway only; the tight cap route still needs HYP-2823's degree-4 factorial moment region.
+
+Tournament Analysis used proof carriers as vertices, not runners.  The observable was `(theorem scale, label retention, LRC relevance, scalarization risk)`, with transitive Hamiltonian role order `q_binding_scale > p_plus_q_additive > octahedron_LK4 > p_times_q_product > Clebsch_halfcube > PZ_second_moment > power_payloads`.  Proposed next theorem target: a reduced `|M14|<=6` atom should carry `(e,q,p+q,p*q)` plus octahedral/Clebsch packet labels into either HYP-2930's non-tight Farey class or HYP-2908/THM-572's forbidden `H=7` state lift.
 
 ## codex-2026-06-23-S130 -- mutated Farey operators rank the LRC14 side channels, but q stays the binding scale
 
