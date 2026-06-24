@@ -21,11 +21,11 @@
 **S161 collision-audit update:** named-row audit confirms qdiv, open-state, mod-14 residue, `c_14`, unit-count, and lcm-scalar quotient collisions across AP/GW, q-witness, K33, petal, and covering routes; only the over-labelled guarded packet signature avoids route mixing.
 **Web/source update:** divisor functions supply the scalar pushforward; Dirichlet convolution supplies packet laws; Jordan totients supply primitive tuple capacity; divisor summatory functions expose boundary defects after a product-lattice quotient; Lambert/Eisenstein series and Ramanujan expansions connect divisor fibers to harmonic coefficients; Ramanujan-sum orthogonality and supercharacters justify unit-orbit quotients only when the primitive trace is retained.
 **Next:** (1) extend quotient-collision audit to packet families in the HYP-2963 bank; (2) test endpoint-owner Ramanujan profiles `R_q^+`, `R_q^-` for `q in {14,27,41}`; (3) turn the controlled-kernel criterion into a theorem-facing admissibility lemma; (4) route any mixed fibers to endpoint-owner, C27/K33, Toeplitz, moment-dual, or THM-572 state-lift labels.  Namespace: HYP-2978 / T1062.
+**Artifacts:** `04-computation/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py`; `05-knowledge/results/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.out`; `07-reflections/lrc14-ramanujan-divisor-quotient-guardrails-codex-s161.md`.
 
 ## Lead codex-2026-06-24: Ramanujan exact-period projectors for LRC14
 
 **Status:** ACTIVE PROOF-INTERFACE (HYP-2979/T1063, companion to HYP-2978). Ramanujan sums turn primitive
-**Status:** ACTIVE STUB (HYP-2979/T1063, companion to HYP-2978). Ramanujan sums turn primitive
 q-th roots into an integer projector:
 `c_q(n)=sum_{(a,q)=1}exp(2*pi*i*a*n/q)=sum_{d|gcd(q,n)}d*mu(q/d)`.
 This looks tailor-made for the current LRC14 stack because the hard rows are
@@ -40,7 +40,9 @@ certificates; and determine whether a Ramanujan-subspace packet catches any
 qdiv>14 zero-open SOURCE-SPECTRUM-UNKNOWN residual. External source trail:
 Ramanujan sums/roots of unity, Carmichael orthogonality, finite-duration
 Ramanujan subspaces, cyclotomic primitive-root traces, and supercharacter
-Ramanujan sums over `Z/n`.
+Ramanujan sums over `Z/n`. HYP-2978 now supplies the guardrail: exact-period
+projectors must retain or reattach q/Farey, Haar, endpoint, C27/K33, and
+state-lift labels before they are admissible proof quotients.
 
 **2026-06-24 update:** `04-computation/lrc14_ramanujan_exact_period_projector_codex_20260624.py`
 audits named rows plus `21906` AP-neighborhood rows.  Every row has a weak

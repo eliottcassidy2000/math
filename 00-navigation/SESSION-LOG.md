@@ -26,6 +26,43 @@ observable "which channel separates route collisions while preserving strict
 witness / AP-GW equality / named state-lift debt."  Next computation is the
 HYP-2963 packet-family extension using endpoint-owner Ramanujan profiles
 `R_q^+`, `R_q^-` for `q in {14,27,41}`.
+## codex-2026-06-24-S161 -- Ramanujan-divisor quotient guardrails computed and pushed
+
+Continued the HYP-2978/T1062 lane after pulling the concurrent exact-period
+projector stub (renamed/clarified as HYP-2979/T1063).  Read the divisor-function
+neighborhood and one-hop pages around multiplicative functions, Dirichlet
+convolution, Ramanujan sums, divisor-summatory functions, Euler totient,
+Jordan totient, and Dedekind psi, then searched outward for Ramanujan
+expansions, regular A-functions, and pentagonal/divisor recurrences.
+
+Added `04-computation/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py`
+and stored `05-knowledge/results/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.out`.
+Also wrote
+`07-reflections/lrc14-ramanujan-divisor-quotient-guardrails-codex-s161.md`
+as the cross-domain quotient-contract synthesis.
+The script verifies the arithmetic identities `sigma_0=tau`, `sum phi=n`,
+`phi=mu*id`, `psi=id*|mu|`, `sum J_2=n^2`, and
+`c_q(n)=sum_{d|gcd(q,n)} d*mu(q/d)`, then audits AP/GW, the residue liar
+`12->26`, K33 `12->36`, petals, P10 splices, and covering rows.
+
+Main finding: the collision audit turns the user's "what may a quotient forget?"
+question into a concrete falsifier.  `qdiv`, open/zero-open state, mod-14
+residue multiset, `c_14` Ramanujan profile, unit counts at `14/27/41`, and lcm
+divisor scalars all mix rows with different proof routes.  The deliberately
+over-labelled packet signature has zero route-mixing on the named audit bank.
+Tournament Analysis over quotient channels is transitive:
+`labelled_lrc_packet_sheaf > exact_period_packet > ramanujan_primitive_shell >
+gcd_strata > totient_jordan_unit_capacity > squarefree_psi_support >
+raw_divisor_counts`.
+
+HYP-2978 theorem target: a coordinate forgotten by an LRC14 proof quotient must
+be invariant under the proof step, reconstructible from retained q/Farey/unit/gcd
+and Ramanujan data, annihilated by a proved dual or orthogonality relation, or
+parked in an explicit labelled residual bucket.  New inquiry bucket added:
+regular A-functions as declared divisor-subset quotients; divisor-summatory
+hyperbolic-simplex geometry; Euler pentagonal recurrences for `sigma`; totient
+as DFT of gcd; Busche-Ramanujan identities as the non-coprime correction to
+naive multiplicativity.
 
 ## codex-2026-06-24-S161 -- Ramanujan-divisor quotient guardrails claimed
 
@@ -68,6 +105,13 @@ speed-profile scalars.  q=14 primitive packets still mix routes, so the live
 theorem is a labelled handoff: primitive packet, Toeplitz/Fejer or spectral
 dual, AP/GW boundary trace, Ramanujan danger-energy defect, or K33/HYP-2908
 state lift.
+was moved to HYP-2979/T1063 as the retained-packet child route.  Stub claim:
+use `c_q(n)` as the primitive-unit trace that keeps denominator, unit, parity,
+and seven-adic packet labels before scalarizing q-blocked witness data.  For
+`q=14`, `c_14(r+s)` is a trace form of the AP/GW endpoint-credit equality
+`r+s==0 mod 14`; `c_14(r-r')` retains exact residue coincidence.  Computation
+and theorem testing remain pending in HYP-2979 under HYP-2978's admissibility
+guardrail.
 
 ## codex-2026-06-24-S160 -- holistic LRC14 proof-history synthesis fills HYP-2976
 

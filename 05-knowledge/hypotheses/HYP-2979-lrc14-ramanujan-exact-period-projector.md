@@ -4,6 +4,7 @@ title: LRC14 Ramanujan exact-period projector packets
 status: PROOF-INTERFACE / exact-period primitive-phase audit; not a proof
 source: codex-2026-06-24-ramanujan-projector
 related:
+  - HYP-2978
   - HYP-2977
   - HYP-2978
   - HYP-2975
@@ -31,6 +32,7 @@ Ramanujan-divisor quotient guardrail: HYP-2978 says what a quotient is allowed
 to forget, while this hypothesis proposes one retained exact-period quotient.
 The proposed object is not a proof yet. It is a packet interface between:
 
+- HYP-2978's quotient-admissibility guardrails,
 - HYP-2972's rational twist ladder,
 - HYP-2973's danger-count moments,
 - HYP-2974's Fourier-Toeplitz dual,
