@@ -4,6 +4,34 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-24-S164 -- LRC14 smoothing dispatcher: choose the proof clock before quotienting (HYP-2985)
+
+Dispatch: merged HYP-2982's analytic-sieve packet weights with HYP-2983's
+Kaczynski/exponential-sum synthesis into an admissible-smoothing dispatcher.
+Added `04-computation/lrc14_smoothing_dispatcher_codex_20260624.py` and stored
+`05-knowledge/results/lrc14_smoothing_dispatcher_codex_20260624.out`; created
+HYP-2985/T1069, complementary to the incoming HYP-2984 kernel-homotopy lane, and reflection
+`07-reflections/lrc14-admissible-smoothing-dispatcher-codex-s164.md`.
+
+Core routing:
+
+```text
+AP/GW boundary        -> endpoint/Kaczynski boundary labels
+K33 and covering      -> Fejer/Toeplitz interval certificates
+q=27 petals/splices   -> Fejer plus Ramanujan prime-power side channel
+late denominator wall -> Ramanujan/Kaczynski; Selberg only as precondition
+true-wide generic     -> Kaczynski/Abel off-resonance decay
+true-wide resonant    -> Freiman finite atlas or THM-572 state lift
+```
+
+Proof target: an admissible-smoothing lemma on HYP-2963 packet fibers.  Every
+primitive packet should have one of these exits; if all exits fail, the failure
+labels should construct the HYP-2908/THM-572 state-lift obligation.  Keep four
+clocks separate: endpoint-owner, exact-period denominator, smoothing/certificate,
+and far-approach boundary.
+
+---
+
 ## codex-2026-06-24-S162 -- LRC14 Fejer interval guardrail: precision is small, packet assembly is the bridge (HYP-2981)
 
 Dispatch: sharpened the next HYP-2974 target from floating Fejer signs to

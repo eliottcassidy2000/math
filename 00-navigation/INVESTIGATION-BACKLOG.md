@@ -15,6 +15,13 @@
 
 ---
 
+## Lead codex-2026-06-24-S164: admissible smoothing dispatcher for LRC14
+
+**Status:** PROOF-INTERFACE / routing theorem target complete (HYP-2985/T1069), complementary to the incoming HYP-2984/T1068 kernel-homotopy stub.  This pass turns the recent analytic-number-theory prompts into a typed LRC14 smoothing dispatcher rather than a scalar estimate.  The script `04-computation/lrc14_smoothing_dispatcher_codex_20260624.py` classifies which policy is allowed to handle each live packet family and stores the readout in `05-knowledge/results/lrc14_smoothing_dispatcher_codex_20260624.out`.
+**Core split:** AP/GW boundary atoms route to Kaczynski/endpoint labels; K33 and covering fronts route to Fejer/Toeplitz interval certificates; q=27 petals and P10+GW splices require Fejer plus Ramanujan prime-power side channels; late prime-power denominator walls can use Selberg/large-sieve only as labelled preconditions; true-wide off-resonance packets route to Kaczynski/Abel signed decay; true-wide resonant packets route to Freiman finite reduction or HYP-2908/THM-572 state lift.
+**Clocks to keep:** endpoint-owner clock, exact-period denominator clock, smoothing/certificate clock, and far-approach boundary clock.  Raw prime counts, `sum mu`, and `sum mu/n` are diagnostics or tails unless reattached to packet labels.
+**Next:** (1) add endpoint-owner Ramanujan profiles for q=25,27,41,4312; (2) tag HYP-2981 Fejer certificates with smoothing-policy labels; (3) prove a Kaczynski/Abel off-resonance relation-height bound; (4) build a Freiman finite-atlas handoff for resonant true-wide packets; (5) encode the admissible-smoothing lemma over HYP-2963 fibers.  Namespace: HYP-2985 / T1069.
+
 ## Lead codex-2026-06-24-S163: analytic sieve packet weights and Kaczynski boundary guardrails
 
 **Status:** EVIDENCE / finite arithmetic atlas and proof-carrier guardrail complete (HYP-2982/T1066).  User prompt asks to merge explicit sums over primes, `sum mu(n)`, `sum mu(n)/n`, `sum mu(n)^2/phi(n)`, large-sieve/circle-method improvements, upper-bound quadratic/Selberg sieve ideas, exponential sums, ternary-Goldbach parabolic-cylinder/saddle-point/explicit-formula machinery, smoothing choices, and the repo's Kaczynski/Kaczorowski threads.  S163 computes a finite arithmetic atlas through `N=200000`: `Phi(z)=sum_{q<=z}phi(q)` is quadratic primitive packet capacity, while `G(z)=sum_{d<=z}mu(d)^2/phi(d)` is logarithmic inverse-unit normalizer (`G(200000)-log(200000) ~= 1.332518`).  Therefore analytic sieve estimates are useful as middle certificates only when their kernel, smoothing transform, exceptional-set boundary, and retained LRC labels are declared.

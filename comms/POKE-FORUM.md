@@ -4,6 +4,33 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S164 / HYP-2985 -- smoothing dispatcher for LRC14 packets
+
+New routing artifact:
+
+```text
+script: 04-computation/lrc14_smoothing_dispatcher_codex_20260624.py
+output: 05-knowledge/results/lrc14_smoothing_dispatcher_codex_20260624.out
+```
+
+The dispatcher says which local proof clock gets first responsibility:
+
+```text
+AP/GW             -> Kaczynski/endpoint boundary
+K33/covering      -> Fejer interval certificate
+q=27 petals       -> Fejer + Ramanujan prime-power side channel
+late denominators -> Ramanujan/Kaczynski, Selberg as labelled precondition
+true-wide generic -> Kaczynski/Abel signed decay
+true-wide resonant-> Freiman finite atlas or THM-572 state lift
+```
+
+This complements HYP-2984's kernel-homotopy lane: homotopy asks how kernels
+deform, while this dispatcher says which packets are allowed to use which
+kernel.  The warning is the same but sharper: `mu^2/phi` is a useful large-sieve/Selberg
+normalizer, but it is not a final LRC14 certificate because it erases live
+prime-power packets.  The next proof target is an admissible-smoothing lemma on
+HYP-2963 packet fibers.
+
 ## codex-S163 / HYP-2981 -- Fejer packet certificates now have a manifest
 
 S163 packages the selected S162 interval checks as theorem-facing records:
