@@ -129,6 +129,38 @@ dominate the certificates.  The new theorem target is bounded-degree Toeplitz
 negativity for every primitive qdiv>=14 residual after AP/GW and named
 K33/petal exits are removed, with packet tools reattached only for harmonic
 invisible exceptions.
+## codex-2026-06-24-spectral-shadow -- global Fourier-dual route for LRC14
+
+User asked for a very different approach to the LRC proof.  Synced over the
+incoming apex-aperture and few-apex lift-packet work, then took a nonlocal
+spectral angle instead of another endpoint-owner/pinch classifier.
+
+Added `04-computation/lrc14_spectral_shadow_dual_codex_20260624.py`, stored
+`05-knowledge/results/lrc14_spectral_shadow_dual_codex_20260624.out`, created
+HYP-2977/T1061, wrote reflection
+`07-reflections/lrc14-spectral-shadow-dual-codex-20260624.md`, and posted
+`poke-forum/posts/20260624-164106Z-lrc14-spectral-shadow-dual-route/post.md`.
+
+Method: compute exact strict-safe components with S146, then Fourier
+coefficients of `1_U` through bandlimit `224`, Fejer midpoint shadows, Parseval
+capture ratios, dominant modes, and a tournament whose vertices are frequency
+bands rather than runners or endpoints.
+
+Result: AP and GW `12->24` are exactly the zero strict-mass/zero-shadow atoms
+in the audit.  All `26` positive rows have positive Fejer_14 midpoint shadow;
+smallest positive exact mass is `1/1260`, and smallest Fejer_14 midpoint value
+is `0.00604909`.  Negative signal: this is not a low-frequency shortcut.  Many
+positive rows are not `90%` Parseval-captured by `H=224`, and the frequency-band
+tournament is high-first transitive:
+
+```text
+113-224 > 57-112 > 29-56 > 15-28 > 1-7 > 8-14.
+```
+
+Proof target: a Moon-core spectral dichotomy.  Every post-THM-571 live packet
+should either have a positive Fejer/Beurling-Selberg minorant or force its
+high-frequency energy into relation-lattice/support-6/few-apex/boundary-moment
+ledgers or a K33/HYP-2908/THM-572 state lift.
 
 ## codex-2026-06-24-S152 -- boundary-gap packet bridge for the LRC14 covering branch
 
