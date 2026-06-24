@@ -1,3 +1,14 @@
+## codex-2026-06-24-S168 -- residual section and packet-grid verification started (HYP-2996/T1080)
+
+User asked to work on residual section characterization and packet grid
+verification.  Claimed HYP-2996/T1080 and reserved
+`04-computation/lrc14_residual_section_packet_grid_codex_s168.py` plus the
+matching result filename.  Planned audit: define residual sections for AP/GW
+boundary atoms, C27/unit-petal strips, K33/THM-572 state-lift debt, covering
+boundary-moment packets, and possible F7 harmonic survivors; then attach
+HYP-2963 packet representatives to HYP-2989 Haar-product interaction classes.
+This is only a namespace reservation until the executable output replaces it.
+
 ## codex-2026-06-24-S167 -- LRC14 cocycle carrier atlas (HYP-2995/T1079)
 
 User asked for a long session seeing everything in terms of cocycles.  Continued

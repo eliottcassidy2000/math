@@ -42,6 +42,19 @@ formalization, the executable F7 cocycle residual record, a finite cocycle-sheaf
 obstruction matrix over HYP-2963 packets, an F0-F7 residual metagraph Laplacian,
 and a binding-pair switch tournament for covering rows.
 Namespace: T1078.
+## Lead codex-2026-06-24-S168: residual section and packet-grid verification
+
+**Status:** RESERVED / executable audit in progress (HYP-2996/T1080).  User
+asked to work on residual section characterization and packet grid verification.
+This lane will make the current coordination claim auditable by defining named
+residual sections and attaching HYP-2963 packet representatives to HYP-2989
+Haar-product interaction classes.
+**Planned readout:** script
+`04-computation/lrc14_residual_section_packet_grid_codex_s168.py`, stored output
+`05-knowledge/results/lrc14_residual_section_packet_grid_codex_s168.out`.
+**Next:** replace this stub with computed section counts, grid class coverage,
+edge-case residual records, and Tournament Analysis over residual sections.
+Namespace: HYP-2996 / T1080.
 
 ## Lead codex-2026-06-24-S166: cocycle obstruction atlas for LRC14
 
