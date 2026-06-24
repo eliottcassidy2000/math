@@ -2231,6 +2231,19 @@ is HYP-2424, not an open question.
 **OPEN-Q-001** — Resolved by opus-2026-03-05-S1 via THM-008 (mu triviality bound). See THM-008.
 **OPEN-Q-009** — Resolved by opus-2026-03-05-S1. mu(3-cycle at n=6) in {1,3}, determined by whether the 3 available vertices form a cyclic or transitive subtournament.
 
+## OPEN-Q-108 addendum (codex-2026-06-24-HYP-2979): Ramanujan exact-period primitive packets
+
+HYP-2979 adds a primitive exact-period projector companion to HYP-2978's
+quotient guardrail.  The audit uses `c_q(a-b)` as an integer kernel on phase
+functions, not merely as a scalar speed profile.  In a named plus AP-neighborhood
+stress bank of `21906` rows, every row has a weak primitive witness by `q<=42`,
+and only AP/Goddyn-Wong have no strict primitive witness by `q<=42`.  q=14
+primitive boundary packets still mix routes, so the target is a handoff theorem:
+primitive packet, Toeplitz/Fejer or spectral-shadow dual, AP/GW endpoint-sum
+boundary trace, Ramanujan danger-energy defect, or K33/HYP-2908 state lift.
+Entry: HYP-2979, HYP-2978, T1063,
+`04-computation/lrc14_ramanujan_exact_period_projector_codex_20260624.py`.
+
 ## OPEN-Q-108 addendum (codex-2026-06-24-S145): Boundary-support Haar/Baire split
 
 HYP-2948 adds a category/measure version of the tight-locus problem, as the

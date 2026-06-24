@@ -16,25 +16,29 @@ the label it forgets.
 Rebased over the S161 collision audit, which verifies the warning on named
 rows: qdiv/open-state/mod14/`c_14`/unit-count/lcm-scalar channels all have
 route-mixing collisions, while the guarded packet signature has none.
+
 ## codex-2026-06-24-ramanujan-projector -- HYP-2979/T1063 exact-period route claimed
 
 User asked to read around Ramanujan sums and push the resulting ideas toward an
 LRC14 tournament-adjacent proof.  Rebased over incoming HYP-2974 Fourier-Fejer
-and HYP-2975 taut-bridge work, then reserved HYP-2979/T1063 for the exact-period
-Ramanujan projector route.  Stub claim: use `c_q(n)` as the primitive-unit
-trace that keeps denominator, unit, parity, and seven-adic packet labels before
-scalarizing q-blocked witness data.  For `q=14`, `c_14(r+s)` is a trace form of
-the AP/GW endpoint-credit equality `r+s==0 mod 14`; `c_14(r-r')` retains exact
-residue coincidence.  Computation and theorem testing remain pending in this
-same session.
 and HYP-2975 taut-bridge work.  A concurrent S161 push reserved HYP-2978/T1062
 for Ramanujan-divisor quotient guardrails, so this exact-period projector route
-was moved to HYP-2979/T1063 as the retained-packet companion.  Stub claim: use
-`c_q(n)` as the primitive-unit trace that keeps denominator, unit, parity, and
-seven-adic packet labels before scalarizing q-blocked witness data.  For `q=14`,
-`c_14(r+s)` is a trace form of the AP/GW endpoint-credit equality
-`r+s==0 mod 14`; `c_14(r-r')` retains exact residue coincidence.  Computation
-and theorem testing remain pending in this same session.
+was moved to HYP-2979/T1063 as the retained-packet companion.
+
+Added `04-computation/lrc14_ramanujan_exact_period_projector_codex_20260624.py`
+and stored `05-knowledge/results/lrc14_ramanujan_exact_period_projector_codex_20260624.out`.
+The script uses `c_q(a-b)` as an exact primitive-frequency kernel on phase
+functions: `E_q(f)=sum_{a,b}f(a)f(b)c_q(a-b)`.  Named-row readout: AP/GW have
+weak q=14 boundary witnesses but no strict primitive witness through q<=42;
+`12->36` first strict witness q=41, petals/P10 splices q=27, covering
+`12->84/168` q=41, and covering `6->98` q=25.  Stress bank: `21906` rows,
+`no weak q<=42=0`, `no strict q<=42=2`, exactly AP and GW.
+
+Conclusion: Ramanujan sums should be used as phase-function projectors, not as
+speed-profile scalars.  q=14 primitive packets still mix routes, so the live
+theorem is a labelled handoff: primitive packet, Toeplitz/Fejer or spectral
+dual, AP/GW boundary trace, Ramanujan danger-energy defect, or K33/HYP-2908
+state lift.
 
 ## codex-2026-06-24-S160 -- holistic LRC14 proof-history synthesis fills HYP-2976
 

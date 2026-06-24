@@ -22,8 +22,7 @@
 **Next:** (1) web read divisor function -> multiplicative function / Dirichlet convolution / Ramanujan sum / abundant-perfect-divisor-summatory pages; (2) mine repo references for matching guardrails; (3) extend quotient-collision audit to packet families in the HYP-2963 bank; (4) post the resulting admissibility theorem target.  Namespace: HYP-2978 / T1062.
 ## Lead codex-2026-06-24: Ramanujan exact-period projectors for LRC14
 
-**Status:** ACTIVE STUB (HYP-2979/T1063, child route of HYP-2978). Ramanujan sums turn primitive
-**Status:** ACTIVE STUB (HYP-2979/T1063, companion to HYP-2978). Ramanujan sums turn primitive
+**Status:** ACTIVE PROOF-INTERFACE (HYP-2979/T1063, companion to HYP-2978). Ramanujan sums turn primitive
 q-th roots into an integer projector:
 `c_q(n)=sum_{(a,q)=1}exp(2*pi*i*a*n/q)=sum_{d|gcd(q,n)}d*mu(q/d)`.
 This looks tailor-made for the current LRC14 stack because the hard rows are
@@ -39,6 +38,13 @@ qdiv>14 zero-open SOURCE-SPECTRUM-UNKNOWN residual. External source trail:
 Ramanujan sums/roots of unity, Carmichael orthogonality, finite-duration
 Ramanujan subspaces, cyclotomic primitive-root traces, and supercharacter
 Ramanujan sums over `Z/n`.
+
+**2026-06-24 update:** `04-computation/lrc14_ramanujan_exact_period_projector_codex_20260624.py`
+audits named rows plus `21906` AP-neighborhood rows.  Every row has a weak
+primitive witness by `q<=42`; only AP and GW lack a strict primitive witness by
+`q<=42`.  q=14 primitive phase packets still mix routes, so the next task is to
+scale the strict primitive-witness audit to the full HYP-2963 bank and
+interval-enclose late q packets `{25,27,34,40,41}`.
 
 ## Lead mac-mini-2026-06-21-S20: LRC LAYER-3 sharpened routes + key literature (from the creative-lead trawl)
 **Source:** S20 trawl + drill workflows (HYP-2760..2763). **Status:** ACTIVE — LAYER 3 (consec Schur-maximizes measS7) is the last wall; LAYERS 1-2 PROVED+Lean.
