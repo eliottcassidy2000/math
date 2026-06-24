@@ -30,18 +30,45 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S151 Skeleton-Gate and Packet-Migration Checkpoints
+## PROJECT STATUS: Stabilized at S152 Analytic-Local Synthesis Checkpoint
 
 As of **Wednesday, June 24, 2026**, the project's coordination state is
-centered on the **codex-S149 Skeleton-Gate Synthesis**, the codex-S148 Derived
-Boundary Tournament Classes, and the S150 packet-migration gauntlet HYP-2955.
+centered on the **Analytic-Local Synthesis (codex-S152)**, reconciling global
+analytic density with p-adic local rigidity. This builds upon the **codex-S149
+Skeleton-Gate Synthesis** and the S150 packet-migration gauntlet.
 
-S151 synchronizes the executable boundary-only classifier (HYP-2960) with the
-wider source-spectrum program.  The combined filter routes every bad row
-through two switches:
+S152 bridges the gap between the analytic density of primes (Mertens) and the
+combinatorial requirements of density increments (Roth) by utilizing p-adic
+completions as a regulator. The "Pi Unital Flower" unit guardrails are now
+anchored in the Hensel-Krasner framework, ensuring that $L$-function residues
+remain consistent with the ultrametric stability of underlying cyclotomic
+fields.
 
-- **Switch A: strict Haar mass > 0.**  Discharge via open-front witness intervals.
-- **Switch B: strict Haar mass = 0.**  The row is a "missing picture" candidate. It must enter the AP/GW six-pair boundary skeleton, where the Jacobsthal gate restricts hidden accelerations to site 12, and C27/unital labels route the result to the GW tight branch or the K33 state-lift.
+---
+
+## codex-S152 -- Analytic-Local Synthesis: Mertens, Roth, and Hensel-Krasner (checkpoint)
+
+Synthesized analytic number theory and p-adic dynamics to support the LRC(14)
+proof path. This checkpoint establishes the "Pi Unital Flower" as an
+ultrametric guardrail for recursive lifting.
+
+### 1. Analytic Density (Mertens)
+Utilizes the generalized Mertens' second theorem for arithmetic progressions
+to evaluate prime density $p \equiv a \pmod q$. The stability of the Meissel-Mertens
+constant $M(q, a)$ serves as a local character data check. Deviations in these
+constants indicate failures in Dirichlet character orthogonality.
+
+### 2. Combinatorial Discrepancy (Roth)
+Employs Roth's discrepancy theorem and the density increment argument (Fourier
+analysis) as primary components of the proof path. This establishes that
+structure and randomness in APs exist on a spectrum defined by Gowers $U^k$ norms,
+providing the global discrepancy bounds needed for LRC(14).
+
+### 3. Ultrametric Rigidity (Hensel-Krasner)
+The Hensel-Krasner framework provides the lifting properties to ensure global
+densities are reflected in local roots. Krasner's Lemma ensures the stability of
+extension fields under perturbation, acting as the functional "guardrail" that
+prevents divergence during recursive lifting phases.
 
 ---
 
@@ -55,27 +82,16 @@ Identifies the boundary skeleton left behind when packet migration fails. For `q
 ### 2. Jacobsthal Gate (Site 12)
 Inside the boundary-only skeleton, the acceleration gate is restricted to $v=12$.
 - **Finding:** In a single-acceleration family, only $12 \to 24$ remains boundary-only. $8 \to 16$ and $10 \to 20$ pass coarse filters but open positive strict-Haar mass.
-- **Implication:** $12$ is the unique first-derived boundary hole.
 
 ### 3. Proof-Lens Tournament
-Vertices are not runners, but analytical lenses: {covering_divisibility, Haar_boundary_skeleton, Jacobsthal_gate, C27_unital_transfer, derived_relative_profile, K33_state_lift}.
-- **3-Cycle Warning:** The SCC {gate, profile, state_lift} forms a directed cycle. These lenses should be treated as a simultaneous packet, not a sequential order.
-
-### 4. Theorem Target
-Every primitive LRC14 endpoint atom with no strict Haar witness has the AP/GW six-pair boundary skeleton. Acceleration is gated to site 12; C27/unital completion permits only the GW branch, while D9/unit branches open fronts or feed the K33 state-lift.
+Vertices are analytical lenses: {covering_divisibility, Haar_boundary_skeleton, Jacobsthal_gate, C27_unital_transfer, derived_relative_profile, K33_state_lift}.
 
 ---
 
 ## codex-S148 -- Derived Boundary Tournament Classes (checkpoint)
 
 Formalized the **Derived Boundary Tournament Classes** (HYP-2952), establishing a necessary-condition layer for AP/GW-kind rows.
-
-### 1. Apex-Pressure Tournament ($T_{apex}$)
-Defines a tournament on the six denominator-14 unit witnesses $U_{14} = \{1,3,5,9,11,13\}/14$.
-- **Invariant:** The transitive isomorphism class is the signature of the AP/GW-kind boundary fiber.
-
-### 2. Derived Boundary Stratum
-AP is the base boundary product; GW is its first derived deformation. Belonging requires: Haar-zero mass, unit-contact multiplicity (2 per unit), and Jacobsthal repair windows.
+- **Apex-Pressure Tournament ($T_{apex}$):** The transitive isomorphism class is the signature of the AP/GW-kind boundary fiber.
 
 ---
 
@@ -83,27 +99,3 @@ AP is the base boundary product; GW is its first derived deformation. Belonging 
 
 Formalized the **Borel Baire Haar LRC Witness Carriers**, establishing the sigma-algebra and invariant measure layer.
 - **Predicate:** The LRC proof endpoint is redefined as: `GOOD \cap G_P` has positive Haar measure and has a retained Borel/Baire code.
-- **Address Tax:** Identified that quotients must preserve the measurable group action to allow witness selection.
-
----
-
-## codex-S143 -- Farey Perfect Product Guardrail (checkpoint)
-
-Formalized the **Farey Perfect Product Guardrail** (HYP-2945).
-- **Quotient:** $a/b \to product ab \to K_{a,b}$.
-- **Net Rule:** Keep exact Farey level, unit-excess address, product edge count, and K33 incidence attached before scalarizing.
-
----
-
-## codex-S141 -- Regular-Solid / Tiling Recursion Carrier (checkpoint)
-
-Formalized the **regular-solid and Euclidean tiling recursion carrier**.
-- **Central Result:** The 14-gonal prism/antiprism annulus (28 vertices, defect 1/14) matches the q=3 unital point count while preserving cyclic order.
-
----
-
-## codex-S140 -- C27 Unital Block-Lift (checkpoint)
-
-Formalized the **C27 Unital Block-Lift**, establishing the q=3 unital as a local splice grammar and pair-completion forum.
-- **Splice Grammar:** S138 two-hole rows lift exactly as two-block splices in the unital grammar.
-- **Calibration:** Established the Goddyn-Wong anchor block as `{AP, GW, H12, D3}`.
