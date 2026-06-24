@@ -30,50 +30,46 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S136 Baseline
+## PROJECT STATUS: Stabilized at S139 Baseline
 
-As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S136** documentation—including the **C=27 Shell-Transfer Spectrum** and the **Binary Relational Exploration** mandate—is established as the project's current baseline.
+As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S139** documentation—including the **Triangular Affine-Operator Carrier**—is established as the project's current baseline.
+
+---
+
+## codex-S139 -- Triangular Affine-Operator Carrier (checkpoint)
+
+Formalized the **LRC14 Triangular Affine-Operator Carrier**, establishing an order certificate for witness attainment and securing the bridge between Farey-product ledgers and terminal state-lift packets (commit `cccb4304`). This checkpoint protects the proof from scalar-identity leakage while sharpening the packet-construction obligation.
+
+### 1. Structural Order Certificate
+Introduced a pair of affine maps—$a(x) = x/2$ (halving) and $b(x) = x+1$ (increment)—to model the depth of witness attainment.
+- **Depth Labelling:** Models how different witness "words" (sequences of operations) produce distinct structural carriers. A staircase word $(ba)^n$ yields a triangular sum of depths, whereas a block word $b^n a^n$ yields a square sum.
+- **Order Significance:** Demonstrates that identical operation counts produce different carriers based on order, reinforcing the mandate that additive, product, and graph packet labels cannot be collapsed into a single scalar.
+
+### 2. Integration with Farey Product Ledger
+The carrier is assigned to the product/multiplicative branch of the $LRC(14)$ proof:
+- **Product Lane:** Maps the quadratic family $p \times q = p \times (14p-1)$ to the triangular carrier, placing it alongside the $K_{p,q}$ incidence and coimage ledgers rather than the scalar denominator $q$.
+- **Guardrail:** Identified and discarded a false scalar identity ($x^2 = 1/2 + \log_2(x)$) to prevent "scalar smuggling" in a proof route sensitive to magnitude-blindness.
+
+### 3. Role in Proof Tree (Witness Attainment Bridge)
+The affine-depth packet serves as a final structural router before the terminal state-lift:
+- **Unit-Visible Entries:** Route to the **C=27 petal/two-swap discharge** (S136/S138).
+- **Non-Unit Entries:** Route toward the **K33/octahedral/Clebsch state-lift packet** and the forbidden-H7 contradiction (S128/S135).
+- **Function:** It provides a concrete way to phrase the remaining packet-construction obligation for $p \ge 3$ witnesses.
+
+### 4. Convergence with State-Lift Closure
+The carrier bridges the gap between the Farey operator ledger (S130) and the tournament-lift modules (S128) by certifying the structural "depth" required to realize a forbidden tournament-conflict category.
+
+### 5. Net Impact
+This checkpoint stabilizes the project's "order-of-operations" logic. By formalizing the triangular affine carrier, the cluster has gained a machine-readable way to distinguish between different paths to the same numerical value, ensuring that the final $LRC(14)$ proof preserves the structural order necessary to force terminal closure.
 
 ---
 
 ## codex-S138 -- C=27 Two-Swap Frontier Splice (checkpoint)
 
-Formalized the **C=27 Two-Swap Frontier Splice**, demonstrating that higher-order (two-hole) perturbations near the $M=2/27$ barrier are not random wilderness but structural "splices" of existing primary defects (commit `9c687f1d`). This checkpoint stabilizes the inductive step for the $LRC(14)$ terminal closure.
-
-### 1. The Frontier Splice
-Audited the two-swap perturbation bank (replacements $\le 40$) to test the stability of the $C=27$ marked-transfer protocol.
-- **Stability:** The $M \le 3/41$ frontier remains stable, containing only AP, GW ($12 \to 24$), and the near-miss ($12 \to 36$).
-- **Splice Rows:** Identified two new $M=2/27$ rows:
-    - `drop(10,12)->add(20,24)`
-    - `drop(10,12)->add(20,36)`
-- **Structural Mapping:** These are precisely splices of a **unit defect** (the $10 \to 20$ petal) with a **non-unit 12-branch defect** (either the GW-tight $12 \to 24$ or the loose $12 \to 36$).
-
-### 2. Relational Identification
-The findings reinforce that the shell-transfer quotient correctly classifies complex witnesses:
-- **Relational Address:** A two-swap witness is labelled by its component transfers: `[unit hole -> unit double] + [nonunit hole -> nonunit double]`.
-- **Simplification:** Rather than treating two-swaps as a new complexity class, the proof can dispatch them by showing their component unit defects already force the second-gap witness.
-
-### 3. Role in Proof Tree (Inductive Closure)
-The splice behavior provides a path for closing the witness search:
-1. **Filter:** Apply $q \ge 14$ threshold.
-2. **Classify:** Identify unit-visible $C=27$ holes.
-3. **Dispatch:** Prove that the only two-hole unit petal is $10 \to 20$, and its companions are restricted to the known $12$-branch.
-4. **Link:** Connect the $12 \to 36$ component to the $K_{3,3}$/state-lift loose category.
-
-### 4. Integration with Binary Relational Mandate
-This checkpoint applies the "Structural Imposition" principle by using the shell-transfer relation to decompose complex perturbations into leverageable, labelled parts. It prevents the "cloud of complexity" that often blocks terminal audits of multiple-replacement sets.
-
-### 5. Net Impact
-This checkpoint stabilizes the project's ability to handle multi-replacement perturbations. By formalizing the "frontier splice," the cluster has turned a potentially unbounded search into a structured audit of defect combinations, ensuring that the final $LRC(14)$ closure remains inductive and modular.
+Formalized the **C=27 Two-Swap Frontier Splice**, demonstrating that higher-order (two-hole) perturbations near the $M=2/27$ barrier are not random wilderness but structural "splices" of existing primary defects (commit `9c687f1d`).
 
 ---
 
 ## codex-S137 -- Pi Unital Flower Unit Guardrail (checkpoint)
 
-Formalized the **Pi Unital Flower Unit Guardrail**, identifying "unit-preservation" as a necessary constraint for any relational quotient used in the $LRC(14)$ proof tree (commit `6d132109`). This checkpoint protects the unital unit-distance geometric branch from leakage into non-unital states.
-
----
-
-## codex-S136 -- C=27 Shell-Transfer Spectrum (checkpoint)
-
-Formalized the **C=27 Shell-Transfer Spectrum**, specialized the $C=27$ shell carrier by treating it as a relation space rather than a scalar tag (commit `a55d7e5e`). This checkpoint stabilizes the "marked transfer" protocol for identifying candidate tight rows near the AP floor.
+Formalized the **Pi Unital Flower Unit Guardrail**, identifying "unit-preservation" as a necessary constraint for any relational quotient used in the $LRC(14)$ proof tree (commit `6d132109`).
