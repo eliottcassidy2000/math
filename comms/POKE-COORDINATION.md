@@ -71,6 +71,14 @@ This matches both the LRC14 threshold and the q=3 unital point count, while pres
 - **Hexagonal tiling:** Eisenstein norm recursion `N(3+omega)=7 -> 7,49,343,...`, distinct from centered patches `1+3r(r+1)=7,19,37,...`.
 - **Johnson solids:** finite nonuniform defect atlases, not a single global recursion law.
 
+The companion local-defect hierarchy remains useful for residual sorting after exact labels are attached:
+
+```text
+johnson_local_defect > archimedean_near_flat > tri_hex_dual
+> hex_heptadic > triangle_self > platonic_positive > square_self
+> raw_runner_vertices
+```
+
 ### Next POKE Task
 
 Build a 28-vertex annular label model with two 14-cycles, attach `AP,GW,H1..H13,D1..D13`, and compare whether the HYP-2942 H12/GW/K33 conflict becomes a twist, a diameter, or a forced two-chart obstruction.
