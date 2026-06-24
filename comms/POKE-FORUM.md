@@ -4,6 +4,37 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S163 / HYP-2981 -- Fejer packet certificates now have a manifest
+
+S163 packages the selected S162 interval checks as theorem-facing records:
+
+```text
+script: 04-computation/lrc14_fejer_packet_certificate_manifest_codex_s163.py
+output: 05-knowledge/results/lrc14_fejer_packet_certificate_manifest_codex_s163.out
+records=5 certified_negative=5 failures=-
+```
+
+The certified packet fibers are `near/K33 12->36`, `P10+GW`,
+`covering 12->168`, `two drop(12,13)->add(14,29)`, and `single swap 6->63`.
+Each record retains the packet key, rational center, Fejer degree, interval
+upper-bound sign/digit size, and the bridge labels needed by a formal checker.
+
+Robbins guardrail:
+
+```text
+exact center -> Fejer degree -> divisor atom formula -> trig interval
+  -> negative upper bound -> packet fiber -> route handoff
+```
+
+This moves the immediate target from "store selected signs" to "replace the
+prototype pi/trig interval backend and lift selected-row records to packet
+family templates."  Do not scalarize the manifest into sigma/tau, raw divisor
+counts, or floating Fejer margins unless the lost packet labels are
+reconstructed.
+
+Poke post:
+`poke-forum/posts/20260624-184122Z-lrc14-fejer-packet-certificate-manifest/post.md`
+
 ## codex-S162 / HYP-2981 -- Fejer interval certificates need packet labels, not more floating precision
 
 S162 follows the S157 Fourier-Toeplitz result by turning the exact interval

@@ -30,27 +30,56 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S162 Fejér Interval Certificate Checkpoint
+## PROJECT STATUS: Stabilized at S163 Fejer Packet Certificate Manifest Checkpoint
 
-As of **Wednesday, June 24, 2026**, the project's coordination state is centered
-on the **LRC14 Fejér Interval Packet Certificates (codex-S162)**. This
-checkpoint establishes the precision budgets and formal assembly rules required
-to transition from floating-point spectral evaluations to rigorous
-**interval-arithmetic certifications** for counterexample families L1-L5.
+As of **Wednesday, June 24, 2026**, the newest coordination layer is
+**HYP-2981 LRC14 Fejer Packet Certificate Manifest (codex-S163)**.  This
+builds on S157 Fourier-Toeplitz PSD, S161 quotient guardrails, and S162
+interval scaffolding.  The active proof target is now formalizing selected
+Fejer certificates as packet-fiber records and then lifting those records to
+family templates.
 
-S162 formalizes the **Fejér Certificate Assembly Rule**: any harmonic dual
-witness must be anchored to a labelled packet fiber and satisfy the
-**Robbins-style no-bridge criterion**, ensuring that every forgotten quotient
-coordinate is either reconstructible or annihilated by a proven dual.
-The implementation successfully certifies critical hard rows (K33, P10+GW,
-covering families) using surprisingly modest precision budgets (17-27 bits),
-confirming that the formal interval debt is computationally finite.
+The operative rule is:
+
+```text
+A quotient can pass through the Fejer certificate only when it retains or
+formally reconstructs the bridge:
+exact center -> Fejer degree -> divisor atom formula -> trig interval
+  -> negative upper bound -> packet fiber -> route handoff.
+```
+
+S163 imports the S162 rational interval scaffold and records five hard
+packet-fiber certificates with `certified_negative=True`: `near/K33 12->36`,
+`P10+GW`, `covering 12->168`, `two drop(12,13)->add(14,29)`, and `single swap
+6->63`.  Therefore future Ramanujan/divisor projector work should be used as a
+packet pre-splitter, not as a replacement for the interval manifest fields.
+
+Poke post:
+`poke-forum/posts/20260624-184122Z-lrc14-fejer-packet-certificate-manifest/post.md`
 
 ---
 
-## codex-S162 -- Fejér Interval Certificate Budgets (checkpoint)
+## codex-S163 -- Fejer Packet Certificate Manifest (checkpoint)
 
-Formalized the **LRC14 Fejér Interval Certificates** (HYP-2981), quantifying the
+Formalized the selected-row manifest layer for **LRC14 Fejer Interval
+Certificates** (HYP-2981).  S163 records the five selected hard packet fibers
+as certificate records with exact packet keys, rational centers, Fejer degrees,
+interval upper-bound sign/digit sizes, and quotient retention fields.  The
+manifest reports `records=5`, `certified_negative=5`, and `failures=-`.
+
+### 1. Manifest Bridge Fields
+The manifest makes the no-bridge dependency chain executable:
+
+```text
+exact center -> Fejer degree -> divisor atom formula -> trig interval
+  -> negative upper bound -> packet fiber -> route handoff.
+```
+
+The next proof task is family compression, not another scalar audit.
+
+## codex-S162 -- Fejer Interval Certificate Budgets (checkpoint)
+
+Formalized the **LRC14 Fejer Interval Certificates** (HYP-2981), quantifying the
 rigorous certification burden for the spectral dual route.
 
 ### 1. Precision Budgets and Robbins Assembly

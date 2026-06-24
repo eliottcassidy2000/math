@@ -1,8 +1,8 @@
 ---
 id: HYP-2981
 title: LRC14 Fejer interval certificates and Robbins/Robin quotient-bridge guardrails
-status: PROOF-INTERFACE / packet-anchored scaffold, precision blueprint, and named-row interval prototype; not a proof
-source: codex-2026-06-24-S162
+status: PROOF-INTERFACE / packet-anchored scaffold, named-row prototype, manifest, and precision blueprint; not a proof
+source: codex-2026-06-24-S162/S163
 related:
   - HYP-2982
   - HYP-2979
@@ -34,6 +34,8 @@ artifacts:
   - 04-computation/lrc14_fejer_interval_named_packet_certificates_codex_s162.py
   - 05-knowledge/results/lrc14_fejer_interval_named_packet_certificates_codex_s162.out
   - 07-reflections/lrc14-robbins-robin-interval-fejer-packet-certificates-codex-s162.md
+  - 04-computation/lrc14_fejer_packet_certificate_manifest_codex_s163.py
+  - 05-knowledge/results/lrc14_fejer_packet_certificate_manifest_codex_s163.out
 ---
 
 # HYP-2981: LRC14 Fejer Interval Certificates and Robbins/Robin Guardrails
@@ -214,6 +216,46 @@ This suggests the exact interval problem is not numerically huge.  The real
 work is quotient discipline: the interval certificate must be attached to the
 right labelled packet fiber, not to an unstructured list of rows.
 
+## S163 Manifest Layer
+
+The S163 manifest script
+`04-computation/lrc14_fejer_packet_certificate_manifest_codex_s163.py`
+turns the S162 selected-row interval checks into stable theorem-facing
+records.  For each selected hard row it records:
+
+```text
+row, speeds, source_family, packet_key, safe_mu, component_count,
+largest_component_width, rational center, Fejer degree,
+interval_hi sign/digit size, certified_negative,
+Robbins bridge labels, quotient_may_forget, quotient_must_retain.
+```
+
+The stored manifest reports `records=5`, `certified_negative=5`, and
+`failures=-`.  The same five rows remain certified with interval upper
+endpoint below zero:
+
+```text
+near/K33 12->36
+P10+GW
+covering 12->168
+two drop(12,13)->add(14,29)
+single swap 6->63
+```
+
+This is the bridge from the floating Fejer pass to a formal checker interface.
+Text output keeps only the sign, digit sizes, and a clipped endpoint; JSONL
+mode preserves the exact rational strings.  The intended certificate contract
+is now explicit:
+
+```text
+exact center -> Fejer degree -> divisor atom formula -> trig interval
+  -> negative upper bound -> packet fiber -> route handoff.
+```
+
+A quotient is not allowed to forget any part of that chain unless it can
+formally reconstruct it or replace it with a named residual/state-lift route.
+This is the Robbins no-bridge principle in executable manifest form.
+
 ## Robbins Versus Robin
 
 Robbins' graph theorem says a connected graph has a strong orientation exactly
@@ -321,7 +363,8 @@ object.
 1. Replace the scaffold's hard-coded `pi` enclosure with a formally cited
    interval backend such as arb/MPFI-style ball arithmetic or a Lean-imported
    rational certificate.
-2. Replace per-row certificates by packet-family templates: AP/GW, K33,
+2. Replace the S163 manifest's selected-row records by packet-family
+   templates: AP/GW, K33,
    unit-petal, covering, few-apex, and selected two-swap families.
 3. Use Ramanujan exact-period projectors from HYP-2979 to pre-split late
    packets before interval work.
