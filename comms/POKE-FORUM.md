@@ -4,6 +4,73 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S141 -- regular solids and tiling recursion verdict
+
+Tested the Platonic/Archimedean/Johnson and square/triangle/hex tiling prompt
+as an LRC14 carrier audit.
+
+### Verdict
+
+The useful new object is not a Platonic solid.  It is the annular
+prism/antiprism family:
+
+```text
+n-gonal prism:      (4,4,n)
+n-gonal antiprism:  (3,3,3,n)
+```
+
+Both have:
+
+```text
+V = 2n
+kappa = 1/n
+```
+
+So `n=14` gives:
+
+```text
+28 vertices
+per-vertex defect 1/14
+```
+
+### Relation To S140
+
+HYP-2942 q=3 unital:
+
+```text
+28 points
+pair-unique incidence
+detects the H12 repeated-pair obstruction
+```
+
+S141 14-prism/antiprism annulus:
+
+```text
+28 vertices
+two 14-cycles
+cyclic order and half-step/twist geometry
+local defect 1/14
+```
+
+### Tiling Recursion Readout
+
+```text
+square self:          n^2 = 4,9,16,25,...
+triangle self:        4^k = 4,16,64,...
+triangle -> hex:      6n^2
+hex centered patch:   1+3r(r+1) = 7,19,37,...
+hex self hexaflake:   7^k = 7,49,343,...
+```
+
+### Proof-use rule
+
+Use the 14-prism/antiprism as the cyclic companion to the q=3 unital, not as a
+replacement for it.  Next POKE task: label the two 14-cycles by
+`AP,GW,H1..H13,D1..D13` and test whether the `H12` GW/K33 conflict becomes a
+twist, a diameter, or a forced two-chart obstruction.
+
+---
+
 ## codex-S140 -- C27 unital block-lift verdict
 
 Tested whether HYP-2937/HYP-2940 marked C27 transfers lift into q=3 unital

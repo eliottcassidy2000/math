@@ -1,0 +1,165 @@
+S141 LRC14 REGULAR-SOLID / EUCLIDEAN-TILING RECURSION CARRIER
+==============================================================================
+[1] Assumption challenge / quotient declaration
+  considered vertices:
+    regular tiling cells, tiling vertex figures, Platonic/Archimedean
+    vertex configurations, prism/antiprism annuli, Johnson defect packets,
+    q=3 unital points, C27 shells, and LRC proof obligations.
+  chosen predicate:
+    normalized angle defect kappa = 1 - sum interior_angle/(2*pi),
+    plus declared self/dual recursion counts.
+  quotient preserves:
+    local curvature/defect, duality type, self-recursion count, finite
+    atlas status, and whether a carrier has the LRC 1/14 defect scale.
+  quotient destroys:
+    exact LRC time geometry, exact denominator witnesses, and pair
+    incidence unless the q=3 unital layer is separately attached.
+  challenged assumption:
+    Platonic/Archimedean/Johnson solids form one global atlas.  The audit
+    splits them into uniform curvature laws, annular 14/28 carriers, and
+    finite nonuniform Johnson defect packets.
+
+[2] Platonic positive-curvature seeds
+  tetrahedron                      cfg=(3, 3, 3)            kappa=   1/2 V=     4 faces={3:4}                  role=triangle self seed / four-face closure
+  cube                             cfg=(4, 4, 4)            kappa=   1/4 V=     8 faces={4:6}                  role=square self-dual solid branch
+  octahedron                       cfg=(3, 3, 3, 3)         kappa=   1/3 V=     6 faces={3:8}                  role=triangle/hex six-vertex hinge
+  dodecahedron                     cfg=(5, 5, 5)            kappa=  1/10 V=    20 faces={5:12}                 role=pentagonal face branch
+  icosahedron                      cfg=(3, 3, 3, 3, 3)      kappa=   1/6 V=    12 faces={3:20}                 role=triangular high-valence branch
+
+[3] Archimedean finite uniform seeds
+  truncated tetrahedron            cfg=(3, 6, 6)            kappa=   1/6 V=    12 faces={3:4, 6:4}             role=triangle-to-hex truncation
+  cuboctahedron                    cfg=(3, 4, 3, 4)         kappa=   1/6 V=    12 faces={3:8, 4:6}             role=cube/octa dual mediator
+  truncated cube                   cfg=(3, 8, 8)            kappa=  1/12 V=    24 faces={3:8, 8:6}             role=square branch truncation
+  truncated octahedron             cfg=(4, 6, 6)            kappa=  1/12 V=    24 faces={4:6, 6:8}             role=square/hex Kelvin-style carrier
+  rhombicuboctahedron              cfg=(3, 4, 4, 4)         kappa=  1/12 V=    24 faces={3:8, 4:18}            role=square-heavy carrier
+  truncated cuboctahedron          cfg=(4, 6, 8)            kappa=  1/24 V=    48 faces={4:12, 6:8, 8:6}       role=three-scale square/hex carrier
+  snub cube                        cfg=(3, 3, 3, 3, 4)      kappa=  1/12 V=    24 faces={3:32, 4:6}            role=chiral square-triangle carrier
+  icosidodecahedron                cfg=(3, 5, 3, 5)         kappa=  1/15 V=    30 faces={3:20, 5:12}           role=icosa/dodeca mediator
+  truncated dodecahedron           cfg=(3, 10, 10)          kappa=  1/30 V=    60 faces={3:20, 10:12}          role=pentagonal truncation
+  truncated icosahedron            cfg=(5, 6, 6)            kappa=  1/30 V=    60 faces={5:12, 6:20}           role=pentagon/hex soccer carrier
+  rhombicosidodecahedron           cfg=(3, 4, 5, 4)         kappa=  1/30 V=    60 faces={3:20, 4:30, 5:12}     role=tri-square-pent carrier
+  truncated icosidodecahedron      cfg=(4, 6, 10)           kappa=  1/60 V=   120 faces={4:30, 6:20, 10:12}    role=large three-scale carrier
+  snub dodecahedron                cfg=(3, 3, 3, 3, 5)      kappa=  1/30 V=    60 faces={3:80, 5:12}           role=chiral pentagonal carrier
+
+[4] Euclidean zero-curvature regular tilings
+  triangular tiling                cfg=(3, 3, 3, 3, 3, 3)   kappa=     0 V=flat/negative faces={}                     role=flat six-triangle vertex
+  square tiling                    cfg=(4, 4, 4, 4)         kappa=     0 V=flat/negative faces={}                     role=flat self-dual square grid
+  hexagonal tiling                 cfg=(6, 6, 6)            kappa=     0 V=flat/negative faces={}                     role=flat dual of triangular grid
+
+[5] Prompt recursion counts for the three Euclidean regular tilings
+  square self n^2                  n=2:4, n=3:9, n=4:16, n=5:25, n=6:36, n=7:49
+  triangle self 4^k                k=1:4, k=2:16, k=3:64, k=4:256, k=5:1024
+  triangle->hex exchange 6*n^2     n=1:6, n=2:24, n=3:54, n=4:96, n=5:150
+  hex centered patch 1+3r(r+1)     r=1:7, r=2:19, r=3:37, r=4:61, r=5:91, r=6:127
+  hex self hexaflake 7^k           k=1:7, k=2:49, k=3:343, k=4:2401
+  readout:
+    square recursion is n^2/self-dual; triangle self-recursion is dyadic
+    4^k; triangle<->hex exchange is 6*n^2; hex self-recursion has two
+    useful readings: centered lattice patches 1+3r(r+1), and hexaflake
+    self-similar packets 7^k.
+
+[6] Johnson-solid guardrail: finite nonuniform defect packets
+  square pyramid J1:
+    apex         mult=1  cfg=(3, 3, 3, 3)     kappa=1/3 contribution=1/3
+    base         mult=4  cfg=(3, 3, 4)        kappa=5/12 contribution=5/3
+    total_curvature=2
+  pentagonal pyramid J2:
+    apex         mult=1  cfg=(3, 3, 3, 3, 3)  kappa=1/6 contribution=1/6
+    base         mult=5  cfg=(3, 3, 5)        kappa=11/30 contribution=11/6
+    total_curvature=2
+  triangular prism as Johnson-like check:
+    all vertices mult=6  cfg=(3, 4, 4)        kappa=1/3 contribution=2
+    total_curvature=2
+  readout:
+    Johnson solids should be treated like finite residual atlases.  They
+    preserve regular-face local defects, but not a single transitive
+    vertex configuration or global recursion law.
+
+[7] Prism / antiprism annular families
+  3-gonal prism          cfg=(4, 4, 3)        kappa=  1/3 V=  6
+  3-gonal antiprism      cfg=(3, 3, 3, 3)     kappa=  1/3 V=  6
+  4-gonal prism          cfg=(4, 4, 4)        kappa=  1/4 V=  8
+  4-gonal antiprism      cfg=(3, 3, 3, 4)     kappa=  1/4 V=  8
+  5-gonal prism          cfg=(4, 4, 5)        kappa=  1/5 V= 10
+  5-gonal antiprism      cfg=(3, 3, 3, 5)     kappa=  1/5 V= 10
+  6-gonal prism          cfg=(4, 4, 6)        kappa=  1/6 V= 12
+  6-gonal antiprism      cfg=(3, 3, 3, 6)     kappa=  1/6 V= 12
+  7-gonal prism          cfg=(4, 4, 7)        kappa=  1/7 V= 14  <-- 14 vertices / seven-sector defect
+  7-gonal antiprism      cfg=(3, 3, 3, 7)     kappa=  1/7 V= 14  <-- 14 vertices / seven-sector defect
+  8-gonal prism          cfg=(4, 4, 8)        kappa=  1/8 V= 16
+  8-gonal antiprism      cfg=(3, 3, 3, 8)     kappa=  1/8 V= 16
+  9-gonal prism          cfg=(4, 4, 9)        kappa=  1/9 V= 18
+  9-gonal antiprism      cfg=(3, 3, 3, 9)     kappa=  1/9 V= 18
+  10-gonal prism         cfg=(4, 4, 10)       kappa= 1/10 V= 20
+  10-gonal antiprism     cfg=(3, 3, 3, 10)    kappa= 1/10 V= 20
+  11-gonal prism         cfg=(4, 4, 11)       kappa= 1/11 V= 22
+  11-gonal antiprism     cfg=(3, 3, 3, 11)    kappa= 1/11 V= 22
+  12-gonal prism         cfg=(4, 4, 12)       kappa= 1/12 V= 24
+  12-gonal antiprism     cfg=(3, 3, 3, 12)    kappa= 1/12 V= 24
+  13-gonal prism         cfg=(4, 4, 13)       kappa= 1/13 V= 26
+  13-gonal antiprism     cfg=(3, 3, 3, 13)    kappa= 1/13 V= 26
+  14-gonal prism         cfg=(4, 4, 14)       kappa= 1/14 V= 28  <-- 28 vertices / LRC 1/14 defect
+  14-gonal antiprism     cfg=(3, 3, 3, 14)    kappa= 1/14 V= 28  <-- 28 vertices / LRC 1/14 defect
+  15-gonal prism         cfg=(4, 4, 15)       kappa= 1/15 V= 30
+  15-gonal antiprism     cfg=(3, 3, 3, 15)    kappa= 1/15 V= 30
+  16-gonal prism         cfg=(4, 4, 16)       kappa= 1/16 V= 32
+  16-gonal antiprism     cfg=(3, 3, 3, 16)    kappa= 1/16 V= 32
+  readout:
+    n-gonal prisms (4,4,n) and antiprisms (3,3,3,n) always have V=2n
+    and per-vertex kappa=1/n.  Thus n=14 gives a 28-point annular
+    carrier at exactly the LRC 1/14 scale, complementary to the q=3
+    unital's 28-point pair-incidence carrier.
+
+[8] Uniform configurations matching the LRC 14/28 or 1/7,1/14 scales
+  cfg=(3, 3, 3, 7)       kappa=  1/7 V= 14 faces={3:14, 7:2}
+  cfg=(4, 4, 7)          kappa=  1/7 V= 14 faces={4:7, 7:2}
+  cfg=(3, 3, 3, 14)      kappa= 1/14 V= 28 faces={3:28, 14:2}
+  cfg=(4, 4, 14)         kappa= 1/14 V= 28 faces={4:14, 14:2}
+  readout:
+    The clean uniform matches are exactly the prism/antiprism annuli.
+    That makes the 14/28 carrier cyclic and branch-local, unlike the
+    q=3 unital which is pair-unique but not cyclic.
+
+[9] Proposed LRC14 carrier split
+  q=3 unital:
+    preserves pair incidence; 28 points; detects repeated pairs such as
+    the H12 conflict in HYP-2942.
+  14-gonal prism/antiprism:
+    preserves cyclic annular order; 28 vertices; per-vertex defect 1/14;
+    candidate carrier for apex clocks, two 14-cycles, and half-step twists.
+  Euclidean tilings:
+    preserve zero-defect recursion rules; useful as flat limits and
+    self/dual recursion mnemonics, not as finite LRC certificates.
+  Johnson solids:
+    preserve finite nonuniform defect packets; useful as finite residual
+    atlases after uniform/prism carriers fail.
+
+[10] Tournament Analysis
+  vertices: proof carriers, not raw solids.
+  observable:
+    exact-LRC retention, C27/branch retention, pair-incidence retention,
+    cyclic/defect retention, anti-scalar guard.
+    exact M/Farey branch                 score=(7, 7, 6, 6, 7)
+    C27 shell transfer                   score=(6, 7, 5, 5, 6)
+    q=3 unital pair incidence            score=(6, 6, 7, 5, 6)
+    14-prism/antiprism annulus           score=(5, 6, 4, 7, 6)
+    Euclidean tiling zero-defect laws    score=(3, 5, 3, 6, 5)
+    triangle/hex dual exchange 6         score=(3, 4, 3, 5, 5)
+    square self n^2 recursion            score=(3, 4, 2, 4, 4)
+    Platonic/Archimedean uniform atlas   score=(2, 3, 4, 4, 4)
+    hex self 7^k recursion               score=(2, 3, 2, 4, 5)
+    Johnson finite defect atlas          score=(1, 2, 4, 5, 4)
+    raw solid numerology                 score=(0, 1, 1, 1, 1)
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1} c3=0 hp=1
+  Hamiltonian path:
+    exact M/Farey branch > C27 shell transfer > q=3 unital pair incidence > 14-prism/antiprism annulus > Euclidean tiling zero-defect laws > triangle/hex dual exchange 6 > square self n^2 recursion > Platonic/Archimedean uniform atlas > hex self 7^k recursion > Johnson finite defect atlas > raw solid numerology
+
+[11] Verdict / next POKE task
+  The new high-leverage carrier is the 14-gonal prism/antiprism annulus:
+    V=28 and kappa=1/14, matching both the q=3 unital point count and
+    the LRC14 threshold.  It should be tested as the cyclic companion to
+    the q=3 unital pair-incidence frame.
+  Next concrete experiment:
+    build a 28-vertex annular label model with two 14-cycles, attach
+    AP/GW/H/D labels, and compare whether the H12/GW/K33 conflict seen
+    by the unital becomes a twist, a diameter, or a two-chart obstruction.

@@ -1,6 +1,10 @@
 ## codex-2026-06-24-S141 -- regular-solid and Euclidean tiling recursion carrier for LRC14
 
-User asked to continue POKE/LRC exploration through Platonic, Archimedean, and Johnson solids plus the Euclidean square/triangular/hexagonal tilings.  Claimed HYP-2943 / T1039 / planned script `04-computation/lrc14_platonic_tiling_recursion_codex_s141.py` for a labelled recursion-carrier audit.  The working target is to compare square self-recursion, triangle/hex dual exchange, hex self-recursion, and solid vertex-defect grammars against HYP-2942's branch-local unital rule, with Tournament Analysis on proof carriers rather than raw solids.
+User asked to continue POKE/LRC exploration through Platonic, Archimedean, and Johnson solids plus the Euclidean square/triangular/hexagonal tilings.  Claimed and filled HYP-2943 / T1039, added `04-computation/lrc14_platonic_tiling_recursion_codex_s141.py`, stored `05-knowledge/results/lrc14_platonic_tiling_recursion_codex_s141.out`, and wrote reflection `07-reflections/lrc14-regular-solid-tiling-recursion-carrier-codex-s141.md`.
+
+Main computation: use normalized vertex defect `kappa=1-sum(p-2)/(2p)`.  The regular Euclidean tilings are exactly zero-defect configurations `3^6`, `4^4`, `6^3`.  The prompt's recursion counts split cleanly: square self `n^2` (`4,9,16,25,...`), triangle self `4^k`, triangle-to-hex exchange `6n^2`, centered hex patches `1+3r(r+1)`, and hexaflake self packets `7^k`.  Platonic/finite Archimedean solids are useful uniform positive-curvature seeds; Johnson solids are finite nonuniform defect atlases, not a global law.
+
+New LRC lead: `n`-gonal prisms `(4,4,n)` and antiprisms `(3,3,3,n)` always have `V=2n` and `kappa=1/n`.  Therefore `n=14` gives a 28-vertex cyclic annulus with per-vertex defect `1/14`, exactly matching the LRC14 threshold and HYP-2942's q=3 unital point count.  Readout: q=3 unital preserves pair incidence; the 14-prism/antiprism preserves cyclic annular order.  Next experiment: label the two 14-cycles by `AP,GW,H1..H13,D1..D13` and test whether the H12/GW/K33 conflict becomes a twist, diameter, or two-chart obstruction.  Tournament Analysis on proof carriers was transitive with the annulus immediately below exact C27/unital carriers.
 
 ## codex-2026-06-24-S140 -- C27 q=3 unital block-lift synthesis
 

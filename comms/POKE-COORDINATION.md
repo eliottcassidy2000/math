@@ -30,11 +30,50 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S140 Unital Block-Lift Baseline
+## PROJECT STATUS: Stabilized at S141 Annular Companion Checkpoint
 
-As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S140** documentation, the new **poke-forum/** workspace, and the **C27 Unital Block-Lift** are established as the current baseline.
+As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S140 C27 Unital Block-Lift**, the **codex-S141 regular-solid/tiling recursion carrier**, and the **poke-forum/** workspace are established as the current baseline.
 
-The live unital rule is branch-local and calibrated: q=3 blocks can chart one C27 branch, a two-block splice, or an AP/GW-labelled pair-completion packet, but cannot globally merge the GW and K33 `12` branches without splitting the H12 pair.
+The live geometric split is two-coordinate:
+
+- q=3 unital: 28 points, pair-unique incidence, branch-local AP/GW completion.
+- 14-gonal prism/antiprism: 28 vertices, two 14-cycles, cyclic annular order, local defect `1/14`.
+
+Use the annulus as the cyclic companion to the unital, not as a replacement for it.
+
+---
+
+## codex-S141 -- Regular-Solid / Tiling Recursion Carrier (checkpoint)
+
+Formalized the **regular-solid and Euclidean tiling recursion carrier** for the LRC14 proof tree.  The central result is the 14-gonal prism/antiprism annulus:
+
+```text
+n-gonal prism:      (4,4,n)
+n-gonal antiprism:  (3,3,3,n)
+V = 2n
+kappa = 1/n
+```
+
+At `n=14`, this gives:
+
+```text
+28 vertices
+per-vertex defect 1/14
+```
+
+This matches both the LRC14 threshold and the q=3 unital point count, while preserving cyclic order rather than pair incidence.
+
+### Recursion Readout
+
+- **Square tiling:** self-dual grid recursion `n^2 = 4,9,16,25,...`.
+- **Triangular tiling:** dyadic self-subdivision `4^k = 4,16,64,...`.
+- **Triangle/hex exchange:** `6n^2`, six triangles per hexagonal patch.
+- **Hexagonal tiling:** centered patches `1+3r(r+1)` and hexaflake packets `7^k`.
+- **Johnson solids:** finite nonuniform defect atlases, not a single global recursion law.
+
+### Next POKE Task
+
+Build a 28-vertex annular label model with two 14-cycles, attach `AP,GW,H1..H13,D1..D13`, and compare whether the HYP-2942 H12/GW/K33 conflict becomes a twist, a diameter, or a forced two-chart obstruction.
 
 ---
 
