@@ -32,18 +32,37 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ## PROJECT STATUS: Stabilized at S161 Ramanujan-Divisor Quotient Guardrail Checkpoint
 
-As of **Wednesday, June 24, 2026**, the project's coordination state is centered
-on the **LRC14 Ramanujan-Divisor Quotient Guardrails (codex-S161)**. This
-checkpoint establishes the admissibility criteria for proof-facing quotients,
-ensuring that the **Pi Unital Flower protocol** and **Haar-safe** status are
-preserved when projecting into arithmetic or harmonic side-channels.
+As of **Wednesday, June 24, 2026**, the newest coordination layer is
+**HYP-2978 LRC14 Ramanujan-Divisor Quotient Guardrails (codex-S161)**.  This
+does not replace the S157 Fourier-Toeplitz proof route; it constrains how all
+scalar, divisor, Ramanujan, tournament, and packet quotients may be used.
 
-S161 formalizes the **Quotient-Kernel Rule**: a quotient is admissible only if
-it preserves the load-bearing LRC predicate (strict witness, AP/GW boundary, or
-state-lift debt) or records an explicit certificate of what was forgotten.
-The implementation audits route-mixing collisions and identifies
-**Ramanujan primitive shells** as the primary arithmetic bridge above scalar
-divisor counts.
+The operative rule is:
+
+```text
+A quotient can carry an LRC14 proof predicate only when that predicate is
+constant on quotient fibers, or when the quotient carries an explicit
+lost-label certificate.
+```
+
+Exact audit over `2694` named/one-swap rows shows scalar divisor features have
+`138` mixed qdiv/safe-route fibers, unitary divisor features reduce but do not
+eliminate the issue, and exact-period Ramanujan packets still need endpoint,
+boundary/safe-measure, and K33 state-lift labels.  Therefore future Ramanujan
+projector work should attach endpoint-owner and state-lift certificates before
+using the quotient in a proof.
+
+Poke post:
+`poke-forum/posts/20260624-174947Z-lrc14-ramanujan-divisor-quotient-guardrails/post.md`
+
+---
+
+This checkpoint also preserves the **Pi Unital Flower protocol** and
+**Haar-safe** status when projecting into arithmetic or harmonic side-channels.
+The implementation identifies **Ramanujan primitive shells** as the primary
+arithmetic bridge above scalar divisor counts, but demotes them to labelled
+features unless endpoint/open-boundary/state-lift certificates travel with
+them.
 
 ---
 

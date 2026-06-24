@@ -85,6 +85,7 @@ as DFT of gcd; Busche-Ramanujan identities as the non-coprime correction to
 naive multiplicativity.
 
 ## codex-2026-06-24-S161 -- Ramanujan-divisor quotient guardrails claimed
+## codex-2026-06-24-S161 -- Ramanujan-divisor quotient guardrail audit
 
 User asked to push the abstract lesson that a quotient must declare what it is
 allowed to forget, using the divisor-function/Ramanujan-sum neighborhood and
@@ -107,6 +108,42 @@ route-mixing collisions, while the guarded packet signature has none.
 
 User asked to read around Ramanujan sums and push the resulting ideas toward an
 LRC14 tournament-adjacent proof.  Rebased over incoming HYP-2974 Fourier-Fejer
+and HYP-2975 taut-bridge work, then reserved HYP-2979/T1063 for the exact-period
+functions.  HYP-2978 / T1062 now has an exact audit and theorem-facing
+guardrail.  External reading used divisor functions, multiplicative functions,
+Dirichlet convolution, Ramanujan sums, unitary divisors, divisor summatory
+problems, and highly composite numbers as the one-hop seed.  The key bridge is
+that scalar divisor data hides a Ramanujan/cyclotomic packet expansion, so a
+proof quotient must say which phase/endpoint labels survive.
+
+Added `04-computation/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py`
+and stored
+`05-knowledge/results/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.out`.
+The script checks `2694` rows exactly (named AP/GW/K33/petal/covering rows plus
+one-swap AP bank through `add<=220`) and asks whether qdiv/safe-route predicates
+are constant on quotient fibers.  Scalar divisor signatures have `138` mixed
+proof-route fibers and `239` bad pair-collisions; unitary divisor signatures
+reduce this to `12/18`; exact-period Ramanujan packets reduce to `14` misses
+but still identify AP with positive `12->96`.  Therefore multiplicative
+functions are useful ledgers, not proof-ending scalars, until endpoint owner,
+boundary/safe-measure, and K33 state-lift labels are reattached.  Tournament
+Analysis over quotient carriers is transitive with Hamiltonian path
+`endpoint_measure > full_row > exact_period_packet > unitary_divisor >
+scalar_divisor > ramanujan_pair > ramanujan_speed > qcover`.  Also fixed the
+incoming HYP-2979 file metadata collision so the exact-period projector lane is
+cross-linked rather than duplicate-numbered.
+
+## codex-2026-06-24-ramanujan-projector -- HYP-2979/T1062 exact-period route claimed
+
+User asked to read around Ramanujan sums and push the resulting ideas toward an
+LRC14 tournament-adjacent proof.  Rebased over incoming HYP-2974 Fourier-Fejer
+and HYP-2975 taut-bridge work, then reserved HYP-2979/T1062 for the exact-period
+Ramanujan projector route.  Stub claim: use `c_q(n)` as the primitive-unit
+trace that keeps denominator, unit, parity, and seven-adic packet labels before
+scalarizing q-blocked witness data.  For `q=14`, `c_14(r+s)` is a trace form of
+the AP/GW endpoint-credit equality `r+s==0 mod 14`; `c_14(r-r')` retains exact
+residue coincidence.  Computation and theorem testing remain pending in this
+same session.
 and HYP-2975 taut-bridge work.  A concurrent S161 push reserved HYP-2978/T1062
 for Ramanujan-divisor quotient guardrails, so this exact-period projector route
 was moved to HYP-2979/T1063 as the retained-packet companion.

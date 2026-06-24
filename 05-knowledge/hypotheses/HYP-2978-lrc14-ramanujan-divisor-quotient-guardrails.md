@@ -1,10 +1,8 @@
 ---
 id: HYP-2978
 title: LRC14 Ramanujan-divisor quotient guardrails
-status: PROOF-INTERFACE / quotient-admissibility proof lane with finite collision audit; not a proof
+status: EVIDENCE / quotient-admissibility proof guardrail; not an LRC14 proof
 source: codex-2026-06-24-S161
-script: 04-computation/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py
-result: 05-knowledge/results/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.out
 related:
   - HYP-2979
   - HYP-2977
@@ -28,20 +26,20 @@ related:
   - THM-572
   - OPEN-Q-108
 artifacts:
+  - 04-computation/lrc14_ramanujan_divisor_named_channel_guardrails_codex_s161.py
+  - 05-knowledge/results/lrc14_ramanujan_divisor_named_channel_guardrails_codex_s161.out
   - 04-computation/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py
   - 05-knowledge/results/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.out
-  - 07-reflections/lrc14-ramanujan-divisor-quotient-guardrails-codex-s161.md
 ---
 
 # HYP-2978: LRC14 Ramanujan-Divisor Quotient Guardrails
 
-This hypothesis is the quotient-admissibility lane requested on 2026-06-24.
-The guiding principle is:
+Core rule:
 
 ```text
-A quotient is admissible for an LRC14 proof only if it preserves the predicate
-needed by the next implication, or records an explicit certificate explaining
-what information was intentionally forgotten.
+A quotient Q is admissible for an LRC14 proof step P only if P is constant
+on every Q-fiber, or Q carries a named certificate for the labels forgotten
+inside nonconstant fibers.
 ```
 
 Equivalently, each quotient must declare:
@@ -53,23 +51,28 @@ compensating transform or side-channel
 defect certificate when a forgotten label is load-bearing
 ```
 
-External seed:
+This is not a proof of LRC14.  It is a proof-safety theorem target: before a
+scalar, tournament, divisor, moment, Ramanujan, or packet quotient can rule out
+a strict counterexample, it must declare exactly which LRC predicate survives
+the quotient and which lost labels are reattached.
+
+## External Seed
+
+The divisor-function neighborhood gives the right arithmetic warning.  The
+divisor functions `sigma_k(n)` are multiplicative, `sigma = Id * 1` under
+Dirichlet convolution, and admit Ramanujan-sum expansions.  Ramanujan sums
 
 ```text
-sigma_k(n), Dirichlet convolution, multiplicativity, Jordan/Dedekind unit
-capacity, Ramanujan sums c_q(n) as primitive-root power sums, divisor-summatory
-hyperbolic-simplex counts, Lambert/Eisenstein coefficient pushes, and Euler
-pentagonal recurrences for sigma.
+c_q(n) = sum_{(a,q)=1} exp(2*pi*i*a*n/q)
+       = sum_{d | gcd(q,n)} d*mu(q/d)
 ```
 
-Internal seed:
-
-```text
-every failed scalar LRC quotient forgot a label: irreducible cores,
-unital-design incidence, Faulhaber odd moments, Pollock defect degree,
-unit-distance norm layers, tiling/solid units, endpoint owners,
-C27/K33 state debt, or harmonic dual data.
-```
+are simultaneously divisor/Mobius data and primitive-root phase data.  Thus a
+scalar divisor quotient is already hiding a cyclotomic packet ledger.  For
+LRC14 this is exactly the missing bridge: `tau`, `sigma`, `omega`, perfect-number
+product loads, Jordan/totient unit capacity, squarefree support, and unitary
+divisor counts are useful only if they retain or recover exact-period phase,
+endpoint owner, and route labels.
 
 The immediate LRC14 hook is HYP-2974's divisor-curried Fourier coefficient:
 
@@ -77,47 +80,40 @@ The immediate LRC14 hook is HYP-2974's divisor-curried Fourier coefficient:
 hat F_S(k) = sum_{v in S, v|k} sin(pi*(k/v)/7)/(pi*(k/v)).
 ```
 
-Mode `k` sees both the divisor fiber `v|k` and the quotient `k/v`.
-Ramanujan sums `c_q(n)`, the sums of nth powers of primitive q-th roots, are
-therefore candidate exact-period unit characters: they retain primitive
-residue-period data after averaging over units instead of collapsing to a bare
-divisor count.  HYP-2979 is the companion retained-packet route: exact-period
-Ramanujan projectors for q-ladders, endpoint sums, primitive phase packets, and
-shifted danger-count autocorrelations.
+Mode `k` sees both the divisor fiber `v|k` and the quotient `k/v`.  Ramanujan
+sums retain primitive residue-period data after averaging over units instead of
+collapsing to a bare divisor count.
 
-## Computation
+HYP-2979 is the companion retained-packet route: exact-period Ramanujan
+projectors for q-ladders, endpoint sums, and primitive unit phase packets.  It
+uses `c_14` as a primitive-unit trace with four values keyed by `gcd(14,n)`:
+`6,-6,-1,1`.  HYP-2978 supplies the admissibility guardrail for that route: the
+projector is not enough merely because it is arithmetic; it must be homogeneous
+for the proof predicate or carry endpoint/safe-measure/K33 certificates.
 
-Script:
+## Named-Channel Audit
 
-```text
-04-computation/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py
-```
-
-Stored output:
+Artifact preserved from the concurrent S161 remote checkpoint:
 
 ```text
-05-knowledge/results/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.out
+04-computation/lrc14_ramanujan_divisor_named_channel_guardrails_codex_s161.py
+05-knowledge/results/lrc14_ramanujan_divisor_named_channel_guardrails_codex_s161.out
 ```
 
-The script verifies through `n<=80` the identities:
+This audit checks arithmetic identities through `n<=80`, `q<=24`:
 
 ```text
-sigma_0=tau
-sum_{d|n} phi(d)=n
-phi=mu*id
-psi=id*|mu|
-sum_{d|n} J_2(d)=n^2
-c_q(n)=sum_{d|gcd(q,n)} d*mu(q/d)
+tau=sigma0, sum phi, phi=mu*id, psi=id*|mu|,
+sum J2, and the Ramanujan c_q Mobius/gcd formula
 ```
 
-It then audits named LRC14 rows:
+with no mismatches.  It then audits named rows: AP, GW, residue liar `12->26`,
+near/K33 `12->36`, petals, P10 splices, and covering repairs.  The warning is
+sharp: AP, GW, the residue liar, K33, petals, and P10+K33 all share the same
+coarse lcm divisor scalars; several also share the same `c_14` profile.  Those
+channels mix AP/GW boundary, q-witness, K33, petal, and covering proof routes.
 
-```text
-AP, GW 12->24, residue liar 12->26, near 12->36, petals 10->20
-and 13->26, P10+GW, P10+K33, covering 12->84/168, covering 6->98.
-```
-
-Main numerical readout:
+Named-channel collision counts:
 
 ```text
 qdiv_only route-mixing collisions                 1
@@ -129,84 +125,21 @@ divisor_lcm_scalars route-mixing collisions       1
 guarded_packet_signature route-mixing collisions  0
 ```
 
-The collisions are the point.  Coarse divisor data, `qdiv`, open/zero-open
-status, mod-14 residues, and a single Ramanujan shell are all useful features,
-but they are not admissible proof quotients by themselves.  They identify rows
-with different proof routes: AP/GW boundary atoms, q-witness rows, K33/state
-lifts, unit-petal rows, and covering-moment rows.
-
-For example, the AP, GW, residue-liar, near-K33, petal, and P10-splice rows
-mostly share the same lcm scalar data:
+Tournament Analysis over quotient channels is transitive:
 
 ```text
-lcm = 2^3*3^2*5*7*11*13
-tau(lcm)=192
-phi(lcm)/lcm=192/1001
-psi(lcm)/lcm=2304/715
-```
-
-Many also share the same `c_14` primitive-shell profile:
-
-```text
-((-6,1), (-1,6), (1,6)).
-```
-
-Thus lcm-divisor data and the `q=14` primitive shell cannot replace exact
-q/Farey/Haar/C27/K33 labels.  Conversely, adding q-threshold, Haar open state,
-Ramanujan profiles at `14,27,41`, unit witness counts, and the current route
-label separates the named audit bank with zero route-mixing collisions.  This
-does not prove LRC14; it states the smallest currently honest packet type.
-
-## Tournament Analysis
-
-Vertices are quotient channels rather than runners:
-
-```text
-raw_divisor_counts
-squarefree_psi_support
-totient_jordan_unit_capacity
-gcd_strata
-ramanujan_primitive_shell
-exact_period_packet
 labelled_lrc_packet_sheaf
+  > exact_period_packet
+  > ramanujan_primitive_shell
+  > gcd_strata
+  > totient_jordan_unit_capacity
+  > squarefree_psi_support
+  > raw_divisor_counts
 ```
 
-Pairwise observable:
+with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}` and no directed 3-cycles.
 
-```text
-A -> B iff A retains more of the declared proof payload:
-divisor capacity, squarefree support, unit capacity, gcd strata,
-primitive phase, exact q/Farey packet, and endpoint/state/dual labels.
-```
-
-Stored fingerprint:
-
-```text
-score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}
-directed_3_cycles=0
-Hamiltonian path:
-labelled_lrc_packet_sheaf >
-exact_period_packet >
-ramanujan_primitive_shell >
-gcd_strata >
-totient_jordan_unit_capacity >
-squarefree_psi_support >
-raw_divisor_counts
-```
-
-The readout is not that Ramanujan shells are complete.  It is that they are the
-first reasonable arithmetic side-channel above scalar divisor counts, while
-endpoint owners, q/Farey data, and state-lift labels remain load-bearing.
-
-Assumption challenge: considered vertices included runners, residues, divisors,
-unit twists, gcd strata, primitive Fourier modes, endpoint owners, C27/K33
-packets, and proof obligations.  This audit chooses quotient channels.  The
-preserved predicate is whether a channel retains enough payload to support the
-next LRC implication without silently mixing AP/GW, q-witness, K33, petal, and
-covering routes.  It intentionally destroys raw runner identity when that
-identity is not part of the next proof predicate.
-
-## Web Pass And Source Trail
+## Web pass and source trail
 
 The divisor-function page makes the useful warning explicit.  `sigma_a(n)` is
 both a divisor-fiber count/sum and a convolutional coefficient: its Dirichlet
@@ -257,9 +190,10 @@ https://arxiv.org/abs/1201.1060
 https://mast.queensu.ca/~murty/HRJ-2013.pdf
 ```
 
-## Guardrail Theorem Target
+## Guardrail theorem target
 
-Let `P` be the predicate needed by the next LRC implication, and let
+The abstract lesson across the repo can now be stated as a quotient-kernel
+rule.  Let `P` be the predicate needed by the next LRC implication, and let
 `pi:X->Q` be a proposed quotient.  The quotient is admissible only if every
 fiber of `pi` satisfies at least one of:
 
@@ -269,25 +203,6 @@ the forgotten coordinate is reconstructible from retained packet data;
 the forgotten coordinate is killed by a proved orthogonality/dual certificate;
 the fiber is assigned to an explicit residual bucket with endpoint/state labels.
 ```
-
-Equivalently, every coordinate forgotten by an LRC14 proof quotient must be:
-
-```text
-invariant under the proof step;
-reconstructible from retained q/Farey, unit, gcd, and Ramanujan data;
-annihilated by a proved orthogonality or dual certificate; or
-placed in an explicit residual bucket with endpoint/state-lift labels.
-```
-
-Expected falsifier shape:
-
-```text
-two rows with the same scalar divisor signature but different LRC route.
-```
-
-The S161 audit already exhibits such pairs for multiple scalar channels, so
-those channels are demoted to features.  Any final quotient must include
-Ramanujan packet labels or exact endpoint-owner/Farey data.
 
 This is the common shape behind the older lessons:
 
@@ -308,10 +223,10 @@ This is the common shape behind the older lessons:
 Thus the fundamental object is not a connection between two scalars.  It is a
 connection whose kernel has been named and discharged.
 
-## Tournament-Adjacent Proof Angle
+## Tournament-adjacent proof angle
 
 Use Tournament Analysis on quotient channels or proof obligations, not on
-runners.  The proof-facing pairwise observable is:
+runners.  The pairwise observable is:
 
 ```text
 Does channel A separate every route collision that channel B mixes, while
@@ -319,7 +234,7 @@ preserving the LRC predicate: strict witness, AP/GW boundary equality, or named
 state-lift debt?
 ```
 
-Ties are broken by the Hamiltonian path:
+Ties are broken by the Hamiltonian path
 
 ```text
 exact-period packet
@@ -328,8 +243,8 @@ exact-period packet
 > residual bucket
 ```
 
-The S161 named-row audit gives the first transitive channel tournament.  The
-proof-facing version should be stronger:
+The S161 named-row audit already gives the first transitive channel tournament.
+The proof-facing version should be stronger:
 
 ```text
 Every post-THM-571 Moon-core packet maps into the labelled LRC packet sheaf.
@@ -346,28 +261,179 @@ owner labels, and covering boundary-moment packets.  HYP-2978's job is to make
 that intersection exact and then empty it, or name the first genuinely new
 residual.
 
-Concrete route toward LRC14:
+Remaining work:
+
+1. Extend the collision audit from named rows to packet families in the
+   HYP-2963 bank.
+2. Turn the quotient-kernel rule into a theorem-facing lemma over the current
+   labelled packet sheaf.
+3. Test HYP-2979's shifted Ramanujan autocorrelations against HYP-2973 count
+   moments and HYP-2974 Toeplitz/Fejer failures.
+4. Stress-test this admissibility criterion against new packet-family mixed
+   fibers, using the one-swap addendum below as the first broad test case.
+
+## One-Swap Fiber Audit
+
+Second artifact from the continued S161 pass:
 
 ```text
-Use divisor/totient/Jordan/psi data as capacity ledgers.
-Use Ramanujan c_q profiles as primitive-shell Fourier guards.
-Then hand off to HYP-2974/HYP-2977 harmonic duals or HYP-2965/HYP-2969
-endpoint packets before claiming that a qdiv>14 zero-open packet cannot exist.
+04-computation/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py
+05-knowledge/results/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.out
 ```
 
-## Inquiry Bucket
+This audit uses exact rational danger-interval union arithmetic on:
 
-- Turn regular A-functions into "declared divisor-subset" quotient metadata.
-- Test divisor-summatory hyperbolic-simplex defects against Pollock and tiling
-  carrier packets.
-- Use Euler pentagonal sigma recurrences as sparse boundary moments in the
-  HYP-2974/HYP-2977 harmonic stack.
-- Treat totient as a finite Fourier transform of gcd and compare with
-  Ramanujan exact-period packets.
-- Use Busche-Ramanujan identities as non-coprime repair terms for any product
-  quotient that tries to forget shared prime support.
-- Extend the named-row audit to HYP-2963 packet families and then to the
-  finite-check endpoint, looking for the first quotient whose route-mixing
-  count remains zero without including the route label itself.
-- Test HYP-2979's shifted Ramanujan autocorrelations against HYP-2973 count
-  moments and HYP-2974 Toeplitz/Fejer failures.
+- `10` named rows: AP, GW `12->24`, K33 near `12->36`, petal rows, two-swap
+  splices, and covering rows `6->98`, `12->84`, `12->168`;
+- the one-swap AP neighborhood through `add<=220`, deduplicated, for `2694`
+  rows total.
+
+Proof-route target:
+
+```text
+boundary-zero, or qdiv=<d> / qdiv>14 plus exact safe-measure bucket
+```
+
+Named packet highlights:
+
+```text
+AP                         qdiv=14 safe=0          c14(v)=-6 c14(sum)= 6 c14(diff)=-36
+GW 12->24                  qdiv=14 safe=0          c14(v)=-6 c14(sum)= 6 c14(diff)=-29
+near 12->36                qdiv=14 safe=1/1260     c14(v)=-6 c14(sum)= 6 c14(diff)=-29
+petal 10->20               qdiv=14 safe=1/980      c14(v)=-6 c14(sum)= 6 c14(diff)=-29
+covering 12->84            qdiv=15 safe=563/105105 c14(v)= 1 c14(sum)=-1 c14(diff)=-36
+```
+
+The important signal is negative: `c_14(v_i+v_j)` catches the AP/GW/K33/petal
+zero-credit trace (`c14(sum)=6`) and separates covering repairs (`-1`), but it
+does not by itself distinguish AP/GW equality from positive K33/petal exits.
+Endpoint/safe-measure labels or a K33 state-lift certificate must be reattached.
+
+Each quotient was bucketed and checked for mixed proof-route fibers.
+
+```text
+quotient              classes  bad_fibers  bad_pair_collisions  largest_fiber
+scalar_divisor           2403         138                  239              5
+unitary_divisor          2677          12                   18              3
+qcover                     37          10                76948            628
+ramanujan_speed           164          75                72586            395
+ramanujan_pair           1564         265                 2291             38
+exact_period_packet      2491          14                   14              4
+endpoint_measure         2112           0                    0             76
+full_row                 2694           0                    0              1
+```
+
+Representative scalar-divisor mixed fiber:
+
+```text
+swap 5->173   route=qdiv=14:open         safe=50569/1731730
+swap 6->118   route=qdiv=14:small<=1/100 safe=5353/708708
+swap 10->122  route=qdiv=10:open         safe=83711/3846843
+swap 11->179  route=qdiv=11:open         safe=232049/4560920
+swap 13->181  route=qdiv=13:open         safe=966677/35121240
+```
+
+All five have the same scalar signature:
+
+```text
+sum tau=37, sum omega=15, sum bigOmega=20, sum sigma=309,
+gcd14 counts=((1,6),(2,6),(7,1)).
+```
+
+Thus scalar divisor data is not an admissible proof carrier for the qdiv/safe
+route predicate.  It can be a feature, heuristic, or irreducibility ledger, but
+not a final quotient unless a refinement recovers the lost phase/route labels.
+
+Representative exact-period packet mixed fiber:
+
+```text
+AP          route=boundary-zero          safe=0
+swap 12->96 route=qdiv=14:small<=1/100   safe=5219/840840
+```
+
+This is the sharper warning: even qcover + Ramanujan speed/pair packets +
+residue multiset can still forget the open-vs-boundary predicate.  HYP-2979 is
+therefore useful only after endpoint owner labels, exact safe measure, or
+K33/state-lift debt are included.
+
+## Fiber Tournament
+
+Vertices were quotient/proof carriers, not runners.  Pairwise observable:
+smaller `(bad_pair_collisions, bad_fibers, classes)` wins; after equal proof
+admissibility, the more compact quotient wins.
+
+```text
+score_hist={3:1, 4:1, 0:1, 1:1, 2:1, 5:1, 7:1, 6:1}
+directed_3_cycles=0
+SCC_sizes=(1,1,1,1,1,1,1,1)
+Hamiltonian_path_count=1
+tie_Hamiltonian_path=
+  endpoint_measure > full_row > exact_period_packet > unitary_divisor >
+  scalar_divisor > ramanujan_pair > ramanujan_speed > qcover
+```
+
+The ranking is not saying endpoint-measure proves LRC14.  It says that for the
+particular route predicate used in the audit, `qdiv + exact safe-measure bucket`
+is the most economical homogeneous quotient.  To become a theorem, that
+endpoint-measure quotient must be lifted back to structural labels: endpoint
+owner pairs, AP/GW zero-credit current, exact-period Ramanujan packets, and
+HYP-2908/THM-572 K33 state-lift debt.
+
+## Guardrail Across Prior Themes
+
+The same rule explains several older failures and useful analogies:
+
+- irreducibility: degree or factor count is not enough; the irreducible packet
+  and field/monodromy labels matter;
+- unital designs: point/line counts are not enough; incidence ownership matters;
+- Faulhaber/moment methods: a scalar moment can be positive while support
+  compatibility is lost;
+- Pollock defects: polygonal/tetrahedral counts forget the degree/dimension
+  carrier unless the defect label is retained;
+- unit-distance carriers: Euclidean norm-1 kissing layers and field-norm unit
+  layers are different quotients;
+- tiling/solid analogies: cell counts are not proof carriers until the boundary
+  unit and gluing labels are declared;
+- perfect/Farey product: `ab=|E(K_{a,b})|` is a scalar load, not a Kuratowski
+  obstruction unless graph incidence/minor labels are retained.
+
+## Theorem Target
+
+The proof-facing statement should be:
+
+```text
+Let P be any LRC14 route predicate used to discharge a residual packet
+(weak witness, strict open mass, boundary equality, qdiv route, Toeplitz
+dual failure, K33 state-lift debt, etc.).  A quotient Q may be used as a
+proof carrier for P only if every Q-fiber is P-homogeneous, or if Q is
+paired with a refinement certificate R whose labels make P recoverable.
+```
+
+For the Ramanujan/divisor lane, the live target is:
+
+```text
+Every non-AP/GW LRC14 residual either has a positive endpoint/safe-measure
+certificate visible after exact-period Ramanujan refinement, or it carries
+a named K33/HYP-2908/THM-572 state-lift debt.  Scalar multiplicative
+quotients alone cannot certify the route.
+```
+
+Next concrete tasks:
+
+1. Add endpoint-owner labels to the HYP-2979 exact-period projector and rerun
+   the fiber test against the HYP-2963 bank.
+2. Compare `c_14(v_i+v_j)` directly against HYP-2970 endpoint credit
+   `K=14(rm-sn)+r+s`.
+3. Test shifted Carmichael/Ramanujan autocorrelation of danger multiplicity
+   against HYP-2973 danger-count moments and HYP-2974 Toeplitz PSD failures.
+4. Treat multiplicative functions as irreducibility ledgers, not proof-ending
+   scalars, unless the lost-label certificate is explicit.
+5. Turn regular A-functions into declared divisor-subset quotient metadata:
+   even the allowed divisor set is load-bearing before convolution or primitive
+   shell averaging.
+6. Test divisor-summatory hyperbolic-simplex boundary defects against the
+   Pollock, tiling, and solid-carrier analogies.
+7. Try Euler pentagonal sigma recurrences as sparse boundary-moment ledgers in
+   the HYP-2974/HYP-2977 harmonic stack.
+8. Use Busche-Ramanujan non-coprime correction terms as the model for any
+   product quotient that tries to forget shared prime support.

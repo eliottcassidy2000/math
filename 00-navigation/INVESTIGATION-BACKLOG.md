@@ -31,6 +31,12 @@
 ## Lead codex-2026-06-24: Ramanujan exact-period projectors for LRC14
 
 **Status:** ACTIVE PROOF-INTERFACE (HYP-2979/T1063, companion to HYP-2978). Ramanujan sums turn primitive
+**Status:** ACTIVE STUB (HYP-2979/T1063, companion to HYP-2978). Ramanujan sums turn primitive
+**Status:** EVIDENCE / quotient-admissibility guardrail, not an LRC14 proof.  User prompt: read the divisor-function neighborhood and use it to formalize quotient guardrails across irreducibility, unital designs, Faulhaber moments, Pollock defects, unit-distance carriers, tiling/solid analogies, multiplicative functions, and Ramanujan sums.  HYP-2978 now states the rule: a quotient may be a proof carrier only when the LRC predicate is constant on its fibers, or when the quotient carries a named lost-label certificate.  Exact audit `lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py` checks `2694` rows.  Scalar divisor signatures have `138` mixed qdiv/safe-route fibers and `239` bad pair-collisions; unitary divisors reduce to `12/18`; exact-period packets reduce to `14` one-pair misses but still identify AP with positive `12->96`, proving endpoint/safe-measure labels or K33 state-lift debt must be reattached.  Tournament Analysis over quotient carriers is transitive with path `endpoint_measure > full_row > exact_period_packet > unitary_divisor > scalar_divisor > ramanujan_pair > ramanujan_speed > qcover`.
+**Next:** (1) add endpoint-owner labels to the HYP-2979 exact-period projector and rerun the fiber test on the HYP-2963 bank; (2) compare `c_14(v_i+v_j)` directly to HYP-2970 endpoint credit `K=14(rm-sn)+r+s`; (3) test shifted Carmichael/Ramanujan autocorrelation of danger multiplicity against HYP-2973 moment-duals and HYP-2974 Toeplitz PSD certificates; (4) keep multiplicative functions as irreducibility ledgers, not proof-ending scalars, unless the lost-label certificate is explicit.  Namespace: HYP-2978 / T1062.
+## Lead codex-2026-06-24: Ramanujan exact-period projectors for LRC14
+
+**Status:** ACTIVE STUB (HYP-2979/T1062), complementary to HYP-2978's quotient guardrail. Ramanujan sums turn primitive
 q-th roots into an integer projector:
 `c_q(n)=sum_{(a,q)=1}exp(2*pi*i*a*n/q)=sum_{d|gcd(q,n)}d*mu(q/d)`.
 This looks tailor-made for the current LRC14 stack because the hard rows are

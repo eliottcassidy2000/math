@@ -6,7 +6,6 @@ source: codex-2026-06-24-ramanujan-projector
 related:
   - HYP-2978
   - HYP-2977
-  - HYP-2978
   - HYP-2975
   - HYP-2974
   - HYP-2973
@@ -32,7 +31,7 @@ Ramanujan-divisor quotient guardrail: HYP-2978 says what a quotient is allowed
 to forget, while this hypothesis proposes one retained exact-period quotient.
 The proposed object is not a proof yet. It is a packet interface between:
 
-- HYP-2978's quotient-admissibility guardrails,
+- HYP-2978's divisor/Ramanujan quotient-admissibility guardrail,
 - HYP-2972's rational twist ladder,
 - HYP-2973's danger-count moments,
 - HYP-2974's Fourier-Toeplitz dual,
@@ -209,6 +208,16 @@ The precise normalization of `A_q,h` is pending, but the guardrail is fixed:
 do not collapse owner pairs before computing `R_q^+` and `R_q^-`.  The S161
 audit shows `c_14` alone collides, so the first theorem-facing test should use
 `q in {14,27,41}` plus endpoint owner labels and exact `M`/Haar route.
+
+## Quotient-Admissibility Addendum
+
+Addendum from HYP-2978/S161: the first quotient-admissibility audit tested an
+exact-period packet consisting of qcover data, Ramanujan speed traces,
+Ramanujan pair sum/difference traces, and residue multisets on `2694` named and
+one-swap rows.  This packet reduced the qdiv/safe-route mixed-fiber count to
+`14`, but still identified AP with a positive `12->96` row.  Therefore the
+projector must be refined by endpoint-owner, open-vs-boundary/safe-measure, or
+K33 state-lift labels before it is theorem-safe.
 
 Assumption challenge: the tournament vertices should not be fixed too early.
 Candidate vertices are speeds, residues, primitive denominator phases,
