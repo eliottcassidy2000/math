@@ -1,4 +1,4 @@
-REGULAR MAP CURVATURE BOUNDARY
+﻿REGULAR MAP CURVATURE BOUNDARY
 tetrahedron: {p,q}={3,3}, dual=self
   V,E,F=(4, 6, 4)
   vertex_deficit_turns=1/2 (0.500000000)
@@ -76,6 +76,28 @@ faces=regular polygons, convex, but not Platonic/Archimedean/prism/antiprism
 vertex figures are mixed rather than one uniform word.
 LRC role: finite residual atlas after the uniform carriers fail,
           analogous to bounded AP/GW/petal/K33 frontier tables.
+
+LOCAL CURVATURE CARRIER TOURNAMENT
+vertices are proof carriers, not runners.
+criteria: keeps_exact_M_Farey_label, keeps_C27_carry, keeps_mod7_petal_seam, keeps_pair_incidence_unit, keeps_branch_locality, resists_scalarization
+scores: {'square_self': 1, 'triangle_self': 3, 'tri_hex_dual': 5, 'hex_heptadic': 4, 'platonic_positive': 2, 'archimedean_near_flat': 6, 'johnson_local_defect': 7, 'raw_runner_vertices': 0}
+score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed_3cycles: 0
+hamiltonian_order: johnson_local_defect > archimedean_near_flat > tri_hex_dual > hex_heptadic > triangle_self > platonic_positive > square_self > raw_runner_vertices
+readout: Johnson defects beat uniform Archimedean charts once residual
+         petal/K33/two-swap surgery data must be retained.
+
+LOW-GAP LRC14 ROW TAGS
+AP             row={1,...,13}                     role=flat Euclidean baseline          carrier=triangle_self + tri_hex_dual
+GW             row={1,...,11,13,24}               role=tight labelled collision         carrier=tri_hex_dual + hex_heptadic
+near_K33       row=AP with 12->36                 role=first nonunit Farey/K33 child    carrier=johnson_local_defect
+petal10        row=AP with 10->20                 role=unit-visible C27 petal           carrier=hex_heptadic local defect
+petal13        row=AP with 13->26                 role=unit-visible C27 petal           carrier=hex_heptadic local defect
+two_swap_GW    row=drop(10,12)->add(20,24)        role=P10+GW splice                    carrier=johnson_local_defect
+two_swap_K33   row=drop(10,12)->add(20,36)        role=P10+K33 splice                   carrier=johnson_local_defect
+proof use: AP/GW form the flat labelled baseline; unit-visible
+           petals use hex-heptadic seams; K33/two-swap residuals
+           are Johnson-style finite surgery packets.
 
 POKE CARRIER TOURNAMENT
 observable=(LRC faithfulness, label retention, recursion exactness,

@@ -10,7 +10,15 @@ Main signal: the HYP-2942 linked order `GW -> K33 -> P10` has component depths `
 
 ## codex-2026-06-24-S141 -- regular-solid and Euclidean tiling recursion carrier for LRC14
 
-User asked to continue POKE/LRC exploration through Platonic, Archimedean, and Johnson solids plus the Euclidean square/triangular/hexagonal tilings.  Claimed HYP-2943 / T1039 / planned script `04-computation/lrc14_platonic_tiling_recursion_codex_s141.py` for a labelled recursion-carrier audit.  The working target is to compare square self-recursion, triangle/hex dual exchange, hex self-recursion, and solid vertex-defect grammars against HYP-2942's branch-local unital rule, with Tournament Analysis on proof carriers rather than raw solids.
+User asked to continue POKE/LRC exploration through Platonic, Archimedean, and Johnson solids plus the Euclidean square/triangular/hexagonal tilings.  Completed HYP-2943 / T1039 with `04-computation/lrc14_platonic_tiling_recursion_codex_s141.py`, stored `05-knowledge/results/lrc14_platonic_tiling_recursion_codex_s141.out`, added reflection `07-reflections/lrc14-regular-solid-tiling-recursion-carrier-codex-s141.md`, and posted POKE comment `003-codex-s141-regular-solid-tiling-carrier.md`.
+
+Main readout: local vertex-figure curvature puts the Euclidean regular tilings at zero (`3^6`, `4^4`, `6^3`), Platonic solids as global positive-curvature caps, Archimedean solids as uniform mixed positive-curvature charts, and Johnson solids as nonuniform local defect patches.  The LRC14 use is a curvature hierarchy: Euclidean tiling = tight/flat baseline; Archimedean near-flat = labelled branch-local chart; Johnson local defect = finite residual surgery packet.
+
+The prompt's recursions become proof roles rather than scalar identities.  Square `n^2` recursion is a self-dual Gaussian-axis guardrail.  Triangle self-recursion is an Eisenstein/dyadic spine (`4,16,64,...`).  Triangle/hex `6` preserves the `C27/F3^3` chart versus seven-sector/petal dual.  Hex self-recursion is the Eisenstein norm chain `N(3+omega)=7`, hence `7,49,...`, distinct from centered-hex ring counts `7,19,37,...`; this is the geometric avatar of the mod-7 coimage seam.
+
+Tournament Analysis used proof carriers as vertices rather than runners or raw solids, after checking runners, gaps, fixed circle sections, section boundaries, wall-crossing events, residues, cover arcs, Fourier modes, matroid circuits, and proof obligations as possible vertex sets.  The resulting carrier tournament is transitive: `johnson_local_defect > archimedean_near_flat > tri_hex_dual > hex_heptadic > triangle_self > platonic_positive > square_self > raw_runner_vertices`.  Pairwise channels were exact `M`/Farey label, C27 carry, mod-7 petal seam, pair-incidence unit, branch locality, and anti-scalarization.
+
+Low-gap tags: AP is the flat Euclidean baseline; GW is triangle/hex plus hex-heptadic labelled collision; `12->36` is a Johnson-style nonunit K33 defect; `10->20` and `13->26` are hex-heptadic unit-visible petals; the two S138 two-swap rows are Johnson-style finite surgery splices.  Proof target sharpened: attach exact `M`/Farey/C27 labels first, then route residuals through Archimedean/Johnson local curvature patches to petal rigidity or the K33/THM-572 state-lift endpoint.  LRC14 remains open.
 
 ## codex-2026-06-24-S140 -- C27 q=3 unital block-lift synthesis
 

@@ -3,11 +3,12 @@
 Polyhedral and Euclidean-tiling carrier scout for LRC14.
 
 The goal is not to classify solids from scratch.  The script fixes the
-curvature, duality, and recursion labels that should be preserved before the
-Platonic/Archimedean/Johnson and plane-tiling analogies are used in the POKE
-binary-relational proof tree.
+curvature, duality, recursion labels, and low-gap LRC14 row tags that should be
+preserved before the Platonic/Archimedean/Johnson and plane-tiling analogies
+are used in the POKE binary-relational proof tree.
 """
 
+from itertools import combinations
 from fractions import Fraction
 
 
@@ -34,6 +35,69 @@ def eisenstein_norm(a, b):
 
 def gaussian_axis_norm(m):
     return m * m
+
+
+LOW_GAP_ROW_TAGS = [
+    ("AP", "{1,...,13}", "flat Euclidean baseline", "triangle_self + tri_hex_dual"),
+    ("GW", "{1,...,11,13,24}", "tight labelled collision", "tri_hex_dual + hex_heptadic"),
+    ("near_K33", "AP with 12->36", "first nonunit Farey/K33 child", "johnson_local_defect"),
+    ("petal10", "AP with 10->20", "unit-visible C27 petal", "hex_heptadic local defect"),
+    ("petal13", "AP with 13->26", "unit-visible C27 petal", "hex_heptadic local defect"),
+    ("two_swap_GW", "drop(10,12)->add(20,24)", "P10+GW splice", "johnson_local_defect"),
+    ("two_swap_K33", "drop(10,12)->add(20,36)", "P10+K33 splice", "johnson_local_defect"),
+]
+
+
+LOCAL_CARRIER_CRITERIA = [
+    "keeps_exact_M_Farey_label",
+    "keeps_C27_carry",
+    "keeps_mod7_petal_seam",
+    "keeps_pair_incidence_unit",
+    "keeps_branch_locality",
+    "resists_scalarization",
+]
+
+
+LOCAL_CARRIER_SCORES = {
+    "square_self": [0, 0, 0, 0, 0, -2],
+    "triangle_self": [1, 1, 0, 0, 1, 1],
+    "tri_hex_dual": [1, 2, 1, 1, 1, 2],
+    "hex_heptadic": [1, 1, 3, 1, 1, 2],
+    "platonic_positive": [1, 1, 0, 1, 0, 0],
+    "archimedean_near_flat": [2, 2, 2, 3, 3, 2],
+    "johnson_local_defect": [3, 2, 2, 2, 3, 3],
+    "raw_runner_vertices": [0, 0, 0, 0, 0, -3],
+}
+
+
+def local_carrier_tournament():
+    names = list(LOCAL_CARRIER_SCORES)
+    n = len(names)
+    adj = [[False] * n for _ in range(n)]
+    for i, j in combinations(range(n), 2):
+        a, b = names[i], names[j]
+        va, vb = LOCAL_CARRIER_SCORES[a], LOCAL_CARRIER_SCORES[b]
+        wins_a = sum(1 for x, y in zip(va, vb) if x > y)
+        wins_b = sum(1 for x, y in zip(va, vb) if y > x)
+        if wins_a > wins_b or (wins_a == wins_b and i < j):
+            adj[i][j] = True
+        else:
+            adj[j][i] = True
+    scores = [sum(row) for row in adj]
+    hist = {s: scores.count(s) for s in sorted(set(scores))}
+    cycles = 0
+    for a, b, c in combinations(range(n), 3):
+        if adj[a][b] and adj[b][c] and adj[c][a]:
+            cycles += 1
+        if adj[a][c] and adj[c][b] and adj[b][a]:
+            cycles += 1
+    order = sorted(range(n), key=lambda idx: (-scores[idx], idx))
+    return {
+        "scores": dict(zip(names, scores)),
+        "score_hist": hist,
+        "directed_3cycles": cycles,
+        "order": [names[i] for i in order],
+    }
 
 
 def print_regular_boundary():
@@ -145,6 +209,30 @@ def print_johnson_guardrail():
     print()
 
 
+def print_local_carrier_tournament():
+    print("LOCAL CURVATURE CARRIER TOURNAMENT")
+    tour = local_carrier_tournament()
+    print("vertices are proof carriers, not runners.")
+    print("criteria:", ", ".join(LOCAL_CARRIER_CRITERIA))
+    print("scores:", tour["scores"])
+    print("score_hist:", tour["score_hist"])
+    print("directed_3cycles:", tour["directed_3cycles"])
+    print("hamiltonian_order:", " > ".join(tour["order"]))
+    print("readout: Johnson defects beat uniform Archimedean charts once residual")
+    print("         petal/K33/two-swap surgery data must be retained.")
+    print()
+
+
+def print_low_gap_row_tags():
+    print("LOW-GAP LRC14 ROW TAGS")
+    for name, row, role, tag in LOW_GAP_ROW_TAGS:
+        print(f"{name:14s} row={row:30s} role={role:32s} carrier={tag}")
+    print("proof use: AP/GW form the flat labelled baseline; unit-visible")
+    print("           petals use hex-heptadic seams; K33/two-swap residuals")
+    print("           are Johnson-style finite surgery packets.")
+    print()
+
+
 def print_carrier_tournament():
     print("POKE CARRIER TOURNAMENT")
     carriers = [
@@ -192,6 +280,8 @@ def main():
     print_tiling_recursions()
     print_archimedean_carriers()
     print_johnson_guardrail()
+    print_local_carrier_tournament()
+    print_low_gap_row_tags()
     print_carrier_tournament()
 
 

@@ -30,11 +30,57 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S140 Unital Block-Lift Baseline
+## PROJECT STATUS: Stabilized at S141 Regular-Solid / Tiling Recursion Carrier
 
-As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S140** documentation, the new **poke-forum/** workspace, and the **C27 Unital Block-Lift** are established as the current baseline.
+As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S141** regular-solid / tiling carrier now sits above the **codex-S140** C27 unital baseline and the new **poke-forum/** workspace.
+
+The live geometric rule is: use Euclidean tilings as the flat/tight recursion wall, Archimedean near-flat solids as branch-local semiregular charts, and Johnson solids as nonuniform local defect/surgery patches.  Do not use Platonic global symmetry as a standalone LRC invariant unless exact `M`/Farey/C27 labels have already been attached.
 
 The live unital rule is branch-local and calibrated: q=3 blocks can chart one C27 branch, a two-block splice, or an AP/GW-labelled pair-completion packet, but cannot globally merge the GW and K33 `12` branches without splitting the H12 pair.
+
+---
+
+## codex-S141 -- Regular-Solid / Tiling Recursion Carrier (checkpoint)
+
+Formalized the **LRC14 Regular-Solid / Tiling Recursion Carrier**, converting the prompt's square/triangle/hex recursion plus Platonic/Archimedean/Johnson solids into a POKE-compatible proof-carrier hierarchy.
+
+### 1. Curvature Hierarchy
+
+The regular Euclidean tilings are zero-curvature carriers:
+
+- `3^6`: triangular tiling, AP/Sturmian dense-net boundary.
+- `4^4`: square tiling, self-dual `n^2` scalar guardrail.
+- `6^3`: hexagonal tiling, seven-sector/mod-7 petal dual.
+
+Platonic solids are global positive-curvature caps.  Archimedean solids are uniform mixed positive-curvature charts; their near-flat rows (`4.6.10`, `3.4.5.4`, `5.6.6`, etc.) are the right analogy for branch-local q=3/unital charts.  Johnson solids are nonuniform local positive-curvature patches, matching AP/GW plus petal/K33/two-swap residual surgery.
+
+The prompt's recursion labels are distinct and should not be scalarized: square grids give Gaussian axis indices `m^2`; triangular grids give an Eisenstein/dyadic spine; triangle/hex duality is a support-six bridge; and hex self-recursion is the Eisenstein norm chain `N(3+omega)=7`, hence `7,49,...`, distinct from centered-hex ring counts.
+
+### 2. Proof-Carrier Tournament
+
+The carrier tournament is transitive:
+
+```text
+johnson_local_defect
+> archimedean_near_flat
+> tri_hex_dual
+> hex_heptadic
+> triangle_self
+> platonic_positive
+> square_self
+> raw_runner_vertices
+```
+
+The pairwise observable is channel preservation: exact `M`/Farey label, C27 carry, mod-7 petal seam, pair-incidence unit, branch locality, and anti-scalarization.
+
+### 3. Role in Proof Tree
+
+This checkpoint turns the solids analogy into an operating rule:
+
+- attach exact `M`/Farey/C27 labels first;
+- use Archimedean near-flat charts for branch-local pair completion;
+- use Johnson-style local defect patches for finite residuals;
+- route unit-visible defects to petal rigidity and nonunit/K33 defects toward THM-572 state-lift packets.
 
 ---
 

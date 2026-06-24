@@ -1,7 +1,7 @@
 ---
 id: HYP-2943
 title: LRC14 regular-solid and Euclidean-tiling recursion carriers
-status: PROOF-INTERFACE / curvature and recursion guardrail; not a proof
+status: PROOF-INTERFACE / curvature, recursion, and local-defect carrier hierarchy; not a proof
 source: codex-2026-06-24-S141
 related:
   - HYP-2942
@@ -27,13 +27,17 @@ results:
 
 S141 imports the prompt's Platonic, Archimedean, Johnson, square, triangular,
 and hexagonal tiling ideas as POKE carriers for LRC14.  The point is to keep
-the binary relations and recursion indices labelled before using the geometry.
+curvature, duality, recursion indices, and branch labels attached before using
+the geometry.
 
-The diagnostic script
-`04-computation/lrc14_platonic_tiling_recursion_codex_s141.py` stores output
-at `05-knowledge/results/lrc14_platonic_tiling_recursion_codex_s141.out`.
+Script: `04-computation/lrc14_platonic_tiling_recursion_codex_s141.py`
+Output: `05-knowledge/results/lrc14_platonic_tiling_recursion_codex_s141.out`
 
-## Curvature boundary
+Status: this is not a proof of LRC(14).  It is a proof-interface and
+anti-scalarization discipline for deciding which geometric analogies preserve
+the data needed by the current C27/Farey/K33 proof route.
+
+## Curvature Boundary
 
 The regular map notation `{p,q}` separates three regimes:
 
@@ -46,9 +50,9 @@ The regular map notation `{p,q}` separates three regimes:
 For the five Platonic solids the script records:
 
 ```text
-tetrahedron  {3,3}, V,E,F=(4,6,4),   self-dual
-cube         {4,3}, V,E,F=(8,12,6),  dual octahedron
-octahedron   {3,4}, V,E,F=(6,12,8),  dual cube
+tetrahedron  {3,3}, V,E,F=(4,6,4),    self-dual
+cube         {4,3}, V,E,F=(8,12,6),   dual octahedron
+octahedron   {3,4}, V,E,F=(6,12,8),   dual cube
 dodecahedron {5,3}, V,E,F=(20,30,12), dual icosahedron
 icosahedron  {3,5}, V,E,F=(12,30,20), dual dodecahedron
 ```
@@ -65,7 +69,7 @@ Proof-use rule: Platonic solids are finite positive-curvature dual skeletons.
 The Euclidean tilings are the recursion wall.  They should not be collapsed
 into one "regular geometry" scalar.
 
-## Euclidean recursion labels
+## Euclidean Recursion Labels
 
 The prompt's recursion counts are real, but they live in different carriers.
 
@@ -118,17 +122,20 @@ This is the main guardrail.  The prompt's `7,49,...` chain is a norm-index
 self-recursion, not the same thing as centered hexagonal patch counts.  The two
 carriers agree at `7` and then diverge.
 
-## Archimedean and Johnson roles
+## Archimedean And Johnson Roles
 
-The 13 Archimedean solids retain one vertex-figure word.  The script records
-their vertex figures and deficits, with range:
+The 13 Archimedean solids retain one vertex-figure word.  They are useful
+analogues for labelled local quotients: one local word is preserved globally.
+The near-flat rows are especially relevant:
 
 ```text
-deficit range = 1/60 .. 1/6.
+4.6.10     deficit 1/60
+3.4.5.4    deficit 1/30
+3.3.3.3.5  deficit 1/30
+3.10.10    deficit 1/30
+5.6.6      deficit 1/30
+4.6.8      deficit 1/24
 ```
-
-They are useful analogues for labelled local quotients: one local word is
-preserved globally.
 
 Johnson solids supply the opposite guardrail:
 
@@ -148,7 +155,9 @@ global.
 
 ## Tournament Analysis
 
-Tournament vertices are proof carriers:
+There are two useful carrier tournaments.
+
+The first keeps the global LRC proof scale above all geometry.  Vertices are:
 
 ```text
 exact_M_Farey_branch
@@ -182,14 +191,68 @@ exact_M_Farey_branch
 > raw_polyhedron_visual_metaphor.
 ```
 
-Fingerprint:
+The second tournament zooms into local curvature carriers after exact labels
+have already been attached.  Vertices are:
 
 ```text
-c3=0
-hp=1
+square_self
+triangle_self
+tri_hex_dual
+hex_heptadic
+platonic_positive
+archimedean_near_flat
+johnson_local_defect
+raw_runner_vertices
 ```
 
-## POKE proof target
+The pairwise observable compares six preserved data channels: exact `M`/Farey
+label, C27 carry, mod-7 petal seam, pair-incidence unit, branch locality, and
+resistance to scalarization.
+
+The local-curvature order is transitive:
+
+```text
+johnson_local_defect
+> archimedean_near_flat
+> tri_hex_dual
+> hex_heptadic
+> triangle_self
+> platonic_positive
+> square_self
+> raw_runner_vertices
+```
+
+Both tournaments have `c3=0`; the proof-carrier fingerprints are transitive.
+
+## Low-Gap LRC14 Tags
+
+The script tags the current low-gap rows as follows:
+
+| row | role | carrier |
+|---|---|---|
+| AP `{1,...,13}` | flat Euclidean baseline | `triangle_self + tri_hex_dual` |
+| GW `{1,...,11,13,24}` | tight labelled collision | `tri_hex_dual + hex_heptadic` |
+| `12->36` | first nonunit Farey/K33 child | `johnson_local_defect` |
+| `10->20`, `13->26` | unit-visible C27 petals | `hex_heptadic local defect` |
+| `drop(10,12)->add(20,24)` | `P10+GW` splice | `johnson_local_defect` |
+| `drop(10,12)->add(20,36)` | `P10+K33` splice | `johnson_local_defect` |
+
+## Assumption Challenge
+
+The tested vertex sets were: runners, fixed circle sections, section
+boundaries, gaps, wall-crossing events, residues, cover arcs, Fourier modes,
+matroid circuits, solid vertex figures, local defect patches, and proof
+obligations.
+
+The useful quotient is not the raw runner quotient.  It preserves exact
+`M`/Farey scale, C27 branch labels, mod-7 seam data, and pair-incidence units
+at the proof-carrier level.  It destroys individual runner ownership and most
+time-order geometry inside a cell.  Challenged assumption: the vertices of a
+Tournament Analysis need not be runners, arcs, or solids; here they are
+candidate proof carriers whose edges record which preserved data channel
+survives a quotient.
+
+## POKE Proof Target
 
 The actionable target is a recursion-label test for future low-gap residuals:
 
@@ -200,13 +263,14 @@ residual packet a Euclidean recursion type:
   triangular dyadic sector packet,
   triangle-hex support-six bridge,
   hex norm-7 self packet,
+  Archimedean branch-local chart,
   or Johnson-like finite residual atom.
 ```
 
-Then check whether unit-visible C27 defects always land in the triangular or
-support-six discharge lanes, while nonunit K33 defects land in hex norm-7 or
-Johnson-like residual lanes that can feed HYP-2908/THM-572.
+Then check whether unit-visible C27 defects always land in the triangular,
+hex-heptadic, or support-six discharge lanes, while nonunit K33 defects land in
+hex norm-7 or Johnson-like residual lanes that can feed HYP-2908/THM-572.
 
-This is not a proof of LRC14.  It is a structured POKE atlas: do not use
+This is a structured POKE atlas, not a proof of LRC14: do not use
 Platonic/Archimedean/Johnson/tiling language unless the preserved local word,
-dual pair, or recursion index is named.
+dual pair, recursion index, or branch label is named.
