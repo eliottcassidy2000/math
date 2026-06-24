@@ -1,0 +1,45 @@
+﻿[1] 2D Haar rectangle product census
+  dyadic depth <= 3; rectangles=225; ordered pairs=50625
+  product rule: h_R*h_S = (h_I*h_I')*(h_J*h_J')
+  1D factors are zero, indicator, or signed nested Haar.
+
+  class                        count     share                  signs readout
+  same_tile_indicator            225   0.00444                  1:225 same tile in both coordinates; endpoint/cocircuit atom survives
+  vertical_owner_strip          1020   0.02015          -1:510, 1:510 same x-owner, refined y-scale; one endpoint label survives
+  horizontal_owner_strip        1020   0.02015          -1:510, 1:510 same y-owner, refined x-scale; one endpoint label survives
+  cross_handoff                 2312   0.04567        -1:1156, 1:1156 opposite coordinate nesting; handoff between two wall clocks
+  nested_refinement             2312   0.04567        -1:1156, 1:1156 same-direction nesting; descend to smaller packet/fiber
+  orthogonal_zero              43736   0.86392                0:43736 disjoint in at least one coordinate; discrepancy orthogonality
+
+[2] Tournament-tiling dictionary
+  Haar rectangle R=I x J          | fixed-path tile (r,c)         | two coordinates carry row/column endpoint clocks
+  disjoint coordinate             | noninteracting tiles          | safe to separate by discrepancy orthogonality
+  same coordinate                 | shared endpoint/owner strip   | must retain labelled owner, not just scalar mass
+  same tile                       | boundary cocircuit atom       | AP/GW-style endpoint atom; Haar mass can be zero
+  same-direction nesting          | recursive tile refinement     | state-lift/fiber descent, not a global quotient
+  opposite-coordinate nesting     | zipper/cross handoff          | the packet gluing case: one clock refines while another coarsens
+
+[3] Proof-carrier Tournament Analysis
+  vertices: Haar-product interaction classes
+  pairwise observable: labelled information retained by quotient
+  switch/gauge: orient toward larger weighted retention vector
+  tie Hamiltonian path: same_tile_indicator -> vertical_owner_strip -> horizontal_owner_strip -> cross_handoff -> nested_refinement -> orthogonal_zero
+
+  vertex                   score  dot role                 vector
+  same_tile_indicator          4   60 boundary atom        (3, 3, 3, 0, 0, 3)
+  vertical_owner_strip         3   54 one-owner strip      (3, 2, 2, 0, 1, 3)
+  horizontal_owner_strip       2   54 one-owner strip      (3, 2, 2, 0, 1, 3)
+  cross_handoff                5   64 zipper handoff       (3, 1, 3, 3, 2, 2)
+  nested_refinement            1   50 state lift           (3, 1, 1, 1, 3, 2)
+  orthogonal_zero              0   10 independent cancellation (1, 0, 0, 0, 0, 1)
+
+  score_histogram= {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3cycles= 0
+  scc_sizes= [1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count= 1
+
+[4] LRC14 proof target suggested by the product algebra
+  Haar-tile discrepancy lemma (target): on each labelled packet fiber, a non-AP/GW zero-open residual must expose a nonzero 2D Haar tile coefficient in one of the owner-strip, cross-handoff, or nested-refinement classes.
+  Interpretation: if all such coefficients vanish, the packet has no local discrepancy address left except same-tile boundary atoms; that should force the AP/GW boundary skeleton or emit a new THM-572/F7 state-lift atom.
+  Guardrail: the quotient may forget scalar noise, but it may not forget endpoint owners, C27 transfers, exact-period/Ramanujan labels, or K33 state-lift debt.  This matches the HYP-2986 handoff atlas.
+

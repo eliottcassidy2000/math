@@ -22824,3 +22824,33 @@ Proof-order takeaway: this does not prove LRC14, but it gives a precise
 boundary-layer falsifier.  A future strict counterexample must have no positive
 bridge, no AP/GW zero-sum taut current, no HYP-2974 Toeplitz-negative harmonic
 exit, and no K33/state-lift debt.
+
+## codex-2026-06-24-S165 -- LRC14 Haar-product tile discrepancy
+
+User asked to synthesize recent agents through discrepancy theory and the
+two-dimensional Haar product rule, specifically how it creates the same
+structure as the tournament tiling model.
+
+Pulled and integrated the recent HYP-2984/HYP-2985/HYP-2986 work on kernel
+homotopy, admissible smoothing, certificate handoff, and tope/cocircuit wall
+packets.  Added
+`04-computation/lrc14_haar_product_tile_discrepancy_codex_s165.py` and stored
+`05-knowledge/results/lrc14_haar_product_tile_discrepancy_codex_s165.out`.
+The script enumerates ordered products of dyadic Haar rectangles through depth
+`3` and classifies the product rule into tournament-tiling interaction types:
+orthogonal zero, same-tile boundary atom, owner strip, cross handoff, and nested
+refinement.
+
+Exact readout: `225` rectangles, `50625` ordered products, `43736` orthogonal
+zeros, `225` same-tile atoms, `1020+1020` owner strips, `2312` cross handoffs,
+and `2312` nested refinements.  Every nonzero non-atom class is perfectly
+sign-balanced, which points away from naive positivity and toward typed
+coefficient detection.  Tournament Analysis over Haar-product interaction
+classes is transitive with one Hamiltonian path.
+
+Created HYP-2988/T1072 and reflection
+`07-reflections/lrc14-haar-product-tile-discrepancy-codex-s165.md`.  The proof
+target is a Haar-tile discrepancy lemma on labelled LRC14 packet fibers: a
+non-AP/GW zero-open residual must reveal a nonzero owner-strip, cross-handoff,
+or nested-refinement coefficient, or else collapse to an AP/GW boundary skeleton
+or emit a new THM-572/F7 state-lift atom.

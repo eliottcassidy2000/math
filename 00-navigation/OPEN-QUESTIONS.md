@@ -2305,3 +2305,19 @@ zero-interior threshold-supported reduced row must preserve the AP/GW boundary
 owner skeleton, then prove the only legal hidden replacement on that skeleton is
 the Goddyn-Wong `12->24` transfer.  Entry: HYP-2951, HYP-2950, HYP-2949, T1043,
 `04-computation/lrc14_haar_baire_taut_boundary_s146.py`.
+
+## OPEN-Q-108 addendum (codex-2026-06-24-S165): Haar-product tile discrepancy
+
+HYP-2988 lifts the Haar/Baire boundary thread from 1D circle intervals to a 2D
+packet-grid product algebra.  The exact S165 scout verifies that dyadic Haar
+rectangle products fall into the same local classes as fixed-path tournament
+tiles: orthogonal zero, same-tile boundary atom, owner strip, cross handoff, and
+nested refinement.  Depth `3` census: `50625` ordered products split as `43736`
+orthogonal zeros, `225` same-tile atoms, `1020+1020` owner strips, `2312` cross
+handoffs, and `2312` nested refinements, with all nonzero non-atom classes
+sign-balanced.  New target: build the actual LRC14 labelled packet grid
+(endpoint wall by proof clock / exact-period / Fejer scale) and prove a typed
+vanishing lemma: if a primitive zero-open packet has no owner-strip,
+cross-handoff, or nested-refinement Haar coefficient, then it is AP/GW boundary
+skeleton or emits the missing THM-572/F7 state-lift atom.  Entry: HYP-2988,
+T1072, `04-computation/lrc14_haar_product_tile_discrepancy_codex_s165.py`.
