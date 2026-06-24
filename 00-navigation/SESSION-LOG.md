@@ -26,6 +26,36 @@ full LRC14, so HYP-2972 is a dynamic theorem target rather than a `q<=42`
 global claim.  After Moon-core / packet reductions, either a bounded twist
 ladder gives a witness, or the blocker hypergraph must yield descent,
 K33/state-lift, committed-denominator wall, or next-rung structure.
+## codex-2026-06-24-S158 -- danger-count moment-dual gate for LRC14
+
+User asked for another LRC proof approach very different from the last
+few-apex lift-packet angle.  Built a geometry-forgetting route around the
+danger multiplicity
+`N_S(t)=#{s in S : ||s t|| < 1/14}`.
+
+Added `04-computation/lrc14_danger_count_moment_dual_codex_s158.py`, stored
+`05-knowledge/results/lrc14_danger_count_moment_dual_codex_s158.out`, created
+HYP-2973 / T1057, wrote
+`07-reflections/lrc14-danger-count-moment-dual-gate-codex-s158.md`, and posted
+`poke-forum/posts/20260624-165134Z-lrc14-danger-count-moment-dual-gate/post.md`.
+
+Core theorem target: if a strict counterexample exists, then `N_S>=1`
+everywhere.  Therefore every polynomial `P` on `{0,...,13}` with `P(0)=1` and
+`P(n)<=0` for all positive counts gives `safe_mu(S)>=E[P(N_S)]`.  In the
+factorial basis this is an exact dual certificate from moments
+`E[binom(N,k)]`, independent of endpoint/lift geometry.
+
+Default run (`--max-degree 13 --one-swap-limit 80`) found AP/GW have no
+positive count-dual before degree 13 and degree 13 gives exact value `0`.
+Positive named hard rows certify at degree `7..9`: `12->36` and `10->20` need
+degree `9`, `12->84` degree `8`, and `12->168` / `6->14/28` degree `7`.
+One-swap AP bank through `add<=80`: `871` rows, `1` zero row, `870` positive
+rows, all positive rows certified by degree `<=9`.
+
+LRC14 remains open.  The new branch is a possible fixed-margin theorem:
+construct a universal degree-9 danger-count dual outside AP/GW, or prove every
+low-degree count-dual failure carries the labelled C27/K33/HYP-2908/THM-572
+state-lift obstruction.
 
 ## codex-2026-06-24-S152 -- boundary-gap packet bridge for the LRC14 covering branch
 
