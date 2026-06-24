@@ -1,3 +1,13 @@
+## codex-2026-06-24-S164 -- HYP-2984/T1068 kernel-homotopy boundary-defect lane claimed
+
+User asked for another creative LRC proof pass.  Synced mainline first and
+found the live frontier around HYP-2981 Fejer interval packet certificates,
+HYP-2982 analytic-sieve packet weights, and HYP-2983 Kaczynski/exponential-sum
+smoothing synthesis.  Reserved HYP-2984/T1068 for a focused bridge: kernel
+deformations are admissible only when they preserve a labelled packet
+certificate or emit a named boundary-defect atom.  The exact computation,
+result file, reflection, and synthesis are pending in this same session.
+
 ## codex-2026-06-24-S163 -- analytic sieve packet weights and Goldbach smoothing guardrails (HYP-2982)
 
 User asked to merge sums over primes, `sum mu(n)`, `sum mu(n)/n`, `sum mu(n)^2/phi(n)`, large-sieve/circle-method improvements, upper-bound quadratic/Selberg sieve ideas, exponential sums, ternary-Goldbach parabolic-cylinder/saddle-point/explicit-formula machinery, smoothing choices, and the repo's Kaczynski work.  Pulled current mainline first, integrating S162's HYP-2981 Fejer interval certificate scaffold, then reserved HYP-2982/T1066 and checkpointed it.
