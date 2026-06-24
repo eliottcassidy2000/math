@@ -1,0 +1,76 @@
+HYP-2982: analytic sieve packet weights for LRC14
+========================================================================
+sieve limit N=200000
+
+Arithmetic sums at LRC/Goldbach packet checkpoints
+Q        pi(Q)   theta/Q     M(Q)    M/sqrtQ      sum_mu/n      G=sum_mu2/phi   G-logQ     Phi(Q)
+    14        6   0.736425       -2   -0.534522   -0.00592741       4.01666667   1.377609         64
+    27        9   0.711967       -1   -0.192450    0.03734102       4.57184343   1.276007        230
+    41       13   0.813387       -1   -0.156174    0.02609263       5.07005772   1.356486        530
+    64       18   0.829983       -1   -0.125000    0.01598324       5.45060847   1.291725       1260
+   128       31   0.874328       -2   -0.176777   -0.00056908       6.17207549   1.320045       5022
+   256       54   0.906715       -1   -0.062500    0.00455000       6.87869165   1.333514      19948
+   512       97   0.951186       -4   -0.176777   -0.00456388       7.57766009   1.339335      79852
+  1024      172   0.960877       -4   -0.125000   -0.00149497       8.26584763   1.334376     318964
+  2048      309   0.969486        7    0.154680    0.00427439       8.95581611   1.331197    1275586
+  4096      564   0.983254      -19   -0.296875   -0.00411701       9.65019926   1.332433    5100020
+  8192     1028   0.984392       22    0.243068    0.00287450      10.34382878   1.332915   20401610
+ 16384     1900   0.992132      -32   -0.250000   -0.00184058      11.03650591   1.332445   81599338
+ 32768     3512   0.992274       26    0.143631    0.00092123      11.72976318   1.332555  326387384
+ 65536     6542   0.994480       14    0.054688    0.00017888      12.42304021   1.332685 1305514926
+131072    12251   0.996964      -20   -0.055243   -0.00009692      13.11619775   1.332696 5222105724
+200000    17984   0.997595       -1   -0.002236    0.00002507      13.53859018   1.332518 12158598918
+
+LRC exact-period denominator packet readings
+q     factorization        phi(q)  mu(q)  mu2/phi(q)  Phi(q)  G(q)  Selberg 1/G
+ 14  2*7                      6      1   0.16666667      64  4.0167  0.24896266
+ 27  3^3                     18      0   0.00000000     230  4.5718  0.21873015
+ 41  41                      40     -1   0.02500000     530  5.0701  0.19723641
+ 84  2^2*3*7                 24      0   0.00000000    2166  5.7653  0.17345185
+168  2^3*3*7                 48      0   0.00000000    8610  6.4423  0.15522439
+
+Large-sieve / Selberg normalizer readout
+G(z)=sum_{d<=z} mu(d)^2/phi(d) is the dimension-one inverse-unit normalizer.  Numerically G(z)-log z is already slowly stabilizing, so inverse primitive-unit cost is logarithmic after squarefree normalization, while Phi(z)=sum phi(q) is quadratic packet capacity.
+z=    14: G=  4.016667, 1/G= 0.2489627, log(z)=  2.639057, Phi/(z^2)=0.326531
+z=    27: G=  4.571843, 1/G= 0.2187301, log(z)=  3.295837, Phi/(z^2)=0.315501
+z=    41: G=  5.070058, 1/G= 0.1972364, log(z)=  3.713572, Phi/(z^2)=0.315289
+z=   128: G=  6.172075, 1/G= 0.1620201, log(z)=  4.852030, Phi/(z^2)=0.306519
+z=  1024: G=  8.265848, 1/G= 0.1209797, log(z)=  6.931472, Phi/(z^2)=0.304188
+z=  8192: G= 10.343829, 1/G= 0.0966760, log(z)=  9.010913, Phi/(z^2)=0.304008
+z= 65536: G= 12.423040, 1/G= 0.0804956, log(z)= 11.090355, Phi/(z^2)=0.303964
+z=200000: G= 13.538590, 1/G= 0.0738629, log(z)= 12.206073, Phi/(z^2)=0.303965
+
+Prompt bridge: Goldbach explicit machinery as packet guardrails
+- sums over primes: carrier=theta(x), prime races, local residues; lesson=raw prime count is too coarse; residues and phase history matter.
+- sum mu(n): carrier=squarefree signed cancellation; lesson=Mertens cancellation is a tail guard, not a local certificate.
+- sum mu(n)/n: carrier=scale-normalized Mobius tail; lesson=candidate error budget for quotient kernels.
+- sum mu(n)^2/phi(n): carrier=inverse primitive-unit capacity; lesson=Selberg/large-sieve normalizer for denominator packets.
+- large sieve: carrier=family bound over phases/residues; lesson=preconditions late-q packets but must keep exceptional labels.
+- circle method: carrier=major arcs plus minor arcs; lesson=same split as LRC primal twist witnesses vs blocker hypergraph.
+- exponential sums: carrier=oscillatory core; lesson=LRC analogue is Fejer/Toeplitz negative quadratic form.
+- explicit formula / saddle point: carrier=smoothing transform plus zero terms; lesson=smoothing is a proof object; changing it changes the packet.
+- Kaczynski/Kaczorowski: carrier=boundary approach / Goldbach exceptional sets; lesson=exceptional-set boundary must be labelled, not averaged away.
+
+Tournament Analysis
+vertices are analytic proof carriers, not runners or arcs
+pairwise observable: retention vector = local data, Mobius sign, scale tail, unit capacity, quadratic kernel, family phase control, major/minor split, smoothing/zero packet
+tie Hamiltonian path: listed vertex order
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+directed_3cycles=0
+hamiltonian_paths=1
+Hamiltonian path: labelled_lrc_interval_packet > explicit_formula_smoothing_packet > circle_method_major_minor_split > large_sieve_minor_arc_packet > selberg_quadratic_upper_packet > squarefree_unit_normalizer_G > mu_over_n_explicit_tail > mertens_mobius_cancellation > raw_prime_count
+
+Carrier notes
+raw_prime_count                        score=(1, 0, 0, 0, 0, 0, 0, 0) :: counts primes but forgets residues, smoothing, and packet labels
+mertens_mobius_cancellation            score=(1, 1, 0, 0, 0, 0, 0, 0) :: keeps signed squarefree cancellation but not unit capacity
+mu_over_n_explicit_tail                score=(1, 1, 1, 0, 0, 0, 0, 0) :: normalizes Mobius cancellation by scale; useful tail guard
+squarefree_unit_normalizer_G           score=(1, 1, 1, 1, 0, 0, 0, 0) :: G(x)=sum mu^2/phi keeps inverse primitive-unit packet cost
+selberg_quadratic_upper_packet         score=(1, 1, 1, 1, 1, 0, 0, 0) :: quadratic upper-bound sieve declares lambda_d and kernel
+large_sieve_minor_arc_packet           score=(1, 1, 1, 1, 1, 1, 0, 0) :: large sieve controls families of phases/exceptions
+circle_method_major_minor_split        score=(1, 1, 1, 1, 1, 1, 1, 0) :: major/minor arcs retain local main term plus oscillatory error
+explicit_formula_smoothing_packet      score=(1, 1, 1, 1, 1, 1, 1, 1) :: smoothing transform plus zero/exponential-sum terms are declared
+labelled_lrc_interval_packet           score=(2, 2, 2, 2, 2, 2, 2, 2) :: HYP-2981-style packet: endpoint, route, interval, and handoff labels
+
+LRC14 theorem-facing readout
+A Selberg/large-sieve packet is useful for LRC14 only as a middle certificate: it may bound a family of late denominators or exceptional phases, but HYP-2978/HYP-2981 still require endpoint, route, safe-measure, Fejer interval, Ramanujan, or state-lift labels.
+New subtarget: prove a labelled analytic packet lemma for the HYP-2901 Node-3 wall: after small denominator packets are killed, G(z)-type inverse-unit normalization plus a declared smoothing transform forces a twist/Fejer witness or routes to HYP-2908.

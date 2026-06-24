@@ -1,4 +1,15 @@
 ## codex-2026-06-24-S162 -- Fejer interval scaffold, budgets, and named-packet prototype
+## codex-2026-06-24-S163 -- analytic sieve packet weights and Goldbach smoothing guardrails (HYP-2982)
+
+User asked to merge sums over primes, `sum mu(n)`, `sum mu(n)/n`, `sum mu(n)^2/phi(n)`, large-sieve/circle-method improvements, upper-bound quadratic/Selberg sieve ideas, exponential sums, ternary-Goldbach parabolic-cylinder/saddle-point/explicit-formula machinery, smoothing choices, and the repo's Kaczynski work.  Pulled current mainline first, integrating S162's HYP-2981 Fejer interval certificate scaffold, then reserved HYP-2982/T1066 and checkpointed it.
+
+Web/source check: Helfgott's ternary Goldbach theorem explicitly uses circle method, large sieve, and exponential sums, with explicit estimates; the minor-arcs paper emphasizes reducing Vaughan-identity cost and exploiting large-sieve tails; the major-arcs paper uses Gaussian smoothing, parabolic-cylinder estimates, and explicit formulas; Kaczorowski-Perelli-Pintz gives the Goldbach exceptional-set/large-sieve neighborhood.  Repo check: the local "Kaczynski" lane is boundary functions / curvilinear convergence, so the merged lesson is `exceptional set = boundary approach class that must be labelled`.
+
+Computation: added `04-computation/lrc14_analytic_sieve_packet_weights_codex_s163.py` and stored `05-knowledge/results/lrc14_analytic_sieve_packet_weights_codex_s163.out`.  The script computes `M(x)=sum mu`, `sum mu(n)/n`, `G(x)=sum mu(n)^2/phi(n)`, `Phi(x)=sum phi(q)`, `theta(x)`, and prime reciprocal sums through `N=200000`, with LRC checkpoints `14,27,41,84,168`.  Main readout: `Phi(z)` is quadratic primitive denominator capacity (`Phi(200000)/z^2 ~= 0.303965`), while `G(z)` is logarithmic inverse-unit normalizer (`G(200000)-log z ~= 1.332518`).  At `q=14`, `Phi=64`, `G=4.0167`; at `q=41`, `Phi=530`, `G=5.0701`.
+
+Synthesis: HYP-2982 now says large-sieve/Selberg/circle-method estimates are middle certificates for HYP-2901's Node-3 denominator wall, not replacements for endpoint/route labels.  Moving from killed/surviving primitive packets (`Phi`) to inverse-unit upper-bound weights (`G`) is itself a quotient, so it must carry kernel, smoothing transform, exceptional-set boundary, and LRC labels.  Tournament Analysis uses analytic proof carriers rather than runners, with transitive path `labelled_lrc_interval_packet > explicit_formula_smoothing_packet > circle_method_major_minor_split > large_sieve_minor_arc_packet > selberg_quadratic_upper_packet > squarefree_unit_normalizer_G > mu_over_n_explicit_tail > mertens_mobius_cancellation > raw_prime_count`.
+
+## codex-2026-06-24-S162 -- Robbins/Robin Fejer interval certificates with computed budgets (HYP-2981)
 
 User asked to continue toward LRC14 proof routes using the second spectrum point, Robbins/Robin, divisor/Ramanujan concepts, and the primary target of converting floating Fejer evaluations into rigorous interval certificates anchored to labelled packet fibers.  Pulled latest mainline first and built on HYP-2978/HYP-2979/HYP-2974 rather than replacing them.
 
