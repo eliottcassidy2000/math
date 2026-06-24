@@ -65,6 +65,47 @@ certificates.  Cross-topic prompts (irreducible polynomials/Bunyakovsky,
 Faulhaber odd moments, Pollock, unit distance, unital/pi/flower, tilings and
 solids) were integrated as carrier/guardrail lessons: they are productive only
 when they declare which labels or units they preserve before scalarization.
+## codex-2026-06-24-S160 -- holistic LRC14 lineage synthesis and proof-object convergence
+
+User asked for a long holistic pass over the full LRC history, keeping all
+recent themes in mind and cycling between exploration, computation, and
+hypothesis generation.  Claimed HYP-2976 / T1060 after detecting the existing
+HYP-2975 taut-bridge graph curvature stub.  Added
+`04-computation/lrc14_holistic_lineage_synthesis_codex_s160.py`, stored
+`05-knowledge/results/lrc14_holistic_lineage_synthesis_codex_s160.out`, wrote
+HYP-2976, added reflection
+`07-reflections/lrc14-holistic-lineage-synthesis-codex-s160.md`, and posted to
+Poke forum at
+`poke-forum/posts/20260624-172000Z-lrc14-holistic-lineage-synthesis/post.md`.
+
+Main readout: the project has converged from scalar runner/tournament quotients
+to a labelled proof packet over a Farey/Haar endpoint sheaf retaining exact
+scale, qdiv/Farey data, open-vs-boundary topology, endpoint owners,
+C27/unital/K33 state labels, fixed-margin family data, few-apex and
+Ramanujan/divisor exact-period packet labels, boundary-moment packets, and dual
+certificates.  The script parses `668` merged hypotheses, `574` LRC/LRC14
+rows, and `304` guardrail/refutation
+signals.  Route mutations show endpoint covers becoming owner hypergraphs,
+raw A000568/tournament shadows becoming observer-source fibers, finite endpoint
+brute force giving way to structural finite-core reductions, scalar moments
+lifting to labelled residual packets, C27/unital/K33 analogies becoming
+state-lift owner labels, fixed-margin families becoming the labelled packet
+theorem, scalar divisor signatures refining to Ramanujan/cyclotomic
+exact-period packet quotients, and endpoint/moment/twist/danger-count/Toeplitz duals merging as
+projections of one cover/noncover sheaf.
+
+Counterexample squeeze: any strict bad row now has to evade qdiv, AP/GW,
+Haar/Baire, unit-petal, K33/state-lift, THM-571 apex-majority, few-apex lift,
+NORK pinch, Ramanujan/cyclotomic exact-period quotient-admissibility, boundary-moment, and
+all known dual-certificate exits.  Tournament Analysis uses proof carriers as
+vertices; the retention-vector tournament is transitive with Hamiltonian path
+`proof-object sheaf > boundary endpoint bridge
+> labelled packet classifier > Ramanujan/cyclotomic packet quotient
+> dual-certificate cluster > source-spectrum
+observer pullback > wide/gK8 analytic route > AP/GW boundary skeleton > raw
+tournament shadow > raw scalar invariant`.  LRC14 remains open; the next
+theorem target is sheaf gluing across the qdiv/Haar/endpoint/packet/Ramanujan
+exact-period/state-lift and dual charts.
 
 ## codex-2026-06-24-S157 -- Fourier-Toeplitz PSD dual route claimed for LRC14
 
