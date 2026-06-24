@@ -4,6 +4,32 @@ This session pushed the HYP-2974 Fejer evidence toward a proof interface.  The
 floating certificates already know where they want to land: not on raw runner
 sets, but on labelled packet fibers.
 
+## Named-row interval addendum
+
+After the precision-budget scout, a direct named-row prototype was stored as
+`04-computation/lrc14_fejer_interval_named_packet_certificates_codex_s162.py`
+with output in
+`05-knowledge/results/lrc14_fejer_interval_named_packet_certificates_codex_s162.out`.
+It uses exact rational safe components from the Haar/Baire engine and evaluates
+the explicit Fejer forms with `mpmath.iv` at `dps=90`.  This is not a formal
+certificate backend, but it is the right interface test: the signs are attached
+to named packet fibers before numerical enclosure.
+
+The result is clean:
+
+```text
+AP, GW 12->24        equality atoms
+positive named rows  9/9 interval-certified
+K33 12->36           degree 159, upper -0.000237712660626355
+P10+GW               degree 280, upper -0.000959294840052407
+covering 12->168     least negative upper -0.0000130202901999956
+```
+
+So the new local target is no longer "do these named floating signs survive
+interval arithmetic?"  They do, at prototype precision.  The target is now
+"make the same payload mechanically checkable and compress it by labelled
+packet family."
+
 The useful surprise from S162 is that the interval problem appears modest in
 precision.  The smallest selected margin, also the smallest full-bank S157
 floating margin, is the two-swap row

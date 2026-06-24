@@ -1,9 +1,10 @@
 ---
 id: HYP-2981
 title: LRC14 Fejer interval certificates and Robbins/Robin quotient-bridge guardrails
-status: PROOF-INTERFACE / packet-anchored interval-certificate scaffold and precision blueprint; not a proof
+status: PROOF-INTERFACE / packet-anchored scaffold, precision blueprint, and named-row interval prototype; not a proof
 source: codex-2026-06-24-S162
 related:
+  - HYP-2982
   - HYP-2979
   - HYP-2978
   - HYP-2977
@@ -30,6 +31,8 @@ artifacts:
   - 07-reflections/lrc14-robin-robbins-fejer-interval-scaffold-codex-s162.md
   - 04-computation/lrc14_fejer_interval_packet_certificates_codex_s162.py
   - 05-knowledge/results/lrc14_fejer_interval_packet_certificates_codex_s162.out
+  - 04-computation/lrc14_fejer_interval_named_packet_certificates_codex_s162.py
+  - 05-knowledge/results/lrc14_fejer_interval_named_packet_certificates_codex_s162.out
   - 07-reflections/lrc14-robbins-robin-interval-fejer-packet-certificates-codex-s162.md
 ---
 
@@ -43,6 +46,14 @@ the floating Fejer evaluations are replaced by rigorous interval certificates.
 ```
 
 It integrates the HYP-2981/T1065 reservation and the later packet scaffold.
+After rebasing over the S160/HYP-2976 source-packet lineage addendum, this
+also fits the broader proof-object-sheaf picture: the interval Fejer payload is
+one projection of the labelled source-spectrum packet, alongside endpoint
+bridges, Ramanujan exact-period packets, moment duals, and state-lift debt.
+After rebasing over the S163/HYP-2982 analytic-sieve packet stub, the same
+guardrail applies to any future smoothing/sieve transfer: smoothing choices are
+allowed only as labelled interval proof obligations with declared kernels and
+exceptional-set boundaries.
 The spelling collision is useful but should not be blurred: the graph theorem
 is Robbins, while the divisor-function/RH criterion is Robin.  A third
 side-reading, associated in the repo with Neville Robbins style
@@ -132,6 +143,44 @@ This is not yet the production certificate emitter.  The current rational
 sourced backend, and the final pass should group the HYP-2963 bank by packet
 family rather than treating `21911` rows individually.
 
+## Named-Row Interval Prototype
+
+The named-row prototype
+`04-computation/lrc14_fejer_interval_named_packet_certificates_codex_s162.py`
+keeps the budget script's namespace separate from a direct interval
+evaluation.  It imports the exact rational safe components from the
+Haar/Baire engine, chooses rational centers inside the largest safe component,
+and evaluates the Fejer quadratic form with `mpmath.iv` at `dps=90`.
+This is still a prototype backend, not a proof-assistant certificate, but it
+checks that the floating signs survive honest outward interval enclosure on
+the named rows.
+
+The stored output
+`05-knowledge/results/lrc14_fejer_interval_named_packet_certificates_codex_s162.out`
+reports:
+
+```text
+rows=11
+equality_atoms=2 names=['AP', 'GW 12->24']
+positive_rows=9
+interval_certified=9
+uncertified_positive=0
+least_negative_upper=-1.30202901999956e-05
+widest_interval=4.312e-88
+```
+
+The hard named rows line up with the proof geography:
+
+```text
+K33 / 12->36       degree 159, upper -0.000237712660626355
+P10+GW             degree 280, upper -0.000959294840052407
+covering 12->168   degree  63, upper -0.0000130202901999956
+```
+
+AP and GW remain the two PSD-blind equality atoms.  The guardrail is that this
+success is useful only while attached to each labelled packet fiber, exact
+safe component, center, degree, and route handoff.
+
 ## Precision Blueprint
 
 The budget script
@@ -200,8 +249,9 @@ External source trail:
 https://en.wikipedia.org/wiki/Divisor_function
 https://en.wikipedia.org/wiki/Ramanujan_sum
 https://en.wikipedia.org/wiki/Dirichlet_convolution
+https://en.wikipedia.org/wiki/Multiplicative_function
 https://en.wikipedia.org/wiki/Robbins%27_theorem
-https://mathworld.wolfram.com/RobinsTheorem.html
+https://en.wikipedia.org/wiki/Robin%27s_theorem
 ```
 
 Useful facts imported from the web pass:
