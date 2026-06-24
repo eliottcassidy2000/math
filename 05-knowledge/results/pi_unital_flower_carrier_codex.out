@@ -1,0 +1,67 @@
+========================================================================================
+pi / unital / flower carrier atlas
+========================================================================================
+
+[1] Low-complexity pi approximants
+    pi = 3.141592653589793
+    pi^3 = 31.006276680299816; pi^3 - 31 = 0.006276680300
+    22/7          value=3.142857142857143 signed_error=+1.264489267350e-03 abs_error=1.264489267350e-03 :: continued-fraction pi convergent
+    cuberoot(31)  value=3.141380652391393 signed_error=-2.120011984004e-04 abs_error=2.120011984004e-04 :: nearest-integer pi^3 carrier
+    355/113       value=3.141592920353983 signed_error=+2.667641894050e-07 abs_error=2.667641894050e-07 :: higher rational comparator
+
+[2] Flower turn families and the unit guardrail
+    1/pi turns: alpha=0.318309886183791 turns per petal
+           0/1    den=1    drift=3.183098862e-01 turns = 114.591559 deg
+           1/3    den=3    drift=4.507034145e-02 turns = 16.225323 deg
+           7/22   den=22   drift=2.817496043e-03 turns = 1.014299 deg
+         106/333  den=333  drift=2.807900798e-03 turns = 1.010844 deg
+         113/355  den=355  drift=9.595245700e-06 turns = 0.003454 deg
+    1/pi radians: alpha=0.050660591821169 turns per petal
+           0/1    den=1    drift=5.066059182e-02 turns = 18.237813 deg
+           1/19   den=19   drift=3.744875540e-02 turns = 13.481552 deg
+           1/20   den=20   drift=1.321183642e-02 turns = 4.756261 deg
+           3/59   den=59   drift=1.102508255e-02 turns = 3.969030 deg
+           4/79   den=79   drift=2.186753872e-03 turns = 0.787231 deg
+    Readout: the 22-family belongs to 1/pi as a turn fraction (7/22).
+             Literal 1/pi radians means alpha=1/(2*pi^2), whose first
+             family is near denominator 20, not 22.
+
+[3] Formal unital parameter rows 2-(q^3+1, q+1, 1)
+    h=q^2-q+1, points=(q+1)h, replication=q^2, blocks=q^2 h
+    q= 2: points=   9=3^2      block= 3 h=  3=3      r=  4 b=   12 tags=h=3
+    q= 3: points=  28=2^2*7    block= 4 h=  7=7      r=  9 b=   63 tags=h=7,C(8,2)
+    q= 4: points=  65=5*13     block= 5 h= 13=13     r= 16 b=  208 tags=h=13,65+7=72
+    q= 5: points= 126=2*3^2*7  block= 6 h= 21=3*7    r= 25 b=  525 tags=h=21,LRC-shell
+    q= 6: points= 217=7*31     block= 7 h= 31=31     r= 36 b= 1116 tags=h=31,LRC-shell,7-block,pi^3-near
+    q= 7: points= 344=2^3*43   block= 8 h= 43=43     r= 49 b= 2107 tags=h=43,LRC-shell
+    q= 8: points= 513=3^3*19   block= 9 h= 57=3*19   r= 64 b= 3648 tags=-
+    q= 9: points= 730=2*5*73   block=10 h= 73=73     r= 81 b= 5913 tags=h=73
+    q=10: points=1001=7*11*13  block=11 h= 91=7*13   r=100 b= 9100 tags=h=91,LRC-shell,C(14,2)
+    q=11: points=1332=2^2*3^2*37 block=12 h=111=3*37   r=121 b=13431 tags=-
+    q=12: points=1729=7*13*19  block=13 h=133=7*19   r=144 b=19152 tags=-
+    q=13: points=2198=2*7*157  block=14 h=157=157    r=169 b=26533 tags=-
+    q=14: points=2745=3^2*5*61 block=15 h=183=3*61   r=196 b=35868 tags=-
+
+[4] Interpretation
+    q=3 gives the known unital pair-frame: 28=C(8,2), block size 4.
+    q=6 is only a formal parameter row in finite-geometry terms, but it
+    is the clean numerological bridge: h=31, points=7*31, block size 7,
+    and cbrt(31) approximates pi because pi^3 is just above 31.
+    q=4 gives 65 points; 65+7=72 is a code-length hint, not a construction.
+    q=10 gives h=91=C(14,2), echoing the LRC14 pair-slot shell.
+
+[5] Proof-carrier Tournament Analysis
+    vertices=['unit_preserving_guardrail', 'C27_shell_transfer', 'q3_unital_pair_frame', 'q6_formal_unital_31', 'pi_turn_22_flower', 'literal_radian_correction', 'q4_unital_65_plus_7_code_hint', 'raw_pi_numerology']
+    role_scores={'unit_preserving_guardrail': (5, 4, 2, 3, 5), 'C27_shell_transfer': (4, 5, 3, 4, 5), 'q3_unital_pair_frame': (3, 4, 5, 3, 4), 'q6_formal_unital_31': (3, 3, 3, 5, 3), 'pi_turn_22_flower': (3, 3, 2, 4, 3), 'literal_radian_correction': (5, 2, 1, 3, 5), 'q4_unital_65_plus_7_code_hint': (3, 2, 3, 4, 4), 'raw_pi_numerology': (1, 1, 1, 2, 1)}
+    vertex_scores={'unit_preserving_guardrail': 7, 'literal_radian_correction': 6, 'C27_shell_transfer': 5, 'q3_unital_pair_frame': 4, 'q6_formal_unital_31': 3, 'pi_turn_22_flower': 2, 'q4_unital_65_plus_7_code_hint': 1, 'raw_pi_numerology': 0}
+    Hamiltonian_order=['unit_preserving_guardrail', 'literal_radian_correction', 'C27_shell_transfer', 'q3_unital_pair_frame', 'q6_formal_unital_31', 'pi_turn_22_flower', 'q4_unital_65_plus_7_code_hint', 'raw_pi_numerology']
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+    directed_3cycles=0
+    SCC_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+    Hamiltonian_path_count=1
+
+Verdict:
+    The shared word 'unital' is not itself a theorem, but it is a guardrail:
+    preserve the unit of measurement / identity / pair-incidence before
+    quotienting.  The 22-flower, cbrt(31), q=6 formal unital row, q=3
+    pair frame, and q=4 length-72 hint are useful only as labelled carriers.
