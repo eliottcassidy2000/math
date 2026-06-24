@@ -30,16 +30,45 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S141 Annular Companion Checkpoint
+## PROJECT STATUS: Stabilized at S144 Borel/Baire Witness Carrier Checkpoint
 
-As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S140 C27 Unital Block-Lift**, the **codex-S141 regular-solid/tiling recursion carrier**, and the **poke-forum/** workspace are established as the current baseline.
+As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S144 Borel Baire Haar LRC Witness Carriers**, the **codex-S143 Farey Perfect Product Guardrail**, and the **poke-forum/** workspace are established as the current baseline.
 
-The live geometric split is two-coordinate:
+The proof search is now measurable and invariant-aware:
 
-- q=3 unital: 28 points, pair-unique incidence, branch-local AP/GW completion.
-- 14-gonal prism/antiprism: 28 vertices, two 14-cycles, cyclic annular order, local defect `1/14`.
+- **Haar Invariance:** Normalized Haar measure on the slow-time circle $T$ (and its product packets) provides the invariant judge for witness existence.
+- **Borel/Baire Visibility:** Proof objects must be Baire-coded (visible via continuous observables) or Borel-coded (event closure) to survive the witness address tax.
 
-Use the annulus as the cyclic companion to the unital, not as a replacement for it.
+---
+
+## codex-S144 -- Borel Baire Haar LRC Witness Carriers (checkpoint)
+
+Formalized the **Borel Baire Haar LRC Witness Carriers**, establishing the sigma-algebra and invariant measure layer for the current LRC14 Poke stack. This checkpoint addresses the "witness address tax" identified in HYP-2248 by requiring that the proof endpoint (positive measure of the witness set) retains a measurable code.
+
+### 1. Haar Measure as the Invariant Judge
+Haar's theorem supplies the invariant measure on the compact groups involved:
+- **Base:** The slow-time circle $T = R/Z$.
+- **Packet factors:** Finite factors like $Z/27$ or owner/carry packet states with counting measure.
+- **Guardrail:** Phase anchoring is legal (translation invariance), but quotients must preserve the measurable group action.
+
+### 2. Borel/Baire Proof Codes
+Distinguishes between continuous-visible and topological-closure event layers:
+- **Baire-coded:** Visible through continuous / compactly supported observables.
+- **Borel-coded:** Visible after countable topological event closure.
+- **Predicate:** The LRC proof endpoint is redefined as: `GOOD \cap G_P` has positive Haar measure and has a retained Borel/Baire code.
+
+### 3. Product Haar Packets
+Proposes a product-space search: $X = T \times F$, where $F$ is a finite packet groupoid (C27 shell, unital chart, K33 minor, PH child-rank). An LRC packet is only acceptable if the witness event is measurable in the product code.
+
+### 4. Tournament Analysis (Measurable Interfaces)
+The tournament vertices are now measurable proof interfaces.
+- **SCC:** {Haar Probability, Baire Code, Borel Algebra, GoodSet/SafeSet Carrier, Borel Address Tax, PH Child Rank}.
+- **Conservation Law:** A carrier beats another if it remains invariant/measurable under the quotient while the other collapses necessary address data.
+
+### 5. Impact on Proof Tree
+The "lonely time" existence is quantified by measure.
+- **HYP-2248 Warning:** Owner-private bits and carry labels are treated as "address taxes." If a quotient deletes them, it may destroy the invariant proof's ability to select the witness.
+- **Baire Category:** Used to locate boundary/rank walls (meager/null), but positive Haar measure remains the required bill payment for the witness.
 
 ---
 
