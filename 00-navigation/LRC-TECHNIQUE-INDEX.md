@@ -131,7 +131,7 @@ the HYP-2990 no-free-slider rule.
 | LTI-044 | Tope/cocircuit wall | Endpoint arrangement cells | Open all-safe cells are strict witnesses; all-safe endpoints are boundary cocircuits | HYP-2986 | Classify no-tope/no-cocircuit packets. |
 | LTI-045 | Oriented-matroid wall language | Topes, cocircuits, circuits | Use endpoint arrangement combinatorics before analytic smoothing | HYP-2986 | Search for minimal forbidden wall packet. |
 | LTI-046 | Haar-product square | 2-by-2 Haar checkerboard | Fixed-margin switch changes mixed coefficient, so row/column margins are lossy | HYP-2989 | Count independent color-compatible mixed switches. |
-| LTI-047 | Haar rectangle product atlas | Dyadic rectangles and interaction classes | Owner strips, cross handoffs, nested refinements carry discrepancy signal | HYP-2988 | Test non-AP/GW zero-open residuals for nonzero coefficients. |
+| LTI-047 | Haar rectangle product atlas | Dyadic rectangles and interaction classes | Owner strips, cross handoffs, nested refinements carry discrepancy signal | HYP-2992 | Test non-AP/GW zero-open residuals for nonzero coefficients. |
 | LTI-048 | Colored discrepancy reservoir | Color grids mod 14 | Replace raw component count by resonance-aware discrepancy bound | HYP-2593, HYP-2594, HYP-2595 | Fuse with Haar mixed-product switches. |
 | LTI-049 | Safe component support radius | Exact open intervals | Gives local smoothing radius and familywise stability target | HYP-2984, HYP-2975 | Compute support radii for new packet families. |
 | LTI-050 | Section check-off Hall graph | Section supports and matchings | Translate one-runner-per-section into Hall/wall-switch problem | HYP-2570 | Apply to C27 and covering residual packets. |

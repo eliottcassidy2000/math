@@ -79,6 +79,68 @@ are usable for LRC only as typed carriers.  The index therefore makes the
 assumption challenge explicit: do not assume vertices are runners; choose
 vertices from the proof obligation and state exactly what the quotient preserves
 and destroys.
+## codex-2026-06-24-S166 -- zipper theorem pattern atlas and Haar/Fejer synthesis (HYP-2993/T1076)
+
+User asked to pull recent agents together, think discrepancy theory, use the
+two-dimensional Haar product rule as the same structure as the tournament
+tiling model, and search for more zipper theorems while remaining free in
+cross-topic exploration.
+
+Push/rebase signal: while publishing, incoming mainline had already claimed
+HYP-2990/T1074 for an abstract zipper/no-free-slider atlas and added the LRC
+Technique Index.  This session therefore treats HYP-2990/T1074 as the abstract
+zipper layer, moves the concrete Haar tile atlas to HYP-2992/T1072, and keeps
+HYP-2993/T1076 as the concrete LRC14/Haar-Fejer zipper pattern specialization.
+
+First repaired a rebase namespace collision.  HYP-2988 remains the
+exposure-poset proof pass, HYP-2989 is the minimal Haar-product discrepancy /
+fixed-margin switch lane, and the larger dyadic Haar rectangle product atlas is
+now HYP-2992/T1072.  Removed stale S165 rows that had reused HYP-2987/T1071,
+which belongs to the certificate-handoff atlas.
+
+Added `04-computation/lrc14_zipper_theorem_pattern_atlas_codex_s166.py`, stored
+`05-knowledge/results/lrc14_zipper_theorem_pattern_atlas_codex_s166.out`, and
+created HYP-2991 plus reflection
+`07-reflections/lrc14-zipper-theorem-pattern-atlas-codex-s166.md`.
+
+Core schema: a zipper theorem has two labelled local certificate sides, a
+labelled interface, declared stops, and named residuals.  A quotient may forget
+a coordinate only when the opposite tooth reconstructs it,
+orthogonality/boundary atoms annihilate it, or the coordinate is emitted as
+residual data strong enough for the next theorem.
+
+The script scores ten proof patterns: Haar-Fourier product, Fejer interval
+packet, tope/cocircuit wall, exposure-poset kernel, Ramanujan exact-period,
+smoothing/Kaczynski policy, fixed-margin/Johnson sector, apex sheaf gluing,
+convolution irreducibility lift, and unit-distance cyclotomic norm.  Tournament
+Analysis over proof patterns is transitive with `score_hist={0:1,...,9:1}`,
+`directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.  Retention
+spine:
+
+```text
+haar_fourier_product
+> tope_cocircuit_wall
+> exposure_poset_kernel
+> fejer_interval_packet
+> convolution_irreducibility_lift
+> ramanujan_exact_period
+> fixed_margin_johnson
+> smoothing_kaczynski_policy
+> apex_sheaf_gluing
+> unit_distance_cyclotomic_norm
+```
+
+Creative synthesis: the 2D Haar product is the fixed-margin tournament tile,
+Fejer intervals are the dual tooth, AP/GW are stops, and K33/C27/petal/covering
+/F7 are residual routes.  HYP-2452's irreducibility/convolution no-lift work is
+the same boundary-total versus hidden-lift guardrail in polynomial language.
+HYP-2101/HYP-2104 sheaf/Vitali work is the measure-side version: local sections
+glue, or failed gluing forces positive measure.
+
+Highest-leverage next move: build a Haar-Fejer compression engine over
+HYP-2963 packet rows by grouping mixed Haar switch signatures before interval
+certificate generation, then tensor primitive-period `c_q` labels onto the
+HYP-2992 endpoint-wall/Haar rectangle cells.
 
 ## codex-2026-06-24-S165 -- Haar-product discrepancy and tournament-tiling synthesis (HYP-2989/T1073)
 
@@ -22968,9 +23030,11 @@ sign-balanced, which points away from naive positivity and toward typed
 coefficient detection.  Tournament Analysis over Haar-product interaction
 classes is transitive with one Hamiltonian path.
 
-Created HYP-2988/T1072 and reflection
+Created HYP-2992/T1072 and reflection
 `07-reflections/lrc14-haar-product-tile-discrepancy-codex-s165.md`.  The proof
 target is a Haar-tile discrepancy lemma on labelled LRC14 packet fibers: a
 non-AP/GW zero-open residual must reveal a nonzero owner-strip, cross-handoff,
 or nested-refinement coefficient, or else collapse to an AP/GW boundary skeleton
-or emit a new THM-572/F7 state-lift atom.
+or emit a new THM-572/F7 state-lift atom.  Namespace repaired after rebase:
+HYP-2988 remains the exposure-poset proof pass, HYP-2989 the minimal Haar-square
+switch, and this rectangle-product lane is HYP-2992.
