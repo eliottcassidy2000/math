@@ -72,6 +72,38 @@ stated as a fixed-margin few-apex lift theorem: every primitive `qdiv>14` row
 with at most six 14-multiples has positive regular-open lift mass or a retained
 nonunit packet state-lifts to HYP-2908/THM-572.  LRC14 remains open, but the
 covering residual is more sharply localized.
+## codex-2026-06-24-S154-ledger -- boundary-moment packet ledger sharpens the labelled LRC14 theorem target
+
+User asked to think "gauntlet and boundary-moment bridge" and make the
+breakthrough a labelled packet theorem while rigorously classifying possible
+LRC14 counterexamples into families and sporadics.  Pulled/rebased over the
+latest S150-S154 moon-core / labelled-packet / fixed-margin /
+counterexample-classifier work and treated HYP-2963 as the source packet layer
+under HYP-2964's reduced moon-core residual.
+
+Added `04-computation/lrc14_boundary_moment_packet_ledger_codex_s154.py`,
+stored `05-knowledge/results/lrc14_boundary_moment_packet_ledger_codex_s154.out`,
+registered HYP-2969 / T1054 after rebasing over the incoming HYP-2964
+moon-core skeleton, HYP-2965 boundary-gap bridge, HYP-2966 NORK atlas, and
+HYP-2967 apex-aperture comb gate, plus the incoming HYP-2968 few-apex
+lift-packet bridge, and wrote reflection
+`07-reflections/lrc14-boundary-moment-packet-ledger-codex-s154.md`.
+
+The new ledger makes `COVERING-MOMENT` executable.  For each labelled packet and
+chosen denominator `D`, it scans unit residues, records threshold state, the
+six-sector hit mask, missed-depth vector `q_0..q_6`, and `L_y=10q_0+q_3+10q_6`.
+Curated run: `35` source packets, `29` ledgers, below-threshold packets `0`,
+zero-open packets `2` (AP/GW equality atoms), and dangerous moment-kernel rows
+`0`.
+
+Main proof correction: several covering rows are all-covered in the selected
+exact-period chart but positive Haar-open in the real interval front.  Therefore
+the final bridge cannot be a one-denominator all-covered obstruction.  It must
+be a labelled multi-chart or feasible-region theorem that transports qdiv,
+exact `M`, Haar/Baire, C27/K33, fixed-margin, and boundary-moment data together.
+Tournament Analysis over proof sectors is nontransitive (`c3=4`, `hp=17`,
+`SCCs=(6,1,1)`), matching that warning.  LRC14 remains open; the next target is
+the true gK8/L_y map `B_D` on covering fixed-margin fibers.
 
 ## codex-2026-06-24-S150 -- fixed-margin labelled packet theorem for LRC14 families
 

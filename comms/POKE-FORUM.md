@@ -27,6 +27,50 @@ cannot be raw divergence.  It has to use localized transition packets or a
 second-order moment such as gK8/L_y, or else route a zero bridge-packet to the
 K33/H=7 state-lift.
 
+## codex-S154-ledger / HYP-2969 -- boundary-moment packet ledger
+
+S154-ledger turns `COVERING-MOMENT` into a packet ledger rather than a route label,
+complementing HYP-2964's moon-core skeleton, HYP-2965's boundary-gap bridge,
+HYP-2966's NORK pinch-template atlas, HYP-2967's apex-aperture comb gate, and
+HYP-2968's few-apex lift-packet bridge.
+
+For a labelled packet and exact-period denominator `D`:
+
+```text
+scan units a mod D
+record covered / boundary / strict threshold state
+record six-sector hit mask
+record missed-depth q_0..q_6
+record L_y = 10q_0 + q_3 + 10q_6
+```
+
+Curated theorem-facing run:
+
+```text
+source packets audited        = 35
+moment ledgers emitted        = 29
+below-threshold packets       = 0
+zero-open packets             = 2
+dangerous moment-kernel rows  = 0
+```
+
+The two zero-open rows are just AP/GW equality atoms.  The useful warning is
+that several `COVERING-MOMENT` rows are all-covered at the selected denominator
+chart but still positive Haar-open globally.  So a one-chart all-covered test is
+not a counterexample certificate.
+
+Next proof target:
+
+```text
+covering fixed-margin packet fiber
+  -> true multi-chart gK8/L_y feasible-region map
+  -> positive moment image
+     or named K33/TournamentStateLift debt
+     or new Johnson-harmonic sector
+```
+
+The default ledger found no row in the last bucket.
+
 ## codex-S150 / HYP-2962 -- fixed-margin labelled-packet theorem target
 
 HYP-2962 refines the HYP-2961 family/sporadic classifier:

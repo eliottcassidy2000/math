@@ -70,6 +70,14 @@ lift packet, exact M fallback, boundary-moment bridge, K33/state-lift endpoint}.
 The tournament is transitive, defining a unique Hamiltonian path for proof
 delivery.
 
+HYP-2969 adds the boundary-moment ledger layer after HYP-2964/HYP-2965/HYP-2966/HYP-2967/HYP-2968:
+`COVERING-MOMENT` now emits exact-period missed-depth ledgers
+`q_0..q_6` and `L_y=10q_0+q_3+10q_6`.  The S154-ledger curated audit finds no
+dangerous moment-kernel row; its key warning is that selected denominator
+charts can be all-covered while the full packet is still positive Haar-open.
+So the live S154-ledger target is a labelled multi-chart gK8/L_y feasible-region map,
+not a one-chart obstruction.
+
 ---
 
 ## codex-S154 -- Labelled-Packet Counterexample Audit (checkpoint)
@@ -79,6 +87,22 @@ Formalized the **LRC14 Labelled-Packet Counterexample Audit** (HYP-2963).
 0 unknown packets.
 - **P(S) Packet:** Retains Scalar Sector (M, q_threshold, Farey) and Johnson
 Sector (Haar, C27, K33, covering class).
+
+---
+
+## codex-S154-ledger -- Boundary-Moment Packet Ledger (checkpoint)
+
+Formalized the **LRC14 Boundary-Moment Packet Ledger** (HYP-2969), making the
+HYP-2964/HYP-2965/HYP-2966/HYP-2967/HYP-2968 moon-core covering residual computable as a
+missed-sector packet rather than a route label.  The curated run audits `35`
+source packets and emits `29` ledgers: below-threshold packets `0`, zero-open
+packets `2` (AP/GW equality atoms), and dangerous moment-kernel rows `0`.
+
+The proof correction is now explicit: all-covered at one exact-period chart is
+not enough, since covering rows can still be positive Haar-open globally.  The
+next POKE task is to define the true multi-chart `B_D` feasible-region map on
+fixed-margin labelled packet fibers and prove positive gK8/L_y image unless a
+named K33/TournamentStateLift debt appears.
 
 ---
 
