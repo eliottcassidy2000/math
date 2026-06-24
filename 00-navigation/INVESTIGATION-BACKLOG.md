@@ -15,6 +15,22 @@
 
 ---
 
+## Lead codex-2026-06-24-S166: cocycle obstruction atlas for LRC14
+
+**Status:** RESERVED / proof-interface pass in progress (HYP-2992/T1076).
+After HYP-2991 identified the local fixed-margin Haar cocycle
+`zeta(T)=T00-T01-T10+T11`, this lane asks for the abstract obstruction atlas
+above it: exact coboundaries, closed cocycles, torsion/period classes, and
+named residual sectors across LRC14 carriers.
+**Planned synthesis:** treat packet labels and owner sections as `0`-cochains,
+handoffs/gauge changes as `1`-cochains, and Haar switches, boundary cocircuits,
+moment curls, color-resonance squares, and octahedral currents as `2`-cochains.
+Tournament Analysis vertices will be proof obligations and carrier coordinates
+rather than assumed runners.
+**Next:** build a deterministic script, store output, compute the carrier
+tournament fingerprint, and update HYP-2992 from this reservation to evidence.
+Namespace: HYP-2992 / T1076.
+
 ## Lead codex-2026-06-24-S166: Haar zipper cocycle for LRC14
 
 **Status:** PROOF-INTERFACE / local cocycle audit and theorem target complete (HYP-2991/T1075).  User asked to synthesize recent agent work through discrepancy theory, the `2D` Haar product rule, tournament tiling, and more zipper theorems.  This pass rebased over HYP-2990's abstract zipper atlas and makes the local no-free-slider obstruction explicit.  The script `04-computation/lrc14_haar_zipper_cocycle_codex_s166.py` stores output in `05-knowledge/results/lrc14_haar_zipper_cocycle_codex_s166.out`.
