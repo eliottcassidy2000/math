@@ -30,69 +30,74 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S154 Labelled-Packet Audit Checkpoint
+## PROJECT STATUS: Stabilized at S155 Few-Apex Lift-Packet Checkpoint
 
 As of **Wednesday, June 24, 2026**, the project's coordination state is
-centered on the **LRC14 Labelled-Packet Counterexample Audit (codex-S154)**.
-This checkpoint provides the exact operational refinement of the S153 classifier,
-auditing over 21,000 rows to verify that no strict counterexample (M < 1/14)
-escapes the labelled family partitions.
+centered on the **Few-Apex Lift-Packet Bridge (codex-S155)**, refining the
+classification of the LRC14 covering residual. This builds upon the **S154
+Labelled-Packet Audit** and the **S153 Counterexample Classifier**.
 
-S154 makes the breakthrough theorem a labelled packet theorem: every primitive
-residual $S$ emits a packet $P(S)$ containing exact $M$, Farey excess, Haar/Baire
-mass, C27 shell data, and K33 state-lift flags. The audit confirms that the
-entire audited bank routes through the safe families (Q-witness, AP/GW, Petal,
-Covering-Moment) or named sporadic obligations, leaving the "Source-Spectrum
-Unknown" bucket empty.
+S155 provides an exact interval theorem target for the "Few-Apex" covering
+branch ($1 \le |14Z \cap S| \le 6$). By splitting the time circle into fourteen
+lifts, every row emits finite rational Borel/Baire interval fronts. The audit of
+over 8,000 rows verifies that this branch maintains positive strict safe mass,
+completing the bridge between the apex-majority descent (THM-571) and the
+boundary-moment bridge.
 
-HYP-2965 adds the boundary-gap operational layer for the F6 covering residual,
-inside HYP-2964's moon-core proof shell: positive strict safety is an exact
-rational endpoint bridge.  The current bounded covering bank has `0` zero-open
-packets, but all rows have zero net first endpoint current, so the next bridge
-must be localized/second-order gK8/L_y or K33/H=7 state lift, not raw
-divergence.
+---
+
+## codex-S155 -- Few-Apex Lift-Packet Bridge (checkpoint)
+
+Formalized the **LRC14 Few-Apex Lift-Packet Bridge** (HYP-2968), refining the
+S153 "Live Family" L1/L3 buckets by splitting the covering residual into
+labelled lift-packets.
+
+### 1. The Few-Apex Branch ($1 \le |14Z \cap S| \le 6$)
+Rows with a small number of multiples of 14 are reduced to fourteen finite
+rational interval ledgers.
+- **Audit Results:** 8,190 rows audited; 0 zero-open packets; all rows maintain
+positive strict safe mass.
+- **Integration:** Bridges the gap between the THM-571 apex-majority descent
+($|Q| \ge 7$) and the boundary-moment bridge for boundary-only cases.
+
+### 2. Exact Lift Packet
+Every row $S = R \cup 14Q$ emits a packet preserving $qdiv > 14$, the $Q/R$ split,
+exact rational lift-safe mass, and the existence of a strict Haar/Baire witness.
+
+### 3. Tournament Analysis (Proof Carriers)
+Vertices are proof carriers: {qdiv witness, apex-majority descent, few-apex
+lift packet, exact M fallback, boundary-moment bridge, K33/state-lift endpoint}.
+The tournament is transitive, defining a unique Hamiltonian path for proof
+delivery.
 
 ---
 
 ## codex-S154 -- Labelled-Packet Counterexample Audit (checkpoint)
 
-Formalized the **LRC14 Labelled-Packet Counterexample Audit** (HYP-2963), an
-audit-level refinement of the S153 classifier. It supplies an exact labelled
-packet emitter $P(S)$ and verifies its behavior over a bank of 21,913 rows.
-
-### 1. The Audit Results
-- **Strict Counterexamples (M < 1/14):** 0
-- **Tight Rows (M = 1/14):** 2 (AP, GW 12->24)
-- **Unknown Packets:** 0
-- **Primary Routing:** Q-WITNESS (14676), COVERING-MOMENT (7228), K33-STATE-LIFT (3), BOUNDARY-PETAL (4).
-
-### 2. Labelled Packet $P(S)$
-Every candidate row is reduced to a packet containing:
-- **Scalar Sector:** Exact M, q_threshold, Farey excess.
-- **Johnson Sector:** Haar/Baire safe mass, C27 shell transfer, S145 packet route/rank, K33/state-lift flag, and covering class.
-
-### 3. Integration with arXiv:2606.22636
-The audit adopts the fixed-margin swap-chain architecture from Fu, Qin, and Wang (2026). Scalar counts (M, Haar) are only "honest" after conditioning on the labels (Johnson sectors) that define the fiber (C27, K33, boundary status).
+Formalized the **LRC14 Labelled-Packet Counterexample Audit** (HYP-2963).
+- **Audit Results:** 21,913 rows audited; 0 strict counterexamples (M < 1/14);
+0 unknown packets.
+- **P(S) Packet:** Retains Scalar Sector (M, q_threshold, Farey) and Johnson
+Sector (Haar, C27, K33, covering class).
 
 ---
 
 ## codex-S153 -- LRC14 Counterexample Family and Sporadic Classifier (checkpoint)
 
-Formalized the **LRC14 Counterexample Family and Sporadic Classifier** (HYP-2961),
-providing a rigorous classification grammar for any possible strict counterexample.
-- **Decision Tree:** Q-witness -> Scale-peel -> Haar-open -> Skeleton-gate -> Unit-petal -> K33-state-lift -> Wide gK8 -> Apex-multiple -> Bounded-covering-core.
+Formalized the **LRC14 Counterexample Family and Sporadic Classifier** (HYP-2961).
+- **Decision Tree:** Q-witness -> Scale-peel -> Haar-open -> Skeleton-gate ->
+Unit-petal -> K33-state-lift -> Wide gK8 -> Apex-multiple -> Bounded-covering-core.
 
 ---
 
 ## codex-S152 -- Analytic-Local Synthesis: Mertens, Roth, and Hensel-Krasner (checkpoint)
 
 Synthesized analytic number theory and p-adic dynamics to support the LRC(14)
-proof path. This checkpoint establishes the "Pi Unital Flower" as an
-ultrametric guardrail for recursive lifting.
+proof path.
 
 ---
 
 ## codex-S149 -- Skeleton-Gate Missing-Picture Synthesis (checkpoint)
 
-Formalized the **Skeleton-Gate Missing-Picture Synthesis** (HYP-2960), merging packet-level classifiers into one executable proof interface.
+Formalized the **Skeleton-Gate Missing-Picture Synthesis** (HYP-2960).
 - **Jacobsthal Gate:** Restricts hidden boundary-only accelerations to site 12.
