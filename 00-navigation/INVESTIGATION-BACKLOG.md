@@ -38,6 +38,11 @@
 ## Lead codex-2026-06-24: Ramanujan exact-period projectors for LRC14
 
 **Status:** ACTIVE STUB (HYP-2979/T1062), complementary to HYP-2978's quotient guardrail. Ramanujan sums turn primitive
+**Status:** INITIAL AUDIT COMPLETE.  User prompt: read the divisor-function neighborhood and use it to formalize quotient guardrails across irreducibility, unital designs, Faulhaber moments, Pollock defects, unit-distance carriers, tiling/solid analogies, multiplicative functions, and Ramanujan sums.  Core question: what may a quotient forget without breaking the proof predicate?  S161 verifies the arithmetic identities and shows named-row route collisions for every coarse quotient tested; only the guarded packet signature avoids route mixing.
+**Next:** (1) extend the quotient-collision audit from named rows to HYP-2963-bank rows; (2) compare primitive phase profiles with Toeplitz/Fejer centers and danger-count moments; (3) formalize the admissibility theorem target.  Namespace: HYP-2978 / T1062.
+## Lead codex-2026-06-24: Ramanujan exact-period projectors for LRC14
+
+**Status:** ACTIVE STUB (HYP-2979/T1063, child route of HYP-2978). Ramanujan sums turn primitive
 q-th roots into an integer projector:
 `c_q(n)=sum_{(a,q)=1}exp(2*pi*i*a*n/q)=sum_{d|gcd(q,n)}d*mu(q/d)`.
 This looks tailor-made for the current LRC14 stack because the hard rows are

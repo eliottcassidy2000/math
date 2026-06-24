@@ -1,0 +1,154 @@
+# LRC14 Holistic Lineage Synthesis Mine
+
+Scope:
+- scanned_docs=8578
+- lrc_relevant_docs=6249
+- cluster_count=10
+- roots=05-knowledge/hypotheses, 05-knowledge/results, 07-reflections, poke-forum/posts, 00-navigation
+
+## Cluster Counts
+- ap_gw_tight_locus: docs=5076, primary=2599, fibers=apex,boundary,owners,tight_atoms
+- tournament_state_lifts: docs=4249, primary=1697, fibers=achievability,conflict,source,state
+- scalar_quotient_guardrails: docs=3381, primary=394, fibers=guardrail
+- moment_dual_certificates: docs=2066, primary=381, fibers=certificates,dual,harmonics,moments
+- haar_baire_boundary: docs=1796, primary=294, fibers=boundary,endpoints,measure,topology
+- wide_gk8_decorrelation: docs=1690, primary=285, fibers=analytic,cap,moments,wide_tail
+- farey_product_c27: docs=1539, primary=257, fibers=branch,incidence,owners,scale
+- packet_fixed_margin: docs=1059, primary=144, fibers=families,fixed_margin,owners,residual,source
+- qdiv_exact_period: docs=980, primary=143, fibers=divisibility,exact_period,scale
+- moon_induction_large_speed: docs=648, primary=48, fibers=boundary_state,descent,induction,scale
+
+## First/Last Hypothesis Touches By Cluster
+- packet_fixed_margin: HYP-1780 -> HYP-2981; first=[(1780, 'HYP-1780')]; last=[(2981, 'HYP-2981')]
+- haar_baire_boundary: HYP-1593 -> HYP-2981; first=[(1593, 'HYP-1593')]; last=[(2981, 'HYP-2981')]
+- moment_dual_certificates: HYP-1582 -> HYP-2981; first=[(1582, 'HYP-1582')]; last=[(2981, 'HYP-2981')]
+- farey_product_c27: HYP-1582 -> HYP-2981; first=[(1582, 'HYP-1582')]; last=[(2981, 'HYP-2981')]
+- qdiv_exact_period: HYP-1802 -> HYP-2981; first=[(1802, 'HYP-1802')]; last=[(2981, 'HYP-2981')]
+- moon_induction_large_speed: HYP-1795 -> HYP-2980; first=[(1795, 'HYP-1795')]; last=[(2980, 'HYP-2980')]
+- tournament_state_lifts: HYP-500 -> HYP-2981; first=[(500, 'HYP-500')]; last=[(2981, 'HYP-2981')]
+- wide_gk8_decorrelation: HYP-1593 -> HYP-2981; first=[(1593, 'HYP-1593')]; last=[(2981, 'HYP-2981')]
+- ap_gw_tight_locus: HYP-1582 -> HYP-2981; first=[(1582, 'HYP-1582')]; last=[(2981, 'HYP-2981')]
+- scalar_quotient_guardrails: HYP-500 -> HYP-2981; first=[(500, 'HYP-500')]; last=[(2981, 'HYP-2981')]
+
+## Status Topline
+- unknown: 5186
+- OPEN: 112
+- EXPLORATORY: 39
+- PROOF-INTERFACE: 31
+- PARTIALLY-TRUE: 16
+- OPEN synthesis: 11
+- PARTIALLY-CONFIRMED: 10
+- exploratory synthesis: 7
+- PROOF-TARGET: 6
+- SYNTHESIS: 5
+- COMPUTATIONAL SIGNAL: 5
+- synthesis: 4
+- EVIDENCE: 4
+- exploratory: 4
+- integration note: 4
+- EXPLORATORY proof-search hypothesis.: 3
+
+## High-Signal Co-Occurrence Edges
+- ap_gw_tight_locus <-> tournament_state_lifts: 3452
+- ap_gw_tight_locus <-> scalar_quotient_guardrails: 2848
+- scalar_quotient_guardrails <-> tournament_state_lifts: 2472
+- ap_gw_tight_locus <-> moment_dual_certificates: 1802
+- ap_gw_tight_locus <-> haar_baire_boundary: 1660
+- ap_gw_tight_locus <-> wide_gk8_decorrelation: 1614
+- moment_dual_certificates <-> tournament_state_lifts: 1560
+- haar_baire_boundary <-> tournament_state_lifts: 1401
+- ap_gw_tight_locus <-> farey_product_c27: 1398
+- moment_dual_certificates <-> scalar_quotient_guardrails: 1274
+- haar_baire_boundary <-> scalar_quotient_guardrails: 1246
+- farey_product_c27 <-> tournament_state_lifts: 1182
+- farey_product_c27 <-> scalar_quotient_guardrails: 1056
+- tournament_state_lifts <-> wide_gk8_decorrelation: 1002
+- ap_gw_tight_locus <-> packet_fixed_margin: 999
+- scalar_quotient_guardrails <-> wide_gk8_decorrelation: 997
+- ap_gw_tight_locus <-> qdiv_exact_period: 876
+- packet_fixed_margin <-> scalar_quotient_guardrails: 839
+- packet_fixed_margin <-> tournament_state_lifts: 800
+- haar_baire_boundary <-> moment_dual_certificates: 757
+- moment_dual_certificates <-> wide_gk8_decorrelation: 748
+- farey_product_c27 <-> moment_dual_certificates: 723
+- farey_product_c27 <-> haar_baire_boundary: 718
+- qdiv_exact_period <-> scalar_quotient_guardrails: 693
+
+## Guardrails, Refutations, And Corrections
+- HYP-2981 [HYP-2981] title: LRC14 Fejer interval certificates and Robbins/Robin quotient-bridge guardrails
+- HYP-2981 [HYP-2981] # HYP-2981: LRC14 Fejer Interval Certificates and Robbins/Robin Guardrails
+- HYP-2981 [HYP-2981] unit-petal, covering, few-apex, and selected two-swap families.
+- HYP-2980 [HYP-2980] raw_tournament_guardrail 374
+- HYP-2980 [HYP-2980] THM-566 then refuted the naive denominator-ladder closure:
+- HYP-2980 [HYP-2980] The residue liar `12->26` refuted residue-only proofs: it has AP-like residues
+- HYP-2980 [HYP-2980] but is loose by q-threshold. The near row `12->36` refuted coarse apex proofs:
+- HYP-2980 [HYP-2980] Tournament class alone is magnitude-blind.
+- HYP-2980 [HYP-2980] raw global GW+K33 lift fails by repeated pair;
+- HYP-2980 [HYP-2980] adaptability to unbounded families,
+- HYP-2980 [HYP-2980] 3. It is top-balanced after one-large peeling; otherwise HYP-2906/THM-398 style interval dodge applies.
+- HYP-2980 [HYP-2980] 8. The open cycle cannot be a closed zero-credit AP/GW circuit.
+- HYP-2979 [HYP-2979] two-swaps through added values `36`. The striking readout is that the weak
+- HYP-2978 [HYP-2978] title: LRC14 Ramanujan-divisor quotient guardrails
+- HYP-2978 [HYP-2978] status: EVIDENCE / quotient-admissibility proof guardrail with S162 interval scaffold; not an LRC14 proof
+- HYP-2978 [HYP-2978] - 04-computation/lrc14_ramanujan_divisor_named_channel_guardrails_codex_s161.py
+- HYP-2978 [HYP-2978] - 05-knowledge/results/lrc14_ramanujan_divisor_named_channel_guardrails_codex_s161.out
+- HYP-2978 [HYP-2978] - 04-computation/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py
+- HYP-2978 [HYP-2978] - 05-knowledge/results/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.out
+- HYP-2978 [HYP-2978] - 07-reflections/lrc14-ramanujan-divisor-quotient-guardrails-codex-s161.md
+- HYP-2978 [HYP-2978] # HYP-2978: LRC14 Ramanujan-Divisor Quotient Guardrails
+- HYP-2978 [HYP-2978] 04-computation/lrc14_ramanujan_divisor_named_channel_guardrails_codex_s161.py
+- HYP-2978 [HYP-2978] 05-knowledge/results/lrc14_ramanujan_divisor_named_channel_guardrails_codex_s161.out
+- HYP-2978 [HYP-2978] with no mismatches. It then audits named rows: AP, GW, residue liar `12->26`,
+- HYP-2978 [HYP-2978] sharp: AP, GW, the residue liar, K33, petals, and P10+K33 all share the same
+- HYP-2978 [HYP-2978] 04-computation/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py
+- HYP-2978 [HYP-2978] 05-knowledge/results/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.out
+- HYP-2976 [HYP-2976] The tournament ranks the route families:
+- HYP-2976 [HYP-2976] useful scout, too coarse for LRC14
+- HYP-2976 [HYP-2976] single residues are too coarse; defect-pair/carry ledgers mirror LRC packet
+- HYP-2976 [HYP-2976] graph shadows are not enough; realizability/state-lift category matters
+- HYP-2976 [HYP-2976] interface, the sequence of tested/refuted/refined ideas, and the shape of the
+- HYP-2976 [HYP-2976] refuted scalar quotient 441
+- HYP-2976 [HYP-2976] scalar_quotient_guardrails docs=3381
+- HYP-2976 [HYP-2976] ones: AP/GW with tournament/state-lift (`3452`), AP/GW with scalar guardrails
+- HYP-2976 [HYP-2976] (`2848`), and scalar guardrails with tournament/state-lift (`2472`). This
+- HYP-2976 [HYP-2976] The sector/far-tail work also generated several guardrails. Scalar additive
+- HYP-2976 [HYP-2976] Positive p0/gK8 evidence remains essential, but it cannot classify AP/GW,
+- HYP-2976 [HYP-2976] HYP-2901 also blocks a tempting shortcut: no fixed finite denominator ladder
+- HYP-2976 [HYP-2976] is too coarse. The design object is a packet address; it is not the LRC
+- HYP-2976 [HYP-2976] HYP-2976 names the object that the earlier phases were approximating:
+- HYP-2976 [HYP-2976] and anti-scalar guardrails.
+
+## Proof-Carrier Tournament
+Vertices are proof carriers, not runners.
+Pair observable = retained source-spectrum fibers plus corpus support.
+Switch/gauge = larger retained-fiber score; ties follow the Hamiltonian path.
+Tie Hamiltonian path:
+  packet_fixed_margin > haar_baire_boundary > moment_dual_certificates > farey_product_c27 > qdiv_exact_period > moon_induction_large_speed > tournament_state_lifts > wide_gk8_decorrelation > ap_gw_tight_locus > scalar_quotient_guardrails
+Score order:
+- packet_fixed_margin: outscore=9, retained_score=10, docs=1059
+- haar_baire_boundary: outscore=8, retained_score=9, docs=1796
+- moment_dual_certificates: outscore=7, retained_score=9, docs=2066
+- farey_product_c27: outscore=6, retained_score=9, docs=1539
+- moon_induction_large_speed: outscore=5, retained_score=9, docs=648
+- tournament_state_lifts: outscore=4, retained_score=9, docs=4249
+- wide_gk8_decorrelation: outscore=3, retained_score=9, docs=1690
+- ap_gw_tight_locus: outscore=2, retained_score=9, docs=5076
+- qdiv_exact_period: outscore=1, retained_score=8, docs=980
+- scalar_quotient_guardrails: outscore=0, retained_score=6, docs=3381
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+Achievable proof-carrier isomorphism class under this gauge: transitive tournament.
+
+## Assumption Challenge
+- Runner vertices alone are not selected: residue and apex tournaments repeatedly collapsed AP with magnitude liars or loose near-misses.
+- Alternate vertices considered by the scanned corpus include gaps, fixed circle sections, endpoints, wall crossings, cover arcs, Fourier modes, packet families, exact-period sectors, state-lift packets, and proof obligations.
+- Preserved predicate in the chosen quotient: whether the object still carries the observer-source LRC witness, exact scale, regular-open/boundary status, owner labels, and a named discharge or obstruction route.
+- Destroyed information: raw row identity and many runner labels after they are converted into packet owners; this is acceptable only when exact scale and boundary/source fibers are retained.
+
+## Synthesis Readout
+- The historical flow is not many unrelated attacks.  It is a sequence of quotient tests around one proof object: SourceSpec / labelled packet / endpoint-dual carrier.
+- Successful finite audits keep exact scale, boundary topology, endpoint owners, and packet labels until the last step.
+- Failed or corrected routes are useful because each names a forbidden quotient: residue-only, scalar-energy-only, fixed-denominator-only, raw tournament-isomorphism-only, raw divergence, and arbitrary-digraph H=7.
+- Current theorem target: every primitive 13-speed row either exits through qdiv/equidistribution/descent, is AP/GW boundary, has a positive regular-open or dual-certified safe interval, or constructs the K33/H=7 TournamentStateLift.  A counterexample must be a zero-open, qdiv>14, fixed-margin source-spectrum kernel avoiding all these exits.

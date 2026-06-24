@@ -50,6 +50,9 @@ results:
   - 04-computation/lrc14_holistic_lineage_synthesis_codex_s160.py
   - 05-knowledge/results/lrc14_holistic_lineage_synthesis_codex_s160.out
   - 07-reflections/lrc14-holistic-lineage-synthesis-codex-s160.md
+  - 04-computation/lrc14_source_packet_lineage_cooccurrence_codex_s160.py
+  - 05-knowledge/results/lrc14_source_packet_lineage_cooccurrence_codex_s160.out
+  - 07-reflections/lrc14-source-packet-lineage-cooccurrence-codex-s160.md
 external:
   - https://arxiv.org/abs/2606.22636
 ---
@@ -293,9 +296,9 @@ Corpus readout:
 ```text
 parsed hypothesis-index rows:      142
 parsed hypothesis detail files:    691
-merged unique hypothesis rows:     668
-LRC/LRC14/N=14 hypothesis rows:    574
-rows with refutation/guardrail language: 304
+merged unique hypothesis rows:     670
+LRC/LRC14/N=14 hypothesis rows:    576
+rows with refutation/guardrail language: 305
 ```
 
 Top dependency hubs inside LRC14 records:
@@ -322,6 +325,44 @@ Ramanujan/divisor quotient       189
 C27/unital/K33 state             169
 Haar-Baire topology               62
 ```
+
+Source-packet co-occurrence addendum:
+
+```text
+script: 04-computation/lrc14_source_packet_lineage_cooccurrence_codex_s160.py
+output: 05-knowledge/results/lrc14_source_packet_lineage_cooccurrence_codex_s160.out
+
+scanned_docs        8578
+lrc_relevant_docs   6249
+cluster_count         10
+
+ap_gw_tight_locus           docs=5076
+tournament_state_lifts      docs=4249
+scalar_quotient_guardrails  docs=3381
+moment_dual_certificates    docs=2066
+haar_baire_boundary         docs=1796
+wide_gk8_decorrelation      docs=1690
+farey_product_c27           docs=1539
+packet_fixed_margin         docs=1059
+qdiv_exact_period            docs=980
+moon_induction_large_speed   docs=648
+```
+
+The strongest co-occurrence edges in that full-doc pass remain the expected
+ones: AP/GW with tournament/state-lift (`3452`), AP/GW with scalar guardrails
+(`2848`), and scalar guardrails with tournament/state-lift (`2472`).  This
+addendum is deliberately coarser than the structured miner above; its role is
+to confirm that the same proof object is visible in unstructured documents,
+forum posts, result outputs, and reflections.
+
+After rebasing over the HYP-2980 holistic route atlas and HYP-2981
+Robbins-Robin/interval-Fejer packet certificates, then over the S162
+packet-anchored Fejer interval scaffold and certificate-budget pass, the same source-packet scan now
+records first/last touches through HYP-2981 on the packet, Haar/Baire,
+moment-dual, Farey, qdiv, tournament/state-lift, wide/gK8, and AP/GW clusters.
+That is evidence of convergence, not independence: the new work strengthens the
+same labelled packet plus interval-dual-certificate proof object rather than
+creating a competing scalar invariant.
 
 The readout is consistent with the qualitative history: early work is dominated
 by observer/tournament and endpoint language; the middle work adds wide/gK8,
@@ -808,5 +849,7 @@ a packet that survives every declared exit.
 Companion after rebase: HYP-2980 is the S159 route-atlas/proof-kernel pass
 over the same lineage request.  It should be read as a route-frequency and
 proof-carrier Tournament Analysis complement to this S160 history miner, while
-HYP-2977 is the spectral-shadow dual route and HYP-2978/HYP-2979 are the
-Ramanujan quotient guardrail/projector lanes.
+HYP-2977 is the spectral-shadow dual route, HYP-2978/HYP-2979 are the
+Ramanujan quotient guardrail/projector lanes, and the S162 interval-Fejer
+scaffold plus certificate-budget audit is the packet-keyed formalization
+pressure on the Fourier/Toeplitz dual certificates.

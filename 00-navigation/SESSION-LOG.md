@@ -113,9 +113,12 @@ older repo work on irreducibility, unital designs, Faulhaber moments, Pollock
 defects, unit-distance carriers, tiling/solid analogies, and multiplicative
 functions.  Claimed HYP-2978 / T1062 for the LRC14 Ramanujan-divisor quotient
 guardrail lane.  Initial status is a reserved proof-interface: external web
-reading and computation are pending; the intended audit is to compare coarse
-divisor signatures with Ramanujan/cyclotomic packet signatures on AP/GW, K33,
-petal, covering, and HYP-2963-bank rows.  The live theorem target is an
+reading and computation were initially pending; the follow-up audit
+`lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py` now verifies the
+arithmetic identities and exhibits the expected quotient collisions.  Coarse
+qdiv/open-state/residue/Ramanujan/unit/divisor-lcm signatures route-mix named
+AP/GW, q-witness, K33, petal, and covering rows, while the guarded packet
+signature has `0` route-mixing collisions.  The live theorem target is an
 admissibility rule: any quotient used against an LRC14 counterexample must
 preserve the LRC predicate needed by the next implication or explicitly record
 the label it forgets.
@@ -237,9 +240,9 @@ to a labelled proof packet over a Farey/Haar endpoint sheaf retaining exact
 scale, qdiv/Farey data, open-vs-boundary topology, endpoint owners,
 C27/unital/K33 state labels, fixed-margin family data, few-apex and
 Ramanujan/divisor exact-period packet labels, boundary-moment packets, and dual
-certificates.  The script parses `668` merged hypotheses, `574` LRC/LRC14
-rows, and `304` guardrail/refutation
-signals.  Route mutations show endpoint covers becoming owner hypergraphs,
+certificates.  After rebasing over HYP-2980/HYP-2981 and the S162 interval
+scaffold, the script parses `670` merged hypotheses, `576` LRC/LRC14 rows, and
+`305` guardrail/refutation signals.  Route mutations show endpoint covers becoming owner hypergraphs,
 raw A000568/tournament shadows becoming observer-source fibers, finite endpoint
 brute force giving way to structural finite-core reductions, scalar moments
 lifting to labelled residual packets, C27/unital/K33 analogies becoming
@@ -260,6 +263,69 @@ observer pullback > wide/gK8 analytic route > AP/GW boundary skeleton > raw
 tournament shadow > raw scalar invariant`.  LRC14 remains open; the next
 theorem target is sheaf gluing across the qdiv/Haar/endpoint/packet/Ramanujan
 exact-period/state-lift and dual charts.
+User asked for a long holistic pass over the full LRC history, keeping all
+recent themes in mind and cycling between exploration, computation, and
+hypothesis generation.  Claimed HYP-2976 / T1060 for the synthesis namespace
+after detecting the existing HYP-2975 taut-bridge graph curvature stub.
+
+Completed the source-packet co-occurrence addendum to HYP-2976, added
+`04-computation/lrc14_source_packet_lineage_cooccurrence_codex_s160.py`,
+stored
+`05-knowledge/results/lrc14_source_packet_lineage_cooccurrence_codex_s160.out`,
+posted `poke-forum/posts/20260624-172747Z-lrc14-holistic-lineage-synthesis/post.md`,
+and wrote
+`07-reflections/lrc14-source-packet-lineage-cooccurrence-codex-s160.md`.
+
+The source-packet mine was rerun after rebasing over incoming main and scanned
+`8578` docs, marking `6249` LRC-relevant after rebasing over HYP-2980/HYP-2981
+and the S162 packet-anchored Fejer interval scaffold plus certificate-budget
+audit.  Cluster counts put AP/GW tight locus (`5076`), tournament/state-lift
+(`4249`), scalar quotient guardrails (`3381`), moment duals (`2066`),
+Haar/Baire boundary (`1796`), wide/gK8 (`1690`), Farey/C27 (`1539`),
+packet/fixed-margin (`1059`), qdiv/exact-period (`980`), and Moon/large-speed
+induction (`648`) on the same map.  Strongest co-occurrences were AP/GW with
+tournament/state-lift (`3452`), AP/GW with scalar guardrails (`2848`), and
+scalar guardrails with tournament/state-lift (`2472`).  The incoming HYP-2980
+route atlas, HYP-2981 Robbins-Robin/interval-Fejer certificates, and S162
+interval/certificate-budget scaffold reinforce the same source-packet plus
+dual-certificate proof object.
+
+Main synthesis: the project has moved from scalar runner, residue,
+fixed-denominator, raw divisor/Ramanujan-shell, and raw tournament shadows
+toward a labelled source-spectrum proof object retaining observer-source phase
+data, qdiv/Farey scale, Ramanujan/exact-period phase, regular-open vs boundary
+topology, endpoint ownership, C27/unital/K33 labels, fixed-margin families,
+and dual certificates.  Failed routes are
+productive because each identifies a forbidden quotient: residue-only,
+fixed-denominator-only, raw divisor/Ramanujan-shell-only,
+raw tournament-isomorphism-only, C27 shell-only, raw endpoint divergence,
+one-chart all-covered tests, and arbitrary-digraph H=7.
+
+The S160 proof-carrier Tournament Analysis uses carriers rather than runners.
+With vertices packet/fixed-margin, Haar/Baire boundary, moment dual,
+Farey/C27, qdiv, Moon induction, tournament/state-lift, wide/gK8, AP/GW, and
+scalar guardrails, the retained-fiber gauge gives a transitive class:
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}`,
+`directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.
+
+Rebase integration: incoming main added the HYP-2974 Fejer full-bank extension,
+which strengthens the Toeplitz section of this synthesis: all `21911`
+positive-open HYP-2963-bank rows have an explicit Fejer PSD-violation vector by
+degree `<=280`, with AP/GW as the two zero-safe atoms.
+Incoming S161/HYP-2978/HYP-2979 also fits the synthesis as the exact-period
+quotient-admissibility lane: it asks exactly what a quotient may forget, proves
+by named-row collisions that coarse divisor/Ramanujan signatures are not final
+proof quotients, and proposes Ramanujan/cyclotomic packet labels as the
+phase-aware repair once endpoint-owner and state-lift labels are retained.
+
+Current strict-counterexample target: a zero-open `qdiv>14` fixed-margin
+source-spectrum kernel that avoids q-witness, scale peel, THM-571
+apex-majority, boundary bridge, aperture/lift packets, all duals, AP/GW
+boundary, unit-petal, and K33/state-lift exits.  Candidate theorem: every
+primitive row exits through one named packet/dual/descent route or constructs
+the HYP-2908/THM-572 `TournamentStateLift`; the honest falsifier is a new F7
+Johnson-harmonic/source-spectrum sector with all labels retained.  LRC14
+remains open.
 
 ## codex-2026-06-24-S157 -- Fourier-Toeplitz PSD dual route claimed for LRC14
 

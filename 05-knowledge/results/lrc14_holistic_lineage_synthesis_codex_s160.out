@@ -1,17 +1,17 @@
 S160 LRC14 HOLISTIC LINEAGE SYNTHESIS
 ==============================================================================
 [0] Corpus
-  parsed hypothesis-index rows: 142
-  parsed hypothesis detail files: 691
-  merged unique hypothesis rows: 668
-  LRC/LRC14/N=14 hypothesis rows: 574
-  hyp_index     : lines=11025 lrc14=1178 hyp=11378
-  results_index : lines=  833 lrc14= 635 hyp=  946
-  tangents      : lines= 3063 lrc14= 368 hyp= 2474
-  forum_index   : lines=   43 lrc14=  71 hyp=   38
-  session_log   : lines=22480 lrc14=1160 hyp= 5770
-  concept_map   : lines=  942 lrc14= 220 hyp= 1874
-  open_questions: lines= 2260 lrc14= 136 hyp= 1102
+  parsed hypothesis-index rows: 152
+  parsed hypothesis detail files: 693
+  merged unique hypothesis rows: 670
+  LRC/LRC14/N=14 hypothesis rows: 576
+  hyp_index     : lines=11035 lrc14=1193 hyp=11580
+  results_index : lines=  841 lrc14= 658 hyp=  963
+  tangents      : lines= 3069 lrc14= 374 hyp= 2534
+  forum_index   : lines=   47 lrc14=  80 hyp=   49
+  session_log   : lines=22700 lrc14=1186 hyp= 5815
+  concept_map   : lines=  944 lrc14= 230 hyp= 1901
+  open_questions: lines= 2280 lrc14= 143 hyp= 1137
 
 [1] Phase ledger
   P0 observer/tournament quotient era: 289 rows
@@ -54,26 +54,27 @@ S160 LRC14 HOLISTIC LINEAGE SYNTHESIS
     HYP-2970  LRC14 DUAL COVER CERTIFICATE VIA ENDPOINT-CREDIT WINDING CYCLES
     HYP-2971  LRC14 MULTIPLICITY-MOMENT DUAL
     HYP-2973  LRC14 DANGER-COUNT MOMENT-DUAL GATE
-    HYP-2974  LRC14 FOURIER-TOEPLITZ DUAL SCOUT AND PSD REFINEMENT
+    HYP-2974  LRC14 FOURIER-TOEPLITZ DUAL SCOUT, PSD REFINEMENT, AND FEJER FULL-
     HYP-2975  LRC14 TAUT BRIDGE GRAPH CURVATURE
-  P7 holistic proof-object convergence: 4 rows
+  P7 holistic proof-object convergence: 6 rows
     HYP-2976  LRC14 HOLISTIC LINEAGE SYNTHESIS AND PROOF-OBJECT CONVERGENCE
     HYP-2977  LRC14 SPECTRAL-SHADOW DUAL ROUTE
-    HYP-2978  LRC14 RAMANUJAN-DIVISOR QUOTIENT GUARDRAILS
     HYP-2979  LRC14 RAMANUJAN EXACT-PERIOD PROJECTOR PACKETS
+    HYP-2980  LRC14 HOLISTIC ROUTE ATLAS AND SOURCE-KERNEL CONVERGENCE
+    HYP-2981  LRC14 FEJER INTERVAL CERTIFICATES AND ROBBINS/ROBIN QUOTIENT-BRIDG
 
 [2] Route-family keyword load
-  observer-source/tournament     1011
-  AP/Goddyn-Wong equality         754
-  endpoint ownership              643
-  dual certificates               501
-  refuted scalar quotient         441
-  wide/gK8 analytic tail          413
-  fixed-margin packet families    396
-  q-threshold/Farey scale         308
-  Ramanujan/divisor quotient      189
-  C27/unital/K33 state            169
-  Haar-Baire topology              62
+  observer-source/tournament     1012
+  AP/Goddyn-Wong equality         761
+  endpoint ownership              645
+  dual certificates               511
+  refuted scalar quotient         444
+  wide/gK8 analytic tail          417
+  fixed-margin packet families    404
+  q-threshold/Farey scale         313
+  Ramanujan/divisor quotient      201
+  C27/unital/K33 state            175
+  Haar-Baire topology              63
 
   phase-leading families:
     P0 observer/tournament quotient era: observer-source/tournament:609, endpoint ownership:417, AP/Goddyn-Wong equality:337, dual certificates:195, refuted scalar quotient:159, fixed-margin packet families:158
@@ -82,11 +83,11 @@ S160 LRC14 HOLISTIC LINEAGE SYNTHESIS
     P3 wide/gK8 and analytic residual era: wide/gK8 analytic tail:71, observer-source/tournament:69, AP/Goddyn-Wong equality:68, refuted scalar quotient:57, dual certificates:47, fixed-margin packet families:39
     P4 source-spectrum/Farey/C27/unital era: AP/Goddyn-Wong equality:60, C27/unital/K33 state:58, refuted scalar quotient:50, q-threshold/Farey scale:37, observer-source/tournament:34, endpoint ownership:22
     P5 packet classifier and boundary-moment era: C27/unital/K33 state:58, fixed-margin packet families:42, AP/Goddyn-Wong equality:39, Haar-Baire topology:30, q-threshold/Farey scale:27, endpoint ownership:25
-    P6 dual-certificate cluster: dual certificates:19, C27/unital/K33 state:17, AP/Goddyn-Wong equality:17, endpoint ownership:14, refuted scalar quotient:7, q-threshold/Farey scale:4
-    P7 holistic proof-object convergence: endpoint ownership:13, C27/unital/K33 state:11, dual certificates:10, Ramanujan/divisor quotient:10, AP/Goddyn-Wong equality:8, fixed-margin packet families:7
+    P6 dual-certificate cluster: dual certificates:19, AP/Goddyn-Wong equality:17, C27/unital/K33 state:16, endpoint ownership:12, refuted scalar quotient:7, fixed-margin packet families:6
+    P7 holistic proof-object convergence: Ramanujan/divisor quotient:21, dual certificates:20, C27/unital/K33 state:18, endpoint ownership:17, AP/Goddyn-Wong equality:15, fixed-margin packet families:13
 
 [3] Refuted/refined quotient signals
-  rows with guardrail/refutation language: 304
+  rows with guardrail/refutation language: 305
     HYP-1812  Lonely Runner Endpoint Kernel Pressure       :: --- id: HYP-1812 status: EXPLORATORY source: codex-2026-05-30-S360 related:   - THM-357   - HYP-1802   - HYP-1805   - HYP-1808   - HYP-1809   - HYP-1810   - HYP-1811 ---  # HYP-1812: Lonely ...
     HYP-1813  Lonely Runner Bohr-Boundary Descent          :: --- id: HYP-1813 status: EXPLORATORY source: codex-2026-05-30-S361 related:   - THM-357   - THM-358   - THM-359   - THM-360   - HYP-1794   - HYP-1802   - HYP-1810   - HYP-1811   - HYP-1812 -...
     HYP-1817  The fourteen-runner case needs a micro-stair :: --- id: HYP-1817 status: EXPLORATORY source: codex-2026-05-31-S363 related:   - THM-363   - THM-364   - THM-357   - THM-358   - THM-360   - HYP-1813   - HYP-1818   - HYP-1823 ---  # HYP-1817...
@@ -107,7 +108,7 @@ S160 LRC14 HOLISTIC LINEAGE SYNTHESIS
     HYP-1866  LRC gap-debt product forbids simultaneous ze :: --- id: HYP-1866 status: OPEN source: codex-2026-05-31-S398 related:   - THM-357   - THM-365   - THM-366   - THM-367   - HYP-1842   - HYP-1844   - HYP-1857   - HYP-1858   - HYP-1859   - HYP-...
 
 [4] Dependency hubs in LRC14 rows
-  top refs: OPEN-Q-108:211, HYP-2908:46, THM-572:43, THM-369:42, THM-401:39, THM-523:36, THM-534:29, THM-381:23, HYP-2164:23, THM-538:23, HYP-2444:22, THM-357:21, THM-398:21, HYP-2167:20, HYP-2937:20, HYP-2684:19
+  top refs: OPEN-Q-108:213, HYP-2908:48, THM-572:45, THM-369:42, THM-401:39, THM-523:38, THM-534:29, THM-381:23, HYP-2164:23, THM-538:23, HYP-2444:22, THM-357:21, THM-398:21, HYP-2167:20, HYP-2937:20, HYP-2684:19
 
 [5] Current convergence cluster
   HYP-2953  LRC14 SOURCE-SPECTRUM PULLBACK                         | observer-source/tournament, q-threshold/Farey scale, Haar-Baire topology, endpoint ownership, C27/unital/K33 state, fixed-margin packet families, wide/gK8 analytic tail, dual certificates, Ramanujan/divisor quotient, AP/Goddyn-Wong equality
@@ -126,11 +127,11 @@ S160 LRC14 HOLISTIC LINEAGE SYNTHESIS
   HYP-2971  LRC14 MULTIPLICITY-MOMENT DUAL                         | q-threshold/Farey scale, endpoint ownership, C27/unital/K33 state, dual certificates, AP/Goddyn-Wong equality
   HYP-2972  LRC14 TWIST-LADDER DUAL CERTIFICATE                    | q-threshold/Farey scale, C27/unital/K33 state, fixed-margin packet families, wide/gK8 analytic tail, dual certificates, Ramanujan/divisor quotient, AP/Goddyn-Wong equality, refuted scalar quotient
   HYP-2973  LRC14 DANGER-COUNT MOMENT-DUAL GATE                    | endpoint ownership, C27/unital/K33 state, fixed-margin packet families, dual certificates, AP/Goddyn-Wong equality
-  HYP-2974  LRC14 FOURIER-TOEPLITZ DUAL SCOUT AND PSD REFINEMENT   | q-threshold/Farey scale, endpoint ownership, C27/unital/K33 state, dual certificates, AP/Goddyn-Wong equality
+  HYP-2974  LRC14 FOURIER-TOEPLITZ DUAL SCOUT, PSD REFINEMENT, AND | q-threshold/Farey scale, C27/unital/K33 state, fixed-margin packet families, wide/gK8 analytic tail, dual certificates, Ramanujan/divisor quotient, AP/Goddyn-Wong equality
   HYP-2975  LRC14 TAUT BRIDGE GRAPH CURVATURE                      | q-threshold/Farey scale, endpoint ownership, C27/unital/K33 state, dual certificates, AP/Goddyn-Wong equality
-  HYP-2976  LRC14 HOLISTIC LINEAGE SYNTHESIS AND PROOF-OBJECT CONV | observer-source/tournament, q-threshold/Farey scale, Haar-Baire topology, endpoint ownership, C27/unital/K33 state, fixed-margin packet families, wide/gK8 analytic tail, dual certificates, AP/Goddyn-Wong equality, refuted scalar quotient
+  HYP-2976  LRC14 HOLISTIC LINEAGE SYNTHESIS AND PROOF-OBJECT CONV | observer-source/tournament, q-threshold/Farey scale, Haar-Baire topology, endpoint ownership, C27/unital/K33 state, fixed-margin packet families, wide/gK8 analytic tail, dual certificates, Ramanujan/divisor quotient, AP/Goddyn-Wong equality, refuted scalar quotient
   HYP-2977  LRC14 SPECTRAL-SHADOW DUAL ROUTE                       | observer-source/tournament, endpoint ownership, C27/unital/K33 state, fixed-margin packet families, wide/gK8 analytic tail, dual certificates, AP/Goddyn-Wong equality, refuted scalar quotient
-  HYP-2978  LRC14 RAMANUJAN-DIVISOR QUOTIENT GUARDRAILS            | endpoint ownership, C27/unital/K33 state, fixed-margin packet families, Ramanujan/divisor quotient, AP/Goddyn-Wong equality, refuted scalar quotient
+  HYP-2978  LRC14 RAMANUJAN-DIVISOR QUOTIENT GUARDRAILS            | q-threshold/Farey scale, endpoint ownership, C27/unital/K33 state, fixed-margin packet families, wide/gK8 analytic tail, dual certificates, Ramanujan/divisor quotient, AP/Goddyn-Wong equality, refuted scalar quotient
   HYP-2979  LRC14 RAMANUJAN EXACT-PERIOD PROJECTOR PACKETS         | endpoint ownership, C27/unital/K33 state, fixed-margin packet families, Ramanujan/divisor quotient, AP/Goddyn-Wong equality
 
 [6] Route mutations: tested, refuted, refined
