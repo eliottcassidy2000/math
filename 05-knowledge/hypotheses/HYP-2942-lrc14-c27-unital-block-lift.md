@@ -1,7 +1,7 @@
 ---
 id: HYP-2942
-title: LRC14 C27 transfers lift to q=3 unital blocks
-status: PROOF-INTERFACE / AP-GW-calibrated pair-completion carrier; not a proof
+title: LRC14 C27 unital block-lift obstruction and calibrated pair-completion
+status: PROOF-INTERFACE / global no-go plus branch-local calibrated positive lift; not a proof
 source: codex-2026-06-24-S140
 related:
   - HYP-2941
@@ -12,25 +12,35 @@ related:
   - HYP-2936
   - HYP-2935
   - HYP-2932
+  - HYP-2894
+  - HYP-2892
   - HYP-2908
   - THM-572
   - OPEN-Q-108
+results:
+  - 04-computation/lrc14_c27_unital_block_lift_codex_s140.py
+  - 05-knowledge/results/lrc14_c27_unital_block_lift_codex_s140.out
 ---
 
-# HYP-2942: C27 transfers lift to q=3 unital blocks
+# HYP-2942: The q=3 unital is a branch-local C27 chart and AP/GW pair-completion forum
 
-S140 carries out the next test suggested by the HYP-2938/HYP-2939 unital
-guardrails:
+S140 tests the prompt:
 
 ```text
-lift HYP-2937 marked C27 transfers into q=3 unital 4-point blocks
-after AP/Goddyn-Wong labels are attached.
+lift HYP-2937 marked C27 transfers into q=3 unital 4-point blocks after
+AP/Goddyn-Wong labels are attached.
 ```
 
-The result is positive in the conservative, noncanonical sense.  The `q=3`
-Hermitian unital supplies a pair-unique completion frame for the C27 transfer
-pairs.  It does not supply a canonical AP8 pair-slot design; S107 already
-refuted that stronger symmetric reading.
+The synthesized answer has two layers:
+
+```text
+global raw lift of all low-frontier transfers: no
+branch-local lift and calibrated AP/GW pair-completion: yes
+```
+
+The negative result is a useful obstruction, not a failure of the analogy.  The
+positive result keeps the unital as a precise relational forum for transfer
+packets.
 
 ## Computation
 
@@ -41,90 +51,142 @@ The script
 It constructs the Hermitian unital over
 
 ```text
-GF(9)=F3[w]/(w^2+1),
+GF(9)=F3[w]/(w^2+1)
 ```
 
-using the equation
+using
 
 ```text
 x^4 + y^4 + z^4 = 0
 ```
 
-in `PG(2,9)`.  The construction verifies:
+in `PG(2,9)`.  The sanity checks are:
 
 ```text
 points = 28
 non-tangent 4-point blocks = 63
-line intersection histogram = {1: 28, 4: 63}
-every point lies in 9 blocks
+line intersection histogram = {1:28, 4:63}
+point replication = 9
 every pair of points lies in exactly one block
+block intersection histogram = {0:945, 1:1008}
 ```
 
-## Label Attachment
+Thus two distinct q=3 unital blocks never share two points.
 
-The 28 unital points are labelled by:
+## Raw C27 Residue-Pair Lift
+
+The first lift sends a marked transfer to the antipodal C27 residue packet:
 
 ```text
-AP, GW, H1..H13, D1..D13.
+H[a] -> D[d]  maps to  {a, 27-a, d, 27-d}.
 ```
 
-Here `H_a` means "hole at C27 shell a" and `D_a` means "doubled C27 shell a."
-The labelling is calibrated so that one unital block is:
+The low-frontier packets become:
+
+```text
+GW H12->D3          {3, 12, 15, 24}
+K33 H12->D9         {9, 12, 15, 18}
+petal H10->D7       {7, 10, 17, 20}
+petal H13->D1       {1, 13, 14, 26}
+```
+
+The global low-frontier raw lift fails because
+
+```text
+GW block  cap  K33 block = {12,15}.
+```
+
+Since the q=3 unital is a `2-(28,4,1)` design, the same pair cannot lie in two
+different blocks.  A single raw unital chart cannot contain both the GW
+`H12->D3` block and the K33 `H12->D9` near-miss block.
+
+## AP/GW Global-Label No-Go
+
+The tempting labelled model
+
+```text
+H[a] -> D[d]  maps to  {AP, GW, H_a, D_d}
+```
+
+also fails globally.  Every transfer block contains `{AP,GW}`, so more than one
+such block repeats a pair.  AP/GW cannot be universal vertices repeated inside
+every transfer block.  They must be a calibrated anchor, branch colors, or
+external metadata.
+
+## Positive Branch-Local Lift
+
+The pair-repeat obstruction kills a single atlas, not local charts.  The
+following desired block systems have no repeated C27 pair and embed into the
+q=3 unital incidence design:
+
+```text
+tight chart:
+  GW H12->D3
+  petal H10->D7
+  petal H13->D1
+
+K33 chart:
+  K33 H12->D9
+  petal H10->D7
+  petal H13->D1
+```
+
+The S138 two-hole frontier rows lift as two-block splices:
+
+```text
+drop(10,12)->add(20,24)
+  = petal H10->D7  plus  GW H12->D3
+
+drop(10,12)->add(20,36)
+  = petal H10->D7  plus  K33 H12->D9
+```
+
+This matches the HYP-2940 reading: the two-hole rows are splices of the unit
+petal with one of the two `12`-branch packets.
+
+## Calibrated AP/GW Pair-Completion Lift
+
+The second positive layer attaches the 28 labels
+
+```text
+AP, GW, H1..H13, D1..D13
+```
+
+to one Hermitian unital and calibrates one block as
 
 ```text
 {AP, GW, H12, D3}.
 ```
 
-Thus the Goddyn-Wong marked transfer
+Then the Goddyn-Wong transfer `H12 -> D3` is literally the AP/GW anchor block.
+The other transfer pairs still have unique q=3 completion blocks.  The script
+records one deterministic calibration:
 
 ```text
-H12 -> D3
+GW H12->D3:
+  {AP, D3, GW, H12}
+
+near-miss H12->D9:
+  {D10, D9, H12, H9}
+
+petal H10->D7:
+  {D7, D9, H10, H13}
+
+petal H13->D1:
+  {D1, D11, D12, H13}
 ```
 
-is literally the AP/GW-labelled unital block.
-
-This is the promised "after AP/Goddyn-Wong labels are attached" condition.
-
-## Transfer Lifts
-
-The HYP-2937/HYP-2940 frontier transfers lift as follows:
+The two S138 splices are separated by incidence:
 
 ```text
-GW 12->24:
-  H12 -> D3    block {AP, D3, GW, H12}
+10+12 -> 20+24:
+  petal block plus AP/GW block, disjoint, union size 8
 
-near-miss 12->36:
-  H12 -> D9    block {D10, D9, H12, H9}
-
-petal 10->20:
-  H10 -> D7    block {D7, D9, H10, H13}
-
-petal 13->26:
-  H13 -> D1    block {D1, D11, D12, H13}
+10+12 -> 20+36:
+  petal block plus near/K33 block, sharing D9, union size 7
 ```
 
-The two S138 genuine two-hole rows become block packets:
-
-```text
-drop(10,12)->add(20,24):
-  block(H10,D7) plus block(H12,D3)
-  intersection = empty
-  union size = 8
-
-drop(10,12)->add(20,36):
-  block(H10,D7) plus block(H12,D9)
-  intersection = {D9}
-  union size = 7
-```
-
-So the two splices are separated by their unital incidence:
-
-```text
-10+12 -> 20+24 is a disjoint product of the petal block and AP/GW block.
-10+12 -> 20+36 is a linked block packet sharing D9.
-```
-
-The second case creates the visible chain:
+The linked packet is:
 
 ```text
 AP/GW --H12-- near/K33 --D9-- petal10.
@@ -132,80 +194,86 @@ AP/GW --H12-- near/K33 --D9-- petal10.
 
 ## Interpretation
 
-This makes the unital useful as a pair-completion interface.  A marked transfer
-pair `(H_a,D_b)` has exactly one 4-point completion block.  Two-swap splices
-become small block packets, whose intersections distinguish independent
-products from linked K33/petal chains.
-
-The proof target becomes sharper:
+The proof-use distinction is now sharp:
 
 ```text
-After exact M/Farey, C27 transfer, and AP/GW labels are attached,
-any low-gap non-AP/GW residual should lift to either
-  (a) the AP/GW anchor block,
-  (b) a unit-petal block,
-  (c) the AP/GW--near/K33--petal chain.
+raw residue lift: detects forbidden global superposition of the two H12 branches
+calibrated lift: supplies unique 4-point completions for labelled transfer pairs
 ```
 
-Then `(a)` is the known tight floor, `(b)` goes to petal/two-block discharge,
-and `(c)` is the candidate packet for the HYP-2908 / THM-572 state lift.
+This gives a concrete packet grammar:
+
+```text
+low-gap residual
+  -> AP/GW anchor block
+  -> unit petal block
+  -> AP/GW--near/K33--petal chain
+```
+
+The first route is the known tight floor, the second routes to the C27
+petal/two-swap discharge, and the third is the candidate HYP-2908 / THM-572
+state-lift packet.
 
 ## Guardrail
 
-This is not a canonical unital model of the AP8 pair slots.  The labelling is
-category-1 / AP-GW-calibrated and intentionally noncanonical.  What survives is
-the incidence unit:
-
-```text
-each transfer pair has a unique 4-point completion.
-```
-
-The exact `M(S)`, q-threshold, Farey branch, C27 unit/nonunit label, and S139
-affine-depth/product labels must remain attached.  The unital block is a forum
-for completing and comparing packets, not scalar evidence for tightness.
+This is not a canonical AP8 pair-slot design and not scalar evidence for
+LRC14.  It is a branch-local, AP/GW-calibrated, pair-unique incidence forum.
+Any future proof that tries to put both `12` branches into one unital object
+must either split the H12 pair by an added branch label or explicitly move to a
+multi-chart atlas.
 
 ## Tournament Analysis
 
-S140 uses lifted transfer packets as tournament vertices, not runners.  The
-pairwise observable is:
+S140 uses proof obligations and lifted packets as tournament vertices, not
+runners.  The carrier observable is:
 
 ```text
-AP/GW anchor visibility,
+theorem-scale retention,
+C27 predicate retention,
+lambda=1 incidence,
+finite checkability,
+anti-scalar guard.
+```
+
+The carrier tournament is transitive:
+
+```text
+exact M/Farey branch
+> C27 marked transfer
+> unital pair-repeat obstruction
+> branch-local q3 unital chart
+> calibrated AP/GW pair-completion
+> S138 two-block splice path
+> global AP/GW vertex model
+> raw unital analogy
+```
+
+The calibrated packet tournament uses:
+
+```text
+AP/GW visibility,
 unit/nonunit content,
 component depth,
 K33 flag,
-smaller unital union as the pressure/tie gauge.
+smaller unital union as pressure/tie gauge.
 ```
 
-The resulting tournament is transitive:
-
-```text
-splice 10,12 -> 20,24
-> GW 12->24
-> splice 10,12 -> 20,36
-> petal 10->20
-> near-miss 12->36
-> petal 13->26
-```
-
-Fingerprint:
-
-```text
-score_hist={0:1,1:1,2:1,3:1,4:1,5:1}
-c3=0
-hp=1
-```
+It is also transitive in the recorded calibration, with the linked and disjoint
+two-block splices appearing at the top of the packet comparison.
 
 ## POKE Forum Contribution
 
-The POKE-level recommendation is:
+Treat q=3 unital blocks as a branch-local pair-completion forum for C27
+transfer packets.  The most actionable new rule is:
 
 ```text
-Treat q=3 unital blocks as AP/GW-calibrated pair-completion blocks for
-C27 transfer packets.  Do not treat them as scalar numerology or as a
-canonical AP8 pair-slot design.
+do not merge GW H12->D3 and K33 H12->D9 in one raw C27 unital chart unless
+the H12 pair is split by additional structure.
 ```
 
-This gives other agents a concrete way to test future C27/K33 packet proposals:
-attach the transfer labels to unital points, inspect the unique completion
-block, and compare block intersections before attempting a state lift.
+The complementary constructive rule is:
+
+```text
+after AP/GW calibration, inspect the unique completion block for each marked
+transfer pair and compare block intersections before attempting a state lift.
+```

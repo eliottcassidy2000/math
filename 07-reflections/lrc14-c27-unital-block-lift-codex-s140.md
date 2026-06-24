@@ -1,29 +1,40 @@
 # LRC14 C27 Unital Block Lift
 
-The q=3 unital finally became useful once I stopped asking it to be canonical.
+The q=3 unital became more useful once the question split in two.
 
-S107 had already warned that the Hermitian unital `2-(28,4,1)` is not a natural
-`S8`-invariant block system on the `28=C(8,2)` AP8 pair slots.  That warning is
-still right.  But the user asked for the more careful thing: attach AP and
-Goddyn-Wong labels first, then see whether HYP-2937's marked C27 transfers lift
-into 4-point unital blocks.
-
-The clean labelling is:
+The raw C27 residue-pair model gives a clean obstruction.  If
 
 ```text
-AP, GW, H1..H13, D1..D13.
+H[a] -> D[d] = {a, 27-a, d, 27-d},
 ```
 
-That uses all 28 unital points exactly.  Calibrate one block as:
+then
+
+```text
+GW H12->D3   = {3, 12, 15, 24}
+K33 H12->D9  = {9, 12, 15, 18}
+```
+
+share `{12,15}`.  A q=3 unital is `2-(28,4,1)`, so two blocks cannot share a
+pair.  That says one raw unital chart cannot contain both the tight GW branch
+and the K33 near-miss branch.
+
+The AP/GW-labelled version gives the complementary positive object.  Label the
+28 Hermitian unital points by
+
+```text
+AP, GW, H1..H13, D1..D13
+```
+
+and calibrate one block as
 
 ```text
 {AP, GW, H12, D3}.
 ```
 
-Now the Goddyn-Wong transfer `H12 -> D3` is not just near the AP/GW story; it is
-the AP/GW anchor block.
-
-The two-splice result is the best part:
+Now the Goddyn-Wong transfer is literally the AP/GW anchor block.  The remaining
+transfer pairs still have unique completion blocks.  In the deterministic
+calibration, the two-splice result is the interesting part:
 
 ```text
 10+12 -> 20+24:
@@ -33,25 +44,26 @@ The two-splice result is the best part:
   petal block and near/K33 block share D9.
 ```
 
-That turns the S138 observation into a small incidence picture:
+That makes the incidence picture visible:
 
 ```text
 AP/GW --H12-- near/K33 --D9-- petal10.
 ```
 
-This is exactly the kind of packet that might feed the HYP-2908 state-lift
-endpoint.  It is not a proof, but it is no longer a metaphor.  It is an actual
-`2-(28,4,1)` incidence object with AP/GW labels attached and exact transfer
-pairs lifted to unique completion blocks.
-
-The guardrail is equally important: the labelling is noncanonical.  The point
-is not "the unital is the AP8 pair graph."  The point is:
+So the real S140 lesson is not simply "the unital lifts" or "the unital fails."
+It is:
 
 ```text
-given a marked transfer pair, the unital supplies one 4-point completion.
+global raw atlas: blocked by lambda=1 pair uniqueness
+branch-local chart: works
+AP/GW-calibrated pair-completion forum: works
 ```
 
-So the next theorem target is a packet classification:
+The guardrail is still essential.  The labelling is noncanonical, and S107's
+warning remains intact: this is not an `S8`-invariant AP8 pair-slot design.  The
+surviving invariant is pair-unique completion.
+
+The next theorem target is a packet classification:
 
 ```text
 low-gap non-AP/GW residual
@@ -60,5 +72,8 @@ low-gap non-AP/GW residual
   or AP/GW--near/K33--petal chain.
 ```
 
-That would give the C27 branch a finite pair-completion grammar before the
-terminal forbidden-H state lift.
+If that classification can be forced from the exact `M`/Farey ledger and C27
+unit labels, then the C27 branch has a finite incidence grammar before the
+terminal HYP-2908 / THM-572 state lift.  If a future proof wants both `12`
+branches in one unital object, it must name the extra structure that splits the
+H12 pair or admit it is working in a multi-chart atlas.
