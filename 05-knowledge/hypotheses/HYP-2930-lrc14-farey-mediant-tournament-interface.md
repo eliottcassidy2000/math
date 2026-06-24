@@ -4,6 +4,7 @@ title: LRC14 Farey-mediant tournament proof interface
 status: PROOF-INTERFACE / local theorem target; not a proof of LRC14
 source: codex-2026-06-23-S128
 related:
+  - HYP-2932
   - HYP-2925
   - HYP-2926
   - HYP-2928
@@ -151,6 +152,18 @@ Either alternative certifies `M(S)>1/14`.  In that form, the Farey mediant is a
 proof certificate: `e=1` says the row escapes at the first possible
 Stern-Brocot child above the floor, while the optimum winding tournament says
 which exact isomorphism class realizes that escape.
+
+S131/HYP-2932 refines the unit-excess alternative by the complete-bipartite
+product ledger:
+
+```text
+p=1: K_{1,13}   coarse q-threshold parent,
+p=2: K_{2,27}   planar two-block strip,
+p>=3:           K_{3,3} product-minor wall.
+```
+
+Thus the unit-excess proof branch should split into a two-block/petal rigidity
+lemma for `p=2` and a finite three-owner obstruction packet for `p>=3`.
 
 ## Guardrail
 

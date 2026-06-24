@@ -1,3 +1,11 @@
+## codex-2026-06-23-S131 -- Farey products become complete-bipartite K33 ledgers for the LRC14 unit-excess branch
+
+User supplied the graph reading `p*q=|E(K_{p,q})|`, with ordinary Farey `F_4` first producing `K_{3,4}` and hence a `K_{3,3}` subgraph.  Added `04-computation/lrc14_farey_bipartite_obstruction_codex_s131.py`, stored `05-knowledge/results/lrc14_farey_bipartite_obstruction_codex_s131.out`, and registered HYP-2932 / T1028.
+
+Core finding: the S130 product payload is not a replacement denominator, but it is a product-minor ledger.  Ordinary Farey levels first hit complete-bipartite nonplanarity at `F_4` via `3/4 -> K_{3,4}`.  The LRC14 unit-excess chain `p/(14p-1)` first hits the same wall at `3/41 -> K_{3,41}`, exactly the S128 near-miss row `12->36`; `1/13 -> K_{1,13}` is a star/q-threshold parent, while `2/27 -> K_{2,27}` is the planar two-block strip.
+
+On the S130 `749`-row AP/GW/petal/single-replacement bank, unit-excess rows split cleanly into `54` star rows, `2` two-block rows (`10->20`, `13->26`), and `1` K33-wall row (`12->36`).  Proof-ledger Tournament Analysis is transitive: `q-binding > sum-recursion > Kpq-product > K33-wall > power-stress > raw-iso`.  New proof split: handle `p=2` by petal/two-block rigidity; route `p>=3` to a finite three-owner/K33 obstruction packet, potentially feeding the HYP-2908 forbidden-H state lift.  This is a sharpened interface, not a completed LRC14 proof.
+
 ## codex-2026-06-23-S130 -- mutated Farey operators rank the LRC14 side channels, but q stays the binding scale
 
 User prompted a long LRC14 tournament-analysis session around four Farey variants: `p+q`, `p*q`, `q^p`, and `p^q`, with the `n*2` / `n+2` recursion lens.  Added `04-computation/lrc14_mutated_farey_tournament_codex_s130.py`, stored `05-knowledge/results/lrc14_mutated_farey_tournament_codex_s130.out`, and registered HYP-2931 / T1027.

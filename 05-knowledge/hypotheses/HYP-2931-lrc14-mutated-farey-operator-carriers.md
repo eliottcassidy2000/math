@@ -4,6 +4,7 @@ title: LRC14 mutated Farey operator carriers
 status: PROOF-INTERFACE / side-channel hierarchy; not a proof of LRC14
 source: codex-2026-06-23-S130
 related:
+  - HYP-2932
   - HYP-2930
   - HYP-2928
   - HYP-2926
@@ -126,6 +127,12 @@ The product payload `p*q` is the useful multiplicative side channel.  It keeps
 both coordinates visible and echoes the repo's product-Mobius / `Div(D) x B_r`
 language, but it is not a valid replacement for `q`: it already reverses many
 global row-bank comparisons.
+
+S131/HYP-2932 sharpens this role: `p*q` should be read as
+`|E(K_{p,q})|`.  Thus the product channel is a complete-bipartite incidence
+ledger.  It first sees the `K_{3,3}` wall on the LRC14 unit-excess chain at
+`3/41 -> K_{3,41}`, while `2/27 -> K_{2,27}` remains the planar two-block
+strip.
 
 The power payloads are magnitude amplifiers.  They are poor local proof
 denominators, but good stress tests for fixed-rule tournaments and scalar
