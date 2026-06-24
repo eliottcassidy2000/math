@@ -4,6 +4,8 @@ title: LRC14 Farey-product bipartite obstruction ledger
 status: PROOF-INTERFACE / new local split; not a proof of LRC14
 source: codex-2026-06-23-S131
 related:
+  - HYP-2934
+  - HYP-2933
   - HYP-2931
   - HYP-2930
   - HYP-2928
@@ -141,3 +143,7 @@ Instead, it should prove that any remaining `q=14` non-AP/GW atom either falls
 into the `p=2` two-block strip handled by petal rigidity, or reaches `p>=3`
 where the `K_{3,3}` ledger supplies the finite three-owner obstruction packet
 that can feed the HYP-2908 state-lift / forbidden-H endpoint.
+
+Follow-up HYP-2934 sharpens the `p=2` side: `2/27` is exactly the
+`C=27=2*14-1` summand-unit shell branch, while `3/41` is the first branch that
+leaves that shell and crosses the `K_{3,3}` incidence wall.

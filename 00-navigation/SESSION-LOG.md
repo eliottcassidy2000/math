@@ -21598,3 +21598,33 @@ Rebase also brought S50's `LRCBindingPair.lean` and THM-569 `LRCUnitGrid14.lean`
 I wired `LRCBindingPair` into the root and `Verify`: it is the denominator-14
 unit-grid binding-pair theorem, while `LRCApexShell` is the shell-general
 version needed to state the remaining `D=14h => h=1` collapse honestly.
+
+## codex-2026-06-23-S133 -- summand/multiplicand bridge for the LRC14 Farey split
+
+User asked to revisit the previous Farey-product prompt through the older
+summand graph and multiplicand graph concepts.  Read the natural operation
+graph hypotheses HYP-1821/HYP-1822, the original summand graph reflection, the
+product graph reflection, S571/S572's `C=2n-1` summand-unit bridge,
+HYP-2083/HYP-2161, and S653/S710's Sidon/cauldron summand-incidence notes.
+During close-out, incoming S132/HYP-2933 arrived with a related Farey graph/PZ
+carrier synthesis; this session was renumbered to S133/HYP-2934/T1030 and
+cross-linked to it.
+
+Added `04-computation/lrc14_summand_multiplicand_bridge_codex_s133.py` and
+stored `05-knowledge/results/lrc14_summand_multiplicand_bridge_codex_s133.out`.
+The script separates three graph layers for `M=p/q`: the Farey additive pair
+`(p,q)` at node `p+q`, the theorem-relevant LRC denominator shell `q`, and the
+multiplicand product node `p*q` whose chosen factor fiber expands to `K_{p,q}`.
+
+Main finding: `2/27` is not merely the planar side of S131.  It is exactly the
+`C=27=2*14-1` second-gap summand-unit branch, so the petal rows `10->20` and
+`13->26` should be handled by HYP-2083/HYP-2161 shell, lift, petal, and CRT
+conservativity tools.  `3/41` leaves the `C=27` shell and is the first
+unit-excess `K_{3,3}` incidence wall, the near-miss `12->36`, which should feed
+a finite three-owner/HYP-2908 packet rather than the second-gap unit clock.
+
+Created HYP-2934 and reflection
+`07-reflections/lrc14-summand-multiplicand-farey-bridge-codex-s133.md`.
+Updated T1030, concept map, results index, and HYP-2932 backlinks.  Proof target
+left for the next session: prove every remaining q=14 non-AP/GW atom either
+reduces to the C=27 p=2 shell branch or crosses the p>=3 K33 packet wall.

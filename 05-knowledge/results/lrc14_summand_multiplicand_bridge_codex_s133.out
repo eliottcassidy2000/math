@@ -1,0 +1,111 @@
+﻿S133 LRC14 SUMMAND x MULTIPLICAND FAREY BRIDGE
+==============================================================================
+
+[1] Operation-graph contrast from the older repo thread
+-------------------------------------------------------
+  summand graph:
+    labelled fiber at node m keeps pairs a+b=m.
+    after forgetting labels, addition collapses to x<m, the natural order.
+  multiplicand/product graph:
+    labelled fiber at node m keeps pairs a*b=m.
+    after forgetting labels, multiplication still leaves the divisor DAG.
+  S133 rule:
+    for M=p/q, keep BOTH the additive pair (p,q) at p+q and the
+    multiplicand pair (p,q) at p*q; then expand the latter to K_{p,q}.
+  guardrail:
+    the LRC C=2n-1 summand graph is the denominator shell q=27, not p+q.
+
+[2] LRC14 unit-excess chain with summand and multiplicand shadows
+-----------------------------------------------------------------
+  e=14p-q=1, q=14p-1.  The q column remains the theorem scale.
+      p/q   p+q sum pairs   p*q            factor fibers  defect     K-rank  reading
+     1/13    14         6    13                        -      -1       star  q-threshold parent; additive star
+     2/27    29        14    54          2x27, 3x18, 6x9      25  two-block  q=C=27 second-gap shell; planar two-block
+     3/41    44        21   123                     3x41      79   K33-wall  first K33 wall; near-miss 12->36
+     4/55    59        29   220 2x110, 4x55, 5x44, 10x22, ...(+1)     161   K33-wall  higher K33 wall
+     5/69    74        36   345       3x115, 5x69, 15x23     271   K33-wall  higher K33 wall
+     6/83    89        44   498       2x249, 3x166, 6x83     409   K33-wall  higher K33 wall
+     7/97   104        51   679                     7x97     575   K33-wall  higher K33 wall
+    8/111   119        59   888 2x444, 3x296, 4x222, 6x148, ...(+3)     769   K33-wall  higher K33 wall
+
+  product-sum defect = p*q - (p+q).  For p>=2 this is the number
+  of 1s needed to turn the two-element core {p,q} into a
+  product-sum equality.  The p=1 parent is the identity-degenerate
+  case, so its defect is negative rather than a core extension count.
+
+[3] The denominator shell: why 2/27 is different from 3/41
+----------------------------------------------------------
+  For n=14, the second-gap/shell modulus is C=2n-1=27.
+  C=27 antipodal summand pairs split by gcd:
+    unit-visible    : count= 9  1+26, 2+25, 4+23, 5+22, 7+20, ...(+4)
+    nonunit gcd=3   : count= 3  3+24, 6+21, 12+15
+    nonunit gcd=9   : count= 1  9+18
+
+  Chain interpretation:
+    1/13: right Farey parent; not the C=27 shell.
+    2/27: exactly the S553 value 2/(2n-1).  This is the summand
+          graph at C=27 acted on by units; composite 27 creates
+          nonunit holes (gcd 3 and 9 strata).
+    3/41: leaves the C=27 shell and enters the first K_{3,3}
+          product-incidence wall.  It should be handled by a
+          three-owner/K33 packet, not by the second-gap unit clock.
+
+[4] Named LRC14 rows under the bridge
+-------------------------------------
+  row                            M q(S)   p+q   p*q     K-rank  bridge tag
+  AP                          1/14   14    15    14       star  apex floor
+  GW 12->24                   1/14   14    15    14       star  apex floor
+  residue-liar 12->26         1/12   12    13    12       star  star/q-threshold
+  petal 10->20                2/27   14    29    54  two-block  C27 second-gap / petal two-block
+  petal 13->26                2/27   14    29    54  two-block  C27 second-gap / petal two-block
+  near-miss 12->36            3/41   14    44   123   K33-wall  Farey-41 K33 wall
+
+[5] Multiplicand graph closeup
+------------------------------
+  2/27: product node 54 = 2 * 3^3
+    product-graph factor fibers: 2x27, 3x18, 6x9
+    K_{2,27}: edges=54, rank=two-block
+  3/41: product node 123 = 3 * 41
+    product-graph factor fibers: 3x41
+    K_{3,41}: edges=123, rank=K33-wall
+  4/55: product node 220 = 2^2 * 5 * 11
+    product-graph factor fibers: 2x110, 4x55, 5x44, 10x22, 11x20
+    K_{4,55}: edges=220, rank=K33-wall
+
+  Reading: the multiplicand graph and K_{p,q} are not the same object.
+  The product graph records factor fibers of the integer p*q; K_{p,q}
+  is the incidence blow-up of the particular fiber (p,q).  The p=2
+  row has rich 3-adic product fibers but no K33 blow-up; p=3 has a
+  simple product node but enough incidence rank to cross K33.
+
+[6] Tournament Analysis on bridge carriers
+------------------------------------------
+  vertices considered/challenged:
+    runners, gaps, denominator shells, Farey pairs, factor fibers,
+    Kpq incidence blowups, K33 packets, and proof obligations.
+  chosen vertices: proof carriers, not runners.
+  pair observable: role score
+    (theorem safety, additive shell retention, multiplicand fiber retention,
+     K33 signal, LRC specificity, false-positive resistance)
+  switch/gauge: lexicographically larger role score wins.
+  preserves: which carrier should handle which branch of the LRC14 split.
+  destroys: exact safe arcs, runner labels, and continuous phase geometry.
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1} c3=0 scc=(1, 1, 1, 1, 1, 1, 1) hp=1
+  first Hamiltonian path: q-binding > C27-shell > Farey p+q > product fiber > Kpq blowup > K33 packet > raw apex iso
+  product-only gauge would flip 9 carrier pairs.
+
+[7] Proof readout
+-----------------
+  New split refined from S131:
+    p=2 is not just planar.  It is the exact C=27 second-gap
+    summand-unit quotient, so the right tools are HYP-2083/HYP-2161,
+    petal rigidity, nonunit gcd strata, and lift/CRT conservativity.
+    p>=3 is a different branch.  It starts at 3/41, where the
+    denominator leaves C=27 and the K_{p,q} incidence blow-up has
+    a K_{3,3} minor.  That branch should feed a finite three-owner
+    obstruction packet, possibly the HYP-2908 tournament-state lift.
+  Salient theorem target:
+    prove every remaining q=14 non-AP/GW atom either reduces to the
+    C=27 p=2 shell/petal branch or crosses the p>=3 K33 packet wall.
+    Do not scalarize product fibers or apex iso classes before the
+    q-shell, owner, and incidence labels have done their work.
