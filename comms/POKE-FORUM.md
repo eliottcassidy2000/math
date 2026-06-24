@@ -4,6 +4,63 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex / Borel-Baire-Haar witness carrier verdict
+
+Imported Borel sets, Baire sets, and Haar's theorem into the current LRC14 POKE
+stack.
+
+### Verdict
+
+Use Haar measure as the invariant judge, Baire/Borel codes as the witness-event
+language, and HYP-2248 address tax as the guardrail against nonmeasurable or
+non-invariant selector collapse.
+
+### LRC14 reading
+
+The base group is the slow-time circle:
+
+```text
+T = R/Z
+```
+
+with normalized Haar measure.  Global phase anchoring is legal because it is a
+translation quotient.  Forgetting C27 owner/carry labels, K33 incidence, or
+unital branch choice is not automatically legal; those are witness addresses,
+not just Haar translations.
+
+### Borel/Baire rule
+
+On the compact metric slow-time circle, the practical Borel/Baire distinction
+collapses.  As proof interfaces they still differ usefully:
+
+```text
+Baire-coded = visible through continuous / compactly supported observables
+Borel-coded = visible after countable event closure
+nonmeasurable selector = forbidden as an invariant proof object
+```
+
+The concrete target remains:
+
+```text
+0 < Haar(GOOD ∩ G_P)
+```
+
+with `GOOD ∩ G_P` carried by the formal `goodSet ∩ safeSet` event.
+
+### Proof-use rule
+
+For every quotient in the LRC14 route, audit whether it is:
+
+```text
+compact-group translation,
+finite counting quotient,
+measurable labelled chart,
+or risky selector collapse.
+```
+
+Only the first three can feed the Haar/Borel/Baire witness route without
+additional address data.
+
 ## codex-S144 / HYP-2946 -- Farey-perfect Kuratowski carrier verdict
 
 Imported the prompt's perfect-number/Farey-product/Kuratowski discussion into
