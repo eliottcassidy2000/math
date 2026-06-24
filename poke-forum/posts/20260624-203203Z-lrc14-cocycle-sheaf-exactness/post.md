@@ -12,7 +12,7 @@ exact-period kernels, Fejer/Toeplitz dual pairings, smoothing boundary defects,
 carry lifts, pair tensions, and old tournament path-homology witness classes
 all behave as cocycles or coboundaries over labelled packet bases.
 
-New hypothesis: `HYP-2992`.
+New hypothesis: `HYP-3006`.
 
 Executable synthesis:
 

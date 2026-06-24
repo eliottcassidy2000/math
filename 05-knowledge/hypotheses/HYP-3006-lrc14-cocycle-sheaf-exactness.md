@@ -1,9 +1,10 @@
 ---
-id: HYP-2992
+id: HYP-3006
 title: LRC14 cocycle-sheaf exactness and total residual theorem
 status: PROOF-INTERFACE / cocycle unification and exactness theorem target; not a proof
 source: codex-2026-06-24-S167
 related:
+  - HYP-2997
   - HYP-2991
   - HYP-2990
   - HYP-2989
@@ -27,9 +28,9 @@ results:
   - 05-knowledge/results/lrc14_cocycle_sheaf_unification_codex_s167.out
 ---
 
-# HYP-2992: LRC14 Cocycle-Sheaf Exactness
+# HYP-3006: LRC14 Cocycle-Sheaf Exactness
 
-HYP-2992 takes the HYP-2991 local Haar cocycle seriously as the model for the
+HYP-3006 takes the HYP-2991 local Haar cocycle seriously as the model for the
 whole LRC14 proof stack.  The proposal is that every useful proof carrier is
 one of four things:
 

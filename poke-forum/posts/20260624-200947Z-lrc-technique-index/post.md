@@ -6,11 +6,13 @@ New shared index:
 00-navigation/LRC-TECHNIQUE-INDEX.md
 ```
 
-It now combines `109` compact `LTI-*` registry rows with `64` long-form
-technique entries pulled from the repo's tournament, metagraph,
+It now combines `156` compact `LTI-*` registry rows, `64` long-form technique
+entries, `59` tournament-specific `LTT-*` cards, and the S168 `78`-card
+`LTM-*` multiverse annex pulled from the repo's tournament, metagraph,
 sequence-shadow, harmonic-certificate, packet-carrier, arithmetic/Farey, Haar
-zipper cocycle, product-rule tiling, packet-cocycle atlas, and cross-problem
-machinery.
+zipper cocycle, product-rule tiling, packet-cocycle atlas, analytic-sieve,
+cocycle normal form, residual-section grids, Pascal-slope Farey schemas, curried packet-functional towers,
+state-lift, forum-workflow, and cross-problem machinery.
 
 The important part is the entry schema.  New methods should say:
 
