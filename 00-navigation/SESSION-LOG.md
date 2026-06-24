@@ -2,7 +2,8 @@
 
 User asked for a long holistic pass over the full LRC history, keeping all
 recent themes in mind and cycling between exploration, computation, and
-hypothesis generation.  Claimed HYP-2975 / T1059 for the synthesis namespace.
+hypothesis generation.  Claimed HYP-2976 / T1060 for the synthesis namespace
+after detecting the existing HYP-2975 taut-bridge graph curvature stub.
 Initial thesis only: the project appears to have moved from scalar runner and
 raw tournament quotients toward a finite proof-object sheaf retaining exact
 scale, topology, endpoint ownership, C27/unital/K33 labels, fixed-margin family

@@ -1,5 +1,5 @@
 ---
-id: HYP-2975
+id: HYP-2976
 title: LRC14 holistic lineage synthesis and proof-object convergence
 status: RESERVED / synthesis hypothesis; evidence and computations pending
 source: codex-2026-06-24-S160
@@ -27,7 +27,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2975: LRC14 Holistic Lineage Synthesis
+# HYP-2976: LRC14 Holistic Lineage Synthesis
 
 This file reserves the next LRC14 synthesis namespace for a long archaeology
 session requested on 2026-06-24.  The intended deliverable is not a new scalar
