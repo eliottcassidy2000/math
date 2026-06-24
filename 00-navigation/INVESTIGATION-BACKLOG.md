@@ -18,10 +18,11 @@
 ## Lead codex-2026-06-24-S161: Ramanujan-divisor quotient guardrails for LRC14
 
 **Status:** RESERVED / about to web-crawl and compute.  User prompt: read the divisor-function neighborhood and use it to formalize quotient guardrails across irreducibility, unital designs, Faulhaber moments, Pollock defects, unit-distance carriers, tiling/solid analogies, multiplicative functions, and Ramanujan sums.  Core question: what may a quotient forget without breaking the proof predicate?  Candidate proof object: a divisor/cyclotomic packet ledger where coarse multiplicative signatures are explicitly stress-tested against phase-sensitive Ramanujan signatures and LRC14 route labels.
-**Next:** (1) web read divisor function -> multiplicative function / Dirichlet convolution / Ramanujan sum / abundant-perfect-divisor-summatory pages; (2) mine repo references for matching guardrails; (3) build a small AP/GW/K33/petal/covering quotient-collision audit; (4) post the resulting admissibility theorem target.  Namespace: HYP-2978 / T1062.
+**S161 collision-audit update:** named-row audit confirms qdiv, open-state, mod-14 residue, `c_14`, unit-count, and lcm-scalar quotient collisions across AP/GW, q-witness, K33, petal, and covering routes; only the over-labelled guarded packet signature avoids route mixing.
+**Next:** (1) web read divisor function -> multiplicative function / Dirichlet convolution / Ramanujan sum / abundant-perfect-divisor-summatory pages; (2) mine repo references for matching guardrails; (3) extend quotient-collision audit to packet families in the HYP-2963 bank; (4) post the resulting admissibility theorem target.  Namespace: HYP-2978 / T1062.
 ## Lead codex-2026-06-24: Ramanujan exact-period projectors for LRC14
 
-**Status:** ACTIVE STUB (HYP-2978/T1062). Ramanujan sums turn primitive
+**Status:** ACTIVE STUB (HYP-2979/T1063, child route of HYP-2978). Ramanujan sums turn primitive
 q-th roots into an integer projector:
 `c_q(n)=sum_{(a,q)=1}exp(2*pi*i*a*n/q)=sum_{d|gcd(q,n)}d*mu(q/d)`.
 This looks tailor-made for the current LRC14 stack because the hard rows are

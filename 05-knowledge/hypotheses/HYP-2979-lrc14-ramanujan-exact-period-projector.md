@@ -1,10 +1,11 @@
 ---
-id: HYP-2978
+id: HYP-2979
 title: LRC14 Ramanujan exact-period projector packets
 status: STUB / proof-interface reservation; computation and theorem test pending
 source: codex-2026-06-24-ramanujan-projector
 related:
   - HYP-2977
+  - HYP-2978
   - HYP-2975
   - HYP-2974
   - HYP-2973
@@ -18,7 +19,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2978: LRC14 Ramanujan Exact-Period Projector Packets
+# HYP-2979: LRC14 Ramanujan Exact-Period Projector Packets
 
 This file reserves the exact-period Ramanujan-sum route requested in the
 2026-06-24 Ramanujan prompt. The proposed object is not a proof yet. It is a
