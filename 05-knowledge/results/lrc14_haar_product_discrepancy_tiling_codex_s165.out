@@ -1,0 +1,46 @@
+S165 Haar product discrepancy / tournament tiling synthesis
+========================================================================
+
+2D Haar product atom
+h_x=(1, -1) h_y=(1, -1)
+h_x tensor h_y = [[1,-1],[-1,1]]
+fixed-margin switch vector = [[1,-1],[-1,1]]
+identity: the Haar product sign matrix is exactly the 2x2 fixed-margin switch
+
+Packet table readout
+diagonal_packet        table=[[1,0],[0,1]] rows=(1, 1) cols=(1, 1) total=2 Hxy=2
+anti_diagonal_packet   table=[[0,1],[1,0]] rows=(1, 1) cols=(1, 1) total=2 Hxy=-2
+uniform_packet         table=[[1,1],[1,1]] rows=(2, 2) cols=(2, 2) total=4 Hxy=0
+left_column_packet     table=[[1,0],[1,0]] rows=(1, 1) cols=(2, 0) total=2 Hxy=0
+top_row_packet         table=[[1,1],[0,0]] rows=(2, 0) cols=(1, 1) total=2 Hxy=0
+
+Quotient collision under row/column margins
+margin_key=((1, 1), (1, 1), 2) has mixed Hxy values: [('diagonal_packet', 2), ('anti_diagonal_packet', -2)]
+minimal collision: diagonal_packet and anti_diagonal_packet have identical margins but opposite mixed Haar coefficients.
+
+Minimal wall-crossing / Markov switch
+anti_diagonal + switch = [[1,0],[0,1]]
+equals diagonal: True
+Hxy jump = 4
+This is the smallest fixed-margin move; in the tope language it is a wall crossing, and in the tiling language it is the oriented square tile.
+
+Exhaustive 2x2 fixed-margin stress for totals <= 6
+total=2: tables_with_margin_mates=2, mates_changing_Hxy=2
+total=3: tables_with_margin_mates=8, mates_changing_Hxy=8
+total=4: tables_with_margin_mates=19, mates_changing_Hxy=19
+total=5: tables_with_margin_mates=36, mates_changing_Hxy=36
+total=6: tables_with_margin_mates=60, mates_changing_Hxy=60
+Conclusion: margins are useful fixed fibers, but the mixed product sign is a separate quotient guardrail even in the smallest model.
+
+Tournament Analysis on proof carriers
+pairwise observable: retention of LRC predicate, margins, mixed Haar sign, fixed-margin switch, color resonance, Fejer compatibility, tope/cocircuit labels, quotient guardrail
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed_3cycles=0
+SCC_sizes=[1, 1, 1, 1, 1, 1, 1]
+hamiltonian_paths=1
+canonical_path=labelled_haar_square_packet > fixed_margin_switch_cocircuit > mixed_haar_discrepancy > colored_resonance_congruence > tope_cocircuit_wall_label > row_column_margin_shadow > raw_component_count_K
+
+Synthesis
+HYP-2594 counted continuous components K. HYP-2595 showed only color-compatible resonances survive. The Haar product square explains why: row/column boundary data are margins, while the surviving discrepancy is the mixed product coefficient.
+HYP-2986's tope/cocircuit packets are the geometric version of the same switch: an open tope is a positive cell, AP/GW are boundary atoms, and a true residual would have to survive every mixed-product switch without exposing a witness.
+Tournament tiling is therefore not a metaphor bolted on afterward. The fixed Hamiltonian path chooses the row/column observer; the Haar product tile records the orientation sign that the row/column quotient would otherwise forget.

@@ -15,6 +15,12 @@
 
 ---
 
+## Lead codex-2026-06-24-S165: Haar product discrepancy and tournament tiling square
+
+**Status:** PROOF-INTERFACE / synthesis scout complete (HYP-2987/T1071).  This pass integrates the recent HYP-2985/HYP-2986 packet handoff work with the older HYP-2594/HYP-2595 colored discrepancy program.  The script `04-computation/lrc14_haar_product_discrepancy_tiling_codex_s165.py` stores its output in `05-knowledge/results/lrc14_haar_product_discrepancy_tiling_codex_s165.out`.
+**Core identity:** On dyadic children, the 2D Haar product `h_I(x)h_J(y)` is `[[1,-1],[-1,1]]`, which is exactly the 2-by-2 fixed-margin switch.  Diagonal and anti-diagonal packets have the same row/column margins but mixed Haar coefficients `+2` and `-2`; applying the switch jumps the coefficient by `4`.  Therefore row/column margins and raw continuous component counts are quotient shadows, while the mixed Haar switch is the packet that must be kept.
+**Synthesis:** HYP-2594's `K` bound counts micro-boundaries before product cancellation; HYP-2595's colored resonance identity says only color-compatible mixed modes survive.  HYP-2986's tope/cocircuit wall language and HYP-2985's smoothing-dispatcher labels are the geometric and analytic forms of the same rule.
+**Next:** (1) express the HYP-2595 resonance condition in a dyadic/Walsh-Haar packet basis; (2) count independent mixed switches for structured banks and compare to `k+c_GP`; (3) route switch families through HYP-2986's handoff atlas as O3 family-compression data; (4) test whether Fejer packet certificates can be precompressed by shared mixed-Haar switch signatures.  Namespace: HYP-2987 / T1071.
 ## Lead codex-2026-06-24-S164: admissible smoothing dispatcher for LRC14
 
 **Status:** PROOF-INTERFACE / routing theorem target complete (HYP-2985/T1069), complementary to the incoming HYP-2984/T1068 kernel-homotopy stub.  This pass turns the recent analytic-number-theory prompts into a typed LRC14 smoothing dispatcher rather than a scalar estimate.  The script `04-computation/lrc14_smoothing_dispatcher_codex_20260624.py` classifies which policy is allowed to handle each live packet family and stores the readout in `05-knowledge/results/lrc14_smoothing_dispatcher_codex_20260624.out`.
