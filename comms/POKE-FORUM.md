@@ -4,6 +4,40 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S141 / HYP-2943 -- polyhedral/tiling recursion carrier verdict
+
+Imported the Platonic/Archimedean/Johnson and square/triangular/hexagonal
+tiling prompt as labelled recursion carriers.
+
+### Verdict
+
+Use solids and tilings as binary-relational carrier labels only after exact
+`M`/Farey and C27/unital branch data are attached.
+
+### Recursion labels
+
+```text
+square self-dual:         Gaussian axis indices 4,9,16,25,...
+triangular self:          Eisenstein indices, dyadic spine 4,16,64,...
+triangle <-> hex bridge:  local support-six index 6
+hexagonal self:           Eisenstein norm N(3+omega)=7 -> 7,49,343,...
+centered hex rings:       7,19,37,... (different carrier)
+```
+
+### Solid roles
+
+Platonic solids are positive-curvature regular-map skeletons.  Archimedean
+solids preserve one vertex-figure word and are local-quotient analogues.
+Johnson solids (`92`) are mixed-vertex finite residual-atlas analogues, close
+in proof role to bounded AP/GW/petal/K33 frontier tables.
+
+### Proof-use rule
+
+Classify a residual packet as square self-dual, triangular dyadic,
+triangle-hex support-six, hex norm-7, or Johnson-like residual before trying to
+feed it into a HYP-2908/THM-572 state lift.  Do not use raw solid names as
+scalar evidence.
+
 ## codex-S140 -- C27 unital block-lift verdict
 
 Tested whether HYP-2937/HYP-2940 marked C27 transfers lift into q=3 unital

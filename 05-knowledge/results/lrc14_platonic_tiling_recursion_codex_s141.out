@@ -1,0 +1,92 @@
+REGULAR MAP CURVATURE BOUNDARY
+tetrahedron: {p,q}={3,3}, dual=self
+  V,E,F=(4, 6, 4)
+  vertex_deficit_turns=1/2 (0.500000000)
+cube: {p,q}={4,3}, dual=octahedron
+  V,E,F=(8, 12, 6)
+  vertex_deficit_turns=1/4 (0.250000000)
+octahedron: {p,q}={3,4}, dual=cube
+  V,E,F=(6, 12, 8)
+  vertex_deficit_turns=1/3 (0.333333333)
+dodecahedron: {p,q}={5,3}, dual=icosahedron
+  V,E,F=(20, 30, 12)
+  vertex_deficit_turns=1/10 (0.100000000)
+icosahedron: {p,q}={3,5}, dual=dodecahedron
+  V,E,F=(12, 30, 20)
+  vertex_deficit_turns=1/6 (0.166666667)
+
+triangular tiling: {p,q}={3,6}, dual=hexagonal tiling
+  vertex_deficit_turns=0 (0.000000000)
+square tiling: {p,q}={4,4}, dual=self
+  vertex_deficit_turns=0 (0.000000000)
+hexagonal tiling: {p,q}={6,3}, dual=triangular tiling
+  vertex_deficit_turns=0 (0.000000000)
+readout: Platonic solids are positive-curvature finite maps;
+         square/triangular/hexagonal tilings are the zero-curvature wall.
+
+EUCLIDEAN REGULAR TILING RECURSIONS
+square self-recursion:
+  lattice: Gaussian axis scaling m+0i
+  indices m^2 for m=2..5: [4, 9, 16, 25]
+  LRC role: self-dual square packet, scalar square counts are safe only
+            when the chosen grid axes remain labelled.
+triangle self-recursion:
+  lattice: Eisenstein scaling m+0*omega
+  general indices m^2 for m=2..5: [4, 9, 16, 25]
+  binary chain emphasized by prompt: [4, 16, 64, 256]
+  LRC role: triangular subdivision keeps orientation-sector labels;
+            powers of 4 are the cleanest dyadic triangle spine.
+triangle <-> hexagon dual bridge:
+  local index: 6
+  reason: a regular hexagon dissects into 6 equilateral triangles,
+          and the triangular tiling has 6 triangles around a vertex.
+  LRC role: support-six packet carrier, compatible with octahedral/current
+            language but not a scalar replacement for q or C27 labels.
+hexagon self-recursion:
+  lattice: Eisenstein norm N(a+b*omega)=a^2-a*b+b^2
+  N(3+omega)=7
+  norm-7 powers: [7, 49, 343, 2401]
+  centered-hex ring counts r=1..4: [7, 19, 37, 61]
+  LRC role: the 7,49,... chain is a norm-index recursion;
+            centered rings 7,19,37,... are a different carrier.
+
+ARCHIMEDEAN VERTEX-FIGURE CARRIERS
+truncated tetrahedron: vertex_figure=3.6.6, deficit=1/6 (0.166666667)
+cuboctahedron: vertex_figure=3.4.3.4, deficit=1/6 (0.166666667)
+truncated cube: vertex_figure=3.8.8, deficit=1/12 (0.083333333)
+truncated octahedron: vertex_figure=4.6.6, deficit=1/12 (0.083333333)
+rhombicuboctahedron: vertex_figure=3.4.4.4, deficit=1/12 (0.083333333)
+truncated cuboctahedron: vertex_figure=4.6.8, deficit=1/24 (0.041666667)
+snub cube: vertex_figure=3.3.3.3.4, deficit=1/12 (0.083333333)
+icosidodecahedron: vertex_figure=3.5.3.5, deficit=1/15 (0.066666667)
+truncated dodecahedron: vertex_figure=3.10.10, deficit=1/30 (0.033333333)
+truncated icosahedron: vertex_figure=5.6.6, deficit=1/30 (0.033333333)
+rhombicosidodecahedron: vertex_figure=3.4.5.4, deficit=1/30 (0.033333333)
+truncated icosidodecahedron: vertex_figure=4.6.10, deficit=1/60 (0.016666667)
+snub dodecahedron: vertex_figure=3.3.3.3.5, deficit=1/30 (0.033333333)
+count=13
+deficit_range=1/60..1/6
+readout: Archimedean solids retain one vertex-figure word;
+         they are better analogues for labelled local quotients than
+         for global LRC scalar invariants.
+
+JOHNSON SOLID GUARDRAIL
+count=92
+faces=regular polygons, convex, but not Platonic/Archimedean/prism/antiprism
+vertex figures are mixed rather than one uniform word.
+LRC role: finite residual atlas after the uniform carriers fail,
+          analogous to bounded AP/GW/petal/K33 frontier tables.
+
+POKE CARRIER TOURNAMENT
+observable=(LRC faithfulness, label retention, recursion exactness,
+            finite certifiability, anti-scalar guard)
+0: exact_M_Farey_branch score=(6, 6, 6, 6, 6)
+1: C27_unital_block_lift score=(6, 6, 5, 6, 5)
+2: Euclidean_tiling_recursion_indices score=(5, 5, 5, 5, 5)
+3: Archimedean_vertex_figure_words score=(4, 5, 4, 5, 4)
+4: Platonic_dual_curvature_skeleton score=(4, 4, 4, 5, 4)
+5: Johnson_residual_atlas score=(3, 4, 5, 4, 3)
+6: raw_polyhedron_visual_metaphor score=(1, 1, 1, 1, 1)
+fingerprint: transitive role order, c3=0, hp=1
+proof use: tiling recursions sit below exact M/Farey and C27 charts,
+           but above raw solid analogies.
