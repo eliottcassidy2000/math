@@ -43,6 +43,27 @@ or route labels.
 `farey_operator_lane`, and `Kpq_factor_fiber` to the HYP-2963 packet schema;
 then test AP/GW, unit-petal/C27, K33, and covering rows under these fields.
 Namespace: HYP-2999 / T1084 / LTI-149 / LTT-058.
+## Lead codex-2026-06-24-S169: Fibonacci additive-basis Farey bridge
+
+**Status:** SYNTHESIS / proof-interface carrier complete (HYP-3000/T1085).
+User asked to merge Fermat polygonal, Goldbach/ternary Goldbach, Zeckendorf,
+the Fibonacci row arrangement, and Farey numerator/denominator operations.  The
+exact bridge is `F_n=sum_k binom(n-k-1,k)`, the independent-set rank vector of
+`P_{n-2}`.  This puts Goldbach, ternary Goldbach, Fermat polygonal, and
+Zeckendorf on one proof-economy axis: smoothing entropy, added hypergraph
+dimension, bounded arity/residue absorption, and path-normal-form carries.
+Incoming HYP-2998 covers the golden Stern-Brocot/Fibonacci spine and HYP-2999
+keeps Pascal-slope row fields as packet data; HYP-3000 is the complementary
+unit-excess/path-rank classifier.
+**Farey pull:** with `M=p/q` and `e=14p-q` retained, `p+q` is
+additive/affine-safe, `p*q` is product/incidence, and `q^p,p^q` are magnitude
+stress tests.  On `p/(14p-1)`, the table is linear/quadratic as `q=14p-1`,
+`p+q=15p-1`, `p*q=14p^2-p`.
+**Next:** build the representation-hypergraph TDA proposed in S501, now with
+three coordinates: entropy, bounded arity, and carry width; then test whether
+HYP-2963 packet debts are smoothing, bounded-invoice, or
+Zeckendorf/Ostrowski normal-form objects.  Namespace: HYP-3000 / T1085 /
+LTI-150.
 
 ## Lead codex-2026-06-24-S168: expanded LRC technique index for tournament/metagraph/series carriers
 

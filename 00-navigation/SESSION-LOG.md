@@ -97,6 +97,47 @@ it is allowed to forget.  The expanded immediate pull list now asks future
 agents to add Burnside/stabilizer cost, H-spread, round-realizability,
 deletion-contraction depth, path-homology, and H-gap state-lift verifier fields
 to packet classifiers and carrier tournaments.
+## codex-2026-06-24-S169 -- Fibonacci additive-basis Farey bridge (HYP-3000/T1085)
+
+User asked to merge previous Fermat polygonal, Goldbach/ternary Goldbach,
+Zeckendorf, Fibonacci-row, and Farey numerator/denominator operation work.
+Read S501 additive-basis reflections, HYP-1902 Zeckendorf boundary normal form,
+HYP-2984 Farey scheduler, and HYP-2934/HYP-2940 summand/product Farey lanes.
+
+Added `04-computation/fibonacci_additive_basis_farey_bridge_codex_s169.py`,
+stored `05-knowledge/results/fibonacci_additive_basis_farey_bridge_codex_s169.out`,
+created HYP-3000, and wrote
+`07-reflections/fibonacci-additive-basis-farey-bridge-codex-s169.md`.
+After `git fetch`/rebase, incoming HYP-2998 and HYP-2999 were visible as
+sibling carriers: HYP-2998 covers the golden Stern-Brocot spine and HYP-2999
+keeps Pascal-slope packet fields attached.  This pass was renumbered to
+HYP-3000/T1085/LTI-150 and positioned as the unit-excess/path-rank
+proof-currency classifier rather than a duplicate of either sibling.
+
+Main readout: the row pattern
+`1,1,1+1,1+2,1+3+1,1+4+3,1+5+6+1,...` is exactly
+`F_n=sum_k binom(n-k-1,k)`, the independent-set rank vector of path `P_{n-2}`.
+This places Fibonacci between abundant representation hypergraphs and
+Zeckendorf uniqueness: Goldbach is high-entropy sieve smoothing, ternary
+Goldbach adds a smoothing dimension, Fermat polygonal is bounded arity/residue
+absorption, and Zeckendorf is no-adjacent path normal form.
+
+Farey translation: after exact `M=p/q` and excess `e=14p-q` are retained,
+`p+q` is the affine-safe additive payload, `p*q` is the product/incidence side
+channel, and `q^p,p^q` are magnitude stress tests.  On `p/(14p-1)`,
+`q=14p-1`, `p+q=15p-1`, and `p*q=14p^2-p`.
+
+Tournament Analysis used proof currencies rather than runners, with observable
+`(quotient_safety, local_to_global, entropy_control, LRC_transfer,
+exact_normal_form)`.  Fingerprint was transitive:
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}`, `directed_3cycles=0`,
+`scc_sizes=[1,1,1,1,1,1,1,1]`, `hamiltonian_path_count=1`, path
+`zeckendorf_normal_form > fibonacci_path_rank > farey_sum_affine_check >
+fermat_polygonal_bounded_arity > ternary_goldbach_smoothing >
+farey_product_incidence > binary_goldbach_sieve > farey_power_stress_test`.
+LRC use: classify a packet's proof economy before importing a sequence:
+smoothing, bounded arity, path-normal form, additive Farey scale, product
+incidence, or power stress.
 
 ## codex-2026-06-24-S167 -- LRC14 cocycle carrier atlas (HYP-2995/T1079)
 

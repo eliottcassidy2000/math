@@ -15,6 +15,7 @@ errors.  Next task: lift these bounded residual sections into family templates
 and group Fejer/Ramanujan certificates by section, not by scalar route label.
 -> HYP-2996, HYP-2995, HYP-2994, HYP-2991, HYP-2989, HYP-2963, THM-572, T1080.
 
+**OPEN-Q-108 S169 additive-basis/Farey addendum:** HYP-3000 adds a proof-currency classifier, complementary to HYP-2998's golden Stern-Brocot/Fibonacci carrier and HYP-2999's Pascal-slope packet schema.  The Fibonacci row pattern is `F_n=sum_k binom(n-k-1,k)`, the rank vector of independent sets in `P_{n-2}`; Zeckendorf is the confluent no-adjacent normal form on this path.  Goldbach/ternary Goldbach/Fermat polygonal/Zeckendorf differ by proof economy: high-entropy sieve, added smoothing dimension, bounded arity/residue absorption, path-normal-form carry.  For Farey payloads, keep exact `M=p/q` and `e=14p-q`: `p+q` is affine-safe additive scale, `p*q` is incidence/product side channel, powers are magnitude stress tests.  Open task: classify each HYP-2963 residual packet as smoothing, bounded-arity invoice, or path-normal-form debt before choosing Fejer/Ramanujan/Kaczynski/Zeckendorf tools. -> HYP-3000, HYP-2999, HYP-2998, HYP-2984, HYP-2982, HYP-1902, LTI-150.
 **OPEN-Q-108 S168 technique-index expansion addendum:** The LRC Technique Index
 now has `148` compact `LTI-*` rows plus the `64` long-form S166 technique-bank
 entries after preserving the incoming `LTI-109` packet-cocycle atlas and
