@@ -173,8 +173,9 @@ Fingerprint: `score_hist={0:1,1:1,2:1,4:2,5:1,6:1,7:2,9:1,10:1}`,
 octahedral, C27, Farey/K33, boundary-moment, unit-distance, and good-cut/SCC
 carriers should be typed handoffs, not forced into one scalar chain.
 
-Rebased over incoming HYP-2988 exposure/Haar-tile work and HYP-2989
-Haar-product discrepancy synthesis, so this lane moved to HYP-2990/T1074.
+Rebased over incoming HYP-2988 exposure work, HYP-2989 Haar-square
+discrepancy, and the repaired HYP-2992 Haar-tile lane, so this lane moved to
+HYP-2990/T1074.
 Main theorem templates: labelled packet zipper
 lemma, no-free-slider lemma, alternating gauntlet theorem, and harmonic residual
 theorem.  LRC14 transfer: make HYP-2987's `F7` a named harmonic/state-lift

@@ -50,11 +50,14 @@
 ## Lead codex-2026-06-24-S165: abstract zipper theorem atlas across past topics
 
 **Status:** EXPLORATORY PROOF-TECHNOLOGY / HYP-2990/T1074 created after rebasing over incoming HYP-2988 exposure and HYP-2989 Haar-product discrepancy lanes.  User asked for more zipper theorems and free creative exploration of past topics.  Added `04-computation/abstract_zipper_theorem_atlas_codex_s165.py` and stored `05-knowledge/results/abstract_zipper_theorem_atlas_codex_s165.out`.
+**Next:** (1) build the actual packet grid for named rows AP, GW, `12->36`, `10->20`, `13->26`, `P10+GW`, `12->168`, and lcm-tail rows; (2) compute typed Haar coefficients by packet family; (3) compare same-tile boundary atoms with the HYP-2986 boundary cocircuit owner-pair sums; (4) test whether HYP-2981 Fejer atoms cluster in owner-strip or nested-refinement classes; (5) formalize the dictionary from fixed-path tournament staircase tiles to Haar rectangles.  Namespace: HYP-2992 / T1072.
+## Lead codex-2026-06-24-S165: abstract zipper theorem atlas across past topics
+
+**Status:** EXPLORATORY PROOF-TECHNOLOGY / HYP-2990/T1074 created after rebasing over incoming HYP-2988 exposure, HYP-2989 Haar-square, and HYP-2992 Haar-tile lanes.  User asked for more zipper theorems and free creative exploration of past topics.  Added `04-computation/abstract_zipper_theorem_atlas_codex_s165.py` and stored `05-knowledge/results/abstract_zipper_theorem_atlas_codex_s165.out`.
 **Core rule:** A zipper theorem is a controlled-kernel theorem.  A quotient may forget a coordinate only if the target predicate is fiber-constant, the coordinate is reconstructible, a dual certificate annihilates it, or it is routed to a named residual sector.
 **Carriers compared:** LRC14 certificate handoff, kernel/tope/smoothing, octahedral Hodge current, C27/unital pair completion, Farey/K33 incidence, boundary-moment multi-chart, shell-1/root packet, unit-distance endpoint ear, OCF activity/coimage, good-cut/SCC support, and raw scalar shadow.
 **Tournament fingerprint:** `score_hist={0:1,1:1,2:1,4:2,5:1,6:1,7:2,9:1,10:1}`, `directed_3cycles=4`, `SCC_sizes=[1,1,1,6,1,1]`, `Hamiltonian_path_count=15`.  The six-carrier middle SCC says several past topics form typed handoff teeth rather than a scalar hierarchy.
 **Next:** (1) define HYP-2987's `F7` as a named harmonic/state-lift residual sector; (2) turn the no-free-slider rule into an LRC14 quotient checklist; (3) test family compression on K33/petal Fejer packets; (4) revisit octahedral divergence/curl and good-cut/SCC support as state-lift coordinates.
-**Next:** (1) build the actual packet grid for named rows AP, GW, `12->36`, `10->20`, `13->26`, `P10+GW`, `12->168`, and lcm-tail rows; (2) compute typed Haar coefficients by packet family; (3) compare same-tile boundary atoms with the HYP-2986 boundary cocircuit owner-pair sums; (4) test whether HYP-2981 Fejer atoms cluster in owner-strip or nested-refinement classes; (5) formalize the dictionary from fixed-path tournament staircase tiles to Haar rectangles.  Namespace: HYP-2992 / T1072.
 
 ## Lead codex-2026-06-24-S164: admissible smoothing dispatcher for LRC14
 
