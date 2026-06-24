@@ -21,6 +21,28 @@
 **Readout:** `04-computation/farey_fibonacci_additive_basis_s169.py` stores output in `05-knowledge/results/farey_fibonacci_additive_basis_s169.out`.  The scout records `F_{n+1}=sum_k binom(n-k,k)` for rows `1,1,1+1,1+2,1+3+1,...`; on the golden Farey spine `F_i/F_{i+1}`, `p+q=F_{i+2}`, `p*q=|E(K_{p,q})|`, and power payloads are ordered magnitude-stress channels.  Tournament Analysis over proof carriers is transitive with path `zeckendorf_sparse_normal_form > farey_address_vector > fermat_polygonal_bounded_arity > farey_product_Kpq_area > ternary_goldbach_smoothing > binary_goldbach_pair_graph > farey_power_stress_channel > raw_scalar_rep_count`.
 **Next:** add a representation-economy field to sequence-shadow packet classifiers: smoothing, bounded arity, normal form, or Farey address.  A quotient using representation counts is unsafe until it states which economy preserves the target predicate and which coordinate is reconstructed, annihilated, exact, descended, or emitted as residual debt.
 Namespace: HYP-2998 / T1083.
+## Lead codex-2026-06-24-S169: Pascal-slope additive-basis Farey packet schema
+
+**Status:** SYNTHESIS / packet-schema lead (HYP-2999/T1084), not a proof.
+Companion to HYP-2998's computed Farey-Fibonacci additive-basis carrier.  User
+asked to merge prior work on Fermat polygonal numbers, Goldbach/ternary
+Goldbach, Zeckendorf, Fibonacci row decompositions, and Farey numerator/
+denominator mutations.
+**Core readout:** the row pattern `1,1,1+1,1+2,1+3+1,1+4+3,1+5+6+1,...` is
+the `d=2` Pascal-slope row `C(n-1-k,k)` with Fibonacci row sum.  Treat this as
+a representation-hypergraph carrier before scalarizing: Goldbach is abundant
+two-prime fiber, ternary Goldbach is smoothing by one more summand, Fermat
+polygonal is bounded arity/residue absorption, Zeckendorf is carry-confluent
+unique normal form, and Pascal-slope rows are the finite row-fiber audit.
+**Farey merge:** exact `p/q` remains the root.  `p+q` is the additive/summand
+lane, `p*q` is the product/coimage lane with `p*q=|E(K_{p,q})|`, and `q^p,p^q`
+are ordered magnitude stress tests that may not forget exact scale, endpoint,
+or route labels.
+**Next:** add `additive_basis_regime`, `representation_entropy`,
+`local_residue_rank`, `carry_width`, `pascal_slope_row_id`,
+`farey_operator_lane`, and `Kpq_factor_fiber` to the HYP-2963 packet schema;
+then test AP/GW, unit-petal/C27, K33, and covering rows under these fields.
+Namespace: HYP-2999 / T1084 / LTI-149 / LTT-058.
 
 ## Lead codex-2026-06-24-S168: expanded LRC technique index for tournament/metagraph/series carriers
 

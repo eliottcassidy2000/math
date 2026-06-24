@@ -55,7 +55,7 @@ obligations, and proof-carrier interfaces.
 - Need a route for non-AP/GW zero-open residuals:
   use LTT-029, LTT-030, LTT-031, LTT-040, LTT-051, and LTT-052.
 - Need cross-domain inspiration without scalarizing it away:
-  use LTT-036 through LTT-044, plus LTT-053 through LTT-057.
+  use LTT-036 through LTT-044, plus LTT-053 through LTT-058.
 
 ## Core Guardrail
 
@@ -882,11 +882,34 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** Paley path-homology notes, Paley ratio tangents, HYP-2979,
   LTT-030, LTT-043, LTT-051.
 
+### LTT-058: Pascal-Slope / Additive-Basis Farey Packet Schema
+
+- **Move:** Treat Pascal-slope row vectors, additive-basis representation
+  fibers, Zeckendorf carry normal forms, and Farey operator lanes as vertices
+  in a proof-carrier tournament.
+- **LRC use:** Adds a labelled way to ask whether a hard row is being explained
+  by additive abundance, ternary smoothing, bounded polygonal residue cover,
+  Fibonacci/Zeckendorf carry normal form, product-incidence debt, or only a
+  power/magnitude shadow.
+- **Preserves:** Exact `p/q`, Farey excess, `p+q` additive lane, `p*q`/`Kpq`
+  factor fiber, Pascal row vector, representation entropy, local residue rank,
+  and carry width.
+- **Forgets / guardrail:** The scalar Fibonacci term, raw Goldbach count,
+  polygonal cover count, product value, or power value is unsafe unless the row
+  fiber, carry rule, exact Farey root, and endpoint packet labels are retained
+  or discharged.
+- **Next pull:** Add `additive_basis_regime`, `representation_entropy`,
+  `local_residue_rank`, `carry_width`, `pascal_slope_row_id`, and
+  `farey_operator_lane` to the HYP-2963 packet classifier.
+- **Pointers:** HYP-2999, HYP-2998, HYP-2940, HYP-2934, HYP-2932,
+  HYP-2931, HYP-2523, S501 additive-basis reflections, LTI-149.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
-   Ramanujan exact-period projector, spectrum binding scale, Burnside cost,
-   score-class H-spread, and round-realizability flag.
+   Ramanujan exact-period projector, spectrum binding scale, additive-basis
+   regime, Pascal-slope carry width, Burnside cost, score-class H-spread, and
+   round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
 3. Compute multi-scale tournament spectra for AP, GW, K33, petals, splices,

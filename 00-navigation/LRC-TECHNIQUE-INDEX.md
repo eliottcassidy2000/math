@@ -53,6 +53,8 @@ boundary-moment chart data
 Kaczynski / analytic smoothing approach class
 state-lift or F7 residual sector
 cochain / cocycle obstruction class
+additive-basis regime / Pascal-slope row / carry-width labels
+Farey operator lane (`root`, `p+q`, `p*q`, `q^p`, `p^q`)
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -259,6 +261,7 @@ record what it destroys before asking it to prove anything.
 | LTI-146 | Namespace collision audit | Hypothesis/tangent IDs, filenames, anchors, claimed packets | Prevent research pointers from identifying the wrong quotient or theorem after concurrent pushes | CONCURRENT-SESSIONS.md, duplicate HYP-2992 signal | Add a small audit script/report for duplicate frontmatter IDs and reused tangent numbers. |
 | LTI-147 | Cocycle normal form | Cocycle channels / proof obligations in the LRC packet complex | Every forgotten coordinate must descend, become a coboundary, be dual-annihilated, or route to a named residual class | HYP-2997, HYP-2996, HYP-2995, HYP-2994, HYP-2992, HYP-2991, HYP-2990, THM-572 | Build HYP-2963 packet-level cocycle ledgers and tag every low-frontier row by first nonzero class. |
 | LTI-148 | Residual-section packet grid | Residual sections and Haar-product exits | Make F7 executable by requiring hard non-AP/GW packets to have owner-strip, cross-handoff, or nested-refinement exits | HYP-2996, HYP-2963, HYP-2989, HYP-2995 | Lift the bounded section map into family templates and Fejer/Ramanujan certificate manifests. |
+| LTI-149 | Pascal-slope additive-basis Farey packet schema | Representation hypergraph rows, additive fibers, Farey operator lanes | Complement HYP-2998 by keeping Pascal-row, carry-width, and Farey `p+q,p*q,q^p,p^q` lane fields as labelled packet data | HYP-2999, HYP-2998, HYP-2940, HYP-2934, HYP-2931, HYP-2523, S501 | Add `additive_basis_regime`, `representation_entropy`, `local_residue_rank`, `carry_width`, `pascal_slope_row_id`, and `farey_operator_lane` fields to packet records. |
 
 ## Cross-Cutting Guardrails
 
@@ -307,6 +310,7 @@ record what it destroys before asking it to prove anything.
 | LTI-TODO-22 | Product-rule irreducibility no-lift compression test | LTI-107, LTI-136, LTI-137, LTI-139 |
 | LTI-TODO-23 | Packet-level first-nonzero cocycle ledger | LTI-044, LTI-046, LTI-056, LTI-147 |
 | LTI-TODO-24 | Familywise residual-section templates for HYP-2996 | LTI-047, LTI-107, LTI-109, LTI-148 |
+| LTI-TODO-25 | Additive-basis / Farey-operator packet schema | LTI-076, LTI-077, LTI-078, LTI-089, LTI-130, LTI-149 |
 
 ## Minimal Entry Template
 

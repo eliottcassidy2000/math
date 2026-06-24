@@ -24,6 +24,28 @@ raw_scalar_rep_count`.  Created HYP-2998/T1083 and the reflection
 origin/main advanced with HYP-2997, rebased this lane conceptually as the
 sequence-shadow representation-economy companion to that cocycle normal-form
 atlas.
+## codex-2026-06-24-S169 -- Pascal-slope additive-basis Farey packet schema (HYP-2999/T1084)
+
+User asked to merge prior work on Fermat polygonal numbers, Goldbach/ternary
+Goldbach, Zeckendorf, the Fibonacci row picture
+`1,1,1+1,1+2,1+3+1,1+4+3,1+5+6+1,...`, and Farey numerator/denominator
+mutations.  Added HYP-2999 as a synthesis/guardrail hypothesis, rebased as a
+packet-schema companion to HYP-2998, and recorded the key correction: the
+Fibonacci picture is the `d=2` Pascal-slope row
+`C(n-1-k,k)` before summation, so the scalar Fibonacci number forgets row
+fiber, carry width, and independent-set support.
+
+Merged S501 additive-basis regimes into one representation-hypergraph schema:
+Goldbach = abundant two-prime fibers, ternary Goldbach = extra smoothing
+dimension, Fermat polygonal = bounded residue cover, Zeckendorf = confluent
+carry normal form, Pascal-slope = finite row-fiber bridge.  On the Farey side,
+exact `p/q` remains the root coordinate; `p+q` is additive/summand ledger,
+`p*q` is product/coimage and `K_{p,q}` incidence, while `q^p,p^q` are magnitude
+stress tests only.  Added LTI-149, LTT-058, T1084, a reflection, backlog lead,
+concept-map updates, and a POKE post.  Next classifier fields:
+`additive_basis_regime`, `representation_entropy`, `local_residue_rank`,
+`carry_width`, `pascal_slope_row_id`, `farey_operator_lane`, and
+`Kpq_factor_fiber`.
 
 ## codex-2026-06-24-S168 -- residual section and packet-grid verification (HYP-2996/T1080)
 
