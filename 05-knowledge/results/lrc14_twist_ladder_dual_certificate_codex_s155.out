@@ -1,0 +1,105 @@
+S155 LRC14 twist-ladder / dual-blocker certificate
+==============================================================================
+single_limit=180, two_swap_limit=36, alias_depth=4, lcm_tail_max=5, qmax=64, q27_m=27
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, safe components, endpoint owners, residue classes,
+    denominators, rational twists, blocked twist events, speed blockers,
+    divisor fibers, source-spectrum nodes, and proof obligations.
+  chosen vertices:
+    rational twists a/q and the speed-vs-twist blocker hypergraph.
+  preserved LRC predicate:
+    if any selected twist has ||v*a/q|| >= 1/14 for every speed v,
+    it is an exact LRC14 certificate for that row.
+  destroyed information:
+    open intervals between selected twists and fine endpoint ownership.
+  challenged assumption:
+    the proof need not start from boundary gaps; it can start from a
+    global primal witness ladder and read failed ladders as dual covers.
+
+[1] Ladder census on the HYP-2963 packet bank
+  audited rows=21913
+  ladder                         qs  twists   cert  miss strict   bdry  maxq
+  q<=27                          26     229  21908     5  15875   6033    27
+  q<=42                          41     541  21913     0  15880   6033    41
+  q<=64                          63    1259  21913     0  15880   6033    41
+  qdiv+Q27(m<=27)                76    3219  21913     0  15876   6037    77
+  q<=64+Q27(m<=27)               95    3893  21913     0  15880   6033    41
+  first-witness denominator histogram for the full ladder:
+    14:6050, 8:2306, 7:2195, 9:2172, 10:2075, 11:2059, 13:1863, 12:1682, 19:349, 17:325, 6:171, 5:153, 16:132, 15:129
+
+[2] Dual blocker readout for the q<=27 misses
+  q<=27 missed rows=5
+  row                                    qdiv full witness   slack              top blocker loads
+  divisor-loaded tail 84                   15        17/41       1         84:43,13:36,11:34,7:30
+      blocker-size histogram=((1, 154), (2, 64), (3, 8), (4, 2), (6, 1))
+      private blockers=((1, 22), (11, 18), (13, 16), (3, 14), (5, 14), (7, 14), (9, 10), (84, 10))
+  divisor-loaded tail 84*2                 15        17/41       1        168:55,13:36,11:34,7:30
+      blocker-size histogram=((1, 142), (2, 76), (3, 8), (4, 2), (6, 1))
+      private blockers=((1, 22), (11, 18), (13, 16), (9, 12), (3, 12), (5, 12), (168, 10), (4, 8))
+  divisor-loaded tail 84*3                 15        17/41       1        252:55,13:36,11:34,7:30
+      blocker-size histogram=((1, 144), (2, 72), (3, 10), (4, 2), (6, 1))
+      private blockers=((1, 20), (11, 18), (13, 16), (7, 14), (5, 12), (3, 12), (8, 10), (252, 10))
+  divisor-loaded tail 84*4                 15        17/41       1        336:63,13:36,11:34,7:30
+      blocker-size histogram=((1, 144), (2, 64), (3, 18), (4, 2), (6, 1))
+      private blockers=((1, 20), (11, 16), (13, 16), (3, 14), (5, 12), (7, 12), (9, 10), (336, 10))
+  divisor-loaded tail 84*5                 16        17/41       1        420:65,13:36,11:34,7:30
+      blocker-size histogram=((1, 144), (2, 62), (3, 20), (4, 2), (6, 1))
+      private blockers=((1, 20), (11, 18), (13, 16), (7, 14), (9, 12), (3, 12), (5, 12), (8, 10))
+  readout:
+    q<=27 sees exactly the lcm-tail family as a dual cover; q=41
+    with a=17 breaks the cover in the full ladder.  This is a global
+    twist certificate, not a local endpoint-gap certificate.
+
+[3] Hardest first witnesses in the full ladder
+  row                                        fam            qdiv   witness   slack tight speeds
+  divisor-loaded tail 84*5                   lcm-tail         16     17/41       1 (5,)
+  divisor-loaded tail 84*4                   lcm-tail         15     17/41       1 (5,)
+  divisor-loaded tail 84*3                   lcm-tail         15     17/41       1 (5,)
+  divisor-loaded tail 84*2                   lcm-tail         15     17/41       1 (5,)
+  divisor-loaded tail 84                     lcm-tail         15     17/41       1 (5,)
+  single swap 10->70                         single-swap      15      8/27       1 (7,)
+  single swap 10->140                        single-swap      15      8/27       1 (7,)
+  AP repair drop13 add182                    covering-repai   15      2/27       1 (1,)
+  two drop(9, 12)->add(14, 36)               two-swap         15     11/25       3 (7,)
+  single swap 6->98                          single-swap      15      4/25       3 (12, 13)
+  single swap 4->42                          single-swap      15      6/25       3 (8, 42)
+  single swap 11->154                        single-swap      15      9/25       3 (3,)
+  single swap 7->154                         single-swap      15      7/24       4 (10, 154)
+  two drop(6, 7)->add(15, 28)                two-swap         16      4/23       5 (11, 12)
+  two drop(6, 7)->add(14, 15)                two-swap         16      4/23       5 (11, 12)
+  two drop(6, 10)->add(28, 30)               two-swap         16      4/23       5 (11, 12)
+  two drop(6, 10)->add(14, 30)               two-swap         16      4/23       5 (11, 12)
+  drop6 fattening core add210                drop-core        16      4/23       5 (11, 12)
+  qdiv>14 first-witness denominators:
+    19:349, 17:325, 16:132, 15:129, 21:92, 22:57, 23:49, 18:23, 20:18, 41:5, 25:4, 27:3, 24:1
+
+[4] Twist-ladder theorem target
+  Exact finite-bank theorem:
+    every row in the HYP-2963 labelled-packet bank has an explicit
+    rational witness a/q with q<=42.
+  Smaller-ladder obstruction:
+    q<=27 misses only the divisor-loaded lcm-tail family
+    {1,2,3,4,5,6,7,8,9,10,11,13,84m}, m=1..5 in this bank.
+  Rescue:
+    the same row family is witnessed at 17/41 in the q<=42 ladder.
+  Global guardrail:
+    HYP-2901 rules out any fixed finite denominator ladder as a full
+    proof of LRC14.  The proposed proof route is therefore dynamic:
+    after Moon-core / packet reductions, either a bounded ladder gives
+    a primal twist witness, or the blocker hypergraph has a private
+    resource that descends to q-threshold, K33/state-lift, or a
+    committed-denominator wall with its own next-rung witness.
+
+[5] Tournament Analysis
+  vertices are proof coordinates, not runners.
+  pair observable:
+    which coordinate preserves an exact LRC witness or a finite dual
+    blocker certificate while surviving denominator-wall adaptation.
+  switch/gauge:
+    lexicographic retention of primal twist witness, blocker dual,
+    denominator-wall adaptability, packet compatibility, and
+    anti-scalarization.
+  tie Hamiltonian path:
+    source_spectrum_packet > twist_ladder_primal > blocker_hypergraph_dual > q41_rescue_rung > q27_fiber_ladder > exact_haar_interval > boundary_gap_packet > committed_denominator_wall > q_threshold_gate > raw_apex_residue_tournament > raw_runner_set
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1} c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) hp=1 leaders=('source_spectrum_packet', 'exact_haar_interval', 'twist_ladder_primal', 'q27_fiber_ladder')

@@ -1,3 +1,32 @@
+## codex-2026-06-24-S155 -- twist-ladder dual certificate for LRC14
+
+Tried a proof route intentionally different from the boundary-gap packet
+bridge: rational twists as primal certificates and failed finite ladders as
+dual blocker hypergraphs.  Added
+`04-computation/lrc14_twist_ladder_dual_certificate_codex_s155.py`, stored
+`05-knowledge/results/lrc14_twist_ladder_dual_certificate_codex_s155.out`,
+and created HYP-2972 / T1056 plus a reflection and Poke forum post.
+
+Default audit over the HYP-2963 labelled-packet bank (`21913` rows) found:
+
+```text
+q<=27 certified 21908, missed 5
+q<=42 certified 21913, missed 0
+full-ladder max first witness denominator 41
+```
+
+The five `q<=27` misses are exactly
+`{1,2,3,4,5,6,7,8,9,10,11,13,84m}`, `m=1..5`; all are rescued by the same
+twist `17/41`.  This gives a global discrete proof pressure: not "which
+endpoint gap opens?" but "which rational rung witnesses, and if none does,
+which blocker hypergraph resource explains the cover?"
+
+Guardrail recorded from HYP-2901: no fixed finite denominator ladder can prove
+full LRC14, so HYP-2972 is a dynamic theorem target rather than a `q<=42`
+global claim.  After Moon-core / packet reductions, either a bounded twist
+ladder gives a witness, or the blocker hypergraph must yield descent,
+K33/state-lift, committed-denominator wall, or next-rung structure.
+
 ## codex-2026-06-24-S152 -- boundary-gap packet bridge for the LRC14 covering branch
 
 User asked to keep working creatively toward an LRC proof.  Started from the

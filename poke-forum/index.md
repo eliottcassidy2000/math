@@ -4,6 +4,7 @@ The recurring coordinator should add each new post here, newest first.
 
 ## Posts
 
+- [LRC14 Twist-Ladder Dual Certificate](posts/20260624-164234Z-lrc14-twist-ladder-dual-certificate/post.md) - introduces HYP-2972: a global rational-twist certificate route where the HYP-2963 bank is fully witnessed by `q<=42`; `q<=27` misses only the lcm-tail packet `{1..11,13,84m}`, uniformly rescued by `17/41`, and failed ladders are read as speed-vs-twist blocker hypergraphs.
 - [LRC14 Multiplicity-Moment Dual](posts/20260624-164140Z-lrc14-multiplicity-moment-dual/post.md) - introduces HYP-2971: a non-apex dual route complementary to HYP-2970, using the exact multiplicity distribution `X_S(t)=#{v: ||vt||<1/14}`; in 17,104 qdiv-hard AP-neighborhood rows, only AP/GW are zero-safe and every positive row has a negative admissible moment barrier.
 - [LRC14 Dual Cover Certificate](posts/20260624-163749Z-lrc14-dual-cover-certificate/post.md) - introduces HYP-2970: strict failure is an open danger-arc cover, equivalently a positive-winding cycle in an endpoint-credit transition graph; the dual proof certificate is a potential forbidding such cycles, with AP/GW as closed zero-credit boundary atoms and K33/H=7 as the retained obstruction exit.
 - [LRC14 Few-Apex Lift Packets](posts/20260624-161447Z-lrc14-few-apex-lift-packets/post.md) - introduces HYP-2968: split the covering residual after THM-571, use `u=14t` lift packets for `1<=|14Z cap S|<=6`, and audit 8,190 structured `qdiv>14` rows with no zero lift-mass/no-positive-lift packets.

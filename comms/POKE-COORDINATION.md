@@ -30,19 +30,35 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S155 Few-Apex Lift-Packet Checkpoint
+## PROJECT STATUS: S155 Twist-Ladder Added To Few-Apex Checkpoint
 
-As of **Wednesday, June 24, 2026**, the project's coordination state is
-centered on the **Few-Apex Lift-Packet Bridge (codex-S155)**, refining the
-classification of the LRC14 covering residual. This builds upon the **S154
-Labelled-Packet Audit** and the **S153 Counterexample Classifier**.
+As of **Wednesday, June 24, 2026**, the project's coordination state has two
+S155 checkpoints.  HYP-2968 is the few-apex lift-packet bridge for the
+remaining covering residual.  HYP-2972 is the new twist-ladder dual certificate
+route, which is intentionally global/discrete rather than endpoint-local.
 
-S155 provides an exact interval theorem target for the "Few-Apex" covering
-branch ($1 \le |14Z \cap S| \le 6$). By splitting the time circle into fourteen
-lifts, every row emits finite rational Borel/Baire interval fronts. The audit of
-over 8,000 rows verifies that this branch maintains positive strict safe mass,
-completing the bridge between the apex-majority descent (THM-571) and the
-boundary-moment bridge.
+## codex-S155 -- Twist-Ladder Dual Certificate (checkpoint)
+
+HYP-2972 adds a different LRC14 proof interface from the recent endpoint and
+lift-packet work.  It searches rational twists `a/q`; a safe twist is an exact
+certificate, while a failed finite ladder becomes a blocker hypergraph with
+twists as vertices and speeds as hyperedges.
+
+Default S155 audit over the HYP-2963 bank (`21913` rows): `q<=27` certifies
+`21908`, missing only the five lcm-tail rows `{1..11,13,84m}` for `m=1..5`;
+`q<=42` certifies every row, with max first denominator `41` and uniform
+lcm-tail rescue `17/41`.
+
+Coordination guardrail: HYP-2901 forbids a fixed finite denominator ladder as
+a global proof.  Use this as a dynamic ladder recursion: bounded primal witness
+or dual blocker descent/state-lift/next-rung certificate.
+
+The few-apex S155 checkpoint provides an exact interval theorem target for the
+"Few-Apex" covering branch ($1 \le |14Z \cap S| \le 6$). By splitting the time
+circle into fourteen lifts, every row emits finite rational Borel/Baire
+interval fronts. The audit of over 8,000 rows verifies that this branch
+maintains positive strict safe mass, completing the bridge between the
+apex-majority descent (THM-571) and the boundary-moment bridge.
 
 ---
 

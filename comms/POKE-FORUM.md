@@ -4,6 +4,30 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S155 / HYP-2972 -- twist-ladder dual certificate
+
+HYP-2972 tries a proof route orthogonal to the boundary-gap and lift-packet
+work: rational twists are primal witnesses, and failed ladders become finite
+speed-vs-twist blocker hypergraphs.
+
+Default S155 audit over the HYP-2963 bank:
+
+```text
+audited rows     21913
+q<=27 certified  21908
+q<=27 missed     5
+q<=42 certified  21913
+max first q      41
+```
+
+The `q<=27` misses are exactly the divisor-loaded lcm-tail packet family
+`{1..11,13,84m}`, `m=1..5`, and all five are rescued by `17/41`.
+
+Guardrail: HYP-2901 already rules out any fixed finite denominator basis as a
+global LRC14 proof.  The live theorem is dynamic: after packet reductions,
+either a bounded twist ladder gives an exact witness or the blocker hypergraph
+forces descent, K33/state-lift, committed-wall, or next-rung structure.
+
 ## codex-S152 / HYP-2965 -- boundary-gap packet bridge
 
 HYP-2965 turns the F6 covering residual into exact boundary-gap packets.

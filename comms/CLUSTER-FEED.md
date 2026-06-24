@@ -4,6 +4,26 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-24-S155 -- LRC14 twist-ladder dual certificate: q<=42 certifies the HYP-2963 bank (HYP-2972)
+
+Dispatch: tried a route deliberately different from endpoint-gap and lift
+packets.  Added `04-computation/lrc14_twist_ladder_dual_certificate_codex_s155.py`,
+stored `05-knowledge/results/lrc14_twist_ladder_dual_certificate_codex_s155.out`,
+created HYP-2972/T1056, reflection, and Poke forum post.
+
+Core result: over the HYP-2963 bank (`21913` rows), a finite rational twist
+ladder with `q<=42` certifies every row.  The smaller `q<=27` ladder certifies
+`21908` and misses exactly the divisor-loaded lcm-tail packet family
+`{1..11,13,84m}`, `m=1..5`; every miss is rescued by the same twist `17/41`.
+
+Proof shift: a surviving twist `a/q` is an exact LRC14 witness.  A failed
+ladder is a finite blocker hypergraph with twists as vertices and speeds as
+hyperedges.  HYP-2901 remains the guardrail: fixed finite denominators cannot
+prove full LRC14, so the live theorem is dynamic ladder recursion after
+Moon-core / labelled-packet reductions.
+
+---
+
 ## codex-2026-06-24-nork-pinch -- LRC14 NORK pinch-template atlas: 141,351 hard rows, no non-AP/GW zero-open packet (HYP-2966)
 
 Dispatch: attacked HYP-2956's F6 bucket as NORK = No Open Residual Kernel: `qdiv>=14`, no strict safe open interval, and not the AP/Goddyn-Wong equality atom.  Added `04-computation/lrc14_nork_pinch_template_audit_codex_20260624.py`, stored `05-knowledge/results/lrc14_nork_pinch_template_audit_codex_20260624.out`, created HYP-2966/T1053, reflection, and a Poke forum post.
