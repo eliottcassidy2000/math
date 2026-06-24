@@ -8,6 +8,27 @@ boundary atoms, C27/unit-petal strips, K33/THM-572 state-lift debt, covering
 boundary-moment packets, and possible F7 harmonic survivors; then attach
 HYP-2963 packet representatives to HYP-2989 Haar-product interaction classes.
 This is only a namespace reservation until the executable output replaces it.
+## codex-2026-06-24-S168b -- LRC tournament technique index expansion (T1081)
+
+User asked to get even more creative, look back through the many tournament,
+metagraph, related-series, and metagraph techniques, and bring as many as
+possible back onto LRC in a big index other agents can pull from.
+
+Expanded `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` from `45` to `57`
+`LTT-*` cards.  The new cards add deletion-contraction summand depth,
+Delta-H flip energy, fixed-path tiling normalization, Burnside orbit-cost
+expansion, score-class H-spread/magic measure, path-homology Betti carriers,
+permanent H-gap obstruction grammar, metric-comparator/trienerment dichotomy,
+nonabelian character-ratio carriers, converse-Z2/reversal ambiguity,
+round-tournament realizability filters, and Paley/Frobenius arithmetic
+tournament carriers.
+
+The proof-order point is still the quotient guardrail: every tournament or
+series shadow must declare which LRC predicate it preserves and which coordinate
+it is allowed to forget.  The expanded immediate pull list now asks future
+agents to add Burnside/stabilizer cost, H-spread, round-realizability,
+deletion-contraction depth, path-homology, and H-gap state-lift verifier fields
+to packet classifiers and carrier tournaments.
 
 ## codex-2026-06-24-S167 -- LRC14 cocycle carrier atlas (HYP-2995/T1079)
 

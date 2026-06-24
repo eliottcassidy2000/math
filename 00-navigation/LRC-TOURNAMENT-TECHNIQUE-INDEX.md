@@ -48,13 +48,14 @@ obligations, and proof-carrier interfaces.
 - Need to prevent an unsafe quotient:
   use LTT-001, LTT-025, LTT-039, and LTT-040.
 - Need tournament enumeration speedups:
-  use LTT-006 through LTT-012, plus LTT-033 and LTT-035.
+  use LTT-006 through LTT-012, plus LTT-033, LTT-035, and LTT-046
+  through LTT-050.
 - Need the AP/GW residue skeleton:
   use LTT-003, LTT-013, LTT-014, LTT-027, and LTT-028.
 - Need a route for non-AP/GW zero-open residuals:
-  use LTT-029, LTT-030, LTT-031, and LTT-040.
+  use LTT-029, LTT-030, LTT-031, LTT-040, LTT-051, and LTT-052.
 - Need cross-domain inspiration without scalarizing it away:
-  use LTT-036 through LTT-044.
+  use LTT-036 through LTT-044, plus LTT-053 through LTT-057.
 
 ## Core Guardrail
 
@@ -667,19 +668,242 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** AGENTS.md Tournament Analysis default, HYP-2987, HYP-2990,
   T1074.
 
+### LTT-046: Deletion-Contraction Summand Depth
+
+- **Move:** Use the Redei/Mitrovic deletion-contraction identity
+  `H(D)=H(D\e)+H(D/e)` as a metagraph recursion, then record the depth at
+  which a Hamiltonian-path value appears in the summand graph.
+- **LRC use:** Gives a proof-debt metric for packet reduction: if a labelled
+  packet can only be discharged after several contractions, those lost boundary
+  labels must become explicit coordinates.
+- **Preserves:** Deletion edge, contraction endpoint, summand pair, SCC/product
+  factor, and irreducible versus product source.
+- **Forgets / guardrail:** One summand is usually a near-tournament, not a
+  tournament.  Dropping the missing-arc or contracted-boundary label destroys
+  the theorem-facing predicate.
+- **Next pull:** Build a deletion-contraction depth ledger for the F0-F7
+  labelled packet classifier and mark which branches are genuine tournaments.
+- **Pointers:** THM-082, `07-reflections/metagraph-summand-recursive.md`,
+  LTT-007, LTT-040.
+
+### LTT-047: Delta-H Flip Energy Ledger
+
+- **Move:** Treat an arc flip as a local energy move with
+  `Delta H=H(T/e)-H(T'/e')`; old scans show these deltas are even and carry
+  rich distribution data.
+- **LRC use:** Packet handoffs, Haar switches, and endpoint-owner transfers
+  can be given an "energy" comparable across rows instead of being collapsed
+  to a safe/unsafe bit.
+- **Preserves:** Flipped pair, contracted residue, `2`-adic valuation of the
+  delta, level edge, and before/after fingerprint.
+- **Forgets / guardrail:** `Delta H` is only an H-shadow.  It does not know the
+  LRC endpoint owner, Farey branch, or exact-period label unless these are
+  stored beside the flip.
+- **Next pull:** Compute the flip-energy analogue for one-swap LRC packet
+  transitions: AP to GW, GW to K33, C27 petals, and Fejer-hard rows.
+- **Pointers:** `07-reflections/metagraph-summand-recursive.md`, LTT-018,
+  LTT-033, LTT-045.
+
+### LTT-048: Tiling Count / Hamiltonian-Path Overlap Partition
+
+- **Move:** Use the fixed-path theorem
+  `tiling_count([T])=H(T)/|Aut(T)|`, the master equation
+  `2^m=sum_[T] H(T)/|Aut(T)|`, and Hamiltonian-path overlap partitions as
+  normalization checks.
+- **LRC use:** Prevents overcounting when packet fibers are represented by
+  fixed-path staircase tilings, and gives an automorphism-aware denominator for
+  packet census claims.
+- **Preserves:** Automorphism size, fixed Hamiltonian base path, tiling fiber,
+  and path-overlap partition block.
+- **Forgets / guardrail:** Tiling count is not an LRC certificate by itself;
+  observer/source marks and packet labels must survive the quotient.
+- **Next pull:** Add `aut_size`, `H`, `H/aut`, and fixed-path-overlap fields to
+  the HYP-2963 representative packet schema.
+- **Pointers:** `05-knowledge/results/tiling_count_theorem.md`,
+  `05-knowledge/results/master_identities.md`, LTT-006, LTT-011.
+
+### LTT-049: Burnside Perturbation / Orbit-Cost Expansion
+
+- **Move:** Read Burnside enumeration as a statistical-mechanics expansion:
+  the identity orbit is the vacuum, non-identity cycle types are excitations,
+  and each symmetry has positive cost at inverse temperature `log(2)`.
+- **LRC use:** Separates generic labelled packet fibers from symmetric
+  exceptional atoms.  AP/GW-like equality should be stabilizer-supported, not
+  an average over a large anonymous orbit.
+- **Preserves:** Stabilizer, conjugacy/cycle type, orbit cost, identity
+  dominance term, and non-identity correction.
+- **Forgets / guardrail:** Asymptotic orbit dominance is not a local proof.
+  Small symmetric packets can be exactly the dangerous rows.
+- **Next pull:** Add a Burnside cost column to packet fibers: identity mass,
+  stabilizer size, first non-identity cost, and whether the row is exceptional
+  because of symmetry.
+- **Pointers:** `07-reflections/burnside-perturbation-theory.md`, LTT-012,
+  LTT-048.
+
+### LTT-050: Score-Class H-Spread / Magic Measure
+
+- **Move:** For a score sequence `s`, record
+  `spread(s)=max H-min H` over tournaments with that score.  Spread zero means
+  H is score-determined; positive spread means hidden cycle-space content.
+- **LRC use:** Score or ranker quotients can be used as cheap prefilters only
+  after checking whether the relevant score fiber is a stabilizer class or a
+  magic class.
+- **Preserves:** Score sequence, within-score H range, stabilizer/magic flag,
+  and extremal witnesses.
+- **Forgets / guardrail:** Score sequence alone misses the LRC-active
+  cycle-space exactly when spread is positive.
+- **Next pull:** Compute H-spread for tournament shadows of AP, GW, K33,
+  petals, and weakest Fejer-margin packets.
+- **Pointers:** `05-knowledge/results/tournament_magic_measure_Hspread_kps.md`,
+  LTT-014, LTT-039.
+
+### LTT-051: Path-Homology Betti Carrier
+
+- **Move:** Use GLMY path homology of tournaments as a residual-topology
+  detector: `Omega_2` is transitive triples, tested tournaments have
+  `beta_2=0`, and `beta_1`/`beta_3` phases appear mutually exclusive in
+  audits.
+- **LRC use:** A zero-open non-AP/GW packet might be forced into a directed
+  topological hole; Betti payloads can distinguish a harmless scalar shadow
+  from a genuine residual class.
+- **Preserves:** Path-homology phase, transitive-triple structure, complement
+  behavior, and OCF/topology correlation.
+- **Forgets / guardrail:** Betti values are not an LRC proof unless attached
+  to labelled packet routes and state-lift obligations.
+- **Next pull:** Run path-homology fingerprints on the carrier tournaments
+  created by HYP-2963 packet classes and HYP-2995 cocycle carriers.
+- **Pointers:** `05-knowledge/results/path_homology_synthesis.md`, HYP-301,
+  HYP-302, HYP-303, LTT-038, LTT-039.
+
+### LTT-052: Permanent H-Gap Obstruction Grammar
+
+- **Move:** Treat the permanent H-gaps `{7,21}` as forbidden atoms, with the
+  H=21 proof pattern reducing to strong components plus lower bounds on odd
+  cycles from pancyclicity.
+- **LRC use:** Converts a residual packet target into a concrete endpoint:
+  construct a tournament-conflict or OCF packet whose H-value must be `7` or
+  `21`, then invoke impossibility.
+- **Preserves:** Strong-component factor, OCF odd-cycle count, connected
+  forbidden atom, and state-lift equality.
+- **Forgets / guardrail:** Ordinary digraphs and partial orientations can
+  realize forbidden-looking values.  The lift must land in the tournament or
+  connected OCF category, not merely a binary relation.
+- **Next pull:** Make a verifier that checks whether each proposed F7 state
+  lift really constructs a complete tournament/OCF packet rather than a loose
+  digraph.
+- **Pointers:** THM-200, THM-572, HYP-2908,
+  `07-reflections/h21-proof-complete-s680.md`, LTT-029, LTT-040.
+
+### LTT-053: Metric Comparator / Trienerment Dichotomy
+
+- **Move:** Read a tournament as a comparator on a metric with a threshold and
+  possible tie layer; separate geometric comparators that collapse to the
+  circular runner picture from arithmetic comparators that retain residue,
+  exact-period, or p-adic channels.
+- **LRC use:** A sanity check for new analogies: ask whether the construction
+  is only a geometric shadow of existing circular order, or whether it carries
+  a new arithmetic coordinate needed by LRC14.
+- **Preserves:** Metric, threshold/tie convention, arithmetic channel, and
+  observer/source mark.
+- **Forgets / guardrail:** Monotone geometric metrics usually add no new LRC
+  data.  Arithmetic metrics need explicit residue/carry labels before they are
+  proof carriers.
+- **Next pull:** Add a metric-comparator audit line to future technique cards:
+  geometric collapse, arithmetic channel, or mixed.
+- **Pointers:**
+  `07-reflections/lrc-a-tournament-is-a-comparator-on-a-metric-the-geometric-arithmetic-dichotomy-s541o.md`,
+  LTT-004, LTT-043, LTT-057.
+
+### LTT-054: Nonabelian Character-Ratio / Alternating-Group Carrier
+
+- **Move:** Treat highly symmetric nonabelian carriers through character
+  ratios, not only abelian Fourier modes; alternating-group and icosahedral
+  lanes are candidates for residual parity and path-action structure.
+- **LRC use:** Provides a possible nonabelian Fourier transform for packet
+  sectors where cyclic Ramanujan projectors are too abelian to see the
+  obstruction.
+- **Preserves:** Group action, conjugacy class, representation character
+  ratio, parity sector, and orbit stabilizer.
+- **Forgets / guardrail:** Matching a character ratio or Platonic count is
+  not a proof unless the LRC packet predicate is transported through the group
+  action.
+- **Next pull:** Test whether F7/Johnson-harmonic residuals admit a
+  nonabelian character-ratio formulation over a small action group.
+- **Pointers:** alternating-group graph reflections, icosahedral tangents,
+  LTT-030, LTT-049.
+
+### LTT-055: Converse-Z2 / Half-Arc-Transitive Orientation
+
+- **Move:** Use self-converse, half-arc-transitive, and orientation-reversal
+  phenomena as tests for whether a quotient has accidentally identified a
+  direction that the proof needs.
+- **LRC use:** AP/GW boundary rows and symmetric packet fibers often have a
+  hidden reversal or antipodal ambiguity; this card asks whether the ambiguity
+  is harmless, reconstructible, or a live residual.
+- **Preserves:** Orientation bit, complement/reversal action, half-arc
+  orbit, and fixed path under the symmetry.
+- **Forgets / guardrail:** A self-converse shadow is not a complete
+  tournament proof unless endpoint owners and tie directions are retained.
+- **Next pull:** Mark every AP/GW and C27 transfer by its reversal/complement
+  action and record where the action changes packet route.
+- **Pointers:** half-arc-transitivity/self-converse notes, LTT-036, LTT-044.
+
+### LTT-056: Round-Tournament Realizability Filter
+
+- **Move:** Before trusting a tournament shadow of a runner movie, filter it
+  through circular/round-tournament realizability constraints and record which
+  SCC patterns are impossible for clock movies.
+- **LRC use:** Blocks false tournament counterexamples whose abstract
+  orientation cannot come from a circular threshold relation.
+- **Preserves:** Circular order, interval neighborhood, SCC end structure, and
+  tie Hamiltonian path.
+- **Forgets / guardrail:** Abstract tournament enumeration produces many
+  shadows that are not realizable by LRC clock images.  Do not feed these into
+  a state-lift as if they were packet rows.
+- **Next pull:** Add a round-realizability flag to tournament shadows used by
+  the HYP-2963 classifier and the HYP-2995 carrier tournament.
+- **Pointers:** round tournament threads, THM-354, HYP-2924, LTT-003,
+  LTT-004, LTT-045.
+
+### LTT-057: Paley / Frobenius Arithmetic Tournament Carrier
+
+- **Move:** Use Paley and Frobenius tournaments as arithmetic difference
+  carriers: quadratic residues orient edges, automorphism groups normalize
+  path counts, and Gauss/Ramanujan sums expose exact-period structure.
+- **LRC use:** Gives a prime-modular model for exact-period channels near the
+  `14=2*7` wall, especially when a row behaves like a residue-difference
+  packet rather than a circular metric packet.
+- **Preserves:** Prime modulus, residue class, Frobenius action, automorphism
+  size, and Gauss/Ramanujan side channel.
+- **Forgets / guardrail:** Paley smoothness or high H is often coincidence.
+  Use Paley as an arithmetic carrier, not as a scalar maximizer proof.
+- **Next pull:** Compare Ramanujan exact-period projectors on q=7, 14, 27, and
+  41 packets against Paley/Frobenius residue tournaments.
+- **Pointers:** Paley path-homology notes, Paley ratio tangents, HYP-2979,
+  LTT-030, LTT-043, LTT-051.
+
 ## Immediate Pull List
 
-1. Expand the HYP-2963 labelled packet classifier with three new columns:
-   Haar tile class, Ramanujan exact-period projector, and spectrum binding
-   scale.
-2. Make a Fejer certificate manifest bridge checklist based on LTT-044.
+1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
+   Ramanujan exact-period projector, spectrum binding scale, Burnside cost,
+   score-class H-spread, and round-realizability flag.
+2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
+   add interval-arithmetic proof anchors for the floating Fejer evaluations.
 3. Compute multi-scale tournament spectra for AP, GW, K33, petals, splices,
    covering rows, and the weakest Fejer-margin rows.
 4. Build a decorated source-cone canonicalizer: observer-source mark,
-   endpoint owners, exact-period class, and Haar tile class.
-5. Prove or refute the vanishing lemma suggested by HYP-2992: no owner-strip,
+   endpoint owners, exact-period class, Haar tile class, and p-adic carry
+   owner.
+5. Prove or refute the HYP-2992 vanishing lemma: no owner-strip,
    no cross-handoff, no nested-refinement coefficient implies AP/GW boundary or
    F7 state-lift.
-6. Turn the controlled-kernel rule into a short reusable theorem template in
-   the style of HYP-2990.
-
+6. Build a deletion-contraction packet metagraph and record DC depth,
+   near-tournament branches, and Delta-H flip energy for named rows.
+7. Run path-homology and OCF-activity fingerprints on packet-carrier
+   tournaments, especially K33, P10+GW, C27 petals, and hard Fejer rows.
+8. Add an H-gap state-lift verifier that rejects loose digraphs and accepts
+   only complete tournament/connected OCF packets.
+9. Audit each new analogy with the metric-comparator dichotomy: geometric
+   collapse, arithmetic channel, or mixed carrier.
+10. Turn the controlled-kernel rule into a short reusable theorem template in
+    the style of HYP-2990.

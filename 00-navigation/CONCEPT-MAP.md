@@ -2,7 +2,7 @@
 
 **Purpose:** Complete, structured database of every mathematical concept, object, technique, and connection in this project. Organized for rapid lookup by future Claude instances. Created by kind-pasteur-2026-03-07-S34.
 
-**Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECHNIQUE-INDEX.md`, applying tournament, metagraph, A000568, Haar, Fejer, Ramanujan, good-cut, OCF, C27/K33, analytic-sieve, and controlled-kernel techniques to LRC14. It should be updated when a new LRC proof route introduces a reusable tournament carrier or discovers a quotient that is unsafe without an extra coordinate.
+**Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECHNIQUE-INDEX.md`, expanded by T1081 to `57` reusable `LTT-*` cards.  It applies tournament, metagraph, A000568, fixed-path tiling, deletion-contraction, flip-energy, Burnside orbit-cost, score-spread, path-homology, H-gap obstruction, metric-comparator, round-realizability, Paley/Frobenius, Haar, Fejer, Ramanujan, good-cut, OCF, C27/K33, analytic-sieve, and controlled-kernel techniques to LRC14. It should be updated when a new LRC proof route introduces a reusable tournament carrier or discovers a quotient that is unsafe without an extra coordinate.
 
 **Last updated:** kind-pasteur-2026-03-07-S34 (continued session — 10+ commits, 30+ connections cataloged)
 
