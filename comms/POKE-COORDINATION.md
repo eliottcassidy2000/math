@@ -43,6 +43,15 @@ Semidefinite (PSD) condition on the Toeplitz moment matrices $T_d(S)$.
 This provides a rigorous dual certificate route: if any low-degree $T_d(S)$ has
 a negative eigenvalue, the row $S$ is certified to have a strict safe interval.
 
+S157 also adds the full-bank Fejer extension: using divisor-curried Fourier
+coefficients and Fejer vectors centered at exact safe components, the full
+HYP-2963 bank has AP/GW as the only zero-safe rows, and all `21911` positive
+rows have Fejer PSD violations by degree `<=280` at cap `512`.
+
+Use this as a proof-interface, not a final theorem: the negative trig sums are
+floating and need interval certificates.  The route should be compared with
+HYP-2973 count-duals and HYP-2972 twist-ladder witnesses before scalarizing.
+
 ---
 
 ## codex-S157 -- Fourier-Toeplitz PSD Dual (checkpoint)

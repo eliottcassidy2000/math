@@ -1,0 +1,145 @@
+S157 LRC14 FOURIER-TOEPLITZ PSD DUAL
+==============================================================================
+max_degree=512, negative_tol=1e-08, single_limit=180, two_swap_limit=36, alias_depth=4, lcm_tail_max=5
+[0] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, danger arcs, exact endpoints, safe components, count states,
+    Fourier modes, Toeplitz rows, Fejer centers, denominator ladders,
+    endpoint owners, packet labels, and proof obligations.
+  chosen vertices:
+    Fourier modes and explicit Toeplitz PSD-test vectors.
+  preserved LRC predicate:
+    a strict counterexample requires F_S=C_S-1>=0 a.e.; any negative
+    Toeplitz quadratic form contradicts that and proves a strict safe set.
+  destroyed information:
+    endpoint-owner labels and exact interval atlas, except for the midpoint
+    used to place the Fejer vector.
+  challenged assumption:
+    HYP-2973's danger-count distribution may not be the only moment
+    object; phase-sensitive Fourier fibers can certify rows while retaining
+    divisor/Farey structure.
+
+[1] Fourier-Toeplitz necessary condition
+  Define C_S(t)=#{v in S : ||v*t||<1/14} and F_S=C_S-1.
+  A strict counterexample would have F_S(t)>=0 almost everywhere.
+  Hence every Toeplitz moment matrix [hat F_S(i-j)] must be PSD.
+  A single vector p with p^*T_d p<0 is a dual certificate for a
+  strict safe interval.
+
+  Divisor-curried Fourier coefficients:
+    c_0 = |S|/7 - 1 = 6/7 for 13-speed LRC14 rows
+    c_k = sum_{v|k, v in S} sin(pi*(k/v)/7)/(pi*(k/v)), k>0
+  Low modes only see the speed divisor fibers.  This is the
+  phase-sensitive cousin of HYP-2973's count distribution.
+
+  Fejer vector used here:
+    p_j=exp(-2*pi*i*j*x)/sqrt(d+1), centered at a safe-component midpoint.
+    Q_d(x)=c_0+2*sum_{k<=d}(1-k/(d+1))*c_k*cos(2*pi*k*x).
+    Q_d(x)<0 proves T_d is not PSD, but may occur after the true first
+    negative eigenvalue.  Floating margins are reported; exact interval
+    enclosures are the next formalization step.
+
+[2] Named-row Fourier-Toeplitz Fejer certificates
+  row                             safe comp       width degree          qform       center invisible speeds
+  AP                                 0    0           0      -              -            - ()
+  GW 12->24                          0    0           0      -              -            - ()
+  near/K33 12->36               1/1260    2      1/2520    159 -0.000237712661    2089/5040 ()
+  petal 10->20                   1/980    2      1/1960    115 -0.00131883185    1161/3920 ()
+  petal 13->26                   1/182    2       1/364     65 -0.00142805942       53/728 ()
+  P10+GW                         1/980    2      1/1960    280 -0.00095929484    1161/3920 ()
+  P10+K33                       4/2205    4      1/1960    124 -0.000603075538    1161/3920 ()
+  covering 12->84           563/105105    8      3/1960     64 -0.000385676844    1627/3920 (84,)
+  covering 12->168           263/30030    8    23/11760     63 -1.30202902e-05   9767/23520 (168,)
+  few-apex 6->14                 7/858    4      5/1848     38 -0.00359279946     643/3696 ()
+  few-apex 6->28                 7/858    4      5/1848    106 -0.000860445933     643/3696 ()
+
+[summary] named rows
+  rows=11 zero_safe=2 positive_safe=9
+  Fejer PSD-vector hits=9 misses_at_cap=0
+  max_first_degree=280 at P10+GW (two-block splice)
+  smallest_negative_margin=-1.30202902e-05 at covering 12->168, degree=63
+  first-degree histogram top=[(159, 1), (115, 1), (65, 1), (280, 1), (124, 1), (64, 1), (63, 1), (38, 1), (106, 1)]
+  first-degree buckets={'030-039': 1, '060-069': 3, '100-109': 1, '110-119': 1, '120-129': 1, '150-159': 1, '280-289': 1}
+  zero-safe rows:
+    AP (AP/GW equality)
+    GW 12->24 (AP/GW equality)
+
+[summary] one-swap AP bank through add<=180
+  rows=2171 zero_safe=1 positive_safe=2170
+  Fejer PSD-vector hits=2170 misses_at_cap=0
+  max_first_degree=266 at drop(6)->63 (one-swap AP bank)
+  smallest_negative_margin=-1.30202902e-05 at drop(12)->168, degree=63
+  first-degree histogram top=[(23, 150), (34, 126), (48, 113), (71, 105), (49, 99), (47, 91), (33, 89), (36, 85), (35, 73), (26, 70), (32, 66), (50, 64), (25, 64), (37, 62), (60, 57), (46, 51)]
+  first-degree buckets={'010-019': 120, '020-029': 391, '030-039': 672, '040-049': 467, '050-059': 198, '060-069': 134, '070-079': 143, '080-089': 11, '090-099': 13, '100-109': 5, '110-119': 6, '120-129': 5, '130-139': 3, '150-159': 1, '260-269': 1}
+  zero-safe rows:
+    drop(12)->24 (one-swap AP bank)
+
+[3] Full HYP-2963-bank Fejer scan rows=21913
+    progress 5000/21913 elapsed=23.8s hits=4998 misses=0 max_first_degree=280
+    progress 10000/21913 elapsed=46.2s hits=9998 misses=0 max_first_degree=280
+    progress 15000/21913 elapsed=69.4s hits=14998 misses=0 max_first_degree=280
+    progress 20000/21913 elapsed=92.8s hits=19998 misses=0 max_first_degree=280
+[summary] HYP-2963 packet bank
+  rows=21913 zero_safe=2 positive_safe=21911
+  Fejer PSD-vector hits=21911 misses_at_cap=0
+  max_first_degree=280 at P10+GW (named-frontier)
+  smallest_negative_margin=-3.36091433e-07 at two drop(12, 13)->add(14, 29), degree=41
+  first-degree histogram top=[(29, 1072), (30, 898), (31, 815), (28, 813), (26, 810), (35, 759), (27, 724), (34, 722), (33, 720), (32, 681), (36, 679), (23, 676), (37, 639), (19, 617), (16, 611), (25, 566)]
+  first-degree buckets={'010-019': 2819, '020-029': 6419, '030-039': 6971, '040-049': 3457, '050-059': 1340, '060-069': 504, '070-079': 247, '080-089': 69, '090-099': 42, '100-109': 16, '110-119': 7, '120-129': 7, '130-139': 7, '140-149': 3, '150-159': 1, '260-269': 1, '280-289': 1}
+  zero-safe rows:
+    AP (named-frontier)
+    GW 12->24 (named-frontier)
+
+[4] Hardest Fejer certificates (top 20)
+  row                                        family           degree        safe       width          qform invisible
+  P10+GW                                     named-frontier      280       1/980      1/1960 -0.00095929484 ()
+  single swap 6->63                          single-swap         266       1/294      1/1176 -0.00023555141 ()
+  near/K33 12->36                            named-frontier      159      1/1260      1/2520 -0.000237712661 ()
+  two drop(6, 9)->add(18, 23)                two-swap            148   373/45864       1/588 -0.00345015137 ()
+  two drop(6, 10)->add(30, 34)               two-swap            144 1211/109395      5/2856 -0.00108372122 ()
+  two drop(6, 10)->add(30, 35)               two-swap            140 14983/1261260       1/539 -0.00108479935 ()
+  two drop(6, 10)->add(20, 34)               two-swap            137   619/92820      5/2856  -0.0029813874 ()
+  single swap 6->34                          single-swap         136     29/4641      5/2856 -0.000750978264 ()
+  two drop(6, 10)->add(20, 35)               two-swap            135   262/35035       1/539 -0.00173454312 ()
+  two drop(10, 12)->add(24, 30)              two-swap            135   263/48510       1/588 -0.000758656656 ()
+  single swap 6->35                          single-swap         135   181/28028       1/539 -0.00125728596 ()
+  single swap 6->86                          single-swap         134 1249/258258       1/728 -0.000121741541 ()
+  two drop(6, 9)->add(18, 28)                two-swap            130 8263/504504      5/1848 -0.00276200936 ()
+  two drop(4, 6)->add(17, 19)                two-swap            127     37/9044      3/1904   -0.004589174 ()
+  P10+K33                                    named-frontier      124      4/2205      1/1960 -0.000603075538 ()
+  single swap 6->178                         single-swap         120 3503/534534       1/728 -0.000371211097 (178,)
+  single swap 6->167                         single-swap         120 6467/1003002       1/728 -0.000371211097 (167,)
+  single swap 6->161                         single-swap         120 6173/966966       1/728 -0.000371211097 (161,)
+  single swap 6->155                         single-swap         120 5879/930930       1/728 -0.000371211097 (155,)
+  single swap 6->121                         single-swap         120   383/66066       1/728 -0.000371211097 (121,)
+
+[5] Tournament Analysis
+  vertices are proof carriers/Fourier packets, not runners.
+  pair observable:
+    retention of cover predicate, phase information, certificate
+    concreteness, packet compatibility, exactness path, and
+    anti-scalarization.
+  switch/gauge:
+    majority over the six retention coordinates; ties follow the displayed
+    Hamiltonian path.
+  Hamiltonian path:
+    exact_nonnegative_function > Toeplitz_PSD_cone > Fejer_center_certificate > divisor_curried_Fourier_fibers > HYP2973_count_distribution > HYP2972_twist_ladder > endpoint_lift_packets > raw_safe_interval > raw_runner_set
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 4: 2, 5: 2, 7: 1, 8: 1} c3=2 leaders=('exact_nonnegative_function', 'Toeplitz_PSD_cone', 'endpoint_lift_packets', 'Fejer_center_certificate')
+
+[6] Theorem-facing readout
+  Necessary condition:
+    Every strict counterexample must pass all finite Toeplitz PSD tests for
+    F_S=C_S-1.  A negative Fejer quadratic form is a concrete dual witness.
+  Current finite-bank evidence:
+    all 21911 positive HYP-2963 packet-bank rows audited here have a Fejer PSD violation by degree <= 280.
+    positive misses at cap 512: 0
+    AP/GW remain zero-safe equality atoms, as expected.
+  Proof target:
+    Fourier-Toeplitz packet gate.  Outside AP/GW, a packet should expose
+    either a bounded-degree divisor-curried Toeplitz violation, a
+    HYP-2973 count-dual, or a labelled C27/K33/state-lift obstruction.
+  Important caveat:
+    This script gives floating Fejer-vector certificates, not exact
+    interval-arithmetic proof objects and not true first eigenvalue degrees.
+    The next formal step is to interval-enclose the reported negative
+    trigonometric sums row-family-wise.

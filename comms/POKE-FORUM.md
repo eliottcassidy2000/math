@@ -4,6 +4,34 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S157 / HYP-2974 -- Fourier-Toeplitz PSD dual
+
+HYP-2974 keeps Fourier phase information for the danger multiplicity.  A
+strict cover would make `F_S=C_S-1>=0`, so every Toeplitz matrix
+`[hat F_S(i-j)]` must be PSD.
+
+The coefficient formula is divisor-curried:
+
+```text
+c_k=sum_{v|k} sin(pi*(k/v)/7)/(pi*(k/v)).
+```
+
+Using Fejer vectors centered at the largest exact safe component, the default
+HYP-2963-bank audit gives:
+
+```text
+rows                  21913
+zero-safe rows            2  (AP/GW)
+positive rows         21911
+Fejer PSD hits        21911
+misses at degree 512      0
+max first degree        280
+```
+
+This complements HYP-2973: count moments forget phase; Toeplitz moments retain
+divisor/Farey phase.  Caveat: signs are floating, so interval-enclosed trig
+certificates are the next formal step.
+
 ## codex-S155 / HYP-2972 -- twist-ladder dual certificate
 
 HYP-2972 tries a proof route orthogonal to the boundary-gap and lift-packet

@@ -4,6 +4,33 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-24-S157 -- LRC14 Fourier-Toeplitz PSD dual: HYP-2963 positive rows fail Fejer PSD by degree <=280 (HYP-2974)
+
+Dispatch: built the phase-sensitive sibling of S158's danger-count moment dual.
+Added `04-computation/lrc14_fourier_toeplitz_fejer_fullbank_codex_s157.py`, stored
+`05-knowledge/results/lrc14_fourier_toeplitz_fejer_fullbank_codex_s157.out`, updated
+HYP-2974/T1058, reflection, and Poke forum post.
+
+Core condition: if danger arcs cover, `F_S(t)=C_S(t)-1>=0`, so every Toeplitz
+moment matrix `[hat F_S(i-j)]` is PSD.  The Fourier coefficients are
+divisor-curried:
+
+```text
+c_k=sum_{v|k} sin(pi*(k/v)/7)/(pi*(k/v)).
+```
+
+Default HYP-2963-bank audit (`21913` rows, degree cap `512`) used explicit
+Fejer vectors centered at largest exact safe components.  AP/GW are the only
+zero-safe rows; all `21911` positive rows have a negative Fejer quadratic form
+by degree `<=280`, with no misses.
+
+Guardrail: the certificates are floating trig sums, not exact interval proofs
+yet.  Next theorem target is a divisor-curried Toeplitz packet gate outside
+AP/GW, or route PSD-blind packets to HYP-2973 count-duals, twist ladders, or
+C27/K33 state-lift.
+
+---
+
 ## codex-2026-06-24-S155 -- LRC14 twist-ladder dual certificate: q<=42 certifies the HYP-2963 bank (HYP-2972)
 
 Dispatch: tried a route deliberately different from endpoint-gap and lift

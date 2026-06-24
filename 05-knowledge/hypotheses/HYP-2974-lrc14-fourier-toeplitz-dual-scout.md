@@ -1,9 +1,12 @@
 ---
 id: HYP-2974
-title: LRC14 Fourier-Toeplitz dual scout and PSD refinement
-status: PROOF-INTERFACE / harmonic dual necessary condition with degree-160 refinement; not a proof
+title: LRC14 Fourier-Toeplitz dual scout, PSD refinement, and Fejer full-bank extension
+status: PROOF-INTERFACE / harmonic dual necessary condition with degree-280 Fejer full-bank extension; not a proof
 source: codex-2026-06-24-S157 + codex-2026-06-24-S156
 related:
+  - HYP-2977
+  - HYP-2976
+  - HYP-2975
   - HYP-2973
   - HYP-2972
   - HYP-2971
@@ -29,16 +32,21 @@ results:
   - 05-knowledge/results/lrc14_fourier_toeplitz_dual_scout_codex_s156.out
   - 04-computation/lrc14_fourier_toeplitz_psd_dual_codex_s157.py
   - 05-knowledge/results/lrc14_fourier_toeplitz_psd_dual_codex_s157.out
+  - 04-computation/lrc14_fourier_toeplitz_fejer_fullbank_codex_s157.py
+  - 05-knowledge/results/lrc14_fourier_toeplitz_fejer_fullbank_codex_s157.out
 ---
 
-# HYP-2974: LRC14 Fourier-Toeplitz Dual Scout And PSD Refinement
+# HYP-2974: LRC14 Fourier-Toeplitz Dual Scout, PSD Refinement, And Fejer Full-Bank Extension
 
 This hypothesis fills the S157 Fourier-Toeplitz PSD stub with the S156
-computation.  It is the Fourier/Toeplitz member of the current
+computation and the later S157 full-bank Fejer extension.  It is the Fourier/Toeplitz member of the current
 dual-certificate cluster, alongside HYP-2970 endpoint-credit winding cycles, HYP-2971
 multiplicity-moment barriers, HYP-2972 twist ladders, and HYP-2973
-danger-count moment duals.  Instead of classifying the residual first, look
-directly at the covering formulation.
+danger-count moment duals.  After rebasing over HYP-2977, distinguish the two
+Fourier lanes this way: HYP-2974 tests the nonnegativity forced by danger-cover
+via Toeplitz moments of `C_S-1`, while HYP-2977 tests positive strict-safe mass
+through Fourier/Fejer shadows of `1_U`.  Instead of classifying the residual
+first, HYP-2974 looks directly at the covering formulation.
 
 For a speed set `S`, define the danger multiplicity
 
@@ -136,6 +144,54 @@ invisible to the full named-row Toeplitz test: `12->36` turns negative at
 degree `101`, and `P10+GW` at degree `160`.  AP and GW still remain PSD to
 numerical precision on this range, as expected for closed boundary atoms.
 
+The S157 full-bank extension avoids NumPy and tests an explicit Fejer vector
+instead of computing eigenvalues.  For each positive-open row, choose a point
+`x` in the largest exact safe component and use
+
+```text
+p_j = exp(-2*pi*i*j*x) / sqrt(d+1),  0 <= j <= d.
+```
+
+Then
+
+```text
+Q_d(x) = c_0 + 2*sum_{k=1}^d (1-k/(d+1))*c_k*cos(2*pi*k*x)
+```
+
+is the Toeplitz quadratic form of that vector.  A negative value is still a
+valid PSD violation, though it is only one possible test vector and not the
+least eigenvalue.
+
+Default full-bank audit over the HYP-2963 labelled-packet bank:
+
+```text
+rows audited                 21913
+zero-safe rows               2
+positive-open rows           21911
+Fejer PSD-vector hits        21911
+misses at cap degree 512     0
+max first degree             280 at P10+GW
+```
+
+The named hard rows are now all hit by explicit Fejer vectors:
+
+```text
+near/K33 12->36       degree 159
+petal 10->20          degree 115
+petal 13->26          degree 65
+P10+GW                degree 280
+P10+K33               degree 124
+covering 12->84       degree 64
+covering 12->168      degree 63
+few-apex 6->14        degree 38
+few-apex 6->28        degree 106
+```
+
+This does not replace the eigen-scan.  It gives a stronger computational
+message for the labelled-packet bank: every positive row tested has an explicit
+trigonometric-square dual witness at modest degree, while AP/GW are exactly the
+two equality atoms.
+
 ## Proof Target
 
 A possible theorem shape is:
@@ -158,7 +214,10 @@ closed boundary atom or emits a retained K33/H=7 state-lift packet.
 ```
 
 Equivalently, every non-AP/GW row should have a finite negative Toeplitz
-section unless it routes to the HYP-2908/THM-572 endpoint.
+section unless it routes to the HYP-2908/THM-572 endpoint.  The full-bank
+Fejer audit sharpens the next formal task: replace floating evaluations of
+`Q_d(x)` by interval-enclosed trigonometric certificates, grouped by labelled
+packet family and endpoint-owner data.
 
 ## Tournament Analysis
 
@@ -197,4 +256,7 @@ Toeplitz certificate
 
 The next useful computation is to decode the negative eigenvectors into
 localized trigonometric squares and attach endpoint-owner labels at their
-mass concentration sites.
+mass concentration sites.  The Fejer full-bank extension offers a simpler
+parallel target: certify the explicit Fejer sums by interval arithmetic first,
+then use eigenvector localization only where the labelled packet theorem needs
+shorter or more structural witnesses.
