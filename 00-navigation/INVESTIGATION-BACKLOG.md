@@ -31,6 +31,33 @@ function carriers.
 **Next:** add `curried_call_signature` and `lost_coordinate_function` to
 HYP-2963 packet records, Fejer manifests, Ramanujan manifests, and
 residual-section templates.  Namespace: HYP-3002 / T1086 / LTI-152 / LTT-059.
+## Lead codex-2026-06-24-S170: dichotomy recursion mode atlas
+
+**Status:** SYNTHESIS / proof-carrier taxonomy complete (HYP-3004/T1088/LTI-154).
+User asked to go back through repo work on dichotomies: odd/even,
+positive/negative, addition/multiplication, `+1` versus `/2`, `*2` versus `+2`,
+and other recursion modes.  This pass integrates older parity ladder,
+orbit-functor, signed-LRC, treebolic, Collatz, triune-cycle, Mobius/totient,
+and H-loneliness recursion notes with the incoming HYP-3002 curried packet
+functional tower, HYP-3003 summand/multiplicand Farey-basis merge,
+HYP-2998/HYP-2999/HYP-3000/HYP-3001, and LTI-151 smoothing work.
+**Readout:** `04-computation/dichotomy_recursion_mode_atlas_codex_s170.py`
+stores output in
+`05-knowledge/results/dichotomy_recursion_mode_atlas_codex_s170.out`.  The
+scout treats the binary splits as quotient guardrails: each must say which
+predicate it preserves, which coordinate it destroys, and what recursion law it
+uses.  Tournament Analysis over proof carriers is transitive with path
+`additive_pair_sum_face > sign_cut > triune_fraction_recursion > parity_fold >
+zeckendorf_path_normal_form > smoothing_switchboard > dyadic_doubling_tree >
+farey_product_scheduler > multiplicative_unit_orbit > farey_sum_affine_check >
+collatz_affine_halving > plus_two_line_motion`.
+**Next:** add six fields to the HYP-2963 packet bank:
+`parity_block`, `sign_cut_status`, `additive_pair_sum_owner`,
+`multiplicative_unit_orbit`, `recursion_boundary_state`, and `smoothing_route`.
+Then test whether every hard non-AP/GW packet is classified by exactly one
+primary recursion mode plus named side-channel debts.
+Namespace: HYP-3004 / T1088 / LTI-154; companion to HYP-3002 / LTI-152 and
+the HYP-3003 / LTI-153 add/multiply fiber merge.
 
 ## Lead codex-2026-06-24-S169: Farey-Fibonacci additive-basis carrier
 

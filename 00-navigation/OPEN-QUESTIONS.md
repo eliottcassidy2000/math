@@ -1,5 +1,24 @@
 # Open Questions
 
+**OPEN-Q-108 S170 dichotomy-recursion addendum:** HYP-3004, companion to the
+HYP-3002 curried packet functional tower and HYP-3003 summand/multiplicand
+Farey-basis merge, reads the repo's
+odd/even, positive/negative, addition/multiplication, `+1` versus `/2`,
+`*2` versus `+2`, and sum/product/fraction/recursion themes as proof-carrier
+switchboards.  The safe form is `binary split + preserved predicate +
+destroyed coordinate + recursion law`.  The S170 script compares `12` carriers
+and gets a transitive proof-carrier tournament whose high-retention path starts
+with additive pair-sum ownership, sign cuts, and triune fraction recursion, then
+passes through parity, Zeckendorf, smoothing, dyadic descent, Farey product
+scheduling, unit orbits, affine Farey sums, Collatz halving, and plus-two line
+motion.  Live task: add `parity_block`, `sign_cut_status`,
+`additive_pair_sum_owner`, `multiplicative_unit_orbit`,
+`recursion_boundary_state`, and `smoothing_route` to HYP-2963 packet records,
+then prove or refute that each hard non-AP/GW packet has one primary recursion
+mode plus named side-channel debts. -> HYP-3004, HYP-3003, HYP-3002, HYP-3001, HYP-3000,
+HYP-2999, HYP-2998, HYP-2963, HYP-2262, HYP-2238, HYP-2134, HYP-2091,
+LTI-152, LTI-153, LTI-154.
+
 **OPEN-Q-108 S168 residual-section packet-grid addendum:** HYP-2996 turns the
 current F7 language into an executable missing-section predicate over the
 HYP-2963 packet bank and HYP-2989 Haar-product grid.  Packet routes now map to

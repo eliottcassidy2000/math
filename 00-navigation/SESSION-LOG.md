@@ -45,6 +45,36 @@ runner_movie_tournament_shadow > raw_scalar_evaluation`.
 Added LTI-152, LTT-059, T1086, a reflection, and a POKE forum post.  Next
 classifier fields: `curried_call_signature` and `lost_coordinate_function` in
 HYP-2963 packet records and Fejer/Ramanujan manifests.
+## codex-2026-06-24-S170 -- dichotomy recursion mode atlas (HYP-3004/T1088/LTI-154)
+
+User asked to revisit repo work around dichotomies: odd/even,
+positive/negative, addition/multiplication, `+1` versus `/2`, `*2` versus
+`+2`, and other recursion modes.  Pulled the older parity ladder,
+orbit-functor rigidity, signed-LRC, treebolic `+2`/`*2`, Collatz affine
+halving, triune-cycle, Mobius/totient, and H-loneliness recursion notes into
+the recent HYP-3002 curried packet functional tower,
+HYP-2998/HYP-2999/HYP-3000/HYP-3001/Farey, and LTI-151 smoothing stack.
+
+Added `04-computation/dichotomy_recursion_mode_atlas_codex_s170.py` and stored
+`05-knowledge/results/dichotomy_recursion_mode_atlas_codex_s170.out`.  The
+script treats `12` dichotomy/recursion modes as proof carriers rather than
+runners, with observables `retained_address`, `quotient_guardrail`,
+`lrc_transfer`, `recursion_depth_control`, `side_channel_exposure`,
+`proof_maturity`, and `unification_breadth`.  The quotient rule is: every
+dichotomy must state its binary split, preserved predicate, destroyed
+coordinate, and recursion law.
+
+Tournament Analysis is transitive with high-retention path
+`additive_pair_sum_face > sign_cut > triune_fraction_recursion > parity_fold >
+zeckendorf_path_normal_form > smoothing_switchboard > dyadic_doubling_tree >
+farey_product_scheduler > multiplicative_unit_orbit > farey_sum_affine_check >
+collatz_affine_halving > plus_two_line_motion`.  Created HYP-3004/T1088 and
+added LTI-154 as the mode-switch companion to HYP-3002/LTI-152 and the HYP-3003/LTI-153 summand/multiplicand subcase.  Next concrete finite check: add `parity_block`,
+`sign_cut_status`, `additive_pair_sum_owner`, `multiplicative_unit_orbit`,
+`recursion_boundary_state`, and `smoothing_route` to HYP-2963 packet records,
+then classify hard non-AP/GW packets by one primary recursion mode plus named
+side-channel debts.
+
 ## codex-2026-06-24-S169 -- Farey-Fibonacci additive-basis carrier (HYP-2998/T1083)
 
 User asked to merge prior work on Fermat polygonal numbers, Goldbach/ternary

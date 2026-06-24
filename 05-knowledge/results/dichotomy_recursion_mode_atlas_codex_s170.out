@@ -1,0 +1,148 @@
+DICHOTOMY / RECURSION MODE ATLAS S170
+========================================================================
+Status: synthesis scout; not a proof.
+Vertex set: proof carriers / recursion modes, not runners.
+Pairwise observable: retained_address, quotient_guardrail, lrc_transfer, recursion_depth_control, side_channel_exposure, proof_maturity, unification_breadth
+Gauge: coordinate majority over the observable vector.
+Tie Hamiltonian path: sign_cut > parity_fold > additive_pair_sum_face > multiplicative_unit_orbit > dyadic_doubling_tree > plus_two_line_motion > farey_sum_affine_check > farey_product_scheduler > zeckendorf_path_normal_form > collatz_affine_halving > triune_fraction_recursion > smoothing_switchboard
+
+[sign_cut]
+  dichotomy: positive/negative
+  recursion: epsilon_i in {+1,-1}; opposite signs turn differences into sums
+  preserves: observer loneliness M is invariant, while pair clocks expose cut edges
+  destroys if scalarized: pair-sum shell partners and zero clocks
+  anchors: signed-lrc-theory-sign-is-a-cut-and-the-worryset-splits-s699.md; T764
+  feature vector: {'retained_address': 5, 'quotient_guardrail': 5, 'lrc_transfer': 5, 'recursion_depth_control': 3, 'side_channel_exposure': 5, 'proof_maturity': 5, 'unification_breadth': 4}
+
+[parity_fold]
+  dichotomy: odd/even
+  recursion: odd is unit-propagating; even is the first 2-adic projection defect
+  preserves: 2-adic depth, unit/nonunit shell split, clean/wall geometry
+  destroys if scalarized: CRT block where doubling stops being an automorphism
+  anchors: lrc-parity-ladder-proof-program-s576.md; lrc-orbit-functor-rigidity-s590.md
+  feature vector: {'retained_address': 5, 'quotient_guardrail': 5, 'lrc_transfer': 5, 'recursion_depth_control': 4, 'side_channel_exposure': 4, 'proof_maturity': 4, 'unification_breadth': 5}
+
+[additive_pair_sum_face]
+  dichotomy: addition/multiplication
+  recursion: a+b=D creates denominator pincers and shell-partner clocks
+  preserves: endpoint owners, pair-sum denominators, additive witness resolution
+  destroys if scalarized: unit-orbit product structure and local factor labels
+  anchors: THM-401; lrc-the-pair-sum-sieve-modulus-is-2n-1-an-identity-s590.md
+  feature vector: {'retained_address': 5, 'quotient_guardrail': 5, 'lrc_transfer': 5, 'recursion_depth_control': 3, 'side_channel_exposure': 5, 'proof_maturity': 5, 'unification_breadth': 5}
+
+[multiplicative_unit_orbit]
+  dichotomy: multiplication/addition
+  recursion: unit multiplication transports witnesses inside a residue orbit
+  preserves: unit-shell visibility, CRT localization, orbit functor action
+  destroys if scalarized: observer-coupled additive folds and endpoint labels
+  anchors: lrc-orbit-functor-rigidity-s590.md; HYP-3001
+  feature vector: {'retained_address': 5, 'quotient_guardrail': 4, 'lrc_transfer': 5, 'recursion_depth_control': 4, 'side_channel_exposure': 3, 'proof_maturity': 4, 'unification_breadth': 5}
+
+[dyadic_doubling_tree]
+  dichotomy: *2/+2
+  recursion: n -> 2n is vertical descent in the 2-adic tree
+  preserves: valuation depth, shell descent, phase plateau after first gate
+  destroys if scalarized: horizontal archimedean ordering and plus-two ruler weave
+  anchors: the-line-and-the-trees-why-N-has-plus2-and-times2-the-adelic-treebolic-geometry-s547o.md; lrc-h-loneliness-recursion-s505.md
+  feature vector: {'retained_address': 4, 'quotient_guardrail': 4, 'lrc_transfer': 5, 'recursion_depth_control': 5, 'side_channel_exposure': 4, 'proof_maturity': 4, 'unification_breadth': 5}
+
+[plus_two_line_motion]
+  dichotomy: +2/*2
+  recursion: n -> n+2 is horocyclic line motion weaving through 2-adic levels
+  preserves: archimedean order, successor shell, additive progression
+  destroys if scalarized: clean valuation descent and multiplicative orbit closure
+  anchors: the-line-and-the-trees-why-N-has-plus2-and-times2-the-adelic-treebolic-geometry-s547o.md
+  feature vector: {'retained_address': 3, 'quotient_guardrail': 3, 'lrc_transfer': 3, 'recursion_depth_control': 3, 'side_channel_exposure': 3, 'proof_maturity': 3, 'unification_breadth': 5}
+
+[farey_sum_affine_check]
+  dichotomy: sum/product/power
+  recursion: (p+q)/q = 1+p/q preserves the true Farey order
+  preserves: exact M=p/q as an affine theorem-safe check
+  destroys if scalarized: branch family after the unit-excess gate
+  anchors: HYP-3001; HYP-3000; HYP-2999
+  feature vector: {'retained_address': 5, 'quotient_guardrail': 5, 'lrc_transfer': 4, 'recursion_depth_control': 3, 'side_channel_exposure': 3, 'proof_maturity': 4, 'unification_breadth': 4}
+
+[farey_product_scheduler]
+  dichotomy: product/sum
+  recursion: after e=14p-q=1, (p*q)/q=p routes p=1,2,>=3 packet families
+  preserves: unit-excess branch scheduler for q-parent, C27, K33/state-lift
+  destroys if scalarized: global order; product-value has many row-bank flips if used alone
+  anchors: HYP-3001-lrc14-farey-mutation-certificate-scheduler.md
+  feature vector: {'retained_address': 5, 'quotient_guardrail': 5, 'lrc_transfer': 5, 'recursion_depth_control': 4, 'side_channel_exposure': 4, 'proof_maturity': 4, 'unification_breadth': 4}
+
+[zeckendorf_path_normal_form]
+  dichotomy: abundance/uniqueness
+  recursion: no adjacent Fibonacci carries give a confluent path normal form
+  preserves: path-rank row fibers and carry-width debt
+  destroys if scalarized: smoothing entropy and product incidence
+  anchors: HYP-3000; summand-graph-fermat-zeckendorf.md
+  feature vector: {'retained_address': 5, 'quotient_guardrail': 5, 'lrc_transfer': 4, 'recursion_depth_control': 5, 'side_channel_exposure': 4, 'proof_maturity': 4, 'unification_breadth': 5}
+
+[collatz_affine_halving]
+  dichotomy: +1,/2
+  recursion: 3n+1 then divide by 2^k; formal logarithm turns +1 into bounded defect
+  preserves: valuation-drop recursion and iterated-linearization scale
+  destroys if scalarized: exact integer residue dependence under scalar drift models
+  anchors: collatz-iterated-log-tower.md; lrc-iterated-logs-are-the-inverse-hyperoperation-tower-s597.md
+  feature vector: {'retained_address': 4, 'quotient_guardrail': 4, 'lrc_transfer': 3, 'recursion_depth_control': 5, 'side_channel_exposure': 4, 'proof_maturity': 3, 'unification_breadth': 5}
+
+[triune_fraction_recursion]
+  dichotomy: sum/product/fraction/recursion
+  recursion: sum -> product -> fraction -> recursion -> next sum
+  preserves: boundary memory: owner, branch, lift, deletion, carry, route
+  destroys if scalarized: raw scalar and static sum-product shadows
+  anchors: triune-cycle-everywhere-s664.md; pi_sum_product_fraction_s662.py
+  feature vector: {'retained_address': 5, 'quotient_guardrail': 5, 'lrc_transfer': 4, 'recursion_depth_control': 5, 'side_channel_exposure': 5, 'proof_maturity': 4, 'unification_breadth': 5}
+
+[smoothing_switchboard]
+  dichotomy: global/local smoothing
+  recursion: packet route first, smoothing kernel second
+  preserves: which Fejer/Ramanujan/Kaczynski/large-sieve kernel may forget which label
+  destroys if scalarized: raw scalar smoothing route without endpoint/packet side channels
+  anchors: lrc14-smoothing-switchboard-codex-s164.md; LTI-151
+  feature vector: {'retained_address': 5, 'quotient_guardrail': 5, 'lrc_transfer': 5, 'recursion_depth_control': 4, 'side_channel_exposure': 5, 'proof_maturity': 4, 'unification_breadth': 4}
+
+SYNTHESIS
+========================================================================
+- odd/even: not mere parity; it decides whether doubling is an automorphism or a projection defect.
+- positive/negative: observer-blind but pair-visible; signs are cuts selecting difference or sum clocks.
+- addition/multiplication: addition creates folds, denominators, and endpoint pincers; multiplication transports along unit orbits and product shells.
+- +1,/2: affine residue noise becomes bounded after the right logarithmic coordinate; the valuation drop is the recursion counter.
+- *2,+2: doubling is vertical 2-adic descent; plus-two is horizontal line motion weaving through ruler-function depths.
+- sum/product/fraction/recursion: the stable grammar is projection repair: aggregate, factor, remember boundary, unroll to the next aggregate.
+
+LRC14 readout:
+- Keep exact M=p/q and e=14p-q before applying any Farey mutation.
+- Use product collapse p only after e=1; otherwise it is a false scalar quotient.
+- Treat signs as a side-channel cut, not as an observer witness.
+- Treat parity as the first CRT block where doubling may leak labels.
+- Route every packet by proof currency before picking a smoothing kernel.
+
+TOURNAMENT ANALYSIS
+========================================================================
+score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+scores:
+  additive_pair_sum_face: 11
+  sign_cut: 10
+  triune_fraction_recursion: 9
+  parity_fold: 8
+  zeckendorf_path_normal_form: 7
+  smoothing_switchboard: 6
+  dyadic_doubling_tree: 5
+  farey_product_scheduler: 4
+  multiplicative_unit_orbit: 3
+  farey_sum_affine_check: 2
+  collatz_affine_halving: 1
+  plus_two_line_motion: 0
+directed_3cycles: 0 []
+scc_sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+sccs: [['sign_cut'], ['parity_fold'], ['additive_pair_sum_face'], ['multiplicative_unit_orbit'], ['dyadic_doubling_tree'], ['plus_two_line_motion'], ['farey_sum_affine_check'], ['farey_product_scheduler'], ['zeckendorf_path_normal_form'], ['collatz_affine_halving'], ['triune_fraction_recursion'], ['smoothing_switchboard']]
+hamiltonian_path_count: 1
+one high-retention path: additive_pair_sum_face > sign_cut > triune_fraction_recursion > parity_fold > zeckendorf_path_normal_form > smoothing_switchboard > dyadic_doubling_tree > farey_product_scheduler > multiplicative_unit_orbit > farey_sum_affine_check > collatz_affine_halving > plus_two_line_motion
+
+Most useful next finite check:
+  Add six fields to the HYP-2963 packet bank:
+  parity_block, sign_cut_status, additive_pair_sum_owner,
+  multiplicative_unit_orbit, recursion_boundary_state, smoothing_route.
+  Then test whether every hard non-AP/GW packet is classified by exactly
+  one primary mode plus named side-channel debts.
