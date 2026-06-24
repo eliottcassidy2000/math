@@ -21752,3 +21752,65 @@ means identity-preservation; C27 "unit-visible" means gcd-one residue
 visibility.  Proof-order takeaway: angle normalization first, exact `M/q/Farey`
 second, C27 unit/nonunit shell transfer third, then pi/unital/flower analogy
 labels.  LRC14 remains open.
+
+## codex-2026-06-24-S141 -- regular-solid and Euclidean-tiling recursion carriers
+
+User asked for more POKE-style exploration aimed at LRC, now through Platonic,
+Archimedean, Johnson, and Euclidean regular-tiling analogies.  Pulled the
+current POKE baseline first; incoming S138-S140 work established the C27
+two-swap splice, triangular affine-depth carrier, and q=3 unital block-lift as
+the live frontier.
+
+Added `04-computation/lrc14_platonic_tiling_recursion_codex_s141.py` and
+stored `05-knowledge/results/lrc14_platonic_tiling_recursion_codex_s141.out`.
+The script records regular-map curvature data for the five Platonic solids,
+the zero-curvature plane tilings `{3,6}`, `{4,4}`, `{6,3}`, and the prompt's
+recursion labels.
+
+Main guardrails: square tilings self-recurse by Gaussian axis indices
+`m^2=4,9,16,25`; triangular tilings self-recurse on the Eisenstein lattice with
+dyadic spine `4,16,64,...`; the triangle/hex bridge has local index `6`; and
+hexagonal self-recursion by Eisenstein norm `N(3+omega)=7` gives
+`7,49,343,...`, which is distinct from centered-hex ring counts
+`7,19,37,...`.  Archimedean solids preserve one vertex-figure word and are
+local-quotient analogues; Johnson solids (`92`) are mixed-vertex finite
+residual-atlas analogues.
+
+Created HYP-2943 and reflection
+`07-reflections/lrc14-regular-solid-tiling-recursion-carrier-codex-s141.md`.
+Updated OPEN-Q-108, concept map, hypothesis/results indexes, and
+`comms/POKE-FORUM.md`.  Proof-order takeaway: classify residual packets as
+square self-dual, triangular dyadic, triangle-hex support-six, hex norm-7, or
+Johnson-like finite residual only after exact `M`/Farey and C27/unital labels
+are attached.  LRC14 remains open.
+
+## codex-2026-06-24-S144 -- Farey-perfect Kuratowski carrier
+
+User asked to keep posting POKE-style investigations, now revisiting perfect
+numbers, their `F_3`/`F_4` behavior, Farey numerator-denominator products, and
+the Kuratowski/Wagner distinction between graph densities and forbidden minors.
+
+Added `04-computation/lrc14_farey_perfect_kuratowski_codex_s144.py` and stored
+`05-knowledge/results/lrc14_farey_perfect_kuratowski_codex_s144.out`.  The
+script verifies the clean split:
+
+```text
+F_3: 2/3 -> K_{2,3}, product 6, planar perfect-product seed
+F_4: 3/4 -> K_{3,4}, product 12, first complete-bipartite K33 wall
+```
+
+Even perfect numbers give edge-load fractions
+`2^(r-1)/(2^r-1) -> K_{2^(r-1),2^r-1}`; after `2/3`, all such graphs are
+nonplanar only by inherited `K_{3,3}` containment.  A product-perfect scalar is
+too coarse because `1/N` has product `N`; the useful nontrivial lane is the
+Mersenne factor fraction.
+
+Created HYP-2946 and reflection
+`07-reflections/lrc14-farey-perfect-kuratowski-carrier-codex-s144.md`.
+Updated OPEN-Q-108, concept map, hypothesis/results indexes, and
+`comms/POKE-FORUM.md`.  Proof-order takeaway: mediant products are parent edge
+loads plus cross terms `ad` and `bc`, not graph averages; graph iteration is
+minor/subdivision transitivity.  For LRC14, keep exact `M`/Farey and C27/unital
+labels first, then route `p=1` to star parents, `p=2` to planar C27
+petal/two-block rigidity, and `p>=3` to a K33 packet or the HYP-2908/THM-572
+state lift.
