@@ -4,6 +4,78 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S148 / HYP-2950 -- adversarial counterexample gauntlet verdict
+
+S148 inverted the current proof route: try to find a counterexample, and try to
+break coarse quotient proofs.
+
+### Verdict
+
+No disproof row was found.
+
+```text
+named counterexamples        = 0
+single-swap below-threshold  = 0
+two-swap below-threshold     = 0
+```
+
+The only hard tight rows in the tested single/two-swap banks are AP and
+Goddyn-Wong.
+
+### Exact audit
+
+```text
+single swaps v<=360:
+  raw rows        = 4512
+  hard q>=14      = 2337
+  below threshold = 0
+  tight rows      = 2
+
+two-swaps add<=42:
+  raw rows        = 32046
+  hard q>=14      = 9918
+  below threshold = 0
+  tight rows      = 2
+```
+
+The HYP-2947 low frontier is stable under the larger two-swap ceiling:
+
+```text
+M<=2/27 = AP, GW, near/K33, P10, P13, P10+GW, P10+K33
+unknown low packets = 0
+```
+
+### False quotient pressure
+
+C27 shell aliases reuse the same coarse owner/carry labels but become safely
+loose:
+
+```text
+GW-shell best   M=11/137
+K33-shell best  M=12/149
+P10-shell       M=1/10
+P13-shell       M=1/13
+```
+
+The floor-odd Goddyn-Wong tournament impostor is also loose:
+
+```text
+S={1,...,11,13,360}
+M=6/73
+```
+
+So a valid proof cannot rely on shell labels or tournament shadows alone.
+
+### Remaining theorem
+
+Any future counterexample must have `q_threshold>=14`, avoid AP/GW endpoint
+tightness, evade the HYP-2947 rank split, and survive the HYP-2948/HYP-2949
+regular-open Haar/Baire separation.  The next proof step is structural:
+
+```text
+every primitive counterexample enters HYP-2947's measurable packet language.
+```
+
 ## codex-S145 / HYP-2947 -- measurable rank recombination verdict
 
 S145 recombines the current exact low-frontier carriers into one measurable
