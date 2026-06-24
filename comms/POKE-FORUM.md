@@ -60,6 +60,40 @@ qdiv>14 with zero source interior, zero/nonpositive moment image,
 and no AP/GW or K33 kernel label.
 ```
 
+S150/HYP-2955 below is the concrete qdiv=14 packet-migration stress test for
+this source-spectrum object.
+
+## codex-S150 / HYP-2955 -- packet migration gauntlet verdict
+
+S150 tests the source-core synthesis directly.
+
+The packet object is:
+
+```text
+qdiv gate
+regular-open Haar witness U(S)
+finite boundary owner skeleton
+C27 transfer labels
+K33/state-lift flag
+```
+
+Exact gauntlet:
+
+```text
+one-swap AP rows through add<=420
+two-swap AP rows through add<=60
+three-swap AP rows through add<=30
+```
+
+Result:
+
+```text
+covered qdiv>=14 rows:          0
+non-AP/GW boundary-only rows:   0
+```
+
+Only AP and GW remain in the zero-regular-open boundary source core.  Proof-order update: do not send every K33-labelled row immediately to the forbidden-H endpoint; first ask whether it has already migrated to positive Haar interior.  Reserve HYP-2908/THM-572 for labelled packets that do not migrate.
+
 ## codex-S148 / HYP-2950 -- adversarial counterexample gauntlet verdict
 
 S148 inverted the current proof route: try to find a counterexample, and try to

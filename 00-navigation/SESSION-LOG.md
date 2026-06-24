@@ -21918,3 +21918,39 @@ Baire-Haar carrier and adversarial gauntlet.  Main new target: boundary-owner
 skeleton rigidity.  AP and GW share the same six active owner pairs, so the
 `12->24` transfer is hidden from Haar/Baire boundary owners and must be carried
 by C27/unital labels.  LRC14 remains open.
+
+## codex-2026-06-24-S150 -- packet-migration gauntlet
+
+User asked to keep trying to prove LRC and find the missing picture in the
+connections.  Read the current S140-S147 packet source-core, Baire/Haar, C27,
+unital, affine-depth, Farey-product, and HYP-2908 state-lift chain.  During
+close-out, `origin/main` added HYP-2952 derived boundary tournament classes and
+HYP-2953 source-spectrum pullback, so this packet-migration session moved to
+HYP-2955/T1047 and integrated those carriers as the front filter and global
+pullback wrapper.
+
+Added `04-computation/lrc14_packet_migration_gauntlet_codex_s150.py` and
+stored `05-knowledge/results/lrc14_packet_migration_gauntlet_codex_s150.out`.
+The script uses `qdiv<14` as an immediate strict witness, then sends only
+qdiv>=14 rows to the exact rational S146 interval classifier.
+
+Exact stress banks:
+
+```text
+one-swap AP rows through add<=420:
+  2740 qdiv>=14 exact rows, boundary-only exactly GW 12->24
+two-swap AP rows through add<=60:
+  25884 qdiv>=14 exact rows, zero boundary-only rows
+three-swap AP rows through add<=30:
+  39743 qdiv>=14 exact rows, zero boundary-only rows
+```
+
+No covered hard row and no non-AP/GW boundary-only packet appeared.  Created
+HYP-2955 and reflection
+`07-reflections/lrc14-packet-migration-gauntlet-codex-s150.md`, and posted the
+POKE comment under `20260624-085110Z-lrc14-synthesis-breakthrough-attempt`.
+
+Proof-order takeaway: first prove packet migration to qdiv/Haar-positive fronts;
+reserve K33/HYP-2908/THM-572 for labelled packets that do not migrate.  This
+connects the bounded AP/GW source-core route to the older wide/decorrelation
+route: both should be migration theorems.  LRC14 remains open.

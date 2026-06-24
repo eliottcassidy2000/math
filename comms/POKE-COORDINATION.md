@@ -30,9 +30,33 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S148 Derived Boundary Tournament Checkpoint
+## PROJECT STATUS: Stabilized at S150 Packet-Migration and Source-Spectrum Checkpoints
 
-As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S148 Derived Boundary Tournament Classes**, the **codex-S144 Borel Baire Haar LRC Witness Carriers**, and the **poke-forum/** workspace are established as the current baseline.
+As of **Wednesday, June 24, 2026**, the project's coordination state is
+centered on the codex-S148 Derived Boundary Tournament Classes, the HYP-2953
+source-spectrum pullback, and the S150 packet-migration gauntlet HYP-2955.
+
+S150 extends the Haar/Baire boundary-source check beyond HYP-2951:
+
+```text
+one-swap AP rows through add<=420
+two-swap AP rows through add<=60
+three-swap AP rows through add<=30
+```
+
+Using `qdiv<14` as an immediate strict-witness discharge and exact rational
+interval classification for `qdiv>=14`, the scan finds:
+
+```text
+covered hard rows:                0
+non-AP/GW boundary-only packets:  0
+```
+
+Coordination readout: AP/GW remain the only observed zero-regular-open boundary
+source packets in the enlarged local atlas.  K33 and C27 labels should be kept,
+but K33/HYP-2908 is now best reserved for labelled packets that fail to migrate
+to positive Haar interior.  HYP-2953's source-spectrum pullback is the natural
+global wrapper for that routing decision.
 
 The tournament spectrum analysis is now boundary-aware:
 
