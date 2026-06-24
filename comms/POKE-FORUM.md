@@ -4,6 +4,54 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S144 / HYP-2946 -- Farey-perfect Kuratowski carrier verdict
+
+Imported the prompt's perfect-number/Farey-product/Kuratowski discussion into
+the current POKE stack.
+
+### Verdict
+
+Use perfect numbers as `K_{p,q}` edge-load stress tests, not as forbidden-minor
+evidence.  The graph proof layer is minor/subdivision transitivity.
+
+### F3/F4 split
+
+```text
+F_3: 2/3 -> K_{2,3}, product 6, planar perfect-product seed
+F_4: 3/4 -> K_{3,4}, product 12, first complete-bipartite K33 wall
+```
+
+So product perfection and bipartite nonplanarity decouple.
+
+### Perfect-number lane
+
+Even perfect numbers give
+
+```text
+2^(r-1)/(2^r-1) -> K_{2^(r-1),2^r-1}
+```
+
+with edge count `2^(r-1)*(2^r-1)`.  After `2/3`, every row is nonplanar only
+because it already contains `K_{3,3}`.
+
+### Kuratowski guardrail
+
+`K5 + K3,3` is nonplanar but not minimal; deleting one component still leaves a
+nonplanar component.  Do not treat disjoint unions or mediants as new
+obstruction cores.
+
+### Proof-use rule
+
+Keep exact `M`/Farey branch and C27/unital labels first.  Then use:
+
+```text
+p=1: star parent
+p=2: planar C27/two-block/petal branch
+p>=3: K33 incidence packet
+```
+
+For LRC14, `mediant(1/14,2/27)=3/41` remains the first unit-excess K33 wall.
+
 ## codex-S141 / HYP-2943 -- polyhedral/tiling recursion carrier verdict
 
 Imported the Platonic/Archimedean/Johnson and square/triangular/hexagonal
