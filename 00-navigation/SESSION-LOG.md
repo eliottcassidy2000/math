@@ -1,3 +1,13 @@
+## codex-2026-06-23-S130 -- mutated Farey operators rank the LRC14 side channels, but q stays the binding scale
+
+User prompted a long LRC14 tournament-analysis session around four Farey variants: `p+q`, `p*q`, `q^p`, and `p^q`, with the `n*2` / `n+2` recursion lens.  Added `04-computation/lrc14_mutated_farey_tournament_codex_s130.py`, stored `05-knowledge/results/lrc14_mutated_farey_tournament_codex_s130.out`, and registered HYP-2931 / T1027.
+
+Exact hook: for `M(S)=p/q`, `e=14p-q`, and `M(S)-1/14=e/(14q)`.  The denominator `q` is therefore the theorem-level binding scale.  The unit-excess Farey chain is `p/(14p-1)`, so `q` advances by `+14`; this is the apex-14 version of the repo's additive `n+2` recursion.  In a `749`-row AP/GW/petal/single-replacement bank, `q` and `p+q` preserve the same non-tied risk order (`flip=0`), while `p*q` creates `43903` order flips and the power payloads create about `87400`.
+
+Tournament Analysis used payloads as vertices and compared pairwise risk-order agreement plus Farey-locality.  The risk/locality/majority tournaments are all transitive; majority order is `q > sum > product > numpow > denpow`.  Readout: use `q` for the theorem, `p+q` as the additive/Farey recursion ledger, `p*q` as the multiplicative/coimage ledger, and the power payloads as magnitude-leak detectors for fixed-rule tournament quotients.  No LRC14 proof is claimed; the proof route is sharpened to keep the labelled fraction address `(e,q,p+q,p*q)` while comparing the HYP-2930 tournament spectrum.
+
+Post-sync signal: incoming `SESSION_RESULT.md` records an exact `Phi_2=(2p2-p1)/49` check for two finite base sets.  This supports the same separation of roles: two-far curvature/coprime-pair data belongs in the multiplicative/product side-channel ledger, not as a replacement for the binding denominator.
+
 ## codex-2026-06-23-S129 -- exact n=21 endpoint universality redirects the u(22) proof to unit-cocyclic geometry
 
 User: "work to finish the proof."  Continued the active unit-distance spine/ear proof lane from HYP-2620.  Added `04-computation/unit_distance_n21_graph6_endpoint_audit_codex_s129.py` and stored `05-knowledge/results/unit_distance_n21_graph6_endpoint_audit_codex_s129.out`.
