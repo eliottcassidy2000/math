@@ -258,6 +258,7 @@ record what it destroys before asking it to prove anything.
 | LTI-145 | Coimage wall-address atlas | Projective coimage classes, signed wall mass, low-height relations | Route signed residual tails by class before taking absolute bounds | HYP-2617, HYP-2618, HYP-2619, HYP-2626 | Attach coimage class IDs to Ramanujan/exact-period and Haar residual packets. |
 | LTI-146 | Namespace collision audit | Hypothesis/tangent IDs, filenames, anchors, claimed packets | Prevent research pointers from identifying the wrong quotient or theorem after concurrent pushes | CONCURRENT-SESSIONS.md, duplicate HYP-2992 signal | Add a small audit script/report for duplicate frontmatter IDs and reused tangent numbers. |
 | LTI-147 | Cocycle normal form | Cocycle channels / proof obligations in the LRC packet complex | Every forgotten coordinate must descend, become a coboundary, be dual-annihilated, or route to a named residual class | HYP-2997, HYP-2996, HYP-2995, HYP-2994, HYP-2992, HYP-2991, HYP-2990, THM-572 | Build HYP-2963 packet-level cocycle ledgers and tag every low-frontier row by first nonzero class. |
+| LTI-148 | Residual-section packet grid | Residual sections and Haar-product exits | Make F7 executable by requiring hard non-AP/GW packets to have owner-strip, cross-handoff, or nested-refinement exits | HYP-2996, HYP-2963, HYP-2989, HYP-2995 | Lift the bounded section map into family templates and Fejer/Ramanujan certificate manifests. |
 
 ## Cross-Cutting Guardrails
 
@@ -305,6 +306,7 @@ record what it destroys before asking it to prove anything.
 | LTI-TODO-21 | Binding-pair switch tournament for covering rows | LTI-031, LTI-050, LTI-144, LTI-145 |
 | LTI-TODO-22 | Product-rule irreducibility no-lift compression test | LTI-107, LTI-136, LTI-137, LTI-139 |
 | LTI-TODO-23 | Packet-level first-nonzero cocycle ledger | LTI-044, LTI-046, LTI-056, LTI-147 |
+| LTI-TODO-24 | Familywise residual-section templates for HYP-2996 | LTI-047, LTI-107, LTI-109, LTI-148 |
 
 ## Minimal Entry Template
 

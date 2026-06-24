@@ -27,10 +27,10 @@ Namespace: HYP-2998 / T1083.
 **Status:** NAVIGATION / compact registry expanded.  User asked to get even more
 creative, look back through the many tournament, metagraph, related-series, and
 carrier methods, and bring back as many techniques as possible for LRC agents.
-`00-navigation/LRC-TECHNIQUE-INDEX.md` now has `146` compact `LTI-*` rows plus
+`00-navigation/LRC-TECHNIQUE-INDEX.md` now has `148` compact `LTI-*` rows plus
 the existing `64` long-form S166 technique-bank entries after merging the
 incoming `LTI-109` packet-cocycle atlas and `LTI-110` cocycle-obstruction atlas.
-**New promoted block:** `LTI-111..LTI-146` promotes deck derivatives,
+**New promoted block:** `LTI-111..LTI-148` promotes deck derivatives,
 Burnside orbit taxes, merged metagraph transport, good-cut/SCC
 gas, OCF coimage sectors, noncommutative Redei/Berge recurrences, GLMY
 path-homology witnesses, heap/tableau/sorting-network carriers, transfer-matrix
@@ -44,23 +44,36 @@ tournaments, coimage wall atlases, and namespace collision auditing.
 frontmatter/anchor situation as a namespace-collision signal, not something to
 silently overwrite.  The new `LTI-146` and `LTI-TODO-16` ask for an audit and
 repair plan so future citations point to the intended quotient/proof object.
-**Next:** build the `LTI-TODO-13..22` artifacts, starting with packet-cocycle
+**Next:** build the `LTI-TODO-13..24` artifacts, starting with packet-cocycle
 formalization, the executable F7 cocycle residual record, a finite cocycle-sheaf
 obstruction matrix over HYP-2963 packets, an F0-F7 residual metagraph Laplacian,
-and a binding-pair switch tournament for covering rows.
+and a binding-pair switch tournament for covering rows.  `LTI-148` adds the
+residual-section packet grid from HYP-2996 as the executable F7 missing-section
+interface.
 Namespace: T1078.
 ## Lead codex-2026-06-24-S168: residual section and packet-grid verification
 
-**Status:** RESERVED / executable audit in progress (HYP-2996/T1080).  User
-asked to work on residual section characterization and packet grid verification.
-This lane will make the current coordination claim auditable by defining named
-residual sections and attaching HYP-2963 packet representatives to HYP-2989
-Haar-product interaction classes.
-**Planned readout:** script
-`04-computation/lrc14_residual_section_packet_grid_codex_s168.py`, stored output
-`05-knowledge/results/lrc14_residual_section_packet_grid_codex_s168.out`.
-**Next:** replace this stub with computed section counts, grid class coverage,
-edge-case residual records, and Tournament Analysis over residual sections.
+**Status:** PROOF-INTERFACE / executable bounded audit complete
+(HYP-2996/T1080).  User asked to work on residual section characterization and
+packet-grid verification.  The script
+`04-computation/lrc14_residual_section_packet_grid_codex_s168.py` imports the
+HYP-2963 labelled-packet bank and the HYP-2989 Haar-product grid, then assigns
+each packet to a residual section and grid exit.
+**Readout:** default run audits `21913` packets.  It finds `7237` hard
+`q>=14` packets, `7235` hard non-AP/GW packets, all `7235` with an
+owner-strip/cross-handoff/nested-refinement grid exit, `0` zero-open hard
+non-AP/GW packets, `0` candidate F7 harmonic sections, and `0` validation
+errors.  Section counts: `direct_q_witness_section=14676`,
+`ap_gw_boundary_section=2`, `unit_petal_c27_strip_section=4`,
+`open_haar_witness_section=6040`, `covering_boundary_moment_section=1188`,
+and `k33_state_lift_section=3`.
+**Tournament Analysis:** vertices are residual sections / packet-grid exits,
+not runners.  The section tournament is transitive with
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, `directed_3cycles=0`,
+`SCC_sizes=[1,1,1,1,1,1,1]`, and `Hamiltonian_path_count=1`.
+**Next:** lift the bounded section map into family templates, then group
+Fejer/Ramanujan certificate manifests by residual section rather than scalar
+route label.
 Namespace: HYP-2996 / T1080.
 
 ## Lead codex-2026-06-24-S166: cocycle obstruction atlas for LRC14

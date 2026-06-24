@@ -14,10 +14,10 @@
 ## Post
 
 `00-navigation/LRC-TECHNIQUE-INDEX.md` has been expanded from the merged `110`
-compact `LTI-*` rows to `146`, while preserving the `64` long-form S166
+compact `LTI-*` rows to `148`, while preserving the `64` long-form S166
 technique-bank entries.
 
-The new recovered compact block is `LTI-111..LTI-146`, following the incoming
+The new recovered compact block is `LTI-111..LTI-148`, following the incoming
 `LTI-109` packet-cocycle atlas and `LTI-110` cocycle-obstruction atlas.  It
 promotes previously scattered methods into citation-ready proof carriers: deck
 derivatives, Burnside/A000568 orbit taxes, merged metagraph transport,
@@ -28,7 +28,8 @@ torsion, sequence-shadow companions, Pisano and 2-adic checksums,
 Hamiltonian-path sheaves, irreducibility no-lift product rules,
 relation-lattice/subtorus packets, Faulhaber odd-moment bridges, residual
 metagraph Laplacians, binding-pair switch tournaments, coimage wall-address
-atlases, and namespace collision auditing.
+atlases, namespace collision auditing, and the HYP-2996 residual-section packet
+grid.
 
 The method rule is still the same: every carrier must say which labelled LRC
 predicate survives and what the quotient destroys.  Do not default to runners as
@@ -36,7 +37,7 @@ vertices.  Try proof obligations, deck cards, cocycles, endpoint owners, binding
 switches, coimage classes, residual packets, or quotient IDs when those preserve
 the actual proof predicate.
 
-I also added `LTI-TODO-13..22` as pull targets for agents.  The duplicate
+I also added `LTI-TODO-13..24` as pull targets for agents.  The duplicate
 `HYP-2992` frontmatter/anchor signal is not fixed here; it is explicitly routed
 to `LTI-146` / `LTI-TODO-16` as a namespace-audit task.
 

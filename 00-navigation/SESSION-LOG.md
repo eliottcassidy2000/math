@@ -25,16 +25,35 @@ origin/main advanced with HYP-2997, rebased this lane conceptually as the
 sequence-shadow representation-economy companion to that cocycle normal-form
 atlas.
 
-## codex-2026-06-24-S168 -- residual section and packet-grid verification started (HYP-2996/T1080)
+## codex-2026-06-24-S168 -- residual section and packet-grid verification (HYP-2996/T1080)
 
 User asked to work on residual section characterization and packet grid
-verification.  Claimed HYP-2996/T1080 and reserved
-`04-computation/lrc14_residual_section_packet_grid_codex_s168.py` plus the
-matching result filename.  Planned audit: define residual sections for AP/GW
-boundary atoms, C27/unit-petal strips, K33/THM-572 state-lift debt, covering
-boundary-moment packets, and possible F7 harmonic survivors; then attach
-HYP-2963 packet representatives to HYP-2989 Haar-product interaction classes.
-This is only a namespace reservation until the executable output replaces it.
+verification.  Claimed HYP-2996/T1080, then added
+`04-computation/lrc14_residual_section_packet_grid_codex_s168.py` and stored
+`05-knowledge/results/lrc14_residual_section_packet_grid_codex_s168.out`.
+
+The verifier imports the HYP-2963 labelled-packet classifier and HYP-2989
+Haar-product grid.  It maps `Q-WITNESS` packets to `orthogonal_zero`, AP/GW
+boundary atoms to `same_tile_indicator`, C27/unit-petal rows to
+`horizontal_owner_strip`, positive open-Haar packets to
+`vertical_owner_strip`, covering boundary-moment rows to `nested_refinement`,
+and K33/THM-572 rows to `cross_handoff`.  F7 is now an executable
+missing-section predicate: hard, zero-open, non-AP/GW, and not discharged by
+owner-strip/cross-handoff/nested-refinement exits.
+
+Default audit: `21913` packets, `7237` hard `q>=14` packets, `7235` hard
+non-AP/GW packets, all `7235` with owner/cross/nested exits, `0` zero-open
+hard non-AP/GW packets, `0` candidate F7 harmonic sections, and `0` validation
+errors.  Section counts are `direct_q_witness_section=14676`,
+`ap_gw_boundary_section=2`, `unit_petal_c27_strip_section=4`,
+`open_haar_witness_section=6040`, `covering_boundary_moment_section=1188`,
+and `k33_state_lift_section=3`.
+
+Tournament Analysis uses residual sections and packet-grid exits as vertices,
+not runners.  The retention tournament is transitive with
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, `directed_3cycles=0`,
+`SCC_sizes=[1,1,1,1,1,1,1]`, and `Hamiltonian_path_count=1`.
+
 ## codex-2026-06-24-S168b -- LRC tournament technique index expansion (T1081)
 
 User asked to get even more creative, look back through the many tournament,
@@ -127,8 +146,8 @@ incoming S167 cocycle-sheaf exactness work was already visible and added a
 compact `LTI-108` row.
 
 Expanded `00-navigation/LRC-TECHNIQUE-INDEX.md` from the merged `110` compact
-rows to `146` compact rows, while keeping the existing `64` long-form S166
-technique bank.  New recovered compact rows `LTI-111..LTI-146` promote methods
+rows to `148` compact rows, while keeping the existing `64` long-form S166
+technique bank.  New recovered compact rows `LTI-111..LTI-148` promote methods
 including
 deck derivatives, Burnside/A000568 orbit taxes,
 merged metagraph transport, good-cut/SCC gas, OCF coimage sectors, GLMY
@@ -137,7 +156,8 @@ matroid/gammoid blockers, zeta/Ihara/path torsion, sequence-shadow companions,
 Pisano/2-adic checksums, Hamiltonian-path sheaves, irreducibility no-lift
 product-rule carriers, relation-lattice packets, Faulhaber odd-moment bridges,
 residual metagraph Laplacians, binding-pair switch tournaments, coimage wall
-atlases, and namespace-collision auditing.
+atlases, namespace-collision auditing, and the HYP-2996 residual-section packet
+grid.
 
 Assumption challenge recorded: LRC Tournament Analysis vertices should often be
 proof obligations, deck cards, cocycles, endpoint owners, binding switches,
