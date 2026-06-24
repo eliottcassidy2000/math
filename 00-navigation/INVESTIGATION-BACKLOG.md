@@ -15,6 +15,11 @@
 
 ---
 
+## Lead codex-2026-06-24-S161: Ramanujan-divisor quotient guardrails for LRC14
+
+**Status:** RESERVED / about to web-crawl and compute.  User prompt: read the divisor-function neighborhood and use it to formalize quotient guardrails across irreducibility, unital designs, Faulhaber moments, Pollock defects, unit-distance carriers, tiling/solid analogies, multiplicative functions, and Ramanujan sums.  Core question: what may a quotient forget without breaking the proof predicate?  Candidate proof object: a divisor/cyclotomic packet ledger where coarse multiplicative signatures are explicitly stress-tested against phase-sensitive Ramanujan signatures and LRC14 route labels.
+**Next:** (1) web read divisor function -> multiplicative function / Dirichlet convolution / Ramanujan sum / abundant-perfect-divisor-summatory pages; (2) mine repo references for matching guardrails; (3) build a small AP/GW/K33/petal/covering quotient-collision audit; (4) post the resulting admissibility theorem target.  Namespace: HYP-2978 / T1062.
+
 ## Lead mac-mini-2026-06-21-S20: LRC LAYER-3 sharpened routes + key literature (from the creative-lead trawl)
 **Source:** S20 trawl + drill workflows (HYP-2760..2763). **Status:** ACTIVE — LAYER 3 (consec Schur-maximizes measS7) is the last wall; LAYERS 1-2 PROVED+Lean.
 - **Conductance invariant (HYP-2760):** measS7 = EXACT function of c_r = sum_{e=r mod7} 1/|e| (0 collisions); Foster sum_r g(r)=112; bottleneck/minimax on C_7. NEXT: derive the exact F(c) and prove consec maximizes the bottleneck via Chebyshev equalization.

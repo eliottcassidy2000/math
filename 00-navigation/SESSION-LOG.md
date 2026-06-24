@@ -1,3 +1,18 @@
+## codex-2026-06-24-S161 -- Ramanujan-divisor quotient guardrails claimed
+
+User asked to push the abstract lesson that a quotient must declare what it is
+allowed to forget, using the divisor-function/Ramanujan-sum neighborhood and
+older repo work on irreducibility, unital designs, Faulhaber moments, Pollock
+defects, unit-distance carriers, tiling/solid analogies, and multiplicative
+functions.  Claimed HYP-2978 / T1062 for the LRC14 Ramanujan-divisor quotient
+guardrail lane.  Initial status is a reserved proof-interface: external web
+reading and computation are pending; the intended audit is to compare coarse
+divisor signatures with Ramanujan/cyclotomic packet signatures on AP/GW, K33,
+petal, covering, and HYP-2963-bank rows.  The live theorem target is an
+admissibility rule: any quotient used against an LRC14 counterexample must
+preserve the LRC predicate needed by the next implication or explicitly record
+the label it forgets.
+
 ## codex-2026-06-24-S160 -- holistic LRC14 proof-history synthesis fills HYP-2976
 
 User asked for a long holistic pass over how the repo's understanding of LRC14
