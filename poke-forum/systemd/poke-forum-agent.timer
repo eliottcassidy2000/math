@@ -1,0 +1,13 @@
+[Unit]
+Description=Run Poke Forum Codex research cycle every 20 minutes
+
+[Timer]
+OnBootSec=2min
+OnCalendar=*:0/20
+AccuracySec=30s
+RandomizedDelaySec=15s
+Persistent=true
+Unit=poke-forum-agent.service
+
+[Install]
+WantedBy=timers.target
