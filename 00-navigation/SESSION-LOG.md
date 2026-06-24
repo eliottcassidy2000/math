@@ -86,6 +86,40 @@ Added `04-computation/lrc14_fejer_packet_certificate_manifest_codex_s163.py` and
 Updated HYP-2981, results index, OPEN-Q-108, backlog, T1065, concept map, hypothesis index, comms/POKE coordination, and Poke forum post `poke-forum/posts/20260624-184122Z-lrc14-fejer-packet-certificate-manifest/post.md`.  New proof obligation: formalize the pi/trig interval backend and lift selected-row records to packet-family templates.  A quotient may forget raw runner names and floating decimal shadows after the packet key and interval bound are fixed; it may not forget packet key, center, degree, interval upper bound, divisor-curried atom formula, or route handoff unless those are formally reconstructed or routed to a residual/state-lift bucket.
 
 Web/source trail retained from the prompt pass: divisor functions as multiplicative divisor-fiber sums and Dirichlet-series shadows; Ramanujan sums as primitive-root power sums; Dirichlet convolution as arithmetic packet product; Robbins graph theorem as the no-bridge strong-orientation criterion; Robin's theorem as the sigma-function scalar warning.  Tournament vertices are certificate carriers/proof obligations rather than runners; the pairwise observable is retained LRC predicate payload and bridge reconstructibility.
+## codex-2026-06-24-exposure-poset -- creative LRC14 proof pass (HYP-2988)
+
+User asked for another creative LRC proof pass.  Added
+`04-computation/lrc14_exposure_poset_creative_pass_codex_20260624.py`
+and stored
+`05-knowledge/results/lrc14_exposure_poset_creative_pass_codex_20260624.out`.
+The pass treats proof channels as exposure vertices and strict counterexamples
+as unexposed labelled source packets.
+
+Default audit checks `12015` bounded AP-neighborhood and hard-frontier rows:
+zero-safe rows are exactly AP and GW `12->24`, all `12013` positive-safe rows
+have Fejer PSD dual exposure, and `0` rows carry `UNEXPOSED_SOURCE_KERNEL`.
+The hard q>=14 front is the expected packet list: `P10+GW` degree `280`,
+`drop(6)->63` degree `266`, K33 `12->36` degree `159`, `P10+K33`, and
+small-margin two-swap faces.  The exposure-channel tournament is transitive
+with `score_hist={0:1,...,8:1}` and no directed 3-cycles.
+
+Created HYP-2988, reflection
+`07-reflections/lrc14-exposure-poset-creative-pass-codex-20260624.md`, and
+Poke post
+`poke-forum/posts/20260624-192909Z-lrc14-exposure-poset-proof-pass/post.md`.
+Proof-order takeaway: the next formal route should prove a no-hidden-kernel
+lemma.  Every primitive q>=14 non-AP/GW source packet must either expose
+positive Haar mass with a familywise Fejer interval certificate, or carry a
+named C27/K33 state-lift label.  A future row failing all exposure channels is
+the first genuine F7 Johnson-harmonic/source-spectrum sector.
+
+Rebase integration: after syncing over HYP-2982/HYP-2983/HYP-2984, the
+HYP-2985 admissible-smoothing dispatcher, the incoming HYP-2986 tope-wall lane,
+and the HYP-2987 certificate-handoff atlas, read HYP-2988 as the audit/router above
+analytic quotient guardrails, Kaczynski smoothing labels, kernel-homotopy
+boundary-defect atoms, Farey unit-excess dispatch, smoothing-policy exits,
+endpoint-cell/cocircuit exits, and zipper-arrow handoffs.  `UNEXPOSED_SOURCE_KERNEL`
+means a packet survives all of those labelled exits at once.
 
 ## codex-2026-06-24-S162 -- Robbins/Robin Fejer interval certificates with computed budgets (HYP-2981)
 
