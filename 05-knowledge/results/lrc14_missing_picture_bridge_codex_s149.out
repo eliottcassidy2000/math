@@ -1,0 +1,73 @@
+﻿LRC14 missing-picture bridge atlas (S149)
+========================================================================
+[1] Named-row bridge audit
+  AP                       q=14 cov14=False has14=False M=   1/14 argD=[14]           strict_mu=       0 comps= 0 closed= 6 packet=AP                 route=boundary atom
+      transfer=AP
+      missing_arrow=prove global boundary-only residuals reduce to AP/GW
+  GW 12->24                q=14 cov14=False has14=False M=   1/14 argD=[14]           strict_mu=       0 comps= 0 closed= 6 packet=GW                 route=boundary atom
+      transfer=H12:g3 -> D3:g3@24
+      missing_arrow=prove global boundary-only residuals reduce to AP/GW
+  near 12->36              q=14 cov14=False has14=False M=   3/41 argD=[41]           strict_mu=  1/1260 comps= 2 closed=10 packet=K33                route=K33 state-lift obligation
+      transfer=H12:g3 -> D9:g9@36
+      missing_arrow=construct TournamentStateLift from this nonunit owner packet
+  petal 10->20             q=14 cov14=False has14=False M=   2/27 argD=[27]           strict_mu=   1/980 comps= 2 closed=10 packet=P10                route=unit-petal discharge
+      transfer=H10:g1 -> D7:g1@20
+      missing_arrow=prove petal/two-block rigidity uniformly
+  petal 13->26             q=14 cov14=False has14=False M=   2/27 argD=[27]           strict_mu=   1/182 comps= 2 closed=10 packet=P13                route=unit-petal discharge
+      transfer=H13:g1 -> D1:g1@26
+      missing_arrow=prove petal/two-block rigidity uniformly
+  splice 10,12->20,24      q=14 cov14=False has14=False M=   2/27 argD=[27]           strict_mu=   1/980 comps= 2 closed=10 packet=P10+GW             route=unit-petal discharge
+      transfer=H10:g1,H12:g3 -> D7:g1@20,D3:g3@24
+      missing_arrow=prove petal/two-block rigidity uniformly
+  splice 10,12->20,36      q=14 cov14=False has14=False M=   2/27 argD=[27]           strict_mu=  4/2205 comps= 4 closed=14 packet=P10+K33            route=K33 state-lift obligation
+      transfer=H10:g1,H12:g3 -> D7:g1@20,D9:g9@36
+      missing_arrow=construct TournamentStateLift from this nonunit owner packet
+  residue liar 12->26      q=12 cov14=False has14=False M=   1/12 argD=[12]           strict_mu=426/35035 comps= 4 closed=14 packet=unknown(12->26)    route=q-witness loose
+      transfer=H12:g3 -> D1:g1@26
+      missing_arrow=q-threshold already explains looseness
+  magnitude liar 12->96    q=14 cov14=False has14=False M=  8/101 argD=[101]          strict_mu=5219/840840 comps= 8 closed=22 packet=unknown(12->96)    route=magnitude-aware open front
+      transfer=H12:g3 -> D12:g3@96
+      missing_arrow=retain spectrum/Farey scale; raw apex tournament forgot magnitude
+  covering comb 12->84     q=15 cov14=True  has14=True  M=   7/89 argD=[89]           strict_mu=563/105105 comps= 8 closed=16 packet=unknown(12->84)    route=covering strictness
+      transfer=H12:g3 -> D3:g3@84
+      missing_arrow=finish shell-collapse/comb-margin theorem for 14-multiple rows
+
+[2] Reused S146 local boundary database
+  one-swap add<=160: boundary_only=2 positive_open=1910 covered=0
+    boundary rows=AP, 12->24
+  two-swap add<=40:  boundary_only=0 positive_open=27378 covered=0
+    smallest positive two-swap rows:
+      (10, 12)->(20, 24)     mass=1/980 transfer=H10:g1,H12:g3 -> D7:g1@20,D3:g3@24
+      (10, 12)->(20, 36)     mass=4/2205 transfer=H10:g1,H12:g3 -> D7:g1@20,D9:g9@36
+      (6, 10)->(17, 20)      mass=1/364 transfer=H6:g3,H10:g1 -> D10:g1@17,D7:g1@20
+      (6, 10)->(20, 23)      mass=12/3185 transfer=H6:g3,H10:g1 -> D7:g1@20,D4:g1@23
+      (4, 6)->(17, 19)       mass=37/9044 transfer=H4:g1,H6:g3 -> D10:g1@17,D8:g1@19
+
+[3] Proof-interface tournament
+  criteria=branch_retention, boundary_retention, C27_unital_retention, K33_state_lift_fit, finite_checkability, theorem_endpoint, anti_scalar_guard
+  C27_transfer             vector=(3, 3, 5, 3, 5, 3, 5) score=9 note=hole/double owner-carry shell
+  exact_M_Farey            vector=(5, 3, 2, 2, 5, 4, 5) score=8 note=binding scale and Farey branch
+  unital_pair_chart        vector=(3, 2, 5, 4, 4, 3, 5) score=7 note=branch-local pair completion
+  K33_incidence            vector=(3, 2, 3, 5, 4, 4, 5) score=6 note=minor-transitive nonunit packet
+  Haar_Baire_front         vector=(4, 5, 2, 2, 5, 3, 4) score=5 note=open-vs-boundary measurable front
+  TournamentStateLift      vector=(2, 2, 3, 5, 3, 5, 5) score=4 note=machine-checked contradiction endpoint once constructed
+  boundary_owner_skeleton  vector=(3, 5, 3, 2, 4, 3, 4) score=3 note=endpoint owner pairs
+  affine_depth             vector=(2, 2, 4, 4, 4, 3, 4) score=2 note=order-sensitive depth-14 marker
+  raw_scalar_M             vector=(4, 1, 1, 1, 5, 2, 1) score=1 note=useful value, unsafe quotient
+  raw_apex_tournament      vector=(1, 1, 1, 1, 4, 1, 2) score=0 note=residue order only; magnitude blind
+  directed_3cycles=0
+  ranking=C27_transfer > exact_M_Farey > unital_pair_chart > K33_incidence > Haar_Baire_front > TournamentStateLift > boundary_owner_skeleton > affine_depth > raw_scalar_M > raw_apex_tournament
+
+[4] Missing-picture readout
+  The repo history is no longer missing a scalar invariant; it is missing a functor.
+  Needed functor:
+    reduced residual -> (exact scale, Haar/Baire front, C27/unital/K33 address)
+                       -> discharge or TournamentStateLift.
+  Local evidence:
+    boundary-only local rows are AP and GW; their owner skeletons agree.
+    positive-open rows are safe, but K33-labelled rows remain state-lift obligations.
+    raw apex tournament and raw scalar M each forget a load-bearing label.
+  Sharp theorem target:
+    every primitive residual that is not discharged by q-threshold or Haar-open
+    strictness must either be AP/GW boundary-only or construct the HYP-2908
+    TournamentStateLift packet.
