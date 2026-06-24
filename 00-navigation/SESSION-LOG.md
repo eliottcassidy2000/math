@@ -1,12 +1,33 @@
-## codex-2026-06-24-S164 -- HYP-2984/T1068 kernel-homotopy boundary-defect lane claimed
+## codex-2026-06-24-S164 -- kernel-homotopy boundary-defect proof pass (HYP-2984/T1068)
 
 User asked for another creative LRC proof pass.  Synced mainline first and
 found the live frontier around HYP-2981 Fejer interval packet certificates,
 HYP-2982 analytic-sieve packet weights, and HYP-2983 Kaczynski/exponential-sum
-smoothing synthesis.  Reserved HYP-2984/T1068 for a focused bridge: kernel
-deformations are admissible only when they preserve a labelled packet
-certificate or emit a named boundary-defect atom.  The exact computation,
-result file, reflection, and synthesis are pending in this same session.
+smoothing synthesis.  Reserved and then filled HYP-2984/T1068 for a focused
+bridge: kernel deformations are admissible only when they preserve a labelled
+packet certificate or emit a named boundary-defect atom.
+
+Added `04-computation/lrc14_kernel_homotopy_boundary_defect_codex_s164.py` and
+stored `05-knowledge/results/lrc14_kernel_homotopy_boundary_defect_codex_s164.out`.
+The script reuses S147 exact safe components and HYP-2975 taut-bridge atoms.
+Named readout: AP and GW `12->24` have `safe_mu=0`, support radius `0`, and
+six taut endpoint transfers each, all with endpoint-owner pair sum `0 mod 14`.
+All selected non-AP/GW packets are open-stable with positive support radii:
+`12->36` has `safe_mu=1/1260`, `eps<1/5040`; `P10+GW` has `1/980`,
+`eps<1/3920`; `12->168` has `263/30030`, `eps<23/23520`.  Single-swap scan
+through `add<=160` checks `1911` primitive rows and finds `1910` open-stable,
+exactly one zero-open row `12->24`, and minimum positive mass `1/1260` at
+`12->36`.
+
+Synthesis: HYP-2984 is not a proof of LRC14; it is a guardrail for future
+smoothing proofs.  A row with a strict safe component allows a local kernel
+homotopy supported inside half the component width.  A zero-open row has no
+support radius, so smoothing emits a boundary-defect atom that must be retained.
+Tournament Analysis over proof carriers is transitive:
+`packet_fejer_certificate > open_component_certificate > boundary_defect_atom >
+kaczynski_approach_class > ramanujan_exact_period_packet >
+analytic_smoothing_kernel > raw_kernel_scalar`.  Wrote reflection
+`07-reflections/lrc14-kernel-homotopy-boundary-defect-codex-s164.md`.
 
 ## codex-2026-06-24-S163 -- analytic sieve packet weights and Goldbach smoothing guardrails (HYP-2982)
 

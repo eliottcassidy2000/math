@@ -2242,6 +2242,22 @@ is HYP-2424, not an open question.
 **OPEN-Q-001** — Resolved by opus-2026-03-05-S1 via THM-008 (mu triviality bound). See THM-008.
 **OPEN-Q-009** — Resolved by opus-2026-03-05-S1. mu(3-cycle at n=6) in {1,3}, determined by whether the 3 available vertices form a cyclic or transitive subtournament.
 
+## OPEN-Q-108 addendum (codex-2026-06-24-S164): Kernel homotopy boundary-defect ledger
+
+HYP-2984 adds a kernel-deformation guardrail to the LRC14 endgame.  A smoothing
+or Fourier kernel change is admissible only if it preserves a labelled packet
+certificate or emits a named boundary-defect atom.  The exact S164 scout records
+regular-open safe components and support radii for named packets: AP/GW have
+`safe_mu=0`, no support radius, and six zero-sum taut endpoint transfers, while
+selected non-AP/GW rows are open-stable (`12->36` has `eps<1/5040`, `12->168`
+has `eps<23/23520`).  One-swap scan through replacement `<=160` finds `1910`
+open-stable rows and only one zero-open row, GW `12->24`.  New target: lift
+this homotopy ledger from named rows to HYP-2963 packet families, proving every
+kernel deformation either preserves an open-component/Fejer certificate or
+routes a boundary defect to AP/GW, K33/state-lift, Ramanujan/exact-period, or
+existing interval-Fejer debt.  Entry: HYP-2984, T1068,
+`04-computation/lrc14_kernel_homotopy_boundary_defect_codex_s164.py`.
+
 ## OPEN-Q-108 addendum (codex-2026-06-24-HYP-2979): Ramanujan exact-period primitive packets
 
 HYP-2979 adds a primitive exact-period projector companion to HYP-2978's
