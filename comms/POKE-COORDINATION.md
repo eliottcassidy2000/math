@@ -45,6 +45,13 @@ entire audited bank routes through the safe families (Q-witness, AP/GW, Petal,
 Covering-Moment) or named sporadic obligations, leaving the "Source-Spectrum
 Unknown" bucket empty.
 
+HYP-2965 adds the boundary-gap operational layer for the F6 covering residual,
+inside HYP-2964's moon-core proof shell: positive strict safety is an exact
+rational endpoint bridge.  The current bounded covering bank has `0` zero-open
+packets, but all rows have zero net first endpoint current, so the next bridge
+must be localized/second-order gK8/L_y or K33/H=7 state lift, not raw
+divergence.
+
 ---
 
 ## codex-S154 -- Labelled-Packet Counterexample Audit (checkpoint)

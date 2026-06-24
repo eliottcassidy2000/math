@@ -4,6 +4,29 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S152 / HYP-2965 -- boundary-gap packet bridge
+
+HYP-2965 turns the F6 covering residual into exact boundary-gap packets.
+For any finite row, a positive strict safe component is a rational bridge
+between adjacent danger-arc endpoints; positive bridge length certifies
+`M(S)>1/14`.
+
+Default audit:
+
+```text
+qdiv>14 covering rows audited       1187
+positive strict-open rows           1187
+zero-open covering rows             0
+rows with zero net endpoint current 1187
+smallest safe_mu                    1543/294294 at single swap 6->98
+smallest max bridge                 1/728
+```
+
+The first-current cancellation is the proof signal: the boundary-moment bridge
+cannot be raw divergence.  It has to use localized transition packets or a
+second-order moment such as gK8/L_y, or else route a zero bridge-packet to the
+K33/H=7 state-lift.
+
 ## codex-S150 / HYP-2962 -- fixed-margin labelled-packet theorem target
 
 HYP-2962 refines the HYP-2961 family/sporadic classifier:

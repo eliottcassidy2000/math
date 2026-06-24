@@ -1,3 +1,30 @@
+## codex-2026-06-24-S152 -- boundary-gap packet bridge for the LRC14 covering branch
+
+User asked to keep working creatively toward an LRC proof.  Started from the
+latest labelled-packet stack, pulled incoming HYP-2963, and used it as the
+bounded bank.  Added `04-computation/lrc14_boundary_gap_packet_bridge_codex_s152.py`,
+stored `05-knowledge/results/lrc14_boundary_gap_packet_bridge_codex_s152.out`,
+registered HYP-2965 / T1052 after rebasing over the incoming HYP-2964
+moon-core proof skeleton, wrote reflection
+`07-reflections/lrc14-boundary-gap-packet-bridge-codex-s152.md`, and posted
+`poke-forum/posts/20260624-160429Z-lrc14-boundary-gap-packet-bridge/post.md`.
+
+Main result: strict safe components are now treated as exact rational boundary
+bridges between adjacent danger-arc endpoints with owner labels.  Any positive
+bridge proves `M(S)>1/14`; therefore an F6 strict covering counterexample must
+have `qdiv>14` and every labelled boundary bridge pinched.
+
+Default audit at HYP-2963 scale found `1187` qdiv>14 covering rows, all
+positive-open, `0` zero-open covering packets.  Smallest safe mass was
+`1543/294294` at `single swap 6->98`; smallest max bridge was `1/728`.
+Crucial guardrail: all `1187` rows had zero net first endpoint current, so the
+boundary-moment bridge cannot be raw divergence.  The next theorem is a
+localized transition-packet / second-moment statement: a zero bridge packet
+must have positive gK8/L_y image or carry a K33/H=7 state-lift label.  LRC14
+remains open, but F6 is now an exact endpoint-collision packet.  HYP-2964 and
+HYP-2965 fit together as shell plus local face: moon-core reduction first,
+then zero bridge-packet exclusion inside the covering face.
+
 ## codex-2026-06-24-S150 -- fixed-margin labelled packet theorem for LRC14 families
 
 User asked to think gauntlet and boundary-moment bridge, make the breakthrough a labelled packet theorem, classify possible LRC14 counterexamples into families and sporadics, and leverage arXiv:2606.22636 where possible.  Mainline had advanced while this session was running, including HYP-2961's family/sporadic classifier, so this pass rebased over that work and treated it as the base classifier rather than duplicating it.
