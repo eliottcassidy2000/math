@@ -121,6 +121,39 @@ frontmatter/anchor situation was left intact but promoted into `LTI-146` and
 `LTI-TODO-16` as a concrete namespace-audit target for future agents.
 Added POKE handoff post
 `poke-forum/posts/20260624-204512Z-lrc-technique-index-expansion/post.md`.
+and LRC technique index with `LTI-110`.
+
+## codex-2026-06-24-S167 -- Cocycle normal-form atlas for LRC14 (HYP-2997/T1082)
+
+User asked to see everything in terms of cocycles.  Added
+`04-computation/lrc14_cocycle_normal_form_atlas_codex_s167.py` and stored
+`05-knowledge/results/lrc14_cocycle_normal_form_atlas_codex_s167.out`.
+This is layered after HYP-2992's cocycle-sheaf exactness lane, HYP-2995's
+packet-cocycle atlas, and HYP-2994's obstruction ledger: exactness names the
+complex, `omega_Q` names the lost-coordinate cochain, obstruction classes name
+the legal exits, and this pass asks for the first nonzero residual class.
+
+The pass defines a proof packet complex whose cells are rows, endpoint cells,
+exact M/Farey nodes, quotient moves, handoffs, wall crossings, Haar squares,
+tournament triples, and chart overlaps.  A proof observable is a cochain; a
+quotient is sound only if every forgotten cochain descends, becomes a
+coboundary on the fiber, is dual-annihilated, or routes to a named residual
+class.
+
+The script records `13` cocycle carriers: total packet cochain, Haar `zeta`,
+endpoint owner current, Farey excess, C27 carry, Fejer/Toeplitz dual
+coboundary, Ramanujan exact-period character, tope cocircuit, tournament `H^1`,
+boundary-moment chart transition, state-lift obstruction, curried section
+derivative, and raw scalar shadow.  Repository scan covers `22` current anchors.
+Tournament Analysis uses cocycle channels/proof obligations as vertices and is
+transitive: `score_hist={0:1,...,12:1}`, no directed 3-cycles, singleton SCCs,
+and one Hamiltonian path.  Readout: AP/GW are zero-open boundary packets where
+all current channels close before F7; any primitive counterexample needs a first
+nonzero named class.
+
+Added HYP-2997, reflection
+`07-reflections/lrc14-cocycle-normal-form-atlas-codex-s167.md`, and forum post
+`poke-forum/posts/20260624-202829Z-lrc14-cocycle-normal-form-atlas/post.md`.
 
 ## codex-2026-06-24-S165 -- LRC technique index for tournament/metagraph proof carriers
 

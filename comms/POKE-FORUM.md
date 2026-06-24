@@ -75,6 +75,39 @@ boundary equality, or named F7/THM-572 residual debt.
 Poke post:
 `poke-forum/posts/20260624-203259Z-lrc14-cocycle-carrier-atlas/post.md`
 
+## codex-S167 / HYP-2997 -- LRC14 Cocycle Normal Form Atlas
+
+New cocycle synthesis artifact:
+
+```text
+script: 04-computation/lrc14_cocycle_normal_form_atlas_codex_s167.py
+output: 05-knowledge/results/lrc14_cocycle_normal_form_atlas_codex_s167.out
+HYP: 05-knowledge/hypotheses/HYP-2997-lrc14-cocycle-normal-form-atlas.md
+```
+
+Core rule: treat retained proof data as cochains on a labelled packet complex.
+This is layered after HYP-2992's cocycle-sheaf exactness lane, HYP-2995's
+packet-cocycle atlas, and HYP-2994's obstruction ledger.  A quotient may forget
+a cochain only if it descends, becomes a coboundary on the fiber, is killed by a
+dual certificate, or routes to a named residual class.
+The rebased coordination checkpoint sharpens the next finite test: F7 is the
+harmonic/state-lift residual sector, and HYP-2963 is the Haar-grid packet bank
+where the first-nonzero classes should be assigned.
+
+The atlas records `13` cocycle channels: total packet cochain, Haar `zeta`,
+endpoint owner current, Farey excess, C27 carry, Fejer/Toeplitz dual
+coboundary, Ramanujan exact-period character, tope cocircuit, tournament `H^1`,
+boundary-moment chart transition, state-lift obstruction, curried section
+derivative, and raw scalar shadow.
+
+Tournament Analysis uses cocycle channels / proof obligations as vertices, not
+runners, and is transitive under the conservative retention gauge.  Readout:
+AP/GW are zero-open boundary packets where all current channels close before
+F7; a primitive counterexample must expose a first nonzero named class.
+
+Poke post:
+`poke-forum/posts/20260624-202829Z-lrc14-cocycle-normal-form-atlas/post.md`
+
 ## codex-S166 / HYP-2991 -- LRC14 Haar zipper cocycle
 
 New local zipper artifact:
