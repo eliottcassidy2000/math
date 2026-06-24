@@ -1,3 +1,17 @@
+## codex-2026-06-24-S150 -- fixed-margin labelled packet theorem for LRC14 families
+
+User asked to think gauntlet and boundary-moment bridge, make the breakthrough a labelled packet theorem, classify possible LRC14 counterexamples into families and sporadics, and leverage arXiv:2606.22636 where possible.  Mainline had advanced while this session was running, including HYP-2961's family/sporadic classifier, so this pass rebased over that work and treated it as the base classifier rather than duplicating it.
+
+Added `04-computation/lrc14_fixed_margin_labelled_packet_classifier_codex_s150.py`, stored `05-knowledge/results/lrc14_fixed_margin_labelled_packet_classifier_codex_s150.out`, registered HYP-2962 / T1048, wrote reflection `07-reflections/lrc14-fixed-margin-labelled-packet-theorem-codex-s150.md`, and posted `poke-forum/posts/20260624-152804Z-lrc14-fixed-margin-labelled-packets/post.md`.
+
+The proof-pattern import from arXiv:2606.22636 is architectural only: fixed-margin fibers, packet-preserving swaps, two-row conditional resampling, three-row local reduction, scalar count sector, and non-scalar Johnson-like sectors.  For LRC14 this becomes: qdiv/q-cover margins are the count sector, while boundary owner, source-spectrum, C27/unital, K33/state-lift, and gK8/L_y labels are non-scalar sectors.
+
+The classifier defines a family as a fixed-margin labelled packet class and a sporadic as a bounded singleton after family parameters are removed.  Packet signatures retain qdiv bucket, q-cover vector for `d=2..14`, U14 apex zero/boundary profiles, C27 shell state counts, packet atom keys, exact `M`, strict Haar-open mass, C27 transfer, and S145 packet route.  Representative run audited `18` rows and found `16` fixed-margin classes, `2` shared signatures, `0` strict counterexamples, `5` qdiv>14 representatives, and `0` qdiv>14 zero-open representatives.  The shared covering signature `12->84/168` is a genuine qdiv>14 lcm-tail packet family but is positive-open here.
+
+Tournament Analysis used proof sectors as vertices, not runners.  Pairwise observable: strict predicate retention, owner-label retention, source/kernel visibility, named proof exit, finite-family pressure, and anti-scalar guard.  The proof-sector tournament is transitive with Hamiltonian path `qdiv/q-cover count sector > Haar open-vs-boundary sector > source-spectrum pullback > fixed-margin mutation family > C27/unital owner sector > K33 state-lift sector > gK8/L_y moment bridge > unnamed source-kernel bucket > raw residue/tournament shadow`.
+
+Next work: add the missing gK8/L_y coordinate to the packet signature, build an L1 bank with many 14-multiples, and search fixed-margin swap fibers for zero-open, non-K33, non-unit, non-AP/GW source kernels.  LRC14 remains open.
+
 ## codex-2026-06-24-S148 -- AP/GW derived-boundary tournament classes add an isomorphism-class filter
 
 User asked for more necessary conditions, focused on what AP and GW have in common, with creative Tournament Analysis and an isomorphism-class proof route.  Read the current AP/GW stack (HYP-2920), Goddyn-Wong/Jacobsthal accelerator note (HYP-2893), C27 shell transfer (HYP-2937), HYP-2908 state-lift guardrail, and recent Baire/Haar/Farey/unital notes.  Also checked Tao's derived multiplicative functions post for the formal infinitesimal/coefficient analogy.

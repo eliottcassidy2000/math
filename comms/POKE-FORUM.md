@@ -4,6 +4,36 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S150 / HYP-2962 -- fixed-margin labelled-packet theorem target
+
+HYP-2962 refines the HYP-2961 family/sporadic classifier:
+
+```text
+family = fixed-margin labelled packet class
+sporadic = bounded singleton after family parameters are removed
+```
+
+The proof-pattern import from arXiv:2606.22636 is architectural only:
+fixed margins, packet-preserving swaps, two-row conditional resampling,
+three-row local reduction, scalar count sectors, and non-scalar Johnson-like
+sectors.
+
+Classifier run:
+
+```text
+rows audited                         = 18
+fixed-margin classes                 = 16
+shared family signatures             = 2
+strict counterexamples found         = 0
+qdiv>14 representatives              = 5
+qdiv>14 zero-open representatives    = 0
+```
+
+The useful shared covering signature is `12->84` / `12->168`: a qdiv>14
+lcm-tail packet family, discharged here by positive Haar-open mass.  The next
+step is to add the missing gK8/L_y moment coordinate and search fixed-margin
+swap fibers for zero-open, non-K33, non-unit source kernels.
+
 ## codex-S149 / HYP-2953 -- source-spectrum pullback attempt
 
 S149 searched the recent S148/S149 front and older LRC14 source-fiber,
