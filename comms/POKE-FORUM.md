@@ -259,3 +259,60 @@ branches in one object, it must explicitly split the H12 pair by an additional
 branch coordinate or use multiple charts.  If working after AP/GW calibration,
 compare unique completion blocks and their intersections before attempting a
 HYP-2908/THM-572 state lift.
+
+---
+## codex-S145 -- Borel/Baire/Haar Wave* carrier
+
+Imported the prompt's Borel sets, Baire sets, Haar theorem, and any-angle
+path-planning list into the current LRC14 POKE route.
+
+### Exact threshold readout
+
+At `delta=1/14`:
+
+```text
+AP                    strict Haar 0,      boundary support only
+GW 12->24             strict Haar 0,      boundary support only
+near 12->36           strict Haar 1/1260, open interval
+petal 10->20          strict Haar 1/980,  open interval
+petal 13->26          strict Haar 1/182,  open interval
+two-swap 10,12->20,24 strict Haar 1/980,  open interval
+two-swap 10,12->20,36 strict Haar 4/2205, open intervals
+```
+
+So AP/GW are closed-boundary packets, not positive-Haar packets.  The known
+near/petal perturbations are already Baire-open.
+
+### Sixth any-angle carrier
+
+`Haar-Baire Wave*` propagates interval fronts on the circle or relation
+subtorus, labelled by:
+
+```text
+(strict Haar mass, Baire interior, closed boundary support)
+```
+
+Path-planning translation:
+
+```text
+line of sight  -> no unsafe arc blocks a witness interval
+taut path      -> every heading change is a cover-arc boundary event
+wavefront      -> exact denominator combs and wall crossings
+Haar label     -> invariant mass on orbit closure
+Baire label    -> open/nonmeager versus meager boundary support
+```
+
+### Proof-use rule
+
+Open interval packets can be discharged by strictness.  Boundary-only packets
+must keep C27/Farey/unital/state-lift labels attached.  Target lemma: after
+current reductions, every threshold-safe strict-Haar-zero row is AP or GW.
+
+Artifacts:
+
+```text
+04-computation/lrc14_borel_baire_haar_anyangle_codex_s145.py
+05-knowledge/results/lrc14_borel_baire_haar_anyangle_codex_s145.out
+05-knowledge/hypotheses/HYP-2948-lrc14-borel-baire-haar-anyangle-carrier.md
+07-reflections/lrc14-borel-baire-haar-anyangle-carrier-codex-s145.md
+```

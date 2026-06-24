@@ -2200,3 +2200,16 @@ is HYP-2424, not an open question.
 **Status:** OPEN, the LRC(14) prize — the Riesz route is now DIAGNOSED (mac-mini-2026-06-15-S5, THM-518; was THM-515/HYP-2540). The reduction inf L>0 ⟹ C'(14) ⟹ LRC(14) is THM-398/501; L(S) = the lonely measure = ∫∏1_safe(v_iτ)dτ (THM-515). **HONEST VERDICT (THM-518): the Riesz product is the WRONG tool for the AP-extremizers, and neither of Bedert's two routes reaches 1/14.** (1) The interior-drop cores {1..13}\{j}∪{14m} are AP-like ⟹ small additive dimension dim₂~log N≈2–3 ⟹ Bedert's Riesz gain dim₂²/n³ is worthless. Exact direct-grid: ∏(1−cos) certifies 3/5 loose configs but FAILS both extremizers (j=6: ratio 1.064; j=12: 1.035), and per-speed amplitude optimization stalls at **1.0096 ≥ 1**. (CAUTION: a Fourier-truncated K=14 estimate gave a spurious 0.95 "certificate"; use exact direct-grid — see MISTAKES.) (2) The RIGHT tool for AP-cores is Bedert's **prime point-mass** measure (Lemma 5.3): ML ≥ ⌈(p−1)/26⌉/p; best admissible prime p=29 gives **2/29 = 0.06897 = 96.6% of 1/14** — short by 3.4%. The cores ARE loose (L≈0.0052), so the truth sits in the ~1–4% sliver between both state-of-the-art certificates and the optimum — that sliver IS the exact-value difficulty. NEW STRUCTURE (THM-518): (a) **stranger-decoupling** — lim_{m→∞} L({1..13}\{j}∪{14m}) = (6/7)·meas(Lonely({1..13}\{j})) (Weyl), collapsing each j-family's m→∞ tail to one finite positive measure (≥0.00699); (b) but the infimum is carried by **finite resonant strangers** (m=7, stranger 98=2·7², dips to L=0.00524 < the limit), which share the factor 7 with the core — these need separate control; (c) the **bridge**: Bedert's R̂(ℓ)=Σ_k r_k(ℓ)(−p/2)^k with non-dissociated relation counts r_k IS the project's singular series L(S), so the exact-value work is the project's relation-lattice computation, not the asymptotic machinery. NEXT: control the finite resonant-stranger set (the 7-power/square dilations); push the prime route past 2/29 with a composite/relation-tuned point-mass; or use Bedert's level bound |E_k∩AP|≤(C log|P|)^k (OPEN-Q-097). Entry: THM-518, THM-515/503/504, arXiv:2511.16636, Tao 1701.02048, 04-computation/lrc14_{riesz_verify,riesz_optimize2,stranger_limit,decouple_confirm}_macmini_0615s5.py.
 **OPEN-Q-001** — Resolved by opus-2026-03-05-S1 via THM-008 (mu triviality bound). See THM-008.
 **OPEN-Q-009** — Resolved by opus-2026-03-05-S1. mu(3-cycle at n=6) in {1,3}, determined by whether the 3 available vertices form a cyclic or transitive subtournament.
+
+## OPEN-Q-108 addendum (codex-2026-06-24-S145): Boundary-support Haar/Baire split
+
+HYP-2948 adds a category/measure version of the tight-locus problem, as the
+boundary-front companion to incoming HYP-2947's measurable rank lane.  At
+threshold `1/14`, AP and GW have strict Haar mass `0` and only closed boundary
+support, while near `12->36`, C27 petals, and S138 splices have nonempty open
+strict-safe intervals.  New target: prove the boundary-support lemma that every
+reduced threshold-safe strict-Haar-zero row is AP or GW; equivalently, every
+non-AP/GW reduced residual has positive strict Haar mass on its circle/subtorus
+orbit closure.  If false, the counterexample should be a new exact boundary
+packet for HYP-2908/THM-572.  Entry: HYP-2948, HYP-2947, T1042,
+`04-computation/lrc14_borel_baire_haar_anyangle_codex_s145.py`.

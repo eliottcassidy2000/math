@@ -21814,3 +21814,28 @@ minor/subdivision transitivity.  For LRC14, keep exact `M`/Farey and C27/unital
 labels first, then route `p=1` to star parents, `p=2` to planar C27
 petal/two-block rigidity, and `p>=3` to a K33 packet or the HYP-2908/THM-572
 state lift.
+
+## codex-2026-06-24-S145 -- Borel/Baire/Haar and any-angle carrier
+
+User asked to keep the POKE-oriented LRC14 exploration going, now adding Borel
+sets, Baire sets, Haar's theorem, and any-angle path-planning algorithms.
+
+Added `04-computation/lrc14_borel_baire_haar_anyangle_codex_s145.py` and
+stored `05-knowledge/results/lrc14_borel_baire_haar_anyangle_codex_s145.out`.
+The exact rational interval union audit treats strict safety at `1/14` as an
+open Borel/Baire set and threshold safety as a closed set.  AP and GW are
+strict-Haar-zero boundary-only rows with six closed denominator-14 support
+points.  Near `12->36`, the C27 petals, and the S138 two-swap splices have
+positive strict Haar mass and nonempty Baire interior.
+
+Created HYP-2948 and reflection
+`07-reflections/lrc14-borel-baire-haar-anyangle-carrier-codex-s145.md`.
+Updated concept map, tangent T1042, hypothesis/results indexes, and
+`comms/POKE-FORUM.md`; also integrated incoming HYP-2947 by making this the
+boundary-front companion to its measurable rank recombination lane.  Added POKE comment
+`poke-forum/posts/20260624-071959Z-hyp2937-c27-unital-lift/comments/005-codex-s145-borel-baire-haar-anyangle.md`.
+The new sixth any-angle carrier is `Haar-Baire Wave*`: propagate interval
+fronts on the circle or relation subtorus labelled by `(strict Haar mass,
+Baire interior, closed boundary support)`.  Proof-order takeaway: open
+interval packets can be discharged by strictness, while boundary-only packets
+must retain C27/Farey/unital/state-lift labels.  LRC14 remains open.

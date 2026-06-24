@@ -1,0 +1,58 @@
+==============================================================================
+S145 Borel/Baire/Haar and any-angle proof carriers for LRC14
+==============================================================================
+[1] Borel/Baire/Haar audit at threshold delta=1/14
+  row                            strict Haar components closed pts  best boundary category readout
+  AP                                       0          0          6           1/14 boundary-only, meager
+  GW 12->24                                0          0          6           1/14 boundary-only, meager
+  near 12->36                         1/1260          2         10           1/14 nonempty open, nonmeager
+  petal 10->20                         1/980          2         10           1/14 nonempty open, nonmeager
+  petal 13->26                         1/182          2         10           1/14 nonempty open, nonmeager
+  two-swap 10,12->20,24                1/980          2         10           1/14 nonempty open, nonmeager
+  two-swap 10,12->20,36               4/2205          4         14           1/14 nonempty open, nonmeager
+  readout:
+    AP and GW are not positive-Haar objects at threshold; they are
+    closed boundary-support objects at the six denominator-14 unit times.
+    Near-miss and petal rows have positive strict Haar mass, hence a
+    Baire-open witness interval rather than only a boundary witness.
+
+[2] Sixth any-angle carrier: Haar-Baire Wave*
+  Classical any-angle planners propagate geometry through grids:
+    Field D* interpolates; Theta* shortcuts by line of sight;
+    Block A* caches local paths; ANYA uses interval/taut nodes;
+    CWave propagates primitive wavefront arcs and lines.
+  Proposed proof planner:
+    Haar-Baire Wave* propagates Borel interval fronts on the circle/subtorus,
+    labelled by (strict Haar mass, Baire interior, closed boundary support).
+  LRC use:
+    line of sight  -> no unsafe arc blocks a witness interval;
+    taut path      -> every heading change is a cover-arc boundary event;
+    wavefront      -> exact denominator combs and wall crossings;
+    Haar label     -> canonical invariant mass on the orbit-closure torus;
+    Baire label    -> open/nonmeager interval versus meager boundary support.
+
+[3] Tournament Analysis on planner/proof carriers
+  Criteria: exactness, interval_nodes, continuous_geometry, dynamic_update, lrc_transfer, haar_baire_label, anti_scalar_guard
+  Haar-Baire Wave*         vector=(5, 5, 5, 4, 5, 5, 5) total=34  new proof planner: Borel fronts with Haar/category/boundary labels
+  ANYA interval-taut       vector=(5, 5, 4, 1, 5, 2, 5) total=27  interval nodes and taut-path pruning
+  CWave primitive-front    vector=(4, 4, 5, 2, 4, 2, 4) total=25  circular/line wavefront primitives
+  AP Theta* angle-prop     vector=(3, 3, 4, 2, 4, 1, 3) total=20  angle-propagated line-of-sight shortcut
+  Theta* line-of-sight     vector=(3, 2, 4, 2, 3, 1, 3) total=18  parent-to-successor line-of-sight shortcut
+  Field D* interpolation   vector=(2, 3, 4, 5, 3, 1, 3) total=21  dynamic interpolation over weighted cells
+  Lazy Theta*              vector=(2, 2, 4, 4, 3, 1, 3) total=19  delayed visibility checks
+  Block A*                 vector=(2, 4, 2, 2, 2, 1, 4) total=17  local database of all small block paths
+  fingerprint:
+    score_histogram={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+    directed_3cycles=0
+    sccs=[('Haar-Baire Wave*',), ('ANYA interval-taut',), ('CWave primitive-front',), ('AP Theta* angle-prop',), ('Theta* line-of-sight',), ('Field D* interpolation',), ('Lazy Theta*',), ('Block A*',)]
+    hamiltonian_paths=1
+    ranking=Haar-Baire Wave* > ANYA interval-taut > CWave primitive-front > AP Theta* angle-prop > Field D* interpolation > Theta* line-of-sight > Lazy Theta* > Block A*
+
+[4] Proof targets generated
+  1. boundary-support lemma: Classify threshold-safe but strict-Haar-zero rows by exact denominator boundary points; AP/GW should be the only q=14 survivors after current reductions.
+  2. Haar subtorus lift: For relation-lattice residuals, push the unsafe arc cover to the orbit closure and integrate by normalized Haar measure there, not by an independent-block product measure.
+  3. Baire-open strictness: A covering-strictness proof can aim to show every non-AP/GW reduced residual has a nonempty open safe interval; this is stronger than positive measure in finite arc arrangements but keeps category visible.
+  4. any-angle finite frontier: Use ANYA/CWave style interval fronts as nodes: expand only wall-crossing intervals where a cover arc becomes tight, with lazy exact-M checks.
+  5. state-lift bridge: If Haar-Baire Wave* cannot produce an open interval, the remaining boundary-only packet should carry enough labels to feed HYP-2908/THM-572.
+
+Status: proof-interface only; no LRC14 proof claimed.

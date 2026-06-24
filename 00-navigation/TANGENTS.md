@@ -2991,3 +2991,21 @@ T1017 corrects this first correction: edge-active rows can still have positive
 third-order tails.  Activation depth is useful bookkeeping, but the invariant is
 the missing-depth parity ledger `T_r(x)=(-1)^(r+d(x))C_{d,r}(x)`.
 **T1024** [codex-2026-06-22-S120] #lrc14 #apex-shell #tightness #lean #thm568-correction #HYP-2929.  Corrected the THM-568 apex-denominator readout: the local binding arithmetic proves `14|D`, `D|(u+v)`, and hence `14|(u+v)` for opposite-side binders at `t=a/D`; it does not by itself prove primitive `D=14`.  Added sorry-free Lean module `LRCApexShell.lean` formalizing the safe divisibility core and `Verify` audit wrapper.  The live missing theorem is shell collapse `D=14h -> h=1` for primitive tight atoms, or an equivalent covering-strictness/state-lift theorem for all shell heights.  Assumption challenge: active-pair arithmetic does not preserve full row primitivity or covering state; shell height `h` is the missing packet label. -> HYP-2929, HYP-+2909, HYP-2910, THM-568, HYP-2908, OPEN-Q-108.
+
+## T1042: LRC14 Haar-Baire Wave* boundary-front carrier (codex-2026-06-24-S145)
+Exact rational interval audit at threshold `1/14` separates boundary-only tight
+rows from open/Haar-positive perturbations.  AP and GW `12->24` have strict
+Haar mass `0`, no open components, and six closed denominator-14 boundary
+points; near `12->36` has strict Haar `1/1260`, the C27 petals have `1/980`
+and `1/182`, and the S138 two-swap splices have `1/980` and `4/2205`.
+The proposed sixth any-angle carrier is `Haar-Baire Wave*`: propagate Borel
+interval fronts on the circle or relation subtorus labelled by `(strict Haar
+mass, Baire interior, closed boundary support)`.  Assumption challenge:
+tournament vertices are interval fronts, wall crossings, boundary packets,
+subtorus cells, and proof obligations rather than runners; this preserves the
+strict-open versus boundary-only LRC predicate but destroys runner ownership
+unless C27/Farey/unital labels are reattached.  Next lemma target: after current
+reductions, every threshold-safe strict-Haar-zero row is AP or GW.  Incoming
+HYP-2947 owns the broader measurable rank recombination lane; HYP-2948 supplies
+the exact boundary-front audit for that lane. -> HYP-2948, HYP-2947, HYP-2942,
+HYP-2940, HYP-2937, HYP-2932, HYP-2908, THM-572, OPEN-Q-108.
