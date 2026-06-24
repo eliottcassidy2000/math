@@ -1,0 +1,99 @@
+S136 LRC14 C=27 SHELL-TRANSFER SPECTRUM
+==============================================================================
+max_replacement=140
+[0] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, residues, C=27 shell pairs, shell transfers, Farey branches,
+    Kpq incidence owners, visible folds, hidden balanced relations, and
+    proof obligations.
+  chosen vertices:
+    antipodal summand shells P_a={a,27-a}.
+  quotient preserves:
+    unit visibility, gcd stratum, AP-lower transversal holes/doubles, and
+    the marked transfer that S571 says multiplication can or cannot see.
+  quotient destroys:
+    exact speed size, off-shell denominators, and full time geometry; those
+    are reattached through exact M(S), q-threshold, and Farey branch.
+  challenged assumption:
+    a runner-vertex tournament is the right first quotient.  For the C=27
+    branch, shell-pair vertices preserve the missing-pair predicate that
+    runner tournaments blur.
+
+[1] Named C=27 shell-transfer signatures
+  row                        M branch                  qthr flips transfer                                      shell fp
+  AP                      1/14 tight-floor               14     0 perfect-transversal                           c3=0,hp=1
+  GW 12->24               1/14 tight-floor               14    20 H[12:g3] D[3:3:11] Z[-]                       c3=0,hp=1
+  near-miss 12->36        3/41 K33-unit-excess           14    22 H[12:g3] D[9:9:20] Z[-]                       c3=0,hp=1
+  swap 10->20             2/27 C27-petal-two-block       14    10 H[10:g1] D[7:1:11] Z[-]                       c3=0,hp=1
+  swap 13->26             2/27 C27-petal-two-block       14     8 H[13:g1] D[1:1:11] Z[-]                       c3=0,hp=1
+  residue-liar 12->26     1/12 nonunit-excess            12    11 H[12:g3] D[1:1:11] Z[-]                       c3=0,hp=1
+  swap 12->60             1/13 q-parent-star             14    21 H[12:g3] D[6:3:20] Z[-]                       c3=0,hp=1
+
+  Reading:
+    AP is the perfect lower transversal.  GW has the nonunit transfer
+    H[12:g3] -> D[3:g3].  The near-miss keeps the same hole but moves
+    surplus to the unique gcd-9 shell, H[12:g3] -> D[9:g9], matching
+    the first K33/Farey child.  The two 2/27 petals are the unit-hole
+    second-gap cases.
+
+[2] Low-gap frontier floor plus first K33 child: M <= 3/41
+  rows=3
+  branch_counts={'K33-unit-excess': 1, 'tight-floor': 2}
+    AP                 M= 1/14 branch=tight-floor             qthr=14 flips= 0 perfect-transversal
+    GW 12->24          M= 1/14 branch=tight-floor             qthr=14 flips=20 H[12:g3] D[3:3:11] Z[-]
+    near-miss 12->36   M= 3/41 branch=K33-unit-excess         qthr=14 flips=22 H[12:g3] D[9:9:20] Z[-]
+
+[2] Low-gap frontier second-gap shell: M <= 2/27
+  rows=5
+  branch_counts={'C27-petal-two-block': 2, 'K33-unit-excess': 1, 'tight-floor': 2}
+    AP                 M= 1/14 branch=tight-floor             qthr=14 flips= 0 perfect-transversal
+    GW 12->24          M= 1/14 branch=tight-floor             qthr=14 flips=20 H[12:g3] D[3:3:11] Z[-]
+    near-miss 12->36   M= 3/41 branch=K33-unit-excess         qthr=14 flips=22 H[12:g3] D[9:9:20] Z[-]
+    swap 10->20        M= 2/27 branch=C27-petal-two-block     qthr=14 flips=10 H[10:g1] D[7:1:11] Z[-]
+    swap 13->26        M= 2/27 branch=C27-petal-two-block     qthr=14 flips= 8 H[13:g1] D[1:1:11] Z[-]
+
+[3] Whole-bank shell-transfer summary
+  audited rows=1653
+  branch_counts={'C27-petal-two-block': 2, 'K33-unit-excess': 1, 'nonunit-excess': 1529, 'q-parent-star': 119, 'tight-floor': 2}
+  rows with M<=2/27=5
+  low-frontier coarse transfer counts:
+     2 Hg(1,)->Dg(1,);z=0       examples=['swap 10->20', 'swap 13->26']
+     1 Hg(3,)->Dg(3,);z=0       examples=['GW 12->24']
+     1 Hg(3,)->Dg(9,);z=0       examples=['near-miss 12->36']
+     1 perfect                  examples=['AP']
+
+  transfer labels that mix tight/K33/C27 with loose rows:
+    H[12:g3] D[3:3:11] Z[-]                       branches={'tight-floor': 1, 'nonunit-excess': 4} examples=GW 12->24:1/14, swap 12->132:11/137, swap 12->105:1/12, swap 12->51:1/12, swap 12->78:1/12
+    perfect-transversal                           branches={'tight-floor': 1, 'nonunit-excess': 113, 'q-parent-star': 9} examples=AP:1/14, swap 13->121:1/13, swap 13->122:1/13, swap 13->14:1/13, swap 13->40:1/13
+    H[12:g3] D[9:9:20] Z[-]                       branches={'K33-unit-excess': 1, 'nonunit-excess': 4} examples=near-miss 12->36:3/41, 12m family m=12:12/149, swap 12->117:1/12, swap 12->63:1/12, swap 12->90:1/12
+    H[10:g1] D[7:1:11] Z[-]                       branches={'C27-petal-two-block': 1, 'nonunit-excess': 4} examples=swap 10->20:2/27, swap 10->101:1/10, swap 10->128:1/10, swap 10->47:1/10, swap 10->74:1/10
+    H[13:g1] D[1:1:11] Z[-]                       branches={'C27-petal-two-block': 1, 'q-parent-star': 4} examples=swap 13->26:2/27, swap 13->107:1/13, swap 13->134:1/13, swap 13->53:1/13, swap 13->80:1/13
+
+  Guardrail:
+    marked shell transfer is necessary relation data but not sufficient
+    by itself.  Exact M/Farey branch must remain attached, because some
+    transfer labels recur in safely loose rows.
+
+[4] Tournament Analysis on proof quotients
+  vertices: proof quotients/channels, not runners.
+  pair observable:
+    theorem scale, shell-predicate retention, visibility/sign retention,
+    HYP-2908 handoff strength, scalar-decoy resistance.
+  switch/gauge: lexicographically larger role score wins.
+  fingerprint: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)) c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1) hp=1
+  Hamiltonian path:
+    exact M/Farey branch > marked C27 shell transfer > unit-visible shell holes > nonunit 3-adic depth > Kpq/K33 incidence owners > shell-priority tournament > raw visible fold count > raw runner residues
+
+[5] Proof readout
+  S136 turns the C=27 branch into a marked transfer problem.
+  Bounded frontier evidence through the S130 single-replacement atlas says:
+    M<=3/41 gives exactly AP, GW, and the 12->36 K33 near-miss;
+    M<=2/27 adds exactly the two unit-hole petals 10->20 and 13->26.
+  This suggests a sharper lemma target:
+    after standard reductions, any low-gap non-AP/GW atom must either
+    have a unit-visible C=27 hole, hence belongs to the second-gap/petal
+    branch, or move a gcd-3 nonunit hole into the gcd-9 shell, hence
+    carries the first K33/Farey-child state-lift packet.
+  The warning is equally important: shell transfer alone is not the proof.
+  The exact Farey branch remains attached to prevent safely loose rows from
+  masquerading as frontier rows.

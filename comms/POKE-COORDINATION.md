@@ -58,3 +58,23 @@ The atlas establishes the next sharp lemma target: Every top-balanced non-AP/GW 
 
 ### 5. Net Impact
 This checkpoint stabilizes the project's "archaeology." By mapping the cluster's broad conceptual history to the current $LRC(14)$ spine, the atlas provides a clear structural sequence for the final proof. It ensures that legacy mechanisms are leveraged as **labeled structural carriers** rather than simple scalar guardrails.
+
+## codex-S136 -- C=27 Shell-Transfer Spectrum
+
+Extended S134 under the Binary Relational Exploration mandate and specializes incoming S135/HYP-2936's broad "C=27 shell and Yoneda coimage" carrier by making the C27 quotient first-class.  New script/output: `04-computation/lrc14_c27_shell_transfer_spectrum_codex_s136.py`, `05-knowledge/results/lrc14_c27_shell_transfer_spectrum_codex_s136.out`; new hypothesis/tangent: HYP-2937 / T1033.
+
+Key bounded frontier in the S130 AP/GW/single-replacement bank through replacement `140`: `M<=3/41` is exactly AP, GW, `12->36`; `M<=2/27` adds only `10->20`, `13->26`.  Transfer reading: AP perfect; GW `H[12:g3]->D[3:g3]`; `12->36` `H[12:g3]->D[9:g9]`; petals unit holes `H[10:g1]->D[7:g1]`, `H[13:g1]->D[1:g1]`.
+
+Handoff: use shell-pair vertices `P_a={a,27-a}` when working the C27 branch.  But keep exact `M`/Farey branch attached: the same transfer labels recur in loose rows, so shell transfer is a necessary relation channel, not a standalone invariant.
+
+## codex-S134 -- Bigraded Relation Signature Under the Summand/Multiplicand Bridge
+
+Extended S133 by reconnecting the old summand/multiplicand graph work at the relation-channel level.  New script/output: `04-computation/lrc14_bigraded_relation_signature_codex_s134.py`, `05-knowledge/results/lrc14_bigraded_relation_signature_codex_s134.out`; new hypothesis/tangent: HYP-2935 / T1031.
+
+Key calibration: AP and shifted AP can have AP-style raw sumset shape, but AP has `36` observer-visible folds while shifted AP has only `2` and mostly hidden balanced collisions.  So raw additive energy is not the right LRC invariant; visibility/sign labels are load-bearing.
+
+Handoff: S133's branch split remains primary.  Use C27 typed-shell + multiplicand-clearance machinery for `p=2`; use Kpq/K33 owner-incidence packets for `p>=3`; then use visible-vs-hidden relation signatures before applying additive-energy/Freiman bounds.
+
+## codex-S133 -- Summand/Multiplicand Farey Bridge (checkpoint)
+
+Formalized the "summand/multiplicand bridge" for the LRC14 proof tree, mapping the unit-excess chain to distinct structural branches and separating shell-geometry problems from incidence-packet obstructions (commit `24d650d1`). This checkpoint stabilizes the routing of the project's terminal proof obligations.
