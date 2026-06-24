@@ -1,0 +1,62 @@
+LRC14 Haar-product / tournament-tiling synthesis scout (codex S165)
+==========================================================================
+
+Geometric Haar product rule
+----------------------------
+1D atoms checked: 15
+1D ordered products: 225
+1D product kinds: {'square_indicator': 15, 'signed_finer_haar': 68, 'zero': 142}
+1D failures: 0
+2D rectangles checked: 49
+2D ordered products: 2401
+2D factorization failures: 0
+2D product kind histogram:
+  ('signed_finer_haar', 'signed_finer_haar'): 400
+  ('signed_finer_haar', 'square_indicator'): 140
+  ('signed_finer_haar', 'zero'): 440
+  ('square_indicator', 'signed_finer_haar'): 140
+  ('square_indicator', 'square_indicator'): 49
+  ('square_indicator', 'zero'): 154
+  ('zero', 'signed_finer_haar'): 440
+  ('zero', 'square_indicator'): 154
+  ('zero', 'zero'): 484
+
+Tournament tiling Walsh product rule
+------------------------------------
+fixed-path n: 6
+staircase tile count: 10
+named masks tested: 21
+ordered mask products: 441
+Walsh xor mismatches: 0
+named closure hits: 12
+product support-size histogram: {0: 25, 1: 6, 2: 116, 3: 64, 4: 34, 5: 98, 6: 38, 7: 28, 8: 30, 10: 2}
+
+Shared readout
+--------------
+1. 2D Haar packets multiply by coordinatewise interval meet/refinement.
+2. Fixed-path tournament tilings multiply by symmetric difference of
+   staircase tile supports, the Boolean Haar/Walsh product rule.
+3. Both algebras are exact before quotienting and lossy after strip/count
+   scalarization unless owner coordinates are retained.
+4. LRC14 discrepancy should therefore be carried by labelled packets:
+   q/Farey scale, Haar open/boundary state, endpoint owners, packet family,
+   and certificate handoff.  AP/GW are boundary packets, not scalar zeros.
+
+Tournament Analysis
+-------------------
+vertices: proof carriers, not runners/arcs/tiles
+pairwise observable: retained LRC/product/discrepancy/topology/formal-check coordinates
+tie Hamiltonian path: haar_rectangle_packet > tiling_walsh_staircase_packet > certificate_handoff_zipper > tope_boundary_cocircuit_packet > smoothing_dispatch_policy > residue_discrepancy_green_packet > strip_count_scalar_profile > raw_tournament_isomorphism_class
+score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed_3cycles: 0
+retention path:
+  haar_rectangle_packet > tiling_walsh_staircase_packet > certificate_handoff_zipper > tope_boundary_cocircuit_packet > smoothing_dispatch_policy > residue_discrepancy_green_packet > strip_count_scalar_profile > raw_tournament_isomorphism_class
+
+Candidate theorem target
+------------------------
+A quotient used in the LRC14 proof must be a homomorphism for the relevant
+Haar/Walsh packet product, or it must emit a named residual coefficient.
+Equivalently: scalar discrepancy, strip counts, and tournament isomorphism
+classes are admissible only after the lost 2D tile/rectangle address is
+reconstructed, annihilated by orthogonality, or routed to a state-lift/F7
+residual packet.

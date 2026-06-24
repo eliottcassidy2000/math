@@ -213,7 +213,6 @@ CONCEPTS = {
 
 DOCS = [
     "05-knowledge/hypotheses/HYP-2989-lrc14-haar-product-discrepancy-tournament-tiling.md",
-    "05-knowledge/hypotheses/HYP-2988-lrc14-haar-product-tile-discrepancy.md",
     "05-knowledge/hypotheses/HYP-2987-lrc14-certificate-handoff-atlas.md",
     "05-knowledge/hypotheses/HYP-2988-lrc14-exposure-poset-proof-pass.md",
     "05-knowledge/hypotheses/HYP-2986-lrc14-tope-wall-cocircuit.md",

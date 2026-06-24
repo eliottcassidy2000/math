@@ -26,7 +26,6 @@ S166 Haar zipper cocycle / discrepancy handoff synthesis
 [3] Recent-work concept co-occurrence
   documents scanned:
     05-knowledge/hypotheses/HYP-2989-lrc14-haar-product-discrepancy-tournament-tiling.md
-    05-knowledge/hypotheses/HYP-2988-lrc14-haar-product-tile-discrepancy.md
     05-knowledge/hypotheses/HYP-2987-lrc14-certificate-handoff-atlas.md
     05-knowledge/hypotheses/HYP-2988-lrc14-exposure-poset-proof-pass.md
     05-knowledge/hypotheses/HYP-2986-lrc14-tope-wall-cocircuit.md
@@ -36,27 +35,27 @@ S166 Haar zipper cocycle / discrepancy handoff synthesis
     05-knowledge/hypotheses/HYP-2450-coefficient-tiling-prime-bridge.md
     05-knowledge/hypotheses/HYP-2736-lrc14-torus-line-discrepancy-integer-grid.md
   concept hits:
-    tope_cocircuit                 130
+    tope_cocircuit                 122
     smoothing                      76
-    zipper_handoff                 54
+    zipper_handoff                 48
     discrepancy                    47
-    state_lift                     41
-    tournament_tiling              25
-    exposure_kernel                23
-    haar_product                   19
+    state_lift                     36
+    exposure_kernel                26
+    tournament_tiling              24
+    haar_product                   16
   strongest co-occurrences:
-    smoothing                  <-> state_lift                 docs=6
-    smoothing                  <-> tope_cocircuit             docs=6
-    smoothing                  <-> zipper_handoff             docs=6
-    state_lift                 <-> tope_cocircuit             docs=6
-    state_lift                 <-> zipper_handoff             docs=6
-    tope_cocircuit             <-> tournament_tiling          docs=6
-    tope_cocircuit             <-> zipper_handoff             docs=6
-    smoothing                  <-> tournament_tiling          docs=5
-    state_lift                 <-> tournament_tiling          docs=5
-    tournament_tiling          <-> zipper_handoff             docs=5
-    discrepancy                <-> tope_cocircuit             docs=4
-    discrepancy                <-> tournament_tiling          docs=3
+    smoothing                  <-> state_lift                 docs=5
+    smoothing                  <-> tope_cocircuit             docs=5
+    smoothing                  <-> zipper_handoff             docs=5
+    state_lift                 <-> tope_cocircuit             docs=5
+    state_lift                 <-> zipper_handoff             docs=5
+    tope_cocircuit             <-> tournament_tiling          docs=5
+    tope_cocircuit             <-> zipper_handoff             docs=5
+    smoothing                  <-> tournament_tiling          docs=4
+    state_lift                 <-> tournament_tiling          docs=4
+    tournament_tiling          <-> zipper_handoff             docs=4
+    discrepancy                <-> tope_cocircuit             docs=3
+    discrepancy                <-> tournament_tiling          docs=2
 
 [4] Zipper theorem skeleton
   Z0 orthogonal cancellation | disjoint Haar coordinate           | discard safely by discrepancy orthogonality

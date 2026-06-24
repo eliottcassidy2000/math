@@ -6,7 +6,14 @@ source: codex-2026-06-24-S165
 artifacts:
   - 04-computation/lrc14_haar_product_discrepancy_tiling_codex_s165.py
   - 05-knowledge/results/lrc14_haar_product_discrepancy_tiling_codex_s165.out
+  - 04-computation/lrc14_haar_product_tile_discrepancy_codex_s165.py
+  - 05-knowledge/results/lrc14_haar_product_tile_discrepancy_codex_s165.out
+  - 04-computation/lrc14_haar_product_tiling_synthesis_codex_s165.py
+  - 05-knowledge/results/lrc14_haar_product_tiling_synthesis_codex_s165.out
+  - 07-reflections/lrc14-haar-product-discrepancy-tournament-tiling-codex-s165.md
+  - 07-reflections/lrc14-haar-product-tournament-tiling-synthesis-codex-s165.md
 related:
+  - HYP-2990
   - HYP-2988
   - HYP-2987
   - HYP-2986
@@ -53,7 +60,7 @@ So the Haar product rule is not just an analogy to tournament tiling.  It is
 the minimal square on which a row/column quotient can look identical while the
 mixed orientation sign flips.
 
-## Computed Artifact
+## Computed Artifacts
 
 Script:
 
@@ -95,6 +102,50 @@ Exhaustive 2-by-2 stress through total mass `6` finds that every table with a
 nontrivial fixed-margin mate has a mate changing `Hxy`.  This is the smallest
 possible warning version of HYP-2978's quotient rule.
 
+The companion tile-discrepancy scout
+`04-computation/lrc14_haar_product_tile_discrepancy_codex_s165.py` enumerates
+depth-3 dyadic Haar rectangles:
+
+```text
+rectangles: 225
+ordered products: 50625
+orthogonal_zero: 43736
+same_tile_indicator: 225
+vertical_owner_strip: 1020
+horizontal_owner_strip: 1020
+cross_handoff: 2312
+nested_refinement: 2312
+```
+
+Every nonzero non-atom class is sign-balanced: owner strips have `510/510`,
+cross handoffs have `1156/1156`, and nested refinements have `1156/1156` by
+sign.  This is the discrepancy-theory version of the tiling model: most
+interactions are orthogonal, and the surviving signal is sparse, signed,
+local, and typed.
+
+The broader product-algebra scout
+`04-computation/lrc14_haar_product_tiling_synthesis_codex_s165.py` checks the
+coordinate-retained packet algebra before quotienting:
+
+```text
+1D Haar ordered products checked: 225, failures: 0
+2D Haar rectangle products checked: 2401, factorization failures: 0
+fixed-path n=6 tiling Walsh products checked: 441, xor mismatches: 0
+```
+
+The exact rules are:
+
+```text
+h_{I x J} h_{I' x J'} = (h_I h_I') tensor (h_J h_J')
+chi_A chi_B = chi_{A xor B}
+```
+
+Here `A,B` are staircase tile-support masks for a fixed Hamiltonian path.  The
+Haar rectangle basis and the Boolean/Walsh staircase basis are not the same
+objects, but they enforce the same proof discipline: product identities are
+exact while the two-dimensional address is retained and become dangerous after
+strip-count or isomorphism-class scalarization.
+
 ## Synthesis Across Recent Agents
 
 HYP-2594 counted continuous interval components `K` and proved the crude bound
@@ -127,6 +178,17 @@ HYP-2981's Fejer interval certificates are high-order relatives of the same
 mixed product atom.  A Fejer quadratic form is a positive trigonometric
 packet that detects a signed mixed defect after lower quotients have been
 fixed.
+
+HYP-2988's exposure-poset proof pass supplies the global no-hidden-kernel
+audit above these local product rules.  In the merged picture, a hidden source
+kernel must be invisible to q-witnesses, AP/GW taut boundary atoms, open Haar
+bridges, Fejer/Toeplitz dual exposure, C27/K33/petal state labels, and the
+mixed Haar/tile product classes listed here.
+
+HYP-2990's abstract zipper atlas supplies the quotient rule in theorem form:
+a projection may forget a coordinate only when the predicate is constant on
+fibers, the coordinate is reconstructible, a dual certificate annihilates it,
+or the lost coordinate is routed to a named residual sector.
 
 ## Theorem-Facing Target
 
@@ -169,6 +231,27 @@ O6 F7 definition:
   anonymous row/column-margin failure.
 ```
 
+Equivalently, the Haar-tile vanishing target is:
+
+```text
+on each labelled LRC14 packet fiber,
+non-AP/GW zero-open residual
+=> nonzero coefficient in owner-strip, cross-handoff, or nested-refinement
+   class
+or AP/GW boundary skeleton / THM-572-F7 residual.
+```
+
+The product-algebra version is:
+
+```text
+every quotient Q used in the LRC14 proof must be
+  (i) a homomorphism for the relevant Haar/Walsh product,
+  (ii) fiber-homogeneous for the proof predicate,
+  (iii) repaired by owner/endpoint/Farey/state reconstruction,
+  (iv) annihilated by orthogonality or a dual certificate, or
+  (v) emitted as a named state-lift/F7 residual packet.
+```
+
 ## Tournament Analysis
 
 Vertices are proof carriers, not runners:
@@ -204,9 +287,12 @@ directed_3cycles=0
 SCC_sizes=[1,1,1,1,1,1,1]
 hamiltonian_paths=1
 canonical_path=
-  labelled_haar_square_packet
+  haar_rectangle_packet
+  > tiling_walsh_staircase_packet
+  > labelled_haar_square_packet
   > fixed_margin_switch_cocircuit
   > mixed_haar_discrepancy
+  > owner_strip_cross_handoff_nested_refinement
   > colored_resonance_congruence
   > tope_cocircuit_wall_label
   > row_column_margin_shadow

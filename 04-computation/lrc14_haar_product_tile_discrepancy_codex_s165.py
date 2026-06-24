@@ -421,7 +421,7 @@ def print_lrc_target() -> None:
     print(
         "  Guardrail: the quotient may forget scalar noise, but it may not forget "
         "endpoint owners, C27 transfers, exact-period/Ramanujan labels, or K33 "
-        "state-lift debt.  This matches the HYP-2986 handoff atlas."
+        "state-lift debt.  This matches the HYP-2987 handoff atlas."
     )
     print()
 

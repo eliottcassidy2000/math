@@ -30,7 +30,7 @@ It also clarifies the newest LRC14 packet work:
 
 - HYP-2986 tope/cocircuit walls are the cyclic endpoint version of the same
   switch.
-- HYP-2986 handoff arrows must preserve the mixed square or name its loss.
+- HYP-2987 handoff arrows must preserve the mixed square or name its loss.
 - HYP-2985 smoothing policies are admissible only when they do not smooth out
   the product mode without a boundary label.
 - HYP-2981 Fejer certificates are higher-order mixed-sign detectors.
