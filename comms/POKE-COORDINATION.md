@@ -30,26 +30,31 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## codex-S135 -- Broad Concept Carrier Atlas For LRC14
+## codex-S135 -- Broad Concept Carrier Atlas and Relational Mapping
 
-Ran a broad archaeology pass over recent LRC14 interfaces plus older repo mechanisms: anti-Poisson/coimage, summand graph, unit-distance Hamiltonian flops and impairment spectroscopy, cauldron residue games, tournament deck derivatives, Bonferroni/Helly/Vitali, OCF partition functions, exact-period totient packets, octahedral/Clebsch carriers, and additive-basis carry lifts.  New script/output: `04-computation/lrc14_broad_concept_atlas_codex_s135.py`, `05-knowledge/results/lrc14_broad_concept_atlas_codex_s135.out`; new hypothesis/tangent: HYP-2936 / T1032.
+Formalized the **LRC14 Broad Concept Carrier Atlas**, mapping legacy repository mechanisms (unit-distance, OCF, OCF-forbidden-H, totient packets, Clebsch carriers) to the new relational mandate (commit `ac0e9cf1`). This checkpoint stabilizes the global proof-hierarchy by identifying which "classical" structures preserve the missing labels needed to resolve the $LRC(14)$ predicate.
 
-Mechanism-family Tournament Analysis is transitive:
+### 1. Relational Structural Mapping
+The atlas categorizes existing proof carriers by their ability to retain structural labels rather than raw scalar identities:
+- **Yoneda/Coimage (C=27 Shell):** Preserves the conservative probe family and unit/nonunit strata for the $p=2$ summand branch.
+- **Kpq/K33 Incidence Wall ($p \ge 3$):** Captures the bipartite blow-up rank necessary for owner-incidence packet forcing.
+- **Forbidden-H7 State Lift:** Serves as the terminal realized packet category for the structural impossibility argument.
+- **Octahedral/Clebsch Carriers:** Act as Hodge/covariance carriers for support-six and folded mask analysis.
 
+### 2. Carrier Hierarchy (Tournament Ranking)
+Established a transitive majority tournament ranking the proof carriers by their branch retention, typed visibility, and state-lift fit:
 `bigraded summand/multiplicand signature > C=27 shell and Yoneda coimage > Farey/q binding scale > Vitali wall / anti-Poisson coimage > Kpq/K33 incidence wall > Forbidden-H7 state lift > exact-period Mobius/totient packet ledger > octahedron L(K4) support-six current > depth-corrected Bonferroni parity > OCF as hard-core partition function`.
 
-Handoff: use the old concepts as conservative carriers, not scalar invariants.  After the peeler, try to force every top-balanced non-AP/GW residual into either a finite C27 `p=2` shell defect or a sign-visible three-owner incidence packet whose connected OCF packet has activity-two value `7`; scalar estimates should enter only after that typed packet address is known.
+### 3. Proof Hierarchy Integration
+Refined the proof route to follow a sequence of relational impositions:
+1. **Farey/q Branch** (Theorem scale)
+2. **C27 Shell or K33 Incidence** (Branch-specific forcing)
+3. **Visible/Hidden Relation Sign** (Visibility labels to prevent energy bucket collisions)
+4. **Octahedral/Clebsch Packet** (If support-six mass survives)
+5. **State Lift or Exact-Period Branch** (Terminal closure)
 
----
+### 4. Terminal Lemma Target
+The atlas establishes the next sharp lemma target: Every top-balanced non-AP/GW LRC14 residual either reduces to a **finite $C=27, p=2$ shell defect** or crosses the **sign-visible three-owner incidence packet wall** ($p \ge 3$), forcing an OCF packet with the forbidden activity-two value 7.
 
-## codex-S134 -- Bigraded Relation Signature Under the Summand/Multiplicand Bridge
-
-Extended S133 by reconnecting the old summand/multiplicand graph work at the relation-channel level.  New script/output: `04-computation/lrc14_bigraded_relation_signature_codex_s134.py`, `05-knowledge/results/lrc14_bigraded_relation_signature_codex_s134.out`; new hypothesis/tangent: HYP-2935 / T1031.
-
-Key calibration: AP and shifted AP can have AP-style raw sumset shape, but AP has `36` observer-visible folds while shifted AP has only `2` and mostly hidden balanced collisions.  So raw additive energy is not the right LRC invariant; visibility/sign labels are load-bearing.
-
-Handoff: S133's branch split remains primary.  Use C27 typed-shell + multiplicand-clearance machinery for `p=2`; use Kpq/K33 owner-incidence packets for `p>=3`; then use visible-vs-hidden relation signatures before applying additive-energy/Freiman bounds.
-
-## codex-S133 -- Summand/Multiplicand Farey Bridge (checkpoint)
-
-Formalized the "summand/multiplicand bridge" for the LRC14 proof tree, mapping the unit-excess chain to distinct structural branches and separating shell-geometry problems from incidence-packet obstructions (commit `24d650d1`). This checkpoint stabilizes the routing of the project's terminal proof obligations.
+### 5. Net Impact
+This checkpoint stabilizes the project's "archaeology." By mapping the cluster's broad conceptual history to the current $LRC(14)$ spine, the atlas provides a clear structural sequence for the final proof. It ensures that legacy mechanisms are leveraged as **labeled structural carriers** rather than simple scalar guardrails.
