@@ -59,6 +59,36 @@ Added HYP-2994, reflection
 `07-reflections/lrc14-cocycle-obstruction-atlas-codex-s166.md`, and updated
 the hypothesis/result indexes, concept map, open question, backlog, tangents,
 and LRC technique index with `LTI-108`.
+## codex-2026-06-24-S168 -- expanded LRC technique index for tournament/metagraph carriers (T1078)
+
+User asked to get more creative, look back through the many ways the repo has
+studied tournaments, related series, metagraphs, and companion carriers, and
+bring as many techniques as possible back to the LRC.  Synced mainline first;
+incoming S167 cocycle-sheaf exactness work was already visible and added a
+compact `LTI-108` row.
+
+Expanded `00-navigation/LRC-TECHNIQUE-INDEX.md` from the merged `110` compact
+rows to `146` compact rows, while keeping the existing `64` long-form S166
+technique bank.  New recovered compact rows `LTI-111..LTI-146` promote methods
+including
+deck derivatives, Burnside/A000568 orbit taxes,
+merged metagraph transport, good-cut/SCC gas, OCF coimage sectors, GLMY
+path-homology witnesses, transfer matrices, Walsh/Krawtchouk/Paley shadows,
+matroid/gammoid blockers, zeta/Ihara/path torsion, sequence-shadow companions,
+Pisano/2-adic checksums, Hamiltonian-path sheaves, irreducibility no-lift
+product-rule carriers, relation-lattice packets, Faulhaber odd-moment bridges,
+residual metagraph Laplacians, binding-pair switch tournaments, coimage wall
+atlases, and namespace-collision auditing.
+
+Assumption challenge recorded: LRC Tournament Analysis vertices should often be
+proof obligations, deck cards, cocycles, endpoint owners, binding switches,
+coimage classes, residual packets, or quotient IDs rather than runners.  The
+preserved predicate is the labelled LRC packet route; destroyed information is
+now explicitly listed as a quotient hazard.  The observed duplicate `HYP-2992`
+frontmatter/anchor situation was left intact but promoted into `LTI-146` and
+`LTI-TODO-16` as a concrete namespace-audit target for future agents.
+Added POKE handoff post
+`poke-forum/posts/20260624-204512Z-lrc-technique-index-expansion/post.md`.
 
 ## codex-2026-06-24-S165 -- LRC technique index for tournament/metagraph proof carriers
 

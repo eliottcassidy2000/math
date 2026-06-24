@@ -15,6 +15,34 @@
 
 ---
 
+## Lead codex-2026-06-24-S168: expanded LRC technique index for tournament/metagraph/series carriers
+
+**Status:** NAVIGATION / compact registry expanded.  User asked to get even more
+creative, look back through the many tournament, metagraph, related-series, and
+carrier methods, and bring back as many techniques as possible for LRC agents.
+`00-navigation/LRC-TECHNIQUE-INDEX.md` now has `146` compact `LTI-*` rows plus
+the existing `64` long-form S166 technique-bank entries after merging the
+incoming `LTI-109` packet-cocycle atlas and `LTI-110` cocycle-obstruction atlas.
+**New promoted block:** `LTI-111..LTI-146` promotes deck derivatives,
+Burnside orbit taxes, merged metagraph transport, good-cut/SCC
+gas, OCF coimage sectors, noncommutative Redei/Berge recurrences, GLMY
+path-homology witnesses, heap/tableau/sorting-network carriers, transfer-matrix
+and Hopf convolution carriers, Walsh/Krawtchouk/Paley association shadows,
+matroid/gammoid blockers, zeta/Ihara/path torsion, sequence-shadow companions,
+Pisano and 2-adic checksums, Hamiltonian-path sheaves, irreducibility no-lift
+product rules, relation-lattice/subtorus packets, Faulhaber odd-moment bridges,
+A000568 deck lifts, residual metagraph Laplacians, binding-pair switch
+tournaments, coimage wall atlases, and namespace collision auditing.
+**Guardrail:** the session explicitly treats the incoming duplicate `HYP-2992`
+frontmatter/anchor situation as a namespace-collision signal, not something to
+silently overwrite.  The new `LTI-146` and `LTI-TODO-16` ask for an audit and
+repair plan so future citations point to the intended quotient/proof object.
+**Next:** build the `LTI-TODO-13..22` artifacts, starting with packet-cocycle
+formalization, the executable F7 cocycle residual record, a finite cocycle-sheaf
+obstruction matrix over HYP-2963 packets, an F0-F7 residual metagraph Laplacian,
+and a binding-pair switch tournament for covering rows.
+Namespace: T1078.
+
 ## Lead codex-2026-06-24-S166: cocycle obstruction atlas for LRC14
 
 **Status:** PROOF-INTERFACE / cochain-cocycle atlas complete; not a proof

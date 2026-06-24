@@ -1,5 +1,26 @@
 # Open Questions
 
+**OPEN-Q-108 S168 technique-index expansion addendum:** The LRC Technique Index
+now has `146` compact `LTI-*` rows plus the `64` long-form S166 technique-bank
+entries after preserving the incoming `LTI-109` packet-cocycle atlas and
+`LTI-110` cocycle-obstruction atlas.  The recovered promoted rows
+`LTI-111..LTI-146` are a pull list for attacking the
+LRC14 gap from tournament/metagraph/series directions: cocycle obstruction
+matrices, deck-derivative reconstruction, Burnside/A000568 orbit taxes, merged
+metagraph transport, good-cut/SCC gas, OCF coimage sectors, path-homology
+residuals, transfer matrices, Walsh/Krawtchouk/Paley shadows, matroid/gammoid
+tests, zeta/Ihara/path torsion, sequence shadows, Pisano/2-adic checksums,
+irreducibility no-lift product rules, relation-lattice packets, Faulhaber
+odd-moment bridges, binding-pair switch tournaments, coimage wall atlases, and
+namespace collision auditing.  The proof-use rule is unchanged but sharper: a
+quotient may forget only fiber-constant, reconstructible, dual-annihilated,
+cochain-exact, or named-residual data.  Near-term proof tasks are
+`LTI-TODO-13..22`: build the packet-cocycle theorem formalization, the
+executable F7 cocycle residual record, the emitted-cocycle matrix over HYP-2963
+packets, an F0-F7 residual metagraph Laplacian, a marked A000568/Burnside
+quotient tax, and a binding-pair switch tournament for covering rows. -> T1078,
+HYP-2995, HYP-2994, HYP-2992, HYP-2991,
+HYP-2990, HYP-2963, THM-524, THM-381, THM-354, THM-002.
 **OPEN-Q-108 S167 cocycle-sheaf exactness addendum:** HYP-2992 recasts the active LRC14 proof stack as one cochain complex instead of many separate ledgers.  `C0` is the labelled packet fiber data (exact `M/qdiv`, open-vs-boundary state, endpoint owners, exact-period labels, route labels); `C1` is the emitted cocycle layer (Haar `zeta` switches, endpoint currents, Ramanujan phases, Fejer debts, smoothing defects, carry lifts, pair tensions, and certificate handoff obligations); `C2` is incompatibility / unnamed residual data.  Candidate theorem target: for primitive non-AP/GW rows, prove exactness at `C1`, so every emitted cocycle is the boundary of a known certificate, annihilated by a dual, restricted to a smaller packet family, or routed to the named THM-572/F7 residual.  S167's carrier tournament has `directed_3cycles=3` and a size-`5` SCC among Ramanujan exact-period, smoothing boundary, tope/cocircuit, Fejer dual, and path-homology witness carriers, warning that these must be typed as interacting cochains rather than collapsed to a scalar chain. -> HYP-2992, HYP-2991, HYP-2990, HYP-2989, HYP-2988, HYP-2987, HYP-2986, HYP-2985, HYP-2979, HYP-2974, HYP-2171, HYP-2027, HYP-362, THM-572.
 **OPEN-Q-108 S166 cocycle obstruction atlas addendum:** HYP-2994 lifts the local HYP-2991 `zeta` cocycle and the HYP-2992/HYP-2993 Haar-tile/zipper atlases into a cochain ledger for LRC14.  `C0` stores packet labels, owner potentials, Fejer centers, and exact-period residues; `C1` stores handoff arrows, endpoint transfers, smoothing gauges, and source pullbacks; `C2` stores Haar switches, tope curls, color-resonance squares, boundary-moment curls, and state-lift faces; `H2` stores unpaired mixed modes, no-hidden-kernel survivors, F7, and THM-572 residuals.  The S166 script scores `15` carriers and finds sparse preserved labels exactly where scalar quotients are dangerous: exact scale, mixed Haar sign, and phase period.  Tournament Analysis has one nontrivial `3`-carrier SCC tying certificate handoff, local `zeta`, and exposure/Cech gluing.  Live theorem target: every allowed LRC quotient must declare whether it takes an exact coboundary, kills a closed cocycle by a dual stop, preserves torsion/period labels, or emits a named residual; next compute packet-level `zeta` signatures and an executable F7 record. -> HYP-2994, HYP-2993, HYP-2992, HYP-2991, HYP-2990, HYP-2988, HYP-2987, HYP-2963, THM-572.
 **OPEN-Q-108 S166 Haar zipper cocycle addendum:** HYP-2991 refines HYP-2990's abstract no-free-slider rule into a concrete LRC14 local obstruction.  On a `2 x 2` fixed-margin Haar/tournament tile, the retained coordinate is `zeta(T)=T00-T01-T10+T11`.  The S166 audit checks all nonnegative tables through total `10`: `1001` tables, `506` margin fibers, `285` nontrivial fibers, and `0` duplicate augmented `(margins,zeta)` keys; fixed-margin zeta steps have gcd `4`.  Margins alone are therefore an unsafe quotient unless `zeta` is reconstructed, annihilated by discrepancy, or routed.  Depth-4 dyadic products show the nonzero non-atom interaction classes are sign-balanced before LRC packet labels break symmetry.  Live theorem target: on each labelled packet fiber, every mixed Haar cocycle cancels by HYP-2595 color-compatible discrepancy, stops at a HYP-2986 boundary cocircuit, hands to Fejer/Ramanujan/endpoint/smoothing clocks in HYP-2987, descends by family compression, or becomes the named F7/THM-572 state-lift residual. -> HYP-2991, HYP-2990, HYP-2989, HYP-2988, HYP-2987, HYP-2986, HYP-2985, HYP-2595, HYP-2594, THM-572.
