@@ -1,0 +1,115 @@
+LRC14 COCYCLE CARRIER ATLAS
+========================================================================
+
+Executive readout:
+A useful LRC cocycle is a signed local obstruction to forgetting a coordinate.  It lives on a labelled packet fiber, closes when local certificates glue, and becomes harmless only as a coboundary/potential, a dual-annihilated mode, a known boundary atom, a descended family, or a named residual sector.
+
+Carrier dictionary:
+- labelled_packet_master_cocycle
+  base: packet base P(S)
+  cochain: total lost-coordinate obstruction omega_P
+  exits: strict witness, AP/GW atom, state-lift residual, or exact certificate
+- haar_zipper_zeta
+  base: 2 x 2 fixed-margin packet table
+  cochain: zeta=T00-T01-T10+T11
+  exits: color cancellation, boundary stop, handoff, descent, F7 debt
+- endpoint_credit_winding
+  base: danger-arc endpoint transition graph
+  cochain: K(a,b)=14rs(R(a)-L(b))
+  exits: potential Phi, AP/GW closed cycle, or K33/state lift
+- carry_crt_cocycle
+  base: Res_27 lift tower v=r+27k
+  cochain: k mod 14 controls parity, apex divisibility, and pair sums
+  exits: owner/Cprime repair, apex tax, scalar lift, or strictness
+- owner_deletion_derivative
+  base: visible Res_27/gcd shell quotient
+  cochain: delta_owner(v)=obligations uncovered by deleting v
+  exits: private-owner bit, carry support, or strict tax
+- ramanujan_exact_period_trace
+  base: exact denominator q and primitive q-th roots
+  cochain: c_q(a-b) as exact-period character trace
+  exits: primitive projector, endpoint-owner repair, or squarefree residual
+- fejer_toeplitz_moment
+  base: Fourier modes of C_S(t)-1
+  cochain: quadratic Fejer form v* M v
+  exits: negative quadratic certificate or interval proof payload
+- boundary_moment_multichart
+  base: exact-period denominator charts
+  cochain: chart-to-chart moment defect
+  exits: positive Haar-open chart, AP/GW equality, or residual chart debt
+- product_rule_tiling
+  base: Haar rectangles / fixed-path Walsh staircase tiles
+  cochain: product class: zero, atom, owner strip, handoff, descent, residual
+  exits: orthogonality, owner reconstruction, dual annihilation, or residual
+- farey_k33_determinant
+  base: exact M=p/q Farey node
+  cochain: determinant/excess e=14p-q and K_{p,q} incidence depth
+  exits: p=1 AP/GW, p=2 C27, p>=3 K33/Fejer/state lift
+- c27_unital_transfer
+  base: C=27 antipodal shell / q=3 unital block
+  cochain: local pair-completion transfer defect
+  exits: petal, GW transfer, K33 branch, or state-lift debt
+- root_packet_boundary
+  base: type-A root-sign chain complex
+  cochain: sum of roots = endpoint boundary; closed packets have zero boundary
+  exits: packet compatibility, incidence rank, or homology residue
+- metagraph_transfer_cocycle
+  base: operation/metagraph state graph
+  cochain: successor defect or transfer-matrix curvature
+  exits: state-vector refinement, support residue, or SCC debt
+- sequence_shadow_difference
+  base: n+2 / n*2 / companion sequence recursions
+  cochain: finite difference under add/multiply mode changes
+  exits: state split, derivative repair, or discarded analogy
+- octahedral_hodge_current
+  base: octahedral/K4 face-current support
+  cochain: discrete curl/divergence defect
+  exits: Hodge split, tail repair, or residual current
+- ocf_activity_coimage
+  base: odd-cycle compatibility graph
+  cochain: hard-core activity residue
+  exits: coimage sector, path homology residue, or support repair
+
+Proof-gauge Tournament Analysis:
+vertices=16
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 6: 2, 7: 1, 8: 2, 10: 1, 11: 1, 12: 1, 14: 3}
+directed_3cycles=4
+SCC_sizes=[1, 1, 1, 1, 1, 5, 1, 1, 1, 3]
+Hamiltonian_path_count=27
+canonical_path=
+  > labelled_packet_master_cocycle
+  > haar_zipper_zeta
+  > endpoint_credit_winding
+  > product_rule_tiling
+  > ramanujan_exact_period_trace
+  > carry_crt_cocycle
+  > fejer_toeplitz_moment
+  > owner_deletion_derivative
+  > boundary_moment_multichart
+  > farey_k33_determinant
+  > c27_unital_transfer
+  > root_packet_boundary
+  > metagraph_transfer_cocycle
+  > octahedral_hodge_current
+  > ocf_activity_coimage
+  > sequence_shadow_difference
+
+Exploration-gauge comparison:
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1}
+directed_3cycles=0
+SCC_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Hamiltonian_path_count=1
+edge_flips_vs_proof_gauge=12
+
+Top cocycle proof obligations:
+- Packet cocycle theorem: Define omega_Q for every quotient Q on P(S)-fibers and prove each omega_Q is exact, dual-annihilated, descended, AP/GW, or residualized.
+- Endpoint-credit potential backend: Turn HYP-2970's no-positive-winding condition into exact interval certificates for packet families.
+- Haar zeta packet grid: Compute zeta/product-rule classes on HYP-2963 packets, not only abstract 2 x 2 tables.
+- Carry-owner no-leak theorem: Prove local/global carry cocycles either reconstruct from paired owner derivatives or pay strict loneliness tax.
+- F7 definition: Define F7 as a non-exact, non-annihilated cocycle class after all known teeth fail; specify its coefficient ring and state-lift map.
+
+Cocycle packet theorem skeleton:
+Let P(S) retain qdiv, exact M/Farey data, Haar/Baire topology, endpoint owners, exact-period labels, Fejer certificate data, C27/K33/state labels, and smoothing route.  For any quotient Q:P(S)->Y, construct a fiber cochain omega_Q measuring the coordinate Q forgets.  Q is theorem-safe only if the LRC predicate is constant on Y-fibers or omega_Q is reconstructed, exact as a coboundary/potential, annihilated by a dual certificate, descended to a smaller packet family, identified as AP/GW boundary equality, or emitted as a named F7/THM-572 residual.
+
+Most important change of viewpoint:
+Tournaments are not only built on runners.  For cocycle work the better vertices are fibers, proof carriers, endpoint arrows, Haar squares, carry derivatives, exact-period modes, transfer states, and residual obligations.  Edges compare which carrier preserves the cocycle needed for the next gluing step.

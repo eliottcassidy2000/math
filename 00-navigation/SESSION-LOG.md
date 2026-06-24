@@ -1,10 +1,36 @@
+## codex-2026-06-24-S167 -- LRC14 cocycle carrier atlas (HYP-2995/T1079)
+
+User asked for a long session seeing everything in terms of cocycles.  Continued
+from the HYP-2990 abstract zipper and HYP-2991 Haar zipper lanes, treating a
+quotient as safe only when its forgotten coordinate is measured by a cochain
+that is exact, dual-annihilated, descended, boundary-equality, reconstructed,
+or routed to named residual debt.
+
+Added `04-computation/lrc14_cocycle_carrier_atlas_codex_s167.py` and stored
+`05-knowledge/results/lrc14_cocycle_carrier_atlas_codex_s167.out`.  The script
+records 16 cocycle carriers: labelled packet master cocycle, Haar zipper
+`zeta`, endpoint-credit winding, carry/CRT, owner-deletion derivative,
+Ramanujan exact-period trace, Fejer/Toeplitz moment, boundary-moment
+multichart, product-rule tiling, Farey/K33 determinant, C27/unital transfer,
+root-packet boundary, metagraph transfer curvature, sequence-shadow
+difference, octahedral Hodge current, and OCF activity coimage.
+
+Tournament Analysis uses proof carriers rather than runners.  Proof-gauge
+fingerprint: `score_hist={0:1,1:1,2:1,3:1,4:1,6:2,7:1,8:2,10:1,11:1,12:1,14:3}`,
+`directed_3cycles=4`, `SCC_sizes=[1,1,1,1,1,5,1,1,1,3]`, and
+`Hamiltonian_path_count=27`; exploration gauge is transitive and flips `12`
+edges.  Created HYP-2995/T1079 and a POKE/forum post.  The live theorem target
+is the packet-cocycle theorem: for every quotient `Q:P(S)->Y`, define
+`omega_Q` and discharge it by fiber constancy, reconstruction, exactness, dual
+annihilation, descent, AP/GW boundary equality, or named F7/THM-572 residual.
+
 ## codex-2026-06-24-S165 -- LRC technique index for tournament/metagraph proof carriers
 
 User asked to get more creative by looking back through the many tournament,
 metagraph, sequence, harmonic, and LRC proof passes and creating a reusable
 index other agents can pull from and contribute to.  Added
 `00-navigation/LRC-TECHNIQUE-INDEX.md`, a working `LTI-*` technique atlas with
-107 entries grouped by tournament/metagraph carriers, packet reductions,
+109 entries grouped by tournament/metagraph carriers, packet reductions,
 geometry/topology/event algebra, harmonic and analytic certificates, arithmetic
 and Farey carriers, and formal verification workflows.
 
@@ -67,9 +93,9 @@ support-residue calculus.
 
 Added `00-navigation/LRC-TECHNIQUE-INDEX.md` as a living contribution surface,
 then merged it with the parallel S165 `LTI-*` registry during rebase.  The
-merged file now has `107` compact `LTI-*` rows plus `63` long-form technique
-entries after folding in HYP-2991's Haar zipper cocycle and HYP-2989's
-product-rule tiling synthesis.  Long-form entries use the fields: sources, preserved LRC predicate,
+merged file now has `109` compact `LTI-*` rows plus `64` long-form technique
+entries after folding in HYP-2991's Haar zipper cocycle, HYP-2989's
+product-rule tiling synthesis, and HYP-2995's packet-cocycle atlas.  Long-form entries use the fields: sources, preserved LRC predicate,
 what it destroys if scalarized, best vertex sets, pairwise observable/gauge,
 LRC use, and next contribution.  The file also includes
 good-first-contribution and high-leverage contribution pull lists.

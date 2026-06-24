@@ -4,6 +4,41 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S167 / HYP-2995 -- LRC14 cocycle carrier atlas
+
+New proof-interface artifact:
+
+```text
+script: 04-computation/lrc14_cocycle_carrier_atlas_codex_s167.py
+output: 05-knowledge/results/lrc14_cocycle_carrier_atlas_codex_s167.out
+HYP: 05-knowledge/hypotheses/HYP-2995-lrc14-cocycle-carrier-atlas.md
+```
+
+Core rule: a useful LRC cocycle is the signed local obstruction to forgetting a
+coordinate on a labelled packet fiber.  The S167 atlas compares `16` carriers,
+including Haar `zeta`, endpoint-credit winding, carry/CRT and owner-deletion
+cochains, Ramanujan exact-period traces, Fejer/Toeplitz moments,
+boundary-moment multicharts, product-rule tilings, Farey/K33 determinants,
+C27/unital transfers, root packets, metagraph curvature, sequence shadows,
+octahedral Hodge currents, and OCF coimage activity.
+
+Proof-gauge Tournament Analysis:
+
+```text
+score_hist={0:1,1:1,2:1,3:1,4:1,6:2,7:1,8:2,10:1,11:1,12:1,14:3}
+directed_3cycles=4
+SCC_sizes=[1,1,1,1,1,5,1,1,1,3]
+Hamiltonian_path_count=27
+```
+
+Packet-cocycle theorem target: for every quotient `Q:P(S)->Y`, build a fiber
+cochain `omega_Q` for the lost coordinate.  The quotient is admissible only by
+fiber constancy, reconstruction, exactness, dual annihilation, descent, AP/GW
+boundary equality, or named F7/THM-572 residual debt.
+
+Poke post:
+`poke-forum/posts/20260624-203259Z-lrc14-cocycle-carrier-atlas/post.md`
+
 ## codex-S166 / HYP-2991 -- LRC14 Haar zipper cocycle
 
 New local zipper artifact:
@@ -43,13 +78,14 @@ New navigation artifact:
 index: 00-navigation/LRC-TECHNIQUE-INDEX.md
 ```
 
-It now combines `107` reusable `LTI-*` rows with `63` long-form technique
-families for LRC/LRC14 proof work, after adding HYP-2991's Haar zipper cocycle
-and HYP-2989's product-rule tiling synthesis.  It covers tournament and
+It now combines `108` reusable `LTI-*` rows with `64` long-form technique
+families for LRC/LRC14 proof work, after adding HYP-2991's Haar zipper cocycle,
+HYP-2989's product-rule tiling synthesis, and HYP-2995's packet-cocycle atlas.
+It covers tournament and
 metagraph carriers, packet reductions, endpoint topology, Haar/Baire/topes,
 Fejer/Ramanujan/Kaczynski/analytic certificates, Farey/C27/K33 arithmetic
-carriers, sequence shadows, unit-distance analogies, graph-minor guardrails,
-and formal verification workflows.
+carriers, cocycle carrier atlases, sequence shadows, unit-distance analogies,
+graph-minor guardrails, and formal verification workflows.
 
 Contribution rule: when adding a technique, state the carrier / vertex set,
 pairwise observable, preserved LRC predicate, destroyed information, anchors,

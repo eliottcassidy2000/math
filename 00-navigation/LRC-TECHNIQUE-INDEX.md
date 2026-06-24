@@ -208,6 +208,7 @@ the HYP-2990 no-free-slider rule.
 | LTI-106 | Haar zipper cocycle | `2 x 2` Haar/fixed-margin packet tables | Retain the mixed cocycle `zeta=T00-T01-T10+T11` when row/column margins collide | HYP-2991, HYP-2990, HYP-2989, HYP-2595 | Compute packet-level `zeta` signatures and route unpaired cocycles to F7/THM-572 debt. |
 | LTI-107 | Haar product tiling synthesis | Haar rectangles and fixed-path staircase tilings | Treat product-rule descent and Walsh/Haar multiplicativity as quotient guardrails before using tiling shadows | HYP-2989, HYP-2988, HYP-2452, THM-351 | Build a packet grid whose product-rule classes feed color-compatible discrepancy and Fejer handoff arrows. |
 | LTI-108 | Cocycle-sheaf exactness | Cocycle carriers / cochain complex `C0 -> C1 -> C2` | Treat every quotient as retaining a cocycle, cancelling it by exactness/duality, restricting it to a smaller packet, or routing it to named residual cohomology | HYP-2992, HYP-2991, HYP-2990 | Build the finite emitted-cocycle matrix on HYP-2963 packet banks and test exactness at `C1`. |
+| LTI-109 | Packet cocycle atlas | Labelled packet fibers / quotient fiber graphs | Measures the signed coordinate lost by a quotient and demands exact, dual-annihilated, descended, boundary, reconstructed, or residual exits | HYP-2995, HYP-2991, HYP-2990, HYP-2978 | Define `omega_Q` for every HYP-2963 quotient and test the cocycle exits familywise. |
 
 ## Cross-Cutting Guardrails
 
@@ -243,6 +244,7 @@ the HYP-2990 no-free-slider rule.
 | LTI-TODO-10 | Contributor script that emits a technique-card stub | LTI-103, LTI-104, LTI-105 |
 | LTI-TODO-11 | Packet-level Haar zipper cocycle signatures | LTI-046, LTI-047, LTI-048, LTI-106 |
 | LTI-TODO-12 | Product-rule packet grid for fixed-path tilings | LTI-047, LTI-048, LTI-106, LTI-107 |
+| LTI-TODO-13 | Packet cocycle theorem formalization | LTI-037, LTI-040, LTI-056, LTI-061, LTI-109 |
 
 ## Minimal Entry Template
 
@@ -1566,6 +1568,37 @@ Next contribution: instantiate the product-rule classes on HYP-2963 packet
 families and compare independent color-compatible product modes against the
 HYP-2595 `k+c_GP` discrepancy target.
 
+### 64. Packet Cocycle Atlas
+
+Sources: HYP-2995, HYP-2991, HYP-2990, HYP-2989, HYP-2978, HYP-2970,
+HYP-2230, HYP-2241, HYP-2618.
+
+Preserves: quotient fibers, lost-coordinate cochains, local closedness/gluing
+laws, and the legal exits that make forgetting a coordinate theorem-safe.
+
+Destroys if used alone: direct numerical proof content.  This is a proof
+interface, not a certificate; each cocycle still needs exact values on packet
+families and a verified exit.
+
+Best vertex sets: packet fibers, proof carriers, endpoint arrows, Haar squares,
+carry derivatives, exact-period modes, product-rule classes, transfer states,
+octahedral currents, OCF coimage sectors, and residual proof obligations.
+
+Pairwise observable / gauge: which carrier better retains the LRC predicate,
+fiber labels, local defect, closedness law, coboundary/dual/boundary/descent
+exit, formal checkability, and named residual routing.
+
+LRC use: define a cochain `omega_Q` for every quotient `Q:P(S)->Y` measuring
+the coordinate forgotten by `Q`; admit the quotient only when the predicate is
+fiber-constant, the coordinate is reconstructed, `omega_Q` is exact, a dual
+certificate annihilates it, it descends to a smaller packet family, it is
+AP/Goddyn-Wong boundary equality, or it becomes named F7/THM-572 state-lift
+debt.
+
+Next contribution: implement an `omega_Q` packet schema over the HYP-2963 bank
+and fill it for Haar `zeta`, endpoint-credit, Ramanujan, Fejer, Farey/K33,
+C27/unital, carry-owner, product-rule, and boundary-moment quotients.
+
 ## Pull Lists
 
 ### Good First Contributions
@@ -1588,6 +1621,8 @@ HYP-2595 `k+c_GP` discrepancy target.
 - Add endpoint-owner Ramanujan profiles to exact-period projectors.
 - Build an LRC packet transfer matrix, inspired by the tournament metagraph
   chain, with qdiv/Farey labels retained.
+- Implement the HYP-2995 `omega_Q` packet-cocycle schema and verify one legal
+  exit for each quotient in the HYP-2963 bank.
 
 ### Red-Flag Patterns
 
