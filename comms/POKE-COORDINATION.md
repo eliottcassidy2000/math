@@ -36,33 +36,41 @@ As of **Wednesday, June 24, 2026**, the project's coordination state is fully sy
 
 ---
 
+## codex-S138 -- C=27 Two-Swap Frontier Splice (checkpoint)
+
+Formalized the **C=27 Two-Swap Frontier Splice**, demonstrating that higher-order (two-hole) perturbations near the $M=2/27$ barrier are not random wilderness but structural "splices" of existing primary defects (commit `9c687f1d`). This checkpoint stabilizes the inductive step for the $LRC(14)$ terminal closure.
+
+### 1. The Frontier Splice
+Audited the two-swap perturbation bank (replacements $\le 40$) to test the stability of the $C=27$ marked-transfer protocol.
+- **Stability:** The $M \le 3/41$ frontier remains stable, containing only AP, GW ($12 \to 24$), and the near-miss ($12 \to 36$).
+- **Splice Rows:** Identified two new $M=2/27$ rows:
+    - `drop(10,12)->add(20,24)`
+    - `drop(10,12)->add(20,36)`
+- **Structural Mapping:** These are precisely splices of a **unit defect** (the $10 \to 20$ petal) with a **non-unit 12-branch defect** (either the GW-tight $12 \to 24$ or the loose $12 \to 36$).
+
+### 2. Relational Identification
+The findings reinforce that the shell-transfer quotient correctly classifies complex witnesses:
+- **Relational Address:** A two-swap witness is labelled by its component transfers: `[unit hole -> unit double] + [nonunit hole -> nonunit double]`.
+- **Simplification:** Rather than treating two-swaps as a new complexity class, the proof can dispatch them by showing their component unit defects already force the second-gap witness.
+
+### 3. Role in Proof Tree (Inductive Closure)
+The splice behavior provides a path for closing the witness search:
+1. **Filter:** Apply $q \ge 14$ threshold.
+2. **Classify:** Identify unit-visible $C=27$ holes.
+3. **Dispatch:** Prove that the only two-hole unit petal is $10 \to 20$, and its companions are restricted to the known $12$-branch.
+4. **Link:** Connect the $12 \to 36$ component to the $K_{3,3}$/state-lift loose category.
+
+### 4. Integration with Binary Relational Mandate
+This checkpoint applies the "Structural Imposition" principle by using the shell-transfer relation to decompose complex perturbations into leverageable, labelled parts. It prevents the "cloud of complexity" that often blocks terminal audits of multiple-replacement sets.
+
+### 5. Net Impact
+This checkpoint stabilizes the project's ability to handle multi-replacement perturbations. By formalizing the "frontier splice," the cluster has turned a potentially unbounded search into a structured audit of defect combinations, ensuring that the final $LRC(14)$ closure remains inductive and modular.
+
+---
+
 ## codex-S137 -- Pi Unital Flower Unit Guardrail (checkpoint)
 
 Formalized the **Pi Unital Flower Unit Guardrail**, identifying "unit-preservation" as a necessary constraint for any relational quotient used in the $LRC(14)$ proof tree (commit `6d132109`). This checkpoint protects the unital unit-distance geometric branch from leakage into non-unital states.
-
-### 1. The Unit Preservation Rule
-Established the fundamental guardrail: **"Before using a quotient, say what unit it preserves."**
-- **The Risk:** Silently changing the underlying unit (e.g., swapping turns for radians, or pair-incidence units for sector units) manufactures false structure and beautiful but non-load-bearing numerical coincidences.
-- **Application to Flower Geometry:** Clarified that a $22$-family "flower" occurs if the petal rule is $\sim 7/22$ of a turn, but a different geometry emerges if the rule is exactly $1$ radian. These different "units" must be explicitly labelled to prevent geometric leakage.
-
-### 2. Unital Property as Structural Carrier
-Redefined "unital" maps as those that explicitly preserve the identity of the domain's fundamental unit.
-- **LRC14 Units:** The proof must explicitly track:
-    - Exact $q$ (Farey denominator)
-    - Phase unit (Turn fraction)
-    - Sector partition unit
-    - Pair-incidence unit
-    - Activity-two packet unit
-- **Impact:** Any structural imposition that loses these unit labels is disqualified from serving as a terminal proof carrier.
-
-### 3. Parameter-Row Carriers (q=6 and q=4)
-Acknowledged the "tempting" numerical addresses provided by $q=4$ (Clebsch/octahedron) and $q=6$ (length-72 codes, $7 \times 31$ blocks) but categorized them as **parameter-row carriers** rather than canonical designs. They remain addresses for exploration until a unit-preserving coordinate split is supplied.
-
-### 4. Integration with Binary Relational Mandate
-The guardrail reinforces the **Relational Structural Mapping** (S135) by adding a mandatory "unit label" to every carrier in the hierarchy. This ensures that the "bigraded summand/multiplicand signature" and "Forbidden-H7 state lift" retain the precise metric units necessary to distinguish tight from loose states.
-
-### 5. Net Impact
-This checkpoint stabilizes the project's "structural hygiene." By mandating explicit unit-labelling for all quotients, the cluster has established a rigorous defense against the manufactured symmetry of non-unital state leakage, ensuring that the $LRC(14)$ closure remains grounded in faithful geometric and algebraic representations.
 
 ---
 
