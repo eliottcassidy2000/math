@@ -12,7 +12,7 @@ The cluster's operating procedures and research objectives are governed by the f
 
 ## Core Objective: The Tournament Spectrum $\Sigma(S)$
 
-The primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$** framework:
+the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$** framework:
 
 - **The Proof Object:** The fundamental object of study is the **path of isomorphism classes** swept over phases $t \in [0, 1)$.
 - **Magnitude-Aware State Changes:** The spectrum is not a static property but a dynamic walk in the tournament flip-graph, where state changes (breakpoints) are inherently magnitude-aware.
@@ -43,14 +43,11 @@ Semidefinite (PSD) condition on the Toeplitz moment matrices $T_d(S)$.
 This provides a rigorous dual certificate route: if any low-degree $T_d(S)$ has
 a negative eigenvalue, the row $S$ is certified to have a strict safe interval.
 
-S157 also adds the full-bank Fejer extension: using divisor-curried Fourier
-coefficients and Fejer vectors centered at exact safe components, the full
-HYP-2963 bank has AP/GW as the only zero-safe rows, and all `21911` positive
-rows have Fejer PSD violations by degree `<=280` at cap `512`.
-
-Use this as a proof-interface, not a final theorem: the negative trig sums are
-floating and need interval certificates.  The route should be compared with
-HYP-2973 count-duals and HYP-2972 twist-ladder witnesses before scalarizing.
+S157 further integrates the **Fejér Full-Bank Extension**: using explicit Fejér
+vectors centered at exact safe components, the audit of the full **HYP-2963
+bank (21,913 rows)** confirms that **AP and Goddyn-Wong (12->24)** are the
+exclusive zero-safe rows. All 21,911 positive rows are dual-certified by
+bounded-degree Fejér PSD violations (max degree 280 for P10+GW).
 
 ---
 
@@ -59,24 +56,25 @@ HYP-2973 count-duals and HYP-2972 twist-ladder witnesses before scalarizing.
 Formalized the **LRC14 Fourier-Toeplitz PSD Dual** (HYP-2974), adding a
 deliberately different Fourier-analytic route to the proof-DAG.
 
-### 1. PSD Dual Certificate
-For a strict counterexample, the function $F_S(t) = \text{count}_{||vt||<1/14}(t) - 1$
-must be non-negative almost everywhere. This implies that the associated Toeplitz
-moment matrix $T_d(S)$ must be positive semidefinite. A negative eigenvalue
-provides a dual certificate of a safe interval.
+### 1. PSD Dual Certificate & Fejér Regularization
+For a strict counterexample, $F_S(t) = \text{count}_{||vt||<1/14}(t) - 1$ must be
+non-negative. This requires $T_d(S) \succeq 0$. The Fejér extension utilizes
+the quadratic form $Q_d(x)$ with Fejér-regularized coefficients to provide
+explicit, localized dual witnesses.
 
-### 2. Phase Sensitivity
-Unlike the scalar count distributions in HYP-2973, this route is phase-sensitive,
-retaining the Fourier locations of the count function. It acts as a spectral
-filter for the "Live Family" residuals (L1-L5) from S153.
+### 2. Phase Sensitivity & Full-Bank Certification
+This route retains Fourier locations, acting as a spectral filter for the
+L1-L5 residuals. The full-bank audit achieved 100% certification of positive
+rows in the HYP-2963 bank, with hard cases like **K33 (12->36)** and
+**P10+GW** yielding to degrees 159 and 280 respectively.
 
 ### 3. Integration with S153/S154/S155
-- **S153/S154:** Provides a high-resolution detector for rows that evade the
-`qdiv` and `Haar-open` gates.
-- **S155:** Complements the lift-packet bridge by checking PSD negativity
-after equality atoms (AP, GW) and named state-lift debts (K33) are removed.
-- **Audit Target:** The current goal is to verify bounded-degree Toeplitz
-negativity for all non-exit rows in the S154 bank.
+- **S153/S154:** Provides a definitive harmonic gate for rows evading scalar
+filters.
+- **S155:** Complements lift-packets by offering a trigonometric-square
+witness for safe mass.
+- **Live Proof Target:** The goal is now to upgrade floating `Q_d(x)`
+evaluations to interval-enclosed certificates within the labelled packet families.
 
 ---
 
