@@ -1,22 +1,16 @@
-## codex-2026-06-24-S162 -- Robbins/Robin bridge guardrail and interval Fejer target claimed
+## codex-2026-06-24-S162 -- Robbins/Robin Fejer interval certificates with computed budgets (HYP-2981)
 
-User asked to consider Robbins theorem in graph theory and number theory while
-keeping the current LRC14 Fejer state in view: AP/GW are the only PSD-blind
-equality atoms, `K33 12->36` yields under Fejer at degree `159`, and `P10+GW`
-at degree `280`; the remaining proof obligation is interval-enclosing the
-floating Fejer signs, anchored to labelled packet `P(S)` fibers.
+User asked to continue toward LRC14 proof routes using the second spectrum point, Robbins/Robin, divisor/Ramanujan concepts, and the primary target of converting floating Fejer evaluations into rigorous interval certificates anchored to labelled packet fibers.  Pulled latest mainline first and built on HYP-2978/HYP-2979/HYP-2974 rather than replacing them.
 
-Claimed HYP-2981/T1065 for this bridge after rebasing over an incoming
-HYP-2980 route-atlas claim.  The graph side is Robbins: strong
-orientation iff a connected graph has no bridge.  The divisor page's
-number-theory side is Robin (no s): the `sigma(n)` inequality past `5040` is
-equivalent to RH.  Also noted Neville Robbins divisor/partition readings where
-divisor functions are fixed-fiber shadows before scalarization.  Synthesis:
-connection means map plus named kernel.  LRC14 certificates must therefore say
-which bridge/fiber they forget and how it is discharged.  The next computation
-is a rigorous interval Fejer prototype carrying `(family, route, exact safe
-component, center, degree, interval Q)` with `upper(Q)<0` for the named hard
-rows, before scaling by packet family across HYP-2963.
+Claimed and then merged into HYP-2981/T1065 after rebase revealed the incoming HYP-2980 route-atlas claim and an initial HYP-2981 reservation.  The graph side is Robbins: strong orientation iff a connected graph has no bridge.  The divisor page's number-theory side is Robin (no s): the `sigma(n)` inequality past `5040` is equivalent to RH.  Neville Robbins-style divisor/partition readings reinforce the same kernel lesson: connection means map plus named kernel, and LRC14 certificates must say which bridge/fiber they forget and how it is discharged.
+
+**Computation:** Integrated the incoming scaffold `04-computation/lrc14_packet_fejer_interval_scaffold_codex_s162.py` with the new budget scout `04-computation/lrc14_fejer_interval_packet_certificates_codex_s162.py`.  The scaffold attaches five hard Fejer certificates to labelled packet keys and gives rational interval upper bounds `<0`; the budget script reuses S157's Fejer certificates, expands selected hard rows into divisor-curried atoms `(k,v,m=k/v)`, computes atom L1 precision budgets, and reports certificate dependency bridges.
+
+**Findings:** The interval arithmetic burden looks finite and not numerically wild.  `P10+GW` is the highest-degree selected packet (`d=280`, `862` atoms); K33 `12->36` needs `d=159`; the smallest full-bank floating margin row `drop(12,13)->add(14,29)` has `Q_41(347/4312)=-3.360914e-7`, `122` atoms, and about `27` conservative precision bits / `9` decimal digits.  Therefore the next hard step is familywise packet labelling and outward-rounded exact interval implementation, not raw numerical precision.
+
+**Synthesis:** Created HYP-2981 and reflection `07-reflections/lrc14-robbins-robin-interval-fejer-packet-certificates-codex-s162.md`.  Robbins' graph theorem supplies the no-bridge assembly analogy: exact center, divisor atom bank, trig interval, signed margin, packet fiber, and route handoff are load-bearing proof bridges.  Robin's divisor theorem supplies the scalar-shadow warning: sigma/tau can encode deep global truth but remain unsafe quotients unless Ramanujan/endpoint/interval labels control their kernels.  The user's `M_k={1,...,k-1,2k}` second-spectrum family makes reset-clock/lift-depth approaches costly by the gap `1/((k+1)(2k+1))`, strengthening the case for direct packet-fiber certificates.
+
+**Tournament Analysis:** Vertices are certificate carriers/proof obligations, not runners.  The transitive path is `labelled_packet_interval_certificate > Robbins_no_bridge_assembly > endpoint_owner_packet_anchor > Fejer_divisor_atom_bank > Ramanujan_exact_period_projector > Dirichlet_convolution_packet_law > floating_Fejer_shadow > Robin_sigma_scalar_shadow > raw_divisor_count`, with `score_hist={0:1,...,8:1}`, `directed_3_cycles=0`, `hamiltonian_paths=1`.
 
 ## codex-2026-06-24-S161b -- quotient guardrails web synthesis and Ramanujan packet angle
 

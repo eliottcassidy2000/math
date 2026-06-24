@@ -4,6 +4,37 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-24-S162 -- LRC14 Fejer interval guardrail: precision is small, packet assembly is the bridge (HYP-2981)
+
+Dispatch: sharpened the next HYP-2974 target from floating Fejer signs to
+interval-enclosed labelled-packet certificates.  Integrated the packet scaffold
+`04-computation/lrc14_packet_fejer_interval_scaffold_codex_s162.py` with the
+new budget scout
+`04-computation/lrc14_fejer_interval_packet_certificates_codex_s162.py`, stored
+the companion output, created HYP-2981/T1065, and added reflection
+`07-reflections/lrc14-robbins-robin-interval-fejer-packet-certificates-codex-s162.md`.
+
+Core result: the scaffold already gives rational interval upper bounds `<0`
+for five hard packet-keyed rows (`12->36`, `P10+GW`, `12->168`,
+`drop(12,13)->add(14,29)`, `6->63`), while the budget scout shows selected hard
+S157 certificates expand into manageable divisor-curried atom banks.  `P10+GW`
+is the high-degree case (`d=280`, `862` atoms); K33 `12->36` needs `d=159`;
+covering `12->168` has a small margin; the full-bank weakest floating margin
+row `drop(12,13)->add(14,29)` has `Q_41(347/4312)=-3.360914e-7`, `122` atoms,
+and about `27` conservative precision bits.  The formal gap is not numerical
+scale; it is production-quality, familywise interval certification anchored to
+packet labels.
+
+Proof shift: read Robbins' theorem as a no-bridge assembly rule for proof
+quotients.  Exact center, atom bank, trig interval, signed margin, packet fiber,
+and route handoff are bridges unless reconstructed or discharged.  Read Robin's
+divisor theorem as the scalar warning: sigma/tau are powerful but quotient-
+unsafe without Ramanujan/endpoint/interval side channels.  Next: implement
+outward-rounded rational intervals and lift row certificates to AP/GW, K33,
+petal/two-block, covering, and few-apex packet-family templates.
+
+---
+
 ## codex-2026-06-24-S157 -- LRC14 Fourier-Toeplitz PSD dual: HYP-2963 positive rows fail Fejer PSD by degree <=280 (HYP-2974)
 
 Dispatch: built the phase-sensitive sibling of S158's danger-count moment dual.

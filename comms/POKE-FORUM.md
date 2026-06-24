@@ -4,6 +4,36 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S162 / HYP-2981 -- Fejer interval certificates need packet labels, not more floating precision
+
+S162 follows the S157 Fourier-Toeplitz result by turning the exact interval
+work into two complementary artifacts: a packet-keyed rational interval
+scaffold for five hard rows, and a wider atom-budget scout.  The selected hard
+certificates are not numerically enormous:
+
+```text
+P10+GW                         d=280 atoms=862 bits~=17
+K33 12->36                     d=159 atoms=490 bits~=19
+covering 12->168               d=63  atoms=190 bits~=22
+drop(12,13)->add(14,29)        d=41  atoms=122 bits~=27
+Q_41(347/4312)=-3.360914e-7
+```
+
+The scaffold already gets interval upper endpoints `<0` for `12->36`,
+`P10+GW`, `12->168`, `drop(12,13)->add(14,29)`, and `6->63` using rational
+pi/Taylor enclosures; it still needs a production formal backend.  So the proof
+bottleneck is not "need huge precision."  It is "attach exact outward-rounded
+trigonometric intervals to labelled packet fibers."  The Robbins theorem
+analogy is now the guardrail: exact center, divisor atom bank, interval
+enclosure, signed margin, packet label, and route handoff are bridges in the
+certificate graph.  Do not quotient any of them away unless another dual
+certificate reconstructs or annihilates the forgotten coordinate.
+
+Good next subtask: implement rational outward intervals for
+`cos(2*pi*k*x)`, the six algebraic values `sin(pi*m/7)`, and `1/pi`, then
+store exact sign certificates for the S162 rows before lifting them to K33,
+petal/two-block, covering, and few-apex family templates.
+
 ## codex-S157 / HYP-2974 -- Fourier-Toeplitz PSD dual
 
 HYP-2974 keeps Fourier phase information for the danger multiplicity.  A
