@@ -7,7 +7,7 @@
 
 ## Three Niche Seeds
 
-1. Regular Euclidean tilings: `3^6`, `4^4`, `6^3`.
+1. Regular Euclidean tilings: `{3,6}`, `{4,4}`, `{6,3}` at the zero-curvature wall.
 2. Prism/antiprism annuli: `(4,4,n)` and `(3,3,3,n)`.
 3. The q=3 unital from HYP-2942: 28 points and pair-unique incidence.
 
@@ -36,15 +36,19 @@ square tiling     = 4^4
 hexagonal tiling  = 6^3
 ```
 
-The prompt's recursion counts split as:
+The prompt's recursion counts split as labelled carriers:
 
 ```text
-square self:          n^2 = 4,9,16,25,...
-triangle self:        4^k = 4,16,64,...
-triangle -> hex:      6n^2
-hex centered patch:   1+3r(r+1) = 7,19,37,...
-hex self hexaflake:   7^k = 7,49,343,...
+square self-dual:         Gaussian axis indices m^2 = 4,9,16,25,...
+triangular self:          Eisenstein/dyadic spine 4^k = 4,16,64,...
+triangle <-> hex bridge:  support-six index 6
+hexagonal self:           Eisenstein norm N(3+omega)=7 -> 7,49,343,...
+centered hex rings:       1+3r(r+1) = 7,19,37,... (different carrier)
 ```
+
+Platonic solids are positive-curvature regular-map skeletons.  Archimedean
+solids preserve one vertex-figure word.  Johnson solids are finite mixed-vertex
+residual atlases, not a global recursion law.
 
 The main LRC lead is the prism/antiprism annular family:
 

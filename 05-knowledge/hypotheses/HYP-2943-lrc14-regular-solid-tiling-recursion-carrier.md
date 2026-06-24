@@ -1,17 +1,25 @@
 ---
 id: HYP-2943
-title: LRC14 regular-solid and Euclidean tiling recursion carrier
-status: PROOF-INTERFACE / annular 28-point 1/14 carrier identified; not a proof
+title: LRC14 regular-solid and Euclidean-tiling recursion carrier
+status: PROOF-INTERFACE / annular 28-point 1/14 carrier plus curvature/norm guardrails; not a proof
 source: codex-2026-06-24-S141
 related:
   - HYP-2942
   - HYP-2941
   - HYP-2940
+  - HYP-2939
   - HYP-2938
+  - HYP-2937
+  - HYP-2936
+  - HYP-2935
+  - HYP-2932
   - HYP-2894
   - HYP-2892
+  - HYP-2891
+  - HYP-2887
   - HYP-2908
   - THM-572
+  - OPEN-Q-108
 results:
   - 04-computation/lrc14_platonic_tiling_recursion_codex_s141.py
   - 05-knowledge/results/lrc14_platonic_tiling_recursion_codex_s141.out
@@ -19,27 +27,21 @@ results:
 
 # HYP-2943: The 14-gonal prism/antiprism is the cyclic companion to the q=3 unital
 
-S141 tests the user's prompt:
+S141 tests the user's Platonic/Archimedean/Johnson and
+square/triangle/hexagonal tiling prompt as an LRC14 carrier audit.  The
+synthesis of the two parallel S141 attempts is:
 
 ```text
-Platonic, Archimedean, and Johnson solids;
-Euclidean square, triangular, and hexagonal tilings;
-square self-recursion 4,9,16,25;
-triangle/hex recursion by 6;
-hex self-recursion 7,49;
-triangle self-recursion 4,16.
-```
-
-The conclusion is a split carrier atlas:
-
-```text
-Euclidean tilings: zero-defect recursion laws
-Platonic/Archimedean solids: uniform positive-curvature seeds
-Johnson solids: finite nonuniform defect packets
+regular maps: curvature boundary and dual skeletons
+Euclidean tilings: zero-curvature recursion/norm labels
+Platonic/Archimedean solids: finite uniform positive-curvature seeds
+Johnson solids: finite nonuniform residual atlases
 14-gonal prism/antiprism: exact LRC14 annular carrier
 ```
 
-The last item is the new high-leverage result.
+The last item is the new high-leverage object.  The norm and solid data are
+guardrails telling us which geometric labels are legitimate; the annulus is the
+candidate proof carrier to test next.
 
 ## Computation
 
@@ -53,61 +55,105 @@ It uses normalized vertex defect
 kappa = 1 - sum_p (p-2)/(2p)
 ```
 
-for a regular-polygon vertex configuration.  For a uniform spherical
-configuration, total curvature gives:
+for regular-polygon vertex configurations.  For a uniform spherical
+configuration,
 
 ```text
 V * kappa = 2.
 ```
 
-This makes the vertex count, curvature denominator, and face counts exact
-Fractions rather than visual guesses.
+This keeps vertex count, curvature denominator, and face counts as exact
+Fractions.
 
-## Euclidean Regular Tilings
+## Curvature Boundary
 
-The three regular Euclidean tilings are exactly the zero-defect configurations:
-
-```text
-triangular tiling:  3^6     kappa = 0
-square tiling:      4^4     kappa = 0
-hexagonal tiling:   6^3     kappa = 0
-```
-
-The prompt's recursion counts split into labelled carriers:
+The regular map notation `{p,q}` separates the regimes:
 
 ```text
-square self n^2:
-  4, 9, 16, 25, 36, 49, ...
-
-triangle self 4^k:
-  4, 16, 64, 256, ...
-
-triangle -> hex exchange 6*n^2:
-  6, 24, 54, 96, 150, ...
-
-hex centered patches 1 + 3r(r+1):
-  7, 19, 37, 61, 91, 127, ...
-
-hex self hexaflake 7^k:
-  7, 49, 343, 2401, ...
+(p-2)(q-2) < 4: spherical finite maps, the Platonic solids.
+(p-2)(q-2) = 4: Euclidean zero-curvature tilings.
+(p-2)(q-2) > 4: hyperbolic maps.
 ```
 
-Interpretation:
+The five Platonic solids are the positive-curvature finite regular maps:
 
 ```text
-square = self-dual product/grid recursion
-triangle = dyadic self-subdivision
-triangle/hex = dual exchange by six triangles per hexagon
-hex = central cell plus six petals, either lattice patch or fractal packet
+tetrahedron  {3,3}, V,E,F=(4,6,4),    self-dual
+cube         {4,3}, V,E,F=(8,12,6),   dual octahedron
+octahedron   {3,4}, V,E,F=(6,12,8),   dual cube
+dodecahedron {5,3}, V,E,F=(20,30,12), dual icosahedron
+icosahedron  {3,5}, V,E,F=(12,30,20), dual dodecahedron
 ```
 
-The `7` in the hex carrier is not by itself the forbidden tournament value
-from THM-572.  It becomes relevant only if an LRC residual constructs the
-right tournament state-lift packet.
+The plane regular tilings sit exactly on the zero-curvature wall:
 
-## Platonic and Archimedean Solids
+```text
+triangular tiling {3,6}, dual hexagonal tiling
+square tiling     {4,4}, self-dual
+hexagonal tiling  {6,3}, dual triangular tiling
+```
 
-Platonic solids are uniform positive-curvature seeds:
+Proof-use rule: do not collapse finite positive-curvature skeletons and
+repeatable Euclidean recursion packets into one scalar "regular geometry"
+object.
+
+## Euclidean Recursion Labels
+
+The prompt's recursion counts are real, but they live in different carriers.
+
+Square tiling:
+
+```text
+Gaussian axis scaling m+0i.
+indices m^2: 4,9,16,25,36,49,...
+```
+
+This is a self-dual square-grid carrier and is useful only if the two grid axes
+remain labelled.
+
+Triangular tiling:
+
+```text
+Eisenstein scaling m+0*omega.
+general indices m^2.
+dyadic spine emphasized by prompt: 4,16,64,256,...
+```
+
+The clean LRC-style carrier is the dyadic triangular spine, because it retains
+orientation-sector labels.
+
+Triangle-hexagon bridge:
+
+```text
+local index 6.
+a regular hexagon dissects into 6 equilateral triangles.
+the triangular tiling has 6 triangles around a vertex.
+```
+
+This belongs to support-six packet language, compatible with the
+HYP-2887 octahedral/current carrier, but it is not a replacement for exact
+`q`, C27, or K33 labels.
+
+Hexagonal tiling:
+
+```text
+Eisenstein norm N(a+b*omega)=a^2-a*b+b^2.
+N(3+omega)=7.
+norm-7 powers: 7,49,343,2401,...
+centered hex ring counts: 7,19,37,61,...
+```
+
+Guardrail: the prompt's `7,49,...` chain is a norm-index self-recursion, not
+the same as ordinary centered hexagonal patch counts.  The two carriers agree
+at `7` and then diverge.
+
+The `7` is not automatically the forbidden tournament value in THM-572.  It
+becomes relevant only if a labelled LRC residual constructs the right
+tournament state-lift packet.
+
+## Platonic, Archimedean, Johnson
+
+Platonic solids are finite positive-curvature seeds:
 
 ```text
 tetrahedron     3^3       kappa=1/2   V=4
@@ -117,10 +163,29 @@ icosahedron     3^5       kappa=1/6   V=12
 dodecahedron    5^3       kappa=1/10  V=20
 ```
 
-The finite Archimedean seeds add mixed regular faces.  They are useful
-structural analogies, especially the old truncated-octahedron and
-square/hex/triangular carriers, but none of the finite exceptional
-Archimedean solids is the direct LRC14 scale.
+The 13 Archimedean solids retain one vertex-figure word.  The script records
+their exact vertex defects; the deficit range is:
+
+```text
+1/60 .. 1/6.
+```
+
+So Archimedean solids are good analogues for labelled local quotients: one
+local word is preserved globally.
+
+Johnson solids supply the opposite guardrail:
+
+```text
+count = 92
+regular polygon faces
+convex
+mixed vertex figures
+not Platonic/Archimedean/prism/antiprism
+```
+
+For LRC14 this is the finite residual-atlas role.  After uniform carriers fail,
+one should expect Johnson-like bounded catalogues of residual atoms, analogous
+to AP/GW/petal/K33 frontier tables, not a single symmetric quotient.
 
 ## Prism / Antiprism Annular Families
 
@@ -148,10 +213,10 @@ n=14:
   V=28, kappa=1/14
 ```
 
-This is the live bridge.  The q=3 unital from HYP-2942 also has `28` points,
-but it preserves pair incidence rather than cyclic order.  The 14-gonal
-prism/antiprism gives a complementary `28`-point annular object at exactly the
-LRC14 threshold scale.
+This is the live bridge.  HYP-2942 gave a 28-point q=3 unital that preserves
+pair incidence but not cyclic order.  The 14-gonal prism/antiprism gives a
+28-vertex object that preserves cyclic annular order and has exactly the LRC14
+threshold curvature `1/14`.
 
 ```text
 q=3 unital:
@@ -166,27 +231,6 @@ So the next test is not "which object is correct?" but:
 ```text
 combine unital pair incidence with annular cyclic order.
 ```
-
-## Johnson-Solid Guardrail
-
-Johnson solids are regular-faced but nonuniform.  The script checks small
-diagnostic examples:
-
-```text
-square pyramid J1:
-  apex      (3,3,3,3)   contribution 1/3
-  base x4   (3,3,4)     contribution 5/3
-  total = 2
-
-pentagonal pyramid J2:
-  apex      (3,3,3,3,3) contribution 1/6
-  base x5   (3,3,5)     contribution 11/6
-  total = 2
-```
-
-This is the right lesson: Johnson solids belong to finite residual-atlas work.
-They are analogous to finite exceptional LRC packets after the uniform and
-annular carriers fail, not a single global recursion law.
 
 ## Tournament Analysis
 
@@ -207,11 +251,11 @@ exact M/Farey branch
 > C27 shell transfer
 > q=3 unital pair incidence
 > 14-prism/antiprism annulus
-> Euclidean tiling zero-defect laws
-> triangle/hex dual exchange 6
-> square self n^2 recursion
+> Euclidean tiling norm recursions
+> triangle/hex support-six bridge
+> square Gaussian self recursion
 > Platonic/Archimedean uniform atlas
-> hex self 7^k recursion
+> hex norm-7 recursion
 > Johnson finite defect atlas
 > raw solid numerology
 ```
@@ -224,31 +268,32 @@ c3=0
 hp=1
 ```
 
-## Proof-Route Consequence
+## POKE Proof Target
 
-HYP-2942 gave the pair-incidence side:
-
-```text
-q=3 unital detects that GW H12->D3 and K33 H12->D9 cannot globally share
-the same raw H12 pair.
-```
-
-HYP-2943 adds the cyclic-annular side:
+Build a 28-vertex annular label model with two 14-cycles.  Attach
 
 ```text
-the 14-gonal prism/antiprism has 28 vertices and local curvature 1/14,
-so it is a candidate carrier for two 14-cycles, half-step twists, and
-apex-clock order.
+AP, GW, H1..H13, D1..D13
 ```
 
-The next concrete experiment is:
+and compare it to the HYP-2942 unital chart:
 
 ```text
-build a 28-vertex annular label model with two 14-cycles,
-attach AP/GW/H/D labels,
-and compare whether the H12/GW/K33 conflict seen by the unital becomes
-a twist, a diameter, or a two-chart obstruction.
+GW  H12->D3
+K33 H12->D9
 ```
 
-If successful, the pair-incidence unital and cyclic annulus could become two
-orthogonal coordinates of the same C27/LRC14 state-lift packet.
+Questions:
+
+```text
+Does the H12 conflict become a twist?
+Does it become a diameter?
+Does it force a two-chart obstruction?
+Does annular cyclic order plus q=3 pair incidence produce the missing
+state-lift packet for HYP-2908/THM-572?
+```
+
+This is not a proof of LRC14.  It is a sharper, typed POKE target: after exact
+`M`/Farey and C27/unital labels are attached, use the 14-annulus to test cyclic
+order constraints, and use Euclidean norm labels only as residual packet
+classifiers.

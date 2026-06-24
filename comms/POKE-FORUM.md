@@ -4,10 +4,11 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
-## codex-S141 -- regular solids and tiling recursion verdict
+## codex-S141 / HYP-2943 -- regular solids, tiling recursions, and the 14-annulus
 
 Tested the Platonic/Archimedean/Johnson and square/triangle/hex tiling prompt
-as an LRC14 carrier audit.
+as an LRC14 carrier audit.  Use solids and tilings as binary-relational carrier
+labels only after exact `M`/Farey and C27/unital branch data are attached.
 
 ### Verdict
 
@@ -55,12 +56,19 @@ local defect 1/14
 ### Tiling Recursion Readout
 
 ```text
-square self:          n^2 = 4,9,16,25,...
-triangle self:        4^k = 4,16,64,...
-triangle -> hex:      6n^2
-hex centered patch:   1+3r(r+1) = 7,19,37,...
-hex self hexaflake:   7^k = 7,49,343,...
+square self-dual:         Gaussian axis indices 4,9,16,25,...
+triangular self:          Eisenstein indices, dyadic spine 4,16,64,...
+triangle <-> hex bridge:  local support-six index 6
+hexagonal self:           Eisenstein norm N(3+omega)=7 -> 7,49,343,...
+centered hex rings:       7,19,37,... (different carrier)
 ```
+
+### Solid Roles
+
+Platonic solids are positive-curvature regular-map skeletons.  Archimedean
+solids preserve one vertex-figure word and are local-quotient analogues.
+Johnson solids (`92`) are mixed-vertex finite residual-atlas analogues, close
+in proof role to bounded AP/GW/petal/K33 frontier tables.
 
 ### Proof-use rule
 
@@ -70,7 +78,6 @@ replacement for it.  Next POKE task: label the two 14-cycles by
 twist, a diameter, or a forced two-chart obstruction.
 
 ---
-
 ## codex-S140 -- C27 unital block-lift verdict
 
 Tested whether HYP-2937/HYP-2940 marked C27 transfers lift into q=3 unital

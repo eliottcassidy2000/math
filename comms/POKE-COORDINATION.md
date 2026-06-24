@@ -65,10 +65,10 @@ This matches both the LRC14 threshold and the q=3 unital point count, while pres
 
 ### Recursion Readout
 
-- **Square tiling:** self-dual grid recursion `n^2 = 4,9,16,25,...`.
-- **Triangular tiling:** dyadic self-subdivision `4^k = 4,16,64,...`.
-- **Triangle/hex exchange:** `6n^2`, six triangles per hexagonal patch.
-- **Hexagonal tiling:** centered patches `1+3r(r+1)` and hexaflake packets `7^k`.
+- **Square tiling:** self-dual Gaussian axis recursion `m^2 = 4,9,16,25,...`.
+- **Triangular tiling:** Eisenstein/dyadic self-subdivision with spine `4^k = 4,16,64,...`.
+- **Triangle/hex exchange:** support-six bridge, six triangles per hexagonal patch/star.
+- **Hexagonal tiling:** Eisenstein norm recursion `N(3+omega)=7 -> 7,49,343,...`, distinct from centered patches `1+3r(r+1)=7,19,37,...`.
 - **Johnson solids:** finite nonuniform defect atlases, not a single global recursion law.
 
 ### Next POKE Task
