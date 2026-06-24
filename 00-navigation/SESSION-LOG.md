@@ -20,6 +20,47 @@ The reused local S146 database remains decisive: one-swap add<=160 has only AP a
 Rebased over incoming S148/S149 work before push.  HYP-2950's adversarial gauntlet added the counterexample-side confirmation: no below-threshold rows in named, single-swap, or two-swap banks, and the low `M<=2/27` frontier remains the same packet list.  HYP-2952's derived-boundary tournament classes added the tournament-side confirmation: AP, GW, near/K33, petals, and splices can share a transitive apex-pressure class, so that class is a necessary AP/GW-kind filter but not a final invariant.  HYP-2953's source-spectrum pullback is the adjacent formulation: the functor below is the computable packet ledger whose pullback should preserve source, boundary, and owner labels.
 
 Main missing theorem now stated: every primitive reduced LRC14 residual that is not discharged by q-threshold or positive Haar-open strictness either reduces to AP/GW boundary-only after C27/unital labels are retained, constructs the HYP-2908/THM-572 `TournamentStateLift`, or lies in the covering/shell branch and is strict by comb-margin or shell-collapse.  LRC14 remains open, but the target arrow is narrower and more functorial.
+## codex-2026-06-24-S149 -- skeleton-gate merge exposes the missing LRC14 packet
+
+User asked to keep trying to prove LRC14, search the history of the ideas, and
+find the missing picture in their connections.  Pulled the latest mainline
+first and read the recent HYP-2920 / HYP-2937 / HYP-2942 / HYP-2947 /
+HYP-2951 chain plus the derived-tournament AP/GW post.
+
+Added `04-computation/lrc14_skeleton_gate_missing_picture_codex_s149.py`,
+stored `05-knowledge/results/lrc14_skeleton_gate_missing_picture_codex_s149.out`,
+registered HYP-2960, and wrote reflection
+`07-reflections/lrc14-skeleton-gate-missing-picture-codex-s149.md`.  Also
+posted the synthesis under the derived-tournament AP/GW poke thread.  During
+close-out, rebased over the incoming HYP-2952 six-unit apex-pressure class
+work and integrated it as the upstream front filter for the S149 labelled
+inside-fiber discriminator.  Later rebases brought in HYP-2953
+source-spectrum pullback, HYP-2954 missing-picture bridge, HYP-2955
+packet-migration gauntlet, and boundary-moment/proof-DAG notes; this packet was
+renumbered to HYP-2960 and scoped as the executable `qdiv=14`
+boundary-source-core subclassifier under that wider covering-residual route.
+
+Main computation: AP and GW are both strict-Haar-zero and have the same
+AP/GW six-pair boundary skeleton.  The false AP-residue row `12->26` has the
+AP relative-profile hashes but fails covering and is Haar-open with strict mass
+`426/35035`.  The near branch `12->36` is open K33 with mass `1/1260`; the
+coarse survivor `8->16` passes basic endpoint filters but fails the Jacobsthal
+gate; `10->20` is an open unit petal with mass `1/980`; and the S138 splices
+are open with masses `1/980` and `4/2205`.  Single basic pass sites are
+`[8,10,12]`, but only `12` passes the gate.  Double basic pass sites are
+`[(4,8),(6,12),(8,10),(8,12),(10,12)]`, with no boundary-only double rows.
+
+Proof readout: the route should be a two-switch theorem.  If strict Haar mass
+is positive, discharge by an open witness front.  If strict Haar mass is zero,
+route to the AP/GW boundary skeleton, then attach the hidden C27/unital labels.
+The proof-lens tournament has one nontrivial SCC
+`{Jacobsthal_gate, derived_relative_profile, K33_state_lift}`.  This is the
+missing packet: site gate, first-fold profile memory, and D9 state-lift route
+should travel together rather than be scalarized.  New theorem target: after
+standard reductions, any no-strict-Haar endpoint atom has AP/GW skeleton; any
+hidden single acceleration is forced to site 12; C27/unital pair completion
+permits the D3 tight branch, while D9/unit branches open or feed
+HYP-2908/THM-572.  LRC14 remains open.
 
 ## codex-2026-06-24-S142 -- affine-depth chain extracts a depth-14 signal from the calibrated unital path
 

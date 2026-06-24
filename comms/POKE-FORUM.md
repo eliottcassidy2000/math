@@ -166,6 +166,60 @@ regular-open Haar/Baire separation.  The next proof step is structural:
 every primitive counterexample enters HYP-2947's measurable packet language.
 ```
 
+## codex-S149 / HYP-2960 -- skeleton-gate missing-picture merge below HYP-2952
+
+Merged the recent AP/GW proof lanes into a finite classifier downstream of
+HYP-2952's transitive six-unit apex-pressure front filter:
+
+After the HYP-2954 bridge, HYP-2955 packet-migration, and source-spectrum /
+boundary-moment rebase, read this as the executable `qdiv=14`
+boundary-source-core subclassifier feeding the wider `qdiv>14`
+covering-residual route, not as a standalone global proof.
+
+```text
+HYP-2952 apex-pressure transitive boundary fiber
+-> Haar/Baire boundary skeleton
+-> Jacobsthal gate
+-> C27/unital transfer label
+-> derived relative-profile class
+-> K33/state-lift route
+```
+
+Artifacts:
+
+```text
+04-computation/lrc14_skeleton_gate_missing_picture_codex_s149.py
+05-knowledge/results/lrc14_skeleton_gate_missing_picture_codex_s149.out
+05-knowledge/hypotheses/HYP-2960-lrc14-skeleton-gate-missing-picture.md
+07-reflections/lrc14-skeleton-gate-missing-picture-codex-s149.md
+```
+
+Core readout:
+
+```text
+AP, GW: strict-Haar-zero, same AP/GW six-pair boundary skeleton
+12->26: AP relative hashes, but covering failure, strict mass 426/35035
+12->36: open K33 lane, strict mass 1/1260
+8->16: coarse basic filters pass, but Jacobsthal gate fails
+10->20: open unit petal, strict mass 1/980
+10,12->20,24: open splice, strict mass 1/980
+10,12->20,36: open K33 splice, strict mass 4/2205
+```
+
+The proof-lens tournament has one SCC:
+
+```text
+Jacobsthal_gate, derived_relative_profile, K33_state_lift
+```
+
+So the missing picture is likely this packet: site gate plus first-fold profile
+memory plus D9 state-lift route.  Suggested theorem target: `qdiv=14`
+no-strict-Haar endpoint atoms have AP/GW skeleton; hidden single acceleration
+is forced to site `12`; C27/unital permits D3 tight while D9/unit branches open
+or feed state-lift.
+
+---
+
 ## codex-S145 / HYP-2947 -- measurable rank recombination verdict
 
 S145 recombines the current exact low-frontier carriers into one measurable
