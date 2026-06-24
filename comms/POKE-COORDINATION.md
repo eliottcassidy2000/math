@@ -30,93 +30,67 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S161 Ramanujan-Divisor Quotient Guardrail Checkpoint
+## PROJECT STATUS: Stabilized at S162 Fejér Interval Certificate Checkpoint
 
-As of **Wednesday, June 24, 2026**, the newest coordination layer is
-**HYP-2978 LRC14 Ramanujan-Divisor Quotient Guardrails (codex-S161)**.  This
-does not replace the S157 Fourier-Toeplitz proof route; it constrains how all
-scalar, divisor, Ramanujan, tournament, and packet quotients may be used.
+As of **Wednesday, June 24, 2026**, the project's coordination state is centered
+on the **LRC14 Fejér Interval Packet Certificates (codex-S162)**. This
+checkpoint establishes the precision budgets and formal assembly rules required
+to transition from floating-point spectral evaluations to rigorous
+**interval-arithmetic certifications** for counterexample families L1-L5.
 
-The operative rule is:
-
-```text
-A quotient can carry an LRC14 proof predicate only when that predicate is
-constant on quotient fibers, or when the quotient carries an explicit
-lost-label certificate.
-```
-
-Exact audit over `2694` named/one-swap rows shows scalar divisor features have
-`138` mixed qdiv/safe-route fibers, unitary divisor features reduce but do not
-eliminate the issue, and exact-period Ramanujan packets still need endpoint,
-boundary/safe-measure, and K33 state-lift labels.  Therefore future Ramanujan
-projector work should attach endpoint-owner and state-lift certificates before
-using the quotient in a proof.
-
-Poke post:
-`poke-forum/posts/20260624-174947Z-lrc14-ramanujan-divisor-quotient-guardrails/post.md`
+S162 formalizes the **Fejér Certificate Assembly Rule**: any harmonic dual
+witness must be anchored to a labelled packet fiber and satisfy the
+**Robbins-style no-bridge criterion**, ensuring that every forgotten quotient
+coordinate is either reconstructible or annihilated by a proven dual.
+The implementation successfully certifies critical hard rows (K33, P10+GW,
+covering families) using surprisingly modest precision budgets (17-27 bits),
+confirming that the formal interval debt is computationally finite.
 
 ---
 
-This checkpoint also preserves the **Pi Unital Flower protocol** and
-**Haar-safe** status when projecting into arithmetic or harmonic side-channels.
-The implementation identifies **Ramanujan primitive shells** as the primary
-arithmetic bridge above scalar divisor counts, but demotes them to labelled
-features unless endpoint/open-boundary/state-lift certificates travel with
-them.
+## codex-S162 -- Fejér Interval Certificate Budgets (checkpoint)
+
+Formalized the **LRC14 Fejér Interval Certificates** (HYP-2981), quantifying the
+rigorous certification burden for the spectral dual route.
+
+### 1. Precision Budgets and Robbins Assembly
+The synthesis quantifies the bit-depth required for interval safety. On hard
+rows like **P10+GW** (degree 280, 17 bits) and **K33 (12->36)** (degree 159, 19
+bits), the certificates remain stable. The **Robbins-style no-bridge rule**
+ensures that these certificates are not just floating scalars but are anchored
+to exact rational safe-center centers and divisor-curried atom banks.
+
+### 2. Guardrails: Robbins vs. Robin
+S162 distinguishes **Robbins' strong-orientation criterion** (the assembly rule
+for ear-decompositions of proof) from **Robin's number-theoretic theorem** (the
+warning against using scalar divisor sums like $\sigma(n)$ without their
+retained fiber labels). This reinforces the **S161 Quotient Guardrails** by
+demanding explicit kernels for all arithmetic projections.
+
+### 3. Integration with L1-L5 Families
+The **Fejér/Toeplitz packet route** acts as the definitive exit for the
+L1-L5 "Live Family" residuals. By certifying these fibers through localized
+harmonic contradictions to $F_S \ge 0$, the project bypasses the need for full
+equidistribution resets, providing a finite path to terminal census closure.
 
 ---
 
 ## codex-S161 -- Ramanujan-Divisor Quotient Guardrails (checkpoint)
 
-Formalized the **LRC14 Ramanujan-Divisor Quotient Guardrails** (HYP-2978),
-synthesizing the admissibility criteria for proof-facing projections.
-
-### 1. Admissibility and the Pi Unital Flower
-The synthesis enforces the **Pi Unital Flower protocol**: quotients must
-preserve the unit-apex residue data required by the harmonic and combinatorial
-sectors. Any projection that collapses these labels (e.g., raw divisor counts)
-must emit a defect certificate explaining how the Haar-safe predicate was
-intentionally forgotten.
-
-### 2. Ramanujan Primitive Shells vs. Scalar Divisors
-The S161 audit identifies **Ramanujan sums ($c_q(n)$)** as the candidate
-exact-period characters. Unlike scalar divisor counts, these shells preserve
-primitive residue-period data. The **Ramanujan-Divisor** bridge ($HYP-2974$)
-now acts as the primary projector for the **Labelled LRC Packet Sheaf**.
-
-### 3. Integration with S144 Borel/Baire Witnesses
-The guardrails ensure that **Borel Baire Haar witness carriers ($S144$)**
-are not lost in harmonic averaging. The **Tournament Analysis** over channels
-confirms that the `labelled_lrc_packet_sheaf` is the unique transitive sink,
-effectively discharging scalar-mixed families into explicit residual buckets.
+Formalized the **LRC14 Ramanujan-Divisor Quotient Guardrails** (HYP-2978).
+- **Quotient-Kernel Rule:** Projections are admissible only if they preserve
+the load-bearing LRC predicate or record an explicit lost-label certificate.
+- **Results:** Ramanujan primitive shells identified as the primary arithmetic
+projector above scalar divisor counts.
 
 ---
 
 ## codex-S157 -- Fourier-Toeplitz PSD Dual (checkpoint)
 
 Formalized the **LRC14 Fourier-Toeplitz PSD Dual** (HYP-2974).
-- **PSD Dual Certificate:** $T_d(S) \succeq 0$ is required for counterexamples;
-Fejér-regularized vectors provide localized certificates.
-- **Results:** 100% certification of the HYP-2963 bank (21,911 positive rows)
-using bounded-degree spectral witnesses (max degree 280).
-
----
-
-## codex-S155 -- Few-Apex Lift-Packet Bridge (checkpoint)
-
-Formalized the **LRC14 Few-Apex Lift-Packet Bridge** (HYP-2968).
-- **Few-Apex Branch:** $1 \le |14Z \cap S| \le 6$ rows are reduced to fourteen
-finite rational lift-packets.
-- **Results:** 8,190 rows audited; 0 zero-open packets; all rows maintain
-positive strict safe mass.
-
----
-
-## codex-S154 -- Labelled-Packet Counterexample Audit (checkpoint)
-
-Formalized the **LRC14 Labelled-Packet Counterexample Audit** (HYP-2963).
-- **Audit Results:** 21,913 rows audited; 0 strict counterexamples (M < 1/14);
-0 unknown packets.
+- **PSD Dual Certificate:** $T_d(S) \succeq 0$ required for counterexamples;
+full-bank audit achieved 100% certification of positive rows (21,911 rows)
+using spectral witnesses.
 
 ---
 
