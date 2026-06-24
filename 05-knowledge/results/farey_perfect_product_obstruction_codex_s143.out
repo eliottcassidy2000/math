@@ -1,0 +1,101 @@
+Farey perfect-product obstruction scout (codex S143)
+================================================================
+Quotient declaration:
+  fraction a/b -> product ab -> complete bipartite graph K_{a,b}
+  preserves: reduced factor-pair incidence, Farey level b, K33 threshold
+  destroys: graph isomorphism type, minor core identity, divisor lattice
+
+[1] Ordinary F3/F4 product seam
+F_3 nonzero terms:
+  1/3 -> product=3  K_{1,3} star/planar
+  1/2 -> product=2  K_{1,2} star/planar
+  2/3 -> product=6  K_{2,3} two-block/planar PERFECT_PRODUCT
+    1 -> product=1  K_{1,1} star/planar
+
+F_4 nonzero terms:
+  1/4 -> product=4  K_{1,4} star/planar
+  1/3 -> product=3  K_{1,3} star/planar
+  1/2 -> product=2  K_{1,2} star/planar
+  2/3 -> product=6  K_{2,3} two-block/planar PERFECT_PRODUCT
+  3/4 -> product=12 K_{3,4} K33-wall FIRST_K33_WALL
+    1 -> product=1  K_{1,1} star/planar
+
+[2] Perfect numbers as Farey-product rows
+  p= 2       2/3  product=6          first_F=    3  det(q-2a)=-1  rank=two-block/planar  A=2
+  p= 3       4/7  product=28         first_F=    7  det(q-2a)=-1  rank=K33-wall          A=2
+  p= 5     16/31  product=496        first_F=   31  det(q-2a)=-1  rank=K33-wall          A=2
+  p= 7    64/127  product=8128       first_F=  127  det(q-2a)=-1  rank=K33-wall          A=2
+  p=13  4096/8191  product=33550336   first_F= 8191  det(q-2a)=-1  rank=K33-wall          A=2
+
+  Reduced Farey terms with perfect-number product through denominator 140:
+    product=6     first_F=3   terms: 2/3 in F_3 (two-block/planar); 1/6 in F_6 (star/planar)
+    product=28    first_F=7   terms: 4/7 in F_7 (K33-wall); 1/28 in F_28 (star/planar)
+    product=496   first_F=31  terms: 16/31 in F_31 (K33-wall)
+    product=8128  first_F=127 terms: 64/127 in F_127 (K33-wall)
+
+[3] Unit-excess prime-q shadow: n=2 is exact perfection; n=14 is deficient
+  apex n=2: fractions a/(n*a-1)
+    a=1   q=1    prime=False prime-q-A=       2  2-A=       0
+    a=2   q=3    prime=True  prime-q-A=       2  2-A=       0 actual_A=2
+    a=4   q=7    prime=True  prime-q-A=       2  2-A=       0 actual_A=2
+    a=8   q=15   prime=False prime-q-A=       2  2-A=       0
+    a=16  q=31   prime=True  prime-q-A=       2  2-A=       0 actual_A=2
+    a=64  q=127  prime=True  prime-q-A=       2  2-A=       0 actual_A=2
+
+  apex n=14: fractions a/(n*a-1)
+    a=1   q=13   prime=True  prime-q-A=   14/13  2-A=   12/13 actual_A=14/13
+    a=2   q=27   prime=False prime-q-A=    14/9  2-A=     4/9
+    a=4   q=55   prime=False prime-q-A=   98/55  2-A=   12/55
+    a=8   q=111  prime=False prime-q-A=   70/37  2-A=    4/37
+    a=16  q=223  prime=True  prime-q-A= 434/223  2-A=  12/223 actual_A=434/223
+    a=64  q=895  prime=False prime-q-A=1778/895  2-A=  12/895
+
+  Identity: for a=2^k and prime q=n*a-1,
+    sigma(a*q)/(a*q) = n(2a-1)/(na-1) = 2 + (2-n)/(na-1).
+  Therefore exact perfection is forced by n=2; LRC14 has defect 12/(14a-1).
+
+[4] Kuratowski/Wagner guardrails for the product ledger
+  K5 edges = 10, but Farey term 2/5 gives K_{2,5} with 10 edges and it is planar.
+  K3,3 edges = 9, but 3/3 is not a reduced Farey term; 1/9 is a star.
+  The first reduced Farey complete-bipartite term containing K3,3 is 3/4 -> K_{3,4}.
+  K5 disjoint-union K3,3 has (edges,vertices)=(19,11), the unreduced density
+  mixture of (10,5) and (9,6), but it is nonplanar only because it already
+  contains the two irreducible obstruction cores.  Minors/subdivisions compose;
+  mediants and edge-density averages do not manufacture new forbidden minors.
+
+[5] Tournament Analysis over carrier roles
+  Alternate vertex sets considered:
+    Farey fractions, products, graph isomorphism types, minor cores,
+    factor pairs, divisor atoms, density ratios, wall crossings, and proof obligations.
+  Chosen vertices are carrier roles.  The quotient preserves proof-role pressure
+  and destroys exact runner geometry and exact graph embeddings.
+  Pairwise observable: earlier role in each criterion beats later role.
+  Gauge: majority of five criteria; tie Hamiltonian path:
+    minor_closure > kuratowski_core > K33_incidence > perfect_abundancy > unit_excess_chain > farey_level > product_edges > raw_edge_density
+  Score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 5: 2, 6: 2}
+  Scores:
+    farey_level          6
+    unit_excess_chain    6
+    K33_incidence        5
+    product_edges        5
+    perfect_abundancy    3
+    minor_closure        2
+    kuratowski_core      1
+    raw_edge_density     0
+  directed_3_cycles=2
+    cycle K33_incidence -> product_edges -> farey_level -> K33_incidence
+    cycle unit_excess_chain -> product_edges -> farey_level -> unit_excess_chain
+  SCCs:
+    {K33_incidence, farey_level, product_edges, unit_excess_chain}
+    {kuratowski_core}
+    {minor_closure}
+    {perfect_abundancy}
+    {raw_edge_density}
+  Hamiltonian-path count=5
+
+[6] Working hypotheses produced by this scout
+  H1. Even perfect numbers are the n=2 unit-excess product chain a/(2a-1) with a power of two and 2a-1 prime.
+  H2. LRC14's a/(14a-1) chain is the deficient prime-q shadow of that chain, with defect 12/(14a-1).
+  H3. F3/F4 is the first useful seam: 2/3 gives product 6 and K_{2,3}; 3/4 gives the first reduced K33 wall.
+  H4. The graph-product ledger is valid only with minor labels attached; edge counts and mediants are too lossy.
+  H5. Tournament vertices should be proof obligations/carrier roles here, not runners, because the question is which quotient preserves the obstruction predicate.
