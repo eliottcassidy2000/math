@@ -21871,3 +21871,27 @@ interval-taut, and wavefront roles.  The sixth carrier, Haar-Baire Taut Wave*,
 stores `(regular-open Baire set, Haar mass, finite boundary debt, C27/K33
 owner, taut wall)` so p=2 petals feed finite C27 rigidity while p>=3 rows feed
 K33/HYP-2908/THM-572 state-lift machinery.  LRC14 remains open.
+
+## codex-2026-06-24-S146 -- Haar-Baire taut boundary finite check
+
+User asked to push the same Borel/Baire/Haar and any-angle POKE route further.
+Extended HYP-2948 with an exact taut-front scout:
+`04-computation/lrc14_haar_baire_taut_boundary_s146.py`, stored output
+`05-knowledge/results/lrc14_haar_baire_taut_boundary_s146.out`.
+
+The script labels strict-safe interval fronts by active endpoint owners.  In
+the one-swap AP neighborhood with replacement `<=160`, it scans `1912` rows and
+finds only AP and GW `12->24` are boundary-only; all other rows have positive
+strict Haar interior, with the first `12->36` at mass `1/1260`.  In the two-swap
+AP neighborhood with added values `14..40`, it scans `27378` primitive rows and
+finds `0` boundary-only rows; the smallest positive rows are the S138 splices
+`(10,12)->(20,24)` and `(10,12)->(20,36)`.
+
+Created HYP-2951 and reflection
+`07-reflections/lrc14-haar-baire-taut-boundary-finite-check-codex-s146.md`, and
+added a POKE comment under the Haar-Baire any-angle post.  Integrated concurrent
+HYP-2949/HYP-2950 by making HYP-2951 the finite local database feeding the
+Baire-Haar carrier and adversarial gauntlet.  Main new target: boundary-owner
+skeleton rigidity.  AP and GW share the same six active owner pairs, so the
+`12->24` transfer is hidden from Haar/Baire boundary owners and must be carried
+by C27/unital labels.  LRC14 remains open.

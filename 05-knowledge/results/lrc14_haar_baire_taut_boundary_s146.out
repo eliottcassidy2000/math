@@ -1,0 +1,108 @@
+==============================================================================
+S146 Haar-Baire taut boundary scout for LRC14
+==============================================================================
+[1] Named Haar-Baire taut fronts
+  AP:
+    transfer=AP
+    strict_mass=0 components=0 closed_pts=6
+    boundary t=1/14 owners=('1L', '13R')
+    boundary t=3/14 owners=('5L', '9R')
+    boundary t=5/14 owners=('3L', '11R')
+    boundary t=9/14 owners=('3R', '11L')
+    boundary t=11/14 owners=('5R', '9L')
+    boundary t=13/14 owners=('1R', '13L')
+  GW 12->24:
+    transfer=H12:g3 -> D3:g3@24
+    strict_mass=0 components=0 closed_pts=6
+    boundary t=1/14 owners=('1L', '13R')
+    boundary t=3/14 owners=('5L', '9R')
+    boundary t=5/14 owners=('3L', '11R')
+    boundary t=9/14 owners=('3R', '11L')
+    boundary t=11/14 owners=('5R', '9L')
+    boundary t=13/14 owners=('1R', '13L')
+  near 12->36:
+    transfer=H12:g3 -> D9:g9@36
+    strict_mass=1/1260 components=2 closed_pts=10
+    front 1: interval=(29/70,209/504) left=('5L',) right=('36R',) mid_slack=1/1008
+    front 2: interval=(295/504,41/70) left=('36L',) right=('5R',) mid_slack=1/1008
+  petal 10->20:
+    transfer=H10:g1 -> D7:g1@20
+    strict_mass=1/980 components=2 closed_pts=10
+    front 1: interval=(29/98,83/280) left=('7L',) right=('20R',) mid_slack=1/560
+    front 2: interval=(197/280,69/98) left=('20L',) right=('7R',) mid_slack=1/560
+  petal 13->26:
+    transfer=H13:g1 -> D1:g1@26
+    strict_mass=1/182 components=2 closed_pts=10
+    front 1: interval=(1/14,27/364) left=('1L',) right=('26R',) mid_slack=1/728
+    front 2: interval=(337/364,13/14) left=('26L',) right=('1R',) mid_slack=1/728
+  two-swap 10,12->20,24:
+    transfer=H10:g1,H12:g3 -> D7:g1@20,D3:g3@24
+    strict_mass=1/980 components=2 closed_pts=10
+    front 1: interval=(29/98,83/280) left=('7L',) right=('20R',) mid_slack=1/560
+    front 2: interval=(197/280,69/98) left=('20L',) right=('7R',) mid_slack=1/560
+  two-swap 10,12->20,36:
+    transfer=H10:g1,H12:g3 -> D7:g1@20,D9:g9@36
+    strict_mass=4/2205 components=4 closed_pts=14
+    front 1: interval=(29/98,83/280) left=('7L',) right=('20R',) mid_slack=1/560
+    front 2: interval=(29/70,209/504) left=('5L',) right=('36R',) mid_slack=1/1008
+    front 3: interval=(295/504,41/70) left=('36L',) right=('5R',) mid_slack=1/1008
+    front 4: interval=(197/280,69/98) left=('20L',) right=('7R',) mid_slack=1/560
+
+[2] one-swap AP neighborhood, add<=160
+  rows=1912 boundary_only=2 positive_open=1910 covered=0
+  boundary-only rows:
+    AP                     closed_pts= 6 transfer=baseline
+    12->24                 closed_pts= 6 transfer=H12:g3 -> D3:g3@24
+  smallest positive strict Haar masses:
+    12->36                 mass=  1/1260 transfer=H12:g3 -> D9:g9@36
+    10->20                 mass=   1/980 transfer=H10:g1 -> D7:g1@20
+    6->69                  mass=19/10626 transfer=H6:g3 -> D12:g3@69
+    6->75                  mass=  4/1925 transfer=H6:g3 -> D6:g3@75
+    12->48                 mass= 13/5880 transfer=H12:g3 -> D6:g3@48
+    6->17                  mass=   1/364 transfer=H6:g3 -> D10:g1@17
+    6->23                  mass=   1/364 transfer=H6:g3 -> D4:g1@23
+    6->46                  mass=   1/364 transfer=H6:g3 -> D8:g1@46
+    12->60                 mass=   1/294 transfer=H12:g3 -> D6:g3@60
+    6->63                  mass=   1/294 transfer=H6:g3 -> D9:g9@63
+    6->29                  mass=423/116116 transfer=H6:g3 -> D2:g1@29
+    6->81                  mass=304/81081 transfer=H6:g3 -> D0:g27@81
+
+[2] two-swap AP neighborhood, add<=40
+  rows=27378 boundary_only=0 positive_open=27378 covered=0
+  boundary-only rows:
+  smallest positive strict Haar masses:
+    (10, 12)->(20, 24)     mass=   1/980 transfer=H10:g1,H12:g3 -> D7:g1@20,D3:g3@24
+    (10, 12)->(20, 36)     mass=  4/2205 transfer=H10:g1,H12:g3 -> D7:g1@20,D9:g9@36
+    (6, 10)->(17, 20)      mass=   1/364 transfer=H6:g3,H10:g1 -> D10:g1@17,D7:g1@20
+    (6, 10)->(20, 23)      mass= 12/3185 transfer=H6:g3,H10:g1 -> D7:g1@20,D4:g1@23
+    (4, 6)->(17, 19)       mass= 37/9044 transfer=H4:g1,H6:g3 -> D10:g1@17,D8:g1@19
+    (6, 10)->(20, 29)      mass=4738/1016015 transfer=H6:g3,H10:g1 -> D7:g1@20,D2:g1@29
+    (2, 6)->(17, 25)       mass=   2/425 transfer=H2:g1,H6:g3 -> D10:g1@17,D2:g1@25
+    (6, 10)->(17, 30)      mass=859/180180 transfer=H6:g3,H10:g1 -> D10:g1@17,D3:g3@30
+    (6, 10)->(20, 40)      mass=379/76440 transfer=H6:g3,H10:g1 -> D7:g1@20,D13:g1@40
+    (2, 6)->(17, 23)       mass=179/35581 transfer=H2:g1,H6:g3 -> D10:g1@17,D4:g1@23
+    (10, 12)->(24, 30)     mass=263/48510 transfer=H10:g1,H12:g3 -> D3:g3@24,D3:g3@30
+    (10, 12)->(30, 36)     mass=67/10780 transfer=H10:g1,H12:g3 -> D3:g3@30,D9:g9@36
+
+[3] HBT*/Haar-Baire Wave proof-order tournament
+  criteria: endpoint_witness, haar_interior, boundary_code, relation_wave, lrc_transfer, dynamic_update, anti_scalar_guard
+  HBT*_boundary_rank       vector=(5, 5, 5, 5, 5, 4, 5) score=7 note=keeps interior, boundary owner, relation rank
+  Haar-Baire_Wave*         vector=(5, 5, 5, 4, 5, 3, 5) score=6 note=exact interval wavefront with Haar/Baire labels
+  ANYA_interval_taut       vector=(5, 5, 4, 2, 4, 2, 5) score=5 note=interval nodes and taut turns
+  CWave_relation_front     vector=(4, 4, 5, 2, 4, 3, 4) score=4 note=primitive wavefronts, relation hyperplanes
+  BlockA_local_database    vector=(3, 4, 3, 4, 3, 2, 4) score=3 note=finite local AP/C27/state-lift databases
+  Theta_owner_line         vector=(3, 2, 4, 3, 3, 1, 3) score=2 note=owner line-of-sight shortcut
+  FieldD_measure_interp    vector=(2, 3, 4, 4, 2, 1, 2) score=1 note=measure interpolation, weak boundary memory
+  raw_denominator_A*       vector=(1, 1, 1, 2, 1, 1, 1) score=0 note=grid-first denominator search
+  directed_3cycles=0
+  ranking=HBT*_boundary_rank > Haar-Baire_Wave* > ANYA_interval_taut > CWave_relation_front > BlockA_local_database > Theta_owner_line > FieldD_measure_interp > raw_denominator_A*
+
+[4] Readout
+  The one-swap finite check supports the boundary-support lemma:
+  through add<=160, AP and GW 12->24 are the only boundary-only rows,
+  and the first open row is near 12->36 with strict Haar mass 1/1260.
+  The two-swap add<=40 check tests the S138 neighborhood for additional
+  boundary-only packets; any nonzero count above should be treated as a
+  new exact boundary-front obligation, not as Haar-positive evidence.
+  HBT*/Haar-Baire Wave should therefore propagate open fronts by measure,
+  and route zero-interior boundary fronts to C27/unital/state-lift labels.

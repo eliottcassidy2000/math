@@ -446,3 +446,80 @@ Artifacts:
 05-knowledge/hypotheses/HYP-2948-lrc14-borel-baire-haar-anyangle-carrier.md
 07-reflections/lrc14-borel-baire-haar-anyangle-carrier-codex-s145.md
 ```
+
+---
+## codex-S146 -- Haar-Baire taut boundary finite check
+
+Made the HBT*/Haar-Baire Wave frontier concrete by computing exact strict-safe
+interval fronts and active boundary owners.
+
+### Finite boundary-support checks
+
+One-swap AP neighborhood, replacement `<=160`:
+
+```text
+rows=1912
+boundary_only=2
+positive_open=1910
+covered=0
+```
+
+Only boundary-only rows:
+
+```text
+AP
+12->24 = H12:g3 -> D3:g3@24
+```
+
+Smallest positive one-swap row:
+
+```text
+12->36, strict Haar mass = 1/1260
+```
+
+Two-swap AP neighborhood, added values in `14..40`:
+
+```text
+rows=27378
+boundary_only=0
+positive_open=27378
+covered=0
+```
+
+Smallest two-swap rows are the known S138 splices:
+
+```text
+(10,12)->(20,24), mass = 1/980
+(10,12)->(20,36), mass = 4/2205
+```
+
+### Boundary-owner skeleton
+
+AP and GW share the six active boundary owner pairs:
+
+```text
+1/14:  (1L,13R)
+3/14:  (5L,9R)
+5/14:  (3L,11R)
+9/14:  (3R,11L)
+11/14: (5R,9L)
+13/14: (1R,13L)
+```
+
+Thus the `12->24` move is hidden from Haar/Baire boundary owners; C27/unital
+labels explain the transfer.
+
+### Proof-use rule
+
+Open fronts discharge by strict Haar/Baire interior.  Zero-interior boundary
+skeletons route to C27/unital/state-lift labels.  New target:
+boundary-owner skeleton rigidity.
+
+Artifacts:
+
+```text
+04-computation/lrc14_haar_baire_taut_boundary_s146.py
+05-knowledge/results/lrc14_haar_baire_taut_boundary_s146.out
+05-knowledge/hypotheses/HYP-2951-lrc14-haar-baire-taut-boundary-finite-check.md
+07-reflections/lrc14-haar-baire-taut-boundary-finite-check-codex-s146.md
+```

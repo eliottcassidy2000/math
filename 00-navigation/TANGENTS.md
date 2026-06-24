@@ -3012,3 +3012,19 @@ reductions, every threshold-safe strict-Haar-zero row is AP or GW.  Incoming
 HYP-2947 owns the broader measurable rank recombination lane; HYP-2948 supplies
 the exact boundary-front audit for that lane. -> HYP-2948, HYP-2947, HYP-2942,
 HYP-2940, HYP-2937, HYP-2932, HYP-2908, THM-572, OPEN-Q-108.
+
+## T1043: LRC14 boundary-owner skeleton rigidity scout (codex-2026-06-24-S146)
+HYP-2951 makes the Haar-Baire Wave/HBT* frontier exact by labelling strict-safe
+interval fronts with active endpoint owners.  One-swap AP neighborhood with
+replacement `<=160`: `1912` rows, only AP and GW `12->24` are boundary-only;
+the first open row is `12->36`, strict Haar mass `1/1260`.  Two-swap AP
+neighborhood with added values `14..40`: `27378` primitive rows, `0`
+boundary-only rows, all positive open; the smallest are S138 splices
+`(10,12)->(20,24)` with `1/980` and `(10,12)->(20,36)` with `4/2205`.
+Crucial owner readout: AP and GW share the same six boundary owner pairs
+`(1,13),(5,9),(3,11),(3,11),(5,9),(1,13)` with orientations, so the
+`H12->D3@24` transfer is invisible to Haar/Baire and must keep C27/unital
+labels.  New target: boundary-owner skeleton rigidity.  This is the finite
+local database feeding HYP-2949's Baire-Haar carrier and HYP-2950's adversarial
+gauntlet. -> HYP-2951, HYP-2950, HYP-2949, HYP-2948, HYP-2947, HYP-2942,
+HYP-2940, HYP-2937, HYP-2908, OPEN-Q-108.

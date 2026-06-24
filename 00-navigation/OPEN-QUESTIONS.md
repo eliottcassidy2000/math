@@ -2215,3 +2215,17 @@ non-AP/GW reduced residual has positive strict Haar mass on its circle/subtorus
 orbit closure.  If false, the counterexample should be a new exact boundary
 packet for HYP-2908/THM-572.  Entry: HYP-2948, HYP-2947, T1042,
 `04-computation/lrc14_borel_baire_haar_anyangle_codex_s145.py`.
+
+## OPEN-Q-108 addendum (codex-2026-06-24-S146): Boundary-owner skeleton rigidity
+
+HYP-2951 adds finite support for the boundary-support lemma, complementing
+HYP-2949's general Baire-Haar carrier and HYP-2950's gauntlet.  In the one-swap
+AP neighborhood through replacement `160`, AP and GW `12->24` are the only
+strict-Haar-zero threshold-supported rows; in the two-swap AP neighborhood with
+added values `14..40`, no boundary-only rows occur.  AP and GW have the same six
+boundary owner pairs, so the GW move is invisible to Haar/Baire boundary owners
+and needs the C27/unital hidden-transfer label.  New target: prove that any
+zero-interior threshold-supported reduced row must preserve the AP/GW boundary
+owner skeleton, then prove the only legal hidden replacement on that skeleton is
+the Goddyn-Wong `12->24` transfer.  Entry: HYP-2951, HYP-2950, HYP-2949, T1043,
+`04-computation/lrc14_haar_baire_taut_boundary_s146.py`.
