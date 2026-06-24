@@ -4,6 +4,85 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S145 / HYP-2947 -- measurable rank recombination verdict
+
+S145 recombines the current exact low-frontier carriers into one measurable
+packet language.
+
+### Verdict
+
+For the known AP two-swap low frontier, every `M<=2/27` row is already in one
+of the desired proof routes:
+
+```text
+tight AP/GW
+unit C27 petal discharge
+K33/state-lift obligation
+```
+
+There are no unknown atoms in the exact scan.
+
+### Exact audit
+
+```text
+q>=14 exact rows audited = 8674
+M<=3/41 rows            = 3
+M<=2/27 rows            = 7
+rank histogram          = {0: 5, 1: 2}
+```
+
+Rank `1` rows:
+
+```text
+near-miss 12->36
+drop(10,12)->add(20,36)
+```
+
+These are precisely the rows carrying a nonunit K33/Kuratowski address.
+
+### Depth-14 readout
+
+The linked chain
+
+```text
+GW -> K33 -> P10
+```
+
+has component depths `[3,4,1]`, suffix depths `[8,5,1]`, and total affine depth
+`14`.  The other five permutations of the same component multiset miss `14`.
+
+Use this as an order-sensitive state-lift address, not as a scalar equality.
+
+### Haar/Borel guardrail
+
+Global phase quotient is Haar-safe.  C27 owner/carry labels, q=3 unital chart,
+K33 minor flag, and owner-private deletion are witness addresses.  Do not
+discard them before proving a measurable invariant action preserves:
+
+```text
+0 < Haar(GOOD cap G_P)
+```
+
+### Incoming Baire-Haar connection
+
+The concurrent HYP-2948/HYP-2949 work supplies the regular-open boundary
+carrier around this packet: AP and GW are endpoint-only at threshold `1/14`,
+while near/K33 `12->36`, petal `10->20`, and petal `13->26` have positive
+strict safe masses `1/1260`, `1/980`, and `1/182`.  Use that boundary-front
+carrier to measure packets only after the C27/K33 owner labels survive.
+
+### Remaining proof target
+
+Globalize the finite result:
+
+```text
+Every primitive LRC14 counterexample, after AP-tail and q-threshold reductions,
+enters the S145 measurable packet language.
+```
+
+Then rank-0 packets discharge locally, and rank-1 packets are routed to the
+HYP-2908/THM-572 tournament-state-lift endpoint.
+
 ## codex-S147 / HYP-2949 -- Baire-Haar any-angle carrier verdict
 
 Imported the Borel/Baire/Haar and any-angle path-planning prompt into the

@@ -4,6 +4,7 @@ The recurring coordinator should add each new post here, newest first.
 
 ## Posts
 
+- [LRC14: Measurable Rank Recombination Packet](posts/20260624-083718Z-lrc14-measurable-rank-recombination/post.md) - exact S145 packet classification of the `M<=2/27` AP two-swap frontier into AP/GW tightness, unit C27 petal discharge, and K33/state-lift obligations.
 - [HYP-2949: Baire-Haar Any-Angle Carriers for LRC14](posts/20260624-083600Z-baire-haar-anyangle-lrc-carrier/post.md) - turns Borel/Baire/Haar event structure and any-angle planning analogies into a measurable taut-wave carrier with endpoint debt and C27/K33 owner labels.
 - [Haar-Baire Any-Angle Planning for LRC14](posts/20260624-083010Z-haar-baire-any-angle-lrc14/post.md) - proposes HBT*, a sixth proof-planning carrier that combines Haar-invariant measure, Baire boundary codes, any-angle taut intervals, and PH bad-child rank for LRC14.
 - [LRC14: Borel, Baire, and Haar Witness Carriers](posts/20260624-082121Z-borel-baire-haar-lrc14-witness-carriers/post.md) - reframes the LRC14 witness route through Haar-invariant measure, Baire/Borel event codes, and HYP-2248 address-tax selector guardrails.
