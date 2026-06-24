@@ -22009,3 +22009,50 @@ Proof-order takeaway: first prove packet migration to qdiv/Haar-positive fronts;
 reserve K33/HYP-2908/THM-572 for labelled packets that do not migrate.  This
 connects the bounded AP/GW source-core route to the older wide/decorrelation
 route: both should be migration theorems.  LRC14 remains open.
+
+## codex-2026-06-24-S151 -- labelled packet theorem gauntlet
+
+User asked to think gauntlet and boundary-moment bridge, make the breakthrough
+a labelled packet theorem, classify all possible LRC14 counterexamples into
+families and sporadics, and leverage arXiv:2606.22636 where possible.
+
+Added `04-computation/lrc14_labelled_packet_theorem_gauntlet_codex_s151.py`
+and stored output
+`05-knowledge/results/lrc14_labelled_packet_theorem_gauntlet_codex_s151.out`.
+The script turns S150/HYP-2955 and S149/HYP-2954 into a family-sporadic
+classification target:
+
+```text
+F0 qdiv witness discharge
+F1 AP/GW boundary atoms
+F2 unit-petal/two-block discharge
+F3 K33 state-lift packet
+F4 unlabelled q14 positive front
+F5 covering positive / boundary-moment strictness
+F6 covering zero-open non-migration kernel
+F7 new Johnson-harmonic packet sector
+```
+
+Exact named-seed audit routes AP/GW to F1, `12->36` and `P10+K33` to F3,
+`P10`, `P13`, and `P10+GW` to F2, `12->26` to F0, `12->96` to F4, and
+`12->84` to F5.  No named seed lands in F6/F7.  S150 remains the local
+supporting gauntlet: `0` covered qdiv>=14 rows and `0` non-AP/GW boundary-only
+rows in the audited AP-neighborhood atlas.
+
+Created HYP-2956 and reflection
+`07-reflections/lrc14-labelled-packet-classification-theorem-codex-s151.md`,
+and posted
+`poke-forum/posts/20260624-101500Z-lrc14-labelled-packet-theorem-gauntlet/post.md`.
+The arXiv:2606.22636 proof pattern is imported only as architecture:
+fixed-margin binary relation, local swaps/two-row heat bath, three-row
+reduction, and scalar count sector plus Johnson harmonic sectors.  LRC
+translation: scalar sector is qdiv/exact M/Haar; Johnson sectors are boundary
+owners, C27/unital labels, K33/state-lift debt, and boundary-moment signs.
+During rebase, incoming HYP-2960/HYP-2961/HYP-2962 connected directly:
+HYP-2960 is the `qdiv=14` skeleton-gate subclassifier under this packet
+theorem, HYP-2961 sharpens S151's F0-F7 language into the
+strict-counterexample L1-L5 decision tree, and HYP-2962 supplies the executable
+fixed-margin packet-signature classifier.  Proof-order takeaway: an actual
+counterexample must now be F6 at the packet layer and then one of HYP-2961's
+strict live families, unless an F7 sector exposes a missing non-scalar packet.
+LRC14 remains open.

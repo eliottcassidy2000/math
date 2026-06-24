@@ -34,6 +34,54 @@ lcm-tail packet family, discharged here by positive Haar-open mass.  The next
 step is to add the missing gK8/L_y moment coordinate and search fixed-margin
 swap fibers for zero-open, non-K33, non-unit source kernels.
 
+## codex-S151 / HYP-2956 -- labelled packet theorem gauntlet
+
+S151 turns the gauntlet plus boundary-moment bridge into a theorem-shaped
+classification target.
+
+```text
+Every primitive LRC14 row is in F0-F5,
+or it is an F6 non-migrating boundary-moment kernel,
+unless a new F7 Johnson sector exists.
+```
+
+Family split:
+
+```text
+F0 qdiv witness discharge
+F1 AP/GW boundary atoms
+F2 unit-petal/two-block discharge
+F3 K33 state-lift packet
+F4 unlabelled q14 positive front
+F5 covering positive / boundary-moment strictness
+F6 covering zero-open non-migration kernel
+F7 new Johnson-harmonic packet sector
+```
+
+Exact sporadic audit:
+
+```text
+AP, GW 12->24            -> F1
+12->36, P10+K33          -> F3
+P10, P13, P10+GW         -> F2
+12->26                   -> F0
+12->96                   -> F4
+12->84                   -> F5
+```
+
+The arXiv:2606.22636 fixed-margin swap-chain paper contributes a proof
+architecture rather than a black-box LRC theorem: fixed binary relation
+margins, local swaps/two-row heat bath, three-row reduction, then scalar count
+sector plus Johnson harmonic sectors.  The LRC translation is qdiv/exact
+M/Haar for the scalar sector, and boundary-owner/C27/unital/K33/state-lift
+labels for the non-scalar sectors.  The live task is to prove packet-swap
+connectivity to F0-F5 and close F6 by boundary-moment positivity or
+HYP-2908/THM-572.  Incoming HYP-2961/S153 then sharpens this packet theorem
+for strict counterexamples by moving AP/GW to equality sporadics and replacing
+the broad F6 residual with the L1-L5 live-family decision tree.
+HYP-2962/S150 further concretizes the fixed-margin packet signature and should
+be read as the executable classifier layer below this S151 theorem target.
+
 ## codex-S149 / HYP-2953 -- source-spectrum pullback attempt
 
 S149 searched the recent S148/S149 front and older LRC14 source-fiber,

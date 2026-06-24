@@ -38,10 +38,33 @@ This checkpoint establishes a rigorous, exhaustive decision tree for all possibl
 strict counterexamples, partitioning them into five live families (L1-L5) and
 six proof-obligation sporadic buckets (S0-S5).
 
+S151/HYP-2956 remains the labelled-packet theorem checkpoint just below this:
+it names F0-F7 packet families, imports the fixed-margin/Johnson-sector proof
+architecture from arXiv:2606.22636, and identifies F6/F7 as the packet-level
+residuals.  S153 sharpens that language for strict counterexamples: AP/GW move
+to equality sporadics, qdiv<=14 discharges, and the live residual is the L1-L5
+strict-counterexample decision tree.
+
 S153 integrates the entire proof-DAG—including q-witness gates, Haar-open
 migration, skeleton gates, source-spectrum pullbacks, and gK8 moment images—into
 a unified grammar. The cluster's progress is now defined by the systematic
 discharge of these remaining "live" buckets.
+
+HYP-2962 adds the fixed-margin operational layer: families are now labelled
+packet classes with retained q-cover, U14 apex, C27 shell, packet-atom, exact
+M/Haar, and route coordinates.  It is the executable classifier layer between
+S151's F0-F7 theorem target and S153's strict-counterexample L1-L5 buckets.
+
+---
+
+## codex-S150 -- Fixed-Margin Labelled Packet Theorem (checkpoint)
+
+Formalized the **LRC14 Fixed-Margin Labelled Packet Theorem** (HYP-2962), making
+the fixed-margin analogy concrete as packet signatures rather than raw row
+families.  The representative classifier audits `18` rows, finds `16`
+fixed-margin classes, `2` shared family signatures, `0` strict counterexamples,
+and `0` `qdiv>14` zero-open representatives.  The shared covering signature
+`12->84/168` is a real lcm-tail family but positive-open in the audited bank.
 
 ---
 
@@ -64,6 +87,29 @@ Rows are categorized into proof-obligation buckets (S0-S5) after infinite parame
 The decision tournament vertices are candidate families and proof exits. The SCC
 is a chain of eleven singleton nodes, defining a unique Hamiltonian path under
 the stated tie gauge: Q > P > H > B > U > K > W > A > C > N > R.
+
+---
+
+## codex-S151 -- Labelled Packet Theorem Gauntlet (checkpoint)
+
+Formalized the **LRC14 Labelled Packet Classification Theorem** (HYP-2956), a
+packet-level theorem target immediately upstream of the S153 strict
+counterexample classifier.
+
+```text
+Every primitive LRC14 row is in F0-F5,
+or it is an F6 non-migrating boundary-moment kernel,
+unless a new F7 Johnson sector exists.
+```
+
+Exact sporadic audit: AP/GW -> F1; `12->36` and `P10+K33` -> F3; `P10`,
+`P13`, and `P10+GW` -> F2; `12->26` -> F0; `12->96` -> F4; `12->84` -> F5.
+The arXiv:2606.22636 fixed-margin swap-chain architecture is used as a proof
+protocol: fixed-margin binary relation -> local swaps/two-row heat bath ->
+three-row reduction -> scalar count sector plus Johnson harmonic sectors.  LRC
+scalar sectors are qdiv/exact M/Haar; Johnson sectors are boundary-owner,
+C27/unital, K33/state-lift, and boundary-moment labels.  S153 refines this by
+separating equality atoms from strict counterexample families.
 
 ---
 
