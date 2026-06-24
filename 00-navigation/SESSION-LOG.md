@@ -1,3 +1,13 @@
+## codex-2026-06-24-S139 -- triangular/perfect-number affine operator carrier for LRC14
+
+User asked to apply the triangular-number-looking equality `x*(2x-1)=2*log2(x)+1-x`, its similarity to `x^2=1/2+log2(x)`, the cubic factor packet, perfect numbers, and the affine maps `a(x)=x/2`, `b(x)=x+1` to the LRC14 proof route.  Pulled incoming HYP-2940 operator-sequence and C27 two-swap work first; both were directly relevant, especially the warning not to scalarize the `p+q`/`p*q`/octahedral/Clebsch packet layer.
+
+Added `04-computation/lrc14_triangular_affine_operator_codex_s139.py`, stored `05-knowledge/results/lrc14_triangular_affine_operator_codex_s139.out`, and registered HYP-2941 / T1037 / reflection `07-reflections/lrc14-triangular-affine-operator-carrier-codex-s139.md`.
+
+Main correction: the proposed equality is equivalent to `x^2=1/2+log2(x)` and has no positive real solution; the gap `x^2-1/2-log2(x)` has positive minimum `0.456964333972033...` at `1/sqrt(2 ln 2)`.  The cubic `((x-1)/2)*(x/2)*(x-1/2)` is therefore a signed three-wall packet, not a logarithm replacement.  Retained carrier: `x*(2x-1)=T_{2x-1}` and becomes an even perfect number at Mersenne-prime indices, so it belongs to the `p*q` product/coimage lane.
+
+Affine composition readout: with left-to-right `a(x)=x/2`, `b(x)=x+1`, each `b` carries a future-halving depth.  Staircase words `(ba)^n` have triangular depth sum `T_n`, block words `b^n a^n` have square depth sum `n^2`, and tail words `a^n b^n` have depth sum `0`.  Tournament Analysis used proof carriers as vertices and was transitive: `exact M/Farey branch > C27 two-swap splice > Kpq/K33 owner packet > affine depth profile > product triangular/perfect lane > cubic barrier carrier > log/quadratic curvature guardrail > raw scalar equality numerology`.  New proof target: after exact `M`, C27, and K33 labels are attached, assign an affine-depth packet; unit-visible entries should force the C27 petal/two-swap splice and nonunit entries should expose the K33/octahedral/Clebsch state-lift packet.  LRC14 remains open.
+
 ## codex-2026-06-23-S138 -- C=27 two-swap frontier splice sharpens the LRC14 local target
 
 User asked to keep making progress on the LRC proof.  Pulled the current S137 pi/unital guardrail and continued the HYP-2937 C27 shell-transfer route into the AP two-swap neighborhood.  Added `04-computation/lrc14_c27_two_swap_frontier_codex_s138.py`, stored `05-knowledge/results/lrc14_c27_two_swap_frontier_codex_s138.out`, and registered HYP-2940 / T1036 / reflection `07-reflections/lrc14-c27-two-swap-frontier-codex-s138.md`.
