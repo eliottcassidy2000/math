@@ -1,0 +1,116 @@
+==============================================================================
+S151 LRC14 counterexample family/sporadic classifier
+==============================================================================
+[assumption challenge]
+  considered vertices: runners, residues, divisor clocks, cover skeletons,
+    Haar fronts, boundary owners, C27/K33 packet labels, and proof families.
+  chosen vertices: classifier gates/families.
+  preserved predicate: qdiv>14 plus exact covered is the only strict
+    counterexample state after THM-523 and S146.
+  destroyed data: individual row identity after divisor skeleton and packet
+    labels are recorded; exact wide analytic data remains an external proof.
+
+[bank] 0-swap add<=13
+  generated_rows=1
+  qroute_counts={'qdiv>=14 exact': 1}
+  exact_qdiv>=14_rows=1
+  candidate_state_counts={'closed-threshold-tight-or-boundary': 1}
+  family_counts={'AP/GW-boundary-family': 1}
+  cover_role_counts={'not-covering': 1}
+  TRUE candidate rows: none
+  boundary/tight rows:
+    AP                                 family=AP/GW-boundary-family closed=closed-threshold-tight-or-boundary
+
+[bank] 1-swap add<=420
+  generated_rows=5291
+  qroute_counts={'qdiv>14 exact': 235, 'qdiv=14 exact': 2505, 'qdiv<14 strict witness': 2551}
+  exact_qdiv>=14_rows=2740
+  candidate_state_counts={'closed-threshold-tight-or-boundary': 1, 'covering-core-positive-open': 235, 'q14-positive-open': 2504}
+  family_counts={'AP/GW-boundary-family': 1, 'K33-state-lift-family': 1, 'q14-positive-open-migration-family': 2501, 'single-14-tail-comb-family': 235, 'unit-petal-or-GW-strip-family': 2}
+  cover_role_counts={'distributed-cover': 235, 'not-covering': 2505}
+  TRUE candidate rows: none
+  boundary/tight rows:
+    12->24                             family=AP/GW-boundary-family closed=closed-threshold-tight-or-boundary
+  smallest covering-core positive fronts:
+    6->98                              mass=1543/294294 family=single-14-tail-comb-family           cover=distributed-cover/7 keys=-
+    12->84                             mass=563/105105 family=single-14-tail-comb-family           cover=distributed-cover/6 keys=-
+    6->56                              mass=943/168168 family=single-14-tail-comb-family           cover=distributed-cover/6 keys=-
+    6->126                             mass=743/126126 family=single-14-tail-comb-family           cover=distributed-cover/6 keys=-
+    6->294                             mass=1829/294294 family=single-14-tail-comb-family           cover=distributed-cover/7 keys=-
+    6->224                             mass=4201/672672 family=single-14-tail-comb-family           cover=distributed-cover/6 keys=-
+    6->168                             mass= 181/28028 family=single-14-tail-comb-family           cover=distributed-cover/5 keys=-
+    6->350                             mass=6859/1051050 family=single-14-tail-comb-family           cover=distributed-cover/6 keys=-
+
+[bank] 2-swap add<=60
+  generated_rows=84318
+  qroute_counts={'qdiv>14 exact': 4791, 'qdiv=14 exact': 21093, 'qdiv<14 strict witness': 58434}
+  exact_qdiv>=14_rows=25884
+  candidate_state_counts={'covering-core-positive-open': 4791, 'q14-positive-open': 21093}
+  family_counts={'K33-state-lift-family': 337, 'mixed-K33-petal-lift-family': 2, 'q14-positive-open-migration-family': 19924, 'unit-petal-or-GW-strip-family': 953, 'unlabelled-covering-repair-family': 4668}
+  cover_role_counts={'distributed-cover': 4791, 'not-covering': 21093}
+  TRUE candidate rows: none
+  smallest covering-core positive fronts:
+    drop(6,10)->add(20,56)             mass=5573/840840 family=unit-petal-or-GW-strip-family        cover=distributed-cover/6 keys=P10
+    drop(4,6)->add(19,42)              mass=1220/133133 family=unlabelled-covering-repair-family    cover=distributed-cover/7 keys=-
+    drop(6,10)->add(14,20)             mass=3859/420420 family=unit-petal-or-GW-strip-family        cover=distributed-cover/7 keys=P10
+    drop(6,10)->add(20,28)             mass=3859/420420 family=unit-petal-or-GW-strip-family        cover=distributed-cover/7 keys=P10
+    drop(6,10)->add(20,42)             mass=3859/420420 family=unit-petal-or-GW-strip-family        cover=distributed-cover/7 keys=P10
+    drop(4,6)->add(42,46)              mass=4747/483483 family=unlabelled-covering-repair-family    cover=distributed-cover/7 keys=-
+    drop(4,6)->add(23,42)              mass=38977/3867864 family=unlabelled-covering-repair-family    cover=distributed-cover/7 keys=-
+    drop(4,12)->add(24,42)             mass= 893/84084 family=unit-petal-or-GW-strip-family        cover=distributed-cover/6 keys=GW
+
+[bank] 3-swap add<=30
+  generated_rows=194480
+  qroute_counts={'qdiv>14 exact': 13879, 'qdiv=14 exact': 25864, 'qdiv<14 strict witness': 154737}
+  exact_qdiv>=14_rows=39743
+  candidate_state_counts={'covering-core-positive-open': 13879, 'q14-positive-open': 25864}
+  family_counts={'q14-positive-open-migration-family': 19481, 'unit-petal-or-GW-strip-family': 8677, 'unlabelled-covering-repair-family': 11585}
+  cover_role_counts={'distributed-cover': 13879, 'not-covering': 25864}
+  TRUE candidate rows: none
+  smallest covering-core positive fronts:
+    drop(4,5,6)->add(19,21,28)         mass=221849/15975960 family=unlabelled-covering-repair-family    cover=distributed-cover/7 keys=-
+    drop(4,5,6)->add(17,19,28)         mass=65249/4526522 family=unlabelled-covering-repair-family    cover=distributed-cover/7 keys=-
+    drop(6,7,10)->add(14,17,30)        mass=4952/315315 family=unlabelled-covering-repair-family    cover=distributed-cover/7 keys=-
+    drop(3,10,11)->add(14,20,22)       mass=3361/210210 family=unit-petal-or-GW-strip-family        cover=distributed-cover/7 keys=P10
+    drop(3,4,10)->add(19,20,28)        mass=11617/726180 family=unit-petal-or-GW-strip-family        cover=distributed-cover/7 keys=P10
+    drop(3,10,12)->add(20,24,28)       mass= 643/38220 family=unit-petal-or-GW-strip-family        cover=distributed-cover/6 keys=P10,GW
+    drop(4,6,10)->add(14,19,20)        mass=135691/7987980 family=unit-petal-or-GW-strip-family        cover=distributed-cover/7 keys=P10
+    drop(4,6,10)->add(19,20,28)        mass=135691/7987980 family=unit-petal-or-GW-strip-family        cover=distributed-cover/7 keys=P10
+
+[global classifier readout]
+  total_exact_rows=68368
+  candidate_states={'closed-threshold-tight-or-boundary': 2, 'covering-core-positive-open': 18905, 'q14-positive-open': 49461}
+  families={'AP/GW-boundary-family': 2, 'K33-state-lift-family': 338, 'mixed-K33-petal-lift-family': 2, 'q14-positive-open-migration-family': 41906, 'single-14-tail-comb-family': 235, 'unit-petal-or-GW-strip-family': 9632, 'unlabelled-covering-repair-family': 16253}
+
+  Necessary strict-counterexample theorem:
+    Every true counterexample must appear in state
+    TRUE-COUNTEREXAMPLE-CANDIDATE = qdiv>14 and exact covered.
+    observed_TRUE_candidates=0
+
+  sporadic-like positive covering fronts (not true candidates):
+    drop(4,6)->add(19,42)              mass=1220/133133 cover_size=7 essential=(8, 9, 10, 11, 12, 13, 42)
+    drop(4,6)->add(42,46)              mass=4747/483483 cover_size=7 essential=(8, 9, 10, 11, 12, 13, 42)
+    drop(4,6)->add(23,42)              mass=38977/3867864 cover_size=7 essential=(8, 9, 10, 11, 12, 13, 42)
+    drop(4,6)->add(42,50)              mass= 919/84084 cover_size=7 essential=(8, 9, 11, 12, 13, 42)
+    drop(6,10)->add(30,56)             mass=27821/2522520 cover_size=6 essential=(9, 11, 12, 13, 30, 56)
+    drop(6,10)->add(40,56)             mass=1087/97020 cover_size=6 essential=(9, 11, 12, 13, 40, 56)
+    drop(2,6)->add(17,42)              mass=   43/3822 cover_size=7 essential=(8, 9, 10, 11, 12, 13, 42)
+    drop(4,6)->add(34,42)              mass=1475/129948 cover_size=7 essential=(8, 9, 10, 11, 12, 13, 42)
+    drop(4,6)->add(29,42)              mass=57119/4876872 cover_size=7 essential=(8, 9, 10, 11, 12, 13, 42)
+    drop(4,6)->add(46,56)              mass=15471/1289288 cover_size=6 essential=(9, 10, 11, 12, 13, 56)
+    drop(4,10)->add(30,42)             mass=15319/1261260 cover_size=7 essential=(8, 9, 11, 12, 13, 30, 42)
+    drop(2,6)->add(17,56)              mass= 535/43316 cover_size=6 essential=(9, 10, 11, 12, 13, 56)
+
+  Family interpretation:
+    AP/GW-boundary-family: tight qdiv=14 boundary, not strict counterexample.
+    unit-petal/GW and K33 families: labelled local packets; discharge or state-lift.
+    single-14-tail and divisor-load families: covering-core comb/tower rows.
+    unlabelled-covering-repair family: current sporadic reservoir; in this audit all open.
+[Tournament Analysis]
+  vertices=classifier gates/families, not runners
+  observable=preserves strict-counterexample predicate plus discharge label
+  switch=earlier gate discharges or labels before later residual
+  tie_hamiltonian_path=qclock-excluded > q14-boundary-tight > q14-open-migration > covering-comb-family > unit-petal-family > K33-state-lift-family > unlabelled-covering-repair > true-covered-sporadic
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3_cycles=0
+  hamiltonian_paths=1

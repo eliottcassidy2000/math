@@ -3,6 +3,10 @@ id: HYP-2961
 title: LRC14 counterexample family and sporadic classifier
 status: CLASSIFICATION TARGET / proof grammar for all possible strict counterexamples, not a proof
 source: codex-2026-06-24-S153
+extensions:
+  - codex-2026-06-24-S151 executable bounded audit
+script_s151: 04-computation/lrc14_counterexample_family_sporadic_classifier_codex_s151.py
+result_s151: 05-knowledge/results/lrc14_counterexample_family_sporadic_classifier_codex_s151.out
 related:
   - HYP-2960
   - HYP-2955
@@ -333,6 +337,96 @@ S0 = {AP, GW}.
 S1 contains only discharged rows in tested banks.
 S2/S3/S4/S5 are proof-obligation buckets; no actual strict counterexample is known.
 ```
+
+## S151 Executable Bounded Extension
+
+S151 implements a finite classifier downstream of the S153 grammar.  It does
+not replace the five live families; it gives the exact bounded readout for the
+AP-neighborhood banks where HYP-2955 already exposed packet migration.
+
+Executable:
+
+```text
+04-computation/lrc14_counterexample_family_sporadic_classifier_codex_s151.py
+```
+
+Stored output:
+
+```text
+05-knowledge/results/lrc14_counterexample_family_sporadic_classifier_codex_s151.out
+```
+
+The S151 exact dangerous state is:
+
+```text
+TRUE-COUNTEREXAMPLE-CANDIDATE = qdiv>14 and exact threshold status covered.
+```
+
+It audits AP, one AP swap through `add<=420`, two AP swaps through `add<=60`,
+and three AP swaps through `add<=30`.  The exact `qdiv>=14` row count is
+`68368`.
+
+Observed candidate states:
+
+```text
+closed-threshold-tight-or-boundary: 2
+covering-core-positive-open:       18905
+q14-positive-open:                 49461
+TRUE-COUNTEREXAMPLE-CANDIDATE:     0
+```
+
+Observed bounded family counts:
+
+```text
+AP/GW-boundary-family:             2
+K33-state-lift-family:             338
+mixed-K33-petal-lift-family:       2
+q14-positive-open-migration-family:41906
+single-14-tail-comb-family:        235
+unit-petal-or-GW-strip-family:     9632
+unlabelled-covering-repair-family: 16253
+```
+
+This refines the sporadic language.  In the S151 interface, the current
+sporadic reservoir is the unlabelled covering-repair family: rows with
+distributed divisor-cover skeletons but no AP/GW, unit-petal, GW-strip, or K33
+packet key.  They are not counterexamples in the audit; every such row is
+positive-open.  The reserved strict sporadic bucket is instead:
+
+```text
+qdiv>14, exact covered, no named family label.
+```
+
+Observed count in S151: `0`.
+
+Representative positive-open sporadic-reservoir rows include:
+
+```text
+drop(4,6)->add(19,42)  mass=1220/133133    cover_size=7
+drop(4,6)->add(42,46)  mass=4747/483483    cover_size=7
+drop(4,6)->add(23,42)  mass=38977/3867864  cover_size=7
+drop(2,6)->add(17,42)  mass=43/3822        cover_size=7
+```
+
+The next local theorem suggested by S151 is sharper than "search more":
+
+> Every unlabelled distributed cover skeleton in the bounded covering-core
+> reservoir has positive strict Haar mass, constructible from the divisor-cover
+> skeleton.
+
+S151 also supplies a separate proof-order tournament whose vertices are
+classifier gates/families rather than runners:
+
+```text
+qclock-excluded > q14-boundary-tight > q14-open-migration
+> covering-comb-family > unit-petal-family > K33-state-lift-family
+> unlabelled-covering-repair > true-covered-sporadic
+```
+
+The fingerprint is transitive: score histogram `{0:1,...,7:1}`, no directed
+3-cycles, and one Hamiltonian path under the stated tie gauge.  Its role is
+not proof, but it forces any proposed strict counterexample to name the first
+classifier gate it escapes.
 
 ## Exhaustive Decision Procedure Target
 
