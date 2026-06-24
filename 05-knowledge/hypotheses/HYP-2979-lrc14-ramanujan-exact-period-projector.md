@@ -156,6 +156,58 @@ stress bank to the full HYP-2963 bank, then interval-enclose the finite list of
 late primitive packets (`q=25,27,34,40,41`) so that they become exact
 certificates rather than just computed witnesses.
 
+## Web-derived refinements
+
+The one-hop web pass around HYP-2978 adds three concrete refinements.
+
+First, Ramanujan sums have an lcm-period orthogonality relation: different
+exact periods are orthogonal after averaging over a common lcm period, while
+the diagonal returns a `phi` weight.  In Murty's survey form, the shifted mean
+also records the shift:
+
+```text
+M(c_r(n)c_s(n+h)) = c_r(h) if r=s, and 0 otherwise.
+```
+
+This turns the previously vague "shifted Carmichael autocorrelation" task into
+an exact packet test: apply Ramanujan modes to endpoint sums, endpoint
+differences, and danger-count shifts; a real exact-period obstruction should
+survive the diagonal and vanish off-period.
+
+Second, the divisor-function page records a Ramanujan expansion for
+`sigma_k(n)`.  That suggests comparing two pushes of the same data:
+
+```text
+divisor pushforward:       sigma/tau/Jordan/psi capacities
+primitive-period pushout:  c_q profiles and Ramanujan-mode autocorrelations
+```
+
+The useful signal is disagreement between these pushes on a labelled LRC route.
+If `tau`, `psi`, or `J_k` agree but the Ramanujan mode differs, the scalar
+quotient forgot phase.  If both agree and LRC route still differs, endpoint
+owners or C27/K33 labels are load-bearing.
+
+Third, Ramanujan sums as supercharacters give a representation-theoretic
+guardrail: the quotient by `(Z/qZ)^*`-orbits is allowed only when the
+supercharacter value is kept as the retained class function.  This is exactly
+the LRC warning from HYP-2924/HYP-2954: raw tournament/isomorphism classes are
+magnitude-blind unless the source, q/Farey, and owner labels travel with them.
+
+## First packet test
+
+For a labelled row `S`, define a finite profile family:
+
+```text
+R_q^+(S) = multiset_{endpoint owners (r,s)} c_q(r+s)
+R_q^-(S) = multiset_{endpoint owners (r,s)} c_q(r-s)
+A_q,h(S) = mean_t c_q(N_S(t+h)-N_S(t))  on exact endpoint cells
+```
+
+The precise normalization of `A_q,h` is pending, but the guardrail is fixed:
+do not collapse owner pairs before computing `R_q^+` and `R_q^-`.  The S161
+audit shows `c_14` alone collides, so the first theorem-facing test should use
+`q in {14,27,41}` plus endpoint owner labels and exact `M`/Haar route.
+
 Assumption challenge: the tournament vertices should not be fixed too early.
 Candidate vertices are speeds, residues, primitive denominator phases,
 denominators, Ramanujan modes, endpoint owner pairs, taut-current atoms,

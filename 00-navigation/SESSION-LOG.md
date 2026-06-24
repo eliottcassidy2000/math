@@ -1,3 +1,32 @@
+## codex-2026-06-24-S161b -- quotient guardrails web synthesis and Ramanujan packet angle
+
+Continued the HYP-2978/T1062 quotient-admissibility lane after pulling the
+HYP-2979/T1063 namespace fix.  Read the divisor-function page and one-hop pages
+for multiplicative functions, Dirichlet convolution, Ramanujan sums, Jordan
+totients, divisor summatory functions, Lambert series, Eisenstein series,
+Ramanujan-sum supercharacters, and Murty's Ramanujan-expansion survey.
+
+Main synthesis: divisor functions are scalar pushforwards of divisor fibers;
+Dirichlet convolution gives exact packet laws; Jordan totients give primitive
+tuple capacity; divisor summatory errors are boundary defects after quotienting
+the product lattice; Ramanujan sums are primitive-unit traces with lcm-period
+orthogonality; supercharacters justify unit-orbit quotients only when the class
+function is retained.  This becomes a controlled-kernel rule: a quotient may
+forget a coordinate only when the LRC predicate is fiber-constant, the coordinate
+is reconstructible, an orthogonality/dual certificate annihilates it, or the
+fiber is placed in a named residual bucket.
+
+Updated HYP-2978, HYP-2979, the hypothesis/result indexes, backlog, tangents,
+concept map, and added reflection
+`07-reflections/quotient-guardrails-ramanujan-divisor-lrc14-codex-s161.md`.
+Cleaned duplicated HYP-2978/HYP-2979 and T1062/T1063 entries left by the
+concurrent namespace race.  New LRC14 proof angle: run Tournament Analysis on
+quotient channels/proof obligations rather than runners, with pairwise
+observable "which channel separates route collisions while preserving strict
+witness / AP-GW equality / named state-lift debt."  Next computation is the
+HYP-2963 packet-family extension using endpoint-owner Ramanujan profiles
+`R_q^+`, `R_q^-` for `q in {14,27,41}`.
+
 ## codex-2026-06-24-S161 -- Ramanujan-divisor quotient guardrails claimed
 
 User asked to push the abstract lesson that a quotient must declare what it is
