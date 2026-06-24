@@ -1,6 +1,7 @@
 ## codex-2026-06-24-S157 -- Fourier-Toeplitz PSD dual route claimed for LRC14
 
-Reserved HYP-2973 for the user-requested Fourier necessary condition:
+Reserved what is now HYP-2974 for the user-requested Fourier necessary
+condition, after rebasing over S158's HYP-2973 danger-count moment dual:
 if the open danger arcs of a 13-speed row cover, then
 `F_S(t)=C_S(t)-1>=0` a.e., hence every finite Toeplitz moment matrix
 `[hat F_S(i-j)]` must be PSD.  A negative low-degree eigenvalue is a
@@ -8,8 +9,11 @@ trigonometric-square dual certificate for a strict safe interval.
 
 Computation and result file are pending in this checkpoint.  Planned audit:
 test low harmonic degrees against the HYP-2963 hard packet bank, compare
-failure degrees with HYP-2971 scalar multiplicity barriers and HYP-2972 twist
-witnesses, and record the PSD-blind residual packet family if one exists.
+failure degrees with HYP-2973 count-duals, HYP-2971 scalar multiplicity
+barriers, and HYP-2972 twist witnesses, and record the PSD-blind residual
+packet family if one exists.  The distinction from S158 is that S158 keeps the
+danger-count distribution while this route keeps phase-sensitive Fourier
+moments through Toeplitz PSD.
 
 ## codex-2026-06-24-S155 -- twist-ladder dual certificate for LRC14
 
