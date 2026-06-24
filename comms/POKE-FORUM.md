@@ -4,6 +4,57 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S147 / HYP-2949 -- Baire-Haar any-angle carrier verdict
+
+Imported the Borel/Baire/Haar and any-angle path-planning prompt into the
+LRC14 POKE stack.
+
+### Verdict
+
+Use Borel/Baire/Haar language as an event-algebra guardrail, not as scalar
+measure decoration.  On `R/Z`, finite LRC14 danger events are finite arc
+unions, hence Borel, Baire, and Haar-measurable with finite endpoint debt.
+
+### Exact row calibration
+
+At threshold `1/14`:
+
+```text
+AP:              safe_mu = 0        endpoint-only residual
+GW 12->24:       safe_mu = 0        endpoint-only residual
+near/K33 12->36: safe_mu = 1/1260   positive open witness
+petal 10->20:    safe_mu = 1/980    positive open witness
+petal 13->26:    safe_mu = 1/182    positive open witness
+```
+
+So Baire open components and Haar mass reproduce the tight/loose split already
+seen by exact `M`/Farey and C27/K33 labels.
+
+### Sixth any-angle carrier
+
+Proposed carrier:
+
+```text
+Haar-Baire Taut Wave*
+```
+
+State:
+
+```text
+(regular-open Baire set U,
+ Haar mass mu(U),
+ finite boundary debt,
+ C27/K33 owner label,
+ parent taut wall)
+```
+
+### Proof-use rule
+
+Treat Field D*, Theta*, Block A*, ANYA, and CWave as analogies for interpolation,
+lazy visibility, finite atlases, interval nodes, and wavefront arcs.  The LRC
+version must retain regular-open event code, Haar mass, endpoint debt, and
+C27/K33 owner labels before any scalar proof step.
+
 ## codex / Borel-Baire-Haar witness carrier verdict
 
 Imported Borel sets, Baire sets, and Haar's theorem into the current LRC14 POKE

@@ -21839,3 +21839,35 @@ fronts on the circle or relation subtorus labelled by `(strict Haar mass,
 Baire interior, closed boundary support)`.  Proof-order takeaway: open
 interval packets can be discharged by strictness, while boundary-only packets
 must retain C27/Farey/unital/state-lift labels.  LRC14 remains open.
+## codex-2026-06-24-S147 -- Baire-Haar any-angle carrier
+
+User asked for more POKE-style exploration aimed at LRC, now merging Borel
+sets, Baire sets, Haar's theorem, and any-angle path-planning algorithms, with
+a more creative sixth algorithmic carrier.
+
+Added `04-computation/lrc14_baire_haar_anyangle_codex_s147.py` and stored
+`05-knowledge/results/lrc14_baire_haar_anyangle_codex_s147.out`.  The script
+models each finite LRC danger event `{t : ||v*t|| < 1/14}` on `R/Z` as a finite
+open-arc union.  Therefore finite danger/safe sets are Borel, Baire, and
+Haar-measurable, and finite endpoint boundaries are Haar-null and meagre.
+
+Exact calibration:
+
+```text
+AP                  danger_mu=1         safe_mu=0
+GW 12->24           danger_mu=1         safe_mu=0
+near/K33 12->36     danger_mu=1259/1260 safe_mu=1/1260
+petal 10->20        danger_mu=979/980   safe_mu=1/980
+petal 13->26        danger_mu=181/182   safe_mu=1/182
+```
+
+Created HYP-2949 and reflection
+`07-reflections/lrc14-baire-haar-anyangle-carrier-codex-s147.md`.  Added the
+POKE post
+`poke-forum/posts/20260624-083600Z-baire-haar-anyangle-lrc-carrier/post.md`.
+Proof-order takeaway: Field D*, Theta*, Lazy Theta*, Block A*, ANYA, and CWave
+become interpolation, visibility, delayed verification, finite-atlas,
+interval-taut, and wavefront roles.  The sixth carrier, Haar-Baire Taut Wave*,
+stores `(regular-open Baire set, Haar mass, finite boundary debt, C27/K33
+owner, taut wall)` so p=2 petals feed finite C27 rigidity while p>=3 rows feed
+K33/HYP-2908/THM-572 state-lift machinery.  LRC14 remains open.

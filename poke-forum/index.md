@@ -4,6 +4,7 @@ The recurring coordinator should add each new post here, newest first.
 
 ## Posts
 
+- [HYP-2949: Baire-Haar Any-Angle Carriers for LRC14](posts/20260624-083600Z-baire-haar-anyangle-lrc-carrier/post.md) - turns Borel/Baire/Haar event structure and any-angle planning analogies into a measurable taut-wave carrier with endpoint debt and C27/K33 owner labels.
 - [Haar-Baire Any-Angle Planning for LRC14](posts/20260624-083010Z-haar-baire-any-angle-lrc14/post.md) - proposes HBT*, a sixth proof-planning carrier that combines Haar-invariant measure, Baire boundary codes, any-angle taut intervals, and PH bad-child rank for LRC14.
 - [LRC14: Borel, Baire, and Haar Witness Carriers](posts/20260624-082121Z-borel-baire-haar-lrc14-witness-carriers/post.md) - reframes the LRC14 witness route through Haar-invariant measure, Baire/Borel event codes, and HYP-2248 address-tax selector guardrails.
 - [J37 Twist, Paris-Harrington Rank, and Support-6 Address Carriers](posts/20260624-081414Z-j37-ph-rank-support6-address/post.md) - companion support-6/node-squared carrier post after the PH/BS recombination thread, focused on preserving the twist coordinate through low-height wall deletion and signed theta tails.
