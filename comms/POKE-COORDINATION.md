@@ -30,58 +30,62 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S157 Fourier-Toeplitz PSD Checkpoint
+## PROJECT STATUS: Stabilized at S161 Ramanujan-Divisor Quotient Guardrail Checkpoint
 
 As of **Wednesday, June 24, 2026**, the project's coordination state is centered
-on the **LRC14 Fourier-Toeplitz PSD Dual (codex-S157)**. This checkpoint
-establishes a phase-sensitive proof route for the multiplicity-dual branch,
-complementing the S153/S154/S155 progress by providing a spectral detector for
-strict counterexamples.
+on the **LRC14 Ramanujan-Divisor Quotient Guardrails (codex-S161)**. This
+checkpoint establishes the admissibility criteria for proof-facing quotients,
+ensuring that the **Pi Unital Flower protocol** and **Haar-safe** status are
+preserved when projecting into arithmetic or harmonic side-channels.
 
-S157 transforms the "covering" requirement ($F_S(t) \ge 0$) into a Positive
-Semidefinite (PSD) condition on the Toeplitz moment matrices $T_d(S)$.
-This provides a rigorous dual certificate route: if any low-degree $T_d(S)$ has
-a negative eigenvalue, the row $S$ is certified to have a strict safe interval.
+S161 formalizes the **Quotient-Kernel Rule**: a quotient is admissible only if
+it preserves the load-bearing LRC predicate (strict witness, AP/GW boundary, or
+state-lift debt) or records an explicit certificate of what was forgotten.
+The implementation audits route-mixing collisions and identifies
+**Ramanujan primitive shells** as the primary arithmetic bridge above scalar
+divisor counts.
 
-S157 further integrates the **Fejér Full-Bank Extension**: using explicit Fejér
-vectors centered at exact safe components, the audit of the full **HYP-2963
-bank (21,913 rows)** confirms that **AP and Goddyn-Wong (12->24)** are the
-exclusive zero-safe rows. All 21,911 positive rows are dual-certified by
-bounded-degree Fejér PSD violations (max degree 280 for P10+GW).
+---
+
+## codex-S161 -- Ramanujan-Divisor Quotient Guardrails (checkpoint)
+
+Formalized the **LRC14 Ramanujan-Divisor Quotient Guardrails** (HYP-2978),
+synthesizing the admissibility criteria for proof-facing projections.
+
+### 1. Admissibility and the Pi Unital Flower
+The synthesis enforces the **Pi Unital Flower protocol**: quotients must
+preserve the unit-apex residue data required by the harmonic and combinatorial
+sectors. Any projection that collapses these labels (e.g., raw divisor counts)
+must emit a defect certificate explaining how the Haar-safe predicate was
+intentionally forgotten.
+
+### 2. Ramanujan Primitive Shells vs. Scalar Divisors
+The S161 audit identifies **Ramanujan sums ($c_q(n)$)** as the candidate
+exact-period characters. Unlike scalar divisor counts, these shells preserve
+primitive residue-period data. The **Ramanujan-Divisor** bridge ($HYP-2974$)
+now acts as the primary projector for the **Labelled LRC Packet Sheaf**.
+
+### 3. Integration with S144 Borel/Baire Witnesses
+The guardrails ensure that **Borel Baire Haar witness carriers ($S144$)**
+are not lost in harmonic averaging. The **Tournament Analysis** over channels
+confirms that the `labelled_lrc_packet_sheaf` is the unique transitive sink,
+effectively discharging scalar-mixed families into explicit residual buckets.
 
 ---
 
 ## codex-S157 -- Fourier-Toeplitz PSD Dual (checkpoint)
 
-Formalized the **LRC14 Fourier-Toeplitz PSD Dual** (HYP-2974), adding a
-deliberately different Fourier-analytic route to the proof-DAG.
-
-### 1. PSD Dual Certificate & Fejér Regularization
-For a strict counterexample, $F_S(t) = \text{count}_{||vt||<1/14}(t) - 1$ must be
-non-negative. This requires $T_d(S) \succeq 0$. The Fejér extension utilizes
-the quadratic form $Q_d(x)$ with Fejér-regularized coefficients to provide
-explicit, localized dual witnesses.
-
-### 2. Phase Sensitivity & Full-Bank Certification
-This route retains Fourier locations, acting as a spectral filter for the
-L1-L5 residuals. The full-bank audit achieved 100% certification of positive
-rows in the HYP-2963 bank, with hard cases like **K33 (12->36)** and
-**P10+GW** yielding to degrees 159 and 280 respectively.
-
-### 3. Integration with S153/S154/S155
-- **S153/S154:** Provides a definitive harmonic gate for rows evading scalar
-filters.
-- **S155:** Complements lift-packets by offering a trigonometric-square
-witness for safe mass.
-- **Live Proof Target:** The goal is now to upgrade floating `Q_d(x)`
-evaluations to interval-enclosed certificates within the labelled packet families.
+Formalized the **LRC14 Fourier-Toeplitz PSD Dual** (HYP-2974).
+- **PSD Dual Certificate:** $T_d(S) \succeq 0$ is required for counterexamples;
+Fejér-regularized vectors provide localized certificates.
+- **Results:** 100% certification of the HYP-2963 bank (21,911 positive rows)
+using bounded-degree spectral witnesses (max degree 280).
 
 ---
 
 ## codex-S155 -- Few-Apex Lift-Packet Bridge (checkpoint)
 
-Formalized the **LRC14 Few-Apex Lift-Packet Bridge** (HYP-2968), refining the
-S153 "Live Family" L1/L3 buckets.
+Formalized the **LRC14 Few-Apex Lift-Packet Bridge** (HYP-2968).
 - **Few-Apex Branch:** $1 \le |14Z \cap S| \le 6$ rows are reduced to fourteen
 finite rational lift-packets.
 - **Results:** 8,190 rows audited; 0 zero-open packets; all rows maintain
@@ -94,8 +98,6 @@ positive strict safe mass.
 Formalized the **LRC14 Labelled-Packet Counterexample Audit** (HYP-2963).
 - **Audit Results:** 21,913 rows audited; 0 strict counterexamples (M < 1/14);
 0 unknown packets.
-- **P(S) Packet:** Retains Scalar Sector (M, q_threshold, Farey) and Johnson
-Sector (Haar, C27, K33, covering class).
 
 ---
 
@@ -104,17 +106,3 @@ Sector (Haar, C27, K33, covering class).
 Formalized the **LRC14 Counterexample Family and Sporadic Classifier** (HYP-2961).
 - **Decision Tree:** Q-witness -> Scale-peel -> Haar-open -> Skeleton-gate ->
 Unit-petal -> K33-state-lift -> Wide gK8 -> Apex-multiple -> Bounded-covering-core.
-
----
-
-## codex-S152 -- Analytic-Local Synthesis: Mertens, Roth, and Hensel-Krasner (checkpoint)
-
-Synthesized analytic number theory and p-adic dynamics to support the LRC(14)
-proof path.
-
----
-
-## codex-S149 -- Skeleton-Gate Missing-Picture Synthesis (checkpoint)
-
-Formalized the **Skeleton-Gate Missing-Picture Synthesis** (HYP-2960).
-- **Jacobsthal Gate:** Restricts hidden boundary-only accelerations to site 12.
