@@ -1,5 +1,5 @@
 ---
-id: HYP-2992
+id: HYP-2994
 title: LRC14 cocycle obstruction atlas
 status: RESERVED / cocycle-level proof-interface pass in progress; not a proof
 source: codex-2026-06-24-S166
@@ -20,7 +20,7 @@ related:
 results: []
 ---
 
-# HYP-2992: LRC14 Cocycle Obstruction Atlas
+# HYP-2994: LRC14 Cocycle Obstruction Atlas
 
 Reserved for the next S166 cocycle pass.  HYP-2991 identified the local
 fixed-margin Haar coordinate
@@ -29,7 +29,7 @@ fixed-margin Haar coordinate
 zeta(T)=T00-T01-T10+T11.
 ```
 
-HYP-2992 asks for the abstract obstruction ledger above that local square:
+HYP-2994 asks for the abstract obstruction ledger above that local square:
 which LRC14 proof carriers behave like exact coboundaries, which are closed
 cocycles, which are torsion/period classes, and which are genuine named
 residuals that must feed the F7/THM-572 state-lift sector.
@@ -40,5 +40,5 @@ handoff arrows, dyadic rectangles, boundary cocircuits, exact-period residues,
 Fejer atom banks, Ramanujan packets, smoothing clocks, octahedral curls,
 color-resonance modes, OCF/coimage residues, and theorem obligations.
 
-This stub only claims HYP-2992/T1076.  Computation, result output, tournament
+This stub only claims HYP-2994/T1077.  Computation, result output, tournament
 fingerprint, and synthesis are pending in this same session.

@@ -17,7 +17,7 @@
 
 ## Lead codex-2026-06-24-S166: cocycle obstruction atlas for LRC14
 
-**Status:** RESERVED / proof-interface pass in progress (HYP-2992/T1076).
+**Status:** RESERVED / proof-interface pass in progress (HYP-2994/T1077).
 After HYP-2991 identified the local fixed-margin Haar cocycle
 `zeta(T)=T00-T01-T10+T11`, this lane asks for the abstract obstruction atlas
 above it: exact coboundaries, closed cocycles, torsion/period classes, and
@@ -29,7 +29,7 @@ Tournament Analysis vertices will be proof obligations and carrier coordinates
 rather than assumed runners.
 **Next:** build a deterministic script, store output, compute the carrier
 tournament fingerprint, and update HYP-2992 from this reservation to evidence.
-Namespace: HYP-2992 / T1076.
+Namespace: HYP-2994 / T1077.
 
 ## Lead codex-2026-06-24-S166: Haar zipper cocycle for LRC14
 
