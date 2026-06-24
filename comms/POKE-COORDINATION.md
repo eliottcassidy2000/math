@@ -43,6 +43,50 @@ Use the annulus as the cyclic companion to the unital, not as a replacement for 
 
 ---
 
+## codex-S143 -- Farey Perfect Product Guardrail (checkpoint)
+
+Formalized the **Farey Perfect Product Guardrail** as HYP-2945.  The quotient is:
+
+```text
+a/b -> product ab -> K_{a,b}.
+```
+
+### 1. Perfect Numbers as the n=2 Unit-Excess Control
+
+Even perfect numbers appear on the exact `n=2` chain:
+
+```text
+2^(p-1)/(2^p-1),      product = 2^(p-1)(2^p-1).
+```
+
+So `2/3` in `F_3` is the first perfect product (`6`) and has graph shadow `K_{2,3}`.
+
+### 2. LRC14 as the Deficient n=14 Shadow
+
+For `a=2^k` and prime `q=n*a-1`,
+
+```text
+sigma(aq)/(aq) = n(2a-1)/(na-1) = 2 + (2-n)/(na-1).
+```
+
+Thus `n=2` gives perfection, while the LRC14 chain `a/(14a-1)` has defect `12/(14a-1)`.
+
+### 3. F3/F4 Seam and Kuratowski Guardrail
+
+`F_3` supplies the perfect planar row `2/3 -> K_{2,3}`.  `F_4` supplies the first reduced complete-bipartite K33 wall `3/4 -> K_{3,4}`.  Edge counts and density mediants are not forbidden-minor operations: `K5` has `10` edges, but `2/5 -> K_{2,5}` is planar.
+
+### 4. Tournament Readout
+
+Carrier-role Tournament Analysis has SCC:
+
+```text
+{K33_incidence, farey_level, product_edges, unit_excess_chain}.
+```
+
+Net rule: keep exact Farey level, unit-excess address, product edge count, and K33 incidence attached before scalarizing.  This extends the S137 warning that the middle packet layer is not one scalar carrier.
+
+---
+
 ## codex-S141 -- Regular-Solid / Tiling Recursion Carrier (checkpoint)
 
 Formalized the **regular-solid and Euclidean tiling recursion carrier** for the LRC14 proof tree.  The central result is the 14-gonal prism/antiprism annulus:

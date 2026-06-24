@@ -4,6 +4,20 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-24-S143 -- Farey perfect products: F3 is the perfect planar row, F4 is the first K33 wall; LRC14 is the deficient n=14 shadow (HYP-2945)
+
+Dispatch: continued the LRC14/Farey/tournament thread with the perfect-number prompt and the Kuratowski/Wagner warning.  Added `04-computation/farey_perfect_product_obstruction_codex_s143.py`, output `05-knowledge/results/farey_perfect_product_obstruction_codex_s143.out`, HYP-2945, T1041, and reflection.
+
+Core bridge: even perfect numbers are exactly the `n=2` unit-excess Farey product chain.  If `a=2^(p-1)` and `q=2^p-1=2a-1` is prime, then `a/q` is a Farey neighbor of `1/2` (`q-2a=-1`) and product `aq` is perfect.  Thus `2/3` in `F_3` has product `6`, abundancy `2`, and graph shadow `K_{2,3}`.  Later perfect rows are `4/7`, `16/31`, `64/127`, etc.
+
+LRC14 comparison: for `a=2^k` and prime `q=n*a-1`, `sigma(aq)/(aq)=n(2a-1)/(na-1)=2+(2-n)/(na-1)`.  So `n=2` is exact perfection, while the LRC14 chain `a/(14a-1)` is deficient by `12/(14a-1)`.  This makes perfect numbers a control family for the product lane, not a terminal proof.
+
+Graph guardrail: `3/4` in `F_4` is the first reduced complete-bipartite K33 wall (`K_{3,4}`), while edge counts alone are too lossy (`K5` has 10 edges but `2/5 -> K_{2,5}` is planar; `3/3` is not reduced).  Disjoint-union/density mediants do not create new Kuratowski obstructions; minor/subdivision closure is the graph operation that composes.
+
+Tournament Analysis over carrier roles has SCC `{K33_incidence,farey_level,product_edges,unit_excess_chain}` with two directed 3-cycles.  Readout for the cluster: keep exact Farey level, unit-excess address, product edge count, and K33 incidence together until the C27/K33 branch either discharges or feeds HYP-2908/THM-572.
+
+---
+
 ## kind-pasteur-2026-06-15-S5 — the tournament IS a zero-sum game: OMWU→bipartisan Nash via a Lyapunov/KL potential, frequencies=skew spectrum; E₇'s 56-rep symplectic form = the exceptional continuous tournament (HYP-2530)
 
 Dispatch: E₇ + the Lyapunov ideas of arXiv:2606.11773 (Orabona, OMWU last-iterate convergence = the Lyapunov-FUNCTION/potential sense, not the EXPONENT sense of γ_pent/φ). BRIDGE (verified): a tournament IS a symmetric zero-sum game (payoff S=A−Aᵀ); OMWU converges last-iterate to the Nash equilibrium (bipartisan set), Lyapunov KL→0. 3-cycle=RPS→uniform; transitive→PURE on the dominator; regular/Paley→uniform — the Nash support tracks the H-gradient (transitive H=1↦pure, Paley H=max↦uniform) = last session's dominance dichotomy as the bipartisan equilibrium. OMWU frequencies = the skew spectrum {μ_j} = the determinant lens det(I+S)=∏(1+μ²) (THM-468/472/507): the Lyapunov-function and Lyapunov-exponent analyses meet on the skew spectrum. E₇ (HYP-2530, sourced): the 56-dim minuscule rep's E₇-invariant SYMPLECTIC form ω (28 antipodal weight-pairs, Freudenthal triple system) is the skew-adjacency of a 'continuous tournament' — predicted Weyl-uniform Nash, OMWU frequencies ~ E₇ exponents {1,5,7,9,11,13,17}/h=18, det-lens ~ the quartic Cartan invariant; realizes the repo's tournament-56 bridge. Core verified; E₇ predictions a flagged direction (build ω from the 3₂₁ polytope). Reflection + HYP-2530 + script.
