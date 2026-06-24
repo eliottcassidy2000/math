@@ -11007,3 +11007,9 @@ Closes my assigned residual (kps MSG-238) for THM-527 Part A: the finite-Vmax co
 - **Claim:** S133 refines HYP-2932 and complements HYP-2933 by separating three graph layers for `M=p/q`: `(p,q)` as a Farey summand pair at node `p+q`, `q` as the theorem-relevant LRC denominator shell, and `(p,q)` as a multiplicand fiber at product node `p*q` whose incidence blow-up is `K_{p,q}`.  Therefore `2/27` is the exact `C=27=2*14-1` summand-unit/petal branch, while `3/41` is the first branch outside C=27 whose `K_{3,41}` expansion contains a K33 wall.
 - **Artifacts:** `04-computation/lrc14_summand_multiplicand_bridge_codex_s133.py`, `05-knowledge/results/lrc14_summand_multiplicand_bridge_codex_s133.out`, `07-reflections/lrc14-summand-multiplicand-farey-bridge-codex-s133.md`.
 - **Depends on / relates to:** HYP-2933, HYP-2932, HYP-2931, HYP-2930, HYP-2908, HYP-2161, HYP-2083, HYP-1822, HYP-1821, OPEN-Q-108.
+
+## HYP-2970: LRC14 taut bridge graph curvature
+- **Status:** RESERVED PROOF-INTERFACE STUB, codex-2026-06-24-S155.
+- **Claim:** Try a new endpoint-transfer quotient for LRC14: positive safe intervals are directed bridges between endpoint-owner labels, while boundary-only equality atoms are zero-length taut vertices with positive cover depth on both sides and zero point-depth at the event.  A counterexample would have neither positive bridges nor taut vertices; AP/GW should be the zero-curvature equality atoms; non-AP/GW packets should either create a positive bridge or route to a named K33/state-lift transfer.
+- **Artifacts:** `05-knowledge/hypotheses/HYP-2970-lrc14-taut-bridge-graph-curvature.md`; computation and reflection pending in this session.
+- **Depends on / relates to:** HYP-2969, HYP-2965, HYP-2956, HYP-2951, HYP-2949, HYP-2908, THM-572, OPEN-Q-108.

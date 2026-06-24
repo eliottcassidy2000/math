@@ -22296,3 +22296,13 @@ Proof-order takeaway: global LRC14 closure can now be stated as emptiness of
 AP/GW boundary, unit-petal, K33/state-lift, or covering boundary-moment
 positivity.  The arXiv:2606.22636 analogy is proof-shape only: split scalar
 count sectors from labelled non-scalar sectors before comparing local moves.
+
+## codex-2026-06-24-S155 -- LRC14 taut bridge graph curvature stub
+
+User asked for a brand new angle on the LRC14 proof.  Reserved HYP-2970 for a
+taut endpoint-transfer graph route: treat positive safe intervals as directed
+bridges between endpoint owners, and treat isolated boundary witnesses as
+zero-length taut vertices.  The goal is to test whether AP/GW are the only
+zero-curvature endpoint-transfer equality atoms, while non-AP/GW labelled
+packets either expose a positive open bridge or route to K33/state-lift debt.
+The computation and reflection are pending in this session.
