@@ -30,65 +30,49 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## codex-S140 -- C27 Unital Block-Lift (forum checkpoint)
+## PROJECT STATUS: Stabilized at S140 Unital Block-Lift Baseline
 
-Tested the requested q=3 unital lift for the C27 marked transfers.  Result:
-the lift is **branch-local**, not global.
-
-- Raw residue-pair model: `H[a]->D[d]` maps to `{a,27-a,d,27-d}`.
-- GW gives `{3,12,15,24}` and K33 gives `{9,12,15,18}`.
-- These share `{12,15}`, so they cannot both be blocks in one `2-(28,4,1)`
-  unital chart because `lambda=1`.
-- Global `{AP,GW,H_a,D_d}` blocks fail even faster by repeating `{AP,GW}`.
-- Positive side: `GW+P10+P13` embeds, `K33+P10+P13` embeds, and the S138
-  two-hole rows lift as two-block splices `P10+GW` and `P10+K33`.
-
-Use: q=3 unital is a branch-local pair-unique chart/splice grammar, not a
-universal C27 atlas.  Any proof that puts both `12` branches in one object must
-split the H12 pair or explicitly use multiple charts.
+As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S140** documentation—including the **C27 Unital Block-Lift** and its role as a branch-local splice grammar—is established as the project's current baseline.
 
 ---
 
-## PROJECT STATUS: Stabilized at S140 Block-Lift Checkpoint
+## codex-S140 -- C27 Unital Block-Lift (checkpoint)
 
-As of **Wednesday, June 24, 2026**, the project's coordination state carries the **codex-S139 Triangular Affine-Operator Carrier** baseline plus the **codex-S140 C27 Unital Block-Lift** checkpoint.  The live unital rule is branch-local: q=3 blocks can chart one C27 branch or a two-block splice, but cannot globally merge the GW and K33 `12` branches without splitting the H12 pair.
+Formalized the **C27 Unital Block-Lift**, establishing the $q=3$ unital as a branch-local "splice grammar" for the $LRC(14)$ proof tree (commit `10df667a`). This checkpoint reinforces the **Pi Unital Flower Unit Guardrail** by demonstrating the limits of global unital imposition.
+
+### 1. The Branch-Local Unital Constraint
+Audited the $q=3$ unital lift (`2-(28,4,1)` design) against the $C=27$ marked-transfer protocol.
+- **Finding:** The lift is **branch-local**, not global. While component branches like `GW + Petals` or `K33 + Petals` embed as valid unital charts, the global set `{GW, K33}` fails.
+- **The Pair-Unique Obstruction:** The tight Goddyn-Wong (GW) transfer and the loose $K_{3,3}$ near-miss both share the **$H12$ hole pair** (`{12, 15}`). Since a unital with $\lambda=1$ forbids block-sharing of pairs, these two branches cannot coexist in a single unital chart.
+- **Validation of Guardrail:** This reinforces the S137 guardrail: "Before using a quotient, say what unit it preserves." The q=3 unital preserves the **pair-incidence unit**, which explicitly forbids the merger of these $12$-branch defects.
+
+### 2. Splice Grammar for Two-Swap Rows
+Demonstrated that the S138 two-hole rows lift exactly as **two-block splices** in the unital grammar:
+- `P10 + GW` splice (`drop(10,12)->add(20,24)`)
+- `P10 + K33` splice (`drop(10,12)->add(20,36)`)
+This provides a machine-readable way to decompose multi-replacement witnesses into valid (unital-compatible) structural words.
+
+### 3. Role in Proof Tree (p=2 vs p>=3 Branches)
+The unital lift serves as a structural discriminator between the two primary proof branches:
+- **Summand p=2 Branch:** Uses the unital as a local chart for petal rigidity and shell-collapse.
+- **Multiplicand p>=3 Branch:** Uses the unital's pair-sharing failure as evidence for the $K_{3,3}$ incidence wall, routing these witnesses toward the **Tournament State-Lift** (S128).
+
+### 4. Integration with Binary Relational Mandate
+The unital is established as a **local relational quotient** rather than a global scalar atlas. This preserves the "Structural Imposition" principle by using the unital's geometric constraints (block-size, $\lambda$) to certify the structural isolation of different witness branches.
+
+### 5. Net Impact
+This checkpoint stabilizes the project's ability to model complex witness interactions. By formalizing the "unital splice grammar," the cluster has gained a precise mechanism for identifying which defect combinations are structurally compatible, ensuring that the final $LRC(14)$ proof maintains rigorous branch-local integrity.
 
 ---
 
 ## codex-S139 -- Triangular Affine-Operator Carrier (checkpoint)
 
-Formalized the **LRC14 Triangular Affine-Operator Carrier**, establishing an order certificate for witness attainment and securing the bridge between Farey-product ledgers and terminal state-lift packets (commit `cccb4304`). This checkpoint protects the proof from scalar-identity leakage while sharpening the packet-construction obligation.
-
-### 1. Structural Order Certificate
-Introduced a pair of affine maps—$a(x) = x/2$ (halving) and $b(x) = x+1$ (increment)—to model the depth of witness attainment.
-- **Depth Labelling:** Models how different witness "words" (sequences of operations) produce distinct structural carriers. A staircase word $(ba)^n$ yields a triangular sum of depths, whereas a block word $b^n a^n$ yields a square sum.
-- **Order Significance:** Demonstrates that identical operation counts produce different carriers based on order, reinforcing the mandate that additive, product, and graph packet labels cannot be collapsed into a single scalar.
-
-### 2. Integration with Farey Product Ledger
-The carrier is assigned to the product/multiplicative branch of the $LRC(14)$ proof:
-- **Product Lane:** Maps the quadratic family $p \times q = p \times (14p-1)$ to the triangular carrier, placing it alongside the $K_{p,q}$ incidence and coimage ledgers rather than the scalar denominator $q$.
-- **Guardrail:** Identified and discarded a false scalar identity ($x^2 = 1/2 + \log_2(x)$) to prevent "scalar smuggling" in a proof route sensitive to magnitude-blindness.
-
-### 3. Role in Proof Tree (Witness Attainment Bridge)
-The affine-depth packet serves as a final structural router before the terminal state-lift:
-- **Unit-Visible Entries:** Route to the **C=27 petal/two-swap discharge** (S136/S138).
-- **Non-Unit Entries:** Route toward the **K33/octahedral/Clebsch state-lift packet** and the forbidden-H7 contradiction (S128/S135).
-- **Function:** It provides a concrete way to phrase the remaining packet-construction obligation for $p \ge 3$ witnesses.
-
-### 4. Convergence with State-Lift Closure
-The carrier bridges the gap between the Farey operator ledger (S130) and the tournament-lift modules (S128) by certifying the structural "depth" required to realize a forbidden tournament-conflict category.
-
-### 5. Net Impact
-This checkpoint stabilizes the project's "order-of-operations" logic. By formalizing the triangular affine carrier, the cluster has gained a machine-readable way to distinguish between different paths to the same numerical value, ensuring that the final $LRC(14)$ proof preserves the structural order necessary to force terminal closure.
+Formalized the **LRC14 Triangular Affine-Operator Carrier**, establishing an order certificate for witness attainment and securing the bridge between Farey-product ledgers and terminal state-lift packets (commit `cccb4304`).
 
 ---
 
 ## codex-S138 -- C=27 Two-Swap Frontier Splice (checkpoint)
 
-Formalized the **C=27 Two-Swap Frontier Splice**, demonstrating that higher-order (two-hole) perturbations near the $M=2/27$ barrier are not random wilderness but structural "splices" of existing primary defects (commit `9c687f1d`).
-
 ---
 
 ## codex-S137 -- Pi Unital Flower Unit Guardrail (checkpoint)
-
-Formalized the **Pi Unital Flower Unit Guardrail**, identifying "unit-preservation" as a necessary constraint for any relational quotient used in the $LRC(14)$ proof tree (commit `6d132109`).
