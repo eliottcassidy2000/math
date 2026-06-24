@@ -4,6 +4,7 @@ The recurring coordinator should add each new post here, newest first.
 
 ## Posts
 
+- [Derived Tournament Conditions for AP/Goddyn-Wong LRC14 Atoms](posts/20260624-084020Z-derived-tournament-ap-gw-conditions/post.md) - turns AP and Goddyn-Wong into base and first-derived tight atoms, then defines runner-pressure, residue-gap, acceleration-gate, and node-squared tournament tests for finite isomorphism-class enumeration.
 - [LRC14: Measurable Rank Recombination Packet](posts/20260624-083718Z-lrc14-measurable-rank-recombination/post.md) - exact S145 packet classification of the `M<=2/27` AP two-swap frontier into AP/GW tightness, unit C27 petal discharge, and K33/state-lift obligations.
 - [HYP-2949: Baire-Haar Any-Angle Carriers for LRC14](posts/20260624-083600Z-baire-haar-anyangle-lrc-carrier/post.md) - turns Borel/Baire/Haar event structure and any-angle planning analogies into a measurable taut-wave carrier with endpoint debt and C27/K33 owner labels.
 - [Haar-Baire Any-Angle Planning for LRC14](posts/20260624-083010Z-haar-baire-any-angle-lrc14/post.md) - proposes HBT*, a sixth proof-planning carrier that combines Haar-invariant measure, Baire boundary codes, any-angle taut intervals, and PH bad-child rank for LRC14.

@@ -1,0 +1,101 @@
+﻿LRC14 derived tournament atom scout
+========================================
+Gate profiles (v, W(v), profile, admissible):
+  v= 1 W=(13, 25) profile=(0, 0, -13, 1) admissible=False
+  v= 2 W=(12, 23) profile=(0, 1, -12, 2) admissible=False
+  v= 3 W=(11, 21) profile=(0, 1, -11, 3) admissible=False
+  v= 4 W=(10, 19) profile=(0, 1, -10, 4) admissible=False
+  v= 5 W=(9, 17) profile=(0, 1, -9, 5) admissible=False
+  v= 6 W=(8, 15) profile=(0, 2, -8, 6) admissible=False
+  v= 7 W=(7, 13) profile=(0, 1, -7, 7) admissible=False
+  v= 8 W=(6, 11) profile=(0, 1, -6, 8) admissible=False
+  v= 9 W=(5, 9) profile=(0, 1, -5, 9) admissible=False
+  v=10 W=(4, 7) profile=(0, 2, -4, 10) admissible=False
+  v=11 W=(3, 5) profile=(0, 0, -3, 11) admissible=False
+  v=12 W=(2, 3) profile=(1, 2, -2, 12) admissible=True
+  v=13 W=(1, 1) profile=(0, 0, -1, 13) admissible=False
+Gate tournament order=(12, 10, 6, 9, 8, 7, 5, 4, 3, 2, 13, 11, 1)
+Admissible sites=[12]
+
+[AP]
+row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+distinct_speeds=True
+covering_ok=True
+endpoint_units_ok=True
+full_unit_shell=True
+has_7_apex=True
+max_empty_gap=2
+residue_multiplicities=(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+pressure_shell_hist=(((0, 0, 0, 0, 2, 2, 2), 6), ((0, 0, 0, 6, 0, 0, 0), 1), ((2, 2, 2, 0, 0, 0, 0), 6))
+square_inner_histogram=(((12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0), 13),)
+square_profile_hash_histogram=(('12e768ec10b7', 6), ('7cb6d2fdf102', 1), ('dfccece3d9ae', 6))
+
+[GW_12_to_24]
+row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+distinct_speeds=True
+covering_ok=True
+endpoint_units_ok=True
+full_unit_shell=True
+has_7_apex=True
+max_empty_gap=2
+residue_multiplicities=(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 0, 1)
+pressure_shell_hist=(((0, 0, 0, 0, 2, 2, 2), 6), ((0, 0, 0, 6, 0, 0, 0), 1), ((2, 2, 2, 0, 0, 0, 0), 6))
+square_inner_histogram=(((12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0), 13),)
+square_profile_hash_histogram=(('08a8aed991bb', 1), ('21d5e6faac7b', 1), ('2ea78b5fda43', 1), ('7cb6d2fdf102', 1), ('8066cf817847', 1), ('85e4207b5f5c', 2), ('967a41e29171', 1), ('a49ee53a5834', 1), ('b2a8a9ed42a5', 1), ('b7095248c29e', 1), ('c4afb2e859ee', 1), ('f849af3fcccd', 1))
+
+[false_AP_residue_12_to_26]
+row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 26)
+distinct_speeds=True
+covering_ok=False
+endpoint_units_ok=True
+full_unit_shell=True
+has_7_apex=True
+max_empty_gap=2
+residue_multiplicities=(0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+pressure_shell_hist=(((0, 0, 0, 0, 2, 2, 2), 6), ((0, 0, 0, 6, 0, 0, 0), 1), ((2, 2, 2, 0, 0, 0, 0), 6))
+square_inner_histogram=(((12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0), 13),)
+square_profile_hash_histogram=(('12e768ec10b7', 6), ('7cb6d2fdf102', 1), ('dfccece3d9ae', 6))
+
+[near_12_to_36]
+row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+distinct_speeds=True
+covering_ok=True
+endpoint_units_ok=True
+full_unit_shell=True
+has_7_apex=True
+max_empty_gap=2
+residue_multiplicities=(0, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 0, 1)
+pressure_shell_hist=(((0, 0, 0, 0, 2, 2, 2), 6), ((0, 0, 0, 6, 0, 0, 0), 1), ((2, 2, 2, 0, 0, 0, 0), 6))
+square_inner_histogram=(((12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0), 13),)
+square_profile_hash_histogram=(('03fa216cc5fa', 2), ('3fcd4ef62771', 1), ('4e3ff704f114', 1), ('548541464b63', 1), ('6528d25a3433', 1), ('7cb6d2fdf102', 1), ('7ddf5a33edd3', 1), ('91b8c4ed6e94', 1), ('cf8275ce5afc', 1), ('e734af0c0278', 1), ('ece805e0b062', 1), ('f94bae065629', 1))
+
+Finite-family audit
+single_accelerations=13
+double_accelerations=78
+single_basic_pass_sites=[8, 10, 12]
+single_basic_and_gate_pass_sites=[12]
+double_basic_pass_count=5
+double_basic_pass_sites=[(4, 8), (6, 12), (8, 10), (8, 12), (10, 12)]
+
+Pressure-shell class buckets among AP/GW/singles:
+  labels=['single_7'] fingerprint=(((0, 0, 0, 0, 0, 0, 0), 1), ((0, 0, 0, 0, 2, 2, 2), 6), ((2, 2, 2, 0, 0, 0, 0), 6))
+  labels=['single_1', 'single_3', 'single_5', 'single_9', 'single_11', 'single_13'] fingerprint=(((0, 0, 0, 0, 2, 2, 2), 7), ((0, 0, 0, 6, 0, 0, 0), 1), ((2, 2, 2, 0, 0, 0, 0), 5))
+  labels=['AP', 'GW', 'single_2', 'single_4', 'single_6', 'single_8', 'single_10', 'single_12'] fingerprint=(((0, 0, 0, 0, 2, 2, 2), 6), ((0, 0, 0, 6, 0, 0, 0), 1), ((2, 2, 2, 0, 0, 0, 0), 6))
+
+Node-squared inner-class buckets among AP/GW/singles:
+  labels=['AP', 'GW', 'single_1', 'single_2', 'single_3', 'single_4', 'single_5', 'single_6', 'single_7', 'single_8', 'single_9', 'single_10', 'single_11', 'single_12', 'single_13'] fingerprint=(((12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0), 13),)
+
+Node-squared relative-profile buckets among AP/GW/singles:
+  labels=['AP'] fingerprint=(('12e768ec10b7', 6), ('7cb6d2fdf102', 1), ('dfccece3d9ae', 6))
+  labels=['single_7'] fingerprint=(('1cac1494b747', 6), ('5c3fe27afab0', 6), ('f3cd7e12d58d', 1))
+  labels=['single_1', 'single_3', 'single_5', 'single_9', 'single_11', 'single_13'] fingerprint=(('1a25ccc6f74b', 1), ('28fe475c1b1f', 1), ('3ac36ab9607b', 1), ('5591ef7f0c58', 1), ('85d37ccd9d81', 1), ('af214a3e8c03', 1), ('bb8c6b7c0a22', 1), ('d23ac68751d8', 1), ('d8402b37bc5c', 1), ('dc62f76c444d', 1), ('e031edfb97c5', 1), ('f8247c05268e', 2))
+  labels=['GW', 'single_2', 'single_4', 'single_6', 'single_8', 'single_10', 'single_12'] fingerprint=(('08a8aed991bb', 1), ('21d5e6faac7b', 1), ('2ea78b5fda43', 1), ('7cb6d2fdf102', 1), ('8066cf817847', 1), ('85e4207b5f5c', 2), ('967a41e29171', 1), ('a49ee53a5834', 1), ('b2a8a9ed42a5', 1), ('b7095248c29e', 1), ('c4afb2e859ee', 1), ('f849af3fcccd', 1))
+
+Readout
+- Only site 12 is Jacobsthal-admissible under W(v)=[14-v,27-2v].
+- AP and GW both pass the basic endpoint/divisibility/unit/apex/gap filters.
+- The AP-residue false look-alike passes endpoint residues but fails covering_ok.
+- Some formal accelerations duplicate speeds; distinct_speeds filters them before summit use.
+- Coarse pressure shells and inner score sequences are too weak; the gate tournament and
+  node-squared relative-profile hashes are the discriminators.
+
