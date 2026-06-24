@@ -30,51 +30,30 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## codex-S135 -- Broad Concept Carrier Atlas and Relational Mapping
+## codex-S136 -- C=27 Shell-Transfer Spectrum (checkpoint)
 
-Formalized the **LRC14 Broad Concept Carrier Atlas**, mapping legacy repository mechanisms (unit-distance, OCF, OCF-forbidden-H, totient packets, Clebsch carriers) to the new relational mandate (commit `ac0e9cf1`). This checkpoint stabilizes the global proof-hierarchy by identifying which "classical" structures preserve the missing labels needed to resolve the $LRC(14)$ predicate.
+Formalized the **C=27 Shell-Transfer Spectrum**, specialized the $C=27$ shell carrier by treating it as a relation space rather than a scalar tag (commit `a55d7e5e`). This checkpoint stabilizes the "marked transfer" protocol for identifying candidate tight rows near the AP floor.
 
-### 1. Relational Structural Mapping
-The atlas categorizes existing proof carriers by their ability to retain structural labels rather than raw scalar identities:
-- **Yoneda/Coimage (C=27 Shell):** Preserves the conservative probe family and unit/nonunit strata for the $p=2$ summand branch.
-- **Kpq/K33 Incidence Wall ($p \ge 3$):** Captures the bipartite blow-up rank necessary for owner-incidence packet forcing.
-- **Forbidden-H7 State Lift:** Serves as the terminal realized packet category for the structural impossibility argument.
-- **Octahedral/Clebsch Carriers:** Act as Hodge/covariance carriers for support-six and folded mask analysis.
+### 1. The C=27 Shell Relation Space
+Redefined the $C=27$ shell (the $p=2$ summand branch) as a space of shell-pair relations $P_a = \{a, 27-a\}$ for $1 \le a \le 13$.
+- **Marked Transfers:** Identified that Goddyn-Wong (GW) and near-misses are not random noise but specific transfers across this shell space:
+    - **GW:** Transfers a hole at $12$ ($gcd(3)$) to a double at $3$ ($gcd(3)$).
+    - **12->36 Near-Miss:** Transfers a hole at $12$ ($gcd(3)$) to a double at $9$ ($gcd(9)$), pushing the defect into a deeper 3-adic layer.
+    - **Petals (10->20, 13->26):** Characterized by **unit-visible holes** ($gcd(1)$), mapping them to the second-gap rigidity branch.
 
-### 2. Carrier Hierarchy (Tournament Ranking)
-Established a transitive majority tournament ranking the proof carriers by their branch retention, typed visibility, and state-lift fit:
-`bigraded summand/multiplicand signature > C=27 shell and Yoneda coimage > Farey/q binding scale > Vitali wall / anti-Poisson coimage > Kpq/K33 incidence wall > Forbidden-H7 state lift > exact-period Mobius/totient packet ledger > octahedron L(K4) support-six current > depth-corrected Bonferroni parity > OCF as hard-core partition function`.
+### 2. Bounded Frontier Analysis
+Audit of the single-replacement atlas through replacement $140$ confirms a remarkably sparse tight/near-tight set:
+- **M <= 3/41:** AP, GW, 12->36.
+- **M <= 2/27:** AP, GW, 12->36, 10->20, 13->26.
+This sparsity reinforces the thesis that low-gap non-AP/GW atoms must exhibit specific shell-transfer signatures.
 
-### 3. Proof Hierarchy Integration
-Refined the proof route to follow a sequence of relational impositions:
-1. **Farey/q Branch** (Theorem scale)
-2. **C27 Shell or K33 Incidence** (Branch-specific forcing)
-3. **Visible/Hidden Relation Sign** (Visibility labels to prevent energy bucket collisions)
-4. **Octahedral/Clebsch Packet** (If support-six mass survives)
-5. **State Lift or Exact-Period Branch** (Terminal closure)
+### 3. Role in Proof Tree (Summand p=2 Branch)
+The shell-transfer spectrum provides the structural link between the $p=2$ branch and terminal rigidity:
+- **Unit-Visible Holes:** Route to the petal rigidity and two-block shell collapse machinery.
+- **Non-Unit Holes (gcd-3, gcd-9):** Route to the $p \ge 3$ $K_{3,3}$ wall or the tournament-conflict state lift via the product-incidence packet.
 
-### 4. Terminal Lemma Target
-The atlas establishes the next sharp lemma target: Every top-balanced non-AP/GW LRC14 residual either reduces to a **finite $C=27, p=2$ shell defect** or crosses the **sign-visible three-owner incidence packet wall** ($p \ge 3$), forcing an OCF packet with the forbidden activity-two value 7.
+### 4. Relational Guardrail
+Reinforced that the shell quotient is a **carrier**, not a standalone invariant. The transfer labels must be integrated with the exact Farey binding scale ($M=p/q$) to ensure magnitude-awareness and prevent magnitude-blindness leakage.
 
 ### 5. Net Impact
-This checkpoint stabilizes the project's "archaeology." By mapping the cluster's broad conceptual history to the current $LRC(14)$ spine, the atlas provides a clear structural sequence for the final proof. It ensures that legacy mechanisms are leveraged as **labeled structural carriers** rather than simple scalar guardrails.
-
-## codex-S136 -- C=27 Shell-Transfer Spectrum
-
-Extended S134 under the Binary Relational Exploration mandate and specializes incoming S135/HYP-2936's broad "C=27 shell and Yoneda coimage" carrier by making the C27 quotient first-class.  New script/output: `04-computation/lrc14_c27_shell_transfer_spectrum_codex_s136.py`, `05-knowledge/results/lrc14_c27_shell_transfer_spectrum_codex_s136.out`; new hypothesis/tangent: HYP-2937 / T1033.
-
-Key bounded frontier in the S130 AP/GW/single-replacement bank through replacement `140`: `M<=3/41` is exactly AP, GW, `12->36`; `M<=2/27` adds only `10->20`, `13->26`.  Transfer reading: AP perfect; GW `H[12:g3]->D[3:g3]`; `12->36` `H[12:g3]->D[9:g9]`; petals unit holes `H[10:g1]->D[7:g1]`, `H[13:g1]->D[1:g1]`.
-
-Handoff: use shell-pair vertices `P_a={a,27-a}` when working the C27 branch.  But keep exact `M`/Farey branch attached: the same transfer labels recur in loose rows, so shell transfer is a necessary relation channel, not a standalone invariant.
-
-## codex-S134 -- Bigraded Relation Signature Under the Summand/Multiplicand Bridge
-
-Extended S133 by reconnecting the old summand/multiplicand graph work at the relation-channel level.  New script/output: `04-computation/lrc14_bigraded_relation_signature_codex_s134.py`, `05-knowledge/results/lrc14_bigraded_relation_signature_codex_s134.out`; new hypothesis/tangent: HYP-2935 / T1031.
-
-Key calibration: AP and shifted AP can have AP-style raw sumset shape, but AP has `36` observer-visible folds while shifted AP has only `2` and mostly hidden balanced collisions.  So raw additive energy is not the right LRC invariant; visibility/sign labels are load-bearing.
-
-Handoff: S133's branch split remains primary.  Use C27 typed-shell + multiplicand-clearance machinery for `p=2`; use Kpq/K33 owner-incidence packets for `p>=3`; then use visible-vs-hidden relation signatures before applying additive-energy/Freiman bounds.
-
-## codex-S133 -- Summand/Multiplicand Farey Bridge (checkpoint)
-
-Formalized the "summand/multiplicand bridge" for the LRC14 proof tree, mapping the unit-excess chain to distinct structural branches and separating shell-geometry problems from incidence-packet obstructions (commit `24d650d1`). This checkpoint stabilizes the routing of the project's terminal proof obligations.
+This checkpoint stabilizes the project's ability to "label the rooms" in the low-gap witness space. By formalizing shell-transfer signatures, the cluster has moved the $LRC(14)$ proof from a broad search to a targeted audit of finite, marked transitions across the $C=27$ unit/nonunit quotient.
