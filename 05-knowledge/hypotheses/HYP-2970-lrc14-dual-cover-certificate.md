@@ -4,6 +4,10 @@ title: LRC14 dual cover certificate via endpoint-credit winding cycles
 status: PROOF-INTERFACE / alternate dual route, not a proof
 source: codex-2026-06-24-S156
 related:
+  - HYP-2974
+  - HYP-2973
+  - HYP-2972
+  - HYP-2971
   - HYP-2969
   - HYP-2968
   - HYP-2967
@@ -25,8 +29,11 @@ related:
 # HYP-2970: LRC14 Dual Cover Certificate Via Endpoint-Credit Winding Cycles
 
 This is a deliberately different attack from the moon-core / packet-family
-route.  It does not begin by classifying possible residual rows.  It begins
-with the exact negation:
+route, and now one vertex of the dual-certificate cluster with HYP-2971's
+multiplicity-moment barriers, HYP-2972's twist ladders, HYP-2973's danger-count
+duals, and HYP-2974's Fourier-Toeplitz PSD scout.  It
+does not begin by classifying possible residual rows.  It begins with the exact
+negation:
 
 ```text
 S is a strict LRC14 counterexample

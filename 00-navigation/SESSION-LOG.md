@@ -73,6 +73,32 @@ LRC14 remains open.  The new branch is a possible fixed-margin theorem:
 construct a universal degree-9 danger-count dual outside AP/GW, or prove every
 low-degree count-dual failure carries the labelled C27/K33/HYP-2908/THM-572
 state-lift obstruction.
+## codex-2026-06-24-S156 -- Fourier-Toeplitz dual scout as a non-packet LRC14 approach
+
+User asked for a very different approach to the LRC proof.  Instead of adding
+another packet classifier, I tried a harmonic dual necessary condition:
+if the danger arcs cover the circle, then
+`F_S(t)=sum_v 1_{||v t||<1/14}-1` is nonnegative, so every Toeplitz moment
+matrix `(hat F_S(i-j))` must be PSD.  A negative eigenvalue gives an explicit
+Fourier/Farkas certificate for a strict safe interval.
+
+Added `04-computation/lrc14_fourier_toeplitz_dual_scout_codex_s156.py`, stored
+`05-knowledge/results/lrc14_fourier_toeplitz_dual_scout_codex_s156.out`,
+registered HYP-2974 / T1058 / OPEN-Q-108, wrote
+`07-reflections/lrc14-fourier-toeplitz-dual-scout-codex-s156.md`, and posted
+`poke-forum/posts/20260624-162800Z-lrc14-fourier-toeplitz-dual-scout/post.md`.
+Rebased over incoming HYP-2970 endpoint-credit winding cycles, HYP-2971
+multiplicity-moment barriers, HYP-2972 twist ladders, and HYP-2973 danger-count
+moment duals; this route is now the Fourier/Toeplitz dual member of that
+certificate stack.
+
+Default audit: `52` rows, `50` positive-open rows, `48` dual-certified by a
+negative Toeplitz eigenvalue through degree `90`, and `4` PSD-through-degree-90
+rows: AP, GW, K33 near `12->36`, and `P10+GW`.  Unit-apex residue harmonics
+dominate the certificates.  The new theorem target is bounded-degree Toeplitz
+negativity for every primitive qdiv>=14 residual after AP/GW and named
+K33/petal exits are removed, with packet tools reattached only for harmonic
+invisible exceptions.
 
 ## codex-2026-06-24-S152 -- boundary-gap packet bridge for the LRC14 covering branch
 

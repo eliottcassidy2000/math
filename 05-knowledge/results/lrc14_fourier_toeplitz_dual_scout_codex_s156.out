@@ -1,0 +1,73 @@
+LRC14 Fourier-Toeplitz dual scout
+==============================================================================
+single_limit=120, two_swap_limit=32, max_generated=40
+[0] Assumption challenge
+  Vertex-set choice:
+    harmonic modes / Toeplitz proof lenses, not runners, arcs, or packets.
+  LRC predicate preserved:
+    danger-covering implies nonnegative multiplicity F_S=D_S-1, hence PSD
+    Toeplitz moment matrices for every degree.
+  Information destroyed:
+    endpoint owners, exact interval components, C27/K33 addresses, and
+    packet-family ancestry are invisible unless reattached afterwards.
+  Challenged assumption:
+    the hard residual may be easier to disprove as a positive-measure
+    trigonometric moment problem than as a labelled covering packet.
+[1] Fourier-Toeplitz dual lemma
+  Let D_S(t)=sum_v 1_{||v t||<1/14} and F_S=D_S-1.
+  If S is a strict counterexample, then F_S(t)>=0 a.e.
+  Therefore for every polynomial q(t)=sum_{j=0}^K c_j exp(2*pi*i*j*t):
+      integral F_S(t) |q(t)|^2 dt >= 0
+  Equivalently T_K=(hat F_S(i-j)) is PSD.
+  A negative eigenvalue of T_K is a rigorous dual obstruction to covering,
+  up to numerical robustness of the displayed eigenvalue.
+[2] Scan summary
+  rows audited=52
+  degrees=16,24,32,40,48,56,64,72,80,90
+  negativity tolerance=1e-08
+  dual-certified rows=48
+  PSD-through-max rows=4
+  status counts={'boundary_only': 2, 'positive_open': 50}
+  family counts={'1-swap-qdiv>=14': 20, '2-swap-qdiv>=14': 19, 'K33-state-lift': 1, 'boundary-gap': 1, 'covering-tail': 2, 'few-apex-lift': 2, 'magnitude-liar': 1, 'tight-boundary': 2, 'two-hole-splice': 2, 'unit-petal': 2}
+  first-negative degree counts={16: 11, 24: 11, 32: 9, 40: 4, 48: 3, 56: 7, 64: 1, 72: 1, 80: 1, 'none': 4}
+  dominant-band counts={'high-tail-band': 1, 'mid-transfer-band': 5, 'unit-apex-residue': 46}
+[3] Representative rows
+  strongest / earliest dual certificates:
+    2-swap drop(1,3)->add(24,25)       qdiv=14  status=positive_open  mu=4813/54600 firstK= 16 minEig=-9.940962e-01@90  band=unit-apex-residue  unit-apex-residue:0.399, mid-transfer-band:0.318, high-tail-band:0.127
+    2-swap drop(1,6)->add(28,30)       qdiv=16  status=positive_open  mu=25309/420420 firstK= 16 minEig=-9.925862e-01@90  band=unit-apex-residue  unit-apex-residue:0.420, mid-transfer-band:0.348, high-tail-band:0.133
+    2-swap drop(1,6)->add(23,24)       qdiv=14  status=positive_open  mu=  419/7176 firstK= 16 minEig=-9.902673e-01@90  band=unit-apex-residue  unit-apex-residue:0.400, mid-transfer-band:0.312, high-tail-band:0.132
+    2-swap drop(1,2)->add(17,32)       qdiv=14  status=positive_open  mu= 923/11424 firstK= 16 minEig=-9.778739e-01@90  band=unit-apex-residue  unit-apex-residue:0.402, mid-transfer-band:0.295, high-tail-band:0.174
+    1-swap 1->45                       qdiv=14  status=positive_open  mu=    37/630 firstK= 16 minEig=-9.631991e-01@90  band=unit-apex-residue  unit-apex-residue:0.390, mid-transfer-band:0.274, high-tail-band:0.160
+    2-swap drop(1,9)->add(14,18)       qdiv=15  status=positive_open  mu=  179/3528 firstK= 16 minEig=-9.284396e-01@90  band=unit-apex-residue  unit-apex-residue:0.421, mid-transfer-band:0.270, high-tail-band:0.173
+    2-swap drop(1,10)->add(14,20)      qdiv=15  status=positive_open  mu=    47/980 firstK= 16 minEig=-8.974347e-01@90  band=unit-apex-residue  unit-apex-residue:0.400, high-tail-band:0.217, mid-transfer-band:0.211
+    1-swap 1->83                       qdiv=14  status=positive_open  mu=    36/581 firstK= 16 minEig=-8.574080e-01@90  band=unit-apex-residue  unit-apex-residue:0.427, mid-transfer-band:0.371, high-tail-band:0.120
+    1-swap 1->112                      qdiv=15  status=positive_open  mu=      3/49 firstK= 16 minEig=-8.566643e-01@90  band=unit-apex-residue  unit-apex-residue:0.426, mid-transfer-band:0.376, high-tail-band:0.117
+    1-swap 1->113                      qdiv=14  status=positive_open  mu=    48/791 firstK= 16 minEig=-8.566643e-01@90  band=unit-apex-residue  unit-apex-residue:0.426, mid-transfer-band:0.376, high-tail-band:0.117
+    2-swap drop(1,5)->add(17,23)       qdiv=14  status=positive_open  mu=9998/150535 firstK= 16 minEig=-7.561027e-01@90  band=unit-apex-residue  unit-apex-residue:0.377, high-tail-band:0.243, mid-transfer-band:0.152
+    2-swap drop(2,4)->add(18,22)       qdiv=14  status=positive_open  mu= 797/12012 firstK= 24 minEig=-9.717787e-01@90  band=unit-apex-residue  unit-apex-residue:0.411, mid-transfer-band:0.289, high-tail-band:0.146
+  PSD-through-max boundary/invisible rows:
+    AP                                 qdiv=14  status=boundary_only  mu=         0 minEig=+4.605832e-05@90  band=unit-apex-residue  unit-apex-residue:0.403, mid-transfer-band:0.345, high-tail-band:0.104
+    GW 12->24                          qdiv=14  status=boundary_only  mu=         0 minEig=+2.696740e-04@90  band=unit-apex-residue  unit-apex-residue:0.402, mid-transfer-band:0.364, high-tail-band:0.121
+    K33 near 12->36                    qdiv=14  status=positive_open  mu=    1/1260 minEig=+3.394408e-03@90  band=unit-apex-residue  unit-apex-residue:0.482, mid-transfer-band:0.295, high-tail-band:0.162
+    two-hole P10+GW                    qdiv=14  status=positive_open  mu=     1/980 minEig=+2.607143e-03@90  band=unit-apex-residue  unit-apex-residue:0.467, mid-transfer-band:0.312, high-tail-band:0.132
+[4] Theorem-facing readout
+  boundary-only rows certified negative=0/2
+  positive-open rows certified negative=48
+  positive-open rows still PSD-through-max=2
+  invisible positive-open rows show this dual lens is incomplete:
+    K33 near 12->36: mu=1/1260, qdiv=14, minEig=+3.394e-03
+    two-hole P10+GW: mu=1/980, qdiv=14, minEig=+2.607e-03
+  Proposed new proof route:
+    prove a structured Toeplitz negativity theorem for every qdiv>14
+    covering residual after AP/GW boundary atoms and K33/state-lift
+    exceptions are removed; use packets only after the harmonic dual lens
+    identifies the missing frequency band.
+[5] Tournament Analysis
+  vertices are harmonic proof lenses, not runners or packets.
+  pairwise observable:
+    which lens preserves the implication cover => F_S>=0 => Toeplitz PSD
+    while retaining enough labelled information for known exits.
+  tie Hamiltonian path:
+    Toeplitz_PSD_dual -> low_AP_harmonics -> apex_14_modes -> C27_K33_modes -> few_apex_lift_modes -> boundary_moment_packets -> exact_interval_front -> raw_runner_tournament
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0
+  score order: Toeplitz_PSD_dual -> boundary_moment_packets -> C27_K33_modes -> few_apex_lift_modes -> exact_interval_front -> apex_14_modes -> low_AP_harmonics -> raw_runner_tournament

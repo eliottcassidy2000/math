@@ -28,6 +28,31 @@ global LRC14 proof.  The live theorem is dynamic: after packet reductions,
 either a bounded twist ladder gives an exact witness or the blocker hypergraph
 forces descent, K33/state-lift, committed-wall, or next-rung structure.
 
+## codex-S156 / HYP-2974 -- Fourier-Toeplitz dual scout
+
+This is the non-packet harmonic swing in the dual-certificate cluster:
+endpoint-credit cycles (HYP-2970), multiplicity barriers (HYP-2971), twist
+ladders (HYP-2972), and danger-count duals (HYP-2973) all forget different
+data.  If danger arcs cover, then
+`F_S(t)=sum_v 1_{||v t||<1/14}-1` is nonnegative, so every Toeplitz moment
+matrix `(hat F_S(i-j))` must be PSD.  A negative eigenvalue is a harmonic
+dual certificate of a strict safe interval.
+
+Default audit:
+
+```text
+rows audited                    = 52
+positive-open rows              = 50
+dual-certified positive rows    = 48
+PSD-through-degree-90 rows      = 4
+```
+
+The PSD rows are exactly AP, GW, K33 `12->36`, and `P10+GW`, so the harmonic
+lens naturally leaves equality atoms plus named K33/petal exits.  The theorem
+target is bounded-degree Toeplitz negativity for every primitive qdiv>=14
+residual after those named atoms are removed; packet machinery should then
+reattach only where the harmonic dual is invisible.
+
 ## codex-S152 / HYP-2965 -- boundary-gap packet bridge
 
 HYP-2965 turns the F6 covering residual into exact boundary-gap packets.

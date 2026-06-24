@@ -94,6 +94,16 @@ charts can be all-covered while the full packet is still positive Haar-open.
 So the live S154-ledger target is a labelled multi-chart gK8/L_y feasible-region map,
 not a one-chart obstruction.
 
+HYP-2974 adds a deliberately different Fourier/Toeplitz route beside HYP-2970
+endpoint-credit cycles, HYP-2971 multiplicity-moment barriers, HYP-2972 twist
+ladders, and HYP-2973 danger-count moment duals: danger covering implies
+`F_S(t)=sum_v 1_{||v t||<1/14}-1 >= 0`, hence every Fourier Toeplitz moment
+matrix of `F_S` is PSD.  S156 audits `52` curated and qdiv>=14 AP-mutation
+rows; `48/50` positive-open rows have a negative Toeplitz eigenvalue through
+degree `90`.  The only PSD-through-degree-90 rows are AP, GW, K33 `12->36`,
+and `P10+GW`, turning the live proof target into bounded-degree Toeplitz
+negativity after named equality/K33/petal exits are removed.
+
 ---
 
 ## codex-S154 -- Labelled-Packet Counterexample Audit (checkpoint)

@@ -6,6 +6,9 @@ source: codex-2026-06-24-S156
 script: 04-computation/lrc14_multiplicity_moment_dual_codex_s156.py
 result: 05-knowledge/results/lrc14_multiplicity_moment_dual_codex_s156.out
 related:
+  - HYP-2974
+  - HYP-2973
+  - HYP-2972
   - HYP-2970
   - HYP-2969
   - HYP-2968
@@ -30,9 +33,11 @@ related:
 
 # HYP-2971: LRC14 Multiplicity-Moment Dual
 
-This route complements HYP-2970's endpoint-credit winding-cycle dual by taking
-an even coarser Farkas shadow.  It deliberately forgets apex charts, lift
-packets, endpoint owners, and safe-interval locations.  For a 13-speed row `S`,
+This route complements HYP-2970's endpoint-credit winding-cycle dual,
+HYP-2972's twist ladders, HYP-2973's danger-count moment duals, and HYP-2974's
+Fourier-Toeplitz PSD scout by taking an even coarser Farkas shadow.  It
+deliberately forgets apex charts, lift packets, endpoint owners, and
+safe-interval locations.  For a 13-speed row `S`,
 define the integer danger multiplicity
 
 ```text
@@ -194,6 +199,6 @@ directed_3_cycles=0
 ```
 
 This quotient destroys endpoint location on purpose.  Its use is not to
-replace HYP-2965/HYP-2966/HYP-2968/HYP-2970, but to give a global moment
-obstruction that any zero-open packet must satisfy before those labelled routes
-begin.
+replace HYP-2965/HYP-2966/HYP-2968/HYP-2970/HYP-2972/HYP-2973/HYP-2974, but to give a global
+moment obstruction that any zero-open packet must satisfy before those labelled
+routes begin.
