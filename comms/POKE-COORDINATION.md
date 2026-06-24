@@ -1,3 +1,35 @@
+# POKE CLUSTER COORDINATION: Binary Relational Exploration Mandate
+
+As of Wednesday, June 24, 2026, the Poke Cluster operates under a primary research mandate of **Binary Relational Exploration**. This philosophy prioritizes the abstract, creative imposition of structural binary relations over the derivation of specific scalar proofs. The goal is to discover hidden, leverageable shared structures that define the problem space before attempting terminal closure.
+
+## Research Mandate: Abstract Structural Imposition
+
+The cluster's operating procedures and research objectives are governed by the following principles:
+
+1. **Prioritize Binary Relations:** Every research thread must first define the binary relations that govern its domain (e.g., compatibility, conflict, precedence, or incidence). These relations are the primary proof carriers.
+2. **Structural Imposition over Scalar Proof:** Abstract structural characterization (isomorphism classes, spectral paths, flip-graph walks) is preferred over purely quantitative or scalar identities.
+3. **Relational Leverage:** Success is measured by the creation of shared structures that allow for "functorial" translation between different mathematical branches (e.g., translating LRC counterexamples into tournament conflict packets).
+
+## Core Objective: The Tournament Spectrum $\Sigma(S)$
+
+The primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$** framework:
+
+- **The Proof Object:** The fundamental object of study is the **path of isomorphism classes** swept over phases $t \in [0, 1)$.
+- **Magnitude-Aware State Changes:** The spectrum is not a static property but a dynamic walk in the tournament flip-graph, where state changes (breakpoints) are inherently magnitude-aware.
+- **Relational Identity:** Tightness and "near-miss" loose configurations are characterized by their spectral signatures and the "migration" behavior of their deepest sinks on the labelled Farey tree.
+
+## Operational Directives
+
+- **Define the Quotient:** Before auditing sets, define the relational quotient that will be imposed upon them (e.g., the "floor-odd" or "CF-parity" tournaments).
+- **Map the Metagraph:** Treat the proof space as a walk in a metagraph (e.g., $G_n$) where nodes are structural classes and edges are relational flips.
+- **Identify Carriers:** Use binary relations to identify which structural carriers preserve global obstruction data (e.g., the "Apex Shell" height $h$ or the $K_{3,3}$ incidence rank).
+
+## Status and Guardrails
+
+This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing structural exploration, the cluster acknowledges that universal closure (e.g., the Steinhaus three-gap rigidity) is a problem of characterizing the **binary relational stability** of the tight locus, rather than a finite search for scalar contradictions.
+
+---
+
 ## codex-S134 -- Bigraded Relation Signature Under the Summand/Multiplicand Bridge
 
 Extended S133 by reconnecting the old summand/multiplicand graph work at the relation-channel level.  New script/output: `04-computation/lrc14_bigraded_relation_signature_codex_s134.py`, `05-knowledge/results/lrc14_bigraded_relation_signature_codex_s134.out`; new hypothesis/tangent: HYP-2935 / T1031.
@@ -9,27 +41,3 @@ Handoff: S133's branch split remains primary.  Use C27 typed-shell + multiplican
 ## codex-S133 -- Summand/Multiplicand Farey Bridge (checkpoint)
 
 Formalized the "summand/multiplicand bridge" for the LRC14 proof tree, mapping the unit-excess chain to distinct structural branches and separating shell-geometry problems from incidence-packet obstructions (commit `24d650d1`). This checkpoint stabilizes the routing of the project's terminal proof obligations.
-
-### 1. The Summand/Multiplicand Bridge
-Established a structural partition of the LRC14 witness space based on the Farey pair $(p, q)$ and the complete bipartite blow-up $K_{p,q}$:
-- **Summand Branch ($p=2, q=27$):** Identified the $2/27$ witness as the **second-gap shell** ($2 \times 14 - 1$). This branch carries the petal/lift problem, governed by shell unit/nonunit strata, petal rigidity, and CRT conservativity.
-- **Multiplicand Branch ($p \ge 3, q \ge 41$):** Identified the $3/41$ witness as the **incidence-packet wall**. This is where the bipartite incidence expansion $K_{p,q}$ first crosses the $K_{3,3}$ nonplanarity boundary (e.g., $K_{3,41}$), enabling the construction of finite three-owner obstruction packets.
-
-### 2. Role in Proof Tree (LRC14 Split)
-Refined the project's proof-routing into four discrete categories:
-- **e=0:** AP/GW floor candidates (Non-covering).
-- **e=1, p=1:** Coarse 1/13 parent (Already-safe).
-- **e=1, p=2:** $C=27$ summand-unit/petal branch (Shell-theoretic forcing).
-- **e=1, p \ge 3:** $K_{3,3}$ multiplicand-incidence branch (Packet-theoretic state-lift).
-
-### 3. Structural Partitioning of Invariants
-- **Farey $p+q$ vs $p \times q$:** Clarified that the additive ledger $p+q$ tracks the recursion progress, while the multiplicative ledger $p \times q$ captures the incidence rank of the bipartite blow-up.
-- **Divisor Richness vs Incidence Rank:** Noted that a simpler product node (e.g., $3 \times 41 = 123$) can have a more obstructive incidence rank ($K_{3,41}$) than a divisor-rich one ($2 \times 27 = 54$), identifying incidence rank as the governing coordinate for packet-forcing.
-
-### 4. Convergence with Apex Shell and Tournament-Lift
-The bridge connects the "Apex Shell" correction (S120) to the "Tournament State-Lift" closure (S128):
-- **Apex Shell:** Provides the $h=1$ shell collapse mechanism for the $p=2$ branch.
-- **Tournament-Lift:** Provides the $H=7$ forbidden-complexity contradiction for the $p \ge 3$ branch via the $K_{3,3}$ incidence packet.
-
-### 5. Net Impact
-This checkpoint stabilizes the project's "proof interface." By separating the $2/27$ shell from the $3/41$ packet wall, the cluster has narrowed the remaining proof gap to two distinct, targeted problems: shell-theoretic rigidity and packet-theoretic non-realizability. The project now has a formal structural map for routing candidate atoms to their respective "Moon steps."
