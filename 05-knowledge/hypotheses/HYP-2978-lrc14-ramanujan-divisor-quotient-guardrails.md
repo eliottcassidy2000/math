@@ -1,7 +1,7 @@
 ---
 id: HYP-2978
 title: LRC14 Ramanujan-divisor quotient guardrails
-status: EVIDENCE / quotient-admissibility proof guardrail; not an LRC14 proof
+status: EVIDENCE / quotient-admissibility proof guardrail with S162 interval scaffold; not an LRC14 proof
 source: codex-2026-06-24-S161
 related:
   - HYP-2979
@@ -9,6 +9,7 @@ related:
   - HYP-2976
   - HYP-2975
   - HYP-2974
+  - HYP-2981
   - HYP-2973
   - HYP-2972
   - HYP-2971
@@ -30,6 +31,10 @@ artifacts:
   - 05-knowledge/results/lrc14_ramanujan_divisor_named_channel_guardrails_codex_s161.out
   - 04-computation/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.py
   - 05-knowledge/results/lrc14_ramanujan_divisor_quotient_guardrails_codex_s161.out
+  - 07-reflections/lrc14-ramanujan-divisor-quotient-guardrails-codex-s161.md
+  - 04-computation/lrc14_packet_fejer_interval_scaffold_codex_s162.py
+  - 05-knowledge/results/lrc14_packet_fejer_interval_scaffold_codex_s162.out
+  - 07-reflections/lrc14-robin-robbins-fejer-interval-scaffold-codex-s162.md
 ---
 
 # HYP-2978: LRC14 Ramanujan-Divisor Quotient Guardrails
@@ -189,6 +194,44 @@ https://en.wikipedia.org/wiki/Eisenstein_series
 https://arxiv.org/abs/1201.1060
 https://mast.queensu.ca/~murty/HRJ-2013.pdf
 ```
+
+## S162 Addendum: Robin/Robbins and Packet-Anchored Fejer Intervals
+
+The requested divisor-function reading adds a useful distinction.  Robin's
+number-theory theorem is a scalar extremal inequality for `sigma(n)/n`; it is
+useful here mainly as a warning that a divisor average is not a proof object
+unless its prime-power and phase packet can be reconstructed.  Robbins'
+graph-theory theorem is the better structural analogy: a strong orientation
+exists exactly when no bridge prevents reachability.  In LRC14 terms, a quotient
+is only admissible when it keeps the certificate graph's bridges: endpoint
+owner, exact q-phase, Fejer degree/center, labelled packet route, and
+K33/state-lift debt.
+
+The one-hop divisor-function trail reinforces the same guardrail:
+
+```text
+sigma_k            multiplicative, but prime-power exponents are load-bearing
+Dirichlet convolution  sigma = Id * 1 and Id = sigma * mu need an inverse channel
+Ramanujan sums     c_q(n) is the primitive-root trace / Mobius-inverted shell
+divisor summatory  divisor counts live on a hyperbola/lattice carrier
+superabundant/Robin extremality  scalar maxima still need labelled divisor packets
+```
+
+S162 uses that lesson on HYP-2974's Fejer certificates.  It computes rational
+interval enclosures for selected Fejer quadratic forms and records the labelled
+packet fiber
+
+```text
+P(S) = (route, family, q_class, packet_route, state_lift, q_threshold).
+```
+
+All five selected rows have interval upper endpoint `<0`: `12->36` at degree
+`159`, `P10+GW` at degree `280`, `12->168` at degree `63`,
+`two drop(12,13)->add(14,29)` at degree `41`, and `single swap 6->63` at
+degree `266`.  This is the first concrete bridge from floating Fejer evidence
+to packet-keyed interval certificates.  It remains a scaffold until the `pi`
+and trigonometric interval backend is formalized and the full HYP-2963 bank is
+grouped by packet fiber.
 
 ## Guardrail theorem target
 

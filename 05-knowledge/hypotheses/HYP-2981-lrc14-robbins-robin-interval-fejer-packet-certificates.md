@@ -1,7 +1,7 @@
 ---
 id: HYP-2981
 title: LRC14 Robbins-Robin bridge guardrails and interval Fejer packet certificates
-status: RESERVED / interval-certificate proof interface; not a proof
+status: PROOF-INTERFACE / named-row interval-certificate scaffold; not a proof
 source: codex-2026-06-24-S162
 related:
   - HYP-2979
@@ -17,13 +17,14 @@ related:
   - THM-572
   - OPEN-Q-108
 artifacts:
-  - 04-computation/lrc14_fejer_interval_packet_certificates_codex_s162.py
-  - 05-knowledge/results/lrc14_fejer_interval_packet_certificates_codex_s162.out
+  - 04-computation/lrc14_packet_fejer_interval_scaffold_codex_s162.py
+  - 05-knowledge/results/lrc14_packet_fejer_interval_scaffold_codex_s162.out
+  - 07-reflections/lrc14-robin-robbins-fejer-interval-scaffold-codex-s162.md
 ---
 
 # HYP-2981: LRC14 Robbins-Robin Bridge Guardrails And Interval Fejer Packet Certificates
 
-This hypothesis reserves the 2026-06-24 follow-up route combining:
+This hypothesis records the 2026-06-24 follow-up route combining:
 
 - Robbins' graph theorem: an undirected graph has a strongly connected
   orientation exactly when it is connected and has no bridge.
@@ -132,7 +133,13 @@ interval Fejer certificate
 > raw quotient.
 ```
 
-The immediate computation is a named-row interval certificate prototype for
-the hardest floating Fejer rows: `K33 12->36` at degree `159` and `P10+GW` at
-degree `280`, plus the smaller-margin named rows.  Once this works, scale it
-by family to the HYP-2963 bank instead of treating `21911` rows individually.
+The immediate computation is
+`04-computation/lrc14_packet_fejer_interval_scaffold_codex_s162.py`, a named-row
+interval certificate scaffold for the hardest floating Fejer rows: `K33
+12->36` at degree `159` and `P10+GW` at degree `280`, plus smaller-margin
+named rows.  Its stored output certifies interval upper endpoints `<0` for all
+five selected rows and attaches each row to its labelled packet fiber.  This is
+not yet the production certificate emitter: the current rational `pi` enclosure
+and Taylor interval engine must be replaced by a formally sourced backend, and
+the final pass should group the HYP-2963 bank by packet family rather than
+treating `21911` rows individually.

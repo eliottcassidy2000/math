@@ -34,6 +34,8 @@ results:
   - 05-knowledge/results/lrc14_fourier_toeplitz_psd_dual_codex_s157.out
   - 04-computation/lrc14_fourier_toeplitz_fejer_fullbank_codex_s157.py
   - 05-knowledge/results/lrc14_fourier_toeplitz_fejer_fullbank_codex_s157.out
+  - 04-computation/lrc14_packet_fejer_interval_scaffold_codex_s162.py
+  - 05-knowledge/results/lrc14_packet_fejer_interval_scaffold_codex_s162.out
 ---
 
 # HYP-2974: LRC14 Fourier-Toeplitz Dual Scout, PSD Refinement, And Fejer Full-Bank Extension
@@ -192,6 +194,31 @@ message for the labelled-packet bank: every positive row tested has an explicit
 trigonometric-square dual witness at modest degree, while AP/GW are exactly the
 two equality atoms.
 
+The S162 scaffold begins the formalization step requested after the floating
+audit.  It rewrites selected Fejer quadratic forms as rational interval
+certificates and attaches each certificate to the labelled packet fiber
+
+```text
+P(S) = (route, family, q_class, packet_route, state_lift, q_threshold).
+```
+
+The first selected packet-anchored interval certificates all have upper endpoint
+strictly below zero:
+
+```text
+near/K33 12->36                    degree 159  P(S)=K33-STATE-LIFT
+P10+GW                             degree 280  P(S)=BOUNDARY-PETAL-SPORADIC
+covering 12->168                   degree  63  P(S)=COVERING-MOMENT
+two drop(12,13)->add(14,29)        degree  41  P(S)=Q-WITNESS
+single swap 6->63                  degree 266  P(S)=COVERING-MOMENT
+```
+
+The interval backend is exact-rational around a rational enclosure of `pi` and
+Taylor enclosures for `sin(pi*m/7)` and `cos(pi*rational)`.  This is still a
+scaffold, not a final formal certificate: the hard-coded `pi` enclosure should
+be replaced by a formally sourced backend, and the full bank should be emitted
+by packet fiber rather than by hand-selected rows.
+
 ## Proof Target
 
 A possible theorem shape is:
@@ -215,9 +242,9 @@ closed boundary atom or emits a retained K33/H=7 state-lift packet.
 
 Equivalently, every non-AP/GW row should have a finite negative Toeplitz
 section unless it routes to the HYP-2908/THM-572 endpoint.  The full-bank
-Fejer audit sharpens the next formal task: replace floating evaluations of
-`Q_d(x)` by interval-enclosed trigonometric certificates, grouped by labelled
-packet family and endpoint-owner data.
+Fejer audit and S162 interval scaffold sharpen the next formal task: replace
+all floating evaluations of `Q_d(x)` by interval-enclosed trigonometric
+certificates, grouped by labelled packet family and endpoint-owner data.
 
 ## Tournament Analysis
 
