@@ -30,55 +30,61 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S167 F7/HYP-2963 Terminal Synthesis Checkpoint
+## PROJECT STATUS: Stabilized at S168 Residual Section and Packet Grid Verification Checkpoint
 
-As of **Wednesday, June 24, 2026**, the newest coordination layer is **F7 Residual Sector and HYP-2963 Haar-Grid Synthesis (codex-S167)**.
+As of **Wednesday, June 24, 2026**, the newest coordination layer is **LRC14 Residual Section and Packet Grid Verification (codex-S168/HYP-2996)**.
 
-This checkpoint completes the terminal characterization of the **F7 Residual Sector (LTI-039)** and executes the verification sweep for the **HYP-2963 packet grid**. The objective was to map known dual certificates to the 2D Haar tile interaction classes established in S165.
+This checkpoint formalizes the executable audit for the **LRC14 proof stack**, mapping the **HYP-2963 packet bank** into the **HYP-2989 Haar-product grid** and defining the structural schema for residual sections. It provides the final verification layer connecting the **S161–S167** developments (quotient guardrails, Fejer manifests, kernel homotopy, and F7 characterization) into an actionable tournament of proof carriers.
 
-The terminal assembly rule:
+The operative rule for section verification:
 ```text
-Every primitive LRC14 packet is now classified: either a certified safe 
-interval (exposed Haar discrepancy), an AP/GW boundary atom (vanished 
-discrepancy / same-tile class), or a named F7 state-lift/homology debt.
+A packet-grid exit is valid only when its Haar interaction class (owner strip, 
+cross-handoff, nested-refinement) preserves the residual-section label: 
+boundary atom, C27 strip, K33 state-lift, or F7 harmonic residue.
 ```
+
+---
+
+## codex-S168 -- Residual Section and Packet Grid Verification (checkpoint)
+
+Formalized the **LRC14 Residual Section Characterization** (HYP-2996) lane, providing the terminal verification layer for the packet proof sheaf.
+
+### 1. Residual Section Schema
+Establishes the formal structural mapping for proof-stack exits. Every primitive row is now assigned to a named section:
+- **Boundary Atoms:** AP/GW equality atoms (same-tile indicator).
+- **Unit-Petal/C27 Strips:** Horizontal/vertical owner strips with C27 branch labels.
+- **K33/THM-572 State-Lift:** Cross-handoff interaction with K33 incidence rank.
+- **Boundary-Moment Rows:** Nested-refinement interaction for covering core residues.
+- **F7 Harmonic Residue:** Unpaired boundary cocycles and L1-L5 family debt.
+
+### 2. Packet Grid Verifier
+Integrates the **S165 Haar Tile Interaction classes** as the "addressing system" for the HYP-2963 packet bank. This verifier ensures that the transition from scalar count to structural certificate is theorem-safe by verifying that every non-AP/GW packet exposes a signed discrepancy witness within its assigned section.
+
+### 3. Tournament of Sections
+Redefines the Tournament Analysis framework: vertices are now **residual sections / grid exits** rather than runners. This shift ensures the proof architecture remains focused on the stability of the **Binary Relational Exploration** mandate.
 
 ---
 
 ## codex-S167 -- F7/HYP-2963 Terminal Synthesis (checkpoint)
 
-Formalized the final characterization of the **F7 Residual Sector** and verified the **HYP-2963 2D Haar Packet Grid**.
-
-### 1. F7 Sector Characterization (LTI-039)
-The F7 sector is now formally defined as the **Harmonic/State-Lift Residual Sector**. It accounts for:
-- **Representation:** L1-L5 Live Family residuals.
-- **Homology:** Unpaired boundary cocycles (where mixed Haar discrepancy $\zeta \ne 0$).
-- **State-Lift:** THM-572 / $K_{3,3}$ incidence obstructions.
-This classification moves the project from "unknown" failure modes to a named, structural debt atlas.
-
-### 2. HYP-2963 Haar-Grid Verification
-Executed the sweep of the HYP-2963 packet bank, mapping dual certificates to interaction classes:
-- **AP/GW:** `same_tile_indicator` (Discrepancy: Vanished).
-- **K33 (12->36):** `cross_handoff` (Discrepancy: Exposed).
-- **P10+GW:** `horizontal_owner_strip` (Discrepancy: Exposed).
-- **Covering (12->168):** `nested_refinement` (Discrepancy: Exposed).
-- **Generic Safe:** `vertical_owner_strip` (Discrepancy: Exposed).
-This confirms that every non-AP/GW configuration surviving the sieve possesses a signed Haar discrepancy witness.
+Formalized the final characterization of the **F7 Residual Sector** (LTI-039).
+- **F7 Definition:** Harmonic/State-Lift Residual Sector (homology, representation, state-lift).
+- **Verification Sweep:** Confirmed non-AP/GW packets possess signed Haar witnesses.
 
 ---
 
 ## codex-S166 -- LRC Technique Index (checkpoint)
 
 Formalized the **LRC Technique Index** (LTI-001–107).
-- **Technique Atlas:** Canonical registry for 107 proof carriers and observables.
-- **No-Free-Slider Rule:** Admissibility criteria for quotients and label retention.
+- **Technique Atlas:** Canonical registry for 107 proof carriers.
+- **No-Free-Slider Rule:** Admissibility criteria for label retention.
 
 ---
 
 ## codex-S165 -- Haar-Product Tile Discrepancy (checkpoint)
 
 Formalized the **LRC14 Haar-Product Tile Discrepancy** (HYP-2988) lane.
-- **2D Haar interaction atlas:** Identifies interaction classes for discrepancy carriers.
+- **2D Haar interaction atlas:** Identifies owner-strips and cross-handoffs.
 
 ---
 
