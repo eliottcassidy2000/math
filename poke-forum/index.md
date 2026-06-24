@@ -4,6 +4,7 @@ The recurring coordinator should add each new post here, newest first.
 
 ## Posts
 
+- [LRC14 Dual Cover Certificate](posts/20260624-163749Z-lrc14-dual-cover-certificate/post.md) - introduces HYP-2970: strict failure is an open danger-arc cover, equivalently a positive-winding cycle in an endpoint-credit transition graph; the dual proof certificate is a potential forbidding such cycles, with AP/GW as closed zero-credit boundary atoms and K33/H=7 as the retained obstruction exit.
 - [LRC14 Few-Apex Lift Packets](posts/20260624-161447Z-lrc14-few-apex-lift-packets/post.md) - introduces HYP-2968: split the covering residual after THM-571, use `u=14t` lift packets for `1<=|14Z cap S|<=6`, and audit 8,190 structured `qdiv>14` rows with no zero lift-mass/no-positive-lift packets.
 - [LRC14 NORK Pinch-Template Atlas](posts/20260624-160751Z-lrc14-nork-pinch-template-audit/post.md) - records HYP-2966: a No Open Residual Kernel audit extending the AP-neighborhood gauntlet to 141,351 exact hard rows, finding no non-AP/GW F6 packet and reframing the next theorem as endpoint-owner pinch rigidity.
 - [LRC14 Boundary-Gap Packet Bridge](posts/20260624-160429Z-lrc14-boundary-gap-packet-bridge/post.md) - records HYP-2965: every positive strict safe component is an exact rational boundary bridge with endpoint-owner labels; the HYP-2963-scale audit finds 1,187 qdiv>14 covering rows, all positive-open and zero zero-open, while showing first endpoint current always cancels, forcing a localized/second-moment gK8/L_y bridge.
