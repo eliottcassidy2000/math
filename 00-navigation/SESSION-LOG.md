@@ -1,3 +1,11 @@
+## codex-2026-06-23-S134 -- bigraded relation signatures reconnect summand/multiplicand graphs to the Farey split
+
+User asked to refamiliarize the last prompt's mutated-Farey concepts with the older summand graph and multiplicand graph.  Pulled S131-S133 first; S133 already proved the major routing split: `2/27` is the `C=27` second-gap summand-unit branch, while `3/41` is the first K33 incidence wall.  Added `04-computation/lrc14_bigraded_relation_signature_codex_s134.py`, stored `05-knowledge/results/lrc14_bigraded_relation_signature_codex_s134.out`, and registered HYP-2935 / T1031.
+
+S134 computes a typed row signature: exact `M=p/q` and Farey branch, pair-sum support/excess, observer-visible folds `a+b=c`, balanced collisions `a+b=c+d` split by visible/hidden shell, exact-denominator blockers, `C=27` antipodal shell profile, and `K_{p,q}` rank.  Named-row calibration recovers the old HYP-2639 warning: AP has `sumset_excess=0`, `visible_folds=36`, while shifted AP has the same AP-style sumset excess but only `2` visible folds and `125` hidden balanced collisions.  So raw additive energy is not an LRC hardness invariant; the sign/visibility label is load-bearing.
+
+Tournament Analysis used typed relation channels as vertices.  The role order is transitive: `q/Farey branch > C27 typed shell > multiplicand clearance > Kpq incidence > visible folds > hidden balanced shells > raw sumset/energy > raw runner vertices`.  Refined proof interface: keep q/Farey branch as theorem scale; inside `p=2`, use C27 typed shell plus multiplicand clearance; inside `p>=3`, use Kpq/K33 incidence plus owner packets; inside relation-rich residuals, separate visible folds from hidden balanced shells before scalar additive-energy or Freiman estimates.  No proof claimed, but the proof-routing map now has the old summand/multiplicand graph inserted at the right layer.
+
 ## codex-2026-06-23-S131 -- Farey products become complete-bipartite K33 ledgers for the LRC14 unit-excess branch
 
 User supplied the graph reading `p*q=|E(K_{p,q})|`, with ordinary Farey `F_4` first producing `K_{3,4}` and hence a `K_{3,3}` subgraph.  Added `04-computation/lrc14_farey_bipartite_obstruction_codex_s131.py`, stored `05-knowledge/results/lrc14_farey_bipartite_obstruction_codex_s131.out`, and registered HYP-2932 / T1028.

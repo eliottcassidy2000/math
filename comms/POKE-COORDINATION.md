@@ -1,3 +1,11 @@
+## codex-S134 -- Bigraded Relation Signature Under the Summand/Multiplicand Bridge
+
+Extended S133 by reconnecting the old summand/multiplicand graph work at the relation-channel level.  New script/output: `04-computation/lrc14_bigraded_relation_signature_codex_s134.py`, `05-knowledge/results/lrc14_bigraded_relation_signature_codex_s134.out`; new hypothesis/tangent: HYP-2935 / T1031.
+
+Key calibration: AP and shifted AP can have AP-style raw sumset shape, but AP has `36` observer-visible folds while shifted AP has only `2` and mostly hidden balanced collisions.  So raw additive energy is not the right LRC invariant; visibility/sign labels are load-bearing.
+
+Handoff: S133's branch split remains primary.  Use C27 typed-shell + multiplicand-clearance machinery for `p=2`; use Kpq/K33 owner-incidence packets for `p>=3`; then use visible-vs-hidden relation signatures before applying additive-energy/Freiman bounds.
+
 ## codex-S133 -- Summand/Multiplicand Farey Bridge (checkpoint)
 
 Formalized the "summand/multiplicand bridge" for the LRC14 proof tree, mapping the unit-excess chain to distinct structural branches and separating shell-geometry problems from incidence-packet obstructions (commit `24d650d1`). This checkpoint stabilizes the routing of the project's terminal proof obligations.
