@@ -97,6 +97,13 @@ Computed fingerprint: `score_hist={0:1,1:1,2:1,4:3,6:1,7:1,8:1}`, one directed 3
 
 HYP-2987 now states the zipper theorem target.  If six arrows hold -- source-kernel exclusion, formal interval backend, family compression, admissible smoothing, state-lift construction, and F7 definition -- then every primitive LRC14 row either has a strict witness/dual certificate in the atlas, is AP/Goddyn-Wong equality, or constructs the forbidden HYP-2908/THM-572 state lift.  The fixed-margin swap-chain paper `arXiv:2606.22636` sharpened the reduction analogy: preserve margin/packet fibers, reduce to a low-row or finite-core comparison, then split count sectors from Johnson harmonic residuals.  In LRC14 terms, F7 must be a named harmonic residual sector with a preserved predicate, not an anonymous failure bucket.  Rebase signal: incoming HYP-2984/T1068 had already claimed the kernel-homotopy boundary-defect lane, HYP-2985/T1069 claimed the admissible-smoothing dispatcher, and HYP-2986/T1070 claimed the tope-wall/cocircuit lane, so the handoff atlas moved to HYP-2987/T1071 and treats all three as admissible-arrow subproblems.
 
+Rebase signal: while pushing, origin added `comms/POKE-COORDINATION.md` updates
+for the same S164 kernel-homotopy checkpoint.  The coordination note phrases
+the finite defect atlas as AP/GW/K33.  I integrated that as a typed distinction
+in HYP-2984: AP/GW are exact zero-open boundary-defect atoms; K33 remains a
+named residual/state-lift route emitted by the homotopy ledger, not a
+scalar-equivalent boundary atom.
+
 ## codex-2026-06-24-S163 -- analytic sieve packet weights and Goldbach smoothing guardrails (HYP-2982)
 
 User asked to merge sums over primes, `sum mu(n)`, `sum mu(n)/n`, `sum mu(n)^2/phi(n)`, large-sieve/circle-method improvements, upper-bound quadratic/Selberg sieve ideas, exponential sums, ternary-Goldbach parabolic-cylinder/saddle-point/explicit-formula machinery, smoothing choices, and the repo's Kaczynski work.  Pulled current mainline first, integrating S162's HYP-2981 Fejer interval certificate scaffold, then reserved HYP-2982/T1066 and checkpointed it.

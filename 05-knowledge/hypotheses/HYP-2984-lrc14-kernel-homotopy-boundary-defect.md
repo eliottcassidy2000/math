@@ -130,6 +130,12 @@ already chosen inside a strict safe component for positive rows; for AP/GW
 there is no such component, so they remain PSD-blind equality atoms rather than
 failed certificates.
 
+Rebase signal from the concurrent S164 coordination sync: the shared
+coordination note describes the finite defect atlas as AP/GW/K33.  This file
+keeps the distinction typed.  AP/GW are zero-open boundary-defect atoms in the
+exact audit; K33 is a named residual/state-lift route that a homotopy may emit
+after leaving the AP/GW taut stratum, not a scalar-equivalent defect.
+
 ## Tournament Analysis
 
 Vertices are proof carriers in the kernel-deformation step:
