@@ -8,6 +8,9 @@ artifacts:
   - 05-knowledge/results/farey_fibonacci_additive_basis_s169.out
   - 07-reflections/farey-fibonacci-additive-basis-carrier-s169.md
 related:
+  - HYP-2525
+  - HYP-2524
+  - HYP-2523
   - HYP-2934
   - HYP-2933
   - HYP-2932
@@ -79,6 +82,26 @@ with rows
 Equivalently, it counts legal supports with no adjacent carries.  This is the
 finite combinatorial face of Zeckendorf: the recurrence does not merely cover
 integers, it supplies a canonical sparse support.
+
+The deeper merge with T819/HYP-2523..2525 is the whole Pascal-slope carry
+family, normalized here as
+
+```text
+a_d(n) = sum_k binom(n-(d-1)k,k),        a_d(n)=a_d(n-1)+a_d(n-d).
+```
+
+The script prints `d=1..6`:
+
+```text
+d=1: 1,2,4,8,16,...            full Pascal / binary subsets
+d=2: 1,1,2,3,5,8,13,...        Fibonacci / Zeckendorf
+d=3: 1,1,1,2,3,4,6,9,...       Narayana / gap-3 carries
+d=4..6: higher gap-d carry gases
+```
+
+Thus the displayed Fibonacci row is not a decoration but the `d=2` member of
+the old slope family.  The parameter `d` is the minimum gap between carry sites.
+Zeckendorf is the first nontrivial normal-form quotient in that family.
 
 The same script isolates the golden Farey/Stern-Brocot spine
 
@@ -172,9 +195,55 @@ p^q,q^p = ordered magnitude-stress tests.
 This refines HYP-2931/HYP-2932/HYP-2934 rather than replacing them.  The LRC14
 unit-excess chain still keeps `q` as the binding denominator, uses `p+q` as the
 linear recursion ledger, and uses `p*q` only after the `K_{p,q}` incidence label
-is retained.  The new Fibonacci observation says that on the all-ones
-Stern-Brocot spine, the additive ledger is not arbitrary: it is exactly the next
-Fibonacci carry level.
+is retained.  On the unit-excess chain
+
+```text
+q = 14p - 1,        e = 14p-q = 1,
+p+q = 15p - 1,      p*q = 14p^2 - p,
+```
+
+these are three different clocks: binding denominator, linear Farey recursion,
+and quadratic incidence area.  The new Fibonacci observation says that on the
+all-ones Stern-Brocot spine, the additive ledger is not arbitrary: it is exactly
+the next Fibonacci carry level.
+
+## Representation-Economy Ledger
+
+The new script now emits the proof ledger explicitly:
+
+```text
+Goldbach:
+  carrier   = prime pair graph
+  preserves = local residue and singular-series side data
+  forgets   = which prime-pair branch caused the coverage
+
+Ternary Goldbach:
+  carrier   = prime triple hypergraph
+  preserves = extra-summand smoothing and major/minor arc labels
+  forgets   = binary branch identity
+
+Fermat polygonal:
+  carrier   = s-gonal atom multiset
+  preserves = bounded summand budget and local obstruction invoice
+  forgets   = representation multiplicity beyond the arity cap
+
+Zeckendorf:
+  carrier   = Fibonacci carry automaton
+  preserves = canonical no-adjacent normal form
+  forgets   = redundant representations killed by confluence
+
+Farey address:
+  carrier   = fraction vector (p,q)
+  preserves = q, p+q, p*q, and ordered power clocks separately
+  forgets   = order and incidence data after scalarization
+```
+
+Assumption challenge: this pass considered integers, summands, primes,
+polygonal atoms, Fibonacci carry sites, Farey fractions, `K_{p,q}` incidences,
+power-order tests, and proof obligations as possible tournament vertices.
+It chose proof carriers because the LRC predicate is not preserved by raw
+scalar counts.  The scalar quotient destroys residue clocks, arity budgets,
+carry adjacency, Farey order, incidence labels, and cocycle debt.
 
 ## Proof Target
 
@@ -202,4 +271,8 @@ HYP-2995 carrier atlas and the HYP-2997 cocycle normal-form atlas: every
 sequence shadow must state whether it is using Goldbach smoothing, Fermat
 bounded arity, Zeckendorf normal form, or Farey address retention.  Otherwise
 it is just another raw scalar representation count, and should be treated as
-unsafe.
+unsafe.  The navigation hook is `LTI-155`, the representation-economy carrier
+row in the LRC Technique Index; HYP-2999/LTI-149, HYP-3000/LTI-150, and
+HYP-3003/LTI-153 are the narrower Pascal-row, path-rank, and
+summand/multiplicand packet-field companions; HYP-3004/LTI-154 is the adjacent
+dichotomy-mode atlas.

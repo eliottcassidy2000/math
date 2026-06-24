@@ -37,6 +37,36 @@ def sparse_fibonacci_rows(rows: int = 12) -> list[tuple[int, list[int], int, int
     return table
 
 
+def pascal_slope_row(d: int, n: int) -> list[int]:
+    """Slope-d Pascal carry row, normalized so d=2 gives F_{n+1}."""
+    return [comb(n - (d - 1) * k, k) for k in range(n // d + 1)]
+
+
+def pascal_slope_family(max_d: int = 6, rows: int = 12) -> list[dict[str, object]]:
+    names = {
+        1: "full Pascal / binary subsets / 2^n",
+        2: "Fibonacci / Zeckendorf no-adjacent carry",
+        3: "Narayana cows / gap-3 carry",
+        4: "gap-4 carry gas",
+        5: "plastic-number slope",
+        6: "post-Pisot warning slope",
+    }
+    out: list[dict[str, object]] = []
+    for d in range(1, max_d + 1):
+        seq = [sum(pascal_slope_row(d, n)) for n in range(rows)]
+        recurrence_ok = all(seq[n] == seq[n - 1] + seq[n - d] for n in range(d, rows))
+        out.append(
+            {
+                "d": d,
+                "name": names.get(d, f"gap-{d} carry"),
+                "seq": seq,
+                "sample_rows": [pascal_slope_row(d, n) for n in range(min(7, rows))],
+                "recurrence_ok": recurrence_ok,
+            }
+        )
+    return out
+
+
 def farey(order: int) -> list[tuple[int, int]]:
     fracs: list[tuple[int, int]] = []
     for q in range(1, order + 1):
@@ -80,6 +110,22 @@ def golden_spine(rows: int = 9) -> list[dict[str, object]]:
                 "log10_q^p": denpow_log,
                 "log10_p^q": numpow_log,
                 "power_winner": power_winner,
+            }
+        )
+    return out
+
+
+def unit_excess_lrc_chain(limit: int = 8, n: int = 14) -> list[dict[str, int]]:
+    out: list[dict[str, int]] = []
+    for p in range(1, limit + 1):
+        q = n * p - 1
+        out.append(
+            {
+                "p": p,
+                "q": q,
+                "excess": n * p - q,
+                "sum": p + q,
+                "product": p * q,
             }
         )
     return out
@@ -176,6 +222,15 @@ class Carrier:
         return (self.retained, self.proof_power, self.scalar_safety, self.lrc_transfer)
 
 
+@dataclass(frozen=True)
+class Economy:
+    name: str
+    carrier: str
+    preserves: str
+    forgets: str
+    lrc_pull: str
+
+
 def tournament_fingerprint(carriers: list[Carrier]) -> dict[str, object]:
     n = len(carriers)
     outdeg = [0] * n
@@ -216,6 +271,21 @@ def main() -> None:
     print("=== Farey/Fibonacci/additive-basis synthesis S169 ===")
     print()
 
+    print("Pascal-slope carry family: a_d(n)=sum_k binom(n-(d-1)k,k)")
+    for record in pascal_slope_family():
+        seq = ",".join(map(str, record["seq"]))
+        print(
+            f"  d={record['d']}: {record['name']:<42s}"
+            f" recurrence a(n)=a(n-1)+a(n-d): {record['recurrence_ok']}"
+        )
+        print(f"       seq n=0..11: {seq}")
+        if record["d"] in (1, 2, 3):
+            rows = ["+".join(map(str, row)) for row in record["sample_rows"]]
+            print(f"       first rows: {'; '.join(rows)}")
+    print("  readout: the named Fibonacci row is d=2; d=1 is full Pascal, d=3 is Narayana.")
+    print("           The parameter d is the minimum gap forced between carry sites.")
+    print()
+
     print("Fibonacci sparse-carry rows: F_{n+1} = sum_k binom(n-k,k)")
     for n, row, total, fib in sparse_fibonacci_rows(11):
         print(f"  n={n:2d}: {'+'.join(map(str, row)):<18s} = {total:3d}  F={fib:3d}")
@@ -241,6 +311,17 @@ def main() -> None:
     print("  readout: adjacent Farey edges are unimodular; mediants add numerator and denominator vectors.")
     print()
 
+    print("Unit-excess LRC/Farey scheduler: q=14p-1")
+    print("  p   q  e=14p-q  p+q  p*q")
+    for row in unit_excess_lrc_chain():
+        print(
+            f" {row['p']:2d} {row['q']:3d} {row['excess']:8d}"
+            f" {row['sum']:4d} {row['product']:5d}"
+        )
+    print("  readout: q is the binding scale, p+q is a linear recursion clock,")
+    print("           and p*q is a quadratic K_{p,q} incidence clock.")
+    print()
+
     missing_binary, missing_ternary = goldbach_counts(N)
     print("Additive-basis finite audit")
     print(f"  Goldbach binary missing evens <= {N}: {missing_binary[:8]} count={len(missing_binary)}")
@@ -253,6 +334,52 @@ def main() -> None:
         fs.append(fs[-1] + fs[-2])
     max_z = max(len(zeckendorf(n, fs)) for n in range(1, N + 1))
     print(f"  Zeckendorf atoms <= {N}: {len(fs)}, max digits={max_z}, atoms={fs}")
+    print()
+
+    economies = [
+        Economy(
+            "Goldbach",
+            "prime pair graph",
+            "local residue and singular-series side data",
+            "which prime-pair branch caused the coverage",
+            "smoothing only after residue clocks are retained",
+        ),
+        Economy(
+            "Ternary Goldbach",
+            "prime triple hypergraph",
+            "extra-summand smoothing and major/minor arc labels",
+            "binary branch identity",
+            "model for admissible smoothing dispatchers",
+        ),
+        Economy(
+            "Fermat polygonal",
+            "s-gonal atom multiset",
+            "bounded summand budget and local obstruction invoice",
+            "representation multiplicity beyond the arity cap",
+            "bounded residual debt rather than raw counts",
+        ),
+        Economy(
+            "Zeckendorf",
+            "Fibonacci carry automaton",
+            "canonical no-adjacent normal form",
+            "redundant representations killed by confluence",
+            "normal-form quotient if the carry rule survives",
+        ),
+        Economy(
+            "Farey address",
+            "fraction vector (p,q)",
+            "q, p+q, p*q, and ordered power clocks separately",
+            "order and incidence data after scalarization",
+            "packet classifier field for sequence shadows",
+        ),
+    ]
+    print("Representation-economy ledger")
+    for e in economies:
+        print(f"  {e.name}:")
+        print(f"    carrier   = {e.carrier}")
+        print(f"    preserves = {e.preserves}")
+        print(f"    forgets   = {e.forgets}")
+        print(f"    LRC pull  = {e.lrc_pull}")
     print()
 
     carriers = [
@@ -270,6 +397,14 @@ def main() -> None:
     print(f"  score_hist={fp['score_hist']}")
     print(f"  directed_3cycles={fp['directed_3cycles']}")
     print(f"  hamiltonian_path={fp['hamiltonian_path']}")
+    print()
+
+    print("Assumption challenge / alternate tournament vertices")
+    print("  considered: integers, summands, primes, polygonal atoms, Fibonacci carry sites,")
+    print("              Farey fractions, K_{p,q} incidences, power-order tests, proof obligations.")
+    print("  chosen: proof carriers, because LRC needs to know which quotient preserves the predicate.")
+    print("  destroyed by raw scalarization: residue clocks, arity budgets, carry adjacency,")
+    print("                                 Farey order, Kpq incidence, and cocycle debt.")
     print()
 
     print("Synthesis")

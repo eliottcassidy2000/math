@@ -62,8 +62,8 @@ the HYP-3003 / LTI-153 add/multiply fiber merge.
 ## Lead codex-2026-06-24-S169: Farey-Fibonacci additive-basis carrier
 
 **Status:** SYNTHESIS / finite scout and proof-interface carrier complete (HYP-2998/T1083).  User asked to merge previous work on Fermat polygonal numbers, Goldbach/ternary Goldbach, Zeckendorf, the Fibonacci sparse-carry arrangement, and Farey numerator/denominator sum/product/power payloads.  Integrated incoming HYP-2997 as the adjacent cocycle normal-form atlas: this lane supplies the representation-economy label that sequence shadows must carry before HYP-2997-style quotient forgetting is safe.
-**Readout:** `04-computation/farey_fibonacci_additive_basis_s169.py` stores output in `05-knowledge/results/farey_fibonacci_additive_basis_s169.out`.  The scout records `F_{n+1}=sum_k binom(n-k,k)` for rows `1,1,1+1,1+2,1+3+1,...`; on the golden Farey spine `F_i/F_{i+1}`, `p+q=F_{i+2}`, `p*q=|E(K_{p,q})|`, and power payloads are ordered magnitude-stress channels.  Tournament Analysis over proof carriers is transitive with path `zeckendorf_sparse_normal_form > farey_address_vector > fermat_polygonal_bounded_arity > farey_product_Kpq_area > ternary_goldbach_smoothing > binary_goldbach_pair_graph > farey_power_stress_channel > raw_scalar_rep_count`.
-**Next:** add a representation-economy field to sequence-shadow packet classifiers: smoothing, bounded arity, normal form, or Farey address.  A quotient using representation counts is unsafe until it states which economy preserves the target predicate and which coordinate is reconstructed, annihilated, exact, descended, or emitted as residual debt.
+**Readout:** `04-computation/farey_fibonacci_additive_basis_s169.py` stores output in `05-knowledge/results/farey_fibonacci_additive_basis_s169.out`.  The scout records the Pascal-slope carry family `a_d(n)=sum_k binom(n-(d-1)k,k)`: `d=1` full Pascal/powers of two, `d=2` Fibonacci/Zeckendorf rows `1,1,1+1,1+2,1+3+1,...`, `d=3` Narayana/gap-3 carries, and `d=4..6` higher gap carry gases.  On the golden Farey spine `F_i/F_{i+1}`, `p+q=F_{i+2}`, `p*q=|E(K_{p,q})|`, and power payloads are ordered magnitude-stress channels; on the LRC unit-excess chain `q=14p-1`, `p+q=15p-1` and `p*q=14p^2-p` are kept as separate clocks.  Tournament Analysis over proof carriers is transitive with path `zeckendorf_sparse_normal_form > farey_address_vector > fermat_polygonal_bounded_arity > farey_product_Kpq_area > ternary_goldbach_smoothing > binary_goldbach_pair_graph > farey_power_stress_channel > raw_scalar_rep_count`.
+**Next:** add a representation-economy field to sequence-shadow packet classifiers: smoothing, bounded arity, normal form, or Farey address.  A quotient using representation counts is unsafe until it states which economy preserves the target predicate and which coordinate is reconstructed, annihilated, exact, descended, or emitted as residual debt.  Navigation hook: `LTI-155`.
 Namespace: HYP-2998 / T1083.
 ## Lead codex-2026-06-24-S169: Pascal-slope additive-basis Farey packet schema
 
@@ -114,10 +114,10 @@ LTI-150.
 **Status:** NAVIGATION / compact registry expanded.  User asked to get even more
 creative, look back through the many tournament, metagraph, related-series, and
 carrier methods, and bring back as many techniques as possible for LRC agents.
-`00-navigation/LRC-TECHNIQUE-INDEX.md` now has `148` compact `LTI-*` rows plus
+`00-navigation/LRC-TECHNIQUE-INDEX.md` now has `155` compact `LTI-*` rows plus
 the existing `64` long-form S166 technique-bank entries after merging the
 incoming `LTI-109` packet-cocycle atlas and `LTI-110` cocycle-obstruction atlas.
-**New promoted block:** `LTI-111..LTI-148` promotes deck derivatives,
+**New promoted block:** `LTI-111..LTI-155` promotes deck derivatives,
 Burnside orbit taxes, merged metagraph transport, good-cut/SCC
 gas, OCF coimage sectors, noncommutative Redei/Berge recurrences, GLMY
 path-homology witnesses, heap/tableau/sorting-network carriers, transfer-matrix
@@ -126,17 +126,22 @@ matroid/gammoid blockers, zeta/Ihara/path torsion, sequence-shadow companions,
 Pisano and 2-adic checksums, Hamiltonian-path sheaves, irreducibility no-lift
 product rules, relation-lattice/subtorus packets, Faulhaber odd-moment bridges,
 A000568 deck lifts, residual metagraph Laplacians, binding-pair switch
-tournaments, coimage wall atlases, and namespace collision auditing.
+tournaments, coimage wall atlases, namespace collision auditing, cocycle normal
+forms, residual-section packet grids, summand/multiplicand operation fibers, and
+representation-economy carriers.
 **Guardrail:** the session explicitly treats the incoming duplicate `HYP-2992`
 frontmatter/anchor situation as a namespace-collision signal, not something to
 silently overwrite.  The new `LTI-146` and `LTI-TODO-16` ask for an audit and
 repair plan so future citations point to the intended quotient/proof object.
-**Next:** build the `LTI-TODO-13..24` artifacts, starting with packet-cocycle
+**Next:** build the `LTI-TODO-13..29` artifacts, starting with packet-cocycle
 formalization, the executable F7 cocycle residual record, a finite cocycle-sheaf
 obstruction matrix over HYP-2963 packets, an F0-F7 residual metagraph Laplacian,
 and a binding-pair switch tournament for covering rows.  `LTI-148` adds the
 residual-section packet grid from HYP-2996 as the executable F7 missing-section
-interface.
+interface, `LTI-149..LTI-153` add Pascal-slope, path-rank, smoothing-switchboard,
+curried functional, summand/multiplicand, and dichotomy-mode packet fields, and
+`LTI-155` asks classifiers to retain representation
+economy before using sequence-shadow counts.
 Namespace: T1078.
 ## Lead codex-2026-06-24-S168: residual section and packet-grid verification
 
@@ -279,7 +284,7 @@ Namespace: HYP-2994 / T1077.
 
 ## Lead codex-2026-06-24-S164: tope-wall cocircuit and Farey route-scheduler follow-ons
 
-**Status:** PROOF-INTERFACE / concurrent namespace repair complete.  HYP-2986/T1070 is the oriented-tope wall/cocircuit pass: cut the LRC14 time circle by all danger endpoints, treat open cells as topes, keep AP/GW as boundary-cocircuit equality atoms, and treat a no-tope/no-cocircuit packet as the real strict-counterexample falsifier.  HYP-3001/T1086 is the Farey mutation certificate scheduler: preserve exact `M=p/q` and excess `e=14p-q`, then use product collapse `p` only after the unit-excess gate as a route selector, not as an order-safe scalar.  HYP-2992/T1072 remains the Haar-product tile namespace, HYP-2993/T1076 remains the zipper-pattern atlas, HYP-2990/T1074 remains the abstract zipper atlas, HYP-2991/T1075 remains the Haar zipper cocycle lane, HYP-2994/T1077 is the cocycle obstruction atlas, HYP-2995/T1079 is the cocycle carrier atlas, HYP-2996/T1080 is the residual-section packet-grid lane, T1081 is the tournament-index expansion, HYP-2997/T1082/LTI-147 is the cocycle normal-form atlas, HYP-2998/T1083/LTI-148 is the Farey-Fibonacci / residual-section-grid namespace, and HYP-2999/T1084/LTI-149 is the Pascal-slope packet schema.
+**Status:** PROOF-INTERFACE / concurrent namespace repair complete.  HYP-2986/T1070 is the oriented-tope wall/cocircuit pass: cut the LRC14 time circle by all danger endpoints, treat open cells as topes, keep AP/GW as boundary-cocircuit equality atoms, and treat a no-tope/no-cocircuit packet as the real strict-counterexample falsifier.  HYP-3001/T1086 is the Farey mutation certificate scheduler: preserve exact `M=p/q` and excess `e=14p-q`, then use product collapse `p` only after the unit-excess gate as a route selector, not as an order-safe scalar.  HYP-2992/T1072 remains the Haar-product tile namespace, HYP-2993/T1076 remains the zipper-pattern atlas, HYP-2990/T1074 remains the abstract zipper atlas, HYP-2991/T1075 remains the Haar zipper cocycle lane, HYP-2994/T1077 is the cocycle obstruction atlas, HYP-2995/T1079 is the cocycle carrier atlas, HYP-2996/T1080/LTI-148 is the residual-section packet-grid lane, T1081 is the tournament-index expansion, HYP-2997/T1082/LTI-147 is the cocycle normal-form atlas, HYP-2998/T1083/LTI-155 is the Farey-Fibonacci representation-economy carrier, HYP-2999/T1084/LTI-149 is the Pascal-slope packet schema, HYP-3000/T1085/LTI-150 is the Fibonacci path-rank bridge, HYP-3003/T1087/LTI-153 is the summand/multiplicand Farey basis merge, and HYP-3004/T1088/LTI-154 is the dichotomy recursion mode atlas.
 **Next:** For HYP-2986, prove every primitive no-tope/no-cocircuit wall packet violates endpoint-owner parity, slides to an open tope, routes to K33/H=7 state lift, or defines F7.  For HYP-3001, turn the `exact M/e -> product-collapse p -> packet family` dispatch into a theorem-facing front end for Fejer/Ramanujan/Kaczynski/state-lift certificates.
 
 ## Lead codex-2026-06-24-S163: analytic sieve packet weights and Kaczynski boundary guardrails

@@ -268,6 +268,7 @@ record what it destroys before asking it to prove anything.
 | LTI-152 | Curried packet functional tower | Higher-order packet evaluators, quotient derivatives, partial applications | Treat each LRC route as `S -> packet -> root -> lane -> fiber -> certificate -> verdict`; a quotient may forget a coordinate only after its lost-coordinate function is discharged | HYP-3002, HYP-3000, HYP-2999, HYP-2997, HYP-2996, HYP-2995, HYP-2974, HYP-2963, HYP-2954 | Add `curried_call_signature` and `lost_coordinate_function` fields to packet records and certificate manifests. |
 | LTI-153 | Summand/multiplicand Farey basis merge | Farey packets with summand antidiagonal and multiplicand hyperbola fibers | Keep `p+q` as additive/pinch fiber and `p*q` as factor/Kpq incidence fiber before comparing Goldbach, polygonal, Zeckendorf, or power shadows | HYP-3003, HYP-3000, HYP-2999, HYP-2998, HYP-2935, HYP-2934, HYP-2083, HYP-2067 | Add `summand_fiber_id`, `multiplicand_factor_fiber`, `zeckendorf_carry_width`, and `farey_shadow_lane` to sequence-shadow packet records. |
 | LTI-154 | Dichotomy recursion mode atlas | Binary/operator mode switches as proof carriers | Treat odd/even, sign, addition/multiplication, `+1`/`/2`, `*2`/`+2`, Farey sum/product, Zeckendorf, Collatz, and triune recursion as allowed-forgetting switchboards; S171's summand/multiplicand LTI-153 is the add/multiply subcase | HYP-3004, HYP-3003, HYP-3002, HYP-3001, HYP-3000, HYP-2999, HYP-2998, HYP-2262, HYP-2238, HYP-2134, HYP-2091 | Add `parity_block`, `sign_cut_status`, `additive_pair_sum_owner`, `multiplicative_unit_orbit`, `recursion_boundary_state`, and `smoothing_route` to HYP-2963 packet records. |
+| LTI-155 | Representation-economy carrier | Goldbach smoothing, polygonal arity, Zeckendorf carries, Farey address clocks | A sequence shadow is usable only after declaring the representation economy whose fibers preserve the LRC predicate | HYP-2998, HYP-3004, HYP-3003, HYP-3000, HYP-2999, HYP-2523, HYP-2416, HYP-2931, HYP-1920 | Add `representation_economy` fields to packet classifiers: smoothing, bounded arity, normal form, or Farey address. |
 
 ## Cross-Cutting Guardrails
 
@@ -280,6 +281,8 @@ record what it destroys before asking it to prove anything.
   route, not the same kind of atom.
 - Exact `M=p/q`, `qdiv`, and Farey excess should be retained before any
   product, summand, power, divisor, or spectral quotient.
+- Representation counts must name their economy: smoothing, bounded arity,
+  normal form, or Farey address.  Otherwise they are raw scalar shadows.
 - Haar/Baire/Haar-product data separates strict-open witnesses from closed
   boundary debt; it does not replace C27, endpoint owner, or K33 labels.
 - Fejer, Ramanujan, Toeplitz, Kaczynski, and analytic-sieve carriers should be
@@ -321,6 +324,7 @@ record what it destroys before asking it to prove anything.
 | LTI-TODO-27 | Family-scale smoothing switchboard for HYP-2963 packets | LTI-035, LTI-049, LTI-057, LTI-061, LTI-065, LTI-151 |
 | LTI-TODO-28 | Curried packet evaluator manifest | LTI-147, LTI-148, LTI-149, LTI-150, LTI-152 |
 | LTI-TODO-29 | HYP-2963 dichotomy-mode packet fields | LTI-011, LTI-063, LTI-076, LTI-150, LTI-151, LTI-152, LTI-153, LTI-154 |
+| LTI-TODO-30 | Representation-economy field for sequence-shadow packet classifiers | LTI-076, LTI-089, LTI-109, LTI-149, LTI-150, LTI-153, LTI-154, LTI-155 |
 
 ## Minimal Entry Template
 

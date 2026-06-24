@@ -84,10 +84,15 @@ addition, multiplication, and exponentiation.
 
 Added `04-computation/farey_fibonacci_additive_basis_s169.py` and stored
 `05-knowledge/results/farey_fibonacci_additive_basis_s169.out`.  The scout
-records `F_{n+1}=sum_k binom(n-k,k)`, verifies that the golden Farey spine
+now records the whole Pascal-slope carry family
+`a_d(n)=sum_k binom(n-(d-1)k,k)`, with `d=1` full Pascal/powers of two, `d=2`
+the Fibonacci/Zeckendorf row, `d=3` Narayana/gap-3 carries, and `d=4..6` higher
+gap carry gases.  It also verifies that the golden Farey spine
 `p/q=F_i/F_{i+1}` has additive payload `p+q=F_{i+2}`, reads `p*q` as the
-`K_{p,q}` incidence area, and treats `p^q,q^p` as ordered magnitude-stress
-channels.  In the finite table the power winner flips after `2/3 -> 3/5`.
+`K_{p,q}` incidence area, treats `p^q,q^p` as ordered magnitude-stress
+channels, and records the LRC unit-excess scheduler `q=14p-1`,
+`p+q=15p-1`, `p*q=14p^2-p`.  In the finite table the power winner flips after
+`2/3 -> 3/5`.
 
 The synthesis separates four representation economies: Goldbach/ternary
 smoothing, Fermat polygonal bounded arity, Zeckendorf no-adjacent normal form,
@@ -101,6 +106,14 @@ raw_scalar_rep_count`.  Created HYP-2998/T1083 and the reflection
 origin/main advanced with HYP-2997, rebased this lane conceptually as the
 sequence-shadow representation-economy companion to that cocycle normal-form
 atlas.
+
+Promoted the reusable move to `LTI-155`: packet classifiers should add a
+`representation_economy` field with values such as smoothing, bounded arity,
+normal form, or Farey address.  HYP-2999/LTI-149, HYP-3000/LTI-150, and
+HYP-3003/LTI-153 remain the narrower Pascal-row, path-rank, and
+summand/multiplicand packet-field companions; HYP-3004/LTI-154 is the adjacent
+dichotomy-mode atlas.
+
 ## codex-2026-06-24-S169 -- Pascal-slope additive-basis Farey packet schema (HYP-2999/T1084)
 
 User asked to merge prior work on Fermat polygonal numbers, Goldbach/ternary
@@ -562,7 +575,7 @@ User asked to consider four Farey-sequence variations and do another creative LR
 
 Added `04-computation/lrc14_farey_mutation_certificate_scheduler_codex_s164.py`, stored `05-knowledge/results/lrc14_farey_mutation_certificate_scheduler_codex_s164.out`, detail `05-knowledge/hypotheses/HYP-3001-lrc14-farey-mutation-certificate-scheduler.md`, and reflection `07-reflections/lrc14-farey-mutation-certificate-scheduler-codex-s164.md`.
 
-**FINDING:** the literal product mutation `(p*q)/q=p` is globally a bad order scalar but locally the right scheduler after the exact Farey-excess gate `e=14p-q=1`.  In the S130 `749`-row bank, the low frontier is exactly scheduled by `(e,p)`: `M<=3/41` is AP/GW at `p=1` plus `12->36` at `p=3`; `M<=2/27` adds `10->20` and `13->26` at `p=2`.  Pairwise order guardrail: product-value has `71462` row-bank flips, denominator-power `88234`, numerator-power `109786`, while sum-value `(p+q)/q=1+M` has `0`.  Proof route: keep exact `M=p/q` and `e` first; if `e=0`, AP/GW boundary; if `e=1`, use `p=1,2,>=3` to route q-parent, C27 petal/two-block, or K33/state-lift/Fejer; if `e>1`, use q-threshold, Fejer/Toeplitz, Ramanujan/exact-period, Kaczynski boundary, or state-lift packets.  LRC14 not proved, but the Farey mutations now serve as a front-end scheduler for the labelled certificate stack.  Rebase signal: S165-S169 claimed HYP-2988/HYP-2989, HYP-2990/T1074, HYP-2991/T1075, HYP-2992/T1072, HYP-2993/T1076, HYP-2994/T1077, HYP-2995/T1079, HYP-2996/T1080, T1081, HYP-2997/T1082/LTI-147, HYP-2998/T1083/LTI-148, and HYP-2999/T1084/LTI-149 for zipper/Haar/cocycle/tournament-technique/residual-section/tournament-index/cocycle-normal-form/Farey-Fibonacci/Pascal-slope lanes, so this scheduler now lives at HYP-3001/T1086. -> HYP-3001, HYP-2999, HYP-2998, HYP-2997, HYP-2931, HYP-2940, HYP-2981, HYP-2982, HYP-2983, HYP-2908, THM-572, OPEN-Q-108.
+**FINDING:** the literal product mutation `(p*q)/q=p` is globally a bad order scalar but locally the right scheduler after the exact Farey-excess gate `e=14p-q=1`.  In the S130 `749`-row bank, the low frontier is exactly scheduled by `(e,p)`: `M<=3/41` is AP/GW at `p=1` plus `12->36` at `p=3`; `M<=2/27` adds `10->20` and `13->26` at `p=2`.  Pairwise order guardrail: product-value has `71462` row-bank flips, denominator-power `88234`, numerator-power `109786`, while sum-value `(p+q)/q=1+M` has `0`.  Proof route: keep exact `M=p/q` and `e` first; if `e=0`, AP/GW boundary; if `e=1`, use `p=1,2,>=3` to route q-parent, C27 petal/two-block, or K33/state-lift/Fejer; if `e>1`, use q-threshold, Fejer/Toeplitz, Ramanujan/exact-period, Kaczynski boundary, or state-lift packets.  LRC14 not proved, but the Farey mutations now serve as a front-end scheduler for the labelled certificate stack.  Rebase signal: S165-S169 claimed HYP-2988/HYP-2989, HYP-2990/T1074, HYP-2991/T1075, HYP-2992/T1072, HYP-2993/T1076, HYP-2994/T1077, HYP-2995/T1079, HYP-2996/T1080/LTI-148, T1081, HYP-2997/T1082/LTI-147, HYP-2998/T1083/LTI-155, HYP-2999/T1084/LTI-149, HYP-3000/T1085/LTI-150, HYP-3003/T1087/LTI-153, and HYP-3004/T1088/LTI-154 for zipper/Haar/cocycle/tournament-technique/residual-section/tournament-index/cocycle-normal-form/Farey-Fibonacci/Pascal-slope/path-rank/summand-multiplicand/dichotomy lanes, so this scheduler now lives at HYP-3001/T1086. -> HYP-3004, HYP-3003, HYP-3001, HYP-3000, HYP-2999, HYP-2998, HYP-2997, HYP-2931, HYP-2940, HYP-2981, HYP-2982, HYP-2983, HYP-2908, THM-572, OPEN-Q-108.
 ## codex-2026-06-24-S164 -- admissible smoothing dispatcher for the LRC14 proof stack (HYP-2985)
 
 User asked for another creative LRC proof pass after the analytic-number-theory, Kaczynski, large-sieve, Fejer, and Ramanujan prompts.  Pulled and read the fresh HYP-2982/HYP-2983 artifacts instead of duplicating them.  Rebased over the incoming HYP-2984 kernel-homotopy reservation and moved this dispatcher to HYP-2985/T1069.  The key insight was to stop asking one scalar smoothing estimate to handle every packet and instead dispatch packet families to the proof clock that retains their load-bearing labels.
