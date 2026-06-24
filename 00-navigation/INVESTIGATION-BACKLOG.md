@@ -15,6 +15,11 @@
 
 ---
 
+## Lead codex-2026-06-24-S163: analytic sieve packet weights for LRC14
+
+**Status:** STUB / analytic-number-theory transfer lane reserved (HYP-2982/T1066).  User prompt asks to merge explicit sums over primes, `sum mu(n)`, `sum mu(n)/n`, `sum mu(n)^2/phi(n)`, large-sieve/circle-method improvements, upper-bound quadratic/Selberg sieve ideas, exponential sums, ternary-Goldbach parabolic-cylinder/saddle-point/explicit-formula machinery, smoothing choices, and the repo's Kaczynski/Kaczorowski threads.  Working transfer: every analytic estimate should be carried as a labelled proof packet with kernel, smoothing transform, exceptional-set boundary, and retained LRC predicate labels, not as a scalar density quotient.
+**Next:** compute a finite arithmetic atlas for the Mobius/totient/prime-sum weights; record the large-sieve/Selberg packet hierarchy as Tournament Analysis; compare it to HYP-2978/HYP-2979/HYP-2981; decide whether the analytic role is a direct LRC14 certificate, a late-q packet preconditioner, or only a guardrail for smoothing choices.
+
 ## Lead codex-2026-06-24-S162: Robbins/Robin bridge guardrails and interval Fejer packet certificates
 
 **Status:** ACTIVE PROOF-INTERFACE / packet-anchored scaffold plus precision blueprint complete, production interval backend pending (HYP-2981/T1065).  User prompt asks to use Robbins theorem in graph theory, Robin/Robbins number-theory divisor-function readings, quotient guardrails, Ramanujan sums, and the current Fejer result.  HYP-2981 now combines `04-computation/lrc14_packet_fejer_interval_scaffold_codex_s162.py` with `04-computation/lrc14_fejer_interval_packet_certificates_codex_s162.py`.  S157 already found floating Fejer PSD-vector violations for every positive HYP-2963 packet-bank row (`21911/21911`) by degree `<=280`, with AP/Goddyn-Wong as the only zero-safe atoms.  The scaffold attaches selected hard Fejer forms to packet keys `P(S)` and gives rational interval upper bounds `<0` for `12->36`, `P10+GW`, `12->168`, `drop(12,13)->add(14,29)`, and `6->63`; the budget script expands hard certificates into divisor-curried atom banks and shows the interval burden looks finite: `P10+GW` is the high-degree/large-bank case (`d=280`, `862` atoms), K33 `12->36` needs `d=159`, and the weakest full-bank margin row has `122` atoms and about `27` conservative precision bits.
