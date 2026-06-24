@@ -28,6 +28,17 @@ Tournament Analysis over proof carriers is transitive:
 kaczynski_approach_class > ramanujan_exact_period_packet >
 analytic_smoothing_kernel > raw_kernel_scalar`.  Wrote reflection
 `07-reflections/lrc14-kernel-homotopy-boundary-defect-codex-s164.md`.
+smoothing synthesis.  Reserved HYP-2984/T1068 for a focused bridge: kernel
+deformations are admissible only when they preserve a labelled packet
+certificate or emit a named boundary-defect atom.  The exact computation,
+result file, reflection, and synthesis are pending in this same session.
+## codex-2026-06-24-S164 -- Farey mutation certificate scheduler for LRC14 (HYP-2984/T1068)
+
+User asked to consider four Farey-sequence variations and do another creative LRC proof pass: numerator multiplied by denominator, numerator and denominator added, denominator raised to numerator, and numerator raised to denominator.  Pulled current mainline first and integrated the fresh HYP-2982/HYP-2983 analytic-sieve/Kaczynski packet work plus the existing HYP-2931/HYP-2940 Farey-mutation lane.
+
+Added `04-computation/lrc14_farey_mutation_certificate_scheduler_codex_s164.py`, stored `05-knowledge/results/lrc14_farey_mutation_certificate_scheduler_codex_s164.out`, detail `05-knowledge/hypotheses/HYP-2984-lrc14-farey-mutation-certificate-scheduler.md`, and reflection `07-reflections/lrc14-farey-mutation-certificate-scheduler-codex-s164.md`.
+
+**FINDING:** the literal product mutation `(p*q)/q=p` is globally a bad order scalar but locally the right scheduler after the exact Farey-excess gate `e=14p-q=1`.  In the S130 `749`-row bank, the low frontier is exactly scheduled by `(e,p)`: `M<=3/41` is AP/GW at `p=1` plus `12->36` at `p=3`; `M<=2/27` adds `10->20` and `13->26` at `p=2`.  Pairwise order guardrail: product-value has `71462` row-bank flips, denominator-power `88234`, numerator-power `109786`, while sum-value `(p+q)/q=1+M` has `0`.  Proof route: keep exact `M=p/q` and `e` first; if `e=0`, AP/GW boundary; if `e=1`, use `p=1,2,>=3` to route q-parent, C27 petal/two-block, or K33/state-lift/Fejer; if `e>1`, use q-threshold, Fejer/Toeplitz, Ramanujan/exact-period, Kaczynski boundary, or state-lift packets.  LRC14 not proved, but the Farey mutations now serve as a front-end scheduler for the labelled certificate stack. -> HYP-2984, HYP-2931, HYP-2940, HYP-2981, HYP-2982, HYP-2983, HYP-2908, THM-572, OPEN-Q-108.
 
 ## codex-2026-06-24-S163 -- analytic sieve packet weights and Goldbach smoothing guardrails (HYP-2982)
 

@@ -1,0 +1,90 @@
+HYP-2984/T1068 LRC14 FAREY MUTATION CERTIFICATE SCHEDULER
+==============================================================================
+Assumption challenge
+  considered vertices: runners, Farey fractions, mutated values, denominators,
+    endpoint owners, Fejer packet fibers, Ramanujan phases, and proof obligations.
+  chosen vertices: four literal Farey mutations used as proof-route carriers.
+  preserved predicate: binding gap M-1/14 after exact e=14p-q is retained.
+  destroyed information: wall geometry; it must be restored by packet labels.
+
+Unit-excess chain p/(14p-1)
+  p is the product-value collapse and becomes a route index after e=1.
+   p       M    q  sum old p*q literal route
+   1    1/13   13   14      13 q-parent star
+   2    2/27   27   29      54 C27 strip / petal
+   3    3/41   41   44     123 first K33 wall
+   4    4/55   55   59     220 higher K33/state-lift
+   5    5/69   69   74     345 higher K33/state-lift
+   6    6/83   83   89     498 higher K33/state-lift
+   7    7/97   97  104     679 higher K33/state-lift
+   8   8/111  111  119     888 higher K33/state-lift
+   9   9/125  125  134    1125 higher K33/state-lift
+  10  10/139  139  149    1390 higher K33/state-lift
+
+Low-frontier scheduler by literal product-value p=(p*q)/q
+  filters: exact M in S130 AP/GW/petal/single-replacement bank
+  M<=3/41: rows=3
+    p=1  boundary AP/GW           count=2
+    p=3  K33/state-lift           count=1
+      AP                       M=   1/14 e=0  p=1  q=14   boundary AP/GW
+      GW 12->24                M=   1/14 e=0  p=1  q=14   boundary AP/GW
+      near-miss 12->36         M=   3/41 e=1  p=3  q=41   K33/state-lift
+  M<=2/27: rows=5
+    p=1  boundary AP/GW           count=2
+    p=2  C27 petal/two-block      count=2
+    p=3  K33/state-lift           count=1
+      AP                       M=   1/14 e=0  p=1  q=14   boundary AP/GW
+      GW 12->24                M=   1/14 e=0  p=1  q=14   boundary AP/GW
+      near-miss 12->36         M=   3/41 e=1  p=3  q=41   K33/state-lift
+      swap 10->20              M=   2/27 e=1  p=2  q=27   C27 petal/two-block
+      swap 13->26              M=   2/27 e=1  p=2  q=27   C27 petal/two-block
+
+Mutation order audit on S130 row bank
+  rows=749; true key is M-1/14=e/(14q)
+  product-value is literal (p*q)/q=p, not the old p*q payload.
+  product_value       agree= 88234 flip= 71462 tie=120430 score=21207/40018
+  sum_value           agree=258329 flip=     0 tie=21797 score=538455/560252
+  denominator_power   agree=170095 flip= 88234 tie=21797 score=361987/560252
+  numerator_power     agree=148543 flip=109786 tie=21797 score=318883/560252
+  readout: sum-value is theorem-safe because it is 1+M; product-value is not
+  order-safe but it is a branch scheduler after e=1; power mutations are
+  magnitude stress tests and should not be proof denominators.
+
+Selected packet rows under the four literal mutations
+  row                                       M   e   p     q  product       sum       denpow       numpow route
+  AP                                     1/14   0   1    14        1     15/14   log=-2.639   log=-2.639 boundary AP/GW
+  GW 12->24                              1/14   0   1    14        1     15/14   log=-2.639   log=-2.639 boundary AP/GW
+  near/K33 12->36                        3/41   1   3    41        3     44/41  log=-10.042   log=41.330 K33/state-lift
+  P10+GW                                 2/27   1   2    27        2     29/27   log=-5.899   log=15.419 C27 petal/two-block
+  P10+K33                                2/27   1   2    27        2     29/27   log=-5.899   log=15.419 C27 petal/two-block
+  petal 10->20                           2/27   1   2    27        2     29/27   log=-5.899   log=15.419 C27 petal/two-block
+  petal 13->26                           2/27   1   2    27        2     29/27   log=-5.899   log=15.419 C27 petal/two-block
+  single swap 6->63                      2/25   3   2    25        2     27/25   log=-5.745   log=14.110 nonunit excess e=3
+  covering 12->168                     14/173  23  14   173       14   187/173  log=-69.507  log=451.404 nonunit excess e=23
+  residue liar 12->26                    1/12   2   1    12        1     13/12   log=-2.485   log=-2.485 nonunit excess e=2
+  two drop(12, 13)->add(14, 29)          1/12   2   1    12        1     13/12   log=-2.485   log=-2.485 nonunit excess e=2
+
+Tournament Analysis
+  vertices: the four literal Farey mutations
+  pairwise observable: retained proof role vector
+    (order safety, branch scheduling, packet side-channel, magnitude stress, false-quotient detection)
+  switch/gauge: larger role vector wins; ties use listed Hamiltonian order
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1} directed_3cycles=0
+  Hamiltonian path: sum_value > product_value > numerator_power > denominator_power
+  challenged assumption: the numerator-times-denominator mutation is useless
+    as a value, but after the e=1 quotient it is exactly the numerator p,
+    which is the C27/K33 route switch.
+
+Proof-route readout
+  1. Keep exact M=p/q and e=14p-q first.
+  2. If e=0, route to AP/GW boundary equality.
+  3. If e=1, the literal product mutation collapses to p and schedules:
+       p=1 -> q-parent/right-neighbor, p=2 -> C27 petal/two-block,
+       p>=3 -> K33/state-lift/Fejer packet.
+  4. Use sum-value only as an affine check that a quotient preserved M.
+  5. Use the two power mutations as adversarial stress tests: a claimed
+     tournament or scalar invariant surviving those distortions is probably
+     too magnitude-blind and needs endpoint/Ramanujan/Fejer labels restored.
+  This integrates HYP-2931/HYP-2940 with HYP-2981/HYP-2982/HYP-2983:
+  Farey mutations are front-end schedulers; Fejer/Ramanujan/Kaczynski
+  packets are the certificate back end.
