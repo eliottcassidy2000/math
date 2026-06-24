@@ -5,7 +5,7 @@ S164 packages the current LRC14 proof stack as a certificate handoff atlas:
 ```text
 script: 04-computation/lrc14_certificate_handoff_atlas_codex_s164.py
 output: 05-knowledge/results/lrc14_certificate_handoff_atlas_codex_s164.out
-hypothesis: HYP-2986
+hypothesis: HYP-2987
 ```
 
 The Tournament Analysis vertices are not runners.  They are proof carriers:

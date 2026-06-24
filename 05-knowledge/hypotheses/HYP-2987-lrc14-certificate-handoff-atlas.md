@@ -1,5 +1,5 @@
 ---
-id: HYP-2986
+id: HYP-2987
 title: LRC14 certificate handoff atlas and zipper theorem target
 status: PROOF-INTERFACE / labelled packet handoff atlas; not a proof
 source: codex-2026-06-24-S164b
@@ -7,6 +7,7 @@ artifacts:
   - 04-computation/lrc14_certificate_handoff_atlas_codex_s164.py
   - 05-knowledge/results/lrc14_certificate_handoff_atlas_codex_s164.out
 related:
+  - HYP-2986
   - HYP-2985
   - HYP-2984
   - HYP-2983
@@ -31,7 +32,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2986: LRC14 Certificate Handoff Atlas
+# HYP-2987: LRC14 Certificate Handoff Atlas
 
 The current LRC14 frontier is no longer a search for one scalar obstruction.
 It is a gluing problem.  The repo has strong local certificates:
@@ -47,7 +48,7 @@ analytic-sieve/Kaczynski smoothing packets
 HYP-2908/THM-572 state-lift endpoint
 ```
 
-HYP-2986 says the next proof object should be a handoff atlas: a finite list
+HYP-2987 says the next proof object should be a handoff atlas: a finite list
 of proof carriers, packet families, and allowed quotient arrows.  An arrow is
 valid only when it preserves the LRC predicate or explicitly retains the label
 that would otherwise be destroyed.
@@ -179,7 +180,7 @@ witness/dual certificate in the atlas, is the AP/Goddyn-Wong equality atom,
 or constructs the forbidden HYP-2908/THM-572 state lift.
 ```
 
-This would prove LRC14.  HYP-2986 does not prove O1-O6.  Its contribution is
+This would prove LRC14.  HYP-2987 does not prove O1-O6.  Its contribution is
 that it localizes the remaining proof debt and forbids future scalar shortcuts
 from hiding one of those six arrows.
 

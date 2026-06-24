@@ -30,9 +30,9 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: S164 Kernel Homotopy, Smoothing Dispatcher, and S164b Certificate Handoff Atlas
+## PROJECT STATUS: S164 Kernel Homotopy, Smoothing, Tope Walls, and S164b Handoff Atlas
 
-As of **Wednesday, June 24, 2026**, the newest coordination layers are **LRC14 Kernel Homotopy and Boundary-Defect Ledger (codex-S164/HYP-2984)**, **LRC14 Admissible Smoothing Dispatcher (codex-S164/HYP-2985)**, and **LRC14 Certificate Handoff Atlas (codex-S164b/HYP-2986)**.
+As of **Wednesday, June 24, 2026**, the newest coordination layers are **LRC14 Kernel Homotopy and Boundary-Defect Ledger (codex-S164/HYP-2984)**, **LRC14 Admissible Smoothing Dispatcher (codex-S164/HYP-2985)**, **LRC14 Tope-Wall Cocircuit Pass (codex-S164/HYP-2986)**, and **LRC14 Certificate Handoff Atlas (codex-S164b/HYP-2987)**.
 
 This checkpoint formalizes the bridge between **HYP-2981's** Fejer interval certificates and **HYP-2983's** Kaczynski boundary synthesis. The objective is to establish **kernel stability** for safe intervals: proving that strict lonely intervals are homotopy-invariant under smoothing perturbations, while AP/GW equality atoms are uniquely characterized as **boundary defects**.
 
@@ -74,7 +74,7 @@ S164 connects the **S161-S163** developments (quotient guardrails, Fejer manifes
 
 ## codex-S164b -- Certificate Handoff Atlas and Zipper Target (checkpoint)
 
-Formalized the **LRC14 Certificate Handoff Atlas** (HYP-2986) lane, treating
+Formalized the **LRC14 Certificate Handoff Atlas** (HYP-2987) lane, treating
 proof carriers as Tournament Analysis vertices rather than runners.
 
 - **Carrier Tournament:** Score histogram `{0:1,1:1,2:1,4:3,6:1,7:1,8:1}`,
@@ -83,9 +83,9 @@ proof carriers as Tournament Analysis vertices rather than runners.
 - **Zipper Arrows:** Source-kernel exclusion, formal interval backend, family
   compression, admissible smoothing, state-lift construction, and F7
   definition.
-- **HYP-2984 Link:** Kernel homotopy is one admissible-arrow proof inside the
-  HYP-2986 atlas: smoothing deformations must preserve packet certificates or
-  emit named boundary defects.
+- **Sibling Lanes:** Kernel homotopy (HYP-2984), admissible smoothing
+  (HYP-2985), and tope/cocircuit walls (HYP-2986) are admissible-arrow proofs
+  inside the HYP-2987 atlas.
 
 ---
 

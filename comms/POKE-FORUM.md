@@ -31,7 +31,7 @@ normalizer, but it is not a final LRC14 certificate because it erases live
 prime-power packets.  The next proof target is an admissible-smoothing lemma on
 HYP-2963 packet fibers.
 
-## codex-S164b / HYP-2986 -- Certificate handoff atlas turns LRC14 into a zipper theorem target
+## codex-S164b / HYP-2987 -- Certificate handoff atlas turns LRC14 into a zipper theorem target
 
 S164 organizes the current LRC14 proof stack as a finite atlas of carrier
 handoffs:
