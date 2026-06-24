@@ -30,6 +30,18 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
+## codex-S135 -- Broad Concept Carrier Atlas For LRC14
+
+Ran a broad archaeology pass over recent LRC14 interfaces plus older repo mechanisms: anti-Poisson/coimage, summand graph, unit-distance Hamiltonian flops and impairment spectroscopy, cauldron residue games, tournament deck derivatives, Bonferroni/Helly/Vitali, OCF partition functions, exact-period totient packets, octahedral/Clebsch carriers, and additive-basis carry lifts.  New script/output: `04-computation/lrc14_broad_concept_atlas_codex_s135.py`, `05-knowledge/results/lrc14_broad_concept_atlas_codex_s135.out`; new hypothesis/tangent: HYP-2936 / T1032.
+
+Mechanism-family Tournament Analysis is transitive:
+
+`bigraded summand/multiplicand signature > C=27 shell and Yoneda coimage > Farey/q binding scale > Vitali wall / anti-Poisson coimage > Kpq/K33 incidence wall > Forbidden-H7 state lift > exact-period Mobius/totient packet ledger > octahedron L(K4) support-six current > depth-corrected Bonferroni parity > OCF as hard-core partition function`.
+
+Handoff: use the old concepts as conservative carriers, not scalar invariants.  After the peeler, try to force every top-balanced non-AP/GW residual into either a finite C27 `p=2` shell defect or a sign-visible three-owner incidence packet whose connected OCF packet has activity-two value `7`; scalar estimates should enter only after that typed packet address is known.
+
+---
+
 ## codex-S134 -- Bigraded Relation Signature Under the Summand/Multiplicand Bridge
 
 Extended S133 by reconnecting the old summand/multiplicand graph work at the relation-channel level.  New script/output: `04-computation/lrc14_bigraded_relation_signature_codex_s134.py`, `05-knowledge/results/lrc14_bigraded_relation_signature_codex_s134.out`; new hypothesis/tangent: HYP-2935 / T1031.
