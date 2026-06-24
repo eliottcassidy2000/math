@@ -5,15 +5,23 @@ sieve limit N=200000
 Arithmetic sums at LRC/Goldbach packet checkpoints
 Q        pi(Q)   theta/Q     M(Q)    M/sqrtQ      sum_mu/n      G=sum_mu2/phi   G-logQ     Phi(Q)
     14        6   0.736425       -2   -0.534522   -0.00592741       4.01666667   1.377609         64
+    25        9   0.768924       -2   -0.400000   -0.00112052       4.48851010   1.269634        200
     27        9   0.711967       -1   -0.192450    0.03734102       4.57184343   1.276007        230
+    36       11   0.722899       -1   -0.166667    0.02555309       4.92005772   1.336539        396
     41       13   0.813387       -1   -0.156174    0.02609263       5.07005772   1.356486        530
+    63       18   0.843158       -1   -0.125988    0.01598324       5.45060847   1.307474       1228
     64       18   0.829983       -1   -0.125000    0.01598324       5.45060847   1.291725       1260
+    84       23   0.888870       -4   -0.436436   -0.02511641       5.76528860   1.334472       2166
+    98       25   0.854371        1    0.101015    0.03113153       5.91054415   1.325577       2944
    128       31   0.874328       -2   -0.176777   -0.00056908       6.17207549   1.320045       5022
+   168       39   0.904362       -1   -0.077152    0.00689673       6.44228672   1.318323       8610
    256       54   0.906715       -1   -0.062500    0.00455000       6.87869165   1.333514      19948
+   280       59   0.928789       -3   -0.179284   -0.00301586       6.96299216   1.328203      23860
    512       97   0.951186       -4   -0.176777   -0.00456388       7.57766009   1.339335      79852
   1024      172   0.960877       -4   -0.125000   -0.00149497       8.26584763   1.334376     318964
   2048      309   0.969486        7    0.154680    0.00427439       8.95581611   1.331197    1275586
   4096      564   0.983254      -19   -0.296875   -0.00411701       9.65019926   1.332433    5100020
+  4312      590   0.984313       -9   -0.137058   -0.00172997       9.70208512   1.332928    5652414
   8192     1028   0.984392       22    0.243068    0.00287450      10.34382878   1.332915   20401610
  16384     1900   0.992132      -32   -0.250000   -0.00184058      11.03650591   1.332445   81599338
  32768     3512   0.992274       26    0.143631    0.00092123      11.72976318   1.332555  326387384
@@ -24,10 +32,17 @@ Q        pi(Q)   theta/Q     M(Q)    M/sqrtQ      sum_mu/n      G=sum_mu2/phi   
 LRC exact-period denominator packet readings
 q     factorization        phi(q)  mu(q)  mu2/phi(q)  Phi(q)  G(q)  Selberg 1/G
  14  2*7                      6      1   0.16666667      64  4.0167  0.24896266
+ 25  5^2                     20      0   0.00000000     200  4.4885  0.22279108
  27  3^3                     18      0   0.00000000     230  4.5718  0.21873015
+ 36  2^2*3^2                 12      0   0.00000000     396  4.9201  0.20324965
  41  41                      40     -1   0.02500000     530  5.0701  0.19723641
+ 63  3^2*7                   36      0   0.00000000    1228  5.4506  0.18346576
  84  2^2*3*7                 24      0   0.00000000    2166  5.7653  0.17345185
+ 98  2*7^2                   42      0   0.00000000    2944  5.9105  0.16918916
 168  2^3*3*7                 48      0   0.00000000    8610  6.4423  0.15522439
+280  2^3*5*7                 96      0   0.00000000   23860  6.9630  0.14361642
+4312  2^3*7^2*11            1680      0   0.00000000 5652414  9.7021  0.10307063
+Squarefree blindness warning: mu^2/phi keeps q=14 and prime q=41, but zeroes prime-power or repeated-prime exact-period packets such as 25,27,36,63,84,98,168,280,4312.  Those denominators need a Ramanujan/endpoint/Fejer/Kaczynski side channel before the quotient is theorem-safe.
 
 Large-sieve / Selberg normalizer readout
 G(z)=sum_{d<=z} mu(d)^2/phi(d) is the dimension-one inverse-unit normalizer.  Numerically G(z)-log z is already slowly stabilizing, so inverse primitive-unit cost is logarithmic after squarefree normalization, while Phi(z)=sum phi(q) is quadratic packet capacity.
@@ -53,23 +68,24 @@ Prompt bridge: Goldbach explicit machinery as packet guardrails
 
 Tournament Analysis
 vertices are analytic proof carriers, not runners or arcs
-pairwise observable: retention vector = local data, Mobius sign, scale tail, unit capacity, quadratic kernel, family phase control, major/minor split, smoothing/zero packet
+pairwise observable: retention vector = local data, Mobius sign, scale tail, unit capacity, quadratic kernel, family phase control, major/minor split, smoothing/zero packet, boundary approach class
 tie Hamiltonian path: listed vertex order
-score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
 directed_3cycles=0
 hamiltonian_paths=1
-Hamiltonian path: labelled_lrc_interval_packet > explicit_formula_smoothing_packet > circle_method_major_minor_split > large_sieve_minor_arc_packet > selberg_quadratic_upper_packet > squarefree_unit_normalizer_G > mu_over_n_explicit_tail > mertens_mobius_cancellation > raw_prime_count
+Hamiltonian path: labelled_lrc_interval_packet > kaczynski_boundary_approach_packet > explicit_formula_smoothing_packet > circle_method_major_minor_split > large_sieve_minor_arc_packet > selberg_quadratic_upper_packet > squarefree_unit_normalizer_G > mu_over_n_explicit_tail > mertens_mobius_cancellation > raw_prime_count
 
 Carrier notes
-raw_prime_count                        score=(1, 0, 0, 0, 0, 0, 0, 0) :: counts primes but forgets residues, smoothing, and packet labels
-mertens_mobius_cancellation            score=(1, 1, 0, 0, 0, 0, 0, 0) :: keeps signed squarefree cancellation but not unit capacity
-mu_over_n_explicit_tail                score=(1, 1, 1, 0, 0, 0, 0, 0) :: normalizes Mobius cancellation by scale; useful tail guard
-squarefree_unit_normalizer_G           score=(1, 1, 1, 1, 0, 0, 0, 0) :: G(x)=sum mu^2/phi keeps inverse primitive-unit packet cost
-selberg_quadratic_upper_packet         score=(1, 1, 1, 1, 1, 0, 0, 0) :: quadratic upper-bound sieve declares lambda_d and kernel
-large_sieve_minor_arc_packet           score=(1, 1, 1, 1, 1, 1, 0, 0) :: large sieve controls families of phases/exceptions
-circle_method_major_minor_split        score=(1, 1, 1, 1, 1, 1, 1, 0) :: major/minor arcs retain local main term plus oscillatory error
-explicit_formula_smoothing_packet      score=(1, 1, 1, 1, 1, 1, 1, 1) :: smoothing transform plus zero/exponential-sum terms are declared
-labelled_lrc_interval_packet           score=(2, 2, 2, 2, 2, 2, 2, 2) :: HYP-2981-style packet: endpoint, route, interval, and handoff labels
+raw_prime_count                        score=(1, 0, 0, 0, 0, 0, 0, 0, 0) :: counts primes but forgets residues, smoothing, and packet labels
+mertens_mobius_cancellation            score=(1, 1, 0, 0, 0, 0, 0, 0, 0) :: keeps signed squarefree cancellation but not unit capacity
+mu_over_n_explicit_tail                score=(1, 1, 1, 0, 0, 0, 0, 0, 0) :: normalizes Mobius cancellation by scale; useful tail guard
+squarefree_unit_normalizer_G           score=(1, 1, 1, 1, 0, 0, 0, 0, 0) :: G(x)=sum mu^2/phi keeps inverse primitive-unit packet cost
+selberg_quadratic_upper_packet         score=(1, 1, 1, 1, 1, 0, 0, 0, 0) :: quadratic upper-bound sieve declares lambda_d and kernel
+large_sieve_minor_arc_packet           score=(1, 1, 1, 1, 1, 1, 0, 0, 0) :: large sieve controls families of phases/exceptions
+circle_method_major_minor_split        score=(1, 1, 1, 1, 1, 1, 1, 0, 0) :: major/minor arcs retain local main term plus oscillatory error
+explicit_formula_smoothing_packet      score=(1, 1, 1, 1, 1, 1, 1, 1, 0) :: smoothing transform plus zero/exponential-sum terms are declared
+kaczynski_boundary_approach_packet     score=(1, 1, 1, 1, 1, 1, 1, 1, 1) :: exceptional/boundary approach class is retained as proof data
+labelled_lrc_interval_packet           score=(2, 2, 2, 2, 2, 2, 2, 2, 2) :: HYP-2981-style packet: endpoint, route, interval, and handoff labels
 
 LRC14 theorem-facing readout
 A Selberg/large-sieve packet is useful for LRC14 only as a middle certificate: it may bound a family of late denominators or exceptional phases, but HYP-2978/HYP-2981 still require endpoint, route, safe-measure, Fejer interval, Ramanujan, or state-lift labels.

@@ -30,6 +30,10 @@ right language for "how many unit packets are killed or survive."
 Selberg/large-sieve thinking.  It grows like `log Q + C`, with the computation
 already showing `G(200000)-log(200000) ~= 1.3325`.
 
+The extended denominator audit makes the loss concrete: `mu^2/phi` sees the
+squarefree and prime packets `14` and `41`, but it zeroes prime-power or
+repeated-prime exact-period packets `25,27,36,63,84,98,168,280,4312`.
+
 So LRC has a new guardrail:
 
 ```text
@@ -49,6 +53,11 @@ These are not the same theorem, but they give the same LRC instruction:
 ```text
 exceptional set = boundary approach class that must be labelled
 ```
+
+Rebasing over HYP-2983 made the division of labor cleaner.  This reflection and
+HYP-2982 are the finite weight-atlas side: `Phi`, `G`, and squarefree blindness.
+HYP-2983 is the companion proof-template side: labelled source kernels,
+exponential-sum engines, smoothing choices, and Kaczynski boundary resonance.
 
 This fits HYP-2679's far-runner boundary-function view and HYP-2901's lcm wall.
 The hard part is not the generic bulk; it is the labelled exceptional approach
@@ -76,4 +85,3 @@ The final slogan is simple enough to be dangerous:
 large sieve without packet labels is just another scalar quotient.
 large sieve with packet labels is a possible LRC14 proof bridge.
 ```
-

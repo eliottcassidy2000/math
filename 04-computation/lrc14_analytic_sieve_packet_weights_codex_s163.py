@@ -26,15 +26,23 @@ from math import gcd, log, sqrt
 N = 200_000
 CHECKPOINTS = [
     14,
+    25,
     27,
+    36,
     41,
+    63,
     64,
+    84,
+    98,
     128,
+    168,
     256,
+    280,
     512,
     1024,
     2048,
     4096,
+    4312,
     8192,
     16384,
     32768,
@@ -42,7 +50,7 @@ CHECKPOINTS = [
     131072,
     200000,
 ]
-LRC_QS = [14, 27, 41, 84, 168]
+LRC_QS = [14, 25, 27, 36, 41, 63, 84, 98, 168, 280, 4312]
 
 
 def linear_mu_phi(limit: int):
@@ -164,47 +172,52 @@ def carrier_tournament():
     vertices = [
         (
             "raw_prime_count",
-            (1, 0, 0, 0, 0, 0, 0, 0),
+            (1, 0, 0, 0, 0, 0, 0, 0, 0),
             "counts primes but forgets residues, smoothing, and packet labels",
         ),
         (
             "mertens_mobius_cancellation",
-            (1, 1, 0, 0, 0, 0, 0, 0),
+            (1, 1, 0, 0, 0, 0, 0, 0, 0),
             "keeps signed squarefree cancellation but not unit capacity",
         ),
         (
             "mu_over_n_explicit_tail",
-            (1, 1, 1, 0, 0, 0, 0, 0),
+            (1, 1, 1, 0, 0, 0, 0, 0, 0),
             "normalizes Mobius cancellation by scale; useful tail guard",
         ),
         (
             "squarefree_unit_normalizer_G",
-            (1, 1, 1, 1, 0, 0, 0, 0),
+            (1, 1, 1, 1, 0, 0, 0, 0, 0),
             "G(x)=sum mu^2/phi keeps inverse primitive-unit packet cost",
         ),
         (
             "selberg_quadratic_upper_packet",
-            (1, 1, 1, 1, 1, 0, 0, 0),
+            (1, 1, 1, 1, 1, 0, 0, 0, 0),
             "quadratic upper-bound sieve declares lambda_d and kernel",
         ),
         (
             "large_sieve_minor_arc_packet",
-            (1, 1, 1, 1, 1, 1, 0, 0),
+            (1, 1, 1, 1, 1, 1, 0, 0, 0),
             "large sieve controls families of phases/exceptions",
         ),
         (
             "circle_method_major_minor_split",
-            (1, 1, 1, 1, 1, 1, 1, 0),
+            (1, 1, 1, 1, 1, 1, 1, 0, 0),
             "major/minor arcs retain local main term plus oscillatory error",
         ),
         (
             "explicit_formula_smoothing_packet",
-            (1, 1, 1, 1, 1, 1, 1, 1),
+            (1, 1, 1, 1, 1, 1, 1, 1, 0),
             "smoothing transform plus zero/exponential-sum terms are declared",
         ),
         (
+            "kaczynski_boundary_approach_packet",
+            (1, 1, 1, 1, 1, 1, 1, 1, 1),
+            "exceptional/boundary approach class is retained as proof data",
+        ),
+        (
             "labelled_lrc_interval_packet",
-            (2, 2, 2, 2, 2, 2, 2, 2),
+            (2, 2, 2, 2, 2, 2, 2, 2, 2),
             "HYP-2981-style packet: endpoint, route, interval, and handoff labels",
         ),
     ]
@@ -254,6 +267,12 @@ def main() -> None:
             f"{q:3d}  {fac:<18s} {phi[q]:7d} {mu[q]:6d}"
             f" {mu2_over_phi:12.8f} {Phi[q]:7d} {G[q]:7.4f} {1/G[q]:11.8f}"
         )
+    print(
+        "Squarefree blindness warning: mu^2/phi keeps q=14 and prime q=41, "
+        "but zeroes prime-power or repeated-prime exact-period packets such as "
+        "25,27,36,63,84,98,168,280,4312.  Those denominators need a "
+        "Ramanujan/endpoint/Fejer/Kaczynski side channel before the quotient is theorem-safe."
+    )
 
     print("\nLarge-sieve / Selberg normalizer readout")
     print(
@@ -324,7 +343,7 @@ def main() -> None:
     print(
         "pairwise observable: retention vector = local data, Mobius sign,"
         " scale tail, unit capacity, quadratic kernel, family phase control,"
-        " major/minor split, smoothing/zero packet"
+        " major/minor split, smoothing/zero packet, boundary approach class"
     )
     print("tie Hamiltonian path: listed vertex order")
     vertices, edges = carrier_tournament()
@@ -355,4 +374,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
