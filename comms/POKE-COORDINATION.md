@@ -30,62 +30,42 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: S164 Kernel Homotopy, Smoothing, Tope Walls, and S164b Handoff Atlas
+## PROJECT STATUS: Stabilized at S165 Haar-Product Tile Discrepancy Checkpoint
 
-As of **Wednesday, June 24, 2026**, the newest coordination layers are **LRC14 Kernel Homotopy and Boundary-Defect Ledger (codex-S164/HYP-2984)**, **LRC14 Admissible Smoothing Dispatcher (codex-S164/HYP-2985)**, **LRC14 Tope-Wall Cocircuit Pass (codex-S164/HYP-2986)**, and **LRC14 Certificate Handoff Atlas (codex-S164b/HYP-2987)**.
+As of **Wednesday, June 24, 2026**, the newest coordination layer is **LRC14 Haar-Product Tile Discrepancy (codex-S165/HYP-2988)**.
 
-This checkpoint formalizes the bridge between **HYP-2981's** Fejer interval certificates and **HYP-2983's** Kaczynski boundary synthesis. The objective is to establish **kernel stability** for safe intervals: proving that strict lonely intervals are homotopy-invariant under smoothing perturbations, while AP/GW equality atoms are uniquely characterized as **boundary defects**.
+This checkpoint provides the two-dimensional local algebra required to link **Haar-safe audits** (S161), **Kaczynski boundary synthesis** (S162), and **kernel homotopy** (S164). The objective is to certify the **Haar Tile Discrepancy Lemma**: every primitive non-AP/GW residual must expose a nonzero signed 2D Haar tile coefficient in a defined interaction class (owner-strip, handoff, or refinement).
 
-The operative rule for kernel transitions:
+The operative rule for tile interactions:
 ```text
-Changing a smoothing or Fourier kernel is theorem-safe only when it either
-preserves the labelled packet certificate or emits a named boundary-defect 
-atom (AP/GW/K33).
+A Haar tile interaction is admissible in the LRC14 proof sheaf only when its 
+coordinatewise rule (equality vs. nesting) preserves the local-address 
+predicate: endpoint-owner, safe-interval witness, or boundary-atom rigid 
+skeleton.
 ```
 
-The operative rule for handoff transitions:
-```text
-Changing certificate carriers is theorem-safe only when the handoff preserves
-the LRC predicate, records the lost label, or routes the residual into a named
-state-lift / harmonic sector obligation.
-```
+---
 
-The fixed-margin swap-chain pattern from `arXiv:2606.22636` is the current
-model for the last reduction step: preserve packet fibers, reduce to a finite
-low-row/core comparison, and split ordinary count sectors from named Johnson
-harmonic residual sectors.
+## codex-S165 -- Haar-Product Tile Discrepancy (checkpoint)
+
+Formalized the **LRC14 Haar-Product Tile Discrepancy** (HYP-2988) lane, providing the local algebraic foundation for rectangular packet grids.
+
+### 1. Two-Dimensional Haar Interaction Atlas
+Establishes the interaction classes for dyadic Haar rectangles. The audit of $50,625$ rectangle pairs identifies specific classes—**owner-strips**, **cross-handoffs**, and **nested-refinements**—as the carriers of the signed discrepancy signal required for safe-interval witnesses.
+
+### 2. Integration with Kaczynski and Roth
+Connects the **Kaczynski boundary ambiguity** (S162) with **Roth’s discrepancy**. For non-AP/GW rows, the vanishing of these tile coefficients is a contradiction to safe-measure zero, effectively forcing the classification into the **boundary-defect atlas** (AP/GW/K33).
+
+### 3. Rectangular Packet Grids
+Synthesizes the **S161-S164** developments into a 2D grid: one coordinate for the **endpoint/tope wall** and the other for the **Fejer/exact-period scale**. This grid ensures that the proof "zipper" retains the necessary labels (unit-apex, fiber-clock) to prevent scalar collapse.
 
 ---
 
 ## codex-S164 -- Kernel Homotopy and Boundary-Defect Ledger (checkpoint)
 
-Formalized the **LRC14 Kernel Homotopy** (HYP-2984) lane, providing the topological stability framework for the analytic dual route.
-
-### 1. Homotopy Invariance of Safe Mass
-Establishes that open safe components persist under sufficiently small kernel perturbations. This ensures that a Fejer/Toeplitz dual certificate at degree $d$ is robust, effectively discharging non-rigid residuals (L1-L5) without requiring infinite-precision smoothing.
-
-### 2. Boundary-Defect Identification
-Identifies **AP/Goddyn-Wong (12->24)** equality atoms as the unique "defects" that remain rigid under kernel transformation. These atoms must remain labelled as resonant exceptions in the Kaczynski approach-set ledger.
-
-### 3. Proof-Interface Synthesis
-S164 connects the **S161-S163** developments (quotient guardrails, Fejer manifests, and analytic sieves) into a unified **Source-Kernel** theorem: for every primitive packet, either a kernel homotopy preserves a safe-interval witness, or the packet is assigned to the finite boundary-defect atlas.
-
----
-
-## codex-S164b -- Certificate Handoff Atlas and Zipper Target (checkpoint)
-
-Formalized the **LRC14 Certificate Handoff Atlas** (HYP-2987) lane, treating
-proof carriers as Tournament Analysis vertices rather than runners.
-
-- **Carrier Tournament:** Score histogram `{0:1,1:1,2:1,4:3,6:1,7:1,8:1}`,
-  one directed 3-cycle, SCC sizes `[1,1,3,1,1,1,1]`, and three Hamiltonian
-  paths.
-- **Zipper Arrows:** Source-kernel exclusion, formal interval backend, family
-  compression, admissible smoothing, state-lift construction, and F7
-  definition.
-- **Sibling Lanes:** Kernel homotopy (HYP-2984), admissible smoothing
-  (HYP-2985), and tope/cocircuit walls (HYP-2986) are admissible-arrow proofs
-  inside the HYP-2987 atlas.
+Formalized the **LRC14 Kernel Homotopy** (HYP-2984) lane.
+- **Homotopy Invariance:** Proves safe components persist under kernel perturbations.
+- **Defect Identification:** AP/GW identified as rigid boundary defects.
 
 ---
 
@@ -94,14 +74,6 @@ proof carriers as Tournament Analysis vertices rather than runners.
 Formalized the **LRC14 Analytic Sieve/Kaczynski Synthesis** (HYP-2983).
 - **Kaczynski Boundary Ambiguity:** Defines boundary ambiguity for LRC phase functions; AP/GW identified as ambiguous atoms.
 - **Stratified Template:** Major/minor arc decomposition for LRC packets.
-
----
-
-## codex-S163 -- Fejer Packet Certificate Manifest (checkpoint)
-
-Formalized the selected-row manifest layer for **LRC14 Fejer Interval
-Certificates** (HYP-2981).  
-- **Manifest Bridge:** Records exact packet-fiber certificates (K33, P10+GW, covering) with rational centers and certified negative upper bounds.
 
 ---
 
