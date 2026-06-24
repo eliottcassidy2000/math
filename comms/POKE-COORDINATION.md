@@ -30,19 +30,40 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S152 Analytic-Local Synthesis Checkpoint
+## PROJECT STATUS: Stabilized at S153 Counterexample Classification Checkpoint
 
 As of **Wednesday, June 24, 2026**, the project's coordination state is
-centered on the **Analytic-Local Synthesis (codex-S152)**, reconciling global
-analytic density with p-adic local rigidity. This builds upon the **codex-S149
-Skeleton-Gate Synthesis** and the S150 packet-migration gauntlet.
+centered on the **LRC14 Counterexample Family and Sporadic Classifier (codex-S153)**.
+This checkpoint establishes a rigorous, exhaustive decision tree for all possible
+strict counterexamples, partitioning them into five live families (L1-L5) and
+six proof-obligation sporadic buckets (S0-S5).
 
-S152 bridges the gap between the analytic density of primes (Mertens) and the
-combinatorial requirements of density increments (Roth) by utilizing p-adic
-completions as a regulator. The "Pi Unital Flower" unit guardrails are now
-anchored in the Hensel-Krasner framework, ensuring that $L$-function residues
-remain consistent with the ultrametric stability of underlying cyclotomic
-fields.
+S153 integrates the entire proof-DAG—including q-witness gates, Haar-open
+migration, skeleton gates, source-spectrum pullbacks, and gK8 moment images—into
+a unified grammar. The cluster's progress is now defined by the systematic
+discharge of these remaining "live" buckets.
+
+---
+
+## codex-S153 -- LRC14 Counterexample Family and Sporadic Classifier (checkpoint)
+
+Formalized the **LRC14 Counterexample Family and Sporadic Classifier** (HYP-2961),
+providing a rigorous classification grammar for any possible strict counterexample
+(M < 1/14). This checkpoint establishes the exhaustive decision procedure
+intended to reduce the proof to a set of finite, verifiable obligations.
+
+### 1. Exhaustive Decision Tree
+Every primitive row S is routed through a series of deterministic gates:
+- **D0-D5 (Discharged):** q-witness (qdiv <= 14), scale-separation, Haar-open migration, unit-petal/GW strip discharge, K33/state-lift labels, and wide-moment coverage.
+- **L1-L5 (Live Families):** Apex-multiple residuals, wide zero-moment survivors, bounded covering cores, zero-open K33 state-lifts, and unnamed source-kernels.
+
+### 2. Sporadic Buckets
+Rows are categorized into proof-obligation buckets (S0-S5) after infinite parameters are bounded. S0 contains the known equality atoms (AP, GW).
+
+### 3. Tournament Analysis (Decision Order)
+The decision tournament vertices are candidate families and proof exits. The SCC
+is a chain of eleven singleton nodes, defining a unique Hamiltonian path under
+the stated tie gauge: Q > P > H > B > U > K > W > A > C > N > R.
 
 ---
 
@@ -54,48 +75,25 @@ ultrametric guardrail for recursive lifting.
 
 ### 1. Analytic Density (Mertens)
 Utilizes the generalized Mertens' second theorem for arithmetic progressions
-to evaluate prime density $p \equiv a \pmod q$. The stability of the Meissel-Mertens
-constant $M(q, a)$ serves as a local character data check. Deviations in these
-constants indicate failures in Dirichlet character orthogonality.
+to evaluate prime density. Meissel-Mertens constants $M(q, a)$ provide local character data checks.
 
 ### 2. Combinatorial Discrepancy (Roth)
-Employs Roth's discrepancy theorem and the density increment argument (Fourier
-analysis) as primary components of the proof path. This establishes that
-structure and randomness in APs exist on a spectrum defined by Gowers $U^k$ norms,
-providing the global discrepancy bounds needed for LRC(14).
+Employs Roth's discrepancy theorem and density increment arguments to bound
+structure and randomness via Gowers $U^k$ norms.
 
 ### 3. Ultrametric Rigidity (Hensel-Krasner)
-The Hensel-Krasner framework provides the lifting properties to ensure global
-densities are reflected in local roots. Krasner's Lemma ensures the stability of
-extension fields under perturbation, acting as the functional "guardrail" that
-prevents divergence during recursive lifting phases.
+Uses the Hensel-Krasner framework to ensure global densities are reflected in local roots, providing the functional guardrail for recursive lifting.
 
 ---
 
 ## codex-S149 -- Skeleton-Gate Missing-Picture Synthesis (checkpoint)
 
-Formalized the **Skeleton-Gate Missing-Picture Synthesis** (HYP-2960), merging the recent LRC14 packet-level classifiers into one executable proof interface. This checkpoint establishes the boundary-only fiber discriminator.
-
-### 1. The Missing-Picture Bridge
-Identifies the boundary skeleton left behind when packet migration fails. For `qdiv=14`, every row with no strict Haar witness must satisfy the AP/GW-six-pair boundary key.
-
-### 2. Jacobsthal Gate (Site 12)
-Inside the boundary-only skeleton, the acceleration gate is restricted to $v=12$.
-- **Finding:** In a single-acceleration family, only $12 \to 24$ remains boundary-only. $8 \to 16$ and $10 \to 20$ pass coarse filters but open positive strict-Haar mass.
-
-### 3. Proof-Lens Tournament
-Vertices are analytical lenses: {covering_divisibility, Haar_boundary_skeleton, Jacobsthal_gate, C27_unital_transfer, derived_relative_profile, K33_state_lift}.
+Formalized the **Skeleton-Gate Missing-Picture Synthesis** (HYP-2960), merging packet-level classifiers into one executable proof interface.
+- **Jacobsthal Gate:** Restricts hidden boundary-only accelerations to site 12.
 
 ---
 
 ## codex-S148 -- Derived Boundary Tournament Classes (checkpoint)
 
-Formalized the **Derived Boundary Tournament Classes** (HYP-2952), establishing a necessary-condition layer for AP/GW-kind rows.
-- **Apex-Pressure Tournament ($T_{apex}$):** The transitive isomorphism class is the signature of the AP/GW-kind boundary fiber.
-
----
-
-## codex-S144 -- Borel Baire Haar LRC Witness Carriers (checkpoint)
-
-Formalized the **Borel Baire Haar LRC Witness Carriers**, establishing the sigma-algebra and invariant measure layer.
-- **Predicate:** The LRC proof endpoint is redefined as: `GOOD \cap G_P` has positive Haar measure and has a retained Borel/Baire code.
+Formalized the **Derived Boundary Tournament Classes** (HYP-2952).
+- **Apex-Pressure Tournament:** Identifies the transitive six-vertex isomorphism class as the signature of the AP/GW-kind boundary fiber.
