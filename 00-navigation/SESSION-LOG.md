@@ -27,6 +27,14 @@ scalarizing q-blocked witness data.  For `q=14`, `c_14(r+s)` is a trace form of
 the AP/GW endpoint-credit equality `r+s==0 mod 14`; `c_14(r-r')` retains exact
 residue coincidence.  Computation and theorem testing remain pending in this
 same session.
+and HYP-2975 taut-bridge work.  A concurrent S161 push reserved HYP-2978/T1062
+for Ramanujan-divisor quotient guardrails, so this exact-period projector route
+was moved to HYP-2979/T1063 as the retained-packet companion.  Stub claim: use
+`c_q(n)` as the primitive-unit trace that keeps denominator, unit, parity, and
+seven-adic packet labels before scalarizing q-blocked witness data.  For `q=14`,
+`c_14(r+s)` is a trace form of the AP/GW endpoint-credit equality
+`r+s==0 mod 14`; `c_14(r-r')` retains exact residue coincidence.  Computation
+and theorem testing remain pending in this same session.
 
 ## codex-2026-06-24-S160 -- holistic LRC14 proof-history synthesis fills HYP-2976
 

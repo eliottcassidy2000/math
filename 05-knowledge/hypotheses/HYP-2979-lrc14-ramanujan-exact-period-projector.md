@@ -22,8 +22,10 @@ related:
 # HYP-2979: LRC14 Ramanujan Exact-Period Projector Packets
 
 This file reserves the exact-period Ramanujan-sum route requested in the
-2026-06-24 Ramanujan prompt. The proposed object is not a proof yet. It is a
-packet interface between:
+2026-06-24 Ramanujan prompt. It is deliberately separate from HYP-2978's
+Ramanujan-divisor quotient guardrail: HYP-2978 says what a quotient is allowed
+to forget, while this hypothesis proposes one retained exact-period quotient.
+The proposed object is not a proof yet. It is a packet interface between:
 
 - HYP-2972's rational twist ladder,
 - HYP-2973's danger-count moments,

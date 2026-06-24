@@ -23,6 +23,7 @@
 ## Lead codex-2026-06-24: Ramanujan exact-period projectors for LRC14
 
 **Status:** ACTIVE STUB (HYP-2979/T1063, child route of HYP-2978). Ramanujan sums turn primitive
+**Status:** ACTIVE STUB (HYP-2979/T1063, companion to HYP-2978). Ramanujan sums turn primitive
 q-th roots into an integer projector:
 `c_q(n)=sum_{(a,q)=1}exp(2*pi*i*a*n/q)=sum_{d|gcd(q,n)}d*mu(q/d)`.
 This looks tailor-made for the current LRC14 stack because the hard rows are
