@@ -4,6 +4,7 @@ title: LRC14 holistic lineage synthesis and proof-object convergence
 status: SYNTHESIS / evidence-backed proof-object map and convergence target; not a proof of LRC14
 source: codex-2026-06-24-S160
 related:
+  - HYP-2980
   - HYP-2979
   - HYP-2978
   - HYP-2977
@@ -803,3 +804,9 @@ labelled proof packet over a Farey/Haar endpoint sheaf.
 
 That is the object HYP-2976 proposes to prove with, or to falsify by producing
 a packet that survives every declared exit.
+
+Companion after rebase: HYP-2980 is the S159 route-atlas/proof-kernel pass
+over the same lineage request.  It should be read as a route-frequency and
+proof-carrier Tournament Analysis complement to this S160 history miner, while
+HYP-2977 is the spectral-shadow dual route and HYP-2978/HYP-2979 are the
+Ramanujan quotient guardrail/projector lanes.
