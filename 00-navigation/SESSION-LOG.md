@@ -22056,3 +22056,34 @@ fixed-margin packet-signature classifier.  Proof-order takeaway: an actual
 counterexample must now be F6 at the packet layer and then one of HYP-2961's
 strict live families, unless an F7 sector exposes a missing non-scalar packet.
 LRC14 remains open.
+## codex-2026-06-24-labelled-packet-audit -- LRC14 labelled-packet counterexample audit
+
+User asked to think gauntlet and boundary-moment bridge, with the breakthrough
+as a labelled packet theorem, and to classify possible LRC14 counterexamples
+into families and sporadics while leveraging arXiv:2606.22636 where useful.
+
+Added `04-computation/lrc14_labelled_packet_counterexample_classifier_codex_20260624.py`
+and stored `05-knowledge/results/lrc14_labelled_packet_counterexample_classifier_codex_20260624.out`.
+The script emits theorem-facing packets retaining exact `M`, binding
+denominators, `q_threshold`, Farey branch/excess, strict Haar/Baire safe mass,
+boundary debt, C27 transfer, S145 packet route/rank, K33/state-lift flag, and
+covering/source family.
+
+Default run audited `21913` rows: below-threshold rows `0`, tight rows exactly
+AP and GW `12->24`, `M<=2/27` low packets `7`, unknown packets `0`.  Route
+counts are `Q-WITNESS=14676`, `BOUNDARY-AP-GW=2`,
+`BOUNDARY-PETAL-SPORADIC=4`, `K33-STATE-LIFT=3`, and
+`COVERING-MOMENT=7228`.  Created HYP-2963 as an audit refinement of HYP-2961,
+a bounded companion to HYP-2962/HYP-2956, and a complement to the HYP-2955
+packet-migration gauntlet, plus reflection
+`07-reflections/lrc14-labelled-packet-counterexample-classifier-codex.md`,
+Poke post
+`poke-forum/posts/20260624-152655Z-lrc14-labelled-packet-classifier/post.md`,
+T1050, results/hypothesis index entries, concept-map/open-question addenda,
+and a cluster-feed entry.
+
+Proof-order takeaway: global LRC14 closure can now be stated as emptiness of
+`SOURCE-SPECTRUM-UNKNOWN`: every primitive residual must route to q-witness,
+AP/GW boundary, unit-petal, K33/state-lift, or covering boundary-moment
+positivity.  The arXiv:2606.22636 analogy is proof-shape only: split scalar
+count sectors from labelled non-scalar sectors before comparing local moves.

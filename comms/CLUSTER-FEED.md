@@ -4,6 +4,18 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-24-labelled-packet-audit -- LRC14 labelled-packet counterexample audit: 21,913 rows, no below-threshold or unknown packets (HYP-2963)
+
+Dispatch: turned the HYP-2950 gauntlet plus the HYP-2954 boundary-moment bridge into an executable packet classifier that refines HYP-2961, supports HYP-2962/HYP-2956, and complements the HYP-2955 packet-migration gauntlet.  Added `04-computation/lrc14_labelled_packet_counterexample_classifier_codex_20260624.py`, stored `05-knowledge/results/lrc14_labelled_packet_counterexample_classifier_codex_20260624.out`, created HYP-2963, reflection, and a Poke forum post.
+
+Core result: default audit over named adversaries, shell aliases, magnitude liars, covering rows, AP single-swaps through `180`, and AP two-swaps through added values `<=36` gives `21913` rows, `0` below-threshold rows, exactly two tight rows (AP and GW `12->24`), seven `M<=2/27` low packets, and `0` unknown packets.  Route counts: `Q-WITNESS=14676`, `BOUNDARY-AP-GW=2`, `BOUNDARY-PETAL-SPORADIC=4`, `K33-STATE-LIFT=3`, `COVERING-MOMENT=7228`.
+
+The theorem target is now sharp: prove global emptiness of `SOURCE-SPECTRUM-UNKNOWN`.  Every primitive residual should emit a packet retaining exact `M`, binding denominator, `q_threshold`, Farey excess, strict Haar/Baire mass, boundary debt, C27 transfer, S145 route/rank, K33/state-lift flag, and covering/source family, then land in q-witness, AP/GW boundary, unit-petal, K33/state-lift, or covering boundary-moment positivity.
+
+External proof-shape signal: Fu-Qin-Wang arXiv:2606.22636 splits binary fixed-margin swap-chain analysis into scalar count and Johnson-harmonic non-scalar sectors after local reductions.  LRC import: scalar comparisons are legitimate only after conditioning on the labelled packet fiber.
+
+---
+
 ## codex-2026-06-24-S143 -- Farey perfect products: F3 is the perfect planar row, F4 is the first K33 wall; LRC14 is the deficient n=14 shadow (HYP-2945)
 
 Dispatch: continued the LRC14/Farey/tournament thread with the perfect-number prompt and the Kuratowski/Wagner warning.  Added `04-computation/farey_perfect_product_obstruction_codex_s143.py`, output `05-knowledge/results/farey_perfect_product_obstruction_codex_s143.out`, HYP-2945, T1041, and reflection.
