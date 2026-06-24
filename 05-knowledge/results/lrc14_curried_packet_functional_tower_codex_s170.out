@@ -1,0 +1,123 @@
+LRC14 CURRIED PACKET FUNCTIONAL TOWER
+status: synthesis scout / proof-interface guardrail, not a proof
+
+Core total evaluator:
+  E : S -> P(S) -> root -> lane -> fiber -> certificate -> verdict
+  A quotient is a partial evaluation of E plus a declared lost-coordinate function.
+
+Quotient audit law:
+  lost_Q(coord)(y)(x,x') = coord(x) - coord(x') on the fiber Q^-1(y)
+  allowed iff lost_Q is zero, reconstructed, coboundary/exact,
+  dual-annihilated, descended to a family, AP/GW boundary equality,
+  or routed to F7/THM-572 residual debt.
+
+Fibonacci path-rank partial evaluations:
+  A(2)(k) row=1            sum=1
+  A(3)(k) row=1+1          sum=2
+  A(4)(k) row=1+2          sum=3
+  A(5)(k) row=1+3+1        sum=5
+  A(6)(k) row=1+4+3        sum=8
+  A(7)(k) row=1+5+6+1      sum=13
+  A(8)(k) row=1+6+10+4     sum=21
+  A(9)(k) row=1+7+15+10+1  sum=34
+
+LRC14 unit-excess Farey partial evaluations p -> q -> lane:
+  F(1)(13): root=(1, 13, 1), sum=14, product=13, power_digit_lengths=(2, 1)
+  F(2)(27): root=(2, 27, 1), sum=29, product=54, power_digit_lengths=(3, 9)
+  F(3)(41): root=(3, 41, 1), sum=44, product=123, power_digit_lengths=(5, 20)
+  F(4)(55): root=(4, 55, 1), sum=59, product=220, power_digit_lengths=(7, 34)
+  F(5)(69): root=(5, 69, 1), sum=74, product=345, power_digit_lengths=(10, 49)
+  F(6)(83): root=(6, 83, 1), sum=89, product=498, power_digit_lengths=(12, 65)
+
+Named-row curried readout templates:
+  AP:
+    call:    E(AP)(boundary_packet)(e=0)(root/sum)(same_tile)(no-open)
+    verdict: AP/GW boundary equality atom
+  GW:
+    call:    E(GW)(C27_boundary_packet)(e=0)(root/sum)(same_tile)(no-open)
+    verdict: AP/GW boundary equality atom with C27 transfer label
+  K33 12->36:
+    call:    E(row)(K33_packet)(p=3)(product)(cross_handoff)(Fejer d159)
+    verdict: strict-safe certificate or named K33/state-lift debt
+  P10+GW:
+    call:    E(row)(unit_petal_packet)(root)(sum/product)(owner_strip)(Fejer d280)
+    verdict: strict-safe certificate after petal/GW labels are retained
+  covering 12->84:
+    call:    E(row)(covering_packet)(root)(sum)(nested_refinement)(boundary_moment)
+    verdict: positive covering/boundary-moment packet, not scalar all-covered
+
+Function-carrier retention vectors
+features: predicate, fiber_labels, argument_order, dual_certificate, residual_name, farey_scale, additive_carry, anti_scalar
+  total_curried_packet_evaluator: (3, 3, 3, 3, 3, 3, 3, 3)
+    type:    S -> P(S) -> root -> lane -> fiber -> certificate -> verdict
+    partial: E(S)(packet)(p/q,e)(farey_lane)(fiber)(cert)
+    LRC:     Keeps the full LRC proof object live until the last certificate.
+    warning: Forgets nothing until a named discharge is returned.
+  quotient_cocycle_derivative: (3, 3, 3, 2, 3, 2, 2, 3)
+    type:    Q -> y -> (x,x' in fiber_y) -> lost_coordinate_delta
+    partial: d_Q(coord)(y)(x,x')
+    LRC:     Turns every quotient into an explicit lost-coordinate function.
+    warning: Forgets the coordinate only after zero/coboundary/dual/residual tests.
+  residual_section_router: (3, 3, 2, 2, 3, 2, 1, 3)
+    type:    packet -> section -> grid_exit -> next_certificate_family
+    partial: R(packet)(section)(owner_strip/cross/nested)
+    LRC:     Routes HYP-2963 packets through HYP-2996 residual sections.
+    warning: Forgets phase location after owner/cross/nested exit is labelled.
+  fejer_toeplitz_dual_functional: (3, 2, 2, 3, 2, 1, 1, 3)
+    type:    S -> k -> divisor_fiber -> coefficient -> quadratic_form
+    partial: Phi(S)(k)(v|k)(atom_bank)
+    LRC:     Makes the PSD-cover implication testable on labelled packet fibers.
+    warning: Forgets endpoint owners unless the packet/family key is retained.
+  farey_lane_scheduler: (2, 2, 3, 1, 2, 3, 1, 3)
+    type:    p -> q -> e=14p-q -> lane -> payload
+    partial: F(p)(q)(e)(root/sum/product/power)
+    LRC:     Separates affine-safe, incidence, and stress-test Farey payloads.
+    warning: Forgets route labels if the payload is used without exact root data.
+  pascal_path_rank_section: (2, 2, 2, 1, 1, 1, 3, 3)
+    type:    n -> k -> C(n-k-1,k), then sum_k or choose carry support
+    partial: A(n)(k)
+    LRC:     Keeps the Fibonacci row fiber before Zeckendorf scalarization.
+    warning: Forgets route/certificate data; only carries additive row support.
+  additive_basis_currency: (2, 2, 2, 1, 1, 1, 2, 2)
+    type:    atom_system -> N -> budget -> representation_fiber
+    partial: B(atoms)(N)(budget)
+    LRC:     Classifies a packet as smoothing, bounded arity, or normal form.
+    warning: Forgets LRC scale unless tethered to the packet root.
+  runner_movie_tournament_shadow: (1, 1, 1, 0, 0, 0, 0, 2)
+    type:    S -> t -> pair_observable -> tournament
+    partial: T(S)(t)(gauge)
+    LRC:     Useful exploratory shadow for pairwise structure.
+    warning: Forgets endpoint debt, exact M, and often the quotient fiber.
+  raw_scalar_evaluation: (1, 0, 0, 0, 0, 0, 0, 0)
+    type:    S -> number
+    partial: m(S), H(T), count(S), product(p,q)
+    LRC:     Negative control for quotient guardrails.
+    warning: Forgets nearly every proof-bearing argument.
+
+Tournament Analysis
+  vertices: curried function carriers / proof obligations, not runners
+  pairwise observable: coordinatewise retention vector over features
+  switch/gauge: majority of strictly larger retention coordinates
+  tie Hamiltonian path: total_curried_packet_evaluator > quotient_cocycle_derivative > residual_section_router > fejer_toeplitz_dual_functional > farey_lane_scheduler > pascal_path_rank_section > additive_basis_currency > runner_movie_tournament_shadow > raw_scalar_evaluation
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  top path:
+    1. total_curried_packet_evaluator
+    2. quotient_cocycle_derivative
+    3. residual_section_router
+    4. fejer_toeplitz_dual_functional
+    5. farey_lane_scheduler
+    6. pascal_path_rank_section
+    7. additive_basis_currency
+    8. runner_movie_tournament_shadow
+    9. raw_scalar_evaluation
+
+Proof-program takeaway:
+  Treat every LRC map as a curried function.  The moment an argument is
+  precomposed, evaluated, summed, or quotient-collapsed, record the lost
+  coordinate as a function on the remaining fiber.  The proof target is
+  not a new scalar; it is totality of this evaluator: every primitive
+  LRC14 packet returns strict-safe, AP/GW boundary equality, or a named
+  F7/THM-572 residual before the final scalar shadow is reached.

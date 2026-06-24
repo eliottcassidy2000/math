@@ -15,6 +15,23 @@
 
 ---
 
+## Lead codex-2026-06-24-S170: LRC14 curried packet functional tower
+
+**Status:** SYNTHESIS / proof-interface guardrail complete
+(HYP-3002/T1086).  User asked to integrate the Fibonacci/Farey/additive-basis
+work with LRC by thinking of everything as functions and currying them.
+**Readout:** replace `row -> scalar` with
+`E:S -> P(S) -> root -> lane -> fiber -> certificate -> verdict`.  A quotient
+is a partial evaluation plus lost-coordinate function
+`lost_Q(c)(y)(x,x')=c(x)-c(x')`, which must be zero, reconstructed,
+exact/coboundary, dual-annihilated, descended, AP/GW boundary equality, or
+named F7/THM-572 debt.  The scout prints path-rank rows, unit-excess Farey
+partials, named-row call signatures, and a transitive Tournament Analysis over
+function carriers.
+**Next:** add `curried_call_signature` and `lost_coordinate_function` to
+HYP-2963 packet records, Fejer manifests, Ramanujan manifests, and
+residual-section templates.  Namespace: HYP-3002 / T1086 / LTI-152 / LTT-059.
+
 ## Lead codex-2026-06-24-S169: Farey-Fibonacci additive-basis carrier
 
 **Status:** SYNTHESIS / finite scout and proof-interface carrier complete (HYP-2998/T1083).  User asked to merge previous work on Fermat polygonal numbers, Goldbach/ternary Goldbach, Zeckendorf, the Fibonacci sparse-carry arrangement, and Farey numerator/denominator sum/product/power payloads.  Integrated incoming HYP-2997 as the adjacent cocycle normal-form atlas: this lane supplies the representation-economy label that sequence shadows must carry before HYP-2997-style quotient forgetting is safe.

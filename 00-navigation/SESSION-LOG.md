@@ -1,3 +1,29 @@
+## codex-2026-06-24-S170 -- LRC14 curried packet functional tower (HYP-3002/T1086)
+
+User asked to integrate the Fibonacci/Farey/additive-basis work with LRC by
+thinking of everything as functions and currying them.  Added HYP-3002 as a
+proof-interface guardrail: replace `row -> scalar` by the curried evaluator
+`E:S -> P(S) -> root -> lane -> fiber -> certificate -> verdict`.  Every
+quotient is a partial evaluation plus a lost-coordinate function
+`lost_Q(c)(y)(x,x')=c(x)-c(x')` on the remaining fiber, discharged only by
+zero, reconstruction, exact/coboundary, dual annihilation, family descent,
+AP/GW boundary equality, or named F7/THM-572 residual debt.
+
+Added `04-computation/lrc14_curried_packet_functional_tower_codex_s170.py` and
+stored `05-knowledge/results/lrc14_curried_packet_functional_tower_codex_s170.out`.
+The scout prints Fibonacci path-rank partials `A(n)(k)=C(n-k-1,k)`, LRC14
+unit-excess Farey partials `F(p)(14p-1)(lane)`, and named-row curried call
+templates for AP/GW, K33 `12->36`, `P10+GW`, and covering `12->84`.
+Tournament Analysis over function carriers is transitive with path
+`total_curried_packet_evaluator > quotient_cocycle_derivative >
+residual_section_router > fejer_toeplitz_dual_functional >
+farey_lane_scheduler > pascal_path_rank_section > additive_basis_currency >
+runner_movie_tournament_shadow > raw_scalar_evaluation`.
+
+Added LTI-152, LTT-059, T1086, a reflection, and a POKE forum post.  Next
+classifier fields: `curried_call_signature` and `lost_coordinate_function` in
+HYP-2963 packet records and Fejer/Ramanujan manifests.
+
 ## codex-2026-06-24-S169 -- Farey-Fibonacci additive-basis carrier (HYP-2998/T1083)
 
 User asked to merge prior work on Fermat polygonal numbers, Goldbach/ternary

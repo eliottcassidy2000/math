@@ -904,12 +904,31 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-2999, HYP-2998, HYP-2940, HYP-2934, HYP-2932,
   HYP-2931, HYP-2523, S501 additive-basis reflections, LTI-149.
 
+### LTT-059: Curried Packet Functional Tower
+
+- **Move:** Treat every LRC proof route as a curried evaluator
+  `S -> packet -> root -> lane -> fiber -> certificate -> verdict`.
+  Tournament vertices are the partial-evaluation carriers, not runners.
+- **LRC use:** Makes every quotient auditable: once a coordinate is fixed,
+  summed, or forgotten, emit the lost-coordinate function on the remaining
+  fiber and discharge it before scalarizing.
+- **Preserves:** Argument order, exact packet root, Farey lane, residual
+  section, certificate family, and named verdict.
+- **Forgets / guardrail:** A raw runner movie, scalar safe mass, H-value,
+  product, or representation count is illegal unless all earlier partial
+  evaluations have closed by zero/reconstruction/coboundary/dual/family/
+  AP-GW-boundary/residual debt.
+- **Next pull:** Add `curried_call_signature` and
+  `lost_coordinate_function` to HYP-2963 records and Fejer/Ramanujan manifests.
+- **Pointers:** HYP-3002, HYP-3000, HYP-2999, HYP-2997, HYP-2996,
+  HYP-2995, HYP-2974, HYP-2963, LTI-152.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
    Ramanujan exact-period projector, spectrum binding scale, additive-basis
-   regime, Pascal-slope carry width, Burnside cost, score-class H-spread, and
-   round-realizability flag.
+   regime, Pascal-slope carry width, curried call signature, lost-coordinate
+   function, Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
 3. Compute multi-scale tournament spectra for AP, GW, K33, petals, splices,
