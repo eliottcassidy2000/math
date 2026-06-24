@@ -30,6 +30,12 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
+## PROJECT STATUS: Stabilized at S136 Baseline
+
+As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S136** documentation—including the **C=27 Shell-Transfer Spectrum** and the **Binary Relational Exploration** mandate—is established as the project's current baseline.
+
+---
+
 ## codex-S136 -- C=27 Shell-Transfer Spectrum (checkpoint)
 
 Formalized the **C=27 Shell-Transfer Spectrum**, specialized the $C=27$ shell carrier by treating it as a relation space rather than a scalar tag (commit `a55d7e5e`). This checkpoint stabilizes the "marked transfer" protocol for identifying candidate tight rows near the AP floor.
