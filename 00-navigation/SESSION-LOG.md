@@ -12,6 +12,17 @@ petal, covering, and HYP-2963-bank rows.  The live theorem target is an
 admissibility rule: any quotient used against an LRC14 counterexample must
 preserve the LRC predicate needed by the next implication or explicitly record
 the label it forgets.
+## codex-2026-06-24-ramanujan-projector -- HYP-2978/T1062 exact-period route claimed
+
+User asked to read around Ramanujan sums and push the resulting ideas toward an
+LRC14 tournament-adjacent proof.  Rebased over incoming HYP-2974 Fourier-Fejer
+and HYP-2975 taut-bridge work, then reserved HYP-2978/T1062 for the exact-period
+Ramanujan projector route.  Stub claim: use `c_q(n)` as the primitive-unit
+trace that keeps denominator, unit, parity, and seven-adic packet labels before
+scalarizing q-blocked witness data.  For `q=14`, `c_14(r+s)` is a trace form of
+the AP/GW endpoint-credit equality `r+s==0 mod 14`; `c_14(r-r')` retains exact
+residue coincidence.  Computation and theorem testing remain pending in this
+same session.
 
 ## codex-2026-06-24-S160 -- holistic LRC14 proof-history synthesis fills HYP-2976
 
