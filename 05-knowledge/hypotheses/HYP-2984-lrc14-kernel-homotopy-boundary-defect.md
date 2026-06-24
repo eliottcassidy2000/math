@@ -1,29 +1,41 @@
 ---
 id: HYP-2984
-title: LRC14 kernel homotopy and boundary-defect ledger
-status: PROOF-INTERFACE / exact named-packet audit and smoothing guardrail; not a proof
+title: LRC14 kernel homotopy and smoothing-switchboard boundary-defect ledger
+status: PROOF-INTERFACE / exact packet audit, finite route matrix, and admissible-kernel guardrail; not a proof
 source: codex-2026-06-24-S164
+artifacts:
+  - 04-computation/lrc14_kernel_homotopy_boundary_defect_codex_s164.py
+  - 05-knowledge/results/lrc14_kernel_homotopy_boundary_defect_codex_s164.out
+  - 07-reflections/lrc14-kernel-homotopy-boundary-defect-codex-s164.md
+  - 04-computation/lrc14_smoothing_switchboard_codex_s164.py
+  - 05-knowledge/results/lrc14_smoothing_switchboard_codex_s164.out
+  - 07-reflections/lrc14-smoothing-switchboard-codex-s164.md
 related:
   - HYP-2983
   - HYP-2982
   - HYP-2981
   - HYP-2980
+  - HYP-2979
   - HYP-2978
   - HYP-2977
   - HYP-2975
   - HYP-2974
   - HYP-2973
+  - HYP-2972
+  - HYP-2969
+  - HYP-2968
+  - HYP-2966
+  - HYP-2965
+  - HYP-2963
   - HYP-2949
   - HYP-2948
+  - HYP-2908
+  - THM-548
   - THM-572
   - OPEN-Q-108
-artifacts:
-  - 04-computation/lrc14_kernel_homotopy_boundary_defect_codex_s164.py
-  - 05-knowledge/results/lrc14_kernel_homotopy_boundary_defect_codex_s164.out
-  - 07-reflections/lrc14-kernel-homotopy-boundary-defect-codex-s164.md
 ---
 
-# HYP-2984: LRC14 Kernel Homotopy And Boundary-Defect Ledger
+# HYP-2984: LRC14 Kernel Homotopy And Smoothing Switchboard
 
 This hypothesis connects HYP-2981's packet Fejer interval certificates with
 HYP-2982/HYP-2983's analytic smoothing and Kaczynski boundary language.
@@ -35,13 +47,17 @@ Changing a smoothing or Fourier kernel is theorem-safe only when it either
 preserves the labelled packet certificate or emits a named boundary-defect atom.
 ```
 
-This is a proof-interface guardrail, not a proof of LRC14.  It says where a
-future smoothing proof is allowed to change kernels.  Positive regular-open
-safe components give a support radius for local kernel perturbations; zero-open
-AP/Goddyn-Wong equality atoms have no such radius and must remain explicit
-boundary defects.
+Equivalently:
 
-## Computation
+```text
+choose the smoothing kernel only after the labelled packet route is known.
+```
+
+This is a proof-interface guardrail, not a proof of LRC14.  It says where a
+future smoothing proof is allowed to change kernels and what the proof is still
+required to remember when a quotient forgets geometry.
+
+## Kernel Homotopy Audit
 
 Script:
 
@@ -105,8 +121,6 @@ minimum positive safe mass: 1/1260 at 12->36
 So, in this finite local audit, every non-GW one-swap row has a positive
 regular-open component and hence a nonzero kernel-stability radius.
 
-## Kernel Homotopy Rule
-
 For a row with a strict safe component `(a,b)`, any symmetric kernel supported
 inside radius `<(b-a)/2` can be centered at `(a+b)/2` without crossing a danger
 boundary.  This gives a theorem-facing homotopy invariant:
@@ -136,9 +150,104 @@ keeps the distinction typed.  AP/GW are zero-open boundary-defect atoms in the
 exact audit; K33 is a named residual/state-lift route that a homotopy may emit
 after leaving the AP/GW taut stratum, not a scalar-equivalent defect.
 
+## Smoothing Switchboard Audit
+
+Script:
+
+```text
+04-computation/lrc14_smoothing_switchboard_codex_s164.py
+```
+
+Stored output:
+
+```text
+05-knowledge/results/lrc14_smoothing_switchboard_codex_s164.out
+```
+
+The script imports:
+
+- HYP-2981/S162 packet-anchored Fejer interval scaffold;
+- HYP-2979 Ramanujan exact-period primitive projector;
+- HYP-2982/HYP-2983 analytic-sieve guardrail language.
+
+For `16` named/probe packets it records:
+
+```text
+q_threshold,
+exact safe measure,
+safe-component count,
+q=14 weak/strict/boundary primitive phase count,
+first weak and strict Ramanujan q through q<=42,
+selected Fejer interval certificate status,
+chosen smoothing/proof route,
+retained side channel,
+forbidden scalarization.
+```
+
+Route counts:
+
+```text
+AP_GW_BOUNDARY_ATOM                 2
+COVERING_LIFT_OR_BOUNDARY_MOMENT    2
+INTERVAL_FEJER_CERTIFICATE          5
+K33_STATE_LIFT                      1
+RAMANUJAN_PRE_SPLIT_THEN_FEJER      6
+```
+
+The five selected positive hard rows from HYP-2981 remain interval-certified:
+
+```text
+P10+GW                              degree 280
+covering 12->168                   degree 63
+near/K33 12->36                    degree 159
+single swap 6->63                  degree 266
+two drop(12,13)->add(14,29)        degree 41
+```
+
+AP and Goddyn-Wong are the only audited `safe_mu=0` boundary atoms.  Covering
+rows without direct Fejer records route to lift / boundary-moment certificates.
+`P10+K33` routes to K33 state-lift debt.  Petal, q14-front, q-witness, and
+repeated-prime probe rows route through Ramanujan pre-split and Fejer/twist
+handoff.
+
+## Switch Contracts
+
+The executable contracts are the new content:
+
+```text
+AP/GW boundary:
+  retain endpoint zero-credit pairs plus Kaczynski approach class.
+  forbidden: open-measure averaging or raw Fejer negativity.
+
+Interval Fejer:
+  retain packet key, rational center, Fejer degree, interval upper bound.
+  forbidden: floating Fejer value without interval/packet label.
+
+Ramanujan pre-split:
+  retain first strict q, primitive phase packet, endpoint labels.
+  forbidden: qdiv-only or scalar Ramanujan profile.
+
+Covering/lift:
+  retain lift chart, endpoint owners, exact safe mass, late-q label.
+  forbidden: squarefree mu^2/phi collapse of repeated-prime q.
+
+K33 state-lift:
+  retain K33 owner packet plus HYP-2908/THM-572 debt.
+  forbidden: large-sieve scalar tail without state-lift side channel.
+```
+
+Thus the admissible-smoothing lemma should not be phrased as "choose Fejer" or
+"use the large sieve."  It should be:
+
+```text
+given a labelled packet, choose the least-forgetting kernel that preserves the
+next proof predicate, and record the residual labels that kernel cannot see.
+```
+
 ## Tournament Analysis
 
-Vertices are proof carriers in the kernel-deformation step:
+Vertices are proof carriers in the kernel-deformation and route-selection
+steps, not runners.  The kernel audit uses:
 
 ```text
 open_component_certificate
@@ -150,25 +259,21 @@ ramanujan_exact_period_packet
 raw_kernel_scalar
 ```
 
-Pairwise observable:
+The switchboard audit uses:
 
 ```text
-retention of strict witness,
-boundary equality,
-packet labels,
-kernel auditability,
-formal interval path,
-scalar-decoy resistance.
+labelled_smoothing_switchboard
+interval_fejer_certificate
+boundary_moment_lift_chart
+kaczynski_boundary_defect
+ramanujan_exact_period_presplit
+large_sieve_middle_bound
+raw_scalar_smoothing_choice
 ```
 
-Switch/gauge: componentwise majority of the six retention scores, ties along
-the declared Hamiltonian path.  Fingerprint:
+Both audited carrier tournaments are transitive:
 
 ```text
-score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}
-directed_3cycles=0
-SCC_sizes=[1,1,1,1,1,1,1]
-Hamiltonian path:
 packet_fejer_certificate >
 open_component_certificate >
 boundary_defect_atom >
@@ -176,31 +281,39 @@ kaczynski_approach_class >
 ramanujan_exact_period_packet >
 analytic_smoothing_kernel >
 raw_kernel_scalar
+
+labelled_smoothing_switchboard >
+interval_fejer_certificate >
+boundary_moment_lift_chart >
+kaczynski_boundary_defect >
+ramanujan_exact_period_presplit >
+large_sieve_middle_bound >
+raw_scalar_smoothing_choice
 ```
 
-The ranking is intentional.  A raw smoothing kernel is below packet Fejer
-certificates and open-component certificates because it can forget the LRC
-predicate.  It becomes useful only after packet labels and boundary defects are
-attached.
-
 Assumption challenge: the proof vertices need not be runners or arcs.  This
-lane explicitly considered kernels, safe components, boundary events,
-endpoint-owner pairs, packet fibers, smoothing defects, and proof obligations.
-The chosen quotient preserves the predicate "strict safe interval, AP/GW
-boundary equality, or named residual debt"; it destroys raw runner ownership
-only after that predicate is retained or reconstructed.
+lane explicitly considers kernels, safe components, boundary events,
+endpoint-owner pairs, packet fibers, smoothing defects, Ramanujan modes, lift
+charts, interval certificates, route handoffs, and proof obligations.  The
+quotient preserves the LRC predicate only by retaining the selected packet
+route and the side channel declared by the audit.  It destroys raw runner
+ownership and scalar smoothing margins unless those labels are retained or
+formally reconstructed.
 
 ## Theorem Target
 
-The useful theorem shape is:
+Candidate lemma:
 
 ```text
-For every labelled LRC14 packet, a kernel deformation either preserves an
-open-component certificate with a declared support radius, or it emits a
-boundary-defect atom that routes to AP/GW equality, K33/state-lift debt,
-Ramanujan/exact-period debt, or an existing Fejer interval certificate.
+Every primitive LRC14 source packet admits a labelled smoothing route:
+AP/GW boundary, interval Fejer certificate, Ramanujan exact-period handoff,
+covering/lift boundary moment, K33/state lift, or a named Kaczynski defect.
+No route may forget endpoint owners, exact-period labels, safe-open/boundary
+state, Fejer interval fields, or state-lift debt unless another retained route
+formally reconstructs them.
 ```
 
-The missing work is familywise: lift the support-radius and boundary-defect
-readout from named rows to HYP-2963 packet families, then prove the emitted
-defects are exhausted by AP/GW and existing state-lift routes.
+The familywise missing work is to scale the support-radius and switchboard
+readout from the named audit bank to HYP-2963 packet families, then prove the
+emitted defects are exhausted by AP/GW and existing state-lift / interval-Fejer
+routes.

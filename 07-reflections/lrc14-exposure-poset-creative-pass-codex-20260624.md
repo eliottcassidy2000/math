@@ -88,7 +88,7 @@ the newer analytic and deformation lanes too.  HYP-2982 warns that
 squarefree/inverse-unit analytic weights forget prime-power and endpoint
 labels; HYP-2983 says smoothing choices must carry Kaczynski boundary approach
 classes; HYP-2984's kernel-homotopy lane requires preserved packet
-certificates or boundary-defect atoms; HYP-2984's Farey scheduler routes
+certificates or boundary-defect atoms; HYP-3001's Farey scheduler routes
 `e=14p-q` and product-collapse `p` into AP/GW, C27 petal, or K33/state-lift
 families; HYP-2985's admissible-smoothing dispatcher names which smoothing
 clock may certify each packet family; and the incoming HYP-2986

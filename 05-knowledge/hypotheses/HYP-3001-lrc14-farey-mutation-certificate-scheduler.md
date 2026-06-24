@@ -1,9 +1,9 @@
 ---
-id: HYP-2984
+id: HYP-3001
 title: LRC14 Farey mutation certificate scheduler
 status: EVIDENCE / proof-route scheduler; not a proof
 source: codex-2026-06-24-S164
-tangent: T1068
+tangent: T1086
 script: 04-computation/lrc14_farey_mutation_certificate_scheduler_codex_s164.py
 result: 05-knowledge/results/lrc14_farey_mutation_certificate_scheduler_codex_s164.out
 related:
@@ -22,7 +22,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2984: LRC14 Farey Mutation Certificate Scheduler
+# HYP-3001: LRC14 Farey Mutation Certificate Scheduler
 
 ## Claim
 

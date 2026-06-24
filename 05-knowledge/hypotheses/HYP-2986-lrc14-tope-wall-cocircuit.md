@@ -6,6 +6,7 @@ source: codex-2026-06-24-S164
 script: 04-computation/lrc14_tope_wall_cocircuit_codex_s164.py
 result: 05-knowledge/results/lrc14_tope_wall_cocircuit_codex_s164.out
 related:
+  - HYP-2987
   - HYP-2985
   - HYP-2984
   - HYP-2983

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HYP-2984/T1068: Farey mutations as LRC14 certificate schedulers.
+"""HYP-3001/T1086: Farey mutations as LRC14 certificate schedulers.
 
 The prompt asks for four Farey-sequence mutations:
 
@@ -327,7 +327,7 @@ def proof_readout() -> None:
 
 
 def main() -> None:
-    print("HYP-2984/T1068 LRC14 FAREY MUTATION CERTIFICATE SCHEDULER")
+    print("HYP-3001/T1086 LRC14 FAREY MUTATION CERTIFICATE SCHEDULER")
     print("=" * 78)
     print("Assumption challenge")
     print("  considered vertices: runners, Farey fractions, mutated values, denominators,")

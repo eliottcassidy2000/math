@@ -43,6 +43,14 @@ Farey-measure safety, Haar interaction discrepancy, and the additive-fiber
 guardrail (Pascal-slope/Zeckendorf) before its proof obligation is discharged.
 ```
 
+Concurrent S164 sync note: **LTI-151 / Labelled Smoothing Switchboard**
+keeps packet route first and smoothing kernel second. HYP-2984 records the
+finite switchboard, while the older Farey mutation scheduler lives at
+**HYP-3001 / T1086** after HYP-2990 through HYP-2999, T1081, T1082, T1083,
+T1084, LTI-147, LTI-148, and LTI-149 were claimed by zipper/Haar/cocycle,
+tournament-technique, residual-section, tournament-index, normal-form,
+Farey-Fibonacci, Pascal-slope, and packet-grid lanes.
+
 ---
 
 ## codex-S169 -- Pascal-slope Farey Carrier Synthesis (checkpoint)

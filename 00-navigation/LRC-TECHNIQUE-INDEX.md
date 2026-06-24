@@ -263,6 +263,7 @@ record what it destroys before asking it to prove anything.
 | LTI-148 | Residual-section packet grid | Residual sections and Haar-product exits | Make F7 executable by requiring hard non-AP/GW packets to have owner-strip, cross-handoff, or nested-refinement exits | HYP-2996, HYP-2963, HYP-2989, HYP-2995 | Lift the bounded section map into family templates and Fejer/Ramanujan certificate manifests. |
 | LTI-149 | Pascal-slope additive-basis Farey packet schema | Representation hypergraph rows, additive fibers, Farey operator lanes | Complement HYP-2998 by keeping Pascal-row, carry-width, and Farey `p+q,p*q,q^p,p^q` lane fields as labelled packet data | HYP-2999, HYP-2998, HYP-2940, HYP-2934, HYP-2931, HYP-2523, S501 | Add `additive_basis_regime`, `representation_entropy`, `local_residue_rank`, `carry_width`, `pascal_slope_row_id`, and `farey_operator_lane` fields to packet records. |
 | LTI-150 | Fibonacci path-rank additive-basis bridge | Path independent-set ranks, Zeckendorf carry graph, additive-basis hypergraphs, Farey unit-excess payloads | Reads `F_n=sum_k binom(n-k-1,k)` as `I(P_{n-2};1)`, separating smoothing, bounded-arity, normal-form, additive, product, and power-stress proof currencies | HYP-3000, HYP-2999, HYP-2998, HYP-1902, HYP-2984, HYP-2934, HYP-2982 | Classify HYP-2963 packet debts as smoothing, bounded-invoice, normal-form carry, additive Farey scale, product incidence, or stress-only magnitude. |
+| LTI-151 | Labelled smoothing switchboard | Packet routes plus admissible kernels | Choose Fejer/Ramanujan/boundary-moment/large-sieve/Kaczynski only after the packet route is known | HYP-2984, HYP-2981, HYP-2979, HYP-2982, HYP-2983 | Scale the `16`-packet route matrix to HYP-2963 families and count any unrouted packet class. |
 
 ## Cross-Cutting Guardrails
 
@@ -313,6 +314,7 @@ record what it destroys before asking it to prove anything.
 | LTI-TODO-24 | Familywise residual-section templates for HYP-2996 | LTI-047, LTI-107, LTI-109, LTI-148 |
 | LTI-TODO-25 | Additive-basis / Farey-operator packet schema | LTI-076, LTI-077, LTI-078, LTI-089, LTI-130, LTI-149 |
 | LTI-TODO-26 | Additive-basis proof-currency packet classifier | LTI-063, LTI-090, LTI-094, LTI-149, LTI-150 |
+| LTI-TODO-27 | Family-scale smoothing switchboard for HYP-2963 packets | LTI-035, LTI-049, LTI-057, LTI-061, LTI-065, LTI-151 |
 
 ## Minimal Entry Template
 

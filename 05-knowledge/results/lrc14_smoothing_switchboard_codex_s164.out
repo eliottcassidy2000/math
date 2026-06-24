@@ -1,0 +1,116 @@
+HYP-2984: LRC14 smoothing switchboard
+==============================================================================
+Rows are packet/proof obligations, not runners.
+Each route declares a smoothing kernel and the side channel it must retain.
+
+Route counts
+  AP_GW_BOUNDARY_ATOM                    2
+  COVERING_LIFT_OR_BOUNDARY_MOMENT       2
+  INTERVAL_FEJER_CERTIFICATE             5
+  K33_STATE_LIFT                         1
+  RAMANUJAN_PRE_SPLIT_THEN_FEJER         6
+
+Packet route matrix
+row | route | qthr | safe_mu | comps | q14 weak/strict/bdy | first weak/strict q | Fejer | switch
+-------------------------------------------------------------------------------------------------
+AP | BOUNDARY-AP-GW | 14 | 0 | 0 | 6/0/6 | 14/- | - | AP_GW_BOUNDARY_ATOM
+GW 12->24 | BOUNDARY-AP-GW | 14 | 0 | 0 | 6/0/6 | 14/- | - | AP_GW_BOUNDARY_ATOM
+covering 12->84 | COVERING-MOMENT | 15 | 563/105105 | 8 | 0/0/0 | 41/41 | - | COVERING_LIFT_OR_BOUNDARY_MOMENT
+covering 6->98 | COVERING-MOMENT | 15 | 1543/294294 | 6 | 0/0/0 | 25/25 | - | COVERING_LIFT_OR_BOUNDARY_MOMENT
+P10+GW | BOUNDARY-PETAL | 14 | 1/980 | 2 | 6/0/6 | 14/27 | d=280:cert | INTERVAL_FEJER_CERTIFICATE
+covering 12->168 | COVERING-MOMENT | 15 | 263/30030 | 8 | 0/0/0 | 41/41 | d=63:cert | INTERVAL_FEJER_CERTIFICATE
+near/K33 12->36 | K33-STATE-LIFT | 14 | 1/1260 | 2 | 6/0/6 | 14/41 | d=159:cert | INTERVAL_FEJER_CERTIFICATE
+single swap 6->63 | ONE-SWAP | 14 | 1/294 | 4 | 6/0/6 | 14/25 | d=266:cert | INTERVAL_FEJER_CERTIFICATE
+two drop(12, 13)->add(14, 29) | Q-WITNESS | 12 | 218923/5627160 | 14 | 0/0/0 | 12/12 | d=41:cert | INTERVAL_FEJER_CERTIFICATE
+P10+K33 | K33-STATE-LIFT | 14 | 4/2205 | 4 | 6/0/6 | 14/27 | - | K33_STATE_LIFT
+late repeated-prime 12->280 | Q-WITNESS-LATE-FACTOR | 12 | 2979/280280 | 6 | 0/0/0 | 12/12 | - | RAMANUJAN_PRE_SPLIT_THEN_FEJER
+petal 10->20 | BOUNDARY-PETAL | 14 | 1/980 | 2 | 6/0/6 | 14/27 | - | RAMANUJAN_PRE_SPLIT_THEN_FEJER
+petal 13->26 | BOUNDARY-PETAL | 14 | 1/182 | 2 | 6/0/6 | 14/27 | - | RAMANUJAN_PRE_SPLIT_THEN_FEJER
+petal splice P13+GW | BOUNDARY-PETAL | 14 | 5/728 | 4 | 6/0/6 | 14/25 | - | RAMANUJAN_PRE_SPLIT_THEN_FEJER
+q14 liar 12->96 | Q14-FRONT | 14 | 5219/840840 | 8 | 6/0/6 | 14/41 | - | RAMANUJAN_PRE_SPLIT_THEN_FEJER
+residue liar 12->26 | Q-WITNESS | 12 | 426/35035 | 4 | 6/0/6 | 12/12 | - | RAMANUJAN_PRE_SPLIT_THEN_FEJER
+
+Switch contracts
+- AP:
+    kernel=closed-boundary endpoint kernel
+    retain=endpoint zero-credit pairs plus Kaczynski approach class
+    forbidden_forgetting=open-measure averaging or raw Fejer negativity
+- GW 12->24:
+    kernel=closed-boundary endpoint kernel
+    retain=endpoint zero-credit pairs plus Kaczynski approach class
+    forbidden_forgetting=open-measure averaging or raw Fejer negativity
+- covering 12->84:
+    kernel=multi-chart lift / boundary-moment kernel
+    retain=lift chart, endpoint owners, exact safe mass, late q label
+    forbidden_forgetting=squarefree mu^2/phi collapse of repeated-prime q
+- covering 6->98:
+    kernel=multi-chart lift / boundary-moment kernel
+    retain=lift chart, endpoint owners, exact safe mass, late q label
+    forbidden_forgetting=squarefree mu^2/phi collapse of repeated-prime q
+- P10+GW:
+    kernel=packet-centered Fejer kernel
+    retain=packet key, rational center, degree, interval upper bound
+    forbidden_forgetting=floating Fejer value without interval/packet label
+- covering 12->168:
+    kernel=packet-centered Fejer kernel
+    retain=packet key, rational center, degree, interval upper bound
+    forbidden_forgetting=floating Fejer value without interval/packet label
+- near/K33 12->36:
+    kernel=packet-centered Fejer kernel
+    retain=packet key, rational center, degree, interval upper bound
+    forbidden_forgetting=floating Fejer value without interval/packet label
+- single swap 6->63:
+    kernel=packet-centered Fejer kernel
+    retain=packet key, rational center, degree, interval upper bound
+    forbidden_forgetting=floating Fejer value without interval/packet label
+- two drop(12, 13)->add(14, 29):
+    kernel=packet-centered Fejer kernel
+    retain=packet key, rational center, degree, interval upper bound
+    forbidden_forgetting=floating Fejer value without interval/packet label
+- P10+K33:
+    kernel=state-lift boundary/resonance kernel
+    retain=K33 owner packet plus HYP-2908/THM-572 debt
+    forbidden_forgetting=large-sieve scalar tail without state-lift side channel
+- late repeated-prime 12->280:
+    kernel=exact-period Ramanujan pre-split plus Fejer handoff
+    retain=first strict q, primitive phase packet, endpoint labels
+    forbidden_forgetting=qdiv-only or Ramanujan scalar profile
+- petal 10->20:
+    kernel=exact-period Ramanujan pre-split plus Fejer handoff
+    retain=first strict q, primitive phase packet, endpoint labels
+    forbidden_forgetting=qdiv-only or Ramanujan scalar profile
+- petal 13->26:
+    kernel=exact-period Ramanujan pre-split plus Fejer handoff
+    retain=first strict q, primitive phase packet, endpoint labels
+    forbidden_forgetting=qdiv-only or Ramanujan scalar profile
+- petal splice P13+GW:
+    kernel=exact-period Ramanujan pre-split plus Fejer handoff
+    retain=first strict q, primitive phase packet, endpoint labels
+    forbidden_forgetting=qdiv-only or Ramanujan scalar profile
+- q14 liar 12->96:
+    kernel=exact-period Ramanujan pre-split plus Fejer handoff
+    retain=first strict q, primitive phase packet, endpoint labels
+    forbidden_forgetting=qdiv-only or Ramanujan scalar profile
+- residue liar 12->26:
+    kernel=exact-period Ramanujan pre-split plus Fejer handoff
+    retain=first strict q, primitive phase packet, endpoint labels
+    forbidden_forgetting=qdiv-only or Ramanujan scalar profile
+
+Tournament Analysis
+vertices: smoothing/proof carriers, not runners
+pairwise observable: retained predicate payload = kernel, q packet, boundary approach, lift chart, interval sign, and route handoff
+tie Hamiltonian path: listed carrier order
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed_3cycles=0
+hamiltonian_paths=1
+Hamiltonian path: labelled_smoothing_switchboard > interval_fejer_certificate > boundary_moment_lift_chart > kaczynski_boundary_defect > ramanujan_exact_period_presplit > large_sieve_middle_bound > raw_scalar_smoothing_choice
+  raw_scalar_smoothing_choice        score=(1, 0, 0, 0, 0, 0, 0) :: chooses a kernel but forgets route labels
+  large_sieve_middle_bound           score=(1, 1, 0, 0, 0, 0, 0) :: bounds a family but needs residual labels
+  ramanujan_exact_period_presplit    score=(1, 1, 1, 0, 0, 0, 0) :: keeps primitive q packets before smoothing
+  kaczynski_boundary_defect          score=(1, 1, 1, 1, 0, 0, 0) :: keeps approach class for boundary ambiguity
+  boundary_moment_lift_chart         score=(1, 1, 1, 1, 1, 0, 0) :: keeps lift chart and endpoint owners
+  interval_fejer_certificate         score=(1, 1, 1, 1, 1, 1, 0) :: keeps center, degree, and interval sign
+  labelled_smoothing_switchboard     score=(1, 1, 1, 1, 1, 1, 1) :: chooses kernel after packet route is known
+
+Proof-pass readout
+The creative compression is a switchboard lemma: choose Fejer, Ramanujan, boundary-moment, large-sieve, or Kaczynski smoothing only after the packet route is known.  AP/GW are boundary atoms; selected positive hard rows already have Fejer interval certificates; covering and K33 rows keep lift/state debt; late q packets keep exact-period labels before any squarefree large-sieve normalization.

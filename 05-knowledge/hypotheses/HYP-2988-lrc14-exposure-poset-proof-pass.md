@@ -188,7 +188,7 @@ restored.  HYP-2983 supplies the Kaczynski/exponential-sum module map: a
 smoothed certificate must retain its boundary approach class.  The HYP-2984
 kernel-homotopy lane says a deformation is safe only when it preserves a
 labelled packet certificate or emits a boundary-defect atom, while the
-HYP-2984 Farey scheduler says exact `M=p/q` and `e=14p-q` dispatch the
+HYP-3001 Farey scheduler says exact `M=p/q` and `e=14p-q` dispatch the
 unit-excess packets into AP/GW, C27 petal/two-block, or K33/state-lift routes.
 HYP-2985 adds the admissible-smoothing dispatcher: every smoothing policy must
 name which labelled packet family it is allowed to certify.
