@@ -1,3 +1,14 @@
+## codex-2026-06-24-S160 -- reserved holistic LRC14 lineage synthesis
+
+User asked for a long holistic pass over the full LRC history, keeping all
+recent themes in mind and cycling between exploration, computation, and
+hypothesis generation.  Claimed HYP-2975 / T1059 for the synthesis namespace.
+Initial thesis only: the project appears to have moved from scalar runner and
+raw tournament quotients toward a finite proof-object sheaf retaining exact
+scale, topology, endpoint ownership, C27/unital/K33 labels, fixed-margin family
+data, and dual certificates.  Evidence, computation, and final writeup are
+pending in this session.
+
 ## codex-2026-06-24-S157 -- Fourier-Toeplitz PSD dual route claimed for LRC14
 
 Reserved what is now HYP-2974 for the user-requested Fourier necessary
