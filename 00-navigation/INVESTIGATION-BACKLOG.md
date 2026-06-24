@@ -15,6 +15,13 @@
 
 ---
 
+## Lead codex-2026-06-24-S166: Haar zipper cocycle for LRC14
+
+**Status:** PROOF-INTERFACE / local cocycle audit and theorem target complete (HYP-2991/T1075).  User asked to synthesize recent agent work through discrepancy theory, the `2D` Haar product rule, tournament tiling, and more zipper theorems.  This pass rebased over HYP-2990's abstract zipper atlas and makes the local no-free-slider obstruction explicit.  The script `04-computation/lrc14_haar_zipper_cocycle_codex_s166.py` stores output in `05-knowledge/results/lrc14_haar_zipper_cocycle_codex_s166.out`.
+**Core readout:** For a `2 x 2` table, the mixed Haar / fixed-margin switch coordinate is `zeta(T)=T00-T01-T10+T11`.  Auditing all nonnegative tables through total `10` gives `1001` tables, `506` margin fibers, `285` nontrivial fibers, `0` duplicate `(margins,zeta)` keys, and fixed-margin zipper-step gcd `4`.  Thus row/column margins are an unsafe quotient unless `zeta` is retained, reconstructed, annihilated, or routed.
+**Zipper theorem target:** On every labelled LRC14 packet fiber, each local mixed Haar cocycle is either cancelled by color-compatible discrepancy, stopped at a boundary cocircuit, handed to endpoint/period/certificate/smoothing clocks, descended to a smaller packet family, or converted into a named F7/THM-572 residual.  The depth-4 dyadic product census supplies the tooth taxonomy: orthogonal zero, same-tile boundary atom, owner strip, cross handoff, nested descent, residual cocycle.
+**Next:** (1) build the actual HYP-2963 packet grid and compute packet-level `zeta` signatures; (2) count independent color-compatible cocycles and compare with HYP-2595's `k+c_GP`; (3) attach each nonzero owner-strip/cross/nested coefficient to a HYP-2987 handoff arrow; (4) define F7 as unpaired mixed-cocycle state-lift debt.  Namespace: HYP-2991 / T1075.
+
 ## Lead codex-2026-06-24-S165: Haar product discrepancy and tournament tiling square
 
 **Status:** PROOF-INTERFACE / synthesis scout complete (HYP-2989/T1073).  This pass integrates the recent HYP-2985/HYP-2986/HYP-2987/HYP-2988 packet, handoff, and exposure work with the older HYP-2594/HYP-2595 colored discrepancy program.  The script `04-computation/lrc14_haar_product_discrepancy_tiling_codex_s165.py` stores its output in `05-knowledge/results/lrc14_haar_product_discrepancy_tiling_codex_s165.out`.

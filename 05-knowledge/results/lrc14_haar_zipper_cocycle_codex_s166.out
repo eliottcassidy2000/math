@@ -1,0 +1,102 @@
+S166 Haar zipper cocycle / discrepancy handoff synthesis
+========================================================================
+
+[1] Local 2x2 fixed-margin zipper cocycle
+  switch / Haar product matrix = ((1, -1), (-1, 1))
+  zeta(T)=sum_ij (-1)^(i+j) T_ij
+  audited nonnegative 2x2 tables with total <= 10
+  tables=1001 margin_fibers=506 nontrivial_fibers=285
+  augmented keys (margins,zeta)=1001
+  duplicate augmented keys=0
+  zipper step gcd inside nontrivial fibers=4
+  max zipper span inside one margin fiber=20
+  max-span margin key=((5, 5), (5, 5), 10), zeta_values=[-10, -6, -2, 2, 6, 10]
+  conclusion: margins alone collide, but margins plus zeta are a complete local coordinate.
+
+[2] Dyadic Haar rectangle product census
+  depth<=4 rectangles=961, ordered_products=923521
+  same_tile_boundary_atom        961 share= 0.00104 signs=1:961
+  vertical_owner_strip          6076 share= 0.00658 signs=-1:3038, 1:3038
+  horizontal_owner_strip        6076 share= 0.00658 signs=-1:3038, 1:3038
+  cross_zipper_handoff         19208 share= 0.02080 signs=-1:9604, 1:9604
+  nested_refinement            19208 share= 0.02080 signs=-1:9604, 1:9604
+  orthogonal_zero             871992 share= 0.94420 signs=0:871992
+  nonzero non-atom classes remain sign-balanced before packet labels break symmetry.
+
+[3] Recent-work concept co-occurrence
+  documents scanned:
+    05-knowledge/hypotheses/HYP-2989-lrc14-haar-product-discrepancy-tournament-tiling.md
+    05-knowledge/hypotheses/HYP-2988-lrc14-haar-product-tile-discrepancy.md
+    05-knowledge/hypotheses/HYP-2987-lrc14-certificate-handoff-atlas.md
+    05-knowledge/hypotheses/HYP-2988-lrc14-exposure-poset-proof-pass.md
+    05-knowledge/hypotheses/HYP-2986-lrc14-tope-wall-cocircuit.md
+    05-knowledge/hypotheses/HYP-2985-lrc14-admissible-smoothing-dispatcher.md
+    05-knowledge/hypotheses/HYP-2595-lrc14-colored-resonance-discrepancy.md
+    05-knowledge/hypotheses/HYP-2594-lrc14-colored-discrepancy-bound.md
+    05-knowledge/hypotheses/HYP-2450-coefficient-tiling-prime-bridge.md
+    05-knowledge/hypotheses/HYP-2736-lrc14-torus-line-discrepancy-integer-grid.md
+  concept hits:
+    tope_cocircuit                 130
+    smoothing                      76
+    zipper_handoff                 54
+    discrepancy                    47
+    state_lift                     41
+    tournament_tiling              25
+    exposure_kernel                23
+    haar_product                   19
+  strongest co-occurrences:
+    smoothing                  <-> state_lift                 docs=6
+    smoothing                  <-> tope_cocircuit             docs=6
+    smoothing                  <-> zipper_handoff             docs=6
+    state_lift                 <-> tope_cocircuit             docs=6
+    state_lift                 <-> zipper_handoff             docs=6
+    tope_cocircuit             <-> tournament_tiling          docs=6
+    tope_cocircuit             <-> zipper_handoff             docs=6
+    smoothing                  <-> tournament_tiling          docs=5
+    state_lift                 <-> tournament_tiling          docs=5
+    tournament_tiling          <-> zipper_handoff             docs=5
+    discrepancy                <-> tope_cocircuit             docs=4
+    discrepancy                <-> tournament_tiling          docs=3
+
+[4] Zipper theorem skeleton
+  Z0 orthogonal cancellation | disjoint Haar coordinate           | discard safely by discrepancy orthogonality
+  Z1 boundary stop         | same-tile indicator                | AP/GW cocircuit or named boundary atom
+  Z2 owner strip           | one coordinate fixed, one refined  | endpoint owner / Fejer center / Ramanujan label
+  Z3 cross handoff         | opposite coordinate nesting        | zipper arrow between proof clocks
+  Z4 nested descent        | same-direction nesting             | family compression or state-lift descent
+  Z5 residual cocycle      | unpaired zeta survives all exits   | F7 / THM-572 state-lift obligation
+
+  Candidate zipper-cocycle theorem:
+    On every labelled LRC14 packet fiber, each local mixed Haar cocycle
+    is either paired by color-compatible discrepancy cancellation, stopped
+    at a boundary cocircuit, handed to an owner/period/certificate clock,
+    descended to a smaller packet family, or converted into a named
+    state-lift residual.  If no tooth applies, the packet is the F7 sector.
+
+[5] Tournament Analysis on proof carriers
+  vertices: proof carriers, not runners
+  pairwise observable: retained LRC predicate, fixed fiber, mixed sign, endpoint topology, certificate handoff, exposure test, state route, formal check
+  switch/gauge: majority comparison of retention vector; ties use the declared Hamiltonian path
+  haar_zipper_cocycle            score=7 vector=(5, 5, 5, 5, 4, 5, 5, 4) role=local mixed-sign coordinate; complete for 2x2 fixed-margin fibers
+  certificate_handoff_atlas      score=6 vector=(5, 4, 4, 5, 5, 4, 5, 5) role=global zipper arrows; specifies allowed quotient handoffs
+  exposure_kernel_audit          score=5 vector=(5, 4, 4, 4, 5, 5, 4, 5) role=tests whether any labelled packet survives all local exits
+  tope_cocircuit_wall            score=4 vector=(4, 5, 4, 4, 4, 4, 5, 4) role=endpoint-cell geometry; separates open topes from boundary atoms
+  color_resonance_discrepancy    score=3 vector=(4, 3, 5, 3, 4, 4, 3, 4) role=global CRT/Fourier compatibility for mixed modes
+  admissible_smoothing_clock     score=2 vector=(4, 3, 4, 4, 4, 3, 3, 5) role=analytic kernel changes with retained approach labels
+  fixed_margin_tiling_shadow     score=1 vector=(3, 5, 2, 2, 3, 2, 2, 3) role=row/column fiber and tournament tile quotient
+  raw_component_count_K          score=0 vector=(2, 1, 1, 1, 1, 1, 1, 1) role=safe but lossy continuous boundary count
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  canonical_path=haar_zipper_cocycle > certificate_handoff_atlas > exposure_kernel_audit > tope_cocircuit_wall > color_resonance_discrepancy > admissible_smoothing_clock > fixed_margin_tiling_shadow > raw_component_count_K
+
+[6] Assumption challenge
+  alternate vertices considered: runners, dyadic rectangles, endpoint walls,
+  row/column margin fibers, switch moves, color resonances, proof carriers,
+  Fejer atoms, state-lift obligations, and theorem arrows.
+  chosen vertices: proof carriers plus the local zipper cocycle.
+  preserved: strict-witness predicate, fixed packet fiber, mixed Haar sign,
+  endpoint/topology labels, and named certificate exits.
+  destroyed: raw runner identity, continuous component count K, and scalar
+  row/column shadows, unless zeta is retained or discharged.

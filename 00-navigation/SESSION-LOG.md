@@ -14,6 +14,42 @@ preserves, what information it destroys, anchors, and a next-agent hook.  The
 main guardrail is the HYP-2990 no-free-slider rule: a quotient may forget a
 coordinate only if the predicate is fiber-constant, reconstructible,
 annihilated by a dual certificate, or routed to a named residual sector.
+## codex-2026-06-24-S166 -- Haar zipper cocycle synthesis for LRC14 (HYP-2991/T1075)
+
+User asked to synthesize recent agent work through discrepancy theory, the
+two-dimensional Haar product rule, tournament tiling, and zipper theorems.
+Started from a clean worktree, then fetched and rebased when mainline moved.
+Rebase signal: HYP-2990/T1074 already owns the abstract zipper theorem atlas,
+so this pass moved to HYP-2991/T1075 as the local Haar cocycle refinement.
+
+Added `04-computation/lrc14_haar_zipper_cocycle_codex_s166.py` and stored
+`05-knowledge/results/lrc14_haar_zipper_cocycle_codex_s166.out`.  The script
+treats the `2D` Haar product / fixed-margin tournament switch as the cocycle
+`zeta(T)=T00-T01-T10+T11`.  The finite audit over all nonnegative `2 x 2`
+tables through total `10` has `1001` tables, `506` margin fibers, `285`
+nontrivial fibers, and `0` duplicate augmented `(margins,zeta)` keys.  The
+fixed-margin zipper-step gcd is `4`, and the largest audited span is `20` on
+balanced margins.  Conclusion: row/column margins alone collide, while margins
+plus `zeta` are a complete local coordinate in the audit.
+
+Depth-4 dyadic product census: `961` rectangles, `923521` ordered products,
+`871992` orthogonal zeros, `961` same-tile boundary atoms, `6076+6076` owner
+strips, `19208` cross handoffs, and `19208` nested refinements.  Every nonzero
+non-atom class is sign-balanced before packet labels break symmetry.  Zipper
+teeth: orthogonal cancellation, boundary stop, owner strip, cross handoff,
+nested descent, and residual cocycle.  Candidate theorem: every local mixed
+Haar cocycle on a labelled LRC14 packet fiber cancels by color-compatible
+discrepancy, stops at a boundary cocircuit, hands to an owner/period/certificate
+clock, descends to a smaller family, or becomes the named F7/THM-572 residual.
+
+Tournament Analysis used proof carriers plus the local cocycle as vertices, not
+runners.  It was transitive:
+`haar_zipper_cocycle > certificate_handoff_atlas > exposure_kernel_audit >
+tope_cocircuit_wall > color_resonance_discrepancy >
+admissible_smoothing_clock > fixed_margin_tiling_shadow >
+raw_component_count_K`.  Added HYP-2991, reflection
+`07-reflections/lrc14-haar-zipper-cocycle-synthesis-codex-s166.md`, and forum
+post `poke-forum/posts/20260624-200530Z-lrc14-haar-zipper-cocycle/post.md`.
 
 ## codex-2026-06-24-S165 -- Haar-product discrepancy and tournament-tiling synthesis (HYP-2989/T1073)
 

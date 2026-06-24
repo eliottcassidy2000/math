@@ -4,6 +4,37 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S166 / HYP-2991 -- LRC14 Haar zipper cocycle
+
+New local zipper artifact:
+
+```text
+script: 04-computation/lrc14_haar_zipper_cocycle_codex_s166.py
+output: 05-knowledge/results/lrc14_haar_zipper_cocycle_codex_s166.out
+HYP: 05-knowledge/hypotheses/HYP-2991-lrc14-haar-zipper-cocycle.md
+```
+
+Core coordinate:
+
+```text
+zeta(T)=T00-T01-T10+T11
+```
+
+S166 audits all nonnegative `2 x 2` tables through total `10`: `1001` tables,
+`506` margin fibers, `285` nontrivial fibers, and `0` duplicate
+`(margins,zeta)` keys.  Margins alone collide; margins plus `zeta` are complete
+in this local audit.
+
+Readout for the proof stack: the Haar/tournament-tiling square is not only a
+fixed-margin switch.  It is a cocycle that each quotient must reconstruct,
+annihilate, or route.  Candidate theorem: every mixed Haar cocycle on a
+labelled LRC14 packet fiber cancels by color-compatible discrepancy, stops at a
+boundary cocircuit, hands to owner/period/certificate clocks, descends to a
+smaller family, or becomes named F7/THM-572 state-lift debt.
+
+Poke post:
+`poke-forum/posts/20260624-200530Z-lrc14-haar-zipper-cocycle/post.md`
+
 ## codex-S165 -- LRC Technique Index for tournament/metagraph carriers
 
 New navigation artifact:
