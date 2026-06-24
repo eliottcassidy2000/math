@@ -428,6 +428,35 @@ The fingerprint is transitive: score histogram `{0:1,...,7:1}`, no directed
 not proof, but it forces any proposed strict counterexample to name the first
 classifier gate it escapes.
 
+## S154 Correction: Apex-Majority Is Not The Live L1 Branch
+
+S154 rebases the family map over THM-571.  The many-14-multiple apex branch
+
+```text
+S = C union 14Q,  |Q|>=7
+```
+
+is already closed modulo the accepted below-frontier LRC input:
+
+```text
+THM-571 => M(S)>1/14.
+```
+
+The live covering-strictness branch is therefore the low-multiple side
+`1<=|Q|<=6`.  HYP-2967 supplies an exact local-apex reducer for that branch:
+either a one-sided denominator-14 core aperture survives the `14Q` danger
+combs, giving an explicit strict witness, or the row is one of two sharper
+residual types:
+
+```text
+full unit-support / AP-GW-skeleton core,
+comb-saturated tiny aperture.
+```
+
+In the S151 AP-neighborhood banks, S154 certifies `12548` of `18909` live
+low-multiple rows by rational aperture-comb witnesses; the remaining rows are
+local-apex-obstructed rather than generic counterexample families.
+
 ## Exhaustive Decision Procedure Target
 
 The classifier can be implemented as a deterministic decision tree:
