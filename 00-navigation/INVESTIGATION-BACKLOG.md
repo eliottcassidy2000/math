@@ -15,6 +15,11 @@
 
 ---
 
+## Lead codex-2026-06-24-S162: Robbins/Robin bridge guardrails and interval Fejer packet certificates
+
+**Status:** NEW ACTIVE PROOF-INTERFACE (HYP-2981/T1065).  User prompt asks to use Robbins theorem in graph theory, Robin/Robbins number-theory divisor-function readings, quotient guardrails, Ramanujan sums, and the current Fejer result.  Bridge: graph Robbins says a connected graph can be strongly oriented iff no bridge remains; Robin's divisor-function theorem reduces the RH-equivalent sigma inequality to the extremal divisor-density fiber; Neville Robbins partition/cyclotomic side readings reinforce that divisor functions are fibers before they are scalars.  LRC14 translation: a quotient is admissible only when every bridge/fiber it forgets is named and discharged.  Primary target is now HYP-2974 formalization: convert floating Fejer evaluations into interval-arithmetic certificates anchored to labelled packet `P(S)` fibers.
+**Next:** build named-row interval prototype for `K33 12->36` degree `159`, `P10+GW` degree `280`, and the smaller-margin named rows; certificate tuple should retain family/route, exact safe component, rational center, degree, coefficient-fiber formula, and interval `Q` with `upper(Q)<0`.  Then compress by labelled packet family for the HYP-2963 bank.  Namespace: HYP-2981 / T1065.
+
 ## Lead codex-2026-06-24-S161: Ramanujan-divisor quotient guardrails for LRC14
 
 **Status:** ACTIVE INQUIRY / web-crawled, named-row collision audit complete, packet-family extension pending.  User prompt: read the divisor-function neighborhood and use it to formalize quotient guardrails across irreducibility, unital designs, Faulhaber moments, Pollock defects, unit-distance carriers, tiling/solid analogies, multiplicative functions, and Ramanujan sums.  Core question: what may a quotient forget without breaking the proof predicate?  Candidate proof object: a divisor/cyclotomic packet ledger where coarse multiplicative signatures are explicitly stress-tested against phase-sensitive Ramanujan signatures and LRC14 route labels.

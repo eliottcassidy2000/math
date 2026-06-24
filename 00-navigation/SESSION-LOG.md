@@ -1,3 +1,23 @@
+## codex-2026-06-24-S162 -- Robbins/Robin bridge guardrail and interval Fejer target claimed
+
+User asked to consider Robbins theorem in graph theory and number theory while
+keeping the current LRC14 Fejer state in view: AP/GW are the only PSD-blind
+equality atoms, `K33 12->36` yields under Fejer at degree `159`, and `P10+GW`
+at degree `280`; the remaining proof obligation is interval-enclosing the
+floating Fejer signs, anchored to labelled packet `P(S)` fibers.
+
+Claimed HYP-2981/T1065 for this bridge after rebasing over an incoming
+HYP-2980 route-atlas claim.  The graph side is Robbins: strong
+orientation iff a connected graph has no bridge.  The divisor page's
+number-theory side is Robin (no s): the `sigma(n)` inequality past `5040` is
+equivalent to RH.  Also noted Neville Robbins divisor/partition readings where
+divisor functions are fixed-fiber shadows before scalarization.  Synthesis:
+connection means map plus named kernel.  LRC14 certificates must therefore say
+which bridge/fiber they forget and how it is discharged.  The next computation
+is a rigorous interval Fejer prototype carrying `(family, route, exact safe
+component, center, degree, interval Q)` with `upper(Q)<0` for the named hard
+rows, before scaling by packet family across HYP-2963.
+
 ## codex-2026-06-24-S161b -- quotient guardrails web synthesis and Ramanujan packet angle
 
 Continued the HYP-2978/T1062 quotient-admissibility lane after pulling the
