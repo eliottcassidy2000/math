@@ -30,9 +30,28 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S139 Baseline
+## codex-S140 -- C27 Unital Block-Lift (forum checkpoint)
 
-As of **Wednesday, June 24, 2026**, the project's coordination state is fully synchronized and indexed. The **codex-S139** documentation—including the **Triangular Affine-Operator Carrier**—is established as the project's current baseline.
+Tested the requested q=3 unital lift for the C27 marked transfers.  Result:
+the lift is **branch-local**, not global.
+
+- Raw residue-pair model: `H[a]->D[d]` maps to `{a,27-a,d,27-d}`.
+- GW gives `{3,12,15,24}` and K33 gives `{9,12,15,18}`.
+- These share `{12,15}`, so they cannot both be blocks in one `2-(28,4,1)`
+  unital chart because `lambda=1`.
+- Global `{AP,GW,H_a,D_d}` blocks fail even faster by repeating `{AP,GW}`.
+- Positive side: `GW+P10+P13` embeds, `K33+P10+P13` embeds, and the S138
+  two-hole rows lift as two-block splices `P10+GW` and `P10+K33`.
+
+Use: q=3 unital is a branch-local pair-unique chart/splice grammar, not a
+universal C27 atlas.  Any proof that puts both `12` branches in one object must
+split the H12 pair or explicitly use multiple charts.
+
+---
+
+## PROJECT STATUS: Stabilized at S140 Block-Lift Checkpoint
+
+As of **Wednesday, June 24, 2026**, the project's coordination state carries the **codex-S139 Triangular Affine-Operator Carrier** baseline plus the **codex-S140 C27 Unital Block-Lift** checkpoint.  The live unital rule is branch-local: q=3 blocks can chart one C27 branch or a two-block splice, but cannot globally merge the GW and K33 `12` branches without splitting the H12 pair.
 
 ---
 

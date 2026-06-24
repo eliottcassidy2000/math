@@ -16,6 +16,16 @@ Exact audit: all primitive AP two-swap rows with added values `<=40` give `27730
 
 Main proof readout: the new two-hole rows are not a new denominator species.  They splice the unit petal `10:g1 -> 7:g1` with the known `12` branch, either `12:g3 -> 3:g3` (GW) or `12:g3 -> 9:g9` (K33 near-miss).  Tournament Analysis used proof-channel vertices, not runners; the transitive path is `exact M/Farey branch > q>=14 threshold prefilter > marked C27 shell transfer > two-hole interaction flag > unit-hole petal discharge > gcd3-to-gcd9 K33 packet > AP-tail theorem S124/S35 > raw runner-residue tournament`.  New theorem target: prove a two-hole splice lemma forcing any genuine second-gap residual into `{10,12}->{20,24/36}`, then dispatch via petal rigidity or K33/HYP-2908 state lift.
 
+## codex-2026-06-24-S140 -- C27 marked transfers lift into q=3 unital only branch-locally
+
+User asked to try lifting HYP-2937 marked C27 transfers into q=3 unital 4-point blocks after AP/Goddyn-Wong labels are attached, and to contribute the result to the POKE forum.  Synced incoming S138/S139 first.  S138 is essential: the second-gap frontier now includes two genuine two-hole rows, both splices of petal `10:g1->7:g1` with either the GW `12:g3->3:g3` branch or the K33 near-miss `12:g3->9:g9` branch.
+
+Added `04-computation/lrc14_c27_unital_block_lift_codex_s140.py`, stored `05-knowledge/results/lrc14_c27_unital_block_lift_codex_s140.out`, and registered HYP-2942 / T1038 / reflection `07-reflections/lrc14-c27-unital-block-lift-codex-s140.md`.  The q=3 unital sanity check has `28` points, `63` blocks, and block intersection histogram `{0:945,1:1008}`, so distinct blocks never share two points.
+
+Raw residue-pair lift sends `H[a]->D[d]` to `{a,27-a,d,27-d}`.  This gives GW `{3,12,15,24}` and K33 `{9,12,15,18}`; they share pair `{12,15}`.  Therefore one q=3 unital chart cannot contain both the tight GW block and the K33 near-miss block, because the design has `lambda=1`.  The global `{AP,GW,H_a,D_d}` model fails even faster by repeating `{AP,GW}` in every transfer block.
+
+Positive result: branch-local charts embed.  The tight chart `GW+P10+P13` and the K33 chart `K33+P10+P13` both satisfy pair uniqueness and embed into the q=3 unital incidence design.  The S138 two-hole rows lift as two-block splices, not new single blocks: `drop(10,12)->add(20,24)=P10+GW` and `drop(10,12)->add(20,36)=P10+K33`.  Forum verdict: q=3 unital is a branch-local pair-unique chart/splice grammar, not a universal C27 atlas.  Any proof that wants both 12-branches in one object must split the H12 pair by an extra branch coordinate or explicitly use multiple charts.
+
 ## codex-2026-06-23 -- pi/unital/flower unit guardrail: 22 belongs to turn units, q=6 formal unital gives the 7*31/pi^3 carrier (HYP-2938)
 User asked to integrate the previous LRC14/tournament/unital themes with `22/7`, `cuberoot(31)`, a flower with turn `1/pi`, and the several notions of "unital."  Pulled the current S136 Binary Relational Exploration baseline first; the key live instruction is to define the binary relation/quotient and state what it preserves.  Added `04-computation/pi_unital_flower_carrier_codex.py`, stored `05-knowledge/results/pi_unital_flower_carrier_codex.out`, and registered HYP-2938/T1034 plus reflection `07-reflections/pi-unital-flower-unit-guardrail-codex.md`.
 
