@@ -1,20 +1,31 @@
 ---
 id: HYP-2953
 title: LRC14 source-spectrum pullback
-status: PROOF-SYNTHESIS / source-spectrum theorem target; not a proof
+status: PROOF-SYNTHESIS / source-spectrum kernel protocol; not a proof
 source: codex-2026-06-24-S149
 related:
   - HYP-2952
   - HYP-2951
   - HYP-2950
+  - HYP-2949
+  - HYP-2948
   - HYP-2947
+  - HYP-2946
+  - HYP-2944
+  - HYP-2942
+  - HYP-2940
+  - HYP-2937
   - HYP-2936
   - HYP-2929
   - HYP-2928
   - HYP-2927
   - HYP-2920
   - HYP-2917
+  - HYP-2908
   - HYP-2486
+  - HYP-2296
+  - HYP-2272
+  - HYP-2024
   - THM-523
   - THM-566
   - THM-572
@@ -27,20 +38,22 @@ related:
 
 S149 searched the recent LRC14 packet/tournament front and then read back
 through the older source-fiber, q-witness, shell-partner, tournament-spectrum,
-bounded-denominator, and state-lift history.
+bounded-denominator, boundary-moment, and state-lift history.
 
 The missing picture seems to be that the repo has been projecting one object
 onto many surfaces.  The object is a **source-spectrum pullback**:
 
 ```text
-Farey/Stern-Brocot binding node
-  + threshold observer-source lift
-  + Haar/Baire boundary-vs-interior code
-  + packet labels retained until discharge.
+SourceSpec(S)
+  = Sigma_phase(S)
+      x_{Farey(M)}
+    Boundary_Haar(S)
+      x_{owner}
+    Packet_C27,unital,K33,PH,gK8(S).
 ```
 
-This is not a new scalar invariant.  It is a proof carrier whose projections
-are already visible in the history:
+This is not a new scalar invariant.  It is the proof carrier whose projections
+have already appeared as:
 
 ```text
 tournament spectrum       remembers magnitude by moving through phase
@@ -52,13 +65,23 @@ boundary-moment bridge    handles the covering / wide branch
 state lift                gives the forbidden-H=7 endpoint
 ```
 
+The point is to carry the source/kernel until the proof has named its exit.
+Raw scalar `M`, raw tournament class, C27 shell alias, or Haar boundary alone
+can all lie.  The pullback is the minimal quotient that still knows where the
+LRC witness source or boundary debt lives.
+
 ## Definitions
 
-For a primitive 13-speed row `S`, define the exact LRC gap:
+For a primitive 13-speed row `S`, define the exact LRC gap and divisor gate:
 
 ```text
-M(S) = sup_t min_{s in S} ||s*t||.
+M(S) = sup_t min_{s in S} ||s*t||
+qdiv(S) = min { d >= 1 : no element of S is divisible by d }.
 ```
+
+The q-witness gives `M(S) >= 1/qdiv(S)`.  Thus `qdiv(S) <= 13` is already
+above `1/14`, while the hard rows split into the `qdiv=14` boundary branch and
+the `qdiv>14` covering branch.
 
 Let `T_src(S,t)` be the threshold observer-source lift:
 
@@ -77,6 +100,17 @@ observer 0 is a source in T_src(S,t).
 This is the HYP-2486 source-cone insight.  Deleting the source gives an
 A000568 tournament class on moving runners, but only after the observer-source
 predicate has been retained.
+
+Let
+
+```text
+O(S) = { t in R/Z : ||s*t|| > 1/14 for all s in S }
+C(S) = { t in R/Z : ||s*t|| >= 1/14 for all s in S }.
+```
+
+`O(S)` is the regular-open strict safe set.  `C(S)` is the closed threshold
+support.  AP and Goddyn-Wong have `O(S)=empty` but nonempty denominator-14
+closed support with the same six tested boundary owner pairs.
 
 Let `Sigma_src(S)` be the source-labelled tournament spectrum:
 
@@ -97,6 +131,7 @@ qdiv(S)
 exact M/Farey mark p/q and excess e14=14p-q
 regular-open Haar safe mass
 closed boundary owner debt
+source-labelled phase walk
 C27 owner/carry transfer
 q=3 unital chart status
 affine-depth word
@@ -147,6 +182,17 @@ Boundary-moment adjunction / proof-DAG posts:
 THM-572:
   a genuine bad K33/state-lift atom dies once it constructs H(T)=7.
 ```
+
+The meta-partner threads say the same thing in unrelated language:
+
+- HYP-2296: signed mutual floors become legible only after a cut selects the
+  shell-partner kernel.
+- HYP-2272: additive-energy scalar projections work only with conjugate
+  root-of-unity side channels retained.
+- `beta2_zero_proof_structure.md`: source cones and multi-cones contract the
+  tournament chain complex; raw tournament counts are not enough.
+- HYP-2024: the useful LRC vertices may be sections, boundaries, events,
+  residues, Fourier modes, or proof obligations rather than runners.
 
 The current synthesis is that these are not independent proof attempts.  They
 are projections of the same source-spectrum packet.
@@ -216,6 +262,47 @@ or reveal a genuinely new kernel class.
 ```
 
 That is a falsifiable shape.
+
+## Necessary Conditions
+
+Any row that is AP/GW-kind, or any new row pretending to be AP/GW-kind, must
+pass all of the following filters.
+
+1.  **Divisor threshold gate.**  It must avoid the easy q-witness:
+    `qdiv(S) >= 14`.
+2.  **Regular-open zero gate.**  If it is tight like AP/GW, then
+    `mu(O(S))=0`.  Positive `mu(O(S))` is already slack.
+3.  **Closed-boundary owner gate.**  Its threshold support must have a finite
+    owner skeleton compatible with denominator 14.  AP and GW share the same
+    six owner pairs; a new skeleton needs a named discharge.
+4.  **Apex-pressure transitivity.**  The denominator-14 unit tournament
+    `T_apex(S)` of HYP-2952 must be transitive.  Cyclic apex pressure is not an
+    AP/GW source.
+5.  **First-derived AP boundary gate.**  The only known valid first derived
+    AP-tail acceleration is the Jacobsthal-admissible `12 -> 24` move.  Double
+    doublings or `3v`-type moves must expose a cross packet.
+6.  **C27 carry gate.**  The boundary transfer must retain its `H[h] -> D[d]`
+    label.  Shell aliases with the same coarse label but loose `M` are
+    explicit refutations of shell-only proofs.
+7.  **Farey debt gate.**  A row below the obvious frontier must explain its
+    Farey node.  The `3/41` neighbor is the expected K33 near-source, not a new
+    tight row.
+8.  **Unital/K33 fork.**  Unit-visible transfers route to the C27 petal or
+    two-block splice grammar.  Nonunit depth must expose the K33/HYP-2908/THM-572
+    state-lift packet.
+9.  **Source-pullback consistency.**  The source cell in `Sigma_src`, the Haar
+    boundary owner, the C27 owner, and the packet label must be the same event
+    after quotienting.  If they disagree, the row is not AP/GW-kind; it is a
+    positive-slack row or a state-lift obligation.
+10. **No-new-kernel obligation.**  A primitive LRC14 counterexample must be a
+    new unnamed source kernel in `SourceSpec(S)`: zero open mass, no gK8/L_y
+    positive slack, no C27 petal discharge, no K33/state-lift flag, and not in
+    the AP/GW derived orbit.
+
+These are necessary conditions, not independent miracles.  They are different
+views of one rigidity statement: the denominator-14 AP source is 2-adically
+rigid except at the Jacobsthal-gated `12 -> 24` site, and every other boundary
+debt must retain enough packet data to discharge.
 
 ## Meta Partners
 
@@ -324,9 +411,10 @@ fixed circle sections,
 section boundaries,
 wall-crossing events,
 Farey nodes,
+denominator-14 residues and units,
 exact-period unit packets,
 cover arcs,
-Fourier modes,
+Fourier/Krawtchouk modes,
 C27 transfer shells,
 unital block completions,
 K33 incidence packets,
@@ -338,7 +426,7 @@ proof obligations.
 Chosen vertices for this synthesis:
 
 ```text
-source-spectrum packet carriers.
+proof-lens source-spectrum packet carriers.
 ```
 
 The quotient preserves:
@@ -355,15 +443,32 @@ It destroys:
 ```text
 raw row identity,
 some exact denominator multiplicity,
+fine wall order,
 and low-level runner labels after they have been converted to packet owners.
+```
+
+The proof-lens tournament `T_lens(S)` has vertices:
+
+```text
+Q  = qdiv gate
+F  = exact M / Farey node
+B  = Haar-Baire boundary carrier
+P  = phase-spectrum source walk
+C  = C27 owner/carry packet
+U  = q=3 unital / affine-depth packet
+K  = K33 / state-lift packet
+G  = gK8 / L_y moment image
+R  = PH-rank / residual atlas
+X  = raw scalar or raw tournament shadow
 ```
 
 Pairwise observable:
 
 ```text
-which carrier preserves the LRC predicate longest before scalarization:
-source predicate, binding scale, boundary ownership, exact-period ownership,
-moment positivity, or state-lift contradiction.
+Obs(A,B;S) =
+  (does A preserve the LRC witness predicate after quotienting?,
+   does A preserve the source/kernel identity?,
+   does A name a discharge branch for the destroyed data?)
 ```
 
 Switch/gauge:
@@ -376,28 +481,71 @@ ties follow the Hamiltonian path below.
 Tie Hamiltonian path:
 
 ```text
-threshold observer-source lift
-> Farey/tournament spectrum
-> exact M pair-switch envelope
-> Haar/Baire boundary-interior code
-> exact-period packet atlas
-> C27/unital owner labels
-> boundary-moment gK8/L_y image
-> K33/THM-572 state lift
-> raw scalar/tournament shadow
+Q
+> F
+> B
+> P
+> C
+> U
+> K
+> G
+> R
+> X.
 ```
 
 Fingerprint:
 
 ```text
-transitive role tournament,
-score histogram {0:1,...,8:1},
-singleton SCCs,
-unique Hamiltonian path.
+score histogram: 9,8,7,6,5,4,3,2,1,0
+directed 3-cycles: 0
+SCCs: ten singleton SCCs
+Hamiltonian paths: unique under the stated tie gauge
 ```
 
-The result is a method theorem, not an LRC proof: it tells us which quotient is
-allowed to be fundamental.
+This is a structural tournament, not a replacement for row enumeration.  It
+preserves the theorem-critical predicate "is this quotient still carrying the
+source of the LRC witness?" and destroys exact row identity, exact denominator
+data, and fine wall order unless those are reattached through the pullback.
+
+## Bounded-Census Consequence
+
+HYP-2950 already made the bounded census smaller by showing many shadows are
+false friends: C27 shell aliases and floor-odd GW tournament impostors are
+loose.  `SourceSpec` suggests the next census shrink:
+
+```text
+row
+  -> qdiv branch
+  -> exact M / Farey node
+  -> strict Haar mass and boundary owner skeleton
+  -> phase-spectrum source-walk hash
+  -> C27/unital/K33/gK8 packet
+  -> source-kernel label
+```
+
+Rows with positive strict Haar mass leave the AP/GW search.  Rows with the K33
+or petal labels leave the tight-source search.  Rows whose phase-spectrum
+source is not the same event as the boundary owner are quotient artifacts.  The
+bounded AP/GW-kind census should then be only:
+
+```text
+AP, GW, named positive-slack frontier rows, named K33/state-lift rows,
+or a genuine new source kernel.
+```
+
+## Falsifiers
+
+Any one of these would break the protocol and should be searched for directly.
+
+1.  A primitive `qdiv>14` row with `mu(O)=0`, zero gK8/L_y slack, no C27 petal
+    label, and no K33/state-lift flag.
+2.  A `qdiv=14` boundary-only row whose owner skeleton and apex-pressure class
+    match AP/GW but whose derived AP profile is not AP or `12 -> 24`.
+3.  A low `M` row whose raw tournament is AP/GW-like but whose source-pullback
+    labels disagree.  This should be loose; if it is tight, the pullback is
+    missing a coordinate.
+4.  A covering row whose exact-period packet has no measurable boundary-moment
+    image.  This would attack the HYP-2950/HYP-2951 to gK8 bridge directly.
 
 ## Next Computation
 
@@ -405,15 +553,26 @@ Extend the HYP-2950 gauntlet so every row emits one JSON/CSV packet:
 
 ```text
 qdiv
-exact M=p/q and e14
-strict-open Haar mass
-source-spectrum binding node
-boundary-owner skeleton
+exact_M=p/q
+farey_excess_14
+strict_haar_mass
+closed_owner_skeleton
+phase_source_walk_hash
+apex_pressure_iso_class
 exact-period first surviving denominator and unit packet
-C27/unital/K33 labels
-boundary-moment/gK8 image
-kernel label: AP/GW | petal | K33 | wide-positive | unknown
+C27_transfer
+unital_affine_depth
+K33_state_lift_flag
+gK8_Ly_slack
+PH_support_six_rank
+source_kernel_label: AP/GW | petal | K33 | wide-positive | unknown
+pullback_consistent
 ```
+
+Then run it on AP, GW, `12 -> 36`, the `10` and `13` petals, both S138
+splices, shell aliases, lcm tails, floor-odd tournament impostors, and the
+named wide/genuine-wide leaders.  The important output is not another scalar
+minimum; it is the count of rows landing in the unnamed source-kernel bucket.
 
 The target is to search for a row with:
 
