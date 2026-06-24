@@ -73,6 +73,7 @@ Literal radians:
 ```text
 theta = 1/pi radians.
 turn_fraction = 1/(2*pi^2) ~= 0.050660591821169.
+if pi is replaced by 22/7 in both places, turn_fraction = 49/968.
 steps per turn = 2*pi^2 ~= 19.739208802178716.
 best q<=100 closure is q=79, four turns, residual 0.01373977980112073 rad.
 q=22 residual is 0.7196321888638089 rad.
@@ -108,6 +109,12 @@ This is exactly the HYP-2892/HYP-2894 pair-frame numerology:
 `28 = C(8,2)`.  It remains a secondary weighted frame after a category-1
 AP/Goddyn-Wong labelling is chosen; HYP-2894 already refutes the naive
 canonical `S8`-invariant design identification.
+
+The next C27-facing experiment is concrete: try to lift the HYP-2937 marked
+transfer packets into q=3 unital 4-point blocks after the AP/Goddyn-Wong
+category-1 labels are attached.  If the lift exists, the `lambda=1` pair
+balance could smooth C27 transfer packets before the HYP-2908 state lift; if
+it fails, the unital remains a weighted labelled frame only.
 
 Algebraic/functional-analytic unital:
 

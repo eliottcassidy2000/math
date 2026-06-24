@@ -9,7 +9,9 @@ The `22` in the flower story is real, but not under the literal phrase
 residual.  The `22` appears cleanly when the step is `1/pi` of a full turn,
 i.e. `2` radians, because `1/pi ~= 7/22`.  Then `22` petals nearly close after
 `7` full turns.  This is an aliasing/family-count signal, not a new exact
-period.
+period.  If `pi=22/7` is substituted directly into the literal-radian
+normalization, the turn fraction is exactly `49/968`; that is the compact
+warning label for why the literal-radian model is not the 22-family model.
 
 The two pi approximants have different roles.  `22/7` is the Farey/rational
 carrier and can produce denominator labels such as `7/22` for a turn fraction.
@@ -23,7 +25,9 @@ unital is the old `28=C(8,2)` pair-frame lead from HYP-2892/HYP-2894.
 Algebraic or functional-analytic unitality is about identities and
 identity-preserving maps.  The C=27 "unit-visible" shell language is about
 gcd-one residue classes.  These are three different carriers; they should not
-be collapsed just because the words are adjacent.
+be collapsed just because the words are adjacent.  The concrete new experiment
+is to test whether HYP-2937 marked C27 transfers lift into q=3 unital 4-point
+blocks after category-1 AP/GW labels are attached.
 
 The resulting proof-order instinct is conservative:
 

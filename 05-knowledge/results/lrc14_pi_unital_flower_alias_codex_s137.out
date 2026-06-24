@@ -16,6 +16,7 @@ FLOWER ROTATION NORMALIZATION
 literal_radian_step: theta = 1/pi radians
   theta_rad: 0.318309886183791
   turn_fraction: 0.050660591821169
+  if_pi_is_22/7_exactly_then_turn_fraction: 49/968 (period 968)
   local_steps_per_turn: 19.739208802178716
   best_closure_q<=100: q=79, turns=4, residual_rad=+1.373977980112073e-02
   q=22_residual_rad: +7.196321888638089e-01
@@ -38,6 +39,8 @@ block_design_unital_q=3:
   blocks: 63
   point_replication: 9
   LRC use: secondary pair-frame candidate for C(8,2)=28 slots.
+  next test: lift HYP-2937 marked C27 transfers into q=3 unital
+             4-point blocks after category-1 AP/GW labels are attached.
 algebraic_unital:
   meaning: an identity/unit is present, or a map preserves identity.
   LRC use: metaphor for label-preserving quotient maps, not a design.

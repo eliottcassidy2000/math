@@ -51,9 +51,16 @@ def print_flower_normalization():
     print("FLOWER ROTATION NORMALIZATION")
 
     theta_literal = 1 / math.pi
+    pi_22_7 = Fraction(22, 7)
+    literal_turn_fraction_with_22_7 = Fraction(1, 1) / pi_22_7 / (2 * pi_22_7)
     print("literal_radian_step: theta = 1/pi radians")
     print(f"  theta_rad: {theta_literal:.15f}")
     print(f"  turn_fraction: {theta_literal / (2 * math.pi):.15f}")
+    print(
+        "  if_pi_is_22/7_exactly_then_turn_fraction: "
+        f"{literal_turn_fraction_with_22_7} "
+        f"(period {literal_turn_fraction_with_22_7.denominator})"
+    )
     print(f"  local_steps_per_turn: {2 * math.pi / theta_literal:.15f}")
     q, k, residual, abs_residual = best_closure(theta_literal, 100)
     print(f"  best_closure_q<=100: q={q}, turns={k}, residual_rad={residual:+.15e}")
@@ -91,6 +98,8 @@ def print_unital_guardrail():
     print(f"  blocks: {blocks}")
     print(f"  point_replication: {replication}")
     print("  LRC use: secondary pair-frame candidate for C(8,2)=28 slots.")
+    print("  next test: lift HYP-2937 marked C27 transfers into q=3 unital")
+    print("             4-point blocks after category-1 AP/GW labels are attached.")
     print("algebraic_unital:")
     print("  meaning: an identity/unit is present, or a map preserves identity.")
     print("  LRC use: metaphor for label-preserving quotient maps, not a design.")

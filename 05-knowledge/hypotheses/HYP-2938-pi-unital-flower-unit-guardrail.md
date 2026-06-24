@@ -54,6 +54,7 @@ The flower statement needs a unit correction:
 ```text
 1/pi turns      has convergent 7/22, drift after 22 petals about 1.014 degrees.
 1/pi radians    has turn fraction 1/(2*pi^2), first good denominators 20 and 79.
+22/7 inserted into the literal-radian normalization gives 49/968 turns.
 ```
 
 So the claimed `22` petal families belong to `1/pi` as a **turn fraction**,
@@ -84,6 +85,12 @@ q=10: v=1001,       k=11, h=91=C(14,2)
 
 The `q=3` row is already active in HYP-2892/HYP-2894: it gives a real
 `28`-point pair-frame but not a canonical AP8 pair-slot design.
+
+The C27-facing next experiment is to try lifting the HYP-2937 marked shell
+transfers into q=3 unital 4-point blocks after category-1 AP/Goddyn-Wong
+labels are attached.  A positive lift would make the unital's `lambda=1`
+balance a transfer-packet smoother before HYP-2908; a negative lift would
+confirm that the unital remains only a weighted labelled frame.
 
 The `q=6` row is the new prompt bridge.  As finite geometry, it should be
 treated as a formal parameter row unless an actual design is supplied; but as

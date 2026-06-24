@@ -7,7 +7,8 @@ If the petal rule is `1/pi` of a full turn, then `1/pi ~= 7/22`, and a
 22-family flower is exactly what one expects.  If the petal rule is literally
 `1/pi` radians, then the turn fraction is `1/(2*pi^2)`, and the first visible
 denominators are near `20` and `79`.  Same symbol, different unit, different
-geometry.
+geometry.  With `pi=22/7` substituted into the literal-radian normalization,
+the fraction is exactly `49/968`, which makes the mismatch wonderfully blunt.
 
 That makes the algebraic word "unital" surprisingly relevant.  A unital map
 is not just a map with a nice adjective; it preserves the identity.  Here the
@@ -33,6 +34,12 @@ real.  HYP-2894 already warns us that it is not canonically the AP8 pair-slot
 design.  That warning should govern the new q=4 and q=6 temptations too.
 `65+7=72` is a lovely hint toward self-dual length-72 code coordinates, but
 without a labelled coordinate split it is only a prompt.
+
+For LRC14, the next concrete test is smaller and less glamorous: try lifting
+the HYP-2937 marked C27 transfers into q=3 unital 4-point blocks after
+category-1 AP/Goddyn-Wong labels are attached.  A positive lift gives a
+`lambda=1` smoothing frame; a negative lift keeps the unital safely demoted to
+weighted labelled analogy.
 
 So the practical rule for future proof searches is:
 
