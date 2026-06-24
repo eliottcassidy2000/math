@@ -1,5 +1,5 @@
 ---
-id: HYP-2987
+id: HYP-2988
 title: LRC14 Haar-product discrepancy and tournament-tiling square
 status: PROOF-INTERFACE / synthesis scout and quotient guardrail, not a proof
 source: codex-2026-06-24-S165
@@ -7,6 +7,7 @@ artifacts:
   - 04-computation/lrc14_haar_product_discrepancy_tiling_codex_s165.py
   - 05-knowledge/results/lrc14_haar_product_discrepancy_tiling_codex_s165.out
 related:
+  - HYP-2987
   - HYP-2986
   - HYP-2985
   - HYP-2984
@@ -22,7 +23,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2987: Haar Product Discrepancy And Tournament Tiling
+# HYP-2988: Haar Product Discrepancy And Tournament Tiling
 
 This pass pulls the recent S162/S163/S164 packet work back into the older
 colored-discrepancy thread.  The key observation is elementary but structural:
@@ -102,7 +103,7 @@ actual_count >= V*Sigma - K.
 ```
 
 HYP-2595 then showed that only color-compatible resonances survive in the
-Fourier/color expansion.  HYP-2987 explains the geometry of that improvement:
+Fourier/color expansion.  HYP-2988 explains the geometry of that improvement:
 the raw boundary components are row/column shadows, while the surviving
 defect lives in mixed Haar product coefficients.
 
@@ -112,7 +113,7 @@ cocircuits are zero-dimensional wall atoms; a genuine residual would have to
 survive the mixed-product switch without exposing an open witness or a boundary
 owner law.
 
-HYP-2986's certificate handoff atlas supplies the gluing rule: a handoff may
+HYP-2987's certificate handoff atlas supplies the gluing rule: a handoff may
 forget margins, endpoint lists, or raw component counts only if it preserves
 the mixed product packet or reconstructs it by Fejer, Ramanujan, endpoint,
 Kaczynski, or state-lift labels.
@@ -145,12 +146,12 @@ A plausible bound remains the HYP-2595 shape:
 Delta(P,E,V) <= C * (k + c_GP)
 ```
 
-where `k=|E|` and `c_GP` is the number of small-speed safe components.  HYP-2987
+where `k=|E|` and `c_GP` is the number of small-speed safe components.  HYP-2988
 adds the mechanism: `k+c_GP` should count independent mixed-product switch
 families after the row/column margins are fixed, while `K` counts every
 micro-boundary component before cancellation.
 
-If formalized, this connects directly to the HYP-2986 zipper theorem arrows:
+If formalized, this connects directly to the HYP-2987 zipper theorem arrows:
 
 ```text
 O1 source-kernel exclusion:
