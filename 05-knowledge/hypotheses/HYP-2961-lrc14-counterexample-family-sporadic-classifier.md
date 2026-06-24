@@ -5,6 +5,7 @@ status: CLASSIFICATION TARGET / proof grammar for all possible strict counterexa
 source: codex-2026-06-24-S153
 extensions:
   - codex-2026-06-24-S151 executable bounded audit
+  - codex-2026-06-24-S152 few-apex lift-packet correction
 script_s151: 04-computation/lrc14_counterexample_family_sporadic_classifier_codex_s151.py
 result_s151: 05-knowledge/results/lrc14_counterexample_family_sporadic_classifier_codex_s151.out
 related:
@@ -206,7 +207,10 @@ wide row; it is live family `L2` below.
 
 ### L1. Apex-multiple residual family
 
-This is the sharpened THM-568/HYP-2909 residual.  A row in this family has:
+This was the sharpened THM-568/HYP-2909 residual.  The S152/HYP-2968
+correction splits it into an apex-majority branch and a few-apex branch.
+
+The older live-family wording was:
 
 ```text
 qdiv(S) > 14,
@@ -219,17 +223,29 @@ top-balanced after HYP-2906,
 prime-covering after THM-523.
 ```
 
-Reason it is live: denominator-14 apex witnesses are blocked by `Q`, and the
-simple `r<=6` comb-teeth positivity has run out.  HYP-2909 identifies the
-remaining theorem as:
+This should no longer be treated as the active live branch.  THM-571 closes
+the `|Q|>=7` apex-majority branch modulo its accepted below-frontier LRC input.
+HYP-2968 therefore rewrites the live covering residual as:
 
 ```text
-S = R union Q, Q subset 14*Z, |Q|>=7
-  => M(S) > 1/14.
+qdiv(S) > 14,
+S = R union 14Q,
+1 <= |Q| <= 6,
+top-balanced after HYP-2906,
+not discharged by positive lift-packet mass,
+not state-lifted to K33 / THM-572.
 ```
 
-This is an infinite family unless the second-moment/resonance defect supplies
-an effective bound.
+The S152 structured AP-replacement lift-packet probe audits `8190` `qdiv>14`
+few-apex rows and finds `0` zero-open packets, with smallest exact lift-safe
+mass `563/105105`.  The live theorem is now the fixed-margin few-apex lift
+packet:
+
+```text
+primitive qdiv>14, 1<=|14Z cap S|<=6
+  -> positive regular-open lift packet
+     or K33 / HYP-2908 / THM-572 state lift.
+```
 
 ### L2. Genuine-wide zero-moment family
 

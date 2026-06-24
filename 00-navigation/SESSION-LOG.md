@@ -35,6 +35,43 @@ The default audit extends S150's AP-neighborhood bank: one-swap `add<=420`, two-
 The proof shift is the important part.  Instead of trying to prove a scalar lower bound on safe mass, the script mines the shortest strict safe interval and records endpoint-owner pinch templates with exact endpoints, width, slack, q-class, atom keys, and C27-normalized labels.  Recurrent templates include `13L->12R`, `14L->13R`, `11L->16R`, `7L->20R`, and `5L->36R`.  Tournament Analysis uses proof carriers/pinch templates, not runners, and is transitive with `F6_NORK_sink`, boundary skeletons, pinch templates, fixed-margin packets, C27/K33 labels, qdiv gate, scalar mass, and raw runner set ordered by retained proof content.
 
 New theorem target: prove the NORK pinch theorem.  Every primitive non-AP/GW AP-source-core packet should create a positive endpoint-owner pinch template, unless it constructs HYP-2908/THM-572 or a genuinely new F7 Johnson-harmonic sector.  LRC14 remains open, but F6 is now a local labelled theorem rather than a generic unknown bucket.
+## codex-2026-06-24-S152 -- few-apex lift-packet bridge for the LRC14 covering residual
+
+User asked to keep working creatively toward proving LRC.  Pulled current
+mainline first and integrated the recent labelled-packet theorem/audit work
+as signal rather than duplicating it.  The key correction found during the
+session: HYP-2961 still listed the `|14Z cap S|>=7` apex-multiple family as
+live, but THM-571 closes that apex-majority branch modulo its below-frontier
+input.  The active covering side is the few-apex branch
+`1<=|14Z cap S|<=6`.
+
+Added `04-computation/lrc14_few_apex_lift_packet_probe_codex_s152.py`, stored
+`05-knowledge/results/lrc14_few_apex_lift_packet_probe_codex_s152.out`,
+created HYP-2968, reflection
+`07-reflections/lrc14-few-apex-lift-packet-bridge-codex-s152.md`, T1051, and
+Poke post
+`poke-forum/posts/20260624-161447Z-lrc14-few-apex-lift-packets/post.md`.
+Also updated HYP-2961 with the correction.
+
+Method: set `u=14t`.  Multiples `14m` become the Q-comb condition `||m u||`;
+residual speed `r` in lift `k` forbids exact rational intervals
+`((14n-1)/r-k,(14n+1)/r-k) cap [0,1]`.  This emits fourteen labelled
+Borel/Baire/Haar lift packets per row.  A positive complement interval in any
+lift is a strict LRC14 witness.
+
+Structured AP-replacement bank: `8190` `qdiv>14` rows with
+`1<=|14Z cap S|<=6`, compact and stretched multiplier profiles, and restored
+divisor coverage for `d=2..14`.  Result: `0` zero strict lift-mass rows and
+`0` no-positive-lift rows.  Smallest exact lift-safe mass is `563/105105`.
+Direct Haar interval checks matched the lift packet.  Exact `M` fallback on
+the four tightest rows gave `7/89`, `2/23`, `2/23`, and `14/173`, all above
+`1/14`.
+
+Proof-order takeaway: the F5/F6 covering boundary-moment bridge can now be
+stated as a fixed-margin few-apex lift theorem: every primitive `qdiv>14` row
+with at most six 14-multiples has positive regular-open lift mass or a retained
+nonunit packet state-lifts to HYP-2908/THM-572.  LRC14 remains open, but the
+covering residual is more sharply localized.
 
 ## codex-2026-06-24-S150 -- fixed-margin labelled packet theorem for LRC14 families
 
