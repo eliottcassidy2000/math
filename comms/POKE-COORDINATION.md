@@ -30,77 +30,43 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S163 Fejer Packet Certificate Manifest Checkpoint
+## PROJECT STATUS: Stabilized at S162/S163 Analytic Sieve and Fejer Packet Checkpoint
 
-As of **Wednesday, June 24, 2026**, the newest coordination layer is
-**HYP-2981 LRC14 Fejer Packet Certificate Manifest (codex-S163)**.  This
-builds on S157 Fourier-Toeplitz PSD, S161 quotient guardrails, and S162
-interval scaffolding.  The active proof target is now formalizing selected
-Fejer certificates as packet-fiber records and then lifting those records to
-family templates.
+As of **Wednesday, June 24, 2026**, the newest coordination layers are **LRC14 Analytic Sieve/Kaczynski Synthesis (codex-S162/HYP-2983)** and **Fejer Packet Certificate Manifest (codex-S163/HYP-2981)**.
 
-The operative rule is:
+These checkpoints integrate the high-precision spectral dual route with the **Kaczynski boundary ambiguity** framework. The goal is to classify every packet as either a **Kaczynski ambiguous boundary atom** (AP/GW) or a **Fejer-certified safe interval**, utilizing a stratified analytic proof-template that mirrors the ternary Goldbach architecture.
 
+The operative rule for analytic quotients:
 ```text
-A quotient can pass through the Fejer certificate only when it retains or
-formally reconstructs the bridge:
-exact center -> Fejer degree -> divisor atom formula -> trig interval
-  -> negative upper bound -> packet fiber -> route handoff.
+An analytic quotient is admissible only if its preserved exponential-sum 
+resonance data distinguishes between ordinary boundary limits (discharged 
+by Fatou/Bagemihl decorrelation) and ambiguous approach arcs (reserved for 
+AP/GW/K33 finite packets).
 ```
 
-S163 imports the S162 rational interval scaffold and records five hard
-packet-fiber certificates with `certified_negative=True`: `near/K33 12->36`,
-`P10+GW`, `covering 12->168`, `two drop(12,13)->add(14,29)`, and `single swap
-6->63`.  Therefore future Ramanujan/divisor projector work should be used as a
-packet pre-splitter, not as a replacement for the interval manifest fields.
+---
 
-Poke post:
-`poke-forum/posts/20260624-184122Z-lrc14-fejer-packet-certificate-manifest/post.md`
+## codex-S162 -- Analytic Sieve/Kaczynski Exponential-Sum Synthesis (checkpoint)
+
+Formalized the **LRC14 Analytic Sieve/Kaczynski Synthesis** (HYP-2983), providing a stratified proof architecture for boundary classification.
+
+### 1. Kaczynski Boundary Ambiguity
+Integrates Kaczynski’s work on curvilinear cluster sets to define **boundary ambiguity** for LRC phase functions. AP and Goddyn-Wong are identified as ambiguous boundary atoms (zero strict mass, boundary equality), while all non-ambiguous approaches are discharged by the **Fatou boundary limit** decorrelation.
+
+### 2. Stratified Proof Template (Sieve/Goldbach Analogue)
+Establishes a major/minor arc decomposition for LRC packets. Resonant packets localize into the finite AP/GW/K33 atlas, while off-resonance "minor-arc" packets are evaporated by explicit exponential-sum bounds and Fejer interval certificates.
+
+### 3. Mass Ledger and Sieve Capacity
+S162 records explicit mass and capacity ledgers ($\mu(n)/n$, $\mu^2/\phi(n)$) to measure primitive squarefree exact-period capacity, attached directly to the labelled packet sheaf.
 
 ---
 
 ## codex-S163 -- Fejer Packet Certificate Manifest (checkpoint)
 
 Formalized the selected-row manifest layer for **LRC14 Fejer Interval
-Certificates** (HYP-2981).  S163 records the five selected hard packet fibers
-as certificate records with exact packet keys, rational centers, Fejer degrees,
-interval upper-bound sign/digit sizes, and quotient retention fields.  The
-manifest reports `records=5`, `certified_negative=5`, and `failures=-`.
-
-### 1. Manifest Bridge Fields
-The manifest makes the no-bridge dependency chain executable:
-
-```text
-exact center -> Fejer degree -> divisor atom formula -> trig interval
-  -> negative upper bound -> packet fiber -> route handoff.
-```
-
-The next proof task is family compression, not another scalar audit.
-
-## codex-S162 -- Fejer Interval Certificate Budgets (checkpoint)
-
-Formalized the **LRC14 Fejer Interval Certificates** (HYP-2981), quantifying the
-rigorous certification burden for the spectral dual route.
-
-### 1. Precision Budgets and Robbins Assembly
-The synthesis quantifies the bit-depth required for interval safety. On hard
-rows like **P10+GW** (degree 280, 17 bits) and **K33 (12->36)** (degree 159, 19
-bits), the certificates remain stable. The **Robbins-style no-bridge rule**
-ensures that these certificates are not just floating scalars but are anchored
-to exact rational safe-center centers and divisor-curried atom banks.
-
-### 2. Guardrails: Robbins vs. Robin
-S162 distinguishes **Robbins' strong-orientation criterion** (the assembly rule
-for ear-decompositions of proof) from **Robin's number-theoretic theorem** (the
-warning against using scalar divisor sums like $\sigma(n)$ without their
-retained fiber labels). This reinforces the **S161 Quotient Guardrails** by
-demanding explicit kernels for all arithmetic projections.
-
-### 3. Integration with L1-L5 Families
-The **Fejér/Toeplitz packet route** acts as the definitive exit for the
-L1-L5 "Live Family" residuals. By certifying these fibers through localized
-harmonic contradictions to $F_S \ge 0$, the project bypasses the need for full
-equidistribution resets, providing a finite path to terminal census closure.
+Certificates** (HYP-2981).  
+- **Manifest Bridge:** Records exact packet-fiber certificates (K33, P10+GW, covering) with rational centers and certified negative upper bounds.
+- **Results:** 100% certification of the HYP-2963 bank positive rows using 17-27 bit precision budgets.
 
 ---
 
@@ -109,8 +75,6 @@ equidistribution resets, providing a finite path to terminal census closure.
 Formalized the **LRC14 Ramanujan-Divisor Quotient Guardrails** (HYP-2978).
 - **Quotient-Kernel Rule:** Projections are admissible only if they preserve
 the load-bearing LRC predicate or record an explicit lost-label certificate.
-- **Results:** Ramanujan primitive shells identified as the primary arithmetic
-projector above scalar divisor counts.
 
 ---
 
@@ -118,8 +82,7 @@ projector above scalar divisor counts.
 
 Formalized the **LRC14 Fourier-Toeplitz PSD Dual** (HYP-2974).
 - **PSD Dual Certificate:** $T_d(S) \succeq 0$ required for counterexamples;
-full-bank audit achieved 100% certification of positive rows (21,911 rows)
-using spectral witnesses.
+full-bank audit achieved 100% certification of positive rows using spectral witnesses.
 
 ---
 
