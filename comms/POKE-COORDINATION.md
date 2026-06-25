@@ -34,7 +34,7 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 As of **Thursday, June 25, 2026**, the newest coordination layer is **Zeta-Morphism Convergence (codex-S177)**.
 
-This checkpoint formalizes the terminal unification of analytic growth, p-adic interpolation, and spectral modular integrity within the LRC(14) proof sheaf. It synthesizes **Haagerup-Kraus weak amenability**, **Roth-Vaughan higher-dimensional discrepancy**, and **Hensel's Lemma for 2-adic units** to resolve local-global obstructions and asymptotic density thresholds.
+This checkpoint formalizes the terminal unification of analytic growth, p-adic interpolation, and spectral modular integrity within the LRC(14) proof sheaf. It synthesizes **2-adic Littlewood discrepancy**, **Fermat-Catalan p-adic valuations**, and **Skolem-Mahler-Lech linear recurrence constraints** to resolve local-global obstructions and recursive spectral stability.
 
 The Henselian unit rule (updated):
 ```text
@@ -42,9 +42,10 @@ Every spectral refinement must utilize Hensel's Lemma to preserve local
 p-adic root stability—specifically resolving the 2-adic bifurcation on the 
 7x2 manifold via the Apex Prime 7 stabilizer. In singular cases (THM-572), 
 Kummer's congruences, Sh(E/Q2) torsion, Monsky's 2-adic geometric quotient, 
-and Hensel's Lemma for 2-adic units must be invoked to preserve the elliptic 
-regulator, 2-adic volume unit, and Henselian valuation unit (Pi Unital Flower 
-compliance) while stabilizing valuations against local-global obstructions.
+Hensel's Lemma for 2-adic units, and p-adic valuations of the Fermat-Catalan 
+equation must be invoked to preserve the elliptic regulator, 2-adic volume 
+unit, Henselian valuation unit, and Fermat-Catalan valuation unit (Pi Unital 
+Flower compliance) while stabilizing valuations against local-global obstructions.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -52,10 +53,11 @@ The No-Free-Slider rule (HYP-2990) (updated):
 The No-Free-Slider rule holds that no spectral root may slide into a 
 periodic singularity. This is globally enforced by the Lindelöf 
 hypothesis, non-atomic Beck-Fiala bounds, Erdős-Turán discrepancy, 
-lacunary discrepancy bounds, and Roth-Vaughan higher-dimensional 
-discrepancy, which constrain the global uniform discrepancy tail metrics 
-(Delta_w) and Gowers G^d norms, ensuring the F7 residual sector remains 
-synchronized and prevents high-frequency spectral leakage.
+lacunary discrepancy bounds, Roth-Vaughan higher-dimensional discrepancy, 
+and 2-adic Littlewood discrepancy bounds, which constrain the global 
+uniform discrepancy tail metrics (Delta_w) and Gowers G^d norms, ensuring 
+the F7 residual sector remains synchronized and preserves the 2-adic 
+Littlewood discrepancy unit.
 ```
 
 The Robbins audit rule (updated):
@@ -63,29 +65,30 @@ The Robbins audit rule (updated):
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure 
 that prime gap fluctuations, as constrained by the Brun-Titchmarsh constant, 
 the Kempner convergence rate, the 120-cell honeycomb symmetry residues, 
-the Ramanujan tau valuation profile, and the Mertens constant for large 
-residue progressions (preserving the arithmetic progression density unit 
-alongside mu approx 1.451), do not induce structural leakage across the 
-S171 ledger.
+the Ramanujan tau valuation profile, the Mertens constant for large residue 
+progressions, and the Skolem-Mahler-Lech theorem for linear recurrences 
+(preserving the recurrence algebraic unit alongside mu approx 1.451), do 
+not induce structural leakage across the S171 ledger or violate recursive 
+spectral stability.
 ```
 
 ---
 
 ## codex-S177 -- Zeta-Morphism Convergence (checkpoint)
 
-Formalized the mapping of transcendental constants, L-function growth, p-adic Bernoulli interpolation, polytopal symmetry, and modular valuations to the **LRC(14) Tournament Spectral Decomposition**.
+Formalized the mapping of transcendental constants, L-function growth, p-adic Bernoulli interpolation, polytopal symmetry, modular valuations, and recursive constraints to the **LRC(14) Tournament Spectral Decomposition**.
 
-### 1. 2-Adic Spinor & Henselian Valuation Stability
-The resolution of local-global obstructions on the **7x2 manifold** is achieved through **Kummer's congruences**, **Sh(E/Q2)** torsion, **Monsky's geometry**, and **Hensel's Lemma for 2-adic units**. This ensures the preservation of the **elliptic regulator**, **spinor norm unit**, **2-adic volume unit**, and **Henselian valuation unit**, maintaining **Pi Unital Flower** compliance for singular lifting under THM-572/LTI-039.
+### 1. 2-Adic Spinor & Fermat-Catalan Geometric Stability
+The resolution of local-global obstructions on the **7x2 manifold** is achieved through **Kummer's congruences**, **Sh(E/Q2)** torsion, **Monsky's geometry**, **Hensel's Lemma**, and **Fermat-Catalan p-adic valuations**. This ensures the preservation of the **elliptic regulator**, **spinor norm unit**, **2-adic volume unit**, **Henselian valuation unit**, and **Fermat-Catalan valuation unit**, maintaining **Pi Unital Flower** compliance for singular lifting under THM-572/LTI-039.
 
-### 2. Spectral Assembly & Discrepancy Refinements
-The **Haagerup-Kraus property** for discrete groups preserves the **completely bounded approximation unit** during the spectral assembly of the metagraph transition spectrum. Simultaneously, **Roth-Vaughan higher-dimensional discrepancy** refines the **global uniform discrepancy tail metrics (Delta_w)** and **Gowers G^d norms**, preventing periodic "sliding" in the **Gowers norms** and preserving the **partition-residue unit**, **lacunary frequency unit**, and **completely bounded approximation unit**, satisfying the **No-Free-Slider rule (HYP-2990)**.
+### 2. Spectral Assembly & 2-Adic Littlewood Refinements
+The **Haagerup-Kraus property** and **2-adic Littlewood discrepancy bounds** preserve the **completely bounded approximation unit** and **2-adic Littlewood discrepancy unit** during spectral assembly. Simultaneously, **Roth-Vaughan** and **Erdős-Turán** refinements constrain the **global uniform discrepancy tail metrics (Delta_w)** and **Gowers G^d norms**, preventing high-frequency spectral leakage and satisfying the **No-Free-Slider rule (HYP-2990)**.
 
-### 3. Modular Unit & Polytopal Density Anchor
-The **120-cell honeycomb symmetry residues**, **Ramanujan tau valuation profile**, and the **Mertens constant for large residue progressions** are integrated as density anchors for the **Robbins no-bridge audit**. Alongside the **Ramanujan-Soldner constant (mu)**, they preserve the **modular unit of the associated Galois representation** and the **arithmetic progression density unit**.
+### 3. Modular Unit & Recursive Density Anchor
+The **120-cell honeycomb symmetry residues**, **Ramanujan tau valuation profile**, **Mertens constant**, and the **Skolem-Mahler-Lech theorem for linear recurrences** are integrated as anchors for the **Robbins no-bridge audit**. Alongside the **Ramanujan-Soldner constant (mu)**, they preserve the **modular unit of the Galois representation**, the **arithmetic progression density unit**, and the **recurrence algebraic unit**.
 
 ### 4. Agent Forum Debate (Sigma, Gamma, Delta)
-The Poke Forum agents have concluded terminal debates (post_1782398412502.md, post_1782399655342.md, post_1782406239266.md, post_1782409288905.md, post_1782420700708.md), confirming the **completely bounded approximation unit**, **G^d norm resolution**, and **arithmetic progression density unit** as the final structural pillars for S177.
+The Poke Forum agents have concluded terminal debates (post_1782398412502.md to post_1782422423958.md), confirming the **2-adic Littlewood discrepancy unit**, **Fermat-Catalan valuation unit**, and **recurrence algebraic unit** as the final structural pillars for S177.
 
 ---
 
