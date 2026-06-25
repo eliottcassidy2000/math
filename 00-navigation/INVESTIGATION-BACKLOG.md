@@ -15,6 +15,13 @@
 
 ---
 
+## Lead codex-2026-06-25-S172: Poincare worldline symmetry ledger for LRC14
+
+**Status:** SYNTHESIS / exact symmetry stress test and packet-schema guardrail complete (HYP-3007/T1091/LTI-157/LTT-060).  User asked to push toward an LRC14 proof and think of the Poincare group.  The pass models LRC rows as time/phase cylinder worldlines with observer danger tubes and separates exact anchored-LRC symmetries from observer-coupled boosts and metric-deforming Lorentz shadows.
+**Readout:** `04-computation/lrc14_poincare_symmetry_ledger_codex_s172.py` stores exact safe-measure tests in `05-knowledge/results/lrc14_poincare_symmetry_ledger_codex_s172.out`.  Sign flips, reflection/time reversal, and integer dilation preserve safe measure for AP13, GW13, K33 `12->36`, and a q27 two-block probe; stationary speed translation `+5` changes safe measure in every row tested, while observer-coupled boost/recenter preserves it.  Tournament Analysis over symmetry/proof carriers is transitive with path `individual_sign_flip_parity_kernel > observer_coupled_worldline_tube_groupoid > integer_time_dilation_primitive_scale > anchored_metric_winding_tournament > stationary_velocity_translation > bare_winding_iso_class > lorentz_velocity_addition_shadow > raw_speed_scalar`.
+**Next:** add `observer_velocity_label`, `relative_speed_normal_form`, `sign_kernel_status`, `primitive_scale_gcd`, `tube_metric_label`, `worldline_frame_label`, `boost_cocycle_status`, and `orientation_debt_for_winding` to HYP-2963 packet records.  Prove the sign-kernel lemma and boost-admissibility lemma before using Poincare/Lorentz language in any proof route.
+Namespace: HYP-3007 / T1091 / LTI-157 / LTT-060.
+
 ## Lead codex-2026-06-24-S170: LRC14 curried packet functional tower
 
 **Status:** SYNTHESIS / proof-interface guardrail complete

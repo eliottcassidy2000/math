@@ -1,5 +1,21 @@
 # Open Questions
 
+**OPEN-Q-108 S172 Poincare/worldline-frame addendum:** HYP-3007 adds a frame
+guardrail for using Poincare or boost language in LRC14.  Model the row as
+worldlines `x_i(t)=v_i t` in the time/phase cylinder with a `1/14` tube around
+the observer.  Exact safe-measure stress tests show anchored-LRC symmetries are
+permutations, independent sign flips, reflection/time reversal, and integer
+dilation/primitive scaling; stationary speed translation `v_i -> v_i+c` changes
+safe measure unless observer velocity is retained and the packet is recentered.
+Open tasks: prove the sign-kernel lemma, prove the boost-admissibility lemma,
+and add `observer_velocity_label`, `relative_speed_normal_form`,
+`sign_kernel_status`, `primitive_scale_gcd`, `tube_metric_label`,
+`worldline_frame_label`, `boost_cocycle_status`, and
+`orientation_debt_for_winding` to HYP-2963 packet records.  Poincare/Lorentz
+language is admissible only as a tube/frame cocycle or residual sector, not as a
+scalar speed invariant. -> HYP-3007, HYP-3006, HYP-3002, HYP-2997, HYP-2963,
+HYP-2486, HYP-2291, THM-381, THM-385, THM-572, LTI-157, LTT-060.
+
 **OPEN-Q-108 S170 dichotomy-recursion addendum:** HYP-3004, companion to the
 HYP-3002 curried packet functional tower and HYP-3003 summand/multiplicand
 Farey-basis merge, reads the repo's
@@ -35,11 +51,11 @@ and group Fejer/Ramanujan certificates by section, not by scalar route label.
 -> HYP-2996, HYP-2995, HYP-2994, HYP-2991, HYP-2989, HYP-2963, THM-572, T1080.
 
 **OPEN-Q-108 S169 additive-basis/Farey addendum:** HYP-3000 adds a proof-currency classifier, complementary to HYP-2998's golden Stern-Brocot/Fibonacci carrier and HYP-2999's Pascal-slope packet schema.  The Fibonacci row pattern is `F_n=sum_k binom(n-k-1,k)`, the rank vector of independent sets in `P_{n-2}`; Zeckendorf is the confluent no-adjacent normal form on this path.  Goldbach/ternary Goldbach/Fermat polygonal/Zeckendorf differ by proof economy: high-entropy sieve, added smoothing dimension, bounded arity/residue absorption, path-normal-form carry.  For Farey payloads, keep exact `M=p/q` and `e=14p-q`: `p+q` is affine-safe additive scale, `p*q` is incidence/product side channel, powers are magnitude stress tests.  Open task: classify each HYP-2963 residual packet as smoothing, bounded-arity invoice, or path-normal-form debt before choosing Fejer/Ramanujan/Kaczynski/Zeckendorf tools. -> HYP-3000, HYP-2999, HYP-2998, HYP-2984, HYP-2982, HYP-1902, LTI-150.
-**OPEN-Q-108 S168-S171 technique-index expansion addendum:** The LRC Technique
-Index now has `156` compact `LTI-*` rows plus the `64` long-form S166
+**OPEN-Q-108 S168-S172 technique-index expansion addendum:** The LRC Technique
+Index now has `157` compact `LTI-*` rows plus the `64` long-form S166
 technique-bank entries after preserving the incoming `LTI-109` packet-cocycle
 atlas and `LTI-110` cocycle-obstruction atlas.  The recovered promoted rows
-`LTI-111..LTI-156` are a pull list for attacking the LRC14 gap from
+`LTI-111..LTI-157` are a pull list for attacking the LRC14 gap from
 tournament/metagraph/series directions: cocycle obstruction matrices,
 deck-derivative reconstruction, Burnside/A000568 orbit taxes, merged metagraph
 transport, good-cut/SCC gas, OCF coimage sectors, path-homology residuals,

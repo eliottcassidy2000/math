@@ -1,0 +1,63 @@
+﻿=== LRC14 Poincare-style symmetry ledger S172 ===
+threshold delta=1/14
+
+Worldline model
+  runner i: x_i(t)=v_i*t on the time/phase cylinder
+  danger tube: ||x_i(t)-x_observer(t)|| < delta
+  safe time: a horizontal time slice misses every danger tube
+  Poincare analogy: transformations are useful only after saying
+    whether the observer worldline, integer lattice, and tube width are retained.
+
+Exact safe-measure stress tests
+  row=AP13                 base_safe=         0
+    global_reflection_v_to_minus_v             safe=         0 same    primitive=[1,2,3,4,5,6,7,8,...] label=orientation label optional for LRC, required for winding tournaments
+    independent_runner_parity_flips            safe=         0 same    primitive=[1,2,3,4,5,6,7,8,...] label=sign cut is invisible to LRC but visible to pairwise order
+    time_dilation_speed_scale_5                safe=         0 same    primitive=[1,2,3,4,5,6,7,8,...] label=gcd / primitive scale label
+    stationary_velocity_translation_plus_5     safe=41299/299880 CHANGED primitive=[6,7,8,9,10,11,12,13,...] label=observer speed label is destroyed
+    observer_coupled_boost_plus_5_then_recenter safe=         0 same    primitive=[1,2,3,4,5,6,7,8,...] label=observer-coupled frame label retained
+
+  row=GW13                 base_safe=         0
+    global_reflection_v_to_minus_v             safe=         0 same    primitive=[1,2,3,4,5,6,7,8,...] label=orientation label optional for LRC, required for winding tournaments
+    independent_runner_parity_flips            safe=         0 same    primitive=[1,2,3,4,5,6,7,8,...] label=sign cut is invisible to LRC but visible to pairwise order
+    time_dilation_speed_scale_5                safe=         0 same    primitive=[1,2,3,4,5,6,7,8,...] label=gcd / primitive scale label
+    stationary_velocity_translation_plus_5     safe=218809/1662570 CHANGED primitive=[6,7,8,9,10,11,12,13,...] label=observer speed label is destroyed
+    observer_coupled_boost_plus_5_then_recenter safe=         0 same    primitive=[1,2,3,4,5,6,7,8,...] label=observer-coupled frame label retained
+
+  row=K33_12_to_36         base_safe=    1/1260
+    global_reflection_v_to_minus_v             safe=    1/1260 same    primitive=[1,2,3,4,5,6,7,8,...] label=orientation label optional for LRC, required for winding tournaments
+    independent_runner_parity_flips            safe=    1/1260 same    primitive=[1,2,3,4,5,6,7,8,...] label=sign cut is invisible to LRC but visible to pairwise order
+    time_dilation_speed_scale_5                safe=    1/1260 same    primitive=[1,2,3,4,5,6,7,8,...] label=gcd / primitive scale label
+    stationary_velocity_translation_plus_5     safe=534439/3760848 CHANGED primitive=[6,7,8,9,10,11,12,13,...] label=observer speed label is destroyed
+    observer_coupled_boost_plus_5_then_recenter safe=    1/1260 same    primitive=[1,2,3,4,5,6,7,8,...] label=observer-coupled frame label retained
+
+  row=q27_two_block_probe  base_safe=2556/245245
+    global_reflection_v_to_minus_v             safe=2556/245245 same    primitive=[7,14,21,28,35,42,49,56,...] label=orientation label optional for LRC, required for winding tournaments
+    independent_runner_parity_flips            safe=2556/245245 same    primitive=[7,14,21,28,35,42,49,56,...] label=sign cut is invisible to LRC but visible to pairwise order
+    time_dilation_speed_scale_5                safe=2556/245245 same    primitive=[7,14,21,28,35,42,49,56,...] label=gcd / primitive scale label
+    stationary_velocity_translation_plus_5     safe=1935391862213/16530724395900 CHANGED primitive=[12,19,26,33,40,47,54,61,...] label=observer speed label is destroyed
+    observer_coupled_boost_plus_5_then_recenter safe=2556/245245 same    primitive=[7,14,21,28,35,42,49,56,...] label=observer-coupled frame label retained
+
+Tournament Analysis over Poincare/symmetry proof carriers
+  score_hist=[(0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
+  directed_3cycles=0
+  hamiltonian_path=individual_sign_flip_parity_kernel > observer_coupled_worldline_tube_groupoid > integer_time_dilation_primitive_scale > anchored_metric_winding_tournament > stationary_velocity_translation > bare_winding_iso_class > lorentz_velocity_addition_shadow > raw_speed_scalar
+
+Carrier guardrails
+  individual_sign_flip_parity_kernel         destroyed=pairwise winding orientation and tournament order
+  observer_coupled_worldline_tube_groupoid   destroyed=none if observer worldline and tube metric are retained
+  integer_time_dilation_primitive_scale      destroyed=raw magnitude before primitive/gcd normalization
+  anchored_metric_winding_tournament         destroyed=continuous tube widths unless threshold gaps are attached
+  stationary_velocity_translation            destroyed=observer velocity; not a standard LRC automorphism
+  bare_winding_iso_class                     destroyed=metric gap widths, observer placement, exact Farey scale
+  lorentz_velocity_addition_shadow           destroyed=integer-speed lattice and fixed Euclidean circle metric
+  raw_speed_scalar                           destroyed=everything packet-level
+
+Proof-target readout
+  True automorphisms for the standard anchored LRC predicate:
+    runner permutation, independent sign flips, global reflection, integer dilation/primitive scaling.
+  Observer-coupled boosts are exact only in the enlarged worldline groupoid:
+    keep observer velocity, then recenter by relative speeds.
+  Stationary velocity translation is the useful failure mode:
+    it measures exactly why observer labels cannot be quotiented away.
+  Lorentz/Poincare language should enter as a cone/tube ledger, not a speed scalar:
+    if a boost tilts the danger tube, the metric, observer, and lattice labels become load-bearing.

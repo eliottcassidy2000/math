@@ -270,6 +270,7 @@ record what it destroys before asking it to prove anything.
 | LTI-154 | Dichotomy recursion mode atlas | Binary/operator mode switches as proof carriers | Treat odd/even, sign, addition/multiplication, `+1`/`/2`, `*2`/`+2`, Farey sum/product, Zeckendorf, Collatz, and triune recursion as allowed-forgetting switchboards; S171's summand/multiplicand LTI-153 is the add/multiply subcase | HYP-3004, HYP-3003, HYP-3002, HYP-3001, HYP-3000, HYP-2999, HYP-2998, HYP-2262, HYP-2238, HYP-2134, HYP-2091 | Add `parity_block`, `sign_cut_status`, `additive_pair_sum_owner`, `multiplicative_unit_orbit`, `recursion_boundary_state`, and `smoothing_route` to HYP-2963 packet records. |
 | LTI-155 | Representation-economy carrier | Goldbach smoothing, polygonal arity, Zeckendorf carries, Farey address clocks | A sequence shadow is usable only after declaring the representation economy whose fibers preserve the LRC predicate | HYP-2998, HYP-3004, HYP-3003, HYP-3000, HYP-2999, HYP-2523, HYP-2416, HYP-2931, HYP-1920 | Add `representation_economy` fields to packet classifiers: smoothing, bounded arity, normal form, or Farey address. |
 | LTI-156 | Technique multiverse annex | Technique families as vertices; retained LRC payload dimensions as pairwise observable | Keeps the broad tournament/metagraph/series/sieve/cocycle toolbox as a cyclic contribution surface rather than a scalar ranking | HYP-3005, T1090, `00-navigation/LRC-TECHNIQUE-MULTIVERSE-INDEX.md` | Promote theorem-facing `LTM-*` cards into `LTI-*`/`LTT-*` entries and run packet-level fiber-mixing tests before trusting scalar quotients. |
+| LTI-157 | Poincare worldline frame ledger | Time/phase cylinder worldlines, observer velocity, danger tube metric, sign kernel, boost cocycle | Separates true anchored-LRC automorphisms from observer-coupled boosts and Lorentz-like deformed-tube shadows | HYP-3007, HYP-3006, HYP-3002, HYP-2997, HYP-2963, HYP-2486, HYP-2291, THM-381, THM-385 | Add `observer_velocity_label`, `relative_speed_normal_form`, `sign_kernel_status`, `primitive_scale_gcd`, `tube_metric_label`, `worldline_frame_label`, `boost_cocycle_status`, and `orientation_debt_for_winding` to packet records. |
 
 ## Cross-Cutting Guardrails
 
@@ -326,7 +327,7 @@ record what it destroys before asking it to prove anything.
 | LTI-TODO-28 | Curried packet evaluator manifest | LTI-147, LTI-148, LTI-149, LTI-150, LTI-152 |
 | LTI-TODO-29 | HYP-2963 dichotomy-mode packet fields | LTI-011, LTI-063, LTI-076, LTI-150, LTI-151, LTI-152, LTI-153, LTI-154 |
 | LTI-TODO-30 | Representation-economy field for sequence-shadow packet classifiers | LTI-076, LTI-089, LTI-109, LTI-149, LTI-150, LTI-153, LTI-154, LTI-155 |
-| LTI-TODO-31 | Multiverse annex promotion queue | LTI-156, LTI-155, LTI-154, LTI-153, LTI-152, LTT-059, LTM-* |
+| LTI-TODO-31 | Multiverse annex promotion queue | LTI-157, LTI-156, LTI-155, LTI-154, LTI-153, LTI-152, LTT-060, LTT-059, LTM-* |
 
 ## Minimal Entry Template
 

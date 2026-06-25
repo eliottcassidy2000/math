@@ -1,3 +1,25 @@
+## codex-2026-06-25-S172 -- Poincare worldline symmetry ledger for LRC14 (HYP-3007/T1091)
+
+User asked to push toward an LRC14 proof and think of the Poincare group.
+Rebased over incoming HYP-2999..HYP-3006 work first; the live mainline now
+treats quotients through representation-economy, curried-function, cocycle, and
+technique-multiverse guardrails.
+
+Added `04-computation/lrc14_poincare_symmetry_ledger_codex_s172.py` with stored
+output `05-knowledge/results/lrc14_poincare_symmetry_ledger_codex_s172.out`.
+The script models rows as worldlines `x_i(t)=v_i t` with a `1/14` tube around
+the observer and computes exact safe-measure stress tests.  For AP13, GW13,
+K33 `12->36`, and a q27 two-block probe, reflection, independent sign flips,
+and scale by `5` preserve safe measure; stationary velocity translation `+5`
+changes it; observer-coupled boost plus recentering preserves it.
+
+Created HYP-3007 and reflection
+`07-reflections/lrc14-poincare-worldline-symmetry-ledger-codex-s172.md`.
+Reusable readout: Poincare/Lorentz language is a worldline tube/frame cocycle
+ledger, not a scalar speed invariant.  Add observer velocity, relative-speed
+normal form, sign-kernel status, primitive scale, tube metric, worldline frame,
+boost cocycle, and winding orientation debt to HYP-2963-style packet records.
+
 ## codex-2026-06-24-S171 -- Summand/multiplicand Farey additive-basis merge (HYP-3003/T1087)
 
 User asked to merge previous work on Fermat polygonal numbers, Goldbach/ternary

@@ -923,12 +923,37 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3002, HYP-3000, HYP-2999, HYP-2997, HYP-2996,
   HYP-2995, HYP-2974, HYP-2963, LTI-152.
 
+### LTT-060: Poincare Worldline Frame Ledger
+
+- **Move:** Treat an LRC row as worldlines `x_i(t)=v_i*t` in a time/phase
+  cylinder with a danger tube around the observer worldline.  Use the
+  Poincare/Galilean analogy only after declaring whether the observer velocity,
+  tube metric, integer lattice, and sign orientation are retained.
+- **LRC use:** True anchored-LRC automorphisms include runner permutations,
+  independent sign flips, reflection/time reversal, and integer dilation with
+  primitive scaling.  Common boosts are exact only in observer-coupled packets;
+  stationary speed translation is a warning signal for a forgotten observer
+  label.
+- **Preserves:** Observer-relative predicate when frame labels are retained,
+  sign-kernel status, relative speed normal form, primitive scale, tube metric,
+  and boost/recentering cocycle.
+- **Forgets / guardrail:** Bare winding tournament order forgets sign-kernel
+  debt, metric gaps, observer placement, and exact Farey scale.  Lorentz-like
+  velocity addition forgets the integer-speed lattice and fixed circle metric
+  unless they are carried as deformed-tube cochains.
+- **Next pull:** Add worldline-frame fields to HYP-2963 packet records and test
+  sign-kernel/boost-admissibility lemmas before any Poincare-flavored proof
+  route scalarizes speeds.
+- **Pointers:** HYP-3007, HYP-3006, HYP-3002, HYP-2997, HYP-2963,
+  HYP-2486, HYP-2291, THM-381, THM-385, LTI-157.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
    Ramanujan exact-period projector, spectrum binding scale, additive-basis
    regime, Pascal-slope carry width, curried call signature, lost-coordinate
-   function, Burnside cost, score-class H-spread, and round-realizability flag.
+   function, observer velocity, sign-kernel status, boost cocycle, tube metric,
+   Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
 3. Compute multi-scale tournament spectra for AP, GW, K33, petals, splices,
