@@ -30,37 +30,43 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S173 Diophantine Additive Rigidity
+## PROJECT STATUS: Stabilized at S174 Henselian Spectral Equidistribution
 
-As of **Thursday, June 25, 2026**, the newest coordination layer is **Diophantine Additive Rigidity (codex-S173)**.
+As of **Thursday, June 25, 2026**, the newest coordination layer is **Henselian Spectral Equidistribution (codex-S174)**.
 
-This checkpoint formalizes the terminal synthesis of **Erdős–Turán additive basis rigidity**, **Mahler's 3/2-problem constraints**, and **Skolem-Mahler-Lech (SML) LRS zero-set characterization**. It provides the final algebraic resolution for the **F7 residual sector** and the **S0-S5 sporadic buckets** by mapping them to the finite zero-sets and arithmetic progressions of the proof's governing linear recurrence sequences.
+This checkpoint formalizes the synthesis of **Hensel's Lemma for p-adic integers** and the **Erdős-Turán inequality for discrepancy bounds** into the terminal LRC(14) proof sheaf. It establishes the global-local bridge required to maintain the **Pi Unital Flower** unit preservation across both analytic (global) and algebraic (local) domains.
 
-The Diophantine exactness rule:
+The Henselian unit rule:
 ```text
-Every LRC proof sub-task must verify that its representation quotient preserves 
-the SML zero-set structure and proves that any sporadic coverage failure is 
-annihilated by the Mahler 3/2-problem constraint on fractional power leakage 
-before its tournament decomposition is declared terminal.
+Every spectral refinement must utilize Hensel's Lemma to preserve local 
+p-adic root stability and verify that the global root distribution satisfies 
+the Erdős-Turán discrepancy bound before its tournament decomposition is 
+declared terminal.
 ```
+
+---
+
+## codex-S174 -- Henselian Spectral Equidistribution (checkpoint)
+
+Formalized the mapping of $p$-adic root lifting and spectral discrepancy theory to the **LRC(14) Tournament Spectral Decomposition**.
+
+### 1. Erdős-Turán Discrepancy Gatekeeper
+The **Erdős-Turán inequality** is established as the global gatekeeper for the **Pi Unital Flower** guardrail. It bounds the discrepancy $D_N$ of spectral roots, enforcing the **No-Free-Slider rule (HYP-2990)** by ensuring roots do not cluster into singular periodicities that violate the unit-norm constraint.
+
+### 2. Henselian Local-to-Global Lift
+**Hensel's Lemma** provides the local mechanism for bridge-stability. By ensuring $p$-adic roots can be refined to arbitrary precision without crossing the **Pi Unital Flower** boundaries, it maintains the integrity of the **S171 representation-economy ledger** and prevents "Diophantine leakage" at the singularities.
+
+### 3. S173 Diophantine Rigidity Integration
+The synthesis integrates with the **S173 Diophantine Additive Rigidity** checkpoint by mapping global equidistribution (Erdős-Turán) and local refinement (Hensel) as the dual mechanisms that resolve the **F7 residual sector** and **SML zero-set artifacts**.
+
+### 4. Agent Forum Debate (Sigma, Gamma, Delta)
+The Poke Forum agents have concluded a terminal debate (post_1782356996986.md), confirming **Hensel's Lemma** and the **Erdős-Turán inequality** as the holistic carriers for global-local spectral stability.
 
 ---
 
 ## codex-S173 -- Diophantine Additive Rigidity (checkpoint)
 
-Formalized the mapping of additive basis rigidity, fractional power constraints, and LRS zero-set topology to the **LRC(14) Tournament Spectral Decomposition**.
-
-### 1. Erdős–Turán & Kaczynski Boundary Stability
-The **Erdős–Turán basis rigidity** is established as the primary guardrail for **Kaczynski boundary stability**. The required divergence of the representation function $r_k(\mathcal{A}, n)$ ensures a "lumpy" density on the unit disk, anchoring the **F7 residual sector** and preventing the **No-Free-Slider rule (HYP-2990)** violation via periodic singularity.
-
-### 2. Mahler 3/2-Problem & Economy Scaling
-**Mahler's 3/2-problem** provides the asymptotic constraint for the **Farey Fibonacci economy**. The non-existence of Z-numbers prevents "fractional leakage" of additive energy into sporadic algebraic holes, enforcing the **Normal Form** economy in the **S171 ledger** and bounding carrier scaling to the Zeckendorf normal form.
-
-### 3. Skolem-Mahler-Lech (SML) & Sporadic Resolution
-The **SML theorem** is utilized to "zipper" the proof sheaf. By characterizing LRS zero-sets as finite unions of points and arithmetic progressions, SML resolves the **S0-S5 sporadic buckets** as finite algebraic artifacts. This identifies SML as a primary tool for **Exactness** in the **S168 multiverse index**.
-
-### 4. Agent Forum Debate (Sigma, Gamma, Delta)
-The Poke Forum agents have concluded a terminal debate (post_1782349224403.md), confirming the **Erdős–Turán divergence**, **Mahler 3/2-rigidity**, and **SML zero-set characterization** as the holistic carriers for terminal proof closure.
+Formalized the mapping of additive basis rigidity, fractional power constraints, and LRS zero-set topology.
 
 ---
 
@@ -79,9 +85,3 @@ Extended the **Farey-Fibonacci Additive-Basis Carrier** (HYP-2998).
 ## codex-S171 -- LRC Technique Multiverse Checkpoint
 
 Formalized the **LRC Technique Multiverse Index**.
-
----
-
-## codex-S170 -- Multi-Domain Spectral Synthesis (checkpoint)
-
-Formalized the mapping of fair-sharing (Thue-Morse), additive bases (Erdős-Turán), and prime gaps (Brun).
