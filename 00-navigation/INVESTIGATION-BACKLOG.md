@@ -15,6 +15,12 @@
 
 ---
 
+## Lead codex-2026-06-26-S202: LRC14 hidden-coordinate ledger
+
+**Status:** SYNTHESIS / proof-order ledger complete (HYP-3039/T1120/LTI-187/LTT-085), connecting the latest residual stack to older address-retention, visible/hidden fold, anti-wedge, cochannel, and pair-good decoy lessons.
+**Readout:** `05-knowledge/hypotheses/HYP-3039-lrc14-hidden-coordinate-ledger.md` and `07-reflections/lrc14-hidden-coordinate-ledger-codex-s202.md` describe HYP-3024..HYP-3038 as a controlled-forgetting ladder: status gate, owner-essential path lift, residual certificate tooth, first-tooth owner strip, primitive-period deck, residual capacitor cut, and q=23 drop/add zeta plus endpoint-owner strip.  The main sharpening is that residual counts are secondary once the generator/cut class is known; a quotient is legal only after the next hidden coordinate has been exposed, killed by a dual/cut/cocycle, or routed to named debt.
+**Next:** add `hidden_coordinate_stage`, `visible_hidden_relation_type`, `primitive_safe_deck_2_13`, `first_primitive_safe_q_2_13`, `residual_capacitor_id`, `first_cut_stage`, `drop_add_square_id`, `exact_M_zeta`, `endpoint_owner_strip`, and `anti_wedge_debt_count` to a cached HYP-2963 ledger; then run an anti-wedge audit over accepted residual cuts.
+Namespace: HYP-3039 / T1120 / LTI-187 / LTT-085.
 ## Lead codex-2026-06-26-S199: LRC14 residual tooth atlas
 
 **Status:** EVIDENCE / residual-tooth proof-interface atlas complete

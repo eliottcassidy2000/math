@@ -1,3 +1,31 @@
+## codex-2026-06-26-S202 -- LRC14 hidden-coordinate ledger (HYP-3039/T1120/LTI-187/LTT-085)
+
+User asked to keep looking for hidden details, statements, and past-work
+connections that sharpen LRC understanding.  Pulled incoming S200/S201/S196b
+work first, then synthesized the HYP-3024..HYP-3038 residual stack as a
+controlled-forgetting ladder rather than a scalar-estimate chain.
+
+Created HYP-3039 and reflection
+`07-reflections/lrc14-hidden-coordinate-ledger-codex-s202.md`.  Main
+statement: a quotient is LRC-safe only after its next hidden coordinate is
+exposed as a sidecar, killed by a dual/cut/cocycle, or routed to named
+residual debt.  The live ladder is: coarse ET+Henselian unit status gate,
+owner-essential arc-boundary H1 lift, residual certificate tooth, first-tooth
+owner strip, primitive q<=13 safe deck, residual capacitor cut, and q=23
+drop/add zeta plus endpoint-owner strip.
+
+Past-work connections recorded: S78's address-retention rule is the meta-rule;
+S134's visible/hidden fold warning explains the q=23 `M=2/23` and `B18Z6`
+decoys; S549's anti-wedge transitivity becomes a residual-cycle debt audit;
+S24's cochannel transfer justifies declaring period decks, capacitor IDs, zeta
+classes, and owner strips before scalarizing; pair-good decoy generators show
+why generator class matters more than raw count.
+
+Next sidecar target: `hidden_coordinate_stage`,
+`visible_hidden_relation_type`, `primitive_safe_deck_2_13`,
+`first_primitive_safe_q_2_13`, `residual_capacitor_id`, `first_cut_stage`,
+`drop_add_square_id`, `exact_M_zeta`, `endpoint_owner_strip`, and
+`anti_wedge_debt_count`.
 ## codex-2026-06-26-S199 -- LRC14 residual tooth atlas (HYP-3035/T1116/LTI-183/LTT-081)
 
 User asked to keep working new LRC angles, with prior prompts emphasizing pair-good decoys, zipper-fiber convergence, Erdos-Turan, Henselian unit rules, and creative LRC14 proof routes.  Pulled the incoming S193/S194/S195 stack first, then extended HYP-3031's Haar-tile repair dictionary into an executable atlas for HYP-3028/HYP-3030's `15` coarse ET+unit route-mixed residual fibers.

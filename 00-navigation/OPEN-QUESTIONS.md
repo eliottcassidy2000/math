@@ -1,5 +1,22 @@
 # Open Questions
 
+**OPEN-Q-108 S202 hidden-coordinate ledger addendum:** HYP-3039 sharpens the
+recent LRC14 residual work by treating HYP-3024..HYP-3038 as a
+controlled-forgetting ladder rather than a scalar-estimate chain.  The hidden
+coordinates now have names: status gate, owner-essential path lift, residual
+certificate tooth, first-tooth owner strip, primitive-period deck, residual
+capacitor cut, and q=23 drop/add zeta plus endpoint-owner strip.  The open
+task is to add a cached HYP-2963 sidecar bundle
+`hidden_coordinate_stage`, `visible_hidden_relation_type`,
+`primitive_safe_deck_2_13`, `first_primitive_safe_q_2_13`,
+`residual_capacitor_id`, `first_cut_stage`, `drop_add_square_id`,
+`exact_M_zeta`, `endpoint_owner_strip`, and `anti_wedge_debt_count`, then
+verify that every residual quotient is legal only after the next hidden
+coordinate is exposed, dual-annihilated, cut, or routed to named
+F7/THM-572/harmonic debt. -> HYP-3039, HYP-3038, HYP-3037, HYP-3036,
+HYP-3035, HYP-3034, HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3028,
+HYP-3027, HYP-3024, HYP-3023, HYP-3022, HYP-3021, HYP-3018, HYP-2963,
+THM-572, LTI-187, LTT-085, T1120.
 **OPEN-Q-108 S198 arc-boundary path-lift addendum:** HYP-3034 pulls the
 older path-homology/deletion-persistence machinery into the HYP-3030
 status-topology gate, but uses closed danger arcs and boundary operators rather

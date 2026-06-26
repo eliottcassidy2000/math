@@ -1670,6 +1670,49 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-185, LTI-184, LTI-183, LTI-180, LTI-179, LTT-083, LTT-082, LTT-081,
   LTT-078, LTT-077, T1119, T1118, T1117, T1116.
 
+### LTT-085: Hidden-Coordinate Ledger Tournament
+
+- **Move:** Treat proof stages as controlled-forgetting ledgers.  A quotient
+  is admissible only after the next hidden coordinate is exposed as a sidecar,
+  killed by a dual/cut/cocycle, or routed to named residual debt.
+- **LRC use:** HYP-3039 connects HYP-3024..HYP-3038 into one ladder: status
+  gate, owner-essential path lift, residual certificate tooth, first-tooth
+  owner strip, primitive-period deck, residual capacitor cut, and q=23
+  drop/add zeta plus endpoint-owner strip.  It also pulls older work back into
+  the current residual surface: address retention, visible/hidden fold
+  signatures, anti-wedge transitivity, cochannel transfer, and pair-good
+  decoy generator classes.
+- **Preserves:** Boundary/open status, theorem-route schedulability, the first
+  legal forgetting stage, generator/cut class, primitive-period channel,
+  endpoint-owner strip, and named residual-debt status.
+- **Forgets / guardrail:** Raw runner identity, scalar exact scale, repeated
+  residual counts, raw analytic q labels, and raw pair-good booleans are unsafe
+  unless their hidden coordinate is declared or discharged.
+- **Tournament fingerprint:** vertices are hidden-coordinate ledgers, not
+  runners: `addressed_packet`, `owner_essential_path_lift`,
+  `residual_certificate_tooth`, `primitive_period_deck`,
+  `residual_capacitor_cut`, `drop_add_haar_square`,
+  `visible_hidden_relation_signature`, `gK8_boundary_moment_channel`, and
+  `raw_scalar_shadow`.  The synthesis gauge is transitive:
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`,
+  `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path
+  `addressed_packet > owner_essential_path_lift >
+  residual_certificate_tooth > primitive_period_deck >
+  residual_capacitor_cut > drop_add_haar_square >
+  visible_hidden_relation_signature > gK8_boundary_moment_channel >
+  raw_scalar_shadow`.
+- **Next pull:** Add `hidden_coordinate_stage`,
+  `visible_hidden_relation_type`, `residual_capacitor_id`, `first_cut_stage`,
+  `drop_add_square_id`, `exact_M_zeta`, `endpoint_owner_strip`, and
+  `anti_wedge_debt_count` to a cached HYP-2963 sidecar, then audit accepted
+  cuts for residual anti-wedges.
+- **Pointers:** HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3034,
+  HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3028, HYP-3027, HYP-3024,
+  HYP-3023, HYP-3022, HYP-3021, HYP-3018, HYP-2963, THM-572, LTI-187,
+  LTI-186, LTI-185, LTI-184, LTI-183, LTI-182, LTI-181, LTI-180, LTI-179,
+  LTI-178, LTT-084, LTT-083, LTT-082, LTT-081, LTT-080, LTT-079, LTT-078,
+  LTT-077, LTT-076, T1120, T1119, T1118, T1117, T1116.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
