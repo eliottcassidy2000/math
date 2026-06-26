@@ -7,6 +7,28 @@ Added `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md` as an operational contributi
 Tournament Analysis setup: vertices are proof-carrier pullbacks rather than runners; the pairwise observable tracks boundary/open status, theorem route, exact scale, endpoint/topology, arithmetic period, harmonic certificate, residual routing, family transfer, formal payload, and proof cost.  The switch favors retained proof payload without unnamed residual debt, with tie path `packet_sheaf > endpoint_topology > harmonic_certificate > arithmetic_period > automaton_language > tournament_metagraph > analytic_smoothing > state_lift_geometry > computation_formal_forum`.
 
 Proof-order takeaway: the next agents should pick `CPI-*` rows from the six bundles, instantiate retained fields on HYP-2963 packets or a named stress family, run boundary/open and route-fiber mixing, and promote successful rows into theorem-facing LTI/LTT cards.  Assumption challenge recorded: do not start from runners or one scalar; start from the proof carrier and state what LRC predicate survives the quotient.
+## codex-2026-06-26-S192 -- LRC14 residual status-gate switchboard (HYP-3028/T1109)
+
+User asked to keep working on creative LRC14 proof angles.  Pulled incoming
+S189/HYP-3026 carrier-fusion switchboard first, then focused on the residual
+left by HYP-3024's full-bank coarse ET+Henselian-unit gate.
+
+Added `04-computation/lrc14_residual_status_gate_switchboard_codex_s192.py`
+and stored `05-knowledge/results/lrc14_residual_status_gate_switchboard_codex_s192.out`.
+The script parses stored S188/S189 evidence rather than recomputing the
+expensive HYP-2963 exact packet bank.  Main readout: `coarse_et_unit_gate` has
+`21702` fibers, `15` mixed-route fibers, max mixed `4`, and `0` mixed
+boundary/open fibers; exact magnitude is route-pure but address-like.  The
+largest displayed residual mixed-route example has three direct `q0=13`
+Q-witness rows and one strict-open covering row, so route mixing after the
+status gate is certificate scheduling debt, not counterexample pressure.
+
+Created HYP-3028, T1109, LTI-176, LTT-074, and reflection
+`07-reflections/lrc14-residual-status-gate-switchboard-codex-s192.md`.
+Next hook: add a cached HYP-2963 packet-ledger mode so the 15 residual fibers
+can be listed without recomputing exact `M`, then attach q-witness,
+safe-stick/barcode/Fejer/Haar, unit-petal, K33/F7/THM-572, covering, or
+magnitude-cocycle certificate teeth.
 
 ## codex-2026-06-26-S188 -- LRC14 fiber-zipper convergence via ET/Henselian units (HYP-3024/T1104)
 

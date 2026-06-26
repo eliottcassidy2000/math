@@ -47,6 +47,8 @@ obligations, and proof-carrier interfaces.
   use LTT-068.
 - Need to repair failed automatic/fiber quotients without using route labels:
   use LTT-072.
+- Need to prove status convergence before route purity:
+  use LTT-074, plus LTT-070.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1317,6 +1319,25 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** T1108, LTI-175,
   `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md`, LTI-173, LTI-156,
   LTI-147, LTI-021, LTM-071, LTM-072.
+
+### LTT-074: Residual Status-Gate Tournament
+
+- **Move:** Treat post-coarse-ET+unit mixed-route fibers as residual proof
+  obligations after the LRC boundary/open predicate has already become
+  fiber-constant.
+- **LRC use:** Makes the next theorem status-first: prove AP/GW endpoint
+  equality cannot share a coarse status fiber with a strict-open packet, then
+  route open-route collisions by certificate teeth.
+- **Preserves:** Boundary/open status at threshold `1/14` and the residual
+  certificate handoff obligation.
+- **Forgets / guardrail:** It forgets exact route family, exact ET address,
+  endpoint owners, and full magnitude/barcode identity until q-witness,
+  safe-stick, Fejer/Haar, petal, K33/F7, covering, or magnitude teeth are
+  reattached.
+- **Next pull:** Add a cached packet-ledger mode to list the 15 S188 residual
+  fibers without recomputing exact maximin data.
+- **Pointers:** HYP-3028, HYP-3026, HYP-3024, HYP-3023, HYP-3020,
+  HYP-2963, THM-572, LTI-176, LTI-173, LTI-171, LTT-071, LTT-070, T1109.
 
 ## Immediate Pull List
 

@@ -1,0 +1,59 @@
+LRC14 residual status-gate switchboard (codex-2026-06-26-S192)
+source_threads=HYP-3026,HYP-3025,HYP-3024,HYP-3023,HYP-3020,HYP-3017,HYP-3016,HYP-3015,HYP-2963
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, section boundaries, residue fibers, ET clocks,
+    p-adic unit roots, zero-root scale debt, safe sticks, barcode
+    bars, magnitude cocycles, route labels, and proof obligations.
+  chosen vertices:
+    residual proof obligations after the coarse ET+unit status gate.
+  preserved LRC predicate:
+    boundary/open status at threshold 1/14, not full theorem-route purity.
+  destroyed information:
+    exact route family, exact ET address, endpoint owners, and full
+    magnitude/barcode identity until a certificate tooth is reattached.
+  challenged assumption:
+    route mixing after status convergence is not a counterexample signal;
+    it is certificate scheduling debt.
+
+[1] Stored full-bank evidence
+  full_bank_coarse_et_unit_gate fibers=21702 mixed_route=15 mixed_status=0 max_mixed=4
+  full_bank_magnitude_cocycle fibers=21909 mixed_route=0 mixed_status=0 max_mixed=0
+  target_word_coarse_gate fibers=585 mixed_route=9 largest_mixed=4
+  s189_named_automatic_plus_barcode_shape fibers=11 mixed_status=0 mixed_route=0
+  interpretation=coarse ET+unit is already status-pure; magnitude is the route-pure fallback.
+
+[2] Largest residual mixed-route sample from S188
+  name | route | M | safe_mu | q0 | exit_tooth | reason
+  single swap 13->143 | COVERING-MOMENT | 11/144 | 4307/194040 | 14 | strict-safe-stick / covering-moment | q0=14 but safe_mu>0, so the LRC predicate is already strict-open
+  single swap 13->31 | Q-WITNESS | 1/13 | 194039/6015240 | 13 | direct q-witness | q0<=13 gives a denominator witness strictly above 1/14
+  single swap 13->59 | Q-WITNESS | 1/13 | 53509/1635480 | 13 | direct q-witness | q0<=13 gives a denominator witness strictly above 1/14
+  single swap 13->115 | Q-WITNESS | 1/13 | 13469/405720 | 13 | direct q-witness | q0<=13 gives a denominator witness strictly above 1/14
+
+[3] Status-first proof target
+  The theorem should not first ask for route purity.  It should prove:
+    in each automatic/residue fiber, coarse ET+Henselian-unit data cannot
+    identify an AP/GW boundary equality atom with a strict-open packet.
+  Once that is proved, the remaining route-mixed fibers are harmless for
+  LRC14 itself and can be discharged by certificate teeth:
+    q<=13 direct witness; AP/GW zero-bar equality; strict safe stick or
+    Fejer/Haar certificate; unit-petal; K33/F7/THM-572 state lift;
+    covering-moment; magnitude-cocycle family formula.
+
+[4] Tournament Analysis
+  vertices=proof obligations after the residual gate, not runners
+  pairwise_observable=predicate, compression, route_split, arithmetic, topology, proof_cost, anti_address
+  switch=majority comparison of carrier vectors
+  tie_hamiltonian_path=status_first_coarse_et_unit_gate>magnitude_cocycle_fallback>safe_stick_barcode_certificate>henselian_unit_lift_rule>exact_et_address_clock>barcode_packet_zipper_address>raw_automatic_word
+  score_hist={0: 1, 3: 4, 4: 1, 5: 1}
+  directed_3cycles=7
+  scc_sizes=[6, 1]
+  hamiltonian_path_count=33
+  score_order=status_first_coarse_et_unit_gate>barcode_packet_zipper_address>exact_et_address_clock>henselian_unit_lift_rule>magnitude_cocycle_fallback>safe_stick_barcode_certificate>raw_automatic_word
+
+[5] Next executable hook
+  Add a cached packet-ledger mode to HYP-2963 so S188 residual fibers can be
+  listed without recomputing exact M.  Then attach for each residual fiber
+  the first successful tooth among q-witness, safe-stick/barcode, Fejer,
+  magnitude formula, unit-petal, K33/F7, and covering-moment.

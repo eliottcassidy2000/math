@@ -18,6 +18,19 @@ transfer, and series/arithmetic shadows. -> T1108, LTI-175, LTT-073, LTM-079,
 CPI-001..CPI-090, HYP-2963, HYP-3026, HYP-3025, HYP-3024, HYP-3023,
 HYP-3022, HYP-3020, HYP-3018, HYP-3016, HYP-3015, HYP-3014, HYP-3013,
 THM-572.
+**OPEN-Q-108 S192 residual status-gate addendum:** HYP-3028 turns the
+HYP-3024 coarse ET+Henselian-unit result into a status-first theorem target.
+The full-bank coarse gate has `21702` fibers, only `15` mixed theorem-route
+fibers, max mixed `4`, and `0` mixed boundary/open fibers; exact magnitude is
+route-pure but more address-like.  The largest displayed residual mixed-route
+fiber contains three direct `q0=13` Q-witness rows and one strict-open covering
+row, so route mixing is certificate scheduling debt rather than counterexample
+pressure.  Open task: add a cached HYP-2963 packet-ledger mode, list all 15
+residual fibers without recomputing exact `M`, and attach the first successful
+tooth among q-witness, safe-stick/barcode/Fejer/Haar, unit-petal,
+K33/F7/THM-572, covering, and magnitude-cocycle formula. -> HYP-3028,
+HYP-3026, HYP-3024, HYP-3023, HYP-3020, HYP-2963, THM-572, LTI-176,
+LTI-173, LTI-171, LTT-074, LTT-071, LTT-070, T1109.
 
 **OPEN-Q-108 S188 fiber-zipper convergence addendum:** HYP-3024 completes the
 reserved S188 fiber-zipper convergence audit by extending HYP-3023 and
