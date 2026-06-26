@@ -1,0 +1,182 @@
+LRC14 pair-good decoy classifier
+========================================================================
+Assumption challenge
+  Candidate vertex sets considered:
+    runners, gaps, fixed sections, section boundaries, wall crossings,
+    residues, cover arcs, Fourier modes, matroid circuits, proof obligations,
+    active normal-fan owners, and decoy generator triples.
+  Chosen vertex set:
+    generator triples (source pair lane, blocker residue tooth, blocker deck).
+  Preserved LRC predicate:
+    pair-good candidate is harmless exactly when every blocker residue tooth
+    is outside threshold; decoy means at least one tooth inequality is strict.
+  Destroyed by raw counts:
+    which blocker tooth generated the failure and whether many times share one mechanism.
+
+[0] Exact generator lemma
+  For t=p/q in lowest terms, runner c blocks iff
+    14 * min(c*p mod q, q-(c*p mod q)) < q.
+  A pair-good decoy is exactly a source pair lane plus at least one such
+  blocker tooth.  Counts are therefore shadows of modular tooth families.
+
+[1] Row-level decoy compression
+  AP13
+    candidates=100; witnesses=3; boundary=3; decoys=95; zero_blocked=29
+    blocker_roles={'core': 65, 'core+core': 27, 'core+core+core': 1, 'core+core+core+core': 1, 'core+core+core+core+core+core': 1}
+    depth_buckets={'deep_tooth': 50, 'near_wall_slack2_3': 12, 'near_wall_slack1': 4, 'zero_tooth': 29}
+    source_lanes={'sum': 72, 'diff+sum': 22, 'halfturn': 1}
+    greedy generator cover:
+      +  14  mode=sum  shell=diff_g7            blockers=core                 tooth=zero_tooth
+      +  10  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +   9  mode=sum  shell=sum11              blockers=core                 tooth=deep_tooth
+      +   9  mode=sum  shell=sum9               blockers=core                 tooth=deep_tooth
+      +   6  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=zero_tooth
+      +   5  mode=sum  shell=diff_g7            blockers=core                 tooth=deep_tooth
+  GW 12->24
+    candidates=210; witnesses=3; boundary=3; decoys=196; zero_blocked=32
+    blocker_roles={'core': 160, 'tail_other': 5, 'core+tail_other': 5, 'core+core': 22, 'core+core+tail_other': 2, 'core+core+core+tail_other': 1, 'core+core+core+core+core+tail_other': 1}
+    depth_buckets={'deep_tooth': 145, 'zero_tooth': 32, 'near_wall_slack2_3': 14, 'near_wall_slack1': 5}
+    source_lanes={'sum': 116, 'diff+sum': 77, 'diff': 2, 'halfturn': 1}
+    greedy generator cover:
+      +  25  mode=sum  shell=sum9               blockers=core                 tooth=deep_tooth
+      +  25  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +  16  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=zero_tooth
+      +  15  mode=sum  shell=sum5               blockers=core                 tooth=deep_tooth
+      +  14  mode=sum  shell=sum_g7             blockers=core                 tooth=deep_tooth
+      +  11  mode=sum  shell=sum3               blockers=core                 tooth=deep_tooth
+  petal 10->20
+    candidates=168; witnesses=4; boundary=3; decoys=157; zero_blocked=33
+    blocker_roles={'core': 121, 'core+tail_other': 6, 'tail_other': 6, 'core+core': 21, 'core+core+core+tail_other': 1, 'core+core+core+core': 1, 'core+core+core+core+core+tail_other': 1}
+    depth_buckets={'deep_tooth': 105, 'zero_tooth': 33, 'near_wall_slack2_3': 14, 'near_wall_slack1': 5}
+    source_lanes={'sum': 102, 'diff+sum': 54, 'halfturn': 1}
+    greedy generator cover:
+      +  16  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +  14  mode=diff shell=sum13              blockers=core                 tooth=zero_tooth
+      +  13  mode=sum  shell=diff_g7            blockers=core                 tooth=deep_tooth
+      +  11  mode=sum  shell=sum3               blockers=core                 tooth=deep_tooth
+      +  11  mode=sum  shell=sum1               blockers=core                 tooth=deep_tooth
+      +   9  mode=sum  shell=sum11              blockers=core                 tooth=deep_tooth
+  petal 13->26
+    candidates=219; witnesses=5; boundary=4; decoys=195; zero_blocked=29
+    blocker_roles={'core': 166, 'tail_other': 6, 'core+core': 15, 'core+core+tail_other': 3, 'core+tail_other': 2, 'core+core+core': 1, 'core+core+core+core': 1, 'core+core+core+core+core+core+tail_other': 1}
+    depth_buckets={'deep_tooth': 147, 'near_wall_slack2_3': 14, 'near_wall_slack1': 5, 'zero_tooth': 29}
+    source_lanes={'sum': 110, 'diff': 14, 'diff+sum': 70, 'halfturn': 1}
+    greedy generator cover:
+      +  30  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +  25  mode=sum  shell=sum9               blockers=core                 tooth=deep_tooth
+      +  14  mode=sum  shell=sum_g2+diff_g14    blockers=core                 tooth=deep_tooth
+      +  14  mode=sum  shell=sum_g7             blockers=core                 tooth=deep_tooth
+      +  14  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=zero_tooth
+      +  11  mode=sum  shell=diff_g7            blockers=core                 tooth=deep_tooth
+  K33 12->36
+    candidates=363; witnesses=4; boundary=3; decoys=334; zero_blocked=32
+    blocker_roles={'core': 300, 'tail_other': 5, 'core+core': 20, 'core+tail_other': 6, 'core+core+tail_other': 1, 'core+core+core+tail_other': 1, 'core+core+core+core+core+tail_other': 1}
+    depth_buckets={'deep_tooth': 278, 'zero_tooth': 32, 'near_wall_slack2_3': 17, 'near_wall_slack1': 7}
+    source_lanes={'sum': 186, 'diff': 94, 'diff+sum': 53, 'halfturn': 1}
+    greedy generator cover:
+      +  50  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +  22  mode=sum  shell=sum_g7             blockers=core                 tooth=deep_tooth
+      +  21  mode=diff shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +  20  mode=sum  shell=sum5               blockers=core                 tooth=deep_tooth
+      +  17  mode=sum  shell=sum1               blockers=core                 tooth=deep_tooth
+      +  17  mode=sum  shell=sum13              blockers=core                 tooth=deep_tooth
+  K33 family drop12,13 add26,36
+    candidates=363; witnesses=10; boundary=4; decoys=337; zero_blocked=42
+    blocker_roles={'core': 258, 'core+tail_other': 29, 'tail_other': 34, 'core+core': 11, 'core+core+tail_other': 3, 'core+core+core+tail_other': 1, 'core+core+core+core+core+tail_other+tail_other': 1}
+    depth_buckets={'deep_tooth': 267, 'zero_tooth': 42, 'near_wall_slack2_3': 19, 'near_wall_slack1': 9}
+    source_lanes={'sum': 161, 'diff+sum': 144, 'diff': 31, 'halfturn': 1}
+    greedy generator cover:
+      +  78  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +  26  mode=sum  shell=sum5               blockers=core                 tooth=deep_tooth
+      +  23  mode=sum  shell=sum1               blockers=core                 tooth=deep_tooth
+      +  21  mode=sum  shell=sum13              blockers=core                 tooth=deep_tooth
+      +  15  mode=diff shell=sum_g2+diff_g2     blockers=tail_other           tooth=zero_tooth
+      +  14  mode=sum  shell=sum0+sum_g14+diff_g2 blockers=core                 tooth=deep_tooth
+  covering 12->84
+    candidates=956; witnesses=9; boundary=0; decoys=846; zero_blocked=38
+    blocker_roles={'core': 805, 'tail_multiple14': 11, 'core+tail_multiple14': 6, 'core+core': 20, 'core+core+tail_multiple14': 2, 'core+core+core+tail_multiple14': 1, 'core+core+core+core+core+tail_multiple14': 1}
+    depth_buckets={'deep_tooth': 777, 'zero_tooth': 38, 'near_wall_slack2_3': 20, 'near_wall_slack1': 11}
+    source_lanes={'sum': 438, 'diff': 359, 'diff+sum': 48, 'halfturn': 1}
+    greedy generator cover:
+      + 168  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      + 147  mode=diff shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +  41  mode=sum  shell=sum13              blockers=core                 tooth=deep_tooth
+      +  37  mode=sum  shell=sum5               blockers=core                 tooth=deep_tooth
+      +  36  mode=sum  shell=sum9               blockers=core                 tooth=deep_tooth
+      +  35  mode=sum  shell=sum_g7+diff_g7     blockers=core                 tooth=deep_tooth
+  single far tail 12->200
+    candidates=2308; witnesses=84; boundary=7; decoys=1934; zero_blocked=27
+    blocker_roles={'core': 1904, 'tail_other': 4, 'core+core': 13, 'core+core+tail_other': 4, 'core+tail_other': 6, 'core+core+core+tail_other': 1, 'core+core+core+core': 1, 'core+core+core+core+core+core+tail_other': 1}
+    depth_buckets={'deep_tooth': 1874, 'zero_tooth': 27, 'near_wall_slack2_3': 19, 'near_wall_slack1': 14}
+    source_lanes={'sum': 985, 'diff': 897, 'diff+sum': 51, 'halfturn': 1}
+    greedy generator cover:
+      + 342  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      + 287  mode=diff shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +  95  mode=sum  shell=sum9               blockers=core                 tooth=deep_tooth
+      +  87  mode=sum  shell=sum5               blockers=core                 tooth=deep_tooth
+      +  84  mode=sum  shell=diff_g7            blockers=core                 tooth=deep_tooth
+      +  84  mode=sum  shell=sum_g7             blockers=core                 tooth=deep_tooth
+  drop6 core add180
+    candidates=2071; witnesses=24; boundary=6; decoys=1788; zero_blocked=40
+    blocker_roles={'core': 1746, 'tail_other': 11, 'core+core': 15, 'core+tail_other': 9, 'core+core+tail_other': 4, 'core+core+core+tail_other': 2, 'core+core+core+core+core+tail_other': 1}
+    depth_buckets={'deep_tooth': 1723, 'zero_tooth': 40, 'near_wall_slack2_3': 19, 'near_wall_slack1': 6}
+    source_lanes={'diff': 811, 'sum': 906, 'diff+sum': 70, 'halfturn': 1}
+    greedy generator cover:
+      + 235  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      + 188  mode=diff shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +  90  mode=sum  shell=sum11              blockers=core                 tooth=deep_tooth
+      +  81  mode=sum  shell=sum9               blockers=core                 tooth=deep_tooth
+      +  77  mode=sum  shell=diff_g7            blockers=core                 tooth=deep_tooth
+      +  77  mode=sum  shell=sum13              blockers=core                 tooth=deep_tooth
+  two-far doublet 20,21
+    candidates=182; witnesses=17; boundary=4; decoys=161; zero_blocked=31
+    blocker_roles={'core': 118, 'core+tail_other': 18, 'tail_other': 10, 'core+core': 9, 'core+core+tail_other': 4, 'core+core+core+tail_other': 1, 'core+core+core+core+core+tail_other': 1}
+    depth_buckets={'deep_tooth': 106, 'zero_tooth': 31, 'near_wall_slack2_3': 17, 'near_wall_slack1': 7}
+    source_lanes={'sum': 109, 'diff+sum': 50, 'diff': 1, 'halfturn': 1}
+    greedy generator cover:
+      +  25  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      +  22  mode=sum  shell=sum13              blockers=core                 tooth=deep_tooth
+      +  11  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=zero_tooth
+      +   9  mode=sum  shell=sum3               blockers=core                 tooth=deep_tooth
+      +   9  mode=sum  shell=sum1               blockers=core                 tooth=deep_tooth
+      +   9  mode=sum  shell=sum9               blockers=core                 tooth=deep_tooth
+
+[2] Global generator census over named rows
+  total_decoy_times=6043
+  distinct_generator_keys=324
+  blocker_role_hist={'core': 5643, 'core+core': 173, 'core+core+core': 2, 'core+core+core+core': 4, 'core+core+core+core+core+core': 1, 'tail_other': 81, 'core+tail_other': 81, 'core+core+tail_other': 21, 'core+core+core+tail_other': 8, 'core+core+core+core+core+tail_other': 5, 'core+core+core+core+core+core+tail_other': 2, 'core+core+core+core+core+tail_other+tail_other': 1, 'tail_multiple14': 11, 'core+tail_multiple14': 6, 'core+core+tail_multiple14': 2, 'core+core+core+tail_multiple14': 1, 'core+core+core+core+core+tail_multiple14': 1}
+  tooth_bucket_hist={'deep_tooth': 5472, 'near_wall_slack2_3': 165, 'near_wall_slack1': 73, 'zero_tooth': 333}
+  top generator keys:
+      979  mode=sum  shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      695  mode=diff shell=sum_g2+diff_g2     blockers=core                 tooth=deep_tooth
+      328  mode=sum  shell=sum9               blockers=core                 tooth=deep_tooth
+      303  mode=sum  shell=sum5               blockers=core                 tooth=deep_tooth
+      271  mode=sum  shell=sum13              blockers=core                 tooth=deep_tooth
+      263  mode=sum  shell=sum11              blockers=core                 tooth=deep_tooth
+      254  mode=sum  shell=diff_g7            blockers=core                 tooth=deep_tooth
+      229  mode=sum  shell=sum_g7             blockers=core                 tooth=deep_tooth
+      219  mode=diff shell=sum13              blockers=core                 tooth=deep_tooth
+      214  mode=diff shell=sum5               blockers=core                 tooth=deep_tooth
+      207  mode=diff shell=sum11              blockers=core                 tooth=deep_tooth
+      203  mode=sum  shell=sum_g2+diff_g14    blockers=core                 tooth=deep_tooth
+
+[3] Why the count is not the invariant
+  The largest rows have thousands of decoys because many source pairs cross
+  inside the same small set of blocker tooth regimes.  The proof object is
+  the blocker residue inequality, not the number of candidate times hitting it.
+  Packet sidecar fields suggested:
+    decoy_source_lane, decoy_source_shell, decoy_blocker_role,
+    decoy_blocker_depth_bucket, decoy_zero_tooth_flag,
+    decoy_generator_cover_size, decoy_top_generator_key.
+
+[4] Tournament Analysis
+  vertices are generator/proof carriers, not runners.
+  pairwise observable:
+    predicate exactness, modular checkability, denominator retention,
+    normal-fan compatibility, family compression, and anti-count guard.
+  switch:
+    majority comparison of these coordinates; ties use the listed path.
+  score_hist=[(0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  tie_hamiltonian_path=blocker_residue_tooth_inequality > source_pair_lane_plus_blocker_deck > normal_fan_active_owner_support > family_compressed_generator_cover > near_wall_clearance_margin > zero_tooth_divisibility_subcase > raw_decoy_count > raw_pair_gap

@@ -1,3 +1,27 @@
+## codex-2026-06-26-S185 -- Pair-good decoy generator classification (HYP-3021/LTI-168)
+
+User asked to classify and understand HYP-3019's pair-good decoys, with the
+right intuition that if the generation mechanism is exact, the raw count is not
+the load-bearing issue.
+
+Added `04-computation/lrc14_pair_good_decoy_classifier_codex_20260626.py` and
+stored `05-knowledge/results/lrc14_pair_good_decoy_classifier_codex_20260626.out`.
+The script classifies each decoy by source pair lane, source shell, blocker
+role, blocker depth bucket, and active blocker deck.
+
+Main lemma: for pair-crossing `t=p/q` in lowest terms, runner `c` blocks exactly
+when `14*min(c*p mod q, q-(c*p mod q))<q`.  Thus a decoy is a source pair lane
+plus a blocker residue tooth.  Named-row audit: `6043` decoy times collapse to
+`324` generator keys; `5643/6043` are core-only blockers; tooth buckets are
+`deep_tooth=5472`, `zero_tooth=333`, `near_wall_slack2_3=165`,
+`near_wall_slack1=73`.  Large-tail rows are AP-core tooth shadows:
+`12->200` has `1934` decoys but `1904` core-only, drop6-add180 has `1788` but
+`1746` core-only, and covering `12->84` has `846` but `805` core-only.
+
+Created HYP-3021, LTI-168, and a reflection.  Next pull: run the generator
+classifier over the full HYP-2963 bank and look for bounded generator-cover
+templates per packet family.
+
 ## codex-2026-06-26-S182 -- LRC14 active-bottleneck normal-fan carrier (HYP-3018/T1101)
 
 User asked to keep looking for better proof carriers.  Fetched and fast-forwarded over the incoming HYP-3016/HYP-3017 automaton fiber-mixing and route-purity work, then used it as the negative control: automaton sidecars mix boundary/open rows unless a local magnitude/support coordinate is retained.

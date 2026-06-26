@@ -6,6 +6,7 @@ source: codex-2026-06-26-S183
 script: 04-computation/lrc14_binding_pair_switch_carrier_codex_20260626.py
 result: 05-knowledge/results/lrc14_binding_pair_switch_carrier_codex_20260626.out
 related:
+  - HYP-3021
   - THM-524
   - HYP-3007
   - HYP-3006
@@ -219,3 +220,10 @@ Then run a fiber-mixing test: inside each HYP-2963 packet family, check whether
 these switch fields are constant, reconstructible, dual-annihilated, or exactly
 the coordinate that routes the packet to AP/GW, covering, petal, K33/state-lift,
 or F7 debt.
+
+## Follow-Up
+
+HYP-3021 classifies the pair-good decoys counted here.  The exact generator is
+a blocker residue tooth: for `t=p/q`, runner `c` blocks iff
+`14*min(c*p mod q, q-(c*p mod q))<q`.  In the named-row audit, most large decoy
+counts are AP-core tooth shadows rather than independent proof obligations.
