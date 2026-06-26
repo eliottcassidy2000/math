@@ -1,0 +1,50 @@
+================================================================================
+S213: A000568 edge-perspective extension lift
+================================================================================
+
+1. FIRST FAILURE AND EXACT EXTENSION LIFT
+   U(5)=12  P(5)=48  U(6)=56  gap=8
+   U(6) generated from U(5)+all incident words: 56
+   rooted 5-perspectives plus incident word states: 1408
+   exact ordered-pair perspectives on U(6): 1408
+   extension states equal ordered-pair perspectives: True
+   exact directed-edge perspectives on U(6): 704
+   exact unordered-pair perspectives on U(6): 704
+   directed-edge equals unordered-pair count: True
+   per rooted 5-parent extension-state count hist: {16: 8, 32: 40}
+   target classes reached per rooted 5-parent hist: {7: 1, 13: 12, 21: 15, 23: 15, 24: 5}
+   rooted 5-parents per target U(6) class hist: {5: 3, 6: 3, 8: 2, 10: 1, 11: 5, 13: 2, 14: 4, 15: 6, 16: 2, 18: 2, 19: 2, 20: 5, 21: 3, 23: 10, 25: 2, 26: 2, 28: 2}
+
+2. ORDERED-PAIR SECTOR DECKS
+   Sector key for x is (old-root beats x, new-observer beats x).
+   A deck is the multiset over all ordered pairs of a 6-tournament class.
+   size    : individual_sigs= 35  unique_class_decks=55/56
+   internal: individual_sigs= 59  unique_class_decks=55/56
+   cross   : individual_sigs=362  unique_class_decks=56/56
+   full    : individual_sigs=422  unique_class_decks=56/56
+
+3. THE ONLY SIZE/INTERNAL COLLISION
+   collided masks=[344, 345]; converse pair=True
+     rep=344 score=(2, 2, 2, 3, 3, 3) c3=8 H=43 aut=1 self_converse=False
+     rep=345 score=(2, 2, 2, 3, 3, 3) c3=8 H=43 aut=1 self_converse=False
+   Cross-sector orientation separates this converse/chirality collision.
+
+4. TOURNAMENT ANALYSIS OVER FORGETFUL CARRIERS
+   Pairwise observable: retained observer role, incident word, cross-sector
+   coupling, chirality, class separation, owner compatibility; cost breaks ties.
+   vertices=['rooted_5_node_cache', 'ordered_pair_extension', 'directed_edge_perspective', 'sector_size_deck', 'sector_internal_deck', 'sector_cross_deck', 'sector_full_deck', 'endpoint_owner_packet']
+   score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+   directed_3_cycles=0
+   scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+   hamiltonian_paths=1
+   one_hamiltonian_path=endpoint_owner_packet -> sector_cross_deck -> sector_full_deck -> ordered_pair_extension -> directed_edge_perspective -> sector_size_deck -> sector_internal_deck -> rooted_5_node_cache
+
+READING
+  A rooted node perspective is one controlled-forgetting rung.  Adding the observer's incident word lifts it exactly to an ordered-pair perspective on the next tournament size.
+  Directed-edge perspective is the old/new-role quotient of that ordered pair.  It is natural and dualistic, but it already forgets which endpoint was the observer unless a sidecar says so.
+  The four-sector deck is the first compact edge sidecar.  Sector sizes and internal sector types almost work at U(6), but they miss one converse pair; cross-sector orientation is exactly the chirality/coupling repair.
+  For LRC, this says the safe quotient is not raw A000568 -> rooted node.  It is rooted node -> incident word -> edge-sector cross deck -> endpoint-owner packet, with each forgotten coordinate explicitly accounted for.
+
+ASSUMPTION CHALLENGE
+  Considered vertices: rooted nodes, ordered pairs, directed edges, sector cells, converse/chirality pairs, endpoint owners, packet sidecars, and proof obligations.  The selected Tournament Analysis vertices are carriers.
+  Preserved predicate: observer-source/incident-coupling data needed for a safe-box hit.  Destroyed information: old/new endpoint role, labelled runner identity, and full extension rows; those are acceptable only with a sidecar or named residual debt.
