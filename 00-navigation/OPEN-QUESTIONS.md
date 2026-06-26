@@ -1,5 +1,23 @@
 # Open Questions
 
+**OPEN-Q-108 S218 observer-extension/cut addendum:** HYP-3054 abstracts the
+A000568 observer-cut defect into the general controlled-forgetting test for
+repo quotients.  For any proposed quotient, name the next operation
+(`observer insertion`, `delete/unroot`, `layer transport`, `route handoff`,
+`capacitor cut`, `automaton transition`, or `certificate pushforward`) and the
+payload that makes that operation proof-safe.  Open task: build the HYP-3048
+sidecar observability matrix over HYP-2963 coarse fibers with columns for
+extension address, cut/cycle defect, and route-owner certificate fields; group
+pair-good decoys by blocker-generator tooth and active-owner relation before
+counting; join residual capacitor cuts to ordered-pair sector decks and
+rectangle/hourglass defects. -> HYP-3054, HYP-3053, HYP-3052, HYP-3051,
+HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-3046, HYP-3045, HYP-3043,
+HYP-3040, HYP-3039, HYP-3037, HYP-3034, HYP-3024, HYP-3022, HYP-3021,
+HYP-3018, HYP-2997, HYP-2995, HYP-2991, HYP-2989, HYP-2963, THM-381,
+THM-385, THM-572, LTI-201, LTI-200, LTI-199, LTI-198, LTI-197, LTT-099,
+LTT-098, LTT-097, LTT-096, LTT-095, T1136, T1135, T1134, T1133, T1132,
+T1131.
+
 **OPEN-Q-108 S217 diagonal-layer flow addendum:** HYP-3053 turns the user's
 tournament tiling-growth model into a `GF(2)` coboundary carrier.  The
 `k^2+k` lines between layers of sizes `k` and `k+1` form `K_{k,k+1}`:

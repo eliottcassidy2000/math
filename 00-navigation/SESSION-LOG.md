@@ -24885,3 +24885,30 @@ rooted children, unrooted children, and rectangle-defect residuals as vertices,
 not original tournament vertices.  Next pull: replace brute canonicalization
 with a fast A000568 backend and add complement/reflection half-extension
 Burnside counts.
+
+## codex-2026-06-26-S218 -- Observer-extension cut payload calculus -- HYP-3054/T1136/LTI-201/LTT-099
+
+User asked to take the observer-extension/cut payload concept abstract and
+apply it to repo problems, synthesized with controlled forgetting.  Read the
+fresh S215-S217 layer-extension/diagonal-transport work plus HYP-3050,
+HYP-3039, HYP-3040, and the LRC lens map.
+
+Added HYP-3054 and reflection
+`07-reflections/observer-extension-cut-controlled-forgetting-codex-s218.md`.
+Core abstraction: for a quotient `q:X->Y`, the observer-extension/cut payload
+is the boundary coordinate needed when the quotient is asked to survive one
+more operation: observer insertion, deletion/unrooting, diagonal layer
+transport, route handoff, capacitor cut, automaton transition, or certificate
+pushforward.  Controlled forgetting is legal only after that payload is
+retained, reconstructed, dual/cut/cocycle-annihilated, descended familywise,
+stopped at AP/GW boundary topology, or routed to named residual debt.
+
+Applications recorded: pair-good decoy counts should be replaced by
+blocker-generator teeth plus active-owner/barcode relation; residual capacitors
+by first-cut/zeta/endpoint-owner payload; AP-tail owner-strip collisions by
+q13 clocks; automaton shadows by magnitude/topology/owner route handoff;
+diagonal-layer lines by rectangle/hourglass defects; and matrix invariants by
+sidecar-observability columns.  Created T1136, LTI-201, and LTT-099.  Next
+pull: add manifest fields `quotient`, `next_operation`,
+`observer_extension_payload`, and `discharge_rule`, then build the HYP-3048
+observability matrix over HYP-2963 coarse fibers with these payload columns.

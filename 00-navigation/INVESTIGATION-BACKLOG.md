@@ -15,6 +15,27 @@
 
 ---
 
+## Lead codex-2026-06-26-S218: Observer-extension cut payload calculus
+
+**Status:** SYNTHESIS / abstraction across existing LRC carriers
+(HYP-3054/T1136/LTI-201/LTT-099), extending HYP-3050's observer-cut payload,
+HYP-3051-HYP-3053's rooted/diagonal transport carriers, and HYP-3039/HYP-3040's
+controlled-forgetting ledgers.
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3054-observer-extension-cut-calculus.md` and
+`07-reflections/observer-extension-cut-controlled-forgetting-codex-s218.md`.
+The key abstraction: a quotient is proof-safe only after the payload for its
+next outside operation is retained, reconstructed, dual/cut/cocycle-killed,
+descended, boundary-stopped, or routed to named debt.  This makes pair-good
+decoy generator teeth, residual capacitor first cuts, q13 AP-tail clocks,
+automaton magnitude/topology handoffs, rectangle/hourglass defects, and matrix
+observability columns instances of one observer-extension/cut rule.
+**Next:** add manifest fields `quotient`, `next_operation`,
+`observer_extension_payload`, and `discharge_rule`; build HYP-3048 sidecar
+observability matrices over HYP-2963 coarse fibers; classify pair-good decoys
+by generator and active-owner relation before reporting raw counts.
+Namespace: HYP-3054 / T1136 / LTI-201 / LTT-099.
+
 ## Lead codex-2026-06-26-S217: Tournament diagonal-layer flow
 
 **Status:** SYNTHESIS / exact small tournament audit and algebraic carrier law
