@@ -40,15 +40,19 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S225 Geometry-Regime Archive Audit
+## PROJECT STATUS: Stabilized at S227 Moser/Fibbinary Partial-Cube Carrier
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **Geometry-Regime Archive Audit (codex-S225)**, built on **Hyperbolic Reciprocal LRC14 Sidecar (codex-S222)**, and the preceding observer-extension ladder (S218-S221).
+As of **Friday, June 26, 2026**, the newest coordination layer is **Moser/Fibbinary Partial-Cube Simplex Carrier (codex-S227)**, built on **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, **Hyperbolic Reciprocal LRC14 Sidecar (codex-S222)**, and the preceding observer-extension ladder (S218-S221).
 
 This checkpoint formalizes the transition through the S218 Observer-Extension Payload Law, which corrected the first unlabelled tournament failure arithmetic ($R(5)=48, U(6)=56$, missing payload $8$) and established the sequence from node roots to proof-obligation sidecars.
 
 S225 integrates the **LRC14 geometry-regime archive audit (HYP-3061)**. It refines the proof stack by transforming old geometry-transition motifs (Schwarz triangles, Schlaefli tilings, tournament sizes $n=5,6,7$) into typed, controlled-forgetting objects. It defines the `geometry_regime_signature` sidecar, which requires every geometry-based analogy to specify its axis, regime (spherical/Euclidean/hyperbolic), and the exact LRC predicate (scale, owner, topology) it preserves. This synthesis enforces a strict gauge for packet-sheaf priority: raw numerology is the lowest carrier, while the `labelled_packet_sheaf` containing magnitude spectra and state-lift certificates is the highest. This ensures that $U(22)$ geometry enforcement and tournament spectral audits are coupled to exact structural carriers rather than scalar slogans.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, and geometry-regime signature before it is promoted to a proof carrier.
+S226 adds the Roth-Minkowski lattice/height fence: geometry-of-numbers and Diophantine-approximation estimates must retain relation lattices, covolumes, successive minima, algebraic targets, height bounds, and exceptional approximants before they can be proof carriers.
+
+S227 adds the Moser/fibbinary partial-cube carrier: automatic sequence shadows must retain native transition, bit-position phase, partial-cube model, Theta-class word, gated-subcube status, simplex face rank, doubled triangular layer, exact `M`, endpoint/topology payloads, magnitude cocycle, and route labels before they can be promoted.
+
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, and partial-cube/simplex sidecar when Moser/fibbinary or doubled-triangular motifs are used before it is promoted to a proof carrier.
 
 The Henselian unit rule (updated):
 ```text

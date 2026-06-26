@@ -153,6 +153,12 @@ obligations, and proof-carrier interfaces.
   use LTT-107 after LTT-106/LTT-103/LTT-099 and retain relation-lattice,
   covolume, successive-minima, algebraic-height, exceptional-approximant,
   low-height-wall, deleted-anti-coset, and residue-tail sidecars.
+- Need to use Moser-de Bruijn, fibbinary, partial cubes, simplices, or doubled
+  triangular numbers without losing LRC packet data:
+  use LTT-108 after LTT-063/LTT-066/LTT-106 and retain automaton state,
+  native transition, bit-position phase, Theta-class word, gated-subcube
+  status, simplex face rank, doubled-triangular layer, exact `M`, endpoint,
+  topology, magnitude, and route sidecars.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2771,6 +2777,52 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2608, THM-538, LTI-209, LTI-208, LTI-205, LTI-203, LTI-201, LTT-107,
   LTT-106, LTT-103, LTT-101, LTT-099, T1144, OPEN-Q-108.
 
+### LTT-108: Moser-Fibbinary Partial-Cube Simplex Carrier
+
+- **Move:** Upgrade Moser-de Bruijn and fibbinary rows from sequence names to
+  partial-cube/simplex packet sidecars.  Fibbinary fixed-length windows are
+  Fibonacci-cube partial cubes with native `x -> 2x`; Moser windows are
+  even-coordinate Boolean subcubes with native `x -> 4x`, and leak under
+  `x -> 2x` unless bit-position phase is retained.
+- **LRC use:** HYP-3063 ties the HYP-3008/HYP-3012 automaton stack to
+  HYP-3061 geometry regimes and HYP-2454/HYP-2458 triangular/Faulhaber
+  carriers.  Use it on AP/GW, K33, C27 petals, covering, fibbinary, and Moser
+  controls before promoting any automatic language, partial cube, simplex, or
+  doubled triangular count as a route splitter.
+- **Preserves:** Automaton language, automaton state, native transition,
+  bit-position phase, hypercube dimension, partial-cube model, Theta-class
+  word, gated-subcube status, median/interval status, simplex face rank,
+  directed-simplex edge count, doubled-triangular layer, geometry-regime
+  signature, exact `M`, endpoint owner, safe topology, magnitude cocycle,
+  route label, and certificate/state-lift payload.
+- **Forgets / guardrail:** Raw sequence membership, raw Fibonacci/Moser growth,
+  and `n(n+1)` scalar counts forget transition phase and endpoint geometry.
+  The sequence `2,6,12,20,30,42` is a directed-simplex sidecar, not a proof
+  shortcut.  The `5,6,7` motif must keep HYP-3061's axis distinction:
+  `{3,5}/{3,6}/{3,7}` is spherical/Euclidean/hyperbolic, while tournament
+  sizes `n=5/n=6/n=7` are boundary/pivot/seven-obstruction.
+- **Tournament fingerprint:** vertices are proof carriers and sidecar columns,
+  not runners:
+  `labelled_packet_sheaf > automatic_magnitude_cocycle >
+  partial_cube_theta_class_ledger > fibbinary_fibonacci_cube >
+  moser_even_coordinate_cube > simplex_directed_edge_layer >
+  geometry_regime_signature > faulhaber_odd_moment_carrier >
+  doubled_triangular_scalar > raw_sequence_name`.  Pairwise observable is
+  retained exact packet, automaton, transition, Theta-class, simplex, geometry,
+  topology, magnitude, and route/status payload.
+- **Next pull:** Add `partial_cube_model`, `theta_class_word`,
+  `gated_subcube_status`, `median_interval_status`, `simplex_face_rank`,
+  `directed_simplex_edge_count`, `doubled_triangular_layer`,
+  `fibonacci_cube_window`, and `moser_even_coordinate_subcube` to a HYP-2963
+  sample already carrying automatic, magnitude-cocycle, barcode, closed-arc
+  Cech, and geometry-regime fields.
+- **Pointers:** HYP-3063, HYP-3062, HYP-3061, HYP-3025, HYP-3023, HYP-3018,
+  HYP-3016, HYP-3012, HYP-3011, HYP-3009, HYP-3008, HYP-3003, HYP-3000,
+  HYP-2998, HYP-2963, HYP-2943, HYP-2887, HYP-2458, HYP-2454, HYP-2557,
+  LTI-210, LTI-208, LTI-172, LTI-166, LTI-165, LTI-161, LTI-160, LTI-159,
+  LTI-158, LTT-108, LTT-106, LTT-069, LTT-066, LTT-063, LTT-062, T1145,
+  OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -2824,6 +2876,10 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    successive minima profile, convex body ID, algebraic target, height bound,
    approximation exponent, exceptional approximants, low-height wall class,
    deleted anti-cosets, residue signed tail, diophantine exit,
+   partial cube model, Theta-class word, gated-subcube status,
+   median interval status, simplex face rank, directed-simplex edge count,
+   doubled triangular layer, Fibonacci-cube window,
+   Moser even-coordinate subcube,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

@@ -1,5 +1,21 @@
 # Open Questions
 
+**OPEN-Q-108 S227 Moser/fibbinary partial-cube simplex addendum:** HYP-3063
+turns Moser-de Bruijn and fibbinary sequence shadows into partial-cube/simplex
+sidecars.  Open task: annotate a HYP-2963 sample containing AP, GW, K33, C27
+petals, covering, fibbinary, and Moser controls with `partial_cube_model`,
+`theta_class_word`, `gated_subcube_status`, `median_interval_status`,
+`simplex_face_rank`, `directed_simplex_edge_count`,
+`doubled_triangular_layer`, `fibonacci_cube_window`,
+`moser_even_coordinate_subcube`, `native_transition`, and
+`bit_position_phase`, alongside exact `M`, endpoint-owner, safe topology,
+magnitude cocycle, geometry-regime signature, route, and certificate fields.
+Test whether these fields make automaton/sequence/cube quotients route-pure;
+if not, record the first leaking Theta class or transition as residual debt. ->
+HYP-3063, HYP-3061, HYP-3025, HYP-3023, HYP-3018, HYP-3016, HYP-3012,
+HYP-3011, HYP-3009, HYP-3008, HYP-2963, HYP-2458, HYP-2454, LTI-210,
+LTT-108, T1145.
+
 **OPEN-Q-108 S226 Roth-Minkowski Diophantine lattice fence addendum:** HYP-3062
 turns Roth's Diophantine approximation theorem and Minkowski's geometry-of-
 numbers theorem into a controlled-forgetting sidecar for LRC14.  Open task:

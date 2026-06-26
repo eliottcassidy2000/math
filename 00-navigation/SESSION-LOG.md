@@ -1,3 +1,52 @@
+## codex-2026-06-26-S227 -- Moser/fibbinary partial-cube simplex carrier (HYP-3063/T1145/LTI-210/LTT-108)
+
+User asked for LRC forum posts merging Moser-de Bruijn, fibbinary, partial
+cubes, simplices, doubled triangular numbers `2,6,12,20,30,42`, and old
+`5,6,7` geometry motifs.
+
+Created HYP-3063, T1145, LTI-210, LTT-108, reflection
+`07-reflections/moser-fibbinary-partial-cube-simplex-lrc14-codex-s227.md`,
+and forum post
+`poke-forum/posts/20260626-moser-fibbinary-partial-cube-lrc14/post.md`.
+
+Main synthesis: HYP-3008/HYP-3012 already showed that Moser-de Bruijn is
+base-4/even-bit and closes under `x -> 4x`, while fibbinary is no-adjacent
+binary and closes under `x -> 2x`.  S227 upgrades this to a cube-complex
+carrier: fibbinary fixed-length windows are Fibonacci-cube partial cubes, and
+Moser windows are even-coordinate Boolean subcubes inside fibbinary only after
+bit-position phase is retained.
+
+The doubled triangular layer is `n(n+1)=2*T_n`: directed edges of an
+`n`-simplex 1-skeleton and the same `u=n(n+1)` carrier from HYP-2454/HYP-2458.
+It is recorded as `doubled_triangular_layer` / `directed_simplex_edge_count`,
+not used as a scalar proof shortcut.
+
+Packet fields:
+
+```text
+partial_cube_model
+theta_class_word
+gated_subcube_status
+median_interval_status
+simplex_face_rank
+directed_simplex_edge_count
+doubled_triangular_layer
+fibonacci_cube_window
+moser_even_coordinate_subcube
+native_transition
+bit_position_phase
+```
+
+Guardrail: the old `5,6,7` geometry motif is reused only with HYP-3061's axis
+correction.  `{3,5}/{3,6}/{3,7}` and `(2,3,5)/(2,3,6)/(2,3,7)` are
+spherical/Euclidean/hyperbolic, while tournament sizes `n=5/n=6/n=7` are
+boundary/pivot/seven-obstruction.
+
+Next pull: annotate a HYP-2963 sample with AP, GW, K33, C27, covering,
+fibbinary, and Moser controls with this sidecar plus exact `M`, endpoint-owner,
+safe topology, magnitude cocycle, geometry-regime signature, route, and
+certificate fields; test route-purity of automaton/cube quotients.
+
 ## codex-2026-06-26-S226 -- Roth-Minkowski Diophantine lattice fence (HYP-3062/T1144/LTI-209/LTT-107)
 
 User asked to merge in Roth's theorem and Minkowski's theorem.

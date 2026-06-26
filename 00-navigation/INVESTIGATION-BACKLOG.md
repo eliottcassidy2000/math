@@ -15,6 +15,28 @@
 
 ---
 
+## Lead codex-2026-06-26-S227: Moser/fibbinary partial-cube simplex carrier
+
+**Status:** SYNTHESIS / forum-facing proof-carrier sidecar
+(HYP-3063/T1145/LTI-210/LTT-108).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3063-moser-fibbinary-partial-cube-simplex-geometry-carrier.md`,
+`07-reflections/moser-fibbinary-partial-cube-simplex-lrc14-codex-s227.md`,
+and `poke-forum/posts/20260626-moser-fibbinary-partial-cube-lrc14/post.md`.
+The carrier upgrades Moser/fibbinary from raw automatic names into
+partial-cube/simplex sidecars: fibbinary windows are Fibonacci cubes, Moser
+windows are even-coordinate Boolean subcubes, and `n(n+1)=2*T_n` is a
+directed-simplex edge layer.  The `5,6,7` geometry motif is retained only with
+HYP-3061 axis typing.
+**Next:** add `partial_cube_model`, `theta_class_word`,
+`gated_subcube_status`, `median_interval_status`, `simplex_face_rank`,
+`directed_simplex_edge_count`, `doubled_triangular_layer`,
+`fibonacci_cube_window`, and `moser_even_coordinate_subcube` to a HYP-2963
+sample already carrying exact `M`, endpoint-owner, closed-arc topology,
+magnitude cocycle, automatic state, and geometry-regime signature; then test
+whether the automaton/cube quotient becomes route-pure.
+Namespace: HYP-3063 / T1145 / LTI-210 / LTT-108.
+
 ## Lead codex-2026-06-26-S226: Roth-Minkowski Diophantine lattice fence
 
 **Status:** SYNTHESIS / proof-interface sidecar for Diophantine geometry
