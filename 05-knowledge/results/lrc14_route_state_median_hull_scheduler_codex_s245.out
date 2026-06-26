@@ -1,0 +1,122 @@
+S245: LRC14 route-state median-hull scheduler
+========================================================================
+1. LEGAL SIDECAR CLOSURE
+   named_features=41
+   horn_rules=34
+   max_premise_arity=1
+   closure_rule=if a retained coordinate implies sidecars, add them before taking theorem quotients
+   median_rule=coordinatewise majority; closure is a no-op for legal states under the unary rule set
+   caveat=multi-premise Horn guards must be compiled into named sidecar coordinates or checked separately
+
+   rule sample
+   - ['route_label'] -> ['endpoint_owner', 'exact_M', 'magnitude_cocycle', 'packet_label', 'safe_topology'] :: routes must carry exact scale, owner, topology, and magnitude
+   - ['certificate_payload'] -> ['exact_M', 'packet_label', 'safe_topology'] :: certificates are packeted interval/topology objects
+   - ['sidecar_payload'] -> ['packet_label'] :: sidecars attach to labelled packet fibers
+   - ['discharge_atom_typed'] -> ['certificate_payload', 'packet_label', 'route_label'] :: a discharge atom is only legal after route and certificate payloads exist
+   - ['observer_cut_payload'] -> ['cross_sector_orientation_word', 'deletion_fiber_profile', 'sidecar_payload', 'value_origin_type'] :: observer cuts need origin, deletion, and cross-sector data
+   - ['rectangle_hourglass_residue'] -> ['observer_cut_payload', 'value_origin_type'] :: rectangle/hourglass residues are observer-cut payloads, not counts
+   - ['partial_cube_theta_word'] -> ['bit_position_phase', 'endpoint_owner', 'exact_M', 'safe_topology', 'sidecar_payload'] :: partial-cube cuts need bit phase and LRC packet data
+   - ['moser_product_split_a_plus_2b'] -> ['bit_position_phase', 'partial_cube_theta_word'] :: Moser two-lane split is a partial-cube cut refinement
+   - ['bridge_rank_debt'] -> ['rectangle_hourglass_residue', 'value_origin_type'] :: K bridge surplus is rectangle-cycle debt
+   - ['toeplitz_scale_gate'] -> ['endpoint_owner', 'exact_M', 'ordered_quad_collapse_mode', 'safe_topology', 'sidecar_payload'] :: Toeplitz/square-peg evidence needs noncollapse scale
+
+2. LEGAL PROOF STATES
+   state                         feature_count  specific_discharge_atoms  signature
+   q_witness_route                          10  q_witness_atom              core=8, discharge=1, sidecars=1
+   ap_gw_boundary_route                     14  ap_gw_boundary_atom         core=9, discharge=1, sidecars=4
+   c27_petal_route                          13  c27_petal_atom              core=9, discharge=1, sidecars=3
+   k33_state_lift_route                     14  k33_state_lift_atom         core=9, discharge=1, sidecars=4
+   fejer_toeplitz_route                     13  fejer_toeplitz_atom         core=9, discharge=1, sidecars=3
+   desargues_beal_route                     17  desargues_beal_atom         core=9, discharge=1, sidecars=7
+   residual_capacitor_route                 17  named_residual_debt_atom    core=9, discharge=1, sidecars=7
+   partial_cube_moser_sidecar               14  -                           core=5, discharge=0, sidecars=9
+   hyperbolic_packet_pressure               10  -                           core=7, discharge=0, sidecars=3
+   toeplitz_noncollapse_sidecar              8  -                           core=5, discharge=0, sidecars=3
+
+3. SERIOUS ROUTE TRIPLES AND MEDIAN CENTERS
+   low_frontier_scheduler
+      routes=ap_gw_boundary_route, c27_petal_route, k33_state_lift_route
+      reading=AP/GW, C27 petal, and K33 routes share exact packet obligations but no terminal atom.
+      raw_majority_features=10  raw_missing_obligations=0
+      legal_center_features=10  center_signature=core=9, discharge=0, sidecars=1
+      center_specific_atoms=-
+      dropped_specific_atoms=ap_gw_boundary_atom,c27_petal_atom,k33_state_lift_atom
+      center_kind=scheduler_center_needs_refinement
+   certificate_noncollapse_triangle
+      routes=fejer_toeplitz_route, toeplitz_noncollapse_sidecar, desargues_beal_route
+      reading=Four-witness noncollapse, interval certificate, and girth-six finalizer meet at certificate payload.
+      raw_majority_features=11  raw_missing_obligations=0
+      legal_center_features=11  center_signature=core=9, discharge=0, sidecars=2
+      center_specific_atoms=-
+      dropped_specific_atoms=desargues_beal_atom,fejer_toeplitz_atom
+      center_kind=scheduler_center_needs_refinement
+   sequence_geometry_pressure
+      routes=partial_cube_moser_sidecar, hyperbolic_packet_pressure, c27_petal_route
+      reading=Moser/fibbinary cuts, hyperbolic pressure, and C27 shell transfer meet at sidecar-completed route data.
+      raw_majority_features=9  raw_missing_obligations=0
+      legal_center_features=9  center_signature=core=7, discharge=0, sidecars=2
+      center_specific_atoms=-
+      dropped_specific_atoms=c27_petal_atom
+      center_kind=scheduler_center_needs_refinement
+   residual_repair_triangle
+      routes=residual_capacitor_route, ap_gw_boundary_route, fejer_toeplitz_route
+      reading=Residual capacitor, boundary atom, and Fejer certificate test whether owner/zeta exits are retained.
+      raw_majority_features=13  raw_missing_obligations=0
+      legal_center_features=13  center_signature=core=9, discharge=0, sidecars=4
+      center_specific_atoms=-
+      dropped_specific_atoms=ap_gw_boundary_atom,fejer_toeplitz_atom,named_residual_debt_atom
+      center_kind=scheduler_center_needs_refinement
+   finalizer_pressure_triangle
+      routes=k33_state_lift_route, desargues_beal_route, hyperbolic_packet_pressure
+      reading=K33, Desargues/Beal, and Fermat-Catalan pressure test common-owner sidecars.
+      raw_majority_features=11  raw_missing_obligations=0
+      legal_center_features=11  center_signature=core=9, discharge=0, sidecars=2
+      center_specific_atoms=-
+      dropped_specific_atoms=desargues_beal_atom,k33_state_lift_atom
+      center_kind=scheduler_center_needs_refinement
+
+4. MEDIAN-HULL CHECK
+   seed_states=10
+   median_hull_states=31
+   closed_states_in_hull=31
+   hull_triples_checked=29791
+   raw_illegal_majorities=0
+   closure_added_features_hist={0: 29791}
+   interval_intersection_failures=0
+   illegal_centers_after_closure=0
+   interpretation=the unary-Horn sidecar interface is finite and every checked triple has one legal center
+
+   smallest nontrivial centers
+   - size= 5 atoms=['-'] signature=core=5, discharge=0, sidecars=0
+   - size= 6 atoms=['-'] signature=core=5, discharge=0, sidecars=1
+   - size= 7 atoms=['-'] signature=core=7, discharge=0, sidecars=0
+   - size= 7 atoms=['-'] signature=core=5, discharge=0, sidecars=2
+   - size= 8 atoms=['-'] signature=core=5, discharge=0, sidecars=3
+   - size= 8 atoms=['-'] signature=core=7, discharge=0, sidecars=1
+   - size= 9 atoms=['-'] signature=core=9, discharge=0, sidecars=0
+   - size= 9 atoms=['-'] signature=core=5, discharge=0, sidecars=4
+
+5. TOURNAMENT ANALYSIS
+   vertices are proof-interface coordinates, not runners or arcs.
+   pairwise_observable=retained LRC predicate, route specificity, certificate legality, sidecar closure, and discharge refinement.
+   switch=orient toward the carrier whose median with two other legal states remains theorem-facing.
+   score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+   directed_3cycles=0
+   scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+   hamiltonian_path_count=1
+   tie_path=labelled_packet_sheaf > route_state_median_center > horn_sidecar_closure > discharge_atom_type > observer_cut_payload > partial_cube_cut_payload > toeplitz_noncollapse_gate > hyperbolic_triple_pressure > raw_route_label
+
+6. ASSUMPTION CHALLENGE
+   considered_vertices=runners,gaps,endpoint owners,route labels,certificate atoms,sidecar columns,discharge modes,proof obligations
+   chosen_vertices=packet/route/certificate/sidecar/discharge coordinates
+   preserved_lrc_predicate=boundary/open status plus exact route/certificate/discharge legality
+   destroyed_if_raw=exact scale, endpoint owner, topology, sidecar obligation, and terminal discharge atom
+   challenged_assumption=the final proof should not be a scalar route order; it should be a median-center legality test on completed packet states
+
+READING
+  The proposed final proof interface can be made finite: encode each
+  packet route as a legal sidecar-closed coordinate set.  Legal sidecars
+  are unary Horn implications here, so three legal packet states have a
+  unique coordinatewise median center.  If that center keeps only the typed
+  discharge coordinate and drops the specific atom, the proof has found
+  a scheduler center: refine by a separating sidecar or name residual debt.

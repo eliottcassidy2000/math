@@ -3384,6 +3384,61 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3060, HYP-3058, HYP-3009, HYP-2963, HYP-2887, HYP-2636, HYP-2632,
   HYP-2618, HYP-2617, HYP-2614, HYP-2608, THM-538, THM-572, LTI-224,
   LTT-122, T1159, OPEN-Q-108.
+### LTT-123: Route-State Median-Hull Scheduler
+
+- **Move:** Replace final-route ranking by a median-center test on completed
+  proof states. A state is a finite set of
+  `packet/route/certificate/sidecar/discharge` coordinates; sidecar legality is
+  a unary Horn closure rule in the current scout; a serious route triple is safe
+  only when it has a unique legal median center.
+- **LRC use:** HYP-3077/S245 organizes the recent sidecar stack into one final
+  assembly check, downstream of HYP-3066 Hodge-cycle realization,
+  HYP-3067 Desargues-median defects, HYP-3068 owner/root sidecars,
+  HYP-3069 route-center obligations, HYP-3070 route-triple center-control
+  pages, HYP-3071 cycle-class observability, HYP-3072 cross-carrier pullback
+  resonance, and HYP-3073 polymer/Dirichlet bridge. AP/GW-C27-K33, residual
+  capacitor, Moser/fibbinary, Fejer/Toeplitz, Toeplitz noncollapse,
+  Desargues/Beal, and hyperbolic-pressure routes are no longer compared by
+  scalar priority first. They are completed by legal sidecars, medianized, then
+  classified as terminal exits or scheduler centers needing the next sidecar
+  split.
+- **Preserves:** Boundary/open status, exact `M`, endpoint owner, topology,
+  magnitude cocycle, route label, certificate payload, sidecar payload, typed
+  discharge coordinate, specific terminal atom when the center has one, and
+  the list of atoms dropped by the center.
+- **Forgets / guardrail:** A unique center is not automatically a terminal
+  proof. If the center keeps only the typed discharge coordinate and drops all
+  specific atoms, it is a scheduler center. The proof must add a separating
+  sidecar or name residual debt before claiming discharge. Genuinely
+  conjunctive sidecar guards must be compiled into named coordinates or checked
+  separately, because arbitrary Horn theories are not automatically
+  majority-closed.
+- **Tournament fingerprint:** vertices are proof-interface coordinates, not
+  runners. The finite scout has `41` features, `34` unary Horn rules, max
+  premise arity `1`, `10` seed states, `31` median-hull states, `29,791`
+  checked triples, `raw_illegal_majorities=0`,
+  `closure_added_features_hist={0: 29791}`, `interval_intersection_failures=0`,
+  and `0` illegal centers after closure. Carrier tournament path:
+  `labelled_packet_sheaf > route_state_median_center >
+  horn_sidecar_closure > discharge_atom_type > observer_cut_payload >
+  partial_cube_cut_payload > toeplitz_noncollapse_gate >
+  hyperbolic_triple_pressure > raw_route_label`.
+- **Next pull:** Run the medianization schema on actual HYP-2963 route fibers:
+  AP/GW-C27-K33 low frontier packets, q=23 residual capacitor packets,
+  Moser/fibbinary automatic fibers after S231, and Fejer/Toeplitz packets
+  against Desargues/Beal finalizers. Record `median_center_kind`,
+  `median_dropped_atoms`, `specific_discharge_atom`, and
+  `median_required_refinement`.
+- **Pointers:** HYP-3077, HYP-3076, HYP-3075, HYP-3074, HYP-3073, HYP-3072, HYP-3071, HYP-3070, HYP-3069,
+  HYP-3068, HYP-3067, HYP-3066, HYP-3065, HYP-3064, HYP-3063, HYP-3062,
+  HYP-3061, HYP-3060, HYP-3058, HYP-3057, HYP-3056, HYP-3054, HYP-3053,
+  HYP-3052, HYP-3049, HYP-3048, HYP-3042, HYP-3039, HYP-3037, HYP-3031,
+  HYP-2997, HYP-2987, HYP-2963, THM-572, LTI-225, LTI-224, LTI-222, LTI-221, LTI-220, LTI-219, LTI-218,
+  LTI-217, LTI-216, LTI-215, LTI-214, LTI-213, LTI-212, LTI-211, LTI-210,
+  LTI-205, LTI-203, LTI-201, LTT-123, LTT-122, LTT-120, LTT-119, LTT-118, LTT-117, LTT-116, LTT-115,
+  LTT-114, LTT-113, LTT-112, LTT-111, LTT-110, LTT-109, LTT-108, LTT-103,
+  LTT-101, LTT-099, T1160, T1159, T1157, T1156, T1155, T1154, T1153, T1152, T1151, T1150, T1149,
+  T1148, T1147, T1146, T1145, T1140, T1138, T1136, OPEN-Q-108.
 
 ### LTT-121: Hurwitz-Markov-Pell Cannonball Sidecar
 

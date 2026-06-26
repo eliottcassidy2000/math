@@ -177,6 +177,31 @@ Toeplitz noncollapse, C27/unital, and K33/state-lift generators.  Record
 `cycle_class_image_status`; do not treat
 `phantom_unresolved` as a proof exit.
 Namespace: HYP-3066 / T1148 / LTI-213 / LTT-111.
+## Lead codex-2026-06-26-S245: Route-state median-hull scheduler
+
+**Status:** SYNTHESIS / finite final proof-interface scout
+(HYP-3077/T1160/LTI-225/LTT-123).
+**Readout:** Added
+`04-computation/lrc14_route_state_median_hull_scheduler_codex_s245.py`,
+`05-knowledge/results/lrc14_route_state_median_hull_scheduler_codex_s245.out`,
+`05-knowledge/hypotheses/HYP-3077-route-state-median-hull-scheduler.md`,
+`07-reflections/lrc14-route-state-median-hull-scheduler-codex-s245.md`,
+and `poke-forum/posts/20260626-lrc14-route-state-median-hull-scheduler/post.md`.
+The scout encodes completed proof states as
+`packet/route/certificate/sidecar/discharge` coordinate sets.  Legal sidecar
+rules are unary Horn implications, so coordinatewise majority gives legal
+median centers after closure.  The finite audit uses `41` features, `34` rules,
+max premise arity `1`, ten seed states, a `31`-state median hull, `29,791`
+checked triples, `raw_illegal_majorities=0`,
+`closure_added_features_hist={0: 29791}`, `interval_intersection_failures=0`,
+and `0` illegal centers.  The selected serious triples produce scheduler
+centers, not terminal exits; future conjunctive guards must be named as
+sidecars or checked separately.
+**Next:** Apply the medianization schema to actual HYP-2963 route fibers:
+AP/GW-C27-K33, q=23 residual capacitors, Moser/fibbinary automatic fibers, and
+Fejer/Toeplitz versus Desargues/Beal finalizers.  Record dropped terminal atoms
+and the first separating sidecar.
+Namespace: HYP-3077 / T1160 / LTI-225 / LTT-123.
 
 ## Lead codex-2026-06-26-S227: Moser/fibbinary partial-cube simplex carrier
 

@@ -147,6 +147,29 @@ not discharged unless it is generated, dual-annihilated, descended, AP/GW
 boundary, or routed to THM-572; `phantom_unresolved` is named work debt. ->
 HYP-3066, HYP-3064, HYP-3063, HYP-3062, HYP-2997, HYP-2995, HYP-2892, HYP-2887,
 HYP-2530, HYP-2521, THM-509, THM-572, LTI-213, LTT-111, T1148, OPEN-Q-099.
+**OPEN-Q-108 S245 route-state medianization addendum:** HYP-3077 introduces a
+final proof-interface check over completed
+`packet/route/certificate/sidecar/discharge` states.  The S245 scout encodes
+legal sidecars as unary Horn implications, builds a `31`-state median hull
+from ten seed proof states, checks `29,791` triples, and finds
+`raw_illegal_majorities=0`, `closure_added_features_hist={0: 29791}`,
+`interval_intersection_failures=0`, and `0` illegal centers after closure.
+Any genuinely conjunctive sidecar guard must be compiled into a named
+coordinate or checked separately.
+Open task: run the S245 medianization closure schema on the S235 route-center
+obligations and S236 route-triple center-control pages inside actual HYP-2963
+route fibers.
+Priority triples are AP/GW-C27-K33 low-frontier packets, q=23 residual
+capacitor packets, Moser/fibbinary automatic fibers with S231 bridge-rank
+sidecars, and Fejer/Toeplitz packets against Desargues/Beal finalizers.  For
+each triple, record `median_center_kind`, `median_dropped_atoms`,
+`specific_discharge_atom`, `median_required_refinement`, and
+`residual_debt_name` if no terminal atom appears. -> HYP-3077, HYP-3073, HYP-3072, HYP-3071, HYP-3070,
+HYP-3069, HYP-3068, HYP-3067, HYP-3066, HYP-3065, HYP-3064, HYP-3063,
+HYP-3062, HYP-3061, HYP-3060, HYP-3058, HYP-3057, HYP-3056, HYP-3054,
+HYP-3053, HYP-3052, HYP-3049, HYP-3048, HYP-3042, HYP-3039, HYP-3037,
+HYP-3031, HYP-2997, HYP-2987, HYP-2963, THM-572, LTI-225, LTI-220, LTI-219, LTI-218, LTI-217,
+LTI-216, LTT-123, LTT-118, LTT-117, LTT-116, LTT-115, LTT-114, T1160, T1155, T1154, T1153, T1152, T1151, OPEN-Q-108.
 
 **OPEN-Q-108 S227 Moser/fibbinary partial-cube simplex addendum:** HYP-3063
 turns Moser-de Bruijn and fibbinary sequence shadows into partial-cube/simplex

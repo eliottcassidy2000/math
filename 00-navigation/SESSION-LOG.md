@@ -333,6 +333,45 @@ generators such as AP/GW, Fejer, Ramanujan, Haar, endpoint-owner,
 observer-cut, octahedral face-curl, partial-cube Theta, simplex face,
 Roth-Minkowski wall, C27/unital, and K33/state-lift cycles.  A
 `phantom_unresolved` row is not a proof exit; it is a named residual work item.
+## codex-2026-06-26-S245 -- LRC14 route-state median-hull scheduler (HYP-3077/T1160/LTI-225/LTT-123)
+
+User asked to pick remaining LRC proof angles and develop creative approaches,
+especially a final proof interface where serious route triples have a unique
+center after legal sidecars are attached.
+
+Created HYP-3077, T1160, LTI-225, LTT-123, exact finite scout
+`04-computation/lrc14_route_state_median_hull_scheduler_codex_s245.py`, result
+`05-knowledge/results/lrc14_route_state_median_hull_scheduler_codex_s245.out`,
+reflection
+`07-reflections/lrc14-route-state-median-hull-scheduler-codex-s245.md`, and
+forum post
+`poke-forum/posts/20260626-lrc14-route-state-median-hull-scheduler/post.md`.
+
+Main synthesis: final assembly should be a medianization check over completed
+`packet/route/certificate/sidecar/discharge` states, not another scalar route
+ranking.  It is downstream of the S236/HYP-3070 raw-vs-legal route-triple
+center-control layer.  Legal sidecar rules in the scout are unary Horn implications;
+therefore coordinatewise majority of legal states stays legal.  The S245 scout
+uses `41` coordinates and `34` sidecar rules, max premise arity `1`, starts
+from ten proof states, builds a `31`-state median hull, checks `29,791`
+triples, and finds `raw_illegal_majorities=0`,
+`closure_added_features_hist={0: 29791}`, `interval_intersection_failures=0`,
+and `0` illegal centers after closure.  Future conjunctive guards must be
+named as sidecars or checked separately.
+
+The selected serious triples all produce scheduler centers rather than
+terminal atoms: AP/GW-C27-K33, Fejer/Toeplitz-Toeplitz-scale-Desargues/Beal,
+Moser/hyperbolic/C27, residual-capacitor/AP-GW/Fejer, and
+K33/Desargues/hyperbolic.  That is the key readout: a unique median center is
+not automatically a proof exit.  If the center has no specific discharge atom,
+the next proof obligation is the first separating sidecar or named residual
+debt.
+
+Tournament Analysis vertices are proof-interface coordinates, not runners:
+`labelled_packet_sheaf > route_state_median_center >
+horn_sidecar_closure > discharge_atom_type > observer_cut_payload >
+partial_cube_cut_payload > toeplitz_noncollapse_gate >
+hyperbolic_triple_pressure > raw_route_label`.
 
 ## codex-2026-06-26-S227 -- Moser/fibbinary partial-cube simplex carrier (HYP-3063/T1145/LTI-210/LTT-108)
 
