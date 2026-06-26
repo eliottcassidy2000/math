@@ -312,18 +312,18 @@ divisor packet merge (`LTI-162`), the creative exact packet-lens atlas
 (`LTI-163`), lonely-profile barcode fields (`LTI-164`), automaton
 fiber-mixing magnitude-cocycle guardrails (`LTI-165`), active-bottleneck
 normal-fan fields (`LTI-166`), discrepancy-height trident fields (`LTI-167`),
-the pair-good decoy generator classifier (`LTI-168`), the pair-good barcode/normal-fan refinement (`LTI-169`), the automatic fiber zipper splitter (`LTI-170`), the fiber-zipper convergence audit (`LTI-171`), and the closed arc-Cech
+the pair-good decoy generator classifier (`LTI-168`), the pair-good barcode/normal-fan refinement (`LTI-169`), the automatic fiber zipper splitter (`LTI-170`), the fiber-zipper convergence audit (`LTI-171`, now with Erdos-Turan and Hensel-unit convergence teeth), and the closed arc-Cech
 quotient-defect carrier (`LTI-172`).  The proof-use
 rule is unchanged but sharper: a quotient may forget only fiber-constant,
 reconstructible, dual-annihilated, cochain-exact, or named-residual data.
-Near-term proof tasks are `LTI-TODO-13..42`: build
+Near-term proof tasks are `LTI-TODO-13..43`: build
 the packet-cocycle theorem formalization, executable F7 cocycle residual
 record, emitted-cocycle matrix over HYP-2963 packets, F0-F7 residual metagraph
 Laplacian, marked A000568/Burnside quotient tax, binding-pair switch
 tournament for covering rows, sequence-shadow `representation_economy`
 fields, LTM-to-LTI/LTT promotion tests, normal-fan sidecar purity theorem,
 discrepancy-height trident compression, pair-good decoy generator/barcode sidecars, automatic fiber zipper compression,
-and full-bank closed arc-Cech quotient-defect audit. -> T1104, T1103, T1102,
+ET/Hensel bounded residual lemma, and full-bank closed arc-Cech quotient-defect audit. -> T1104, T1103, T1102,
 T1101, T1100, T1098, T1097, T1090,
 T1087, T1086, T1085, T1084, T1083, T1078, HYP-3025, HYP-3024, HYP-3023, HYP-3022, HYP-3021, HYP-3020, HYP-3018,
 HYP-3016, HYP-3015, HYP-3014, HYP-3013, HYP-3006, HYP-3005, HYP-3004,

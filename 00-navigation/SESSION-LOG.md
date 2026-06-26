@@ -23974,3 +23974,23 @@ session log.  Next pull: add `fusion_signature`, `largest_safe_stick`,
 `endpoint_current_word`, `crt_first_chart`, `danger_distribution_word`, and
 `doubling_transition_word` to the full HYP-2963 packet bank and test whether
 barcode shape continues to kill boundary/open leakage.
+
+Continuation after rebase: mainline already contained the stronger S188
+implementation of
+`04-computation/lrc14_fiber_zipper_convergence_codex_s188.py` and
+`05-knowledge/results/lrc14_fiber_zipper_convergence_codex_s188.out`, so this
+pass preserved that canonical version and posted the coordination note
+`poke-forum/posts/20260626-141444Z-lrc14-fiber-zipper-convergence/post.md`.
+The useful synthesis is that exact Erdos-Turan clocks split the `21913` packet
+bank but are too address-like; the coarser ET+Henselian-unit gate leaves only
+`15` mixed route fibers, max mixed `4`, and `0` mixed boundary/open fibers.
+A side-branch binned ET / p^2-Hensel experiment matched the qualitative
+message: ET nearly closes route mixing before magnitude, while Hensel data is
+best read as local unit-lift or zero-root scale debt.  New proof target:
+coarse ET+unit status convergence inside automatic/residue fibers, then route
+remaining open collisions through the existing certificate stack.
+After rebasing over S190/HYP-3027, this becomes the front tooth of the
+side-channel repair ladder: coarse ET+unit should repair status early, while
+the remaining open route collisions feed the first-nonzero repair cochain
+sequence `M/q`, boundary topology, packet labels, harmonic duals, and residual
+F7/THM-572 debt.
