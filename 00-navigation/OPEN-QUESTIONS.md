@@ -31,6 +31,22 @@ tooth among q-witness, safe-stick/barcode/Fejer/Haar, unit-petal,
 K33/F7/THM-572, covering, and magnitude-cocycle formula. -> HYP-3028,
 HYP-3026, HYP-3024, HYP-3023, HYP-3020, HYP-2963, THM-572, LTI-176,
 LTI-173, LTI-171, LTT-074, LTT-071, LTT-070, T1109.
+**OPEN-Q-108 S193 safe-component stalk descent addendum:** HYP-3029 tests a
+local replacement for the HYP-3026 fusion packet on the hard HYP-3023/HYP-3024
+automatic word `MFCMMCCFFFCCC`.  The S193 script filters HYP-2963 to `639`
+target packets and attaches the stalk of the largest strict safe component:
+left endpoint owner residues, peak bottleneck owner residues, right endpoint
+owner residues, exact component length, exact local peak height, and
+open/boundary status.  Route-mixing drops from residue-terminal `27` mixed
+fibers/max `30`, to owner-only `7`/max `5`, to coarse-stalk `2`/max `2`, to
+exact-stalk `0`; exact magnitude also has `0`.  The two coarse residuals are
+open-route scheduler collisions (`13->159/117` and `13->118/104`), not
+boundary/open leaks.  Open task: prove largest-stalk descent inside the target
+automatic fiber, discharge the two coarse residual families, and run exact
+stalk keys over the full HYP-2963 bank against HYP-3025 Cech facets,
+HYP-3018 normal-fan supports, HYP-3015 barcode fields, and HYP-3026 fusion
+sidecars. -> HYP-3029, HYP-3026, HYP-3025, HYP-3024, HYP-3023, HYP-3018,
+HYP-3015, HYP-2963, THM-572, LTI-177, LTT-075, T1110.
 
 **OPEN-Q-108 S188 fiber-zipper convergence addendum:** HYP-3024 completes the
 reserved S188 fiber-zipper convergence audit by extending HYP-3023 and

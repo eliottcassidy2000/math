@@ -29,6 +29,15 @@ Next hook: add a cached HYP-2963 packet-ledger mode so the 15 residual fibers
 can be listed without recomputing exact `M`, then attach q-witness,
 safe-stick/barcode/Fejer/Haar, unit-petal, K33/F7/THM-572, covering, or
 magnitude-cocycle certificate teeth.
+## codex-2026-06-26-S193 -- LRC14 safe-component stalk descent (HYP-3029/T1110)
+
+User asked for more creative LRC angles after the fiber-zipper and carrier-fusion passes.  Pulled incoming HYP-3026 first, then tested the reverse direction: instead of adding more fusion sidecars, ask whether the sidecars descend from one local safe-component stalk.
+
+Added `04-computation/lrc14_safe_component_stalk_codex_s193.py` and stored `05-knowledge/results/lrc14_safe_component_stalk_codex_s193.out`.  The script filters the HYP-2963 bank to the hard AP/GW automatic word `MFCMMCCFFFCCC`, giving `639` target packets, and compares automatic word, residue-terminal fiber, owner-only stalk, coarse largest-component stalk, exact largest-component stalk, exact magnitude, and stalk-plus-magnitude.
+
+Readout: residue-terminal fibers still have `27` mixed route fibers with max mixed `30`; owner-only stalks reduce this to `7` mixed fibers/max `5`; coarse largest-component stalks reduce to `2` size-2 open-route collisions; exact largest-component stalks have `0` mixed route fibers, matching exact magnitude while retaining endpoint/peak owner geometry.  The two coarse residuals are `13->159/117` and `13->118/104`, both `Q-WITNESS` versus `COVERING-MOMENT`, not boundary/open leaks.
+
+Created HYP-3029, T1110, LTI-177, LTT-075, and reflection `07-reflections/lrc14-safe-component-stalk-descent-codex-s193.md`.  Proof-order takeaway: try a largest-stalk descent lemma inside `MFCMMCCFFFCCC`, then run the stalk key over the full HYP-2963 bank and compare with HYP-3025 Cech facets and HYP-3018 normal-fan supports.
 
 ## codex-2026-06-26-S188 -- LRC14 fiber-zipper convergence via ET/Henselian units (HYP-3024/T1104)
 

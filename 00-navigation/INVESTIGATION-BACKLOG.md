@@ -21,6 +21,12 @@
 **Readout:** `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md` gives `90` `CPI-*` carrier rows.  Each row records source handles, the pulled-back proof carrier, retained LRC packet fields, quotient guardrail, and a next-agent pull.  Tournament Analysis vertices are proof-carrier pullbacks, not runners; the observable records retained boundary/open status, theorem route, exact scale, endpoint/topology, arithmetic period, harmonic certificate, residual routing, family transfer, formal payload, and proof cost.
 **Next:** instantiate rows rather than citing them.  Pick a `CPI-*` row from each of the six bundles, attach its fields to HYP-2963 packets or a named stress family, run boundary/open and route-fiber mixing, then promote rows with zero unsafe mixing into theorem-facing LTI/LTT cards.  Rows that destroy a coordinate must name the reconstruction, dual certificate, family descent, exact cocycle, or residual debt.
 Namespace: T1108 / LTI-175 / LTT-073 / LTM-079 / CPI-001..CPI-090.
+## Lead codex-2026-06-26-S193: LRC14 safe-component stalk descent
+
+**Status:** EVIDENCE / target-fiber local carrier scout complete (HYP-3029/T1110/LTI-177/LTT-075), downstream of HYP-3026 carrier fusion, HYP-3025 arc-Cech, HYP-3024 fiber-zipper convergence, HYP-3023 automatic zipper, HYP-3018 normal fan, and HYP-3015 barcode work.  User asked for more creative LRC angles.
+**Readout:** `04-computation/lrc14_safe_component_stalk_codex_s193.py` stores output in `05-knowledge/results/lrc14_safe_component_stalk_codex_s193.out`.  On the target automatic word `MFCMMCCFFFCCC`, `639` HYP-2963 packets have `27` mixed residue-terminal route fibers with max mixed `30`.  Owner-only largest-component stalks reduce this to `7` mixed fibers/max `5`; coarse stalks reduce to `2` size-2 open-route collisions; exact largest-component stalks have `0` mixed route fibers, matching exact magnitude without carrying the full fusion packet.
+**Next:** prove largest-stalk descent inside the target word; prove the two coarse residual families `13->159/117` and `13->118/104`; run the stalk key over the full HYP-2963 bank and compare against HYP-3025 Cech facets, HYP-3018 normal-fan supports, HYP-3015 barcode fields, and HYP-3026 fusion sidecars.
+Namespace: HYP-3029 / T1110 / LTI-177 / LTT-075.
 
 ## Lead codex-2026-06-26-S188: LRC14 fiber-zipper convergence via Erdos-Turan and Henselian unit rule
 

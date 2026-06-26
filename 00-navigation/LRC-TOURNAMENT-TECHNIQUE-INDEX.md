@@ -1339,6 +1339,37 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3028, HYP-3026, HYP-3024, HYP-3023, HYP-3020,
   HYP-2963, THM-572, LTI-176, LTI-173, LTI-171, LTT-071, LTT-070, T1109.
 
+### LTT-075: Safe-Component Stalk Descent Tournament
+
+- **Move:** Treat local stalk carriers as tournament vertices: raw automatic
+  word, residue-terminal fiber, owner-only largest-component stalk,
+  coarse largest-component stalk, exact largest-component stalk, exact
+  magnitude cocycle, and stalk-plus-magnitude.  Orient by route purity,
+  boundary/open status purity, max mixed-fiber size, retained topology,
+  endpoint/peak owner data, exact local geometry, avoidance of global exact
+  magnitude, small fusion size, and proof cost.
+- **LRC use:** HYP-3029 tests the target automatic word `MFCMMCCFFFCCC`
+  from HYP-3023/HYP-3024.  Residue-terminal fibers have `27` mixed route
+  fibers and max mixed `30`; owner-only stalks reduce this to `7` and `5`;
+  coarse stalks reduce to `2` size-2 open-route collisions; exact
+  largest-component stalks have `0` mixed route fibers, matching exact
+  magnitude but with local endpoint/peak owner geometry attached.
+- **Preserves:** Strict-open status, largest safe-component length, local peak
+  height, endpoint owner residues, peak bottleneck owner residues, and enough
+  local topology to split the target automatic fiber.
+- **Forgets / guardrail:** Non-largest bars, global barcode multiplicity
+  beyond the count, and exact magnitude are destroyed unless a descent theorem
+  reconstructs or discharges them.  Coarse stalks still leave two open-route
+  scheduler collisions: `13->159/117` and `13->118/104`.
+- **Next pull:** Prove the target-word largest-stalk descent lemma, prove the
+  two coarse residual families directly, then run exact stalk keys over the
+  full HYP-2963 bank and compare with HYP-3025 closed arc-Cech facets,
+  HYP-3018 normal-fan supports, HYP-3015 barcode fields, and HYP-3026 fusion
+  sidecars.
+- **Pointers:** HYP-3029, HYP-3026, HYP-3025, HYP-3024, HYP-3023, HYP-3018,
+  HYP-3015, HYP-2963, THM-572, LTI-177, LTI-175, LTI-173, LTI-172, LTI-171,
+  LTI-170, LTI-166, LTI-164, T1110, T1106.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,

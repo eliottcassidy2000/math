@@ -1,0 +1,73 @@
+=== LRC14 safe-component stalk descent S193 ===
+bank=HYP-2963 target automatic word MFCMMCCFFFCCC single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5
+candidate_rows=639 of 21913
+packets=639
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, all bars, single bars, endpoints, peak bottlenecks,
+    wall-crossing events, residues, cover arcs, Cech nerves, Fourier modes,
+    matroid cocircuits, and proof obligations.
+  chosen vertices:
+    proof carriers built from the largest safe-component stalk.
+  preserved LRC predicate:
+    strict-open status and route purity on the target automatic fiber when
+    the exact local stalk is retained.
+  destroyed information:
+    all non-largest bars, global barcode multiplicity beyond the count, and
+    exact magnitude unless the stalk theorem reconstructs it locally.
+  challenged assumption:
+    the fusion packet may not need every sidecar as a primitive field; some
+    fields can descend from a local safe-component stalk.
+
+[1] Stalk descent ladder
+  carrier                       fibers mixS mixR mixF maxF maxMix mixRows purity
+  automatic_word                     1    1    1    1  639    639     639   0.0%
+  residue_terminal_fiber           181    2   27   27   30     30     300  85.1%
+  owner_only_stalk                 407    0    7    7    9      5      24  98.3%
+  coarse_component_stalk           473    0    2    2    9      2       4  99.6%
+  exact_component_stalk            515    0    0    0    9      0       0 100.0%
+  magnitude_cocycle                546    0    0    0    5      0       0 100.0%
+  stalk_plus_magnitude             637    0    0    0    2      0       0 100.0%
+
+[2] Coarse-stalk residuals
+  coarse_component_stalk leaves 2 mixed route fibers, largest mixed size 2, mixed rows 4.
+  residual 1: size=2 routes=Q-WITNESS:1, COVERING-MOMENT:1
+    rows=single swap 13->159, single swap 13->117
+    key=(('MFCMMCCFFFCCC', ((1, 'M'), (2, 'F'), (3, 'C'), (4, 'M'), (5, 'C'), (5, 'M'), (6, 'C'), (7, 'C'), (8, 'F'), (9, 'F'), (10, 'F'), (11, 'C'), (12, 'C')), (('Fok', 'Mok'), ('Fok', 'Mdead'), ('Fdead', 'Mdead'), ('Fok', 'Mok'), ('Fok', 'Mok'), ('Fdead', 'Mdead'), ('Fdead', 'Mdead'), ('Fok', 'Mdead'), ('Fok', 'Mdead'), ('Fok', 'Mdead'), ('Fdead', 'Mdead'), ('Fdead', 'Mdead'), ('Fdead', 'Mdead'))), ('open', 16, 'medium<1/100', ('1+',), ('1+', '5-'), ('5-',), 'h-mid'))
+  residual 2: size=2 routes=Q-WITNESS:1, COVERING-MOMENT:1
+    rows=single swap 13->118, single swap 13->104
+    key=(('MFCMMCCFFFCCC', ((1, 'M'), (2, 'F'), (3, 'C'), (4, 'M'), (5, 'M'), (6, 'C'), (6, 'C'), (7, 'C'), (8, 'F'), (9, 'F'), (10, 'F'), (11, 'C'), (12, 'C')), (('Fok', 'Mok'), ('Fok', 'Mdead'), ('Fdead', 'Mdead'), ('Fok', 'Mok'), ('Fok', 'Mok'), ('Fdead', 'Mdead'), ('Fdead', 'Mdead'), ('Fok', 'Mdead'), ('Fok', 'Mdead'), ('Fok', 'Mdead'), ('Fdead', 'Mdead'), ('Fdead', 'Mdead'), ('Fdead', 'Mdead'))), ('open', 14, 'medium<1/100', ('1+',), ('1+', '6-'), ('6-',), 'h-mid'))
+  Readout: the residuals are open-route collisions, not boundary/open leaks.
+
+[3] Exact stalk examples
+  scale-separated AP tail 200    route=Q-WITNESS                open|bars=16|len=1/308|owners=('11+',)->('11+', '2-')->('2-',)|h=1/13
+  single swap 13->118            route=Q-WITNESS                open|bars=14|len=1/236|owners=('1+',)->('1+', '6-')->('6-',)|h=9/119
+  GW-shell alias 12->105         route=Q-WITNESS                open|bars=4|len=1/245|owners=('5+',)->('5+', '7-')->('7-', '7-')|h=1/12
+  GW-shell alias 12->51          route=Q-WITNESS                open|bars=4|len=1/245|owners=('5+',)->('5+', '7-')->('7-',)|h=1/12
+  GW-shell alias 12->78          route=Q-WITNESS                open|bars=4|len=1/245|owners=('5+',)->('5+', '7-')->('7-',)|h=1/12
+  AP                             route=BOUNDARY-AP-GW           boundary|B=6|Z=6
+  GW 12->24                      route=BOUNDARY-AP-GW           boundary|B=6|Z=6
+  single swap 13->104            route=COVERING-MOMENT          open|bars=14|len=1/208|owners=('1+',)->('1+', '6-')->('6-',)|h=8/105
+  AP repair drop13 add182        route=COVERING-MOMENT          open|bars=24|len=3/637|owners=('0+',)->('0-', '1+')->('0-',)|h=14/183
+  floor-odd GW iso impostor      route=COVERING-MOMENT          open|bars=8|len=11/5040|owners=('5+',)->('10-', '5+')->('10-',)|h=6/73
+
+[4] Tournament Analysis
+  vertices_are=proof carriers and local stalks, not runners
+  observable=route_purity,status_purity,max_mixed,topology,owner_data,
+             exact_local_geometry,avoid_exact_magnitude,small_fusion_size,proof_cost
+  switch=majority comparison of observable vectors
+  tie_hamiltonian_path=automatic_word > residue_terminal_fiber > owner_only_stalk > coarse_component_stalk > exact_component_stalk > magnitude_cocycle > stalk_plus_magnitude
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  first_hamiltonian_path=exact_component_stalk > stalk_plus_magnitude > coarse_component_stalk > owner_only_stalk > magnitude_cocycle > residue_terminal_fiber > automatic_word
+
+[5] Interpretation
+  residue-terminal fibers have 27 mixed route fibers with max mixed size 30.
+  A coarse largest-component stalk contracts this to 2 mixed route fibers with max mixed size 2.
+  The exact largest-component stalk has 0 mixed route fibers; exact magnitude has 0.
+  This suggests a descent lemma: derive barcode/normal-fan/Cech sidecars
+  from the stalk of one strict safe component whenever the automatic fiber
+  is already in the AP/GW target word.
