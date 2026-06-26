@@ -1,0 +1,77 @@
+﻿=== LRC14 discrepancy-height carrier scout S184 ===
+threshold=1/14 max_single_swap_add=180
+row_bank=2173 distinct primitive rows
+status_counts={'boundary': 2, 'open': 2171}
+min_positive_safe_measure=1/1260 at K33_12_to_36 components=2 largest=1/2520
+
+## Named Packet Readout
+AP13                 boundary mu=           0 comp=  0 largest=           0 mfc=MFCMMCCFFFCCC res_l1=(13/7,364/27,728/41) height=(4, 13, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) et=(2450, 10377, 15425)
+GW_12_to_24          boundary mu=           0 comp=  0 largest=           0 mfc=MFCMMCCFFFCCC res_l1=(26/7,364/27,728/41) height=(5, 24, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) et=(4472, 9759, 14348)
+loose_12_to_26       open     mu=   426/35035 comp=  4 largest=       1/245 mfc=MFCMMCCFFFCCC res_l1=(13/7,364/27,728/41) height=(5, 26, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) et=(2450, 9000, 13879)
+loose_12_to_96       open     mu= 5219/840840 comp=  8 largest=     11/6720 mfc=MFCMMCCFFFCCC res_l1=(13/7,364/27,728/41) height=(7, 96, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) et=(2450, 9850, 14698)
+K33_12_to_36         open     mu=      1/1260 comp=  2 largest=      1/2520 mfc=MFCMMCCFFFCCF res_l1=(26/7,130/9,728/41) height=(6, 36, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) et=(4575, 11702, 14605)
+GW_fiber_12_to_38    open     mu=   426/35035 comp=  4 largest=       1/245 mfc=MFCMMCCFFFCCC res_l1=(26/7,130/9,728/41) height=(6, 38, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) et=(4472, 11020, 14106)
+GW_fiber_12_to_52    open     mu=   426/35035 comp=  4 largest=       1/245 mfc=MFCMMCCFFFCCC res_l1=(26/7,364/27,754/41) height=(6, 52, 'M<0.90') hensel=((1, 0), (1, 0), (2, 0)) et=(4472, 9272, 15975)
+GW_fiber_12_to_150   open     mu=   426/35035 comp=  4 largest=       1/245 mfc=MFCMMCCFFFCCC res_l1=(26/7,364/27,728/41) height=(8, 150, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) et=(4472, 9850, 13842)
+petal_10_to_20       open     mu=       1/980 comp=  2 largest=      1/1960 mfc=MFCMMCCFFCCCM res_l1=(26/7,364/27,728/41) height=(5, 20, 'M<0.90') hensel=((1, 0), (1, 0), (2, 1)) et=(4566, 9968, 14217)
+petal_13_to_26       open     mu=       1/182 comp=  2 largest=       1/364 mfc=MFCMMCCFFFCCC res_l1=(26/7,364/27,728/41) height=(5, 26, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) et=(4122, 10010, 14488)
+cover_12_to_84       open     mu=  563/105105 comp=  8 largest=      3/1960 mfc=MFCMMCCFFFCCM res_l1=(13/7,130/9,754/41) height=(7, 84, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) et=(2450, 11805, 16294)
+cover_12_to_168      open     mu=   263/30030 comp=  8 largest=    23/11760 mfc=MFCMMCCFFFCCF res_l1=(13/7,130/9,754/41) height=(8, 168, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) et=(2450, 11446, 16633)
+res27_tail260        open     mu= 2556/245245 comp= 28 largest=      1/1715 mfc=CCMCCFCCCCCCM res_l1=(143/7,364/27,754/41) height=(9, 37, 'M<0.90') hensel=((1, 1), (1, 1), (1, 1)) et=(15188, 5290, 6060)
+
+## Quotient Fiber Reports
+automatic_word                       fibers=  22 mixed_status=  1 mixed_route=  12 largest= 361 max_mu_spread=49897/637560 example=[swap_6_to_16:open:7/858, swap_6_to_17:open:1/364, swap_6_to_20:open:7/858, swap_6_to_21:open:7/858, swap_6_to_64:open:475/64064, swap_6_to_65:open:7/858, swap_6_to_68:open:7/858, swap_6_to_69:open:19/10626]
+residue_mfc_pairs_mod14              fibers= 511 mixed_status=  2 mixed_route=   5 largest=  64 max_mu_spread=    389/5148 example=[AP13:boundary:0, loose_12_to_26:open:426/35035, loose_12_to_96:open:5219/840840, swap_10_to_136:open:19521/952952, swap_10_to_164:open:19907/940212, swap_10_to_66:open:229/9702, swap_11_to_109:open:8873/170040, swap_11_to_123:open:39527/783510]
+residue_l1_14_27_41                  fibers=   9 mixed_status=  2 mixed_route=   8 largest= 760 max_mu_spread=    317/3960 example=[GW_12_to_24:boundary:0, GW_fiber_12_to_150:open:426/35035, petal_10_to_20:open:1/980, petal_13_to_26:open:1/182, swap_10_to_100:open:28991/1576575, swap_10_to_101:open:117484/6369363, swap_10_to_102:open:4177/194922, swap_10_to_103:open:12148/590499]
+hensel_2_3_7                         fibers=  13 mixed_status=  1 mixed_route=  13 largest= 951 max_mu_spread=    317/3960 example=[AP13:boundary:0, GW_12_to_24:boundary:0, GW_fiber_12_to_150:open:426/35035, GW_fiber_12_to_38:open:426/35035, K33_12_to_36:open:1/1260, cover_12_to_168:open:263/30030, cover_12_to_84:open:563/105105, loose_12_to_26:open:426/35035]
+mahler_height_bucket                 fibers= 253 mixed_status=  1 mixed_route= 167 largest=  12 max_mu_spread=  3067/38808 example=[petal_10_to_20:open:1/980, swap_11_to_20:open:1517/25480, swap_12_to_20:open:426/35035, swap_13_to_20:open:131/3960, swap_2_to_20:open:11/364, swap_3_to_20:open:71/2730, swap_4_to_20:open:97/4004, swap_5_to_20:open:103/2860]
+residue_discrepancy_height           fibers= 525 mixed_status=  1 mixed_route= 167 largest=  12 max_mu_spread=  3067/38808 example=[petal_10_to_20:open:1/980, swap_11_to_20:open:1517/25480, swap_12_to_20:open:426/35035, swap_13_to_20:open:131/3960, swap_2_to_20:open:11/364, swap_3_to_20:open:71/2730, swap_4_to_20:open:97/4004, swap_5_to_20:open:103/2860]
+discrepancy_height_hensel_trident    fibers=2167 mixed_status=  0 mixed_route=   6 largest=   2 max_mu_spread= 6731/168168 example=[swap_6_to_14:open:7/858, swap_9_to_14:open:2701/56056]
+safe_topology                        fibers=1321 mixed_status=  0 mixed_route= 167 largest=  92 max_mu_spread= 6583/194040 example=[swap_13_to_168:open:5627/194040, swap_13_to_84:open:5297/194040, swap_1_to_168:open:3/49, swap_5_to_168:open:3611/120120]
+exact_speed_tuple                    fibers=2173 mixed_status=  0 mixed_route=   0 largest=   1 max_mu_spread=           0 example=[AP13:boundary:0]
+
+## Automaton Collision Fibers And Trident Split
+AP13 under residue_mfc_pairs_mod14:
+  AP13               boundary mu=           0 height=(4, 13, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=999529
+  swap_11_to_25      open     mu=19297/382200 height=(5, 25, 'M<0.90') hensel=((1, 0), (1, 0), (3, 1)) trident_hash=663428
+  loose_12_to_26     open     mu=   426/35035 height=(5, 26, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=544807
+  swap_13_to_27      open     mu=13691/582120 height=(5, 27, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=985417
+  swap_3_to_31       open     mu=   487/16926 height=(5, 31, 'M<0.90') hensel=((1, 0), (1, 0), (3, 1)) trident_hash=030353
+  swap_7_to_35       open     mu=29971/504504 height=(6, 35, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=114705
+  swap_8_to_36       open     mu=   950/21021 height=(6, 36, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=258228
+  swap_9_to_37       open     mu=93073/2074072 height=(6, 37, 'M<0.90') hensel=((1, 0), (1, 0), (3, 0)) trident_hash=712799
+  swap_11_to_39      open     mu=  1251/25480 height=(6, 39, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=388269
+  swap_3_to_45       open     mu=    139/4095 height=(6, 45, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=708055
+  swap_6_to_48       open     mu=       7/858 height=(6, 48, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=274992
+  swap_7_to_49       open     mu=1172537/17657640 height=(6, 49, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=723372
+GW_12_to_24 under residue_mfc_pairs_mod14:
+  GW_12_to_24        boundary mu=           0 height=(5, 24, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=723395
+  GW_fiber_12_to_38  open     mu=   426/35035 height=(6, 38, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=725370
+  GW_fiber_12_to_52  open     mu=   426/35035 height=(6, 52, 'M<0.90') hensel=((1, 0), (1, 0), (2, 0)) trident_hash=447081
+  swap_12_to_94      open     mu=   278/29939 height=(7, 94, 'M<0.90') hensel=((1, 0), (1, 0), (2, 0)) trident_hash=983457
+  swap_12_to_108     open     mu= 6497/945945 height=(7, 108, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=775133
+  swap_12_to_122     open     mu=   236/23485 height=(7, 122, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=115246
+  GW_fiber_12_to_150 open     mu=   426/35035 height=(8, 150, 'M<0.90') hensel=((1, 0), (1, 0), (1, 0)) trident_hash=956126
+  swap_12_to_178     open     mu= 5363/566930 height=(8, 178, 'M<0.90') hensel=((1, 0), (1, 0), (2, 0)) trident_hash=654617
+
+## Beck-Fiala Style Incidence Carrier
+feature_token_count=353
+row_feature_arity_range=(12,12)
+max_token_support=2005
+largest_tokens=hensel2:(1, 0):2005, res14:26/7:1860, res41:728/41:1548, hensel3:(1, 0):1507, res27:364/27:1237, hensel7:(1, 0):1229, res27:130/9:936, res41:754/41:625
+readout=bounded row arity makes a Beck-Fiala-style packet incidence theorem plausible; high-support tokens are exactly where another coordinate must be attached.
+
+## Tournament Analysis
+vertices_are=proof carriers, not runners; observable=(predicate purity, route purity, magnitude retention, discrepancy, local lift stability, certificate handoff, finite cost, anti-scalar guard)
+tie_hamiltonian_path=exact_labelled_packet > safe_topology_barcode > discrepancy_height_hensel_trident > residue_discrepancy_height > hensel_singular_lift_guard > erdos_turan_residue_discrepancy > mahler_height_proxy > automatic_word_sidecar > raw_scalar_family_name
+score_hist=[(0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1)]
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+score_order=discrepancy_height_hensel_trident > exact_labelled_packet > residue_discrepancy_height > safe_topology_barcode > erdos_turan_residue_discrepancy > mahler_height_proxy > hensel_singular_lift_guard > automatic_word_sidecar > raw_scalar_family_name
+
+## Proof Readout
+1. Automaton words and residue+MFC pairs remain mixed on the bounded bank: AP/GW boundary rows share fibers with strictly open tails.
+2. Adding height alone helps, but the proof-facing improvement is the trident: residue discrepancy tells which denominators are noisy, Mahler/Farey height restores lost magnitude, and Hensel singular counts flag local lifting debt.
+3. In this bounded bank, the discrepancy-height-Hensel trident has zero mixed boundary/open fibers, while still being cheaper than exact packet identity.  This is evidence for a sidecar theorem, not a proof.
+4. Challenged assumption: vertices need not be runners, gaps, residues, or automaton states.  The useful tournament here has proof carriers as vertices and orients by what each carrier is legally allowed to forget.

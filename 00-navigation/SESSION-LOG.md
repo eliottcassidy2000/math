@@ -8395,7 +8395,7 @@ User: 1729/cubic lens (note: 33/42 fell 2019 — Booker, Booker–Sutherland; sm
 ## kind-pasteur-2026-06-10-S1 — THE CUBIC LENS: 1729 fleshed out on all three lanes (THM-463 taxicab-Moser bridge, n=-1 of Ramanujan's family, HYP-2306 contrast), c3 spectrum GAP-FREE (THM-462), |Aut| | H universal (LEM-003), three-cubes ledger corrected, falsifiable H(T_31) prediction (HYP-2371)
 User: "this repo came across 1729 a few times but was unable to flesh it out ... look at the mathematical progress through the cubic lens; note 42 is the smallest natural number not known as a sum of 3 cubes [outdated -- corrected below]; spend a long session creatively leveraging past work + new discovery." Orchestrated as a 5-thread lab, EVERY thread re-verified by an independent adversarial agent with fresh code and different methods: 36/36 claims CONFIRMED. Namespace collision survived: THM-461 went first-come to monad-explorer's deletion ladder mid-session (our reservation push was blocked by a network outage) -- our taxicab theorem renumbered THM-463 with provenance notes everywhere.
 - **Thread A (HYP-2367 -> THM-463 PROVED+VERIFIED): the taxicab-Moser Eisenstein bridge is STRUCTURAL.** x^3+y^3 = (x+y)*N(x+y*omega) factors through THM-434's own norm form: reps <-> good-divisors bijection (parity condition proven AUTOMATIC; <= tau(n) divisor checks; 0 mismatches all n <= 10^6), split lemma (primitive cofactors = 3^{0,1} * split primes, elementary, no reciprocity), NEW inert-confinement corollary (inert p | n => v_p(d) = v_p(n); inert content hides in gcd(d_1,d_2), never in a cofactor -- happens in 1952/5464 doubly-primitive taxicab numbers <= 10^12, first 4342914, 0 violations in all 10931 primitive reps). 1729 = product of the three SMALLEST split primes, B = tau = 8 => bottom of BOTH lists (Ta(2) AND the 60-unit rosette record). THM-434's "flagged resonance" resolved on both sides: taxicab side THEOREM, tournament side stays COINCIDENCE (HYP-2306). THM-434 addendum added.
-- **Thread B (HYP-2369 -> LEM-003 PROVED+VERIFIED): |Aut(T)| | H(T) for EVERY digraph** -- Aut acts freely on directed Ham paths (unique-source rigidity, one paragraph). Backlog 1729-spine handle 2 DISSOLVES (zero Eisenstein content). Exhaustive n <= 6 (all 2^10+2^15 labeled, explicit orbits, Burnside checks exact). Boundary: FAILS for Ham CYCLES (C3: 3 does not divide 1; RQ5: both Ham cycles rotation-fixed). Canon hygiene: the fact had been asserted (THM-048), assumed (S20bt), circularly "proved" (S182), special-cased (THM-212/HYP-1264/HYP-1714) -- never proved. **MISTAKE-070 filed** (circular proof inventoried as PROVED). CLAUDE.md tiling line annotated.
+- **Thread B (HYP-2369 -> LEM-003 PROVED+VERIFIED): |Aut(T)| | H(T) for EVERY digraph** -- Aut acts freely on directed Ham paths (unique-source rigidity, one paragraph). Backlog 1729-spine handle 2 DISSOLVES (zero Eisenstein content). Exhaustive n <= 6 (all 2^10+2^15 labeled, explicit orbits, Burnside checks exact). Boundary: FAILS for Ham CYCLES (C3: 3 does not divide 1; RQ5: both Ham cycles rotation-fixed). Canon hygiene: the fact had been asserted (THM-048), assumed (S20bt), circularly "proved" (S184), special-cased (THM-212/HYP-1264/HYP-1714) -- never proved. **MISTAKE-070 filed** (circular proof inventoried as PROVED). CLAUDE.md tiling line annotated.
 - **Thread C (HYP-2368 REFUTED as posed -> THM-462 PROVED+VERIFIED): the cubic spectrum is GAP-FREE.** c3 takes EVERY value in [0, M(n)] (M = (n^3-n)/24 odd, (n^3-4n)/24 even) at every n: Kendall-Babington Smith 1940 identity (attribution CORRECTED from Goodman), exact bitset DP n <= 60 (38 s; the concavity reduction made n=60 cost 4 s), Lagrange four-square top-window construction + dominant-vertex induction, machine-checked n <= 80 (verifier: n <= 100). The forbidden-values hunt INVERTED: the degree-3 channel has NO impossibility levels -- H's {7,21} live strictly higher. Max-c3 = A006918(n-2) ("[Kac]"); spectrum-size sequence NOT in OEIS (candidate). Verifier reached + text-mined McShane-Harris JIS 27 (2024): no prior gap-free statement.
 - **Thread D (HYP-2370 RESOLVED): three-cubes ledger, premise corrected.** 42 fell Sept 2019 (Booker-Sutherland; re-VERIFIED residual 0 with 33 and Mordell's 3). Live-verified open list < 1000: {114, 390, 627, 633, 732, 921, 975} (579 fell 2019; stale mirrors lie). PROVED: mod-9 forbidden law (never +-4), mod-7 non-obstruction, +-3 mod 9 RIGIDITY (forces x=y=z mod 3) -- all 7 open k are rigid-class (finite-list fact). **Ramanujan's near-miss identity PROVED for ALL n in Z** (two independent proofs) and **1729 IS the n = -1 member** (backward extension (-9,12,10): 9^3+10^3 = 12^3+1). Ono-Trebat-Leder "1729 K3 surface" cited (abstract-level). Structural contrast PROVED: x^3+y^3+z^3 irreducible (smooth Fermat cubic) => no norm-form collapse => log-K3 hardness vs THM-463's divisor collapse.
 - **Thread E (HYP-2371 DELIVERED): falsifiable prediction R(31) = 2.59599 +/- 0.00650** => H(T_31) in [1.9831e25, 1.9930e25], **H == 465 (mod 930)** (LEM-003 freeness + Redei parity; H/465 odd ~ 4.275e22 = the next "1729"). HONEST NEGATIVE proved into the record: exact truncated cluster sums are NON-predictive at p <= 31 (factorial collision growth, THM-438 ADD-6 resurgence; new exact integers A_6(31), A_8(19..31), delta tables; cluster identity EXACT at p=7: R(7) = 12/5 from characters alone). NEW one-line lemma: single-run reversal kills any joint with an odd run (delta(3,3) == 0). Predictor = proven form e(1-C/p-...) with p=23 holdout, C ~ 1.3-1.6 (THM-438 anticipated 1.4). Compute design doc validated at p=11,19 -> backlog [COMPUTE-NODE] lead. THM-438 ADDENDUM-8 added (incl. verifier's placement-DP semantics caveat).
@@ -23772,3 +23772,38 @@ OPEN-Q-108, and the technique index.  Next pull: build family templates for
 the largest mixed automatic fibers, starting with `MFCMMCCFFFCCC`, compare
 them with HYP-3016 magnitude-cocycle fibers and HYP-3015 barcode classes, and
 avoid searching for a scalar finite-automaton shortcut.
+
+## codex-2026-06-26-S184 -- LRC14 discrepancy-height trident carrier -- HYP-3020/LTI-167
+
+User asked to keep looking for better proof carriers.  Pulled the current
+mainline first and treated the incoming HYP-3016/HYP-3017 route-purity failure
+as the active constraint: automaton words are useful sidecars, but mixed fibers
+need a retained coordinate that knows why AP/Goddyn-Wong are boundary while
+nearby tails are open.
+
+Added `04-computation/lrc14_discrepancy_height_carrier_codex_s184.py` and
+stored `05-knowledge/results/lrc14_discrepancy_height_carrier_codex_s184.out`.
+The scout audits named rows plus the AP single-swap atlas through tail `180`
+with exact rational threshold-`1/14` safe components, residue L1 discrepancy
+at `14,27,41`, Erdos-Turan proxy bins, Mahler/Farey height buckets, and Hensel
+`(root,singular)` counts at `2,3,7`.  The bank has `2173` distinct primitive
+rows, only AP/GW boundary atoms, and K33 `12->36` as the minimum positive row
+at `1/1260`.
+
+Main finding: one-coordinate sidecars still leak, but the combined
+discrepancy-height-Hensel trident does not leak boundary/open status in this
+bounded bank.  Reports: `automatic_word` has `1` mixed boundary/open fiber,
+`residue_mfc_pairs_mod14` has `2`, residue discrepancy alone has `2`, Hensel
+alone has `1`, height alone has `1`, while
+`discrepancy_height_hensel_trident` has `2167` fibers, `0` mixed status
+fibers, largest fiber `2`, and `6` mixed route fibers.  Honest warning: this
+signature is almost exact, so the real theorem target is compression without
+reintroducing the automaton fiber leak.
+
+Created HYP-3020, T1102, LTI-167, LTT-067, and reflection
+`07-reflections/lrc14-discrepancy-height-carrier-codex-s184.md`.  Updated the
+hypothesis/result indexes, concept map, OPEN-Q-108, backlog, and both LRC
+technique indexes.  Next pull: attach trident sidecars to the full HYP-2963
+packet bank, coarsen them until the smallest route-pure signature is found for
+large mixed automatic fibers such as `MFCMMCCFFFCCC`, then compare survivors
+against HYP-3015 barcode fields and HYP-2981 Fejer interval manifests.

@@ -1,5 +1,21 @@
 # Open Questions
 
+**OPEN-Q-108 S184 discrepancy-height trident addendum:** HYP-3020 tests a
+three-coordinate proof carrier after the automaton route-purity failure:
+small-denominator residue discrepancy / Erdos-Turan proxy bins,
+Mahler/Farey height, and Hensel `(root,singular)` counts at `2,3,7`.  On
+`2173` primitive named plus AP single-swap rows through tail `180`, only AP/GW
+are boundary rows and K33 `12->36` is the minimum positive row at `1/1260`.
+Raw automaton words, residue+MFC pairs, residue discrepancy alone, Hensel
+alone, and height alone all still have mixed boundary/open fibers, but the full
+discrepancy-height-Hensel trident has `0` mixed boundary/open fibers in this
+bounded bank.  Open task: add trident sidecars to the full HYP-2963 bank, then
+coarsen the signature until it is much smaller than exact packet identity while
+retaining `mixed_status=0`; any remaining nonzero coordinate must route to
+magnitude-cocycle, Ramanujan/Haar/Fejer discrepancy, Hensel lift debt, or
+K33/F7/THM-572 residual. -> HYP-3020, HYP-3017, HYP-3016, HYP-3015, HYP-3014,
+HYP-2963, HYP-2997, HYP-2995, HYP-2989, THM-572, LTI-167, LTT-067, T1102.
+
 **OPEN-Q-108 S175 creative packet-lens addendum:** HYP-3014 tests creative
 LRC14 angles as exact packet lenses rather than metaphors: Cech nerve / cover
 homology, tropical slack, CRT solenoid charts, endpoint chip-firing current,

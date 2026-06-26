@@ -1093,6 +1093,37 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3009, HYP-3008, HYP-3002, HYP-2997, HYP-2963, HYP-2928, THM-572,
   LTI-165.
 
+### LTT-067: Discrepancy-Height Trident Tournament
+
+- **Move:** Treat proof carriers as tournament vertices: exact labelled packet,
+  safe topology / barcode, discrepancy-height-Hensel trident, residue-height
+  pair, Hensel singular-lift guard, Erdos-Turan residue discrepancy,
+  Mahler-height proxy, automatic word sidecar, and raw scalar family name.
+  Orient edges by retained predicate purity, route purity, magnitude
+  retention, discrepancy retention, local lift stability, certificate handoff,
+  finite cost, and anti-scalar guard.
+- **LRC use:** The trident is the first bounded carrier after HYP-3016/HYP-3017
+  that splits AP/Goddyn-Wong boundary rows from open rows inside mixed
+  residue/automatic fibers without using exact speed tuple identity.  On the
+  S184 named plus single-swap bank it has `0` mixed boundary/open fibers,
+  while automaton words, residue+MFC pairs, residue discrepancy alone, Hensel
+  alone, and height alone all still leak.
+- **Preserves:** Boundary-vs-open predicate in the bounded scout, route-purity
+  telemetry, small-denominator discrepancy, lost magnitude/Farey scale,
+  Hensel singular-root status, and a Beck-Fiala-style bounded feature
+  incidence surface.
+- **Forgets / guardrail:** The full trident is nearly exact (`2167` fibers for
+  `2173` rows), so it is not yet a compressed theorem coordinate.  It also
+  forgets endpoint-owner geometry, exact Fejer atom banks, and barcode
+  topology unless HYP-3015/HYP-2981 fields are reattached.
+- **Next pull:** Add trident fields to the full HYP-2963 packet bank; then
+  coarsen residue denominators, Erdos-Turan bins, height buckets, and Hensel
+  flags until the smallest route-pure signature is found for the large mixed
+  automatic fibers, especially `MFCMMCCFFFCCC`.
+- **Pointers:** HYP-3020, HYP-3017, HYP-3016, HYP-3015, HYP-3014, HYP-3009,
+  HYP-3008, HYP-2997, HYP-2995, HYP-2991, HYP-2989, HYP-2963, THM-572,
+  LTI-167.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1112,6 +1143,8 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    lonely-profile barcode, bar count, persistence margin,
    residue-automaton fiber ID, magnitude cocycle, Farey magnitude height,
    fiber anchor row, fiber-mixing exit,
+   discrepancy-height trident signature, residue discrepancy bins,
+   Erdos-Turan proxy bins, Mahler/Farey height bucket, Hensel singular counts,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
