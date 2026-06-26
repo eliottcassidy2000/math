@@ -44,9 +44,7 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 As of **Friday, June 26, 2026**, the newest coordination layer is **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, built on **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
 
-S229 integrates the **Toeplitz square-peg scale gate (HYP-3064)**. It refines the proof stack by importing the square-peg configuration space as a **four-witness configuration carrier with an explicit positive-scale gate**. This ensures that four-witness, rectangle, or homological obstructions in the LRC14 spectrum are only admitted if they survive a strictness condition preventing collapse to boundary/AP-GW zero-open atoms. The `toeplitz_square_scale_gate` is established as the mandatory strictness condition for final-assembly packets, coupled with residues for midpoint balance, equal diagonal radius, and quarter-turn orthogonality.
-
-S231 extends the **Moser/fibbinary partial-cube carrier (HYP-3063)** after the S228 exact scout by adding the `K_{k,k+1}` bridge-rank ledger and finite Moser two-lane split audit.  The doubled triangular row `2,6,12,20,30,42=k(k+1)` is recorded as bridge/simplex line count with rank `2k` and rectangle debt `k(k-1)`, not as independent proof mass.
+S231 extends the **Moser/fibbinary partial-cube carrier (HYP-3063)** by adding the `K_{k,k+1}` bridge-rank ledger and finite Moser two-lane split audit. It refines the proof stack by formalizing automatic sequences (Moser-de Bruijn, fibbinary) as partial-cube cut sidecars rather than just labels. The doubled triangular row `2,6,12,20,30,42=k(k+1)` is mapped to bridge/simplex line counts with rank `2k` and rectangle debt `k(k-1)`. It establishes that forgetting a fibbinary or Moser coordinate requires routing the loss to a partial-cube Theta class or carry boundary.
 
 The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, and Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used before it is promoted to a proof carrier.
 
@@ -124,37 +122,32 @@ square-peg unit, and partial-cube bridge-rank split unit alongside mu approx
 ## codex-S231 -- Partial-Cube Bridge-Rank Split Ledger (checkpoint)
 
 Added the bridge-rank and two-lane split ledger behind the S227/S228
-Moser/fibbinary partial-cube carrier.  The audit artifacts are
-`04-computation/lrc14_partial_cube_bridge_rank_split_codex_s231.py` and
-`05-knowledge/results/lrc14_partial_cube_bridge_rank_split_codex_s231.out`.
-Next operational pull: attach `bridge_K_k_kplus1_line_id`,
-`bridge_cut_potential_word`, `rectangle_cycle_redundancy_class`, and
-`moser_product_split_a_plus_2b` to HYP-2963 automatic fibers and test
-route/status splitting before exact magnitude is restored.
+Moser/fibbinary partial-cube carrier. Refined automatic sequences into 
+partial-cube cut sidecars.
+
+### 1. Partial-Cube Bridge-Rank Enforcement
+It maps the `k(k+1)` bridge lines to rank `2k` and rectangle cycle redundancy 
+`k(k-1)`. Forgetting a coordinate now requires routing to a `theta_class_word` 
+or `zeckendorf_carry_boundary`.
+
+### 2. Sidecar Ledger Update
+It establishes mandatory fields for Moser/fibbinary automatic fibers:
+`partial_cube_carrier_id`, `theta_class_word`, `fibbinary_forbidden_adjacency_mask`,
+`zeckendorf_carry_boundary`, `moser_even_lane_word`, `moser_odd_lane_word`,
+`moser_product_split_a_plus_2b`, `simplex_oriented_edge_sector`, 
+`bridge_K_k_kplus1_line_id`, `bridge_cut_potential_word`, and
+`rectangle_cycle_redundancy_class`.
+
+### 3. LRC Translation
+Inside the HYP-2963 packet bank, these fields serve as splitting criteria for 
+mixed route fibers before exact magnitude restoration.
 
 ---
 
 ## codex-S229 -- Toeplitz Square-Peg Scale Gate (checkpoint)
 
-Formalized the integration of Toeplitz square-peg configuration spaces as 
-four-witness configuration carriers. The new HYP-3064/T1146 layer defines the 
-`toeplitz_square_scale_gate`.
-
-### 1. Configuration Space Enforcement
-The S229 gate defines the non-degenerate square as two antipodal pairs sharing 
-a midpoint, equal radius, and quarter-turn orthogonality. This prevents a 
-four-witness certificate from collapsing to a point or boundary pair.
-
-### 2. Sidecar Gating
-It adds the following fields to the HYP-2963 packet ledger:
-`toeplitz_square_scale_gate`, `midpoint_balance_residue`, 
-`diagonal_equal_radius_residue`, `quarter_turn_residue`, 
-`ordered_quad_collapse_mode`, `d4_orbit_word`, and `toeplitz_psd_bridge_degree`.
-
-### 3. LRC Translation
-A final residual in the LRC14 spectrum is now routed by these gates: if scale 
-is zero, the result is flagged as degenerate/debt-only; if residues for balance 
-or orthogonality are non-zero, it triggers Haar/rectangle/hourglass repairs.
+Formalized the transition to S229, integrating the Toeplitz square-peg scale 
+gate.
 
 ---
 
@@ -162,12 +155,6 @@ or orthogonality are non-zero, it triggers Haar/rectangle/hourglass repairs.
 
 Formalized the transition to S227, integrating the Moser/fibbinary partial-cube 
 simplex carrier.
-
----
-
-## codex-S226 -- Roth-Minkowski Diophantine Lattice Fence (checkpoint)
-
-Formalized the transition to S226, integrating the Roth-Minkowski lattice fence.
 
 ---
 
