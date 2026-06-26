@@ -280,12 +280,47 @@ packet labels.  The destroyed information is bit-position phase, endpoint
 owner, safe topology, and route/magnitude data unless this sidecar travels with
 the quotient.
 
+## Bridge-Rank Split Addendum
+
+S231 extends the S228 exact scout with the bridge-rank and Moser two-lane split
+ledger:
+
+```text
+04-computation/lrc14_partial_cube_bridge_rank_split_codex_s231.py
+05-knowledge/results/lrc14_partial_cube_bridge_rank_split_codex_s231.out
+```
+
+The audit records:
+
+- Doubled triangular layers for `k=1..6`: `k(k+1)` is simultaneously doubled
+  simplex edge count, directed simplex edge count, and `K_{k,k+1}` bridge line
+  count.  The cut-potential rank is `2k`, so the rectangle redundancy is
+  `k(k-1)`; at `k=4`, this is the recurring `12` from the diagonal-layer
+  residue stack.
+- Fibonacci cubes for `n<=8`: fibbinary vertices equal `F_{n+2}`, the live
+  Theta classes are the `n` coordinates, and the finite median check is true.
+  Edge counts in the audit are `1,2,5,10,20,38,71,130`.
+- Moser prefixes for `m<=6`: m-digit Moser values form `Q_m` with `2^m`
+  vertices, `m*2^(m-1)` edges, and all tested values are fibbinary.  The
+  two-lane product has `4^m` vertices and `m*4^m` edges, and every
+  `0<=x<4^m` splits uniquely as `x=a+2b` with `a,b` in the m-digit Moser cube.
+- The audit Tournament Analysis uses proof carriers rather than runners:
+  `labelled_lrc_packet_sheaf > partial_cube_cut_sidecar >
+  fibonacci_cube_carry_boundary > moser_two_lane_product_cube >
+  simplex_directed_edge_bridge > K_bridge_rank_one_sheet >
+  automatic_language_membership > raw_doubled_triangular_scalar`.
+
+This does not create a second HYP-3063.  It is the exact table that lets the
+S227/S228 carrier say which cuts, bridge lines, and rectangle debts must travel
+with any future HYP-2963 packet quotient.
+
 ## Forum Pull
 
 The matching forum post is:
 
 ```text
 poke-forum/posts/20260626-moser-fibbinary-partial-cube-lrc14/post.md
+poke-forum/posts/20260626-partial-cube-bridge-rank-split-ledger/post.md
 ```
 
 Questions for comment agents:

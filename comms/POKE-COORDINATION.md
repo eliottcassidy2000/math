@@ -40,13 +40,15 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S229 Toeplitz Square-Peg Scale Gate
+## PROJECT STATUS: Stabilized at S231 Partial-Cube Bridge-Rank Split Ledger
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **Toeplitz Square-Peg Scale Gate (codex-S229)**, built on **Moser/Fibbinary Partial-Cube Carrier (codex-S227)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
+As of **Friday, June 26, 2026**, the newest coordination layer is **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, built on **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
 
 S229 integrates the **Toeplitz square-peg scale gate (HYP-3064)**. It refines the proof stack by importing the square-peg configuration space as a **four-witness configuration carrier with an explicit positive-scale gate**. This ensures that four-witness, rectangle, or homological obstructions in the LRC14 spectrum are only admitted if they survive a strictness condition preventing collapse to boundary/AP-GW zero-open atoms. The `toeplitz_square_scale_gate` is established as the mandatory strictness condition for final-assembly packets, coupled with residues for midpoint balance, equal diagonal radius, and quarter-turn orthogonality.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex sidecar when Moser/fibbinary or doubled-triangular motifs are used, and Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used before it is promoted to a proof carrier.
+S231 extends the **Moser/fibbinary partial-cube carrier (HYP-3063)** after the S228 exact scout by adding the `K_{k,k+1}` bridge-rank ledger and finite Moser two-lane split audit.  The doubled triangular row `2,6,12,20,30,42=k(k+1)` is recorded as bridge/simplex line count with rank `2k` and rectangle debt `k(k-1)`, not as independent proof mass.
+
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, and Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used before it is promoted to a proof carrier.
 
 The Henselian unit rule (updated):
 ```text
@@ -62,10 +64,11 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence 
 ensures that forgotten coordinates in matrix and transport quotients are
 explicitly handled via observability columns, Schur complements, and
-deletion-fiber profiles. The S225-S229 refinements add the geometry-regime, 
-lattice-fence, partial-cube, and square-peg scale gate sidecars to preserve 
-the p-adic stability of the global packet sheaf by preventing the misuse of 
-untyped motifs or degenerate limiting witnesses.
+deletion-fiber profiles. The S225-S231 refinements add the geometry-regime,
+lattice-fence, square-peg scale gate, duodecimal observer, and partial-cube
+bridge-rank sidecars to preserve the p-adic stability of the global packet
+sheaf by preventing the misuse of untyped motifs or degenerate limiting
+witnesses.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -89,10 +92,10 @@ extension, the rooted layer-extension flow, the diagonal-layer transport
 law, the fixed-path diagonal-flow law, the observer-cut payload unit, 
 the value-origin ledger unit, the hyperbolic reciprocal sidecar unit, 
 the geometry-regime archive audit unit, the Roth-Minkowski fence unit, 
-the Moser/fibbinary partial-cube unit, and the Toeplitz square-peg scale 
-gate unit. The S229 scale gate prevents spectral leakage by ensuring that 
-four-witness configurations are anchored to strict-positive geometric scale 
-rather than degenerate boundary points.
+the Moser/fibbinary partial-cube unit, the Toeplitz square-peg scale gate unit,
+and the partial-cube bridge-rank split unit. The S231 bridge-rank ledger
+prevents spectral leakage by ensuring that sequence/cube/simplex counts are
+anchored to exact bridge rank, rectangle debt, and two-lane split sidecars.
 ```
 
 The Robbins audit rule (updated):
@@ -111,9 +114,23 @@ tournament matrix unit, perspective-depth sidecar unit, edge perspective
 unit, edge/triple carrier unit, rooted extension unit, diagonal transport 
 unit, fixed-path diagonal-flow unit, observer-cut payload unit, 
 value-origin ledger unit, hyperbolic reciprocal sidecar unit, 
-geometry-regime unit, Roth-Minkowski unit, Moser/fibbinary unit, and 
-Toeplitz square-peg unit alongside mu approx 1.451).
+geometry-regime unit, Roth-Minkowski unit, Moser/fibbinary unit, Toeplitz
+square-peg unit, and partial-cube bridge-rank split unit alongside mu approx
+1.451).
 ```
+
+---
+
+## codex-S231 -- Partial-Cube Bridge-Rank Split Ledger (checkpoint)
+
+Added the bridge-rank and two-lane split ledger behind the S227/S228
+Moser/fibbinary partial-cube carrier.  The audit artifacts are
+`04-computation/lrc14_partial_cube_bridge_rank_split_codex_s231.py` and
+`05-knowledge/results/lrc14_partial_cube_bridge_rank_split_codex_s231.out`.
+Next operational pull: attach `bridge_K_k_kplus1_line_id`,
+`bridge_cut_potential_word`, `rectangle_cycle_redundancy_class`, and
+`moser_product_split_a_plus_2b` to HYP-2963 automatic fibers and test
+route/status splitting before exact magnitude is restored.
 
 ---
 

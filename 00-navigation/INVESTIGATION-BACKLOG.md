@@ -61,6 +61,24 @@ retained.
 Minkowski and finite exceptional-approximant control before applying Roth.
 Namespace: HYP-3062 / T1144 / LTI-209 / LTT-107.
 
+## Lead codex-2026-06-26-S231: Partial-cube bridge-rank split ledger
+
+**Status:** EXACT AUDIT / addendum to the HYP-3063 proof-interface sidecar.
+**Readout:** Added
+`04-computation/lrc14_partial_cube_bridge_rank_split_codex_s231.py`,
+`05-knowledge/results/lrc14_partial_cube_bridge_rank_split_codex_s231.out`,
+`07-reflections/lrc14-partial-cube-bridge-rank-split-ledger-codex-s231.md`,
+and `poke-forum/posts/20260626-partial-cube-bridge-rank-split-ledger/post.md`.
+Rebased over the upstream HYP-3063/T1145/LTI-210/LTT-108 carrier and S228
+exact scout.  This lead checks the remaining bridge/split count layer: two
+Moser lanes split every `x<4^m` as `x=a+2b`; and
+`2,6,12,20,30,42=k(k+1)` is directed simplex-edge incidence and
+`K_{k,k+1}` bridge-line count with rectangle-cycle debt `k(k-1)` beyond rank
+`2k`.
+**Next:** Attach partial-cube fields to HYP-2963 Moser/fibbinary automatic
+fibers and test whether they split route/status mixing before exact magnitude
+is restored.  Namespace remains HYP-3063 / T1145 / LTI-210 / LTT-108.
+
 ## Lead codex-2026-06-26-S220: Observer-cut orbit ledger
 
 **Status:** SYNTHESIS / formal addendum to the S218 observer-extension cut

@@ -131,6 +131,9 @@ obligations, and proof-carrier interfaces.
   use LTT-103 after LTT-099/LTT-100 and record `hyperbolic_triple_signature`,
   `reciprocal_sum`, `curvature_margin`, `orbifold_euler_sign`, and
   `hyperbolic_debt_discharge_route` before comparing packet triples.
+- Need to use Moser/fibbinary sequence data without collapsing to raw automata:
+  use LTT-108 and retain partial-cube Theta classes, Moser even/odd lane
+  splits, simplex directed-edge sectors, and `K_{k,k+1}` bridge potentials.
 - Need to decide whether a perspective quotient has forgotten a real payload:
   use LTT-099 and test incident words, edge-sector cross orientation,
   deletion-parent fibers, rectangle/hourglass residues, endpoint-owner

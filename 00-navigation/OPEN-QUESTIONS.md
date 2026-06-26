@@ -47,6 +47,23 @@ HYP-3043, HYP-3039, HYP-3003, HYP-2963, HYP-2943, HYP-2934, HYP-2928,
 HYP-2900, HYP-2887, THM-572, LTI-208, LTI-205, LTT-106, LTT-103, T1143,
 T1140.
 
+**OPEN-Q-108 S231 bridge-rank split-ledger addendum:** after the S228 exact
+scout, the S231 audit isolates the remaining HYP-3063 bridge/split obligations:
+every `0<=x<4^m` splits as `x=a+2b`, and `k(k+1)` has `K_{k,k+1}` bridge rank
+`2k` with rectangle debt `k(k-1)`.
+Open task: take HYP-2963 packet rows already tagged by automatic
+Moser/fibbinary words and attach those exact fields as `theta_class_word`,
+`fibbinary_forbidden_adjacency_mask`, `zeckendorf_carry_boundary`,
+`moser_even_lane_word`, `moser_odd_lane_word`,
+`moser_product_split_a_plus_2b`, `simplex_oriented_edge_sector`,
+`bridge_K_k_kplus1_line_id`, `bridge_cut_potential_word`, and
+`rectangle_cycle_redundancy_class`.  Test whether mixed automatic fibers split
+before exact magnitude is reattached, and record whether each forgotten cut is
+reconstructed, dual-annihilated, descended, AP/GW-boundary-stopped, or named as
+residual debt. -> HYP-3063, HYP-3062, HYP-3058, HYP-3057, HYP-3054,
+HYP-3053, HYP-3052, HYP-3012, HYP-3009, HYP-3008, HYP-2963, LTI-210,
+LTT-108, T1145, OPEN-Q-108.
+
 **OPEN-Q-108 S220 observer-cut orbit ledger addendum:** HYP-3056 refines
 HYP-3054 by making the cut payload an orbit under the visible-fiber
 automorphism group:

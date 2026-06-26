@@ -171,6 +171,37 @@ noncollapse gate is the four-witness sibling of the Moser rule that
 sequence/cube/simplex motifs are unusable after forgetting native transitions
 and gated sidecars, and of the Roth-Minkowski rule that volume/height pressure
 is unusable after forgetting lattice and exceptional-approximant sidecars.
+## codex-2026-06-26-S231 -- LRC14 partial-cube bridge-rank split ledger (HYP-3063 addendum)
+
+User asked to work on LRC forum posts and merge Moser-de Bruijn, fibbinary,
+partial cubes, simplices, and the doubled triangular sequence
+`2,6,12,20,30,42`.
+
+Rebased over the upstream S227 carrier and S228 exact scout, then kept this as
+the narrower bridge-rank/two-lane addendum.  Added exact finite audit script
+`04-computation/lrc14_partial_cube_bridge_rank_split_codex_s231.py`, stored
+result
+`05-knowledge/results/lrc14_partial_cube_bridge_rank_split_codex_s231.out`,
+reflection
+`07-reflections/lrc14-partial-cube-bridge-rank-split-ledger-codex-s231.md`, and
+forum addendum
+`poke-forum/posts/20260626-partial-cube-bridge-rank-split-ledger/post.md`.
+
+Main synthesis: Moser-de Bruijn and fibbinary should be upgraded from
+automaton telemetry to partial-cube cut carriers.  Fibbinary words are
+independent sets of a path, giving Fibonacci cubes `Gamma_n` with
+`F_{n+2}` vertices and `n` coordinate cuts.  Moser m-digit prefixes are
+even-bit cubes `Q_m`; two Moser lanes split every `x<4^m` uniquely as
+`x=a+2b`.  The row `2,6,12,20,30,42` is `k(k+1)`, simultaneously directed
+simplex-edge incidence and `K_{k,k+1}` bridge-line count.  Since the bridge
+rank is `2k`, the surplus `k(k-1)` is rectangle-cycle sidecar debt, not proof
+mass.
+
+Tournament Analysis vertices are proof carriers, not runners:
+`labelled_lrc_packet_sheaf > partial_cube_cut_sidecar >
+fibonacci_cube_carry_boundary > moser_two_lane_product_cube >
+simplex_directed_edge_bridge > K_bridge_rank_one_sheet >
+automatic_language_membership > raw_doubled_triangular_scalar`.
 
 ## codex-2026-06-26-S222 -- LRC14 Fermat-Catalan hyperbolic reciprocal bound (HYP-3058/T1140/LTI-205/LTT-103)
 
