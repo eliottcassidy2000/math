@@ -170,6 +170,10 @@ obligations, and proof-carrier interfaces.
 - Need exact evidence behind the duodecimal ledger:
   use LTT-110 and audit Burnside terms, deletion fibers, ordered-pair sectors,
   and rectangle/hourglass residues before promoting the count.
+- Need to use the Hodge conjecture lens without pretending positivity is
+  realization: use LTT-111 after LTT-048/LTT-069/LTT-108/LTT-109/LTT-110 and
+  build the cycle-class map from named certificate generators to residual
+  packet cohomology before calling a closed/positive cochain discharged.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2921,6 +2925,48 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTT-095, LTT-094, T1147, T1141, T1140, T1139, T1138, T1137, T1136,
   T1135, T1134, T1133, T1132, T1131, OPEN-Q-108.
 
+### LTT-111: Hodge-Cycle Lifting Carrier
+
+- **Move:** Treat the Hodge conjecture as a realizability discipline for
+  packet cohomology. A closed/type-correct/positivity-feasible cochain is not
+  a proof exit until it lies in the span of named certificate cycles, is
+  dual-annihilated, descends to a smaller family, is an AP/GW boundary class,
+  or is emitted as a specific F7/THM-572 state-lift target.
+- **LRC use:** HYP-3066 merges the repo's baby-Hodge holes, the HYP-2887
+  octahedral current, HYP-2892 design/Hodge carriers, HYP-2995/HYP-2997
+  cocycle normal forms, and S227 partial-cube/simplex sidecars. It turns
+  "positivity is not realization" into a packet-field test:
+  `Cert(P) -> H_res(P)`.
+- **Preserves:** Cochain closedness, type/positivity filters, certificate
+  generator names, exact `M`, endpoint owner, topology, route label, formal
+  coefficient ring, cycle-class image rank/status, algebraic-cycle
+  decomposition, residual class id, and THM-572 state-lift target.
+- **Forgets / guardrail:** Raw moment positivity, Fejer positivity, convex flag
+  feasibility, and smooth Hodge metaphors forget integrality/compatibility.
+  HYP-2521/HYP-2530 show that positive shadows can still miss realized
+  packet classes. A `phantom_unresolved` row is not a proof exit.
+- **Tournament fingerprint:** vertices are certificate generators and residual
+  classes, not runners:
+  `labelled_packet_master_class > fejer_toeplitz_dual_cycle >
+  haar_zipper_square_cycle > endpoint_owner_boundary_cycle >
+  ramanujan_period_character > observer_cut_boundary >
+  octahedral_face_curl > partial_cube_theta_class >
+  simplex_face_boundary > roth_minkowski_low_height_wall >
+  c27_unital_transfer > k33_state_lift_incidence >
+  raw_moment_positive_shadow`. Pairwise observable is retained predicate,
+  closedness, type filter, cycle generation, formal checkability, descent, and
+  residual exit.
+- **Next pull:** Build an exact rational cycle-class matrix on a HYP-2963
+  sample: rows are emitted residual cochains; columns are AP/GW, Fejer,
+  Ramanujan, Haar, endpoint, observer-cut, octahedral, partial-cube, simplex,
+  low-height-wall, Toeplitz noncollapse, C27/unital, and K33/state-lift
+  generators. Record `cycle_class_image_status` before naming F7.
+- **Pointers:** HYP-3066, HYP-3065, HYP-3064, HYP-3063, HYP-3062, HYP-3061,
+  HYP-3054, HYP-3048, HYP-2997, HYP-2995, HYP-2892, HYP-2887, HYP-2530,
+  HYP-2521, HYP-2240, THM-509, THM-572, LTI-213, LTI-212, LTI-211,
+  LTI-210, LTI-209, LTI-109, LTI-108, LTT-111, LTT-110, LTT-109, LTT-108,
+  LTT-107, LTT-069, T1148, OPEN-Q-099, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -2964,6 +3010,11 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    first surviving filtration page,
    observer extension cut signature, node perspective depth,
    edge tail/tip sector word, triple perspective kind,
+   hodge type filter, moment-positive shadow, flag/overlap feasibility,
+   cochain closedness status, certificate cycle generators,
+   cycle-class image rank, cycle-class image status,
+   algebraic-cycle decomposition, residual Hodge class id, phantom-class exit,
+   F7 state-lift target,
    cycle conflict pair ID,
    diagonal word orbit, K position-line profile, aligned pair counts,
    newest link bit, deletion-parent profile,

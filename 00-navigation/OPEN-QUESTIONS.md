@@ -1,5 +1,25 @@
 # Open Questions
 
+**OPEN-Q-108 S232 Hodge-cycle lifting addendum:** HYP-3066 turns the Hodge
+conjecture cue into a cycle-class sidecar for LRC14 rather than a theorem
+analogy.  Open task: build an exact rational cycle-class matrix on a HYP-2963
+packet sample.  Rows are emitted residual cochains; columns are named
+certificate generators including AP/GW boundary atoms, Fejer dual forms,
+Ramanujan exact-period characters, Haar zipper squares, endpoint-owner
+potentials, observer-cut boundaries, octahedral face curls, partial-cube Theta
+classes, simplex face boundaries, Roth-Minkowski low-height walls,
+Toeplitz noncollapse cycles, C27/unital transfers, and K33/state-lift
+incidences.  Add
+`hodge_type_filter`, `moment_positive_shadow`, `flag_or_overlap_feasible`,
+`cochain_closedness_status`, `certificate_cycle_generators`,
+`cycle_class_image_rank`, `cycle_class_image_status`,
+`algebraic_cycle_decomposition`, `residual_hodge_class_id`,
+`phantom_class_exit`, and `f7_state_lift_target`.  A positive/closed shadow is
+not discharged unless it is generated, dual-annihilated, descended, AP/GW
+boundary, or routed to THM-572; `phantom_unresolved` is named work debt. ->
+HYP-3066, HYP-3064, HYP-3063, HYP-3062, HYP-2997, HYP-2995, HYP-2892, HYP-2887,
+HYP-2530, HYP-2521, THM-509, THM-572, LTI-213, LTT-111, T1148, OPEN-Q-099.
+
 **OPEN-Q-108 S227 Moser/fibbinary partial-cube simplex addendum:** HYP-3063
 turns Moser-de Bruijn and fibbinary sequence shadows into partial-cube/simplex
 sidecars.  Open task: annotate a HYP-2963 sample containing AP, GW, K33, C27
