@@ -15,6 +15,13 @@
 
 ---
 
+## Lead codex-2026-06-26-S179: LRC14 lonely-profile persistence barcode carrier
+
+**Status:** EVIDENCE / exact finite scout and proof-interface carrier complete (HYP-3015/T1099/LTI-164), rebased over the incoming creative exact packet-lens atlas (HYP-3014/LTI-163).  User asked for more creative LRC angles.  This pass treats the lonely profile `m_S(t)=min_v ||v t||` as a threshold persistence object rather than a raw maximin scalar.
+**Readout:** `04-computation/lrc14_lonely_profile_persistence_barcode_codex_s179.py` stores output in `05-knowledge/results/lrc14_lonely_profile_persistence_barcode_codex_s179.out`.  Exact Fraction arithmetic over affine cells shows AP13 and GW `12->24` have zero bars; K33 has two bars, petals have two, covering `12->84` has eight, fibbinary first13 has `38`, and Moser first13 has `64`.  The barcode exposes bar count, length, peak, and persistence margin, so raw `M` and safe mass are insufficient quotients.
+**Next:** run barcode sidecar over the HYP-2963 packet bank; route lowest-persistence positive families to endpoint-owner / Fejer interval certificates; compare barcode classes against HYP-3012 automaton classes and HYP-3013 divisor fields.
+Namespace: HYP-3015 / T1099 / LTI-164.
+
 ## Lead codex-2026-06-25-S178: LRC14 Fermat-Catalan automatic-gap extension
 
 **Status:** SYNTHESIS / packet-schema guardrail complete

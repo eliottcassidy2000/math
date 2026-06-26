@@ -1,3 +1,13 @@
+## codex-2026-06-26-S179 -- LRC14 lonely-profile persistence barcode carrier (HYP-3015/T1099)
+
+User asked for more creative LRC angles.  After pulling current mainline through HYP-3011..HYP-3013, chose a persistence/barcode route rather than another sequence or divisor scalar.
+
+Added `04-computation/lrc14_lonely_profile_persistence_barcode_codex_s179.py` and stored `05-knowledge/results/lrc14_lonely_profile_persistence_barcode_codex_s179.out`.  The script cuts the time circle at all `k/(2v)` triangular-wave breakpoints and computes exact superlevel bars of `m_S(t)=min_v ||v t||` at threshold `1/14`.
+
+Readout: AP13 and GW `12->24` have zero bars and `M=1/14`; K33 `12->36` has two bars and safe mass `1/1260`; petals have two bars; covering `12->84` has eight bars; first-13 fibbinary has `38` bars and `M=3/25`; first-13 Moser has `64` bars and `M=1/6`.
+
+Created HYP-3015, T1099, LTI-164, and reflection `07-reflections/lrc14-lonely-profile-persistence-barcode-codex-s179.md`.  Proof-order takeaway: add barcode sidecar fields to HYP-2963 packets and route lowest-persistence positive families to endpoint-owner / Fejer interval certificates before trusting raw `M` or safe mass.
+
 ## codex-2026-06-25-S178 -- LRC14 Fermat-Catalan automatic-gap extension (HYP-3009/T1093)
 
 User asked to keep pushing toward the LRC14 proof while thinking about
