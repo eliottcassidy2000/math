@@ -1,2 +1,101 @@
 === LRC14 fiber-zipper convergence S188 ===
-RESERVED: implementation pending.
+bank=HYP-2963 target automatic word MFCMMCCFFFCCC single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5
+candidate_rows=639 of 21913
+packets=639
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, fixed circle sections, residue classes, Erdos-Turan
+    Fourier modes, Henselian unit roots, denominator units, barcode bars,
+    packet labels, and proof obligations.
+  chosen vertices:
+    zipper teeth / proof-carrier bundles over HYP-2963 packets.
+  preserved LRC predicate:
+    theorem-route purity and boundary-versus-open status at threshold 1/14.
+  challenged assumption:
+    exact magnitude is not the only possible convergence carrier; test
+    analytic discrepancy and p-adic unit-lift rules before accepting that
+    route purity needs near-identity packet data.
+
+[1] Convergence ladder
+  split                          fibers    mixR    mixF    maxF  maxMix  mixRows  purity
+  automatic_word                      1       1       1     639     639      639    0.0%
+  residue_terminal_fiber            181      27      27      30      30      300   85.0%
+    delta from previous: mixed_fibers +26, max_mixed -609, mixed_rows -339
+  erdos_turan_residue_zipper        595       6       6       4       4       15   98.9%
+    delta from previous: mixed_fibers -21, max_mixed -26, mixed_rows -285
+  henselian_unit_zipper             424       0       0       4       0        0  100.0%
+    delta from previous: mixed_fibers -6, max_mixed -4, mixed_rows -15
+  et_hensel_unit_zipper             627       0       0       2       0        0  100.0%
+    delta from previous: mixed_fibers +0, max_mixed +0, mixed_rows +0
+  et_hensel_qrule_zipper            627       0       0       2       0        0  100.0%
+    delta from previous: mixed_fibers +0, max_mixed +0, mixed_rows +0
+  magnitude_cocycle                 638       0       0       2       0        0  100.0%
+    delta from previous: mixed_fibers +0, max_mixed +0, mixed_rows +0
+  barcode_shadow                    639       0       0       1       0        0  100.0%
+    delta from previous: mixed_fibers +0, max_mixed +0, mixed_rows +0
+  packet_zipper                     639       0       0       1       0        0  100.0%
+    delta from previous: mixed_fibers +0, max_mixed +0, mixed_rows +0
+
+  largest mixed fiber by split:
+    automatic_word: max_mixed=639 routes={'Q-WITNESS': 603, 'COVERING-MOMENT': 33, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1}
+    residue_terminal_fiber: max_mixed=30 routes={'Q-WITNESS': 27, 'COVERING-MOMENT': 2, 'BOUNDARY-AP-GW': 1}
+    erdos_turan_residue_zipper: max_mixed=4 routes={'Q-WITNESS': 3, 'COVERING-MOMENT': 1}
+    henselian_unit_zipper: max_mixed=0 routes={}
+    et_hensel_unit_zipper: max_mixed=0 routes={}
+    et_hensel_qrule_zipper: max_mixed=0 routes={}
+    magnitude_cocycle: max_mixed=0 routes={}
+    barcode_shadow: max_mixed=0 routes={}
+    packet_zipper: max_mixed=0 routes={}
+
+[2] Proof readout
+  Residue-terminal fibers are close but still mixed.
+  Erdos-Turan bins alone change mixed fibers by -21 and max mixed by -26.
+  Henselian unit-rule bins alone change mixed fibers by -27 and max mixed by -30.
+  Zipping both changes mixed fibers by -27 and max mixed by -30.
+  Adding the coarse q/unit-excess lane leaves 0 mixed route fibers; exact magnitude leaves 0.
+  Interpretation: on this target fiber, the Henselian unit rule is
+  already a route-pure convergence carrier, while Erdos-Turan bins explain
+  most of the visible contraction before the p-adic unit rule finishes it.
+  The next lemma should prove this unit-lift split familywise, then stress
+  the same rule on the full HYP-2963 bank before replacing exact magnitude.
+
+[3] Target automatic word MFCMMCCFFFCCC
+  rows=639
+  routes={'Q-WITNESS': 603, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 33}
+  families={'infinite q-witness family': 603, 'AP/Goddyn-Wong boundary family': 2, 'unit-petal sporadic family': 1, 'open-Haar loose family': 29, 'covering boundary-moment family': 4}
+  distinct M values=33
+
+  residue_terminal_fiber: fibers=181 mixed_route=27 largest_mixed=30
+    routes={'Q-WITNESS': 27, 'BOUNDARY-AP-GW': 1, 'COVERING-MOMENT': 2}
+      AP                                 M=   1/14 mu=        0 q0=14 et=((52, 9), (377, 41), (497, 61)) hU=((0, 0, (1, 0, 0, 0)), (0, 0, (0, 0, 5, 0)), (0, 0, (1, 0, 0, 0))) qrule=('q=14', 'boundary', 0, 4) route=BOUNDARY-AP-GW
+      magnitude liar 12->96              M=  8/101 mu=5219/840840 q0=14 et=((52, 9), (377, 39), (497, 58)) hU=((0, 0, (0, 3, 1, 3)), (0, 0, (0, 0, 2, 2)), (0, 0, (0, 0, 3, 11))) qrule=('q=14', 'open-excess', 11, 7) route=COVERING-MOMENT
+      single swap 12->180                M=   3/37 mu=2833/315315 q0=14 et=((52, 9), (377, 40), (497, 57)) hU=((0, 0, (0, 0, 1, 1)), (0, 0, (0, 1, 1, 5)), (0, 0, (0, 0, 37, 5))) qrule=('q=14', 'open-excess', 5, 6) route=COVERING-MOMENT
+      single swap 11->53                 M=   1/11 mu=71483/1350440 q0=11 et=((52, 9), (377, 36), (514, 60)) hU=((0, 0, (0, 0, 3, 3)), (0, 0, (0, 0, 2, 3)), (0, 0, (0, 0, 11, 3))) qrule=('q<=13', 'open-excess', 3, 4) route=Q-WITNESS
+      two drop(11, 12)->add(25, 26)      M=   1/11 mu=24181/382200 q0=11 et=((52, 9), (377, 35), (497, 51)) hU=((0, 0, (0, 0, 3, 3)), (0, 0, (0, 0, 2, 3)), (1, 0, (0, 0, 11, 3))) qrule=('q<=13', 'open-excess', 3, 4) route=Q-WITNESS
+      two drop(11, 13)->add(25, 27)      M=   1/11 mu=1021/13230 q0=11 et=((52, 9), (377, 36), (497, 51)) hU=((0, 0, (0, 0, 3, 3)), (0, 0, (0, 0, 2, 3)), (0, 0, (0, 0, 11, 3))) qrule=('q<=13', 'open-excess', 3, 4) route=Q-WITNESS
+  erdos_turan_residue_zipper: fibers=595 mixed_route=6 largest_mixed=4
+    routes={'Q-WITNESS': 3, 'COVERING-MOMENT': 1}
+      single swap 13->143                M= 11/144 mu=4307/194040 q0=14 et=((104, 19), (404, 48), (497, 60)) hU=((0, 0, (4, 0, 0, 2)), (0, 0, (2, 0, 0, 1)), (0, 0, (0, 0, 46, 10))) qrule=('q=14', 'open-excess', 10, 8) route=COVERING-MOMENT
+      single swap 13->31                 M=   1/13 mu=194039/6015240 q0=13 et=((104, 19), (404, 48), (497, 60)) hU=((0, 0, (0, 0, 1, 1)), (0, 0, (0, 0, 4, 1)), (0, 0, (0, 0, 13, 1))) qrule=('q<=13', 'open-excess', 1, 4) route=Q-WITNESS
+      single swap 13->59                 M=   1/13 mu=53509/1635480 q0=13 et=((104, 19), (404, 48), (497, 60)) hU=((0, 0, (0, 0, 1, 1)), (0, 0, (0, 0, 4, 1)), (0, 0, (0, 0, 13, 1))) qrule=('q<=13', 'open-excess', 1, 4) route=Q-WITNESS
+      single swap 13->115                M=   1/13 mu=13469/405720 q0=13 et=((104, 19), (404, 48), (497, 60)) hU=((0, 0, (0, 0, 1, 1)), (0, 0, (0, 0, 4, 1)), (0, 0, (0, 0, 13, 1))) qrule=('q<=13', 'open-excess', 1, 4) route=Q-WITNESS
+  henselian_unit_zipper: fibers=424 mixed_route=0 largest_mixed=0
+  et_hensel_unit_zipper: fibers=627 mixed_route=0 largest_mixed=0
+  et_hensel_qrule_zipper: fibers=627 mixed_route=0 largest_mixed=0
+  magnitude_cocycle: fibers=638 mixed_route=0 largest_mixed=0
+  barcode_shadow: fibers=639 mixed_route=0 largest_mixed=0
+  packet_zipper: fibers=639 mixed_route=0 largest_mixed=0
+
+[4] Tournament Analysis
+  vertices_are=zipper teeth / proof carriers, not runners
+  observable=route purity, max mixed-fiber size, convergence from prior
+             tooth, Erdos-Turan retention, Henselian-unit retention,
+             magnitude retention, packet-label retention, proof cost
+  switch=majority comparison of observable vectors
+  tie_hamiltonian_path=automatic_word > residue_terminal_fiber > erdos_turan_residue_zipper > henselian_unit_zipper > et_hensel_unit_zipper > et_hensel_qrule_zipper > magnitude_cocycle > barcode_shadow > packet_zipper
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  score_order=et_hensel_qrule_zipper > et_hensel_unit_zipper > packet_zipper > magnitude_cocycle > barcode_shadow > henselian_unit_zipper > erdos_turan_residue_zipper > residue_terminal_fiber > automatic_word
