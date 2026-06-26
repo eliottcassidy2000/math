@@ -89,6 +89,39 @@ ranking.
 
 Next pull: implement the HYP-2963 observer-cut orbit ledger and emit the
 payload-column tournament for coarse route/status fibers.
+## codex-2026-06-26-S221 -- tournament value-origin ledger (HYP-3057/T1139/LTI-204/LTT-102)
+
+User noted the `48 + 12 = 56`/`12` pattern around tournament isomorphism
+classes and asked to investigate incident words, ordered-pair/edge sectors,
+cross-sector orientation, deletion fibers, and S217 rectangle/hourglass
+residues.  First correction: `48+12=60`; the first shifted failure is
+`R(5)=48`, `U(6)=56`, defect `8`.
+
+Added `04-computation/tournament_value_origin_ledger_codex_s221.py` and
+stored `05-knowledge/results/tournament_value_origin_ledger_codex_s221.out`.
+Created HYP-3057, T1139, LTI-204, LTT-102, and reflection
+`07-reflections/tournament-value-origin-ledger-codex-S221.md`.  Renumbered
+after incoming HYP-3054/T1136/LTI-201/LTT-099 landed as the observer-extension
+cut payload calculus; this S221 ledger is the count-origin layer on top of
+that cut-payload calculus.
+
+Main result: the value `12` is structural but diagonal, not the first
+additive correction.  It appears as `R(4)=12`, `U(5)=12`, `SC(6)=12`,
+the `5->6` parent-class count, the source/sink deletion slices, and the
+small exact triple-carrier level from S214.  The exact first-failure ladder is
+`U(5)=12`, raw incident extensions `384`, parent-automorphism word orbits
+`R(6)=296`, unrooted child sinks `U(6)=56`, rooted 5-perspective plus
+incident word equals ordered-pair perspectives `1408`, and directed-edge /
+unordered-pair perspectives equal `704`.
+
+The guardrail is `value_origin_type`: class count, rooted perspective count,
+self-converse fixed branch, incident-word orbit count, deletion-fiber
+multiplicity, ordered-pair/edge-sector sidecar, fixed-path Hamiltonian fiber,
+or rectangle/hourglass residue.  The same visible integer can carry different
+lost coordinates.  For LRC, no small scalar or tournament quotient should be
+trusted until it states which origin type it preserves, what coordinate it
+destroys, and whether the loss is retained, reconstructed, annihilated,
+descended, or emitted as named residual debt.
 
 ## codex-2026-06-26-S217 -- tournament diagonal-layer flow (HYP-3053/T1135/LTI-200/LTT-098)
 

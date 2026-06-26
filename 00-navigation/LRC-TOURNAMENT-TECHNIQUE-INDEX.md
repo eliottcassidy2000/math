@@ -123,6 +123,9 @@ obligations, and proof-carrier interfaces.
 - Need to exploit the user's diagonal tiling-growth model:
   use LTT-098 and treat `K_{k,k+1}` line flow as a rectangle-cycle
   duplication law before counting lines as independent data.
+- Need to decide whether a small tournament integer is a class count, rooted
+  count, fixed branch, deletion fiber, edge-sector sidecar, or cycle residue:
+  use LTT-102 and attach `value_origin_type` before promoting the number.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2456,6 +2459,55 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2963, THM-572, LTI-203, LTI-202, LTI-201, LTT-101, LTT-100, LTT-099,
   T1138, T1137, T1136, OPEN-Q-108.
 
+### LTT-102: Tournament Value-Origin Ledger
+
+- **Move:** Treat small tournament integers as typed shadows.  Before using a
+  count, tag whether it comes from an unlabelled class count, rooted/node
+  perspective, self-converse fixed branch, incident-word orbit,
+  deletion-parent fiber, ordered-pair/edge-sector sidecar, fixed-path
+  Hamiltonian presentation fiber, or rectangle/hourglass cycle-space residue.
+- **LRC use:** HYP-3057 extends HYP-3054's observer-extension cut calculus by
+  typing the numerical origin of the cut payload.  It corrects the first
+  shifted failure to `48+8=56` and reframes the user's `12` signal as a
+  diagonal alignment
+  `R(4)=U(5)=SC(6)=12`.  This is a quotient-admissibility warning: the same
+  visible number can come from incompatible proof origins.  For LRC packets,
+  `value_origin_type` should travel with every scalar or tournament quotient
+  until the lost coordinate is retained, reconstructed, annihilated,
+  descended, or named as residual debt.
+- **Preserves:** Origin of the number, parent class, incident-word orbit,
+  root orbit count, child sink class, deletion-parent profile,
+  self-converse status, fixed-path fiber, edge-sector cross orientation, and
+  rectangle/hourglass residue class.
+- **Forgets / guardrail:** A naked integer forgets whether it is a class count,
+  a rooted perspective, a fixed branch, or a cycle-space residue.  The `12`
+  alignment is real but not one object; using it as one scalar would merge
+  different quotient kernels.
+- **First-failure ledger:** At `5 -> 6`, `U(5)=12`, raw incident extensions
+  are `384`, parent-Aut word orbits/rooted children are `R(6)=296`, unrooted
+  sinks are `U(6)=56`, rooted 5-perspective plus incident word equals
+  ordered-pair perspectives `1408`, and directed-edge/unordered-pair
+  perspectives equal `704`.
+- **Tournament fingerprint:** vertices are value-origin carriers, not runners:
+  endpoint owner packet, edge-sector cross orientation, deletion-parent fiber,
+  incident-word orbit, self-converse fixed branch, rooted perspective count,
+  rectangle/hourglass residue, fixed-path Hamiltonian fiber, raw unlabelled
+  class count, and raw integer coincidence.  The synthesis gauge orients toward
+  higher retained LRC payload and lower hidden debt.
+- **Next pull:** Add `value_origin_type`, `parent_class`,
+  `incident_word_orbit`, `root_orbit_count`, `child_sink_class`,
+  `deletion_parent_profile`, `self_converse_status`, `fixed_path_fiber`,
+  `edge_sector_cross_orientation_word`, `rectangle_residue_class`,
+  `hourglass_residue_class`, and `lost_coordinate_exit` to tournament/LRC
+  packet experiments.  Then test whether route/status-mixed fibers split
+  faster after their small numerical shadows are typed by origin.
+- **Pointers:** HYP-3057, HYP-3054, HYP-3053, HYP-3052, HYP-3051, HYP-3050, HYP-3049,
+  HYP-3048, HYP-3047, HYP-3039, HYP-2991, HYP-2989, THM-381, THM-385,
+  LTI-204, LTI-201, LTI-200, LTI-199, LTI-198, LTI-197, LTI-196, LTI-195,
+  LTT-102, LTT-099, LTT-098, LTT-097, LTT-096, LTT-095, LTT-094, T1139,
+  T1136, T1135, T1134, T1133,
+  T1132, T1131, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -2502,6 +2554,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    cycle conflict pair ID,
    diagonal word orbit, K position-line profile, aligned pair counts,
    newest link bit, deletion-parent profile,
+   value origin type, child sink class, self-converse status,
+   fixed path fiber, rectangle residue class, hourglass residue class,
+   lost-coordinate exit,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
