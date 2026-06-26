@@ -1044,6 +1044,30 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3013, HYP-3012, HYP-3009, HYP-3008, HYP-2946, HYP-2945,
   HYP-2941, HYP-2221, HYP-2220, HYP-2963, THM-572, LTI-162.
 
+### LTT-065: Creative Packet-Lens Tournament
+
+- **Move:** Treat speculative proof ideas as exact packet lenses: Cech nerve
+  classes, tropical slack potentials, CRT/solenoid charts, endpoint
+  chip-firing currents, danger-count distributions, matroid tope/cocircuit
+  walls, and automaton/divisor sidecars.
+- **LRC use:** Separates AP/GW zero-open boundary controls from K33/petal
+  positive-open rows that still have denominator-14 boundary witnesses, and
+  from covering rows whose first useful chart can move to denominator `41`.
+- **Preserves:** Safe-component topology, exact slack, CRT witness chart,
+  endpoint current, danger-count distribution, tope/cocircuit state, and typed
+  arithmetic/automatic sidecars.
+- **Forgets / guardrail:** Any one creative lens forgets another coordinate:
+  Cech loses arithmetic period, tropical slack loses owner identity, CRT loses
+  real interval topology, and danger-count duals lose route labels.
+- **Next pull:** Add `cech_nerve_class`, `positive_component_count`,
+  `tropical_slack_margin`, `crt_solenoid_first_chart`,
+  `endpoint_current_word`, `danger_count_distribution`,
+  `tope_cocircuit_wall_state`, and `automaton_divisor_sidecar` to HYP-2963
+  sidecars, then test hard covering families.
+- **Pointers:** HYP-3014, HYP-3013, HYP-3012, HYP-3008, HYP-2974, HYP-2973,
+  HYP-2970, HYP-2969, HYP-2965, HYP-2963, HYP-2949, HYP-2948, THM-572,
+  LTI-163.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1057,6 +1081,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    unit-excess apex, perfect-control status, abundancy defect,
    divisor-lattice factorization, prime-q flag, product-incidence rank,
    automaton transition state,
+   Cech nerve class, positive-component count, tropical slack margin, CRT
+   solenoid first chart, endpoint current word, danger-count distribution,
+   tope/cocircuit wall state, automaton-divisor sidecar,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
