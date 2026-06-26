@@ -167,3 +167,36 @@ rank-one layer sheet
   -> edge/triple/cycle/conflict sidecars
   -> unrooting collision fiber
 ```
+
+## Addendum: S216 Diagonal-Layer Transport
+
+S216 makes the S215 extension carrier recursive.  The theorem-facing growth
+object is:
+
+```text
+parent class + diagonal word orbit under Aut(parent)
+  -> rooted child
+  -> unrooted child sink
+```
+
+At `5 -> 6`, the exact numbers are:
+
+```text
+raw labelled diagonal extensions = 384
+parent-automorphism word orbits = 296
+rooted 6-count = 296
+unrooted sinks = 56
+```
+
+The `k^2+k` cross-lines should be read as the `K_{k,k+1}` position-line
+carrier, not as independent binary data.  With word weights `a=sum(w)` and
+`b=sum(u)`, the line-count matrix satisfies:
+
+```text
+N00*N11 = N01*N10
+```
+
+The aligned diagonal and newest link bit carry the two-newest triangle
+increment.  This makes `diagonal_word_orbit`, `K_position_line_profile`,
+`aligned_pair_counts`, `newest_link_bit`, and `deletion_parent_profile` the
+next sidecars after the ordered-pair incident word.

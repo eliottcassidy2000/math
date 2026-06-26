@@ -34,7 +34,7 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 As of **Friday, June 26, 2026**, the newest coordination layer is **Fixed-Path Diagonal-Layer Flow (codex-S217)**, built directly over the **Diagonal Layer Transport Law (codex-S216)** and the S211-S215 controlled-forgetting ladder.
 
-This checkpoint formalizes the chain from S211 through S217. S211 identifies the first A000568/rooted-perspective defect and its rootless `[3,3]` Burnside sidecar; S212 translates forgotten coordinates into matrix observability, kernel, Smith, and Schur-complement sidecars; S213 gives the first exact ordered-pair/edge-sector repair via `cross_sector_orientation_word`; S214 widens that repair to exact edge/triple/cycle/conflict carriers; S215 retains the rooted `n -> n+1` extension sheet before unrooting; S216 makes the incident payload recursive by using parent-automorphism diagonal word orbits, deletion-parent fibers, aligned triangle-flow sidecars, and `K_{k,k+1}` rank-one line profiles.
+This checkpoint formalizes the transition from the S211 Perspective-Depth Ladder through the S212 Expanded Tournament Matrix Atlas, the S213 Edge-Perspective Extension Lift, the S214 edge/triple carrier extension, the S215 rooted layer-extension flow, and the S216 diagonal-layer transport law. S211 says rooted node depth saturates before the A000568 shift is recovered and the Burnside defect is rootless/cyclic; S212 says the lost coordinate must be carried by a sidecar observability matrix; S213 gives the first exact sidecar column, where a rooted 5-perspective plus the new observer's incident word is exactly an ordered-pair perspective on `U(6)` and cross-sector orientation upgrades sector decks from `55/56` to `56/56`; S214 widens that repair to exact non-node carriers, with edge perspectives and triple perspectives both totaling `88` at base size `m=5`, split as `64` transitive triples and `24` cyclic triples; S215 reframes the whole growth step as a retained extension carrier, where layer sheets are rank-one/coboundary objects and one-vertex tournament growth counts incident-word orbits before unrooting; S216 makes that incident payload recursive, with parent automorphism word-orbits giving rooted children, deletion fibers giving unrooted sinks, and `K_{k,k+1}` line counts supplying rank-one transport sidecars.
 
 S217 adds **tournament diagonal-layer flow and half-tiling quotient laws (HYP-3053)**. It reads the user's `k^2+k` inter-layer lines as a `GF(2)` coboundary/cut-space carrier on `K_{k,k+1}`: `k(k+1)` line observations have rank `2k`, with `k(k-1)` rectangle redundancies. Globally, full adjacent-layer flow has rank `C(n,2)-1` and redundancy `2*C(n-1,3)+C(n-2,2)`, decomposing into local rectangle cycles plus hourglass cycles. Fixed Hamiltonian-path half-tilings cover A000568 classes with fiber `H(T)/|Aut(T)|`; path reversal plus converse is only a diagonal `Z2` sidecar quotient. The S217 instruction is to treat rectangle/hourglass residues as hidden endpoint-owner, barcode, active-bottleneck, route, or proof-obligation coordinates, not as scalar line counts.
 
@@ -50,11 +50,14 @@ invoked to preserve the elliptic regulator, 2-adic volume unit, Henselian
 valuation unit, Hensel-Krasner valuation unit, Monsky volume unit, singular 
 residue valuation unit, and Fermat-Catalan valuation unit while stabilizing 
 valuations against local-global obstructions. The S210/S212 synthesis ensures
-that forgotten matrix quotient coordinates are handled by Smith normal forms,
-Schur complements, or observability columns; S213/S214 supply exact
-edge-sector and edge/triple carrier sidecars; S215/S216 retain rooted extension,
-diagonal transport, and deletion-fiber coordinates, preserving the p-adic stability
-of the global packet sheaf.
+that forgotten coordinates in matrix quotients are explicitly handled via
+Smith normal forms, Schur complements, or observability columns; the S213
+synthesis supplies the first exact A000568 extension sidecar by restoring the
+edge-sector incident deck and cross-sector orientation; the S214 synthesis
+widens that sidecar into exact edge/triple carrier obligations; the S215
+synthesis retains the parent/root extension address before unrooting; the
+S216 synthesis keeps diagonal transport/deletion-fiber sidecars recursive,
+preserving the p-adic stability of the global packet sheaf.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -72,10 +75,10 @@ fiber zipper, the arc-Cech nerve carrier, the safe-component stalk
 descent, the Haar tile repair, the residual tooth atlas, the residual 
 capacitor flow cuts, the hidden statement ledger, the owner-strip 
 filtration, the comprehensive lens map, the endpoint owner transfer 
-carrier, the tournament matrix atlas, the expanded matrix atlas, the
-perspective-depth sidecar ladder, the A000568 edge perspective lift, the
-edge/triple carrier extension, the rooted layer-extension flow, and the
-diagonal layer transport law, which constrain the global uniform
+carrier, the tournament matrix atlas, the expanded matrix atlas, the perspective-depth sidecar
+ladder, the A000568 edge-perspective lift, the edge/triple carrier extension,
+the rooted layer-extension flow, and the diagonal-layer transport law,
+which constrain the global uniform
 discrepancy tail metrics (Delta_w) and Gowers G^d norms, ensuring the F7 
 residual sector remains synchronized, prevents high-frequency spectral 
 leakage, and preserves the 2-adic Littlewood discrepancy unit, 2-adic Roth 
@@ -95,16 +98,26 @@ that prevent spectral leakage by resolving growth-step duplications before
 unrooting; the S217 fixed-path flow law formalizes the rectangle/hourglass
 cycle-space guardrails that decide when duplicated line data descends to
 potentials and when it names a real hidden sidecar.
+
+The S210 matrix atlas formalizes the observability guardrails that prevent
+spectral leakage by requiring each matrix quotient to preserve route/status
+purity; S211 adds the root-object guardrail that decides which observer
+carries a leaked coordinate; S213 identifies `cross_sector_orientation_word`
+as the first worked observability column after the rooted cache; S214 marks
+edge/triple/cycle/conflict carriers as the next exact observer obligations;
+S215 keeps the full `n -> n+1` rooted extension sheet before final unrooting;
+S216 keeps parent-automorphism word orbits and deletion fibers as the recursive
+transport sidecar; S217 keeps rectangle/hourglass cycle residues as the
+fixed-path line-flow sidecar.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure 
 that prime gap fluctuations do not induce structural leakage across the 
-S171 ledger. The S210/S212/S213/S214/S215/S216 transition preserves the
-tournament matrix atlas, expanded matrix atlas, perspective-depth sidecar
-ladder, A000568 edge perspective lift, exact edge/triple carrier extension,
-rooted layer-extension flow, and diagonal layer transport law
+S171 ledger. The S210/S212/S213/S214/S215/S216 transition preserves the tournament matrix atlas,
+expanded matrix atlas, perspective-depth sidecar ladder, A000568 edge perspective lift,
+exact edge/triple carrier extension, rooted layer-extension flow, and diagonal-layer transport law
 (preserving the recurrence algebraic unit, Poincaré recurrence unit, 
 automatic gap carrier unit, automatic lacunary filter unit, gap automaton 
 carrier unit, perfect-number packet unit, route-purity unit, binding-pair 
@@ -112,9 +125,7 @@ switch unit, automatic fiber zipper unit, arc-Cech nerve unit,
 safe-component stalk unit, Haar tile stabilizer unit, residual tooth unit, 
 residual capacitor unit, hidden statement unit, owner-strip filtration unit, 
 comprehensive lens unit, endpoint owner transfer unit, tournament matrix
-unit, expanded matrix atlas unit, perspective-depth sidecar unit, edge
-perspective unit, edge/triple carrier unit, rooted extension unit, and
-diagonal transport unit alongside mu approx 1.451).
+unit, expanded matrix atlas unit, perspective-depth sidecar unit, edge perspective unit, edge/triple carrier unit, rooted extension unit, and diagonal transport unit alongside mu approx 1.451).
 ```
 
 ---
@@ -149,61 +160,92 @@ payloads are attached, the failed cycle relation names the hidden coordinate.
 
 ---
 
-## codex-S216 -- Diagonal Layer Transport Law (checkpoint)
+## codex-S216 -- Diagonal-Layer Transport Law (checkpoint)
 
-Formalized the transition to S216, integrating the diagonal layer transport 
-law as a structural guardrail for the **LRC(14) Tournament Spectral 
-Decomposition**.
+Formalized the S216 follow-on to HYP-3051, integrating
+HYP-3052/T1134/LTI-199/LTT-097 as the recursive transport carrier above the
+rooted extension flow.
 
-### 1. Diagonal Transport Orbit DAG & Growth Laws
-The **diagonal layer transport law** (HYP-3052) preserves the **diagonal 
-transport unit** by formalizing the tournament growth step as an orbit DAG. It 
-advances the architecture by identifying the diagonal incident word modulo 
-parent automorphisms as the missing rooted payload. This synthesis enforces 
-the **No-Free-Slider rule (HYP-2990)** by demonstrating that "rooted" growth 
-redundancy is resolved by the parent-automorphism quotient, while unrooted 
-duplication is resolved by the deletion-fiber quotient. It further identifies 
-the `K_{k,k+1}` position-line carrier as a low-rank (rank one) redundancy 
-that simplifies tiling-packet bookkeeping.
+### 1. Transport Orbit DAG
 
-### 2. Edge Perspective & Matrix Atlas Sync (S213/S210 Sync)
-The S216 layer maintains the S213/S210 stabilizers: **A000568 edge 
-perspective lift** (HYP-3049) and **tournament matrix atlas** (S210). It 
-integrates the diagonal transport sidecar as the refinement of the 
-ordered-pair sector deck, ensuring that the two-newest-triangle flow is 
-retained before a growth step is unrooted.
+Tournament growth should be read as:
 
-### 3. Agent Forum Debate
-The Poke Forum agents have concluded terminal debates (post_1782398412502.md 
-to post_1782473525000.md, and the S216 transport-law post_1782475536000.md), 
-confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth 
-approximation unit**, **p-adic Mahler measure unit**, **multivariate Mahler 
-measure unit**, **Erdős-Turán discrepancy unit**, **Beck-Fiala unit**, 
-**lacunary frequency unit**, **Fermat-Catalan valuation unit**, 
-**Hensel-Krasner valuation unit**, **Monsky volume unit**, **singular residue 
-valuation unit**, **recurrence algebraic unit**, **Poincaré recurrence unit**, 
-**automatic gap carrier unit**, **automatic lacunary filter unit**, **gap 
-automaton carrier unit**, **perfect-number packet unit**, **route-purity 
-unit**, **binding-pair switch unit**, **automatic fiber zipper unit**, 
-**arc-Cech nerve unit**, **safe-component stalk unit**, **Haar tile 
-stabilizer unit**, **residual tooth unit**, **residual capacitor unit**, 
-**hidden statement unit**, **owner-strip filtration unit**, **comprehensive 
-lens unit**, **endpoint owner transfer unit**, **tournament matrix unit**, 
-**edge perspective unit**, and **diagonal transport unit** as the final 
-structural pillars for S216.
+```text
+parent class + diagonal word orbit under Aut(parent)
+  -> rooted child
+  -> unrooted child sink
+```
+
+At `5 -> 6`, raw labelled diagonal extensions are `384`, parent-automorphism
+word orbits/rooted children are `296`, and all `56` unrooted sinks are reached.
+
+### 2. Rank-One Line Law
+
+For consecutive layer words with weights `a=sum(w)` and `b=sum(u)`, the
+`K_{k,k+1}` line-count matrix satisfies `N00*N11=N01*N10`.  The aligned
+diagonal plus newest link bit gives the two-newest triangle increment.
+
+### 3. LRC Sidecar Rule
+
+Keep `diagonal_word_orbit`, `K_position_line_profile`, `aligned_pair_counts`,
+`newest_link_bit`, `cross_sector_orientation_word`, and
+`deletion_parent_profile` until the unrooting/deletion-fiber payload is
+retained, reconstructed, annihilated, descended, or named as residual debt.
+
+---
+
+## codex-S215 -- Rooted Layer-Extension Flow (checkpoint)
+
+Formalized HYP-3051/T1133/LTI-198/LTT-096 as the enumeration-side carrier:
+rank-one/coboundary layer sheets and incident-word Burnside orbits come before
+unrooted A000568 sinks.
+
+### 1. Rooted Extension Law
+
+For a parent class `[T]`, one-vertex growth first quotients incident words by
+`Aut(T)`, giving `E(n->n+1)=R(n+1)` before the final unrooting quotient.
+
+### 2. LRC Sidecar Rule
+
+Retain `parent_class`, `root_orbit`, `incident_word_orbit`,
+`layer_boundary_word`, and `unrooting_collision_fiber` until the lost coordinate
+is reconstructed, annihilated, descended, or named residual debt.
+
+---
+
+## codex-S214 -- Perspective Carrier Ladder (checkpoint)
+
+Formalized HYP-3050/T1132/LTI-197/LTT-095 as the broad carrier theorem above
+the S213 ordered-pair subcase.
+
+### 1. First Defect Location
+
+Exact rooted node perspectives satisfy `P(m)=A000568(m+1)` through `m=4` and
+first fail at base size `m=5`: `P(5)=48` while `A000568(6)=56`.  The missing
+`8` states are observer-extension cut data, not another node-depth layer.
+
+### 2. Non-Node Carrier Counts
+
+At `m=5`, directed-edge perspectives and triple perspectives both total `88`;
+triples split into `64` transitive and `24` cyclic.
 
 ---
 
 ## codex-S213 -- A000568 Edge Perspective Lift (checkpoint)
 
-Formalized the transition to S213, integrating the A000568 edge perspective 
-lift.
+Formalized HYP-3049/T1131 as the first exact edge-sector subcase feeding the
+shared LTI-197/LTT-095 carrier slot.
 
----
+### 1. Ordered-Pair Lift
 
-S211 supplies the immediate columns: edge-sector decks, cycle/chirality traces,
-clique insertion cuts, rootless `[3,3]` sidecars, endpoint-owner strips, and
-conflict-fiber roots.
+At `P(5)=48 < U(6)=56`, a rooted 5-perspective plus the new observer's incident
+word is exactly an ordered-pair perspective on a six-tournament: `1408=1408`.
+
+### 2. Cross-Sector Repair
+
+Directed-edge perspective is the old/new-role quotient with `704` states.
+Sector size/internal decks split `55/56` six-classes; cross-sector orientation
+splits `56/56`.
 
 ---
 
