@@ -184,6 +184,9 @@ obligations, and proof-carrier interfaces.
 - Need to test final route compatibility:
   use LTT-112 as the median-graph finalization check for route triples after
   LTT-111/LTT-110/LTT-109 and controlled-forgetting sidecars.
+- Need to turn the Hodge-cycle lens into an exact residual proof matrix:
+  use LTT-116 after LTT-111/LTT-101/LTT-108/LTT-113/LTT-114/LTT-115 and record first-tooth
+  observability plus the rational cycle-class image before naming F7.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -3137,6 +3140,51 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-215, LTI-214, LTT-115, LTT-114, LTT-113, LTT-112, T1152, T1151,
   OPEN-Q-108.
 
+### LTT-116: Cycle-Class Observability Matrix
+
+- **Move:** Turn residual proof debt into two exact matrices: a first-tooth
+  observability matrix over route/status-changing fibers, and a rational
+  cycle-class matrix from named certificate generators to residual cochains.
+- **LRC use:** HYP-3071 instantiates HYP-3066 on the exact S199/S200 HYP-2963
+  summaries after the HYP-3070 route-triple center-control addendum, the
+  HYP-3069 Boolean route-center gate, and the HYP-3067/HYP-3068 median
+  owner/root warnings. On the `15` strict-open
+  coarse ET+unit route-mixed fibers, `arc_topology_compact` separates `13/15`,
+  while `coarse_safe_stalk`, exact stalk, magnitude cocycle, first primitive
+  safe q, and primitive deck each separate `15/15`. The first-tooth proof
+  shape is arc topology first, coarse stalk only for the two topology
+  collisions.
+- **Preserves:** Boundary/open status, Q-WITNESS versus COVERING-MOMENT route
+  separability, first legal sidecar tooth, owner/root/median-center hooks,
+  cycle-generator names, exact coefficient ring, rank/image status, and
+  explicit residual basis atoms.
+- **Forgets / guardrail:** Exact packet identity and exact `M` are destroyed
+  by the summary matrix unless packet cochain coordinates are attached. A rank
+  or span statement over template atoms is not yet a full HYP-2963 cochain
+  computation. `phantom_f7_class` is named debt, not a proof exit.
+- **Tournament fingerprint:** vertices are proof carriers / sidecar columns /
+  certificate generators, not runners. Pairwise observable is
+  `(residual_fiber_separation_count, cycle_atom_support, inverse_payload_cost)`;
+  the S237 scout is transitive with score histogram `{0:1,...,13:1}`, no
+  directed 3-cycles, singleton SCCs, and one Hamiltonian path
+  `coarse_safe_stalk > primitive_safe_deck_2_13 > arc_topology_compact >
+  endpoint_owner_boundary > haar_zipper_square > observer_cut_boundary >
+  rectangle_hourglass_cycle > partial_cube_theta_class >
+  simplex_face_boundary > octahedral_face_curl > toeplitz_square_scale_gate >
+  roth_minkowski_low_height_wall > k33_state_lift_incidence >
+  phantom_f7_marker`.
+- **Next pull:** Replace the template rows with actual HYP-2963 packet
+  cochains: topology, owner current, route-triple center-control status,
+  primitive deck, Haar zeta, observer-cut payload, rectangle/hourglass residue,
+  partial-cube Theta/simplex sidecar,
+  low-height wall, octahedral curl, Toeplitz scale, median owner/root fields,
+  median-center status, and state-lift target. Then row-reduce over `Q` and
+  record `cycle_class_image_status`.
+- **Pointers:** HYP-3071, HYP-3070, HYP-3069, HYP-3068, HYP-3067, HYP-3066, HYP-3065,
+  HYP-3063, HYP-3036, HYP-3035, HYP-3033, HYP-2997, HYP-2995, HYP-2963,
+  HYP-2887, THM-572, LTI-218, LTI-217, LTI-216, LTI-215, LTI-214, LTI-213, LTI-212,
+  LTI-210, LTI-203, LTT-116, LTT-115, LTT-114, LTT-113, LTT-112, LTT-111, LTT-110,
+  LTT-108, LTT-101, T1153, T1152, T1151, T1150, T1149, T1148, OPEN-Q-108.
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,

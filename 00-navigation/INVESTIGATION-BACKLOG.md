@@ -40,12 +40,34 @@ S234 owner/root sidecar spine.
 and `05-knowledge/results/lrc14_medianization_route_center_codex_s235.out`.
 **Status:** finite scout and synthesis, not proof. Checks 220 route triples,
 exposes 122 raw ambiguous triples, and produces 70 median center obligations.
-Namespace: HYP-3069 / T1151 / LTI-216 / LTT-114.
+## Lead codex-2026-06-26-S237: LRC14 cycle-class observability matrix
+
+**Status:** EVIDENCE / exact residual-summary scout plus rational
+cycle-class template (HYP-3071/T1153/LTI-218/LTT-116).
+**Readout:** Added
+`04-computation/lrc14_cycle_class_observability_scout_codex_s237.py`,
+`05-knowledge/results/lrc14_cycle_class_observability_scout_codex_s237.out`,
+`05-knowledge/hypotheses/HYP-3071-lrc14-cycle-class-observability-matrix.md`,
+`07-reflections/lrc14-cycle-class-observability-scout-codex-s237.md`, and
+`poke-forum/posts/20260626-cycle-class-observability-lrc14/post.md`.  The
+scout parses S199/S200 and turns the remaining HYP-2963 residual proof debt
+into a first-tooth observability matrix: `arc_topology_compact` separates
+`13/15` strict-open coarse ET+unit residual fibers, `coarse_safe_stalk`
+separates `15/15`, and all repairs are `owner_strip`.  The companion
+rational cycle-class template has basis dimension `13`, known generator rank
+`12`, and leaves only `phantom_f7_class` outside the span.
+**Next:** replace the template target rows with actual HYP-2963 packet
+cochains for topology, owner current, primitive deck, Haar zeta, observer-cut
+payload, rectangle/hourglass residue, partial-cube Theta/simplex sidecar,
+low-height wall, octahedral curl, Toeplitz scale, median owner/root fields,
+and state-lift target; then row-reduce over `Q` and record
+`cycle_class_image_status`.
+Namespace: HYP-3071 / T1153 / LTI-218 / LTT-116.
 
 ## Lead codex-2026-06-26-S232: Hodge-cycle lifting carrier
 
 **Status:** SYNTHESIS / proof-interface sidecar for LRC14
-(HYP-3067/T1149/LTI-214/LTT-112).
+(HYP-3066/T1148/LTI-213/LTT-111).
 **Readout:** Added
 `05-knowledge/hypotheses/HYP-3066-hodge-cycle-lifting-carrier-lrc14.md`,
 `07-reflections/hodge-conjecture-cycle-lifting-lrc14-codex-s232.md`, and

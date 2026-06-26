@@ -25,6 +25,27 @@ HYP-3069, HYP-3068, HYP-3067, HYP-3066, HYP-3065, HYP-3063, HYP-3059, HYP-3056, 
 HYP-3053, HYP-2997, HYP-2995, HYP-2458, HYP-2454, THM-572, LTI-216, LTT-114,
 T1151.
 
+**OPEN-Q-108 S237 cycle-class observability addendum:** HYP-3071 partially
+answers the S232 matrix pull downstream of the S236 center-control layer by
+building an exact scout over the S199/S200 HYP-2963 residual summaries plus a
+rational certificate-cycle template.  On
+the `15` strict-open coarse ET+unit residual route-mixed fibers, first-tooth
+observability is `arc_topology_compact` for `13` fibers and
+`coarse_safe_stalk` for the remaining `2`, with all repairs in the
+`owner_strip` class.  Coarse/exact stalks, magnitude cocycle, first primitive
+safe q, and primitive deck each separate `15/15`.  The cycle-class template
+has basis dimension `13`, known generator rank `12`, and only
+`phantom_f7_class` outside the span.  Open task: replace the template target
+rows with actual HYP-2963 packet cochains for topology, owner current,
+primitive deck, Haar zeta, observer-cut payload, rectangle/hourglass residue,
+partial-cube Theta/simplex sidecar, low-height wall, octahedral curl,
+Toeplitz scale, HYP-3070 center-control status, HYP-3068 owner/root fields,
+and state-lift target; then row-reduce over `Q` and record
+`cycle_class_image_status`. -> HYP-3071, HYP-3070, HYP-3069,
+HYP-3068, HYP-3067, HYP-3066, HYP-3065, HYP-3063, HYP-3036, HYP-3035,
+HYP-3033, HYP-2997, HYP-2995, HYP-2963, HYP-2887, THM-572, LTI-218,
+LTI-217, LTT-116, LTT-115, T1153, T1152.
+
 **OPEN-Q-108 S232 Hodge-cycle lifting addendum:** HYP-3066 turns the Hodge
 conjecture cue into a cycle-class sidecar for LRC14 rather than a theorem
 analogy.  Open task: build an exact rational cycle-class matrix on a HYP-2963

@@ -50,7 +50,8 @@ zero-open
   or named F7/THM-572/harmonic residual debt;
 
 positive-open residual
-  = first tooth + primitive deck + capacitor/zeta/owner cut.
+  = first tooth + primitive deck + capacitor/zeta/owner cut
+  + cycle-class image status.
 ```
 
 ## Lens Families
@@ -64,6 +65,7 @@ positive-open residual
 | Endpoint-owner / normal-fan / barcode lens | local bottleneck owners, safe bars, active supports, stalk shape | global route and period labels | endpoint-owner strip, barcode shape, normal-fan support, largest-stalk key | owner-strip descent |
 | Arithmetic / Farey / period lens | exact scale, qdiv, Farey excess, primitive periods, Henselian unit roots | topology and owner identity when reduced to numeric buckets | magnitude cocycle, primitive safe deck, Hensel unit/zero-root debt | status gate then route scheduler |
 | Harmonic / analytic / certificate lens | dual certificates, capacity meters, squarefree blindness, smoothing clocks | packet family, prime-power route, owner geometry if raw estimates are used | Fejer packet key, Ramanujan projector, analytic blindness report | packet-keyed certificate backend |
+| Cycle-class / observability lens | first legal sidecar tooth, rational certificate span, residual basis atom, image rank/status | exact row identity if only summaries are used; F7 meaning if phantom rows are anonymous | `first_tooth`, `cycle_class_image_status`, `algebraic_cycle_decomposition`, `phantom_f7_class` | proof matrix over packet sheaf |
 | Automata / sequence / lacunary lens | Moser/fibbinary/gap language, carry state, finite transition data, power-lift guards | exact safe intervals, AP/GW equality, theorem route | exact `M`, endpoint/topology sidecars, automaton shadow class | telemetry sidecar, not proof quotient |
 | Partial-cube sequence lens | Moser even/odd lane cuts, fibbinary Fibonacci-cube Theta classes, simplex directed-edge sectors, `K_{k,k+1}` bridge line potentials | exact packet scale, endpoint owners, route and certificate data if cut words are scalarized | `theta_class_word`, forbidden-adjacency mask, Moser `a+2b` split, bridge potential, rectangle redundancy class | automaton telemetry upgraded to controlled-forgetting cut carrier |
 | Pair / decoy / local switch lens | false switches, blocker teeth, pair shells, Haar square coordinates | row identity and route class if decoys are counted only | generator class, blocker deck, barcode/normal-fan relation, zeta class | first nonzero local cut |
