@@ -1,0 +1,137 @@
+=== LRC14 gap/automaton carrier scout S173 ===
+Status: synthesis computation and quotient guardrail; not a proof
+
+External source notes
+  arXiv:2506.04110: 2-adic Littlewood work uses doubling of continued-fraction data as a live obstruction carrier; for this pass it contributes the retained field 'doubling transition state'.
+  Ostrowski-Hadamard gap theorem: lacunary exponent support with ratio bounded above 1 creates natural-boundary behavior; for LRC it is a boundary warning, not a scalar certificate.
+  DOI 10.5555/1109557.1109610: the ACM record resolves to a computational-geometry 'large sticks and potatoes' paper, not Fermat-Catalan; here it contributes only a visibility/inscribed-core analogy.
+  Fermat-Catalan: the useful abstraction is the hyperbolic exponent budget 1/p + 1/q + 1/r < 1 as a finite-exception ledger.
+
+Finite automata
+  fibbinary_no_adjacent_one: states=['last0', 'last1', 'dead'], start=last0, accept=['last0', 'last1']
+    interpretation: binary normal forms with no adjacent 1s; doubling appends 0
+  moser_base4_01_digit_language: states=['ok', 'dead'], start=ok, accept=['ok']
+    interpretation: sums of distinct powers of 4; multiply by 4 appends 0
+
+Finite sequence audit through N=4096
+  fibbinary_count=378 first20=[0, 1, 2, 4, 5, 8, 9, 10, 16, 17, 18, 20, 21, 32, 33, 34, 36, 37, 40, 41]
+  moser_count=65 first20=[0, 1, 4, 5, 16, 17, 20, 21, 64, 65, 68, 69, 80, 81, 84, 85, 256, 257, 260, 261]
+  intersection_count=65 first20=[0, 1, 4, 5, 16, 17, 20, 21, 64, 65, 68, 69, 80, 81, 84, 85, 256, 257, 260, 261]
+  fibbinary_residues_mod14={0:31, 1:19, 2:33, 3:21, 4:34, 5:20, 6:34, 7:21, 8:36, 9:22, 10:33, 11:20, 12:33, 13:21}
+  moser_residues_mod14={0:5, 1:5, 2:5, 3:5, 4:5, 5:5, 6:5, 7:5, 8:5, 9:4, 10:4, 11:4, 12:4, 13:4}
+  fibbinary_mixed_residue_classes_mod14=14
+  moser_mixed_residue_classes_mod14=14
+  fibbinary_double_closure_violations=0
+  moser_times4_closure_violations=0
+  moser_double_closure_violations=63
+  lacunary_support_ratios: powers_of_2=2, powers_of_4=4; full fibbinary and Moser languages are finite-state sparse but not Hadamard-lacunary as full sequences.
+
+LRC14 unit-excess chain q=14p-1 against automaton languages
+  hits_with_p<=384: 21
+    p=  3 q=   41 tags=fibbinary        bin=        101001 base4=     221
+    p=  5 q=   69 tags=fibbinary+moser  bin=       1000101 base4=    1011
+    p= 19 q=  265 tags=fibbinary        bin=     100001001 base4=   10021
+    p= 21 q=  293 tags=fibbinary        bin=     100100101 base4=   10211
+    p= 23 q=  321 tags=fibbinary+moser  bin=     101000001 base4=   11001
+    p= 37 q=  517 tags=fibbinary        bin=    1000000101 base4=   20011
+    p= 39 q=  545 tags=fibbinary        bin=    1000100001 base4=   20201
+    p= 47 q=  657 tags=fibbinary        bin=    1010010001 base4=   22101
+    p= 79 q= 1105 tags=fibbinary+moser  bin=   10001010001 base4=  101101
+    p= 83 q= 1161 tags=fibbinary        bin=   10010001001 base4=  102021
+    p= 85 q= 1189 tags=fibbinary        bin=   10010100101 base4=  102211
+    p= 93 q= 1301 tags=fibbinary+moser  bin=   10100010101 base4=  110111
+    p=147 q= 2057 tags=fibbinary        bin=  100000001001 base4=  200021
+    p=149 q= 2085 tags=fibbinary        bin=  100000100101 base4=  200211
+    p=151 q= 2113 tags=fibbinary        bin=  100001000001 base4=  201001
+    p=157 q= 2197 tags=fibbinary        bin=  100010010101 base4=  202111
+    p=165 q= 2309 tags=fibbinary        bin=  100100000101 base4=  210011
+    p=167 q= 2337 tags=fibbinary        bin=  100100100001 base4=  210201
+    ... 3 more
+  readout: membership alone mixes every residue class; the packet must retain automaton state plus exact M/qdiv/endpoint labels.
+
+Fermat-Catalan style exponent budget
+  box=2 <= p <= q <= r <= 10
+  counts: hyperbolic=150 boundary=3 elliptic=12
+  first_hyperbolic_triples=[(3, 3, 4), (2, 4, 5), (3, 3, 5), (3, 4, 4), (2, 3, 7), (2, 4, 6), (2, 5, 5), (3, 3, 6), (3, 4, 5), (4, 4, 4), (2, 3, 8), (2, 4, 7)]
+  LRC use: if a residual packet needs simultaneous additive, multiplicative, and valuation exponents in the hyperbolic region, record it as finite-exception debt rather than a free scalar.
+
+Proposed packet fields
+  - automaton_language_id
+  - automaton_state_word
+  - gap_support_ratio_label
+  - hadamard_boundary_warning
+  - doubling_transition_state
+  - base4_digit_mask
+  - zeckendorf_carry_state
+  - valuation_exponent_budget
+  - finite_exception_budget
+  - visibility_core_label
+
+Tournament Analysis over proof/gap carriers
+  gauge=proof_priority
+    priority=('lrc_packet_transfer', 'quotient_safety', 'boundary_guardrail', 'proof_maturity', 'finite_state', 'gap_support', 'doubling_transfer', 'valuation_budget')
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+    directed_3cycles=0
+    scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+    hamiltonian_path_count=1
+    outdegree_path=labelled_lrc_gap_automaton_packet > two_adic_littlewood_hurwitz_doubling > moser_base4_digit_language > fibbinary_no_adjacent_language > large_stick_potato_visibility_core > ostrowski_hadamard_lacunary_boundary > skolem_mahler_lech_zero_set_guard > fermat_catalan_exponent_budget > raw_sequence_membership_scalar
+  gauge=automaton_priority
+    priority=('finite_state', 'doubling_transfer', 'quotient_safety', 'lrc_packet_transfer', 'gap_support', 'boundary_guardrail', 'valuation_budget', 'proof_maturity')
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+    directed_3cycles=0
+    scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+    hamiltonian_path_count=1
+    outdegree_path=fibbinary_no_adjacent_language > moser_base4_digit_language > labelled_lrc_gap_automaton_packet > skolem_mahler_lech_zero_set_guard > two_adic_littlewood_hurwitz_doubling > ostrowski_hadamard_lacunary_boundary > fermat_catalan_exponent_budget > large_stick_potato_visibility_core > raw_sequence_membership_scalar
+  gauge=gap_boundary_priority
+    priority=('gap_support', 'boundary_guardrail', 'lrc_packet_transfer', 'quotient_safety', 'finite_state', 'doubling_transfer', 'valuation_budget', 'proof_maturity')
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+    directed_3cycles=0
+    scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+    hamiltonian_path_count=1
+    outdegree_path=ostrowski_hadamard_lacunary_boundary > labelled_lrc_gap_automaton_packet > moser_base4_digit_language > skolem_mahler_lech_zero_set_guard > two_adic_littlewood_hurwitz_doubling > fibbinary_no_adjacent_language > large_stick_potato_visibility_core > fermat_catalan_exponent_budget > raw_sequence_membership_scalar
+  gauge=dyadic_valuation_priority
+    priority=('doubling_transfer', 'valuation_budget', 'finite_state', 'lrc_packet_transfer', 'quotient_safety', 'gap_support', 'boundary_guardrail', 'proof_maturity')
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+    directed_3cycles=0
+    scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+    hamiltonian_path_count=1
+    outdegree_path=two_adic_littlewood_hurwitz_doubling > fibbinary_no_adjacent_language > labelled_lrc_gap_automaton_packet > skolem_mahler_lech_zero_set_guard > moser_base4_digit_language > ostrowski_hadamard_lacunary_boundary > fermat_catalan_exponent_budget > large_stick_potato_visibility_core > raw_sequence_membership_scalar
+  gauge=exception_budget_priority
+    priority=('valuation_budget', 'boundary_guardrail', 'quotient_safety', 'lrc_packet_transfer', 'finite_state', 'gap_support', 'doubling_transfer', 'proof_maturity')
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+    directed_3cycles=0
+    scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+    hamiltonian_path_count=1
+    outdegree_path=two_adic_littlewood_hurwitz_doubling > fermat_catalan_exponent_budget > labelled_lrc_gap_automaton_packet > skolem_mahler_lech_zero_set_guard > ostrowski_hadamard_lacunary_boundary > moser_base4_digit_language > fibbinary_no_adjacent_language > large_stick_potato_visibility_core > raw_sequence_membership_scalar
+  gauge=majority_payload
+    rule=fieldwise majority over ('finite_state', 'gap_support', 'doubling_transfer', 'valuation_budget', 'lrc_packet_transfer', 'boundary_guardrail', 'quotient_safety', 'proof_maturity'); ties follow declared carrier order
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 5: 3, 7: 1, 8: 1}
+    directed_3cycles=1
+    scc_sizes=[3, 1, 1, 1, 1, 1, 1]
+    nontrivial_sccs=[('fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary')]
+    hamiltonian_path_count=3
+    outdegree_path=labelled_lrc_gap_automaton_packet > two_adic_littlewood_hurwitz_doubling > fibbinary_no_adjacent_language > moser_base4_digit_language > ostrowski_hadamard_lacunary_boundary > skolem_mahler_lech_zero_set_guard > fermat_catalan_exponent_budget > large_stick_potato_visibility_core > raw_sequence_membership_scalar
+
+Induced tournament isomorphism-class census
+  n=4: distinct_classes_generated=3
+    class1: word=000000 gauge=proof_priority subset=('labelled_lrc_gap_automaton_packet', 'two_adic_littlewood_hurwitz_doubling', 'fibbinary_no_adjacent_language', 'moser_base4_digit_language')
+    class2: word=000010 gauge=majority_payload subset=('fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary', 'fermat_catalan_exponent_budget')
+    class3: word=001001 gauge=majority_payload subset=('labelled_lrc_gap_automaton_packet', 'fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary')
+  n=5: distinct_classes_generated=4
+    class1: word=0000000000 gauge=proof_priority subset=('labelled_lrc_gap_automaton_packet', 'two_adic_littlewood_hurwitz_doubling', 'fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary')
+    class2: word=0000000010 gauge=majority_payload subset=('fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary', 'fermat_catalan_exponent_budget', 'skolem_mahler_lech_zero_set_guard')
+    class3: word=0000001001 gauge=majority_payload subset=('labelled_lrc_gap_automaton_packet', 'fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary', 'fermat_catalan_exponent_budget')
+    class4: word=0001000011 gauge=majority_payload subset=('labelled_lrc_gap_automaton_packet', 'two_adic_littlewood_hurwitz_doubling', 'fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary')
+  n=6: distinct_classes_generated=4
+    class1: word=000000000000000 gauge=proof_priority subset=('labelled_lrc_gap_automaton_packet', 'two_adic_littlewood_hurwitz_doubling', 'fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary', 'fermat_catalan_exponent_budget')
+    class2: word=000000000000010 gauge=majority_payload subset=('fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary', 'fermat_catalan_exponent_budget', 'skolem_mahler_lech_zero_set_guard', 'large_stick_potato_visibility_core')
+    class3: word=000000000001001 gauge=majority_payload subset=('labelled_lrc_gap_automaton_packet', 'fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary', 'fermat_catalan_exponent_budget', 'skolem_mahler_lech_zero_set_guard')
+    class4: word=000000001000011 gauge=majority_payload subset=('labelled_lrc_gap_automaton_packet', 'two_adic_littlewood_hurwitz_doubling', 'fibbinary_no_adjacent_language', 'moser_base4_digit_language', 'ostrowski_hadamard_lacunary_boundary', 'fermat_catalan_exponent_budget')
+  readout: this is an achievable-subset census for the chosen carrier surface, not a universal tournament enumeration.  It gives future agents exact class words to compare against when a new proof carrier is added.
+
+LRC14 proof readout
+  Necessary condition S173-A: any sequence/gap proof quotient must retain the automaton state or prove that the LRC predicate is constant on each automaton-language fiber.
+  Necessary condition S173-B: doubling-compatible evidence must say whether the native transition is x -> 2x, x -> 4x, or a recentered 2-adic continued-fraction/Hurwitz move.
+  Necessary condition S173-C: lacunary gap claims are boundary-obstruction claims unless attached to a finite source-packet family with exact endpoints.
+  Necessary condition S173-D: Fermat-Catalan style exponent budgets are useful only as finite-exception ledgers over labelled packets; they cannot replace exact M/qdiv/route labels.
+  Candidate theorem target: a primitive non-AP/GW LRC14 residual whose exact packet data are finite-state under all declared carry/doubling languages must either emit a known q/Fejer/Ramanujan/Haar/state-lift certificate or expose a named nonregular/natural-boundary residual sector.

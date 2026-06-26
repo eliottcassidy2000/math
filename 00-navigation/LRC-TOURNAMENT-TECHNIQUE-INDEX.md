@@ -1000,6 +1000,27 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3011, HYP-3008, HYP-3002, HYP-3000, HYP-2997, HYP-2996,
   HYP-2963, HYP-1902, THM-572, LTI-160.
 
+### LTT-063: Gap Automaton Carrier Tournament
+
+- **Move:** Treat finite automata, lacunary support, valuation budgets,
+  visibility cores, and induced tournament class ledgers as proof-carrier
+  vertices.  Orient edges by retained LRC predicate dimensions or by declared
+  rank-priority gauges.
+- **LRC use:** A sequence-shadow quotient is admissible only after retaining its
+  automaton state, native transition (`x->2x` versus `x->4x`), gap-boundary
+  label, finite-exception budget, packet route, and induced tournament class
+  census.
+- **Preserves:** Automaton language, state word, support ratio, doubling
+  transition, base-4 digit mask, Zeckendorf carry state, valuation budget,
+  visibility-core label, and induced isomorphism-class word.
+- **Forgets / guardrail:** Raw fibbinary/Moser membership mixes all `14` residue
+  classes and cannot distinguish AP/GW equality atoms or hard residual routes.
+- **Next pull:** Build product automata on the unit-excess lane `q=14p-1` and
+  compare hard non-AP/GW packet tournaments against the S173 `n=4,5,6`
+  canonical class words.
+- **Pointers:** HYP-3012, HYP-3011, HYP-3010, HYP-3009, HYP-3008, HYP-3007, HYP-3006, HYP-2998,
+  HYP-2997, HYP-2983, HYP-2982, HYP-2963, THM-572, LTI-161.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1008,8 +1029,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    lost-coordinate function, observer velocity, sign-kernel status, boost
    cocycle, tube metric, automatic language class, fibbinary/Moser carry
    status, lacunary gap ratio, gap-block profile, safe-component readout,
-   power-lift guard, Hurwitz doubling-CF state, Burnside cost, score-class
-   H-spread, and round-realizability flag.
+   power-lift guard, Hurwitz doubling-CF state, automaton state word, native
+   doubling transition, finite-exception budget, induced tournament class word,
+   Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
 3. Compute multi-scale tournament spectra for AP, GW, K33, petals, splices,

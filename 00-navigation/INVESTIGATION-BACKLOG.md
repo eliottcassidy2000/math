@@ -42,6 +42,32 @@ Borel-Baire-Haar witness labels.
 and `visibility_potato_approx_guard` to HYP-2963 packet records.  Compute
 route-purity of automatic words over the full labelled packet bank and list the
 first mixed fibers.  Namespace: HYP-3009 / T1093 / LTI-159 / LTT-061.
+## Lead codex-2026-06-25-S173: gap automaton carrier for LRC14
+
+**Status:** SYNTHESIS / finite automaton audit and packet-schema guardrail
+complete (HYP-3012/T1096/LTI-161/LTT-063), extending the incoming HYP-3008
+automatic-gap scout, HYP-3009 power-lift ledger, HYP-3010 exact-gap/safe-component carrier, and HYP-3011 automatic lacunary safe-component filter.  User asked to keep pushing toward
+an LRC14 proof while thinking about Fermat-Catalan, 2-adic Littlewood,
+Ostrowski-Hadamard gaps, Moser-de Bruijn, fibbinary numbers, and finite
+automata.
+**Readout:** `04-computation/lrc14_gap_automaton_carrier_codex_s173.py`
+stores output in
+`05-knowledge/results/lrc14_gap_automaton_carrier_codex_s173.out`.  Through
+`N=4096`, fibbinary has `378` members, Moser has `65`, their intersection is
+`65`, all `14` residue classes are mixed for both languages, fibbinary closes
+under `x->2x`, Moser closes under `x->4x`, and Moser has `63` violations under
+`x->2x`.  On the unit-excess lane `q=14p-1`, there are `21` fibbinary/Moser
+hits for `p<=384`.  Priority-gauge Tournament Analysis is transitive, while
+fieldwise majority has SCC `{fibbinary_no_adjacent_language,
+moser_base4_digit_language, ostrowski_hadamard_lacunary_boundary}` and induced
+isomorphism-class counts `n=4:3`, `n=5:4`, `n=6:4`.
+**Next:** add S173 automaton/gap fields to HYP-2963 packet records or a sidecar
+manifest, build product automata for `q=14p-1`, and prove the finite-state
+residual dichotomy: finite-state hard packets route to known
+q/Fejer/Ramanujan/Haar/state-lift certificates, otherwise the first failed
+transition names a nonregular/natural-boundary F7 sector.
+Namespace: HYP-3012 / T1096 / LTI-161 / LTT-063; base threads HYP-3011 / T1095 / LTI-160, HYP-3010 / T1094, HYP-3009 / LTI-159
+and HYP-3008 / LTI-158.
 
 ## Lead codex-2026-06-25-S172: Poincare worldline symmetry ledger for LRC14
 

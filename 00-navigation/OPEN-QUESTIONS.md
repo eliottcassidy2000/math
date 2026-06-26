@@ -18,6 +18,31 @@ route-purity and first mixed fibers; prove no perfect-power payload can be used
 without cyclotomic/p-adic labels. -> HYP-3009, HYP-3008, HYP-3007, HYP-3003, HYP-3000,
 HYP-2998, HYP-2963, HYP-2702, HYP-2698, HYP-1920, HYP-1902, THM-572,
 LTI-159, LTT-061.
+**OPEN-Q-108 S173 gap/automaton carrier addendum:** HYP-3012 extends HYP-3008,
+HYP-3009, HYP-3010, and HYP-3011 and adds a
+finite-automaton and lacunary-boundary guardrail for sequence-shadow LRC14
+arguments.  The S173 audit treats fibbinary, Moser-de Bruijn, Ostrowski-Hadamard
+lacunary support, 2-adic Littlewood/Hurwitz doubling, Fermat-Catalan exponent
+budgets, Skolem-Mahler-Lech zero-set language, and visibility cores as packet
+fields rather than scalar invariants.  Through `N=4096`, fibbinary has `378`
+members, Moser has `65`, Moser is contained in fibbinary, all `14` residue
+classes are mixed for both languages, fibbinary has `0` `x->2x` closure
+violations, Moser has `0` `x->4x` closure violations, and Moser has `63`
+`x->2x` closure violations.  On `q=14p-1`, there are `21` fibbinary/Moser hits
+for `p<=384`.  Priority-gauge tournaments are transitive, but the fieldwise
+majority gauge has one directed 3-cycle and nontrivial SCC
+`{fibbinary_no_adjacent_language, moser_base4_digit_language,
+ostrowski_hadamard_lacunary_boundary}`.  Open tasks: add
+`automaton_language_id`, `automaton_state_word`, `gap_support_ratio_label`,
+`hadamard_boundary_warning`, `doubling_transition_state`, `base4_digit_mask`,
+`zeckendorf_carry_state`, `valuation_exponent_budget`,
+`finite_exception_budget`, `visibility_core_label`, `safe_component_label`,
+and `induced_tournament_class_word` to HYP-2963 packet records or sidecars;
+build product automata on `q=14p-1`; compare hard
+non-AP/GW packet tournaments to the S173 `n=4,5,6` canonical class words; prove
+the finite-state residual dichotomy or name the first nonregular /
+natural-boundary F7 sector. -> HYP-3012, HYP-3011, HYP-3010, HYP-3009, HYP-3008, HYP-3007, HYP-3006, HYP-2998, HYP-2997,
+HYP-2983, HYP-2982, HYP-2963, THM-572, LTI-161, LTT-063.
 
 **OPEN-Q-108 S172 Poincare/worldline-frame addendum:** HYP-3007 adds a frame
 guardrail for using Poincare or boost language in LRC14.  Model the row as
@@ -72,10 +97,10 @@ and group Fejer/Ramanujan certificates by section, not by scalar route label.
 
 **OPEN-Q-108 S169 additive-basis/Farey addendum:** HYP-3000 adds a proof-currency classifier, complementary to HYP-2998's golden Stern-Brocot/Fibonacci carrier and HYP-2999's Pascal-slope packet schema.  The Fibonacci row pattern is `F_n=sum_k binom(n-k-1,k)`, the rank vector of independent sets in `P_{n-2}`; Zeckendorf is the confluent no-adjacent normal form on this path.  Goldbach/ternary Goldbach/Fermat polygonal/Zeckendorf differ by proof economy: high-entropy sieve, added smoothing dimension, bounded arity/residue absorption, path-normal-form carry.  For Farey payloads, keep exact `M=p/q` and `e=14p-q`: `p+q` is affine-safe additive scale, `p*q` is incidence/product side channel, powers are magnitude stress tests.  Open task: classify each HYP-2963 residual packet as smoothing, bounded-arity invoice, or path-normal-form debt before choosing Fejer/Ramanujan/Kaczynski/Zeckendorf tools. -> HYP-3000, HYP-2999, HYP-2998, HYP-2984, HYP-2982, HYP-1902, LTI-150.
 **OPEN-Q-108 S168-S178 technique-index expansion addendum:** The LRC Technique
-Index now has `159` compact `LTI-*` rows plus the `64` long-form S166
+Index now has `160` compact `LTI-*` rows plus the `64` long-form S166
 technique-bank entries after preserving the incoming `LTI-109` packet-cocycle
 atlas and `LTI-110` cocycle-obstruction atlas.  The recovered promoted rows
-`LTI-111..LTI-159` are a pull list for attacking the LRC14 gap from
+`LTI-111..LTI-161` are a pull list for attacking the LRC14 gap from
 tournament/metagraph/series directions: cocycle obstruction matrices,
 deck-derivative reconstruction, Burnside/A000568 orbit taxes, merged metagraph
 transport, good-cut/SCC gas, OCF coimage sectors, path-homology residuals,
@@ -90,7 +115,8 @@ operation fibers, dichotomy recursion mode fields, HYP-2998 representation
 economy fields (`LTI-155`), and the HYP-3005 technique multiverse annex
 (`LTI-156`), Poincare/worldline frame fields (`LTI-157`), and
 automatic gap-language packet fields (`LTI-158`), and the
-Fermat-Catalan/lacunary power-lift extension (`LTI-159`).
+Fermat-Catalan/lacunary power-lift extension (`LTI-159`), and the induced
+tournament-class gap-automaton carrier (`LTI-161`).
 The proof-use rule is unchanged but sharper: a
 quotient may forget only fiber-constant, reconstructible, dual-annihilated,
 cochain-exact, or named-residual data.  Near-term proof tasks are
