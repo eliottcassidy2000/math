@@ -72,6 +72,13 @@ obligations, and proof-carrier interfaces.
 - Need to resolve the squarefree `q=23` petal/covering residual pair:
   use LTT-084 after LTT-083/LTT-082 and retain the drop/add square plus
   endpoint-owner strip.
+- Need to repair AP-core one-tail owner-strip collisions:
+  use LTT-087 after LTT-086/LTT-085 and retain the q=13 puncture bit or
+  reciprocal fixed-point witness.
+- Need to refine coarse endpoint-current counts inside the `B18Z6` residual
+  surface:
+  use LTT-091 after LTT-087/LTT-086/LTT-085 and retain external endpoint-owner
+  strips plus owner-transfer deltas.
 - Need a controlled-forgetting hidden-coordinate ledger:
   use LTT-085 after LTT-080..LTT-084 and attach hidden-coordinate stage,
   visible/hidden relation type, cut, zeta, and anti-wedge fields.
@@ -1840,6 +1847,47 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3031, HYP-3018, HYP-2997, HYP-2963, THM-572, LTI-190, LTI-189,
   LTI-186, LTI-184, LTI-183, LTI-179, LTT-088, LTT-087, LTT-084, LTT-082,
   LTT-081, LTT-077, T1123, T1122, T1119, T1117, T1116, OPEN-Q-108.
+### LTT-091: Endpoint-Owner Transfer Tournament
+
+- **Move:** Replace coarse endpoint-current counts such as `B18Z6` by the
+  external endpoint-owner strip and, when needed, join it with the
+  largest-safe-component owner stalk.
+- **LRC use:** HYP-3045/S208 audits the S201 q=23 diagonal and the S196b
+  residual capacitors as a concrete refinement of HYP-3039/HYP-3040 and as a
+  detailed endpoint-current plate inside HYP-3042's owner-strip filtration and
+  as the endpoint-current companion to HYP-3044's topology-exception
+  owner-stalk collars and HYP-3041's AP-tail clock repair.  All four capacitor
+  packets have coarse endpoint word `B18Z6`, but external owner
+  strips split the q=23 diagonal and both capacitors: `12:26x6,6:20x4`,
+  `2:16x6`, `12:26x6,8:36x4`, and `2:72x6`.  This single non-route carrier
+  refines both exact-M and coarse-topology first cuts.
+- **Preserves:** Strict-open status after the status gate, residual
+  route-schedulability, endpoint owner identity, owner-transfer deltas,
+  residue projections, and optional safe-component owner stalks.
+- **Forgets / guardrail:** Coarse B/Z endpoint counts forget the owner names.
+  Owner strips still forget nonlargest safe components, full packet labels, and
+  global family proof unless the stalk join or another sidecar is retained.
+- **Tournament fingerprint:** vertices are owner-transfer proof carriers, not
+  runners or raw arcs: `raw_residual_shadow`, `coarse_endpoint_count`,
+  `exact_M_q`, `coarse_safe_body`, `safe_component_owner_stalk`,
+  `external_endpoint_owner_strip`, `owner_transfer_carrier`, and
+  `route_label_sink`.  Score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}`, no directed 3-cycles, singleton SCCs,
+  and one Hamiltonian path with `owner_transfer_carrier >
+  external_endpoint_owner_strip > route_label_sink >
+  safe_component_owner_stalk > coarse_safe_body > exact_M_q >
+  coarse_endpoint_count > raw_residual_shadow`.
+- **Next pull:** Add `endpoint_owner_strip`, `endpoint_owner_transfer_delta`,
+  `endpoint_owner_residue_delta`, `safe_component_owner_stalk`, and
+  `owner_transfer_carrier` to residual-pair manifests; test the full `B18Z6`
+  residual surface and prove owner coordinates are retained, reconstructed,
+  dual-annihilated, or routed to named F7/THM-572 debt.
+- **Pointers:** HYP-3045, HYP-3044, HYP-3042, HYP-3041, HYP-3040, HYP-3039, HYP-3038, HYP-3037, HYP-3036,
+  HYP-3035, HYP-3032, HYP-3031, HYP-3027, HYP-3026, HYP-3018, HYP-2963,
+  THM-572, LTI-193, LTI-192, LTI-190, LTI-189, LTI-188, LTI-187, LTI-186,
+  LTI-185, LTI-183, LTI-182, LTI-177, LTT-091, LTT-090, LTT-088, LTT-087,
+  LTT-086, LTT-085, LTT-084, LTT-083, LTT-081, LTT-080, LTT-075, T1126,
+  T1125, T1123, T1122, T1121, T1120, T1119, T1118, T1116.
 
 ### LTT-089: Comprehensive Lens Map Tournament
 

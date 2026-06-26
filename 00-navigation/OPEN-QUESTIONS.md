@@ -16,6 +16,24 @@ packet-keyed blindness reports. -> HYP-3043, HYP-3042, HYP-3041, HYP-3040, HYP-3
 HYP-3037, HYP-3036, HYP-3035, HYP-3034, HYP-3032, HYP-3024, HYP-3023,
 HYP-3022, HYP-3021, HYP-3018, HYP-3015, HYP-3012, HYP-3009, HYP-2963,
 LTI-191, LTT-089, LTI-190, LTT-088, LTI-189, LTT-087, T1124, T1123, T1122.
+**OPEN-Q-108 S208 endpoint-owner transfer addendum:** HYP-3045 tightens
+HYP-3042's owner-strip filtration, HYP-3044's topology-exception collar lesson,
+the HYP-3039/HYP-3040 hidden-ledger story, and HYP-3041's AP-tail puncture
+repair by keeping the owner names inside the coarse endpoint-current count.  All
+four audited residual capacitor packets have
+`endpoint_current_word=B18Z6`, so B/Z counts alone split nothing.
+External owner strips split the q=23 diagonal and both residual capacitors:
+petal q=23 `12:26x6,6:20x4`, q=23 covering `2:16x6`, K33 lift
+`12:26x6,8:36x4`, and single-swap covering `2:72x6`.  This owner-transfer
+carrier refines both first-cut mechanisms from S196b, exact `M+q` and coarse
+boundary topology, without using route labels.  Open task: add
+`endpoint_owner_strip`, `endpoint_owner_transfer_delta`,
+`endpoint_owner_residue_delta`, `safe_component_owner_stalk`, and
+`owner_transfer_carrier` to residual manifests, then test the full `B18Z6`
+surface and prove owner coordinates are retained, reconstructed,
+dual-annihilated, or routed to named F7/THM-572 debt. -> HYP-3045, HYP-3044, HYP-3042, HYP-3041, HYP-3040,
+HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3032, HYP-3031,
+HYP-3027, HYP-3026, HYP-3018, HYP-2963, THM-572, LTI-193, LTI-192, LTI-190, LTI-189, LTT-091, LTT-090, LTT-088, LTT-087, T1126, T1125, T1123, T1122.
 **OPEN-Q-108 S202 hidden-coordinate ledger addendum:** HYP-3039 sharpens the
 recent LRC14 residual work by treating HYP-3024..HYP-3038 as a
 controlled-forgetting ladder rather than a scalar-estimate chain.  The hidden

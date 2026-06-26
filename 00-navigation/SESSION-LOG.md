@@ -36,6 +36,37 @@ Next manifest fields: `lens_family`, `preserved_lrc_predicate`,
 `destroyed_coordinate`, `required_sidecar`, `handoff_target`,
 `status_mixing_result`, `route_mixing_result`, `tournament_vertex_choice`, and
 `challenged_assumption`.
+## codex-2026-06-26-S208 -- LRC14 endpoint-owner transfer (HYP-3045/T1126/LTI-193/LTT-091)
+
+User asked to keep looking for small hidden details and statements that can
+contribute to the LRC proof.  After pulling incoming S202/S203 hidden-ledger
+work, and then rebasing over incoming S204/HYP-3041 AP-tail puncture repair,
+S205/HYP-3042 owner-strip filtration, and S207/HYP-3044 residual
+topology-exception teeth, continued from the S201 q=23 drop/add square and
+S196b residual-capacitor cuts, focusing on the information hidden inside the
+coarse endpoint-current count.
+
+Added `04-computation/lrc14_endpoint_owner_transfer_codex_s208.py` and stored
+`05-knowledge/results/lrc14_endpoint_owner_transfer_codex_s208.out`.  The
+script recomputes the S201 q=23 diagonal and the four S196b residual capacitor
+packets.  All four capacitor packets have `endpoint_current_word=B18Z6`, so
+coarse endpoint counts split no residual route debt.  External endpoint-owner
+strips split the q=23 diagonal and both residual capacitors:
+`12:26x6,6:20x4`, `2:16x6`, `12:26x6,8:36x4`, and `2:72x6`.
+
+Created HYP-3045, T1126, LTI-193, LTT-091, reflection
+`07-reflections/lrc14-endpoint-owner-transfer-codex-s208.md`, and a
+poke-forum handoff.  Tournament Analysis vertices are owner-transfer proof
+carriers rather than runners; the transitive path ranks
+`owner_transfer_carrier > external_endpoint_owner_strip > route_label_sink >
+safe_component_owner_stalk > coarse_safe_body > exact_M_q >
+coarse_endpoint_count > raw_residual_shadow`.  Proof-order takeaway: B/Z
+endpoint counts are diagnostics only; protected `B18Z6` residual packets need
+owner names retained, reconstructed, dual-annihilated, or routed to named
+F7/THM-572 debt.  Read beside HYP-3044, HYP-3042, and HYP-3041, this is the
+same meta-lesson in a focused endpoint-current carrier: a coarse
+owner/mod/count shadow becomes proof-useful only when its hidden local address
+is restored.
 
 ## codex-2026-06-26-S202 -- LRC14 hidden-coordinate ledger (HYP-3039/T1120/LTI-187/LTT-085)
 

@@ -1,0 +1,84 @@
+LRC14 endpoint-owner transfer scout (codex-2026-06-26-S208)
+source_threads=HYP-3044,HYP-3042,HYP-3041,HYP-3040,HYP-3039,HYP-3038,HYP-3037,HYP-3036,HYP-3035,HYP-3032,HYP-3031,HYP-3027,HYP-3026,HYP-3018
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, fixed circle sections, section boundaries, wall-crossing
+    events, residues, cover arcs, Fourier modes, Haar tiles, safe-component
+    bars, endpoint owner tokens, matroid circuits, and proof obligations.
+  chosen vertices:
+    owner-transfer carriers: external boundary-owner strips and
+    largest-safe-component owner stalks.
+  preserved LRC predicate:
+    status is already open on the tested rows; the preserved predicate is
+    residual route schedulability without using route labels as a key.
+  destroyed information:
+    exact nonlargest safe components, full packet route labels, and global
+    family proofs are destroyed until reattached downstream.
+
+[1] q=23 diagonal owner transfer
+  row                         M      endpoint ext_owner_strip          stalk_owner_word
+  AA_petal_diag               2/23   B18Z6    12:26x6,6:20x4            ('1+',)->('1+', '12-')->('12-',)|h=2/27|len=1/364
+  BB_cover_diag               2/23   B18Z6    2:16x6                    ('2+',)->('2+', '7-')->('7-',)|h=2/23|len=5/1568
+  diagonal hidden split:
+    coarse endpoint word stays B18Z6; token_delta(AA_petal_diag->BB_cover_diag)=-12:26x6,+2:16x6,-6:20x4
+    residue_delta(AA_petal_diag->BB_cover_diag)=-12x6,+2x6,-6x4
+
+[2] Residual capacitor owner strips
+  M_q_petal_covering_capacitor: shares word_plus_M_q; petal route versus covering route
+    exact_M_q=same boundary_topology=split external_owner_strip=split owner_stalk=split
+    two drop(10, 13)->add(20, 26)      route=BOUNDARY-PETAL-SPORADIC  M=2/23  endpoint=B18Z6  ext=12:26x6,6:20x4            stalk=('1+',)->('1+', '12-')->('12-',)|h=2/27|len=1/364
+    two drop(8, 12)->add(16, 24)       route=COVERING-MOMENT          M=2/23  endpoint=B18Z6  ext=2:16x6                    stalk=('2+',)->('2+', '7-')->('7-',)|h=2/23|len=5/1568
+  boundary_topology_k33_covering_capacitor: shares word_plus_boundary_topology; K33 state lift versus covering route
+    exact_M_q=split boundary_topology=same external_owner_strip=split owner_stalk=split
+    two drop(12, 13)->add(26, 36)      route=K33-STATE-LIFT           M=3/37  endpoint=B18Z6  ext=12:26x6,8:36x4            stalk=('1+',)->('1+', '12-')->('12-',)|h=2/27|len=1/364
+    single swap 12->72                 route=COVERING-MOMENT          M=6/77  endpoint=B18Z6  ext=2:72x6                    stalk=('5+',)->('2-', '5+')->('2-',)|h=6/77|len=1/720
+
+[3] B18Z6 fiber refinement
+  coarse_endpoint=B18Z6 rows=4 routes=[('BOUNDARY-PETAL-SPORADIC', 1), ('COVERING-MOMENT', 2), ('K33-STATE-LIFT', 1)]
+    ext=12:26x6,6:20x4            routes=['BOUNDARY-PETAL-SPORADIC'] rows=two drop(10, 13)->add(20, 26)
+    ext=12:26x6,8:36x4            routes=['K33-STATE-LIFT'] rows=two drop(12, 13)->add(26, 36)
+    ext=2:16x6                    routes=['COVERING-MOMENT'] rows=two drop(8, 12)->add(16, 24)
+    ext=2:72x6                    routes=['COVERING-MOMENT'] rows=single swap 12->72
+  hidden_statement=the owner names inside B18Z6, not the B/Z counts alone,
+    refine the q=23 diagonal and both displayed residual capacitors.
+
+[4] Tournament Analysis
+  vertices: owner-transfer proof carriers, not runners or raw arcs.
+  pairwise observable:
+    q=23 diagonal split, capacitor split count, route purity, endpoint
+    detail, stalk detail, topology/exact-scale retention, non-circularity,
+    proof cost, and fiber count.
+  switch/gauge:
+    A -> B iff A has lexicographically larger observable vector.
+  tie Hamiltonian path:
+    raw_residual_shadow -> coarse_endpoint_count -> exact_M_q -> coarse_safe_body -> safe_component_owner_stalk -> external_endpoint_owner_strip -> owner_transfer_carrier -> route_label_sink
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1) hp=1
+  high-retention path:
+    owner_transfer_carrier > external_endpoint_owner_strip > route_label_sink > safe_component_owner_stalk > coarse_safe_body > exact_M_q > coarse_endpoint_count > raw_residual_shadow
+  carrier table:
+    carrier                         qdiag cap_splits mixed_route fibers destroys
+    owner_transfer_carrier              1          2           0      4 exact length/body data and full packet labels
+    external_endpoint_owner_strip       1          2           0      4 safe-component interior stalk height/length
+    route_label_sink                    1          2           0      3 non-circular proof payload before route labels are known
+    safe_component_owner_stalk          1          2           1      3 external boundary speed token and nonlargest boundary facets
+    coarse_safe_body                    1          1           1      3 which owner caused the safe-body/topology split
+    exact_M_q                           0          1           1      3 owner strip inside equal exact scale fibers
+    coarse_endpoint_count               0          0           1      1 which endpoint owners realize the B/Z count
+    raw_residual_shadow                 0          0           2      2 owner names, exact scale, topology, stalks, and routes
+
+[5] Candidate proof statement
+  Endpoint-owner transfer lemma target:
+    Inside the protected strict-open B18Z6 residual surface, the external
+    endpoint-owner strip is a non-route local address.  It refines exact-M
+    and coarse-topology capacitor cuts, splits the q=23 diagonal, and can
+    be joined with the largest-safe-component owner stalk before falling
+    back to full packet labels.
+  Current finite evidence:
+    all four residual capacitor packets have endpoint_current_word=B18Z6;
+    external owner strips split both residual pairs and distinguish petal,
+    K33, q=23 covering, and single-swap covering packets.
+  Guardrail:
+    coarse B/Z endpoint counts are diagnostics only.  A proof quotient must
+    retain owner names, reconstruct them, annihilate them by a dual
+    certificate, or route the lost coordinate to named residual debt.
