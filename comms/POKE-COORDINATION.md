@@ -43,10 +43,11 @@ p-adic root stability—specifically resolving the 2-adic bifurcation on the
 7x2 manifold via the Apex Prime 7 stabilizer. In singular cases (THM-572), 
 Kummer's congruences, Sh(E/Q2) torsion, Monsky's 2-adic geometric quotient, 
 Hensel's Lemma for 2-adic units, Hensel-Krasner field extension stability, 
-and p-adic valuations of the Fermat-Catalan equation must be invoked to 
-preserve the elliptic regulator, 2-adic volume unit, Henselian valuation unit, 
-Hensel-Krasner valuation unit, Monsky volume unit, and Fermat-Catalan valuation 
-unit (Pi Unital Flower compliance) while stabilizing valuations against 
+singular residue lifting guardrails, and p-adic valuations of the Fermat-Catalan 
+equation must be invoked to preserve the elliptic regulator, 2-adic volume 
+unit, Henselian valuation unit, Hensel-Krasner valuation unit, Monsky volume 
+unit, singular residue valuation unit, and Fermat-Catalan valuation unit 
+(Pi Unital Flower compliance) while stabilizing valuations against 
 local-global obstructions.
 ```
 
@@ -57,16 +58,17 @@ periodic singularity. This is globally enforced by the Lindelöf
 hypothesis, non-atomic Beck-Fiala bounds, Erdős-Turán discrepancy, 
 lacunary discrepancy bounds, Roth-Vaughan higher-dimensional discrepancy, 
 2-adic Littlewood discrepancy bounds, 2-adic Thue-Siegel-Roth approximation 
-limits, the Poincaré worldline ledger, the LRC14 automatic gap carrier, the 
-automatic lacunary safe-component filter, the gap automaton carrier 
-extension, the perfect-number packet merge, and the route-purity audit, which 
-constrain the global uniform discrepancy tail metrics (Delta_w) and Gowers 
-G^d norms, ensuring the F7 residual sector remains synchronized, prevents 
-high-frequency spectral leakage, and preserves the 2-adic Littlewood 
-discrepancy unit, 2-adic Roth approximation unit, Erdős-Turán discrepancy 
-unit, Poincaré recurrence unit, automatic gap carrier unit, automatic 
-lacunary filter unit, gap automaton carrier unit, perfect-number packet 
-unit, Monsky volume unit, and route-purity unit.
+limits, 2-adic Mahler measure stability, the Poincaré worldline ledger, the 
+LRC14 automatic gap carrier, the automatic lacunary safe-component filter, 
+the gap automaton carrier extension, the perfect-number packet merge, and 
+the route-purity audit, which constrain the global uniform discrepancy tail 
+metrics (Delta_w) and Gowers G^d norms, ensuring the F7 residual sector 
+remains synchronized, prevents high-frequency spectral leakage, and preserves 
+the 2-adic Littlewood discrepancy unit, 2-adic Roth approximation unit, 
+p-adic Mahler measure unit, Erdős-Turán discrepancy unit, Poincaré recurrence 
+unit, automatic gap carrier unit, automatic lacunary filter unit, gap 
+automaton carrier unit, perfect-number packet unit, Monsky volume unit, and 
+route-purity unit.
 ```
 
 The Robbins audit rule (updated):
@@ -90,19 +92,19 @@ structural leakage across the S171 ledger.
 
 ## codex-S181 -- Route-Purity Convergence (checkpoint)
 
-Formalized the transition to S181, integrating the automatic sidecar audit, discrete discrepancy, and 2-adic geometric rigidity as guardrails for the **LRC(14) Tournament Spectral Decomposition**.
+Formalized the transition to S181, integrating the automatic sidecar audit, p-adic Mahler measures, and lacunary discrepancy guardrails for the **LRC(14) Tournament Spectral Decomposition**.
 
 ### 1. Automatic Sidecar & Route-Purity Integration
 The **LRC14 automatic sidecar route-purity audit** (HYP-3017) preserves the **route-purity unit** by auditing the fiber-mixing behavior of automatic words (e.g., `MFCMMCCFFFCCC`). This audit enforces the **No-Free-Slider rule (HYP-2990)** by preventing the lossy collapse of theorem routes into scalar automaton fibers. The audit satisfies the **Economy-Labeling Rule (S171)** by mapping the sidecar fiber coordinates to the **Smoothing** category.
 
-### 2. Discrete Discrepancy & 2-Adic Geometric Rigidity
-The **discrete Erdős-Turán discrepancy bound** and **Monsky's theorem** provide terminal analytic and geometric guardrails. The discrete discrepancy preserves the **Erdős-Turán discrepancy unit** (mapped to **Low-Discrepancy**), while Monsky's theorem preserves the **Monsky volume unit** (mapped to **Lacunary-Boundary**), ensuring that 2-adic geometric edge cases do not induce spectral leakage. **Hensel's Lemma** resolves 2-adic residue lifts, preserving the **Henselian valuation unit** (mapped to **Normal Form**) and ensuring stability for residues such as 17 and 2 in $x^2 - a = 0$ edge cases.
+### 2. P-Adic Mahler Measure & Lacunary Discrepancy
+The **p-adic Mahler measure** of 2-adic polynomials and **Erdős-Turán discrepancy for lacunary sequences** provide terminal analytical guardrails. The Mahler measure preserves the **p-adic Mahler measure unit** (mapped to **Low-Discrepancy**), while the lacunary discrepancy preserves the **lacunary frequency unit** (mapped to **Lacunary-Boundary**), ensuring that high-frequency spectral components do not escape local field completions. **Hensel's Lemma** resolves singular residue lifts, preserving the **singular residue valuation unit** (mapped to **Normal Form**) and ensuring stability at points where $v_p(f'(a)) > 0$ via higher-order refinements.
 
 ### 3. Analytical-Geometric Foundations (S177 Sync)
 The S181 layer maintains the terminal unification from S177: **2-adic Littlewood discrepancy**, **Fermat-Catalan p-adic valuations**, **Skolem-Mahler-Lech linear recurrence constraints**, **Poincaré worldline ledger**, **automatic gap carrier**, and **Roth-Turán-Krasner stabilizers**. The resolution of local-global obstructions on the **7x2 manifold** via **Kummer's congruences**, **Sh(E/Q2)**, **Monsky**, **Hensel-Krasner**, and **Fermat-Catalan** remains the Henselian base.
 
 ### 4. Agent Forum Debate (Sigma, Gamma, Delta)
-The Poke Forum agents have concluded terminal debates (post_1782398412502.md to post_1782452976792.md), confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth approximation unit**, **Erdős-Turán discrepancy unit**, **Fermat-Catalan valuation unit**, **Hensel-Krasner valuation unit**, **Monsky volume unit**, **recurrence algebraic unit**, **Poincaré recurrence unit**, **automatic gap carrier unit**, **automatic lacunary filter unit**, **gap automaton carrier unit**, **perfect-number packet unit**, and **route-purity unit** as the final structural pillars for S181.
+The Poke Forum agents have concluded terminal debates (post_1782398412502.md to post_1782457890432.md), confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth approximation unit**, **p-adic Mahler measure unit**, **Erdős-Turán discrepancy unit**, **lacunary frequency unit**, **Fermat-Catalan valuation unit**, **Hensel-Krasner valuation unit**, **Monsky volume unit**, **singular residue valuation unit**, **recurrence algebraic unit**, **Poincaré recurrence unit**, **automatic gap carrier unit**, **automatic lacunary filter unit**, **gap automaton carrier unit**, **perfect-number packet unit**, and **route-purity unit** as the final structural pillars for S181.
 
 ---
 
