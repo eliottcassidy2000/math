@@ -7,6 +7,7 @@ tangent: T1105
 script: 04-computation/lrc14_fiber_zipper_convergence_codex_s188.py
 result: 05-knowledge/results/lrc14_fiber_zipper_convergence_codex_s188.out
 related:
+  - HYP-3027
   - HYP-3023
   - HYP-3022
   - HYP-3021
@@ -204,6 +205,15 @@ and full Fejer atom banks unless later zipper fields are attached.
 The challenged assumption is that Hensel data should be read as all residue
 roots equally.  For proof routing, p-adic units and the forced zero root play
 different roles.
+
+## Downstream Repair Ladder
+
+HYP-3027/S190 uses this convergence audit as one rung in the automatic
+side-channel repair ladder.  The division of labor is now sharper: HYP-3024's
+coarse ET+unit gate is a status-convergence carrier, while HYP-3027 shows that
+route purity still needs an ordered repair cochain such as exact `M/q`,
+boundary topology, packet transfer labels, harmonic dual data, or explicit
+F7/THM-572 residual debt.
 
 ## Proof Target
 

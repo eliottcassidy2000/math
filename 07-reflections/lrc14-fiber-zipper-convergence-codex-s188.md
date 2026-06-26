@@ -56,3 +56,8 @@ It should prove that coarse ET+unit data cannot mix AP/GW boundary equality
 with strict-open packets.  Once that is done, the remaining route-mixed fibers
 are all open in this bank and can be discharged by the existing family
 certificate stack.
+
+After rebasing over HYP-3027/S190, the clean handoff is: S188 supplies the
+status-convergence rung, and S190 orders the route-repair cochains above it.
+So the fiber-zipper proof should first certify boundary/open constancy, then
+invoke the repair ladder only for the residual open-route collisions.
