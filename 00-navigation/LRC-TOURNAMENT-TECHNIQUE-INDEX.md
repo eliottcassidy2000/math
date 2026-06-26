@@ -95,6 +95,10 @@ obligations, and proof-carrier interfaces.
 - Need to turn the two residual arc-topology failures into a local lemma:
   use LTT-090 with `residual_topology_exception_id`, owner-stalk keys, and
   primitive `q<=13` deck labels.
+- Need to audit whether a new residual carrier is already older proof
+  machinery:
+  use LTT-092 after LTT-091/LTT-090 and add connector sidecars before naming new
+  residual vocabulary.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1967,6 +1971,63 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-188, LTI-187, LTI-186, LTI-185, LTI-184, LTI-183, LTI-177, LTI-176,
   LTT-090, LTT-087, LTT-086, LTT-085, LTT-084, LTT-083, LTT-082, LTT-081,
   LTT-075, T1125, T1122, T1121, T1120, T1119, T1118, T1117, T1116.
+
+### LTT-092: Hidden Connection Accelerator Tournament
+
+- **Move:** Treat hidden connector lemmas as tournament vertices and audit
+  whether recent residual proof carriers are renamed older carriers before
+  adding new proof vocabulary.
+- **LRC use:** HYP-3046 verifies `106` source markers with `0` misses and
+  ranks twelve connector lemmas, incorporating HYP-3045's endpoint-owner
+  transfer, HYP-3044's topology-exception teeth, HYP-3043's lens map,
+  HYP-3042's owner-strip filtration, and HYP-3041's AP-tail q13 puncture as
+  concrete hidden-coordinate repairs.  Main readout: HYP-3037 capacitor exits
+  are the HYP-2996/HYP-2992 residual-section/Haar exit alphabet; HYP-3045 is
+  the `B18Z6` endpoint-owner address lift; HYP-3044's compact-topology
+  failures are owner-stalk collars with primitive q<=13 deck splits; HYP-3038
+  is the first q=23 nested-refinement normal form; HYP-3036 primitive decks are
+  HYP-2886 exact-period packet atlases; HYP-3035 owner-strip teeth route
+  through HYP-3042 plus HYP-3018/HYP-3034 owner support; q=14 and AP-tail q13
+  punctures live in exact-period/puncture guardrails; pair-good decoys are
+  blocker decks; and squarefree blindness needs perfect/divisor-lattice
+  prime-power fields.
+- **Preserves:** Boundary/open status, route schedulability, sidecar field,
+  exit class, exact-period/puncture status, topology-exception repair teeth,
+  endpoint-owner current, owner-transfer deltas, owner-support filtration page,
+  repair stage, and cocycle exactness obligation.
+- **Forgets / guardrail:** This quotient forgets raw runner names, exact times,
+  row identity, compact topology bucket identity, and some route labels.  It is
+  legal only because the connector card records which old carrier discharges
+  the obligation or which named sidecar is still missing.
+- **Tournament fingerprint:** vertices are connector lemmas/proof obligations,
+  not runners or packets.  Pairwise observable is
+  `(recent_stack_reach, legacy_evidence, route_power, sidecar_readiness,
+  scalar_guardrail, family_transfer, low_proof_cost)`.  The tournament is
+  transitive with score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1}`, no directed
+  3-cycles, singleton SCCs, and one Hamiltonian path.  The high-retention path
+  starts `section_grid_exits_are_capacitor_exit_codes >
+  endpoint_owner_transfer_is_B18Z6_address_lift >
+  topology_exceptions_are_owner_stalk_primitive_teeth`.
+- **Next pull:** Add the HYP-3046 sidecar merge set to the HYP-2963 packet
+  ledger, beginning with `zeta_exit_class`, `residual_section_exit`,
+  `coarse_endpoint_word`, `external_endpoint_owner_strip`,
+  `endpoint_owner_transfer_delta`, `endpoint_owner_residue_delta`,
+  `primitive_safe_deck_2_13`, topology-exception fields, AP-tail
+  puncture/fixed-point fields, owner-transfer and owner-support fields,
+  `first_surviving_filtration_page`, `first_cut_stage`,
+  `drop_add_square_id`, `omega_Q_class`, exact-period chart fields,
+  `divisibility_threshold_qS`, divisor-lattice fields, and blocker-deck
+  fields.
+- **Pointers:** HYP-3046, HYP-3045, HYP-3044, HYP-3043, HYP-3042, HYP-3041, HYP-3040,
+  HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3034, HYP-3032,
+  HYP-3031, HYP-3027, HYP-3022, HYP-3018, HYP-3013, HYP-3006, HYP-2996,
+  HYP-2995, HYP-2992, HYP-2886, THM-523, THM-566, LTI-194, LTI-193, LTI-192,
+  LTI-191, LTI-190, LTI-189, LTI-188, LTI-187, LTI-186, LTI-185, LTI-184,
+  LTI-183, LTI-182, LTI-180, LTI-179, LTI-174, LTI-169, LTI-166, LTI-162,
+  LTT-092, LTT-091, LTT-090, LTT-089, LTT-088, LTT-087, LTT-086, LTT-085, LTT-084,
+  LTT-083, LTT-082, LTT-081, LTT-080, LTT-078, LTT-077, LTT-072, T1127,
+  T1126, T1125, T1124, T1123, T1122, T1121, T1120.
 
 ## Immediate Pull List
 

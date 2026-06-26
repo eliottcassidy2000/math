@@ -163,6 +163,50 @@ OPEN-Q-108, TANGENTS, and this session log.  Next pull: promote
 into packet sidecars, then prove every post-status residual topology failure
 is one of these collars or emits named F7/THM-572 debt.
 
+## codex-2026-06-26-S209 -- LRC14 hidden connection accelerators (HYP-3046/T1127/LTI-194/LTT-092)
+
+User asked to keep searching for hidden details and connections to past work
+that can accelerate progress on the LRC proof.  Rebased over incoming S202
+hidden-coordinate, S203 hidden-statement, S204 AP-tail puncture, S205
+owner-strip filtration, S206 lens-map, S207 topology-exception work, and the
+incoming S208/HYP-3045 endpoint-owner transfer carrier,
+keeping S201's q=23 drop/add square, S204's q13 AP-tail repair, S205's
+endpoint-owner filtration, S207's owner-stalk topology teeth, and S208's
+`B18Z6` owner-current address lift as concrete local normal forms, then
+shifted this session to the next namespace:
+HYP-3046/T1127/LTI-194/LTT-092.
+
+Added `04-computation/lrc14_hidden_connection_accelerators_codex_s209.py` and
+stored `05-knowledge/results/lrc14_hidden_connection_accelerators_codex_s209.out`.
+The script defines twelve connector lemmas, audits local source markers, and
+ranks them as proof carriers.  Marker audit: `106` hit, `0` missing.
+
+Main readout: HYP-3037 capacitor exit labels are the HYP-2996/HYP-2992
+residual-section/Haar exit alphabet; HYP-3045 gives the concrete `B18Z6`
+endpoint-owner address lift; HYP-3038 gives the concrete q=23
+nested-refinement normal form; HYP-3036 primitive safe decks are exact-period
+packet atlases; HYP-3035 owner-strip teeth should route through HYP-3042
+endpoint-owner filtration plus HYP-3045 owner transfer, HYP-3018 normal-fan
+support, and HYP-3034 owner-deletion persistence; HYP-3041's AP-tail repair is the q13
+prime-clock/puncture version of the same hidden-coordinate pattern; HYP-3044
+shows compact-topology failures are owner-stalk collars with primitive q<=13
+deck splits; q=14 belongs to THM-523/HYP-2917; pair-good decoys are blocker
+decks; analytic squarefree blindness needs perfect/divisor-lattice prime-power
+fields; and recent sidecars should be managed under HYP-2995/HYP-3006 cocycle
+exactness.
+
+Created HYP-3046, T1127, LTI-194, LTT-092, and reflection
+`07-reflections/lrc14-hidden-connection-accelerators-codex-s209.md`.  Next
+pull: add the HYP-3046 sidecar merge set to the HYP-2963 packet ledger,
+starting with `zeta_exit_class`, `residual_section_exit`,
+`coarse_endpoint_word`, `external_endpoint_owner_strip`,
+`endpoint_owner_transfer_delta`, `endpoint_owner_residue_delta`,
+`primitive_safe_deck_2_13`, AP-tail puncture/fixed-point fields,
+owner-transfer and owner-support fields, `first_surviving_filtration_page`, `first_cut_stage`,
+topology-exception fields, `drop_add_square_id`, `omega_Q_class`,
+exact-period chart fields, `divisibility_threshold_qS`, divisor-lattice
+fields, and blocker-deck fields.
+
 ## codex-2026-06-26-S199 -- LRC14 residual tooth atlas (HYP-3035/T1116/LTI-183/LTT-081)
 
 User asked to keep working new LRC angles, with prior prompts emphasizing pair-good decoys, zipper-fiber convergence, Erdos-Turan, Henselian unit rules, and creative LRC14 proof routes.  Pulled the incoming S193/S194/S195 stack first, then extended HYP-3031's Haar-tile repair dictionary into an executable atlas for HYP-3028/HYP-3030's `15` coarse ET+unit route-mixed residual fibers.
@@ -12020,7 +12064,7 @@ id debt (THM-260×3, THM-338×2, THM-336/337 dups) noted in MISTAKE-052 for futu
 
 **Context:** User asked for a long Gabor/t(r)ienerment and p-adic-tree continuation, then sharpened the target to prime-power zero-branch cover cores. Mainline already had HYP-2035 on p-adic channel rank and a HYP-2036 stub; a concurrent upstream S546 commit supplied the product-tree scan, so this close-out integrates that work with the prime-power endpoint-core supplement instead of splitting the ID.
 **Computation:** `04-computation/lrc_padic_tree_trienerment_s546.py` scans product p-adic zero-branch obligations `q=2..n`, with mass `z_q=# {v_i:q|v_i}`. Empty `q<n` gives a THM-369 open witness; empty `q=n` gives the compact wall. `04-computation/lrc_prime_power_zero_branch_core_s546b.py` restricts to prime powers `q=p^d`, builds the local danger intervals centered at killed unit points `u/q`, and peels endpoint-protection cores.
-**Findings:** Product-tree primitive boxes `(n,max_speed)=(6,8),(8,10),...,(18,20)` have open/compact survivor counts `25/16,44/30,70/50,104/77,147/112,200/156,264/210`; every open survivor has minimum open cover size `n/2`; tree-trienerment classes have zero mixed open-survivor fibers. The prime-power supplement audits `86` local branch cores and `9` full danger-cover cores, all empty, even though n=18 has huge `Z_9` full-support zero-flow counts (`~1.88e14` to `~2.50e14`).
+**Findings:** Product-tree primitive boxes `(n,max_speed)=(6,8),(8,10),...,(18,20)` have open/compact survivor counts `25/16,44/30,70/50,104/77,147/112,200/156,264/210`; every open survivor has minimum open cover size `n/2`; tree-trienerment classes have zero mixed open-survivor fibers. The prime-power supplement audits `87` local branch cores and `9` full danger-cover cores, all empty, even though n=18 has huge `Z_9` full-support zero-flow counts (`~1.88e14` to `~2.50e14`).
 **Synthesis:** Product branches give a pure sieve-survival ledger below HYP-2035's channel rank. Prime-power zero branches kill simple rational unit witnesses, but their local centered intervals are nested stars that peel to empty, so they are gates/debt carriers rather than local counterexample cores. Nontrivial cyclic trienerments should refine vertices to endpoint descendants, event owners, cross-prime product-tree pairs, or Gabor zero-column labels.
 **Artifacts:** HYP-2036; T636; `07-reflections/lrc-padic-tree-cover-trienerment-s546.md`; `07-reflections/lrc-prime-power-zero-branch-endpoint-core-s546b.md`; `04-computation/lrc_padic_tree_trienerment_s546.py` / `.out`; `04-computation/lrc_prime_power_zero_branch_core_s546b.py` / `.out`.
 

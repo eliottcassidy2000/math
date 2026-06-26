@@ -393,6 +393,37 @@ routing data, or emits F7/THM-572 debt. -> HYP-3038, HYP-3037, HYP-3036, HYP-303
 HYP-3031, HYP-3027, HYP-3026, HYP-2991, HYP-2989, HYP-2963, THM-572,
 LTI-186, LTT-084, T1119.
 
+**OPEN-Q-108 S209 hidden connection accelerator addendum:** HYP-3046 audits
+hidden overlaps between the recent residual stack and older proof carriers,
+with `106` source markers hit and `0` missing.  The strongest acceleration is
+to stop treating HYP-3037 capacitor exits as new labels: `owner_strip`,
+`nested_refinement`, `cross_handoff`, and `same_tile_boundary` are the
+HYP-2996/HYP-2992 residual-section/Haar exit alphabet.  HYP-3045 gives the
+`B18Z6` endpoint-owner transfer address lift; HYP-3038 gives the first
+concrete q=23 `nested_refinement` normal form; HYP-3036 primitive decks
+are HYP-2886 exact-period packet atlases; HYP-3035 owner strips should be
+proven through HYP-3042 endpoint-owner filtration, HYP-3045 owner-transfer
+deltas, HYP-3018 normal-fan support, and HYP-3034 owner-deletion persistence;
+HYP-3041 supplies the q13
+AP-tail prime-clock/puncture repair; HYP-3044 shows compact topology failures
+are owner-stalk collars with primitive q<=13 deck splits; q=14 belongs to
+THM-523/HYP-2917; pair-good decoys are blocker decks; squarefree analytic
+blindness needs HYP-3013 divisor-lattice fields; and all emitted sidecars
+should be recorded as `omega_Q` cocycles under HYP-2995/HYP-3006.  Next
+theorem-engineering target: add the HYP-3046 sidecar
+merge set to HYP-2963 packet records, beginning with `zeta_exit_class`,
+`residual_section_exit`, `coarse_endpoint_word`,
+`external_endpoint_owner_strip`, `endpoint_owner_transfer_delta`,
+`endpoint_owner_residue_delta`, `primitive_safe_deck_2_13`, AP-tail
+puncture/fixed-point fields, owner-transfer and owner-support fields,
+`first_surviving_filtration_page`, topology-exception fields,
+`first_cut_stage`, `drop_add_square_id`, `omega_Q_class`, exact-period chart fields,
+`divisibility_threshold_qS`, divisor-lattice fields, and blocker-deck fields.
+-> HYP-3046, HYP-3045, HYP-3044, HYP-3043, HYP-3042, HYP-3041, HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3034,
+HYP-3032, HYP-3031, HYP-3027, HYP-3022, HYP-3018, HYP-3013, HYP-3006,
+HYP-2996, HYP-2995, HYP-2992, HYP-2886, THM-523, THM-566, LTI-194, LTI-193, LTI-192,
+LTI-191, LTT-092, LTT-091, LTT-090, LTT-089, T1127, T1126, T1125, T1124.
+
 **OPEN-Q-108 S174 perfect-number packet merge addendum:** HYP-3013 merges the
 prior perfect-number / aliquot fixed-point work into the current LRC14
 automatic-gap stack.  The exact `n=2` Euclid-Euler rows remain calibration

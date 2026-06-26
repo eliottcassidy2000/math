@@ -76,6 +76,48 @@ primitive packet is AP/GW boundary H1, a `q<=13` primitive witness,
 an owner/stalk/topology descent, or a named capacitor/zeta cut to existing
 route debt.
 Namespace: HYP-3040 / T1121 / LTI-188 / LTT-086.
+## Lead codex-2026-06-26-S209: LRC14 hidden connection accelerators
+
+**Status:** SYNTHESIS / source-audited proof-carrier index complete
+(HYP-3046/T1127/LTI-194/LTT-092), rebased over S202/HYP-3039 hidden-coordinate
+S203/HYP-3040 hidden-statement ledger work, S204/HYP-3041 AP-tail puncture
+work, S205/HYP-3042 owner-strip filtration, S206/HYP-3043 lens map, and
+S207/HYP-3044 topology-exception teeth plus incoming S208/HYP-3045
+endpoint-owner transfer while using S201/HYP-3038 q=23 drop/add square,
+S204's q13 AP-tail repair, S205's endpoint-owner filtration, S207's
+owner-stalk topology teeth, and S208's `B18Z6` owner-current address lift as
+concrete local normal forms.  It
+connects back to HYP-2996/HYP-2992 residual section/Haar exits, HYP-2886
+exact-period packets, HYP-3042 endpoint-owner filtration, HYP-3045
+endpoint-owner transfer, HYP-3044 topology
+exception fields, HYP-3018 normal-fan support, HYP-3013 perfect/divisor lanes,
+HYP-3022 decoy blocker decks, and HYP-2995/HYP-3006 cocycle exactness.
+**Readout:** `04-computation/lrc14_hidden_connection_accelerators_codex_s209.py`
+stores output in
+`05-knowledge/results/lrc14_hidden_connection_accelerators_codex_s209.out`.
+The script verifies `106` local source markers with `0` missing and ranks twelve
+connector lemmas.  Top accelerator: HYP-3037 capacitor exits are not new proof
+vocabulary; they are the HYP-2996/HYP-2992 exit alphabet.  HYP-3045 supplies
+the `B18Z6` endpoint-owner transfer address lift, HYP-3038 supplies the
+concrete q=23 nested-refinement square, HYP-3036 primitive decks are
+exact-period atlases, owner strips route through HYP-3042 endpoint-owner
+filtration plus HYP-3045 endpoint-owner transfer and HYP-3018/HYP-3034 owner
+support, HYP-3041 supplies the q13
+AP-tail prime-clock repair, HYP-3044 routes compact-topology failures through
+owner-stalk and primitive-deck teeth, q=14 routes through THM-523/HYP-2917,
+pair-good decoys route through blocker decks, and squarefree blindness routes
+through divisor-lattice prime-power fields.
+**Next:** add the HYP-3046 sidecar merge set to HYP-2963 packet records:
+`zeta_exit_class`, `residual_section_exit`, `primitive_safe_deck_2_13`,
+`first_primitive_safe_q_2_13`, `coarse_endpoint_word`,
+`external_endpoint_owner_strip`, `endpoint_owner_transfer_delta`,
+`endpoint_owner_residue_delta`, AP-tail puncture/fixed-point fields,
+owner-transfer and owner-support fields, `first_surviving_filtration_page`, `first_cut_stage`,
+topology-exception fields, `drop_add_square_id`, `omega_Q_class`,
+exact-period chart fields,
+`divisibility_threshold_qS`,
+divisor-lattice fields, and blocker-deck fields.
+Namespace: HYP-3046 / T1127 / LTI-194 / LTT-092.
 
 ## Lead codex-2026-06-26-S199: LRC14 residual tooth atlas
 
@@ -1308,7 +1350,7 @@ and may yield the free density's exact edge constant (numerics give `≈0.4–0.
 **S2 Lean update (kind-pasteur-2026-05-30-S2):** Added THM-350 / the unordered abstract layer in `TournamentH7.BucketBalance`: the partner map `(x,u)->(step u x,u)` preserves internal half-lines for involutive moves, fixed-point-free moves forbid self-partners, and the unordered balance follows from `Even selfHalf.card`. Also added the concrete staircase-to-tournament bridge and top-good-cut/SC audit via `StaircaseConnectivity`.
 **Codex 2026-05-30 orbit update:** The generic orbit-parity bridge is now Lean-proved. `BucketBalance.even_card_of_fixedPointFree_involutiveOn` proves that any finite fixed-point-free involution has even cardinality, and `BucketBalance.unordered_balance_of_involutive_fixedPointFree` removes the separate evenness assumption from the abstract unordered balance.
 **Opus 2026-05-30 Boolean-cube update:** THM-351 closes the remaining Boolean-mask bridge in Lean. `BoolCube`, `xorMask`, `xorMask_involutive`, `xorMask_fixedPointFree_of_nonzero`, and `unordered_balance_boolCube_masks` specialize the abstract THM-350 layer to finite Boolean cubes with nonzero xor masks. This gives a reusable formal model for tiling-cube mask families before quotient-specific tournament maps are attached.
-**Why it matters:** This turns the merged metagraph into a constrained reversible transport system, not just an unweighted graph. It also corrects the old S202 "merged tiling excess" narration: merged buckets still partition the fixed-base cube exactly.
+**Why it matters:** This turns the merged metagraph into a constrained reversible transport system, not just an unweighted graph. It also corrects the old S205 "merged tiling excess" narration: merged buckets still partition the fixed-base cube exactly.
 **Next steps:**
   1. Attach the Boolean-cube theorem to the concrete tiling-coordinate type used by the staircase explorer, if a more semantic wrapper is wanted.
   2. Determine whether generic NS-sea transport is approximable from bucket sizes alone, with SC/rib corrections.
