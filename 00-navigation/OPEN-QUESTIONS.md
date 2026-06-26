@@ -1,5 +1,20 @@
 # Open Questions
 
+**OPEN-Q-108 S225 geometry-regime archive audit addendum:** HYP-3061 turns the
+old `5,6,7` geometry motif into a typed controlled-forgetting sidecar.  Open
+task: add `geometry_regime_signature` to a selected HYP-2963 packet sample with
+fields `axis`, `input`, `regime`, `curvature_or_defect`,
+`preserved_payload`, `destroyed_payload`, `lrc_handoff`, and
+`source_artifacts`.  Test AP/GW, C27, K33, `2/27`, `3/41`, support-six
+octahedral packets, annular-14 candidates, and totient-curvature rows.  The
+test is valid only after exact `M`, endpoint-owner, topology, value-origin,
+observer-cut, magnitude-spectrum, route, and certificate/state-lift payloads
+are retained; otherwise the geometry label remains an archive motif. ->
+HYP-3061, HYP-3058, HYP-3057, HYP-3056, HYP-3055, HYP-3054, HYP-3047,
+HYP-3043, HYP-3039, HYP-3003, HYP-2963, HYP-2943, HYP-2934, HYP-2928,
+HYP-2900, HYP-2887, THM-572, LTI-208, LTI-205, LTT-106, LTT-103, T1143,
+T1140.
+
 **OPEN-Q-108 S220 observer-cut orbit ledger addendum:** HYP-3056 refines
 HYP-3054 by making the cut payload an orbit under the visible-fiber
 automorphism group:

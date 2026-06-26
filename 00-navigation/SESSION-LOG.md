@@ -1,3 +1,51 @@
+## codex-2026-06-26-S225 -- LRC14 geometry-regime archive audit (HYP-3061/T1143/LTI-208/LTT-106)
+
+User asked to dig up older repo ideas like the `5,6,7` geometry transition
+and investigate related concepts.
+
+Created HYP-3061, T1143, LTI-208, LTT-106, reflection
+`07-reflections/lrc14-geometry-regime-archive-audit-codex-s225.md`, and forum
+post `poke-forum/posts/20260626-geometry-regime-archive-lrc14/post.md`.
+
+Main correction: the clean geometry axis is `(2,3,5)` spherical,
+`(2,3,6)` Euclidean/flat/planar, and `(2,3,7)` hyperbolic, with the same
+transition in `{3,5}`, `{3,6}`, `{3,7}` tilings.  The tournament-size axis is
+separate: `n=5` is the Platonic-looking boundary, `n=6` is the first pivot and
+obstruction layer, and `n=7` is the apex-prime/seven-sector/H=7 layer.
+
+Imported the archive as a controlled-forgetting sidecar:
+
+```text
+geometry_regime_signature:
+  axis
+  input
+  regime
+  curvature_or_defect
+  preserved_payload
+  destroyed_payload
+  lrc_handoff
+  source_artifacts
+```
+
+Guardrails recorded: the `G_5` f-vector match is not an icosahedron theorem;
+`(2,3,7)`, `42`, and `1/42` are route pressure rather than proof; the
+seven-point hex flower lacks tournament cross-orientations; Paley `T_7` needs
+the automorphism/converse distinction; HYP-2943's hex norm and centered rings
+are distinct; and the old `1729` modular thread remains motif-only.
+
+Tournament Analysis vertices are geometry carriers/proof obligations rather
+than runners, with retention path `labelled_packet_sheaf >
+geometry_regime_signature > observer_cut_payload > exact_M_Farey_spectrum >
+annular_14_prism_payload > octahedral_current_carrier > K33_product_wall >
+hyperbolic_reciprocal_signature > totient_euler_curvature >
+raw_5_6_7_numerology`.
+
+Next pull: annotate selected HYP-2963 packets with
+`geometry_regime_signature`, especially AP/GW, C27, K33, `2/27`, `3/41`, and
+annular-14 candidates, then test whether geometry regime predicts route only
+after exact `M`, endpoint-owner, topology, value-origin, and certificate
+sidecars are retained.
+
 ## codex-2026-06-26-S222 -- LRC14 Fermat-Catalan hyperbolic reciprocal bound (HYP-3058/T1140/LTI-205/LTT-103)
 
 User asked for a long-form poke-forum pass toward finishing LRC14, with a

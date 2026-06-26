@@ -144,6 +144,11 @@ obligations, and proof-carrier interfaces.
 - Need to continue after rectangle/hourglass residues vanish:
   use LTT-105 and test `desargues_girth6_residue` plus
   `beal_common_owner_gate` before naming any survivor F7/THM-572 debt.
+- Need to reuse old `5,6,7` geometry work without confusing axes:
+  use LTT-106 after LTT-102/LTT-103 and record `geometry_regime_signature`,
+  `axis`, `input`, `regime`, `curvature_or_defect`, `preserved_payload`,
+  `destroyed_payload`, `lrc_handoff`, and `source_artifacts` before promoting
+  any spherical/flat/hyperbolic analogy.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2674,6 +2679,49 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3052, HYP-3051, HYP-3048, HYP-3037, HYP-3034, HYP-3031, HYP-2991,
   HYP-2963, THM-572, LTI-207, LTI-204, LTI-203, LTI-201, LTT-105, LTT-102,
   LTT-101, LTT-099, LTT-098, T1142, T1139, T1138, T1136, OPEN-Q-108.
+
+### LTT-106: Geometry-Regime Archive Audit
+
+- **Move:** Type each geometry analogy by axis before using it as a proof
+  carrier.  The triangle/tiling axes say `(2,3,5)` and `{3,5}` are
+  spherical, `(2,3,6)` and `{3,6}` are Euclidean/flat/planar, and `(2,3,7)`
+  and `{3,7}` are hyperbolic.  The tournament-size axis says `n=5` is a
+  Platonic-looking boundary, `n=6` is the pivot/first obstruction layer, and
+  `n=7` is the apex-prime/seven-sector/H=7 obstruction layer.
+- **LRC use:** HYP-3061 consolidates older geometry work into
+  `geometry_regime_signature` rather than another scalar.  Use it to retain
+  the axis, input, regime, curvature/defect, preserved payload, destroyed
+  payload, LRC handoff, and source artifacts while testing AP/GW, C27, K33,
+  `2/27`, `3/41`, support-six, octahedral-current, annular-14, and
+  totient-curvature rows.
+- **Preserves:** Geometry axis, curvature sign or obstruction defect, exact
+  scale context, endpoint-owner/topology sidecars, value-origin tag,
+  observer-cut payload, magnitude-spectrum requirement, route handoff, and
+  certificate/state-lift obligation.
+- **Forgets / guardrail:** Raw `5`, `6`, `7`, `14`, `28`, `42`, or `1/42`
+  numerology forgets the axis.  The `G_5` f-vector match is not an
+  icosahedron theorem; `(2,3,7)` is route pressure rather than proof; the
+  seven-point hex flower lacks tournament cross-orientations; Paley `T_7`
+  needs the automorphism/converse distinction; and old `1729` modular claims
+  remain motif-only unless reconstructed by packet sidecars.
+- **Tournament fingerprint:** vertices are geometry carriers and proof
+  obligations, not runners:
+  `labelled_packet_sheaf > geometry_regime_signature >
+  observer_cut_payload > exact_M_Farey_spectrum >
+  annular_14_prism_payload > octahedral_current_carrier >
+  K33_product_wall > hyperbolic_reciprocal_signature >
+  totient_euler_curvature > raw_5_6_7_numerology`.  The intended gauge is
+  transitive by retained LRC predicate; edge flips mean the geometry analogy
+  hides multiple packet coordinates.
+- **Next pull:** Add `geometry_regime_signature` to selected HYP-2963 rows
+  and test route/status prediction only after exact `M`, endpoint-owner,
+  topology, value-origin, observer-cut, magnitude-spectrum, route, and
+  certificate/state-lift payloads are retained.
+- **Pointers:** HYP-3061, HYP-3058, HYP-3057, HYP-3056, HYP-3055, HYP-3054,
+  HYP-3047, HYP-3043, HYP-3039, HYP-3003, HYP-2963, HYP-2943, HYP-2934,
+  HYP-2928, HYP-2900, HYP-2887, THM-572, LTI-208, LTI-205, LTI-204,
+  LTI-203, LTI-202, LTI-201, LTT-106, LTT-103, LTT-102, LTT-101, LTT-100,
+  LTT-099, T1143, T1140, OPEN-Q-108.
 
 ## Immediate Pull List
 
