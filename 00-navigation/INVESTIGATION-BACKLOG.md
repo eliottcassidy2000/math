@@ -9,7 +9,7 @@
 **Last S90 update:** opus-2026-03-15-S90 (simplicial Rédei, Cayley monad, τ-φ clock, equidecomposability)
 **Last gauge theory analysis:** kind-pasteur-2026-03-21-S12 (Napolitano paper, Cartan decomposition bridge, TournamentProbe)
 **Last literature sweep:** opus-2026-04-05-S24 (Stanley-Stembridge proved, Mitrovic NC deletion-contraction, Tang-Yau circulant Fourier)
-**Last LRC web trawl:** mac-mini-2026-06-21-S20 (Rosenfeld 2025 proves LRC n=8,9,10; Huffer-Shepp Schur-convex coverage; Cusick AP-tight; see leads below)
+**Last LRC web trawl:** codex-2026-06-26-S170 (2-adic Littlewood/Hurwitz finite transducer, Ostrowski-Hadamard gap warning, ACM large-stick safe-component analogy; exact-gap companion to HYP-3008/LTI-158 and HYP-3009/LTI-159 at HYP-3010/T1094)
 **Last full repo scour:** opus-2026-03-05-S9
 **Last web research:** opus-2026-03-05-S9 (Paley maximizer, n=8 anomaly)
 
@@ -93,6 +93,31 @@ Then test whether every hard non-AP/GW packet is classified by exactly one
 primary recursion mode plus named side-channel debts.
 Namespace: HYP-3004 / T1088 / LTI-154; companion to HYP-3002 / LTI-152 and
 the HYP-3003 / LTI-153 add/multiply fiber merge.
+## Lead codex-2026-06-26-S170: LRC14 lacunary exact-gap automaton carrier
+
+**Status:** EVIDENCE / exact scout and proof-interface carrier complete
+(HYP-3010/T1094/LTI-158/LTI-159 companion).  User asked to push LRC14 proof thinking through
+Fermat-Catalan, the 2-adic Littlewood paper, Ostrowski-Hadamard gaps,
+Moser-de Bruijn, fibbinary numbers, and finite automata.
+**Readout:** `04-computation/lrc14_lacunary_automaton_carrier_codex_s170.py`
+stores output in
+`05-knowledge/results/lrc14_lacunary_automaton_carrier_codex_s170.out`.  The
+script builds fibbinary and Moser-de Bruijn automata and computes exact LRC14
+gaps/safe components for AP, GW, first-13 sequence rows, and first mod-14
+residue transversals.  AP and GW are boundary atoms with `M=1/14` and zero
+safe mass; first13 fibbinary is strict with `M=3/25`; first13 Moser,
+fibbinary residue transversal, and Moser residue transversal are strict with
+`M=1/6`.  Tournament Analysis ranks exact Farey scale and exact largest safe
+component above dyadic/fibbinary/Moser carry languages, with raw sequence
+scalars last.  Rebase signal: HYP-3008/LTI-158 already owns the automatic
+gap-language closure lane and HYP-3009/LTI-159 adds the Fermat-Catalan
+power-lift extension; HYP-3010 adds exact LRC maximin and safe-component
+audits for the same carrier family.
+**Next:** add `carry_language` and `automaton_state` to HYP-2963/HYP-3001/HYP-3008/HYP-3009
+packet records, then test whether zero-open non-AP/GW residuals emit a
+nontrivial dyadic/Ostrowski carry state, have an owner-strip/cross-handoff/
+nested-refinement Haar exit, route to K33/THM-572, or collapse to AP/GW.
+Namespace: HYP-3010 / T1094 / LTI-158-LTI-159 companion.
 
 ## Lead codex-2026-06-24-S169: Farey-Fibonacci additive-basis carrier
 

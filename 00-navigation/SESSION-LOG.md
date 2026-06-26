@@ -126,6 +126,42 @@ added LTI-154 as the mode-switch companion to HYP-3002/LTI-152 and the HYP-3003/
 `recursion_boundary_state`, and `smoothing_route` to HYP-2963 packet records,
 then classify hard non-AP/GW packets by one primary recursion mode plus named
 side-channel debts.
+## codex-2026-06-26-S170 -- LRC14 lacunary exact-gap automaton carrier (HYP-3010/T1094)
+
+User asked to keep pushing toward the LRC14 proof while thinking through
+Fermat-Catalan, the 2-adic Littlewood/Hurwitz multiplication-by-2 paper,
+Ostrowski-Hadamard gaps, Moser-de Bruijn, fibbinary numbers, and finite
+automata.
+
+Added `04-computation/lrc14_lacunary_automaton_carrier_codex_s170.py` and
+stored `05-knowledge/results/lrc14_lacunary_automaton_carrier_codex_s170.out`.
+The scout builds fibbinary and Moser-de Bruijn automata, then computes exact
+LRC14 maximin gaps, safe mass, longest safe component, and residue profiles for
+AP, GW, first-13 sequence rows, and first mod-14 residue transversals.
+
+Exact readout: AP and GW remain boundary atoms with `M=1/14` and zero safe
+mass.  First13 fibbinary is strict with `M=3/25`.  First13 Moser, fibbinary
+residue transversal, and Moser residue transversal are strict with `M=1/6`.
+Thus the automata are useful carry side channels and negative controls, not
+new tight candidates.
+
+Tournament Analysis uses proof carriers as vertices, not runners:
+`farey_exact_M_scheduler`, `large_stick_safe_component`,
+`two_adic_hurwitz_transducer`, `fibbinary_no_adjacent_carry`,
+`moser_de_bruijn_base4_sparse`, `fermat_catalan_power_collision`,
+`ostrowski_hadamard_gap_guard`, and `raw_sequence_scalar`.  Fingerprint:
+`score_hist={0:1,1:1,2:1,4:2,5:2,7:1}`, `directed_3cycles=2`,
+`scc_sizes=[1,1,1,1,4]`, and `hamiltonian_path_count=5`.
+
+Rebased over the incoming HYP-3008/LTI-158 automatic gap-language carrier and
+the HYP-3009/LTI-159 Fermat-Catalan power-lift extension, so this local pass
+now lives as HYP-3010/T1094: the exact-gap and safe-component companion to
+those automaton/power packet notes.  Created reflection
+`07-reflections/lrc14-lacunary-finite-automaton-carrier-codex-s170.md`.
+Proof-order takeaway: add `carry_language` and `automaton_state` fields to
+HYP-2963/HYP-3001/HYP-3008/HYP-3009 packet records, then test whether zero-open non-AP/GW
+residuals emit a dyadic/Ostrowski state, have a Haar section exit, route to
+K33/THM-572, or collapse to the AP/GW boundary skeleton.
 
 ## codex-2026-06-24-S169 -- Farey-Fibonacci additive-basis carrier (HYP-2998/T1083)
 
