@@ -271,6 +271,21 @@ by Fejer/Ramanujan/Haar, or emits F7/THM-572 debt. -> HYP-3032, HYP-3027,
 HYP-3026, HYP-3024, HYP-3023, HYP-3020, HYP-2985, HYP-2984, HYP-2983,
 HYP-2982, HYP-2979, HYP-2978, HYP-2963, THM-572, LTI-180, LTT-078, T1113.
 
+**OPEN-Q-108 S201 q=23 drop/add square addendum:** HYP-3038 tests the first
+HYP-3032 analytic residual pair as a HYP-3031 Haar-tile square after the
+HYP-3037 residual-capacitor cut and HYP-3036 primitive-period scheduler.  The diagonal
+drop/add rows `drop(10,13)->add(20,26)` and `drop(8,12)->add(16,24)` both
+have `M=2/23`, while the cross-swaps open to direct witnesses with `M=1/10`
+and `M=1/8`.  Exact-M zeta is `-47/920`; safe-body zeta, bar-count zeta, and
+endpoint zeta are also nonzero, but magnitude height/delta zeta is `0`.
+Exact `M` still mixes the diagonal petal/covering routes, and endpoint-owner
+strips split them (`12:26x6,6:20x4` versus `2:16x6`).  Next theorem target:
+audit double-pair drop/add squares familywise and prove each square either
+opens off diagonal, descends through a family q-diagonal, exposes owner-strip
+routing data, or emits F7/THM-572 debt. -> HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3032,
+HYP-3031, HYP-3027, HYP-3026, HYP-2991, HYP-2989, HYP-2963, THM-572,
+LTI-186, LTT-084, T1119.
+
 **OPEN-Q-108 S174 perfect-number packet merge addendum:** HYP-3013 merges the
 prior perfect-number / aliquot fixed-point work into the current LRC14
 automatic-gap stack.  The exact `n=2` Euclid-Euler rows remain calibration

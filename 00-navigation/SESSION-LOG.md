@@ -7,6 +7,36 @@ Added `04-computation/lrc14_residual_tooth_atlas_codex_s199.py` and stored `05-k
 Created HYP-3035, T1116, LTI-183, LTT-081, and reflection `07-reflections/lrc14-residual-tooth-atlas-codex-s199.md`.  Tournament Analysis vertices are repair teeth rather than runners; the observable tracks status preservation, route split, nonroute legality, locality, compression, and proof cost.  The tournament has `score_hist={0:1,2:3,4:1}`, one directed 3-cycle, and `3` Hamiltonian paths, warning that first proof tooth, strongest splitter, and explicit route certificate are different roles.  Proof-order takeaway: add `first_tooth` and `residual_tooth_class` sidecars, then prove two owner-strip descent lemmas instead of re-counting residual fibers.
 
 During close-out, incoming S196/HYP-3032 claimed the analytic sieve-clock bridge namespace, incoming S197/HYP-3033 claimed the residual certificate-teeth scheduler, and incoming S198/HYP-3034 claimed the arc-boundary path lift.  The residual tooth atlas was renumbered forward to S199/HYP-3035/T1116/LTI-183/LTT-081 and linked as the first-tooth refinement layered after HYP-3034/HYP-3033 and beside HYP-3032's analytic-clock blindness/capacity route.
+## codex-2026-06-26-S201 -- LRC14 q=23 drop/add Haar square (HYP-3038/T1119/LTI-186/LTT-084)
+
+User asked to keep working new angles on the LRC.  After repairing and pushing
+the incoming namespace collision around the analytic bridge, followed the
+HYP-3032 q=23 residual pair into HYP-3031's Haar-tile repair dictionary, then
+rebased over the S196b/HYP-3037 residual-capacitor cut and S200/HYP-3036
+Ramanujan primitive-period scheduler.
+
+Added `04-computation/lrc14_q23_drop_add_haar_square_codex_s201.py` and stored
+`05-knowledge/results/lrc14_q23_drop_add_haar_square_codex_s201.out`.  The
+script builds the two-coordinate square whose coordinates are dropped AP pair
+and added double pair.  The HYP-3032 residual rows are the diagonal corners:
+`drop(10,13)->add(20,26)` and `drop(8,12)->add(16,24)`, both with `M=2/23`.
+The off-diagonal cross-swaps open as direct q-witness rows with `M=1/10` and
+`M=1/8`.
+
+Main readout: exact-M zeta is `-47/920`; safe measure, bar count, longest bar,
+midpoint slack, boundary count, and zero-sum active pairs also have nonzero
+zeta, while magnitude height and magnitude delta have zeta `0`.  Exact `M`
+still mixes the diagonal petal/covering routes, but safe-body geometry and
+endpoint-owner strips split all cells.  Endpoint-owner strips distinguish the
+diagonal rows as `12:26x6,6:20x4` versus `2:16x6`.
+
+Created HYP-3038, T1119, LTI-186, LTT-084, reflection
+`07-reflections/lrc14-q23-drop-add-haar-square-codex-s201.md`, and a
+poke-forum handoff.  Proof-order takeaway: the repair class is
+`nested_refinement_to_q23_diagonal_then_owner_strip`; next audit double-pair
+drop/add squares familywise and prove each square opens off diagonal,
+descends through a family q-diagonal, exposes owner-strip routing data, or
+emits named F7/THM-572 debt.
 
 ## codex-2026-06-26-S191 -- LRC carrier pullback mega-index (T1108/LTI-175/LTT-073)
 

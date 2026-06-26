@@ -69,6 +69,9 @@ obligations, and proof-carrier interfaces.
 - Need to inspect two-plate residual route collisions after the broad residual
   tooth atlas and primitive-period scheduler have organized the full coarse ledger:
   use LTT-083 and record `residual_capacitor_id` plus `first_cut_stage`.
+- Need to resolve the squarefree `q=23` petal/covering residual pair:
+  use LTT-084 after LTT-083/LTT-082 and retain the drop/add square plus
+  endpoint-owner strip.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1632,6 +1635,41 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-179, LTI-178, LTI-177, LTT-082, LTT-081, LTT-080, LTT-079, LTT-078,
   LTT-077, LTT-076, LTT-075, T1118, T1117, T1116.
 
+### LTT-084: q=23 Drop/Add Haar-Square Tournament
+
+- **Move:** Build the actual `2 x 2` fixed-margin square whose coordinates
+  are a dropped AP pair and an added double pair; treat the mixed coordinate
+  as exact-M/safe-body/endpoint-owner zeta.
+- **LRC use:** HYP-3038 resolves the HYP-3032 `q=23` analytic residual pair
+  locally, downstream of HYP-3037's capacitor cut and HYP-3036's
+  primitive-period scheduler.  The diagonal rows `drop(10,13)->add(20,26)` and
+  `drop(8,12)->add(16,24)` have `M=2/23`; the off-diagonal cross-swaps open
+  as `M=1/10` and `M=1/8` q-witness rows.  Exact-M zeta is `-47/920`, but
+  exact `M` still mixes petal and covering until endpoint-owner strips are
+  retained.
+- **Preserves:** Open/boundary status, exact mixed coordinate, diagonal
+  doubling match, safe-component body, endpoint-owner strip, and route
+  schedulability for the local residual pair.
+- **Forgets / guardrail:** Raw analytic q=23 data forgets drop/add geometry;
+  row/column margins forget zeta; exact `M` forgets endpoint owners; coarse
+  endpoint count `B18Z6` forgets which external speed owns the boundary facets.
+- **Tournament fingerprint:** vertices are proof teeth, not runners:
+  `raw_analytic_q23_shadow`, `drop_add_row_column_shadow`,
+  `diagonal_doubling_match`, `exact_M_zeta_grid`, `safe_component_body`,
+  `endpoint_owner_strip`, and `labelled_packet_route`.  Score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, no directed 3-cycles, singleton SCCs, and
+  one Hamiltonian path with
+  `labelled_packet_route > endpoint_owner_strip > safe_component_body >
+  exact_M_zeta_grid > diagonal_doubling_match >
+  drop_add_row_column_shadow > raw_analytic_q23_shadow`.
+- **Next pull:** Run the double-pair square audit over more diagonal families:
+  each square should open off diagonal, descend through a family q-diagonal,
+  expose endpoint-owner strip data, or emit named F7/THM-572 debt.
+- **Pointers:** HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3032, HYP-3031,
+  HYP-3027, HYP-3026, HYP-2991, HYP-2989, HYP-2963, THM-572, LTI-186,
+  LTI-185, LTI-184, LTI-183, LTI-180, LTI-179, LTT-083, LTT-082, LTT-081,
+  LTT-078, LTT-077, T1119, T1118, T1117, T1116.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1670,6 +1708,8 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    status-purity status, guarded non-route signature,
    carrier-pullback row ID, destroyed-coordinate ledger, zeta repair class,
    residual tooth class, first residual tooth,
+   drop-add square ID, diagonal doubling match, exact-M zeta,
+   endpoint-owner strip,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
