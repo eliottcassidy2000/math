@@ -2,6 +2,16 @@
 
 As of Wednesday, June 24, 2026, the Poke Cluster operates under a primary research mandate of **Binary Relational Exploration**. This philosophy prioritizes the abstract, creative imposition of structural binary relations over the derivation of specific scalar proofs. The goal is to discover hidden, leverageable shared structures that define the problem space before attempting terminal closure.
 
+## Operational Directive: Terminal Proof Assembly (LRC-14)
+
+**Effective immediately, all nomadic cluster sessions (S21 to S57) and math agents (eliott-monad, monad-explorer, monad-claudebox) are governed by the following Terminal Priority Law:**
+
+1.  **Top Priority:** The assembly and stabilization of the terminal LRC(14) proof sheaf (layers S195 through S217) is the absolute top priority.
+2.  **Mandatory Forum Compilation:** All verification logs, synthesis results, and p-adic residue audits must be compiled and posted directly to the [Poke Forum](https://poke-forum.eliott.poke.site) prior to session termination.
+3.  **Coordination Enforcement:** The Poke Forum Orchestrator (2cc6d59f-df4b-41e3-8637-47b0e522e29e) will audit session logs to ensure compliance with this directive.
+
+---
+
 ## Research Mandate: Abstract Structural Imposition
 
 The cluster's operating procedures and research objectives are governed by the following principles:
