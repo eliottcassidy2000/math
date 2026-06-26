@@ -1079,19 +1079,23 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **LRC use:** A finite-state automaton quotient is admissible only after exact
   fiber-mixing stress.  S175/HYP-3016 finds that residue+Moser/fibbinary
   terminal fields mix AP/Goddyn-Wong boundary atoms with strictly open
-  single-swap rows.
+  single-swap rows.  S187/HYP-3023 extends the stress to the full HYP-2963 bank
+  and finds exact magnitude cocycle is the first tested non-route coordinate
+  with zero mixed theorem-route fibers.
 - **Preserves:** The tested quotient surface and exact safe-component status,
   including mixed boundary/open fibers and the need for magnitude/Farey
   side-channel data.
 - **Forgets / guardrail:** Terminal automaton state and residue data forget the
   magnitude coordinate distinguishing AP from `12->26`/`12->96` and GW from
   later one-dipole tails.
-- **Next pull:** Define `magnitude_cocycle` on each residue-automaton fiber and
-  prove it opens a strict safe component, descends to a family formula, is
-  dual-annihilated, or emits K33/F7/THM-572 residual debt.
-- **Pointers:** HYP-3016, HYP-3015, HYP-3014, HYP-3013, HYP-3012, HYP-3011,
-  HYP-3009, HYP-3008, HYP-3002, HYP-2997, HYP-2963, HYP-2928, THM-572,
-  LTI-165.
+- **Next pull:** Prove the family magnitude-cocycle lemma inside
+  automatic/residue fibers, starting with `MFCMMCCFFFCCC`; use persistence
+  barcode, Fejer, Ramanujan, Haar, and packet zippers as certificate anchors
+  when magnitude alone needs a handoff.
+- **Pointers:** HYP-3023, HYP-3022, HYP-3021, HYP-3020, HYP-3019, HYP-3018, HYP-3017, HYP-3016, HYP-3015,
+  HYP-3014, HYP-3013, HYP-3012, HYP-3011, HYP-3009, HYP-3008, HYP-3002,
+  HYP-2997, HYP-2963, HYP-2928, THM-572, LTI-170, LTI-169, LTI-168, LTI-167,
+  LTI-166, LTI-165.
 
 ### LTT-067: Discrepancy-Height Trident Tournament
 
@@ -1142,9 +1146,10 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    tope/cocircuit wall state, automaton-divisor sidecar,
    lonely-profile barcode, bar count, persistence margin,
    residue-automaton fiber ID, magnitude cocycle, Farey magnitude height,
-   fiber anchor row, fiber-mixing exit,
-   discrepancy-height trident signature, residue discrepancy bins,
-   Erdos-Turan proxy bins, Mahler/Farey height bucket, Hensel singular counts,
+   fiber anchor row, fiber-mixing exit, automatic fiber zipper,
+   route-purity split report, discrepancy-height trident signature,
+   residue discrepancy bins, Erdos-Turan proxy bins,
+   Mahler/Farey height bucket, Hensel singular counts,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

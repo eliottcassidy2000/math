@@ -65,6 +65,26 @@ after exact `M/q`, endpoint geometry, C27/K33, Haar/Fejer, covering, valuation,
 and residual labels are attached. -> HYP-3017, HYP-3016, HYP-3015, HYP-3014,
 HYP-2963, HYP-3013, HYP-3012, HYP-3011, HYP-3010, HYP-3009, HYP-3008,
 THM-572, LTI-159, LTI-160, LTI-161, LTI-164, LTI-TODO-32, LTI-TODO-34.
+**OPEN-Q-108 S187 automatic-fiber zipper addendum:** HYP-3023 runs the full
+HYP-2963 `21913`-packet bank through an explicit zipper ladder from automatic
+word to residue-terminal fiber, magnitude cocycle, barcode shadow, packet
+zipper, and theorem route.  Automatic words remain unsafe quotients (`225`
+fibers, `143` mixed-route, max mixed `1179` rows), and residue-terminal
+automaton fibers only reduce the obstruction (`16555` fibers, `265`
+mixed-route, max mixed `30`).  The first tested non-route coordinate with zero
+mixed theorem-route fibers is exact magnitude:
+`(M,q_threshold,farey_excess,lacunary_tail_ratio)` has `21909` fibers and `0`
+mixed-route fibers.  The AP/GW word `MFCMMCCFFFCCC` still has `639` rows
+across q-witness, AP/GW, petal, and covering routes; residue-terminal fibers
+inside it mix `27` times, while magnitude splits it to `638` fibers with no
+route mixing.  Open task: prove the family magnitude-cocycle lemma inside
+automatic/residue fibers, starting with the `33` exact `M` values in
+`MFCMMCCFFFCCC`, and use barcode/Fejer/Ramanujan/Haar/packet zippers as
+certificate anchors rather than scalar replacements. -> HYP-3023, HYP-3022,
+HYP-3021, HYP-3020, HYP-3019, HYP-3018, HYP-3017, HYP-3016, HYP-3015,
+HYP-3014, HYP-3012, HYP-3009, HYP-3008, HYP-2963, THM-572, LTI-170, LTI-169,
+LTI-168, LTI-167, LTI-166, LTI-165, LTI-164, LTI-159,
+LTI-TODO-38.
 
 **OPEN-Q-108 S174 perfect-number packet merge addendum:** HYP-3013 merges the
 prior perfect-number / aliquot fixed-point work into the current LRC14

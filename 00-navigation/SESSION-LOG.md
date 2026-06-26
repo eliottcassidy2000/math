@@ -23840,3 +23840,47 @@ technique indexes.  Next pull: attach trident sidecars to the full HYP-2963
 packet bank, coarsen them until the smallest route-pure signature is found for
 large mixed automatic fibers such as `MFCMMCCFFFCCC`, then compare survivors
 against HYP-3015 barcode fields and HYP-2981 Fejer interval manifests.
+
+## codex-2026-06-26-S187 -- LRC14 automatic fiber zipper -- HYP-3023/LTI-170
+
+User asked to keep working on creative LRC proof angles, with the current
+Fermat-Catalan / 2-adic / Moser-de Bruijn / fibbinary / finite-automaton lane
+still in view.  Pulled live `origin/main` first, then rebased over incoming
+HYP-3018 normal-fan, HYP-3019 binding-pair, HYP-3020 discrepancy-height
+trident, HYP-3021 pair-good decoy generator, and HYP-3022 pair-good
+barcode/normal-fan work; this zipper was renumbered to HYP-3023/LTI-170/S187
+after those mainline namespace claims landed.
+
+Added `04-computation/lrc14_automatic_fiber_zipper_codex_s187.py` and stored
+`05-knowledge/results/lrc14_automatic_fiber_zipper_codex_s187.out`.  The
+script imports the HYP-2963 default classifier bank and compares quotient /
+sidecar bundles:
+
+```text
+automatic_word
+residue_terminal_fiber
+magnitude_cocycle
+barcode_shadow
+packet_zipper
+route_labelled_packet
+```
+
+Full-bank result on `21913` packets: automatic words have `225` fibers with
+`143` mixed theorem-route fibers and max mixed fiber `1179`; residue-terminal
+automaton fibers reduce the obstruction to `16555` fibers with `265`
+mixed-route fibers and max mixed `30`; exact magnitude cocycle has `21909`
+fibers with `0` mixed theorem-route fibers.  Barcode shadow, packet zipper,
+and route-labelled packet are also route-pure on this bank.
+
+Target word `MFCMMCCFFFCCC` remains the useful local proof problem.  It has
+`639` rows split across q-witness, AP/Goddyn-Wong boundary, one petal row, and
+covering rows.  Residue-terminal fibers still have `27` mixed-route fibers
+inside this word, while magnitude splits it to `638` fibers with `0` route
+mixing.  The next proof target is a family magnitude-cocycle lemma: inside
+every automatic/residue packet fiber, the cocycle must be AP/GW equality,
+strict-open, a known q-witness/source-family formula, dual-annihilated by
+barcode/Fejer/Ramanujan/Haar data, or named K33/F7/THM-572 residual debt.
+
+Created HYP-3023, LTI-170, and reflection
+`07-reflections/lrc14-automatic-fiber-zipper-codex-s187.md`; updated the
+hypothesis/result indexes, OPEN-Q-108, concept map, and LTT-066 handoff.
