@@ -4,6 +4,8 @@ title: Moser-fibbinary partial-cube simplex geometry carrier
 status: SYNTHESIS / forum-facing proof-carrier sidecar; not a proof
 source: codex-2026-06-26-S227
 tangent: T1145
+script: 04-computation/lrc14_fibbinary_moser_partial_cube_codex_s228.py
+result: 05-knowledge/results/lrc14_fibbinary_moser_partial_cube_codex_s228.out
 related:
   - HYP-3062
   - HYP-3061
@@ -167,6 +169,37 @@ AP/GW boundary stop
 C27/K33/state-lift handoff
 named F7/THM-572 residual debt
 ```
+
+## Exact Scout Addendum
+
+S228 adds an exact carrier scout:
+
+```text
+04-computation/lrc14_fibbinary_moser_partial_cube_codex_s228.py
+05-knowledge/results/lrc14_fibbinary_moser_partial_cube_codex_s228.out
+```
+
+It verifies the ordered-sector row:
+
+```text
+k=2..7: k(k-1)=2*C(k,2)=2*T_{k-1}=2,6,12,20,30,42.
+```
+
+It also separates the first count collisions by value origin:
+
+```text
+Gamma_5: vertices 13, edges 20, layers [1,5,6,1]
+Gamma_6: vertices 21, edges 38, layers [1,6,10,4]
+
+M_5: vertices 32, cube_edges 80, layers [1,5,10,10,5,1]
+M_6: vertices 64, cube_edges 192, layers [1,6,15,20,15,6,1]
+```
+
+So `20` can be a Fibonacci-cube edge count or an ordered-sector count, and
+`12` can be a Moser cube edge count or an ordered-sector count.  Those
+coincidences are legal only after `value_origin_type`, transition, bit phase,
+partial-cube/simplex layer, exact `M`, endpoint owner, route, and safe
+component certificate are retained.
 
 ## LRC14 Transfer
 

@@ -63,6 +63,28 @@ doubled_triangular_layer
 and kept separate from exact `M`, endpoint owners, safe topology, magnitude
 cocycle, and route labels.
 
+S228 adds an exact scout:
+
+```text
+04-computation/lrc14_fibbinary_moser_partial_cube_codex_s228.py
+05-knowledge/results/lrc14_fibbinary_moser_partial_cube_codex_s228.out
+```
+
+The scout verifies:
+
+```text
+k=2..7: k(k-1)=2*C(k,2)=2*T_{k-1}=2,6,12,20,30,42
+
+Gamma_5: vertices 13, edges 20, layers [1,5,6,1]
+Gamma_6: vertices 21, edges 38, layers [1,6,10,4]
+
+M_5: vertices 32, cube_edges 80, layers [1,5,10,10,5,1]
+M_6: vertices 64, cube_edges 192, layers [1,6,15,20,15,6,1]
+```
+
+So coincidences like `12` and `20` need a `value_origin_type` before they can
+be used in any proof route.
+
 Finally, reuse the old `5,6,7` geometry motif with the S225 correction attached.
 The clean geometry axis is:
 

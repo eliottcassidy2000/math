@@ -130,7 +130,7 @@ residual handoff.
 | HYP-3021/HYP-3022 pair-good decoys | generator teeth and barcode/normal-fan overlap explain decoys | local blocker generation | raw count meaning | classify by generator grammar |
 | HYP-3015/HYP-3018 barcode/normal fan | bars and active bottleneck supports localize positive rows | local owner geometry | theorem route | prove stalk/barcode descent |
 | HYP-3023 automatic zipper | automatic words mix routes; exact magnitude cocycle is route-pure in bank | sequence shadow telemetry | exact scale | family magnitude-cocycle lemma |
-| HYP-3009/HYP-3012 Moser/fibbinary/lacunary | automatic languages mix all residues and need packet labels | carry/gap state | boundary/open status | keep as sidecars only |
+| HYP-3009/HYP-3012/HYP-3063 Moser/fibbinary/lacunary | automatic languages mix all residues and need packet labels; HYP-3063 refines them as partial-cube/simplex carriers with typed ordered-sector origins | carry/gap state, native transition, bit phase, partial-cube coordinate, simplex-face layer, ordered-edge sector origin | boundary/open status, exact scale, owner/topology, route if scalarized | keep as sidecars only, with `partial_cube_carrier` and `value_origin_type` attached |
 | HYP-3032 analytic bridge | `mu^2/phi` is a capacity meter with blindness report | analytic capacity | prime-power/family route | packet-keyed analytic zipper |
 | HYP-2995/HYP-2997 cocycle atlases | forgotten coordinates become cochains or named residuals | obstruction class | row identity | implement `omega_Q` manifest |
 | Carrier pullback index CPI-* | `90` cross-surface carrier rows | source-to-LRC translation | proof if uninstantiated | instantiate rows with status/route tests |
@@ -167,7 +167,8 @@ strip, boundary atom, or named residual.
 
 ## Sequence And Automaton Shadows
 
-Moser-de Bruijn, fibbinary/Zeckendorf, Ostrowski-Hadamard lacunary support,
+Moser-de Bruijn, fibbinary/Zeckendorf, partial-cube carrier state,
+ordered edge-sector/pronic rows, Ostrowski-Hadamard lacunary support,
 Fermat-Catalan power guards, Hurwitz doubling states, and Mahler-style
 distribution analogies all behave the same way in this map.  They are useful
 telemetry fields, but unsafe quotient fields.  They preserve carry/gap state

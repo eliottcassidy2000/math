@@ -91,6 +91,11 @@ low_height_wall_ledger > relation_lattice_covolume >
 minkowski_successive_minima_gate > roth_algebraic_height_fence >
 residue_signed_tail > hyperbolic_reciprocal_signature >
 automatic_gap_language > raw_volume_or_exponent_scalar`.
+## codex-2026-06-26-S228 -- HYP-3063 exact partial-cube scout addendum
+
+Added exact scout `04-computation/lrc14_fibbinary_moser_partial_cube_codex_s228.py`, result `05-knowledge/results/lrc14_fibbinary_moser_partial_cube_codex_s228.out`, and reflection `07-reflections/lrc14-fibbinary-moser-partial-cube-exact-scout-codex-s228.md` to the canonical S227 HYP-3063 carrier.
+
+The scout verifies Fibonacci-cube layers, Moser even-bit cube layers, M_m subset Gamma_{2m-1}, and the ordered-sector row `k(k-1)=2*C(k,2)=2*T_{k-1}=2,6,12,20,30,42`.  It separates collisions such as `20 = Gamma_5 edge count = ordered sectors of K_5` and `12 = M_3 cube edge count = ordered sectors of K_4`, so future LRC uses must retain `value_origin_type`, transition, bit phase, partial-cube or simplex layer, exact `M`, endpoint owner, route, and safe-component certificate.
 
 ## codex-2026-06-26-S225 -- LRC14 geometry-regime archive audit (HYP-3061/T1143/LTI-208/LTT-106)
 
