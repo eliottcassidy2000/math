@@ -3147,3 +3147,18 @@ labels.  New target: boundary-owner skeleton rigidity.  This is the finite
 local database feeding HYP-2949's Baire-Haar carrier and HYP-2950's adversarial
 gauntlet. -> HYP-2951, HYP-2950, HYP-2949, HYP-2948, HYP-2947, HYP-2942,
 HYP-2940, HYP-2937, HYP-2908, OPEN-Q-108.
+
+## T1112: LRC14 Haar-tile repair ladder synthesis (codex-2026-06-26-S195)
+
+HYP-3031 identifies the shared product-rule skeleton behind discrepancy
+theory, the two-dimensional Haar product rule, fixed-path tournament tilings,
+and the HYP-3023..HYP-3030 automatic-fiber/status/stalk/topology-gate repair ladder.  The local mixed
+coordinate is `zeta=T00-T01-T10+T11`, equivalently the `2 x 2` Haar product
+atom, the fixed-margin switch, the staircase tile flip/Walsh xor bit, and the
+first lost repair cochain on a quotient fiber.  The proof exits are
+orthogonal zero, same-tile AP/GW boundary atom, owner strip, cross handoff,
+nested refinement, and residual F7/THM-572 debt.  Next target: build the
+two-coordinate packet grids for HYP-3027's two residual mixed pairs and classify
+their `zeta_repair_class`. -> HYP-3031, LTI-179, LTT-077, HYP-3030,
+LTI-178, LTT-076, HYP-3029, HYP-3028, HYP-3027, HYP-3024, HYP-3023,
+HYP-2992, HYP-2991, HYP-2989, THM-572, OPEN-Q-108.

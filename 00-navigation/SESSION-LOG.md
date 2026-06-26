@@ -24054,3 +24054,29 @@ side-channel repair ladder: coarse ET+unit should repair status early, while
 the remaining open route collisions feed the first-nonzero repair cochain
 sequence `M/q`, boundary topology, packet labels, harmonic duals, and residual
 F7/THM-572 debt.
+
+## codex-2026-06-26-S195 -- LRC14 Haar-tile repair ladder synthesis -- HYP-3031/LTI-179/LTT-077
+
+User asked to synthesize recent agents' work through discrepancy theory, the
+two-dimensional Haar product rule, and the tournament tiling model.  Read the
+recent HYP-3023 automatic zipper, HYP-3024 ET/Hensel convergence, HYP-3026
+fusion switchboard, HYP-3027 repair ladder, HYP-3028 residual status gate,
+HYP-3029 safe-component stalk descent, incoming HYP-3030 status-topology gate,
+and the older HYP-2989/HYP-2991/HYP-2992 Haar-product/tournament-tiling line.
+
+Added `05-knowledge/hypotheses/HYP-3031-lrc14-haar-tile-repair-ladder-synthesis.md`
+and posted
+`poke-forum/posts/20260626-083531Z-lrc14-haar-tile-repair-synthesis/post.md`.
+Core synthesis: the mixed Haar cocycle `zeta=T00-T01-T10+T11`, the
+fixed-margin switch `[[+1,-1],[-1,+1]]`, the fixed-path tournament staircase
+tile flip, and HYP-3027's first nonzero repair cochain are the same lost
+coordinate viewed in different languages.  HYP-3030 supplies the same-tile
+status-topology gate: AP/GW boundary cycles must be recognized before open
+route scheduling.  Orthogonal zero, same-tile boundary, owner strip, cross
+handoff, nested refinement, and residual `zeta` become the proof exits for
+automatic-fiber quotient leakage.
+
+Updated HYP index, LTI-179, LTT-077, concept map, OPEN-Q-108, T1112, and the
+forum index while preserving HYP-3030/LTI-178/LTT-076 as the predecessor
+status-topology bridge.  Next pull: build the two-coordinate packet grids for
+the two HYP-3027 residual mixed pairs and classify each by `zeta_repair_class`.

@@ -2790,3 +2790,18 @@ vanishing lemma: if a primitive zero-open packet has no owner-strip,
 cross-handoff, or nested-refinement Haar coefficient, then it is AP/GW boundary
 skeleton or emits the missing THM-572/F7 state-lift atom.  Entry: HYP-2992,
 T1072, `04-computation/lrc14_haar_product_tile_discrepancy_codex_s165.py`.
+
+## OPEN-Q-108 addendum (codex-2026-06-26-S195): Haar-tile repair ladder
+
+HYP-3031 merges the older HYP-2989/HYP-2991/HYP-2992 Haar-product and
+tournament-tiling product-rule line with the recent HYP-3023..HYP-3030
+automatic-fiber/status/topology repair ladder.  The local lost coordinate is
+`zeta=T00-T01-T10+T11`, equivalently a 2D Haar product atom, fixed-margin
+switch, staircase tile flip, and first nonzero repair cochain.  New packet
+field target: `zeta_repair_class` in `{orthogonal_zero, same_tile_boundary,
+owner_strip, cross_handoff, nested_refinement, residual}`.  Next task: for the
+two HYP-3027 route-mixed pairs, construct the two-coordinate packet grid and
+prove the separating tooth is owner-strip, cross-handoff, nested-refinement, or
+named F7/THM-572 residual debt. -> HYP-3031, HYP-3030, HYP-3029, HYP-3028, HYP-3027,
+HYP-3024, HYP-3023, HYP-2992, HYP-2991, HYP-2989, LTI-179, LTI-178,
+LTT-077, LTT-076, T1112, T1111, THM-572.

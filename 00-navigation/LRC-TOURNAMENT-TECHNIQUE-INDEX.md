@@ -49,6 +49,11 @@ obligations, and proof-carrier interfaces.
   use LTT-072.
 - Need to prove status convergence before route purity:
   use LTT-074, plus LTT-070.
+- Need to descend automatic-fiber route mixing through safe-component stalks:
+  use LTT-075.
+- Need to connect discrepancy, two-dimensional Haar products, and tournament
+  tiling repairs:
+  use LTT-077 and add `zeta_repair_class` to the packet sidecar.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1398,7 +1403,38 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3030, HYP-3029, HYP-3028, HYP-3027, HYP-3026, HYP-3025, HYP-3024, HYP-3023, HYP-3020, HYP-3018,
   HYP-3016, HYP-3015, HYP-2963, THM-572, LTI-178, LTI-172, LTI-171.
 
+### LTT-077: Haar-Tile Repair Ladder Tournament
 
+- **Move:** Treat the mixed coordinate forgotten by a quotient as the same
+  object in three languages: the `2 x 2` Haar cocycle
+  `zeta=T00-T01-T10+T11`, the fixed-margin switch
+  `[[+1,-1],[-1,+1]]`, and the fixed-path tournament staircase tile flip.
+  The repair tournament vertices are proof teeth: raw automatic shadow,
+  row/column margin shadow, coarse ET+unit status gate, residual status gate,
+  safe-component stalk, exact `M/q`, arc-Cech topology, Haar `zeta` packet,
+  magnitude cocycle, and guarded packet signature.
+- **LRC use:** HYP-3031 synthesizes HYP-2989/HYP-2991/HYP-2992 with
+  HYP-3023..HYP-3030.  Automatic words and scalar tournament shadows are
+  row/column quotients; the mixed cocycle is what they erase.  The HYP-3027
+  repair ladder, HYP-3028 residual status gate, HYP-3029 stalk descent, and
+  HYP-3030 status-topology gate describe where that erased coordinate
+  reappears: exact scale, topology, packet labels, status gates, stalk
+  carriers, harmonic duals, or F7/THM-572 debt.
+- **Preserves:** Boundary/open status, theorem route when available, local
+  mixed sign `zeta`, topology, packet labels, and the declared repair tooth.
+- **Forgets / guardrail:** Raw component counts, row/column margins,
+  automatic words, and tournament isomorphism classes are unsafe if they do not
+  retain or discharge the mixed product coordinate.
+- **Next pull:** For the two residual HYP-3027 mixed pairs, construct the
+  two-coordinate packet grid and classify the separating tooth as
+  `orthogonal_zero`, `same_tile_boundary`, `owner_strip`, `cross_handoff`,
+  `nested_refinement`, or `residual`; use LTT-074/LTT-075 to schedule any
+  open-route residual.
+- **Pointers:** HYP-3031, HYP-3030, HYP-3029, HYP-3028, HYP-3027, HYP-3026, HYP-3025,
+  HYP-3024, HYP-3023, HYP-3020, HYP-2992, HYP-2991, HYP-2989, HYP-2997,
+  HYP-2995, HYP-2990, HYP-2963, THM-572, LTI-179, LTI-178, LTI-177, LTI-176, LTI-174,
+  LTI-148, LTI-147, LTI-109, LTI-108, LTI-107, LTI-106, LTI-047, LTI-046,
+  LTT-075, LTT-074, LTT-072, LTT-006, T1112.
 
 ## Immediate Pull List
 
@@ -1432,7 +1468,7 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    danger-distribution word, doubling-transition word, carrier-fusion exit,
    repair-ladder stage, first nonzero repair cochain, route-purity status,
    status-purity status, guarded non-route signature,
-   carrier-pullback row ID, destroyed-coordinate ledger,
+   carrier-pullback row ID, destroyed-coordinate ledger, zeta repair class,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
