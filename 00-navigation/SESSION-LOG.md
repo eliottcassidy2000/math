@@ -93,6 +93,44 @@ materialize the hidden sidecar vocabulary
 `residual_capacitor_id`, `first_cut_stage`, `exact_M_zeta`,
 `endpoint_owner_strip`, `analytic_blindness_report`, and
 `automaton_shadow_class`.
+## codex-2026-06-26-S207 -- LRC14 residual topology-exception teeth -- HYP-3044/LTI-192/LTT-090
+
+User asked to keep mining hidden LRC details and especially connections that
+look unrelated at first.  After pulling the latest mainline work, connected
+HYP-3035's residual tooth atlas to HYP-3036's primitive-period scheduler,
+HYP-3037's residual capacitor framing, HYP-3038's q=23 endpoint-owner square,
+HYP-3039's hidden-coordinate ledger, HYP-3040's hidden statement ledger, and
+HYP-3041's AP-tail puncture atlas.  The target was the small leftover
+inside S199: the two residual fibers not split by compact arc topology.
+
+Added `04-computation/lrc14_residual_exception_teeth_codex_s207.py`, stored
+`05-knowledge/results/lrc14_residual_exception_teeth_codex_s207.out`, created
+HYP-3044, T1125, LTI-192, LTT-090, and reflection
+`07-reflections/lrc14-residual-topology-exception-teeth-codex-s207.md`.
+
+Core result: rebuilding only the `38` S194 residual packets, compact topology
+fails on exactly two same-topology strict-open buckets:
+`single swap 9->99` versus `single swap 9->155`, and
+`single swap 11->121` versus `single swap 11->163`.  All four rows are
+single-swap collars at drops `9` and `11`.  In both buckets, the covering row
+has zero primitive safe mass for `2<=q<=13`, while the Q-witness row has first
+primitive safe q equal to the dropped speed and to `q_threshold`; the coarse
+largest-safe-component stalk splits both buckets.
+
+Tournament Analysis used exception repair carriers rather than runners.  The
+exception-carrier tournament is transitive with score order
+`topology_then_owner_stalk_rule > primitive_deck_2_13 > coarse_safe_stalk >
+exact_safe_stalk > arc_topology_compact > route_label_sink`.  Proof takeaway:
+after status protection, compact-topology failure should be a local
+owner-stalk collar lemma with an independent primitive-period split, not new
+boundary/open or route-label debt.
+
+Updated result and hypothesis indexes, LTI/LTT indexes, concept map,
+OPEN-Q-108, TANGENTS, and this session log.  Next pull: promote
+`residual_topology_exception_id`, `topology_exception_drop`,
+`topology_exception_stalk_key`, and `topology_exception_first_primitive_q`
+into packet sidecars, then prove every post-status residual topology failure
+is one of these collars or emits named F7/THM-572 debt.
 
 ## codex-2026-06-26-S199 -- LRC14 residual tooth atlas (HYP-3035/T1116/LTI-183/LTT-081)
 

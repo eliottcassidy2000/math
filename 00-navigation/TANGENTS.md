@@ -3182,6 +3182,33 @@ unit-scale tooth gives `21` fibers with `0` route mixing.  Next target:
 promote the teeth to packet sidecars and prove the family scheduler without
 route labels. -> HYP-3033, LTI-181, LTT-079, HYP-3031, LTI-179, LTT-077,
 HYP-3030, LTI-178, LTT-076, HYP-3028, HYP-3024, HYP-2963, THM-572,
+OPEN-Q-108.
+
+## T1125: LRC14 residual topology-exception teeth (codex-2026-06-26-S207)
+
+HYP-3044 overlays HYP-3035's residual tooth atlas with HYP-3036's primitive
+period scheduler, read through HYP-3041's AP-tail puncture atlas,
+HYP-3040's hidden statement ledger, HYP-3039's hidden-coordinate rule, and
+HYP-3038's q=23 endpoint-owner square,
+to mine the two compact arc-topology
+failures.  On the
+stored S194 residual ledger, topology fails on exactly two same-topology
+strict-open buckets: `single swap 9->99` versus `single swap 9->155`, and
+`single swap 11->121` versus `single swap 11->163`.  All four rows are
+single-swap collars at drops `9` and `11`.  In each collar the covering row
+has zero primitive safe mass for `2<=q<=13`, while the Q-witness row has first
+primitive safe q equal to the dropped speed and to `q_threshold`; the coarse
+largest-safe-component stalk splits both buckets.  Tournament Analysis uses
+exception repair carriers, not runners, and is transitive with score order
+`topology_then_owner_stalk_rule > primitive_deck_2_13 > coarse_safe_stalk >
+exact_safe_stalk > arc_topology_compact > route_label_sink`.  Candidate
+lemma: after status protection, compact-topology failure means owner-stalk
+collar plus primitive-deck split, not new boundary/open or route-label debt.
+-> HYP-3044, HYP-3041, HYP-3040, HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035,
+HYP-3034, HYP-3033, HYP-3031, HYP-3030, HYP-3029, HYP-3028, HYP-2963,
+LTI-192, LTT-090, LTI-189, LTT-087, LTI-188, LTT-086, LTI-187, LTT-085, LTI-186, LTT-084,
+LTI-184, LTT-082, LTI-183, LTT-081, OPEN-Q-108.
+
 ## T1118: LRC14 residual capacitor flow cuts (codex-2026-06-26-S196b)
 
 HYP-3037 turns HYP-3027's two remaining displayed mixed-route pairs into

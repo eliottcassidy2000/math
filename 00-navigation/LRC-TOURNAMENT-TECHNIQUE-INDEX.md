@@ -85,6 +85,9 @@ obligations, and proof-carrier interfaces.
 - Need to orient a new creative LRC lens in the whole proof surface:
   use LTT-089 with `preserved_lrc_predicate`, `destroyed_coordinate`,
   `required_sidecar`, and `handoff_target` before promoting the lens.
+- Need to turn the two residual arc-topology failures into a local lemma:
+  use LTT-090 with `residual_topology_exception_id`, owner-stalk keys, and
+  primitive `q<=13` deck labels.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1875,6 +1878,47 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3018, HYP-3015, HYP-3012, HYP-3009, HYP-2997, HYP-2995, HYP-2963,
   THM-572, LTI-191, LTI-190, LTI-189, LTI-188, LTI-187, LTI-175, LTT-088,
   LTT-087, LTT-086, LTT-085, LTT-073, T1124, T1123, T1122, T1121, T1120.
+
+### LTT-090: Residual Topology-Exception Tooth Tournament
+
+- **Move:** Treat the residual compact-arc-topology failures as a separate
+  exception tournament whose vertices are proof carriers: topology-then-owner
+  rule, coarse safe-component stalk, primitive `q<=13` deck, compact topology,
+  exact stalk, and route-label sink.
+- **LRC use:** HYP-3044 overlays HYP-3041's AP-tail puncture atlas,
+  HYP-3040's hidden statement ledger, HYP-3035's residual tooth atlas,
+  HYP-3036's primitive-period scheduler, and HYP-3039's hidden-coordinate
+  rule.  Compact arc topology fails on exactly two same-topology buckets in
+  the S194 residual ledger: `single swap 9->99` versus
+  `single swap 9->155`, and `single swap 11->121` versus
+  `single swap 11->163`.  All four rows are strict-open single-swap collars.
+  The covering rows have zero primitive safe mass for `2<=q<=13`; the
+  Q-witness rows have first primitive safe q equal to the dropped speed and to
+  `q_threshold`.  The coarse safe-component stalk and primitive deck split
+  both topology exceptions.
+- **Preserves:** Strict-open status after the coarse ET+unit gate, route split
+  inside the topology-exception buckets, local owner-stalk data, and
+  primitive-period evidence independent of route labels.
+- **Forgets / guardrail:** Compact topology alone forgets the local
+  safe-component owner stalk and the exact primitive denominator deck.  Route
+  labels split the rows but are a sink, not a proof carrier.
+- **Tournament fingerprint:** The exception-carrier tournament is transitive:
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1}`, `directed_3cycles=0`,
+  `hamiltonian_path_count=1`, with score order
+  `topology_then_owner_stalk_rule > primitive_deck_2_13 > coarse_safe_stalk >
+  exact_safe_stalk > arc_topology_compact > route_label_sink`.
+- **Next pull:** Add `residual_topology_exception_id`,
+  `topology_exception_drop`, `topology_exception_stalk_key`,
+  `topology_exception_first_primitive_q`, and
+  `topology_then_owner_stalk_rule` to packet sidecars, then prove that every
+  post-status residual topology failure is one of these owner-stalk collars or
+  emits named F7/THM-572 debt.
+- **Pointers:** HYP-3044, HYP-3041, HYP-3040, HYP-3039, HYP-3038, HYP-3037,
+  HYP-3036, HYP-3035, HYP-3034, HYP-3033, HYP-3031, HYP-3030, HYP-3029,
+  HYP-3028, HYP-3027, HYP-3024, HYP-2963, THM-572, LTI-192, LTI-189,
+  LTI-188, LTI-187, LTI-186, LTI-185, LTI-184, LTI-183, LTI-177, LTI-176,
+  LTT-090, LTT-087, LTT-086, LTT-085, LTT-084, LTT-083, LTT-082, LTT-081,
+  LTT-075, T1125, T1122, T1121, T1120, T1119, T1118, T1117, T1116.
 
 ## Immediate Pull List
 

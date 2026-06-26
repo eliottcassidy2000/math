@@ -68,6 +68,27 @@ promote only packets invisible beyond endpoint-owner strip to named
 F7/THM-572/harmonic/state-lift attention. -> HYP-3042, HYP-3041, HYP-3038,
 HYP-3037, HYP-3036, HYP-3035, HYP-3031, HYP-3018, HYP-2997, HYP-2963,
 LTI-190, LTI-189, LTT-088, LTT-087, T1123, T1122.
+**OPEN-Q-108 S207 residual-topology exception addendum:** HYP-3044 sharpens
+the HYP-3035 residual tooth atlas by isolating the only compact arc-topology
+failures, and connects them to HYP-3041's AP-tail puncture warning,
+HYP-3040's hidden statement ledger, HYP-3039's hidden-coordinate rule, and
+HYP-3038's endpoint-owner repair pattern.  The S207 script imports
+HYP-3035/S199 and HYP-3036/S200, rebuilds the `38` stored S194 residual
+packets, and finds exactly two same-topology exception buckets: `single swap
+9->99` versus `single swap 9->155`, and `single swap 11->121` versus `single
+swap 11->163`.  All four rows are
+strict-open single-swap collars.  In each bucket the covering row has zero
+primitive safe mass for `2<=q<=13`, while the Q-witness row has first
+primitive safe q equal to its dropped speed and `q_threshold`; the coarse
+largest-safe-component stalk splits both buckets.  Open task: add
+`residual_topology_exception_id`, `topology_exception_drop`,
+`topology_exception_stalk_key`, and `topology_exception_first_primitive_q`
+sidecars, then prove that every post-status residual topology failure is one
+of these owner-stalk collars or emits named F7/THM-572 debt. -> HYP-3044,
+HYP-3041, HYP-3040, HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3034,
+HYP-3033, HYP-3031, HYP-3030, HYP-3029, HYP-3028, HYP-2963, THM-572,
+LTI-192, LTT-090, LTI-189, LTT-087, LTI-188, LTT-086, LTI-187, LTT-085, LTI-186, LTT-084,
+T1125.
 **OPEN-Q-108 S198 arc-boundary path-lift addendum:** HYP-3034 pulls the
 older path-homology/deletion-persistence machinery into the HYP-3030
 status-topology gate, but uses closed danger arcs and boundary operators rather
