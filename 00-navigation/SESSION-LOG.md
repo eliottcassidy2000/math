@@ -23465,3 +23465,43 @@ projector, and spectrum binding scale to the HYP-2963 classifier; add a Robbins
 no-bridge checklist to Fejer manifests; compute multi-scale spectra for named
 and weak-margin rows; build a decorated source-cone canonicalizer; and test the
 HYP-2992 vanishing lemma.
+
+## codex-2026-06-26 -- LRC14 Moser/fibbinary automatic gap carrier -- HYP-3008/LTI-158
+
+User asked to keep pushing toward the LRC14 proof while thinking about
+Fermat-Catalan, the 2-adic Littlewood paper, Ostrowski-Hadamard gaps,
+Moser-de Bruijn, fibbinary numbers, and finite automata.  First protected and
+pushed the previously stranded local LRC14 artifacts as checkpoint commit
+`485fb9bf8`, rebasing over the live mainline and preserving the newer forum
+index entries.
+
+Added `04-computation/lrc14_moser_fibbinary_automatic_gap_carrier_codex_20260626.py`
+and stored `05-knowledge/results/lrc14_moser_fibbinary_automatic_gap_carrier_codex_20260626.out`.
+The exact scout builds DFAs for Moser binary even-position bits, fibbinary
+no-adjacent bits, and Moser base-4 digits `0/1`.  Through `2^14-1`, Moser is a
+subset of fibbinary, binary/base-4 Moser recognition agrees, and the counts are
+`Moser=128=2^7`, `fibbinary=987=F_16`, `intersection=128`.
+
+Main closure result: Moser is stable under `n -> 4n` (`64/64`) but not under
+the LRC-relevant `n -> 2n` (`1/128`, only zero survives); fibbinary is stable
+under `n -> 2n` (`610/610`) and exposes `+1` carry debt (`610/987`).  Therefore
+Moser-de Bruijn is a base-4/even-phase gap carrier, not a theorem-safe 2-adic
+scalar unless the even/odd bit-position phase is retained.  Fibbinary is the
+safer 2-adic normal-form language and matches the HYP-3000/HYP-3003
+Zeckendorf/path carry lane.
+
+Tournament Analysis used proof-language carriers as vertices, not runners:
+`product_phase_automaton`, `fibbinary_2adic_shift_dfa`,
+`fermat_catalan_valuation_gate`, `sml_eventual_periodic_zero_gate`,
+`moser_base4_gap_dfa`, `ostrowski_hadamard_atom_gap`,
+`stick_potato_safe_geometry`, and `raw_sequence_scalar_shadow`.  Pairwise
+observable was retained packet labels, 2-adic shift control, carry-boundary
+memory, gap lacunarity, SML eventual-period guard, finite automaton exactness,
+and LRC transfer safety.  Fingerprint: transitive tournament, score histogram
+`0..7` each once, no directed 3-cycles, singleton SCCs, one Hamiltonian path.
+
+Created HYP-3008 and LTI-158.  Proof-order takeaway: any Fermat-Catalan/SML
+import must name a valuation or eventual-periodic index coordinate explicitly;
+raw automatic value-set membership is only a sequence shadow.  The supplied ACM
+DOI resolves to a large-sticks/potatoes geometry paper, so it was kept only as
+a largest-safe-component analogy, not an arithmetic input.
