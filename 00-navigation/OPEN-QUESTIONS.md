@@ -17,6 +17,21 @@ covering branch routes through denominator-14 failure, CRT chart `41`, and a
 labelled lift/Fejer/moment certificate. -> HYP-3014, HYP-3013, HYP-3012,
 HYP-3008, HYP-2974, HYP-2973, HYP-2970, HYP-2969, HYP-2965, HYP-2963,
 HYP-2949, HYP-2948, THM-572, LTI-163, LTT-065, T1098.
+**OPEN-Q-108 S175 automaton fiber-mixing addendum:** HYP-3016 stress-tests the
+HYP-3008..HYP-3015 finite-automaton side channels against exact LRC14
+safe-measure fibers.  In `2172` primitive named plus AP single-swap rows through
+tail `180`, only AP and Goddyn-Wong are boundary-only; all other rows are open,
+with K33 `12->36` the minimum positive row at `1/1260`.  The key obstruction to
+using automaton data as a proof quotient is explicit: `residue_mfc_pairs` and
+`residue_terminal_pairs` each have `2` mixed boundary/open fibers.  AP shares a
+residue-automaton fiber with open `12->26` and `12->96`; GW shares its
+one-dipole fiber with open `12->38`, `12->52`, and `12->150`.  Open task:
+define the `magnitude_cocycle` on each residue-automaton fiber and prove that a
+nonzero cocycle opens a strict safe component, descends to a known family
+formula, is annihilated by Fejer/Ramanujan/Haar/endpoint data, or emits
+K33/F7/THM-572 residual debt. -> HYP-3016, HYP-3015, HYP-3014, HYP-3013,
+HYP-3012, HYP-3011, HYP-3009, HYP-3008, HYP-3002, HYP-2997, HYP-2963,
+HYP-2928, THM-572, LTI-165, LTT-066, T1100.
 
 **OPEN-Q-108 S174 perfect-number packet merge addendum:** HYP-3013 merges the
 prior perfect-number / aliquot fixed-point work into the current LRC14
@@ -131,10 +146,10 @@ and group Fejer/Ramanujan certificates by section, not by scalar route label.
 
 **OPEN-Q-108 S169 additive-basis/Farey addendum:** HYP-3000 adds a proof-currency classifier, complementary to HYP-2998's golden Stern-Brocot/Fibonacci carrier and HYP-2999's Pascal-slope packet schema.  The Fibonacci row pattern is `F_n=sum_k binom(n-k-1,k)`, the rank vector of independent sets in `P_{n-2}`; Zeckendorf is the confluent no-adjacent normal form on this path.  Goldbach/ternary Goldbach/Fermat polygonal/Zeckendorf differ by proof economy: high-entropy sieve, added smoothing dimension, bounded arity/residue absorption, path-normal-form carry.  For Farey payloads, keep exact `M=p/q` and `e=14p-q`: `p+q` is affine-safe additive scale, `p*q` is incidence/product side channel, powers are magnitude stress tests.  Open task: classify each HYP-2963 residual packet as smoothing, bounded-arity invoice, or path-normal-form debt before choosing Fejer/Ramanujan/Kaczynski/Zeckendorf tools. -> HYP-3000, HYP-2999, HYP-2998, HYP-2984, HYP-2982, HYP-1902, LTI-150.
 **OPEN-Q-108 S168-S178 technique-index expansion addendum:** The LRC Technique
-Index now has `163` compact `LTI-*` rows plus the `64` long-form S166
+Index now has `165` compact `LTI-*` rows plus the `66` long-form S166/S175
 technique-bank entries after preserving the incoming `LTI-109` packet-cocycle
 atlas and `LTI-110` cocycle-obstruction atlas.  The recovered promoted rows
-`LTI-111..LTI-163` are a pull list for attacking the LRC14 gap from
+`LTI-111..LTI-165` are a pull list for attacking the LRC14 gap from
 tournament/metagraph/series directions: cocycle obstruction matrices,
 deck-derivative reconstruction, Burnside/A000568 orbit taxes, merged metagraph
 transport, good-cut/SCC gas, OCF coimage sectors, path-homology residuals,
@@ -149,14 +164,16 @@ operation fibers, dichotomy recursion mode fields, HYP-2998 representation
 economy fields (`LTI-155`), and the HYP-3005 technique multiverse annex
 (`LTI-156`), Poincare/worldline frame fields (`LTI-157`), and
 automatic gap-language packet fields (`LTI-158`), the
-Fermat-Catalan/lacunary power-lift extension (`LTI-159`), the induced
-tournament-class gap-automaton carrier (`LTI-161`), the perfect-number
-divisor packet merge (`LTI-162`), and the creative exact packet-lens atlas
-(`LTI-163`).
+Fermat-Catalan/lacunary power-lift extension (`LTI-159`), automatic
+lacunary safe-component fields (`LTI-160`), the induced tournament-class
+gap-automaton carrier (`LTI-161`), the perfect-number divisor packet merge
+(`LTI-162`), the creative exact packet-lens atlas (`LTI-163`),
+lonely-profile barcode fields (`LTI-164`), and the automaton fiber-mixing
+magnitude-cocycle guardrail (`LTI-165`).
 The proof-use rule is unchanged but sharper: a
 quotient may forget only fiber-constant, reconstructible, dual-annihilated,
 cochain-exact, or named-residual data.  Near-term proof tasks are
-`LTI-TODO-13..36`: build the packet-cocycle theorem formalization, the
+`LTI-TODO-13..38`: build the packet-cocycle theorem formalization, the
 executable F7 cocycle residual record, the emitted-cocycle matrix over HYP-2963
 packets, an F0-F7 residual metagraph Laplacian, a marked A000568/Burnside
 quotient tax, a binding-pair switch tournament for covering rows, a

@@ -1,0 +1,98 @@
+=== LRC14 automaton quotient fiber-mixing scout S175 ===
+threshold=1/14 max_single_swap_add=180
+row_bank=2172 distinct primitive rows
+status_counts={'boundary': 2, 'open': 2170}
+min_positive_safe_measure=1/1260 at K33_12_to_36 components=2 largest=1/2520
+
+## Named Rows
+AP13               status=boundary mu=           0 components=  0 largest=           0 boundary_units=(1, 3, 5, 9, 11, 13) mfc=MFCMMCCFFFCCC residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+GW_12_to_24        status=boundary mu=           0 components=  0 largest=           0 boundary_units=(1, 3, 5, 9, 11, 13) mfc=MFCMMCCFFFCCC residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13)
+K33_12_to_36       status=open     mu=      1/1260 components=  2 largest=      1/2520 boundary_units=(1, 3, 5, 9, 11, 13) mfc=MFCMMCCFFFCCF residues=(1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10, 11, 13)
+loose_12_to_26     status=open     mu=   426/35035 components=  4 largest=       1/245 boundary_units=(1, 3, 5, 9, 11, 13) mfc=MFCMMCCFFFCCC residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+loose_12_to_96     status=open     mu= 5219/840840 components=  8 largest=     11/6720 boundary_units=(1, 3, 5, 9, 11, 13) mfc=MFCMMCCFFFCCC residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+petal_10_to_20     status=open     mu=       1/980 components=  2 largest=      1/1960 boundary_units=(1, 3, 5, 9, 11, 13) mfc=MFCMMCCFFCCCM residues=(1, 2, 3, 4, 5, 6, 6, 7, 8, 9, 11, 12, 13)
+petal_13_to_26     status=open     mu=       1/182 components=  2 largest=       1/364 boundary_units=(1, 3, 5, 9, 11, 13) mfc=MFCMMCCFFFCCC residues=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12)
+cover_12_to_84     status=open     mu=  563/105105 components=  8 largest=      3/1960 boundary_units=() mfc=MFCMMCCFFFCCM residues=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+
+## Quotient Fiber-Mixing Reports
+mfc_counts                   fibers=   7 mixed_boundary_open=   1 max_mu_spread=77771/978120 max_component_spread= 22 example=[AP13:boundary:0, GW_12_to_24:boundary:0, swap_6_to_75:open:4/1925, swap_7_to_26:open:3989/51480, swap_7_to_27:open:929/11880, swap_7_to_19:open:77771/978120]
+mfc_word                     fibers=  21 mixed_boundary_open=   1 max_mu_spread=     89/1470 max_component_spread= 22 example=[AP13:boundary:0, GW_12_to_24:boundary:0, swap_12_to_48:open:13/5880, swap_11_to_35:open:353/5880, swap_11_to_23:open:106129/1758120, swap_11_to_24:open:89/1470]
+terminal_word                fibers=  21 mixed_boundary_open=   1 max_mu_spread=     89/1470 max_component_spread= 22 example=[AP13:boundary:0, GW_12_to_24:boundary:0, swap_12_to_48:open:13/5880, swap_11_to_35:open:353/5880, swap_11_to_23:open:106129/1758120, swap_11_to_24:open:89/1470]
+residue_multiset_mod14       fibers= 170 mixed_boundary_open=   2 max_mu_spread=    389/5148 max_component_spread= 20 example=[AP13:boundary:0, swap_6_to_132:open:5/924, swap_6_to_104:open:47/8008, swap_7_to_119:open:530147/7147140, swap_7_to_91:open:187871/2522520, swap_7_to_105:open:389/5148]
+residue_mfc_pairs            fibers= 510 mixed_boundary_open=   2 max_mu_spread=    389/5148 max_component_spread= 20 example=[AP13:boundary:0, swap_6_to_104:open:47/8008, loose_12_to_96:open:5219/840840, swap_7_to_119:open:530147/7147140, swap_7_to_91:open:187871/2522520, swap_7_to_105:open:389/5148]
+residue_terminal_pairs       fibers= 510 mixed_boundary_open=   2 max_mu_spread=    389/5148 max_component_spread= 20 example=[AP13:boundary:0, swap_6_to_104:open:47/8008, loose_12_to_96:open:5219/840840, swap_7_to_119:open:530147/7147140, swap_7_to_91:open:187871/2522520, swap_7_to_105:open:389/5148]
+residue_mfc_bitlen_pairs     fibers=1223 mixed_boundary_open=   0 max_mu_spread=20753/812812 max_component_spread=  4 example=[swap_11_to_44:open:1921/64680, swap_11_to_58:open:17491/316680]
+perfect_power_word           fibers=  49 mixed_boundary_open=   1 max_mu_spread=     89/1470 max_component_spread= 22 example=[AP13:boundary:0, GW_12_to_24:boundary:0, petal_10_to_20:open:1/980, swap_11_to_35:open:353/5880, swap_11_to_23:open:106129/1758120, swap_11_to_24:open:89/1470]
+gap_ratio_bucket             fibers=   3 mixed_boundary_open=   1 max_mu_spread=    317/3960 max_component_spread= 12 example=[AP13:boundary:0, GW_12_to_24:boundary:0, petal_10_to_20:open:1/980, swap_7_to_18:open:41/520, swap_7_to_19:open:77771/978120, swap_7_to_20:open:317/3960]
+exact_speed_tuple            fibers=2172 mixed_boundary_open=   0 max_mu_spread=           0 max_component_spread=  0 example=[AP13:boundary:0]
+
+## Collision Fibers
+AP13 under residue_mfc_pairs:
+  AP13             tail= 13 status=boundary mu=           0 components=  0 largest=           0
+  swap_6_to_104    tail=104 status=open     mu=     47/8008 components=  4 largest=    25/16016
+  loose_12_to_96   tail= 96 status=open     mu= 5219/840840 components=  8 largest=     11/6720
+  swap_6_to_62     tail= 62 status=open     mu= 2609/372372 components=  4 largest=      5/1848
+  swap_6_to_174    tail=174 status=open     mu=   213/29029 components=  4 largest=    67/26796
+  swap_6_to_118    tail=118 status=open     mu= 5353/708708 components=  4 largest=      5/1848
+  swap_6_to_48     tail= 48 status=open     mu=       7/858 components=  4 largest=      5/1848
+  swap_6_to_76     tail= 76 status=open     mu=       7/858 components=  4 largest=      5/1848
+  swap_6_to_90     tail= 90 status=open     mu=       7/858 components=  4 largest=      5/1848
+  swap_12_to_180   tail=180 status=open     mu= 2833/315315 components=  8 largest=       1/504
+  swap_12_to_166   tail=166 status=open     mu= 4981/528710 components=  6 largest=    37/16268
+  swap_12_to_110   tail=110 status=open     mu=       4/385 components=  4 largest=       1/308
+  swap_12_to_152   tail=152 status=open     mu=11549/1065064 components=  4 largest=    51/14896
+  loose_12_to_26   tail= 26 status=open     mu=   426/35035 components=  4 largest=       1/245
+GW_12_to_24 under residue_mfc_pairs:
+  GW_12_to_24      tail= 24 status=boundary mu=           0 components=  0 largest=           0
+  swap_12_to_108   tail=108 status=open     mu= 6497/945945 components=  8 largest=     13/7560
+  swap_12_to_94    tail= 94 status=open     mu=   278/29939 components=  4 largest=     25/9212
+  swap_12_to_178   tail=178 status=open     mu= 5363/566930 components=  6 largest=    39/17444
+  swap_12_to_122   tail=122 status=open     mu=   236/23485 components=  4 largest=     27/8540
+  swap_12_to_38    tail= 38 status=open     mu=   426/35035 components=  4 largest=       1/245
+  swap_12_to_52    tail= 52 status=open     mu=   426/35035 components=  4 largest=       1/245
+  swap_12_to_150   tail=150 status=open     mu=   426/35035 components=  4 largest=       1/245
+AP13 under residue_terminal_pairs:
+  AP13             tail= 13 status=boundary mu=           0 components=  0 largest=           0
+  swap_6_to_104    tail=104 status=open     mu=     47/8008 components=  4 largest=    25/16016
+  loose_12_to_96   tail= 96 status=open     mu= 5219/840840 components=  8 largest=     11/6720
+  swap_6_to_62     tail= 62 status=open     mu= 2609/372372 components=  4 largest=      5/1848
+  swap_6_to_174    tail=174 status=open     mu=   213/29029 components=  4 largest=    67/26796
+  swap_6_to_118    tail=118 status=open     mu= 5353/708708 components=  4 largest=      5/1848
+  swap_6_to_48     tail= 48 status=open     mu=       7/858 components=  4 largest=      5/1848
+  swap_6_to_76     tail= 76 status=open     mu=       7/858 components=  4 largest=      5/1848
+  swap_6_to_90     tail= 90 status=open     mu=       7/858 components=  4 largest=      5/1848
+  swap_12_to_180   tail=180 status=open     mu= 2833/315315 components=  8 largest=       1/504
+  swap_12_to_166   tail=166 status=open     mu= 4981/528710 components=  6 largest=    37/16268
+  swap_12_to_110   tail=110 status=open     mu=       4/385 components=  4 largest=       1/308
+  swap_12_to_152   tail=152 status=open     mu=11549/1065064 components=  4 largest=    51/14896
+  loose_12_to_26   tail= 26 status=open     mu=   426/35035 components=  4 largest=       1/245
+
+## Automaton Closure Stress Inside Single-Swap Bank
+unit_excess_automaton_hits_p<128=12
+  p=  3 q=   41 tags=F  status=open     mu=2292/287287
+  p=  5 q=   69 tags=FM status=open     mu=426/35035
+  p= 19 q=  265 tags=F  status=open     mu=18574/1856855
+  p= 21 q=  293 tags=F  status=open     mu=114808/10265255
+  p= 23 q=  321 tags=FM status=open     mu=22144/2249247
+  p= 37 q=  517 tags=F  status=open     mu=1572/149695
+  p= 39 q=  545 tags=F  status=open     mu=496/49595
+  p= 47 q=  657 tags=F  status=open     mu=83284/7672665
+  p= 79 q= 1105 tags=FM status=open     mu=6164/595595
+  p= 83 q= 1161 tags=F  status=open     mu=2564/246519
+  p= 85 q= 1189 tags=F  status=open     mu=33158/3204355
+  p= 93 q= 1301 tags=FM status=open     mu=95630/9116107
+
+## Tournament Analysis
+vertices_are=quotient/proof carriers, not runners; observable=fiber purity, finite-state checkability, magnitude retention, residue/endpoint retention, route compatibility, anti-scalar guard, proof cost
+tie_hamiltonian_path=exact_labelled_packet > farey_magnitude_height > residue_mfc_bitlen_pairs > residue_terminal_pairs > residue_mfc_pairs > terminal_word > mfc_word > perfect_power_word > gap_ratio_bucket > raw_counts
+score_hist=[(0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1)]
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+score_order=exact_labelled_packet > farey_magnitude_height > residue_mfc_bitlen_pairs > residue_terminal_pairs > residue_mfc_pairs > terminal_word > mfc_word > perfect_power_word > gap_ratio_bucket > raw_counts
+
+## Proof Readout
+1. The AP residue+automaton fiber is mixed: AP13 is boundary-only, while residue- and automaton-indistinguishable tails such as 12->26 and 12->96 are strictly open.  Thus mod-14 residue plus Moser/fibbinary terminal state cannot prove tightness.
+2. The GW one-dipole residue+automaton fiber is also mixed by later tails.  The Jacobsthal/doubling site 12 is visible only after the magnitude/Farey height coordinate is retained.
+3. Adding crude bit-length reduces some collisions but is not a proof invariant; it is a proxy for the real coordinate: exact speed/Farey scale and safe-component endpoint ownership.
+4. A theorem-safe packet quotient for HYP-2963 should therefore carry automaton state as a side channel, but discharge or retain the magnitude cocycle measuring how far a tail has moved inside a fixed residue-language fiber.

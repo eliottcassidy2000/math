@@ -1068,6 +1068,31 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2970, HYP-2969, HYP-2965, HYP-2963, HYP-2949, HYP-2948, THM-572,
   LTI-163.
 
+### LTT-066: Automaton Fiber-Mixing Quotient Tournament
+
+- **Move:** Treat quotient candidates as tournament vertices: exact labelled
+  packets, Farey magnitude height, residue+automaton words, terminal DFA
+  words, perfect-power words, gap-ratio buckets, and raw counts.  Orient by
+  fiber purity, finite-state checkability, magnitude retention,
+  residue/endpoint retention, route compatibility, anti-scalar guard, and
+  proof cost.
+- **LRC use:** A finite-state automaton quotient is admissible only after exact
+  fiber-mixing stress.  S175/HYP-3016 finds that residue+Moser/fibbinary
+  terminal fields mix AP/Goddyn-Wong boundary atoms with strictly open
+  single-swap rows.
+- **Preserves:** The tested quotient surface and exact safe-component status,
+  including mixed boundary/open fibers and the need for magnitude/Farey
+  side-channel data.
+- **Forgets / guardrail:** Terminal automaton state and residue data forget the
+  magnitude coordinate distinguishing AP from `12->26`/`12->96` and GW from
+  later one-dipole tails.
+- **Next pull:** Define `magnitude_cocycle` on each residue-automaton fiber and
+  prove it opens a strict safe component, descends to a family formula, is
+  dual-annihilated, or emits K33/F7/THM-572 residual debt.
+- **Pointers:** HYP-3016, HYP-3015, HYP-3014, HYP-3013, HYP-3012, HYP-3011,
+  HYP-3009, HYP-3008, HYP-3002, HYP-2997, HYP-2963, HYP-2928, THM-572,
+  LTI-165.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1084,6 +1109,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    Cech nerve class, positive-component count, tropical slack margin, CRT
    solenoid first chart, endpoint current word, danger-count distribution,
    tope/cocircuit wall state, automaton-divisor sidecar,
+   lonely-profile barcode, bar count, persistence margin,
+   residue-automaton fiber ID, magnitude cocycle, Farey magnitude height,
+   fiber anchor row, fiber-mixing exit,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

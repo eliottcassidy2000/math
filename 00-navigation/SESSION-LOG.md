@@ -23667,3 +23667,34 @@ Next pull: add `cech_nerve_class`, `tropical_slack_margin`,
 `crt_solenoid_first_chart`, `endpoint_current_word`, and
 `danger_count_distribution` to HYP-2963 sidecars, then rerun the hard covering
 families through the exact-lens zipper.
+## codex-2026-06-26-S175 -- LRC14 automaton fiber-mixing -- HYP-3016/LTI-165
+
+User asked to keep pushing toward the LRC14 proof with Fermat-Catalan,
+2-adic/Hurwitz, Ostrowski-Hadamard gap, Moser-de Bruijn, fibbinary, and finite
+automaton ideas in mind.  Mainline already contained HYP-3008 through HYP-3015
+after the creative packet-lens and barcode passes, so this pass added the
+missing exact fiber-mixing stress test rather than another sequence-shadow
+classifier.
+
+Added `04-computation/lrc14_automaton_fiber_mixing_codex_s175.py` and stored
+`05-knowledge/results/lrc14_automaton_fiber_mixing_codex_s175.out`.  The script
+computes exact rational threshold-`1/14` safe components for named rows and the
+AP single-swap atlas through tail `180`: `2172` distinct primitive rows, with
+only AP and Goddyn-Wong boundary-only and all other rows open.  The minimum
+positive safe measure is K33 `12->36` at `1/1260`.
+
+Main finding: residue plus Moser/fibbinary terminal state is too coarse.
+`residue_mfc_pairs` and `residue_terminal_pairs` each have `2` mixed
+boundary/open fibers.  AP shares its residue-automaton fiber with open rows
+including `12->26` (`426/35035`) and `12->96` (`5219/840840`); GW shares its
+one-dipole fiber with open `12->38`, `12->52`, and `12->150`.  Therefore the
+automaton side channel must retain or discharge a magnitude/Farey coordinate
+inside each fixed residue-language fiber.
+
+Created HYP-3016, T1100, LTI-165, LTT-066, reflection
+`07-reflections/lrc14-automaton-fiber-mixing-codex-s175.md`, and a poke-forum
+post after rebasing over the incoming HYP-3014/HYP-3015 namespace.  The proof
+target is now a magnitude-cocycle theorem: inside each
+residue-automaton fiber, nonzero magnitude cocycle must open a strict safe
+component, descend to a known family formula, be annihilated by a dual
+certificate, or emit K33/F7/THM-572 residual debt.
