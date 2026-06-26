@@ -114,6 +114,9 @@ obligations, and proof-carrier interfaces.
 - Need to model the actual growth step when a new diagonal layer is added:
   use LTT-097 with parent automorphism word-orbits, `K_{k,k+1}` position-line
   profiles, aligned triangle-flow sidecars, and deletion-parent fibers.
+- Need to exploit the user's diagonal tiling-growth model:
+  use LTT-098 and treat `K_{k,k+1}` line flow as a rectangle-cycle
+  duplication law before counting lines as independent data.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2047,50 +2050,6 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTT-078, LTT-077, LTT-072, T1134, T1130, T1129, T1127, T1126, T1125,
   T1124, T1123, T1122, T1121, T1120.
 
-### LTT-097: Diagonal-Layer Transport Tournament
-
-- **Move:** Treat tournament growth as a diagonal transport orbit DAG:
-  `parent class + diagonal word orbit under Aut(parent) -> rooted child ->
-  unrooted child sink`.  Separate the geometric `K_{k,k+1}` tile-position
-  carrier from the exponentially many binary word labels.
-- **LRC use:** HYP-3052 turns the user's `k^2+k` line prompt into an exact
-  controlled-forgetting carrier.  At `5 -> 6`, raw labelled diagonal
-  extensions are `384`, parent-automorphism word orbits are `296`, rooted
-  6-count is `296`, and all `56` unrooted sinks are reached.  This supplies
-  the incident-word sidecar that HYP-3047 showed was missing from rooted-node
-  memory; HYP-3049 identifies the same sidecar as an ordered-pair sector deck
-  whose first missing observability column is `cross_sector_orientation_word`.
-- **Preserves:** Parent class, parent automorphism quotient, diagonal incident
-  word orbit, source/sink deletion slices, aligned pair counts, newest link
-  bit, two-newest directed-triangle increment, deletion-parent fiber, and after
-  LRC lift, endpoint-owner/proof-obligation payload.
-- **Forgets / guardrail:** The `K_{k,k+1}` line count forgets full word order;
-  half-tiling counts forget the unlabelled isomorphism quotient.  The fold is a
-  converse-symmetric branch input, not a class-count identity.
-- **Algebraic law:** If `a=sum(w)` and `b=sum(u)`, then
-  `N00=(k-a)(k+1-b)`, `N01=(k-a)b`, `N10=a(k+1-b)`, `N11=ab`, hence
-  `N00*N11=N01*N10`.  The two-newest triangle increment is
-  `#{i<k : w_i=ell and u_i!=ell}` for `ell=u_k`.
-- **Tournament fingerprint:** vertices are proof carriers, not runners.
-  Pairwise observable is retained
-  `(iso, aut, deletion, line, cycle, half, owner, automaton)` payload minus
-  proof cost.  The tournament is transitive with score histogram
-  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, no directed 3-cycles, singleton
-  SCCs, and one Hamiltonian path:
-  `proof_obligation_automaton > endpoint_owner_packet_sheaf >
-  diagonal_transport_sidecar > deletion_parent_fiber >
-  parent_aut_layer_orbit > aligned_triangle_flow > K_position_line_profile >
-  binary_half_tiling_shadow > raw_labelled_diagonal_word`.
-- **Next pull:** Build the displayed `5 -> 6` child-class ledger with
-  deletion-parent profiles, rooted orbit counts, self-converse status, score
-  sequence, and aligned triangle-flow summaries; then join HYP-3049
-  ordered-pair sector decks to diagonal words as observer incident-sector
-  decks, testing `cross_sector_orientation_word` as the first extension column.
-- **Pointers:** HYP-3052, HYP-3049, HYP-3048, HYP-3047, HYP-3046, HYP-3043, HYP-3039, HYP-3031,
-  HYP-2685, HYP-2690, HYP-2120, HYP-2121, THM-549, THM-550, THM-381,
-  THM-385, LTI-199, LTI-196, LTI-195, LTT-097, LTT-094, LTT-093, T1134,
-  T1131, T1130, T1129, OPEN-Q-108.
-
 ### LTT-093: A000568 K-Depth Perspective Ladder Tournament
 
 - **Move:** Treat the old A000568/rooted-perspective count coincidence as a
@@ -2293,6 +2252,54 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2121, THM-549, THM-550, THM-381, THM-385, LTI-199, LTI-198, LTI-197,
   LTI-196, LTI-195, LTT-097, LTT-096, LTT-095, LTT-094, LTT-093, T1134,
   T1133, T1132, T1131, T1130, T1129, OPEN-Q-108.
+
+### LTT-098: Tournament Diagonal-Layer Flow
+
+- **Move:** Read the upper-triangular tournament matrix as a binary
+  half-tiling with diagonal layers.  Between layers of sizes `k` and `k+1`,
+  replace the raw `k^2+k` line count by the `K_{k,k+1}` coboundary/cycle-space
+  law: `k(k+1)` line observations, `2k` independent `GF(2)` rank, and
+  `k(k-1)` rectangle redundancies.  A spanning-tree basis determines all other
+  lines by `L(a,b)=L(a,b0)+L(a0,b)+L(a0,b0)`.
+- **LRC use:** HYP-3053 complements HYP-3052's diagonal transport and
+  HYP-3051's rooted layer-extension compression by turning the
+  fixed-path/global tiling prompt into a controlled duplication carrier.  Full
+  adjacent-layer flow has `2*C(n,3)` lines and rank `C(n,2)-1`, with
+  redundancy `2*C(n-1,3)+C(n-2,2)` from local rectangles plus
+  bridge-to-bridge hourglass cycles.  Fixed Hamiltonian-path half-tilings cover
+  A000568 classes with fiber `H(T)/|Aut(T)|`, while path reversal plus
+  converse is only a diagonal `Z2` sidecar quotient.  For LRC packets, line
+  redundancies should carry endpoint owners, barcode bars, active bottleneck
+  owners, route/status labels, or proof obligations.
+- **Preserves:** Half-tiling parity flow, adjacent-layer potential data,
+  rectangle/hourglass cycle consistency, fixed-path presentation fibers,
+  diagonal path-reversal/converse symmetry, and owner/barcode sidecars when
+  attached.
+- **Forgets / guardrail:** Raw inter-layer line count forgets the cycle-space
+  generator.  Fixed-path half-tilings forget full `S_n` quotienting and
+  duplicate a class by `H(T)/|Aut(T)|`.  The diagonal `Z2` quotient is not
+  A000568 and overcounts from `n=4`.  The rank law is only the XOR/equality
+  shadow; owner labels, directions, active bottleneck data, and nonlinear LRC
+  payloads need sidecar equations.
+- **Tournament fingerprint:** vertices are proof carriers, not runners.  The
+  carrier tournament is transitive with path
+  `endpoint_owner_packet_sidecar > rectangle_cycle_defect >
+  hamiltonian_path_fiber > fixed_path_half_tiling >
+  diagonal_reflection_converse > adjacent_layer_potential >
+  raw_interlayer_line_count > raw_A000568_orbit_count`.
+- **Next pull:** Emit explicit rectangle-cycle bases for each layer bridge,
+  add hourglass-cycle bases linking adjacent bridges, join them to HYP-3047
+  edge/cycle/clique perspectives, HYP-3049 cross-sector orientation, and
+  HYP-3048 matrix observability, and add
+  `tile_layer_id`, `interlayer_bridge_id`, `rectangle_cycle_basis_id`,
+  `line_potential_word`, `cycle_defect_word`, and owner/barcode support fields
+  to LRC packet experiments.
+- **Pointers:** HYP-3053, HYP-3052, HYP-3051, HYP-3050, HYP-3049, HYP-3048,
+  HYP-3047, HYP-3043, HYP-3039,
+  HYP-3031, HYP-2991, HYP-2989, HYP-2120, HYP-2121, THM-381, THM-385,
+  LTI-200, LTI-199, LTI-198, LTI-197, LTI-196, LTI-195, LTT-098, LTT-097,
+  LTT-096, LTT-095, LTT-094, LTT-093, T1135, T1134, T1133, T1132, T1131,
+  T1130, T1129, OPEN-Q-108.
 
 ## Immediate Pull List
 

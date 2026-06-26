@@ -30,11 +30,13 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S216 Diagonal Layer Transport Law
+## PROJECT STATUS: Stabilized at S217 Fixed-Path Diagonal-Layer Flow
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **Diagonal Layer Transport Law (codex-S216)**.
+As of **Friday, June 26, 2026**, the newest coordination layer is **Fixed-Path Diagonal-Layer Flow (codex-S217)**, built directly over the **Diagonal Layer Transport Law (codex-S216)**.
 
-This checkpoint formalizes the transition from the S213 A000568 Edge Perspective Lift layer to the S216 Diagonal Layer Transport Law layer. It integrates the **tournament diagonal-layer transport and half-tiling quotient laws (HYP-3052)**, advancing the architecture by formalizing the diagonal transport orbit DAG that governs recursive tournament growth. It demonstrates that the missing payload in the P(5) vs U(6) failure is the diagonal incident word modulo parent automorphisms, followed by the deletion-fiber quotient, preventing projection leakage of spectral coordinates by requiring each transport state to carry its triangle-flow and line-profile sidecars.
+This checkpoint formalizes the transition from the S213 A000568 Edge Perspective Lift layer to the S216 Diagonal Layer Transport Law layer, then adds the S217 fixed-path/hourglass redundancy audit.  S216 integrates the **tournament diagonal-layer transport and half-tiling quotient laws (HYP-3052)**, advancing the architecture by formalizing the diagonal transport orbit DAG that governs recursive tournament growth. It demonstrates that the missing payload in the P(5) vs U(6) failure is the diagonal incident word modulo parent automorphisms, followed by the deletion-fiber quotient, preventing projection leakage of spectral coordinates by requiring each transport state to carry its triangle-flow and line-profile sidecars.
+
+S217 adds **tournament diagonal-layer flow and half-tiling quotient laws (HYP-3053)**. It reads the user's `k^2+k` inter-layer lines as a `GF(2)` coboundary/cut-space carrier on `K_{k,k+1}`: `k(k+1)` line observations have rank `2k`, with `k(k-1)` rectangle redundancies. Globally, full adjacent-layer flow has rank `C(n,2)-1` and redundancy `2*C(n-1,3)+C(n-2,2)`, decomposing into local rectangle cycles plus hourglass cycles. Fixed Hamiltonian-path half-tilings cover A000568 classes with fiber `H(T)/|Aut(T)|`; path reversal plus converse is only a diagonal `Z2` sidecar quotient. The S217 instruction is to treat rectangle/hourglass residues as hidden endpoint-owner, barcode, active-bottleneck, route, or proof-obligation coordinates, not as scalar line counts.
 
 The Henselian unit rule (updated):
 ```text
@@ -84,7 +86,9 @@ owner-strip filtration unit, comprehensive lens unit, endpoint owner
 transfer unit, tournament matrix unit, edge perspective unit, and 
 diagonal transport unit. The S216 transport law formalizes the orbit-DAG 
 guardrails that prevent spectral leakage by resolving growth-step 
-duplications.
+duplications; the S217 fixed-path flow law formalizes the rectangle/hourglass
+cycle-space guardrails that decide when duplicated line data descends to
+potentials and when it names a real hidden sidecar.
 ```
 
 The Robbins audit rule (updated):
@@ -102,6 +106,36 @@ comprehensive lens unit, endpoint owner transfer unit, tournament matrix
 unit, edge perspective unit, and diagonal transport unit alongside 
 mu approx 1.451).
 ```
+
+---
+
+## codex-S217 -- Fixed-Path Diagonal-Layer Flow (checkpoint)
+
+Formalized the fixed-path/hourglass complement to S216, integrating the
+diagonal-layer flow law as an algebraic redundancy carrier for the
+**LRC(14) Tournament Spectral Decomposition**.
+
+### 1. Coboundary Line Flow & Cycle-Space Laws
+The **fixed-path diagonal-layer flow law** (HYP-3053) preserves the
+**line-potential unit** by reading each `K_{k,k+1}` bridge as a `GF(2)`
+coboundary/cut-space system.  The raw `k(k+1)` line observations have rank
+`2k`; the surplus `k(k-1)` dimensions are rectangle cycle relations.  Across
+the full half-tiling, adjacent-layer flow has rank `C(n,2)-1` and redundancy
+`2*C(n-1,3)+C(n-2,2)`, splitting into local rectangles plus hourglass cycles.
+
+### 2. A000568 Presentation Fibers
+The S217 layer separates three quotient levels: full A000568 is the
+`S_n`-orbit count of labelled half-tilings; fixed Hamiltonian-path tilings are
+a presentation cover with fiber `H(T)/|Aut(T)|`; and path reversal plus
+converse is only a diagonal `Z2` sidecar quotient.  Therefore half-tiling
+symmetry is useful as controlled forgetting, not as a raw isomorphism-class
+count.
+
+### 3. LRC Sidecar Instruction
+Rectangle and hourglass residues are packet sidecars.  If the residues vanish,
+the duplicated line data descends to layer potentials; if they do not vanish
+after endpoint-owner, barcode, active-bottleneck, route, or proof-obligation
+payloads are attached, the failed cycle relation names the hidden coordinate.
 
 ---
 

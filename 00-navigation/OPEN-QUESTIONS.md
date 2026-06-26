@@ -1,5 +1,23 @@
 # Open Questions
 
+**OPEN-Q-108 S217 diagonal-layer flow addendum:** HYP-3053 turns the user's
+tournament tiling-growth model into a `GF(2)` coboundary carrier.  The
+`k^2+k` lines between layers of sizes `k` and `k+1` form `K_{k,k+1}`:
+`k(k+1)` observations, rank `2k`, and `k(k-1)` rectangle redundancies, while
+the full adjacent-layer flow has redundancy `2*C(n-1,3)+C(n-2,2)` from local
+rectangles plus hourglass cycles.  Open task: emit explicit rectangle and
+hourglass cycle bases, attach edge-sector/cycle/clique perspective data plus
+endpoint-owner, barcode, and active-normal-fan support, and treat any nonzero
+cycle residue as a hidden sidecar coordinate rather than scalar line count.
+Use HYP-3052's diagonal transport ledger, HYP-3051's rooted layer-extension
+fibers, HYP-3050's exact edge/triple carriers, HYP-3049's cross-sector
+orientation word, and HYP-3048's sidecar observability matrix to test which
+line-cycle fields separate
+route/status-changing packet pairs. -> HYP-3053, HYP-3052, HYP-3051, HYP-3050,
+HYP-3049, HYP-3048,
+HYP-3047, HYP-3043, HYP-3039, HYP-3031, HYP-2991, HYP-2989, HYP-2120,
+HYP-2121, THM-381, THM-385, LTI-200, LTI-199, LTI-198, LTI-197, LTI-196, LTT-098,
+LTT-096, LTT-095, LTT-094, T1135, T1134, T1133, T1132, T1131, T1130.
 **OPEN-Q-108 S212 expanded matrix-atlas addendum:** HYP-3048 expands the S210
 tournament matrix atlas with `165` additional classic matrix hooks across `14`
 domains, giving `300` named hooks with S210.  The open task is to build a

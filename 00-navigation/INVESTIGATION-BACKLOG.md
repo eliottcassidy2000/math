@@ -15,6 +15,31 @@
 
 ---
 
+## Lead codex-2026-06-26-S217: Tournament diagonal-layer flow
+
+**Status:** SYNTHESIS / exact small tournament audit and algebraic carrier law
+(HYP-3053/T1135/LTI-200/LTT-098), rebased over the incoming S212 expanded
+matrix atlas, S213 A000568 edge-perspective lift, and S214 exact
+non-node perspective-depth carrier, plus S215 rooted layer-extension flow, and
+S216 diagonal-layer transport, and linked to their sidecar-observability,
+cross-sector, edge-triple, rooted-fiber, and deletion-transport targets.
+**Readout:** `04-computation/tournament_diagonal_layer_flow_codex_s217.py`
+stores output in
+`05-knowledge/results/tournament_diagonal_layer_flow_codex_s217.out`.  The
+user's `k^2+k` inter-layer lines are a `GF(2)` coboundary/cut-space
+presentation on `K_{k,k+1}`: `k(k+1)` lines, rank `2k`, and `k(k-1)`
+rectangle redundancies, with spanning-tree reconstruction.  Full adjacent
+layer flow has rank `C(n,2)-1` and redundancy
+`2*C(n-1,3)+C(n-2,2)`, decomposing into local rectangles plus hourglass
+cycles.  Fixed Hamiltonian-path half-tilings cover A000568 with fiber
+`H(T)/|Aut(T)|`; diagonal path-reversal/converse is useful but not A000568.
+**Next:** emit rectangle/hourglass cycle bases; attach endpoint-owner,
+barcode-bar, active-normal-fan, edge-sector, cross-sector orientation,
+cycle-conflict, deletion-parent, and clique insertion sidecars; then feed
+those fields into HYP-3052's diagonal transport ledger and HYP-3048's sidecar
+observability matrix to test route/status separation.
+Namespace: HYP-3053 / T1135 / LTI-200 / LTT-098.
+
 ## Lead codex-2026-06-26-S206: LRC14 comprehensive lens map
 
 **Status:** SYNTHESIS / coordination map complete

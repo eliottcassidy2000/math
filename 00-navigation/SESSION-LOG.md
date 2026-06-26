@@ -1,3 +1,44 @@
+## codex-2026-06-26-S217 -- tournament diagonal-layer flow (HYP-3053/T1135/LTI-200/LTT-098)
+
+User asked to consider the tiling model for tournament growth from `n` to
+`n+1`, where a new diagonal layer is added and consecutive layers of sizes
+`k` and `k+1` are joined by `k^2+k` lines.  Pulled incoming mainline and
+renumbered after codex-S212/HYP-3048 landed as the expanded matrix atlas,
+codex-S213/HYP-3049 landed as the A000568 edge-perspective lift, and
+codex-S214/HYP-3050 landed as the exact non-node perspective-depth carrier,
+codex-S215/HYP-3051 landed as the rooted layer-extension flow, and
+codex-S216/HYP-3052 landed as the diagonal-layer transport law.
+
+Added `04-computation/tournament_diagonal_layer_flow_codex_s217.py` and
+stored `05-knowledge/results/tournament_diagonal_layer_flow_codex_s217.out`.
+The script treats inter-layer lines as the `GF(2)` coboundary/cut-space
+shadow `delta(x)(uv)=x_u+x_v`.  Local law: `K_{k,k+1}` has `k(k+1)` lines,
+rank `2k`, and `k(k-1)` rectangle redundancies; a spanning-tree basis
+determines every other line.  Global law: full adjacent-layer flow has
+`2*C(n,3)` lines, rank `C(n,2)-1`, and redundancy
+`2*C(n-1,3)+C(n-2,2)` from local rectangles plus hourglass cycles.
+
+Created HYP-3053, T1135, LTI-200, LTT-098, and reflection
+`07-reflections/tournament-diagonal-layer-flow-codex-s217.md`.  A000568 is
+the full `S_n` orbit count of binary half-tilings.  Fixed Hamiltonian-path
+half-tilings are a smaller presentation atlas that surjects by Redei, with
+fiber `H(T)/|Aut(T)|` verified through `n=6`; path reversal plus converse is
+only a diagonal `Z2` sidecar quotient and overcounts from `n=4`.
+
+Tournament Analysis vertices are proof carriers, not runners.  The carrier
+tournament is transitive:
+`endpoint_owner_packet_sidecar > rectangle_cycle_defect >
+hamiltonian_path_fiber > fixed_path_half_tiling >
+diagonal_reflection_converse > adjacent_layer_potential >
+raw_interlayer_line_count > raw_A000568_orbit_count`.
+
+Next pull: emit rectangle/hourglass cycle bases, join them to HYP-3052
+diagonal transport, HYP-3047 edge/cycle/clique perspectives, HYP-3049
+cross-sector orientation, and HYP-3048 matrix observability, then add
+`tile_layer_id`, `interlayer_bridge_id`, `rectangle_cycle_basis_id`,
+`line_potential_word`, `cycle_defect_word`, and owner/barcode support fields
+to LRC packet experiments.
+
 ## codex-2026-06-26-S212 -- expanded tournament-matrix atlas (HYP-3048/T1130/LTI-196/LTT-094)
 
 User asked how tournaments relate to matrices and requested as many classic
