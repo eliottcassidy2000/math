@@ -47,6 +47,33 @@ Reusable readout: add automatic-language, lacunary-gap, power-lift, Hurwitz
 doubling-CF, and visibility-guard fields to HYP-2963 packets.  Perfect powers
 such as `p=2: q=27=3^3` in the unit-excess payload are no-lift guards requiring
 cyclotomic/p-adic labels, not standalone LRC certificates.
+## codex-2026-06-26-S183 -- LRC14 binding-pair switch carrier (HYP-3019/LTI-144)
+
+User asked to keep working on creative LRC14 proof angles.  Built an exact
+THM-524 binding-pair switch scout:
+`04-computation/lrc14_binding_pair_switch_carrier_codex_20260626.py`, with
+stored output
+`05-knowledge/results/lrc14_binding_pair_switch_carrier_codex_20260626.out`.
+
+Main result: pair crossings are the right finite support but not a safe scalar
+quotient.  The proof carrier must keep active blocker decks and all
+other-runner clearance inequalities.  AP13 and GW `12->24` are zero-open
+boundary atoms with complement optimum pairs `(1,13)`, `(5,9)`, `(3,11)`;
+petal/K33 rows are positive-open with active pairs `(7,20)`, `(1,26)`,
+`(5,36)`, `(1,36)`; covering `{1..11,13,84}` has `M=7/89`,
+strict safe measure `563/105105`, and no grid witness.
+
+After fetching, incoming mainline had already claimed HYP-3009 through
+HYP-3018, including automatic/fiber-mixing and normal-fan LRC14 carriers; this
+session's namespace was renumbered to HYP-3019/S183 and kept compatible with
+that work.
+
+The raw pair-gap quotient is strongly refuted as proof data: `12->200` has
+`1934` pair-good decoys, drop6-add180 has `1788`, and covering `12->84` has
+`846`.  Added HYP-3019, a reflection, LTI-144 update, and result-index entry.
+Next packet-schema fields: `binding_switch_type`, `active_pair_shell`,
+`denominator_lane`, `active_blocker_deck`, `other_clearance_margin`,
+`decoy_pair_gap`, `grid_or_offgrid_status`, and `switch_witness_count`.
 
 ## codex-2026-06-25-S172 -- Poincare worldline symmetry ledger for LRC14 (HYP-3007/T1091)
 

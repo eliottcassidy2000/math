@@ -1,0 +1,111 @@
+LRC14 binding-pair switch carrier scout
+========================================================================
+Assumption challenge
+  Candidate vertex sets considered:
+    runners, gaps, fixed sections, section boundaries, wall crossings,
+    residues, cover arcs, Fourier modes, matroid circuits, proof obligations,
+    and binding-pair switches.
+  Chosen vertex set:
+    binding-pair/proof switches, because THM-524 says the max is there but
+    the LRC predicate is only preserved after the other-runner clearance scan.
+  Preserved predicate:
+    existence of a time with min_v ||v t|| >= 1/14.
+  Destroyed by raw pair quotients:
+    active blocker deck, endpoint owners, off-grid witness intervals, and
+    whether the promising pair is blocked by another runner.
+
+[1] Named-row binding switch audit
+  AP13
+    family=AP/GW boundary; row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+    candidates=100; M=1/14; strict_safe_mu=0; grid_witnesses=1/14,3/14,5/14,9/14,11/14,13/14
+    witness_switch_times=3; decoy_pair_times=95; best_decoy_pair_gap=1/2 blocked_to=0
+      optimum t=1/14 gap=1/14 active=(1, 13) labels=1,13:sum:sum0mod14,literal14,nonunit-sum-gcd14,nonunit-diff-gcd2
+      optimum t=3/14 gap=1/14 active=(5, 9) labels=5,9:sum:sum0mod14,literal14,nonunit-sum-gcd14,nonunit-diff-gcd2
+      optimum t=5/14 gap=1/14 active=(3, 11) labels=3,11:sum:sum0mod14,literal14,nonunit-sum-gcd14,nonunit-diff-gcd2
+  GW 12->24
+    family=AP/GW boundary; row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+    candidates=210; M=1/14; strict_safe_mu=0; grid_witnesses=1/14,3/14,5/14,9/14,11/14,13/14
+    witness_switch_times=3; decoy_pair_times=196; best_decoy_pair_gap=1/2 blocked_to=1/16
+      optimum t=1/14 gap=1/14 active=(1, 13) labels=1,13:sum:sum0mod14,literal14,nonunit-sum-gcd14,nonunit-diff-gcd2
+      optimum t=3/14 gap=1/14 active=(5, 9) labels=5,9:sum:sum0mod14,literal14,nonunit-sum-gcd14,nonunit-diff-gcd2
+      optimum t=5/14 gap=1/14 active=(3, 11) labels=3,11:sum:sum0mod14,literal14,nonunit-sum-gcd14,nonunit-diff-gcd2
+  petal 10->20
+    family=unit petal; row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20)
+    candidates=168; M=2/27; strict_safe_mu=1/980; grid_witnesses=1/14,3/14,5/14,9/14,11/14,13/14
+    witness_switch_times=4; decoy_pair_times=157; best_decoy_pair_gap=1/2 blocked_to=0
+      optimum t=8/27 gap=2/27 active=(7, 20) labels=7,20:sum:sum_mod14=13
+  petal 13->26
+    family=unit petal; row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26)
+    candidates=219; M=2/27; strict_safe_mu=1/182; grid_witnesses=1/14,3/14,5/14,9/14,11/14,13/14
+    witness_switch_times=5; decoy_pair_times=195; best_decoy_pair_gap=1/2 blocked_to=0
+      optimum t=2/27 gap=2/27 active=(1, 26) labels=1,26:sum:sum_mod14=13
+  K33 12->36
+    family=K33/state-lift; row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+    candidates=363; M=3/41; strict_safe_mu=1/1260; grid_witnesses=1/14,3/14,5/14,9/14,11/14,13/14
+    witness_switch_times=4; decoy_pair_times=334; best_decoy_pair_gap=1/2 blocked_to=0
+      optimum t=17/41 gap=3/41 active=(5, 36) labels=5,36:sum:sum_mod14=13
+  K33 family drop12,13 add26,36
+    family=K33/state-lift; row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 26, 36)
+    candidates=363; M=3/37; strict_safe_mu=79/8190; grid_witnesses=1/14,3/14,5/14,9/14,11/14,13/14
+    witness_switch_times=10; decoy_pair_times=337; best_decoy_pair_gap=1/2 blocked_to=0
+      optimum t=3/37 gap=3/37 active=(1, 36) labels=1,36:sum:nonunit-diff-gcd7
+  covering 12->84
+    family=covering; row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    candidates=956; M=7/89; strict_safe_mu=563/105105; grid_witnesses=none
+    witness_switch_times=9; decoy_pair_times=846; best_decoy_pair_gap=1/2 blocked_to=0
+      optimum t=37/89 gap=7/89 active=(5, 84) labels=5,84:sum:sum_mod14=5
+  single far tail 12->200
+    family=covering; row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 200)
+    candidates=2308; M=1/13; strict_safe_mu=9899/323400; grid_witnesses=1/14,3/14,5/14,9/14,11/14,13/14
+    witness_switch_times=84; decoy_pair_times=1934; best_decoy_pair_gap=1/2 blocked_to=1/16
+      optimum t=1/13 gap=1/13 active=(1, 12) labels=1,12:sum:sum_mod14=13
+      optimum t=2/13 gap=1/13 active=(6, 7) labels=6,7:sum:sum_mod14=13
+      optimum t=3/13 gap=1/13 active=(4, 9) labels=4,9:sum:sum_mod14=13
+      optimum t=4/13 gap=1/13 active=(3, 10) labels=3,10:sum:nonunit-diff-gcd7
+      ... 2 additional optimum times
+  drop6 core add180
+    family=drop-core; row=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 180)
+    candidates=2071; M=2/23; strict_safe_mu=7/858; grid_witnesses=1/14,3/14,5/14,9/14,11/14,13/14
+    witness_switch_times=24; decoy_pair_times=1788; best_decoy_pair_gap=1/2 blocked_to=1/24
+      optimum t=4/23 gap=2/23 active=(11, 12) labels=11,12:sum:sum_mod14=9
+  two-far doublet 20,21
+    family=genuine-wide doublet; row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 20, 21)
+    candidates=182; M=1/12; strict_safe_mu=1321/24255; grid_witnesses=1/14,3/14,5/14,9/14,11/14,13/14
+    witness_switch_times=17; decoy_pair_times=161; best_decoy_pair_gap=1/2 blocked_to=0
+      optimum t=1/12 gap=1/12 active=(1, 11) labels=1,11:sum:nonunit-sum-gcd2,nonunit-diff-gcd2
+      optimum t=5/12 gap=1/12 active=(5, 7) labels=5,7:sum:nonunit-sum-gcd2,nonunit-diff-gcd2
+
+[2] Cross-row readout
+  boundary atoms (M=1/14 and no strict open mass): ['AP13', 'GW 12->24']
+  positive-open rows in this audit: ['petal 10->20', 'petal 13->26', 'K33 12->36', 'K33 family drop12,13 add26,36', 'covering 12->84', 'single far tail 12->200', 'drop6 core add180', 'two-far doublet 20,21']
+  off-grid-only witness rows: ['covering 12->84']
+  largest raw-pair decoy counts:
+    single far tail 12->200: decoys=1934, best_pair_gap=1/2 -> actual 1/16
+    drop6 core add180: decoys=1788, best_pair_gap=1/2 -> actual 1/24
+    covering 12->84: decoys=846, best_pair_gap=1/2 -> actual 0
+    K33 family drop12,13 add26,36: decoys=337, best_pair_gap=1/2 -> actual 0
+
+[3] Tournament Analysis
+  vertices are switch/proof carriers, not runners.
+  pairwise observable:
+    predicate retention, clearance retention, exact denominator scale,
+    off-grid coverage, family separation, decoy resistance, proof maturity.
+  binary gauge:
+    carrier A -> B when A wins a majority of observable coordinates; ties
+    use the declared Hamiltonian path below.
+  score_hist=[(0, 1), (1, 1), (2, 1), (3, 1), (5, 3), (7, 1), (8, 1)]
+  directed_3cycles=1
+  scc_sizes=[3, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=3
+  tie_hamiltonian_path=others_clear_binding_switch > covering_big_flank_switch > grid_section_unit_witness > binding_denominator_lane > active_blocker_deck > complement_sum14_boundary > state_lift_nonunit_pair > raw_pair_gap_shadow > snapshot_position_tournament
+
+[4] Proof-angle target
+  Add binding-switch fields to HYP-2963-style packet records:
+    binding_switch_type, active_pair_shell, denominator_lane,
+    active_blocker_deck, other_clearance_margin, decoy_pair_gap,
+    grid_or_offgrid_status, and switch_witness_count.
+  The theorem-facing lemma is not 'large pair gap implies LRC witness'.
+  It is the stronger switch statement:
+    a quotient may keep a binding pair only when the active blocker deck and
+    all other-runner clearance inequalities are retained, reconstructed,
+    dual-annihilated, or routed to AP/GW, covering, petal, K33, or F7 debt.
