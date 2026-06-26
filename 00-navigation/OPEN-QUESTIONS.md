@@ -1,5 +1,20 @@
 # Open Questions
 
+**OPEN-Q-108 S220 observer-cut orbit ledger addendum:** HYP-3056 refines
+HYP-3054 by making the cut payload an orbit under the visible-fiber
+automorphism group:
+`C_q(x,o)=orbit_Aut_q(x)(boundary slice, incidence word, extended shadow)`.
+Open task: build the HYP-2963 observer-cut ledger over coarse fibers with
+fields `base_quotient`, `fiber_id`, `observer_kind`,
+`visible_automorphism_group`, `cut_payload_orbit_id`,
+`changed_lrc_predicate`, `separating_sidecar`, `discharge_mode`, and
+`residual_debt_name`.  For each mixed route/status pair, enumerate admissible
+observers and prove the payload orbit is separated, reconstructed, exact,
+dual-annihilated, descended, boundary-stopped at AP/GW, or named as residual
+debt.  Emit the induced payload-column tournament and treat directed cycles as
+noncommuting discharge warnings. -> HYP-3056, HYP-3055, HYP-3054, HYP-3048, HYP-3039,
+HYP-2963, LTI-203, LTI-202, LTI-201, LTT-101, LTT-100, LTT-099, T1138, T1137, T1136.
+
 **OPEN-Q-108 S218 observer-extension/cut addendum:** HYP-3054 abstracts the
 A000568 observer-cut defect into the general controlled-forgetting test for
 repo quotients.  For any proposed quotient, name the next operation

@@ -28,6 +28,9 @@ The live proof object has at least four layers:
 Every LRC quotient seen so far is safe only if the forgotten coordinate is
 fiber-constant, reconstructed, dual-annihilated, descended familywise,
 stopped at AP/GW boundary topology, or routed to a named residual sector.
+HYP-3056 sharpens this by making the forgotten observer-extension coordinate
+an orbit under the visible-fiber automorphism group:
+`C_q(x,o)=orbit_Aut_q(x)(boundary slice, incidence word, extended shadow)`.
 
 ```text
 LRC-safe quotient

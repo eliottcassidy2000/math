@@ -54,6 +54,10 @@ obligations, and proof-carrier interfaces.
 - Need to connect discrepancy, two-dimensional Haar products, and tournament
   tiling repairs:
   use LTT-077 and add `zeta_repair_class` to the packet sidecar.
+- Need to turn observer-extension/cut payload into an auditable quotient
+  ledger:
+  use LTT-101 after LTT-099/LTT-100 and record payload orbits modulo visible
+  automorphisms.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -2414,6 +2418,43 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-202, LTI-201, LTI-200, LTI-199, LTI-198, LTI-197, LTI-196, LTT-100,
   LTT-099, LTT-098, LTT-097, LTT-096, LTT-095, LTT-094, T1137, T1136,
   T1135, T1134, T1133, T1132, T1131, OPEN-Q-108.
+
+### LTT-101: Observer-Cut Orbit Ledger
+
+- **Move:** Replace raw "payload retained" statements with the orbit object
+  `C_q(x,o)=orbit_Aut_q(x)(boundary slice, incidence word, extended shadow)`.
+  The visible quotient determines the automorphism group; the next observer
+  determines the cut; the ledger determines whether forgetting is legal.
+- **LRC use:** HYP-3056 turns HYP-3054 into a packet-manifest interface.  For
+  each coarse HYP-2963 fiber, enumerate admissible next observers and record
+  which payload orbit changes boundary/open status, route, owner current,
+  topology, certificate availability, or residual name.  This gives one
+  shared language for A000568 sector orientation, AP/GW closed-H1 owner
+  support, q=23 Haar zeta, K33 state lifts, automaton exact-packet handoffs,
+  analytic blindness reports, diagonal-layer cycle residues, and matrix
+  observability columns.
+- **Preserves:** The quotient action, observer address, payload orbit id,
+  changed LRC predicate, separating sidecar, discharge mode, and residual debt
+  name.
+- **Forgets / guardrail:** A raw scalar, automaton word, exact `M`, line count,
+  spectrum, or residual count cannot replace the orbit unless the ledger says
+  the orbit is reconstructed, exact, dual-annihilated, descended,
+  boundary-stopped, or named as debt.
+- **Tournament fingerprint:** vertices are ledger columns and discharge modes.
+  Pairwise observable is separation of route/status-changing fiber pairs, then
+  exactness, dual annihilation, family descent, proof cost, and residual debt
+  introduced.  Directed cycles mean noncommuting discharges and should trigger
+  a bicomplex/fiber-product carrier rather than a scalar ranking.
+- **Next pull:** Build the HYP-2963 observer-cut ledger with fields
+  `base_quotient`, `fiber_id`, `observer_kind`,
+  `visible_automorphism_group`, `cut_payload_orbit_id`,
+  `changed_lrc_predicate`, `separating_sidecar`, `discharge_mode`, and
+  `residual_debt_name`; emit the induced payload-column tournament.
+- **Pointers:** HYP-3056, HYP-3055, HYP-3054, HYP-3053, HYP-3052, HYP-3051,
+  HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-3043, HYP-3039, HYP-3037,
+  HYP-3034, HYP-3032, HYP-3031, HYP-3024, HYP-3018, HYP-2997, HYP-2995,
+  HYP-2963, THM-572, LTI-203, LTI-202, LTI-201, LTT-101, LTT-100, LTT-099,
+  T1138, T1137, T1136, OPEN-Q-108.
 
 ## Immediate Pull List
 

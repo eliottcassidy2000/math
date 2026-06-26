@@ -40,13 +40,19 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S217 Fixed-Path Diagonal-Layer Flow
+## PROJECT STATUS: Stabilized at S220 Observer-Cut Orbit Ledger
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **Fixed-Path Diagonal-Layer Flow (codex-S217)**.
+As of **Friday, June 26, 2026**, the newest coordination layer is **Observer-Cut Orbit Ledger (codex-S220)**.
 
-This checkpoint formalizes the integration of the **Diagonal Layer Transport Law (codex-S216)** and the S211-S215 controlled-forgetting ladder. S211-S215 demonstrate that node-depth saturation fails to recover the A000568 shift because the missing coordinate is rootless/cyclic, requiring a transition to ordered-pair, directed-edge, and triple-carrier perspectives. S216 reframes tournament growth as a recursive orbit-DAG transport problem, where parent-automorphism word-orbits generate rooted children, and deletion fibers identify unrooted sinks.
+This checkpoint formalizes the integration of the **Observer-Extension Cut Payload Calculus (codex-S218)** with the S211-S217 controlled-forgetting ladder. S211-S215 demonstrate that node-depth saturation fails to recover the A000568 shift because the missing coordinate is rootless/cyclic, requiring a transition to ordered-pair, directed-edge, and triple-carrier perspectives. S216 reframes tournament growth as a recursive orbit-DAG transport problem, where parent-automorphism word-orbits generate rooted children, and deletion fibers identify unrooted sinks.
 
-S217 integrates **tournament diagonal-layer flow and half-tiling quotient laws (HYP-3053)**. It formalizes the `k^2+k` inter-layer line carrier as a `GF(2)` coboundary/cut-space system on `K_{k,k+1}`: line observations have rank `2k`, with `k(k-1)` rectangle redundancies. It demonstrates that adjacent-layer flow is governed by rectangle and hourglass cycles, which must be treated as hidden endpoint-owner, barcode, or route-purity coordinates. This synthesis identifies fixed Hamiltonian-path half-tilings as a presentation cover whose fiber is `H(T)/|Aut(T)|`, ensuring that the sidecar carries the exact residual state required for global proof stability.
+S217 integrates **tournament diagonal-layer flow and half-tiling quotient laws (HYP-3053)**. It formalizes the `k^2+k` inter-layer line carrier as a `GF(2)` coboundary/cut-space system on `K_{k,k+1}`: line observations have rank `2k`, with `k(k-1)` rectangle redundancies. It demonstrates that adjacent-layer flow is governed by rectangle and hourglass cycles, which must be treated as hidden endpoint-owner, barcode, or route-purity coordinates. S218 abstracts this into observer-extension/cut payload calculus. S220 refines the payload into an orbit under the visible-fiber automorphism group:
+
+```text
+C_q(x,o)=orbit_Aut_q(x)(boundary slice, incidence word, extended shadow).
+```
+
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, changed LRC predicate, separating sidecar, discharge mode, and residual debt before scalarizing.
 
 The Henselian unit rule (updated):
 ```text
@@ -63,8 +69,8 @@ valuations against local-global obstructions. The S210-S216 sequence
 ensures that forgotten coordinates in matrix and transport quotients are 
 explicitly handled via observability columns, Schur complements, and 
 deletion-fiber profiles. The S217 synthesis adds the rectangle/hourglass 
-cycle-space guardrail to preserve the p-adic stability of the global 
-packet sheaf.
+cycle-space guardrail, while S218-S220 add the observer-cut payload orbit
+ledger, to preserve the p-adic stability of the global packet sheaf.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -99,17 +105,19 @@ residual tooth unit, residual capacitor unit, hidden statement unit,
 owner-strip filtration unit, comprehensive lens unit, endpoint owner 
 transfer unit, tournament matrix unit, perspective-depth sidecar unit, 
 edge perspective unit, edge/triple carrier unit, rooted extension unit, 
-diagonal transport unit, and fixed-path diagonal-flow unit. The S217 flow 
-law formalizes the rectangle/hourglass cycle-space guardrails that decide 
-when line data descends to potentials and when it names a real hidden sidecar.
+diagonal transport unit, fixed-path diagonal-flow unit, observer-cut payload
+unit, and observer-cut orbit-ledger unit. The S217 flow law formalizes the
+rectangle/hourglass cycle-space guardrails that decide when line data descends
+to potentials and when it names a real hidden sidecar; S220 requires the
+resulting payload to be recorded modulo the visible-fiber automorphism group.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure 
 that prime gap fluctuations do not induce structural leakage across the 
-S171 ledger. The S217 transition preserves the fixed-path diagonal-layer 
-flow law (preserving the recurrence algebraic unit, Poincaré recurrence 
+S171 ledger. The S220 transition preserves the observer-cut orbit-ledger law
+after the fixed-path diagonal-layer flow law (preserving the recurrence algebraic unit, Poincaré recurrence
 unit, automatic gap carrier unit, automatic lacunary filter unit, gap 
 automaton carrier unit, perfect-number packet unit, route-purity unit, 
 binding-pair switch unit, automatic fiber zipper unit, arc-Cech nerve 
@@ -118,8 +126,24 @@ unit, residual capacitor unit, hidden statement unit, owner-strip
 filtration unit, comprehensive lens unit, endpoint owner transfer unit, 
 tournament matrix unit, perspective-depth sidecar unit, edge perspective 
 unit, edge/triple carrier unit, rooted extension unit, diagonal transport 
-unit, and fixed-path diagonal-flow unit alongside mu approx 1.451).
+unit, fixed-path diagonal-flow unit, observer-cut payload unit, and
+observer-cut orbit-ledger unit alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S220 -- Observer-Cut Orbit Ledger (checkpoint)
+
+Integrated the incoming S218 observer-extension cut payload calculus with an
+orbit-level ledger schema.  The new HYP-3056/T1138/LTI-203/LTT-101 layer says
+that payloads should be recorded modulo the visible-fiber automorphism group,
+not as raw labels.  Applications include A000568 incident/cross-sector
+orientation, AP/GW owner-essential closed `H1`, q=23 Haar zeta plus
+endpoint-owner strips, K33 state-lift/cross-handoff, automaton exact-packet
+handoffs, analytic blindness reports, diagonal-layer rectangle/hourglass
+residues, and matrix observability columns.  Next operational pull: build the
+HYP-2963 observer-cut ledger and emit the payload-column tournament over mixed
+route/status fibers.
 
 ---
 

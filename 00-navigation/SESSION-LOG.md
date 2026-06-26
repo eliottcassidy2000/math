@@ -45,6 +45,51 @@ merged tournament or packet pairs and whose columns are incident-word orbit,
 observer endpoint role, ordered-pair sector deck, cross-sector orientation,
 deletion-parent profile, rectangle residue, hourglass residue, self-converse
 status, endpoint-owner packet, and binding scale.
+## codex-2026-06-26-S220 -- observer-cut orbit ledger (HYP-3056/T1138/LTI-203/LTT-101)
+
+User asked to apply observer-extension/cut payload abstractions to repo
+problems and synthesize with controlled forgetting.  While closing out, fetched
+mainline and found incoming `codex-S218: add observer cut payload calculus`
+had already claimed HYP-3054/T1136/LTI-201/LTT-099 for the same broad
+calculus.  Rebased by fast-forwarding to that S218 layer, then landed this
+session as an addendum rather than a duplicate.
+
+Added HYP-3056 and reflection
+`07-reflections/observer-cut-orbit-ledger-controlled-forgetting-codex-s220.md`,
+plus forum post
+`poke-forum/posts/20260626-observer-cut-orbit-ledger/post.md`.
+
+Main refinement: the observer-cut payload should be an orbit under the visible
+fiber automorphism group:
+
+```text
+C_q(x,o) = orbit_Aut_q(x)(boundary slice, incidence word, extended shadow).
+```
+
+Controlled forgetting is therefore ledger-shaped.  Each row should name the
+base quotient, coarse fiber, next observer, visible automorphism group,
+payload orbit id, LRC predicate changed, separating sidecar, discharge mode,
+and named residual debt if any.  The allowed discharges remain reconstruction,
+exact/cycle-boundary, dual annihilation, family descent, AP/GW boundary stop,
+or named residual debt.
+
+Cross-problem synthesis: A000568 uses incident/cross-sector orientation
+orbits; AP/GW use owner-essential closed `H1`; q=23 uses Haar zeta plus
+endpoint-owner strip; K33 uses state-lift/cross-handoff; automata need exact
+packet handoff; analytic clocks need blindness reports; diagonal layers need
+rectangle/hourglass residue orbits; matrix invariants need observability
+columns.
+
+Tournament Analysis vertices are payload columns and discharge modes rather
+than runners.  Pairwise observable is proof-critical fiber separation, with
+exactness, dual annihilation, descent, proof cost, and residual debt as
+tie-breakers.  Directed cycles should be treated as noncommuting discharge
+warnings, suggesting a bicomplex/fiber-product carrier rather than a scalar
+ranking.
+
+Next pull: implement the HYP-2963 observer-cut orbit ledger and emit the
+payload-column tournament for coarse route/status fibers.
+
 ## codex-2026-06-26-S217 -- tournament diagonal-layer flow (HYP-3053/T1135/LTI-200/LTT-098)
 
 User asked to consider the tiling model for tournament growth from `n` to

@@ -15,6 +15,26 @@
 
 ---
 
+## Lead codex-2026-06-26-S220: Observer-cut orbit ledger
+
+**Status:** SYNTHESIS / formal addendum to the S218 observer-extension cut
+payload calculus (HYP-3056/T1138/LTI-203/LTT-101).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3056-observer-cut-orbit-ledger.md`,
+`07-reflections/observer-cut-orbit-ledger-controlled-forgetting-codex-s220.md`,
+and `poke-forum/posts/20260626-observer-cut-orbit-ledger/post.md`.  The
+refinement is that the payload should be an orbit under the visible-fiber
+automorphism group:
+`C_q(x,o)=orbit_Aut_q(x)(boundary slice, incidence word, extended shadow)`.
+This turns controlled forgetting into a ledger of quotient, fiber, next
+observer, automorphism group, payload orbit, changed LRC predicate,
+separating sidecar, discharge mode, and residual debt name.
+**Next:** implement the observer-cut ledger over HYP-2963 coarse fibers,
+enumerating admissible observers for mixed route/status pairs.  Emit the
+payload-column tournament; a directed cycle should be treated as evidence of
+noncommuting discharges and routed to a bicomplex/fiber-product proof carrier.
+Namespace: HYP-3056 / T1138 / LTI-203 / LTT-101.
+
 ## Lead codex-2026-06-26-S218: Observer-extension cut payload calculus
 
 **Status:** SYNTHESIS / abstraction across existing LRC carriers
