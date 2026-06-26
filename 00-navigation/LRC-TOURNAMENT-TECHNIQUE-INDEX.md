@@ -45,6 +45,8 @@ obligations, and proof-carrier interfaces.
   use LTT-018 through LTT-021, plus LTT-069.
 - Need to classify large pair-good decoy tails without trusting raw counts:
   use LTT-068.
+- Need to repair failed automatic/fiber quotients without using route labels:
+  use LTT-072.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1216,7 +1218,6 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3024, HYP-3023, HYP-3020, HYP-3017, HYP-3016, HYP-3015,
   HYP-2963, THM-572, LTI-171, LTI-170, LTI-167.
 
-
 ### LTT-071: Carrier-Fusion Switchboard Tournament
 
 - **Move:** Treat fused proof sidecars as tournament vertices: labelled packet
@@ -1255,6 +1256,34 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3009, HYP-2963, HYP-2974, HYP-2969, THM-572, LTI-173, LTI-172,
   LTI-171, LTI-170, LTI-169, LTI-168, LTT-070, T1106, T1105, T1104.
 
+### LTT-072: Side-Channel Repair Ladder Tournament
+
+- **Move:** When a quotient fails fiber-purity, make the possible repairs the
+  tournament vertices: automatic word, q-threshold, q-factor/power guard, tail
+  magnitude, exact `M`, exact `M+q`, boundary topology, HYP-3020 trident
+  coordinates, HYP-3021 decoy-generator coordinates, HYP-3022 barcode/normal-fan
+  coordinates, HYP-3023 automatic zipper coordinates, HYP-3024 convergence
+  coordinates, HYP-3025 arc-Cech topology, packet labels, guarded non-route
+  signature, and circular route/exit diagnostics.
+- **LRC use:** HYP-3027 turns the HYP-3017/HYP-3023 automatic-word failure and
+  the HYP-3020/HYP-3021/HYP-3022/HYP-3024/HYP-3025 side-channel carriers into
+  an ordered proof target.  Exact `M` repairs open/boundary status but leaves
+  `366` mixed theorem-route fibers;
+  `M+q` and boundary topology each leave one mixed route pair; packet labels and
+  the guarded non-route signature are route-pure on the audited HYP-2963 bank.
+- **Preserves:** Fiber-purity tests for open/boundary status and theorem route,
+  the declared side-channel retained by each repair, and the noncircularity
+  status of the repair coordinate.
+- **Forgets / guardrail:** Route labels and automatic-filter exits are circular
+  diagnostics, not admissible proof quotients.  Exact scale alone forgets
+  packet route; tail magnitude alone remains route-mixed.
+- **Next pull:** Prove local zipper repairs for the two residual mixed pairs:
+  `two drop(10,13)->add(20,26)` versus `two drop(8,12)->add(16,24)`, and
+  `two drop(12,13)->add(26,36)` versus `single swap 12->72`.
+- **Pointers:** HYP-3027, HYP-3026, HYP-3025, HYP-3024, HYP-3023, HYP-3022, HYP-3021, HYP-3020, HYP-3018, HYP-3017, HYP-3016,
+  HYP-3015, HYP-3014, HYP-2963, HYP-2997, HYP-2995, HYP-2992, THM-572,
+  LTI-174, LTI-173, LTI-172, LTI-171, LTI-170, LTI-169, LTI-168, LTI-167, LTI-166.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1274,13 +1303,18 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    lonely-profile barcode, bar count, persistence margin,
    residue-automaton fiber ID, magnitude cocycle, Farey magnitude height,
    fiber anchor row, fiber-mixing exit, automatic fiber zipper,
+   fiber-convergence delta, sidecar redundancy flag, closed arc-Cech beta,
+   open arc component count, boundary cocircuit facet word,
+   runner quotient Betti defect,
    route-purity split report, discrepancy-height trident signature,
    residue discrepancy bins, Erdos-Turan proxy bins,
    Henselian unit-root rule, zero-root scale debt,
    coarse ET+unit status-convergence gate,
    Mahler/Farey height bucket, Hensel singular counts,
-   fusion signature, largest safe stick, safe-body mass, barcode shape,
+fusion signature, largest safe stick, safe-body mass, barcode shape,
    danger-distribution word, doubling-transition word, carrier-fusion exit,
+   repair-ladder stage, first nonzero repair cochain, route-purity status,
+   status-purity status, guarded non-route signature,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

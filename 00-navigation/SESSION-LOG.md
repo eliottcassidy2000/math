@@ -50,6 +50,35 @@ Added `04-computation/lrc14_active_bottleneck_normal_fan_codex_s182.py` and stor
 Readout: AP13 and GW `12->24` stay zero-bar boundary atoms with six global boundary peak owner pairs such as `{1+,13-}`, `{5+,9-}`, and `{3+,11-}`; K33 has peak support `(5,36)`; petals have `(7,20)` and `(1,26)`; covering has low-persistence support `(13,84)`; fibbinary and Moser controls have `38` and `64` bars.  Aggregate tested rows have `138` positive bars and peak-owner histogram `{2:114,3:18,4:6}`.
 
 Created HYP-3018, T1101, LTI-166, and reflection `07-reflections/lrc14-active-bottleneck-normal-fan-codex-s182.md`.  Proof-order takeaway: add normal-fan sidecars to HYP-2963 packets and test whether HYP-3017 mixed automatic-word fibers become pure after retaining peak support and endpoint residue sums.
+## codex-2026-06-26-S190 -- LRC14 side-channel repair ladder -- HYP-3027/LTI-174
+
+User asked to keep working on creative LRC proof angles.  Pulled current
+mainline through HYP-3022/HYP-3023/HYP-3024/HYP-3025 and found the automatic
+fiber-zipper, convergence-audit reservation, and closed arc-Cech topology were
+all adjacent repair coordinates.  This session pushed one layer further: which
+side-channel repairs which failed quotient predicate, and where does the repair
+ladder still leak?
+
+Added `04-computation/lrc14_sidechannel_repair_ladder_codex_s190.py` and stored
+`05-knowledge/results/lrc14_sidechannel_repair_ladder_codex_s190.out`.  The
+script imports the HYP-3017 classifier and audits the same `21913` packets by
+quotient joins.  Automatic word alone has `143` mixed-route fibers and one
+mixed open/boundary fiber.  `word+M` eliminates mixed open/boundary fibers but
+still leaves `366` mixed theorem-route fibers.  `word+M+q_threshold` leaves one
+mixed route pair, and `word+boundary topology` leaves one mixed route pair.
+C27/K33/transfer packet labels and the maximal guarded non-route signature are
+route-pure in the audited bank.
+
+Created HYP-3026, T1106, LTI-173, LTT-071, reflection
+`07-reflections/lrc14-sidechannel-repair-ladder-codex-s190.md`, and a
+poke-forum handoff.  The proof target is now a local repair zipper: in any
+fixed automatic fiber, the first nonzero repair cochain among exact scale/q,
+boundary topology, packet labels, HYP-3022/HYP-3023/HYP-3024/HYP-3025 sidecars, and harmonic/dual
+data must open, descend, be dual-annihilated, or emit F7/THM-572 residual debt.
+The two immediate test
+pairs are `two drop(10,13)->add(20,26)` versus
+`two drop(8,12)->add(16,24)` and `two drop(12,13)->add(26,36)` versus
+`single swap 12->72`.
 
 ## codex-2026-06-26-S179 -- LRC14 lonely-profile persistence barcode carrier (HYP-3015/T1099)
 
