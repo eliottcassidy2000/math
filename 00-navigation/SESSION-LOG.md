@@ -23917,3 +23917,47 @@ LTT-070, and updated the reflection.  Next pull: prove coarse ET+unit status
 convergence inside automatic/residue fibers before attempting full route
 purity; route the remaining open collisions through family magnitude formulas
 and the existing certificate stack.
+Reserved HYP-3024/LTI-171/S188 for extending the HYP-3023 fiber zipper from a
+static split table into a convergence audit.  Planned output: marginal drops
+in mixed theorem-route fibers, total mixed rows, and largest mixed fiber as
+residue, terminal automaton, magnitude, barcode, packet, discrepancy-height,
+and pair-good sidecars are zipped onto automatic/residue fibers, with
+`MFCMMCCFFFCCC` as the first local template.
+## codex-2026-06-26-S189 -- LRC14 carrier-fusion switchboard -- HYP-3026/LTI-173
+
+User asked to keep looking for better, more creative LRC proof carriers after
+the automatic sidecar and fiber-mixing work.  Mainline already had HYP-3014
+creative packet lenses, HYP-3015 lonely-profile barcode, HYP-3016
+magnitude-cocycle fiber mixing, HYP-3017 automatic route-purity failure,
+HYP-3018's active-bottleneck normal-fan sidecar, and after rebase HYP-3020's
+discrepancy-height trident carrier plus HYP-3021's pair-good decoy generator
+classifier, HYP-3022's pair-good barcode/normal-fan refinement, and HYP-3023's
+automatic fiber zipper, with HYP-3024's convergence audit and HYP-3025's
+closed arc-Cech carrier arriving on mainline during push/rebase, so this pass
+tested which combination of sidecars actually repairs the leakage.
+
+Added `04-computation/lrc14_carrier_fusion_switchboard_codex_s189.py` and
+stored `05-knowledge/results/lrc14_carrier_fusion_switchboard_codex_s189.out`.
+The script computes exact rational maximin values, strict safe components,
+safe-stick lengths, CRT first charts, endpoint currents, magnitude cocycles,
+automatic words, doubling-transition sidecars, and danger-count distributions
+on named AP/GW, K33, petal, covering, automaton-fiber twin, fibbinary, and
+Moser rows.
+
+Main finding: standalone automatic sidecars still leak.  `raw_automatic_word`
+has one mixed boundary/open fiber, and `automatic_plus_chart_den` still mixes
+AP/GW boundary atoms with open rows.  In the named bank,
+`automatic_plus_barcode_shape`, `automatic_plus_magnitude`, and the full
+`fusion_signature` have zero mixed boundary/open fibers.  The safe-stick /
+safe-body carrier is the one-dimensional version of the large-sticks/potatoes
+analogy: largest strict safe interval plus total regular-open safe body, used
+as a certificate anchor rather than an arithmetic replacement.
+
+Created HYP-3026, T1106, LTI-173, LTT-071, and reflection
+`07-reflections/lrc14-carrier-fusion-switchboard-codex-s189.md`.  Updated the
+hypothesis/result indexes, technique indexes, concept map, OPEN-Q-108, and the
+session log.  Next pull: add `fusion_signature`, `largest_safe_stick`,
+`safe_body_mass`, `barcode_shape`, `magnitude_cocycle`,
+`endpoint_current_word`, `crt_first_chart`, `danger_distribution_word`, and
+`doubling_transition_word` to the full HYP-2963 packet bank and test whether
+barcode shape continues to kill boundary/open leakage.

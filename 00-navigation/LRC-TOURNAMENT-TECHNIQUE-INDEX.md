@@ -1187,7 +1187,6 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3016, HYP-3015, HYP-3014, HYP-3013, HYP-3012, HYP-3011, HYP-3010,
   HYP-3009, HYP-3008, HYP-2997, HYP-2986, HYP-2975, HYP-2974, HYP-2970,
   HYP-2963, HYP-2990, THM-572, LTI-172.
-
 ### LTT-070: Fiber-Zipper Convergence Tournament
 
 - **Move:** Treat zipper gates as tournament vertices: automatic word,
@@ -1217,6 +1216,45 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3024, HYP-3023, HYP-3020, HYP-3017, HYP-3016, HYP-3015,
   HYP-2963, THM-572, LTI-171, LTI-170, LTI-167.
 
+
+### LTT-071: Carrier-Fusion Switchboard Tournament
+
+- **Move:** Treat fused proof sidecars as tournament vertices: labelled packet
+  fusion signatures, safe-stick/potato bodies, lonely-profile barcodes,
+  magnitude-cocycle fibers, endpoint currents, CRT charts, danger-count duals,
+  Hurwitz doubling states, automatic words, and raw row names.  Orient by
+  retained predicate, exactness, topology, arithmetic, endpoint data, route
+  split, family transfer, computability, and anti-scalar discipline.
+- **LRC use:** Converts the HYP-3014 creative lenses, HYP-3015 barcode,
+  HYP-3016 magnitude-cocycle guardrail, HYP-3017 sidecar route-purity
+  failure, HYP-3018 active normal-fan sidecar, HYP-3020
+  discrepancy-height trident, HYP-3021 pair-good decoy generator classifier,
+  HYP-3022 pair-good barcode/normal-fan refinement, HYP-3023 automatic
+  fiber zipper, HYP-3024 fiber-zipper convergence audit, and HYP-3025 closed
+  arc-Cech carrier into one exact packet switchboard.  In the S189
+  named bank,
+  automatic words and chart denominators still mix AP/Goddyn-Wong boundary
+  atoms with open rows, while barcode shape, magnitude cocycle, and the full
+  fusion signature remove boundary/open leakage.
+- **Preserves:** Strict-open status, exact safe-component topology, largest
+  safe-stick and safe-body mass, CRT first chart, endpoint current, magnitude
+  cocycle, automatic/doubling sidecars, ET/Henselian convergence sidecar,
+  danger-count duals, and route labels.
+- **Forgets / guardrail:** Any proper subcarrier can forget a load-bearing
+  coordinate: automatic state forgets magnitude, chart denominators forget safe
+  topology, endpoint current forgets open bars, and safe-stick geometry forgets
+  arithmetic period unless packetized.
+- **Next pull:** Add `fusion_signature`, `largest_safe_stick`,
+  `safe_body_mass`, `barcode_shape`, `magnitude_cocycle`,
+  `endpoint_current_word`, `crt_first_chart`, `danger_distribution_word`,
+  `et_henselian_unit_zipper`, and `doubling_transition_word` to HYP-2963
+  packet sidecars, then rerun the full bank to test whether
+  `automatic_plus_barcode_shape` remains boundary/open pure.
+- **Pointers:** HYP-3026, HYP-3025, HYP-3024, HYP-3023, HYP-3022, HYP-3021,
+  HYP-3020, HYP-3018, HYP-3017, HYP-3016, HYP-3015, HYP-3014, HYP-3013,
+  HYP-3009, HYP-2963, HYP-2974, HYP-2969, THM-572, LTI-173, LTI-172,
+  LTI-171, LTI-170, LTI-169, LTI-168, LTT-070, T1106, T1105, T1104.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1241,6 +1279,8 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    Henselian unit-root rule, zero-root scale debt,
    coarse ET+unit status-convergence gate,
    Mahler/Farey height bucket, Hensel singular counts,
+   fusion signature, largest safe stick, safe-body mass, barcode shape,
+   danger-distribution word, doubling-transition word, carrier-fusion exit,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
