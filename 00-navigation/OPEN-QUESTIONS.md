@@ -53,6 +53,26 @@ annihilation, family descent, AP/GW boundary equality, or THM-572/F7. ->
 HYP-3069, HYP-3068, HYP-3067, HYP-3066, HYP-3065, HYP-3063, HYP-3059, HYP-3056, HYP-3054,
 HYP-3053, HYP-2997, HYP-2995, HYP-2458, HYP-2454, THM-572, LTI-216, LTT-114,
 T1151.
+**OPEN-Q-108 S240 route-state closure median addendum:** HYP-3074 extends the
+S239 polymer/Dirichlet bridge stub, the S238 cross-carrier pullback resonance
+stub, the S237 cycle-class observability matrix/certificate-image parent, and the
+HYP-3070/S236 route-triple center-control layer and turns the final LRC14 proof
+interface into a medianization check over
+`packet / route / certificate / sidecar / discharge` proof states.  Open task:
+build the HYP-2963 medianization ledger.  For each packet route, emit
+`packet_state`, `route_state`, `certificate_state`, `legal_sidecar_closure`,
+`discharge_state`, `median_triples_entering_this_state`, and
+`failed_median_reason`.  For every serious route triple, compute the
+coordinate-wise median after legal closure.  A center is accepted only if it is
+legal; a failed center must be classified as missing gated partial-cube sidecar,
+missing cycle image, missing observer-cut repair, or explicit F7/THM-572 debt.
+The S240 scout shows the automatic/Moser/fibbinary partial-cube route repairs
+after sidecars, the Hodge/Toeplitz/Fejer phantom remains illegal until
+`hodge_cycle_image` or `residual_debt_exit` appears, and observer-cut payloads
+can fail when repair lanes do not agree. -> HYP-3074, HYP-3073, HYP-3072, HYP-3071, HYP-3070, HYP-3069, HYP-3068, HYP-3067, HYP-3066, HYP-3064,
+HYP-3063, HYP-3062, HYP-3056, HYP-3054, HYP-3037, HYP-3027, HYP-2997,
+HYP-2963, THM-572, LTI-221, LTI-218, LTI-217, LTI-216, LTT-119, LTT-116, LTT-115, LTT-114,
+T1156, T1154, T1153, T1152, T1151.
 
 **OPEN-Q-108 S237 cycle-class observability addendum:** HYP-3071 partially
 answers the S232 matrix pull downstream of the S236 center-control layer by

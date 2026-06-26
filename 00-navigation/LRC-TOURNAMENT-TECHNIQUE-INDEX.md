@@ -65,6 +65,9 @@ obligations, and proof-carrier interfaces.
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
   is unique and legally discharged.
+- Need the final packet/route/certificate/sidecar/discharge proof interface:
+  use LTT-119 after LTT-113 and run legal sidecar closure before judging
+  coordinate-wise medians.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3261,6 +3264,43 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3037, HYP-2645, HYP-2632, HYP-2540, THM-572, LTI-220, LTI-218, LTI-217,
   LTI-216, LTI-213, LTI-185, LTI-071, LTT-118, LTT-116, LTT-115, LTT-114,
   LTT-111, LTT-083, T1155, OPEN-Q-108.
+### LTT-119: Route-State Closure Median Interface
+
+- **Move:** Make the medianization proof interface executable by representing
+  each proof witness as a finite `packet / route / certificate / sidecar /
+  discharge` state, applying legal sidecar closure, and then checking whether
+  the coordinate-wise median of a serious route triple is still legal.
+- **LRC use:** HYP-3074/S240 extends the HYP-3073/S239 polymer/Dirichlet
+  bridge stub, the HYP-3072/S238 cross-carrier pullback resonance stub, the
+  HYP-3071/S237 cycle-class observability matrix, the HYP-3070/S236
+  route-triple center-control layer, and the HYP-3069/S235 route-center gate by
+  testing legal
+  closure before accepting a median center.
+  The automatic/Moser/fibbinary partial-cube route fails as a raw quotient but
+  passes after Theta/gated-subcube/median-interval and magnitude sidecars are
+  closed.  The Hodge/Toeplitz/Fejer phantom remains illegal until a
+  `hodge_cycle_image` or `residual_debt_exit` is majority-visible.
+- **Preserves:** Exact packet scale, endpoint owner, topology-safe status,
+  route words, analytic/cycle certificates, sidecar closure payload, discharge
+  exits, and median-center legality after controlled forgetting.
+- **Forgets / guardrail:** Raw automatic words, positivity shadows, and
+  observer-cut payloads are not proof centers by themselves.  A failed median
+  must name a missing gated sidecar, missing cycle image, missing observer-cut
+  repair, or explicit F7/THM-572 debt.
+- **Tournament fingerprint:** vertices are proof states, not runners.  Pairwise
+  observable is weighted retained proof coordinates plus a legality bonus.  In
+  the S240 scout both raw and closed tournaments are transitive with one
+  Hamiltonian path, but legal sidecar closure flips `59` pairwise edges.
+- **Next pull:** Run the closure rules over actual HYP-2963 coarse fibers with
+  packet, route, certificate, sidecar, and discharge bit vectors.  Emit the
+  closed median status for every serious route triple and bucket every failed
+  center by the first missing sidecar or debt exit.
+- **Pointers:** HYP-3074, HYP-3073, HYP-3072, HYP-3071, HYP-3070, HYP-3069, HYP-3068, HYP-3067,
+  HYP-3066, HYP-3063, HYP-3056, HYP-3054, HYP-3037, HYP-2963, THM-572,
+  LTI-221, LTI-218, LTI-217, LTI-216, LTI-215, LTI-214, LTI-213, LTI-210, LTI-203,
+  LTI-201, LTT-119, LTT-116, LTT-115, LTT-114, LTT-113, LTT-112, LTT-111, LTT-108,
+  LTT-101, T1156, T1154, T1153, T1152, T1151, T1150, T1149, T1148, T1145, T1138, T1136,
+  OPEN-Q-108.
 
 ## Immediate Pull List
 

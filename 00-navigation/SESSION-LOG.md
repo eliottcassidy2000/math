@@ -1,10 +1,11 @@
 ## codex-2026-06-26-S239 -- renormalized polymer / Dirichlet bridge (HYP-3073/T1155/LTI-220/LTT-118)
+## codex-2026-06-26-S239 -- reserved renormalized polymer / Dirichlet bridge (HYP-3073)
 
 User asked for one or two different remaining LRC proof angles and a
 cross-disciplinary scour of past work. Initial local reservation used
 HYP-3072/T1154, but the checkpoint rebase revealed incoming S238 had already
 claimed HYP-3072 for cross-carrier pullback resonance. This active pass is now
-renumbered to HYP-3073/T1155/LTI-220/LTT-118 and treats HYP-3072 as an upstream
+renumbered to HYP-3073 and treats HYP-3072 as an upstream
 portfolio signal. The synthesis deliberately avoids continuing the median-graph
 line: renormalized signed-polymer/Riesz-product grammar on AP/repeated-residue/
 wide packets, plus a Dirichlet-energy / Schur-complement reading of sidecars as
@@ -80,6 +81,53 @@ triples; full sidecars give deterministic centers, raw projections leave 14
 ambiguous center classes and 122 ambiguous triples, and the median completion
 has 82 states with 70 new obligations. Tournament Analysis uses proof carriers
 plus median obligations, not runners.
+## codex-2026-06-26-S240 -- Route-state closure median interface for LRC14 (HYP-3074/T1156/LTI-221/LTT-119)
+
+User asked to pick remaining LRC proof angles and aim the final proof
+interface at a medianization check over packet/route/certificate/sidecar/
+discharge states, where serious route triples should have a unique center
+after legal sidecars are attached.
+
+Created HYP-3074, T1156, LTI-221, LTT-119, exact scout
+`04-computation/lrc14_route_state_closure_median_s240.py`, result
+`05-knowledge/results/lrc14_route_state_closure_median_s240.out`, reflection
+`07-reflections/lrc14-route-state-closure-median-interface-codex-s240.md`, and
+forum post
+`poke-forum/posts/20260626-lrc14-route-state-closure-median-interface-s240/post.md`.
+After rebasing, this row is downstream of the S238 cross-carrier pullback
+resonance stub (HYP-3072/T1154): carrier-portfolio rows become candidate
+route-state coordinates before medianization.
+
+Main synthesis: represent each proof witness as a
+`packet / route / certificate / sidecar / discharge` state, close it under
+legal sidecar rules, and take the coordinate-wise majority median for route
+triples.  The unique center exists in the ambient cube; the theorem content is
+that legal LRC proof states are gated enough for serious triples to remain
+legal.  Failed centers must name a missing gated sidecar, missing cycle image,
+missing observer-cut repair, or explicit F7/THM-572 debt.
+
+Exact scout readout:
+
+```text
+45 state coordinates
+17 proof states
+11 closure rules
+automatic_partial_cube_router: raw FAIL, closed PASS
+hodge_toeplitz_fejer_phantom: raw FAIL, closed FAIL
+hodge_toeplitz_fejer_repaired: raw FAIL, closed PASS
+named_residual_debt_exit: raw PASS, closed PASS
+observer_cut_incompatible_repairs: raw FAIL, closed FAIL
+```
+
+Tournament Analysis uses proof states rather than runners.  Pairwise
+observable is weighted retained proof coordinates with a legality bonus; the
+fingerprint has no raw/closed directed 3-cycles, one raw and one closed
+Hamiltonian path, and `59` edge flips after legal sidecars, showing that proof
+order changes when hidden coordinates are restored.
+
+Next pull: build the HYP-2963 medianization ledger.  For every serious route
+triple, compute the closed median and classify every failed center into one of
+the named missing-sidecar/debt exits.
 
 ## codex-2026-06-26-S237 -- LRC14 cycle-class observability matrix (HYP-3071/T1153/LTI-218/LTT-116)
 

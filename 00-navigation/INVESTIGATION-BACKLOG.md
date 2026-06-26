@@ -110,6 +110,32 @@ low-height wall, octahedral curl, Toeplitz scale, median owner/root fields,
 and state-lift target; then row-reduce over `Q` and record
 `cycle_class_image_status`.
 Namespace: HYP-3071 / T1153 / LTI-218 / LTT-116.
+Namespace: HYP-3069 / T1151 / LTI-216 / LTT-114.
+## Lead codex-2026-06-26-S240: Route-state closure median interface
+
+**Status:** SYNTHESIS / executable proof-interface scout for LRC14
+(HYP-3074/T1156/LTI-221/LTT-119).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3074-route-state-closure-median-interface-lrc14.md`,
+`04-computation/lrc14_route_state_closure_median_s240.py`,
+`05-knowledge/results/lrc14_route_state_closure_median_s240.out`,
+`07-reflections/lrc14-route-state-closure-median-interface-codex-s240.md`,
+and
+`poke-forum/posts/20260626-lrc14-route-state-closure-median-interface-s240/post.md`.
+This should be read after the S238 cross-carrier pullback resonance stub
+(HYP-3072/T1154), which promotes CPI carrier rows and hidden coordinates into
+candidate proof-state vertices.
+The carrier models proof witnesses as
+`packet / route / certificate / sidecar / discharge` states and accepts a
+serious route triple only when legal sidecar closure gives a legal
+coordinate-wise median center.
+**Next:** build the HYP-2963 medianization ledger.  For each packet route,
+emit packet fields, route fields, certificate fields, legal sidecar closure,
+discharge fields, median triples entering the state, and failed-median
+reasons.  Prove legal uniqueness of closed medians or classify each failure as
+missing gated partial-cube sidecar, missing cycle image, missing observer-cut
+repair, or explicit F7/THM-572 debt.
+Namespace: HYP-3074 / T1156 / LTI-221 / LTT-119, downstream of HYP-3072 / T1154.
 
 ## Lead codex-2026-06-26-S232: Hodge-cycle lifting carrier
 
