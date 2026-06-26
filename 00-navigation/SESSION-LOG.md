@@ -1,3 +1,13 @@
+## codex-2026-06-26-S182 -- LRC14 active-bottleneck normal-fan carrier (HYP-3018/T1101)
+
+User asked to keep looking for better proof carriers.  Fetched and fast-forwarded over the incoming HYP-3016/HYP-3017 automaton fiber-mixing and route-purity work, then used it as the negative control: automaton sidecars mix boundary/open rows unless a local magnitude/support coordinate is retained.
+
+Added `04-computation/lrc14_active_bottleneck_normal_fan_codex_s182.py` and stored `05-knowledge/results/lrc14_active_bottleneck_normal_fan_codex_s182.out`.  The script extends the HYP-3015 barcode by recording active owner sets at each strict bar's left endpoint, peak, and right endpoint.
+
+Readout: AP13 and GW `12->24` stay zero-bar boundary atoms with six global boundary peak owner pairs such as `{1+,13-}`, `{5+,9-}`, and `{3+,11-}`; K33 has peak support `(5,36)`; petals have `(7,20)` and `(1,26)`; covering has low-persistence support `(13,84)`; fibbinary and Moser controls have `38` and `64` bars.  Aggregate tested rows have `138` positive bars and peak-owner histogram `{2:114,3:18,4:6}`.
+
+Created HYP-3018, T1101, LTI-166, and reflection `07-reflections/lrc14-active-bottleneck-normal-fan-codex-s182.md`.  Proof-order takeaway: add normal-fan sidecars to HYP-2963 packets and test whether HYP-3017 mixed automatic-word fibers become pure after retaining peak support and endpoint residue sums.
+
 ## codex-2026-06-26-S179 -- LRC14 lonely-profile persistence barcode carrier (HYP-3015/T1099)
 
 User asked for more creative LRC angles.  After pulling current mainline through HYP-3011..HYP-3013, chose a persistence/barcode route rather than another sequence or divisor scalar.

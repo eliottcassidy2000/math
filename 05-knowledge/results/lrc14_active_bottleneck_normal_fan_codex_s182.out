@@ -1,0 +1,144 @@
+LRC14 active-bottleneck normal-fan scout
+threshold=1/14
+
+[ROW NORMAL-FAN SUMMARY]
+- AP13
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  M=1/14 global_peak_count=6 bar_count=0 safe_mass=0 min_persistence=0
+  global_peak_owners={1+,13-}[sum=0]; {5+,9-}[sum=0]; {3+,11-}[sum=0]; {3-,11+}[sum=0]; ...
+  bar_peak_owner_hist={} endpoint_owner_hist={}
+- GW_12_to_24
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  M=1/14 global_peak_count=6 bar_count=0 safe_mass=0 min_persistence=0
+  global_peak_owners={1+,13-}[sum=0]; {5+,9-}[sum=0]; {3+,11-}[sum=0]; {3-,11+}[sum=0]; ...
+  bar_peak_owner_hist={} endpoint_owner_hist={}
+- K33_12_to_36
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+  M=3/41 global_peak_count=2 bar_count=2 safe_mass=1/1260 min_persistence=1/574
+  global_peak_owners={5+,36-}[sum=13]; {5-,36+}[sum=13]
+  bar_peak_owner_hist={2: 2} endpoint_owner_hist={1: 4}
+    fan_bar_1: interval=(29/70,209/504) length=1/2520 peak_t=17/41 height=3/41 persistence=1/574 support=(5, 36) L={5+}[sum=5] P={5+,36-}[sum=13] R={36-}[sum=8]
+    fan_bar_2: interval=(295/504,41/70) length=1/2520 peak_t=24/41 height=3/41 persistence=1/574 support=(5, 36) L={36+}[sum=8] P={5-,36+}[sum=13] R={5-}[sum=5]
+- petal_10_to_20
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20)
+  M=2/27 global_peak_count=2 bar_count=2 safe_mass=1/980 min_persistence=1/378
+  global_peak_owners={7+,20-}[sum=13]; {7-,20+}[sum=13]
+  bar_peak_owner_hist={2: 2} endpoint_owner_hist={1: 4}
+    fan_bar_1: interval=(29/98,83/280) length=1/1960 peak_t=8/27 height=2/27 persistence=1/378 support=(7, 20) L={7+}[sum=7] P={7+,20-}[sum=13] R={20-}[sum=6]
+    fan_bar_2: interval=(197/280,69/98) length=1/1960 peak_t=19/27 height=2/27 persistence=1/378 support=(7, 20) L={20+}[sum=6] P={7-,20+}[sum=13] R={7-}[sum=7]
+- petal_13_to_26
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26)
+  M=2/27 global_peak_count=2 bar_count=2 safe_mass=1/182 min_persistence=1/378
+  global_peak_owners={1+,26-}[sum=13]; {1-,26+}[sum=13]
+  bar_peak_owner_hist={2: 2} endpoint_owner_hist={1: 4}
+    fan_bar_1: interval=(1/14,27/364) length=1/364 peak_t=2/27 height=2/27 persistence=1/378 support=(1, 26) L={1+}[sum=1] P={1+,26-}[sum=13] R={26-}[sum=12]
+    fan_bar_2: interval=(337/364,13/14) length=1/364 peak_t=25/27 height=2/27 persistence=1/378 support=(1, 26) L={26+}[sum=12] P={1-,26+}[sum=13] R={1-}[sum=1]
+- P10_plus_GW
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20, 24)
+  M=2/27 global_peak_count=2 bar_count=2 safe_mass=1/980 min_persistence=1/378
+  global_peak_owners={7+,20-}[sum=13]; {7-,20+}[sum=13]
+  bar_peak_owner_hist={2: 2} endpoint_owner_hist={1: 4}
+    fan_bar_1: interval=(29/98,83/280) length=1/1960 peak_t=8/27 height=2/27 persistence=1/378 support=(7, 20) L={7+}[sum=7] P={7+,20-}[sum=13] R={20-}[sum=6]
+    fan_bar_2: interval=(197/280,69/98) length=1/1960 peak_t=19/27 height=2/27 persistence=1/378 support=(7, 20) L={20+}[sum=6] P={7-,20+}[sum=13] R={7-}[sum=7]
+- covering_12_to_84
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+  M=7/89 global_peak_count=2 bar_count=8 safe_mass=563/105105 min_persistence=1/1358
+  global_peak_owners={5+,84-}[sum=5]; {5-,84+}[sum=5]
+  bar_peak_owner_hist={2: 8} endpoint_owner_hist={1: 16}
+    fan_bar_1: interval=(29/70,163/392) length=3/1960 peak_t=37/89 height=7/89 persistence=9/1246 support=(5, 84) L={5+}[sum=5] P={5+,84-}[sum=5] R={84-}[sum=0]
+    fan_bar_2: interval=(229/392,41/70) length=3/1960 peak_t=52/89 height=7/89 persistence=9/1246 support=(5, 84) L={84+}[sum=0] P={5-,84+}[sum=5] R={5-}[sum=5]
+    fan_bar_3: interval=(57/98,685/1176) length=1/1176 peak_t=53/91 height=1/13 persistence=1/182 support=(7, 84) L={7+}[sum=7] P={7+,84-}[sum=7] R={84-}[sum=0]
+- mixed_AP_fiber_12_to_26
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 26)
+  M=1/12 global_peak_count=4 bar_count=4 safe_mass=426/35035 min_persistence=1/84
+  global_peak_owners={1+,11-,13+}[sum=11]; {5+,7-}[sum=12]; {5-,7+}[sum=12]; {1-,11+,13-}[sum=11]
+  bar_peak_owner_hist={2: 2, 3: 2} endpoint_owner_hist={1: 8}
+    fan_bar_1: interval=(29/70,41/98) length=1/245 peak_t=5/12 height=1/12 persistence=1/84 support=(5, 7) L={5+}[sum=5] P={5+,7-}[sum=12] R={7-}[sum=7]
+    fan_bar_2: interval=(57/98,41/70) length=1/245 peak_t=7/12 height=1/12 persistence=1/84 support=(5, 7) L={7+}[sum=7] P={5-,7+}[sum=12] R={5-}[sum=5]
+    fan_bar_3: interval=(15/182,13/154) length=2/1001 peak_t=1/12 height=1/12 persistence=1/84 support=(1, 11, 13) L={13+}[sum=13] P={1+,11-,13+}[sum=11] R={11-}[sum=11]
+- mixed_AP_fiber_12_to_96
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 96)
+  M=8/101 global_peak_count=2 bar_count=8 safe_mass=5219/840840 min_persistence=3/1526
+  global_peak_owners={5+,96-}[sum=3]; {5-,96+}[sum=3]
+  bar_peak_owner_hist={2: 8} endpoint_owner_hist={1: 16}
+    fan_bar_1: interval=(29/70,559/1344) length=11/6720 peak_t=42/101 height=8/101 persistence=11/1414 support=(5, 96) L={5+}[sum=5] P={5+,96-}[sum=3] R={96-}[sum=12]
+    fan_bar_2: interval=(785/1344,41/70) length=11/6720 peak_t=59/101 height=8/101 persistence=11/1414 support=(5, 96) L={96+}[sum=12] P={5-,96+}[sum=3] R={5-}[sum=5]
+    fan_bar_3: interval=(57/98,261/448) length=3/3136 peak_t=60/103 height=8/103 persistence=9/1442 support=(7, 96) L={7+}[sum=7] P={7+,96-}[sum=5] R={96-}[sum=12]
+- mixed_GW_fiber_12_to_38
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 38)
+  M=1/12 global_peak_count=4 bar_count=4 safe_mass=426/35035 min_persistence=1/84
+  global_peak_owners={1+,11-,13+}[sum=11]; {5+,7-}[sum=12]; {5-,7+}[sum=12]; {1-,11+,13-}[sum=11]
+  bar_peak_owner_hist={2: 2, 3: 2} endpoint_owner_hist={1: 8}
+    fan_bar_1: interval=(29/70,41/98) length=1/245 peak_t=5/12 height=1/12 persistence=1/84 support=(5, 7) L={5+}[sum=5] P={5+,7-}[sum=12] R={7-}[sum=7]
+    fan_bar_2: interval=(57/98,41/70) length=1/245 peak_t=7/12 height=1/12 persistence=1/84 support=(5, 7) L={7+}[sum=7] P={5-,7+}[sum=12] R={5-}[sum=5]
+    fan_bar_3: interval=(15/182,13/154) length=2/1001 peak_t=1/12 height=1/12 persistence=1/84 support=(1, 11, 13) L={13+}[sum=13] P={1+,11-,13+}[sum=11] R={11-}[sum=11]
+- mixed_GW_fiber_12_to_52
+  row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 52)
+  M=1/12 global_peak_count=4 bar_count=4 safe_mass=426/35035 min_persistence=1/84
+  global_peak_owners={1+,11-,13+}[sum=11]; {5+,7-}[sum=12]; {5-,7+}[sum=12]; {1-,11+,13-}[sum=11]
+  bar_peak_owner_hist={2: 2, 3: 2} endpoint_owner_hist={1: 8}
+    fan_bar_1: interval=(29/70,41/98) length=1/245 peak_t=5/12 height=1/12 persistence=1/84 support=(5, 7) L={5+}[sum=5] P={5+,7-}[sum=12] R={7-}[sum=7]
+    fan_bar_2: interval=(57/98,41/70) length=1/245 peak_t=7/12 height=1/12 persistence=1/84 support=(5, 7) L={7+}[sum=7] P={5-,7+}[sum=12] R={5-}[sum=5]
+    fan_bar_3: interval=(15/182,13/154) length=2/1001 peak_t=1/12 height=1/12 persistence=1/84 support=(1, 11, 13) L={13+}[sum=13] P={1+,11-,13+}[sum=11] R={11-}[sum=11]
+- fibbinary_first13
+  row=(1, 2, 4, 5, 8, 9, 10, 16, 17, 18, 20, 21, 32)
+  M=3/25 global_peak_count=6 bar_count=38 safe_mass=66077/399840 min_persistence=1/574
+  global_peak_owners={18-,32+}[sum=8]; {9-,16+}[sum=11]; {8-,17+}[sum=11]; {8+,17-}[sum=11]; ...
+  bar_peak_owner_hist={2: 28, 3: 6, 4: 4} endpoint_owner_hist={1: 76}
+    fan_bar_1: interval=(71/112,9/14) length=1/112 peak_t=16/25 height=3/25 persistence=17/350 support=(8, 17) L={8+}[sum=8] P={8+,17-}[sum=11] R={17-}[sum=3]
+    fan_bar_2: interval=(5/14,41/112) length=1/112 peak_t=9/25 height=3/25 persistence=17/350 support=(8, 17) L={17+}[sum=3] P={8-,17+}[sum=11] R={8-}[sum=8]
+    fan_bar_3: interval=(85/126,153/224) length=17/2016 peak_t=17/25 height=3/25 persistence=17/350 support=(9, 16) L={9+}[sum=9] P={9+,16-}[sum=11] R={16-}[sum=2]
+- moser_de_bruijn_first13
+  row=(1, 4, 5, 16, 17, 20, 21, 64, 65, 68, 69, 80, 81)
+  M=1/6 global_peak_count=2 bar_count=64 safe_mass=4264747/40348854 min_persistence=1/1358
+  global_peak_owners={1+,5-,17-,65-}[sum=4]; {1-,5+,17+,65+}[sum=4]
+  bar_peak_owner_hist={2: 56, 3: 6, 4: 2} endpoint_owner_hist={1: 128}
+    fan_bar_1: interval=(183/1120,153/910) length=69/14560 peak_t=1/6 height=1/6 persistence=2/21 support=(1, 5, 17, 65, 80) L={80+}[sum=10] P={1+,5-,17-,65-}[sum=4] R={65-}[sum=9]
+    fan_bar_2: interval=(757/910,937/1120) length=69/14560 peak_t=5/6 height=1/6 persistence=2/21 support=(1, 5, 17, 65, 80) L={65+}[sum=9] P={1-,5+,17+,65+}[sum=4] R={80-}[sum=10]
+    fan_bar_3: interval=(603/952,713/1120) length=61/19040 peak_t=54/85 height=14/85 persistence=111/1190 support=(16, 68, 69, 80) L={68+}[sum=12] P={16+,69-}[sum=1] R={80-}[sum=10]
+
+[AGGREGATE NORMAL-FAN FINGERPRINTS]
+total_positive_bars=138
+peak_owner_count_hist={2: 114, 3: 18, 4: 6}
+endpoint_owner_count_hist={1: 276}
+bar_support_size_hist={2: 86, 3: 42, 4: 8, 5: 2}
+bars_with_endpoint_zero_sum=8
+
+[LOW-PERSISTENCE DISCHARGE QUEUE]
+  moser_de_bruijn_first13: persistence=1/1358 length=1/19040 peak=86/97 support=(17, 80) L={17+}[sum=3] P={17+,80-}[sum=13] R={80-}[sum=10]
+  moser_de_bruijn_first13: persistence=1/1358 length=1/19040 peak=11/97 support=(17, 80) L={80+}[sum=10] P={17-,80+}[sum=13] R={17-}[sum=3]
+  moser_de_bruijn_first13: persistence=1/1358 length=1/18144 peak=55/97 support=(16, 81) L={16+}[sum=2] P={16+,81-}[sum=13] R={81-}[sum=11]
+  moser_de_bruijn_first13: persistence=1/1358 length=1/18144 peak=42/97 support=(16, 81) L={81+}[sum=11] P={16-,81+}[sum=13] R={16-}[sum=2]
+  covering_12_to_84: persistence=1/1358 length=1/15288 peak=8/97 support=(13, 84) L={13+}[sum=13] P={13+,84-}[sum=13] R={84-}[sum=0]
+  covering_12_to_84: persistence=1/1358 length=1/15288 peak=89/97 support=(13, 84) L={84+}[sum=0] P={13-,84+}[sum=13] R={13-}[sum=13]
+  fibbinary_first13: persistence=1/574 length=1/5880 peak=35/41 support=(20, 21) L={20+}[sum=6] P={20+,21-}[sum=13] R={21-}[sum=7]
+  fibbinary_first13: persistence=1/574 length=1/5880 peak=6/41 support=(20, 21) L={21+}[sum=7] P={20-,21+}[sum=13] R={20-}[sum=6]
+  fibbinary_first13: persistence=1/574 length=1/4032 peak=14/41 support=(9, 32) L={9+}[sum=9] P={9+,32-}[sum=13] R={32-}[sum=4]
+  fibbinary_first13: persistence=1/574 length=1/4032 peak=27/41 support=(9, 32) L={32+}[sum=4] P={9-,32+}[sum=13] R={9-}[sum=9]
+
+[MIXED AUTOMATON-FIBER REPAIR READOUT]
+  AP13: M=1/14 zero_bar boundary_peak_owners={1+,13-}[sum=0]; {5+,9-}[sum=0]; {3+,11-}[sum=0]; {3-,11+}[sum=0]
+  mixed_AP_fiber_12_to_26: M=1/12 open_bar peak=5/12 support=(5, 7) L={5+}[sum=5] P={5+,7-}[sum=12] R={7-}[sum=7]
+  mixed_AP_fiber_12_to_96: M=8/101 open_bar peak=42/101 support=(5, 96) L={5+}[sum=5] P={5+,96-}[sum=3] R={96-}[sum=12]
+  GW_12_to_24: M=1/14 zero_bar boundary_peak_owners={1+,13-}[sum=0]; {5+,9-}[sum=0]; {3+,11-}[sum=0]; {3-,11+}[sum=0]
+  mixed_GW_fiber_12_to_38: M=1/12 open_bar peak=5/12 support=(5, 7) L={5+}[sum=5] P={5+,7-}[sum=12] R={7-}[sum=7]
+  mixed_GW_fiber_12_to_52: M=1/12 open_bar peak=5/12 support=(5, 7) L={5+}[sum=5] P={5+,7-}[sum=12] R={7-}[sum=7]
+
+[TOURNAMENT ANALYSIS]
+vertices=proof carriers / local certificate schemas, not runners
+observable=(predicate, local_bottleneck_support, endpoint_geometry, quotient_purity_repair, stability, handoff_quality, anti_scalar)
+switch=majority comparison; tie path=listed carrier order
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+tie_path=active_bottleneck_normal_fan > lonely_profile_persistence_barcode > tope_cocircuit_wall_language > fejer_interval_certificate > exact_safe_component_front > automaton_fiber_magnitude_cocycle > raw_maximin_scalar > raw_automaton_word
+score_order=active_bottleneck_normal_fan > lonely_profile_persistence_barcode > tope_cocircuit_wall_language > fejer_interval_certificate > exact_safe_component_front > automaton_fiber_magnitude_cocycle > raw_maximin_scalar > raw_automaton_word
+  active_bottleneck_normal_fan: score=7 vector=(3, 3, 3, 3, 3, 3, 3) note=keeps the local active inequalities at endpoints and peaks
+  lonely_profile_persistence_barcode: score=6 vector=(3, 2, 2, 2, 3, 3, 3) note=keeps open bars, heights, lengths, and persistence margins
+  tope_cocircuit_wall_language: score=5 vector=(3, 2, 3, 2, 2, 3, 3) note=keeps wall/topology and endpoint cocircuits but not peak support
+  fejer_interval_certificate: score=4 vector=(3, 2, 2, 2, 3, 3, 3) note=dual certificate after an interval and packet are chosen
+  exact_safe_component_front: score=3 vector=(3, 1, 2, 1, 2, 3, 3) note=knows strict components but not the bottleneck normal fan
+  automaton_fiber_magnitude_cocycle: score=2 vector=(2, 1, 1, 3, 2, 2, 3) note=repairs mixed automatic fibers by retaining Farey/magnitude data
+  raw_maximin_scalar: score=1 vector=(1, 0, 0, 1, 1, 0, 1) note=knows M but forgets local owners and topology
+  raw_automaton_word: score=0 vector=(0, 0, 0, 0, 0, 0, 0) note=can mix AP/GW boundary atoms with open rows

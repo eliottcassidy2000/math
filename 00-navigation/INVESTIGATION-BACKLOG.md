@@ -15,6 +15,13 @@
 
 ---
 
+## Lead codex-2026-06-26-S182: LRC14 active-bottleneck normal-fan carrier
+
+**Status:** EVIDENCE / exact finite scout and proof-interface carrier complete (HYP-3018/T1101/LTI-166), extending the HYP-3015 barcode and using HYP-3016/HYP-3017 mixed automaton fibers as the negative control.  User asked to keep looking for better proof carriers.
+**Readout:** `04-computation/lrc14_active_bottleneck_normal_fan_codex_s182.py` stores output in `05-knowledge/results/lrc14_active_bottleneck_normal_fan_codex_s182.out`.  The sidecar records left endpoint owners, peak bottleneck owners, right endpoint owners, support speeds, and residue sums for each strict bar.  AP/GW remain zero-bar boundary atoms; K33 emits `(5,36)`, petals emit `(7,20)` and `(1,26)`, covering low-persistence bars emit `(13,84)`, and mixed AP/GW automaton-fiber open rows emit supports such as `(5,7)` and `(5,96)`.  Aggregate tested rows: `138` positive bars, peak-owner histogram `{2:114,3:18,4:6}`, support-size histogram `{2:86,3:42,4:8,5:2}`.
+**Next:** add normal-fan sidecars to the HYP-2963 packet bank; test whether the HYP-3017 mixed automatic-word fibers become boundary/open pure after adding peak support and endpoint residue sums; route the lowest-persistence supports to Fejer interval and endpoint-owner certificates.
+Namespace: HYP-3018 / T1101 / LTI-166.
+
 ## Lead codex-2026-06-26-S179: LRC14 lonely-profile persistence barcode carrier
 
 **Status:** EVIDENCE / exact finite scout and proof-interface carrier complete (HYP-3015/T1099/LTI-164), rebased over the incoming creative exact packet-lens atlas (HYP-3014/LTI-163).  User asked for more creative LRC angles.  This pass treats the lonely profile `m_S(t)=min_v ||v t||` as a threshold persistence object rather than a raw maximin scalar.
