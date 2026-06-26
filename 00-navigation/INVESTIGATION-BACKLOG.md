@@ -67,6 +67,30 @@ observability columns instances of one observer-extension/cut rule.
 sidecar observability matrices over HYP-2963 coarse fibers; classify pair-good
 decoys by generator and active-owner relation before reporting raw counts.
 Namespace: HYP-3054 / T1136 / LTI-201 / LTT-099.
+## Lead codex-2026-06-26-S223: Observer-extension cut payload
+
+**Status:** SYNTHESIS / exact finite audit and proof-carrier abstraction
+(HYP-3059/T1141/LTI-206/LTT-104), refining incoming HYP-3056, HYP-3055, and HYP-3054 and built on
+S213 ordered-pair sector decks, S216 source/sink diagonal transport slices,
+and S217 rectangle/hourglass flow.
+**Readout:** `04-computation/observer_extension_cut_payload_codex_s223.py`
+stores output in
+`05-knowledge/results/observer_extension_cut_payload_codex_s223.out`.  The
+prompt arithmetic is corrected: `48+12=60`, while the exact first-defect
+splice is `U(6)=P(5)+U(5)-U(4)=48+12-4=56`; the defect is `8`, and the
+fractions are `1=6/7+3/14-1/14`.  Recurring `12` carriers are `P(4)`,
+`U(5)`, source and sink `5->6` slices, `SC(6)`, and S217's `K_{4,5}`
+rectangle redundancy.  Source/sink child sets overlap in `4`; `SC(6)`
+deletion decks touch all `12` five-parent classes; ordered-pair
+cross-sector decks separate `56/56`.
+**Next:** materialize the observer-extension/cut payload schema in packet
+experiments: `observer_cut_word`, `stabilizer_orbit_id`,
+`source_sink_slice_id`, `source_sink_overlap_class`, `deletion_fiber_payload`,
+`self_converse_branch_bit`, `cross_sector_orientation_word`,
+`rectangle_hourglass_residue`, `endpoint_owner_packet`, and `legality_exit`.
+Prove each forgotten coordinate is retained, reconstructed, annihilated,
+descended, AP/GW equality, or named residual debt.
+Namespace: HYP-3059 / T1141 / LTI-206 / LTT-104.
 
 ## Lead codex-2026-06-26-S217: Tournament diagonal-layer flow
 

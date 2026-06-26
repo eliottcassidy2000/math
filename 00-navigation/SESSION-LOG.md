@@ -69,12 +69,54 @@ local exact structure, not a recurrence: `U(7)-P(6)=160` while
 `U(6)-U(5)=44`.
 
 Created HYP-3055, T1137, LTI-202, LTT-100, and reflection
-`07-reflections/duodecimal-observer-extension-payload-codex-s218.md`.
+`07-reflections/duodecimal-observer-extension-payload-codex-s219.md`.
 The cross-carrier abstraction is observer-extension/cut payload: retain
 incident-word orbit, endpoint role, ordered-pair sector deck, cross-sector
 orientation, deletion-parent profile, rectangle/hourglass residues, and LRC
 endpoint-owner or binding-scale analogues until the forgotten coordinate is
 fiber-constant, reconstructed, annihilated, descended, or routed to named
+residual debt.
+
+## codex-2026-06-26-S223 -- observer-extension cut payload (HYP-3059/T1141/LTI-206/LTT-104)
+
+User asked to investigate why `12` appears around tournament perspectives,
+including the note `48 +12 = 56`, and to synthesize observer-extension/cut
+payload with controlled forgetting, incident words, ordered-pair sectors,
+deletion fibers, and S217 rectangle/hourglass residues.
+
+Pulled current mainline first and integrated S213 through S217 rather than
+duplicating them.  Later fetches revealed incoming S218/HYP-3054 had claimed
+the general observer-extension cut calculus, S219/HYP-3055 had claimed the
+duodecimal first-defect bridge, and S220/HYP-3056 had claimed the observer-cut
+orbit ledger, so this exact twelve-layer audit was renumbered to
+S223/HYP-3059/T1141/LTI-206/LTT-104.  S213 already gave the exact ordered-pair
+sector lift; S216 gave source/sink `5->6` slices of size `12`; S217 gave the
+rectangle/hourglass fixed-path diagonal flow.
+A final fetch integrated the `comms/POKE-COORDINATION.md` terminal-priority
+directive; this audit matches it by making binary proof-payload relations, not
+scalar counts, the proof carrier surface.
+
+Added `04-computation/observer_extension_cut_payload_codex_s223.py` and
+stored `05-knowledge/results/observer_extension_cut_payload_codex_s223.out`.
+The script corrects the arithmetic: `48+12=60`, while the exact finite splice
+is `U(6)=P(5)+U(5)-U(4)=48+12-4=56`; the real defect remains
+`U(6)-P(5)=8`, with fractions `1=6/7+3/14-1/14`.
+
+Exact `12` carriers near the first defect: `P(4)=12`, `U(5)=12`, source and
+sink `5->6` extension slices each have size `12`, `SC(6)=12`, and the S217
+`K_{4,5}` rectangle-cycle redundancy is `12`.  The source and sink child sets
+overlap in `4`; `SC(6)` intersects the source slice in `2` and the sink slice
+in `2`; deletion decks of the `12` self-converse six-classes touch all `12`
+five-parent classes; all six-class deletion decks have `52/56` unique decks.
+The HYP-3049 ordered-pair sector fact survives: cross-sector decks separate
+`56/56`.
+
+Created HYP-3059, T1141, LTI-206, LTT-104, and reflection
+`07-reflections/twelve-layer-observer-cut-audit-codex-s223.md`.  The reusable
+carrier is `base quotient Q + observer/cut word sigma + Aut(Q) + sidecar
+C(sigma) + sink map Phi + legality exit`.  Controlled forgetting becomes:
+retain or repair the cut payload before forgetting; the allowed exits are
+reconstruction, dual annihilation, descent, AP/Goddyn-Wong equality, or named
 residual debt.
 
 Tournament Analysis vertices are proof carriers, not runners.  The carrier
@@ -207,6 +249,18 @@ capacitor/Haar squares, AP-tail q13 clocks, automaton handoffs, closed-arc
 A quotient is legal only when the forgotten coordinate is retained, constant,
 reconstructed, dual/cut/cocycle-annihilated, descended to potentials,
 boundary-stopped, or routed to named debt.
+`proof_obligation_automaton > sidecar_observability_matrix >
+endpoint_owner_packet > rectangle_hourglass_residue >
+deletion_fiber_payload > ordered_pair_sector_deck >
+incident_word_orbit > rooted_node_cache > raw_scalar_or_count`.
+
+Next pull: add `observer_cut_word`, `stabilizer_orbit_id`,
+`source_sink_slice_id`, `source_sink_overlap_class`,
+`deletion_fiber_payload`, `self_converse_branch_bit`,
+`ordered_pair_sector_deck`, `cross_sector_orientation_word`,
+`rectangle_hourglass_residue`, `endpoint_owner_packet`, and `legality_exit`
+to packet experiments, then prove each forgotten coordinate is retained,
+reconstructed, annihilated, descended, AP/GW equality, or named residual debt.
 
 ## codex-2026-06-26-S217 -- tournament diagonal-layer flow (HYP-3053/T1135/LTI-200/LTT-098)
 

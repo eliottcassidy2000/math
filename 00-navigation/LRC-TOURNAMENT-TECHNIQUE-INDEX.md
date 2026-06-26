@@ -135,6 +135,12 @@ obligations, and proof-carrier interfaces.
   use LTT-099 and test incident words, edge-sector cross orientation,
   deletion-parent fibers, rectangle/hourglass residues, endpoint-owner
   payloads, and proof-obligation sidecars before trusting scalar counts.
+- Need the first-defect observer-extension/cut payload bridge:
+  use LTT-100 for the duodecimal inclusion-exclusion ledger, LTT-101 for
+  payload orbits modulo visible automorphisms, LTT-102 to type value origins,
+  LTT-103 to flag hyperbolic triple debt when present, then LTT-104 for
+  source/sink overlap, deletion fibers, sector cross-orientation,
+  rectangle/hourglass residue, endpoint owner, and legality exits.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2572,6 +2578,56 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3009, HYP-3003, HYP-3002, HYP-2998, HYP-2963, HYP-2945, HYP-2937,
   HYP-2934, HYP-2928, THM-572, LTI-205, LTI-202, LTI-201, LTT-103,
   LTT-100, LTT-099, T1140, T1137, T1136, OPEN-Q-108.
+
+### LTT-104: Observer-Extension Cut Payload
+
+- **Move:** Treat a quotient as safe only after recording the observer/cut
+  payload it would otherwise destroy.  Extending HYP-3056's orbit ledger and
+  HYP-3055's duodecimal bridge, the standard carrier is
+  `base quotient Q + observer/cut word sigma + Aut(Q) + sidecar C(sigma) +
+  sink map Phi + legality exit`.  S223 audits the first A000568/rooted
+  perspective defect and corrects the arithmetic: `48+12=60`, while
+  `U(6)=P(5)+U(5)-U(4)=48+12-4=56`.
+- **LRC use:** The recurring `12` layers are not one object, but they are one
+  warning pattern: `P(4)=12`, `U(5)=12`, source and sink `5->6` slices have
+  size `12`, `SC(6)=12`, and the S217 `K_{4,5}` rectangle-cycle redundancy is
+  `12`.  The source and sink slices overlap in `4`, giving a concrete place
+  to inspect the `-4` correction.  Deletion decks of the `12` self-converse
+  six-classes touch all `12` five-parent classes.  For LRC packets, this says
+  retain endpoint owner, period deck, route label, mixed Haar zeta,
+  rectangle/hourglass residue, automaton state, divisor lane, or proof
+  obligation before scalarizing.
+- **Preserves:** Observer-source route/status payload, incident-word orbits,
+  source/sink slice identity, deletion-parent fibers, self-converse branch
+  data, cross-sector orientation, rectangle/hourglass residues, endpoint-owner
+  packets, and sidecar observability columns.
+- **Forgets / guardrail:** Raw A000568 class, raw rooted perspective, raw
+  half-tiling count, raw matrix scalar, raw automaton membership, and raw
+  abundancy/product scalars all forget the cut payload unless a sidecar is
+  attached.  `48+12=56` should never be quoted; the correct finite splice is
+  `48+12-4=56`, and it is a hypothesis signal, not a structural theorem yet.
+- **Tournament fingerprint:** vertices are proof carriers, not runners or
+  tournament nodes.  The carrier tournament is transitive with path
+  `proof_obligation_automaton > sidecar_observability_matrix >
+  endpoint_owner_packet > rectangle_hourglass_residue >
+  deletion_fiber_payload > ordered_pair_sector_deck >
+  incident_word_orbit > rooted_node_cache > raw_scalar_or_count`.
+- **Next pull:** Build a packet schema with `observer_cut_word`,
+  `stabilizer_orbit_id`, `source_sink_slice_id`, `source_sink_overlap_class`,
+  `deletion_fiber_payload`, `self_converse_branch_bit`,
+  `ordered_pair_sector_deck`, `cross_sector_orientation_word`,
+  `rectangle_hourglass_residue`, `endpoint_owner_packet`, and
+  `legality_exit`.  Prove each forgotten coordinate is retained,
+  reconstructed, dual-annihilated, descended, AP/Goddyn-Wong equality, or
+  named residual debt.
+- **Pointers:** HYP-3059, HYP-3058, HYP-3056, HYP-3055, HYP-3054, HYP-3053,
+  HYP-3052, HYP-3051, HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-3046,
+  HYP-3043, HYP-3039, HYP-3031, HYP-3013, HYP-3008, HYP-2120, HYP-2121,
+  THM-381, THM-385, LTI-206, LTI-205, LTI-203, LTI-202, LTI-201, LTI-200,
+  LTI-199, LTI-198, LTI-197, LTI-196, LTI-195, LTT-104, LTT-103, LTT-101,
+  LTT-100, LTT-099, LTT-098, LTT-097, LTT-096, LTT-095, LTT-094, LTT-093,
+  T1141, T1140, T1138, T1137, T1136, T1135, T1134, T1133, T1132, T1131,
+  OPEN-Q-108.
 
 ## Immediate Pull List
 

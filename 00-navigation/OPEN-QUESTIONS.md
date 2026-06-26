@@ -87,6 +87,22 @@ HYP-3021, HYP-3018, HYP-2997, HYP-2995, HYP-2991, HYP-2989, HYP-2963,
 THM-381, THM-385, THM-572, LTI-201, LTI-200, LTI-199, LTI-198, LTI-197,
 LTI-196, LTI-195, LTT-099, LTT-098, LTT-097, LTT-096, LTT-095, LTT-094,
 LTT-093, T1136, T1135, T1134, T1133, T1132, T1131.
+**OPEN-Q-108 S223 observer-extension/cut payload addendum:** HYP-3059 extends HYP-3056 and HYP-3055 and corrects
+the arithmetic around the first A000568/rooted-perspective defect: `48+12=60`,
+while `U(6)=P(5)+U(5)-U(4)=48+12-4=56`; the real defect is `8`.  The recurring
+`12` carriers are `P(4)`, `U(5)`, source and sink `5->6` slices, `SC(6)`, and
+S217's `K_{4,5}` rectangle redundancy.  Open task: prove the
+observer-extension/cut payload theorem.  For any quotient, identify the
+observer/cut word, stabilizer orbit, sidecar, sink map, and legality exit, then
+show the forgotten payload is retained, reconstructed, dual-annihilated,
+descended, AP/Goddyn-Wong equality, or named residual debt.  Immediate fields
+to test are `observer_cut_word`, `source_sink_overlap_class`,
+`deletion_fiber_payload`, `self_converse_branch_bit`,
+`cross_sector_orientation_word`, `rectangle_hourglass_residue`,
+`endpoint_owner_packet`, and `sidecar_observability_matrix`. -> HYP-3059, HYP-3056, HYP-3055,
+HYP-3054, HYP-3053, HYP-3052, HYP-3051, HYP-3050, HYP-3049, HYP-3048, HYP-3047,
+HYP-3046, HYP-3043, HYP-3039, HYP-3031, HYP-3013, HYP-3008, LTI-206, LTI-203, LTI-202,
+LTT-104, LTT-101, LTT-100, T1141, T1138, T1137.
 **OPEN-Q-108 S217 diagonal-layer flow addendum:** HYP-3053 turns the user's
 tournament tiling-growth model into a `GF(2)` coboundary carrier.  The
 `k^2+k` lines between layers of sizes `k` and `k+1` form `K_{k,k+1}`:
