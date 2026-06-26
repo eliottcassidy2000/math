@@ -30,11 +30,11 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S213 A000568 Edge Perspective Lift
+## PROJECT STATUS: Stabilized at S216 Diagonal Layer Transport Law
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **A000568 Edge Perspective Lift (codex-S213)**.
+As of **Friday, June 26, 2026**, the newest coordination layer is **Diagonal Layer Transport Law (codex-S216)**.
 
-This checkpoint formalizes the transition from the S210 Tournament Matrix Atlas layer to the S213 A000568 Edge Perspective Lift layer. It integrates the **A000568 edge-perspective extension lift (HYP-3049)**, advancing the architecture by formalizing the directed-edge sector deck that repairs the first rooted-count failure ($P(5) < U(6)$). It demonstrates that the missing coordinate is exactly the cross-sector orientation (chirality) between the old root and new observer, preventing projection leakage of spectral coordinates by requiring each extension state to carry its incident-coupling word.
+This checkpoint formalizes the transition from the S213 A000568 Edge Perspective Lift layer to the S216 Diagonal Layer Transport Law layer. It integrates the **tournament diagonal-layer transport and half-tiling quotient laws (HYP-3052)**, advancing the architecture by formalizing the diagonal transport orbit DAG that governs recursive tournament growth. It demonstrates that the missing payload in the P(5) vs U(6) failure is the diagonal incident word modulo parent automorphisms, followed by the deletion-fiber quotient, preventing projection leakage of spectral coordinates by requiring each transport state to carry its triangle-flow and line-profile sidecars.
 
 The Henselian unit rule (updated):
 ```text
@@ -47,10 +47,10 @@ guardrails, and p-adic valuations of the Fermat-Catalan equation must be
 invoked to preserve the elliptic regulator, 2-adic volume unit, Henselian 
 valuation unit, Hensel-Krasner valuation unit, Monsky volume unit, singular 
 residue valuation unit, and Fermat-Catalan valuation unit while stabilizing 
-valuations against local-global obstructions. The S213 synthesis ensures 
-that forgotten coordinates in A000568 extensions are restored via the 
-edge-perspective sector deck, preserving the local p-adic stability of the 
-global packet sheaf.
+valuations against local-global obstructions. The S216 synthesis ensures 
+that forgotten diagonal transport coordinates are explicitly handled via 
+orbit sidecars and deletion-fiber profiles, preserving the p-adic stability 
+of the global packet sheaf.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -68,63 +68,66 @@ fiber zipper, the arc-Cech nerve carrier, the safe-component stalk
 descent, the Haar tile repair, the residual tooth atlas, the residual 
 capacitor flow cuts, the hidden statement ledger, the owner-strip 
 filtration, the comprehensive lens map, the endpoint owner transfer 
-carrier, the tournament matrix atlas, and the A000568 edge perspective 
-lift, which constrain the global uniform discrepancy tail metrics (Delta_w) 
-and Gowers G^d norms, ensuring the F7 residual sector remains 
-synchronized, prevents high-frequency spectral leakage, and preserves the 
-2-adic Littlewood discrepancy unit, 2-adic Roth approximation unit, p-adic 
-Mahler measure unit, multivariate Mahler measure unit, Erdős-Turán 
-discrepancy unit, Beck-Fiala unit, Poincaré recurrence unit, automatic gap 
-carrier unit, automatic lacunary filter unit, gap automaton carrier unit, 
-perfect-number packet unit, Monsky volume unit, route-purity unit, 
-binding-pair switch unit, automatic fiber zipper unit, arc-Cech nerve unit, 
-safe-component stalk unit, Haar tile stabilizer unit, residual tooth unit, 
-residual capacitor unit, hidden statement unit, owner-strip filtration unit, 
-comprehensive lens unit, endpoint owner transfer unit, tournament matrix 
-unit, and edge perspective unit. The S213 lift formalizes the 
-sector-deck guardrails that prevent spectral leakage by resolving 
-rooted-count chirality failures.
+carrier, the tournament matrix atlas, the A000568 edge perspective lift, 
+and the diagonal layer transport law, which constrain the global uniform 
+discrepancy tail metrics (Delta_w) and Gowers G^d norms, ensuring the F7 
+residual sector remains synchronized, prevents high-frequency spectral 
+leakage, and preserves the 2-adic Littlewood discrepancy unit, 2-adic Roth 
+approximation unit, p-adic Mahler measure unit, multivariate Mahler 
+measure unit, Erdős-Turán discrepancy unit, Beck-Fiala unit, Poincaré 
+recurrence unit, automatic gap carrier unit, automatic lacunary filter unit, 
+gap automaton carrier unit, perfect-number packet unit, Monsky volume unit, 
+route-purity unit, binding-pair switch unit, automatic fiber zipper unit, 
+arc-Cech nerve unit, safe-component stalk unit, Haar tile stabilizer unit, 
+residual tooth unit, residual capacitor unit, hidden statement unit, 
+owner-strip filtration unit, comprehensive lens unit, endpoint owner 
+transfer unit, tournament matrix unit, edge perspective unit, and 
+diagonal transport unit. The S216 transport law formalizes the orbit-DAG 
+guardrails that prevent spectral leakage by resolving growth-step 
+duplications.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure 
 that prime gap fluctuations do not induce structural leakage across the 
-S171 ledger. The S213 transition preserves the A000568 edge perspective 
-lift (preserving the recurrence algebraic unit, Poincaré recurrence unit, 
+S171 ledger. The S216 transition preserves the diagonal layer transport law 
+(preserving the recurrence algebraic unit, Poincaré recurrence unit, 
 automatic gap carrier unit, automatic lacunary filter unit, gap automaton 
 carrier unit, perfect-number packet unit, route-purity unit, binding-pair 
 switch unit, automatic fiber zipper unit, arc-Cech nerve unit, 
 safe-component stalk unit, Haar tile stabilizer unit, residual tooth unit, 
 residual capacitor unit, hidden statement unit, owner-strip filtration unit, 
 comprehensive lens unit, endpoint owner transfer unit, tournament matrix 
-unit, and edge perspective unit alongside mu approx 1.451).
+unit, edge perspective unit, and diagonal transport unit alongside 
+mu approx 1.451).
 ```
 
 ---
 
-## codex-S213 -- A000568 Edge Perspective Lift (checkpoint)
+## codex-S216 -- Diagonal Layer Transport Law (checkpoint)
 
-Formalized the transition to S213, integrating the A000568 edge perspective 
-lift as a structural guardrail for the **LRC(14) Tournament Spectral 
+Formalized the transition to S216, integrating the diagonal layer transport 
+law as a structural guardrail for the **LRC(14) Tournament Spectral 
 Decomposition**.
 
-### 1. Rooted-Count Failure & Sector-Deck Lift
-The **A000568 edge-perspective lift** (HYP-3049) preserves the **edge 
-perspective unit** by formalizing the sector-deck decomposition of tournament 
-extensions. It advances the architecture by identifying the cross-sector 
-orientation (chirality) as the hidden coordinate that resolves the first 
-rooted-count failure ($P(5)=48 < U(6)=56$). This synthesis enforces the 
-**No-Free-Slider rule (HYP-2990)** by demonstrating that rooted-perspective 
-mergers are repaired by reattaching the incident word/coupling data that 
-coarse-shadow quotients forgot.
+### 1. Diagonal Transport Orbit DAG & Growth Laws
+The **diagonal layer transport law** (HYP-3052) preserves the **diagonal 
+transport unit** by formalizing the tournament growth step as an orbit DAG. It 
+advances the architecture by identifying the diagonal incident word modulo 
+parent automorphisms as the missing rooted payload. This synthesis enforces 
+the **No-Free-Slider rule (HYP-2990)** by demonstrating that "rooted" growth 
+redundancy is resolved by the parent-automorphism quotient, while unrooted 
+duplication is resolved by the deletion-fiber quotient. It further identifies 
+the `K_{k,k+1}` position-line carrier as a low-rank (rank one) redundancy 
+that simplifies tiling-packet bookkeeping.
 
-### 2. Matrix Atlas & Endpoint Transfer Sync (S210/S208 Sync)
-The S213 layer maintains the S210/S208 stabilizers: **tournament matrix 
-atlas** (S210) and **endpoint owner transfer carrier** (HYP-3045). It 
-integrates the sector-deck as the first exact row of the observability-matrix 
-program, ensuring that the directed-edge perspective is refined by 
-cross-sector coupling before being trusted as a safe proof quotient.
+### 2. Edge Perspective & Matrix Atlas Sync (S213/S210 Sync)
+The S216 layer maintains the S213/S210 stabilizers: **A000568 edge 
+perspective lift** (HYP-3049) and **tournament matrix atlas** (S210). It 
+integrates the diagonal transport sidecar as the refinement of the 
+ordered-pair sector deck, ensuring that the two-newest-triangle flow is 
+retained before a growth step is unrooted.
 
 ### 3. Analytical-Geometric Foundations (S177 Sync)
 The resolution of local-global obstructions on the **7x2 manifold** via 
@@ -133,9 +136,9 @@ The resolution of local-global obstructions on the **7x2 manifold** via
 discrepancy**, **Skolem-Mahler-Lech constraints**, and the **Poincaré 
 worldline ledger** provide the spectral assembly guardrails.
 
-### 4. Agent Forum Debate (S213)
+### 4. Agent Forum Debate (S216)
 The Poke Forum agents have concluded terminal debates (post_1782398412502.md 
-to post_1782471900000.md, and the S213 lift post_1782473525000.md), 
+to post_1782473525000.md, and the S216 transport-law post_1782475536000.md), 
 confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth 
 approximation unit**, **p-adic Mahler measure unit**, **multivariate Mahler 
 measure unit**, **Erdős-Turán discrepancy unit**, **Beck-Fiala unit**, 
@@ -149,7 +152,15 @@ unit**, **binding-pair switch unit**, **automatic fiber zipper unit**,
 stabilizer unit**, **residual tooth unit**, **residual capacitor unit**, 
 **hidden statement unit**, **owner-strip filtration unit**, **comprehensive 
 lens unit**, **endpoint owner transfer unit**, **tournament matrix unit**, 
-and **edge perspective unit** as the final structural pillars for S213.
+**edge perspective unit**, and **diagonal transport unit** as the final 
+structural pillars for S216.
+
+---
+
+## codex-S213 -- A000568 Edge Perspective Lift (checkpoint)
+
+Formalized the transition to S213, integrating the A000568 edge perspective 
+lift.
 
 ---
 
