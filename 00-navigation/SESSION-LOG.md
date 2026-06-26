@@ -71,6 +71,30 @@ payloads.  LRC14 branch readout: `p=1` gives q-parent/AP-GW side, `p=2` gives
 C27 petal/two-block summand side, and `p>=3` gives product-incidence/Kpq-K33
 side.  Tournament Analysis uses proof currencies / representation fibers as
 vertices and is transitive with path `exact_farey_packet > summand_antidiagonal_fiber > multiplicand_hyperbola_fiber > zeckendorf_path_carry > fibonacci_pascal_row > fermat_polygonal_invoice > ternary_goldbach_smoothing > binary_goldbach_pair_sieve > farey_power_stress`.
+## codex-2026-06-26-S171 -- LRC14 automatic lacunary safe-component filter (HYP-3011/T1095)
+
+User asked to keep pushing toward LRC14 and think Fermat-Catalan,
+arXiv:2506.04110, Ostrowski-Hadamard gaps, Moser-de Bruijn, fibbinary numbers,
+and finite automata.
+
+Added `04-computation/lrc14_automatic_lacunary_packet_filter_codex_s171.py`
+and stored
+`05-knowledge/results/lrc14_automatic_lacunary_packet_filter_codex_s171.out`.
+The script uses exact interval unions at threshold `1/14` and LSB-first DFA
+tags for fibbinary/no-`11` and Moser/even-bit-support languages.  AP and GW
+`12->24` have `positive_safe_components=0` and only denominator-14 boundary
+witness units; first-13 fibbinary has safe mass `66077/399840`, and first-13
+Moser-de Bruijn has safe mass `4264747/40348854`.
+
+After fetch showed origin/main had claimed HYP-3008/LTI-158 for an automatic
+gap-language carrier, rebased this lane conceptually as the exact
+safe-component companion: automatic membership is not enough; attach safe
+components and boundary units.  Added HYP-3011, LTI-160, LTT-062, T1095,
+OPEN-Q-108 S171, and a reflection.  The proof-program takeaway is that
+automatic/lacunary data should become labelled packet fields under the
+HYP-3002 controlled-kernel rule.  Tournament Analysis uses proof carriers /
+automatic packet filters as vertices and is transitive with raw sequence
+name/growth last.
 
 ## codex-2026-06-24-S170 -- LRC14 curried packet functional tower (HYP-3002/T1086)
 

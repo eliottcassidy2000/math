@@ -971,13 +971,43 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2963, HYP-2950, HYP-2944, HYP-2937, HYP-2702, HYP-2698, HYP-1920,
   HYP-1902, LTI-159.
 
+### LTT-062: Automatic / Lacunary Safe-Component Filter
+
+- **Move:** Treat finite automata and lacunary sequence languages as packet
+  filters: a row may carry DFA state, 2-adic window state, gap-block profile,
+  and exception-ledger labels, but those labels are not final scalar
+  invariants.
+- **LRC use:** Imports the user's Fermat-Catalan, 2-adic/Hurwitz,
+  Ostrowski-Hadamard, fibbinary, and Moser-de Bruijn prompts as proof roles.
+  This is the exact safe-component companion to HYP-3008's automatic
+  gap-language membership audit.  S171 keeps AP and GW `12->24` as zero-open
+  denominator-14 boundary atoms; the first-13 fibbinary and Moser-de Bruijn
+  rows instead have positive safe mass `66077/399840` and
+  `4264747/40348854`.
+- **Preserves:** LRC predicate, exact `M=p/q`, endpoint owners,
+  exact-period labels, finite-state word state, gap-block/lacunarity profile,
+  first safe component, and named certificate/residual route.
+- **Forgets / guardrail:** The raw sequence name, growth rate, gap ratio, or
+  automatic-language inclusion forgets real circle gaps.  It is proof-safe only
+  when paired with packet labels or discharged by a strict-safe component,
+  AP/GW boundary equality, Fejer/Ramanujan/endpoint annihilation, family
+  descent, or named F7/THM-572 residual debt.
+- **Next pull:** Pair HYP-3008's `automatic_gap_carrier` with exact
+  safe-component fields (`largest_component`, `safe_measure`,
+  `boundary_units`, and `automatic_filter_exit`) in HYP-2963 packet manifests,
+  then audit whether any zero-open non-AP/GW packet survives after these
+  labels and existing dual exits are attached.
+- **Pointers:** HYP-3011, HYP-3008, HYP-3002, HYP-3000, HYP-2997, HYP-2996,
+  HYP-2963, HYP-1902, THM-572, LTI-160.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
    Ramanujan exact-period projector, spectrum binding scale, additive-basis
-   regime, Pascal-slope carry width, curried call signature, lost-coordinate
-   function, observer velocity, sign-kernel status, boost cocycle, tube metric,
-   automatic language class, fibbinary/Moser carry status, lacunary gap ratio,
+   regime, Pascal-slope carry width, curried call signature,
+   lost-coordinate function, observer velocity, sign-kernel status, boost
+   cocycle, tube metric, automatic language class, fibbinary/Moser carry
+   status, lacunary gap ratio, gap-block profile, safe-component readout,
    power-lift guard, Hurwitz doubling-CF state, Burnside cost, score-class
    H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then

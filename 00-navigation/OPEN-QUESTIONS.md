@@ -53,6 +53,7 @@ then prove or refute that each hard non-AP/GW packet has one primary recursion
 mode plus named side-channel debts. -> HYP-3004, HYP-3003, HYP-3002, HYP-3001, HYP-3000,
 HYP-2999, HYP-2998, HYP-2963, HYP-2262, HYP-2238, HYP-2134, HYP-2091,
 LTI-152, LTI-153, LTI-154.
+**OPEN-Q-108 S171 automatic/lacunary safe-component addendum:** HYP-3011 imports the user's Fermat-Catalan, arXiv:2506.04110, Ostrowski-Hadamard, Moser-de Bruijn, fibbinary, and finite-automaton prompts as packet-interface roles rather than scalar analogies, downstream of HYP-3008's automatic gap-language membership audit.  Exact scout at threshold `1/14` leaves AP and GW `12->24` as the only zero-open rows among the four tested examples, while first-13 fibbinary and Moser-de Bruijn rows have positive safe mass `66077/399840` and `4264747/40348854`.  Open task: pair HYP-3008's `automatic_gap_carrier` with safe-component fields (`largest_component`, `safe_measure`, `boundary_units`, `automatic_filter_exit`) and prove that any automatic label either certifies a strict-safe component, descends to a family, is annihilated by Fejer/Ramanujan/endpoint data, routes to AP/GW boundary equality, or emits named F7/THM-572 residual debt. -> HYP-3011, HYP-3008, HYP-3002, HYP-2997, HYP-2963, HYP-1902, THM-572, LTI-160, LTT-062, T1095.
 
 **OPEN-Q-108 S168 residual-section packet-grid addendum:** HYP-2996 turns the
 current F7 language into an executable missing-section predicate over the
