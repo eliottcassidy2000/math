@@ -24330,3 +24330,28 @@ Updated result/hypothesis/technique indexes, concept map, and session log.
 Next pull: run the residual-capacitor cut audit over all `15` HYP-3028 coarse
 ET+unit mixed-route fibers and add `residual_capacitor_id`, `first_cut_stage`,
 and `zeta_exit_class` to the cached HYP-2963 packet sidecar.
+## codex-2026-06-26-S204 -- LRC14 AP-tail q13 puncture atlas -- HYP-3041/LTI-189/LTT-087
+
+User asked to keep working new LRC angles.  Continued from HYP-3031's request
+to classify the two-coordinate packet grids for the HYP-3029 residual mixed
+pairs.  Added `04-computation/lrc14_ap_tail_puncture_atlas_codex_s204.py`,
+stored `05-knowledge/results/lrc14_ap_tail_puncture_atlas_codex_s204.out`,
+and wrote HYP-3041 plus reflection
+`07-reflections/lrc14-ap-tail-puncture-atlas-codex-s204.md`.
+
+Main result: the AP-tail family `S_m={1,...,12,m}` is completely discharged by
+two explicit clocks.  If `13 does not divide m`, then `t=1/13` is a strict witness.  If
+`m=13s` with `s>=2`, then `t=s/(13s+1)` is a strict reciprocal fixed-point
+witness, with runners `1` and `m` binding; `m=13` is the AP boundary atom.
+The verification scan `m=13..400` found `358` q13-puncture rows, `29`
+fixed-point-tail rows, `0` non-strict rows except AP, and minimum strict
+margin `1/378` at `m=26`.
+
+This resolves the two HYP-3029 coarse-stalk teeth: `13->104/118` and
+`13->117/159` have the same mod-14 owner strips, but differ by the hidden
+`m mod 13` clock.  Adding `coarse_plus_q13_bit` or
+`coarse_plus_tail_certificate` to the target `MFCMMCCFFFCCC` coarse-stalk key
+gives `0` mixed-route fibers.  HYP-3031 repair class: `nested_refinement` plus
+`owner_strip`, not F7 debt.  Next pull: search two-tail AP-core residuals for
+the same prime-puncture / reciprocal-fixed-point certificate before invoking
+Fejer or THM-572 machinery.

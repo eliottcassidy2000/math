@@ -2945,3 +2945,17 @@ boundary-moment certificate. -> HYP-3036, HYP-3033, HYP-3032, HYP-3031,
 HYP-3030, HYP-3028, HYP-3027, HYP-3024, HYP-3023, HYP-2963, LTI-184,
 LTT-082, T1117,
 CPI-043.
+## OPEN-Q-108 addendum (codex-2026-06-26-S204): AP-tail puncture repair
+
+HYP-3041 closes the immediate HYP-3031 pull for the two HYP-3029 coarse-stalk
+residual pairs.  For `S_m={1,...,12,m}`, `13 does not divide m` gives the direct witness
+`t=1/13`, while `m=13s`, `s>=2`, gives the reciprocal fixed-point witness
+`t=s/(13s+1)`; only `m=13` is boundary.  Thus `13->104/118` and
+`13->117/159` collide only because the coarse mod-14 owner strip forgot
+`m mod 13`.  Adding the `q=13` puncture bit or the explicit AP-tail certificate
+to the target `MFCMMCCFFFCCC` coarse-stalk key gives `0` mixed-route fibers.
+New target: find and classify two-tail AP-core residuals by the same
+prime-puncture / reciprocal-fixed-point repair before spending Fejer or
+THM-572 machinery. -> HYP-3041, HYP-3033, HYP-3032, HYP-3031, HYP-3029,
+HYP-3028, HYP-3027, HYP-3024, HYP-3023, LTI-189, LTI-181, LTI-180, LTT-087,
+LTT-079, LTT-078, T1122, T1114, T1113.

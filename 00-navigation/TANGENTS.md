@@ -3250,3 +3250,14 @@ back to HYP-3029/HYP-3018 barcode and normal-fan support.  Next target: add
 HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3034, HYP-3033, HYP-3032,
 HYP-3031, HYP-3030, HYP-3029, HYP-3023, HYP-3022, HYP-3021, HYP-3018,
 HYP-2963, THM-572, OPEN-Q-108.
+## T1122: LRC14 AP-tail q13 puncture and fixed-point repair (codex-2026-06-26-S204)
+
+HYP-3041 discharges the AP-tail family `S_m={1,...,12,m}` by two explicit
+clocks: if `13` does not divide `m`, use `t=1/13`; if `m=13s` with `s>=2`,
+use the reciprocal fixed point `t=s/(13s+1)`, where runners `1` and `m` bind.
+The only boundary case is `m=13`.  This explains the two HYP-3029 coarse-stalk
+residual pairs as mod-14 owner-strip collisions that forgot the hidden
+`m mod 13` clock, not F7 debt.  Next pull: search two-tail AP-core residuals
+for the same prime-puncture/fixed-point repair pattern. -> HYP-3041, HYP-3032,
+LTI-189, LTI-180, LTT-087, LTT-078, HYP-3031, HYP-3029, HYP-3028, HYP-3027,
+HYP-3024, HYP-3023, HYP-2963, OPEN-Q-108.

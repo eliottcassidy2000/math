@@ -1716,7 +1716,7 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3028, HYP-3027, HYP-3024,
   HYP-3023, HYP-3022, HYP-3021, HYP-3018, HYP-2963, THM-572, LTI-187,
   LTI-186, LTI-185, LTI-184, LTI-183, LTI-182, LTI-181, LTI-180, LTI-179,
-  LTI-178, LTT-084, LTT-083, LTT-082, LTT-081, LTT-080, LTT-079, LTT-078,
+  LTI-178, LTT-085, LTT-084, LTT-083, LTT-082, LTT-081, LTT-080, LTT-079, LTT-078,
   LTT-077, LTT-076, T1120, T1119, T1118, T1117, T1116.
 
 ### LTT-086: Hidden Statement Ledger Tournament
@@ -1756,6 +1756,38 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   THM-572, LTI-188, LTI-187, LTI-186, LTI-185, LTI-184, LTI-183, LTI-182,
   LTI-181, LTI-180, LTT-085, LTT-084, LTT-083, LTT-082, LTT-081, LTT-080,
   T1121, T1120.
+
+### LTT-087: AP-Tail Puncture Repair Tournament
+
+- **Move:** Treat AP-tail repair clocks as tournament vertices: residue-terminal
+  shadow, coarse largest-stalk owner strip, coarse plus `q=13` puncture bit,
+  coarse plus explicit AP-tail certificate, coarse plus exact peak height,
+  exact stalk, and magnitude cocycle.  Orient by route purity, max mixed-fiber
+  size, exact-period retention, owner-strip retention, local geometry,
+  family-proof scope, and proof cost.
+- **LRC use:** HYP-3041 proves the AP-tail family `S_m={1,...,12,m}` by two
+  clocks.  If `13` does not divide `m`, then `t=1/13` is a strict witness.
+  If `m=13s` with `s>=2`, then `t=s/(13s+1)` is a strict reciprocal
+  fixed-point witness.  The two HYP-3029 coarse-stalk residual pairs are not
+  F7 debt: they have the same mod-14 owner strip but differ by the hidden
+  `m mod 13` clock.
+- **Preserves:** Existence of a strict witness for AP-tail rows, theorem route
+  in the target `MFCMMCCFFFCCC` fiber, mod-14 owner-strip geometry, and the
+  exact-period/fixed-point address that separates direct `q=13` witnesses from
+  covering-moment rows.
+- **Forgets / guardrail:** A mod-14 owner strip alone is unsafe.  It can collide
+  `13->104` with `13->118`, and `13->117` with `13->159`, unless the `13|m`
+  puncture or equivalent exact peak-height coordinate is retained.
+- **Next pull:** Search two-tail AP-core residuals for the same pattern:
+  owner-strip collision plus forgotten prime clock, repaired by either an
+  exact-period puncture or a reciprocal fixed point before Fejer/THM-572 is
+  invoked.
+- **Pointers:** HYP-3041, HYP-3040, HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3033,
+  HYP-3032, HYP-3031, HYP-3029, HYP-3028, HYP-3027, HYP-3024, HYP-3023,
+  HYP-3017, HYP-2963, LTI-189, LTI-188, LTI-187, LTI-186, LTI-185, LTI-184, LTI-183,
+  LTI-182, LTI-181, LTI-180, LTI-179, LTI-177, LTT-087, LTT-086, LTT-085, LTT-084, LTT-083, LTT-082, LTT-081,
+  LTT-079, LTT-078, T1122, T1121, T1120, T1119, T1118, T1117, T1116, T1114, T1113,
+  OPEN-Q-108.
 
 ## Immediate Pull List
 
