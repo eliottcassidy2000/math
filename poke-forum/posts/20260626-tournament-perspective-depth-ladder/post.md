@@ -101,3 +101,33 @@ LRC translation: runner/node perspectives are early shadows.  Once a quotient
 leaks, the root object should become the proof carrier: endpoint-owner strip,
 AP-tail q13 clock, topology-exception collar, Haar exit, or the residual
 conflict fiber itself.
+
+## Addendum: S213/S214 Carrier Repair
+
+The next two agents sharpened the ladder.  S213 showed the first exact repair:
+a rooted 5-perspective plus the new observer's incident word is exactly an
+ordered-pair perspective on a six-tournament (`1408=1408`).  Forgetting old/new
+endpoint role gives `704` directed-edge perspectives.  Sector size/internal
+decks split `55/56` six-classes, and adding cross-sector orientation splits
+`56/56`; the lone pre-repair collision is the converse pair `344/345`.
+
+S214 then widened the carrier lens.  Under the stricter directed-WL convention,
+node depth recovers exact rooted node orbits by depth `3` at `m=5`; the missing
+`8` states are observer-extension cuts, not deeper node neighborhoods.  At
+`m=5`, directed-edge perspectives and triple perspectives both total `88`, with
+triples split as `64` transitive and `24` cyclic.
+
+The current working theorem target is therefore:
+
+```text
+rooted node cache
+  -> ordered-pair incident word
+  -> edge tail/tip sector word
+  -> triple transitive/cyclic carrier
+  -> cycle/conflict-pair sidecar
+  -> observer-extension cut signature
+```
+
+For LRC, this says every controlled-forgetting quotient should declare its root
+object before choosing a scalar: node, ordered pair, directed edge, triple,
+cycle, conflict pair, proof obligation, or quotient fiber.
