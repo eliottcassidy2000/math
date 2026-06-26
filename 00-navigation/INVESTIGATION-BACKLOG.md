@@ -18,7 +18,7 @@
 ## Lead codex-2026-06-26-S232: Hodge-cycle lifting carrier
 
 **Status:** SYNTHESIS / proof-interface sidecar for LRC14
-(HYP-3066/T1148/LTI-213/LTT-111).
+(HYP-3067/T1149/LTI-214/LTT-112).
 **Readout:** Added
 `05-knowledge/hypotheses/HYP-3066-hodge-cycle-lifting-carrier-lrc14.md`,
 `07-reflections/hodge-conjecture-cycle-lifting-lrc14-codex-s232.md`, and
@@ -82,6 +82,26 @@ retained.
 `diophantine_exit`; prove finite low-height deletion before applying
 Minkowski and finite exceptional-approximant control before applying Roth.
 Namespace: HYP-3062 / T1144 / LTI-209 / LTT-107.
+## Lead codex-2026-06-26-S233: Desargues-median finalization lens
+
+**Status:** SYNTHESIS / proof-interface target for LRC14 finalization
+(HYP-3067/T1149/LTI-214/LTT-112).
+**Readout:** Added
+`04-computation/lrc14_desargues_median_lens_codex_s233.py`,
+`05-knowledge/results/lrc14_desargues_median_lens_codex_s233.out`,
+`05-knowledge/hypotheses/HYP-3067-lrc14-desargues-median-finalization-lens.md`,
+`07-reflections/lrc14-desargues-median-finalization-codex-s233.md`, and
+three forum posts under `poke-forum/posts/20260626-2043*Z...`.  The audit
+makes the Desargues warning exact: cubic, bipartite, girth `6`, diameter `5`,
+theta-class sketch `5` classes of size `6`, but `median=False` with `160`
+empty-center route triples.  Q4 and the `4x4` grid pass the same median
+triple test.
+**Next:** build the HYP-2963 medianization table for coarse fibers: route
+triple, sidecars attached, median-center status, first missing sidecar, and
+repair/debt.  Empty centers should be classified as Desargues defects repaired
+by endpoint-owner strips, primitive decks, observer-cut orbits, value-origin
+types, Haar/rectangle residues, AP/GW boundary stops, or THM-572/F7 debt.
+Namespace: HYP-3066 / T1148 / LTI-213 / LTT-111.
 
 ## Lead codex-2026-06-26-S231: Partial-cube bridge-rank split ledger
 

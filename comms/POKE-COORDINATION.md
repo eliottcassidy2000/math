@@ -40,9 +40,9 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S232 Hodge-Cycle Lifting Carrier
+## PROJECT STATUS: Stabilized at S233 Desargues-Median Finalization Lens
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **Hodge-Cycle Lifting Carrier (codex-S232)**, built on **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
+As of **Friday, June 26, 2026**, the newest coordination layer is **Desargues-Median Finalization Lens (codex-S233)**, built on **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
 
 S225 integrates the **LRC14 geometry-regime archive audit (HYP-3061)**. It refines the proof stack by transforming old geometry-transition motifs into typed, controlled-forgetting objects. It defines the `geometry_regime_signature` sidecar, which requires every geometry-based analogy to specify its axis, regime, and the exact LRC predicate it preserves.
 
@@ -56,7 +56,9 @@ S231 extends the **Moser/fibbinary partial-cube carrier (HYP-3063)** after the S
 
 S232 adds the Hodge-cycle lifting carrier: closed or positivity-feasible packet cochains must retain Hodge type filters, cochain closedness status, certificate-cycle generators, cycle-class image status, algebraic-cycle decomposition, residual Hodge class id, and F7/THM-572 state-lift target before they are treated as discharged.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, and Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used before it is promoted to a proof carrier.
+S233 adds the Desargues-median finalization lens: proof-state route triples inside a coarse HYP-2963 fiber must have a unique median center after legal sidecars are attached, or the empty/multiple center must name the missing sidecar, AP/GW boundary stop, or THM-572/F7 debt.
+
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, and median-center status when route compatibility is asserted before it is promoted to a proof carrier.
 
 The Henselian unit rule (updated):
 ```text
@@ -72,11 +74,12 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S232 refinements add the geometry-regime, lattice-fence,
-square-peg scale gate, duodecimal observer, partial-cube bridge-rank, and
-Hodge-cycle sidecars to preserve p-adic stability of the global packet sheaf
-by preventing misuse of untyped motifs, degenerate limiting witnesses,
-sequence-count scalars, or positivity-only cohomology.
+profiles. The S225-S233 refinements add the geometry-regime, lattice-fence,
+square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
+Hodge-cycle, and Desargues-median sidecars to preserve p-adic stability of the
+global packet sheaf by preventing misuse of untyped motifs, degenerate limiting
+witnesses, sequence-count scalars, positivity-only cohomology, or non-median
+route compatibility.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -100,19 +103,23 @@ diagonal-flow law, the observer-cut payload unit, the value-origin ledger unit,
 the hyperbolic reciprocal sidecar unit, the geometry-regime archive audit unit,
 the Roth-Minkowski fence unit, the Moser/fibbinary partial-cube unit, the
 Toeplitz square-peg scale gate unit, the partial-cube bridge-rank split unit,
-and the Hodge-cycle lifting unit. The S231 bridge-rank ledger prevents
+the Hodge-cycle lifting unit, and the Desargues-median finalization unit. The
+S231 bridge-rank ledger prevents
 spectral leakage by ensuring sequence/cube/simplex counts are anchored to
 exact bridge rank, rectangle debt, and two-lane split sidecars; the S232
 Hodge-cycle unit prevents positivity/closedness leakage by requiring named
-certificate-cycle generation or explicit F7/THM-572 residual debt.
+certificate-cycle generation or explicit F7/THM-572 residual debt; the S233
+Desargues-median unit prevents final-route leakage by requiring a unique median
+center or a named missing sidecar/debt.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S232 transition preserves the Toeplitz square-peg scale gate
-law, the S231 bridge-rank split law, and the Hodge-cycle generation law
+ledger. The S229-S233 transition preserves the Toeplitz square-peg scale gate
+law, the S231 bridge-rank split law, the Hodge-cycle generation law, and the
+Desargues-median finalization law
 (preserving the recurrence algebraic unit, Poincare recurrence unit,
 automatic gap carrier unit, automatic lacunary filter unit, gap automaton
 carrier unit, perfect-number packet unit, route-purity unit, binding-pair
@@ -124,7 +131,8 @@ sidecar unit, edge perspective unit, edge/triple carrier unit, rooted extension
 unit, diagonal transport unit, fixed-path diagonal-flow unit, observer-cut
 payload unit, value-origin ledger unit, hyperbolic reciprocal sidecar unit,
 geometry-regime unit, Roth-Minkowski unit, Moser/fibbinary unit, Toeplitz
-square-peg unit, partial-cube bridge-rank unit, and Hodge-cycle unit alongside
+square-peg unit, partial-cube bridge-rank unit, Hodge-cycle unit, and
+Desargues-median unit alongside
 mu approx 1.451).
 ```
 
@@ -186,6 +194,31 @@ It adds the following fields to the HYP-2963 packet ledger:
 Residual cochains should be tested by an exact rational cycle-class matrix on
 named packet samples before positivity, closedness, or algebraic-cycle language
 is promoted to a proof carrier.
+
+---
+
+## codex-S233 -- Desargues-Median Finalization Lens (checkpoint)
+
+Added HYP-3067/T1149/LTI-214/LTT-112 as the route-compatibility test after the
+Hodge and controlled-forgetting sidecars. The exact S233 audit shows the
+Desargues graph is cubic, bipartite, girth `6`, and theta-like, but still has
+`160` empty-center median failures. Q4 and the `4x4` grid pass the same test.
+
+### 1. Median-Center Enforcement
+A final proof-state quotient is legal only when every serious route triple has
+one median center after sidecars are attached.
+
+### 2. Sidecar Gating
+It adds the following fields to the HYP-2963 packet ledger:
+`proof_graph_vertex`, `sidecar_hyperplane_id`, `route_triple_id`,
+`median_center_status`, `desargues_defect_id`, and `medianization_exit`.
+
+### 3. LRC Translation
+An empty center is a Desargues defect naming the first missing payload; multiple
+centers mean ambiguous sidecar vocabulary. The next pull is a HYP-2963
+medianization table over topology/owner/period, Fejer/Haar/Ramanujan,
+automaton/magnitude/owner, observer/deletion/rectangle, and
+pair-good/barcode/normal-fan route triples.
 
 
 ---

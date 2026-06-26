@@ -174,6 +174,9 @@ obligations, and proof-carrier interfaces.
   realization: use LTT-111 after LTT-048/LTT-069/LTT-108/LTT-109/LTT-110 and
   build the cycle-class map from named certificate generators to residual
   packet cohomology before calling a closed/positive cochain discharged.
+- Need to test final route compatibility:
+  use LTT-112 as the median-graph finalization check for route triples after
+  LTT-111/LTT-110/LTT-109 and controlled-forgetting sidecars.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2967,6 +2970,47 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-210, LTI-209, LTI-109, LTI-108, LTT-111, LTT-110, LTT-109, LTT-108,
   LTT-107, LTT-069, T1148, OPEN-Q-099, OPEN-Q-108.
 
+### LTT-112: Desargues-Median Finalization Lens
+
+- **Move:** Treat final proof assembly as a medianization test on proof-state
+  graphs inside HYP-2963 coarse fibers.  Vertices are packet/route/sidecar/
+  certificate/discharge states, not runners; edges change one retained sidecar
+  or one discharge decision.
+- **LRC use:** HYP-3067 turns the Desargues graph into a warning for controlled
+  forgetting: bipartite incidence, girth `6`, and theta-like classes are still
+  not enough if three legal proof routes have no common center.  A final-safe
+  quotient should give every serious route triple a unique median center after
+  legal sidecars are attached.
+- **Preserves:** Coarse packet fiber, proof-graph vertex, route triple,
+  sidecar hyperplane, exact `M`, endpoint owner, closed arc-H1 support,
+  primitive deck, ET/Henselian status gate, residual capacitor cut, Haar zeta,
+  observer-cut orbit, value-origin type, Fejer/Ramanujan/smoothing certificate
+  state, median-center status, Desargues-defect ID, and named repair/debt exit.
+- **Forgets / guardrail:** Raw bipartite incidence, even-cycle counts, and
+  theta-class sketches can still forget the coordinate needed to make route
+  triples compatible.  Empty centers are Desargues defects naming a missing
+  sidecar; multiple centers name redundant or ambiguous sidecar vocabulary.
+- **Tournament fingerprint:** vertices are proof routes and sidecar columns,
+  not runners.  The S233 audit has Desargues cubic, bipartite, girth `6`, with
+  `5` theta-like edge classes of size `6`, but `median=False`: `160` route
+  triples have empty interval intersection.  Q4 and the `4x4` grid pass the
+  same median test.
+- **Next pull:** Build a median-failure table over HYP-2963 coarse fibers with
+  `route_triple_id`, `sidecars_attached`, `median_center_status`,
+  `first_missing_sidecar`, `desargues_defect_id`, and `medianization_exit`.
+  Classify empty centers as repaired by owner strips, primitive decks,
+  observer-cut orbits, value-origin types, rectangle/hourglass residues,
+  AP/GW boundary stops, or THM-572/F7 debt.
+- **Pointers:** HYP-3067, HYP-3066, HYP-3065, HYP-3064, HYP-3063, HYP-3062,
+  HYP-3061, HYP-3058, HYP-3057, HYP-3056, HYP-3054, HYP-3053, HYP-3052,
+  HYP-3051, HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-3043, HYP-3039,
+  HYP-3037, HYP-3034, HYP-3031, HYP-3024, HYP-3018, HYP-2997, HYP-2963,
+  HYP-2314, THM-572, LTI-214, LTI-213, LTI-212, LTI-211, LTI-210, LTI-209,
+  LTI-208, LTI-205, LTI-204, LTI-203, LTI-201, LTT-112, LTT-111, LTT-110,
+  LTT-109, LTT-108, LTT-107, LTT-106, LTT-103, LTT-102, LTT-101, LTT-099,
+  T1149, T1148, T1147, T1146, T1145, T1144, T1143, T1140, T1139, T1138,
+  T1136, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -3032,6 +3076,8 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    Toeplitz square scale gate, ordered quad collapse mode,
    midpoint balance residue, diagonal equal-radius residue,
    quarter-turn residue, D4 orbit word, Toeplitz PSD bridge degree,
+   proof-graph vertex, sidecar hyperplane ID, route triple ID,
+   median-center status, Desargues defect ID, medianization exit,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

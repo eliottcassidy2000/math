@@ -1,9 +1,9 @@
-## codex-2026-06-26-S232 -- Hodge-cycle lifting carrier for LRC14 (HYP-3066/T1148/LTI-213/LTT-111)
+## codex-2026-06-26-S232 -- Hodge-cycle lifting carrier for LRC14 (HYP-3067/T1149/LTI-214/LTT-112)
 
 User asked to consider the Hodge conjecture, extend prior Hodge work, and keep
 working on LRC.
 
-Created HYP-3066, T1148, LTI-213, LTT-111, reflection
+Created HYP-3067, T1149, LTI-214, LTT-112, reflection
 `07-reflections/hodge-conjecture-cycle-lifting-lrc14-codex-s232.md`, and forum
 post `poke-forum/posts/20260626-hodge-cycle-lifting-lrc14/post.md`.
 
@@ -348,6 +348,41 @@ tournament is transitive:
 desargues_girth6_incidence_residue > beal_common_owner_gate >
 endpoint_owner_strip > residual_capacitor_min_cut > haar_zeta_cocycle >
 fejer_interval_certificate > raw_desargues_scalar > raw_beal_scalar`.
+## codex-2026-06-26-S233 -- Desargues-median finalization lens -- HYP-3067/T1149/LTI-214/LTT-112
+
+User asked for a long forum-post session aimed at finalizing LRC14, with
+Desargues graph and median graph as guiding analogies.
+
+Added `04-computation/lrc14_desargues_median_lens_codex_s233.py` and stored
+`05-knowledge/results/lrc14_desargues_median_lens_codex_s233.out`.  The script
+audits the Desargues graph against median graph controls.  Exact result:
+Desargues has `n=20`, `m=30`, degree histogram `{3:20}`, bipartite `True`,
+diameter `5`, girth `6`, cycle counts through length `16`, and a theta-class
+sketch of `5` classes of size `6`; nevertheless `median=False`, with median
+intersection histogram `{0:160, 1:1380}`.  Q4 and the `4x4` grid pass the same
+median triple test; C6 fails by empty-center triples.
+
+Created HYP-3067, T1149, LTI-214, LTT-112, and reflection
+`07-reflections/lrc14-desargues-median-finalization-codex-s233.md`, plus three
+forum posts: Desargues obstruction, medianization proof spine, and
+finalization gauntlet.  The proof-interface translation is to build a
+proof-state graph inside each coarse HYP-2963 fiber, with vertices as
+packet/route/certificate/sidecar/discharge states and edges changing one
+retained sidecar or discharge.  A quotient is finalization-safe only when
+every serious route triple has a unique median center, or the empty/multiple
+center is routed to a named sidecar, AP/GW boundary stop, or THM-572/F7 debt.
+
+Tournament Analysis vertices are proof-graph objects, not runners.  The
+retention path is
+`median_center > sidecar_hyperplane > observer_cut_orbit >
+value_origin_type > endpoint_owner_strip > primitive_period_deck >
+arc_H1_owner_support > residual_capacitor_cut >
+rectangle_hourglass_residue > Desargues_defect > raw_incidence_graph >
+raw_scalar_count`.
+
+Next pull: build the HYP-2963 medianization table with columns
+`route_triple`, `coarse_fiber`, `sidecars_attached`,
+`median_center_status`, `first_missing_sidecar`, and `repair_or_debt`.
 
 ## codex-2026-06-26-S219 -- duodecimal observer-extension cut payload (HYP-3055/T1137/LTI-202/LTT-100)
 

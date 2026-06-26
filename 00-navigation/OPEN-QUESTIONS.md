@@ -66,6 +66,25 @@ HYP-3061, HYP-3058, HYP-3057, HYP-3056, HYP-3055, HYP-3054, HYP-3047,
 HYP-3043, HYP-3039, HYP-3003, HYP-2963, HYP-2943, HYP-2934, HYP-2928,
 HYP-2900, HYP-2887, THM-572, LTI-208, LTI-205, LTT-106, LTT-103, T1143,
 T1140.
+**OPEN-Q-108 S233 Desargues-median addendum:** HYP-3067 turns the
+Desargues/median graph prompt into a finalization test for controlled
+forgetting.  Open task: for each serious HYP-2963 coarse fiber, build the
+proof-state graph whose vertices are packet/route/certificate/sidecar/discharge
+states and whose edges change one sidecar or discharge.  For route triples
+such as topology/owner/period, Fejer/Haar/Ramanujan, automaton/magnitude/owner,
+observer/deletion/rectangle, and pair-good/barcode/normal-fan, compute
+`I(A,B) cap I(B,C) cap I(C,A)`.  Unique center means a legal medianized
+quotient; empty center is a Desargues defect naming a missing payload; multiple
+centers mean sidecar ambiguity.  The defect table should name the first missing
+sidecar or exit: exact `M`, qdiv, closed arc-H1 owner support, primitive deck,
+ET/Henselian unit gate, residual capacitor cut, Haar zeta, endpoint-owner
+strip, observer-cut orbit, value-origin type, rectangle/hourglass residue,
+AP/GW boundary stop, or THM-572/F7 debt. -> HYP-3067, HYP-3066, HYP-3065, HYP-3064,
+HYP-3063, HYP-3062, HYP-3061, HYP-3057, HYP-3056, HYP-3054, HYP-3048,
+HYP-3039, HYP-2963, THM-572, LTI-214, LTI-213, LTI-212, LTI-211, LTI-210, LTI-209,
+LTI-208, LTI-204, LTI-203, LTI-201, LTT-112, LTT-111, LTT-110, LTT-109, LTT-108,
+LTT-107, LTT-106, LTT-102, LTT-101, LTT-099, T1149, T1148, T1147, T1146, T1145,
+T1144, T1143, T1139, T1138, T1136.
 
 **OPEN-Q-108 S231 bridge-rank split-ledger addendum:** after the S228 exact
 scout, the S231 audit isolates the remaining HYP-3063 bridge/split obligations:
