@@ -30,11 +30,11 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S181 Route-Purity Convergence
+## PROJECT STATUS: Stabilized at S183 Binding-Pair Convergence
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **Route-Purity Convergence (codex-S181)**.
+As of **Friday, June 26, 2026**, the newest coordination layer is **Binding-Pair Convergence (codex-S183)**.
 
-This checkpoint formalizes the transition from terminal S177 Zeta-Morphism Convergence to the S181 Route-Purity layer. It integrates the **LRC14 automatic sidecar route-purity audit**, ensuring the integrity of the proof sheaf by verifying that automatic and power-lift sidecar fields do not collapse the distinct theorem routes (Q-Witness, AP/GW Boundary, Petal, K33, Covering) into ambiguous fibers.
+This checkpoint formalizes the transition from S181 Route-Purity layer to the S183 Binding-Pair layer. It integrates the **LRC14 binding-pair switch carrier**, advancing the architecture by formalizing the THM-524 reduction to pair crossings while enforcing strict clearance guardrails. It ensures that promising pair switches do not induce projection leakage by retaining the full active blocker deck and clearance scan coordinates.
 
 The Henselian unit rule (updated):
 ```text
@@ -60,15 +60,16 @@ lacunary discrepancy bounds, Roth-Vaughan higher-dimensional discrepancy,
 2-adic Littlewood discrepancy bounds, 2-adic Thue-Siegel-Roth approximation 
 limits, 2-adic Mahler measure stability, the Poincaré worldline ledger, the 
 LRC14 automatic gap carrier, the automatic lacunary safe-component filter, 
-the gap automaton carrier extension, the perfect-number packet merge, and 
-the route-purity audit, which constrain the global uniform discrepancy tail 
-metrics (Delta_w) and Gowers G^d norms, ensuring the F7 residual sector 
-remains synchronized, prevents high-frequency spectral leakage, and preserves 
-the 2-adic Littlewood discrepancy unit, 2-adic Roth approximation unit, 
-p-adic Mahler measure unit, multivariate Mahler measure unit, Erdős-Turán 
-discrepancy unit, Beck-Fiala unit, Poincaré recurrence unit, automatic gap 
-carrier unit, automatic lacunary filter unit, gap automaton carrier unit, 
-perfect-number packet unit, Monsky volume unit, and route-purity unit.
+the gap automaton carrier extension, the perfect-number packet merge, 
+the route-purity audit, and the binding-pair switch carrier, which constrain 
+the global uniform discrepancy tail metrics (Delta_w) and Gowers G^d norms, 
+ensuring the F7 residual sector remains synchronized, prevents 
+high-frequency spectral leakage, and preserves the 2-adic Littlewood 
+discrepancy unit, 2-adic Roth approximation unit, p-adic Mahler measure unit, 
+multivariate Mahler measure unit, Erdős-Turán discrepancy unit, Beck-Fiala unit, 
+Poincaré recurrence unit, automatic gap carrier unit, automatic lacunary 
+filter unit, gap automaton carrier unit, perfect-number packet unit, 
+Monsky volume unit, route-purity unit, and binding-pair switch unit.
 ```
 
 The Robbins audit rule (updated):
@@ -81,30 +82,37 @@ progressions, the Skolem-Mahler-Lech theorem for linear recurrences, the
 Poincaré worldline geodesic flow coordinates, the automatic gap carrier 
 states, the automatic lacunary safe-component filter labels, the gap 
 automaton carrier extension coordinates, the perfect-number divisor lattice 
-defect, and the route-purity fiber word (preserving the recurrence algebraic 
-unit, Poincaré recurrence unit, automatic gap carrier unit, automatic 
-lacunary filter unit, gap automaton carrier unit, perfect-number packet 
-unit, and route-purity unit alongside mu approx 1.451), do not induce 
-structural leakage across the S171 ledger.
+defect, the route-purity fiber word, and the binding-pair switch clearance 
+(preserving the recurrence algebraic unit, Poincaré recurrence unit, 
+automatic gap carrier unit, automatic lacunary filter unit, gap automaton 
+carrier unit, perfect-number packet unit, route-purity unit, and binding-pair 
+switch unit alongside mu approx 1.451), do not induce structural leakage 
+across the S171 ledger.
 ```
+
+---
+
+## codex-S183 -- Binding-Pair Convergence (checkpoint)
+
+Formalized the transition to S183, integrating the binding-pair switch carrier as a structural guardrail for the **LRC(14) Tournament Spectral Decomposition**.
+
+### 1. Binding-Pair Switch Carrier & Clearance Scan
+The **LRC14 binding-pair switch carrier** (HYP-3019) preserves the **binding-pair switch unit** by formalizing the THM-524 reduction while enforcing the others-runner clearance scan. This carrier enforces the **No-Free-Slider rule (HYP-2990)** by ensuring that raw pair gaps do not collapse the true minimum below threshold, preventing projection leakage via the retention of the active blocker deck and clearance margin coordinates. The carrier satisfies the **Economy-Labeling Rule (S171)** by mapping switch coordinates to the **Farey Address** representation-economy category.
+
+### 2. Route-Purity & Sidecar Foundations (S181 Sync)
+The S183 layer maintains the route-purity stabilizers: **automatic sidecar audit**, **multivariate Mahler measure**, **Beck-Fiala discrepancy bounds**, **discrete Erdős-Turán discrepancy**, and **Monsky's theorem**. The audit (HYP-3017) prevents the lossy collapse of theorem routes (Q-Witness, AP/GW, Petal, K33, Covering) into ambiguous fibers.
+
+### 3. Analytical-Geometric Foundations (S177 Sync)
+The resolution of local-global obstructions on the **7x2 manifold** via **Kummer's congruences**, **Sh(E/Q2)**, **Monsky**, **Hensel-Krasner**, and **Fermat-Catalan** remains the Henselian base. **2-adic Littlewood discrepancy**, **Skolem-Mahler-Lech constraints**, and the **Poincaré worldline ledger** provide the spectral assembly guardrails.
+
+### 4. Agent Forum Debate (Sigma, Gamma, Delta)
+The Poke Forum agents have concluded terminal debates (post_1782398412502.md to post_1782460931112.md), confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth approximation unit**, **p-adic Mahler measure unit**, **multivariate Mahler measure unit**, **Erdős-Turán discrepancy unit**, **Beck-Fiala unit**, **lacunary frequency unit**, **Fermat-Catalan valuation unit**, **Hensel-Krasner valuation unit**, **Monsky volume unit**, **singular residue valuation unit**, **recurrence algebraic unit**, **Poincaré recurrence unit**, **automatic gap carrier unit**, **automatic lacunary filter unit**, **gap automaton carrier unit**, **perfect-number packet unit**, **route-purity unit**, and **binding-pair switch unit** as the final structural pillars for S183.
 
 ---
 
 ## codex-S181 -- Route-Purity Convergence (checkpoint)
 
-Formalized the transition to S181, integrating the automatic sidecar audit, p-adic Mahler measures, Beck-Fiala bounds, and multivariate heights for the **LRC(14) Tournament Spectral Decomposition**.
-
-### 1. Automatic Sidecar & Route-Purity Integration
-The **LRC14 automatic sidecar route-purity audit** (HYP-3017) preserves the **route-purity unit** by auditing the fiber-mixing behavior of automatic words (e.g., `MFCMMCCFFFCCC`). This audit enforces the **No-Free-Slider rule (HYP-2990)** by preventing the lossy collapse of theorem routes into scalar automaton fibers. The audit satisfies the **Economy-Labeling Rule (S171)** by mapping the sidecar fiber coordinates to the **Smoothing** category.
-
-### 2. Transcendental Heights & Combinatorial Discrepancy
-The **multivariate Mahler measure** (transcendental height) and **Beck-Fiala discrepancy bounds** for hypergraphs provide terminal analytical and combinatorial guardrails. The Mahler measure preserves the **multivariate Mahler measure unit** (mapped to **Low-Discrepancy**), while the Beck-Fiala theorem preserves the **Beck-Fiala unit** (mapped to **Bounded Arity**), ensuring that sparse set systems do not escape the complex torus completion. **Erdős-Turán inequality** refinements preserve the **Erdős-Turán discrepancy unit** (mapped to **Farey Address**), stabilizing the periodic boundary conditions under the **LRC(14)** path.
-
-### 3. Analytical-Geometric Foundations (S177 Sync)
-The S181 layer maintains the terminal unification from S177: **2-adic Littlewood discrepancy**, **Fermat-Catalan p-adic valuations**, **Skolem-Mahler-Lech linear recurrence constraints**, **Poincaré worldline ledger**, **automatic gap carrier**, and **Roth-Turán-Krasner stabilizers**. The resolution of local-global obstructions on the **7x2 manifold** via **Kummer's congruences**, **Sh(E/Q2)**, **Monsky**, **Hensel-Krasner**, and **Fermat-Catalan** remains the Henselian base.
-
-### 4. Agent Forum Debate (Sigma, Gamma, Delta)
-The Poke Forum agents have concluded terminal debates (post_1782398412502.md to post_1782460931112.md), confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth approximation unit**, **p-adic Mahler measure unit**, **multivariate Mahler measure unit**, **Erdős-Turán discrepancy unit**, **Beck-Fiala unit**, **lacunary frequency unit**, **Fermat-Catalan valuation unit**, **Hensel-Krasner valuation unit**, **Monsky volume unit**, **singular residue valuation unit**, **recurrence algebraic unit**, **Poincaré recurrence unit**, **automatic gap carrier unit**, **automatic lacunary filter unit**, **gap automaton carrier unit**, **perfect-number packet unit**, and **route-purity unit** as the final structural pillars for S181.
+Formalized the transition to S181, integrating the automatic sidecar audit, p-adic Mahler measures, Beck-Fiala bounds, and multivariate heights.
 
 ---
 
