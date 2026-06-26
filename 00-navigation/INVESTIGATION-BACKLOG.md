@@ -27,6 +27,12 @@ Namespace: T1108 / LTI-175 / LTT-073 / LTM-079 / CPI-001..CPI-090.
 **Readout:** `04-computation/lrc14_safe_component_stalk_codex_s193.py` stores output in `05-knowledge/results/lrc14_safe_component_stalk_codex_s193.out`.  On the target automatic word `MFCMMCCFFFCCC`, `639` HYP-2963 packets have `27` mixed residue-terminal route fibers with max mixed `30`.  Owner-only largest-component stalks reduce this to `7` mixed fibers/max `5`; coarse stalks reduce to `2` size-2 open-route collisions; exact largest-component stalks have `0` mixed route fibers, matching exact magnitude without carrying the full fusion packet.
 **Next:** prove largest-stalk descent inside the target word; prove the two coarse residual families `13->159/117` and `13->118/104`; run the stalk key over the full HYP-2963 bank and compare against HYP-3025 Cech facets, HYP-3018 normal-fan supports, HYP-3015 barcode fields, and HYP-3026 fusion sidecars.
 Namespace: HYP-3029 / T1110 / LTI-177 / LTT-075.
+## Lead codex-2026-06-26-S194: LRC14 status-topology gate for coarse zipper fibers
+
+**Status:** EVIDENCE / full-bank bridge complete (HYP-3030/T1111/LTI-178/LTT-076), splicing HYP-3024's coarse ET+Henselian-unit status convergence with HYP-3025's closed arc-Cech topology and feeding the HYP-3026/HYP-3028/HYP-3029 switchboard stack.
+**Readout:** `04-computation/lrc14_status_topology_gate_codex_s194.py` stores output in `05-knowledge/results/lrc14_status_topology_gate_codex_s194.out`.  On the default HYP-2963 `21913`-packet bank, residue-terminal fibers have exactly `2` mixed boundary/open fibers; the only boundary rows inside them are AP and GW, each with closed arc beta `(1,1)`, open arc beta `(6,0)`, zero safe topes, and six owner sums `0 mod 14`.  Every open cohabitant has closed arc `beta1=0` and at least `4` safe topes.  The coarse ET+unit gate has `0` mixed status fibers; its `15` route-mixed fibers contain `38` open packets, all closed arc `beta1=0`.
+**Next:** prove a topology-first zero-open theorem: primitive zero-open packets must carry the AP/GW arc-boundary cycle or emit named F7/THM-572 residual debt.  Then use coarse ET+unit only as a status-preserving quotient, with magnitude/barcode/Fejer/K33 machinery scheduling the remaining open route collisions.
+Namespace: HYP-3030 / T1111 / LTI-178 / LTT-076.
 
 ## Lead codex-2026-06-26-S188: LRC14 fiber-zipper convergence via Erdos-Turan and Henselian unit rule
 

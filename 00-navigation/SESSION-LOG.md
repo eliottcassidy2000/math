@@ -38,6 +38,15 @@ Added `04-computation/lrc14_safe_component_stalk_codex_s193.py` and stored `05-k
 Readout: residue-terminal fibers still have `27` mixed route fibers with max mixed `30`; owner-only stalks reduce this to `7` mixed fibers/max `5`; coarse largest-component stalks reduce to `2` size-2 open-route collisions; exact largest-component stalks have `0` mixed route fibers, matching exact magnitude while retaining endpoint/peak owner geometry.  The two coarse residuals are `13->159/117` and `13->118/104`, both `Q-WITNESS` versus `COVERING-MOMENT`, not boundary/open leaks.
 
 Created HYP-3029, T1110, LTI-177, LTT-075, and reflection `07-reflections/lrc14-safe-component-stalk-descent-codex-s193.md`.  Proof-order takeaway: try a largest-stalk descent lemma inside `MFCMMCCFFFCCC`, then run the stalk key over the full HYP-2963 bank and compare with HYP-3025 Cech facets and HYP-3018 normal-fan supports.
+## codex-2026-06-26-S194 -- LRC14 status-topology gate bridge (HYP-3030/T1111/LTI-178/LTT-076)
+
+User asked to keep pushing for an LRC14 proof.  Built a bridge between HYP-3024's coarse ET+Henselian-unit status convergence and HYP-3025's closed arc-Cech topology carrier, then integrated the incoming HYP-3026 carrier-fusion and HYP-3028 residual status-gate switchboard as the surrounding proof interface.
+
+Added `04-computation/lrc14_status_topology_gate_codex_s194.py` and stored `05-knowledge/results/lrc14_status_topology_gate_codex_s194.out`.  The script audits the full HYP-2963 `21913`-packet bank, focusing on residue-terminal boundary/open collisions and coarse ET+unit route-mixed survivors.
+
+Readout: residue-terminal fibers have exactly `2` mixed boundary/open fibers.  The only boundary rows inside them are AP and GW, each with closed arc beta `(1,1)`, open arc beta `(6,0)`, zero safe topes, and six owner sums `0 mod 14`; every open cohabitant has closed arc `beta1=0` and at least `4` safe topes.  The coarse ET+unit gate has `0` mixed status fibers; its `15` route-mixed fibers contain `38` packets, all open, all closed arc `beta1=0`.
+
+Created HYP-3030, T1111, LTI-178, LTT-076, and reflection `07-reflections/lrc14-status-topology-gate-codex-s194.md`.  Proof-order takeaway: prove zero-open implies the AP/GW arc-boundary cycle or named F7/THM-572 residual, then allow coarse ET+unit to forget exact route labels while preserving the LRC yes/no predicate.
 
 ## codex-2026-06-26-S188 -- LRC14 fiber-zipper convergence via ET/Henselian units (HYP-3024/T1104)
 

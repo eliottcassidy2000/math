@@ -47,6 +47,21 @@ stalk keys over the full HYP-2963 bank against HYP-3025 Cech facets,
 HYP-3018 normal-fan supports, HYP-3015 barcode fields, and HYP-3026 fusion
 sidecars. -> HYP-3029, HYP-3026, HYP-3025, HYP-3024, HYP-3023, HYP-3018,
 HYP-3015, HYP-2963, THM-572, LTI-177, LTT-075, T1110.
+**OPEN-Q-108 S194 status-topology gate addendum:** HYP-3030 connects the
+HYP-3024 coarse ET+Henselian-unit status gate with the HYP-3025 closed
+arc-Cech topology carrier on the full HYP-2963 `21913`-packet bank.
+Residue-terminal fibers have exactly `2` mixed boundary/open fibers; the only
+boundary rows inside them are AP and GW, each with closed arc beta `(1,1)`,
+open arc beta `(6,0)`, zero safe topes, and six owner sums `0 mod 14`.  Every
+open cohabitant has closed arc `beta1=0` and at least `4` safe topes.  The
+coarse ET+unit gate has `0` mixed status fibers; its `15` route-mixed fibers
+contain `38` packets, all open and all closed arc `beta1=0`.  Open task:
+prove zero-open implies the AP/GW arc-boundary cycle or a named F7/THM-572
+residual; after that, route-mixing inside coarse ET+unit fibers is harmless
+for the LRC yes/no predicate and can be scheduled by magnitude, barcode,
+Fejer/Ramanujan/Haar, q-witness, covering, or state-lift exits. -> HYP-3030,
+HYP-3025, HYP-3024, HYP-3023, HYP-3020, HYP-3018, HYP-3016, HYP-3015,
+HYP-3029, HYP-3028, HYP-3027, HYP-3026, HYP-2963, THM-572, LTI-178, LTT-076, T1111.
 
 **OPEN-Q-108 S188 fiber-zipper convergence addendum:** HYP-3024 completes the
 reserved S188 fiber-zipper convergence audit by extending HYP-3023 and

@@ -1370,6 +1370,36 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3015, HYP-2963, THM-572, LTI-177, LTI-175, LTI-173, LTI-172, LTI-171,
   LTI-170, LTI-166, LTI-164, T1110, T1106.
 
+
+### LTT-076: Status-Topology Gate Tournament
+
+- **Move:** Treat proof gates as tournament vertices: arc boundary cycle,
+  coarse ET+unit status gate, magnitude route splitter, barcode packet
+  scheduler, and raw residue-terminal word.  Orient by boundary/open predicate
+  preservation, topology exactness, arithmetic compression, route scheduling,
+  quotient-defect visibility, and proof cost.
+- **LRC use:** HYP-3030 orders the current proof surface.  In the full
+  HYP-2963 bank, residue-terminal fibers have exactly `2` mixed
+  boundary/open fibers; AP and GW are the only boundary rows and carry the
+  arc-Cech `(1,1)` full-cover cycle with six zero owner sums.  Every open
+  cohabitant has closed arc `beta1=0` and at least `4` safe topes.  The
+  coarse ET+unit gate has `0` mixed status fibers, and its `15` route-mixed
+  fibers contain only open packets.
+- **Preserves:** Boundary/open status, AP/GW arc-boundary cycle, closed/open
+  arc Betti data, safe-tope count, quotient-defect visibility, coarse ET
+  clocks, and Henselian unit/zero-root status.
+- **Forgets / guardrail:** Route labels may be forgotten only after topology
+  separates equality atoms.  The coarse ET+unit gate is not a route theorem;
+  it is a status-preserving quotient plus a certificate scheduler.
+- **Next pull:** Prove zero-open implies AP/GW arc-boundary cycle or named
+  F7/THM-572 residual debt.  Then use magnitude, barcode, Fejer/Ramanujan/Haar,
+  q-witness, covering, petal, or state-lift certificates only for open-route
+  scheduling.
+- **Pointers:** HYP-3030, HYP-3029, HYP-3028, HYP-3027, HYP-3026, HYP-3025, HYP-3024, HYP-3023, HYP-3020, HYP-3018,
+  HYP-3016, HYP-3015, HYP-2963, THM-572, LTI-178, LTI-172, LTI-171.
+
+
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1396,6 +1426,7 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    residue discrepancy bins, Erdos-Turan proxy bins,
    Henselian unit-root rule, zero-root scale debt,
    coarse ET+unit status-convergence gate,
+   status-topology proof gate, arc-boundary cycle flag,
    Mahler/Farey height bucket, Hensel singular counts,
    fusion signature, largest safe stick, safe-body mass, barcode shape,
    danger-distribution word, doubling-transition word, carrier-fusion exit,
