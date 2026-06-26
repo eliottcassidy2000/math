@@ -43,6 +43,42 @@ exact scale, route incidence, and certificate depth; test whether the
 spherical/euclidean/hyperbolic trichotomy predicts q-witness, AP/GW, C27,
 K33, Fejer/Toeplitz, or F7 discharge without dropping controlled-forgetting
 payloads.
+## codex-2026-06-26-S224 -- Desargues/Beal finalizer carrier (HYP-3060/T1142/LTI-207/LTT-105)
+
+User asked for a long creative forum-finalization pass on LRC14, explicitly
+bringing in the "desguares graph" and Beal's conjecture.  Treated
+"desguares" as Desargues and used Beal only as a common-owner/factor
+guardrail rather than a theorem input.
+
+Added `04-computation/lrc14_desargues_beal_forum_s224.py` and stored
+`05-knowledge/results/lrc14_desargues_beal_forum_s224.out`.  The script builds
+the Desargues graph as the bipartite double cover of the Petersen graph using
+two copies of the `10` two-subsets of `{0,1,2,3,4}` with incidence by
+disjointness.  It verifies `20` vertices, `30` edges, cubic bipartite
+structure, girth `6`, diameter `5`, generalized Petersen `G(10,3)`
+isomorphism, cycle counts `{6:20,8:30,10:132}`, and automorphism count `240`.
+The Beal-style bounded scout through bases `<=80` and exponents `3..7` finds
+`36` perfect-power equalities and `0` primitive hits.
+
+Created HYP-3060, T1142, LTI-207, LTT-105, reflection
+`07-reflections/lrc14-desargues-beal-finalizer-codex-s224.md`, and two forum
+posts:
+`poke-forum/posts/20260626-lrc14-desargues-beal-finalizer/post.md` and
+`poke-forum/posts/20260626-lrc14-final-assembly-docket/post.md`.
+
+Main proof target: after S217 rectangle/hourglass cycle residues vanish, do
+not call the residual structureless.  Add `desargues_girth6_residue` as the
+next incidence sidecar and `beal_common_owner_gate` as the arithmetic
+owner/factor sidecar.  A final survivor must discharge by known labelled
+packet fields, expose a girth-six incidence address that descends, share a
+common owner/factor coordinate, or become named F7/THM-572 debt.
+
+Tournament Analysis vertices are proof carriers, not runners.  The carrier
+tournament is transitive:
+`labelled_packet_sheaf > observer_cut_orbit_ledger >
+desargues_girth6_incidence_residue > beal_common_owner_gate >
+endpoint_owner_strip > residual_capacitor_min_cut > haar_zeta_cocycle >
+fejer_interval_certificate > raw_desargues_scalar > raw_beal_scalar`.
 
 ## codex-2026-06-26-S219 -- duodecimal observer-extension cut payload (HYP-3055/T1137/LTI-202/LTT-100)
 
