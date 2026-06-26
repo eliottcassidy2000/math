@@ -1,0 +1,51 @@
+LRC14 perfect-number packet merge (codex-2026-06-26-S174)
+source_threads=HYP-2221,HYP-2941,HYP-2945,HYP-3008,HYP-3009,HYP-3011,HYP-3012
+
+Even perfect controls: n=2 unit-excess fixed points
+r a q2=2a-1 N sigma(N)/N defect a_fibbinary a_moser
+2 2 3 6 2 0 1 0
+3 4 7 28 2 0 1 1
+5 16 31 496 2 0 1 1
+7 64 127 8128 2 0 1 1
+13 4096 8191 33550336 2 0 1 1
+17 65536 131071 8589869056 2 0 1 1
+
+LRC14 power-of-two shadows: q=14a-1
+k a q14 prime factorization sigma(aq)/aq defect prime_formula_defect a_fibbinary a_moser q_fibbinary q_moser
+0 1 13 1 13 14/13 12/13 12/13 1 1 0 0
+1 2 27 0 3^3 20/9 -2/9 NA 1 0 0 0
+2 4 55 0 5 * 11 126/55 -16/55 NA 1 1 0 0
+3 8 111 0 3 * 37 95/37 -21/37 NA 1 0 0 0
+4 16 223 1 223 434/223 12/223 12/223 1 1 0 0
+5 32 447 0 3 * 149 1575/596 -383/596 NA 1 0 0 0
+6 64 895 0 5 * 179 3429/1432 -565/1432 NA 1 1 0 0
+7 128 1791 0 3^2 * 199 27625/9552 -8521/9552 NA 1 0 0 0
+8 256 3583 1 3583 7154/3583 12/3583 12/3583 1 1 0 0
+9 512 7167 0 3 * 2389 407495/152896 -101703/152896 NA 1 0 0 0
+10 1024 14335 0 5 * 47 * 61 571113/229360 -112393/229360 NA 1 1 0 0
+11 2048 28671 0 3 * 19 * 503 429975/152912 -124151/152912 NA 1 0 0 0
+12 4096 57343 0 11 * 13 * 401 34574211/14679808 -5214595/14679808 NA 1 1 0 0
+
+Merge readout
+perfect_control_rows=6
+lrc14_shadow_rows=13
+prime_q14_shadow_rows=3
+composite_q14_shadow_rows=10
+prime_q14_defect_formula_ok=1
+composite_q14_abundant_rows=[(1, 2, 27, '-2/9'), (2, 4, 55, '-16/55'), (3, 8, 111, '-21/37'), (5, 32, 447, '-383/596'), (6, 64, 895, '-565/1432'), (7, 128, 1791, '-8521/9552'), (9, 512, 7167, '-101703/152896'), (10, 1024, 14335, '-112393/229360'), (11, 2048, 28671, '-124151/152912'), (12, 4096, 57343, '-5214595/14679808')]
+packet_fields=unit_excess_apex, perfect_control_status, abundancy_defect, divisor_lattice_factorization, prime_q_flag, product_incidence_rank, automaton_transition_state
+guardrail=the n=2 perfect chain is exact, while prime q=14a-1 shadows are deficient by 12/(14a-1); composite q rows prove the factorization side channel is load-bearing.
+
+Tournament Analysis
+vertices=proof carriers and side channels, not runners/arcs/raw sequence entries
+pairwise_observable=lrc_predicate,exact_scale,divisor_lattice,graph_minor,automaton_state,power_exception,anti_scalar,proof_maturity
+tie_hamiltonian_path=labelled_lrc_packet_sheaf>divisor_lattice_abundancy_packet>exact_farey_unit_excess>lrc14_n14_deficient_shadow>perfect_n2_fixed_control>k33_product_incidence>automatic_power_of_two_state>fermat_catalan_power_budget>raw_product_scalar
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+first_hamiltonian_path=labelled_lrc_packet_sheaf>perfect_n2_fixed_control>divisor_lattice_abundancy_packet>exact_farey_unit_excess>lrc14_n14_deficient_shadow>k33_product_incidence>automatic_power_of_two_state>fermat_catalan_power_budget>raw_product_scalar
+
+Assumption challenge
+Alternate vertices considered: runners, gaps, fixed circle sections, section boundaries, wall-crossing events, residues, cover arcs, Fourier modes, matroid circuits, divisor atoms, and proof obligations.
+Chosen quotient preserves the LRC predicate only through labelled packet fields; it destroys raw runner identity and refuses to collapse divisor or automaton information to a product scalar.

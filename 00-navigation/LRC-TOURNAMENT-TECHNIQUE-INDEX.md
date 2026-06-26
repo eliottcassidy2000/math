@@ -1021,6 +1021,29 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3012, HYP-3011, HYP-3010, HYP-3009, HYP-3008, HYP-3007, HYP-3006, HYP-2998,
   HYP-2997, HYP-2983, HYP-2982, HYP-2963, THM-572, LTI-161.
 
+### LTT-064: Perfect-Number Divisor Packet Tournament
+
+- **Move:** Treat perfect-number controls, divisor-lattice packets, Farey
+  unit-excess address, Kpq product incidence, and automatic power states as
+  proof-carrier vertices.  Orient edges by retained LRC predicate dimensions,
+  not by raw product size.
+- **LRC use:** The Euclid-Euler `n=2` chain is an exact calibration lane, while
+  LRC14 `q=14a-1` rows are deficient only under a prime-q side condition.
+  Composite `q14` rows can flip abundant, so factorization and abundancy defect
+  are load-bearing packet fields.
+- **Preserves:** Exact `M`, unit-excess apex, prime/composite `q` flag,
+  divisor factorization, abundancy defect, product/Kpq route, and automaton
+  transition state.
+- **Forgets / guardrail:** Raw product scalar, power-of-two address, or
+  fibbinary/Moser membership erases the difference between perfect controls,
+  deficient prime-q LRC14 shadows, and abundant composite-q rows.
+- **Next pull:** Add `unit_excess_apex`, `perfect_control_status`,
+  `abundancy_defect`, `divisor_lattice_factorization`, `prime_q_flag`,
+  `product_incidence_rank`, and `automaton_transition_state` to HYP-2963
+  sidecars, then rerun unit-excess route purity on `q=14p-1`.
+- **Pointers:** HYP-3013, HYP-3012, HYP-3009, HYP-3008, HYP-2946, HYP-2945,
+  HYP-2941, HYP-2221, HYP-2220, HYP-2963, THM-572, LTI-162.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1031,6 +1054,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    status, lacunary gap ratio, gap-block profile, safe-component readout,
    power-lift guard, Hurwitz doubling-CF state, automaton state word, native
    doubling transition, finite-exception budget, induced tournament class word,
+   unit-excess apex, perfect-control status, abundancy defect,
+   divisor-lattice factorization, prime-q flag, product-incidence rank,
+   automaton transition state,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

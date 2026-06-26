@@ -23595,3 +23595,32 @@ import must name a valuation or eventual-periodic index coordinate explicitly;
 raw automatic value-set membership is only a sequence shadow.  The supplied ACM
 DOI resolves to a large-sticks/potatoes geometry paper, so it was kept only as
 a largest-safe-component analogy, not an arithmetic input.
+
+## codex-2026-06-26-S174 -- LRC14 perfect-number packet merge -- HYP-3013/LTI-162
+
+User asked to merge prior perfect-number work into the current LRC14 proof
+push.  Rebasing showed the live mainline already had the HYP-3012 gap-automaton
+extension, so this pass integrated the older HYP-2221/HYP-2941/HYP-2945
+perfect-number material as a typed packet side channel rather than reopening
+the old product analogy.
+
+Added `04-computation/lrc14_perfect_number_packet_merge_codex_s174.py` and
+stored `05-knowledge/results/lrc14_perfect_number_packet_merge_codex_s174.out`.
+The computation verifies the Euclid-Euler `n=2` controls through Mersenne
+exponent `17`: `6,28,496,8128,33550336,8589869056` all have abundancy `2`.
+On the LRC14 power-of-two lane `q=14a-1`, prime rows `(a,q)=(1,13),(16,223),
+(256,3583)` have defect exactly `12/q`, while every composite `q14` row in the
+bounded scan is abundant, starting with `a=2,q=27=3^3,defect=-2/9`.
+
+Main guardrail: perfect products are useful only after exact `M`,
+unit-excess apex, prime/composite `q`, divisor factorization, abundancy defect,
+Kpq/product-incidence route, and automaton transition state are attached.
+Tournament Analysis used proof carriers and packet side channels as vertices,
+not runners or raw sequence entries; the fingerprint is transitive and ranks
+raw product scalar last.
+
+Created HYP-3013, T1097, LTI-162, LTT-064, and reflection
+`07-reflections/lrc14-perfect-number-packet-merge-codex-s174.md`.  Updated
+the hypothesis/result indexes, technique indexes, concept map, and OPEN-Q-108.
+Next pull: add the S174 packet fields to HYP-2963 sidecars and rerun route
+purity on `q=14p-1` with HYP-3012 automaton labels attached.
