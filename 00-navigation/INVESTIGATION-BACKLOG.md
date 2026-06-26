@@ -15,6 +15,35 @@
 
 ---
 
+## Lead codex-2026-06-26-S206: LRC14 comprehensive lens map
+
+**Status:** SYNTHESIS / coordination map complete
+(HYP-3043/T1124/LTI-191/LTT-089), built to let concurrent agents place new
+LRC ideas beside the existing packet, topology, arithmetic, analytic,
+automaton, pair-decoy, residual, formal, and external-analogy lenses.
+**Readout:** `00-navigation/LRC-LENS-MAP.md` maps each lens by preserved LRC
+predicate, destroyed coordinate, required sidecar, and handoff target.  The
+shared center is a labelled packet sheaf with controlled forgetting: a quotient
+is legal only if the forgotten coordinate is constant, reconstructed,
+dual-annihilated, descended, boundary-stopped, or routed to named
+F7/THM-572/harmonic debt.  Pair-good decoys are blocker-generator teeth routed
+through barcode/normal-fan active owners; Moser/fibbinary/lacunary shadows are
+telemetry sidecars, not proof quotients; analytic/operator analogies are
+capacity/blindness or certificate backends only after packet translation.
+**Next:** add `lens_family`, `preserved_lrc_predicate`,
+`destroyed_coordinate`, `required_sidecar`, `handoff_target`,
+`status_mixing_result`, `route_mixing_result`, `tournament_vertex_choice`, and
+`challenged_assumption` to new LRC lens notes and packet-ledger experiments,
+then rerun status/route fiber checks before promoting a new carrier.
+**Integration note:** after fetch revealed the concurrent S204 AP-tail
+puncture atlas, this map was renumbered to S206/HYP-3043/T1124/LTI-191/LTT-089
+and the AP-tail q13/fixed-point clock was added as a concrete controlled-
+forgetting repair lens.
+Second integration note: the concurrent S205 owner-strip filtration was also
+absorbed as the post-status page order between primitive clocks/Haar zeta and
+named F7/THM-572 debt.
+Namespace: HYP-3043 / T1124 / LTI-191 / LTT-089.
+
 ## Lead codex-2026-06-26-S202: LRC14 hidden-coordinate ledger
 
 **Status:** SYNTHESIS / proof-order ledger complete (HYP-3039/T1120/LTI-187/LTT-085), connecting the latest residual stack to older address-retention, visible/hidden fold, anti-wedge, cochannel, and pair-good decoy lessons.

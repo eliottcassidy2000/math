@@ -1,5 +1,21 @@
 # Open Questions
 
+**OPEN-Q-108 S206 comprehensive lens-map addendum:** HYP-3043 adds
+`00-navigation/LRC-LENS-MAP.md` as the coordination layer for all current LRC14
+lenses.  The open task is to turn the map into a packet manifest: every new
+lens should declare `lens_family`, `preserved_lrc_predicate`,
+`destroyed_coordinate`, `required_sidecar`, `handoff_target`,
+`status_mixing_result`, `route_mixing_result`, `tournament_vertex_choice`, and
+`challenged_assumption`.  Then rerun status and route fiber checks.  The
+specific pressure points are owner-strip filtration pages versus named
+residual debt, AP-tail puncture/fixed-point clocks versus coarse
+owner-stalk quotients, pair-good generator teeth versus
+barcode/normal-fan active owners, automaton/Moser/fibbinary shadows versus
+exact scale/topology/owner handoffs, and analytic/operator clocks versus
+packet-keyed blindness reports. -> HYP-3043, HYP-3042, HYP-3041, HYP-3040, HYP-3039, HYP-3038,
+HYP-3037, HYP-3036, HYP-3035, HYP-3034, HYP-3032, HYP-3024, HYP-3023,
+HYP-3022, HYP-3021, HYP-3018, HYP-3015, HYP-3012, HYP-3009, HYP-2963,
+LTI-191, LTT-089, LTI-190, LTT-088, LTI-189, LTT-087, T1124, T1123, T1122.
 **OPEN-Q-108 S202 hidden-coordinate ledger addendum:** HYP-3039 sharpens the
 recent LRC14 residual work by treating HYP-3024..HYP-3038 as a
 controlled-forgetting ladder rather than a scalar-estimate chain.  The hidden

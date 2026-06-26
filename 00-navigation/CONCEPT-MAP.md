@@ -6,6 +6,12 @@
 
 **Current LRC tournament technique index addendum:** T1123/HYP-3042/LTI-190/LTT-088 extends the tournament companion to `88` reusable `LTT-*` cards with owner-strip filtration tournaments: residual proof pages, not runners, are the vertices, and the first-surviving-page test asks whether primitive-period decks, AP-tail q13 clocks, Haar/drop-add zeta, or endpoint-owner strip current explains a residual before it is named F7/THM-572 debt.
 
+**S206 LRC lens-map addendum:** `00-navigation/LRC-LENS-MAP.md` and LTT-089
+extend the live tournament index through a comprehensive lens-family
+tournament.  Use it to place new LRC ideas by `preserved_lrc_predicate`,
+`destroyed_coordinate`, `required_sidecar`, and `handoff_target` before
+promoting another scalar, automaton, analytic estimate, or external analogy.
+
 **Current LRC technique multiverse index:** `00-navigation/LRC-TECHNIQUE-MULTIVERSE-INDEX.md` is the S168/T1090 `LTM-*` annex for broad creative reuse across tournament/metagraph, series, sieve, Haar/Fejer, cocycle, state-lift, cross-domain, formalization, and forum-workflow techniques. Its `79`-card family-level Tournament Analysis should be used as a cyclic technique surface rather than a scalar ranking, with LTM-079 pointing to the CPI carrier-pullback rows.
 
 **Last updated:** kind-pasteur-2026-03-07-S34 (continued session — 10+ commits, 30+ connections cataloged)

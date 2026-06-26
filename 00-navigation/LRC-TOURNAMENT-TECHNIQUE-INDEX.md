@@ -82,6 +82,9 @@ obligations, and proof-carrier interfaces.
   q13 clock, Haar zeta, and endpoint-owner current:
   use LTT-088 after LTT-084/LTT-082 and record the first surviving filtration
   page before naming F7/THM-572 debt.
+- Need to orient a new creative LRC lens in the whole proof surface:
+  use LTT-089 with `preserved_lrc_predicate`, `destroyed_coordinate`,
+  `required_sidecar`, and `handoff_target` before promoting the lens.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1835,6 +1838,44 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-186, LTI-184, LTI-183, LTI-179, LTT-088, LTT-087, LTT-084, LTT-082,
   LTT-081, LTT-077, T1123, T1122, T1119, T1117, T1116, OPEN-Q-108.
 
+### LTT-089: Comprehensive Lens Map Tournament
+
+- **Move:** Make LRC lens families / proof obligations the tournament vertices
+  and orient edges by retained LRC predicate, named destroyed coordinate,
+  required sidecar, residual handoff, compression, and checkability.
+- **LRC use:** HYP-3043 and `00-navigation/LRC-LENS-MAP.md` sit above the
+  carrier-pullback index and hidden-statement ledger.  They connect packet,
+  topology, owner/barcode/normal-fan, arithmetic/Farey/period,
+  harmonic/analytic, automaton/sequence, pair-decoy, residual/state-lift,
+  formal, and external-analogy lenses as controlled-forgetting projections of
+  a labelled packet sheaf.  HYP-3041's AP-tail puncture atlas is a concrete
+  new instance: a coarse owner-stalk quotient became route-pure only after the
+  missing `m mod 13` puncture/fixed-point clock was named.  HYP-3042 turns the
+  same lesson into an owner-strip filtration page order.
+- **Preserves:** Boundary/open status, theorem-route schedulability, and a
+  named handoff target for owner, topology, period, scale, dual certificate,
+  local switch, or residual debt.
+- **Forgets / guardrail:** Row enumeration, runner identity, and raw scalar
+  ordering are suppressed.  The card is a routing map, not a proof certificate;
+  every promoted lens still needs status and route fiber checks.
+- **Tournament fingerprint:** vertices are lens families, not runners.  The
+  observable is `(boundary/open retention, route schedulability,
+  owner/topology retention, period/scale retention, dual-certificate strength,
+  named residual handoff, compression, formal checkability)`.  Tie path:
+  `packet_sheaf > boundary_topology > owner_stalk_barcode >
+  period_arithmetic > harmonic_certificate > local_switch_decoy >
+  automaton_sequence > external_analogy > raw_scalar`.
+- **Next pull:** Add `lens_family`, `preserved_lrc_predicate`,
+  `destroyed_coordinate`, `required_sidecar`, `handoff_target`,
+  `status_mixing_result`, `route_mixing_result`, `tournament_vertex_choice`,
+  and `challenged_assumption` to future LRC lens notes and HYP-2963-style
+  packet-ledger experiments.
+- **Pointers:** HYP-3043, HYP-3042, HYP-3041, HYP-3040, HYP-3039, HYP-3038, HYP-3037, HYP-3036,
+  HYP-3035, HYP-3034, HYP-3032, HYP-3024, HYP-3023, HYP-3022, HYP-3021,
+  HYP-3018, HYP-3015, HYP-3012, HYP-3009, HYP-2997, HYP-2995, HYP-2963,
+  THM-572, LTI-191, LTI-190, LTI-189, LTI-188, LTI-187, LTI-175, LTT-088,
+  LTT-087, LTT-086, LTT-085, LTT-073, T1124, T1123, T1122, T1121, T1120.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1897,3 +1938,8 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    collapse, arithmetic channel, or mixed carrier.
 10. Turn the controlled-kernel rule into a short reusable theorem template in
     the style of HYP-2990.
+11. Add the lens-map manifest fields `lens_family`,
+    `preserved_lrc_predicate`, `destroyed_coordinate`, `required_sidecar`,
+    `handoff_target`, `status_mixing_result`, `route_mixing_result`,
+    `tournament_vertex_choice`, and `challenged_assumption` to new LRC lens
+    experiments before promoting another analogy or scalar.

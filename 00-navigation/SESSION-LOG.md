@@ -1,3 +1,42 @@
+## codex-2026-06-26-S206 -- LRC14 comprehensive lens map (HYP-3043/T1124/LTI-191/LTT-089)
+
+User asked for a comprehensive map of all lenses through which the repo has
+seen LRC and to connect those lenses so concurrent agents can see what they
+point at.  Pulled the latest shared mainline first, including S203 hidden
+statement ledger work and the new operator/distribution forum cue.
+
+Created `00-navigation/LRC-LENS-MAP.md`, HYP-3043, T1124, LTI-191, LTT-089,
+and reflection `07-reflections/lrc14-comprehensive-lens-map-codex-s206.md`.
+Central readout: the lenses point to a labelled packet sheaf with controlled
+forgetting, not to a scalar, raw runner tournament, standalone automaton, or
+naked analytic estimate.  Each lens must name the LRC predicate it preserves,
+the coordinate it destroys, the required sidecar, and the handoff target.
+
+During close-out, origin/main advanced with S204/HYP-3041/T1122/LTI-189/LTT-087
+AP-tail puncture atlas, so this lens-map session was renumbered to S206 and
+integrated that work.  The AP-tail atlas is now recorded as a concrete
+controlled-forgetting example: coarse owner-stalk geometry was not wrong, but
+it had forgotten the `m mod 13` puncture/fixed-point tail clock.
+
+Origin/main then advanced again with S205/HYP-3042/T1123/LTI-190/LTT-088
+owner-strip filtration.  Integrated it as the post-status page order:
+primitive deck, AP-tail clock, Haar/drop-add zeta, endpoint-owner strip
+current, then named residual debt only if all pages stay invisible.
+
+The map connects packet, tournament/metagraph, circle topology, endpoint-owner
+barcode/normal-fan, arithmetic/Farey/period, harmonic/analytic,
+automaton/sequence/lacunary, pair-good decoy, residual/state-lift, formal, and
+external-analogy lenses.  It highlights pair-good decoys as blocker-generator
+teeth routed through barcode/normal-fan active owners, automata as telemetry
+sidecars requiring exact scale/topology/owner/route handoff, and
+analytic/operator analogies as packet-keyed capacity/blindness or certificate
+backends.
+
+Next manifest fields: `lens_family`, `preserved_lrc_predicate`,
+`destroyed_coordinate`, `required_sidecar`, `handoff_target`,
+`status_mixing_result`, `route_mixing_result`, `tournament_vertex_choice`, and
+`challenged_assumption`.
+
 ## codex-2026-06-26-S202 -- LRC14 hidden-coordinate ledger (HYP-3039/T1120/LTI-187/LTT-085)
 
 User asked to keep looking for hidden details, statements, and past-work
