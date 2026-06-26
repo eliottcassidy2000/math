@@ -1188,6 +1188,35 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3009, HYP-3008, HYP-2997, HYP-2986, HYP-2975, HYP-2974, HYP-2970,
   HYP-2963, HYP-2990, THM-572, LTI-172.
 
+### LTT-070: Fiber-Zipper Convergence Tournament
+
+- **Move:** Treat zipper gates as tournament vertices: automatic word,
+  residue-terminal fiber, exact ET clocks, Henselian unit-root rule, coarse
+  ET+unit gate, magnitude cocycle, magnitude+ET+unit, and barcode/packet
+  zipper.  Orient by route purity, max mixed-fiber size, ET discrepancy
+  retention, unit-lift stability, magnitude retention, topology, packet
+  labels, finite-state checkability, and proof cost.
+- **LRC use:** HYP-3024 shows the full HYP-2963 bank admits a cleaner
+  two-stage proof target.  Exact ET clocks at `14,27,41` split to singleton
+  fibers and are too close to an address coordinate.  The coarse ET+unit gate
+  has `21702` fibers, `15` mixed theorem-route fibers, max mixed `4`, and
+  `0` mixed boundary/open fibers.  Thus status convergence can be attacked
+  before full route purity.
+- **Preserves:** Boundary/open status, coarse residue discrepancy, p-adic
+  unit-root clocks, zero-root scale debt, and the residual route-purity
+  telemetry needed to schedule Fejer/Ramanujan/Haar, magnitude, K33/F7, or
+  covering certificates.
+- **Forgets / guardrail:** Exact ET clocks can become a packet address, and
+  unit-Hensel counts alone still mix AP/GW boundary with open rows.  The
+  quotient is admissible only as a status-preserving gate plus a named
+  certificate scheduler.
+- **Next pull:** Prove the coarse ET+unit gate cannot mix AP/GW boundary
+  equality with strict-open packets inside automatic/residue fibers; then
+  route the remaining open-route collisions through magnitude formulas and
+  the existing certificate stack.
+- **Pointers:** HYP-3024, HYP-3023, HYP-3020, HYP-3017, HYP-3016, HYP-3015,
+  HYP-2963, THM-572, LTI-171, LTI-170, LTI-167.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1209,6 +1238,8 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    fiber anchor row, fiber-mixing exit, automatic fiber zipper,
    route-purity split report, discrepancy-height trident signature,
    residue discrepancy bins, Erdos-Turan proxy bins,
+   Henselian unit-root rule, zero-root scale debt,
+   coarse ET+unit status-convergence gate,
    Mahler/Farey height bucket, Hensel singular counts,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then

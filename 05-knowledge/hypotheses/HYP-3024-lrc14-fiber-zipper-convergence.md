@@ -1,9 +1,9 @@
 ---
 id: HYP-3024
-title: LRC14 fiber-zipper convergence via Erdos-Turan and Henselian unit rule
-status: EVIDENCE / target-fiber convergence scout; not a proof
+title: LRC14 zipper-fiber convergence, Erdos-Turan clocks, and Henselian unit rule
+status: EVIDENCE / full-bank convergence scout and proof-interface target; not a proof
 source: codex-2026-06-26-S188
-tangent: T1104
+tangent: T1105
 script: 04-computation/lrc14_fiber_zipper_convergence_codex_s188.py
 result: 05-knowledge/results/lrc14_fiber_zipper_convergence_codex_s188.out
 related:
@@ -16,40 +16,40 @@ related:
   - HYP-3017
   - HYP-3016
   - HYP-3015
+  - HYP-3014
   - HYP-3009
   - HYP-3008
+  - HYP-2997
+  - HYP-2995
+  - HYP-2991
+  - HYP-2989
   - HYP-2963
   - THM-572
-  - LTI-171
-  - LTI-170
-  - LTI-167
   - OPEN-Q-108
 ---
 
-# HYP-3024: LRC14 Fiber-Zipper Convergence
+# HYP-3024: LRC14 Zipper-Fiber Convergence
 
 ## Claim
 
-The first HYP-3023 automatic-fiber target
+The full HYP-2963 packet bank supports a sharper version of the
+HYP-3020/HYP-3023 bridge:
 
 ```text
-MFCMMCCFFFCCC
+residue-terminal zipper
+  + coarse Erdos-Turan discrepancy clocks
+  + Henselian unit-root rule
 ```
 
-has a smaller proof carrier than exact magnitude:
+is already enough to preserve the direct boundary/open LRC predicate on the
+tested full bank, even though it is not enough to classify every theorem
+route.  Exact Erdos-Turan clocks at `14,27,41` are too sharp on this bank and
+degenerate to packet-level addressing; the useful target is the coarsened
+status-preserving gate.
 
-```text
-residue-terminal fiber
-  -> Erdos-Turan residue discrepancy bins
-  -> Henselian unit rule
-```
-
-On the target fiber, the Erdos-Turan bins explain most of the visible
-contraction, and the Henselian unit rule already gives route-pure fibers.
-
-This is not a proof of LRC14.  It is a convergence scout for the first zipper
-fiber.  The same rule still needs a full-bank stress test before replacing the
-exact HYP-3023 magnitude cocycle.
+This is not a proof of LRC14.  It is a proof-interface result: it identifies
+which clocks matter for the question "does this orbit hit the safe box even
+once?" and which clocks are only route schedulers.
 
 ## Computation
 
@@ -65,136 +65,158 @@ Stored output:
 05-knowledge/results/lrc14_fiber_zipper_convergence_codex_s188.out
 ```
 
-The default run filters the HYP-2963 bank to the target automatic word before
-exact packet computation:
+The script audits the default HYP-2963 `21913`-packet bank with zipper gates:
 
 ```text
-candidate_rows=639 of 21913
-packets=639
+automatic_word
+residue_terminal_fiber
+residue_plus_et
+residue_plus_unit_hensel
+et_unit_convergence
+coarse_et_unit_gate
+magnitude_cocycle
+magnitude_et_unit
+barcode_packet_zipper
 ```
 
-The convergence ladder is:
+The full-bank convergence table:
 
 ```text
-automatic_word                 fibers=1   mixed_route=1   max_mixed=639
-residue_terminal_fiber         fibers=181 mixed_route=27  max_mixed=30
-erdos_turan_residue_zipper     fibers=595 mixed_route=6   max_mixed=4
-henselian_unit_zipper          fibers=424 mixed_route=0   max_mixed=0
-et_hensel_unit_zipper          fibers=627 mixed_route=0   max_mixed=0
-et_hensel_qrule_zipper         fibers=627 mixed_route=0   max_mixed=0
-magnitude_cocycle              fibers=638 mixed_route=0   max_mixed=0
-barcode_shadow                 fibers=639 mixed_route=0   max_mixed=0
-packet_zipper                  fibers=639 mixed_route=0   max_mixed=0
+split                      fibers    mixR    mixF    mixS    maxF  maxMix  purity
+automatic_word                225     143     178       1    1179    1179   36.4%
+residue_terminal_fiber      16555     265     265       2      30      30   98.3%
+residue_plus_et             21913       0       0       0       1       0  100.0%
+residue_plus_unit_hensel    19301     220     221       2      22      22   98.8%
+et_unit_convergence         21913       0       0       0       1       0  100.0%
+coarse_et_unit_gate         21702      15      16       0       4       4   99.9%
+magnitude_cocycle           21909       0       0       0       2       0  100.0%
+magnitude_et_unit           21913       0       0       0       1       0  100.0%
+barcode_packet_zipper       21913       0       0       0       1       0  100.0%
 ```
 
-Readout:
+The key new data point is:
 
 ```text
-Residue-terminal fibers are close but still mixed.
-Erdos-Turan bins reduce mixed-route fibers 27 -> 6 and max mixed size 30 -> 4.
-Henselian unit-rule bins reduce mixed-route fibers 27 -> 0.
-Exact magnitude is no stronger for route purity on this target fiber.
+coarse_et_unit_gate:
+  fibers=21702
+  mixed_route=15
+  mixed_status=0
+  max_mixed=4
 ```
 
-## Erdos-Turan Tooth
-
-The Erdos-Turan tooth records, for moduli `14,27,41`,
-
-```text
-exact L1 residue-discrepancy bucket
-low-frequency sum_{h<=6} |sum_{v in S} exp(2*pi*i*h*v/q)| / h bucket
-```
-
-This is intentionally not exact magnitude.  Its role is a convergence gauge:
-inside `MFCMMCCFFFCCC`, it contracts the largest residue-terminal mixed fiber
-from `30` rows to `4`, leaving only six mixed-route fibers.
-
-The largest remaining Erdos-Turan-mixed example is a q-witness/covering split:
-
-```text
-single swap 13->143  M=11/144 route=COVERING-MOMENT
-single swap 13->31   M=1/13   route=Q-WITNESS
-single swap 13->59   M=1/13   route=Q-WITNESS
-single swap 13->115  M=1/13   route=Q-WITNESS
-```
-
-So ET sees the right pressure but still forgets a local unit/lift distinction.
+So the coarse gate is more compressed than the exact magnitude cocycle on this
+bank, preserves boundary/open status, and leaves only open-route mixing to be
+routed by proof families.
 
 ## Henselian Unit Rule
 
-For each `p in {2,3,7}`, define
+HYP-3020 counted roots and singular roots of `A_S(x)=sum_{v in S} x^v` modulo
+`2,3,7`.  HYP-3024 refines this: roots in `F_p^*` are genuine Hensel unit
+clocks, while the forced root at `x=0` is tracked separately as scale or
+nilpotent debt.
+
+Full-bank readout:
 
 ```text
-A_S(x)=sum_{v in S} x^v  over F_p^*
+coarse_et_clock_fibers=1761 largest=242
+hensel_unit_count_fibers=29 largest=7660
+hensel_unit_exact_fibers=73 largest=7660
+packets_with_singular_unit_root=3358
+packets_with_zero_singular_debt=3203
 ```
 
-and retain:
+Thus p-adic data is not a scalar discriminator.  It is a routing rule:
+unit-root singularities feed local lift debt; zero-singular roots feed scale
+debt; neither should be confused with the other.
+
+## Target Word
+
+For the AP/Goddyn-Wong word
 
 ```text
-simple unit roots:    A_S(x)=0 and A'_S(x) != 0
-singular unit roots:  A_S(x)=0 and A'_S(x) = 0
-exponent counts on the cyclic unit group F_p^*
-p-adic denominator-unit data for M=p0/q0 and Farey excess
+MFCMMCCFFFCCC
 ```
 
-The rule is Henselian in the narrow sense: a simple unit root is lift-stable,
-while a singular unit root is local lift debt.  On the target automatic fiber,
-this sidecar separates every theorem route:
+the script finds:
 
 ```text
-henselian_unit_zipper: fibers=424 mixed_route=0
+rows=639
+routes={'Q-WITNESS': 603, 'BOUNDARY-AP-GW': 2,
+        'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 33}
+distinct_M=33
+distinct_ET_clocks=639
+distinct_unit_rules=28
 ```
 
-This is the key new carrier.  It suggests that the target word's `33` exact
-`M` values are overkill for route purity; a p-adic unit-lift signature may be
-enough.
+Inside the word:
+
+```text
+residue_terminal_fiber:    fibers=181 mixed_route=27
+residue_plus_et:           fibers=639 mixed_route=0
+residue_plus_unit_hensel:  fibers=294 mixed_route=28
+et_unit_convergence:       fibers=639 mixed_route=0
+coarse_et_unit_gate:       fibers=585 mixed_route=9
+magnitude_cocycle:         fibers=638 mixed_route=0
+magnitude_et_unit:         fibers=639 mixed_route=0
+```
+
+Exact ET clocks fully split this finite target word, but that is too close to
+an address coordinate.  The coarse ET+unit gate leaves only `9` mixed route
+fibers in the target word, all open, with largest mixed fiber size `4`.
 
 ## Tournament Analysis
 
-Vertices are zipper teeth / proof carriers, not runners.  Pairwise observable:
-
-```text
-route purity
-max mixed-fiber size
-convergence from the previous tooth
-Erdos-Turan retention
-Henselian-unit retention
-magnitude retention
-packet-label retention
-proof cost
-```
+Vertices were quotient/proof-carrier bundles, not runners.  The observable was
+route purity, max mixed-fiber size, Erdos-Turan discrepancy, Henselian unit
+stability, magnitude retention, topology retention, packet-label retention,
+finite-state checkability, and proof cost.  The switch was majority comparison
+of those observable vectors, with the zipper list as the tie Hamiltonian path.
 
 Fingerprint:
 
 ```text
-score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}
-directed_3cycles=0
-scc_sizes=[1,1,1,1,1,1,1,1,1]
-hamiltonian_path_count=1
-score_order=et_hensel_qrule_zipper > et_hensel_unit_zipper > packet_zipper >
-            magnitude_cocycle > barcode_shadow > henselian_unit_zipper >
-            erdos_turan_residue_zipper > residue_terminal_fiber >
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 5: 2, 6: 2, 8: 1}
+directed_3cycles=2
+scc_sizes=[4, 1, 1, 1, 1, 1]
+hamiltonian_path_count=5
+score_order=magnitude_et_unit > barcode_packet_zipper > magnitude_cocycle >
+            et_unit_convergence > residue_plus_et > coarse_et_unit_gate >
+            residue_plus_unit_hensel > residue_terminal_fiber >
             automatic_word
 ```
 
+The size-4 SCC is the warning: exact magnitude, exact ET, Hensel-unit, and
+packet/barcode labels are interacting proof clocks, not a single scalar
+ranking.
+
 ## Assumption Challenge
 
-Alternate vertices considered: runners, gaps, fixed circle sections, residues,
-Erdos-Turan Fourier modes, Henselian unit roots, denominator units, barcode
-bars, packet labels, and proof obligations.
+Alternate vertex sets considered: runners, gaps, fixed circle sections,
+section boundaries, residues, Fourier clocks, p-adic unit roots, zero-root
+scale debt, magnitude cocycles, barcode fibers, packet labels, and proof
+obligations.
 
-The chosen vertices are zipper teeth.  They preserve theorem-route purity and
-boundary-versus-open status at threshold `1/14`.  They destroy raw runner
-identity and raw automatic-word multiplicity, but only after retaining enough
-analytic and p-adic data to explain the destroyed distinction.
+The chosen vertices are quotient/proof-carrier bundles because they preserve
+the tested LRC predicate: theorem-route purity and boundary/open status at
+threshold `1/14`.  They destroy raw runner identity, exact endpoint owners,
+and full Fejer atom banks unless later zipper fields are attached.
 
-## Next Pulls
+The challenged assumption is that Hensel data should be read as all residue
+roots equally.  For proof routing, p-adic units and the forced zero root play
+different roles.
 
-1. Prove the Henselian unit split for the target word `MFCMMCCFFFCCC`.
-2. Run the same ET/Hensel zipper on the full HYP-2963 bank; the script supports
-   `--full-bank`, but the first full run was too slow for this pass.
-3. If full-bank Henselian unit rule still has mixed fibers, classify the
-   survivors by q-threshold, unit-excess lane, barcode support, and packet
-   route.
-4. Promote only the smallest route-pure compression into HYP-2963 packet
-   fields; keep exact magnitude as fallback until the family lemma exists.
+## Proof Target
+
+Coarse zipper-fiber convergence theorem:
+
+```text
+Inside each automatic/residue-terminal fiber, the coarse ET+unit gate either
+  (a) is boundary/open fiber-constant,
+  (b) emits a bounded Erdos-Turan discrepancy certificate,
+  (c) emits Henselian unit-lift debt or zero-root scale debt,
+  (d) descends to a familywise magnitude formula, or
+  (e) routes to named K33/F7/THM-572 residual debt.
+```
+
+This target is weaker and cleaner than immediate route purity.  It focuses on
+the direct LRC question first: whether the orbit has any strict safe interval.

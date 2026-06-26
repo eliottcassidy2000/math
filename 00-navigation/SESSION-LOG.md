@@ -23895,11 +23895,25 @@ Created HYP-3023, LTI-170, and reflection
 `07-reflections/lrc14-automatic-fiber-zipper-codex-s187.md`; updated the
 hypothesis/result indexes, OPEN-Q-108, concept map, and LTT-066 handoff.
 
-## codex-2026-06-26-S188 -- LRC14 fiber-zipper convergence -- HYP-3024/LTI-171
+## codex-2026-06-26-S188 -- LRC14 fiber-zipper convergence and Henselian unit rule (HYP-3024/T1105)
 
-Reserved HYP-3024/LTI-171/S188 for extending the HYP-3023 fiber zipper from a
-static split table into a convergence audit.  Planned output: marginal drops
-in mixed theorem-route fibers, total mixed rows, and largest mixed fiber as
-residue, terminal automaton, magnitude, barcode, packet, discrepancy-height,
-and pair-good sidecars are zipped onto automatic/residue fibers, with
-`MFCMMCCFFFCCC` as the first local template.
+Completed the reserved HYP-3024/LTI-171/S188 convergence audit by replacing the
+stub with `04-computation/lrc14_fiber_zipper_convergence_codex_s188.py` and
+stored `05-knowledge/results/lrc14_fiber_zipper_convergence_codex_s188.out`.
+The script runs on the default HYP-2963 `21913`-packet bank and compares
+automatic word, residue-terminal fiber, exact ET clocks, Henselian unit roots,
+coarse ET+unit gates, magnitude cocycle, and barcode/packet zipper gates.
+
+Readout: automatic words have `143` mixed-route fibers and max mixed `1179`;
+residue-terminal fibers have `265` mixed-route fibers and max mixed `30`.
+Exact ET clocks at `14,27,41` split to singleton fibers, so they are
+address-like.  The useful compression is `coarse_et_unit_gate`: `21702`
+fibers, `15` mixed-route fibers, max mixed `4`, and `0` mixed boundary/open
+fibers.  Hensel was refined by treating roots in `F_p^*` as unit clocks and
+the forced zero root as scale debt.
+
+Upgraded HYP-3024 from RESERVED to EVIDENCE, upgraded LTI-171, added T1105 and
+LTT-070, and updated the reflection.  Next pull: prove coarse ET+unit status
+convergence inside automatic/residue fibers before attempting full route
+purity; route the remaining open collisions through family magnitude formulas
+and the existing certificate stack.

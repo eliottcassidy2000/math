@@ -1,5 +1,22 @@
 # Open Questions
 
+**OPEN-Q-108 S188 fiber-zipper convergence addendum:** HYP-3024 completes the
+reserved S188 fiber-zipper convergence audit by extending HYP-3023 and
+HYP-3020 to the full HYP-2963 `21913`-packet bank.  Exact Erdos-Turan clocks
+at `14,27,41` split the full bank to singleton fibers, which is useful
+telemetry but too sharp as theorem compression.  The new proof target is the
+coarser ET+Henselian-unit gate: it has `21702` fibers, only `15` mixed
+theorem-route fibers, max mixed size `4`, and `0` mixed boundary/open fibers.
+The Hensel rule is also sharpened: roots in `F_p^*` are local unit clocks,
+while the forced zero root is recorded separately as scale debt (`3358`
+packets with a singular unit root, `3203` with zero-singular debt).  Open
+task: prove coarse status convergence inside automatic/residue fibers first,
+then route the remaining open-route collisions through family magnitude
+formulas, q-witness/covering/petal exits, Fejer/Ramanujan/Haar certificates,
+or K33/F7/THM-572 residual debt. -> HYP-3024, HYP-3023, HYP-3020, HYP-3017,
+HYP-3016, HYP-3015, HYP-2963, THM-572, LTI-171, LTI-170, LTI-167, LTT-070,
+LTT-067, T1105.
+
 **OPEN-Q-108 S184 discrepancy-height trident addendum:** HYP-3020 tests a
 three-coordinate proof carrier after the automaton route-purity failure:
 small-denominator residue discrepancy / Erdos-Turan proxy bins,

@@ -21,6 +21,28 @@
 **Readout:** `04-computation/lrc14_fiber_zipper_convergence_codex_s188.py` stores output in `05-knowledge/results/lrc14_fiber_zipper_convergence_codex_s188.out`.  The default run filters the HYP-2963 bank to the target automatic word `MFCMMCCFFFCCC` before exact packet computation (`639` rows of `21913`).  Residue-terminal fibers have `27` mixed route fibers and largest mixed size `30`; Erdos-Turan low-frequency residue bins reduce this to `6` and `4`; the Henselian unit rule at `p=2,3,7` gives `0` mixed route fibers before exact magnitude is attached.
 **Next:** prove the Henselian unit split for the target word; run the ET/Hensel zipper on the full HYP-2963 bank; classify any full-bank survivors by q-threshold, unit-excess lane, barcode support, and packet route before replacing exact magnitude.
 Namespace: HYP-3024 / T1104 / LTI-171.
+## Lead codex-2026-06-26-S188: LRC14 fiber-zipper convergence and Henselian unit rule
+
+**Status:** EVIDENCE / full-bank convergence scout and proof-interface target
+complete (HYP-3024/T1105/LTI-171/LTT-070), bridging HYP-3023's automatic
+fiber zipper and HYP-3020's discrepancy-height-Hensel trident.  User asked to
+extend zipper-fiber convergence while thinking Erdos-Turan and Henselian unit
+rule.
+**Readout:** `04-computation/lrc14_fiber_zipper_convergence_codex_s188.py`
+stores output in
+`05-knowledge/results/lrc14_fiber_zipper_convergence_codex_s188.out`.  On the
+default HYP-2963 `21913`-packet bank, automatic words have `143` mixed-route
+fibers with max mixed `1179`; residue-terminal fibers reduce max mixed to
+`30` but still have `265` mixed-route fibers.  Exact ET clocks at `14,27,41`
+split to singleton fibers, so they are address-like.  The coarser ET+unit gate
+is the useful carrier: `21702` fibers, `15` mixed-route fibers, max mixed `4`,
+and `0` mixed boundary/open fibers.  Hensel data is refined by separating
+unit roots in `F_p^*` from the forced zero root/scale debt.
+**Next:** prove coarse ET+unit status convergence inside automatic/residue
+fibers; then discharge the remaining route-mixed open fibers by magnitude
+formulas, q-witness/covering/petal exits, Fejer/Ramanujan/Haar/barcode
+certificates, or K33/F7/THM-572 residuals.
+Namespace: HYP-3024 / T1105 / LTI-171 / LTT-070.
 
 ## Lead codex-2026-06-26-S186: LRC14 pair-good decoy barcode and normal-fan refinement
 

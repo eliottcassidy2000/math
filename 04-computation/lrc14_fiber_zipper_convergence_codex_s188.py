@@ -1,21 +1,18 @@
 #!/usr/bin/env python3
-"""Fiber-zipper convergence scout for LRC14.
+"""LRC14 zipper-fiber convergence scout.
 
-This extends HYP-3023 by asking whether the mixed automatic/residue fibers
-converge before the exact magnitude cocycle is attached.  The tested middle
-teeth are:
+HYP-3023 found that the automatic/residue fiber zipper becomes route-pure only
+after the magnitude cocycle is attached.  HYP-3020 suggested a trident:
+Erdos-Turan discrepancy, height, and Hensel data.  This script splices those
+ideas on the full HYP-2963 packet bank and asks a narrower question:
 
-* Erdos-Turan low-frequency residue discrepancy bins;
-* a Henselian unit rule for A_S(x)=sum_{v in S} x^v on p-adic unit roots;
-* a coarse q-threshold / unit-excess rule.
+    which clocks actually shrink mixed zipper fibers, and which clocks are
+    only warnings?
 
-Tournament Analysis declaration:
-  vertices: zipper teeth / proof carriers, not runners;
-  pairwise observable: route purity, max mixed-fiber size, convergence from the
-    previous tooth, retained analytic discrepancy, retained Henselian unit
-    data, retained magnitude, packet-label retention, and proof cost;
-  switch/gauge: majority comparison of the observable vector;
-  tie Hamiltonian path: the listed zipper order.
+The Hensel coordinate is refined to a unit rule: roots in F_p^* are genuine
+local unit clocks, while the forced zero root is recorded separately as scale
+or nilpotent debt.  Tournament Analysis is over quotient/proof carriers, not
+runners.
 """
 
 from __future__ import annotations
@@ -23,20 +20,19 @@ from __future__ import annotations
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from fractions import Fraction
+from functools import lru_cache
 from importlib.util import module_from_spec, spec_from_file_location
 from itertools import combinations, permutations
-from math import cos, gcd, pi, sin, sqrt
+from math import cos, pi, sin, sqrt
 from pathlib import Path
 import argparse
-import os
 import sys
 
 
 REPO = Path(__file__).resolve().parents[1]
 TARGET_WORD = "MFCMMCCFFFCCC"
-LOCAL_PRIMES = (2, 3, 7)
-ET_MODULI = (14, 27, 41)
-THRESHOLD_DEN = 14
+ET_QS = (14, 27, 41)
+HENSEL_PS = (2, 3, 7)
 
 
 def load_module(name: str, path: Path):
@@ -62,7 +58,7 @@ def residue_mfc_pairs(packet) -> tuple[tuple[int, str], ...]:
     return tuple(sorted((v % 14, lp.automatic_letter(v)) for v in packet.speeds))
 
 
-def terminal_word(packet) -> tuple[str, ...]:
+def terminal_word(packet) -> tuple[tuple[str, str], ...]:
     return tuple(
         (
             "Fok" if lp.is_fibbinary(v) else "Fdead",
@@ -70,6 +66,10 @@ def terminal_word(packet) -> tuple[str, ...]:
         )
         for v in packet.speeds
     )
+
+
+def residue_terminal(packet):
+    return packet.automatic_word, residue_mfc_pairs(packet), terminal_word(packet)
 
 
 def magnitude_cocycle(packet) -> tuple[Fraction, int, int, Fraction]:
@@ -98,111 +98,128 @@ def local_packet_shadow(packet) -> tuple[str, str, bool, str, str, str]:
     )
 
 
-def residue_l1_bucket(speeds: tuple[int, ...], modulus: int) -> int:
-    counts = Counter(v % modulus for v in speeds)
+@lru_cache(maxsize=None)
+def residue_l1_speeds(speeds: tuple[int, ...], q: int) -> Fraction:
+    counts = Counter(v % q for v in speeds)
     n = len(speeds)
-    l1 = sum(abs(Fraction(counts[r], 1) - Fraction(n, modulus)) for r in range(modulus))
-    return int(l1 * 28)
+    return sum(abs(Fraction(counts[r], 1) - Fraction(n, q)) for r in range(q))
 
 
-def erdos_turan_proxy(speeds: tuple[int, ...], modulus: int, hmax: int = 6) -> int:
+def residue_l1(packet, q: int) -> Fraction:
+    return residue_l1_speeds(packet.speeds, q)
+
+
+@lru_cache(maxsize=None)
+def erdos_turan_proxy_speeds(speeds: tuple[int, ...], q: int, hmax: int = 6) -> tuple[int, int]:
+    """Return a scaled ET sum and its dominant harmonic."""
+
     total = 0.0
+    best_h = 0
+    best_term = -1.0
     for h in range(1, hmax + 1):
         real = 0.0
         imag = 0.0
         for v in speeds:
-            angle = 2.0 * pi * h * (v % modulus) / modulus
+            angle = 2.0 * pi * h * (v % q) / q
             real += cos(angle)
             imag += sin(angle)
-        total += sqrt(real * real + imag * imag) / h
-    return int(round(1000.0 * total))
+        term = sqrt(real * real + imag * imag) / h
+        total += term
+        if term > best_term:
+            best_term = term
+            best_h = h
+    return int(round(1000.0 * total)), best_h
 
 
-def erdos_turan_signature(packet) -> tuple[tuple[int, int], ...]:
-    """Coarse low-frequency discrepancy signature.
+def erdos_turan_proxy(packet, q: int, hmax: int = 6) -> tuple[int, int]:
+    return erdos_turan_proxy_speeds(packet.speeds, q, hmax)
 
-    The first coordinate is an exact L1 residue-discrepancy bucket.  The second
-    is a low-frequency Erdos-Turan proxy bucket.  These are intentionally
-    coarser than exact magnitude: they model convergence pressure, not identity.
-    """
 
+@lru_cache(maxsize=None)
+def et_clock_speeds(speeds: tuple[int, ...]) -> tuple[tuple[Fraction, int, int], ...]:
     return tuple(
-        (
-            residue_l1_bucket(packet.speeds, modulus),
-            erdos_turan_proxy(packet.speeds, modulus) // 250,
-        )
-        for modulus in ET_MODULI
+        (residue_l1_speeds(speeds, q), *erdos_turan_proxy_speeds(speeds, q))
+        for q in ET_QS
     )
 
 
-def vp(n: int, p: int) -> int:
-    if n == 0:
-        return 99
-    n = abs(n)
-    out = 0
-    while n % p == 0:
-        n //= p
-        out += 1
-    return out
+def et_clock(packet) -> tuple[tuple[Fraction, int, int], ...]:
+    return et_clock_speeds(packet.speeds)
 
 
-def unit_root_counts(speeds: tuple[int, ...], p: int) -> tuple[int, int, tuple[int, ...]]:
-    """Return simple/singular unit roots plus exponent counts on F_p^*.
+@lru_cache(maxsize=None)
+def et_coarse_clock_speeds(speeds: tuple[int, ...]) -> tuple[tuple[int, int, int], ...]:
+    """A deliberately coarse ET gate: L1 numerator buckets plus ET 500-bins."""
 
-    A unit root x with A_S(x)=0 and A'_S(x) nonzero is the Hensel-stable case:
-    it lifts uniquely.  A singular unit root is retained as local lift debt.
-    """
+    out = []
+    for q in ET_QS:
+        l1 = residue_l1_speeds(speeds, q)
+        et, h = erdos_turan_proxy_speeds(speeds, q)
+        out.append((int(20 * l1), et // 500, h))
+    return tuple(out)
 
-    simple = 0
-    singular = 0
-    period = max(1, p - 1)
-    exp_counts = [0] * period
-    for v in speeds:
-        exp_counts[v % period] += 1
+
+def et_coarse_clock(packet) -> tuple[tuple[int, int, int], ...]:
+    return et_coarse_clock_speeds(packet.speeds)
+
+
+@lru_cache(maxsize=None)
+def poly_value_mod_speeds(speeds: tuple[int, ...], x: int, p: int) -> tuple[int, int]:
+    val = sum(pow(x, v, p) for v in speeds) % p
+    der = sum((v % p) * pow(x, v - 1, p) for v in speeds) % p
+    return val, der
+
+
+def poly_value_mod(packet, x: int, p: int) -> tuple[int, int]:
+    return poly_value_mod_speeds(packet.speeds, x, p)
+
+
+@lru_cache(maxsize=None)
+def hensel_unit_signature_speeds(speeds: tuple[int, ...], p: int) -> tuple[tuple[int, ...], tuple[int, ...], str]:
+    """Roots in F_p^* plus a separate status for the forced zero root."""
+
+    unit_roots = []
+    singular_units = []
     for x in range(1, p):
-        val = sum(pow(x, v, p) for v in speeds) % p
-        der = sum((v % p) * pow(x, v - 1, p) for v in speeds) % p
+        val, der = poly_value_mod_speeds(speeds, x, p)
         if val == 0:
+            unit_roots.append(x)
             if der == 0:
-                singular += 1
-            else:
-                simple += 1
-    return simple, singular, tuple(exp_counts)
+                singular_units.append(x)
+
+    zero_val, zero_der = poly_value_mod_speeds(speeds, 0, p)
+    assert zero_val == 0
+    zero_status = "zero-simple" if zero_der != 0 else "zero-singular"
+    return tuple(unit_roots), tuple(singular_units), zero_status
 
 
-def local_denominator_unit(packet, p: int) -> tuple[int, int, int, int]:
-    den = packet.M.denominator
-    num = packet.M.numerator
-    pe2 = p * p
-    den_v = vp(den, p)
-    num_v = vp(num, p)
-    den_unit = 0 if den_v else den % pe2
-    excess_unit = packet.farey_excess % pe2
-    return den_v, num_v, den_unit, excess_unit
+def hensel_unit_signature(packet, p: int) -> tuple[tuple[int, ...], tuple[int, ...], str]:
+    return hensel_unit_signature_speeds(packet.speeds, p)
 
 
-def henselian_unit_rule(packet) -> tuple[tuple[int, int, tuple[int, ...], tuple[int, int, int, int]], ...]:
+@lru_cache(maxsize=None)
+def hensel_unit_rule_speeds(speeds: tuple[int, ...]) -> tuple[tuple[int, tuple[int, ...], tuple[int, ...], str], ...]:
     return tuple(
-        (*unit_root_counts(packet.speeds, p), local_denominator_unit(packet, p))
-        for p in LOCAL_PRIMES
+        (p, *hensel_unit_signature_speeds(speeds, p))
+        for p in HENSEL_PS
     )
 
 
-def q_unit_excess_rule(packet) -> tuple[str, str, int, int]:
-    if packet.q_threshold <= 13:
-        qclass = "q<=13"
-    elif packet.q_threshold == 14:
-        qclass = "q=14"
-    else:
-        qclass = "q>14"
-    excess = 14 * packet.M.numerator - packet.M.denominator
-    if excess == 0:
-        exclass = "boundary"
-    elif excess > 0:
-        exclass = "open-excess"
-    else:
-        exclass = "below"
-    return qclass, exclass, packet.farey_excess % 14, packet.M.denominator.bit_length()
+def hensel_unit_rule(packet) -> tuple[tuple[int, tuple[int, ...], tuple[int, ...], str], ...]:
+    return hensel_unit_rule_speeds(packet.speeds)
+
+
+@lru_cache(maxsize=None)
+def hensel_unit_counts_speeds(speeds: tuple[int, ...]) -> tuple[tuple[int, int, int, int], ...]:
+    out = []
+    for p in HENSEL_PS:
+        roots, singular, zero_status = hensel_unit_signature_speeds(speeds, p)
+        out.append((p, len(roots), len(singular), int(zero_status == "zero-singular")))
+    return tuple(out)
+
+
+def hensel_unit_counts(packet) -> tuple[tuple[int, int, int, int], ...]:
+    return hensel_unit_counts_speeds(packet.speeds)
 
 
 @dataclass(frozen=True)
@@ -211,9 +228,8 @@ class Split:
     description: str
     key_func: object
     finite_state: int
-    erdos_turan: int
-    hensel_unit: int
-    q_rule: int
+    discrepancy: int
+    unit_lift: int
     magnitude: int
     topology: int
     packet_label: int
@@ -231,86 +247,67 @@ SPLITS: tuple[Split, ...] = (
         0,
         0,
         0,
-        0,
         1,
     ),
     Split(
         "residue_terminal_fiber",
-        "automatic word plus residue and DFA terminal states",
-        lambda p: (p.automatic_word, residue_mfc_pairs(p), terminal_word(p)),
+        "automatic word plus mod-14 MFC and terminal-state word",
+        residue_terminal,
         5,
-        0,
-        0,
-        0,
         1,
+        0,
+        0,
         0,
         1,
         2,
     ),
     Split(
-        "erdos_turan_residue_zipper",
-        "adds low-frequency residue discrepancy bins",
-        lambda p: (p.automatic_word, residue_mfc_pairs(p), terminal_word(p), erdos_turan_signature(p)),
-        5,
+        "residue_plus_et",
+        "residue-terminal fiber plus Erdos-Turan clocks at 14,27,41",
+        lambda p: (residue_terminal(p), et_clock(p)),
+        4,
         5,
         0,
         0,
-        1,
         0,
         1,
         3,
     ),
     Split(
-        "henselian_unit_zipper",
-        "adds p-adic unit-root lift rule for p=2,3,7",
-        lambda p: (p.automatic_word, residue_mfc_pairs(p), terminal_word(p), henselian_unit_rule(p)),
+        "residue_plus_unit_hensel",
+        "residue-terminal fiber plus Henselian unit-root rule at 2,3,7",
+        lambda p: (residue_terminal(p), hensel_unit_rule(p)),
+        4,
+        1,
         5,
         0,
-        5,
-        1,
-        1,
         0,
         1,
         3,
     ),
     Split(
-        "et_hensel_unit_zipper",
-        "zips Erdos-Turan residue bins with the Henselian unit rule",
-        lambda p: (
-            p.automatic_word,
-            residue_mfc_pairs(p),
-            terminal_word(p),
-            erdos_turan_signature(p),
-            henselian_unit_rule(p),
-        ),
+        "et_unit_convergence",
+        "residue-terminal plus ET clocks and Henselian unit rule",
+        lambda p: (residue_terminal(p), et_clock(p), hensel_unit_rule(p)),
+        3,
         5,
         5,
-        5,
-        1,
-        1,
+        0,
         0,
         1,
         4,
     ),
     Split(
-        "et_hensel_qrule_zipper",
-        "adds q-threshold and coarse unit-excess lane without exact M",
-        lambda p: (
-            p.automatic_word,
-            residue_mfc_pairs(p),
-            terminal_word(p),
-            erdos_turan_signature(p),
-            henselian_unit_rule(p),
-            q_unit_excess_rule(p),
-        ),
-        5,
-        5,
-        5,
-        5,
-        2,
+        "coarse_et_unit_gate",
+        "same as ET+unit but with coarser ET and count-only unit data",
+        lambda p: (residue_terminal(p), et_coarse_clock(p), hensel_unit_counts(p)),
+        4,
+        4,
+        4,
         0,
-        2,
-        5,
+        0,
+        1,
+        3,
     ),
     Split(
         "magnitude_cocycle",
@@ -318,34 +315,33 @@ SPLITS: tuple[Split, ...] = (
         lambda p: (p.automatic_word, residue_mfc_pairs(p), magnitude_cocycle(p)),
         4,
         1,
-        1,
-        5,
+        0,
         5,
         0,
         2,
-        6,
+        3,
     ),
     Split(
-        "barcode_shadow",
-        "adds open/boundary status, component count, safe mass, margin, boundary units",
+        "magnitude_et_unit",
+        "magnitude cocycle plus ET clocks and Henselian unit rule",
         lambda p: (
             p.automatic_word,
             residue_mfc_pairs(p),
             magnitude_cocycle(p),
-            barcode_shadow(p),
+            et_clock(p),
+            hensel_unit_rule(p),
         ),
         3,
-        1,
-        1,
         5,
         5,
         5,
+        0,
         2,
-        7,
+        5,
     ),
     Split(
-        "packet_zipper",
-        "adds C27/K33/source/power/factorization local packet labels",
+        "barcode_packet_zipper",
+        "magnitude, barcode, and local labelled packet shadow",
         lambda p: (
             p.automatic_word,
             residue_mfc_pairs(p),
@@ -354,13 +350,12 @@ SPLITS: tuple[Split, ...] = (
             local_packet_shadow(p),
         ),
         3,
+        2,
         1,
-        1,
         5,
         5,
         5,
         5,
-        8,
     ),
 )
 
@@ -371,12 +366,13 @@ class SplitReport:
     fibers: int
     mixed_route_fibers: int
     mixed_family_fibers: int
+    mixed_status_fibers: int
     max_fiber_size: int
     max_mixed_size: int
-    mixed_rows: int
     largest_mixed_key: object
     largest_mixed_routes: tuple[tuple[str, int], ...]
     largest_mixed_families: tuple[tuple[str, int], ...]
+    largest_mixed_status: tuple[tuple[str, int], ...]
 
     @property
     def route_purity_score(self) -> int:
@@ -389,30 +385,39 @@ class SplitReport:
         return (
             self.route_purity_score,
             -self.max_mixed_size,
-            -self.mixed_rows,
-            self.split.erdos_turan,
-            self.split.hensel_unit,
-            self.split.q_rule,
+            self.split.discrepancy,
+            self.split.unit_lift,
             self.split.magnitude,
             self.split.topology,
             self.split.packet_label,
             self.split.finite_state,
-            10 - self.split.proof_cost,
+            8 - self.split.proof_cost,
         )
 
 
-def split_report(packets: list, split: Split) -> SplitReport:
+def status(packet) -> str:
+    return "boundary" if packet.strict_safe_mu == 0 else "open"
+
+
+def split_groups(packets: list, split: Split) -> dict[object, list]:
     groups: dict[object, list] = defaultdict(list)
     for packet in packets:
         groups[split.key_func(packet)].append(packet)
+    return groups
 
+
+def split_report(packets: list, split: Split) -> SplitReport:
+    groups = split_groups(packets, split)
     mixed_route = []
     mixed_family = []
+    mixed_status = []
     for key, rows in groups.items():
         if len({p.route for p in rows}) > 1:
             mixed_route.append((key, rows))
         if len({p.family for p in rows}) > 1:
             mixed_family.append((key, rows))
+        if len({status(p) for p in rows}) > 1:
+            mixed_status.append((key, rows))
 
     if mixed_route:
         largest_key, largest_rows = max(mixed_route, key=lambda item: (len(item[1]), str(item[0])))
@@ -424,12 +429,13 @@ def split_report(packets: list, split: Split) -> SplitReport:
         fibers=len(groups),
         mixed_route_fibers=len(mixed_route),
         mixed_family_fibers=len(mixed_family),
+        mixed_status_fibers=len(mixed_status),
         max_fiber_size=max((len(rows) for rows in groups.values()), default=0),
         max_mixed_size=max((len(rows) for _, rows in mixed_route), default=0),
-        mixed_rows=sum(len(rows) for _, rows in mixed_route),
         largest_mixed_key=largest_key,
         largest_mixed_routes=tuple(Counter(p.route for p in largest_rows).most_common()),
         largest_mixed_families=tuple(Counter(p.family for p in largest_rows).most_common()),
+        largest_mixed_status=tuple(Counter(status(p) for p in largest_rows).most_common()),
     )
 
 
@@ -485,7 +491,7 @@ def tournament_fingerprint(reports: list[SplitReport]) -> tuple[Counter, int, li
 
     reverse = [[mat[j][i] for j in range(len(mat))] for i in range(len(mat))]
     remaining = set(range(len(mat)))
-    scc_sizes: list[int] = []
+    scc_sizes = []
     while remaining:
         seed = min(remaining)
         comp = reach(seed, mat) & reach(seed, reverse)
@@ -508,171 +514,146 @@ def sample_rows(rows: list, limit: int = 8) -> list:
     return ordered[: limit // 2] + ordered[-(limit // 2) :]
 
 
-def target_split_report(packets: list, split: Split):
-    rows = [p for p in packets if p.automatic_word == TARGET_WORD]
-    groups: dict[object, list] = defaultdict(list)
-    for packet in rows:
-        groups[split.key_func(packet)].append(packet)
-    mixed = [packet_rows for packet_rows in groups.values() if len({p.route for p in packet_rows}) > 1]
-    largest = max(mixed, key=len) if mixed else []
-    return rows, len(groups), mixed, largest
-
-
 def print_assumption_challenge() -> None:
     print("[0] Assumption challenge")
     print("  considered vertices:")
-    print("    runners, gaps, fixed circle sections, residue classes, Erdos-Turan")
-    print("    Fourier modes, Henselian unit roots, denominator units, barcode bars,")
-    print("    packet labels, and proof obligations.")
+    print("    runners, gaps, fixed circle sections, section boundaries, residues,")
+    print("    Fourier clocks, p-adic unit roots, zero-root scale debt, magnitude")
+    print("    cocycles, barcode fibers, packet labels, and proof obligations.")
     print("  chosen vertices:")
-    print("    zipper teeth / proof-carrier bundles over HYP-2963 packets.")
+    print("    quotient/proof-carrier bundles over HYP-2963 packets.")
     print("  preserved LRC predicate:")
-    print("    theorem-route purity and boundary-versus-open status at threshold 1/14.")
+    print("    theorem-route purity and boundary/open safety at threshold 1/14.")
+    print("  destroyed information:")
+    print("    raw runner identity, exact endpoint owners, and full Fejer atom banks")
+    print("    until barcode/packet zipper fields are reattached.")
     print("  challenged assumption:")
-    print("    exact magnitude is not the only possible convergence carrier; test")
-    print("    analytic discrepancy and p-adic unit-lift rules before accepting that")
-    print("    route purity needs near-identity packet data.")
+    print("    Hensel information should be read through p-adic unit roots, not")
+    print("    through the forced nonunit zero root alone.")
     print()
 
 
 def print_reports(reports: list[SplitReport]) -> None:
-    print("[1] Convergence ladder")
+    print("[1] Zipper convergence table")
     print(
-        "  {name:29s} {fibers:>7s} {mixed:>7s} {mfam:>7s} {maxf:>7s} "
-        "{maxm:>7s} {mrows:>8s} {purity:>7s}"
-        .format(
+        "  {name:25s} {fibers:>7s} {mixr:>7s} {mixf:>7s} {mixs:>7s} "
+        "{maxf:>7s} {maxm:>7s} {purity:>7s}".format(
             name="split",
             fibers="fibers",
-            mixed="mixR",
-            mfam="mixF",
+            mixr="mixR",
+            mixf="mixF",
+            mixs="mixS",
             maxf="maxF",
             maxm="maxMix",
-            mrows="mixRows",
             purity="purity",
         )
     )
-    prior: SplitReport | None = None
+    previous = None
     for report in reports:
         print(
-            "  {name:29s} {fibers:7d} {mixed:7d} {mfam:7d} {maxf:7d} "
-            "{maxm:7d} {mrows:8d} {purity:6.1f}%".format(
+            "  {name:25s} {fibers:7d} {mixr:7d} {mixf:7d} {mixs:7d} "
+            "{maxf:7d} {maxm:7d} {purity:6.1f}%".format(
                 name=report.split.name,
                 fibers=report.fibers,
-                mixed=report.mixed_route_fibers,
-                mfam=report.mixed_family_fibers,
+                mixr=report.mixed_route_fibers,
+                mixf=report.mixed_family_fibers,
+                mixs=report.mixed_status_fibers,
                 maxf=report.max_fiber_size,
                 maxm=report.max_mixed_size,
-                mrows=report.mixed_rows,
                 purity=report.route_purity_score / 10,
             )
         )
-        if prior:
+        if previous:
             print(
-                "    delta from previous: mixed_fibers {:+d}, max_mixed {:+d}, mixed_rows {:+d}".format(
-                    report.mixed_route_fibers - prior.mixed_route_fibers,
-                    report.max_mixed_size - prior.max_mixed_size,
-                    report.mixed_rows - prior.mixed_rows,
-                )
+                f"    delta_vs_previous: fibers={report.fibers - previous.fibers:+d} "
+                f"mixR={report.mixed_route_fibers - previous.mixed_route_fibers:+d} "
+                f"maxMix={report.max_mixed_size - previous.max_mixed_size:+d}"
             )
-        prior = report
+        previous = report
     print()
     print("  largest mixed fiber by split:")
     for report in reports:
         print(
             f"    {report.split.name}: max_mixed={report.max_mixed_size} "
-            f"routes={dict(report.largest_mixed_routes)}"
+            f"routes={dict(report.largest_mixed_routes)} status={dict(report.largest_mixed_status)}"
         )
     print()
 
 
-def print_target_word_templates(packets: list) -> None:
+def print_unit_rule_readout(packets: list) -> None:
+    print("[2] Erdos-Turan and Henselian unit clocks")
+    et_support = Counter(et_coarse_clock(p) for p in packets)
+    unit_support = Counter(hensel_unit_counts(p) for p in packets)
+    exact_unit_support = Counter(hensel_unit_rule(p) for p in packets)
+    singular_unit = sum(
+        1
+        for p in packets
+        if any(len(hensel_unit_signature(p, prime)[1]) for prime in HENSEL_PS)
+    )
+    zero_singular = sum(
+        1
+        for p in packets
+        if any(hensel_unit_signature(p, prime)[2] == "zero-singular" for prime in HENSEL_PS)
+    )
+    print(f"  coarse_et_clock_fibers={len(et_support)} largest={et_support.most_common(1)[0][1]}")
+    print(f"  hensel_unit_count_fibers={len(unit_support)} largest={unit_support.most_common(1)[0][1]}")
+    print(f"  hensel_unit_exact_fibers={len(exact_unit_support)} largest={exact_unit_support.most_common(1)[0][1]}")
+    print(f"  packets_with_singular_unit_root={singular_unit}")
+    print(f"  packets_with_zero_singular_debt={zero_singular}")
+    print("  readout:")
+    print("    ET clocks are global phase/discrepancy clocks; they split many")
+    print("    residue fibers but remain magnitude-blind.")
+    print("    Unit-Hensel roots are local lift clocks; zero-singular status is")
+    print("    separate scale debt and should not masquerade as a unit witness.")
+    print()
+
+
+def print_target_word(packets: list, reports: list[SplitReport]) -> None:
     rows = [p for p in packets if p.automatic_word == TARGET_WORD]
     print(f"[3] Target automatic word {TARGET_WORD}")
     print(f"  rows={len(rows)}")
     print(f"  routes={dict(Counter(p.route for p in rows))}")
     print(f"  families={dict(Counter(p.family for p in rows))}")
-    print(f"  distinct M values={len({p.M for p in rows})}")
+    print(f"  distinct_M={len({p.M for p in rows})}")
+    print(f"  distinct_ET_clocks={len({et_clock(p) for p in rows})}")
+    print(f"  distinct_unit_rules={len({hensel_unit_rule(p) for p in rows})}")
     print()
-    for split in SPLITS[1:]:
-        _, fiber_count, mixed, largest = target_split_report(packets, split)
-        print(
-            f"  {split.name}: fibers={fiber_count} mixed_route={len(mixed)} "
-            f"largest_mixed={len(largest)}"
-        )
-        if largest:
-            print(f"    routes={dict(Counter(p.route for p in largest))}")
+    for report in reports[1:8]:
+        split = report.split
+        groups: dict[object, list] = defaultdict(list)
+        for packet in rows:
+            groups[split.key_func(packet)].append(packet)
+        mixed = [g for g in groups.values() if len({p.route for p in g}) > 1]
+        print(f"  {split.name}: fibers={len(groups)} mixed_route={len(mixed)}")
+        if mixed:
+            largest = max(mixed, key=len)
+            print(
+                f"    largest_mixed_rows={len(largest)} "
+                f"routes={dict(Counter(p.route for p in largest))}"
+            )
             for packet in sample_rows(largest, 6):
                 print(
-                    "      {name:34s} M={M:>7s} mu={mu:>9s} q0={q0:2d} "
-                    "et={et} hU={hu} qrule={qr} route={route}".format(
+                    "      {name:34s} M={M:>7s} mu={mu:>9s} "
+                    "q0={q0:2d} unit={unit} route={route}".format(
                         name=packet.name[:34],
                         M=fmt(packet.M),
                         mu=fmt(packet.strict_safe_mu),
                         q0=packet.q_threshold,
-                        et=erdos_turan_signature(packet),
-                        hu=tuple((x[0], x[1], x[3]) for x in henselian_unit_rule(packet)),
-                        qr=q_unit_excess_rule(packet),
+                        unit=hensel_unit_counts(packet),
                         route=packet.route,
                     )
                 )
     print()
 
 
-def print_rule_readout(reports: list[SplitReport]) -> None:
-    by_name = {report.split.name: report for report in reports}
-    residue = by_name["residue_terminal_fiber"]
-    et = by_name["erdos_turan_residue_zipper"]
-    hensel = by_name["henselian_unit_zipper"]
-    both = by_name["et_hensel_unit_zipper"]
-    qrule = by_name["et_hensel_qrule_zipper"]
-    mag = by_name["magnitude_cocycle"]
-    print("[2] Proof readout")
-    print("  Residue-terminal fibers are close but still mixed.")
-    print(
-        "  Erdos-Turan bins alone change mixed fibers by {:+d} and max mixed by {:+d}.".format(
-            et.mixed_route_fibers - residue.mixed_route_fibers,
-            et.max_mixed_size - residue.max_mixed_size,
-        )
-    )
-    print(
-        "  Henselian unit-rule bins alone change mixed fibers by {:+d} and max mixed by {:+d}.".format(
-            hensel.mixed_route_fibers - residue.mixed_route_fibers,
-            hensel.max_mixed_size - residue.max_mixed_size,
-        )
-    )
-    print(
-        "  Zipping both changes mixed fibers by {:+d} and max mixed by {:+d}.".format(
-            both.mixed_route_fibers - residue.mixed_route_fibers,
-            both.max_mixed_size - residue.max_mixed_size,
-        )
-    )
-    print(
-        "  Adding the coarse q/unit-excess lane leaves {mixed} mixed route fibers; exact magnitude leaves {mag}.".format(
-            mixed=qrule.mixed_route_fibers,
-            mag=mag.mixed_route_fibers,
-        )
-    )
-    if hensel.mixed_route_fibers == 0:
-        print("  Interpretation: on this target fiber, the Henselian unit rule is")
-        print("  already a route-pure convergence carrier, while Erdos-Turan bins explain")
-        print("  most of the visible contraction before the p-adic unit rule finishes it.")
-        print("  The next lemma should prove this unit-lift split familywise, then stress")
-        print("  the same rule on the full HYP-2963 bank before replacing exact magnitude.")
-    else:
-        print("  Interpretation: Erdos-Turan controls convergence pressure and the")
-        print("  Henselian unit rule names local lift debt, but the current coarse bins")
-        print("  do not yet replace the exact magnitude cocycle.  The next lemma should")
-        print("  prove which q/unit-excess sublanes admit compression without route mixing.")
-    print()
-
-
 def print_tournament(reports: list[SplitReport]) -> None:
     score_hist, c3, scc, hp, ranking = tournament_fingerprint(reports)
     print("[4] Tournament Analysis")
-    print("  vertices_are=zipper teeth / proof carriers, not runners")
-    print("  observable=route purity, max mixed-fiber size, convergence from prior")
-    print("             tooth, Erdos-Turan retention, Henselian-unit retention,")
-    print("             magnitude retention, packet-label retention, proof cost")
+    print("  vertices_are=quotient/proof-carrier bundles, not runners")
+    print("  observable=route purity, max mixed-fiber size, ET discrepancy,")
+    print("             Henselian unit stability, magnitude retention,")
+    print("             topology retention, packet-label retention, finite-state")
+    print("             checkability, and proof cost")
     print("  switch=majority comparison of observable vectors")
     print("  tie_hamiltonian_path=" + " > ".join(s.name for s in SPLITS))
     print(f"  score_hist={dict(sorted(score_hist.items()))}")
@@ -680,6 +661,26 @@ def print_tournament(reports: list[SplitReport]) -> None:
     print(f"  scc_sizes={scc}")
     print(f"  hamiltonian_path_count={hp}")
     print("  score_order=" + " > ".join(ranking))
+    print()
+
+
+def print_proof_readout() -> None:
+    print("[5] Proof readout")
+    print("  1. Erdos-Turan clocks improve the residue zipper, but they do not")
+    print("     replace exact magnitude; they are best read as a discrepancy")
+    print("     certificate scheduler.")
+    print("  2. The Henselian unit rule separates genuine unit-root lifting from")
+    print("     zero-root scale debt.  This makes p-adic data a routing rule,")
+    print("     not a scalar discriminator.")
+    print("  3. The magnitude cocycle is still the first tested non-route gate")
+    print("     with zero mixed theorem-route fibers on the full bank.  ET+unit")
+    print("     data explains which fibers should receive analytic or p-adic")
+    print("     certificates before that exact cocycle is discharged.")
+    print("  4. The next proof target is a convergence theorem: every residue")
+    print("     fiber either has a bounded ET discrepancy certificate, a unit")
+    print("     Hensel lift/zero-debt exit, a familywise magnitude formula,")
+    print("     or named K33/F7/THM-572 residual debt.")
+    print()
 
 
 def main() -> None:
@@ -688,37 +689,27 @@ def main() -> None:
     parser.add_argument("--two-swap-limit", type=int, default=36)
     parser.add_argument("--alias-depth", type=int, default=4)
     parser.add_argument("--lcm-tail-max", type=int, default=5)
-    parser.add_argument("--workers", type=int, default=max(1, min(os.cpu_count() or 1, 8)))
-    parser.add_argument("--target-word", default=TARGET_WORD)
-    parser.add_argument(
-        "--full-bank",
-        action="store_true",
-        help="Audit the whole HYP-2963 bank. Default filters to --target-word before exact packet computation.",
-    )
+    parser.add_argument("--workers", type=int, default=1)
     args = parser.parse_args()
 
     rows = lp.build_bank(args.single_limit, args.two_swap_limit, args.alias_depth, args.lcm_tail_max)
-    all_rows = len(rows)
-    if not args.full_bank:
-        rows = [row for row in rows if lp.automatic_word(row[2]) == args.target_word]
     packets = lp.compute_packets(rows, args.workers)
     reports = [split_report(packets, split) for split in SPLITS]
 
-    print("=== LRC14 fiber-zipper convergence S188 ===")
+    print("=== LRC14 zipper-fiber convergence scout S188 ===")
     print(
-        "bank=HYP-2963 "
-        + ("full default rows " if args.full_bank else f"target automatic word {args.target_word} ")
-        + f"single_limit={args.single_limit} two_swap_limit={args.two_swap_limit} "
+        "bank=HYP-2963 default rows "
+        f"single_limit={args.single_limit} two_swap_limit={args.two_swap_limit} "
         f"alias_depth={args.alias_depth} lcm_tail_max={args.lcm_tail_max}"
     )
-    print(f"candidate_rows={len(rows)} of {all_rows}")
     print(f"packets={len(packets)}")
     print()
     print_assumption_challenge()
     print_reports(reports)
-    print_rule_readout(reports)
-    print_target_word_templates(packets)
+    print_unit_rule_readout(packets)
+    print_target_word(packets, reports)
     print_tournament(reports)
+    print_proof_readout()
 
 
 if __name__ == "__main__":
