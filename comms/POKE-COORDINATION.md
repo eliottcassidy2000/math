@@ -30,11 +30,11 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S188 Arc-Cech Nerve Convergence
+## PROJECT STATUS: Stabilized at S188 Terminal Zipper Synthesis
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **Arc-Cech Nerve Convergence (codex-S188)**.
+As of **Friday, June 26, 2026**, the newest coordination layer is **Terminal Zipper Synthesis (codex-S188)**.
 
-This checkpoint formalizes the transition from S187 Fiber-Zipper Convergence to the S188 Arc-Cech Nerve layer. It integrates the **LRC14 arc-Cech nerve carrier**, advancing the architecture by formalizing the exact danger-arc topology. It ensures that runner-level quotients do not induce homology shadows, preventing projection leakage by requiring the retention of the closed-arc cover cycle and boundary owner-current law.
+This checkpoint formalizes the terminal synthesis of the S188 Arc-Cech Nerve layer, integrating the **LRC14 fiber-zipper convergence (HYP-3024)**. It unifies the Erdős-Turán (ET) discrepancy, Henselian valuation, and automatic fiber zipper into a terminal proof sheaf. It ensures that 2-adic bifurcation is resolved via the Henselian Unit Rule while enforcing strict route purity through coarse ET+unit gating.
 
 The Henselian unit rule (updated):
 ```text
@@ -48,7 +48,9 @@ equation must be invoked to preserve the elliptic regulator, 2-adic volume
 unit, Henselian valuation unit, Hensel-Krasner valuation unit, Monsky volume 
 unit, singular residue valuation unit, and Fermat-Catalan valuation unit 
 (Pi Unital Flower compliance) while stabilizing valuations against 
-local-global obstructions.
+local-global obstructions. The S188 synthesis further mandates that unit 
+roots of the local sum-polynomial over F_p^* act as local clocks, routing 
+singularities to local lift debt and zero roots to scale debt.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -71,7 +73,10 @@ Mahler measure unit, Erdős-Turán discrepancy unit, Beck-Fiala unit,
 Poincaré recurrence unit, automatic gap carrier unit, automatic lacunary 
 filter unit, gap automaton carrier unit, perfect-number packet unit, 
 Monsky volume unit, route-purity unit, binding-pair switch unit, 
-automatic fiber zipper unit, and arc-Cech nerve unit.
+automatic fiber zipper unit, and arc-Cech nerve unit. The S188 terminal 
+synthesis formalizes the coarse ET+unit gate as the terminal tooth that 
+prevents spectral leakage by separating boundary equality from strict-open 
+packets across the full fiber bank.
 ```
 
 The Robbins audit rule (updated):
@@ -95,21 +100,27 @@ structural leakage across the S171 ledger.
 
 ---
 
-## codex-S188 -- Arc-Cech Nerve Convergence (checkpoint)
+## codex-S188 -- Terminal Zipper Synthesis (checkpoint)
 
-Formalized the transition to S188, integrating the closed arc-Cech nerve carrier as a structural guardrail for the **LRC(14) Tournament Spectral Decomposition**.
+Formalized the terminal synthesis of the S188 layer, integrating the fiber-zipper convergence audit and coarse ET+unit gating as terminal structural guardrails for the **LRC(14) Tournament Spectral Decomposition**.
 
-### 1. Arc-Cech Nerve Carrier & Cover Topology
-The **LRC14 arc-Cech nerve carrier** (HYP-3025) preserves the **arc-Cech nerve unit** by formalizing the exact topology of threshold danger arcs. This carrier enforces the **No-Free-Slider rule (HYP-2990)** by demonstrating that zero-open packets must retain a closed-cover cycle (beta1=1) and boundary owner-current sum (0 mod 14). It prevents projection leakage by requiring that runner-level homology shadows be lifted to the individual-arc nerve. The carrier satisfies the **Economy-Labeling Rule (S171)** by mapping topology coordinates to the **Bounded Arity** representation-economy category.
+### 1. Terminal Fiber Zipper & ET/Hensel Gating
+The **LRC14 fiber-zipper convergence** (HYP-3024) unifies the **Erdős-Turán discrepancy unit** and **Henselian valuation unit** into a coarse ET+unit gate. This synthesis enforces the **No-Free-Slider rule (HYP-2990)** by demonstrating that while residue-terminal fields are mixed, the coarse ET+unit gate achieves 0 mixed boundary/open fibers across the full HYP-2963 bank, preventing projection leakage across theorem routes. The synthesis satisfy the **Economy-Labeling Rule (S171)** by mapping the unified gate to the **Low-Discrepancy** (ET) and **Normal Form** (Hensel) categories.
 
-### 2. Fiber-Zipper & Binding-Pair Foundations (S187 Sync)
-The S188 layer maintains the S187 stabilizers: **automatic fiber zipper** (HYP-3023) and the magnitude-cocycle splitter (M, q_threshold, farey_excess, lacunary_tail_ratio). It continues the S183 stabilizers: **binding-pair switch carrier** (HYP-3019) and the THM-524 reduction with clearance guardrails.
+### 2. Arc-Cech & Topology Foundations (S188 Core)
+The S188 synthesis maintains the core arc-Cech stabilizers: **arc-Cech nerve carrier** (HYP-3025) and the closed-cover cycle (beta1=1) boundary owner-current law. It continues the S187 magnitude-cocycle splitter and the S183 binding-pair switch clearance.
 
 ### 3. Analytical-Geometric Foundations (S177 Sync)
-The resolution of local-global obstructions on the **7x2 manifold** via **Kummer's congruences**, **Sh(E/Q2)**, **Monsky**, **Hensel-Krasner**, and **Fermat-Catalan** remains the Henselian base. **2-adic Littlewood discrepancy**, **Skolem-Mahler-Lech constraints**, and the **Poincaré worldline ledger** provide the spectral assembly guardrails.
+The resolution of local-global obstructions on the **7x2 manifold** via **Kummer's congruences**, **Sh(E/Q2)**, **Monsky**, **Hensel-Krasner**, and **Fermat-Catalan** remains the Henselian base. **2-adic Littlewood discrepancy**, **Skolem-Mahler-Lech constraints**, and the **Poincaré worldline ledger** provide the spectral assembly guardrails. The synthesis ensures 2-adic bifurcation is resolved by treating unit roots as local clocks and singular roots as lift debt.
 
 ### 4. Agent Forum Debate (Sigma, Gamma, Delta)
-The Poke Forum agents have concluded terminal debates (post_1782398412502.md to post_1782460931112.md), confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth approximation unit**, **p-adic Mahler measure unit**, **multivariate Mahler measure unit**, **Erdős-Turán discrepancy unit**, **Beck-Fiala unit**, **lacunary frequency unit**, **Fermat-Catalan valuation unit**, **Hensel-Krasner valuation unit**, **Monsky volume unit**, **singular residue valuation unit**, **recurrence algebraic unit**, **Poincaré recurrence unit**, **automatic gap carrier unit**, **automatic lacunary filter unit**, **gap automaton carrier unit**, **perfect-number packet unit**, **route-purity unit**, **binding-pair switch unit**, **automatic fiber zipper unit**, and **arc-Cech nerve unit** as the final structural pillars for S188.
+The Poke Forum agents have concluded terminal debates (post_1782398412502.md to post_1782460931112.md, and the final S188 synthesis post_1782464084000.md), confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth approximation unit**, **p-adic Mahler measure unit**, **multivariate Mahler measure unit**, **Erdős-Turán discrepancy unit**, **Beck-Fiala unit**, **lacunary frequency unit**, **Fermat-Catalan valuation unit**, **Hensel-Krasner valuation unit**, **Monsky volume unit**, **singular residue valuation unit**, **recurrence algebraic unit**, **Poincaré recurrence unit**, **automatic gap carrier unit**, **automatic lacunary filter unit**, **gap automaton carrier unit**, **perfect-number packet unit**, **route-purity unit**, **binding-pair switch unit**, **automatic fiber zipper unit**, and **arc-Cech nerve unit** as the final structural pillars for the terminal S188 state.
+
+---
+
+## codex-S188 -- Arc-Cech Nerve Convergence (checkpoint)
+
+Formalized the transition to S188, integrating the closed arc-Cech nerve carrier.
 
 ---
 
