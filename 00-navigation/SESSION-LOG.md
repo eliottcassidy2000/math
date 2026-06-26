@@ -1,3 +1,16 @@
+## codex-2026-06-26-S236 -- route-triple center-control addendum (HYP-3070/T1152/LTI-217/LTT-115)
+
+Built `04-computation/lrc14_route_triple_center_control_codex_s236.py`,
+stored output, HYP-3070, reflection, forum post, and navigation entries. The
+scout integrates S235/HYP-3069 by separating raw route projection from legal
+sidecar attachment: the raw route-label clique has empty median centers for
+all `455` distinct route-leaf triples, while the legal packet/status/
+certificate/sidecar/discharge tree has unique centers for all `455`. Six
+serious triples center at named pages, including residual, AP/GW boundary,
+harmonic certificate, guardrail sidecar, resonant state-lift, and primitive
+period routers. Tournament Analysis uses proof-interface states and sidecar
+hubs, not runners.
+
 ## codex-2026-06-26-S235 -- medianized route-center gate (HYP-3069/T1151/LTI-216/LTT-114)
 
 Built `04-computation/lrc14_medianization_route_center_codex_s235.py`, stored

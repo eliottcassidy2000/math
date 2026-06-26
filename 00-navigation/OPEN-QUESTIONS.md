@@ -1,5 +1,17 @@
 # Open Questions
 
+**OPEN-Q-108 S236 route-triple center-control addendum:** HYP-3070 proposes a
+pre-Boolean legality gate for the final medianization interface. Raw route
+labels alone should behave like a centerless clique (`0/455` unique centers in
+the S236 scout), while legal packet/status/certificate/sidecar/discharge
+attachment should give a unique named center (`455/455` in the scout). Next
+task: instantiate the expected-center pages on actual HYP-2963 coarse fibers
+and compare them with HYP-3069 Boolean median-completion centers. Any mismatch
+must expose a first missing sidecar or route to AP/GW boundary, primitive
+clock, owner-strip descent, harmonic certificate, state lift, or THM-572/F7.
+-> HYP-3070, HYP-3069, HYP-3068, HYP-3067, HYP-3066, HYP-3056, HYP-3054,
+HYP-2963, THM-572, LTI-217, LTT-115, T1152.
+
 **OPEN-Q-108 S235 medianized route-center addendum:** HYP-3069 proposes the
 final LRC assembly gate: after exact packet/route/certificate/sidecar/discharge
 fields are attached, every serious route triple should have a unique median

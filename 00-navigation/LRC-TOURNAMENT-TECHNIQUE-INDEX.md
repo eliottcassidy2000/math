@@ -3098,6 +3098,45 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-206, LTT-114, LTT-113, LTT-112, LTT-111, LTT-110, LTT-108, LTT-104,
   LTT-101, LTT-099, T1151, OPEN-Q-108.
 
+### LTT-115: Route-Triple Center-Control Addendum
+
+- **Move:** Separate raw route vocabulary from legal medianization. The raw
+  route-label projection is modeled as a clique on route leaves and is expected
+  to be centerless for distinct triples. Legal packet/status/certificate/
+  sidecar/discharge attachment is modeled as a median carrier with named center
+  pages before Boolean completion.
+- **LRC use:** HYP-3070 checks 15 route leaves. The raw clique has empty
+  centers for all `455` route triples; the legal sidecar tree has unique
+  centers for all `455`. Named serious triples center at residual, AP/GW
+  boundary, harmonic certificate, guardrail sidecar, resonant state-lift, and
+  primitive-period routers. The primitive-owner split centers at the primitive
+  clock because two legs share that clock before owner-strip comparison.
+- **Preserves:** Route/status-changing triple identity, raw projection status,
+  legal sidecar center page, center-page depth, majority-clock reason, guardrail
+  sidecar hub, AP/GW boundary stop, primitive-clock handoff, owner-strip
+  descent, harmonic backend, state-lift debt, and THM-572/F7 exit.
+- **Forgets / guardrail:** Raw route labels forget the sidecar page that makes
+  a center legal. A raw false center means vocabulary collapse; an empty legal
+  center means the first missing sidecar must be named before creating theorem
+  debt.
+- **Tournament fingerprint:** vertices are proof-interface states and sidecar
+  hubs, not runners. Pairwise observable is predicate retention, median
+  uniqueness, sidecar legality, first-missing-sidecar clarity, discharge
+  namedness, and formal checkability. The S236 tournament is transitive with
+  path `labelled_packet_sheaf > route_triple_center_control >
+  medianized_route_center_gate > median_owner_root_spine >
+  desargues_median_lens > boundary_status_gate > positive_residual_router >
+  sidecar_observability_matrix > harmonic_certificate_backend >
+  resonant_state_lift_router > primitive_period_router >
+  raw_route_label_triangle`.
+- **Next pull:** Instantiate the center-control table on actual HYP-2963
+  coarse fibers and compare its expected sidecar-tree centers to HYP-3069's
+  Boolean median-completion obligations.
+- **Pointers:** HYP-3070, HYP-3069, HYP-3068, HYP-3067, HYP-3066, HYP-3065,
+  HYP-3063, HYP-3056, HYP-3054, HYP-2963, THM-572, LTI-217, LTI-216,
+  LTI-215, LTI-214, LTT-115, LTT-114, LTT-113, LTT-112, T1152, T1151,
+  OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -3169,6 +3208,10 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    median route triple ID, median center signature, median completion rank,
    simplex directed-edge sector, Faulhaber u center, bridge-rank center,
    rectangle-debt center, Hodge-cycle center status, legal center discharge,
+   route-triple center control, raw route-clique center status,
+   legal sidecar-tree center status, median center expected page,
+   center-page depth, center-page majority reason, guardrail sidecar center,
+   center-control exit,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

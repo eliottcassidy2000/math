@@ -135,6 +135,7 @@ residual handoff.
 | HYP-3032 analytic bridge | `mu^2/phi` is a capacity meter with blindness report | analytic capacity | prime-power/family route | packet-keyed analytic zipper |
 | HYP-2995/HYP-2997 cocycle atlases | forgotten coordinates become cochains or named residuals | obstruction class | row identity | implement `omega_Q` manifest |
 | Carrier pullback index CPI-* | `90` cross-surface carrier rows | source-to-LRC translation | proof if uninstantiated | instantiate rows with status/route tests |
+| HYP-3070 route-triple center control | raw route clique has `0/455` centers while legal sidecar tree has `455/455` unique centers | sidecar-completed route-triple median legality | route labels alone, if treated as proof graph vertices | instantiate expected center pages on HYP-2963 fibers and compare with HYP-3069 Boolean completion |
 | Incoming Pincherle/operator forum cue | operator and distribution analogies for hidden lifts | analogy grammar | LRC predicate | translate only as sidecar/certificate law |
 
 ## Pair-Good Decoys And Active Owners

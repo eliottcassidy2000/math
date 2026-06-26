@@ -15,6 +15,21 @@
 
 ---
 
+## Lead codex-2026-06-26-S236: Route-triple center-control addendum
+
+Use HYP-3070 as the raw-vs-legal control layer for the final LRC medianization
+interface. Read after S235/HYP-3069: Boolean completion finds raw-projection
+ambiguity, while S236 says the route vocabulary itself should first pass a
+center-control test.
+**Readout:** `04-computation/lrc14_route_triple_center_control_codex_s236.py`
+and `05-knowledge/results/lrc14_route_triple_center_control_codex_s236.out`.
+**Status:** exact finite scout and synthesis, not proof. Raw route-label clique
+has empty centers for `455/455` route triples; legal sidecar tree has unique
+centers for `455/455`. Next: instantiate the expected-center pages on actual
+HYP-2963 coarse fibers and compare with HYP-3069's Boolean median-completion
+obligations.
+Namespace: HYP-3070 / T1152 / LTI-217 / LTT-115.
+
 ## Lead codex-2026-06-26-S235: Medianized route-center gate
 
 Turn the doubled triangular/simplex/Faulhaber cue into a final LRC
