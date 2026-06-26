@@ -1,0 +1,94 @@
+LRC14 analytic sieve-clock bridge (codex-2026-06-26-S196)
+source_threads=HYP-2982,HYP-2983,HYP-3024,HYP-3026,HYP-3027
+external_prompt=Mobius/totient sums, large sieve/circle method, smoothing, Kaczynski
+
+rows=19 arithmetic_limit=5000
+[0] Row-level analytic packet readout
+name route status M@t q factors mu phi mu2/phi A(q) G(q) clock smoothing boundary
+AP13 | BOUNDARY-AP-GW | boundary | 1/14@1/14 | 14 | 2*7 | 1 | 6 | 1/6 | -0.005927 | 4.016667 | apex_14_squarefree_unit | endpoint_kaczynski_boundary_atom | true_wide_kaczynski_ambiguous_approach
+GW_12_to_24 | BOUNDARY-AP-GW | boundary | 1/14@1/14 | 14 | 2*7 | 1 | 6 | 1/6 | -0.005927 | 4.016667 | apex_14_squarefree_unit | endpoint_kaczynski_boundary_atom | true_wide_kaczynski_ambiguous_approach
+K33_12_to_36 | K33-STATE-LIFT | open | 3/41@17/41 | 41 | 41 | -1 | 40 | 1/40 | 0.026093 | 5.070058 | k33_prime_unit | k33_exponential_sum_state_lift | nonunit_state_lift_boundary_debt
+loose_12_to_26 | Q-WITNESS | open | 1/12@1/12 | 12 | 2^2*3 | 0 | 4 | 0 | -0.000433 | 3.766667 | repeated_prime_mu2phi_blind | direct_q_witness_major_arc | ordinary_open_fatou_approach
+loose_12_to_96 | Q-WITNESS | open | 8/101@42/101 | 101 | 101 | -1 | 100 | 1/100 | 0.021231 | 5.920544 | prime_squarefree_unit | direct_q_witness_minor_arc | ordinary_open_fatou_approach
+GW_fiber_tail_12_to_38 | Q-WITNESS | open | 1/12@1/12 | 12 | 2^2*3 | 0 | 4 | 0 | -0.000433 | 3.766667 | repeated_prime_mu2phi_blind | direct_q_witness_major_arc | ordinary_open_fatou_approach
+GW_fiber_tail_12_to_52 | Q-WITNESS | open | 1/12@1/12 | 12 | 2^2*3 | 0 | 4 | 0 | -0.000433 | 3.766667 | repeated_prime_mu2phi_blind | direct_q_witness_major_arc | ordinary_open_fatou_approach
+GW_fiber_tail_12_to_150 | Q-WITNESS | open | 1/12@1/12 | 12 | 2^2*3 | 0 | 4 | 0 | -0.000433 | 3.766667 | repeated_prime_mu2phi_blind | direct_q_witness_major_arc | ordinary_open_fatou_approach
+petal_10_to_20 | BOUNDARY-PETAL-SPORADIC | open | 2/27@8/27 | 27 | 3^3 | 0 | 18 | 0 | 0.037341 | 4.571843 | c27_primepower_mu2phi_blind | fejer_ramanujan_c27_packet | c27_endpoint_transfer_debt
+petal_13_to_26 | BOUNDARY-PETAL-SPORADIC | open | 2/27@2/27 | 27 | 3^3 | 0 | 18 | 0 | 0.037341 | 4.571843 | c27_primepower_mu2phi_blind | fejer_ramanujan_c27_packet | c27_endpoint_transfer_debt
+P10_plus_GW | BOUNDARY-PETAL-SPORADIC | open | 2/27@8/27 | 27 | 3^3 | 0 | 18 | 0 | 0.037341 | 4.571843 | c27_primepower_mu2phi_blind | fejer_ramanujan_c27_packet | c27_endpoint_transfer_debt
+P10_plus_K33 | K33-STATE-LIFT | open | 2/27@8/27 | 27 | 3^3 | 0 | 18 | 0 | 0.037341 | 4.571843 | c27_primepower_mu2phi_blind | k33_exponential_sum_state_lift | nonunit_state_lift_boundary_debt
+cover_12_to_84 | COVERING-MOMENT | open | 7/89@37/89 | 89 | 89 | -1 | 88 | 1/88 | -0.001466 | 5.833944 | prime_squarefree_unit | boundary_moment_large_sieve_precondition | finite_grid_boundary_moment_debt
+fibbinary_first13 | AUTOMATIC-OPEN-CONTROL | open | 3/25@4/25 | 25 | 5^2 | 0 | 20 | 0 | -0.001121 | 4.488510 | repeated_prime_mu2phi_blind | automatic_open_control_clock | ordinary_open_fatou_approach
+moser_de_bruijn_first13 | AUTOMATIC-OPEN-CONTROL | open | 1/6@1/6 | 6 | 2*3 | 1 | 2 | 1/2 | 0.133333 | 3.250000 | composite_squarefree_unit | automatic_open_control_clock | ordinary_open_fatou_approach
+residual_petal_drop10_13_add20_26 | BOUNDARY-PETAL-SPORADIC | open | 2/23@7/23 | 23 | 23 | -1 | 22 | 1/22 | -0.001121 | 4.488510 | prime_squarefree_unit | fejer_ramanujan_c27_packet | c27_endpoint_transfer_debt
+residual_cover_drop8_12_add16_24 | COVERING-MOMENT | open | 2/23@3/23 | 23 | 23 | -1 | 22 | 1/22 | -0.001121 | 4.488510 | prime_squarefree_unit | boundary_moment_large_sieve_precondition | finite_grid_boundary_moment_debt
+residual_k33_drop12_13_add26_36 | K33-STATE-LIFT | open | 3/37@3/37 | 37 | 37 | -1 | 36 | 1/36 | -0.001474 | 4.947835 | prime_squarefree_unit | k33_exponential_sum_state_lift | nonunit_state_lift_boundary_debt
+residual_cover_single_12_to_72 | COVERING-MOMENT | open | 6/77@32/77 | 77 | 7*11 | 1 | 60 | 1/60 | 0.000215 | 5.673606 | composite_squarefree_unit | boundary_moment_large_sieve_precondition | finite_grid_boundary_moment_debt
+
+squarefree_blind_rows=['loose_12_to_26', 'GW_fiber_tail_12_to_38', 'GW_fiber_tail_12_to_52', 'GW_fiber_tail_12_to_150', 'petal_10_to_20', 'petal_13_to_26', 'P10_plus_GW', 'P10_plus_K33', 'fibbinary_first13']
+interpretation=mu2/phi is a capacity clock with an attached blindness certificate; it is not an admissible LRC quotient by itself.
+
+[1] Analytic arithmetic checkpoints
+q M(q) sum_mu/n G=sum_mu2/phi Phi(q) theta(q) sum_1/p
+6 | -1 | 0.133333 | 3.250000 | 12 | 3.401197 | 1.033333
+12 | -2 | -0.000433 | 3.766667 | 46 | 7.745003 | 1.267100
+14 | -2 | -0.005927 | 4.016667 | 64 | 10.309952 | 1.344023
+23 | -2 | -0.001121 | 4.488510 | 172 | 19.223099 | 1.498956
+25 | -2 | -0.001121 | 4.488510 | 200 | 19.223099 | 1.498956
+27 | -1 | 0.037341 | 4.571843 | 230 | 19.223099 | 1.498956
+37 | -2 | -0.001474 | 4.947835 | 432 | 29.635300 | 1.592724
+41 | -1 | 0.026093 | 5.070058 | 530 | 33.348872 | 1.617114
+77 | -2 | 0.000215 | 5.673606 | 1832 | 65.876755 | 1.756566
+84 | -4 | -0.025116 | 5.765289 | 2166 | 74.665043 | 1.781272
+89 | -2 | -0.001466 | 5.833944 | 2456 | 79.153679 | 1.792508
+101 | 0 | 0.021231 | 5.920544 | 3144 | 88.343511 | 1.812718
+168 | -1 | 0.006897 | 6.442287 | 8610 | 151.932860 | 1.911624
+4312 | -9 | -0.001730 | 9.702085 | 5652414 | 4244.356659 | 2.388230
+
+[2] Quotient stress
+key fibers mixed_route mixed_status largest_fiber largest_mixed
+mu2_phi_blind_flag | 2 | 2 | 1 | 10 | 10
+  mixed_route_examples: 'live'=>AP13,GW_12_to_24,K33_12_to_36,loose_12_to_96,cover_12_to_84 ; 'blind'=>loose_12_to_26,GW_fiber_tail_12_to_38,GW_fiber_tail_12_to_52,GW_fiber_tail_12_to_150,petal_10_to_20
+mu2_phi_value_only | 9 | 2 | 0 | 9 | 9
+  mixed_route_examples: Fraction(0, 1)=>loose_12_to_26,GW_fiber_tail_12_to_38,GW_fiber_tail_12_to_52,GW_fiber_tail_12_to_150,petal_10_to_20 ; Fraction(1, 22)=>residual_petal_drop10_13_add20_26,residual_cover_drop8_12_add16_24
+sieve_clock_only | 6 | 4 | 0 | 5 | 5
+  mixed_route_examples: 'repeated_prime_mu2phi_blind'=>loose_12_to_26,GW_fiber_tail_12_to_38,GW_fiber_tail_12_to_52,GW_fiber_tail_12_to_150,fibbinary_first13 ; 'prime_squarefree_unit'=>loose_12_to_96,cover_12_to_84,residual_petal_drop10_13_add20_26,residual_cover_drop8_12_add16_24,residual_k33_drop12_13_add26_36 ; 'c27_primepower_mu2phi_blind'=>petal_10_to_20,petal_13_to_26,P10_plus_GW,P10_plus_K33
+sieve_clock_plus_exact_denominator | 11 | 2 | 0 | 4 | 4
+  mixed_route_examples: ('c27_primepower_mu2phi_blind', 27)=>petal_10_to_20,petal_13_to_26,P10_plus_GW,P10_plus_K33 ; ('prime_squarefree_unit', 23)=>residual_petal_drop10_13_add20_26,residual_cover_drop8_12_add16_24
+sieve_clock_plus_smoothing | 12 | 0 | 0 | 4 | 0
+nonroute_clock_packet | 12 | 1 | 0 | 4 | 2
+  mixed_route_examples: ('prime_squarefree_unit', 23, 'open', 6, 18, 6, 14)=>residual_petal_drop10_13_add20_26,residual_cover_drop8_12_add16_24
+declared_analytic_exit | 12 | 0 | 0 | 4 | 0
+
+[3] Tournament Analysis
+vertices=analytic proof clocks and repair packets, not runners/arcs
+pairwise_observable=status_retention,route_retention,denominator_retention,squarefree_blindness,smoothing_retention,exponential_sum_declared,boundary_approach,finite_checkability,noncircularity
+tie_hamiltonian_path=labelled_repair_ladder_packet>analytic_sieve_clock_bridge>kaczynski_boundary_approach>smoothing_explicit_formula_packet>exponential_sum_checksum>circle_method_major_minor_split>large_sieve_minor_arc_gate>mu2_phi_inverse_unit_clock>mobius_mu_over_n_tail>raw_prime_count
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+  raw_prime_count: destroys=all residues, packets, and smoothing debt
+  mobius_mu_over_n_tail: destroys=positive density and endpoint geometry
+  mu2_phi_inverse_unit_clock: destroys=prime powers, repeated-prime packets, and route labels
+  large_sieve_minor_arc_gate: destroys=major-arc local packet and boundary approach class
+  circle_method_major_minor_split: destroys=smoothing defect and exact exceptional packets
+  exponential_sum_checksum: destroys=which named packet owns a resonant checksum
+  smoothing_explicit_formula_packet: destroys=Kaczynski approach ambiguity unless labelled
+  kaczynski_boundary_approach: destroys=finite family label without repair ladder
+  analytic_sieve_clock_bridge: destroys=full packet labels and topology if used alone
+  labelled_repair_ladder_packet: destroys=nothing relevant in the audited bridge
+
+[4] Proof-angle synthesis
+mu_over_n_role=cancellation/tail guard; it can remove a smoothed kernel term but cannot certify positive lonely density alone.
+mu2_phi_role=inverse primitive-unit capacity; it is valuable exactly when squarefree blindness is carried as a side-channel.
+large_sieve_role=minor-arc family majorant; admissible only after major-arc packet labels and exceptional fibers are retained.
+exponential_sum_role=checksum for resonance packets; an unexplained large sum must route to AP/GW, C27, K33, covering, or F7/THM-572 debt.
+smoothing_role=kernel homotopy ledger; changing the smoothing function is legal only when boundary defects are named.
+kaczynski_role=approach-class label for true-wide boundary ambiguity; ordinary approaches should open, ambiguous approaches must be classified.
+candidate_lemma=inside a fixed automatic/residue/fusion fiber, the first nonzero analytic clock among mu/n tail, mu2/phi capacity, large-sieve minor-arc budget, exponential-sum checksum, smoothing defect, and Kaczynski approach class either opens a strict component, descends to AP/GW/C27/K33/covering, is dual-annihilated by Fejer/Ramanujan/Haar, or emits F7/THM-572 residual debt.
+
+[5] Assumption challenge
+Alternate vertices considered: runners, primes, denominators, residues, Fourier modes, smoothing kernels, exponential phases, boundary approach classes, local obstructions, and proof obligations.
+Chosen vertices are analytic proof clocks and repair packets.  The quotient preserves open/boundary status and theorem-route purity only when squarefree blindness, exact denominator, smoothing choice, exponential checksum, Kaczynski approach class, and packet labels remain attached or are discharged.
+Challenged assumption: a number-theoretic scalar such as sum mu(n)/n or sum mu(n)^2/phi(n) is not an LRC proof object.  It becomes useful only as a clock inside the HYP-3027 first-nonzero repair ladder.

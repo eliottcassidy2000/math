@@ -57,6 +57,43 @@ Added `04-computation/lrc14_fiber_zipper_convergence_codex_s188.py` and stored `
 Readout: residue-terminal fibers for `MFCMMCCFFFCCC` have `27` mixed route fibers and largest mixed size `30`; Erdos-Turan low-frequency residue bins reduce this to `6` mixed fibers and largest mixed size `4`; the Henselian unit rule at `p=2,3,7` gives `0` mixed route fibers before exact magnitude is attached.  ET is the contraction gauge; Henselian unit roots and denominator-unit data are the target-fiber route-purity splitter.
 
 Created HYP-3024, T1104, LTI-171, and reflection `07-reflections/lrc14-fiber-zipper-convergence-codex-s188.md`.  Proof-order takeaway: prove the Henselian unit split for `MFCMMCCFFFCCC`, then stress the same ET/Hensel zipper on the full HYP-2963 bank before demoting exact magnitude from fallback to theorem coordinate.
+## codex-2026-06-26-S196 -- LRC14 analytic sieve-clock bridge -- HYP-3032/LTI-180
+
+User asked to merge sums over primes, sums of `mu(n)`, `mu(n)/n`,
+`mu(n)^2/phi(n)`, large-sieve/circle-method/quadratic-sieve language,
+exponential sums, smoothing, saddle/explicit-formula packets, and Kaczynski
+history into the LRC14 proof search.  Pulled incoming HYP-3024 convergence
+updates and used HYP-3027's side-channel repair ladder as the target rather
+than treating analytic number theory as a free scalar shortcut.  During rebase,
+incoming work had already claimed HYP-3028/T1109/LTI-176/LTT-074 for the
+residual status-gate switchboard, so the analytic bridge was repaired forward
+to HYP-3032/T1113/LTI-180/LTT-078.
+
+Added `04-computation/lrc14_analytic_sieve_clock_bridge_codex_s196.py` and
+stored `05-knowledge/results/lrc14_analytic_sieve_clock_bridge_codex_s196.out`.
+The script audits the HYP-3026 named carrier bank plus the two residual
+HYP-3027 mixed pairs.  It computes exact `M=p/q`, factorization, `mu(q)`,
+`phi(q)`, `mu^2(q)/phi(q)`, prefix `sum mu(n)/n`, prefix
+`sum mu(n)^2/phi(n)`, `sum phi(n)`, `theta(q)`, and prime reciprocal sums,
+then stress-tests analytic quotient clocks.
+
+Main finding: `mu^2/phi` is a capacity meter with a blindness certificate, not
+an LRC quotient.  It is blind on repeated-prime/prime-power packets such as
+C27 `q=27=3^3` petals, `P10_plus_K33`, and the fibbinary `q=25` control.  Exact
+denominator plus non-route analytic fields still leaves the HYP-3027 `q=23`
+petal/covering pair mixed:
+`drop(10,13)->add(20,26)` and `drop(8,12)->add(16,24)` both have
+`M=2/23` and `mu^2/phi=1/22`.  The second HYP-3027 pair separates
+arithmetically (`3/37` K33 versus `6/77` covering).
+
+Created HYP-3032, T1113, LTI-180, LTT-078, reflection
+`07-reflections/lrc14-analytic-sieve-clock-bridge-codex-s196.md`, and a
+poke-forum handoff.  Candidate lemma: inside a fixed automatic/residue/fusion
+fiber, the first nonzero analytic clock among `mu/n` tail, `mu^2/phi`
+capacity, large-sieve minor-arc budget, exponential-sum checksum, smoothing
+defect, and Kaczynski approach class must open, descend to
+AP/GW/C27/K33/covering, be dual-annihilated by Fejer/Ramanujan/Haar, or emit
+F7/THM-572 residual debt.
 
 ## codex-2026-06-26-S185 -- Pair-good decoy generator classification (HYP-3021/LTI-168)
 

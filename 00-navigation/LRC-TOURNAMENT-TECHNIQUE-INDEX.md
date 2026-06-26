@@ -1436,6 +1436,38 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-148, LTI-147, LTI-109, LTI-108, LTI-107, LTI-106, LTI-047, LTI-046,
   LTT-075, LTT-074, LTT-072, LTT-006, T1112.
 
+### LTT-078: Analytic Sieve-Clock Bridge Tournament
+
+- **Move:** Treat analytic proof clocks as tournament vertices: raw prime
+  count, Mobius `mu/n` tail, `mu^2/phi` inverse-unit capacity, large-sieve
+  minor-arc gate, circle-method major/minor split, exponential-sum checksum,
+  smoothing/explicit-formula packet, Kaczynski boundary approach,
+  analytic-sieve bridge, and labelled repair-ladder packet.
+- **LRC use:** HYP-3032 turns HYP-2982/HYP-2983's Mobius/totient,
+  large-sieve/circle-method, smoothing, exponential-sum, and Kaczynski packet
+  into HYP-3027 repair-ladder clocks. In the S196 named plus residual-pair
+  bank, `mu^2/phi` is useful only as a capacity meter with a blindness
+  certificate: it kills C27 prime-power petals and the fibbinary `q=25` row,
+  while exact denominator plus non-route analytic packet fields still leave
+  the `q=23` petal/covering pair mixed.
+- **Preserves:** The declared analytic clock, its squarefree blindness report,
+  exact denominator, smoothing/approach class when attached, and quotient
+  stress against open/boundary status and theorem route.
+- **Forgets / guardrail:** Raw prime sums forget all LRC geometry; `mu/n`
+  forgets positive density; `mu^2/phi` forgets prime powers and repeated-prime
+  packets; large sieve without major-arc labels forgets local packet owners;
+  smoothing without a Kaczynski/defect ledger hides boundary atoms.
+- **Next pull:** Promote S196 fields into the repair-ladder manifest:
+  `mobius_tail_clock`, `mu2_phi_capacity`,
+  `squarefree_blindness_report`, `large_sieve_budget`,
+  `exponential_sum_checksum`, `smoothing_defect`, and
+  `kaczynski_approach_class`; then attack the `q=23` petal/covering residual
+  as the first analytic-clock zipper test.
+- **Pointers:** HYP-3032, HYP-3031, HYP-3027, HYP-3026, HYP-3024, HYP-3023,
+  HYP-3020, HYP-2985, HYP-2984, HYP-2983, HYP-2982, HYP-2979, HYP-2978,
+  HYP-2963, HYP-2997, HYP-2995, HYP-2992, THM-572, LTI-180, LTI-174,
+  LTI-171, LTT-077, LTT-072, LTT-070, T1113.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1463,6 +1495,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    Henselian unit-root rule, zero-root scale debt,
    coarse ET+unit status-convergence gate,
    status-topology proof gate, arc-boundary cycle flag,
+   Mobius tail clock, `mu2_phi_capacity`, squarefree-blindness report,
+   large-sieve budget, exponential-sum checksum, smoothing defect,
+   Kaczynski approach class,
    Mahler/Farey height bucket, Hensel singular counts,
    fusion signature, largest safe stick, safe-body mass, barcode shape,
    danger-distribution word, doubling-transition word, carrier-fusion exit,

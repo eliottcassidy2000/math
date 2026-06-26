@@ -207,6 +207,22 @@ HYP-3014, HYP-2963, HYP-2997, HYP-2995, HYP-2992, THM-572, LTI-173,
 LTI-172, LTI-171, LTI-170, LTI-169, LTI-168, LTI-167, LTI-166,
 LTT-070, LTT-069, LTT-068, LTT-067, T1105, LTI-TODO-43.
 
+**OPEN-Q-108 S196 analytic sieve-clock addendum:** HYP-3032 folds the
+Mobius/totient, large-sieve/circle-method, exponential-sum, smoothing, and
+Kaczynski packet from HYP-2982/HYP-2983 into the HYP-3027 repair ladder.  The
+finite audit says `mu^2/phi` is an inverse primitive-unit capacity clock with a
+squarefree-blindness certificate, not a proof quotient: C27 `q=27=3^3` petals,
+`P10_plus_K33`, and the fibbinary `q=25` control disappear under it.  Exact
+denominator and non-route analytic packet fields still leave the `q=23`
+petal/covering residual pair mixed, so the next theorem target is an analytic
+repair-clock zipper: inside a fixed automatic/residue/fusion fiber, the first
+nonzero analytic clock among `mu/n` tail, `mu^2/phi` capacity, large-sieve
+minor-arc budget, exponential-sum checksum, smoothing defect, and Kaczynski
+approach class opens, descends to AP/GW/C27/K33/covering, is dual-annihilated
+by Fejer/Ramanujan/Haar, or emits F7/THM-572 debt. -> HYP-3032, HYP-3027,
+HYP-3026, HYP-3024, HYP-3023, HYP-3020, HYP-2985, HYP-2984, HYP-2983,
+HYP-2982, HYP-2979, HYP-2978, HYP-2963, THM-572, LTI-180, LTT-078, T1113.
+
 **OPEN-Q-108 S174 perfect-number packet merge addendum:** HYP-3013 merges the
 prior perfect-number / aliquot fixed-point work into the current LRC14
 automatic-gap stack.  The exact `n=2` Euclid-Euler rows remain calibration
