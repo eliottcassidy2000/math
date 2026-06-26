@@ -1,5 +1,17 @@
 # Open Questions
 
+**OPEN-Q-108 S212 expanded matrix-atlas addendum:** HYP-3048 expands the S210
+tournament matrix atlas with `165` additional classic matrix hooks across `14`
+domains, giving `300` named hooks with S210.  The open task is to build a
+sidecar observability matrix: rows are packet pairs identified by a coarse
+quotient, columns are hidden coordinates, and a sidecar set is proof-safe only
+when every route/status-changing pair is separated, reconstructed,
+dual-annihilated, descended, or routed to named debt.  Immediate columns to
+test are edge-sector decks, skew-cycle traces, Schur-complement deletion
+corrections, Smith-normal integer clocks, endpoint-owner strips, primitive
+period decks, and KKT/Farkas/SOS dual certificates. -> HYP-3048, HYP-3047,
+HYP-3046, HYP-3043, HYP-3042, HYP-3040, HYP-3039, HYP-2121, HYP-2120,
+THM-381, THM-385, LTI-196, LTT-094, T1130.
 **OPEN-Q-108 S211 A000568 perspective-ladder addendum:** HYP-3047 turns the
 old A000568/rooted-perspective count curiosity into a controlled-forgetting
 test case.  The shifted failure is `n=6`: `U(6)=56` while all node perspectives

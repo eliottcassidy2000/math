@@ -1,3 +1,41 @@
+## codex-2026-06-26-S212 -- expanded tournament-matrix atlas (HYP-3048/T1130/LTI-196/LTT-094)
+
+User asked how tournaments relate to matrices and requested as many classic
+matrix results as possible, with useful tournament statements for each.
+Built on incoming codex-S210/T1128 rather than replacing it.
+
+Added `04-computation/tournament_matrix_expansion_atlas_codex_s212.py` and
+stored `05-knowledge/results/tournament_matrix_expansion_atlas_codex_s212.out`.
+The script adds `165` additional matrix results/objects across `14` domains;
+with S210's `135` hooks, the combined atlas has `300` named hooks.  Domains
+include linear spectral, matrix scaling/positivity, canonical forms, graph
+combinatorics, finite-field/coding, number theory/arithmetic, algebra and
+representation theory, topology/geometry, analysis/operators, optimization,
+probability/random matrices, CS/ML, games/social choice, and physics/control.
+
+Created HYP-3048, T1130, LTI-196, LTT-094, and reflection
+`07-reflections/expanded-tournament-matrix-atlas-codex-s212.md`.  Main readout:
+"tournament matrix" should not mean only adjacency eigenvalues.  Depending on
+the proof task, the matrix can be a skew sign matrix, Hermitian `iS`,
+Laplacian, stochastic kernel, incidence/boundary matrix, transfer matrix,
+comparison game, integer Smith sidecar, KKT/Farkas/SOS dual, or sidecar
+observability system.
+
+Tournament Analysis vertices are matrix-result domains rather than runners.
+The domain tournament is transitive with path `topology geometry > graph
+combinatorics > optimization algorithms > number theory arithmetic > finite
+fields coding > physics control > games social choice > algebra representation
+> matrix scaling positivity > analysis operators > linear spectral >
+factorizations canonical forms > probability random > cs machine learning`.
+
+Next pull: build the sidecar observability matrix.  Rows are packet pairs
+identified by a coarse quotient; columns are hidden coordinates such as
+edge-sector decks, skew-cycle traces, Schur-complement deletion corrections,
+Smith-normal clocks, endpoint-owner strips, primitive-period decks, and
+KKT/Farkas/SOS dual certificates.  A sidecar set is proof-safe only when every
+route/status-changing pair is separated, reconstructed, annihilated,
+descended, or routed to named debt.
+
 ## codex-2026-06-26-S211 -- A000568 k-depth perspective ladder (HYP-3047/T1129/LTI-195/LTT-093)
 
 User asked to connect the controlled-forgetting ladder to the point where

@@ -103,6 +103,10 @@ obligations, and proof-carrier interfaces.
   shifted `n=6` level:
   use LTT-093 and lift from node-depth cache to directed-edge sectors,
   cycle conflicts, clique insertion cuts, and endpoint-owner packet sheaves.
+- Need a broad matrix dictionary for tournament proof carriers:
+  use LTT-094 and treat rows/columns as edges, cycles, sidecars, proof
+  obligations, quotient fibers, or update directions rather than defaulting to
+  runners.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2074,6 +2078,46 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3039, HYP-3018, HYP-3015, HYP-1824, HYP-1825, THM-381, THM-385,
   LTI-195, LTI-194, LTI-191, LTI-008, LTI-009, LTT-093, LTT-092, LTT-089,
   T1129, T1127, T1124, OPEN-Q-108.
+
+### LTT-094: Expanded Tournament-Matrix Carrier Tournament
+
+- **Move:** Treat classic matrix theorems as a carrier factory for tournaments:
+  adjacency, skew sign, Hermitian `iS`, Laplacian, incidence, boundary,
+  transfer, game, integer Smith sidecar, KKT/Farkas/SOS dual, and observability
+  matrices are different proof surfaces.
+- **LRC use:** HYP-3048 extends incoming S210 with `165` additional matrix
+  hooks across `14` domains (`300` named hooks with S210).  It reframes matrix
+  invariants as legal only when their fibers are route-pure, status-pure,
+  reconstructible, dual-annihilated, descended by a family lemma, or routed to
+  named residual debt.  This gives a concrete matrix version of the
+  HYP-3039/HYP-3043 controlled-forgetting rule.
+- **Preserves:** Matrix carriers can preserve cycle/cocycle classes,
+  endpoint-owner incidence, exact-period/p-adic clocks, proof-route duals,
+  edge-sector cross-couplings, low-rank update directions, and observability
+  of hidden sidecars.
+- **Forgets / guardrail:** Pure spectra, ranks, norms, random-matrix baselines,
+  and learned embeddings usually forget labelled runner identity, exact
+  endpoint ownership, route labels, and integer period clocks.  They are scouts
+  until a sidecar observability check proves otherwise.
+- **Tournament fingerprint:** vertices are matrix-result domains, not runners.
+  Pairwise observable is retained exactness, incident/cycle payload,
+  arithmetic hidden-clock payload, LRC sidecar usefulness, and computability.
+  The domain tournament is transitive with score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1}`,
+  no directed 3-cycles, and one Hamiltonian path:
+  `topology geometry > graph combinatorics > optimization algorithms >
+  number theory arithmetic > finite fields coding > physics control >
+  games social choice > algebra representation > matrix scaling positivity >
+  analysis operators > linear spectral > factorizations canonical forms >
+  probability random > cs machine learning`.
+- **Next pull:** Build a sidecar observability matrix for a target LRC residual
+  fiber.  Rows are packet pairs identified by a coarse quotient; columns are
+  candidate hidden coordinates such as edge-sector decks, skew-cycle traces,
+  Schur-complement deletion corrections, Smith-normal clocks, endpoint-owner
+  strips, primitive-period decks, and dual certificates.
+- **Pointers:** HYP-3048, HYP-3047, HYP-3046, HYP-3043, HYP-3042, HYP-3040,
+  HYP-3039, HYP-2121, HYP-2120, THM-381, THM-385, LTI-196, LTI-195, LTI-194,
+  LTT-094, LTT-093, LTT-092, T1130, T1129, T1128, OPEN-Q-108.
 
 ## Immediate Pull List
 
