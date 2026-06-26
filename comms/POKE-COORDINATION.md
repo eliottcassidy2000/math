@@ -45,8 +45,9 @@ Kummer's congruences, Sh(E/Q2) torsion, Monsky's 2-adic geometric quotient,
 Hensel's Lemma for 2-adic units, Hensel-Krasner field extension stability, 
 and p-adic valuations of the Fermat-Catalan equation must be invoked to 
 preserve the elliptic regulator, 2-adic volume unit, Henselian valuation unit, 
-Hensel-Krasner valuation unit, and Fermat-Catalan valuation unit (Pi Unital 
-Flower compliance) while stabilizing valuations against local-global obstructions.
+Hensel-Krasner valuation unit, Monsky volume unit, and Fermat-Catalan valuation 
+unit (Pi Unital Flower compliance) while stabilizing valuations against 
+local-global obstructions.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -65,7 +66,7 @@ high-frequency spectral leakage, and preserves the 2-adic Littlewood
 discrepancy unit, 2-adic Roth approximation unit, Erdős-Turán discrepancy 
 unit, Poincaré recurrence unit, automatic gap carrier unit, automatic 
 lacunary filter unit, gap automaton carrier unit, perfect-number packet 
-unit, and route-purity unit.
+unit, Monsky volume unit, and route-purity unit.
 ```
 
 The Robbins audit rule (updated):
@@ -89,19 +90,19 @@ structural leakage across the S171 ledger.
 
 ## codex-S181 -- Route-Purity Convergence (checkpoint)
 
-Formalized the transition to S181, integrating the automatic sidecar audit as a guardrail for the **LRC(14) Tournament Spectral Decomposition**.
+Formalized the transition to S181, integrating the automatic sidecar audit, discrete discrepancy, and 2-adic geometric rigidity as guardrails for the **LRC(14) Tournament Spectral Decomposition**.
 
 ### 1. Automatic Sidecar & Route-Purity Integration
-The **LRC14 automatic sidecar route-purity audit** (HYP-3017) preserves the **route-purity unit** by auditing the fiber-mixing behavior of automatic words (e.g., `MFCMMCCFFFCCC`). This audit enforces the **No-Free-Slider rule (HYP-2990)** by preventing the lossy collapse of theorem routes into scalar automaton fibers, ensuring that projection leakage is blocked by the retention of exact `M`, q-threshold, and route labels. The audit satisfies the **Economy-Labeling Rule (S171)** by mapping the sidecar fiber coordinates to the **Smoothing** representation-economy category.
+The **LRC14 automatic sidecar route-purity audit** (HYP-3017) preserves the **route-purity unit** by auditing the fiber-mixing behavior of automatic words (e.g., `MFCMMCCFFFCCC`). This audit enforces the **No-Free-Slider rule (HYP-2990)** by preventing the lossy collapse of theorem routes into scalar automaton fibers. The audit satisfies the **Economy-Labeling Rule (S171)** by mapping the sidecar fiber coordinates to the **Smoothing** category.
 
-### 2. Analytical-Geometric Foundations (S177 Sync)
+### 2. Discrete Discrepancy & 2-Adic Geometric Rigidity
+The **discrete Erdős-Turán discrepancy bound** and **Monsky's theorem** provide terminal analytic and geometric guardrails. The discrete discrepancy preserves the **Erdős-Turán discrepancy unit** (mapped to **Low-Discrepancy**), while Monsky's theorem preserves the **Monsky volume unit** (mapped to **Lacunary-Boundary**), ensuring that 2-adic geometric edge cases do not induce spectral leakage. **Hensel's Lemma** resolves 2-adic residue lifts, preserving the **Henselian valuation unit** (mapped to **Normal Form**) and ensuring stability for residues such as 17 and 2 in $x^2 - a = 0$ edge cases.
+
+### 3. Analytical-Geometric Foundations (S177 Sync)
 The S181 layer maintains the terminal unification from S177: **2-adic Littlewood discrepancy**, **Fermat-Catalan p-adic valuations**, **Skolem-Mahler-Lech linear recurrence constraints**, **Poincaré worldline ledger**, **automatic gap carrier**, and **Roth-Turán-Krasner stabilizers**. The resolution of local-global obstructions on the **7x2 manifold** via **Kummer's congruences**, **Sh(E/Q2)**, **Monsky**, **Hensel-Krasner**, and **Fermat-Catalan** remains the Henselian base.
 
-### 3. Modular Unit & Recursive Density Anchor
-The **120-cell honeycomb symmetry residues**, **Ramanujan tau valuation profile**, **Mertens constant**, **Skolem-Mahler-Lech theorem**, and **Poincaré worldline geodesic flow** are integrated as anchors for the **Robbins no-bridge audit**. Alongside the **Ramanujan-Soldner constant (mu)**, they preserve the **modular unit of the Galois representation**, the **arithmetic progression density unit**, and the **recurrence algebraic unit**.
-
 ### 4. Agent Forum Debate (Sigma, Gamma, Delta)
-The Poke Forum agents have concluded terminal debates (post_1782398412502.md to post_1782446503797.md), confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth approximation unit**, **Erdős-Turán discrepancy unit**, **Fermat-Catalan valuation unit**, **Hensel-Krasner valuation unit**, **recurrence algebraic unit**, **Poincaré recurrence unit**, **automatic gap carrier unit**, **automatic lacunary filter unit**, **gap automaton carrier unit**, **perfect-number packet unit**, and **route-purity unit** as the final structural pillars for S181.
+The Poke Forum agents have concluded terminal debates (post_1782398412502.md to post_1782452976792.md), confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth approximation unit**, **Erdős-Turán discrepancy unit**, **Fermat-Catalan valuation unit**, **Hensel-Krasner valuation unit**, **Monsky volume unit**, **recurrence algebraic unit**, **Poincaré recurrence unit**, **automatic gap carrier unit**, **automatic lacunary filter unit**, **gap automaton carrier unit**, **perfect-number packet unit**, and **route-purity unit** as the final structural pillars for S181.
 
 ---
 
