@@ -85,6 +85,16 @@ class Packet:
     packet_rank: int
     state_lift: bool
     unknown_pairs: tuple[tuple[int, int], ...]
+    automatic_word: str
+    automatic_counts: tuple[int, int, int]
+    moser_double_breaks: int
+    fibbinary_double_breaks: int
+    lacunary_tail_ratio: Fraction
+    lacunary_max_ratio: Fraction
+    q_factorization: str
+    unit_excess_apex: bool
+    power_lift_guard: str
+    automatic_filter_exit: str
     q_class: str
     route: str
     family: str
@@ -119,6 +129,122 @@ ROUTE_VECTORS: dict[str, tuple[int, ...]] = {
 
 def fmt(frac: Fraction) -> str:
     return str(frac.numerator) if frac.denominator == 1 else f"{frac.numerator}/{frac.denominator}"
+
+
+def bits_lsb(n: int) -> list[int]:
+    bits: list[int] = []
+    while n:
+        bits.append(n & 1)
+        n >>= 1
+    return bits or [0]
+
+
+def is_fibbinary(n: int) -> bool:
+    return n > 0 and (n & (n >> 1)) == 0
+
+
+def is_moser(n: int) -> bool:
+    return n > 0 and all((bit == 0 or pos % 2 == 0) for pos, bit in enumerate(bits_lsb(n)))
+
+
+def automatic_letter(n: int) -> str:
+    if is_moser(n):
+        return "M"
+    if is_fibbinary(n):
+        return "F"
+    return "C"
+
+
+def automatic_word(speeds: tuple[int, ...]) -> str:
+    return "".join(automatic_letter(v) for v in speeds)
+
+
+def automatic_counts(word: str) -> tuple[int, int, int]:
+    return (word.count("M"), word.count("F"), word.count("C"))
+
+
+def max_adjacent_ratio(speeds: tuple[int, ...]) -> Fraction:
+    ordered = tuple(sorted(speeds))
+    return max(Fraction(b, a) for a, b in zip(ordered, ordered[1:]))
+
+
+def tail_gap_ratio(speeds: tuple[int, ...]) -> Fraction:
+    ordered = tuple(sorted(speeds))
+    return Fraction(ordered[-1], ordered[-2])
+
+
+def factorization(n: int) -> tuple[tuple[int, int], ...]:
+    out: list[tuple[int, int]] = []
+    d = 2
+    while d * d <= n:
+        if n % d == 0:
+            exp = 0
+            while n % d == 0:
+                n //= d
+                exp += 1
+            out.append((d, exp))
+        d += 1 if d == 2 else 2
+    if n > 1:
+        out.append((n, 1))
+    return tuple(out)
+
+
+def factor_text(n: int) -> str:
+    if n <= 1:
+        return str(n)
+    return "*".join(str(p) if e == 1 else f"{p}^{e}" for p, e in factorization(n))
+
+
+def integer_nth_root(n: int, exp: int) -> int:
+    lo = 1
+    hi = 1 << ((n.bit_length() + exp - 1) // exp)
+    while lo + 1 < hi:
+        mid = (lo + hi) // 2
+        if mid**exp <= n:
+            lo = mid
+        else:
+            hi = mid
+    return lo
+
+
+def perfect_power(n: int) -> tuple[int, int] | None:
+    if n <= 1:
+        return None
+    for exp in range(n.bit_length(), 1, -1):
+        base = integer_nth_root(n, exp)
+        if base > 1 and base**exp == n:
+            return base, exp
+    return None
+
+
+def power_lift_guard(M: Fraction) -> str:
+    p, q = M.numerator, M.denominator
+    payloads = (("p", p), ("q", q), ("p+q", p + q), ("p*q", p * q))
+    powers = []
+    for label, value in payloads:
+        pp = perfect_power(value)
+        if pp:
+            base, exp = pp
+            powers.append(f"{label}={value}={base}^{exp}")
+    return ",".join(powers) if powers else "none"
+
+
+def automatic_exit(route: str, strict_safe_mu: Fraction) -> str:
+    if route == "COUNTEREXAMPLE":
+        return "unresolved-counterexample"
+    if route == "Q-WITNESS":
+        return "direct-q-witness"
+    if route == "BOUNDARY-AP-GW":
+        return "boundary-equality"
+    if route == "K33-STATE-LIFT":
+        return "state-lift-debt"
+    if route == "BOUNDARY-PETAL-SPORADIC":
+        return "petal-discharge"
+    if strict_safe_mu > 0:
+        return "strict-safe-component"
+    if route == "COVERING-MOMENT":
+        return "covering-moment-route"
+    return "named-residual-needed"
 
 
 def primitive(speeds: tuple[int, ...]) -> bool:
@@ -186,6 +312,7 @@ def audit_row(name: str, source_family: str, speeds: tuple[int, ...], M: Fractio
         packet.state_lift,
         packet.unknown_pairs,
     )
+    aut_word = automatic_word(speeds)
     return Packet(
         name=name,
         source_family=source_family,
@@ -203,6 +330,16 @@ def audit_row(name: str, source_family: str, speeds: tuple[int, ...], M: Fractio
         packet_rank=packet.ph_rank,
         state_lift=packet.state_lift,
         unknown_pairs=packet.unknown_pairs,
+        automatic_word=aut_word,
+        automatic_counts=automatic_counts(aut_word),
+        moser_double_breaks=sum(1 for v in speeds if is_moser(v) and not is_moser(2 * v)),
+        fibbinary_double_breaks=sum(1 for v in speeds if is_fibbinary(v) and not is_fibbinary(2 * v)),
+        lacunary_tail_ratio=tail_gap_ratio(speeds),
+        lacunary_max_ratio=max_adjacent_ratio(speeds),
+        q_factorization=factor_text(M.denominator),
+        unit_excess_apex=(14 * M.numerator - M.denominator == 1),
+        power_lift_guard=power_lift_guard(M),
+        automatic_filter_exit=automatic_exit(route, strict_safe_mu),
         q_class=q_class(row.q_threshold),
         route=route,
         family=family,
@@ -397,8 +534,61 @@ def print_theorem_shape(packets: list[Packet]) -> None:
     print()
 
 
+def print_automatic_sidecar_audit(packets: list[Packet]) -> None:
+    print("[4] Automatic / Fermat-Catalan sidecar audit")
+    print("  added fields:")
+    print("    automatic_word over M=Moser, F=fibbinary-not-Moser, C=carry-present;")
+    print("    lacunary tail/max ratios, q factorization, unit-excess flag,")
+    print("    perfect-power payload guard, and automatic_filter_exit.")
+    by_word: dict[str, list[Packet]] = defaultdict(list)
+    for p in packets:
+        by_word[p.automatic_word].append(p)
+    mixed_route = {
+        word: rows
+        for word, rows in by_word.items()
+        if len({p.route for p in rows}) > 1
+    }
+    mixed_family = {
+        word: rows
+        for word, rows in by_word.items()
+        if len({p.family for p in rows}) > 1
+    }
+    ap_gw = [p for p in packets if p.name in {"AP", "GW 12->24"}]
+    power_rows = [p for p in packets if p.power_lift_guard != "none"]
+    unit_excess = [p for p in packets if p.unit_excess_apex]
+    print(f"  automatic word fibers={len(by_word)}")
+    print(f"  mixed-route word fibers={len(mixed_route)}")
+    print(f"  mixed-family word fibers={len(mixed_family)}")
+    print(f"  unit-excess apex rows={len(unit_excess)}")
+    print(f"  rows with perfect-power payload guards={len(power_rows)}")
+    print(f"  rows with Moser n->2n phase breaks={sum(1 for p in packets if p.moser_double_breaks)}")
+    print(f"  rows with fibbinary n->2n breaks={sum(1 for p in packets if p.fibbinary_double_breaks)}")
+    if ap_gw:
+        words = ", ".join(f"{p.name}:{p.automatic_word}" for p in ap_gw)
+        print(f"  AP/GW boundary words: {words}")
+    print("  largest mixed automatic-word fibers:")
+    for word, rows in sorted(mixed_route.items(), key=lambda item: (-len(item[1]), item[0]))[:8]:
+        routes = Counter(p.route for p in rows)
+        print(f"    {word:13s} rows={len(rows):5d} routes={dict(routes)}")
+    print("  low-frontier sidecar rows:")
+    low_rows = [p for p in packets if p.M <= LOW_227 or p.strict_safe_mu == 0 or p.state_lift]
+    for p in sorted(low_rows, key=lambda p: (p.M, p.route, p.name))[:12]:
+        m_count, f_count, c_count = p.automatic_counts
+        print(
+            f"    {p.name[:32]:32s} word={p.automatic_word:13s} "
+            f"MFC=({m_count},{f_count},{c_count}) tail={fmt(p.lacunary_tail_ratio):>5s} "
+            f"qfac={p.q_factorization:>6s} power={p.power_lift_guard} "
+            f"exit={p.automatic_filter_exit}"
+        )
+    print("  verdict:")
+    print("    automatic words are useful packet sidecars, but mixed fibers show they")
+    print("    are not theorem-safe quotients unless exact M/q, endpoint geometry,")
+    print("    and route labels remain attached.")
+    print()
+
+
 def print_swap_chain_analogy() -> None:
-    print("[4] Binary fixed-margin swap-chain analogy")
+    print("[5] Binary fixed-margin swap-chain analogy")
     print("  Fu-Qin-Wang arXiv:2606.22636 proves an inverse-polynomial spectral")
     print("  gap for binary fixed-margin swap chains by comparing to two-row")
     print("  heat-bath moves, reducing to three rows, then splitting a scalar count")
@@ -414,7 +604,7 @@ def print_swap_chain_analogy() -> None:
 
 
 def print_tournament_analysis() -> None:
-    print("[5] Tournament Analysis")
+    print("[6] Tournament Analysis")
     names = list(ROUTE_ORDER)
     mask = tournament_mask(names)
     fp = s138.tournament_fingerprint(mask, len(names))
@@ -431,7 +621,7 @@ def print_tournament_analysis() -> None:
 
 
 def print_machine_readable(packets: list[Packet], emit_all: bool) -> None:
-    print("[6] Machine-readable packet rows")
+    print("[7] Machine-readable packet rows")
     selected = packets
     if not emit_all:
         chosen: list[Packet] = []
@@ -443,11 +633,15 @@ def print_machine_readable(packets: list[Packet], emit_all: bool) -> None:
                 chosen.append(p)
         selected = chosen
         print("  representative rows only; pass --emit-all-rows for the full packet ledger")
-    print("  name|source|M|q|mu|route|family|role")
+    print("  name|source|M|q|mu|route|family|auto|mfc|tail|qfac|power|exit|role")
     for p in selected:
+        m_count, f_count, c_count = p.automatic_counts
         print(
             f"  {p.name}|{p.source_family}|{fmt(p.M)}|{p.q_threshold}|"
-            f"{fmt(p.strict_safe_mu)}|{p.route}|{p.family}|{p.theorem_role}"
+            f"{fmt(p.strict_safe_mu)}|{p.route}|{p.family}|{p.automatic_word}|"
+            f"{m_count},{f_count},{c_count}|{fmt(p.lacunary_tail_ratio)}|"
+            f"{p.q_factorization}|{p.power_lift_guard}|{p.automatic_filter_exit}|"
+            f"{p.theorem_role}"
         )
 
 
@@ -474,6 +668,7 @@ def main() -> None:
     print_packet_summary(packets)
     print_low_frontier(packets)
     print_theorem_shape(packets)
+    print_automatic_sidecar_audit(packets)
     print_swap_chain_analogy()
     print_tournament_analysis()
     print_machine_readable(packets, args.emit_all_rows)

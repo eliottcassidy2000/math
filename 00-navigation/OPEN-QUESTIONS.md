@@ -32,6 +32,23 @@ formula, is annihilated by Fejer/Ramanujan/Haar/endpoint data, or emits
 K33/F7/THM-572 residual debt. -> HYP-3016, HYP-3015, HYP-3014, HYP-3013,
 HYP-3012, HYP-3011, HYP-3009, HYP-3008, HYP-3002, HYP-2997, HYP-2963,
 HYP-2928, THM-572, LTI-165, LTT-066, T1100.
+**OPEN-Q-108 S181 automatic sidecar route-purity addendum:** HYP-3017 carries
+the HYP-3009/HYP-3013 automaton, lacunary, and power-lift fields into the live
+HYP-2963 labelled-packet classifier.  The mechanical field-addition step is
+done: the classifier now emits automatic words, Moser/fibbinary doubling
+breaks, lacunary gap ratios, `q` factorization, unit-excess apex, perfect-power
+payload guards, and automatic-filter exits.  The old route census is unchanged
+and still has `0` unknown packets, but the quotient-purity test is negative:
+`225` automatic-word fibers include `143` mixed-route fibers and `178`
+mixed-family fibers.  The AP/GW boundary word `MFCMMCCFFFCCC` also contains
+q-witness, petal, and covering rows.  Open task: build family templates for
+the largest mixed fibers, starting with `MFCMMCCFFFCCC`, compare them against
+HYP-3015 lonely-profile barcode classes and HYP-3016 magnitude-cocycle fibers,
+and prove any future sequence / finite-automaton quotient is route-pure only
+after exact `M/q`, endpoint geometry, C27/K33, Haar/Fejer, covering, valuation,
+and residual labels are attached. -> HYP-3017, HYP-3016, HYP-3015, HYP-3014,
+HYP-2963, HYP-3013, HYP-3012, HYP-3011, HYP-3010, HYP-3009, HYP-3008,
+THM-572, LTI-159, LTI-160, LTI-161, LTI-164, LTI-TODO-32, LTI-TODO-34.
 
 **OPEN-Q-108 S174 perfect-number packet merge addendum:** HYP-3013 merges the
 prior perfect-number / aliquot fixed-point work into the current LRC14

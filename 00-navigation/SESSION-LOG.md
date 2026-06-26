@@ -23698,3 +23698,40 @@ target is now a magnitude-cocycle theorem: inside each
 residue-automaton fiber, nonzero magnitude cocycle must open a strict safe
 component, descend to a known family formula, be annihilated by a dual
 certificate, or emit K33/F7/THM-572 residual debt.
+
+## codex-2026-06-26-S181 -- LRC14 automatic sidecar route-purity audit -- HYP-3017
+
+User asked to keep pushing toward the LRC14 proof with Fermat-Catalan,
+automatic sequences, Ostrowski-Hadamard gaps, Moser-de Bruijn, fibbinary
+numbers, and finite automata in view.  Pulled the live mainline first and
+treated the incoming HYP-3009/HYP-3013 work as the active constraint: these
+ideas belong as packet sidecars until a quotient-purity check says otherwise.
+During close-out, the remote added HYP-3014, HYP-3015, and then HYP-3016, so
+this sidecar audit was renumbered to HYP-3017 and linked to the new
+persistence-barcode and magnitude-cocycle carriers.
+
+Extended `04-computation/lrc14_labelled_packet_counterexample_classifier_codex_20260624.py`
+and regenerated `05-knowledge/results/lrc14_labelled_packet_counterexample_classifier_codex_20260624.out`.
+The classifier now emits automatic words over `M/F/C`, automatic counts,
+Moser and fibbinary doubling-break counters, lacunary gap ratios, `q`
+factorization, unit-excess apex, perfect-power payload guards, and
+automatic-filter exits.  The original HYP-2963 route census is unchanged:
+`21913` rows, `0` below threshold, exactly AP and GW `12->24` tight,
+`7` packets with `M<=2/27`, `0` unknown packets, and route counts
+`Q-WITNESS=14676`, `BOUNDARY-AP-GW=2`, `BOUNDARY-PETAL-SPORADIC=4`,
+`K33-STATE-LIFT=3`, `COVERING-MOMENT=7228`.
+
+Main result: automatic words fail as standalone quotient coordinates on the
+HYP-2963 bank.  The sidecar audit found `225` automatic-word fibers, `143`
+mixed-route fibers, `178` mixed-family fibers, `169` unit-excess apex rows,
+and `9606` rows with perfect-power payload guards.  The AP/GW boundary word
+`MFCMMCCFFFCCC` has `639` rows split across q-witness, AP/GW boundary, petal,
+and covering routes.  Therefore Moser/fibbinary and Fermat-Catalan power data
+must stay attached to exact `M/q`, endpoint geometry, C27/K33, Haar/Fejer,
+covering, valuation, and residual labels.
+
+Created HYP-3017 and updated HYP-2963, the hypothesis/result indexes,
+OPEN-Q-108, and the technique index.  Next pull: build family templates for
+the largest mixed automatic fibers, starting with `MFCMMCCFFFCCC`, compare
+them with HYP-3016 magnitude-cocycle fibers and HYP-3015 barcode classes, and
+avoid searching for a scalar finite-automaton shortcut.

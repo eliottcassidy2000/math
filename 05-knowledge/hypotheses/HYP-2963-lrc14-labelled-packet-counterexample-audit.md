@@ -19,6 +19,7 @@ related:
   - HYP-2947
   - HYP-2942
   - HYP-2940
+  - HYP-3017
   - HYP-2937
   - HYP-2908
   - THM-572
@@ -151,6 +152,54 @@ This is useful because it says K33 is not only one near-miss point.  It is a
 family label: once a nonunit K33 packet appears, the proof should route it to
 the HYP-2908/THM-572 state-lift lane rather than try to discharge it as a raw
 open interval.
+
+## S181 Automatic Sidecar Addendum
+
+The classifier now emits the HYP-3009/HYP-3010/HYP-3011/HYP-3012/HYP-3013
+automatic and power-lift sidecar fields:
+
+```text
+automatic_word over M/F/C
+automatic_counts
+moser_double_breaks
+fibbinary_double_breaks
+lacunary_tail_ratio
+lacunary_max_ratio
+q_factorization
+unit_excess_apex
+power_lift_guard
+automatic_filter_exit
+```
+
+The default bank keeps the same route census, but the sidecar route-purity
+audit is strongly negative for scalarizing automaton words:
+
+```text
+automatic word fibers                 225
+mixed-route word fibers               143
+mixed-family word fibers              178
+unit-excess apex rows                 169
+rows with perfect-power payload guards 9606
+rows with Moser n->2n phase breaks    21913
+rows with fibbinary n->2n breaks      0
+```
+
+The key mixed fiber is exactly the AP/GW boundary word:
+
+```text
+MFCMMCCFFFCCC:
+  Q-WITNESS                 603
+  BOUNDARY-AP-GW              2
+  BOUNDARY-PETAL-SPORADIC     1
+  COVERING-MOMENT            33
+```
+
+Thus Moser/fibbinary/finite-automaton data are useful sidecar labels, but not
+safe quotient coordinates unless exact `M/q`, endpoint geometry, and route
+labels stay attached.  The Fermat-Catalan style payloads behave the same way:
+`q=27=3^3` tags the petal/K33 low frontier, while positive-open rows also
+expose powers such as `p=4=2^2`, `p=8=2^3`, and `p+q=25=5^2`.  These are
+no-lift guards and finite-exception ledgers, not certificates by themselves.
 
 ## Family Definitions
 
