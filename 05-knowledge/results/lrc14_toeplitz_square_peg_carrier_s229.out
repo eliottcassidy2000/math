@@ -1,0 +1,51 @@
+S229 Toeplitz square-peg carrier for LRC14
+========================================================================
+External status anchors
+toeplitz_square_peg_general_jordan_status=open
+regular_cases=piecewise analytic/smooth/generic/open classes/near C2/two-graph Lipschitz/Floer rectangle lanes
+periodic_variant=resolved by Floer-homology style torus intersection
+
+Square constraint carrier
+ambient_variables=4 plane points = 8 real coordinates
+constraint_count=4 equalities plus one open inequality
+square_family_dimension=4 (center 2 + diagonal vector 2)
+midpoint_balance: p0+p2=p1+p3 :: shared center / AP-GW endpoint-credit analogue
+equal_diagonal_radius: |p0-p2|^2=|p1-p3|^2 :: equal slack / equal danger-radius analogue
+quarter_turn_orthogonality: (p0-p2) dot (p1-p3)=0 :: Haar rectangle zeta / hourglass residue analogue
+positive_scale_gate: p0 != p2 and p1 != p3 :: strict-open LRC witness, not a boundary atom
+
+D4 witness symmetry
+D4_group_size=8
+all_pair_partitions=3
+opposite_pair_partition_orbit_size=1
+cyclic_order_orbit_size=8
+all_labelled_orders=24
+diagonal_pairing_is_not_a_raw_four_point_choice=True
+
+Two Toeplitz bridge
+square_peg_toeplitz=configuration-space existence with positive scale
+fourier_toeplitz=PSD necessary condition for nonnegative cover shadow
+shared_lrc_lesson=do not pass to a quotient limit without a scale/strictness sidecar
+
+Tournament Analysis
+vertices=proof carriers and sidecar gates, not runners and not curve points
+pairwise_observable=predicate retention, noncollapse protection, reconstructibility, dual certificate value, route handoff
+switch=lexicographic retained-payload vector; tie path listed below
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+tie_path=labelled_packet_sheaf > toeplitz_square_configuration_space > positive_scale_gate > midpoint_balance_residue > diagonal_equal_radius_residue > quarter_turn_orthogonality_residue > cyclic_order_D4_orbit > floer_spectral_invariant_lane > integration_sign_pattern_lane > fourier_toeplitz_PSD_dual_bridge > raw_square_peg_analogy
+
+Assumption challenge
+Candidate vertices considered: curve points, square corners, diagonal pairs, D4 orbits, runners, danger arcs, endpoint owners, Toeplitz modes, packet sidecar fields, and proof obligations.
+Chosen vertices are proof obligations because they preserve strict LRC witness status and named residual handoff; raw square corners and raw Toeplitz moments forget scale, owner names, and collapse mode.
+
+Proposed packet fields
+toeplitz_square_scale_gate
+midpoint_balance_residue
+diagonal_equal_radius_residue
+quarter_turn_residue
+ordered_quad_collapse_mode
+d4_orbit_word
+toeplitz_psd_bridge_degree

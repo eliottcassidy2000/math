@@ -159,6 +159,11 @@ obligations, and proof-carrier interfaces.
   native transition, bit-position phase, Theta-class word, gated-subcube
   status, simplex face rank, doubled-triangular layer, exact `M`, endpoint,
   topology, magnitude, and route sidecars.
+- Need to use Toeplitz square-peg intuition without collapsing witnesses:
+  use LTT-109 and retain `toeplitz_square_scale_gate`,
+  `ordered_quad_collapse_mode`, midpoint/equal-radius/quarter-turn residues,
+  `d4_orbit_word`, and the Fourier-Toeplitz bridge degree before promoting a
+  four-witness or PSD-shadow certificate.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2823,6 +2828,48 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-158, LTT-108, LTT-106, LTT-069, LTT-066, LTT-063, LTT-062, T1145,
   OPEN-Q-108.
 
+### LTT-109: Toeplitz Square-Peg Scale Gate
+
+- **Move:** Treat Toeplitz's square-peg conjecture as a controlled-forgetting
+  warning about nondegenerate four-witnesses.  A square is not raw four-point
+  data: it is two antipodal pairs with midpoint balance, equal diagonal
+  radius, quarter-turn orthogonality, cyclic `D4` order, and a positive-scale
+  inequality.  This is distinct from, but adjacent to, the existing
+  Fourier-Toeplitz PSD dual.
+- **LRC use:** HYP-3064 adds a noncollapse gate after the Desargues/Beal
+  finalizer and beside geometry/Roth/Moser guardrails.  Approximate
+  four-witness, rectangle, homological, Floer, or Toeplitz/PSD evidence cannot
+  become an LRC14 proof unless the witness has positive strict scale and has
+  not collapsed to a boundary/AP-GW zero-open atom.
+- **Preserves:** Strict witness scale, midpoint-balance residue,
+  equal-radius/slack residue, quarter-turn/Haar residue, cyclic `D4` orbit,
+  collapse mode, and Fourier-Toeplitz certificate degree.
+- **Forgets / guardrail:** Raw square-peg analogy, raw four points, raw
+  diagonal pairings, raw `D4` counts, and raw Toeplitz PSD moments forget
+  endpoint owners, exact scale, route labels, and whether the witness has
+  degenerated.
+- **Tournament fingerprint:** vertices are proof carriers and sidecar gates,
+  not runners and not curve points.  The S229 carrier tournament is
+  transitive with path
+  `labelled_packet_sheaf > toeplitz_square_configuration_space >
+  positive_scale_gate > midpoint_balance_residue >
+  diagonal_equal_radius_residue > quarter_turn_orthogonality_residue >
+  cyclic_order_D4_orbit > floer_spectral_invariant_lane >
+  integration_sign_pattern_lane > fourier_toeplitz_PSD_dual_bridge >
+  raw_square_peg_analogy`.
+- **Next pull:** Add fields to HYP-2963/HYP-3037/HYP-3056 packet ledgers.
+  Zero-scale residual is boundary/AP-GW debt; midpoint/radius/quarter-turn
+  failures route to Haar/rectangle/hourglass repair; D4 ambiguity routes to
+  observer-cut/value-origin repair; PSD bridge failure routes to Fejer/Toeplitz
+  certificates; all gates surviving routes to family descent or THM-572/F7
+  debt.
+- **Pointers:** HYP-3064, HYP-3063, HYP-3062, HYP-3061, HYP-3060, HYP-3059,
+  HYP-3058, HYP-3057, HYP-3056, HYP-3054, HYP-3053, HYP-3037, HYP-2997,
+  HYP-2974, HYP-2963, THM-572, LTI-211, LTI-210, LTI-209, LTI-208, LTI-207,
+  LTI-206, LTI-205, LTI-201, LTT-109, LTT-108, LTT-107, LTT-106, LTT-105,
+  LTT-104, LTT-103, LTT-099, T1146, T1145, T1144, T1143, T1142, T1141,
+  T1140, T1138, T1136, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -2880,6 +2927,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    median interval status, simplex face rank, directed-simplex edge count,
    doubled triangular layer, Fibonacci-cube window,
    Moser even-coordinate subcube,
+   Toeplitz square scale gate, ordered quad collapse mode,
+   midpoint balance residue, diagonal equal-radius residue,
+   quarter-turn residue, D4 orbit word, Toeplitz PSD bridge degree,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

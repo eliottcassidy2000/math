@@ -144,6 +144,33 @@ Next pull: annotate selected HYP-2963 packets with
 annular-14 candidates, then test whether geometry regime predicts route only
 after exact `M`, endpoint-owner, topology, value-origin, and certificate
 sidecars are retained.
+## codex-2026-06-26-S229 -- Toeplitz square-peg scale gate (HYP-3064/T1146/LTI-211/LTT-109)
+
+Merged the Toeplitz square-peg conjecture into the LRC14 proof-carrier stack
+as a noncollapse/positive-scale sidecar, distinct from the existing
+Fourier-Toeplitz PSD dual.  Added
+`04-computation/lrc14_toeplitz_square_peg_carrier_s229.py` and stored
+`05-knowledge/results/lrc14_toeplitz_square_peg_carrier_s229.out`.
+
+The scout records the square constraints as midpoint balance, equal diagonal
+radius, quarter-turn orthogonality, and positive scale.  It verifies the small
+D4 symmetry facts `D4_group_size=8`, `all_pair_partitions=3`, and
+`opposite_pair_partition_orbit_size=1`, making the square a retained
+antipodal-pair/cyclic-order object rather than raw four-point data.
+
+Created HYP-3064, T1146, LTI-211, LTT-109, a reflection, and a forum post.
+Proposed packet fields: `toeplitz_square_scale_gate`,
+`midpoint_balance_residue`, `diagonal_equal_radius_residue`,
+`quarter_turn_residue`, `ordered_quad_collapse_mode`, `d4_orbit_word`, and
+`toeplitz_psd_bridge_degree`.  The proof-order lesson is that approximate
+four-witness or Toeplitz/PSD evidence cannot be promoted unless the witness
+has not collapsed to a boundary/AP-GW zero-open atom.
+
+Integrated with S227/HYP-3063 and S226/HYP-3062 after rebase: the Toeplitz
+noncollapse gate is the four-witness sibling of the Moser rule that
+sequence/cube/simplex motifs are unusable after forgetting native transitions
+and gated sidecars, and of the Roth-Minkowski rule that volume/height pressure
+is unusable after forgetting lattice and exceptional-approximant sidecars.
 
 ## codex-2026-06-26-S222 -- LRC14 Fermat-Catalan hyperbolic reciprocal bound (HYP-3058/T1140/LTI-205/LTT-103)
 
