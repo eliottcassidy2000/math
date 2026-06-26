@@ -14,6 +14,21 @@ dual-annihilated, descended, boundary-stopped at AP/GW, or named as residual
 debt.  Emit the induced payload-column tournament and treat directed cycles as
 noncommuting discharge warnings. -> HYP-3056, HYP-3055, HYP-3054, HYP-3048, HYP-3039,
 HYP-2963, LTI-203, LTI-202, LTI-201, LTT-101, LTT-100, LTT-099, T1138, T1137, T1136.
+**OPEN-Q-108 S222 hyperbolic reciprocal addendum:** HYP-3058 turns the
+Fermat-Catalan reciprocal condition `1/a+1/b+1/c<1` into a controlled-
+forgetting sidecar for LRC14.  Open task: choose actual HYP-2963 packet rows
+and define honest triples `(a,b,c)` from retained data such as exact
+denominator/order, route incidence, automaton/lacunary state depth,
+observer-extension cut depth, primitive-period deck, Fejer degree, or
+state-lift obligation.  Then test whether `reciprocal_sum`, `orbifold_euler`,
+and `curvature_margin=1-reciprocal_sum` predict discharge route
+(`q-witness`, `AP/GW boundary`, `C27 petal`, `K33 state lift`,
+`Fejer/Toeplitz certificate`, or named `F7` debt) without losing exact `M`,
+endpoint-owner transfer, topology, deletion-fiber, rectangle/hourglass, and
+certificate payloads. -> HYP-3058, HYP-3055, HYP-3054, HYP-3043, HYP-3039,
+HYP-3012, HYP-3009, HYP-3003, HYP-3002, HYP-2998, HYP-2963, HYP-2945,
+HYP-2937, HYP-2934, HYP-2928, THM-572, LTI-205, LTI-202, LTI-201, LTT-103,
+LTT-100, LTT-099, T1140, T1137, T1136.
 
 **OPEN-Q-108 S218 observer-extension/cut addendum:** HYP-3054 abstracts the
 A000568 observer-cut defect into the general controlled-forgetting test for

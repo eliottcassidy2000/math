@@ -126,6 +126,11 @@ obligations, and proof-carrier interfaces.
 - Need to decide whether a small tournament integer is a class count, rooted
   count, fixed branch, deletion fiber, edge-sector sidecar, or cycle residue:
   use LTT-102 and attach `value_origin_type` before promoting the number.
+- Need to use the Fermat-Catalan reciprocal-sum condition without turning it
+  into numerology:
+  use LTT-103 after LTT-099/LTT-100 and record `hyperbolic_triple_signature`,
+  `reciprocal_sum`, `curvature_margin`, `orbifold_euler_sign`, and
+  `hyperbolic_debt_discharge_route` before comparing packet triples.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2507,6 +2512,48 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTT-102, LTT-099, LTT-098, LTT-097, LTT-096, LTT-095, LTT-094, T1139,
   T1136, T1135, T1134, T1133,
   T1132, T1131, OPEN-Q-108.
+
+### LTT-103: Hyperbolic Reciprocal Packet Sidecar
+
+- **Move:** Treat `1/a+1/b+1/c<1` as a hyperbolic reciprocal-curvature
+  sidecar, not as a scalar proof shortcut.  The retained fields are
+  `hyperbolic_triple_signature`, `reciprocal_sum`,
+  `curvature_margin=1-reciprocal_sum`, `orbifold_euler_sign`,
+  `triangle_group_signature`, `fermat_catalan_power_guard`, and
+  `hyperbolic_debt_discharge_route`.
+- **LRC use:** HYP-3058 extends HYP-3009's Fermat-Catalan/power-lift packet
+  guard and HYP-3054/HYP-3055's controlled-forgetting calculus.  If an LRC14
+  packet emits a meaningful triple of exact scale, route incidence, automaton
+  depth, observer-cut depth, primitive-period deck, Fejer degree, or state-lift
+  obligation and the reciprocal sum is less than one, treat the quotient as
+  carrying hyperbolic debt.  It may be finite and classifiable, but it is not
+  safe to flatten until the exact `M`, endpoint-owner, topology, deletion
+  fiber, rectangle/hourglass, primitive-period, harmonic, or state-lift payload
+  is accounted for.
+- **Preserves:** Boundary/open status pressure, exact-scale context,
+  three-lane packet order, negative orbifold Euler sign, Fermat-Catalan
+  power-lift guardrail, route schedulability, and named residual handoff.
+- **Forgets / guardrail:** Raw exponent triples, attractive fractions such as
+  `(2,3,7)`, and isolated reciprocal sums forget endpoint owners, safe
+  topology, deletion fibers, route labels, and certificates.  The
+  `(2,3,7)` signature gives `41/42` and margin `1/42`, resonating with
+  `14=2*7`, `q=27=3^3`, `3/41`, C27, K33, and AP/GW, but it is route
+  pressure rather than a proof.
+- **Tournament fingerprint:** vertices are proof carriers, not runners or
+  exponent triples.  Conservative retention path:
+  `labelled_packet_sheaf > hyperbolic_reciprocal_signature >
+  observer_extension_cut_payload > triangle_orbifold_guard >
+  fermat_catalan_power_guard > exact_M_Farey_node >
+  C27_petal_two_block_route > K33_state_lift_route >
+  automaton_gap_language > raw_exponent_numerology`.
+- **Next pull:** Define honest triples on HYP-2963 packet families and test
+  whether spherical/euclidean/hyperbolic sign predicts q-witness, AP/GW,
+  C27, K33, Fejer/Toeplitz, or F7 discharge after all controlled-forgetting
+  sidecars are retained.
+- **Pointers:** HYP-3058, HYP-3055, HYP-3054, HYP-3043, HYP-3039, HYP-3012,
+  HYP-3009, HYP-3003, HYP-3002, HYP-2998, HYP-2963, HYP-2945, HYP-2937,
+  HYP-2934, HYP-2928, THM-572, LTI-205, LTI-202, LTI-201, LTT-103,
+  LTT-100, LTT-099, T1140, T1137, T1136, OPEN-Q-108.
 
 ## Immediate Pull List
 

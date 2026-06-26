@@ -1,3 +1,49 @@
+## codex-2026-06-26-S222 -- LRC14 Fermat-Catalan hyperbolic reciprocal bound (HYP-3058/T1140/LTI-205/LTT-103)
+
+User asked for a long-form poke-forum pass toward finishing LRC14, with a
+Fermat-Catalan angle and the condition that the sum of reciprocals of three
+variables is less than one.
+
+Created HYP-3058, T1140, LTI-205, LTT-103, reflection
+`07-reflections/lrc14-fermat-catalan-hyperbolic-reciprocal-bound-codex-s222.md`,
+and forum post
+`poke-forum/posts/20260626-fermat-catalan-hyperbolic-lrc14/post.md`.
+
+Main synthesis: `1/a+1/b+1/c<1` is the negative orbifold Euler /
+hyperbolic triangle threshold, appearing in generalized Fermat-Catalan,
+triangle groups, three-cone-point orbifolds, Coxeter/tiling trichotomies,
+Seifert/Brieskorn settings, and singularity thresholds.  LRC14 should import
+this as a packet sidecar, not as a proof shortcut:
+
+```text
+hyperbolic_triple_signature
+reciprocal_sum
+curvature_margin = 1 - reciprocal_sum
+orbifold_euler = reciprocal_sum - 1
+triangle_group_signature
+hyperbolic_debt_discharge_route
+```
+
+The first hyperbolic triangle `(2,3,7)` gives
+`1/2+1/3+1/7=41/42` and margin `1/42`, suggestive near `14=2*7`,
+`q=27=3^3`, `3/41`, C27, K33, and AP/GW.  Recorded this only as
+route-pressure: the actual proof still needs exact `M`, endpoint owners,
+safe topology, primitive-period decks, Fejer/Toeplitz certificates, and
+state-lift sidecars.
+
+Tournament Analysis vertices are proof carriers, not exponent triples:
+`labelled_packet_sheaf > hyperbolic_reciprocal_signature >
+observer_extension_cut_payload > triangle_orbifold_guard >
+fermat_catalan_power_guard > exact_M_Farey_node >
+C27_petal_two_block_route > K33_state_lift_route >
+automaton_gap_language > raw_exponent_numerology`.
+
+Next pull: choose actual HYP-2963 packet rows and define honest triples from
+exact scale, route incidence, and certificate depth; test whether the
+spherical/euclidean/hyperbolic trichotomy predicts q-witness, AP/GW, C27,
+K33, Fejer/Toeplitz, or F7 discharge without dropping controlled-forgetting
+payloads.
+
 ## codex-2026-06-26-S219 -- duodecimal observer-extension cut payload (HYP-3055/T1137/LTI-202/LTT-100)
 
 User asked to investigate why `12` keeps appearing around the A000568
