@@ -188,8 +188,15 @@ node ladder reaches exact rooted type at `m=5` by depth `2`
 node-neighborhood layer.  It is incident-word/cross-coupling data.  The source
 slice remains exact and gapless: source roots on `m` vertices equal `U(m-1)`.
 
+Added companion Burnside audit `04-computation/tournament_perspective_ladder_codex_s211.py`
+with stored result `05-knowledge/results/tournament_perspective_ladder_codex_s211.out`.
+It independently confirms the shifted defect and identifies the rootless
+obstruction: Burnside's nonzero `U(6)` terms include a fixed-point-free
+`[3,3]` cycle type with `32` fixed tournaments and `0` fixed vertices.
+
 Created HYP-3047, T1129, LTI-195, LTT-093, and reflection
-`07-reflections/a000568-k-depth-perspective-ladder-codex-s211.md`.
+`07-reflections/a000568-k-depth-perspective-ladder-codex-s211.md`; added the
+forum post `poke-forum/posts/20260626-tournament-perspective-depth-ladder/post.md`.
 Creative proof-carrier menu: directed-edge sector perspectives, directed-cycle
 conflict perspectives, transitive-clique insertion cuts, edge-cycle incidence
 conflicts, and endpoint-owner/gap-pressure packet sheaves.  Tournament
@@ -9233,8 +9240,6 @@ User: "work on the radical tower and the witness tower." Developed HYP-2303 (S70
 - **VERIFIED structural identities (m≤4 full):** `R_s(m,m)=A088368(m)`; `R_s(m,2m−1)=P_m(1)=1,3,20,181` [check OEIS]; `Σ_e(−1)^e R_s(m,e)=0` ⟺ `deg P_m=m−2` ⟺ `Q_m(−1)=0` where `Q_m(t)=Σ_e R_s(m,e)t^e=t^m(1+t)^{m−1}P_m(t/(1+t))`, equivalently the reduced bivariate `V(t,y)=Σ_m Q_m(t)y^m` has `V(−1,y)=−y`; `lead P_m=Σ_e(−1)^e(2m−1−e)R_s(m,e)=2^m−1`.
 - **Artifacts:** THM-438 ADDENDUM-7; reflection `07-reflections/the-column-denominator-is-an-euler-characteristic-ceiling.md`; HYP-2308 INDEX update; script `04-computation/paley_starstar_core_decomp_monad.py` (+`.out`). Statements `A_{2k}=C_k p^{k+1}`, `R(p)→e`, `(★★)`, column rationality: all UNCHANGED/strengthened.
 - **NEXT explorer / compute node:** (1) **PROVE `deg P_m=m−2`** = the single identity `Σ_e(−1)^e R_s(m,e)=0` / `V(−1,y)=−y` — a WITHIN-COLUMN sign-reversing involution flipping #lines parity; structurally simpler than handoff #2 (the m-shifting involution proving `(★★)`) and likely the place the real involution first appears. (2) **PROVE `lead P_m=2^m−1`** (= #nonempty subsets of the `m` independent cycles?). (3) **CORE-BASED ENUMERATOR** to pin `P_5,P_6` and extend the triangle to k=7,8 — but WARNING: the per-core contribution carries trail-ordering symmetry (this session's honesty correction), so the count is NOT "core-count × `s^e`"; validate any enumerator against the known triangle (k≤6) before trusting k≥7. The correct per-core weight is the `(σ,R)` fatgraph count with `∏(|B_v|−1)!` (visits, not half-edges). (4) HYP-2308 remainder still open (non-circulant DRT n=15 skew-Hadamard, expander-mixing).
-
-# Session Log
 
 ## monad-explorer-2026-06-07 (deep-research / analytic lane, 8th session) — `(★★)` VERIFIED at k=6; the cycle-rank triangle's COLUMNS are RATIONAL (`T_m=P_m(x)x^m/(1−x)^{2m−1}`, `deg P_m=m−2`, lead `2^m−1`, const `A088368(m)`); the even-series count is NOT A215257 (breaks at k=6: true 2351, not in OEIS — MISTAKE-062); and NO low-degree catalytic equation fits `U(x,y)` (factorial diagonal ⟹ RESURGENT, not algebraic) ⟹ handoff #1 reframed, prime route = the involution — THM-438 ADDENDUM-6
 **Dispatched seed:** build on THM-438 ADDENDUM-5 (7th session, genus-blindness). I took its handoff #1 (catalytic GF `U(x,y)`) and #3 (extend the triangle), built a fast enumerator to reach k=6, and found the catalytic equation is the WRONG target while the columns hide a clean rational structure. Mesh DOWN all session (`agent-msg` http 000, relay unreachable); repo-only coord; rebased clean on `c2f6841` (my own 7th session), no conflicts (touched only new files + THM-438/MISTAKES/HYP-2308/INDEX/SESSION-LOG addenda).

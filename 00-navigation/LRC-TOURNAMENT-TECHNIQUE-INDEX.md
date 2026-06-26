@@ -102,7 +102,8 @@ obligations, and proof-carrier interfaces.
 - Need to understand why A000568/rooted-perspective counts first fail at the
   shifted `n=6` level:
   use LTT-093 and lift from node-depth cache to directed-edge sectors,
-  cycle conflicts, clique insertion cuts, and endpoint-owner packet sheaves.
+  cycle conflicts, clique insertion cuts, rootless Burnside sidecars, and
+  endpoint-owner packet sheaves before adding another scalar sidecar.
 - Need a broad matrix dictionary for tournament proof carriers:
   use LTT-094 and treat rows/columns as edges, cycles, sidecars, proof
   obligations, quotient fibers, or update directions rather than defaulting to
@@ -2063,6 +2064,13 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   classes are not deeper node-neighborhood memory.  They are incident-word and
   cross-coupling payload, exactly the kind of hidden coordinate that the LRC14
   controlled-forgetting stack requires as a sidecar.
+- **Burnside / matrix readout:** The companion Burnside audit shows that
+  `U(6)` has a fixed-point-free `[3,3]` symmetry type with `32` fixed
+  tournaments and `0` fixed vertices.  This identifies the defect as
+  rootless/cyclic, not just under-refined node memory.  T1128 gives the linear
+  version: a non-observable coordinate must survive as an observability vector,
+  kernel sidecar, or Schur-complement correction before a scalar quotient can
+  be trusted.
 - **Preserves:** Rooted observer type through the node-depth cache; source
   deletion exactness through source roots; directed-edge tip/tail sector data;
   cycle chirality; clique insertion cut position; and, after the LRC lift,
@@ -2084,13 +2092,16 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   raw_A000568_class`.
 - **Next pull:** Build the exact extension map from 5-edge perspectives to
   6-tournament classes; isolate the eight-class defect by edge-sector
-  cross-coupling and cycle chirality; then add `observer_cut_position_word`,
-  `incident_sector_deck`, and `cross_sector_orientation_word` to LRC
-  threshold-packet experiments.
+  cross-coupling, cycle chirality, and rootless `[3,3]` sidecars; then add
+  `perspective_root_type`, `perspective_depth_k`,
+  `observer_cut_position_word`, `incident_sector_deck`, `edge_zone_profile`,
+  `cycle_relation_word`, `clique_root_shape`, and
+  `cross_sector_orientation_word` to LRC threshold-packet experiments.
 - **Pointers:** HYP-3047, HYP-2120, HYP-2121, HYP-3046, HYP-3043, HYP-3042,
   HYP-3039, HYP-3018, HYP-3015, HYP-1824, HYP-1825, THM-381, THM-385,
-  LTI-195, LTI-194, LTI-191, LTI-008, LTI-009, LTT-093, LTT-092, LTT-089,
-  T1129, T1127, T1124, OPEN-Q-108.
+  LTI-195, LTI-194, LTI-193, LTI-191, LTI-190, LTI-189, LTI-187, LTI-008,
+  LTI-009, LTT-093, LTT-092, LTT-091, LTT-089, LTT-088, LTT-087, LTT-085,
+  T1129, T1128, T1127, T1126, T1124, T1123, T1122, T1120, OPEN-Q-108.
 
 ### LTT-094: Expanded Tournament-Matrix Carrier Tournament
 

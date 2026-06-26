@@ -19,6 +19,7 @@ related:
   - HYP-1825
   - THM-381
   - THM-385
+  - T1128
   - OPEN-Q-108
 ---
 
@@ -118,6 +119,35 @@ This is not a bijection claim.  It is a capacity and carrier-selection signal:
 directed edges and transitive cliques retain incident/cut data that rooted
 nodes have forgotten.  Directed cycles retain chirality/conflict data that may
 explain the old eight-class bridge to HYP-1824/HYP-1825.
+
+## Burnside Rootless-Sidecar Check
+
+A standalone companion audit,
+`04-computation/tournament_perspective_ladder_codex_s211.py`, recomputes
+`U(n)` and exact rooted counts by Burnside through `n=10`.  It gives the same
+shift failure:
+
+```text
+R(5)=48
+U(6)=56
+defect=8
+```
+
+The nonzero Burnside terms for `U(6)` include:
+
+```text
+cycle_type=[5,1]         fixed_tournaments=8    fixed_vertices=1
+cycle_type=[3,3]         fixed_tournaments=32   fixed_vertices=0
+cycle_type=[3,1,1,1]     fixed_tournaments=128  fixed_vertices=3
+cycle_type=[1,1,1,1,1,1] fixed_tournaments=32768 fixed_vertices=6
+```
+
+The `[3,3]` term is the rootless warning: two rotating triples can be fixed
+with no fixed vertex.  A rooted node perspective cannot name that coordinate,
+even after the k-depth ladder has recovered every rooted node type.  This is
+the combinatorial analogue of the S210/T1128 matrix-atlas rule: a hidden mode
+that is not observable from the chosen quotient must survive as a kernel,
+observability, or Schur-complement sidecar rather than as another scalar.
 
 ## Proof-Carrier Index
 

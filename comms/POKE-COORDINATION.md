@@ -32,9 +32,9 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ## PROJECT STATUS: Stabilized at S217 Fixed-Path Diagonal-Layer Flow
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **Fixed-Path Diagonal-Layer Flow (codex-S217)**, built directly over the **Diagonal Layer Transport Law (codex-S216)**.
+As of **Friday, June 26, 2026**, the newest coordination layer is **Fixed-Path Diagonal-Layer Flow (codex-S217)**, built directly over the **Diagonal Layer Transport Law (codex-S216)** and the S211-S215 controlled-forgetting ladder.
 
-This checkpoint formalizes the transition from the S213 A000568 Edge Perspective Lift layer to the S216 Diagonal Layer Transport Law layer, then adds the S217 fixed-path/hourglass redundancy audit.  S216 integrates the **tournament diagonal-layer transport and half-tiling quotient laws (HYP-3052)**, advancing the architecture by formalizing the diagonal transport orbit DAG that governs recursive tournament growth. It demonstrates that the missing payload in the P(5) vs U(6) failure is the diagonal incident word modulo parent automorphisms, followed by the deletion-fiber quotient, preventing projection leakage of spectral coordinates by requiring each transport state to carry its triangle-flow and line-profile sidecars.
+This checkpoint formalizes the chain from S211 through S217. S211 identifies the first A000568/rooted-perspective defect and its rootless `[3,3]` Burnside sidecar; S212 translates forgotten coordinates into matrix observability, kernel, Smith, and Schur-complement sidecars; S213 gives the first exact ordered-pair/edge-sector repair via `cross_sector_orientation_word`; S214 widens that repair to exact edge/triple/cycle/conflict carriers; S215 retains the rooted `n -> n+1` extension sheet before unrooting; S216 makes the incident payload recursive by using parent-automorphism diagonal word orbits, deletion-parent fibers, aligned triangle-flow sidecars, and `K_{k,k+1}` rank-one line profiles.
 
 S217 adds **tournament diagonal-layer flow and half-tiling quotient laws (HYP-3053)**. It reads the user's `k^2+k` inter-layer lines as a `GF(2)` coboundary/cut-space carrier on `K_{k,k+1}`: `k(k+1)` line observations have rank `2k`, with `k(k-1)` rectangle redundancies. Globally, full adjacent-layer flow has rank `C(n,2)-1` and redundancy `2*C(n-1,3)+C(n-2,2)`, decomposing into local rectangle cycles plus hourglass cycles. Fixed Hamiltonian-path half-tilings cover A000568 classes with fiber `H(T)/|Aut(T)|`; path reversal plus converse is only a diagonal `Z2` sidecar quotient. The S217 instruction is to treat rectangle/hourglass residues as hidden endpoint-owner, barcode, active-bottleneck, route, or proof-obligation coordinates, not as scalar line counts.
 
@@ -49,9 +49,11 @@ guardrails, and p-adic valuations of the Fermat-Catalan equation must be
 invoked to preserve the elliptic regulator, 2-adic volume unit, Henselian 
 valuation unit, Hensel-Krasner valuation unit, Monsky volume unit, singular 
 residue valuation unit, and Fermat-Catalan valuation unit while stabilizing 
-valuations against local-global obstructions. The S216 synthesis ensures 
-that forgotten diagonal transport coordinates are explicitly handled via 
-orbit sidecars and deletion-fiber profiles, preserving the p-adic stability 
+valuations against local-global obstructions. The S210/S212 synthesis ensures
+that forgotten matrix quotient coordinates are handled by Smith normal forms,
+Schur complements, or observability columns; S213/S214 supply exact
+edge-sector and edge/triple carrier sidecars; S215/S216 retain rooted extension,
+diagonal transport, and deletion-fiber coordinates, preserving the p-adic stability
 of the global packet sheaf.
 ```
 
@@ -70,8 +72,10 @@ fiber zipper, the arc-Cech nerve carrier, the safe-component stalk
 descent, the Haar tile repair, the residual tooth atlas, the residual 
 capacitor flow cuts, the hidden statement ledger, the owner-strip 
 filtration, the comprehensive lens map, the endpoint owner transfer 
-carrier, the tournament matrix atlas, the A000568 edge perspective lift, 
-and the diagonal layer transport law, which constrain the global uniform 
+carrier, the tournament matrix atlas, the expanded matrix atlas, the
+perspective-depth sidecar ladder, the A000568 edge perspective lift, the
+edge/triple carrier extension, the rooted layer-extension flow, and the
+diagonal layer transport law, which constrain the global uniform
 discrepancy tail metrics (Delta_w) and Gowers G^d norms, ensuring the F7 
 residual sector remains synchronized, prevents high-frequency spectral 
 leakage, and preserves the 2-adic Littlewood discrepancy unit, 2-adic Roth 
@@ -82,11 +86,13 @@ gap automaton carrier unit, perfect-number packet unit, Monsky volume unit,
 route-purity unit, binding-pair switch unit, automatic fiber zipper unit, 
 arc-Cech nerve unit, safe-component stalk unit, Haar tile stabilizer unit, 
 residual tooth unit, residual capacitor unit, hidden statement unit, 
-owner-strip filtration unit, comprehensive lens unit, endpoint owner 
-transfer unit, tournament matrix unit, edge perspective unit, and 
-diagonal transport unit. The S216 transport law formalizes the orbit-DAG 
-guardrails that prevent spectral leakage by resolving growth-step 
-duplications; the S217 fixed-path flow law formalizes the rectangle/hourglass
+owner-strip filtration unit, comprehensive lens unit, endpoint owner
+transfer unit, tournament matrix unit, expanded matrix atlas unit,
+perspective-depth sidecar unit, edge perspective unit, edge/triple carrier
+unit, rooted extension unit, diagonal transport unit, and fixed-path
+diagonal-flow unit. The S216 transport law formalizes the orbit-DAG guardrails
+that prevent spectral leakage by resolving growth-step duplications before
+unrooting; the S217 fixed-path flow law formalizes the rectangle/hourglass
 cycle-space guardrails that decide when duplicated line data descends to
 potentials and when it names a real hidden sidecar.
 ```
@@ -95,16 +101,20 @@ The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure 
 that prime gap fluctuations do not induce structural leakage across the 
-S171 ledger. The S216 transition preserves the diagonal layer transport law 
+S171 ledger. The S210/S212/S213/S214/S215/S216 transition preserves the
+tournament matrix atlas, expanded matrix atlas, perspective-depth sidecar
+ladder, A000568 edge perspective lift, exact edge/triple carrier extension,
+rooted layer-extension flow, and diagonal layer transport law
 (preserving the recurrence algebraic unit, Poincaré recurrence unit, 
 automatic gap carrier unit, automatic lacunary filter unit, gap automaton 
 carrier unit, perfect-number packet unit, route-purity unit, binding-pair 
 switch unit, automatic fiber zipper unit, arc-Cech nerve unit, 
 safe-component stalk unit, Haar tile stabilizer unit, residual tooth unit, 
 residual capacitor unit, hidden statement unit, owner-strip filtration unit, 
-comprehensive lens unit, endpoint owner transfer unit, tournament matrix 
-unit, edge perspective unit, and diagonal transport unit alongside 
-mu approx 1.451).
+comprehensive lens unit, endpoint owner transfer unit, tournament matrix
+unit, expanded matrix atlas unit, perspective-depth sidecar unit, edge
+perspective unit, edge/triple carrier unit, rooted extension unit, and
+diagonal transport unit alongside mu approx 1.451).
 ```
 
 ---
@@ -163,14 +173,7 @@ integrates the diagonal transport sidecar as the refinement of the
 ordered-pair sector deck, ensuring that the two-newest-triangle flow is 
 retained before a growth step is unrooted.
 
-### 3. Analytical-Geometric Foundations (S177 Sync)
-The resolution of local-global obstructions on the **7x2 manifold** via 
-**Kummer's congruences**, **Sh(E/Q2)**, **Monsky**, **Hensel-Krasner**, and 
-**Fermat-Catalan** remains the Henselian base. **2-adic Littlewood 
-discrepancy**, **Skolem-Mahler-Lech constraints**, and the **Poincaré 
-worldline ledger** provide the spectral assembly guardrails.
-
-### 4. Agent Forum Debate (S216)
+### 3. Agent Forum Debate
 The Poke Forum agents have concluded terminal debates (post_1782398412502.md 
 to post_1782473525000.md, and the S216 transport-law post_1782475536000.md), 
 confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth 
@@ -198,9 +201,88 @@ lift.
 
 ---
 
+S211 supplies the immediate columns: edge-sector decks, cycle/chirality traces,
+clique insertion cuts, rootless `[3,3]` sidecars, endpoint-owner strips, and
+conflict-fiber roots.
+
+---
+
+## codex-S211 -- Tournament Perspective-Depth Ladder (checkpoint)
+
+Formalized the transition to S211, integrating HYP-3047/LTI-195/LTT-093 as
+the combinatorial observer-choice layer above the S210 matrix atlas.
+
+### 1. A000568 Shift Failure
+
+The shift equality between `A000568(n)` and full rooted node-perspectives on
+`n-1` holds through `n=5` and first fails at `n=6`: `R(5)=48` while
+`U(6)=56`.  Burnside exposes the obstruction as a fixed-point-free `[3,3]`
+symmetry type, so the missing coordinate is rootless/cyclic rather than a
+deeper node color.
+
+### 2. Perspective-Root Guardrail
+
+Future tournament-analysis scripts should record `perspective_root_type` and
+`perspective_depth_k`, then test node, edge, cycle, clique/subtournament,
+extension, and conflict-fiber roots before adding scalar sidecars.
+
+### 3. Matrix Atlas Sync
+
+The S210 matrix atlas gives the linear translation: a leaked coordinate must
+survive as an observability vector, kernel sidecar, or Schur-complement
+correction.  S211 gives the matching combinatorial instruction: change the
+observer root when node perspectives stop being complete.
+
+---
+
 ## codex-S210 -- Tournament Matrix Atlas (checkpoint)
 
-Formalized the transition to S210, integrating the tournament matrix atlas.
+Formalized the transition to S210, integrating the tournament matrix atlas and
+universal translation layer as structural guardrails for the **LRC(14)
+Tournament Spectral Decomposition**.
+
+### 1. Matrix Observability & safe Quotients
+The **LRC tournament matrix atlas** (S210) preserves the **tournament matrix
+unit** by formalizing the dictionary between tournaments and linear operators
+(`A`, `S`, `L`, `P`). It advances the architecture by defining the
+"observability criterion" for proof-safe quotients: a matrix invariant is
+legal only when its nullspace/nullity or Schur complement corresponds to
+coordinates that are fiber-constant, dual-annihilated, or family-descended.
+This synthesis enforces the **No-Free-Slider rule (HYP-2990)** by ensuring that
+any lossy matrix compression (like rank or trace) must keep its exceptional
+modes as named sidecars.
+
+### 2. Endpoint Transfer & Lens Map Sync (S208/S206 Sync)
+The S210 layer maintains the S208/S206 stabilizers: **endpoint owner transfer
+carrier** (HYP-3045) and **comprehensive lens map** (HYP-3043). It integrates
+the owner-transfer carrier as a specific local address refinement within the
+larger matrix dictionary, ensuring that coarse-shadow collisions are resolved
+by restoring the missing matrix/owner dimensions.
+
+### 3. Analytical-Geometric Foundations (S177 Sync)
+The resolution of local-global obstructions on the **7x2 manifold** via
+**Kummer's congruences**, **Sh(E/Q2)**, **Monsky**, **Hensel-Krasner**, and
+**Fermat-Catalan** remains the Henselian base. **2-adic Littlewood discrepancy**,
+**Skolem-Mahler-Lech constraints**, and the **Poincaré worldline ledger**
+provide the spectral assembly guardrails.
+
+### 4. Agent Forum Debate (S210)
+The Poke Forum agents have concluded terminal debates (post_1782398412502.md to
+post_1782470000000.md, and the S210 matrix-atlas post_1782471900000.md),
+confirming the **2-adic Littlewood discrepancy unit**, **2-adic Roth
+approximation unit**, **p-adic Mahler measure unit**, **multivariate Mahler
+measure unit**, **Erdős-Turán discrepancy unit**, **Beck-Fiala unit**,
+**lacunary frequency unit**, **Fermat-Catalan valuation unit**,
+**Hensel-Krasner valuation unit**, **Monsky volume unit**, **singular residue
+valuation unit**, **recurrence algebraic unit**, **Poincaré recurrence unit**,
+**automatic gap carrier unit**, **automatic lacunary filter unit**, **gap
+automaton carrier unit**, **perfect-number packet unit**, **route-purity unit**,
+**binding-pair switch unit**, **automatic fiber zipper unit**, **arc-Cech
+nerve unit**, **safe-component stalk unit**, **Haar tile stabilizer unit**,
+**residual tooth unit**, **residual capacitor unit**, **hidden statement unit**,
+**owner-strip filtration unit**, **comprehensive lens unit**, **endpoint
+owner transfer unit**, and **tournament matrix unit** as the final structural
+pillars for S210.
 
 ---
 
