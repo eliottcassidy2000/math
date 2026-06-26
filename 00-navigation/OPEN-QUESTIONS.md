@@ -1,5 +1,20 @@
 # Open Questions
 
+**OPEN-Q-108 S198 arc-boundary path-lift addendum:** HYP-3034 pulls the
+older path-homology/deletion-persistence machinery into the HYP-3030
+status-topology gate, but uses closed danger arcs and boundary operators rather
+than runner tournaments.  The S198 script scans the full HYP-2963 default
+`21913` row bank for exact boundary/open status, then runs the expensive GF(2)
+boundary lift only on `41` residue-terminal collision/control rows.  AP and
+GW are the only closed-H1 rows on that surface; AP has `C0/C1=1/1`,
+`d1=90`, `d2=84`, `rep_edges=58`, and GW has `C0/C1=1/1`, `d1=102`,
+`d2=90`, `rep_edges=58`.  Deleting any owner speed kills H1 in both
+representatives, while all open cohabitants in the two residue-terminal
+boundary/open collisions have closed H1 `0`.  Open task: prove the
+owner-essential path-cycle theorem for zero-open packets, or route failures to
+named F7/THM-572/harmonic residual debt; then add cached Cech sidecars for a
+full closed-H1 scan. -> HYP-3034, HYP-3030, HYP-3025, HYP-3024, HYP-3029,
+HYP-3018, HYP-2963, THM-572, LTI-182, LTT-080, T1115.
 **OPEN-Q-108 S191 carrier-pullback index addendum:** T1108/LTI-175/LTT-073
 creates `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md`, a `90`-row `CPI-*`
 menu for pulling tournament/metagraph, related-series, automaton, topology,

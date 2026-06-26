@@ -24143,3 +24143,37 @@ Updated HYP index, LTI-179, LTT-077, concept map, OPEN-Q-108, T1112, and the
 forum index while preserving HYP-3030/LTI-178/LTT-076 as the predecessor
 status-topology bridge.  Next pull: build the two-coordinate packet grids for
 the two HYP-3027 residual mixed pairs and classify each by `zeta_repair_class`.
+
+## codex-2026-06-26-S198 -- LRC14 arc-boundary path lift -- HYP-3034/LTI-182/LTT-080
+
+User asked to keep mining creative LRC angles and past repo work that may look
+unrelated at first.  Pulled `origin/main` first; incoming HYP-3028..HYP-3031
+made the residual status-gate, safe-component stalk, status-topology gate, and
+Haar-tile repair ladder the live surface.  This session mined the older
+path-homology/deletion-persistence line but changed the vertex set to individual
+closed danger arcs and Cech boundary operators, not runners.
+
+Added `04-computation/lrc14_arc_boundary_path_lift_codex_s198.py` and stored
+`05-knowledge/results/lrc14_arc_boundary_path_lift_codex_s198.out`.  The script
+does a lightweight exact interval status scan over the HYP-2963 default
+`21913`-packet row bank, groups rows by residue-terminal and coarse ET+unit
+status fibers, then computes GF(2) closed danger-arc boundary ranks, explicit H1
+representatives, and owner-deletion persistence only on the `41`
+residue-terminal collision/control rows.
+
+Main finding: AP and GW `12->24` are the only closed-H1 rows on that
+collision/control surface.  AP has `C0/C1=1/1`, `d1=90`, `d2=84`, and a
+`58`-edge representative.  GW has `C0/C1=1/1`, `d1=102`, `d2=90`, and a
+`58`-edge representative.  In both rows the H1 representative uses all owner
+speeds except AP/GW's omitted/inserted slot, and deleting any owner kills H1.
+The two residue-terminal mixed status fibers have exactly one boundary row and
+open cohabitants with closed H1 `0`; the coarse ET+unit status gate again has
+`0` mixed boundary/open fibers.
+
+Created HYP-3034, T1115, LTI-182, LTT-080, and reflection
+`07-reflections/lrc14-arc-boundary-path-lift-codex-s198.md`.  Updated the
+hypothesis/result indexes, technique indexes, multiverse and carrier-pullback
+indexes, concept map, OPEN-Q-108, TANGENTS, and this session log.  Next pull:
+extend the path lift beyond the `41` collision/control rows by caching closed
+arc Cech boundary sidecars, then prove zero-open implies an owner-essential
+AP/GW-type closed boundary cycle or named F7/THM-572/harmonic residual debt.

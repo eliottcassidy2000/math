@@ -3178,3 +3178,18 @@ promote the teeth to packet sidecars and prove the family scheduler without
 route labels. -> HYP-3033, LTI-181, LTT-079, HYP-3031, LTI-179, LTT-077,
 HYP-3030, LTI-178, LTT-076, HYP-3028, HYP-3024, HYP-2963, THM-572,
 OPEN-Q-108.
+## T1115: LRC14 arc-boundary path lift (codex-2026-06-26-S198)
+
+HYP-3034 pulls older path-homology/deletion-persistence machinery into the
+HYP-3030 status-topology gate, but changes the vertices to individual closed
+danger arcs and GF(2) boundary operators rather than runner tournaments.  The
+S198 script scans the HYP-2963 default `21913`-row bank for exact boundary/open
+status, then runs boundary ranks, explicit H1 representatives, and
+owner-deletion persistence on the `41` residue-terminal collision/control rows.
+AP and GW are the only closed-H1 rows on that surface: AP has
+`C0/C1=1/1`, `d1=90`, `d2=84`, `rep_edges=58`; GW has `C0/C1=1/1`,
+`d1=102`, `d2=90`, `rep_edges=58`.  Deleting any owner speed kills H1 in both
+representatives, while every open cohabitant has closed H1 `0`.  Next target:
+prove zero-open implies an owner-essential AP/GW-type closed danger-arc cycle
+or named F7/THM-572/harmonic residual debt. -> HYP-3034, LTI-182, LTT-080,
+HYP-3030, HYP-3025, HYP-3024, HYP-3018, HYP-2963, THM-572, OPEN-Q-108.

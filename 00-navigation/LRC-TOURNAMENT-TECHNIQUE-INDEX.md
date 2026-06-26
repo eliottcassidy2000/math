@@ -54,6 +54,12 @@ obligations, and proof-carrier interfaces.
 - Need to connect discrepancy, two-dimensional Haar products, and tournament
   tiling repairs:
   use LTT-077 and add `zeta_repair_class` to the packet sidecar.
+- Need analytic repair clocks after the side-channel ladder:
+  use LTT-078.
+- Need residual certificate teeth after the status gate:
+  use LTT-079.
+- Need an explicit owner-essential AP/GW closed boundary cycle:
+  use LTT-080, plus LTT-076.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1495,6 +1501,29 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3033, HYP-3031, HYP-3030, HYP-3029, HYP-3028, HYP-3024,
   HYP-2963, THM-572, LTI-181, LTI-179, LTI-178, LTI-176, LTT-077, LTT-076,
   LTT-074, T1114.
+
+### LTT-080: Arc-Boundary Path-Lift Tournament
+
+- **Move:** Lift the closed danger-arc Cech nerve to an explicit GF(2)
+  boundary complex: record `rank(d1)`, `rank(d2)`, a nonboundary H1
+  representative when present, its owner support, and owner-deletion
+  persistence.
+- **LRC use:** HYP-3034 strengthens HYP-3030's closed beta signal on the
+  residue-terminal boundary/open collision surface.  AP and GW are the only
+  closed-H1 rows among the `41` path-lift target rows; each has a `58`-edge
+  representative, and deleting any owner speed kills H1.  All open cohabitants
+  in the two residue-terminal status collisions have closed H1 `0`.
+- **Preserves:** Boundary/open status, closed arc H1, explicit boundary ranks,
+  representative support, owner-essentiality, and quotient-defect visibility.
+- **Forgets / guardrail:** This is not a runner path-homology theorem and not
+  a theorem-route classifier.  It is a topology-front gate; route labels are
+  scheduled later by HYP-3030/HYP-3028 and the repair ladder.
+- **Next pull:** Add path-lift sidecars to a cached Cech bank, then prove
+  zero-open implies an owner-essential AP/GW-type closed danger-arc cycle or
+  named F7/THM-572/harmonic residual debt.
+- **Pointers:** HYP-3034, HYP-3031, HYP-3030, HYP-3029, HYP-3028, HYP-3025,
+  HYP-3024, HYP-3023, HYP-3018, HYP-2963, THM-572, LTI-182, LTI-178,
+  LTI-172, LTM-016, T1115.
 
 ## Immediate Pull List
 
