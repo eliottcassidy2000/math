@@ -3231,3 +3231,22 @@ data.  Next target: add the primitive deck to HYP-3027/HYP-3031 packet
 sidecars and run a cached full-bank ledger. -> HYP-3036, LTI-184, LTT-082,
 HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3028, HYP-3027, HYP-3024,
 HYP-3023, HYP-2963, CPI-043, OPEN-Q-108.
+
+## T1121: LRC14 hidden statement ledger (codex-2026-06-26-S203)
+
+HYP-3040 extends HYP-3039 by synthesizing HYP-3034..HYP-3038 with older pair-good, automaton,
+barcode/normal-fan, Ramanujan, and analytic-clock work into `11` small
+proof-facing statements.  The readout is not a new scalar.  It is a layered
+obstruction calculus: owner-essential AP/GW boundary H1; coarse status gates
+before route gates; owner/topology/stalk first teeth; `q<=13` primitive
+direct-witness decks with `q=14` boundary/covering debt; residual capacitors;
+and Haar-zeta/endpoint-owner squares.  The strongest hidden edge is the
+residual first-tooth atlas to safe-component stalk geometry, tying HYP-3035
+back to HYP-3029/HYP-3018 barcode and normal-fan support.  Next target: add
+`boundary_h1_owner_support`, `first_tooth`, `primitive_safe_deck_2_13`,
+`residual_capacitor_id`, `first_cut_stage`, `exact_M_zeta`,
+`endpoint_owner_strip`, `analytic_blindness_report`, and
+`automaton_shadow_class` to packet ledgers. -> HYP-3040, HYP-3039, LTI-188, LTT-086,
+HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3034, HYP-3033, HYP-3032,
+HYP-3031, HYP-3030, HYP-3029, HYP-3023, HYP-3022, HYP-3021, HYP-3018,
+HYP-2963, THM-572, OPEN-Q-108.

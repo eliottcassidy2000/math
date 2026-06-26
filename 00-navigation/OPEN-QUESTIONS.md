@@ -17,6 +17,26 @@ F7/THM-572/harmonic debt. -> HYP-3039, HYP-3038, HYP-3037, HYP-3036,
 HYP-3035, HYP-3034, HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3028,
 HYP-3027, HYP-3024, HYP-3023, HYP-3022, HYP-3021, HYP-3018, HYP-2963,
 THM-572, LTI-187, LTT-085, T1120.
+**OPEN-Q-108 S203 hidden-statement ledger addendum:** HYP-3040 extends the
+HYP-3039 hidden-coordinate ledger by turning the recent HYP-3034..HYP-3038
+stack plus older automaton, pair-good,
+barcode/normal-fan, Ramanujan, and analytic-clock threads into an `11`-item
+micro-statement ledger.  The proof-facing readout is that LRC14 is a layered
+obstruction calculus, not one master scalar: AP/GW zero-open packets carry
+owner-essential boundary H1; coarse ET+Henselian data is a status theorem
+before it is a route theorem; residual route-mixed fibers are first-tooth
+owner-strip descents; `q<=13` primitive safe mass is direct Q-witness currency
+while `q=14` is boundary/covering currency; analytic clocks and
+automatic/Moser/fibbinary shadows are useful only with explicit blindness or
+lost-coordinate labels.  Open task: materialize the hidden sidecar vocabulary
+`boundary_h1_owner_support`, `first_tooth`, `primitive_safe_deck_2_13`,
+`residual_capacitor_id`, `first_cut_stage`, `exact_M_zeta`,
+`endpoint_owner_strip`, `analytic_blindness_report`, and
+`automaton_shadow_class`, then prove the candidate packet principle or expose
+the first sidecar field that still leaks boundary/open or route debt. ->
+ HYP-3040, HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3034, HYP-3033,
+HYP-3032, HYP-3031, HYP-3030, HYP-3029, HYP-3024, HYP-3023, HYP-3022,
+HYP-3021, HYP-3018, HYP-2963, THM-572, LTI-188, LTT-086, T1121.
 **OPEN-Q-108 S198 arc-boundary path-lift addendum:** HYP-3034 pulls the
 older path-homology/deletion-persistence machinery into the HYP-3030
 status-topology gate, but uses closed danger arcs and boundary operators rather

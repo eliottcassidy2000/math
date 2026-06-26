@@ -21,6 +21,33 @@
 **Readout:** `05-knowledge/hypotheses/HYP-3039-lrc14-hidden-coordinate-ledger.md` and `07-reflections/lrc14-hidden-coordinate-ledger-codex-s202.md` describe HYP-3024..HYP-3038 as a controlled-forgetting ladder: status gate, owner-essential path lift, residual certificate tooth, first-tooth owner strip, primitive-period deck, residual capacitor cut, and q=23 drop/add zeta plus endpoint-owner strip.  The main sharpening is that residual counts are secondary once the generator/cut class is known; a quotient is legal only after the next hidden coordinate has been exposed, killed by a dual/cut/cocycle, or routed to named debt.
 **Next:** add `hidden_coordinate_stage`, `visible_hidden_relation_type`, `primitive_safe_deck_2_13`, `first_primitive_safe_q_2_13`, `residual_capacitor_id`, `first_cut_stage`, `drop_add_square_id`, `exact_M_zeta`, `endpoint_owner_strip`, and `anti_wedge_debt_count` to a cached HYP-2963 ledger; then run an anti-wedge audit over accepted residual cuts.
 Namespace: HYP-3039 / T1120 / LTI-187 / LTT-085.
+
+## Lead codex-2026-06-26-S203: LRC14 hidden statement ledger
+
+**Status:** SYNTHESIS / proof-facing micro-statement ledger complete
+(HYP-3040/T1121/LTI-188/LTT-086), synthesizing HYP-3034..HYP-3038 with older
+pair-good decoy, automaton/Moser/fibbinary, barcode/normal-fan, Ramanujan, and
+analytic-clock work.
+**Readout:** `04-computation/lrc14_hidden_statement_ledger_codex_s203.py`
+stores output in
+`05-knowledge/results/lrc14_hidden_statement_ledger_codex_s203.out`.  The
+ledger records `11` small statements and their lost-coordinate guardrails.  The
+fundamental readout is layered obstruction calculus: owner-essential boundary
+H1, status-preserving coarse gate, owner/topology/stalk first teeth,
+`q<=13` primitive witness scheduler, and residual capacitor/Haar-zeta cuts.
+The strongest hidden connection is HYP-3035 residual first-tooth atlas to
+HYP-3029/HYP-3018 safe-component stalk/barcode/normal-fan geometry
+(`weight=11`).
+**Next:** add the hidden sidecar vocabulary to packet ledgers:
+`boundary_h1_owner_support`, `first_tooth`, `primitive_safe_deck_2_13`,
+`residual_capacitor_id`, `first_cut_stage`, `exact_M_zeta`,
+`endpoint_owner_strip`, `analytic_blindness_report`, and
+`automaton_shadow_class`; then prove the candidate principle that every
+primitive packet is AP/GW boundary H1, a `q<=13` primitive witness,
+an owner/stalk/topology descent, or a named capacitor/zeta cut to existing
+route debt.
+Namespace: HYP-3040 / T1121 / LTI-188 / LTT-086.
+
 ## Lead codex-2026-06-26-S199: LRC14 residual tooth atlas
 
 **Status:** EVIDENCE / residual-tooth proof-interface atlas complete

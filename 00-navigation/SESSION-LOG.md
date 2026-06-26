@@ -26,6 +26,35 @@ Next sidecar target: `hidden_coordinate_stage`,
 `first_primitive_safe_q_2_13`, `residual_capacitor_id`, `first_cut_stage`,
 `drop_add_square_id`, `exact_M_zeta`, `endpoint_owner_strip`, and
 `anti_wedge_debt_count`.
+
+## codex-2026-06-26-S203 -- LRC14 hidden statement ledger (HYP-3040/T1121/LTI-188/LTT-086)
+
+User asked to keep searching for hidden details, statements, and connections
+to past work that sharpen the conception of LRC14.  Built a synthesis pass over
+the recent HYP-3034..HYP-3038 stack and older pair-good, automaton,
+barcode/normal-fan, Ramanujan, and analytic-clock threads.
+
+Added `04-computation/lrc14_hidden_statement_ledger_codex_s203.py` and stored
+`05-knowledge/results/lrc14_hidden_statement_ledger_codex_s203.out`.  The
+script records `11` micro-statements: owner-essential AP/GW boundary H1, status
+gate before route gate, residual first-tooth owner strips, `q<=13` primitive
+witness boundary, analytic capacity/blindness, residual capacitor min-cuts,
+the `q=23` diagonal Haar-zeta square, topology-bucket plus unit-scale
+scheduling, safe-stalk geometry, automatic words as row/column shadows, and
+pair-good decoys as blocker-generator teeth.
+
+Readout: LRC14 looks like a layered obstruction calculus, not one master
+scalar.  The strongest hidden edge is residual first-tooth atlas to
+safe-component stalk geometry (`weight=11`), tying HYP-3035 back to
+HYP-3029/HYP-3018 barcode and normal-fan work.  Created HYP-3040, T1121,
+LTI-188, LTT-086, and reflection
+`07-reflections/lrc14-hidden-statement-ledger-codex-s203.md`.  Next proof hook:
+materialize the hidden sidecar vocabulary
+`boundary_h1_owner_support`, `first_tooth`, `primitive_safe_deck_2_13`,
+`residual_capacitor_id`, `first_cut_stage`, `exact_M_zeta`,
+`endpoint_owner_strip`, `analytic_blindness_report`, and
+`automaton_shadow_class`.
+
 ## codex-2026-06-26-S199 -- LRC14 residual tooth atlas (HYP-3035/T1116/LTI-183/LTT-081)
 
 User asked to keep working new LRC angles, with prior prompts emphasizing pair-good decoys, zipper-fiber convergence, Erdos-Turan, Henselian unit rules, and creative LRC14 proof routes.  Pulled the incoming S193/S194/S195 stack first, then extended HYP-3031's Haar-tile repair dictionary into an executable atlas for HYP-3028/HYP-3030's `15` coarse ET+unit route-mixed residual fibers.

@@ -72,6 +72,12 @@ obligations, and proof-carrier interfaces.
 - Need to resolve the squarefree `q=23` petal/covering residual pair:
   use LTT-084 after LTT-083/LTT-082 and retain the drop/add square plus
   endpoint-owner strip.
+- Need a controlled-forgetting hidden-coordinate ledger:
+  use LTT-085 after LTT-080..LTT-084 and attach hidden-coordinate stage,
+  visible/hidden relation type, cut, zeta, and anti-wedge fields.
+- Need to synthesize hidden proof statements into packet sidecar fields:
+  use LTT-086 after LTT-085 and attach the hidden-statement sidecar vocabulary
+  before trying another scalar.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1712,6 +1718,44 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-186, LTI-185, LTI-184, LTI-183, LTI-182, LTI-181, LTI-180, LTI-179,
   LTI-178, LTT-084, LTT-083, LTT-082, LTT-081, LTT-080, LTT-079, LTT-078,
   LTT-077, LTT-076, T1120, T1119, T1118, T1117, T1116.
+
+### LTT-086: Hidden Statement Ledger Tournament
+
+- **Move:** Make micro-statements / proof obligations the tournament vertices
+  and orient edges by predicate sharpness, localizer strength, noncircularity,
+  past-work connection count, compression, and theorem-actionability.
+- **LRC use:** HYP-3040 extends HYP-3039 by turning the recent
+  residual/topology/period/analytic stack into an explicit proof-sidecar
+  vocabulary.  The tournament orders
+  owner-essential boundary H1, first-tooth owner strips, primitive `q<=13`
+  decks, residual capacitor cuts, q=23 zeta squares, topology-scale teeth,
+  safe-stalk descent, analytic blindness, automaton shadows, and decoy
+  generator teeth.
+- **Preserves:** Boundary/open status, post-status route schedulability, and
+  the named repair route by which a quotient recovers lost owner, topology,
+  period, stalk, zeta, capacitor, or blocker data.
+- **Forgets / guardrail:** Raw row enumeration, scalar ranking, and route
+  labels are deliberately suppressed until a legal carrier reattaches them.
+  Therefore the ledger is not a scalar theorem; it is a sidecar construction
+  order.
+- **Tournament fingerprint:** vertices are `11` hidden micro-statements, not
+  runners.  Score histogram
+  `{0:1,2:3,4:1,5:1,6:1,7:1,8:1,9:1,10:1}`, one directed 3-cycle, and
+  `3` Hamiltonian paths.  The score order begins
+  `owner_essential_boundary_h1 > residual_first_tooth_owner_strip >
+  primitive_q13_boundary > residual_capacitor_min_cut >
+  q23_diagonal_zeta_owner_strip`.
+- **Next pull:** Add `boundary_h1_owner_support`, `first_tooth`,
+  `primitive_safe_deck_2_13`, `residual_capacitor_id`, `first_cut_stage`,
+  `exact_M_zeta`, `endpoint_owner_strip`, `analytic_blindness_report`, and
+  `automaton_shadow_class` to HYP-2963-style packet ledgers, then check which
+  sidecar field is first to leak boundary/open or route debt.
+- **Pointers:** HYP-3040, HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035,
+  HYP-3034, HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3029, HYP-3028,
+  HYP-3027, HYP-3024, HYP-3023, HYP-3022, HYP-3021, HYP-3018, HYP-2963,
+  THM-572, LTI-188, LTI-187, LTI-186, LTI-185, LTI-184, LTI-183, LTI-182,
+  LTI-181, LTI-180, LTT-085, LTT-084, LTT-083, LTT-082, LTT-081, LTT-080,
+  T1121, T1120.
 
 ## Immediate Pull List
 

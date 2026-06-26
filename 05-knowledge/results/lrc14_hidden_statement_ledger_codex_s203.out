@@ -1,0 +1,185 @@
+=== LRC14 hidden statement ledger S203 ===
+statements=11
+
+[0] Assumption challenge
+  considered vertices:
+    runners, speeds, gaps, route labels, automatic words, exact M values,
+    cover arcs, proof carriers, micro-statements, and proof obligations.
+  chosen vertices:
+    micro-statements / proof obligations extracted from recent and past
+    LRC14 work, because the user asked for hidden details and connections.
+  preserved LRC predicate:
+    boundary/open status, post-status route schedulability, and the
+    named repair route by which a quotient recovers lost information.
+  destroyed information:
+    raw row enumeration, scalar ranking, and route labels until a legal
+    topology, period, owner, stalk, zeta, or cut carrier reattaches them.
+
+[1] Micro-statement ledger
+  MS01 owner_essential_boundary_h1 (HYP-3034/HYP-3030/HYP-3025)
+    role=front_gate
+    statement=Zero-open is not just beta1=1; on the tested collision surface it is an owner-essential closed danger-arc H1 representative.
+    evidence=AP and GW are the only closed-H1 rows; each has a 58-edge representative and deleting any owner speed kills H1.
+    keeps=status,topology,owner,boundary,deletion
+    destroys=route,exact_magnitude,runner_order
+    past_threads=path_homology,deletion_persistence,arc_cech
+  MS02 coarse_status_gate_before_routes (HYP-3024/HYP-3028/HYP-3030/HYP-3034)
+    role=ordering_rule
+    statement=The coarse ET+Henselian gate is a status theorem before it is a route theorem.
+    evidence=Full-bank coarse ET+unit fibers have 0 mixed boundary/open fibers; their route-mixed survivors are all strict-open.
+    keeps=status,et_hensel,residual,ordering
+    destroys=route,exact_magnitude,full_packet_identity
+    past_threads=fiber_zipper,henselian_units,erdos_turan
+  MS03 residual_first_tooth_owner_strip (HYP-3035/HYP-3033/HYP-3029)
+    role=first_tooth_manifest
+    statement=The 15 coarse residual route fibers are a finite owner-strip atlas, not a residual count.
+    evidence=Arc topology is first tooth for 13 fibers, coarse safe stalk for 2, and every first repair is owner_strip.
+    keeps=status,route,owner,topology,stalk,residual
+    destroys=route_labels_until_late,exact_magnitude_until_backup
+    past_threads=safe_component_stalk,barcode,normal_fan,haar_repair
+  MS04 primitive_q13_boundary (HYP-3036/HYP-2979/HYP-2978)
+    role=period_scheduler
+    statement=The direct-witness layer is q<=13 primitive safe mass; q=14 belongs to the boundary/covering layer.
+    evidence=On the 38 S194 residual packets, every Q-WITNESS row has positive primitive safe mass for q<=13 and every covering row has zero.
+    keeps=status,route,period,ramanujan,q_witness
+    destroys=exact_magnitude,safe_interval_length,raw_trace_without_inequality
+    past_threads=ramanujan_projector,exact_period,divisor_packets
+  MS05 analytic_capacity_blindness (HYP-3032/HYP-2982/HYP-2983)
+    role=analytic_guardrail
+    statement=Analytic sieve clocks are capacity and blindness meters, not LRC quotients.
+    evidence=mu^2/phi kills C27 prime powers and fibbinary q=25, while squarefree q=23 still needs packet geometry.
+    keeps=analytic_clock,capacity,blindness,residual
+    destroys=prime_power_packets,owner,topology,route
+    past_threads=large_sieve,mobius,kaczynski,smoothing
+  MS06 residual_capacitor_min_cut (HYP-3037/HYP-3027/HYP-3031)
+    role=cut_lattice
+    statement=After status purity, a mixed open-route pair is a capacitor whose proof content is the first nonzero cut.
+    evidence=The petal/covering capacitor is cut by boundary topology; the K33/covering capacitor is cut by exact M+q.
+    keeps=status,route,cut,topology,magnitude,residual
+    destroys=universal_scalar_order,runner_identity
+    past_threads=max_flow_min_cut,repair_ladder,haar_zeta
+  MS07 q23_diagonal_zeta_owner_strip (HYP-3038/HYP-3032/HYP-3031)
+    role=local_square
+    statement=The squarefree q=23 analytic residual is a drop/add Haar square with a diagonal zeta and endpoint-owner strip.
+    evidence=Diagonal corners keep M=2/23, off-diagonal corners open as q=10 and q=8 witnesses, and endpoint-owner strips split petal from covering.
+    keeps=route,zeta,owner,drop_add_square,endpoint,residual
+    destroys=raw_analytic_q23,row_column_shadow,endpoint_scalar_B18Z6
+    past_threads=haar_product,fixed_margin,drop_add_grid
+  MS08 topology_bucket_plus_unit_scale (HYP-3033/HYP-3030)
+    role=compressed_scheduler
+    statement=A tiny topology bucket plus unit-scale tooth schedules all stored coarse residual Q/covering route debt.
+    evidence=Topology alone leaves 3 mixed route classes, unit-scale alone leaves 1, but the joined tooth has 21 fibers and 0 route mixing.
+    keeps=status,route,topology,unit_scale,compression
+    destroys=exact_magnitude,coarse_et_address,row_identity
+    past_threads=cech_topology,henselian_unit_rule,fiber_zipper
+  MS09 safe_stalk_as_geometry_not_magnitude (HYP-3029/HYP-3035/HYP-3018)
+    role=geometric_descent
+    statement=The safe-component stalk is a geometric descent of magnitude, not a numerical fallback.
+    evidence=Exact stalk splits the target automatic fiber like exact M, while coarse stalk supplies the two missing residual first teeth.
+    keeps=status,route,stalk,owner,safe_component
+    destroys=full_barcode,global_magnitude_scalar
+    past_threads=normal_fan,barcode,safe_component_stalk
+  MS10 automatic_words_are_row_column_shadows (HYP-3023/HYP-3031/HYP-3008/HYP-3010)
+    role=shadow_guardrail
+    statement=Moser/fibbinary/automatic words are useful telemetry but unsafe quotients unless a mixed coordinate or packet label returns.
+    evidence=The AP/GW word mixes routes badly; q=23 drop/add row-column shadows forget zeta; exact packet labels or zeta/owner strips repair the loss.
+    keeps=automaton,zeta,packet_label,shadow,sequence
+    destroys=route,boundary,mixed_coordinate
+    past_threads=moser_de_bruijn,fibbinary,ostrowski_hadamard,finite_automata
+  MS11 pair_good_decoys_are_generator_teeth (HYP-3021/HYP-3022/HYP-3019)
+    role=decoy_normal_form
+    statement=Pair-good decoys are modular blocker teeth, not a raw abundance problem.
+    evidence=The blocker rule 14*min(c*p mod q,q-c*p mod q)<q collapses thousands of decoys to bounded lane/blocker generators tied to barcode and normal-fan supports.
+    keeps=decoy,blocker,barcode,normal_fan,owner
+    destroys=raw_decoy_count,pair_good_boolean
+    past_threads=binding_pair_switch,barcode,normal_fan
+
+[2] Hidden connection edges
+  MS03-MS09 weight=11 shared_keeps=('owner', 'route', 'stalk', 'status') shared_past=('barcode', 'normal_fan', 'safe_component_stalk')
+  MS03-MS06 weight=8 shared_keeps=('residual', 'route', 'status', 'topology') shared_past=-
+  MS01-MS03 weight=6 shared_keeps=('owner', 'status', 'topology') shared_past=-
+  MS03-MS07 weight=6 shared_keeps=('owner', 'residual', 'route') shared_past=-
+  MS03-MS08 weight=6 shared_keeps=('route', 'status', 'topology') shared_past=-
+  MS06-MS08 weight=6 shared_keeps=('route', 'status', 'topology') shared_past=-
+  MS01-MS06 weight=4 shared_keeps=('status', 'topology') shared_past=-
+  MS01-MS08 weight=4 shared_keeps=('status', 'topology') shared_past=-
+  MS01-MS09 weight=4 shared_keeps=('owner', 'status') shared_past=-
+  MS02-MS03 weight=4 shared_keeps=('residual', 'status') shared_past=-
+  MS02-MS06 weight=4 shared_keeps=('residual', 'status') shared_past=-
+  MS03-MS04 weight=4 shared_keeps=('route', 'status') shared_past=-
+  MS03-MS11 weight=4 shared_keeps=('owner',) shared_past=('barcode', 'normal_fan')
+  MS04-MS06 weight=4 shared_keeps=('route', 'status') shared_past=-
+  MS04-MS08 weight=4 shared_keeps=('route', 'status') shared_past=-
+  MS04-MS09 weight=4 shared_keeps=('route', 'status') shared_past=-
+  MS06-MS07 weight=4 shared_keeps=('residual', 'route') shared_past=-
+  MS06-MS09 weight=4 shared_keeps=('route', 'status') shared_past=-
+
+[3] Field histogram
+  status             7
+  route              6
+  owner              5
+  residual           5
+  topology           4
+  stalk              2
+  zeta               2
+  boundary           1
+  deletion           1
+  et_hensel          1
+  ordering           1
+  period             1
+  ramanujan          1
+  q_witness          1
+  analytic_clock     1
+  capacity           1
+  blindness          1
+  cut                1
+  magnitude          1
+  drop_add_square    1
+  endpoint           1
+  unit_scale         1
+  compression        1
+  safe_component     1
+  automaton          1
+  packet_label       1
+  shadow             1
+  sequence           1
+  decoy              1
+  blocker            1
+  barcode            1
+  normal_fan         1
+
+[4] Tournament Analysis over hidden statements
+  vertices_are=micro-statements / proof obligations, not runners
+  score_hist={0: 1, 2: 3, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+  directed_3cycles=1
+  hamiltonian_path_count=3
+  score_order=owner_essential_boundary_h1 > residual_first_tooth_owner_strip > primitive_q13_boundary > residual_capacitor_min_cut > q23_diagonal_zeta_owner_strip > analytic_capacity_blindness > topology_bucket_plus_unit_scale > safe_stalk_as_geometry_not_magnitude > pair_good_decoys_are_generator_teeth > coarse_status_gate_before_routes > automatic_words_are_row_column_shadows
+  scores={'owner_essential_boundary_h1': 10, 'coarse_status_gate_before_routes': 2, 'residual_first_tooth_owner_strip': 9, 'primitive_q13_boundary': 8, 'analytic_capacity_blindness': 5, 'residual_capacitor_min_cut': 7, 'q23_diagonal_zeta_owner_strip': 6, 'topology_bucket_plus_unit_scale': 4, 'safe_stalk_as_geometry_not_magnitude': 2, 'automatic_words_are_row_column_shadows': 0, 'pair_good_decoys_are_generator_teeth': 2}
+
+[5] Fundamental readout
+  1. LRC14 is no longer looking like one master scalar.  It is a
+     layered obstruction calculus: owner-essential boundary H1 first,
+     status-preserving coarse gates second, route teeth third, and
+     residual capacitors/zeta squares only at the end.
+  2. The AP/GW equality atom is topological and deletion-critical,
+     not merely a tight maximin value.
+  3. The sharp q-boundary is q<=13 versus q=14: q<=13 primitive safe
+     mass is direct-witness currency; q=14 is boundary/covering currency.
+  4. Owner identity is repeatedly the missing coordinate: first teeth are
+     owner strips, endpoint-current words can be lossy, and deleting any
+     AP/GW owner kills the closed-H1 representative.
+  5. Past scalar shadows become useful once labelled by their blindness:
+     automatic words are row/column shadows, mu^2/phi is a squarefree
+     capacity meter, and pair-good decoys are blocker-generator teeth.
+
+[6] Sidecar theorem target
+  Add a hidden-statement sidecar vocabulary to the HYP-2963 packet ledger:
+    boundary_h1_owner_support, first_tooth, primitive_safe_deck_2_13,
+    residual_capacitor_id, first_cut_stage, exact_M_zeta,
+    endpoint_owner_strip, analytic_blindness_report, automaton_shadow_class.
+  Candidate principle:
+    Every primitive packet either carries the AP/GW owner-essential
+    boundary H1 atom, has a q<=13 primitive witness, descends through
+    an owner/stalk/topology tooth, or exposes a named capacitor/zeta
+    cut leading to covering, petal, K33/THM-572, Haar/Fejer/Ramanujan
+    annihilation, or F7 debt.
