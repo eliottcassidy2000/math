@@ -2869,3 +2869,27 @@ prove the separating tooth is owner-strip, cross-handoff, nested-refinement, or
 named F7/THM-572 residual debt. -> HYP-3031, HYP-3030, HYP-3029, HYP-3028, HYP-3027,
 HYP-3024, HYP-3023, HYP-2992, HYP-2991, HYP-2989, LTI-179, LTI-178,
 LTT-077, LTT-076, T1112, T1111, THM-572.
+
+## OPEN-Q-108 addendum (codex-2026-06-26-S200): Ramanujan primitive-period scheduler
+
+HYP-3036 tests the CPI-043 Ramanujan exact-period route on HYP-3030's stored
+coarse ET+unit residuals.  On the `38` packets in the `15` strict-open
+route-mixed residual fibers, the primitive safe-residue deck
+`D_q(S)` for `2<=q<=13` separates all residual Q-WITNESS rows from all
+COVERING-MOMENT rows:
+
+```text
+coarse_plus_first_q_2_13        mixed_route=0 mixed_status=0
+coarse_plus_primitive_deck_2_13 mixed_route=0 mixed_status=0
+```
+
+New packet field target: `primitive_safe_deck_2_13` plus
+`first_primitive_safe_q_2_13`.  Guardrail: do not merge the `q=14` primitive
+mass into the direct q-witness layer; many covering rows have q=14 mass while
+their q<=13 deck is zero.  Next task: cached full-bank ledger and family proof
+that post-status positive q<=13 primitive mass is exactly the residual
+Q-WITNESS scheduler, with zero-deck open rows routed to covering/q=14 or a
+boundary-moment certificate. -> HYP-3036, HYP-3033, HYP-3032, HYP-3031,
+HYP-3030, HYP-3028, HYP-3027, HYP-3024, HYP-3023, HYP-2963, LTI-184,
+LTT-082, T1117,
+CPI-043.

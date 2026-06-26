@@ -24187,3 +24187,29 @@ indexes, concept map, OPEN-Q-108, TANGENTS, and this session log.  Next pull:
 extend the path lift beyond the `41` collision/control rows by caching closed
 arc Cech boundary sidecars, then prove zero-open implies an owner-essential
 AP/GW-type closed boundary cycle or named F7/THM-572/harmonic residual debt.
+## codex-2026-06-26-S200 -- LRC14 Ramanujan primitive-period route scheduler -- HYP-3036/LTI-184/LTT-082
+
+User asked to keep working new angles on LRC.  Followed the HYP-3030/HYP-3031
+frontier and tested the CPI-043 Ramanujan exact-period carrier on the small
+open-route residual left by the coarse ET+Henselian-unit status gate.
+
+Added `04-computation/lrc14_ramanujan_route_scheduler_codex_s200.py`,
+`05-knowledge/results/lrc14_ramanujan_route_scheduler_codex_s200.out`,
+`05-knowledge/hypotheses/HYP-3036-lrc14-ramanujan-route-scheduler.md`, and
+`07-reflections/lrc14-ramanujan-route-scheduler-codex-s200.md`.
+
+Core result: parsing S194's stored residual list and rebuilding the `38`
+packets in the `15` route-mixed coarse ET+unit fibers, the raw coarse residual
+has `15` mixed-route fibers and `0` mixed-status fibers.  Adding either
+`first_primitive_safe_q_2_13` or `primitive_safe_deck_2_13` gives `30` fibers
+with `0` mixed route and `0` mixed status.  All residual covering rows have
+zero primitive safe mass for `q<=13`; many have q=14 mass, so `q=14` must
+remain boundary/covering data rather than direct q-witness data.
+
+Updated HYP/result indexes, LTI-184, LTT-082, CPI-043, concept map, OPEN-Q-108,
+T1117, and the investigation backlog after rebasing over the concurrent
+HYP-3032/T1113/LTI-180/LTT-078 analytic sieve-clock bridge and
+HYP-3033/T1114/LTI-181/LTT-079 residual certificate teeth.  Next pull: add the
+primitive deck fields to HYP-3027/HYP-3031 packet sidecars, run a cached
+full-bank ledger, and prove familywise that post-status positive q<=13
+primitive mass is exactly the residual Q-WITNESS scheduler.

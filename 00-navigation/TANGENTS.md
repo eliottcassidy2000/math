@@ -3194,3 +3194,17 @@ representatives, while every open cohabitant has closed H1 `0`.  Next target:
 prove zero-open implies an owner-essential AP/GW-type closed danger-arc cycle
 or named F7/THM-572/harmonic residual debt. -> HYP-3034, LTI-182, LTT-080,
 HYP-3030, HYP-3025, HYP-3024, HYP-3018, HYP-2963, THM-572, OPEN-Q-108.
+## T1117: LRC14 Ramanujan primitive-period route scheduler (codex-2026-06-26-S200)
+
+HYP-3036 instantiates the CPI-043 Ramanujan exact-period pullback on the
+HYP-3030 residual route fibers.  The script parses the stored S194 residual
+list, rebuilds the `38` packets in the `15` coarse ET+unit route-mixed fibers,
+and attaches primitive safe-residue decks `D_q(S)` for `2<=q<=13`.  The
+baseline residual set has `15` mixed-route fibers and `0` mixed-status fibers;
+refining by `first_primitive_safe_q_2_13` or by `primitive_safe_deck_2_13`
+gives `30` fibers with `0` mixed route and `0` mixed status.  Guardrail:
+`q=14` primitive safe mass is boundary/covering data, not direct q-witness
+data.  Next target: add the primitive deck to HYP-3027/HYP-3031 packet
+sidecars and run a cached full-bank ledger. -> HYP-3036, LTI-184, LTT-082,
+HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3028, HYP-3027, HYP-3024,
+HYP-3023, HYP-2963, CPI-043, OPEN-Q-108.

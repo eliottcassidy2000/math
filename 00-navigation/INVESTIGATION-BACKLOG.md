@@ -34,6 +34,13 @@ fibers; `coarse_safe_stalk` handles the other `2`; all first repairs are
 **Next:** add `first_tooth` and `residual_tooth_class` to HYP-2963 sidecars,
 then prove the arc-topology and coarse-stalk owner-strip descent lemmas.
 Namespace: HYP-3035 / T1116 / LTI-183 / LTT-081.
+## Lead codex-2026-06-26-S200: LRC14 Ramanujan primitive-period route scheduler
+
+**Status:** EVIDENCE / residual route scheduler complete (HYP-3036/T1117/LTI-184/LTT-082), downstream of HYP-3030's status-topology gate, HYP-3031's repair-ladder synthesis, and the HYP-3033 residual-certificate teeth.
+**Readout:** `04-computation/lrc14_ramanujan_route_scheduler_codex_s200.py` stores output in `05-knowledge/results/lrc14_ramanujan_route_scheduler_codex_s200.out`.  The script parses the S194 stored residual list and rebuilds only the `38` packets in the `15` route-mixed coarse ET+unit fibers.  Baseline residuals have `15` mixed-route fibers, `0` mixed-status fibers, and routes `Q-WITNESS=23`, `COVERING-MOMENT=15`.  Adding `first_primitive_safe_q_2_13` or `primitive_safe_deck_2_13` gives `30` fibers with `0` mixed route and `0` mixed status.  All residual covering rows have zero primitive safe mass for `q<=13`; q=14 mass is a separate boundary/covering layer.
+**Next:** add `primitive_safe_deck_2_13` and `first_primitive_safe_q_2_13` to the HYP-3027/HYP-3031 packet sidecar, run a cached full-bank ledger, and prove familywise that post-status positive q<=13 primitive mass is exactly the residual Q-WITNESS scheduler while zero-deck open rows route to covering/q=14/boundary-moment certificates.
+Namespace: HYP-3036 / T1117 / LTI-184 / LTT-082 / CPI-043.
+
 ## Lead codex-2026-06-26-S191: LRC carrier pullback mega-index
 
 **Status:** SYNTHESIS / contribution index complete (T1108/LTI-175/LTT-073/LTM-079).  User asked to get more creative by looking back through tournament, related-series, metagraph, automaton, topology, arithmetic, harmonic, and formalization work and bringing as many techniques as possible back to LRC.

@@ -63,6 +63,9 @@ obligations, and proof-carrier interfaces.
 - Need to classify the `15` coarse ET+unit residual fibers by first legal
   non-route tooth:
   use LTT-081 after LTT-080 and LTT-079; add `first_tooth` / `residual_tooth_class` to the packet sidecar.
+- Need to schedule the remaining coarse-gate open-route residuals:
+  use LTT-082 after LTT-079/LTT-081 and add `primitive_safe_deck_2_13`
+  to the packet sidecar.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1556,10 +1559,48 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-183, LTI-182, LTI-181, LTI-179, LTI-178, LTI-177, LTI-176, LTT-080,
   LTT-079, LTT-077, LTT-076, LTT-075, LTT-074, T1116, T1115, T1114.
 
+### LTT-082: Ramanujan Primitive-Period Scheduler Tournament
+
+- **Move:** Use primitive denominator layers as the route-scheduler carrier
+  after status has already converged.  For a packet `S`, record
+  `D_q(S)=#{a mod q : gcd(a,q)=1 and ||a v/q|| >= 1/14 for all v in S}`
+  for `2<=q<=13`, plus the first positive primitive denominator and optional
+  Ramanujan trace profiles `c_q(v)`.
+- **LRC use:** HYP-3036 tests this on HYP-3030's `15` coarse ET+unit
+  route-mixed residual fibers.  The baseline residual set has `38` strict-open
+  packets and mixes `Q-WITNESS=23` with `COVERING-MOMENT=15`; refining by
+  `first_primitive_safe_q_2_13` or by the full `primitive_safe_deck_2_13`
+  gives `30` fibers with `0` mixed route and `0` mixed status, without exact
+  `M`.
+- **Preserves:** Boundary/open status inherited from the coarse gate and the
+  direct `q<=13` witness predicate needed to schedule Q-WITNESS rows.
+- **Forgets / guardrail:** Exact magnitude, exact safe interval lengths, full
+  barcode, and arc-Cech topology.  It must not merge `q=14` with the direct
+  witness layer: many covering rows have primitive safe mass at `q=14` while
+  their `q<=13` deck is zero.  Raw Ramanujan traces are diagnostic unless
+  paired with the safe-phase inequality.
+- **Tournament fingerprint:** vertices are proof carriers, not runners:
+  `primitive_count_deck_2_13`, `first_safe_q_2_13`,
+  `ramanujan_trace_deck_2_14`, `coarse_et_unit_status_gate`,
+  `exact_magnitude_cocycle`, and `raw_residue_terminal_word`.
+  Score histogram `{0:1,1:1,2:1,3:1,4:1,5:1}`, no directed 3-cycles, one
+  Hamiltonian path, score order
+  `primitive_count_deck_2_13 > first_safe_q_2_13 >
+  ramanujan_trace_deck_2_14 > coarse_et_unit_status_gate >
+  exact_magnitude_cocycle > raw_residue_terminal_word`.
+- **Next pull:** Add `primitive_safe_deck_2_13` and
+  `first_primitive_safe_q_2_13` to HYP-3027/HYP-3031 packet sidecars, rerun a
+  cached full-bank ledger, and prove zero-deck post-status open rows route to
+  covering/q=14/boundary-moment certificates.
+- **Pointers:** HYP-3036, HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3028,
+  HYP-3027, HYP-3024, HYP-3023, HYP-2963, LTI-184, LTI-181, LTI-180,
+  LTI-179, LTI-178, LTI-176, LTT-079, CPI-043, T1117, T1112, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
-   Ramanujan exact-period projector, spectrum binding scale, additive-basis
+   Ramanujan exact-period projector, primitive safe deck, first primitive
+   safe q, spectrum binding scale, additive-basis
    regime, Pascal-slope carry width, curried call signature,
    lost-coordinate function, observer velocity, sign-kernel status, boost
    cocycle, tube metric, automatic language class, fibbinary/Moser carry
