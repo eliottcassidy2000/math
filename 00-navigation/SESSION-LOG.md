@@ -1,3 +1,48 @@
+## codex-2026-06-26-S226 -- Roth-Minkowski Diophantine lattice fence (HYP-3062/T1144/LTI-209/LTT-107)
+
+User asked to merge in Roth's theorem and Minkowski's theorem.
+
+Created HYP-3062, T1144, LTI-209, LTT-107, and reflection
+`07-reflections/roth-minkowski-diophantine-lattice-fence-codex-s226.md`.
+
+Main synthesis: use Roth's theorem in Diophantine approximation and Minkowski's
+geometry-of-numbers theorem as a paired controlled-forgetting sidecar.
+Minkowski is the relation-lattice existence/volume gate only after the lattice,
+covolume, convex body, successive minima, and short-vector certificate are
+named.  Roth is the algebraic near-miss finiteness fence only after the
+algebraic target, field degree, height scale, approximation exponent, epsilon
+margin, and finite exceptional approximants are named.
+
+Packet sidecar:
+
+```text
+relation_lattice
+covolume
+successive_minima_profile
+convex_body_id
+algebraic_target
+height_bound
+approximation_exponent
+exceptional_approximants
+low_height_wall_class
+deleted_anti_cosets
+residue_signed_tail
+diophantine_exit
+```
+
+Proof interface: finite low-height wall deletion first, then a named
+Minkowski relation-lattice tail, then a Roth exceptional-approximant fence.
+This clarifies the older support-six "execute Minkowski count" residual in
+HYP-2612-HYP-2614 and connects it to HYP-2963, HYP-2764, HYP-2998/HYP-3003,
+HYP-3008/HYP-3009, HYP-3058, and HYP-3061.
+
+Tournament Analysis vertices are proof carriers and sidecar columns rather
+than runners, with retention path `labelled_packet_sheaf >
+low_height_wall_ledger > relation_lattice_covolume >
+minkowski_successive_minima_gate > roth_algebraic_height_fence >
+residue_signed_tail > hyperbolic_reciprocal_signature >
+automatic_gap_language > raw_volume_or_exponent_scalar`.
+
 ## codex-2026-06-26-S225 -- LRC14 geometry-regime archive audit (HYP-3061/T1143/LTI-208/LTT-106)
 
 User asked to dig up older repo ideas like the `5,6,7` geometry transition

@@ -1,5 +1,21 @@
 # Open Questions
 
+**OPEN-Q-108 S226 Roth-Minkowski Diophantine lattice fence addendum:** HYP-3062
+turns Roth's Diophantine approximation theorem and Minkowski's geometry-of-
+numbers theorem into a controlled-forgetting sidecar for LRC14.  Open task:
+build a support-six Roth-Minkowski ledger over selected HYP-2614/HYP-2963
+packets with fields `relation_lattice`, `covolume`,
+`successive_minima_profile`, `convex_body_id`, `algebraic_target`,
+`height_bound`, `approximation_exponent`, `exceptional_approximants`,
+`low_height_wall_class`, `deleted_anti_cosets`, `residue_signed_tail`, and
+`diophantine_exit`.  Prove finite low-height wall deletion first, apply
+Minkowski only to the named relation-lattice tail, and apply Roth only after
+the algebraic target, height scale, epsilon margin, and finite exceptional
+approximants are explicit.  Any unlisted near miss is residual debt, not a
+discharge. -> HYP-3062, HYP-3061, HYP-3058, HYP-3009, HYP-2998, HYP-2963,
+HYP-2764, HYP-2614, HYP-2613, HYP-2612, HYP-2608, THM-538, LTI-209, LTT-107,
+T1144.
+
 **OPEN-Q-108 S225 geometry-regime archive audit addendum:** HYP-3061 turns the
 old `5,6,7` geometry motif into a typed controlled-forgetting sidecar.  Open
 task: add `geometry_regime_signature` to a selected HYP-2963 packet sample with

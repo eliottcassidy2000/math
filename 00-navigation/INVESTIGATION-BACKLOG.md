@@ -15,6 +15,30 @@
 
 ---
 
+## Lead codex-2026-06-26-S226: Roth-Minkowski Diophantine lattice fence
+
+**Status:** SYNTHESIS / proof-interface sidecar for Diophantine geometry
+(HYP-3062/T1144/LTI-209/LTT-107).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3062-roth-minkowski-diophantine-lattice-fence.md`
+and
+`07-reflections/roth-minkowski-diophantine-lattice-fence-codex-s226.md`.
+Roth's Diophantine approximation theorem and Minkowski's geometry-of-numbers
+theorem are imported as a paired controlled-forgetting fence: first finite
+low-height wall deletion, then named Minkowski relation-lattice tail, then
+Roth exceptional-approximant fence.  Raw volume, raw covolume, and raw
+approximation exponent remain scouts unless the lattice, convex-body, algebraic
+height, exception, anti-coset, residue-tail, and packet-exit fields are
+retained.
+**Next:** annotate a HYP-2614/HYP-2963 support-six sample with
+`relation_lattice`, `covolume`, `successive_minima_profile`,
+`convex_body_id`, `algebraic_target`, `height_bound`,
+`approximation_exponent`, `exceptional_approximants`,
+`low_height_wall_class`, `deleted_anti_cosets`, `residue_signed_tail`, and
+`diophantine_exit`; prove finite low-height deletion before applying
+Minkowski and finite exceptional-approximant control before applying Roth.
+Namespace: HYP-3062 / T1144 / LTI-209 / LTT-107.
+
 ## Lead codex-2026-06-26-S220: Observer-cut orbit ledger
 
 **Status:** SYNTHESIS / formal addendum to the S218 observer-extension cut

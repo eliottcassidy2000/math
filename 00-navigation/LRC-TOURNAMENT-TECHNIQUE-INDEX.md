@@ -149,6 +149,10 @@ obligations, and proof-carrier interfaces.
   `axis`, `input`, `regime`, `curvature_or_defect`, `preserved_payload`,
   `destroyed_payload`, `lrc_handoff`, and `source_artifacts` before promoting
   any spherical/flat/hyperbolic analogy.
+- Need to import Roth or Minkowski without scalarizing Diophantine estimates:
+  use LTT-107 after LTT-106/LTT-103/LTT-099 and retain relation-lattice,
+  covolume, successive-minima, algebraic-height, exceptional-approximant,
+  low-height-wall, deleted-anti-coset, and residue-tail sidecars.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2723,6 +2727,50 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-203, LTI-202, LTI-201, LTT-106, LTT-103, LTT-102, LTT-101, LTT-100,
   LTT-099, T1143, T1140, OPEN-Q-108.
 
+### LTT-107: Roth-Minkowski Diophantine Lattice Fence
+
+- **Move:** Treat Roth's Diophantine approximation theorem and Minkowski's
+  geometry-of-numbers theorem as a paired sidecar.  Minkowski is the
+  relation-lattice existence gate after lattice, covolume, convex body, and
+  successive minima are named.  Roth is the algebraic near-miss fence after
+  algebraic target, field degree, height, epsilon margin, and finite
+  exceptional approximants are named.
+- **LRC use:** HYP-3062 upgrades older support-six "execute Minkowski count"
+  language into a three-stage proof interface: finite low-height wall deletion,
+  named Minkowski relation-lattice tail, then Roth exceptional-approximant
+  fence.  It applies to HYP-2612-HYP-2614, HYP-2764, HYP-2963 packet rows,
+  Farey/additive-basis lanes, automatic/Fermat-Catalan power guards,
+  hyperbolic reciprocal signatures, and geometry-regime analogies.
+- **Preserves:** Exact `M` and Farey address, relation lattice, ambient rank,
+  covolume, convex body, successive minima profile, short-vector certificate,
+  algebraic target, field degree, height bound, approximation exponent,
+  epsilon margin, exceptional approximants, low-height wall class, deleted
+  anti-cosets, residue signed tail, route/status handoff, and proof exit.
+- **Forgets / guardrail:** Raw volume, raw covolume, a short-vector existence
+  slogan, or a Diophantine exponent cannot certify LRC14 after the finite
+  low-height exceptions have been collapsed.  Roth is not allowed to erase the
+  exceptional approximants; Minkowski is not allowed to erase the lattice and
+  convex body that made the volume statement true.
+- **Tournament fingerprint:** vertices are proof carriers and sidecar columns,
+  not runners:
+  `labelled_packet_sheaf > low_height_wall_ledger >
+  relation_lattice_covolume > minkowski_successive_minima_gate >
+  roth_algebraic_height_fence > residue_signed_tail >
+  hyperbolic_reciprocal_signature > automatic_gap_language >
+  raw_volume_or_exponent_scalar`.  Pairwise observable is retained exact
+  packet, lattice, height, exception, residue-tail, and route/status payload;
+  edge flips mark an unsafe quotient or an unnamed exceptional family.
+- **Next pull:** Add `relation_lattice`, `covolume`,
+  `successive_minima_profile`, `convex_body_id`, `algebraic_target`,
+  `height_bound`, `approximation_exponent`, `exceptional_approximants`,
+  `low_height_wall_class`, `deleted_anti_cosets`, `residue_signed_tail`, and
+  `diophantine_exit` to selected HYP-2963/HYP-2614 rows before applying a
+  geometry-of-numbers or algebraic-approximation estimate.
+- **Pointers:** HYP-3062, HYP-3061, HYP-3058, HYP-3054, HYP-3009, HYP-3008,
+  HYP-2998, HYP-2982, HYP-2963, HYP-2764, HYP-2614, HYP-2613, HYP-2612,
+  HYP-2608, THM-538, LTI-209, LTI-208, LTI-205, LTI-203, LTI-201, LTT-107,
+  LTT-106, LTT-103, LTT-101, LTT-099, T1144, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -2772,7 +2820,10 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    value origin type, child sink class, self-converse status,
    fixed path fiber, rectangle residue class, hourglass residue class,
    lost-coordinate exit, desargues girth-six residue,
-   beal common-owner gate,
+   beal common-owner gate, relation lattice, covolume,
+   successive minima profile, convex body ID, algebraic target, height bound,
+   approximation exponent, exceptional approximants, low-height wall class,
+   deleted anti-cosets, residue signed tail, diophantine exit,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
