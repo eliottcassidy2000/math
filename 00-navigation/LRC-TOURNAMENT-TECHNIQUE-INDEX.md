@@ -1468,6 +1468,34 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2963, HYP-2997, HYP-2995, HYP-2992, THM-572, LTI-180, LTI-174,
   LTI-171, LTT-077, LTT-072, LTT-070, T1113.
 
+### LTT-079: Residual Certificate Teeth Tournament
+
+- **Move:** Treat the S194 route-mixed residual proof carriers as tournament
+  vertices: coarse residual fiber, topology tooth, unit-scale tooth, topology
+  bucket plus unit-scale, full topology plus unit-scale, and exact `M`
+  fallback.  Orient by status preservation, route purity, topology retention,
+  scale retention, compression, noncircularity, and proof cost.
+- **LRC use:** HYP-3033 parses the S194 residual ledger for the `38` open
+  packets in the `15` route-mixed coarse ET+unit fibers.  Topology alone
+  leaves `3` mixed route classes, unit-scale alone leaves one mixed class, and
+  exact `M` fallback leaves `2` mixed classes.  Joining the topology compact
+  signature, or the compressed safe-tope/quotient-defect bucket, with the
+  unit-scale tooth gives `21` residual fibers with `0` route mixing.
+- **Preserves:** The already-proved strict-open status of the residual ledger,
+  arc topology compact data, safe-tope count, quotient defect, and a tiny
+  unit/nonunit scale tooth.
+- **Forgets / guardrail:** Raw coarse ET address, row identity, route labels,
+  and most exact magnitude data are destroyed.  This is only a stored-ledger
+  scheduler until the teeth are promoted into packet sidecars and rerun
+  directly.
+- **Next pull:** Add `residual_topology_bucket`, `unit_scale_tooth`, and
+  `residual_certificate_tooth` to the packet classifier, rerun the full bank,
+  then prove the family theorem routing open residuals to q-witness,
+  covering/Haar/nested refinement, or named F7/THM-572 debt.
+- **Pointers:** HYP-3033, HYP-3031, HYP-3030, HYP-3029, HYP-3028, HYP-3024,
+  HYP-2963, THM-572, LTI-181, LTI-179, LTI-178, LTI-176, LTT-077, LTT-076,
+  LTT-074, T1114.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,

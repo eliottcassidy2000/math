@@ -34,6 +34,13 @@ Namespace: HYP-3029 / T1110 / LTI-177 / LTT-075.
 **Next:** prove a topology-first zero-open theorem: primitive zero-open packets must carry the AP/GW arc-boundary cycle or emit named F7/THM-572 residual debt.  Then use coarse ET+unit only as a status-preserving quotient, with magnitude/barcode/Fejer/K33 machinery scheduling the remaining open route collisions.
 Namespace: HYP-3030 / T1111 / LTI-178 / LTT-076.
 
+## Lead codex-2026-06-26-S197: LRC14 residual certificate teeth
+
+**Status:** EVIDENCE / stored-ledger residual scheduler complete (HYP-3033/T1114/LTI-181/LTT-079), downstream of HYP-3031's Haar repair dictionary, HYP-3030's status-topology gate, HYP-3028's residual status gate, and HYP-3024's coarse ET+Henselian-unit convergence.
+**Readout:** `04-computation/lrc14_residual_certificate_teeth_codex_s197.py` stores output in `05-knowledge/results/lrc14_residual_certificate_teeth_codex_s197.out`.  On the S194 residual ledger, the `15` route-mixed coarse ET+unit fibers contain `38` packets and all are open.  Topology alone leaves `3` mixed route classes, unit-scale alone leaves one mixed class, and exact `M` fallback leaves `2` mixed classes.  Full topology plus unit-scale, and the compressed `(safe topes, quotient defect, open beta0 - closed beta0)` bucket plus unit-scale, both produce `21` residual fibers with `0` route mixing.
+**Next:** materialize `residual_topology_bucket`, `unit_scale_tooth`, and `residual_certificate_tooth` in the packet classifier instead of parsing S194 text; rerun on the full HYP-2963 bank; then prove the family scheduler that routes open residuals to q-witness, covering/Haar/nested refinement, or named F7/THM-572 debt.
+Namespace: HYP-3033 / T1114 / LTI-181 / LTT-079.
+
 ## Lead codex-2026-06-26-S188: LRC14 fiber-zipper convergence via Erdos-Turan and Henselian unit rule
 
 **Status:** EVIDENCE / target-fiber convergence scout complete (HYP-3024/T1104/LTI-171), downstream of HYP-3023 automatic fiber zipper and HYP-3020 discrepancy-height trident.  User asked to extend fiber-zipper convergence using Erdos-Turan and a Henselian unit rule.

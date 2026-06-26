@@ -48,6 +48,32 @@ Readout: residue-terminal fibers have exactly `2` mixed boundary/open fibers.  T
 
 Created HYP-3030, T1111, LTI-178, LTT-076, and reflection `07-reflections/lrc14-status-topology-gate-codex-s194.md`.  Proof-order takeaway: prove zero-open implies the AP/GW arc-boundary cycle or named F7/THM-572 residual, then allow coarse ET+unit to forget exact route labels while preserving the LRC yes/no predicate.
 
+## codex-2026-06-26-S197 -- LRC14 residual certificate teeth (HYP-3033/T1114/LTI-181/LTT-079)
+
+User asked to keep working new LRC angles.  Built a residual route scheduler on
+top of HYP-3030's status-topology gate rather than recomputing the full packet
+bank.
+
+Added `04-computation/lrc14_residual_certificate_teeth_codex_s197.py` and
+stored `05-knowledge/results/lrc14_residual_certificate_teeth_codex_s197.out`.
+The script parses the stored S194 residual ledger and audits the `38` open
+packets in the `15` route-mixed coarse ET+unit fibers.
+
+Readout: topology alone leaves `3` mixed route classes, unit-scale alone leaves
+one mixed class, and exact `M` fallback still leaves `2` mixed classes.  Joining
+the full topology compact signature, or the compressed topology bucket
+`(safe topes, quotient defect, open beta0 - closed beta0)`, with the
+unit-scale tooth gives `21` residual fibers with `0` route mixing and `0`
+status mixing.
+
+Created HYP-3033, T1114, LTI-181, LTT-079, and reflection
+`07-reflections/lrc14-residual-certificate-teeth-codex-s197.md`.  Proof-order
+takeaway: after the status gate proves all residuals open, promote
+`residual_topology_bucket`, `unit_scale_tooth`, and
+`residual_certificate_tooth` into packet sidecars and prove the joined tooth
+routes q-witness versus covering/Haar/nested exits without using route labels
+as keys.
+
 ## codex-2026-06-26-S188 -- LRC14 fiber-zipper convergence via ET/Henselian units (HYP-3024/T1104)
 
 User asked to extend fiber-zipper convergence while thinking Erdos-Turan and a Henselian unit rule.  Fast-forwarded over HYP-3023, which supplied the automatic fiber zipper and identified `MFCMMCCFFFCCC` as the first target automatic word.

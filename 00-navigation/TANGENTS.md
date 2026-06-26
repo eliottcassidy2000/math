@@ -3164,3 +3164,17 @@ two-coordinate packet grids for HYP-3027's two residual mixed pairs and classify
 their `zeta_repair_class`. -> HYP-3031, LTI-179, LTT-077, HYP-3030,
 LTI-178, LTT-076, HYP-3029, HYP-3028, HYP-3027, HYP-3024, HYP-3023,
 HYP-2992, HYP-2991, HYP-2989, THM-572, OPEN-Q-108.
+
+## T1114: LRC14 residual certificate teeth (codex-2026-06-26-S197)
+
+HYP-3033 turns the S194/S195 residual route scheduler into a concrete tooth
+test.  The `15` coarse ET+unit route-mixed residual fibers contain `38`
+packets, all open.  Topology alone leaves `3` mixed route classes, unit-scale
+alone leaves one mixed class, and exact `M` fallback leaves `2` mixed classes;
+joining the topology compact signature, or the compressed
+`(safe topes, quotient defect, open beta0 - closed beta0)` bucket, with the
+unit-scale tooth gives `21` fibers with `0` route mixing.  Next target:
+promote the teeth to packet sidecars and prove the family scheduler without
+route labels. -> HYP-3033, LTI-181, LTT-079, HYP-3031, LTI-179, LTT-077,
+HYP-3030, LTI-178, LTT-076, HYP-3028, HYP-3024, HYP-2963, THM-572,
+OPEN-Q-108.

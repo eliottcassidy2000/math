@@ -62,6 +62,19 @@ for the LRC yes/no predicate and can be scheduled by magnitude, barcode,
 Fejer/Ramanujan/Haar, q-witness, covering, or state-lift exits. -> HYP-3030,
 HYP-3025, HYP-3024, HYP-3023, HYP-3020, HYP-3018, HYP-3016, HYP-3015,
 HYP-3029, HYP-3028, HYP-3027, HYP-3026, HYP-2963, THM-572, LTI-178, LTT-076, T1111.
+**OPEN-Q-108 S197 residual certificate-teeth addendum:** HYP-3033 parses the
+S194 residual ledger for the `38` open packets in the `15` route-mixed coarse
+ET+unit fibers.  Topology alone leaves `3` mixed route classes, unit-scale
+alone leaves one mixed class, and exact `M` fallback still leaves `2` mixed
+classes.  The joined tooth `(full topology compact signature or compressed
+safe-topes/quotient-defect/open-minus-closed bucket) + unit-scale` gives `21`
+residual fibers with `0` route mixing.  Open task: promote
+`residual_topology_bucket`, `unit_scale_tooth`, and
+`residual_certificate_tooth` into packet sidecars, rerun without stored-text
+parsing, and prove the family theorem that sends open residuals to q-witness,
+covering/Haar/nested refinement, or named state-lift/F7/THM-572 debt. ->
+HYP-3033, HYP-3031, HYP-3030, HYP-3028, HYP-3024, HYP-2963, THM-572,
+LTI-181, LTI-179, LTI-178, LTT-079, LTT-077, LTT-076, T1114.
 
 **OPEN-Q-108 S188 fiber-zipper convergence addendum:** HYP-3024 completes the
 reserved S188 fiber-zipper convergence audit by extending HYP-3023 and
