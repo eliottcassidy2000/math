@@ -150,6 +150,30 @@ to test are `observer_cut_word`, `source_sink_overlap_class`,
 HYP-3054, HYP-3053, HYP-3052, HYP-3051, HYP-3050, HYP-3049, HYP-3048, HYP-3047,
 HYP-3046, HYP-3043, HYP-3039, HYP-3031, HYP-3013, HYP-3008, LTI-206, LTI-203, LTI-202,
 LTT-104, LTT-101, LTT-100, T1141, T1138, T1137.
+**OPEN-Q-108 S230 exact duodecimal audit addendum:** HYP-3065 refines
+HYP-3054/HYP-3055 by turning the `48/56/12` clue into an exact overlap target.
+Since `48+12=60`, the live ledger is
+`U(6)=P(5)+SC(6)-U(4)=48+12-4=56`, with net defect `8=(2/3)*12` and overlap
+kernel `U(4)=4=(1/3)*12`.  Open task: construct or refute a real
+inclusion-exclusion / deletion-boundary / cycle-cohomology object behind this
+identity.  Compare the overlap kernel with S217 rectangle/hourglass residues,
+HYP-3056 observer-cut payload orbits, HYP-3057 value-origin types, HYP-3049's
+ordered-pair sector collision `344/345`, HYP-3052 deletion-parent fibers,
+HYP-3050 exact non-node carriers, and HYP-3065's Burnside odd-cycle/self-
+converse deletion split.  Add
+`observer_extension_cut_signature`, `value_origin_type`,
+`observer_cut_payload_orbit`, `duodecimal_overlap_kernel`,
+`self_converse_branch_locus`, `cross_sector_orientation_word`,
+`deletion_parent_profile`, `rectangle_cycle_residue`, and
+`hourglass_cycle_residue` to LRC packet experiments before quotienting an
+observer role. -> HYP-3065, HYP-3059, HYP-3058, HYP-3057, HYP-3056, HYP-3055, HYP-3054, HYP-3053, HYP-3052,
+HYP-3051, HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-3045, HYP-3043,
+HYP-3041, HYP-3040, HYP-3039, HYP-3038, HYP-3037, HYP-3022, HYP-3021,
+HYP-2991, HYP-2989, HYP-2120, HYP-2121, THM-381, THM-385, LTI-212, LTI-206, LTI-205, LTI-204,
+LTI-203, LTI-202, LTI-201, LTI-200, LTI-199, LTI-197, LTI-196, LTI-195,
+LTT-110, LTT-104, LTT-103, LTT-102, LTT-101, LTT-100, LTT-099, LTT-098, LTT-097, LTT-095,
+LTT-094, LTT-093, T1147, T1141, T1140, T1139, T1138, T1137, T1136,
+T1135, T1134, T1132, T1131.
 **OPEN-Q-108 S217 diagonal-layer flow addendum:** HYP-3053 turns the user's
 tournament tiling-growth model into a `GF(2)` coboundary carrier.  The
 `k^2+k` lines between layers of sizes `k` and `k+1` form `K_{k,k+1}`:
@@ -2303,11 +2327,11 @@ The EXACT formula uses combinatorial g_k polynomials of degree k:
 
 **Evidence:** Only 7 and 21 are known forbidden. 63 is achievable (n=8). No other candidates found through n=11.
 
-**UPDATE (opus-S227):** H-spectrum density at n=8 is 320/331 = 96.7%. Only 11 gaps remain, dominated by {7, 21}. In the metagraph, forbidden values create "missing floors" that force edge jumps. At n=5, 33% of edges bridge the H=7 gap. The fraction decreases as n grows (2.2% at n=7). Edges bridging H=7 gap: 0, 0, 7, 21, 47 for n=3..7.
+**UPDATE (opus-S230):** H-spectrum density at n=8 is 320/331 = 96.7%. Only 11 gaps remain, dominated by {7, 21}. In the metagraph, forbidden values create "missing floors" that force edge jumps. At n=5, 33% of edges bridge the H=7 gap. The fraction decreases as n grows (2.2% at n=7). Edges bridging H=7 gap: 0, 0, 7, 21, 47 for n=3..7.
 
 **STRONG CONJECTURE:** Only H=7 and H=21 are permanently forbidden. All other gaps are transient (filled at large enough n).
 
-**Source:** kind-pasteur-S107, opus-S227
+**Source:** kind-pasteur-S107, opus-S230
 
 ---
 

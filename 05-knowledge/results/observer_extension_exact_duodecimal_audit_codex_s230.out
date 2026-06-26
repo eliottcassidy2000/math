@@ -1,0 +1,151 @@
+================================================================================
+S230: observer-extension exact duodecimal deletion-sector audit
+================================================================================
+1. COUNT LADDERS AND THE DUODECIMAL GATE
+   n  U(n)  Burnside  rooted P(n)  extension E(n->n+1)  self-converse
+   1     1         1            1                     2              1
+   2     1         1            2                     4              1
+   3     2         2            4                    12              2
+   4     4         4           12                    48              2
+   5    12        12           48                   296              8
+   6    56        56          296                                   12
+
+   Duodecimal coincidences:
+     P(4) = 12 = 1 dozen rooted/node perspectives on 4-classes.
+     U(5) = 12 = 1 dozen unrooted 5-tournament classes.
+     SC(6) = 12 = 1 dozen self-converse 6-classes.
+     K_{4,5} rectangle redundancy = 4*(4-1) = 12.
+
+   Literal arithmetic check and corrected ledgers:
+     48 + 12 = 60, not 56.
+     U(6) = P(5) + 8 = 48 + 8 = 56.
+     U(6) = P(5) + SC(6) - U(4) = 48 + 12 - 4 = 56.
+     defect/U(6) = 1/7; P(5)/U(6) = 6/7.
+     defect/dozen = 2/3; overlap/dozen = U(4)/12 = 1/3.
+     U(6)/dozen = 14/3; P(5)/dozen = 4.
+
+2. BURNSIDE TERMS: WHERE U(4), U(5), U(6) COME FROM
+   n=4:
+     type=(3, 1)         perms=  8 edge_orbits= 2 fixed=    4 burnside_sum=    32
+     type=(1, 1, 1, 1)   perms=  1 edge_orbits= 6 fixed=   64 burnside_sum=    64
+     total=96; total/24=4
+   n=5:
+     type=(5,)           perms= 24 edge_orbits= 2 fixed=    4 burnside_sum=    96
+     type=(3, 1, 1)      perms= 20 edge_orbits= 4 fixed=   16 burnside_sum=   320
+     type=(1, 1, 1, 1, 1) perms=  1 edge_orbits=10 fixed= 1024 burnside_sum=  1024
+     total=1440; total/120=12
+   n=6:
+     type=(5, 1)         perms=144 edge_orbits= 3 fixed=    8 burnside_sum=  1152
+     type=(3, 3)         perms= 40 edge_orbits= 5 fixed=   32 burnside_sum=  1280
+     type=(3, 1, 1, 1)   perms= 40 edge_orbits= 7 fixed=  128 burnside_sum=  5120
+     type=(1, 1, 1, 1, 1, 1) perms=  1 edge_orbits=15 fixed=32768 burnside_sum= 32768
+     total=40320; total/720=56
+   Reading: the [3,3] term at n=6 contributes 40*32 labelled fixed shadows
+   with no fixed vertex.  It is a rootless/cyclic observer leak, matching
+   the first P(5)->U(6) defect rather than a deeper node-memory failure.
+
+3. SIX-CLASS DELETION FIBERS AND ORDERED-PAIR SECTORS
+   self_converse : classes=12 rooted_mult_sum= 60 deletion_parent_count_hist={1: 3, 2: 2, 3: 1, 4: 5, 5: 1} vertex_orbit_hist={2: 3, 6: 9} c3_range=(0,8) H_range=(1,45)
+   chiral        : classes=44 rooted_mult_sum=236 deletion_parent_count_hist={2: 4, 3: 12, 4: 8, 5: 16, 6: 4} vertex_orbit_hist={2: 2, 4: 10, 6: 32} c3_range=(1,8) H_range=(3,43)
+   sector_size_deck          : separates=55/56 collisions=[[344, 345]]
+   sector_size_internal_deck : separates=55/56 collisions=[[344, 345]]
+   sector_full_cross_deck    : separates=56/56 collisions=[]
+   Reading: sector sizes and internal sector tournaments still forget one
+   converse-pair distinction.  Adding cross-sector orientation restores
+   all 56 classes, so cross-sector orientation is the compact observer-cut
+   payload after the rooted cache.
+
+4. S217 RECTANGLE/HOURGLASS RESIDUES FOR FIXED-PATH DIAGONAL FLOW
+   Local bridge K_{k,k+1}:
+   k  lines  rank  rectangle_redundancy
+   1      2     2                     0
+   2      6     4                     2
+   3     12     6                     6
+   4     20     8                    12  <-- one dozen
+   5     30    10                    20
+   6     42    12                    30
+   7     56    14                    42
+
+   Full adjacent-layer flow:
+   n  lines  rank  redundancy  local_rectangles  hourglass_residues
+   4      8     5           3                 2                   1
+   5     20     9          11                 8                   3
+   6     40    14          26                20                   6
+   7     70    20          50                40                  10
+   Reading: the dozen at K_{4,5} is not extra class mass.  It is a
+   rectangle-cycle reservoir.  To affect U(6)=56 it must pass through an
+   overlap/forgetting law, not through literal addition.
+
+5. OBSERVER-EXTENSION / CUT PAYLOAD ABSTRACT
+   HYP-3057 value-origin ledger:
+     quotient=small integer reused across adjacent levels
+     payload=value_origin_type plus the coordinate it came from
+     rule=type the number before using it as an invariant
+   HYP-3056 observer-cut orbit ledger:
+     quotient=visible-fiber automorphism quotient
+     payload=orbit of boundary slice / incidence word / extended shadow
+     rule=normalize payloads only modulo visible automorphisms
+   HYP-3039 controlled forgetting:
+     quotient=coarse quotient fiber
+     payload=hidden coordinate stage / residual debt
+     rule=retain, reconstruct, dual-annihilate, descend, or name debt
+   HYP-3038 q=23 drop/add square:
+     quotient=fixed-margin rectangle
+     payload=exact-M zeta and endpoint-owner strip
+     rule=rectangle residue is payload, not count noise
+   HYP-3037 residual capacitors:
+     quotient=two-plate route cut
+     payload=first-cut stage / capacitor id
+     rule=cut payload schedules route separation
+   HYP-3041 AP-tail repair:
+     quotient=AP-core one-tail observer
+     payload=q=13 puncture or reciprocal fixed-point clock
+     rule=coarse owner strip is unsafe without hidden clock
+   HYP-3045 endpoint-owner transfer:
+     quotient=B18Z6 endpoint shadow
+     payload=external owner strip and transfer delta
+     rule=owner names are the extension payload
+   HYP-3021/HYP-3022 pair-good decoys:
+     quotient=blocker generator quotient
+     payload=barcode / normal-fan active owner
+     rule=generator class beats raw decoy count
+   HYP-3049 ordered-pair sectors:
+     quotient=old-root/new-observer cut
+     payload=cross-sector orientation word
+     rule=first compact sidecar after rooted cache
+   HYP-3053 diagonal flow:
+     quotient=K_{k,k+1} line quotient
+     payload=rectangle/hourglass cycle residue
+     rule=redundancy law is the proof carrier
+   Abstract law: observer-extension creates a cut payload; controlled
+   forgetting may quotient the observer only when that payload is typed
+   by origin, reduced to its visible payload orbit, fiber-constant,
+   reconstructible, killed by a dual/cycle equation, descended
+   familywise, or emitted as named residual debt.
+
+6. TOURNAMENT ANALYSIS
+   Vertices are proof carriers, not runners or arcs.
+   Pairwise observable: retained LRC predicate payload minus quotient loss.
+   Switch: orient toward the carrier that explains an actual lost coordinate;
+   ties follow the displayed Hamiltonian path.
+   path=exact_canonical_audit > burnside_odd_cycle_sidecar > cross_sector_orientation_word > deletion_parent_fiber_profile > rectangle_hourglass_cycle_residue > self_converse_branch_locus > duodecimal_overlap_ledger > rooted_perspective_cache > raw_orbit_count_coincidence
+   score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}
+   directed_3_cycles=0
+   scc_sizes=[1,1,1,1,1,1,1,1,1]
+   hamiltonian_paths=1
+
+7. ASSUMPTION CHALLENGE
+   Vertex sets considered: runners, arcs, rooted vertices, ordered pairs,
+   edge sectors, diagonal tiles, K_{k,k+1} line sectors, rectangle cycles,
+   hourglass cycles, deletion fibers, self-converse branch points, cover
+   arcs, barcode bars, endpoint owners, residues, Fourier modes, matroid
+   cocircuits, and proof obligations.
+   Chosen vertices: observer-extension proof carriers and their cut payloads.
+   Preserved predicate: whether the quotient keeps enough information to
+   separate or reconstruct LRC route/status-changing packet pairs.
+   Destroyed information: labelled runner identity, old-root/new-observer
+   role, cross-sector orientation, deletion parent multiplicity, endpoint
+   owner names, and rectangle/hourglass residues when they are not sidecars.
+   Challenged assumption: the dozen should not be added as independent mass.
+   At this scale the live statement is a duodecimal overlap law:
+   56 = 48 + 12 - 4, with net correction 8 = (2/3)*12.

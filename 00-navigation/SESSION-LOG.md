@@ -471,6 +471,68 @@ Next pull: add `observer_cut_word`, `stabilizer_orbit_id`,
 `rectangle_hourglass_residue`, `endpoint_owner_packet`, and `legality_exit`
 to packet experiments, then prove each forgotten coordinate is retained,
 reconstructed, annihilated, descended, AP/GW equality, or named residual debt.
+## codex-2026-06-26-S230 -- observer-extension exact duodecimal audit (HYP-3065/T1147/LTI-212/LTT-110)
+
+User pointed at the `48`, `56`, and `12` surface: `48` rooted
+5-perspectives, `56` six-tournament isomorphism classes, and `12` recurring
+as unique perspectives / iso classes / self-converse classes, then asked to
+combine incident words, ordered-pair sectors, deletion fibers, S217
+rectangle/hourglass residues, observer-extension/cut payload, controlled
+forgetting, and duodecimal thinking.
+
+This pass was moved to S230/HYP-3065 after incoming S222/HYP-3058 claimed the
+hyperbolic reciprocal sidecar namespace and incoming S223/HYP-3059 claimed the
+twelve-layer observer-cut audit namespace.  The connection is retained as a
+controlled-forgetting sibling: all three warn that an attractive scalar or
+small integer must name its proof payload before being promoted.
+
+Added
+`04-computation/observer_extension_exact_duodecimal_audit_codex_s230.py` and
+stored
+`05-knowledge/results/observer_extension_exact_duodecimal_audit_codex_s230.out`.
+The script independently recomputes tournament classes through `n=6`,
+Burnside terms, rooted counts, extension word-orbits, self-converse counts,
+deletion-parent profiles, and ordered-pair sector decks, refining incoming
+HYP-3054/HYP-3055 and the HYP-3056 observer-cut orbit / HYP-3057 value-origin
+ledgers, with HYP-3058 and HYP-3059 as neighboring sidecar-payload warnings.
+Main correction: `48+12=60`, so the proof-shaped ledger is
+`U(6)=P(5)+SC(6)-U(4)=48+12-4=56`; the first defect is `8=(2/3)*12`, with
+overlap kernel `U(4)=4=(1/3)*12`.  The same dozen recurs as `P(4)=12`,
+`U(5)=12`, `SC(6)=12`, and S217's `K_{4,5}` rectangle redundancy.
+
+Created HYP-3065, T1147, LTI-212, LTT-110, and reflection
+`07-reflections/observer-extension-exact-duodecimal-audit-codex-s230.md`.
+Reverified HYP-3049's sector payload: sector size/internal decks separate
+`55/56` six-classes, missing only converse masks `344/345`, while
+`cross_sector_orientation_word` separates `56/56`.  Deletion fibers and
+self-converse/chiral rooted multiplicities give a local branch ledger:
+self-converse classes `12` with rooted-multiplicity sum `60`, chiral classes
+`44` with sum `236`.
+
+LRC synthesis: observer-extension creates a cut payload; controlled forgetting
+may quotient the observer only when the payload is retained, reconstructed,
+dual-annihilated, descended familywise, or emitted as named residual debt.
+This abstract packages HYP-3057 value-origin typing, HYP-3056 payload-orbit
+normalization, HYP-3039 controlled forgetting, HYP-3038 q=23 drop/add zeta
+and endpoint-owner strips, HYP-3037 residual capacitor cuts,
+HYP-3041 q=13 AP-tail clocks, HYP-3045 endpoint-owner transfer, HYP-3021/3022
+pair-good decoy generator sidecars, HYP-3049 ordered-pair sectors, and
+HYP-3053 rectangle/hourglass residues.
+
+Tournament Analysis vertices are proof carriers, not runners.  The carrier
+tournament is transitive:
+`observer_extension_cut_payload > cross_sector_orientation_word >
+rectangle_hourglass_cycle_residue > deletion_parent_fiber_profile >
+self_converse_branch_locus > duodecimal_overlap_ledger >
+rooted_perspective_cache > raw_orbit_count_coincidence`.
+
+Next pull: construct or refute an actual inclusion-exclusion object behind
+`U(6)=P(5)+SC(6)-U(4)`, compare rectangle/hourglass residues against the
+`344/345` ordered-pair-sector collision, and add
+`observer_extension_cut_signature`, `duodecimal_overlap_kernel`,
+`self_converse_branch_locus`, `cross_sector_orientation_word`,
+`deletion_parent_profile`, `rectangle_cycle_residue`, and
+`hourglass_cycle_residue` to LRC packet experiments.
 
 ## codex-2026-06-26-S217 -- tournament diagonal-layer flow (HYP-3053/T1135/LTI-200/LTT-098)
 

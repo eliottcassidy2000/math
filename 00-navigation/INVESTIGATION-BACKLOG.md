@@ -137,6 +137,36 @@ experiments: `observer_cut_word`, `stabilizer_orbit_id`,
 Prove each forgotten coordinate is retained, reconstructed, annihilated,
 descended, AP/GW equality, or named residual debt.
 Namespace: HYP-3059 / T1141 / LTI-206 / LTT-104.
+`observer_extension_payload`, and `discharge_rule`; build HYP-3048 sidecar
+observability matrices over HYP-2963 coarse fibers; classify pair-good decoys
+by generator and active-owner relation before reporting raw counts.
+## Lead codex-2026-06-26-S230: Observer-extension exact duodecimal audit
+
+**Status:** SYNTHESIS / exact small tournament audit and LRC carrier
+abstraction (HYP-3065/T1147/LTI-212/LTT-110), refining HYP-3054/HYP-3055 and
+the incoming HYP-3056 observer-cut orbit / HYP-3057 value-origin ledgers,
+rebased beside the HYP-3058 hyperbolic reciprocal sidecar, and built on the
+S211..S217 A000568/rooted-perspective/ordered-pair/diagonal-flow stack plus the
+HYP-3039 controlled-forgetting ledger.
+**Readout:** `04-computation/observer_extension_exact_duodecimal_audit_codex_s230.py`
+stores output in
+`05-knowledge/results/observer_extension_exact_duodecimal_audit_codex_s230.out`.
+The tempting statement `48+12=56` is arithmetically false; the useful ledger
+is `U(6)=P(5)+SC(6)-U(4)=48+12-4=56`, with defect `8=(2/3)*12` and overlap
+kernel `U(4)=4=(1/3)*12`.  The recurring dozen is `P(4)=12`, `U(5)=12`,
+`SC(6)=12`, and the S217 `K_{4,5}` rectangle redundancy.  Exact sector audit
+again finds sector size/internal decks separate `55/56`, while
+`cross_sector_orientation_word` separates `56/56`.
+**Next:** build or refute the actual inclusion-exclusion object behind the
+overlap law; compare the `U(4)` kernel with deletion boundaries,
+self-converse branch loci, the `344/345` ordered-pair-sector collision, and
+rectangle/hourglass cycle residues.  Add
+`observer_extension_cut_signature`, `value_origin_type`,
+`observer_cut_payload_orbit`, `duodecimal_overlap_kernel`,
+`self_converse_branch_locus`, `cross_sector_orientation_word`,
+`deletion_parent_profile`, `rectangle_cycle_residue`, and
+`hourglass_cycle_residue` to packet experiments.
+Namespace: HYP-3065 / T1147 / LTI-212 / LTT-110.
 
 ## Lead codex-2026-06-26-S217: Tournament diagonal-layer flow
 

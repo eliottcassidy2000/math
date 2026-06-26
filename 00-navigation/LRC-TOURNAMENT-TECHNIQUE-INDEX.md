@@ -164,6 +164,9 @@ obligations, and proof-carrier interfaces.
   `ordered_quad_collapse_mode`, midpoint/equal-radius/quarter-turn residues,
   `d4_orbit_word`, and the Fourier-Toeplitz bridge degree before promoting a
   four-witness or PSD-shadow certificate.
+- Need exact evidence behind the duodecimal ledger:
+  use LTT-110 and audit Burnside terms, deletion fibers, ordered-pair sectors,
+  and rectangle/hourglass residues before promoting the count.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2869,6 +2872,51 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-206, LTI-205, LTI-201, LTT-109, LTT-108, LTT-107, LTT-106, LTT-105,
   LTT-104, LTT-103, LTT-099, T1146, T1145, T1144, T1143, T1142, T1141,
   T1140, T1138, T1136, OPEN-Q-108.
+
+### LTT-110: Exact Duodecimal Deletion-Sector Audit
+
+- **Move:** Treat the `48/56/12` surface as an audited overlap ledger, not a
+  mnemonic.  Recompute the small tournament window, then keep the sidecar
+  columns that explain why `48+12=60` while
+  `U(6)=P(5)+SC(6)-U(4)=48+12-4=56`.
+- **LRC use:** HYP-3065 refines HYP-3055 and HYP-3054 with exact canonical
+  enumeration through `n=6`, Burnside odd-cycle terms, deletion-parent
+  profiles, self-converse/chiral splits, ordered-pair sector collisions, and
+  the S217 `K_{4,5}` rectangle-residue dozen, while respecting HYP-3056's
+  orbit-ledger and HYP-3057's value-origin guardrails.  The transferable lesson
+  is that LRC packet quotients should retain the exact observer/deletion/sector
+  sidecars before converting a near-count into an algebraic law.
+- **Preserves:** Canonical tournament class, rooted multiplicity,
+  self-converse status, Burnside cycle-type contribution, deletion-parent
+  profile, ordered-pair cross-sector orientation, rectangle/hourglass residue,
+  and the controlled-forgetting discharge status of each payload.
+- **Forgets / guardrail:** Burnside totals without fixed-vertex status hide the
+  `[3,3]` rootless sidecar; self-converse counts without deletion fibers hide
+  the four-class overlap; sector size/internal decks separate only `55/56`
+  six-classes until `cross_sector_orientation_word` is retained; raw
+  `K_{k,k+1}` line counts forget cycle generators.
+- **Tournament fingerprint:** vertices are proof carriers, not runners.  The
+  carrier tournament is transitive with path
+  `exact_canonical_audit > burnside_odd_cycle_sidecar >
+  cross_sector_orientation_word > deletion_parent_fiber_profile >
+  rectangle_hourglass_cycle_residue > self_converse_branch_locus >
+  duodecimal_overlap_ledger > rooted_perspective_cache >
+  raw_orbit_count_coincidence`.
+- **Next pull:** Build the actual inclusion-exclusion or cohomology object
+  that makes the `U(4)` overlap kernel visible, identify the collision pair
+  split by cross-sector orientation, compare deletion boundaries with the
+  S217 rectangle/hourglass bases, and transfer the same audit columns to
+  residual capacitor, AP-tail, endpoint-owner, pair-good, Haar-zeta, and
+  binding-scale ledgers.
+- **Pointers:** HYP-3065, HYP-3059, HYP-3058, HYP-3057, HYP-3056, HYP-3055,
+  HYP-3054, HYP-3053, HYP-3052, HYP-3051, HYP-3050, HYP-3049, HYP-3048,
+  HYP-3047, HYP-3045, HYP-3043, HYP-3041, HYP-3040, HYP-3039, HYP-3038,
+  HYP-3037, HYP-3022, HYP-3021, HYP-2991, HYP-2989, HYP-2120, HYP-2121,
+  THM-381, THM-385, LTI-212, LTI-206, LTI-205, LTI-204, LTI-203, LTI-202,
+  LTI-201, LTI-200, LTI-199, LTI-198, LTI-197, LTI-196, LTT-110, LTT-104,
+  LTT-103, LTT-102, LTT-101, LTT-100, LTT-099, LTT-098, LTT-097, LTT-096,
+  LTT-095, LTT-094, T1147, T1141, T1140, T1139, T1138, T1137, T1136,
+  T1135, T1134, T1133, T1132, T1131, OPEN-Q-108.
 
 ## Immediate Pull List
 
