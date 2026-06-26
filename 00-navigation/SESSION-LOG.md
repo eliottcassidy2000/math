@@ -1,3 +1,15 @@
+## codex-2026-06-26-S235 -- medianized route-center gate (HYP-3069/T1151/LTI-216/LTT-114)
+
+Built `04-computation/lrc14_medianization_route_center_codex_s235.py`, stored
+output, HYP-3069, reflection, and navigation entries. The scout treats
+`n(n+1)=2*T_n` as directed-simplex / K-bridge / Faulhaber-u sidecar coordinate
+for final route-triple medians, downstream of HYP-3067's Desargues-median
+warning and HYP-3068's owner/root sidecar spine. It checks 12 named proof states and 220
+triples; full sidecars give deterministic centers, raw projections leave 14
+ambiguous center classes and 122 ambiguous triples, and the median completion
+has 82 states with 70 new obligations. Tournament Analysis uses proof carriers
+plus median obligations, not runners.
+
 ## codex-2026-06-26-S232 -- Hodge-cycle lifting carrier for LRC14 (HYP-3066/T1148/LTI-213/LTT-111)
 
 User asked to consider the Hodge conjecture, extend prior Hodge work, and keep

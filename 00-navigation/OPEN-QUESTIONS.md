@@ -1,5 +1,18 @@
 # Open Questions
 
+**OPEN-Q-108 S235 medianized route-center addendum:** HYP-3069 proposes the
+final LRC assembly gate: after exact packet/route/certificate/sidecar/discharge
+fields are attached, every serious route triple should have a unique median
+center. The S235 scout checks 220 triples, finds 122 raw-projection ambiguous
+triples, and median-completes 12 seed carriers to 82 states with 70 center
+obligations. Next task: build this completion over HYP-2963 packet rows and
+discharge every new center through the HYP-3067 median lens, the HYP-3068
+owner/root sidecar table, named carriers, HYP-3066 cycle generation, dual
+annihilation, family descent, AP/GW boundary equality, or THM-572/F7. ->
+HYP-3069, HYP-3068, HYP-3067, HYP-3066, HYP-3065, HYP-3063, HYP-3059, HYP-3056, HYP-3054,
+HYP-3053, HYP-2997, HYP-2995, HYP-2458, HYP-2454, THM-572, LTI-216, LTT-114,
+T1151.
+
 **OPEN-Q-108 S232 Hodge-cycle lifting addendum:** HYP-3066 turns the Hodge
 conjecture cue into a cycle-class sidecar for LRC14 rather than a theorem
 analogy.  Open task: build an exact rational cycle-class matrix on a HYP-2963

@@ -15,6 +15,18 @@
 
 ---
 
+## Lead codex-2026-06-26-S235: Medianized route-center gate
+
+Turn the doubled triangular/simplex/Faulhaber cue into a final LRC
+proof-interface check (HYP-3069/T1151/LTI-216/LTT-114). Read after S231
+bridge-rank, S232 Hodge-cycle work, S233 Desargues-median failures, and the
+S234 owner/root sidecar spine.
+**Readout:** `04-computation/lrc14_medianization_route_center_codex_s235.py`
+and `05-knowledge/results/lrc14_medianization_route_center_codex_s235.out`.
+**Status:** finite scout and synthesis, not proof. Checks 220 route triples,
+exposes 122 raw ambiguous triples, and produces 70 median center obligations.
+Namespace: HYP-3069 / T1151 / LTI-216 / LTT-114.
+
 ## Lead codex-2026-06-26-S232: Hodge-cycle lifting carrier
 
 **Status:** SYNTHESIS / proof-interface sidecar for LRC14

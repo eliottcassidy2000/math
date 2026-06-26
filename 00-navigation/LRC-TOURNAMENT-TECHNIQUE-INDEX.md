@@ -61,6 +61,10 @@ obligations, and proof-carrier interfaces.
 - Need owner/root-aware medianization:
   use LTT-113 after LTT-112 and record root object, owner object, coarse
   shadow, first missing sidecar, and sidecar rank before naming new debt.
+- Need Boolean route centers after owner/root sidecars:
+  use LTT-114 after LTT-112/LTT-113 and attach packet/route/
+  certificate/sidecar/discharge fields until the route-triple median center
+  is unique and legally discharged.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3057,6 +3061,43 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTT-099, T1150, T1149, T1148, T1147, T1146, T1145, T1144, T1143, T1142,
   T1139, T1138, T1136, OPEN-Q-108.
 
+### LTT-114: Medianized Route-Center Gate
+
+- **Move:** Treat final LRC assembly as a Boolean medianization check on
+  sidecar-completed proof states. LTT-112 asks whether the proof-state graph has
+  route-triple centers; LTT-113 names owner/root sidecars for failures; LTT-114
+  closes the named route/certificate states under coordinate-wise median and
+  turns every new center into a proof obligation.
+- **LRC use:** HYP-3069 turns `n(n+1)=2*T_n` into a center-address sidecar. S235
+  checks 12 named proof states and 220 triples: full sidecars give deterministic
+  Boolean medians, while raw projections leave 14 ambiguous center classes and
+  122/220 ambiguous triples. The median completion has 82 states, so 70 centers
+  become named proof obligations.
+- **Preserves:** Exact `M`, endpoint owner, safe topology, value origin, route
+  label, certificate cycle, observer-cut payload, cross-sector orientation,
+  Theta class, simplex edge sector, bridge rank, rectangle debt, Faulhaber `u`,
+  Hodge-cycle image, dual annihilator, family descent, AP/GW boundary, and
+  THM-572 exit.
+- **Forgets / guardrail:** Raw route labels and scalar `n(n+1)` counts forget
+  which sidecar lift makes a center legal. A median center that is not named,
+  generated, annihilated, descended, boundary, or THM-572/F7 is unresolved proof
+  debt.
+- **Tournament fingerprint:** vertices are proof carriers plus median sidecar
+  obligations, not runners. Path:
+  `median_completion_gate > full_sidecar_signature > hodge_cycle_lift >
+  simplex_faulhaber_bridge > partial_cube_theta_gate >
+  observer_cut_boundary > fejer_toeplitz_dual_cycle >
+  endpoint_owner_payload > route_label_cache > raw_scalar_shadow`. The scout
+  tournament is transitive with one Hamiltonian path.
+- **Next pull:** Build the HYP-2963 packet-bank Boolean median completion and
+  feed its center obligations into the HYP-3066 cycle-class matrix and HYP-3068
+  owner/root table.
+- **Pointers:** HYP-3069, HYP-3068, HYP-3067, HYP-3066, HYP-3065, HYP-3063,
+  HYP-3059, HYP-3056, HYP-3054, HYP-3053, HYP-2997, HYP-2995, HYP-2458,
+  HYP-2454, THM-572, LTI-216, LTI-215, LTI-214, LTI-213, LTI-212, LTI-210,
+  LTI-206, LTT-114, LTT-113, LTT-112, LTT-111, LTT-110, LTT-108, LTT-104,
+  LTT-101, LTT-099, T1151, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -3125,6 +3166,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    proof-graph vertex, sidecar hyperplane ID, route triple ID,
    median-center status, Desargues defect ID, medianization exit,
    root object, owner object, coarse shadow, first missing sidecar, sidecar rank,
+   median route triple ID, median center signature, median completion rank,
+   simplex directed-edge sector, Faulhaber u center, bridge-rank center,
+   rectangle-debt center, Hodge-cycle center status, legal center discharge,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
