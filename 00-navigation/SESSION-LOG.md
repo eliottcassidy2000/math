@@ -24714,3 +24714,30 @@ whose rows are residual packet pairs and whose columns are hidden sidecar
 coordinates, then find the smallest column set separating LRC route/status
 labels.  This turns HYP-3039/HYP-3040/HYP-3041's hidden-coordinate doctrine
 into finite linear algebra.
+
+## codex-2026-06-26-S215 -- tournament layer-extension flow -- HYP-3051/T1133
+
+User asked to consider the tiling model under `n -> n+1`, where a new diagonal
+layer is added and consecutive binary layers of sizes `k` and `k+1` are joined
+by `k^2+k` complete-bipartite lines, then use redundancies as algebraic
+efficiency for tournament isomorphism classes / half-tilings.
+
+Added `04-computation/tournament_layer_extension_flow_codex_s215.py` and stored
+`05-knowledge/results/tournament_layer_extension_flow_codex_s215.out`.  The
+script verifies the layer-sheet compression law `e_ij=x_i XOR y_j`: every
+`2x2` rectangle has zero parity, so `k^2+k` apparent cross-line bits reduce to
+`2k` boundary-potential bits, saving `k(k-1)` bits.  It also computes
+unrooted and rooted/perspective tournament counts through `n=7` and verifies
+the one-vertex extension identity `E(n->n+1)=R(n+1)` through `6->7`.
+
+Main readout: the old perspective observation is exactly right at the small
+boundary, `R(3)=A(4)=4` and `R(4)=A(5)=12`, but it is not the A000568
+recurrence: it fails at `R(5)=48 != A(6)=56` and `R(6)=296 != A(7)=456`.
+The theorem-shaped recursive object is rooted extension state, followed by a
+nontrivial unrooting quotient.  Added HYP-3051, LTI-198, LTT-096, and
+reflection `07-reflections/tournament-layer-extension-flow-codex-s215.md`.
+Tournament Analysis uses boundary words, rank-one sheets, parent word-orbits,
+rooted children, unrooted children, and rectangle-defect residuals as vertices,
+not original tournament vertices.  Next pull: replace brute canonicalization
+with a fast A000568 backend and add complement/reflection half-extension
+Burnside counts.

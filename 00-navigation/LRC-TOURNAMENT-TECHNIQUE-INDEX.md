@@ -116,8 +116,9 @@ obligations, and proof-carrier interfaces.
 - Need to prevent an unsafe quotient:
   use LTT-001, LTT-025, LTT-039, and LTT-040.
 - Need tournament enumeration speedups:
-  use LTT-006 through LTT-012, plus LTT-033, LTT-035, and LTT-046
-  through LTT-050.
+  use LTT-006 through LTT-012, plus LTT-033, LTT-035, LTT-046
+  through LTT-050, and LTT-096 when the speedup comes from adding one rooted
+  layer before unrooting.
 - Need the AP/GW residue skeleton:
   use LTT-003, LTT-013, LTT-014, LTT-027, and LTT-028.
 - Need a route for non-AP/GW zero-open residuals:
@@ -2159,6 +2160,44 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-197, LTI-196, LTI-195, LTI-194, LTI-188, LTI-187, LTT-095, LTT-094,
   LTT-093, LTT-092, LTT-086, LTT-085, T1132, T1131, T1130, T1129, T1127,
   T1121, T1120.
+
+### LTT-096: Rooted Layer-Extension Flow
+
+- **Move:** Treat the growth step `n -> n+1` as a rooted extension carrier.
+  In fixed-path tiling coordinates, compress the complete bipartite sheet
+  between consecutive layer words of sizes `k` and `k+1` as
+  `e_ij=x_i XOR y_j`, so all `2x2` rectangle parities vanish and `k^2+k`
+  apparent line bits reduce to `2k` boundary-potential bits.
+- **LRC use:** Any LRC packet tournament or tiling shadow built by adding a
+  layer should retain the root/deletion address, incident-word orbit, and
+  rectangle-defect residual before unrooting.  This is the enumeration version
+  of the hidden-coordinate guardrail behind HYP-3039/HYP-3046.
+- **Preserves:** Fixed-path layer address, parent class, parent automorphism
+  cycle index, incident-word orbit, rooted child class, unrooting collision
+  fiber, and rectangle-defect rank.
+- **Forgets / guardrail:** Plain unrooted A000568 loses which root/deletion
+  address produced the child.  The early coincidence `R(3)=A(4)` and
+  `R(4)=A(5)` fails at `R(5)=48` versus `A(6)=56`, so perspective counts are
+  not a direct A000568 recurrence after the small boundary.
+- **Tournament fingerprint:** vertices are layer carriers, not original
+  tournament vertices: boundary words, rank-one sheets, parent word-orbits,
+  rooted children, unrooted children, and rectangle-defect residuals.  The
+  switch orders carriers by retained extension address; the tie Hamiltonian
+  path is `boundary_words > rank_one_sheet > parent_word_orbit >
+  rooted_child > unrooted_child`.
+- **Next pull:** Replace the S215 brute canonicalizer with a fast A000568
+  backend, extend the rooted/unrooted table, and add
+  `parent_class`, `root_orbit`, `incident_word_orbit`,
+  `layer_boundary_word`, `rank_one_sheet_id`, `rectangle_defect_rank`, and
+  `unrooting_collision_fiber` to packet/tournament sidecars.
+- **Pointers:** HYP-3051, HYP-3050, HYP-3049, HYP-3048, HYP-3047, T1133,
+  T1132, T1131, T1130, T1129,
+  `04-computation/tournament_layer_extension_flow_codex_s215.py`,
+  `05-knowledge/results/tournament_layer_extension_flow_codex_s215.out`,
+  `07-reflections/tournament-layer-extension-flow-codex-s215.md`, A000568,
+  fixed-path tilings, half-tilings, HYP-3046, HYP-3043, HYP-3039,
+  LTI-198, LTI-197, LTI-196, LTI-195, LTT-096, LTT-095, LTT-094,
+  LTT-093, LTT-092, LTT-089, LTT-085, LTT-048, LTT-036, LTT-006.
 
 ## Immediate Pull List
 
