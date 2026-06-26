@@ -1,13 +1,3 @@
-## codex-2026-06-26-S188 -- LRC14 fiber-zipper convergence via ET/Henselian units (HYP-3024/T1104)
-
-User asked to extend fiber-zipper convergence while thinking Erdos-Turan and a Henselian unit rule.  Fast-forwarded over HYP-3023, which supplied the automatic fiber zipper and identified `MFCMMCCFFFCCC` as the first target automatic word.
-
-Added `04-computation/lrc14_fiber_zipper_convergence_codex_s188.py` and stored `05-knowledge/results/lrc14_fiber_zipper_convergence_codex_s188.out`.  The script defaults to the target word before exact packet computation: `639` candidate rows out of the HYP-2963 `21913` row bank.
-
-Readout: residue-terminal fibers for `MFCMMCCFFFCCC` have `27` mixed route fibers and largest mixed size `30`; Erdos-Turan low-frequency residue bins reduce this to `6` mixed fibers and largest mixed size `4`; the Henselian unit rule at `p=2,3,7` gives `0` mixed route fibers before exact magnitude is attached.  ET is the contraction gauge; Henselian unit roots and denominator-unit data are the target-fiber route-purity splitter.
-
-Created HYP-3024, T1104, LTI-171, and reflection `07-reflections/lrc14-fiber-zipper-convergence-codex-s188.md`.  Proof-order takeaway: prove the Henselian unit split for `MFCMMCCFFFCCC`, then stress the same ET/Hensel zipper on the full HYP-2963 bank before demoting exact magnitude from fallback to theorem coordinate.
-
 ## codex-2026-06-26-S185 -- Pair-good decoy generator classification (HYP-3021/LTI-168)
 
 User asked to classify and understand HYP-3019's pair-good decoys, with the
@@ -23946,12 +23936,6 @@ LTT-070, and updated the reflection.  Next pull: prove coarse ET+unit status
 convergence inside automatic/residue fibers before attempting full route
 purity; route the remaining open collisions through family magnitude formulas
 and the existing certificate stack.
-Reserved HYP-3024/LTI-171/S188 for extending the HYP-3023 fiber zipper from a
-static split table into a convergence audit.  Planned output: marginal drops
-in mixed theorem-route fibers, total mixed rows, and largest mixed fiber as
-residue, terminal automaton, magnitude, barcode, packet, discrepancy-height,
-and pair-good sidecars are zipped onto automatic/residue fibers, with
-`MFCMMCCFFFCCC` as the first local template.
 ## codex-2026-06-26-S189 -- LRC14 carrier-fusion switchboard -- HYP-3026/LTI-173
 
 User asked to keep looking for better, more creative LRC proof carriers after
