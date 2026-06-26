@@ -131,3 +131,39 @@ rooted node cache
 For LRC, this says every controlled-forgetting quotient should declare its root
 object before choosing a scalar: node, ordered pair, directed edge, triple,
 cycle, conflict pair, proof obligation, or quotient fiber.
+
+## Addendum: S215 Rooted Layer-Extension Flow
+
+S215 reframes the same failure one level higher.  The exact recurrence-shaped
+object is not the unrooted A000568 class count; it is the retained extension
+state before unrooting.
+
+For a parent class `[T]`, add one vertex by incident words on `V(T)` modulo
+`Aut(T)`.  This gives:
+
+```text
+E(n -> n+1) = R(n+1)
+```
+
+The final map to `A(n+1)` is a further unrooting quotient, and the collisions
+in that quotient are precisely the information the proof must not throw away.
+
+The tiling analogue is the layer sheet law:
+
+```text
+e_ij = x_i XOR y_j
+```
+
+so `k(k+1)` apparent cross-lines collapse to `2k` boundary-potential bits when
+rectangle parity is zero.  Nonzero rectangle defects are not noise; they are
+the residual sidecars.
+
+Updated carrier ladder:
+
+```text
+rank-one layer sheet
+  -> rooted one-vertex extension
+  -> ordered-pair incident word
+  -> edge/triple/cycle/conflict sidecars
+  -> unrooting collision fiber
+```
