@@ -18,6 +18,22 @@ THM-385, THM-572, LTI-201, LTI-200, LTI-199, LTI-198, LTI-197, LTT-099,
 LTT-098, LTT-097, LTT-096, LTT-095, T1136, T1135, T1134, T1133, T1132,
 T1131.
 
+**OPEN-Q-108 S219 duodecimal observer-extension addendum:** HYP-3055 corrects
+the first-failure arithmetic: `48+12=60`, while the exact count is
+`U(6)=P(5)+U(5)-U(4)=48+12-4=56`.  The `12` is still structural because
+`P(4)=U(5)=SC(6)=12`; the missing `8` is the dozen control/fold slice minus
+the four-class overlap.  Open task: build the promised observability matrix
+whose rows are six-tournament class pairs merged by coarse carriers and whose
+columns are incident-word orbit, endpoint role, ordered-pair sector deck,
+cross-sector orientation, deletion-parent profile, rectangle residue,
+hourglass residue, self-converse status, and LRC endpoint-owner analogues.
+Then test the same columns on endpoint-owner packets, Haar rectangle zeta,
+pair-good decoy teeth, residual capacitors, and tournament-spectrum magnitude
+fibers. -> HYP-3055, HYP-3054, HYP-3053, HYP-3052, HYP-3051, HYP-3050, HYP-3049,
+HYP-3048, HYP-3047, HYP-3043, HYP-3039, HYP-3031, HYP-2991, HYP-2989,
+HYP-2928, HYP-2120, HYP-2121, THM-381, THM-385, LTI-202, LTI-201, LTI-200, LTI-199,
+LTI-198, LTI-197, LTI-196, LTT-100, LTT-099, LTT-098, LTT-097, LTT-096, LTT-095,
+LTT-094, T1137, T1136, T1135, T1134, T1133, T1132, T1131.
 **OPEN-Q-108 S217 diagonal-layer flow addendum:** HYP-3053 turns the user's
 tournament tiling-growth model into a `GF(2)` coboundary carrier.  The
 `k^2+k` lines between layers of sizes `k` and `k+1` form `K_{k,k+1}`:

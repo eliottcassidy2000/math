@@ -1,3 +1,50 @@
+## codex-2026-06-26-S219 -- duodecimal observer-extension cut payload (HYP-3055/T1137/LTI-202/LTT-100)
+
+User asked to investigate why `12` keeps appearing around the A000568
+perspective failure and to synthesize observer-extension/cut payload with
+controlled forgetting, incident words, edge sectors, deletion fibers, and
+S217 rectangle/hourglass residues.
+
+Added `04-computation/duodecimal_observer_extension_payload_codex_s219.py`
+and stored
+`05-knowledge/results/duodecimal_observer_extension_payload_codex_s219.out`.
+The script corrects the arithmetic guardrail: `48+12=60`, while the exact
+first-failure identity is
+
+```text
+U(6)=P(5)+U(5)-U(4)=48+12-4=56.
+```
+
+Thus the dozen is not the additive defect.  It is a control/fold slice with
+a four-class overlap: `P(4)=U(5)=SC(6)=12`, and
+`U(6)-P(5)=8=SC(6)-U(4)`.  In denominator-14 form, the identity is
+`12/14+3/14-1/14=1`.  The script also records the guardrail that this is
+local exact structure, not a recurrence: `U(7)-P(6)=160` while
+`U(6)-U(5)=44`.
+
+Created HYP-3055, T1137, LTI-202, LTT-100, and reflection
+`07-reflections/duodecimal-observer-extension-payload-codex-s218.md`.
+The cross-carrier abstraction is observer-extension/cut payload: retain
+incident-word orbit, endpoint role, ordered-pair sector deck, cross-sector
+orientation, deletion-parent profile, rectangle/hourglass residues, and LRC
+endpoint-owner or binding-scale analogues until the forgotten coordinate is
+fiber-constant, reconstructed, annihilated, descended, or routed to named
+residual debt.
+
+Tournament Analysis vertices are proof carriers, not runners.  The carrier
+tournament is transitive:
+`endpoint_owner_packet_sheaf > observer_extension_cut_payload >
+cross_sector_orientation_word > deletion_parent_fiber_profile >
+rectangle_hourglass_cycle_residue > incident_word_orbit_under_aut >
+ordered_pair_edge_sector_deck > rooted_node_perspective_cache >
+fixed_path_half_tiling_shadow > raw_A000568_class_count >
+raw_labelled_word_count`.
+
+Next pull: build the HYP-3055 observability matrix whose rows are coarse
+merged tournament or packet pairs and whose columns are incident-word orbit,
+observer endpoint role, ordered-pair sector deck, cross-sector orientation,
+deletion-parent profile, rectangle residue, hourglass residue, self-converse
+status, endpoint-owner packet, and binding scale.
 ## codex-2026-06-26-S217 -- tournament diagonal-layer flow (HYP-3053/T1135/LTI-200/LTT-098)
 
 User asked to consider the tiling model for tournament growth from `n` to
