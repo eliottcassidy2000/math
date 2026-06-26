@@ -24542,3 +24542,25 @@ primitive_period_deck > status_gate > raw_shadow`.  Next pull: add
 `drop_add_square_id`, `exact_M_zeta`, `endpoint_owner_strip_current`,
 `owner_strip_page`, and
 `first_surviving_filtration_page` to cached packet ledgers.
+## codex-2026-06-26-S210 -- tournament matrix classic-results atlas -- T1128
+
+User asked how tournaments relate to matrices, requesting as many classic
+matrix results as possible and a useful tournament statement for each.  Added
+`07-reflections/tournament-matrix-classic-results-atlas-codex-s210.md`.
+
+Core synthesis: a tournament can be read as adjacency `A`, skew sign matrix
+`S=A-A^T`, Hermitian operator `iS`, directed Laplacian, stochastic kernel,
+boundary source, quiver, social-choice matrix, and transfer-matrix input.  The
+matrix guardrail is the same one recent LRC work keeps rediscovering: scalar
+matrix invariants are legal proof quotients only when their fibers are
+route/status pure, reconstructible, dual-annihilated, descended by a family
+lemma, or routed to named residual debt.
+
+The atlas records tournament translations for linear algebra, graph spectra,
+Pfaffian/determinant methods, random matrices, arithmetic/Fourier matrices,
+representation theory, topology, operator theory, optimization, control, and
+physics.  Most actionable next theorem schema: build an observability matrix
+whose rows are residual packet pairs and whose columns are hidden sidecar
+coordinates, then find the smallest column set separating LRC route/status
+labels.  This turns HYP-3039/HYP-3040/HYP-3041's hidden-coordinate doctrine
+into finite linear algebra.

@@ -3318,3 +3318,16 @@ pages as vertices, not runners, and gives one Hamiltonian path
 primitive_period_deck > status_gate > raw_shadow`. -> HYP-3042, HYP-3041,
 HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3031, HYP-3018, HYP-2997,
 HYP-2963, THM-572, LTI-190, LTI-189, LTT-088, LTT-087, OPEN-Q-108.
+## T1128: Tournament matrices as a universal translation layer (codex-2026-06-26-S210)
+
+Built a broad atlas connecting classic matrix results to tournament-facing
+statements.  The main synthesis is that a tournament is simultaneously a
+`0/1` adjacency matrix, a skew sign matrix, a Hermitian operator `iS`, a
+directed Laplacian, a stochastic kernel after normalization, a boundary-matrix
+source, a quiver, and a social-choice margin matrix.  The highest-leverage
+proof move is an observability/Schur-complement rule: when a tournament
+quotient forgets a coordinate, the legal residual is the corrected matrix
+sidecar, not the raw scalar invariant.  This reframes HYP-3039/HYP-3040/HYP-3041
+as a finite hidden-coordinate matrix story. -> LTI-189, LTT-087, HYP-3041,
+HYP-3040, HYP-3039, THM-572, OCF, A000568, matrix-tree, Pfaffian, Smith normal
+form, Schur complement, observability.
