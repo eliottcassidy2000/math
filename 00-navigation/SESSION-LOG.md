@@ -1,3 +1,33 @@
+## codex-2026-06-25-S178 -- LRC14 Fermat-Catalan automatic-gap extension (HYP-3009/T1093)
+
+User asked to keep pushing toward the LRC14 proof while thinking about
+Fermat-Catalan, arXiv:2506.04110, Ostrowski-Hadamard gaps, Moser-de Bruijn,
+fibbinary numbers, and finite automata.  First pulled current mainline and
+absorbed the Poincare/worldline, curried packet, representation-economy, and
+cocycle guardrails.  The ACM DOI in the prompt resolves to the polygon
+"sticks and potatoes" approximation paper, so it was treated as a
+visibility/approximation guardrail rather than a Fermat-Catalan source.  A
+later rebase brought in the parallel HYP-3008 automatic-gap carrier plus the
+C27/unital, petal, Farey-product-perfect, and Borel-Baire-Haar checkpoint;
+HYP-3009 now treats those as upstream packet routes that the
+Fermat-Catalan/lacunary/power-lift ledger should tag.
+
+Added `04-computation/lrc14_fermat_catalan_automatic_gap_s178.py` and stored
+`05-knowledge/results/lrc14_fermat_catalan_automatic_gap_s178.out`.  The script
+audits named rows by Moser-de Bruijn even-bit status, fibbinary/Zeckendorf
+no-adjacent-carry status, lacunary tail-gap ratio, and Fermat-Catalan-style
+perfect-power payload guards.  AP13 and GW `12->24` share the same automatic
+word `MFCMMCCFFFCCC`, so the language shadow alone cannot distinguish equality
+atoms; K33, C27 petals, covering tails, and a Res_27 probe split into different
+automatic packet signatures.
+
+Created HYP-3009 and reflection
+`07-reflections/lrc14-fermat-catalan-automatic-gap-ledger-codex-s178.md`.
+Reusable readout: add automatic-language, lacunary-gap, power-lift, Hurwitz
+doubling-CF, and visibility-guard fields to HYP-2963 packets.  Perfect powers
+such as `p=2: q=27=3^3` in the unit-excess payload are no-lift guards requiring
+cyclotomic/p-adic labels, not standalone LRC certificates.
+
 ## codex-2026-06-25-S172 -- Poincare worldline symmetry ledger for LRC14 (HYP-3007/T1091)
 
 User asked to push toward an LRC14 proof and think of the Poincare group.

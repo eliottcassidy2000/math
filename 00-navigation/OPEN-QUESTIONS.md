@@ -1,5 +1,24 @@
 # Open Questions
 
+**OPEN-Q-108 S178 Fermat-Catalan automatic-gap addendum:** HYP-3009 extends
+HYP-3008's finite-automaton carrier with no-lift and lacunary guardrails for
+LRC14 packet quotients.  Treat
+Moser-de Bruijn even-bit words, fibbinary/Zeckendorf no-adjacent carries,
+Ostrowski-Hadamard lacunary support, Fermat-Catalan perfect-power payloads,
+Hurwitz doubling continued-fraction states, and polygon visibility
+approximations as labelled packet fields, not scalar certificates.  Exact scout
+on named rows shows AP13 and GW `12->24` share `MFCMMCCFFFCCC`, so automatic
+language alone cannot distinguish equality atoms; K33, C27 petals, covering
+tails, and a Res_27 probe split by automatic counts and lacunary tail ratios.
+Open tasks: add `automatic_language_class`, `fibbinary_carry_status`,
+`moser_even_bit_status`, `ostrowski_digit_system`, `lacunary_gap_ratio`,
+`power_lift_guard`, `fermat_catalan_residual`, `hurwitz_doubling_cf_state`,
+and `visibility_potato_approx_guard` to HYP-2963 packet records; compute
+route-purity and first mixed fibers; prove no perfect-power payload can be used
+without cyclotomic/p-adic labels. -> HYP-3009, HYP-3008, HYP-3007, HYP-3003, HYP-3000,
+HYP-2998, HYP-2963, HYP-2702, HYP-2698, HYP-1920, HYP-1902, THM-572,
+LTI-159, LTT-061.
+
 **OPEN-Q-108 S172 Poincare/worldline-frame addendum:** HYP-3007 adds a frame
 guardrail for using Poincare or boost language in LRC14.  Model the row as
 worldlines `x_i(t)=v_i t` in the time/phase cylinder with a `1/14` tube around
@@ -51,11 +70,11 @@ and group Fejer/Ramanujan certificates by section, not by scalar route label.
 -> HYP-2996, HYP-2995, HYP-2994, HYP-2991, HYP-2989, HYP-2963, THM-572, T1080.
 
 **OPEN-Q-108 S169 additive-basis/Farey addendum:** HYP-3000 adds a proof-currency classifier, complementary to HYP-2998's golden Stern-Brocot/Fibonacci carrier and HYP-2999's Pascal-slope packet schema.  The Fibonacci row pattern is `F_n=sum_k binom(n-k-1,k)`, the rank vector of independent sets in `P_{n-2}`; Zeckendorf is the confluent no-adjacent normal form on this path.  Goldbach/ternary Goldbach/Fermat polygonal/Zeckendorf differ by proof economy: high-entropy sieve, added smoothing dimension, bounded arity/residue absorption, path-normal-form carry.  For Farey payloads, keep exact `M=p/q` and `e=14p-q`: `p+q` is affine-safe additive scale, `p*q` is incidence/product side channel, powers are magnitude stress tests.  Open task: classify each HYP-2963 residual packet as smoothing, bounded-arity invoice, or path-normal-form debt before choosing Fejer/Ramanujan/Kaczynski/Zeckendorf tools. -> HYP-3000, HYP-2999, HYP-2998, HYP-2984, HYP-2982, HYP-1902, LTI-150.
-**OPEN-Q-108 S168-S172 technique-index expansion addendum:** The LRC Technique
-Index now has `157` compact `LTI-*` rows plus the `64` long-form S166
+**OPEN-Q-108 S168-S178 technique-index expansion addendum:** The LRC Technique
+Index now has `159` compact `LTI-*` rows plus the `64` long-form S166
 technique-bank entries after preserving the incoming `LTI-109` packet-cocycle
 atlas and `LTI-110` cocycle-obstruction atlas.  The recovered promoted rows
-`LTI-111..LTI-157` are a pull list for attacking the LRC14 gap from
+`LTI-111..LTI-159` are a pull list for attacking the LRC14 gap from
 tournament/metagraph/series directions: cocycle obstruction matrices,
 deck-derivative reconstruction, Burnside/A000568 orbit taxes, merged metagraph
 transport, good-cut/SCC gas, OCF coimage sectors, path-homology residuals,
@@ -68,11 +87,13 @@ grids, Pascal-slope/Fibonacci additive-basis packet fields, smoothing
 switchboards, curried functional packet fields, summand/multiplicand Farey
 operation fibers, dichotomy recursion mode fields, HYP-2998 representation
 economy fields (`LTI-155`), and the HYP-3005 technique multiverse annex
-(`LTI-156`).
+(`LTI-156`), Poincare/worldline frame fields (`LTI-157`), and
+automatic gap-language packet fields (`LTI-158`), and the
+Fermat-Catalan/lacunary power-lift extension (`LTI-159`).
 The proof-use rule is unchanged but sharper: a
 quotient may forget only fiber-constant, reconstructible, dual-annihilated,
 cochain-exact, or named-residual data.  Near-term proof tasks are
-`LTI-TODO-13..31`: build the packet-cocycle theorem formalization, the
+`LTI-TODO-13..32`: build the packet-cocycle theorem formalization, the
 executable F7 cocycle residual record, the emitted-cocycle matrix over HYP-2963
 packets, an F0-F7 residual metagraph Laplacian, a marked A000568/Burnside
 quotient tax, a binding-pair switch tournament for covering rows, a

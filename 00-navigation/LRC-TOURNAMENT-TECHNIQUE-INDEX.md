@@ -947,13 +947,39 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3007, HYP-3006, HYP-3002, HYP-2997, HYP-2963,
   HYP-2486, HYP-2291, THM-381, THM-385, LTI-157.
 
+### LTT-061: Automatic-Gap / Power-Lift Packet Ledger
+
+- **Move:** Treat Moser-de Bruijn words, fibbinary/Zeckendorf carry words,
+  Hadamard-lacunary support ratios, Fermat-Catalan power guards, Hurwitz
+  doubling-CF states, and visibility approximations as proof-carrier vertices.
+- **LRC use:** Before a sequence, gap, or perfect-power shadow is used in an
+  LRC14 proof, test whether it is route-pure on labelled packets or whether it
+  mixes AP/GW, C27, K33, Res_27, and covering residual families.
+- **Preserves:** Automatic-language state, carry status, lacunary address,
+  power-lift obstruction label, dyadic doubling clock, visibility guard, and
+  residual route.
+- **Forgets / guardrail:** Raw scalar words collapse important distinctions:
+  AP13 and GW `12->24` share the word `MFCMMCCFFFCCC`, so automatic shadows are
+  not certificates unless packet labels remain attached.
+- **Next pull:** Add `automatic_language_class`,
+  `fibbinary_carry_status`, `moser_even_bit_status`,
+  `ostrowski_digit_system`, `lacunary_gap_ratio`, `power_lift_guard`,
+  `fermat_catalan_residual`, `hurwitz_doubling_cf_state`, and
+  `visibility_potato_approx_guard` to HYP-2963 records, then compute
+  route-purity and first mixed fibers.
+- **Pointers:** HYP-3009, HYP-3008, HYP-3007, HYP-3003, HYP-3000, HYP-2998,
+  HYP-2963, HYP-2950, HYP-2944, HYP-2937, HYP-2702, HYP-2698, HYP-1920,
+  HYP-1902, LTI-159.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
    Ramanujan exact-period projector, spectrum binding scale, additive-basis
    regime, Pascal-slope carry width, curried call signature, lost-coordinate
    function, observer velocity, sign-kernel status, boost cocycle, tube metric,
-   Burnside cost, score-class H-spread, and round-realizability flag.
+   automatic language class, fibbinary/Moser carry status, lacunary gap ratio,
+   power-lift guard, Hurwitz doubling-CF state, Burnside cost, score-class
+   H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
 3. Compute multi-scale tournament spectra for AP, GW, K33, petals, splices,

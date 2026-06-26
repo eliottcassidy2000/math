@@ -272,6 +272,7 @@ record what it destroys before asking it to prove anything.
 | LTI-156 | Technique multiverse annex | Technique families as vertices; retained LRC payload dimensions as pairwise observable | Keeps the broad tournament/metagraph/series/sieve/cocycle toolbox as a cyclic contribution surface rather than a scalar ranking | HYP-3005, T1090, `00-navigation/LRC-TECHNIQUE-MULTIVERSE-INDEX.md` | Promote theorem-facing `LTM-*` cards into `LTI-*`/`LTT-*` entries and run packet-level fiber-mixing tests before trusting scalar quotients. |
 | LTI-157 | Poincare worldline frame ledger | Time/phase cylinder worldlines, observer velocity, danger tube metric, sign kernel, boost cocycle | Separates true anchored-LRC automorphisms from observer-coupled boosts and Lorentz-like deformed-tube shadows | HYP-3007, HYP-3006, HYP-3002, HYP-2997, HYP-2963, HYP-2486, HYP-2291, THM-381, THM-385 | Add `observer_velocity_label`, `relative_speed_normal_form`, `sign_kernel_status`, `primitive_scale_gcd`, `tube_metric_label`, `worldline_frame_label`, `boost_cocycle_status`, and `orientation_debt_for_winding` to packet records. |
 | LTI-158 | Automatic gap-language carrier | Moser-de Bruijn DFA states, fibbinary no-adjacent carry states, product phase automata, valuation/SML gates | Sequence shadows are safe only after retaining `2`-adic phase, carry-boundary, or eventual-periodic recurrence coordinates; Moser is stable under `n -> 4n`, fibbinary under `n -> 2n` | HYP-3008, HYP-3004, HYP-3003, HYP-3000, LTI-132, LTI-150, LTI-154 | Add `automatic_gap_carrier` to packet records: `none`, `fibbinary_2adic_normal_form`, `moser_even_phase_gap`, `product_phase_automaton`, `sml_eventual_periodic_gate`, or `valuation_gate_only`; run route-mixing tests before using sequence membership as evidence. |
+| LTI-159 | Fermat-Catalan automatic-gap / power-lift extension | Moser-de Bruijn even-bit words, fibbinary/Zeckendorf no-adjacent carries, lacunary gap support, Fermat-Catalan perfect-power guards, Hurwitz doubling states | Extends LTI-158 by keeping sequence/gap/power shadows as packet fields before using them to split LRC14 residual routes | HYP-3009, HYP-3008, HYP-3007, HYP-3003, HYP-3000, HYP-2998, HYP-2963, HYP-2950, HYP-2944, HYP-2937, HYP-2702, HYP-2698, HYP-1902 | Add `automatic_language_class`, `fibbinary_carry_status`, `moser_even_bit_status`, `ostrowski_digit_system`, `lacunary_gap_ratio`, `power_lift_guard`, `fermat_catalan_residual`, `hurwitz_doubling_cf_state`, and `visibility_potato_approx_guard` to packet records; test route-purity of automatic words. |
 
 ## Cross-Cutting Guardrails
 
@@ -328,7 +329,8 @@ record what it destroys before asking it to prove anything.
 | LTI-TODO-28 | Curried packet evaluator manifest | LTI-147, LTI-148, LTI-149, LTI-150, LTI-152 |
 | LTI-TODO-29 | HYP-2963 dichotomy-mode packet fields | LTI-011, LTI-063, LTI-076, LTI-150, LTI-151, LTI-152, LTI-153, LTI-154 |
 | LTI-TODO-30 | Representation-economy field for sequence-shadow packet classifiers | LTI-076, LTI-089, LTI-109, LTI-149, LTI-150, LTI-153, LTI-154, LTI-155 |
-| LTI-TODO-31 | Multiverse annex promotion queue | LTI-157, LTI-156, LTI-155, LTI-154, LTI-153, LTI-152, LTT-060, LTT-059, LTM-* |
+| LTI-TODO-31 | Multiverse annex promotion queue | LTI-159, LTI-158, LTI-157, LTI-156, LTI-155, LTI-154, LTI-153, LTI-152, LTT-061, LTT-060, LTT-059, LTM-* |
+| LTI-TODO-32 | Automatic-word route-purity audit over HYP-2963 | LTI-159, LTI-158, LTI-155, LTI-150, LTI-151, LTI-152, LTT-061 |
 
 ## Minimal Entry Template
 

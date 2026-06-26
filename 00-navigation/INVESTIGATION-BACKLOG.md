@@ -15,6 +15,34 @@
 
 ---
 
+## Lead codex-2026-06-25-S178: LRC14 Fermat-Catalan automatic-gap extension
+
+**Status:** SYNTHESIS / packet-schema guardrail complete
+(HYP-3009/T1093/LTI-159/LTT-061), extending upstream HYP-3008/LTI-158.  User
+asked to keep pushing toward LRC14
+while thinking Fermat-Catalan, the 2-adic Littlewood/Hurwitz doubling paper,
+Ostrowski-Hadamard gap theorem, Moser-de Bruijn sequence, fibbinary numbers,
+and finite automata.
+**Readout:** `04-computation/lrc14_fermat_catalan_automatic_gap_s178.py`
+stores output in
+`05-knowledge/results/lrc14_fermat_catalan_automatic_gap_s178.out`.  Named-row
+audit labels speeds by Moser even-bit (`M`), fibbinary/no-adjacent carry (`F`),
+and carry-present (`C`) status.  AP13 and GW `12->24` share the same word
+`MFCMMCCFFFCCC`, proving the automatic shadow alone cannot distinguish equality
+atoms.  K33 `12->36`, C27 petals, covering tails, and a Res_27 probe split by
+automatic counts, lacunary tail-gap ratios, and perfect-power flags.  Unit
+excess payloads flag `p=2: q=27=3^3` plus powers at `p=4,8` as no-lift guards
+requiring cyclotomic/p-adic labels.  Incoming HYP-2937/HYP-2944/HYP-2950
+checkpoint work supplies the route families this ledger should tag:
+C27/unital transfers, Farey-product perfect-number gates, and
+Borel-Baire-Haar witness labels.
+**Next:** add `automatic_language_class`, `fibbinary_carry_status`,
+`moser_even_bit_status`, `ostrowski_digit_system`, `lacunary_gap_ratio`,
+`power_lift_guard`, `fermat_catalan_residual`, `hurwitz_doubling_cf_state`,
+and `visibility_potato_approx_guard` to HYP-2963 packet records.  Compute
+route-purity of automatic words over the full labelled packet bank and list the
+first mixed fibers.  Namespace: HYP-3009 / T1093 / LTI-159 / LTT-061.
+
 ## Lead codex-2026-06-25-S172: Poincare worldline symmetry ledger for LRC14
 
 **Status:** SYNTHESIS / exact symmetry stress test and packet-schema guardrail complete (HYP-3007/T1091/LTI-157/LTT-060).  User asked to push toward an LRC14 proof and think of the Poincare group.  The pass models LRC rows as time/phase cylinder worldlines with observer danger tubes and separates exact anchored-LRC symmetries from observer-coupled boosts and metric-deforming Lorentz shadows.
