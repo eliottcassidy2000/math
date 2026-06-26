@@ -1,0 +1,105 @@
+LRC14 residual capacitor flow scout (codex-2026-06-26-S196b)
+==============================================================================
+parameters: single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5 workers=1
+target_packets=4 target_pairs=2
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, endpoint walls, wall-crossing events, residue words,
+    cover arcs, safe-component bars, dyadic Haar tiles, packet rows,
+    route labels, residual pairs, and proof obligations.
+  chosen vertices:
+    residual-cut carriers that may discharge a route capacitor.
+  preserved LRC predicate:
+    all four target rows are open; the tested predicate is route-purity
+    after status has already been protected by HYP-3024/HYP-3030 gates.
+  destroyed information:
+    raw runner identity and exact route labels are destroyed until a sidecar
+    separates the capacitor or declares named residual debt.
+
+[1] Residual capacitors
+  M_q_petal_covering_capacitor: shares word_plus_M_q; petal route versus covering route; routes={'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 1}
+    two drop(10, 13)->add(20, 26)      route=BOUNDARY-PETAL-SPORADIC  status=open M=  2/23 q=14 mu=   59/6370 components=6  boundary=13 closed=(6,0) open=(12,0) stalk=open|bars=6|len=1/364|owners=('1+',)->('1+', '12-')->('12-',)|h=2/27
+    two drop(8, 12)->add(16, 24)       route=COVERING-MOMENT          status=open M=  2/23 q=14 mu= 263/25872 components=6  boundary=13 closed=(6,0) open=(12,0) stalk=open|bars=6|len=5/1568|owners=('2+',)->('2+', '7-')->('7-',)|h=2/23
+  boundary_topology_k33_covering_capacitor: shares word_plus_boundary_topology; K33 state lift versus covering route; routes={'K33-STATE-LIFT': 1, 'COVERING-MOMENT': 1}
+    two drop(12, 13)->add(26, 36)      route=K33-STATE-LIFT           status=open M=  3/37 q=14 mu=   79/8190 components=6  boundary=13 closed=(6,0) open=(12,0) stalk=open|bars=6|len=1/364|owners=('1+',)->('1+', '12-')->('12-',)|h=2/27
+    single swap 12->72                 route=COVERING-MOMENT          status=open M=  6/77 q=14 mu= 283/64680 components=6  boundary=13 closed=(6,0) open=(12,0) stalk=open|bars=6|len=1/720|owners=('5+',)->('2-', '5+')->('2-',)|h=6/77
+
+[2] Cut-stage table on four target packets
+  stage                         fibers pair_splits mixed_route mixed_status max_mixed note
+  raw_residual_pair                   2           0           2            0         2 negative control: pair identity only
+  automatic_word                      2           0           2            0         2 finite automaton shadow
+  word_plus_M_q                       3           1           1            0         2 exact scale plus q threshold
+  word_plus_boundary_topology         3           1           1            0         2 coarse safe topology
+  closed_arc_topology                 4           2           0            0         0 HYP-3030 closed/open Cech data
+  safe_component_owner_stalk          4           2           0            0         0 endpoint/peak owner stalk
+  safe_component_exact_stalk          4           2           0            0         0 exact largest-component stalk
+  fusion_signature                    4           2           0            0         0 HYP-3026 fused packet sidecar
+  packet_label_sink                   4           2           0            0         0 C27/K33/transfer packet labels
+  route_label_sink                    4           2           0            0         0 circular target label; sanity check only
+
+[3] First-cut readout
+  M_q_petal_covering_capacitor
+    note=shares word_plus_M_q; petal route versus covering route
+    first_cut_stage=word_plus_boundary_topology
+    zeta_exit_class=nested_refinement
+    stage states:
+      raw_residual_pair              same
+      automatic_word                 same
+      word_plus_M_q                  same
+      word_plus_boundary_topology    split
+      closed_arc_topology            split
+      safe_component_owner_stalk     split
+      safe_component_exact_stalk     split
+      fusion_signature               split
+      packet_label_sink              split
+      route_label_sink               split
+    separating key previews:
+      word_plus_boundary_topology:two drop(10, 13)->add(20, 26): ('MFCMMCCFFCCMC', 14, 6, 13, '(1e-3,1e-2]')
+      word_plus_boundary_topology:two drop(8, 12)->add(16, 24): ('MFCMMCCFFCCMC', 14, 6, 13, '>1e-2')
+  boundary_topology_k33_covering_capacitor
+    note=shares word_plus_boundary_topology; K33 state lift versus covering route
+    first_cut_stage=word_plus_M_q
+    zeta_exit_class=cross_handoff
+    stage states:
+      raw_residual_pair              same
+      automatic_word                 same
+      word_plus_M_q                  split
+      word_plus_boundary_topology    same
+      closed_arc_topology            split
+      safe_component_owner_stalk     split
+      safe_component_exact_stalk     split
+      fusion_signature               split
+      packet_label_sink              split
+      route_label_sink               split
+    separating key previews:
+      word_plus_M_q:two drop(12, 13)->add(26, 36): ('MFCMMCCFFFCCF', Fraction(3, 37), 14)
+      word_plus_M_q:single swap 12->72: ('MFCMMCCFFFCCF', Fraction(6, 77), 14)
+
+[4] Tournament Analysis
+  vertices: residual-cut carriers, not runners or arcs.
+  pairwise observable:
+    capacitor separation count, route/status purity, retained packet labels,
+    topology, stalk, magnitude, non-circularity, proof cost, fiber count.
+  switch/gauge:
+    A -> B iff A has lexicographically larger observable vector.
+  tie Hamiltonian path:
+    raw_residual_pair -> automatic_word -> word_plus_M_q -> word_plus_boundary_topology -> closed_arc_topology -> safe_component_owner_stalk -> safe_component_exact_stalk -> fusion_signature -> packet_label_sink -> route_label_sink
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1} c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1) hp=1
+  high-retention path:
+    packet_label_sink > fusion_signature > route_label_sink > closed_arc_topology > safe_component_exact_stalk > safe_component_owner_stalk > word_plus_boundary_topology > word_plus_M_q > raw_residual_pair > automatic_word
+
+[5] Flow/cut theorem target
+  Residual capacitor lemma:
+    In any automatic/residue fiber after status is protected, a mixed open
+    route pair is a two-plate capacitor.  The first nonzero cut among exact
+    scale, coarse topology, closed-arc topology, safe-component stalk,
+    fusion sidecar, and packet labels must either classify the pair as
+    owner_strip, nested_refinement, cross_handoff, or named residual debt.
+  Current four-packet audit:
+    M_q_petal_covering_capacitor exits by nested_refinement.
+    boundary_topology_k33_covering_capacitor exits by cross_handoff.
+  New angle:
+    Treat the proof ladder as max-flow/min-cut on residual debt.  Status
+    gates remove boundary/open capacity; route capacitors are then finite
+    cut obligations, not new counterexample families.

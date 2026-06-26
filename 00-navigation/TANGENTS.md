@@ -3178,7 +3178,28 @@ unit-scale tooth gives `21` fibers with `0` route mixing.  Next target:
 promote the teeth to packet sidecars and prove the family scheduler without
 route labels. -> HYP-3033, LTI-181, LTT-079, HYP-3031, LTI-179, LTT-077,
 HYP-3030, LTI-178, LTT-076, HYP-3028, HYP-3024, HYP-2963, THM-572,
-OPEN-Q-108.
+## T1118: LRC14 residual capacitor flow cuts (codex-2026-06-26-S196b)
+
+HYP-3037 turns HYP-3027's two remaining displayed mixed-route pairs into
+finite "capacitors" after status has been protected by the HYP-3028/HYP-3030
+gates and after HYP-3034 lifts the arc-boundary cycle, HYP-3035 supplies first-tooth owner-strip descents, HYP-3036 supplies primitive-period route scheduling, and HYP-3032 shows the analytic sieve clocks still leave the
+squarefree `q=23` petal/covering pair as packet-family/geometric debt.  The
+petal/covering pair
+`two drop(10,13)->add(20,26)` versus `two drop(8,12)->add(16,24)` shares
+automatic word and exact `M+q`, then splits at `word_plus_boundary_topology`;
+its exit class is `nested_refinement`.  The K33/covering pair
+`two drop(12,13)->add(26,36)` versus `single swap 12->72` shares automatic
+word and coarse boundary topology, then splits at `word_plus_M_q`; its exit
+class is `cross_handoff`.
+
+The tournament vertices are residual-cut carriers rather than runners:
+raw pair, automatic word, exact scale, boundary topology, closed arc topology,
+safe-component stalks, fusion signature, packet label, and route label.  The
+proof-carrier tournament is transitive with one Hamiltonian path.  The new
+proof target is a max-flow/min-cut residual lemma: once boundary/open status
+is pure, every mixed open-route capacitor must be cut by exact scale,
+topology, stalk, fusion, packet labels, owner strip, nested refinement,
+cross-handoff, same-tile boundary, or named F7/THM-572 debt. -> HYP-3037, HYP-3036, HYP-3035, HYP-3034, HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3029, HYP-3028, HYP-3027, LTI-185, LTT-083, LTI-184, LTT-082, T1117, OPEN-Q-108.
 ## T1115: LRC14 arc-boundary path lift (codex-2026-06-26-S198)
 
 HYP-3034 pulls older path-homology/deletion-persistence machinery into the

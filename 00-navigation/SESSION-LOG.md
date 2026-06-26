@@ -24213,3 +24213,33 @@ HYP-3033/T1114/LTI-181/LTT-079 residual certificate teeth.  Next pull: add the
 primitive deck fields to HYP-3027/HYP-3031 packet sidecars, run a cached
 full-bank ledger, and prove familywise that post-status positive q<=13
 primitive mass is exactly the residual Q-WITNESS scheduler.
+## codex-2026-06-26-S196b -- LRC14 residual capacitor flow cuts -- HYP-3037/LTI-185/LTT-083
+
+User asked to keep working new angles on the LRC.  Continued from HYP-3031's
+Haar-tile repair synthesis and, after rebasing over HYP-3035's residual tooth atlas, HYP-3036's primitive-period route scheduler, HYP-3033's residual certificate teeth and HYP-3032's analytic
+sieve-clock bridge, targeted its next pull: classify the two HYP-3027 residual
+mixed-route pairs by their first nonzero repair cut.
+
+Added `04-computation/lrc14_residual_capacitor_flow_codex_s196.py` and stored
+`05-knowledge/results/lrc14_residual_capacitor_flow_codex_s196.out`.  The
+script recomputes only the four target packets, attaches existing closed
+arc-Cech topology, safe-component stalk, and fusion sidecars, then tests a
+stage ladder from raw residual pair and automatic word through exact `M+q`,
+boundary topology, closed arc topology, stalks, fusion, packet labels, and
+route labels.
+
+Main finding: the two capacitors cross-cut.  The petal/covering pair
+`two drop(10,13)->add(20,26)` versus `two drop(8,12)->add(16,24)` survives
+automatic word and `M+q`, then splits at `word_plus_boundary_topology`, so its
+exit class is `nested_refinement`.  The K33/covering pair
+`two drop(12,13)->add(26,36)` versus `single swap 12->72` survives automatic
+word and coarse boundary topology, then splits at exact `M+q`, so its exit
+class is `cross_handoff`.  Closed arc topology, safe-component stalks, fusion,
+packet labels, and route labels split both pairs.
+
+Created HYP-3037, T1118, LTI-185, LTT-083, and the forum post
+`poke-forum/posts/20260626-151915Z-lrc14-residual-capacitor-flow/post.md`.
+Updated result/hypothesis/technique indexes, concept map, and session log.
+Next pull: run the residual-capacitor cut audit over all `15` HYP-3028 coarse
+ET+unit mixed-route fibers and add `residual_capacitor_id`, `first_cut_stage`,
+and `zeta_exit_class` to the cached HYP-2963 packet sidecar.

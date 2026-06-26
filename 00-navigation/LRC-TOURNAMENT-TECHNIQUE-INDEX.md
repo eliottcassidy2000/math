@@ -54,18 +54,21 @@ obligations, and proof-carrier interfaces.
 - Need to connect discrepancy, two-dimensional Haar products, and tournament
   tiling repairs:
   use LTT-077 and add `zeta_repair_class` to the packet sidecar.
-- Need analytic repair clocks after the side-channel ladder:
-  use LTT-078.
-- Need residual certificate teeth after the status gate:
-  use LTT-079.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
+- Need to use analytic clocks inside the side-channel repair ladder:
+  use LTT-078 with retained packet labels and squarefree-blindness reports.
+- Need to schedule the 15 open coarse ET+unit residual route-mixed fibers:
+  use LTT-079 with `residual_topology_bucket` and `unit_scale_tooth`.
 - Need to classify the `15` coarse ET+unit residual fibers by first legal
   non-route tooth:
   use LTT-081 after LTT-080 and LTT-079; add `first_tooth` / `residual_tooth_class` to the packet sidecar.
 - Need to schedule the remaining coarse-gate open-route residuals:
   use LTT-082 after LTT-079/LTT-081 and add `primitive_safe_deck_2_13`
   to the packet sidecar.
+- Need to inspect two-plate residual route collisions after the broad residual
+  tooth atlas and primitive-period scheduler have organized the full coarse ledger:
+  use LTT-083 and record `residual_capacitor_id` plus `first_cut_stage`.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1595,6 +1598,39 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3036, HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3028,
   HYP-3027, HYP-3024, HYP-3023, HYP-2963, LTI-184, LTI-181, LTI-180,
   LTI-179, LTI-178, LTI-176, LTT-079, CPI-043, T1117, T1112, OPEN-Q-108.
+
+### LTT-083: Residual Capacitor Cut Tournament
+
+- **Move:** Treat residual mixed open-route fibers as two-plate capacitors
+  after status is protected.  Tournament vertices are cut carriers:
+  raw residual pair, automatic word, exact `M+q`, boundary topology, closed
+  arc topology, safe-component owner stalk, exact safe-component stalk, fusion
+  signature, primitive-period deck, first-tooth labels, packet labels, and
+  route labels.
+- **LRC use:** HYP-3037 tests the two HYP-3027 residual pairs, downstream of
+  HYP-3036's primitive-period scheduler, HYP-3035's residual tooth atlas,
+  HYP-3034's arc-boundary path lift, HYP-3033's certificate teeth, and
+  HYP-3032's analytic-clock bridge.  The petal/covering exact-scale collision
+  survives automatic word and `M+q` but is cut by boundary topology, giving
+  `nested_refinement`.  The K33/covering topology collision survives automatic
+  word and coarse boundary topology but is cut by exact `M+q`, giving
+  `cross_handoff`.  Closed arc topology, stalks, fusion, primitive-period,
+  first-tooth, and packet labels split both.
+- **Preserves:** Strict-open status after HYP-3028/HYP-3030, route-purity
+  obligations, first cut stage, exact scale, topology, stalk information,
+  fusion sidecar data, and named exit class.
+- **Forgets / guardrail:** A capacitor abstraction forgets raw runner identity
+  and exact route labels until a cut carrier separates the pair.  It is legal
+  only after boundary/open status has already been protected by the status
+  gate.
+- **Next pull:** Run the same cut-stage audit over all `15` HYP-3028 coarse
+  ET+unit mixed-route fibers and add `residual_capacitor_id`,
+  `first_cut_stage`, and `zeta_exit_class` to the HYP-2963 packet sidecar.
+- **Pointers:** HYP-3037, HYP-3036, HYP-3035, HYP-3034, HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3029, HYP-3028,
+  HYP-3027, HYP-3026, HYP-3024, HYP-3023, HYP-2992, HYP-2991, HYP-2990,
+  HYP-2963, THM-572, LTI-185, LTI-184, LTI-183, LTI-182, LTI-181, LTI-180,
+  LTI-179, LTI-178, LTI-177, LTT-082, LTT-081, LTT-080, LTT-079, LTT-078,
+  LTT-077, LTT-076, LTT-075, T1118, T1117, T1116.
 
 ## Immediate Pull List
 
