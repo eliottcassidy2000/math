@@ -44,6 +44,9 @@ exact M/Farey node
 qdiv / denominator shell
 regular-open safe component
 closed boundary atom
+closed arc-Cech beta / open tope component count
+boundary cocircuit facets
+runner quotient Betti defect
 endpoint owners
 C27 / unital / K33 state labels
 Fejer / Toeplitz certificate data
@@ -285,6 +288,7 @@ record what it destroys before asking it to prove anything.
 | LTI-169 | Pair-good decoy barcode/normal-fan refinement | Pair-good false switches, sum/diff lanes, pair shells, denominator lanes, pair gaps, blocker decks, barcode/normal-fan relations | Extends LTI-168 by recording whether each generated false switch is outside a strict barcode bar, in an AP/GW zero-bar row, or overlaps/disjoins HYP-3018 active peak supports through the good pair or blocker deck | HYP-3022, HYP-3021, HYP-3019, HYP-3018, HYP-3015, HYP-2963, THM-524, THM-572 | Add pair-good barcode/normal-fan sidecars to HYP-2963 packets; prove blocker-deck lemmas for common singleton blockers and route overlap classes by normal-fan support. |
 | LTI-170 | Automatic fiber zipper splitter | Automatic-word fibers, residue-terminal automaton fibers, exact magnitude cocycles, lonely-profile barcode shadows, packet zippers, route-labelled packets | Converts the HYP-3017/HYP-3016 mixed-fiber warning into a proof ladder; HYP-3023 shows automatic words and residue-terminal fields still mix theorem routes on the full HYP-2963 bank, while exact magnitude cocycle is the first tested non-route coordinate with zero mixed theorem-route fibers | HYP-3023, HYP-3022, HYP-3021, HYP-3020, HYP-3019, HYP-3018, HYP-3017, HYP-3016, HYP-3015, HYP-3014, HYP-3009, HYP-3008, HYP-2963, THM-572 | Prove the family magnitude-cocycle lemma inside automatic/residue fibers, starting with `MFCMMCCFFFCCC`; use barcode and packet zippers as certificate anchors. |
 | LTI-171 | Fiber-zipper convergence audit | Marginal split deltas, residual mixed-fiber rows, target-word convergence, sidecar redundancy tests | Reserves the convergence extension of HYP-3023: measure which coordinates actually shrink mixed automatic/residue fibers and which are certificate refinements after route purity has already appeared | HYP-3024, HYP-3023, HYP-3022, HYP-3021, HYP-3020, HYP-3018, HYP-3017, HYP-3016, HYP-2963 | Compute a convergence table for the full HYP-2963 bank and for `MFCMMCCFFFCCC`, then promote only nonredundant sidecars into a theorem lemma. |
+| LTI-172 | Closed arc-Cech nerve carrier | Individual threshold danger arcs, endpoint-completed closed Cech nerves, open tope nerves, boundary cocircuit facets, runner quotient defects | Makes the actual circle-cover topology the proof carrier: AP/GW are closed arc full-cover cycles with open pieces glued only by endpoint cocircuits, while K33, petals, covering, fibbinary, and Moser controls have closed arc `beta1=0` and positive safe mass | HYP-3025, HYP-3024, HYP-3023, HYP-3022, HYP-3021, HYP-3020, HYP-3018, HYP-3016, HYP-3015, HYP-3014, HYP-3013, HYP-3012, HYP-3011, HYP-3010, HYP-3009, HYP-3008, HYP-2997, HYP-2986, HYP-2975, HYP-2974, HYP-2970, HYP-2963, HYP-2990, THM-572 | Add `closed_arc_cech_beta`, `open_arc_component_count`, `boundary_cocircuit_facet_word`, `boundary_owner_sum_word_mod_14`, `runner_quotient_betti_defect`, `private_arc_count`, `private_runner_count`, `safe_tope_count`, and `arc_cech_exit_route` to HYP-2963 packets or a sidecar before trusting runner-level nerves. |
 
 ## Cross-Cutting Guardrails
 
@@ -341,7 +345,7 @@ record what it destroys before asking it to prove anything.
 | LTI-TODO-28 | Curried packet evaluator manifest | LTI-147, LTI-148, LTI-149, LTI-150, LTI-152 |
 | LTI-TODO-29 | HYP-2963 dichotomy-mode packet fields | LTI-011, LTI-063, LTI-076, LTI-150, LTI-151, LTI-152, LTI-153, LTI-154 |
 | LTI-TODO-30 | Representation-economy field for sequence-shadow packet classifiers | LTI-076, LTI-089, LTI-109, LTI-149, LTI-150, LTI-153, LTI-154, LTI-155 |
-| LTI-TODO-31 | Multiverse annex promotion queue | LTI-171, LTI-170, LTI-169, LTI-168, LTI-167, LTI-166, LTI-165, LTI-164, LTI-163, LTI-162, LTI-161, LTI-160, LTI-159, LTI-158, LTI-157, LTI-156, LTI-155, LTI-154, LTI-153, LTI-152, LTT-067, LTT-066, LTT-065, LTT-064, LTT-063, LTT-062, LTT-061, LTT-060, LTT-059, LTM-* |
+| LTI-TODO-31 | Multiverse annex promotion queue | LTI-172, LTI-171, LTI-170, LTI-169, LTI-168, LTI-167, LTI-166, LTI-165, LTI-164, LTI-163, LTI-162, LTI-161, LTI-160, LTI-159, LTI-158, LTI-157, LTI-156, LTI-155, LTI-154, LTI-153, LTI-152, LTT-069, LTT-068, LTT-067, LTT-066, LTT-065, LTT-064, LTT-063, LTT-062, LTT-061, LTT-060, LTT-059, LTM-* |
 | LTI-TODO-32 | Mixed automatic-word family templates after HYP-3023 zipper audit | LTI-170, LTI-169, LTI-168, LTI-167, LTI-166, LTI-165, LTI-164, LTI-163, LTI-162, LTI-161, LTI-160, LTI-159, LTI-158, LTI-155, LTI-150, LTI-151, LTI-152, LTT-067, LTT-066, LTT-065, LTT-064, LTT-063, LTT-062, LTT-061 |
 | LTI-TODO-33 | Automaton-state exact-gap side-channel audit | LTI-089, LTI-130, LTI-149, LTI-150, LTI-158, LTI-159, LTI-160, LTI-161, LTI-162, LTI-163, LTI-164, LTI-165, LTI-166, LTI-167, LTI-168, LTI-169, LTI-170, LTT-067, LTT-066, LTT-065, LTT-064, LTT-063, LTT-062 |
 | LTI-TODO-34 | DFA/gap-block safe-component fields for HYP-2963 packets beyond the HYP-3017 sidecars | LTI-089, LTI-130, LTI-131, LTI-158, LTI-160, LTI-161, LTI-162, LTI-163, LTI-164, LTI-165, LTI-166, LTI-167, LTI-168, LTI-169, LTI-170, LTT-067, LTT-066, LTT-065, LTT-064, LTT-063 |
@@ -352,6 +356,7 @@ record what it destroys before asking it to prove anything.
 | LTI-TODO-39 | Normal-fan packet sidecar purity theorem | LTI-166, LTI-165, LTI-164, LTI-099, LTI-044, LTI-057, LTI-147, LTI-151 |
 | LTI-TODO-40 | Discrepancy-height trident compression on the full HYP-2963 bank | LTI-167, LTI-166, LTI-165, LTI-164, LTI-159, LTI-147, LTI-151, LTT-067, LTT-066, LTT-044 |
 | LTI-TODO-41 | Pair-good decoy barcode/normal-fan blocker-deck grammar theorem | LTI-169, LTI-168, LTI-166, LTI-144, LTI-044, LTI-057, LTI-099, LTI-151 |
+| LTI-TODO-42 | Full-bank closed arc-Cech nerve and quotient-defect audit | LTI-172, LTI-041, LTI-044, LTI-045, LTI-097, LTI-147, LTT-069 |
 
 ## Minimal Entry Template
 

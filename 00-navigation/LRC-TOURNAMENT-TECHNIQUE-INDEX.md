@@ -42,7 +42,9 @@ obligations, and proof-carrier interfaces.
 ## Fast Routing Map
 
 - Need to separate strict-open mass from endpoint-only equality:
-  use LTT-018 through LTT-021.
+  use LTT-018 through LTT-021, plus LTT-069.
+- Need to classify large pair-good decoy tails without trusting raw counts:
+  use LTT-068.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1127,6 +1129,64 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3020, HYP-3017, HYP-3016, HYP-3015, HYP-3014, HYP-3009,
   HYP-3008, HYP-2997, HYP-2995, HYP-2991, HYP-2989, HYP-2963, THM-572,
   LTI-167.
+
+### LTT-068: Pair-Good Decoy Generator / Barcode Classifier Tournament
+
+- **Move:** Treat source pair lanes, blocker residue teeth, active blocker
+  decks, generator-cover sizes, barcode relations, normal-fan support
+  relations, and raw pair-good counts as tournament vertices.  Orient by
+  retained blocker mechanism, modular tooth inequality, source-lane
+  specificity, support/barcode relation, and whether the carrier separates
+  AP/GW boundary atoms from positive-open rows.
+- **LRC use:** HYP-3021 replaces raw pair-good decoy counts by the exact
+  generator rule `14*min(c*p mod q,q-c*p mod q)<q`; HYP-3022 then records how
+  each generated false switch sits relative to HYP-3015 barcode bars and
+  HYP-3018 normal-fan peak supports.  Large tails such as `12->200`,
+  drop6-add180, and covering `12->84` mostly recycle AP-core blocker teeth
+  rather than producing new obstruction families.
+- **Preserves:** Source pair lane, source shell, blocker role, blocker-depth
+  bucket, zero-tooth flag, generator-cover size, top generator key, barcode
+  relation, and normal-fan support relation.
+- **Forgets / guardrail:** A raw count of pair-good times forgets that many
+  times can land on the same modular tooth cover, and can also forget that the
+  same false switch is outside all strict bars or already controlled by a
+  normal-fan support.  It should not be used as an obstruction-size scalar
+  without the generator and barcode/normal-fan sidecars.
+- **Next pull:** Add the decoy-generator and barcode/normal-fan fields beside
+  active-pair and arc-Cech sidecars in HYP-2963 packet records, then test
+  whether residual packet families have bounded generator-cover and
+  blocker-deck templates.
+- **Pointers:** HYP-3022, HYP-3021, HYP-3019, HYP-3018, HYP-3015, THM-524,
+  HYP-2990, HYP-2963, LTI-169, LTI-168.
+
+### LTT-069: Closed Arc-Cech Nerve Carrier Tournament
+
+- **Move:** Treat proof carriers around the exact danger cover as tournament
+  vertices: endpoint tope/cocircuit wall, individual-arc closed Cech nerve,
+  boundary owner current, safe interval measure, runner quotient nerve, Fejer
+  dual certificate, automaton sidecar, and raw speed/sequence scalar.  Orient
+  by preserved circle-cover predicate, endpoint equality retention, quotient
+  defect visibility, and certificate handoff strength.
+- **LRC use:** Makes the exact closed cover topology primary.  AP/Goddyn-Wong
+  are full-cover cycles in the endpoint-completed individual-arc Cech nerve
+  with open pieces glued by six boundary cocircuits; K33, petal, covering,
+  fibbinary, and Moser controls have closed arc `beta1=0` and positive safe
+  mass.
+- **Preserves:** Closed arc Betti numbers, open arc component count, boundary
+  cocircuit facet word, owner sums mod `14`, runner quotient Betti defect,
+  private arc/runner counts, safe tope count, and exit route.
+- **Forgets / guardrail:** Runner-level nerves and sequence shadows can merge
+  several disjoint danger arcs owned by one speed, erasing either disconnected
+  cover pieces or the full-cover cycle unless `runner_quotient_betti_defect`
+  remains attached.
+- **Next pull:** Add the arc-Cech fields to HYP-2963 packet records or a
+  sidecar, run the full packet bank, prove K33/petal `beta1=0` exits
+  familywise, and define F7 as a good-cover quotient-defect class before using
+  more scalar filters.
+- **Pointers:** HYP-3025, HYP-3024, HYP-3023, HYP-3022, HYP-3021, HYP-3020, HYP-3018,
+  HYP-3016, HYP-3015, HYP-3014, HYP-3013, HYP-3012, HYP-3011, HYP-3010,
+  HYP-3009, HYP-3008, HYP-2997, HYP-2986, HYP-2975, HYP-2974, HYP-2970,
+  HYP-2963, HYP-2990, THM-572, LTI-172.
 
 ## Immediate Pull List
 

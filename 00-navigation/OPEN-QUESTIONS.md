@@ -101,6 +101,26 @@ analogies can be used only after exact `M`, factorization, Kpq route, and
 certificate/residual labels are retained. -> HYP-3013, HYP-3012, HYP-3009,
 HYP-3008, HYP-2946, HYP-2945, HYP-2941, HYP-2221, HYP-2220, HYP-2963,
 THM-572, LTI-162, LTT-064, T1097.
+**OPEN-Q-108 S174 closed arc-Cech nerve addendum:** HYP-3025 makes the
+individual threshold danger arcs, not runners or sequence entries, the exact
+topological carrier for LRC14 covering.  The S174 audit computes both the open
+arc nerve and the endpoint-completed closed arc-Cech nerve, then compares them
+to the lossy runner quotient nerve.  AP and GW `12->24` have closed arc Betti
+`(1,1)`, open arc Betti `(6,0)`, six boundary-safe cocircuits, and boundary
+owner sums all `0 mod 14`; K33, petal, covering, fibbinary, and Moser rows have
+closed arc `beta1=0` and positive safe mass.  The one-swap AP scan through
+`add<=160` has exactly one zero-open row, GW `12->24`, and smallest positive
+safe mass `1/1260` at K33 `12->36`.  Open tasks: add
+`closed_arc_cech_beta`, `open_arc_component_count`,
+`boundary_cocircuit_facet_word`, `boundary_owner_sum_word_mod_14`,
+`runner_quotient_betti_defect`, `private_arc_count`, `private_runner_count`,
+`safe_tope_count`, and `arc_cech_exit_route` to HYP-2963 packet records or a
+sidecar; run the audit over the full HYP-2963 bank; prove the K33/petal
+`beta1=0` exits familywise; define F7 as a good-cover quotient-defect class
+before adding more scalar filters. -> HYP-3025, HYP-3024, HYP-3023, HYP-3022, HYP-3021, HYP-3020, HYP-3018, HYP-3016,
+HYP-3015, HYP-3014, HYP-3013, HYP-3012, HYP-3011, HYP-3010, HYP-3009,
+HYP-3008, HYP-2997, HYP-2986, HYP-2975, HYP-2974, HYP-2970, HYP-2963,
+THM-572, LTI-172, LTT-069, T1104.
 
 **OPEN-Q-108 S178 Fermat-Catalan automatic-gap addendum:** HYP-3009 extends
 HYP-3008's finite-automaton carrier with no-lift and lacunary guardrails for
@@ -198,12 +218,12 @@ and group Fejer/Ramanujan certificates by section, not by scalar route label.
 -> HYP-2996, HYP-2995, HYP-2994, HYP-2991, HYP-2989, HYP-2963, THM-572, T1080.
 
 **OPEN-Q-108 S169 additive-basis/Farey addendum:** HYP-3000 adds a proof-currency classifier, complementary to HYP-2998's golden Stern-Brocot/Fibonacci carrier and HYP-2999's Pascal-slope packet schema.  The Fibonacci row pattern is `F_n=sum_k binom(n-k-1,k)`, the rank vector of independent sets in `P_{n-2}`; Zeckendorf is the confluent no-adjacent normal form on this path.  Goldbach/ternary Goldbach/Fermat polygonal/Zeckendorf differ by proof economy: high-entropy sieve, added smoothing dimension, bounded arity/residue absorption, path-normal-form carry.  For Farey payloads, keep exact `M=p/q` and `e=14p-q`: `p+q` is affine-safe additive scale, `p*q` is incidence/product side channel, powers are magnitude stress tests.  Open task: classify each HYP-2963 residual packet as smoothing, bounded-arity invoice, or path-normal-form debt before choosing Fejer/Ramanujan/Kaczynski/Zeckendorf tools. -> HYP-3000, HYP-2999, HYP-2998, HYP-2984, HYP-2982, HYP-1902, LTI-150.
-**OPEN-Q-108 S168-S178 technique-index expansion addendum:** The LRC Technique
-Index now has `165` compact `LTI-*` rows plus the `66` long-form S166/S175
-technique-bank entries after preserving the incoming `LTI-109` packet-cocycle
-atlas and `LTI-110` cocycle-obstruction atlas.  The recovered promoted rows
-`LTI-111..LTI-165` are a pull list for attacking the LRC14 gap from
-tournament/metagraph/series directions: cocycle obstruction matrices,
+**OPEN-Q-108 S168-S187 technique-index expansion addendum:** The LRC Technique
+Index now has `172` compact `LTI-*` rows plus the `69` long-form tournament
+technique-bank entries after preserving the incoming `LTI-109`
+packet-cocycle atlas and `LTI-110` cocycle-obstruction atlas.  The recovered
+promoted rows `LTI-111..LTI-172` are a pull list for attacking the LRC14 gap
+from tournament/metagraph/series directions: cocycle obstruction matrices,
 deck-derivative reconstruction, Burnside/A000568 orbit taxes, merged metagraph
 transport, good-cut/SCC gas, OCF coimage sectors, path-homology residuals,
 transfer matrices, Walsh/Krawtchouk/Paley shadows, matroid/gammoid tests,
@@ -214,27 +234,33 @@ namespace collision auditing, cocycle normal forms, residual-section packet
 grids, Pascal-slope/Fibonacci additive-basis packet fields, smoothing
 switchboards, curried functional packet fields, summand/multiplicand Farey
 operation fibers, dichotomy recursion mode fields, HYP-2998 representation
-economy fields (`LTI-155`), and the HYP-3005 technique multiverse annex
-(`LTI-156`), Poincare/worldline frame fields (`LTI-157`), and
-automatic gap-language packet fields (`LTI-158`), the
-Fermat-Catalan/lacunary power-lift extension (`LTI-159`), automatic
-lacunary safe-component fields (`LTI-160`), the induced tournament-class
-gap-automaton carrier (`LTI-161`), the perfect-number divisor packet merge
-(`LTI-162`), the creative exact packet-lens atlas (`LTI-163`),
-lonely-profile barcode fields (`LTI-164`), and the automaton fiber-mixing
-magnitude-cocycle guardrail (`LTI-165`).
-The proof-use rule is unchanged but sharper: a
-quotient may forget only fiber-constant, reconstructible, dual-annihilated,
-cochain-exact, or named-residual data.  Near-term proof tasks are
-`LTI-TODO-13..38`: build the packet-cocycle theorem formalization, the
-executable F7 cocycle residual record, the emitted-cocycle matrix over HYP-2963
-packets, an F0-F7 residual metagraph Laplacian, a marked A000568/Burnside
-quotient tax, a binding-pair switch tournament for covering rows, a
-`representation_economy` packet field for sequence shadows, and LTM-to-LTI/LTT
-promotion tests. -> T1090, T1087, T1086, T1085, T1084, T1083, T1078,
-HYP-3006, HYP-3005, HYP-3004, HYP-3003, HYP-3002, HYP-3001, HYP-3000, HYP-2999,
-HYP-2998, HYP-2997, HYP-2996, HYP-2995, HYP-2994, HYP-2992, HYP-2991,
-HYP-2990, HYP-2963, THM-572, THM-524, THM-381, THM-354, THM-002.
+economy fields (`LTI-155`), the HYP-3005 technique multiverse annex
+(`LTI-156`), Poincare/worldline frame fields (`LTI-157`), automatic
+gap-language packet fields (`LTI-158`), Fermat-Catalan/lacunary power-lift
+fields (`LTI-159`), automatic lacunary safe-component fields (`LTI-160`), the
+induced tournament-class gap-automaton carrier (`LTI-161`), the perfect-number
+divisor packet merge (`LTI-162`), the creative exact packet-lens atlas
+(`LTI-163`), lonely-profile barcode fields (`LTI-164`), automaton
+fiber-mixing magnitude-cocycle guardrails (`LTI-165`), active-bottleneck
+normal-fan fields (`LTI-166`), discrepancy-height trident fields (`LTI-167`),
+the pair-good decoy generator classifier (`LTI-168`), the pair-good barcode/normal-fan refinement (`LTI-169`), the automatic fiber zipper splitter (`LTI-170`), the fiber-zipper convergence audit (`LTI-171`), and the closed arc-Cech
+quotient-defect carrier (`LTI-172`).  The proof-use
+rule is unchanged but sharper: a quotient may forget only fiber-constant,
+reconstructible, dual-annihilated, cochain-exact, or named-residual data.
+Near-term proof tasks are `LTI-TODO-13..42`: build
+the packet-cocycle theorem formalization, executable F7 cocycle residual
+record, emitted-cocycle matrix over HYP-2963 packets, F0-F7 residual metagraph
+Laplacian, marked A000568/Burnside quotient tax, binding-pair switch
+tournament for covering rows, sequence-shadow `representation_economy`
+fields, LTM-to-LTI/LTT promotion tests, normal-fan sidecar purity theorem,
+discrepancy-height trident compression, pair-good decoy generator/barcode sidecars, automatic fiber zipper compression,
+and full-bank closed arc-Cech quotient-defect audit. -> T1104, T1103, T1102,
+T1101, T1100, T1098, T1097, T1090,
+T1087, T1086, T1085, T1084, T1083, T1078, HYP-3025, HYP-3024, HYP-3023, HYP-3022, HYP-3021, HYP-3020, HYP-3018,
+HYP-3016, HYP-3015, HYP-3014, HYP-3013, HYP-3006, HYP-3005, HYP-3004,
+HYP-3003, HYP-3002, HYP-3001, HYP-3000, HYP-2999, HYP-2998, HYP-2997,
+HYP-2996, HYP-2995, HYP-2994, HYP-2992, HYP-2991, HYP-2990, HYP-2963,
+THM-572, THM-524, THM-381, THM-354, THM-002.
 **OPEN-Q-108 S168 technique multiverse addendum:** HYP-3005 adds `00-navigation/LRC-TECHNIQUE-MULTIVERSE-INDEX.md`, a 78-card `LTM-*` contribution annex for tournament/metagraph, series, sieve, Haar/Fejer, cocycle, state-lift, formalization, and forum-workflow techniques.  The family-level tournament uses technique families as vertices, retained LRC payload dimensions as the pairwise observable, a rotating first-difference gauge, and a declared tie Hamiltonian path.  Fingerprint: `score_hist={2:1,3:1,4:4,5:3}`, `directed_3cycles=26`, `scc_sizes=[9]`, `edge_flips_against_tie_path=21`, `hamiltonian_path_count=2397`; the all-family SCC says the old techniques should be integrated cyclically rather than ranked.  Open tasks: promote theorem-facing `LTM-*` cards into `LTI-*`/`LTT-*`; build the finite C1 emitted-cocycle matrix on HYP-2963 packet banks; extend packet schemas with exact M/qdiv, Haar class, Ramanujan projector, Fejer manifest, endpoint owner, source-spectrum class, and state-lift debt; run fiber-mixing tests for `mu`, `mu^2/phi`, divisor, spectrum, `H`, trace, pressure, and edge-density scalars; define F7 as finite state lift, harmonic current, or named cohomology class. -> HYP-3005, HYP-3006, HYP-3004, HYP-3003, HYP-3002, HYP-3001, HYP-3000, HYP-2999, HYP-2998, HYP-2997, HYP-2996, HYP-2995, HYP-2993, HYP-2992, HYP-2991, HYP-2990, HYP-2989, HYP-2987, HYP-2963, THM-572.
 **OPEN-Q-108 S167 cocycle-sheaf exactness addendum:** HYP-3006 recasts the active LRC14 proof stack as one cochain complex instead of many separate ledgers.  `C0` is the labelled packet fiber data (exact `M/qdiv`, open-vs-boundary state, endpoint owners, exact-period labels, route labels); `C1` is the emitted cocycle layer (Haar `zeta` switches, endpoint currents, Ramanujan phases, Fejer debts, smoothing defects, carry lifts, pair tensions, and certificate handoff obligations); `C2` is incompatibility / unnamed residual data.  Candidate theorem target: for primitive non-AP/GW rows, prove exactness at `C1`, so every emitted cocycle is the boundary of a known certificate, annihilated by a dual, restricted to a smaller packet family, or routed to the named THM-572/F7 residual.  S167's carrier tournament has `directed_3cycles=3` and a size-`5` SCC among Ramanujan exact-period, smoothing boundary, tope/cocircuit, Fejer dual, and path-homology witness carriers, warning that these must be typed as interacting cochains rather than collapsed to a scalar chain. -> HYP-3006, HYP-2997, HYP-2991, HYP-2990, HYP-2989, HYP-2988, HYP-2987, HYP-2986, HYP-2985, HYP-2979, HYP-2974, HYP-2171, HYP-2027, HYP-362, THM-572.
 **OPEN-Q-108 S166 cocycle obstruction atlas addendum:** HYP-2994 lifts the local HYP-2991 `zeta` cocycle and the HYP-2992/HYP-2993 Haar-tile/zipper atlases into a cochain ledger for LRC14.  `C0` stores packet labels, owner potentials, Fejer centers, and exact-period residues; `C1` stores handoff arrows, endpoint transfers, smoothing gauges, and source pullbacks; `C2` stores Haar switches, tope curls, color-resonance squares, boundary-moment curls, and state-lift faces; `H2` stores unpaired mixed modes, no-hidden-kernel survivors, F7, and THM-572 residuals.  The S166 script scores `15` carriers and finds sparse preserved labels exactly where scalar quotients are dangerous: exact scale, mixed Haar sign, and phase period.  Tournament Analysis has one nontrivial `3`-carrier SCC tying certificate handoff, local `zeta`, and exposure/Cech gluing.  Live theorem target: every allowed LRC quotient must declare whether it takes an exact coboundary, kills a closed cocycle by a dual stop, preserves torsion/period labels, or emits a named residual; next compute packet-level `zeta` signatures and an executable F7 record. -> HYP-2994, HYP-2993, HYP-2992, HYP-2991, HYP-2990, HYP-2988, HYP-2987, HYP-2963, THM-572.

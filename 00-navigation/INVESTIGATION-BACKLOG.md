@@ -57,6 +57,31 @@ Namespace: HYP-3020 / T1102 / LTI-167 / LTT-067.
 **Readout:** `04-computation/lrc14_lonely_profile_persistence_barcode_codex_s179.py` stores output in `05-knowledge/results/lrc14_lonely_profile_persistence_barcode_codex_s179.out`.  Exact Fraction arithmetic over affine cells shows AP13 and GW `12->24` have zero bars; K33 has two bars, petals have two, covering `12->84` has eight, fibbinary first13 has `38`, and Moser first13 has `64`.  The barcode exposes bar count, length, peak, and persistence margin, so raw `M` and safe mass are insufficient quotients.
 **Next:** run barcode sidecar over the HYP-2963 packet bank; route lowest-persistence positive families to endpoint-owner / Fejer interval certificates; compare barcode classes against HYP-3012 automaton classes and HYP-3013 divisor fields.
 Namespace: HYP-3015 / T1099 / LTI-164.
+## Lead codex-2026-06-26-S174: LRC14 closed arc-Cech nerve carrier
+
+**Status:** SYNTHESIS / exact topology proof-interface carrier complete
+(HYP-3025/T1104/LTI-172/LTT-069), downstream of the endpoint
+tope/cocircuit, taut-current, Fejer/Ramanujan, and automaton/gap-sidecar
+threads.  User asked to keep looking for better creative proof carriers.
+**Readout:** `04-computation/lrc14_arc_cech_nerve_carrier_codex_s174.py`
+stores output in
+`05-knowledge/results/lrc14_arc_cech_nerve_carrier_codex_s174.out`.  The
+script builds the exact threshold danger-arc endpoint arrangement, computes
+the open and endpoint-completed closed arc-Cech nerves, compares them to the
+runner quotient nerve, and records quotient Betti defect.  AP and GW
+`12->24` have closed arc Betti `(1,1)`, open arc Betti `(6,0)`, six
+boundary-safe cocircuits, and boundary owner sums all `0 mod 14`; named
+positive rows have closed arc `beta1=0`.  The AP one-swap scan through
+`add<=160` has exactly one zero-open row, GW, and smallest positive safe mass
+`1/1260` at K33 `12->36`.
+**Next:** add `closed_arc_cech_beta`, `open_arc_component_count`,
+`boundary_cocircuit_facet_word`, `boundary_owner_sum_word_mod_14`,
+`runner_quotient_betti_defect`, `private_arc_count`, `private_runner_count`,
+`safe_tope_count`, and `arc_cech_exit_route` to HYP-2963 packet records or a
+sidecar.  Run the full HYP-2963 bank through the closed arc-Cech audit.  Prove
+familywise that K33/petal/covering positive rows have `beta1=0` exits, and
+define F7 as a good-cover quotient-defect sector if any non-AP/GW zero-open
+packet survives.
 
 ## Lead codex-2026-06-25-S178: LRC14 Fermat-Catalan automatic-gap extension
 
