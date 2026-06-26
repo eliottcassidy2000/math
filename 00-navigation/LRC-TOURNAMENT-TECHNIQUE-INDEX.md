@@ -58,6 +58,9 @@ obligations, and proof-carrier interfaces.
   ledger:
   use LTT-101 after LTT-099/LTT-100 and record payload orbits modulo visible
   automorphisms.
+- Need owner/root-aware medianization:
+  use LTT-113 after LTT-112 and record root object, owner object, coarse
+  shadow, first missing sidecar, and sidecar rank before naming new debt.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3011,6 +3014,49 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   T1149, T1148, T1147, T1146, T1145, T1144, T1143, T1140, T1139, T1138,
   T1136, OPEN-Q-108.
 
+### LTT-113: Median Owner/Root Sidecar Spine
+
+- **Move:** Refine the proof-state median test by making owner and root
+  objects explicit vertices/fields.  A route triple can fail to have a median
+  center because the quotient forgot an endpoint owner, rootless cycle object,
+  value-origin role, observer-cut orbit, rectangle/hourglass residue, or
+  common-owner gate.
+- **LRC use:** HYP-3068 is the first table-shaped continuation of HYP-3067.
+  It tests six representative fibers before the full HYP-2963 run: q=23
+  endpoint-owner, A000568 rootless cycle, Desargues/Beal owner,
+  Fejer/Haar/Ramanujan value-origin, observer/deletion/rectangle cut orbit,
+  and pair-good/barcode active support.  Each empty or multiple center becomes
+  a unique-center row only after the first missing sidecar is attached.
+- **Preserves:** Boundary/open status, route schedulability, owner object,
+  root object, proof obligation, coarse shadow, median-center status, and
+  named repair/debt exit.
+- **Forgets / guardrail:** Runners, raw graph nodes, raw scalar counts, and
+  incidence shadows forget which proof-state object owns the center.  Empty
+  center names a first missing sidecar; multiple center is value-origin or
+  sidecar-vocabulary ambiguity before it is new theorem debt.
+- **Tournament fingerprint:** vertices are proof obligations plus owner/root/
+  sidecar objects, not runners.  Pairwise observable is repaired route triples,
+  preserved LRC predicates, and debt cost.  The S234 sidecar tournament is
+  transitive:
+  `endpoint_owner_strip > observer_cut_orbit > exact_M_zeta >
+  active_owner_barcode_support > value_origin_type > beal_common_owner_gate >
+  rootless_cycle_object > rectangle_hourglass_residue >
+  primitive_period_deck > closed_arc_h1_owner_support >
+  sidecar_vocabulary > raw_scalar_count`.
+- **Next pull:** Run the S234 table on actual HYP-2963 coarse fibers with
+  `coarse_fiber_id`, `route_triple`, `coarse_shadow`, `root_object`,
+  `owner_object`, `sidecars_attached`, `median_center_status`,
+  `first_missing_sidecar`, and `repair_or_debt`.  Add a `sidecar_rank` column
+  if the table needs a proof-obligation order.
+- **Pointers:** HYP-3068, HYP-3067, HYP-3066, HYP-3065, HYP-3064, HYP-3063,
+  HYP-3062, HYP-3061, HYP-3060, HYP-3059, HYP-3058, HYP-3057, HYP-3056,
+  HYP-3054, HYP-3053, HYP-3048, HYP-3039, HYP-3038, HYP-3037, HYP-2963,
+  THM-572, LTI-215, LTI-214, LTI-213, LTI-212, LTI-211, LTI-210, LTI-209,
+  LTI-208, LTI-207, LTI-204, LTI-203, LTI-201, LTT-113, LTT-112, LTT-111,
+  LTT-110, LTT-109, LTT-108, LTT-107, LTT-106, LTT-105, LTT-102, LTT-101,
+  LTT-099, T1150, T1149, T1148, T1147, T1146, T1145, T1144, T1143, T1142,
+  T1139, T1138, T1136, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -3078,6 +3124,7 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    quarter-turn residue, D4 orbit word, Toeplitz PSD bridge degree,
    proof-graph vertex, sidecar hyperplane ID, route triple ID,
    median-center status, Desargues defect ID, medianization exit,
+   root object, owner object, coarse shadow, first missing sidecar, sidecar rank,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

@@ -1,9 +1,9 @@
-## codex-2026-06-26-S232 -- Hodge-cycle lifting carrier for LRC14 (HYP-3067/T1149/LTI-214/LTT-112)
+## codex-2026-06-26-S232 -- Hodge-cycle lifting carrier for LRC14 (HYP-3066/T1148/LTI-213/LTT-111)
 
 User asked to consider the Hodge conjecture, extend prior Hodge work, and keep
 working on LRC.
 
-Created HYP-3067, T1149, LTI-214, LTT-112, reflection
+Created HYP-3066, T1148, LTI-213, LTT-111, reflection
 `07-reflections/hodge-conjecture-cycle-lifting-lrc14-codex-s232.md`, and forum
 post `poke-forum/posts/20260626-hodge-cycle-lifting-lrc14/post.md`.
 
@@ -266,6 +266,35 @@ Tournament Analysis vertices are proof carriers, not runners:
 fibonacci_cube_carry_boundary > moser_two_lane_product_cube >
 simplex_directed_edge_bridge > K_bridge_rank_one_sheet >
 automatic_language_membership > raw_doubled_triangular_scalar`.
+## codex-2026-06-26-S234 -- Median owner/root sidecar spine -- HYP-3068/T1150/LTI-215/LTT-113
+
+User asked to continue local work and extend ideas toward an LRC14 proof.
+Picked up the S233 Desargues-median finalization lens and the owner/root
+sidecar forum seed, then added a small proof-interface audit rather than a
+proof claim.
+
+Added `04-computation/lrc14_median_owner_root_sidecar_audit_codex_s234.py` and
+stored `05-knowledge/results/lrc14_median_owner_root_sidecar_audit_codex_s234.out`.
+The script shows the toy median lift explicitly: C6 route triple `(0,2,4)` has
+empty center, while Q3 sidecar triple `(000,110,101)` has unique center `100`.
+It then audits six route fibers whose coarse shadows become unique-center rows
+only after owner/root/sidecar payloads are attached: q=23 endpoint owner,
+A000568 rootless cycle object, Desargues/Beal owner gate, Fejer/Haar/Ramanujan
+value origin, observer/deletion/rectangle cut orbit, and pair-good/barcode
+support.
+
+Created HYP-3068, T1150, LTI-215, LTT-113, and reflection
+`07-reflections/lrc14-median-owner-root-sidecar-spine-codex-s234.md`.
+Tournament Analysis vertices are proof obligations and owner/root/sidecar
+objects, not runners.  The sidecar tournament is transitive with one
+Hamiltonian path headed by `endpoint_owner_strip`, `observer_cut_orbit`,
+`exact_M_zeta`, `active_owner_barcode_support`, and `value_origin_type`; raw
+scalar count is last.
+
+Next pull: run the table over actual HYP-2963 coarse fibers with fields
+`coarse_fiber_id`, `route_triple`, `coarse_shadow`, `root_object`,
+`owner_object`, `median_center_status`, `first_missing_sidecar`, and
+`repair_or_debt`.
 
 ## codex-2026-06-26-S222 -- LRC14 Fermat-Catalan hyperbolic reciprocal bound (HYP-3058/T1140/LTI-205/LTT-103)
 

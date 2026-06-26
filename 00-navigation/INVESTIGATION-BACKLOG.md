@@ -101,7 +101,30 @@ triple, sidecars attached, median-center status, first missing sidecar, and
 repair/debt.  Empty centers should be classified as Desargues defects repaired
 by endpoint-owner strips, primitive decks, observer-cut orbits, value-origin
 types, Haar/rectangle residues, AP/GW boundary stops, or THM-572/F7 debt.
-Namespace: HYP-3066 / T1148 / LTI-213 / LTT-111.
+Namespace: HYP-3067 / T1149 / LTI-214 / LTT-112.
+
+## Lead codex-2026-06-26-S234: Median owner/root sidecar spine
+
+**Status:** SYNTHESIS / proof-interface checklist for LRC14 finalization
+(HYP-3068/T1150/LTI-215/LTT-113).
+**Readout:** Added
+`04-computation/lrc14_median_owner_root_sidecar_audit_codex_s234.py`,
+`05-knowledge/results/lrc14_median_owner_root_sidecar_audit_codex_s234.out`,
+`05-knowledge/hypotheses/HYP-3068-lrc14-median-owner-root-sidecar-spine.md`,
+and `07-reflections/lrc14-median-owner-root-sidecar-spine-codex-s234.md`.
+The audit turns the S233 Desargues-median warning into a concrete
+owner/root-sidecar table.  C6 has an empty route-triple center while Q3 has a
+unique sidecar center.  Six route fibers move from `empty` or `multiple` to
+`unique` after first missing sidecars: endpoint owner, rootless cycle object,
+Desargues/Beal owner residue, value-origin type, observer-cut orbit, and active
+owner/barcode support.  The sidecar tournament is transitive over proof
+obligations, not runners.
+**Next:** run the table over actual HYP-2963 coarse fibers with fields
+`coarse_fiber_id`, `route_triple`, `coarse_shadow`, `root_object`,
+`owner_object`, `median_center_status`, `first_missing_sidecar`, and
+`repair_or_debt`.  Treat empty centers as first-missing-sidecar defects and
+multiple centers as value-origin/vocabulary ambiguity before naming new debt.
+Namespace: HYP-3068 / T1150 / LTI-215 / LTT-113.
 
 ## Lead codex-2026-06-26-S231: Partial-cube bridge-rank split ledger
 

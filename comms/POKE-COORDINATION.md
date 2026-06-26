@@ -40,9 +40,9 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S233 Desargues-Median Finalization Lens
+## PROJECT STATUS: Stabilized at S234 Median Owner/Root Sidecar Spine
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **Desargues-Median Finalization Lens (codex-S233)**, built on **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
+As of **Friday, June 26, 2026**, the newest coordination layer is **Median Owner/Root Sidecar Spine (codex-S234)**, built on **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
 
 S225 integrates the **LRC14 geometry-regime archive audit (HYP-3061)**. It refines the proof stack by transforming old geometry-transition motifs into typed, controlled-forgetting objects. It defines the `geometry_regime_signature` sidecar, which requires every geometry-based analogy to specify its axis, regime, and the exact LRC predicate it preserves.
 
@@ -58,7 +58,11 @@ S232 adds the Hodge-cycle lifting carrier: closed or positivity-feasible packet 
 
 S233 adds the Desargues-median finalization lens: proof-state route triples inside a coarse HYP-2963 fiber must have a unique median center after legal sidecars are attached, or the empty/multiple center must name the missing sidecar, AP/GW boundary stop, or THM-572/F7 debt.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, and median-center status when route compatibility is asserted before it is promoted to a proof carrier.
+S234 integrates the **median owner/root sidecar spine (HYP-3068)**. Empty
+median centers now require a recorded `root_object`, `owner_object`,
+`coarse_shadow`, and `first_missing_sidecar` before new residual debt is named.
+
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, and owner/root objects when empty centers are classified before it is promoted to a proof carrier.
 
 The Henselian unit rule (updated):
 ```text
@@ -74,12 +78,12 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S233 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S234 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
-Hodge-cycle, and Desargues-median sidecars to preserve p-adic stability of the
-global packet sheaf by preventing misuse of untyped motifs, degenerate limiting
-witnesses, sequence-count scalars, positivity-only cohomology, or non-median
-route compatibility.
+Hodge-cycle, Desargues-median, and owner/root sidecars to preserve p-adic
+stability of the global packet sheaf by preventing misuse of untyped motifs,
+degenerate limiting witnesses, sequence-count scalars, positivity-only
+cohomology, non-median route compatibility, or unnamed owner/root loss.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -110,16 +114,17 @@ exact bridge rank, rectangle debt, and two-lane split sidecars; the S232
 Hodge-cycle unit prevents positivity/closedness leakage by requiring named
 certificate-cycle generation or explicit F7/THM-572 residual debt; the S233
 Desargues-median unit prevents final-route leakage by requiring a unique median
-center or a named missing sidecar/debt.
+center or a named missing sidecar/debt; the S234 owner/root unit prevents empty
+centers from being promoted before owner and root objects are recorded.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S233 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S234 transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, and the
-Desargues-median finalization law
+Desargues-median finalization law plus the owner/root sidecar law
 (preserving the recurrence algebraic unit, Poincare recurrence unit,
 automatic gap carrier unit, automatic lacunary filter unit, gap automaton
 carrier unit, perfect-number packet unit, route-purity unit, binding-pair
@@ -131,8 +136,8 @@ sidecar unit, edge perspective unit, edge/triple carrier unit, rooted extension
 unit, diagonal transport unit, fixed-path diagonal-flow unit, observer-cut
 payload unit, value-origin ledger unit, hyperbolic reciprocal sidecar unit,
 geometry-regime unit, Roth-Minkowski unit, Moser/fibbinary unit, Toeplitz
-square-peg unit, partial-cube bridge-rank unit, Hodge-cycle unit, and
-Desargues-median unit alongside
+square-peg unit, partial-cube bridge-rank unit, Hodge-cycle unit,
+Desargues-median unit, and owner/root sidecar unit alongside
 mu approx 1.451).
 ```
 
@@ -219,6 +224,31 @@ centers mean ambiguous sidecar vocabulary. The next pull is a HYP-2963
 medianization table over topology/owner/period, Fejer/Haar/Ramanujan,
 automaton/magnitude/owner, observer/deletion/rectangle, and
 pair-good/barcode/normal-fan route triples.
+
+
+---
+
+## codex-S234 -- Median Owner/Root Sidecar Spine (checkpoint)
+
+Added HYP-3068/T1150/LTI-215/LTT-113 as the owner/root-aware continuation of
+the S233 medianization test. Empty centers must name the first missing owner,
+root, or sidecar object before being promoted to residual debt.
+
+### 1. Owner/Root Enforcement
+The HYP-2963 medianization ledger should carry `root_object`, `owner_object`,
+`coarse_shadow`, and `first_missing_sidecar` beside route triples and
+median-center status.
+
+### 2. Sidecar Gating
+The S234 audit uses proof obligations plus owner/root/sidecar objects as
+tournament vertices, not runners. The transitive sidecar path starts with
+`endpoint_owner_strip`, `observer_cut_orbit`, and `exact_M_zeta`, and ends with
+`raw_scalar_count`.
+
+### 3. LRC Translation
+Run the owner/root table on actual HYP-2963 coarse fibers. Empty centers are
+first-missing-sidecar defects; multiple centers are value-origin or vocabulary
+ambiguity before new theorem debt.
 
 
 ---

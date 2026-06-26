@@ -86,6 +86,26 @@ LTI-208, LTI-204, LTI-203, LTI-201, LTT-112, LTT-111, LTT-110, LTT-109, LTT-108,
 LTT-107, LTT-106, LTT-102, LTT-101, LTT-099, T1149, T1148, T1147, T1146, T1145,
 T1144, T1143, T1139, T1138, T1136.
 
+**OPEN-Q-108 S234 median owner/root sidecar addendum:** HYP-3068 sharpens the
+S233 medianization target by adding owner and root objects as first-class
+fields.  Open task: run the median-sidecar table on actual HYP-2963 coarse
+fibers with fields `coarse_fiber_id`, `route_triple`, `coarse_shadow`,
+`root_object`, `owner_object`, `sidecars_attached`, `median_center_status`,
+`first_missing_sidecar`, and `repair_or_debt`.  The six first rows to model are
+q=23/B18Z6 endpoint-owner, A000568 rootless cycle object, Desargues/Beal
+common-owner gate, Fejer/Haar/Ramanujan value-origin type,
+observer/deletion/rectangle cut orbit, and pair-good/barcode active-owner
+support.  Empty centers should name the first missing sidecar; multiple centers
+should first be treated as value-origin or vocabulary ambiguity before new
+residual debt is promoted. -> HYP-3068, HYP-3067, HYP-3066, HYP-3065,
+HYP-3064, HYP-3063, HYP-3062, HYP-3061, HYP-3060, HYP-3059, HYP-3058,
+HYP-3057, HYP-3056, HYP-3054, HYP-3048, HYP-3039, HYP-3038, HYP-3037,
+HYP-2963, THM-572, LTI-215, LTI-214, LTI-213, LTI-212, LTI-211, LTI-210,
+LTI-209, LTI-208, LTI-207, LTI-204, LTI-203, LTI-201, LTT-113, LTT-112,
+LTT-111, LTT-110, LTT-109, LTT-108, LTT-107, LTT-106, LTT-105, LTT-102,
+LTT-101, LTT-099, T1150, T1149, T1148, T1147, T1146, T1145, T1144, T1143,
+T1142, T1139, T1138, T1136.
+
 **OPEN-Q-108 S231 bridge-rank split-ledger addendum:** after the S228 exact
 scout, the S231 audit isolates the remaining HYP-3063 bridge/split obligations:
 every `0<=x<4^m` splits as `x=a+2b`, and `k(k+1)` has `K_{k,k+1}` bridge rank

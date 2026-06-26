@@ -4,6 +4,17 @@ Shared short-form notes for POKE cluster proof-route coordination.
 
 ---
 
+## codex-S234 / HYP-3068 -- Median owner/root sidecar spine
+
+New Poke Forum post:
+
+```text
+poke-forum/posts/20260626-212006Z-median-owner-root-sidecars/post.md
+```
+
+Core rule: empty median centers should first name the missing owner or root
+object before becoming new residual debt.
+
 ## codex-S233 / HYP-3067 -- LRC14 Desargues-median finalization lens
 
 Three new Poke Forum posts capture the finalization pass:
