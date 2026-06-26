@@ -1,3 +1,42 @@
+## codex-2026-06-26-S211 -- A000568 k-depth perspective ladder (HYP-3047/T1129/LTI-195/LTT-093)
+
+User asked to connect the controlled-forgetting ladder to the point where
+A000568 stops matching the total count of unique node perspectives on all
+isomorphism classes of one smaller tournament, and to explore k-depth node,
+edge, cycle, clique, and conflict perspectives.
+
+Added `04-computation/a000568_k_depth_perspective_ladder_codex_s211.py` and
+stored `05-knowledge/results/a000568_k_depth_perspective_ladder_codex_s211.out`.
+The shifted failure is `n=6`: `A000568(6)=U(6)=56`, while all node
+perspectives on 5-tournament classes give `P(5)=48`, defect `8`.  A k-depth
+node ladder reaches exact rooted type at `m=5` by depth `2`
+(`depth_counts=[5,41,48,48,48]`), so the missing payload is not one more
+node-neighborhood layer.  It is incident-word/cross-coupling data.  The source
+slice remains exact and gapless: source roots on `m` vertices equal `U(m-1)`.
+
+Created HYP-3047, T1129, LTI-195, LTT-093, and reflection
+`07-reflections/a000568-k-depth-perspective-ladder-codex-s211.md`.
+Creative proof-carrier menu: directed-edge sector perspectives, directed-cycle
+conflict perspectives, transitive-clique insertion cuts, edge-cycle incidence
+conflicts, and endpoint-owner/gap-pressure packet sheaves.  Tournament
+Analysis vertices are proof carriers rather than runners or arcs; the carrier
+tournament is transitive with one Hamiltonian path:
+`endpoint_owner_packet_sheaf > edge_cycle_incidence_conflict >
+transitive_clique_insertion > directed_edge_perspective >
+directed_cycle_conflict > k_depth_node_ladder > exact_rooted_node >
+raw_A000568_class`.
+
+Rebased over incoming codex-S210 tournament matrix atlas.  Integrated the
+connection: the next edge/cycle/clique perspective pass should emit sector
+matrices, skew-cycle traces, Schur-complement or low-rank update fields, and
+boundary matrices indexed by proof carriers so the matrix atlas can carry the
+same incident/coupling sidecars.
+
+Next pull: build the exact map from 5-edge perspectives to 6-tournament
+classes, isolate the eight-class defect by edge-sector/cycle-chirality data,
+and add `observer_cut_position_word`, `incident_sector_deck`, and
+`cross_sector_orientation_word` sidecars to threshold-packet experiments.
+
 ## codex-2026-06-26-S206 -- LRC14 comprehensive lens map (HYP-3043/T1124/LTI-191/LTT-089)
 
 User asked for a comprehensive map of all lenses through which the repo has

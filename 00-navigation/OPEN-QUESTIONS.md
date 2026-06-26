@@ -1,5 +1,17 @@
 # Open Questions
 
+**OPEN-Q-108 S211 A000568 perspective-ladder addendum:** HYP-3047 turns the
+old A000568/rooted-perspective count curiosity into a controlled-forgetting
+test case.  The shifted failure is `n=6`: `U(6)=56` while all node perspectives
+on 5-tournament classes give `P(5)=48`.  The k-depth node ladder reaches exact
+rooted type by depth `2` at `m=5` (`[5,41,48,48,48]`), so the missing eight
+classes are incident-word/cross-coupling payload, not deeper node memory.  Open
+task: build the exact map from 5-edge perspectives to 6-tournament classes,
+isolate the defect by directed-edge sectors and cycle chirality, and add
+`observer_cut_position_word`, `incident_sector_deck`, and
+`cross_sector_orientation_word` to LRC threshold-packet experiments. -> HYP-3047,
+HYP-2120, HYP-2121, HYP-3046, HYP-3043, HYP-3042, HYP-3039, HYP-3018,
+HYP-3015, HYP-1824, HYP-1825, THM-381, THM-385, LTI-195, LTT-093, T1129.
 **OPEN-Q-108 S206 comprehensive lens-map addendum:** HYP-3043 adds
 `00-navigation/LRC-LENS-MAP.md` as the coordination layer for all current LRC14
 lenses.  The open task is to turn the map into a packet manifest: every new

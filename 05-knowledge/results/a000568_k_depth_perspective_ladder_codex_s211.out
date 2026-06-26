@@ -1,0 +1,58 @@
+================================================================================
+S211: A000568 k-depth perspective ladder and LRC carriers
+================================================================================
+1. SHIFTED A000568 / NODE-PERSPECTIVE COUNT
+   m is the tournament size; shifted_n=m+1 is the user's A000568 index.
+   The first failure is shifted_n=6, equivalently m=5.
+
+   m  shifted_n  U(m)  P(m)  U(m+1)  U(m+1)-P(m)  source_roots  U(m-1)
+   1      2         1     1        1              0             1       1
+   2      3         1     2        2              0             1       1
+   3      4         2     4        4              0             1       1
+   4      5         4    12       12              0             2       2
+   5      6        12    48       56              8             4       4
+
+2. k-DEPTH NODE LADDER
+   depth 0 is score.  depth k+1 sees in/out multisets of depth-k node types.
+   m=3: depth_counts=[3, 4, 4, 4, 4] exact_rooted=4 U(m+1)-exact=0
+   m=4: depth_counts=[4, 12, 12, 12, 12] exact_rooted=12 U(m+1)-exact=0
+   m=5: depth_counts=[5, 41, 48, 48, 48] exact_rooted=48 U(m+1)-exact=8
+
+3. EDGE / CYCLE / CLIQUE PERSPECTIVE LIFTS
+   Edge depth uses sector colors around the directed edge tail -> tip.
+   m=3: edge_depth_counts=[4, 4, 4, 4, 4] exact_edge=4 directed_cycle=1 transitive_chain=1 target_U(m+1)=4
+   m=4: edge_depth_counts=[16, 16, 16, 16, 16] exact_edge=16 directed_cycle=4 transitive_chain=8 target_U(m+1)=12
+   m=5: edge_depth_counts=[88, 88, 88, 88, 88] exact_edge=88 directed_cycle=24 transitive_chain=64 target_U(m+1)=56
+
+4. CREATIVE PROOF-CARRIER INDEX
+   - raw_A000568_class: Useful cache only.  It forgets observer and incident word.
+   - exact_rooted_node: The old perspective object.  It preserves observer choice but forgets the incident word/cocycle needed at the first failure.
+   - k_depth_node_ladder: Controlled local memory.  Good for diagnosing the break; insufficient by itself because exact rooted nodes still cap at P(5)=48.
+   - directed_edge_perspective: Tip/tail dual carrier.  Other vertices sit in four sectors (both beaten, tail-only, tip-only, both beat endpoints); cross-sector orientation is the missing coupling payload.
+   - directed_cycle_conflict: Frustration carrier.  A directed 3-cycle remembers chirality and catches the kind of orientation debt that the eight-class gap suggests.
+   - transitive_clique_insertion: Insertion-cut carrier.  A chain/rooted clique classifies external vertices by cut position, matching the add-a-new-observer problem.
+   - edge_cycle_incidence_conflict: Bipartite conflict carrier between directed edges and cyclic witnesses; useful when local edge sectors and cycle chirality must agree.
+   - endpoint_owner_packet_sheaf: LRC-facing lift: source predicate plus incident threshold word plus endpoint-owner/gap-pressure labels.
+
+5. TOURNAMENT ANALYSIS OVER CARRIERS
+   Vertices are proof carriers, not runners or arcs.
+   Observable: retained source/incident/pair/cycle/insertion/owner/automaton payload minus proof cost.
+   Switch: orient toward the carrier retaining more missing observer-coupling payload; name order breaks exact ties.
+   vertices=['raw_A000568_class', 'exact_rooted_node', 'k_depth_node_ladder', 'directed_edge_perspective', 'directed_cycle_conflict', 'transitive_clique_insertion', 'edge_cycle_incidence_conflict', 'endpoint_owner_packet_sheaf']
+   score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+   directed_3_cycles=0
+   scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+   hamiltonian_paths=1
+   one_hamiltonian_path=endpoint_owner_packet_sheaf -> edge_cycle_incidence_conflict -> transitive_clique_insertion -> directed_edge_perspective -> directed_cycle_conflict -> k_depth_node_ladder -> exact_rooted_node -> raw_A000568_class
+
+READING
+  The old equality is a shallow coincidence between observer-coupled m-objects and observer-blind (m+1)-objects.  It fails at shifted n=6 because a rooted five-tournament has forgotten an incident-word/cross-coupling coordinate.
+  The source slice remains exact: source-rooted m-tournaments delete to U(m-1), so source deletion is the controlled-forgetting map that LRC can actually use.  Non-source perspectives need sidecars.
+  Edge perspectives are the first natural lift because an observer added to a rooted node is really an incident word.  Directed edges expose the four tip/tail sectors and their cross-sector orientations.  Cycle and clique perspectives then split chirality and insertion-order debt.
+  LRC translation: do not use raw A000568 or exact rooted nodes as final proof states.  Use them as cache layers below source threshold arcs, endpoint-owner packets, gap-pressure fibers, and proof-obligation automata.
+
+ASSUMPTION CHALLENGE
+  Considered vertices: tournament nodes, rooted perspectives, directed edges, directed cycles, transitive clique insertion cuts, edge-cycle conflicts, endpoint owners, gap-pressure fibers, automaton states, and proof obligations.
+  Preserved predicate in the selected quotient: whether a carrier keeps the observer-source/incident-coupling data needed for an LRC safe-box hit.
+  Destroyed information: exact labelled runner identities, full extension rows, and scalar ordering.  These losses are acceptable only when sidecars retain/reconstruct/annihilate the forgotten coordinate or emit named debt.
+  Challenged assumption: tournament vertices should be only runners or raw arcs.  For the LRC proof they should often be proof carriers, observer sidecars, wall-crossing events, endpoint-owner packets, or conflict cells.

@@ -99,6 +99,10 @@ obligations, and proof-carrier interfaces.
   machinery:
   use LTT-092 after LTT-091/LTT-090 and add connector sidecars before naming new
   residual vocabulary.
+- Need to understand why A000568/rooted-perspective counts first fail at the
+  shifted `n=6` level:
+  use LTT-093 and lift from node-depth cache to directed-edge sectors,
+  cycle conflicts, clique insertion cuts, and endpoint-owner packet sheaves.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2028,6 +2032,48 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTT-092, LTT-091, LTT-090, LTT-089, LTT-088, LTT-087, LTT-086, LTT-085, LTT-084,
   LTT-083, LTT-082, LTT-081, LTT-080, LTT-078, LTT-077, LTT-072, T1127,
   T1126, T1125, T1124, T1123, T1122, T1121, T1120.
+
+### LTT-093: A000568 K-Depth Perspective Ladder Tournament
+
+- **Move:** Treat the old A000568/rooted-perspective count coincidence as a
+  controlled-forgetting laboratory.  Use k-depth node colors to recover rooted
+  type, then test directed-edge sectors, directed-cycle conflicts, transitive
+  clique insertion cuts, edge-cycle incidence, and endpoint-owner packet
+  sheaves as higher carriers.
+- **LRC use:** HYP-3047 shows the shifted comparison first fails at `n=6`:
+  `U(6)=56` but `P(5)=48`.  The k-depth node ladder reaches all exact rooted
+  5-perspectives by depth `2` (`[5,41,48,48,48]`), so the missing eight
+  classes are not deeper node-neighborhood memory.  They are incident-word and
+  cross-coupling payload, exactly the kind of hidden coordinate that the LRC14
+  controlled-forgetting stack requires as a sidecar.
+- **Preserves:** Rooted observer type through the node-depth cache; source
+  deletion exactness through source roots; directed-edge tip/tail sector data;
+  cycle chirality; clique insertion cut position; and, after the LRC lift,
+  endpoint-owner/gap-pressure proof payload.
+- **Forgets / guardrail:** Raw A000568 classes forget the observer.  Exact
+  rooted nodes still forget the incident word needed to distinguish the first
+  shifted extension defect.  Edge/cycle/clique carriers forget full labelled
+  runner identity and must therefore be paired with sidecars or a named
+  residual debt target.
+- **Tournament fingerprint:** vertices are proof carriers, not runners or
+  arcs.  Pairwise observable is retained
+  `(source, incident, pair, cycle, insertion, owner, automaton)` payload minus
+  proof cost.  The tournament is transitive with score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}`, no directed 3-cycles, singleton SCCs,
+  and one Hamiltonian path:
+  `endpoint_owner_packet_sheaf > edge_cycle_incidence_conflict >
+  transitive_clique_insertion > directed_edge_perspective >
+  directed_cycle_conflict > k_depth_node_ladder > exact_rooted_node >
+  raw_A000568_class`.
+- **Next pull:** Build the exact extension map from 5-edge perspectives to
+  6-tournament classes; isolate the eight-class defect by edge-sector
+  cross-coupling and cycle chirality; then add `observer_cut_position_word`,
+  `incident_sector_deck`, and `cross_sector_orientation_word` to LRC
+  threshold-packet experiments.
+- **Pointers:** HYP-3047, HYP-2120, HYP-2121, HYP-3046, HYP-3043, HYP-3042,
+  HYP-3039, HYP-3018, HYP-3015, HYP-1824, HYP-1825, THM-381, THM-385,
+  LTI-195, LTI-194, LTI-191, LTI-008, LTI-009, LTT-093, LTT-092, LTT-089,
+  T1129, T1127, T1124, OPEN-Q-108.
 
 ## Immediate Pull List
 
