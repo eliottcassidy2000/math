@@ -108,10 +108,11 @@ obligations, and proof-carrier interfaces.
   use LTT-094 and treat rows/columns as edges, cycles, sidecars, proof
   obligations, quotient fibers, or update directions rather than defaulting to
   runners.
-- Need exact non-node carrier counts for the first perspective-defect window:
-  use LTT-095 after LTT-094/LTT-093 and compare edge tail/tip sector words, triple
-  type splits, and cycle-conflict roots against pair-good and capacitor
-  sidecars.
+- Need the first exact edge/triple perspective repair after rooted nodes
+  saturate:
+  use LTT-095 after LTT-094/LTT-093 and keep the old-root/new-observer
+  incident word, four-sector/cross-sector orientation, edge tail/tip sector
+  words, triple type splits, and cycle-conflict roots before trusting a scalar.
 - Need to model the actual growth step when a new diagonal layer is added:
   use LTT-097 with parent automorphism word-orbits, `K_{k,k+1}` position-line
   profiles, aligned triangle-flow sidecars, and deletion-parent fibers.
@@ -2091,8 +2092,8 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   directed_cycle_conflict > k_depth_node_ladder > exact_rooted_node >
   raw_A000568_class`.
 - **Next pull:** Build the exact extension map from 5-edge perspectives to
-  6-tournament classes; isolate the eight-class defect by edge-sector
-  cross-coupling, cycle chirality, and rootless `[3,3]` sidecars; then add
+  6-tournament classes using the S213 ordered-pair lift as the first worked
+  model; then repeat the sector-deck audit at `n=7` and add
   `perspective_root_type`, `perspective_depth_k`,
   `observer_cut_position_word`, `incident_sector_deck`, `edge_zone_profile`,
   `cycle_relation_word`, `clique_root_shape`, and
@@ -2139,46 +2140,61 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   candidate hidden coordinates such as edge-sector decks, skew-cycle traces,
   Schur-complement deletion corrections, Smith-normal clocks, endpoint-owner
   strips, primitive-period decks, and dual certificates.
-- **Pointers:** HYP-3048, HYP-3047, HYP-3046, HYP-3043, HYP-3042, HYP-3040,
+- **Pointers:** HYP-3049, HYP-3048, HYP-3047, HYP-3046, HYP-3043, HYP-3042, HYP-3040,
   HYP-3039, HYP-2121, HYP-2120, THM-381, THM-385, LTI-196, LTI-195, LTI-194,
-  LTT-094, LTT-093, LTT-092, T1130, T1129, T1128, OPEN-Q-108.
+  LTI-197, LTT-095, LTT-094, LTT-093, LTT-092, T1131, T1130, T1129, T1128,
+  OPEN-Q-108.
 
 ### LTT-095: Exact Edge/Triple Perspective Carrier Extension
 
 - **Move:** After LTT-093 identifies the missing A000568 payload as
-  incident/cross-coupling data, compute exact non-node rooted carriers and
-  local depth colors: directed-edge orbits, unordered triple orbits,
-  transitive triples, cyclic triples, and future disjoint cycle-conflict pairs.
+  incident/cross-coupling data, first replace the saturated rooted-node cache
+  by an ordered pair: old root plus new observer.  Then compute exact
+  non-node rooted carriers and local depth colors: directed-edge orbits,
+  unordered triple orbits, transitive triples, cyclic triples, and future
+  disjoint cycle-conflict pairs.
 - **LRC use:** HYP-3050 records the exact first-defect carrier table, extending
   HYP-3049's ordered-pair edge lift while using HYP-3048's
-  sidecar-observability matrix language as the encoding target.  At base size
-  `m=5`, directed-edge perspectives and triple perspectives both total `88`;
-  the triples split into `64` transitive and `24` cyclic.  Local edge depth `2`
-  and triple depth `2` recover those exact carriers.  This makes edge sectors a
-  natural two-plate sidecar for pair-good switches and residual capacitors,
-  while cyclic triples are Omega/conflict sidecars.
-- **Preserves:** Exact rooted edge and triple orbit payload, edge tail/tip
-  outside-sector words, transitive/cyclic triple kind, and enough local
-  carrier depth to test whether a proposed quotient has erased pair/cycle
-  data before the observer cut is named.
-- **Forgets / guardrail:** Edge/triple carriers still do not replace the
-  observer-extension cut from LTT-093.  They are diagnostic sidecars: a useful
-  quotient must either retain them, reconstruct them, annihilate them by a
-  dual/cocycle, or route the lost coordinate to named residual debt.
+  sidecar-observability matrix language as the encoding target.  HYP-3049
+  supplies the exact ordered-pair subcase: rooted 5-perspective plus incident
+  word equals ordered-pair perspective on `U(6)`, with count `1408=1408`;
+  forgetting old/new role gives a `704` directed-edge quotient; sector-size
+  and internal-sector decks separate `55/56` six-classes, while cross-sector
+  orientation separates `56/56`.  HYP-3050 then computes the broader local
+  carrier table: at base size `m=5`, directed-edge perspectives and triple
+  perspectives both total `88`; the triples split into `64` transitive and
+  `24` cyclic.  Local edge depth `2` and triple depth `2` recover those exact
+  carriers.  This makes edge sectors a natural two-plate sidecar for pair-good
+  switches and residual capacitors, while cyclic triples are Omega/conflict
+  sidecars.
+- **Preserves:** Observer-source role, incident coupling between old root and
+  new observer, exact rooted edge and triple orbit payload, edge tail/tip
+  outside-sector words, four-sector ordered-pair decks, cross-sector
+  orientation, converse/chirality repair, transitive/cyclic triple kind, and
+  enough local carrier depth to test whether a proposed quotient has erased
+  pair/cycle data before the observer cut is named.
+- **Forgets / guardrail:** Directed-edge perspective is already a quotient: it
+  forgets which endpoint was old root and which endpoint was new observer.
+  Edge/triple carriers still do not replace the observer-extension cut from
+  LTT-093.  They are diagnostic sidecars: a useful quotient must retain them,
+  reconstruct them, annihilate them by a dual/cocycle, or route the lost
+  coordinate to named residual debt.
 - **Tournament Analysis:** vertices are carrier obligations rather than
   runners: observer-extension cut, source perspective, exact rooted node,
   edge tail/tip perspective, transitive triple, cyclic triple, conflict-pair
   root, shallow node views, and raw A000568 class.  The switch favors retained
   LRC predicate payload with lower hidden debt; the synthesis tournament is
   transitive with one Hamiltonian path.
-- **Next pull:** extend exact edge/triple/cycle/conflict counts to `m=6`;
-  compare edge-sector words against pair-good blocker teeth and residual
-  capacitor IDs; compare cyclic-triple/conflict carriers against `Omega(T)`.
+- **Next pull:** Extend exact edge/triple/cycle/conflict counts to `m=6`;
+  repeat the ordered-pair sector-deck lift at `n=7`; compare the unique
+  `344/345` converse collision to HYP-1824/HYP-1825 chirality bridges; compare
+  edge-sector words against pair-good blocker teeth and residual capacitor IDs;
+  compare cyclic-triple/conflict carriers against `Omega(T)`.
 - **Pointers:** HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-3040, HYP-3039,
-  HYP-2210, HYP-2120, HYP-1978, HYP-1977, THM-381, THM-385, THM-260, THM-409,
-  LTI-197, LTI-196, LTI-195, LTI-194, LTI-188, LTI-187, LTT-095, LTT-094,
-  LTT-093, LTT-092, LTT-086, LTT-085, T1132, T1131, T1130, T1129, T1127,
-  T1121, T1120.
+  HYP-2210, HYP-2120, HYP-1978, HYP-1977, HYP-1824, HYP-1825, THM-381,
+  THM-385, THM-260, THM-409, LTI-197, LTI-196, LTI-195, LTI-194, LTI-188,
+  LTI-187, LTT-095, LTT-094, LTT-093, LTT-092, LTT-086, LTT-085, T1132,
+  T1131, T1130, T1129, T1127, T1121, T1120, OPEN-Q-108.
 
 ### LTT-096: Rooted Layer-Extension Flow
 

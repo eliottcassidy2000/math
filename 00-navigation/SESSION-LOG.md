@@ -38,6 +38,45 @@ cross-sector orientation, and HYP-3048 matrix observability, then add
 `tile_layer_id`, `interlayer_bridge_id`, `rectangle_cycle_basis_id`,
 `line_potential_word`, `cycle_defect_word`, and owner/barcode support fields
 to LRC packet experiments.
+## codex-2026-06-26-S213 -- A000568 edge-perspective extension lift (HYP-3049/T1131/LTI-197/LTT-095)
+
+Built directly on incoming S211/HYP-3047 for the user's controlled-forgetting
+and perspective-ladder prompt.  Rebased over incoming S212/HYP-3048 expanded
+tournament-matrix atlas, which claimed the earlier S212/HYP-3048 namespace and
+connects via four-sector edge block matrices and sidecar observability.  This
+pass was renamed to S213/HYP-3049/T1131 and linked back to the matrix atlas.
+Added
+`04-computation/a000568_edge_perspective_extension_codex_s213.py` and stored
+`05-knowledge/results/a000568_edge_perspective_extension_codex_s213.out`, plus
+HYP-3049, T1131, and reflection
+`07-reflections/a000568-edge-perspective-extension-codex-s213.md`.
+
+Main result: at the first shifted failure `P(5)=48 < U(6)=56`, a rooted
+5-perspective plus the new observer's incident word is exactly an ordered-pair
+perspective on a 6-tournament.  The exact count is `1408` on both sides.
+Forgetting old/new endpoint role gives `704` directed-edge perspectives,
+equal to unordered-pair perspectives.
+
+Sector-deck compression: classify every other vertex around an ordered pair
+`(old root, new observer)` by `(old root beats x, new observer beats x)`.
+The deck of sector sizes separates `55/56` six-classes; adding internal sector
+tournaments still separates `55/56`; adding cross-sector orientation separates
+`56/56`.  The only size/internal collision is the converse pair masks
+`344/345`, both with score `(2,2,2,3,3,3)`, `c3=8`, `H=43`, and `aut=1`.
+Thus cross-sector orientation is the first concrete extension sidecar.
+In HYP-3048 observability language, the first separating column after the
+rooted cache is `cross_sector_orientation_word`.
+
+Tournament Analysis vertices are forgetful carriers, not runners.  The carrier
+tournament is transitive with one Hamiltonian path:
+`endpoint_owner_packet > sector_cross_deck > sector_full_deck >
+ordered_pair_extension > directed_edge_perspective > sector_size_deck >
+sector_internal_deck > rooted_5_node_cache`.  LRC translation: edge
+perspective is natural and dualistic, but it is safe only with endpoint-role,
+threshold-arc, endpoint-owner, or proof-obligation sidecars.
+
+Promoted the S213 result into the shared technique indexes as LTI-197/LTT-095
+and updated OPEN-Q-108 with the `n=7` sector-deck lift as the next pull.
 
 ## codex-2026-06-26-S212 -- expanded tournament-matrix atlas (HYP-3048/T1130/LTI-196/LTT-094)
 

@@ -18,6 +18,22 @@ HYP-3049, HYP-3048,
 HYP-3047, HYP-3043, HYP-3039, HYP-3031, HYP-2991, HYP-2989, HYP-2120,
 HYP-2121, THM-381, THM-385, LTI-200, LTI-199, LTI-198, LTI-197, LTI-196, LTT-098,
 LTT-096, LTT-095, LTT-094, T1135, T1134, T1133, T1132, T1131, T1130.
+**OPEN-Q-108 S213 edge-perspective extension addendum:** HYP-3049 gives the
+first exact repair after the S211 node-perspective failure.  A rooted
+5-perspective plus the new observer's incident word is exactly an ordered-pair
+perspective on U(6), with count `1408=1408`.  Forgetting old/new role gives
+`704` directed-edge perspectives, equal to unordered-pair perspectives.
+Ordered-pair sector decks around `(old root, new observer)` separate `55/56`
+six-classes by sector size/internal data and `56/56` after adding
+cross-sector orientation; the only size/internal miss is the converse pair
+`344/345`.  Open task: repeat the sector-deck lift at `n=7`, compare the
+collision pattern with HYP-1824/HYP-1825 chirality bridges, and add
+`observer_endpoint_role`, `incident_word`, `ordered_pair_sector_deck`,
+`sector_internal_deck`, `cross_sector_orientation_word`, and
+`endpoint_owner_packet` to LRC threshold-packet experiments. -> HYP-3049,
+HYP-3048, HYP-3047, HYP-3043, HYP-3039, HYP-2120, HYP-2121, HYP-1824,
+HYP-1825, THM-381, THM-385, LTI-197, LTT-095, T1131.
+
 **OPEN-Q-108 S212 expanded matrix-atlas addendum:** HYP-3048 expands the S210
 tournament matrix atlas with `165` additional classic matrix hooks across `14`
 domains, giving `300` named hooks with S210.  The open task is to build a
