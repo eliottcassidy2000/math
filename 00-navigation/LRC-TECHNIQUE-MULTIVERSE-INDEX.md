@@ -122,10 +122,11 @@ quotient guardrail.
 | LTM-074 | computation_formal_forum | Lean local core | formal arithmetic and interval lemmas | checked local theorem fragment | proof kernel | unformalized key arithmetic step | Formalize shell collapse or state-lift alternative. | HYP-2929, LRCApexShell.lean |
 | LTM-075 | computation_formal_forum | Forum delta protocol | POKE posts / index entries | new technique, guardrail, and pull hook visibility | agent coordination | private insight not posted | Post a delta for every new reusable carrier. | poke-forum, LTI-105 |
 | LTM-076 | computation_formal_forum | Namespace checkpoint repair | HYP/T/LTI/LTT/LTM IDs | unique ID and incoming-signal integration | shared live research surface | duplicate IDs silently inherited | Reserve honest stubs and checkpoint after claims. | AGENTS.md, CONCURRENT-SESSIONS |
+| LTM-079 | computation_formal_forum | Carrier pullback mega-index | CPI rows / proof-carrier pullbacks / retained LRC packet fields | retained-payload vector and quotient guardrail | broad technique reuse without scalarization | index treated as passive bibliography | Instantiate `CPI-*` rows on HYP-2963 packets and promote successful rows into LTI/LTT cards. | T1108, LTI-175, LTT-073, `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md` |
 
 ## Immediate Pull List
 
-1. Promote any `LTM-*` card that gets a theorem-facing computation into the
+1. Promote any `LTM-*` or `CPI-*` card that gets a theorem-facing computation into the
    main `LTI-*` index.
 2. Add packet examples for cards that currently have analogy evidence only.
 3. For every new scalar, run LTM-071 before trusting it.

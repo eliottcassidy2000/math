@@ -1,5 +1,24 @@
 # Open Questions
 
+**OPEN-Q-108 S191 carrier-pullback index addendum:** T1108/LTI-175/LTT-073
+creates `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md`, a `90`-row `CPI-*`
+menu for pulling tournament/metagraph, related-series, automaton, topology,
+harmonic, arithmetic, geometry, computation, and formalization techniques back
+into LRC packet fields.  The new open task is not to quote the rows, but to
+instantiate them: pick one or more `CPI-*` carriers, record the retained
+boundary/open, theorem-route, exact-scale, endpoint/topology, period,
+harmonic-certificate, residual-routing, family-transfer, formal-payload, and
+proof-cost fields on HYP-2963 packets or a named stress family, then run
+boundary/open and route-fiber mixing.  A row survives only if the LRC predicate
+is fiber-constant, reconstructible, certified by a dual, exact as a cocycle,
+descended to a family theorem, or routed to named residual debt.  Priority
+bundles: boundary/open purity, route purity inside automatic fibers, non-AP/GW
+zero-open residual search, analytic certificate backend, tournament/metagraph
+transfer, and series/arithmetic shadows. -> T1108, LTI-175, LTT-073, LTM-079,
+CPI-001..CPI-090, HYP-2963, HYP-3026, HYP-3025, HYP-3024, HYP-3023,
+HYP-3022, HYP-3020, HYP-3018, HYP-3016, HYP-3015, HYP-3014, HYP-3013,
+THM-572.
+
 **OPEN-Q-108 S188 fiber-zipper convergence addendum:** HYP-3024 completes the
 reserved S188 fiber-zipper convergence audit by extending HYP-3023 and
 HYP-3020 to the full HYP-2963 `21913`-packet bank.  Exact Erdos-Turan clocks

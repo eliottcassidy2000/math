@@ -60,6 +60,9 @@ obligations, and proof-carrier interfaces.
   use LTT-029, LTT-030, LTT-031, LTT-040, LTT-051, and LTT-052.
 - Need cross-domain inspiration without scalarizing it away:
   use LTT-036 through LTT-044, plus LTT-053 through LTT-058.
+- Need the broadest creative pullback menu across tournaments, metagraphs,
+  series, automata, harmonic certificates, topology, and formal tooling:
+  use LTT-073 and `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md`.
 
 ## Core Guardrail
 
@@ -1284,6 +1287,37 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3015, HYP-3014, HYP-2963, HYP-2997, HYP-2995, HYP-2992, THM-572,
   LTI-174, LTI-173, LTI-172, LTI-171, LTI-170, LTI-169, LTI-168, LTI-167, LTI-166.
 
+### LTT-073: Carrier Pullback Mega-Index Tournament
+
+- **Move:** Treat project techniques themselves as proof-carrier pullback
+  vertices.  Each vertex is a row in
+  `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md`: a tournament/metagraph,
+  series, topology, harmonic, arithmetic, automaton, geometric, formal, or
+  computation technique with named retained LRC fields and a quotient
+  guardrail.
+- **LRC use:** Gives future agents a large operational menu before they reach
+  for a new scalar.  The index currently has `90` `CPI-*` rows that pull back
+  A000568/source lifts, OCF/Walsh/deletion-contraction, path homology,
+  metagraph Laplacians, exact interval topology, Cech/topes/cocircuits,
+  Fejer/Toeplitz/Ramanujan/Haar, Mobius/totient/Farey/Fibonacci/Zeckendorf,
+  Moser/fibbinary/Fermat-Catalan, perfect-number divisor packets,
+  Poincare/worldline frames, K33/C27/state-lift geometry, and formal/checkpoint
+  tooling into LRC packet fields.
+- **Preserves:** The proof-interface discipline: boundary/open status,
+  theorem route, exact scale, endpoint/topology, arithmetic period, harmonic
+  certificate, state-lift residual, family-transfer promise, formal/checkable
+  payload, and proof cost.
+- **Forgets / guardrail:** A big index can become a passive bibliography.  A
+  row is only useful after another agent instantiates its retained fields,
+  runs a fiber-mixing audit, and records a carrier tournament fingerprint or a
+  negative quotient guardrail.
+- **Next pull:** Pick one row from each bundle in the pullback index, implement
+  its packet sidecar on HYP-2963 or a named stress family, and promote any
+  successful row into a theorem-facing `LTI-*` or `LTT-*` card.
+- **Pointers:** T1108, LTI-175,
+  `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md`, LTI-173, LTI-156,
+  LTI-147, LTI-021, LTM-071, LTM-072.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1311,10 +1345,11 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    Henselian unit-root rule, zero-root scale debt,
    coarse ET+unit status-convergence gate,
    Mahler/Farey height bucket, Hensel singular counts,
-fusion signature, largest safe stick, safe-body mass, barcode shape,
+   fusion signature, largest safe stick, safe-body mass, barcode shape,
    danger-distribution word, doubling-transition word, carrier-fusion exit,
    repair-ladder stage, first nonzero repair cochain, route-purity status,
    status-purity status, guarded non-route signature,
+   carrier-pullback row ID, destroyed-coordinate ledger,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

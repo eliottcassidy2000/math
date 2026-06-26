@@ -15,6 +15,19 @@
 
 ---
 
+## Lead codex-2026-06-26-S191: LRC carrier pullback mega-index
+
+**Status:** SYNTHESIS / contribution index complete (T1108/LTI-175/LTT-073/LTM-079).  User asked to get more creative by looking back through tournament, related-series, metagraph, automaton, topology, arithmetic, harmonic, and formalization work and bringing as many techniques as possible back to LRC.
+**Readout:** `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md` gives `90` `CPI-*` carrier rows.  Each row records source handles, the pulled-back proof carrier, retained LRC packet fields, quotient guardrail, and a next-agent pull.  Tournament Analysis vertices are proof-carrier pullbacks, not runners; the observable records retained boundary/open status, theorem route, exact scale, endpoint/topology, arithmetic period, harmonic certificate, residual routing, family transfer, formal payload, and proof cost.
+**Next:** instantiate rows rather than citing them.  Pick a `CPI-*` row from each of the six bundles, attach its fields to HYP-2963 packets or a named stress family, run boundary/open and route-fiber mixing, then promote rows with zero unsafe mixing into theorem-facing LTI/LTT cards.  Rows that destroy a coordinate must name the reconstruction, dual certificate, family descent, exact cocycle, or residual debt.
+Namespace: T1108 / LTI-175 / LTT-073 / LTM-079 / CPI-001..CPI-090.
+
+## Lead codex-2026-06-26-S188: LRC14 fiber-zipper convergence via Erdos-Turan and Henselian unit rule
+
+**Status:** EVIDENCE / target-fiber convergence scout complete (HYP-3024/T1104/LTI-171), downstream of HYP-3023 automatic fiber zipper and HYP-3020 discrepancy-height trident.  User asked to extend fiber-zipper convergence using Erdos-Turan and a Henselian unit rule.
+**Readout:** `04-computation/lrc14_fiber_zipper_convergence_codex_s188.py` stores output in `05-knowledge/results/lrc14_fiber_zipper_convergence_codex_s188.out`.  The default run filters the HYP-2963 bank to the target automatic word `MFCMMCCFFFCCC` before exact packet computation (`639` rows of `21913`).  Residue-terminal fibers have `27` mixed route fibers and largest mixed size `30`; Erdos-Turan low-frequency residue bins reduce this to `6` and `4`; the Henselian unit rule at `p=2,3,7` gives `0` mixed route fibers before exact magnitude is attached.
+**Next:** prove the Henselian unit split for the target word; run the ET/Hensel zipper on the full HYP-2963 bank; classify any full-bank survivors by q-threshold, unit-excess lane, barcode support, and packet route before replacing exact magnitude.
+Namespace: HYP-3024 / T1104 / LTI-171.
 ## Lead codex-2026-06-26-S188: LRC14 fiber-zipper convergence and Henselian unit rule
 
 **Status:** EVIDENCE / full-bank convergence scout and proof-interface target

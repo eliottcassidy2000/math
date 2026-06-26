@@ -1,3 +1,23 @@
+## codex-2026-06-26-S191 -- LRC carrier pullback mega-index (T1108/LTI-175/LTT-073)
+
+User asked to get more creative and pull back the many tournament, related-series, metagraph, automaton, topology, arithmetic, harmonic, and formalization techniques into LRC.
+
+Added `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md` as an operational contribution/pull-from index with `90` `CPI-*` rows.  Each row names source handles, the pulled-back carrier, retained LRC packet fields, a quotient guardrail, and a next-agent pull.  The index claims T1108/LTI-175/LTT-073 and cross-links through LTM-079.
+
+Tournament Analysis setup: vertices are proof-carrier pullbacks rather than runners; the pairwise observable tracks boundary/open status, theorem route, exact scale, endpoint/topology, arithmetic period, harmonic certificate, residual routing, family transfer, formal payload, and proof cost.  The switch favors retained proof payload without unnamed residual debt, with tie path `packet_sheaf > endpoint_topology > harmonic_certificate > arithmetic_period > automaton_language > tournament_metagraph > analytic_smoothing > state_lift_geometry > computation_formal_forum`.
+
+Proof-order takeaway: the next agents should pick `CPI-*` rows from the six bundles, instantiate retained fields on HYP-2963 packets or a named stress family, run boundary/open and route-fiber mixing, and promote successful rows into theorem-facing LTI/LTT cards.  Assumption challenge recorded: do not start from runners or one scalar; start from the proof carrier and state what LRC predicate survives the quotient.
+
+## codex-2026-06-26-S188 -- LRC14 fiber-zipper convergence via ET/Henselian units (HYP-3024/T1104)
+
+User asked to extend fiber-zipper convergence while thinking Erdos-Turan and a Henselian unit rule.  Fast-forwarded over HYP-3023, which supplied the automatic fiber zipper and identified `MFCMMCCFFFCCC` as the first target automatic word.
+
+Added `04-computation/lrc14_fiber_zipper_convergence_codex_s188.py` and stored `05-knowledge/results/lrc14_fiber_zipper_convergence_codex_s188.out`.  The script defaults to the target word before exact packet computation: `639` candidate rows out of the HYP-2963 `21913` row bank.
+
+Readout: residue-terminal fibers for `MFCMMCCFFFCCC` have `27` mixed route fibers and largest mixed size `30`; Erdos-Turan low-frequency residue bins reduce this to `6` mixed fibers and largest mixed size `4`; the Henselian unit rule at `p=2,3,7` gives `0` mixed route fibers before exact magnitude is attached.  ET is the contraction gauge; Henselian unit roots and denominator-unit data are the target-fiber route-purity splitter.
+
+Created HYP-3024, T1104, LTI-171, and reflection `07-reflections/lrc14-fiber-zipper-convergence-codex-s188.md`.  Proof-order takeaway: prove the Henselian unit split for `MFCMMCCFFFCCC`, then stress the same ET/Hensel zipper on the full HYP-2963 bank before demoting exact magnitude from fallback to theorem coordinate.
+
 ## codex-2026-06-26-S185 -- Pair-good decoy generator classification (HYP-3021/LTI-168)
 
 User asked to classify and understand HYP-3019's pair-good decoys, with the
