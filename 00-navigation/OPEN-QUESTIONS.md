@@ -15,6 +15,26 @@ owner-essential path-cycle theorem for zero-open packets, or route failures to
 named F7/THM-572/harmonic residual debt; then add cached Cech sidecars for a
 full closed-H1 scan. -> HYP-3034, HYP-3030, HYP-3025, HYP-3024, HYP-3029,
 HYP-3018, HYP-2963, THM-572, LTI-182, LTT-080, T1115.
+**OPEN-Q-108 S199 residual-tooth atlas addendum:** HYP-3035 discharges the
+HYP-3028/HYP-3030 coarse ET+unit residual count into a finite first-tooth
+manifest.  The stored S194 residual list has `15` route-mixed fibers and `38`
+packets, all strict-open.  Arc topology separates `13` fibers; the two
+same-topology collisions split by the coarse largest-safe-component stalk.
+Exact stalk, magnitude, and explicit q/covering certificate labels split all
+fibers as nested backups, but the first legal non-route tooth is always an
+`owner_strip`: `arc_topology_compact` for `13` fibers and
+`coarse_safe_stalk` for `2`.  Open task: add `first_tooth` and
+`residual_tooth_class` to HYP-2963 sidecars, then prove the two owner-strip
+descent lemmas rather than re-counting the residual fibers.  Read this beside
+S198/HYP-3034, S197/HYP-3033, and S196/HYP-3032: HYP-3034 gives the
+owner-essential AP/GW topology-front lift, HYP-3033 gives the residual
+topology-bucket/unit-scale route scheduler, analytic clocks are
+capacity/blindness meters, and the S199 atlas supplies the first local
+non-route tooth for the residual route-mixed fibers. -> HYP-3035, HYP-3034,
+HYP-3033, HYP-3032, HYP-3031, HYP-3030, HYP-3029, HYP-3028, HYP-3027,
+HYP-3024, HYP-3023, HYP-2963, THM-572, LTI-183, LTI-182, LTI-181, LTI-180,
+LTI-179, LTI-178, LTI-177, LTI-176, LTT-081, LTT-080, LTT-079, LTT-078,
+LTT-077, LTT-076, LTT-075, LTT-074, T1116, T1115, T1114, T1113.
 **OPEN-Q-108 S191 carrier-pullback index addendum:** T1108/LTI-175/LTT-073
 creates `00-navigation/LRC-CARRIER-PULLBACK-INDEX.md`, a `90`-row `CPI-*`
 menu for pulling tournament/metagraph, related-series, automaton, topology,

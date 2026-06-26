@@ -1,3 +1,13 @@
+## codex-2026-06-26-S199 -- LRC14 residual tooth atlas (HYP-3035/T1116/LTI-183/LTT-081)
+
+User asked to keep working new LRC angles, with prior prompts emphasizing pair-good decoys, zipper-fiber convergence, Erdos-Turan, Henselian unit rules, and creative LRC14 proof routes.  Pulled the incoming S193/S194/S195 stack first, then extended HYP-3031's Haar-tile repair dictionary into an executable atlas for HYP-3028/HYP-3030's `15` coarse ET+unit route-mixed residual fibers.
+
+Added `04-computation/lrc14_residual_tooth_atlas_codex_s199.py` and stored `05-knowledge/results/lrc14_residual_tooth_atlas_codex_s199.out`.  The script parses the stored S194 residual-fiber list and recomputes only the `38` selected HYP-2963 packets, avoiding a full exact-bank recomputation.  Readout: all `15` residual fibers are strict-open; arc topology separates `13` fibers; the two same-topology residuals are separated by the coarse largest-safe-component stalk; exact stalk, magnitude, and q/covering certificate teeth all split every residual as nested backups.  First-tooth counts are `{'arc_topology_compact': 13, 'coarse_safe_stalk': 2}`, and every first repair is an `owner_strip`.
+
+Created HYP-3035, T1116, LTI-183, LTT-081, and reflection `07-reflections/lrc14-residual-tooth-atlas-codex-s199.md`.  Tournament Analysis vertices are repair teeth rather than runners; the observable tracks status preservation, route split, nonroute legality, locality, compression, and proof cost.  The tournament has `score_hist={0:1,2:3,4:1}`, one directed 3-cycle, and `3` Hamiltonian paths, warning that first proof tooth, strongest splitter, and explicit route certificate are different roles.  Proof-order takeaway: add `first_tooth` and `residual_tooth_class` sidecars, then prove two owner-strip descent lemmas instead of re-counting residual fibers.
+
+During close-out, incoming S196/HYP-3032 claimed the analytic sieve-clock bridge namespace, incoming S197/HYP-3033 claimed the residual certificate-teeth scheduler, and incoming S198/HYP-3034 claimed the arc-boundary path lift.  The residual tooth atlas was renumbered forward to S199/HYP-3035/T1116/LTI-183/LTT-081 and linked as the first-tooth refinement layered after HYP-3034/HYP-3033 and beside HYP-3032's analytic-clock blindness/capacity route.
+
 ## codex-2026-06-26-S191 -- LRC carrier pullback mega-index (T1108/LTI-175/LTT-073)
 
 User asked to get more creative and pull back the many tournament, related-series, metagraph, automaton, topology, arithmetic, harmonic, and formalization techniques into LRC.

@@ -15,6 +15,25 @@
 
 ---
 
+## Lead codex-2026-06-26-S199: LRC14 residual tooth atlas
+
+**Status:** EVIDENCE / residual-tooth proof-interface atlas complete
+(HYP-3035/T1116/LTI-183/LTT-081), extending the S192/S194 residual status
+gate and S195 Haar-tile repair dictionary; sibling to the incoming
+S198/HYP-3034 arc-boundary path lift, S197/HYP-3033 residual
+certificate-teeth scheduler, and S196/HYP-3032 analytic sieve-clock bridge.
+**Readout:** `04-computation/lrc14_residual_tooth_atlas_codex_s199.py`
+stores output in
+`05-knowledge/results/lrc14_residual_tooth_atlas_codex_s199.out`.  It parses
+S194's stored `15` coarse ET+unit route-mixed residual fibers, recomputes only
+the `38` selected HYP-2963 packets, and attaches arc topology, coarse/exact
+safe-component stalks, magnitude cocycle, and q/covering certificate teeth.
+All rows are strict-open.  First tooth: `arc_topology_compact` handles `13`
+fibers; `coarse_safe_stalk` handles the other `2`; all first repairs are
+`owner_strip`.
+**Next:** add `first_tooth` and `residual_tooth_class` to HYP-2963 sidecars,
+then prove the arc-topology and coarse-stalk owner-strip descent lemmas.
+Namespace: HYP-3035 / T1116 / LTI-183 / LTT-081.
 ## Lead codex-2026-06-26-S191: LRC carrier pullback mega-index
 
 **Status:** SYNTHESIS / contribution index complete (T1108/LTI-175/LTT-073/LTM-079).  User asked to get more creative by looking back through tournament, related-series, metagraph, automaton, topology, arithmetic, harmonic, and formalization work and bringing as many techniques as possible back to LRC.

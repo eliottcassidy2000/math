@@ -60,6 +60,9 @@ obligations, and proof-carrier interfaces.
   use LTT-079.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
+- Need to classify the `15` coarse ET+unit residual fibers by first legal
+  non-route tooth:
+  use LTT-081 after LTT-080 and LTT-079; add `first_tooth` / `residual_tooth_class` to the packet sidecar.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1525,6 +1528,34 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3024, HYP-3023, HYP-3018, HYP-2963, THM-572, LTI-182, LTI-178,
   LTI-172, LTM-016, T1115.
 
+### LTT-081: Residual Tooth Atlas Tournament
+
+- **Move:** Treat the `15` coarse ET+unit route-mixed residual fibers as a
+  finite tournament of repair teeth rather than as a raw residual count.  The
+  vertices are `arc_topology_compact`, `coarse_safe_stalk`,
+  `exact_safe_stalk`, `magnitude_cocycle`, and
+  `q_or_covering_certificate`.
+- **LRC use:** HYP-3035 parses S194's stored residual list and recomputes only
+  the `38` selected HYP-2963 packets.  All are strict-open.  Arc topology is
+  the first separating tooth for `13` fibers; coarse largest-safe-component
+  stalk is the first tooth for the two same-topology residuals.  Exact stalk,
+  magnitude, and q/covering certificate labels split every fiber as nested
+  backups.
+- **Preserves:** Boundary/open status, non-route route splitting, local
+  endpoint/topology/stalk data, and the first proof tooth before explicit
+  route labels are used.
+- **Forgets / guardrail:** Exact theorem route, exact magnitude, and explicit
+  q/covering labels are intentionally delayed.  The directed 3-cycle in the
+  tooth tournament warns that "first proof tooth", "strongest splitter", and
+  "explicit certificate" are different roles.
+- **Next pull:** Add `first_tooth` and `residual_tooth_class` to HYP-2963
+  sidecars.  Prove the `13` arc-topology owner-strip descents separately from
+  the `2` coarse-stalk owner-strip descents.
+- **Pointers:** HYP-3035, HYP-3034, HYP-3033, HYP-3032, HYP-3031, HYP-3030,
+  HYP-3029, HYP-3028, HYP-3027, HYP-3024, HYP-3023, HYP-2963, THM-572,
+  LTI-183, LTI-182, LTI-181, LTI-179, LTI-178, LTI-177, LTI-176, LTT-080,
+  LTT-079, LTT-077, LTT-076, LTT-075, LTT-074, T1116, T1115, T1114.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1561,6 +1592,7 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    repair-ladder stage, first nonzero repair cochain, route-purity status,
    status-purity status, guarded non-route signature,
    carrier-pullback row ID, destroyed-coordinate ledger, zeta repair class,
+   residual tooth class, first residual tooth,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

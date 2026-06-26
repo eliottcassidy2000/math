@@ -233,6 +233,23 @@ new scalar or an isomorphism-class census.  Here it enters as a product-rule
 guardrail: the fixed-path tile algebra tells us which two-dimensional
 coordinate a quotient is trying to erase.
 
+## S199 Instantiation
+
+HYP-3035 instantiates the owner-strip part of this dictionary on the `15`
+coarse ET+unit route-mixed residual fibers from HYP-3028/HYP-3030.  It parses
+the stored S194 residual list, recomputes only the `38` selected HYP-2963
+packets, and finds that all first legal non-route teeth are owner strips:
+
+```text
+arc_topology_compact  13 fibers
+coarse_safe_stalk      2 fibers
+```
+
+Exact stalk, magnitude, and q/covering certificate labels split every residual
+as nested backups.  Thus at least for the coarse status-gate residuals, the
+Haar/tile repair class is not an unpaired `zeta` or anonymous F7 object; it is
+a finite owner-strip manifest.
+
 ## Next Pull
 
 1. Add a packet-level `zeta_repair_class` field with values
