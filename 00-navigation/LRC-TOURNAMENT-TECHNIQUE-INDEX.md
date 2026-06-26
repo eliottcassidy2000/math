@@ -131,6 +131,10 @@ obligations, and proof-carrier interfaces.
   use LTT-103 after LTT-099/LTT-100 and record `hyperbolic_triple_signature`,
   `reciprocal_sum`, `curvature_margin`, `orbifold_euler_sign`, and
   `hyperbolic_debt_discharge_route` before comparing packet triples.
+- Need to decide whether a perspective quotient has forgotten a real payload:
+  use LTT-099 and test incident words, edge-sector cross orientation,
+  deletion-parent fibers, rectangle/hourglass residues, endpoint-owner
+  payloads, and proof-obligation sidecars before trusting scalar counts.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2340,48 +2344,62 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTT-096, LTT-095, LTT-094, LTT-093, T1135, T1134, T1133, T1132, T1131,
   T1130, T1129, OPEN-Q-108.
 
-### LTT-099: Observer-Extension Cut Payload Calculus
+### LTT-099: Observer-Extension Cut Payload Tournament
 
 - **Move:** For any quotient used in an LRC or tournament proof, name the next
   outside operation before deciding the quotient is safe: add an observer,
   delete/unroot, move a diagonal layer, cross a route, cut a capacitor, push an
-  automaton transition, or transport a certificate.  The observer-extension
-  payload is the missing boundary coordinate for that operation.
+  automaton transition, or transport a certificate.  The corrected prototype is
+  `R(5)=48`, `U(6)=56`, defect `8`; `48+12=60`, so the recurring `12` is a
+  fold/parent/fixed-locus count rather than the additive defect.
 - **LRC use:** HYP-3054 turns HYP-3050's first A000568 observer-cut defect into
-  a general controlled-forgetting calculus.  Pair-good decoys should be grouped
-  by blocker-generator tooth and active-owner/barcode relation before their
-  count matters.  Residual capacitors should be grouped by first cut, exact
-  scale/topology split, zeta exit, and endpoint-owner strip.  AP-tail owner
-  collisions need q13 clocks; automaton shadows need magnitude/topology/owner
-  route handoffs; diagonal layer lines need rectangle/hourglass defect fields;
-  and matrix invariants need sidecar-observability columns.
+  a general controlled-forgetting calculus and packages the safe ladder:
+  `node perspective -> incident word -> ordered pair / edge sector ->
+  cross-sector orientation -> deletion-parent fiber -> rectangle/hourglass
+  residue -> endpoint-owner payload -> proof-obligation sidecar`.  The `12`
+  count appears as `R(4)`, `U(5)`, both `5->6` source/sink deletion slices,
+  and `SC(6)`, while the defect `8` names the first observer-extension/cut
+  payload.  Pair-good decoys should be grouped by blocker-generator tooth and
+  active-owner/barcode relation; residual capacitors by first cut, zeta exit,
+  and endpoint-owner strip; AP-tail collisions by q13 clocks; automaton
+  shadows by magnitude/topology/owner handoff; diagonal layer lines by
+  rectangle/hourglass defects; and matrix invariants by observability columns.
 - **Preserves:** Boundary/open status, route/certificate schedulability,
-  extension address, old-root/new-observer role, endpoint-owner packet fields,
-  hidden period clocks, cut/cycle defects, and named residual handoff.
+  extension address, old-root/new-observer role, incident word, edge-sector
+  cross orientation, deletion parent, line-flow cycle residue, endpoint-owner
+  packet fields, hidden period clocks, cut/cycle defects, and named residual
+  handoff.
 - **Forgets / guardrail:** Raw scalar counts, unrooted classes, automaton
   words, spectra, row/column margins, and line counts are unsafe whenever the
   next operation changes a status, route, owner, topology, period, or
-  certificate class inside a coarse fiber.
+  certificate class inside a coarse fiber.  Each loss is legal only if the
+  coordinate is constant, reconstructed, dual-annihilated, descended to
+  potentials, boundary-stopped, or routed to named debt.
 - **Tournament fingerprint:** vertices are proof payloads and quotient
-  obligations, not runners.  The retention path is
-  `observer_extension_cut > sidecar_observability_matrix >
-  endpoint_owner_packet > residual_capacitor_cut >
-  rectangle_hourglass_defect > diagonal_transport_word >
-  ordered_pair_sector_deck > closed_arc_h1_owner_support >
-  primitive_period_deck > pair_good_blocker_tooth > automaton_shadow >
-  raw_scalar_count`.
+  obligations, not runners.  The exact S218 carrier sub-tournament is
+  transitive with one Hamiltonian path:
+  `proof_obligation_sidecar > endpoint_owner_payload >
+  deletion_parent_fiber > rectangle_hourglass_residue >
+  cross_sector_orientation > ordered_pair_edge_sector >
+  incident_word_extension > raw_node_perspective`.  The broader LRC retention
+  path continues through sidecar-observability matrices, residual capacitor
+  cuts, closed-arc `H1` owner support, primitive-period decks,
+  pair-good blocker teeth, automaton shadows, and raw scalar counts.
 - **Next pull:** Add manifest fields `quotient`, `next_operation`,
-  `observer_extension_payload`, and `discharge_rule` to new LRC notes and
-  packet experiments; build HYP-3048 observability matrices over HYP-2963
-  coarse fibers using extension-address, cut-defect, and route-owner
-  certificate columns from HYP-3054.
+  `observer_extension_payload`, `observer_payload_stage`,
+  `incident_word_orbit`, `edge_sector_cross_orientation`,
+  `deletion_parent_fiber`, `rectangle_hourglass_residue`,
+  `endpoint_owner_payload`, `barcode_active_owner_support`,
+  `extension_address`, `cut_or_cycle_defect`, `route_owner_certificate`, and
+  `payload_exit/discharge_rule` to HYP-2963 packet experiments; build HYP-3048
+  observability matrices before any scalar count is trusted.
 - **Pointers:** HYP-3054, HYP-3053, HYP-3052, HYP-3051, HYP-3050, HYP-3049,
   HYP-3048, HYP-3047, HYP-3046, HYP-3045, HYP-3043, HYP-3040, HYP-3039,
-  HYP-3037, HYP-3034, HYP-3024, HYP-3022, HYP-3021, HYP-3018, HYP-2997,
-  HYP-2995, HYP-2991, HYP-2989, HYP-2963, THM-381, THM-385, THM-572,
-  LTI-201, LTI-200, LTI-199, LTI-198, LTI-197, LTI-196, LTT-099, LTT-098,
-  LTT-097, LTT-096, LTT-095, LTT-094, T1136, T1135, T1134, T1133, T1132,
-  T1131, OPEN-Q-108.
+  HYP-3038, HYP-3037, HYP-3034, HYP-3027, HYP-3024, HYP-3022, HYP-3021,
+  HYP-3018, HYP-2997, HYP-2995, HYP-2991, HYP-2989, HYP-2963, THM-381,
+  THM-385, THM-572, LTI-201, LTI-200, LTI-199, LTI-198, LTI-197, LTI-196,
+  LTI-195, LTT-099, LTT-098, LTT-097, LTT-096, LTT-095, LTT-094, LTT-093,
+  T1136, T1135, T1134, T1133, T1132, T1131, OPEN-Q-108.
 
 ### LTT-100: Duodecimal Observer-Extension Cut Payload
 

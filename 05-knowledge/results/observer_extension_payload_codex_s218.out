@@ -1,0 +1,87 @@
+================================================================================
+S218: observer-extension/cut payload ledger
+================================================================================
+1. SHIFTED PERSPECTIVE ARITHMETIC
+   Correct first-failure arithmetic: 48 + 8 = 56; 48 + 12 = 60.
+   The value 12 is a recurring fixed-locus/parent count, not the additive defect.
+
+   m  U(m)  R(m)  U(m+1)  defect  R/U_next  defect/U_next  U(m)/U_next  SC(m+1)/U_next
+   3     2     4        4       0       1/1            0/1          1/2              1/2
+   4     4    12       12       0       1/1            0/1          1/3              2/3
+   5    12    48       56       8       6/7            1/7         3/14             3/14
+   6    56   296      456     160     37/57          20/57         7/57                -
+
+   At m=5: R(5)/U(6)=6/7, defect/U(6)=1/7, and U(5)/U(6)=SC(6)/U(6)=3/14.
+   R(5) itself decomposes by vertex-orbit profile as 7*5 + 4*3 + 1*1 = 48.
+
+2. WHERE THE 12S COME FROM
+   role                                      value  interpretation
+   R(4)=P(4)                                 12  node perspectives on 4-classes, equal to U(5)
+   U(5)                                      12  parent isomorphism classes for the 5->6 extension
+   source slice 5->6                         12  all-zero incident word deletion slice
+   sink slice 5->6                           12  all-one incident word deletion slice
+   SC(6)                                     12  self-converse/converse-fold branch locus
+
+   U(5) parent automorphism histogram: {1: 7, 3: 4, 5: 1}
+   This is the same profile as vertex orbit counts reversed: {5:7, 3:4, 1:1}.
+
+3. BURNSIDE ROOTLESS WARNING FOR U(6)
+   cycle_type  class_size  fixed_tournaments  fixed_vertices  contribution_to_U6
+   1^6                 1              32768               6            2048/45
+   3,1,1,1            40                128               3               64/9
+   3,3                40                 32               0               16/9
+   5,1               144                  8               1                8/5
+   Burnside numerator=40320, divided by 6! gives 56.
+   The [3,3] symmetry has fixed_vertices=0: it is exactly the kind of observerless cut payload a node-root quotient cannot name.
+
+4. INCIDENT WORDS, EDGE SECTORS, AND DELETION FIBERS
+   5->6 raw incident words: U(5)*2^5 = 384; parent-aut word orbits = rooted R(6) = 296; child sinks U(6) = 56.
+   Fractions: raw/rooted=48/37, rooted/U(6)=37/7, raw/U(6)=48/7.
+   word orbit size histogram under parent automorphisms: {1: 258, 3: 32, 5: 6}
+   rooted extension orbits per 6-class: {2: 5, 4: 10, 6: 41}
+   unique deletion-parent classes per 6-class: {1: 3, 2: 6, 3: 13, 4: 13, 5: 17, 6: 4}
+   max repeated deletion-parent multiplicity per 6-class: {1: 4, 2: 27, 3: 17, 4: 3, 5: 2, 6: 3}
+
+   S213 lift: rooted-5 + incident word states = 1408 = exact ordered-pair perspectives; directed-edge perspectives = 704.
+   Sector decks: size/internal separate 55/56 classes; cross/full separate 56/56.
+   The only size/internal collision is masks (344, 345); cross-sector orientation is the chirality repair.
+
+5. S217 RECTANGLE/HOURGLASS RESIDUES
+   k  K_edges  xor_rank  rectangle_red  line_profiles  aligned_profiles
+   1        2         2              0              6                 8
+   2        6         4              2             12                20
+   3       12         6              6             20                40
+   4       20         8             12             30                70
+   5       30        10             20             42               112
+   6       42        12             30             56               168
+
+   n=6 full adjacent-layer flow: lines=40, rank=14, redundancy=26 = rectangles 20 + hourglass 6.
+   n=6 fixed-path flow: lines=20, rank=9, redundancy=11.
+   Interpretation: a vanished rectangle/hourglass residue means the quotient descends to potentials; a nonzero residue names hidden payload.
+
+6. ABSTRACT OBSERVER-EXTENSION/CUT PAYLOAD RULE
+   Payload = the minimal coordinate that turns an unsafe observer quotient into a recoverable one.
+   In tournaments it appears as:
+     node root -> incident word -> ordered pair / edge sector -> cross-sector orientation -> deletion fiber -> rectangle/hourglass residue.
+   In the LRC stack the same rule reads:
+     pair-good decoys               -> blocker generator + barcode bar + active owner support before counting decoys
+     endpoint-owner transfer        -> old/new endpoint role is repaired by external owner strips and owner-transfer deltas
+     fiber zipper / Hensel          -> automatic/residue fibers need ET bins, unit-root clocks, and magnitude cocycles
+     residual capacitor / Haar square -> rectangle zeta and first nonzero cochain are cut residues
+     status-topology gate           -> closed-arc H1 owner support is the observerless cut payload for AP/GW
+     matrix observability           -> sidecar columns must separate, reconstruct, annihilate, descend, or name debt
+
+7. TOURNAMENT ANALYSIS OVER PAYLOAD CARRIERS
+   vertices are carriers/proof obligations, not runners
+   vertices=['raw_node_perspective', 'incident_word_extension', 'ordered_pair_edge_sector', 'cross_sector_orientation', 'deletion_parent_fiber', 'rectangle_hourglass_residue', 'endpoint_owner_payload', 'proof_obligation_sidecar']
+   score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+   directed_3_cycles=0
+   scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+   hamiltonian_paths=1
+   one_hamiltonian_path=proof_obligation_sidecar -> endpoint_owner_payload -> deletion_parent_fiber -> rectangle_hourglass_residue -> cross_sector_orientation -> ordered_pair_edge_sector -> incident_word_extension -> raw_node_perspective
+
+READING
+  The first failure is not 48+12=56; it is 48+8=56.
+  The value 12 is a stable fold/parent count: it names U(5), R(4), source/sink deletion slices, and SC(6).
+  The defect 8 is the first observer-extension/cut payload: node perspectives cannot see a rootless coupling, so the proof carrier must add incident words, edge-sector cross orientation, deletion fibers, and finally rectangle/hourglass residues when line-flow payload is attached.
+  Controlled forgetting should therefore be stated as a payload law: a quotient is legal only when the forgotten coordinate is constant, reconstructed, dual-annihilated, descended to potentials, boundary-stopped, or routed to a named residual sidecar.

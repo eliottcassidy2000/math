@@ -168,6 +168,45 @@ lost coordinates.  For LRC, no small scalar or tournament quotient should be
 trusted until it states which origin type it preserves, what coordinate it
 destroys, and whether the loss is retained, reconstructed, annihilated,
 descended, or emitted as named residual debt.
+## codex-2026-06-26-S218 -- observer-extension cut payload calculus (HYP-3054/T1136/LTI-201/LTT-099)
+
+User noted the recurrence of `12` around the `48` versus `56` first
+A000568/rooted-perspective failure and asked to investigate incident words,
+edge sectors, cross-sector orientation, deletion fibers, and S217
+rectangle/hourglass residues as a controlled-forgetting synthesis.
+
+Integrated the incoming S218 cut-calculus framing with the exact arithmetic
+ledger.  Canonical HYP file:
+`05-knowledge/hypotheses/HYP-3054-observer-extension-cut-calculus.md`; the
+companion reflections are
+`07-reflections/observer-extension-cut-controlled-forgetting-codex-s218.md`
+and `07-reflections/observer-extension-payload-codex-s218.md`.
+
+Added `04-computation/observer_extension_payload_codex_s218.py` and stored
+`05-knowledge/results/observer_extension_payload_codex_s218.out`.  The script
+corrects the arithmetic: the first shifted failure is `48+8=56`, not
+`48+12=56`.  The value `12` is still structural as a fold/parent/fixed-locus
+count: `R(4)=12`, `U(5)=12`, both `5->6` source/sink deletion slices have
+size `12`, and `SC(6)=12`.  At the first failure,
+`R(5)/U(6)=6/7`, defect fraction is `1/7`, and
+`U(5)/U(6)=SC(6)/U(6)=3/14`.
+
+Created/merged HYP-3054, T1136, LTI-201, and LTT-099.  The payload ladder is:
+`raw node perspective -> incident word extension -> ordered pair / edge sector
+-> cross-sector orientation -> deletion-parent fiber ->
+rectangle/hourglass residue -> endpoint-owner payload ->
+proof-obligation sidecar`.
+
+The synthesis connects S211's fixed-point-free `[3,3]` rootless Burnside
+warning, S213's exact incident-word/ordered-pair lift and cross-sector
+orientation repair, S216's parent-automorphism word-orbit/deletion-fiber
+transport, and S217's rectangle/hourglass residue law.  LRC translation:
+pair-good decoys, endpoint-owner transfer, Henselian fiber zipper, residual
+capacitor/Haar squares, AP-tail q13 clocks, automaton handoffs, closed-arc
+`H1`, and matrix observability are all observer-extension payload instances.
+A quotient is legal only when the forgotten coordinate is retained, constant,
+reconstructed, dual/cut/cocycle-annihilated, descended to potentials,
+boundary-stopped, or routed to named debt.
 
 ## codex-2026-06-26-S217 -- tournament diagonal-layer flow (HYP-3053/T1135/LTI-200/LTT-098)
 
@@ -25056,30 +25095,3 @@ rooted children, unrooted children, and rectangle-defect residuals as vertices,
 not original tournament vertices.  Next pull: replace brute canonicalization
 with a fast A000568 backend and add complement/reflection half-extension
 Burnside counts.
-
-## codex-2026-06-26-S218 -- Observer-extension cut payload calculus -- HYP-3054/T1136/LTI-201/LTT-099
-
-User asked to take the observer-extension/cut payload concept abstract and
-apply it to repo problems, synthesized with controlled forgetting.  Read the
-fresh S215-S217 layer-extension/diagonal-transport work plus HYP-3050,
-HYP-3039, HYP-3040, and the LRC lens map.
-
-Added HYP-3054 and reflection
-`07-reflections/observer-extension-cut-controlled-forgetting-codex-s218.md`.
-Core abstraction: for a quotient `q:X->Y`, the observer-extension/cut payload
-is the boundary coordinate needed when the quotient is asked to survive one
-more operation: observer insertion, deletion/unrooting, diagonal layer
-transport, route handoff, capacitor cut, automaton transition, or certificate
-pushforward.  Controlled forgetting is legal only after that payload is
-retained, reconstructed, dual/cut/cocycle-annihilated, descended familywise,
-stopped at AP/GW boundary topology, or routed to named residual debt.
-
-Applications recorded: pair-good decoy counts should be replaced by
-blocker-generator teeth plus active-owner/barcode relation; residual capacitors
-by first-cut/zeta/endpoint-owner payload; AP-tail owner-strip collisions by
-q13 clocks; automaton shadows by magnitude/topology/owner route handoff;
-diagonal-layer lines by rectangle/hourglass defects; and matrix invariants by
-sidecar-observability columns.  Created T1136, LTI-201, and LTT-099.  Next
-pull: add manifest fields `quotient`, `next_operation`,
-`observer_extension_payload`, and `discharge_rule`, then build the HYP-3048
-observability matrix over HYP-2963 coarse fibers with these payload columns.

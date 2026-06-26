@@ -40,9 +40,9 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S220 Observer-Cut Orbit Ledger
+## PROJECT STATUS: Stabilized at S222 Hyperbolic Reciprocal LRC14 Sidecar
 
-As of **Friday, June 26, 2026**, the newest coordination layer is **Observer-Cut Orbit Ledger (codex-S220)**.
+As of **Friday, June 26, 2026**, the newest coordination layer is **Hyperbolic Reciprocal LRC14 Sidecar (codex-S222)**, built on **Tournament Value-Origin Ledger (codex-S221)**, **Observer-Cut Orbit Ledger (codex-S220)**, **Duodecimal Observer-Extension Payload (codex-S219)**, and **Observer-Extension/Cut Payload Law (codex-S218)**.
 
 This checkpoint formalizes the integration of the **Observer-Extension Cut Payload Calculus (codex-S218)** with the S211-S217 controlled-forgetting ladder. S211-S215 demonstrate that node-depth saturation fails to recover the A000568 shift because the missing coordinate is rootless/cyclic, requiring a transition to ordered-pair, directed-edge, and triple-carrier perspectives. S216 reframes tournament growth as a recursive orbit-DAG transport problem, where parent-automorphism word-orbits generate rooted children, and deletion fibers identify unrooted sinks.
 
@@ -52,7 +52,17 @@ S217 integrates **tournament diagonal-layer flow and half-tiling quotient laws (
 C_q(x,o)=orbit_Aut_q(x)(boundary slice, incidence word, extended shadow).
 ```
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, changed LRC predicate, separating sidecar, discharge mode, and residual debt before scalarizing.
+S221 adds the **tournament value-origin ledger (HYP-3057)**.  It keeps the corrected `48+8=56` first shifted A000568/rooted-perspective failure, preserves the real diagonal `12` alignment `R(4)=U(5)=SC(6)=12`, and requires every small tournament integer to be tagged as a class count, rooted perspective count, self-converse fixed branch, incident-word orbit, deletion fiber, edge-sector sidecar, fixed-path Hamiltonian fiber, or rectangle/hourglass residue before it is promoted to a proof carrier.
+
+S222 adds the **Fermat-Catalan hyperbolic reciprocal sidecar (HYP-3058)**.  It imports `1/a+1/b+1/c<1` as negative orbifold Euler characteristic / hyperbolic triangle debt, not as a scalar proof.  Packet triples now need `hyperbolic_triple_signature`, `reciprocal_sum`, `curvature_margin`, `orbifold_euler_sign`, and `hyperbolic_debt_discharge_route` only after exact scale, endpoint-owner, topology, route, and certificate sidecars are retained.
+
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, changed LRC predicate, separating sidecar, discharge mode, and residual debt before scalarizing.
+
+S218 integrates **observer-extension/cut payload laws (HYP-3054)** with controlled forgetting. It corrects the first shifted failure arithmetic: `R(5)=48`, `U(6)=56`, so the defect is `8`, not `12`; `48+12=60`. The recurring `12` is instead the fold/parent/fixed-locus signal `R(4)=12=U(5)=source-slice(5->6)=sink-slice(5->6)=SC(6)`. The payload ladder is node root -> incident word -> ordered-pair/edge sector -> cross-sector orientation -> deletion fiber -> rectangle/hourglass residue -> endpoint/barcode owner payload -> proof-obligation sidecar. Every quotient now must prove that the forgotten coordinate is constant, reconstructible, dual-annihilated, descended to a boundary, blocked by a boundary, or explicitly carried as named debt.
+
+S219 integrates **duodecimal observer-extension payload laws (HYP-3055)**. It keeps the corrected `48+8=56` ledger but explains why the value `12` keeps reappearing: locally,
+`U(6)=P(5)+U(5)-U(4)=48+12-4=56`,
+so the dozen is a control/fold slice and the `4` old-class overlap is the inclusion-exclusion term. The same dozen appears as `P(4)=U(5)=SC(6)=12`, while the missing `8` is `SC(6)-U(4)`. This promotes incident-word orbit, endpoint role, cross-sector orientation, deletion-parent fiber, rectangle/hourglass residue, self-converse status, endpoint-owner packet, and binding scale into the sidecar observability columns for the next packet-bank audit.
 
 The Henselian unit rule (updated):
 ```text
@@ -66,11 +76,15 @@ invoked to preserve the elliptic regulator, 2-adic volume unit, Henselian
 valuation unit, Hensel-Krasner valuation unit, Monsky volume unit, singular 
 residue valuation unit, and Fermat-Catalan valuation unit while stabilizing 
 valuations against local-global obstructions. The S210-S216 sequence 
-ensures that forgotten coordinates in matrix and transport quotients are 
-explicitly handled via observability columns, Schur complements, and 
-deletion-fiber profiles. The S217 synthesis adds the rectangle/hourglass 
-cycle-space guardrail, while S218-S220 add the observer-cut payload orbit
-ledger, to preserve the p-adic stability of the global packet sheaf.
+ensures that forgotten coordinates in matrix and transport quotients are
+explicitly handled via observability columns, Schur complements, and
+deletion-fiber profiles. The S217 synthesis adds the rectangle/hourglass
+cycle-space guardrail; S218 adds the observer-extension payload-exit rule;
+S219 adds the duodecimal control-slice ledger; S220 records payloads
+modulo the visible-fiber automorphism group; S221 tags the numerical shadow
+by quotient origin; and S222 carries the Fermat-Catalan reciprocal-curvature
+sign only after the exact packet sidecars needed for p-adic stability are
+declared.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -104,19 +118,21 @@ arc-Cech nerve unit, safe-component stalk unit, Haar tile stabilizer unit,
 residual tooth unit, residual capacitor unit, hidden statement unit, 
 owner-strip filtration unit, comprehensive lens unit, endpoint owner 
 transfer unit, tournament matrix unit, perspective-depth sidecar unit, 
-edge perspective unit, edge/triple carrier unit, rooted extension unit, 
 diagonal transport unit, fixed-path diagonal-flow unit, observer-cut payload
-unit, and observer-cut orbit-ledger unit. The S217 flow law formalizes the
+unit, observer-cut orbit-ledger unit, value-origin ledger unit, and hyperbolic
+reciprocal sidecar unit. The S217 flow law formalizes the
 rectangle/hourglass cycle-space guardrails that decide when line data descends
 to potentials and when it names a real hidden sidecar; S220 requires the
-resulting payload to be recorded modulo the visible-fiber automorphism group.
+resulting payload to be recorded modulo the visible-fiber automorphism group,
+S221 requires the visible small integer to be tagged by quotient origin, and
+S222 requires reciprocal-curvature triples to keep their discharge route.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure 
 that prime gap fluctuations do not induce structural leakage across the 
-S171 ledger. The S220 transition preserves the observer-cut orbit-ledger law
+S171 ledger. The S222 transition preserves the hyperbolic reciprocal sidecar law
 after the fixed-path diagonal-layer flow law (preserving the recurrence algebraic unit, Poincaré recurrence
 unit, automatic gap carrier unit, automatic lacunary filter unit, gap 
 automaton carrier unit, perfect-number packet unit, route-purity unit, 
@@ -126,9 +142,36 @@ unit, residual capacitor unit, hidden statement unit, owner-strip
 filtration unit, comprehensive lens unit, endpoint owner transfer unit, 
 tournament matrix unit, perspective-depth sidecar unit, edge perspective 
 unit, edge/triple carrier unit, rooted extension unit, diagonal transport 
-unit, fixed-path diagonal-flow unit, observer-cut payload unit, and
-observer-cut orbit-ledger unit alongside mu approx 1.451).
+unit, fixed-path diagonal-flow unit, observer-cut payload unit,
+observer-cut orbit-ledger unit, value-origin ledger unit, and hyperbolic
+reciprocal sidecar unit, alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S222 -- Hyperbolic Reciprocal LRC14 Sidecar (checkpoint)
+
+Integrated the prompt's Fermat-Catalan cue into the packet proof interface.
+The new HYP-3058/T1140/LTI-205/LTT-103 layer treats
+`1/a+1/b+1/c<1` as hyperbolic reciprocal-curvature debt: useful for route
+pressure only after the orders `(a,b,c)` name exact scale, route incidence,
+certificate depth, endpoint owners, topology, and the discharge route.  The
+first resonance `(2,3,7)` gives margin `1/42`, but remains a warning flag, not
+a proof.  Next operational pull: add these fields to HYP-2963-style packet
+ledgers when meaningful triples are available.
+
+---
+
+## codex-S221 -- Tournament Value-Origin Ledger (checkpoint)
+
+Integrated the S218 observer-extension/cut payload law, S219 duodecimal
+control slice, and S220 orbit-ledger schema with a count-origin sidecar.  The
+new HYP-3057/T1139/LTI-204/LTT-102 layer says the first shifted tournament
+failure is `48+8=56`, not `48+12=56`, and that the recurring `12` is a typed
+alignment across `R(4)`, `U(5)`, and `SC(6)`.  Next operational pull: add
+`value_origin_type` to LRC packet/tournament experiments before scalar
+comparisons, especially for incident words, deletion fibers, edge sectors,
+fixed-path fibers, and rectangle/hourglass residues.
 
 ---
 
@@ -144,6 +187,64 @@ handoffs, analytic blindness reports, diagonal-layer rectangle/hourglass
 residues, and matrix observability columns.  Next operational pull: build the
 HYP-2963 observer-cut ledger and emit the payload-column tournament over mixed
 route/status fibers.
+
+---
+
+## codex-S219 -- Duodecimal Observer-Extension Payload (checkpoint)
+
+Formalized the dozen as a first-failure control slice rather than an additive
+defect.  The local exact identity is `U(6)=P(5)+U(5)-U(4)=48+12-4=56`, with
+`P(4)=U(5)=SC(6)=12` and defect `8=SC(6)-U(4)`.
+
+### 1. Duodecimal Inclusion-Exclusion
+The S219 layer explains why the `12` is structural without treating it as the
+missing mass.  It is the parent/fold/self-converse surface; the four
+4-tournament classes are the overlap that must be subtracted.
+
+### 2. Sidecar Matrix Columns
+The next observability matrix should test `incident_word_orbit`,
+`observer_endpoint_role`, `ordered_pair_sector_deck`,
+`cross_sector_orientation_word`, `deletion_parent_profile`,
+`rectangle_residue`, `hourglass_residue`, `self_converse_status`,
+`endpoint_owner_packet`, and `binding_scale`.
+
+### 3. LRC Translation
+The dozen bridge does not replace HYP-3054.  It specializes it: endpoint-owner
+packets, Haar zeta grids, pair-good decoys, residual capacitors, and tournament
+spectra all need the same inclusion-exclusion discipline before raw counts are
+trusted.
+
+---
+
+## codex-S218 -- Observer-Extension Payload Law (checkpoint)
+
+Formalized the controlled-forgetting interpretation of observer extension:
+when a quotient forgets a cut coordinate, the proof obligation is not merely
+to count the missing states, but to classify the payload and route it to a
+stable carrier.
+
+### 1. Corrected First-Failure Ledger
+The S218 ledger fixes the arithmetic around the first shifted failure:
+`R(5)=48`, `U(6)=56`, and the missing payload is `8` classes. The repeatedly
+visible `12` is not the defect; it is the fold/parent/fixed-locus signal
+`R(4)=12=U(5)=source-slice(5->6)=sink-slice(5->6)=SC(6)`. The exact fraction
+at the failure is `R(5)/U(6)=6/7`, with defect `1/7`.
+
+### 2. Observer Payload Ladder
+The active carrier chain is node root -> incident word -> ordered-pair/edge
+sector -> cross-sector orientation -> deletion-parent fiber ->
+rectangle/hourglass residue -> endpoint-owner or barcode payload ->
+proof-obligation sidecar. In S213 language, rooted-5 plus incident-word
+states recover `1408` ordered-pair perspectives and `704` directed-edge
+perspectives; the final collision masks are repaired by cross-sector
+orientation.
+
+### 3. LRC Translation
+The same payload law applies to pair-good decoys, endpoint-owner transfer,
+fiber-zipper Henselian unit rules, residual capacitor/Haar-square residues,
+status-topology gates, and matrix observability. Each quotient must declare
+whether the forgotten coordinate exits as constant, reconstructible,
+dual-annihilated, descended, boundary-stopped, or named proof debt.
 
 ---
 

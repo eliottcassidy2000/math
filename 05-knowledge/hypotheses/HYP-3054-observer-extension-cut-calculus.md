@@ -4,6 +4,8 @@ title: Observer-extension cut payload calculus for controlled forgetting
 status: SYNTHESIS / abstraction across existing LRC carriers; not a proof
 source: codex-2026-06-26-S218
 tangent: T1136
+script: 04-computation/observer_extension_payload_codex_s218.py
+result: 05-knowledge/results/observer_extension_payload_codex_s218.out
 related:
   - HYP-3053
   - HYP-3052
@@ -17,8 +19,10 @@ related:
   - HYP-3043
   - HYP-3040
   - HYP-3039
+  - HYP-3038
   - HYP-3037
   - HYP-3034
+  - HYP-3027
   - HYP-3024
   - HYP-3022
   - HYP-3021
@@ -91,6 +95,32 @@ exact rooted node cache at m=5: P(5)=48
 next unrooted class count:       A000568(6)=56
 defect:                          8
 ```
+
+The exact S218 ledger sharpens a tempting misread: `48+12=60`, not `56`.
+The additive defect is `8`; the value `12` is a recurring fold/parent/fixed
+locus:
+
+```text
+R(4)=12
+U(5)=12
+5->6 source deletion slice = 12
+5->6 sink deletion slice   = 12
+self-converse 6-classes    = 12
+```
+
+At the first failure, the useful fractions are:
+
+```text
+R(5)/U(6)    = 6/7
+defect/U(6) = 1/7
+U(5)/U(6)   = 3/14
+SC(6)/U(6)  = 3/14
+```
+
+The companion computation
+`04-computation/observer_extension_payload_codex_s218.py` records this ledger,
+the S213 `1408` ordered-pair lift, the S216 `384 -> 296 -> 56`
+extension/deletion funnel, and the S217 rectangle/hourglass residue split.
 
 HYP-3050 shows that deeper node perspective is not the missing coordinate:
 under the stricter directed-WL convention, node depth already reaches exact
@@ -259,6 +289,19 @@ observer_extension_cut
 > pair_good_blocker_tooth
 > automaton_shadow
 > raw_scalar_count
+```
+
+The exact finite S218 carrier sub-tournament is also transitive:
+
+```text
+proof_obligation_sidecar
+> endpoint_owner_payload
+> deletion_parent_fiber
+> rectangle_hourglass_residue
+> cross_sector_orientation
+> ordered_pair_edge_sector
+> incident_word_extension
+> raw_node_perspective
 ```
 
 Assumption challenge: the tournament vertices here are not runners, arcs, or

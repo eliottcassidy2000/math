@@ -64,6 +64,29 @@ HYP-3048, HYP-3047, HYP-3043, HYP-3039, HYP-3031, HYP-2991, HYP-2989,
 HYP-2928, HYP-2120, HYP-2121, THM-381, THM-385, LTI-202, LTI-201, LTI-200, LTI-199,
 LTI-198, LTI-197, LTI-196, LTT-100, LTT-099, LTT-098, LTT-097, LTT-096, LTT-095,
 LTT-094, T1137, T1136, T1135, T1134, T1133, T1132, T1131.
+repo quotients and corrects the exact first shifted ledger:
+`R(5)=48`, `U(6)=56`, defect `8`; `48+12=60`, so the recurring `12` is a
+fold/parent/fixed-locus count (`R(4)`, `U(5)`, both `5->6` source/sink deletion
+slices, and `SC(6)`) rather than the additive complement.  For any proposed
+quotient, name the next operation (`observer insertion`, `delete/unroot`,
+`layer transport`, `route handoff`, `capacitor cut`, `automaton transition`,
+or `certificate pushforward`) and the payload that makes that operation
+proof-safe.  Open task: build the HYP-3048 sidecar observability matrix over
+HYP-2963 coarse fibers with columns for extension address, incident-word
+orbit, edge-sector/cross orientation, deletion-parent fiber,
+rectangle/hourglass residue, route-owner certificate, endpoint-owner payload,
+barcode active owner support, and a payload-exit label (`constant`,
+`reconstructible`, `dual_annihilated`, `descended`, `boundary_stopped`,
+`named_debt`).  Group pair-good decoys by blocker-generator tooth and
+active-owner relation before counting; join residual capacitor cuts to
+ordered-pair sector decks and rectangle/hourglass defects before any scalar
+quotient is trusted. -> HYP-3054, HYP-3053, HYP-3052, HYP-3051, HYP-3050,
+HYP-3049, HYP-3048, HYP-3047, HYP-3046, HYP-3045, HYP-3043, HYP-3040,
+HYP-3039, HYP-3038, HYP-3037, HYP-3034, HYP-3027, HYP-3024, HYP-3022,
+HYP-3021, HYP-3018, HYP-2997, HYP-2995, HYP-2991, HYP-2989, HYP-2963,
+THM-381, THM-385, THM-572, LTI-201, LTI-200, LTI-199, LTI-198, LTI-197,
+LTI-196, LTI-195, LTT-099, LTT-098, LTT-097, LTT-096, LTT-095, LTT-094,
+LTT-093, T1136, T1135, T1134, T1133, T1132, T1131.
 **OPEN-Q-108 S217 diagonal-layer flow addendum:** HYP-3053 turns the user's
 tournament tiling-growth model into a `GF(2)` coboundary carrier.  The
 `k^2+k` lines between layers of sizes `k` and `k+1` form `K_{k,k+1}`:

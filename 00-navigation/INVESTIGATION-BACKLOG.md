@@ -37,23 +37,35 @@ Namespace: HYP-3056 / T1138 / LTI-203 / LTT-101.
 
 ## Lead codex-2026-06-26-S218: Observer-extension cut payload calculus
 
-**Status:** SYNTHESIS / abstraction across existing LRC carriers
-(HYP-3054/T1136/LTI-201/LTT-099), extending HYP-3050's observer-cut payload,
-HYP-3051-HYP-3053's rooted/diagonal transport carriers, and HYP-3039/HYP-3040's
-controlled-forgetting ledgers.
+**Status:** SYNTHESIS / abstraction across existing LRC carriers plus exact
+first-failure ledger (HYP-3054/T1136/LTI-201/LTT-099), extending HYP-3050's
+observer-cut payload, HYP-3051-HYP-3053's rooted/diagonal transport carriers,
+and HYP-3039/HYP-3040's controlled-forgetting ledgers.
 **Readout:** Added
 `05-knowledge/hypotheses/HYP-3054-observer-extension-cut-calculus.md` and
-`07-reflections/observer-extension-cut-controlled-forgetting-codex-s218.md`.
+`07-reflections/observer-extension-cut-controlled-forgetting-codex-s218.md`;
+added `04-computation/observer_extension_payload_codex_s218.py`,
+`05-knowledge/results/observer_extension_payload_codex_s218.out`, and
+`07-reflections/observer-extension-payload-codex-s218.md` as the exact ledger.
 The key abstraction: a quotient is proof-safe only after the payload for its
 next outside operation is retained, reconstructed, dual/cut/cocycle-killed,
-descended, boundary-stopped, or routed to named debt.  This makes pair-good
-decoy generator teeth, residual capacitor first cuts, q13 AP-tail clocks,
-automaton magnitude/topology handoffs, rectangle/hourglass defects, and matrix
+descended, boundary-stopped, or routed to named debt.  The exact tournament
+ledger corrects the first shifted A000568 failure to `48+8=56`, not
+`48+12=56`; `12` is a fold/parent/fixed-locus count (`R(4)`, `U(5)`, both
+`5->6` source/sink deletion slices, and `SC(6)`), while the defect `8` is the
+observer-extension/cut payload.  This makes pair-good decoy generator teeth,
+residual capacitor first cuts, q13 AP-tail clocks, automaton
+magnitude/topology handoffs, rectangle/hourglass defects, deletion-parent
+fibers, edge-sector cross orientation, endpoint-owner payloads, and matrix
 observability columns instances of one observer-extension/cut rule.
 **Next:** add manifest fields `quotient`, `next_operation`,
-`observer_extension_payload`, and `discharge_rule`; build HYP-3048 sidecar
-observability matrices over HYP-2963 coarse fibers; classify pair-good decoys
-by generator and active-owner relation before reporting raw counts.
+`observer_extension_payload`, `observer_payload_stage`, `incident_word_orbit`,
+`edge_sector_cross_orientation`, `deletion_parent_fiber`,
+`rectangle_hourglass_residue`, `endpoint_owner_payload`,
+`barcode_active_owner_support`, `extension_address`, `cut_or_cycle_defect`,
+`route_owner_certificate`, and `payload_exit/discharge_rule`; build HYP-3048
+sidecar observability matrices over HYP-2963 coarse fibers; classify pair-good
+decoys by generator and active-owner relation before reporting raw counts.
 Namespace: HYP-3054 / T1136 / LTI-201 / LTT-099.
 
 ## Lead codex-2026-06-26-S217: Tournament diagonal-layer flow
