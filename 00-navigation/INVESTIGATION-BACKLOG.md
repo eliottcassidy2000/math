@@ -15,6 +15,13 @@
 
 ---
 
+## Lead codex-2026-06-26-S186: LRC14 pair-good decoy barcode and normal-fan refinement
+
+**Status:** EVIDENCE / exact bounded classifier and quotient guardrail complete (HYP-3022/T1103/LTI-169), downstream of HYP-3021 modular tooth classification, HYP-3019 binding-pair switches, and HYP-3018 active normal fans.  User asked to classify pair-good decoys and relate them to barcode bars and active bottleneck owners.
+**Readout:** `04-computation/lrc14_pair_good_decoy_barcode_normal_fan_codex_s186.py` stores output in `05-knowledge/results/lrc14_pair_good_decoy_barcode_normal_fan_codex_s186.out`.  Pair-good decoys are exact pair-crossing times where a pair is threshold-good but the full row is blocked below `1/14`.  Named rows have `8889` decoys and `5692` generator classes; low-frontier one-swap atlas `drops={10,12,13}, add<=36` has `48037` decoys and `9809` generator classes.  All named decoys are outside strict barcode bars or in zero-bar rows; many overlap true normal-fan supports through the good pair or blocker deck, while disjoint classes are explicit lane/shell/blocker false switches.
+**Next:** add pair-good generator fields to HYP-2963 packets next to HYP-3021 tooth fields; prove blocker-deck lemmas for singleton blockers `(7,)`, `(11,)`, `(1,)`, `(9,)`, `(13,)`, `(8,)`; route overlap classes by HYP-3018 normal-fan support and disjoint classes by denominator lane/blocker clearance.
+Namespace: HYP-3022 / T1103 / LTI-169.
+
 ## Lead codex-2026-06-26-S182: LRC14 active-bottleneck normal-fan carrier
 
 **Status:** EVIDENCE / exact finite scout and proof-interface carrier complete (HYP-3018/T1101/LTI-166), extending the HYP-3015 barcode and using HYP-3016/HYP-3017 mixed automaton fibers as the negative control.  User asked to keep looking for better proof carriers.

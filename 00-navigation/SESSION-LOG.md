@@ -21,6 +21,15 @@ plus a blocker residue tooth.  Named-row audit: `6043` decoy times collapse to
 Created HYP-3021, LTI-168, and a reflection.  Next pull: run the generator
 classifier over the full HYP-2963 bank and look for bounded generator-cover
 templates per packet family.
+## codex-2026-06-26-S186 -- LRC14 pair-good decoy barcode and normal-fan refinement (HYP-3022/T1103)
+
+User asked to classify and understand pair-good decoys and relate them to barcode bars and active bottleneck owners.  Fast-forwarded over HYP-3019, which supplied the binding-pair switch carrier and raw pair-good decoy warning, then rebased over HYP-3021, which supplied the modular tooth generator classification.
+
+Added `04-computation/lrc14_pair_good_decoy_barcode_normal_fan_codex_s186.py` and stored `05-knowledge/results/lrc14_pair_good_decoy_barcode_normal_fan_codex_s186.out`.  The script defines a pair-good decoy as a pair-crossing time where some pair has equal distance `>=1/14` but the full row has `min_v ||v t|| < 1/14`, then records the exact lane/shell/denominator/pair-gap/blocker generator and its barcode/normal-fan relation.
+
+Readout: named rows have `8889` decoys and `5692` generator classes; all named decoys are outside strict barcode bars or in AP/GW zero-bar rows.  Support relation splits as `pair_overlaps_bar_support=4344`, `blocker_overlaps_bar_support=1317`, `pair_is_bar_peak_support=693`, `blocker_is_bar_peak_support=45`, and `disjoint=2490`.  Low-frontier one-swap atlas `drops={10,12,13}, add<=36` has `48037` decoys and `9809` generator classes dominated by singleton blockers such as `(7,)`, `(11,)`, `(1,)`, `(9,)`, `(5,)`, `(8,)`, `(13,)`, `(3,)`.
+
+Created HYP-3022, T1103, LTI-169, and reflection `07-reflections/lrc14-pair-good-decoy-barcode-normal-fan-codex-s186.md`.  Proof-order takeaway: decoy counts should become bookkeeping once HYP-2963 packets retain HYP-3021 generator fields plus barcode/normal-fan relation fields; the proof obligation is the blocker-deck grammar and its overlap/disjoint relation to HYP-3015 barcode bars and HYP-3018 active normal-fan supports.
 
 ## codex-2026-06-26-S182 -- LRC14 active-bottleneck normal-fan carrier (HYP-3018/T1101)
 
