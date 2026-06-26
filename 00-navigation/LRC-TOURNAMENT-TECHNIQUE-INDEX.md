@@ -78,6 +78,10 @@ obligations, and proof-carrier interfaces.
 - Need to synthesize hidden proof statements into packet sidecar fields:
   use LTT-086 after LTT-085 and attach the hidden-statement sidecar vocabulary
   before trying another scalar.
+- Need to test whether residual route debt survives primitive deck, AP-tail
+  q13 clock, Haar zeta, and endpoint-owner current:
+  use LTT-088 after LTT-084/LTT-082 and record the first surviving filtration
+  page before naming F7/THM-572 debt.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -1789,6 +1793,48 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTT-079, LTT-078, T1122, T1121, T1120, T1119, T1118, T1117, T1116, T1114, T1113,
   OPEN-Q-108.
 
+### LTT-088: Owner-Strip Filtration Tournament
+
+- **Move:** Treat the current residual stack as a short filtration of proof
+  carriers rather than as a scalar route scheduler:
+  `raw_shadow -> status_gate -> primitive_period_deck -> haar_zeta_grid ->
+  endpoint_owner_strip -> labelled_route_certificate`.
+- **LRC use:** Sharpens the necessary condition after HYP-3038 and absorbs
+  HYP-3041 as the concrete primitive-clock example.  A residual pair surviving
+  protected status must either show positive primitive safe mass at `q<=13`,
+  a useful AP-tail `q=13`/fixed-point clock, a useful drop/add Haar-zeta square
+  that opens or descends, or an endpoint-owner strip current.  If all pages are
+  invisible, the residual is legitimate named F7/THM-572/harmonic/state-lift
+  debt.
+- **Preserves:** strict-open status, route schedulability, primitive-period
+  scheduler data, Haar/drop-add zeta, endpoint-owner boundary current,
+  topology/family-transfer labels, and the route certificate only on the final
+  page.
+- **Forgets / guardrail:** raw runner identity, route labels before the final
+  page, nonlargest safe bars, and scalar endpoint words such as `B18Z6`.
+  The q=23 diagonal example shows why: petal and covering share `B18Z6` but
+  split by external owner multisets `12:26x6,6:20x4` versus `2:16x6`.
+- **Tournament fingerprint:** vertices are filtration pages/proof carriers,
+  not runners.  Pairwise observable is
+  `status,route,primitive_period,haar_zeta,owner_strip,topology,
+  family_transfer,compression,low_cost`; the switch is majority retained
+  coordinates with tie path
+  `labelled_route_certificate > endpoint_owner_strip > haar_zeta_grid >
+  primitive_period_deck > status_gate > raw_shadow`.  Output:
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1}`, no directed 3-cycles,
+  singleton SCCs, one Hamiltonian path
+  `endpoint_owner_strip > labelled_route_certificate > haar_zeta_grid >
+  primitive_period_deck > status_gate > raw_shadow`.
+- **Next pull:** Add `primitive_safe_deck_2_13`, `ap_tail_certificate_kind`,
+  `q13_puncture_bit`, `drop_add_square_id`, `exact_M_zeta`,
+  `endpoint_owner_strip_current`, `owner_strip_page`, and
+  `first_surviving_filtration_page` to cached packet sidecars; then search for
+  packets whose first surviving page is beyond endpoint-owner strip.
+- **Pointers:** HYP-3042, HYP-3041, HYP-3038, HYP-3037, HYP-3036, HYP-3035,
+  HYP-3031, HYP-3018, HYP-2997, HYP-2963, THM-572, LTI-190, LTI-189,
+  LTI-186, LTI-184, LTI-183, LTI-179, LTT-088, LTT-087, LTT-084, LTT-082,
+  LTT-081, LTT-077, T1123, T1122, T1119, T1117, T1116, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -1828,7 +1874,8 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    carrier-pullback row ID, destroyed-coordinate ledger, zeta repair class,
    residual tooth class, first residual tooth,
    drop-add square ID, diagonal doubling match, exact-M zeta,
-   endpoint-owner strip,
+   endpoint-owner strip current, owner-strip page,
+   first surviving filtration page,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

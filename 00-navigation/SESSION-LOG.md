@@ -24355,3 +24355,38 @@ gives `0` mixed-route fibers.  HYP-3031 repair class: `nested_refinement` plus
 `owner_strip`, not F7 debt.  Next pull: search two-tail AP-core residuals for
 the same prime-puncture / reciprocal-fixed-point certificate before invoking
 Fejer or THM-572 machinery.
+
+## codex-2026-06-26-S205 -- LRC14 owner-strip filtration -- HYP-3042/LTI-190/LTT-088
+
+User asked to keep looking for hidden details, statements, and connections to
+past work that sharpen LRC understanding.  Pulled recent mainline work first;
+incoming S201/HYP-3038 made the q=23 drop/add Haar square the live local
+surface, with exact-M zeta `-47/920` and diagonal route mixing resolved only
+after endpoint-owner strips split petal owners `12:26x6,6:20x4` from covering
+owner `2:16x6`.
+
+Added `04-computation/lrc14_owner_strip_spectral_sequence_codex_s205.py` and
+stored `05-knowledge/results/lrc14_owner_strip_spectral_sequence_codex_s205.out`.
+The script is a connection-mining synthesis, not a full-bank recomputation.  It
+links HYP-3038 back to HYP-2997's cocycle normal form, HYP-3018's normal-fan
+endpoint-owner supports, HYP-3035's all-owner-strip residual first teeth,
+HYP-3036's primitive-period residual scheduler, and incoming HYP-3041's
+AP-tail q13/fixed-point clock.
+
+Created HYP-3042 with the filtration `raw_shadow -> status_gate ->
+primitive_period_deck -> haar_zeta_grid -> endpoint_owner_strip ->
+labelled_route_certificate`.  Main sharpened condition: a protected residual
+that still mixes routes must have positive primitive safe mass at `q<=13`,
+an AP-tail q13/fixed-point clock, useful drop/add Haar zeta, or endpoint-owner
+strip current; only residuals invisible to all these pages should be named
+F7/THM-572/harmonic/state-lift debt.
+
+Tournament Analysis used filtration pages/proof carriers rather than runners.
+The fingerprint is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1}`,
+no directed 3-cycles, singleton SCCs, and one Hamiltonian path
+`endpoint_owner_strip > labelled_route_certificate > haar_zeta_grid >
+primitive_period_deck > status_gate > raw_shadow`.  Next pull: add
+`primitive_safe_deck_2_13`, `q13_puncture_bit`, `ap_tail_certificate_kind`,
+`drop_add_square_id`, `exact_M_zeta`, `endpoint_owner_strip_current`,
+`owner_strip_page`, and
+`first_surviving_filtration_page` to cached packet ledgers.

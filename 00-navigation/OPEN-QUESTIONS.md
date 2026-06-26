@@ -37,6 +37,21 @@ the first sidecar field that still leaks boundary/open or route debt. ->
  HYP-3040, HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3034, HYP-3033,
 HYP-3032, HYP-3031, HYP-3030, HYP-3029, HYP-3024, HYP-3023, HYP-3022,
 HYP-3021, HYP-3018, HYP-2963, THM-572, LTI-188, LTT-086, T1121.
+**OPEN-Q-108 S205 owner-strip filtration addendum:** HYP-3042 turns the latest
+residual repair stack into a first-surviving-page task.  After boundary/open
+status is protected, a route-mixed residual should be tested against
+`primitive_safe_deck_2_13`, AP-tail clocks (`q13_puncture_bit`,
+`ap_tail_certificate_kind`), drop/add Haar zeta (`drop_add_square_id`,
+`exact_M_zeta`), and `endpoint_owner_strip_current` before route labels are
+used.  HYP-3041 is the primitive-clock warning: a mod-14 owner strip can still
+forget `m mod 13`.  The q=23 diagonal warning is that scalar endpoint word `B18Z6` still
+mixes petal and covering, while owner currents `12:26x6,6:20x4` versus
+`2:16x6` split them.  Open task: add `owner_strip_page` and
+`first_surviving_filtration_page` to cached HYP-2963 packet ledgers, then
+promote only packets invisible beyond endpoint-owner strip to named
+F7/THM-572/harmonic/state-lift attention. -> HYP-3042, HYP-3041, HYP-3038,
+HYP-3037, HYP-3036, HYP-3035, HYP-3031, HYP-3018, HYP-2997, HYP-2963,
+LTI-190, LTI-189, LTT-088, LTT-087, T1123, T1122.
 **OPEN-Q-108 S198 arc-boundary path-lift addendum:** HYP-3034 pulls the
 older path-homology/deletion-persistence machinery into the HYP-3030
 status-topology gate, but uses closed danger arcs and boundary operators rather
