@@ -181,6 +181,43 @@ same meta-lesson in a focused endpoint-current carrier: a coarse
 owner/mod/count shadow becomes proof-useful only when its hidden local address
 is restored.
 
+## codex-2026-06-26-S214 -- Perspective-depth controlled forgetting (HYP-3050/T1132/LTI-197/LTT-095)
+
+User asked to connect the controlled-forgetting ladder with the A000568
+perspective coincidence and to get creative about k-depth node, edge, cycle,
+clique, and conflict perspectives.  Read THM-260, HYP-2210, and the S580/S582
+perspective corrections first: full rooted node perspectives first fail
+against `A000568(m+1)` at base size `m=5`, while the LRC source-perspective
+slice remains exact by THM-381.
+
+Added `04-computation/perspective_depth_ladder_codex_s214.py` and stored
+`05-knowledge/results/perspective_depth_ladder_codex_s214.out`.  Exact shift
+readout: `P(1..5)=1,2,4,12,48` versus `A000568(2..6)=1,2,4,12,56`, so the
+first defect is `8` at next-level index `n=6`.  Directed k-depth node
+perspectives recover exact rooted node orbits by depth `2` at `m=4` and depth
+`3` at `m=5`; therefore the missing `8` states are observer-extension/cut data
+rather than deeper node-neighborhood data.
+
+Non-node first-failure carriers: at `m=5`, exact directed-edge perspectives
+and exact triple perspectives both total `88`; triple perspectives split into
+`64` transitive-clique and `24` cyclic-triangle perspectives.  Local edge
+depth `2` and triple depth `2` recover the exact first-failure carriers.  The
+edge perspective is a dual tail/tip, two-plate object with four outside
+sectors, matching pair-good blocker teeth and residual capacitor cuts; cyclic
+triple and future conflict-pair perspectives are Omega/conflict sidecars.
+
+Created HYP-3050, reflection
+`07-reflections/perspective-depth-ladder-controlled-forgetting-codex-s214.md`,
+T1132, LTI-197, and LTT-095.  During sync, origin/main had already added
+S211/HYP-3047/T1129/LTI-195/LTT-093 for the A000568 k-depth incident-lift
+ladder, and then added S212/HYP-3048/T1130/LTI-196/LTT-094 for the expanded
+tournament-matrix atlas.  Origin/main then added S213/HYP-3049/T1131 for the
+exact ordered-pair edge lift, so this work is recorded as the S214 exact
+non-node carrier extension to HYP-3047/HYP-3049, with HYP-3048 supplying the
+sidecar-observability matrix language for edge/triple/cut carriers.
+Next work: define observer-extension cut
+perspectives and extend the exact carrier table to `m=6` with a faster class
+generator so disjoint cycle-conflict perspectives become visible.
 ## codex-2026-06-26-S202 -- LRC14 hidden-coordinate ledger (HYP-3039/T1120/LTI-187/LTT-085)
 
 User asked to keep looking for hidden details, statements, and past-work

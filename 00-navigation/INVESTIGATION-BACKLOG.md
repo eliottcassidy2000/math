@@ -44,6 +44,12 @@ absorbed as the post-status page order between primitive clocks/Haar zeta and
 named F7/THM-572 debt.
 Namespace: HYP-3043 / T1124 / LTI-191 / LTT-089.
 
+## Lead codex-2026-06-26-S214: Perspective-depth controlled forgetting
+
+**Status:** EVIDENCE / exact first-failure scout complete (HYP-3050/T1132/LTI-197/LTT-095), extending HYP-3047's A000568 k-depth incident-lift ladder, HYP-3049's ordered-pair edge lift, and HYP-3048's matrix-atlas sidecar language to connect the old rooted-perspective/A000568 curiosity to HYP-3039/HYP-3040's controlled-forgetting ladder.
+**Readout:** `04-computation/perspective_depth_ladder_codex_s214.py` stores output in `05-knowledge/results/perspective_depth_ladder_codex_s214.out`.  The equality `P(m)=A000568(m+1)` first fails at base size `m=5` / next index `n=6`: exact rooted node perspectives give `P(5)=48` while `A000568(6)=56`.  Directed k-depth node perspectives recover exact rooted node orbits by depth `3` at `m=5`, so the missing `8` are observer-extension/cut states, not deeper node neighborhoods.  At `m=5`, exact arc perspectives and triple perspectives both total `88`; triples split into `64` transitive and `24` cyclic.  Edge depth `2` and triple depth `2` recover those exact first-failure carriers.
+**Next:** define observer-extension cut perspectives, extend exact non-node carrier counts to `m=6` so conflict-pair perspectives appear, and compare edge tail/tip sectors with pair-good decoy teeth plus residual capacitor cuts.
+Namespace: HYP-3050 / T1132 / LTI-197 / LTT-095.
 ## Lead codex-2026-06-26-S202: LRC14 hidden-coordinate ledger
 
 **Status:** SYNTHESIS / proof-order ledger complete (HYP-3039/T1120/LTI-187/LTT-085), connecting the latest residual stack to older address-retention, visible/hidden fold, anti-wedge, cochannel, and pair-good decoy lessons.

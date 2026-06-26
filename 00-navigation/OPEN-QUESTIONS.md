@@ -58,6 +58,21 @@ surface and prove owner coordinates are retained, reconstructed,
 dual-annihilated, or routed to named F7/THM-572 debt. -> HYP-3045, HYP-3044, HYP-3042, HYP-3041, HYP-3040,
 HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3032, HYP-3031,
 HYP-3027, HYP-3026, HYP-3018, HYP-2963, THM-572, LTI-193, LTI-192, LTI-190, LTI-189, LTT-091, LTT-090, LTT-088, LTT-087, T1126, T1125, T1123, T1122.
+**OPEN-Q-108 S214 perspective-depth addendum:** HYP-3050 extends HYP-3047 and
+HYP-3049 by adding exact non-node carrier counts to the first
+A000568/rooted-perspective defect, using HYP-3048's matrix-atlas
+sidecar-observability language as the encoding target.  At base size `m=5`,
+exact directed-edge perspectives and
+exact triple perspectives both total `88`; triples split into `64` transitive
+and `24` cyclic perspectives, and local edge/triple depth `2` recovers the
+exact carrier orbits.  Open task: define an observer-extension cut perspective, then
+extend the edge/triple/cycle/conflict carrier table to `m=6`; compare edge
+tail/tip sectors against pair-good blocker teeth and residual capacitors, and
+compare cyclic-triple/conflict-pair carriers against `Omega(T)` cycle-conflict
+payload. -> HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-3040, HYP-3039,
+HYP-2210, HYP-2120, HYP-1978, HYP-1977, THM-381, THM-385, THM-260, THM-409,
+LTI-197, LTI-196, LTI-195, LTT-095, LTT-094, LTT-093, T1132, T1131, T1130,
+T1129.
 **OPEN-Q-108 S202 hidden-coordinate ledger addendum:** HYP-3039 sharpens the
 recent LRC14 residual work by treating HYP-3024..HYP-3038 as a
 controlled-forgetting ladder rather than a scalar-estimate chain.  The hidden
@@ -2258,10 +2273,10 @@ Tournament conflict graphs Omega(T) have all real roots of I(G,x) for n<=8 (prov
 
 ---
 
-## OPEN-Q-039 🔴 — SUBSTANTIALLY RESOLVED (sessions S211-S249)
+## OPEN-Q-039 🔴 — SUBSTANTIALLY RESOLVED (sessions S212-S249)
 **Understand the isomorphism class graph G_n completely**
 
-**MASSIVE PROGRESS (opus S211-S249, kind-pasteur S20bo-S20dj):**
+**MASSIVE PROGRESS (opus S212-S249, kind-pasteur S20bo-S20dj):**
 
 G_n = Q_{C(n,2)} / S_n is a genuinely new mathematical object (no prior literature). The merged metagraph G_n/Z_2 has been computed exactly through n=9 with 7 exact edge terms: E(G_n) = 1, 5, 30, 290, 4086, 91161, 3,380,751.
 
@@ -2292,7 +2307,7 @@ G_n = Q_{C(n,2)} / S_n is a genuinely new mathematical object (no prior literatu
 
 **REMAINING:** Exact formula for gap_orbits (= 2,5,20,86,490,3703,47889); twin_SL residual; chi=n-1 conjecture proof (greedy fails at n≥6).
 
-**Source:** opus S211-S249, kind-pasteur S20bo-S20dj. Library: `04-computation/tournament_metagraph.py`
+**Source:** opus S212-S249, kind-pasteur S20bo-S20dj. Library: `04-computation/tournament_metagraph.py`
 
 ---
 

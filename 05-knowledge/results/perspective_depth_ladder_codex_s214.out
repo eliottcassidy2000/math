@@ -1,0 +1,42 @@
+Perspective-depth ladder scout
+======================================================================
+
+Shift check: A000568(m+1) versus exact rooted node perspectives P(m)
+m classes(m) P(m) A000568(m+1) defect
+1 1 1 1 0
+2 1 2 2 0
+3 2 4 4 0
+4 4 12 12 0
+5 12 48 56 8
+
+Node k-depth totals (directed WL perspective colors, summed over iso classes)
+m exact d1 d2 d3 d4
+1 1 1 1 1 1
+2 2 2 2 2 2
+3 4 4 4 4 4
+4 12 10 12 12 12
+5 48 36 47 48 48
+
+Exact non-node rooted carriers, summed over iso classes
+m arc_orbits triple_orbits transitive_triple_orbits cyclic_triple_orbits cycle_conflict_pair_orbits
+1 0 0 0 0 0
+2 1 0 0 0 0
+3 4 2 1 1 0
+4 16 12 8 4 0
+5 88 88 64 24 0
+
+Local depth totals for edge and triple carriers
+m edge_d1 edge_d2 edge_d3 all_triple_d1 all_triple_d2 cyclic_d1 cyclic_d2
+1 0 0 0 0 0 0 0
+2 1 1 1 0 0 0 0
+3 4 4 4 2 2 1 1
+4 15 16 16 12 12 4 4
+5 75 88 88 86 88 24 24
+
+Key readout
+- The classic equality P(m)=A000568(m+1) holds through m=4 and first fails at m=5.
+- In LRC indexing, this is the first next-level value n=6: A000568(6)=56 while P(5)=48.
+- Under this stricter directed-WL convention, node depth reaches exact rooted node orbits by depth 3 at m=5.
+- THM-260 gives the next exact rooted value P(6)=296 versus A000568(7)=456; extending the non-node carrier table to m=6 needs a faster class generator.
+- Edge, triple, cycle, and conflict perspectives grow as different marked carriers, not as replacements for A000568.
+- Controlled forgetting suggests using these carriers only after declaring which rooted payload is preserved.

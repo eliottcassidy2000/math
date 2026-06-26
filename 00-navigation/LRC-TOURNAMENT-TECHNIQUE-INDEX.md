@@ -107,6 +107,10 @@ obligations, and proof-carrier interfaces.
   use LTT-094 and treat rows/columns as edges, cycles, sidecars, proof
   obligations, quotient fibers, or update directions rather than defaulting to
   runners.
+- Need exact non-node carrier counts for the first perspective-defect window:
+  use LTT-095 after LTT-094/LTT-093 and compare edge tail/tip sector words, triple
+  type splits, and cycle-conflict roots against pair-good and capacitor
+  sidecars.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2119,6 +2123,43 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3039, HYP-2121, HYP-2120, THM-381, THM-385, LTI-196, LTI-195, LTI-194,
   LTT-094, LTT-093, LTT-092, T1130, T1129, T1128, OPEN-Q-108.
 
+### LTT-095: Exact Edge/Triple Perspective Carrier Extension
+
+- **Move:** After LTT-093 identifies the missing A000568 payload as
+  incident/cross-coupling data, compute exact non-node rooted carriers and
+  local depth colors: directed-edge orbits, unordered triple orbits,
+  transitive triples, cyclic triples, and future disjoint cycle-conflict pairs.
+- **LRC use:** HYP-3050 records the exact first-defect carrier table, extending
+  HYP-3049's ordered-pair edge lift while using HYP-3048's
+  sidecar-observability matrix language as the encoding target.  At base size
+  `m=5`, directed-edge perspectives and triple perspectives both total `88`;
+  the triples split into `64` transitive and `24` cyclic.  Local edge depth `2`
+  and triple depth `2` recover those exact carriers.  This makes edge sectors a
+  natural two-plate sidecar for pair-good switches and residual capacitors,
+  while cyclic triples are Omega/conflict sidecars.
+- **Preserves:** Exact rooted edge and triple orbit payload, edge tail/tip
+  outside-sector words, transitive/cyclic triple kind, and enough local
+  carrier depth to test whether a proposed quotient has erased pair/cycle
+  data before the observer cut is named.
+- **Forgets / guardrail:** Edge/triple carriers still do not replace the
+  observer-extension cut from LTT-093.  They are diagnostic sidecars: a useful
+  quotient must either retain them, reconstruct them, annihilate them by a
+  dual/cocycle, or route the lost coordinate to named residual debt.
+- **Tournament Analysis:** vertices are carrier obligations rather than
+  runners: observer-extension cut, source perspective, exact rooted node,
+  edge tail/tip perspective, transitive triple, cyclic triple, conflict-pair
+  root, shallow node views, and raw A000568 class.  The switch favors retained
+  LRC predicate payload with lower hidden debt; the synthesis tournament is
+  transitive with one Hamiltonian path.
+- **Next pull:** extend exact edge/triple/cycle/conflict counts to `m=6`;
+  compare edge-sector words against pair-good blocker teeth and residual
+  capacitor IDs; compare cyclic-triple/conflict carriers against `Omega(T)`.
+- **Pointers:** HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-3040, HYP-3039,
+  HYP-2210, HYP-2120, HYP-1978, HYP-1977, THM-381, THM-385, THM-260, THM-409,
+  LTI-197, LTI-196, LTI-195, LTI-194, LTI-188, LTI-187, LTT-095, LTT-094,
+  LTT-093, LTT-092, LTT-086, LTT-085, T1132, T1131, T1130, T1129, T1127,
+  T1121, T1120.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -2160,6 +2201,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    drop-add square ID, diagonal doubling match, exact-M zeta,
    endpoint-owner strip current, owner-strip page,
    first surviving filtration page,
+   observer extension cut signature, node perspective depth,
+   edge tail/tip sector word, triple perspective kind,
+   cycle conflict pair ID,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
