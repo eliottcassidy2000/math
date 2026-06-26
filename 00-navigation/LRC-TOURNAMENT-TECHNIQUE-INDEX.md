@@ -111,6 +111,9 @@ obligations, and proof-carrier interfaces.
   use LTT-095 after LTT-094/LTT-093 and compare edge tail/tip sector words, triple
   type splits, and cycle-conflict roots against pair-good and capacitor
   sidecars.
+- Need to model the actual growth step when a new diagonal layer is added:
+  use LTT-097 with parent automorphism word-orbits, `K_{k,k+1}` position-line
+  profiles, aligned triangle-flow sidecars, and deletion-parent fibers.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -2035,12 +2038,58 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3046, HYP-3045, HYP-3044, HYP-3043, HYP-3042, HYP-3041, HYP-3040,
   HYP-3039, HYP-3038, HYP-3037, HYP-3036, HYP-3035, HYP-3034, HYP-3032,
   HYP-3031, HYP-3027, HYP-3022, HYP-3018, HYP-3013, HYP-3006, HYP-2996,
-  HYP-2995, HYP-2992, HYP-2886, THM-523, THM-566, LTI-194, LTI-193, LTI-192,
-  LTI-191, LTI-190, LTI-189, LTI-188, LTI-187, LTI-186, LTI-185, LTI-184,
+  HYP-2995, HYP-2992, HYP-2886, THM-523, THM-566, LTI-199, LTI-196, LTI-195,
+  LTI-194, LTI-193, LTI-192, LTI-191, LTI-190, LTI-189, LTI-188, LTI-187,
+  LTI-186, LTI-185, LTI-184,
   LTI-183, LTI-182, LTI-180, LTI-179, LTI-174, LTI-169, LTI-166, LTI-162,
-  LTT-092, LTT-091, LTT-090, LTT-089, LTT-088, LTT-087, LTT-086, LTT-085, LTT-084,
-  LTT-083, LTT-082, LTT-081, LTT-080, LTT-078, LTT-077, LTT-072, T1127,
-  T1126, T1125, T1124, T1123, T1122, T1121, T1120.
+  LTT-097, LTT-094, LTT-093, LTT-092, LTT-091, LTT-090, LTT-089, LTT-088,
+  LTT-087, LTT-086, LTT-085, LTT-084, LTT-083, LTT-082, LTT-081, LTT-080,
+  LTT-078, LTT-077, LTT-072, T1134, T1130, T1129, T1127, T1126, T1125,
+  T1124, T1123, T1122, T1121, T1120.
+
+### LTT-097: Diagonal-Layer Transport Tournament
+
+- **Move:** Treat tournament growth as a diagonal transport orbit DAG:
+  `parent class + diagonal word orbit under Aut(parent) -> rooted child ->
+  unrooted child sink`.  Separate the geometric `K_{k,k+1}` tile-position
+  carrier from the exponentially many binary word labels.
+- **LRC use:** HYP-3052 turns the user's `k^2+k` line prompt into an exact
+  controlled-forgetting carrier.  At `5 -> 6`, raw labelled diagonal
+  extensions are `384`, parent-automorphism word orbits are `296`, rooted
+  6-count is `296`, and all `56` unrooted sinks are reached.  This supplies
+  the incident-word sidecar that HYP-3047 showed was missing from rooted-node
+  memory; HYP-3049 identifies the same sidecar as an ordered-pair sector deck
+  whose first missing observability column is `cross_sector_orientation_word`.
+- **Preserves:** Parent class, parent automorphism quotient, diagonal incident
+  word orbit, source/sink deletion slices, aligned pair counts, newest link
+  bit, two-newest directed-triangle increment, deletion-parent fiber, and after
+  LRC lift, endpoint-owner/proof-obligation payload.
+- **Forgets / guardrail:** The `K_{k,k+1}` line count forgets full word order;
+  half-tiling counts forget the unlabelled isomorphism quotient.  The fold is a
+  converse-symmetric branch input, not a class-count identity.
+- **Algebraic law:** If `a=sum(w)` and `b=sum(u)`, then
+  `N00=(k-a)(k+1-b)`, `N01=(k-a)b`, `N10=a(k+1-b)`, `N11=ab`, hence
+  `N00*N11=N01*N10`.  The two-newest triangle increment is
+  `#{i<k : w_i=ell and u_i!=ell}` for `ell=u_k`.
+- **Tournament fingerprint:** vertices are proof carriers, not runners.
+  Pairwise observable is retained
+  `(iso, aut, deletion, line, cycle, half, owner, automaton)` payload minus
+  proof cost.  The tournament is transitive with score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, no directed 3-cycles, singleton
+  SCCs, and one Hamiltonian path:
+  `proof_obligation_automaton > endpoint_owner_packet_sheaf >
+  diagonal_transport_sidecar > deletion_parent_fiber >
+  parent_aut_layer_orbit > aligned_triangle_flow > K_position_line_profile >
+  binary_half_tiling_shadow > raw_labelled_diagonal_word`.
+- **Next pull:** Build the displayed `5 -> 6` child-class ledger with
+  deletion-parent profiles, rooted orbit counts, self-converse status, score
+  sequence, and aligned triangle-flow summaries; then join HYP-3049
+  ordered-pair sector decks to diagonal words as observer incident-sector
+  decks, testing `cross_sector_orientation_word` as the first extension column.
+- **Pointers:** HYP-3052, HYP-3049, HYP-3048, HYP-3047, HYP-3046, HYP-3043, HYP-3039, HYP-3031,
+  HYP-2685, HYP-2690, HYP-2120, HYP-2121, THM-549, THM-550, THM-381,
+  THM-385, LTI-199, LTI-196, LTI-195, LTT-097, LTT-094, LTT-093, T1134,
+  T1131, T1130, T1129, OPEN-Q-108.
 
 ### LTT-093: A000568 K-Depth Perspective Ladder Tournament
 
@@ -2199,6 +2248,52 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-198, LTI-197, LTI-196, LTI-195, LTT-096, LTT-095, LTT-094,
   LTT-093, LTT-092, LTT-089, LTT-085, LTT-048, LTT-036, LTT-006.
 
+### LTT-097: Diagonal-Layer Transport Tournament
+
+- **Move:** Treat tournament growth as a diagonal transport orbit DAG:
+  `parent class + diagonal word orbit under Aut(parent) -> rooted child ->
+  unrooted child sink`.  Separate the geometric `K_{k,k+1}` tile-position
+  carrier from the exponentially many binary word labels.
+- **LRC use:** HYP-3052 complements HYP-3051's rooted layer-extension flow by
+  retaining the unrooting/deletion-fiber sink and the half-tiling guardrail.
+  At `5 -> 6`, raw labelled diagonal extensions are `384`,
+  parent-automorphism word orbits are `296`, rooted 6-count is `296`, and all
+  `56` unrooted sinks are reached.  This supplies the incident-word sidecar
+  that HYP-3047/HYP-3050 showed was missing from rooted-node memory; HYP-3049
+  identifies the same sidecar as an ordered-pair sector deck whose first
+  missing observability column is `cross_sector_orientation_word`.
+- **Preserves:** Parent class, parent automorphism quotient, diagonal incident
+  word orbit, source/sink deletion slices, aligned pair counts, newest link
+  bit, two-newest directed-triangle increment, deletion-parent fiber, and after
+  LRC lift, endpoint-owner/proof-obligation payload.
+- **Forgets / guardrail:** The `K_{k,k+1}` line count forgets full word order;
+  half-tiling counts forget the unlabelled isomorphism quotient.  The fold is a
+  converse-symmetric branch input, not a class-count identity.
+- **Algebraic law:** If `a=sum(w)` and `b=sum(u)`, then
+  `N00=(k-a)(k+1-b)`, `N01=(k-a)b`, `N10=a(k+1-b)`, `N11=ab`, hence
+  `N00*N11=N01*N10`.  The two-newest triangle increment is
+  `#{i<k : w_i=ell and u_i!=ell}` for `ell=u_k`.
+- **Tournament fingerprint:** vertices are proof carriers, not runners.
+  Pairwise observable is retained
+  `(iso, aut, deletion, line, cycle, half, owner, automaton)` payload minus
+  proof cost.  The tournament is transitive with score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, no directed 3-cycles, singleton
+  SCCs, and one Hamiltonian path:
+  `proof_obligation_automaton > endpoint_owner_packet_sheaf >
+  diagonal_transport_sidecar > deletion_parent_fiber >
+  parent_aut_layer_orbit > aligned_triangle_flow > K_position_line_profile >
+  binary_half_tiling_shadow > raw_labelled_diagonal_word`.
+- **Next pull:** Build the displayed `5 -> 6` child-class ledger with
+  deletion-parent profiles, rooted orbit counts, self-converse status, score
+  sequence, and aligned triangle-flow summaries; then join HYP-3049
+  ordered-pair sector decks to diagonal words as observer incident-sector
+  decks, testing `cross_sector_orientation_word` as the first extension column.
+- **Pointers:** HYP-3052, HYP-3051, HYP-3050, HYP-3049, HYP-3048, HYP-3047,
+  HYP-3046, HYP-3043, HYP-3039, HYP-3031, HYP-2685, HYP-2690, HYP-2120,
+  HYP-2121, THM-549, THM-550, THM-381, THM-385, LTI-199, LTI-198, LTI-197,
+  LTI-196, LTI-195, LTT-097, LTT-096, LTT-095, LTT-094, LTT-093, T1134,
+  T1133, T1132, T1131, T1130, T1129, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -2243,6 +2338,8 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    observer extension cut signature, node perspective depth,
    edge tail/tip sector word, triple perspective kind,
    cycle conflict pair ID,
+   diagonal word orbit, K position-line profile, aligned pair counts,
+   newest link bit, deletion-parent profile,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
