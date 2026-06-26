@@ -1,0 +1,137 @@
+LRC14 PETAL THEMES AND PROOF ATTACK
+==============================================================================
+[Flower denominators next to LRC petal marks]
+  22/7-pi=+1.264489267350e-03; 31^(1/3)-pi=-2.120011984004e-04
+  1/pi=0.318309886183791; 7/22=0.318181818181818; error=+1.280680019725e-04
+  k-petal returns at theta=1/pi radians:
+    k  k/pi-nearest-integer   normalized-turns-nearest-integer
+    14 +4.563384065731e-01 -2.907517145036e-01
+    20 +3.661977236758e-01 +1.321183642338e-02
+    22 +2.817496043395e-03 +1.145330200657e-01
+    23 +3.211273822272e-01 +1.651936118869e-01
+    24 -3.605627315890e-01 +2.158542037081e-01
+    27 -4.056330730377e-01 +3.678359791716e-01
+    31 -1.323935283025e-01 -4.295216535438e-01
+    41 +5.070533353542e-02 +7.708426466792e-02
+  Readout: 22 is a radian-denominator family; 27 is the LRC14 pair-sum
+  modulus 2n-1; 41 is the first nonplanar unit Farey child 3/(14*3-1).
+
+[Minimal doubling petals h -> 2h]
+   h  row       q  gate blockers        M        status        packet
+   7  7->14  15 False (8, 9, 10, 11, 12, 13) 1/11     apex-blocked  1/11: sum=12, prod=11, det=-3, K_{1,11} planar
+   8  8->16  14 False (7, 9, 11)      2/23     nonunit-child 2/23: sum=25, prod=46, det=-5, K_{2,23} planar
+   9  9->18  14 False (5, 7, 8)       2/23     nonunit-child 2/23: sum=25, prod=46, det=-5, K_{2,23} planar
+  10  10->20  14 False (7,)            2/27     unit-child    2/27: sum=29, prod=54, det=-1, K_{2,27} planar
+  11  11->22  14 False (3, 4, 5)       2/25     nonunit-child 2/25: sum=27, prod=50, det=-3, K_{2,25} planar
+  12  12->24  14  True ()              1/14     tight-apex    1/14: sum=15, prod=14, det=0, K_{1,14} planar
+  13  13->26  14 False (1,)            2/27     unit-child    2/27: sum=29, prod=54, det=-1, K_{2,27} planar
+  Only 12->24 is both blocker-free in the GW window and marked at 1/14.
+
+[n+2 recursion probe: first valid same-parity tails]
+   h  tails tested        best mark       best row    status
+   1  [15, 17, 19]       2/17           1->15  nonunit-child
+   2  [14, 16, 18]       2/17           2->14  apex-blocked
+   3  [15, 17, 19]       2/19           3->17  nonunit-child
+   4  [14, 16, 18]       2/19           4->14  apex-blocked
+   5  [15, 17, 19]       2/21           5->19  nonunit-child
+   6  [14, 16, 18]       2/23           6->14  apex-blocked
+   7  [15, 17, 19]       1/7            7->15  loose-up
+   8  [14, 16, 18]       2/23           8->16  nonunit-child
+   9  [15, 17, 19]       1/9            9->15  loose-up
+  10  [14, 16, 18]       1/10           10->14  apex-blocked
+  11  [15, 17, 19]       1/11           11->15  loose-up
+  12  [14, 16, 18]       1/12           12->14  apex-blocked
+  13  [15, 17, 19]       1/13           13->15  loose-up
+  The +2 mode mostly falls into apex-blocked or loose-up residue lifts;
+  it does not reproduce the mark-unital 12->24 doubling petal.
+
+[AP single-replacement exact marked atlas, unique rows v<=80]
+  rows=872 status_counts={'apex-blocked': 65, 'loose-up': 392, 'nonunit-child': 409, 'tight-apex': 2, 'unit-child': 4}
+  tight=2 below_threshold=0
+    TIGHT AP      q=14 M=1/14 denoms=[14] first_fail=PASS
+    TIGHT 12->24  q=14 M=1/14 denoms=[14] first_fail=PASS
+  most common marked Farey nodes:
+    2/19    count= 119 2/19: sum=21, prod=38, det=-9, K_{2,19} planar
+    2/17    count= 111 2/17: sum=19, prod=34, det=-11, K_{2,17} planar
+    1/9     count=  66 1/9: sum=10, prod=9, det=-5, K_{1,9} planar
+    1/13    count=  63 1/13: sum=14, prod=13, det=-1, K_{1,13} planar
+    1/12    count=  63 1/12: sum=13, prod=12, det=-2, K_{1,12} planar
+    1/11    count=  63 1/11: sum=12, prod=11, det=-3, K_{1,11} planar
+    2/23    count=  62 2/23: sum=25, prod=46, det=-5, K_{2,23} planar
+    1/10    count=  62 1/10: sum=11, prod=10, det=-4, K_{1,10} planar
+    1/8     count=  62 1/8: sum=9, prod=8, det=-6, K_{1,8} planar
+    1/7     count=  57 1/7: sum=8, prod=7, det=-7, K_{1,7} planar
+    2/15    count=  52 2/15: sum=17, prod=30, det=-13, K_{2,15} planar
+    2/21    count=  14 2/21: sum=23, prod=42, det=-7, K_{2,21} planar
+
+[Single missing-site profiles for tails 14..80]
+   h  status counts                                      closest mark above 1/14
+   1  apex-blocked:5, nonunit-child:62                   1->16 M=1/9 gap=5/126 nonunit-child
+   2  apex-blocked:5, nonunit-child:62                   2->19 M=3/32 gap=5/224 nonunit-child
+   3  apex-blocked:5, nonunit-child:62                   3->14 M=2/19 gap=9/266 apex-blocked
+   4  apex-blocked:5, nonunit-child:62                   4->38 M=2/23 gap=5/322 nonunit-child
+   5  apex-blocked:5, nonunit-child:62                   5->14 M=2/21 gap=1/42 apex-blocked
+   6  apex-blocked:5, nonunit-child:62                   6->69 M=3/40 gap=1/280 nonunit-child
+   7  apex-blocked:5, loose-up:57, nonunit-child:5       7->14 M=1/11 gap=3/154 apex-blocked
+   8  apex-blocked:5, loose-up:54, nonunit-child:8       8->16 M=2/23 gap=5/322 nonunit-child
+   9  apex-blocked:5, loose-up:55, nonunit-child:7       9->18 M=2/23 gap=5/322 nonunit-child
+  10  apex-blocked:5, loose-up:56, nonunit-child:5, unit-child:1 10->20 M=2/27 gap=1/378 unit-child
+  11  apex-blocked:5, loose-up:56, nonunit-child:6       11->22 M=2/25 gap=3/350 nonunit-child
+  12  apex-blocked:5, loose-up:57, nonunit-child:2, tight-apex:1, unit-child:2 12->36 M=3/41 gap=1/574 unit-child
+  13  apex-blocked:5, loose-up:57, nonunit-child:4, unit-child:1 13->26 M=2/27 gap=1/378 unit-child
+
+[Terminal core inside the minimal-one-petal premise, bank v<=300]
+  terminal rows=4
+    AP      S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) M=1/14  status=tight-apex    defect=zero missing=() extra=() first_fail=PASS
+    12->24  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24) M=1/14  status=tight-apex    defect=single_even_dipole missing=(12,) extra=(10,) first_fail=PASS
+    10->20  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20) M=2/27  status=unit-child    defect=single_even_dipole missing=(10,) extra=(6,) first_fail=top_petal_or_ap
+    8->16   S=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 16) M=2/23  status=nonunit-child defect=single_even_dipole missing=(8,) extra=(2,) first_fail=top_petal_or_ap
+  Exact terminal implication in this bank:
+    minimal one-petal + mark-unital  <=>  AP or 12->24.
+  The remaining proof target is to turn this bounded terminal fact into
+  a lemma, or prove every tight survivor must enter this premise.
+
+[Farey/summand/multiplicand exemplars]
+  AP                           AP      q=14 M=1/14  tight-apex    1/14: sum=15, prod=14, det=0, K_{1,14} planar
+  GW                           12->24  q=14 M=1/14  tight-apex    1/14: sum=15, prod=14, det=0, K_{1,14} planar
+  apex blocked 7->14           7->14   q=15 M=1/11  apex-blocked  1/11: sum=12, prod=11, det=-3, K_{1,11} planar
+  same-residue liar 12->26     12->26  q=12 M=1/12  loose-up      1/12: sum=13, prod=12, det=-2, K_{1,12} planar
+  nonunit petal 8->16          8->16   q=14 M=2/23  nonunit-child 2/23: sum=25, prod=46, det=-5, K_{2,23} planar
+  unit child 10->20            10->20  q=14 M=2/27  unit-child    2/27: sum=29, prod=54, det=-1, K_{2,27} planar
+  nonplanar unit child 12->36  12->36  q=14 M=3/41  unit-child    3/41: sum=44, prod=123, det=-1, K_{3,41} nonplanar
+  The first child with numerator 3 is 3/41, hence the first child whose
+  complete-bipartite packet K_{3,41} contains the K_{3,3} obstruction.
+
+[Tournament Analysis: filter-strength carrier]
+  vertex pass counts:
+    punctured_q_cover       1770
+    unit_cover              2133
+    exact_unit_shell        1125
+    exact_odd_skeleton       882
+    cofinite_residue_set    3459
+    zsum_max                2988
+    complement_sum14        1149
+    even_dipole_or_zero      882
+    one_petal_or_ap          270
+    minimal_one_petal          4
+    top_petal_or_ap            2
+  directed_3cycles=0; incomparable_pairs=19
+  equal pass-set pairs=[('exact_odd_skeleton', 'even_dipole_or_zero')]
+  The mark-unital check is then applied only to the terminal core: there
+  the top-petal gate is exactly AP/GW, and exact M separates those from
+  the loose terminal petals.
+
+[Proof attack distilled]
+  1. Existing theorem-level gates: q=2..13 covered, q=14 omitted, and
+     unit residues covered. Failure here is loose-up or apex-blocked.
+  2. Existing AP-tail measure theorems THM-542/543/544 close the one-tail
+     and two-tail below-second AP collar; the petal attack should not redo
+     those exact interval certificates.
+  3. Petal lemma target: once the proof enters the minimal one-petal branch,
+     the only mark-unital terminal rows are AP and 12->24. The exact escape
+     witnesses are 8->16 with M=2/23 and 10->20 with M=2/27.
+  4. The GW window explains why 12 is special: [14-12,27-24]=[2,3] has no
+     coprime blocker for 12, while every other h has a blocker.
+  5. Remaining global work: prove every primitive tight survivor either
+     enters that one-petal branch or is killed by a multi-dipole/far-tail
+     theorem preserving the marked Farey node.
