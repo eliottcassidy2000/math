@@ -27,6 +27,40 @@ warning into the S258 readout: coarse mod-14 H degenerates at `k>=8` by
 antipodal-pair ties, exactly where the LRC14 cap rows bind.  This reinforces
 the observer-ledger choice of sector-pair/fine-scale packet sidecars over raw
 coarse tournament H as a proof vertex.
+## kind-pasteur-2026-06-27-S31ag -- arXiv:2604.23906 deep-read => paper bridge; THM-574/576; cap side SOLVED; crux isolated
+
+Owner: long session, max progress toward LRC, push hypotheses in real time, connect to incoming work,
+understand the 14-runner state vs the recently-proven 11-13 (resting on arXiv:2604.23906). Deep-read the
+paper, welded it onto the project; team (mac-mini-S60/S61/S63, codex-S255) converged in real time on my
+findings. ~13 checkpoints, 5 broadcasts. Deliverables:
+
+- **HYP-3087 (paper bridge):** LRC(14) IS the composite-(k+1) case of the paper. Prop 4.1 (polynomial
+  method) needs k+1 PRIME (field Z_{k+1}); k=13 => 14=2*7 composite => dies = the apex-7 wall (phi(14)=6
+  units; null poly b_7=prod(X-j), deg 7, 14|7!). Paper's fallback = lifts at c=2,7 = the descent 14->7->2;
+  **THM-573 = the c=7 lift** (uses LRC(<=13)=the paper as induction base). 2 reflections.
+- **THM-574 (c-lift sieve family):** |H_c|>=14-c (c<=7) => M>1/14; c=7 UNIQUELY optimal (1/7 = arc width
+  = finest one-survivor spacing).
+- **THM-576 (CAP SIDE SOLVED):** caps are a PAIRWISE AVOIDANCE prob min meas(lonely(P))=C(14-j,2)/C(14,2)
+  EXACT j<=3 (j=2 PROVED), minimizers {1}U-top; cap_k=C(k+1,2)/91 exact k>=10; binding rows dip -1/4004
+  (k=9), -1081/76440 (k=8); pattern breaks j=5 {1,5,7,8,9}. (renamed from THM-575, deferring to codex-S255.)
+  => catalyzed mac-mini-S63 (cap = pair-normalized Pascal mass, HYP-3092).
+- **HYP-3089:** pairwise co-emptiness M reflection-symmetric (=complement T->T^op) dominant-Perron, NOT
+  4I+2J -- settles CRUX-1 = reflection-Perron route. **HYP-3090:** caps = triangular C(k+1,2)/91 (also B_k
+  carries C(k+1,2)). **HYP-3093:** coarse winding tournament DEGENERATE at exactly k>=8 (apex-7 antipodal
+  pigeonhole) -- closes the coarse H-bridge, points to fine-scale H-max.
+- **Conj 7.1(13) <=> LRC(14)**, literal forall-d FALSE (=codex THM-575/HYP-2866); uniform object = lonely
+  MEASURE. EXACT raw arc <= 3/(49V) (crossover ~15 != witness V*~234, normalized frame) -- handoff-A
+  refinement to mac-mini-S61's "one constant".
+- **Cover-bound moment ladder:** degree-2 closes k>=11; k=9,10 need deg-3, k=8 deg-4 (PZ/pairwise fails at
+  consec). consec MAXIMIZES coverage P(N=0) robustly at binding k=8,9,10 (margins 0.054/0.078/0.100).
+- **Comprehensive state doc:** lrc14_state_of_the_proof_S31ag_kps.md; leads-trawl reflection (9 angles).
+
+NET: LRC(14) NOT proved. SINGLE CRUX (triangulated from ~7 angles, all hitting apex-7) = the COVERAGE
+EXTREMALITY: consec/AP maximizes 7-sector coverage = three-distance / reflection-Perron, order-3, over
+bounded clusters. Cap side SOLVED. Reductions match the paper's program; the project = the analytic
+substitute for the paper's (prohibitive) I(13,p,1) enumeration. NEXT: prove the coverage extremality
+(mac-mini reflection-Perron + Hankel dip; or three-distance majorization); Node-3 r>=7 tail.
+=> HYP-3087/3088/3089/3090/3093, THM-574/576.
 
 ## mac-mini-2026-06-27-S63 -- the covering-bound cap is a pair-normalized Pascal mass + a web of connections
 
