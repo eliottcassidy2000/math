@@ -1,34 +1,99 @@
-################################################################################################
-# LRC(14)  GAUSSIAN/BEURLING-SELBERG MINORANT FLOOR  (kpswf15, HYP-3121 TOOL 1)
-#   L(S) = int prod_s phi_s  >=  int prod_s psi_s = MAIN + RESONANCE
-#   MAIN = (int psi)^|S|,  RESONANCE = sum_{sum k_s s=0, k!=0} prod psihat(k_s)
-################################################################################################
+####################################################################################################
+# LRC(14)  GAUSSIAN/BEURLING-SELBERG MINORANT FLOOR   (kpswf15, HYP-3121 TOOL 1)
+#   L(S)=int prod_s phi_s >= int prod_s psi_s = MAIN + RESONANCE
+#   MAIN=(int psi)^|S|,  RESONANCE=sum_{sum k_s s=0,k!=0} prod psihat(k_s)
+####################################################################################################
 
-================================================================================================
-STEP 1: build + VALIDATE the minorants (true minorant <=> max_leak ~ 0, min_psi >= 0)
-================================================================================================
+====================================================================================================
+STEP 1: build + VALIDATE the C^infty mollifier minorant  psi=1_{[a+delta,b-delta]}*rho_delta
+        (TRUE minorant <=> max_leak(outside arc)=0 and min_psi>=0; int psi = 6/7 - 2 delta)
+====================================================================================================
+  delta=0.02: int psi=0.817143 (exact 0.817143)  min_psi=+0.00e+00  max_leak=0.00e+00  max_over=+3.55e-15
+           |psihat(k)| (super-poly decay): k=7:3.29e-02  k=14:1.73e-02  k=28:1.28e-03  k=56:3.49e-04  k=100:1.63e-06  k=200:4.92e-06
+  delta=0.03: int psi=0.797143 (exact 0.797143)  min_psi=+0.00e+00  max_leak=0.00e+00  max_over=+3.55e-15
+           |psihat(k)| (super-poly decay): k=7:3.83e-02  k=14:5.98e-03  k=28:3.35e-04  k=56:1.83e-04  k=100:1.42e-05  k=200:5.84e-07
+  delta=0.05: int psi=0.757143 (exact 0.757143)  min_psi=+0.00e+00  max_leak=0.00e+00  max_over=+3.55e-15
+           |psihat(k)| (super-poly decay): k=7:2.45e-02  k=14:2.18e-03  k=28:2.82e-05  k=56:4.78e-05  k=100:3.21e-06  k=200:1.27e-07
+  delta=0.07: int psi=0.717143 (exact 0.717143)  min_psi=+0.00e+00  max_leak=0.00e+00  max_over=+3.55e-15
+           |psihat(k)| (super-poly decay): k=7:1.21e-03  k=14:2.67e-04  k=28:1.69e-05  k=56:8.64e-06  k=100:3.09e-08  k=200:1.00e-08
 
-(B) C^infty compactly-supported mollifier minorant  psi = 1_{[a+delta,b-delta]} * rho_delta
-   delta=0.02: int psi = 0.817143   min_psi=-4.59e-06  max_leak(outside arc)=3.45e-06  max_over(inside)=+4.74e-06
-             |psihat(k)|: k=7:3.29e-02  k=14:1.73e-02  k=28:1.28e-03  k=56:3.49e-04  k=100:1.63e-06  k=200:4.92e-06
-   delta=0.03: int psi = 0.797143   min_psi=-7.61e-07  max_leak(outside arc)=6.14e-07  max_over(inside)=+7.92e-07
-             |psihat(k)|: k=7:3.83e-02  k=14:5.98e-03  k=28:3.35e-04  k=56:1.83e-04  k=100:1.42e-05  k=200:5.84e-07
-   delta=0.05: int psi = 0.757143   min_psi=-4.03e-08  max_leak(outside arc)=3.21e-08  max_over(inside)=+3.70e-08
-             |psihat(k)|: k=7:2.45e-02  k=14:2.18e-03  k=28:2.82e-05  k=56:4.78e-05  k=100:3.21e-06  k=200:1.27e-07
+====================================================================================================
+STEP 2: per-set MAIN / RESONANCE / FLOOR  (working minorant delta=0.03; band |k|<=56)
+        floor = int prod psi  (Gauss/midpoint quad); RESONANCE = floor - MAIN; cross-check L(S)
+====================================================================================================
+  h0 = int psi = 0.797143   MAIN = h0^13 = 5.247713e-02
+  few-apex covering bank: 41 primitive covering sets; r=2:21  r=3:16  r=4:4
 
-(A) Fejer-smoothed shrunk-arc (band-limited, degree N)  -- comparison object
-   N=14, shrink h=0.0: int psi=h0=0.857143  min_psi=+9.20e-02  max_leak=5.19e-01  max_over=+0.00e+00  (band 14)
-   N=28, shrink h=0.0: int psi=h0=0.857143  min_psi=+4.78e-02  max_leak=5.04e-01  max_over=+0.00e+00  (band 28)
-   N=56, shrink h=0.02: int psi=h0=0.817143  min_psi=+1.85e-02  max_leak=5.27e-02  max_over=+0.00e+00  (band 56)
-   N=112, shrink h=0.02: int psi=h0=0.817143  min_psi=+9.42e-03  max_leak=2.61e-02  max_over=+0.00e+00  (band 112)
+  --- representative set per r ---
+  r=2: S=[1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 56, 70]
+        R=[1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13]  Q=[4, 5]
+        L(S)=int prod phi (EXACT) = 0.042765 = 26969/630630
+        minorant floor int prod psi = 4.069342e-03   (<= L: True)
+        MAIN=5.247713e-02   RESONANCE=floor-MAIN=-4.840779e-02   [2-term part=+3.511795e-02]
+        floor>0: True    floor/MAIN ratio = 0.0775
+  r=3: S=[1, 2, 3, 4, 5, 6, 7, 9, 11, 13, 56, 70, 84]
+        R=[1, 2, 3, 4, 5, 6, 7, 9, 11, 13]  Q=[4, 5, 6]
+        L(S)=int prod phi (EXACT) = 0.037578 = 9479/252252
+        minorant floor int prod psi = 3.564999e-03   (<= L: True)
+        MAIN=5.247713e-02   RESONANCE=floor-MAIN=-4.891213e-02   [2-term part=+2.938864e-02]
+        floor>0: True    floor/MAIN ratio = 0.0679
+  r=4: S=[1, 2, 3, 4, 5, 6, 9, 11, 13, 14, 56, 70, 84]
+        R=[1, 2, 3, 4, 5, 6, 9, 11, 13]  Q=[1, 4, 5, 6]
+        L(S)=int prod phi (EXACT) = 0.077427 = 19531/252252
+        minorant floor int prod psi = 1.959066e-02   (<= L: True)
+        MAIN=5.247713e-02   RESONANCE=floor-MAIN=-3.288647e-02   [2-term part=+3.044653e-02]
+        floor>0: True    floor/MAIN ratio = 0.3733
 
-================================================================================================
-STEP 2: per-set MAIN/RESONANCE/FLOOR for r=2..6 few-apex covering sets
-   (working minorant: C^infty mollifier, delta=0.03; resonance band |k|<=BAND)
-================================================================================================
+====================================================================================================
+STEP 3: the MINORANT FLOOR over the whole r=2..6 few-apex covering bank
+====================================================================================================
+  sets analyzed: 41
+  minorant floor > 0 for 41/41 sets
+  WORST floor = 8.474062e-05  at S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 70, 84]   (MAIN=5.247713e-02, ratio 0.0016)
+  floor/MAIN ratio range: [0.0016, 1.0618]
+     r=2: worst floor = 8.474062e-05 (ratio 0.0016) at S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 70, 84]
+     r=3: worst floor = 3.564999e-03 (ratio 0.0679) at S=[1, 2, 3, 4, 5, 6, 7, 9, 11, 13, 56, 70, 84]
+     r=4: worst floor = 1.959066e-02 (ratio 0.3733) at S=[1, 2, 3, 4, 5, 6, 9, 11, 13, 14, 56, 70, 84]
 
-   few-apex covering bank: 3 primitive covering sets, r=2..6
-      r=2: 2 sets
-      r=3: 1 sets
+  => MINORANT FLOOR CONSTANT  c = min floor = 8.474062e-05 > 0  (over this bank)
 
---- representative sets per r ---
+====================================================================================================
+STEP 4: UNIFORM (speed-INDEPENDENT) resonance bound from per-coefficient sizes B1
+        |RES| <= (h0+B1)^13 - h0^13 - 13 h0^12 B1 ;  MAIN - this = uniform floor
+====================================================================================================
+  delta=0.02, band=56: h0=0.81714  B1=1.51725  B1_tail(|k|>band)=9.80e-03
+        MAIN=h0^13=7.242256e-02  full_envelope=6.112968e+04  (t=2 part=1.947546e+01)
+        MAIN - envelope = -6.112961e+04   (envelope too lossy at this delta/band)
+  delta=0.02, band=200: h0=0.81714  B1=1.52692  B1_tail(|k|>band)=2.09e-04
+        MAIN=h0^13=7.242256e-02  full_envelope=6.450291e+04  (t=2 part=1.972436e+01)
+        MAIN - envelope = -6.450284e+04   (envelope too lossy at this delta/band)
+  delta=0.03, band=56: h0=0.79714  B1=1.36967  B1_tail(|k|>band)=3.42e-03
+        MAIN=h0^13=5.247713e-02  full_envelope=2.320829e+04  (t=2 part=1.208429e+01)
+        MAIN - envelope = -2.320824e+04   (envelope too lossy at this delta/band)
+  delta=0.03, band=200: h0=0.79714  B1=1.37306  B1_tail(|k|>band)=4.52e-05
+        MAIN=h0^13=5.247713e-02  full_envelope=2.368514e+04  (t=2 part=1.214423e+01)
+        MAIN - envelope = -2.368509e+04   (envelope too lossy at this delta/band)
+  delta=0.05, band=56: h0=0.75714  B1=1.19991  B1_tail(|k|>band)=7.34e-04
+        MAIN=h0^13=2.687273e-02  full_envelope=6.177316e+03  (t=2 part=5.264413e+00)
+        MAIN - envelope = -6.177289e+03   (envelope too lossy at this delta/band)
+  delta=0.05, band=200: h0=0.75714  B1=1.20064  B1_tail(|k|>band)=4.03e-06
+        MAIN=h0^13=2.687273e-02  full_envelope=6.207395e+03  (t=2 part=5.270832e+00)
+        MAIN - envelope = -6.207368e+03   (envelope too lossy at this delta/band)
+  delta=0.07, band=56: h0=0.71714  B1=1.09995  B1_tail(|k|>band)=2.39e-04
+        MAIN=h0^13=1.327009e-02  full_envelope=2.354278e+03  (t=2 part=2.435031e+00)
+        MAIN - envelope = -2.354264e+03   (envelope too lossy at this delta/band)
+  delta=0.07, band=200: h0=0.71714  B1=1.10019  B1_tail(|k|>band)=6.78e-07
+        MAIN=h0^13=1.327009e-02  full_envelope=2.358300e+03  (t=2 part=2.436088e+00)
+        MAIN - envelope = -2.358287e+03   (envelope too lossy at this delta/band)
+
+====================================================================================================
+STEP 5: Beurling-Selberg / Fejer band-N minorant (route ii): finite band => cleanest uniform tail
+====================================================================================================
+  Fejer N=28, shrink h=0.0: int psi=h0=0.857143  min_psi=+4.78e-02  max_leak=5.11e-01  (TRUE minorant: False)
+  Fejer N=56, shrink h=0.02: int psi=h0=0.817143  min_psi=+1.85e-02  max_leak=5.29e-02  (TRUE minorant: False)
+  Fejer N=112, shrink h=0.02: int psi=h0=0.817143  min_psi=+9.42e-03  max_leak=2.64e-02  (TRUE minorant: False)
+  Fejer N=200, shrink h=0.03: int psi=h0=0.797143  min_psi=+4.78e-03  max_leak=9.71e-03  (TRUE minorant: False)
+  (Fejer-of-shrunk-arc is the band-limited object; a true band-N minorant needs the leak<=0;
+   shrink h trades int psi vs leak. The C^infty route i above is the validated true minorant.)
+
+DONE.

@@ -1,0 +1,39 @@
+==============================================================================
+Joint few-apex floor R' and danger-count PGF clearance (documented + synthetic)
+==============================================================================
+tag       |R|  r     measR     measQ      both   R prime  min|root|  min|1-z|
+r=1 doc    12  1   0.01216   0.85714   0.00536   0.51395     0.0106    0.6483
+r=2 doc    11  2   0.08382   0.73377   0.05692   0.92542     0.1407    0.7147
+r=2 alt    11  2   0.10601   0.73443   0.07474   0.96001     0.1850    0.7116
+r=3        10  3   0.09033   0.67308   0.05344   0.87891     0.1182    0.7788
+r=4         9  4   0.21480   0.56943   0.11917   0.97428     0.4739    0.8663
+r=5         8  5   0.24399   0.47413   0.10310   0.89126     0.3224    0.9823
+r=6         7  6   0.38571   0.40525   0.16661   1.06587     1.0483    1.0636
+==============================================================================
+Bidisk zero-free test: is (lambda,mu)=(1,1) strictly inside the zero-free region?
+==============================================================================
+  r=1 doc: min|Xi| on bidisk torus
+     |lam|=1.0,|mu|=1.0: min|Xi|=0.005357  [zero-free]
+     |lam|=1.1,|mu|=1.1: min|Xi|=0.042098  [zero-free]
+     |lam|=1.0,|mu|=1.5: min|Xi|=0.001955  [zero-free]
+     |lam|=1.5,|mu|=1.0: min|Xi|=0.184753  [zero-free]
+  r=2 doc: min|Xi| on bidisk torus
+     |lam|=1.0,|mu|=1.0: min|Xi|=0.056916  [zero-free]
+     |lam|=1.1,|mu|=1.1: min|Xi|=0.015328  [zero-free]
+     |lam|=1.0,|mu|=1.5: min|Xi|=0.045204  [zero-free]
+     |lam|=1.5,|mu|=1.0: min|Xi|=0.113756  [zero-free]
+  r=2 alt: min|Xi| on bidisk torus
+     |lam|=1.0,|mu|=1.0: min|Xi|=0.074743  [zero-free]
+     |lam|=1.1,|mu|=1.1: min|Xi|=0.032136  [zero-free]
+     |lam|=1.0,|mu|=1.5: min|Xi|=0.061268  [zero-free]
+     |lam|=1.5,|mu|=1.0: min|Xi|=0.105570  [zero-free]
+  r=3: min|Xi| on bidisk torus
+     |lam|=1.0,|mu|=1.0: min|Xi|=0.053435  [zero-free]
+     |lam|=1.1,|mu|=1.1: min|Xi|=0.007809  [zero-free]
+     |lam|=1.0,|mu|=1.5: min|Xi|=0.043095  [zero-free]
+     |lam|=1.5,|mu|=1.0: min|Xi|=0.153853  [zero-free]
+  r=4: min|Xi| on bidisk torus
+     |lam|=1.0,|mu|=1.0: min|Xi|=0.119165  [zero-free]
+     |lam|=1.1,|mu|=1.1: min|Xi|=0.085282  [zero-free]
+     |lam|=1.0,|mu|=1.5: min|Xi|=0.092167  [zero-free]
+     |lam|=1.5,|mu|=1.0: min|Xi|=0.002272  [zero-free]
