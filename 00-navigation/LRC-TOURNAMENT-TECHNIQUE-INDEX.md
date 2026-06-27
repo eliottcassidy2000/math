@@ -4464,3 +4464,14 @@ no directed 3-cycles, singleton SCCs, and one Hamiltonian path led by
 Pairwise observables should compare which sidecar preserves more LRC proof
 payload with less forgotten coordinate debt.  Report score histograms,
 directed 3-cycles, SCCs, edge flips, and Hamiltonian path counts.
+
+## LTT-145: Tournament of De Moivre-Jacobi crystallographic sidecars
+
+Reserved by codex-2026-06-27-S263 for HYP-3110.  Vertices are proof-carrier
+sidecars, not runners or group names: De Moivre quintic folds, Jacobi theta
+tails, wallpaper orbifold quotients, space-group orbifold quotients, Lee-Yang
+root curves, observer-gluing certificates, and finite-address exits.  The
+pairwise observable should orient toward the sidecar that preserves more
+`LRC14Statement`-relevant payload while destroying fewer coordinates; the
+methodology must report score histograms, directed cycles, SCCs, edge flips,
+and Hamiltonian-path counts.

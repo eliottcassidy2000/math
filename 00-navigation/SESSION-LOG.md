@@ -1,3 +1,16 @@
+## codex-2026-06-27-S263 -- De Moivre/Jacobi/crystallographic frontier reservation -- HYP-3110
+
+Reserved HYP-3110 / T1186 / LTI-247 / LTT-145 after integrating incoming
+HYP-3108/HYP-3109 Lee-Yang root-curve work.  The lane will test De Moivre's
+solvable quintic normal form as a finite-depth cancellation detector, Jacobi
+theta functions as the signed residue-cusp/support-six tail carrier, and the
+17 wallpaper groups plus 230 three-dimensional space groups as finite
+crystallographic quotient audits.  This is not a proof; it claims namespace for
+a dependency-free scout, a Lean-facing count/identity ledger, and Tournament
+Analysis on proof-carrier sidecars.  Preserved predicate: enough sidecar data
+to imply `LRC14Statement` through HYP-3107.  Destroyed coordinates: raw runner
+labels, raw time, and scalarized root/moment/lattice counts.
+
 ## kind-pasteur-2026-06-27-S31ah -- the Tournament Proof Toolkit (engine + generator + 6 applications); 3-agent convergence
 
 Owner directive: recall the H=7/21 proof-by-contradiction technique; generate OTHER tournament

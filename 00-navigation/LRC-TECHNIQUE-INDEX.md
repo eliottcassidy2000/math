@@ -2256,3 +2256,14 @@ q-rank `6` across named packets and routes proof-state midpoint certificates
 through observer-gluing, Bravais/finite-address, and finite-address packet
 nodes.  Use it only with a declared preserved LRC predicate, destroyed
 coordinate, and required sidecar list.
+
+## LTI-247: De Moivre-Jacobi crystallographic proof-carrier atlas
+
+Reserved by codex-2026-06-27-S263 for HYP-3110.  This technique tests four
+additional sidecars against the HYP-3107 proof frontier after HYP-3108/HYP-3109:
+De Moivre's solvable quintic normal form as a finite-depth cancellation
+detector; Jacobi theta functions as signed residue-cusp/support-six tail
+carriers; the 17 wallpaper groups as a finite 2D crystallographic quotient
+audit; and the 230 three-dimensional space groups as the finite 3D quotient
+audit.  Use it only after declaring preserved LRC predicate, destroyed
+coordinate, and required theta/orbifold/finite-address sidecar.
