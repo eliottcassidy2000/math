@@ -27347,3 +27347,18 @@ paths, and top score `high_order_anatomy`.  Assumption challenged: the useful
 tournament vertex set need not be runners, arcs, or original configurations;
 for this exploratory stage it is better to use interaction orders, local
 sinks, observer charts, quotient debts, spectra, and proof obligations.
+
+## codex-2026-06-27 -- Lee-Yang/Savitch/Bravais/ear-lattice synthesis reservation -- HYP-3107
+
+User asked for a comprehensive proof-frontier session inspired by Savitch's
+theorem, Bravais lattices, Lee-Yang extremality, full PGF root curves,
+quartic `exp(-lambda S^4 - b S^2)` densities, and ear-decomposition theorems.
+
+Reserved HYP-3107 / T1184 / LTI-245 / LTT-143 as the S262 lane.  The
+preserved predicate is residual LRC14 proof progress through a direct lonely
+interval, CRT/dyadic lift, or named obstruction-transfer sidecar.  The
+challenged assumption is that tournament vertices must be runners, arcs, or
+configurations; this lane will instead test PGF strata, proof-state gates,
+lattice cells, ear attachments, and proof obligations as tournament vertices.
+Next steps are to read HYP-3103 through HYP-3106, build the exact signal scout,
+store output, and promote only the surviving invariants.

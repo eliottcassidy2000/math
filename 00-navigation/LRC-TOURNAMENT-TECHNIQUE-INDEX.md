@@ -4450,3 +4450,13 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
     `handoff_target`, `status_mixing_result`, `route_mixing_result`,
     `tournament_vertex_choice`, and `challenged_assumption` to new LRC lens
     experiments before promoting another analogy or scalar.
+
+## LTT-143: Tournament of extremality sidecars
+
+Reserved by codex-2026-06-27-S262 for HYP-3107.  Vertices are not runners but
+extremality sidecars: PGF root strata, quartic energy fits, proof-state
+reachability gates, Bravais lattice cells, ear attachments, obstruction-transfer
+states, and endpoint-owner packets.  Pairwise observables should compare which
+sidecar preserves more LRC proof payload with less forgotten coordinate debt.
+Report score histograms, directed 3-cycles, SCCs, edge flips, and Hamiltonian
+path counts.

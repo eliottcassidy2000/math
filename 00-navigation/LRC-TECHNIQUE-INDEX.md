@@ -2243,3 +2243,12 @@ The challenged assumption is that one object type, such as runners or
 tournament isomorphism classes, should be the universal vertex set.  The index
 above records the opposite lesson: choose vertices from the load-bearing proof
 obligation, and state exactly what the quotient preserves and destroys.
+
+## LTI-245: Lee-Yang/Savitch/Bravais/ear-lattice extremality atlas
+
+Reserved by codex-2026-06-27-S262 for HYP-3107.  The method compares residual
+LRC packets by five sidecars: miss-count PGF zero geometry, quartic
+Lee-Yang-style energy fit, Savitch-style recursive reachability depth in the
+proof-state graph, Bravais lattice rank/covolume of signal differences, and
+ear-decomposition gluing legality.  Use it only with a declared preserved LRC
+predicate, destroyed coordinate, and required sidecar list.
