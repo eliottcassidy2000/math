@@ -40,15 +40,15 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S260 Miss-Count PGF Root Ledger
+## PROJECT STATUS: Stabilized at S261 Tournament Obstruction-Transfer Atlas
 
-As of **Saturday, June 27, 2026**, the newest coordination layer is **Miss-Count PGF Root Ledger (mac-mini-S66)**, built on **Component/Obstruction Proof Angles (codex-S259)**, **Observer Gluing Lean Frontier (codex-S259)**, **Observer Gluing Ledger (codex-S258)**, **THM-577 Symbolic Coverage Extremality (mac-mini-S64)**, **Tournament Certificate Engine (kps-S31ah)**, **Tournament-as-Proof-Engines / Cap / Hodge Scouts (mac-mini-S65)**, **Equivalence Triad Invariant Ledger (codex-S257)**, **Pairwise-Avoidance Cap Ledger (codex-S255)**, **Apex-Bridge V* Crossover Ledger (codex-S254)**, **Clebsch Covering-Moment Ledger (codex-S253)**, **Hurwitz Finite-Address Spine (codex-S252b)**, **Morita-Gamma Transcendental Ledger (codex-S252)**, **p-Adic Transcendental hyper-tower Carrier (codex-S251)**, **Branch-Kernel Orientation Audit (codex-S250)**, **Branch-Tournament Strong Orientation (codex-S249)**, **Sixth-Power Certificate Extension (codex-S248)**, **Lean q-Pochhammer Modular Cusp Ledger (codex-S247)**, **q-Pochhammer Modular-Cusp Principal-Part Gate (codex-S246)**, **Modular Cusp q-Pochhammer Carrier (codex-S245)**, **Route-State Median-Hull Scheduler (codex-S245)**, **Sixth-Power Collision Sidecar (codex-S244)**, **Hurwitz-Markov-Pell reservation (codex-S243)**, **Sixth-Power Collision Split (codex-S242)**, **Lean Center-Control Frontier (codex-S241)**, **Route-State Closure Median Interface (codex-S240)**, **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding ladder.
+As of **Saturday, June 27, 2026**, the newest coordination layer is **Tournament Obstruction-Transfer Atlas (codex-S261)**, built on **Miss-Count PGF Root Ledger (codex-S260)**, **Component/Obstruction Proof Angles (codex-S259)**, **Observer Gluing Lean Frontier (codex-S259)**, **Observer Gluing Ledger (codex-S258)**, **THM-577 Symbolic Coverage Extremality (mac-mini-S64)**, **Tournament Certificate Engine (kps-S31ah)**, **Tournament-as-Proof-Engines / Cap / Hodge Scouts (mac-mini-S65)**, **Equivalence Triad Invariant Ledger (codex-S257)**, **Pairwise-Avoidance Cap Ledger (codex-S255)**, **Apex-Bridge V* Crossover Ledger (codex-S254)**, **Clebsch Covering-Moment Ledger (codex-S253)**, **Hurwitz Finite-Address Spine (codex-S252b)**, **Morita-Gamma Transcendental Ledger (codex-S252)**, **p-Adic Transcendental hyper-tower Carrier (codex-S251)**, **Branch-Kernel Orientation Audit (codex-S250)**, **Branch-Tournament Strong Orientation (codex-S249)**, **Sixth-Power Certificate Extension (codex-S248)**, **Lean q-Pochhammer Modular Cusp Ledger (codex-S247)**, **q-Pochhammer Modular-Cusp Principal-Part Gate (codex-S246)**, **Modular Cusp q-Pochhammer Carrier (codex-S245)**, **Route-State Median-Hull Scheduler (codex-S245)**, **Sixth-Power Collision Sidecar (codex-S244)**, **Hurwitz-Markov-Pell reservation (codex-S243)**, **Sixth-Power Collision Split (codex-S242)**, **Lean Center-Control Frontier (codex-S241)**, **Route-State Closure Median Interface (codex-S240)**, **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding ladder.
 
-S259 formalizes the **Observer Gluing Lean Frontier (9bf59ee)** and the **Component/Obstruction Proof Angles (codex-S259)**. It provides the formalization of the **observability sheaf (HYP-3095)** and the **normal-fan/Cech/barcode component route (HYP-3101)**.
+S260 formalizes the **Miss-Count PGF Root Ledger (10acc9d)**. It integrates the analytic signal derived from the Probability Generating Function (PGF) $G_N(z) = E[z^N]$, establishing the **gK8/coverage extremizer** as having zero real roots and identifying the `#real=0` stratum as the locus of extremality.
 
-S260 formalizes the **Miss-Count PGF Root Ledger (10acc9d)**. It integrates a new analytic signal derived from the **Probability Generating Function (PGF) $G_N(z) = E[z^N]$** of the miss-count distribution. This layer establishes that the **gK8/coverage extremizer (consec_8)** is characterized by **zero real roots** (existing as three complex conjugate pairs), indicating maximal sector correlation and bimodality. This analytic fingerprint stratifies the configuration space, with the extremizer residing in the `#real=0` stratum, while non-extremal or random configurations carry real roots. This provides a **Lee-Yang zero-confinement** interpretation of LRC extremality: the coverage extremum is not just a scalar peak but an analytic singularity where real roots are excluded from the PGF, formalizing the transition from "noise" to "structured obstruction."
+S261 formalizes the **Tournament Obstruction-Transfer Atlas (56902a3)**. It provides the formal "functorial" bridge between creative tournament subproblems and the LRC14 proof stack via the **obstruction-transfer atlas (HYP-3105)**. This layer refines the proof stack by establishing the "proof-by-transfer" pattern: mapping an LRC predicate to a faithful tournament carrier, identifying a forbidden spectrum (e.g., H=7, H=21 gaps) or forced expansion (clique-like $\Omega$ components), and using the resulting hard obstruction to certify impossibility or optimality. It establishes that no tournament analogy is proof-safe until its transfer functor explicitly names the preserved predicate and the destroyed coordinate. This state integrates the **exchange-tournament local-minimum audit (S65)** as a finite-check scheduler for cap-minimizers and the **cycle-census hole (baby-Hodge)** as a distinct spectral obstruction layer, independent of scalar H.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, and **miss-count PGF root signatures**.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, and **tournament obstruction-transfer certificates**.
 
 The Henselian unit rule (updated):
 ```text
@@ -64,7 +64,7 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S260 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S261 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-state
@@ -75,12 +75,13 @@ finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge
 V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence
 Triad forgetting-cost tuples, Pascal pair-mass addresses, observer-gluing
 packets, chart overlap certificates, normal-fan/Cech/barcode component packets,
-first-obstruction cocycle syndromes, and miss-count PGF root signatures to
-preserve p-adic stability of the global packet sheaf by preventing misuse of
-untyped motifs, degenerate limiting witnesses, sequence-count scalars,
-positivity-only cohomology, non-median route compatibility, unnamed owner/root
-loss, non-unique route-triple centers, unaligned disciplinary pullback indices,
-unsigned polymer/current quotients, unclosed packet/route/certificate/discharge
+first-obstruction cocycle syndromes, miss-count PGF root signatures, and
+tournament obstruction-transfer certificates to preserve p-adic stability of
+the global packet sheaf by preventing misuse of untyped motifs, degenerate
+limiting witnesses, sequence-count scalars, positivity-only cohomology,
+non-median route compatibility, unnamed owner/root loss, non-unique
+route-triple centers, unaligned disciplinary pullback indices, unsigned
+polymer/current quotients, unclosed packet/route/certificate/discharge
 medians, unvalidated Diophantine collision arity, q-series certificates without
 a formal principal-part gate, equal-power sums without tuple-rank-residue
 certificates, naked bridges in contracted proof corridors, hyper-tower limits
@@ -92,8 +93,9 @@ structures without verified pairwise avoidance minimizers, structural
 quotients without verified forgetting-cost invariants, Pascal shadows without
 pair-mass sidecars, observer charts without gluing maps, chart overlaps without
 certificates, component claims without normal-fan/Cech/barcode packets,
-quotient gluing without first-obstruction syndromes, or analytic extremality
-claims without PGF root signatures.
+quotient gluing without first-obstruction syndromes, analytic extremality
+claims without PGF root signatures, or tournament analogies without
+obstruction-transfer certificates.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -128,25 +130,26 @@ transcendental unit, the Hurwitz finite-address unit, the Clebsch
 covering-moment unit, the Apex-Bridge V* crossover unit, the
 Pairwise-Avoidance Cap unit, the Equivalence Triad invariant unit, the Pascal
 pair-mass unit, the observer-gluing unit, the chart overlap unit, the
-normal-fan component unit, the first-obstruction syndrome unit, and the
-miss-count PGF root unit. The S235-S260 sequence prevents spectral leakage by
-requiring route-triple centers to be unique and promoted only after legal
-closure, named debt exits, validated collision arity, a named modular cusp
-principal part, a formally verified Lean modular cusp ledger, tuple/rank/residue
-equal-power certificates, a protected branch-kernel orientation, verified
-p-adic hyper-tower limits, Morita-gamma transcendental lifts, finite-address
-Hurwitz seeds, reflection-Perron covering certificates, induction-base V*
-crossover signatures, verified pairwise avoidance minimizers, verified
-forgetting-cost invariants, Pascal pair-mass sidecars, observer gluing packets,
-chart overlap certificates, normal-fan component packets, first-obstruction
-syndrome packets, or PGF root signatures are attached.
+normal-fan component unit, the first-obstruction syndrome unit, the
+miss-count PGF root unit, and the tournament obstruction-transfer unit. The
+S235-S261 sequence prevents spectral leakage by requiring route-triple centers
+to be unique and promoted only after legal closure, named debt exits, validated
+collision arity, a named modular cusp principal part, a formally verified Lean
+modular cusp ledger, tuple/rank/residue equal-power certificates, a protected
+branch-kernel orientation, verified p-adic hyper-tower limits, Morita-gamma
+transcendental lifts, finite-address Hurwitz seeds, reflection-Perron covering
+certificates, induction-base V* crossover signatures, verified pairwise
+avoidance minimizers, verified forgetting-cost invariants, Pascal pair-mass
+sidecars, observer gluing packets, chart overlap certificates, normal-fan
+component packets, first-obstruction syndrome packets, PGF root signatures, or
+tournament obstruction-transfer certificates are attached.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S260 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S261 transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
@@ -158,31 +161,56 @@ the Morita-gamma transcendental law, the Hurwitz finite-address law, the
 Clebsch covering-moment law, the Apex-Bridge V* crossover law, the
 Pairwise-Avoidance Cap law, the Equivalence Triad invariant law, the Pascal
 pair-mass law, the observer-gluing law, the chart overlap law, the normal-fan
-component law, the first-obstruction syndrome law, and the miss-count PGF root
-law (preserving the recurrence algebraic unit, Poincare recurrence unit,
-automatic gap carrier unit, automatic lacunary filter unit, gap automaton
-carrier unit, perfect-number packet unit, route-purity unit, binding-pair
-switch unit, automatic fiber zipper unit, arc-Cech nerve unit, safe-component
-stalk unit, Haar tile stabilizer unit, residual tooth unit, residual capacitor
-unit, hidden statement unit, owner-strip filtration unit, comprehensive lens
-unit, endpoint owner transfer unit, tournament matrix unit, perspective-depth
-sidecar unit, edge perspective unit, edge/triple carrier unit, rooted extension
-unit, diagonal transport unit, fixed-path diagonal-flow unit, observer-cut
-payload unit, value-origin ledger unit, hyperbolic reciprocal sidecar unit,
-geometry-regime unit, Roth-Minkowski unit, Moser/fibbinary unit, Toeplitz
-square-peg unit, partial-cube bridge-rank unit, Hodge-cycle unit,
-Desargues-median unit, owner/root sidecar unit, medianized route-center unit,
-cross-carrier resonance unit, polymer/Dirichlet boundary-energy unit,
-route-triple center-control unit, route-state closure unit, sixth-power
-collision unit, modular cusp principal-part unit, Lean modular cusp unit,
-sixth-power certificate extension unit, branch-kernel orientation unit, p-adic
-hyper-tower unit, Morita-gamma transcendental unit, Hurwitz finite-address unit,
-Clebsch covering-moment unit, Apex-Bridge V* crossover unit, Pairwise-Avoidance
-Cap unit, Equivalence Triad invariant unit, Pascal pair-mass unit,
-observer-gluing unit, chart overlap unit, normal-fan component unit,
-first-obstruction syndrome unit, and miss-count PGF root unit alongside mu
-approx 1.451).
+component law, the first-obstruction syndrome law, the miss-count PGF root
+law, and the tournament obstruction-transfer law (preserving the recurrence
+algebraic unit, Poincare recurrence unit, automatic gap carrier unit, automatic
+lacunary filter unit, gap automaton carrier unit, perfect-number packet unit,
+route-purity unit, binding-pair switch unit, automatic fiber zipper unit,
+arc-Cech nerve unit, safe-component stalk unit, Haar tile stabilizer unit,
+residual tooth unit, residual capacitor unit, hidden statement unit,
+owner-strip filtration unit, comprehensive lens unit, endpoint owner transfer
+unit, tournament matrix unit, perspective-depth sidecar unit, edge perspective
+unit, edge/triple carrier unit, rooted extension unit, diagonal transport unit,
+fixed-path diagonal-flow unit, observer-cut payload unit, value-origin ledger
+unit, hyperbolic reciprocal sidecar unit, geometry-regime unit, Roth-Minkowski
+unit, Moser/fibbinary unit, Toeplitz square-peg unit, partial-cube bridge-rank
+unit, Hodge-cycle unit, Desargues-median unit, owner/root sidecar unit,
+medianized route-center unit, cross-carrier resonance unit, polymer/Dirichlet
+boundary-energy unit, route-triple center-control unit, route-state closure
+unit, sixth-power collision unit, modular cusp principal-part unit, Lean modular
+cusp unit, sixth-power certificate extension unit, branch-kernel orientation
+unit, p-adic hyper-tower unit, Morita-gamma transcendental unit, Hurwitz
+finite-address unit, Clebsch covering-moment unit, Apex-Bridge V* crossover
+unit, Pairwise-Avoidance Cap unit, Equivalence Triad invariant unit, Pascal
+pair-mass unit, observer-gluing unit, chart overlap unit, normal-fan component
+unit, first-obstruction syndrome unit, miss-count PGF root unit, and tournament
+obstruction-transfer unit alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S261 -- Tournament Obstruction-Transfer Atlas (checkpoint)
+
+Integrated codex-s259b/HYP-3105/T1182/LTI-243/LTT-141. The Tournament 
+Obstruction-Transfer Atlas and the "proof-by-transfer" pattern are now formal
+proof carriers.
+
+### 1. Obstruction-Transfer Functor (HYP-3105)
+Formalizes the "functorial" bridge between tournament subproblems and the 
+LRC14 proof sheaf. It establishes that a tournament analogy is only valid 
+when it explicitly names the preserved LRC predicate and the coordinate 
+destroyed in the transfer.
+
+### 2. Forbidden-Spectrum Certificates
+Identifies persistent gaps in the tournament spectrum (e.g., H=7, H=21) and 
+forced expansion properties (clique-like $\Omega$ components) as hard 
+impossibility certificates. This turns the "shadow" of tournament statistics 
+into a rigorous contradiction engine.
+
+### 3. Exchange-Tournament Local-Minimum Audit
+Integrates the exchange-tournament findings from S65, establishing that 
+cap-side optimality can be reduced to a finite audit of local minima when 
+transitivity fails. This provides a practical route for THM-577 validation.
 
 ---
 
@@ -190,27 +218,3 @@ approx 1.451).
 
 Integrated mac-mini-2026-06-27-S66/T1181/LTI-241/LTT-139. The Miss-Count PGF 
 Root Ledger and its analytic signal are now formal proof carriers.
-
-### 1. PGF Root Extremality Signature
-Formalizes the discovery that the gK8/coverage extremizer (`consec_8`) has 
-**zero real roots** in its miss-count PGF $G_N(z)$, existing as complex 
-conjugate pairs. This signal separates the extremal "sector-correlated" 
-configuration from non-extremal configurations (which carry real roots).
-
-### 2. Config-Space Stratification
-Introduces a stratification of the configuration space based on the number of
-real roots (`#real`). The extremal configuration resides in the `#real=0` 
-stratum, providing a geometric boundary for identifying extremality.
-
-### 3. Lee-Yang Zero-Confinement Reading
-Provides the "Lee-Yang" interpretation of LRC extremality: the coverage 
-extremum is characterized by the exclusion of real roots from the generating 
-function, mapping analytic stability to structural optimality.
-
----
-
-## codex-S259 -- Observer Gluing Lean Frontier (checkpoint)
-
-Integrated HYP-3095/HYP-3096/HYP-3098/T1177/LTI-238/LTT-136. The Observer Gluing Lean
-Frontier and the observability sheaf formalization are now formal proof 
-carriers.
