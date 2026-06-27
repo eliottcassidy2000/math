@@ -169,6 +169,32 @@ Low-margin edges cluster around Bravais/reflection/coverage/obstruction
 sidecars, so those are the next place to test edge flips on the full residual
 bank.
 
+The rebased S262 script now also includes the bounded `{0}+7` scan over all
+`C(13,7)=1716` rows.  This adds the missing full-bank Bravais and strict-local
+descent checks to the named-packet map:
+
+```text
+corr(p0,nearest_root)      = +0.899
+corr(p0,real_roots)        = -0.483
+corr(p0,Bravais_peak)      = -0.430
+corr(p0,residue_entropy)   = +0.541
+corr(p0,phi4_lambda)       = -0.696
+
+#real=0: count=290,  mean_p0=0.10551, max_p0=0.32721
+#real=2: count=1426, mean_p0=0.05732, max_p0=0.20833
+
+j=3,n=13 strict-descent traps: 11, reachable midpoint depth 3
+j=4,n=13 strict-descent traps: 14, reachable midpoint depth 3
+j=5,n=13 strict-descent traps: 3,  reachable midpoint depth 3
+j=5,n=16 strict-descent traps: 14, reachable midpoint depth 3
+```
+
+The extra bank-level lesson is sharper than the named-packet Bravais-rank
+warning: in this bounded bank, high `p0` prefers reciprocal flatness and high
+residue entropy, not large Bragg peaks.  The Lee-Yang root wall is value-facing;
+Savitch and ears are proof-facing sidecars that explain when local descent is
+compressible and when a named trap needs a nonlocal packet.
+
 ## Current Hypotheses
 
 Strengthened:
@@ -180,6 +206,9 @@ Strengthened:
 3. Ear/state-transition data is a plausible observer-gluing sidecar and should
    be tested on HYP-2963 packets before any raw H=7/H=21 tournament analogy is
    reused.
+4. Bounded-bank residue spectra suggest a reciprocal-flat Bravais phase for
+   coverage extremizers; Bragg-like residue crystallinity is a warning signal,
+   not a maximizer certificate.
 
 Still speculative:
 

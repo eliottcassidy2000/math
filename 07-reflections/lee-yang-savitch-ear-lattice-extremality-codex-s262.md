@@ -18,6 +18,12 @@ it has to name the sidecar that restores the lost information.  This matches
 the lesson of HYP-3106: controlled forgetting is legal only when the next
 operation's required sidecar is retained.
 
+The bounded-bank appendix corrects the first naive lattice guess.  On all
+`{0}+7` rows from `1..13`, high `p0` correlates negatively with the largest
+mod-7 Bravais peak and positively with residue entropy.  The lattice signal is
+therefore reciprocal flatness plus nonlinear sector correlation, not a
+crystalline Bragg peak.
+
 The second map is a proof-frontier map.  HYP-3107 exposes open Lean fields;
 Savitch's theorem suggests looking at reachability in that proof-state graph
 through recursive midpoint certificates.  In the scout, paths from raw packets

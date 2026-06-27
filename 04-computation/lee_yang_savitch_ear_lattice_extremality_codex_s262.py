@@ -33,6 +33,9 @@ import numpy as np
 sys.stdout.reconfigure(line_buffering=True)
 
 
+Q = 7
+
+
 def fstr(x: F) -> str:
     return str(x.numerator) if x.denominator == 1 else f"{x.numerator}/{x.denominator}"
 
@@ -72,6 +75,23 @@ class PacketFeatures:
     k4_subgraphs: int
     perron_gap: float
     reflection_ok: bool
+
+
+@dataclass
+class BankFeature:
+    row: tuple[int, ...]
+    p0: float
+    n_real: int
+    nearest_root_abs: float
+    apex7_angle_gap: float
+    phi4_lambda: float
+    phi4_b: float
+    bravais_peak: float
+    bravais_mode: int
+    residue_entropy: float
+    state_count: int
+    ear_rank: int
+    savitch_depth: int
 
 
 PACKETS = [
@@ -581,6 +601,216 @@ def print_extreme_findings(features: list[PacketFeatures]) -> None:
     print("  closest apex-7 angle packets:", ", ".join(f"{f.packet.name}:{f.apex7_angle_gap:.2f}deg" for f in best_gap))
 
 
+def bank_phi4_fit(q: list[F]) -> tuple[float, float, float]:
+    """Fit symmetrized q around t=3 to exp(c - b*s^2 - lambda*s^4)."""
+    vals = [
+        float(q[3]),
+        0.5 * (float(q[2]) + float(q[4])),
+        0.5 * (float(q[1]) + float(q[5])),
+        0.5 * (float(q[0]) + float(q[6])),
+    ]
+    xs = np.array([[1.0, float(s * s), float(s**4)] for s in range(4)])
+    ys = np.array([math.log(max(v, 1e-300)) for v in vals])
+    a0, a2, a4 = np.linalg.lstsq(xs, ys, rcond=None)[0]
+    pred = xs @ np.array([a0, a2, a4])
+    return float(-a4), float(-a2), float(np.linalg.norm(pred - ys))
+
+
+def bravais_residue_signal(row: tuple[int, ...]) -> tuple[float, int, float]:
+    residues = [e % Q for e in row]
+    counts = Counter(residues)
+    probs = [counts[r] / len(row) for r in range(Q)]
+    entropy = -sum(p * math.log(p) for p in probs if p) / math.log(Q)
+    peaks: dict[int, float] = {}
+    for m in range(1, Q):
+        z = sum(np.exp(2j * np.pi * m * r / Q) for r in residues)
+        peaks[m] = float((abs(z) / len(row)) ** 2)
+    mode, peak = max(peaks.items(), key=lambda item: item[1])
+    return peak, mode, entropy
+
+
+def miss_graph_features(cells: list[tuple[F, F, int]]) -> tuple[int, int, int]:
+    seq = [mask.bit_count() for _, _, mask in cells]
+    vertices = set(seq)
+    directed = {(a, b) for a, b in zip(seq, seq[1:] + seq[:1]) if a != b}
+    undirected = {tuple(sorted(edge)) for edge in directed}
+    if not vertices:
+        return 0, 0, -1
+    todo = set(vertices)
+    components = 0
+    while todo:
+        components += 1
+        stack = [todo.pop()]
+        while stack:
+            cur = stack.pop()
+            for a, b in undirected:
+                nxt = b if a == cur else a if b == cur else None
+                if nxt in todo:
+                    todo.remove(nxt)
+                    stack.append(nxt)
+    rev: dict[int, set[int]] = defaultdict(set)
+    for a, b in directed:
+        rev[b].add(a)
+    if 0 not in vertices:
+        depth = -1
+    else:
+        dist = {0: 0}
+        q = deque([0])
+        while q:
+            cur = q.popleft()
+            for nxt in rev[cur]:
+                if nxt not in dist:
+                    dist[nxt] = dist[cur] + 1
+                    q.append(nxt)
+        maxdist = max(dist.values()) if len(dist) == len(vertices) else -1
+        depth = math.ceil(math.log2(maxdist + 1)) if maxdist > 0 else maxdist
+    return len(vertices), len(undirected) - len(vertices) + components, depth
+
+
+def bank_feature(row: tuple[int, ...]) -> BankFeature:
+    q, cells, _ = cell_profile(row)
+    roots = pgf_roots(q)
+    n_real, nearest, _, angle_gap = root_features(roots)
+    lam, b, _ = bank_phi4_fit(q)
+    peak, mode, entropy = bravais_residue_signal(row)
+    state_count, ear_rank, depth = miss_graph_features(cells)
+    return BankFeature(
+        row=row,
+        p0=float(q[0]),
+        n_real=n_real,
+        nearest_root_abs=nearest,
+        apex7_angle_gap=angle_gap,
+        phi4_lambda=lam,
+        phi4_b=b,
+        bravais_peak=peak,
+        bravais_mode=mode,
+        residue_entropy=entropy,
+        state_count=state_count,
+        ear_rank=ear_rank,
+        savitch_depth=depth,
+    )
+
+
+def bounded_bank(limit: int = 13) -> list[BankFeature]:
+    return [bank_feature((0,) + combo) for combo in itertools.combinations(range(1, limit + 1), 7)]
+
+
+def pearson(xs: list[float], ys: list[float]) -> float:
+    x = np.array(xs, dtype=float)
+    y = np.array(ys, dtype=float)
+    if len(x) < 2 or float(np.std(x)) == 0.0 or float(np.std(y)) == 0.0:
+        return float("nan")
+    return float(np.corrcoef(x, y)[0, 1])
+
+
+def norm_circle(x: F) -> F:
+    f = x % 1
+    return min(f, 1 - f)
+
+
+def lonely_measure(speeds: tuple[int, ...], modulus: int = 14) -> F:
+    speeds = tuple(sorted(set(p for p in speeds if p)))
+    if not speeds:
+        return F(1)
+    cuts = {F(0), F(1)}
+    for p in speeds:
+        for a in range(p + 1):
+            for sign in (-1, 1):
+                x = F(a, p) + sign * F(1, modulus * p)
+                if 0 <= x <= 1:
+                    cuts.add(x)
+    total = F(0)
+    ordered = sorted(cuts)
+    for a, b in zip(ordered, ordered[1:]):
+        if b <= a:
+            continue
+        mid = (a + b) / 2
+        if all(norm_circle(p * mid) >= F(1, modulus) for p in speeds):
+            total += b - a
+    return total
+
+
+def local_exchange_savitch(j: int, n: int) -> tuple[int, int, int, int]:
+    configs = list(itertools.combinations(range(1, n + 1), j))
+    values = {c: lonely_measure(c) for c in configs}
+    best = min(values.values())
+    goals = {c for c, v in values.items() if v == best}
+    adj: dict[tuple[int, ...], list[tuple[int, ...]]] = {c: [] for c in configs}
+    for cfg in configs:
+        s = set(cfg)
+        for old in cfg:
+            for new in range(1, n + 1):
+                if new in s:
+                    continue
+                nxt = tuple(sorted((s - {old}) | {new}))
+                if values[nxt] < values[cfg]:
+                    adj[cfg].append(nxt)
+    rev: dict[tuple[int, ...], list[tuple[int, ...]]] = defaultdict(list)
+    for a, outs in adj.items():
+        for b in outs:
+            rev[b].append(a)
+    q = deque(goals)
+    dist = {g: 0 for g in goals}
+    while q:
+        cur = q.popleft()
+        for prev in rev[cur]:
+            if prev not in dist:
+                dist[prev] = dist[cur] + 1
+                q.append(prev)
+    maxdist = max(dist.values()) if dist else -1
+    depth = math.ceil(math.log2(maxdist + 1)) if maxdist > 0 else maxdist
+    return len(configs), sum(len(v) for v in adj.values()), len(configs) - len(dist), depth
+
+
+def print_bounded_bank_appendix() -> None:
+    print("\n" + "=" * 100)
+    print("MAP 1B: BOUNDED BANK SCAN -- ALL ROWS {0}+7 SPEEDS FROM 1..13")
+    print("=" * 100)
+    bank = bounded_bank(13)
+    p0s = [r.p0 for r in bank]
+    print(f"  rows={len(bank)}")
+    print("  top p0 rows:")
+    for r in sorted(bank, key=lambda x: x.p0, reverse=True)[:5]:
+        print(
+            f"    {r.row} p0={r.p0:.6f} #real={r.n_real} nearest={r.nearest_root_abs:.3f} "
+            f"phi4_b={r.phi4_b:+.3f} bragg=m{r.bravais_mode}:{r.bravais_peak:.3f} "
+            f"ear={r.ear_rank} sav={r.savitch_depth}"
+        )
+    metrics = {
+        "real_roots": [float(r.n_real) for r in bank],
+        "nearest_root": [r.nearest_root_abs for r in bank],
+        "angle_err_to_7": [r.apex7_angle_gap for r in bank],
+        "phi4_b": [r.phi4_b for r in bank],
+        "phi4_lambda": [r.phi4_lambda for r in bank],
+        "bravais_peak": [r.bravais_peak for r in bank],
+        "residue_entropy": [r.residue_entropy for r in bank],
+        "state_count": [float(r.state_count) for r in bank],
+        "ear_rank": [float(r.ear_rank) for r in bank],
+        "savitch_depth": [float(r.savitch_depth) for r in bank],
+    }
+    print("  correlations with p0:")
+    for name, vals in metrics.items():
+        print(f"    corr(p0,{name})={pearson(p0s, vals):+.3f}")
+    strata: dict[int, list[float]] = defaultdict(list)
+    for r in bank:
+        strata[r.n_real].append(r.p0)
+    print("  real-root strata p0 ranges:")
+    for rr in sorted(strata):
+        vals = strata[rr]
+        print(f"    #real={rr}: count={len(vals):4d} mean_p0={sum(vals)/len(vals):.5f} max_p0={max(vals):.5f}")
+
+    print("\n" + "=" * 100)
+    print("MAP 2C: STRICT DOWNHILL ONE-SWAP SAVITCH CHECK")
+    print("=" * 100)
+    for j, n in [(3, 13), (4, 13), (5, 13), (5, 16)]:
+        nodes, edges, unreachable, depth = local_exchange_savitch(j, n)
+        print(
+            f"  j={j} n={n}: configs={nodes} downhill_edges={edges} "
+            f"cannot_reach_global_by_strict_descent={unreachable} "
+            f"Savitch_midpoint_depth_for_reachable={depth}"
+        )
+
+
 def print_savitch_map() -> None:
     print("\n" + "=" * 100)
     print("MAP 2A: SAVITCH-STYLE REACHABILITY THROUGH CURRENT LRC14 FRONTIER OBLIGATIONS")
@@ -750,6 +980,7 @@ def main() -> None:
     print_packet_map(features)
     print_bravais(features)
     print_extreme_findings(features)
+    print_bounded_bank_appendix()
     print_savitch_map()
     print_sidecar_tournament()
     print_hypotheses(features)

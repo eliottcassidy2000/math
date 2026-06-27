@@ -2,6 +2,24 @@
 
 **OPEN-Q-108 S262 Lee-Yang/Savitch/ear-lattice sidecar addendum:**
 HYP-3108 completes the reserved Lee-Yang/Savitch/Bravais/ear-lattice lane by joining HYP-3103 PGF roots, HYP-3104 maximizer currencies, HYP-3105 obstruction transfer, HYP-3106 perspective functors, and HYP-3107 Lean proof-frontier fields.  The miss-count PGF root curve is now a serious candidate sidecar for `CoverageExtremality`: deterministic anchored-sample correlations are `corr(#real,q0+q6)=-0.372` and `corr(nearest-root-modulus,q0+q6)=+0.952`, while consecutive `k=8..13` rows stay in the all-complex stratum and their root arguments drift near 7th-root angles (`k=11` middle pair at `102.9°`).  The quartic `exp(-lambda S^4-bS^2)` fit is explicitly downgraded to stress-test status: `corr(phi4-lambda,L_yK8)=+0.690` in the root-only sample, but the sign/strength is less stable across named packets.  New sidecars to attach to packet ledgers: `lee_yang_root_curve`, `bravais_relation_address`, `ear_state_graph`, and `savitch_terminal_kind`.  Open task: join these columns to HYP-2963/HYP-3107 residual rows and test whether root confinement separates bounded-core local minima, exchange traps, and observer-gluing packets without losing endpoint owners or exact safe intervals. -> HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, OPEN-Q-108.
+**OPEN-Q-108 S262 root/lattice/reachability signal addendum:**
+HYP-3108 adds two maps to the LRC14 frontier.  The coefficient-root map tracks
+the full miss-count PGF `G_N(z)=sum q_t z^t`, nearest Lee-Yang zero radius,
+real-root stratum, root-angle error to `7`th-root directions, Bravais residue
+entropy/structure factor, and the phi4 phase tuple `(lambda,b,residual)`.
+The state-reachability map tracks the sector-sweep mask graph, miss-count
+transition graph, Savitch midpoint depth, strict-descent trap count, and
+ear-rank sidecar data.
+
+Open task: attach these fields to the finite-address branch ledger and rerun
+them on the THM-573 `<=6` multiples-of-7 residual, the HYP-3101 component
+packets, HYP-3102 first-obstruction syndromes, HYP-3105 obstruction-transfer
+rows, and HYP-2963 packet-bank representatives.  A residual packet should
+hit a root wall, lattice wall, compressed reachability path, or named
+ear/sidecar debt before a new scalar invariant is introduced. -> HYP-3108,
+HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101,
+HYP-3096, HYP-3095, HYP-3093, HYP-3085, THM-573, THM-577, LTI-246,
+LTT-144, T1185, OPEN-Q-108.
 
 **OPEN-Q-108 S259b tournament obstruction-transfer addendum:**
 HYP-3105 turns the H=7/H=21 contradiction pattern into a reusable

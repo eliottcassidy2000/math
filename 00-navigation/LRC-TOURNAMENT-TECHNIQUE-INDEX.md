@@ -158,6 +158,10 @@ obligations, and proof-carrier interfaces.
   use LTT-143 after LTT-141/LTT-140/LTT-136/LTT-132 and make proof nodes the vertices:
   solved gates, cap ledger, coverage extremality, fine-scale winding transfer,
   residual classifier, packet producer, and terminal `Mreach` readout.
+- Need to compare Lee-Yang roots, Bravais residue spectra, Savitch reachability,
+  and ear-decomposition sidecars for an LRC packet:
+  use LTT-144 after LTT-143/LTT-141/LTT-140/LTT-138 and make signal families,
+  sector-sweep states, local traps, and proof-map obligations the vertices.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -4453,17 +4457,34 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 
 ## LTT-144: Tournament of extremality sidecars
 
-Used by codex-2026-06-27-S262 for HYP-3108 after incoming HYP-3107 claimed
-LTT-143 for the Lean proof-frontier ledger.  Vertices are not runners but
-extremality sidecars: PGF root strata, quartic energy fits, proof-state
-reachability gates, Bravais lattice cells, ear attachments,
-obstruction-transfer states, and endpoint-owner packets.  The S262 sidecar
-tournament has score histogram `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}`,
-no directed 3-cycles, singleton SCCs, and one Hamiltonian path led by
-`savitch_reachability -> ear_decomposition_state_graph -> pgf_zero_curve`.
-Pairwise observables should compare which sidecar preserves more LRC proof
-payload with less forgotten coordinate debt.  Report score histograms,
-directed 3-cycles, SCCs, edge flips, and Hamiltonian path counts.
+- **Move:** Treat analytic/lattice/proof-decomposition signals as tournament
+  vertices.  Compare the full miss-count PGF curve, Lee-Yang root data,
+  Bravais residue structure, phi4 phase shape, Savitch reachability, ear
+  decomposition, exchange traps, observer-gluing payloads, and raw `p0` by
+  which one retains more proof-relevant coordinates.
+- **LRC use:** HYP-3108 applies this to named LRC packets and the bounded
+  `{0}+7` bank from `1..13`.  The named-packet sidecar tournament has score
+  histogram `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}`, no directed 3-cycles,
+  singleton SCCs, and one Hamiltonian path led by
+  `savitch_reachability -> ear_decomposition_state_graph -> pgf_zero_curve`.
+  The bounded-bank appendix adds the scalar-warning readout: high `p0` is
+  no-real-root and reciprocal-flat, while large Bravais peaks mark residue
+  crystallinity rather than the maximizer.
+- **Preserves:** PGF coefficients, nearest-zero radius, real-root stratum,
+  root-angle error to `7`th-root directions, residue entropy, reciprocal
+  structure factor, phi4 tuple, sector-sweep mask count, miss-count transition
+  graph, Savitch midpoint depth, strict-descent trap count, and ear-rank.
+- **Forgets / guardrail:** no single signal is terminal.  A no-real-root PGF,
+  flat Bravais spectrum, or small Savitch depth is theorem-facing only after it
+  is attached to a valid LRC packet exit or named residual debt.
+- **Tournament vertices:** signal families, sector masks, miss-count states,
+  local exchange traps, recursive midpoint certificates, ear sidecars, and
+  finite-address proof obligations, not runners or raw residues.
+- **Pointers:** HYP-3108, HYP-3109, HYP-3107, HYP-3106, HYP-3105, HYP-3104,
+  HYP-3103, HYP-3102, HYP-3101, HYP-3096, HYP-3095, HYP-3093, HYP-3085,
+  THM-573, THM-577, LTI-246, LTI-245, LTI-244, LTI-243, LTI-242, LTI-240,
+  LTT-144, LTT-143, LTT-142, LTT-141, LTT-140, LTT-138, T1185, T1184,
+  T1183, OPEN-Q-108.
 
 ## LTT-145: Tournament of De Moivre-Jacobi crystallographic sidecars
 

@@ -13,6 +13,47 @@ labels, raw time, and scalarized root/moment/lattice counts.
 User asked to work on Lee-Yang extremality toward the LRC proof, using full PGF root curves, `exp(-lambda S^4-bS^2)`, Savitch reachability, Bravais lattices, and ear decompositions as inspiration.  Pulled current mainline first and integrated the directly relevant incoming HYP-3103 miss-count PGF roots, HYP-3104 maximizer signal atlas, HYP-3105 obstruction-transfer atlas, HYP-3106 perspective functors, and HYP-3107 Lean proof-frontier ledger.  Completed the reserved HYP-3108/T1185 lane with `04-computation/lee_yang_savitch_ear_lattice_extremality_codex_s262.py`, stored output, and reflection `07-reflections/lee-yang-savitch-ear-lattice-extremality-codex-s262.md`.
 
 FINDING: the full miss-count PGF root curve survives the stronger join as a serious coverage-extremality sidecar.  Consecutive/even-AP `k=8` have `#real=0`, nearest root modulus `1.489`, and `q0+q6=73/210`; spread/break rows move to real-root collisions with much lower extreme mass while wide rows re-enter the all-complex stratum.  In a deterministic anchored sample, `corr(#real,q0+q6)=-0.372` and `corr(nearest-root-modulus,q0+q6)=+0.952`.  The quartic `phi4` lambda is positive in the root-only sample (`corr(phi4-lambda,L_yK8)=+0.690`) but remains noisier across named packets, so it is retained as a stress test, not a scalar proof route.  Consecutive `k=8..13` zero arcs remain all-complex and drift near 7th-root angles; `k=11` has the middle pair at `102.9°=2*360/7`.  Bravais/relation-lattice counts, missed-mask ear graphs, and Savitch terminal kinds are promoted as sidecars for `CoverageExtremality`, `FineScaleWindingTransfer`, `ResidualToFiniteAddressPackets`, and `ObserverGluingCertificates`.  Tournament Analysis uses sidecars/proof carriers rather than runners and is transitive: endpoint-owner packet > Savitch reachability > obstruction transfer > ear gluing > PGF root curve > Bravais relation lattice > quartic energy > pair-Pascal shadow > raw scalar `p0`.  LRC14 not proved; the proof frontier now has a sharper sidecar ledger for root/recursion/lattice/gluing information.
+## codex-2026-06-27-S262 -- Lee-Yang/Savitch/Bravais/ear-lattice extremality scout
+
+Owner asked to combine Savitch's theorem, Bravais lattices, Lee-Yang
+extremality, phi4 density, and ear-decomposition facts while continuing the
+LRC maximizer/tournament thread.  Rebased over incoming HYP-3106/HYP-3107 and
+added HYP-3108, T1185, LTI-246, LTT-144, script
+`04-computation/lee_yang_savitch_ear_lattice_extremality_codex_s262.py`,
+stored output
+`05-knowledge/results/lee_yang_savitch_ear_lattice_extremality_codex_s262.out`,
+and reflection
+`07-reflections/lee-yang-savitch-ear-lattice-extremality-codex-s262.md`.
+
+Main synthesis: there are two maps, not one scalar.  The coefficient-root map
+tracks `q_t -> G_N(z)` roots, Lee-Yang nearest-zero radius, Bravais reciprocal
+flatness, and phi4 phase shape.  The state-reachability map tracks the circle
+sweep of occupied sector masks, miss-count transition graph, Savitch midpoint
+depth, strict-descent traps, and ear budget.  The single value `p0=G_N(0)` is
+only a shadow of the full PGF, and the PGF is still only a shadow of the sweep.
+
+Exact bounded-bank scan over all `{0}+7` rows from `1..13` (`1716` rows):
+`corr(p0,nearest_root_radius)=+0.899`, `corr(p0,#real_roots)=-0.483`,
+`corr(p0,Bravais_peak)=-0.430`, `corr(p0,residue_entropy)=+0.541`,
+and `corr(p0,phi4_lambda)=-0.696`.  Top `p0` rows are all in the no-real-root
+Lee-Yang stratum, so nearest-zero distance is the sharpest new scalar.  Bravais
+extremality is reciprocal-flat, not Bragg-peaked.  The phi4 tuple
+`(lambda,b,residual)` is a phase-warning coordinate: very negative `b` marks
+broken near-zero-root rows, while the extremizer has moderate negative `b`,
+small `lambda`, low residual, and root confinement.
+
+Savitch-style strict descent on one-swap exchange graphs is compressible where
+it works but leaves local-trap sidecar debt: tested graphs have midpoint depth
+`3` for reachable states and unreachable counts `11,14,3,14` for
+`(j,n)=(3,13),(4,13),(5,13),(5,16)`.  Ear-rank barely correlates with `p0`,
+so it should be used as proof-decomposition metadata, not as a value predictor.
+
+Next proof use: add `lee_yang_nearest_zero_radius`,
+`bravais_residue_entropy`, `phi4_phase_tuple`, `savitch_midpoint_depth`,
+`strict_descent_trap_count`, and `miss_count_ear_rank` to the finite-address
+branch ledger.  A residual packet should hit a root wall, lattice wall,
+compressed reachability path, or named ear/sidecar debt before a new scalar
+invariant is introduced.
 
 ## kind-pasteur-2026-06-27-S31ah -- the Tournament Proof Toolkit (engine + generator + 6 applications); 3-agent convergence
 
