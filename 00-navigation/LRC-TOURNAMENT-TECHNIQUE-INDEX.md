@@ -88,9 +88,11 @@ obligations, and proof-carrier interfaces.
   tail-only/tip-only recursion.
 - Need to close the `r=2..6` covering decorrelation floor:
   use LTT-158 after LTT-157/LTT-156/LTT-144/LTT-130 and make proof carriers
-  for the edge-floor packet the vertices.  Treat EH as an LRC
-  level-of-distribution proxy, Gaussian smoothing as a positivity interface,
-  and Asano/Lee-Yang contraction as a legality sidecar.
+  for the edge-floor packet the vertices.  Treat Asano/Lee-Yang as the
+  apex/tip zero-free diagnostic and tail-obstruction alarm; the positive floor
+  should now be routed through the HYP-3129 fixed-lattice SPEC certificate,
+  with HYP-3130 Gaussian/minorant apex-floor data and HYP-3131 far-tip
+  zero-free monotonicity as tip-side certificates.
 - Need to use A000568 without scalar numerology:
   use LTT-159 after LTT-158/LTT-157 and place the unlabeled one-extra-vertex
   quotient between sector words and paired tail/tip child decks.  Treat it as
@@ -5045,9 +5047,10 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
   cross-sector orientation, recursive child edge decks, child/root asymmetry,
   coordinate-resurrection guard data, HYP-3121 decorrelation-floor boundary
   data, H7/F7 state-lift edge-boundary data, HYP-3125/HYP-3126 wide-V
-  decoupling status, HYP-3127 Asano contraction order, HYP-3122/S67 phi4
-  wall stress, and HYP-3123/S270 chiral/Cech orientation stress when tied to
-  child packets.
+  decoupling status, HYP-3128 Asano obstruction status, HYP-3129 SPEC
+  resonance-lattice floor status, HYP-3130 minorant apex-floor status,
+  HYP-3131 far-tip zero-free monotonicity, HYP-3122/S67 phi4 wall stress, and
+  HYP-3123/S270 chiral/Cech orientation stress when tied to child packets.
 - **Forgets / guardrail:** raw edge counts, raw H shadows, one-sided endpoint
   recursions, and one-swap or Lee-Yang wall labels are not terminal unless the
   recursive child packets or named debts survive.
@@ -5067,9 +5070,11 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
 - **Next hook:** Add `edge_witness_recursion_id`, `tail_child_packet`,
   `tip_child_packet`, `four_sector_observer_deck`, `child_deck_asymmetry`,
   `coordinate_resurrection_status`, `decorrelation_floor_status`,
+  `asano_obstruction_status`, `spec_resonance_floor_status`,
+  `minorant_apex_floor_status`, `bounded_core_binding_status`,
   `state_lift_boundary_status`, `phi4_edge_wall_status`, and
   `terminal_exit_or_named_debt` to HYP-2963/HYP-3098/HYP-3107 packet rows.
-- **Pointers:** HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3123,
+- **Pointers:** HYP-3131, HYP-3130, HYP-3129, HYP-3128, HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3123,
   HYP-3122, HYP-3121, HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116,
   HYP-3115, HYP-3112, HYP-3106, HYP-3054, HYP-3050, LTI-259, LTT-157,
   T1198, OPEN-Q-108.
@@ -5101,11 +5106,14 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
 - **Preserves:** lifted covering predicate, tail/tip packets, four-sector deck,
   both deletion-child ratios, residue exception set, Gaussian smoothing width,
   finite-ruler desmoothing threshold, Asano/Lee-Yang zero-free contraction
-  status, phi4 cumulant sign, normal-fan chamber, chiral guard word, and
+  status, HYP-3128 tail obstruction, HYP-3129 resonance-lattice SPEC floor,
+  HYP-3130 minorant apex-floor certificate, HYP-3131 far-tip zero-free
+  monotonicity, phi4 cumulant sign, normal-fan chamber, chiral guard word, and
   terminal exit.
 - **Forgets / guardrail:** Bonferroni, raw `p0`, individual pair ratios,
   untyped EH analogies, Gaussian positivity without finite-ruler desmoothing,
-  and Asano contraction without a zero-free sidecar are only telemetry.
+  and Asano contraction through the overcrowded tail without the SPEC floor
+  certificate are only telemetry.
 - **Fingerprint:** Pairwise observable is majority retention over LRC
   predicate, attack on the multi-far floor, tail/tip recursion, decorrelation
   power, zero-free contraction, finite packet fields, formalization readiness,
@@ -5118,21 +5126,26 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
   phi4_quartic_cumulant_stabilizer -> H7_state_lift_zero_kernel ->
   EH_level_distribution_proxy -> raw_Bonferroni_or_scalar_p0`.
 - **Next hook:** Add `edge_floor_packet`, `tail_deletion_child_Rprime`,
-  `tip_deletion_child_Rprime`, `EH_level_distribution_proxy`,
+  `tip_deletion_child_Rprime`, `asano_obstruction_status`,
+  `lee_yang_zero_free_tip_status`, `spec_resonance_lattice`,
+  `minorant_apex_floor_status`, `bounded_core_binding_status`,
+  `SPEC_low_certificate`, `parseval_tail_bound`,
   `major_arc_residue_exception_set`, `gaussian_heat_kernel_width`,
-  `finite_ruler_desmoothing_threshold`, `asano_contraction_status`,
-  `lee_yang_zero_free_after_contraction`, `phi4_kappa4_sign`,
+  `finite_ruler_desmoothing_threshold`, `SPEC_bound_status`,
+  `phi4_kappa4_sign`,
   `normal_fan_chamber_id`, `chiral_guard_word`, and
   `terminal_exit_or_named_debt` to real `r=2..6` covering packets.
-- **Pointers:** HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121,
+- **Pointers:** HYP-3131, HYP-3130, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121,
   HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3108, HYP-3106, HYP-3101,
   HYP-2968, HYP-2963, THM-573, THM-572, THM-082, LTI-260, LTT-158,
   T1199, OPEN-Q-108.
 
-Post-rebase HYP-3127 promotes Asano to the candidate contraction engine for
-this same tournament card.  Future LTT-158 uses should treat S271's tournament
-as the packet/diagnostic layer for HYP-3127's single-far zero-free, SPEC-bound,
-and monotonicity obligations.
+Post-rebase HYP-3128/HYP-3129/HYP-3130/HYP-3131 revise the HYP-3127
+interpretation for this card.  Future LTT-158 uses should treat S271's
+tournament as the packet layer: Asano and minorants certify the apex/tip side,
+HYP-3131 says far tips push zeros outward on good bases, and the bounded core/tail
+coupling is the elementary SPEC resonance-lattice certificate plus a finite
+constant chase.
 
 ## LTT-159: Tournament Of A000568 Edge-Extension Shadows
 

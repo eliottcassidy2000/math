@@ -220,6 +220,26 @@ Use it as a controlled-forgetting layer for HYP-3129's finite SPEC constant
 chase, not as a replacement for the HYP-3129 resonance-lattice proof or as a
 naive Asano shortcut after HYP-3128.
 
+## codex-2026-06-27 -- post-rebase edge-witness integration of HYP-3128/HYP-3129
+
+After rebasing the HYP-3124 recursive edge-witness scout over the incoming
+HYP-3128/HYP-3129 Asano/SPEC work, integrated the correction into
+HYP-3124/LTI-259/LTT-157 and the S271 floor card LTI-260/LTT-158.  The edge
+packet now records two separate coordinates: `asano_obstruction_status`
+for the Lee-Yang zero in the overcrowded R/tail factor, and
+`spec_resonance_floor_status` for the retained-edge certificate supplied by
+HYP-3129.  This keeps the creative tail/tip recursion but prevents the stale
+reading where a collapsed Asano contraction is expected to prove the joint
+floor by itself.
+
+Proof-frontier consequence: tournament edges-as-witness should be applied to
+the lifted covering edge `R-safe packet -> Q-lonely packet`.  The tip side can
+carry the apex zero-free packet; the tail side must preserve enough Fourier
+support to expose `L = lcm(gcd(R),14gcd(Q)) Z`, the exact low SPEC sum, and
+the Parseval tail.  The next finite proof task is the closed-form constant
+chase behind the current certified floor `Rprime >= 0.64178`, plus packet
+attachment to HYP-2963/HYP-3098/HYP-3107 rows.
+
 ## mac-mini-2026-06-27-S68 -- the multi-far floor R'>=c is an ASANO contraction of single-far factors
 
 Owner: merge 'tournament edges as witness, recurse on tip and tail' into closing the uniform multi-far floor

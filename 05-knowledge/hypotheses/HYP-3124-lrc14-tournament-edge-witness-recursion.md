@@ -9,6 +9,8 @@ tournament_technique: LTT-157
 script: 04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py
 result: 05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out
 related:
+  - HYP-3129
+  - HYP-3128
   - HYP-3127
   - HYP-3126
   - HYP-3125
@@ -83,6 +85,13 @@ The existing sources already point at this shape:
   can be localized to a retained packet or named cumulant debt.
 - HYP-3123 says chiral/converse/rootless quotients need orientation sidecars;
   tail/tip recursion is the edge-local test for that guard.
+- HYP-3128 says the Asano/Lee-Yang picture is a diagnostic, not a standalone
+  joint-floor proof: the apex/tip block is zero-free, but the overcrowded
+  R/tail block has interior Lee-Yang zeros, so any edge contraction that
+  forgets the tail packet is illegal.
+- HYP-3129 supplies the compatible repair: the multi-far `Rprime` floor is an
+  elementary fixed-lattice SPEC bound on the retained `R-safe -> Q-lonely`
+  edge, with a certified floor `Rprime >= 0.64178` on the tested family.
 
 Challenged assumption: an edge is not just a relation between two vertices.
 For LRC-style proof search it is a bidirectional proof obligation: the tail
@@ -215,6 +224,8 @@ four_sector_observer_deck
 child_deck_asymmetry
 coordinate_resurrection_status
 decorrelation_floor_status
+asano_obstruction_status
+spec_resonance_floor_status
 state_lift_boundary_status
 phi4_edge_wall_status
 terminal_exit_or_named_debt
@@ -232,8 +243,13 @@ whether the edge cut is in the wide-V elementary decoupling regime, the
 bounded-core `3/pi^2` floor regime, the finite `w0` check, or the remaining
 minorant/constant-chase debt.  HYP-3127 adds the Asano contraction reading:
 tail/tip recursion is a candidate contraction order for multi-far Lee-Yang
-factors, but only if the endpoint children and zero-free polydisk sidecars
-survive the quotient.  HYP-3122/S67's `phi4` quartic
+factors, but HYP-3128 narrows that reading: Asano cleanly packages the
+apex/tip block and exposes the overcrowded tail's Lee-Yang zero obstruction;
+it cannot certify the joint floor after the tail packet is collapsed to a
+single zero-free factor.  HYP-3129 then supplies the proof-facing floor field:
+`spec_resonance_floor_status` should record the resonance lattice, exact low
+SPEC sum, Parseval-tail certificate, and constant-chase debt for the retained
+two-ended edge packet.  HYP-3122/S67's `phi4` quartic
 stabilizer is therefore only an edge-wall stress signal unless it points back
 to the recursive tail/tip packets or to named quartic-cumulant debt.  HYP-3123
 /S270 supplies the companion orientation test: a chiral, converse, or Cech

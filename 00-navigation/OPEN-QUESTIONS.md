@@ -60,15 +60,17 @@ tail/tip deletion children show the floor is recursive on both endpoints.
 
 Open task: build real `r=2..6` covering-packet rows with
 `edge_floor_packet`, `tail_deletion_child_Rprime`,
-`tip_deletion_child_Rprime`, `EH_level_distribution_proxy`,
+`tip_deletion_child_Rprime`, `fixed_lattice_SPEC_certificate`,
 `major_arc_residue_exception_set`, `gaussian_heat_kernel_width`,
-`finite_ruler_desmoothing_threshold`, `asano_contraction_status`,
-`lee_yang_zero_free_after_contraction`, `phi4_kappa4_sign`,
-`normal_fan_chamber_id`, `chiral_guard_word`, and
-`terminal_exit_or_named_debt`.  Prove a uniform LRC-specific BV/L2
-edge-sector distribution bound outside named major arcs, obtain a
-Gaussian-smoothed diagonal lower bound, desmooth through finite-ruler/Cech
-fields, or route failures to Asano/Lee-Yang/phi4/Cech/H7 named debt. ->
+`finite_ruler_desmoothing_threshold`, `asano_obstruction_status`,
+`lee_yang_zero_free_tip_status`, `spec_resonance_lattice`,
+`SPEC_low_certificate`, `parseval_tail_bound`, `SPEC_bound_status`,
+`phi4_kappa4_sign`, `normal_fan_chamber_id`, `chiral_guard_word`, and
+`terminal_exit_or_named_debt`.  Incoming HYP-3128/HYP-3129 replace the
+provisional EH/BV target by a sharper finite task: Asano/Lee-Yang certifies
+the apex/tip side and exposes the overcrowded R/tail obstruction, while the
+positive floor comes from the retained-edge SPEC resonance-lattice certificate
+with exact low frequencies plus a Parseval tail. -> HYP-3129, HYP-3128,
 HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121, HYP-3118, HYP-3116,
 HYP-3112, HYP-3108, HYP-3106, HYP-3101, HYP-2968, HYP-2963, THM-573,
 THM-572, THM-082, LTI-260, LTT-158, T1199, OPEN-Q-108.
@@ -95,6 +97,10 @@ covering-floor use through HYP-3125/LTI-260 rather than duplicating the
 `Rprime` packet schema. -> HYP-3125, HYP-3124, HYP-3121, HYP-3118, HYP-3116,
 HYP-3112, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-2963, LTI-259,
 LTT-157, T1198, OPEN-Q-108.
+Post-rebase note: HYP-3128/HYP-3129 now make the S271 `edge_floor_packet` a
+split ledger.  It should record the apex/tip zero-free success, the R/tail
+Lee-Yang obstruction, and the elementary fixed-lattice SPEC floor rather than
+asking a collapsed Asano contraction to prove positivity by itself.
 
 **OPEN-Q-108 S270 chiral-stalk / Cech proof-angle addendum:**
 HYP-3123 selects two remaining LRC14 proof angles that should be worked as
@@ -159,10 +165,12 @@ repair debt.  HYP-3125/HYP-3126 sharpen the positive-mass decorrelation side:
 record wide-V decoupling, bounded-core floor, finite `w0` check, or minorant
 debt before accepting an edge cut.  HYP-3127 turns the same tail/tip recursion
 into a possible Asano contraction order when endpoint children and zero-free
-polydisk sidecars survive. -> HYP-3127, HYP-3126, HYP-3125, HYP-3124,
-HYP-3123, HYP-3122, HYP-3121, HYP-3120, HYP-3119, HYP-3118, HYP-3116,
-HYP-3115, HYP-3112, HYP-3106, HYP-3054, HYP-3050, LTI-259, LTT-157,
-T1198, OPEN-Q-108.
+polydisk sidecars survive; HYP-3128/HYP-3129 sharpen this by making Asano an
+obstruction alarm for the overcrowded tail and SPEC resonance-lattice analysis
+the positive repair field. -> HYP-3129, HYP-3128, HYP-3127, HYP-3126,
+HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121, HYP-3120, HYP-3119,
+HYP-3118, HYP-3116, HYP-3115, HYP-3112, HYP-3106, HYP-3054, HYP-3050,
+LTI-259, LTT-157, T1198, OPEN-Q-108.
 
 **OPEN-Q-108 S266 circuit missing-input addendum:**
 HYP-3116 converts circuit complexity into an LRC14 proof-compression audit.

@@ -46,6 +46,8 @@ four_sector_observer_deck
 child_deck_asymmetry
 coordinate_resurrection_status
 decorrelation_floor_status
+asano_obstruction_status
+spec_resonance_floor_status
 state_lift_boundary_status
 phi4_edge_wall_status
 terminal_exit_or_named_debt
@@ -68,6 +70,16 @@ Incoming HYP-3127 adds the Asano contraction interpretation: the tail/tip
 recursion can be treated as a contraction order for multi-far Lee-Yang
 factors only when both endpoint children and the zero-free polydisk sidecar
 survive the edge quotient.
+
+Incoming HYP-3128/HYP-3129 revise that interpretation into a sharper
+two-part rule.  The apex/tip block is Lee-Yang safe, but the overcrowded
+R/tail block has interior Lee-Yang zeros, so a naive Asano contraction that
+collapses the tail is blocked for the right reason.  The surviving proof route
+is to keep the two-ended packet and attach the elementary SPEC
+resonance-lattice certificate: exact low frequencies plus a Parseval-tail
+bound, with the current certified floor `Rprime >= 0.64178` on the tested
+multi-far family.  In packet terms, `asano_obstruction_status` is the alarm and
+`spec_resonance_floor_status` is the positive repair field.
 
 HYP-3122/S67's `phi4` quartic-stabilizer signal fits as an edge-wall stress
 test.  It is not yet a proof carrier by itself.  It becomes a proof-facing
@@ -97,9 +109,12 @@ be finite and brutal:
    their asymmetry name a repair?
 3. Is the cut positive-mass decorrelation, zero-mass state-lift, observer
    gluing, coordinate resurrection, or named debt?
-4. If a phi4/Ising/Lee-Yang wall is used, does it point back to the child
+4. If an Asano/Lee-Yang wall is used, does it keep the apex/tip zero-free
+   side, expose the R/tail obstruction, and route the floor through the SPEC
+   resonance-lattice certificate rather than through a collapsed tail factor?
+5. If a phi4/Ising/Lee-Yang wall is used, does it point back to the child
    packets?
-5. If a chiral/Cech quotient is used, does the edge boundary keep the
+6. If a chiral/Cech quotient is used, does the edge boundary keep the
    cross-sector orientation word and both endpoint children?
 
 Only after those answers are present should an edge, wall, or H value be
