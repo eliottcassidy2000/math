@@ -3740,35 +3740,63 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 
 - **Move:** Promote the Hurwitz sharpness lesson to the whole proof interface:
   an extremal scalar, q-tail, Markov/Pell wall, route median, sixth-power
-  equality, apex-periodic covering row, or tournament kernel is admissible
-  only after the finite address that made it extremal is retained.
-- **LRC use:** HYP-3083/S252+S252b+S253 claims the remaining-proof map after
-  HYP-3082 and the S59 redirect: after q-witness, apex-majority, and
-  one-large-speed exits, low-apex top-balanced covering rows must enter a
-  finite-address packet normalizer, pass through the protected no-naked-bridge
-  branch graph, and terminate at a strict witness, AP/GW boundary, C27 petal,
-  covering-family gamma/Node3 discharge, K33/THM-572 state-lift resolution, or
-  named formal residual.  The explicit remaining obligations are
-  normalizer/packet coverage, covering-moment discharge, state-lift
-  construction, branch-closure theorem, integer-vs-real finite-ruler glue, and
-  AP/GW census only if the proof routes through boundary equality.
+  equality, Hensel/Morita-gamma lift, apex-periodic covering row, or
+  tournament kernel is admissible only after the finite address that made it
+  extremal is retained.
+- **LRC use:** HYP-3083/S252+S252b+S253+S31af+S31ag claims the remaining-proof map
+  after HYP-3082 and the S59 redirect: no-apex rows first have the direct
+  `t=1/14` witness; THM-573 then discharges every row with at least seven
+  speeds divisible by `7`; after q-witness, level-7, and one-large-speed
+  exits, the `<=6` multiples-of-7 low-apex top-balanced covering residual must
+  enter a finite-address packet normalizer, pass through the protected
+  no-naked-bridge branch graph, and terminate at a strict witness, AP/GW
+  boundary, C27 petal, covering-family gamma/Node3 discharge, K33/THM-572
+  state-lift resolution, or named formal residual.  The S31af covering-margin
+  scout refutes a uniform `>1/13` shortcut, so aliasing/dilation status is a
+  retained coordinate.  THM-576/HYP-3090 adds the cap-side tournament payload:
+  pairwise avoidance gives the clean triangular caps for `k>=10`, while
+  `k=8,9` deviations and the first order-3 break must be retained as named
+  cap debt.  HYP-3091 adds the lonely-set three-sameness fiber: equinum is
+  only a covering/cardinality shadow, equidecomp splits the `D=41` bounded
+  core from the `1/lmax=V*` apex invariant, and equidist is the tight-locus
+  measure test.  HYP-3094 then shuttles the two live obligations:
+  `nested_refinement` packets feed O2 covering discharge, while
+  `cross_handoff` packets with active binder and endpoint-owner words feed O3
+  THM-572 state-lift debt.  Incoming HYP-3088/HYP-3089 add the external
+  polynomial-method target: the composite `14=2*7` wall is the failed field
+  interpolation case, and the replacement target is a uniform largest-lonely
+  interval for the normalized slow/ruler-coordinate lonely carrier.  The explicit remaining
+  obligations are normalizer/packet coverage, normalized arc-count
+  floor, covering-moment discharge, state-lift construction, branch-closure
+  theorem, integer-vs-real finite-ruler glue, and AP/GW census only if the
+  proof routes through boundary equality.
 - **Preserves:** boundary/open status, exact packet address, route handoff,
   finite cusp/principal-part debt, Hurwitz/Markov/Pell arithmetic address,
+  polynomial composite-lift status, cap-ratio/deviation status,
+  three-sameness fiber status, largest-lonely-arc floor status,
   median-center legality, bridge protection, and named residual exits.
 - **Forgets / guardrail:** Raw scalar constants, q-coefficients, automatic
   words, tournament counts, or route labels are unsafe if they destroy the
   address that distinguishes boundary atoms from strict-open packets.
 - **Next pull:** Build the `finite_address_branch_closure` ledger: for each
   packet or outside-bank low-apex/top-balanced normalizer attempt, record
-  source family, multiple-of-14 status, exact `M/q`, finite address, q-cusp
-  principal part, polar exit, Hurwitz/Pell address, preserved LRC predicate,
-  destroyed coordinate, required sidecar/debt, protected branch node,
-  raw/protected bridge status, median center, terminal exit, and
-  Lean/formalization status.
-- **Pointers:** HYP-3083, HYP-3082, HYP-3081, HYP-3080, HYP-3079, HYP-3078,
-  HYP-3077, HYP-3075, HYP-3074, HYP-2996, HYP-2963, THM-571, THM-572,
-  LTI-232, LTI-231, LTI-230, LTI-228, LTI-227, LTI-226, LTI-225, LTT-130,
-  LTT-129, LTT-128, LTT-126, LTT-125, LTT-124, LTT-123, T1167, OPEN-Q-108.
+  source family, `multiple_of_7_profile`, multiple-of-14 status,
+  `level7_lift_sieve_status`, `polynomial_composite_lift_status`,
+  `cap_ratio_or_deviation_status`, `direct_lonely_arc_count_status`, `largest_lonely_arc_floor`,
+  `three_sameness_fiber`, `equinum_shadow`, `equidecomp_D`, `inverse_lmax`,
+  `equidist_measure_status`,
+  `covering_margin_aliasing_status`, `grid_class`, `active_binder_owner_word`,
+  `endpoint_owner_transition_word`,
+  `apex_divisible_by_14_flag`, exact `M/q`, finite address, q-cusp principal
+  part, polar exit, Hurwitz/Pell/Morita address, p-adic/discrepancy sidecar
+  status, preserved LRC predicate, destroyed coordinate, required
+  sidecar/debt, protected branch node, raw/protected bridge status, median
+  center, terminal exit, and Lean/formalization status.
+- **Pointers:** HYP-3083, HYP-3088, HYP-3089, HYP-3090, HYP-3091, HYP-3092, HYP-3087, HYP-3085, HYP-3084, HYP-3082, HYP-3081, HYP-3080, HYP-3079,
+  HYP-3078, HYP-3077, HYP-3075, HYP-3074, HYP-2996, HYP-2963, THM-571,
+  THM-572, THM-573, THM-575, THM-576, LTI-232, LTI-231, LTI-230, LTI-228, LTI-227, LTI-226,
+  LTI-225, LTT-130, LTT-129, LTT-128, LTT-126, LTT-125, LTT-124, LTT-123,
+  T1167, T1168, OPEN-Q-108.
 
 ### LTT-131: Hyperoperation Grid Address Carrier
 
@@ -3777,25 +3805,28 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   product/valuation `x*2` lane, `q^p,p^q` are power-stress lanes, and a
   space-filling curve is only a scheduler through these cells.
 - **LRC use:** HYP-3087/S254 adds this carrier downstream of HYP-3083,
-  incoming HYP-3085, and THM-573.  After the 14-free q-witness exit and the level-7 lift sieve, the
+  HYP-3088/HYP-3089 normalized-arc / paper largest-arc target, HYP-3085 Clebsch
+  localization, HYP-3090 cap/deviation status, HYP-3091 three-sameness fiber,
+  HYP-3094 shuttle grammar, and THM-573.  After the 14-free q-witness exit and the level-7 lift sieve, the
   live residual has at most `6` multiples of `7`.  The operation grid should
   audit that residual by danger-weighted cells which either open a witness,
-  descend through covering/Node3, hand off to K33/THM-572, enter protected
-  branch closure, or name residual debt.
+  prove a normalized lonely-arc floor, descend through covering/Node3, hand off to
+  K33/THM-572, enter protected branch closure, or name residual debt.
 - **Preserves:** Farey root `(p,q)`, operation lane, additive owner, product
   shell, current danger deficit, endpoint owner, level-7 lift status,
-  destroyed-coordinate label, finite address, terminal exit, and no-naked
-  bridge status.
+  normalized arc status, three-sameness fiber status, destroyed-coordinate label, finite address,
+  terminal exit, and no-naked bridge status.
 - **Forgets / guardrail:** Static grid labels, raw curve order, and raw
   hyperoperation values are unsafe because they forget the LRC clock.  Power
   lanes are stress tests unless the root packet and terminal exit survive.
 - **Next pull:** Build a `hyperoperation_grid_address` ledger over HYP-2963 and
   outside-bank normalizer attempts with `count_7_divisible`,
-  `level7_lift_status`, `(p,q)`, `p+q`, `p*q`, power-stress word,
+  `level7_lift_status`, `(p,q)`, `p+q`, `p*q`, cap/deviation status,
+  three-sameness fiber status, power-stress word,
   space-filling successor, danger deficit, endpoint owner, finite address,
   destroyed coordinate, terminal exit, and branch/debt status.
-- **Pointers:** HYP-3087, HYP-3085, HYP-3083, HYP-3004, HYP-3003, THM-523, THM-571,
-  THM-572, THM-573, LTI-233, LTI-232, LTI-154, LTI-153, LTI-011, LTT-131,
+- **Pointers:** HYP-3087, HYP-3088, HYP-3089, HYP-3090, HYP-3091, HYP-3092, HYP-3085, HYP-3083, HYP-3004, HYP-3003, THM-523, THM-571,
+  THM-572, THM-573, THM-575, THM-576, LTI-233, LTI-232, LTI-154, LTI-153, LTI-011, LTT-131,
   LTT-130, T1169, T1167, OPEN-Q-108.
 
 ### LTT-132: Finite-Address Branch-Packet Lean Interface

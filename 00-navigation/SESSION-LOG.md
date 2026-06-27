@@ -105,6 +105,41 @@ base unlocking THM-573; project adds the c=7 lift theorem + the analytic substit
 NAMESPACE: HYP-3085 DUPLICATE (mine gk8 / codex K33-shuttle) flagged in INDEX for codex to renumber. Net:
 LRC(14) NOT proved; endgame re-localized to the V*-bounded finite check + the two open lemmas (gK8 CRUX 1,
 Node-3), now also recognized as the paper's Conjecture 7.1(13).
+## codex-2026-06-27-S252/S254-postrebase -- integrate S31ag polynomial-method bridge into finite-address LRC14 spine
+
+Post-rebase synthesis after incoming HYP-3088/HYP-3089.  Preserved the
+incoming polynomial-method reservations and renumbered the local S254 artifacts
+to HYP-3087 (hyperoperation grid address) and HYP-3094 (covering/K33 shuttle).
+After later S31ag work claimed HYP-3090 for the triangular cap-ratio carrier,
+the final namespace split is: HYP-3090 = sector caps / pairwise avoidance,
+HYP-3094 = covering/K33 O2/O3 shuttle.
+The current HYP-3083 readout is now:
+
+```text
+no-14 row -> direct t=1/14 witness
+>=7 multiples of 7 -> THM-573 c=7 lift
+<=6 multiples of 7 low-apex/top-balanced covering residual
+  -> finite-address packet
+  -> protected no-naked-bridge graph
+  -> normalized largest-arc floor
+     or nested-refinement O2 discharge
+     or cross-handoff O3/THM-572 lift
+     or named residual debt
+  -> formal witness readout M>=1/14
+```
+
+Incoming S31ag supplies the external finish line: LRC14 is the composite
+`k+1=14=2*7` case where the odd-prime polynomial method loses field
+interpolation, THM-573 is the clean `c=7` lift, the dyadic tower is the `c=2`
+side, and HYP-3088 translates Conjecture 7.1(13) into a uniform
+largest-lonely-interval floor for the normalized slow/ruler-coordinate lonely carrier.  This does not
+prove LRC14; it makes the remaining proof target sharper than "covering
+positivity": prove the normalized arc-count/floor theorem or identify
+the first finite-address packet obstructing that translation.
+The later THM-576/HYP-3090 cap result sharpens this again: pairwise avoidance
+explains the clean triangular cap ratios for `k>=10`, leaving the two
+deviation constants (`k=8,9`) and the first order-3 break as the cap-side
+residue that must interface with the normalized arc floor.
 
 ## codex-2026-06-27-S257 -- equivalence triad invariant synthesis
 
@@ -255,10 +290,11 @@ vertical/product axis of the operation grid: it must track `v7` depth and
 level-7 lift status before entering the HYP-3083 finite-address branch-closure
 spine.
 
-Rebased over incoming HYP-3085, the covering-moment / K33 state-lift shuttle:
-the hyperoperation grid should hand nested-refinement covering cells and
-cross-handoff K33 cells to that shuttle rather than collapsing them into raw
-safe-mass or product-lane scalars.
+Rebased over HYP-3085 Clebsch covering-moment localization and the renumbered
+HYP-3094 covering-moment / K33 state-lift shuttle: the hyperoperation grid
+should hand nested-refinement covering cells and cross-handoff K33 cells to
+that shuttle rather than collapsing them into raw safe-mass or product-lane
+scalars.
 Renumbered the final hyperoperation artifact to HYP-3087/T1169 after incoming
 HYP-3086/T1168 claimed the sexy-prime pair-sieve transfer namespace.
 
@@ -352,17 +388,20 @@ covering-family p0/moment or apex-periodic discharge, K33/THM-572 state-lift
 construction, no-new-naked-bridge theorem for parameterized families, and a
 Lean finite-address branch-packet record joining `LRCModularCuspLedger`,
 `LRCMedianCenterControl`, `LRCMomentDual`, and `LRCTournamentStateLift`.
-During rebase, integrated incoming S252b's sharpened residual: after the
-q-witness gate, THM-571 apex-majority gamma split, and HYP-2906 one-large
-peeler, the live covering rows are low-apex and top-balanced, so the packet
-theorem should start from that narrower residual class.  A later incoming
-S252 integration added the explicit `finite_address_branch_closure` ledger,
-integer-vs-real glue, and equality-route census caveat; HYP-3083 now merges
-those with the q-cusp/Hurwitz finite-principal-part argument.
+During rebase, integrated incoming S252b/S253's sharpened residual and the
+S31af level-7 lift sieve: no-14 rows have the direct `t=1/14` witness,
+THM-573 closes rows with at least seven speeds divisible by `7`, and HYP-2906
+peels one-large rows.  The live covering rows are therefore low-apex,
+top-balanced, `<=6` multiples-of-7 residuals with finite addresses retained.
+A later incoming S252 integration added the explicit
+`finite_address_branch_closure` ledger, integer-vs-real glue, and
+equality-route census caveat; HYP-3083 now merges those with the
+q-cusp/Hurwitz finite-principal-part argument.
 The final merged HYP-3083 also keeps the remote S253 candidate
 finite-address branch-closure lemma and the executable ledger fields for
-multiple-of-14 status, exact `M/q`, endpoint owner, q-cusp principal part,
-polar exit, Hurwitz/Pell address, protected branch node, bridge mode,
+`multiple_of_7_profile`, level-7 status, multiple-of-14 status, exact `M/q`,
+endpoint owner, q-cusp principal part, polar exit, Hurwitz/Pell/Morita
+address, covering-margin aliasing status, protected branch node, bridge mode,
 median-center kind, terminal exit, and formalization status.
 
 ## mac-mini-2026-06-27-S59 -- RE-PRIORITIZATION: the LRC(14) proof = the COVERING BOUND (exponential/periodicity), the census is the EASY case's extremal (NOT on the critical path)
@@ -384,7 +423,7 @@ namespace into the current remaining-obligation map:
 ```text
 primitive covering 13-row
   -> q-witness gate
-  -> apex-majority gamma descent or low-apex residue
+  -> THM-573 level-7 lift sieve or <=6 multiples-of-7 residual
   -> one-large-speed interval peeler or top-balanced residue
   -> finite-address packet
   -> protected branch graph
@@ -394,15 +433,16 @@ primitive covering 13-row
 ```
 
 Main synthesis: Hurwitz/Markov/Pell walls, q-cusp principal parts, modular
-tails, sixth-power collision certificates, route-median centers,
-apex-periodic covering rows, endpoint owners, and tournament kernels are all
-proof-usable only after the finite address that made them extremal is
-retained.  Raw scalar shadows are the last object, not the theorem interface.
+tails, Hensel/Morita-gamma discrepancy carriers, sixth-power collision
+certificates, route-median centers, apex-periodic covering rows, endpoint
+owners, and tournament kernels are all proof-usable only after the finite
+address that made them extremal is retained.  Raw scalar shadows are the last
+object, not the theorem interface.
 
 What remains in LRC14 now splits into these concrete obligations:
 
 1. prove global finite-address normalizer / packet coverage for low-apex,
-   top-balanced covering rows;
+   top-balanced covering rows with at most six `7`-multiples;
 2. prove the covering-moment / positive-open discharge behind OPEN-Q-108;
 3. construct the K33/THM-572 tournament-state lift whenever invoked;
 4. promote the HYP-3082 no-naked-bridge audit to a branch-closure theorem over
@@ -413,11 +453,17 @@ What remains in LRC14 now splits into these concrete obligations:
 
 Added the S252 OPEN-Q-108 addendum and backlog lead for the next artifact:
 `finite_address_branch_closure`, a row ledger recording source family,
+`apex_divisible_by_14_flag`, `multiple_of_7_profile`,
+`level7_lift_sieve_status`, covering-margin aliasing status,
 low-apex/top-balanced status, finite address, preserved LRC predicate,
-destroyed coordinate, required sidecar/debt, raw/protected bridge status,
-terminal exit, formalization status, and residual debt name.
+destroyed coordinate, p-adic/discrepancy sidecar status, required
+sidecar/debt, raw/protected bridge status, terminal exit, formalization
+status, and residual debt name.  The Morita-gamma layer is
+integrated only as address data: local field, Fourier cutoff, normalization,
+Hensel seed, valuation, and terminal exit must be attached before a
+transcendental/discrepancy scalar can enter the proof route.
 
-## codex-2026-06-27-S254 -- covering-moment / K33 state-lift shuttle (HYP-3085)
+## codex-2026-06-27-S254 -- covering-moment / K33 state-lift shuttle (HYP-3091)
 
 Worked the two selected HYP-3083 obligations back and forth after rebasing over
 the incoming S253 Hurwitz/q-cusp covering-bound spine and the S31af THM-573
@@ -430,11 +476,11 @@ O3 = K33 / THM-572 state-lift construction
 
 Added exact scout `04-computation/lrc14_o2_o3_shuttle_codex_s254.py`, stored
 `05-knowledge/results/lrc14_o2_o3_shuttle_codex_s254.out`, and created
-HYP-3085 after incoming work claimed HYP-3084 for the gK8/Clebsch moment
-decomposition.  The scout audits three covering representatives and the three
-low-frontier K33 representatives with exact `M`, optimizer `tau`, q-threshold,
-strict safe mass, safe components, active binders, endpoint-owner transitions,
-and grid class.
+HYP-3091 after incoming work kept HYP-3085 for the gK8/Clebsch moment
+decomposition and later used HYP-3090 for the triangular cap-ratio carrier.
+The scout audits three covering representatives and the three low-frontier K33
+representatives with exact `M`, optimizer `tau`, q-threshold, strict safe mass,
+safe components, active binders, endpoint-owner transitions, and grid class.
 
 Main readout: covering rows are locally positive and route through
 `nested_refinement`, but K33 rows are also locally positive and must route
@@ -451,9 +497,9 @@ stress also refutes the tempting scalar margin route after dilation/aliasing;
 the useful object remains nested-refinement / owner-transition address data.
 
 Incoming mac-mini S60 also updated the gK8/Clebsch low-order moment-LP route
-in `05-knowledge/hypotheses/HYP-3084-gk8-concentration-is-low-order-moment-s2-clebsch.md`.
+in `05-knowledge/hypotheses/HYP-3085-gk8-concentration-is-low-order-moment-s2-clebsch.md`.
 The integration is useful: the corrected S60 carrier is a reflection-symmetric
-Perron-mode moment bound candidate for O2, while HYP-3085 is the finite-address
+Perron-mode moment bound candidate for O2, while HYP-3091 is the finite-address
 shuttle that keeps that carrier separate from scalar-margin shortcuts and K33
 cross-handoff debt.
 
@@ -26514,12 +26560,14 @@ peeler, labelled packet bank, branch-kernel audit, and Lean status notes.
 
 Updated `05-knowledge/hypotheses/HYP-3083-lrc14-hurwitz-finite-address-branch-closure-spine.md`
 from stub to a remaining-obligation map.  Main correction to the slogan:
-after THM-571, the covering bound is not all rows with a multiple of `14`; the
-live residual is low-apex covering rows with `1..6` multiples of `14`.  After
-HYP-2906, it is also top-balanced (`v_max <= 13 v_second`) unless handled by
-the connected-safe-arc peeler.  THM-566 blocks a naive fixed bounded-denominator
-witness, so the remaining proof has to keep finite addresses rather than
-collapse to a scalar.
+after THM-573, the covering bound is not all rows with a multiple of `14`; the
+level-7 lift sieve closes rows with at least seven speeds divisible by `7`.
+The live residual is low-apex covering rows with at most six `7`-multiples;
+after HYP-2906, it is also top-balanced (`v_max <= 13 v_second`) unless
+handled by the connected-safe-arc peeler.  THM-566 blocks a naive fixed
+bounded-denominator witness, and the S31af covering-margin scout blocks a
+uniform `>1/13` shortcut, so the remaining proof has to keep finite addresses
+and aliasing status rather than collapse to a scalar.
 
 The proposed proof spine is:
 
@@ -26527,7 +26575,7 @@ The proposed proof spine is:
 S primitive, |S|=13
   -> q-witness gate
   -> covering row with a multiple of 14
-  -> apex-majority gamma descent or low-apex residue
+  -> THM-573 level-7 lift sieve or <=6 multiples-of-7 residual
   -> one-large-speed interval peeler or top-balanced residue
   -> finite-address packet P(S)
   -> protected branch graph

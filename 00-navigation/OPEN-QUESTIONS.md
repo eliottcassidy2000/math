@@ -2,6 +2,7 @@
 
 **OPEN-Q-108 S257 equivalence-triad invariant addendum:**
 HYP-3093 adds the forgetting-cost tuple
+HYP-3093 adds the forgetting-cost tuple
 `(cardinal_shadow, scissors_fiber, observer_cut_orbit, distribution_law,
 interaction_order_defect, named_residual_debt)` as the shared audit for
 equinumerosity, equidecomposability, and equidistribution.  It is not another
@@ -14,6 +15,7 @@ pairwise cap rows versus the `k=8,9` higher-order deviation constants.  Record
 target predicate, quotient, count shadow, scissors-fiber key, observer-cut
 orbit, distribution law, first failed interaction order, separating sidecar,
 discharge mode, and residual debt. -> HYP-3093, HYP-3092, HYP-3091, HYP-3090, THM-576, HYP-2187,
+discharge mode, and residual debt. -> HYP-3094, HYP-3090, THM-576, HYP-2187,
 HYP-2186, HYP-2949, HYP-3053, HYP-3056, HYP-3072, HYP-3085, LTI-235, LTT-133,
 T1171, OPEN-Q-108.
 
@@ -45,7 +47,14 @@ shadow, power-stress word, current danger deficit, endpoint owner,
 level-7 lift status, destroyed coordinate, finite address, and terminal exit.
 THM-573 is now part of the opening sieve: rows with at least `7` multiples of
 `7` are closed, so the active covering residual is `<= 6` multiples of `7`.
-Incoming HYP-3085 supplies the covering/K33 shuttle grammar for
+HYP-3088/HYP-3089 add the normalized-arc and paper/V* target: the same
+`14=2*7` wall is the failed composite interpolation case, and Conjecture
+7.1(13) becomes a uniform largest-lonely-arc floor for the direct `1/14`
+lonely set.
+THM-576/HYP-3090 adds the cap skeleton: pairwise avoidance gives the clean
+triangular caps for `k>=10`, while `k=8,9` and the first order-3 break are now
+explicit cap/deviation debt.
+HYP-3094 supplies the covering/K33 shuttle grammar for
 nested-refinement and cross-handoff exits.
 Open task: build a `hyperoperation_grid_address` ledger over HYP-2963 and
 outside-bank normalizer attempts, then test whether danger-weighted operation
@@ -82,6 +91,10 @@ global packet coverage and the K33/THM-572 state-lift producer. -> HYP-3087,
 HYP-3088, HYP-3089, HYP-3085, HYP-3084, HYP-3083, HYP-3082, HYP-3081,
 HYP-3079, HYP-3078, HYP-3075, HYP-2963, THM-523, THM-571, THM-572, THM-573,
 LTI-234, LTI-233, LTI-232, LTT-132, LTT-131, LTT-130, T1170, T1169,
+normalized lonely-arc floor, K33/THM-572, protected branch closure, or named
+residual debt without creating a naked bridge. -> HYP-3087, HYP-3088,
+HYP-3089, HYP-3090, HYP-3091, HYP-3085, HYP-3083, HYP-3004, HYP-3003,
+THM-523, THM-571, THM-572, THM-573, THM-575, LTI-233, LTT-131, T1169,
 OPEN-Q-108.
 
 **OPEN-Q-108 S252/S253 finite-address q-cusp branch-closure addendum:**
@@ -100,14 +113,50 @@ finite-address HYP-2963 packet -> protected S250 branch graph -> terminal
 discharge or named residual debt -> formal witness readout M>=1/14`.  Record
 multiple-of-14 status, exact `M/q`, endpoint owner, destroyed coordinate,
 q-cusp principal part, polar exit, Hurwitz/Pell address, protected branch node,
+**OPEN-Q-108 S252/S253/S31af/S31ag finite-address q-cusp branch-closure addendum:**
+HYP-3083 integrates the S59 covering-bound redirect with THM-523,
+THM-570/THM-571, THM-573, HYP-2906/HYP-2900, HYP-2996/HYP-2963, HYP-3075,
+HYP-3078/HYP-3079, HYP-3080, HYP-3081/HYP-3082, HYP-3084, HYP-3085,
+HYP-3087/HYP-3088/HYP-3089, the Lean
+modular/moment/state-lift shells, and the full-modular-cusp rule that
+meromorphic q-expansions have only finitely many negative powers.  The
+modular/q-Pochhammer input becomes finite-principal-part discipline;
+Hurwitz/Markov/Pell and Vieta orbits supply finite seed/address and
+zero-persistence gates; Robbins/S250 supplies the no-naked-bridge rule.
+THM-573 now closes every row with at least seven speeds divisible by `7`, so
+after the no-`14` direct witness and level-7 lift sieve the live proof-critical
+rows are low-apex, top-balanced covering rows with at most six `7`-multiples.
+The S31af covering-margin scout also refutes a uniform `>1/13` shortcut, so
+aliasing/dilation status must be retained.
+HYP-3094 adds the O2/O3 shuttle: `nested_refinement` rows feed the
+covering-moment theorem, while `cross_handoff` rows with active binder and
+endpoint-owner words feed THM-572 state-lift debt.
+THM-576/HYP-3090 says the cap side is no longer shapeless: pairwise
+avoidance supplies triangular caps, and the remaining cap work is the two
+deviation constants plus higher-order break packets.
+HYP-3088 adds the direct lonely-set target: prove a uniform largest-lonely-arc
+floor for the residual, or identify the finite-address packet where the
+Conjecture 7.1(13) translation breaks.
+
+Open task: build/prove the `finite_address_branch_closure` ledger
+`<=6-multiple-of-7 low-apex top-balanced covering row -> finite-address
+HYP-2963 packet -> protected S250 branch graph -> direct largest-arc floor or
+terminal discharge or named residual debt -> formal witness readout M>=1/14`.
+Record
+`multiple_of_7_profile`, multiple-of-14 status, level-7 lift status, exact
+`M/q`, endpoint owner, destroyed coordinate, covering-margin aliasing status,
+`polynomial_composite_lift_status`, `direct_lonely_arc_count_status`,
+`largest_lonely_arc_floor`, `grid_class`, active binder owner word, endpoint
+transition word, q-cusp principal part, polar exit, Hurwitz/Pell/Morita address, protected branch node,
 bridge mode, median-center kind, terminal exit, and formalization status.
 Named debts are global packet coverage, covering-moment/p0 or apex-periodic
-gamma/Node3 discharge, K33/THM-572 state-lift construction,
+gamma/Node3 discharge for nested-refinement packets, K33/THM-572 state-lift construction,
 branch-closure/no-new-naked-bridge family theorem, integer-vs-real finite-ruler
 glue, and AP/GW census only if the proof chooses a boundary-equality route. ->
-HYP-3083, HYP-3082, HYP-3081, HYP-3080, HYP-3079, HYP-3078, HYP-3077,
+HYP-3083, HYP-3088, HYP-3089, HYP-3090, HYP-3091, HYP-3087, HYP-3085,
+HYP-3084, HYP-3082, HYP-3081, HYP-3080, HYP-3079, HYP-3078, HYP-3077,
 HYP-3075, HYP-2996, HYP-2963, HYP-2906, HYP-2900, THM-523, THM-534, THM-571,
-THM-572, LTI-232, LTT-130, T1167, OPEN-Q-108.
+THM-572, THM-573, THM-575, LTI-232, LTT-130, T1167, T1168, OPEN-Q-108.
 
 **OPEN-Q-108 S249 branch-tournament orientation addendum:** HYP-3081 turns
 Robbins' no-bridge strong-orientation criterion into an LRC14

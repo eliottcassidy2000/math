@@ -9,6 +9,8 @@ merges:
   - HYP-2716   # codex: miss-zeta = Krawtchouk top-character budget (j=2 = pair, j>=3 = dip)
 related:
   - HYP-3091   # the lonely set's fiber: cap = the 'volume' face; D=mod-41 = the Dehn face
+  - HYP-3094   # routes cap/fiber packets between O2 discharge and O3/K33 debt
+  - HYP-3093   # the forgetting-cost tuple that prevents quotient collapse
   - THM-534    # the moment-LP / Delsarte frame
   - OPEN-Q-108
 reflections:

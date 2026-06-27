@@ -11,12 +11,17 @@ related:
   - HYP-1980
   - HYP-3003
   - HYP-3004
+  - HYP-3088
+  - HYP-3089
+  - HYP-3090
   - HYP-3085
+  - HYP-3091
   - HYP-3083
   - THM-523
   - THM-571
   - THM-572
   - THM-573
+  - THM-575
   - LTI-011
   - LTI-153
   - LTI-154
@@ -83,11 +88,24 @@ This synthesis merges five existing lines.
    of `7`.  Therefore the vertical product/valuation axis must record the
    level-7 lift status, not merely multiple-of-14 status.
 
-5. Incoming HYP-3085, the covering-moment / K33 state-lift shuttle, supplies a
+5. THM-576/HYP-3090 adds cap-ratio/deviation status.  Pairwise avoidance
+   explains the clean triangular caps for `k>=10`, while `k=8,9` and the
+   first order-3 break remain named cap-side debt.  A grid cell is therefore
+   not proof-safe if it forgets whether it is a clean cap-ratio packet, a
+   deviation packet, or a higher-order break packet.
+
+6. HYP-3094, the covering-moment / K33 state-lift shuttle, supplies a
    concrete exit grammar for this grid.  Nested-refinement covering packets and
    cross-handoff K33 packets can both be positive-open, so the operation grid
    must retain grid class, active binders, and endpoint-owner transitions
    before using safe mass or a product lane as a theorem separator.
+
+7. HYP-3088/HYP-3089 add the normalized-arc and paper/V* target.  The same
+   `14=2*7` wall appears as the failed field-interpolation case, but the raw
+   Conjecture 7.1 denominator reading is repaired into normalized
+   slow/ruler-coordinate arc data plus the V* crossover.  Thus a grid cell must
+   also record whether it contributes to that normalized largest-arc floor or
+   only routes to O2/O3 residual debt.
 
 ## Interpretation Of The Space-Filling Curve
 
@@ -141,8 +159,10 @@ primitive 13-speed row
   -> level-7 lift sieve if at least 7 speeds are divisible by 7 (THM-573)
   -> residual core with at most 6 multiples of 7
   -> danger-weighted operation-address packet
+  -> cap-ratio/deviation status (HYP-3090/THM-576)
+  -> three-sameness lonely-set fiber (HYP-3091)
   -> finite-address branch packet (HYP-3083)
-  -> covering/K33 shuttle if the grid class is nested_refinement or cross_handoff (HYP-3085)
+  -> covering/K33 shuttle if the grid class is nested_refinement or cross_handoff (HYP-3092)
   -> protected branch graph / no naked bridge
   -> terminal discharge or named residual debt
   -> formal witness readout M>=1/14
@@ -150,7 +170,7 @@ primitive 13-speed row
 
 The hyperoperation grid contributes at the middle step.  It is not replacing
 the q-witness theorem, the level-7 sieve, the HYP-2963 packet bank, the
-HYP-3085 covering/K33 shuttle, or the branch-closure proof.  It gives a
+HYP-3094 covering/K33 shuttle, or the branch-closure proof.  It gives a
 coordinate chart for the remaining residual core, where additive and
 multiplicative shadows must both be retained until a legal exit has been
 found.
@@ -160,6 +180,7 @@ In this chart:
 ```text
 p+q    detects additive endpoint-owner / summand pressure;
 p*q    detects product incidence, factor shell, and level-7 vertical depth;
+cap    records triangular ratio, deviation, or higher-order break status;
 q^p    tests denominator-dominated lacunarity;
 p^q    tests numerator-dominated explosion and residue collapse;
 curve  schedules adjacent repairs but proves nothing without sidecars.
@@ -301,5 +322,6 @@ formalization_status
 The target theorem would not say that the grid is complete.  It would say that
 inside the THM-573 residual core, the first nonzero danger-weighted operation
 cell either opens a witness, descends through a covering/Node3 or q-witness
-route, hands off to the HYP-3085 K33/THM-572 shuttle, enters a protected branch
-packet, or emits a named residual debt without creating a naked bridge.
+route, identifies a HYP-3090 cap/deviation packet, hands off to the HYP-3091
+K33/THM-572 shuttle, enters a protected branch packet, or emits a named
+residual debt without creating a naked bridge.

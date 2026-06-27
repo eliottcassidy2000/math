@@ -15,6 +15,7 @@ results:
   - 05-knowledge/results/lrc14_modular_cusp_pochhammer_hurwitz_s245.out
 tags: [lrc14, hurwitz, markov, pell, cannonball, q-pochhammer, modular-functions, cusp, diophantine-approximation, controlled-forgetting, tournament-analysis]
 related:
+  - HYP-3083
   - HYP-3077
   - HYP-3076
   - HYP-3074

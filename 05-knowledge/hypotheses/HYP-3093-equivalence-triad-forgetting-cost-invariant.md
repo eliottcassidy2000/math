@@ -8,6 +8,7 @@ tags: [invariants, equinumerosity, equidecomposability, equidistribution, contro
 related:
   - HYP-3091
   - HYP-3092
+  - HYP-3094
   - HYP-2187
   - HYP-2186
   - HYP-2244

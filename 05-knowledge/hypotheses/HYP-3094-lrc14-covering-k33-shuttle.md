@@ -1,14 +1,22 @@
 ---
-id: HYP-3085
+id: HYP-3094
 title: LRC14 covering-moment and K33 state-lift shuttle
 status: EVIDENCE / two-obligation proof-interface shuttle; not a proof
-source: codex-2026-06-27-S254
+source: codex-2026-06-27-S254 + postrebase namespace integration
 technique: LTI-232
 tournament_technique: LTT-130
 script: 04-computation/lrc14_o2_o3_shuttle_codex_s254.py
 result: 05-knowledge/results/lrc14_o2_o3_shuttle_codex_s254.out
 related:
   - HYP-3083
+  - HYP-3087
+  - HYP-3088
+  - HYP-3089
+  - HYP-3090
+  - HYP-3091
+  - HYP-3092
+  - HYP-3094
+  - HYP-3085
   - HYP-3084
   - HYP-3082
   - HYP-2965
@@ -18,10 +26,11 @@ related:
   - HYP-3045
   - THM-573
   - THM-572
+  - THM-576
   - OPEN-Q-108
 ---
 
-# HYP-3085: LRC14 Covering-Moment and K33 State-Lift Shuttle
+# HYP-3094: LRC14 Covering-Moment and K33 State-Lift Shuttle
 
 This hypothesis records a focused back-and-forth between the two live
 obligations from HYP-3083:
@@ -48,14 +57,31 @@ nested-refinement rows should therefore be read as local interface evidence,
 not as a global margin theorem.
 
 The incoming mac-mini S60 gK8 artifact
-`05-knowledge/hypotheses/HYP-3084-gk8-concentration-is-low-order-moment-s2-clebsch.md`
+`05-knowledge/hypotheses/HYP-3085-gk8-concentration-is-low-order-moment-s2-clebsch.md`
 is the complementary O2 certificate candidate: it localizes the gK8/p0
 covering-moment bound to low-order factorial moments led by pairwise `S2`,
 then corrects the literal Clebsch-design guess to a reflection-symmetric
 Perron-mode bound.  Read together, that S60 artifact supplies a possible
-moment-LP carrier for O2, while HYP-3085 records the finite-address guardrails
+moment-LP carrier for O2, while HYP-3094 records the finite-address guardrails
 that prevent that carrier from collapsing into a scalar-margin claim or
 swallowing K33 cross-handoff debt.
+
+The incoming HYP-3088/HYP-3089 normalized-arc / paper bridge adds the global
+interpretation of this local split.  Positive-open mass is not enough unless it
+can be converted into a normalized slow/ruler-coordinate largest-arc floor and
+then back into real witnesses through the V* split or finite-ruler handoff;
+otherwise the shuttle must name the exact cross-handoff, arc-count, or
+state-lift sidecar that blocks the repaired Conjecture 7.1(13) translation.
+
+The postrebase THM-576/HYP-3090 cap-ratio note narrows the O2 side further.
+Pairwise avoidance accounts for the clean triangular caps for `k>=10`, while
+`k=8,9` and the first order-3/order-4 break remain the cap-side deviations
+that any O2 certificate has to localize.  HYP-3091 adds a complementary
+three-sameness fiber: a packet should carry its equinum, equidecomp, and
+equidist status instead of only its safe-mass scalar.  This HYP-3094 shuttle
+is therefore the interface for carrying cap/deviation and three-sameness
+packets into either nested-refinement discharge or cross-handoff state-lift
+debt.
 
 ## Exact Scout
 

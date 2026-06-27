@@ -5,7 +5,8 @@ Source: codex-2026-06-27-S254.
 This pass merges the user's hyperoperation prompt with the older
 `x+2`/`x*2` space-filling grid work and the incoming THM-573 level-7 sieve.
 After rebasing over the incoming covering/K33 shuttle and the later HYP-3086
-sexy-prime namespace claim, the resulting artifact is HYP-3087.
+sexy-prime namespace claim, then preserving the later HYP-3088/HYP-3089
+polynomial-method reservations, the resulting artifact is HYP-3087.
 
 The useful reading is not "a space-filling curve proves LRC14."  The curve is a
 scheduler through operation cells.  It becomes theorem-relevant only when each
@@ -35,11 +36,23 @@ multiples of `14`.  Therefore the product/vertical lane must record
 `count_7_divisible`, `v7_depth`, and `level7_lift_status` before it can be used
 in the finite-address branch-closure spine.
 
-The rebase also brought in HYP-3085, the covering-moment / K33 state-lift
+THM-576/HYP-3090 adds a cap-side coordinate.  Pairwise avoidance supplies the
+clean triangular caps for `k>=10`, but `k=8,9` and the first order-3 break must
+remain visible as deviation debt.  The grid cell should therefore retain
+`cap_ratio_or_deviation_status` before it gets scalarized into a moment bound.
+
+The rebase also brought in HYP-3094, the covering-moment / K33 state-lift
 shuttle.  That shuttle is a direct exit grammar for the grid: nested-refinement
 covering packets and cross-handoff K33 packets may both be positive-open, so
 the hyperoperation carrier must keep grid class, active binders, and endpoint
 owner transitions before any product lane or safe-mass shadow is trusted.
+
+The later S31ag bridge adds one more target coordinate.  HYP-3087 identifies
+the same `14=2*7` wall in the external polynomial-method paper, and HYP-3088
+translates Conjecture 7.1(13) into a uniform largest-lonely-arc floor.  Thus an
+operation-address cell is not complete merely because it routes through O2/O3;
+it must also say whether it contributes to the normalized slow/ruler-coordinate arc
+floor or names the packet where that floor reduction fails.
 
 The improved proof shape is:
 

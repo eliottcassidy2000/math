@@ -123,6 +123,7 @@ residual handoff.
 | Lens handle | Strongest current evidence | Preserved predicate | Destroyed coordinate | Next pull |
 |---|---|---|---|---|
 | HYP-2963 labelled packet bank | `21913` exact packets with named route census | route and exact packet family | sidecar compression | add lens-family tags and hidden sidecar fields |
+| HYP-3083 finite-address branch closure | S252/S253/S31af/S31ag/S254 proof spine integrating Hurwitz/q-cusp/median/sixth-power/Robbins/branch-kernel/Morita address rules, S59 apex split, THM-573 level-7 lift sieve, HYP-3088/HYP-3089 normalized-arc / paper largest-arc target, THM-576/HYP-3090 triangular cap skeleton, HYP-3091 three-sameness fiber, and HYP-3094 O2/O3 shuttle | boundary/open status, route schedulability, `apex_divisible_by_14_flag`, `multiple_of_7_profile`, `level7_lift_sieve_status`, cap-ratio/deviation status, `three_sameness_fiber`, `equinum_shadow`, `equidecomp_D`, `inverse_lmax`, `equidist_measure_status`, `grid_class`, active binder/endpoint-owner words, largest-lonely-arc floor status, low-apex/top-balanced status, finite address, protected branch entry, terminal exit | raw scalar constants, q-coefficients, route labels, tournament counts, safe-mass scalars, cardinality/equinum shadows, covering-margin heuristics, field-interpolation analogies, and p-adic/discrepancy constants when used without address | build `finite_address_branch_closure` ledger; split no-apex direct witnesses and THM-573 level-7 exits from the `<=6` multiples-of-7 low-apex/top-balanced covering residuals, record HYP-3090 cap/deviation status and HYP-3091 `Phi(S)`, then route nested-refinement rows to O2 covering discharge, cross-handoff rows to K33/THM-572 lift debt, prove the normalized largest-arc floor or name the obstructing packet, and Lean packet closure |
 | HYP-3024 coarse ET + unit rule | `0` mixed boundary/open fibers, `15` route-mixed fibers | status | exact route | prove status convergence before route purity |
 | HYP-3030 status-topology gate | AP/GW are the only boundary rows in mixed residue-terminal status collisions | zero-open topology | route scheduling | prove AP/GW boundary H1 theorem |
 | HYP-3034 arc-boundary path lift | AP/GW closed-H1 reps killed by any owner deletion | owner-essential boundary | arithmetic period | add closed-H1 owner support sidecar |
@@ -294,12 +295,18 @@ raw_lens_key
   -> named theorem target.
 ```
 
-The current best theorem target is the **lens unification principle**:
+The current best theorem target is **finite-address branch closure**:
 
-> For every primitive LRC14 packet, any quotient produced by a lens in this
-> map is legal only if it preserves boundary/open status and theorem-route
-> schedulability directly, or exposes a named sidecar whose first nonzero
-> coordinate routes to AP/GW boundary H1, a Q-witness primitive deck, an
-> AP-tail puncture/fixed-point clock, an owner/stalk/barcode descent, an
-> owner-strip filtration page, a capacitor/zeta cut, a packet-family
-> certificate, or F7/THM-572/harmonic residual debt.
+> For every primitive LRC14 row, first split by whether some runner is
+> divisible by `14`; no-apex rows emit the direct `t=1/14` witness, while
+> apex rows pass through q-witness, apex-majority, and one-large-speed exits.
+> The remaining low-apex/top-balanced covering rows either emit a strict
+> witness or AP/GW boundary equality directly, or emit a finite-address branch
+> packet whose lost
+> coordinate is reconstructed, dual-annihilated, descended, boundary-stopped,
+> protected by a no-naked-bridge proof graph, or routed to a terminal theorem
+> exit: Q-witness primitive deck, C27 petal, covering-family positivity,
+> K33/THM-572/F7 state-lift theorem, or formal named residual debt.
+
+The older lens unification principle is now the quotient-admissibility lemma
+inside that target.
