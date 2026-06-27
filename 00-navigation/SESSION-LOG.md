@@ -344,6 +344,7 @@ coordinate.  Next task: attach HYP-3124 `edge_witness_certificate` fields to
 HYP-3115 one-swap/domain-wall edges and HYP-3098 observer-gluing rows; use
 HYP-3125/LTI-260 for the actual few-apex `Rprime` row schema.
 
+## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- superseded by HYP-3124
 ## mac-mini-2026-06-27-S67 -- Lee-Yang extremality: the cap is a phi^4 field theory, kappa4 marks the hard row k=8
 
 Owner: work on Lee-Yang extremality toward the LRC proof, with the phi^4 density exp(-lambda S^4 - b S^2) and
@@ -373,6 +374,64 @@ EAR BRIDGE (creative): odd cumulant kappa3 (3.7->5.6) <-> odd-ear/odd-cycle/OCF 
 even quartic kappa4 <-> phi^4 stabilizer. Honest: the zeros are NOT on |z|=1, so the sector model is phi^4
 not plain Ising. Builds on codex HYP-3113 (which proposed quartic_cumulant_stabilizer but never computed it).
 
+## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- superseded by HYP-3124
+## codex-2026-06-27 -- recursive tournament-edge witness scout -- HYP-3124
+
+User asked to continue the proof-frontier work by treating tournament edges as
+witnesses and thinking recursively on both tip and tail, while preserving prior
+work.  Integrated incoming S268 by renumbering the edge-witness lane to
+HYP-3124 / T1198 / LTI-259 / LTT-157 because S269 owns HYP-3119 / T1194 /
+LTI-255 / LTT-153, S253 owns HYP-3121, S67 owns HYP-3122, and S270 owns
+HYP-3123.  Added executable scout
+`04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py`,
+stored output
+`05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out`,
+and reflection
+`07-reflections/lrc14-edge-witness-recursion-codex-20260627.md`.
+
+Main result: through all unlabeled tournaments on `n<=6`, score sequence sees
+only `22/56` classes at `n=6`, the depth-0 edge-sector deck sees `55/56`, and
+the depth-1/depth-2 recursive edge-witness deck sees `56/56` with no
+collisions.  The missing sector-deck bit is repaired exactly by retaining both
+endpoint deletion children.  At `n=6`, the scout records `648`
+child-code-asymmetric directed edges, `744` root-perspective-asymmetric edges,
+and `346` two-sided middle-sector edges, marking where a quotient needs tail
+child, tip child, observer deck, coordinate-resurrection status, or named
+debt.
+
+Tournament Analysis uses proof lenses rather than raw arcs.  The proof-lens
+tournament is transitive with one Hamiltonian path:
+`recursive_edge_witness_packet > edge_coordinate_resurrection_guard >
+tail_tip_child_pair > decorrelation_edge_floor >
+h7_state_lift_edge_boundary > four_sector_observer_deck >
+phi4_ising_edge_wall > raw_H_value_shadow > raw_edge_count_shadow`.
+
+Next packet fields: `edge_witness_recursion_id`, `tail_child_packet`,
+`tip_child_packet`, `four_sector_observer_deck`, `child_deck_asymmetry`,
+`coordinate_resurrection_status`, `decorrelation_floor_status`,
+`state_lift_boundary_status`, `phi4_edge_wall_status`, and
+`terminal_exit_or_named_debt`.  This connects HYP-3120's closure-bridge
+packet schema, HYP-3121's lift-and-decorrelate versus H7 state-lift split,
+HYP-3122/S67's phi4 quartic wall, and HYP-3123/S270's chiral/Cech orientation
+guard: those stress signals are proof-facing only when they point back to
+recursive tail/tip child packets or named repair debt.
+
+## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- HYP-3124
+
+Reserved the prompt to merge tournament edges as witnesses and recurse on both
+tip and tail.  The reservation is now HYP-3124/T1198/LTI-259/LTT-157 after
+S269 claimed HYP-3119/T1194/LTI-255/LTT-153 for the endpoint-gated niche
+archive bridge and S253 claimed HYP-3121 for the lift-and-decorrelate
+three-engine synthesis, while S67 owns HYP-3122 for phi4 and S270 owns
+HYP-3123 for chiral/Cech proof angles.  The planned object is an oriented edge
+`tail -> tip`
+carrying `tail_packet`, `tip_packet`, the outside four-sector deck,
+tail-deletion child, tip-deletion child, and repaired coordinate or named debt.
+This explicitly joins HYP-3050 edge tail/tip perspectives, HYP-3054
+observer-extension cut words, HYP-3106 directed-edge controlled-forgetting,
+HYP-3112 ear-payload edges, HYP-3115 domain-wall edges, and the
+HYP-3116/HYP-3118 missing-input/resurrection guardrails.  Status at
+reservation: not a proof; executable scout pending.
 ## kind-pasteur-2026-06-27-S253 -- SYNTHESIS: the LRC(14) covering case is ONE lift-and-decorrelate engine; open core = r=2..6 multi-far floor
 Owner: integrate incoming+past work, understand what remains, synthesize an improved argument. Mapped the full proof DAG (Explore) + verified the unification. HYP-3121 + reflection lrc14-three-engines-lift-and-decorrelate.
 - **PROOF MAP (current):** (A) non-covering qdiv<=14: THM-523 tau=1/q, M>=1/14; tight=census {AP,GW} (HYP-2920/2921 bounded+single-swap PROVEN). (B) covering qdiv>14, r=|14Z cap S|: THM-571 (r>=7, PROVED mod LRC<=13) + HYP-2968 (r<=6, OPEN). Hard kernel: THM-572 (H=7 state-lift, conditional on construction). THM-568 corrected (14|D not D=14, shell-collapse open).
@@ -440,6 +499,9 @@ tail_deleted_one_sided_recursion -> tip_deleted_one_sided_recursion ->
 raw_edge_count_scalar`.  Handoff invariant:
 `edge_witness_certificate = four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar_or_named_debt`;
 next attach it to HYP-3115 one-swap/domain-wall edges.
+phi4 stabilizer and HYP-3124's edge-witness recursion give adjacent tests for
+the chiral guard: cumulant/ear parity and tail/tip directed-edge sector
+recursion.
 
 ## codex-2026-06-27-S267 -- LRC14 coordinate-resurrection sheaf and adjoint repair calculus -- HYP-3118
 

@@ -38,7 +38,7 @@ related:
 ## Claim
 
 After the incoming HYP-3118 coordinate-resurrection sheaf, HYP-3120 niche
-closure bridge, HYP-3121 lift-and-decorrelate three-engine synthesis, and
+closure bridge, HYP-3121 lift-and-decorrelate three-engine synthesis,
 HYP-3122 phi4 material, and HYP-3124 edge-witness material, two remaining
 LRC14 proof angles look structurally different enough to deserve their own
 packet schema:
@@ -67,11 +67,11 @@ component control.
 Post-merge integration: HYP-3121 says the covering case is one
 lift-and-decorrelate engine, with the hard open core in the `r=2..6`
 multi-far floor.  HYP-3123's Cech route should therefore be tested as the
-normalized component / finite-ruler payload for that middle engine.  Incoming
-HYP-3122 material adds the phi4 quartic-stabilizer hook; HYP-3124 adds the
-edge-witness hook.  Ear parity and cumulants are the analytic side of the
-chiral guard, while completed tail/tip edge-witness recursion supplies the
-directed-edge sector test that can instantiate the guard.
+normalized component / finite-ruler payload for that middle engine.  HYP-3122
+adds the phi4 quartic-stabilizer hook: ear parity and cumulants are the
+analytic side of the chiral guard.  HYP-3124 adds the matching edge-recursion
+hook: directed-edge tail/tip sectors instantiate the guard only when both
+endpoint children and the cross-sector orientation word survive.
 
 ## Executable Scout
 

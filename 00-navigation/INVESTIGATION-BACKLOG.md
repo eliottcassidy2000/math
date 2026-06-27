@@ -215,6 +215,8 @@ the normalized component payload for the `r=2..6` multi-far floor.  HYP-3122's
 phi4 stabilizer and the HYP-3124 edge-witness recursion scout are natural
 stress tests for the chiral guard through cumulant/ear parity and tail/tip
 sectors.
+phi4 stabilizer and HYP-3124's edge-witness recursion are natural stress
+tests for the chiral guard through cumulant/ear parity and tail/tip sectors.
 
 Next: run a joined packet ledger over HYP-2963/HYP-3098/HYP-3107/HYP-3112
 with chiral guard fields, normal-fan/Cech finite-ruler fields, first-obstruction
@@ -249,6 +251,40 @@ Next: attach `edge_witness_certificate`, `edge_tail_tip_sector_word`,
 `recursive_tail_child_edge_deck`, `recursive_tip_child_edge_deck`,
 `edge_missing_input_vector`, `edge_repair_sidecar`, and `edge_terminal_exit`
 to HYP-3115 one-swap/domain-wall edges and HYP-3098 observer-gluing rows.
+## Lead codex-2026-06-27: LRC14 recursive tournament-edge witness packet
+
+**Status:** EVIDENCE / exact small-tournament information audit and packet
+schema; not proof (HYP-3124/T1198).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3124-lrc14-tournament-edge-witness-recursion.md`,
+`04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py`,
+`05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out`.
+
+Readout: the scout treats a directed edge `tail -> tip` as a recursive proof
+witness retaining the outside four-sector observer deck, the tail child after
+deleting the tip, the tip child after deleting the tail, and both child edge
+decks.  Through all unlabeled tournaments on `n<=6`, score sequences separate
+only `22/56` classes at `n=6`, the depth-0 edge-sector deck separates `55/56`,
+and depth-1/depth-2 recursive edge-witness decks separate `56/56` with no
+collisions.  The proof-lens tournament is transitive and led by
+`recursive_edge_witness_packet`, then `edge_coordinate_resurrection_guard`,
+then `tail_tip_child_pair`, then `decorrelation_edge_floor`, then
+`h7_state_lift_edge_boundary`.
+
+Integration: this row now treats HYP-3122/S67 as the phi4 quartic wall stress
+and HYP-3123/S270 as the chiral/Cech orientation guard.  HYP-3124 is the
+edge-local packet that tests whether those signals still point back to
+tail/tip children, observer sectors, and named destroyed-coordinate repairs.
+
+Next: attach `edge_witness_recursion_id`, `tail_child_packet`,
+`tip_child_packet`, `four_sector_observer_deck`, `child_deck_asymmetry`,
+`coordinate_resurrection_status`, `decorrelation_floor_status`,
+`state_lift_boundary_status`, `phi4_edge_wall_status`, and
+`terminal_exit_or_named_debt` to HYP-2963/HYP-3098/HYP-3107 packet rows.  Use
+the edge witness as a legal sidecar for observer gluing, coordinate
+resurrection, HYP-3121 lift-and-decorrelate cuts, and zero-mass H7/F7
+state-lift boundaries; keep raw H or raw sector counts as alarms only.
 
 Namespace: HYP-3124 / LTI-259 / LTT-157 / T1198 / OPEN-Q-108.
 

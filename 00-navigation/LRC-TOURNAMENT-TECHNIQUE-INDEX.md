@@ -5024,50 +5024,55 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
   HYP-3106, HYP-3102, HYP-3101, HYP-3098, HYP-3096, THM-573, THM-572,
   THM-565, LTI-258, LTT-156, T1197, OPEN-Q-108.
 
-## LTT-157: Tournament Of Edge-Witness Recursion Reframes
+## LTT-157: Tournament of Recursive Edge-Witness Proof Lenses
 
-- **Move:** Treat `tail -> tip` directed edges as proof witnesses only after
-  their two endpoint recursions are retained.  Vertices in the tournament are
-  edge-witness reframes: coordinate-resurrection edge sheaves, two-ended edge
-  packets, cross-sector orientation words, paired tail/tip deletion recursion,
-  proof-circuit edge gates, domain-wall classifiers, ear-payload edge masses,
-  four-sector decks, one-sided endpoint recursions, and raw edge-count
-  scalars.
+- **Move:** Treat an oriented edge `tail -> tip` as a proof witness only when
+  it retains both endpoint recursions: the tail child after deleting the tip,
+  the tip child after deleting the tail, the outside four-sector observer deck,
+  and the child edge decks.  Vertices are edge-witness reframes or proof
+  lenses, not runners, arcs, raw sector counts, or H values.
 - **LRC use:** HYP-3124/S268 extends HYP-3050/HYP-3054/HYP-3106 by adding the
-  missing recursive payload.  The exact census through labelled tournaments
-  `n<=5` shows that sector words are a local observable but not a complete
-  witness: sector counts are `1,4,10,20`, while sector plus paired
-  endpoint-deletion child signatures are `1,4,16,80`.  At `n=5`, all `20`
-  sector groups split by child pair.  Therefore the proof carrier is
-  `edge_witness_certificate = four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar_or_named_debt`.
-  S271 extends this to the HYP-3121 multi-far floor: unlabelled `n=6`
-  class-deck sector counts/internal decks separate `55/56`, colliding only on
-  converse pair `344/345`; roleless children, recursive children, and full
-  edge witnesses separate `56/56`.  Edge-instance fibers show why the
-  two-ended payload matters: `43` nontrivial sector-internal fibers split by
-  tail/tip children and `16` recursive fibers still need cross-sector
-  orientation.
-- **Preserves:** endpoint role word, tail/tip sector word, cross-sector
-  orientation, tail-deletion child, tip-deletion child, recursive child edge
-  decks, observer-gluing payload orbit, HYP-3116 missing-input vector,
-  HYP-3118 coordinate-resurrection sidecar, and terminal exit.
-- **Forgets / guardrail:** raw edge count, raw Ising/domain-wall count,
-  one-sided tail-only recursion, one-sided tip-only recursion, and sector word
-  alone all forget either the endpoint owner or the paired recursive
-  compatibility condition.
-- **Fingerprint:** Pairwise observable is majority retention over LRC
-  predicate, tail/tip symmetry, recursive closure, sector resolution,
-  observer gluing, missing-input repair, domain-wall alignment, formal
-  readiness, and scalar guardrail.  S268 reports
-  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,7:3,9:1,10:1}`,
-  one directed 3-cycle, SCC sizes `[3,1,1,1,1,1,1,1,1]`, three Hamiltonian
-  paths, and `7` edge flips against a locality-first gauge.  Selected path:
-  `coordinate_resurrection_edge_sheaf -> edge_witness_two_ended_packet ->
-  cross_sector_orientation_word -> paired_tail_tip_deletion_recursion ->
-  proof_circuit_edge_gate -> domain_wall_edge_classifier ->
-  ear_payload_edge_mass -> outside_four_sector_deck ->
-  tail_deleted_one_sided_recursion -> tip_deleted_one_sided_recursion ->
-  raw_edge_count_scalar`.
+  missing recursive payload.  The labelled S268 census through `n<=5` shows
+  that sector words are local but not complete: sector counts are `1,4,10,20`,
+  while sector plus paired endpoint-deletion child signatures are
+  `1,4,16,80`; at `n=5`, all `20` sector groups split by child pair.  The
+  continuation scout enumerates all unlabeled tournaments through `n=6`; at
+  `n=6`, raw score sequence separates `22/56` classes, the depth-0
+  edge-sector deck separates `55/56`, and the depth-1/depth-2 recursive
+  edge-witness deck separates `56/56`.  Both scouts point to the same carrier:
+  `four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar_or_named_debt`.
+- **Preserves:** edge-local observer sectors, endpoint deletion packets,
+  cross-sector orientation, recursive child edge decks, child/root asymmetry,
+  coordinate-resurrection guard data, HYP-3121 decorrelation-floor boundary
+  data, H7/F7 state-lift edge-boundary data, HYP-3125/HYP-3126 wide-V
+  decoupling status, HYP-3127 Asano contraction order, HYP-3122/S67 phi4
+  wall stress, and HYP-3123/S270 chiral/Cech orientation stress when tied to
+  child packets.
+- **Forgets / guardrail:** raw edge counts, raw H shadows, one-sided endpoint
+  recursions, and one-swap or Lee-Yang wall labels are not terminal unless the
+  recursive child packets or named debts survive.
+- **Tournament readout:** S268's reframe tournament has one directed 3-cycle,
+  SCC sizes `[3,1,1,1,1,1,1,1,1]`, three Hamiltonian paths, and selected path
+  `coordinate_resurrection_edge_sheaf > edge_witness_two_ended_packet >
+  cross_sector_orientation_word > paired_tail_tip_deletion_recursion >
+  proof_circuit_edge_gate > domain_wall_edge_classifier >
+  ear_payload_edge_mass > outside_four_sector_deck >
+  tail_deleted_one_sided_recursion > tip_deleted_one_sided_recursion >
+  raw_edge_count_scalar`.  The continuation proof-lens tournament is
+  transitive with one Hamiltonian path:
+  `recursive_edge_witness_packet > edge_coordinate_resurrection_guard >
+  tail_tip_child_pair > decorrelation_edge_floor >
+  h7_state_lift_edge_boundary > four_sector_observer_deck >
+  phi4_ising_edge_wall > raw_H_value_shadow > raw_edge_count_shadow`.
+- **Next hook:** Add `edge_witness_recursion_id`, `tail_child_packet`,
+  `tip_child_packet`, `four_sector_observer_deck`, `child_deck_asymmetry`,
+  `coordinate_resurrection_status`, `decorrelation_floor_status`,
+  `state_lift_boundary_status`, `phi4_edge_wall_status`, and
+  `terminal_exit_or_named_debt` to HYP-2963/HYP-3098/HYP-3107 packet rows.
+- **Pointers:** HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3123,
+  HYP-3122, HYP-3121, HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116,
+  HYP-3115, HYP-3112, HYP-3106, HYP-3054, HYP-3050, LTI-259, LTT-157,
+  T1198, OPEN-Q-108.
 - **S271 class-deck stress:** The supplemental HYP-3124 audit through
   unlabelled `n=6` keeps this tournament card focused on edge-witness memory:
   sector-count/internal decks separate `55/56`, colliding only on converse
@@ -5076,15 +5081,6 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
   payload is real: `43` nontrivial sector-internal fibers split by tail/tip
   children and `16` recursive fibers split further by cross-sector
   orientation.  The measured multi-far `Rprime` repair tournament is LTT-158.
-- **Next hook:** Attach `edge_witness_certificate`,
-  `tail_deletion_child_signature`, `tip_deletion_child_signature`,
-  `recursive_tail_child_edge_deck`, `recursive_tip_child_edge_deck`,
-  `edge_missing_input_vector`, and `edge_repair_sidecar` to HYP-3115
-  one-swap/domain-wall edges and HYP-3098 observer-gluing rows; switch to
-  LTT-158 when the same witness becomes an `Rprime` floor packet.
-- **Pointers:** HYP-3124, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115,
-  HYP-3112, HYP-3108, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-2963,
-  LTI-259, LTT-157, T1198, OPEN-Q-108.
 
 ## LTT-158: Tournament Of Multi-Far Edge-Floor Repair Operators
 
@@ -5128,10 +5124,10 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
   `lee_yang_zero_free_after_contraction`, `phi4_kappa4_sign`,
   `normal_fan_chamber_id`, `chiral_guard_word`, and
   `terminal_exit_or_named_debt` to real `r=2..6` covering packets.
-- **Pointers:** HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121, HYP-3120,
-  HYP-3127, HYP-3118, HYP-3116, HYP-3112, HYP-3108, HYP-3106, HYP-3101, HYP-2968,
-  HYP-2963, THM-573, THM-572, THM-082, LTI-260, LTT-158, T1199,
-  OPEN-Q-108.
+- **Pointers:** HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121,
+  HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3108, HYP-3106, HYP-3101,
+  HYP-2968, HYP-2963, THM-573, THM-572, THM-082, LTI-260, LTT-158,
+  T1199, OPEN-Q-108.
 
 Post-rebase HYP-3127 promotes Asano to the candidate contraction engine for
 this same tournament card.  Future LTT-158 uses should treat S271's tournament

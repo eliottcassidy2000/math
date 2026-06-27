@@ -138,6 +138,31 @@ or named HYP-2963/HYP-3098 residual debt before using domain-wall counts or
 edge shortcuts. -> HYP-3124, HYP-3119, HYP-3118, HYP-3117, HYP-3116,
 HYP-3115, HYP-3112, HYP-3106, HYP-3054, HYP-3050, HYP-2963, LTI-259,
 LTT-157, T1198, OPEN-Q-108.
+**OPEN-Q-108 HYP-3124 recursive edge-witness addendum:**
+HYP-3124 turns tournament edges into two-ended proof witnesses.  The exact
+scout enumerates all unlabeled tournaments through `n=6`: score sequence sees
+`22/56` classes, the depth-0 edge-sector deck sees `55/56`, and the
+depth-1/depth-2 recursive edge-witness deck sees `56/56`.  The missing edge
+sector bit is repaired by retaining both endpoint deletion children.
+
+Open task: add `edge_witness_recursion_id`, `tail_child_packet`,
+`tip_child_packet`, `four_sector_observer_deck`, `child_deck_asymmetry`,
+`coordinate_resurrection_status`, `decorrelation_floor_status`,
+`state_lift_boundary_status`, `phi4_edge_wall_status`, and
+`terminal_exit_or_named_debt` to HYP-2963/HYP-3098/HYP-3107 rows.  Any edge
+cut, Ising/Lee-Yang domain wall, observer-extension cut, or H-value transfer
+should be rejected unless these fields preserve the LRC predicate or name the
+first destroyed coordinate as repair debt.  HYP-3122 supplies the phi4 wall
+stress and HYP-3123 supplies the chiral/Cech orientation guard; both are
+admissible here only when they still point back to tail/tip children or named
+repair debt.  HYP-3125/HYP-3126 sharpen the positive-mass decorrelation side:
+record wide-V decoupling, bounded-core floor, finite `w0` check, or minorant
+debt before accepting an edge cut.  HYP-3127 turns the same tail/tip recursion
+into a possible Asano contraction order when endpoint children and zero-free
+polydisk sidecars survive. -> HYP-3127, HYP-3126, HYP-3125, HYP-3124,
+HYP-3123, HYP-3122, HYP-3121, HYP-3120, HYP-3119, HYP-3118, HYP-3116,
+HYP-3115, HYP-3112, HYP-3106, HYP-3054, HYP-3050, LTI-259, LTT-157,
+T1198, OPEN-Q-108.
 
 **OPEN-Q-108 S266 circuit missing-input addendum:**
 HYP-3116 converts circuit complexity into an LRC14 proof-compression audit.
