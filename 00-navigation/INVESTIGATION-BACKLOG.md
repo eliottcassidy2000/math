@@ -116,6 +116,40 @@ and translate the HYP-3129 low-frequency SPEC certificate into coefficient
 moments of `F_R,Q`.
 
 Namespace: HYP-3139 / LTI-265 / LTT-163 / T1204 / OPEN-Q-108.
+## Lead codex-2026-06-27-S273: k=8 resolvent sidecar certificate
+
+**Status:** EVIDENCE / exact bounded-bank scout through B=14; not proof
+(HYP-3142/T1207).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3142-k8-resolvent-sidecar-certificate.md`,
+`04-computation/lrc14_k8_resolvent_sidecar_scout_codex_s273.py`,
+`05-knowledge/results/lrc14_k8_resolvent_sidecar_scout_codex_s273.out`,
+`05-knowledge/results/lrc14_k8_resolvent_sidecar_scout_codex_s273_B14.out`,
+and `07-reflections/k8-resolvent-sidecar-certificate-codex-s273.md`.
+
+Readout: the current one-node frontier can be attacked by an exact 4-moment
+sidecar.  For primitive k=8 bounded rows, `B=13` scans `1716` rows and `B=14`
+scans `3431`; both have `U4_over_cap_count=0`.  The worst row is exactly
+`consec_8`, with `U4=2633/7350`, `cap_8-U4=683/29400`, nearest PGF root
+`1.488584`, no real roots, Bravais residue counts `(2,1,1,1,1,1,1)`, peak
+`1/8`, entropy `1`, mirror defect `0`, and `kappa4=-0.787150`.
+
+Connection to niche past work: HYP-3140 supplies the fiber-PGF `Rprime`
+moment, HYP-3137 supplies the generating-function payload lens, HYP-3138
+supplies reflection-fold coordinate resurrection, HYP-3136/HYP-3135 supply
+the surrounding multi-far floor and resolvent-packet theorem shape, HYP-3132
+supplies the biquadratic De Moivre fold, HYP-3113 supplies the
+Bravais-flat/Lee-Yang map, HYP-3118 supplies Savitch repair-depth language,
+and HYP-3134 supplies the controlled-forgetting guard before dropping
+edge-child payload.
+
+Next: prove global moment-majorization `U4(E) <= U4(consec_8)` for all
+primitive k=8 bounded-core shapes.  Non-flat residue spectra should give
+strict slack; any exception should descend through a Hensel/CRT `2x7` sidecar
+or become named finite resonance debt.
+
+Namespace: HYP-3142 / LTI-268 / LTT-166 / T1207 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-A000568: LRC14 A000568 edge-witness sandwich
 

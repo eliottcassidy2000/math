@@ -92,6 +92,12 @@ Useful synthetic maps added later:
   Exact bounded-bank check: the even fold is injective through span<=16, but
   the top row has nonzero odd leakage, so the next theorem target is a
   finite fold-adjoint lemma rather than an odd-coordinate erasure claim.
+- `07-reflections/k8-resolvent-sidecar-certificate-codex-s273.md`:
+  HYP-3142/T1207 note turning the single k=8 hard node into the exact theorem
+  target `U4(E) <= U4(consec_8)`.  It ties HYP-3141/HYP-3140/HYP-3139/HYP-3138/HYP-3137/HYP-3136/HYP-3135 packet
+  reduction, De Moivre biquadratic folding, Bravais residue-flatness, Savitch
+  repair depth, Lee-Yang confinement, and A000568 controlled-forgetting into
+  one terminal sidecar packet.
 
 ## Second-Pass Small Motif Ledger
 

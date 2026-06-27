@@ -48,6 +48,26 @@ the HYP-3131 far-push reduction.  Attach `fiber_pgf_word`,
 `SPEC_resonance_lattice_status` before quotienting sheet data. -> HYP-3140,
 HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3125, HYP-3124,
 HYP-3122, HYP-3112, LTI-266, LTT-164, T1205, OPEN-Q-108.
+**OPEN-Q-108 HYP-3142 k=8 resolvent sidecar addendum:**
+HYP-3142 turns the current single hard node into an exact moment-majorization
+problem and supplies the `bounded_core_U4_exit` field after HYP-3140's
+fiber-PGF `Rprime` certificate, HYP-3137's generating-function payload atlas,
+HYP-3138's reflection-fold repair table, HYP-3139's reflection-block proof
+pages, HYP-3136's multi-far floor factorization, and incoming HYP-3135's
+resolvent packet.  The exact scout
+verifies `U4(E) <= cap_8` for every primitive k=8 bounded row through `B=14`;
+the worst row is `consec_8`, with
+`U4=2633/7350`, `cap_8-U4=683/29400`, and the expected Bravais-flat,
+mirror-even, Lee-Yang-confined, phi4-negative sidecar profile.
+
+Open task: prove the global inequality `U4(E) <= U4(consec_8)` for every
+primitive k=8 bounded-core shape, then use the HYP-3132 biquadratic fold
+`g(u+3)=u^4-5u^2+4` to close the remaining k=8 dip by exact rational
+arithmetic.  Non-flat residue spectra should give strict slack; any exception
+should descend by a Hensel/CRT `2x7` sidecar or become named finite resonance
+debt. -> HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3129,
+HYP-3122, HYP-3119, HYP-3118, HYP-3113, HYP-3111, HYP-3110, THM-577,
+LTI-268, LTT-166, T1207, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3133 A000568 edge-sandwich addendum:**
 HYP-3133 adds the field `a000568_extension_shadow` between HYP-3124's

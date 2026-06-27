@@ -125,6 +125,11 @@ obligations, and proof-carrier interfaces.
   factor data, relation/Ising/quintic sidecars, resolvent middle payload,
   coefficient/root-locus/log-derivative payload, and terminal exit before a
   directed edge becomes proof evidence.
+- Need to attack the single k=8 hard node:
+  use LTT-166 after LTT-148/LTT-152/LTT-160 and make proof sidecars the
+  tournament vertices: exact U4 cap certificate, biquadratic resolvent fold,
+  Bravais flatness, Savitch repair depth, Lee-Yang root confinement, and
+  A000568 global consistency.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5164,7 +5169,7 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
   HYP-2968, HYP-2963, THM-573, THM-572, THM-082, LTI-260, LTT-158,
   T1199, OPEN-Q-108.
 
-Post-rebase HYP-3136/HYP-3135/HYP-3134/HYP-3128/HYP-3129/HYP-3130/HYP-3131 revise the
+Post-rebase HYP-3139/HYP-3138/HYP-3137/HYP-3136/HYP-3135/HYP-3134/HYP-3128/HYP-3129/HYP-3130/HYP-3131 revise the
 HYP-3127 interpretation for this card.  Future LTT-158 uses should treat
 S271's tournament as the packet layer: Asano and minorants certify the
 apex/tip side, HYP-3131 says far tips push zeros outward on good bases,
@@ -5487,3 +5492,34 @@ constant chase.
   HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3103, HYP-3062,
   HYP-3056, HYP-3054, HYP-3053, HYP-3049, HYP-3045, HYP-2008, THM-571,
   HYP-2968, LTI-267, LTT-165, T1206, OPEN-Q-108.
+## LTT-166: Tournament Of k=8 Resolvent Sidecars
+
+- **Move:** Put the proof sidecars for the single k=8 hard node in a
+  tournament: exact 4-moment `U4` cap certificate, biquadratic resolvent fold,
+  Bravais residue flatness, Savitch midpoint repair depth, Lee-Yang root
+  confinement, A000568 edge-global consistency, phi4 kappa4 stabilizer,
+  coordinate-resurrection sheaf, and raw scalar `meas(S7)`.
+- **LRC use:** HYP-3142/S273 finds that exact `U4(E) <= cap_8` for all
+  primitive bounded k=8 rows through `B=14`, and packages that inequality as
+  the `bounded_core_U4_exit` for the HYP-3141/HYP-3140/HYP-3139/HYP-3138/HYP-3137/HYP-3136/HYP-3135 multi-far resolvent
+  route; worst row is `consec_8`, with
+  `U4=2633/7350`, `cap_8-U4=683/29400`, Bravais peak `1/8`, residue entropy
+  `1`, nearest root `1.488584`, no real roots, and negative `kappa4`.
+- **Pairwise observable:** compare sidecars by whether they close the k=8 cap
+  node, are finite/exact, preserve the LRC predicate, explain the HYP-3132
+  resolvent fold, resurrect destroyed coordinates, integrate niche past work,
+  provide guardrails, and have a formalization path.
+- **Fingerprint:** transitive tournament, `score_hist={0:1,...,8:1}`, no
+  directed 3-cycles, one Hamiltonian path:
+  `exact_4moment_U4_cap_certificate -> biquadratic_resolvent_fold ->
+  savitch_midpoint_repair_depth -> bravais_residue_flatness ->
+  lee_yang_root_confinement -> coordinate_resurrection_sheaf ->
+  a000568_edge_global_consistency -> phi4_kappa4_stabilizer ->
+  raw_scalar_meas_S7`.
+- **Next pull:** Prove global moment-majorization `U4(E) <= U4(consec_8)`.
+  Use Bravais non-flatness for strict slack and the De Moivre fold for the
+  flat stalk; exceptions must descend through Hensel/CRT `2x7` or become named
+  resonance debt.
+- **Pointers:** HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3129,
+  HYP-3122, HYP-3119, HYP-3118, HYP-3113, HYP-3111, HYP-3110, THM-577,
+  LTI-268, LTT-166, T1207, OPEN-Q-108.

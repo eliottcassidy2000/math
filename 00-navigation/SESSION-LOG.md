@@ -28814,3 +28814,27 @@ child/gluing status, and HYP-3137's `edge_gf_carrier_type`,
 `edge_log_derivative_cumulant_status`.  Then
 apply the same schema to HYP-3098 observer-gluing rows, HYP-3112 one-runner
 ears, and HYP-3121 covering/decorrelation event pairs.
+## codex-2026-06-27-S273 -- k=8 resolvent sidecar certificate -- HYP-3142
+
+Searched the current LRC14 frontier and niche archive carriers after HYP-3132
+reduced the covering proof to the single k=8 bounded-core node, then integrated
+the result as the `bounded_core_U4_exit` for the incoming HYP-3141/HYP-3140/HYP-3139/HYP-3138/HYP-3137/HYP-3136/HYP-3135
+multi-far resolvent packet route.  Added
+`04-computation/lrc14_k8_resolvent_sidecar_scout_codex_s273.py`, stored
+outputs `05-knowledge/results/lrc14_k8_resolvent_sidecar_scout_codex_s273.out`
+and `05-knowledge/results/lrc14_k8_resolvent_sidecar_scout_codex_s273_B14.out`,
+detail `05-knowledge/hypotheses/HYP-3142-k8-resolvent-sidecar-certificate.md`,
+and reflection `07-reflections/k8-resolvent-sidecar-certificate-codex-s273.md`.
+
+The exact scout computes the miss-count distribution and 4-binomial-moment
+relaxation `U4(E)` for primitive k=8 bounded rows.  `B=13` scans `1716` rows
+and `B=14` scans `3431`; both have `U4_over_cap_count=0`.  The worst row is
+`consec_8`, with `U4=2633/7350`, `cap_8-U4=683/29400`, nearest root
+`1.488584`, no real roots, Bravais peak `1/8`, residue entropy `1`, mirror
+defect `0`, and `kappa4=-0.787150`.
+
+Synthesis: HYP-3132's De Moivre fold, HYP-3122's phi4 sign, HYP-3113's
+Bravais-flat root map, HYP-3118's Savitch repair-depth grammar, and HYP-3134's
+A000568 controlled-forgetting guard now point to the same theorem target:
+prove `U4(E) <= U4(consec_8)` globally, then close the k=8 node by exact
+rational arithmetic.
