@@ -1,3 +1,15 @@
+## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- HYP-3119
+
+Reserved HYP-3119/T1194/LTI-255/LTT-153 for the prompt to merge tournament
+edges as witnesses and recurse on both tip and tail.  The planned object is an
+oriented edge `tail -> tip` carrying `tail_packet`, `tip_packet`, the outside
+four-sector deck, tail-deletion child, tip-deletion child, and repaired
+coordinate or named debt.  This explicitly joins HYP-3050 edge tail/tip
+perspectives, HYP-3054 observer-extension cut words, HYP-3106 directed-edge
+controlled-forgetting, HYP-3112 ear-payload edges, HYP-3115 domain-wall edges,
+and the HYP-3116/HYP-3118 missing-input/resurrection guardrails.  Status at
+reservation: not a proof; executable scout pending.
+
 ## codex-2026-06-27-S267 -- LRC14 coordinate-resurrection sheaf and adjoint repair calculus -- HYP-3118
 
 Completed the HYP-3118/T1193/LTI-254/LTT-152 coordinate-resurrection scout after HYP-3116's missing-input ledger and HYP-3117's proof-circuit past-work compiler.  Added `04-computation/lrc14_coordinate_resurrection_sheaf_codex_s267.py`, stored output `05-knowledge/results/lrc14_coordinate_resurrection_sheaf_codex_s267.out`, detail `05-knowledge/hypotheses/HYP-3118-lrc14-coordinate-resurrection-sheaf.md`, and reflection `07-reflections/lrc14-coordinate-resurrection-sheaf-codex-s267.md`.
