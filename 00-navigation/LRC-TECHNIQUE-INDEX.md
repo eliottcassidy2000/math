@@ -86,6 +86,7 @@ coordinate-resurrection sheaf / destroyed-coordinate cover / adjoint section / c
 niche archive bridge ledger / endpoint Phi-P gate / normalized interval / ET-Hensel zipper / CRT-2x7 resonance
 tournament edge-witness recursion / tail-tip sector word / paired endpoint-deletion children / repair sidecar
 edge-extension A000568 sandwich / unrooted one-extra-vertex shadow / paired child deck / SPEC resonance sidecar
+tournament edge-witness tip-tail information packet / tip-tail commutator / repair sidecar / A000568 envelope / phi4-Ising-De Moivre-resolvent middle payloads
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -405,6 +406,7 @@ record what it destroys before asking it to prove anything.
 | LTI-264 | k=8 reflection-fold coordinate resurrection | Even folded miss distribution, odd-coordinate resurrection table, De Moivre biquadratic resolvent word, endpoint `Phi/P` activation status, observer gluing or named debt | HYP-3138 tests the HYP-3132 k=8 De Moivre fold as a proof-legal quotient.  Folding `q` by `t<->6-t` gives `even_fold=(q0+q6,q1+q5,q2+q4,q3)`, which preserves `L_yK8=10q0+q3+10q6`.  Exact integer-grid audit over primitive k=8 banks span<=14/15/16 finds `0` fold collisions across `3431/6434/11432` rows, so the fold behaves like a finite adjoint lookup in these banks.  The best row has nonzero odd leakage, so the fold needs coordinate resurrection before endpoint/circuit proof use. | HYP-3138, HYP-3134, HYP-3132, HYP-3122, HYP-3118, HYP-3116, HYP-3110, HYP-3085, THM-577, T1203, LTT-162, LTI-264, OPEN-Q-108 | Prove a finite k=8 fold-adjoint lemma: the even fold determines odd leakage on the bounded-core bank or emits finite-address / observer-gluing debt before endpoint `Phi/P` is invoked. |
 | LTI-265 | k=8 reflection-block resolvent | Pairwise sector co-emptiness matrix, reflection core on sectors `1..5`, inner shell `2x2` page, center-sector coupling, antisymmetric nonmax block, sector-`6` boundary leakage, HYP-3132 biquadratic shell roots | HYP-3139/S273 makes HYP-3132's solvable De Moivre/biquadratic reduction exact at matrix level.  For `consec_8`, the core sectors `1..5` fold under `s->6-s`; the inner shell page on `(1+5,2+4)` is the boundary-free biquadratic fold `y^2-5y+4`, sector `3` is a fixed-center coupling, and sector `6` is leakage that must remain a sidecar.  Exact values include `S2_core=874/735`, `S2_boundary=442/735`, and top symmetric-block eigenvalue about `0.73066`. | HYP-3139, HYP-3138, HYP-3132, HYP-3122, HYP-3085, HYP-3133, HYP-3129, HYP-3128, HYP-3131, THM-577, T1204, LTT-163, LTI-265, OPEN-Q-108 | Prove the exact rational inner `2x2` shell bound, add center/boundary ceilings, and combine with the HYP-3122 `phi4` sign for the `-9S3+6S4` correction before claiming the `k=8` bounded-core dip is discharged. |
 | LTI-266 | Fiber-PGF conditional first-moment certificate | 14-sheet lift over `u=14t`, sheet-count PGF `F_R(y)`, Q-masked PGF `F_R,Q(y)`, conditional first moment, SPEC/Fourier transform sidecar, global-consistency quotient status | HYP-3140 refines HYP-3136 by rewriting `Rprime` for `S=R union 14Q` as `E[N_R|Q-lonely]/E[N_R]`, where `N_R(u)` counts R-safe lifts `(u+a)/14`, and gives HYP-3137's GF payload atlas a concrete coefficient-layer carrier.  Exact rows show the HYP-3129 worst targeted row is a two-coefficient PGF defect, not a mysterious covariance: `F_R=7243/13860*y^0+6617/13860*y^1`, `F_R,Q=7243/13860*y^0+521/1980*y^1`, `Rprime=51058/72787`.  This imports Lee-Yang PGFs, Delsarte/MacWilliams transforms, q-Pochhammer tail guardrails, and Moser/fibbinary partial-cube sidecars into a finite coefficient theorem. | HYP-3140, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3125, HYP-3124, HYP-3122, HYP-3112, HYP-3078, HYP-3063, HYP-3009, HYP-2758, HYP-2523, T1205, LTT-164, LTI-266, OPEN-Q-108 | Add `fiber_pgf_word`, `Q_masked_fiber_pgf_word`, `sheet_count_mean`, `Q_conditioned_sheet_mean`, `conditional_first_moment_floor`, `SPEC_resonance_lattice_status`, and `global_consistency_class` to HYP-3125/HYP-3129 packet rows; prove `F_R,Q'(1)/F_R,Q(1) >= c*F_R'(1)/F_R(1)` before scalarizing to `Rprime`. |
+| LTI-267 | Tournament edge-witness tip-tail information packet | Directed edges as proof-information channels: tail deletion payload, tip extension payload, observer-cut orbit, commutator defect, coordinate-resurrection cover, predicate delta, terminal exit; edge carriers include Asano single-far tips, SPEC-certified obstruction splits, Ising domain walls, relation walls, proof-circuit transitions, phi4 quartic stabilizers, De Moivre branch/resolvent data, A000568 extension/envelope shadows, GF coefficient/root-locus payloads, Lee-Yang ears, and decorrelation event pairs | HYP-3141/codex-2026-06-27 extends HYP-3124's exact edge-recursion census with a proof-information overlay.  A raw orientation `u -> v` is only telemetry; proof currency is `EdgeWitness(e)=(Tail(e),Tip(e),Orbit(e),Comm(e),Exit(e))`.  The scout folds HYP-3125/HYP-3126/HYP-3127/HYP-3128/HYP-3129/HYP-3130/HYP-3131/HYP-3132/HYP-3133/HYP-3134/HYP-3135/HYP-3136/HYP-3137 edge-floor, wide-decoupling, Asano, Lee-Yang obstruction, SPEC, minorant-tail, far-zero-push, bounded-core biquadratic, A000568 extension/envelope, resolvent middle-payload, integrated floor closure, GF payload atlas input, HYP-3138 k=8 reflection-fold coordinate-resurrection input, HYP-3139 reflection-block proof-page input, and HYP-3140 fiber-PGF Rprime input, HYP-3049 directed-edge perspective, HYP-3054/HYP-3056 observer-cut payload orbits, HYP-3118 coordinate-resurrection covers, HYP-3120 finite-address/Phi receivers, HYP-3121 `R-safe -> Q-lonely` event edges, HYP-3111/HYP-3115 Minkowski/circuit/Ising/de Moivre sidecars, and HYP-3122 phi4 quartic-stabilizer signals into one edge-packet schema. | HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3130, HYP-3129, HYP-3128, HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3122, HYP-3121, HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3103, HYP-3062, HYP-3056, HYP-3054, HYP-3053, HYP-3049, HYP-3045, HYP-2008, THM-571, HYP-2968, T1206, LTT-165, LTI-267, OPEN-Q-108 | Build an edge-row ledger over HYP-3115 wall edges, HYP-3125/HYP-3127/HYP-3130/HYP-3131/HYP-3132/HYP-3133/HYP-3134/HYP-3135/HYP-3136/HYP-3137 floor/Asano/minorant/far-zero-push/resolvent/extension-envelope/integrated-floor/GF/k8-fold tips, HYP-3098 observer-gluing rows, HYP-3112 ears, and HYP-3121 event edges.  Emit `tip_tail_commutator_defect`, `edge_cut_payload_orbit_id`, `edge_gf_carrier_type`, `edge_coefficient_payload_layer`, `edge_pgf_root_locus_status`, `edge_log_derivative_cumulant_status`, `edge_fiber_pgf_word`, `edge_q_masked_fiber_pgf_word`, `edge_conditional_first_moment_floor_status`, `edge_spec_resonance_lattice_status`, `edge_k8_reflection_fold_adjoint_status`, `edge_odd_coordinate_resurrection_status`, `edge_reflection_core_block_status`, `edge_inner_shell_bound_status`, `edge_center_boundary_leakage_status`, `edge_a000568_extension_shadow`, `edge_a000568_envelope_position`, `edge_global_consistency_class`, `edge_child_gluing_status`, `edge_ising_domain_wall_id`, `edge_ising_partition_zero_locus_status`, `edge_domain_wall_legal_exit`, `edge_minkowski_relation_wall_class`, `edge_minkowski_covolume_threshold_status`, `edge_proof_circuit_size_depth_fanin`, `edge_circuit_uniformity_guard_status`, `edge_phi4_quartic_cumulant_delta`, `edge_phi4_lambda_sign`, `edge_de_moivre_quintic_residual_delta`, `edge_de_moivre_auxiliary_quadratic_status`, `edge_de_moivre_biquadratic_resolvent_status`, `edge_resolvent_middle_payload_status`, `edge_resolvent_pair_triple_layer`, `edge_signed_spec_resolvent_packet_status`, `edge_de_moivre_branch_orbit_word`, `edge_asano_contraction_order_word`, `edge_single_far_factor_id`, `edge_zero_free_region_status`, `edge_wide_decoupling_rate_bound`, `edge_spec_certificate_status`, `edge_lee_yang_obstruction_status`, `edge_minorant_tail_certificate_status`, `edge_far_zero_push_status`, `edge_bounded_core_floor_exit`, and `edge_terminal_exit_or_debt`; reject raw arcs and scalar wall scores until a legal exit is named. |
 
 ## Cross-Cutting Guardrails
 
@@ -2727,6 +2729,142 @@ Priority from the scout: receiver first, then observer payload, then HYP-3116
 circuit-certificate vector, then HYP-3117 proof-circuit compiler, then HYP-3118 coordinate-resurrection status, then resource normalizer, then dual/source/Dirichlet repairs.  Sexy-prime residue-sieve
 bookkeeping is retained only as local-channel hygiene; it is not a closure
 carrier without analytic prime-distribution input.
+
+## LTI-267: Tournament Edge-Witness Tip-Tail Information Packet
+
+Used by codex-2026-06-27 for HYP-3141/T1206.  This technique extends
+HYP-3124's exact edge-recursion census by treating a directed tournament edge
+as a proof-information channel instead of a raw orientation.
+For an edge `e=(tail -> tip)`:
+
+```text
+EdgeWitness(e) =
+  (tail_delete_payload,
+   tip_extend_payload,
+   observer_cut_payload_orbit,
+   tip_tail_commutator_defect,
+   coordinate_resurrection_cover,
+   predicate_delta,
+   terminal_exit_or_named_debt)
+```
+
+Preserves: LRC14 progress through exact `Phi/P`, finite address,
+observer-gluing certificates, coordinate resurrection, legal Lee-Yang ear
+payloads, zero-free single-far Asano factors, HYP-3126 wide-decoupling rate
+budgets, HYP-3128 obstruction status, HYP-3129 SPEC certificates, HYP-3130
+minorant/uniform-tail certificates, HYP-3131 far-zero-push status, HYP-3132
+bounded-core biquadratic resolvent status, HYP-3133 A000568 extension
+shadows, HYP-3134 edge-envelope/global-consistency classes, HYP-3135
+resolvent middle-layer packets, HYP-3136 integrated multi-far floor
+factorization, HYP-3137 GF coefficient/root-locus/log-derivative payloads,
+HYP-3138 k=8 reflection-fold adjoint and odd-coordinate resurrection fields,
+Node-3 decorrelation floors, or named residual debt.
+
+Destroys or audits: raw arc sign, old/new endpoint role, cross-sector
+orientation, relation-wall owner, proof-circuit uniformity, Ising wall
+legality, phi4 cumulant signs, De Moivre fifth-root branch data, Asano
+contraction order, single-far factor identity, zero-free certificate, SPEC
+certificate, Lee-Yang obstruction status, minorant tail certificate,
+far-zero-push status, De Moivre biquadratic resolvent status, A000568
+extension shadows, A000568 edge-envelope gluing status, resolvent pair/triple
+payloads, raw GF scalar/root count, coefficient layer, root locus,
+log-derivative/cumulant payloads, k=8 reflection-fold adjoint and odd-coordinate resurrection data, rectangle/hourglass residues, and
+low-frequency resonance corrections.
+
+LRC use: before using a tournament edge or one-swap wall as proof evidence,
+emit:
+
+```text
+edge_witness_packet_id
+edge_tail_payload_word
+edge_tip_payload_word
+tail_delete_recursion_depth
+tip_extend_recursion_depth
+tip_tail_commutator_defect
+edge_cut_payload_orbit_id
+old_new_endpoint_role
+cross_sector_orientation_word
+edge_gf_carrier_type
+edge_coefficient_payload_layer
+edge_pgf_root_locus_status
+edge_log_derivative_cumulant_status
+edge_k8_reflection_fold_adjoint_status
+edge_odd_coordinate_resurrection_status
+edge_a000568_extension_shadow
+edge_a000568_envelope_position
+edge_global_consistency_class
+edge_child_gluing_status
+edge_information_gain_rank
+edge_predicate_delta
+edge_coordinate_resurrection_cover
+edge_missing_input_delta
+edge_proof_circuit_size_depth_fanin
+edge_circuit_uniformity_guard
+edge_circuit_uniformity_guard_status
+edge_phi_p_activation_delta
+edge_minkowski_relation_wall_class
+edge_minkowski_covolume_threshold_status
+edge_successive_minima_proxy
+edge_ising_domain_wall_id
+edge_ising_partition_zero_locus_status
+edge_domain_wall_legal_exit
+edge_ear_payload_vector
+edge_phi4_quartic_cumulant_delta
+edge_phi4_lambda_sign
+edge_de_moivre_quintic_residual_delta
+edge_de_moivre_auxiliary_quadratic_status
+edge_de_moivre_biquadratic_resolvent_status
+edge_resolvent_middle_payload_status
+edge_resolvent_pair_triple_layer
+edge_signed_spec_resolvent_packet_status
+edge_de_moivre_branch_orbit_word
+edge_rectangle_hourglass_residue
+edge_decorrelation_floor_status
+edge_asano_contraction_order_word
+edge_single_far_factor_id
+edge_zero_free_region_status
+edge_wide_decoupling_rate_bound
+edge_spec_certificate_status
+edge_lee_yang_obstruction_status
+edge_minorant_tail_certificate_status
+edge_far_zero_push_status
+edge_bounded_core_floor_exit
+edge_terminal_exit_or_debt
+```
+
+Tournament result: the HYP-3141 scout uses edge-witness carrier types as
+vertices, not runners or raw arcs.  The tournament is transitive with
+`score_hist={-8:1,24:4,27:1,29:2,30:2,31:1,32:1,33:2,34:1,46:1,47:1}`, no directed
+3-cycles, singleton SCCs, and one Hamiltonian path:
+`recursive_tip_tail_edge_witness -> asano_tip_contraction_edge ->
+observer_cut_payload_orbit -> finite_address_phi_edge -> ising_domain_wall_edge ->
+coordinate_resurrection_edge -> directed_edge_perspective ->
+endpoint_owner_transfer_edge -> phi4_quartic_stabilizer_edge ->
+lee_yang_ear_motion_edge -> de_moivre_stationary_quintic_edge ->
+proof_circuit_missing_input_edge ->
+minkowski_relation_wall_edge -> node3_decorrelation_edge ->
+source_sink_apex_arc -> rectangle_hourglass_flow_edge -> raw_tournament_arc`.
+
+Next hook: classify HYP-3115's `10084` one-swap Ising domain-wall edges by
+tail payload, tip payload, commutator defect, relation wall, proof-circuit
+uniformity guard, phi4 cumulant/lambda sign, De Moivre branch orbit, and
+terminal exit; in parallel attach Asano contraction order, single-far factor
+id, zero-free status, wide-decoupling rate, SPEC certificate, Lee-Yang
+obstruction status, minorant tail certificate, far-zero-push status, and
+bounded-core floor exit to the HYP-3125/HYP-3127/HYP-3130/HYP-3131
+floor/Asano/minorant/far-zero-push rows; add `edge_de_moivre_biquadratic_resolvent_status`
+from HYP-3132, `edge_a000568_extension_shadow` from HYP-3133,
+`edge_a000568_envelope_position`/`edge_global_consistency_class`/`edge_child_gluing_status`
+from HYP-3134, and `edge_resolvent_middle_payload_status`/`edge_resolvent_pair_triple_layer`
+from HYP-3135, HYP-3138's `edge_k8_reflection_fold_adjoint_status`/`edge_odd_coordinate_resurrection_status`, HYP-3136's integrated floor child/gluing status, and
+HYP-3137's `edge_gf_carrier_type`/`edge_coefficient_payload_layer`/
+`edge_pgf_root_locus_status`/`edge_log_derivative_cumulant_status`.  Then run the same edge-row schema on
+HYP-3098 observer-gluing rows, HYP-3112 ears, and HYP-3121 covering/decorrelation event pairs.
+
+Pointers: HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3130, HYP-3129, HYP-3128, HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3122, HYP-3121, HYP-3120, HYP-3119,
+HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3103, HYP-3062,
+HYP-3056, HYP-3054, HYP-3053, HYP-3049, HYP-3045, HYP-2008, THM-571,
+HYP-2968, LTI-267, LTT-165, T1206, OPEN-Q-108.
 
 ## LTI-258: Chiral Base-Stalk Guard / Normal-Fan Cech Finite-Ruler Angles
 

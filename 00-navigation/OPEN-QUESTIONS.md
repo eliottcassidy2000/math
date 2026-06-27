@@ -226,6 +226,80 @@ stabilizing and the bounded core/tail is binding. -> HYP-3131, HYP-3130, HYP-312
 HYP-3128, HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3123, HYP-3122,
 HYP-3121, HYP-3120, HYP-3119, HYP-3118, HYP-3116, HYP-3115, HYP-3112,
 HYP-3106, HYP-3054, HYP-3050, LTI-259, LTT-157, T1198, OPEN-Q-108.
+**OPEN-Q-108 HYP-3141 edge-witness tip-tail addendum:**
+HYP-3141 reframes tournament edges as proof witnesses rather than raw
+orientations.  For an edge `e=(tail -> tip)`, the required packet is
+`Tail(e), Tip(e), Orbit(e), Comm(e), Exit(e)`: tail deletion payload, tip
+extension payload, observer-cut orbit, tip-tail commutator defect, and a
+terminal exit or named debt.  The executable scout folds in HYP-3049
+directed-edge perspectives, HYP-3054/HYP-3056 observer-cut payload orbits,
+HYP-3118 coordinate-resurrection covers, HYP-3120 finite-address/Phi
+receivers, HYP-3121 `R-safe -> Q-lonely` event edges, HYP-3111/HYP-3115
+Minkowski/circuit/Ising/de Moivre sidecars, HYP-3124 recursive edge-deck
+census data, HYP-3122 phi4 quartic-stabilizer signals, and
+HYP-3125/HYP-3126/HYP-3127/HYP-3128/HYP-3129/HYP-3130/HYP-3131/HYP-3132/HYP-3133/HYP-3134/HYP-3135/HYP-3136/HYP-3137
+edge-floor, wide-decoupling, Asano, obstruction, SPEC, minorant-tail, and
+far-zero-push input plus bounded-core resolvent, A000568 extension/envelope
+shadows, resolvent middle-layer payloads, integrated floor closure, GF
+coefficient/root-locus/log-derivative payloads, and HYP-3138 k=8
+reflection-fold coordinate-resurrection fields.  The later HYP-3139
+reflection-block scout adds inner-shell / center-boundary leakage fields, and
+HYP-3140 adds fiber-PGF / Q-masked conditional first-moment fields for the
+remaining `Rprime` factor.
+
+Open task: build an edge-row ledger for HYP-3115's `10084` one-swap Ising
+domain-wall edges, HYP-3098 observer-gluing rows, HYP-3112 one-runner ear
+rows, and HYP-3121 covering/decorrelation rows.  Emit
+`edge_witness_packet_id`, `edge_tail_payload_word`, `edge_tip_payload_word`,
+`tail_delete_recursion_depth`, `tip_extend_recursion_depth`,
+`tip_tail_commutator_defect`, `edge_cut_payload_orbit_id`,
+`old_new_endpoint_role`, `cross_sector_orientation_word`,
+`edge_gf_carrier_type`, `edge_coefficient_payload_layer`,
+`edge_pgf_root_locus_status`, `edge_log_derivative_cumulant_status`,
+`edge_fiber_pgf_word`, `edge_q_masked_fiber_pgf_word`,
+`edge_conditional_first_moment_floor_status`, `edge_spec_resonance_lattice_status`,
+`edge_k8_reflection_fold_adjoint_status`, `edge_odd_coordinate_resurrection_status`,
+`edge_reflection_core_block_status`, `edge_inner_shell_bound_status`,
+`edge_center_boundary_leakage_status`,
+`edge_a000568_extension_shadow`, `edge_a000568_envelope_position`,
+`edge_global_consistency_class`, `edge_child_gluing_status`,
+`edge_information_gain_rank`, `edge_predicate_delta`,
+`edge_coordinate_resurrection_cover`, `edge_missing_input_delta`,
+`edge_proof_circuit_size_depth_fanin`, `edge_circuit_uniformity_guard`,
+`edge_circuit_uniformity_guard_status`,
+`edge_phi_p_activation_delta`, `edge_minkowski_relation_wall_class`,
+`edge_minkowski_covolume_threshold_status`,
+`edge_successive_minima_proxy`, `edge_ising_domain_wall_id`,
+`edge_ising_partition_zero_locus_status`,
+`edge_domain_wall_legal_exit`, `edge_ear_payload_vector`,
+`edge_phi4_quartic_cumulant_delta`, `edge_phi4_lambda_sign`,
+`edge_de_moivre_quintic_residual_delta`,
+`edge_de_moivre_auxiliary_quadratic_status`,
+`edge_de_moivre_biquadratic_resolvent_status`,
+`edge_resolvent_middle_payload_status`, `edge_resolvent_pair_triple_layer`,
+`edge_signed_spec_resolvent_packet_status`,
+`edge_de_moivre_branch_orbit_word`,
+`edge_rectangle_hourglass_residue`, `edge_decorrelation_floor_status`,
+`edge_asano_contraction_order_word`, `edge_single_far_factor_id`,
+`edge_zero_free_region_status`, `edge_wide_decoupling_rate_bound`,
+`edge_spec_certificate_status`, `edge_lee_yang_obstruction_status`,
+`edge_minorant_tail_certificate_status`, `edge_far_zero_push_status`,
+`edge_bounded_core_floor_exit`, and
+`edge_terminal_exit_or_debt`.
+
+A tournament-edge shortcut should be accepted only if the tip-tail commutator
+is zero, reconstructed, dual-annihilated, descended, boundary-stopped, exits
+through positive `Phi/P`, finite address, observer gluing,
+coordinate-resurrection, Node-3 decorrelation, or records a named residual
+debt.  A raw arc, raw Ising energy, raw Minkowski pressure, fitted circuit
+literal, raw phi4 dip, raw zero-free claim, raw Asano contraction order, raw
+minorant/far-zero-push claim, raw A000568 count, raw envelope position, or raw
+PGF scalar/root count, determinant ratio, ordinary GF value, or raw quintic
+residual is telemetry until those fields are filled.
+-> HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3130, HYP-3129, HYP-3128, HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3122, HYP-3121, HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116,
+HYP-3115, HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3103, HYP-3062, HYP-3056,
+HYP-3054, HYP-3053, HYP-3049, HYP-3045, HYP-2008, THM-571, HYP-2968,
+LTI-267, LTT-165, T1206, OPEN-Q-108.
 
 **OPEN-Q-108 S266 circuit missing-input addendum:**
 HYP-3116 converts circuit complexity into an LRC14 proof-compression audit.

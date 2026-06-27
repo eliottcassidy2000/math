@@ -28707,3 +28707,110 @@ bank, or the row emits finite-address / observer-gluing debt before endpoint
 `Phi/P` gates from HYP-3116 are invoked.  This is the practical transfer of
 the older HYP-3110 theta/crystallographic quotient audit and HYP-3118
 coordinate-resurrection sheaf into the current single remaining proof node.
+## codex-2026-06-27 -- Tournament edge-witness tip-tail recursion -- HYP-3141
+
+User asked to continue the LRC proof work by merging tournament edges as
+witnesses, thinking recursively on both tip and tail, and treating the objects
+abstractly as information.  Rebased onto current `origin/main`, found HYP-3121
+already occupied by the KPS covering/decorrelation synthesis, HYP-3122 occupied
+by the phi4 stabilizer lane, HYP-3123 by the chiral/Cech lane, and HYP-3124 by
+the exact edge-recursion census.  A later rebase showed HYP-3125/HYP-3126 had
+become the Gaussian and elementary wide-decoupling lanes.  A second mainline
+advance claimed HYP-3127 for the multi-far Asano contraction, HYP-3128 for the
+Lee-Yang obstruction, and HYP-3129 for the elementary SPEC certificate, so the
+tip-tail information-packet overlay was moved to HYP-3141 / T1206 / LTI-267 /
+LTT-165.  A later mainline advance claimed HYP-3132 for the k=8
+De Moivre/phi4 bounded-core biquadratic resolvent, HYP-3133/T1200/LTI-261/
+LTT-159 for the A000568 edge-extension sandwich, HYP-3134/T1201/LTI-262/
+LTT-160 for the A000568 edge-envelope global-consistency quotient, and
+HYP-3135 for the LRC14 resolvent-packet middle-layer synthesis, so this
+overlay treats those as dependencies rather than reusing their namespace.  A
+subsequent mainline batch claimed HYP-3136 for the integrated multi-far floor
+closure and HYP-3137/T1202/LTI-263/LTT-161 for the GF payload atlas; this
+edge-witness overlay remains HYP-3141/T1206/LTI-267/LTT-165 and imports those
+as the factorized-floor and generating-function payload dependencies.  The
+next mainline fetch completed HYP-3137 and claimed HYP-3138/T1203/LTI-264/
+LTT-162 for the k=8 reflection-fold coordinate-resurrection scout, so this
+overlay moved to HYP-3141/T1206/LTI-267/LTT-165 and imports HYP-3138 through
+`edge_k8_reflection_fold_adjoint_status` and
+`edge_odd_coordinate_resurrection_status`.  A further fetch claimed HYP-3139
+for the k=8 reflection-block resolvent and HYP-3140 for the fiber-PGF Rprime
+certificate, so this overlay moved to HYP-3141/T1206/LTI-267/LTT-165 and
+imports them through reflection-core / inner-shell / center-boundary leakage
+fields and fiber-PGF / Q-masked conditional first-moment fields.
+
+Added `04-computation/lrc14_tournament_edge_witness_tip_tail_codex_20260627.py`,
+stored output
+`05-knowledge/results/lrc14_tournament_edge_witness_tip_tail_codex_20260627.out`,
+hypothesis
+`05-knowledge/hypotheses/HYP-3141-lrc14-tournament-edge-witness-tip-tail-recursion.md`,
+and reflection
+`07-reflections/lrc14-tournament-edge-witness-tip-tail-recursion-codex-20260627.md`.
+Updated the hypothesis index, results index, OPEN-Q-108, Tangents, and both
+LRC technique indexes.
+
+Main definition:
+
+```text
+EdgeWitness(e) =
+  (tail_delete_payload,
+   tip_extend_payload,
+   observer_cut_payload_orbit,
+   tip_tail_commutator_defect,
+   coordinate_resurrection_cover,
+   predicate_delta,
+   terminal_exit_or_named_debt)
+```
+
+The scout folds together HYP-3049 directed-edge perspective, HYP-3054/HYP-3056
+observer-cut payload orbits, HYP-3118 coordinate-resurrection covers,
+HYP-3120 finite-address/Phi receivers, HYP-3121 `R-safe -> Q-lonely`
+event-edge decorrelation, and HYP-3111/HYP-3115
+Minkowski/circuit/Ising/de Moivre sidecars plus the incoming phi4
+quartic-stabilizer signal.  It now also imports
+HYP-3125/HYP-3126/HYP-3127/HYP-3128/HYP-3129/HYP-3130/HYP-3131/HYP-3132/HYP-3133/HYP-3134/HYP-3135/HYP-3136/HYP-3137 as the
+edge-floor / wide-decoupling / Asano / obstruction / SPEC / minorant-tail /
+far-zero-push / bounded-core resolvent / A000568 extension-envelope /
+resolvent middle-payload / integrated floor / GF payload carrier, HYP-3138 as
+the k=8 reflection-fold coordinate-resurrection carrier, HYP-3139 as the
+reflection-block proof-page carrier, and HYP-3140 as the fiber-PGF Rprime
+carrier:
+`asano_tip_contraction_edge=(single_far_factor, contraction_order_word,
+zero_free_region_certificate, decoupling_rate_bound, spec_certificate,
+minorant_tail_certificate, far_zero_push_status,
+lee_yang_obstruction_status, a000568_global_consistency_class,
+resolvent_middle_payload_status, bounded_core_floor_exit,
+fiber_pgf_conditional_first_moment_status)`.
+Tournament Analysis uses
+edge-witness carrier types, not runners or raw arcs.  Fingerprint:
+`score_hist={-8:1,24:4,27:1,29:2,30:2,31:1,32:1,33:2,34:1,46:1,47:1}`,
+no directed 3-cycles, singleton SCCs, and one Hamiltonian path:
+`recursive_tip_tail_edge_witness -> asano_tip_contraction_edge ->
+observer_cut_payload_orbit -> finite_address_phi_edge -> ising_domain_wall_edge ->
+coordinate_resurrection_edge -> directed_edge_perspective ->
+endpoint_owner_transfer_edge -> phi4_quartic_stabilizer_edge ->
+lee_yang_ear_motion_edge -> de_moivre_stationary_quintic_edge ->
+proof_circuit_missing_input_edge ->
+minkowski_relation_wall_edge -> node3_decorrelation_edge ->
+source_sink_apex_arc -> rectangle_hourglass_flow_edge -> raw_tournament_arc`.
+
+Next proof pull: build the edge-row ledger for HYP-3115's `10084` one-swap
+Ising domain-wall edges with tail payload, tip payload,
+`tip_tail_commutator_defect`, relation wall, proof-circuit uniformity guard,
+Minkowski covolume threshold, Ising partition-zero locus, phi4
+cumulant/lambda sign, De Moivre auxiliary quadratic/branch orbit, wall
+legality, and terminal exit/debt before using wall edges as proof evidence.
+In parallel, attach
+`edge_asano_contraction_order_word`, `edge_single_far_factor_id`,
+`edge_zero_free_region_status`, `edge_wide_decoupling_rate_bound`,
+`edge_spec_certificate_status`, `edge_lee_yang_obstruction_status`,
+`edge_minorant_tail_certificate_status`, `edge_far_zero_push_status`, and
+`edge_bounded_core_floor_exit` to the HYP-3125/HYP-3127/HYP-3130/HYP-3131
+floor/Asano/minorant/far-zero-push lanes; add
+`edge_de_moivre_biquadratic_resolvent_status` from HYP-3132 and
+`edge_a000568_extension_shadow` from HYP-3133, the HYP-3136 integrated-floor
+child/gluing status, and HYP-3137's `edge_gf_carrier_type`,
+`edge_coefficient_payload_layer`, `edge_pgf_root_locus_status`, and
+`edge_log_derivative_cumulant_status`.  Then
+apply the same schema to HYP-3098 observer-gluing rows, HYP-3112 one-runner
+ears, and HYP-3121 covering/decorrelation event pairs.

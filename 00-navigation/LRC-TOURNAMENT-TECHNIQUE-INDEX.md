@@ -117,6 +117,14 @@ obligations, and proof-carrier interfaces.
   exact reflection block, inner shell fold, SPEC certificate, A000568 shadow,
   Worpitzky vocabulary, antisymmetric nonmax block, boundary leakage, and raw
   spectrum.  The quotient may not forget center coupling or sector-6 leakage.
+- Need to use tournament edges as witnesses rather than raw orientations:
+  use LTT-165 after LTT-161/LTT-160/LTT-159/LTT-158/LTT-157/LTT-154/LTT-152/LTT-150/LTT-147/LTT-146
+  and make edge-witness carrier types the vertices.  Emit tail payload, tip
+  payload, observer-cut orbit, commutator defect,
+  Asano/zero-free/SPEC/minorant/far-zero/resolvent/A000568-envelope/GF tip
+  factor data, relation/Ising/quintic sidecars, resolvent middle payload,
+  coefficient/root-locus/log-derivative payload, and terminal exit before a
+  directed edge becomes proof evidence.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5376,3 +5384,106 @@ constant chase.
 - **Pointers:** HYP-3140, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3129,
   HYP-3125, HYP-3124, HYP-3122, HYP-3112, LTI-266, LTT-164, T1205,
   OPEN-Q-108.
+
+## LTT-165: Tournament of Edge-Witness Tip-Tail Carriers
+
+- **Move:** Treat a directed edge `tail -> tip` as an information channel.
+  The tournament vertices are edge-witness carrier types:
+  recursive tip-tail witness, Asano tip-contraction edge, observer-cut payload
+  orbit, finite-address/Phi edge, Ising domain-wall edge, coordinate-resurrection edge, endpoint-owner
+  transfer edge, directed-edge perspective, Lee-Yang ear edge, proof-circuit
+  missing-input edge, phi4 quartic-stabilizer edge, de Moivre
+  stationary-quintic edge, Minkowski relation-wall edge, Node-3 decorrelation
+  edge, source-sink apex edge, rectangle/hourglass flow edge, and raw arc
+  negative control.
+- **LRC use:** HYP-3141 extends HYP-3124's exact edge-recursion census by
+  saying an edge becomes proof-facing only after it emits `Tail(e)`, `Tip(e)`,
+  `Orbit(e)`, `Comm(e)`, and `Exit(e)`.  This folds HYP-3049 edge
+  perspectives, HYP-3054/HYP-3056 observer-cut payloads, HYP-3118 coordinate
+  resurrection, HYP-3120 finite-address/Phi receivers, HYP-3121 event
+  decorrelation, HYP-3111/HYP-3115 Minkowski/circuit/Ising/de Moivre
+  sidecars, HYP-3122 phi4 quartic stabilizers, and
+  HYP-3125/HYP-3126/HYP-3127/HYP-3128/HYP-3129/HYP-3130/HYP-3131/HYP-3132/HYP-3133/HYP-3134/HYP-3135/HYP-3136/HYP-3137
+  edge-floor, wide-decoupling, Asano, obstruction, SPEC, minorant-tail, and
+  far-zero-push input plus bounded-core resolvent, A000568 extension/envelope
+  shadows, resolvent middle-layer payloads, integrated floor closure, and GF
+  coefficient/root-locus/log-derivative payloads, HYP-3138 k=8
+  reflection-fold adjoint fields, HYP-3139 reflection-block proof pages, and
+  HYP-3140 fiber-PGF Rprime fields into one edge-row ledger.
+- **Preserves:** exact `Phi/P`, finite address, observer gluing,
+  coordinate resurrection, legal root-collision ears, relation-wall deletion
+  status, proof-circuit uniformity guard, zero-free single-far factors,
+  HYP-3126 wide-decoupling rate budgets, HYP-3128 obstruction status,
+  HYP-3129 SPEC certificates, HYP-3130 minorant/uniform-tail certificates,
+  HYP-3131 far-zero-push status, HYP-3132 bounded-core biquadratic resolvent
+  status, HYP-3133 A000568 extension shadows, HYP-3134 edge-envelope
+  gluing status, HYP-3135 resolvent middle payloads, HYP-3136 integrated
+  multi-far floor factorization, HYP-3137 GF payload atlas fields, HYP-3138
+  k=8 reflection-fold adjoint fields, HYP-3139 reflection-core / inner-shell
+  / center-boundary leakage fields, HYP-3140 fiber-PGF conditional moment
+  fields, Node-3
+  decorrelation floors, and named residual exits.
+- **Forgets / guardrail:** a raw arc forgets old/new endpoint role,
+  cross-sector orientation, root-motion payload, relation-wall owners, Ising
+  wall legality, phi4 cumulant signs, De Moivre branch data, circuit uniformity,
+  Asano contraction order, single-far factor identity, zero-free certificate,
+  SPEC certificate, Lee-Yang obstruction status, minorant tail certificate,
+  far-zero-push status, De Moivre biquadratic resolvent status, A000568
+  extension shadows, A000568 edge-envelope gluing status, resolvent
+  pair/triple payload, raw GF scalar/root count, coefficient layer, root
+  locus, log-derivative/cumulant payload, fiber-PGF conditional moments, k=8
+  reflection-block leakage, reflection-fold adjoint and odd-coordinate
+  resurrection data, rectangle/hourglass residues, and
+  low-frequency resonance correction.  Raw arc sign ranks last.
+- **Tournament readout:** HYP-3141 is transitive with
+  `score_hist={-8:1,24:4,27:1,29:2,30:2,31:1,32:1,33:2,34:1,46:1,47:1}`, no directed
+  3-cycles, singleton SCCs, and one Hamiltonian path:
+  `recursive_tip_tail_edge_witness -> asano_tip_contraction_edge ->
+  observer_cut_payload_orbit -> finite_address_phi_edge -> ising_domain_wall_edge ->
+  coordinate_resurrection_edge -> directed_edge_perspective ->
+  endpoint_owner_transfer_edge -> phi4_quartic_stabilizer_edge ->
+  lee_yang_ear_motion_edge -> de_moivre_stationary_quintic_edge ->
+  proof_circuit_missing_input_edge ->
+  minkowski_relation_wall_edge -> node3_decorrelation_edge ->
+  source_sink_apex_arc -> rectangle_hourglass_flow_edge -> raw_tournament_arc`.
+- **Next hook:** Build the edge-row ledger for HYP-3115's `10084`
+  one-swap Ising domain-wall edges first.  For every edge record tail payload,
+  tip payload, `tip_tail_commutator_defect`,
+  `edge_minkowski_relation_wall_class`,
+  `edge_minkowski_covolume_threshold_status`,
+  `edge_proof_circuit_size_depth_fanin`,
+  `edge_circuit_uniformity_guard`, `edge_circuit_uniformity_guard_status`,
+  `edge_ising_domain_wall_id`, `edge_ising_partition_zero_locus_status`,
+  `edge_domain_wall_legal_exit`,
+  `edge_phi4_quartic_cumulant_delta`,
+  `edge_phi4_lambda_sign`,
+  `edge_de_moivre_quintic_residual_delta`,
+  `edge_de_moivre_auxiliary_quadratic_status`,
+  `edge_de_moivre_biquadratic_resolvent_status`,
+  `edge_de_moivre_branch_orbit_word`,
+  `edge_gf_carrier_type`, `edge_coefficient_payload_layer`,
+  `edge_pgf_root_locus_status`, `edge_log_derivative_cumulant_status`,
+  `edge_fiber_pgf_word`, `edge_q_masked_fiber_pgf_word`,
+  `edge_conditional_first_moment_floor_status`,
+  `edge_spec_resonance_lattice_status`,
+  `edge_k8_reflection_fold_adjoint_status`, `edge_odd_coordinate_resurrection_status`,
+  `edge_reflection_core_block_status`, `edge_inner_shell_bound_status`,
+  `edge_center_boundary_leakage_status`,
+  `edge_a000568_extension_shadow`,
+  `edge_a000568_envelope_position`, `edge_global_consistency_class`,
+  `edge_child_gluing_status`, `edge_resolvent_middle_payload_status`,
+  `edge_resolvent_pair_triple_layer`,
+  `edge_signed_spec_resolvent_packet_status`,
+  `edge_asano_contraction_order_word`,
+  `edge_single_far_factor_id`, `edge_zero_free_region_status`,
+  `edge_wide_decoupling_rate_bound`, `edge_spec_certificate_status`,
+  `edge_lee_yang_obstruction_status`,
+  `edge_minorant_tail_certificate_status`, `edge_far_zero_push_status`,
+  `edge_bounded_core_floor_exit`, and
+  terminal exit/debt.  Then apply the
+  same schema to HYP-3098 observer-gluing rows, HYP-3112 ears, and HYP-3121
+  covering/decorrelation event edges.
+- **Pointers:** HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3130, HYP-3129, HYP-3128, HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3122, HYP-3121, HYP-3120, HYP-3119,
+  HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3103, HYP-3062,
+  HYP-3056, HYP-3054, HYP-3053, HYP-3049, HYP-3045, HYP-2008, THM-571,
+  HYP-2968, LTI-267, LTT-165, T1206, OPEN-Q-108.
