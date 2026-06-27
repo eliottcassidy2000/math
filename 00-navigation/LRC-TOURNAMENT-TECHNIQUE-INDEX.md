@@ -93,6 +93,10 @@ obligations, and proof-carrier interfaces.
   use LTT-128 after LTT-126/LTT-125/LTT-123/LTT-119 and declare branch
   carriers, endpoint kernel tournaments, reverse verification paths, q-cusp
   guards, and named residual exits before contracting the branch graph.
+- Need an executable bridge count on the current packet bank:
+  use LTT-129 after LTT-128 and compare raw scalar-star bridges with the
+  protected branch graph after route, section, grid, no-lift, q-cusp, Lean
+  finite-tail, and residual-debt exits are named.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3654,7 +3658,7 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Move:** Treat proof branches and local exit kernels as the tournament
   vertices, then apply Robbins' bridgelessness criterion to the proof graph
   before any quotient contraction is trusted.
-- **LRC use:** HYP-3081/S248 turns "controlled forgetting" into a graph test
+- **LRC use:** HYP-3081/S249 turns "controlled forgetting" into a graph test
   downstream of the HYP-3078 q-cusp scout and HYP-3079 Lean q-cusp ledger: a
   forgotten coordinate is illegal when it is the only load-bearing bridge
   between two certificate regions.  Legal branch corridors must have a reverse
@@ -3678,6 +3682,34 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3074, HYP-3071, HYP-3070, HYP-3058, HYP-3057, HYP-3056, HYP-2963,
   THM-572, LTI-230, LTI-228, LTI-227, LTI-225, LTI-221, LTT-128, LTT-126,
   LTT-125, LTT-123, T1165, T1163, T1162, T1160, OPEN-Q-108.
+
+### LTT-129: Branch-Kernel Orientation Audit
+
+- **Move:** Turn the branch-orientation guardrail into a finite graph audit:
+  compare the unsafe raw scalar-star quotient against a protected branch graph
+  whose exits and sidecars are explicitly named.
+- **LRC use:** HYP-3082/S250 runs on the HYP-2963 packet bank.  The default
+  stored audit covers `21913` packets, with `7235` hard non-AP/GW packets. The
+  raw scalar-star quotient has `6` nodes, `5` bridges, and `5` naked bridges.
+  The protected branch graph has `80` nodes, `83` edges, `69` bridges, `0`
+  naked bridges, and a strongly orientable contracted core.  This supports the
+  proof target "all primitive residuals must enter a protected branch graph",
+  not a proof of the global reduction or the K33/THM-572 discharge.
+- **Tournament Analysis:** Vertices are route/section/exit carriers:
+  `labelled_packet_sheaf`, `route_section_exit`, `haar_grid_exit`,
+  `branch_kernel_protection`, `no_lift_guard`, `q_cusp_polar_debt_guard`,
+  `lean_finite_tail_guard`, `desargues_beal_finalizer`,
+  `named_residual_debt`, and `raw_scalar_star`.  The pairwise observable is
+  whether a vertex protects a bridge while preserving exact `M>=1/14`,
+  q-threshold, open/boundary status, endpoint owner, route handoff, section
+  exit, power-lift guard, and residual name.
+- **Next hook:** Export every bridge witness with raw/protected status,
+  responsible sidecar, residual exit, endpoint kernel class, and contracted
+  core orientation status; then rerun after any HYP-2963 packet-bank expansion.
+- **Pointers:** HYP-3082, HYP-3081, HYP-3079, HYP-3078, HYP-3077, HYP-3076,
+  HYP-3075, HYP-3074, HYP-3071, HYP-3070, HYP-2996, HYP-2963, THM-572,
+  LTI-231, LTI-230, LTI-228, LTI-227, LTI-225, LTT-129, LTT-128, LTT-126,
+  LTT-125, LTT-123, T1166, T1165, T1163, T1162, OPEN-Q-108.
 
 ## Immediate Pull List
 
