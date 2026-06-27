@@ -1184,12 +1184,13 @@ to leave future agents with many small handles that might unexpectedly open.
 - `01-canon/MISTAKES.md`: essential guardrail for avoiding seductive but false
   repeats.
 
-## T1184: Lee-Yang/Savitch/Bravais/ear-lattice extremality synthesis
+## T1185: Lee-Yang/Savitch/Bravais/ear-lattice extremality synthesis
 
-Reserved by codex-2026-06-27-S262 for HYP-3107.  This tangent treats the LRC14
+Reserved by codex-2026-06-27-S262 for HYP-3108 after incoming HYP-3107 claimed
+T1184 for the Lean proof-frontier ledger.  This tangent treats the LRC14
 frontier as a multi-map extremality problem: the full miss-count PGF zero
 curve, recursive proof-state reachability depth, lattice packet address, and
-ear-growth grammar are compared as sidecars for the HYP-3103 through HYP-3106
-signals.  The tangent should not collapse these to one scalar maximizer until
-the quotient states which LRC predicate it preserves and which coordinate it
+ear-growth grammar are compared as sidecars for HYP-3103 through HYP-3107.
+The tangent should not collapse these to one scalar maximizer until the
+quotient states which LRC predicate it preserves and which coordinate it
 forgets.

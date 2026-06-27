@@ -27348,17 +27348,20 @@ tournament vertex set need not be runners, arcs, or original configurations;
 for this exploratory stage it is better to use interaction orders, local
 sinks, observer charts, quotient debts, spectra, and proof obligations.
 
-## codex-2026-06-27 -- Lee-Yang/Savitch/Bravais/ear-lattice synthesis reservation -- HYP-3107
+## codex-2026-06-27 -- Lee-Yang/Savitch/Bravais/ear-lattice synthesis reservation -- HYP-3108
 
 User asked for a comprehensive proof-frontier session inspired by Savitch's
 theorem, Bravais lattices, Lee-Yang extremality, full PGF root curves,
 quartic `exp(-lambda S^4 - b S^2)` densities, and ear-decomposition theorems.
 
-Reserved HYP-3107 / T1184 / LTI-245 / LTT-143 as the S262 lane.  The
-preserved predicate is residual LRC14 proof progress through a direct lonely
-interval, CRT/dyadic lift, or named obstruction-transfer sidecar.  The
-challenged assumption is that tournament vertices must be runners, arcs, or
-configurations; this lane will instead test PGF strata, proof-state gates,
-lattice cells, ear attachments, and proof obligations as tournament vertices.
-Next steps are to read HYP-3103 through HYP-3106, build the exact signal scout,
-store output, and promote only the surviving invariants.
+Initially reserved HYP-3107 / T1184 / LTI-245 / LTT-143, then an incoming
+mainline rebase revealed those IDs already belonged to the Lean proof-frontier
+ledger.  This lane is therefore renumbered to HYP-3108 / T1185 / LTI-246 /
+LTT-144 and explicitly depends on incoming HYP-3107.  The preserved predicate
+is residual LRC14 proof progress through a direct lonely interval, CRT/dyadic
+lift, or named obstruction-transfer sidecar.  The challenged assumption is
+that tournament vertices must be runners, arcs, or configurations; this lane
+will instead test PGF strata, proof-state gates, lattice cells, ear
+attachments, and proof obligations as tournament vertices.  Next steps are to
+read HYP-3103 through HYP-3107, build the exact signal scout, store output, and
+promote only the surviving invariants.

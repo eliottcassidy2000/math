@@ -1,14 +1,15 @@
 ---
-id: HYP-3107
+id: HYP-3108
 title: Lee-Yang, Savitch, Bravais, and ear-lattice extremality signals for LRC14
 status: RESERVED / signal scout in progress; not a proof
 source: codex-2026-06-27-S262
-tangent: T1184
-technique: LTI-245
-tournament_technique: LTT-143
+tangent: T1185
+technique: LTI-246
+tournament_technique: LTT-144
 script: 04-computation/lee_yang_savitch_ear_lattice_extremality_codex_s262.py
 result: 05-knowledge/results/lee_yang_savitch_ear_lattice_extremality_codex_s262.out
 related:
+  - HYP-3107
   - HYP-3106
   - HYP-3105
   - HYP-3104
@@ -23,14 +24,15 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3107: Lee-Yang, Savitch, Bravais, And Ear-Lattice Extremality Signals For LRC14
+# HYP-3108: Lee-Yang, Savitch, Bravais, And Ear-Lattice Extremality Signals For LRC14
 
 ## Reservation Claim
 
-This lane reserves the S262 synthesis: merge the HYP-3103 miss-count PGF root
-signal, the HYP-3104 maximizer atlas, the HYP-3105 obstruction-transfer atlas,
-and the HYP-3106 controlled-forgetting perspective groupoid with four
-additional lenses:
+This lane reserves the S262 synthesis after integrating incoming HYP-3107's
+Lean proof-frontier ledger.  It merges the HYP-3103 miss-count PGF root signal,
+the HYP-3104 maximizer atlas, the HYP-3105 obstruction-transfer atlas, the
+HYP-3106 controlled-forgetting perspective groupoid, and HYP-3107's formal
+open fields with four additional lenses:
 
 ```text
 Lee-Yang extremality: the full PGF zero curve, not only a scalar moment.
