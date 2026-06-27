@@ -3483,3 +3483,16 @@ Tournament Analysis uses sidecars/proof obligations as vertices and gives one
 Hamiltonian path led by `savitch_reachability -> ear_decomposition_state_graph
 -> pgf_zero_curve`. -> HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104,
 HYP-3103, LTI-246, LTT-144, OPEN-Q-108.
+
+## T1187: Minkowski/circuit/Ising/De Moivre carrier atlas (codex-2026-06-27-S264)
+
+HYP-3111 reserves the next LRC14 synthesis lane after the Lee-Yang root-curve
+and De Moivre-Jacobi crystallographic work.  Minkowski theorem is treated as a
+convex symmetric q-lattice forcing sidecar, circuit complexity as a
+size/depth/uniformity ledger for proof-state gates, the Ising model as finite
+partition-polynomial zero geometry, and De Moivre's quintic as an exact
+finite-depth fold.  The key guardrail is controlled forgetting: the tournament
+vertices are proof carriers, not runners, and every quotient must state the
+LRC predicate preserved and the raw labels/time/branch coordinates destroyed.
+-> HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, LTI-248, LTT-146,
+OPEN-Q-108.

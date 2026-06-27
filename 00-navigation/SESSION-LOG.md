@@ -27448,3 +27448,18 @@ root-collision wall.  Proposed new signals: `root_zero_locus`,
 `lee_yang_segment_clearance`, `apex7_angle_error`, `quartic_phi4_profile`,
 `root_collision_discriminant`, `zero_real_ear_component`,
 `odd_ear_collision_parity`, and `nested_ear_width`.
+
+## codex-2026-06-27 -- Minkowski/circuit/Ising/De Moivre carrier reservation -- HYP-3111
+
+User asked to merge in Minkowski theorem, circuit complexity, the Ising model,
+and De Moivre's quintic.  Reserved HYP-3111/T1187/LTI-248/LTT-146 for a
+controlled-forgetting carrier atlas that joins those prompts to
+HYP-3107--HYP-3110.
+
+Initial guardrail: Minkowski is a q-lattice convex-body sidecar, circuit
+complexity is a proof-state size/depth/uniformity ledger, Ising is a finite
+partition-zero refinement of the Lee-Yang root curve, and De Moivre is an exact
+algebraic fold/cancellation detector.  The preserved predicate is progress
+toward `LRC14Statement` through CRT/dyadic lift, observer gluing, root-locus
+and finite-address packets; destroyed coordinates are raw runner labels, raw
+time, algebraic branch choices, and scalar-only summaries.

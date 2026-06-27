@@ -1196,3 +1196,16 @@ affine q-rank `6`, and Savitch midpoint bottlenecks at observer-gluing,
 Bravais/finite-address, and finite-address packet nodes.  Do not collapse the
 tangent to one scalar maximizer until the quotient states which LRC predicate
 it preserves and which coordinate it forgets.
+
+## T1187: Minkowski/circuit/Ising/De Moivre carrier atlas (codex-2026-06-27-S264)
+
+Reserved for HYP-3111.  This tangent tests four requested outside carriers
+against the current LRC14 proof frontier: Minkowski convex-body forcing over a
+finite q-lattice packet; circuit-complexity size/depth/uniformity for the
+proof-state DAG; finite Ising partition-polynomial zeros as a Lee-Yang
+refinement; and De Moivre's quintic normal form as an exact algebraic fold.
+The vertices are proof obligations and sidecars, not runners.  The quotient
+preserves progress toward a finite LRC14 certificate and destroys raw labels,
+raw time, and branch coordinates unless the sidecar explicitly records them.
+-> HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, LTI-248, LTT-146,
+OPEN-Q-108.

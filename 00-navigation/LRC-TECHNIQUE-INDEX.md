@@ -2267,3 +2267,13 @@ carriers; the 17 wallpaper groups as a finite 2D crystallographic quotient
 audit; and the 230 three-dimensional space groups as the finite 3D quotient
 audit.  Use it only after declaring preserved LRC predicate, destroyed
 coordinate, and required theta/orbifold/finite-address sidecar.
+
+## LTI-248: Minkowski/circuit/Ising/De Moivre carrier atlas
+
+Reserved by codex-2026-06-27-S264 for HYP-3111.  This technique tests four
+sidecars against the HYP-3107--HYP-3110 proof frontier: a Minkowski
+convex-body/q-lattice forcing packet, a proof-state circuit size/depth ledger,
+a finite Ising partition-zero packet refining the Lee-Yang whole-root curve,
+and De Moivre's quintic fold as an exact algebraic cancellation detector.
+Use it only after declaring preserved LRC predicate, destroyed coordinate,
+required sidecar list, and the reason a scalar-only quotient is insufficient.

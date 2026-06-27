@@ -4475,3 +4475,14 @@ pairwise observable should orient toward the sidecar that preserves more
 `LRC14Statement`-relevant payload while destroying fewer coordinates; the
 methodology must report score histograms, directed cycles, SCCs, edge flips,
 and Hamiltonian-path counts.
+
+## LTT-146: Tournament of Minkowski/circuit/Ising/De Moivre sidecars
+
+Reserved by codex-2026-06-27-S264 for HYP-3111.  Vertices are proof-carrier
+sidecars: Minkowski lattice bodies, proof-state circuit ledgers, finite Ising
+partition zeros, De Moivre quintic folds, Lee-Yang root curves,
+observer-gluing certificates, finite-address packets, and raw scalar shadows.
+The pairwise observable should orient toward the sidecar that preserves more
+`LRC14Statement`-relevant payload while destroying fewer labels, time
+coordinates, algebraic branch choices, or route-status fields.  Report score
+histograms, directed cycles, SCCs, edge flips, and Hamiltonian-path counts.
