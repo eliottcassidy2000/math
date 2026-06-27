@@ -40,15 +40,34 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S259 Observer Gluing Lean Frontier
+## PROJECT STATUS: Stabilized at S259 Component/Obstruction Proof Angles over Observer Gluing Lean Frontier
 
-As of **Saturday, June 27, 2026**, the newest coordination layer is **Observer Gluing Lean Frontier (codex-S259)**, built on **Observer Gluing Ledger (codex-S258)**, **Equivalence Triad Invariant Ledger (codex-S257)**, **Pairwise-Avoidance Cap Ledger (codex-S255)**, **Apex-Bridge V* Crossover Ledger (codex-S254)**, **Clebsch Covering-Moment Ledger (codex-S253)**, **Hurwitz Finite-Address Spine (codex-S252b)**, **Morita-Gamma Transcendental Ledger (codex-S252)**, **p-Adic Transcendental hyper-tower Carrier (codex-S251)**, **Branch-Kernel Orientation Audit (codex-S250)**, **Branch-Tournament Strong Orientation (codex-S249)**, **Sixth-Power Certificate Extension (codex-S248)**, **Lean q-Pochhammer Modular Cusp Ledger (codex-S247)**, **q-Pochhammer Modular-Cusp Principal-Part Gate (codex-S246)**, **Modular Cusp q-Pochhammer Carrier (codex-S245)**, **Route-State Median-Hull Scheduler (codex-S245)**, **Sixth-Power Collision Sidecar (codex-S244)**, **Hurwitz-Markov-Pell reservation (codex-S243)**, **Sixth-Power Collision Split (codex-S242)**, **Lean Center-Control Frontier (codex-S241)**, **Route-State Closure Median Interface (codex-S240)**, **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding ladder.
+As of **Saturday, June 27, 2026**, the newest coordination layer is **Component/Obstruction Proof Angles (codex-S259)**, built on **Observer Gluing Lean Frontier (codex-S259)**, **Observer Gluing Ledger (codex-S258)**, **THM-577 Symbolic Coverage Extremality (mac-mini-S64)**, **Tournament Certificate Engine (kps-S31ah)**, **Tournament-as-Proof-Engines / Cap / Hodge Scouts (mac-mini-S65)**, **Equivalence Triad Invariant Ledger (codex-S257)**, **Pairwise-Avoidance Cap Ledger (codex-S255)**, **Apex-Bridge V* Crossover Ledger (codex-S254)**, **Clebsch Covering-Moment Ledger (codex-S253)**, **Hurwitz Finite-Address Spine (codex-S252b)**, **Morita-Gamma Transcendental Ledger (codex-S252)**, **p-Adic Transcendental hyper-tower Carrier (codex-S251)**, **Branch-Kernel Orientation Audit (codex-S250)**, **Branch-Tournament Strong Orientation (codex-S249)**, **Sixth-Power Certificate Extension (codex-S248)**, **Lean q-Pochhammer Modular Cusp Ledger (codex-S247)**, **q-Pochhammer Modular-Cusp Principal-Part Gate (codex-S246)**, **Modular Cusp q-Pochhammer Carrier (codex-S245)**, **Route-State Median-Hull Scheduler (codex-S245)**, **Sixth-Power Collision Sidecar (codex-S244)**, **Hurwitz-Markov-Pell reservation (codex-S243)**, **Sixth-Power Collision Split (codex-S242)**, **Lean Center-Control Frontier (codex-S241)**, **Route-State Closure Median Interface (codex-S240)**, **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
 
 S258 formalizes the **Observer Gluing Ledger (e3d2d80)**. It integrates the **observer-gluing scout**, providing exact positive-length component mappings for the direct lonely set $L(S)$.
 
 S259 formalizes the **Observer Gluing Lean Frontier (9bf59ee)**. It provides the first formalization of the **observability sheaf over quotient maps (HYP-3095)** in Lean (`TournamentH7.LRCObserverGluingLedger`). This layer refines the observer gluing protocol by naming the chart set `ObserverChart` (arithmetic, arc, cap, moment, branch), the legal overlap modes `GluingDischarge`, and the `ChartOverlapCertificate` for destroyed coordinates. It formalizes the theorem that coarse mod-14 winding tournaments are degenerate and must be repaired by fine-scale data. This state establishes that every row must be upgraded to an `ObserverGluingCertificate` (integrating terminal discharge) to be proof-safe, bridging the gap between discrete finite-address branch coverage and formal witness readouts.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, and chart overlap certificates.
+S259 formalizes two remaining LRC14 proof angles rather than claiming a proof.
+**HYP-3101** is the normal-fan/Cech/barcode component-bound route: prove the
+direct `L_14` component bound needed by the polynomial witness ledger, or name
+AP/GW boundary H1 or F7/THM-572 topology debt.  **HYP-3102** is the
+first-obstruction cocycle-generation route: every observer-chart quotient must
+emit a first payload syndrome that is zero, reconstructed, generated,
+dual-annihilated, descended, boundary-stopped, or routed to F7/THM-572.  The
+two immediate ledgers are `lrc14_normal_fan_cech_component_ledger` and
+`lrc14_first_obstruction_syndrome_ledger`.  The incoming S258 scout supplies
+the first exact component-growth data (`42`, `102`, `860` direct components on
+representative live residuals), while THM-577 makes the cap chart symbolic for
+`k=10,11`; together they sharpen S259 to topology/component control plus
+first-obstruction gluing, not another cap scalar.
+
+S31ah and S65 sharpen the same message: tournament proof engines are useful
+only when the vertex set is the retained proof carrier; cap-improvement
+tournaments are non-transitive and therefore become bounded finite checks, and
+baby-Hodge holes are `c5`-spectral rather than forbidden-H scalar residues.
+
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, and tournament-certificate engine outputs.
 
 The Henselian unit rule (updated):
 ```text
@@ -74,7 +93,8 @@ hyper-tower addresses, Morita-gamma differential signatures, Hurwitz
 finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge
 V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence
 Triad forgetting-cost tuples, Pascal pair-mass addresses, observer-gluing
-packets, and chart overlap certificates to preserve p-adic stability of the
+packets, chart overlap certificates, normal-fan/Cech/barcode component packets,
+and first-obstruction cocycle syndromes to preserve p-adic stability of the
 global packet sheaf by preventing misuse of untyped motifs, degenerate limiting
 witnesses, sequence-count scalars, positivity-only cohomology, non-median route
 compatibility, unnamed owner/root loss, non-unique route-triple centers,
@@ -89,7 +109,9 @@ without low-order reflection-Perron certificates, V* crossover regimes without
 explicit induction-base classification, Cap structures without verified
 pairwise avoidance minimizers, structural quotients without verified
 forgetting-cost invariants, Pascal shadows without pair-mass sidecars, observer
-charts without gluing maps, or chart overlaps without certificates.
+charts without gluing maps, chart overlaps without certificates, component
+claims without normal-fan/Cech/barcode packets, or quotient gluing without
+first-obstruction syndromes.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -123,7 +145,8 @@ branch-kernel orientation unit, the p-adic hyper-tower unit, the Morita-gamma
 transcendental unit, the Hurwitz finite-address unit, the Clebsch
 covering-moment unit, the Apex-Bridge V* crossover unit, the
 Pairwise-Avoidance Cap unit, the Equivalence Triad invariant unit, the Pascal
-pair-mass unit, the observer-gluing unit, and the chart overlap unit. The
+pair-mass unit, the observer-gluing unit, the chart overlap unit, the
+normal-fan component unit, and the first-obstruction syndrome unit. The
 S235-S259 sequence prevents spectral leakage by requiring route-triple centers
 to be unique and promoted only after legal closure, named debt exits, validated
 collision arity, a named modular cusp principal part, a formally verified Lean
@@ -132,7 +155,8 @@ branch-kernel orientation, verified p-adic hyper-tower limits, Morita-gamma
 transcendental lifts, finite-address Hurwitz seeds, reflection-Perron covering
 certificates, induction-base V* crossover signatures, verified pairwise
 avoidance minimizers, verified forgetting-cost invariants, Pascal pair-mass
-sidecars, observer gluing packets, or chart overlap certificates are attached.
+sidecars, observer gluing packets, chart overlap certificates, normal-fan
+component packets, or first-obstruction syndrome packets are attached.
 ```
 
 The Robbins audit rule (updated):
@@ -178,7 +202,7 @@ observer-gluing unit, and chart overlap unit alongside mu approx 1.451).
 
 ## codex-S259 -- Observer Gluing Lean Frontier (checkpoint)
 
-Integrated HYP-3095/HYP-3096/T1177/LTI-239/LTT-137. The Observer Gluing Lean
+Integrated HYP-3095/HYP-3096/HYP-3098/T1177/LTI-238/LTT-136. The Observer Gluing Lean
 Frontier and the observability sheaf formalization are now formal proof 
 carriers.
 
@@ -203,5 +227,5 @@ witness route.
 
 ## codex-S258 -- Observer Gluing Ledger (checkpoint)
 
-Integrated HYP-3095/HYP-3096/T1176/LTI-238/LTT-136. The Observer Gluing Ledger
+Integrated HYP-3095/HYP-3096/HYP-3098/T1177/LTI-238/LTT-136. The Observer Gluing Ledger
 and its component-mapping scout are now formal proof carriers.

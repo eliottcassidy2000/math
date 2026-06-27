@@ -140,6 +140,14 @@ obligations, and proof-carrier interfaces.
   use LTT-137 after LTT-136 and make certificate functors / proof obligations
   the vertices.  Run completeness, SCC, Omega, bridge-protection, and
   sidecar-normalizer checks before treating a forbidden H hit as terminal.
+- Need to prove the direct `L_14` component bound needed by the witness route:
+  use LTT-138 after LTT-069/LTT-081/LTT-116/LTT-135 and make normal-fan
+  chambers, Cech cycles, barcode bars, safe stalks, and finite-ruler
+  obligations the vertices, not runners.
+- Need to glue observer charts by naming the first forgotten payload:
+  use LTT-139 after LTT-101/LTT-116/LTT-134/LTT-138 and make obstruction
+  syndromes, sidecar columns, certificate cycles, owner currents, and
+  state-lift classes the vertices.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -4073,6 +4081,83 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3100, HYP-3099, HYP-3098, HYP-3096, HYP-3097, HYP-3086,
   THM-200, THM-202, THM-343, THM-573, THM-577, LTI-239, LTT-137, LTT-136,
   T1178, T1177, `TournamentH7.LRCBleedingEdgeFrontier`, OPEN-Q-108.
+
+### LTT-138: Normal-Fan Cech Barcode Component Bound
+
+- **Move:** Treat the direct `L_14` component theorem as a tournament on
+  topology carriers and proof obligations, not on runners, raw endpoint
+  counts, raw safe mass, or denominator-grid rows.
+- **LRC use:** HYP-3101/S259 targets the HYP-3096 missing condition
+  `components(L_14(S)) <= A0`.  The carrier merges HYP-3025 closed arc-Cech
+  topology, HYP-3015 barcode persistence, HYP-3018 active normal-fan supports,
+  and HYP-3071 first-tooth observability.  The intended split is: a THM-573
+  residual non-tight packet has a bounded normalized component/chamber packet,
+  is AP/GW closed-boundary H1, or emits named F7/THM-572 good-cover quotient
+  debt.  Incoming S258 already gives exact sample pressure (`42`, `102`, and
+  `860` direct components), while THM-577 strengthens the cap chart without
+  solving this topology bound.  The S259 Lean frontier makes bounded component
+  packets producers for `ObserverGluingCertificate`, and S65 shows cap exchange
+  can be a non-transitive finite check rather than a proof engine.
+- **Preserves:** direct lonely-set topology, normalized component count,
+  endpoint-owner current, boundary cocircuit facets, active bottleneck support,
+  safe-stalk shape, largest-arc floor, finite-ruler threshold, destroyed
+  coordinate, and terminal exit.
+- **Forgets / guardrail:** Runner quotients, scalar safe mass, and raw apex
+  time subdivisions are unsafe unless Cech Betti defects, owner currents,
+  barcode bars, and normal-fan chamber words are retained or discharged.
+- **Tournament vertices:** `normal_fan_chamber_packet`,
+  `open_tope_cocircuit_packet`, `closed_arc_cech_nerve`,
+  `lonely_profile_barcode`, `coarse_safe_stalk`, `component_bound_A0`,
+  `measure_floor_m0`, `finite_ruler_net`, `AP_GW_boundary_H1`,
+  `F7_good_cover_defect`, and `raw_safe_mass`.
+- **Next hook:** Build `lrc14_normal_fan_cech_component_ledger` with
+  `closed_arc_cech_beta`, `open_arc_component_count`,
+  `boundary_cocircuit_facet_word`, `owner_current_word_mod_14`,
+  `bar_count_at_height_1_14`, `minimum_bar_persistence`,
+  `peak_bottleneck_support_word`, `normal_fan_chamber_id`,
+  `component_bound_status`, `measure_floor_status`,
+  `finite_ruler_threshold_D`, destroyed coordinate, and terminal exit.
+- **Pointers:** HYP-3101, HYP-3096, HYP-3095, HYP-3025, HYP-3018, HYP-3015,
+  HYP-3071, HYP-3035, HYP-2997, HYP-2963, THM-577, THM-575, THM-573, THM-565,
+  LTI-240, LTT-138, T1179, OPEN-Q-108.
+
+### LTT-139: First-Obstruction Cocycle Generation
+
+- **Move:** Turn observer-chart gluing into a tournament on first obstruction
+  syndromes and certificate-cycle images.  A quotient is allowed to forget a
+  payload only when the emitted cochain is zero, reconstructed, exact,
+  generated, dual-annihilated, descended, AP/GW-stopped, or routed to named
+  F7/THM-572 debt.
+- **LRC use:** HYP-3102/S259 synthesizes HYP-3095 observer-chart gluing,
+  HYP-3071 cycle-class observability, HYP-3054/HYP-3056 observer-cut payload
+  ledgers, and HYP-2997 cocycle normal forms.  The S237 rank-12-of-13 template
+  becomes a proof target on actual HYP-2963 packet cochains, with
+  `phantom_f7_class` as the only intended unspanned atom.  Incoming S258
+  supplies the first observer-glue sample rows, and THM-577 says the
+  Pascal/cap residue should be tested as generated finite-remainder data.  S31ah
+  supplies tournament-certificate generators, while S65 says `c5`/power-sum
+  holes and forbidden-H alpha events are distinct obstruction mechanisms.
+- **Preserves:** proof legality for `M(S)>=1/14`, observer-cut payload orbit,
+  first sidecar stage, obstruction basis vector, certificate-cycle image
+  status, dual annihilator, family descent, AP/GW boundary stop, state-lift
+  status, destroyed coordinate, and terminal exit.
+- **Forgets / guardrail:** Raw route labels and chart summaries are unsafe if
+  they hide the first payload difference on a visible fiber.  The missing
+  coordinate must become a named syndrome before gluing.
+- **Tournament vertices:** `first_obstruction_syndrome`,
+  `cycle_generation_span`, `observability_matrix_first_tooth`,
+  `endpoint_owner_current`, `haar_zeta_cocycle`,
+  `primitive_period_character`, `observer_cut_boundary`,
+  `rectangle_hourglass_cycle`, `normal_fan_component_chamber`,
+  `k33_state_lift_class`, `phantom_f7_class`, and `raw_route_label`.
+- **Next hook:** Build `lrc14_first_obstruction_syndrome_ledger`; for each
+  mixed route/status fiber emit quotient, next observer, visible automorphism
+  group, payload orbit, first sidecar stage, obstruction vector,
+  cycle-image status, dual-annihilator status, family descent, AP/GW boundary
+  stop, F7/THM-572 state-lift status, and terminal exit.
+- **Pointers:** HYP-3102, HYP-3101, HYP-3095, HYP-3071, HYP-3070, HYP-3069,
+  HYP-3066, HYP-3056, HYP-3054, HYP-2997, HYP-2995, HYP-2963, THM-577,
+  THM-572, THM-573, LTI-241, LTT-139, T1180, OPEN-Q-108.
 
 ## Immediate Pull List
 

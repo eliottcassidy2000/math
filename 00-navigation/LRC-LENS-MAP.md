@@ -21,7 +21,10 @@ The live proof object has at least four layers:
 3. **Local owner, period, and topology layer:** endpoint owners, active
    bottleneck owners, barcode bars, normal-fan supports, primitive safe decks,
    residual capacitors, drop/add squares, exact-M zeta.
-4. **Certificate layer:** dual annihilation, cut/cochain/zeta repair,
+4. **Component-bound layer:** normalized direct `L_14` components, closed
+   Cech/open tope packets, persistence bars, active normal-fan chambers, and
+   finite-ruler denominator-net thresholds.
+5. **Certificate layer:** dual annihilation, cut/cochain/zeta repair,
    familywise descent, Henselian unit rules, Fejer/Toeplitz interval
    certificates, Ramanujan exact-period projectors, formal exact arithmetic.
 
@@ -64,9 +67,11 @@ positive-open residual
 | Tiling / diagonal-layer flow lens | binary half-tiling parity flow, `K_{k,k+1}` line potentials, rectangle and hourglass cycle laws, fixed-path presentation fibers | full `S_n` quotient, exact Hamiltonian-path presentation, owner/barcode/route payload unless attached | rectangle/hourglass cycle basis, line potential word, fixed-path fiber count, endpoint-owner and barcode support | duplication-law sidecar for controlled forgetting |
 | Exact circle / event / topology lens | boundary/open status, closed arc-Cech H1, open topes, owner-essential cycles | route labels and arithmetic period if topology is used alone | closed/open arc beta, owner-deletion persistence, cocircuit facets | AP/GW boundary H1 versus open topology |
 | Endpoint-owner / normal-fan / barcode lens | local bottleneck owners, safe bars, active supports, stalk shape | global route and period labels | endpoint-owner strip, barcode shape, normal-fan support, largest-stalk key | owner-strip descent |
+| Normal-fan Cech component lens | normalized direct `L_14` component count, Cech beta, open tope components, barcode persistence, active chamber word, finite-ruler threshold | exact scale, branch route, and certificate image if topology is isolated | `normal_fan_chamber_id`, owner current, boundary cocircuit word, first tooth, component-bound status, terminal exit | HYP-3096 component bound via HYP-3101 |
 | Arithmetic / Farey / period lens | exact scale, qdiv, Farey excess, primitive periods, Henselian unit roots | topology and owner identity when reduced to numeric buckets | magnitude cocycle, primitive safe deck, Hensel unit/zero-root debt | status gate then route scheduler |
 | Harmonic / analytic / certificate lens | dual certificates, capacity meters, squarefree blindness, smoothing clocks | packet family, prime-power route, owner geometry if raw estimates are used | Fejer packet key, Ramanujan projector, analytic blindness report | packet-keyed certificate backend |
 | Cycle-class / observability lens | first legal sidecar tooth, rational certificate span, residual basis atom, image rank/status | exact row identity if only summaries are used; F7 meaning if phantom rows are anonymous | `first_tooth`, `cycle_class_image_status`, `algebraic_cycle_decomposition`, `phantom_f7_class` | proof matrix over packet sheaf |
+| First-obstruction cocycle lens | observer-cut payload difference, first sidecar stage, obstruction basis vector, certificate-cycle image, dual annihilator, state-lift status | route legality if a chart summary hides the first payload difference | `first_obstruction_basis_vector`, `certificate_cycle_image_status`, `dual_annihilator_status`, `F7_THM572_state_lift_status` | chart-gluing exactness via HYP-3102 |
 | Route-state medianization lens | legal median centers of completed packet/route/certificate/sidecar/discharge states | terminal proof status if scheduler centers are treated as theorem exits | `median_state_id`, `median_center_kind`, `median_dropped_atoms`, `specific_discharge_atom`, `median_required_refinement` | sidecar closure before discharge |
 | Automata / sequence / lacunary lens | Moser/fibbinary/gap language, carry state, finite transition data, power-lift guards | exact safe intervals, AP/GW equality, theorem route | exact `M`, endpoint/topology sidecars, automaton shadow class | telemetry sidecar, not proof quotient |
 | Partial-cube sequence lens | Moser even/odd lane cuts, fibbinary Fibonacci-cube Theta classes, simplex directed-edge sectors, `K_{k,k+1}` bridge line potentials | exact packet scale, endpoint owners, route and certificate data if cut words are scalarized | `theta_class_word`, forbidden-adjacency mask, Moser `a+2b` split, bridge potential, rectangle redundancy class | automaton telemetry upgraded to controlled-forgetting cut carrier |
@@ -98,6 +103,16 @@ coarse ET + Henselian unit gate
 closed arc topology
   -> owner-essential AP/GW H1
   -> zero-open theorem target
+
+normal-fan / Cech / barcode topology
+  -> normalized component bound
+  -> largest arc floor
+  -> finite-ruler denominator net
+
+observer-cut payloads
+  -> first obstruction syndrome
+  -> certificate-cycle image or dual annihilator
+  -> chart-gluing theorem or F7 state lift
 
 analytic clocks
   -> capacity + blindness report

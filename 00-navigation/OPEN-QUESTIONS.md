@@ -25,6 +25,54 @@ nested-refinement discharge, reroutes to O3/K33 state-lift debt, or names the
 first failed overlap. -> HYP-3098, HYP-3097, HYP-3096, HYP-3095, HYP-3094,
 HYP-3093, HYP-3092, HYP-3090, HYP-3089, HYP-3088, HYP-3085, THM-577, THM-576,
 THM-575, THM-573, LTI-238, LTT-136, T1177, OPEN-Q-108.
+**OPEN-Q-108 S259 normal-fan Cech component-bound addendum:**
+HYP-3101 targets the direct component bound required by HYP-3096.  After
+THM-575, raw denominator time and raw largest time arcs are unstable under
+apex loading, so the live object is the normalized direct lonely set
+`L_14(S)` plus its topology.  The proposed carrier combines closed danger-arc
+Cech beta, open topes, boundary cocircuit owner currents, lonely-profile
+bars, active normal-fan support, and safe-component stalks.  Incoming S258
+already shows why this is a real theorem and not bookkeeping: representative
+live residuals have `42`, `102`, and `860` direct components, with a largest
+direct arc as small as `1/82320`.  THM-577 strengthens the cap chart
+symbolically for `k=10,11`, but the topology/component debt remains.  The
+S259 Lean frontier makes this a producer obligation for
+`ObserverGluingCertificate`, and S65's cap-improvement scout warns that
+exchange tournaments become non-transitive finite checks at `j=5`.  Open task:
+prove that every primitive non-tight THM-573 residual row with `<=6` multiples
+of `7` has a bounded normal-fan/Cech/barcode component packet, unless it is an
+AP/GW closed-boundary H1 equality atom or emits named F7/THM-572 good-cover
+quotient debt.  Build `lrc14_normal_fan_cech_component_ledger` with
+`closed_arc_cech_beta`, `open_arc_component_count`,
+`boundary_cocircuit_facet_word`, `owner_current_word_mod_14`,
+`bar_count_at_height_1_14`, `minimum_bar_persistence`,
+`peak_bottleneck_support_word`, `normal_fan_chamber_id`,
+`component_bound_status`, `measure_floor_status`,
+`finite_ruler_threshold_D`, destroyed coordinate, and terminal exit. ->
+HYP-3101, HYP-3096, HYP-3095, HYP-3025, HYP-3018, HYP-3015, HYP-3071,
+THM-577, THM-575, THM-573, THM-565, LTI-240, LTT-138, T1179, OPEN-Q-108.
+
+**OPEN-Q-108 S259 first-obstruction cocycle-generation addendum:**
+HYP-3102 turns observer-chart gluing into a finite syndrome problem.  For a
+quotient and next observer/cut operation, the hidden payload difference over a
+visible fiber is the first obstruction cochain; the quotient is legal only if
+that cochain is zero, reconstructed by a sidecar, exact/coboundary, generated
+by named certificate cycles, dual-annihilated, descended, AP/GW
+boundary-stopped, or routed to the named F7/THM-572 state-lift coordinate.
+Incoming S258 supplies the first sample observer-glue ledger; THM-577 suggests
+the Pascal/cap defect should be tested as generated finite-remainder data
+before promoting it to an independent basis atom.  S31ah supplies a reusable
+tournament-certificate generator catalog, while S65 separates `c5`/power-sum
+holes from forbidden-H alpha events; the ledger must label the mechanism of
+each obstruction, not just its scalar value.  Open task: instantiate the
+HYP-3071 rank-12-of-13 template on actual HYP-2963
+packet cochains.  Build `lrc14_first_obstruction_syndrome_ledger` with
+quotient name, next observer, visible automorphism group, payload orbit, first
+nonzero sidecar stage, obstruction basis vector, certificate-cycle image
+status, dual-annihilator status, family descent, AP/GW boundary stop,
+F7/THM-572 state-lift status, and terminal exit. -> HYP-3102, HYP-3101,
+HYP-3095, HYP-3071, HYP-3066, HYP-3056, HYP-3054, HYP-2997, HYP-2995,
+HYP-2963, THM-577, THM-572, THM-573, LTI-241, LTT-139, T1180, OPEN-Q-108.
 
 **OPEN-Q-108 S257 equivalence-triad invariant addendum:**
 HYP-3093 adds the forgetting-cost tuple
