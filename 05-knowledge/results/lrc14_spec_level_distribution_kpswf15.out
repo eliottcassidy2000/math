@@ -1,0 +1,126 @@
+############################################################################################
+# TOOL 3 : LEVEL-OF-DISTRIBUTION BOUNDS ON SPEC  (L1 vs L2 vs actual)
+#   Is the uniform |SPEC| < baseline bound elementary (L2/Parseval) or does it need BV/EH?
+############################################################################################
+============================================================================================
+  (R={1..13}\{12}, Q={1} r=1)  R=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]  Q=[1]  far=14Q=[14]
+============================================================================================
+  baseline=0.01042223  SPEC_exact=+0.00173704  R'=1.166667
+  -- DISCREPANCY / LEVEL-OF-DISTRIBUTION BOUNDS on |SPEC| --
+  |SPEC| (actual)                         = 0.00173704  = 0.16667 * baseline
+  L1 triangle  sum|chat||ghat| (|n|<=4000)  = 0.00951838  = 0.91328 * baseline   [needs per-term arith]
+  L2 Cauchy-Schwarz (EXACT Parseval)      = 0.03835083  = 3.67971 * baseline   [UNCONDITIONAL, no BV/EH]
+     var_R=meas(Rsafe)(1-meas)= 0.012011   var_Q=meas(Qlon)(1-meas)= 0.122449
+  ==> R' >= 1 - L2/baseline = -2.679714   (L2-only floor; positive iff L2<baseline)
+  ==> R' >= 1 - L1/baseline = +0.086723   (L1 floor; tighter but truncated)
+============================================================================================
+  (R={1..12}, Q={1,2} r=2 (worst R'=0.70))  R=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  Q=[1, 2]  far=14Q=[14, 28]
+============================================================================================
+  baseline=0.02679381  SPEC_exact=-0.00799872  R'=0.701471
+  -- DISCREPANCY / LEVEL-OF-DISTRIBUTION BOUNDS on |SPEC| --
+  |SPEC| (actual)                         = 0.00799872  = 0.29853 * baseline
+  L1 triangle  sum|chat||ghat| (|n|<=4000)  = 0.01018073  = 0.37997 * baseline   [needs per-term arith]
+  L2 Cauchy-Schwarz (EXACT Parseval)      = 0.07446971  = 2.77936 * baseline   [UNCONDITIONAL, no BV/EH]
+     var_R=meas(Rsafe)(1-meas)= 0.032938   var_Q=meas(Qlon)(1-meas)= 0.168367
+  ==> R' >= 1 - L2/baseline = -1.779362   (L2-only floor; positive iff L2<baseline)
+  ==> R' >= 1 - L1/baseline = +0.620034   (L1 floor; tighter but truncated)
+============================================================================================
+  (R={1..11}, Q={1,2,3} r=3)  R=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  Q=[1, 2, 3]  far=14Q=[14, 28, 42]
+============================================================================================
+  baseline=0.03889711  SPEC_exact=-0.00127085  R'=0.967328
+  -- DISCREPANCY / LEVEL-OF-DISTRIBUTION BOUNDS on |SPEC| --
+  |SPEC| (actual)                         = 0.00127085  = 0.03267 * baseline
+  L1 triangle  sum|chat||ghat| (|n|<=4000)  = 0.01637137  = 0.42089 * baseline   [needs per-term arith]
+  L2 Cauchy-Schwarz (EXACT Parseval)      = 0.10658962  = 2.74030 * baseline   [UNCONDITIONAL, no BV/EH]
+     var_R=meas(Rsafe)(1-meas)= 0.053160   var_Q=meas(Qlon)(1-meas)= 0.213719
+  ==> R' >= 1 - L2/baseline = -1.740297   (L2-only floor; positive iff L2<baseline)
+  ==> R' >= 1 - L1/baseline = +0.579111   (L1 floor; tighter but truncated)
+============================================================================================
+  (R={1..10}, Q={1,2,3,4} r=4)  R=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  Q=[1, 2, 3, 4]  far=14Q=[14, 28, 42, 56]
+============================================================================================
+  baseline=0.08541734  SPEC_exact=+0.00494547  R'=1.057898
+  -- DISCREPANCY / LEVEL-OF-DISTRIBUTION BOUNDS on |SPEC| --
+  |SPEC| (actual)                         = 0.00494547  = 0.05790 * baseline
+  L1 triangle  sum|chat||ghat| (|n|<=4000)  = 0.01661451  = 0.19451 * baseline   [needs per-term arith]
+  L2 Cauchy-Schwarz (EXACT Parseval)      = 0.16748140  = 1.96074 * baseline   [UNCONDITIONAL, no BV/EH]
+     var_R=meas(Rsafe)(1-meas)= 0.118943   var_Q=meas(Qlon)(1-meas)= 0.235828
+  ==> R' >= 1 - L2/baseline = -0.960742   (L2-only floor; positive iff L2<baseline)
+  ==> R' >= 1 - L1/baseline = +0.805490   (L1 floor; tighter but truncated)
+============================================================================================
+  (R={1..9}, Q={1..5} r=5)  R=[1, 2, 3, 4, 5, 6, 7, 8, 9]  Q=[1, 2, 3, 4, 5]  far=14Q=[14, 28, 42, 56, 70]
+============================================================================================
+  baseline=0.09139510  SPEC_exact=+0.00361624  R'=1.039567
+  -- DISCREPANCY / LEVEL-OF-DISTRIBUTION BOUNDS on |SPEC| --
+  |SPEC| (actual)                         = 0.00361624  = 0.03957 * baseline
+  L1 triangle  sum|chat||ghat| (|n|<=4000)  = 0.02146137  = 0.23482 * baseline   [needs per-term arith]
+  L2 Cauchy-Schwarz (EXACT Parseval)      = 0.19252760  = 2.10654 * baseline   [UNCONDITIONAL, no BV/EH]
+     var_R=meas(Rsafe)(1-meas)= 0.148281   var_Q=meas(Qlon)(1-meas)= 0.249977
+  ==> R' >= 1 - L2/baseline = -1.106542   (L2-only floor; positive iff L2<baseline)
+  ==> R' >= 1 - L1/baseline = +0.765180   (L1 floor; tighter but truncated)
+============================================================================================
+  (R={1..8}, Q={1..6} r=6 max)  R=[1, 2, 3, 4, 5, 6, 7, 8]  Q=[1, 2, 3, 4, 5, 6]  far=14Q=[14, 28, 42, 56, 70, 84]
+============================================================================================
+  baseline=0.12151603  SPEC_exact=-0.00501944  R'=0.958693
+  -- DISCREPANCY / LEVEL-OF-DISTRIBUTION BOUNDS on |SPEC| --
+  |SPEC| (actual)                         = 0.00501944  = 0.04131 * baseline
+  L1 triangle  sum|chat||ghat| (|n|<=4000)  = 0.02824327  = 0.23242 * baseline   [needs per-term arith]
+  L2 Cauchy-Schwarz (EXACT Parseval)      = 0.22007055  = 1.81104 * baseline   [UNCONDITIONAL, no BV/EH]
+     var_R=meas(Rsafe)(1-meas)= 0.195158   var_Q=meas(Qlon)(1-meas)= 0.248163
+  ==> R' >= 1 - L2/baseline = -0.811041   (L2-only floor; positive iff L2<baseline)
+  ==> R' >= 1 - L1/baseline = +0.767576   (L1 floor; tighter but truncated)
+============================================================================================
+  (R gcd=2, Q={1,3,5}  (worst SPEC=-0.029))  R=[2, 4, 6, 8, 10, 12]  Q=[1, 3, 5]  far=14Q=[14, 42, 70]
+============================================================================================
+  baseline=0.29605442  SPEC_exact=-0.02938776  R'=0.900735
+  -- DISCREPANCY / LEVEL-OF-DISTRIBUTION BOUNDS on |SPEC| --
+  |SPEC| (actual)                         = 0.02938776  = 0.09926 * baseline
+  L1 triangle  sum|chat||ghat| (|n|<=4000)  = 0.04174632  = 0.14101 * baseline   [needs per-term arith]
+  L2 Cauchy-Schwarz (EXACT Parseval)      = 0.23797688  = 0.80383 * baseline   [UNCONDITIONAL, no BV/EH]
+     var_R=meas(Rsafe)(1-meas)= 0.248163   var_Q=meas(Qlon)(1-meas)= 0.228209
+  ==> R' >= 1 - L2/baseline = +0.196172   (L2-only floor; positive iff L2<baseline)
+  ==> R' >= 1 - L1/baseline = +0.858991   (L1 floor; tighter but truncated)
+============================================================================================
+  (R gcd=3, Q={1,2,5})  R=[3, 6, 9, 12]  Q=[1, 2, 5]  far=14Q=[14, 28, 70]
+============================================================================================
+  baseline=0.41564626  SPEC_exact=-0.00374150  R'=0.990998
+  -- DISCREPANCY / LEVEL-OF-DISTRIBUTION BOUNDS on |SPEC| --
+  |SPEC| (actual)                         = 0.00374150  = 0.00900 * baseline
+  L1 triangle  sum|chat||ghat| (|n|<=4000)  = 0.00699330  = 0.01683 * baseline   [needs per-term arith]
+  L2 Cauchy-Schwarz (EXACT Parseval)      = 0.22809312  = 0.54877 * baseline   [UNCONDITIONAL, no BV/EH]
+     var_R=meas(Rsafe)(1-meas)= 0.235828   var_Q=meas(Qlon)(1-meas)= 0.220612
+  ==> R' >= 1 - L2/baseline = +0.451233   (L2-only floor; positive iff L2<baseline)
+  ==> R' >= 1 - L1/baseline = +0.983175   (L1 floor; tighter but truncated)
+============================================================================================
+  (R coprime-ish, Q={1,2,3})  R=[5, 9, 11, 13]  Q=[1, 2, 3]  far=14Q=[14, 28, 42]
+============================================================================================
+  baseline=0.35271078  SPEC_exact=-0.00855494  R'=0.975745
+  -- DISCREPANCY / LEVEL-OF-DISTRIBUTION BOUNDS on |SPEC| --
+  |SPEC| (actual)                         = 0.00855494  = 0.02425 * baseline
+  L1 triangle  sum|chat||ghat| (|n|<=4000)  = 0.02447790  = 0.06940 * baseline   [needs per-term arith]
+  L2 Cauchy-Schwarz (EXACT Parseval)      = 0.23109451  = 0.65520 * baseline   [UNCONDITIONAL, no BV/EH]
+     var_R=meas(Rsafe)(1-meas)= 0.249883   var_Q=meas(Qlon)(1-meas)= 0.213719
+  ==> R' >= 1 - L2/baseline = +0.344805   (L2-only floor; positive iff L2<baseline)
+  ==> R' >= 1 - L1/baseline = +0.930601   (L1 floor; tighter but truncated)
+============================================================================================
+SUMMARY: actual R' vs the unconditional L2 floor (1 - L2/baseline)
+============================================================================================
+label                                        R-prime  |SPEC|/base   L2/base   floor_L2   floor_L1
+R={1..13}\{12}, Q={1} r=1                    1.16667      0.16667   3.67971   -2.67971    0.08672
+R={1..12}, Q={1,2} r=2 (worst R'=0.70)       0.70147      0.29853   2.77936   -1.77936    0.62003
+R={1..11}, Q={1,2,3} r=3                     0.96733      0.03267   2.74030   -1.74030    0.57911
+R={1..10}, Q={1,2,3,4} r=4                   1.05790      0.05790   1.96074   -0.96074    0.80549
+R={1..9}, Q={1..5} r=5                       1.03957      0.03957   2.10654   -1.10654    0.76518
+R={1..8}, Q={1..6} r=6 max                   0.95869      0.04131   1.81104   -0.81104    0.76758
+R gcd=2, Q={1,3,5}  (worst SPEC=-0.029)      0.90074      0.09926   0.80383    0.19617    0.85899
+R gcd=3, Q={1,2,5}                           0.99100      0.00900   0.54877    0.45123    0.98317
+R coprime-ish, Q={1,2,3}                     0.97575      0.02425   0.65520    0.34480    0.93060
+
+  min actual R'            = 0.70147
+  min L2-only floor        = -2.67971   (if >0: Parseval alone gives R'>=c, NO BV/EH)
+  min L1 floor (truncated) = 0.08672
+
+VERDICT (printed in detail by the analysis):
+  The L2 Cauchy-Schwarz / Parseval bound is UNCONDITIONAL: it uses only
+  sum|chat|^2 = meas(Rsafe)-meas(Rsafe)^2 and the same for Q.  It needs NO
+  equidistribution input.  Whether it gives a POSITIVE floor is the question.
+DONE.

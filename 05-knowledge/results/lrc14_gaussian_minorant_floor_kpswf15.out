@@ -1,0 +1,34 @@
+################################################################################################
+# LRC(14)  GAUSSIAN/BEURLING-SELBERG MINORANT FLOOR  (kpswf15, HYP-3121 TOOL 1)
+#   L(S) = int prod_s phi_s  >=  int prod_s psi_s = MAIN + RESONANCE
+#   MAIN = (int psi)^|S|,  RESONANCE = sum_{sum k_s s=0, k!=0} prod psihat(k_s)
+################################################################################################
+
+================================================================================================
+STEP 1: build + VALIDATE the minorants (true minorant <=> max_leak ~ 0, min_psi >= 0)
+================================================================================================
+
+(B) C^infty compactly-supported mollifier minorant  psi = 1_{[a+delta,b-delta]} * rho_delta
+   delta=0.02: int psi = 0.817143   min_psi=-4.59e-06  max_leak(outside arc)=3.45e-06  max_over(inside)=+4.74e-06
+             |psihat(k)|: k=7:3.29e-02  k=14:1.73e-02  k=28:1.28e-03  k=56:3.49e-04  k=100:1.63e-06  k=200:4.92e-06
+   delta=0.03: int psi = 0.797143   min_psi=-7.61e-07  max_leak(outside arc)=6.14e-07  max_over(inside)=+7.92e-07
+             |psihat(k)|: k=7:3.83e-02  k=14:5.98e-03  k=28:3.35e-04  k=56:1.83e-04  k=100:1.42e-05  k=200:5.84e-07
+   delta=0.05: int psi = 0.757143   min_psi=-4.03e-08  max_leak(outside arc)=3.21e-08  max_over(inside)=+3.70e-08
+             |psihat(k)|: k=7:2.45e-02  k=14:2.18e-03  k=28:2.82e-05  k=56:4.78e-05  k=100:3.21e-06  k=200:1.27e-07
+
+(A) Fejer-smoothed shrunk-arc (band-limited, degree N)  -- comparison object
+   N=14, shrink h=0.0: int psi=h0=0.857143  min_psi=+9.20e-02  max_leak=5.19e-01  max_over=+0.00e+00  (band 14)
+   N=28, shrink h=0.0: int psi=h0=0.857143  min_psi=+4.78e-02  max_leak=5.04e-01  max_over=+0.00e+00  (band 28)
+   N=56, shrink h=0.02: int psi=h0=0.817143  min_psi=+1.85e-02  max_leak=5.27e-02  max_over=+0.00e+00  (band 56)
+   N=112, shrink h=0.02: int psi=h0=0.817143  min_psi=+9.42e-03  max_leak=2.61e-02  max_over=+0.00e+00  (band 112)
+
+================================================================================================
+STEP 2: per-set MAIN/RESONANCE/FLOOR for r=2..6 few-apex covering sets
+   (working minorant: C^infty mollifier, delta=0.03; resonance band |k|<=BAND)
+================================================================================================
+
+   few-apex covering bank: 3 primitive covering sets, r=2..6
+      r=2: 2 sets
+      r=3: 1 sets
+
+--- representative sets per r ---
