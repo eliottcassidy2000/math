@@ -1,9 +1,10 @@
 ---
-id: HYP-3128
-title: The multi-far SPEC bound is ELEMENTARY (resonance-lattice + exact-low + Parseval-tail), NOT EH/BV — a rigorous uniform certified floor R'>=0.642 over r=2..6, resolving HYP-3127 obligation 2 and confirming kps-S254
+id: HYP-3129
+title: The multi-far SPEC bound is ELEMENTARY (resonance-lattice + exact-low + Parseval-tail), NOT EH/BV — a rigorous uniform certified floor R'>=0.642 over r=2..6; supplies the TOOL-1 equidistribution piece that HYP-3128 (Asano) isolated as the genuine obstruction, closes HYP-3127 obligation 2, confirms kps-S254/HYP-3125
 status: VERIFIED rigorous certificate (uniform certified floor R'>=0.64178 over the tested multi-far family via exact finite low part + unconditional Parseval-tail L2 Cauchy-Schwarz). EH/BV honest necessity = NEITHER NEEDED. Not yet a closed-form proof for ALL (R,Q); the certificate is per-row exact + a uniform structural mechanism.
 source: kind-pasteur-2026-06-27-S255
 extends:
+  - HYP-3128   # Lee-Yang/Asano dichotomy (concurrent kps-S254): isolated R'>=c as "genuinely an equidistribution statement" -- THIS supplies that piece, elementarily
   - HYP-3127   # Asano contraction route -- this closes its obligation 2 (the SPEC bound / constant c)
   - HYP-2867   # resonance-channel tournament floor -- this gives the residue-0-trunk + nonzero-shell bound it asked for
   - HYP-2861   # L2 Cauchy-Schwarz spectrum bound -- this is the engine, refined to the resonance lattice
