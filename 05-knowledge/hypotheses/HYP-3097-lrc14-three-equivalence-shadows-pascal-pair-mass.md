@@ -177,6 +177,49 @@ Then test:
    by decomposition data: base count alone is equinumerosity, not proof
    equivalence.
 
+## S258 Back-And-Forth With The Witness Ledger
+
+`04-computation/lrc14_observer_gluing_ledger_codex_s258.py` performs the first
+joint audit with HYP-3096.  It does not merely print cap numerology; it attaches
+pair/Pascal scissors fields to exact direct lonely-set rows:
+
+```text
+H7_pair_shadow = C(count_7_divisible,2) / C(14,2)
+even_pair_shadow = C(count_even,2) / C(14,2)
+mod7_residue_counts and mod14_residue_counts
+Farey lanes p+q mod 91 and p*q mod 91 when an apex/root is named
+```
+
+The sample is deliberately small, but it already separates live rows that a
+scalar residual label would merge.  The seven live observer-glue rows have one
+terminal label, yet the sample has `5` distinct mod-7 scissors signatures.
+The apex family `{1,...,12,14V}` keeps the same mod-7/mod-14 signature as `V`
+changes while its direct largest arc falls from `3/637` at `V=13` to `3/9800`
+at `V=200`; the divisor-loaded rows keep a different scissors signature and
+shatter further to `1/82320` at `B=8`.  Thus:
+
+```text
+same terminal residual status
+  != same component topology
+  != same pair-scissors packet
+  != same legal quotient for a proof route.
+```
+
+This confirms the invariant's role as a gluing sidecar.  Pair/Pascal mass
+does not by itself prove the witness route; it tells the proof when the direct
+arc chart, normalized arc chart, and moment/branch charts are still observing
+the same packet.
+
+Incoming kps-S31ag adds a compatible warning from the tournament side:
+`lrc14_coverage_vs_tournament_H_kps.py` shows the coarse mod-14 winding
+tournament degenerates for every `k>=8`, because `8` residues force an
+antipodal pair `{r,r+7}` and hence a permanent tie.  Thus the coverage
+extremality cannot be imported from coarse H-maximization at exactly the
+binding rows.  In this HYP's language, coarse H is only another cardinal/count
+shadow unless the fine-scale mod-`p` or packet scissors sidecar is retained.
+This strengthens the S258 guardrail: observer vertices should be sector-pair
+and fine-scale proof packets, not coarse mod-14 winding tournaments.
+
 ## Tournament Analysis
 
 Vertices are invariant shadows and proof packets, not runners:

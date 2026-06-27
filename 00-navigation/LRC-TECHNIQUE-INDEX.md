@@ -1877,9 +1877,18 @@ components(L(S)) <= A0
 => witnesses in (1/d)Z for all d >= ceil(A0/m0).
 ```
 
-Next contribution: attach the HYP-3096 ledger fields to HYP-2963 rows and
-outside-bank normalizer attempts, then prove the direct `1/14` lonely-set
-component bound or a controlled reduction from THM-565's maxgap witness object.
+S258 starter artifact: `04-computation/lrc14_observer_gluing_ledger_codex_s258.py`
+and `05-knowledge/results/lrc14_observer_gluing_ledger_codex_s258.out` attach
+HYP-3096 direct-arc fields and HYP-3097 pair-scissors fields to representative
+rows.  The sample has q-witness and THM-573 exits plus seven live residual rows;
+the largest direct arc ranges from `19/1372` on an `H7=6` boundary sample down
+to `1/82320` on the divisor-loaded `B=8` sample, while live rows split into
+`5` mod-7 scissors signatures.
+
+Next contribution: lift the S258 fields into HYP-2963 rows and outside-bank
+normalizer attempts, then split the direct `1/14` component-bound obligation
+into bounded-apex direct packets versus large-apex normalized slow/ruler
+packets with moment/branch overlap maps.
 
 ## Pull Lists
 

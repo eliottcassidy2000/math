@@ -1,3 +1,33 @@
+## codex-2026-06-27-S258 -- observer-gluing ledger back-and-forth on HYP-3096/HYP-3097
+
+Owner asked to keep working on at least two proof-frontier tasks back and
+forth.  I used incoming HYP-3096 (polynomial-method witness-route ledger) and
+HYP-3097 (three equivalence shadows / Pascal pair-mass) as the two tasks and
+made a joint starter artifact rather than creating duplicate namespaces.
+
+Added `04-computation/lrc14_observer_gluing_ledger_codex_s258.py`, saved
+`05-knowledge/results/lrc14_observer_gluing_ledger_codex_s258.out`, and wrote
+`07-reflections/lrc14-observer-gluing-ledger-back-and-forth-codex-s258.md`.
+The scout computes exact positive-length direct lonely-set components for
+representative rows and attaches CRT, pair/Pascal, mod-7/mod-14 scissors, and
+Farey-lane fields to the same rows.
+
+Readout: q-witness and THM-573 rows get terminal exits; seven representative
+covering residual rows remain live observer-glue debt.  The `H7=6` boundary
+sample has `42` direct components and largest arc `19/1372`; apex-family rows
+show the direct largest arc falling from `3/637` at `V=13` to `3/9800` at
+`V=200`; the divisor-loaded `B=8` sample has `860` components and largest arc
+`1/82320`.  The same live rows split into `5` mod-7 scissors signatures.  This
+confirms the next frontier: lift the S258 fields into HYP-2963/outside-bank
+packets, then split direct bounded-apex packets from large-apex normalized
+slow/ruler packets with moment/branch overlap maps.
+
+After rebasing over kps-S31ag's coarse winding tournament result, I folded its
+warning into the S258 readout: coarse mod-14 H degenerates at `k>=8` by
+antipodal-pair ties, exactly where the LRC14 cap rows bind.  This reinforces
+the observer-ledger choice of sector-pair/fine-scale packet sidecars over raw
+coarse tournament H as a proof vertex.
+
 ## mac-mini-2026-06-27-S63 -- the covering-bound cap is a pair-normalized Pascal mass + a web of connections
 
 Owner: merge 'pair-normalized Pascal mass' if applicable, then generate my own web of out-of-the-box

@@ -3936,9 +3936,10 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Tournament vertices:** `arithmetic_lift_chart`, `normalized_arc_chart`,
   `cap_pascal_chart`, `moment_perron_chart`, `branch_k33_chart`,
   `formal_witness_chart`, and `raw_scalar_shadow`.
-- **Next hook:** Build `lrc14_observer_gluing_ledger` over the THM-573
-  residual and check every overlap map before any quotient is reused as a
-  theorem step.
+- **Next hook:** Extend the S258 starter ledger
+  `lrc14_observer_gluing_ledger_codex_s258.py` from representative rows to the
+  HYP-2963 packet bank; check every direct-arc, pair-scissors, moment, and
+  branch overlap map before any quotient is reused as a theorem step.
 - **Pointers:** HYP-3095, HYP-3094, HYP-3093, HYP-3092, HYP-3091, HYP-3090,
   HYP-3089, HYP-3088, HYP-3087, HYP-3085, HYP-3083, HYP-2990, THM-576,
   THM-575, THM-574, THM-573, LTI-236, LTI-235, LTT-134, LTT-133, T1172,
@@ -3971,15 +3972,16 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   `continuous_I_substitute`, `finite_principal_part_bad_denominator_budget`,
   `hyperoperation_grid_address`, `polynomial_prime_field_packet`, and
   `raw_I_table_enumeration`.
-- **Next hook:** Attach a `polynomial_method_witness_ledger` to HYP-2963 rows
-  and outside-bank normalizer attempts with `count_7_divisible`,
+- **Next hook:** Lift the S258 `polynomial_method_witness_ledger` scout from
+  representative rows to HYP-2963 rows and outside-bank normalizer attempts
+  with `count_7_divisible`,
   `crt_c7_lift_status`, `crt_c2_dyadic_lift_status`,
   `I_discrete_grid_status`, `lonely_measure_floor`,
   `direct_1_14_component_bound`, `largest_lonely_arc_floor`,
   `denominator_net_threshold_D`, `(p,q),p+q,p*q,powers`, finite
-  bad-denominator budget, destroyed coordinate, and terminal exit.  Then prove
-  the direct `1/14` lonely-set component bound or a controlled reduction from
-  THM-565's maxgap witness object.
+  bad-denominator budget, destroyed coordinate, terminal exit, and HYP-3097
+  pair-scissors signatures.  Then split the direct `1/14` component-bound debt
+  into bounded-apex direct packets and large-apex normalized slow/ruler packets.
 - **Pointers:** HYP-3096, HYP-3089, HYP-3088, THM-573, THM-565, THM-530,
   HYP-3083, HYP-3084, HYP-3085, HYP-3003, HYP-3004, HYP-2866, HYP-2827,
   LTI-237, LTI-234, LTI-233, LTT-135, LTT-132, LTT-131, T1176, T1170,

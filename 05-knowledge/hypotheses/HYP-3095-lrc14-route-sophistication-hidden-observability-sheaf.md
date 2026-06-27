@@ -197,6 +197,16 @@ was invented to restore.
 
 ## Current proof obligations through this lens
 
+S258 adds the first concrete starter artifact:
+`04-computation/lrc14_observer_gluing_ledger_codex_s258.py` and
+`05-knowledge/results/lrc14_observer_gluing_ledger_codex_s258.out`.  It glues
+the HYP-3096 direct-witness ledger and the HYP-3097 pair/Pascal scissors fields
+on representative rows.  The sample has q-witness and THM-573 terminal exits,
+plus seven live residual rows whose direct arcs, CRT status, mod-7 scissors
+signatures, and Farey lanes must be kept as separate observer fields.  The
+large-apex and divisor-loaded rows show why raw direct largest arcs cannot be
+the global scalar chart.
+
 1. **Normalized apex residual.**  Build the THM-573 / THM-575 residual ledger
    for rows with `<=6` multiples of 7.  It should retain `P,E,V`, normalized
    good set `G(P,E)`, component count, largest normalized component,

@@ -140,6 +140,43 @@ handled by exact packet normalizers or named computation.  Thus the analytic
 substitute for `I(13,p,1)` is not just positive total measure; it is positive
 measure plus a uniform component bound for the direct `1/14` lonely set.
 
+## S258 Starter Ledger: Direct Arcs Plus Pair Scissors
+
+`04-computation/lrc14_observer_gluing_ledger_codex_s258.py` builds the first
+small observer-gluing ledger over representative rows and writes
+`05-knowledge/results/lrc14_observer_gluing_ledger_codex_s258.out`.  It
+alternates this HYP's witness-route fields with HYP-3097's pair/Pascal scissors
+fields on the same rows.
+
+The exact direct `1/14` lonely-set scan gives three immediate checks.
+
+```text
+q-witness row {1,...,13}:       boundary-only direct grid exit, components=0
+synthetic H7=7 row:             THM-573 terminal exit, largest arc=3/343
+H7=6 boundary residual row:     live residual, components=42, largest=19/1372
+apex family V=13:               live residual, components=24, largest=3/637
+apex family V=200:              live residual, components=102, largest=3/9800
+divisor-loaded B=8 row:         live residual, components=860, largest=1/82320
+```
+
+The back-and-forth conclusion is useful: direct arcs are computable packet
+fields, but they are not yet a scalar theorem.  The divisor-loaded rows keep
+positive direct measure while shattering the largest direct arc, exactly the
+THM-575 warning.  Therefore the HYP-3096 target should be sharpened from
+"prove a direct component bound for all residual rows" to:
+
+```text
+either prove a direct component/floor theorem on a finite bounded-apex packet
+or pass through the normalized slow/ruler chart before using any denominator
+net statement globally.
+```
+
+The same ledger records `H7_pair_shadow`, `even_pair_shadow`, mod-7 and mod-14
+residue-count scissors signatures, and Farey `p+q,p*q mod 91` lanes.  Those
+sidecars are not decorative: live rows with the same terminal status split
+into `5` mod-7 scissors signatures in the sample, so the next packet-bank
+ledger must keep these fields before asking a moment or branch chart to glue.
+
 ## Proof Route Target
 
 The current sharpened theorem target is:
@@ -250,12 +287,14 @@ uniform largest-arc route
 
 ## Remaining Work
 
-- Prove the direct `1/14` lonely-set component bound for the THM-573 residual,
-  or reduce it cleanly to the THM-565 maxgap object with controlled loss.
+- Split the direct `1/14` component-bound obligation into bounded-apex direct
+  packets versus large-apex normalized slow/ruler packets, as exposed by the
+  S258 ledger.
 - Make the `c=2` dyadic lift as explicit as THM-573 is for `c=7`.
 - Turn the continuous substitute for `I(13,p,1)` into a theorem with a finite
   small-denominator budget.
-- Attach the ledger fields to HYP-2963 packet rows and outside-bank normalizer
-  attempts.
+- Attach the S258 ledger fields to HYP-2963 packet rows and outside-bank
+  normalizer attempts: direct component data, CRT status, pair-scissors
+  signatures, Farey lanes, and named gluing debt.
 - Formalize the route as a finite-ruler statement: largest arc
   `>= ell0` implies witnesses in `(1/d)Z` for every `d >= ceil(1/ell0)`.
