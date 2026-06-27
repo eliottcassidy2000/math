@@ -102,6 +102,12 @@ obligations, and proof-carrier interfaces.
   use LTT-160 after LTT-157/LTT-158 and treat A000568 as a middle
   global-consistency quotient between raw four-sector decks and fully paired
   tail/tip child packets.
+- Need to choose the right generating function for the LRC14 endgame:
+  use LTT-161 after LTT-160/LTT-159/LTT-158/LTT-152/LTT-144 and make
+  generating-function carriers the vertices.  Compare retained payload:
+  coefficient layer, root locus, log-derivative/cumulant, quotient legality,
+  signed tail certificate, and terminal exit; do not rank raw scalar
+  evaluations as proof carriers.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5218,3 +5224,31 @@ constant chase.
 - **Pointers:** HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124,
   HYP-3123, HYP-3121, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-3047,
   LTI-262, LTT-160, T1201, OPEN-Q-108.
+
+## LTT-161: Tournament Of Generating-Function Proof Carriers
+
+- **Move:** Treat generating-function carriers as tournament vertices:
+  miss-count PGF, signed SPEC Fourier series, A000568 ordinary count or
+  cycle-index quotient, OCF independence polynomial / Walsh EGF, De
+  Moivre-resolvent elementary-symmetric polynomial, Irving-Omar walk
+  determinant GF, hard-core/polymer partition function, and raw scalar
+  evaluation.
+- **LRC use:** HYP-3137/S273 asks which GF preserves the proof payload needed
+  after the HYP-3136 integrated multi-far floor closure: coefficient layer,
+  zero/root locus, log-derivative or cumulant, rooted/unrooted quotient
+  legality, signed tail certificate, finite-address/observer-gluing exit, or
+  named debt.
+- **Preserves:** retained LRC predicate, coefficient payload, root-locus
+  status, quotient legality, signed tail bounds, finite packet coordinates,
+  and terminal proof exit.
+- **Forgets / guardrail:** a whole generating function can still be an unsafe
+  quotient if the proof uses only one scalar evaluation, root count, unmarked
+  sequence value, or determinant ratio without the coordinate it destroys.
+- **Next hook:** Run `lrc14_generating_function_payload_atlas_codex_s273.py`
+  and attach `gf_carrier_type`, `coefficient_payload_layer`,
+  `root_locus_status`, `log_derivative_cumulant`, `quotient_legality`,
+  `signed_tail_certificate`, and `terminal_exit_or_named_debt` to the
+  HYP-3129/HYP-3135 packet theorem target.
+- **Pointers:** HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131,
+  HYP-3129, HYP-3118, HYP-3109, HYP-3108, HYP-3103, HYP-3054, HYP-2991,
+  THM-077, THM-076, THM-059, LTI-263, LTT-161, T1202, OPEN-Q-108.

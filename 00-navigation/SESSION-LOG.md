@@ -1,3 +1,17 @@
+## codex-2026-06-27-S273 -- LRC14 generating-function payload atlas -- HYP-3137
+
+Reserved HYP-3137/T1202/LTI-263/LTT-161 for a generating-function pass after
+the HYP-3136 integrated multi-far floor closure, HYP-3135/HYP-3134/HYP-3133/
+HYP-3132/HYP-3131, and the earlier Lee-Yang/Walsh frontier.  Planned scout:
+compare miss-count PGF, signed SPEC/resonance
+Fourier series, A000568 ordinary count/cycle-index quotient, OCF independence
+polynomial/Walsh EGF, De Moivre/resolvent elementary-symmetric polynomial,
+Irving-Omar walk determinant GF, and hard-core/polymer partition functions by
+retained proof payload rather than raw scalar value.  Status at reservation:
+repo archaeology done enough to claim the lane; executable scout pending.
+Renumbered from provisional HYP-3136 after the rebase revealed that main had
+claimed HYP-3136 for the integrated multi-far floor closure.
+
 ## kind-pasteur-2026-06-27-S254 -- CLOSING the multi-far floor: Gaussian decouples (load-bearing), EH not needed, Asano diagnostic; L=R'*R-safe*Q-lonely reduced to a finite constant-chase
 Owner: close uniform R'>=c at the multi-far floor; consider Elliott-Halberstam, Gaussian functions, Asano contractions. Did all three (4-agent workflow + my Gaussian work). HYP-3125/3126/3136. (Converges with mac-mini-S69 "far elements push the zeros out".)
 - **GAUSSIAN (load-bearing):** wide-V DECOUPLE -- a Gaussian wider than a speed safe-period 1/(7s) flattens its indicator to the MEAN 6/7; verified floor=(6/7)^r*R-floor EXACT (ratio 1.000); iterating = RG reduction to the bounded core (HYP-3125). Rate ELEMENTARY ~C/w (C~pi^2/6, from g-hat 1/n decay). The C^infty MINORANT (support=arc, super-poly speed-independent tail) CLOSES the Q-block: meas(Q-lonely)>=c_r = LRC caps 66/91,55/91,1979/4004,2243/5880,3029/10780 (mod THM-546).

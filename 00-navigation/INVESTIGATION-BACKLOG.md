@@ -15,6 +15,29 @@
 
 ---
 
+## Lead codex-2026-06-27-S273: LRC14 generating-function payload atlas
+
+**Status:** RESERVED / repo archaeology and executable scout pending; not
+proof (HYP-3137/T1202).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3137-lrc14-generating-function-payload-atlas.md`,
+`04-computation/lrc14_generating_function_payload_atlas_codex_s273.py`,
+`05-knowledge/results/lrc14_generating_function_payload_atlas_codex_s273.out`.
+
+Goal: compare generating functions by retained proof payload rather than raw
+scalar value.  Candidate carriers: miss-count PGF, signed SPEC/resonance
+Fourier series, A000568 count/cycle-index quotient, OCF independence
+polynomial/Walsh EGF, De Moivre/resolvent elementary-symmetric polynomial,
+Irving-Omar walk determinant GF, and hard-core/polymer partition function.
+The scout should declare which LRC predicate survives, what coefficient/root/
+quotient/tail coordinate is retained, what is destroyed by scalar evaluation,
+and what terminal exit or named debt remains.
+
+Namespace: HYP-3137 / LTI-263 / LTT-161 / T1202 / OPEN-Q-108.  The atlas
+cross-references HYP-3136 as the integrated multi-far floor closure it is
+meant to feed.
+
 ## Lead codex-2026-06-27-A000568: LRC14 A000568 edge-witness sandwich
 
 **Status:** EVIDENCE / executable quotient scout; not proof
