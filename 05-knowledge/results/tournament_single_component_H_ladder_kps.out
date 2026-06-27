@@ -1,0 +1,8 @@
+Single-component (connected Omega) H spectrum:
+  single-component H achieved (sample, up to 189): [3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59] ...
+  ODD GAPS in single-component H below 189: [1, 7, 21]
+  => BOTH 7 and 21 are single-comp gaps (=K3,K10 non-realizable)
+
+  CLIQUE-Omega (K_m) realizable sizes m: [1, 2, 4, 5, 6, 7, 8, 9, 11, 12, 13, 15, 16, 18, 19, 22, 23, 24, 25, 34]
+  K_m gives H=1+2m: [(1, 3), (2, 5), (4, 9), (5, 11), (6, 13), (7, 15), (8, 17), (9, 19), (11, 23), (12, 25), (13, 27), (15, 31), (16, 33), (18, 37), (19, 39), (22, 45), (23, 47), (24, 49), (25, 51), (34, 69)]
+  K_m NOT found as Omega for m in [3, 10]  (expect 3,10 -> H=7,21; others may need bigger n/more samples)
