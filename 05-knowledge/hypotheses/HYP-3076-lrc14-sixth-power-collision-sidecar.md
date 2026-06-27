@@ -153,6 +153,23 @@ three-channel collision must not forget owner/factor coordinates.  HYP-3076
 adds that equal sixth-power collisions must also declare whether their six
 terms are genuinely native or artificially padded.
 
+## Lean follow-up from S247
+
+HYP-3079/S247 adds the first Lean-facing hook in
+`TournamentH7.LRCModularCuspLedger`:
+
+```text
+SixthPowerTwoCollision
+  -> twoCollisionToThreeWithTail
+  -> SixthPowerThreeCollision
+```
+
+The theorem-level content is intentionally small but useful: a binary equation
+`a^6+b^6=d^6+e^6` can be placed in the ternary ledger only by adding the same
+sixth-power tail to both sides.  This formally preserves the warning above:
+the two-term equation is padded/degenerate support-six data unless another
+packet proves it should be treated as native.
+
 ## Tournament Analysis
 
 Vertices are proof carriers and sidecar fields, not runners or raw bases.

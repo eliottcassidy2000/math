@@ -106,6 +106,23 @@ sidecar ledger: `continued_fraction_period_word`, `lagrange_markov_depth`,
 `quadratic_carry_residue`, and `required_sidecar_or_exit`. Tournament Analysis
 uses proof carriers/arithmetic sidecar types rather than runners or sequence
 entries and is transitive with one Hamiltonian path.
+## codex-2026-06-27-S247 -- Lean q-Pochhammer modular cusp ledger (HYP-3079/T1163/LTI-228/LTT-126)
+
+User asked to merge q-Pochhammer series, full modular-function q-expansion
+behavior at the cusp, and a Hurwitz-theorem lens into the LRC14 Lean work.
+The incoming HYP-3078/S246 exact scout is the canonical q-series computation:
+it verifies `(q;q)_infty`, partition tails, divisor-log channel,
+`Delta=q(q;q)_infty^24`, and `j=E4^3/Delta` with finite principal part
+`q^-1`.  This S247 follow-up adds `TournamentH7.LRCModularCuspLedger`, a
+checked Lean ledger for finite negative q-tails, the
+`FullModularCuspExpansionObligation`, Hurwitz gate transfer, S247
+`j`/`1/Delta` principal parts, sidecar vertices, and the HYP-3076 sixth-power
+face map from `a^6+b^6=d^6+e^6` to the padded
+`a^6+b^6+c^6=d^6+e^6+f^6` ledger.  The result says exactly how close the Lean
+route is: finite-tail and padding glue are proved, while full modular-function
+analysis and HYP-2963 packet coverage remain obligations. Next pull:
+instantiate a Lean packet sidecar without using a bare q-series field as a
+proof center.
 
 ## codex-2026-06-26-S239 -- renormalized polymer / Dirichlet bridge (HYP-3073/T1155/LTI-220/LTT-118)
 ## codex-2026-06-26-S239 -- reserved renormalized polymer / Dirichlet bridge (HYP-3073)

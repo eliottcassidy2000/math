@@ -48,3 +48,45 @@ stop being sparse while preserving arithmetic control.
 The Type II code analogy is direct: the length-72 Gleason gate is not sparse in
 the full coefficient list, but it is controlled by an invariant ring that forces
 the dangerous low weights to vanish.
+
+## S246 q-Pochhammer / cusp addendum
+
+HYP-3078 refines this ladder by separating the product source from the
+full-level modular-function exit:
+
+```text
+(q;q)_inf = prod(1-q^n)
+eta(tau) = q^(1/24) (q;q)_inf
+Delta = eta^24 = q (q;q)_inf^24
+j = E4^3 / Delta
+```
+
+`eta` carries weight and multiplier data, so it is not by itself a full modular
+function.  The legal full-level exit must also retain the `SL2(Z)`
+transformation law and a finite Laurent principal part at the cusp
+`infinity`.  In q-expansion language, this means only finitely many
+negative-power terms.  The HYP-3078/S246 exact scout verifies:
+
+```text
+1/Delta = q^-1 + 24 + 324 q + ...
+j = q^-1 + 744 + 196884 q + ...
+```
+
+Thus the sparsity-to-modularity ladder needs one more sidecar:
+
+```text
+q_pochhammer_tail
+eta_multiplier_balance
+full_modular_group_ST_law
+cusp_principal_part_finite
+hurwitz_zero_persistence_status
+j_rational_exit_status
+```
+
+HYP-3079/S247 supplies the Lean-facing ledger for this sidecar: finite
+negative-tail packets, the full modular-cusp theorem as an explicit obligation,
+a Hurwitz zero/pole persistence gate, and the padded sixth-power face map.
+
+The Hurwitz role here is the complex-analysis noncollapse theorem for locally
+uniform limits of nonzero holomorphic functions: q-product limits should carry
+a zero/pole divisor ledger rather than silently creating hidden zeros.

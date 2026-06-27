@@ -80,6 +80,10 @@ obligations, and proof-carrier interfaces.
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
   or modular tails.
+- Need the Lean-facing q-series proof packet:
+  use LTT-126 after LTT-125/LTT-124/LTT-122/LTT-120 and fill finite-tail,
+  modular-cusp obligation, Hurwitz gate, and padded sixth-power fields before
+  linking q-series evidence into a `CenterControlPacket`.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3558,6 +3562,49 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTT-116, LTT-115, T1162, T1161, T1160, T1159, T1157, T1156, T1155, T1154,
   OPEN-Q-108.
 
+### LTT-126: Lean q-Pochhammer Modular Cusp Ledger
+
+- **Move:** Treat the Lean q-series route as a proof-obligation packet, not as
+  a coefficient oracle.  The Lean object may carry a finite negative-tail
+  proof, a named modular-cusp theorem obligation, a Hurwitz zero/pole
+  persistence gate, and a padded sixth-power face map, but it must not replace
+  full modular invariance or HYP-2963 packet coverage with raw q-coefficients.
+- **LRC use:** HYP-3079/S247 adds
+  `TournamentH7.LRCModularCuspLedger` as the Lean-facing companion to
+  HYP-3078/S246.  It formalizes `HasOnlyFiniteNegativePowers`,
+  `LaurentPrincipalPartPacket`, `FullModularCuspExpansionObligation`,
+  `HurwitzQExpansionGate`, S247 `j` and `1/Delta` finite principal parts, and
+  the HYP-3076 map from `a^6+b^6=d^6+e^6` into the padded
+  `a^6+b^6+c^6=d^6+e^6+f^6` ledger.  This tells us how close the formal route
+  is: finite-tail and padding glue are checked; the analytic modular theorem
+  and real packet coverage remain named obligations.
+- **Preserves:** finite principal-part certificate, proof obligation identity,
+  q-Pochhammer tail address, eta multiplier status, Hurwitz zero/pole
+  persistence status, and padded-vs-native sixth-power relation status.
+- **Forgets / guardrail:** Raw q-coefficients forget transformation law,
+  multiplier balance, pole order, zero divisor data, and whether a two-term
+  sixth-power equality is native or merely padded.  Those losses must be paid
+  by sidecars or named residual debt.
+- **Tournament fingerprint:** vertices are proof obligations and sidecar
+  packets.  Challenged alternatives were runners, gaps, fixed circle sections,
+  section boundaries, wall-crossing events, residues, cover arcs, Fourier
+  modes, q-coefficients, cusp principal parts, zero divisors, and matroid
+  circuits.  Proof obligations are the right quotient because they preserve the
+  LRC predicate "the infinite q-tail is a legal certificate source"; raw
+  q-coefficients destroy the legality data.  S247 is transitive with path
+  `full_modular_function_packet > j_rational_exit
+  > finite_principal_part_ledger > eta_multiplier_balance
+  > hurwitz_zero_persistence_gate > q_pochhammer_tail
+  > raw_q_coefficients`.
+- **Next pull:** Instantiate a non-tautological q-cusp
+  `CenterControlPacket` only after HYP-2963 rows carry transformation status,
+  finite negative tail proof, zero/pole persistence, and padded sixth-power
+  relation status.
+- **Pointers:** HYP-3079, HYP-3078, HYP-3077, HYP-3076, HYP-3075, HYP-3074,
+  HYP-3071, HYP-3070, HYP-2627, HYP-2428, THM-572, LTI-228, LTI-227,
+  LTI-226, LTI-225, LTI-224, LTI-222, LTT-126, LTT-125, LTT-124, LTT-123,
+  LTT-122, LTT-120, T1163, T1162, T1161, T1160, T1159, T1157, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -3639,7 +3686,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    sidecar-energy exit, phantom F7 boundary atom,
    q-cusp ledger id, q-Pochhammer product tail, finite principal-part status,
    polar exit word, partition-tail certificate, divisor-log channel,
-   illegal infinite-polar-tail flag,
+   illegal infinite-polar-tail flag, eta multiplier balance status,
+   SL2Z transformation status, Hurwitz zero-persistence status,
+   formal series truncation bound, sixth-power collision padding status,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.
