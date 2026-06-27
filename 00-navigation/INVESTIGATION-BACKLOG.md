@@ -45,6 +45,33 @@ sufficient prime distribution in arithmetic progressions or a replacement
 structural input.  Keep THM-503/THM-518 as a guardrail: the LRC singular object
 is not the Hardy-Littlewood Euler product.
 Namespace: HYP-3086 / T1168.
+## Lead codex-2026-06-27-S254: LRC14 hyperoperation grid address
+
+**Status:** SYNTHESIS / operation-address proof carrier; not proof
+(HYP-3087/T1169/LTI-233/LTT-131).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3087-lrc14-hyperoperation-grid-address.md`
+and
+`07-reflections/lrc14-hyperoperation-grid-address-codex-s254.md`.
+The user-specified hyperoperation hierarchy on `(p,q)` and the older grid
+tiled by `x+2` and `x*2` should be read as a Farey operation-address chart:
+`p+q` is the additive/horizontal lane, `p*q` is the product/vertical lane, and
+`q^p,p^q` are lacunary stress lanes.  The space-filling curve is only a
+scheduler unless every cell retains root packet, operation lane, current
+danger, endpoint owner, level-7 status, finite address, destroyed coordinate,
+and terminal exit.  THM-573 sharpens the arithmetic opening: the residual is
+now rows with `<= 6` multiples of `7`, so the vertical lane must record
+level-7 lift status rather than just multiple-of-14 status.  Incoming HYP-3085
+adds the covering/K33 shuttle exit grammar for nested-refinement and
+cross-handoff grid classes.
+**Next:** build a `hyperoperation_grid_address` ledger over HYP-2963 and
+outside-bank normalizer attempts with fields for `count_7_divisible`,
+`level7_lift_status`, `(p,q)`, `p+q`, `p*q`, power-stress word,
+space-filling successor, danger deficit, endpoint owner, finite address,
+terminal exit, and branch/debt status.  Test whether danger-weighted operation
+cells split the THM-573 residual core into q-witness, covering/Node3,
+K33/THM-572, protected branch closure, or named residual debt.
+Namespace: HYP-3087 / T1169 / LTI-233 / LTT-131.
 
 ## Lead codex-2026-06-27-S252: LRC14 finite-address branch-closure spine
 

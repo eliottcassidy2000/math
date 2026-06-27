@@ -105,6 +105,11 @@ obligations, and proof-carrier interfaces.
   subgoals are global packet emission, covering-family discharge, K33/THM-572
   lift, family no-bridge closure, and a Lean finite-address branch-packet
   record.
+- Need to use the hyperoperation hierarchy or the old `x+2`/`x*2`
+  space-filling grid without losing the LRC clock:
+  use LTT-131 after LTT-130 and retain `(p,q)`, operation lane, danger
+  deficit, endpoint owner, level-7 lift status, destroyed coordinate, and
+  terminal exit before trusting any grid traversal.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3752,6 +3757,34 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3077, HYP-3075, HYP-3074, HYP-2996, HYP-2963, THM-571, THM-572,
   LTI-232, LTI-231, LTI-230, LTI-228, LTI-227, LTI-226, LTI-225, LTT-130,
   LTT-129, LTT-128, LTT-126, LTT-125, LTT-124, LTT-123, T1167, OPEN-Q-108.
+
+### LTT-131: Hyperoperation Grid Address Carrier
+
+- **Move:** Treat the hyperoperation hierarchy on a Farey packet `(p,q)` as an
+  operation-address grid: `p+q` is the additive `x+2` lane, `p*q` is the
+  product/valuation `x*2` lane, `q^p,p^q` are power-stress lanes, and a
+  space-filling curve is only a scheduler through these cells.
+- **LRC use:** HYP-3087/S254 adds this carrier downstream of HYP-3083,
+  incoming HYP-3085, and THM-573.  After the 14-free q-witness exit and the level-7 lift sieve, the
+  live residual has at most `6` multiples of `7`.  The operation grid should
+  audit that residual by danger-weighted cells which either open a witness,
+  descend through covering/Node3, hand off to K33/THM-572, enter protected
+  branch closure, or name residual debt.
+- **Preserves:** Farey root `(p,q)`, operation lane, additive owner, product
+  shell, current danger deficit, endpoint owner, level-7 lift status,
+  destroyed-coordinate label, finite address, terminal exit, and no-naked
+  bridge status.
+- **Forgets / guardrail:** Static grid labels, raw curve order, and raw
+  hyperoperation values are unsafe because they forget the LRC clock.  Power
+  lanes are stress tests unless the root packet and terminal exit survive.
+- **Next pull:** Build a `hyperoperation_grid_address` ledger over HYP-2963 and
+  outside-bank normalizer attempts with `count_7_divisible`,
+  `level7_lift_status`, `(p,q)`, `p+q`, `p*q`, power-stress word,
+  space-filling successor, danger deficit, endpoint owner, finite address,
+  destroyed coordinate, terminal exit, and branch/debt status.
+- **Pointers:** HYP-3087, HYP-3085, HYP-3083, HYP-3004, HYP-3003, THM-523, THM-571,
+  THM-572, THM-573, LTI-233, LTI-232, LTI-154, LTI-153, LTI-011, LTT-131,
+  LTT-130, T1169, T1167, OPEN-Q-108.
 
 ## Immediate Pull List
 

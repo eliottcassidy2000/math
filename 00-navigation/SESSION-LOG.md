@@ -89,6 +89,40 @@ status, parity debt, distribution modulus, prime-power sidecar, carry debt, and
 terminal exit.  The remaining proof obligations are lower-bound fixed-gap
 sieve, simultaneous prime detection, and sufficient distribution in arithmetic
 progressions or a replacement structural input.
+## codex-2026-06-27-S254 -- hyperoperation grid address synthesis
+
+Merged the user's hyperoperation hierarchy on `(numerator, denominator)` with
+the prior `x+2`/`x*2` operation-grid and space-filling-curve work.  Added
+HYP-3087/T1169/LTI-233/LTT-131 plus reflection
+`07-reflections/lrc14-hyperoperation-grid-address-codex-s254.md`.
+
+Main synthesis: for a Farey packet `t=p/q`, `p+q` is the horizontal additive
+or summand lane, `p*q` is the vertical product/factor lane, and `q^p,p^q` are
+power-stress lanes that are unsafe unless the root packet and forgotten fibers
+remain visible.  The old space-filling curve is a scheduler through operation
+cells, not a proof by coverage.  It becomes proof-relevant only when each cell
+keeps the root `(p,q)`, operation lane, current danger deficit, endpoint owner,
+level-7 lift status, finite address, destroyed coordinate, and terminal exit.
+
+Integrated incoming THM-573 into the proof map: every row with at least `7`
+multiples of `7` is closed, so the live covering residual is `<= 6` multiples
+of `7`, not merely the older `<= 6` multiples of `14`.  That changes the
+vertical/product axis of the operation grid: it must track `v7` depth and
+level-7 lift status before entering the HYP-3083 finite-address branch-closure
+spine.
+
+Rebased over incoming HYP-3085, the covering-moment / K33 state-lift shuttle:
+the hyperoperation grid should hand nested-refinement covering cells and
+cross-handoff K33 cells to that shuttle rather than collapsing them into raw
+safe-mass or product-lane scalars.
+Renumbered the final hyperoperation artifact to HYP-3087/T1169 after incoming
+HYP-3086/T1168 claimed the sexy-prime pair-sieve transfer namespace.
+
+Next executable artifact: build `hyperoperation_grid_address` over HYP-2963
+and outside-bank normalizer attempts, then test whether danger-weighted
+operation cells split the THM-573 residual core into q-witness, covering/Node3,
+K33/THM-572, protected branch closure, or named residual debt without creating
+a naked bridge.
 
 ## codex-2026-06-27-S253 -- q-cusp Hurwitz finite-address branch-closure synthesis
 

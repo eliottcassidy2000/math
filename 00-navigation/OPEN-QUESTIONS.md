@@ -1,5 +1,23 @@
 # Open Questions
 
+**OPEN-Q-108 S254 hyperoperation grid-address addendum:**
+HYP-3087 turns the user's hyperoperation hierarchy on `(p,q)` and the older
+`x+2`/`x*2` space-filling grid into an operation-address packet carrier.  The
+raw grid point or curve step is not a proof object.  A useful cell must retain
+the Farey root `(p,q)`, operation lane, `p+q` additive shadow, `p*q` product
+shadow, power-stress word, current danger deficit, endpoint owner,
+level-7 lift status, destroyed coordinate, finite address, and terminal exit.
+THM-573 is now part of the opening sieve: rows with at least `7` multiples of
+`7` are closed, so the active covering residual is `<= 6` multiples of `7`.
+Incoming HYP-3085 supplies the covering/K33 shuttle grammar for
+nested-refinement and cross-handoff exits.
+Open task: build a `hyperoperation_grid_address` ledger over HYP-2963 and
+outside-bank normalizer attempts, then test whether danger-weighted operation
+cells route the THM-573 residual core to q-witness, covering/Node3,
+K33/THM-572, protected branch closure, or named residual debt without creating
+a naked bridge. -> HYP-3087, HYP-3085, HYP-3083, HYP-3004, HYP-3003, THM-523, THM-571,
+THM-572, THM-573, LTI-233, LTT-131, T1169, OPEN-Q-108.
+
 **OPEN-Q-108 S252/S253 finite-address q-cusp branch-closure addendum:**
 HYP-3083 integrates the S59 covering-bound redirect with THM-523, THM-571,
 HYP-2906/HYP-2900, HYP-2996/HYP-2963, HYP-3075, HYP-3078/HYP-3079, HYP-3080,
