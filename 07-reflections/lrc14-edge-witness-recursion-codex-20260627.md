@@ -48,6 +48,8 @@ coordinate_resurrection_status
 decorrelation_floor_status
 asano_obstruction_status
 spec_resonance_floor_status
+minorant_apex_floor_status
+bounded_core_binding_status
 state_lift_boundary_status
 phi4_edge_wall_status
 terminal_exit_or_named_debt
@@ -81,6 +83,14 @@ bound, with the current certified floor `Rprime >= 0.64178` on the tested
 multi-far family.  In packet terms, `asano_obstruction_status` is the alarm and
 `spec_resonance_floor_status` is the positive repair field.
 
+Incoming HYP-3130 and the S69 Lee-Yang polydisk scout add the orientation rule
+for that repair.  The far/apex tips are stabilizing: the minorant closes the
+apex block with cap-matching constants, and S69 finds multi-far nearest-zero
+radius still bounded away from the unit disk (`rho >= 1.5589` in the probes).
+The binding side is the bounded core/tail.  Edge recursion should therefore
+ask whether the tail child preserves the bounded-core SPEC/minorant coupling,
+not whether the far tips themselves create the obstruction.
+
 HYP-3122/S67's `phi4` quartic-stabilizer signal fits as an edge-wall stress
 test.  It is not yet a proof carrier by itself.  It becomes a proof-facing
 sidecar only when the one-swap/Lee-Yang/Ising wall still points back to the
@@ -112,9 +122,12 @@ be finite and brutal:
 4. If an Asano/Lee-Yang wall is used, does it keep the apex/tip zero-free
    side, expose the R/tail obstruction, and route the floor through the SPEC
    resonance-lattice certificate rather than through a collapsed tail factor?
-5. If a phi4/Ising/Lee-Yang wall is used, does it point back to the child
+5. If a minorant/Gaussian wall is used, does it certify the apex-tip floor or
+   only an absolute-envelope failure, and does the signed coupling remain in
+   the bounded-core tail packet?
+6. If a phi4/Ising/Lee-Yang wall is used, does it point back to the child
    packets?
-6. If a chiral/Cech quotient is used, does the edge boundary keep the
+7. If a chiral/Cech quotient is used, does the edge boundary keep the
    cross-sector orientation word and both endpoint children?
 
 Only after those answers are present should an edge, wall, or H value be

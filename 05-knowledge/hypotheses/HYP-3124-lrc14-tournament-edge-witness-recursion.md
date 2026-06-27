@@ -9,6 +9,7 @@ tournament_technique: LTT-157
 script: 04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py
 result: 05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out
 related:
+  - HYP-3130
   - HYP-3129
   - HYP-3128
   - HYP-3127
@@ -92,6 +93,11 @@ The existing sources already point at this shape:
 - HYP-3129 supplies the compatible repair: the multi-far `Rprime` floor is an
   elementary fixed-lattice SPEC bound on the retained `R-safe -> Q-lonely`
   edge, with a certified floor `Rprime >= 0.64178` on the tested family.
+- HYP-3130 and the S69 Lee-Yang polydisk scout say the far/apex tip side is
+  not the binding obstruction: Gaussian/Beurling-Selberg minorants close the
+  apex block with cap-matching constants, single/multi-far additions to a good
+  base push PGF zeros outward (`rho >= 1.5589` in the S69 probes), and the
+  remaining work is the bounded-core/tail coupling plus signed SPEC.
 
 Challenged assumption: an edge is not just a relation between two vertices.
 For LRC-style proof search it is a bidirectional proof obligation: the tail
@@ -226,6 +232,8 @@ coordinate_resurrection_status
 decorrelation_floor_status
 asano_obstruction_status
 spec_resonance_floor_status
+minorant_apex_floor_status
+bounded_core_binding_status
 state_lift_boundary_status
 phi4_edge_wall_status
 terminal_exit_or_named_debt
@@ -249,7 +257,10 @@ it cannot certify the joint floor after the tail packet is collapsed to a
 single zero-free factor.  HYP-3129 then supplies the proof-facing floor field:
 `spec_resonance_floor_status` should record the resonance lattice, exact low
 SPEC sum, Parseval-tail certificate, and constant-chase debt for the retained
-two-ended edge packet.  HYP-3122/S67's `phi4` quartic
+two-ended edge packet.  HYP-3130 and S69 add the complementary orientation:
+the tip/far side carries `minorant_apex_floor_status` and Lee-Yang outward-root
+monotonicity, while `bounded_core_binding_status` names the tail-side core
+that still needs the signed coupling proof.  HYP-3122/S67's `phi4` quartic
 stabilizer is therefore only an edge-wall stress signal unless it points back
 to the recursive tail/tip packets or to named quartic-cumulant debt.  HYP-3123
 /S270 supplies the companion orientation test: a chiral, converse, or Cech

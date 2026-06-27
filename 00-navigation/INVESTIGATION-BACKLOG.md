@@ -280,11 +280,15 @@ Incoming HYP-3128/HYP-3129 add the next correction: Asano/Lee-Yang certifies
 the apex/tip side but exposes the overcrowded tail obstruction, so the
 positive multi-far floor must be recorded as a retained-edge SPEC
 resonance-lattice certificate, not as a collapsed zero-free tail contraction.
+HYP-3130/S69 add the companion orientation: the far/apex tip side is
+stabilizing (minorant apex floor plus Lee-Yang roots pushed outward), and the
+bounded-core/tail side is binding.
 
 Next: attach `edge_witness_recursion_id`, `tail_child_packet`,
 `tip_child_packet`, `four_sector_observer_deck`, `child_deck_asymmetry`,
 `coordinate_resurrection_status`, `decorrelation_floor_status`,
 `asano_obstruction_status`, `spec_resonance_floor_status`,
+`minorant_apex_floor_status`, `bounded_core_binding_status`,
 `state_lift_boundary_status`, `phi4_edge_wall_status`, and
 `terminal_exit_or_named_debt` to HYP-2963/HYP-3098/HYP-3107 packet rows.  Use
 the edge witness as a legal sidecar for observer gluing, coordinate
