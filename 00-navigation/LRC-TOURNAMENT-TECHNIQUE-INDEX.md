@@ -4324,6 +4324,38 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   THM-565, THM-573, LTI-251, LTI-249, LTT-149, LTT-147, T1190, T1188,
   OPEN-Q-108.
 
+### LTT-150: Tournament Of Circuit Missing-Input Proof Gates
+
+- **Move:** Treat proof-gate families as tournament vertices.  Do not use
+  runners, Boolean gates, fitted scalar thresholds, or raw circuit size as
+  vertices.  Compare which gate family preserves more essential proof inputs,
+  supplies a certificate minterm, repairs missing coordinates, proves
+  uniformity, and feeds finite-address or observer-gluing exits.
+- **LRC use:** HYP-3116/S266 turns circuit complexity into a missing-input
+  lower-bound ledger for LRC14 shortcuts.  The proof circuit is shallow
+  (`gate_count=3`, `depth=3`) but all `12` inputs are essential.  Ten shortcut
+  routes close `0/10` as stated; missing frequencies are `finite_address:10`,
+  `observer_gluing:8`, `endpoint_owner:7`, and `uniformity:5`.
+- **Tournament readout:** Proof-gate tournament is transitive:
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}`,
+  `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path
+  `finite_address_branch_closure -> observer_gluing_certificate ->
+  root_ear_payload_ledger -> cocycle_exactness_ledger ->
+  route_center_median_ledger -> pde_weak_form_operator ->
+  relation_lattice_minkowski -> staircase_walsh_carry_data_circuit ->
+  finite_bank_threshold_signal -> raw_scalar_p0`.
+- **Preserves:** `input_basis`, `essential_input_set`,
+  `minimal_certificate_minterm`, `proof_circuit_missing_input_vector`,
+  `repair_cover`, `reconstructible_coordinate_certificate`, required sidecar,
+  and terminal exit or named debt.
+- **Forgets / guardrail:** data-circuit efficiency is not proof compression.
+  A low-degree Walsh expansion, one-literal finite-bank rule, raw H-gap
+  transfer, raw Ising energy, raw Minkowski volume, or raw `p0` scalar must
+  name the missing-input vector before it can be promoted.
+- **Pointers:** HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111,
+  HYP-3108, HYP-3107, HYP-3098, HYP-3083, HYP-3074, HYP-3054, HYP-2997,
+  HYP-2991, HYP-2963, LTI-252, LTT-150, T1191, OPEN-Q-108.
+
 ### LTT-141: Tournament Obstruction-Transfer Atlas
 
 - **Move:** Generalize the H=7/H=21 contradiction pattern into a transfer

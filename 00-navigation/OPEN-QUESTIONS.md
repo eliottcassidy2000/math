@@ -1,5 +1,25 @@
 # Open Questions
 
+**OPEN-Q-108 S266 circuit missing-input addendum:**
+HYP-3116 converts circuit complexity into an LRC14 proof-compression audit.
+The S266 executable ledger models the active proof edge as a shallow monotone
+circuit with `12` essential inputs and minterms `direct_witness`,
+`ap_gw_boundary`, or `finite_address AND observer_gluing AND endpoint_owner
+AND uniformity AND X` for one retained sidecar.  Ten tempting shortcuts close
+`0/10` as stated; missing-input frequencies are `finite_address:10`,
+`observer_gluing:8`, `endpoint_owner:7`, and `uniformity:5`.
+
+Open task: add `proof_circuit_missing_input_vector` to HYP-2963/HYP-3098/
+HYP-3107 rows.  For every shortcut or residual packet record `input_basis`,
+`essential_input_set`, `minimal_certificate_minterm`, `missing_input_vector`,
+`repair_cover`, `reconstructible_coordinate_certificate`,
+`required_sidecar_or_exit`, and `terminal_exit_or_named_debt`.  A proposed
+shortcut should be accepted only if it hits a minterm or a legal sidecar repair
+strictly decreases the missing vector. -> HYP-3116, HYP-3115, HYP-3114,
+HYP-3113, HYP-3112, HYP-3111, HYP-3108, HYP-3107, HYP-3098, HYP-3083,
+HYP-3074, HYP-3054, HYP-2997, HYP-2991, HYP-2963, LTI-252, LTT-150, T1191,
+OPEN-Q-108.
+
 **OPEN-Q-108 S264b PDE weak-form compiler addendum:**
 HYP-3111's canonical Minkowski/circuit/Ising/De Moivre atlas now has a PDE weak-form supplement.  Exact supplement verifies the De Moivre fold `x=z-a/z => x^5+5*a*x^3+5*a^2*x=z^5-a^5/z^5`, but the new content is the route `Lee-Yang/Ising transfer -> PDE weak form -> endpoint Phi gap -> observer gluing -> finite address`.  Open task: annotate HYP-2963/HYP-3107 residual rows with route type, mass/stiffness/boundary data, zero-mode status, low-height wall deletion status, root/free-energy packet, proof-DAG depth, and finite-address or observer-gluing exit. -> HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3101, HYP-3062, HYP-2112, HYP-2108, THM-559, THM-538, OPEN-Q-108.
 

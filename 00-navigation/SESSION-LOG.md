@@ -11,6 +11,23 @@ finite fitted classifiers such as `apex7_error <= 5` are signals only until a
 uniform circuit basis, essential-input set, certificate minterms, and
 missing-input vector are recorded.
 
+Completed the executable audit
+`04-computation/lrc14_circuit_missing_input_ledger_codex_s266.py` with stored
+output and reflection.  The proof-circuit model has `12` inputs, `3` gates,
+depth `3`, and all `12` inputs essential.  Minimal certificate minterms are
+`direct_witness`, `ap_gw_boundary`, or `finite_address AND observer_gluing AND
+endpoint_owner AND uniformity AND X` for one retained sidecar.  Ten tempting
+shortcuts close `0/10`; total missing inputs are `36`, led by
+`finite_address:10`, `observer_gluing:8`, `endpoint_owner:7`, and
+`uniformity:5`.  Tournament Analysis over proof-gate families is transitive,
+with priority path `finite_address_branch_closure -> observer_gluing_certificate
+-> root_ear_payload_ledger -> cocycle_exactness_ledger ->
+route_center_median_ledger -> pde_weak_form_operator ->
+relation_lattice_minkowski -> staircase_walsh_carry_data_circuit ->
+finite_bank_threshold_signal -> raw_scalar_p0`.  Next packet task:
+add `proof_circuit_missing_input_vector` to HYP-2963/HYP-3098/HYP-3107 rows
+and prove minterm hit or strictly decreasing sidecar repair.
+
 ## codex-2026-06-27-S263 -- De Moivre/Jacobi/crystallographic frontier -- HYP-3110
 
 Completed the reserved HYP-3110 / T1186 / LTI-247 / LTT-145 lane after

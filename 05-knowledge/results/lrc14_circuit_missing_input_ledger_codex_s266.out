@@ -1,0 +1,121 @@
+HYP-3116 circuit lower-bound / missing-input ledger -- codex S266
+
+PROOF CIRCUIT MODEL
+  input_count=12
+  gate_count=3
+  depth=3
+  essential_inputs=12: direct_witness, ap_gw_boundary, finite_address, observer_gluing, root_ear_sidecar, relation_lattice, component_bound, cocycle_exactness, state_lift, endpoint_owner, uniformity, pde_weak_form
+  minimal_certificate_minterms:
+    direct_witness
+    ap_gw_boundary
+    finite_address AND observer_gluing AND root_ear_sidecar AND endpoint_owner AND uniformity
+    finite_address AND observer_gluing AND relation_lattice AND endpoint_owner AND uniformity
+    finite_address AND observer_gluing AND component_bound AND endpoint_owner AND uniformity
+    finite_address AND observer_gluing AND cocycle_exactness AND endpoint_owner AND uniformity
+    finite_address AND observer_gluing AND state_lift AND endpoint_owner AND uniformity
+    finite_address AND observer_gluing AND endpoint_owner AND uniformity AND pde_weak_form
+
+LEGACY CARRIER KEYWORD SCAN
+  staircase_walsh_carry_circuit: files=1/1, supplies=uniformity
+    top_keywords=circuit:5, ear:3, uniform:2, Walsh:1
+    use=data-circuit analogy for low-degree interactions and carry debt
+  haar_zipper_cocycle: files=2/2, supplies=cocycle_exactness,endpoint_owner
+    top_keywords=cocycle:21, circuit:17, proof:16, component:6
+    use=local quotient repair for product/Haar shortcuts
+  cocycle_normal_form: files=2/2, supplies=cocycle_exactness,endpoint_owner,state_lift
+    top_keywords=cocycle:139, proof:29, circuit:27, median:10
+    use=proof-circuit sidecar for exactness before quotienting
+  observer_extension_cut_payload: files=2/2, supplies=endpoint_owner,observer_gluing,uniformity
+    top_keywords=proof:36, observer:32, sidecar:32, cocycle:11
+    use=declares destroyed coordinates and required sidecars
+  route_state_closure_median: files=2/2, supplies=cocycle_exactness,endpoint_owner,uniformity
+    top_keywords=sidecar:267, proof:189, observer:152, ear:125
+    use=prevents raw route-label clique centers from acting as proof
+  finite_address_branch_closure: files=2/2, supplies=endpoint_owner,finite_address,state_lift
+    top_keywords=proof:54, sidecar:45, finite-address:22, ear:15
+    use=packs q-cusp, level-7, branch, owner, and terminal exits
+  observer_gluing_ledger: files=2/2, supplies=component_bound,finite_address,observer_gluing
+    top_keywords=component:14, observer:8, proof:5, uniform:3
+    use=terminal exit for residual rows after chart compatibility
+  lee_yang_savitch_ear_lattice: files=2/2, supplies=relation_lattice,root_ear_sidecar,uniformity
+    top_keywords=ear:61, sidecar:20, Savitch:17, component:12
+    use=compresses reachability only when sidecar traps are named
+  lee_yang_ear_payload: files=2/2, supplies=endpoint_owner,root_ear_sidecar
+    top_keywords=ear:74, circuit:0, Walsh:0, proof:0
+    use=repairs scalar root-count shortcuts with extension data
+  minkowski_circuit_ising_quintic: files=2/2, supplies=relation_lattice,root_ear_sidecar,uniformity
+    top_keywords=ear:50, sidecar:20, circuit:17, proof:7
+    use=tests sidecars and exposes nonuniform one-literal classifiers
+  pde_weak_form_packet: files=2/2, supplies=component_bound,observer_gluing,pde_weak_form
+    top_keywords=circuit:17, proof:6, uniform:4, observer:2
+    use=operator-side guardrail for component/gap proofs
+
+SHORTCUT MISSING-INPUT AUDIT
+  raw_p0_scalar: supplied=none
+    missing_count=5 missing=endpoint_owner,finite_address,observer_gluing,root_ear_sidecar,uniformity
+    repair_cover=staircase_walsh_carry_circuit, observer_gluing_ledger, lee_yang_ear_payload
+    source=single miss-mass value
+  one_literal_apex7_threshold: supplied=root_ear_sidecar
+    missing_count=4 missing=endpoint_owner,finite_address,observer_gluing,uniformity
+    repair_cover=observer_extension_cut_payload, finite_address_branch_closure
+    source=HYP-3115 finite-bank rule apex7_error <= 5
+  raw_H_gap_transfer: supplied=state_lift
+    missing_count=3 missing=finite_address,observer_gluing,uniformity
+    repair_cover=staircase_walsh_carry_circuit, observer_gluing_ledger
+    source=H=7/H=21 contradiction without faithful transfer sidecar
+  raw_minkowski_volume: supplied=relation_lattice
+    missing_count=4 missing=finite_address,observer_gluing,root_ear_sidecar,uniformity
+    repair_cover=observer_gluing_ledger, lee_yang_savitch_ear_lattice
+    source=convex-body pressure without packet decoding
+  raw_ising_energy: supplied=root_ear_sidecar
+    missing_count=3 missing=endpoint_owner,finite_address,observer_gluing
+    repair_cover=haar_zipper_cocycle, observer_gluing_ledger
+    source=domain-wall energy without labelled root-collision exits
+  raw_demoivre_residual: supplied=none
+    missing_count=4 missing=finite_address,observer_gluing,root_ear_sidecar,uniformity
+    repair_cover=observer_gluing_ledger, lee_yang_savitch_ear_lattice
+    source=stationary quintic residual without branch orbit address
+  raw_walsh_low_degree: supplied=uniformity
+    missing_count=3 missing=cocycle_exactness,endpoint_owner,finite_address
+    repair_cover=haar_zipper_cocycle, finite_address_branch_closure
+    source=low-degree data circuit treated as proof circuit
+  raw_direct_component_count: supplied=component_bound
+    missing_count=3 missing=endpoint_owner,finite_address,observer_gluing
+    repair_cover=haar_zipper_cocycle, observer_gluing_ledger
+    source=component count without observer chart and owner data
+  raw_pair_pascal_shadow: supplied=none
+    missing_count=4 missing=cocycle_exactness,endpoint_owner,finite_address,observer_gluing
+    repair_cover=haar_zipper_cocycle, observer_gluing_ledger
+    source=pair-mass or Pascal shadow without scissors/gluing
+  raw_automaton_language: supplied=uniformity
+    missing_count=3 missing=endpoint_owner,finite_address,state_lift
+    repair_cover=finite_address_branch_closure
+    source=Moser/fibbinary language without packet address
+  closed_shortcuts=0/10
+  total_missing_inputs=36
+
+MISSING INPUT FREQUENCY
+  finite_address: 10
+  observer_gluing: 8
+  endpoint_owner: 7
+  uniformity: 5
+  root_ear_sidecar: 3
+  cocycle_exactness: 2
+  state_lift: 1
+
+TOURNAMENT ANALYSIS
+  vertices=10
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  priority_path:
+    finite_address_branch_closure -> observer_gluing_certificate -> root_ear_payload_ledger -> cocycle_exactness_ledger -> route_center_median_ledger -> pde_weak_form_operator -> relation_lattice_minkowski -> staircase_walsh_carry_data_circuit -> finite_bank_threshold_signal -> raw_scalar_p0
+
+SYNTHESIS
+  Data-circuit lesson: low Walsh degree or a one-literal threshold is a
+  compressed computation, not a proof route, unless it supplies the
+  proof-circuit inputs demanded by the certificate DAG.
+  The most frequent missing inputs are the real bottlenecks above.
+  Therefore the next LRC14 ledger should store proof_circuit_missing_input_vector
+  beside root/ear, finite-address, observer-gluing, cocycle, and endpoint-owner fields.

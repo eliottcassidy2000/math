@@ -3519,3 +3519,27 @@ source law.  The duodecimal audit is `4` carriers times `3` legal cells
 fields are `q_body_inequality_word`, `proof_circuit_missing_input_vector`,
 `ising_zero_arc_signature`, and `demoivre_branch_orbit_word`; none is a proof
 exit without finite address and observer gluing.
+
+## T1191: Circuit lower-bound missing-input ledger (codex-2026-06-27-S266)
+
+HYP-3116 mines the older staircase Boolean-circuit/Walsh-carry work,
+Haar/cocycle repairs, observer-extension cut payloads, finite-address branch
+closure, observer-gluing ledgers, Savitch/ear/root sidecars, route-center
+median closure, HYP-3115's finite-bank classifier, and PDE weak-form packets
+to turn circuit complexity into a proof-compression audit.  The S266 scout
+models `LRC14Statement` as a shallow monotone circuit with `12` essential
+inputs.  Minterms are `direct_witness`, `ap_gw_boundary`, or
+`finite_address AND observer_gluing AND endpoint_owner AND uniformity AND X`
+for one retained sidecar.  Ten shortcut routes close `0/10`; missing inputs
+total `36`, led by `finite_address:10`, `observer_gluing:8`,
+`endpoint_owner:7`, and `uniformity:5`.  Tournament Analysis over proof-gate
+families is transitive with path
+`finite_address_branch_closure -> observer_gluing_certificate ->
+root_ear_payload_ledger -> cocycle_exactness_ledger ->
+route_center_median_ledger -> pde_weak_form_operator ->
+relation_lattice_minkowski -> staircase_walsh_carry_data_circuit ->
+finite_bank_threshold_signal -> raw_scalar_p0`.  Next: add
+`proof_circuit_missing_input_vector` to HYP-2963/HYP-3098/HYP-3107 rows and
+prove minterm hit or strictly decreasing sidecar repair.  -> HYP-3116,
+HYP-3115, HYP-3111, HYP-3108, HYP-3107, HYP-3098, HYP-3083, HYP-3074,
+HYP-3054, HYP-2997, HYP-2991, LTI-252, LTT-150, OPEN-Q-108.

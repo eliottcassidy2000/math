@@ -386,6 +386,7 @@ record what it destroys before asking it to prove anything.
 | LTI-249 | Lee-Yang ear-payload root-motion ledger | Miss-count PGF roots, Lee-Yang danger interval, one-runner ear payloads `A_t`, root-motion reconstruction, nested/far ear status, parity and mean payloads | HYP-3112/S262b refines HYP-3109's root-curve ear map, HYP-3108's Lee-Yang/Savitch atlas, and the HYP-3111 carrier-sidecar lane to an exact one-runner extension identity `q_full[t]=q_base[t]-A_t+A_{t+1}`. AP/consec and even-AP have `real=0/6`, `nearest=1.4886`, and `dist(roots,[-1,0])=0.9119`; `single_far_21` is complex-rooted but much closer to the danger interval; break/spread rows have interval-contact roots. The ear payload explains the difference: final nested AP `+7` has `A_mean=1.965291`, while final far `+21` has `A_mean=2.993492`. Ear-decomposition facts become sidecar grammar: directed ear means retained extension payload, odd ear means parity split, nested ear means AP-style legal refinement, and nonnested ear means root collision or named debt. | HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3098, HYP-3085, HYP-2879, THM-577, THM-576, THM-573, T1188, T1187, T1186, T1184, LTT-147, LTT-146, LTT-145, LTT-144, LTT-143, LTI-249, LTI-248, LTI-247, LTI-246, LTI-245, OPEN-Q-108 | Build `lrc14_lee_yang_ear_payload_ledger` over HYP-2963 and the THM-573 residual; emit `miss_count_pgf_coefficients`, root multiset, `lee_yang_negative_interval_distance`, `root_axis_gap_deg`, `ear_payload_A_vector`, `ear_payload_mean_level`, `ear_payload_parity_bias`, `root_motion_reconstruction_status`, `nested_ear_status`, destroyed coordinate, and terminal exit. |
 | LTI-250 | Two-map root-lattice-ear extremality synthesis | Miss-count PGF root curves, Lee-Yang zero-free regions, discriminant breaks, phi4 quartic cumulants, Savitch midpoint sidecars, Bravais relation-lattice shape, strong/odd/nested ear certificates | HYP-3113/S265 rebases the prompt-driven synthesis after HYP-3108/HYP-3109, HYP-3112, and HYP-3111.  The root-curve map upgrades from the single value `G_N(0)=p0` to the whole PGF coefficient vector, root locus, Lee-Yang confinement margin, and discriminant-break profile; the scout's root tournament has one nontrivial SCC tying Lee-Yang, discriminant, and tournament-root spectra.  The memory-lattice-ear map upgrades relation-lattice pressure into a Bravais shape sidecar and treats Savitch midpoint recursion plus strong/odd/nested ear decompositions as certificate grammar before a packet-sheaf legal exit. | HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3062, HYP-2879, THM-577, T1189, LTT-148, LTI-250, OPEN-Q-108 | Join HYP-3109 root-curve rows and HYP-3108 sidecar rows to HYP-3104 maximizer atlas; add `PGF_zero_locus_signature`, `Lee_Yang_confinement_margin`, `PGF_discriminant_break_index`, `quartic_cumulant_stabilizer`, `Savitch_midpoint_sidecar_depth`, `Bravais_relation_shape_class`, `ear_certificate_type`, and `root_lattice_ear_resonance_portfolio` to packet rows. |
 | LTI-251 | Irrational/transcendental approximation witness-margin sidecar | Positive witness interval, endpoint distance, max-speed margin, continued-fraction convergents, irrationality-measure class, exceptional approximants, Liouville spike schedule, denominator-shell grid hit | HYP-3114/S265 imports irrational and transcendental approximation only through a retained LRC margin: if `t` is a witness with margin `delta`, then every `p/q` with `|t-p/q|<delta/max(s_i)` is also a witness.  The exact scout finds AP13 has no positive component, while `AP12_tail84`, divisor-loaded `loaded_B6`, and `single_tail168` have widest direct-time lengths `3/1960`, `1/5880`, and `23/11760`; named algebraic/transcendental/Liouville-like constants hit those intervals only as sidecar examples.  Algebraic irrational targets can use Roth/Hurwitz finite-exception fences only with height and exceptional approximants; transcendental targets require explicit irrationality-measure or approximation-sequence sidecars; Liouville-type targets warn about lacunary denominator spikes.  This extends HYP-3062 and HYP-3075 while connecting to HYP-3088/HYP-3089 denominator-grid repair and HYP-3112 ear payloads. | HYP-3114, HYP-3112, HYP-3111, HYP-3109, HYP-3108, HYP-3098, HYP-3096, HYP-3089, HYP-3088, HYP-3075, HYP-3062, HYP-2866, THM-575, THM-565, THM-573, T1190, T1188, LTT-149, LTT-147, LTI-251, LTI-249, OPEN-Q-108 | Extend the exact interval-margin scout from direct-time named rows to THM-565 normalized slow/ruler-coordinate rows.  Emit `witness_interval`, `endpoint_margin`, `max_speed`, `robust_approximation_radius`, `grid_hit_bound`, `continued_fraction_first_hit`, `partial_quotient_spike`, `irrationality_measure_status`, `exceptional_approximant_list`, `liouville_spike_schedule`, destroyed coordinate, and terminal exit into HYP-3098/HYP-3112 packet rows. |
+| LTI-252 | Circuit lower-bound missing-input ledger | Proof-circuit inputs, essential-input sets, certificate minterms, missing-input vectors, repair covers, data-circuit guardrails | HYP-3116/S266 mines niche prior work on staircase Boolean/Walsh carry circuits, Haar and cocycle repairs, observer-extension cut payloads, finite-address branch closure, observer-gluing ledgers, Savitch/ear/root sidecars, route-center median closure, HYP-3115's finite-bank threshold, and PDE weak-form packets.  The scout models `LRC14Statement` as a shallow monotone proof circuit with `12` essential inputs and minterms `direct_witness`, `ap_gw_boundary`, or `finite_address AND observer_gluing AND endpoint_owner AND uniformity AND X`.  Ten tempting shortcuts close `0/10`; missing-input frequencies are `finite_address:10`, `observer_gluing:8`, `endpoint_owner:7`, `uniformity:5`. | HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3108, HYP-3107, HYP-3098, HYP-3083, HYP-3074, HYP-3054, HYP-2997, HYP-2991, HYP-2963, T1191, LTT-150, LTI-252, OPEN-Q-108 | Add `proof_circuit_missing_input_vector`, `input_basis`, `essential_input_set`, `minimal_certificate_minterm`, `repair_cover`, `reconstructible_coordinate_certificate`, and `terminal_exit_or_named_debt` to HYP-2963/HYP-3098/HYP-3107 rows; reject low-depth scalar shortcuts unless the missing vector is empty or strictly repaired by named sidecars. |
 
 ## Cross-Cutting Guardrails
 
@@ -2168,6 +2169,37 @@ Guardrail: rationality, irrationality, algebraicity, and transcendence are
 not LRC predicates by themselves.  They are legal only when field, height,
 dependence, exceptional approximants, and finite packet coordinates are
 retained or explicitly routed to named debt.
+
+### 80. LTI-252 Circuit Lower-Bound Missing-Input Ledger
+
+Sources: HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111,
+HYP-3108, HYP-3107, HYP-3098, HYP-3083, HYP-3074, HYP-3054, HYP-2997,
+HYP-2991, HYP-2963.
+
+Preserves: proof-circuit input basis, essential-input set, minimal certificate
+minterms, missing-input vector, repair cover, reconstructibility certificate,
+required sidecar, terminal exit, and the distinction between data circuits
+that compute a scalar and proof circuits that imply `LRC14Statement`.
+
+LRC use: HYP-3116/S266 models the active proof edge as a shallow monotone
+circuit.  The minterms are `direct_witness`, `ap_gw_boundary`, or
+`finite_address AND observer_gluing AND endpoint_owner AND uniformity AND X`
+for one retained sidecar `X`.  All `12` model inputs are essential.  Audited
+shortcuts (`raw_p0`, one-literal `apex7_error<=5`, raw H-gap transfer, raw
+Minkowski volume, raw Ising energy, raw De Moivre residual, raw Walsh
+low-degree, raw component count, raw pair-Pascal shadow, and raw automaton
+language) close `0/10` as stated.
+
+Guardrail: a low-depth classifier is not a proof unless the missing vector is
+empty or every missing coordinate is reconstructible from named sidecars.  The
+session's bottleneck frequency is the actionable lower-bound readout:
+`finite_address:10`, `observer_gluing:8`, `endpoint_owner:7`,
+`uniformity:5`.
+
+Next contribution: attach `proof_circuit_missing_input_vector` to HYP-2963,
+HYP-3098, and HYP-3107 residual rows, then prove that each live row either
+hits a minterm or has a legal sidecar repair that strictly decreases the
+missing vector.
 
 ### 72. LTI-243 Tournament Obstruction-Transfer Atlas
 
