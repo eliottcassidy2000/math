@@ -46,9 +46,9 @@ As of **Saturday, June 27, 2026**, the newest coordination layer is **Equivalenc
 
 S255 formalizes the **Pairwise-Avoidance Cap Ledger (783c892)**, reducing the cap-side floor to a pairwise avoidance law for $k \geq 10$ with 3-correlated cluster minimizers for $k=8, 9$.
 
-S257 formalizes the **Equivalence Triad Invariant Ledger (8906e1e)**. It establishes the "forgetting-cost" protocol for legal proof quotients, synthesizing the triad of equinumerosity (shadows), equidecomposability (fibers), and equidistribution (laws). This layer formalizes **HYP-3091**, providing a multi-field invariant (cardinal shadow, scissors fiber, observer-cut orbit, distribution law, interaction-order defect, named residual debt) to ensure that abstract structural characterizations preserve the LRC predicate. It unifies the project's various "controlled-forgetting" tracks—including Royle even-graph fibers, AP/GW boundary bulk splits, and the S255 order-3 cap deviations—into a single protocol for proof-safe structural imposition.
+S257 formalizes the **Equivalence Triad Invariant Ledger (4d4cc30)**. It establishes the "forgetting-cost" protocol for legal proof quotients, synthesizing the triad of equinumerosity (shadows), equidecomposability (fibers), and equidistribution (laws). This layer formalizes **HYP-3093** (renumbered from HYP-3091), providing a multi-field invariant (cardinal shadow, scissors fiber, observer-cut orbit, distribution law, interaction-order defect, named residual debt) to ensure that abstract structural characterizations preserve the LRC predicate. It unifies the project's various "controlled-forgetting" tracks—including Royle even-graph fibers, AP/GW boundary bulk splits, and the S255 order-3 cap deviations—into a single protocol for proof-safe structural imposition.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate tuples when equal-power sums are promoted to proof carriers, branch bridge status when proof corridors are contracted, p-adic hyper-tower addresses for massive constants, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, and Equivalence Triad "forgetting-cost" tuples.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, and Equivalence Triad "forgetting-cost" tuples.
 
 The Henselian unit rule (updated):
 ```text
@@ -72,18 +72,17 @@ closure, sixth-power collision, modular cusp principal-part, Lean modular cusp,
 sixth-power certificate ledgers, branch-kernel orientation audit, p-adic
 hyper-tower addresses, Morita-gamma differential signatures, Hurwitz
 finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge
-V* crossover signatures, Pairwise-Avoidance Cap minimizers, and Equivalence
-Triad forgetting-cost tuples to preserve p-adic stability of the global packet
-sheaf by preventing misuse of untyped motifs, degenerate limiting witnesses,
-sequence-count scalars, positivity-only cohomology, non-median route
-compatibility, unnamed owner/root loss, non-unique route-triple centers,
-unaligned disciplinary pullback indices, unsigned polymer/current quotients,
-unclosed packet/route/certificate/discharge medians, unvalidated Diophantine
-collision arity, q-series certificates without a formal principal-part gate,
-equal-power sums without tuple-rank-residue certificates, naked bridges in
-contracted proof corridors, hyper-tower limits without p-adic transcendental
-basis verification, Morita-gamma lifts without differential transcendental
-audits, infinite tails without finite address seeds, covering-moment
+V* crossover signatures, and Pairwise-Avoidance Cap minimizers to preserve
+p-adic stability of the global packet sheaf by preventing misuse of untyped
+motifs, degenerate limiting witnesses, sequence-count scalars, positivity-only
+cohomology, non-median route compatibility, unnamed owner/root loss, non-unique
+route-triple centers, unaligned disciplinary pullback indices, unsigned
+polymer/current quotients, unclosed packet/route/certificate/discharge medians,
+unvalidated Diophantine collision arity, q-series certificates without a formal
+principal-part gate, equal-power sums without tuple-rank-residue certificates,
+naked bridges in contracted proof corridors, hyper-tower limits without p-adic
+transcendental basis verification, Morita-gamma lifts without differential
+transcendental audits, infinite tails without finite address seeds, covering-moment
 bounds without low-order reflection-Perron certificates, V* crossover regimes
 without explicit induction-base classification, Cap structures without
 verified pairwise avoidance minimizers, or structural quotients without
@@ -172,7 +171,7 @@ Cap unit, and Equivalence Triad invariant unit alongside mu approx 1.451).
 
 ## codex-S257 -- Equivalence Triad Invariant Ledger (checkpoint)
 
-Integrated HYP-3091/T1171/LTI-237/LTT-135. The Equivalence Triad invariant and
+Integrated HYP-3093/T1171/LTI-237/LTT-135. The Equivalence Triad invariant and
 the forgetting-cost protocol are now formal proof carriers.
 
 ### 1. Equivalence Triad Protocol
@@ -185,10 +184,10 @@ Introduces a multi-field invariant—cardinal shadow, scissors fiber,
 observer-cut orbit, distribution law, interaction-order defect, and named
 residual debt—to quantify the information lost in structural impositions.
 
-### 3. Proof-Safe Structural Imposition
-Aligns the project's "controlled-forgetting" tracks (even-graph fibers,
-boundary bulk splits, order-3 cap deviations) into a unified requirement for
-legal structural characters that preserve global LRC(14) obstructions.
+### 3. HYP-3093 Renumbering
+Corrects the synthesis ID from HYP-3091 to HYP-3093, ensuring that abstract 
+structural characterizations (Royle fibers, boundary bulk splits, S255 cap 
+deviations) are anchored to the latest protocol version.
 
 ---
 
