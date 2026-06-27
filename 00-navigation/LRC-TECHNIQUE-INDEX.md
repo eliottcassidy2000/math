@@ -76,6 +76,7 @@ polynomial-method witness ledger / CRT c=7,c=2 lifts / largest-arc denominator-n
 normal-fan Cech barcode component ledger / direct L_14 component bound / finite-ruler net
 first-obstruction cocycle generation / observer-cut syndrome / certificate-cycle image
 Lee-Yang miss-count PGF root ledger / one-runner ear payload / root-motion reconstruction
+PGF root-locus / Lee-Yang zero-free margin / Bravais relation-lattice shape / ear-certificate type
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -378,6 +379,7 @@ record what it destroys before asking it to prove anything.
 | LTI-245 | Lean proof-frontier ledger | `TournamentH7.LRCProofFrontier`, solved/open frontier nodes, pair-Pascal cap arithmetic, THM-577 dense cap value import, residual classifier, residual finite-address packet theorem, observer-gluing certificate theorem, bleeding-edge packet wrapper theorem, experiment vertices | HYP-3107/S259 turns the current LRC14 proof edge into a Lean-facing conditional interface. It records solved nodes (q-witness, level-7 lift, pair-Pascal cap RHS, THM-577 symbolic dense cap values, terminal `Mreach`), open nodes (coverage extremality, reflection-Perron/order-3/order-4, Node-3 effective peel, finite-ruler glue, fine-scale winding transfer), and exact cap arithmetic (`capRat k=k(k+1)/182` for `k=10..13`, plus the `k=9` and `k=8` debts). HYP-3099 feeds the tournament diagnostic: cap optimality is bounded but non-transitive, and apex-7-to-H=7 is a coincidence. HYP-3100/HYP-3105 supply the contradiction grammar, obstruction-transfer atlas, and `TournamentH7.LRCBleedingEdgeFrontier` conservative wrapper. The S31ah certificate-toolkit rebase validates the H/Omega engine but marks its coarse LRC14 use as vacuous, so H enters only through fine-scale or packet-preserving observers. The key theorems are `lrc14_from_bleeding_edge_frontier`, `lrc14_from_bleeding_edge_observer_gluing_frontier`, and `lrc14_from_bleeding_edge_packet_wrapper_frontier`. | HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098, HYP-3097, HYP-3096, HYP-3095, HYP-3094, HYP-3093, HYP-3092, HYP-3091, HYP-3090, HYP-3089, HYP-3088, HYP-3085, HYP-3083, THM-577, THM-573, THM-575, THM-576, T1184, T1183, T1182, LTT-143, LTT-142, LTT-141, LTT-136, LTI-245, LTI-244, LTI-243, LTI-239, LTI-238, LTI-236, LTI-234, OPEN-Q-108, `TournamentH7.LRCProofFrontier` | Instantiate `CoverageExtremality` with exact `p0` and consecutive clusters for `k=8,9,10` by certifying HYP-3099's finite local minima, not by assuming greedy descent; define a fine mod-`p` or sector-pair winding observable after the coarse mod-14 H bridge degeneracy; add HYP-3100/HYP-3105 certificate columns to `BleedingEdgeFrontierCoverage`; convert the `k=8,9` cap debt into an Eberlein/Hankel degree-2-to-4 certificate; add the HYP-3093/HYP-3097 equinumerosity/equidecomposability/equidistribution triad to the frontier experiment schema; and make the HYP-3095/HYP-3097/HYP-3098 observer-gluing ledger emit concrete `ObserverGluingCertificate` rows, then `FiniteAddressBranchPacket` rows when available. |
 | LTI-246 | Lee-Yang/Savitch/Bravais/ear-lattice extremality atlas | Miss-count PGF zero curve, nearest-root radius, real-root stratum, Bravais reciprocal flatness, phi4 phase tuple, sector-sweep transition graph, Savitch midpoint depth, strict-descent traps, ear-rank sidecars | HYP-3108/S262 turns the user-suggested Lee-Yang, Savitch, Bravais-lattice, phi4, and ear-decomposition lenses into two coupled maps for LRC maximizers: a coefficient-root map `q_t -> G_N(z)` and a sector-sweep reachability map.  The bounded `{0}+7` scan from `1..13` finds `corr(p0,nearest_root_radius)=+0.899`, `corr(p0,#real_roots)=-0.483`, `corr(p0,Bravais_peak)=-0.430`, `corr(p0,residue_entropy)=+0.541`, and `corr(p0,phi4_lambda)=-0.696`; high `p0` lives in the no-real-root stratum with reciprocal-flat residue spectra, while Savitch/ear data identify finite-check sidecar debt rather than scalar value. | HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3096, HYP-3095, HYP-3093, HYP-3085, THM-573, THM-577, T1185, LTT-144, LTI-246, OPEN-Q-108 | Add `lee_yang_nearest_zero_radius`, `lee_yang_real_root_stratum`, `root_angle_error_to_7`, `bravais_residue_entropy`, `bravais_reciprocal_peak`, `phi4_phase_tuple`, `savitch_midpoint_depth`, `strict_descent_trap_count`, and `miss_count_ear_rank` to finite-address branch packets before accepting a new scalar invariant. |
 | LTI-249 | Lee-Yang ear-payload root-motion ledger | Miss-count PGF roots, Lee-Yang danger interval, one-runner ear payloads `A_t`, root-motion reconstruction, nested/far ear status, parity and mean payloads | HYP-3112/S262b refines HYP-3109's root-curve ear map, HYP-3108's Lee-Yang/Savitch atlas, and the HYP-3111 carrier-sidecar lane to an exact one-runner extension identity `q_full[t]=q_base[t]-A_t+A_{t+1}`. AP/consec and even-AP have `real=0/6`, `nearest=1.4886`, and `dist(roots,[-1,0])=0.9119`; `single_far_21` is complex-rooted but much closer to the danger interval; break/spread rows have interval-contact roots. The ear payload explains the difference: final nested AP `+7` has `A_mean=1.965291`, while final far `+21` has `A_mean=2.993492`. Ear-decomposition facts become sidecar grammar: directed ear means retained extension payload, odd ear means parity split, nested ear means AP-style legal refinement, and nonnested ear means root collision or named debt. | HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3098, HYP-3085, HYP-2879, THM-577, THM-576, THM-573, T1188, T1187, T1186, T1184, LTT-147, LTT-146, LTT-145, LTT-144, LTT-143, LTI-249, LTI-248, LTI-247, LTI-246, LTI-245, OPEN-Q-108 | Build `lrc14_lee_yang_ear_payload_ledger` over HYP-2963 and the THM-573 residual; emit `miss_count_pgf_coefficients`, root multiset, `lee_yang_negative_interval_distance`, `root_axis_gap_deg`, `ear_payload_A_vector`, `ear_payload_mean_level`, `ear_payload_parity_bias`, `root_motion_reconstruction_status`, `nested_ear_status`, destroyed coordinate, and terminal exit. |
+| LTI-250 | Two-map root-lattice-ear extremality synthesis | Miss-count PGF root curves, Lee-Yang zero-free regions, discriminant breaks, phi4 quartic cumulants, Savitch midpoint sidecars, Bravais relation-lattice shape, strong/odd/nested ear certificates | HYP-3113/S265 rebases the prompt-driven synthesis after HYP-3108/HYP-3109, HYP-3112, and HYP-3111.  The root-curve map upgrades from the single value `G_N(0)=p0` to the whole PGF coefficient vector, root locus, Lee-Yang confinement margin, and discriminant-break profile; the scout's root tournament has one nontrivial SCC tying Lee-Yang, discriminant, and tournament-root spectra.  The memory-lattice-ear map upgrades relation-lattice pressure into a Bravais shape sidecar and treats Savitch midpoint recursion plus strong/odd/nested ear decompositions as certificate grammar before a packet-sheaf legal exit. | HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3062, HYP-2879, THM-577, T1189, LTT-148, LTI-250, OPEN-Q-108 | Join HYP-3109 root-curve rows and HYP-3108 sidecar rows to HYP-3104 maximizer atlas; add `PGF_zero_locus_signature`, `Lee_Yang_confinement_margin`, `PGF_discriminant_break_index`, `quartic_cumulant_stabilizer`, `Savitch_midpoint_sidecar_depth`, `Bravais_relation_shape_class`, `ear_certificate_type`, and `root_lattice_ear_resonance_portfolio` to packet rows. |
 
 ## Cross-Cutting Guardrails
 
@@ -2253,6 +2255,50 @@ HYP-3101/HYP-3102 sidecars.  Add the HYP-3093/HYP-3097 equivalence triad as a
 frontier experiment: equinumerosity for the count shadow, equidecomposability
 for the retained scissors fiber, and equidistribution only after the relevant
 resonance/observer debt is named.
+
+### 79. LTI-250 Two-Map Root-Lattice-Ear Extremality Synthesis
+
+Sources: HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107,
+HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101,
+HYP-3062, HYP-2879, THM-577, T1189.
+
+Preserves: the full miss-count PGF/root-locus object, the Lee-Yang
+zero-free margin near the LRC evaluation, the discriminant/root-collision
+profile, quartic cumulant stabilization, relation-lattice Bravais shape,
+Savitch midpoint sidecar depth, and the ear-certificate type needed by the
+next proof operation.
+
+Destroys if used alone: scalar LRC value, root count without locations,
+covolume or shortest-vector lattice pressure, raw runner identity, and a
+generic connectedness certificate that forgets whether the required ear is
+strong, odd, or nested.
+
+LRC use: before claiming an extremizer is explained by one value, attach
+
+```text
+PGF_zero_locus_signature
+nearest_zero_to_LRC_evaluation
+Lee_Yang_confinement_margin
+PGF_discriminant_break_index
+quartic_cumulant_stabilizer
+Savitch_midpoint_sidecar_depth
+Bravais_relation_shape_class
+successive_minima_anisotropy
+ear_certificate_type
+odd_ear_parity_debt
+nested_ear_crossing_defect
+root_lattice_ear_resonance_portfolio
+```
+
+Scout guardrail: the root-curve tournament is not transitive; Lee-Yang
+zero-free regions, PGF discriminant breaks, and tournament-root spectra form a
+nontrivial SCC.  The memory-lattice-ear map is transitive in the scout, so the
+next risk is not ranking but whether the strict ladder hides a missing sidecar.
+
+Next contribution: join HYP-3109 root-curve rows and HYP-3108 sidecar rows to
+the HYP-3104 maximizer atlas, then test whether exchange traps or cap false
+positives occur exactly at small Lee-Yang margins, discriminant collisions,
+anisotropic relation-lattice shapes, or non-nested ear defects.
 
 ## Pull Lists
 

@@ -168,6 +168,10 @@ obligations, and proof-carrier interfaces.
   vertices.  Keep `A_t`, parity/mean payload, negative-interval root distance,
   reconstruction status, destroyed coordinate, and terminal exit before using
   PGF roots as a proof carrier.
+- Need to compare Lee-Yang root curves, Bravais relation-lattice shape, Savitch
+  midpoint sidecars, and ear-certificate grammars as a coupled extremality map:
+  use LTT-148 after LTT-146/LTT-144/LTT-145/LTT-143 and make proof-carrier sidecars the
+  vertices rather than runners or scalar root counts.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -4387,6 +4391,61 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-240, LTI-238, LTI-236, LTI-234, LTT-143, LTT-141, LTT-140, LTT-139,
   LTT-138, LTT-136, LTT-135, LTT-134, LTT-133, T1184, T1182, T1181, T1180,
   T1179, OPEN-Q-108.
+
+## LTT-148: Two-Map Root-Lattice-Ear Extremality Tournament
+
+- **Move:** Replace "what maximizes the LRC value" by two proof-carrier
+  tournaments: a root-curve tournament over the full miss-count PGF/root
+  locus, and a memory-lattice-ear tournament over recursive sidecars,
+  relation-lattice shape, and certificate decompositions.
+- **LRC use:** HYP-3113/S265 rebases the prompt-driven synthesis after
+  HYP-3108/HYP-3109, HYP-3112, and HYP-3111.  The single value `G_N(0)=p0`, pair-Pascal cap value, or
+  local exchange sink is only a shadow; the theorem-facing object is the PGF
+  zero locus, Lee-Yang confinement margin, discriminant-break profile, quartic
+  cumulant stabilizer, Bravais relation-lattice shape, Savitch midpoint
+  sidecar depth, and strong/odd/nested ear exit.
+- **Preserves:** the LRC predicate near the evaluation point, whole-curve
+  extremality data, root-collision events, cumulant stabilization, relation
+  lattice anisotropy, midpoint recursion payloads, ear-certificate grammar,
+  first-obstruction cocycle status, and packet-sheaf legal exit.
+- **Forgets / guardrail:** root count without locations, scalar safe mass,
+  raw tournament `H`, covolume, shortest vector, raw runner vertices, and
+  generic connectivity can all be correct but lossy.  Each quotient must state
+  which LRC predicate it preserves and which sidecar repairs the loss.
+- **Tournament vertices:** Map A uses `root_curve_zero_locus`,
+  `Lee_Yang_zero_free_region`, `PGF_discriminant_break`,
+  `miss_count_PGF_root_stratum`, `phi4_quartic_cumulant_stabilizer`,
+  `tournament_Iomega_root_spectrum`, `full_PGF_coefficients`,
+  `fugacity_rank_curve`, `single_value_p0`, and `raw_scalar_rank`.  Map B uses
+  `packet_sheaf_legal_exit`, `first_obstruction_cocycle`,
+  `Savitch_midpoint_certificate`, `Bravais_shape_tensor`,
+  `successive_minima_covolume`, `relation_lattice_basis`,
+  `strong_ear_spine`, `odd_ear_parity_spine`,
+  `nested_ear_series_parallel_spine`, and `raw_runner_vertices`.
+- **Pairwise observable:** predicate retention, whole-curve or whole-shape
+  fidelity, ability to detect extremality breaks, transfer to existing packet
+  ledgers, computability, and proof-exit strength.  Ties use the declared
+  Hamiltonian paths from the scout.
+- **Hamiltonian path:** Map A selects
+  `root_curve_zero_locus > Lee_Yang_zero_free_region >
+  PGF_discriminant_break > tournament_Iomega_root_spectrum >
+  miss_count_PGF_root_stratum > phi4_quartic_cumulant_stabilizer >
+  full_PGF_coefficients > fugacity_rank_curve > single_value_p0 >
+  raw_scalar_rank`, with one nontrivial SCC among Lee-Yang/discriminant/Iomega
+  and three Hamiltonian paths.  Map B is the strict ladder
+  `packet_sheaf_legal_exit > first_obstruction_cocycle >
+  Savitch_midpoint_certificate > Bravais_shape_tensor >
+  successive_minima_covolume > relation_lattice_basis > strong_ear_spine >
+  odd_ear_parity_spine > nested_ear_series_parallel_spine >
+  raw_runner_vertices`, with no directed 3-cycles and one Hamiltonian path.
+- **Next hook:** Join HYP-3109 root-curve rows and HYP-3108 sidecar rows to
+  the HYP-3104 maximizer atlas, then test whether cap false positives,
+  one-swap traps, and exchange local sinks are predicted by small Lee-Yang
+  margins, discriminant collisions, quartic cumulant stabilizers, Bravais
+  anisotropy, or non-nested ear defects.
+- **Pointers:** HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3106,
+  HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3062, HYP-2879,
+  THM-577, LTI-250, LTT-148, LTT-146, LTT-145, LTT-144, LTT-143, T1189, OPEN-Q-108.
 
 ## Immediate Pull List
 

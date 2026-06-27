@@ -99,6 +99,39 @@ HYP-3108.  Updated the result/hypothesis indexes, OPEN-Q-108, the
 investigation backlog, the LRC lens map, and coordination notes.  Tournament
 Analysis uses ear payloads, root-motion events, and proof obligations as
 vertices, not runners.
+## codex-2026-06-27-S265 -- LRC14 two-map root-lattice-ear extremality synthesis -- HYP-3113
+
+Owner asked to think Savitch's theorem, Bravais lattices, Lee-Yang
+extremality, the full PGF/root curve rather than a single value, phi4 quartic
+stabilization, and ear decompositions while working toward the LRC proof.
+
+After rebasing over the incoming HYP-3108/HYP-3109 Lee-Yang root-curve work,
+HYP-3110 De Moivre/Jacobi/crystallographic reservation, and HYP-3111
+Minkowski/circuit/Ising lane, reserved HYP-3113, T1189, LTI-250, and LTT-148
+for a two-map synthesis plus exact
+proof-obligation tournament scout.  Map A is the root-curve extremality map:
+`single_value_p0 -> full_PGF_coefficients -> root_curve_zero_locus ->
+Lee_Yang_zero_free_region / PGF_discriminant_break -> packet certificate`.
+Its tournament has `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,7:3,9:1}`, one
+directed 3-cycle, three Hamiltonian paths, and a nontrivial SCC tying
+Lee-Yang, discriminant, and Iomega-root spectra.  Map B is the
+memory-lattice-ear certificate map: raw runners pass through relation-lattice
+basis, successive minima/covolume, Bravais shape tensor, Savitch midpoint
+certificate, strong/odd/nested ear spines, first-obstruction cocycle, and
+packet-sheaf legal exit.  It is transitive in the scout, with no directed
+3-cycles and one Hamiltonian path.
+
+New measurement targets: `PGF_zero_locus_signature`,
+`nearest_zero_to_LRC_evaluation`, `Lee_Yang_confinement_margin`,
+`PGF_discriminant_break_index`, `quartic_cumulant_stabilizer`,
+`Savitch_midpoint_sidecar_depth`, `Bravais_relation_shape_class`,
+`successive_minima_anisotropy`, `ear_certificate_type`,
+`odd_ear_parity_debt`, `nested_ear_crossing_defect`, and
+`root_lattice_ear_resonance_portfolio`.  The next executable task is to join
+HYP-3103 miss-count PGF zero rows to HYP-3104 maximizer/exchange-trap rows and
+ask whether local traps or cap false positives occur exactly at root
+collisions, small Lee-Yang margins, anisotropic relation lattices, or bad ear
+types.
 
 ## kind-pasteur-2026-06-27-S31ah -- the Tournament Proof Toolkit (engine + generator + 6 applications); 3-agent convergence
 

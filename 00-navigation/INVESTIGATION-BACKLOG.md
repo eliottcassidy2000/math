@@ -50,6 +50,35 @@ whether every root approaching `[-1,0]` is routed to high-mean payload,
 nonnested ear debt, component-bound debt, first-obstruction debt,
 K33/THM-572 debt, or AP/GW boundary status.
 Namespace: HYP-3112 / LTI-249 / LTT-147 / OPEN-Q-108.
+## Lead codex-2026-06-27-S265: LRC14 two-map root-lattice-ear extremality synthesis
+
+**Status:** SYNTHESIS + exact map scout; not proof (HYP-3113/T1189).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3113-lrc14-two-map-root-lattice-ear-extremality.md`,
+`04-computation/lrc14_two_map_root_lattice_ear_extremality_codex_s265.py`, and
+`05-knowledge/results/lrc14_two_map_root_lattice_ear_extremality_codex_s265.out`.
+Rebased after HYP-3108/HYP-3109, the scout converts the
+Savitch/Bravais/Lee-Yang/phi4/ear-decomposition prompt into two coupled maps.
+The root-curve map moves from `single_value_p0` to
+full PGF coefficients, root locus, Lee-Yang zero-free regions, discriminant
+breaks, quartic cumulant stabilization, and tournament-root spectra; its
+fingerprint has `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,7:3,9:1}`, one directed
+3-cycle, and a nontrivial SCC among Lee-Yang, discriminant, and Iomega-root
+signals.  The memory-lattice-ear map is a strict certificate ladder from raw
+runners through relation-lattice basis, successive minima, Bravais shape,
+Savitch midpoint sidecars, strong/odd/nested ear spines, first-obstruction
+cocycles, and packet-sheaf legal exits (`score_hist={0:1,...,9:1}`, one
+Hamiltonian path).
+**Next:** join HYP-3103 PGF-zero data to the HYP-3104 maximizer signal atlas.
+Add `PGF_zero_locus_signature`, `Lee_Yang_confinement_margin`,
+`PGF_discriminant_break_index`, `quartic_cumulant_stabilizer`,
+`Savitch_midpoint_sidecar_depth`, `Bravais_relation_shape_class`,
+`successive_minima_anisotropy`, `ear_certificate_type`,
+`odd_ear_parity_debt`, `nested_ear_crossing_defect`, and
+`root_lattice_ear_resonance_portfolio` to packet rows.  Test whether cap false
+positives and one-swap exchange traps coincide with root collisions, small
+Lee-Yang margins, anisotropic relation lattices, or non-nested ear defects.
+Namespace: HYP-3113 / LTI-250 / LTT-148 / T1189 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-S259a: LRC14 normal-fan Cech component-bound route
 

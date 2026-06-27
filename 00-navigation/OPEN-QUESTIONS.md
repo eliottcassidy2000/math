@@ -96,6 +96,34 @@ HYP-3078, HYP-3076, HYP-3074, HYP-2963, THM-002, THM-029, THM-079,
 THM-115, THM-264, THM-454, THM-577, LTI-244, LTI-243, LTI-241, LTI-240,
 LTI-239, LTT-142, LTT-141, LTT-139, LTT-138, LTT-137, T1183, T1182, T1180,
 T1179, T1178, OPEN-Q-108.
+**OPEN-Q-108 S265 two-map root-lattice-ear extremality addendum:**
+HYP-3113, rebased after HYP-3108/HYP-3109, HYP-3112, and HYP-3111, turns the latest extremality prompt
+into a coupled measurement program.  The root-side question is no longer whether a single scalar such as
+`p0`, cap value, root count, or tournament `H` is largest, but whether the
+whole miss-count PGF curve has a Lee-Yang zero-free margin, discriminant-break
+profile, and quartic cumulant stabilization that explains the LRC extremizer.
+The scout root tournament finds a nontrivial SCC among
+`Lee_Yang_zero_free_region`, `PGF_discriminant_break`, and
+`tournament_Iomega_root_spectrum`, so these signals should be treated as a
+coupled diagnostic rather than a linear rank.  The certificate-side question
+is whether Savitch-style midpoint recursion, Bravais relation-lattice shape,
+successive minima anisotropy, and strong/odd/nested ear decompositions provide
+the sidecars needed before a quotient can legally forget runner data.
+
+Open task: join HYP-3103 PGF-zero data to the HYP-3104 maximizer atlas and
+emit, for each tested row or packet, `PGF_zero_locus_signature`,
+`nearest_zero_to_LRC_evaluation`, `Lee_Yang_confinement_margin`,
+`PGF_discriminant_break_index`, `quartic_cumulant_stabilizer`,
+`exchange_trap_index`, `Bravais_relation_shape_class`,
+`successive_minima_anisotropy`, `Savitch_midpoint_sidecar_depth`,
+`ear_certificate_type`, `odd_ear_parity_debt`,
+`nested_ear_crossing_defect`, and terminal exit.  The theorem-shaped target:
+every candidate extremizer either has a root-locus/Lee-Yang certificate, a
+relation-lattice/ear certificate, a generated first-obstruction cocycle, an
+AP/GW boundary stop, or named F7/THM-572 residual debt. -> HYP-3113,
+HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3106, HYP-3105,
+HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3062, HYP-2879, THM-577,
+LTI-250, LTT-148, T1189, OPEN-Q-108.
 
 **OPEN-Q-108 S258 two-frontier observer-gluing addendum:**
 HYP-3098 turns the current proof frontier into a paired obligation rather
