@@ -1,0 +1,24 @@
+Connected Omega structural classes REALIZED (m<=6), with example H:
+  m=1: K1                             H=3
+  m=2: CLIQUE K2, TREE, STAR K1,1, PATH P2, BIPARTITE H=5
+  m=4: CLIQUE K4                      H=9
+  m=5: CLIQUE K5                      H=11
+  m=6: 6v-14e (other)                 H=17
+  m=6: CLIQUE K6                      H=13
+
+Family realized-counts: {'CLIQUE': 35255, 'TREE': 18435, 'STAR': 18435, 'PATH': 18435, 'BIPARTITE': 18435, 'K1': 14326, '6v-14e': 857}
+
+Forbidden families (NEVER realized as connected Omega in this scan):
+  CYCLE: NOT realized (candidate forbidden family)
+  STAR: realized
+  PATH: realized
+  TREE: realized
+  BIPARTITE: realized
+
+--- kps-S31ah note ---
+SUGGESTIVE (sampling-limited): small connected Omega are CLIQUE-dominated K_m (m!=3,10) + rare dense
+near-cliques (K6-e at H=17, I=1+12+4); sparse graphs (cycles C_m, large stars/paths/trees) not hit.
+CAVEAT: P3 IS realizable at n=7 (THM-200, 3360 tournaments) -- my near-transitive scan missed it, so
+"forbidden family" verdicts here are NOT rigorous. The rigorous facts remain: K_m realizable iff m!=3,10
+(the ladder), and small-Omega realizability is sparse. Candidate NEW certificate to verify properly:
+"C_m (m>=4) is never a connected COMPONENT of Omega(T)" -- odd cycles cluster, don't form conflict-cycles.
