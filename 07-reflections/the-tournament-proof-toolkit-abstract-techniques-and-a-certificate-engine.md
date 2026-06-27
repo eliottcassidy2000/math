@@ -87,5 +87,32 @@ family of forbidden-substructure certificates generalizing THM-201/202.
 - **Open hypotheses** that count something or assert an extremal config (scan the INDEX).
 - **Concurrent agents' new ideas.**
 
-→ `04-computation/tournament_certificate_engine_kps.py`, THM-002/200/201/202/115/029/027/030/255/020,
-the even-graph metagraph, [[lrc14-thread]], HYP-3093 (degeneracy caveat).
+## S31ah results + the 3-agent convergence (where the technique is powerful, where it is vacuous)
+
+The directive went to three machines at once; **kps (this engine), codex-S260 (a "contradiction grammar"
+layer on top of it), and mac-mini-S65 (a generative catalog) converged.** Shared verdicts:
+
+- **The toolkit is VALIDATED:** the generator mechanically rediscovers THM-200/115/201/202/029. The
+  complete results: the **Hamiltonian-path-count spectrum of all tournaments is exactly `{odd ≥1}\{7,21}`**;
+  **`K_m` realizable as `Ω` ⟺ `m ∉ {3,10}`** (`⟺ 1+2m ∉ {7,21}`). All H-based certificates reduce to the
+  two gaps `{7,21}`. THM-115 (`H≠21`, "pending peer verification") is **independently corroborated** (Moon
+  bound loose: min `α₁` at `m=9` is 24 not 12 ⟹ `H≥49`; `H=21` never observed; the 5 connected `I=21`
+  graphs `{K₁₀,K₈-e,K₆-M,K₆-P₃,P₄}` are non-realizable).
+- **Powerful for:** tournament/H questions, `Ω`-realizability, Hamiltonian-path counts, score profiles,
+  H-spectrum membership — anything that is *genuinely a complete tournament shadow* of a predicate.
+- **VACUOUS for LRC(14)** (all three agreed, two ways): (i) **apex-7 ≠ H-gap-7** — a numerical
+  coincidence (`H=7` is `I(K₃,2)` from cycle-counting; LRC-7 is the apex prime of `14=2·7`). (ii) The
+  LRC's tournament-native structure is the **order-2 antipodal symmetry** (the 7 pairs `{r,r+7}` mod 14,
+  a triangle-free perfect matching — the *opposite* of `K₃`), whose conflict graph has **no odd cycles**,
+  so `H=1` and the H-certificate is vacuously satisfied. The coarse winding tournament **degenerates at
+  exactly `k≥8`** (HYP-3093, antipodal-tie pigeonhole). So the LRC lever is NOT a forbidden-H hit; it
+  reduces to the **coverage extremality** (consec-maximizes), the part-1 crux. *The H-contradiction is a
+  decisive TERMINAL move, never a first move, and only where the encoding is a complete tournament shadow.*
+
+The lasting deliverable is the reusable engine (`certify(adj)` battery) + the generator
+(spectrum-gap discovery) + the catalog — now used by codex's grammar layer.
+
+→ `04-computation/tournament_certificate_engine_kps.py` (+ `_spectrum_discovery`, `_single_component_H_ladder`,
+`_thm115_moon_verification`, `_I21_omega_miner`, `_certify_applications`), HYP-3101 (this toolkit, renamed
+from 3099), HYP-3099 (mac-mini-S65), HYP-3100 (codex-S260), THM-002/200/201/202/115/029/027/030/255/020,
+HYP-3093 (LRC degeneracy = the antipodal lever), [[lrc14-thread]].
