@@ -29,21 +29,25 @@ H-contradiction is a TERMINAL move (not first), valid only where the encoding is
 shadow. The reusable engine is now used by codex's grammar layer. -> HYP-3101, the toolkit reflection.
 
 ## codex-2026-06-27-S261 -- perspective groupoid controlled-forgetting functors (reserved)
+## codex-2026-06-27-S261 -- perspective groupoid controlled-forgetting functors
 
 Owner asked to connect the A000568 perspective-count break, k-depth
 perspectives, edge/cycle/clique/conflict viewpoints, and prior dihedral
 tournament work to the active LRC14 proof frontier.
 
-Reserved HYP-3103, T1181, LTI-242, and LTT-140 for a perspective-groupoid
-formalization.  The seed facts being integrated are the first shifted
+Renumbered the perspective-groupoid lane to HYP-3106, T1183, LTI-244, and
+LTT-142 after incoming S66 claimed HYP-3103 for the miss-count PGF zeros,
+incoming HYP-3104 claimed the LRC/tournament maximizer signal atlas, and
+incoming HYP-3105 claimed the tournament obstruction-transfer atlas.  The
+seed facts being integrated are the first shifted
 rooted-perspective failure `P(5)=48 < U(6)=56`, node-depth recovery of exact
 rooted type before the defect, the ordered-pair incident-word lift, the
 directed-edge cross-sector orientation repair, and the dihedral/converse
 warning that reflection/ownership sidecars cannot be silently quotiented.
 Incoming HYP-3101/HYP-3102 keep their topology/component-bound and
 first-obstruction-cocycle namespaces; this perspective lane is now a bridge
-that treats those as two stress tests for legal quotient functors. Computation
-and synthesis pending in the same session.
+that treats those as two stress tests for legal quotient functors.  HYP-3103 is
+the analytic PGF-root sidecar imported by this lane, not its identifier.
 ## mac-mini-2026-06-27-S66 -- what maximizes LRC values: a NEW SIGNAL (the miss-count PGF zeros)
 
 Owner: understand what maximizes LRC values <-> tournaments (comprehensive, niche details), be bold/wild on the
@@ -76,6 +80,45 @@ dist, Lee-Yang region, fugacity rank curve, arg-spread, discriminant, winding-to
 
 Honest: the Route 5 'rank-flip' (consec worst at z=3) NOT reproduced -- the tournament fugacity acts on a
 DIFFERENT GF (odd-cycle alpha_j), the two are parallel not one object (signal #7 compares them directly).
+
+## codex-2026-06-27-S261 -- perspective groupoid scout continuation
+
+After rebasing over HYP-3103, S261 treats HYP-3101/HYP-3102 as two structural
+stress tests for legal quotient functors.  HYP-3103 adds a third stress test:
+miss-count PGF root signatures are analytic sidecars for moment/extremality
+quotients.  HYP-3104 adds the matching maximizer-transfer sidecar: exchange
+traps, first live interaction order, and `H`-spectrum alarms are also data
+that a quotient may not erase silently.  HYP-3105 adds the terminal-use
+sidecar: forbidden-spectrum transfer is legal only when the transfer functor
+and destroyed coordinate are named.
+
+Added `04-computation/perspective_groupoid_forgetting_codex_s261.py` and
+stored `05-knowledge/results/perspective_groupoid_forgetting_codex_s261.out`.
+The scout verifies the shifted A000568 failure and its next row:
+
+```text
+P_node(5)=48 < U(6)=56
+P_node(6)=296 < U(7)=456
+node depth rows: [36,47,48,48] and [196,280,294,296]
+```
+
+It extends the non-node carrier table to `m=6`:
+
+```text
+arc=704, triple=928, transitive=688, cyclic=240, conflict_pair=32
+```
+
+The U(6) edge-sector/dihedral audit keeps the old warning sharp:
+size/internal sector decks separate `55/56`, while cross/full decks separate
+`56/56`; the only size/internal collision is the converse pair `344,345`, and
+there are `12` self-converse U(6) classes.  The S66 PGF sidecar is folded in:
+`consec_8` has `#real=0/6`, `extreme_mass=0.3476`, and `L_yK8=3.5823`.
+
+Tournament Analysis uses perspective functors as vertices, not runners.  The
+functor tournament has `4` directed 3-cycles, `scc_sizes=[5,1,1,1,1,1,1,1,1]`,
+and `13` Hamiltonian paths.  That is the useful frontier message: sidecar
+choice is operation-dependent, not a scalar priority list.  Updated HYP-3106,
+T1183, LTI-244, LTT-142, the result index, and the reflection.
 
 ## mac-mini-2026-06-27-S65 -- tournaments as proof engines: a catalog + 3 applications (2 refute a coincidence)
 
@@ -27241,7 +27284,7 @@ New signal list to carry forward: `maximizer_currency_vector`,
 
 During close-out, incoming mainline claimed HYP-3100 for the tournament
 contradiction grammar, HYP-3101/HYP-3102 for component/obstruction proof
-routes, and HYP-3103 for the S66 miss-count PGF zeros plus a perspective
+routes, and HYP-3103 for the S66 miss-count PGF zeros, HYP-3105 for obstruction-transfer, and HYP-3106 for a perspective
 groupoid reservation.  This atlas was renumbered to HYP-3104 and the S66 signal
 was folded in: `#real roots`, nearest root modulus, and
 log-concavity/root-confinement of `G_N(z)=sum q_t z^t` are now the root-side

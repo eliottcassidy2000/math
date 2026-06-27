@@ -149,7 +149,7 @@ obligations, and proof-carrier interfaces.
   syndromes, sidecar columns, certificate cycles, owner currents, and
   state-lift classes the vertices.
 - Need to use H=7/H=21-like contradiction transfer after the legality grammar:
-  use LTT-141 after LTT-140/LTT-139/LTT-138/LTT-137/LTT-136/LTT-133/LTT-101 and
+  use LTT-141 with LTT-142/LTT-139/LTT-138/LTT-137/LTT-136/LTT-133/LTT-101 and
   require a faithful transfer functor, preserved LRC predicate,
   destroyed-coordinate ledger, forced-expansion payload, edge-flip stress
   result, and terminal exit or named debt before importing any forbidden H
@@ -4165,18 +4165,23 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3066, HYP-3056, HYP-3054, HYP-2997, HYP-2995, HYP-2963, THM-577,
   THM-572, THM-573, LTI-241, LTT-139, T1180, OPEN-Q-108.
 
-### LTT-140: Perspective Groupoid Functors
+### LTT-142: Perspective Groupoid Functors
 
 - **Move:** Treat node k-depth views, directed-edge sectors, cycle roots,
   clique insertion cuts, conflict pairs, observer cuts, and dihedral/converse
   quotients as perspective functors.  The tournament vertices are the
   functors or sidecar obligations, not the runners.
-- **LRC use:** HYP-3103/S261 reserves the formal layer above
-  HYP-3047-HYP-3057, rebased over HYP-3101/HYP-3102.  Each perspective must
+- **LRC use:** HYP-3106/S261 supplies the formal layer above
+  HYP-3047-HYP-3057, rebased over HYP-3101/HYP-3102 and using HYP-3103 PGF
+  roots, HYP-3104 maximizer-transfer signals, and HYP-3105 obstruction-transfer
+  ledgers as sidecars.  Each perspective must
   declare its root object, automorphism action, depth rule, forgotten
   coordinate, next operation, and legal discharge before it can be used in an
   LRC14 quotient or proof tournament.  The normal-fan component bound and the
-  first-obstruction cocycle are the first two LRC stress tests.
+  first-obstruction cocycle are the first two LRC stress tests.  The S261 scout
+  verifies `P_node(6)=296<U(7)=456`, exposes the first nonzero conflict/Omega
+  perspective carrier at `m=6` with `32` orbits, and joins S66 PGF roots as an
+  analytic sidecar.
 - **Preserves:** rooted view type, acted-on orbit structure, exact
   add/delete/observer stress point, cross-sector or cycle/chirality sidecars
   when retained, and the named LRC predicate that survives the quotient.
@@ -4193,10 +4198,12 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   `endpoint_owner_packet_functor`.
 - **Next hook:** Run the S261 perspective-groupoid scout, then feed its
   sidecar vocabulary into HYP-2963 packet manifests and the observer-gluing
-  Lean frontier.
-- **Pointers:** HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3057, HYP-3054,
+  Lean frontier.  The current functor tournament has `4` directed 3-cycles and
+  a 5-node SCC, so choose sidecars by the next operation rather than by one
+  linear priority order.
+- **Pointers:** HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3057, HYP-3054,
   HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-2121, HYP-2120, HYP-2087,
-  LTI-242, LTT-140, LTT-139, LTT-138, T1181, OPEN-Q-108.
+  LTI-244, LTT-142, LTT-139, LTT-138, T1183, OPEN-Q-108.
 
 ### LTT-141: Tournament Obstruction-Transfer Atlas
 
@@ -4220,7 +4227,7 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   holes from H gaps; the best LRC14 proof-facing use now routes through
   ranked proof-carrier tournaments for `ObserverGluingCoverage`, the
   HYP-3101 component-bound packets, the HYP-3102 first-obstruction
-  syndrome packets, HYP-3103 perspective functors, and HYP-3104
+  syndrome packets, HYP-3106 perspective functors, and HYP-3104
   maximizer-signal packets.
 - **Preserves:** preserved LRC predicate, surrogate vertex set, transfer
   functor, forbidden-spectrum source, target H or typed OCF vector, minimal
@@ -4250,18 +4257,18 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   edge_flip_stress_disprover @ H2963_packet_bank`.
 - **Next hook:** Build `obstruction_transfer_ledger` rows over HYP-2963 and
   the S258/S259 observer-gluing samples.  Start with HYP-3101 component-bound
-  carriers, HYP-3102 first-obstruction syndromes, HYP-3103 perspective
+  carriers, HYP-3102 first-obstruction syndromes, HYP-3106 perspective
   functors, divisor-loaded large-apex rows, H7=6 boundary residuals, THM-577
   `j=4,5` cap-dip minimizers, K33
   cross-handoff rows, q-cusp principal-part packets, support-six collisions,
   route-state median triples, S65 cap-exchange local minima, apex7 antipodal
   tie matchings, baby-Hodge cycle-count holes, and KPS `K3/K10` clique-Omega
   realizability gaps.
-- **Pointers:** HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098,
+- **Pointers:** HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098,
   HYP-3094, HYP-3078, HYP-3076, HYP-3074,
   HYP-2963, THM-002, THM-029, THM-079, THM-115, THM-264, THM-454, THM-577,
-  LTI-243, LTI-242, LTI-241, LTI-240, LTI-239, LTI-238, LTT-141, LTT-140,
-  LTT-139, LTT-138, LTT-137, LTT-136, LTT-133, LTT-101, T1182, T1181,
+  LTI-244, LTI-243, LTI-241, LTI-240, LTI-239, LTI-238, LTT-142, LTT-141,
+  LTT-139, LTT-138, LTT-137, LTT-136, LTT-133, LTT-101, T1183, T1182,
   T1180, T1179, T1178,
   OPEN-Q-108.
 

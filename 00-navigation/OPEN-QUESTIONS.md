@@ -4,7 +4,7 @@
 HYP-3105 turns the H=7/H=21 contradiction pattern into a reusable
 obstruction-transfer audit downstream of HYP-3100's legality grammar and
 alongside HYP-3101/HYP-3102's component-bound and syndrome routes plus
-HYP-3103's perspective-functor route and HYP-3104's maximizer-signal route.  A
+HYP-3106's perspective-functor route and HYP-3104's maximizer-signal route.  A
 constructed LRC14 subproblem may cite a
 forbidden tournament/OCF spectrum only after it gives a faithful transfer
 functor, preserved LRC predicate, destroyed-coordinate ledger, required
@@ -32,10 +32,10 @@ triples.  For each row record `surrogate_vertex_set`, `transfer_functor`,
 first checks: record that literal apex7/H=7 transfer currently fails, record
 KPS's `K3/K10` clique-Omega ladder as the clean H-gap target, and record S65's
 `j=5` cap-exchange local minima as finite proof obligations. ->
-HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098, HYP-3094,
+HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098, HYP-3094,
 HYP-3078, HYP-3076, HYP-3074, HYP-2963, THM-002, THM-029, THM-079,
-THM-115, THM-264, THM-454, THM-577, LTI-243, LTI-242, LTI-241, LTI-240,
-LTI-239, LTT-141, LTT-140, LTT-139, LTT-138, LTT-137, T1182, T1181, T1180,
+THM-115, THM-264, THM-454, THM-577, LTI-244, LTI-243, LTI-241, LTI-240,
+LTI-239, LTT-142, LTT-141, LTT-139, LTT-138, LTT-137, T1183, T1182, T1180,
 T1179, T1178, OPEN-Q-108.
 
 **OPEN-Q-108 S258 two-frontier observer-gluing addendum:**
