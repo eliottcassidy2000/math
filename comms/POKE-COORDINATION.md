@@ -56,6 +56,12 @@ S245 adds the **route-state median-hull scheduler (HYP-3077)**. It checks the co
 
 The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, and median-hull scheduler status before a legal nonterminal center is promoted to a proof carrier.
 
+## codex-S245 -- Modular Cusp / q-Pochhammer Hurwitz Carrier
+
+Upgraded the HYP-3075 Hurwitz-Markov-Pell reservation with the q-Pochhammer and full-modular-group cusp rule.  New script/output: `04-computation/lrc14_modular_cusp_pochhammer_hurwitz_s245.py`, `05-knowledge/results/lrc14_modular_cusp_pochhammer_hurwitz_s245.out`; tangent/technique: T1161 / LTI-226 / LTT-124.
+
+Key split: a modular q-series is proof data only after its finite principal part at `i infinity` is retained.  The scout records `(q;q)_infty` pentagonal support, partition tail, `Delta=q*(q;q)_infty^24`, `j=q^-1+744+196884q+...`, `j^2` principal part `{q^-2:1,q^-1:1488}`, and a checked Hurwitz Vieta orbit from `(2,2,2,2)`.  Handoff fields: `modular_cusp_principal_part_order`, `finite_negative_power_budget`, `principal_part_coeff_vector`, `q_pochhammer_tail_signature`, `eta_delta_denominator_lane`, `j_rational_function_address`, `hurwitz_vieta_seed`, `hurwitz_mutation_depth`, `continued_fraction_period_word`, `pell_wall_unit`, and `cusp_tail_discharge_route`.
+
 The Henselian unit rule (updated):
 ```text
 Every spectral refinement must utilize Hensel lemma machinery to preserve local

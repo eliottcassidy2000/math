@@ -72,6 +72,10 @@ obligations, and proof-carrier interfaces.
   stack:
   use LTT-122 and separate native `3-vs-3` support-six collisions from
   rank-lowered `2-vs-2` square-cube shadows before naming any residual debt.
+- Need to import q-Pochhammer/modular-function tails:
+  use LTT-124 and retain the finite cusp principal part, eta/Delta lane,
+  Hurwitz Vieta seed, and Markov/Pell address before trusting an infinite
+  q-series or Diophantine mutation tail.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3478,6 +3482,44 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2753, HYP-2456, HYP-2454, HYP-2963, THM-572, LTI-223, LTI-221, LTI-219,
   LTI-210, LTI-209, LTT-121, LTT-119, LTT-117, LTT-108, LTT-107, T1158,
   OPEN-Q-108.
+
+### LTT-124: Modular Cusp / q-Pochhammer Hurwitz Carrier
+
+- **Move:** Treat modular q-series and Hurwitz/Markov/Pell scalar
+  coincidences as finite-address-plus-tail objects.  For full-modular-group
+  modular functions, the finite address is the principal part at the cusp
+  `i infinity`; for Hurwitz equations, it is the Vieta seed and mutation word.
+- **LRC use:** HYP-3075/S245 extends the S243 Hurwitz-Markov-Pell carrier.
+  The scout records the sparse pentagonal support of
+  `(q;q)_infty`, the dense partition tail of `1/(q;q)_infty`,
+  `Delta=q*(q;q)_infty^24`, `j=q^-1+744+196884q+...`, the finite principal
+  part of `j^2`, and the Markov-Hurwitz Vieta orbit from `(2,2,2,2)`.  The
+  proof use is the shared guardrail: infinite q-tails and infinite mutation
+  orbits are legal only after their finite cusp/arithmetic address is named.
+- **Preserves:** Cusp principal-part order, finite negative-power budget,
+  principal-part coefficient vector, q-Pochhammer tail signature, eta/Delta
+  lane, `j`-address, Hurwitz seed, mutation depth, continued-fraction/Markov
+  address, Pell wall unit, and discharge route.
+- **Forgets / guardrail:** Raw q-coefficients, raw partition counts, raw
+  Hurwitz quadruples, and raw modular-function names forget the finite debt
+  that makes the tail legal.  Runners are not the tournament vertices here;
+  proof sidecars are.
+- **Tournament fingerprint:** S245 uses proof-carrier sidecars as vertices and
+  is transitive:
+  `labelled_lrc_packet_sheaf > modular_cusp_principal_part >
+  full_modular_group_invariance_gate > q_pochhammer_eta_tail >
+  hurwitz_vieta_seed_orbit > continued_fraction_markov_address >
+  pell_wall_unit_address > raw_q_series_coefficients > raw_hurwitz_scalar`.
+- **Next pull:** Add `modular_cusp_principal_part_order`,
+  `finite_negative_power_budget`, `principal_part_coeff_vector`,
+  `q_pochhammer_tail_signature`, `eta_delta_denominator_lane`,
+  `j_rational_function_address`, `hurwitz_vieta_seed`,
+  `hurwitz_mutation_depth`, `continued_fraction_period_word`,
+  `pell_wall_unit`, and `cusp_tail_discharge_route` to a HYP-2963 analytic or
+  Diophantine packet sample.
+- **Pointers:** HYP-3075, HYP-3076, HYP-3074, HYP-3073, HYP-3072, HYP-3071,
+  HYP-3062, HYP-3060, HYP-3058, HYP-3009, HYP-2963, HYP-2627, HYP-2617,
+  HYP-2614, THM-538, THM-572, LTI-226, LTT-124, T1161, OPEN-Q-108.
 
 ## Immediate Pull List
 

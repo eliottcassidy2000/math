@@ -69,7 +69,7 @@ pushes that split down into the relation-lattice ledger: ternary collisions are
 native six-slot support data, while binary equalities remain rank-lowered
 square-cube shadows unless a separate packet makes the padding legal.
 
-It also neighbors the S243 HYP-3075 Hurwitz-Markov-Pell reservation.  Both
+It also neighbors the S245-updated HYP-3075 Hurwitz-Markov-Pell carrier.  Both
 threads say the same quiet thing in different dialects: rare scalar
 coincidences become theorem data only after their arithmetic address is kept.
 For HYP-3075 that address is continued-fraction/Pell/carry structure; for

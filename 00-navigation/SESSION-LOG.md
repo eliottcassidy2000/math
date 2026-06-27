@@ -1,3 +1,25 @@
+## codex-2026-06-27-S245 -- modular cusp / q-Pochhammer Hurwitz carrier (HYP-3075/T1161/LTI-226/LTT-124)
+
+User asked to merge q-Pochhammer series, the full-modular-group modular
+function cusp rule, and Hurwitz's equation.  Upgraded the S243 HYP-3075
+Hurwitz-Markov-Pell reservation into a finite modular-cusp carrier.  Added
+exact scout `04-computation/lrc14_modular_cusp_pochhammer_hurwitz_s245.py`,
+stored `05-knowledge/results/lrc14_modular_cusp_pochhammer_hurwitz_s245.out`,
+and created reflection
+`07-reflections/lrc14-modular-cusp-pochhammer-hurwitz-codex-s245.md`.
+
+Main readout: a full-modular-group modular function has a q-expansion at
+`i infinity` with finitely many negative powers, so the LRC proof analogue is
+finite named cusp debt plus forced q-Pochhammer/eta tail.  The scout records
+`(q;q)_infty` pentagonal support through `q^32`, partition tail
+`1/(q;q)_infty`, `Delta=q*(q;q)_infty^24`, `j=q^-1+744+196884q+...`, `j^2`
+principal part `{q^-2:1,q^-1:1488}`, and a checked Hurwitz Vieta orbit from
+`(2,2,2,2)`.  New packet fields include finite principal-part order, q-tail
+signature, eta/Delta lane, `j` address, Hurwitz seed/mutation depth,
+continued-fraction/Pell address, and cusp-tail discharge route. Tournament
+Analysis uses proof sidecars rather than q-coefficients, Hurwitz quadruples, or
+runners.
+
 ## codex-2026-06-27-S244 -- sixth-power collision sidecar (HYP-3076/T1159/LTI-224/LTT-122)
 
 User asked to merge ideas from the equations
