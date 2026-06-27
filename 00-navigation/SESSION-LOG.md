@@ -1,3 +1,30 @@
+## kind-pasteur-2026-06-27-S31af -- level-7 sieve (THM-573) + the dilation correction
+
+Integrated the incoming LRC(14) work — mac-mini-S59's covering-bound REDIRECT,
+codex-S122 THM-571, kps Node-3/S31v — into one proof tree, and let the synthesis
+suggest an improved argument. Two concrete outcomes:
+
+**(1) THM-573, the level-7 lift sieve (sharpening).** Every 13-set with `>=7`
+multiples of 7 has `M>1/14`, by a single argument (no Case-1/Case-2 split). Since
+`14|v => 7|v`, this *subsumes THM-570+571* (`|M14|>=7 ⊂ |H|>=7`) and relocates the
+residual from `|M14|<=6` to `|H|<=6` (`<=6` multiples of 7) — strictly smaller.
+Proof: `H=7P`, `P`-safe phase by LRC(<=13), 7 lifts keep `H` safe, each 7-coprime
+speed forbids `<=1` lift (arc `1/7` = spacing `1/7`), `13-|H|<=6<7` ⟹ survivor.
+Verified `lrc_level7_sieve_kps.py`: 1500/1500, `<=1`-forbidden crux over 20000.
+
+**(2) The dilation correction (refutes a tempting margin).** "covering ⟹ `M>=1/13`"
+is FALSE: `2·{1..13}={2,..,26}` is covering (has 14) and tight (`M=1/14`), and
+primitive `{1..12,182}` has `M=14/183<1/13` (182=14·13 aliases to 0 mod 13 onto
+`{1..12}`'s optimum; S3: only `13|j` drops it). So the covering bound is TIGHT —
+mac-mini's "strictly weaker / margin" framing is wrong (its *logical* reduction is
+fine; the census is not logically required for the bound, but no free margin exists).
+
+Net: LRC(14) still NOT proved. Residual sharpened to *primitive covering rows with
+`<=6` multiples of 7 over a bounded coprime core* (Node-3 / finite-`V*` wall).
+Logged HYP-3084. Reflection
+`07-reflections/the-covering-bound-proof-tree-level7-sieve-and-the-dilation-correction.md`.
+Updated honest status doc with the S31af addendum.
+
 ## codex-2026-06-27-S253 -- q-cusp Hurwitz finite-address branch-closure synthesis
 
 Expanded the HYP-3083/T1167/LTI-232/LTT-130 stub into a full remaining-proof

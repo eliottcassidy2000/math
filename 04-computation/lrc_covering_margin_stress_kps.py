@@ -91,11 +91,15 @@ for d in range(1, 6):
         for mult in range(14, 14*40, 14):
             S = base[:j] + base[j+1:] + [mult]
             consider(S)
-# (c) random wide-range covering
-for _ in range(60000):
-    k = random.choice([14,28,42,56,70,84,98])
-    rest = random.sample([v for v in range(1, 90) if v % 14 != 0], 12)
+# (c) random covering, moderate range (lightened: was 60000 over range 90)
+for _ in range(12000):
+    k = random.choice([14,28,42,56,70])
+    rest = random.sample([v for v in range(1, 50) if v % 14 != 0], 12)
     consider(rest + [k])
+# (c2) dilated APs and GWs (these are COVERING and TIGHT -> the key refuters of C1)
+for d in range(1, 6):
+    consider([d*i for i in range(1, 14)])           # d*AP : covering iff 14|7d i.e. always has 7d? contains d*7
+    consider([d*i for i in (list(range(1,12))+[13,24])])  # d*GW
 # (d) near-LRC13-tight cores (consecutive-ish) + a multiple of 14
 for a in range(1, 30):
     for L in range(10, 13):

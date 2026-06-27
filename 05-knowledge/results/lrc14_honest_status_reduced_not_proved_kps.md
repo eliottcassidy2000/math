@@ -56,3 +56,36 @@ descent.  This is compatible with the honest verdict: it removes one named
 covering residual, but it does not prove the bounded/comparable core or the
 global tight-locus census.  The remaining open core is still the
 consec-maximizes / three-gap rigidity statement.
+
+## kind-pasteur S31af addendum — two corrections + a sharpening
+
+Integrating mac-mini-S59's covering-bound REDIRECT changes the framing of "what
+remains," and two things sharpen above:
+
+1. **The remaining core is the covering BOUND, not the three-gap rigidity.**
+   LRC(14) ⇔ [every covering 13-set has `M ≥ 1/14`]; the 14-free half is the
+   trivial `t=1/14` witness (THM-523). The tight-locus census (which sets equal
+   `1/14`) is *not logically required* for the bound. So the earlier "the
+   remaining core IS the three-gap rigidity" overstated: the bound is weaker
+   than the census. (mac-mini-S59 is right on this point.)
+
+2. **But the covering bound is TIGHT — there is no free margin.** The dilated AP
+   `2·{1..13}={2,..,26}` is covering (contains 14) and tight (`M=1/14`). The
+   primitive `{1..12,182}` has `M=14/183<1/13` (182=14·13 aliases to 0 mod 13).
+   So "covering ⟹ `M≥1/13`" is **REFUTED** (HYP-3084), and mac-mini's
+   "strictly weaker / has a margin" reading is wrong. The hard tight cases
+   (dilations of AP/GW) sit *inside* the covering family, with `|H|` small.
+   WLOG primitive; then the open content is *primitive covering with `≤6`
+   multiples of 7*, which still includes near-tight rows.
+
+3. **Sharpening — THM-573 (the level-7 lift sieve).** Every 13-set with `≥7`
+   multiples of 7 has `M>1/14`, by one argument (no case split), subsuming
+   THM-570+571 and **relocating the residual to `≤6` multiples of 7** (strictly
+   smaller than `|M14|≤6`). PROVED modulo accepted LRC(≤13).
+
+**Net honest verdict (unchanged at the top level):** still NOT a proof of
+LRC(14). The residual is now precisely *primitive covering rows with `≤6`
+multiples of 7 over a bounded coprime core* — the Node-3 / effective
+Erdős–Turán / finite-`V*` wall. The sieve sharpens the perimeter; it does not
+breach the wall. -> THM-573, HYP-3084, mac-mini-S59,
+`the-covering-bound-proof-tree-level7-sieve-and-the-dilation-correction.md`.
