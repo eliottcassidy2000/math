@@ -1,0 +1,172 @@
+LRC14 CIRCUIT-COMPLEXITY PAST-WORK SYNTHESIS
+status: evidence / executable synthesis; not a proof
+vertex_set: proof carriers and sidecar gates, not runners or arcs
+pairwise_observable: retained LRC predicate, exact gap readout, uniform family, route purity, sidecar closure, bridge safety, proof readiness, destroyed-coordinate discharge, and finite-bank warning
+switch: majority comparison of the observable vector; ties use weighted payload then the declared tie path
+tie_hamiltonian_path:
+  endpoint_phi_relu_gap -> endpoint_cover_circuit_positivity -> automatic_magnitude_zipper -> route_state_horn_median_hull -> protected_branch_graph_no_naked_bridge -> pde_weak_form_endpoint_compiler -> mciq_monotone_proof_frontier -> three_state_middle_automaton -> finite_bank_apex_threshold_warning -> raw_scalar_p0_shadow
+
+PAST-WORK FACTS
+- HYP-2112: Phi(C)=mu(safe set) verified exactly 900/900 for n=6..14; Phi>0 iff loose.
+- HYP-2108: P(S)>0 iff loose for endpoint-cover circuits; sign gate precedes Phi value.
+- HYP-2109: L/M/R automaton proposes M as the unavoidable wall/tie corridor.
+- HYP-3016: Automatic/residue languages mix AP/GW boundary atoms with open rows unless magnitude is retained.
+- HYP-3023: Full HYP-2963 bank: magnitude_cocycle has 100.0% route purity after automatic fibers mix.
+- HYP-3077: Horn proof-state hull: 41 features, 34 rules, 29791 triples, 0 illegal centers.
+- HYP-3082: Raw scalar star has 5 naked bridges; protected branch graph has 0 naked bridges.
+- HYP-3111: Monotone proof-frontier circuit has 10 inputs, size 8, depth 4, all inputs essential.
+- HYP-3115: Finite-bank literal apex7_error<=5 isolates max p0, but is explicitly a uniformity warning.
+
+CARRIER LEDGER
+- endpoint_phi_relu_gap
+  sources: HYP-2112, HYP-2108
+  role: exact numeric output gate
+  payload_score: 108
+  circuit_proxy: size=4, depth=2
+  retains: Phi(C)=mu(safe set) as a ReLU/ramp gap sum
+  destroys_or_warns: which endpoint owners caused each ramp unless paired with HYP-2108
+  next_test: compile Phi, endpoint owners, and multiple-of-14 checks into HYP-2963 rows
+- endpoint_cover_circuit_positivity
+  sources: HYP-2108
+  role: closed endpoint-cover sign gate
+  payload_score: 97
+  circuit_proxy: size=3, depth=2
+  retains: P(S)>0 iff loose; midpoint circuit resonance
+  destroys_or_warns: gap magnitude; recovered by HYP-2112 Phi
+  next_test: pair P-sign with Phi-value so tight/worry kernels become explicit proof obligations
+- three_state_middle_automaton
+  sources: HYP-2109
+  role: stateful wall-crossing gate
+  payload_score: 81
+  circuit_proxy: size=3, depth=2
+  retains: L/M/R terminal state, with M as wall or tie corridor
+  destroys_or_warns: metric gap size and magnitude cocycle
+  next_test: prove or refute no-closed-middle around endpoint-cover circuits
+- automatic_magnitude_zipper
+  sources: HYP-3016, HYP-3023
+  role: finite-state quotient repaired by magnitude cocycle
+  payload_score: 104
+  circuit_proxy: size=6, depth=3
+  retains: (M, q_threshold, farey_excess, lacunary_tail_ratio)
+  destroys_or_warns: route purity inside automatic/residue-terminal fibers
+  next_test: turn the magnitude cocycle purity into a family lemma for automatic fibers
+- route_state_horn_median_hull
+  sources: HYP-3074, HYP-3077
+  role: proof-circuit legality and closure gate
+  payload_score: 107
+  circuit_proxy: size=34, depth=2
+  retains: packet/route/certificate/sidecar/discharge Horn closure
+  destroys_or_warns: specific terminal atom when only scheduler center survives
+  next_test: compile multi-premise sidecar laws or prove the current unary closure is enough
+- protected_branch_graph_no_naked_bridge
+  sources: HYP-3082
+  role: terminal no-naked-bridge gate
+  payload_score: 113
+  circuit_proxy: size=83, depth=4
+  retains: protected branch graph after route/section/grid/no-lift/q-cusp exits
+  destroys_or_warns: raw scalar-star bridges; five naked bridges before protection
+  next_test: prove every primitive residual emits the protected sidecar set before contraction
+- mciq_monotone_proof_frontier
+  sources: HYP-3111, HYP-3115
+  role: bounded monotone proof-circuit frontier
+  payload_score: 92
+  circuit_proxy: size=8, depth=4
+  retains: 10-input monotone proof-frontier circuit, size 8, depth 4
+  destroys_or_warns: uniform family parameter and non-fitted thresholds
+  next_test: replace finite-bank literals with a uniform circuit over named proof sidecars
+- pde_weak_form_endpoint_compiler
+  sources: HYP-3111, HYP-2112, HYP-2108
+  role: weak-form compiler into endpoint Phi
+  payload_score: 99
+  circuit_proxy: size=8, depth=5
+  retains: mass/stiffness/boundary/zero-mode data routed to Phi
+  destroys_or_warns: root/free-energy geometry before the weak-form packet is typed
+  next_test: annotate residual rows with mass, stiffness, zero modes, Phi, and terminal exit
+- finite_bank_apex_threshold_warning
+  sources: HYP-3115
+  role: small fitted classifier warning
+  payload_score: 21
+  circuit_proxy: size=1, depth=1
+  retains: single bounded-bank literal apex7_error <= 5
+  destroys_or_warns: uniformity, proof basis, and reason the threshold is not fitted
+  next_test: use only as an alarm that a genuine uniform circuit field is missing
+- raw_scalar_p0_shadow
+  sources: HYP-3103, HYP-3115
+  role: negative-control scalar output
+  payload_score: 6
+  circuit_proxy: size=1, depth=1
+  retains: single value p0=G(0)
+  destroys_or_warns: root locus, route label, endpoint owners, and all proof sidecars
+  next_test: never use without a retained root/ear/gap/route certificate
+
+TOURNAMENT FINGERPRINT
+score_hist={0:1, 1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1, 8:1, 9:1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+proof_payload_order:
+  protected_branch_graph_no_naked_bridge > route_state_horn_median_hull > endpoint_phi_relu_gap > automatic_magnitude_zipper > pde_weak_form_endpoint_compiler > endpoint_cover_circuit_positivity > mciq_monotone_proof_frontier > three_state_middle_automaton > finite_bank_apex_threshold_warning > raw_scalar_p0_shadow
+
+SMALLEST-CIRCUIT GAUGE CHECK
+edge_flips_against_smallest_circuit_first=38
+- proof_payload prefers endpoint_phi_relu_gap; smallest_circuit_first prefers endpoint_cover_circuit_positivity
+- proof_payload prefers endpoint_phi_relu_gap; smallest_circuit_first prefers three_state_middle_automaton
+- proof_payload prefers route_state_horn_median_hull; smallest_circuit_first prefers endpoint_phi_relu_gap
+- proof_payload prefers protected_branch_graph_no_naked_bridge; smallest_circuit_first prefers endpoint_phi_relu_gap
+- proof_payload prefers endpoint_phi_relu_gap; smallest_circuit_first prefers finite_bank_apex_threshold_warning
+- proof_payload prefers endpoint_phi_relu_gap; smallest_circuit_first prefers raw_scalar_p0_shadow
+- proof_payload prefers automatic_magnitude_zipper; smallest_circuit_first prefers endpoint_cover_circuit_positivity
+- proof_payload prefers route_state_horn_median_hull; smallest_circuit_first prefers endpoint_cover_circuit_positivity
+- proof_payload prefers protected_branch_graph_no_naked_bridge; smallest_circuit_first prefers endpoint_cover_circuit_positivity
+- proof_payload prefers pde_weak_form_endpoint_compiler; smallest_circuit_first prefers endpoint_cover_circuit_positivity
+- proof_payload prefers endpoint_cover_circuit_positivity; smallest_circuit_first prefers finite_bank_apex_threshold_warning
+- proof_payload prefers endpoint_cover_circuit_positivity; smallest_circuit_first prefers raw_scalar_p0_shadow
+- proof_payload prefers automatic_magnitude_zipper; smallest_circuit_first prefers three_state_middle_automaton
+- proof_payload prefers route_state_horn_median_hull; smallest_circuit_first prefers three_state_middle_automaton
+- proof_payload prefers protected_branch_graph_no_naked_bridge; smallest_circuit_first prefers three_state_middle_automaton
+- proof_payload prefers mciq_monotone_proof_frontier; smallest_circuit_first prefers three_state_middle_automaton
+- proof_payload prefers pde_weak_form_endpoint_compiler; smallest_circuit_first prefers three_state_middle_automaton
+- proof_payload prefers three_state_middle_automaton; smallest_circuit_first prefers finite_bank_apex_threshold_warning
+- proof_payload prefers three_state_middle_automaton; smallest_circuit_first prefers raw_scalar_p0_shadow
+- proof_payload prefers route_state_horn_median_hull; smallest_circuit_first prefers automatic_magnitude_zipper
+- proof_payload prefers protected_branch_graph_no_naked_bridge; smallest_circuit_first prefers automatic_magnitude_zipper
+- proof_payload prefers automatic_magnitude_zipper; smallest_circuit_first prefers finite_bank_apex_threshold_warning
+- proof_payload prefers automatic_magnitude_zipper; smallest_circuit_first prefers raw_scalar_p0_shadow
+- proof_payload prefers protected_branch_graph_no_naked_bridge; smallest_circuit_first prefers route_state_horn_median_hull
+- proof_payload prefers route_state_horn_median_hull; smallest_circuit_first prefers mciq_monotone_proof_frontier
+- proof_payload prefers route_state_horn_median_hull; smallest_circuit_first prefers pde_weak_form_endpoint_compiler
+- proof_payload prefers route_state_horn_median_hull; smallest_circuit_first prefers finite_bank_apex_threshold_warning
+- proof_payload prefers route_state_horn_median_hull; smallest_circuit_first prefers raw_scalar_p0_shadow
+- proof_payload prefers protected_branch_graph_no_naked_bridge; smallest_circuit_first prefers mciq_monotone_proof_frontier
+- proof_payload prefers protected_branch_graph_no_naked_bridge; smallest_circuit_first prefers pde_weak_form_endpoint_compiler
+- proof_payload prefers protected_branch_graph_no_naked_bridge; smallest_circuit_first prefers finite_bank_apex_threshold_warning
+- proof_payload prefers protected_branch_graph_no_naked_bridge; smallest_circuit_first prefers raw_scalar_p0_shadow
+- proof_payload prefers pde_weak_form_endpoint_compiler; smallest_circuit_first prefers mciq_monotone_proof_frontier
+- proof_payload prefers mciq_monotone_proof_frontier; smallest_circuit_first prefers finite_bank_apex_threshold_warning
+- proof_payload prefers mciq_monotone_proof_frontier; smallest_circuit_first prefers raw_scalar_p0_shadow
+- proof_payload prefers pde_weak_form_endpoint_compiler; smallest_circuit_first prefers finite_bank_apex_threshold_warning
+- proof_payload prefers pde_weak_form_endpoint_compiler; smallest_circuit_first prefers raw_scalar_p0_shadow
+- proof_payload prefers finite_bank_apex_threshold_warning; smallest_circuit_first prefers raw_scalar_p0_shadow
+
+SYNTHESIZED INVARIANT
+circuit_certificate_vector = (input_packet_schema, gate_basis, sidecar_closure, exact_gap_functional, route_purity, bridge_safety, uniform_family_parameter, terminal_exit)
+gate_assignment:
+- output_numeric_gate: HYP-2112 Phi
+- sign_resonance_gate: HYP-2108 endpoint-cover P
+- stateful_wall_gate: HYP-2109 L/M/R middle automaton
+- route_purity_gate: HYP-3023 magnitude cocycle
+- legality_gate: HYP-3077 Horn sidecar closure
+- terminal_bridge_gate: HYP-3082 protected branch graph
+- frontier_uniformity_gate: HYP-3111/HYP-3115 proof circuit
+
+ASSUMPTION CHALLENGE
+- challenged: circuit vertices should be runner rows or Boolean literals.
+- replacement: vertices should be proof obligations/gates with declared retained coordinates.
+- preserves: LRC14 packet validity up to exact gap, route, bridge, and terminal-exit sidecars.
+- destroys if omitted: endpoint owners, magnitude cocycle, root/ear payload, and uniform-family debt.
+
+NEXT PROOF TESTS
+1. Build a HYP-2963 row ledger with columns Phi, P-sign, L/M/R terminal state, magnitude cocycle, Horn closure, protected-bridge status, and proof-depth stage.
+2. Prove the no-closed-middle lemma or exhibit the first endpoint-cover circuit whose terminal M cycle survives all Phi and magnitude sidecars.
+3. Replace the finite apex7_error<=5 literal with a uniform circuit family over named sidecar gates; reject it if size/depth grows by fitting the bank.
+4. Use protected-branch status as the terminal gate: a row closes only after no naked bridge remains or a named THM-572/F7 residual is emitted.

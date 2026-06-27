@@ -76,6 +76,11 @@ obligations, and proof-carrier interfaces.
   use LTT-124 and retain the finite cusp principal part, eta/Delta lane,
   Hurwitz Vieta seed, and Markov/Pell address before trusting an infinite
   q-series or Diophantine mutation tail.
+- Need to use circuit complexity without overfitting a finite bank:
+  use LTT-150 after LTT-146/LTT-147/LTT-148/LTT-149 and make proof-circuit
+  gates, sidecar obligations, and terminal exits the vertices.  Treat
+  one-literal finite-bank classifiers as telemetry until a uniform family
+  parameter and destroyed-coordinate discharge are explicit.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -4761,21 +4766,22 @@ boundary owner ledgers, zero-mode certificates, and proof-DAG gates.  These
 are still proof carriers, not PDE grid cells, Boolean gates, Ising spins,
 lattice vectors, or quintic roots.
 
-## LTT-150: Tournament of circuit missing-input carriers
+## LTT-150: Tournament of circuit missing-input and proof-carrier gates
 
-Used by codex-2026-06-27-S266 for HYP-3116.  Vertices are proof carriers and
-sidecar ledgers, not runners, arcs, Boolean gates, roots, or raw scalar
-values.  The pairwise observable is weighted proof-payload retention:
-exact gap, kernel exclusion, HYP-3107 frontier adjacency, sidecar retention,
-quotient-leakage control, formal readiness, global lift, uniformity, and
-finite checkability.
+Used by codex-2026-06-27-S266 for HYP-3116.  Treat circuit complexity as a
+tournament over typed proof-circuit gates, endpoint-cover kernels, and sidecar
+obligations, not as a search for the smallest bounded-bank Boolean classifier.
+Vertices are proof carriers and sidecar ledgers, not runners, arcs, Boolean
+gates, roots, or raw scalar values.
 
-The S266 ledger ranks the older endpoint-cover activation circuit above newer
-outside analogies.  HYP-2108 supplies the max gate `P(S)>0`; HYP-2112 supplies
-the sum gate `Phi(C)=G(v)`, equal to the exact gap.  Thus the tournament
-orients toward kernel-exclusion power before novelty.
+Endpoint-kernel audit: the pairwise observable is weighted proof-payload
+retention: exact gap, kernel exclusion, HYP-3107 frontier adjacency, sidecar
+retention, quotient-leakage control, formal readiness, global lift,
+uniformity, and finite checkability.  HYP-2108 supplies the max gate
+`P(S)>0`; HYP-2112 supplies the sum gate `Phi(C)=G(v)`, equal to the exact
+gap, so the tournament orients toward kernel-exclusion power before novelty.
 
-Fingerprint:
+Endpoint-kernel fingerprint:
 
 ```text
 score_hist = {0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1}
@@ -4783,28 +4789,52 @@ directed_3cycles = 0
 scc_sizes = [1,1,1,1,1,1,1,1,1,1,1,1,1]
 hamiltonian_path_count = 1
 edge_flips_against_novelty_gauge = 55
+priority_path =
+  endpoint_phi_sum_gap
+  -> lean_proof_frontier_dag
+  -> finite_address_observer_gluing
+  -> endpoint_P_max_activation
+  -> route_state_median_closure
+  -> haar_zipper_cocycle
+  -> fourier_toeplitz_psd_dual
+  -> boolean_mobius_low_depth_cut
+  -> lee_yang_root_ear_payload
+  -> full_boolean_mobius_hierarchy
+  -> endpoint_period_warning
+  -> minkowski_circuit_ising_bridge
+  -> finite_bank_apex7_literal
 ```
 
-Priority path:
+Proof-certificate audit: HYP-3116/S266 also looks back through
+HYP-2108/HYP-2109/HYP-2112, HYP-3016/HYP-3023, HYP-3074/HYP-3077,
+HYP-3082, and HYP-3111/HYP-3115 to build the gate basis `Phi` exact gap,
+endpoint-cover `P`, `L/M/R` wall state, magnitude cocycle, Horn sidecar
+closure, protected branch graph, proof-frontier uniformity, and
+finite-threshold warnings.
 
-```text
-endpoint_phi_sum_gap
--> lean_proof_frontier_dag
--> finite_address_observer_gluing
--> endpoint_P_max_activation
--> route_state_median_closure
--> haar_zipper_cocycle
--> fourier_toeplitz_psd_dual
--> boolean_mobius_low_depth_cut
--> lee_yang_root_ear_payload
--> full_boolean_mobius_hierarchy
--> endpoint_period_warning
--> minkowski_circuit_ising_bridge
--> finite_bank_apex7_literal
-```
+Proof-certificate fingerprint: transitive with
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}`, no directed
+3-cycles, singleton SCCs, one Hamiltonian path, and `38` edge flips against
+the "smallest circuit first" gauge.
+
+Preserves: the circuit-certificate vector
+`(input_packet_schema, gate_basis, sidecar_closure, exact_gap_functional,
+route_purity, bridge_safety, uniform_family_parameter, terminal_exit)`,
+together with endpoint-cover activation vectors and proof-circuit
+missing-input vectors.
 
 Guardrail: a finite fitted literal such as HYP-3115's `apex7_error <= 5`
 stays last because its missing-input vector contains proof uniformity,
 endpoint activation data, finite address, observer gluing, and family-split
 data.  Low-depth is useful only after the missing input is named, retained,
 reconstructed, dual-annihilated, descended, or routed to residual debt.
+
+Next pull: build the HYP-2963/HYP-3107 circuit-certificate row ledger with
+`Phi_gap`, `P_sign`, endpoint-cover activation vector, endpoint owners,
+`LMR_terminal_state`, magnitude cocycle, root/ear payload, Horn closure,
+protected branch status, proof-depth stage, finite-threshold alarm,
+uniform-family parameter, and terminal exit.
+
+Pointers: HYP-3117, HYP-3116, HYP-3115, HYP-3111, HYP-3109, HYP-3108,
+HYP-3082, HYP-3077, HYP-3074, HYP-3023, HYP-3016, HYP-2112, HYP-2109,
+HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.

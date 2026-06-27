@@ -32,6 +32,31 @@ edge flips against a novelty-first gauge warn that HYP-3115's
 `apex7_error <= 5` finite-bank literal remains a signal only until it supplies
 proof uniformity, endpoint activation, finite-address, observer-gluing, and
 family-split data.
+## codex-2026-06-27-S266 -- circuit lower-bound proof-carrier synthesis -- HYP-3116
+
+User asked to search niche past work for connections that can augment the LRC
+proof attempts, especially through circuit complexity.  Rebased over incoming
+HYP-3111/HYP-3115/HYP-3114/HYP-3113 work, then integrated the concurrent
+HYP-3116/T1191/LTI-252/LTT-150 reservation for a circuit lower-bound /
+missing-input ledger.  The lane now treats circuit complexity as a
+proof-carrier and missing-input audit rather than another scalar-complexity
+analogy.  Added
+`04-computation/lrc14_circuit_complexity_past_work_synthesis_codex_s266.py`
+with stored output in
+`05-knowledge/results/lrc14_circuit_complexity_past_work_synthesis_codex_s266.out`.
+
+Main readout: circuit complexity should be treated as a typed proof circuit
+over retained sidecars.  The gate basis is now explicit: HYP-2112 `Phi` exact
+gap, HYP-2108 endpoint-cover `P`, HYP-2109 `L/M/R` middle automaton, HYP-3023
+magnitude cocycle, HYP-3077 Horn sidecar closure, HYP-3082 protected
+no-naked-bridge graph, and HYP-3111/HYP-3115 proof-frontier/uniformity gates.
+Tournament Analysis uses proof carriers rather than runners or Boolean
+literals.  The proof-payload tournament is transitive with one Hamiltonian
+path; the important warning is `38` edge flips against a "smallest circuit
+first" gauge, so finite fitted classifiers such as `apex7_error<=5` remain
+missing-input alarms, not proof.  Next pull: build a HYP-2963 row ledger with `Phi`, `P`,
+endpoint-owner, `L/M/R`, magnitude-cocycle, root/ear, Horn-closure,
+protected-branch, proof-depth, uniform-family, and terminal-exit fields.
 
 Completed the executable audit
 `04-computation/lrc14_circuit_missing_input_ledger_codex_s266.py` with stored

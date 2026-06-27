@@ -48,6 +48,12 @@ Useful synthetic maps added later:
   closed type-A packets; proposes a boundary-fiber ladder from root signs to
   endpoint fibers, packet compatibility, incidence rank, character phase, and
   final scalar evaluation.
+- `07-reflections/lrc14-circuit-complexity-past-work-synthesis-codex-s266.md`:
+  HYP-3116/T1191 synthesis that turns older exact-gap, endpoint-cover,
+  automaton, automatic-zipper, Horn-closure, and protected-branch work into a
+  typed circuit-certificate vector.  Preserves the warning that tiny
+  finite-bank classifiers are not proof circuits unless uniformity and
+  destroyed-coordinate discharge are explicit.
 
 ## Second-Pass Small Motif Ledger
 

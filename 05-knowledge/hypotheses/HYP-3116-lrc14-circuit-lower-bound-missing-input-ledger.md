@@ -1,16 +1,21 @@
 ---
 id: HYP-3116
 title: LRC14 circuit lower-bound and missing-input ledger
-status: EVIDENCE / executable missing-input and endpoint-kernel ledger; not a proof
+status: EVIDENCE / executable missing-input, endpoint-kernel, and proof-carrier synthesis; not a proof
 source: codex-2026-06-27-S266
-script: 04-computation/lrc14_circuit_missing_input_ledger_codex_s266.py
-result: 05-knowledge/results/lrc14_circuit_missing_input_ledger_codex_s266.out
-reflections:
-  - lrc14-circuit-missing-input-ledger-codex-s266
-  - lrc14-circuit-lower-bound-missing-input-ledger-codex-s266
 tangent: T1191
 technique: LTI-252
 tournament_technique: LTT-150
+scripts:
+  - 04-computation/lrc14_circuit_missing_input_ledger_codex_s266.py
+  - 04-computation/lrc14_circuit_complexity_past_work_synthesis_codex_s266.py
+results:
+  - 05-knowledge/results/lrc14_circuit_missing_input_ledger_codex_s266.out
+  - 05-knowledge/results/lrc14_circuit_complexity_past_work_synthesis_codex_s266.out
+reflections:
+  - lrc14-circuit-missing-input-ledger-codex-s266
+  - lrc14-circuit-lower-bound-missing-input-ledger-codex-s266
+  - lrc14-circuit-complexity-past-work-synthesis-codex-s266
 related:
   - HYP-3117
   - HYP-3115
@@ -32,9 +37,15 @@ related:
   - HYP-2108
   - HYP-3098
   - HYP-3083
+  - HYP-3082
+  - HYP-3077
   - HYP-3074
   - HYP-3054
+  - HYP-3023
+  - HYP-3016
+  - HYP-2109
   - HYP-2963
+  - THM-572
   - OPEN-Q-108
 ---
 
@@ -65,6 +76,27 @@ LRC14 circuit complexity is a kernel-exclusion problem for the endpoint-cover
 activation circuit.  A low-depth quotient may be useful, but it cannot be
 terminal unless it retains or reconstructs the `Phi`/`P` activation data and
 feeds the HYP-3107 finite-address/observer-gluing proof interface.
+
+S266 executable integration turns that reservation into a concrete
+proof-carrier synthesis.  The useful invariant is:
+
+```text
+circuit_certificate_vector =
+  (input_packet_schema,
+   gate_basis,
+   sidecar_closure,
+   exact_gap_functional,
+   route_purity,
+   bridge_safety,
+   uniform_family_parameter,
+   terminal_exit)
+```
+
+This vector treats equinumerosity, equidecomposability, and equidistribution as
+distinct circuit input types.  Cardinal/fiber shadows, scissors/branch
+decompositions, and measure/root/Phi shadows may interact, but a proof circuit
+may forget one only after reconstruction, dual annihilation, or named residual
+debt is recorded.
 
 ## Executable Ledger
 
@@ -217,12 +249,138 @@ This is compatible with HYP-3111/HYP-3115.  Their
 `proof_circuit_missing_input_vector` should now be read specifically as the
 vector above, not just as a generic request for size/depth/uniformity data.
 
+## Executable Synthesis
+
+Artifact:
+
+```text
+04-computation/lrc14_circuit_complexity_past_work_synthesis_codex_s266.py
+05-knowledge/results/lrc14_circuit_complexity_past_work_synthesis_codex_s266.out
+```
+
+The script records audited facts from local past work and gives each carrier a
+common vector:
+
+```text
+(retained LRC predicate,
+ exact gap readout,
+ uniform family clarity,
+ route purity,
+ sidecar closure,
+ bridge safety,
+ proof readiness,
+ destroyed-coordinate discharge,
+ finite-bank warning)
+```
+
+Gate basis extracted from older work:
+
+```text
+HYP-2112: Phi(C)=mu(safe set), verified exactly 900/900 for n=6..14.
+HYP-2108: P(S)>0 iff loose for endpoint-cover circuits.
+HYP-2109: L/M/R automaton proposes M as the wall/tie corridor.
+HYP-3023: magnitude_cocycle has 100.0% route purity after automatic fibers mix.
+HYP-3077: 41 features, 34 Horn rules, 29791 triples, 0 illegal centers.
+HYP-3082: raw scalar star has 5 naked bridges; protected branch graph has 0.
+HYP-3111: monotone proof circuit has 10 inputs, size 8, depth 4.
+HYP-3115: apex7_error<=5 isolates the max row only as a finite-bank warning.
+```
+
+## Tournament Analysis
+
+Vertices are proof carriers and sidecar gates, not runners, arcs, Boolean
+literals, Ising spins, or scalar values.
+
+Pairwise observable: which carrier better retains the LRC predicate, gives an
+exact gap readout, scales as a uniform family, keeps route purity, enforces
+sidecar closure, protects against naked bridges, is proof-ready, discharges
+destroyed coordinates, and avoids finite-bank fitting.
+
+Switch: majority comparison of the observable vector.  Ties use weighted
+payload and then the declared tie Hamiltonian path:
+
+```text
+endpoint_phi_relu_gap
+endpoint_cover_circuit_positivity
+automatic_magnitude_zipper
+route_state_horn_median_hull
+protected_branch_graph_no_naked_bridge
+pde_weak_form_endpoint_compiler
+mciq_monotone_proof_frontier
+three_state_middle_automaton
+finite_bank_apex_threshold_warning
+raw_scalar_p0_shadow
+```
+
+Fingerprint:
+
+```text
+score_hist={0:1, 1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1, 8:1, 9:1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+edge_flips_against_smallest_circuit_first=38
+```
+
+Proof-payload order:
+
+```text
+protected_branch_graph_no_naked_bridge
+> route_state_horn_median_hull
+> endpoint_phi_relu_gap
+> automatic_magnitude_zipper
+> pde_weak_form_endpoint_compiler
+> endpoint_cover_circuit_positivity
+> mciq_monotone_proof_frontier
+> three_state_middle_automaton
+> finite_bank_apex_threshold_warning
+> raw_scalar_p0_shadow
+```
+
+The `38` edge flips against the "smallest circuit first" gauge are the main
+readout.  Small circuits are attractive, but the proof payload prefers larger
+gates when they retain exact gap data, legal sidecar closure, or
+no-naked-bridge protection.
+
+## Proof Route
+
+The next theorem-facing experiment is a row ledger over HYP-2963/HYP-3107:
+
+```text
+row_id
+input_packet_schema
+Phi_gap
+P_sign
+endpoint_owner_word
+LMR_terminal_state
+magnitude_cocycle
+automatic_word
+root_or_ear_payload
+Horn_sidecar_closure
+protected_branch_status
+proof_depth_stage
+finite_bank_literal_alarm
+uniform_family_parameter
+terminal_exit_or_named_debt
+```
+
+Candidate closure theorem:
+
+> Every primitive residual row either passes through the exact Phi/endpoint
+> gap gate, is split by the magnitude/route-purity gate, is legally closed by
+> the Horn sidecar gate, reaches the protected no-naked-bridge terminal graph,
+> or emits a named THM-572/F7 residual. Any row whose proof uses only a finite
+> threshold or raw scalar must be rejected as an unsafe quotient.
+
 ## Guardrail
 
 HYP-3115's one-literal finite-bank rule `apex7_error <= 5` is a signal, not a
 uniform proof.  This hypothesis exists to prevent that kind of finite fitted
-classifier from masquerading as a theorem route.  The endpoint-kernel script ranks that
-literal last despite its finite checkability:
+classifier from masquerading as a theorem route.  The proof-carrier scout
+sharpens this: `apex7_error<=5` is useful only as a missing-input alarm until
+the uniform family parameter and destroyed-coordinate discharge are part of the
+circuit schema.  The endpoint-kernel script also ranks that literal last
+despite its finite checkability:
 
 ```text
 finite_bank_apex7_literal:

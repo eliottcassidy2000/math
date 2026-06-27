@@ -39,6 +39,35 @@ observer-gluing certificate, or named K33/F7/THM-572/first-obstruction debt.
 -> HYP-3117, HYP-3116, HYP-3115, HYP-3111, HYP-3112, HYP-3108, HYP-3107, HYP-3102,
 HYP-3016, HYP-2963, HYP-2961, HYP-2114, HYP-2112, HYP-2108, THM-573,
 OPEN-Q-108.
+**OPEN-Q-108 S266 circuit-complexity proof-carrier synthesis addendum:**
+HYP-3116 searches older circuit/gap, automaton, automatic-zipper,
+median-closure, and branch-protection work for the circuit-complexity route.
+The emerging object is not a smallest finite classifier but a typed proof
+circuit over retained sidecars:
+
+```text
+circuit_certificate_vector =
+  (input_packet_schema, gate_basis, sidecar_closure, exact_gap_functional,
+   route_purity, bridge_safety, uniform_family_parameter, terminal_exit)
+```
+
+Gate assignments are now concrete: HYP-2112 `Phi` for exact gap, HYP-2108
+endpoint-cover `P` for sign/resonance, HYP-2109 `L/M/R` for wall state,
+HYP-3023 magnitude cocycle for route purity, HYP-3077 Horn closure for proof
+legality, HYP-3082 protected branch graph for no-naked-bridge terminal status,
+and HYP-3111/HYP-3115 for proof-frontier/uniformity.  The executable synthesis
+has `38` edge flips against a "smallest circuit first" gauge, so the finite
+`apex7_error<=5` literal remains warning telemetry.
+
+Open task: build a HYP-2963/HYP-3107 row ledger with `Phi_gap`, `P_sign`,
+endpoint-owner word, `LMR_terminal_state`, `magnitude_cocycle`,
+`automatic_word`, root/ear payload, Horn sidecar closure,
+protected-branch status, proof-depth stage, finite-threshold alarm,
+uniform-family parameter, and terminal exit.  A residual row closes only by
+exact gap, route-purity split, legal sidecar closure, protected branch
+terminal graph, or named THM-572/F7 debt. -> HYP-3116, HYP-3115, HYP-3111,
+HYP-3109, HYP-3108, HYP-3082, HYP-3077, HYP-3023, HYP-2112, HYP-2109,
+HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
 
 **OPEN-Q-108 S264b PDE weak-form compiler addendum:**
 HYP-3111's canonical Minkowski/circuit/Ising/De Moivre atlas now has a PDE weak-form supplement.  Exact supplement verifies the De Moivre fold `x=z-a/z => x^5+5*a*x^3+5*a^2*x=z^5-a^5/z^5`, but the new content is the route `Lee-Yang/Ising transfer -> PDE weak form -> endpoint Phi gap -> observer gluing -> finite address`.  Open task: annotate HYP-2963/HYP-3107 residual rows with route type, mass/stiffness/boundary data, zero-mode status, low-height wall deletion status, root/free-energy packet, proof-DAG depth, and finite-address or observer-gluing exit. -> HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3101, HYP-3062, HYP-2112, HYP-2108, THM-559, THM-538, OPEN-Q-108.
