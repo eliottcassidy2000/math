@@ -5,6 +5,34 @@ Owner: close uniform R'>=c at the multi-far floor; consider Elliott-Halberstam, 
 - **ASANO/LEE-YANG: DIAGNOSTIC not closer** -- loneliness = danger-count partition function P(M=0). Q-block IS Lee-Yang (clearance>1, r/7<1); R-block(>=7) FAILS (roots inside unit disk, |R|/7>1) => bidisk not zero-free => Asano cannot certify L>0 alone; EXPLAINS Bonferroni failure at zero locations (floor survives via quasi-independence). [= mac-mini-S69 "far push zeros out".]
 - **INTEGRATED (HYP-3132):** L=R'*meas(R-safe)*meas(Q-lonely): F1 Q-block>=c_r (caps, mod THM-546); F2 R-safe>0 (Gaussian wide-V decouple + 3/pi^2 core); F3 R'>=0.642 (UNCONDITIONAL elementary SIGNED SPEC, no EH; absolute envelope FAILS, sign-cancellation essential). => L>=0.642*meas(R-safe)*c_r>0. OPEN = FINITE CONSTANT-CHASE (no new analytic input): closed-form SPEC_low + tail-ceiling at M=80 for uniform R'>=c.
 NET: the multi-far floor (open core of LRC(14) covering case) REDUCED to a finite constant-chase + proved THM-546/3-pi^2 inputs -- the closest the core has come. Gaussian load-bearing, EH ruled out, Asano explains the obstruction. NEXT: the F3 constant-chase.
+## mac-mini-2026-06-27-S70 -- the single hard node (k=8) is a SOLVABLE De Moivre biquadratic resolvent
+
+Owner: integrate incoming+past work, understand comprehensively what REMAINS in LRC(14), synthesize creatively;
+hint 'where 120 and 320' + a solvable De Moivre quintic (resolvent quartic x^4+10x^3-120x^2-320x+1024, geometric
+roots {2,-4,8,-16}). Result: HYP-3132 + reflection the-k8-hard-row-is-a-solvable-de-moivre-resolvent.
+
+WHAT REMAINS (comprehensive, scout-verified): the covering-bound tree is nearly closed -- apex-majority THM-573
+(PROVED), single-far/Node-3 THM-546/547 (PROVED), multi-far SPEC bound HYP-3129 (PROVED ELEMENTARILY by kps-S255,
+R'>=0.642, NOT EH-dependent), far-pushes-out HYP-3131 (far subsumes into bounded core), bounded-core k>=10 THM-577
+(PROVED), induction base arXiv:2604.23906 (ACCEPTED). => THE ENTIRE OPEN CORE = the bounded-core extremality at
+the binding row k=8 (the dip_8=1081/76440 / the phi^4 kappa4/kappa2^2 bound, HYP-3122). Everything else proved or
+reduced to it.
+
+THE k=8 NODE IS A SOLVABLE QUINTIC RESOLVENT (the 120/320 lens): k=8 => |P|=5 = a QUINTIC (minimizer {1,5,7,8,9}).
+Its gK8/Delsarte dual is the RESOLVENT QUARTIC (t-1)(t-2)(t-4)(t-5)=t^4-12t^3+49t^2-78t+40. Dual degree stratifies:
+quadratic k>=11, cubic k=9,10, QUARTIC k=8 (the deepest = hard row). Under the reflection s->6-s (center t=3, the
+order-2 antipodal of S60), u=t-3 gives (u^2-4)(u^2-1)=u^4-5u^2+4 -- a BIQUADRATIC = an EVEN/phi^4 potential. So
+the phi^4 of S67 IS the biquadratic resolvent; phi^4-evenness = the reflection symmetry = De Moivre-solvability.
+Discriminant 25-16=9=3^2 PERFECT SQUARE => radicals collapse to Q (t in {1,2,4,5}) = WHY cap_8, dip_8 are exact
+RATIONALS (THM-577). 1024=2^10 (the owner resolvent constant=root product)=tilings at n=6 (Q_10); the 2^{1..4}
+root tower = the dyadic H4 face.
+
+IMPROVED ARGUMENT: bound the k=8 dip uniformly = a SOLVABLE DEGREE-2 problem via the reflection fold: the gK8
+quartic obligation is s->6-s-symmetric (S60 covariance folds via Z/2) => a biquadratic u^4+b u^2 (degree-2 in
+u^2, solvable); the phi^4 sign (lambda>0, kappa4<0, S67) fixes direction; so 'bound kappa4/kappa2^2' => 'bound the
+biquadratic u^2-coefficient' -- degree-2, not a general quartic. META: the bounded-core dual never exceeds degree
+4 (k=8 deepest), below the Abel-Ruffini quintic wall = the n<=7 tameness of the A000568 sandwich (S69). LRC(14)'s
+hard core is SOLVABLE because its resolvent degree is <=4.
 
 ## mac-mini-2026-06-27-S69 -- far elements PUSH the zeros out: the multi-far floor reduces to the bounded core
 
