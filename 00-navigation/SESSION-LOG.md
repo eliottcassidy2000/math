@@ -49,6 +49,31 @@ Owner: integrate incoming+past work, understand what remains, synthesize an impr
 - **r-REFINEMENT (sharpened open core):** r=1 = SINGLE-FAR (THM-546/547, PROVED); r=2..6 = MULTI-FAR floor (HYP-2840 Vitali + Node-3), the GENUINELY-OPEN core, BOUNDED/favorable (2-6 far elements); r>=7 = THM-571. So the whole covering hard core = the r=2..6 multi-far decorrelation floor R'>=c.
 - **IMPROVED ARGUMENT (3 engines):** [q-witness+census] + [lift-and-decorrelate R'>=c, all r] + [H=7 state-lift for the zero-mass kernel]. The middle engine subsumes THM-571 + HYP-2968 into ONE floor obligation; closing the uniform R'>=c (on the favorable r=2..6 few-apex) closes the open covering branch AND advances the general witness floor. HIGHEST-LEVERAGE move identified.
 NET: collapsed the labelled-packet zoo + r-split into 3 engines; unified THM-571 with my witness floor; sharpened the open core to the r=2..6 multi-far floor (bounded, favorable). NEXT: prove uniform R'>=c on r=2..6 few-apex covering sets.
+## codex-2026-06-27-S270 -- LRC14 chiral/Cech proof angles -- HYP-3123
+
+Completed HYP-3123/T1197/LTI-258/LTT-156 with executable scout
+`04-computation/lrc14_chiral_cech_proof_angles_codex_20260627.py`, stored
+output `05-knowledge/results/lrc14_chiral_cech_proof_angles_codex_20260627.out`,
+detail `05-knowledge/hypotheses/HYP-3123-lrc14-chiral-stalk-cech-proof-angles.md`,
+and reflection
+`07-reflections/lrc14-chiral-stalk-cech-proof-angles-codex-20260627.md`.
+
+The session selected two proof angles different from the broad HYP-3118
+coordinate-resurrection calculus: a chiral base-stalk guard for
+mirror/converse/rootless quotient collapse, and a normal-fan Cech finite-ruler
+route for normalized component control.  Top bridge scores were Cech to
+HYP-3101 component bound (`59`), first-obstruction syndrome to HYP-3102 (`58`),
+Lean frontier bus to HYP-3098 observer rows (`54`), Cech to THM-573 residual
+(`53`), and chiral guard to HYP-3112 ear payload (`53`) / HYP-3098 observer
+rows (`52`).  Tournament Analysis used proof mechanisms rather than runners
+or raw counts, with two directed 3-cycles around observer payload, endpoint
+Phi, Cech, and syndrome carriers.
+
+Post-fast-forward connection: incoming HYP-3121's lift-and-decorrelate
+three-engine synthesis makes the Cech route a candidate normalized component /
+finite-ruler payload for the `r=2..6` multi-far floor.  Incoming HYP-3122's
+phi4 stabilizer and edge-witness reservation give adjacent tests for the
+chiral guard: cumulant/ear parity and tail/tip directed-edge sector recursion.
 
 ## codex-2026-06-27-S267 -- LRC14 coordinate-resurrection sheaf and adjoint repair calculus -- HYP-3118
 

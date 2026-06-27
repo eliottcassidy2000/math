@@ -1,5 +1,29 @@
 # Open Questions
 
+**OPEN-Q-108 S270 chiral-stalk / Cech proof-angle addendum:**
+HYP-3123 selects two remaining LRC14 proof angles that should be worked as
+coupled packet producers rather than more scalar analogies.  The chiral
+base-stalk guard says every mirror/converse/rootless quotient must retain
+`chiral_guard_word`, `mirror_pair_id`, `cross_sector_orientation_word`,
+`endpoint_owner_cocycle`, and `state_lift_sign`, or prove the collapsed fibers
+share a finite-address or observer-gluing terminal exit.  The normal-fan Cech
+finite-ruler route says component control must be normalized through
+`normal_fan_chamber_id`, `closed_arc_cech_beta`,
+`barcode_persistence_word`, `owner_current_word`,
+`component_bound_status`, and `finite_ruler_denominator_threshold`.
+
+Open task: build one joined HYP-2963/HYP-3098/HYP-3107/HYP-3112 row schema
+with the chiral guard fields, the Cech finite-ruler fields,
+`first_obstruction_basis_vector`, `certificate_cycle_image_status`,
+`dual_annihilator_status`, `F7_THM572_state_lift_status`,
+`endpoint_cover_activation_vector`, `Phi_gap`, `P_sign`,
+`proof_circuit_missing_input_vector`, and `terminal_exit_or_named_debt`.
+Rows close only by direct witness, AP/GW boundary atom, finite-address packet,
+observer-gluing certificate, or named F7/THM-572 debt. -> HYP-3123,
+HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3107, HYP-3106, HYP-3102,
+HYP-3101, HYP-3098, HYP-3096, THM-573, THM-572, THM-565, LTI-258, LTT-156,
+T1197, OPEN-Q-108.
+
 **OPEN-Q-108 S266 circuit missing-input addendum:**
 HYP-3116 converts circuit complexity into an LRC14 proof-compression audit.
 The S266 executable ledger models the active proof edge as a shallow monotone

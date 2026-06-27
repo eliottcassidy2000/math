@@ -15,6 +15,46 @@
 
 ---
 
+## Lead codex-2026-06-27-S270: LRC14 chiral base-stalk guard and normal-fan Cech finite-ruler proof angles
+
+**Status:** SYNTHESIS / executable proof-angle scout; not proof (HYP-3123/T1197).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3123-lrc14-chiral-stalk-cech-proof-angles.md`,
+`04-computation/lrc14_chiral_cech_proof_angles_codex_20260627.py`,
+`05-knowledge/results/lrc14_chiral_cech_proof_angles_codex_20260627.out`,
+and `07-reflections/lrc14-chiral-stalk-cech-proof-angles-codex-20260627.md`.
+
+Readout: selected two routes different from the broad HYP-3118 coordinate
+resurrection calculus.  The chiral base-stalk guard treats mirror/converse,
+rootless, directed-edge-sector, and perspective-pair quotients as legal only
+after `chiral_guard_word`, `cross_sector_orientation_word`,
+`endpoint_owner_cocycle`, and `state_lift_sign` are retained or both fibers
+share terminal exit.  The normal-fan Cech finite-ruler route upgrades raw
+component count into `normal_fan_chamber_id`, `closed_arc_cech_beta`,
+`barcode_persistence_word`, `owner_current_word`, and
+`finite_ruler_denominator_threshold`.
+
+Top scout bridges: Cech route to HYP-3101 component bound (`59`),
+first-obstruction syndrome to HYP-3102 (`58`), Lean frontier bus to HYP-3098
+observer rows (`54`), Cech route to THM-573 residual (`53`), and chiral guard
+to HYP-3112 ear payload (`53`) / HYP-3098 observer rows (`52`).  Tournament
+Analysis has two directed 3-cycles involving Cech, first-obstruction, observer
+payload, and endpoint Phi, so the next ledger should couple those carriers
+rather than choose a single scalar winner.
+
+Incoming work connection: HYP-3121 makes the covering case one
+lift-and-decorrelate engine, so the normal-fan/Cech fields should be tested as
+the normalized component payload for the `r=2..6` multi-far floor.  HYP-3122's
+phi4 stabilizer and edge-witness recursion reservation are natural stress
+tests for the chiral guard through cumulant/ear parity and tail/tip sectors.
+
+Next: run a joined packet ledger over HYP-2963/HYP-3098/HYP-3107/HYP-3112
+with chiral guard fields, normal-fan/Cech finite-ruler fields, first-obstruction
+syndrome fields, endpoint Phi/P gates, and `terminal_exit_or_named_debt`.
+
+Namespace: HYP-3123 / LTI-258 / LTT-156 / T1197 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S267: LRC14 coordinate-resurrection sheaf and adjoint repair calculus
 
 **Status:** EVIDENCE / executable coordinate-repair scout and abstract synthesis;

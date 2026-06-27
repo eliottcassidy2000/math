@@ -54,6 +54,12 @@ Useful synthetic maps added later:
   typed circuit-certificate vector.  Preserves the warning that tiny
   finite-bank classifiers are not proof circuits unless uniformity and
   destroyed-coordinate discharge are explicit.
+- `07-reflections/lrc14-chiral-stalk-cech-proof-angles-codex-20260627.md`:
+  HYP-3123/T1197 synthesis choosing two remaining LRC14 proof angles: a
+  Z/2 chiral base-stalk guard for mirror/converse/rootless quotient collapse
+  and a normal-fan Cech finite-ruler route for normalized component control.
+  Preserves the non-transitive scout warning that observer payload, endpoint
+  Phi, Cech, and first-obstruction carriers need a coupled row schema.
 
 ## Second-Pass Small Motif Ledger
 

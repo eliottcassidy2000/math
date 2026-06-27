@@ -4965,3 +4965,42 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
 - **Pointers:** HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111,
   HYP-3107, HYP-3098, HYP-3083, HYP-3073, HYP-3056, HYP-2108, HYP-2112,
   HYP-2470, HYP-2471, HYP-2480, LTI-256, LTT-154, T1195, OPEN-Q-108.
+
+## LTT-156: Tournament of Chiral-Stalk / Cech Proof Mechanisms
+
+- **Move:** Treat the remaining chiral and topological routes as proof
+  mechanisms only after they name the preserved LRC predicate, destroyed
+  coordinate, required sidecar, and terminal exit.  Vertices are chiral
+  base-stalk guards, normal-fan/Cech finite-ruler packets, first-obstruction
+  syndromes, observer-cut payload orbits, endpoint Phi receivers, Lean frontier
+  buses, and raw negative controls.
+- **LRC use:** HYP-3123/S270 scores eight proof mechanisms against seven
+  obligations.  Top bridges are `normal_fan_cech_finite_ruler ->
+  HYP-3101_component_bound`, `first_obstruction_syndrome_bridge ->
+  HYP-3102_first_obstruction`, `lean_frontier_packet_bus ->
+  HYP-3098_observer_gluing_rows`, `normal_fan_cech_finite_ruler ->
+  THM-573_level7_residual`, and `chiral_base_stalk_guard ->
+  HYP-3112_lee_yang_ear_payload`.
+- **Preserves:** finite-address packet validity, observer-gluing payload,
+  endpoint owner, uniformity, Z/2 mirror/converse orientation payload,
+  normalized component packets, AP/GW boundary atoms, and named F7/THM-572
+  debt.
+- **Forgets / guardrail:** raw runner tournaments, raw A000568 equality,
+  self-converse/chiral counts, raw component counts, raw direct time, and
+  endpoint-free topology are not terminal proof currency.
+- **Tournament readout:** `vertices=8`, `score_hist={0:1,1:1,3:2,4:2,6:1,7:1}`,
+  two directed 3-cycles, SCC sizes `[1,1,4,1,1]`, and five Hamiltonian paths.
+  Selected path:
+  `chiral_base_stalk_guard > lean_frontier_packet_bus >
+  normal_fan_cech_finite_ruler > first_obstruction_syndrome_bridge >
+  observer_cut_payload_orbit > endpoint_phi_packet_receiver >
+  raw_component_count_shadow > raw_chirality_count_shadow`.
+- **Next hook:** Build the joined packet-row schema with
+  `chiral_guard_word`, `cross_sector_orientation_word`,
+  `endpoint_owner_cocycle`, `state_lift_sign`, `normal_fan_chamber_id`,
+  `closed_arc_cech_beta`, `barcode_persistence_word`,
+  `finite_ruler_denominator_threshold`, first-obstruction syndrome fields,
+  endpoint Phi/P gates, and `terminal_exit_or_named_debt`.
+- **Pointers:** HYP-3123, HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3107,
+  HYP-3106, HYP-3102, HYP-3101, HYP-3098, HYP-3096, THM-573, THM-572,
+  THM-565, LTI-258, LTT-156, T1197, OPEN-Q-108.
