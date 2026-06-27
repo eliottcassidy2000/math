@@ -14,6 +14,38 @@ Incoming HYP-3101/HYP-3102 keep their topology/component-bound and
 first-obstruction-cocycle namespaces; this perspective lane is now a bridge
 that treats those as two stress tests for legal quotient functors. Computation
 and synthesis pending in the same session.
+## mac-mini-2026-06-27-S66 -- what maximizes LRC values: a NEW SIGNAL (the miss-count PGF zeros)
+
+Owner: understand what maximizes LRC values <-> tournaments (comprehensive, niche details), be bold/wild on the
+recurring structure, and invent NEW signals. Two comprehensive scouts mapped the extremizers; result =
+HYP-3103 + reflection the-miss-count-partition-function-and-its-zeros.
+
+RECURRING STRUCTURE (comprehensive): consec/AP is the extremizer of EVERY functional (mu_1/7, S1, L_yK8/S2,
+meas(S7)), proof 'irreducibly global' (= my S65 non-transitive improvement tournament, same wall). Deepest
+frame (Route 5): LRC and tournament-H are PARALLEL fugacity partition functions, consec extremal on the same
+additive AP surface at opposite level+sign (tourn H=sum (+2)^j alpha_j high-order; LRC meas(S7)=sum (-1)^k MISS_k
+low-order).
+
+NEW OBJECT: MISS_k = S_k (factorial moments), and sum S_k x^k = E[(1+x)^N], so the LRC side IS the PGF of the
+sector-miss-count: G_N(z)=sum q_t z^t, z=1+x. LRC at z=0 (=p0), tournament fugacity at z=3. The project measured
+only moments + the single value p0=G_N(0); NEVER the whole curve / its ZEROS.
+
+NEW SIGNAL (VERIFIED): the zeros of G_N(z). consec has ZERO real roots (3 complex conjugate pairs, far from 0);
+spread configs have a real root near z=0. #real-roots STRATIFIES config space -- the gK8 extremizer (max L_yK8=3.58
+=consec) lives ONLY in the #real=0 stratum; corr(#real, extreme-mass q0+q6)=-0.37. RIGOROUS reading: PGF
+real-rooted <=> N is a sum of INDEPENDENT indicators, so #real measures sector INDEPENDENCE -- consec is
+MAXIMALLY non-independent (max sector correlation), = the high q0+q6 that L_yK8 rewards (unifies with S60
+gK8/S2/Clebsch). 'consec extremal' = consec pushes the partition-function zeros maximally OFF the real axis
+(Lee-Yang confinement).
+
+BOLD TESTS: (apex-7 zero arc, PARTIAL) consec's zero args drift THROUGH the 7th-roots {51.4,102.9,154.3} as k
+varies, no clean convergence, but the third zero is robustly ~154 ~ 3*360/7 and at k=11 the middle is exactly
+102.9=2*360/7 -- suggestive, unconfirmed. (untested) Lee-Yang zero-free-region = a NEW analytic route to coverage
+extremality; the k=8 break = a real-zero collision (discriminant). NEW-SIGNAL slate (7): #real-roots, nearest-zero
+dist, Lee-Yang region, fugacity rank curve, arg-spread, discriminant, winding-tournament I(Omega,x) zeros.
+
+Honest: the Route 5 'rank-flip' (consec worst at z=3) NOT reproduced -- the tournament fugacity acts on a
+DIFFERENT GF (odd-cycle alpha_j), the two are parallel not one object (signal #7 compares them directly).
 
 ## mac-mini-2026-06-27-S65 -- tournaments as proof engines: a catalog + 3 applications (2 refute a coincidence)
 
