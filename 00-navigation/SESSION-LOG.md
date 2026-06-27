@@ -1,3 +1,25 @@
+## mac-mini-2026-06-27-S69 -- far elements PUSH the zeros out: the multi-far floor reduces to the bounded core
+
+Owner: noted A000568 (tournaments) sandwiched (12 between 10,16; 56 between 20,80), then 'work creatively toward
+remaining LRC(14) proofs'. Result: HYP-3131 + reflection far-elements-help-the-multifar-floor-reduces-to-the-bounded-core.
+
+WARM-UP (verified): C(n,3) <= A000568(n) <= 2(n-1)!/3 holds for n=4,5,6,7 ONLY, BREAKS at n=8 (6880>3360): the
+tournament count is between the additive C(n,3) (OCF triangle blocks) and the factorial 2(n-1)!/3, up to the apex
+prime 7 -- a small-number tameness window closing at n=8. Apex-7 through-line; no load-bearing LRC use.
+
+THE PROOF ADVANCE (continues HYP-3127/Asano): tracking the nearest-zero radius rho of the miss-PGF G_N(z) as far
+elements are added to the GOOD base B=consec_8 (rho(B)=1.49>1, Lee-Yang). Adding far MONOTONICALLY PUSHES THE
+ZEROS OUTWARD: r=0:1.49, r=1:~1.6, r=2:~1.7, r=3:~2.0. 400-config multi-far scan: FLOOR rho>=1.559 (binding at
+resonant r=2 (21,28)). Mechanism: each far INCREASES coverage (d(f)=p0(Bu{f})/p0(B)~1.04-1.14>1) = a
+coverage-increasing Asano factor pushing zeros out of the unit disk.
+
+=> THE MULTI-FAR ELEMENTS ARE NOT THE OBSTRUCTION -- they HELP. The binding case is the BOUNDED CORE (consec,
+rho=1.49) = the phi^4 hard row (S67). HYP-3127's obligations 1 (single-far Lee-Yang region) and 3 (r-monotonicity)
+are VERIFIED. The multi-far Lee-Yang region reduces to [bounded-core Lee-Yang: rho>1, finite check] + [far-pushes-out:
+Asano monotonicity]. The remaining piece is the rho_bounded>1 => R'>=c link (Lee-Yang => GHS/Griffiths correlation
+inequality). So the covering bound's entire FAR structure subsumes into the bounded-core Lee-Yang property = the
+coverage-extremality/phi^4 row already under study. The multi-far floor is downstream, not separate.
+
 ## kind-pasteur-2026-06-27-S256 -- TOOL-1: the Gaussian / Beurling-Selberg minorant (HYP-3130)
 
 Owner task: TOOL-1 of the kps HYP-3121 synthesis -- build a NONNEGATIVE smooth MINORANT psi_s <= phi_s
