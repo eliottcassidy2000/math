@@ -1,3 +1,29 @@
+## mac-mini-2026-06-27-S63 -- the covering-bound cap is a pair-normalized Pascal mass + a web of connections
+
+Owner: merge 'pair-normalized Pascal mass' if applicable, then generate my own web of out-of-the-box
+connections to explore while pushing the frontier. The merge lands on the live cap thread (HYP-3092,
+reflection the-cap-is-a-pair-normalized-pascal-mass-and-a-web-of-connections; VERIFIED
+lrc_pair_pascal_cap_margin_macmini_S63.py).
+
+MERGE (verified): cap_k = C(k+1,2)/C(14,2) = C(k+1,2)/91 EXACTLY for k=10..13 (codex HYP-3090) = the SECOND
+factorial moment of block-occupancy (P(random pair both in the (k+1)-block)) -- a pair-normalized Pascal
+mass. Margin 1-cap_k = (91-C(k+1,2))/91 = #pairs OUTSIDE the block (closed form, exact k>=10). The binding
+rows dip below: dip_9=1/4004=1/(44*91), dip_8=1081/76440 ~ 0.0141 = the gK8 -9S3+6S4 cubic/quartic
+correction (Krawtchouk j>=3, HYP-2716). So the covering bound = 'pairwise occupancy <= pairwise capacity'
+(pure pair-Pascal, exact k>=10) + a finite higher-Pascal dip at k=8,9. Unifies HYP-3090/3085/2716.
+
+WEB (out-of-box leads, marked proof-relevant): Johnson-scheme J(14,2)/Eberlein (re-run the gK8 LP on the
+91 pairs); truncated moment problem / Hankel (dip = degree-2->4 gap, a finite determinant cert); de
+Moivre-Laplace/Edgeworth (dip = non-Gaussian S3/S4); pair correlation/GUE; Bloch group/dilogarithm
+(weight-2 = pairs, ties the mod-41 Dehn face S62); Apery/zeta denominators; Beurling-Selberg dual;
+quasicrystal diffraction (= pairwise autocorrelation); persistent homology of the lonely arcs.
+
+PUSH: prove dip_k = U2(k)-U4(k) (degree-2 minus degree-4 truncated moment-LP) as a finite Hankel/Eberlein
+certificate -- closing the only non-pairwise content of the covering bound. Not a new bound; a clean
+reframing (cap=pair-Pascal mass, margin=pair-complement, dip=higher-Pascal) + a web. Compatible with
+codex-S255/THM-575 (raw Conjecture 7.1 refuted by divisor loading; my pair-Pascal cap is on the
+bounded/normalized side).
+
 ## mac-mini-2026-06-27-S62 -- three notions of sameness are the lonely set's fiber (equidecomp/equinum/equidist)
 
 Owner: consider equidecomposability and equinumerosity in addition to equidistribution; search past work for
