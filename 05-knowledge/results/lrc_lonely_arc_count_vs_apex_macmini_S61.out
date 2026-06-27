@@ -1,0 +1,27 @@
+==========================================================================
+ DIRECT lonely set L(S): arc count & largest arc vs growing apex  S={1..12, 14V}
+==========================================================================
+ bounded core L({1..12}):  arcs total measure = 0.03410  largest arc = 0.00595
+   (constant, independent of any apex -- this carries the uniform long arc)
+
+    V  apex=14V  arcCount  L-measure  largest arc 1/largest
+    1        14        12    0.02390     0.003247     308.0
+    2        28        12    0.02390     0.003401     294.0
+    3        42        12    0.02730     0.004252     235.2
+    5        70        12    0.03002     0.004932     202.8
+    8       112        12    0.02900     0.005315     188.2
+   13       182        24    0.02390     0.004710     212.3
+   16       224        16    0.02900     0.003827     261.3
+   20       280        16    0.02951     0.003061     326.7
+   30       420        20    0.02934     0.002041     490.0
+   50       700        32    0.02920     0.001224     816.7
+   80      1120        44    0.02925     0.000765    1306.7
+  130      1820        70    0.02923     0.000471    2123.3
+  200      2800       102    0.02920     0.000306    3266.7
+
+READ (corrected): largest arc is BOUNDED BELOW (~0.003-0.005) while apex <= ~V* (the bounded/finite
+regime), then the apex's fine forbidden arcs (spacing 1/(14V)) start subdividing each core arc and
+the largest arc decays ~1/V. The CROSSOVER apex ~ V* coincides with kps's D~213 and the V* atlas
+~234 -- the SAME constant in 3 framings (paper enumeration bound / Conj-7.1 D / project V*).
+So Conjecture 7.1(13) splits cleanly at V*: [apex<=V*] direct long arc (finite check);
+[apex>V*] PEEL the apex (equidistribution, Node-3) onto the bounded core's long arc (0.006).
