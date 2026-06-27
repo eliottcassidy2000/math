@@ -60,6 +60,12 @@ Useful synthetic maps added later:
   and a normal-fan Cech finite-ruler route for normalized component control.
   Preserves the non-transitive scout warning that observer payload, endpoint
   Phi, Cech, and first-obstruction carriers need a coupled row schema.
+- `07-reflections/lrc14-tournament-edge-witness-recursion-codex-s268.md`:
+  HYP-3124/T1198 note turning directed edges into two-ended proof witnesses.
+  It separates equinumerosity/equidistribution sector counts from
+  equidecomposability data carried by paired tail-deletion and tip-deletion
+  children, and proposes `edge_witness_certificate` as the next HYP-3115
+  domain-wall packet.
 
 ## Second-Pass Small Motif Ledger
 

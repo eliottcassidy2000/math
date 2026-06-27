@@ -1,0 +1,71 @@
+HYP-3124 / codex-2026-06-27-S268
+Tournament edge witness recursion scout; executable synthesis, not a proof.
+
+1. EDGE-WITNESS PACKET SCHEMA
+namespace=HYP-3124/T1198/LTI-259/LTT-157; provisional S268 HYP-3119 was renumbered after rebase
+edge_witness(tail -> tip) = (
+  endpoint_role_word,
+  outside_four_sector_deck,
+  tail_deletion_child_signature,
+  tip_deletion_child_signature,
+  recursive_tail_child_edge_deck,
+  recursive_tip_child_edge_deck,
+  observer_gluing_payload_orbit,
+  missing_input_vector,
+  coordinate_resurrection_sidecar_or_named_debt,
+  terminal_exit
+)
+
+Preserved LRC predicate: a local edge quotient is legal only if the LRC14 packet route remains constant on the quotient fiber, or the lost tail/tip coordinate is reconstructed, dual-annihilated, recursed into a smaller child, or named as residual debt.
+Destroyed information if scalarized: endpoint role, four-sector orientation, which side owns the obstruction, both endpoint-deletion children, and the proof-circuit/coordinate-repair inputs.
+Challenged assumption: tournament vertices need not be runners or tournament classes.  Here the candidate vertices are directed edges, endpoint-deletion children, outside sectors, proof obligations, and repair sidecars.
+
+
+2. EXACT SMALL-TOURNAMENT EDGE CENSUS
+sector order=(tail->w & tip->w, tail->w & w->tip, w->tail & tip->w, w->tail & w->tip)
+n  labelled_T  directed_edges  sectors  sector+tail_child  sector+tip_child  sector+child_pair  depth1_sigs  sector_groups_split_by_child_pair
+2           2               2        1                  1                 1                  1            1                                   0
+3           8              24        4                  4                 4                  4            4                                   0
+4          64             384       10                 14                14                 16           16                                   6
+5        1024           10240       20                 52                52                 80           80                                  20
+
+n=5 largest sector refinements (child_pairs, tail_children, tip_children, instances, sector):
+- (1, 1, 1, 0): child_pairs=7, tail_children=3, tip_children=3, instances=960
+- (0, 1, 1, 1): child_pairs=7, tail_children=3, tip_children=3, instances=960
+- (1, 1, 0, 1): child_pairs=6, tail_children=3, tip_children=3, instances=960
+- (1, 0, 1, 1): child_pairs=6, tail_children=3, tip_children=3, instances=960
+- (0, 2, 1, 0): child_pairs=4, tail_children=3, tip_children=3, instances=480
+
+Readout: the four-sector word is a useful local observable, but every nontrivial n=5 sector group splits after both endpoint-deletion children are kept.  One-sided recursion sees only one projection; the paired child object is the first natural witness carrier.
+
+3. TOURNAMENT ANALYSIS OVER EDGE-WITNESS REFRAMES
+vertices=edge-witness proof reframes, not runners, roots, spins, or scalar edges
+pairwise_observable=majority of retained proof payload over axes lrc_predicate_retention,tail_tip_symmetry,recursive_closure,sector_resolution,observer_gluing,missing_input_repair,domain_wall_alignment,formal_readiness,scalar_guardrail
+switch=orient A->B when A wins more axes; ties follow the declared Hamiltonian path
+tie_hamiltonian_path=coordinate_resurrection_edge_sheaf -> edge_witness_two_ended_packet -> paired_tail_tip_deletion_recursion -> proof_circuit_edge_gate -> cross_sector_orientation_word -> domain_wall_edge_classifier -> ear_payload_edge_mass -> outside_four_sector_deck -> tail_deleted_one_sided_recursion -> tip_deleted_one_sided_recursion -> raw_edge_count_scalar
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 7: 3, 9: 1, 10: 1}
+directed_3cycles=1
+scc_sizes=[3, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=3
+edge_flips_against_locality_first_gauge=7
+selected_hamiltonian_path=coordinate_resurrection_edge_sheaf -> edge_witness_two_ended_packet -> cross_sector_orientation_word -> paired_tail_tip_deletion_recursion -> proof_circuit_edge_gate -> domain_wall_edge_classifier -> ear_payload_edge_mass -> outside_four_sector_deck -> tail_deleted_one_sided_recursion -> tip_deleted_one_sided_recursion -> raw_edge_count_scalar
+
+Top reframe fields:
+- coordinate_resurrection_edge_sheaf: preserves=destroyed-coordinate vector, repair cover, adjoint section, and live endpoint section; next=make HYP-3118 repair covers accept edge-tail/tip coordinates as live sections
+- edge_witness_two_ended_packet: preserves=tail packet, tip packet, four-sector deck, both endpoint-deletion children, repair/debt; next=promote `edge_witness(tail->tip)` as a packet row field in HYP-2963/HYP-3098/HYP-3112
+- cross_sector_orientation_word: preserves=HYP-3050/HYP-3054/HYP-3106 cross-sector orientation around tail -> tip; next=retain as the local observer-gluing coordinate inside the two-ended packet
+- paired_tail_tip_deletion_recursion: preserves=two recursive child obligations after deleting the tail and after deleting the tip; next=use as the recursive kernel beneath the full edge witness packet
+- proof_circuit_edge_gate: preserves=edge witness as a proof-circuit gate with missing-input vector and terminal exit; next=add edge-witness inputs to HYP-3116/HYP-3117 circuit-certificate vectors
+
+4. PROOF-ROUTE CONSEQUENCES
+- HYP-3050/HYP-3054/HYP-3106 supply the local observable: the edge tail/tip sector word and cross-sector orientation.
+- HYP-3112 supplies an analytic payload: edge boundaries can carry one-runner ear mass and root-motion debt.
+- HYP-3115 supplies a finite wall payload: domain-wall and one-swap edges should be classified by their two endpoint-deletion children before using wall counts.
+- HYP-3116 supplies the circuit guardrail: an edge shortcut must name its missing-input vector rather than advertise small local complexity.
+- HYP-3118 supplies the repair rule: any quotient that loses endpoint role, child recursion, or sector orientation must add a resurrection sidecar or name residual debt.
+
+Candidate invariant:
+  edge_witness_certificate = four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar
+
+Next executable test: attach this packet to HYP-3115 one-swap/domain-wall edges and ask which walls become legal observer-gluing discharges, which recurse to smaller tail/tip children, and which remain named HYP-2963/HYP-3098 debt.
+

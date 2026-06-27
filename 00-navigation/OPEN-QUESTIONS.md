@@ -23,6 +23,25 @@ observer-gluing certificate, or named F7/THM-572 debt. -> HYP-3123,
 HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3107, HYP-3106, HYP-3102,
 HYP-3101, HYP-3098, HYP-3096, THM-573, THM-572, THM-565, LTI-258, LTT-156,
 T1197, OPEN-Q-108.
+**OPEN-Q-108 S268 edge-witness recursion addendum:**
+HYP-3124 turns tournament edges into two-ended proof witnesses rather than
+raw arcs or scalar edge counts.  The S268 scout enumerates labelled
+tournaments through `n=5`: sector words alone have counts `1,4,10,20`, while
+sector plus paired endpoint-deletion child signatures have counts
+`1,4,16,80`; at `n=5`, all `20` sector groups split by the paired child
+object.  The live invariant is
+`edge_witness_certificate = four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar_or_named_debt`.
+
+Open task: attach `edge_witness_certificate`, `edge_tail_tip_sector_word`,
+`tail_deletion_child_signature`, `tip_deletion_child_signature`,
+`recursive_tail_child_edge_deck`, `recursive_tip_child_edge_deck`,
+`edge_missing_input_vector`, `edge_repair_sidecar`, and `edge_terminal_exit`
+to HYP-3115 one-swap/domain-wall edges and HYP-3098 observer-gluing rows.
+Classify each edge as observer-gluing discharge, smaller tail/tip recursion,
+or named HYP-2963/HYP-3098 residual debt before using domain-wall counts or
+edge shortcuts. -> HYP-3124, HYP-3119, HYP-3118, HYP-3117, HYP-3116,
+HYP-3115, HYP-3112, HYP-3106, HYP-3054, HYP-3050, HYP-2963, LTI-259,
+LTT-157, T1198, OPEN-Q-108.
 
 **OPEN-Q-108 S266 circuit missing-input addendum:**
 HYP-3116 converts circuit complexity into an LRC14 proof-compression audit.

@@ -81,6 +81,11 @@ obligations, and proof-carrier interfaces.
   gates, sidecar obligations, and terminal exits the vertices.  Treat
   one-literal finite-bank classifiers as telemetry until a uniform family
   parameter and destroyed-coordinate discharge are explicit.
+- Need to use tournament edges as witnesses:
+  use LTT-157 after LTT-153/LTT-154/LTT-152/LTT-150 and make directed edges,
+  endpoint-deletion children, sector words, repair sidecars, and proof
+  obligations the carriers.  Do not stop at raw edge counts or one-sided
+  tail-only/tip-only recursion.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5004,3 +5009,49 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
 - **Pointers:** HYP-3123, HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3107,
   HYP-3106, HYP-3102, HYP-3101, HYP-3098, HYP-3096, THM-573, THM-572,
   THM-565, LTI-258, LTT-156, T1197, OPEN-Q-108.
+
+## LTT-157: Tournament Of Edge-Witness Recursion Reframes
+
+- **Move:** Treat `tail -> tip` directed edges as proof witnesses only after
+  their two endpoint recursions are retained.  Vertices in the tournament are
+  edge-witness reframes: coordinate-resurrection edge sheaves, two-ended edge
+  packets, cross-sector orientation words, paired tail/tip deletion recursion,
+  proof-circuit edge gates, domain-wall classifiers, ear-payload edge masses,
+  four-sector decks, one-sided endpoint recursions, and raw edge-count
+  scalars.
+- **LRC use:** HYP-3124/S268 extends HYP-3050/HYP-3054/HYP-3106 by adding the
+  missing recursive payload.  The exact census through labelled tournaments
+  `n<=5` shows that sector words are a local observable but not a complete
+  witness: sector counts are `1,4,10,20`, while sector plus paired
+  endpoint-deletion child signatures are `1,4,16,80`.  At `n=5`, all `20`
+  sector groups split by child pair.  Therefore the proof carrier is
+  `edge_witness_certificate = four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar_or_named_debt`.
+- **Preserves:** endpoint role word, tail/tip sector word, cross-sector
+  orientation, tail-deletion child, tip-deletion child, recursive child edge
+  decks, observer-gluing payload orbit, HYP-3116 missing-input vector,
+  HYP-3118 coordinate-resurrection sidecar, and terminal exit.
+- **Forgets / guardrail:** raw edge count, raw Ising/domain-wall count,
+  one-sided tail-only recursion, one-sided tip-only recursion, and sector word
+  alone all forget either the endpoint owner or the paired recursive
+  compatibility condition.
+- **Fingerprint:** Pairwise observable is majority retention over LRC
+  predicate, tail/tip symmetry, recursive closure, sector resolution,
+  observer gluing, missing-input repair, domain-wall alignment, formal
+  readiness, and scalar guardrail.  S268 reports
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,7:3,9:1,10:1}`,
+  one directed 3-cycle, SCC sizes `[3,1,1,1,1,1,1,1,1]`, three Hamiltonian
+  paths, and `7` edge flips against a locality-first gauge.  Selected path:
+  `coordinate_resurrection_edge_sheaf -> edge_witness_two_ended_packet ->
+  cross_sector_orientation_word -> paired_tail_tip_deletion_recursion ->
+  proof_circuit_edge_gate -> domain_wall_edge_classifier ->
+  ear_payload_edge_mass -> outside_four_sector_deck ->
+  tail_deleted_one_sided_recursion -> tip_deleted_one_sided_recursion ->
+  raw_edge_count_scalar`.
+- **Next hook:** Attach `edge_witness_certificate`,
+  `tail_deletion_child_signature`, `tip_deletion_child_signature`,
+  `recursive_tail_child_edge_deck`, `recursive_tip_child_edge_deck`,
+  `edge_missing_input_vector`, and `edge_repair_sidecar` to HYP-3115
+  one-swap/domain-wall edges and HYP-3098 observer-gluing rows.
+- **Pointers:** HYP-3124, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115,
+  HYP-3112, HYP-3108, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-2963,
+  LTI-259, LTT-157, T1198, OPEN-Q-108.

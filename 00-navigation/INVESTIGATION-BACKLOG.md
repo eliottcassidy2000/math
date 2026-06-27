@@ -46,14 +46,45 @@ rather than choose a single scalar winner.
 Incoming work connection: HYP-3121 makes the covering case one
 lift-and-decorrelate engine, so the normal-fan/Cech fields should be tested as
 the normalized component payload for the `r=2..6` multi-far floor.  HYP-3122's
-phi4 stabilizer and edge-witness recursion reservation are natural stress
-tests for the chiral guard through cumulant/ear parity and tail/tip sectors.
+phi4 stabilizer and the HYP-3124 edge-witness recursion scout are natural
+stress tests for the chiral guard through cumulant/ear parity and tail/tip
+sectors.
 
 Next: run a joined packet ledger over HYP-2963/HYP-3098/HYP-3107/HYP-3112
 with chiral guard fields, normal-fan/Cech finite-ruler fields, first-obstruction
 syndrome fields, endpoint Phi/P gates, and `terminal_exit_or_named_debt`.
 
 Namespace: HYP-3123 / LTI-258 / LTT-156 / T1197 / OPEN-Q-108.
+## Lead codex-2026-06-27-S268: LRC14 tournament edge-witness recursion
+
+**Status:** EVIDENCE / executable edge-witness recursion scout; not proof
+(HYP-3124/T1198).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3124-lrc14-tournament-edge-witness-recursion.md`,
+`04-computation/lrc14_tournament_edge_witness_recursion_codex_s268.py`,
+`05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_s268.out`,
+and `07-reflections/lrc14-tournament-edge-witness-recursion-codex-s268.md`.
+
+Readout: the edge carrier is two-ended.  A directed edge `tail -> tip` should
+carry endpoint role, outside four-sector deck, tail-deletion and tip-deletion
+child signatures, recursive child edge decks, observer-gluing payload,
+missing-input vector, coordinate-resurrection sidecar or named debt, and
+terminal exit.  The exact census through labelled tournaments `n<=5` shows
+that sector counts alone are `1,4,10,20`, while sector plus paired endpoint
+children are `1,4,16,80`; at `n=5`, all `20` sector groups split by child
+pair.  Tournament Analysis over edge-witness reframes has one directed
+3-cycle, three Hamiltonian paths, and selected path led by
+`coordinate_resurrection_edge_sheaf -> edge_witness_two_ended_packet ->
+cross_sector_orientation_word`.
+
+Next: attach `edge_witness_certificate`, `edge_tail_tip_sector_word`,
+`tail_deletion_child_signature`, `tip_deletion_child_signature`,
+`recursive_tail_child_edge_deck`, `recursive_tip_child_edge_deck`,
+`edge_missing_input_vector`, `edge_repair_sidecar`, and `edge_terminal_exit`
+to HYP-3115 one-swap/domain-wall edges and HYP-3098 observer-gluing rows.
+
+Namespace: HYP-3124 / LTI-259 / LTT-157 / T1198 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-S267: LRC14 coordinate-resurrection sheaf and adjoint repair calculus
 

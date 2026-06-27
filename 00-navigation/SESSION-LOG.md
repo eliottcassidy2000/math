@@ -1,4 +1,3 @@
-## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- HYP-3122
 ## mac-mini-2026-06-27-S67 -- Lee-Yang extremality: the cap is a phi^4 field theory, kappa4 marks the hard row k=8
 
 Owner: work on Lee-Yang extremality toward the LRC proof, with the phi^4 density exp(-lambda S^4 - b S^2) and
@@ -28,20 +27,6 @@ EAR BRIDGE (creative): odd cumulant kappa3 (3.7->5.6) <-> odd-ear/odd-cycle/OCF 
 even quartic kappa4 <-> phi^4 stabilizer. Honest: the zeros are NOT on |z|=1, so the sector model is phi^4
 not plain Ising. Builds on codex HYP-3113 (which proposed quartic_cumulant_stabilizer but never computed it).
 
-## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- HYP-3119
-
-Reserved the prompt to merge tournament edges as witnesses and recurse on both
-tip and tail.  The reservation is now HYP-3122/T1196/LTI-257/LTT-155 after
-S269 claimed HYP-3119/T1194/LTI-255/LTT-153 for the endpoint-gated niche
-archive bridge and S253 claimed HYP-3121 for the lift-and-decorrelate
-three-engine synthesis.  The planned object is an oriented edge `tail -> tip`
-carrying `tail_packet`, `tip_packet`, the outside four-sector deck,
-tail-deletion child, tip-deletion child, and repaired coordinate or named debt.
-This explicitly joins HYP-3050 edge tail/tip perspectives, HYP-3054
-observer-extension cut words, HYP-3106 directed-edge controlled-forgetting,
-HYP-3112 ear-payload edges, HYP-3115 domain-wall edges, and the
-HYP-3116/HYP-3118 missing-input/resurrection guardrails.  Status at
-reservation: not a proof; executable scout pending.
 ## kind-pasteur-2026-06-27-S253 -- SYNTHESIS: the LRC(14) covering case is ONE lift-and-decorrelate engine; open core = r=2..6 multi-far floor
 Owner: integrate incoming+past work, understand what remains, synthesize an improved argument. Mapped the full proof DAG (Explore) + verified the unification. HYP-3121 + reflection lrc14-three-engines-lift-and-decorrelate.
 - **PROOF MAP (current):** (A) non-covering qdiv<=14: THM-523 tau=1/q, M>=1/14; tight=census {AP,GW} (HYP-2920/2921 bounded+single-swap PROVEN). (B) covering qdiv>14, r=|14Z cap S|: THM-571 (r>=7, PROVED mod LRC<=13) + HYP-2968 (r<=6, OPEN). Hard kernel: THM-572 (H=7 state-lift, conditional on construction). THM-568 corrected (14|D not D=14, shell-collapse open).
@@ -72,8 +57,43 @@ Phi, Cech, and syndrome carriers.
 Post-fast-forward connection: incoming HYP-3121's lift-and-decorrelate
 three-engine synthesis makes the Cech route a candidate normalized component /
 finite-ruler payload for the `r=2..6` multi-far floor.  Incoming HYP-3122's
-phi4 stabilizer and edge-witness reservation give adjacent tests for the
-chiral guard: cumulant/ear parity and tail/tip directed-edge sector recursion.
+phi4 stabilizer and HYP-3124's completed edge-witness scout give adjacent
+tests for the chiral guard: cumulant/ear parity and tail/tip directed-edge
+sector recursion.
+## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- HYP-3124
+
+Reserved HYP-3124/T1198/LTI-259/LTT-157 for the prompt to merge tournament
+edges as witnesses and recurse on both tip and tail.  The planned object is an
+oriented edge `tail -> tip` carrying `tail_packet`, `tip_packet`, the outside
+four-sector deck, tail-deletion child, tip-deletion child, and repaired
+coordinate or named debt.  This explicitly joins HYP-3050 edge tail/tip
+perspectives, HYP-3054 observer-extension cut words, HYP-3106 directed-edge
+controlled-forgetting, HYP-3112 ear-payload edges, HYP-3115 domain-wall edges,
+and the HYP-3116/HYP-3118 missing-input/resurrection guardrails.  Status at
+reservation: not a proof; executable scout pending.  A rebase after the
+reservation showed that S269 owns HYP-3119/T1194/LTI-255/LTT-153 and incoming
+S253 owns HYP-3121; a later rebase showed HYP-3122 is the phi4 lane and
+HYP-3123 is the chiral/Cech lane.  The S268 edge-witness lane therefore moved
+to HYP-3124 to preserve all threads without reverting any work.
+
+Completed the executable HYP-3124/T1198/LTI-259/LTT-157 scout
+`04-computation/lrc14_tournament_edge_witness_recursion_codex_s268.py` with
+stored output
+`05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_s268.out`.
+The exact small-tournament census through `n=5` shows that four-sector words
+alone are too coarse (`1,4,10,20` signatures), while sector plus paired
+tail/tip endpoint-deletion children gives `1,4,16,80`; all `20` nontrivial
+`n=5` sector groups split by the child pair.  Tournament Analysis over
+edge-witness proof reframes, not runners or scalar edges, has one directed
+3-cycle, SCC sizes `[3,1,1,1,1,1,1,1,1]`, three Hamiltonian paths, and selected
+path `coordinate_resurrection_edge_sheaf -> edge_witness_two_ended_packet ->
+cross_sector_orientation_word -> paired_tail_tip_deletion_recursion ->
+proof_circuit_edge_gate -> domain_wall_edge_classifier ->
+ear_payload_edge_mass -> outside_four_sector_deck ->
+tail_deleted_one_sided_recursion -> tip_deleted_one_sided_recursion ->
+raw_edge_count_scalar`.  Handoff invariant:
+`edge_witness_certificate = four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar_or_named_debt`;
+next attach it to HYP-3115 one-swap/domain-wall edges.
 
 ## codex-2026-06-27-S267 -- LRC14 coordinate-resurrection sheaf and adjoint repair calculus -- HYP-3118
 

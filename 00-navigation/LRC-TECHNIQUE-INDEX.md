@@ -83,6 +83,7 @@ Minkowski/circuit/Ising/PDE compiler / weak-form zero modes / proof-DAG sidecar 
 circuit-certificate vector / Phi exact gap / endpoint P sign / LMR wall state / magnitude cocycle / Horn closure / protected branch terminal
 coordinate-resurrection sheaf / destroyed-coordinate cover / adjoint section / concept-lattice intent
 niche archive bridge ledger / endpoint Phi-P gate / normalized interval / ET-Hensel zipper / CRT-2x7 resonance
+tournament edge-witness recursion / tail-tip sector word / paired endpoint-deletion children / repair sidecar
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -393,7 +394,8 @@ record what it destroys before asking it to prove anything.
 | LTI-254 | Coordinate-resurrection sheaf and adjoint repair calculus | Destroyed-coordinate ledger, minimal sidecar repair covers, concept-lattice intents, adjoint quotient/section pairs, bottleneck proof coordinates, theorem-to-signal map | HYP-3118/S267 executes the next abstraction after HYP-3116/HYP-3117: a quotient is useful only with the smallest legal sidecar, adjoint map, or sheaf section that resurrects the coordinate needed by the next proof obligation.  The scout models `17` sidecars and `11` shortcuts.  Base stalk is `finite_address + observer_gluing + endpoint_owner + uniformity`; live sections are root/ear, relation-lattice, component, cocycle, state-lift, and PDE carriers.  Scalar-like shortcuts require size-`4` repair covers (`40` minimal choices), live-section shortcuts require size-`3` covers, and the global proof route has `40` minimal covers.  It also maps Savitch, Bravais, Lee-Yang/PGF roots, `phi4`, and directed/odd/nested ears to new measurable signals. | HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3108, HYP-3107, HYP-3102, HYP-3098, HYP-3083, HYP-2963, T1193, LTT-152, LTI-254, OPEN-Q-108 | Add `destroyed_coordinate_vector`, `coordinate_resurrection_cover`, `adjoint_section_status`, `repair_cover_rank`, `concept_lattice_intent_id`, `core_stalk_presence`, `live_section_type`, `observer_ear_certificate_type`, `midpoint_certificate_depth_profile`, `pgf_zero_trajectory_signature`, `bravais_shape_wall_signature`, and `terminal_exit_or_named_debt` fields before promoting any scalar quotient. |
 | LTI-255 | Niche archive bridge ledger | Archive proof carriers and packet columns: endpoint `Phi`/`P` activation circuit, LMR/magnitude/Horn/protected-branch gates, normalized interval/denominator-center, ET+unit/Hensel zipper, CRT `2x7` gear, finite L7 resonance atlas, anti-Bohr endpoint cocycle, coordinate-resurrection cover ranks and concept intents, relation-lattice/Ising/circuit missing-input walls, Ostrowski automatic shadows | HYP-3119/S269 searches older proof-frontier work for connections that materially augment the current HYP-3114/HYP-3115 route.  After integrating the S266/S267 augmentations, the scout ranks carriers by whether they preserve the LRC predicate, repair known quotient failures, feed or lower-bound the exact HYP-2108/HYP-2112 endpoint `Phi`/`P` activation circuit, pass HYP-2109/HYP-3023/HYP-3077/HYP-3082 gate checks, compress packet fibers, integrate current approximation/root-lattice sidecars, and control destroyed coordinates.  It puts endpoint activation first, normalized THM-565 intervals plus HYP-2866 denominator-center profiles second, HYP-3020/HYP-3024 ET/Hensel zipper third, and CRT `14 -> 7 -> 2` gear fourth; raw direct-time named constants are last.  Incoming HYP-3116 supplies endpoint missing-input and proof-carrier gate fields, HYP-3117 supplies the proof-circuit packet id, and HYP-3118 supplies destroyed-coordinate vectors, cover ranks, adjoint sections, and concept intents. | HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3098, HYP-3082, HYP-3077, HYP-3024, HYP-3023, HYP-3020, HYP-2866, HYP-2730, HYP-2072, HYP-2108, HYP-2109, HYP-2112, THM-565, THM-573, T1194, LTT-153, LTI-255, OPEN-Q-108 | Build two joined scouts: endpoint activation/proof-carrier gates plus normalized interval/denominator-center profiles over HYP-3114/HYP-3098 rows, and ET/Hensel plus CRT/resonance/proof-circuit/coordinate-resurrection fields over HYP-3098/HYP-3112 packets, HYP-3115 one-swap Ising domain walls, and endpoint kernels. |
 | LTI-256 | Niche past-work closure bridge | Finite-address `Phi` receiver, observer-cut payload orbit, circuit-certificate vector, proof-circuit past-work compiler, coordinate-resurrection sheaf, Q27/Q31 resource descent, endpoint-credit Farkas certificate, source-perspective worry fiber, twist-ladder dual, Dirichlet/F7 conductance, Ostrowski/Pell carry wall, Vitali/anti-Poisson width debt | HYP-3120/codex-2026-06-27 extends HYP-3119/S269 by routing broader niche LRC work into packet-closure obligations.  The scout scores `16` carriers against `9` obligations and finds the strongest bridges: HYP-3117 proof-circuit past-work compiler to the Lean packet frontier, completed HYP-3118 coordinate-resurrection sheaf to the Lean packet frontier, HYP-3116 circuit-certificate vector to the Lean packet frontier, Q27/Q31 resource descent to loaded-denominator normalization, observer-cut payload orbit to observer gluing, finite-address `Phi` tuple to the Lean packet frontier, HYP-3116/HYP-3117 endpoint/missing-input circuit `Phi` to proof-circuit gates, source-perspective worry fiber to Lee-Yang ear payload, and signed-polymer/Dirichlet network to F7 state-lift exits.  The result is a finite packet-closure program rather than a new scalar invariant. | HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3107, HYP-3098, HYP-3083, HYP-3073, HYP-3056, HYP-2108, HYP-2112, HYP-2470, HYP-2471, HYP-2480, T1195, LTT-154, LTI-256, OPEN-Q-108 | Add `finite_address_phi_tuple_status`, `observer_cut_payload_orbit`, `circuit_certificate_vector`, `proof_circuit_past_work_compiler`, `coordinate_resurrection_status`, `coordinate_resurrection_cover`, `repair_cover_rank`, `live_section_type`, `q27_q31_resource_status`, `twist_ladder_dual_status`, `source_perspective_worry_fiber`, `endpoint_credit_farkas_certificate`, `endpoint_circuit_phi_gate`, `missing_input_vector`, `ostrowski_beatty_pell_carry_wall`, `dirichlet_polymer_conductance`, `vitali_antipoisson_width_debt`, and `terminal_exit_or_named_debt` to HYP-2963/HYP-3107/HYP-3098 rows. |
-| LTI-258 | Chiral base-stalk guard / normal-fan Cech finite-ruler proof angles | Z/2 chiral guard words, mirror-pair ids, cross-sector orientation, endpoint-owner cocycles, state-lift signs, normal-fan chambers, closed arc-Cech beta, barcode persistence, owner currents, finite-ruler denominator thresholds, first-obstruction syndrome fields | HYP-3123/S270 chooses two remaining proof angles different from the general HYP-3118 repair calculus and integrates incoming HYP-3121/HYP-3122: a chiral guard for mirror/converse/rootless quotient collapse and a normal-fan Cech finite-ruler route for component control.  The scout scores eight proof mechanisms against seven obligations; top bridges are Cech to HYP-3101 component bound, first-obstruction to HYP-3102, Lean bus to HYP-3098 observer rows, Cech to THM-573 residual, and chiral guard to HYP-3112 ear payload.  Tournament Analysis is non-transitive with two directed 3-cycles involving observer payload, endpoint Phi, Cech, and syndrome carriers, so the next proof ledger should couple them. | HYP-3123, HYP-3122, HYP-3121, HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3107, HYP-3106, HYP-3102, HYP-3101, HYP-3098, HYP-3096, HYP-3056, HYP-3047, THM-573, THM-572, THM-565, T1197, LTT-156, LTI-258, OPEN-Q-108 | Add `chiral_guard_word`, `mirror_pair_id`, `cross_sector_orientation_word`, `endpoint_owner_cocycle`, `state_lift_sign`, `normal_fan_chamber_id`, `closed_arc_cech_beta`, `barcode_persistence_word`, `finite_ruler_denominator_threshold`, `owner_current_word`, `first_obstruction_basis_vector`, `certificate_cycle_image_status`, `dual_annihilator_status`, and `F7_THM572_state_lift_status` to the HYP-2963/HYP-3098/HYP-3107/HYP-3112 packet rows before accepting chirality or topology shortcuts. |
+| LTI-258 | Chiral base-stalk guard / normal-fan Cech finite-ruler proof angles | Z/2 chiral guard words, mirror-pair ids, cross-sector orientation, endpoint-owner cocycles, state-lift signs, normal-fan chambers, closed arc-Cech beta, barcode persistence, owner currents, finite-ruler denominator thresholds, first-obstruction syndrome fields | HYP-3123/S270 chooses two remaining proof angles different from the general HYP-3118 repair calculus and integrates incoming HYP-3121/HYP-3122/HYP-3124: a chiral guard for mirror/converse/rootless quotient collapse and a normal-fan Cech finite-ruler route for component control.  The scout scores eight proof mechanisms against seven obligations; top bridges are Cech to HYP-3101 component bound, first-obstruction to HYP-3102, Lean bus to HYP-3098 observer rows, Cech to THM-573 residual, and chiral guard to HYP-3112 ear payload.  Tournament Analysis is non-transitive with two directed 3-cycles involving observer payload, endpoint Phi, Cech, and syndrome carriers, so the next proof ledger should couple them. | HYP-3123, HYP-3124, HYP-3122, HYP-3121, HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3107, HYP-3106, HYP-3102, HYP-3101, HYP-3098, HYP-3096, HYP-3056, HYP-3047, THM-573, THM-572, THM-565, T1197, LTT-156, LTI-258, OPEN-Q-108 | Add `chiral_guard_word`, `mirror_pair_id`, `cross_sector_orientation_word`, `endpoint_owner_cocycle`, `state_lift_sign`, `normal_fan_chamber_id`, `closed_arc_cech_beta`, `barcode_persistence_word`, `finite_ruler_denominator_threshold`, `owner_current_word`, `first_obstruction_basis_vector`, `certificate_cycle_image_status`, `dual_annihilator_status`, and `F7_THM572_state_lift_status` to the HYP-2963/HYP-3098/HYP-3107/HYP-3112 packet rows before accepting chirality or topology shortcuts. |
+| LTI-259 | Tournament edge-witness recursion | Directed edge `tail -> tip` as proof carrier; endpoint role word, outside four-sector deck, paired tail-deletion/tip-deletion children, recursive child edge decks, observer-gluing payload orbit, missing-input vector, coordinate-resurrection sidecar or named debt | HYP-3124/S268 turns "tournament edges as witnesses" into an executable controlled-forgetting test.  The exact census through labelled tournaments `n<=5` shows sector words are local but too coarse: counts are `1,4,10,20`, while sector plus paired endpoint-deletion child signatures are `1,4,16,80`; at `n=5`, all `20` sector groups split by child pair.  The proof use is therefore not an edge count but `edge_witness_certificate = four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar_or_named_debt`. | HYP-3124, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3112, HYP-3108, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-2963, T1198, LTT-157, LTI-259, OPEN-Q-108 | Attach `edge_witness_certificate`, `edge_tail_tip_sector_word`, `tail_deletion_child_signature`, `tip_deletion_child_signature`, `recursive_tail_child_edge_deck`, `recursive_tip_child_edge_deck`, `edge_missing_input_vector`, `edge_repair_sidecar`, and `edge_terminal_exit` to HYP-3115 one-swap/domain-wall edges and HYP-3098 observer-gluing rows before using domain-wall counts or edge shortcuts. |
 
 ## Cross-Cutting Guardrails
 
@@ -2766,3 +2768,70 @@ Hamiltonian paths.  The selected path starts with `chiral_base_stalk_guard`,
 then `lean_frontier_packet_bus`, then `normal_fan_cech_finite_ruler`.  The
 directed cycles involving observer payload, endpoint Phi, Cech, and syndrome
 carriers mean the next ledger should be coupled, not linearly ranked.
+
+## LTI-259: Tournament Edge-Witness Recursion
+
+Used by codex-2026-06-27-S268 for HYP-3124 after renumbering the provisional
+edge-witness HYP-3119 lane to preserve S269/HYP-3119 and the incoming
+HYP-3121 covering synthesis.  The carrier is a directed edge `tail -> tip`,
+not a runner, raw arc, tournament class, or scalar edge count.
+
+The proof-facing packet is:
+
+```text
+edge_witness(tail -> tip) =
+  endpoint_role_word
+  + outside_four_sector_deck
+  + tail_deletion_child_signature
+  + tip_deletion_child_signature
+  + recursive_tail_child_edge_deck
+  + recursive_tip_child_edge_deck
+  + observer_gluing_payload_orbit
+  + missing_input_vector
+  + coordinate_resurrection_sidecar_or_named_debt
+  + terminal_exit
+```
+
+Preserves: tail/tip role, HYP-3050/HYP-3054 four-sector observable,
+cross-sector orientation, both endpoint-deletion child obligations, child
+edge-deck recursion, observer-gluing payload, HYP-3116 missing-input status,
+HYP-3118 coordinate-repair status, and terminal exit.
+
+Destroys or audits: raw edge counts, local sector words without recursion,
+one-sided tail-only or tip-only recursions, untyped Ising/domain-wall counts,
+and any quotient that forgets which endpoint owns an obstruction.
+
+Executable readout: the S268 scout enumerates labelled tournaments through
+`n=5`.  Sector-word counts are `1,4,10,20`; sector plus paired
+endpoint-deletion child signatures are `1,4,16,80`; and at `n=5` all `20`
+sector groups split by child pair.  The largest sector refinements are
+`(1,1,1,0)` and `(0,1,1,1)`, each with `7` child-pair signatures over `960`
+labelled edge instances.
+
+Tournament Analysis vertices are edge-witness proof reframes, not runners or
+scalar edges.  The pairwise observable compares LRC predicate retention,
+tail/tip symmetry, recursive closure, sector resolution, observer gluing,
+missing-input repair, domain-wall alignment, formal readiness, and scalar
+guardrail.  Fingerprint:
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,7:3,9:1,10:1}`,
+`directed_3cycles=1`, `scc_sizes=[3,1,1,1,1,1,1,1,1]`,
+`hamiltonian_path_count=3`, and `7` flips against a locality-first gauge.
+Selected path:
+
+```text
+coordinate_resurrection_edge_sheaf
+-> edge_witness_two_ended_packet
+-> cross_sector_orientation_word
+-> paired_tail_tip_deletion_recursion
+-> proof_circuit_edge_gate
+-> domain_wall_edge_classifier
+-> ear_payload_edge_mass
+-> outside_four_sector_deck
+-> tail_deleted_one_sided_recursion
+-> tip_deleted_one_sided_recursion
+-> raw_edge_count_scalar
+```
+
+Next hook: attach the packet to HYP-3115 one-swap/domain-wall edges and ask
+which walls become observer-gluing discharges, which recurse to smaller
+tail/tip children, and which remain HYP-2963/HYP-3098 named debt.

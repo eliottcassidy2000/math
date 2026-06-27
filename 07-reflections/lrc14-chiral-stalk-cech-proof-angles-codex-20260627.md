@@ -28,7 +28,7 @@ protects the component/topology payload over that stalk.
 The integration with incoming work is concrete: the Cech route should be tested
 against HYP-3121's `r=2..6` multi-far lift-and-decorrelate floor, while the
 chiral route should be tested against HYP-3122's phi4/ear parity signal and
-the HYP-3122 edge-witness tail/tip recursion reservation.
+the HYP-3124 edge-witness tail/tip recursion scout.
 
 ## Why The Chiral Guard Is Different
 
