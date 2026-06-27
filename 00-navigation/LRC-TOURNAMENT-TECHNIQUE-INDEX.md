@@ -4261,6 +4261,32 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-246, LTI-245, LTT-147, LTT-146, LTT-145, LTT-144, LTT-143, T1188,
   T1187, T1186, T1184, OPEN-Q-108.
 
+### LTT-149: Irrational/Transcendental Approximation Witness-Margin Sidecar
+
+- **Move:** Treat approximation data as proof-carrier sidecars only after an
+  LRC witness interval or positive margin is retained.  Tournament vertices are
+  witness intervals, endpoint margins, continued-fraction states, denominator
+  shells, exceptional approximants, irrationality-measure claims, Liouville
+  spike schedules, ear payloads, and finite-address obligations, not named
+  constants alone.
+- **LRC use:** HYP-3114/S265 connects HYP-3062's Roth-Minkowski algebraic
+  fence, HYP-3075's Hurwitz/Markov/Pell best-approximant walls, HYP-3088/3089's
+  finite-grid witness repair, and HYP-3112's ear-payload frontier.  The central
+  pairwise observable is whether a carrier preserves the interval-margin
+  predicate `|t-p/q|<delta/max(s_i)` and the denominator shell needed by the
+  observer-gluing route.
+- **Preserves:** positive witness interval, endpoint distance, max-speed scale,
+  continued-fraction convergents, partial quotient spikes, irrationality-measure
+  status, exceptional approximants, Liouville spike schedule, finite-grid
+  bound, and terminal LRC route.
+- **Forgets / guardrail:** "Transcendental" alone is not a bound.  A quotient
+  that drops irrationality-measure data, exceptional approximants, or
+  partial-quotient spikes cannot justify a finite-denominator conclusion.
+- **Pointers:** HYP-3114, HYP-3112, HYP-3111, HYP-3109, HYP-3108, HYP-3098,
+  HYP-3096, HYP-3089, HYP-3088, HYP-3075, HYP-3062, HYP-2866, THM-575,
+  THM-565, THM-573, LTI-251, LTI-249, LTT-149, LTT-147, T1190, T1188,
+  OPEN-Q-108.
+
 ### LTT-141: Tournament Obstruction-Transfer Atlas
 
 - **Move:** Generalize the H=7/H=21 contradiction pattern into a transfer

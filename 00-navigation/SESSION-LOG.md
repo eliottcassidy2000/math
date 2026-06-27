@@ -27605,3 +27605,19 @@ strict one-swap root-lattice descent has named traps with Savitch depth `3` for
 reachable cases.  Therefore the HYP-3111 Minkowski q-body should encode root
 stratum, entropy/flatness, segment clearance, finite-address status, and
 observer debt rather than raw lattice concentration.
+
+## codex-2026-06-27 -- Irrational/transcendental approximation sidecar reservation -- HYP-3114
+
+User asked to merge in connections relating to approximation of irrational and
+transcendental numbers.  Reserved HYP-3114/T1190/LTI-251/LTT-149 after
+incoming HYP-3112 claimed the Lee-Yang ear-payload lane.
+
+Initial guardrail: approximation is useful for LRC14 only after an interior
+witness margin or positive witness interval is retained.  If `t` is a witness
+with margin `delta`, then any rational `p/q` with
+`|t-p/q| < delta/max(s_i)` remains a witness.  Algebraic irrational targets
+can use Roth/Hurwitz finite-exception fences only with height and exceptional
+approximants retained; transcendental targets need explicit irrationality
+measure or approximation-sequence sidecars; Liouville-type targets mark
+lacunary denominator spikes.  The preserved predicate is conversion of a
+positive witness interval into legal finite-grid or observer-gluing data.
