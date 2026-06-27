@@ -28,6 +28,33 @@ Next pull: add `sixth_power_collision_type`, `native_support6_flag`,
 `degenerate_padding_pair`, and `power_collision_discharge_route` to a
 HYP-2963/HYP-3074 packet sample already carrying relation-lattice,
 low-height-wall, cycle-image, and route-state closure fields.
+## codex-2026-06-27-S243 -- Hurwitz-Markov-Pell cannonball carrier (HYP-3075/T1158/LTI-223/LTT-121)
+
+User asked to merge in Hurwitz's theorem and Markov numbers, and to think of
+the cannonball problem and Pell numbers. Claimed HYP-3075, then added
+`04-computation/lrc14_hurwitz_markov_pell_cannonball_s243.py`, stored
+`05-knowledge/results/lrc14_hurwitz_markov_pell_cannonball_s243.out`, expanded
+the hypothesis, and created reflection/forum artifacts.
+
+Main readout: the nontrivial cannonball square
+`1^2+...+24^2=70^2` has `70=Pell P6`, while the neighboring Pell values
+`29=Pell P5` and `169=Pell P7` are fixed-coordinate-2 Markov branch wall
+numbers:
+
+```text
+(2,5,29), (2,29,169), (2,169,985), ...
+29*169 - 70^2 = 1
+```
+
+Conclusion for LRC14: Hurwitz/Markov/Pell/cannonball data is not a direct
+scalar proof quotient. Hurwitz/Markov classify best-approximation walls, while
+LRC14 needs anti-Bohr endpoint survival. The transferable proof object is a
+sidecar ledger: `continued_fraction_period_word`, `lagrange_markov_depth`,
+`markov_pell_fixed_coordinate`, `pell_cassini_gap`,
+`cannonball_square_pyramid_gate`, `endpoint_shell_address`,
+`quadratic_carry_residue`, and `required_sidecar_or_exit`. Tournament Analysis
+uses proof carriers/arithmetic sidecar types rather than runners or sequence
+entries and is transitive with one Hamiltonian path.
 
 ## codex-2026-06-26-S239 -- renormalized polymer / Dirichlet bridge (HYP-3073/T1155/LTI-220/LTT-118)
 ## codex-2026-06-26-S239 -- reserved renormalized polymer / Dirichlet bridge (HYP-3073)

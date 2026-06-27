@@ -15,6 +15,25 @@
 
 ---
 
+## Lead codex-2026-06-27-S243: Hurwitz-Markov-Pell cannonball carrier
+
+**Status:** SYNTHESIS / finite arithmetic sidecar scout; not proof
+(HYP-3075/T1158/LTI-223/LTT-121).
+**Readout:** Added
+`04-computation/lrc14_hurwitz_markov_pell_cannonball_s243.py`,
+`05-knowledge/results/lrc14_hurwitz_markov_pell_cannonball_s243.out`,
+`05-knowledge/hypotheses/HYP-3075-lrc14-hurwitz-markov-pell-cannonball-carrier.md`,
+`07-reflections/lrc14-hurwitz-markov-pell-cannonball-codex-s243.md`, and
+`poke-forum/posts/20260627-hurwitz-markov-pell-cannonball-lrc14/post.md`.
+The scout finds the nontrivial cannonball square `1^2+...+24^2=70^2`, with
+`70=Pell P6`; its neighboring Pell values `29=Pell P5` and `169=Pell P7` are
+fixed-coordinate-2 Markov branch wall numbers and satisfy `29*169-70^2=1`.
+**Next:** add the Hurwitz/Markov/Pell/cannonball sidecar fields to a Q27 or
+HYP-2963 packet sample and run status/route purity: the visible token should
+split by continued-fraction period, Markov depth, Pell unit, endpoint shell,
+quadratic carry, owner coordinate, and legal exit before any scalar is used.
+Namespace: HYP-3075 / T1158 / LTI-223 / LTT-121.
+
 ## Lead codex-2026-06-26-S238: LRC14 cross-carrier pullback resonance
 
 **Status:** EVIDENCE / finite carrier-portfolio scout; not proof

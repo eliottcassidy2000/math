@@ -1,0 +1,108 @@
+LRC14 HURWITZ / MARKOV / PELL / CANNONBALL CARRIER SCOUT
+========================================================================
+
+Scope
+  Markov triples generated with max coordinate <= 10000: 21
+  distinct Markov numbers: 21
+  cannonball scan: n <= 100000
+
+Hurwitz/Markov spectrum payload
+  Hurwitz constant: 1/sqrt(5), equality obstruction: golden ratio class
+  Markov refinement below 3: L_m = sqrt(9 - 4/m^2)
+  first Markov numbers:
+    1, 2, 5, 13, 29, 34, 89, 169, 194, 233, 433, 610, 985, 1325, 1597, 2897, 4181, 5741, 6466, 7561, 9077
+  first Markov-Pell intersection:
+    1, 2, 5, 29, 169, 985, 5741
+  sample Lagrange values for Markov-Pell branch:
+    m=   1  L_m=2.236067977500  approx_coeff=0.447213595500
+    m=   2  L_m=2.828427124746  approx_coeff=0.353553390593
+    m=   5  L_m=2.973213749464  approx_coeff=0.336336396998
+    m=  29  L_m=2.999207188147  approx_coeff=0.333421446825
+    m= 169  L_m=2.999976658056  approx_coeff=0.333335926903
+    m= 985  L_m=2.999999312874  approx_coeff=0.333333409681
+    m=5741  L_m=2.999999979773  approx_coeff=0.333333335581
+
+Fixed-2 Markov-Pell branch
+  (1, 2, 5): lhs=rhs=30, recurrence coordinate=5
+  (2, 5, 29): lhs=rhs=870, recurrence coordinate=29
+  (2, 29, 169): lhs=rhs=29406, recurrence coordinate=169
+  (2, 169, 985): lhs=rhs=998790, recurrence coordinate=985
+  (2, 985, 5741): lhs=rhs=33929310, recurrence coordinate=5741
+  Readout: fixing one Markov coordinate at 2 turns Vieta mutation into
+  the odd-index Pell branch 1,5,29,169,985,... with recurrence a(n+1)=6a(n)-a(n-1).
+
+Cannonball gate
+  square-pyramidal solutions found:
+    sum_{i<= 1} i^2 = 1^2
+    sum_{i<= 24} i^2 = 70^2
+  Pell context: P5=29, P6=70, P7=169
+  Cassini gap: P5*P7 - P6^2 = 1
+  Cannonball square: 70^2 = 4900, and 29*169 = 4901
+  n=24 side observations: 24 = P5-P3 = 24 = 2*P4 = 24
+  Readout: the nontrivial cannonball scalar is an elliptic/global square
+  event whose visible square root is a Pell carry between two Markov-Pell
+  wall numbers.  Use it as a wall/carry sidecar, not as a direct quotient.
+
+Triangular-tower Pell endpoint walls
+  same_end_tail_prefix_m_m1_eq_2n_n1: [(2, 3), (14, 20), (84, 119)]
+  right_block_begins_left_m2_eq_2n2_2n_1: [(3, 5), (20, 29), (119, 169)]
+  left_block_begins_left_m2_eq_n_2n1: [(4, 6), (144, 204)]
+  Readout: S712/T800 already give the LRC transfer grammar:
+  visible token = projection(shell address, quadratic carry, endpoint atom).
+
+Carrier ledger
+  labelled_lrc_packet_ledger
+    retained=['anti_bohr_predicate', 'controlled_forgetting', 'endpoint_owner', 'exact_scale', 'finite_certificate', 'legal_exit', 'route']
+    destroyed=[]
+    note=HYP-2963-style packet state; theorem currency.
+  route_state_closure_median
+    retained=['anti_bohr_predicate', 'controlled_forgetting', 'finite_certificate', 'legal_exit', 'route', 'sidecar_closure']
+    destroyed=['endpoint_owner_location']
+    note=S240/HYP-3074 interface after legal sidecar closure.
+  cross_carrier_portfolio
+    retained=['anti_bohr_predicate', 'controlled_forgetting', 'exact_scale', 'formal_exit', 'route', 'sidecar_closure']
+    destroyed=['packet_identity']
+    note=S238/HYP-3072 local portfolios glued by exits.
+  markov_three_leg_resonance
+    retained=['aggregate_warning', 'continued_fraction_period', 'lagrange_markov_depth', 'quadratic_unit', 'three_leg_residue']
+    destroyed=['anti_bohr_predicate', 'endpoint_owner', 'route']
+    note=HYP-2745/HYP-2753 three-leg language, not the LRC predicate.
+  hurwitz_threshold
+    retained=['approximation_exponent', 'badly_approximable_wall', 'continued_fraction_period', 'height_fence']
+    destroyed=['anti_bohr_predicate', 'endpoint_owner', 'route']
+    note=Best-approximant fence; LRC needs anti-approximation.
+  markov_pell_fixed_two_branch
+    retained=['continued_fraction_period', 'lagrange_markov_depth', 'pell_cassini_gap', 'quadratic_unit', 'three_leg_residue']
+    destroyed=['endpoint_owner', 'finite_certificate', 'route']
+    note=Fixed coordinate 2 turns Markov mutation into a Pell branch.
+  cannonball_square_pyramid_gate
+    retained=['endpoint_wall', 'pell_cassini_gap', 'quadratic_unit', 'square_pyramid_scalar']
+    destroyed=['anti_bohr_predicate', 'owner_support', 'route']
+    note=70^2 is visible residue; the Pell/elliptic address is the sidecar.
+  beatty_pell_endpoint_wall
+    retained=['carry_residue', 'endpoint_wall', 'quadratic_unit', 'shell_address', 'visible_token_warning']
+    destroyed=['anti_bohr_predicate', 'route']
+    note=HYP-2456/T800: visible word is carry-decorated, not raw Sturmian.
+
+Tournament Analysis
+  Candidate vertex sets considered: runners, speed gaps, fixed circle sections,
+  section boundaries, wall-crossing events, residues, cover arcs, Fourier modes,
+  matroid circuits, proof obligations, Markov triples, Pell wall atoms,
+  cannonball square-pyramid events, and proof-carrier ledgers.
+  Chosen vertices: proof carriers and arithmetic sidecar types, not runners.
+  Pairwise observable: retained critical LRC axes, total retained payload,
+  and destroyed owner/route/anti-Bohr coordinates.
+  Switch/gauge: orient toward the carrier preserving more critical LRC axes;
+  tie by total payload and fewer destroyed coordinates.
+  score_order: ['labelled_lrc_packet_ledger', 'route_state_closure_median', 'cross_carrier_portfolio', 'beatty_pell_endpoint_wall', 'markov_three_leg_resonance', 'markov_pell_fixed_two_branch', 'hurwitz_threshold', 'cannonball_square_pyramid_gate']
+  score_hist: {7: 1, 6: 1, 5: 1, 3: 1, 1: 1, 2: 1, 0: 1, 4: 1}
+  directed_3cycles: 0
+  hamiltonian_path_count: 1
+
+Proof-interface conclusion
+  Hurwitz/Markov tells us how best-approximation exceptions are stratified.
+  LRC14 asks for anti-approximation endpoint survival, so the direct scalar
+  theorem is facing the wrong way.  The transferable object is the sidecar:
+  continued-fraction period, Markov depth, quadratic unit, Pell carry, endpoint
+  shell address, and named destroyed coordinates.  In HYP-3072 language this
+  belongs to the blindness-pair/resonance-portfolio ledger.

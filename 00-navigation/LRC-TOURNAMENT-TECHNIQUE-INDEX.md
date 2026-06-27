@@ -3385,6 +3385,45 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2618, HYP-2617, HYP-2614, HYP-2608, THM-538, THM-572, LTI-224,
   LTT-122, T1159, OPEN-Q-108.
 
+### LTT-121: Hurwitz-Markov-Pell Cannonball Sidecar
+
+- **Move:** Treat Hurwitz/Markov/Pell/cannonball arithmetic as a sidecar
+  tournament over proof payloads, not as a runner or sequence-entry tournament.
+  The useful observable is whether the arithmetic carrier preserves anti-Bohr
+  endpoint survival after endpoint owner, exact scale, route, carry, and legal
+  exit fields are restored.
+- **LRC use:** HYP-3075/S243 finds the nontrivial cannonball square
+  `1^2+...+24^2=70^2`, with `70=Pell P6` between Markov-Pell wall numbers
+  `29=Pell P5` and `169=Pell P7`, satisfying `29*169-70^2=1`. The fixed-2
+  Markov branch is `(2,5,29),(2,29,169),(2,169,985),...`. This turns the
+  visible scalar square into a quadratic-unit/carry sidecar.
+- **Preserves:** Continued-fraction period, Lagrange/Markov depth, fixed
+  Markov coordinate, Pell unit, Pell Cassini gap, endpoint shell address,
+  quadratic carry residue, and visible endpoint-wall token.
+- **Forgets / guardrail:** Hurwitz/Markov classify best-approximation walls,
+  while LRC14 needs anti-Bohr endpoint survival. A scalar Markov number, Pell
+  number, or cannonball square destroys endpoint owner, route, exact scale, and
+  proof certificate data unless pulled back to HYP-2963 packets.
+- **Tournament fingerprint:** vertices are proof carriers and arithmetic
+  sidecar types, not runners. The retained-critical-axis gauge is transitive:
+  `labelled_lrc_packet_ledger > route_state_closure_median >
+  cross_carrier_portfolio > beatty_pell_endpoint_wall >
+  markov_three_leg_resonance > markov_pell_fixed_two_branch >
+  hurwitz_threshold > cannonball_square_pyramid_gate`, with no directed
+  3-cycles and one Hamiltonian path.
+- **Next pull:** Add `hurwitz_markov_approximant_class`,
+  `lagrange_markov_depth`, `continued_fraction_period_word`,
+  `markov_pell_fixed_coordinate`, `pell_wall_unit`, `pell_cassini_gap`,
+  `cannonball_square_pyramid_gate`, `endpoint_shell_address`,
+  `quadratic_carry_residue`, and `required_sidecar_or_exit` to a Q27 or
+  HYP-2963 packet sample; then test whether visible blocked/open tokens split
+  into endpoint atoms, neighboring open rows, deletion targets, or named
+  F7/THM-572 debt.
+- **Pointers:** HYP-3075, HYP-3074, HYP-3072, HYP-3062, HYP-3063, HYP-2745,
+  HYP-2753, HYP-2456, HYP-2454, HYP-2963, THM-572, LTI-223, LTI-221, LTI-219,
+  LTI-210, LTI-209, LTT-121, LTT-119, LTT-117, LTT-108, LTT-107, T1158,
+  OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,

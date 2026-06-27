@@ -17,6 +17,21 @@ remain degeneracy guards unless another sidecar makes them native. -> HYP-3076,
 HYP-3074, HYP-3073, HYP-3071, HYP-3062, HYP-3060, HYP-3058, HYP-3009,
 HYP-2963, HYP-2887, HYP-2636, HYP-2617, HYP-2614, THM-538, THM-572,
 LTI-224, LTT-122, T1159.
+**OPEN-Q-108 S243 Hurwitz-Markov-Pell cannonball addendum:** HYP-3075 turns
+Hurwitz/Markov/Pell/cannonball arithmetic into a sidecar ledger for anti-Bohr
+packet work.  The S243 scout finds `1^2+...+24^2=70^2`, with
+`70=Pell P6` between Markov-Pell wall numbers `29=Pell P5` and
+`169=Pell P7`, satisfying `29*169-70^2=1`; fixed-coordinate-2 Markov triples
+give `(2,5,29),(2,29,169),(2,169,985),...`.  Open task: add
+`hurwitz_markov_approximant_class`, `lagrange_markov_depth`,
+`continued_fraction_period_word`, `markov_pell_fixed_coordinate`,
+`pell_wall_unit`, `pell_cassini_gap`, `cannonball_square_pyramid_gate`,
+`endpoint_shell_address`, `quadratic_carry_residue`, and
+`required_sidecar_or_exit` to a Q27 or HYP-2963 packet sample.  Then test
+whether visible blocked/open tokens split into exact endpoint atoms,
+neighboring open rows, deletion targets, or named F7/THM-572 debt. ->
+HYP-3075, HYP-3074, HYP-3072, HYP-3062, HYP-3063, HYP-2745, HYP-2753,
+HYP-2456, HYP-2454, HYP-2963, THM-572, LTI-223, LTT-121, T1158.
 
 **OPEN-Q-108 S238 cross-carrier pullback resonance addendum:** HYP-3072 turns
 the CPI pullback index into a finite proof-carrier portfolio audit.  The S238

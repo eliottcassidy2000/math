@@ -175,6 +175,15 @@ AP/GW boundary stop, or THM-572/F7 exit.
 This turns failures into proof data instead of bibliography.  A failed quotient
 is useful precisely because it says which sidecar must be restored.
 
+S243/HYP-3075 adds a Hurwitz-Markov-Pell/cannonball instance of the same rule.
+Hurwitz/Markov best-approximant constants face the opposite direction from the
+LRC anti-Bohr predicate; the transferable payload is the exceptional-wall
+sidecar.  The cannonball identity `1^2+...+24^2=70^2` is read as
+`70=Pell P6` between Markov-Pell walls `29=Pell P5` and `169=Pell P7`, with
+`29*169-70^2=1`.  It can enter packet rows only as continued-fraction period,
+Markov depth, Pell unit/Cassini gap, endpoint shell, quadratic carry, and
+required sidecar/exit fields.
+
 ## Creative Proof Angle B: Resonance-Portfolio Proof
 
 The second route is to stop trying to force every residual through one master
