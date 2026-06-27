@@ -10,6 +10,7 @@ extends:
   - HYP-3113   # codex two-map: quartic_cumulant_stabilizer (proposed; here computed)
   - HYP-3111   # codex Ising/Lee-Yang carriers (zeros on |z|=1 for toy ferromagnets; LRC is φ⁴ not Ising)
 related:
+  - HYP-3138   # k=8 reflection fold preserves gK8 but requires odd-coordinate repair
   - HYP-3085   # gK8/S2 = the quadratic (b) term; the +6 S4 is the quartic
   - HYP-3092   # cap = pair-Pascal mass (the quadratic), dip = the higher-Pascal (the quartic)
   - THM-577    # the cap value + the dip
@@ -60,3 +61,22 @@ Lee–Yang confinement.**
 1. Test the dip-bound = κ₄/κ₂² bound across the bounded binding bank (does a uniform quartic bound give the
    dip uniformly?). 2. Fit the effective `(λ_k,b_k)`; verify `λ_k≥0`. 3. Test the odd-ear(winding tournament)
    ↔ κ₃ bridge. 4. Derive the zero-confinement from a φ⁴ sector model (the Lee–Yang half).
+
+## Post-HYP-3138 Fold-Repair Addendum
+
+HYP-3138 supplies the missing quotient discipline for the k=8 phi4/gK8 lane.
+The even reflection fold
+
+```text
+(q0+q6, q1+q5, q2+q4, q3)
+```
+
+preserves the gK8 functional `L_yK8=10q0+q3+10q6` and is injective on the
+tested primitive k=8 bounded banks through span<=16.  This means the phi4
+quartic/dip argument may use the even folded coordinate as a finite
+bounded-core lookup.
+
+The same audit warns that the top row is not reflection-balanced:
+`odd_leakage=(451/1470,142/735,131/1470)`.  Thus the quartic stabilizer is
+not allowed to forget odd coordinates unless HYP-3118-style coordinate
+resurrection or HYP-3116 endpoint `Phi/P` sidecars are present.

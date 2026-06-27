@@ -37,6 +37,31 @@ and what terminal exit or named debt remains.
 Namespace: HYP-3137 / LTI-263 / LTT-161 / T1202 / OPEN-Q-108.  The atlas
 cross-references HYP-3136 as the integrated multi-far floor closure it is
 meant to feed.
+## Lead codex-2026-06-27-k8-reflection-fold: k=8 reflection-fold coordinate resurrection
+
+**Status:** EVIDENCE / executable bounded-bank quotient audit; not proof
+(HYP-3138/T1203).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3138-lrc14-k8-reflection-fold-resurrection.md`,
+`04-computation/lrc14_k8_reflection_fold_resurrection_codex_20260627.py`,
+`05-knowledge/results/lrc14_k8_reflection_fold_resurrection_codex_20260627.out`,
+and `07-reflections/lrc14-k8-reflection-fold-resurrection-codex-20260627.md`.
+
+Readout: HYP-3132's De Moivre hard-row fold gives the even biquadratic
+coordinate, but HYP-3138 checks the destroyed coordinates directly.  For k=8,
+folding the miss distribution by `t <-> 6-t`,
+`even_fold=(q0+q6,q1+q5,q2+q4,q3)`, is injective on the tested primitive
+bounded banks span<=14,15,16 (`3431`, `6434`, `11432` rows and `0` collision
+fibers).  The top row remains `(0,1,2,3,4,5,6,7)` with
+`L_yK8=2633/735`, margin `10*cap8-L_yK8=683/2940`, and nonzero odd leakage
+`(451/1470,142/735,131/1470)`.
+
+Next: prove a finite k=8 fold-adjoint lemma.  The even fold may carry the
+gK8/phi4 dip bound, but endpoint `Phi/P`, observer gluing, and finite-address
+exits need either the odd-coordinate resurrection table or named debt.
+
+Namespace: HYP-3138 / LTI-264 / LTT-162 / T1203 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-A000568: LRC14 A000568 edge-witness sandwich
 

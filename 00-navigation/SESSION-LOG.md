@@ -28605,3 +28605,32 @@ Next proof pull: build a packet-row schema with
 `dirichlet_polymer_conductance`, `vitali_antipoisson_width_debt`, and
 `terminal_exit_or_named_debt`, then run it on HYP-2963/HYP-3107 residual
 packets, HYP-3098 observer-gluing rows, and the THM-573 level-7 residual.
+
+## codex-2026-06-27-k8-reflection-fold -- k=8 reflection-fold coordinate resurrection -- HYP-3138
+
+User asked to search creatively through niche unrelated work and test freely
+toward the remaining LRC14 proof.  After fetching new HYP-3134 and HYP-3132
+work, the active open node was the k=8 bounded-core dip.  Added
+`04-computation/lrc14_k8_reflection_fold_resurrection_codex_20260627.py`,
+stored output
+`05-knowledge/results/lrc14_k8_reflection_fold_resurrection_codex_20260627.out`,
+detail
+`05-knowledge/hypotheses/HYP-3138-lrc14-k8-reflection-fold-resurrection.md`,
+and reflection
+`07-reflections/lrc14-k8-reflection-fold-resurrection-codex-20260627.md`.
+
+The exact test folds the miss-count distribution by `t <-> 6-t`:
+`even_fold=(q0+q6,q1+q5,q2+q4,q3)`.  This preserves
+`L_yK8=10q0+q3+10q6`.  Integer-grid enumeration over primitive k=8 banks gives
+`0` fold-collision fibers for span<=14 (`3431` rows), span<=15 (`6434` rows),
+and span<=16 (`11432` rows).  The best row remains `(0,1,2,3,4,5,6,7)` with
+`L_yK8=2633/735`, margin `10*cap8-L_yK8=683/2940`, and nonzero
+`odd_leakage=(451/1470,142/735,131/1470)`.
+
+Readout: HYP-3132's De Moivre biquadratic symmetry is a legal even fold, not
+an odd-coordinate eraser.  The next theorem target is a finite k=8
+fold-adjoint lemma: the even fold determines odd leakage on the bounded-core
+bank, or the row emits finite-address / observer-gluing debt before endpoint
+`Phi/P` gates from HYP-3116 are invoked.  This is the practical transfer of
+the older HYP-3110 theta/crystallographic quotient audit and HYP-3118
+coordinate-resurrection sheaf into the current single remaining proof node.

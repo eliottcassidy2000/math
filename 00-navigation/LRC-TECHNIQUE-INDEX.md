@@ -401,6 +401,7 @@ record what it destroys before asking it to prove anything.
 | LTI-261 | A000568 edge-extension sandwich | `four_sector_tetrahedral_word`, `A000568_unlabeled_extension_shadow`, `paired_tail_tip_child_deck`, `SPEC_resonance_lattice_sidecar_or_named_debt` | HYP-3133 tests the user's `10 < 12 < 16` and `20 < 56 < 80` observation as a shifted quotient ladder.  Edge-local signatures on `m` vertices compare to A000568 unlabeled tournaments on `m+1` vertices: `m=4: 10 < 12 < 16`, `m=5: 20 < 56 < 80`, and `m=6: 35 < 456 < 632`.  The layer is diagnostic: sector word is equinumerosity, A000568 is the unrooted one-extra-vertex equidistribution/free-extension shadow, and paired children are equidecomposability. | HYP-3133, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3121, HYP-2968, T1200, LTT-159, LTI-261, OPEN-Q-108 | Add `a000568_extension_shadow` between `edge_tail_tip_sector_word` and deletion-child ratios in HYP-3125/HYP-3129 packet rows; use it to stratify finite SPEC constant-chase failures before escalating to paired child deck or named resonance debt. |
 | LTI-262 | A000568 edge-envelope global consistency quotient | Lower four-sector composition envelope, upper paired tail/tip child envelope, A000568 middle quotient, envelope position, global-consistency class, edge-child gluing status | HYP-3134/S272 explains `10<12<16` and `20<56<80`: raw sector decks give `1,4,10,20,35`, paired child edge packets give `1,4,16,80,632`, and A000568 one vertex later sits between them (`12`, `56`, `456`).  The proof use is a controlled-forgetting rule: start with the safe HYP-3124 paired child packet, then quotient only by a named global-consistency rule. | HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3121, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-3047, T1201, LTT-160, LTI-262, OPEN-Q-108 | Add `envelope_position`, `global_consistency_class`, `edge_child_gluing_status`, `resonance_lattice_class`, `SPEC_bound_status`, and `terminal_exit_or_named_debt` to HYP-3125 edge-floor packets before quotienting away paired tail/tip child data. |
 | LTI-263 | Generating-function payload atlas | Miss-count PGF, signed SPEC Fourier series, A000568 count/cycle-index quotient, OCF independence polynomial/Walsh EGF, De Moivre/resolvent elementary-symmetric polynomial, IO walk determinant GF, hard-core/polymer partition function | HYP-3137/S273 reserves a comparison of generating functions by proof payload rather than by raw scalar evaluation after the HYP-3136 integrated floor synthesis.  The question is which coordinates survive: coefficient layer, root locus, log-derivative/cumulant, rooted/unrooted quotient status, signed tail certificate, finite-address/observer-gluing exit, or named debt. | HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3129, HYP-3118, HYP-3109, HYP-3108, HYP-3103, HYP-3054, HYP-2991, THM-077, THM-076, THM-059, T1202, LTT-161, LTI-263, OPEN-Q-108 | Run `lrc14_generating_function_payload_atlas_codex_s273.py`; attach `gf_carrier_type`, `coefficient_payload_layer`, `root_locus_status`, `log_derivative_cumulant`, `quotient_legality`, `signed_tail_certificate`, and `terminal_exit_or_named_debt` to the current finite constant-chase packet. |
+| LTI-264 | k=8 reflection-fold coordinate resurrection | Even folded miss distribution, odd-coordinate resurrection table, De Moivre biquadratic resolvent word, endpoint `Phi/P` activation status, observer gluing or named debt | HYP-3138 tests the HYP-3132 k=8 De Moivre fold as a proof-legal quotient.  Folding `q` by `t<->6-t` gives `even_fold=(q0+q6,q1+q5,q2+q4,q3)`, which preserves `L_yK8=10q0+q3+10q6`.  Exact integer-grid audit over primitive k=8 banks span<=14/15/16 finds `0` fold collisions across `3431/6434/11432` rows, so the fold behaves like a finite adjoint lookup in these banks.  The best row has nonzero odd leakage, so the fold needs coordinate resurrection before endpoint/circuit proof use. | HYP-3138, HYP-3134, HYP-3132, HYP-3122, HYP-3118, HYP-3116, HYP-3110, HYP-3085, THM-577, T1203, LTT-162, LTI-264, OPEN-Q-108 | Prove a finite k=8 fold-adjoint lemma: the even fold determines odd leakage on the bounded-core bank or emits finite-address / observer-gluing debt before endpoint `Phi/P` is invoked. |
 
 ## Cross-Cutting Guardrails
 
@@ -3077,3 +3078,54 @@ global_consistency_quotient
 -> raw_four_sector_composition
 -> raw_count_numerology
 ```
+
+## LTI-264: k=8 Reflection-Fold Coordinate Resurrection
+
+Used by codex-2026-06-27-k8-reflection-fold for HYP-3138/T1203.  This
+technique turns the HYP-3132 De Moivre biquadratic hard-row symmetry into a
+coordinate-resurrection test.
+
+Fold the k=8 miss-count distribution by reflection:
+
+```text
+even_fold(q) = (q0+q6, q1+q5, q2+q4, q3)
+odd_leakage(q) = (q0-q6, q1-q5, q2-q4)
+```
+
+The gK8 functional
+
+```text
+L_yK8 = 10*q0 + q3 + 10*q6
+```
+
+depends only on the even fold.  The De Moivre resolvent explains why this is
+the natural even coordinate:
+
+```text
+(t-1)(t-2)(t-4)(t-5), t=u+3
+  = u^4 - 5u^2 + 4
+```
+
+Executable readout: exact integer-grid enumeration finds the even fold
+injective on primitive k=8 banks:
+
+```text
+span<=14: 3431 rows, 0 collision fibers
+span<=15: 6434 rows, 0 collision fibers
+span<=16: 11432 rows, 0 collision fibers
+```
+
+The guardrail is that the best row `(0,1,2,3,4,5,6,7)` has nonzero
+`odd_leakage=(451/1470,142/735,131/1470)`.  Therefore the fold is not an
+odd-coordinate eraser.  It is a finite adjoint lookup candidate in the sense
+of HYP-3118.
+
+Preserves: the even gK8/phi4 Delsarte coordinate, the De Moivre biquadratic
+resolvent word, and finite bounded-bank identity.
+
+Destroys or audits: odd coordinates, endpoint `Phi/P` activation data,
+observer gluing data, and any terminal finite-address coordinate.
+
+Next hook: prove a k=8 fold-adjoint lemma.  The even fold may carry the
+gK8/phi4 dip bound, but the proof packet must resurrect odd leakage or route
+it to named debt before endpoint/circuit proof obligations are used.

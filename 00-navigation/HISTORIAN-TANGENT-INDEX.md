@@ -84,6 +84,14 @@ Useful synthetic maps added later:
   A000568 as a global-consistency quotient between raw four-sector edge
   shadows and fully paired tail/tip child witnesses, and transfers that
   controlled-forgetting rule to the LRC14 edge-floor packet.
+- `07-reflections/lrc14-k8-reflection-fold-resurrection-codex-20260627.md`:
+  HYP-3138/T1203 audit of the k=8 hard-row reflection fold.  It connects
+  HYP-3132 De Moivre biquadratic symmetry, HYP-3122 gK8/phi4, HYP-3116
+  endpoint circuit gates, HYP-3118 coordinate resurrection, HYP-3110 theta /
+  crystallographic quotient audits, and HYP-3134 global-consistency warnings.
+  Exact bounded-bank check: the even fold is injective through span<=16, but
+  the top row has nonzero odd leakage, so the next theorem target is a
+  finite fold-adjoint lemma rather than an odd-coordinate erasure claim.
 
 ## Second-Pass Small Motif Ledger
 

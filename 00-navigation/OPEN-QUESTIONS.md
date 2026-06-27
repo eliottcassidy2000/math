@@ -1,5 +1,20 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3138 k=8 reflection-fold addendum:**
+HYP-3138 tests the quotient suggested by the HYP-3132 De Moivre/biquadratic
+hard-row reduction.  The even fold
+`(q0+q6,q1+q5,q2+q4,q3)` preserves `L_yK8=10q0+q3+10q6` and is injective on
+the tested primitive k=8 banks span<=14,15,16: `3431`, `6434`, and `11432`
+rows, all with `0` collision fibers.  The best row still has nonzero
+`odd_leakage=(451/1470,142/735,131/1470)`, so symmetry is not an eraser.
+
+Open task: prove a finite fold-adjoint lemma for the k=8 bounded core.  Either
+the even fold determines the odd leakage in the bounded bank, or the row emits
+named finite-address / observer-gluing debt before endpoint `Phi/P` is used.
+This is the bridge from the even gK8/phi4 dip bound to a proof-legal terminal
+packet. -> HYP-3138, HYP-3134, HYP-3132, HYP-3122, HYP-3118, HYP-3116,
+HYP-3110, HYP-3085, THM-577, LTI-264, LTT-162, T1203, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3133 A000568 edge-sandwich addendum:**
 HYP-3133 adds the field `a000568_extension_shadow` between HYP-3124's
 `edge_tail_tip_sector_word` and the paired endpoint-deletion child deck.  The

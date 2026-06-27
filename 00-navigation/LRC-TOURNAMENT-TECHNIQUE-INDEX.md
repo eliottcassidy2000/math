@@ -108,6 +108,10 @@ obligations, and proof-carrier interfaces.
   coefficient layer, root locus, log-derivative/cumulant, quotient legality,
   signed tail certificate, and terminal exit; do not rank raw scalar
   evaluations as proof carriers.
+- Need to use the k=8 De Moivre reflection fold without erasing coordinates:
+  use LTT-162 after LTT-161/LTT-160/LTT-152 and treat the even fold as a
+  quotient operator with an odd-coordinate resurrection table or named
+  finite-address / observer-gluing debt.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5252,3 +5256,38 @@ constant chase.
 - **Pointers:** HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131,
   HYP-3129, HYP-3118, HYP-3109, HYP-3108, HYP-3103, HYP-3054, HYP-2991,
   THM-077, THM-076, THM-059, LTI-263, LTT-161, T1202, OPEN-Q-108.
+
+## LTT-162: Tournament Of k=8 Reflection-Fold Repair Carriers
+
+- **Move:** Treat the HYP-3132 k=8 De Moivre biquadratic fold as a quotient
+  operator requiring coordinate resurrection.  Vertices are proof carriers and
+  quotient operators: endpoint `Phi/P` activation circuit, coordinate
+  resurrection adjoint, k=8 even fold table, gK8 even Delsarte functional,
+  A000568 global-consistency quotient, Jacobi theta even/odd channels,
+  De Moivre biquadratic resolvent, raw `L_yK8` scalar, and wallpaper/space
+  orbifold audits.
+- **LRC use:** HYP-3138 folds the miss distribution to
+  `even_fold=(q0+q6,q1+q5,q2+q4,q3)`, preserving
+  `L_yK8=10q0+q3+10q6`.  Exact bounded-bank audit finds the fold injective
+  through span<=14/15/16 (`3431/6434/11432` primitive rows, `0` collision
+  fibers).  The best row has nonzero odd leakage, so the fold must carry an
+  odd-coordinate repair table or named debt before endpoint proof gates use it.
+- **Preserves:** k=8 Delsarte/phi4 predicate, De Moivre even resolvent word,
+  finite bounded-bank lookup, and quotient legality when a repair section is
+  named.
+- **Forgets / guardrail:** raw `L_yK8` forgets odd coordinates and endpoint
+  activation data; crystallographic finite catalogs are only quotient audits
+  unless stabilizers and destroyed coordinates are named.
+- **Fingerprint:** HYP-3138 reports
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`,
+  no directed 3-cycles, singleton SCCs, one Hamiltonian path, and selected
+  path `endpoint_phi_activation_circuit -> coordinate_resurrection_adjoint ->
+  k8_even_reflection_fold_table -> gK8_even_delsarte_functional ->
+  A000568_global_consistency_quotient -> jacobi_theta_even_odd_channels ->
+  de_moivre_biquadratic_resolvent -> raw_LyK8_scalar ->
+  wallpaper17_space230_orbifold_audit`.
+- **Next hook:** Prove the finite k=8 fold-adjoint lemma: the even fold
+  determines the odd leakage on the bounded-core bank, or the row emits
+  finite-address / observer-gluing debt before endpoint `Phi/P` is invoked.
+- **Pointers:** HYP-3138, HYP-3134, HYP-3132, HYP-3122, HYP-3118, HYP-3116,
+  HYP-3110, HYP-3085, THM-577, LTI-264, LTT-162, T1203, OPEN-Q-108.

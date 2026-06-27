@@ -7,6 +7,7 @@ extends:
   - HYP-3122   # the φ⁴ cap (S67) -- the φ⁴ potential IS this biquadratic resolvent
   - HYP-3085   # gK8 dual = the resolvent quartic
 related:
+  - HYP-3138   # reflection fold is injective on tested k=8 bounded banks but needs odd-coordinate repair
   - THM-577    # the rational cap = the De Moivre solvability collapse to Q
   - HYP-3131   # far subsumes into bounded core (so k=8 is THE node)
   - HYP-3129   # multi-far SPEC bound proved elementarily (kps, c>=0.642)
@@ -54,3 +55,23 @@ its resolvent degree is ≤4.
    binding family (the degree-2 reduction of HYP-3122's `κ₄/κ₂²`).
 2. Bound that single coefficient (now solvable) + the φ⁴ sign ⟹ close the k=8 dip ⟹ close coverage extremality
    ⟹ (with the proved branches) close the covering bound.
+
+## Post-HYP-3138 Guardrail: Fold, Do Not Erase
+
+HYP-3138 tests the reflection fold as an exact bounded-bank quotient:
+
+```text
+even_fold(q) = (q0+q6, q1+q5, q2+q4, q3).
+```
+
+The fold is injective on the tested primitive k=8 banks span<=14,15,16
+(`3431/6434/11432` rows and `0` collision fibers).  This supports the
+improved argument: the biquadratic coordinate can be used as a finite
+adjoint/lookup object for the bounded core.
+
+But the best row `(0,1,2,3,4,5,6,7)` has nonzero
+`odd_leakage=(451/1470,142/735,131/1470)`.  Therefore the reflection does not
+prove odd coordinates vanish.  The next theorem must be a fold-adjoint lemma:
+either recover odd leakage from the even fold on the bounded-core bank, or
+emit finite-address / observer-gluing debt before endpoint `Phi/P` proof
+gates are invoked.
