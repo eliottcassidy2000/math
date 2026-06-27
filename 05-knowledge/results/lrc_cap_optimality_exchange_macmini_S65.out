@@ -1,0 +1,38 @@
+======================================================================================
+ CAP MINIMIZER: true min over {1..N}, the minimizer, and is it BOUNDED?
+======================================================================================
+
+--- speeds from {1..13} ---
+  j=2 (k=11): min lonely =          66/91 = 0.725275  minimizer=(1, 13)  = top-cluster
+  j=3 (k=10): min lonely =          55/91 = 0.604396  minimizer=(1, 12, 13)  = top-cluster
+  j=4 (k=9): min lonely =      1979/4004 = 0.494256  minimizer=(1, 11, 12, 13)  = top-cluster
+  j=5 (k=8): min lonely =      2243/5880 = 0.381463  minimizer=(1, 5, 7, 8, 9)  = top-cluster
+
+--- speeds from {1..16} ---
+  j=2 (k=11): min lonely =          66/91 = 0.725275  minimizer=(1, 13)  = top-cluster
+  j=3 (k=10): min lonely =          55/91 = 0.604396  minimizer=(1, 12, 13)  = top-cluster
+  j=4 (k=9): min lonely =      1979/4004 = 0.494256  minimizer=(1, 11, 12, 13)  = top-cluster
+  j=5 (k=8): min lonely =      2243/5880 = 0.381463  minimizer=(1, 5, 7, 8, 9)  = top-cluster
+
+--- speeds from {1..20} ---
+  j=2 (k=11): min lonely =          66/91 = 0.725275  minimizer=(1, 13)  = top-cluster
+  j=3 (k=10): min lonely =          55/91 = 0.604396  minimizer=(1, 12, 13)  = top-cluster
+  j=4 (k=9): min lonely =      1979/4004 = 0.494256  minimizer=(1, 11, 12, 13)  = top-cluster
+  j=5 (k=8): min lonely =      2243/5880 = 0.381463  minimizer=(1, 5, 7, 8, 9)  = top-cluster
+
+======================================================================================
+ GREEDY DESCENT (improvement tournament) — does it reach the global minimizer?
+======================================================================================
+  j=2: greedy -> (1, 13) lonely=0.725275   global min (1, 13)=0.725275   REACHES global min
+  j=3: greedy -> (1, 12, 13) lonely=0.604396   global min (1, 12, 13)=0.604396   REACHES global min
+  j=4: greedy -> (1, 11, 12, 13) lonely=0.494256   global min (1, 11, 12, 13)=0.494256   REACHES global min
+  j=5: greedy -> (1, 10, 11, 12, 13) lonely=0.396570   global min (1, 5, 7, 8, 9)=0.381463   STUCK (greedy=0.39657 vs min=0.38146)
+
+======================================================================================
+ IMPROVEMENT-TOURNAMENT TRANSITIVITY: are there swap-3-cycles (A<B<C<A) near the optimum?
+======================================================================================
+  j=3: 286 configs; LOCAL minima under single-swap (no improving swap) = 4: [(1, 12, 13), (2, 9, 11), (3, 10, 11), (5, 8, 9)]
+  global min = (1, 12, 13) (0.604396); local minima all == global? False
+
+  -> single local min = the swap-improvement digraph has a UNIQUE sink = greedy/exchange proves
+     optimality (no spurious local minima = the improvement relation is 'transitive enough').
