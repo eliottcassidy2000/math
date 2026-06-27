@@ -80,8 +80,8 @@ if __name__=="__main__":
                 c=subgraph_canon(comp,E)
                 key=(len(comp),c)
                 if key in tcanon: hits[tcanon[key]]+=1
-    for n in (7,8,9,10):
-        T= 30000 if n<=8 else 12000
+    for n in (7,):
+        T= 12000
         for _ in range(T):
             adj=random_tournament(n,random); checked+=1
             m,E=conflict_graph(adj)

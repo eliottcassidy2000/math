@@ -3,7 +3,7 @@ tournament_omega_graph_families_kps.py  (kind-pasteur-2026-06-27-S31ah)
 
 Generalize THM-201/202 (K3, P4 forbidden as Omega) to GRAPH FAMILIES: which
 structural classes can be a tournament's conflict graph Omega(T)?
-Realized small Omega are clique-like (HYP-3099); test which families appear:
+Realized small Omega are clique-like (HYP-3101); test which families appear:
   clique, cycle C_m, star K_{1,m}, path P_m, tree (acyclic), bipartite,
   disconnected. Forbidden families = new certificate classes.
 

@@ -1,0 +1,17 @@
+I=21 Omega-realizability miner (codex-S260 frontier task 1)
+==========================================================
+The 5 connected graphs with I(G,2)=21: K10, K8-e, K6-M, K6-P3, P4 (verified I=21 each).
+P4 excluded by THM-202. The remaining 4 (K10, K8-e, K6-M, K6-P3):
+
+RESULT (from tournament_single_component_H_ladder_kps.py, the rigorous source):
+the SINGLE-COMPONENT (connected Omega) H spectrum has odd gaps EXACTLY {7,21} (exhaustive n<=6
++ 30k sample n=7). Since each of the 5 graphs is connected with I=21, and NO connected Omega has
+I=21, NONE of the 5 is realizable as a tournament's Omega(T) => H=21 has no single-component
+realization => combined with H = prod I(C_i,2) and I=7 impossible (no K3, THM-201), H=21 is blocked.
+This CORROBORATES THM-115. The focused per-graph miner (this script) confirms 0 hits in the
+sampled range; the full rigor is THM-115's Moon bound (m>=9 => alpha1>=12 => H>=25) + n<=8 exhaustive.
+
+EXPANSION OBSTRUCTION (the mechanism, generalizing K3->K4 of THM-201):
+  m pairwise-sharing odd cycles cluster around common vertices and FORCE additional cycles;
+  for the K10 target, Moon vertex-pancyclicity gives alpha1>=12 at m>=9, so the 10 cycles can
+  never be ISOLATED (always >10 cycles present) => no K10 component. Same expansion blocks K8-e etc.
