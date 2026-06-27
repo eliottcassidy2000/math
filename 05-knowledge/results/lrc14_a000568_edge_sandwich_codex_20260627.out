@@ -1,0 +1,71 @@
+HYP-3133 / codex-2026-06-27-A000568
+A000568 middle quotient for edge-witness recursion; executable synthesis, not a proof.
+
+1. CLAIMED MIDDLE QUOTIENT
+namespace=HYP-3133/T1200/LTI-261/LTT-159
+candidate invariant:
+  edge_extension_sandwich_certificate = (
+    four_sector_tetrahedral_word,
+    A000568_unlabeled_extension_shadow,
+    paired_tail_tip_child_deck,
+    SPEC_resonance_lattice_sidecar_or_named_debt
+  )
+
+Interpretation:
+- equinumerosity layer: sector words are weak compositions of m-2 outside vertices into four edge sectors.
+- equidistribution layer: A000568(m+1) is the unrooted one-extra-vertex tournament quotient.
+- equidecomposability layer: paired child signatures remember both tail-deletion and tip-deletion cards.
+
+Preserved LRC predicate: in the HYP-3125/HYP-3129 multi-far floor, the quotient is legal only if the
+R-safe -> Q-safe witness edge still routes to positive SPEC floor, finite constant chase, endpoint recursion,
+or a named H7/Asano/Lee-Yang/phi4/Cech debt.
+Destroyed by scalarization: the free middle extension class, endpoint owner, which deletion child improves
+the floor, and which finite low-frequency row in HYP-3129 caused the constant-chase burden.
+
+Challenged assumption: A000568 is not just numerology.  It is the natural unrooted middle quotient between
+sector equinumerosity and paired endpoint-deletion equidecomposition.
+
+2. SHIFTED A000568 EDGE-WITNESS SANDWICH
+A000568(n)=number of unlabeled tournaments on n vertices.
+Compare edge-local signatures on m vertices with A000568(m+1).
+m  sector_words  A000568(m+1)  paired_child_signatures  lower_gap  upper_gap  gap_position  status
+2             1              2                        1          1         -1            NA  outside_small_boundary
+3             4              4                        4          0          0            NA  trivial_equality
+4            10             12                       16          2          4         0.333  proper_sandwich
+5            20             56                       80         36         24         0.600  proper_sandwich
+6            35            456                      632        421        176         0.705  proper_sandwich
+
+Readout: the user's 10<12<16 and 20<56<80 pattern is the first two proper cases of a shifted sandwich that continues at m=6 as 35<456<632.  The m=3 row is equality, and m=2 is a small boundary where the free one-vertex quotient is larger than the available two-ended edge deck.
+
+m=6 largest sector refinements:
+- sector=(1, 1, 1, 1): child_pairs=47, instances=46080
+- sector=(2, 1, 1, 0): child_pairs=30, instances=23040
+- sector=(1, 2, 1, 0): child_pairs=30, instances=23040
+- sector=(1, 1, 2, 0): child_pairs=30, instances=23040
+- sector=(0, 2, 1, 1): child_pairs=30, instances=23040
+
+3. TOURNAMENT ANALYSIS OVER QUOTIENT CARRIERS
+vertices=proof carriers and quotient shadows, not runners or scalar sequences
+pairwise_observable=majority over axes lrc_predicate_retention,edge_sandwich_explains,tail_tip_recursion,equidecomposition_power,equinumerosity_guard,spec_resonance_bridge,finite_constant_chase,formalization_readiness,scalar_guardrail
+switch=orient A->B when A wins more axes; ties use the declared Hamiltonian path
+tie_hamiltonian_path=SPEC_resonance_lattice_certificate -> edge_floor_two_ended_packet -> A000568_unlabeled_extension_shadow -> paired_tail_tip_child_deck -> four_sector_tetrahedral_word -> even_graph_cycle_space_parity -> Asano_tip_tail_legality_guard -> closed_form_constant_chase -> raw_sequence_numerology
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+selected_hamiltonian_path=edge_floor_two_ended_packet -> SPEC_resonance_lattice_certificate -> A000568_unlabeled_extension_shadow -> paired_tail_tip_child_deck -> closed_form_constant_chase -> Asano_tip_tail_legality_guard -> even_graph_cycle_space_parity -> four_sector_tetrahedral_word -> raw_sequence_numerology
+
+Top carrier hooks:
+- edge_floor_two_ended_packet: preserves=HYP-3125 R-safe -> Q-safe edge packet with both endpoint deletion children; next=add `a000568_extension_shadow` to the edge_floor_packet schema
+- SPEC_resonance_lattice_certificate: preserves=HYP-3129 exact-low plus Parseval-tail floor for the multi-far SPEC term; next=attach sector/extension shadows to the finite low-frequency constant chase
+- A000568_unlabeled_extension_shadow: preserves=one-extra-vertex isomorphism quotient sitting between sector words and paired children; next=use as a middle quotient before escalating to the full paired child deck
+- paired_tail_tip_child_deck: preserves=equidecomposition data from both endpoint-deletion cards; next=keep as the repair layer when A000568 shadow is not enough
+- closed_form_constant_chase: preserves=the remaining HYP-3129 task: uniform lower SPEC_low and upper tail constants; next=stratify constant-chase rows by sector, A000568 shadow, and child pair
+
+4. LRC14 PROOF ROUTE CONSEQUENCES
+- HYP-3129 already moves the multi-far SPEC bound away from EH/BV and into exact-low plus Parseval-tail harmonic analysis.
+- HYP-3133 adds a finite quotient stratifier for that constant chase: sector word, A000568 middle shadow, then paired child deck.
+- HYP-3128 warns that naive Asano over the crowded R-tail fails; the A000568 shadow should therefore be a diagnostic, not a zero-free proof engine.
+- HYP-3125 edge-floor packets should add `a000568_extension_shadow` between `edge_tail_tip_sector_word` and deletion-child Rprime ratios.
+- Next executable test: for HYP-3129's worst finite SPEC rows, group rows by this sandwich certificate and ask whether every bad middle shadow either improves under one endpoint deletion or lands in a named resonance-lattice debt class.
+

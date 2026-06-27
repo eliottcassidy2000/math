@@ -15,6 +15,32 @@
 
 ---
 
+## Lead codex-2026-06-27-A000568: LRC14 A000568 edge-witness sandwich
+
+**Status:** EVIDENCE / executable quotient scout; not proof
+(HYP-3133/T1200).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3133-lrc14-a000568-edge-sandwich.md`,
+`04-computation/lrc14_a000568_edge_sandwich_codex_20260627.py`,
+`05-knowledge/results/lrc14_a000568_edge_sandwich_codex_20260627.out`,
+and `07-reflections/lrc14-a000568-edge-sandwich-codex-20260627.md`.
+
+Readout: the user's `12` and `56` observation is a shifted quotient sandwich.
+HYP-3124 edge-local signatures on `m` vertices compare to A000568 unlabeled
+tournaments on `m+1` vertices: `m=4: 10 < 12 < 16`,
+`m=5: 20 < 56 < 80`, and `m=6: 35 < 456 < 632`.  Sector word is the
+equinumerosity layer, A000568 is the unrooted one-extra-vertex
+equidistribution/free-extension shadow, and paired tail/tip child deck is the
+equidecomposability layer.
+
+Next: add `a000568_extension_shadow` to HYP-3125 edge-floor packets and use it
+to stratify HYP-3129's finite low-frequency SPEC constant chase.  HYP-3128 is
+the guardrail: this is a controlled-forgetting diagnostic, not a naive Asano
+zero-free proof shortcut.
+
+Namespace: HYP-3133 / LTI-261 / LTT-159 / T1200 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S271: LRC14 multi-far edge-witness Rprime floor
 
 **Status:** EVIDENCE / executable edge-floor synthesis scout; not proof

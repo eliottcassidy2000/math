@@ -73,6 +73,12 @@ Useful synthetic maps added later:
   smoothing as a positivity interface, and treats Asano contraction as a
   Lee-Yang legality sidecar for tail/tip contraction; after HYP-3127, this is
   best read as the packet ledger for the stronger Asano-contraction reduction.
+- `07-reflections/lrc14-a000568-edge-sandwich-codex-20260627.md`:
+  HYP-3133/T1200 synthesis turning the user's `10 < 12 < 16` and
+  `20 < 56 < 80` observation into a middle quotient between HYP-3124 sector
+  words and paired tail/tip deletion decks.  It proposes
+  `a000568_extension_shadow` as a finite quotient stratifier for HYP-3129's
+  SPEC constant chase.
 
 ## Second-Pass Small Motif Ledger
 

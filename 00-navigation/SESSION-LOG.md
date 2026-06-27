@@ -150,6 +150,26 @@ it does NOT itself yield `R' ≥ c` (genuinely an equidistribution statement = T
 certified `R' ≥ 0.642` elementarily in HYP-3129). Scripts
 `04-computation/lrc14_asano_{loneliness_partition,zerofree,atom_decomp,contraction_proof,joint_floor,certified_summary}_kpswf15.py`;
 outputs `05-knowledge/results/lrc14_asano_*_kpswf15.out`.
+## codex-2026-06-27-A000568 -- LRC14 A000568 edge-witness sandwich -- HYP-3133
+
+User noticed that `12` sits between `10` and `16`, and `56` sits between
+`20` and `80`, where A000568 is the unlabeled tournament sequence and
+HYP-3124 produced the edge sector / paired-child counts.  Added
+`04-computation/lrc14_a000568_edge_sandwich_codex_20260627.py`, stored output
+`05-knowledge/results/lrc14_a000568_edge_sandwich_codex_20260627.out`,
+detail `05-knowledge/hypotheses/HYP-3133-lrc14-a000568-edge-sandwich.md`,
+and reflection
+`07-reflections/lrc14-a000568-edge-sandwich-codex-20260627.md`.
+
+Exact small census compares edge-local signatures on `m` vertices with
+A000568 on `m+1` vertices: `m=4: 10 < 12 < 16`, `m=5: 20 < 56 < 80`, and
+`m=6: 35 < 456 < 632`; `m=3` is equality and `m=2` is a small boundary.  The
+candidate certificate is
+`four_sector_tetrahedral_word + A000568_unlabeled_extension_shadow +
+paired_tail_tip_child_deck + SPEC_resonance_lattice_sidecar_or_named_debt`.
+Use it as a controlled-forgetting layer for HYP-3129's finite SPEC constant
+chase, not as a replacement for the HYP-3129 resonance-lattice proof or as a
+naive Asano shortcut after HYP-3128.
 
 ## mac-mini-2026-06-27-S68 -- the multi-far floor R'>=c is an ASANO contraction of single-far factors
 

@@ -91,6 +91,11 @@ obligations, and proof-carrier interfaces.
   for the edge-floor packet the vertices.  Treat EH as an LRC
   level-of-distribution proxy, Gaussian smoothing as a positivity interface,
   and Asano/Lee-Yang contraction as a legality sidecar.
+- Need to use A000568 without scalar numerology:
+  use LTT-159 after LTT-158/LTT-157 and place the unlabeled one-extra-vertex
+  quotient between sector words and paired tail/tip child decks.  Treat it as
+  a finite quotient stratifier for SPEC constant-chase rows, not as a new
+  zero-free proof engine.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5128,3 +5133,37 @@ Post-rebase HYP-3127 promotes Asano to the candidate contraction engine for
 this same tournament card.  Future LTT-158 uses should treat S271's tournament
 as the packet/diagnostic layer for HYP-3127's single-far zero-free, SPEC-bound,
 and monotonicity obligations.
+
+## LTT-159: Tournament Of A000568 Edge-Extension Shadows
+
+- **Move:** Insert A000568's unlabeled tournament quotient as a middle
+  edge-extension shadow between HYP-3124's local sector word and the full
+  paired tail/tip child deck.  Vertices are quotient/proof carriers, not
+  runners or sequence terms.
+- **LRC use:** HYP-3133 turns `10 < 12 < 16` and `20 < 56 < 80` into a
+  proof-packet diagnostic.  For edge witnesses on `m` vertices, A000568 on
+  `m+1` vertices sits between sector words and paired child signatures in the
+  tested nontrivial range: `m=4: 10 < 12 < 16`, `m=5: 20 < 56 < 80`, and
+  `m=6: 35 < 456 < 632`.
+- **Preserves:** equinumerosity through sector words, equidistribution/free
+  extension through A000568, equidecomposability through paired child decks,
+  and HYP-3129 SPEC resonance sidecar or named debt.
+- **Forgets / guardrail:** the A000568 shadow forgets endpoint ownership and
+  which deletion child improves the floor.  HYP-3128 also warns that this is
+  not a naive Asano zero-free shortcut across the crowded `R` tail.
+- **Fingerprint:** Pairwise observable is majority retention over LRC
+  predicate, edge-sandwich explanation, tail/tip recursion,
+  equidecomposition, equinumerosity, SPEC-resonance bridge, finite constant
+  chase, formalization readiness, and scalar guardrail.  HYP-3133 reports
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, no directed 3-cycles,
+  singleton SCCs, and one Hamiltonian path:
+  `edge_floor_two_ended_packet -> SPEC_resonance_lattice_certificate ->
+  A000568_unlabeled_extension_shadow -> paired_tail_tip_child_deck ->
+  closed_form_constant_chase -> Asano_tip_tail_legality_guard ->
+  even_graph_cycle_space_parity -> four_sector_tetrahedral_word ->
+  raw_sequence_numerology`.
+- **Next hook:** Add `a000568_extension_shadow` to HYP-3125/HYP-3129 row
+  schemas, then group the worst finite SPEC rows by
+  `sector word -> A000568 shadow -> paired child deck`.
+- **Pointers:** HYP-3133, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124,
+  HYP-3123, HYP-3121, HYP-2968, LTI-261, LTT-159, T1200, OPEN-Q-108.

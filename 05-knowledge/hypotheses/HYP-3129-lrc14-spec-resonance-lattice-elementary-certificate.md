@@ -10,6 +10,7 @@ extends:
   - HYP-2861   # L2 Cauchy-Schwarz spectrum bound -- this is the engine, refined to the resonance lattice
   - HYP-2606   # singular series / chat on the lattice -- this is the chat support fact, made the resonance condition
 related:
+  - HYP-3133   # A000568 middle quotient for the finite SPEC constant-chase row stratifier
   - HYP-2840   # Vitali multi-far
   - HYP-2856   # 3/pi^2 Farey floor (bounded-core companion)
   - HYP-2968   # few-apex lift packet (the |Q|<=6 covering branch this lives in)
@@ -116,3 +117,26 @@ To make it a *theorem for ALL* `(R,Q)` with `|Q|≤6` one needs:
 3. Combine at a fixed `M` (e.g. `M=80`) to get a universal `c>0`. No new analytic input.
 This is a finite constant-chase, exactly the kind of obligation the bounded-core 3/π²
 Farey floor (HYP-2856) already discharges on the companion piece.
+
+## HYP-3133 Addendum: Finite Quotient Stratifier
+
+HYP-3133 does not change the proof engine above.  The engine remains exact
+finite low frequencies plus the Parseval/Cauchy-Schwarz resonance-tail bound.
+It does add a useful row stratifier for the finite constant chase:
+
+```text
+sector word -> A000568 extension shadow -> paired tail/tip child deck.
+```
+
+The small exact sandwich is:
+
+```text
+m=4: 10 < 12 < 16
+m=5: 20 < 56 < 80
+m=6: 35 < 456 < 632
+```
+
+Use `a000568_extension_shadow` as the middle quotient when classifying bad
+finite `SPEC_low` rows.  The desired dichotomy is that the middle shadow
+already predicts a positive floor, one endpoint deletion improves the floor,
+or the row is a named resonance-lattice debt.

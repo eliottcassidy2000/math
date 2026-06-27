@@ -1,5 +1,19 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3133 A000568 edge-sandwich addendum:**
+HYP-3133 adds the field `a000568_extension_shadow` between HYP-3124's
+`edge_tail_tip_sector_word` and the paired endpoint-deletion child deck.  The
+exact small pattern is `m=4: 10 < 12 < 16`, `m=5: 20 < 56 < 80`, and
+`m=6: 35 < 456 < 632`, where the middle values are A000568 unlabeled
+tournaments on `m+1` vertices.
+
+Open task: rerun HYP-3129's finite low-frequency SPEC row ledger with rows
+stratified by `sector word -> A000568 extension shadow -> paired child deck`.
+The target dichotomy is: the middle shadow predicts a positive SPEC floor, one
+endpoint deletion improves the floor, or the row is a finite named
+resonance-lattice debt. -> HYP-3133, HYP-3129, HYP-3128, HYP-3127, HYP-3125,
+HYP-3124, HYP-3121, HYP-2968, LTI-261, LTT-159, T1200, OPEN-Q-108.
+
 **OPEN-Q-108 S271 multi-far edge-witness Rprime floor addendum:**
 HYP-3125 turns the HYP-3121 `r=2..6` covering floor into an HYP-3124-style
 edge witness.  The live packet is `R-safe packet -> Q-safe packet` in the

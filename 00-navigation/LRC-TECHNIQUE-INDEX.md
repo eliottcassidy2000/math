@@ -84,6 +84,7 @@ circuit-certificate vector / Phi exact gap / endpoint P sign / LMR wall state / 
 coordinate-resurrection sheaf / destroyed-coordinate cover / adjoint section / concept-lattice intent
 niche archive bridge ledger / endpoint Phi-P gate / normalized interval / ET-Hensel zipper / CRT-2x7 resonance
 tournament edge-witness recursion / tail-tip sector word / paired endpoint-deletion children / repair sidecar
+edge-extension A000568 sandwich / unrooted one-extra-vertex shadow / paired child deck / SPEC resonance sidecar
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -397,6 +398,7 @@ record what it destroys before asking it to prove anything.
 | LTI-258 | Chiral base-stalk guard / normal-fan Cech finite-ruler proof angles | Z/2 chiral guard words, mirror-pair ids, cross-sector orientation, endpoint-owner cocycles, state-lift signs, normal-fan chambers, closed arc-Cech beta, barcode persistence, owner currents, finite-ruler denominator thresholds, first-obstruction syndrome fields | HYP-3123/S270 chooses two remaining proof angles different from the general HYP-3118 repair calculus and integrates incoming HYP-3121/HYP-3122/HYP-3124: a chiral guard for mirror/converse/rootless quotient collapse and a normal-fan Cech finite-ruler route for component control.  The scout scores eight proof mechanisms against seven obligations; top bridges are Cech to HYP-3101 component bound, first-obstruction to HYP-3102, Lean bus to HYP-3098 observer rows, Cech to THM-573 residual, and chiral guard to HYP-3112 ear payload.  Tournament Analysis is non-transitive with two directed 3-cycles involving observer payload, endpoint Phi, Cech, and syndrome carriers, so the next proof ledger should couple them. | HYP-3123, HYP-3124, HYP-3122, HYP-3121, HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3107, HYP-3106, HYP-3102, HYP-3101, HYP-3098, HYP-3096, HYP-3056, HYP-3047, THM-573, THM-572, THM-565, T1197, LTT-156, LTI-258, OPEN-Q-108 | Add `chiral_guard_word`, `mirror_pair_id`, `cross_sector_orientation_word`, `endpoint_owner_cocycle`, `state_lift_sign`, `normal_fan_chamber_id`, `closed_arc_cech_beta`, `barcode_persistence_word`, `finite_ruler_denominator_threshold`, `owner_current_word`, `first_obstruction_basis_vector`, `certificate_cycle_image_status`, `dual_annihilator_status`, and `F7_THM572_state_lift_status` to the HYP-2963/HYP-3098/HYP-3107/HYP-3112 packet rows before accepting chirality or topology shortcuts. |
 | LTI-259 | Tournament edge-witness recursion | Directed edge `tail -> tip` as proof carrier; endpoint role word, outside four-sector deck, paired tail-deletion/tip-deletion children, recursive child edge decks, observer-gluing payload orbit, missing-input vector, coordinate-resurrection sidecar or named debt | HYP-3124/S268 turns "tournament edges as witnesses" into an executable controlled-forgetting test.  The exact census through labelled tournaments `n<=5` shows sector words are local but too coarse: counts are `1,4,10,20`, while sector plus paired endpoint-deletion child signatures are `1,4,16,80`; at `n=5`, all `20` sector groups split by child pair.  The proof use is therefore not an edge count but `edge_witness_certificate = four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar_or_named_debt`. | HYP-3124, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3112, HYP-3108, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-2963, T1198, LTT-157, LTI-259, OPEN-Q-108 | Attach `edge_witness_certificate`, `edge_tail_tip_sector_word`, `tail_deletion_child_signature`, `tip_deletion_child_signature`, `recursive_tail_child_edge_deck`, `recursive_tip_child_edge_deck`, `edge_missing_input_vector`, `edge_repair_sidecar`, and `edge_terminal_exit` to HYP-3115 one-swap/domain-wall edges and HYP-3098 observer-gluing rows before using domain-wall counts or edge shortcuts. |
 | LTI-260 | Multi-far edge-witness Rprime floor | Lifted covering packets `R-safe -> Q-safe`, diagonal edge-sector mass `Rprime`, tail/tip deletion-child ratios, residue exception ledger, Gaussian smoothing width, finite-ruler desmoothing threshold, Asano/Lee-Yang contraction status, phi4 sign | HYP-3125/S271 joins HYP-3121's `r=2..6` floor with HYP-3124's two-ended edge witness.  The scout treats `Rprime=mu(R-safe and Q-safe)/(mu(R-safe)mu(Q-safe))` as a diagonal edge-sector mass.  Named Bonferroni-negative rows remain positive by quasi-independence (`0.513784`, `0.925326`); tail deletion often improves the floor, tip deletion exposes the multiple-of-14 side, and individual R/Q edge ratios stay near `1`, pointing to packet-level distribution rather than one bad pair.  Post-rebase HYP-3127 upgrades this from sidecar language to an Asano-contraction reduction, with S271 as the packet ledger. | HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121, HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3108, HYP-3106, HYP-3101, HYP-2968, HYP-2963, THM-573, THM-572, THM-082, T1199, LTT-158, LTI-260, OPEN-Q-108 | Add `edge_floor_packet`, `tail_deletion_child_Rprime`, `tip_deletion_child_Rprime`, `EH_level_distribution_proxy`, `major_arc_residue_exception_set`, `gaussian_heat_kernel_width`, `finite_ruler_desmoothing_threshold`, `asano_contraction_status`, `lee_yang_zero_free_after_contraction`, `phi4_kappa4_sign`, `normal_fan_chamber_id`, `chiral_guard_word`, `single_far_zero_free_polydisk_status`, `SPEC_bound_status`, `contraction_monotonicity_status`, and `terminal_exit_or_named_debt` before accepting any multi-far floor estimate. |
+| LTI-261 | A000568 edge-extension sandwich | `four_sector_tetrahedral_word`, `A000568_unlabeled_extension_shadow`, `paired_tail_tip_child_deck`, `SPEC_resonance_lattice_sidecar_or_named_debt` | HYP-3133 tests the user's `10 < 12 < 16` and `20 < 56 < 80` observation as a shifted quotient ladder.  Edge-local signatures on `m` vertices compare to A000568 unlabeled tournaments on `m+1` vertices: `m=4: 10 < 12 < 16`, `m=5: 20 < 56 < 80`, and `m=6: 35 < 456 < 632`.  The layer is diagnostic: sector word is equinumerosity, A000568 is the unrooted one-extra-vertex equidistribution/free-extension shadow, and paired children are equidecomposability. | HYP-3133, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3121, HYP-2968, T1200, LTT-159, LTI-261, OPEN-Q-108 | Add `a000568_extension_shadow` between `edge_tail_tip_sector_word` and deletion-child ratios in HYP-3125/HYP-3129 packet rows; use it to stratify finite SPEC constant-chase failures before escalating to paired child deck or named resonance debt. |
 
 ## Cross-Cutting Guardrails
 
@@ -2930,3 +2932,44 @@ a zero-free legality sidecar to the candidate main reduction because coverage
 is multi-affine.  The LTI-260 packet should therefore record
 `single_far_zero_free_polydisk_status`, `SPEC_bound_status`, and
 `contraction_monotonicity_status` as the three HYP-3127 obligations.
+
+## LTI-261: A000568 Edge-Extension Sandwich
+
+Used by codex-2026-06-27-A000568 for HYP-3133/T1200.  This technique inserts
+a middle quotient between HYP-3124's four-sector edge word and its paired
+tail/tip child deck:
+
+```text
+edge_extension_sandwich_certificate =
+  four_sector_tetrahedral_word
+  + A000568_unlabeled_extension_shadow
+  + paired_tail_tip_child_deck
+  + SPEC_resonance_lattice_sidecar_or_named_debt
+```
+
+Preserves: the LRC packet route only as a controlled-forgetting diagnostic.
+The sector word preserves equinumerosity, the A000568 layer preserves an
+unrooted one-extra-vertex extension shadow, and the paired child deck preserves
+tail/tip equidecomposition.
+
+Destroys or audits: raw sequence numerology, scalar sector counts, and naive
+Asano contraction across the crowded `R` tail.  HYP-3128 is the guardrail: the
+A000568 shadow is not a zero-free proof engine.
+
+Executable readout: HYP-3133 computes exact small sandwiches:
+
+```text
+m=4: 10 < 12 < 16
+m=5: 20 < 56 < 80
+m=6: 35 < 456 < 632
+```
+
+Here edge-local counts are on `m` vertices, while A000568 is evaluated at
+`m+1`.  The `m=6` balanced sector `(1,1,1,1)` splits into `47` paired child
+signatures, confirming that the child-deck layer is real structure rather than
+cosmetic refinement.
+
+Next hook: add `a000568_extension_shadow` to HYP-3125 edge-floor packets and
+rerun the HYP-3129 finite low-frequency SPEC row ledger.  A hard row should
+either have a middle shadow predicting a positive SPEC floor, improve under
+one endpoint deletion, or land in a named resonance-lattice debt class.
