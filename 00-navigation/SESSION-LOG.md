@@ -1,10 +1,13 @@
-## codex-2026-06-26-S238 -- reserved renormalized polymer / Dirichlet bridge (HYP-3072/T1154/LTI-219/LTT-117)
+## codex-2026-06-26-S239 -- reserved renormalized polymer / Dirichlet bridge (HYP-3073/T1155/LTI-220/LTT-118)
 
 User asked for one or two different remaining LRC proof angles and a
-cross-disciplinary scour of past work. Reserved HYP-3072/T1154/LTI-219/LTT-117
-for a synthesis that deliberately avoids continuing the median-graph line:
-renormalized signed-polymer/Riesz-product grammar on AP/repeated-residue/wide
-packets, plus a Dirichlet-energy / Schur-complement reading of sidecars as
+cross-disciplinary scour of past work. Initial local reservation used
+HYP-3072/T1154, but the checkpoint rebase revealed incoming S238 had already
+claimed HYP-3072 for cross-carrier pullback resonance. This active pass is now
+renumbered to HYP-3073/T1155/LTI-220/LTT-118 and treats HYP-3072 as an upstream
+portfolio signal. The synthesis deliberately avoids continuing the median-graph
+line: renormalized signed-polymer/Riesz-product grammar on AP/repeated-residue/
+wide packets, plus a Dirichlet-energy / Schur-complement reading of sidecars as
 boundary conditions for residual currents. Finite scout, result, reflection,
 and navigation entries still pending in this active session.
 

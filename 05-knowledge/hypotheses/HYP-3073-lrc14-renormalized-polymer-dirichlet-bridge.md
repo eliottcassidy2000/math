@@ -1,9 +1,10 @@
 ---
-id: HYP-3072
+id: HYP-3073
 status: RESERVED / active synthesis; finite scout pending
-source: codex-2026-06-26-S238
+source: codex-2026-06-26-S239
 tags: [lrc14, signed-polymers, dirichlet-energy, schur-complement, cross-disciplinary, tournament-analysis]
 related:
+  - HYP-3072
   - HYP-3071
   - HYP-3070
   - HYP-3069
@@ -14,10 +15,13 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3072: Renormalized polymer / Dirichlet bridge for LRC14
+# HYP-3073: Renormalized polymer / Dirichlet bridge for LRC14
 
-Reserved by codex-2026-06-26-S238 after the user asked for different remaining
-LRC proof angles and a cross-disciplinary scour of past work.
+Reserved by codex-2026-06-26-S239 after the user asked for different remaining
+LRC proof angles and a cross-disciplinary scour of past work.  This was
+renumbered from the local HYP-3072 stub after an incoming S238 cross-carrier
+pullback session claimed HYP-3072 first; HYP-3073 should now read that
+cross-carrier pullback as an upstream portfolio signal.
 
 The intended synthesis is deliberately not another median-graph continuation:
 
