@@ -372,6 +372,25 @@ Part-A or THM-572 readout
 This is the natural common target for `LRCModularCuspLedger`,
 `LRCMedianCenterControl`, `LRCMomentDual`, and `LRCTournamentStateLift`.
 
+S254 instantiates this common target as
+`TournamentH7.LRCFiniteAddressBranchClosure`.  The Lean theorem
+`lrc14_from_cutting_edge_branch_coverage` proves the exact conditional frontier:
+early q-witness / level-7 lift sieve / one-large-speed gates plus low-apex,
+top-balanced finite-address packet coverage imply `LRC14Statement`.  After
+incoming THM-573, the packet retains both the original multiple-of-14 covering
+datum and the sharpened residual count `1..6` multiples of `7`.  The packet now
+has formal fields for q-cusp finite principal part, q-Pochhammer tail, Hurwitz
+arithmetic address, protected branch certificate, covering-moment dual ledger,
+median-center packet, and terminal floor `1/14 <= witnessFloor <= Mreach`.
+Incoming HYP-3085-gK8 suggests the covering-moment producer should be a
+low-order pairwise `S2` / reflection-`3x3` Perron certificate, and incoming
+HYP-3085-covering/K33 supplies concrete nested-refinement versus cross-handoff
+rows for the O2/O3 shuttle.  Incoming HYP-3087 supplies the adjacent
+hyperoperation/operation-grid address scheduler; it should feed this packet
+only after retaining `(p,q)`, danger, level-7 status, destroyed coordinate, and
+terminal exit.  No analytic normalizer, covering discharge, or K33 lift is
+asserted; those are the remaining producer theorems.
+
 ### O6. Boundary census only if the proof routes through equality
 
 The AP/GW census and shell-collapse problem remain mathematically valuable,

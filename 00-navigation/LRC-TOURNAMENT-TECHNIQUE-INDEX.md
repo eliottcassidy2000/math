@@ -110,6 +110,12 @@ obligations, and proof-carrier interfaces.
   use LTT-131 after LTT-130 and retain `(p,q)`, operation lane, danger
   deficit, endpoint owner, level-7 lift status, destroyed coordinate, and
   terminal exit before trusting any grid traversal.
+- Need the Lean interface for that remaining-proof spine:
+  use LTT-132 after LTT-130/LTT-131 and populate
+  `TournamentH7.LRCFiniteAddressBranchClosure.FiniteAddressBranchPacket`
+  with a real low-apex/top-balanced covering-moment row, multiple-of-7
+  residual count, feasible dual ledger, HYP-3085 pairwise/Perron certificate,
+  protected branch certificate, and terminal witness floor.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3785,6 +3791,45 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3087, HYP-3085, HYP-3083, HYP-3004, HYP-3003, THM-523, THM-571,
   THM-572, THM-573, LTI-233, LTI-232, LTI-154, LTI-153, LTI-011, LTT-131,
   LTT-130, T1169, T1167, OPEN-Q-108.
+
+### LTT-132: Finite-Address Branch-Packet Lean Interface
+
+- **Move:** Make proof obligations and finite-address sidecars the tournament
+  vertices of a Lean packet interface.  The raw scalar or q-tail is a terminal
+  shadow, not a proof vertex, unless a sidecar reconstructs what it forgets.
+- **LRC use:** S254 adds `TournamentH7.LRCFiniteAddressBranchClosure`.  The
+  theorem `lrc14_from_cutting_edge_branch_coverage` proves that early gates
+  plus low-apex/top-balanced finite-address packet coverage imply
+  `LRC14Statement`.  After THM-573 the early apex gate is the level-7 lift
+  sieve, so the residual packet carries both multiple-of-14 covering status and
+  the sharpened `1..6` multiples-of-7 count.  A `FiniteAddressBranchPacket`
+  also carries q-cusp finite principal part, q-Pochhammer tail, Hurwitz
+  arithmetic address, destroyed-coordinate label, protected branch certificate,
+  optional covering-moment dual ledger, median-center packet, and terminal
+  witness floor `1/14 <= floor <= Mreach`.
+- **Preserves:** exact scale address, low-apex/top-balanced status, finite
+  q-cusp polar debt, Hurwitz seed or explicit absence, protected bridge
+  status, route-center legality, p0-to-moment ledger, and formal witness
+  readout.
+- **Forgets / guardrail:** Runner identity, raw scalar buckets, raw
+  q-coefficients, and raw route labels are only legal after a terminal floor,
+  sidecar reconstruction, no-naked-bridge proof, descent, or named residual
+  debt is attached.
+- **Tournament vertices:** `global_packet_normalizer`,
+  `protected_branch_graph`, `covering_moment_exit`, `k33_state_lift_exit`,
+  `q_cusp_principal_part_guard`, `hurwitz_seed_guard`,
+  `median_center_scheduler`, `apex_majority_gate`, `one_large_speed_gate`,
+  `q_witness_gate`, `lean_sidecar_closure`, and `raw_scalar_shadow`.
+- **Next hook:** Instantiate one actual HYP-2963 low-apex/top-balanced
+  covering-moment packet in this Lean shape, including a feasible dual `g`,
+  HYP-3085-gK8 pairwise `S2` / reflection-`3x3` Perron certificate data,
+  HYP-3085 covering/K33 shuttle status, bridge-protection mode, q-cusp ledger
+  id, terminal floor, and K33/F7 status; then test whether parameterized
+  family extension introduces any naked bridge.
+- **Pointers:** HYP-3087, HYP-3085, HYP-3084, HYP-3083, HYP-3082, HYP-3081,
+  HYP-3079, HYP-3078, HYP-3075, HYP-2963, THM-523, THM-571, THM-572, THM-573,
+  LTI-234, LTI-233, LTI-232, LTI-231, LTT-132, LTT-131, LTT-130, LTT-129,
+  T1170, T1169, T1167, OPEN-Q-108.
 
 ## Immediate Pull List
 

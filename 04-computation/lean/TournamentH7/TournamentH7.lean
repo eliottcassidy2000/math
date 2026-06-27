@@ -99,6 +99,10 @@
     · TournamentH7.LRCModularCuspLedger — S246 q-Pochhammer/modular-cusp
                                       finite-principal-part ledger and
                                       sixth-power collision face map.
+    · TournamentH7.LRCFiniteAddressBranchClosure — S254 finite-address
+                                      branch-packet interface joining q-cusp,
+                                      Hurwitz, protected-branch, moment-dual,
+                                      median-center, and terminal exits.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -184,4 +188,5 @@ import TournamentH7.LRCMedianCenterControl
 import TournamentH7.LRCL7Discrepancy
 import TournamentH7.LRCApexShell
 import TournamentH7.LRCModularCuspLedger
+import TournamentH7.LRCFiniteAddressBranchClosure
 import TournamentH7.Verify

@@ -34,6 +34,8 @@ TournamentH7/
     ├── StaircaseBucketTransport.lean
     │                          concrete staircase transport checksums
     ├── LRCDeathChain.lean    finite LRC death-chain/live-depth quotient
+    ├── LRCFiniteAddressBranchClosure.lean
+    │                          S254 LRC14 finite-address branch-packet interface
     └── Verify.lean           #print axioms audit
 ```
 
@@ -126,6 +128,17 @@ by transport matrices: empty source fibers give zero rows and empty target
 fibers give zero columns. For `goodCutBucket`, the exact finite image is
 `{0} ∪ {2,...,n-1}` for `n >= 3`, so buckets `1` and `n` are certified gaps.
 This is THM-355.
+
+`LRCFiniteAddressBranchClosure.lean` is the S254 Lean-facing interface for the
+current LRC14 proof frontier. It packages the HYP-3083 spine as a
+proof-bearing finite-address branch packet: q-cusp finite principal part,
+q-Pochhammer tail, Hurwitz arithmetic address, protected bridge certificate,
+moment-dual covering ledger, median-center packet, and terminal witness floor.
+The key conditional theorem is
+`LonelyRunner.LRC14.lrc14_from_cutting_edge_branch_coverage`: early gates
+plus low-apex/top-balanced finite-address packet coverage imply
+`LRC14Statement`. The module asserts no new analytic normalizer or K33 lift;
+those remain explicit producer obligations.
 
 ## Proof sketch
 

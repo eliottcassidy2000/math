@@ -180,6 +180,54 @@ and outside-bank normalizer attempts, then test whether danger-weighted
 operation cells split the THM-573 residual core into q-witness, covering/Node3,
 K33/THM-572, protected branch closure, or named residual debt without creating
 a naked bridge.
+## codex-2026-06-27-S254 -- LRC14 finite-address branch-packet Lean frontier
+
+Added `TournamentH7.LRCFiniteAddressBranchClosure`, a Lean-facing interface for
+the current HYP-3083 proof frontier.  The module packages the low-apex,
+top-balanced residual route as a proof-bearing `FiniteAddressBranchPacket`
+joining q-cusp finite principal parts, q-Pochhammer product-tail status,
+Hurwitz arithmetic addresses, protected branch-bridge certificates,
+covering-moment dual ledgers, median-center packets, and terminal witness
+floors.
+
+The main formal theorem is:
+
+```text
+CuttingEdgeBranchCoverage -> LRC14Statement
+```
+
+where `CuttingEdgeBranchCoverage` means every nonzero 13-speed row is either
+discharged by an early q-witness / level-7 lift sieve / one-large-speed gate,
+or emits a low-apex/top-balanced finite-address packet.  This is intentionally
+conditional: the session did not assert the global packet normalizer, the
+covering-family analytic discharge, or the K33 state-lift construction.  It
+did formalize the exact throat those producer theorems must feed:
+`TerminalDischargeCertificate` carries `1/14 <= witnessFloor <= Mreach v`, and
+the existing concrete compactness bridge turns that into an LRC14 lonely time.
+
+After rebasing over incoming S31af/S60, the packet tracks the sharpened
+THM-573 residual by adding `multiple7Count`: the live primitive covering rows
+now have `1..6` multiples of `7`, while still retaining the original
+multiple-of-14 covering datum.  Incoming HYP-3084 is the level-7/margin
+correction, while incoming HYP-3085-gK8 supplies the likely
+producer route for the covering-moment exit: a low-order moment certificate led
+by the pairwise `S2` co-emptiness term and a reflection-symmetric `3x3` Perron
+bound, to be fed through the `CoveringMomentDualLedger` and terminal floor.
+Incoming HYP-3085-covering/K33 adds concrete nested-refinement versus
+cross-handoff rows for the O2/O3 shuttle.
+
+Small formal checks: `qCuspSidecar_finite_principal_part` and
+`protectedBranch_no_raw_naked_bridge` are axiom-free; the
+`CoveringMomentDualLedger` reuses the already-formalized `p0 <= Ly` moment-dual
+reduction; the S254 proof-carrier tournament has 12 named vertices.  Added
+reflection
+`07-reflections/lrc14-finite-address-branch-packet-formalization-codex-s254.md`.
+Verified with:
+
+```bash
+cd 04-computation/lean/TournamentH7
+lake build TournamentH7.LRCFiniteAddressBranchClosure
+```
 
 ## codex-2026-06-27-S253 -- q-cusp Hurwitz finite-address branch-closure synthesis
 
