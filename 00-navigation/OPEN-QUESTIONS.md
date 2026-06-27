@@ -125,6 +125,23 @@ HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3106, HYP-3105,
 HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3062, HYP-2879, THM-577,
 LTI-250, LTT-148, T1189, OPEN-Q-108.
 
+**OPEN-Q-108 S264b Minkowski/circuit/Ising/De Moivre source-bridge addendum:**
+HYP-3111 now feeds HYP-3113 through a duodecimal cut-payload audit: four
+outside carriers times preserved predicate, destroyed coordinate, and handoff
+payload.  The carriers remain pressure gauges, not proof exits.  A legal use
+of Minkowski must emit `q_body_inequality_word`; a legal use of circuit
+complexity must emit `proof_circuit_missing_input_vector`; a legal use of the
+Ising model must emit `ising_zero_arc_signature`; and a legal use of De
+Moivre's quintic must emit `demoivre_branch_orbit_word`.
+
+Open task: add these four fields to the HYP-2963/HYP-3107 packet ledger and
+test them against HYP-3109 zero-real wall crossings, HYP-3112 one-runner ear
+payloads, and HYP-3113 packet-sheaf legal exits.  Reject any shortcut whose
+outside theorem survives only as a scalar, root moment, volume threshold, gate
+name, or algebraic fold without its cut payload. -> HYP-3113, HYP-3112,
+HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, LTI-250, LTI-249,
+LTI-248, LTT-148, LTT-147, LTT-146, T1189, T1188, T1187, OPEN-Q-108.
+
 **OPEN-Q-108 S258 two-frontier observer-gluing addendum:**
 HYP-3098 turns the current proof frontier into a paired obligation rather
 than a single scalar chase.  The polynomial-method witness route must prove a

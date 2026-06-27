@@ -116,6 +116,38 @@ bank, high `p0` is reciprocal-flat rather than Bragg-crystalline:
 root stratum, entropy/flatness, segment clearance, and finite-address status.
 A convex body around a large lattice peak would point the wrong way.
 
+## S265 Bridge Update
+
+After rebasing over HYP-3113, the clean way to use this lane is not "four
+analogies that might prove LRC14."  It is a cut-payload ledger feeding the
+two-map frontier:
+
+```text
+Minkowski q-body -> memory-lattice-ear map
+Circuit DAG      -> packet-sheaf legal-exit regression test
+Ising zeros      -> root-curve / Lee-Yang zero-arc portfolio
+De Moivre fold   -> finite branch-address / first-obstruction fold test
+```
+
+The regenerated script adds a duodecimal audit: four carriers times three
+legal cells, namely preserved predicate, destroyed coordinate, and handoff
+payload.  All twelve cells are now named, but no carrier is proof-closed.
+
+The resulting guardrail is sharper than the original atlas.  A future proof
+shortcut cannot merely cite a Minkowski volume threshold, a small circuit
+depth, a unit-circle Ising zero set, or the De Moivre quadratic fold.  It must
+also provide the surviving packet field:
+
+```text
+q_body_inequality_word
+proof_circuit_missing_input_vector
+ising_zero_arc_signature
+demoivre_branch_orbit_word
+```
+
+Those are the fields that can plausibly enter HYP-3113's packet-sheaf legal
+exit.  Without them, the outside theorem is only a diagnostic pressure gauge.
+
 ## Next Programmatic Tests
 
 1. Replace the toy Ising carrier graph with the actual HYP-3109 zero-real

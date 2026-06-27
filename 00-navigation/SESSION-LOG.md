@@ -65,6 +65,44 @@ low-denominator resonance events that can keep roots complex while moving the
 root cloud toward `[-1,0]`.  Next concrete work: add the approximation fields
 to the finite-address branch-closure ledger and the Lee-Yang ear-payload
 ledger over HYP-2963 and the THM-573 residual.
+## codex-2026-06-27-S264b -- Minkowski/circuit/Ising/De Moivre source bridge into HYP-3113
+
+Owner asked to merge in Minkowski's theorem, circuit complexity, the Ising
+model, and De Moivre's quintic.  Rebased over incoming
+HYP-3113/T1189/LTI-250/LTT-148, which turns the active LRC14 frontier into a
+two-map system: root-curve extremality portfolio plus memory-lattice-ear
+certificate ladder.
+
+Updated HYP-3111/T1187/LTI-248/LTT-146 rather than claiming a new namespace.
+The regenerated S264 scout now includes `MAP 6: HYP-3113 TWO-MAP
+CUT-PAYLOAD BRIDGE`, a duodecimal audit with four carriers times three legal
+cells: preserved predicate, destroyed coordinate, and handoff payload.  The
+source hooks are deliberately narrow: Minkowski supplies a symmetric
+convex-body volume gate only after rank/covolume/body are declared; circuit
+complexity supplies a proof-DAG size/depth/minterm ledger; Ising supplies a
+partition-function zero-arc carrier over spin/proof-obligation interactions;
+De Moivre supplies the exact fifth-root fold through
+`y^2 + b*y - a^5 = 0`.  Named survivor fields are
+`q_body_inequality_word`, `proof_circuit_missing_input_vector`,
+`ising_zero_arc_signature`, and `demoivre_branch_orbit_word`.
+
+Status remains honest: all twelve legal cells are named, but proof-closed
+carriers remain `0/4`.  The proof route still requires finite address plus
+observer gluing plus a retained root/ear/lattice/fold sidecar before a
+packet-sheaf legal exit can imply `LRC14Statement`.
+
+During push/rebase, incoming HYP-3114/T1190/LTI-251/LTT-149 added an adjacent
+irrational/transcendental approximation sidecar.  Integrated it as signal by
+keeping both lens rows and recording the distinction: HYP-3114 uses
+Roth-Minkowski/Hurwitz only after witness interval, endpoint margin, max-speed
+scale, and denominator-shell data are retained; HYP-3111's Minkowski row is a
+q-body volume gate.  Both obey the same no-naked-source theorem rule.
+
+A later rebase also brought in the completed HYP-3110/S263
+De Moivre/Jacobi/crystallographic frontier.  Integrated it into the De Moivre
+row: `demoivre_branch_orbit_word` should be read with HYP-3110's formal
+normal-form sidecar, and theta/crystallographic residuals remain legal only
+when they feed an observer-gluing certificate or finite-address branch packet.
 
 ## codex-2026-06-27-S263 -- De Moivre/Jacobi/crystallographic frontier reservation -- HYP-3110
 

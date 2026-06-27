@@ -4674,3 +4674,11 @@ SCCs, and one Hamiltonian path:
 proof_circuit_complexity -> zero_real_ear_map -> lee_yang_root_curve ->
 demoivre_quintic_fold -> minkowski_lattice_body -> ising_partition_zero ->
 raw_scalar_p0`.
+
+The S265 bridge update adds a second, non-ranking audit over the same vertices:
+four carriers times three legal cells, namely preserved predicate, destroyed
+coordinate, and handoff payload.  Its next tournament use is to orient proposed
+shortcuts by whether their cut payload survives into HYP-3113's packet-sheaf
+legal exit, with candidate survivor fields `q_body_inequality_word`,
+`proof_circuit_missing_input_vector`, `ising_zero_arc_signature`, and
+`demoivre_branch_orbit_word`.

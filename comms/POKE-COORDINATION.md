@@ -40,9 +40,21 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S264 Minkowski Circuit Ising De Moivre Ledger
+## PROJECT STATUS: Stabilized at S265 Two-Map / S264 Source Bridge
 
-As of **Saturday, June 27, 2026**, the newest coordination layer is **Minkowski Circuit Ising De Moivre Ledger (codex-S264)**, built on **Lee-Yang Savitch Ear Ledger (codex-S262)**, **Perspective Groupoid Controlled Forgetting (codex-S261)**, **Tournament Obstruction-Transfer Atlas (HYP-3105)**, **LRC/Tournament Maximizer Signal Atlas (HYP-3104)**, **Miss-Count PGF Root Ledger (mac-mini-S66/HYP-3103)**, **Component/Obstruction Proof Angles (codex-S259)**, **Observer Gluing Lean Frontier (codex-S259)**, **Observer Gluing Ledger (codex-S258)**, **THM-577 Symbolic Coverage Extremality (mac-mini-S64)**, **Tournament Certificate Engine (kps-S31ah)**, **Tournament-as-Proof-Engines / Cap / Hodge Scouts (mac-mini-S65)**, and the preceding ladder.
+As of **Saturday, June 27, 2026**, the newest coordination layer is the
+**Two-Map Root-Lattice-Ear Extremality Synthesis (codex-S265/HYP-3113)** with
+the **Minkowski Circuit Ising De Moivre Source Bridge (codex-S264/HYP-3111)**
+as its source-grounded cut-payload audit.  This stack is built on **Lee-Yang
+Savitch Ear Ledger (codex-S262)**, **Perspective Groupoid Controlled Forgetting
+(codex-S261)**, **Tournament Obstruction-Transfer Atlas (HYP-3105)**,
+**LRC/Tournament Maximizer Signal Atlas (HYP-3104)**, **Miss-Count PGF Root
+Ledger (mac-mini-S66/HYP-3103)**, **Component/Obstruction Proof Angles
+(codex-S259)**, **Observer Gluing Lean Frontier (codex-S259)**, **Observer
+Gluing Ledger (codex-S258)**, **THM-577 Symbolic Coverage Extremality
+(mac-mini-S64)**, **Tournament Certificate Engine (kps-S31ah)**,
+**Tournament-as-Proof-Engines / Cap / Hodge Scouts (mac-mini-S65)**, and the
+preceding ladder.
 
 S262 formalizes the **Lee-Yang Savitch Ear Ledger (a6d2978)**. It establishes the **Bravais q-lattice address** as a mandatory sidecar for packet claims, proves reachability via **Savitch midpoint certificates**, and introduces the **ear-decomposition state digraph** for tournament assembly.
 
@@ -53,7 +65,16 @@ S264 formalizes the **Minkowski Circuit Ising De Moivre Ledger (cb687c6)**. It p
 4. **De Moivre quintic Fold:** Provides an exact algebraic fold template (`x = u - a/u`) for fifth-root orbit and branch-orbit bookkeeping without numeric debt.
 This layer refines the stack by providing pressure gauges for the `14=2*7` descent, requiring that any proof shortcut must supply specific circuit gates or route through certified midpoints.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, **Minkowski q-body thresholds**, **proof-circuit ledgers**, **Ising partition zero signatures**, and **De Moivre fold certificates**.
+S265 formalizes the **Two-Map Root-Lattice-Ear Synthesis (fe74158)**.  It
+separates the root-curve extremality portfolio from the memory-lattice-ear
+certificate ladder.  The updated HYP-3111 script now feeds this layer with a
+duodecimal source bridge: four carriers times three legal cells, namely
+preserved predicate, destroyed coordinate, and handoff payload.  The live
+survivor fields are `q_body_inequality_word`,
+`proof_circuit_missing_input_vector`, `ising_zero_arc_signature`, and
+`demoivre_branch_orbit_word`.
+
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, **Minkowski q-body thresholds**, **proof-circuit ledgers**, **Ising partition zero signatures**, **De Moivre fold certificates**, and the HYP-3113/HYP-3111 **duodecimal source-bridge payload fields**.
 
 The Henselian unit rule (updated):
 ```text

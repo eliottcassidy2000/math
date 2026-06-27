@@ -188,6 +188,18 @@ class Packet:
     note: str
 
 
+@dataclass(frozen=True)
+class BridgeRow:
+    carrier: str
+    source_hook: str
+    hyp3113_role: str
+    keeps: str
+    destroys: str
+    cut_payload: str
+    legal_gate: str
+    next_measure: str
+
+
 PACKETS = [
     Packet("consec_8", tuple(range(8)), "HYP-3109 root-locus leader"),
     Packet("even_AP_8", tuple(2 * i for i in range(8)), "dilation-tied AP row"),
@@ -202,6 +214,50 @@ PACKETS = [
     Packet("gw11", (0, 1, 2, 3, 4, 5, 6, 7, 8, 21, 22), "wide binding bank"),
     Packet("gw12", (0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 18, 20), "wide binding bank"),
     Packet("E_star_k12", (0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18), "mac-mini k=12 breaker"),
+]
+
+
+BRIDGE_ROWS = [
+    BridgeRow(
+        carrier="minkowski_lattice_body",
+        source_hook="symmetric convex body volume > 2^rank * covolume forces a nonzero lattice point",
+        hyp3113_role="memory-lattice-ear map: Bravais_shape_tensor / successive_minima_covolume",
+        keeps="rank, covolume, declared q-body inequalities, and forced relation vector",
+        destroys="witness time, endpoint owner, root stratum, and route status if the body is only Euclidean",
+        cut_payload="q-body inequality word plus forced-vector-to-packet decoding map",
+        legal_gate="body must be symmetric, convex, LRC-native, and tied to witness/lift/observer output",
+        next_measure="reciprocal-flat q-body using root stratum, segment clearance, entropy, finite-address, observer debt",
+    ),
+    BridgeRow(
+        carrier="proof_circuit_complexity",
+        source_hook="Boolean circuit DAG; size is gate count and depth is longest input-output path",
+        hyp3113_role="memory-lattice-ear map: packet_sheaf_legal_exit / Savitch_midpoint_certificate",
+        keeps="proof obligation DAG, essential inputs, minterm exits, and shortcut regression tests",
+        destroys="metric geometry and analytic root motion when a gate is treated as a theorem",
+        cut_payload="missing-input bit vector for every proposed shortcut or quotient",
+        legal_gate="shortcut must supply a minimal certificate or prove the removed input is reconstructible",
+        next_measure="lower-bound style tests for quotients that delete finite_address or observer_gluing fields",
+    ),
+    BridgeRow(
+        carrier="ising_partition_zero",
+        source_hook="spin interactions define a Hamiltonian and partition function over configurations",
+        hyp3113_role="root-curve map: Lee_Yang_zero_free_region / tournament_Iomega_root_spectrum",
+        keeps="interaction graph, coupling sign, partition coefficients, and whole zero multiset",
+        destroys="endpoint-owner and branch-route semantics if only a moment or nearest zero is kept",
+        cut_payload="spin/proof-obligation incidence word plus partition-zero arc signature",
+        legal_gate="couplings must map to named proof obligations and zeros must be compared as a curve",
+        next_measure="replace toy carrier graph by HYP-3109 zero-real one-swap component before/after root wall",
+    ),
+    BridgeRow(
+        carrier="demoivre_quintic_fold",
+        source_hook="x^5 + 5*a*x^3 + 5*a^2*x + b folds through y^2 + b*y - a^5 = 0",
+        hyp3113_role="memory-lattice-ear map: first_obstruction_cocycle / finite branch address",
+        keeps="exact fifth-root branch orbit, algebraic cancellation depth, and fold normal form",
+        destroys="which LRC packet branch is legal unless finite-address data is attached",
+        cut_payload="five-branch orbit word plus finite-address sidecar for the selected branch",
+        legal_gate="fold must feed an observer-gluing or finite-address certificate, not a naked algebraic analogy",
+        next_measure="formalize Laurent identity and test HYP-3110 branch packets for fifth-root orbit debt",
+    ),
 ]
 
 
@@ -827,6 +883,32 @@ def print_tournament(report: dict[str, object]) -> None:
     print("one priority path: " + " -> ".join(report["priority_path"]))  # type: ignore[arg-type]
 
 
+def print_bridge_rows() -> None:
+    print()
+    print("=" * 96)
+    print("MAP 6: HYP-3113 TWO-MAP CUT-PAYLOAD BRIDGE")
+    print("=" * 96)
+    print(
+        "The four imported carriers are retention tests for HYP-3113's "
+        "root-curve portfolio and memory-lattice-ear certificate ladder."
+    )
+    print(
+        "duodecimal audit: 4 carriers x 3 legal cells "
+        "(predicate, destroyed coordinate, handoff payload) = 12 named cells; "
+        "proof-closed carriers = 0 / 4."
+    )
+    for row in BRIDGE_ROWS:
+        print()
+        print(f"- {row.carrier}")
+        print(f"  source_hook: {row.source_hook}")
+        print(f"  HYP-3113 role: {row.hyp3113_role}")
+        print(f"  keeps: {row.keeps}")
+        print(f"  destroys: {row.destroys}")
+        print(f"  cut_payload: {row.cut_payload}")
+        print(f"  legal_gate: {row.legal_gate}")
+        print(f"  next_measure: {row.next_measure}")
+
+
 def main() -> None:
     print("HYP-3111 Minkowski/circuit/Ising/De Moivre carrier scout -- codex S264")
     print("This scout integrates HYP-3108/HYP-3109/HYP-3110 with the user-requested sources.")
@@ -847,6 +929,7 @@ def main() -> None:
     print_ising(ising)
     print_demoivre(demoivre)
     print_tournament(tournament)
+    print_bridge_rows()
     print()
     print("=" * 96)
     print("SYNTHESIS")
@@ -859,6 +942,7 @@ def main() -> None:
     print("still open:")
     print("  None of the four carriers proves the residual LRC14 observer certificate alone.")
     print("  The live bridge remains: finite-address packet + observer gluing + root/ear sidecar.")
+    print("  HYP-3113 reframes this as packet-sheaf legal exit after a root-curve or memory-lattice-ear sidecar.")
     print("challenged assumption:")
     print("  The tournament vertices need not be runners, gaps, arcs, or roots; in this scout")
     print("  they are proof carriers.  This preserves route legality and destroys raw labels/time.")

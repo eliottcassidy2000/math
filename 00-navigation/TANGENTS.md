@@ -3509,3 +3509,10 @@ is `0.020934`; the proof circuit has size/depth `8/4`; finite Ising packets
 keep partition zeros on the unit circle to numerical error; and De Moivre's
 fold is verified exactly as a Laurent identity.  The live bridge remains
 finite-address plus observer-gluing plus a retained carrier sidecar.
+
+S265 bridge update: HYP-3113 reinterprets T1187 as a two-map cut-payload
+source law.  The duodecimal audit is `4` carriers times `3` legal cells
+(preserved predicate, destroyed coordinate, handoff payload).  The survivor
+fields are `q_body_inequality_word`, `proof_circuit_missing_input_vector`,
+`ising_zero_arc_signature`, and `demoivre_branch_orbit_word`; none is a proof
+exit without finite address and observer gluing.

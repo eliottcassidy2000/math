@@ -2468,3 +2468,18 @@ shows high `p0` is reciprocal-flat, not Bragg-crystalline
 HYP-3111 Minkowski body should encode root stratum, entropy/flatness,
 segment clearance, finite-address status, and observer debt rather than raw
 lattice peak size.
+
+Post-rebase S265 integration: HYP-3113 turns this atlas into a two-map
+cut-payload bridge.  The new Map 6 duodecimal audit names four carriers times
+three legal cells: preserved predicate, destroyed coordinate, and handoff
+payload.  The packet fields to carry forward are `q_body_inequality_word`,
+`proof_circuit_missing_input_vector`, `ising_zero_arc_signature`, and
+`demoivre_branch_orbit_word`; proof-closed carriers remain `0/4`.
+
+Incoming HYP-3114 is adjacent but separate: it uses Roth-Minkowski/Hurwitz for
+witness-interval approximation after margin data is retained, while this
+HYP-3111 entry uses Minkowski as a declared q-body volume gate.
+
+Incoming completed HYP-3110 supplies the De Moivre normal-form sidecar and
+Lean proof over `Rat`; read `demoivre_branch_orbit_word` together with that
+formal fold and its observer-gluing / finite-address gate.

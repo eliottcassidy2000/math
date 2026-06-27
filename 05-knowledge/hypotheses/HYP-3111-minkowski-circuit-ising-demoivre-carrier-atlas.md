@@ -7,6 +7,9 @@ tangent: T1187
 technique: LTI-248
 tournament_technique: LTT-146
 related:
+  - HYP-3114
+  - HYP-3113
+  - HYP-3112
   - HYP-3110
   - HYP-3109
   - HYP-3108
@@ -34,7 +37,9 @@ external_sources:
 
 This lane merges the user's requested Minkowski theorem, circuit complexity,
 Ising model, and De Moivre quintic prompts into the live HYP-3107--HYP-3110
-proof frontier.
+proof frontier.  After the incoming HYP-3113 two-map synthesis, this lane is
+best read as a source-grounded cut-payload bridge into the root-curve
+portfolio and memory-lattice-ear certificate ladder.
 
 It is not a proof.  The intended contribution is a controlled-forgetting
 interface:
@@ -77,6 +82,9 @@ its sidecar.
    any shortcut must supply `q_witness_gate`, or both `level7_sieve` and
    `dyadic_lift`, or route through `observer_gluing_certificate` plus
    `finite_address_packet`.
+5. Promote the new Map 6 bridge rows into packet fields:
+   `q_body_inequality_word`, `proof_circuit_missing_input_vector`,
+   `ising_zero_arc_signature`, and `demoivre_branch_orbit_word`.
 
 ## Assumption Challenge
 
@@ -211,3 +219,63 @@ if a carrier reduces a residual to a multiplicative equation or a two-block
 determinant gap, record `linear_forms_log_gap`, `low_height_resonance_list`,
 and the exact descent or debt exit.  Otherwise it remains an analogy, not a
 proof step.
+
+## Incoming S265 Two-Map And Source-Law Integration
+
+Post-rebase, S265/HYP-3113 reframes the same frontier as two coupled maps:
+
+```text
+root-curve portfolio:
+  full PGF/root locus -> Lee-Yang zero-free region / discriminant break
+
+memory-lattice-ear certificate ladder:
+  relation-lattice/Bravais shape -> Savitch midpoint sidecar
+  -> strong/odd/nested ear grammar -> packet-sheaf legal exit
+```
+
+The S264 script now emits **Map 6: HYP-3113 two-map cut-payload bridge**.  It
+uses the external source hooks in their narrow forms:
+
+- Minkowski theorem is a volume gate only after the symmetric convex body,
+  rank, and covolume are declared; its LRC payload is a q-body inequality word
+  plus a forced-vector-to-packet decoding map.
+- Circuit complexity is a proof-DAG ledger: size, depth, essential inputs, and
+  minimal certificates are useful only as regression tests for shortcuts that
+  delete observer or finite-address fields.
+- The Ising model is a partition-function zero carrier: the LRC payload is an
+  interaction/proof-obligation incidence word plus the full zero arc, not a
+  single moment or nearest-zero scalar.
+- De Moivre's quintic is an exact fold template: it keeps a fifth-root branch
+  orbit and cancellation normal form, but it needs a finite-address sidecar
+  before touching `LRC14Statement`.
+
+Incoming S263 completed HYP-3110 and strengthens this De Moivre row.  Its Lean
+sidecar proves the fold over `Rat` and states that theta/crystallographic
+residual producers close only through an `ObserverGluingCertificate` or a
+`FiniteAddressBranchPacket`.  Therefore `demoivre_branch_orbit_word` should be
+read together with HYP-3110's normal-form sidecar, and wallpaper/space-group
+catalog counts remain quotient audits rather than proof exits.
+
+The duodecimal audit is deliberately modest:
+
+```text
+4 carriers x 3 legal cells
+  = preserved predicate
+  + destroyed coordinate
+  + handoff payload
+  = 12 named cells,
+proof-closed carriers = 0 / 4.
+```
+
+This update strengthens HYP-3111 as a legal-forgetting test rather than as a
+new proof route.  A future proof shortcut should be rejected if it can name a
+Minkowski bound, circuit gate, Ising zero, or quintic fold but cannot also name
+the cut payload that survives into HYP-3113's packet-sheaf legal exit.
+
+Post-rebase, S265 also added HYP-3114 for irrational/transcendental
+approximation.  That lane is adjacent but distinct: it uses Roth-Minkowski and
+Hurwitz prior art only after a witness interval, endpoint margin, max-speed
+scale, and denominator-shell sidecar are retained.  HYP-3111's Minkowski row
+remains a q-body volume gate.  The shared rule is that neither approximation
+nor geometry-of-numbers may enter the LRC proof as a naked scalar theorem;
+both must name their surviving packet payload.
