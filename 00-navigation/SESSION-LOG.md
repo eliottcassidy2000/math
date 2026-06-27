@@ -27118,3 +27118,57 @@ backlog, POKE coordination, and this session log.  Next pull: build
 `lrc14_normal_fan_cech_component_ledger` and
 `lrc14_first_obstruction_syndrome_ledger` over HYP-2963 and the THM-573
 residual.
+## codex-2026-06-27 -- LRC/tournament maximizer signal atlas -- HYP-3104
+
+User asked to understand what maximizes values in the LRC and how that relates
+to tournaments, with broad mining of prior work and bold new measurable
+signals.
+
+Added `05-knowledge/hypotheses/HYP-3104-lrc-tournament-maximizer-signal-atlas.md`
+and exact scout `04-computation/lrc_tournament_maximizer_signal_atlas_codex.py`
+with stored output
+`05-knowledge/results/lrc_tournament_maximizer_signal_atlas_codex.out`.
+
+Main correction: pair-Pascal value exactness is not the same as order-2 proof
+anatomy.  For `j=3,k=10,P=(1,12,13)`, the final cap equals `55/91`, but the
+orders are `O0=1, O1=-3/7, O2=4/91, O3=-1/91`, so `pair_excess=1/91` is
+canceled by live order-3 debt.  This makes `pair_shadow_false_positive` and
+`first_live_interaction_order` first-class signals.
+
+One-swap exchange graphs are also not scalar-optimality witnesses by
+themselves.  For `N=13,j=3`, there are `4` local minima and `3` nonglobal
+traps; nonglobal traps already occur at `j=2`.  The exchange tournament should
+therefore be read as a local proof-geometry/trap detector, not as a clean
+transitive maximizer principle.
+
+Small tournament spectra through `n=6` confirm the HYP-3099 warning: `H`
+maximization is balance/rigidity, not LRC cap value.  At `n=6`, `max_H=45`
+with score sequence `(2,2,2,3,3,3)`, while missing odd `H` values below max
+include `7` and `21`.  Treat these as quotient-transfer alarms.
+
+New signal list to carry forward: `maximizer_currency_vector`,
+`pascal_anatomy_residual`, `first_live_interaction_order`,
+`pair_shadow_false_positive`, `exchange_trap_index`, `deep_tail_signature`,
+`boundary_mass_charge`, `miss_count_PGF_root_stratum`,
+`decorrelation_inward_flux`, `far_block_coherence`,
+`curvature_plateau_tail`, `scissors_split_count`,
+`coarse_to_fine_transfer_risk`, and `H_spectrum_transfer_risk`.
+
+During close-out, incoming mainline claimed HYP-3100 for the tournament
+contradiction grammar, HYP-3101/HYP-3102 for component/obstruction proof
+routes, and HYP-3103 for the S66 miss-count PGF zeros plus a perspective
+groupoid reservation.  This atlas was renumbered to HYP-3104 and the S66 signal
+was folded in: `#real roots`, nearest root modulus, and
+log-concavity/root-confinement of `G_N(z)=sum q_t z^t` are now the root-side
+version of `boundary_mass_charge`.  In S66, `consec_8` has `#real roots=0/6`,
+high `q0+q6`, and maximal displayed `L_yK8`; more spread rows move to
+`#real=2` or `#real=4` strata.  Next test: join the PGF root stratum to
+`exchange_trap_index` and `first_live_interaction_order`.
+
+Tournament Analysis used signal families/proof obligations as vertices rather
+than runners.  The signal tournament had score histogram
+`{0:1,1:1,3:2,4:1,5:2,7:1,8:1,9:1}`, `3` directed 3-cycles, `9` Hamiltonian
+paths, and top score `high_order_anatomy`.  Assumption challenged: the useful
+tournament vertex set need not be runners, arcs, or original configurations;
+for this exploratory stage it is better to use interaction orders, local
+sinks, observer charts, quotient debts, spectra, and proof obligations.
