@@ -54,6 +54,51 @@ Next proof use: add `lee_yang_nearest_zero_radius`,
 branch ledger.  A residual packet should hit a root wall, lattice wall,
 compressed reachability path, or named ear/sidecar debt before a new scalar
 invariant is introduced.
+## codex-2026-06-27-S262b -- Lee-Yang ear-payload root-motion route
+
+Owner asked to work on Lee-Yang extremality, whole PGF/root structure, phi4
+distribution thinking, and ear decompositions as inspiration for LRC14 and
+tournament connections.
+
+Integrated the incoming S261/S66/S259/S262 stack first: HYP-3103 gives the
+miss-count PGF root signal, HYP-3104 separates maximizer currencies,
+HYP-3105 supplies obstruction-transfer guardrails, HYP-3106 supplies
+perspective functors, HYP-3107 supplies the Lean proof-frontier ledger,
+HYP-3108 supplies the broader Lee-Yang/Savitch/Bravais/ear-lattice atlas,
+HYP-3109 supplies the exhaustive root-curve/zero-real-ear map, HYP-3110
+reserves the De Moivre/Jacobi crystallographic proof-carrier lane, HYP-3111
+reserves the Minkowski/circuit/Ising/De Moivre carrier atlas, and
+HYP-3101/HYP-3102 name the component-bound and first-obstruction proof
+obligations.  The new S262b contribution is HYP-3112: turn one-runner
+addition into an exact ear payload
+
+```text
+A_t(E,a)=P(N_E=t and a hits a sector empty for E)
+q_{E+a}[t]=q_E[t]-A_t+A_{t+1}.
+```
+
+Added `04-computation/lrc_lee_yang_ear_payload_codex_s262.py` and stored
+`05-knowledge/results/lrc_lee_yang_ear_payload_codex_s262.out`.  The exact
+scout shows AP/consec and even-AP have `real=0/6`, `nearest=1.4886`, and
+`dist(roots,[-1,0])=0.9119`; `single_far_21` is also complex-rooted but much
+closer to the danger interval (`0.2786`); `break_mid` and `random_spread`
+have roots on the interval.  Final nested AP `+7` has `A_mean=1.965291`,
+while final far `+21` has `A_mean=2.993492`, making the new hypothesis:
+nested low-level ears stabilize roots away from `[-1,0]`, while high-level
+far or nonnested ears produce root-collision debt or route to named sidecars.
+
+Initially reserved HYP-3107/T1184/LTI-245/LTT-143, then rebased over incoming
+mainline work that had already claimed those IDs for the Lean proof-frontier
+ledger.  Renumbered once to HYP-3109/T1186/LTI-247/LTT-145, then a later pull
+revealed HYP-3109 root-curve earmap and HYP-3110/T1186/LTI-247/LTT-145
+De Moivre/Jacobi reservations.  Final namespace is
+HYP-3111/T1187/LTI-248/LTT-146, then another pull revealed HYP-3111 as the
+Minkowski/circuit/Ising/De Moivre carrier atlas.  Final namespace is
+HYP-3112/T1188/LTI-249/LTT-147, connected to HYP-3111, HYP-3109, and
+HYP-3108.  Updated the result/hypothesis indexes, OPEN-Q-108, the
+investigation backlog, the LRC lens map, and coordination notes.  Tournament
+Analysis uses ear payloads, root-motion events, and proof obligations as
+vertices, not runners.
 
 ## kind-pasteur-2026-06-27-S31ah -- the Tournament Proof Toolkit (engine + generator + 6 applications); 3-agent convergence
 

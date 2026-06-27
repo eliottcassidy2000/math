@@ -20,6 +20,44 @@ ear/sidecar debt before a new scalar invariant is introduced. -> HYP-3108,
 HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101,
 HYP-3096, HYP-3095, HYP-3093, HYP-3085, THM-573, THM-577, LTI-246,
 LTT-144, T1185, OPEN-Q-108.
+**OPEN-Q-108 S262b Lee-Yang ear-payload addendum:**
+HYP-3112 refines HYP-3109's root-curve ear map, HYP-3108's Lee-Yang/Savitch
+atlas, and HYP-3111's carrier-sidecar lane by turning HYP-3103's miss-count PGF
+root signal into an extension calculus.  The single value `p0=G_E(0)` and the
+final root multiset are not enough: when
+`F=E union {a}`, the hidden payload
+
+```text
+A_t(E,a)=P(N_E=t and a hits a sector empty for E)
+q_F[t]=q_E[t]-A_t+A_{t+1}
+```
+
+is the observer-extension/cut coordinate that reconstructs root motion.  The
+S262b scout verifies AP/consec and even-AP have `real=0/6`,
+`nearest=1.4886`, and `dist(roots,[-1,0])=0.9119`, while `single_far_21`
+remains complex-rooted but sits much closer to the danger interval
+(`dist=0.2786`), and broken/spread rows have roots on `[-1,0]`.  The final
+nested AP ear `+7` has `A_mean=1.965291`; the final far ear `+21` has
+`A_mean=2.993492`.  This suggests a root-stability version of the ear
+decomposition grammar: directed ear = retained extension payload, odd ear =
+parity split of `A_t`, nested ear = AP-style legal refinement, and nonnested
+ear = root collision or named proof debt.
+
+Open task: build `lrc14_lee_yang_ear_payload_ledger` over HYP-2963 and the
+THM-573 residual.  Each row should carry `miss_count_pgf_coefficients`,
+`miss_count_pgf_root_multiset`, `lee_yang_negative_interval_distance`,
+`root_axis_gap_deg`, `root_modulus_span`, `fugacity_winner_profile`,
+`last_legal_ear`, `ear_payload_A_vector`, `ear_payload_mean_level`,
+`ear_payload_parity_bias`, `root_motion_reconstruction_status`,
+`nested_ear_status`, `negative_interval_contact_status`,
+`destroyed_coordinate`, and `terminal_exit_or_named_debt`.  Test the
+separation theorem: if a root approaches or meets `[-1,0]`, then the packet
+has high-mean far-ear payload, nonnested ear debt, component-bound debt,
+first-obstruction debt, K33/THM-572 state-lift debt, or AP/GW boundary
+status. -> HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107,
+HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3098,
+HYP-3085, HYP-2879, THM-577, THM-576, THM-573, LTI-249, LTT-147, T1188,
+OPEN-Q-108.
 
 **OPEN-Q-108 S259b tournament obstruction-transfer addendum:**
 HYP-3105 turns the H=7/H=21 contradiction pattern into a reusable

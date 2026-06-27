@@ -162,6 +162,12 @@ obligations, and proof-carrier interfaces.
   and ear-decomposition sidecars for an LRC packet:
   use LTT-144 after LTT-143/LTT-141/LTT-140/LTT-138 and make signal families,
   sector-sweep states, local traps, and proof-map obligations the vertices.
+- Need to test Lee-Yang root extremality through legal one-runner ears:
+  use LTT-147 after LTT-146/LTT-145/LTT-144/LTT-143/LTT-142/LTT-141/LTT-139/LTT-138/LTT-136/LTT-133/LTT-101
+  and make ear payloads, root-motion events, and proof obligations the
+  vertices.  Keep `A_t`, parity/mean payload, negative-interval root distance,
+  reconstruction status, destroyed coordinate, and terminal exit before using
+  PGF roots as a proof carrier.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -4212,6 +4218,44 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3057, HYP-3054,
   HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-2121, HYP-2120, HYP-2087,
   LTI-244, LTT-142, LTT-139, LTT-138, T1183, OPEN-Q-108.
+
+### LTT-147: Lee-Yang Ear-Payload Root-Motion Ledger
+
+- **Move:** Treat the miss-count PGF `G_E(z)=sum q_t z^t` and its one-runner
+  extension payload as a proof-carrier tournament.  For `F=E union {a}`, keep
+  the payload `A_t=P(N_E=t and a lands in a sector empty for E)`, so
+  `q_F[t]=q_E[t]-A_t+A_{t+1}`.  The tournament vertices are ear payloads,
+  root-motion events, danger-interval contacts, and proof obligations, not
+  runners.
+- **LRC use:** HYP-3112/S262b refines HYP-3109's root-curve ear map,
+  HYP-3108's Lee-Yang/Savitch atlas, and HYP-3111's carrier-sidecar lane,
+  upgrading HYP-3103's root signal from a final-row diagnostic to a
+  legal-extension calculus.  AP/consec and even-AP have
+  `real=0/6` and `dist(roots,[-1,0])=0.9119`; `single_far_21` is also
+  complex-rooted but much closer (`0.2786`); broken/spread rows hit the danger
+  interval.  The exact payload distinguishes nested AP growth
+  (`A_mean=1.965291`) from far resonance (`A_mean=2.993492`).
+- **Preserves:** miss-count PGF coefficients, root multiset, negative-interval
+  distance, axis gap, fugacity winner profile, `A_t`, parity/mean payload,
+  nested/far ear status, and root-motion reconstruction.
+- **Forgets / guardrail:** Root-realness alone is too coarse: a far-resonant
+  row can remain in the complex-root stratum while approaching the danger
+  interval.  A quotient that keeps `p0`, moments, pair mass, or final roots but
+  drops `A_t` has forgotten the coordinate that predicts the next root motion.
+- **Tournament vertices:** `nested_low_payload_ear`, `far_high_payload_ear`,
+  `negative_interval_contact`, `root_axis_gap_event`,
+  `payload_parity_split`, `root_motion_reconstruction`,
+  `component_bound_debt`, `first_obstruction_debt`, `K33_state_lift_debt`,
+  and `AP_GW_boundary_stop`.
+- **Next hook:** Build `lrc14_lee_yang_ear_payload_ledger` over HYP-2963 and
+  the THM-573 residual.  Test whether every root approaching `[-1,0]` is
+  explained by high-mean payload, nonnested ear debt, component debt,
+  first-obstruction debt, K33/THM-572 debt, or AP/GW boundary status.
+- **Pointers:** HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107,
+  HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3098,
+  HYP-3085, HYP-2879, THM-577, THM-576, THM-573, LTI-249, LTI-248, LTI-247,
+  LTI-246, LTI-245, LTT-147, LTT-146, LTT-145, LTT-144, LTT-143, T1188,
+  T1187, T1186, T1184, OPEN-Q-108.
 
 ### LTT-141: Tournament Obstruction-Transfer Atlas
 

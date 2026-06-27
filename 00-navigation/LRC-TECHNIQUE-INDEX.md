@@ -75,6 +75,7 @@ hyperoperation grid address / x+2 additive lane / x*2 product-depth lane / level
 polynomial-method witness ledger / CRT c=7,c=2 lifts / largest-arc denominator-net route
 normal-fan Cech barcode component ledger / direct L_14 component bound / finite-ruler net
 first-obstruction cocycle generation / observer-cut syndrome / certificate-cycle image
+Lee-Yang miss-count PGF root ledger / one-runner ear payload / root-motion reconstruction
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -376,6 +377,7 @@ record what it destroys before asking it to prove anything.
 | LTI-244 | Perspective groupoid controlled forgetting | Node k-depth views, directed-edge dual sectors, cycle/chirality roots, transitive-clique insertion cuts, conflict/Omega roots, observer cuts, dihedral/converse actions, required sidecars | HYP-3106/S261 shifts the A000568 perspective ladder from counts into quotient functors and treats HYP-3103's PGF roots, HYP-3104's maximizer-transfer signals, and HYP-3105's obstruction-transfer ledgers as sidecars rather than the same namespace.  Each perspective declares root object, automorphism or dihedral action, depth rule, forgotten coordinate, next operation, required sidecar, and preserved LRC predicate.  The scout verifies `P_node(5)=48<U(6)=56` and `P_node(6)=296<U(7)=456`; node depth reaches exact rooted memory but not the shifted target; `m=6` conflict/Omega carriers first appear with `32` orbits; U(6) edge-sector decks repair `55/56 -> 56/56` by cross-sector orientation.  Rebased over HYP-3101/HYP-3102, normal-fan component bounds and first-obstruction cocycle gluing become two concrete stress tests for whether a perspective quotient is legal. | HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3057, HYP-3054, HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-2121, HYP-2120, HYP-2087, T1183, LTT-142, LTI-244, OPEN-Q-108 | Add `perspective_functor`, `root_object`, `automorphism_action`, `next_operation`, `required_sidecar`, `dihedral_reflection_status`, `component_bound_stress`, `first_obstruction_stress`, `pgf_root_signature`, `maximizer_transfer_signal`, and `obstruction_transfer_status` to packet ledgers before using a perspective quotient. |
 | LTI-245 | Lean proof-frontier ledger | `TournamentH7.LRCProofFrontier`, solved/open frontier nodes, pair-Pascal cap arithmetic, THM-577 dense cap value import, residual classifier, residual finite-address packet theorem, observer-gluing certificate theorem, bleeding-edge packet wrapper theorem, experiment vertices | HYP-3107/S259 turns the current LRC14 proof edge into a Lean-facing conditional interface. It records solved nodes (q-witness, level-7 lift, pair-Pascal cap RHS, THM-577 symbolic dense cap values, terminal `Mreach`), open nodes (coverage extremality, reflection-Perron/order-3/order-4, Node-3 effective peel, finite-ruler glue, fine-scale winding transfer), and exact cap arithmetic (`capRat k=k(k+1)/182` for `k=10..13`, plus the `k=9` and `k=8` debts). HYP-3099 feeds the tournament diagnostic: cap optimality is bounded but non-transitive, and apex-7-to-H=7 is a coincidence. HYP-3100/HYP-3105 supply the contradiction grammar, obstruction-transfer atlas, and `TournamentH7.LRCBleedingEdgeFrontier` conservative wrapper. The S31ah certificate-toolkit rebase validates the H/Omega engine but marks its coarse LRC14 use as vacuous, so H enters only through fine-scale or packet-preserving observers. The key theorems are `lrc14_from_bleeding_edge_frontier`, `lrc14_from_bleeding_edge_observer_gluing_frontier`, and `lrc14_from_bleeding_edge_packet_wrapper_frontier`. | HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098, HYP-3097, HYP-3096, HYP-3095, HYP-3094, HYP-3093, HYP-3092, HYP-3091, HYP-3090, HYP-3089, HYP-3088, HYP-3085, HYP-3083, THM-577, THM-573, THM-575, THM-576, T1184, T1183, T1182, LTT-143, LTT-142, LTT-141, LTT-136, LTI-245, LTI-244, LTI-243, LTI-239, LTI-238, LTI-236, LTI-234, OPEN-Q-108, `TournamentH7.LRCProofFrontier` | Instantiate `CoverageExtremality` with exact `p0` and consecutive clusters for `k=8,9,10` by certifying HYP-3099's finite local minima, not by assuming greedy descent; define a fine mod-`p` or sector-pair winding observable after the coarse mod-14 H bridge degeneracy; add HYP-3100/HYP-3105 certificate columns to `BleedingEdgeFrontierCoverage`; convert the `k=8,9` cap debt into an Eberlein/Hankel degree-2-to-4 certificate; add the HYP-3093/HYP-3097 equinumerosity/equidecomposability/equidistribution triad to the frontier experiment schema; and make the HYP-3095/HYP-3097/HYP-3098 observer-gluing ledger emit concrete `ObserverGluingCertificate` rows, then `FiniteAddressBranchPacket` rows when available. |
 | LTI-246 | Lee-Yang/Savitch/Bravais/ear-lattice extremality atlas | Miss-count PGF zero curve, nearest-root radius, real-root stratum, Bravais reciprocal flatness, phi4 phase tuple, sector-sweep transition graph, Savitch midpoint depth, strict-descent traps, ear-rank sidecars | HYP-3108/S262 turns the user-suggested Lee-Yang, Savitch, Bravais-lattice, phi4, and ear-decomposition lenses into two coupled maps for LRC maximizers: a coefficient-root map `q_t -> G_N(z)` and a sector-sweep reachability map.  The bounded `{0}+7` scan from `1..13` finds `corr(p0,nearest_root_radius)=+0.899`, `corr(p0,#real_roots)=-0.483`, `corr(p0,Bravais_peak)=-0.430`, `corr(p0,residue_entropy)=+0.541`, and `corr(p0,phi4_lambda)=-0.696`; high `p0` lives in the no-real-root stratum with reciprocal-flat residue spectra, while Savitch/ear data identify finite-check sidecar debt rather than scalar value. | HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3096, HYP-3095, HYP-3093, HYP-3085, THM-573, THM-577, T1185, LTT-144, LTI-246, OPEN-Q-108 | Add `lee_yang_nearest_zero_radius`, `lee_yang_real_root_stratum`, `root_angle_error_to_7`, `bravais_residue_entropy`, `bravais_reciprocal_peak`, `phi4_phase_tuple`, `savitch_midpoint_depth`, `strict_descent_trap_count`, and `miss_count_ear_rank` to finite-address branch packets before accepting a new scalar invariant. |
+| LTI-249 | Lee-Yang ear-payload root-motion ledger | Miss-count PGF roots, Lee-Yang danger interval, one-runner ear payloads `A_t`, root-motion reconstruction, nested/far ear status, parity and mean payloads | HYP-3112/S262b refines HYP-3109's root-curve ear map, HYP-3108's Lee-Yang/Savitch atlas, and the HYP-3111 carrier-sidecar lane to an exact one-runner extension identity `q_full[t]=q_base[t]-A_t+A_{t+1}`. AP/consec and even-AP have `real=0/6`, `nearest=1.4886`, and `dist(roots,[-1,0])=0.9119`; `single_far_21` is complex-rooted but much closer to the danger interval; break/spread rows have interval-contact roots. The ear payload explains the difference: final nested AP `+7` has `A_mean=1.965291`, while final far `+21` has `A_mean=2.993492`. Ear-decomposition facts become sidecar grammar: directed ear means retained extension payload, odd ear means parity split, nested ear means AP-style legal refinement, and nonnested ear means root collision or named debt. | HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3098, HYP-3085, HYP-2879, THM-577, THM-576, THM-573, T1188, T1187, T1186, T1184, LTT-147, LTT-146, LTT-145, LTT-144, LTT-143, LTI-249, LTI-248, LTI-247, LTI-246, LTI-245, OPEN-Q-108 | Build `lrc14_lee_yang_ear_payload_ledger` over HYP-2963 and the THM-573 residual; emit `miss_count_pgf_coefficients`, root multiset, `lee_yang_negative_interval_distance`, `root_axis_gap_deg`, `ear_payload_A_vector`, `ear_payload_mean_level`, `ear_payload_parity_bias`, `root_motion_reconstruction_status`, `nested_ear_status`, destroyed coordinate, and terminal exit. |
 
 ## Cross-Cutting Guardrails
 
@@ -495,6 +497,7 @@ record what it destroys before asking it to prove anything.
 | LTI-TODO-90 | Finite-address branch-closure ledger | LTI-246, LTI-245, LTI-244, LTI-243, LTI-242, LTI-241, LTI-240, LTI-239, LTI-238, LTI-237, LTI-236, LTI-235, LTI-234, LTI-233, LTI-232, LTI-231, LTI-230, LTI-229, LTI-228, LTI-227, LTI-226, LTI-225, LTI-221, LTI-218, LTT-144, LTT-143, LTT-142, LTT-141, LTT-140, LTT-139, LTT-138, LTT-137, LTT-136, LTT-135, LTT-134, LTT-133, LTT-132, LTT-131, LTT-130, LTT-129, LTT-128, LTT-127, LTT-126, LTT-125, LTT-124, LTT-123, HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3098, HYP-3083, HYP-3088, HYP-3089, HYP-3090, HYP-3091, HYP-3092, HYP-3093, HYP-3095, HYP-3094, HYP-3087, HYP-3085, HYP-3084, HYP-3082, HYP-3081, HYP-3080, HYP-3079, HYP-3078, HYP-3077, HYP-3075, HYP-2990, HYP-2963, THM-572, THM-573, THM-575, THM-576, T1167, T1171, T1172, T1177, T1178, T1179, T1180, T1181, T1185, T1184, T1183, T1182, OPEN-Q-108 | Build the FA-BC ledger with `source_row_id`, `apex_divisible_by_14_flag`, `multiple_of_7_profile`, `level7_lift_sieve_status`, `polynomial_composite_lift_status`, `cap_pascal_mass_status`, `cap_ratio_or_deviation_status`, `direct_lonely_arc_count_status`, `largest_lonely_arc_floor`, `direct_component_bound_status`, `normal_fan_chamber_id`, `closed_arc_cech_beta`, `first_obstruction_basis_vector`, `certificate_cycle_image_status`, `lee_yang_nearest_zero_radius`, `lee_yang_real_root_stratum`, `bravais_residue_entropy`, `bravais_reciprocal_peak`, `phi4_phase_tuple`, `savitch_midpoint_depth`, `strict_descent_trap_count`, `miss_count_ear_rank`, `three_sameness_fiber`, `equinum_shadow`, `equidecomp_D`, `inverse_lmax`, `equidist_measure_status`, `equivalence_triad_tuple`, `covering_margin_aliasing_status`, `grid_class`, `active_binder_owner_word`, `endpoint_owner_transition_word`, `normalizer_step`, `finite_address_kind`, `destroyed_coordinate`, `branch_graph_node`, `bridge_status`, `median_center_kind`, `dropped_terminal_atoms`, `terminal_exit`, `formal_lean_status`, and `remaining_debt_name`; use it to split no-apex direct witnesses from THM-573 level-7 exits, then the `<=6` multiples-of-7 covering residual into normalized lonely-arc floor candidates, tournament-contradiction grammar packets, observer-gluing overlap packets, normal-fan component packets, first-obstruction syndrome packets, perspective-functor packets, maximizer-signal packets, root/lattice/reachability packets, obstruction-transfer packets, HYP-3092 cap-Pascal/deviation packets, HYP-3091 three-sameness fiber packets, HYP-3094 nested-refinement O2 packets, HYP-3094 cross-handoff O3 packets, K33 rows, HYP-3093 quotient-forgetting probes, and outside-bank normalizer attempts before any new scalar shortcut is considered. |
 | LTI-TODO-91 | Normal-fan Cech component-bound ledger | LTI-240, LTI-237, LTI-218, LTI-183, LTI-177, LTI-172, LTI-166, LTI-044, LTI-041, LTT-138, LTT-116, LTT-081, LTT-069, HYP-3101, HYP-3096, HYP-3025, HYP-3018, HYP-3015, HYP-3071, THM-573, THM-575, OPEN-Q-108 | Emit the normalized `L_14` component packet: closed Cech beta, open component count, boundary cocircuit word, owner-current word, runner quotient Betti defect, barcode count/persistence, active peak support, normal-fan chamber id, first tooth, component-bound status, measure-floor status, finite-ruler threshold, destroyed coordinate, and terminal exit; prove bounded chambers or name AP/GW/F7 topology debt. |
 | LTI-TODO-92 | First-obstruction syndrome ledger | LTI-241, LTI-240, LTI-236, LTI-221, LTI-218, LTI-213, LTI-203, LTI-201, LTT-139, LTT-138, LTT-134, LTT-119, LTT-116, LTT-111, LTT-101, HYP-3102, HYP-3101, HYP-3095, HYP-3071, HYP-3066, HYP-3056, HYP-3054, HYP-2997, HYP-2995, HYP-2963, THM-572, THM-573, OPEN-Q-108 | For every mixed route/status fiber, compute the observer-cut payload orbit and first obstruction basis vector; record sidecar stage, cycle-image rank/status, dual-annihilator status, family descent, AP/GW boundary stop, F7/THM-572 state-lift status, and terminal exit before allowing any observer-chart quotient to glue. |
+| LTI-TODO-96 | Lee-Yang ear-payload root ledger | LTI-249, LTI-248, LTI-247, LTI-246, LTI-245, LTI-244, LTI-243, LTI-241, LTI-240, LTI-238, LTI-237, LTI-235, LTI-232, LTT-147, LTT-146, LTT-145, LTT-144, LTT-143, LTT-142, LTT-141, LTT-139, LTT-138, LTT-136, LTT-133, LTT-101, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3098, HYP-3085, HYP-2879, THM-577, THM-576, THM-573, OPEN-Q-108 | Build a root-motion ledger over HYP-2963 and the THM-573 residual. Record `G_E`, root metrics, last legal ear, `A_t`, nested/far ear type, parity and mean payload, negative-interval contact, destroyed coordinate, and terminal exit; test whether every danger-interval approach is routed to high-mean ear payload, nonnested ear debt, component debt, first-obstruction debt, K33/THM-572 debt, or AP/GW boundary status. |
 
 ## Minimal Entry Template
 
@@ -2055,6 +2058,66 @@ functor tournament: directed_3_cycles=4, SCC sizes [5,1,1,1,1,1,1,1,1]
 
 Next contribution: add the sidecar names to HYP-2963 packet manifests and the
 observer-gluing frontier.
+
+### 78. LTI-249 Lee-Yang Ear-Payload Root-Motion Ledger
+
+Sources: HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107,
+HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3098,
+HYP-3085, HYP-2879, THM-577, THM-576, THM-573.
+
+Preserves: the whole miss-count PGF `G_E(z)`, its root multiset, the
+Lee-Yang danger-interval distance, and the exact one-runner extension payload
+`A_t(E,a)` satisfying
+
+```text
+q_{E+a}[t] = q_E[t] - A_t + A_{t+1}.
+```
+
+Destroys if used alone: labelled runner geometry, endpoint owners, the sector
+incidence word, and next-extension root motion unless the `A_t` sidecar is
+retained.
+
+LRC use: before using PGF roots as an extremality certificate or adding/removing
+a runner in a proof quotient, attach
+
+```text
+miss_count_pgf_coefficients
+miss_count_pgf_root_multiset
+lee_yang_negative_interval_distance
+root_axis_gap_deg
+root_modulus_span
+fugacity_winner_profile
+ear_payload_A_vector
+ear_payload_mean_level
+ear_payload_parity_bias
+root_motion_reconstruction_status
+nested_ear_status
+terminal_exit_or_named_debt
+```
+
+Seed guardrail: AP/consec and even-AP have `real=0/6` and
+`dist(roots,[-1,0])=0.9119`, but `single_far_21` is also complex-rooted and
+has distance only `0.2786`.  The distance and the ear payload are needed; the
+root-realness stratum alone is too coarse.
+
+Ear grammar: directed ears correspond to retained one-runner payloads, odd
+ears to `A_t` parity split, nested ears to AP-style legal refinement, and
+nonnested ears to root collision or named debt.
+
+S262b result:
+
+```text
+AP/consec final +7:   A_mean=1.965291, dist([-1,0])=0.912
+single-far final +21: A_mean=2.993492, dist([-1,0])=0.279
+break/spread rows: roots meet [-1,0]
+```
+
+Next contribution: build `lrc14_lee_yang_ear_payload_ledger` over HYP-2963
+and the THM-573 residual as the exact `A_t` refinement of HYP-3109's
+root-curve ear map, HYP-3108's Lee-Yang/Savitch atlas, and HYP-3111's
+carrier-sidecar lane; test whether every root approaching `[-1,0]` is
+explained by high-mean payload, nonnested ear debt, component-bound debt,
+first-obstruction debt, K33/THM-572 state-lift debt, or AP/GW boundary status.
 
 ### 72. LTI-243 Tournament Obstruction-Transfer Atlas
 

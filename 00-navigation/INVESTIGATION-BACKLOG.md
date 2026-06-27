@@ -15,6 +15,42 @@
 
 ---
 
+## Lead codex-2026-06-27-S262b: LRC14 Lee-Yang ear-payload root-motion route
+
+**Status:** EVIDENCE / exact scout and proof-route proposal; not proof
+(HYP-3112/T1188).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3112-lrc14-lee-yang-ear-payload-extremality.md`
+and
+`07-reflections/lrc14-lee-yang-ear-payload-extremality-codex-s262.md`.
+This is the exact one-runner payload refinement of HYP-3109's root-curve
+ear-map, HYP-3108's Lee-Yang/Savitch atlas, and HYP-3111's carrier-sidecar
+lane.  The HYP-3103 miss-count PGF root signal becomes proof-facing only after
+the one-runner extension payload is retained.  For `F=E union {a}`, the exact
+payload
+
+```text
+A_t(E,a)=P(N_E=t and a hits a sector empty for E)
+q_F[t]=q_E[t]-A_t+A_{t+1}
+```
+
+is the observer-extension/cut coordinate controlling root motion.  The S262b
+scout shows AP/consec and even-AP have `real=0/6` and
+`dist(roots,[-1,0])=0.9119`; `single_far_21` is also complex-rooted but much
+closer to the danger interval (`0.2786`); broken/spread rows have roots on the
+danger interval.  Final nested AP `+7` has lower payload level
+(`A_mean=1.965291`) than final far `+21` (`A_mean=2.993492`), suggesting
+nested low-level ears stabilize roots while far high-level ears retain
+root-collision debt.
+**Next:** build `lrc14_lee_yang_ear_payload_ledger` over HYP-2963 and the
+THM-573 `<=6` multiples-of-7 residual.  Emit `G_E`, root metrics,
+last legal ear, `A_t`, nested/far ear type, parity and mean payload,
+negative-interval contact, destroyed coordinate, and terminal exit.  Test
+whether every root approaching `[-1,0]` is routed to high-mean payload,
+nonnested ear debt, component-bound debt, first-obstruction debt,
+K33/THM-572 debt, or AP/GW boundary status.
+Namespace: HYP-3112 / LTI-249 / LTT-147 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S259a: LRC14 normal-fan Cech component-bound route
 
 **Status:** SYNTHESIS / proof-route target; not proof (HYP-3101/T1179).
