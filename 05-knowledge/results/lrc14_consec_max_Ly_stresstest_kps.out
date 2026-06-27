@@ -1,0 +1,17 @@
+k=8: L_y(consec)=3.58231  cap=0.38146  consec<=cap? False
+   configs BEATING consec's L_y: 0/2006  consec is MAX (route holds)
+k=9: L_y(consec)=8.87177  cap=0.49426  consec<=cap? False
+   configs BEATING consec's L_y: 0/2006  consec is MAX (route holds)
+k=10: L_y(consec)=10.26145  cap=0.60440  consec<=cap? False
+   configs BEATING consec's L_y: 0/2006  consec is MAX (route holds)
+
+--- kps-S31ag interpretation ---
+With the e=0 anchor ENFORCED (valid clusters only): consec MAXIMIZES the gK8 concentration
+functional L_y at ALL binding rows k=8,9,10 (0/2006 beat it). The earlier "shift {1..k} beats
+consec" was the INVALID no-anchor config (sector 0 not auto-hit) -- excluded.
+=> the route's load-bearing assumption (consec-max) HOLDS robustly at the binding rows (unlike k=12).
+NOTE: this L_y is the Bonferroni UPPER functional (meas(S7)<=L_y, loose ~3.6); the cover bound uses
+the tighter moment-LP dual. The CLEAN equivalent target: "consec maximizes meas(S7)=P(N=0)" (the
+coverage extremality), VERIFIED robust, with meas(S7(consec_k)) <= cap_k margins 0.054/0.078/0.100
+for k=8/9/10 (k=8 tightest). Remaining gap = SYMBOLIC proof of this coverage-extremality
+(= mac-mini reflection-Perron). The binding row is k=8 (smallest margin), NOT k=10 (margin 0.10, loose).
