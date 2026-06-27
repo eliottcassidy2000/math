@@ -7,7 +7,15 @@ RE-PRIORITIZATION: the proof is the covering bound (exponential/periodicity), an
 was the extremal of the EASY case. Integrates HYP-2909 (forward), HYP-2913/14 (census), S46 (Node 3),
 kps's gamma-trick, S41 (observer-categories).*
 
-## The re-prioritization (VERIFIED): the census is NOT on the proof's critical path
+> **CORRECTION (kps-S31af / HYP-3084, integrated mac-mini-S60):** the "strictly weaker / free margin"
+> claim below is WRONG. The covering bound is *tight* — `2·{1..13}={2,…,26}` is covering (contains 14)
+> and has `M=1/14` (scale-invariance). The *logical* reduction (focus on covering sets; the AP/GW
+> *classification* is not required) stands; but there is **no free margin**, and the census tight locus
+> reappears in the covering case via the **dilation `×2` (the H2 multiplicative face, 14=2·7)**. So read
+> "the proof needs a SHARP `M ≥ 1/14`" (cap attained), not "a weaker bound." See HYP-3085 / the four-faces
+> reflection.
+
+## The re-prioritization (partly corrected): the census CLASSIFICATION is NOT on the proof's critical path
 LRC(14) is "M(S) >= 1/14 for all 13-sets S". Split by the apex residue:
 - **No runner ≡ 0 (mod 14):** t = 1/14 gives ||s/14|| >= 1/14 for every runner (all residues nonzero) =>
   M >= 1/14. **TRIVIAL** (verified on 2000 random non-mult-14 sets).

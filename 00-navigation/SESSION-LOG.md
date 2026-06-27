@@ -1,3 +1,36 @@
+## mac-mini-2026-06-27-S60 -- the four faces of 14; gK8 = low-order S2 bound; integrate kps's correction
+
+Owner asked to integrate incoming+past work, understand what REMAINS in LRC(14), and find the deep
+structure behind the Clebsch graph + four Farey variations (hyperoperation hierarchy on (num,denom)).
+
+**(1) The deep-structure synthesis (reflection `the-four-faces-of-14-...`).** The four hyperoperation
+faces of the apex `(1,14)` ARE the four arithmetic structures on `Z/14`, each with an exceptional avatar:
+H1 add (Farey/three-gap → K5,K3,3 with a+b=15; the census), H2 mult (CRT `14=2·7` → the **two Fano
+planes** = the 14 cyclic triples of T7, VERIFIED), H3 exp (apex-periodicity/gamma-trick → the **covering
+bound = THE PROOF**), H4 2-adic (cut-space/Clebsch/Cayley-Dickson → the pairwise S2 carrier). **Why they
+surface:** 7 is the first exceptional prime (Fano=PG(2,2)) and 14=2·7 stacks the 2-adic tower on it; the
+project's Cut⊕Cycle split IS this 2-vs-7 split. LRC(14)=first open case = first forced to confront both
+at once. Builds on S40 (Clebsch=cut-space K5), S548 (the tower), S59 (covering redirect).
+
+**(2) gK8 covering-moment bound = LOW-ORDER moment-LP (HYP-3085, was 3084 — ceded to kps).** Reconciled
+the S59 redirect: the proof needs the BOUND `p0≤cap_k` (= O2/OPEN-Q-108/CRUX 1), not the AP/GW census
+classification — so gK8 is ON the critical path. VERIFIED (`lrc_gk8_moment_decomposition_S60.py`): the
+Delsarte duals live on `S0..S4`; the concentration gap is driven by the **+S2 pairwise sector
+co-emptiness** (leads k=9,10,11; balance at k=8); consec maximizes S2. The 15=C(6,2)=2^4−1 pairs = the
+Clebsch cut-space (Z/2)^4. **Structure check (corrects naive design ID):** the pairwise matrix M is NOT
+circulant and NOT `4I+2J`; it is **reflection-symmetric + dominant-Perron** → route to CRUX 1 is a 3×3
+reflection-half-block Perron bound.
+
+**(3) Integrated kps-S31af in real time.** kps's THM-573 (level-7 sieve, ≥7 mult of 7, subsumes
+THM-570/571) and the **dilation/margin correction** directly engaged my S59 work. My "strictly weaker /
+free margin" framing was WRONG — corrected in the S59 reflection + HYP-3085 + four-faces: the bound is
+SHARP (`2·{1..13}` tight-covering), and the `×2` dilation moving AP→covering IS the H2 multiplicative
+face. The synthesis survives and sharpens.
+
+Net: LRC(14) NOT proved. Live core unchanged-but-sharper: CRUX 1 (bounded-core positivity, now a
+reflection-Perron / low-order-S2 bound) + Node-3 effective Erdős–Turán + induction base. Files: HYP-3085,
+reflection `the-four-faces-of-14-...`, scripts `lrc_gk8_{moment_decomposition,pairwise_covariance_structure}_macmini_S60.py`.
+
 ## kind-pasteur-2026-06-27-S31af -- level-7 sieve (THM-573) + the dilation correction
 
 Integrated the incoming LRC(14) work — mac-mini-S59's covering-bound REDIRECT,

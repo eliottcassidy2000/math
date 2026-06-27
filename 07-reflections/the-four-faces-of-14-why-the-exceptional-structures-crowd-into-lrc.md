@@ -6,7 +6,7 @@ to surface" — naming the Clebsch graph and the four Farey variations (the hype
 (numerator, denominator)). This welds four prior threads into one answer: [[the-cut-side-is-classical-clebsch-and-the-permutohedron]]
 (S40, Clebsch = cut-space of K5), [[multiplication-is-repeated-addition-the-lrc-hyperoperation-tower-s548]]
 (the tower), [[the-proof-lives-at-the-exponential-variation-covering-bound-not-census]] (S59, the
-redirect), and HYP-2829/HYP-3084 (the gK8 covering-moment bound). The answer is sharp: **the exceptional
+redirect), and HYP-2829/HYP-3085 (the gK8 covering-moment bound). The answer is sharp: **the exceptional
 structures are the four hyperoperation faces of the apex denominator 14 = 2·7, and LRC(14) is hard
 because it is the first case forced to confront all four at once.***
 
@@ -51,7 +51,7 @@ the proof at H3 (exponential), with H4 (Clebsch) as the carrier of its binding t
 ## The weld (where the synthesis pays off concretely)
 The open node is **CRUX 1 = the covering-moment bound** (`max_E L_y(E) ≤ scale·cap`, the bounded-core
 positivity / OPEN-Q-108): the BOUND the covering proof needs — *not* the census classification (S59).
-HYP-3084 (this session) localizes it: the Delsarte duals are **low-order moment functionals**
+HYP-3085 (this session) localizes it: the Delsarte duals are **low-order moment functionals**
 (`L_yK8 = 10S0 − 10S1 + 10S2 − 9S3 + 6S4`, supported on `S0..S4`), and the binding direction is the
 **`+S2` term = the pairwise sector co-emptiness** (verified: S2 leads the consec−wide gap at k=9,10,11;
 consec maximizes S2). And `S2` ranges over the `15 = C(6,2) = 2^4 − 1` inner-sector pairs — **the nonzero
@@ -68,12 +68,19 @@ supplying the tail, and a finite `−9S3 + 6S4` correction at the tight k=8 row.
 (0.90–1.44) replace the razor-thin p0 dichotomy (0.13).
 
 ## What remains, mapped onto the four faces (the honest scope)
-- **H1 (census):** DONE as far as the proof cares — it is off the critical path (S59). The AP/GW
-  classification is a side theorem.
-- **H2 (apex/CRT):** the trivial reduction is proved (no multiple of 14 ⟹ τ=1/14 works); the
-  apex-MAJORITY branch (≥7 multiples of 14) is **proved** (THM-570/571, the 14→7 two-Fano descent —
-  this is H2→H3 in action) and the one-large-speed peel is **proved** (HYP-2906).
-- **H3 (exponential):** the live core. (i) **CRUX 1** — the bounded covering-core positivity (= HYP-3084's
+- **H1 (census):** the *classification* of tight configs is not logically required (S59) — but the tight
+  configs are NOT off the critical path. **kps-S31af correction (HYP-3084):** the covering bound is *tight*
+  (`2·{1..13} = {2,…,26}` is covering and `M = 1/14`), so there is **no free margin** — my earlier
+  "strictly weaker" framing was wrong. The fix is illuminating: the **dilation `×2` that carries the AP
+  into the covering case IS the H2 multiplicative face** (`14 = 2·7`), so the census tight locus reappears,
+  dilated, as the equality locus of the *sharp* covering bound. The proof needs that sharp inequality
+  (`p0 ≤ cap_k`, with `cap_k` the exact extremal), not the AP/GW dichotomy.
+- **H2 (apex/CRT):** the trivial reduction is proved (no multiple of 14 ⟹ τ=1/14 works); the apex-MAJORITY
+  branch is **proved** and now **sharpened by kps THM-573 to ≥7 multiples of 7** (the *level-7 lift sieve*,
+  a single argument subsuming THM-570/571's ≥7-multiples-of-14 — the 14→7 two-Fano descent, H2→H3 in
+  action), and the one-large-speed peel is **proved** (HYP-2906). The dilation `×2` (above) is the same
+  H2 operation seen from the equality side.
+- **H3 (exponential):** the live core. (i) **CRUX 1** — the bounded covering-core positivity (= HYP-3085's
   low-order/S2 bound); (ii) **Node-3** effective equidistribution (Erdős–Turán) for the unbounded peel
   (HYP-2900); (iii) the induction base (LRC ≤ 7, known).
 - **H4 (2-adic):** not a separate obligation but the *carrier/method* — the Clebsch pairwise design-Hodge
@@ -82,9 +89,9 @@ supplying the tail, and a finite `−9S3 + 6S4` correction at the tight k=8 row.
 ## Rigorous vs suggestive (discipline)
 - RIGOROUS: the covering reduction (H2); the two-Fano fact for T7 (14 cyclic triples, verified); the
   apex-majority/one-large proofs; Clebsch = cut-space of K5 (S40); the moment form and S2-driver
-  localization (HYP-3084); `15 = 2^4 − 1` = Clebsch cut-space dimension count.
+  localization (HYP-3085); `15 = 2^4 − 1` = Clebsch cut-space dimension count.
 - SUGGESTIVE (a frame, not yet a theorem): that the *exact* design-Hodge eigenstructure of the 6-sector
-  pairwise covariance is the biplane `4I+2J` and certifies the consec extremum (HYP-3084's "to verify");
+  pairwise covariance is the biplane `4I+2J` and certifies the consec extremum (HYP-3085's "to verify");
   the `(numerator,denominator)`→hyperoperation→exceptional-graph dictionary as a *generative* principle
   rather than an a-posteriori organizing table. These are leads with teeth, flagged as such.
 

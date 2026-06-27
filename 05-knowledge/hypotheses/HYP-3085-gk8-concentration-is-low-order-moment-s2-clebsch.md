@@ -1,9 +1,11 @@
 ---
-id: HYP-3084
+id: HYP-3085
 title: The gK8/Delsarte concentration bound (CRUX 1 of the covering route) is a LOW-ORDER moment-LP statement led by the pairwise S2 term, carried by the Clebsch "support-six" biplane (= cut-space Cayley graph of K5); and this BOUND — not the AP/GW census — is exactly what the proof needs
-status: VERIFIED localization (moment-driver decomposition + S2 extremality, this session) + SYNTHESIS reduction (design-Hodge route, proposed). Not a proof of CRUX 1.
+status: VERIFIED localization (moment-driver decomposition + S2 extremality, this session) + SYNTHESIS reduction (literal design-Hodge route REFUTED, replaced by reflection-Perron route). Not a proof of CRUX 1.
 source: mac-mini-2026-06-27-S60
+note: renamed from HYP-3084 (ceded to kind-pasteur-S31af, the level-7 sieve / margin refutation) to avoid namespace collision.
 related:
+  - HYP-3084   # kps level-7 sieve + the dilation/margin correction (integrated in "the sharp-bound correction" below)
   - HYP-2829   # gK8 binding is single-far (the r=0/r=1/r>=2 split) — this S2-localization sharpens it
   - HYP-2823   # variance reframe (Var(N)=S1+2S2-S1^2) — S2 is the covariance layer
   - HYP-2809   # the dichotomy / census route — NOT needed (off critical path)
@@ -18,7 +20,7 @@ reflections:
   - multiplication-is-repeated-addition-the-lrc-hyperoperation-tower-s548    # the tower
 ---
 
-# HYP-3084 — The covering-moment bound is a low-order (S2-led) moment-LP on the Clebsch carrier
+# HYP-3085 — The covering-moment bound is a low-order (S2-led) moment-LP on the Clebsch carrier
 
 ## The reconciliation first (what the proof actually needs)
 The S59 redirect (the proof = the covering bound; the AP/GW census = the easy case's extremal,
@@ -30,6 +32,20 @@ Delsarte machinery delivers (`10*p0(E) <= L_yK8(E)`, proved sorry-free; `max_E L
 CRUX 1). What is NOT needed is the **CLASSIFICATION** of the tight locus (the census AP/GW =
 HYP-2809 dichotomy). **Proof needs the bound, not the classification.** So HYP-2829 (gK8 binding is
 single-far, comfortable margin) sits directly on the critical path; the census does not.
+
+## The sharp-bound correction (integrating kps HYP-3084 — my S59 "margin" framing was WRONG)
+kps-S31af refuted the tempting reading that the covering bound is "strictly weaker / has free margin":
+`2·{1..13} = {2,…,26}` **is covering** (contains `14`) and **tight** (`M = 1/14`, by scale-invariance
+`M(cS)=M(S)`), so the covering bound `M ≥ 1/14` is **achieved** — no slack. The resolution sharpens,
+rather than weakens, this file: the **dilation `×2` that moves the AP into the covering case is exactly
+the H2 multiplicative face** (`14 = 2·7`; multiply by the 2-part and `7 ∈ AP` becomes the `14`). So the
+census tight configs, *in dilated form*, ARE the tight covering sets — the equality locus the bound runs
+up against. This is consistent with the gK8 route precisely because **`cap_k` is the SHARP extremal value**
+(`p0 = cap_k` is attained at the tight configs): a sharp bound is the right tool for a tight inequality.
+What stays true from S59: the **classification** (which configs are tight) is not logically required —
+only the sharp inequality `p0 ≤ cap_k`, achieved with equality at the dilated census. So: *bound (sharp),
+not classification*; and the census is the equality locus of that sharp bound, reached through the H2
+dilation — not an irrelevant easy-case artifact.
 
 ## The new localization (VERIFIED this session)
 The Delsarte duals, in factorial-moment form (`S_r = E[C(N,r)] = sum_t C(t,r) q_t`, the r-th binomial
