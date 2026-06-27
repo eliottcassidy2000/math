@@ -1,5 +1,22 @@
 # Open Questions
 
+**OPEN-Q-108 S257 equivalence-triad invariant addendum:**
+HYP-3091 adds the forgetting-cost tuple
+`(cardinal_shadow, scissors_fiber, observer_cut_orbit, distribution_law,
+interaction_order_defect, named_residual_debt)` as the shared audit for
+equinumerosity, equidecomposability, and equidistribution.  It is not another
+scalar proof route; it asks which side channel must survive before a quotient
+is legal for the LRC predicate.
+Open task: build a small `equivalence_triad_probe` ledger for three known
+collisions: Royle/even-graph count versus `(H,beta1,packet)` fibers, AP/GW
+endpoint-only boundary rows versus positive regular-open rows, and THM-576
+pairwise cap rows versus the `k=8,9` higher-order deviation constants.  Record
+target predicate, quotient, count shadow, scissors-fiber key, observer-cut
+orbit, distribution law, first failed interaction order, separating sidecar,
+discharge mode, and residual debt. -> HYP-3091, HYP-3090, THM-576, HYP-2187,
+HYP-2186, HYP-2949, HYP-3053, HYP-3056, HYP-3072, HYP-3085, LTI-235, LTT-133,
+T1171, OPEN-Q-108.
+
 **OPEN-Q-108 S255 Conjecture 7.1 correction / normalized-arc addendum:**
 THM-575 refutes the paper's literal Conjecture 7.1 for `k=13`: divisor-loaded
 rows `S_B={1,...,11,13,84*lcm(1..B)}` are primitive and non-tight but kill every

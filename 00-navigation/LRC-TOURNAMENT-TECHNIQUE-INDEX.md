@@ -117,6 +117,11 @@ obligations, and proof-carrier interfaces.
   residual count, feasible dual ledger, HYP-3085 pairwise/Perron certificate,
   protected branch certificate, largest-arc floor status, and terminal witness
   floor.
+- Need to compare equinumerosity, equidecomposability, and equidistribution
+  without collapsing them:
+  use LTT-133 after LTT-101/LTT-117/LTT-132 and make invariant carriers the
+  vertices: cardinal shadow, scissors fiber, observer-cut orbit, distribution
+  law, interaction-order defect, and named residual debt.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3831,6 +3836,42 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3082, HYP-3081, HYP-3079, HYP-3078, HYP-3075, HYP-2963, THM-523,
   THM-571, THM-572, THM-573, LTI-234, LTI-233, LTI-232, LTI-231, LTT-132,
   LTT-131, LTT-130, LTT-129, T1170, T1169, T1167, OPEN-Q-108.
+
+### LTT-133: Equivalence Triad Forgetting-Cost Tournament
+
+- **Move:** Treat equinumerosity, equidecomposability, and equidistribution as
+  three different projections of a quotient, then tournament-rank the
+  invariant carriers that make the quotient predicate-safe.
+- **LRC use:** HYP-3091/S257 gives the tuple
+  `F_q=(cardinal_shadow, scissors_fiber, observer_cut_orbit,
+  distribution_law, interaction_order_defect, named_residual_debt)`.  This
+  reads Royle/even-graph counts, tournament scissors fibers, CH/model side
+  channels, fixed-path tiling presentations, Haar/Baire events,
+  observer-cut orbits, and HYP-3090/THM-576 cap deviations through one
+  controlled-forgetting audit.
+- **Preserves:** target-predicate separation across a quotient fiber,
+  next-operation stability, retained scissors pieces, limiting distribution
+  law, first interaction order where a lower-order shadow fails, and terminal
+  debt labels.
+- **Forgets / guardrail:** Raw orbit count, raw `H`, raw safe mass,
+  pairwise-only cap value, automatic word, or denominator count is not a proof
+  carrier until its scissors fiber, observer-cut orbit, and distribution or
+  residual exit are named.
+- **Tournament vertices:** `forgetting_cost_tuple`, `observer_cut_orbit`,
+  `scissors_fiber`, `interaction_order_defect`, `distribution_law`,
+  `resonance_lattice`, `boundary_bulk_split`, `presentation_multiplicity`,
+  `cardinal_shadow`, and `raw_scalar`.
+- **Pairwise observable:** predicate preservation, mixed-fiber separation,
+  next-operation survival, exact/coboundary/dual/descent discharge, residual
+  debt named, distribution-failure detection, and proof cost.
+- **Next hook:** Build an `equivalence_triad_probe` for three known collisions:
+  Royle/even count versus `(H,beta1,packet)` fibers, AP/GW endpoint-only
+  boundary versus positive regular-open rows, and THM-576 pairwise cap rows
+  versus `k=8,9` higher-order deviation constants.
+- **Pointers:** HYP-3091, HYP-3090, THM-576, HYP-2187, HYP-2186, HYP-2244,
+  HYP-2232, HYP-2872, HYP-2883, HYP-2949, HYP-3053, HYP-3054, HYP-3056,
+  HYP-3072, HYP-3085, HYP-3088, HYP-3089, LTI-235, LTT-133, LTT-132,
+  LTT-117, LTT-101, T1171, OPEN-Q-108.
 
 ## Immediate Pull List
 

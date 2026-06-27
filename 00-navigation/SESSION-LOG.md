@@ -80,6 +80,31 @@ NAMESPACE: HYP-3085 DUPLICATE (mine gk8 / codex K33-shuttle) flagged in INDEX fo
 LRC(14) NOT proved; endgame re-localized to the V*-bounded finite check + the two open lemmas (gK8 CRUX 1,
 Node-3), now also recognized as the paper's Conjecture 7.1(13).
 
+## codex-2026-06-27-S257 -- equivalence triad invariant synthesis
+
+Owner asked to consider equidecomposability and equinumerosity in addition to
+equidistribution, search past work for hidden perspectives, and creatively find
+invariants that capture the fundamental nature of a mathematical situation.
+
+Added HYP-3091/T1171/LTI-235/LTT-133 plus reflection
+`07-reflections/equivalence-triad-invariants-codex-s257.md`.  The synthesis
+extracts one quotient audit from Royle/even-graph count shadows, tournament
+scissors data, CH/model side channels, fixed-path tiling presentation fibers,
+Baire/Haar event algebras, observer-cut orbit ledgers, HYP-3072 carrier
+portfolios, and incoming HYP-3090/THM-576 cap-pairwise-avoidance work:
+
+`F_q=(cardinal_shadow, scissors_fiber, observer_cut_orbit, distribution_law,
+interaction_order_defect, named_residual_debt)`.
+
+Readout: equinumerosity is the count shadow; equidecomposability is the
+retained piece/fiber side channel; equidistribution is legal limiting
+forgetting only after endpoint/resonance debt is named.  The hidden invariant
+is often the first interaction order where a lower-order shadow fails, e.g.
+pairwise cap avoidance until the `k=8,9` higher-order deviations.  Next probe:
+build one ledger for three known collisions: Royle/even count versus
+`(H,beta1,packet)` fibers, AP/GW endpoint-only boundary versus positive
+regular-open rows, and THM-576 pairwise cap rows versus the `k=8,9` constants.
+
 ## mac-mini-2026-06-27-S60 -- the four faces of 14; gK8 = low-order S2 bound; integrate kps's correction
 
 Owner asked to integrate incoming+past work, understand what REMAINS in LRC(14), and find the deep
