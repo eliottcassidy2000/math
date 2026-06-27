@@ -103,6 +103,28 @@ De Moivre/Jacobi/crystallographic frontier.  Integrated it into the De Moivre
 row: `demoivre_branch_orbit_word` should be read with HYP-3110's formal
 normal-form sidecar, and theta/crystallographic residuals remain legal only
 when they feed an observer-gluing certificate or finite-address branch packet.
+## codex-2026-06-27-S264b -- PDE weak-form supplement to the Minkowski/circuit/Ising/De Moivre carrier atlas
+
+User asked to merge Minkowski's theorem, circuit complexity, the Ising model,
+De Moivre's quintic, and repo work related to partial differential equations.
+Rebased over the incoming canonical HYP-3111/T1187/LTI-248/LTT-146 atlas rather
+than creating a duplicate namespace.  Added a dependency-free S264b supplement
+`04-computation/lrc14_minkowski_circuit_ising_pde_compiler_codex_s264.py` and
+recorded it in HYP-3111.  It rechecks the De Moivre Laurent fold
+`x=z-a/z => x^5+5*a*x^3+5*a^2*x=z^5-a^5/z^5`, then adds the weak-form route:
+Lee-Yang/Ising transfer -> PDE weak form -> endpoint `Phi` gap ->
+observer-gluing -> finite address.  PDE lookback anchors the route in
+`tournament_matrix_expansion_atlas` entries 103-110, HYP-2108 endpoint-cover
+circuit positivity, HYP-2112 `Phi`, HYP-3101 normal-fan/Cech component bound,
+and HYP-3108/HYP-3109 `phi4`/Lee-Yang work.  Tournament Analysis uses proof
+carriers rather than runners and is acyclic with path
+`finite_address_packet -> endpoint_phi_gap_operator ->
+pde_weak_form_stiffness -> lee_yang_ising_transfer ->
+minkowski_successive_minima -> circuit_complexity_audit ->
+de_moivre_quintic_fold -> jacobi_theta_signed_tail -> raw_scalar_p0`.
+LRC14 not proved; next pull is to annotate HYP-2963/HYP-3107 residual rows with
+route type, mass/stiffness/boundary data, low-height wall status, proof-DAG
+depth, and terminal finite-address exit.
 
 ## codex-2026-06-27-S263 -- De Moivre/Jacobi/crystallographic frontier reservation -- HYP-3110
 

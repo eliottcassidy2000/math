@@ -79,6 +79,7 @@ Lee-Yang miss-count PGF root ledger / one-runner ear payload / root-motion recon
 PGF root-locus / Lee-Yang zero-free margin / Bravais relation-lattice shape / ear-certificate type
 theta/crystallographic sidecar ledger / De Moivre fold / theta tail / orbifold quotient audit
 Minkowski/circuit/Ising carrier ledger / q-lattice body / proof DAG / partition-zero geometry
+Minkowski/circuit/Ising/PDE compiler / weak-form zero modes / proof-DAG sidecar gates
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -2483,3 +2484,9 @@ HYP-3111 entry uses Minkowski as a declared q-body volume gate.
 Incoming completed HYP-3110 supplies the De Moivre normal-form sidecar and
 Lean proof over `Rat`; read `demoivre_branch_orbit_word` together with that
 formal fold and its observer-gluing / finite-address gate.
+
+PDE supplement: the same atlas should tag residual rows with weak-form
+mass/stiffness/boundary data, zero-mode status, route type, retained sidecar
+fields, destroyed coordinate, proof-DAG stage, and observer-gluing or
+finite-address exit.  Do not use raw scalar `p0`, raw volume, raw Ising energy,
+raw PDE grid counts, or raw circuit size as terminal proof currency.

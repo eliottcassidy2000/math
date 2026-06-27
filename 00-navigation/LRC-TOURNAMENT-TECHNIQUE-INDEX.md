@@ -4682,3 +4682,9 @@ shortcuts by whether their cut payload survives into HYP-3113's packet-sheaf
 legal exit, with candidate survivor fields `q_body_inequality_word`,
 `proof_circuit_missing_input_vector`, `ising_zero_arc_signature`, and
 `demoivre_branch_orbit_word`.
+
+PDE supplement: when this tournament is used for weak-form carriers, vertices
+may also include endpoint-`Phi` gap operators, stiffness/mass matrices,
+boundary owner ledgers, zero-mode certificates, and proof-DAG gates.  These
+are still proof carriers, not PDE grid cells, Boolean gates, Ising spins,
+lattice vectors, or quintic roots.

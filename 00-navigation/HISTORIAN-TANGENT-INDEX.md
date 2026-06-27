@@ -1232,3 +1232,9 @@ proof-circuit size/depth `8/4`, unit-circle finite Ising zeros, and exact
 De Moivre Laurent cancellation.  It does not close LRC14; it localizes the
 remaining obligation to finite-address plus observer-gluing plus a retained
 carrier sidecar.
+
+S264b PDE addendum: the weak-form interpretation says this tangent should also
+carry mass matrices, stiffness matrices, boundary owner vectors, and zero-mode
+certificates.  The next pull is to annotate actual HYP-2963/HYP-3107 residual
+rows with route type, boundary/operator sidecars, low-height wall deletion,
+proof-depth stage, and finite-address exit.

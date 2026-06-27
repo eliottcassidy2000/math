@@ -14,12 +14,16 @@ related:
   - HYP-3109
   - HYP-3108
   - HYP-3107
+  - HYP-3101
   - HYP-3106
   - HYP-3103
   - HYP-3097
   - HYP-3096
   - HYP-3089
   - HYP-3088
+  - HYP-2112
+  - HYP-2108
+  - THM-559
   - THM-575
   - THM-573
   - OPEN-Q-108
@@ -51,6 +55,8 @@ proof_circuit_complexity
   -> size/depth/uniformity ledger for proof-state gates;
 ising_partition_zero
   -> finite spin partition-function zero geometry refining Lee-Yang signals;
+pde_weak_form_operator
+  -> mass/stiffness/boundary/zero-mode ledger for component packets;
 demoivre_quintic_fold
   -> exact finite-depth algebraic cancellation/fold witness;
 lee_yang_root_curve
@@ -76,9 +82,11 @@ its sidecar.
 2. Search for an LRC-native q-body whose inequalities are component count,
    segment clearance, endpoint-owner debt, and finite-address status rather
    than arbitrary Euclidean radius.
-3. Turn the De Moivre Laurent identity into a formal lemma and test whether
+3. Build one weak-form component packet: mass matrix, stiffness matrix,
+   boundary owner vector, zero-mode certificate, and endpoint `Phi` gap exit.
+4. Turn the De Moivre Laurent identity into a formal lemma and test whether
    HYP-3110's branch/orbifold packets need a fifth-root orbit sidecar.
-4. Use the proof-circuit ledger as a regression check for future shortcuts:
+5. Use the proof-circuit ledger as a regression check for future shortcuts:
    any shortcut must supply `q_witness_gate`, or both `level7_sieve` and
    `dyadic_lift`, or route through `observer_gluing_certificate` plus
    `finite_address_packet`.
@@ -90,11 +98,12 @@ its sidecar.
 
 Do not assume the useful vertices are runners, arcs, roots, graphs, or algebra
 systems.  The candidate vertices are proof obligations and carriers:
-Minkowski convex bodies, circuit gates, Ising spin packets, De Moivre algebraic
-folds, Lee-Yang root curves, observer-gluing certificates, and finite-address
-packets.  The quotient preserves progress toward a finite LRC14 certificate;
-it destroys raw labels and branch coordinates unless a sidecar explicitly
-stores them.
+Minkowski convex bodies, circuit gates, Ising spin packets, PDE weak-form
+operators, De Moivre algebraic folds, Lee-Yang root curves, observer-gluing
+certificates, and finite-address packets.  The quotient preserves progress
+toward a finite LRC14 certificate; it destroys raw labels, boundary
+conditions, mass/stiffness weights, zero-mode data, and branch coordinates
+unless a sidecar explicitly stores them.
 
 ## S264 Scout Readout
 
@@ -140,6 +149,50 @@ Main measurements:
    proof_circuit_complexity -> zero_real_ear_map -> lee_yang_root_curve ->
    demoivre_quintic_fold -> minkowski_lattice_body -> ising_partition_zero ->
    raw_scalar_p0`.
+
+## S264b PDE Weak-Form Supplement
+
+A follow-up scout records the PDE lookback requested in the prompt:
+
+```text
+04-computation/lrc14_minkowski_circuit_ising_pde_compiler_codex_s264.py
+05-knowledge/results/lrc14_minkowski_circuit_ising_pde_compiler_codex_s264.out
+07-reflections/lrc14-minkowski-circuit-ising-pde-compiler-codex-s264.md
+```
+
+It verifies the same De Moivre Laurent identity by a dependency-free
+polynomial calculation and adds the weak-form route:
+
+```text
+Lee-Yang/Ising transfer
+  -> PDE weak-form stiffness/mass data
+  -> endpoint Phi gap operator
+  -> observer-gluing certificate
+  -> finite-address packet
+```
+
+The repo anchors for this route are `tournament_matrix_expansion_atlas` entries
+103-110, HYP-2108 endpoint-cover circuit positivity, HYP-2112's exact `Phi`
+gap functional, HYP-3101 normal-fan/Cech component bounds, and the
+HYP-3108/HYP-3109 `phi4`/Lee-Yang root work.  The supplement's carrier
+tournament is acyclic with Hamilton path:
+
+```text
+finite_address_packet
+-> endpoint_phi_gap_operator
+-> pde_weak_form_stiffness
+-> lee_yang_ising_transfer
+-> minkowski_successive_minima
+-> circuit_complexity_audit
+-> de_moivre_quintic_fold
+-> jacobi_theta_signed_tail
+-> raw_scalar_p0
+```
+
+Readout: PDE language is not decorative.  It is the guardrail saying that a
+component-bound or gap-functional proof must retain mass, stiffness, boundary
+owners, and zero modes, just as the lattice route must retain its convex body
+and low-height wall deletion.
 
 ## Proof-Frontier Consequence
 
