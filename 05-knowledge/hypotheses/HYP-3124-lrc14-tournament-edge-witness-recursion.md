@@ -1,8 +1,8 @@
 ---
 id: HYP-3124
 title: LRC14 tournament edge witness recursion
-status: EVIDENCE / executable edge-witness recursion scout; not a proof
-source: codex-2026-06-27-S268
+status: EVIDENCE / executable edge-witness recursion scout plus S271 class-deck stress supplement; not a proof
+source: codex-2026-06-27-S268; extended by codex-2026-06-27-S271
 tangent: T1198
 technique: LTI-259
 tournament_technique: LTT-157
@@ -123,6 +123,38 @@ coordinate_resurrection_edge_sheaf
 -> raw_edge_count_scalar
 ```
 
+## S271 Class-Deck Stress Supplement
+
+The S271 follow-up script
+`04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py`
+keeps the same directed-edge carrier but shifts the finite test from labelled
+edge instances through `n=5` to unlabelled class decks through `n=6`.  Stored output:
+`05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out`.
+
+Class-deck readout:
+
+| n | classes | sector counts | sector internal | roleless children | recursive children | full edge witness |
+|---|---------|---------------|-----------------|-------------------|--------------------|-------------------|
+| 3 | 2 | 2/2 | 2/2 | 2/2 | 2/2 | 2/2 |
+| 4 | 4 | 4/4 | 4/4 | 4/4 | 4/4 | 4/4 |
+| 5 | 12 | 12/12 | 12/12 | 12/12 | 12/12 | 12/12 |
+| 6 | 56 | 55/56 | 55/56 | 56/56 | 56/56 | 56/56 |
+
+The only `n=6` sector-count/internal collision is the converse pair
+`344/345` with score sequence `(2,2,2,3,3,3)`, `c3=8`, and `H=43`.  Retaining
+the paired endpoint children repairs that collision.  At the directed-edge
+instance level, all `43` nontrivial `n=6` sector-internal fibers split by
+tail/tip deletion children, and `16` recursive fibers split further by the
+cross-sector orientation word.  This says the cross-sector word is not
+cosmetic; it is the remaining covariance/phase payload inside recursive edge
+fibers.
+
+The covering-floor translation is now carried by HYP-3125/HYP-3127 rather than
+by this HYP-3124 witness card.  Read this supplement as evidence that the
+tail/tip deletion children and cross-sector word are genuine information
+coordinates before an `R-safe packet -> Q-safe packet` is compressed into the
+multi-far `Rprime` floor.
+
 ## Integration With Existing Threads
 
 The existing sources already point at this shape:
@@ -149,8 +181,9 @@ edge_witness_certificate =
 
 Next executable test: attach this packet to HYP-3115 one-swap/domain-wall
 edges and ask which walls become legal observer-gluing discharges, which
-recurse to smaller tail/tip children, and which remain named
-HYP-2963/HYP-3098 debt.
+recurse to smaller tail/tip children, and which remain named HYP-2963/HYP-3098
+debt.  When the same witness is used for covering-floor rows, use HYP-3125's
+`edge_floor_packet` fields.
 
 Challenged assumption: an edge is not just a relation between two vertices.
 For LRC-style proof search it is a bidirectional proof obligation: the tail

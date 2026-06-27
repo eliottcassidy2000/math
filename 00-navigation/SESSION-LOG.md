@@ -191,6 +191,35 @@ therefore be read as the edge-floor packet schema/diagnostic harness for
 HYP-3127's obligations: single-far zero-free polydisk, `SPEC` or signed
 cancellation bound, and contraction monotonicity/termination.  It is not a
 competing route.
+## codex-2026-06-27-S271 -- edge-witness class-deck stress supplement -- HYP-3124
+
+Extended the HYP-3124/T1198/LTI-259/LTT-157 edge-witness lane with executable
+unlabelled class-deck stress scout
+`04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py`,
+stored output
+`05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out`,
+updated detail
+`05-knowledge/hypotheses/HYP-3124-lrc14-tournament-edge-witness-recursion.md`,
+and reflection
+`07-reflections/lrc14-edge-witness-recursion-multifar-floor-codex-20260627.md`.
+
+The scout treats a directed tournament edge `tail -> tip` as a two-ended proof
+witness: outside four-sector deck, tail-deletion child, tip-deletion child,
+and cross-sector orientation payload.  Class-deck results: `n=3,4,5` all five
+modes separate all classes; at `n=6`, sector counts/internal decks separate
+`55/56`, colliding only on converse pair `344/345`, while roleless children,
+recursive children, and full edge witnesses separate `56/56`.  Edge-instance
+results: `43` nontrivial `n=6` sector-internal fibers split by tail/tip
+deletion children, and `16` recursive fibers split further by cross-sector
+orientation.
+
+This supplement is now a witness-memory stress test for the incoming
+HYP-3125/HYP-3127 multi-far floor program: before an `R-safe packet ->
+Q-safe packet` is compressed into an `Rprime` row, the packet must retain
+tail/tip deletion children and cross-sector orientation, or name the lost
+coordinate.  Next task: attach HYP-3124 `edge_witness_certificate` fields to
+HYP-3115 one-swap/domain-wall edges and HYP-3098 observer-gluing rows; use
+HYP-3125/LTI-260 for the actual few-apex `Rprime` row schema.
 
 ## mac-mini-2026-06-27-S67 -- Lee-Yang extremality: the cap is a phi^4 field theory, kappa4 marks the hard row k=8
 

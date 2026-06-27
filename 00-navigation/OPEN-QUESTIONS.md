@@ -27,6 +27,24 @@ Post-rebase note: incoming HYP-3127 upgrades this task by proposing Asano
 contraction as the main engine.  The S271 `edge_floor_packet` should be the
 ledger for HYP-3127's single-far zero-free, `SPEC`-bound, and monotonicity
 obligations.
+**OPEN-Q-108 S271 edge-witness class-deck stress addendum:**
+HYP-3124/S271 extends the reserved tournament edge-witness route as a finite
+memory stress test, not as the canonical `Rprime` floor computation.  A
+directed edge `tail -> tip` retains the outside four-sector deck,
+`tail_child`, `tip_child`, and `cross_sector_orientation_word`.  The finite
+audit separates all class decks through `n=5`; at `n=6`, sector
+counts/internal decks separate `55/56`, colliding only on the converse pair
+`344/345`, while recursive children separate `56/56`.  Edge-instance fibers
+still need the cross-sector word: `43` nontrivial sector-internal fibers split
+by tail/tip children and `16` recursive fibers split further by cross-sector
+orientation.
+
+Open task: attach HYP-3124 `edge_witness_certificate` fields to HYP-3115
+one-swap/domain-wall edges and HYP-3098 observer-gluing rows, then route any
+covering-floor use through HYP-3125/LTI-260 rather than duplicating the
+`Rprime` packet schema. -> HYP-3125, HYP-3124, HYP-3121, HYP-3118, HYP-3116,
+HYP-3112, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-2963, LTI-259,
+LTT-157, T1198, OPEN-Q-108.
 
 **OPEN-Q-108 S270 chiral-stalk / Cech proof-angle addendum:**
 HYP-3123 selects two remaining LRC14 proof angles that should be worked as

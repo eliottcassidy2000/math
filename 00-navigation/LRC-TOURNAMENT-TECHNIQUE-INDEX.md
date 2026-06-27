@@ -5031,6 +5031,13 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
   endpoint-deletion child signatures are `1,4,16,80`.  At `n=5`, all `20`
   sector groups split by child pair.  Therefore the proof carrier is
   `edge_witness_certificate = four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar_or_named_debt`.
+  S271 extends this to the HYP-3121 multi-far floor: unlabelled `n=6`
+  class-deck sector counts/internal decks separate `55/56`, colliding only on
+  converse pair `344/345`; roleless children, recursive children, and full
+  edge witnesses separate `56/56`.  Edge-instance fibers show why the
+  two-ended payload matters: `43` nontrivial sector-internal fibers split by
+  tail/tip children and `16` recursive fibers still need cross-sector
+  orientation.
 - **Preserves:** endpoint role word, tail/tip sector word, cross-sector
   orientation, tail-deletion child, tip-deletion child, recursive child edge
   decks, observer-gluing payload orbit, HYP-3116 missing-input vector,
@@ -5052,11 +5059,20 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
   ear_payload_edge_mass -> outside_four_sector_deck ->
   tail_deleted_one_sided_recursion -> tip_deleted_one_sided_recursion ->
   raw_edge_count_scalar`.
+- **S271 class-deck stress:** The supplemental HYP-3124 audit through
+  unlabelled `n=6` keeps this tournament card focused on edge-witness memory:
+  sector-count/internal decks separate `55/56`, colliding only on converse
+  pair `344/345`; roleless children, recursive children, and full edge
+  witnesses separate `56/56`.  Edge-instance fibers show the recursive
+  payload is real: `43` nontrivial sector-internal fibers split by tail/tip
+  children and `16` recursive fibers split further by cross-sector
+  orientation.  The measured multi-far `Rprime` repair tournament is LTT-158.
 - **Next hook:** Attach `edge_witness_certificate`,
   `tail_deletion_child_signature`, `tip_deletion_child_signature`,
   `recursive_tail_child_edge_deck`, `recursive_tip_child_edge_deck`,
   `edge_missing_input_vector`, and `edge_repair_sidecar` to HYP-3115
-  one-swap/domain-wall edges and HYP-3098 observer-gluing rows.
+  one-swap/domain-wall edges and HYP-3098 observer-gluing rows; switch to
+  LTT-158 when the same witness becomes an `Rprime` floor packet.
 - **Pointers:** HYP-3124, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115,
   HYP-3112, HYP-3108, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-2963,
   LTI-259, LTT-157, T1198, OPEN-Q-108.

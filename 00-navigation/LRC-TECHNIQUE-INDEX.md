@@ -2809,6 +2809,25 @@ sector groups split by child pair.  The largest sector refinements are
 `(1,1,1,0)` and `(0,1,1,1)`, each with `7` child-pair signatures over `960`
 labelled edge instances.
 
+S271 supplement: the follow-up unlabelled class-deck audit
+`lrc14_tournament_edge_witness_recursion_codex_20260627.py` extends the same
+packet into the HYP-3121 multi-far floor.  For classes `n=3,4,5`, all tested
+edge-deck modes separate all isomorphism classes.  At `n=6`,
+sector-count/internal decks separate `55/56`, colliding only on the converse
+pair `344/345`; adding roleless children, recursive children, or full
+cross-sector witnesses separates `56/56`.  At the edge-instance level, all
+`43` nontrivial `n=6` sector-internal fibers split by the paired tail/tip
+children, and `16` recursive fibers split further by cross-sector orientation.
+
+Multi-far translation: tail=`R-safe`, tip=`Q-lonely`, endpoint-deletion
+children are marginal tests, and the cross-sector word is the covariance
+payload for the bounded `r=2..6` floor `Rprime >= c`.  Incoming S254/S68 make
+the analytic route sharper: the Gaussian scale-separation lane treats
+Elliott-Halberstam as a finite channel-discrepancy schema rather than a
+load-bearing conjectural input, while the Asano contraction lane gives a real
+endpoint-contraction model only when the contracted polynomial still reads
+back to endpoint `Phi/P` activation.
+
 Tournament Analysis vertices are edge-witness proof reframes, not runners or
 scalar edges.  The pairwise observable compares LRC predicate retention,
 tail/tip symmetry, recursive closure, sector resolution, observer gluing,
@@ -2833,9 +2852,21 @@ coordinate_resurrection_edge_sheaf
 -> raw_edge_count_scalar
 ```
 
+S271 class-deck supplement: the HYP-3124 stress audit
+`lrc14_tournament_edge_witness_recursion_codex_20260627.py` checks unlabelled
+classes through `n=6`.  Sector-count/internal decks separate `55/56` at
+`n=6`, colliding only on converse pair `344/345`; roleless children,
+recursive children, and full edge witnesses separate `56/56`.  At the
+edge-instance level, all `43` nontrivial sector-internal fibers split by
+tail/tip children, and `16` recursive fibers split further by cross-sector
+orientation.  This is HYP-3124 witness stress evidence; the measured multi-far
+`Rprime` floor itself is now LTI-260/HYP-3125.
+
 Next hook: attach the packet to HYP-3115 one-swap/domain-wall edges and ask
 which walls become observer-gluing discharges, which recurse to smaller
-tail/tip children, and which remain HYP-2963/HYP-3098 named debt.
+tail/tip children, and which remain HYP-2963/HYP-3098 named debt.  When the
+same packet is used for covering-floor rows, switch to the LTI-260
+`edge_floor_packet` fields.
 
 ## LTI-260: Multi-Far Edge-Witness Rprime Floor
 

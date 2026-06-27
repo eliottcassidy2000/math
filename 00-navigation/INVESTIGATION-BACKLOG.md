@@ -50,6 +50,42 @@ and diagnostic harness for HYP-3127's single-far zero-free, `SPEC`-bound, and
 monotonicity obligations.
 
 Namespace: HYP-3125 / LTI-260 / LTT-158 / T1199 / OPEN-Q-108.
+## Lead codex-2026-06-27-S271: LRC14 edge-witness class-deck stress supplement
+
+**Status:** EVIDENCE / executable class-deck stress scout; not proof
+(HYP-3124/T1198/LTI-259/LTT-157).
+
+Claimed files:
+`04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py`,
+`05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out`,
+`05-knowledge/hypotheses/HYP-3124-lrc14-tournament-edge-witness-recursion.md`,
+and
+`07-reflections/lrc14-edge-witness-recursion-multifar-floor-codex-20260627.md`.
+
+Readout: directed tournament edges are treated as two-ended witnesses with
+outside four-sector decks, tail-deletion child, tip-deletion child, and
+cross-sector orientation payload.  Class-deck audit: `n=3,4,5` all tested
+modes separate all classes; at `n=6`, sector counts/internal decks separate
+`55/56`, colliding only on converse pair `344/345`, while roleless children,
+recursive children, and full edge witnesses separate `56/56`.  Edge-instance
+audit: `43` nontrivial `n=6` sector-internal fibers split by tail/tip
+deletion children and `16` recursive fibers split further by cross-sector
+orientation.
+
+HYP-3125/HYP-3127 now carry the measured multi-far `Rprime >= c` program.
+This HYP-3124 supplement should be read as the finite witness-memory stress
+test feeding that program: before an `R-safe packet -> Q-safe packet` is
+compressed, retain tail/tip deletion children and cross-sector orientation or
+name the lost coordinate.
+
+Next: attach `edge_witness_certificate`, `tail_deletion_child_signature`,
+`tip_deletion_child_signature`, `recursive_tail_child_edge_deck`,
+`recursive_tip_child_edge_deck`, `edge_missing_input_vector`, and
+`edge_repair_sidecar` to HYP-3115 one-swap/domain-wall edges and HYP-3098
+observer-gluing rows.  Use HYP-3125/LTI-260 for the few-apex `Rprime` row
+fields.
+
+Namespace: HYP-3124 / LTI-259 / LTT-157 / T1198 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-S270: LRC14 chiral base-stalk guard and normal-fan Cech finite-ruler proof angles
 
