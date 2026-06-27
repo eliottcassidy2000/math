@@ -1,3 +1,49 @@
+## kind-pasteur-2026-06-27-S256 -- TOOL-1: the Gaussian / Beurling-Selberg minorant (HYP-3130)
+
+Owner task: TOOL-1 of the kps HYP-3121 synthesis -- build a NONNEGATIVE smooth MINORANT psi_s <= phi_s
+(phi_s = arc indicator of measure 6/7) with GAUSSIAN / super-polynomial Fourier decay, to give the wide-V
+tail problem a UNIFORM (speed-independent) bound; check whether the main term prod(int psi_s) ~ (6/7)^13
+beats the resonance corrections for the r=2..6 few-apex covering core. Result: HYP-3130.
+
+Scripts lrc14_{gaussian_minorant_floor,apex_block_minorant_floor,cross_resonance_minorant}_kpswf15.py;
+outputs + 2 certificate files in 05-knowledge/results/.
+
+WHAT I BUILT (TOOL 1, route i -- the validated TRUE minorant):
+  psi = 1_{[1/14+delta, 13/14-delta]} * rho_delta, rho the C^infty bump exp(-1/(1-u^2)). Support(psi) =
+  [1/14,13/14] EXACTLY => psi<=phi pointwise, psi>=0 (grid validation: min_psi=0, max_leak=0, max_over=3.5e-15);
+  int psi = 6/7 - 2 delta. psihat(k)=chi_arc(k) rhohat(delta k), |chi_arc(k)|=|sin(pi k 6/7)|/(pi|k|) (=0 at
+  the APEX 7|k), rhohat super-poly. CERT 2 (the deliverable uniform tail): tail mass sum_{|k|>B}|psihat|
+  (delta=0.05) = B16:2.0e-2, B32:3.8e-3, B64:4.9e-4, B128:3.4e-5 -- super-poly, band B SPEED-INDEPENDENT.
+  This converts the wide-V 1/n arc tail to a uniform tail. (Route ii Beurling-Selberg/Fejer-of-shrunk-arc
+  has a finite band but LEAKS outside the arc => not a true minorant without large shrink; route i is the one.)
+
+THREE RESULTS:
+  A. APEX (Q) BLOCK CLOSED UNIFORMLY. L(S)=R'*meas(R-safe)*meas(Q-lonely); Q has only r<=6 runners =>
+     bounded complexity. PROVED meas(Q-lonely)>=c_r>0, c_2..c_6 = 66/91, 55/91, 1979/4004, 2243/5880,
+     3029/10780. THE MINIMIZERS ARE THE LRC CAPS: c_4=1979/4004=cap_9, c_5=2243/5880=cap_8; argmin
+     {1,11,12,13},{1,5,7,8,9} = THM-576 pairwise-avoidance configs. CERT 1 (inf on bounded Q): (6/7)c_{r-1}>c_r
+     with gaps +0.009..+0.046; the THM-546 single-far peel pushes wide Q UP toward 6/7*(prev) (peel factor
+     0.85->0.857 for w=50..1000), so the infimum is on bounded Q (finite-checked exactly). Stress test: 0
+     violations over ~6500 wide/adversarial/dilated/multiscale Q. => rigorous mod the proved THM-546 comb bound.
+  B. THE HONEST ENVELOPE OBSTRUCTION. The absolute Schur envelope |RES|<=(h0+B1)^13-h0^13-13 h0^12 B1 FAILS
+     at EVERY delta (MAIN-env ~ -1e4): B1/h0 ~ 1.4-1.7 ALWAYS, never <1. So the minorant MAIN is NOT provably
+     > the resonance via the absolute bound -- SIGN CANCELLATION is essential (same wall as MISTAKE-078).
+     This AGREES with HYP-3128 (Asano can't certify Xi(1,1)>0) and HYP-3129 (needs the SIGNED SPEC).
+  C. CROSS-RESONANCE = apex-14 |N|=1 level, super-poly tail in N. int psi^R psi^Q=(R-floor)(Q-floor)+CROSS;
+     a cross relation needs Sum_r j_r r = -14N with R 14-free => the APEX-PRIME-7 coupling (2*7=14). VERIFIED
+     super-poly convergence in |N| (sum |N|<=6 = 85-95% of CROSS), |N|=1 dominates when 1 in Q. UNIFORM tail
+     in N. BUT minorant degrades the ratio (R'_min~0.20-0.36 vs exact R'~0.47-1.14) -- the minorant is the
+     apex-block tool, not the coupling tool.
+
+PLACEMENT / CONVERGENCE: TOOL 1 (this minorant) = the apex-block + uniform-tail engine. It CLOSES the Q-block
+factor (a 3rd independent route alongside HYP-3128 Lee-Yang and HYP-3129 union/SPEC) and delivers the prompt's
+super-poly uniform tail. It does NOT give a new R'>=c proof -- the absolute envelope can't (Result B). The
+signed/uniform coupling floor is the HYP-3129 job (R'>=0.642). THREE same-prompt concurrent kps/mac-mini routes
+(minorant / Lee-Yang-Asano / SPEC) all factor L=R'*mR*mQ, all close the Q-block, all isolate R'>=c as the sole
+open content -- strong triangulation on the structure. Concurrency: HYP-3127/3128/3129 (mac-mini-S68, kps-S254,
+kps-S255) ran on this same prompt; I reserved HYP-3130 after rebase, my work is the distinct TOOL-1 minorant.
+HIGHEST-LEVERAGE NEXT: close R'>=c uniformly (HYP-3129's finite constant-chase to a closed-form c).
+
 ## kind-pasteur-2026-06-27-S255 -- TOOL-3: the multi-far SPEC bound is ELEMENTARY, NOT EH/BV (HYP-3129)
 
 Owner task: TOOL-3 of the kps HYP-3121 synthesis -- does Bombieri-Vinogradov (proven, level 1/2) or
