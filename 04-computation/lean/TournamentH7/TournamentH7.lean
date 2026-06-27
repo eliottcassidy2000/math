@@ -92,6 +92,9 @@
                                       nodes plus exact arithmetic.
     · TournamentH7.LRCWitnessPartA — finite-Vmax error-budget glue for the
                                       LRC14 direct witness implication.
+    · TournamentH7.LRCMedianCenterControl — HYP-3070 route-triple
+                                      center-control interface and exact
+                                      formal gap to LRC14.
     · TournamentH7.LRCL7Discrepancy — Finite integer core of the L7 discrepancy.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
@@ -174,6 +177,7 @@ import TournamentH7.LRCWitnessFloorConcrete
 import TournamentH7.LRCFourteenSkeleton
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCWitnessPartA
+import TournamentH7.LRCMedianCenterControl
 import TournamentH7.LRCL7Discrepancy
 import TournamentH7.LRCApexShell
 import TournamentH7.Verify

@@ -56,6 +56,24 @@ graph with `signed_polymer_packet_type`, `signed_activity_budget`,
 `finite_cell_route`, `schur_complement_conductance`, `sidecar_energy_exit`, and
 `phantom_f7_boundary_atom`; prove activity summability or positive-conductance
 preservation before quotienting.
+## codex-2026-06-26-S241 -- Lean median center-control frontier (T1157/LTI-222/LTT-120)
+
+Added `TournamentH7.LRCMedianCenterControl` and a stored targeted Lean check.
+The module formalizes the HYP-3070/S236 center-control interface: 15 route
+leaves, 455 route triples, raw route centerlessness, legal sidecar unique
+centers, the primitive-owner split expected center, and the conditional theorem
+`lrc14_from_center_control : CenterControlCoverage -> CenterControlSoundness ->
+LRC14Statement`. Then replaced the packet placeholder with a concrete
+proof-bearing `CenterControlPacket` shell carrying route triple, legal center,
+exit label, witness floor, threshold proof, and `soundness_to_Mreach`, yielding
+`lrc14_from_center_control_coverage : CenterControlCoverage -> LRC14Statement`.
+Readout: the median sidecar route is not yet a proof; the remaining Lean work is
+constructing non-tautological HYP-2963 packets for every nonzero speed family.
+This entry was renumbered after fetch because incoming work had already claimed
+S237/T1153/LTI-218/LTT-116 for the cycle-class observability matrix. Targeted
+`lake env lean` passed. Full
+`lake build` timed out; aggregate `TournamentH7.lean` stopped before the new
+module because an existing `LRCBindingPair.olean` object was missing.
 
 ## codex-2026-06-26-S236 -- route-triple center-control addendum (HYP-3070/T1152/LTI-217/LTT-115)
 

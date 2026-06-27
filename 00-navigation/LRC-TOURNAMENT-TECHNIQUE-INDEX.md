@@ -3301,6 +3301,36 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-201, LTT-119, LTT-116, LTT-115, LTT-114, LTT-113, LTT-112, LTT-111, LTT-108,
   LTT-101, T1156, T1154, T1153, T1152, T1151, T1150, T1149, T1148, T1145, T1138, T1136,
   OPEN-Q-108.
+### LTT-120: Lean Center-Control Frontier
+
+- **Move:** Turn the HYP-3070 median sidecar story into a Lean interface with
+  explicit remaining obligations instead of prose. The new module proves the
+  finite center-control readouts, exposes the conditional theorem needed for
+  LRC14, and makes the packet shell proof-bearing.
+- **LRC use:** `TournamentH7.LRCMedianCenterControl` checks `RouteLeaf` has 15
+  leaves, `RouteTriple` has 455 triples, raw route centers are absent, legal
+  sidecar centers are unique, and the primitive-owner split expects the
+  primitive-period page. The theorem `lrc14_from_center_control` proves that
+  `CenterControlCoverage` plus `CenterControlSoundness` imply
+  `LRC14Statement`; after the concrete packet shell, the theorem
+  `lrc14_from_center_control_coverage` proves that packet coverage alone
+  suffices.
+- **Preserves:** Lean-level statement of route leaves, route triples, raw
+  centerlessness, legal center uniqueness, expected center page, proof-bearing
+  packet coverage, packet soundness, and concrete `Mreach` handoff.
+- **Forgets / guardrail:** The packet bank is still not instantiated. This is
+  not an LRC14 proof until real HYP-2963 rows fill the packet fields with
+  non-tautological witness floors and `soundness_to_Mreach` proofs.
+- **Tournament fingerprint:** vertices remain proof-interface states and
+  sidecar hubs; the Lean module formalizes the unique-center interface rather
+  than a new runner tournament.
+- **Next pull:** Instantiate the concrete `CenterControlPacket` record for
+  AP/GW boundary rows plus one positive residual-router row, then push coverage
+  across the full HYP-2963 packet bank.
+- **Pointers:** HYP-3074, HYP-3071, HYP-3070, HYP-3069, HYP-3068, HYP-3067,
+  HYP-2963, LTI-222, LTI-221, LTI-218, LTI-217, LTI-216, LTT-120, LTT-119,
+  LTT-116, LTT-115, LTT-114, T1157, T1156, T1153, T1152, OPEN-Q-108,
+  `TournamentH7.LRCMedianCenterControl`.
 
 ## Immediate Pull List
 
