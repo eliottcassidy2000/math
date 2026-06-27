@@ -8,9 +8,40 @@ Fourier series, A000568 ordinary count/cycle-index quotient, OCF independence
 polynomial/Walsh EGF, De Moivre/resolvent elementary-symmetric polynomial,
 Irving-Omar walk determinant GF, and hard-core/polymer partition functions by
 retained proof payload rather than raw scalar value.  Status at reservation:
-repo archaeology done enough to claim the lane; executable scout pending.
+repo archaeology done enough to claim the lane; executable scout completed
+below after the S272 coordination rebase.
 Renumbered from provisional HYP-3136 after the rebase revealed that main had
 claimed HYP-3136 for the integrated multi-far floor closure.
+
+Completed the executable scout after rebasing over the S272 edge quotient
+coordination update.  Result stored in
+`05-knowledge/results/lrc14_generating_function_payload_atlas_codex_s273.out`.
+The strongest actionable readout is a smallest full-cover three-carrier packet:
+
+```text
+signed_SPEC_resonance_series
++ A000568_cycle_index_quotient
++ miss_count_PGF_root_locus
+```
+
+This packet covers all twelve tracked obligations: Q/apex floor, R-safe
+positivity, Rprime signed low modes, SPEC Parseval tail, bounded-core k=8
+phi4, far-push zero motion, edge tail/tip children, global-consistency
+quotient, finite-address/observer gluing, closed-form constants, middle
+coefficient layer, and destroyed-coordinate guard.  The tournament over 12 GF
+carriers is acyclic (`0` directed 3-cycles, singleton SCCs, Hamiltonian path
+count `1`), which is less a ranking surprise than a warning: every typed
+payload beats raw scalar evaluation.
+
+New fields to measure next: `SPEC_support_sieve`,
+`edge_recursion_depth_PGF`, `global_consistency_class`,
+`PGF_root_trajectory_derivative`, `middle_layer_vector`,
+`k8_reflection_fold_adjoint`, `repair_cover_H(q)`, `Bravais_resonance_cell`,
+and `Savitch_packet_depth`.  After rebasing over HYP-3138, the resolvent
+carrier now has a concrete k=8 even-fold/odd-leakage resurrection lookup.
+Working thesis: the single evaluation is never the whole GF curve; the proof
+packet wants support law + signed tail + global edge quotient +
+root-motion/core bridge.
 
 ## kind-pasteur-2026-06-27-S254 -- CLOSING the multi-far floor: Gaussian decouples (load-bearing), EH not needed, Asano diagnostic; L=R'*R-safe*Q-lonely reduced to a finite constant-chase
 Owner: close uniform R'>=c at the multi-far floor; consider Elliott-Halberstam, Gaussian functions, Asano contractions. Did all three (4-agent workflow + my Gaussian work). HYP-3125/3126/3136. (Converges with mac-mini-S69 "far elements push the zeros out".)

@@ -17,7 +17,7 @@
 
 ## Lead codex-2026-06-27-S273: LRC14 generating-function payload atlas
 
-**Status:** RESERVED / repo archaeology and executable scout pending; not
+**Status:** EVIDENCE / executable payload atlas and tournament scout; not a
 proof (HYP-3137/T1202).
 
 Claimed files:
@@ -33,6 +33,22 @@ Irving-Omar walk determinant GF, and hard-core/polymer partition function.
 The scout should declare which LRC predicate survives, what coefficient/root/
 quotient/tail coordinate is retained, what is destroyed by scalar evaluation,
 and what terminal exit or named debt remains.
+
+Readout: the stored scout finds the smallest full-cover packet
+`signed_SPEC_resonance_series + A000568_cycle_index_quotient +
+miss_count_PGF_root_locus`, covering all twelve tracked obligations from
+`Q_apex_floor` through `destroyed_coordinate_guard`.  Tournament fingerprints:
+12 carriers, 66 edges, score histogram `0..11`, 0 directed 3-cycles, singleton
+SCCs, Hamiltonian path count 1, and every typed payload beats
+`raw_scalar_evaluation`.
+
+Next fields to attach to finite constant-chase rows: `SPEC_support_sieve`,
+`edge_recursion_depth_PGF`, `global_consistency_class`,
+`PGF_root_trajectory_derivative`, `middle_layer_vector`,
+`k8_reflection_fold_adjoint`, `repair_cover_H(q)`,
+`Bravais_resonance_cell`, `Savitch_packet_depth`, and
+`terminal_exit_or_named_debt`.  Post-rebase HYP-3138 supplies the concrete
+k=8 fold-adjoint lookup for the resolvent carrier.
 
 Namespace: HYP-3137 / LTI-263 / LTT-161 / T1202 / OPEN-Q-108.  The atlas
 cross-references HYP-3136 as the integrated multi-far floor closure it is

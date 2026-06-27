@@ -5242,6 +5242,11 @@ constant chase.
   zero/root locus, log-derivative or cumulant, rooted/unrooted quotient
   legality, signed tail certificate, finite-address/observer-gluing exit, or
   named debt.
+- **Readout:** The stored scout finds a smallest full-cover packet of
+  `signed_SPEC_resonance_series + A000568_cycle_index_quotient +
+  miss_count_PGF_root_locus`, covering all tracked LRC14 obligations.  The
+  tournament has 12 vertices, 66 edges, score histogram `0..11`, no directed
+  3-cycles, singleton SCCs, and Hamiltonian path count 1.
 - **Preserves:** retained LRC predicate, coefficient payload, root-locus
   status, quotient legality, signed tail bounds, finite packet coordinates,
   and terminal proof exit.
@@ -5253,7 +5258,12 @@ constant chase.
   `root_locus_status`, `log_derivative_cumulant`, `quotient_legality`,
   `signed_tail_certificate`, and `terminal_exit_or_named_debt` to the
   HYP-3129/HYP-3135 packet theorem target.
-- **Pointers:** HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131,
+- **New signals:** `SPEC_support_sieve`, `edge_recursion_depth_PGF`,
+  `global_consistency_class`, `PGF_root_trajectory_derivative`,
+  `middle_layer_vector`, `k8_reflection_fold_adjoint`, `repair_cover_H(q)`,
+  `Bravais_resonance_cell`, and `Savitch_packet_depth`.  HYP-3138 supplies
+  the concrete k=8 reflection-fold adjoint for the resolvent carrier.
+- **Pointers:** HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131,
   HYP-3129, HYP-3118, HYP-3109, HYP-3108, HYP-3103, HYP-3054, HYP-2991,
   THM-077, THM-076, THM-059, LTI-263, LTT-161, T1202, OPEN-Q-108.
 
