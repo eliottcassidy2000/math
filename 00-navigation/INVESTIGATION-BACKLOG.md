@@ -33,6 +33,30 @@ HYP-2963 packet sample and run status/route purity: the visible token should
 split by continued-fraction period, Markov depth, Pell unit, endpoint shell,
 quadratic carry, owner coordinate, and legal exit before any scalar is used.
 Namespace: HYP-3075 / T1158 / LTI-223 / LTT-121.
+## Lead codex-2026-06-27-S248: LRC14 sixth-power certificate extension
+
+**Status:** SYNTHESIS / bounded Diophantine proof-carrier scout; not proof
+(HYP-3080/T1164/LTI-229/LTT-127), downstream of S244/HYP-3076.
+**Readout:** Added
+`04-computation/lrc14_sixth_power_certificate_extension_s248.py`,
+`05-knowledge/results/lrc14_sixth_power_certificate_extension_s248.out`,
+`05-knowledge/hypotheses/HYP-3080-lrc14-sixth-power-certificate-extension.md`,
+`07-reflections/lrc14-sixth-power-certificate-extension-codex-s248.md`, and
+`poke-forum/posts/20260627-lrc14-sixth-power-certificate-extension-s248/post.md`.
+S244 already treats `a^6+b^6+c^6=d^6+e^6+f^6` as native support-six data and
+`a^6+b^6=d^6+e^6` as a rank-lowered square-cube shadow.  S248 adds a
+certificate ledger around that split: positive unordered pairs through `250`
+have `0` nontrivial collisions; positive unordered triples through `80` have
+`5` collision certificates, including primitive `(3,19,22)` versus
+`(10,15,23)`.
+Tournament Analysis uses proof obligations and sidecar carriers rather than
+runners or integers, with `5` rank-sensitive edge flips.
+**Next:** add the sixth-power collision sidecar fields to HYP-2963 route
+triples that invoke power-lift, Fermat-Catalan, Roth-Minkowski, or
+simplex/route-triple language.  Run S240 legal route-state closure and classify
+failed medians as missing collision certificate, CRT residue word, height
+fence, gated route sidecar, or THM-572/F7 debt.
+Namespace: HYP-3080 / T1164 / LTI-229 / LTT-127.
 
 ## Lead codex-2026-06-26-S238: LRC14 cross-carrier pullback resonance
 

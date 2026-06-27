@@ -51,6 +51,27 @@ whether visible blocked/open tokens split into exact endpoint atoms,
 neighboring open rows, deletion targets, or named F7/THM-572 debt. ->
 HYP-3075, HYP-3074, HYP-3072, HYP-3062, HYP-3063, HYP-2745, HYP-2753,
 HYP-2456, HYP-2454, HYP-2963, THM-572, LTI-223, LTT-121, T1158.
+**OPEN-Q-108 S248 sixth-power certificate extension addendum:** HYP-3080 extends
+the S244/HYP-3076 sixth-power sidecar.  S244 keeps
+`a^6+b^6+c^6=d^6+e^6+f^6` as native support-six data and
+`a^6+b^6=d^6+e^6` as a rank-lowered square-cube shadow; S248 turns that split
+into a rank-sensitive certificate ledger rather than a scalar Diophantine
+shortcut.  The S248 scout checks positive unordered pairs through `250` with
+`0` nontrivial two-lane collisions and positive unordered triples through `80`
+with `5` three-lane collision certificates, including primitive `(3,19,22)`
+versus `(10,15,23)`.  Open task: add
+`sixth_power_collision_rank`, `sixth_power_collision_sum`,
+`primitive_all_terms_gcd`, `shared_term_filter`, `mod14_sixth_power_word`,
+`mod27_sixth_power_word`, `mod41_sixth_power_word`,
+`two_lane_rigidity_gate`, `three_lane_resonance_graph_id`, and
+`sixth_power_collision_exit` to HYP-2963 packets that use power-lift,
+Fermat-Catalan, Roth-Minkowski, or simplex/route-triple language.  Then run
+S240 legal route-state closure and classify failed centers as missing
+collision certificate, missing residue word, missing height fence, missing
+gated route sidecar, or explicit THM-572/F7 debt. -> HYP-3080, HYP-3076,
+HYP-3075, HYP-3074, HYP-3073, HYP-3072, HYP-3071, HYP-3070, HYP-3069,
+HYP-3066, HYP-3063, HYP-3062, HYP-3060, HYP-3058, HYP-2963, THM-572,
+LTI-229, LTT-127, T1164.
 
 **OPEN-Q-108 S238 cross-carrier pullback resonance addendum:** HYP-3072 turns
 the CPI pullback index into a finite proof-carrier portfolio audit.  The S238

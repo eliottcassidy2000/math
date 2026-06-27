@@ -40,9 +40,9 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S247 Lean q-Pochhammer Modular Cusp Ledger
+## PROJECT STATUS: Stabilized at S248 Sixth-Power Certificate Extension
 
-As of **Saturday, June 27, 2026**, the newest coordination layer is **Lean q-Pochhammer Modular Cusp Ledger (codex-S247)**, built on **Modular Cusp q-Pochhammer Carrier (codex-S245)**, **Sixth-Power Collision Sidecar (codex-S244)**, **Hurwitz-Markov-Pell reservation (codex-S243)**, **Sixth-Power Collision Split (codex-S242)**, **Lean Center-Control Frontier (codex-S241)**, **Route-State Closure Median Interface (codex-S240)**, **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
+As of **Saturday, June 27, 2026**, the newest coordination layer is **Sixth-Power Certificate Extension (codex-S248)**, built on **Lean q-Pochhammer Modular Cusp Ledger (codex-S247)**, **q-Pochhammer Modular-Cusp Principal-Part Gate (codex-S246)**, **Modular Cusp q-Pochhammer Carrier (codex-S245)**, **Route-State Median-Hull Scheduler (codex-S245)**, **Sixth-Power Collision Sidecar (codex-S244)**, **Hurwitz-Markov-Pell reservation (codex-S243)**, **Sixth-Power Collision Split (codex-S242)**, **Lean Center-Control Frontier (codex-S241)**, **Route-State Closure Median Interface (codex-S240)**, **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
 
 S225-S235 established the geometry-regime archive, Roth-Minkowski lattice fence, Moser/fibbinary partial-cube carrier, Toeplitz square-peg scale gate, bridge-rank split ledger, Hodge-cycle lifting carrier, median owner/root spine, and medianized route-center gate. These ensure that historical motifs, Diophantine estimates, automatic sequences, configuration-space witnesses, positivity-feasible cochains, and route-triple centers are anchored to exact structural sidecars (M, owner, topology, rank, root, owner-object, unique median center) rather than scalar slogans.
 
@@ -50,9 +50,13 @@ S240 formalizes the **route-state closure median interface (HYP-3074)**, represe
 
 S245 formalizes the **modular cusp q-Pochhammer carrier (HYP-3075)**, establishing that infinite modular series are proof data only after their finite principal part at the cusp is retained.
 
-S247 formalizes the **Lean q-Pochhammer modular cusp ledger (HYP-3079)**. It refines the current proof stack by providing the Lean 4 formalization for the S245 modular cusp principal-part gate. This layer defines the dictionary between q-Pochhammer products, Dedekind eta, and the j-function inside the Lean environment (`TournamentH7.LRCModularCuspLedger`). It establishes the formal proof obligation that full modular invariance plus meromorphicity at the cusp necessitates a finite negative q-tail. It ensures that modular/q-series certificates are admitted as route centers or residual discharges only after transformation laws, finite principal parts, and Hurwitz zero-persistence (complex-analysis limit law) are formally verified.
+S246 formalizes the **q-Pochhammer modular-cusp principal-part gate (HYP-3078)**. It narrows the modular-function cusp rule into a quotient guardrail: q-series, product tails, divisor log-derivatives, and modular-function tails can be used only after the negative q-tail is a finite named principal part with legal polar exits.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, and Lean modular cusp status when q-series certificates are used before it is promoted to a proof carrier.
+S247 formalizes the **Lean q-Pochhammer modular cusp ledger (HYP-3079)**. It refines the proof stack by providing the Lean 4 formalization for the S245/S246 modular cusp principal-part gate. This layer defines the dictionary between q-Pochhammer products, Dedekind eta, and the j-function inside `TournamentH7.LRCModularCuspLedger`, adds the Lean-facing finite-tail and padded-sixth-power interface, keeps the full modular-function theorem and actual HYP-2963 packet coverage as named obligations, and requires Hurwitz zero-persistence before q-series certificates are admitted as route centers or residual discharges.
+
+S248 adds the **sixth-power certificate extension (HYP-3080)**. It refines S244 by keeping tuple rank, primitive gcd, shared-term filters, mod-14/mod-27/mod-41 residue words, modular/Hurwitz arithmetic address when attached, and legal collision exits around `a^6+b^6+c^6=d^6+e^6+f^6` and `a^6+b^6=d^6+e^6`.
+
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal-part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, and sixth-power certificate tuples when equal-power sums are promoted to proof carriers.
 
 The Henselian unit rule (updated):
 ```text
@@ -68,18 +72,20 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S247 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S248 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-state
-closure, sixth-power collision, modular cusp principal-part, and Lean modular
-cusp sidecars to preserve p-adic stability of the global packet sheaf by
-preventing misuse of untyped motifs, degenerate limiting witnesses,
-sequence-count scalars, positivity-only cohomology, non-median route
-compatibility, unnamed owner/root loss, non-unique route-triple centers,
-unaligned disciplinary pullback indices, unsigned polymer/current quotients,
-unclosed packet/route/certificate/discharge medians, unvalidated Diophantine
-collision arity, or q-series certificates without a formal principal-part gate.
+closure, sixth-power collision, modular cusp principal-part, Lean modular cusp,
+and sixth-power certificate ledgers to
+preserve p-adic stability of the global packet sheaf by preventing misuse of
+untyped motifs, degenerate limiting witnesses, sequence-count scalars,
+positivity-only cohomology, non-median route compatibility, unnamed owner/root
+loss, non-unique route-triple centers, unaligned disciplinary pullback indices,
+unsigned polymer/current quotients, unclosed packet/route/certificate/discharge
+medians, unvalidated Diophantine collision arity, q-series certificates without
+a formal principal-part gate, or equal-power sums without tuple-rank-residue
+certificates.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -107,68 +113,123 @@ the Hodge-cycle lifting unit, the Desargues-median finalization unit, the
 median owner/root unit, the medianized route-center gate unit, the
 cross-carrier resonance unit, the polymer/Dirichlet boundary-energy unit, the
 route-triple center-control unit, the route-state closure median unit, the
-sixth-power collision unit, the modular cusp principal-part unit, and the Lean
-modular cusp unit. The S235-S247 sequence prevents spectral leakage by
-requiring route-triple centers to be unique and promoted only after legal
-closure, named debt exits, validated collision arity, or a formally verified
-Lean modular cusp ledger are attached.
+sixth-power collision unit, the modular cusp principal-part unit, the Lean
+modular cusp unit, and the sixth-power certificate extension unit. The
+S235-S248 sequence prevents spectral leakage by requiring route-triple centers
+to be unique and promoted only after legal closure, named debt exits, validated
+collision arity, a named modular cusp principal part, a formally verified Lean
+modular cusp ledger, or tuple/rank/residue equal-power certificates are
+attached.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S247 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S248 transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
 boundary-energy law, the route-triple center-control law, the route-state
 closure median law, the sixth-power collision sidecar law, the modular cusp
-principal-part law, and the Lean modular cusp law (preserving the recurrence
-algebraic unit, Poincare recurrence unit, automatic gap carrier unit, automatic
-lacunary filter unit, gap automaton carrier unit, perfect-number packet unit,
-route-purity unit, binding-pair switch unit, automatic fiber zipper unit,
-arc-Cech nerve unit, safe-component stalk unit, Haar tile stabilizer unit,
-residual tooth unit, residual capacitor unit, hidden statement unit,
-owner-strip filtration unit, comprehensive lens unit, endpoint owner transfer
-unit, tournament matrix unit, perspective-depth sidecar unit, edge perspective
-unit, edge/triple carrier unit, rooted extension unit, diagonal transport unit,
-fixed-path diagonal-flow unit, observer-cut payload unit, value-origin ledger
-unit, hyperbolic reciprocal sidecar unit, geometry-regime unit, Roth-Minkowski
-unit, Moser/fibbinary unit, Toeplitz square-peg unit, partial-cube bridge-rank
-unit, Hodge-cycle unit, Desargues-median unit, owner/root sidecar unit,
-medianized route-center unit, cross-carrier resonance unit, polymer/Dirichlet
-boundary-energy unit, route-triple center-control unit, route-state closure
-unit, sixth-power collision unit, modular cusp principal-part unit, and Lean
-modular cusp unit alongside mu approx 1.451).
+principal-part law, the Lean modular cusp law, and the sixth-power certificate
+extension law (preserving the recurrence algebraic unit, Poincare recurrence
+unit, automatic gap carrier unit, automatic lacunary filter unit, gap automaton
+carrier unit, perfect-number packet unit, route-purity unit, binding-pair
+switch unit, automatic fiber zipper unit, arc-Cech nerve unit, safe-component
+stalk unit, Haar tile stabilizer unit, residual tooth unit, residual capacitor
+unit, hidden statement unit, owner-strip filtration unit, comprehensive lens
+unit, endpoint owner transfer unit, tournament matrix unit, perspective-depth
+sidecar unit, edge perspective unit, edge/triple carrier unit, rooted extension
+unit, diagonal transport unit, fixed-path diagonal-flow unit, observer-cut
+payload unit, value-origin ledger unit, hyperbolic reciprocal sidecar unit,
+geometry-regime unit, Roth-Minkowski unit, Moser/fibbinary unit, Toeplitz
+square-peg unit, partial-cube bridge-rank unit, Hodge-cycle unit,
+Desargues-median unit, owner/root sidecar unit, medianized route-center unit,
+cross-carrier resonance unit, polymer/Dirichlet boundary-energy unit,
+route-triple center-control unit, route-state closure unit, sixth-power
+collision unit, modular cusp principal-part unit, Lean modular cusp unit, and
+sixth-power certificate extension unit alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S248 -- Sixth-Power Certificate Extension (checkpoint)
+
+Extended S244/S245/S246/S247 with HYP-3080/T1164/LTI-229/LTT-127.  The two prompt
+equations now enter the final proof interface through explicit sixth-power
+collision certificates before they can affect route-state medianization.
+
+### 1. Certificate Payload
+`a^6+b^6+c^6=d^6+e^6+f^6` is native three-lane support-six data; `a^6+b^6=d^6+e^6`
+is a rank-lowered square-cube shadow unless a padded/canceling-pair sidecar
+makes the lift explicit.  Packets must retain collision rank, collision sum,
+left/right lane tuples, primitive gcd, shared-term filter, mod-14/mod-27/mod-41
+residue words, two-lane rigidity gate, three-lane resonance graph id, modular
+cusp/Hurwitz arithmetic address when attached, and legal collision exit.
+
+### 2. Scout Signal
+The bounded scout checks `31,375` unordered pairs through `250` with `0`
+nontrivial pair collisions, and `88,560` unordered triples through `80` with
+`5` collision certificates, including primitive `(3,19,22)` versus
+`(10,15,23)`.
+
+### 3. Proof Interface
+Before a sixth-power equality is used as a packet/route/certificate/sidecar
+field, run the S240/S245/S246/S247 closure checks.  Failed medians must name
+the missing collision certificate, CRT residue word, Roth-Minkowski height
+fence, gated route sidecar, native/padded arity mark, modular-cusp arithmetic
+address, scheduler split, or THM-572/F7 exit.
 
 ---
 
 ## codex-S247 -- Lean q-Pochhammer Modular Cusp Ledger (checkpoint)
 
-Formalized the S245 modular cusp principal-part gate in Lean 4. The new S247 
-layer defines the dictionary between infinite modular tails and their formal 
-principal parts.
+Added HYP-3079/T1163/LTI-228/LTT-126 as the Lean-facing companion to the S246
+q-cusp gate.  The ledger formalizes finite-negative-tail packets, records the
+full modular cusp expansion theorem as an obligation, keeps a Hurwitz
+zero/pole persistence gate, and exposes the padded sixth-power face map.
 
 ### 1. Formal Principal-Part Gate
-It establishes the Lean 4 proof obligation that modular invariance plus 
-meromorphicity at the cusp necessitates a finite negative q-tail. This is 
-implemented in `LRCModularCuspLedger.lean` as the gate for admitting 
-q-series certificates into the terminal proof stack.
+It establishes the Lean 4 proof obligation that modular invariance plus
+meromorphicity at the cusp necessitates a finite negative q-tail.  This is
+implemented in `LRCModularCuspLedger.lean` as the gate for admitting q-series
+certificates into the terminal proof stack.
 
-### 2. Sidecar Gating
-It adds the following formal fields to the Lean center-control packet: 
-`q_pochhammer_tail_id`, `eta_multiplier_balance_status`, 
-`sl2z_transformation_status`, `cusp_principal_part_order`, 
-`finite_negative_tail_proof`, `hurwitz_zero_persistence_status`, and 
-`j_rational_exit_status`.
+### 2. Formal Interface
+Use `TournamentH7.LRCModularCuspLedger` for `HasOnlyFiniteNegativePowers`,
+finite principal-part packets, q-tail readouts, and the `2-vs-2` to `3-vs-3`
+padding map.  The Lean packet fields include `q_pochhammer_tail_id`,
+`eta_multiplier_balance_status`, `sl2z_transformation_status`,
+`cusp_principal_part_order`, `finite_negative_tail_proof`,
+`hurwitz_zero_persistence_status`, and `j_rational_exit_status`.  Do not
+replace the modular-function theorem or HYP-2963 packet coverage with raw
+q-coefficients.
 
-### 3. LRC Translation
-Hurwitz zero-persistence (the complex-analysis limit law) is integrated as 
-a divisor-persistence guard. This ensures that pass-to-the-limit proofs 
-retain zero/pole data and do not silently introduce hidden zeros into the 
-infinite product tail.
+### 3. Relation To S248
+The S248 sixth-power certificate layer can cite the Lean q-cusp ledger as an
+arithmetic-address sidecar, but it still needs tuple rank, primitive gcd,
+shared-term filter, residue words, native/padded arity, and legal collision
+exit before median closure.
+
+---
+
+## codex-S246 -- q-Pochhammer Modular-Cusp Principal-Part Gate (checkpoint)
+
+Narrowed the S245 modular cusp carrier with HYP-3078/T1162/LTI-227/LTT-125.
+Product, partition, divisor-log, and modular q-series tails are proof data
+only after their negative q-tail is a finite named principal part.
+
+### 1. Polar-Debt Gate
+Every quotient must record `q_cusp_ledger_id`, `principal_part_order`,
+`polar_exit_word`, `partition_tail_certificate`,
+`log_derivative_divisor_channel`, and `illegal_infinite_polar_tail_flag`
+before using a q-Pochhammer, partition, or modular-function tail.
+
+### 2. Relation To S248
+The S248 sixth-power certificate layer can cite a modular/Hurwitz arithmetic
+address only through this finite principal-part gate; otherwise equal-power
+arithmetic and q-tail arithmetic remain separate sidecar debts.
 
 ---
 

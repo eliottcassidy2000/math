@@ -84,6 +84,11 @@ obligations, and proof-carrier interfaces.
   use LTT-126 after LTT-125/LTT-124/LTT-122/LTT-120 and fill finite-tail,
   modular-cusp obligation, Hurwitz gate, and padded sixth-power fields before
   linking q-series evidence into a `CenterControlPacket`.
+- Need to certify equal sixth-power sums before median closure:
+  use LTT-127 after LTT-126/LTT-125/LTT-124/LTT-122 and retain lane tuple,
+  collision rank, primitive gcd, shared-term filter, CRT residue words,
+  optional Lean q-cusp arithmetic address, and legal collision exit before a
+  `2-vs-2` or `3-vs-3` equality becomes proof data.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3604,6 +3609,42 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3071, HYP-3070, HYP-2627, HYP-2428, THM-572, LTI-228, LTI-227,
   LTI-226, LTI-225, LTI-224, LTI-222, LTT-126, LTT-125, LTT-124, LTT-123,
   LTT-122, LTT-120, T1163, T1162, T1161, T1160, T1159, T1157, OPEN-Q-108.
+
+### LTT-127: Sixth-Power Certificate Extension Ledger
+
+- **Move:** Treat equal sixth-power sums as certificate-bearing relation data,
+  not as raw Diophantine numerology.  Native `3-vs-3` sixth-power equalities
+  act like support-six route triples; `2-vs-2` equalities are rank-lowered
+  square-cube shadows unless a padded/canceling-pair lift is explicit.
+- **LRC use:** HYP-3080/S248 keeps the exact tuple/rank/residue payload before
+  equal sixth-power sums enter route-state medianization.  The scout checks
+  positive unordered pairs through `250` with `0` nontrivial pair collisions
+  and positive unordered triples through `80` with `5` collision certificates,
+  including primitive `(3,19,22)=(10,15,23)`.  It can cite HYP-3079/S247's Lean
+  q-cusp ledger only as an arithmetic-address sidecar, not as a substitute for
+  the sixth-power certificate.
+- **Preserves:** lane tuple, collision rank, collision sum, primitive gcd,
+  shared-term filter, mod-14/mod-27/mod-41 sixth-power words, two-lane
+  rigidity gate, three-lane resonance graph id, modular/Hurwitz/Lean q-cusp
+  arithmetic address when attached, and legal collision exit.
+- **Forgets / guardrail:** Raw equal sums forget whether the relation is a
+  native support-six wall, a padded two-lane degeneracy, a low-height lattice
+  exception, a modular-cusp address, or a named residual debt.
+- **Tournament fingerprint:** S248 uses proof obligations / sidecar carriers
+  as vertices, not runners or integers.  Rank-2 and rank-3 gauges are
+  transitive with one Hamiltonian path and `5` edge flips, reversing the local
+  order between `two_lane_rigidity_gate` and
+  `three_lane_resonance_graph_id`; raw equal-sum scalar is last in both.
+- **Next pull:** Attach the certificate tuple to HYP-2963 packets that invoke
+  power-lift, Fermat-Catalan, Roth-Minkowski, modular-cusp, Lean q-cusp, or
+  route-triple language, then run legal closure and classify failed medians by
+  first missing sidecar.
+- **Pointers:** HYP-3080, HYP-3079, HYP-3078, HYP-3077, HYP-3076, HYP-3075,
+  HYP-3074, HYP-3073, HYP-3072, HYP-3071, HYP-3070, HYP-3069, HYP-3066,
+  HYP-3063, HYP-3062, HYP-3060, HYP-3058, HYP-2963, THM-572, LTI-229,
+  LTI-228, LTI-227, LTI-226, LTI-224, LTI-221, LTI-209, LTT-127, LTT-126,
+  LTT-125, LTT-124, LTT-122, LTT-119, LTT-107, T1164, T1163, T1162, T1161,
+  T1159, OPEN-Q-108.
 
 ## Immediate Pull List
 

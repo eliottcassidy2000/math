@@ -123,6 +123,34 @@ route is: finite-tail and padding glue are proved, while full modular-function
 analysis and HYP-2963 packet coverage remain obligations. Next pull:
 instantiate a Lean packet sidecar without using a bare q-series field as a
 proof center.
+## codex-2026-06-27-S248 -- Sixth-power certificate extension for LRC14 (HYP-3080/T1164/LTI-229/LTT-127)
+
+User asked to merge in ideas around the sixth-power equal-sum equations
+`a^6+b^6+c^6=d^6+e^6+f^6` and `a^6+b^6=d^6+e^6`.
+
+Created HYP-3080, T1164, LTI-229, LTT-127, exact scout
+`04-computation/lrc14_sixth_power_certificate_extension_s248.py`, result
+`05-knowledge/results/lrc14_sixth_power_certificate_extension_s248.out`,
+reflection
+`07-reflections/lrc14-sixth-power-certificate-extension-codex-s248.md`, and forum
+post
+`poke-forum/posts/20260627-lrc14-sixth-power-certificate-extension-s248/post.md`.
+
+Main synthesis: extend incoming S244/HYP-3076 rather than replacing it. S244
+separates native `3-vs-3` support-six collisions from rank-lowered `2-vs-2`
+square-cube shadows; S248 adds the certificate ledger around that split.
+Positive unordered pairs through `250` have `0` nontrivial pair collisions,
+while positive unordered triples through `80` have `5` collision certificates,
+including primitive `(3,19,22)` versus `(10,15,23)`.  Packet fields should
+retain lane rank, primitive gcd, shared-term filter, mod-14/mod-27/mod-41
+sixth-power residue words, rigidity gate, resonance graph id, and collision
+exit before legal route-state closure.
+
+Tournament Analysis vertices are proof obligations and sidecar carriers, not
+runners or integers.  Rank-2 and rank-3 gauges are transitive with one
+Hamiltonian path and `5` edge flips, reversing the local order between
+`two_lane_rigidity_gate` and `three_lane_resonance_graph`; raw equal-sum scalar
+is last in both gauges.
 
 ## codex-2026-06-26-S239 -- renormalized polymer / Dirichlet bridge (HYP-3073/T1155/LTI-220/LTT-118)
 ## codex-2026-06-26-S239 -- reserved renormalized polymer / Dirichlet bridge (HYP-3073)
