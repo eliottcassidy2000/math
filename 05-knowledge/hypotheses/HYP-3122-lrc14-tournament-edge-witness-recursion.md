@@ -1,14 +1,17 @@
 ---
-id: HYP-3119
+id: HYP-3122
 title: LRC14 tournament edge witness recursion
 status: RESERVED / edge-witness synthesis and executable scout pending; not a proof
-source: codex-2026-06-27-S268
-tangent: T1194
-technique: LTI-255
-tournament_technique: LTT-153
-script: 04-computation/lrc14_tournament_edge_witness_recursion_codex_s268.py
-result: 05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_s268.out
+source: codex-2026-06-27-S268; continued by codex-2026-06-27 edge-witness recursion extension
+tangent: T1196
+technique: LTI-257
+tournament_technique: LTT-155
+script: 04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py
+result: 05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out
 related:
+  - HYP-3121
+  - HYP-3120
+  - HYP-3119
   - HYP-3118
   - HYP-3117
   - HYP-3116
@@ -24,13 +27,18 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3119: LRC14 Tournament Edge Witness Recursion
+# HYP-3122: LRC14 Tournament Edge Witness Recursion
 
 ## Reservation Claim
 
-This lane reserves the S268 response to the edge-as-witness prompt.  The
-working object is not a tournament vertex and not a scalar edge count.  It is
-an oriented edge `tail -> tip` whose proof value is the pair of recursive
+This lane continues the S268 response to the edge-as-witness prompt.  S268
+originally reserved this idea under HYP-3119 / T1194 / LTI-255 / LTT-153, but
+S269 already owns that namespace for the endpoint-gated niche archive bridge,
+and HYP-3121 is the lift-and-decorrelate three-engine synthesis.  The clean
+continuation namespace is therefore HYP-3122 / T1196 / LTI-257 / LTT-155.
+
+The working object is not a tournament vertex and not a scalar edge count.  It
+is an oriented edge `tail -> tip` whose proof value is the pair of recursive
 witness obligations seen from both ends:
 
 ```text

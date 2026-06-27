@@ -1,13 +1,16 @@
-## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- HYP-3119
+## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- HYP-3122
 
-Reserved HYP-3119/T1194/LTI-255/LTT-153 for the prompt to merge tournament
-edges as witnesses and recurse on both tip and tail.  The planned object is an
-oriented edge `tail -> tip` carrying `tail_packet`, `tip_packet`, the outside
-four-sector deck, tail-deletion child, tip-deletion child, and repaired
-coordinate or named debt.  This explicitly joins HYP-3050 edge tail/tip
-perspectives, HYP-3054 observer-extension cut words, HYP-3106 directed-edge
-controlled-forgetting, HYP-3112 ear-payload edges, HYP-3115 domain-wall edges,
-and the HYP-3116/HYP-3118 missing-input/resurrection guardrails.  Status at
+Reserved the prompt to merge tournament edges as witnesses and recurse on both
+tip and tail.  The reservation is now HYP-3122/T1196/LTI-257/LTT-155 after
+S269 claimed HYP-3119/T1194/LTI-255/LTT-153 for the endpoint-gated niche
+archive bridge and S253 claimed HYP-3121 for the lift-and-decorrelate
+three-engine synthesis.  The planned object is an oriented edge `tail -> tip`
+carrying `tail_packet`, `tip_packet`, the outside four-sector deck,
+tail-deletion child, tip-deletion child, and repaired coordinate or named debt.
+This explicitly joins HYP-3050 edge tail/tip perspectives, HYP-3054
+observer-extension cut words, HYP-3106 directed-edge controlled-forgetting,
+HYP-3112 ear-payload edges, HYP-3115 domain-wall edges, and the
+HYP-3116/HYP-3118 missing-input/resurrection guardrails.  Status at
 reservation: not a proof; executable scout pending.
 ## kind-pasteur-2026-06-27-S253 -- SYNTHESIS: the LRC(14) covering case is ONE lift-and-decorrelate engine; open core = r=2..6 multi-far floor
 Owner: integrate incoming+past work, understand what remains, synthesize an improved argument. Mapped the full proof DAG (Explore) + verified the unification. HYP-3121 + reflection lrc14-three-engines-lift-and-decorrelate.
