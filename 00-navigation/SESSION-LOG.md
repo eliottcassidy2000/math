@@ -1,3 +1,13 @@
+## codex-2026-06-26-S238 -- reserved renormalized polymer / Dirichlet bridge (HYP-3072/T1154/LTI-219/LTT-117)
+
+User asked for one or two different remaining LRC proof angles and a
+cross-disciplinary scour of past work. Reserved HYP-3072/T1154/LTI-219/LTT-117
+for a synthesis that deliberately avoids continuing the median-graph line:
+renormalized signed-polymer/Riesz-product grammar on AP/repeated-residue/wide
+packets, plus a Dirichlet-energy / Schur-complement reading of sidecars as
+boundary conditions for residual currents. Finite scout, result, reflection,
+and navigation entries still pending in this active session.
+
 ## codex-2026-06-26-S236 -- route-triple center-control addendum (HYP-3070/T1152/LTI-217/LTT-115)
 
 Built `04-computation/lrc14_route_triple_center_control_codex_s236.py`,
