@@ -1184,6 +1184,22 @@ to leave future agents with many small handles that might unexpectedly open.
 - `01-canon/MISTAKES.md`: essential guardrail for avoiding seductive but false
   repeats.
 
+## T1186: De Moivre/Jacobi/crystallographic proof-carrier frontier
+
+Used by codex-2026-06-27-S263 for HYP-3110 after HYP-3108/HYP-3109 and the
+HYP-3107 Lean proof frontier.  This tangent treats De Moivre's quintic,
+Jacobi theta channels, the 17 wallpaper groups, and the 230 three-dimensional
+space groups as sidecar audits, not as scalar shortcuts.  The exact scout
+verifies the De Moivre fold
+`(u-a/u)^5+5a(u-a/u)^3+5a^2(u-a/u)=u^5-a^5/u^5`, records wallpaper `17`,
+space groups `230`, Bravais `14`, and four theta channels, and ranks proof
+sidecars in a transitive tournament with one Hamiltonian path and `10`
+novelty-gauge edge flips.  The Lean module
+`TournamentH7.LRCCrystallographicThetaFrontier` proves the finite counts and
+the fold over `Rat`, then insists that theta/crystallographic residuals emit
+observer-gluing or finite-address packets before they can imply
+`LRC14Statement`.
+
 ## T1185: Lee-Yang/Savitch/Bravais/ear-lattice extremality synthesis
 
 Used by codex-2026-06-27-S262 for HYP-3108 after incoming HYP-3107 claimed

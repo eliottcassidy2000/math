@@ -167,6 +167,13 @@ It also exposes the observer-gluing route and the
 an explicit experiment vertex for the equinumerosity / equidecomposability /
 equidistribution triad. It is a formal frontier map, not a proof of LRC14.
 
+`LRCCrystallographicThetaFrontier.lean` is the S263 / HYP-3110 sidecar ledger
+for the De Moivre/Jacobi/crystallographic frontier. It records exact counts
+for the 17 wallpaper groups, 230 three-dimensional space groups, 14 Bravais
+lattice types, and four Jacobi theta channels; proves the De Moivre quintic
+fold over `Rat`; and keeps theta/crystallographic residual production
+conditional on observer-gluing or finite-address packet output.
+
 ## Proof sketch
 
 By `ocf`: H(T) = 1 + 2α₁ + 4α₂ + 8α₃ + 16α₄. Setting H = 7 gives

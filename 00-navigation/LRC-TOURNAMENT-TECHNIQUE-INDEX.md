@@ -162,6 +162,16 @@ obligations, and proof-carrier interfaces.
   and ear-decomposition sidecars for an LRC packet:
   use LTT-144 after LTT-143/LTT-141/LTT-140/LTT-138 and make signal families,
   sector-sweep states, local traps, and proof-map obligations the vertices.
+- Need to test De Moivre/Jacobi/crystallographic sidecars without collapsing
+  them into catalogs:
+  use LTT-145 after LTT-143/LTT-144 and make proof sidecars the vertices:
+  finite-address exits, observer-gluing certificates, theta tails, Lee-Yang
+  root curves, quintic folds, orbifold quotient audits, and scalar shadows.
+- Need to test Minkowski/circuit/Ising/De Moivre carriers without scalarizing
+  geometric or statistical-mechanics shadows:
+  use LTT-146 after LTT-145/LTT-144/LTT-143 and make q-lattice bodies,
+  proof-state circuits, Ising zero packets, De Moivre folds, root curves,
+  observer-gluing certificates, and finite-address packets the vertices.
 - Need to test Lee-Yang root extremality through legal one-runner ears:
   use LTT-147 after LTT-146/LTT-145/LTT-144/LTT-143/LTT-142/LTT-141/LTT-139/LTT-138/LTT-136/LTT-133/LTT-101
   and make ear payloads, root-motion events, and proof obligations the
@@ -4617,14 +4627,19 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 
 ## LTT-145: Tournament of De Moivre-Jacobi crystallographic sidecars
 
-Reserved by codex-2026-06-27-S263 for HYP-3110.  Vertices are proof-carrier
-sidecars, not runners or group names: De Moivre quintic folds, Jacobi theta
-tails, wallpaper orbifold quotients, space-group orbifold quotients, Lee-Yang
-root curves, observer-gluing certificates, and finite-address exits.  The
-pairwise observable should orient toward the sidecar that preserves more
-`LRC14Statement`-relevant payload while destroying fewer coordinates; the
-methodology must report score histograms, directed cycles, SCCs, edge flips,
-and Hamiltonian-path counts.
+Used by codex-2026-06-27-S263 for HYP-3110.  Vertices are proof-carrier
+sidecars, not runners or group names: finite-address exits,
+observer-gluing certificates, Jacobi theta tails, Lee-Yang root curves, De
+Moivre quintic folds, space-group orbifold quotients, wallpaper orbifold
+quotients, and raw scalar shadows.  The pairwise observable orients toward
+the sidecar that preserves more `LRC14Statement`-relevant payload while
+destroying fewer coordinates, with proof readiness and HYP-3107 frontier
+adjacency ahead of finite-catalog novelty.  The S263 tournament is transitive:
+score histogram `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}`, `0` directed
+3-cycles, singleton SCCs, and `1` Hamiltonian path.  The novelty-first gauge
+flips `10` edges, warning that exact crystallographic catalogs are attractive
+but not proof-terminal unless they feed observer gluing or finite-address
+packets.
 
 ## LTT-146: Tournament of Minkowski/circuit/Ising/De Moivre sidecars
 

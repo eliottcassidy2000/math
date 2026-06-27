@@ -232,6 +232,31 @@ HYP-3090, HYP-3085, HYP-3083, THM-577, THM-573, THM-576, LTI-245, LTI-243,
 LTI-242, LTI-241, LTI-240, LTI-238, LTT-143, LTT-141, LTT-140, LTT-139,
 LTT-138, LTT-136, T1184, T1182, T1181, T1180, T1179, OPEN-Q-108.
 
+**OPEN-Q-108 S263 De Moivre/Jacobi/crystallographic addendum:**
+HYP-3110 adds a sidecar frontier around the HYP-3107 Lean interface.  The
+exact De Moivre fold is a finite-depth quintic cancellation detector:
+`(u-a/u)^5+5a(u-a/u)^3+5a^2(u-a/u)=u^5-a^5/u^5`, so the special quintic
+reduces to `y^2+b*y-a^5=0` with `y=u^5`.  Jacobi theta functions belong to
+the signed residue-cusp/support-six tail after low-height wall deletion.  The
+17 wallpaper groups and 230 three-dimensional space groups are finite
+orbifold quotient audits, useful only when translation lattice, stabilizer
+word, glide/screw/torsion sidecar, preserved predicate, and destroyed
+coordinate are named.  HYP-3109's Lee-Yang root curves remain upstream; a
+crystallographic quotient that forgets the zero-collision/root-locus sidecar
+is not proof-legal.
+
+Open task: extend the HYP-2963 residual-row ledger with theta/orbifold
+columns: `theta_tail_status`, `deleted_low_height_wall`,
+`support_six_residue_word`, `translation_lattice_id`, `stabilizer_word`,
+`glide_screw_torsion_sidecar`, `lee_yang_root_curve_id`,
+`zero_collision_status`, `preserved_lrc_predicate`, `destroyed_coordinate`,
+`observer_gluing_packet_id`, `finite_address_packet_id`, and
+`terminal_exit_or_named_debt`.  The first success criterion is a concrete row
+emitting an `ObserverGluingCertificate`; the stronger endpoint is compression
+to a `FiniteAddressBranchPacket`. -> HYP-3110, HYP-3109, HYP-3108, HYP-3107,
+HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3073, HYP-3063, HYP-2614,
+HYP-2613, HYP-2309, LTI-247, LTT-145, T1186, OPEN-Q-108.
+
 **OPEN-Q-108 S257 equivalence-triad invariant addendum:**
 HYP-3093 adds the forgetting-cost tuple
 HYP-3093 adds the forgetting-cost tuple

@@ -1,15 +1,39 @@
-## codex-2026-06-27-S263 -- De Moivre/Jacobi/crystallographic frontier reservation -- HYP-3110
+## codex-2026-06-27-S263 -- De Moivre/Jacobi/crystallographic frontier -- HYP-3110
 
-Reserved HYP-3110 / T1186 / LTI-247 / LTT-145 after integrating incoming
-HYP-3108/HYP-3109 Lee-Yang root-curve work.  The lane will test De Moivre's
-solvable quintic normal form as a finite-depth cancellation detector, Jacobi
-theta functions as the signed residue-cusp/support-six tail carrier, and the
-17 wallpaper groups plus 230 three-dimensional space groups as finite
-crystallographic quotient audits.  This is not a proof; it claims namespace for
-a dependency-free scout, a Lean-facing count/identity ledger, and Tournament
-Analysis on proof-carrier sidecars.  Preserved predicate: enough sidecar data
-to imply `LRC14Statement` through HYP-3107.  Destroyed coordinates: raw runner
-labels, raw time, and scalarized root/moment/lattice counts.
+Completed the reserved HYP-3110 / T1186 / LTI-247 / LTT-145 lane after
+integrating incoming HYP-3108/HYP-3109 Lee-Yang root-curve work and the
+HYP-3111 reservation as an adjacent, later carrier lane.  Added
+`04-computation/lrc14_de_moivre_jacobi_crystallographic_frontier_codex_s263.py`
+with stored output in
+`05-knowledge/results/lrc14_de_moivre_jacobi_crystallographic_frontier_codex_s263.out`.
+The exact scout verifies De Moivre's Laurent fold
+`(u-a/u)^5+5a(u-a/u)^3+5a^2(u-a/u)=u^5-a^5/u^5`, so the special quintic
+reduces to `y^2+b*y-a^5=0` with `y=u^5`; records wallpaper `17`, 3D space
+group count `230` with crystal-system split `2,13,59,68,25,27,36`, Bravais
+`14`, and four Jacobi theta channels; and treats these as quotient audits,
+not scalar proof shortcuts.
+
+Tournament Analysis uses proof-carrier sidecars as vertices, not runners,
+roots, or group names.  Fingerprint: score histogram
+`{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}`, `0` directed 3-cycles, singleton SCCs,
+`1` Hamiltonian path, and `10` edge flips against a novelty-first gauge.  The
+tie path is
+`finite_address_exit > observer_gluing_certificate > jacobi_theta_tail >
+lee_yang_root_curve > de_moivre_quintic_fold > space_group_230_orbifold >
+wallpaper_17_orbifold > raw_scalar_shadow`.
+
+Added the Lean module
+`TournamentH7.LRCCrystallographicThetaFrontier`.  It proves the 17/230/14/4
+catalog counts, proves the De Moivre fold over `Rat`, and adds the conditional
+frontier theorem `lrc14_from_theta_crystallographic_residuals`: theta and
+crystallographic residual producers close against `LRC14Statement` only after
+they emit an `ObserverGluingCertificate` or `FiniteAddressBranchPacket`.  Thus
+the new sidecars feed HYP-3107; they do not bypass observer gluing or finite
+address.  Updated HYP-3110, OPEN-Q-108, LTI-247, LTT-145, the result index,
+and the reflection.
+
+## codex-2026-06-27-S262 -- Lee-Yang sidecar supplement
+
 User asked to work on Lee-Yang extremality toward the LRC proof, using full PGF root curves, `exp(-lambda S^4-bS^2)`, Savitch reachability, Bravais lattices, and ear decompositions as inspiration.  Pulled current mainline first and integrated the directly relevant incoming HYP-3103 miss-count PGF roots, HYP-3104 maximizer signal atlas, HYP-3105 obstruction-transfer atlas, HYP-3106 perspective functors, and HYP-3107 Lean proof-frontier ledger.  Completed the reserved HYP-3108/T1185 lane with `04-computation/lee_yang_savitch_ear_lattice_extremality_codex_s262.py`, stored output, and reflection `07-reflections/lee-yang-savitch-ear-lattice-extremality-codex-s262.md`.
 
 FINDING: the full miss-count PGF root curve survives the stronger join as a serious coverage-extremality sidecar.  Consecutive/even-AP `k=8` have `#real=0`, nearest root modulus `1.489`, and `q0+q6=73/210`; spread/break rows move to real-root collisions with much lower extreme mass while wide rows re-enter the all-complex stratum.  In a deterministic anchored sample, `corr(#real,q0+q6)=-0.372` and `corr(nearest-root-modulus,q0+q6)=+0.952`.  The quartic `phi4` lambda is positive in the root-only sample (`corr(phi4-lambda,L_yK8)=+0.690`) but remains noisier across named packets, so it is retained as a stress test, not a scalar proof route.  Consecutive `k=8..13` zero arcs remain all-complex and drift near 7th-root angles; `k=11` has the middle pair at `102.9°=2*360/7`.  Bravais/relation-lattice counts, missed-mask ear graphs, and Savitch terminal kinds are promoted as sidecars for `CoverageExtremality`, `FineScaleWindingTransfer`, `ResidualToFiniteAddressPackets`, and `ObserverGluingCertificates`.  Tournament Analysis uses sidecars/proof carriers rather than runners and is transitive: endpoint-owner packet > Savitch reachability > obstruction transfer > ear gluing > PGF root curve > Bravais relation lattice > quartic energy > pair-Pascal shadow > raw scalar `p0`.  LRC14 not proved; the proof frontier now has a sharper sidecar ledger for root/recursion/lattice/gluing information.

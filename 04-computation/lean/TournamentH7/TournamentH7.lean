@@ -205,4 +205,5 @@ import TournamentH7.LRCFiniteAddressBranchClosure
 import TournamentH7.LRCObserverGluingLedger
 import TournamentH7.LRCBleedingEdgeFrontier
 import TournamentH7.LRCProofFrontier
+import TournamentH7.LRCCrystallographicThetaFrontier
 import TournamentH7.Verify
