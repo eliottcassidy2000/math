@@ -1,0 +1,475 @@
+﻿HYP-3118 coordinate-resurrection sheaf scout -- codex S267
+This is evidence and route selection, not a proof.
+
+====================================================================================================
+REPAIR HYPERGRAPH: SIDECARS AS COORDINATE-RESURRECTION EDGES
+====================================================================================================
+- labelled_packet_decision_tree [HYP-3117/HYP-2963]
+  coords=endpoint_owner,finite_address,packet_label,route_purity
+  note=old labelled packets resurrect finite address and endpoint owner together
+- observer_gluing_certificate [HYP-3098/HYP-3107]
+  coords=chart_overlap,observer_gluing,terminal_exit
+  note=observer chart compatibility and terminal discharge interface
+- ear_decomposition_gluing_grammar [ear-decomposition theorems/HYP-3108]
+  coords=ear_decomposition,ear_parity,nested_ear_order,observer_gluing,strong_connectivity_witness
+  note=treats directed/odd/nested ears as named gluing grammars for proof-state charts
+- proof_circuit_uniformity_bus [HYP-3116/HYP-3117]
+  coords=missing_input_vector,proof_circuit_basis,uniformity
+  note=turns low-depth shortcuts into uniform proof-state circuits
+- savitch_midpoint_certificate_ladder [Savitch/HYP-3108/HYP-3117]
+  coords=proof_circuit_basis,reachability_halving,savitch_midpoint,uniformity
+  note=uses midpoint reachability recursion as a uniform certificate ladder, not a stored path
+- lee_yang_ear_payload_gate [HYP-3112/HYP-3109]
+  coords=ear_payload_A_vector,root_ear_payload,root_motion,root_zero_locus
+  note=restores root motion and one-runner ear payload, not only root count
+- pgf_root_curve_section [HYP-3108/HYP-3109/HYP-3112]
+  coords=discriminant_wall,lee_yang_extremality,pgf_curve,root_argument_path,root_ear_payload,root_zero_locus
+  note=promotes the whole PGF curve and zero trajectory over any single p0 scalar
+- root_lattice_two_map_portfolio [HYP-3113]
+  coords=ear_certificate,relation_lattice_shape,root_ear_payload,savitch_midpoint
+  note=couples analytic root portfolio to certificate ladder
+- bravais_relation_shape_atlas [Bravais/HYP-3115]
+  coords=basis_reduction_word,bravais_shape,low_height_wall,relation_lattice_shape
+  note=records lattice shape class and low-height relation walls before using volume pressure
+- minkowski_relation_wall_gate [HYP-3115/HYP-3062]
+  coords=bravais_shape,low_height_wall,relation_lattice_shape
+  note=relation-rich rows need wall labels and shape, not raw covolume
+- normal_fan_component_packet [HYP-3101/HYP-3096]
+  coords=cech_barcode,component_bound,normal_fan_chamber
+  note=component-bound proof route for normalized lonely-set packets
+- first_obstruction_cocycle_gate [HYP-3102]
+  coords=cocycle_exactness,dual_annihilator,obstruction_syndrome
+  note=hidden payload difference is exact, generated, killed, descended, or debt
+- state_lift_K33_gate [HYP-3094/THM-572]
+  coords=K33_cross_handoff,active_binder,state_lift
+  note=routes cross-handoff packets through named state-lift debt or construction
+- pde_weak_form_operator [HYP-3111/S264b]
+  coords=boundary_data,pde_weak_form,stiffness_matrix,zero_mode
+  note=weak-form carrier preserves boundary/operator data before energy analogies
+- phi4_quartic_density_stress_test [phi4_2/HYP-3111]
+  coords=boundary_data,pde_weak_form,quartic_density_moment_curve,zero_mode
+  note=quartic density is a stress test for moment/root analogies only with boundary data retained
+- finite_interval_margin_packet [HYP-3114]
+  coords=approximation_margin,endpoint_margin,finite_grid_hit
+  note=resurrects rational-grid witness transfer only after an interval exists
+- route_center_median_ledger [HYP-3069/HYP-3070]
+  coords=median_center,route_center,sidecar_closure
+  note=legal route centers require sidecar closure before median arguments
+
+proof-route predicate used by scout:
+  CORE = finite_address + observer_gluing + endpoint_owner + uniformity
+  plus at least one LIVE sidecar:
+  cocycle_exactness, component_bound, pde_weak_form, relation_lattice_shape, root_ear_payload, state_lift
+
+====================================================================================================
+TWO COMPREHENSIVE MAPS
+====================================================================================================
+MAP A: quotient -> destroyed coordinate vector -> first proof demand
+- raw_p0_scalar
+  core_gap=endpoint_owner,finite_address,observer_gluing,uniformity
+  live_present=none
+  live_options=cocycle_exactness,component_bound,pde_weak_form,relation_lattice_shape,root_ear_payload,state_lift
+  first_demand=choose one live section after core repair
+- one_literal_apex7_threshold
+  core_gap=endpoint_owner,finite_address,observer_gluing,uniformity
+  live_present=none
+  live_options=cocycle_exactness,component_bound,pde_weak_form,relation_lattice_shape,root_ear_payload,state_lift
+  first_demand=choose one live section after core repair
+- root_count_only
+  core_gap=endpoint_owner,finite_address,observer_gluing,uniformity
+  live_present=none
+  live_options=cocycle_exactness,component_bound,pde_weak_form,relation_lattice_shape,root_ear_payload,state_lift
+  first_demand=choose one live section after core repair
+- ear_payload_without_owner
+  core_gap=endpoint_owner,finite_address,observer_gluing,uniformity
+  live_present=root_ear_payload
+  live_options=cocycle_exactness,component_bound,pde_weak_form,relation_lattice_shape,state_lift
+  first_demand=terminalize existing live section
+- raw_minkowski_volume
+  core_gap=endpoint_owner,finite_address,observer_gluing,uniformity
+  live_present=relation_lattice_shape
+  live_options=cocycle_exactness,component_bound,pde_weak_form,root_ear_payload,state_lift
+  first_demand=terminalize existing live section
+- raw_ising_energy
+  core_gap=endpoint_owner,finite_address,observer_gluing,uniformity
+  live_present=root_ear_payload
+  live_options=cocycle_exactness,component_bound,pde_weak_form,relation_lattice_shape,state_lift
+  first_demand=terminalize existing live section
+- direct_time_interval_only
+  core_gap=endpoint_owner,finite_address,observer_gluing,uniformity
+  live_present=none
+  live_options=cocycle_exactness,component_bound,pde_weak_form,relation_lattice_shape,root_ear_payload,state_lift
+  first_demand=choose one live section after core repair
+- first_obstruction_only
+  core_gap=endpoint_owner,finite_address,observer_gluing,uniformity
+  live_present=cocycle_exactness
+  live_options=component_bound,pde_weak_form,relation_lattice_shape,root_ear_payload,state_lift
+  first_demand=terminalize existing live section
+- component_bound_only
+  core_gap=endpoint_owner,finite_address,observer_gluing,uniformity
+  live_present=component_bound
+  live_options=cocycle_exactness,pde_weak_form,relation_lattice_shape,root_ear_payload,state_lift
+  first_demand=terminalize existing live section
+- pde_energy_only
+  core_gap=endpoint_owner,finite_address,observer_gluing,uniformity
+  live_present=pde_weak_form
+  live_options=cocycle_exactness,component_bound,relation_lattice_shape,root_ear_payload,state_lift
+  first_demand=terminalize existing live section
+- proof_circuit_compiler_without_payload
+  core_gap=endpoint_owner,finite_address,observer_gluing
+  live_present=none
+  live_options=cocycle_exactness,component_bound,pde_weak_form,relation_lattice_shape,root_ear_payload,state_lift
+  first_demand=choose one live section after core repair
+
+MAP B: external pattern -> LRC resurrection signal
+- Savitch midpoint recursion
+  external_pattern=reachability can be certified by recursively naming midpoints while reusing space
+  lrc_reframe=proof reachability should store a recomputable midpoint certificate, not the whole route
+  resurrects=uniformity,savitch_midpoint,proof_circuit_basis
+  new_signal=midpoint_certificate_depth_profile
+- Bravais lattice shape
+  external_pattern=lattice behavior is controlled by shape class and basis choices, not only covolume
+  lrc_reframe=Minkowski pressure needs relation-shape labels and low-height wall ownership
+  resurrects=relation_lattice_shape,bravais_shape,low_height_wall
+  new_signal=bravais_shape_wall_signature
+- Lee-Yang extremality
+  external_pattern=zeros move as a structured locus under parameter changes
+  lrc_reframe=replace p0-only maximization by the PGF root curve, nearest-zero radius, and discriminant walls
+  resurrects=root_ear_payload,root_zero_locus,pgf_curve,discriminant_wall
+  new_signal=pgf_zero_trajectory_signature
+- phi4 quartic density
+  external_pattern=exp(-lambda*S^4-b*S^2) is controlled by moments, wells, and boundary regimes
+  lrc_reframe=quartic energy analogies are legal only after boundary data and zero modes are sidecars
+  resurrects=pde_weak_form,boundary_data,zero_mode,quartic_density_moment_curve
+  new_signal=quartic_moment_wall_profile
+- strong connectivity iff ear decomposition
+  external_pattern=global directed connectivity can be certified by an ear-building grammar
+  lrc_reframe=observer gluing should be tested by explicit ear certificates rather than asserted globally
+  resurrects=observer_gluing,ear_decomposition,strong_connectivity_witness
+  new_signal=observer_ear_certificate_type
+- factor-critical iff odd ear decomposition
+  external_pattern=matching-critical structure is exposed by parity-constrained ears
+  lrc_reframe=payload ownership may require parity debt, not just a connected chart
+  resurrects=endpoint_owner,ear_parity,parity_debt
+  new_signal=odd_ear_payload_parity_debt
+- series-parallel iff nested ear decomposition
+  external_pattern=forbidden-minor simplicity appears as nested ear order
+  lrc_reframe=proof routes may become tractable only after a nested-ear or branchwidth sidecar is declared
+  resurrects=observer_gluing,nested_ear_order,series_parallel_shadow
+  new_signal=nested_ear_branchwidth_shadow
+
+====================================================================================================
+SHORTCUT REPAIR COVERS
+====================================================================================================
+- raw_p0_scalar [HYP-3103/HYP-3116]
+  kept=scalar_value
+  challenged_assumption=scalar value preserves neither mechanism nor proof exit
+  minimal_cover_size=4 cost=4
+  minimal_cover_count_at_size=40
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + bravais_relation_shape_atlas
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + first_obstruction_cocycle_gate
+  alternative_cover_3=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + lee_yang_ear_payload_gate
+  alternative_cover_4=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + minkowski_relation_wall_gate
+  resurrected=endpoint_owner,finite_address,observer_gluing,relation_lattice_shape,uniformity
+- one_literal_apex7_threshold [HYP-3115/HYP-3116]
+  kept=apex7_angle,finite_bank_threshold
+  challenged_assumption=finite classifier may be a uniformity warning, not a proof
+  minimal_cover_size=4 cost=4
+  minimal_cover_count_at_size=40
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + bravais_relation_shape_atlas
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + first_obstruction_cocycle_gate
+  alternative_cover_3=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + lee_yang_ear_payload_gate
+  alternative_cover_4=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + minkowski_relation_wall_gate
+  resurrected=endpoint_owner,finite_address,observer_gluing,relation_lattice_shape,uniformity
+- root_count_only [HYP-3109/HYP-3112]
+  kept=root_count
+  challenged_assumption=real-root count forgets root motion and the extension payload
+  minimal_cover_size=4 cost=4
+  minimal_cover_count_at_size=40
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + bravais_relation_shape_atlas
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + first_obstruction_cocycle_gate
+  alternative_cover_3=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + lee_yang_ear_payload_gate
+  alternative_cover_4=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + minkowski_relation_wall_gate
+  resurrected=endpoint_owner,finite_address,observer_gluing,relation_lattice_shape,uniformity
+- ear_payload_without_owner [HYP-3112]
+  kept=ear_payload_A_vector,root_ear_payload
+  challenged_assumption=ear payload is not terminal until owner and proof route survive
+  minimal_cover_size=3 cost=3
+  minimal_cover_count_at_size=4
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + savitch_midpoint_certificate_ladder
+  alternative_cover_3=labelled_packet_decision_tree + observer_gluing_certificate + proof_circuit_uniformity_bus
+  alternative_cover_4=labelled_packet_decision_tree + observer_gluing_certificate + savitch_midpoint_certificate_ladder
+  resurrected=endpoint_owner,finite_address,observer_gluing,uniformity
+- raw_minkowski_volume [HYP-3111/HYP-3115]
+  kept=covolume,relation_lattice_shape
+  challenged_assumption=volume pressure needs a declared body and route predicate
+  minimal_cover_size=3 cost=3
+  minimal_cover_count_at_size=4
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + savitch_midpoint_certificate_ladder
+  alternative_cover_3=labelled_packet_decision_tree + observer_gluing_certificate + proof_circuit_uniformity_bus
+  alternative_cover_4=labelled_packet_decision_tree + observer_gluing_certificate + savitch_midpoint_certificate_ladder
+  resurrected=endpoint_owner,finite_address,observer_gluing,uniformity
+- raw_ising_energy [HYP-3111/HYP-3115]
+  kept=ising_energy,root_ear_payload
+  challenged_assumption=spin energy forgets which domain wall is a legal root-collision exit
+  minimal_cover_size=3 cost=3
+  minimal_cover_count_at_size=4
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + savitch_midpoint_certificate_ladder
+  alternative_cover_3=labelled_packet_decision_tree + observer_gluing_certificate + proof_circuit_uniformity_bus
+  alternative_cover_4=labelled_packet_decision_tree + observer_gluing_certificate + savitch_midpoint_certificate_ladder
+  resurrected=endpoint_owner,finite_address,observer_gluing,uniformity
+- direct_time_interval_only [HYP-3114/HYP-3088]
+  kept=approximation_margin,finite_grid_hit
+  challenged_assumption=raw time intervals do not preserve the normalized slow/ruler clock
+  minimal_cover_size=4 cost=4
+  minimal_cover_count_at_size=40
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + bravais_relation_shape_atlas
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + first_obstruction_cocycle_gate
+  alternative_cover_3=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + lee_yang_ear_payload_gate
+  alternative_cover_4=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + minkowski_relation_wall_gate
+  resurrected=endpoint_owner,finite_address,observer_gluing,relation_lattice_shape,uniformity
+- first_obstruction_only [HYP-3102]
+  kept=cocycle_exactness,obstruction_syndrome
+  challenged_assumption=knowing the first obstruction is not the same as discharging it
+  minimal_cover_size=3 cost=3
+  minimal_cover_count_at_size=4
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + savitch_midpoint_certificate_ladder
+  alternative_cover_3=labelled_packet_decision_tree + observer_gluing_certificate + proof_circuit_uniformity_bus
+  alternative_cover_4=labelled_packet_decision_tree + observer_gluing_certificate + savitch_midpoint_certificate_ladder
+  resurrected=endpoint_owner,finite_address,observer_gluing,uniformity
+- component_bound_only [HYP-3101]
+  kept=cech_barcode,component_bound
+  challenged_assumption=component control must feed a terminal observer certificate
+  minimal_cover_size=3 cost=3
+  minimal_cover_count_at_size=4
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + savitch_midpoint_certificate_ladder
+  alternative_cover_3=labelled_packet_decision_tree + observer_gluing_certificate + proof_circuit_uniformity_bus
+  alternative_cover_4=labelled_packet_decision_tree + observer_gluing_certificate + savitch_midpoint_certificate_ladder
+  resurrected=endpoint_owner,finite_address,observer_gluing,uniformity
+- pde_energy_only [HYP-3111/S264b]
+  kept=pde_weak_form,stiffness_matrix
+  challenged_assumption=energy analogies collapse without boundary and zero-mode sidecars
+  minimal_cover_size=3 cost=3
+  minimal_cover_count_at_size=4
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + savitch_midpoint_certificate_ladder
+  alternative_cover_3=labelled_packet_decision_tree + observer_gluing_certificate + proof_circuit_uniformity_bus
+  alternative_cover_4=labelled_packet_decision_tree + observer_gluing_certificate + savitch_midpoint_certificate_ladder
+  resurrected=endpoint_owner,finite_address,observer_gluing,uniformity
+- proof_circuit_compiler_without_payload [HYP-3117]
+  kept=missing_input_vector,proof_circuit_basis,uniformity
+  challenged_assumption=compiler detects missing coordinates before it supplies them
+  minimal_cover_size=3 cost=3
+  minimal_cover_count_at_size=20
+  cover=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + bravais_relation_shape_atlas
+  alternative_cover_2=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + first_obstruction_cocycle_gate
+  alternative_cover_3=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + lee_yang_ear_payload_gate
+  alternative_cover_4=labelled_packet_decision_tree + ear_decomposition_gluing_grammar + minkowski_relation_wall_gate
+  resurrected=endpoint_owner,finite_address,observer_gluing,relation_lattice_shape
+
+missing_coordinate_frequency_across_shortcuts:
+  endpoint_owner: 11
+  finite_address: 11
+  observer_gluing: 11
+  state_lift: 11
+  cocycle_exactness: 10
+  component_bound: 10
+  pde_weak_form: 10
+  relation_lattice_shape: 10
+  uniformity: 10
+  root_ear_payload: 9
+repair_sidecar_frequency_in_first_minimal_covers:
+  ear_decomposition_gluing_grammar: 11
+  labelled_packet_decision_tree: 11
+  proof_circuit_uniformity_bus: 10
+  bravais_relation_shape_atlas: 5
+repair_sidecar_frequency_across_all_minimal_covers:
+  labelled_packet_decision_tree: 204
+  ear_decomposition_gluing_grammar: 102
+  observer_gluing_certificate: 102
+  proof_circuit_uniformity_bus: 92
+  savitch_midpoint_certificate_ladder: 92
+  bravais_relation_shape_atlas: 18
+  first_obstruction_cocycle_gate: 18
+  lee_yang_ear_payload_gate: 18
+  minkowski_relation_wall_gate: 18
+  normal_fan_component_packet: 18
+  pde_weak_form_operator: 18
+  pgf_root_curve_section: 18
+  phi4_quartic_density_stress_test: 18
+  root_lattice_two_map_portfolio: 18
+  state_lift_K33_gate: 18
+cover_size_hist={3: 7, 4: 4}
+
+====================================================================================================
+GLOBAL PROOF-ROUTE COVERS
+====================================================================================================
+minimal_global_cover_count=40 size=4
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + bravais_relation_shape_atlas
+    live=relation_lattice_shape
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + first_obstruction_cocycle_gate
+    live=cocycle_exactness
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + lee_yang_ear_payload_gate
+    live=root_ear_payload
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + minkowski_relation_wall_gate
+    live=relation_lattice_shape
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + normal_fan_component_packet
+    live=component_bound
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + pde_weak_form_operator
+    live=pde_weak_form
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + pgf_root_curve_section
+    live=root_ear_payload
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + phi4_quartic_density_stress_test
+    live=pde_weak_form
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + root_lattice_two_map_portfolio
+    live=relation_lattice_shape,root_ear_payload
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + proof_circuit_uniformity_bus + state_lift_K33_gate
+    live=state_lift
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + savitch_midpoint_certificate_ladder + bravais_relation_shape_atlas
+    live=relation_lattice_shape
+  labelled_packet_decision_tree + ear_decomposition_gluing_grammar + savitch_midpoint_certificate_ladder + first_obstruction_cocycle_gate
+    live=cocycle_exactness
+
+====================================================================================================
+FORMAL CONCEPT LATTICE: SIDECAR EXTENTS AND COORDINATE INTENTS
+====================================================================================================
+concept_count=26 informative=24
+  extent_size= 1 intent_size= 6
+    extent=pgf_root_curve_section
+    intent=discriminant_wall, lee_yang_extremality, pgf_curve, root_argument_path, root_ear_payload, root_zero_locus
+  extent_size= 1 intent_size= 5
+    extent=ear_decomposition_gluing_grammar
+    intent=ear_decomposition, ear_parity, nested_ear_order, observer_gluing, strong_connectivity_witness
+  extent_size= 1 intent_size= 4
+    extent=bravais_relation_shape_atlas
+    intent=basis_reduction_word, bravais_shape, low_height_wall, relation_lattice_shape
+  extent_size= 1 intent_size= 4
+    extent=labelled_packet_decision_tree
+    intent=endpoint_owner, finite_address, packet_label, route_purity
+  extent_size= 1 intent_size= 4
+    extent=lee_yang_ear_payload_gate
+    intent=ear_payload_A_vector, root_ear_payload, root_motion, root_zero_locus
+  extent_size= 1 intent_size= 4
+    extent=pde_weak_form_operator
+    intent=boundary_data, pde_weak_form, stiffness_matrix, zero_mode
+  extent_size= 1 intent_size= 4
+    extent=phi4_quartic_density_stress_test
+    intent=boundary_data, pde_weak_form, quartic_density_moment_curve, zero_mode
+  extent_size= 1 intent_size= 4
+    extent=root_lattice_two_map_portfolio
+    intent=ear_certificate, relation_lattice_shape, root_ear_payload, savitch_midpoint
+  extent_size= 1 intent_size= 4
+    extent=savitch_midpoint_certificate_ladder
+    intent=proof_circuit_basis, reachability_halving, savitch_midpoint, uniformity
+  extent_size= 2 intent_size= 3
+    extent=bravais_relation_shape_atlas, minkowski_relation_wall_gate
+    intent=bravais_shape, low_height_wall, relation_lattice_shape
+  extent_size= 2 intent_size= 3
+    extent=pde_weak_form_operator, phi4_quartic_density_stress_test
+    intent=boundary_data, pde_weak_form, zero_mode
+  extent_size= 1 intent_size= 3
+    extent=finite_interval_margin_packet
+    intent=approximation_margin, endpoint_margin, finite_grid_hit
+  extent_size= 1 intent_size= 3
+    extent=first_obstruction_cocycle_gate
+    intent=cocycle_exactness, dual_annihilator, obstruction_syndrome
+  extent_size= 1 intent_size= 3
+    extent=normal_fan_component_packet
+    intent=cech_barcode, component_bound, normal_fan_chamber
+  extent_size= 1 intent_size= 3
+    extent=observer_gluing_certificate
+    intent=chart_overlap, observer_gluing, terminal_exit
+  extent_size= 1 intent_size= 3
+    extent=proof_circuit_uniformity_bus
+    intent=missing_input_vector, proof_circuit_basis, uniformity
+
+====================================================================================================
+TOURNAMENT ANALYSIS ON ABSTRACT REFRAMES
+====================================================================================================
+axes=predicate, repair, minimality, composition, computable, falsifiable, unifies, proof_exit
+tie_path=coordinate_resurrection_sheaf > missing_input_matroid > adjoint_quotient_section_pair > repair_hypergraph_cover > formal_concept_lattice > interval_margin_functor > pde_weak_form_compiler > energy_entropy_dual > raw_scalar_tuning
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+scores={'coordinate_resurrection_sheaf': 8, 'missing_input_matroid': 7, 'adjoint_quotient_section_pair': 6, 'repair_hypergraph_cover': 5, 'formal_concept_lattice': 4, 'interval_margin_functor': 3, 'pde_weak_form_compiler': 2, 'energy_entropy_dual': 1, 'raw_scalar_tuning': 0}
+directed_3cycles=0
+SCCs=[['raw_scalar_tuning'], ['energy_entropy_dual'], ['pde_weak_form_compiler'], ['interval_margin_functor'], ['formal_concept_lattice'], ['repair_hypergraph_cover'], ['adjoint_quotient_section_pair'], ['missing_input_matroid'], ['coordinate_resurrection_sheaf']]
+Hamiltonian_path_count=1
+selected_retention_path=coordinate_resurrection_sheaf > missing_input_matroid > adjoint_quotient_section_pair > repair_hypergraph_cover > formal_concept_lattice > interval_margin_functor > pde_weak_form_compiler > energy_entropy_dual > raw_scalar_tuning
+
+vertex ledger:
+- coordinate_resurrection_sheaf
+  preserves: destroyed coordinates plus legal sections
+  destroys: none essential if sections are proved
+  next_signal: instantiate sheaf sections on HYP-2963 packet fibers
+- missing_input_matroid
+  preserves: circuits of mutually missing coordinates
+  destroys: geometric meaning unless labelled by sidecars
+  next_signal: compute circuits/cocircuits of repair hypergraph
+- adjoint_quotient_section_pair
+  preserves: which quotient has which legal right adjoint section
+  destroys: finite enumeration unless section is concrete
+  next_signal: write quotient/section pairs for root, lattice, time, and circuit maps
+- repair_hypergraph_cover
+  preserves: minimal sidecar covers of shortcut missing vectors
+  destroys: semantic legality if cover is untyped
+  next_signal: attach cover certificate to every shortcut audit
+- formal_concept_lattice
+  preserves: sidecar extents and common coordinate intents
+  destroys: dynamics of next operation unless transitions are added
+  next_signal: mine stable coordinate intents across current carrier library
+- interval_margin_functor
+  preserves: positive intervals and rational-grid resurrection
+  destroys: normalized proof clock unless included
+  next_signal: move HYP-3114 from raw time to normalized slow/ruler intervals
+- pde_weak_form_compiler
+  preserves: operator/boundary data as uniform proof sidecar
+  destroys: discrete packet address without finite-address bridge
+  next_signal: compile Lee-Yang and component data into weak-form rows
+- energy_entropy_dual
+  preserves: PDE/Ising/Lee-Yang entropy-energy analogies
+  destroys: endpoint owner and finite address unless resurrected
+  next_signal: test boundary-data sidecars against root and component packets
+- raw_scalar_tuning
+  preserves: cheap ranking values
+  destroys: almost every coordinate that HYP-3116 says is essential
+  next_signal: demote to scout feature unless repair cover is attached
+
+====================================================================================================
+GENERATED HYPOTHESES AND REFRAMES
+====================================================================================================
+- H1 coordinate resurrection: Every failed scalar shortcut can be made productive by naming the first destroyed coordinate and a minimal repair cover; the cover is the theorem-facing object.
+- H2 proof sheaf: Finite-address, observer-gluing, endpoint-owner, and uniformity are the base sheaf stalk; root/ear, lattice, component, cocycle, state-lift, and PDE sidecars are local sections.
+- H3 adjoint quotient: A quotient is legal exactly when it has a computable right-adjoint section on the coordinate demanded by the next proof operation.
+- H4 matroid debt: The recurring missing-input vectors form circuits of a matroid-like repair object; finite_address/observer_gluing/endpoint_owner/uniformity behave like coloops in the current model.
+- H5 energy-root duality: PDE weak forms and Ising energy are dual to Lee-Yang root confinement only after boundary and zero-mode coordinates are resurrected.
+- H6 approximation as section: Irrational/transcendental approximation is not a separate proof route; it is a section from positive interval margin to finite grid address.
+- H7 concept-lattice atlas: The stable intents in the sidecar concept lattice should become packet schema fields before another broad analogy is added.
+- H8 PGF curve over scalar: The single p0 value is a lossy quotient of a whole PGF root curve; extremality should track zero trajectories, discriminant walls, and root-ear payload transfer.
+- H9 ear grammar as gluing: Directed, odd, and nested ear decompositions are not analogies in bulk: they are three possible observer-gluing certificate grammars with different parity and nesting debts.
+- H10 Bravais wall ownership: Minkowski/Bravais signals are strongest when they name the relation-lattice shape and low-height wall owner; raw volume is an unowned pressure signal.
+- H11 Savitch proof compression: A finite LRC route may need a Savitch-style midpoint ladder: recomputable certificate segments replace storing the entire proof path.
+- H12 phi4 stress discipline: The quartic density analogy is useful as a stress test for moment walls and zero modes, but illegal as a proof route until boundary/operator data are retained.
+
+new signals:
+  - destroyed_coordinate_vector
+  - coordinate_resurrection_cover
+  - adjoint_section_status
+  - repair_cover_rank
+  - concept_lattice_intent_id
+  - core_stalk_presence
+  - live_section_type
+  - bottleneck_coordinate_frequency
+  - matroid_circuit_debt
+  - section_gluing_failure_mode
+  - pgf_zero_trajectory_signature
+  - discriminant_wall_crossing_count
+  - observer_ear_certificate_type
+  - odd_ear_payload_parity_debt
+  - nested_ear_branchwidth_shadow
+  - bravais_shape_wall_signature
+  - midpoint_certificate_depth_profile
+  - quartic_moment_wall_profile

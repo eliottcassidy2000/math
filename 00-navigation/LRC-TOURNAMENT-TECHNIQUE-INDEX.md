@@ -192,7 +192,9 @@ obligations, and proof-carrier interfaces.
   vertices: coordinate-resurrection sheaves, missing-input matroids, adjoint
   quotient/section pairs, concept lattices, repair hypergraphs, and scalar
   quotients.  Pairwise observable is retained LRC predicate plus minimal
-  repair cover, not raw signal strength.
+  repair cover, not raw signal strength.  S267 records the first fingerprint:
+  transitive reframe tournament, `score_hist={0:1,...,8:1}`, one Hamiltonian
+  path, led by coordinate-resurrection sheaf then missing-input matroid.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -4378,13 +4380,23 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3117's proof-circuit past-work compiler.  Once a
   shortcut has a nonempty missing vector, the next question is which minimal
   sidecar cover or adjoint section resurrects the coordinate exactly when the
-  next proof operation needs it.
+  next proof operation needs it.  The scout models `17` sidecars and `11`
+  shortcuts with base stalk `finite_address + observer_gluing +
+  endpoint_owner + uniformity` plus one live sidecar.  Scalar-like shortcuts
+  have size-`4` covers (`40` minimal choices); live-section shortcuts have
+  size-`3` covers.
 - **Preserves:** destroyed-coordinate vector, repaired coordinate set,
   minimal repair cover, concept-lattice intent, adjoint section status,
   bottleneck coordinate, terminal exit, and named debt.
 - **Forgets / guardrail:** raw signal strength is not the pairwise observable.
   A scalar, root count, circuit gate count, lattice volume, energy, or named
   theorem loses if it cannot repair the active missing coordinate.
+- **Fingerprint:** `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`,
+  `directed_3cycles=0`, singleton SCCs, `Hamiltonian_path_count=1`, selected
+  path `coordinate_resurrection_sheaf > missing_input_matroid >
+  adjoint_quotient_section_pair > repair_hypergraph_cover >
+  formal_concept_lattice > interval_margin_functor > pde_weak_form_compiler >
+  energy_entropy_dual > raw_scalar_tuning`.
 - **Pointers:** HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112,
   HYP-3111, HYP-3108, HYP-3107, HYP-3102, HYP-3098, HYP-3083, HYP-2963,
   LTI-254, LTI-252, LTT-152, LTT-150, T1193, OPEN-Q-108.

@@ -1,6 +1,14 @@
 ## codex-2026-06-27-S267 -- LRC14 coordinate-resurrection sheaf and adjoint repair calculus -- HYP-3118
 
-Reserved HYP-3118/T1193/LTI-254/LTT-152 for a long abstract synthesis after HYP-3116's missing-input ledger and incoming HYP-3117's proof-circuit past-work compiler.  Planned computation: build a repair hypergraph over HYP-3112-HYP-3117 carriers, compute minimal repair covers and concept-lattice intents, and run Tournament Analysis on reframes rather than runners, roots, gates, or constants.  Status at reservation: no proof, scout pending.
+Completed the HYP-3118/T1193/LTI-254/LTT-152 coordinate-resurrection scout after HYP-3116's missing-input ledger and HYP-3117's proof-circuit past-work compiler.  Added `04-computation/lrc14_coordinate_resurrection_sheaf_codex_s267.py`, stored output `05-knowledge/results/lrc14_coordinate_resurrection_sheaf_codex_s267.out`, detail `05-knowledge/hypotheses/HYP-3118-lrc14-coordinate-resurrection-sheaf.md`, and reflection `07-reflections/lrc14-coordinate-resurrection-sheaf-codex-s267.md`.
+
+The scout models `17` sidecars and `11` shortcuts with proof-route predicate `finite_address + observer_gluing + endpoint_owner + uniformity + one live section`.  Scalar-like shortcuts with no live section (`raw_p0_scalar`, one-literal threshold, root count, direct-time interval) require size-`4` repair covers and have `40` minimal choices.  Shortcuts already carrying a live section require size-`3` covers.  All-minimal-cover counts make labelled packet decision tree universal, split observer repair between chart certificate and ear-decomposition grammar, and split uniformity repair between proof-circuit bus and Savitch midpoint ladder.  The two maps are quotient-to-destroyed-coordinate repair and theorem-to-new-signal dictionary for Savitch, Bravais, Lee-Yang/PGF roots, `phi4`, and directed/odd/nested ears.  Tournament Analysis uses reframes as vertices, not runners or roots; fingerprint is transitive, `score_hist={0:1,...,8:1}`, one Hamiltonian path led by `coordinate_resurrection_sheaf > missing_input_matroid > adjoint_quotient_section_pair`.
+
+Rebased over incoming S266 proof-carrier work before close-out.  Connection:
+HYP-2112 `Phi`, HYP-2108 `P`, HYP-2109 `L/M/R`, HYP-3023 magnitude cocycle,
+HYP-3077 Horn closure, and HYP-3082 protected branch status become named repair
+sections for exact-gap, endpoint-activation, wall-crossing, route-purity,
+legality, and bridge-safety coordinates inside the same HYP-3118 schema.
 
 ## codex-2026-06-27-S266 -- circuit lower-bound missing-input ledger reservation -- HYP-3116
 ## codex-2026-06-27-S266 -- circuit lower-bound missing-input ledger -- HYP-3116

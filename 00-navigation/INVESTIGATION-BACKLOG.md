@@ -17,19 +17,41 @@
 
 ## Lead codex-2026-06-27-S267: LRC14 coordinate-resurrection sheaf and adjoint repair calculus
 
-**Status:** RESERVED / abstract synthesis plus executable scout pending; not proof (HYP-3118/T1193).
+**Status:** EVIDENCE / executable coordinate-repair scout and abstract synthesis;
+not proof (HYP-3118/T1193).
 
 Claimed files:
 `05-knowledge/hypotheses/HYP-3118-lrc14-coordinate-resurrection-sheaf.md`,
 `04-computation/lrc14_coordinate_resurrection_sheaf_codex_s267.py`,
 `05-knowledge/results/lrc14_coordinate_resurrection_sheaf_codex_s267.out`.
 
-Goal: after HYP-3116's missing-input ledger and HYP-3117's proof-circuit
-past-work compiler, model quotient repair as a coordinate-resurrection
-problem.  Compute minimal legal sidecar covers,
-concept-lattice intents, bottleneck coordinates, and a reframe tournament
-whose vertices are adjunction/sheaf/repair grammars rather than runners or
-scalar signals.
+Readout: after HYP-3116's missing-input ledger and HYP-3117's proof-circuit
+past-work compiler, the S267 scout models quotient repair as a
+coordinate-resurrection problem.  It uses a base stalk
+`finite_address + observer_gluing + endpoint_owner + uniformity` plus one live
+section.  Scalar-like shortcuts with no live section require size-`4` repair
+covers and have `40` minimal choices; live-section shortcuts require size-`3`
+covers.  Observer repair splits between chart certificates and
+ear-decomposition grammars; uniformity repair splits between proof-circuit buses
+and Savitch midpoint ladders.  The two comprehensive maps are:
+quotient-to-destroyed-coordinate repair, and theorem-to-new-signal dictionary
+for Savitch, Bravais, Lee-Yang/PGF roots, `phi4`, and directed/odd/nested ears.
+Tournament vertices are reframes rather than runners or scalar signals, with a
+transitive retention path led by `coordinate_resurrection_sheaf`.  Rebased over
+the S266 proof-carrier augmentation, this also treats HYP-2112 `Phi`, HYP-2108
+`P`, HYP-2109 `L/M/R`, HYP-3023 magnitude cocycle, HYP-3077 Horn closure, and
+HYP-3082 protected branch status as candidate repair sections for exact-gap,
+endpoint-activation, wall-crossing, route-purity, legality, and bridge-safety
+coordinates.
+
+Next: add `destroyed_coordinate_vector`, `coordinate_resurrection_cover`,
+`repair_cover_rank`, `adjoint_section_status`, `observer_ear_certificate_type`,
+`midpoint_certificate_depth_profile`, `pgf_zero_trajectory_signature`,
+`bravais_shape_wall_signature`, `phi_gap_sum`, `P_max_activation`,
+`LMR_terminal_state`, `magnitude_cocycle_route_purity`,
+`horn_legality_status`, `protected_branch_status`, and
+`terminal_exit_or_named_debt` to HYP-2963, HYP-3098, HYP-3107, and HYP-3112
+packet rows.
 
 Namespace: HYP-3118 / LTI-254 / LTT-152 / T1193 / OPEN-Q-108.
 
