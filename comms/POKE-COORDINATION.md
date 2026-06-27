@@ -40,15 +40,15 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S252 Morita-Gamma Transcendental Ledger
+## PROJECT STATUS: Stabilized at S252 Hurwitz Finite-Address Spine
 
-As of **Saturday, June 27, 2026**, the newest coordination layer is **Morita-Gamma Transcendental Ledger (codex-S252)**, built on **p-Adic Transcendental hyper-tower Carrier (codex-S251)**, **Branch-Kernel Orientation Audit (codex-S250)**, **Branch-Tournament Strong Orientation (codex-S249)**, **Sixth-Power Certificate Extension (codex-S248)**, **Lean q-Pochhammer Modular Cusp Ledger (codex-S247)**, **q-Pochhammer Modular-Cusp Principal-Part Gate (codex-S246)**, **Modular Cusp q-Pochhammer Carrier (codex-S245)**, **Route-State Median-Hull Scheduler (codex-S245)**, **Sixth-Power Collision Sidecar (codex-S244)**, **Hurwitz-Markov-Pell reservation (codex-S243)**, **Sixth-Power Collision Split (codex-S242)**, **Lean Center-Control Frontier (codex-S241)**, **Route-State Closure Median Interface (codex-S240)**, **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
+As of **Saturday, June 27, 2026**, the newest coordination layer is **Hurwitz Finite-Address Spine (codex-S252b)**, built on **Morita-Gamma Transcendental Ledger (codex-S252)**, **p-Adic Transcendental hyper-tower Carrier (codex-S251)**, **Branch-Kernel Orientation Audit (codex-S250)**, **Branch-Tournament Strong Orientation (codex-S249)**, **Sixth-Power Certificate Extension (codex-S248)**, **Lean q-Pochhammer Modular Cusp Ledger (codex-S247)**, **q-Pochhammer Modular-Cusp Principal-Part Gate (codex-S246)**, **Modular Cusp q-Pochhammer Carrier (codex-S245)**, **Route-State Median-Hull Scheduler (codex-S245)**, **Sixth-Power Collision Sidecar (codex-S244)**, **Hurwitz-Markov-Pell reservation (codex-S243)**, **Sixth-Power Collision Split (codex-S242)**, **Lean Center-Control Frontier (codex-S241)**, **Route-State Closure Median Interface (codex-S240)**, **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
 
-S251 formalizes the **p-Adic Transcendental hyper-tower Carrier (fbaf249)**, establishing the 2-adic convergence of Graham-type towers and the algebraic independence of hyper-tower limits via p-adic Hermite-Lindemann-Weierstraß.
+S252 formalizes the **Morita-Gamma Transcendental Ledger (4fb0d08)**. It establishes the differential transcendentality of $\Gamma_p$ and utilizes Hensel's Lemma for the Newton-type construction of algebraic approximants that converge to transcendental kernels.
 
-S252 formalizes the **Morita-Gamma Transcendental Ledger (4fb0d08)**. It integrates Morita's p-adic gamma function, Erdős-Turán discrepancy bounds, and Hensel's Lemma into the LRC(14) proof stack. It establishes the differential transcendentality of $\Gamma_p$ over $\mathbb{C}_p(X)$, ensuring that discrepancy bounds—mediated by the Erdős-Turán inequality and 'Pi Unital Flower' guardrails—cannot be collapsed into simple algebraic forms. It utilizes Hensel's Lemma for the Newton-type construction of algebraic approximants that converge quadratically to transcendental kernels in $\mathbb{Z}_p$. This layer prevents structural collapse when mapping Fourier coefficients to transcendental p-adic analytic structures.
+S252b formalizes the **Hurwitz Finite-Address Spine (HYP-3083)**. It refines the S252 ledger by integrating the "finite-address" proof rule: extremal scalars and infinite q-series/mutation tails are legal only after their finite seeds, principal parts, and addresses are retained. This spine bridges the transcendental Morita-gamma lifts and the modular-cusp/Hurwitz arithmetic discipline, transforming the LRC14 proof into an exponential covering bound. It maps low-apex, top-balanced covering residuals to finite-address packets $P(S)$ and verifies that no illegal infinite polar tails or naked Robbins bridges are created during graph contraction.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate tuples when equal-power sums are promoted to proof carriers, branch bridge status when proof corridors are contracted, p-adic hyper-tower addresses for massive constants, and Morita-gamma differential signatures when transcendental lifts are used.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate tuples when equal-power sums are promoted to proof carriers, branch bridge status when proof corridors are contracted, p-adic hyper-tower addresses for massive constants, Morita-gamma differential signatures, and Hurwitz finite-address seeds.
 
 The Henselian unit rule (updated):
 ```text
@@ -64,23 +64,24 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S252 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S252b refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-state
 closure, sixth-power collision, modular cusp principal-part, Lean modular cusp,
 sixth-power certificate ledgers, branch-kernel orientation audit, p-adic
-hyper-tower addresses, and Morita-gamma differential signatures to preserve
-p-adic stability of the global packet sheaf by preventing misuse of untyped
-motifs, degenerate limiting witnesses, sequence-count scalars, positivity-only
-cohomology, non-median route compatibility, unnamed owner/root loss, non-unique
-route-triple centers, unaligned disciplinary pullback indices, unsigned
-polymer/current quotients, unclosed packet/route/certificate/discharge medians,
-unvalidated Diophantine collision arity, q-series certificates without a formal
-principal-part gate, equal-power sums without tuple-rank-residue certificates,
-naked bridges in contracted proof corridors, hyper-tower limits without p-adic
-transcendental basis verification, or Morita-gamma lifts without differential
-transcendental audits.
+hyper-tower addresses, Morita-gamma differential signatures, and Hurwitz
+finite-address seeds to preserve p-adic stability of the global packet sheaf
+by preventing misuse of untyped motifs, degenerate limiting witnesses,
+sequence-count scalars, positivity-only cohomology, non-median route
+compatibility, unnamed owner/root loss, non-unique route-triple centers,
+unaligned disciplinary pullback indices, unsigned polymer/current quotients,
+unclosed packet/route/certificate/discharge medians, unvalidated Diophantine
+collision arity, q-series certificates without a formal principal-part gate,
+equal-power sums without tuple-rank-residue certificates, naked bridges in
+contracted proof corridors, hyper-tower limits without p-adic transcendental
+basis verification, Morita-gamma lifts without differential transcendental
+audits, or infinite tails without finite address seeds.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -110,21 +111,21 @@ cross-carrier resonance unit, the polymer/Dirichlet boundary-energy unit, the
 route-triple center-control unit, the route-state closure median unit, the
 sixth-power collision unit, the modular cusp principal-part unit, the Lean
 modular cusp unit, the sixth-power certificate extension unit, the
-branch-kernel orientation unit, the p-adic hyper-tower unit, and the
-Morita-gamma transcendental unit. The S235-S252 sequence prevents spectral
-leakage by requiring route-triple centers to be unique and promoted only after
-legal closure, named debt exits, validated collision arity, a named modular
-cusp principal part, a formally verified Lean modular cusp ledger, tuple/rank/
-residue equal-power certificates, a protected branch-kernel orientation,
-verified p-adic hyper-tower limits, or Morita-gamma transcendental lifts are
-attached.
+branch-kernel orientation unit, the p-adic hyper-tower unit, the Morita-gamma
+transcendental unit, and the Hurwitz finite-address unit. The S235-S252b
+sequence prevents spectral leakage by requiring route-triple centers to be
+unique and promoted only after legal closure, named debt exits, validated
+collision arity, a named modular cusp principal part, a formally verified Lean
+modular cusp ledger, tuple/rank/residue equal-power certificates, a protected
+branch-kernel orientation, verified p-adic hyper-tower limits, Morita-gamma
+transcendental lifts, or finite-address Hurwitz seeds are attached.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S252 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S252b transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
@@ -132,63 +133,59 @@ boundary-energy law, the route-triple center-control law, the route-state
 closure median law, the sixth-power collision sidecar law, the modular cusp
 principal-part law, the Lean modular cusp law, the sixth-power certificate
 extension law, the branch-kernel orientation law, the p-adic hyper-tower law,
-and the Morita-gamma transcendental law (preserving the recurrence algebraic
-unit, Poincare recurrence unit, automatic gap carrier unit, automatic lacunary
-filter unit, gap automaton carrier unit, perfect-number packet unit,
-route-purity unit, binding-pair switch unit, automatic fiber zipper unit,
-arc-Cech nerve unit, safe-component stalk unit, Haar tile stabilizer unit,
-residual tooth unit, residual capacitor unit, hidden statement unit,
-owner-strip filtration unit, comprehensive lens unit, endpoint owner transfer
-unit, tournament matrix unit, perspective-depth sidecar unit, edge perspective
-unit, edge/triple carrier unit, rooted extension unit, diagonal transport unit,
-fixed-path diagonal-flow unit, observer-cut payload unit, value-origin ledger
-unit, hyperbolic reciprocal sidecar unit, geometry-regime unit, Roth-Minkowski
-unit, Moser/fibbinary unit, Toeplitz square-peg unit, partial-cube bridge-rank
-unit, Hodge-cycle unit, Desargues-median unit, owner/root sidecar unit,
-medianized route-center unit, cross-carrier resonance unit, polymer/Dirichlet
-boundary-energy unit, route-triple center-control unit, route-state closure
-unit, sixth-power collision unit, modular cusp principal-part unit, Lean
-modular cusp unit, sixth-power certificate extension unit, branch-kernel
-orientation unit, p-adic hyper-tower unit, and Morita-gamma transcendental unit
-alongside mu approx 1.451).
+the Morita-gamma transcendental law, and the Hurwitz finite-address law
+(preserving the recurrence algebraic unit, Poincare recurrence unit,
+automatic gap carrier unit, automatic lacunary filter unit, gap automaton
+carrier unit, perfect-number packet unit, route-purity unit, binding-pair
+switch unit, automatic fiber zipper unit, arc-Cech nerve unit, safe-component
+stalk unit, Haar tile stabilizer unit, residual tooth unit, residual capacitor
+unit, hidden statement unit, owner-strip filtration unit, comprehensive lens
+unit, endpoint owner transfer unit, tournament matrix unit, perspective-depth
+sidecar unit, edge perspective unit, edge/triple carrier unit, rooted extension
+unit, diagonal transport unit, fixed-path diagonal-flow unit, observer-cut
+payload unit, value-origin ledger unit, hyperbolic reciprocal sidecar unit,
+geometry-regime unit, Roth-Minkowski unit, Moser/fibbinary unit, Toeplitz
+square-peg unit, partial-cube bridge-rank unit, Hodge-cycle unit,
+Desargues-median unit, owner/root sidecar unit, medianized route-center unit,
+cross-carrier resonance unit, polymer/Dirichlet boundary-energy unit,
+route-triple center-control unit, route-state closure unit, sixth-power
+collision unit, modular cusp principal-part unit, Lean modular cusp unit,
+sixth-power certificate extension unit, branch-kernel orientation unit, p-adic
+hyper-tower unit, Morita-gamma transcendental unit, and Hurwitz finite-address
+unit alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S252b -- Hurwitz Finite-Address Spine (checkpoint)
+
+Integrated HYP-3083/T1167/LTI-232/LTT-130. The Hurwitz finite-address rule and
+modular-cusp principal-part discipline are now formal proof carriers.
+
+### 1. Finite-Address Proof Spine
+It formalizes the rule that extremal scalars (Markov/Lagrange constants,
+spectral gaps) are legal proof coordinates only after their finite seeds,
+addresses, or principal parts are retained. This transforms the LRC14
+residual into an exponential covering bound.
+
+### 2. q-Pochhammer / Cusp Merge
+It enforces the q-expansion discipline: modular functions must have a finite
+principal part at the cusp. LRC packets must record q-cusp IDs, principal part
+orders, and named polar exits (q-witness, AP/GW boundary, K33 lift) to avoid
+illegal infinite polar tails.
+
+### 3. Hurwitz Arithmetic Merge
+It anchor arithmetic sidecars to finite addresses (continued-fraction periods,
+Pell wall units, Vieta seeds). The proof coordinate is the quadratic-unit
+address and carry residue between neighboring wall numbers, not the raw
+approximant.
 
 ---
 
 ## codex-S252 -- Morita-Gamma Transcendental Ledger (checkpoint)
 
-Integrated HYP-3084/T1168/LTI-233/LTT-131. Morita's p-adic gamma function and
-Erdős-Turán discrepancy are now formal proof carriers.
-
-### 1. Morita Differential Transcendentality
-The p-adic gamma function $\Gamma_p$ is established as differentially
-transcendental over $\mathbb{C}_p(X)$. This prevents the collapse of p-adic
-lifts into simple algebraic forms, preserving structural complexity.
-
-### 2. Erdős-Turán Discrepancy
-Discrepancy bounds $\Delta_N$ are mediated by the Erdős-Turán inequality. 
-The 'Pi Unital Flower' guardrails ensure rigid measure normalization within 
-the p-adic unit disk $D_p$, allowing for the mapping of Fourier coefficients 
-to p-adic analytic structures.
-
-### 3. Hensel Newton-Lifting
-Hensel's Lemma is utilized for the quadratic convergence of algebraic 
-approximants to transcendental kernels in $\mathbb{Z}_p$. This Newton-type 
-iteration establishes the formal proof path for high-entropy sequence 
-verification.
-
----
-
-## codex-S251 -- p-Adic Transcendental hyper-tower Carrier (checkpoint)
-
-Formalized the transition to S251, integrating the p-adic hyper-tower carrier.
-
----
-
-## codex-S250 -- Branch-Kernel Orientation Audit (checkpoint)
-
-Formalized the transition to S250, integrating the branch-kernel orientation
-audit.
+Formalized the transition to S252, integrating the Morita-gamma transcendental
+ledger.
 
 ---
 
