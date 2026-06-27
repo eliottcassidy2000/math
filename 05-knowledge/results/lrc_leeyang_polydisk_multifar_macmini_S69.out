@@ -1,0 +1,29 @@
+==========================================================================================
+ base B=(0, 1, 2, 3, 4, 5, 6, 7)  p0(B)=0.3272  nearest-zero radius rho(B) = 1.4886  (>1 = Lee-Yang)
+==========================================================================================
+
+ adding far to the good base -- nearest-zero radius rho (>=1 = Lee-Yang PRESERVED):
+   single-far r=1    : rho = [1.782, 1.597, 1.603, 1.590, 1.594, 1.589]   min=1.589  OK >=1
+   separated r=2     : rho = [1.728, 1.744, 1.731]   min=1.728  OK >=1
+   resonant r=2      : rho = [1.559, 1.818, 1.862, 1.826]   min=1.559  OK >=1
+   tight doublet r=2 : rho = [1.701, 1.683, 1.703]   min=1.683  OK >=1
+   separated r=3     : rho = [2.090, 1.927]   min=1.927  OK >=1
+   resonant r=3      : rho = [1.923, 1.904, 2.006]   min=1.904  OK >=1
+
+   random multi-far scan (400, r=2..4): MIN nearest-zero radius = 1.5589 @ F=(21, 28)
+   OVERALL FLOOR rho = 1.5589 @ ('resonant r=2', (21, 28))
+
+==========================================================================================
+ SINGLE-FAR BUILDING BLOCK: |zero| >= 1 <=> P(far misses its sector | base good) <= 1/2
+==========================================================================================
+   f=  15: d(f)=p0(Bu{f})/p0(B) = 1.0416 (>1: far INCREASES coverage => zero pushed OUT)
+   f=  21: d(f)=p0(Bu{f})/p0(B) = 1.1372 (>1: far INCREASES coverage => zero pushed OUT)
+   f=  28: d(f)=p0(Bu{f})/p0(B) = 1.0894 (>1: far INCREASES coverage => zero pushed OUT)
+   f=  56: d(f)=p0(Bu{f})/p0(B) = 1.0878 (>1: far INCREASES coverage => zero pushed OUT)
+   f= 100: d(f)=p0(Bu{f})/p0(B) = 1.1062 (>1: far INCREASES coverage => zero pushed OUT)
+   f= 500: d(f)=p0(Bu{f})/p0(B) = 1.1086 (>1: far INCREASES coverage => zero pushed OUT)
+
+READING: adding far to a GOOD base keeps the nearest zero >= 1 (Lee-Yang PRESERVED) with a positive
+FLOOR -- because each far increases coverage (d(f)>1) = a coverage-increasing Asano factor that pushes
+the zeros outward. This is HYP-3127 obligation 1 (single-far Lee-Yang region) + the Asano monotonicity:
+the multi-far G_N stays zero-free in |z|<=1, so the multi-far floor R'>=c follows from the good base.
