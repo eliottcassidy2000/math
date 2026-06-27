@@ -9,8 +9,8 @@ as a controlled-forgetting guardrail for the current LRC14 endgame:
   roots themselves;
 * the live LRC14 proof has the same shape: the useful invariant is a packet of
   low/middle interaction data (Q-floor, signed SPEC low/tail, Lee-Yang radius,
-  edge tail/tip sectors, global-consistency quotient), not any single scalar
-  shadow.
+  edge tail/tip sectors, global-consistency quotient, assembled multi-far
+  factorization), not any single scalar shadow.
 """
 
 from __future__ import annotations
@@ -140,9 +140,14 @@ def print_lrc_packet_map() -> None:
             "HYP-3134: A000568 sits between raw edge sectors and paired tail/tip child packets as a global-consistency quotient.",
         ),
         (
+            "assembled multi-far floor",
+            "factorized into three named proof fields",
+            "HYP-3136: L(S)=Rprime*meas(R-safe)*meas(Q-lonely), with Q/apex minorant, R-safe wide-V/bounded-core floor, and signed SPEC coupling.",
+        ),
+        (
             "Rprime coupling",
             "certified but not fully theorem-packaged",
-            "HYP-3129: signed SPEC gives Rprime >= 0.64178 on the tested family; needs closed-form constant chase.",
+            "HYP-3129/HYP-3136: signed SPEC gives Rprime >= 0.64178 on the tested family; needs closed-form constant chase.",
         ),
         (
             "absolute minorant envelope",
@@ -172,8 +177,9 @@ def print_lrc_packet_map() -> None:
         "(-120, 320).  The LRC14 analogue is to stop promoting raw p0, raw root "
         "radius, or raw tournament counts alone.  The current proof packet should "
         "carry Q-floor constants, signed SPEC low/tail, Lee-Yang radius/far-push "
-        "status, edge tail/tip deletion sectors, and a named global-consistency "
-        "quotient.  The remaining work is a closed-form middle-layer packet "
+        "status, edge tail/tip deletion sectors, a named global-consistency "
+        "quotient, and the HYP-3136 assembled multi-far factorization.  The "
+        "remaining work is a closed-form middle-layer packet "
         "theorem, sharpened by S70 to a k=8 biquadratic/phi4 coefficient bound."
     )
 

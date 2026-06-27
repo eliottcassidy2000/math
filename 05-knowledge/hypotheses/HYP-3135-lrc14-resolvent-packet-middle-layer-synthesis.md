@@ -6,6 +6,7 @@ source: codex-2026-06-27-S272
 script: 04-computation/lrc14_resolvent_packet_synthesis_codex_s272.py
 result: 05-knowledge/results/lrc14_resolvent_packet_synthesis_codex_s272.out
 extends:
+  - HYP-3136
   - HYP-3134
   - HYP-3133
   - HYP-3132
@@ -73,15 +74,14 @@ raw De Moivre residual).  It should preserve the middle packet:
 
 ## Incoming work integrated
 
-The incoming HYP-3132 namespace currently carries two compatible front-line
-updates.  The S254 update assembles the multi-far floor closure: the covering
-factorization `L(S)=Rprime*meas(R-safe)*meas(Q-lonely)` now has the `Q` block,
-the `R-safe` wide-V reduction, and the signed-SPEC `Rprime` certificate in
-place, with the remaining work reduced to a finite constant chase.  The S70
-update sharpens the bounded-core residue: the whole remaining core is the k=8
-dip, whose gK8/Delsarte dual quartic `(t-1)(t-2)(t-4)(t-5)` folds under
-`u=t-3` to the biquadratic `u^4 - 5u^2 + 4`, with discriminant `9`.  That is
-the local phi4/De Moivre payload this HYP-3135 packet is trying to preserve.
+HYP-3136 assembles the multi-far floor closure: the covering factorization
+`L(S)=Rprime*meas(R-safe)*meas(Q-lonely)` now has the `Q` block, the `R-safe`
+wide-V reduction, and the signed-SPEC `Rprime` certificate in place, with the
+remaining work reduced to a finite constant chase.  HYP-3132 sharpens the
+bounded-core residue: the whole remaining core is the k=8 dip, whose
+gK8/Delsarte dual quartic `(t-1)(t-2)(t-4)(t-5)` folds under `u=t-3` to the
+biquadratic `u^4 - 5u^2 + 4`, with discriminant `9`.  That is the local
+phi4/De Moivre payload this HYP-3135 packet is trying to preserve.
 
 HYP-3134 (incoming A000568 edge-envelope quotient) sharpens HYP-3133: raw
 four-sector edge decks are a lower envelope, paired tail/tip child packets are

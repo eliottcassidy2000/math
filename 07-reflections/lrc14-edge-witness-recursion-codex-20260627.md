@@ -102,14 +102,18 @@ minorant/zero-free/far-push data, close or descend every tail child by
 bounded-core SPEC data, and emit the first lost coordinate as named debt when
 neither side closes.
 
-The post-rebase incoming work sharpens both ends.  HYP-3133 adds an A000568
-middle quotient between the four-sector word and paired child deck; it should
-stratify the finite SPEC constant chase before a row is escalated to named
-resonance debt.  HYP-3132 says the tail-side bounded-core obstruction is the
-k=8 De Moivre/phi4 biquadratic resolvent, not an undifferentiated core.  The
-renumbered HYP-3134 then packages the multi-far floor as
-`Rprime * meas(R-safe) * meas(Q-lonely)`: tip stabilizers, tail binding, and
-signed coupling.
+The post-rebase incoming work sharpens both ends and the middle.  HYP-3133
+adds an A000568 middle quotient between the four-sector word and paired child
+deck; it should stratify the finite SPEC constant chase before a row is
+escalated to named resonance debt.  HYP-3134 sharpens this into the edge-
+envelope/global-consistency quotient: raw sector data is below it, paired
+children are above it, and legal forgetting needs a named gluing class.
+HYP-3132 says the tail-side bounded-core obstruction is the k=8 De
+Moivre/phi4 biquadratic resolvent, not an undifferentiated core.  HYP-3135
+keeps the De Moivre/SPEC middle payload from collapsing into scalar
+numerology.  The renumbered HYP-3136 then packages the multi-far floor as
+`Rprime * meas(R-safe) * meas(Q-lonely)`: tip stabilizers, tail binding, legal
+quotienting, and signed coupling.
 
 HYP-3122/S67's `phi4` quartic-stabilizer signal fits as an edge-wall stress
 test.  It is not yet a proof carrier by itself.  It becomes a proof-facing

@@ -9,6 +9,8 @@ tournament_technique: LTT-157
 script: 04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py
 result: 05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out
 related:
+  - HYP-3136
+  - HYP-3135
   - HYP-3134
   - HYP-3133
   - HYP-3132
@@ -179,7 +181,7 @@ tail/tip deletion children and cross-sector word are genuine information
 coordinates before an `R-safe packet -> Q-safe packet` is compressed into the
 multi-far `Rprime` floor.
 
-## Edge Information Rule After HYP-3131/HYP-3132/HYP-3133/HYP-3134
+## Edge Information Rule After HYP-3131/HYP-3132/HYP-3133/HYP-3134/HYP-3135/HYP-3136
 
 The useful abstraction is now an information split, not a pictorial edge
 analogy.  In the lifted covering packet
@@ -213,11 +215,16 @@ sector word -> A000568 extension shadow -> paired endpoint children.
 ```
 
 That layer is not a proof engine, but it is a finite row stratifier for the
-HYP-3129 SPEC constant chase.  Incoming HYP-3132 then identifies the tail-side
-bounded-core hard node as the k=8 De Moivre/phi4 biquadratic resolvent, while
-HYP-3134 names the assembled multi-far factorization.  Thus the edge rule is
-now: tip stabilizes, tail binds, the middle A000568 shadow stratifies, and the
-orientation word carries the signed coupling.
+HYP-3129 SPEC constant chase.  HYP-3134 sharpens the same row into an
+edge-envelope/global-consistency quotient: raw sector data is below it,
+paired tail/tip child data is above it, and legal proof forgetting must pass
+through a named gluing class.  Incoming HYP-3132 identifies the tail-side
+bounded-core hard node as the k=8 De Moivre/phi4 biquadratic resolvent.
+HYP-3135 packages the corresponding algebraic middle payload, while HYP-3136
+names the assembled multi-far factorization.  Thus the edge rule is now: tip
+stabilizes, tail binds, the A000568/global-consistency quotient stratifies
+legal forgetting, the resolvent packet preserves middle-layer coupling, and
+the orientation word carries the signed coupling.
 
 ## Integration With Existing Threads
 

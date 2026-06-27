@@ -9,6 +9,8 @@ tournament_technique: LTT-160
 script: 04-computation/a000568_edge_envelope_lrc14_codex_s272.py
 result: 05-knowledge/results/a000568_edge_envelope_lrc14_codex_s272.out
 related:
+  - HYP-3136
+  - HYP-3135
   - HYP-3133
   - HYP-3132
   - HYP-3131
@@ -107,14 +109,15 @@ only by a named global-consistency rule.  For LRC14, that rule should be the
 combined HYP-3129 resonance-lattice/SPEC certificate, HYP-3125 edge-floor
 packet, and HYP-3123 normal-fan/Cech or observer-gluing legality exit.
 
-Post-fetch integration: incoming HYP-3133 supplies the direct A000568 edge-
-sandwich scout, incoming HYP-3132 assembles the multi-far floor into a finite
-constant chase, incoming HYP-3130 supplies the Gaussian/Beurling-Selberg
-minorant side of the same tool stack, and incoming HYP-3131 says far elements
-push miss-PGF zeros outward so the multi-far part is not the main obstruction.
-HYP-3134 is compatible with all four: it is not a new analytic floor, but the
-quotient discipline for deciding when those certificates may forget the
-HYP-3124 paired child payload.
+Post-fetch integration: HYP-3133 supplies the direct A000568 edge-sandwich
+scout, HYP-3136 assembles the multi-far floor into a finite constant chase,
+HYP-3130 supplies the Gaussian/Beurling-Selberg minorant side of the same
+tool stack, and HYP-3131 says far elements push miss-PGF zeros outward so the
+multi-far part is not the main obstruction.  HYP-3132 names the bounded-core
+k=8 De Moivre/phi4 tail node, and HYP-3135 keeps the corresponding middle
+resolvent/SPEC payload.  HYP-3134 is compatible with all of these: it is not
+a new analytic floor, but the quotient discipline for deciding when those
+certificates may forget the HYP-3124 paired child payload.
 
 ## Tournament Analysis
 

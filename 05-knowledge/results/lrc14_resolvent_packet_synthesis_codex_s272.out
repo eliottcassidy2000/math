@@ -41,8 +41,10 @@ CURRENT LRC14 REMAINING-PROOF MAP
   HYP-3131: far elements push miss-PGF zeros outward; multi-far reduces to bounded core.
 - global quotient discipline: A000568 wedge is a proof-legality signal
   HYP-3134: A000568 sits between raw edge sectors and paired tail/tip child packets as a global-consistency quotient.
+- assembled multi-far floor: factorized into three named proof fields
+  HYP-3136: L(S)=Rprime*meas(R-safe)*meas(Q-lonely), with Q/apex minorant, R-safe wide-V/bounded-core floor, and signed SPEC coupling.
 - Rprime coupling: certified but not fully theorem-packaged
-  HYP-3129: signed SPEC gives Rprime >= 0.64178 on the tested family; needs closed-form constant chase.
+  HYP-3129/HYP-3136: signed SPEC gives Rprime >= 0.64178 on the tested family; needs closed-form constant chase.
 - absolute minorant envelope: ruled out
   HYP-3130: B1/h0 > 1, so the proof must use sign cancellation, not absolute Schur mass.
 - bounded core: main proof bottleneck
@@ -51,4 +53,4 @@ CURRENT LRC14 REMAINING-PROOF MAP
   HYP-3116/HYP-3124/HYP-3125: retain edge tail/tip sectors, finite address, observer-gluing, Phi/P, or name debt.
 
 SYNTHESIS
-The example quartic teaches the useful lesson: the branch roots are simple, but the load-bearing data live in the middle elementary-symmetric payload (-120, 320).  The LRC14 analogue is to stop promoting raw p0, raw root radius, or raw tournament counts alone.  The current proof packet should carry Q-floor constants, signed SPEC low/tail, Lee-Yang radius/far-push status, edge tail/tip deletion sectors, and a named global-consistency quotient.  The remaining work is a closed-form middle-layer packet theorem, sharpened by S70 to a k=8 biquadratic/phi4 coefficient bound.
+The example quartic teaches the useful lesson: the branch roots are simple, but the load-bearing data live in the middle elementary-symmetric payload (-120, 320).  The LRC14 analogue is to stop promoting raw p0, raw root radius, or raw tournament counts alone.  The current proof packet should carry Q-floor constants, signed SPEC low/tail, Lee-Yang radius/far-push status, edge tail/tip deletion sectors, a named global-consistency quotient, and the HYP-3136 assembled multi-far factorization.  The remaining work is a closed-form middle-layer packet theorem, sharpened by S70 to a k=8 biquadratic/phi4 coefficient bound.
