@@ -5074,7 +5074,7 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
   `minorant_apex_floor_status`, `bounded_core_binding_status`,
   `state_lift_boundary_status`, `phi4_edge_wall_status`, and
   `terminal_exit_or_named_debt` to HYP-2963/HYP-3098/HYP-3107 packet rows.
-- **Pointers:** HYP-3131, HYP-3130, HYP-3129, HYP-3128, HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3123,
+- **Pointers:** HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3130, HYP-3129, HYP-3128, HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3123,
   HYP-3122, HYP-3121, HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116,
   HYP-3115, HYP-3112, HYP-3106, HYP-3054, HYP-3050, LTI-259, LTT-157,
   T1198, OPEN-Q-108.
@@ -5134,18 +5134,21 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
   `finite_ruler_desmoothing_threshold`, `SPEC_bound_status`,
   `phi4_kappa4_sign`,
   `normal_fan_chamber_id`, `chiral_guard_word`, and
-  `terminal_exit_or_named_debt` to real `r=2..6` covering packets.
-- **Pointers:** HYP-3131, HYP-3130, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121,
+  `a000568_extension_shadow`, and `terminal_exit_or_named_debt` to real
+  `r=2..6` covering packets.
+- **Pointers:** HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3130, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121,
   HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3108, HYP-3106, HYP-3101,
   HYP-2968, HYP-2963, THM-573, THM-572, THM-082, LTI-260, LTT-158,
   T1199, OPEN-Q-108.
 
-Post-rebase HYP-3128/HYP-3129/HYP-3130/HYP-3131 revise the HYP-3127
-interpretation for this card.  Future LTT-158 uses should treat S271's
-tournament as the packet layer: Asano and minorants certify the apex/tip side,
-HYP-3131 says far tips push zeros outward on good bases, and the bounded core/tail
-coupling is the elementary SPEC resonance-lattice certificate plus a finite
-constant chase.
+Post-rebase HYP-3134/HYP-3128/HYP-3129/HYP-3130/HYP-3131 revise the
+HYP-3127 interpretation for this card.  Future LTT-158 uses should treat
+S271's tournament as the packet layer: Asano and minorants certify the
+apex/tip side, HYP-3131 says far tips push zeros outward on good bases,
+HYP-3133 supplies the A000568 middle shadow for finite SPEC stratification,
+and HYP-3132 names the bounded-core k=8 tail node.  The bounded core/tail
+coupling remains the elementary SPEC resonance-lattice certificate plus a
+finite constant chase.
 
 ## LTT-159: Tournament Of A000568 Edge-Extension Shadows
 

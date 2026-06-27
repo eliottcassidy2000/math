@@ -9,6 +9,9 @@ tournament_technique: LTT-157
 script: 04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py
 result: 05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out
 related:
+  - HYP-3134
+  - HYP-3133
+  - HYP-3132
   - HYP-3131
   - HYP-3130
   - HYP-3129
@@ -176,7 +179,7 @@ tail/tip deletion children and cross-sector word are genuine information
 coordinates before an `R-safe packet -> Q-safe packet` is compressed into the
 multi-far `Rprime` floor.
 
-## Edge Information Rule After HYP-3131/HYP-3132
+## Edge Information Rule After HYP-3131/HYP-3132/HYP-3133/HYP-3134
 
 The useful abstraction is now an information split, not a pictorial edge
 analogy.  In the lifted covering packet
@@ -201,6 +204,20 @@ If neither child closes, the first lost coordinate must be emitted as
 observer-gluing, coordinate-resurrection, finite-ruler, phi4 cumulant, or
 H7/F7 state-lift debt.  A future proof should treat this as an
 edge-witness descent lemma rather than as another scalar invariant.
+
+Incoming HYP-3133 inserts a middle A000568 extension shadow between the
+four-sector word and paired child deck:
+
+```text
+sector word -> A000568 extension shadow -> paired endpoint children.
+```
+
+That layer is not a proof engine, but it is a finite row stratifier for the
+HYP-3129 SPEC constant chase.  Incoming HYP-3132 then identifies the tail-side
+bounded-core hard node as the k=8 De Moivre/phi4 biquadratic resolvent, while
+HYP-3134 names the assembled multi-far factorization.  Thus the edge rule is
+now: tip stabilizes, tail binds, the middle A000568 shadow stratifies, and the
+orientation word carries the signed coupling.
 
 ## Integration With Existing Threads
 

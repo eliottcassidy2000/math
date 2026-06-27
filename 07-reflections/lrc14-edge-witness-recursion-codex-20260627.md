@@ -102,6 +102,15 @@ minorant/zero-free/far-push data, close or descend every tail child by
 bounded-core SPEC data, and emit the first lost coordinate as named debt when
 neither side closes.
 
+The post-rebase incoming work sharpens both ends.  HYP-3133 adds an A000568
+middle quotient between the four-sector word and paired child deck; it should
+stratify the finite SPEC constant chase before a row is escalated to named
+resonance debt.  HYP-3132 says the tail-side bounded-core obstruction is the
+k=8 De Moivre/phi4 biquadratic resolvent, not an undifferentiated core.  The
+renumbered HYP-3134 then packages the multi-far floor as
+`Rprime * meas(R-safe) * meas(Q-lonely)`: tip stabilizers, tail binding, and
+signed coupling.
+
 HYP-3122/S67's `phi4` quartic-stabilizer signal fits as an edge-wall stress
 test.  It is not yet a proof carrier by itself.  It becomes a proof-facing
 sidecar only when the one-swap/Lee-Yang/Ising wall still points back to the
