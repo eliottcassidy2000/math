@@ -4008,8 +4008,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   both partial charts.
 - **Preserves:** predicate retention, chart-overlap map, normalized
   apex/ruler status, denominator-net survival, CRT/lift debt,
-  Pascal/pair-mass and cap-defect payload, moment/Perron debt, branch/K33
-  handoff data, active binders, endpoint-owner transitions, and terminal exit.
+  Pascal/pair-mass, cap-defect, cap inclusion-exclusion order vector,
+  moment/Perron debt, branch/K33 handoff data, active binders, endpoint-owner
+  transitions, and terminal exit.
 - **Forgets / guardrail:** Runners, residues, raw denominators, direct arcs,
   Pascal entries, or safe-mass scalars are admissible vertices only after the
   quotient states what LRC predicate it preserves and which coordinate it
@@ -4025,9 +4026,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   compatible with cap/scissors data, O2 nested-refinement discharge, O3/K33
   state-lift debt, or named first failed overlap.
 - **Pointers:** HYP-3098, HYP-3097, HYP-3096, HYP-3095, HYP-3094, HYP-3093,
-  HYP-3092, HYP-3090, HYP-3089, HYP-3088, HYP-3085, HYP-3083, THM-576,
-  THM-575, THM-573, LTI-238, LTI-237, LTI-236, LTT-136, LTT-135, LTT-134,
-  T1177, T1176, T1172, OPEN-Q-108.
+  HYP-3092, HYP-3090, HYP-3089, HYP-3088, HYP-3085, HYP-3083, THM-577,
+  THM-576, THM-575, THM-573, LTI-238, LTI-237, LTI-236, LTT-136, LTT-135,
+  LTT-134, T1177, T1176, T1172, OPEN-Q-108.
 
 ## Immediate Pull List
 

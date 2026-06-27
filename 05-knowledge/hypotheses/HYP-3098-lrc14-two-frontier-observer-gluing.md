@@ -23,6 +23,7 @@ related:
   - HYP-3088
   - HYP-3085
   - HYP-3083
+  - THM-577
   - THM-576
   - THM-575
   - THM-574
@@ -114,6 +115,17 @@ cap side binds.  Therefore the next object cannot be coarse `H`, raw direct
 arc, or raw pair mass; it must be a fine-scale observer ledger carrying packet
 scissors and chart-overlap fields.
 
+The incoming mac-mini S64 / THM-577 symbolic coverage theorem strengthens
+Task B further.  It verifies a closed-form pairwise forbidden-arc overlap
+through `p,q<=16` with no mismatches, proves `cap_11=66/91` and
+`cap_10=55/91` symbolically, and exposes the apex-14 switch in the overlap
+formula.  Its inclusion-exclusion
+anatomy is the useful refinement: `j=3` already has a triple correction
+(`O2=4/91`, `O3=-1/91`) but no Pascal dip, while `j=4,5` have net higher-order
+terms that become the `1/4004` and `1081/76440` dips.  Thus the cap chart
+should carry an order-by-order inclusion-exclusion vector, not only the final
+cap scalar.
+
 ## Reframing
 
 The proof object is neither:
@@ -185,6 +197,7 @@ denominator_net_threshold_D
 pascal_pair_mass_unit
 triangular_cap_shadow
 cap_defect
+cap_inclusion_exclusion_order_vector
 sector_pair_scissors_signature
 grid_class
 active_binder_owner_word

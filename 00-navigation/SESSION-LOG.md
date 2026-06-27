@@ -128,6 +128,14 @@ winding degeneracy at `k>=8` reinforces the same conclusion: fine packet
 sidecars must replace coarse `H`, raw direct arcs, or raw pair mass as proof
 vertices.
 
+Second integration after mac-mini S64 / THM-577: the cap side now has a
+symbolic forbidden-arc overlap formula and inclusion-exclusion anatomy.
+`cap_11` and `cap_10` are symbolic, with `j=3` using `O2=4/91` and `O3=-1/91`
+to land back on `55/91`; the actual Pascal dips begin at `j=4,5`.  Added the
+ledger lesson that cap rows need a `cap_inclusion_exclusion_order_vector`,
+since a final cap scalar hides whether higher-order terms cancel legally or
+become Perron/S3/S4 debt.
+
 ## mac-mini-2026-06-27-S63 -- the covering-bound cap is a pair-normalized Pascal mass + a web of connections
 
 Owner: merge 'pair-normalized Pascal mass' if applicable, then generate my own web of out-of-the-box

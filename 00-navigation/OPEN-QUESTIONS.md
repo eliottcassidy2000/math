@@ -15,14 +15,15 @@ residual.  Each row should carry `source_row_id`, `crt_c7_lift_status`,
 `crt_c2_dyadic_lift_status`, `direct_lonely_measure`,
 `direct_component_count`, `largest_direct_arc`,
 `denominator_net_threshold_D`, `pascal_pair_mass_unit`,
-`triangular_cap_shadow`, `cap_defect`, `sector_pair_scissors_signature`,
+`triangular_cap_shadow`, `cap_defect`,
+`cap_inclusion_exclusion_order_vector`, `sector_pair_scissors_signature`,
 `grid_class`, `active_binder_owner_word`, `endpoint_owner_transition_word`,
 `overlap_failure_chart`, and `terminal_exit_or_named_debt`.  The theorem
 target is a chart-overlap statement: every residual packet either has a
 normalized arc floor compatible with its cap/scissors packet, reroutes to O2
 nested-refinement discharge, reroutes to O3/K33 state-lift debt, or names the
 first failed overlap. -> HYP-3098, HYP-3097, HYP-3096, HYP-3095, HYP-3094,
-HYP-3093, HYP-3092, HYP-3090, HYP-3089, HYP-3088, HYP-3085, THM-576,
+HYP-3093, HYP-3092, HYP-3090, HYP-3089, HYP-3088, HYP-3085, THM-577, THM-576,
 THM-575, THM-573, LTI-238, LTT-136, T1177, OPEN-Q-108.
 
 **OPEN-Q-108 S257 equivalence-triad invariant addendum:**

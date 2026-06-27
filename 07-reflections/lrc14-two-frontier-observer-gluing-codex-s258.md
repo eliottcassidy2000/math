@@ -43,6 +43,15 @@ degenerates at `k>=8` by forced antipodal ties.  That lands exactly on the
 binding cap rows.  So the fine-scale packet sidecar is not optional; it is the
 coordinate that coarse `H`, raw pair mass, and raw direct arcs all lose.
 
+Mac-mini S64, now canonized as THM-577, pushes the Pascal side from numerology
+toward proof anatomy.  The closed-form overlap formula proves `cap_11` and
+`cap_10` symbolically and shows that `j=3` already has a triple
+inclusion-exclusion correction that cancels back to the Pascal value.  The
+real cap dip begins when the higher-order inclusion-exclusion tail no longer
+cancels, at `j=4,5`.  That means the gluing ledger needs an order vector, not
+just a cap scalar: the moment/Perron chart must see which S3/S4 term is debt
+and which one is legal cancellation.
+
 The hidden structure is the overlap map.  Each chart is allowed to forget
 something only when another chart pays for that loss.  Direct arc charts forget
 apex normalization.  Pascal charts forget branch handoff.  Branch charts forget
