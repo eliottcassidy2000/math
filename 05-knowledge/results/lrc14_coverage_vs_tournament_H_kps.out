@@ -1,0 +1,31 @@
+
+=== k=8 ===  consec: P(N=0)=0.32721  H=None
+  max P(N=0) = 0.32721 at consec (consec? True)
+  max H      = None at consec (consec? True)
+  tournament-valid clusters: 0/1 (consec valid? False -- antipodal-mod-14 tie at apex 7)
+  too few valid for correlation
+
+=== k=9 ===  consec: P(N=0)=0.41616  H=None
+  max P(N=0) = 0.41616 at consec (consec? True)
+  max H      = None at consec (consec? True)
+  tournament-valid clusters: 0/1 (consec valid? False -- antipodal-mod-14 tie at apex 7)
+  too few valid for correlation
+
+=== k=10 ===  consec: P(N=0)=0.50448  H=None
+  max P(N=0) = 0.50448 at consec (consec? True)
+  max H      = None at consec (consec? True)
+  tournament-valid clusters: 0/1 (consec valid? False -- antipodal-mod-14 tie at apex 7)
+  too few valid for correlation
+
+--- kps-S31ag finding (HYP-3093) ---
+The COARSE (mod 14) winding tournament is DEGENERATE for EVERY k>=8 cluster.
+Reason (exact pigeonhole): Z/14 has 7 antipodal pairs {r,r+7}; the pair {r,r+7} differs by 7,
+and 7*a mod 14 in {0,7} for ALL phases a => a PERMANENT tie. Any k>=8 distinct residues mod 14
+must (pigeonhole, 8>7) contain a full antipodal pair => no proper tournament exists.
+THRESHOLD IS EXACTLY k=8 = the first binding LRC(14) row (cap_8 tightest).
+=> the project's H-maximization (regular max H, THM-027) CANNOT directly prove the coverage
+extremality at the coarse scale: the extremal clusters are tournament-degenerate. The apex-7
+antipodal obstruction is pervasive exactly at the binding sizes. The H/tournament structure must
+live at the FINE scale (mod p, p>14 prime, no antipodal ties): there the AP -> regular R_p, max H.
+LIVE DIRECTION: connect coverage P(N=0)=lim(fine-scale good count) to the fine-scale winding
+tournament's H-maximization (regular/Paley max H) -- the H-bridge re-opens at the fine scale.
