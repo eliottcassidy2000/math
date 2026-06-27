@@ -187,6 +187,10 @@ obligations, and proof-carrier interfaces.
 - Need to turn the Hodge-cycle lens into an exact residual proof matrix:
   use LTT-116 after LTT-111/LTT-101/LTT-108/LTT-113/LTT-114/LTT-115 and record first-tooth
   observability plus the rational cycle-class image before naming F7.
+- Need a non-median route for old polymer/capacitor ideas:
+  use LTT-118 after LTT-116 and LTT-073; retain typed signed activity,
+  finite-cell route, sidecar boundary potential, Schur-complement conductance,
+  and phantom F7 boundary atom before quotienting.
 - Need a rigorous positive-row certificate:
   use LTT-022, LTT-023, LTT-024, and LTT-026.
 - Need to prevent an unsafe quotient:
@@ -3225,6 +3229,39 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3065, HYP-3063, HYP-3058, HYP-3039, HYP-3032, HYP-3029, HYP-3026,
   HYP-2963, THM-572, LTI-219, LTI-218, LTT-117, LTT-116, T1154, CPI-001..CPI-090,
   OPEN-Q-108.
+### LTT-118: Renormalized Polymer / Dirichlet Bridge
+
+- **Move:** Reopen two non-median proof angles: signed polymers and
+  Dirichlet/Schur sidecar energy.  Use HYP-3072 as the carrier portfolio and
+  HYP-3071 as the observability/cycle input.
+- **LRC use:** HYP-3073/S239 tests whether old Riesz-product/polymer failures
+  become useful after activities are typed by packet class, and whether
+  residual sidecars can be treated as boundary conditions whose Schur
+  complements preserve positive conductance to named exits.
+- **Preserves:** Packet type, signed activity, finite-cell route, positive test
+  measure, first-tooth sidecar, boundary potential, Schur-complement
+  conductance, named discharge, and phantom F7 boundary atom.
+- **Forgets / guardrail:** Absolute Mayer activity, raw R6 count, raw route
+  labels, and scalar conductance without boundary sidecars.  `phantom_f7_class`
+  is a named one-unit side exit, not a discharge.
+- **Tournament fingerprint:** vertices are proof carriers and
+  renormalization/energy obligations, not runners, routes, or median centers.
+  The S239 tournament is transitive with score histogram `{0:1,...,9:1}`, no
+  directed 3-cycles, singleton SCCs, one Hamiltonian path, and tie path
+  `renormalized_signed_polymer > dirichlet_schur_certificate >
+  cross_carrier_pullback_portfolio > cycle_class_observability >
+  riesz_positive_test_measure > residual_capacitor_min_cut >
+  poisson_finite_cell > repeated_residue_character >
+  absolute_mayer_shadow > raw_route_scalar`.
+- **Next pull:** Build the actual HYP-2963 typed-polymer ledger and residual
+  sidecar graph.  Prove wide/Sidon and repeated-residue activities are
+  summable after AP cores are isolated, or prove every admissible sidecar Schur
+  complement preserves positive conductance to named exits.
+- **Pointers:** HYP-3073, HYP-3072, HYP-3071, HYP-3070, HYP-3069, HYP-3066,
+  HYP-3037, HYP-2645, HYP-2632, HYP-2540, THM-572, LTI-220, LTI-218, LTI-217,
+  LTI-216, LTI-213, LTI-185, LTI-071, LTT-118, LTT-116, LTT-115, LTT-114,
+  LTT-111, LTT-083, T1155, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -3300,6 +3337,10 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    legal sidecar-tree center status, median center expected page,
    center-page depth, center-page majority reason, guardrail sidecar center,
    center-control exit,
+   signed-polymer packet type, signed-activity budget, finite-cell route,
+   renormalized-activity exit, Dirichlet sidecar graph ID,
+   Dirichlet boundary potential, Schur-complement conductance,
+   sidecar-energy exit, phantom F7 boundary atom,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

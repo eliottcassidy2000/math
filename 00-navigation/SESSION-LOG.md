@@ -1,4 +1,4 @@
-## codex-2026-06-26-S239 -- reserved renormalized polymer / Dirichlet bridge (HYP-3073/T1155/LTI-220/LTT-118)
+## codex-2026-06-26-S239 -- renormalized polymer / Dirichlet bridge (HYP-3073/T1155/LTI-220/LTT-118)
 
 User asked for one or two different remaining LRC proof angles and a
 cross-disciplinary scour of past work. Initial local reservation used
@@ -36,6 +36,25 @@ resonance-portfolio theorem, where local minimal carrier portfolios are glued
 by a legal exit ledger.  Tournament Analysis uses proof-carrier pullbacks, not
 runners, and is transitive with score histogram `{0:1,...,21:1}` and one
 Hamiltonian path.
+boundary conditions for residual currents.
+
+Added `04-computation/lrc14_polymer_dirichlet_bridge_codex_s239.py`, stored
+`05-knowledge/results/lrc14_polymer_dirichlet_bridge_codex_s239.out`, expanded
+HYP-3073, added T1155/LTI-220/LTT-118, and created reflection
+`07-reflections/lrc14-renormalized-polymer-dirichlet-bridge-codex-s239.md`.
+Main scout readout: raw R6 density is not theorem currency (`odd_AP` has fewer
+R6 relations than `near_AP` but larger signed correction), wide/Sidon packets
+have tiny signed activity, raw route conductance is `1/2`, legal sidecar
+conductance is `9`, legal min-cut to discharge is `27`, and phantom F7 remains
+a one-unit boundary atom. Tournament Analysis uses proof carriers and
+renormalization/energy obligations rather than runners, route labels, or median
+centers.
+
+Next pull: build the actual HYP-2963 typed-polymer ledger and residual sidecar
+graph with `signed_polymer_packet_type`, `signed_activity_budget`,
+`finite_cell_route`, `schur_complement_conductance`, `sidecar_energy_exit`, and
+`phantom_f7_boundary_atom`; prove activity summability or positive-conductance
+preservation before quotienting.
 
 ## codex-2026-06-26-S236 -- route-triple center-control addendum (HYP-3070/T1152/LTI-217/LTT-115)
 

@@ -13,6 +13,21 @@ residual coarse fibers status-pure and route-pure before any new theorem debt
 is named. -> HYP-3072, HYP-3071, HYP-3070, HYP-3069, HYP-3066, HYP-3065,
 HYP-3063, HYP-3058, HYP-3039, HYP-3032, HYP-3029, HYP-3026, HYP-2963,
 THM-572, LTI-219, LTT-117, T1154.
+**OPEN-Q-108 S239 renormalized polymer / Dirichlet addendum:** HYP-3073
+opens a non-median route after the HYP-3072 carrier-portfolio and HYP-3071
+cycle-class passes. The signed-polymer target is to define packet activities
+by `signed_polymer_packet_type`, `signed_activity_budget`, and
+`finite_cell_route`, then prove wide/Sidon and repeated-residue activity is
+summable after AP-like cores are isolated or certified. The Dirichlet target
+is to build the actual HYP-2963 residual sidecar graph with
+`dirichlet_boundary_potential`, `schur_complement_conductance`,
+`sidecar_energy_exit`, and `phantom_f7_boundary_atom`; every admissible Schur
+complement must preserve positive conductance to named exits or isolate
+phantom F7 as a concrete one-unit boundary atom. The S239 scout shows why raw
+scalars are unsafe: raw R6 density misorders signed corrections, raw route
+conductance is only `1/2`, while legal sidecars give conductance `9` and
+discharge min-cut `27`. -> HYP-3073, HYP-3072, HYP-3071, HYP-3070, HYP-3069,
+HYP-3066, HYP-3037, HYP-2645, HYP-2632, HYP-2540, LTI-220, LTT-118, T1155.
 
 **OPEN-Q-108 S236 route-triple center-control addendum:** HYP-3070 proposes a
 pre-Boolean legality gate for the final medianization interface. Raw route

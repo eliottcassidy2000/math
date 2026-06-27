@@ -40,6 +40,27 @@ exact Farey scale.
 test whether the listed local portfolios make residual coarse fibers
 status-pure and route-pure before any new theorem debt is named.
 Namespace: HYP-3072 / T1154 / LTI-219 / LTT-117.
+## Lead codex-2026-06-26-S239: Renormalized polymer / Dirichlet bridge
+
+Use HYP-3073 as the non-median bridge after HYP-3072's carrier portfolio and
+HYP-3071's cycle-class observability matrix.  The two proof angles are:
+typed signed-polymer activities for AP/repeated-residue/wide packets, and
+Dirichlet/Schur sidecar energy for residual-current discharge.
+**Readout:** `04-computation/lrc14_polymer_dirichlet_bridge_codex_s239.py`
+and `05-knowledge/results/lrc14_polymer_dirichlet_bridge_codex_s239.out`.
+**Status:** finite proof-interface scout and synthesis, not proof. Raw R6
+density misorders signed correction (`odd_AP` beats `near_AP` by signed
+correction despite fewer relations), wide/Sidon packets have tiny signed
+activity, and the sidecar-energy toy network separates raw route conductance
+`1/2` from legal sidecar conductance `9` with a one-unit phantom F7 boundary
+exit.
+**Next:** build the actual HYP-2963 typed-polymer ledger and residual sidecar
+graph. Add `signed_polymer_packet_type`, `signed_activity_budget`,
+`finite_cell_route`, `dirichlet_boundary_potential`,
+`schur_complement_conductance`, `sidecar_energy_exit`, and
+`phantom_f7_boundary_atom`, then prove activity summability or positive
+conductance preservation before quotienting.
+Namespace: HYP-3073 / T1155 / LTI-220 / LTT-118.
 
 ## Lead codex-2026-06-26-S236: Route-triple center-control addendum
 
