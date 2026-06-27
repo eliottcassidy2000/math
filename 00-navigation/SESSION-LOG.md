@@ -27739,3 +27739,25 @@ approximants retained; transcendental targets need explicit irrationality
 measure or approximation-sequence sidecars; Liouville-type targets mark
 lacunary denominator spikes.  The preserved predicate is conversion of a
 positive witness interval into legal finite-grid or observer-gluing data.
+
+Completed the executable scout
+`04-computation/lrc_irrational_transcendental_approximation_codex_s265.py`
+and stored
+`05-knowledge/results/lrc_irrational_transcendental_approximation_codex_s265.out`.
+Exact direct-time readout: AP13 has no positive component; `AP12_tail84` has
+`8` components, widest length `3/1960`, and grid bound `q>653`; divisor-loaded
+`loaded_B6={1,...,11,13,5040}` has `64` components, widest length `1/5880`,
+and grid bound `q>5880`; `single_tail168` has widest length `23/11760` and
+grid bound `q>511`.  Tested algebraic, transcendental, and Liouville-like
+targets enter the positive intervals through modest continued-fraction
+denominators, but the robust radii are tiny in the loaded row, about
+`4e-7` to `7e-7`, so the useful proof object is the interval-plus-margin
+packet, not the named constant.
+
+Tournament Analysis used proof-carrier vertices and was transitive:
+`finite_interval_margin -> continued_fraction_packet -> observer_gluing_packet
+-> algebraic_roth_height_fence -> liouville_spike_schedule
+-> transcendental_measure_sidecar -> raw_named_constant`.  Next proof pull:
+replace direct-time intervals by THM-565 normalized slow/ruler-coordinate
+intervals, then attach the approximation sidecar to HYP-3098 observer-gluing
+and HYP-3112 ear-payload rows.

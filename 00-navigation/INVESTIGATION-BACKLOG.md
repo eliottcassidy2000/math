@@ -15,6 +15,40 @@
 
 ---
 
+## Lead codex-2026-06-27-S265: LRC14 irrational/transcendental approximation sidecar
+
+**Status:** EVIDENCE / exact interval-margin scout and sidecar synthesis; not
+proof (HYP-3114/T1190).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3114-lrc14-irrational-transcendental-approximation-sidecar.md`,
+`04-computation/lrc_irrational_transcendental_approximation_codex_s265.py`,
+`05-knowledge/results/lrc_irrational_transcendental_approximation_codex_s265.out`,
+and
+`07-reflections/lrc14-irrational-transcendental-approximation-sidecar-codex-s265.md`.
+The lane imports irrational and transcendental approximation into LRC14 only
+through a retained witness interval and margin: if `t` is a witness with
+margin `delta`, then every rational `p/q` with
+`|t-p/q| < delta/max(s_i)` is a witness.
+
+Exact direct-time scout: AP13 has no positive component; `AP12_tail84` has
+`8` components, widest length `3/1960`, and grid bound `q>653`;
+divisor-loaded `loaded_B6={1,...,11,13,5040}` has `64` components, widest
+length `1/5880`, and grid bound `q>5880`; `single_tail168` has widest length
+`23/11760` and grid bound `q>511`.  Algebraic/transcendental/Liouville-like
+targets enter the positive intervals through continued-fraction convergents,
+but those hits are sidecar examples; the proof carrier is the interval,
+margin, max-speed robustness radius, exceptional-approximant ledger, and
+terminal observer route.
+
+**Next:** replace direct-time intervals by THM-565 normalized slow/ruler
+coordinates in the HYP-3088/3089 repair.  Then add `witness_interval`,
+`endpoint_margin`, `robust_approximation_radius`,
+`continued_fraction_first_hit`, `partial_quotient_spike`,
+`irrationality_measure_status`, `exceptional_approximants`,
+`liouville_spike_schedule`, destroyed coordinate, and terminal exit to
+HYP-3098 observer-gluing rows and HYP-3112 ear-payload rows.
+Namespace: HYP-3114 / LTI-251 / LTT-149 / T1190 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S262b: LRC14 Lee-Yang ear-payload root-motion route
 
 **Status:** EVIDENCE / exact scout and proof-route proposal; not proof

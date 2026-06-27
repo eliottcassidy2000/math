@@ -1,7 +1,7 @@
 ---
 id: HYP-3114
 title: LRC14 irrational and transcendental approximation sidecar
-status: RESERVED / synthesis and executable scout lane; not a proof
+status: EVIDENCE / exact interval-margin scout and sidecar synthesis; not a proof
 source: codex-2026-06-27-S265
 tangent: T1190
 technique: LTI-251
@@ -28,7 +28,7 @@ related:
 
 # HYP-3114: LRC14 Irrational And Transcendental Approximation Sidecar
 
-## Reservation Claim
+## Evidence Claim
 
 This lane merges irrational and transcendental approximation into the LRC14
 proof frontier without collapsing it to a scalar "good approximation" slogan.
@@ -48,6 +48,19 @@ interval, endpoint distance, max-speed scale, and finite-address route are
 retained.  Approximation can convert an irrational or transcendental interior
 witness into rational grid witnesses, but it cannot replace the proof that the
 interior witness interval exists.
+
+The S265 scout
+`04-computation/lrc_irrational_transcendental_approximation_codex_s265.py`
+and stored output
+`05-knowledge/results/lrc_irrational_transcendental_approximation_codex_s265.out`
+make this exact on named LRC14 rows.  The tight AP13 row has no positive
+component, so approximation has no place to enter.  The divisor-loaded
+THM-575 row `loaded_B6={1,...,11,13,5040}` has `64` positive components,
+widest component `(1165/14112, 5837/70560)`, length `1/5880`, and
+all-denominator grid bound `q>5880`.  This matches the raw-time denominator
+wall from HYP-3088 while also explaining why the repaired route must move to
+the normalized THM-565 slow/ruler-coordinate interval rather than the original
+time coordinate.
 
 ## Sidecar Split
 
@@ -84,6 +97,30 @@ distinction between:
   spikes and cannot be quotient-forgotten;
 - the elementary LRC fact that every positive rational interval contains grid
   points at all large denominators.
+
+## Exact Scout Readout
+
+The computation shows that named constants are not the carrier.  In the
+positive rows tested, `phi-1`, `sqrt(2)-1`, `e-2`, `pi-3`, and a truncated
+Liouville-like target all enter the widest component through modest
+continued-fraction denominators; what matters for proof is the retained packet
+containing the component, margin, max speed, first convergent, partial-quotient
+spikes, and any irrationality-measure side condition.
+
+Selected exact readout:
+
+```text
+AP13_tight       components=0  measure=0
+AP12_tail84      components=8  widest_len=3/1960  grid q>653
+loaded_B6        components=64 widest_len=1/5880  grid q>5880
+single_tail168   components=8  widest_len=23/11760 grid q>511
+```
+
+For `loaded_B6`, the first continued-fraction hit into the widest interval
+has denominator `121` for `phi_minus_1` and `e_minus_2`, and denominator `109`
+for `sqrt2_minus_1`, `pi_minus_3`, and `liouville_10`.  The robust radii are
+only about `4e-7` to `7e-7`, so a proof cannot discard the interval-margin
+scale even when a low-denominator convergent happens to hit.
 
 ## Root, Lattice, And Log-Gap Extension
 
@@ -153,17 +190,54 @@ to legal finite-grid or observer-gluing data."  It destroys raw time, the
 chosen irrational representative, partial-quotient spikes, and exceptional
 approximants unless they are retained in the sidecar.
 
-## Immediate Work
+## Tournament Analysis
 
-1. Build a dependency-free scout that computes exact LRC witness intervals for
-   named rows, then places algebraic/transcendental/Liouville targets inside a
-   positive component and measures the first continued-fraction convergent that
-   stays inside the component.
-2. Compare that first-convergent denominator with the exact grid-hit bound
-   `floor(1/length)+1` and the robustness denominator predicted by the margin
-   lemma.
-3. Run Tournament Analysis over approximation carriers, with vertices chosen
-   from proof obligations rather than from the constants themselves.
-4. Join the scout to the Lee-Yang ear-payload ledger by adding root isolation,
-   Farey parent, separation, and exceptional low-denominator resonance fields
-   to rows where roots approach `[-1,0]` or `7`th-root directions.
+The scout uses proof-carrier vertices, not constants:
+
+```text
+finite_interval_margin
+continued_fraction_packet
+observer_gluing_packet
+algebraic_roth_height_fence
+liouville_spike_schedule
+transcendental_measure_sidecar
+raw_named_constant
+```
+
+Its tournament is transitive on the chosen axes:
+
+```text
+score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}
+directed_3cycles=0
+priority_path =
+  finite_interval_margin
+  -> continued_fraction_packet
+  -> observer_gluing_packet
+  -> algebraic_roth_height_fence
+  -> liouville_spike_schedule
+  -> transcendental_measure_sidecar
+  -> raw_named_constant
+```
+
+The close edge flips are also informative: `finite_interval_margin` beats
+`continued_fraction_packet` by only one axis, and `continued_fraction_packet`
+beats `observer_gluing_packet` by only one axis.  That says the next proof
+advance should not choose between interval arithmetic and observer gluing; it
+should attach the approximation sidecar to the HYP-3098/HYP-3112 packet route.
+
+## Next Work
+
+1. Replace the direct-time widest-component scout with the normalized THM-565
+   slow/ruler-coordinate witness intervals used by the repaired HYP-3088/3089
+   route.
+2. Attach `witness_interval`, `endpoint_margin`, `max_speed`,
+   `robust_approximation_radius`, `continued_fraction_first_hit`, and
+   `irrationality_measure_status` to HYP-3098 observer-gluing rows and
+   HYP-3112 ear-payload rows.
+3. Separate algebraic-height finite-exception fences from transcendental
+   irrationality-measure sidecars in any future proof of finite denominator
+   coverage.
+4. Join the approximation scout to the Lee-Yang ear-payload ledger by adding
+   root isolation, Farey parent, separation, and exceptional low-denominator
+   resonance fields to rows where roots approach `[-1,0]` or `7`th-root
+   directions.

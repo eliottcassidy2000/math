@@ -4149,3 +4149,29 @@ prime-puncture / reciprocal-fixed-point repair before spending Fejer or
 THM-572 machinery. -> HYP-3041, HYP-3033, HYP-3032, HYP-3031, HYP-3029,
 HYP-3028, HYP-3027, HYP-3024, HYP-3023, LTI-189, LTI-181, LTI-180, LTT-087,
 LTT-079, LTT-078, T1122, T1114, T1113.
+
+## OPEN-Q-108 addendum (codex-2026-06-27-S265): Irrational/transcendental approximation sidecar
+
+HYP-3114 adds a controlled approximation sidecar to the LRC14 witness route.
+The transfer rule is elementary but proof-critical: if `t` is an LRC14 witness
+with margin `delta`, then any rational `p/q` satisfying
+`|t-p/q| < delta/max(s_i)` is also a witness.  Thus Diophantine approximation
+can move a proved positive interval into finite-grid evidence, but it cannot
+replace the proof that the interval exists.
+
+The exact S265 scout checks named direct-time rows.  AP13 has no positive
+component.  `AP12_tail84` has widest component length `3/1960` and grid bound
+`q>653`; divisor-loaded `loaded_B6={1,...,11,13,5040}` has `64` components,
+widest length `1/5880`, and grid bound `q>5880`; `single_tail168` has widest
+length `23/11760` and grid bound `q>511`.  The loaded row confirms the
+HYP-3088 warning that raw time can shrink under apex loading, so OPEN-Q-108
+should use the normalized THM-565 slow/ruler-coordinate witness interval when
+feeding the polynomial-method / observer-gluing route.
+
+New target: add `witness_interval`, `endpoint_margin`,
+`robust_approximation_radius`, `continued_fraction_first_hit`,
+`irrationality_measure_status`, `exceptional_approximants`, and
+`liouville_spike_schedule` fields to HYP-3098 observer-gluing packets and
+HYP-3112 ear-payload packets.  Algebraic targets may use Roth/Hurwitz fences
+only with height and exceptions retained; transcendental targets need explicit
+irrationality-measure or approximation-sequence sidecars.

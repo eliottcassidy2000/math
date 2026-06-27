@@ -4292,7 +4292,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   finite-grid witness repair, and HYP-3112's ear-payload frontier.  The central
   pairwise observable is whether a carrier preserves the interval-margin
   predicate `|t-p/q|<delta/max(s_i)` and the denominator shell needed by the
-  observer-gluing route.
+  observer-gluing route.  The exact scout finds no positive AP13 component,
+  but finds direct-time widest lengths `3/1960`, `1/5880`, and `23/11760` for
+  `AP12_tail84`, divisor-loaded `loaded_B6`, and `single_tail168`.
 - **Preserves:** positive witness interval, endpoint distance, max-speed scale,
   continued-fraction convergents, partial quotient spikes, irrationality-measure
   status, exceptional approximants, Liouville spike schedule, finite-grid
@@ -4307,7 +4309,17 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   are legal only after the multiplicative relation lattice is explicit.  The
   HYP-3110 De Moivre/Jacobi lane adds the finite theta/branch version: branch
   ids, theta channels, translation lattices, and legal exits must be retained.
-- **Pointers:** HYP-3114, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3098,
+- **Tournament readout:** S265 uses proof-carrier vertices and gets a
+  transitive priority path
+  `finite_interval_margin -> continued_fraction_packet -> observer_gluing_packet
+  -> algebraic_roth_height_fence -> liouville_spike_schedule
+  -> transcendental_measure_sidecar -> raw_named_constant`.
+- **Next hook:** Move the scout from raw direct-time intervals to THM-565
+  normalized slow/ruler-coordinate intervals, then attach interval-margin and
+  continued-fraction fields to HYP-3098 observer-gluing packets and attach
+  root isolation / Farey parent / separation fields to HYP-3112 ear-payload
+  packets.
+- **Pointers:** HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3098,
   HYP-3096, HYP-3089, HYP-3088, HYP-3075, HYP-3062, HYP-2866, THM-575,
   THM-565, THM-573, LTI-251, LTI-249, LTT-149, LTT-147, T1190, T1188,
   OPEN-Q-108.
