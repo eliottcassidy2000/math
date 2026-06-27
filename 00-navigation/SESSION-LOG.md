@@ -1,3 +1,28 @@
+## mac-mini-2026-06-27-S62 -- three notions of sameness are the lonely set's fiber (equidecomp/equinum/equidist)
+
+Owner: consider equidecomposability and equinumerosity in addition to equidistribution; search past work for
+hidden perspectives; be abstract; find invariants capturing the fundamental nature. Revived three niche
+threads (HYP-2187 equinum/equidecomp fiber bridge [H=volume, beta1=Dehn, count=cardinal shadow]; HYP-2239
+triune carrier; HYP-2213 Dehn-scissors) and carried them -- for the first time -- onto the LRC lonely set
+L(S)={t: ||s t||>=1/14}. Result (HYP-3091, reflection three-notions-of-sameness; VERIFIED
+lrc_three_sameness_invariants_macmini_S62.py):
+
+The three notions are three resolutions of a measure-class, giving three computable invariants:
+ * EQUIDIST  meas(L)=0  EXACTLY characterizes the TIGHT atoms (AP, GW -> 0 arcs). The witness floor = the
+   tightness detector. 'Volume detects tightness.'
+ * EQUINUM (covering/residues) is PREDICATE-BLIND -- the cardinal shadow; AP is non-covering yet tight (so
+   covering != tight, consistent with S60 dilation). A count can't decide the LR predicate.
+ * EQUIDECOMP splits into TWO scissors invariants that the project had found separately: D(S)=min witness
+   denominator = 41 for the hard family {1..11,13,84m} APEX-INDEPENDENT = the project's mod-41 Farey scale;
+   and 1/lmax (worst arc) = the V* apex constant (S61). D<=1/lmax separates mod-41 (bounded core) from V*
+   (apex). meas=volume, (D,1/lmax)=the Dehn invariant (HYP-2187's H-vs-beta1 split, now on the measure side).
+
+The fiber Phi(S)=(covering | D,1/lmax,arc-spectrum | meas) is the 'fundamental nature': no single column
+separates {tight, generic, easy-cover, hard-cover}; the triple does. CRUX 1 = the scissors-nondegeneracy
+form (meas>0 off the tight locus) of the gK8 p0<=cap bound. NOT a new bound; an organizing invariant + two
+recovered scales (mod-41 via D, V* via 1/lmax). Note: codex-S255 (concurrent) refuted Conjecture 7.1 in RAW
+time -- the meas=0<=>tight here is the normalized/level-set object, compatible; will reconcile next session.
+
 ## codex-2026-06-27-S255 -- Conjecture 7.1 refuted in raw time; normalized-arc route repaired
 
 Integrated the incoming polynomial-method bridge with THM-566 and THM-573.  The
