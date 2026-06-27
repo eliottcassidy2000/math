@@ -26049,3 +26049,51 @@ rooted children, unrooted children, and rectangle-defect residuals as vertices,
 not original tournament vertices.  Next pull: replace brute canonicalization
 with a fast A000568 backend and add complement/reflection half-extension
 Burnside counts.
+
+## codex-2026-06-27-S252b -- LRC14 finite-address covering spine synthesis -- HYP-3083
+
+Integrated incoming mainline through `06769d7b2`, including the S59 redirect
+that the LRC(14) proof lives in the covering bound rather than the AP/GW
+census, with the older q-witness, apex-majority gamma descent, one-large-speed
+peeler, labelled packet bank, branch-kernel audit, and Lean status notes.
+
+Updated `05-knowledge/hypotheses/HYP-3083-lrc14-hurwitz-finite-address-branch-closure-spine.md`
+from stub to a remaining-obligation map.  Main correction to the slogan:
+after THM-571, the covering bound is not all rows with a multiple of `14`; the
+live residual is low-apex covering rows with `1..6` multiples of `14`.  After
+HYP-2906, it is also top-balanced (`v_max <= 13 v_second`) unless handled by
+the connected-safe-arc peeler.  THM-566 blocks a naive fixed bounded-denominator
+witness, so the remaining proof has to keep finite addresses rather than
+collapse to a scalar.
+
+The proposed proof spine is:
+
+```text
+S primitive, |S|=13
+  -> q-witness gate
+  -> covering row with a multiple of 14
+  -> apex-majority gamma descent or low-apex residue
+  -> one-large-speed interval peeler or top-balanced residue
+  -> finite-address packet P(S)
+  -> protected branch graph
+  -> terminal discharge or named residual debt
+```
+
+Named remaining obligations:
+
+- global finite-address normalizer into the HYP-2963/HYP-3082 packet graph or
+  a declared outside-bank normal form;
+- uniform covering-moment / OPEN-Q-108 discharge, equivalently the analytic
+  cap-floor plus finite-ruler Part-A bridge in the Lean-facing route;
+- construction of the K33/THM-572 tournament-state lift, since THM-572 only
+  closes the contradiction after the lift exists;
+- formal sidecar closure proving every quotient retains, reconstructs,
+  annihilates, or names the finite address it destroys.
+
+Tournament Analysis used proof obligations and finite-address packets as
+vertices rather than runners.  The pairwise observable is retained address data
+for the predicate `M(S)>=1/14`; the intended carrier tournament is transitive
+with tie path `finite_address_packet_normalizer > protected_branch_graph >
+covering_moment_exit > K33_state_lift_exit > apex_majority_gamma_gate >
+one_large_interval_peeler > q_witness_gate > Lean_sidecar_closure >
+raw_scalar_or_census_shadow`.
