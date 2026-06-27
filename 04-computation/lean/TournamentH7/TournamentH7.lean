@@ -112,6 +112,10 @@
                                       pair-mass, polynomial-route, and
                                       moment-degree sidecars to the
                                       finite-address packet.
+    · TournamentH7.LRCProofFrontier — S259/HYP-3107 proof-frontier ledger
+                                      joining solved gates, cap arithmetic,
+                                      observer-gluing, and residual packet
+                                      producer obligations.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -200,4 +204,5 @@ import TournamentH7.LRCModularCuspLedger
 import TournamentH7.LRCFiniteAddressBranchClosure
 import TournamentH7.LRCObserverGluingLedger
 import TournamentH7.LRCBleedingEdgeFrontier
+import TournamentH7.LRCProofFrontier
 import TournamentH7.Verify

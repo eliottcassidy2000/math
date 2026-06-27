@@ -374,6 +374,7 @@ record what it destroys before asking it to prove anything.
 | LTI-241 | First-obstruction cocycle generation | Observer-cut payload differences, first obstruction syndromes, sidecar columns, certificate-cycle image, dual annihilators, AP/GW boundary stop, F7/THM-572 state-lift class | HYP-3102/S259 turns HYP-3095 chart gluing and HYP-3071 cycle-class observability into a finite exactness target.  For a quotient and next observer/cut operation, the hidden payload difference over a visible fiber must be zero, reconstructed, exact, generated, dual-annihilated, descended, AP/GW-stopped, or routed to the named phantom F7 state-lift coordinate.  Incoming S258 supplies the first observer-glue sample ledger, and THM-577 says the Pascal/cap defect should be tested as generated finite-remainder data before becoming a new basis atom; S31ah supplies tournament-certificate generators, while S65 separates `c5`/power-sum holes from forbidden-H alpha events, so each syndrome needs a mechanism label. | HYP-3102, HYP-3101, HYP-3095, HYP-3071, HYP-3070, HYP-3069, HYP-3066, HYP-3056, HYP-3054, HYP-2997, HYP-2995, HYP-2963, THM-577, THM-572, THM-573, T1180, LTT-139, LTI-241, OPEN-Q-108 | Build `lrc14_first_obstruction_syndrome_ledger`; for each mixed fiber emit quotient, next observer, visible automorphism group, payload orbit, first sidecar stage, obstruction basis vector, cycle-image status, dual-annihilator status, descent/boundary/state-lift status, and terminal exit. |
 | LTI-243 | Tournament obstruction-transfer atlas | Faithful transfer functors, forbidden H/OCF spectra, forced-expansion payloads, edge-flip stress, generated certificate gaps, destroyed-coordinate ledgers | HYP-3105/S259b generalizes the H=7/H=21 contradiction pattern after HYP-3100's legality grammar, after HYP-3101/HYP-3102 identify the component-bound and first-obstruction proof targets, after HYP-3106 turns perspective quotients into explicit functors, and after HYP-3104 separates maximizer currencies from H-rigidity.  A constructed subproblem may import tournament, OCF, Omega, score, cycle-census, or cap-exchange obstructions only when it names the preserved LRC predicate, destroyed coordinate, required sidecar, and terminal exit. | HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098, HYP-3094, HYP-3078, HYP-3076, HYP-3074, HYP-2963, THM-002, THM-029, THM-079, THM-115, THM-264, THM-454, THM-577, T1182, LTT-141, LTI-243, OPEN-Q-108 | Build `obstruction_transfer_ledger` rows over HYP-2963, S258/S259 observer-gluing samples, HYP-3101 component packets, HYP-3102 syndrome packets, HYP-3106 perspective functors, and HYP-3104 maximizer-signal packets; record transfer functor, target spectrum, forced expansion, sidecar, stress result, and terminal exit. |
 | LTI-244 | Perspective groupoid controlled forgetting | Node k-depth views, directed-edge dual sectors, cycle/chirality roots, transitive-clique insertion cuts, conflict/Omega roots, observer cuts, dihedral/converse actions, required sidecars | HYP-3106/S261 shifts the A000568 perspective ladder from counts into quotient functors and treats HYP-3103's PGF roots, HYP-3104's maximizer-transfer signals, and HYP-3105's obstruction-transfer ledgers as sidecars rather than the same namespace.  Each perspective declares root object, automorphism or dihedral action, depth rule, forgotten coordinate, next operation, required sidecar, and preserved LRC predicate.  The scout verifies `P_node(5)=48<U(6)=56` and `P_node(6)=296<U(7)=456`; node depth reaches exact rooted memory but not the shifted target; `m=6` conflict/Omega carriers first appear with `32` orbits; U(6) edge-sector decks repair `55/56 -> 56/56` by cross-sector orientation.  Rebased over HYP-3101/HYP-3102, normal-fan component bounds and first-obstruction cocycle gluing become two concrete stress tests for whether a perspective quotient is legal. | HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3057, HYP-3054, HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-2121, HYP-2120, HYP-2087, T1183, LTT-142, LTI-244, OPEN-Q-108 | Add `perspective_functor`, `root_object`, `automorphism_action`, `next_operation`, `required_sidecar`, `dihedral_reflection_status`, `component_bound_stress`, `first_obstruction_stress`, `pgf_root_signature`, `maximizer_transfer_signal`, and `obstruction_transfer_status` to packet ledgers before using a perspective quotient. |
+| LTI-245 | Lean proof-frontier ledger | `TournamentH7.LRCProofFrontier`, solved/open frontier nodes, pair-Pascal cap arithmetic, THM-577 dense cap value import, residual classifier, residual finite-address packet theorem, observer-gluing certificate theorem, bleeding-edge packet wrapper theorem, experiment vertices | HYP-3107/S259 turns the current LRC14 proof edge into a Lean-facing conditional interface. It records solved nodes (q-witness, level-7 lift, pair-Pascal cap RHS, THM-577 symbolic dense cap values, terminal `Mreach`), open nodes (coverage extremality, reflection-Perron/order-3/order-4, Node-3 effective peel, finite-ruler glue, fine-scale winding transfer), and exact cap arithmetic (`capRat k=k(k+1)/182` for `k=10..13`, plus the `k=9` and `k=8` debts). HYP-3099 feeds the tournament diagnostic: cap optimality is bounded but non-transitive, and apex-7-to-H=7 is a coincidence. HYP-3100/HYP-3105 supply the contradiction grammar, obstruction-transfer atlas, and `TournamentH7.LRCBleedingEdgeFrontier` conservative wrapper. The S31ah certificate-toolkit rebase validates the H/Omega engine but marks its coarse LRC14 use as vacuous, so H enters only through fine-scale or packet-preserving observers. The key theorems are `lrc14_from_bleeding_edge_frontier`, `lrc14_from_bleeding_edge_observer_gluing_frontier`, and `lrc14_from_bleeding_edge_packet_wrapper_frontier`. | HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098, HYP-3097, HYP-3096, HYP-3095, HYP-3094, HYP-3093, HYP-3092, HYP-3091, HYP-3090, HYP-3089, HYP-3088, HYP-3085, HYP-3083, THM-577, THM-573, THM-575, THM-576, T1184, T1183, T1182, LTT-143, LTT-142, LTT-141, LTT-136, LTI-245, LTI-244, LTI-243, LTI-239, LTI-238, LTI-236, LTI-234, OPEN-Q-108, `TournamentH7.LRCProofFrontier` | Instantiate `CoverageExtremality` with exact `p0` and consecutive clusters for `k=8,9,10` by certifying HYP-3099's finite local minima, not by assuming greedy descent; define a fine mod-`p` or sector-pair winding observable after the coarse mod-14 H bridge degeneracy; add HYP-3100/HYP-3105 certificate columns to `BleedingEdgeFrontierCoverage`; convert the `k=8,9` cap debt into an Eberlein/Hankel degree-2-to-4 certificate; add the HYP-3093/HYP-3097 equinumerosity/equidecomposability/equidistribution triad to the frontier experiment schema; and make the HYP-3095/HYP-3097/HYP-3098 observer-gluing ledger emit concrete `ObserverGluingCertificate` rows, then `FiniteAddressBranchPacket` rows when available. |
 
 ## Cross-Cutting Guardrails
 
@@ -490,7 +491,7 @@ record what it destroys before asking it to prove anything.
 | LTI-TODO-87 | Sixth-power certificate median closure audit | LTI-229, LTI-228, LTI-227, LTI-226, LTI-225, LTI-224, LTI-221, LTI-220, LTI-218, LTI-209, LTI-207, LTT-127, LTT-126, LTT-125, LTT-124, LTT-123, LTT-122, LTT-119, LTT-118, LTT-116, LTT-107, HYP-3080, HYP-3079, HYP-3078, HYP-3077, HYP-3076, HYP-3075, HYP-3074, HYP-3073, HYP-3071, HYP-3062, HYP-3060, HYP-3058, HYP-2963, THM-572, T1164, T1163, T1162, T1161, T1160, T1159 | Attach the S248 certificate tuple to packet rows that invoke sixth-power equal sums, then run the S240/S245/S246/S247 closure median checks. A failed center must say whether it is missing the collision certificate, CRT residue word, Roth-Minkowski height fence, gated route sidecar, native/padded arity mark, scheduler split, modular-cusp arithmetic address, Lean q-cusp formal gate, or explicit THM-572/F7 exit. |
 | LTI-TODO-88 | HYP-2963 branch-tournament orientation ledger | LTI-230, LTI-228, LTI-227, LTI-225, LTI-221, LTI-218, LTI-217, LTT-128, LTT-126, LTT-125, LTT-123, LTT-119, LTT-116, HYP-3081, HYP-3079, HYP-3078, HYP-3077, HYP-3074, HYP-3071, HYP-3070, HYP-2963, THM-572, T1165, T1163, T1162, T1160, OPEN-Q-108 | Build the proof graph on HYP-2963 packet branches, declare endpoint kernel vertex sets and pairwise gauges, compute bridge status before and after sidecars, and refuse any contraction whose reverse path is not reconstructed, dual-certified, descended, AP/GW boundary, or named THM-572/F7 debt. |
 | LTI-TODO-89 | Branch-kernel audit expansion | LTI-231, LTI-230, LTI-229, LTI-228, LTI-227, LTI-225, LTI-221, LTI-218, LTT-129, LTT-128, LTT-127, LTT-126, LTT-125, LTT-123, HYP-3082, HYP-3081, HYP-3080, HYP-3079, HYP-3078, HYP-3077, HYP-3074, HYP-2996, HYP-2963, THM-572, T1166, T1165, T1164, T1163, T1162 | Rerun the branch-kernel orientation audit on any enlarged HYP-2963 packet bank and export bridge witnesses: raw scalar bridge, protected bridge, responsible sidecar, residual exit, endpoint kernel class, and whether the contracted core admits a strong orientation. |
-| LTI-TODO-90 | Finite-address branch-closure ledger | LTI-244, LTI-243, LTI-241, LTI-240, LTI-239, LTI-238, LTI-237, LTI-236, LTI-235, LTI-234, LTI-233, LTI-232, LTI-231, LTI-230, LTI-229, LTI-228, LTI-227, LTI-226, LTI-225, LTI-221, LTI-218, LTT-142, LTT-141, LTT-139, LTT-138, LTT-137, LTT-136, LTT-135, LTT-134, LTT-133, LTT-132, LTT-131, LTT-130, LTT-129, LTT-128, LTT-127, LTT-126, LTT-125, LTT-124, LTT-123, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3098, HYP-3083, HYP-3088, HYP-3089, HYP-3090, HYP-3091, HYP-3092, HYP-3093, HYP-3095, HYP-3094, HYP-3087, HYP-3085, HYP-3084, HYP-3082, HYP-3081, HYP-3080, HYP-3079, HYP-3078, HYP-3077, HYP-3075, HYP-2990, HYP-2963, THM-572, THM-573, THM-575, THM-576, T1167, T1171, T1172, T1177, T1178, T1179, T1180, T1182, T1183, OPEN-Q-108 | Build the FA-BC ledger with `source_row_id`, `apex_divisible_by_14_flag`, `multiple_of_7_profile`, `level7_lift_sieve_status`, `polynomial_composite_lift_status`, `cap_pascal_mass_status`, `cap_ratio_or_deviation_status`, `direct_lonely_arc_count_status`, `largest_lonely_arc_floor`, `direct_component_bound_status`, `normal_fan_chamber_id`, `closed_arc_cech_beta`, `first_obstruction_basis_vector`, `certificate_cycle_image_status`, `three_sameness_fiber`, `equinum_shadow`, `equidecomp_D`, `inverse_lmax`, `equidist_measure_status`, `equivalence_triad_tuple`, `covering_margin_aliasing_status`, `grid_class`, `active_binder_owner_word`, `endpoint_owner_transition_word`, `normalizer_step`, `finite_address_kind`, `destroyed_coordinate`, `branch_graph_node`, `bridge_status`, `median_center_kind`, `dropped_terminal_atoms`, `terminal_exit`, `formal_lean_status`, and `remaining_debt_name`; use it to split no-apex direct witnesses from THM-573 level-7 exits, then the `<=6` multiples-of-7 covering residual into normalized lonely-arc floor candidates, tournament-contradiction grammar packets, observer-gluing overlap packets, normal-fan component packets, first-obstruction syndrome packets, perspective-functor packets, maximizer-signal packets, obstruction-transfer packets, HYP-3092 cap-Pascal/deviation packets, HYP-3091 three-sameness fiber packets, HYP-3094 nested-refinement O2 packets, HYP-3094 cross-handoff O3 packets, K33 rows, HYP-3093 quotient-forgetting probes, and outside-bank normalizer attempts before any new scalar shortcut is considered. |
+| LTI-TODO-90 | Finite-address branch-closure ledger | LTI-245, LTI-244, LTI-243, LTI-242, LTI-241, LTI-240, LTI-239, LTI-238, LTI-237, LTI-236, LTI-235, LTI-234, LTI-233, LTI-232, LTI-231, LTI-230, LTI-229, LTI-228, LTI-227, LTI-226, LTI-225, LTI-221, LTI-218, LTT-143, LTT-142, LTT-141, LTT-140, LTT-139, LTT-138, LTT-137, LTT-136, LTT-135, LTT-134, LTT-133, LTT-132, LTT-131, LTT-130, LTT-129, LTT-128, LTT-127, LTT-126, LTT-125, LTT-124, LTT-123, HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3098, HYP-3083, HYP-3088, HYP-3089, HYP-3090, HYP-3091, HYP-3092, HYP-3093, HYP-3095, HYP-3094, HYP-3087, HYP-3085, HYP-3084, HYP-3082, HYP-3081, HYP-3080, HYP-3079, HYP-3078, HYP-3077, HYP-3075, HYP-2990, HYP-2963, THM-572, THM-573, THM-575, THM-576, T1167, T1171, T1172, T1177, T1178, T1179, T1180, T1181, T1184, T1183, T1182, OPEN-Q-108 | Build the FA-BC ledger with `source_row_id`, `apex_divisible_by_14_flag`, `multiple_of_7_profile`, `level7_lift_sieve_status`, `polynomial_composite_lift_status`, `cap_pascal_mass_status`, `cap_ratio_or_deviation_status`, `direct_lonely_arc_count_status`, `largest_lonely_arc_floor`, `direct_component_bound_status`, `normal_fan_chamber_id`, `closed_arc_cech_beta`, `first_obstruction_basis_vector`, `certificate_cycle_image_status`, `three_sameness_fiber`, `equinum_shadow`, `equidecomp_D`, `inverse_lmax`, `equidist_measure_status`, `equivalence_triad_tuple`, `covering_margin_aliasing_status`, `grid_class`, `active_binder_owner_word`, `endpoint_owner_transition_word`, `normalizer_step`, `finite_address_kind`, `destroyed_coordinate`, `branch_graph_node`, `bridge_status`, `median_center_kind`, `dropped_terminal_atoms`, `terminal_exit`, `formal_lean_status`, and `remaining_debt_name`; use it to split no-apex direct witnesses from THM-573 level-7 exits, then the `<=6` multiples-of-7 covering residual into normalized lonely-arc floor candidates, tournament-contradiction grammar packets, observer-gluing overlap packets, normal-fan component packets, first-obstruction syndrome packets, perspective-functor packets, maximizer-signal packets, obstruction-transfer packets, HYP-3092 cap-Pascal/deviation packets, HYP-3091 three-sameness fiber packets, HYP-3094 nested-refinement O2 packets, HYP-3094 cross-handoff O3 packets, K33 rows, HYP-3093 quotient-forgetting probes, and outside-bank normalizer attempts before any new scalar shortcut is considered. |
 | LTI-TODO-91 | Normal-fan Cech component-bound ledger | LTI-240, LTI-237, LTI-218, LTI-183, LTI-177, LTI-172, LTI-166, LTI-044, LTI-041, LTT-138, LTT-116, LTT-081, LTT-069, HYP-3101, HYP-3096, HYP-3025, HYP-3018, HYP-3015, HYP-3071, THM-573, THM-575, OPEN-Q-108 | Emit the normalized `L_14` component packet: closed Cech beta, open component count, boundary cocircuit word, owner-current word, runner quotient Betti defect, barcode count/persistence, active peak support, normal-fan chamber id, first tooth, component-bound status, measure-floor status, finite-ruler threshold, destroyed coordinate, and terminal exit; prove bounded chambers or name AP/GW/F7 topology debt. |
 | LTI-TODO-92 | First-obstruction syndrome ledger | LTI-241, LTI-240, LTI-236, LTI-221, LTI-218, LTI-213, LTI-203, LTI-201, LTT-139, LTT-138, LTT-134, LTT-119, LTT-116, LTT-111, LTT-101, HYP-3102, HYP-3101, HYP-3095, HYP-3071, HYP-3066, HYP-3056, HYP-3054, HYP-2997, HYP-2995, HYP-2963, THM-572, THM-573, OPEN-Q-108 | For every mixed route/status fiber, compute the observer-cut payload orbit and first obstruction basis vector; record sidecar stage, cycle-image rank/status, dual-annihilator status, family descent, AP/GW boundary stop, F7/THM-572 state-lift status, and terminal exit before allowing any observer-chart quotient to glue. |
 
@@ -2103,6 +2104,91 @@ cap-dip minimizers, K33 cross-handoff rows, q-cusp finite-principal-part
 packets, support-six collision packets, route-state median triples, S65
 cap-exchange local minima, apex7 antipodal tie matchings, baby-Hodge
 cycle-count holes, and KPS `K3/K10` clique-Omega realizability gaps.
+
+### 74. LTI-245 Lean Proof-Frontier Ledger
+
+Sources: HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098, HYP-3097, HYP-3096, HYP-3095, HYP-3094,
+HYP-3093, HYP-3092, HYP-3091, HYP-3090, HYP-3089, HYP-3088, HYP-3085,
+HYP-3083, THM-577, THM-576, THM-575, THM-573.
+
+Preserves: the formal route from residual packet coverage to
+`LRC14Statement`.  `TournamentH7.LRCProofFrontier` separates solved gates
+(q-witness, level-7 lift, pair-Pascal cap RHS, THM-577 dense cap values,
+terminal `Mreach`) from open producers (coverage extremality,
+reflection-Perron/order-3/order-4, Node-3 peel, finite-ruler glue,
+fine-scale winding transfer, and residual packet construction).
+
+Destroys if used alone: the analytic content of the open fields.  A Lean
+record carrying `CoverageExtremality`, `Node3EffectivePeel`, or
+`FineScaleWindingTransfer` as a `Prop` is a typed proof frontier, not the
+missing theorem.  Coarse mod-14 winding-H is explicitly demoted because
+apex-7 antipodal ties make it degenerate at the binding rows.
+
+HYP-3099 adds two tournament guardrails for this ledger: the cap-minimizer
+exchange graph is bounded but non-transitive, so the formal target should be a
+finite local-minima certificate rather than a greedy exchange proof; and the
+apex-7/H=7 alignment is a coincidence, so no raw H-spectrum bridge may enter
+as terminal proof currency.
+
+HYP-3100/HYP-3105 add the grammar and obstruction-transfer side:
+`TournamentH7.LRCBleedingEdgeFrontier` is the conservative wrapper around
+finite-address packets with observer, equivalence, Pascal, polynomial, and
+moment-degree sidecars.  `LRCProofFrontier` delegates to that wrapper through
+`lrc14_from_bleeding_edge_packet_wrapper_frontier`, while HYP-3105 supplies the
+transfer-atlas checklist for any future H/Omega/score/cycle contradiction.
+
+Namespace warning: current mainline still overloads `HYP-3101` between the
+normal-fan component route and the S31ah tournament certificate toolkit.  The
+old HYP-3103 split is now repaired: `HYP-3103` names miss-count PGF zeros and
+`HYP-3106` names perspective groupoid controlled-forgetting functors.  When
+using this ledger, cite the route name as well as the ID when historical
+namespace meanings matter.
+
+HYP-3101/HYP-3102/HYP-3103/HYP-3104 plus HYP-3106 sharpen the first producer
+tests for this ledger: normal-fan component packets for coverage extremality,
+first-obstruction cocycles for observer gluing, HYP-3106 perspective sidecars
+for quotient validity, and HYP-3103 miss-count PGF zeros / HYP-3104 maximizer
+signal atoms as candidate fine-scale coverage observables.
+
+The S31ah certificate-toolkit addendum validates the H/Omega engine but also
+marks the direct LRC14 use of coarse H as vacuous: the apex-7 obstruction is an
+order-2 antipodal matching phenomenon, not the forbidden H=7/Omega-K3
+phenomenon.  H may therefore be a terminal contradiction only after a
+fine-scale or packet-preserving encoding has already retained the LRC predicate.
+
+Best vertex sets: proof obligations, solved gates, cap ledgers, residual
+classifiers, finite-address packet producers, fine-scale observable guards,
+Lean theorem interfaces, and terminal readouts.
+
+Pairwise observable / gauge: whether one node discharges, refines, or makes
+formally checkable an obligation another node merely names.  The edge
+orientation favors nodes that preserve the LRC predicate while replacing an
+open obligation by a proof-bearing packet, a symbolic cap ledger, or a named
+degenerate quotient.
+
+LRC use: once a residual classifier and a residual-to-`FiniteAddressBranchPacket`
+producer are supplied, `lrc14_from_bleeding_edge_frontier` calls the existing
+`lrc14_from_cutting_edge_branch_coverage` theorem and obtains
+`LRC14Statement`.  After the observer-gluing Lean interface landed, a parallel
+route uses residual-to-`ObserverGluingCertificate` production and
+`lrc14_from_bleeding_edge_observer_gluing_frontier` to call
+`lrc14_from_observer_gluing_coverage`.  A third route uses
+`BleedingEdgeFrontierCoverage` through the HYP-3100 wrapper.
+
+Next contribution: instantiate one `BleedingEdgeFrontier` field with a theorem:
+either THM-577-style exact `p0` coverage extremality for `k=8,9,10` via
+HYP-3099's finite local-minima certificate, a fine mod-`p`/sector-pair winding
+observable that avoids coarse mod-14 ties, an
+Eberlein/Hankel certificate for the `k=8,9` cap debts, or an HYP-3098
+observer-gluing row emitter that returns concrete `ObserverGluingCertificate`
+records, with `FiniteAddressBranchPacket` compression as the stronger endpoint.
+Add HYP-3100/HYP-3105 tournament-certificate columns before promoting any H/Omega/score
+contradiction as terminal, and test whether HYP-3103/HYP-3104 zero confinement
+and signal atoms predict the same finite local minima without losing
+HYP-3101/HYP-3102 sidecars.  Add the HYP-3093/HYP-3097 equivalence triad as a
+frontier experiment: equinumerosity for the count shadow, equidecomposability
+for the retained scissors fiber, and equidistribution only after the relevant
+resonance/observer debt is named.
 
 ## Pull Lists
 

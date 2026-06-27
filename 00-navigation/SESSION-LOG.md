@@ -305,6 +305,53 @@ Wrote
 `04-computation/lean/TournamentH7/README.md`,
 `04-computation/lean/TournamentH7/TournamentH7.lean`, and LTI-236/LTI-237.
 Verified with `lake build TournamentH7.LRCObserverGluingLedger`.
+## codex-2026-06-27-S259 -- Lean proof-frontier ledger for the LRC14 edge
+
+Owner asked to formalize up to the bleeding-edge LRC14 proof frontier while
+staying alert to creative refinements.  Added HYP-3107/T1184/LTI-245/LTT-143,
+`TournamentH7.LRCProofFrontier`, and imported it through `TournamentH7.lean`.
+
+The module records the current proof split: solved q-witness / level-7 lift /
+pair-Pascal cap RHS / THM-577 symbolic dense cap values / terminal `Mreach`,
+with open coverage-extremality, reflection-Perron, Node-3, finite-ruler, and
+fine-scale winding-transfer obligations.  Exact Lean checks prove the
+pair-Pascal cap arithmetic for `k=10..13` plus the `k=9` and `k=8`
+higher-order debts.  The conditional theorem `lrc14_from_bleeding_edge_frontier`
+wires residual classifier + residual-to-`FiniteAddressBranchPacket` producer
+into the existing `CuttingEdgeBranchCoverage -> LRC14Statement` theorem.
+After rebasing over the observer-gluing Lean frontier, the companion theorem
+`lrc14_from_bleeding_edge_observer_gluing_frontier` also closes through
+residual-to-`ObserverGluingCertificate` production and
+`lrc14_from_observer_gluing_coverage`.
+Final rebase over HYP-3099 added a guardrail to this frontier: cap optimality
+should now be pursued as a bounded finite local-minima certificate because the
+improvement tournament is non-transitive, and raw apex-7/H=7 numerology is not
+a terminal bridge.
+Final rebase over HYP-3100 and the later HYP-3105 obstruction-transfer atlas
+also added the conservative `LRCBleedingEdgeFrontier` wrapper route: any
+H/Omega/score contradiction must carry encoding, preserved-predicate,
+destroyed-coordinate, sidecar-discharge columns, and faithful transfer data
+before it can close through `BleedingEdgeFrontierCoverage`.
+The final mainline fetch over HYP-3101/HYP-3102/HYP-3103/HYP-3104 kept the
+Lean theorem unchanged but sharpened the producer map: component-bound packets
+feed coverage extremality, first-obstruction cocycles audit observer-gluing,
+perspective functors police quotient sidecars, and miss-count PGF zeros plus
+the maximizer signal atlas become candidate fine-scale coverage signals.
+After the S31ah certificate-toolkit rebase, the handoff also records that
+H/Omega is validated as a terminal tournament engine but vacuous for coarse
+LRC14 winding-H: apex-7 is the antipodal matching in `14=2*7`, not forbidden
+H=7/Omega-K3.  The local mainline currently overloads `HYP-3101` and
+`HYP-3103`, so future notes should cite route names as well as IDs.  The next
+frontier experiments should explicitly compare HYP-3093/HYP-3097
+equinumerosity, equidecomposability, and equidistribution before scalarizing a
+coverage signal.
+
+New creative test targets are explicit Lean experiment vertices:
+Eberlein/Hankel dip, reflection-Perron dual, fine mod-`p` winding H,
+observer-sheaf overlap, finite-ruler sampler, Node-3 Erdos-Turan tail, and
+Pascal scissors non-equidecomposition, plus the equivalence-triad audit.  This
+treats coarse mod-14 winding-H as a known degenerate bridge at the binding
+rows, not as a proof vertex.
 
 ## codex-2026-06-27 -- LRC14 bleeding-edge frontier Lean wrapper
 

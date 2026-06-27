@@ -156,6 +156,17 @@ certificate, so it is conservative over the S254 interface. The theorem
 antipodal-tie coarse mod-14 winding chart is not a terminal proof carrier
 unless fine-scale sidecars or an independent terminal discharge are attached.
 
+`LRCProofFrontier.lean` is the S259 / HYP-3107 Lean-facing ledger for the next
+proof frontier. It records the solved pair-Pascal cap RHS, including the
+THM-577 symbolic dense cap values, keeps coverage extremality /
+reflection-Perron / Node-3 / finite-ruler / fine-scale winding transfer as
+named `Prop` obligations, and proves the conditional wiring
+`residual classifier + residual finite-address packets -> LRC14Statement`.
+It also exposes the observer-gluing route and the
+`LRCBleedingEdgeFrontier.lean` packet-wrapper route as producer targets, with
+an explicit experiment vertex for the equinumerosity / equidecomposability /
+equidistribution triad. It is a formal frontier map, not a proof of LRC14.
+
 ## Proof sketch
 
 By `ocf`: H(T) = 1 + 2α₁ + 4α₂ + 8α₃ + 16α₄. Setting H = 7 gives

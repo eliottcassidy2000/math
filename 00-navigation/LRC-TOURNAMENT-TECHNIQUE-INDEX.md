@@ -154,6 +154,10 @@ obligations, and proof-carrier interfaces.
   destroyed-coordinate ledger, forced-expansion payload, edge-flip stress
   result, and terminal exit or named debt before importing any forbidden H
   spectrum.
+- Need to turn the current Lean proof edge into explicit formal obligations:
+  use LTT-143 after LTT-141/LTT-140/LTT-136/LTT-132 and make proof nodes the vertices:
+  solved gates, cap ledger, coverage extremality, fine-scale winding transfer,
+  residual classifier, packet producer, and terminal `Mreach` readout.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -4271,6 +4275,70 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTT-139, LTT-138, LTT-137, LTT-136, LTT-133, LTT-101, T1183, T1182,
   T1180, T1179, T1178,
   OPEN-Q-108.
+
+### LTT-143: Lean Proof-Frontier Obligation Tournament
+
+- **Move:** Treat the current Lean proof frontier as a tournament on proof
+  obligations and observer nodes, not on runners, arcs, residues, or raw
+  Hamiltonian-path counts.
+- **LRC use:** HYP-3107/S259 adds `TournamentH7.LRCProofFrontier`.  It
+  records solved nodes (q-witness, level-7 lift, pair-Pascal cap RHS,
+  THM-577 symbolic dense cap values, terminal `Mreach`) and open nodes
+  (coverage extremality,
+  reflection-Perron/order-3/order-4, Node-3 effective peel, finite-ruler glue,
+  and fine-scale winding transfer).  Exact Lean arithmetic proves the solved
+  cap ledger, while `lrc14_from_bleeding_edge_frontier` keeps the top-level
+  theorem conditional on residual classification plus either finite-address
+  packet production or observer-gluing certificate production.
+  HYP-3099 adds the tournament-side caution: cap optimality is a bounded but
+  non-transitive exchange problem, and apex-7-to-H=7 is not a proof bridge.
+  HYP-3100 adds the contradiction grammar and
+  `TournamentH7.LRCBleedingEdgeFrontier` wrapper as an additional conservative
+  packet route.
+  HYP-3105 adds the obstruction-transfer atlas, so the Lean frontier treats any
+  future H/Omega/score/cycle contradiction as a typed producer only after the
+  transfer functor and sidecar audit are explicit.
+  The S31ah certificate-toolkit addendum validates the H/Omega engine but
+  marks its direct coarse LRC14 use as vacuous: mod-14 apex-7 is an antipodal
+  matching obstruction, not an H=7/Omega-K3 obstruction.
+  HYP-3101/HYP-3102/HYP-3103/HYP-3104 plus HYP-3106 now identify the first
+  producer targets: component-bound packets, first-obstruction cocycles,
+  HYP-3106 legal perspective sidecars, HYP-3103 miss-count PGF zero
+  confinement, and HYP-3104 maximizer signal atoms.
+- **Preserves:** LRC predicate-to-`LRC14Statement` wiring, solved/open status,
+  pair-Pascal cap debt, residual classifier, observer-gluing production target,
+  finite-address packet-production target, fine-scale tournament replacement
+  hook, and experiment-to-obligation map.
+- **Forgets / guardrail:** Coarse mod-14 winding-H is not a proof vertex at
+  the binding rows because apex-7 antipodal ties make it degenerate.  Any
+  tournament transfer must retain a fine mod-`p`, sector-pair, or packet
+  sidecar observable that still sees coverage/magnitude.  Current mainline
+  still overloads `HYP-3101`; HYP-3103 now names PGF-zero data and HYP-3106
+  names perspective functors, so cite route names when pulling component,
+  toolkit, perspective, or PGF-zero data into this tournament.
+- **Tournament vertices:** `q_witness_gate`, `level7_lift_sieve`,
+  `pair_pascal_cap_rhs`, `bounded_coverage_extremality`,
+  `reflection_perron_certificate`, `node3_effective_peel`,
+  `fine_modp_winding_transfer`, `finite_ruler_glue`,
+  `finite_address_packet_glue`, and `terminal_mreach_readout`.
+- **Pairwise observable:** whether node A discharges, refines, or makes
+  formally checkable an obligation that node B merely names.
+- **Next hook:** Instantiate `CoverageExtremality` with exact `p0` for
+  `k=8,9,10`; test PGF-zero confinement and maximizer signal atoms as
+  fine-scale observables that avoid the mod-14 tie degeneracy; and make
+  HYP-3095/HYP-3097/HYP-3098
+  observer-gluing rows emit concrete `ObserverGluingCertificate` records with
+  HYP-3102 first-obstruction status, then compress to
+  `FiniteAddressBranchPacket` records when the stronger packet fields are
+  available; add the HYP-3093/HYP-3097 equivalence triad as a sidecar test so
+  equinumerosity, equidecomposability, and equidistribution are compared before
+  scalarizing a candidate invariant.
+- **Pointers:** HYP-3107, HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098, HYP-3097, HYP-3096, HYP-3095, HYP-3094, HYP-3093,
+  HYP-3092, HYP-3091, HYP-3090, HYP-3089, HYP-3088, HYP-3085, HYP-3083,
+  THM-577, THM-573, THM-575, THM-576, LTI-245, LTI-243, LTI-242, LTI-241,
+  LTI-240, LTI-238, LTI-236, LTI-234, LTT-143, LTT-141, LTT-140, LTT-139,
+  LTT-138, LTT-136, LTT-135, LTT-134, LTT-133, T1184, T1182, T1181, T1180,
+  T1179, OPEN-Q-108.
 
 ## Immediate Pull List
 

@@ -111,6 +111,39 @@ status, dual-annihilator status, family descent, AP/GW boundary stop,
 F7/THM-572 state-lift status, and terminal exit. -> HYP-3102, HYP-3101,
 HYP-3095, HYP-3071, HYP-3066, HYP-3056, HYP-3054, HYP-2997, HYP-2995,
 HYP-2963, THM-577, THM-572, THM-573, LTI-241, LTT-139, T1180, OPEN-Q-108.
+**OPEN-Q-108 S259 Lean proof-frontier addendum:**
+HYP-3107 adds `TournamentH7.LRCProofFrontier`, a conditional Lean ledger for
+the current LRC14 edge.  The cap RHS is formalized as solved pair-Pascal
+arithmetic, now including the THM-577 symbolic dense value closure for
+`k=10,11`; the live open fields are coverage extremality,
+reflection-Perron, Node-3, finite-ruler glue, and fine-scale winding transfer.
+Open task: replace one `BleedingEdgeFrontier` `Prop` field by a theorem,
+starting with exact `p0` coverage extremality or a residual classifier that
+emits real `ObserverGluingCertificate` rows from the S258/HYP-3098
+observer-gluing ledger, then compresses to `FiniteAddressBranchPacket` rows
+where possible.  HYP-3099 says the coverage-extremality side should target a
+bounded finite local-minima certificate, not a transitive greedy exchange or
+raw H-spectrum bridge.  HYP-3100/HYP-3105 add the formal
+contradiction-grammar and obstruction-transfer wrappers: any
+H/Omega/spectrum certificate needs encoding, preserved predicate, destroyed
+coordinate, sidecar-discharge fields, and a faithful transfer functor before it
+can close a packet. ->
+Incoming HYP-3101/HYP-3102/HYP-3103/HYP-3104 plus HYP-3106 split the first
+concrete tests: component packets for coverage extremality, first-obstruction
+cocycles for legal gluing, HYP-3106 perspective sidecars for quotient
+validity, and HYP-3103 miss-count PGF zeros / HYP-3104 maximizer signal atoms
+as fine-scale coverage signals.  The S31ah certificate-toolkit rebase
+validates H/Omega certificates but says coarse LRC14 winding-H is vacuous until
+a fine-scale or packet-preserving encoding retains the LRC predicate; current
+`HYP-3101` remains overloaded and the HYP-3103/HYP-3106 split should be cited
+by route name when needed.  Also test the HYP-3093/HYP-3097
+triad directly: equinumerosity, equidecomposability, and equidistribution may
+separate different residual failures before a scalar invariant can. -> HYP-3107,
+HYP-3106, HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101,
+HYP-3100, HYP-3099, HYP-3098, HYP-3097, HYP-3095, HYP-3094, HYP-3092,
+HYP-3090, HYP-3085, HYP-3083, THM-577, THM-573, THM-576, LTI-245, LTI-243,
+LTI-242, LTI-241, LTI-240, LTI-238, LTT-143, LTT-141, LTT-140, LTT-139,
+LTT-138, LTT-136, T1184, T1182, T1181, T1180, T1179, OPEN-Q-108.
 
 **OPEN-Q-108 S257 equivalence-triad invariant addendum:**
 HYP-3093 adds the forgetting-cost tuple
