@@ -27827,3 +27827,57 @@ finite-bank maximizer, which is a warning that a proof needs uniform circuit
 data rather than a fitted threshold.  The de Moivre residual of `G'(z)` is
 weak (`corr(p0,-residual)=+0.348`) and should be tested along root-collision
 paths rather than used as a static maximizer objective.
+
+## codex-2026-06-27 -- Past-work proof-circuit recompilation -- HYP-3117
+
+User asked to search past work for connections that augment LRC proof attempts,
+with circuit complexity in view.  Upstream concurrently reserved HYP-3116 as a
+circuit lower-bound / missing-input ledger, so this completed scout is
+HYP-3117 and extends that lane with the past-work gate map.  After rebase,
+HYP-3116 also supplied a concrete `12`-input, depth-`3` monotone circuit with
+all inputs essential and `0/10` tempting shortcuts closed; dominant missing
+coordinates were `finite_address`, `observer_gluing`, `endpoint_owner`, and
+`uniformity`.  Added
+`05-knowledge/hypotheses/HYP-3117-lrc14-proof-circuit-past-work-recompilation.md`,
+reflection
+`07-reflections/lrc14-proof-circuit-past-work-synthesis-codex-20260627.md`,
+script
+`04-computation/lrc14_proof_circuit_past_work_scout_codex_20260627.py`, and
+stored output
+`05-knowledge/results/lrc14_proof_circuit_past_work_scout_codex_20260627.out`.
+
+Search readout: the older endpoint-cover/additive-circuit layer is not just
+historical context.  HYP-2108 supplies the endpoint-cover `P(S)` gate,
+HYP-2112 supplies the exact `Phi` output wire, and HYP-2114/HYP-2115 supply
+the 3-term fold plus hidden virtual-sum gate.  The newer packet/automaton/
+cocycle/frontier layers then supply the proof-circuit discipline:
+HYP-2961/HYP-2963 labelled packet decision tree, HYP-3016 automaton magnitude
+cocycle, HYP-3102 first-obstruction missing-input detector, HYP-3107 terminal
+Lean proof bus, and HYP-3109/HYP-3112 root/ear payloads.
+
+The executable scout makes two maps.  Map 1 recompiles past work as proof
+gates and sidecars.  Map 2 sketches the residual compiler:
+
+```text
+primitive_residual_row
+  -> labelled_packet_decision_tree
+  -> endpoint_cover_circuit_gate
+  -> Phi_gap_output_wire
+  -> fold_gate_virtual_sum
+  -> automaton_branch_program_guard
+  -> Lee_Yang_ear_payload_gate
+  -> Minkowski_relation_wall_gate
+  -> first_obstruction_cocycle_gate
+  -> Lean_frontier_obligation_bus
+```
+
+Tournament Analysis uses proof gates/sidecars as vertices, not runners or
+arcs.  Fingerprint:
+`score_hist={-3:1,18:1,19:2,20:1,21:1,22:1,24:1,25:1,28:1,31:1}`,
+`directed_3cycles=0`, singleton SCCs, and `hamiltonian_path_count=1`.  The
+priority path starts with `first_obstruction_cocycle_gate`, then
+`lean_frontier_obligation_bus`, then the labelled packet decision tree and
+`Phi`.  Main new fields to attach to HYP-2963/HYP-3107 residual rows:
+`proof_circuit_input_basis_id`, `proof_circuit_missing_input_vector`,
+`sidecar_fanin_profile`, `minimal_certificate_depth`, `gate_route_purity`, and
+`terminal_exit_kind`.

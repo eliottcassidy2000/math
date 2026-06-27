@@ -1,0 +1,114 @@
+HYP-3117 LRC14 proof-circuit past-work scout
+========================================================================
+MAP 1: past-work gates recompiled as proof-circuit carriers
+------------------------------------------------------------------------
+first_obstruction_cocycle_gate [HYP-3102, HYP-2997] score=31
+  role: Turns illegal forgetting into a first obstruction cochain.
+  preserves: Observer/cut payload legality and generated certificate-cycle exits.
+  destroys: Packet identity after the obstruction class has been generated.
+  missing: Actual residual cochains and a stability proof for the basis.
+lean_frontier_obligation_bus [HYP-3107] score=28
+  role: Ten named proof obligations and the terminal LRC14 interface.
+  preserves: LRC14Statement routing through finite-address or observer-gluing certificates.
+  destroys: Raw runner labels and any scalar shortcut that bypasses the proof fields.
+  missing: Replace Prop fields by theorem-producing packets.
+labelled_packet_decision_tree [HYP-2961, HYP-2962, HYP-2963] score=25
+  role: Deterministic counterexample-family decision tree and packet emitter.
+  preserves: Strict-counterexample predicate, qdiv, open-front, packet family, and state-lift flags.
+  destroys: Fine row identity once converted to a fixed-margin labelled packet.
+  missing: Uniform theorem that every primitive residual emits a legal packet.
+phi_gap_output_wire [HYP-2112] score=24
+  role: Exact circuit-to-gap functional G(v)=Phi(C).
+  preserves: Positive gap measure and ker Phi as the tight/worry set.
+  destroys: Endpoint-owner history after the exact gap value is formed.
+  missing: Proof that Phi>0 on every residual multiple-of-n configuration.
+automaton_branch_program_guard [HYP-3008..HYP-3016] score=22
+  role: Finite automaton or branching-program quotient with magnitude cocycle.
+  preserves: Residue-language state only when magnitude/Farey data separates mixed fibers.
+  destroys: Exact magnitude inside a mixed residue-language fiber if no cocycle is retained.
+  missing: Fiber-purity theorem or magnitude-cocycle discharge.
+endpoint_cover_circuit_gate [HYP-2108] score=21
+  role: Exact endpoint-cover positivity circuit P(S).
+  preserves: Simultaneous resonance obstruction for all component midpoints.
+  destroys: Which local owner argument proved a positive P term.
+  missing: A global simultaneous-resonance infeasibility theorem for the residual.
+minkowski_relation_wall_gate [HYP-3062, HYP-3111, HYP-3115] score=20
+  role: Relation-lattice short-wall and convex-body sidecar.
+  preserves: Relation lattice, covolume/body id, low-height wall deletion, and root-stratum compatibility.
+  destroys: Generic geometry slogans and raw Bravais concentration.
+  missing: LRC-native convex body whose inequalities are packet predicates.
+lee_yang_ear_payload_gate [HYP-3109, HYP-3112] score=19
+  role: Whole PGF root curve plus exact one-runner ear payload.
+  preserves: Root stratum, root-motion reconstruction, and ear payload A_t(E,a).
+  destroys: Raw scalar p0 and raw row identity after the root packet is formed.
+  missing: Classify domain-wall/root-collision ears as legal exits or forbidden walls.
+mciq_uniformity_guard [HYP-3111, HYP-3115] score=19
+  role: Circuit-complexity audit: fixed inputs, fan-in, depth, and uniformity.
+  preserves: Proof-circuit basis and missing-input vector for any shortcut.
+  destroys: Finite-bank fitted thresholds after their sidecars are compiled.
+  missing: Train/test and residual-bank circuit with fixed legal inputs.
+fold_gate_virtual_sum [HYP-2114, HYP-2115] score=18
+  role: 3-term fold gate plus hidden virtual-sum nodes.
+  preserves: The delta-clock/fold boundary and why 4-term energy is only a shadow.
+  destroys: Translation-invariant additive energy when hidden sums are collapsed.
+  missing: Fold pressure theorem with virtual-sum nodes retained.
+raw_scalar_maximizer_rule [HYP-3115 warning] score=-3
+  role: One-literal finite-bank classifier such as apex7_error<=5.
+  preserves: Only a bounded-bank signal that suggests a sidecar to test.
+  destroys: Uniformity, basis declaration, root/observer payloads, and proof exits.
+  missing: All theorem-grade circuit fields.
+
+MAP 2: residual-row proof-circuit compiler sketch
+------------------------------------------------------------------------
+primitive_residual_row -> emit labelled packet with qdiv, Haar front, owner skeleton, K33/C27, source family
+labelled_packet_decision_tree -> route to a safe family, live family, or named sporadic/state-lift debt
+endpoint_cover_circuit_gate -> test simultaneous endpoint resonance by P(S)
+phi_gap_output_wire -> compute exact positive gap Phi(C), or identify ker Phi worry set
+fold_gate_virtual_sum -> retain 3-term folds and hidden virtual-sum nodes
+automaton_branch_program_guard -> reject mixed finite-state fibers unless magnitude cocycle is retained
+lee_yang_ear_payload_gate -> attach whole PGF root structure and one-runner ear payload
+minkowski_relation_wall_gate -> declare relation body, short walls, and low-height wall deletion
+first_obstruction_cocycle_gate -> turn any illegal quotient into a generated obstruction class
+lean_frontier_obligation_bus -> supply finite-address or observer-gluing terminal certificate
+
+TOURNAMENT ANALYSIS
+------------------------------------------------------------------------
+vertices = proof gates/sidecars, not runners or arcs
+pairwise observable = which carrier preserves the LRC predicate, retains a legal sidecar, supplies a uniform proof-circuit input, or exposes a missing-input vector before scalarization
+switch/gauge = larger weighted proof-readiness score; ties follow the declared compiler path
+score_hist={-3: 1, 18: 1, 19: 2, 20: 1, 21: 1, 22: 1, 24: 1, 25: 1, 28: 1, 31: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+priority_path=first_obstruction_cocycle_gate -> lean_frontier_obligation_bus -> labelled_packet_decision_tree -> phi_gap_output_wire -> automaton_branch_program_guard -> endpoint_cover_circuit_gate -> minkowski_relation_wall_gate -> lee_yang_ear_payload_gate -> mciq_uniformity_guard -> fold_gate_virtual_sum -> raw_scalar_maximizer_rule
+
+NEW SIGNALS TO MEASURE
+------------------------------------------------------------------------
+proof_circuit_input_basis_id
+proof_circuit_missing_input_vector
+uniformity_guard_status
+endpoint_cover_P_gate
+Phi_gap_output_wire
+fold_gate_depth
+hidden_virtual_sum_count
+automaton_fiber_mixing_bit
+magnitude_cocycle_height
+first_obstruction_class
+lee_yang_ear_payload_mean_level
+root_motion_reconstruction_status
+relation_wall_class
+sidecar_fanin_profile
+minimal_certificate_depth
+gate_route_purity
+terminal_exit_kind
+
+ASSUMPTION CHALLENGE
+------------------------------------------------------------------------
+candidate vertices considered=runners, gaps, fixed circle sections, section boundaries, wall-crossing events, residues, cover arcs, Fourier modes, matroid circuits, proof obligations, Boolean gates, automaton states, cocycle basis atoms, Lee-Yang root-motion ears
+chosen vertices=proof gates and sidecar obligations
+preserved predicate=residual packet progress to LRC14Statement through positive Phi/P, finite-address packets, observer-gluing certificates, or named state-lift debt
+destroyed data=raw row identity, runner order, raw time, some owner history, and scalar maximizer labels unless a sidecar retains them
+
+SUMMARY
+------------------------------------------------------------------------
+Circuit complexity is best used here as a uniform proof compiler: fixed inputs, declared fan-in/depth, missing-input vectors, and terminal proof exits.  The old endpoint/Phi/additive-circuit work supplies real gates, while the newer packet, automaton, cocycle, Lee-Yang, and Lean frontiers supply sidecars and legality checks.

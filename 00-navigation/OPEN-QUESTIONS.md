@@ -18,6 +18,26 @@ shortcut should be accepted only if it hits a minterm or a legal sidecar repair
 strictly decreases the missing vector. -> HYP-3116, HYP-3115, HYP-3114,
 HYP-3113, HYP-3112, HYP-3111, HYP-3108, HYP-3107, HYP-3098, HYP-3083,
 HYP-3074, HYP-3054, HYP-2997, HYP-2991, HYP-2963, LTI-252, LTT-150, T1191,
+**OPEN-Q-108 HYP-3117 proof-circuit recompilation addendum:**
+HYP-3117 extends the HYP-3116 missing-input ledger by recompiling older LRC
+circuit-adjacent work into a proof-state circuit rather than a scalar
+maximizer rule.  The reusable gates are HYP-2108
+endpoint-cover `P(S)`, HYP-2112 exact `Phi`, HYP-2114/HYP-2115
+fold/virtual-sum nodes, HYP-2961/HYP-2963 labelled-packet decision branches,
+HYP-3016 automaton magnitude cocycles, HYP-3102 first-obstruction cochains,
+HYP-3107 Lean frontier obligations, and the HYP-3109/HYP-3112 root/ear
+payloads.  Open task: attach `proof_circuit_input_basis_id`,
+`proof_circuit_missing_input_vector`, `endpoint_cover_P_gate`,
+`Phi_gap_output_wire`, `hidden_virtual_sum_count`,
+`automaton_fiber_mixing_bit`, `first_obstruction_class`,
+`Lee_Yang_ear_payload_mean_level`, `relation_wall_class`,
+`sidecar_fanin_profile`, `minimal_certificate_depth`, `gate_route_purity`,
+and `terminal_exit_kind` to HYP-2963/HYP-3107 residual rows.  Reject any
+shortcut whose input basis changes between anchored-bank tests and residual
+packets; a live row should exit by positive `Phi/P`, finite-address packet,
+observer-gluing certificate, or named K33/F7/THM-572/first-obstruction debt.
+-> HYP-3117, HYP-3116, HYP-3115, HYP-3111, HYP-3112, HYP-3108, HYP-3107, HYP-3102,
+HYP-3016, HYP-2963, HYP-2961, HYP-2114, HYP-2112, HYP-2108, THM-573,
 OPEN-Q-108.
 
 **OPEN-Q-108 S264b PDE weak-form compiler addendum:**
