@@ -28,6 +28,26 @@ global-consistency class proves that the HYP-3129 SPEC certificate and HYP-3124
 tail/tip child packet glue to the same LRC predicate. -> HYP-3134, HYP-3133, HYP-3132, HYP-3129,
 HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3121, HYP-3106,
 HYP-3054, HYP-3050, HYP-3049, HYP-3047, LTI-262, LTT-160, T1201,
+**OPEN-Q-108 S272 resolvent-packet middle-layer addendum:**
+HYP-3135 integrates the user's De Moivre-style quintic with the current LRC14
+proof frontier.  The resolvent roots `2,-4,8,-16` give `e2=-120` and `e3=320`;
+therefore the numbers `120` and `320` are useful as a warning to retain the
+pair/triple branch payload before quotienting.  For LRC14 the analogous
+payload is not a scalar root or count, but the packet
+`Q-floor constants + signed_SPEC_low + SPEC_tail + bounded_core_rho +
+far_push_status + edge_tail_child + edge_tip_child + global_consistency_class +
+terminal_exit`.  HYP-3134 supplies the A000568 edge-envelope version of that
+global-consistency class.
+
+Open task: convert the HYP-3129 signed-SPEC certificate from per-row exact
+computation to a closed-form uniform constant over all `(R,Q)` with
+`2<=|Q|<=6`; prove HYP-3131's far-push-out monotonicity for all far
+placements; prove the S70 k=8 biquadratic coefficient bound behind the
+bounded-core Lee-Yang/phi4 bridge; and connect it back to
+`rho>1 => Rprime>=c`.  Packet rows must also retain the HYP-3124/HYP-3125
+tail/tip deletion sectors or explicitly route to finite-address,
+observer-gluing, or named residual debt. -> HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3130,
+HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3122, HYP-3116,
 OPEN-Q-108.
 
 **OPEN-Q-108 S271 multi-far edge-witness Rprime floor addendum:**

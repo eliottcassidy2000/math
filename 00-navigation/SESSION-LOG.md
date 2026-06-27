@@ -33,6 +33,27 @@ u^2, solvable); the phi^4 sign (lambda>0, kappa4<0, S67) fixes direction; so 'bo
 biquadratic u^2-coefficient' -- degree-2, not a general quartic. META: the bounded-core dual never exceeds degree
 4 (k=8 deepest), below the Abel-Ruffini quintic wall = the n<=7 tameness of the A000568 sandwich (S69). LRC(14)'s
 hard core is SOLVABLE because its resolvent degree is <=4.
+## codex-2026-06-27-S272 -- LRC14 resolvent-packet synthesis: 120/320 as middle pair/triple payload
+
+Integrated incoming HYP-3134/HYP-3133/HYP-3132/HYP-3131/HYP-3130/HYP-3129 with the user's De Moivre-style quintic.  Added HYP-3135, reflection
+`lrc14-resolvent-packet-synthesis-codex-s272.md`, script
+`04-computation/lrc14_resolvent_packet_synthesis_codex_s272.py`, and stored output.  The script verifies the
+resolvent roots `2,-4,8,-16`: elementary symmetric layers are `e1=-10`, `e2=-120`, `e3=320`, `e4=1024`, giving
+quartic coefficients `[1,10,-120,-320,1024]`.  The real branch expression
+`fifthroot(2)-fifthroot(4)+fifthroot(8)-fifthroot(16)` satisfies
+`x^5+20x^3+20x^2+30x+10=0` to `7.105e-15`.
+
+Proof synthesis: `120` and `320` should be read as middle elementary-symmetric branch payload, not scalar
+numerology.  The LRC14 analogue is the packet of Q-floor constants, signed SPEC low/tail, bounded-core
+Lee-Yang/phi4 status, far-push-out monotonicity, edge tail/tip deletion sectors, and finite-address or
+observer-gluing exit.  Incoming work now narrows the remaining proof: Q/apex block closed (HYP-3130/HYP-3128),
+far additions help and reduce the obstruction to the bounded core (HYP-3131), A000568 edge-sandwich/envelope
+work stratifies finite quotient layers and global-consistency legality (HYP-3133/HYP-3134), absolute minorant
+envelopes are ruled out (HYP-3130), the coupling is elementary signed SPEC (HYP-3129/HYP-3132), and the newest
+S70 update sharpens the bounded core to the k=8 solvable biquadratic `u^4-5u^2+4` coefficient bound.  Selected
+120/320 repo motifs were recorded:
+`-120*bc33`, 0/320 resonant-center checks, HYP-2608's 320 support-six stress, +0.320 cap slack, 5! tournament
+mass, n=15 torsion moat 120, and q^120 modular support horizon.
 
 ## mac-mini-2026-06-27-S69 -- far elements PUSH the zeros out: the multi-far floor reduces to the bounded core
 

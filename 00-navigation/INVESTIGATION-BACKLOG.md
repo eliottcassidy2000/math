@@ -70,6 +70,44 @@ and `terminal_exit_or_named_debt` to HYP-3125/HYP-3129 edge-floor packet rows
 before quotienting away paired tail/tip child data.
 
 Namespace: HYP-3134 / LTI-262 / LTT-160 / T1201 / OPEN-Q-108.
+## Lead codex-2026-06-27-S272: LRC14 resolvent-packet middle-layer synthesis
+
+**Status:** SYNTHESIS / proof-target refinement; not proof (HYP-3135).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3135-lrc14-resolvent-packet-middle-layer-synthesis.md`,
+`04-computation/lrc14_resolvent_packet_synthesis_codex_s272.py`,
+`05-knowledge/results/lrc14_resolvent_packet_synthesis_codex_s272.out`,
+and `07-reflections/lrc14-resolvent-packet-synthesis-codex-s272.md`.
+
+Readout: the user's De Moivre-style quintic gives a concrete controlled-
+forgetting lesson.  The resolvent roots `2,-4,8,-16` have elementary symmetric
+layers `e1=-10`, `e2=-120`, `e3=320`, `e4=1024`; hence `120` and `320` are
+pair/triple branch payloads, not standalone roots.  The real branch expression
+`fifthroot(2)-fifthroot(4)+fifthroot(8)-fifthroot(16)` checks against the
+quintic.  Prior repo motifs with 120/320 mostly mark finite middle layers:
+cycle-pair corrections, bounded 0/320 resonant-center checks, support-six
+signed cancellation, cap slack, fixed-path/tournament scale, torsion moats,
+and q^120 modular support horizons.
+
+LRC14 placement: Q/apex block is closed by HYP-3130/HYP-3128; far additions
+help by HYP-3131; HYP-3133/HYP-3134 add the A000568 edge-extension quotient
+stratifier and global-consistency quotient discipline; the absolute minorant
+envelope is ruled out; HYP-3129/HYP-3132 give the signed SPEC coupling
+certificate and need closed-form constant chasing; and S70 sharpens the
+bounded core to the k=8 biquadratic coefficient bound.  The remaining proof
+should be framed as a bounded-core plus
+middle-payload packet theorem retaining Q-floor constants, signed SPEC
+low/tail, Lee-Yang radius, far-push status, edge tail/tip deletion sectors,
+and finite-address or observer-gluing exits.
+
+Next: turn the HYP-3129 per-row exact certificate into a uniform symbolic
+constant; prove far-pushes-out for all far placements; make the S70 k=8
+reflection-fold/biquadratic coefficient bound rigorous; formalize the
+bounded-core `rho>1 => Rprime>=c` bridge; attach HYP-3124/HYP-3125 edge-witness
+fields to real covering packets.
+
+Namespace: HYP-3135 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-S271: LRC14 multi-far edge-witness Rprime floor
 
