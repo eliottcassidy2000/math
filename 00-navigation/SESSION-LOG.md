@@ -1,3 +1,49 @@
+## kind-pasteur-2026-06-27-S254 -- LRC(14) loneliness = danger-count partition function; the Lee-Yang DICHOTOMY + the rigorous Asano OBSTRUCTION (HYP-3128)
+
+Owner TOOL-2: frame the loneliness measure `∫ ∏_s φ_s` as a PARTITION FUNCTION and find an
+Asano-contraction / Lee-Yang zero-free structure proving the floor > 0. Result: HYP-3128 + reflection
+`lee-yang-zeros-explain-bonferroni-failure-kps-S254.md`. Pairs with the SAME-machine concurrent
+TOOL-1 (HYP-3129, S255), which supplies the equidistribution piece I isolated.
+
+THE REFRAMING (exact, validated two ways -- arc-sweep + finite-root + Riesz lattice sum all agree):
+loneliness = `meas(∩_s D_s^c) = P(M=0)`, where `D_s = {t: ‖s t‖ < 1/14}` has `meas(D_s) = 1/7`
+EXACTLY for every speed s, and `M(t) = #{s: t ∈ D_s}` is the danger count over uniform t. The
+danger-count PGF `G(z) = E[z^M]` IS the partition function; with one fugacity,
+`Ξ_diag(λ) = ∫_0^1 (1-λ)^{M(t)} dt = G(1-λ)`, so `L = Ξ_diag(1) = G(0) = P(M=0)` and the Lee-Yang
+zeros are `λ = 1 - ζ` for `ζ` = PGF roots. "Lee-Yang" := all roots `|1-ζ| ≥ 1` (no zero of `Ξ_diag`
+in the open λ-unit-disk).
+
+THE DICHOTOMY (decisive, exact). Split `S = R ∪ 14Q`, R = 14-free big part (`|R| = 13-r`), Q = apexes
+(r = |Q| ∈ 2..6). (i) **Q-BLOCK (apex sub-LRC, r ≤ 6) IS Lee-Yang** -- all PGF roots `|1-ζ| > 1`,
+margins 7.0/5.77/3.78/2.76/2.32/1.74 for r=1..6; multi-affine `Ξ_Q` zero-free on polydisk radius
+`ρ* ≥ 12 (≫ 1)`; so `meas(Q-lonely) > 0` (also plain union bound `≥ 1 - r/7`). (ii) **R-BLOCK (≥ 7
+speeds) FAILS Lee-Yang** -- complex roots enter the λ-unit-disk (R={1..11,13}: λ-root `-0.43 ± 0.48i`
+inside); the `> 6`-speed regime where the union bound is vacuous (`|R|/7 > 1`). (iii) **COMONOTONE
+control:** Lee-Yang NOT implied by `kp < 1` alone -- the max-correlation count `{0:1-1/k, k:1/k}` at
+`kp=1` FAILS for `k ≥ 4` (`min|1-ζ| = 0.933` at k=4); the Q-block's Lee-Yang is a STRUCTURAL fact
+about the equidistributed (near-independent) apex comb, not generic.
+
+THE HONEST OBSTRUCTION (why naive Asano CANNOT close the joint floor). Joint loneliness
+`= meas(R-safe ∩ Q-lonely) = Ξ(1,1)` for the two-block `Ξ(λ,μ)`. Because `Ξ(λ,0) = G_R(1-λ)` already
+has zeros inside `|λ| < 1`, the FULL bidisk `|λ| ≤ 1, |μ| ≤ 1` is NOT zero-free, so the
+Asano-contraction / polydisk-Lee-Yang route by itself CANNOT certify `Ξ(1,1) > 0`. On the real box
+`[0,1]^2`, `Ξ ≥ 0` with min exactly at `(1,1)` (= `both`) -- gives only `≥ 0`, not `> 0`. This
+RIGOROUSLY reproduces and explains -- at the level of zero locations -- the documented BONFERRONI
+FAILURE for few-apex covering; the floor survives only via QUASI-INDEPENDENCE
+(`R' = Ξ(1,1)/(Ξ(1,0)Ξ(0,1))` ≈ 0.51/0.93/0.88/0.97/0.89/1.07 for r=1..6, reproducing HYP-3121's
+documented 0.514 and 0.925).
+
+RELATION TO HYP-3127 (sibling, optimistic): that entry asserts Asano-contracting the tips against the
+"tail" preserves zero-freeness ⇒ R'≥c. The load-bearing premise (single-far zero-free polydisk
+surviving contraction with the ≥ 7-speed tail) is exactly what FAILS here: the ≥ 7-speed R/tail factor
+is NOT single-variable zero-free in the unit disk. The Asano frame is correct for the apex TIPS, but
+the contraction order must NOT pass through the overcrowded tail as a single zero-free factor. NET:
+Lee-Yang/Asano cleanly proves the apex factor + isolates the obstruction as R-block overcrowding;
+it does NOT itself yield `R' ≥ c` (genuinely an equidistribution statement = TOOL-1 thread, now
+certified `R' ≥ 0.642` elementarily in HYP-3129). Scripts
+`04-computation/lrc14_asano_{loneliness_partition,zerofree,atom_decomp,contraction_proof,joint_floor,certified_summary}_kpswf15.py`;
+outputs `05-knowledge/results/lrc14_asano_*_kpswf15.out`.
+
 ## mac-mini-2026-06-27-S68 -- the multi-far floor R'>=c is an ASANO contraction of single-far factors
 
 Owner: merge 'tournament edges as witness, recurse on tip and tail' into closing the uniform multi-far floor

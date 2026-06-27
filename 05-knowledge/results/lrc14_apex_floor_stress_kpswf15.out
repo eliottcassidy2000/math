@@ -1,0 +1,6 @@
+STRESS: can wide/adversarial Q dip below the finite-window floor c_r? (cap 150)
+  r=2: c_r=0.725275  tested 867  violations=0  min=0.725275 at (1, 13)
+  r=3: c_r=0.604396  tested 1272  violations=0  min=0.604396 at (1, 12, 13)
+  r=4: c_r=0.494256  tested 1428  violations=0  min=0.494256 at (1, 11, 12, 13)
+  r=5: c_r=0.381463  tested 1462  violations=0  min=0.381463 at (1, 5, 7, 8, 9)
+  r=6: c_r=0.280983  tested 1494  violations=0  min=0.280983 at (1, 5, 7, 8, 9, 11)
