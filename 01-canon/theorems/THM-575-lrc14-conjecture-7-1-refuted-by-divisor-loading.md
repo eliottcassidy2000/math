@@ -1,5 +1,5 @@
 ---
-id: THM-574
+id: THM-575
 title: The paper's Conjecture 7.1 is false for k=13 as stated; divisor-loaded non-tight covering rows kill any proposed universal denominator
 status: PROVED
 date: 2026-06-27
@@ -18,7 +18,7 @@ external:
   - arXiv:2604.23906 Conjecture 7.1
 ---
 
-# THM-574: Conjecture 7.1 Refuted by Divisor Loading
+# THM-575: Conjecture 7.1 Refuted by Divisor Loading
 
 ## Statement
 

@@ -2,7 +2,7 @@
 
 **S255 correction.** The composite-`14=2*7` bridge remains right, but the raw
 Conjecture 7.1 identification in this incoming reflection is too literal.
-THM-574 refutes the paper's Conjecture 7.1 for `k=13` using divisor-loaded
+THM-575 refutes the paper's Conjecture 7.1 for `k=13` using divisor-loaded
 non-tight rows `S_B={1,...,11,13,84*lcm(1..B)}`: every denominator `d<=B` is
 killed by the loaded speed, while `t=1/12+1/(2N)` is a strict witness for
 `B>=6`. The repaired witness route is HYP-3088's normalized slow/ruler-coordinate
@@ -89,7 +89,7 @@ fraction.**
 ## 5. The headline: **Conjecture 7.1 for k=13 ⟺ LRC(14)**, and it is our witness route
 
 **S255 supersession of this section.** The implication "Conjecture 7.1(13) would imply
-LRC(14)" is formally true, but THM-574 proves the conjecture is false for `k=13`
+LRC(14)" is formally true, but THM-575 proves the conjecture is false for `k=13`
 as written. Treat the largest-arc discussion below as a historical route sketch whose
 direct-time denominator invariant has been replaced by HYP-3088's normalized
 slow/ruler-coordinate invariant.

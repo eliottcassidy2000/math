@@ -4,7 +4,7 @@ title: LRC14 Conjecture 7.1 bridge is refuted in raw time and repaired in normal
 status: REFUTED-AND-REPAIRED / proof-interface target
 source: codex-2026-06-27-S255
 related:
-  - THM-574
+  - THM-575
   - THM-573
   - THM-566
   - THM-565
@@ -25,7 +25,7 @@ The earlier HYP-3088 formulation identified the paper's Conjecture 7.1 with a
 uniform largest-lonely-arc floor in the original time circle. That identification
 is false.
 
-THM-574 proves that Conjecture 7.1 is false for `k=13` as stated. For every
+THM-575 proves that Conjecture 7.1 is false for `k=13` as stated. For every
 proposed denominator bound, the divisor-loaded rows
 
 ```text
@@ -75,7 +75,7 @@ finer/continuous witness.
 
 S61 also measures the direct lonely set for `{1,...,12,14V}`. Direct arcs are
 bounded below only in the finite `V <= V*` range and then get shredded by the
-apex at scale `1/V`. This is the same failure mode THM-574 exposes with
+apex at scale `1/V`. This is the same failure mode THM-575 exposes with
 divisor-loaded rows. Read the S61 "crossover near `V*`" as a finite-ruler
 threshold and a cue to peel the apex, not as a rescue of the raw absolute
 denominator Conjecture 7.1.

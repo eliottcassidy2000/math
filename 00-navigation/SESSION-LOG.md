@@ -6,7 +6,7 @@ field `Z/(k+1)Z`, so the project descent through dyadic work and THM-573's
 level-7 lift is the right analogue of the paper's `c=2,7` fallback.  But the
 incoming HYP-3088 equivalence with Conjecture 7.1 was too literal.
 
-Added THM-574: Conjecture 7.1 is false for `k=13` as stated.  For
+Added THM-575: Conjecture 7.1 is false for `k=13` as stated.  For
 `S_B={1,...,11,13,84*lcm(1..B)}`, every denominator `d<=B` is killed by the
 loaded apex, while `t=1/12+1/(2N)` is a strict witness once `B>=6`, so the rows
 are primitive and non-tight.  The S255 scout verifies representative `B` values
@@ -18,14 +18,14 @@ floor in the THM-573 residual (`<=6` multiples of `7`), paired with HYP-2072's
 mod-7 `I(k,p,1)` sieve.  The two proof obligations now talk to each other:
 divisor loading refutes raw denominator pruning, and the CRT/lift sieve tells
 us exactly which normalized witness carrier must be preserved.  Files:
-THM-574, HYP-3088 detail, script/result
+THM-575, HYP-3088 detail, script/result
 `lrc14_conj71_refutation_normalized_arc_codex_s255.*`, reflection
 `lrc14-conj71-refutation-normalized-arc-repair-codex-s255.md`.
 
 Rebased over incoming mac-mini-S61 and integrated it as confirmation: S61
 verifies `I(13,7,1)` is covering mod `7`, one `c=2` lift lands on covering mod
 `14`, and direct lonely arcs for `{1..12,14V}` decay after the finite `V*`
-crossover.  Read together with THM-574, this says the paper bridge is exact at
+crossover.  Read together with THM-575, this says the paper bridge is exact at
 the `I(k,p,1)`/lift level but must be closed through normalized apex peeling,
 not raw denominator time.
 ## mac-mini-2026-06-27-S61 -- merge the polynomial-method paper (arXiv:2604.23906): exact I(k,p,1) apex bridge + V* unifies three walls

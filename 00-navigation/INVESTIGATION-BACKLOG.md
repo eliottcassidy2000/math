@@ -18,9 +18,9 @@
 ## Lead codex-2026-06-27-S255: LRC14 Conjecture 7.1 raw-time refutation and normalized repair
 
 **Status:** PROVED refutation of paper Conjecture 7.1 as stated + repaired
-proof-interface route (THM-574/HYP-3088).
+proof-interface route (THM-575/HYP-3088).
 **Readout:** Added
-`01-canon/theorems/THM-574-lrc14-conjecture-7-1-refuted-by-divisor-loading.md`,
+`01-canon/theorems/THM-575-lrc14-conjecture-7-1-refuted-by-divisor-loading.md`,
 `05-knowledge/hypotheses/HYP-3088-lrc14-conj71-refutation-and-normalized-arc-repair.md`,
 `04-computation/lrc14_conj71_refutation_normalized_arc_codex_s255.py`,
 `05-knowledge/results/lrc14_conj71_refutation_normalized_arc_codex_s255.out`,
@@ -44,7 +44,7 @@ Incoming mac-mini-S61 supplies the matching first measurements: exact
 and direct arcs for `{1..12,14V}` cross over from finite long arcs to `1/V`
 decay near `V*`.  Use this as support for the normalized peel, not for raw
 Conjecture 7.1.
-Namespace: THM-574 / HYP-3088 / OPEN-Q-108.
+Namespace: THM-575 / HYP-3088 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-S254: Sexy prime pair sieve transfer
 
