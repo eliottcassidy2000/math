@@ -86,6 +86,11 @@ obligations, and proof-carrier interfaces.
   endpoint-deletion children, sector words, repair sidecars, and proof
   obligations the carriers.  Do not stop at raw edge counts or one-sided
   tail-only/tip-only recursion.
+- Need to close the `r=2..6` covering decorrelation floor:
+  use LTT-158 after LTT-157/LTT-156/LTT-144/LTT-130 and make proof carriers
+  for the edge-floor packet the vertices.  Treat EH as an LRC
+  level-of-distribution proxy, Gaussian smoothing as a positivity interface,
+  and Asano/Lee-Yang contraction as a legality sidecar.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5055,3 +5060,55 @@ HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
 - **Pointers:** HYP-3124, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115,
   HYP-3112, HYP-3108, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-2963,
   LTI-259, LTT-157, T1198, OPEN-Q-108.
+
+## LTT-158: Tournament Of Multi-Far Edge-Floor Repair Operators
+
+- **Move:** Treat the open `Rprime >= c` floor as a directed edge-witness
+  packet `R-safe packet -> Q-safe packet`, then rank the repair operators
+  that can legally make the diagonal sector positive.  Vertices are proof
+  carriers: two-ended edge packet, uniform floor, Gaussian smoothing,
+  EH-style level-of-distribution proxy, Asano/Lee-Yang contraction, phi4
+  stabilizer, Cech finite-ruler desmoothing, chiral guard, H7 state lift, and
+  raw Bonferroni negative control.
+- **LRC use:** HYP-3125/S271 targets the HYP-3121 `r=2..6` multi-far
+  covering branch after HYP-3124 proved sector words alone are too coarse.
+  Midpoint-grid audit shows the named Bonferroni-negative rows still have
+  positive `Rprime` (`0.513784`, `0.925326`), tail deletion generally improves
+  the floor, tip deletion exposes the multiple-of-14 recursion, and
+  individual R/Q edge ratios stay near `1`.  The hard object is therefore a
+  packet-level distribution floor, not a single pair edge.
+- **Preserves:** lifted covering predicate, tail/tip packets, four-sector deck,
+  both deletion-child ratios, residue exception set, Gaussian smoothing width,
+  finite-ruler desmoothing threshold, Asano/Lee-Yang zero-free contraction
+  status, phi4 cumulant sign, normal-fan chamber, chiral guard word, and
+  terminal exit.
+- **Forgets / guardrail:** Bonferroni, raw `p0`, individual pair ratios,
+  untyped EH analogies, Gaussian positivity without finite-ruler desmoothing,
+  and Asano contraction without a zero-free sidecar are only telemetry.
+- **Fingerprint:** Pairwise observable is majority retention over LRC
+  predicate, attack on the multi-far floor, tail/tip recursion, decorrelation
+  power, zero-free contraction, finite packet fields, formalization readiness,
+  and failure guards.  S271 reports
+  `score_hist={0:1,1:1,2:1,3:1,5:2,6:2,8:1,9:1}`, two directed 3-cycles,
+  SCC sizes `[4,1,1,1,1,1,1]`, five Hamiltonian paths, and selected path
+  `edge_witness_two_ended_RQ_packet -> uniform_multifar_Rprime_floor ->
+  gaussian_heat_minorant_smoothing -> normal_fan_cech_finite_ruler ->
+  asano_lee_yang_edge_contraction -> chiral_cross_sector_guard ->
+  phi4_quartic_cumulant_stabilizer -> H7_state_lift_zero_kernel ->
+  EH_level_distribution_proxy -> raw_Bonferroni_or_scalar_p0`.
+- **Next hook:** Add `edge_floor_packet`, `tail_deletion_child_Rprime`,
+  `tip_deletion_child_Rprime`, `EH_level_distribution_proxy`,
+  `major_arc_residue_exception_set`, `gaussian_heat_kernel_width`,
+  `finite_ruler_desmoothing_threshold`, `asano_contraction_status`,
+  `lee_yang_zero_free_after_contraction`, `phi4_kappa4_sign`,
+  `normal_fan_chamber_id`, `chiral_guard_word`, and
+  `terminal_exit_or_named_debt` to real `r=2..6` covering packets.
+- **Pointers:** HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121, HYP-3120,
+  HYP-3127, HYP-3118, HYP-3116, HYP-3112, HYP-3108, HYP-3106, HYP-3101, HYP-2968,
+  HYP-2963, THM-573, THM-572, THM-082, LTI-260, LTT-158, T1199,
+  OPEN-Q-108.
+
+Post-rebase HYP-3127 promotes Asano to the candidate contraction engine for
+this same tournament card.  Future LTT-158 uses should treat S271's tournament
+as the packet/diagnostic layer for HYP-3127's single-far zero-free, SPEC-bound,
+and monotonicity obligations.

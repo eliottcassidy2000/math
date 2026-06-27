@@ -30,6 +30,44 @@ OBLIGATIONS (named): (1) single-far Lee-Yang region = HYP-2829 as a zero-free po
 (2) the SPEC bound |SPEC|<=1-c via EH + signed cancellation (verified c~0.98 distinct); (3) recursion termination
 + r-monotonicity (r up => R' up, bottoming at r=1 closed + bounded core). The prize: the genuinely-open core of
 the covering bound reduced to a single-far Lee-Yang region + Asano + an EH-level spectrum bound.
+## codex-2026-06-27-S271 -- LRC14 multi-far edge-witness Rprime floor -- HYP-3125
+
+Integrated the new upstream HYP-3124/T1198 edge-witness recursion before
+claiming HYP-3125/T1199/LTI-260/LTT-158.  Added
+`04-computation/lrc14_multifar_edge_witness_floor_codex_s271.py`, stored
+output `05-knowledge/results/lrc14_multifar_edge_witness_floor_codex_s271.out`,
+detail `05-knowledge/hypotheses/HYP-3125-lrc14-multifar-edge-witness-rprime-floor.md`,
+and reflection
+`07-reflections/lrc14-multifar-edge-witness-rprime-floor-codex-s271.md`.
+
+The continuation treats HYP-3121's open `r=2..6` decorrelation floor as an
+HYP-3124 two-ended proof edge `R-safe packet -> Q-safe packet`, with
+`Rprime=mu(R-safe and Q-safe)/(mu(R-safe)mu(Q-safe))` as the diagonal sector
+mass.  Midpoint-grid audit in `u in [0,14)` reproduces the named
+Bonferroni-negative quasi-independence rows: `{1..11,13,84}` has
+`Rprime=0.513784`, and `{1..10,13,84,154}` has `Rprime=0.925326`.  Tail
+deletion usually improves the floor; tip deletion exposes the multiple-of-14
+side as the sharper child; individual R/Q edge ratios stay near `1`, so the
+obstruction is packet-level distribution rather than a single bad pair edge.
+
+Tournament Analysis uses repair operators/proof carriers as vertices, not
+runners, primes, Gaussian samples, or scalars.  Selected path:
+`edge_witness_two_ended_RQ_packet -> uniform_multifar_Rprime_floor ->
+gaussian_heat_minorant_smoothing -> normal_fan_cech_finite_ruler ->
+asano_lee_yang_edge_contraction -> chiral_cross_sector_guard ->
+phi4_quartic_cumulant_stabilizer -> H7_state_lift_zero_kernel ->
+EH_level_distribution_proxy -> raw_Bonferroni_or_scalar_p0`.  EH is kept only
+as an LRC level-of-distribution proxy; Gaussian smoothing is the positivity
+interface before finite-ruler/Cech desmoothing; Asano contraction is the
+Lee-Yang legality test for tail/tip contraction, with HYP-3122 phi4 support.
+
+Post-rebase integration: incoming HYP-3127/S68 promotes Asano from a legality
+sidecar to the candidate main engine for the same multi-far floor, using the
+multi-affine coverage polynomial and single-far Lee-Yang factors.  S271 should
+therefore be read as the edge-floor packet schema/diagnostic harness for
+HYP-3127's obligations: single-far zero-free polydisk, `SPEC` or signed
+cancellation bound, and contraction monotonicity/termination.  It is not a
+competing route.
 
 ## mac-mini-2026-06-27-S67 -- Lee-Yang extremality: the cap is a phi^4 field theory, kappa4 marks the hard row k=8
 

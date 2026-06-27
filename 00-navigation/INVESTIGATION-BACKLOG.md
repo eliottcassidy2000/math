@@ -15,6 +15,42 @@
 
 ---
 
+## Lead codex-2026-06-27-S271: LRC14 multi-far edge-witness Rprime floor
+
+**Status:** EVIDENCE / executable edge-floor synthesis scout; not proof
+(HYP-3125/T1199).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3125-lrc14-multifar-edge-witness-rprime-floor.md`,
+`04-computation/lrc14_multifar_edge_witness_floor_codex_s271.py`,
+`05-knowledge/results/lrc14_multifar_edge_witness_floor_codex_s271.out`,
+and `07-reflections/lrc14-multifar-edge-witness-rprime-floor-codex-s271.md`.
+
+Readout: integrates incoming HYP-3124 with HYP-3121 by treating the open
+`r=2..6` decorrelation floor as a two-ended directed proof edge
+`R-safe packet -> Q-safe packet`.  In the lifted `u=14t` coordinate, `Rprime`
+is the normalized diagonal sector mass.  The S271 audit keeps the known
+Bonferroni-negative rows positive by quasi-independence (`0.513784`,
+`0.925326`), shows tail deletion usually improves the floor, shows tip
+deletion is the sharper multiple-of-14 recursion, and finds individual R/Q
+edge ratios near `1`, pointing to packet-level distribution rather than a
+single bad pair.
+
+Next: add `edge_floor_packet`, deletion-child `Rprime` ratios,
+`EH_level_distribution_proxy`, major-arc exceptions, Gaussian smoothing width,
+finite-ruler desmoothing threshold, Asano/Lee-Yang contraction status, phi4
+sign, normal-fan chamber, chiral guard word, and terminal debt to real
+`r=2..6` covering rows.  Prove an LRC-specific level-of-distribution bound
+over edge-sector residues, then desmooth; route failures to
+Asano/Lee-Yang/phi4/Cech/H7 debt.
+
+Post-rebase connection: incoming HYP-3127/S68 strengthens this lead by making
+Asano contraction the candidate main engine.  Treat S271 as the packet schema
+and diagnostic harness for HYP-3127's single-far zero-free, `SPEC`-bound, and
+monotonicity obligations.
+
+Namespace: HYP-3125 / LTI-260 / LTT-158 / T1199 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S270: LRC14 chiral base-stalk guard and normal-fan Cech finite-ruler proof angles
 
 **Status:** SYNTHESIS / executable proof-angle scout; not proof (HYP-3123/T1197).

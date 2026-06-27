@@ -1,5 +1,33 @@
 # Open Questions
 
+**OPEN-Q-108 S271 multi-far edge-witness Rprime floor addendum:**
+HYP-3125 turns the HYP-3121 `r=2..6` covering floor into an HYP-3124-style
+edge witness.  The live packet is `R-safe packet -> Q-safe packet` in the
+lifted `u=14t` coordinate, with `Rprime` as its normalized diagonal sector
+mass.  The S271 grid audit confirms the named Bonferroni-negative rows remain
+positive by quasi-independence (`Rprime=0.513784` and `0.925326`), while
+tail/tip deletion children show the floor is recursive on both endpoints.
+
+Open task: build real `r=2..6` covering-packet rows with
+`edge_floor_packet`, `tail_deletion_child_Rprime`,
+`tip_deletion_child_Rprime`, `EH_level_distribution_proxy`,
+`major_arc_residue_exception_set`, `gaussian_heat_kernel_width`,
+`finite_ruler_desmoothing_threshold`, `asano_contraction_status`,
+`lee_yang_zero_free_after_contraction`, `phi4_kappa4_sign`,
+`normal_fan_chamber_id`, `chiral_guard_word`, and
+`terminal_exit_or_named_debt`.  Prove a uniform LRC-specific BV/L2
+edge-sector distribution bound outside named major arcs, obtain a
+Gaussian-smoothed diagonal lower bound, desmooth through finite-ruler/Cech
+fields, or route failures to Asano/Lee-Yang/phi4/Cech/H7 named debt. ->
+HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121, HYP-3118, HYP-3116,
+HYP-3112, HYP-3108, HYP-3106, HYP-3101, HYP-2968, HYP-2963, THM-573,
+THM-572, THM-082, LTI-260, LTT-158, T1199, OPEN-Q-108.
+
+Post-rebase note: incoming HYP-3127 upgrades this task by proposing Asano
+contraction as the main engine.  The S271 `edge_floor_packet` should be the
+ledger for HYP-3127's single-far zero-free, `SPEC`-bound, and monotonicity
+obligations.
+
 **OPEN-Q-108 S270 chiral-stalk / Cech proof-angle addendum:**
 HYP-3123 selects two remaining LRC14 proof angles that should be worked as
 coupled packet producers rather than more scalar analogies.  The chiral

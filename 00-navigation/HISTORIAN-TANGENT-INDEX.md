@@ -66,6 +66,13 @@ Useful synthetic maps added later:
   equidecomposability data carried by paired tail-deletion and tip-deletion
   children, and proposes `edge_witness_certificate` as the next HYP-3115
   domain-wall packet.
+- `07-reflections/lrc14-multifar-edge-witness-rprime-floor-codex-s271.md`:
+  HYP-3125/T1199 synthesis turning the HYP-3121 multi-far `Rprime >= c`
+  floor into an HYP-3124 two-ended edge packet.  It keeps
+  Elliott-Halberstam only as a level-of-distribution metaphor, uses Gaussian
+  smoothing as a positivity interface, and treats Asano contraction as a
+  Lee-Yang legality sidecar for tail/tip contraction; after HYP-3127, this is
+  best read as the packet ledger for the stronger Asano-contraction reduction.
 
 ## Second-Pass Small Motif Ledger
 
