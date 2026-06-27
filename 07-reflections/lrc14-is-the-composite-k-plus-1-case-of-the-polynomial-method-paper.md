@@ -1,4 +1,4 @@
-# LRC(14) is the composite-`k+1` case of the polynomial-method paper — and Conjecture 7.1 *is* our witness route
+# LRC(14) is the composite-`k+1` case of the polynomial-method paper — with raw Conjecture 7.1 replaced by the normalized witness route
 
 **S255 correction.** The composite-`14=2*7` bridge remains right, but the raw
 Conjecture 7.1 identification in this incoming reflection is too literal.
@@ -86,13 +86,18 @@ uniform, *replaces* the computation the paper cannot afford. **This is the preci
 project can contribute past k=12: not a new finite check, but an analytic lower bound on the witness
 fraction.**
 
-## 5. The headline: **Conjecture 7.1 for k=13 ⟺ LRC(14)**, and it is our witness route
+## 5. The correction: raw Conjecture 7.1 is false, but its normalized carrier is our witness route
 
 **S255 supersession of this section.** The implication "Conjecture 7.1(13) would imply
 LRC(14)" is formally true, but THM-575 proves the conjecture is false for `k=13`
 as written. Treat the largest-arc discussion below as a historical route sketch whose
 direct-time denominator invariant has been replaced by HYP-3088's normalized
-slow/ruler-coordinate invariant.
+slow/ruler-coordinate invariant. Incoming HYP-3091 explains the repair: the
+direct denominator scale splits into bounded-core `D=41` and apex `1/lmax=V*`
+scissors scales, so a single raw original-time denominator theorem is the wrong
+carrier. The corrected ledger keeps CRT factor status, the THM-573 `c=7` lift,
+the dyadic/covering `c=2` lift, normalized component counts, cap regime
+HYP-3090/HYP-3092/THM-576, mod-41 `D`, V* regime, and HYP-3094 shuttle state.
 
 > **Conjecture 7.1 (paper).** For each `k+1` there is a constant `D` such that for every integer `d≥D`,
 > every non-tight coprime tuple `v∈ℤ_{>0}^k` has a witness time in `(1/d)ℤ`.
@@ -144,32 +149,41 @@ in this light, **measuring the failure of the order-6 unit group to fill the deg
 
 ## 7. What this buys us — the sharpened target
 
-LRC(14), fully reconciled, is now:
+LRC(14), fully reconciled after THM-575, is now:
 
 ```
-LRC(14)  ⟺  Conjecture 7.1(13)  ⟺  every non-tight primitive covering 13-tuple has a
-            lonely interval of length ≥ ℓ0 > 0  (uniform ⟹ D = ⌈1/ℓ0⌉ ≈ few hundred)
+LRC(14)  ⇐  normalized residual witness ledger closes every primitive covering row
 
-   built from:
-   (i)  scale separation ⟹ lonely-arc count uniformly bounded   [THM-565 Framing A: arcCount = m]
-   (ii) witness floor    ⟹ lonely measure ≥ m_P > 0             [THM-530/565]
-   (iii) (i)+(ii) ⟹ largest arc ≥ m_P/arcCount = ℓ0             [pigeonhole, elementary]
-   (iv) largest arc ≥ ℓ0 ⟹ bounded-denominator witness ⟹ LR property  [a/d ∈ interval]
+   live bridge:
+   (i)   factor `14=2*7` into CRT lift channels
+   (ii)  THM-573 closes the `c=7` channel with >=7 multiples of 7
+   (iii) HYP-3089 identifies `I(13,7,1)=covering mod 7` and the `c=2` lift
+         as covering mod 14
+   (iv)  HYP-3090/THM-576 make the cap side pairwise-triangular for k>=10
+   (v)   HYP-3091 separates bounded-core `D=41` from apex `V*`
+   (vi)  HYP-3094 feeds nested-refinement / cross-handoff finite-address rows
+   (vii) normalized slow/ruler-coordinate arc floor + finite-ruler sampling
+         gives the terminal witness floor
 ```
 
-The genuine open piece is exactly **(i) for the direct `1/14` lonely set** (THM-565 currently bounds the
-arc count for the *maxgap>1/7* witness object after peeling; we need the same uniform arc-count bound for
-the lonely set itself, or a clean reduction between the two). Everything else is in hand. This is a
-*much* more concrete target than "OPEN-Q-108 / `p0≤cap` symbolic," and it is the paper's own
-Conjecture 7.1 — so a proof would be recognized immediately by the LRC community as completing their
-program at k=13.
+The genuine open piece is no longer a raw direct `1/14` largest-arc theorem.
+It is the normalized residual ledger after the THM-573 sieve: prove uniform
+positive normalized measure plus a controlled component bound for rows with
+`<=6` multiples of `7`, while preserving the CRT lift status, cap regime,
+mod-41 bounded-core status, V* apex status, Node-3/gK8 peel status, and
+finite-address shuttle exit. This is still the paper's bottleneck in recognizable
+form: it replaces the prohibitive `I(k,p,1)` enumeration by an analytic
+normalized witness certificate.
 
-**Honest status:** LRC(14) still NOT proved. But the endgame is re-localized to a single uniform
-arc-count bound, the constant `D` is pinned to the few-hundred range (matching the `V*` atlas), and the
-project's witness machinery is revealed to be the engine for the paper's own Conjecture 7.1. The
-next computational step (this session) is to *measure* `ℓ_max` over covering tuples and confirm the
-uniform floor `ℓ0` and the implied `D`.
+**Honest status:** LRC(14) still NOT proved. The endgame is re-localized to the
+normalized residual witness ledger, with the old few-hundred `D/V*` signal now
+understood as a bounded-apex crossover rather than a global denominator theorem.
+The next computation should emit one table joining CRT factors, count of
+7-divisible speeds, direct and normalized component counts, cap
+formula/deviation regime, mod-41 `D`, V* regime, Node-3 peel status,
+gK8/p0 status, finite-ruler threshold, and first missing sidecar.
 
-→ HYP-3088 (polynomial-method/CRT bridge), HYP-3089 (largest-arc ⟺ Conjecture 7.1(13)), THM-573,
-THM-565, THM-530, OPEN-Q-108, HYP-2866 (compatible), HYP-2602, mac-mini-S59/S60 (covering redirect,
-gK8), the-four-faces-of-14, [[lrc14-thread]], arXiv:2604.23906.
+→ THM-575, THM-576, THM-574, THM-573, HYP-3088, HYP-3089, HYP-3090,
+HYP-3091, HYP-3092, HYP-3094, HYP-3085, THM-565, THM-530, T1172, LTI-236, LTT-134,
+OPEN-Q-108, HYP-2866, HYP-2602, the-four-faces-of-14, [[lrc14-thread]],
+arXiv:2604.23906.

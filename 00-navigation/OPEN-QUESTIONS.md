@@ -51,7 +51,6 @@ Incoming mac-mini-S61 should be treated as the first two ledger columns already
 measured: `I(13,7,1)=covering mod 7`, `c=2` lift gives covering mod `14`, and
 direct arc decay begins past `V*`; the open work is the normalized peel and
 uniform residual certificate.
-
 **OPEN-Q-108 S254 hyperoperation grid-address addendum:**
 HYP-3087 turns the user's hyperoperation hierarchy on `(p,q)` and the older
 `x+2`/`x*2` space-filling grid into an operation-address packet carrier.  The
@@ -76,6 +75,7 @@ outside-bank normalizer attempts, then test whether danger-weighted operation
 cells route the THM-573 residual core to q-witness, covering/Node3,
 K33/THM-572, protected branch closure, or named residual debt without creating
 a naked bridge. -> HYP-3087, HYP-3092, HYP-3083, HYP-3004, HYP-3003, THM-523, THM-571,
+a naked bridge. -> HYP-3087, HYP-3094, HYP-3085, HYP-3083, HYP-3004, HYP-3003, THM-523, THM-571,
 THM-572, THM-573, LTI-233, LTT-131, T1169, OPEN-Q-108.
 **OPEN-Q-108 S254 finite-address Lean packet addendum:** S254 adds
 `TournamentH7.LRCFiniteAddressBranchClosure`, which formalizes the HYP-3083
@@ -94,16 +94,17 @@ producer toward a low-order pairwise `S2` / reflection-`3x3` Perron
 certificate, while incoming HYP-3094 supplies concrete
 nested-refinement and cross-handoff shuttle rows for O2/O3; HYP-3087 supplies
 the operation-grid address scheduler that must preserve the LRC clock before
-feeding this Lean packet; HYP-3088-HYP-3089 identifies a compatible
-largest-lonely-arc / Conjecture 7.1 producer for the same terminal floor.
+feeding this Lean packet; HYP-3088-HYP-3089 identifies a compatible normalized
+polynomial-method witness-floor producer for the same terminal floor.
 Open task:
 replace the conservative wrapper with real producer theorems.  First
 instantiate an actual HYP-2963 low-apex, top-balanced covering-moment row with
 exact endpoint owner, feasible dual `g`, protected branch node, q-cusp ledger
 id, HYP-3085 pairwise/Perron certificate, HYP-3094 covering/K33 shuttle status,
 HYP-3087 operation-cell address, and terminal discharge; then generalize to
+HYP-3087 operation-cell address, HYP-3091 scissors-fiber status, and terminal discharge; then generalize to
 global packet coverage and the K33/THM-572 state-lift producer. -> HYP-3087,
-HYP-3088, HYP-3089, HYP-3085, HYP-3084, HYP-3083, HYP-3082, HYP-3081,
+HYP-3088, HYP-3089, HYP-3091, HYP-3092, HYP-3094, HYP-3085, HYP-3084, HYP-3083, HYP-3082, HYP-3081,
 HYP-3079, HYP-3078, HYP-3075, HYP-2963, THM-523, THM-571, THM-572, THM-573,
 LTI-234, LTI-233, LTI-232, LTT-132, LTT-131, LTT-130, T1170, T1169,
 normalized lonely-arc floor, K33/THM-572, protected branch closure, or named

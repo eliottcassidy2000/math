@@ -95,6 +95,30 @@ HYP-2963 bank representatives and the O2/O3 shuttle examples, then measure
 whether the THM-565 scale-separated arc-count bound transfers from the
 controlled witness object to the direct lonely set.
 Namespace: HYP-3083 / HYP-3087 / HYP-3088 / HYP-3089 / HYP-3090 / HYP-3091.
+Namespace: THM-574 / HYP-3089 / OPEN-Q-108.
+## Lead codex-2026-06-27-S255b: CRT bridge after raw Conjecture 7.1 refutation
+
+**Status:** SYNTHESIS / corrected proof-target refinement; not proof
+(THM-575/THM-576/THM-574/HYP-3088/HYP-3089/HYP-3090/HYP-3091/HYP-3092/HYP-3094/T1172/LTI-236/LTT-134).
+**Readout:** Rebased the polynomial-method bridge over incoming S61.  The raw
+denominator/largest-time-arc reading is false by THM-575 and HYP-3088, so the
+old `D<=213` direct route must not be used as a global theorem.  The corrected
+bridge keeps the user's core insight but changes the carrier: `14=2*7` still
+forces `c=7` and `c=2` lift channels; THM-574 gives the c-lift family,
+THM-573 supplies the `c=7` lift; HYP-3089 verifies
+`I(13,7,1)=covering mod 7` and the `c=2` lift to covering
+mod `14`; the V* crossover splits bounded apex direct checks from large-apex
+Node-3/gK8 peeling.  HYP-3090/HYP-3092/THM-576 make the cap side
+pair-Pascal / pairwise-triangular for `k>=10`, leaving only the `k=8,9`
+deviation constants as finite analytic-substitute debt; HYP-3091 separates the
+mod-41 bounded-core scissors scale from apex V*, and HYP-3094 resolves the
+duplicate K33-shuttle namespace.
+**Next:** build the normalized residual witness ledger with CRT factor, lift
+status, `P,E,V` normalization, direct and normalized component counts,
+cap-formula/deviation regime, mod-41 `D`, V* regime, Node-3 peel status,
+gK8/p0 status, HYP-3094 shuttle status, finite-ruler threshold, and first
+missing sidecar.
+Namespace: THM-574 / THM-576 / HYP-3088 / HYP-3089 / HYP-3090 / HYP-3091 / HYP-3092 / HYP-3094 / T1172 / LTI-236 / LTT-134.
 
 ## Lead codex-2026-06-27-S254: Sexy prime pair sieve transfer
 

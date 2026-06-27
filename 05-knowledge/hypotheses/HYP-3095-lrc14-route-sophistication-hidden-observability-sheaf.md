@@ -141,9 +141,12 @@ The hidden object is the packet that can be read in all four lanes.
 The incoming polynomial-method work sharpened why 14 is special.  The paper's
 Proposition 4.1 wants `Z/(k+1)Z` to be a field.  At `k=13`, `k+1=14=2*7`;
 the field proof breaks into prime-factor lifts.  THM-574 shows the c-lift
-family, and THM-573 supplies the level-7 sieve.  The polynomial-method
-reflection adds the algebraic shadow: the units mod 14 have size 6, leaving a
-degree-7 null direction, while the low-order moments survive through degree 6.
+family, and THM-573 supplies the level-7 sieve.  HYP-3089/S61 makes the
+apex bridge exact: `I(13,7,1)` is covering mod `7`; THM-573 is the `c=7`
+lift; and the dyadic `c=2` lift lands on the project's covering condition
+mod `14`.  The polynomial-method reflection adds the algebraic shadow: the
+units mod 14 have size 6, leaving a degree-7 null direction, while the
+low-order moments survive through degree 6.
 
 That is the same number appearing in different languages:
 
@@ -197,8 +200,8 @@ was invented to restore.
 1. **Normalized apex residual.**  Build the THM-573 / THM-575 residual ledger
    for rows with `<=6` multiples of 7.  It should retain `P,E,V`, normalized
    good set `G(P,E)`, component count, largest normalized component,
-   `I(13,7,1)`/mod-7 status, c-lift status, finite-ruler threshold, and
-   terminal exit.
+   `I(13,7,1)=covering mod 7`, `c=7` lift status, dyadic `c=2` lift status
+   to covering mod `14`, finite-ruler threshold, and terminal exit.
 
 2. **Degree-7 null-direction control.**  Treat gK8/HYP-3085 as the low-order
    moment chart for the same residual, not as a separate scalar bound.  The

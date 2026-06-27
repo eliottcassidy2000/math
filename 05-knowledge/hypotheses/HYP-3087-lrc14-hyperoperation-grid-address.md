@@ -14,6 +14,9 @@ related:
   - HYP-3088
   - HYP-3089
   - HYP-3090
+  - HYP-3092
+  - HYP-3093
+  - HYP-3094
   - HYP-3085
   - HYP-3091
   - HYP-3083
@@ -162,7 +165,7 @@ primitive 13-speed row
   -> cap-ratio/deviation status (HYP-3090/THM-576)
   -> three-sameness lonely-set fiber (HYP-3091)
   -> finite-address branch packet (HYP-3083)
-  -> covering/K33 shuttle if the grid class is nested_refinement or cross_handoff (HYP-3092)
+  -> covering/K33 shuttle if the grid class is nested_refinement or cross_handoff (HYP-3094)
   -> protected branch graph / no naked bridge
   -> terminal discharge or named residual debt
   -> formal witness readout M>=1/14
@@ -322,6 +325,6 @@ formalization_status
 The target theorem would not say that the grid is complete.  It would say that
 inside the THM-573 residual core, the first nonzero danger-weighted operation
 cell either opens a witness, descends through a covering/Node3 or q-witness
-route, identifies a HYP-3090 cap/deviation packet, hands off to the HYP-3091
-K33/THM-572 shuttle, enters a protected branch packet, or emits a named
-residual debt without creating a naked bridge.
+route, identifies a HYP-3090/HYP-3092 cap/deviation packet, hands off through
+the HYP-3094 K33/THM-572 shuttle, enters a protected branch packet, or emits a
+named residual debt without creating a naked bridge.

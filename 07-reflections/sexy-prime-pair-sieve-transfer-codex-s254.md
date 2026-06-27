@@ -26,7 +26,7 @@ and parity/distribution debt.
 
 The incoming level-7 and gK8 work sharpens the analogy but not the theorem.
 THM-573 is a seven-lift pigeonhole sieve for LRC covering rows, reducing the
-hard residual to at most six multiples of `7`. HYP-3084 now says the gK8
+hard residual to at most six multiples of `7`. HYP-3085 now says the gK8
 covariance route is not a literal Clebsch design Gram; the surviving certificate
 is a reflection-symmetric pairwise co-emptiness matrix with a dominant Perron
 mode and a `3x3` symmetric-block target. That is the same style of local gate,

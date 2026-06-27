@@ -175,6 +175,30 @@ The later THM-576/HYP-3090 cap result sharpens this again: pairwise avoidance
 explains the clean triangular cap ratios for `k>=10`, leaving the two
 deviation constants (`k=8,9`) and the first order-3 break as the cap-side
 residue that must interface with the normalized arc floor.
+## codex-2026-06-27-S255b -- polynomial-method CRT bridge after S61 correction
+
+Rebased the polynomial-method CRT synthesis over incoming S61.  The raw
+Conjecture 7.1 / original-time largest-arc reading is now refuted by THM-575
+and HYP-3088, so the deleted pre-correction structural scout is no longer an
+authoritative artifact.
+
+The surviving bridge is sharper.  The paper's `k+1=14=2*7` obstruction still
+maps to the project descent: THM-573 is the `c=7` lift and the dyadic/covering
+condition is the `c=2` lift.  HYP-3089 makes this exact at the apex:
+`I(13,7,1)=covering mod 7`, and one `c=2` lift lands on covering mod `14`.
+Its V* crossover explains the earlier `D≈213` signal as a bounded-apex
+constant; beyond V*, direct arcs decay and the route must peel/normalize by
+Node-3 plus gK8/p0.
+
+After the S256/S257/S63 rebases, T1172/LTI-236/LTT-134 is the HYP-3095
+observer-chart gluing carrier, with the normalized witness bridge as its
+arithmetic/arc chart, while T1171/LTI-235/LTT-133 is the equivalence-triad
+invariant.  T1170/LTI-234/LTT-132 remains the finite-address Lean packet
+interface; the S254 K33 shuttle is renumbered to HYP-3094, HYP-3085 remains the
+gK8/Clebsch carrier, HYP-3091 remains the scissors-fiber carrier, and incoming
+HYP-3090/HYP-3092/THM-576 remain the pair-Pascal / pairwise-triangular cap
+carriers.  LRC(14) is still not proved; the next target is the observer-gluing
+ledger over the normalized THM-573 residual.
 
 ## codex-2026-06-27-S257 -- equivalence triad invariant synthesis
 
@@ -378,8 +402,8 @@ bound, to be fed through the `CoveringMomentDualLedger` and terminal floor.
 Incoming HYP-3094 adds concrete nested-refinement versus
 cross-handoff rows for the O2/O3 shuttle.  Later incoming HYP-3087 supplies
 the hyperoperation/operation-grid scheduler for packet addresses, and incoming
-S31ag HYP-3088-HYP-3089 supplies a polynomial-method / Conjecture 7.1
-largest-arc producer target for the same terminal floor.
+S31ag HYP-3088-HYP-3089 supplies a normalized polynomial-method witness-floor
+producer target for the same terminal floor.
 
 Small formal checks: `qCuspSidecar_finite_principal_part` and
 `protectedBranch_no_raw_naked_bridge` are axiom-free; the
@@ -524,6 +548,8 @@ safe components, active binders, endpoint-owner transitions, and grid class.
 HYP-3085 in its original session, later renumbered by codex-S256 to HYP-3092
 after incoming work claimed HYP-3085 for the gK8/Clebsch moment
 decomposition and HYP-3090 for the cap/pairwise-avoidance thread.  The scout audits three covering representatives and the three
+HYP-3092 after incoming work kept HYP-3085 for the gK8/Clebsch moment
+decomposition.  The scout audits three covering representatives and the three
 low-frontier K33 representatives with exact `M`, optimizer `tau`, q-threshold,
 strict safe mass, safe components, active binders, endpoint-owner transitions,
 and grid class.
@@ -547,6 +573,7 @@ in `05-knowledge/hypotheses/HYP-3085-gk8-concentration-is-low-order-moment-s2-cl
 The integration is useful: the corrected S60 carrier is a reflection-symmetric
 Perron-mode moment bound candidate for O2, while HYP-3091 is the finite-address
 Perron-mode moment bound candidate for O2, while HYP-3094 is the finite-address
+Perron-mode moment bound candidate for O2, while HYP-3092 is the finite-address
 shuttle that keeps that carrier separate from scalar-margin shortcuts and K33
 cross-handoff debt.
 

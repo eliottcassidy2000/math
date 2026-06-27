@@ -5,11 +5,13 @@ status: VERIFIED exact bridge (I(13,7,1)=covering mod 7; c=2 lift -> covering mo
 source: mac-mini-2026-06-27-S61
 extends:
   - HYP-3087   # kps polynomial-method / CRT bridge
-  - HYP-3088   # kps largest-arc <=> Conjecture 7.1(13)
+  - HYP-3088   # raw Conjecture 7.1 refutation and normalized-arc repair
 related:
   - THM-573    # level-7 sieve = the paper's c=7 lift (uses LRC<=13 = the paper as induction base)
+  - THM-576    # cap side = pairwise avoidance exactness plus k=8,9 deviation constants
   - HYP-2900   # Node-3 equidistribution = the apex>V* peel (the "reduction between the two")
   - HYP-3085   # gK8 = low-order moment-LP = the analytic substitute for I(k,p,1) enumeration
+  - HYP-3090   # cap_k triangular ratios; k=8,9 deviation constants localize remaining cap debt
   - THM-565    # lonely set = finite union of intervals; arcCount bound after peel
   - THM-530    # witness floor (lonely measure >= m_P = 14249/252252)
   - OPEN-Q-108 # the covering-moment / bounded-core positivity crux
@@ -20,6 +22,12 @@ reflections:
 ---
 
 # HYP-3089 — The paper's I(k,p,1) IS the covering condition; the V* crossover unifies the constants
+
+Read this after THM-575/HYP-3088 and THM-574: the literal raw-time Conjecture
+7.1 is false for `k=13`, while the c-lift family still supplies the right
+composite-`k+1` language.  The "Conjecture 7.1" language below means the
+repaired normalized/V* witness program, not a global absolute-denominator
+theorem in the original time coordinate.
 
 Extends kps-S31ag (which mapped the Sungkawichai-Trakulthongchai polynomial-method paper onto the
 project and posed Conjecture 7.1(13) <=> uniform largest-lonely-arc). Two verified contributions plus
@@ -79,6 +87,11 @@ improper fraction's leading correction — the analytic substitute, made certifi
 reflection-Perron block). **This is the concrete sense in which the project can pass `k=12`: not a faster
 finite check, but a uniform analytic lower bound on the witness fraction.**
 
+Incoming HYP-3090/THM-576 sharpens the cap side of this substitute:
+`cap_k=C(k+1,2)/91` is exact for `k=10,11,12,13`, equivalently pairwise
+avoidance is exact through `j=3`; the remaining finite cap debt is localized to
+the two rational deviation constants at `k=8,9`, not to a full new cap ladder.
+
 Mutual dependency (the merge is symbiotic):
 - the **paper → project:** LRC(`≤12`) is the **induction base** for THM-573 (the level-7 sieve uses
   `LRC(≤13)`), so the paper *unlocks* the project's `c=7` lift theorem;
@@ -87,11 +100,14 @@ Mutual dependency (the merge is symbiotic):
   reducing to the same **Conjecture 7.1(13) ⟺ uniform positive lonely measure on covering tuples**.
 
 ## What remains (unchanged target, now triply-motivated)
-`Conjecture 7.1(13) ⟺ LRC(14) ⟺ [every non-tight primitive covering 13-tuple has lonely measure ≥ m_P
-and (apex≤V*: a long arc | apex>V*: the bounded core's arc survives the equidistributed peel)]`. The two
-live pieces are the project's existing CRUX 1 (bounded-core positivity = p0≤cap = gK8, HYP-3085) and Node-3
-effective Erdős–Turán (HYP-2900) — now also recognized as the paper's Conjecture 7.1(13). Induction base
-`LRC(≤12)` = the paper (PROVED).
+The normalized Conjecture-7.1 carrier at `k=13` is now the same target as
+`LRC(14)`: every non-tight primitive covering 13-tuple should have lonely
+measure `>= m_P` and either an apex-`<=V*` long normalized arc or an
+apex-`>V*` bounded-core arc that survives the equidistributed peel. The two
+live pieces are the project's existing CRUX 1 (bounded-core positivity =
+`p0<=cap` = gK8, HYP-3085) and Node-3 effective Erdős-Turán (HYP-2900) -- now
+also recognized as the normalized replacement for the paper's Conjecture 7.1
+route. Induction base `LRC(<=12)` = the paper (PROVED).
 
 ## Next
 1. Confirm the V* crossover is worst-case (run the arc-curve over genuine-wide / top-balanced covering

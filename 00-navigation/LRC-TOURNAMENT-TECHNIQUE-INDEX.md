@@ -3915,8 +3915,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   same finite-address LRC14 packet, then tournament-rank charts by how much of
   the LRC predicate they preserve under quotienting.
 - **LRC use:** HYP-3095/S256 synthesizes the route history as legal-forgetting
-  discipline.  The arithmetic chart keeps `I(13,7,1)`, c-lift, and level-7
-  sieve data; the normalized-arc chart keeps slow/ruler-coordinate witness
+  discipline.  The arithmetic chart keeps `I(13,7,1)=covering mod 7`, the
+  `c=7` level-7 lift, the dyadic `c=2` lift to covering mod `14`, and the
+  post-THM-573 residual data; the normalized-arc chart keeps slow/ruler-coordinate witness
   mass after THM-575; the cap chart keeps HYP-3090/HYP-3092 pairwise-Pascal
   and deviation status; the moment chart keeps HYP-3085 gK8/reflection-Perron
   data; the branch chart keeps HYP-3094 nested-refinement versus cross-handoff
