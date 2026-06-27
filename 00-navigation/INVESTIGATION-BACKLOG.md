@@ -15,6 +15,37 @@
 
 ---
 
+## Lead codex-2026-06-27-S255: LRC14 Conjecture 7.1 raw-time refutation and normalized repair
+
+**Status:** PROVED refutation of paper Conjecture 7.1 as stated + repaired
+proof-interface route (THM-574/HYP-3088).
+**Readout:** Added
+`01-canon/theorems/THM-574-lrc14-conjecture-7-1-refuted-by-divisor-loading.md`,
+`05-knowledge/hypotheses/HYP-3088-lrc14-conj71-refutation-and-normalized-arc-repair.md`,
+`04-computation/lrc14_conj71_refutation_normalized_arc_codex_s255.py`,
+`05-knowledge/results/lrc14_conj71_refutation_normalized_arc_codex_s255.out`,
+and
+`07-reflections/lrc14-conj71-refutation-normalized-arc-repair-codex-s255.md`.
+The user's paper-method bridge is correct at the lift level: `k+1=14=2*7`
+breaks Proposition 4.1's prime-field argument and points to `c=2,7` descent,
+matching dyadic work plus THM-573.  The raw Conjecture 7.1 equation is false,
+however.  For `S_B={1,...,11,13,84*lcm(1..B)}`, the loaded apex kills all
+denominators `d<=B`, while `t=1/12+1/(2N)` is a strict witness for `B>=6`; thus
+the rows are primitive and non-tight.  Direct time components shrink (`B=6`
+largest `1/5880`), so a direct largest-time-arc floor is not the proof route.
+**Next:** build the normalized residual ledger over THM-573's `<=6` multiples
+of `7` core: fields should include `P,E,V`, `count_7_divisible`,
+`G(P,E)` measure, normalized component count, largest normalized arc,
+HYP-2072 `I(k,p,1)`/mod-7 sieve status, finite-ruler threshold, finite-check
+status, and terminal exit.  The theorem target is uniform normalized arc
+floor plus component bound, not a raw denominator theorem.
+Incoming mac-mini-S61 supplies the matching first measurements: exact
+`I(13,7,1)` equals covering mod `7`, one `c=2` lift equals covering mod `14`,
+and direct arcs for `{1..12,14V}` cross over from finite long arcs to `1/V`
+decay near `V*`.  Use this as support for the normalized peel, not for raw
+Conjecture 7.1.
+Namespace: THM-574 / HYP-3088 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S254: Sexy prime pair sieve transfer
 
 **Status:** SYNTHESIS / proof-interface map; not proof

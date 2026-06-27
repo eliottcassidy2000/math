@@ -1,0 +1,33 @@
+CONJECTURE_7_1_LITERAL_REFUTATION_SCOUT
+  family: S_B = {1,2,...,11,13,84*lcm(1..B)}
+  obstruction: every d<=B divides the last speed, so that runner is at 0 for every a/d
+  non_tight_witness: t = 1/12 + 1/(2N), valid once N>462; for B>=6, N>=5040
+  B=6: N_digits=4 gcd=1 mult7_count=2 explicit_margin=109/10080 no_grid_hits_d<=B=True direct_component_upper_by_apex=1/5880 direct_strict_D_at_least=5881
+  B=10: N_digits=6 gcd=1 mult7_count=2 explicit_margin=5029/423360 no_grid_hits_d<=B=True direct_component_upper_by_apex=1/246960 direct_strict_D_at_least=246961
+  B=14: N_digits=8 gcd=1 mult7_count=2 explicit_margin=65519/5503680 no_grid_hits_d<=B=True direct_component_upper_by_apex=1/35315280 direct_strict_D_at_least=35315281
+  B=26: N_digits=13 gcd=1 mult7_count=2 explicit_margin=4867480799/408868387200 no_grid_hits_d<=B=True direct_component_upper_by_apex=1/2623572151200 direct_strict_D_at_least=2623572151201
+  B=41: N_digits=20 gcd=1 mult7_count=2 explicit_margin=39829125407198399/3345646534204665600 no_grid_hits_d<=B=True direct_component_upper_by_apex=1/21467898594479937600 direct_strict_D_at_least=21467898594479937601
+  B=67: N_digits=31 gcd=1 mult7_count=2 explicit_margin=14402160224525289440592950399/1209781458860124313009807833600 no_grid_hits_d<=B=True direct_component_upper_by_apex=1/7762764361019131008479600265600 direct_strict_D_at_least=7762764361019131008479600265601
+  conclusion: for any proposed universal D, choose B>=max(D,6) and d=max(D,6).
+  Then S_B is primitive and non-tight, but has no witness in (1/d)Z.
+
+DIRECT_COMPONENT_SCOUT
+  tight_AP_1_to_13: components=0 measure=0/1 largest=0/1 largest_float=0 strict_grid_D=None mult7_count=1
+  base_divisor_row_N84: components=8 measure=563/105105 largest=3/1960 largest_float=0.0015306122449 strict_grid_D=654 mult7_count=2
+  first_large_THM566_row_B6: components=64 measure=52621/5045040 largest=1/5880 largest_float=0.000170068027211 strict_grid_D=5881 mult7_count=2
+  readout: direct t-components shrink with the loaded apex; this is the failure that points to the normalized ruler coordinate.
+
+TOURNAMENT_ANALYSIS
+  vertices_are: proof obligations / coordinate carriers, not runners
+  pairwise_observable: lexicographic retention of LRC predicate, survival under divisor loading, removal of paper I(k,p,1)/c=14 bottleneck, proof scope, denominator-assumption safety
+  score_histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  hamiltonian_path: normalized_ruler_arc_floor > level7_c7_lift_sieve_THM573 > two_tier_CRT_I_k_p_1_sieve > THM566_divisor_loaded_obstruction > direct_t_largest_arc_floor > prime_field_Prop4_1_shortcut > raw_Conjecture_7_1_denominator_floor
+  edge_flips_against_input_order: 1
+  first_flips: prime_field_Prop4_1_shortcut>raw_Conjecture_7_1_denominator_floor
+
+ASSUMPTION_CHALLENGE
+  considered_vertices: runners, residues mod 14, residues mod 7, denominators, direct t-components, normalized ruler arcs, danger endpoints, lift factors, proof obligations
+  selected_vertices: proof obligations and coordinate carriers
+  preserved_predicate: existence of level-1/14 witness after legal lifting/normalization
+  destroyed_by_raw_Conj71: apex scale; absolute denominator d is sensitive to divisor loading
+  repaired_obligation: prove a uniform normalized arc/component-count floor in the THM-573 residual, then translate through the finite-ruler/equidistribution gate

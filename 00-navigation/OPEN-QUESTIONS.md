@@ -1,5 +1,24 @@
 # Open Questions
 
+**OPEN-Q-108 S255 Conjecture 7.1 correction / normalized-arc addendum:**
+THM-574 refutes the paper's literal Conjecture 7.1 for `k=13`: divisor-loaded
+rows `S_B={1,...,11,13,84*lcm(1..B)}` are primitive and non-tight but kill every
+denominator `d<=B`.  Therefore OPEN-Q-108 must not be framed as a raw absolute
+denominator or direct largest-time-arc theorem.  The corrected target is a
+normalized slow/ruler-coordinate arc floor after the THM-573 level-7 sieve:
+for residual rows with `<=6` multiples of `7`, prove uniform `meas(G(P,E))>0`
+and uniform component/arc-count bounds, then use THM-565 finite-ruler sampling
+and a finite complement.  HYP-2072's `I(k,p,1)` / mod-7 CRT sieve should retain
+this normalized witness carrier rather than prune by small raw denominators.
+Next task: build the residual ledger joining `count_7_divisible`, `P,E,V`
+normalization, `G(P,E)` measure, component count, largest normalized component,
+HYP-2072 sieve status, finite-ruler threshold, and terminal exit. -> THM-574,
+HYP-3088, THM-573, THM-566, THM-565, THM-530, HYP-2072, HYP-3087, OPEN-Q-108.
+Incoming mac-mini-S61 should be treated as the first two ledger columns already
+measured: `I(13,7,1)=covering mod 7`, `c=2` lift gives covering mod `14`, and
+direct arc decay begins past `V*`; the open work is the normalized peel and
+uniform residual certificate.
+
 **OPEN-Q-108 S254 hyperoperation grid-address addendum:**
 HYP-3087 turns the user's hyperoperation hierarchy on `(p,q)` and the older
 `x+2`/`x*2` space-filling grid into an operation-address packet carrier.  The
