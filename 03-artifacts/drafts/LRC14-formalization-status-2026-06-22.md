@@ -18,6 +18,23 @@ the remaining p0-route work is now exactly the certificate/extremality bridge
 which proves a feasible dual has `L_y(E,g) <= cap - delta` in the relevant
 shape family.
 
+**2026-06-27 targeted update (Codex S259):**
+`TournamentH7.LRCObserverGluingLedger` now target-builds with
+`lake build TournamentH7.LRCObserverGluingLedger`.  It formalizes the current
+observer-gluing frontier after S258: observer chart names, legal overlap
+discharge modes, destroyed-coordinate certificates, direct-arc
+denominator-net numerics, pair-scissors signatures, coarse mod-14 winding
+status, and `ObserverGluingCertificate`.  Its theorem
+`LonelyRunner.LRC14.lrc14_from_observer_gluing_coverage` proves that early
+gates plus proof-bearing observer-gluing certificates imply `LRC14Statement`.
+This does not discharge the missing coverage theorem; it names the current
+producer target `ObserverGluingCoverage`.  The module is conservative over
+`LRCFiniteAddressBranchClosure` via
+`observerGluingCoverage_of_cutting_edge`, and it formalizes the guardrail
+`coarseWinding_degenerate_not_terminal`: antipodal-tie coarse mod-14 winding
+data is not a terminal proof carrier without fine-scale sidecars or an
+independent discharge.
+
 ---
 
 ## 1. The headline theorem (VERIFIED sorry-free) — TWO viable routes

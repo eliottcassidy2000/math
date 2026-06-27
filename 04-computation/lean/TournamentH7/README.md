@@ -36,6 +36,9 @@ TournamentH7/
     ├── LRCDeathChain.lean    finite LRC death-chain/live-depth quotient
     ├── LRCFiniteAddressBranchClosure.lean
     │                          S254 LRC14 finite-address branch-packet interface
+    ├── LRCObserverGluingLedger.lean
+    │                          S259 observer-chart gluing ledger for the
+    │                          direct-arc / pair-scissors / terminal interface
     └── Verify.lean           #print axioms audit
 ```
 
@@ -139,6 +142,19 @@ The key conditional theorem is
 plus low-apex/top-balanced finite-address packet coverage imply
 `LRC14Statement`. The module asserts no new analytic normalizer or K33 lift;
 those remain explicit producer obligations.
+
+`LRCObserverGluingLedger.lean` is the S259 Lean-facing continuation of that
+frontier after the S258 observer-gluing scout. It introduces observer charts,
+legal chart-overlap discharges, denominator-net numerics, pair-scissors
+signatures, coarse mod-14 winding status, and `ObserverGluingCertificate`.
+Its conditional theorem
+`LonelyRunner.LRC14.lrc14_from_observer_gluing_coverage` says that early gates
+plus observer-gluing certificates imply `LRC14Statement`. The module also
+embeds any existing `FiniteAddressBranchPacket` as an observer-gluing
+certificate, so it is conservative over the S254 interface. The theorem
+`coarseWinding_degenerate_not_terminal` records the current guardrail: the
+antipodal-tie coarse mod-14 winding chart is not a terminal proof carrier
+unless fine-scale sidecars or an independent terminal discharge are attached.
 
 ## Proof sketch
 

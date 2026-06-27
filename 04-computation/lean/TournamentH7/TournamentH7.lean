@@ -103,6 +103,10 @@
                                       branch-packet interface joining q-cusp,
                                       Hurwitz, protected-branch, moment-dual,
                                       median-center, and terminal exits.
+    · TournamentH7.LRCObserverGluingLedger — S259 observer-chart gluing
+                                      ledger joining direct-arc, normalized
+                                      arc, pair-scissors, CRT/Farey, and
+                                      finite-address terminal certificates.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -189,4 +193,5 @@ import TournamentH7.LRCL7Discrepancy
 import TournamentH7.LRCApexShell
 import TournamentH7.LRCModularCuspLedger
 import TournamentH7.LRCFiniteAddressBranchClosure
+import TournamentH7.LRCObserverGluingLedger
 import TournamentH7.Verify

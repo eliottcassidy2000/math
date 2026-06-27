@@ -23,6 +23,42 @@ remainder, not a search.
 REMAINS: the symbolic VALUE is now proved for k>=10; the OPTIMALITY (named config attains the min) is still
 THM-576's search = the concentration extremality (OPEN-Q-108/gK8). The apex-14 threshold in o(p,q) is the
 lever: overlaps grow only across the apex, so spreading speeds to the {1..13} extremes minimizes overlap.
+## codex-2026-06-27-S259 -- observer-gluing Lean frontier for LRC14
+
+Owner asked to formalize up to the bleeding edge of the current LRC14 proof
+frontier while staying aware of related connections and refinements.  I used
+the S258 witness-route / pair-scissors ledger as the incoming work to
+integrate and added
+`04-computation/lean/TournamentH7/TournamentH7/LRCObserverGluingLedger.lean`.
+
+The new Lean module introduces observer charts, legal overlap discharges,
+coarse-winding status, denominator-net numerics, `ObserverGluingObligation`,
+and `ObserverGluingCertificate`.  Its main conditional theorem is
+`lrc14_from_observer_gluing_coverage`: if every nonzero 13-speed row is
+handled by an early gate or emits a proof-bearing observer-gluing certificate,
+then `LRC14Statement` follows through the existing `Mreach >= 1/14` bridge.
+This is conservative over S254: any `FiniteAddressBranchPacket` converts into
+an observer-gluing certificate.
+
+The formal guardrail added from incoming kps/S31ag is
+`coarseWinding_degenerate_not_terminal`: an antipodal-tie coarse mod-14
+winding chart is not a terminal proof carrier.  Coarse H, pair/Pascal mass,
+and direct largest arcs may remain shadows, but the proof must attach
+fine-scale sidecars, certified overlaps, or terminal discharge.
+
+Two S258 direct-arc rows are now Lean obligation examples: the `H7=6` boundary
+row has largest arc `19/1372` and denominator threshold `D=73`; the
+divisor-loaded `B=8` row has largest arc `1/82320` and threshold `D=82321`.
+This sharpens the next producer target: populate `ObserverGluingObligation`
+from HYP-2963/outside-bank rows, then prove producer lemmas for bounded direct
+packets, large-apex normalized slow/ruler packets, moment/Perron packets, and
+branch/K33 packets into `ObserverGluingCertificate`.
+
+Wrote
+`07-reflections/lrc14-observer-gluing-lean-frontier-codex-s259.md`, updated
+`04-computation/lean/TournamentH7/README.md`,
+`04-computation/lean/TournamentH7/TournamentH7.lean`, and LTI-236/LTI-237.
+Verified with `lake build TournamentH7.LRCObserverGluingLedger`.
 
 ## codex-2026-06-27-S258 -- observer-gluing ledger back-and-forth on HYP-3096/HYP-3097
 

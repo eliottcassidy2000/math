@@ -177,6 +177,30 @@ sidecars are not decorative: live rows with the same terminal status split
 into `5` mod-7 scissors signatures in the sample, so the next packet-bank
 ledger must keep these fields before asking a moment or branch chart to glue.
 
+## S259 Lean Bridge
+
+`TournamentH7.LRCObserverGluingLedger` lifts this ledger into a checked proof
+interface.  `DenominatorNetNumerics` stores the exact largest-arc fraction and
+reciprocal grid threshold, and the S258 samples are now named obligations:
+
+```text
+s258H7Eq6BoundaryObligation:      19/1372, D=73
+s258DivisorLoadedB8Obligation:    1/82320, D=82321
+```
+
+The module does not turn these rows into proof exits.  It separates an
+`ObserverGluingObligation` from an `ObserverGluingCertificate`; only the
+certificate carries a `TerminalDischargeCertificate` and hence implies
+`Mreach >= 1/14`.  The new theorem
+`lrc14_from_observer_gluing_coverage` says the remaining global theorem can be
+phrased as coverage by early gates or such certificates.
+
+This sharpens the witness-route target.  The direct denominator-net field is
+legal for bounded-apex rows only after a uniform component/floor theorem is
+proved.  Divisor-loaded rows should instead route through normalized
+slow/ruler coordinates, moment/Perron discharge, branch/K33 discharge, or
+named finite-denominator debt.
+
 ## Proof Route Target
 
 The current sharpened theorem target is:

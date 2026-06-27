@@ -220,6 +220,20 @@ shadow unless the fine-scale mod-`p` or packet scissors sidecar is retained.
 This strengthens the S258 guardrail: observer vertices should be sector-pair
 and fine-scale proof packets, not coarse mod-14 winding tournaments.
 
+## S259 Lean Interface
+
+`TournamentH7.LRCObserverGluingLedger` makes this HYP's scissors warning a
+formal sidecar requirement.  `ObserverGluingObligation` includes mod-7 and
+mod-14 scissors signatures, pair-shadow numerators and denominators,
+Farey `p+q,p*q mod 91` lanes, the preserved-LR flag, destroyed-coordinate
+overlaps, and remaining named debt.  These fields are nonterminal until a
+later `ObserverGluingCertificate` attaches a terminal discharge.
+
+The coarse tournament warning is encoded as `CoarseWindingStatus`: the
+antipodal-tie case reduces to `False` under `chartIsTerminal`, proved by
+`coarseWinding_degenerate_not_terminal`.  Thus coarse mod-14 H is formally a
+shadow unless a fine-scale tournament or packet-scissors sidecar is retained.
+
 ## Tournament Analysis
 
 Vertices are invariant shadows and proof packets, not runners:

@@ -236,6 +236,37 @@ the global scalar chart.
    different names: no-free-slider, finite-address branch closure,
    no-naked-bridge, normalized Conjecture 7.1, and c-lift descent.
 
+## S259 Lean Interface
+
+`TournamentH7.LRCObserverGluingLedger` is the first Lean-facing version of
+this HYP's observability sheaf.  It names the chart set
+`ObserverChart`, the legal overlap modes `GluingDischarge`, the destroyed
+coordinate carried by each `ChartOverlapCertificate`, and the nonterminal
+`ObserverGluingObligation` row.  A proof row becomes usable only after it is
+upgraded to `ObserverGluingCertificate`, which adds the existing
+`TerminalDischargeCertificate`.
+
+The formal target is now:
+
+```text
+ObserverGluingCoverage
+  -> every row has an early gate or observer-gluing certificate
+  -> LRC14Statement
+```
+
+This is deliberately conservative over S254:
+`observerGluingCoverage_of_cutting_edge` shows existing finite-address branch
+coverage implies observer-gluing coverage.  The new value is the middle layer:
+direct arcs, normalized arcs, pair-scissors, CRT/Farey lanes, moment/Perron
+sidecars, and branch/K33 sidecars can be populated before a terminal discharge
+is known.
+
+The incoming coarse-H warning is also formalized.  The theorem
+`coarseWinding_degenerate_not_terminal` says the antipodal-tie coarse mod-14
+winding chart is not a terminal proof carrier.  It may remain a shadow, but it
+must be repaired by fine-scale data, packet scissors, or a separate terminal
+exit.
+
 ## Tournament Analysis
 
 This pass deliberately does not use runners as tournament vertices.  The
