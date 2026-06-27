@@ -67,11 +67,24 @@ Applied the improvement-tournament/exchange technique to my own open frontier �
 > to a finite check (bounded minimizer + finitely many local minima to rule out).** The tournament lens
 > turned "why is this hard" into a precise statement — exactly the diagnostic mode of #6.
 
+## Three applications this session (verdicts; full detail in HYP-3099)
+- **#6 exchange → cap-optimality (App A):** *diagnostic.* The minimizer is **bounded** (finite check), but the
+  config improvement tournament is **non-transitive** (4 spurious local minima at j=3; greedy stuck at the k=8
+  break). No clean exchange proof; the difficulty IS the non-transitivity.
+- **#2 realizability-hole → baby-Hodge (App B):** *corrects an over-claim.* Holes like `(8,10)` are **c5/spectral**
+  exclusions (neighbors carry realizable `H=41,43`), **orthogonal** to the α₂/forbidden-H gap (THM-499 two-layer).
+  Forbidden-H closes only the `{7,21}` α₂-family; the deep bridge (THM-200 directed-C5 = E₇ pentagon) is OPEN.
+- **#1/#5 forbidden-H → apex-7 ↔ H=7 (App C):** *refutes a slogan.* Coincidence: the winding tournament avoids
+  H=7 *vacuously*; the real apex-7 is `n/2` antipodal diameters = a **triangle-free perfect matching** (opposite
+  of K₃). The genuine lever is the **order-2 antipodal / odd-|Aut|** obstruction (reduces to consec-maximizes).
+
+**Meta:** the techniques here mostly *diagnose* and twice *refute a false bridge with evidence* — killing
+seductive coincidences is half the value of the catalog.
+
 ## How to use this catalog
 For any target: pick the MODE (disprove → 1-4; prove → 5-8; bound/count → 9-12); choose an ENCODE that makes
 the relevant LEVER bite; check the lever's exact constraint against the target. The novel levers (★ 2, 6, 9,
-10) are the under-explored frontier. Logged applications: HYP-31xx (this session) + the two background scouts
-(baby-Hodge realizability-hole = forbidden-H; apex-7 ↔ forbidden-H=7).
+10) are the under-explored frontier.
 
 Related: THM-029/THM-079 (forbidden H), THM-264 (girth), THM-454 (blindness), THM-576/577 (cap), HYP-2907
 (apex-7 state-lift), HYP-2605 (winding tournament), OPEN-Q-099 (baby-Hodge holes), OPEN-Q-028 (H-permanence),

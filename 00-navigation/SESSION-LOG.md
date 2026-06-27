@@ -1,3 +1,33 @@
+## mac-mini-2026-06-27-S65 -- tournaments as proof engines: a catalog + 3 applications (2 refute a coincidence)
+
+Owner: starting from the forbidden-H={7,21} proof-by-contradiction, generate (abstractly, programmatically)
+a catalog of tournament-as-proof techniques, then apply many to repo problems + concurrent ideas.
+
+CATALOG (reflection tournaments-as-proof-engines-a-generative-catalog): the meta-structure is
+(ENCODE: vertices/arc) x (LEVER: a rigid invariant) x (MODE: obstruct/transfer/bound/count). 12 generated
+techniques over the levers {Redei parity, H-spectrum holes {7,21}, completeness-forcing, girth-3-only,
+Landau, chi(G_n)=n-1, SCC-product, complement, even-cycle blindness, (a1,i2)-jump}. 4 NOVEL (star):
+#2 realizability-hole=forbidden-H, #6 exchange/improvement-tournament, #9 winding-tournament IVT/continuity
+obstruction, #10 H-gradient thermometer.
+
+THREE APPLICATIONS (HYP-3099; each with a verification script):
+ App A (#6 -> cap optimality): DIAGNOSTIC. The improvement tournament on configs is NON-transitive (4
+  spurious local minima at j=3; greedy stuck at the k=8 break {1,10,11,12,13} vs true {1,5,7,8,9}); but the
+  minimizer is BOUNDED (same over {1..13/16/20}) => optimality is a FINITE check. The non-transitivity IS
+  why cap-optimality has no clean exchange proof. (lrc_cap_optimality_exchange_macmini_S65.py)
+ App B (#2 -> baby-Hodge holes): CORRECTS an over-claim. Holes like (8,10) are c5/SPECTRAL exclusions
+  (neighbors carry realizable H=41,43), ORTHOGONAL to the alpha2/forbidden-H gap (THM-499 two-layer
+  H=1+2(c3+c5)+4alpha2). Forbidden-H closes only the {7,21} alpha2-family; the deep bridge (THM-200 directed-C5
+  = E7 pentagon) is OPEN. (baby_hodge_forbidden_h_crosscheck_opus.py, scout)
+ App C (#1 -> apex-7 ↔ H=7): REFUTES a slogan. Coincidence: the winding tournament avoids H=7 VACUOUSLY
+  (identical [1,9,11,15] for tight/loose). The real apex-7 = n/2 antipodal diameters = a TRIANGLE-FREE
+  perfect matching (opposite of K3). Genuine lever = the order-2 antipodal / odd-|Aut| obstruction (reduces
+  to consec-maximizes). (apex7_vs_forbiddenH7_bridge_audit.py, scout)
+
+META: the techniques mostly DIAGNOSE and twice REFUTE a false bridge with evidence. The reusable LRC
+tournament levers that survived (order-2 antipodal odd-|Aut|, the non-transitivity of cap-optimality) both
+point at the same consec-maximizes crux. NOT new bounds; a toolkit + 3 honest verdicts.
+
 ## mac-mini-2026-06-27-S64 -- SYMBOLIC coverage extremality: closed-form arc overlap (apex-14) => cap_10, cap_11 symbolic
 
 Owner: work on symbolic coverage extremality. The seven-sector coverage extremal cap_k = min meas(lonely(P)),
