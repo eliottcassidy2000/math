@@ -1,0 +1,48 @@
+==============================================================================
+ gK8/gK9/gK11: WHICH MOMENT DRIVES THE CONCENTRATION BINDING?
+==============================================================================
+
+--- k=8   dual S0..S6 = [10, -10, 10, -9, 6, 0, 0] ---
+  consec_8: L_y = 3.5823   S = [1.000, 1.604, 1.790, 1.348, 0.642, 0.173, 0.020]
+  vs single-far(21)  : L_y=2.3704  gap=+1.2119  per-term ΔS·c = [+0.000, +0.490, +2.752, -3.879, +1.849, +0.000, +0.000]
+      -> driver = S3 (coeff -9); S2-share of gap = +227.1%
+  vs single-far(40)  : L_y=2.0798  gap=+1.5026  per-term ΔS·c = [+0.000, +1.185, +2.095, -3.595, +1.817, +0.000, +0.000]
+      -> driver = S3 (coeff -9); S2-share of gap = +139.4%
+  vs even-AP(2i)     : L_y=3.5823  gap=+0.0000  per-term ΔS·c = [+0.000, +0.000, +0.000, +0.000, +0.000, +0.000, +0.000]
+      -> driver = S0 (coeff +10); S2-share of gap = +nan%
+
+--- k=9   dual S0..S6 = [18, -13, 8, -3, 0, 0, 0] ---
+  consec_9: L_y = 8.8718   S = [1.000, 1.381, 1.544, 1.176, 0.564, 0.153, 0.018]
+  vs single-far(21)  : L_y=8.2592  gap=+0.6126  per-term ΔS·c = [+0.000, -0.385, +2.173, -1.176, +0.000, +0.000, +0.000]
+      -> driver = S2 (coeff +8); S2-share of gap = +354.7%
+  vs single-far(40)  : L_y=7.9293  gap=+0.9425  per-term ΔS·c = [+0.000, +0.345, +1.725, -1.128, +0.000, +0.000, +0.000]
+      -> driver = S2 (coeff +8); S2-share of gap = +183.0%
+  vs even-AP(2i)     : L_y=8.8718  gap=+0.0000  per-term ΔS·c = [+0.000, +0.000, +0.000, +0.000, +0.000, +0.000, +0.000]
+      -> driver = S0 (coeff +18); S2-share of gap = +nan%
+
+--- k=10   dual S0..S6 = [18, -13, 8, -3, 0, 0, 0] ---
+  consec_10: L_y = 10.2615   S = [1.000, 1.193, 1.364, 1.046, 0.499, 0.135, 0.016]
+  vs single-far(21)  : L_y=9.5002  gap=+0.7613  per-term ΔS·c = [+0.000, -0.215, +2.066, -1.089, +0.000, +0.000, +0.000]
+      -> driver = S2 (coeff +8); S2-share of gap = +271.4%
+  vs single-far(40)  : L_y=9.3833  gap=+0.8781  per-term ΔS·c = [+0.000, +0.108, +1.824, -1.053, +0.000, +0.000, +0.000]
+      -> driver = S2 (coeff +8); S2-share of gap = +207.7%
+  vs even-AP(2i)     : L_y=10.2615  gap=+0.0000  per-term ΔS·c = [+0.000, +0.000, +0.000, +0.000, +0.000, +0.000, +0.000]
+      -> driver = S0 (coeff +18); S2-share of gap = +nan%
+
+--- k=11   dual S0..S6 = [6, -3, 1, 0, 0, 0, 0] ---
+  consec_11: L_y = 4.0983   S = [1.000, 1.040, 1.219, 0.940, 0.450, 0.122, 0.014]
+  vs single-far(21)  : L_y=3.9312  gap=+0.1671  per-term ΔS·c = [+0.000, -0.083, +0.250, +0.000, +0.000, +0.000, +0.000]
+      -> driver = S2 (coeff +1); S2-share of gap = +149.5%
+  vs single-far(40)  : L_y=3.8820  gap=+0.2163  per-term ΔS·c = [+0.000, +0.011, +0.205, +0.000, +0.000, +0.000, +0.000]
+      -> driver = S2 (coeff +1); S2-share of gap = +94.8%
+  vs even-AP(2i)     : L_y=4.0983  gap=+0.0000  per-term ΔS·c = [+0.000, +0.000, +0.000, +0.000, +0.000, +0.000, +0.000]
+      -> driver = S0 (coeff +6); S2-share of gap = +nan%
+
+==============================================================================
+ PAIRWISE STRUCTURE of S2 (the Clebsch 'support-six' layer)
+==============================================================================
+  k=8: S2(consec)=1.7905   configs beating consec's S2: 1/42   max at rand(0, 1, 3, 5, 8, 10, 12, 14)
+  k=9: S2(consec)=1.5444   configs beating consec's S2: 0/42   consec MAXIMIZES pairwise co-emptiness
+  k=10: S2(consec)=1.3637   configs beating consec's S2: 0/42   consec MAXIMIZES pairwise co-emptiness
+
+(15 = C(6,2) inner-sector pairs = 2^4 - 1 nonzero vectors of the Clebsch cut-space (Z/2)^4 = K5 cut-space, S40.)
