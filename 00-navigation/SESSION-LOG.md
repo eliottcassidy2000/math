@@ -9,6 +9,13 @@ perspectives, HYP-3054 observer-extension cut words, HYP-3106 directed-edge
 controlled-forgetting, HYP-3112 ear-payload edges, HYP-3115 domain-wall edges,
 and the HYP-3116/HYP-3118 missing-input/resurrection guardrails.  Status at
 reservation: not a proof; executable scout pending.
+## kind-pasteur-2026-06-27-S253 -- SYNTHESIS: the LRC(14) covering case is ONE lift-and-decorrelate engine; open core = r=2..6 multi-far floor
+Owner: integrate incoming+past work, understand what remains, synthesize an improved argument. Mapped the full proof DAG (Explore) + verified the unification. HYP-3121 + reflection lrc14-three-engines-lift-and-decorrelate.
+- **PROOF MAP (current):** (A) non-covering qdiv<=14: THM-523 tau=1/q, M>=1/14; tight=census {AP,GW} (HYP-2920/2921 bounded+single-swap PROVEN). (B) covering qdiv>14, r=|14Z cap S|: THM-571 (r>=7, PROVED mod LRC<=13) + HYP-2968 (r<=6, OPEN). Hard kernel: THM-572 (H=7 state-lift, conditional on construction). THM-568 corrected (14|D not D=14, shell-collapse open).
+- **THE UNIFICATION (verified):** the covering case = ONE engine -- u=14t LIFT (14-multiples become a sub-LRC for Q, lonely by LRC<=13) + DECORRELATION FLOOR (R-safe ∩ Q-lonely, R=14-free small part). THM-571(r>=7,7-lift) and open HYP-2968(r<=6) are the SAME floor. VERIFIED on {1..11,13,84}(r=1,M=7/89), {1..10,13,84,154}(r=2,M=14/155): loneliness=R-safe∩Q-lonely positive, but **Bonferroni FAILS** (meas sum -1 = -0.13,-0.18<0) => survives only via QUASI-INDEPENDENCE R'=0.50,0.93>0 = MY Node-3 floor (HYP-2861 L2-CS, HYP-2856 3/pi^2, HYP-2871 complement-even).
+- **r-REFINEMENT (sharpened open core):** r=1 = SINGLE-FAR (THM-546/547, PROVED); r=2..6 = MULTI-FAR floor (HYP-2840 Vitali + Node-3), the GENUINELY-OPEN core, BOUNDED/favorable (2-6 far elements); r>=7 = THM-571. So the whole covering hard core = the r=2..6 multi-far decorrelation floor R'>=c.
+- **IMPROVED ARGUMENT (3 engines):** [q-witness+census] + [lift-and-decorrelate R'>=c, all r] + [H=7 state-lift for the zero-mass kernel]. The middle engine subsumes THM-571 + HYP-2968 into ONE floor obligation; closing the uniform R'>=c (on the favorable r=2..6 few-apex) closes the open covering branch AND advances the general witness floor. HIGHEST-LEVERAGE move identified.
+NET: collapsed the labelled-packet zoo + r-split into 3 engines; unified THM-571 with my witness floor; sharpened the open core to the r=2..6 multi-far floor (bounded, favorable). NEXT: prove uniform R'>=c on r=2..6 few-apex covering sets.
 
 ## codex-2026-06-27-S267 -- LRC14 coordinate-resurrection sheaf and adjoint repair calculus -- HYP-3118
 
