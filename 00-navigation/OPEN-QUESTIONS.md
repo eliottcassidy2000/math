@@ -1,5 +1,43 @@
 # Open Questions
 
+**OPEN-Q-108 S259b tournament obstruction-transfer addendum:**
+HYP-3105 turns the H=7/H=21 contradiction pattern into a reusable
+obstruction-transfer audit downstream of HYP-3100's legality grammar and
+alongside HYP-3101/HYP-3102's component-bound and syndrome routes plus
+HYP-3103's perspective-functor route and HYP-3104's maximizer-signal route.  A
+constructed LRC14 subproblem may cite a
+forbidden tournament/OCF spectrum only after it gives a faithful transfer
+functor, preserved LRC predicate, destroyed-coordinate ledger, required
+sidecar, and terminal exit or named debt.  This is now aligned with the Lean
+observer-gluing guardrail: raw coarse H, raw pair mass, direct arcs, or scalar
+packet ranks are shadows unless they feed `ObserverGluingCoverage`.  Incoming
+HYP-3099/S31ah/S65/KPS sharpens the task: the next obstruction may come from
+single-component H ladders, spectrum-gap generation, Redei parity, Landau
+score feasibility, cycle-census holes, exchange nontransitivity, or apex-tie
+audits, not only handpicked H=7/H=21 analogies.
+
+Open task: build an `obstruction_transfer_ledger` over HYP-2963 plus the
+S258/S259 observer-gluing rows.  Start with rows that already stress scalar
+arguments: divisor-loaded large-apex rows, H7=6 boundary residuals, THM-577
+`j=4,5` cap-dip minimizers, K33 cross-handoff representatives, q-cusp
+principal-part packets, support-six collision packets, and route-state median
+triples.  For each row record `surrogate_vertex_set`, `transfer_functor`,
+`preserved_lrc_predicate`, `target_H_or_typed_ocf_vector`,
+`minimal_forbidden_skeleton`, `forced_expansion_payload`,
+`component_factorization`, `destroyed_coordinate`, `required_sidecar`,
+`edge_flip_stress_result`, `certificate_invariant_family`,
+`single_component_H_gap`, `clique_omega_realizability`, `omega_sparsity`,
+`cycle_count_fiber`, `improvement_tournament_local_minima`,
+`apex_tie_matching_status`, and `terminal_exit_or_named_debt`.  Special
+first checks: record that literal apex7/H=7 transfer currently fails, record
+KPS's `K3/K10` clique-Omega ladder as the clean H-gap target, and record S65's
+`j=5` cap-exchange local minima as finite proof obligations. ->
+HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098, HYP-3094,
+HYP-3078, HYP-3076, HYP-3074, HYP-2963, THM-002, THM-029, THM-079,
+THM-115, THM-264, THM-454, THM-577, LTI-243, LTI-242, LTI-241, LTI-240,
+LTI-239, LTT-141, LTT-140, LTT-139, LTT-138, LTT-137, T1182, T1181, T1180,
+T1179, T1178, OPEN-Q-108.
+
 **OPEN-Q-108 S258 two-frontier observer-gluing addendum:**
 HYP-3098 turns the current proof frontier into a paired obligation rather
 than a single scalar chase.  The polynomial-method witness route must prove a

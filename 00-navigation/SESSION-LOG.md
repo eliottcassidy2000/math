@@ -144,6 +144,61 @@ is a terminal certificate, but not always the first legal operation.
 
 Added HYP-3100, T1178, LTI-239, LTT-137, and
 `07-reflections/tournament-contradiction-grammar-and-applications-codex-s260.md`.
+## codex-2026-06-27-S259b -- tournament obstruction-transfer atlas
+
+Owner asked to push tournament construction beyond the prior proof by
+contradiction pattern where a creative subproblem is shown analogous to a
+tournament/OCF obstruction with H=21 or H=7.  I integrated the incoming
+observer-gluing Lean frontier, the S64 symbolic cap-overlap work, and then
+rebased again over HYP-3104/HYP-3103/HYP-3102/HYP-3101/HYP-3100/HYP-3099/S31ah/S65/KPS tournament certificate engines,
+single-component H ladder, cap exchange scout, apex7/H=7 bridge audit,
+baby-Hodge crosscheck, and the LRC/tournament maximizer signal atlas.  The
+resulting atlas
+uses tournaments as contradiction engines, generated certificate searches,
+forced-expansion tests, route schedulers, scalar stress disprovers, and
+analogy rejection filters.
+
+Added `04-computation/tournament_obstruction_transfer_atlas_codex_s259.py`
+and saved `05-knowledge/results/tournament_obstruction_transfer_atlas_codex_s259.out`.
+The script rebuilds the H-gap skeletons `K3`, `P4`, `K6-2e`, `K8-e`, and
+`K10`, generates `128` technique/carrier/guard cross moves, and applies them
+to LRC14 observer gluing, THM-577 cap dips, HYP-3094 K33 state lift, q-cusp
+principal parts, sixth-power support-six lanes, route-state median hulls,
+p-adic/Roth/Steiner speculation, HYP-2963 packet-bank scalar stress, the KPS
+certificate engine, KPS single-component H discovery, S65 cap optimality,
+baby-Hodge cycle holes, and the apex7/H=7 bridge audit.
+
+Top ranked applications after the S31ah/S65/KPS merge: single-component H
+ladder for `K3/K10` clique-Omega non-realizability (score `28`),
+spectrum-gap generation in the KPS certificate engine (score `27`),
+winding-tie/apex audit rejecting a literal apex7/H=7 bridge (score `26`),
+score-exchange nontransitivity for the S65 cap optimality finite-check
+scheduler (score `26`), cycle-census hole-transfer for the baby-Hodge `c5`
+hole (score `25`), ranked proof-carrier tournaments for
+`ObserverGluingCoverage` (score `24`), median-center legality for route-state
+hulls (score `23`), forced-expansion closure for THM-577 cap-dip order vectors
+(score `20`), and edge-flip stress disproof for HYP-2963 scalar proposals
+(score `20`).
+
+Post-rebase KPS exact artifacts sharpened this connection:
+`tournament_I21_omega_miner_kps.py` isolates the five connected `I(G,2)=21`
+targets and `tournament_certify_applications_kps.py` packages the reusable
+Hamiltonian-path-count guard `{odd >= 1} \ {7,21}`.  The KPS close-out calls
+that clean-spectrum package `HYP-3101`; current navigation already uses
+HYP-3101 for the normal-fan Cech component-bound route, so this S259b atlas
+cites the KPS work by artifact/S31ah label to avoid overloading the ID.
+
+Created HYP-3105, T1182, LTI-243, and LTT-141 after the incoming maximizer
+signal atlas took HYP-3104.  Main guardrail: H=7/H=21 are
+not proof currency as analogies.  They become useful only after a faithful
+transfer functor names the preserved LRC predicate, destroyed coordinate,
+required sidecar, forced-expansion payload, and terminal exit or named debt.
+The new guardrails are concrete: apex 7 is currently an antipodal matching,
+not `Omega=K3`; the cap-exchange tournament is nontransitive at `j=5`, so it
+becomes a finite local-minimum audit; and baby-Hodge holes can live in
+cycle-count spectra without being H gaps.  Next concrete task is an
+`obstruction_transfer_ledger` over HYP-2963 and the S258/S259 observer-gluing
+rows.
 
 ## mac-mini-2026-06-27-S64 -- SYMBOLIC coverage extremality: closed-form arc overlap (apex-14) => cap_10, cap_11 symbolic
 

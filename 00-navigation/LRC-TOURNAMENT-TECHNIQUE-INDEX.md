@@ -148,6 +148,12 @@ obligations, and proof-carrier interfaces.
   use LTT-139 after LTT-101/LTT-116/LTT-134/LTT-138 and make obstruction
   syndromes, sidecar columns, certificate cycles, owner currents, and
   state-lift classes the vertices.
+- Need to use H=7/H=21-like contradiction transfer after the legality grammar:
+  use LTT-141 after LTT-140/LTT-139/LTT-138/LTT-137/LTT-136/LTT-133/LTT-101 and
+  require a faithful transfer functor, preserved LRC predicate,
+  destroyed-coordinate ledger, forced-expansion payload, edge-flip stress
+  result, and terminal exit or named debt before importing any forbidden H
+  spectrum.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -4191,6 +4197,73 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3057, HYP-3054,
   HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-2121, HYP-2120, HYP-2087,
   LTI-242, LTT-140, LTT-139, LTT-138, T1181, OPEN-Q-108.
+
+### LTT-141: Tournament Obstruction-Transfer Atlas
+
+- **Move:** Generalize the H=7/H=21 contradiction pattern into a transfer
+  audit: construct a subproblem, map it faithfully to a tournament/OCF/conflict
+  carrier, then use forbidden local spectra, component factorization, forced
+  expansion, deletion invariants, typed OCF vectors, median legality, or
+  edge-flip stress to prove, disprove, rank, or reject the proposal.  After
+  S31ah/S65, also test Redei parity, Landau score feasibility, cycle-census
+  holes, spectrum-gap generation, improvement-tournament nontransitivity, and
+  apex-tie matching audits.  After the KPS ladder pass, also test whether a
+  proposed carrier forces the missing clique-Omega sizes `K3` or `K10`.
+- **LRC use:** HYP-3105 integrates HYP-3104/HYP-3103/HYP-3102/HYP-3101/HYP-3100/HYP-3099 and
+  applies this to LRC14 observer gluing, THM-577 cap
+  dips, HYP-3094 K33 state lift, q-cusp finite principal parts, sixth-power
+  support-six lanes, route-state median hulls, p-adic/Roth/Steiner speculation,
+  and HYP-2963 packet-bank scalar stress.  The best current obstruction uses
+  are the single-component H ladder (`K3/K10` non-realizability), spectrum-gap
+  generation, rejecting the literal apex7/H=7 bridge, using cap-exchange
+  nontransitivity as a finite-check scheduler, and separating baby-Hodge `c5`
+  holes from H gaps; the best LRC14 proof-facing use now routes through
+  ranked proof-carrier tournaments for `ObserverGluingCoverage`, the
+  HYP-3101 component-bound packets, the HYP-3102 first-obstruction
+  syndrome packets, HYP-3103 perspective functors, and HYP-3104
+  maximizer-signal packets.
+- **Preserves:** preserved LRC predicate, surrogate vertex set, transfer
+  functor, forbidden-spectrum source, target H or typed OCF vector, minimal
+  skeleton, forced-expansion payload, component factorization,
+  deletion-inert coordinate, edge-flip stress result, required sidecar, and
+  terminal exit or named debt.  Extended fields include certificate invariant
+  family, score/Landau status, cycle-count fiber, improvement-tournament local
+  minima, apex-tie matching status, single-component H gap, clique-Omega
+  realizability, and Omega sparsity.
+- **Forgets / guardrail:** H=7/H=21 analogies are shadows unless the transfer
+  functor is faithful.  The incoming Lean guardrail
+  `coarseWinding_degenerate_not_terminal` makes this explicit: raw coarse H,
+  raw winding, raw pair mass, direct arcs, and scalar packet ranks are not
+  terminal proof carriers.
+- **Tournament vertices:** technique applications and proof-obligation
+  carriers: observer-chart overlaps, inclusion-exclusion order vectors,
+  route-state median centers, endpoint-owner/branch sidecars, q-cusp polar
+  debts, support-six lane ranks, valuation fibers, and packet-bank stress rows.
+- **Hamiltonian path:** `single_component_H_ladder_certificate @ single_component_H_ladder_kps >
+  certificate_engine_spectrum_generator @ certificate_engine_kps >
+  winding_tie_apex_audit @ apex7_forbiddenH_bridge_audit >
+  score_exchange_nontransitivity @ cap_optimality_exchange_S65 >
+  cycle_census_hole_transfer @ baby_Hodge_cycle_hole >
+  ranked_proof_carrier_tournament @ LRC14_observer_gluing >
+  median_center_legality_tournament @ route_state_median_hull >
+  forced_expansion_closure @ THM577_cap_dip >
+  edge_flip_stress_disprover @ H2963_packet_bank`.
+- **Next hook:** Build `obstruction_transfer_ledger` rows over HYP-2963 and
+  the S258/S259 observer-gluing samples.  Start with HYP-3101 component-bound
+  carriers, HYP-3102 first-obstruction syndromes, HYP-3103 perspective
+  functors, divisor-loaded large-apex rows, H7=6 boundary residuals, THM-577
+  `j=4,5` cap-dip minimizers, K33
+  cross-handoff rows, q-cusp principal-part packets, support-six collisions,
+  route-state median triples, S65 cap-exchange local minima, apex7 antipodal
+  tie matchings, baby-Hodge cycle-count holes, and KPS `K3/K10` clique-Omega
+  realizability gaps.
+- **Pointers:** HYP-3105, HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3099, HYP-3098,
+  HYP-3094, HYP-3078, HYP-3076, HYP-3074,
+  HYP-2963, THM-002, THM-029, THM-079, THM-115, THM-264, THM-454, THM-577,
+  LTI-243, LTI-242, LTI-241, LTI-240, LTI-239, LTI-238, LTT-141, LTT-140,
+  LTT-139, LTT-138, LTT-137, LTT-136, LTT-133, LTT-101, T1182, T1181,
+  T1180, T1179, T1178,
+  OPEN-Q-108.
 
 ## Immediate Pull List
 
