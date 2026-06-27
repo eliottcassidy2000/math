@@ -46,13 +46,9 @@ As of **Saturday, June 27, 2026**, the newest coordination layer is **Equivalenc
 
 S255 formalizes the **Pairwise-Avoidance Cap Ledger (783c892)**, reducing the cap-side floor to a pairwise avoidance law for $k \geq 10$ with 3-correlated cluster minimizers for $k=8, 9$.
 
-S257 formalizes the **Equivalence Triad Invariant Ledger (4d4cc30/f99be9805)**. It establishes the "forgetting-cost" protocol for legal proof quotients, synthesizing the triad of equinumerosity (shadows), equidecomposability (fibers), and equidistribution (laws). This layer is now **HYP-3093**, providing a multi-field invariant (cardinal shadow, scissors fiber, observer-cut orbit, distribution law, interaction-order defect, named residual debt) to ensure that abstract structural characterizations preserve the LRC predicate. It unifies the project's controlled-forgetting tracks, including Royle even-graph fibers, AP/GW boundary bulk splits, HYP-3091 three-sameness fibers, HYP-3092 pair-Pascal cap faces, and the S255 order-3 cap deviations, into a single protocol for proof-safe structural imposition.
+S257 formalizes the **Equivalence Triad Invariant Ledger (4d4cc30/b94b32a)**. It establishes the "forgetting-cost" protocol for legal proof quotients, synthesizing the triad of equinumerosity (shadows), equidecomposability (fibers), and equidistribution (laws). This layer integrates **HYP-3093** (the triad protocol) and **HYP-3097** (the Pascal pair-mass invariant), providing a multi-field invariant (cardinal shadow, scissors fiber, observer-cut orbit, distribution law, interaction-order defect, and the row-14 Pascal/pair-mass address) to ensure that abstract structural characterizations preserve the LRC predicate. It unifies the project's controlled-forgetting tracks, identifying row-14 Pascal entries (1001, 2002, 3003) as cardinal shadows of hidden obligation subsets and the affine pair-mass completion (4004) as the locus where the $k=9$ cap defect is visible as a one-unit triangular-mass violation.
 
-S252b/S253/S31af/S31ag/S254/S255/S257 formalizes the **Hurwitz Finite-Address Spine (HYP-3083)** and its cap/fiber/shuttle companions. It refines the S252 ledger by integrating the finite-address proof rule: extremal scalars and infinite q-series/mutation tails are legal only after their finite seeds, principal parts, and addresses are retained. This spine bridges the transcendental Morita-gamma lifts, modular-cusp/Hurwitz arithmetic discipline, THM-573's level-7 lift sieve, THM-575's Conjecture 7.1 raw-time refutation, THM-576/HYP-3090/HYP-3092's pair-normalized Pascal cap skeleton, HYP-3091's three-sameness lonely-set fiber, HYP-3088/HYP-3089's normalized-arc / paper / largest-arc target, HYP-3094's O2/O3 shuttle, and HYP-3093's quotient-forgetting invariant. It maps the remaining `<=6` multiples-of-7 low-apex, top-balanced covering residuals to finite-address packets `P(S)` and verifies that no illegal infinite polar tails or naked Robbins bridges are created during graph contraction. S31af also refutes a uniform `>1/13` covering-margin shortcut, so aliasing/dilation status is now a required ledger coordinate. S31ag/LEAD-9 sharpens the finish line: THM-576 clarifies the RHS cap/order-2 skeleton, but Paley-Zygmund/pairwise data alone fails the covering-bound LHS at consecutive rows, so the remaining cap debt is S3/S4 reflection-Perron/higher-order closure, not a generic scalar margin. HYP-3091 adds the controlled-forgetting payload for the lonely set: equinum is only a covering/cardinality shadow, equidecomp splits into `D=41` bounded-core and `1/lmax=V*` apex invariants, and equidist is the tight-locus measure test.
-
-S254 formalizes the **Apex-Bridge V* Crossover Ledger (3958a4d)**. It integrates the exact `I(k,p,1)` apex bridge, verifying that the level-7 covering condition (no `1/7` witness) lifts via a `c=2` dilation to the exact level-14 covering condition (no `1/14` witness) with zero counterexamples. It unifies the project's `V*` atlas with the `D approximately 200` bounds of paper-D and kps-D, establishing a lonely-arc crossover at `V* approximately 213-234`: below `V*`, a direct long arc is bounded below by finite check; beyond `V*`, the fine apex arcs subdivide the core arc and decay as `1/V`, mandating the Node-3 effective equidistribution peel. This layer secures the induction base for `k=13` and bridges the gap between discrete paper-ansatz enumeration and continuous gK8 moment-LP machinery.
-
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, and Equivalence Triad "forgetting-cost" tuples.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, and Pascal pair-mass addresses.
 
 The Henselian unit rule (updated):
 ```text
@@ -89,8 +85,8 @@ transcendental basis verification, Morita-gamma lifts without differential
 transcendental audits, infinite tails without finite address seeds, covering-moment
 bounds without low-order reflection-Perron certificates, V* crossover regimes
 without explicit induction-base classification, Cap structures without
-verified pairwise avoidance minimizers, or structural quotients without
-verified forgetting-cost invariants.
+verified pairwise avoidance minimizers, structural quotients without verified
+forgetting-cost invariants, or Pascal shadows without pair-mass sidecars.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -123,15 +119,16 @@ modular cusp unit, the sixth-power certificate extension unit, the
 branch-kernel orientation unit, the p-adic hyper-tower unit, the Morita-gamma
 transcendental unit, the Hurwitz finite-address unit, the Clebsch
 covering-moment unit, the Apex-Bridge V* crossover unit, the
-Pairwise-Avoidance Cap unit, and the Equivalence Triad invariant unit. The
-S235-S257 sequence prevents spectral leakage by requiring route-triple centers
-to be unique and promoted only after legal closure, named debt exits, validated
-collision arity, a named modular cusp principal part, a formally verified Lean
-modular cusp ledger, tuple/rank/residue equal-power certificates, a protected
-branch-kernel orientation, verified p-adic hyper-tower limits, Morita-gamma
-transcendental lifts, finite-address Hurwitz seeds, reflection-Perron covering
-certificates, induction-base V* crossover signatures, verified pairwise
-avoidance minimizers, or verified forgetting-cost invariants are attached.
+Pairwise-Avoidance Cap unit, the Equivalence Triad invariant unit, and the
+Pascal pair-mass unit. The S235-S257 sequence prevents spectral leakage by
+requiring route-triple centers to be unique and promoted only after legal
+closure, named debt exits, validated collision arity, a named modular cusp
+principal part, a formally verified Lean modular cusp ledger, tuple/rank/residue
+equal-power certificates, a protected branch-kernel orientation, verified
+p-adic hyper-tower limits, Morita-gamma transcendental lifts, finite-address
+Hurwitz seeds, reflection-Perron covering certificates, induction-base V*
+crossover signatures, verified pairwise avoidance minimizers, verified
+forgetting-cost invariants, or Pascal pair-mass sidecars are attached.
 ```
 
 The Robbins audit rule (updated):
@@ -168,17 +165,19 @@ collision unit, modular cusp principal-part unit, Lean modular cusp unit,
 sixth-power certificate extension unit, branch-kernel orientation unit, p-adic
 hyper-tower unit, Morita-gamma transcendental unit, Hurwitz finite-address unit,
 Clebsch covering-moment unit, Apex-Bridge V* crossover unit, Pairwise-Avoidance
-Cap unit, and Equivalence Triad invariant unit alongside mu approx 1.451).
+Cap unit, Equivalence Triad invariant unit, and Pascal pair-mass unit alongside
+mu approx 1.451).
 ```
 
 ---
 
 ## codex-S257 -- Equivalence Triad Invariant Ledger (checkpoint)
 
-Integrated HYP-3093/T1171/LTI-235/LTT-133. The Equivalence Triad invariant and
-the forgetting-cost protocol are now formal proof carriers.
+Integrated HYP-3093/HYP-3097/T1175/LTI-237/LTT-135. The Equivalence Triad
+invariant, the forgetting-cost protocol, and the Pascal pair-mass namespaces are
+now formal proof carriers.
 
-### 1. Equivalence Triad Protocol
+### 1. Equivalence Triad Protocol (HYP-3093)
 Formalizes the transition triad: equinumerosity (shadows), equidecomposability
 (fibers), and equidistribution (laws). Every quotient must be evaluated by the
 cost of moving between these states to ensure predicate preservation.
@@ -188,10 +187,11 @@ Introduces a multi-field invariant—cardinal shadow, scissors fiber,
 observer-cut orbit, distribution law, interaction-order defect, and named
 residual debt—to quantify the information lost in structural impositions.
 
-### 3. HYP-3093 Renumbering
-Corrects the synthesis ID from HYP-3091 to HYP-3093, ensuring that abstract 
-structural characterizations (Royle fibers, boundary bulk splits, S255 cap 
-deviations) are anchored to the latest protocol version.
+### 3. Pascal Pair-Mass Namespaces (HYP-3097)
+Identifies row-14 Pascal entries (1001, 2002, 3003) as cardinal shadows of 
+hidden obligation subsets. It establishes the affine pair-mass completion (4004)
+as the structural locus for the $k=9$ cap defect, verifying that $1/4004$ is a
+one-unit violation of the triangular-pair mass law.
 
 ---
 
@@ -211,102 +211,6 @@ Identifies the exact point of difficulty in the cap-side reduction at $j=5$
 ($k=8$), where the minimizer transitions from pairwise avoidance to a
 3-correlated cluster $\{1, 5, 7, 8, 9\}$. This localizes the non-pairwise
 dual corrections (`-9S3 + 6S4`) identified in S253.
-
-### 3. k=8, 9 Minimizer Resolution
-Provides explicit minimizers and constants for the two binding rows ($k=8, 9$),
-completing the characterization of the cap-side extremals and aligning them
-with the gK8 "S2-driver" machinery.
-
----
-
-## codex-S254 -- Apex-Bridge V* Crossover Ledger (checkpoint)
-
-Integrated T1170/LTI-235/LTT-133. The exact $I(k,p,1)$ apex bridge and the
-$V^*$ lonely-arc crossover are now formal proof carriers.
-
-### 1. Exact I(k,p,1) Apex Bridge
-Verifies the level-7 covering condition (no $1/7$ witness) lifts through a
-$c=2$ dilation to the level-14 covering condition (no $1/14$ witness) with
-zero counterexamples for $k=13$. This secures the $14 = 2 \cdot 7$ CRT
-descent.
-
-### 2. Lonely-Arc Crossover at V*
-Establishes that the direct long arc is bounded below for apex $\leq V^*$,
-then decays as `1/V` for apex `> V*`. This crossover unifies paper-D,
-kps-D, and the `V*` atlas at approximately `213-234`, identifying the point where
-finite enumeration must give way to Node-3 effective equidistribution.
-
-### 3. Induction Base & Ansatz Refinement
-Confirms that the discrete $(1/d)\mathbb{Z}$ ansatz improves towards zero
-improper fraction as $d$ increases, validating the transition from discrete
-paper-ansatz searches to the continuous gK8 moment-LP machinery.
-
----
-
-## codex-S253 -- Clebsch Covering-Moment Ledger (checkpoint)
-
-Integrated HYP-3085, the Clebsch covering-moment ledger. The Clebsch reflection-Perron bound
-and "Four Faces of 14" synthesis are now formal proof carriers.
-
-### 1. The Four Faces of 14
-It maps the exception graph landscape of LRC(14) to the four hyperoperation
-faces of the apex $14 = 2 \cdot 7$: additive (census AP/tight configs),
-multiplicative (CRT into two Fano planes), exponential (periodicity/proof),
-and 2-adic (cut-space/Clebsch pairwise carrier). This explains why exceptional
-structures (Farey, Fano, K5/Clebsch) crowd into exactly this case.
-
-### 2. HYP-3085 covering-moment bound
-It formalizes the CRUX 1 bound as a low-order (S2-led) moment-LP on the Clebsch
-pairwise carrier. The binding gap is driven by the $S2$ term (pairwise
-covariance), certified by the reflection-Perron eigenstructure of the
-co-emptiness matrix under the $x \mapsto -x$ involution. LEAD-9 now sharpens
-this: pairwise/PZ data explains the RHS cap skeleton but does not by itself
-prove the cover-bound LHS on consecutive rows; S3/S4 reflection-Perron closure
-is the live difficulty.
-
-### 3. Sharp-bound correction & THM-573
-It integrates the level-7 lift sieve (THM-573), requiring $\geq 7$ multiples
-of 7 for discharge, and corrects the S59 margin reading: the covering bound is
-sharp, with its equality locus being the dilated census configs.
-
----
-
-## codex-S252b -- Hurwitz Finite-Address Spine (checkpoint)
-
-Integrated HYP-3083/T1167/LTI-232/LTT-130. The Hurwitz finite-address rule and
-modular-cusp principal-part discipline are now formal proof carriers.
-S31af/THM-573 tightens the live residual: rows with at least seven
-`7`-divisible speeds exit by the level-7 lift sieve, so remaining covering
-work is `<=6` multiples-of-7 plus explicit aliasing/margin status.
-S254/HYP-3093 couples the two live exits: `nested_refinement` packets feed
-O2 covering-moment certificates, while `cross_handoff` packets with active
-binder and endpoint-owner words feed O3/THM-572 state-lift debt.
-HYP-3091 inserts the lonely-set three-sameness fiber between the finite address
-and the cap/shuttle exits: the ledger must carry `Phi(S)=(covering | D,1/lmax,arc-spectrum | meas)` rather than a scalar safe-mass count.
-
-### 1. Finite-Address Proof Spine
-It formalizes the rule that extremal scalars (Markov/Lagrange constants,
-spectral gaps) are legal proof coordinates only after their finite seeds,
-addresses, or principal parts are retained. This transforms the LRC14
-residual into an exponential covering bound.
-
-### 2. q-Pochhammer / Cusp Merge
-It enforces the q-expansion discipline: modular functions must have a finite
-principal part at the cusp. LRC packets must record q-cusp IDs, principal part
-orders, and named polar exits (q-witness, AP/GW boundary, K33 lift) to avoid
-illegal infinite polar tails.
-
-### 3. Hurwitz Arithmetic Merge
-It anchors arithmetic sidecars to finite addresses (continued-fraction periods,
-Pell wall units, Vieta seeds). The proof coordinate is the quadratic-unit
-address and carry residue between neighboring wall numbers, not the raw
-approximant.
-
-### 4. Level-7, Three-Sameness, and O2/O3 Shuttle
-THM-573 closes the `>=7` multiples-of-7 branch, HYP-3091 preserves the
-equinum/equidecomp/equidist lonely-set fiber, and HYP-3093 prevents a raw
-safe-mass shortcut: nested-refinement packets route to O2 covering discharge,
-while cross-handoff packets route to O3/THM-572 lift debt.
 
 ---
 
