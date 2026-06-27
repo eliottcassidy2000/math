@@ -10,6 +10,9 @@ script: 04-computation/lrc_lee_yang_ear_payload_codex_s262.py
 result: 05-knowledge/results/lrc_lee_yang_ear_payload_codex_s262.out
 related:
   - HYP-3111
+  - HYP-3115
+  - HYP-3114
+  - HYP-3113
   - HYP-3109
   - HYP-3108
   - HYP-3107
@@ -45,6 +48,10 @@ This is the exact one-runner payload refinement of HYP-3109's root-curve
 ear-map, HYP-3108's broader Lee-Yang/Savitch/Bravais/ear-lattice atlas, and
 the HYP-3111 carrier-sidecar reservation, and it uses HYP-3107's Lean
 proof-frontier fields as downstream obligations.
+
+Post-rebase bridge: HYP-3115 supplies the exact anchored-bank
+Minkowski/circuit/Ising/De Moivre subscout that should consume this ear-payload
+ledger as the root-motion sidecar rather than replacing it with scalar `p0`.
 
 If `F=E union {a}` and
 

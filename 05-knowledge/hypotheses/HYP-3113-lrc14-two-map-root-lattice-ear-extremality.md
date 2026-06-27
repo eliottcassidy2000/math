@@ -9,6 +9,8 @@ tangent: T1189
 technique: LTI-250
 tournament_technique: LTT-148
 related:
+  - HYP-3115
+  - HYP-3114
   - HYP-3112
   - HYP-3111
   - HYP-3110
@@ -116,6 +118,12 @@ certificates rather than one-step shortcuts.  Thus S265 should treat
 `Bravais_shape_tensor`, `Savitch_midpoint_certificate`, and
 `strong_ear_spine` as jointly legal only when they route through an
 observer-gluing certificate or finite-address packet.
+
+Post-rebase HYP-3115 adds the exact anchored-bank
+Minkowski/circuit/Ising/De Moivre bridge under this synthesis: pair-relation
+pressure, root-stratum Ising domain walls, finite-bank proof-signal circuits,
+and stationary de Moivre residuals become concrete fields for the two-map
+portfolio.
 
 Incoming S262b/HYP-3112 sharpens the ear side.  The one-runner payload
 identity `q_full[t]=q_base[t]-A_t+A_{t+1}` says root motion is controlled by a

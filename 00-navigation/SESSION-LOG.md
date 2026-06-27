@@ -27761,3 +27761,39 @@ Tournament Analysis used proof-carrier vertices and was transitive:
 replace direct-time intervals by THM-565 normalized slow/ruler-coordinate
 intervals, then attach the approximation sidecar to HYP-3098 observer-gluing
 and HYP-3112 ear-payload rows.
+Follow-up: HYP-3115 now supplies the exact anchored-bank executable subscout
+for this HYP-3111 carrier atlas, while incoming HYP-3112 owns the Lee-Yang
+ear-payload ledger, incoming HYP-3113 owns the two-map root-lattice-ear
+synthesis, and incoming HYP-3114 owns the irrational/transcendental
+approximation sidecar.
+
+## codex-2026-06-27 -- Minkowski/circuit/Ising/de Moivre sidecars -- HYP-3115
+
+User asked to merge Minkowski's theorem, circuit complexity, the Ising model,
+and de Moivre's quintic into the Lee-Yang/LRC proof search.  Added
+`05-knowledge/hypotheses/HYP-3115-minkowski-circuit-ising-quintic-bridge.md`,
+reflection `07-reflections/minkowski-circuit-ising-quintic-bridge-codex-20260627.md`,
+script `04-computation/lrc_minkowski_circuit_ising_quintic_bridge_codex_20260627.py`,
+and stored output
+`05-knowledge/results/lrc_minkowski_circuit_ising_quintic_bridge_codex_20260627.out`.
+
+Post-rebase integration: incoming HYP-3110 owns the De Moivre/Jacobi/
+crystallographic frontier, incoming HYP-3111 owns the broad
+Minkowski/circuit/Ising/De Moivre carrier atlas, incoming HYP-3112 owns the
+Lee-Yang ear-payload extremality ledger, incoming HYP-3113 owns the two-map
+root-lattice-ear synthesis, and incoming HYP-3114 owns the
+irrational/transcendental approximation sidecar.  This exact anchored-bank
+subscout was therefore renumbered to HYP-3115 and linked as
+HYP-3111/HYP-3112/HYP-3113/HYP-3114 evidence.
+
+The scout recomputes the HYP-3109 anchored bank (`1716` rows) and adds four
+sidecars.  Minkowski-style pair relations are positively aligned with
+extremality: `corr(p0,pair_relation_count)=+0.427`, and `consec_8` is the
+top relation leader with `22` pair relations.  The Ising root-stratum graph has
+`36036` one-swap edges, spin counts `{+1:290,-1:1426}`, `10084` domain-wall
+edges, wall fraction `0.27983`, and energy `-15868`.  The circuit-complexity
+scan finds that the single non-`p0` predicate `apex7_error<=5` isolates the
+finite-bank maximizer, which is a warning that a proof needs uniform circuit
+data rather than a fitted threshold.  The de Moivre residual of `G'(z)` is
+weak (`corr(p0,-residual)=+0.348`) and should be tested along root-collision
+paths rather than used as a static maximizer objective.

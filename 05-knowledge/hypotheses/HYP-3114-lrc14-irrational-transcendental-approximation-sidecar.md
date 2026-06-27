@@ -7,6 +7,7 @@ tangent: T1190
 technique: LTI-251
 tournament_technique: LTT-149
 related:
+  - HYP-3115
   - HYP-3113
   - HYP-3112
   - HYP-3111
@@ -176,6 +177,10 @@ This keeps the pi/e lesson in scope: rationality, irrationality,
 algebraicity, and transcendence are not closed-enough proof coordinates by
 themselves.  The load-bearing datum is the retained field, height, dependence,
 exception list, and finite packet coordinate that survives the quotient.
+
+Post-rebase HYP-3115 supplies the exact anchored-bank
+Minkowski/circuit/Ising/De Moivre bridge that can test whether approximation
+sidecars align with relation pressure, root strata, and proof-circuit gates.
 
 ## Assumption Challenge
 

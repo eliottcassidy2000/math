@@ -11,6 +11,10 @@ related:
   - HYP-3113
   - HYP-3112
   - HYP-3110
+  - HYP-3112
+  - HYP-3113
+  - HYP-3114
+  - HYP-3115
   - HYP-3109
   - HYP-3108
   - HYP-3107
@@ -75,6 +79,16 @@ algebraic folds, and any scalar-only root/moment/lattice/circuit count without
 its sidecar.
 
 ## Remaining Work
+
+Post-rebase update: HYP-3112 now supplies the Lee-Yang ear-payload ledger,
+HYP-3113 supplies the two-map root-lattice-ear synthesis, HYP-3114 supplies
+the irrational/transcendental approximation sidecar, and HYP-3115 supplies the
+exact anchored-bank executable subscout for this carrier atlas.  HYP-3115
+measures pair-relation Minkowski pressure, root-stratum Ising domain walls, a
+finite-bank non-`p0` circuit predicate, and the translated De Moivre residual
+of `G'(z)`.  The remaining HYP-3111 work is to lift those fields from the
+anchored bank into HYP-2963 residual packets and Lean-facing proof-state
+gates.
 
 1. Replace the toy finite Ising carrier graph with the actual HYP-3109
    zero-real one-swap component and compare partition-zero angles before and
