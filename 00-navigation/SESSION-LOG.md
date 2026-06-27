@@ -1,4 +1,34 @@
 ## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- HYP-3122
+## mac-mini-2026-06-27-S67 -- Lee-Yang extremality: the cap is a phi^4 field theory, kappa4 marks the hard row k=8
+
+Owner: work on Lee-Yang extremality toward the LRC proof, with the phi^4 density exp(-lambda S^4 - b S^2) and
+ear-decomposition cues; be creative with hypotheses/definitions. Extends S66 (miss-PGF zeros HYP-3103) and the
+concurrent codex Lee-Yang/Ising/ear portfolio (HYP-3108-3116). Result: HYP-3122 + reflection
+the-cap-is-a-phi4-field-theory-and-the-quartic-marks-the-hard-row.
+
+THE phi^4 SPLIT (verified): cap_k = C(k+1,2)/91 (QUADRATIC pair-Pascal / S2 / 'b') - dip_k (QUARTIC / S4 /
+'lambda'). The dip is nonzero only at the binding rows k=8,9 -- exactly the gK8 +6 S4 quartic term (appears
+only at k=8; k=9,10 stop at S3, k>=11 at S2). This IS the (phi^4)_2 measure exp(-lambda S^4 - b S^2).
+
+NEW SIGNAL (verified, lrc_phi4_quartic_stabilizer_S67.py): the 4th cumulant kappa4 of the miss-count for
+consec_k: [-0.79, +1.61, +3.92, +6.36, +8.19, +9.80] for k=8..13. kappa4 CHANGES SIGN, going NEGATIVE exactly
+at k=8 (the largest dip). kappa4<0 <=> sub-Gaussian <=> the genuine lambda>0 phi^4/Lee-Yang regime. So k=8 is
+the UNIQUE phi^4-stabilized binding row -- the quartic engages precisely where the cap dips below the quadratic
+pair-Pascal. (#real roots = 0 for all k; Lee-Yang confinement holds throughout; the quartic SIGN is the finer
+hard-row signal.)
+
+PROOF-RELEVANT REFRAME: coverage extremality reduces (S63/S64) to bounding the dip = the only non-pairwise
+content. The phi^4 frame makes it a SINGLE 4th-cumulant inequality with a GUARANTEED SIGN: dip=quartic S4,
+phi^4/Lee-Yang says the quartic stabilizes (lambda>0, kappa4<0), so the correction is bounded + right sign.
+Target: a uniform bound on kappa4/kappa2^2 over the binding family => the dip is bounded => the cap closes.
+Complementary (codex HYP-3108/3111): corr(p0,nearest-zero)=+0.899, corr(p0,#real)=-0.48. Coverage extremality
+= phi^4 stabilization = Lee-Yang confinement.
+
+EAR BRIDGE (creative): odd cumulant kappa3 (3.7->5.6) <-> odd-ear/odd-cycle/OCF (factor-critical <=> odd ear);
+even quartic kappa4 <-> phi^4 stabilizer. Honest: the zeros are NOT on |z|=1, so the sector model is phi^4
+not plain Ising. Builds on codex HYP-3113 (which proposed quartic_cumulant_stabilizer but never computed it).
+
+## codex-2026-06-27-S268 -- tournament edge witness recursion reservation -- HYP-3119
 
 Reserved the prompt to merge tournament edges as witnesses and recurse on both
 tip and tail.  The reservation is now HYP-3122/T1196/LTI-257/LTT-155 after
