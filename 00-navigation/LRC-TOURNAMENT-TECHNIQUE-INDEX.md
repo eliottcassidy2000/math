@@ -131,6 +131,11 @@ obligations, and proof-carrier interfaces.
   use LTT-135 after LTT-131/LTT-132 and retain CRT lift status, direct
   lonely-set component data, denominator-net threshold, q-cusp finite
   bad-denominator budget, hyperoperation address fields, and terminal exit.
+- Need to work the witness route and Pascal/scissors route back and forth:
+  use LTT-136 after LTT-134/LTT-135 and make tournament vertices observer
+  charts / proof obligations.  Retain overlap failures, normalized arc status,
+  cap defect, branch/K33 handoff, endpoint-owner words, active binders, and
+  terminal debt.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3986,6 +3991,43 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3083, HYP-3084, HYP-3085, HYP-3003, HYP-3004, HYP-2866, HYP-2827,
   LTI-237, LTI-234, LTI-233, LTT-135, LTT-132, LTT-131, T1176, T1170,
   T1169, OPEN-Q-108, arXiv:2604.23906.
+
+### LTT-136: Two-Frontier Observer-Gluing Tournament
+
+- **Move:** Treat the live proof frontier as a tournament on observer charts
+  and proof obligations, with each edge asking which chart better pays for a
+  coordinate forgotten by another chart.
+- **LRC use:** HYP-3098/S258 works HYP-3096's polynomial-method witness route
+  against HYP-3097's Pascal/equivalence/scissors route.  The witness chart
+  preserves direct lonely measure, components, largest arcs, denominator-net
+  thresholds, and binders, but divisor-loaded `B=6` shows raw time can be
+  made too fine.  The Pascal chart preserves pair-normalized cap mass and
+  exposes a one-unit `1/4004` defect at `j=4`, but it cannot identify whether
+  a positive-open packet is nested-refinement covering discharge or K33
+  cross-handoff debt.  The tournament ranks the observer-gluing packet above
+  both partial charts.
+- **Preserves:** predicate retention, chart-overlap map, normalized
+  apex/ruler status, denominator-net survival, CRT/lift debt,
+  Pascal/pair-mass and cap-defect payload, moment/Perron debt, branch/K33
+  handoff data, active binders, endpoint-owner transitions, and terminal exit.
+- **Forgets / guardrail:** Runners, residues, raw denominators, direct arcs,
+  Pascal entries, or safe-mass scalars are admissible vertices only after the
+  quotient states what LRC predicate it preserves and which coordinate it
+  destroys.  Otherwise the quotient is a diagnostic, not theorem currency.
+- **Tournament vertices:** `observer_gluing_packet`, `normalized_arc_chart`,
+  `pascal_scissors_chart`, `level7_crt_chart`, `branch_k33_chart`,
+  `safe_mass_scalar`, `raw_denominator_floor`, and `raw_pair_count`.
+- **Hamiltonian path:** `observer_gluing_packet > normalized_arc_chart >
+  pascal_scissors_chart > level7_crt_chart > branch_k33_chart >
+  safe_mass_scalar > raw_denominator_floor > raw_pair_count`.
+- **Next hook:** Build `lrc14_observer_gluing_ledger` rows over the THM-573
+  residual and check each packet for one of four exits: normalized arc floor
+  compatible with cap/scissors data, O2 nested-refinement discharge, O3/K33
+  state-lift debt, or named first failed overlap.
+- **Pointers:** HYP-3098, HYP-3097, HYP-3096, HYP-3095, HYP-3094, HYP-3093,
+  HYP-3092, HYP-3090, HYP-3089, HYP-3088, HYP-3085, HYP-3083, THM-576,
+  THM-575, THM-573, LTI-238, LTI-237, LTI-236, LTT-136, LTT-135, LTT-134,
+  T1177, T1176, T1172, OPEN-Q-108.
 
 ## Immediate Pull List
 

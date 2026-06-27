@@ -87,6 +87,36 @@ bounded clusters. Cap side SOLVED. Reductions match the paper's program; the pro
 substitute for the paper's (prohibitive) I(13,p,1) enumeration. NEXT: prove the coverage extremality
 (mac-mini reflection-Perron + Hankel dip; or three-distance majorization); Node-3 r>=7 tail.
 => HYP-3087/3088/3089/3090/3093, THM-574/576.
+## codex-2026-06-27-S258 -- two-frontier observer-gluing push
+
+Owner asked to keep working on at least two LRC proof-frontier tasks back and
+forth.  Worked HYP-3096's polynomial-method witness route against HYP-3097's
+Pascal/equivalence/scissors route, using HYP-3095 observer gluing as the
+bridge.  Added HYP-3098, T1177, LTI-238, LTT-136, the exact scout
+`04-computation/lrc14_two_frontier_gluing_s258.py`, stored output, and a
+reflection.
+
+Witness-route readout: fixed rows now have exact direct lonely measure,
+component count, largest direct arc, denominator-net threshold, small-grid
+hits, and binders.  `12->84` has largest arc `3/1960` and threshold `654`;
+`12->168` has `23/11760` and threshold `512`; `near/K33 12->36` has
+`1/2520` and threshold `2521`; `P10+K33` has `1/1960` and threshold `1961`.
+But divisor-loaded `B=6` has largest direct arc `1/5880`, threshold `5881`,
+and no grid hit through `d<=14`, so raw direct time is a chart, not an
+invariant.
+
+Pascal-scissors readout: `j=1,2,3` are pure pair mass, `j=4` has exactly one
+`1/4004` affine pair-mass defect, and `j=5` has defect `1081/76440`, i.e. it
+needs S3/S4 or reflection-Perron debt.  But pair mass cannot separate positive
+nested-refinement covering rows from positive K33 cross-handoff rows, so
+branch chart, endpoint owners, active binders, and terminal debt must survive.
+
+Net synthesis: the proof object is the overlap map among arithmetic/CRT,
+normalized-arc, Pascal-scissors, moment/Perron, branch/K33, and formal witness
+charts.  Next concrete artifact is `lrc14_observer_gluing_ledger` over the
+THM-573 residual, with direct component topology, denominator threshold, cap
+defect, pair-mass unit, grid class, binders, endpoint owners, failed overlap,
+and terminal exit recorded per packet.
 
 ## mac-mini-2026-06-27-S63 -- the covering-bound cap is a pair-normalized Pascal mass + a web of connections
 

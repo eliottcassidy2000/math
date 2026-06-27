@@ -1890,6 +1890,47 @@ normalizer attempts, then split the direct `1/14` component-bound obligation
 into bounded-apex direct packets versus large-apex normalized slow/ruler
 packets with moment/branch overlap maps.
 
+### 67. LTI-238 Two-Frontier Observer-Gluing Ledger
+
+Sources: HYP-3098, HYP-3097, HYP-3096, HYP-3095, HYP-3094, HYP-3093,
+HYP-3092, HYP-3090, HYP-3089, HYP-3088, HYP-3085, THM-576, THM-575,
+THM-573.
+
+Preserves: chart overlaps among the polynomial-method witness route,
+normalized arc route, Pascal/pair-mass cap route, moment/Perron route,
+branch/K33 route, and formal witness route.  The retained payload is direct
+lonely-set topology, finite denominator-net status, CRT lift status, cap
+defect, scissors payload, active binders, endpoint-owner transitions, grid
+class, and terminal exit.
+
+Destroys if used alone: the scalar comfort of any one chart.  Raw direct time
+is unstable under divisor loading; raw pair mass does not identify branch
+handoff; raw safe mass does not distinguish covering discharge from K33 debt;
+and raw Pascal counts do not prove the LRC predicate without endpoint and
+component sidecars.
+
+Best vertex sets: observer charts, proof obligations, chart-overlap failures,
+active binders, endpoint-owner words, cap-defect packets, denominator-net
+budgets, CRT lift states, and terminal exits.
+
+Pairwise observable / gauge: whether one carrier better retains the LRC
+predicate while preserving the coordinate another chart forgets: apex/ruler
+normalization for witness arcs, S3/S4/Perron debt for cap defects, branch
+owners for positive-open packets, and CRT descent for `14=2*7`.
+
+LRC use: build an `lrc14_observer_gluing_ledger` over the THM-573 residual.
+Each packet must either have a normalized arc floor compatible with its
+cap/scissors packet, reroute to O2 nested-refinement discharge, reroute to
+O3/K33 state-lift debt, or name the first failed chart overlap.
+
+Next contribution: populate the ledger fields
+`source_row_id`, `crt_c7_lift_status`, `crt_c2_dyadic_lift_status`,
+`direct_lonely_measure`, `direct_component_count`, `largest_direct_arc`,
+`denominator_net_threshold_D`, `pascal_pair_mass_unit`,
+`triangular_cap_shadow`, `cap_defect`, `sector_pair_scissors_signature`,
+`grid_class`, `active_binder_owner_word`, `endpoint_owner_transition_word`,
+`overlap_failure_chart`, and `terminal_exit_or_named_debt`.
+
 ## Pull Lists
 
 ### Good First Contributions
