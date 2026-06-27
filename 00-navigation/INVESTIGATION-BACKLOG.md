@@ -78,6 +78,44 @@ gK8/phi4 dip bound, but endpoint `Phi/P`, observer gluing, and finite-address
 exits need either the odd-coordinate resurrection table or named debt.
 
 Namespace: HYP-3138 / LTI-264 / LTT-162 / T1203 / OPEN-Q-108.
+## Lead codex-2026-06-27-S273: LRC14 fiber-PGF Rprime certificate
+
+**Status:** EVIDENCE / exact generating-function scout; not proof
+(HYP-3140/T1205).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3140-lrc14-fiber-pgf-rprime-certificate.md`,
+`04-computation/lrc14_fiber_pgf_certificate_codex_s273.py`,
+`05-knowledge/results/lrc14_fiber_pgf_certificate_codex_s273.out`,
+and `07-reflections/lrc14-fiber-pgf-rprime-certificate-codex-s273.md`.
+
+Readout: this refines HYP-3136's integrated multi-far factorization at its
+remaining `Rprime` factor and supplies a concrete coefficient carrier for the
+completed HYP-3137 generating-function payload atlas.  For `S=R union 14Q`,
+pass to `u=14t` and count the R-safe lifts
+`N_R(u)=#{a: (u+a)/14 is R-safe}`.  Then
+`Rprime=E[N_R | Q-lonely]/E[N_R]` exactly.  The scout computes exact
+sheet-count PGFs `F_R(y)` and Q-masked PGFs `F_R,Q(y)`.  The HYP-3129 worst
+targeted row `R={1,...,12}`, `Q={1,2}` becomes a two-coefficient defect:
+`F_R=7243/13860*y^0+6617/13860*y^1`,
+`F_R,Q=7243/13860*y^0+521/1980*y^1`, and
+`Rprime=51058/72787=0.701471...`.
+
+LRC14 placement: HYP-3129's signed SPEC certificate is the Fourier transform
+of this finite fiber-PGF moment inequality.  Pointwise positive-sheet
+positivity is false in low rows, so the live target is the conditional
+first-moment bound
+`F_R,Q'(1)/F_R,Q(1) >= c*F_R'(1)/F_R(1)` over legal residual packets.  This
+integrates HYP-3137/HYP-3136, Lee-Yang PGFs, Delsarte/MacWilliams transforms,
+q-Pochhammer tail warnings, Moser/fibbinary partial-cube sidecars, and HYP-3134 quotient
+legality.
+
+Next: enumerate the legal post-HYP-3131 residual packet family, attach
+`fiber_pgf_word` and `Q_masked_fiber_pgf_word` to HYP-3125 edge-floor packets,
+and translate the HYP-3129 low-frequency SPEC certificate into coefficient
+moments of `F_R,Q`.
+
+Namespace: HYP-3139 / LTI-265 / LTT-163 / T1204 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-A000568: LRC14 A000568 edge-witness sandwich
 

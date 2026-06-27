@@ -26,6 +26,34 @@ The session refocused the recent HYP-3132 De Moivre/biquadratic insight into a f
 Key exact readout: `S2_core_1..5=874/735`, `S2_boundary_with_sector6=442/735`, `S2_total=188/105`; the inner shell page has charpoly `(61740*x**2 - 47103*x + 5476)/61740` and eigenvalues about `0.14309,0.61983`; the full reflection-symmetric `3x3` block has top eigenvalue about `0.73066`.  Shell polynomial enumeration around center `3` shows HYP-3132's fold `(t-1)(t-2)(t-4)(t-5)` is the unique reflected four-root fold avoiding the boundary shell, with `y^2-5y+4` and discriminant `9`.
 
 Interpretation: HYP-3085's pairwise moment/Perron route, HYP-3122's `phi4` sign, and HYP-3132's solvable biquadratic are now the same finite packet.  HYP-3133's A000568 controlled-forgetting lesson reappears as a guardrail: the inner fold is usable only if center coupling and boundary leakage remain named sidecars.  Next proof task: prove the inner `2x2` shell bound, add center/boundary ceilings, then attach the `-9S3+6S4` / `phi4` correction inside the HYP-3107/THM-577 coverage-extremality interface.
+## codex-2026-06-27-S273 -- LRC14 fiber-PGF certificate for the Rprime floor -- HYP-3140
+
+Owner task: search niche unrelated repo work for generating-function connections that could help close LRC14.  Added
+HYP-3140, reflection `07-reflections/lrc14-fiber-pgf-rprime-certificate-codex-s273.md`, script
+`04-computation/lrc14_fiber_pgf_certificate_codex_s273.py`, and stored output.
+After fetch, incoming HYP-3136 supplied the integrated multi-far factorization
+`L=Rprime*meas(R-safe)*meas(Q-lonely)`; HYP-3140 is now explicitly the
+coefficient-level refinement of its remaining `Rprime` factor.
+After the final rebase, upstream HYP-3137 completed the generating-function
+payload atlas; HYP-3140 is the concrete fiber-PGF coefficient-layer instance
+of that atlas.
+
+Main identity: for residual rows `S=R union 14Q`, put `u=14t` and
+`N_R(u)=#{a in {0,...,13}: (u+a)/14 is R-safe}`.  Since the Q-side is a function of `u` alone,
+`Rprime = E[N_R | Q-lonely]/E[N_R]` exactly.  The script verifies this by exact rational interval arithmetic on
+canonical and adversarial rows.  The HYP-3129 worst targeted row becomes a two-coefficient fiber PGF:
+`R={1,...,12}`, `Q={1,2}`,
+`F_R=7243/13860*y^0+6617/13860*y^1`,
+`F_R,Q=7243/13860*y^0+521/1980*y^1`,
+and `Rprime=51058/72787=0.701471...`.
+
+Proof synthesis: the signed SPEC certificate is the Fourier transform of a finite 14-sheet coefficient problem.
+Pointwise positive-sheet arguments are false because Q-safe mass can include large `y^0` mass; the live theorem
+target is a conditional first-moment inequality
+`F_R,Q'(1)/F_R,Q(1) >= c*F_R'(1)/F_R(1)` over legal residual packets.  Niche connections are now operational:
+Lee-Yang PGFs supply root/coefficient language, Delsarte/MacWilliams supplies the transform lens, q-Pochhammer tails
+warn that tails need a named principal packet, Moser/fibbinary partial cubes explain the 14 sheet coordinates as typed
+sidecars, and HYP-3134 supplies the global-consistency rule for forgetting individual sheets.
 
 Completed the executable scout after rebasing over the S272 edge quotient
 coordination update.  Result stored in

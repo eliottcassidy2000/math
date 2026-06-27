@@ -31,6 +31,23 @@ allowed to forget neither center coupling nor boundary leakage; otherwise it
 becomes another unsafe scalar shadow. -> HYP-3139, HYP-3138, HYP-3132, HYP-3122,
 HYP-3085, HYP-3133, HYP-3129, HYP-3131, THM-577, LTI-265, LTT-163, T1204,
 OPEN-Q-108.
+**OPEN-Q-108 HYP-3140 fiber-PGF Rprime addendum:**
+HYP-3140 refines HYP-3136's integrated multi-far factorization at the
+remaining `Rprime` factor and instantiates HYP-3137's completed GF payload
+atlas.  It rewrites each residual `S=R union 14Q` row with `u=14t` and
+`N_R(u)=#{a: (u+a)/14 is R-safe}`.  Then
+`Rprime=E[N_R | Q-lonely]/E[N_R]` exactly.  The HYP-3129 worst targeted row is
+the two-coefficient PGF defect
+`F_R=7243/13860*y^0+6617/13860*y^1`,
+`F_R,Q=7243/13860*y^0+521/1980*y^1`.
+
+Open task: prove the finite coefficient/moment inequality
+`F_R,Q'(1)/F_R,Q(1) >= c*F_R'(1)/F_R(1)` for every legal residual packet after
+the HYP-3131 far-push reduction.  Attach `fiber_pgf_word`,
+`Q_masked_fiber_pgf_word`, `global_consistency_class`, and
+`SPEC_resonance_lattice_status` before quotienting sheet data. -> HYP-3140,
+HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3125, HYP-3124,
+HYP-3122, HYP-3112, LTI-266, LTT-164, T1205, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3133 A000568 edge-sandwich addendum:**
 HYP-3133 adds the field `a000568_extension_shadow` between HYP-3124's

@@ -5348,3 +5348,31 @@ constant chase.
   last bounded-core row.
 - **Pointers:** HYP-3139, HYP-3138, HYP-3132, HYP-3122, HYP-3085, HYP-3133,
   HYP-3129, HYP-3128, HYP-3131, THM-577, LTI-265, LTT-163, T1204, OPEN-Q-108.
+
+## LTT-164: Fiber-PGF Conditional-Moment Tournament
+
+- **Move:** Treat generating-function proof carriers as tournament vertices,
+  not runners or raw speed rows.  The live vertex is the 14-sheet
+  `fiber_pgf_conditional_mean`: refine HYP-3136's `Rprime` factor by counting
+  the R-safe lifts `N_R(u)` over `u=14t`, then prove the floor as
+  `E[N_R|Q-lonely]/E[N_R]`.  This is the concrete coefficient-layer vertex
+  promised by the completed HYP-3137 GF payload atlas.
+- **Preserves:** the exact LRC14 `Rprime` predicate, coefficient packet
+  `F_R(y)`, Q-masked packet `F_R,Q(y)`, HYP-3129 SPEC transform status,
+  HYP-3134 quotient legality, and named terminal debt.
+- **Forgets / guardrail:** raw `Rprime`, raw Fourier covariance, raw
+  runner lists, and individual sheet identities if the coefficient packet is
+  dropped.
+- **Fingerprint:** S273 reports a transitive carrier tournament with
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}`, no directed 3-cycles,
+  seven edge flips against raw scalar `Rprime`, and selected path
+  `fiber_pgf_conditional_mean -> signed_SPEC_resonance_lattice ->
+  edge_child_global_quotient -> lee_yang_root_pgf ->
+  macwilliams_weight_enumerator -> q_pochhammer_modular_tail ->
+  moser_fibbinary_partial_cube -> raw_scalar_Rprime`.
+- **Next hook:** prove the finite coefficient inequality
+  `F_R,Q'(1)/F_R,Q(1) >= c*F_R'(1)/F_R(1)` over the legal post-HYP-3131
+  residual packet family, then translate it back to HYP-3129 signed SPEC.
+- **Pointers:** HYP-3140, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3129,
+  HYP-3125, HYP-3124, HYP-3122, HYP-3112, LTI-266, LTT-164, T1205,
+  OPEN-Q-108.
