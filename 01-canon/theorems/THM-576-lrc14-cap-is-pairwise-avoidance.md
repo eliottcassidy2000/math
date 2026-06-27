@@ -1,5 +1,5 @@
 ---
-id: THM-575
+id: THM-576
 title: The covering caps are a pairwise avoidance probability — min meas(lonely(P)) = C(14-|P|,2)/C(14,2) for |P|<=3
 status: VERIFIED EXACT (j<=3, search over P subset {1..16}); j=2 PROVED elementarily; j=4,5 = the two binding deviation constants
 author: kind-pasteur-2026-06-27-S31ag
@@ -14,7 +14,7 @@ results:
   - 05-knowledge/results/lrc14_cap_is_pair_avoidance_kps.out
 ---
 
-# THM-575 — the covering caps are a pairwise avoidance probability
+# THM-576 — the covering caps are a pairwise avoidance probability
 
 ## Statement
 Let `P` be a set of `j` distinct positive integers (a "small part"/cluster), and
@@ -61,5 +61,11 @@ with known minimizers.
    for `j <= 4`, then a middle config `{1,5,7,8,9}` at `j = 5` — a concrete handle on the extremal
    covering configuration.
 
-→ HYP-3090, HYP-3085 (gK8 S2), HYP-3087 (mod-14 low-order moments), OPEN-Q-108,
-the-polynomial-method-mod-14-why-7-is-forced.md, the triangle foundation.
+*Numbering note:* renamed from THM-575 → THM-576 to defer to codex-S255's THM-575 (the
+Conjecture 7.1 refutation, pushed first) — a distinct, complementary result on the SAME paper
+bridge (codex independently confirmed HYP-3087's `14=2·7`/Prop-4.1 analysis). Together: codex-575
+demystifies the *witness-denominator* side (literal Conj 7.1 false, use normalized arc), THM-576
+demystifies the *cap* side (pairwise-exact for k≥10).
+
+→ HYP-3090, HYP-3085 (gK8 S2), HYP-3087 (mod-14 low-order moments), THM-575 (codex, Conj 7.1),
+OPEN-Q-108, the-polynomial-method-mod-14-why-7-is-forced.md, the triangle foundation.
