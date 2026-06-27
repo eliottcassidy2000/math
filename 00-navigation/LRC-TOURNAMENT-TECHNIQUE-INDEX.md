@@ -4914,3 +4914,54 @@ uniform-family parameter, and terminal exit.
 Pointers: HYP-3117, HYP-3116, HYP-3115, HYP-3111, HYP-3109, HYP-3108,
 HYP-3082, HYP-3077, HYP-3074, HYP-3023, HYP-3016, HYP-2112, HYP-2109,
 HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
+
+## LTT-154: Tournament of Niche Past-Work Closure Carriers
+
+- **Move:** Treat older niche proof devices as tournament vertices only after
+  they name the LRC predicate preserved, coordinate destroyed, required
+  sidecar, and frontier obligation.  Vertices are finite-address receivers,
+  observer-cut payloads, circuit-certificate vectors, proof-circuit past-work compiler gates,
+  coordinate-resurrection sheaf carriers, resource ledgers, endpoint/Farkas duals,
+  source-perspective fibers, twist ladders, Dirichlet/F7 conductance carriers,
+  endpoint-circuit `Phi` gates, normal-fan barcodes, Ostrowski/Pell carry
+  walls, Vitali width debts, unit endpoint sieves, and local residue-sieve
+  echoes.
+- **LRC use:** HYP-3120 extends HYP-3119/S269 and scores `16` carriers against `9` obligations, with
+  incoming HYP-3116 folded in as the circuit missing-input subcarrier and
+  circuit-certificate vector,
+  incoming HYP-3117 folded in as the proof-circuit past-work compiler carrier.
+  Completed HYP-3118 is folded in as the coordinate-resurrection sheaf carrier, including base-stalk/live-section repair-cover fields.
+  Top bridges are `proof_circuit_past_work_compiler -> lean_frontier_packet`,
+  `coordinate_resurrection_sheaf -> lean_frontier_packet`,
+  `circuit_certificate_vector -> lean_frontier_packet`,
+  `q27_q31_resource_descent -> q27_resource_normalizer`,
+  `observer_cut_payload_orbit -> observer_gluing_packet`,
+  `proof_circuit_past_work_compiler -> observer_gluing_packet`,
+  `coordinate_resurrection_sheaf -> observer_gluing_packet`,
+  `finite_address_phi_tuple -> lean_frontier_packet`,
+  `endpoint_circuit_phi -> lean_frontier_packet`,
+  `source_perspective_worry_fiber -> lee_yang_ear_payload`, and
+  `signed_polymer_dirichlet_network -> f7_state_lift_exit`.
+- **Preserves:** finite-address packet validity, observer-gluing payloads,
+  normalized witness intervals, Lee-Yang one-runner ear payloads, Q27/Q31
+  resource descent, endpoint dual certificates, Dirichlet/F7 energy exits, and
+  named AP/GW/F7/THM-572 debt.
+- **Forgets / guardrail:** raw runner tournaments, raw time, raw A000568
+  equality, final root locus without payload, raw H values, and sexy-prime
+  residue-sieve analogies are not terminal proof currency.
+- **Tournament readout:** transitive carrier tournament with one Hamiltonian
+  path:
+  `finite_address_phi_tuple > observer_cut_payload_orbit >
+  circuit_certificate_vector > proof_circuit_past_work_compiler > coordinate_resurrection_sheaf >
+  q27_q31_resource_descent > endpoint_credit_farkas >
+  source_perspective_worry_fiber > twist_ladder_dual >
+  signed_polymer_dirichlet_network > endpoint_circuit_phi >
+  normal_fan_cech_barcode > ostrowski_beatty_pell_normal_form >
+  vitali_antipoisson_width > unit_endpoint_sieve >
+  sexy_prime_residue_sieve_echo`.
+- **Next hook:** Build the packet-row schema named in LTI-256 and run it on
+  HYP-2963/HYP-3107 residual packets, HYP-3098 observer-gluing rows, and the
+  THM-573 level-7 residual.
+- **Pointers:** HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111,
+  HYP-3107, HYP-3098, HYP-3083, HYP-3073, HYP-3056, HYP-2108, HYP-2112,
+  HYP-2470, HYP-2471, HYP-2480, LTI-256, LTT-154, T1195, OPEN-Q-108.

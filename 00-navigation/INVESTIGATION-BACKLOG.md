@@ -54,6 +54,61 @@ Next: add `destroyed_coordinate_vector`, `coordinate_resurrection_cover`,
 packet rows.
 
 Namespace: HYP-3118 / LTI-254 / LTT-152 / T1193 / OPEN-Q-108.
+## Lead codex-2026-06-27: LRC14 niche past-work closure bridge
+
+**Status:** EVIDENCE / synthesis scout; not proof (HYP-3120/T1195).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3120-lrc14-niche-past-work-closure-bridge.md`,
+`04-computation/lrc14_niche_past_work_closure_bridge_codex_20260627.py`,
+`05-knowledge/results/lrc14_niche_past_work_closure_bridge_codex_20260627.out`,
+and
+`07-reflections/lrc14-niche-past-work-closure-bridge-codex-20260627.md`.
+The scout turns older niche LRC threads into a current proof-frontier router:
+finite-address `Phi` tuple, observer-cut payload orbit, Q27/Q31 resource
+descent, endpoint-credit Farkas, source-perspective worry fiber, twist-ladder
+dual, signed-polymer/Dirichlet network, HYP-3116 circuit missing-input ledger,
+HYP-3117 proof-circuit past-work compiler,
+HYP-3118 coordinate-resurrection sheaf,
+HYP-3116 circuit-certificate vector,
+endpoint-circuit `Phi`, normal-fan
+barcode, Ostrowski/Pell carry wall, Vitali/anti-Poisson width debt, unit
+endpoint sieve, and sexy-prime local-channel echo.
+
+Top bridges: HYP-3117 proof-circuit past-work compiler to the Lean frontier
+packet (`32`), HYP-3118 coordinate-resurrection sheaf to the Lean frontier
+packet (`28`), Q27/Q31 resource descent to loaded-denominator normalization
+(`28`), observer-cut payload orbit to observer gluing (`27`), HYP-3116
+circuit-certificate vector to the Lean frontier packet (`27`), finite-address
+`Phi` tuple to the Lean frontier packet (`26`), and source-perspective worry
+fiber to Lee-Yang ear payload (`26`).  Tournament Analysis over past-work
+carrier vertices is transitive with one Hamiltonian path led by
+`finite_address_phi_tuple`, then `observer_cut_payload_orbit`, then
+`circuit_certificate_vector`, then `proof_circuit_past_work_compiler`, then
+`coordinate_resurrection_sheaf`, then
+`q27_q31_resource_descent`.
+
+**Next:** build a packet-row schema with
+`finite_address_phi_tuple_status`, `observer_cut_payload_orbit`,
+`circuit_certificate_vector`,
+`proof_circuit_past_work_compiler`,
+`coordinate_resurrection_status`,
+`coordinate_resurrection_cover`,
+`repair_cover_rank`,
+`live_section_type`,
+`q27_q31_resource_status`, `twist_ladder_dual_status`,
+`source_perspective_worry_fiber`, `endpoint_credit_farkas_certificate`,
+`endpoint_circuit_phi_gate`, `missing_input_vector`,
+`ostrowski_beatty_pell_carry_wall`,
+`dirichlet_polymer_conductance`, `vitali_antipoisson_width_debt`, and
+`terminal_exit_or_named_debt`.  Run it on HYP-2963/HYP-3107 residual packets,
+HYP-3098 observer-gluing rows, and the THM-573 level-7 residual.  Keep the
+sexy-prime connection as local residue-sieve bookkeeping only unless analytic
+prime-distribution input is added.
+Namespace: HYP-3120 / LTI-256 / LTT-154 / T1195 / OPEN-Q-108.  Integrates
+incoming HYP-3116 as the proof-circuit missing-input subcarrier and incoming
+HYP-3117 as the proof-circuit past-work compiler carrier.  HYP-3118 is
+integrated as the completed coordinate-resurrection sheaf carrier with the
+base-stalk/live-section repair-cover schema.
 
 ## Lead codex-2026-06-27-S265: LRC14 irrational/transcendental approximation sidecar
 

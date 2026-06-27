@@ -392,6 +392,7 @@ record what it destroys before asking it to prove anything.
 | LTI-252 | Circuit missing-input kernel / proof-carrier certificate vector | Endpoint-cover activations, `Phi` gap sum, `P` max activation, proof-circuit inputs, essential-input sets, certificate minterms, missing-input vectors, repair covers, typed sidecar gates: HYP-2112 `Phi`, HYP-2108 endpoint-cover `P`, HYP-2109 `L/M/R`, HYP-3023 magnitude cocycle, HYP-3077 Horn closure, HYP-3082 protected branch graph | HYP-3116/S266 turns circuit complexity into a proof-facing missing-input discipline.  The broad audit models `LRC14Statement` as a shallow monotone proof circuit with `12` essential inputs and minterms `direct_witness`, `ap_gw_boundary`, or `finite_address AND observer_gluing AND endpoint_owner AND uniformity AND X`; ten tempting shortcuts close `0/10`, led by missing `finite_address`, `observer_gluing`, `endpoint_owner`, and `uniformity`.  The augmented endpoint-cover ledger mines `13` proof gates and ranks HYP-2112's `endpoint_phi_sum_gap` first: `P(S)` from HYP-2108 is the max activation and `Phi(C)=G(v)` from HYP-2112 is the sum activation equal to the exact gap.  The companion proof-carrier scout ranks typed sidecar gates by `(input_packet_schema, gate_basis, sidecar_closure, exact_gap_functional, route_purity, bridge_safety, uniform_family_parameter, terminal_exit)` and finds `38` edge flips against "smallest circuit first". | HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3109, HYP-3108, HYP-3107, HYP-3098, HYP-3083, HYP-3082, HYP-3077, HYP-3074, HYP-3054, HYP-3023, HYP-3016, HYP-2997, HYP-2991, HYP-2989, HYP-2981, HYP-2974, HYP-2791, HYP-2790, HYP-2744, HYP-2112, HYP-2109, HYP-2108, HYP-2963, THM-572, T1191, LTT-150, LTI-252, OPEN-Q-108 | Add `endpoint_cover_activation_vector`, `phi_gap_sum`, `phi_kernel_status`, `P_max_activation`, `simultaneous_resonance_winding_word`, `boolean_mobius_low_depth_cut`, `endpoint_period_numerator_sidecar`, `proof_circuit_missing_input_vector`, `proof_uniformity_schema`, `finite_address_packet`, `observer_gluing_certificate`, `Phi_gap`, `P_sign`, endpoint-owner word, `LMR_terminal_state`, `magnitude_cocycle`, Horn closure, protected-branch status, uniform-family parameter, `minimal_certificate_minterm`, `repair_cover`, and `terminal_exit_or_named_debt` to HYP-2963/HYP-3098/HYP-3107 rows before accepting a low-depth shortcut. |
 | LTI-254 | Coordinate-resurrection sheaf and adjoint repair calculus | Destroyed-coordinate ledger, minimal sidecar repair covers, concept-lattice intents, adjoint quotient/section pairs, bottleneck proof coordinates, theorem-to-signal map | HYP-3118/S267 executes the next abstraction after HYP-3116/HYP-3117: a quotient is useful only with the smallest legal sidecar, adjoint map, or sheaf section that resurrects the coordinate needed by the next proof obligation.  The scout models `17` sidecars and `11` shortcuts.  Base stalk is `finite_address + observer_gluing + endpoint_owner + uniformity`; live sections are root/ear, relation-lattice, component, cocycle, state-lift, and PDE carriers.  Scalar-like shortcuts require size-`4` repair covers (`40` minimal choices), live-section shortcuts require size-`3` covers, and the global proof route has `40` minimal covers.  It also maps Savitch, Bravais, Lee-Yang/PGF roots, `phi4`, and directed/odd/nested ears to new measurable signals. | HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3108, HYP-3107, HYP-3102, HYP-3098, HYP-3083, HYP-2963, T1193, LTT-152, LTI-254, OPEN-Q-108 | Add `destroyed_coordinate_vector`, `coordinate_resurrection_cover`, `adjoint_section_status`, `repair_cover_rank`, `concept_lattice_intent_id`, `core_stalk_presence`, `live_section_type`, `observer_ear_certificate_type`, `midpoint_certificate_depth_profile`, `pgf_zero_trajectory_signature`, `bravais_shape_wall_signature`, and `terminal_exit_or_named_debt` fields before promoting any scalar quotient. |
 | LTI-255 | Niche archive bridge ledger | Archive proof carriers and packet columns: endpoint `Phi`/`P` activation circuit, LMR/magnitude/Horn/protected-branch gates, normalized interval/denominator-center, ET+unit/Hensel zipper, CRT `2x7` gear, finite L7 resonance atlas, anti-Bohr endpoint cocycle, coordinate-resurrection cover ranks and concept intents, relation-lattice/Ising/circuit missing-input walls, Ostrowski automatic shadows | HYP-3119/S269 searches older proof-frontier work for connections that materially augment the current HYP-3114/HYP-3115 route.  After integrating the S266/S267 augmentations, the scout ranks carriers by whether they preserve the LRC predicate, repair known quotient failures, feed or lower-bound the exact HYP-2108/HYP-2112 endpoint `Phi`/`P` activation circuit, pass HYP-2109/HYP-3023/HYP-3077/HYP-3082 gate checks, compress packet fibers, integrate current approximation/root-lattice sidecars, and control destroyed coordinates.  It puts endpoint activation first, normalized THM-565 intervals plus HYP-2866 denominator-center profiles second, HYP-3020/HYP-3024 ET/Hensel zipper third, and CRT `14 -> 7 -> 2` gear fourth; raw direct-time named constants are last.  Incoming HYP-3116 supplies endpoint missing-input and proof-carrier gate fields, HYP-3117 supplies the proof-circuit packet id, and HYP-3118 supplies destroyed-coordinate vectors, cover ranks, adjoint sections, and concept intents. | HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3098, HYP-3082, HYP-3077, HYP-3024, HYP-3023, HYP-3020, HYP-2866, HYP-2730, HYP-2072, HYP-2108, HYP-2109, HYP-2112, THM-565, THM-573, T1194, LTT-153, LTI-255, OPEN-Q-108 | Build two joined scouts: endpoint activation/proof-carrier gates plus normalized interval/denominator-center profiles over HYP-3114/HYP-3098 rows, and ET/Hensel plus CRT/resonance/proof-circuit/coordinate-resurrection fields over HYP-3098/HYP-3112 packets, HYP-3115 one-swap Ising domain walls, and endpoint kernels. |
+| LTI-256 | Niche past-work closure bridge | Finite-address `Phi` receiver, observer-cut payload orbit, circuit-certificate vector, proof-circuit past-work compiler, coordinate-resurrection sheaf, Q27/Q31 resource descent, endpoint-credit Farkas certificate, source-perspective worry fiber, twist-ladder dual, Dirichlet/F7 conductance, Ostrowski/Pell carry wall, Vitali/anti-Poisson width debt | HYP-3120/codex-2026-06-27 extends HYP-3119/S269 by routing broader niche LRC work into packet-closure obligations.  The scout scores `16` carriers against `9` obligations and finds the strongest bridges: HYP-3117 proof-circuit past-work compiler to the Lean packet frontier, completed HYP-3118 coordinate-resurrection sheaf to the Lean packet frontier, HYP-3116 circuit-certificate vector to the Lean packet frontier, Q27/Q31 resource descent to loaded-denominator normalization, observer-cut payload orbit to observer gluing, finite-address `Phi` tuple to the Lean packet frontier, HYP-3116/HYP-3117 endpoint/missing-input circuit `Phi` to proof-circuit gates, source-perspective worry fiber to Lee-Yang ear payload, and signed-polymer/Dirichlet network to F7 state-lift exits.  The result is a finite packet-closure program rather than a new scalar invariant. | HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3107, HYP-3098, HYP-3083, HYP-3073, HYP-3056, HYP-2108, HYP-2112, HYP-2470, HYP-2471, HYP-2480, T1195, LTT-154, LTI-256, OPEN-Q-108 | Add `finite_address_phi_tuple_status`, `observer_cut_payload_orbit`, `circuit_certificate_vector`, `proof_circuit_past_work_compiler`, `coordinate_resurrection_status`, `coordinate_resurrection_cover`, `repair_cover_rank`, `live_section_type`, `q27_q31_resource_status`, `twist_ladder_dual_status`, `source_perspective_worry_fiber`, `endpoint_credit_farkas_certificate`, `endpoint_circuit_phi_gate`, `missing_input_vector`, `ostrowski_beatty_pell_carry_wall`, `dirichlet_polymer_conductance`, `vitali_antipoisson_width_debt`, and `terminal_exit_or_named_debt` to HYP-2963/HYP-3107/HYP-3098 rows. |
 
 ## Cross-Cutting Guardrails
 
@@ -2662,3 +2663,55 @@ status, proof-depth stage, finite-threshold alarm, uniform-family parameter,
 and terminal exit.  A row closes only through exact gap, route-purity split,
 legal sidecar closure, protected-branch terminal graph, or named THM-572/F7
 debt.
+
+## LTI-256: Niche Past-Work Closure Bridge
+
+Used by codex-2026-06-27 for HYP-3120, extending S269/HYP-3119 and integrating
+incoming HYP-3116 as the proof-circuit missing-input subcarrier, incoming
+HYP-3117 as the proof-circuit past-work compiler carrier, and completed
+HYP-3118 as the coordinate-resurrection sheaf carrier.  This technique
+searches older niche LRC work for the first forgotten coordinates that the
+current frontier needs.
+The carriers are not analogies once they emit typed packet fields:
+finite-address `Phi` receiver, observer-cut payload orbit, circuit-certificate
+vector, Q27/Q31 resource descent, proof-circuit past-work compiler,
+coordinate-resurrection sheaf, endpoint-credit Farkas certificate, source-perspective worry fiber,
+twist-ladder dual, signed-polymer/Dirichlet conductance, endpoint-circuit
+`Phi` gate plus missing-input vector, normal-fan/Cech barcode, Ostrowski/Beatty/Pell carry wall,
+Vitali/anti-Poisson width debt, and unit-endpoint sieve.
+
+Preserves: LRC14 packet validity through a witness, observer-gluing packet,
+finite-address packet, root/ear payload, resource descent, dual endpoint
+certificate, or named residual exit.
+
+Destroys or audits: raw time, raw A000568 count, final root locus without
+payload, raw tournament H value, residue-sieve analogy without analytic input,
+and anonymous F7 debt.
+
+LRC use: add the fields below before promoting another scalar:
+
+```text
+finite_address_phi_tuple_status
+observer_cut_payload_orbit
+circuit_certificate_vector
+proof_circuit_past_work_compiler
+coordinate_resurrection_status
+coordinate_resurrection_cover
+repair_cover_rank
+live_section_type
+q27_q31_resource_status
+twist_ladder_dual_status
+source_perspective_worry_fiber
+endpoint_credit_farkas_certificate
+endpoint_circuit_phi_gate
+missing_input_vector
+ostrowski_beatty_pell_carry_wall
+dirichlet_polymer_conductance
+vitali_antipoisson_width_debt
+terminal_exit_or_named_debt
+```
+
+Priority from the scout: receiver first, then observer payload, then HYP-3116
+circuit-certificate vector, then HYP-3117 proof-circuit compiler, then HYP-3118 coordinate-resurrection status, then resource normalizer, then dual/source/Dirichlet repairs.  Sexy-prime residue-sieve
+bookkeeping is retained only as local-channel hygiene; it is not a closure
+carrier without analytic prime-distribution input.

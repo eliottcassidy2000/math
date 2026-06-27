@@ -27994,3 +27994,63 @@ priority path starts with `first_obstruction_cocycle_gate`, then
 `proof_circuit_input_basis_id`, `proof_circuit_missing_input_vector`,
 `sidecar_fanin_profile`, `minimal_certificate_depth`, `gate_route_purity`, and
 `terminal_exit_kind`.
+## codex-2026-06-27 -- Niche past-work closure bridge -- HYP-3120
+
+User asked to search through niche past work for connections that augment and
+help close the LRC proof attempts.  Added
+`05-knowledge/hypotheses/HYP-3120-lrc14-niche-past-work-closure-bridge.md`,
+reflection
+`07-reflections/lrc14-niche-past-work-closure-bridge-codex-20260627.md`,
+script `04-computation/lrc14_niche_past_work_closure_bridge_codex_20260627.py`,
+and stored output
+`05-knowledge/results/lrc14_niche_past_work_closure_bridge_codex_20260627.out`.
+The namespace was moved to HYP-3120 / LTI-256 / LTT-154 / T1195 after incoming
+S269 claimed HYP-3119 / LTI-255 / LTT-153 / T1194 for the endpoint-gated niche
+archive bridge ledger.
+
+The scout turns older niche LRC threads into proof-frontier carriers rather
+than analogies.  It scores `16` carriers against `9` HYP-3098--HYP-3118
+obligations after integrating incoming HYP-3116 as the missing-input ledger
+and circuit-certificate vector, incoming HYP-3117 as the proof-circuit
+past-work compiler, and completed HYP-3118 as the coordinate-resurrection
+sheaf.  Top bridges are:
+`proof_circuit_past_work_compiler -> lean_frontier_packet` (`32`),
+`q27_q31_resource_descent -> q27_resource_normalizer` (`28`),
+`coordinate_resurrection_sheaf -> lean_frontier_packet` (`28`),
+`observer_cut_payload_orbit -> observer_gluing_packet` (`27`),
+`circuit_certificate_vector -> lean_frontier_packet` (`27`),
+`proof_circuit_past_work_compiler -> observer_gluing_packet` (`26`),
+`coordinate_resurrection_sheaf -> observer_gluing_packet` (`26`),
+`finite_address_phi_tuple -> lean_frontier_packet` (`26`),
+`endpoint_circuit_phi -> lean_frontier_packet` (`26`),
+`source_perspective_worry_fiber -> lee_yang_ear_payload` (`26`), and
+`signed_polymer_dirichlet_network -> f7_state_lift_exit` (`25`).
+
+Tournament Analysis uses proof carriers / obligations as vertices, not
+runners.  The carrier tournament is transitive with one Hamiltonian path:
+`finite_address_phi_tuple > observer_cut_payload_orbit >
+circuit_certificate_vector > proof_circuit_past_work_compiler > coordinate_resurrection_sheaf >
+q27_q31_resource_descent > endpoint_credit_farkas >
+source_perspective_worry_fiber > twist_ladder_dual >
+signed_polymer_dirichlet_network > endpoint_circuit_phi >
+normal_fan_cech_barcode > ostrowski_beatty_pell_normal_form >
+vitali_antipoisson_width > unit_endpoint_sieve >
+sexy_prime_residue_sieve_echo`.  The sexy-prime link is explicitly kept as
+local residue-sieve bookkeeping only; it lacks the analytic distribution input
+needed to prove prime pairs and is not an LRC closure carrier.
+
+Next proof pull: build a packet-row schema with
+`finite_address_phi_tuple_status`, `observer_cut_payload_orbit`,
+`circuit_certificate_vector`,
+`proof_circuit_past_work_compiler`,
+`coordinate_resurrection_status`,
+`coordinate_resurrection_cover`,
+`repair_cover_rank`,
+`live_section_type`,
+`q27_q31_resource_status`, `twist_ladder_dual_status`,
+`source_perspective_worry_fiber`, `endpoint_credit_farkas_certificate`,
+`endpoint_circuit_phi_gate`, `missing_input_vector`,
+`ostrowski_beatty_pell_carry_wall`,
+`dirichlet_polymer_conductance`, `vitali_antipoisson_width_debt`, and
+`terminal_exit_or_named_debt`, then run it on HYP-2963/HYP-3107 residual
+packets, HYP-3098 observer-gluing rows, and the THM-573 level-7 residual.

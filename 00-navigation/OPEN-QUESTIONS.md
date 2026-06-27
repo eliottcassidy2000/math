@@ -114,7 +114,7 @@ against HYP-3115 one-swap Ising domain-wall edges, endpoint kernels, and
 repair-sheaf covers. -> HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115,
 HYP-3114, HYP-3098, HYP-3082, HYP-3077, HYP-3024, HYP-3023, HYP-3020,
 HYP-2866, HYP-2730, HYP-2072, HYP-2108, HYP-2109, HYP-2112, THM-565,
-THM-573, LTI-255, LTT-153, T1194, OPEN-Q-108.
+THM-573, LTI-256, LTT-154, T1195, OPEN-Q-108.
 
 **OPEN-Q-108 S264b PDE weak-form compiler addendum:**
 HYP-3111's canonical Minkowski/circuit/Ising/De Moivre atlas now has a PDE weak-form supplement.  Exact supplement verifies the De Moivre fold `x=z-a/z => x^5+5*a*x^3+5*a^2*x=z^5-a^5/z^5`, but the new content is the route `Lee-Yang/Ising transfer -> PDE weak form -> endpoint Phi gap -> observer gluing -> finite address`.  Open task: annotate HYP-2963/HYP-3107 residual rows with route type, mass/stiffness/boundary data, zero-mode status, low-height wall deletion status, root/free-energy packet, proof-DAG depth, and finite-address or observer-gluing exit. -> HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3101, HYP-3062, HYP-2112, HYP-2108, THM-559, THM-538, OPEN-Q-108.
@@ -4315,3 +4315,51 @@ New target: add `witness_interval`, `endpoint_margin`,
 HYP-3112 ear-payload packets.  Algebraic targets may use Roth/Hurwitz fences
 only with height and exceptions retained; transcendental targets need explicit
 irrationality-measure or approximation-sequence sidecars.
+
+## OPEN-Q-108 addendum (codex-2026-06-27): Niche past-work closure bridge
+
+HYP-3120 extends HYP-3119/S269 and searches older niche LRC work for coordinates that augment the current
+HYP-3098--HYP-3118 proof frontier.  The result is a packet-closure router:
+old carriers become useful only when they emit a retained sidecar, name the
+destroyed coordinate, and hand off to finite-address, observer-gluing,
+normalized-witness, Lee-Yang-ear, resource-descent, dual-certificate, or named
+residual exits.
+
+The scout's top bridges are:
+
+```text
+proof_circuit_past_work_compiler -> lean_frontier_packet
+q27_q31_resource_descent -> q27_resource_normalizer
+coordinate_resurrection_sheaf -> lean_frontier_packet
+observer_cut_payload_orbit -> observer_gluing_packet
+circuit_certificate_vector -> lean_frontier_packet
+proof_circuit_past_work_compiler -> observer_gluing_packet
+coordinate_resurrection_sheaf -> observer_gluing_packet
+finite_address_phi_tuple -> lean_frontier_packet
+source_perspective_worry_fiber -> lee_yang_ear_payload
+endpoint_circuit_phi -> lean_frontier_packet
+signed_polymer_dirichlet_network -> f7_state_lift_exit
+twist_ladder_dual -> normalized_witness_interval
+vitali_antipoisson_width -> coverage_extremality_cap_debt
+```
+
+New OPEN-Q-108 target: add these fields to the packet frontier:
+`finite_address_phi_tuple_status`, `observer_cut_payload_orbit`,
+`circuit_certificate_vector`,
+`proof_circuit_past_work_compiler`,
+`coordinate_resurrection_status`,
+`coordinate_resurrection_cover`,
+`repair_cover_rank`,
+`live_section_type`,
+`q27_q31_resource_status`, `twist_ladder_dual_status`,
+`source_perspective_worry_fiber`, `endpoint_credit_farkas_certificate`,
+`endpoint_circuit_phi_gate`, `missing_input_vector`,
+`ostrowski_beatty_pell_carry_wall`,
+`dirichlet_polymer_conductance`, `vitali_antipoisson_width_debt`, and
+`terminal_exit_or_named_debt`.  Then run the schema on HYP-2963/HYP-3107
+residual packets, HYP-3098 observer-gluing rows, and the THM-573 level-7
+residual.  The theorem-shaped goal is that every surviving packet emits one of
+these typed exits or is routed to AP/GW/F7/THM-572 named debt. -> HYP-3119,
+HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3107, HYP-3098,
+HYP-3083, HYP-3073, HYP-3056, HYP-2108, HYP-2112, HYP-2470, HYP-2471,
+HYP-2480, LTI-256, LTT-154, T1195, OPEN-Q-108.
