@@ -3,17 +3,35 @@
 Reserved HYP-3118/T1193/LTI-254/LTT-152 for a long abstract synthesis after HYP-3116's missing-input ledger and incoming HYP-3117's proof-circuit past-work compiler.  Planned computation: build a repair hypergraph over HYP-3112-HYP-3117 carriers, compute minimal repair covers and concept-lattice intents, and run Tournament Analysis on reframes rather than runners, roots, gates, or constants.  Status at reservation: no proof, scout pending.
 
 ## codex-2026-06-27-S266 -- circuit lower-bound missing-input ledger reservation -- HYP-3116
+## codex-2026-06-27-S266 -- circuit lower-bound missing-input ledger -- HYP-3116
 
 Owner asked to search niche past work for further connections that might
-augment LRC proof attempts, especially through circuit complexity.  Reserved
-HYP-3116/T1191/LTI-252/LTT-150 as a circuit lower-bound / missing-input ledger
-rather than another scalar-complexity analogy.  The lane will mine the old
-staircase Boolean-circuit and Walsh/carry work, observer-gluing and
-finite-address proof-DAG ledgers, Savitch midpoint sidecars, route-center
-median ledgers, and HYP-3115's finite-bank circuit warning.  Guardrail:
-finite fitted classifiers such as `apex7_error <= 5` are signals only until a
-uniform circuit basis, essential-input set, certificate minterms, and
-missing-input vector are recorded.
+augment LRC proof attempts, especially through circuit complexity.  Completed
+HYP-3116/T1191/LTI-252/LTT-150 with executable ledger
+`04-computation/lrc14_circuit_missing_input_ledger_codex_s266.py` and stored
+output in `05-knowledge/results/lrc14_circuit_missing_input_ledger_codex_s266.out`.
+
+Main finding: the strongest old circuit bridge is HYP-2108/HYP-2112, not a
+generic hardness analogy.  `P(S)` is the max endpoint-cover activation gate
+and `Phi(C)=G(v)` is the sum activation equal to the exact LRC gap, so the
+LRC14 circuit problem is kernel exclusion for the endpoint-cover activation
+circuit.  The ledger mines `13` proof gates; top missing inputs are
+`endpoint_cover_activation_vector` (`6` gates), `finite_address_packet` (`5`),
+`observer_gluing_certificate` (`4`), and `endpoint_period_numerator_sidecar`
+(`3`).  HYP-2791's low-depth Boolean cut should now be tested as a lower bound
+on `Phi` after HYP-2790's endpoint-period numerator and speed-owner sidecars
+are retained.
+
+Tournament Analysis uses proof carriers rather than runners/gates/scalars and
+is transitive: `score_hist={0:1,...,12:1}`, no directed 3-cycles, singleton
+SCCs, one Hamiltonian path, and priority path
+`endpoint_phi_sum_gap -> lean_proof_frontier_dag ->
+finite_address_observer_gluing -> endpoint_P_max_activation ->
+route_state_median_closure -> ... -> finite_bank_apex7_literal`.  The `55`
+edge flips against a novelty-first gauge warn that HYP-3115's
+`apex7_error <= 5` finite-bank literal remains a signal only until it supplies
+proof uniformity, endpoint activation, finite-address, observer-gluing, and
+family-split data.
 
 Completed the executable audit
 `04-computation/lrc14_circuit_missing_input_ledger_codex_s266.py` with stored

@@ -4444,6 +4444,16 @@ in quotient/H/isomorphism statistics must come from tournament structure.
 **Repo's sieve THM-369 = Rosenfeld's divisibility sieve** (independently rediscovered the modern engine); pair it with the MSS finite bound (HYP-2052 shows why the bounded sieve alone can't close it).
 **TOP TARGET:** find the `k+1=2q`-analogue of "the tight tuple (1,Ã¢â‚¬Â¦,k) is proper" Ã¢â‚¬â€ an algebraic substitute for the polynomial method when k+1 is twice an odd prime (k+1=14=2Ã‚Â·7). This is the single most leveraged route to n=14 and squarely in the repo's wheelhouse.
 **S593 cap-face update:** THM-398 now includes Lemma H, the dual n-clock cap pigeonhole: for `v=nw`, each primary `n`-clock cell has danger capacity exactly `2/n^2`; if `G(S')` has more mass than that in any cell, the multiple row is loose.  The S593 audit routes `2460/2500` deterministic multiple-of-14 rows by this aggregate cell-cap criterion, with the remaining `40` routed by S581 owner descent.  Next target: on rows where every cell is under capacity, combine endpoint-owner congruences with `Phi` ramps to force positive gap.
+**Codex S266 circuit update:** HYP-3116 identifies the old HYP-2108/HYP-2112
+endpoint-cover activation circuit as the concrete circuit-complexity bridge:
+`P(S)` is the max activation and `Phi(C)=G(v)` is the exact gap sum.  The next
+proof-facing task is to attach `endpoint_cover_activation_vector`,
+`phi_gap_sum`, `phi_kernel_status`, `P_max_activation`,
+`endpoint_period_numerator_sidecar`, `finite_address_packet`, and
+`observer_gluing_certificate` to HYP-2963/HYP-3107 residual packets, then prove
+the legal residual `Phi` kernel is empty or route the first missing input to
+named debt.  HYP-2791's low-depth Boolean cut should be tested as a lower bound
+on `Phi`, not as a standalone scalar proof.
 
 ## LEAD (monad-explorer-S4): Moser-lattice unit-distance toolkit + the Ã¢Ë†Å¡(4tÃ¢Ë†â€™1) angle ladder
 - **Source:** THM-432, HYP-2298, reflection the-moser-lattice-is-the-bridge-ring-s4.md.

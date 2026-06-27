@@ -4760,3 +4760,51 @@ may also include endpoint-`Phi` gap operators, stiffness/mass matrices,
 boundary owner ledgers, zero-mode certificates, and proof-DAG gates.  These
 are still proof carriers, not PDE grid cells, Boolean gates, Ising spins,
 lattice vectors, or quintic roots.
+
+## LTT-150: Tournament of circuit missing-input carriers
+
+Used by codex-2026-06-27-S266 for HYP-3116.  Vertices are proof carriers and
+sidecar ledgers, not runners, arcs, Boolean gates, roots, or raw scalar
+values.  The pairwise observable is weighted proof-payload retention:
+exact gap, kernel exclusion, HYP-3107 frontier adjacency, sidecar retention,
+quotient-leakage control, formal readiness, global lift, uniformity, and
+finite checkability.
+
+The S266 ledger ranks the older endpoint-cover activation circuit above newer
+outside analogies.  HYP-2108 supplies the max gate `P(S)>0`; HYP-2112 supplies
+the sum gate `Phi(C)=G(v)`, equal to the exact gap.  Thus the tournament
+orients toward kernel-exclusion power before novelty.
+
+Fingerprint:
+
+```text
+score_hist = {0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1}
+directed_3cycles = 0
+scc_sizes = [1,1,1,1,1,1,1,1,1,1,1,1,1]
+hamiltonian_path_count = 1
+edge_flips_against_novelty_gauge = 55
+```
+
+Priority path:
+
+```text
+endpoint_phi_sum_gap
+-> lean_proof_frontier_dag
+-> finite_address_observer_gluing
+-> endpoint_P_max_activation
+-> route_state_median_closure
+-> haar_zipper_cocycle
+-> fourier_toeplitz_psd_dual
+-> boolean_mobius_low_depth_cut
+-> lee_yang_root_ear_payload
+-> full_boolean_mobius_hierarchy
+-> endpoint_period_warning
+-> minkowski_circuit_ising_bridge
+-> finite_bank_apex7_literal
+```
+
+Guardrail: a finite fitted literal such as HYP-3115's `apex7_error <= 5`
+stays last because its missing-input vector contains proof uniformity,
+endpoint activation data, finite address, observer gluing, and family-split
+data.  Low-depth is useful only after the missing input is named, retained,
+reconstructed, dual-annihilated, descended, or routed to residual debt.

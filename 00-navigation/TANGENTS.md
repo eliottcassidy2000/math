@@ -3544,3 +3544,26 @@ finite_bank_threshold_signal -> raw_scalar_p0`.  Next: add
 prove minterm hit or strictly decreasing sidecar repair.  -> HYP-3116,
 HYP-3115, HYP-3111, HYP-3108, HYP-3107, HYP-3098, HYP-3083, HYP-3074,
 HYP-3054, HYP-2997, HYP-2991, LTI-252, LTT-150, OPEN-Q-108.
+## T1191: Circuit missing-input kernel ledger (codex-2026-06-27-S266)
+
+HYP-3116 turns the circuit-complexity prompt into a proof-facing missing-input
+ledger.  The important old connection is HYP-2108/HYP-2112: `P(S)` is the max
+endpoint-cover activation and `Phi(C)=G(v)` is the sum activation equal to the
+exact LRC gap.  Therefore the LRC14 circuit problem is kernel exclusion for
+this endpoint-cover activation circuit, not a generic lower-bound analogy.
+
+The executable S266 ledger mines `13` proof gates and ranks
+`endpoint_phi_sum_gap` first, above the Lean frontier, finite-address plus
+observer-gluing interface, and the HYP-3111/HYP-3115 outside-carrier bridge.
+Top missing inputs are `endpoint_cover_activation_vector`,
+`finite_address_packet`, `observer_gluing_certificate`, and
+`endpoint_period_numerator_sidecar`.  HYP-2791's low-depth Boolean cut should
+therefore be used as a possible lower bound on `Phi`, with HYP-2790's endpoint
+period numerator retained, not as a standalone scalar proof.
+
+Tournament Analysis uses proof carriers rather than runners/gates/scalars and
+is transitive with `hamiltonian_path_count=1`; `55` edges flip against a
+novelty-first gauge, which is the warning that fashionable outside analogies
+and finite fitted literals do not outrank exact gap circuits.
+-> HYP-3116, HYP-3115, HYP-3111, HYP-3107, HYP-2791, HYP-2790, HYP-2112,
+HYP-2108, LTI-252, LTT-150, OPEN-Q-108.

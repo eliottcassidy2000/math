@@ -168,6 +168,30 @@ HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3106, HYP-3105,
 HYP-3104, HYP-3103, HYP-3102, HYP-3101, HYP-3062, HYP-2879, THM-577,
 LTI-250, LTT-148, T1189, OPEN-Q-108.
 
+**OPEN-Q-108 S266 circuit missing-input addendum:**
+HYP-3116 turns the circuit-complexity prompt into a concrete lower-bound
+discipline.  The strongest old circuit bridge is HYP-2108/HYP-2112:
+`P(S)` is the max endpoint-cover activation and `Phi(C)=G(v)` is the sum
+activation equal to the exact gap.  The S266 executable ledger mines `13`
+proof gates and ranks `endpoint_phi_sum_gap` first, above the Lean frontier
+and above newer outside-carrier analogies.  Circuit complexity should
+therefore mean kernel exclusion for the endpoint-cover activation circuit,
+not a generic hardness metaphor.
+
+Top missing inputs are `endpoint_cover_activation_vector` (`6` gates),
+`finite_address_packet` (`5`), `observer_gluing_certificate` (`4`), and
+`endpoint_period_numerator_sidecar` (`3`).  Future LRC14 shortcuts must either
+emit these fields, reconstruct them, dual-annihilate them, descend with them,
+or route the first missing one to named residual debt.  In particular,
+HYP-2791's low-depth Boolean cut should be tested as a lower bound on `Phi`
+after HYP-2790's endpoint-period numerator and speed-owner sidecars are
+retained.  HYP-3115's `apex7_error <= 5` finite-bank literal remains a signal
+only; its missing vector still contains proof uniformity, endpoint activation,
+finite address, observer gluing, and family-split data. -> HYP-3116,
+HYP-3115, HYP-3111, HYP-3107, HYP-3098, HYP-2991, HYP-2974, HYP-2791,
+HYP-2790, HYP-2744, HYP-2112, HYP-2108, LTI-252, LTT-150, T1191,
+OPEN-Q-108.
+
 **OPEN-Q-108 S264b Minkowski/circuit/Ising/De Moivre source-bridge addendum:**
 HYP-3111 now feeds HYP-3113 through a duodecimal cut-payload audit: four
 outside carriers times preserved predicate, destroyed coordinate, and handoff

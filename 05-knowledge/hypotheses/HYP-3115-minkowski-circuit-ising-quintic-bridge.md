@@ -8,6 +8,7 @@ result: 05-knowledge/results/lrc_minkowski_circuit_ising_quintic_bridge_codex_20
 reflections:
   - minkowski-circuit-ising-quintic-bridge-codex-20260627
 related:
+  - HYP-3116
   - HYP-3111
   - HYP-3114
   - HYP-3113
@@ -176,6 +177,12 @@ branch points or solvable local models near a collision wall.
 3. **Circuit-uniformity guardrail.**  Any scalar-looking maximizer rule must be
    replaced by a uniform circuit over named sidecars.  A one-literal finite-bank
    classifier is evidence for a signal, not evidence for a proof.
+
+   HYP-3116 sharpens the missing sidecars: the circuit row must retain
+   `endpoint_cover_activation_vector`, `phi_gap_sum`, `phi_kernel_status`,
+   `P_max_activation`, `endpoint_period_numerator_sidecar`,
+   `finite_address_packet`, and `observer_gluing_certificate`, or name the
+   first missing input as residual debt.
 
 4. **Stationary quintic stress.**  The de Moivre residual of `G'(z)` is not an
    extremality objective, but low residuals may mark solvable local normal forms

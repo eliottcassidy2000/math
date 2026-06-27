@@ -7,6 +7,7 @@ tangent: T1187
 technique: LTI-248
 tournament_technique: LTT-146
 related:
+  - HYP-3116
   - HYP-3114
   - HYP-3113
   - HYP-3112
@@ -89,6 +90,14 @@ finite-bank non-`p0` circuit predicate, and the translated De Moivre residual
 of `G'(z)`.  The remaining HYP-3111 work is to lift those fields from the
 anchored bank into HYP-2963 residual packets and Lean-facing proof-state
 gates.
+
+S266/HYP-3116 sharpens the circuit row: `proof_circuit_missing_input_vector`
+should now include the endpoint-cover activation fields from HYP-2108/HYP-2112,
+especially `endpoint_cover_activation_vector`, `phi_gap_sum`,
+`phi_kernel_status`, `P_max_activation`, `endpoint_period_numerator_sidecar`,
+`finite_address_packet`, and `observer_gluing_certificate`.  Circuit
+complexity is kernel exclusion for that endpoint-cover activation circuit, not
+only size/depth accounting.
 
 1. Replace the toy finite Ising carrier graph with the actual HYP-3109
    zero-real one-swap component and compare partition-zero angles before and

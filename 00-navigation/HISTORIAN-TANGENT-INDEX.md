@@ -1238,3 +1238,23 @@ carry mass matrices, stiffness matrices, boundary owner vectors, and zero-mode
 certificates.  The next pull is to annotate actual HYP-2963/HYP-3107 residual
 rows with route type, boundary/operator sidecars, low-height wall deletion,
 proof-depth stage, and finite-address exit.
+
+## T1191: Circuit missing-input kernel ledger (codex-2026-06-27-S266)
+
+HYP-3116 searches older circuit-flavored work and finds the proof-facing
+center in HYP-2108/HYP-2112, not in generic circuit-hardness analogies.
+`P(S)` is the max endpoint-cover activation gate and `Phi(C)=G(v)` is the sum
+activation gate equal to the exact gap.  The LRC14 circuit problem is thus
+kernel exclusion for this endpoint-cover activation circuit, with
+finite-address and observer-gluing packets attaching it to HYP-3107.
+
+The S266 executable ledger mines `13` proof gates.  Top missing inputs are
+`endpoint_cover_activation_vector`, `finite_address_packet`,
+`observer_gluing_certificate`, and `endpoint_period_numerator_sidecar`.
+Tournament Analysis uses proof carriers rather than runners/gates/scalars and
+is transitive with one Hamiltonian path:
+`endpoint_phi_sum_gap -> lean_proof_frontier_dag ->
+finite_address_observer_gluing -> endpoint_P_max_activation -> ... ->
+finite_bank_apex7_literal`.  The `55` novelty-gauge edge flips are the warning
+that finite fitted literals and outside analogies remain subordinate to exact
+gap and packet-gluing data.
