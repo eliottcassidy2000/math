@@ -4159,6 +4159,39 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3066, HYP-3056, HYP-3054, HYP-2997, HYP-2995, HYP-2963, THM-577,
   THM-572, THM-573, LTI-241, LTT-139, T1180, OPEN-Q-108.
 
+### LTT-140: Perspective Groupoid Functors
+
+- **Move:** Treat node k-depth views, directed-edge sectors, cycle roots,
+  clique insertion cuts, conflict pairs, observer cuts, and dihedral/converse
+  quotients as perspective functors.  The tournament vertices are the
+  functors or sidecar obligations, not the runners.
+- **LRC use:** HYP-3103/S261 reserves the formal layer above
+  HYP-3047-HYP-3057, rebased over HYP-3101/HYP-3102.  Each perspective must
+  declare its root object, automorphism action, depth rule, forgotten
+  coordinate, next operation, and legal discharge before it can be used in an
+  LRC14 quotient or proof tournament.  The normal-fan component bound and the
+  first-obstruction cocycle are the first two LRC stress tests.
+- **Preserves:** rooted view type, acted-on orbit structure, exact
+  add/delete/observer stress point, cross-sector or cycle/chirality sidecars
+  when retained, and the named LRC predicate that survives the quotient.
+- **Forgets / guardrail:** The first A000568/rooted-perspective failure is
+  already enough to reject deeper node memory as the missing object:
+  `P(5)=48`, `U(6)=56`, and node depth reaches exact rooted type before the
+  defect is repaired.  The missing payload is observer-extension/cut data
+  such as incident word, endpoint role, cross-sector orientation, or
+  dihedral reflection sidecars.
+- **Tournament vertices:** `node_depth_functor`, `directed_edge_sector_functor`,
+  `ordered_pair_extension_functor`, `cycle_chirality_functor`,
+  `transitive_clique_insertion_functor`, `conflict_omega_functor`,
+  `dihedral_reflection_quotient`, `observer_cut_functor`, and
+  `endpoint_owner_packet_functor`.
+- **Next hook:** Run the S261 perspective-groupoid scout, then feed its
+  sidecar vocabulary into HYP-2963 packet manifests and the observer-gluing
+  Lean frontier.
+- **Pointers:** HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3057, HYP-3054,
+  HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-2121, HYP-2120, HYP-2087,
+  LTI-242, LTT-140, LTT-139, LTT-138, T1181, OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,

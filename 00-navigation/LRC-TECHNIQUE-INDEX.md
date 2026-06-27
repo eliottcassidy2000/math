@@ -372,6 +372,7 @@ record what it destroys before asking it to prove anything.
 | LTI-237 | Polynomial-method witness-route ledger | CRT `c=7,c=2` lift status, direct lonely-set measure floor, component bound, largest-arc denominator-net threshold, finite bad-denominator budget, hyperoperation `(p,q),p+q,p*q` address | HYP-3096/S255 promotes the arXiv:2604.23906 `I(k,p,1)` bottleneck into the project witness route.  For `k+1=14=2*7`, THM-573 closes the `c=7` lift and the live residual is the `c=2`/analytic side: primitive covering rows with `<=6` multiples of `7`.  The replacement for large `I(13,p,1)` enumeration is `mu(L_14)>=m0` plus `components(L_14)<=A0`, giving a largest arc and a denominator-net witness for all large `d`. | HYP-3096, HYP-3089, HYP-3088, THM-573, THM-565, THM-530, HYP-3083, HYP-3084, HYP-3085, HYP-3003, HYP-3004, HYP-2866, HYP-2827, T1176, LTT-135, LTI-237, OPEN-Q-108, arXiv:2604.23906 | Attach the HYP-3096 fields to HYP-2963 and outside-bank normalizer attempts, then prove the direct `1/14` lonely-set component bound or a controlled reduction from THM-565's maxgap witness object. |
 | LTI-240 | Normal-fan Cech barcode component ledger | Normalized direct lonely-set components, closed arc-Cech beta, open topes, cocircuit owner currents, barcode bars, active normal-fan chambers, finite-ruler net | HYP-3101/S259 attacks the HYP-3096 component-bound obligation directly.  It merges HYP-3025 closed Cech topology, HYP-3015 persistence bars, HYP-3018 active normal-fan supports, and HYP-3071 first-tooth observability into a finite-chamber theorem: a THM-573 residual non-tight packet has bounded normalized direct components, is AP/GW boundary H1, or emits named F7/THM-572 good-cover quotient debt. Incoming S258 shows the direct component count can already hit `860` on sample residuals; THM-577 strengthens the cap chart but leaves this topology ledger live; the S259 Lean frontier makes bounded component packets producers for `ObserverGluingCertificate`, and S65's non-transitive cap-improvement scout warns that bounded exchange checks do not replace topology control. | HYP-3101, HYP-3096, HYP-3095, HYP-3025, HYP-3018, HYP-3015, HYP-3071, HYP-3035, HYP-2997, HYP-2963, THM-577, THM-575, THM-573, THM-565, T1179, LTT-138, LTI-240, OPEN-Q-108 | Build `lrc14_normal_fan_cech_component_ledger` with Cech beta, open component count, boundary cocircuit word, owner current, bar count, persistence, peak support, chamber id, component-bound status, finite-ruler threshold, destroyed coordinate, and terminal exit. |
 | LTI-241 | First-obstruction cocycle generation | Observer-cut payload differences, first obstruction syndromes, sidecar columns, certificate-cycle image, dual annihilators, AP/GW boundary stop, F7/THM-572 state-lift class | HYP-3102/S259 turns HYP-3095 chart gluing and HYP-3071 cycle-class observability into a finite exactness target.  For a quotient and next observer/cut operation, the hidden payload difference over a visible fiber must be zero, reconstructed, exact, generated, dual-annihilated, descended, AP/GW-stopped, or routed to the named phantom F7 state-lift coordinate.  Incoming S258 supplies the first observer-glue sample ledger, and THM-577 says the Pascal/cap defect should be tested as generated finite-remainder data before becoming a new basis atom; S31ah supplies tournament-certificate generators, while S65 separates `c5`/power-sum holes from forbidden-H alpha events, so each syndrome needs a mechanism label. | HYP-3102, HYP-3101, HYP-3095, HYP-3071, HYP-3070, HYP-3069, HYP-3066, HYP-3056, HYP-3054, HYP-2997, HYP-2995, HYP-2963, THM-577, THM-572, THM-573, T1180, LTT-139, LTI-241, OPEN-Q-108 | Build `lrc14_first_obstruction_syndrome_ledger`; for each mixed fiber emit quotient, next observer, visible automorphism group, payload orbit, first sidecar stage, obstruction basis vector, cycle-image status, dual-annihilator status, descent/boundary/state-lift status, and terminal exit. |
+| LTI-242 | Perspective groupoid controlled forgetting | Node k-depth views, directed-edge dual sectors, cycle/chirality roots, transitive-clique insertion cuts, conflict/Omega roots, observer cuts, dihedral/converse actions, required sidecars | HYP-3103/S261 shifts the A000568 perspective ladder from counts into quotient functors.  Each perspective declares root object, automorphism or dihedral action, depth rule, forgotten coordinate, next operation, required sidecar, and preserved LRC predicate.  The seed warning is `P(5)=48 < U(6)=56`: node depth reaches exact rooted memory before the defect is repaired, so the missing object is observer-extension/cut payload.  Rebased over HYP-3101/HYP-3102, normal-fan component bounds and first-obstruction cocycle gluing become two concrete stress tests for whether a perspective quotient is legal. | HYP-3103, HYP-3102, HYP-3101, HYP-3100, HYP-3057, HYP-3054, HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-2121, HYP-2120, HYP-2087, T1181, LTT-140, LTI-242, OPEN-Q-108 | Build `perspective_groupoid_forgetting_codex_s261.py`; emit node/edge/cycle/clique/conflict functor ledgers, dihedral/converse losses, sidecar obligations, and a proof-carrier tournament whose vertices are perspective functors rather than runners. |
 
 ## Cross-Cutting Guardrails
 
@@ -1999,6 +2000,48 @@ spectrum, and tie-lift status; add tournament-certificate columns to the
 HYP-2963 packet normalizer and `TournamentH7.LRCBleedingEdgeFrontier`; keep
 sexy-prime tournament work as a residue-sieve sidecar unless a
 parity/distribution theorem is supplied.
+
+### 71. LTI-242 Perspective Groupoid Controlled Forgetting
+
+Sources: HYP-3103, HYP-3102, HYP-3101, HYP-3057, HYP-3054,
+HYP-3050, HYP-3049, HYP-3048, HYP-3047, HYP-2121, HYP-2120,
+HYP-2087, HYP-3100.
+
+Preserves: the quotient functor being used, its root object, the automorphism
+or dihedral action acting on the view, the perspective depth rule, the next
+operation that stresses the quotient, and the sidecar that makes that
+operation legal.
+
+Destroys if used alone: labelled runner identity, full extension rows,
+observer endpoint role, cycle chirality, cross-sector orientation, endpoint
+owners, and the exact LRC metric predicate.
+
+LRC use: before a perspective, orbit count, dihedral quotient, or tournament
+shadow is promoted, attach
+
+```text
+perspective_functor
+root_object
+automorphism_action
+dihedral_reflection_status
+forgotten_coordinate
+next_operation
+required_sidecar
+legal_discharge
+```
+
+Seed guardrail: the first shifted A000568 coincidence fails at `P(5)=48` vs
+`U(6)=56`; k-depth node memory reaches exact rooted type before the failure is
+repaired, so the missing coordinate is an observer-extension/cut sidecar, not
+another node-neighborhood layer.
+
+Rebase hook: incoming HYP-3101 and HYP-3102 give this functor language two
+immediate proof stress tests.  A perspective quotient must either preserve the
+normal-fan/component-bound packet and the first-obstruction cocycle, or it must
+name which sidecar is missing.
+
+Next contribution: run the S261 perspective-groupoid scout, then add its
+sidecar names to HYP-2963 packet manifests and the observer-gluing frontier.
 
 ## Pull Lists
 

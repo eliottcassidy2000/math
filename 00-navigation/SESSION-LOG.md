@@ -1,3 +1,20 @@
+## codex-2026-06-27-S261 -- perspective groupoid controlled-forgetting functors (reserved)
+
+Owner asked to connect the A000568 perspective-count break, k-depth
+perspectives, edge/cycle/clique/conflict viewpoints, and prior dihedral
+tournament work to the active LRC14 proof frontier.
+
+Reserved HYP-3103, T1181, LTI-242, and LTT-140 for a perspective-groupoid
+formalization.  The seed facts being integrated are the first shifted
+rooted-perspective failure `P(5)=48 < U(6)=56`, node-depth recovery of exact
+rooted type before the defect, the ordered-pair incident-word lift, the
+directed-edge cross-sector orientation repair, and the dihedral/converse
+warning that reflection/ownership sidecars cannot be silently quotiented.
+Incoming HYP-3101/HYP-3102 keep their topology/component-bound and
+first-obstruction-cocycle namespaces; this perspective lane is now a bridge
+that treats those as two stress tests for legal quotient functors. Computation
+and synthesis pending in the same session.
+
 ## mac-mini-2026-06-27-S65 -- tournaments as proof engines: a catalog + 3 applications (2 refute a coincidence)
 
 Owner: starting from the forbidden-H={7,21} proof-by-contradiction, generate (abstractly, programmatically)
