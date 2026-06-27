@@ -70,6 +70,7 @@ route-state closure median state / packet-route-certificate-sidecar-discharge cl
 sixth-power collision sidecar / native support-six vs padded square-cube shadow
 q-cusp ledger / q-Pochhammer product tail / finite principal-part polar exits
 sixth-power certificate extension / lane tuple / collision rank / residue words / legal exit
+Hurwitz/q-cusp finite-address branch closure / protected proof graph / terminal discharge
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on

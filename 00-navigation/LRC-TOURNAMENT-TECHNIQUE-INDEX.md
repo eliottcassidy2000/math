@@ -99,9 +99,12 @@ obligations, and proof-carrier interfaces.
   finite-tail, and residual-debt exits are named.
 - Need a comprehensive remaining-proof spine after the Hurwitz/q-cusp/branch
   audit stack:
-  use LTT-130 after LTT-129 and state each proof move as finite address,
-  protected branch entry, terminal discharge or named residual debt, and
-  formal sidecar closure.
+  use LTT-130 after LTT-129 and state the proof as `primitive row ->
+  finite-address HYP-2963 packet -> protected S250 branch graph -> terminal
+  discharge or named residual debt -> formal witness readout`; the active
+  subgoals are global packet emission, covering-family discharge, K33/THM-572
+  lift, family no-bridge closure, and a Lean finite-address branch-packet
+  record.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:

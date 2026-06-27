@@ -1,7 +1,7 @@
 ---
 id: HYP-3083
 title: LRC14 Hurwitz finite-address branch-closure spine
-status: SYNTHESIS / remaining-proof spine; not a proof
+status: SYNTHESIS / finite-address covering and branch-closure remaining-obligation map; not a proof
 source: codex-2026-06-27-S252
 updated: codex-2026-06-27-S252b+S253
 tangent: T1167
@@ -12,6 +12,8 @@ related:
   - HYP-2906
   - HYP-2909
   - HYP-2996
+  - HYP-2997
+  - HYP-2963
   - HYP-3082
   - HYP-3081
   - HYP-3080
@@ -19,9 +21,9 @@ related:
   - HYP-3078
   - HYP-3077
   - HYP-3075
-  - HYP-2963
   - THM-523
   - THM-525
+  - THM-534
   - THM-566
   - THM-570
   - THM-571
@@ -33,15 +35,16 @@ related:
 
 This file completes the S252/S252b/S253 synthesis lane for the user's request
 to integrate incoming work, past LRC14 proof work, Hurwitz's theorem, and the
-q-Pochhammer/full-modular-group cusp cue into a sharper account of what
-remains in the LRC14 proof.
+q-Pochhammer/full-modular-group cusp cue into a sharper account of what remains
+in the LRC14 proof.
 
 The claim is not that a Hurwitz theorem or modular q-series directly proves
 LRC14.  The claim is that all Hurwitz-shaped lessons point to the same
 proof-interface rule:
 
 ```text
-an extremal scalar can be used only after its finite address is retained
+an infinite tail, extremal scalar, or branch contraction is legal only after
+the finite address that generates it has been retained or discharged
 ```
 
 The relevant Hurwitz readings are:
@@ -61,7 +64,7 @@ negative-power terms.  In LRC14 language, a quotient may use an infinite
 product, partition, periodicity, or mutation tail only after its polar debt is
 finite and every polar term has a named packet exit.
 
-Incoming work already supplies the adjacent pieces:
+Incoming work supplies adjacent pieces:
 
 - HYP-3075: Hurwitz/Markov/Pell/cannonball and modular-cusp finite-address
   sidecars.
@@ -69,6 +72,8 @@ Incoming work already supplies the adjacent pieces:
   nonterminal scheduler centers.
 - HYP-3078/HYP-3079: q-series tails are legal only after finite principal
   part, transformation, multiplier, and zero/pole persistence data are named.
+- HYP-3080: sixth-power equalities are proof data only with lane tuple,
+  primitive gcd, shared-term filter, residue words, and collision exit.
 - HYP-3081/HYP-3082: proof quotients must not create naked Robbins bridges;
   the current HYP-2963 packet-bank protected graph has no naked bridges after
   sidecars are attached.
@@ -83,6 +88,7 @@ global primitive row
   -> finite-address packet bank
   -> protected branch graph
   -> terminal discharge or named residual debt
+  -> formal witness readout M >= 1/14
 ```
 
 ## Covering-Bound Priority
@@ -130,14 +136,14 @@ S primitive, |S|=13
   -> finite-address packet P(S)
   -> protected branch graph
   -> terminal discharge or named residual debt
+  -> formal witness readout M(S) >= 1/14
 ```
 
 The word "exponential" keeps the useful part of the S59 hyperoperation
-reframe: multiples of `14` are periodic on the `1/14` lift, and the gamma
-trick uses that periodicity.  Hurwitz/Markov/q-cusp adds the guardrail:
-periodicity, q-series tails, route medians, power equalities, and scalar
-extrema are legal only after the finite address that made them special is
-retained.
+reframe: multiples of `14` are periodic on the `1/14` lift, and the gamma trick
+uses that periodicity.  Hurwitz/Markov/q-cusp adds the guardrail: periodicity,
+q-series tails, route medians, power equalities, and scalar extrema are legal
+only after the finite address that made them special is retained.
 
 The finite address should contain at least:
 
@@ -295,23 +301,78 @@ automatic word, scalar `M` bucket, or q-series tail unless the forgotten
 coordinate is reconstructible, dual-annihilated, fiber-constant, or routed to
 named residual debt.
 
-### O2. Covering-moment family discharge
+### O2. Covering-moment / positive-open discharge
 
-Prove the strict safe-component exit for covering-family packets uniformly.  In
+Prove the strict safe-component exit for covering-family packets uniformly. In
 the older language this is OPEN-Q-108 / GAP G2 / bounded-core fattening.  In
 the Lean formalization status it is the analytic side of the cap floor
 `hmeasGP` plus finite-ruler Part A `hpartA` (or the p0/cap positive-margin
 route after its certificate/extremality bridge is supplied).  In S59 language,
 this is the exponential covering bound, not the additive census.
 
-### O3. K33/state-lift construction
+The q-cusp analogy is useful here because it says the infinite covering tail is
+legal only after its finite polar debt is named.  A covering proof should
+therefore expose a finite certificate row:
+
+```text
+principal debt: covered small-denominator witnesses
+tail certificate: p0/moment, gamma/apex-periodic, Haar/Ramanujan, or Node-3
+exit: positive witness density, descent, or named residual
+```
+
+### O3. K33 / THM-572 state-lift construction
 
 Turn each K33/nonunit residual packet into the complete tournament-state lift
 required by THM-572, or give a different terminal discharge.  THM-572 proves
 the endpoint contradiction from an `H=7` lift; it does not build the lift.
 HYP-3082's `K33-STATE-LIFT` rows are therefore honest debt, not solved rows.
 
-### O4. Boundary census only if the proof routes through equality
+### O4. Branch-closure / no-new-naked-bridge theorem
+
+Promote the HYP-3082 bounded audit into a theorem over the normalizer image:
+controlled forgetting is legal exactly when every load-bearing bridge is
+protected by a named sidecar, reconstruction, dual-annihilation, descent, or
+residual exit.
+
+For parameterized tails, the family theorem should prove:
+
+```text
+family extension of a protected branch
+  either keeps a reverse verification path
+  or descends
+  or discharges
+  or names new residual debt
+```
+
+This is exactly where the modular finite-principal-part rule and Hurwitz seed
+rule become proof infrastructure: parameterized infinite tails are legal only
+if they are generated by a finite address.
+
+### O5. Integer-vs-real and formal sidecar closure
+
+Formalize the passage from limiting shape/cap arguments back to integer
+runners: `rho_K -> rho*`, arc-count/Vmax bounds, shape extraction, and witness
+handoff.  The Lean track has a verified conditional assembly reducing LRC14 to
+named nodes, and THM-572 is formal once the state lift exists.  What is not
+yet formal is the packet normalizer, the covering-moment certificate, the K33
+lift, and the sidecar legality theorem saying finite addresses survive every
+proof quotient.
+
+The next Lean-facing object should be a record combining:
+
+```text
+packet identity
+finite principal-part / polar-exit proof
+branch graph entry and bridge certificate
+terminal discharge certificate
+event bridge to goodSet/safeSet or state lift
+Part-A or THM-572 readout
+```
+
+This is the natural common target for `LRCModularCuspLedger`,
+`LRCMedianCenterControl`, `LRCMomentDual`, and `LRCTournamentStateLift`.
+
+### O6. Boundary census only if the proof routes through equality
 
 The AP/GW census and shell-collapse problem remain mathematically valuable,
 but they are not the shortest proof path unless the argument chooses a
@@ -320,27 +381,19 @@ classification.  If a future proof uses "all tight rows are AP/GW" as its
 bridge, then it must still prove the HYP-2909 shell-collapse / covering
 strictness step; otherwise the census is a side theorem.
 
-### O5. Formal sidecar closure
-
-The Lean track has a verified conditional assembly reducing LRC14 to named
-nodes, and THM-572 is formal once the state lift exists.  What is not yet
-formal is the packet normalizer, the covering-moment certificate, the K33 lift,
-and the sidecar legality theorem saying finite addresses survive every proof
-quotient.
-
 ## Candidate Branch-Closure Lemma
 
 The theorem shape suggested by this synthesis is:
 
-> **Finite-address branch-closure lemma.**  Let `S` be a primitive 13-speed
-> row.  Suppose the q-witness, apex-majority, and one-large-speed gates reduce
-> `S` to a low-apex, top-balanced covering row.  Suppose this row admits a
-> packet `P(S)` whose finite-address ledger retains exact scale, endpoint
-> owner, route, residual section, bridge-protection sidecar, and any
-> q-cusp/Hurwitz arithmetic address used by the proof.  If `P(S)` has no
-> illegal infinite polar tail, no naked protected-graph bridge, and every
-> terminal branch is discharged by q-witness, boundary, owner-strip,
-> covering-family, or THM-572 state-lift exit, then `M(S) >= 1/14`.
+> **Finite-address branch-closure lemma.** Let `S` be a primitive 13-speed row.
+> Suppose the q-witness, apex-majority, and one-large-speed gates reduce `S` to
+> a low-apex, top-balanced covering row.  Suppose this row admits a packet
+> `P(S)` whose finite-address ledger retains exact scale, endpoint owner,
+> route, residual section, bridge-protection sidecar, and any q-cusp/Hurwitz
+> arithmetic address used by the proof.  If `P(S)` has no illegal infinite
+> polar tail, no naked protected-graph bridge, and every terminal branch is
+> discharged by q-witness, boundary, owner-strip, covering-family, or THM-572
+> state-lift exit, then `M(S) >= 1/14`.
 
 This lemma is intentionally conditional.  It is a better target than another
 scalar separator because each missing hypothesis is now a named proof
@@ -398,10 +451,18 @@ finite_address_packet_normalizer
 > raw_scalar_or_census_shadow
 ```
 
-The intended proof-carrier tournament is transitive; expected score histogram
-is singleton at each score, with no directed 3-cycles, singleton SCCs, and one
-Hamiltonian path.  A directed cycle in an actual packet audit would be useful
-evidence that two carriers each destroy a coordinate the other needs.
+Known and intended fingerprints:
+
+- HYP-3082 raw scalar-star: `6` nodes, `5` bridges, `5` naked bridges.
+- HYP-3082 protected graph: `80` nodes, `83` edges, `69` bridges, `0` naked
+  bridges, strongly orientable contracted core.
+- HYP-3080 sixth-power rank audit: `0` nontrivial two-lane collisions through
+  `250`, `5` three-lane collision certificates through `80`, and `5`
+  rank-sensitive edge flips.
+- The intended proof-carrier tournament is transitive: singleton score
+  histogram, no directed 3-cycles, singleton SCCs, and one Hamiltonian path.
+  A directed cycle in an actual packet audit would be useful evidence that two
+  carriers each destroy a coordinate the other needs.
 
 ## Practical Next Pull
 
@@ -413,23 +474,44 @@ source_row_id
 source_row_or_family
 contains_multiple_of_14
 low_apex_top_balanced_status
+normalizer_exit_attempted
 finite_address_kind
+finite_address_word
 exact_M_and_q_threshold
 endpoint_owner
 destroyed_coordinate
+required_sidecar_or_debt
 q_cusp_ledger_id
 principal_part_order
 polar_exit_word
 hurwitz_or_pell_address
 protected_branch_node
+bridge_status_raw
+bridge_status_protected
 bridge_protection_mode
 median_center_kind
 terminal_exit
-Lean_formalization_status
+lean_formalization_status
 residual_debt_name
 ```
+
+Concrete first targets:
+
+1. Instantiate one low-apex covering-moment row as a q-cusp ledger with finite
+   principal part, polar exit word, product/partition tail certificate, branch
+   id, bridge status, and covering discharge route.
+2. Turn the p0/moment covering-family certificate into exact rational data:
+   feasible dual over miss counts, `L_y <= cap - delta`, and the event bridge
+   into `goodSet/safeSet`.
+3. Build the K33 state-lift packet record with endpoint owners, incidence
+   branch kernel, and the `H(T)=7` payload required by THM-572.
+4. Re-run the S250 branch audit on a parameterized low-apex covering family,
+   not just the bounded bank, and report whether any bridge becomes naked.
+5. Add a Lean `FiniteAddressBranchPacket` record that packages q-cusp,
+   branch-bridge, terminal-discharge, and witness-readout fields in one place.
 
 The first useful target is the low-apex covering-moment family, not AP/GW
 census.  The second is the K33/THM-572 lift construction.  Those two
 obligations are the live proof debt after integrating the incoming redirect
-with the older gamma, peeler, packet-bank, q-cusp/Hurwitz, and Lean tracks.
+with the older gamma, peeler, packet-bank, branch-closure, q-cusp/Hurwitz, and
+Lean tracks.

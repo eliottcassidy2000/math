@@ -1,40 +1,29 @@
 # Open Questions
 
-**OPEN-Q-108 S252 finite-address branch-closure addendum:** HYP-3083
-integrates the S59 covering-bound redirect with the Hurwitz/Markov/Pell,
-q-cusp, Lean finite-tail, sixth-power, median-hull, Robbins bridge, and
-branch-kernel audit work.  Open task: build a
-`finite_address_branch_closure` ledger that takes each low-apex,
-top-balanced covering residual through finite-address packet entry, protected
-branch-graph node, bridge-protection status, terminal exit, and formal closure
-status.  The critical path is the covering bound for rows with multiples of
-`14`, not AP/GW census rigidity.  The named obligations are global
-normalizer/packet coverage, covering-moment/positive-open discharge behind
-OPEN-Q-108, K33/THM-572 state-lift construction, branch-closure theorem over
-the normalizer image, integer-vs-real finite-ruler glue, and AP/GW census only
-if the proof chooses a boundary-equality route.  The guardrail is that no
-extremal scalar, q-tail, route median, sixth-power equality, apex-periodic row,
-or tournament kernel may be used unless the finite address that made it
-extremal is retained or routed to named residual debt. -> HYP-3083, HYP-3082,
-HYP-3081, HYP-3080, HYP-3079, HYP-3078, HYP-3077, HYP-3075, HYP-2963,
+**OPEN-Q-108 S252/S253 finite-address q-cusp branch-closure addendum:**
+HYP-3083 integrates the S59 covering-bound redirect with THM-523, THM-571,
+HYP-2906/HYP-2900, HYP-2996/HYP-2963, HYP-3075, HYP-3078/HYP-3079, HYP-3080,
+HYP-3081/HYP-3082, the Lean modular/moment/state-lift shells, and the
+full-modular-cusp rule that meromorphic q-expansions have only finitely many
+negative powers.  The modular/q-Pochhammer input becomes the finite-principal
+part discipline; Hurwitz/Markov/Pell and Vieta orbits supply finite
+seed/address and zero-persistence gates; Robbins/S250 supplies the
+no-naked-bridge rule.  After q-witness, THM-571 apex-majority gamma, and
+HYP-2906 one-large peeler gates, the live rows are low-apex, top-balanced
+covering rows with finite addresses retained.  Open task: build/prove the
+`finite_address_branch_closure` ledger `low-apex top-balanced covering row ->
+finite-address HYP-2963 packet -> protected S250 branch graph -> terminal
+discharge or named residual debt -> formal witness readout M>=1/14`.  Record
+multiple-of-14 status, exact `M/q`, endpoint owner, destroyed coordinate,
+q-cusp principal part, polar exit, Hurwitz/Pell address, protected branch node,
+bridge mode, median-center kind, terminal exit, and formalization status.
+Named debts are global packet coverage, covering-moment/p0 or apex-periodic
+gamma/Node3 discharge, K33/THM-572 state-lift construction,
+branch-closure/no-new-naked-bridge family theorem, integer-vs-real finite-ruler
+glue, and AP/GW census only if the proof chooses a boundary-equality route. ->
+HYP-3083, HYP-3082, HYP-3081, HYP-3080, HYP-3079, HYP-3078, HYP-3077,
+HYP-3075, HYP-2996, HYP-2963, HYP-2906, HYP-2900, THM-523, THM-534, THM-571,
 THM-572, LTI-232, LTT-130, T1167, OPEN-Q-108.
-**OPEN-Q-108 S253 Hurwitz/q-cusp covering-bound spine addendum:** HYP-3083 now
-integrates the S59 redirect with the S245-S252 finite-address stack.  The
-critical path is the covering bound, but after THM-571 and HYP-2906 the live
-residual is narrower: low-apex, top-balanced covering rows with `1..6`
-multiples of `14`, no small-q witness, no apex-majority gamma descent, and no
-one-large-speed interval peel.  Open task: build the executable
-`finite_address_branch_closure` ledger over HYP-2963 packets and outside-bank
-normalizers for that residual.  For each row record `contains_multiple_of_14`,
-`low_apex_top_balanced_status`, exact `M/q`, endpoint owner, destroyed
-coordinate, q-cusp ledger id, finite principal-part order, polar exit word,
-Hurwitz/Markov/Pell or Vieta address, protected branch node,
-bridge-protection mode, median-center kind, terminal exit, and formalization
-status.  The target theorem is that every such residual packet has a terminal
-exit or named debt, and the only named debts left are covering-family
-gamma/Node3 and K33/THM-572. -> HYP-3083, HYP-3082, HYP-3079, HYP-3078,
-HYP-3077, HYP-3075, HYP-2996, HYP-2963, THM-571, THM-572, LTI-232, LTT-130,
-T1167, OPEN-Q-108.
 
 **OPEN-Q-108 S249 branch-tournament orientation addendum:** HYP-3081 turns
 Robbins' no-bridge strong-orientation criterion into an LRC14

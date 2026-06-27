@@ -1,23 +1,48 @@
-## codex-2026-06-27-S253 -- Hurwitz/q-cusp covering-bound spine update (HYP-3083)
+## codex-2026-06-27-S253 -- q-cusp Hurwitz finite-address branch-closure synthesis
 
-Expanded HYP-3083 after rebasing over incoming S252b and integrating S59/S245-
-S252 work.  Main synthesis: LRC14 is now best organized around the covering
-bound, not the AP/GW census, and after THM-571/HYP-2906 the live residual is
-low-apex, top-balanced covering rows.  Hurwitz/Markov/Pell, complex Hurwitz
-zero-persistence, Hurwitz Vieta orbits, and the q-Pochhammer full-modular-group
-cusp rule all give the same controlled-forgetting law: no extremal scalar,
-q-tail, modular principal part, route median, or tournament kernel is
-proof-usable until its finite address and named exit are retained.
+Expanded the HYP-3083/T1167/LTI-232/LTT-130 stub into a full remaining-proof
+spine for the user's q-Pochhammer/full-modular-group/Hurwitz LRC14 synthesis.
+Added reflection
+`07-reflections/lrc14-q-cusp-hurwitz-branch-closure-synthesis-codex-s253.md`.
 
-HYP-3083 now states the remaining obligations: global finite-address normalizer
-for the low-apex/top-balanced residual; structural entry into the HYP-3082
-protected branch graph with no naked Robbins bridge; terminal discharge through
-q-witness, AP/GW boundary, C27 owner-strip, covering-family gamma/Node3, or
-K33/THM-572; and Lean/formal q-cusp/Hurwitz sidecar closure.  Added the
-`finite_address_branch_closure` ledger target with fields for multiple-of-14
-status, low-apex/top-balanced status, exact `M/q`, endpoint owner, q-cusp
-principal part, polar exit, Hurwitz/Pell address, branch node, bridge
-protection, median center, terminal exit, and formalization status.
+Main readout: the q-Pochhammer/modular-function cue is not a direct LRC proof;
+it is the finite-principal-part discipline.  For a full-level modular function,
+meromorphicity at the cusp gives only finitely many negative q-powers, so an
+infinite product/partition/modular tail is theorem-usable only after its finite
+polar debt and exits are named.  Hurwitz contributes two compatible finite
+address gates: Diophantine Hurwitz/Markov/Pell scalars require continued
+fraction, Markov depth, Pell unit, and endpoint-shell addresses; complex
+Hurwitz zero persistence prevents q-Pochhammer product limits from hiding
+unrecorded zero/pole debt.  Robbins/S250 gives the proof-graph translation:
+a forgotten address becomes a naked bridge.
+
+Improved proof target:
+
+```text
+primitive 13-speed row
+  -> finite-address HYP-2963 packet
+  -> protected S250 branch graph
+  -> terminal discharge or named residual debt
+  -> formal witness readout M>=1/14
+```
+
+What remains is now localized: global finite-address packet theorem,
+covering-family p0/moment or apex-periodic discharge, K33/THM-572 state-lift
+construction, no-new-naked-bridge theorem for parameterized families, and a
+Lean finite-address branch-packet record joining `LRCModularCuspLedger`,
+`LRCMedianCenterControl`, `LRCMomentDual`, and `LRCTournamentStateLift`.
+During rebase, integrated incoming S252b's sharpened residual: after the
+q-witness gate, THM-571 apex-majority gamma split, and HYP-2906 one-large
+peeler, the live covering rows are low-apex and top-balanced, so the packet
+theorem should start from that narrower residual class.  A later incoming
+S252 integration added the explicit `finite_address_branch_closure` ledger,
+integer-vs-real glue, and equality-route census caveat; HYP-3083 now merges
+those with the q-cusp/Hurwitz finite-principal-part argument.
+The final merged HYP-3083 also keeps the remote S253 candidate
+finite-address branch-closure lemma and the executable ledger fields for
+multiple-of-14 status, exact `M/q`, endpoint owner, q-cusp principal part,
+polar exit, Hurwitz/Pell address, protected branch node, bridge mode,
+median-center kind, terminal exit, and formalization status.
 
 ## mac-mini-2026-06-27-S59 -- RE-PRIORITIZATION: the LRC(14) proof = the COVERING BOUND (exponential/periodicity), the census is the EASY case's extremal (NOT on the critical path)
 Owner: 4 Farey variations (a+b,a*b,b^a,a^b) + integrate work + comprehensive understanding of what REMAINS + creative synthesis. Reflection: the-proof-lives-at-the-exponential-variation-covering-bound-not-census.md.

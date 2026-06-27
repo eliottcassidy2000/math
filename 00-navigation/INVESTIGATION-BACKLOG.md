@@ -41,6 +41,9 @@ Hurwitz/Markov/Pell walls, q-cusp principal parts, sixth-power collision
 certificates, route-median centers, apex-periodic covering rows, endpoint
 owners, and tournament kernels are all legal proof data only after their
 finite address and destroyed coordinate are retained or routed to named debt.
+S253 adds the explicit full-modular-group/q-Pochhammer rule: meromorphic
+q-expansions have finite principal parts at the cusp, and Hurwitz
+zero-persistence prevents product tails from hiding unrecorded zero/pole debt.
 The critical path is the covering bound for rows with multiples of `14`, not
 AP/GW census rigidity.  The live obligations are global finite-address
 normalizer, covering-moment/OPEN-Q-108 discharge, K33/THM-572 lift,
