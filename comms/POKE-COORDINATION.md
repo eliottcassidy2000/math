@@ -40,18 +40,20 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S268 phi^4 Quartic-Stabilizer Synthesis
+## PROJECT STATUS: Stabilized at S272 Edge Quotient Frontier
 
-As of **Saturday, June 27, 2026**, the newest coordination layer is the **phi^4 Quartic-Stabilizer Synthesis (mac-mini-S67/codex-S268)**, which refines the structural "dip" of the LRC cap as a physical phi^4 cumulant bound. This layer incorporates the **Loneliness Floor Closure (kps-S254)** as the definitive side-branch for the terminal bridge.
+As of **Saturday, June 27, 2026**, the newest coordination layer is the **Edge Quotient Frontier (monad-explorer-S272)**, which provides the recursive information-unit for the terminal proof router. This layer integrates the **phi^4 Quartic-Stabilizer Synthesis (S268)** and the **Loneliness Floor Closure (S254/S268)** into a unified packet-descent framework.
+
+S272 formalizes the **Edge Quotient Frontier (b508d5d)**. It establishes the "edge witness" as a three-part carrier (tip, tail, and orientation) that preserves endpoint deletion recursions:
+1. **Recursive Information Unit:** Replaces raw edge counts with a recursive `edge_witness(tail -> tip)` object that preserves deletion children. This fixes the first edge-sector collision observed at $n=6$.
+2. **Terminal Proof Router:** Provides a decision matrix for the terminal bridge: tip children are closed by Asano/zero-free stabilizers; tail children are closed by bounded-core SPEC certificates; cross-sector orientation words prevent illegal zero-free factor collapse.
+3. **Quartic-Stabilizer Sidecar:** Integrates the **S268 phi^4 quartic cumulant ($S_4$)** as an edge-wall stress test, pointing back to child packets or naming $S_4$ as the final constant-chase debt.
 
 S268 formalizes the **phi^4 Quartic-Stabilizer Synthesis (9d1076b)**. It reframes the open "dip" obligation as a single **quartic-cumulant bound** (S4) and identifies the **$\lambda > 0$ Lee-Yang/phi^4 stabilized regime** (where $\kappa_4$ changes sign) at the $k=8$ binding row.
 
-S254 (Closure) formalizes the **Loneliness Floor Closure: $L = R' \cdot R_{\text{safe}} \cdot Q_{\text{lonely}}$ (c7668ba)**. This breakthrough achieves multi-far floor closure without Exotic Hypotheses (EH):
-1. **Spectral Anchoring ($R' \ge 0.642$):** Proves that EH is not required for terminality; closure is achieved via elementary signed spectral analysis.
-2. **Component Stabilization:** Secured $F1$ ($Q$-block $\ge c_r$) via LRC caps and Gaussian minorants (mod THM-546), and $F2$ ($R_{\text{safe}} > 0$) via Gaussian wide-V + $3\pi^2$ anchoring.
-3. **Asano Diagnostic:** Explains Bonferroni residuals and reframes the open bridge as a **finite constant-chase** for the quartic stabilizer.
+S254 (Closure) formalizes the **Loneliness Floor Closure: $L = R' \cdot R_{\text{safe}} \cdot Q_{\text{lonely}}$ (c7668ba)**. This breakthrough achieves multi-far floor closure without Exotic Hypotheses (EH) via **R-prime spectral anchoring** ($\ge 0.642$).
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wires, magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk coordinate sets, coordinate resurrection covers, repair-cover rank certificates, quartic-cumulant S4 bounds, phi^4 stabilizer signatures, Lee-Yang kappa-4 sign audits, Asano polydisk zero-free signatures, Beurling-Selberg minorant floors, Gaussian-minorant leakage audits, **multi-far floor closure certificates**, **R-prime spectral signatures**, and **R-safe Gaussian wide-V packets**.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wires, magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk coordinate sets, coordinate resurrection covers, repair-cover rank certificates, quartic-cumulant S4 bounds, phi^4 stabilizer signatures, Lee-Yang kappa-4 sign audits, Asano polydisk zero-free signatures, Beurling-Selberg minorant floors, Gaussian-minorant leakage audits, multi-far floor closure certificates, R-prime spectral signatures, R-safe Gaussian wide-V packets, **Edge-Witness recursion decks**, **tail/tip child packet recursions**, **four-sector observer decks**, **Asano-obstruction status words**, **SPEC resonance-lattice certificates**, **A000568 middle quotients**, and **edge-envelope global-consistency quotients**.
 
 The Henselian unit rule (updated):
 ```text
@@ -67,7 +69,7 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S268 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S272 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-triple
@@ -89,10 +91,13 @@ coordinate sets, coordinate resurrection covers, repair-cover rank
 certificates, quartic-cumulant S4 bounds, phi^4 stabilizer signatures,
 Lee-Yang kappa-4 sign audits, Asano polydisk zero-free signatures,
 Beurling-Selberg minorant floors, Gaussian-minorant leakage audits, multi-far
-floor closure certificates, R-prime spectral signatures, and R-safe Gaussian
-wide-V packets to preserve p-adic stability of the global packet sheaf by
-preventing misuse of untyped motifs, degenerate limiting witnesses,
-sequence-count scalars, positivity-only cohomology, non-median route
+floor closure certificates, R-prime spectral signatures, R-safe Gaussian
+wide-V packets, Edge-Witness recursion decks, tail/tip child packet
+recursions, four-sector observer decks, Asano-obstruction status words,
+SPEC resonance-lattice certificates, A000568 middle quotients, and
+edge-envelope global-consistency quotients to preserve p-adic stability of the
+global packet sheaf by preventing misuse of untyped motifs, degenerate limiting
+witnesses, sequence-count scalars, positivity-only cohomology, non-median route
 compatibility, unnamed owner/root loss, non-unique route-triple centers,
 unaligned disciplinary pullback indices, unsigned polymer/current quotients,
 unclosed packet/route/certificate/discharge medians, unvalidated Diophantine
@@ -111,16 +116,18 @@ first-obstruction syndromes, analytic extremality claims without PGF root
 signatures, tournament analogies without obstruction-transfer certificates,
 moment claims without Bravais q-lattice addresses, reachability claims without
 ear-lattice certificates, lattice claims without Minkowski q-body thresholds,
-complexity claims without proof-circuit ledgers, root claims without Ising partition zero signatures,
-fold claims without De Moivre fold certificates, circuit claims without
-endpoint-cover P gates, Phi gap output wires, magnitude-cocycle guards,
-repair claims without base-stalk coordinates, resurrection covers,
-repair-cover rank certificates, quartic-cumulant claims without S4 bounds,
-phi^4 stabilizer signatures, or kappa-4 sign audits, or minorant claims
-without Asano zero-free signatures, Beurling-Selberg minorant floors, or
-Gaussian-minorant leakage audits, or floor claims without multi-far floor
-closure certificates, R-prime spectral signatures, or R-safe Gaussian
-wide-V packets.
+complexity claims without proof-circuit ledgers, root claims without Ising
+partition zero signatures, fold claims without De Moivre fold certificates,
+circuit claims without endpoint-cover P gates, Phi gap output wires,
+magnitude-cocycle guards, repair claims without base-stalk coordinates,
+resurrection covers, repair-cover rank certificates, quartic-cumulant claims
+without S4 bounds, phi^4 stabilizer signatures, or kappa-4 sign audits, or
+minorant claims without Asano zero-free signatures, Beurling-Selberg minorant
+floors, or Gaussian-minorant leakage audits, or floor claims without
+multi-far floor closure certificates, R-prime spectral signatures, or R-safe
+Gaussian wide-V packets, or edge claims without edge-witness recursion decks,
+tail/tip child packet recursions, four-sector observer decks, or
+global-consistency quotients.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -142,9 +149,9 @@ edge-perspective lift, the edge/triple carrier extension, the rooted
 layer-extension flow, the diagonal-layer transport law, the fixed-path
 diagonal-flow law, the observer-cut payload unit, the value-origin ledger unit,
 the hyperbolic reciprocal sidecar unit, the geometry-regime archive audit unit,
-the Roth-Minkowski fence unit, the Moser/fibbinary partial-cube unit, the
-Toeplitz square-peg scale gate unit, the partial-cube bridge-rank split unit,
-the Hodge-cycle lifting unit, the Desargues-median finalization unit, the
+the Roth-Minkowski fence unit, the Moser/fibbinary unit, the Toeplitz
+square-peg scale gate unit, the partial-cube bridge-rank split unit, the
+Hodge-cycle lifting unit, the Desargues-median finalization unit, the
 median owner/root unit, the medianized route-center gate unit, the
 cross-carrier resonance unit, the polymer/Dirichlet boundary-energy unit, the
 route-triple center-control unit, the route-state closure median unit, the
@@ -165,7 +172,9 @@ the base-stalk unit, the resurrection cover unit, the repair-rank unit, the
 quartic-cumulant S4 unit, the phi^4 stabilizer unit, the kappa-4 sign unit, the
 Asano zero-free unit, the Beurling-Selberg minorant floor unit, the
 Gaussian-minorant leakage unit, the multi-far floor closure unit, the R-prime
-spectral unit, and the R-safe wide-V unit. The S235-S268 sequence prevents
+spectral unit, the R-safe wide-V unit, the edge-witness recursion unit, the
+tail/tip packet unit, the four-sector unit, the SPEC resonance-lattice unit,
+and the global-consistency quotient unit. The S235-S272 sequence prevents
 spectral leakage by requiring route-triple centers to be unique and promoted
 only after legal closure, named debt exits, validated collision arity, a named
 modular cusp principal part, a formally verified Lean modular cusp ledger,
@@ -184,15 +193,17 @@ missing-input vectors, base-stalk coordinate sets, coordinate resurrection
 covers, repair-cover rank certificates, quartic-cumulant S4 bounds, phi^4
 stabilizer signatures, Lee-Yang kappa-4 sign audits, Asano zero-free signatures,
 Beurling-Selberg minorant floors, Gaussian-minorant leakage audits, multi-far
-floor closure certificates, R-prime spectral signatures, or R-safe Gaussian
-wide-V packets are attached.
+floor closure certificates, R-prime spectral signatures, R-safe Gaussian
+wide-V packets, edge-witness recursion decks, tail/tip child packet recursions,
+four-sector observer decks, SPEC resonance-lattice certificates, or
+global-consistency quotients are attached.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S268 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S272 transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
@@ -213,37 +224,64 @@ base-stalk coordinate law, the resurrection cover law, the repair-rank law, the
 quartic-cumulant S4 law, the phi^4 stabilizer law, the kappa-4 sign law, the
 Asano zero-free law, the Beurling-Selberg minorant floor law, the
 Gaussian-minorant leakage law, the multi-far floor closure law, the R-prime
-spectral law, and the R-safe wide-V law (preserving the recurrence algebraic
-unit, Poincare recurrence unit, automatic gap carrier unit, automatic lacunary
-filter unit, gap automaton carrier unit, perfect-number packet unit,
-route-purity unit, binding-pair switch unit, automatic fiber zipper unit,
-arc-Cech nerve unit, safe-component stalk unit, Haar tile stabilizer unit,
-residual tooth unit, residual capacitor unit, hidden statement unit,
-owner-strip filtration unit, comprehensive lens unit, endpoint owner transfer
-unit, tournament matrix unit, perspective-depth sidecar unit, edge perspective
-unit, edge/triple carrier unit, rooted extension unit, diagonal transport unit,
-fixed-path diagonal-flow unit, observer-cut payload unit, value-origin ledger
-unit, hyperbolic reciprocal sidecar unit, geometry-regime unit, Roth-Minkowski
-unit, Moser/fibbinary unit, Toeplitz square-peg unit, partial-cube bridge-rank
-unit, Hodge-cycle unit, Desargues-median unit, owner/root sidecar unit,
-medianized route-center unit, cross-carrier resonance unit, polymer/Dirichlet
-boundary-energy unit, route-triple center-control unit, route-state closure
-unit, sixth-power collision unit, modular cusp principal-part unit, Lean
-modular cusp unit, sixth-power certificate extension unit, branch-kernel
-orientation unit, p-adic hyper-tower unit, Morita-gamma transcendental unit,
-Hurwitz finite-address unit, Clebsch covering-moment unit, Apex-Bridge V*
-crossover unit, Pairwise-Avoidance Cap unit, Equivalence Triad invariant unit,
-Pascal pair-mass unit, observer-gluing unit, chart overlap unit, normal-fan
-component unit, first-obstruction syndrome unit, miss-count PGF root unit,
-tournament obstruction-transfer unit, Bravais q-lattice unit, ear-lattice
-reachability unit, Minkowski q-body unit, proof-circuit unit, Ising partition
-zero unit, De Moivre fold unit, endpoint-cover P gate unit, Phi gap output wire
-unit, magnitude-cocycle guard unit, base-stalk coordinate unit, resurrection
-cover unit, repair-rank unit, quartic-cumulant S4 unit, phi^4 stabilizer unit,
+spectral law, the R-safe wide-V law, the edge-witness recursion law, the
+tail/tip packet recursion law, the four-sector observer law, the SPEC
+resonance-lattice law, and the global-consistency quotient law (preserving the
+recurrence algebraic unit, Poincare recurrence unit, automatic gap carrier
+unit, automatic lacunary filter unit, gap automaton carrier unit,
+perfect-number packet unit, route-purity unit, binding-pair switch unit,
+automatic fiber zipper unit, arc-Cech nerve unit, safe-component stalk unit,
+Haar tile stabilizer unit, residual tooth unit, residual capacitor unit,
+hidden statement unit, owner-strip filtration unit, comprehensive lens unit,
+endpoint owner transfer unit, tournament matrix unit, perspective-depth
+sidecar unit, edge perspective unit, edge/triple carrier unit, rooted extension
+unit, diagonal transport unit, fixed-path diagonal-flow unit, observer-cut
+payload unit, value-origin ledger unit, hyperbolic reciprocal sidecar unit,
+geometry-regime unit, Roth-Minkowski unit, Moser/fibbinary unit, Toeplitz
+square-peg unit, partial-cube bridge-rank unit, Hodge-cycle unit,
+Desargues-median unit, owner/root sidecar unit, medianized route-center unit,
+cross-carrier resonance unit, polymer/Dirichlet boundary-energy unit,
+route-triple center-control unit, route-state closure unit, sixth-power
+collision unit, modular cusp principal-part unit, Lean modular cusp unit,
+sixth-power certificate extension unit, branch-kernel orientation unit, p-adic
+hyper-tower unit, Morita-gamma transcendental unit, Hurwitz finite-address unit,
+Clebsch covering-moment unit, Apex-Bridge V* crossover unit, Pairwise-Avoidance
+Cap unit, Equivalence Triad invariant unit, Pascal pair-mass unit,
+observer-gluing unit, chart overlap unit, normal-fan component unit,
+first-obstruction syndrome unit, miss-count PGF root unit, tournament
+obstruction-transfer unit, Bravais q-lattice unit, ear-lattice reachability
+unit, Minkowski q-body unit, proof-circuit unit, Ising partition zero unit,
+De Moivre fold unit, endpoint-cover P gate unit, Phi gap output wire unit,
+magnitude-cocycle guard unit, base-stalk coordinate unit, resurrection cover
+unit, repair-rank unit, quartic-cumulant S4 unit, phi^4 stabilizer unit,
 kappa-4 sign unit, Asano zero-free unit, Beurling-Selberg minorant floor unit,
 Gaussian-minorant leakage unit, multi-far floor closure unit, R-prime spectral
-unit, and R-safe wide-V unit alongside mu approx 1.451).
+unit, R-safe wide-V unit, edge-witness recursion unit, tail/tip packet unit,
+four-sector observer unit, SPEC resonance-lattice unit, and
+global-consistency quotient unit alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S272 -- Edge Quotient Frontier (checkpoint)
+
+Integrated b508d5d/HYP-3124/HYP-3134/HYP-3135. The Edge Quotient Frontier and 
+its recursive-witness ledger are now formal proof carriers.
+
+### 1. Edge-Witness Recursion
+Replaces raw edge counts with a recursive information unit `edge_witness(tail -> 
+tip)` that preserves both endpoint deletion children. This fixes structural 
+collisions and identifies proof states with high precision.
+
+### 2. Terminal Proof Router
+Provides the decision matrix for the terminal bridge: tip children are 
+stabilized by Asano/zero-free/minorant data; tail children are anchored by 
+bounded-core SPEC certificates; cross-sector words prevent illegal factor 
+collapse.
+
+### 3. Global Consistency Quotient
+Formalizes the edge-envelope quotient (A000568) that stratifies finite SPEC 
+constant-chase progress before escalation to named resonance debt.
 
 ---
 
@@ -252,23 +290,3 @@ unit, and R-safe wide-V unit alongside mu approx 1.451).
 Integrated 9d1076b/c7668ba/HYP-3120/HYP-3121. The phi^4 
 Quartic-Stabilizer Synthesis and Loneliness Floor Closure are now formal 
 proof carriers.
-
-### 1. Loneliness Floor Closure ($L = R' \cdot R_{\text{safe}} \cdot Q_{\text{lonely}}$)
-Achieves terminal closure for the multi-far loneliness bridge without 
-recourse to Exotic Hypotheses (EH). Secured via **R-prime spectral 
-anchoring** ($\ge 0.642$) and **R-safe Gaussian wide-V** signatures.
-
-### 2. Quartic-Cumulant S4 Bound
-Reframes the open bridge as a **finite constant-chase** for the **quartic-cumulant 
-bound** ($S_4$) in the Lee-Yang stabilized regime ($\lambda > 0$).
-
-### 3. Asano Diagnostic
-Utilizes the **Asano contraction** to explain Bonferroni residuals, providing 
-the analytical basis for the constant-chase.
-
----
-
-## codex-S267 -- Coordinate Resurrection Sheaf (checkpoint)
-
-Integrated 7d16763/HYP-3118. The Coordinate Resurrection Sheaf is a formal 
-proof carrier.
