@@ -1,5 +1,21 @@
 ## codex-2026-06-26-S239 -- renormalized polymer / Dirichlet bridge (HYP-3073/T1155/LTI-220/LTT-118)
 ## codex-2026-06-26-S239 -- reserved renormalized polymer / Dirichlet bridge (HYP-3073)
+## codex-2026-06-27-S242 -- sixth-power collision split for Desargues/Beal finalizer
+
+User asked to merge ideas around the equations
+`a^6+b^6+c^6=d^6+e^6+f^6` and `a^6+b^6=d^6+e^6`. Added
+`04-computation/sixth_power_collision_gate_s242.py` and stored output. The
+bounded scout found no primitive binary collision through bases `<=1000`, but
+found `3` primitive ternary collisions through `<=80`, smallest
+`3^6+19^6+22^6=10^6+15^6+23^6=160426514`. Merged the distinction into
+HYP-3060/LTI-207/LTT-105: binary sixth-power equality is a Gaussian
+norm-owner/factor gate, while ternary sixth-power equality is a diagonal
+current/cycle carrier. Added packet fields
+`binary_sixth_gaussian_owner_gate`, `ternary_sixth_diagonal_current`, and
+`sixth_power_residue_signature`, plus a reflection tying the split to
+cycle-class/certificate sidecars and the LRC14 controlled-forgetting policy.
+
+## codex-2026-06-26-S239 -- reserved renormalized polymer / Dirichlet bridge (HYP-3073/T1155/LTI-220/LTT-118)
 
 User asked for one or two different remaining LRC proof angles and a
 cross-disciplinary scour of past work. Initial local reservation used

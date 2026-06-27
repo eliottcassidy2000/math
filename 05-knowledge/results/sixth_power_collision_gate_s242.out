@@ -1,0 +1,21 @@
+SIXTH-POWER COLLISION GATE SCOUT
+binary_bound=1000
+ternary_bound=80
+primitive_binary_collisions=0
+smallest_binary_hit=NONE_WITHIN_BOUND
+primitive_ternary_collisions=3
+smallest_ternary_hit=(3, 19, 22)=(10, 15, 23) sum=160426514
+identity: 3^6+19^6+22^6 = 10^6+15^6+23^6 = 160426514
+mod7_sixth_residue_signature=(1, 1, 1)=(1, 1, 1)
+mod9_sixth_residue_signature=(0, 1, 1)=(0, 1, 1)
+mod13_sixth_residue_signature=(1, 1, 12)=(1, 1, 12)
+
+TOURNAMENT_ANALYSIS
+vertices=binary_gaussian_owner_gate,ternary_diagonal_current,beal_common_owner_gate,desargues_girth6_residue,lrc_packet_sidecar,raw_equal_sum_scalar
+pairwise_observable=retained_owner_or_current,preserved_lrc_handoff,primitive_collision_status,residue_signature_visibility
+switch_gauge=A->B when A retains every sidecar B retains and one more owner/current coordinate needed before scalar quotienting
+tie_hamiltonian_path=lrc_packet_sidecar > desargues_girth6_residue > ternary_diagonal_current > binary_gaussian_owner_gate > beal_common_owner_gate > raw_equal_sum_scalar
+score_hist={0:1,1:1,2:1,3:1,4:1,5:1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1]
+hamiltonian_path_count=1

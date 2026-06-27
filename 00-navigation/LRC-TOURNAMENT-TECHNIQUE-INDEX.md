@@ -2690,40 +2690,49 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   vertices, `30` edges, girth `6`, automorphism count `240`, and first cycle
   counts `{6:20,8:30,10:132}`.  Pair this with a Beal-style common-owner gate:
   a primitive three-channel equality/collision should expose a shared
-  owner/prime/packet coordinate before quotienting.
+  owner/prime/packet coordinate before quotienting.  S242 adds the sixth-power
+  refinement: `a^6+b^6=d^6+e^6` is a binary Gaussian norm owner test, while
+  `a^6+b^6+c^6=d^6+e^6+f^6` is a ternary diagonal-current carrier because
+  primitive collisions already occur at small height.
 - **LRC use:** HYP-3060 is a finalizer after HYP-3054/HYP-3056 controlled
   forgetting and HYP-3053/S217 rectangle-hourglass flow.  A residual that is
   invisible to `4`-cycle defects is not structureless; it may have moved into
   a hexagonal incidence address.  A residual that looks like a primitive
   three-channel arithmetic collision should either share an owner/factor
-  coordinate or be promoted to F7/THM-572 debt.
+  coordinate, or else be represented as a named ternary-current/cycle class
+  before it is promoted to F7/THM-572 debt.
 - **Preserves:** Boundary/open status, route schedulability, exact scale,
   owner incidence, topology, visible automorphism orbit, girth-six incidence
-  address, and common owner/factor sidecar.
+  address, common owner/factor sidecar, binary Gaussian-owner gate, ternary
+  diagonal-current sidecar, and sixth-power residue signatures.
 - **Forgets / guardrail:** Raw Desargues scalars, raw cycle counts, and raw
-  perfect-power coincidences are not proof carriers.  They forget owner names,
-  endpoint labels, exact speeds, observer-cut payloads, and family descent
-  data.  Beal is used as a guardrail metaphor, not as a theorem input.
+  perfect-power coincidences or raw equal-sum-of-sixth-powers values are not
+  proof carriers.  They forget owner names, endpoint labels, exact speeds,
+  observer-cut payloads, and family descent data.  Beal is used as a guardrail
+  metaphor, not as a theorem input.
 - **Tournament fingerprint:** vertices are proof carriers, not runners:
   labelled packet sheaf, observer-cut orbit ledger,
   Desargues girth-six incidence residue, Beal common-owner gate,
-  endpoint-owner strip, residual capacitor min-cut, Haar zeta cocycle,
-  Fejer interval certificate, raw Desargues scalar, and raw Beal scalar.
+  binary Gaussian-owner gate, ternary diagonal current, endpoint-owner strip,
+  residual capacitor min-cut, Haar zeta cocycle, Fejer interval certificate,
+  raw Desargues scalar, and raw Beal scalar.
   Pairwise observable is retained boundary/open status, theorem route, exact
   scale, owner incidence, topology, arithmetic common-owner gate, harmonic
   certificate, and visible automorphism orbit.  The S224 carrier tournament is
   transitive with one Hamiltonian path.
-- **Next pull:** Add `desargues_girth6_residue` and
-  `beal_common_owner_gate` to HYP-2963/HYP-3037/HYP-3056 packet ledgers after
-  `rectangle_residue_class` and `hourglass_residue_class`.  Then test every
-  remaining route/status residual: zero gates discharge through existing
-  sidecars; nonzero Desargues residue should descend to a family; nonzero
-  Beal gate should expose common owner/factor repair; otherwise name
-  F7/THM-572 debt.
-- **Pointers:** HYP-3060, HYP-3057, HYP-3056, HYP-3055, HYP-3054, HYP-3053,
-  HYP-3052, HYP-3051, HYP-3048, HYP-3037, HYP-3034, HYP-3031, HYP-2991,
-  HYP-2963, THM-572, LTI-207, LTI-204, LTI-203, LTI-201, LTT-105, LTT-102,
-  LTT-101, LTT-099, LTT-098, T1142, T1139, T1138, T1136, OPEN-Q-108.
+- **Next pull:** Add `desargues_girth6_residue`, `beal_common_owner_gate`,
+  `binary_sixth_gaussian_owner_gate`, `ternary_sixth_diagonal_current`, and
+  `sixth_power_residue_signature` to HYP-2963/HYP-3037/HYP-3056 packet ledgers
+  after `rectangle_residue_class` and `hourglass_residue_class`.  Then test
+  every remaining route/status residual: zero gates discharge through existing
+  sidecars; nonzero Desargues residue should descend to a family; nonzero Beal
+  gate should expose common owner/factor repair; nonzero ternary current should
+  be generated/annihilated by certificate cycles or named as state-lift debt.
+- **Pointers:** HYP-3060, HYP-3058, HYP-3057, HYP-3056, HYP-3055, HYP-3054,
+  HYP-3053, HYP-3052, HYP-3051, HYP-3048, HYP-3037, HYP-3034, HYP-3031,
+  HYP-3009, HYP-2991, HYP-2963, THM-572, LTI-207, LTI-205, LTI-204, LTI-203,
+  LTI-201, LTT-105, LTT-103, LTT-102, LTT-101, LTT-099, LTT-098, T1142,
+  T1140, T1139, T1138, T1136, OPEN-Q-108.
 
 ### LTT-106: Geometry-Regime Archive Audit
 

@@ -8,10 +8,16 @@ technique: LTI-207
 tournament_technique: LTT-105
 script: 04-computation/lrc14_desargues_beal_forum_s224.py
 result: 05-knowledge/results/lrc14_desargues_beal_forum_s224.out
+addendum_scripts:
+  - 04-computation/sixth_power_collision_gate_s242.py
+addendum_results:
+  - 05-knowledge/results/sixth_power_collision_gate_s242.out
 forum_posts:
   - poke-forum/posts/20260626-lrc14-desargues-beal-finalizer/post.md
   - poke-forum/posts/20260626-lrc14-final-assembly-docket/post.md
 related:
+  - HYP-3074
+  - HYP-3071
   - HYP-3057
   - HYP-3056
   - HYP-3055
@@ -19,10 +25,12 @@ related:
   - HYP-3053
   - HYP-3052
   - HYP-3051
+  - HYP-3058
   - HYP-3048
   - HYP-3037
   - HYP-3034
   - HYP-3031
+  - HYP-3009
   - HYP-2991
   - HYP-2963
   - THM-572
@@ -32,7 +40,7 @@ related:
 
 ## Claim
 
-The next useful LRC14 forum-finalization carrier is a two-part sidecar:
+The next useful LRC14 forum-finalization carrier is a three-part sidecar:
 
 1. **Desargues incidence residue.**  After S217 rectangle/hourglass checks
    annihilate all local `4`-cycle/coboundary defects, the next geometric
@@ -45,6 +53,13 @@ The next useful LRC14 forum-finalization carrier is a two-part sidecar:
    without using Beal as an input theorem: primitive all-exponent collisions
    are suspicious unless a common factor is retained or the row becomes named
    F7/THM-572 debt.
+3. **Sixth-power collision split.**  The two equations
+   `a^6+b^6=d^6+e^6` and `a^6+b^6+c^6=d^6+e^6+f^6` should not be merged into
+   one scalar "equal powers" cue.  The binary equation is a Gaussian norm
+   equality `N(a^3+i b^3)=N(d^3+i e^3)`, so a primitive collision asks for a
+   Gaussian-owner/factor sidecar.  The ternary equation is different:
+   primitive equalities exist at small height, so it is a diagonal
+   three-square current/cycle carrier rather than a no-collision warning.
 
 Thus a final LRC14 assembly should not stop after local rectangle residues
 vanish.  It should check whether the remaining residual has a Desargues
@@ -82,6 +97,33 @@ Beal's conjecture.  Its proof-use is the sidecar rule: when three independent
 proof channels collide, keep the common owner/factor coordinate before
 quotienting.
 
+S242 adds a focused sixth-power scout:
+
+```text
+script=04-computation/sixth_power_collision_gate_s242.py
+result=05-knowledge/results/sixth_power_collision_gate_s242.out
+binary_bound=1000
+ternary_bound=80
+primitive_binary_collisions=0
+primitive_ternary_collisions=3
+smallest_ternary_hit=(3,19,22)=(10,15,23)
+3^6+19^6+22^6 = 10^6+15^6+23^6 = 160426514
+```
+
+The modular sixth-power signatures agree in the smallest ternary hit:
+
+```text
+mod7:  (1,1,1) = (1,1,1)
+mod9:  (0,1,1) = (0,1,1)
+mod13: (1,1,12) = (1,1,12)
+```
+
+Interpretation: the binary equation supports an owner/factor gate, while the
+ternary equation proves that primitive equal-power collisions can be legitimate
+cycle/current objects.  A final LRC proof interface should therefore retain
+which side of this split a power-shadow analogy is using before it is allowed
+to influence a residual route.
+
 ## LRC14 Translation
 
 The proof stack already has strong local sidecars:
@@ -101,6 +143,8 @@ hourglass residue = 0
 but residual still route/status critical
 => test Desargues girth-six incidence residue
 => test Beal common-owner gate
+=> if a sixth-power shadow appears, split binary Gaussian-owner stress from
+   ternary diagonal-current carrier
 => owner strip / exact period / Fejer-Haar certificate / AP-GW stop / THM-572 debt
 ```
 
@@ -112,8 +156,8 @@ hexagonal incidence configuration.
 
 Vertices are proof carriers, not runners.  Candidate vertices considered and
 rejected as first-level objects: runners, raw Desargues vertices, raw graph
-edge counts, and raw perfect-power triples.  The useful vertices are sidecar
-families and proof obligations.
+edge counts, raw perfect-power triples, raw sixth-power bases, and raw equal
+sum values.  The useful vertices are sidecar families and proof obligations.
 
 Pairwise observable:
 
@@ -135,6 +179,8 @@ labelled_packet_sheaf >
 observer_cut_orbit_ledger >
 desargues_girth6_incidence_residue >
 beal_common_owner_gate >
+binary_gaussian_owner_gate >
+ternary_diagonal_current >
 endpoint_owner_strip >
 residual_capacitor_min_cut >
 haar_zeta_cocycle >
@@ -146,19 +192,22 @@ raw_beal_scalar
 Fingerprint:
 
 ```text
-score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
 directed_3cycles=0
-scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 hamiltonian_path_count=1
 ```
 
 ## Next Pull
 
-Add two packet fields to the HYP-2963/HYP-3037/HYP-3056 family of ledgers:
+Add these packet fields to the HYP-2963/HYP-3037/HYP-3056 family of ledgers:
 
 ```text
 desargues_girth6_residue
 beal_common_owner_gate
+binary_sixth_gaussian_owner_gate
+ternary_sixth_diagonal_current
+sixth_power_residue_signature
 ```
 
 Then test the remaining route-mixed residuals after rectangle/hourglass,
@@ -169,4 +218,6 @@ either:
 - expose a Desargues girth-six incidence address that descends to a family,
 - share a Beal-style common owner/factor and route to owner-strip/exact-period
   repair, or
+- expose a ternary sixth-power current that is generated by named certificate
+  cycles, dual-annihilated, descended, or routed to explicit state-lift debt, or
 - become the named F7/THM-572 state-lift object.
