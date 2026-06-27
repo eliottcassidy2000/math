@@ -76,6 +76,10 @@ obligations, and proof-carrier interfaces.
   use LTT-124 and retain the finite cusp principal part, eta/Delta lane,
   Hurwitz Vieta seed, and Markov/Pell address before trusting an infinite
   q-series or Diophantine mutation tail.
+- Need a q-series/product/modular quotient guardrail:
+  use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
+  part with named polar exits before using q-Pochhammer, partition, divisor,
+  or modular tails.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3521,6 +3525,39 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3062, HYP-3060, HYP-3058, HYP-3009, HYP-2963, HYP-2627, HYP-2617,
   HYP-2614, THM-538, THM-572, LTI-226, LTT-124, T1161, OPEN-Q-108.
 
+### LTT-125: q-Pochhammer Modular-Cusp Principal-Part Gate
+
+- **Move:** Treat q-series, product-tail, divisor-sum, and modular analogies as
+  proof carriers only after their q-expansion at the cusp has finite principal
+  part.
+- **LRC use:** HYP-3078/S246 narrows the LTT-124 cusp/Hurwitz carrier into a
+  quotient-legality audit. It checks exact q-Pochhammer product coefficients,
+  partition reciprocal coefficients, the divisor log-derivative channel,
+  `Delta=q(q;q)_infty^24` as cusp zero, and `j=E4^3/Delta` as a single-pole
+  modular-function guardrail.  Translation: a HYP-2963 packet quotient may
+  forget an infinite positive tail only if all negative/polar terms are finite
+  and named.
+- **Preserves:** finite polar debt, product-tail address, partition-recursion
+  address, divisor-log-derivative channel, modular transform/cusp status, and
+  named LRC exits.
+- **Forgets / guardrail:** Raw q-series numerology can hide an infinite
+  negative tail.  That is not meromorphic at the cusp and not a legal quotient.
+- **Tournament fingerprint:** vertices are proof carriers and q-expansion
+  sidecars, not runners; S246 is transitive with path
+  `labelled_packet_sheaf > modular_cusp_principal_part
+  > j_single_pole_guardrail > q_pochhammer_product_tail
+  > delta_cusp_zero_boundary > log_derivative_divisor_channel
+  > partition_recursive_tail > ramanujan_exact_period_projector
+  > route_state_closure_median > raw_q_series_numerology`.
+- **Next pull:** Build q-cusp ledgers on actual HYP-2963 rows and reject any
+  q-product or modular quotient with infinite or unnamed polar debt.
+- **Pointers:** HYP-3078, HYP-3077, HYP-3076, HYP-3075, HYP-3074, HYP-3073,
+  HYP-3072, HYP-3071, HYP-3070, HYP-2963, THM-572, LTI-227, LTI-226,
+  LTI-225, LTI-224, LTI-222, LTI-221, LTI-220, LTI-219, LTI-218, LTI-217,
+  LTT-125, LTT-124, LTT-123, LTT-122, LTT-120, LTT-119, LTT-118, LTT-117,
+  LTT-116, LTT-115, T1162, T1161, T1160, T1159, T1157, T1156, T1155, T1154,
+  OPEN-Q-108.
+
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,
@@ -3600,6 +3637,9 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
    renormalized-activity exit, Dirichlet sidecar graph ID,
    Dirichlet boundary potential, Schur-complement conductance,
    sidecar-energy exit, phantom F7 boundary atom,
+   q-cusp ledger id, q-Pochhammer product tail, finite principal-part status,
+   polar exit word, partition-tail certificate, divisor-log channel,
+   illegal infinite-polar-tail flag,
    Burnside cost, score-class H-spread, and round-realizability flag.
 2. Make a Fejer certificate manifest bridge checklist based on LTT-044, then
    add interval-arithmetic proof anchors for the floating Fejer evaluations.

@@ -19,6 +19,35 @@ signature, eta/Delta lane, `j` address, Hurwitz seed/mutation depth,
 continued-fraction/Pell address, and cusp-tail discharge route. Tournament
 Analysis uses proof sidecars rather than q-coefficients, Hurwitz quadruples, or
 runners.
+## codex-2026-06-27-S246 -- q-Pochhammer modular-cusp principal-part gate (HYP-3078/T1162/LTI-227/LTT-125)
+
+User asked to merge the q-Pochhammer series with the modular-function cusp
+rule: for `q=exp(2*pi*i*z)`, meromorphicity at `i infinity` means only
+finitely many negative q-powers.  Added
+`04-computation/lrc14_q_pochhammer_modular_cusp_s246.py` and stored output.
+The scout verifies `(q;q)_infty`, the partition reciprocal, divisor
+log-derivative, `Delta=q(q;q)_infty^24`, and `j=E4^3/Delta` with single
+principal term `q^-1`.  Added HYP-3078, T1162, LTI-227, LTT-125, and the
+reflection
+`07-reflections/lrc14-q-pochhammer-modular-cusp-principal-part-codex-s246.md`.
+
+Main readout: a q-series/product quotient is theorem-safe only after its polar
+principal part is finite and every negative coefficient has a named packet
+exit.  Infinite positive partition/product tails can be compressed; infinite
+negative tails are uncontrolled residual debt.  Next pull is to build
+`q_cusp_ledger_id`, `principal_part_order`, `polar_exit_word`,
+`partition_tail_certificate`, `log_derivative_divisor_channel`, and
+`illegal_infinite_polar_tail_flag` fields on HYP-2963 rows.
+
+Rebase note: incoming work claimed HYP-3077/T1160/LTI-225/LTT-123 for the
+route-state median-hull scheduler and then HYP-3075/T1161/LTI-226/LTT-124 for
+the modular cusp / q-Pochhammer Hurwitz carrier, so this narrower q-cusp gate
+was renumbered to HYP-3078/T1162/LTI-227/LTT-125.  The connection is useful:
+HYP-3075 attaches finite cusp and Diophantine address data to q-series and
+rare scalar coincidences, HYP-3076 attaches support-six relation address data
+to equal-power collisions, HYP-3077 keeps median-hull scheduler centers typed,
+and HYP-3078 attaches principal-part and polar-exit data to rare q-series or
+modular terms.
 
 ## codex-2026-06-27-S244 -- sixth-power collision sidecar (HYP-3076/T1159/LTI-224/LTT-122)
 
