@@ -18,6 +18,23 @@ or tournament kernel may be used unless the finite address that made it
 extremal is retained or routed to named residual debt. -> HYP-3083, HYP-3082,
 HYP-3081, HYP-3080, HYP-3079, HYP-3078, HYP-3077, HYP-3075, HYP-2963,
 THM-572, LTI-232, LTT-130, T1167, OPEN-Q-108.
+**OPEN-Q-108 S253 Hurwitz/q-cusp covering-bound spine addendum:** HYP-3083 now
+integrates the S59 redirect with the S245-S252 finite-address stack.  The
+critical path is the covering bound, but after THM-571 and HYP-2906 the live
+residual is narrower: low-apex, top-balanced covering rows with `1..6`
+multiples of `14`, no small-q witness, no apex-majority gamma descent, and no
+one-large-speed interval peel.  Open task: build the executable
+`finite_address_branch_closure` ledger over HYP-2963 packets and outside-bank
+normalizers for that residual.  For each row record `contains_multiple_of_14`,
+`low_apex_top_balanced_status`, exact `M/q`, endpoint owner, destroyed
+coordinate, q-cusp ledger id, finite principal-part order, polar exit word,
+Hurwitz/Markov/Pell or Vieta address, protected branch node,
+bridge-protection mode, median-center kind, terminal exit, and formalization
+status.  The target theorem is that every such residual packet has a terminal
+exit or named debt, and the only named debts left are covering-family
+gamma/Node3 and K33/THM-572. -> HYP-3083, HYP-3082, HYP-3079, HYP-3078,
+HYP-3077, HYP-3075, HYP-2996, HYP-2963, THM-571, THM-572, LTI-232, LTT-130,
+T1167, OPEN-Q-108.
 
 **OPEN-Q-108 S249 branch-tournament orientation addendum:** HYP-3081 turns
 Robbins' no-bridge strong-orientation criterion into an LRC14

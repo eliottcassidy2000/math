@@ -3722,16 +3722,16 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   an extremal scalar, q-tail, Markov/Pell wall, route median, sixth-power
   equality, apex-periodic covering row, or tournament kernel is admissible
   only after the finite address that made it extremal is retained.
-- **LRC use:** HYP-3083/S252 claims the remaining-proof map after HYP-3082:
-  after q-witness, apex-majority, and one-large-speed exits, low-apex
-  top-balanced covering rows must enter a finite-address packet normalizer,
-  pass through the protected no-naked-bridge branch graph, and terminate at a
-  strict witness, AP/GW boundary, C27 petal, covering-family discharge,
-  K33/THM-572 state-lift resolution, or named formal residual.  The explicit
-  remaining obligations are normalizer/packet coverage, covering-moment
-  discharge, state-lift construction, branch-closure theorem, integer-vs-real
-  finite-ruler glue, and AP/GW census only if the proof routes through
-  boundary equality.
+- **LRC use:** HYP-3083/S252+S252b+S253 claims the remaining-proof map after
+  HYP-3082 and the S59 redirect: after q-witness, apex-majority, and
+  one-large-speed exits, low-apex top-balanced covering rows must enter a
+  finite-address packet normalizer, pass through the protected no-naked-bridge
+  branch graph, and terminate at a strict witness, AP/GW boundary, C27 petal,
+  covering-family gamma/Node3 discharge, K33/THM-572 state-lift resolution, or
+  named formal residual.  The explicit remaining obligations are
+  normalizer/packet coverage, covering-moment discharge, state-lift
+  construction, branch-closure theorem, integer-vs-real finite-ruler glue, and
+  AP/GW census only if the proof routes through boundary equality.
 - **Preserves:** boundary/open status, exact packet address, route handoff,
   finite cusp/principal-part debt, Hurwitz/Markov/Pell arithmetic address,
   median-center legality, bridge protection, and named residual exits.
@@ -3739,14 +3739,16 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   words, tournament counts, or route labels are unsafe if they destroy the
   address that distinguishes boundary atoms from strict-open packets.
 - **Next pull:** Build the `finite_address_branch_closure` ledger: for each
-  packet or outside-bank normalizer attempt, record source family,
-  low-apex/top-balanced status, finite address, preserved LRC predicate,
+  packet or outside-bank low-apex/top-balanced normalizer attempt, record
+  source family, multiple-of-14 status, exact `M/q`, finite address, q-cusp
+  principal part, polar exit, Hurwitz/Pell address, preserved LRC predicate,
   destroyed coordinate, required sidecar/debt, protected branch node,
-  raw/protected bridge status, terminal exit, and Lean/formalization status.
+  raw/protected bridge status, median center, terminal exit, and
+  Lean/formalization status.
 - **Pointers:** HYP-3083, HYP-3082, HYP-3081, HYP-3080, HYP-3079, HYP-3078,
-  HYP-3077, HYP-3075, HYP-3074, HYP-2963, THM-572, LTI-232, LTI-231,
-  LTI-230, LTI-228, LTI-227, LTI-226, LTI-225, LTT-130, LTT-129, LTT-128,
-  LTT-126, LTT-125, LTT-124, LTT-123, T1167, OPEN-Q-108.
+  HYP-3077, HYP-3075, HYP-3074, HYP-2996, HYP-2963, THM-571, THM-572,
+  LTI-232, LTI-231, LTI-230, LTI-228, LTI-227, LTI-226, LTI-225, LTT-130,
+  LTT-129, LTT-128, LTT-126, LTT-125, LTT-124, LTT-123, T1167, OPEN-Q-108.
 
 ## Immediate Pull List
 

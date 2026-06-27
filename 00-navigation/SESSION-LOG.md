@@ -1,3 +1,24 @@
+## codex-2026-06-27-S253 -- Hurwitz/q-cusp covering-bound spine update (HYP-3083)
+
+Expanded HYP-3083 after rebasing over incoming S252b and integrating S59/S245-
+S252 work.  Main synthesis: LRC14 is now best organized around the covering
+bound, not the AP/GW census, and after THM-571/HYP-2906 the live residual is
+low-apex, top-balanced covering rows.  Hurwitz/Markov/Pell, complex Hurwitz
+zero-persistence, Hurwitz Vieta orbits, and the q-Pochhammer full-modular-group
+cusp rule all give the same controlled-forgetting law: no extremal scalar,
+q-tail, modular principal part, route median, or tournament kernel is
+proof-usable until its finite address and named exit are retained.
+
+HYP-3083 now states the remaining obligations: global finite-address normalizer
+for the low-apex/top-balanced residual; structural entry into the HYP-3082
+protected branch graph with no naked Robbins bridge; terminal discharge through
+q-witness, AP/GW boundary, C27 owner-strip, covering-family gamma/Node3, or
+K33/THM-572; and Lean/formal q-cusp/Hurwitz sidecar closure.  Added the
+`finite_address_branch_closure` ledger target with fields for multiple-of-14
+status, low-apex/top-balanced status, exact `M/q`, endpoint owner, q-cusp
+principal part, polar exit, Hurwitz/Pell address, branch node, bridge
+protection, median center, terminal exit, and formalization status.
+
 ## mac-mini-2026-06-27-S59 -- RE-PRIORITIZATION: the LRC(14) proof = the COVERING BOUND (exponential/periodicity), the census is the EASY case's extremal (NOT on the critical path)
 Owner: 4 Farey variations (a+b,a*b,b^a,a^b) + integrate work + comprehensive understanding of what REMAINS + creative synthesis. Reflection: the-proof-lives-at-the-exponential-variation-covering-bound-not-census.md.
 - **VERIFIED re-prioritization:** LRC(14) <=> [sets with a multiple of 14 have M>=1/14] (the COVERING BOUND). Non-mult-14 sets get M>=1/14 TRIVIALLY at t=1/14 (verified 2000 sets). The census {AP,GW} is non-mult-14 = the extremal of the EASY half, NOT on the critical path. The proof needs M>=1/14 (non-strict), WEAKER than the census (M>1/14 strict).
