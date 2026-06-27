@@ -97,6 +97,11 @@ obligations, and proof-carrier interfaces.
   use LTT-129 after LTT-128 and compare raw scalar-star bridges with the
   protected branch graph after route, section, grid, no-lift, q-cusp, Lean
   finite-tail, and residual-debt exits are named.
+- Need a comprehensive remaining-proof spine after the Hurwitz/q-cusp/branch
+  audit stack:
+  use LTT-130 after LTT-129 and state each proof move as finite address,
+  protected branch entry, terminal discharge or named residual debt, and
+  formal sidecar closure.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3710,6 +3715,32 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3075, HYP-3074, HYP-3071, HYP-3070, HYP-2996, HYP-2963, THM-572,
   LTI-231, LTI-230, LTI-228, LTI-227, LTI-225, LTT-129, LTT-128, LTT-126,
   LTT-125, LTT-123, T1166, T1165, T1163, T1162, OPEN-Q-108.
+
+### LTT-130: Hurwitz Finite-Address Branch-Closure Spine
+
+- **Move:** Promote the Hurwitz sharpness lesson to the whole proof interface:
+  an extremal scalar, q-tail, Markov/Pell wall, route median, sixth-power
+  equality, or tournament kernel is admissible only after the finite address
+  that made it extremal is retained.
+- **LRC use:** HYP-3083/S252 claims the remaining-proof map after HYP-3082:
+  global primitive rows must reduce into a finite-address HYP-2963 packet
+  bank, enter the protected no-naked-bridge branch graph, and then terminate
+  at q-witness, AP/GW equality, C27 petal, covering-family discharge,
+  K33/THM-572 state-lift resolution, or a named formal residual.
+- **Preserves:** boundary/open status, exact packet address, route handoff,
+  finite cusp/principal-part debt, Hurwitz/Markov/Pell arithmetic address,
+  median-center legality, bridge protection, and named residual exits.
+- **Forgets / guardrail:** Raw scalar constants, q-coefficients, automatic
+  words, tournament counts, or route labels are unsafe if they destroy the
+  address that distinguishes boundary atoms from strict-open packets.
+- **Next pull:** Build the `finite_address_branch_closure` ledger: for each
+  packet or outside-bank normalizer attempt, record source, finite address,
+  destroyed coordinate, protected branch node, bridge protection mode,
+  terminal exit, and Lean/formalization status.
+- **Pointers:** HYP-3083, HYP-3082, HYP-3081, HYP-3080, HYP-3079, HYP-3078,
+  HYP-3077, HYP-3075, HYP-3074, HYP-2963, THM-572, LTI-232, LTI-231,
+  LTI-230, LTI-228, LTI-227, LTI-226, LTI-225, LTT-130, LTT-129, LTT-128,
+  LTT-126, LTT-125, LTT-124, LTT-123, T1167, OPEN-Q-108.
 
 ## Immediate Pull List
 

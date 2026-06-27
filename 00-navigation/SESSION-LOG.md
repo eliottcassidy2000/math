@@ -1,3 +1,13 @@
+## codex-2026-06-27-S252 -- Hurwitz finite-address branch-closure spine (HYP-3083/T1167/LTI-232/LTT-130)
+
+Started the synthesis requested after incoming S245-S251: integrate Hurwitz
+finite-address thinking with the q-cusp, Lean, median-hull, sixth-power,
+Robbins, and branch-kernel layers.  Claimed HYP-3083/T1167/LTI-232/LTT-130 as
+the remaining-proof spine.  Stub claim: LRC14 should now be organized as
+global primitive-row reduction into finite-address packet rows, protected
+branch-graph entry, terminal discharge or named residual debt, and formal
+sidecar closure, rather than another scalar separator.
+
 ## codex-2026-06-27-S245 -- modular cusp / q-Pochhammer Hurwitz carrier (HYP-3075/T1161/LTI-226/LTT-124)
 
 User asked to merge q-Pochhammer series, the full-modular-group modular
