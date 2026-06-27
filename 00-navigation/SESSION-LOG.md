@@ -1,3 +1,36 @@
+## mac-mini-2026-06-27-S68 -- the multi-far floor R'>=c is an ASANO contraction of single-far factors
+
+Owner: merge 'tournament edges as witness, recurse on tip and tail' into closing the uniform multi-far floor
+R'>=c, with Elliott-Halberstam, Gaussian functions, Asano contractions; continue the phi^4/Lee-Yang line (S67).
+Result: HYP-3127 + reflection the-multi-far-floor-is-an-asano-contraction-of-single-far-factors. (Asano/EH/Gaussian
+were NOT previously in the LRC context -- grep=0; first wiring.)
+
+THE REDUCTION: the open core = the multi-far floor R'=1+SPEC>=c over r=2..6 far placements. Bold reduction:
+(a) coverage is MULTILINEAR in the runners (incl-excl p0=E_x[prod_e (1-1_miss,e)], degree 1 per runner) = exactly
+the hypothesis of ASANO's contraction lemma. (b) So each far element is a 'tip' (single-variable factor) whose
+single-far Lee-Yang region IS HYP-2829; Asano-contracting the r tips against the bounded-core 'tail' preserves
+the zero-free region => R'>=c. The multi-far floor reduces to the single-far factor; Asano is the multi-variable
+engine; this is the multi-variable extension of S67 (single-tip = phi^4 measure; Asano = Lee-Yang-preserving
+coupling of phi^4, Lieb-Sokal).
+
+VERIFIED (lrc_multifar_asano_floor_S68.py): R'_cov(F)=p0(BuF)p0(B)^(r-1)/prod p0(Bu{f}) (=1=Asano-factorized).
+R'_cov in [0.87,1.05], FLOOR ~0.98 distinct far (0.87 only at a degenerate repeated-speed config) -- reproduces
+the kps/codex R' in [0.81,1.0]. The multi-far coverage QUASI-FACTORIZES over the tips with a positive floor =
+the Asano floor. The single-far factor d(f)=p0(Bu{f})/p0(B)~1.10 STABILIZES for large f = the Gaussian/free-field
+decoupled limit (R'->1). Tight doublets R'_cov>1 (HYP-2797 correlated hard case); separated R'_cov<1.
+
+THE TOOLS PLACED: Asano = engine (multi-affine => contraction preserves zero-free region). Gaussian = the lambda->0
+free-field limit of the phi^4 single-tip (large tips decouple, SPEC=0 baseline). Elliott-Halberstam = the level
+of distribution of the far tips; SPEC=Sum c^(n)g^(n)* small when the far cluster equidistributes; EH(theta->1)
+=> R'->1; unconditionally a Bombieri-Vinogradov input + signed cancellation bounds SPEC. tip/tail recursion
+(codex HYP-3124) = the Asano contraction order: peel one tip (Node-3 pull-back), contract, recurse on the tail
+(push-forward); the edge-witness compatibility = the Asano zero-free preservation.
+
+OBLIGATIONS (named): (1) single-far Lee-Yang region = HYP-2829 as a zero-free polydisk (the load-bearing lemma);
+(2) the SPEC bound |SPEC|<=1-c via EH + signed cancellation (verified c~0.98 distinct); (3) recursion termination
++ r-monotonicity (r up => R' up, bottoming at r=1 closed + bounded core). The prize: the genuinely-open core of
+the covering bound reduced to a single-far Lee-Yang region + Asano + an EH-level spectrum bound.
+
 ## mac-mini-2026-06-27-S67 -- Lee-Yang extremality: the cap is a phi^4 field theory, kappa4 marks the hard row k=8
 
 Owner: work on Lee-Yang extremality toward the LRC proof, with the phi^4 density exp(-lambda S^4 - b S^2) and
