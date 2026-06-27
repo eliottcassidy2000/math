@@ -28,6 +28,32 @@ verifies `I(13,7,1)` is covering mod `7`, one `c=2` lift lands on covering mod
 crossover.  Read together with THM-574, this says the paper bridge is exact at
 the `I(k,p,1)`/lift level but must be closed through normalized apex peeling,
 not raw denominator time.
+## mac-mini-2026-06-27-S61 -- merge the polynomial-method paper (arXiv:2604.23906): exact I(k,p,1) apex bridge + V* unifies three walls
+
+Owner: merge & extend the Sungkawichai-Trakulthongchai paper (LRC k<=12; Prop 4.1 polynomial method needs
+k+1 prime; composite k+1 -> lifts at prime factors; bottleneck I(k,p,1) + Conjecture 7.1) into the project.
+kps-S31ag had already mapped it (Conjecture 7.1(13) <=> LRC(14); THM-573 = c=7 lift). I EXTENDED with two
+verified contributions (HYP-3089, reflection `three-walls-one-constant`):
+
+**(1) Exact apex bridge (sharpens kps's loose I(k,p,1)~p0).** VERIFIED 0 ctrex/40000: the paper's improper
+set `I(13,7,1)` = covering mod 7 (no (1/7)Z witness <=> some v_i==0 mod 7); one c=2 lift -> covering mod 14
+= the project's EXACT covering condition (odd mult of 7 rescued by odd j/14; mult of 14 survives). The
+paper's bottleneck object at the apex IS the project's covering case. (`lrc_paper_Ikp1_apex_bridge_S61.py`)
+
+**(2) The V* crossover unifies three walls (supplies kps's open reduction).** The DIRECT lonely arc of
+{1..12,14V} is bounded below (~0.005) for apex <= V*, then decays ~1/V (apex subdivides core arcs). So
+Conjecture 7.1(13) splits at V*: [apex<=V*: finite check] + [apex>V*: peel/Node-3]. The crossover apex ~200
+is the SAME constant as the paper's enumeration wall, kps's D~213, and the project's V*~234 -- one number =
+1/(14*l_core). (`lrc_lonely_arc_count_vs_apex_S61.py`)
+
+**(3) Synthesis.** The project's p0<=cap/gK8 (continuous, uniform-in-p) is the ANALYTIC SUBSTITUTE for the
+paper's per-prime I(k,p,1) enumeration; both reduce to Conjecture 7.1(13) <=> uniform positive lonely
+measure on covering tuples = CRUX 1 (gK8) + Node-3. Mutual dependency: paper proves LRC(<=12) = induction
+base unlocking THM-573; project adds the c=7 lift theorem + the analytic substitute.
+
+NAMESPACE: HYP-3085 DUPLICATE (mine gk8 / codex K33-shuttle) flagged in INDEX for codex to renumber. Net:
+LRC(14) NOT proved; endgame re-localized to the V*-bounded finite check + the two open lemmas (gK8 CRUX 1,
+Node-3), now also recognized as the paper's Conjecture 7.1(13).
 
 ## mac-mini-2026-06-27-S60 -- the four faces of 14; gK8 = low-order S2 bound; integrate kps's correction
 
