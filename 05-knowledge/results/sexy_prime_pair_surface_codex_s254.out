@@ -1,0 +1,40 @@
+Sexy prime pair surface scout (codex-S254)
+========================================================================
+Fixed-gap prime-pair rows through 1000000
+Sexy primes are h=3, gap=6.
+
+C2 finite Euler product through 200000: 0.660162067
+twin baseline count=8169, predicted=6917.5
+
+   h   gap     odd_factors   HL_chord    count  count/twin  pred/twin  count/pred
+   1     2              []          1     8169       1.000      1.000       1.181
+   2     4              []          1     8144       0.997      1.000       1.177
+   3     6             [3]          2    16386       2.006      2.000       1.184
+   5    10             [5]        4/3    10934       1.338      1.333       1.185
+   6    12             [3]          2    16378       2.005      2.000       1.184
+  10    20             [5]        4/3    10971       1.343      1.333       1.189
+  15    30          [3, 5]        8/3    21990       2.692      2.667       1.192
+  21    42          [3, 7]       12/5    19838       2.428      2.400       1.195
+  30    60          [3, 5]        8/3    21829       2.672      2.667       1.183
+
+Local midpoint-sieve ledger
+
+twin h=1     survival=10935/176111
+  q=3:[1, 2]; q=5:[1, 4]; q=7:[1, 6]; q=11:[1, 10]; q=13:[1, 12]; q=17:[1, 16]; q=19:[1, 18]; q=23:[1, 22]; q=29:[1, 28]; q=31:[1, 30]
+sexy h=3     survival=21870/176111
+  q=3:[0]; q=5:[2, 3]; q=7:[3, 4]; q=11:[3, 8]; q=13:[3, 10]; q=17:[3, 14]; q=19:[3, 16]; q=23:[3, 20]; q=29:[3, 26]; q=31:[3, 28]
+gap30 h=15   survival=29160/176111
+  q=3:[0]; q=5:[0]; q=7:[1, 6]; q=11:[4, 7]; q=13:[2, 11]; q=17:[2, 15]; q=19:[4, 15]; q=23:[8, 15]; q=29:[14, 15]; q=31:[15, 16]
+
+For h=3 the q=3 obstruction collapses from two bad residues to one:
+  m = +/-3 mod 3 both mean m = 0 mod 3.
+That gives the Hardy-Littlewood chord factor 2 relative to twins.
+
+Proof-interface ledger
+
+local_admissibility       closed         gap 6 has no prime covering obstruction
+singular_series_chord     closed         HL factor relative to twins is 2
+finite_pair_counts        evidence       counts track the fixed-gap chord shape
+parity_barrier            open           upper-bound sieves cannot force both endpoints prime
+level_of_distribution     open           need enough uniformity for a lower-bound pair sieve
+finite_address_guardrail  repo-transfer  retain gap, midpoint residues, squarefree/prime-power sidecars

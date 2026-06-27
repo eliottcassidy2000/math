@@ -24,6 +24,38 @@ Net: LRC(14) still NOT proved. Residual sharpened to *primitive covering rows wi
 Logged HYP-3084. Reflection
 `07-reflections/the-covering-bound-proof-tree-level7-sieve-and-the-dilation-correction.md`.
 Updated honest status doc with the S31af addendum.
+## codex-2026-06-27-S254 -- sexy prime pair sieve transfer
+
+Mapped the repo's prime-pair and LRC/Tournament Analysis work onto the sexy
+prime conjecture.  Added HYP-3086/T1168 plus a bounded scout and reflection.
+The conclusion is deliberately conservative: sexy primes are exactly the
+`h=3` fixed half-gap row `(p,p+6)=(m-3,m+3)` in the HYP-1966/HYP-1965 pair
+surface, and the local midpoint-sieve obstruction modulo `3` collapses from two
+bad residues to one.  That gives the Hardy-Littlewood chord factor `2` relative
+to twins.  The S254 scout through `10^6` finds `8169` twin pairs and `16386`
+gap-6 pairs, ratio `2.006`, matching the predicted shape.
+
+What transfers from the LRC14 stack is finite-address proof discipline:
+pair-first cells, local residue ledgers, analytic-sieve blindness sidecars,
+side-channel jackknife, and Tournament Analysis over proof obligations rather
+than raw endpoints.  What does not transfer is equally important:
+THM-503/THM-518 are not the Hardy-Littlewood Euler product, and the existing
+LRC machinery does not break the parity barrier or supply a fixed-gap
+lower-bound sieve.
+
+After rebasing over incoming S31af/S60, folded in the sharper LRC analogy:
+THM-573 is a level-7 lift sieve reducing the LRC residual to at most six
+multiples of `7`, and HYP-3084 now points to a reflection-symmetric
+Perron/`3x3` covariance certificate rather than a literal Clebsch-design Gram.
+Those are useful models of local gates and low-order finite certificates, not
+inputs to prime-pair distribution.
+
+Next artifact should be a `sexy_prime_pair_ledger` retaining midpoint, gap,
+local residue word, surviving primorial class, sieve weight, almost-prime
+status, parity debt, distribution modulus, prime-power sidecar, carry debt, and
+terminal exit.  The remaining proof obligations are lower-bound fixed-gap
+sieve, simultaneous prime detection, and sufficient distribution in arithmetic
+progressions or a replacement structural input.
 
 ## codex-2026-06-27-S253 -- q-cusp Hurwitz finite-address branch-closure synthesis
 

@@ -15,6 +15,37 @@
 
 ---
 
+## Lead codex-2026-06-27-S254: Sexy prime pair sieve transfer
+
+**Status:** SYNTHESIS / proof-interface map; not proof
+(HYP-3086/T1168).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3086-sexy-prime-pair-sieve-transfer.md`,
+`04-computation/sexy_prime_pair_surface_codex_s254.py`,
+`05-knowledge/results/sexy_prime_pair_surface_codex_s254.out`, and
+`07-reflections/sexy-prime-pair-sieve-transfer-codex-s254.md`.
+The repo's strongest connection to the sexy prime conjecture is the existing
+pair-lens coordinate system: sexy primes are the fixed half-gap ray `h=3`,
+`(p,p+6)=(m-3,m+3)`.  The local midpoint sieve kills `m=+h` or `m=-h mod q`;
+for `h=3` the two bad residues collapse modulo `3`, giving the
+Hardy-Littlewood chord factor `2` relative to twins.  S254 confirms the shape
+through `10^6`: `8169` twin pairs and `16386` gap-6 pairs, ratio `2.006`
+against predicted `2.000`.
+Incoming S31af/S60 sharpens the LRC side of the analogy: THM-573 is a level-7
+lift sieve reducing the LRC residual to at most six multiples of `7`, and
+HYP-3084 replaces the literal Clebsch-design covariance shortcut with a
+reflection-symmetric Perron/`3x3` block certificate target.  These reinforce
+the finite-residual-ledger method but do not supply prime-pair distribution.
+**Next:** do not treat this as a proof.  Build a `sexy_prime_pair_ledger` with
+midpoint, gap, local bad-residue word, surviving primorial class, sieve weight
+type, almost-prime status, parity debt, distribution modulus, exceptional
+modulus flag, prime-power sidecar, carry debt, and terminal exit.  The open
+proof obligations remain lower-bound fixed-gap sieve, parity breaking, and
+sufficient prime distribution in arithmetic progressions or a replacement
+structural input.  Keep THM-503/THM-518 as a guardrail: the LRC singular object
+is not the Hardy-Littlewood Euler product.
+Namespace: HYP-3086 / T1168.
+
 ## Lead codex-2026-06-27-S252: LRC14 finite-address branch-closure spine
 
 **Status:** SYNTHESIS / remaining-obligation map; not proof
