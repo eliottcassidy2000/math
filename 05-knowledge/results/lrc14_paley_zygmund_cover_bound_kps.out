@@ -1,0 +1,20 @@
+Second-moment (Paley-Zygmund) cover bound vs cap_k:
+  P(N=0) <= 1 - S1^2/(S1+2 S2)  [pairwise only];  want <= cap_k
+
+k=8: cap_k = 2243/5880 = 0.38146
+  max P(N=0) over configs        = 0.32721  (<= cap? True)  at (0, 1, 2, 3, 4, 5, 6, 7)
+  max PZ-bound 1-S1^2/E[N^2]      = 0.50375  (<= cap? False)
+  configs where PZ-bound > cap    = 2/302  (PZ too weak (needs higher moments))
+  consec_8: P(N=0)=0.32721  S1=1.6041 S2=1.7905  PZ=0.50375
+
+k=9: cap_k = 1979/4004 = 0.49426
+  max P(N=0) over configs        = 0.41616  (<= cap? True)  at (0, 1, 2, 3, 4, 5, 6, 7, 8)
+  max PZ-bound 1-S1^2/E[N^2]      = 0.57317  (<= cap? False)
+  configs where PZ-bound > cap    = 2/302  (PZ too weak (needs higher moments))
+  consec_9: P(N=0)=0.41616  S1=1.3813 S2=1.5444  PZ=0.57317
+
+k=10: cap_k = 55/91 = 0.60440
+  max P(N=0) over configs        = 0.50448  (<= cap? True)  at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+  max PZ-bound 1-S1^2/E[N^2]      = 0.63691  (<= cap? False)
+  configs where PZ-bound > cap    = 2/302  (PZ too weak (needs higher moments))
+  consec_10: P(N=0)=0.50448  S1=1.1931 S2=1.3637  PZ=0.63691

@@ -75,9 +75,21 @@ the paper's version of the project's three-gap / Node-1 lemma (THM-565), with th
 > configs** (dilated AP/GW + perturbations) is the true residual, and there the `c=7` lift cannot fire.
 > (Confirms HYP-3084's "hard tight cases have `|H|` small.")
 
+> **CONCRETE LEAD 9 — TESTED: second moment (pairwise) is NOT enough for the cover bound; difficulty is
+> order-3/4 in the LHS extremality.** Since THM-576 makes the *cap* (RHS) pairwise-exact, I tested whether
+> the *cover bound* `meas(S7)=P(N=0) ≤ cap_k` closes by **Paley–Zygmund** `P(N=0) ≤ 1−S1²/E[N²]` (pairwise
+> only). **Result (`lrc14_paley_zygmund_cover_bound_kps.py`): it fails at the binding config** — for
+> consec_8 it gives `0.504` vs true `P(N=0)=0.327` and `cap_8=0.381`; only `2/302` configs (incl. consec)
+> need more than pairwise, but they are exactly the binding ones. So the asymmetry is sharp: **the cap is
+> order-2, but the cover-bound LHS extremality needs order-3 (S3, closing k=9,10 via mac-mini's
+> `L_yK9=18−13S1+8S2−3S3`) and order-4 (S4, only k=8 via `L_yK8=…−9S3+6S4`).** The whole LRC(14) binding
+> difficulty is "consec maximizes a degree-3 (k=9,10) / degree-4 (k=8) moment functional of `N∈{0..6}`" —
+> the reflection-Perron crux. Consec is the meas(S7)-maximizer at every binding row (verified), with
+> margin to cap (0.054 at k=8). This pins the order and the extremal config exactly.
+
 ## Net
 Lead 1 (covering ⟺ empty coarse `G`) and Lead 2 (reflection-Perron = complement/SC) are solid and
-immediately useful. Leads 5,6 are bridges worth a quick numeric test. Lead 8 sharpens the residual and
+immediately useful. Lead 9 pins the cover-bound difficulty to order-3/4 at consec (PZ/pairwise fails). Leads 5,6 are bridges worth a quick numeric test. Lead 8 sharpens the residual and
 is tested next. None closes LRC(14); together they re-tool the endgame around the paper's two-scale
 witness and the project's complement symmetry.
 
