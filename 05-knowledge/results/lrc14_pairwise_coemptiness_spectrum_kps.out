@@ -1,0 +1,102 @@
+PAIRWISE SECTOR CO-EMPTINESS MATRIX M — eigenstructure & symmetry
+======================================================================
+
+=== consec_8  E=(0, 1, 2, 3, 4, 5, 6, 7) ===
+  M (6x6, inner sectors 1..6), entries x1000:
+    271.8  136.1  130.6  102.0  121.1  101.4
+    136.1  243.5  102.0  126.5  102.0  105.8
+    130.6  102.0  238.8  102.0  130.6  119.4
+    102.0  126.5  102.0  243.5  136.1  125.9
+    121.1  102.0  130.6  136.1  271.8  149.0
+    101.4  105.8  119.4  125.9  149.0  334.7
+  diag(P[sector a empty]) = [0.2718, 0.2435, 0.2388, 0.2435, 0.2718, 0.3347]
+  S2 = sum_pairs = 1.79048   trace = 1.60408
+  eigenvalues (desc): [0.86713, 0.22023, 0.15766, 0.15022, 0.11326, 0.09559]
+  Perron gap lambda1-lambda2 = 0.64690
+  reflection-symmetric (a<->6-a): True
+  circulant (depends on a-b mod 6): False
+  #distinct off-diag = 10, #distinct diag = 4 (4I+2J would need 1 and 1)
+
+=== consec_9  E=(0, 1, 2, 3, 4, 5, 6, 7, 8) ===
+  M (6x6, inner sectors 1..6), entries x1000:
+    229.1  117.3  109.7   94.4   96.9   89.3
+    117.3  216.3   89.3  116.3   94.4   83.7
+    109.7   89.3  197.3   89.3  109.7   98.6
+     94.4  116.3   89.3  216.3  117.3  105.4
+     96.9   94.4  109.7  117.3  229.1  132.7
+     89.3   83.7   98.6  105.4  132.7  293.2
+  diag(P[sector a empty]) = [0.2291, 0.2163, 0.1973, 0.2163, 0.2291, 0.2932]
+  S2 = sum_pairs = 1.54439   trace = 1.38129
+  eigenvalues (desc): [0.74733, 0.19817, 0.13505, 0.12188, 0.09083, 0.08804]
+  Perron gap lambda1-lambda2 = 0.54916
+  reflection-symmetric (a<->6-a): True
+  circulant (depends on a-b mod 6): False
+  #distinct off-diag = 10, #distinct diag = 4 (4I+2J would need 1 and 1)
+
+=== consec_11  E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) ===
+  M (6x6, inner sectors 1..6), entries x1000:
+    172.2   93.7   89.3   74.6   78.6   60.3
+     93.7  150.7   71.4   91.2   74.6   66.2
+     89.3   71.4  159.8   71.4   89.3   79.9
+     74.6   91.2   71.4  150.7   93.7   79.4
+     78.6   74.6   89.3   93.7  172.2  106.0
+     60.3   66.2   79.9   79.4  106.0  234.8
+  diag(P[sector a empty]) = [0.1722, 0.1507, 0.1598, 0.1507, 0.1722, 0.2348]
+  S2 = sum_pairs = 1.21939   trace = 1.04036
+  eigenvalues (desc): [0.58184, 0.16143, 0.09468, 0.08607, 0.06557, 0.05078]
+  Perron gap lambda1-lambda2 = 0.42041
+  reflection-symmetric (a<->6-a): True
+  circulant (depends on a-b mod 6): False
+  #distinct off-diag = 11, #distinct diag = 4 (4I+2J would need 1 and 1)
+
+=== single-far(8+21)  E=(0, 1, 2, 3, 4, 5, 6, 21) ===
+  M (6x6, inner sectors 1..6), entries x1000:
+    260.2  105.4  115.3   89.1   95.2   74.8
+    105.4  249.0   88.4  110.2   89.1   79.9
+    115.3   88.4  259.2   88.4  115.3  116.0
+     89.1  110.2   88.4  249.0  105.4  100.0
+     95.2   89.1  115.3  105.4  260.2  142.5
+     74.8   79.9  116.0  100.0  142.5  375.5
+  diag(P[sector a empty]) = [0.2602, 0.249, 0.2592, 0.249, 0.2602, 0.3755]
+  S2 = sum_pairs = 1.51531   trace = 1.65306
+  eigenvalues (desc): [0.78675, 0.26881, 0.18263, 0.15116, 0.13353, 0.13017]
+  Perron gap lambda1-lambda2 = 0.51794
+  reflection-symmetric (a<->6-a): True
+  circulant (depends on a-b mod 6): False
+  #distinct off-diag = 11, #distinct diag = 4 (4I+2J would need 1 and 1)
+
+=== even-AP_8  E=(0, 2, 4, 6, 8, 10, 12, 14) ===
+  M (6x6, inner sectors 1..6), entries x1000:
+    271.8  136.1  130.6  102.0  121.1  101.4
+    136.1  243.5  102.0  126.5  102.0  105.8
+    130.6  102.0  238.8  102.0  130.6  119.4
+    102.0  126.5  102.0  243.5  136.1  125.9
+    121.1  102.0  130.6  136.1  271.8  149.0
+    101.4  105.8  119.4  125.9  149.0  334.7
+  diag(P[sector a empty]) = [0.2718, 0.2435, 0.2388, 0.2435, 0.2718, 0.3347]
+  S2 = sum_pairs = 1.79048   trace = 1.60408
+  eigenvalues (desc): [0.86713, 0.22023, 0.15766, 0.15022, 0.11326, 0.09559]
+  Perron gap lambda1-lambda2 = 0.64690
+  reflection-symmetric (a<->6-a): True
+  circulant (depends on a-b mod 6): False
+  #distinct off-diag = 10, #distinct diag = 4 (4I+2J would need 1 and 1)
+
+=== wide-rand_8  E=(0, 1, 3, 7, 12, 20, 33, 50) ===
+  M (6x6, inner sectors 1..6), entries x1000:
+    314.5   82.4   89.5   79.8   75.2   87.8
+     82.4  343.0   89.4   90.9   79.8  101.4
+     89.5   89.4  346.7   89.4   89.5  122.3
+     79.8   90.9   89.4  343.0   82.4  115.6
+     75.2   79.8   89.5   82.4  314.5  111.2
+     87.8  101.4  122.3  115.6  111.2  358.1
+  diag(P[sector a empty]) = [0.3145, 0.343, 0.3467, 0.343, 0.3145, 0.3581]
+  S2 = sum_pairs = 1.38693   trace = 2.01967
+  eigenvalues (desc): [0.8041, 0.26174, 0.25659, 0.2437, 0.23784, 0.21571]
+  Perron gap lambda1-lambda2 = 0.54236
+  reflection-symmetric (a<->6-a): True
+  circulant (depends on a-b mod 6): False
+  #distinct off-diag = 11, #distinct diag = 4 (4I+2J would need 1 and 1)
+
+NOTE: J=all-ones; 4I+2J SRG eigenstructure needs M = aI+bJ form
+(all off-diag equal, all diag equal). Reflection-Perron route needs only
+the reflection symmetry + a dominant Perron eigenvalue.

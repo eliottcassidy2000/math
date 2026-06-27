@@ -1,0 +1,67 @@
+=== Dilated APs (tight family, covering) ===
+1*{1..13}                    gcd=1 max=    13 M=0.07143(=1/14 TIGHT) Dwit=   14 | Larc=0.00000 Darc=inf narcs=0 meas=0.0000
+2*{1..13}                    gcd=2 max=    26 M=0.07143(=1/14 TIGHT) Dwit=   28 | Larc=0.00000 Darc=inf narcs=0 meas=0.0000
+3*{1..13}                    gcd=3 max=    39 M=0.07143(=1/14 TIGHT) Dwit=   42 | Larc=0.00000 Darc=inf narcs=0 meas=0.0000
+
+=== Goddyn-Wong {1..11,13,24} and dilations ===
+GW {1..11,13,24}             gcd=1 max=    24 M=0.07143(=1/14 TIGHT) Dwit=   14 | Larc=0.00000 Darc=inf narcs=0 meas=0.0000
+2*GW                         gcd=2 max=    48 M=0.07143(=1/14 TIGHT) Dwit=   28 | Larc=0.00000 Darc=inf narcs=0 meas=0.0000
+
+=== HYP-2866 family {1..11,13,84m} (unbounded witness?) ===
+{1..11,13,84}                gcd=1 max=    84 M=0.07865 Dwit=   89 | Larc=0.00153 Darc=654 narcs=8 meas=0.0054
+{1..11,13,168}               gcd=1 max=   168 M=0.08092 Dwit=  173 | Larc=0.00196 Darc=512 narcs=8 meas=0.0088
+{1..11,13,252}               gcd=1 max=   252 M=0.08171 Dwit=  257 | Larc=0.00210 Darc=477 narcs=8 meas=0.0099
+{1..11,13,420}               gcd=1 max=   420 M=0.08235 Dwit=  425 | Larc=0.00204 Darc=490 narcs=8 meas=0.0105
+{1..11,13,588}               gcd=1 max=   588 M=0.08263 Dwit=  593 | Larc=0.00146 Darc=686 narcs=10 meas=0.0105
+{1..11,13,924}               gcd=1 max=   924 M=0.08288 Dwit=  929 | Larc=0.00093 Darc=1078 narcs=14 meas=0.0105
+
+=== {1..12, 14j} aliasing family (covering, near 1/13) ===
+{1..12,14}                   gcd=1 max=    14 M=0.07692 Dwit=   13 | Larc=0.00325 Darc=308 narcs=12 meas=0.0239
+{1..12,28}                   gcd=1 max=    28 M=0.07692 Dwit=   13 | Larc=0.00340 Darc=294 narcs=12 meas=0.0239
+{1..12,182}                  gcd=1 max=   182 M=0.07650 Dwit=  183 | Larc=0.00471 Darc=213 narcs=24 meas=0.0239
+{1..12,196}                  gcd=1 max=   196 M=0.07692 Dwit=   13 | Larc=0.00437 Darc=229 narcs=14 meas=0.0305
+{1..12,364}                  gcd=1 max=   364 M=0.07671 Dwit=  365 | Larc=0.00235 Darc=425 narcs=26 meas=0.0278
+
+=== Residual: covering, <=6 mult of 7, bounded core ===
+rand#0                       gcd=1 max=    23 M=0.13793 Dwit=   29 | Larc=0.00850 Darc=118 narcs=18 meas=0.0719
+rand#1                       gcd=1 max=    38 M=0.20000 Dwit=   10 | Larc=0.00923 Darc=109 narcs=28 meas=0.0691
+rand#2                       gcd=1 max=    35 M=0.13953 Dwit=   43 | Larc=0.00680 Darc=147 narcs=30 meas=0.0989
+rand#3                       gcd=1 max=    27 M=0.15152 Dwit=   33 | Larc=0.01653 Darc=61 narcs=18 meas=0.1066
+rand#4                       gcd=1 max=    38 M=0.17857 Dwit=   56 | Larc=0.00877 Darc=114 narcs=32 meas=0.0969
+rand#5                       gcd=1 max=    25 M=0.16129 Dwit=   31 | Larc=0.01333 Darc=75 narcs=28 meas=0.1262
+rand#6                       gcd=1 max=    27 M=0.10526 Dwit=   19 | Larc=0.01058 Darc=95 narcs=28 meas=0.0860
+rand#7                       gcd=1 max=    26 M=0.10000 Dwit=   10 | Larc=0.00663 Darc=151 narcs=22 meas=0.0535
+rand#8                       gcd=1 max=    23 M=0.11111 Dwit=   18 | Larc=0.00466 Darc=215 narcs=18 meas=0.0416
+rand#9                       gcd=1 max=    20 M=0.11111 Dwit=    9 | Larc=0.01276 Darc=79 narcs=28 meas=0.1216
+rand#10                      gcd=1 max=    27 M=0.15625 Dwit=   32 | Larc=0.01144 Darc=88 narcs=30 meas=0.1253
+rand#11                      gcd=1 max=    27 M=0.15789 Dwit=   19 | Larc=0.01011 Darc=99 narcs=22 meas=0.0771
+rand#12                      gcd=1 max=    30 M=0.14286 Dwit=   21 | Larc=0.00833 Darc=120 narcs=30 meas=0.1026
+rand#13                      gcd=1 max=    26 M=0.15385 Dwit=   39 | Larc=0.00850 Darc=118 narcs=30 meas=0.0961
+rand#14                      gcd=1 max=    23 M=0.12500 Dwit=    8 | Larc=0.01831 Darc=55 narcs=20 meas=0.1310
+rand#15                      gcd=1 max=    27 M=0.17500 Dwit=   40 | Larc=0.01180 Darc=85 narcs=26 meas=0.1353
+rand#16                      gcd=1 max=    27 M=0.16667 Dwit=    6 | Larc=0.01145 Darc=88 narcs=20 meas=0.0921
+rand#17                      gcd=1 max=    26 M=0.14286 Dwit=   42 | Larc=0.00829 Darc=121 narcs=28 meas=0.0980
+rand#18                      gcd=1 max=    25 M=0.12821 Dwit=   39 | Larc=0.01333 Darc=75 narcs=36 meas=0.1286
+rand#19                      gcd=1 max=    26 M=0.14286 Dwit=   28 | Larc=0.01042 Darc=96 narcs=34 meas=0.1378
+rand#20                      gcd=1 max=    26 M=0.16216 Dwit=   37 | Larc=0.01119 Darc=90 narcs=34 meas=0.1279
+rand#21                      gcd=1 max=    27 M=0.13333 Dwit=   15 | Larc=0.01385 Darc=73 narcs=26 meas=0.1022
+rand#22                      gcd=1 max=    30 M=0.15789 Dwit=   19 | Larc=0.00933 Darc=108 narcs=24 meas=0.1044
+rand#23                      gcd=1 max=    26 M=0.17241 Dwit=   29 | Larc=0.01339 Darc=75 narcs=28 meas=0.1308
+rand#24                      gcd=1 max=    27 M=0.13793 Dwit=   29 | Larc=0.00945 Darc=106 narcs=22 meas=0.0846
+rand#25                      gcd=1 max=    27 M=0.11111 Dwit=   18 | Larc=0.00585 Darc=171 narcs=20 meas=0.0503
+rand#26                      gcd=1 max=    29 M=0.14634 Dwit=   41 | Larc=0.00883 Darc=114 narcs=32 meas=0.0798
+rand#27                      gcd=1 max=    26 M=0.11765 Dwit=   17 | Larc=0.00604 Darc=166 narcs=18 meas=0.0505
+rand#28                      gcd=1 max=    26 M=0.12000 Dwit=   25 | Larc=0.00611 Darc=164 narcs=24 meas=0.0571
+rand#29                      gcd=1 max=    27 M=0.14286 Dwit=   21 | Larc=0.00974 Darc=103 narcs=26 meas=0.0799
+rand#30                      gcd=1 max=    26 M=0.21212 Dwit=   33 | Larc=0.02551 Darc=40 narcs=38 meas=0.1278
+rand#31                      gcd=1 max=    26 M=0.16667 Dwit=   18 | Larc=0.01190 Darc=84 narcs=18 meas=0.1148
+rand#32                      gcd=1 max=    33 M=0.14286 Dwit=   21 | Larc=0.01028 Darc=98 narcs=28 meas=0.0885
+rand#33                      gcd=1 max=    26 M=0.12500 Dwit=    8 | Larc=0.01523 Darc=66 narcs=28 meas=0.1219
+rand#34                      gcd=1 max=    25 M=0.10714 Dwit=   28 | Larc=0.01333 Darc=75 narcs=20 meas=0.0696
+rand#35                      gcd=1 max=    27 M=0.13333 Dwit=   15 | Larc=0.00750 Darc=134 narcs=20 meas=0.0626
+rand#36                      gcd=1 max=    39 M=0.17073 Dwit=   41 | Larc=0.00824 Darc=122 narcs=38 meas=0.1266
+rand#37                      gcd=1 max=    34 M=0.15385 Dwit=   13 | Larc=0.01331 Darc=76 narcs=24 meas=0.0990
+rand#38                      gcd=1 max=    24 M=0.12500 Dwit=   16 | Larc=0.01218 Darc=83 narcs=30 meas=0.1051
+rand#39                      gcd=1 max=    25 M=0.17647 Dwit=   34 | Larc=0.01488 Darc=68 narcs=30 meas=0.1047
+
+WORST non-tight largest-arc among random: rand#8 Larc=0.00466 Darc=215
