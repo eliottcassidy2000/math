@@ -127,4 +127,30 @@ SYNTHESIS: WHAT THIS SESSION ADVANCES
     Raw scalar p0 and raw tournament H are too lossy.  They destroy the root stratum,
     first-live order, component count, and sidecar needed by the Lean frontier.
 
+====================================================================================================
+SUPPLEMENT: CONSECUTIVE ZERO ARC k=8..13
+====================================================================================================
+  k        q0  real  nearest    gap7 roots |z|@arg
+  8  481/1470     0    1.489    4.04 1.489@-55.3, 1.489@+55.3, 1.581@-111.0, 1.581@+111.0, 1.701@-154.2, 1.701@+154.2
+  9 2447/5880     0    1.531    2.74 1.531@-51.9, 1.531@+51.9, 1.685@-107.3, 1.685@+107.3, 1.871@-157.6, 1.871@+157.6
+ 10 8899/17640     0    1.556    1.82 1.556@-49.3, 1.556@+49.3, 1.849@-105.0, 1.849@+105.0, 1.960@-155.5, 1.960@+155.5
+ 11 3419/5880     0    1.589    1.98 1.589@-47.4, 1.589@+47.4, 1.905@-102.9, 1.905@+102.9, 2.108@-156.2, 2.108@+156.2
+ 12 121103/194040     0    1.631    1.88 1.631@-46.4, 1.631@+46.4, 1.955@-102.4, 1.955@+102.4, 2.173@-154.2, 2.173@+154.2
+ 13 14573/21560     0    1.654    2.89 1.654@-45.3, 1.654@+45.3, 2.022@-101.2, 2.022@+101.2, 2.254@-155.1, 2.254@+155.1
+  readout: consecutive rows keep all roots non-real; the middle pair passes
+  close to 2*360/7 at k=11, matching the HYP-3103 zero-arc hint.
+
+====================================================================================================
+SUPPLEMENT: ROOT/ENERGY CORRELATIONS ON DETERMINISTIC ANCHORED 8-SET SAMPLE
+====================================================================================================
+  #real -> count, mean(q0+q6), mean(L_yK8), max(L_yK8), mean phi4 lambda
+    #real=0: n= 15 mean_ext=0.0972 mean_Ly=1.1564 max_Ly=3.5823 mean_lambda=-0.0209
+    #real=2: n= 95 mean_ext=0.0332 mean_Ly=0.5433 max_Ly=0.8378 mean_lambda=-0.0250
+    #real=4: n= 13 mean_ext=0.0331 mean_Ly=0.5473 max_Ly=0.7708 mean_lambda=-0.0289
+  corr(#real, q0+q6)=-0.372
+  corr(nearest-root-modulus, q0+q6)=+0.952
+  corr(phi4-lambda, L_yK8)=+0.690
+  readout: root confinement is a robust sidecar; phi4 curvature is much
+  noisier and should stay downstream of exact packet labels.
+
 DONE.

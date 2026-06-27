@@ -22,12 +22,15 @@ from __future__ import annotations
 
 import itertools
 import math
+import sys
 from collections import Counter, defaultdict, deque
 from dataclasses import dataclass
 from fractions import Fraction as F
 from typing import Iterable
 
 import numpy as np
+
+sys.stdout.reconfigure(line_buffering=True)
 
 
 def fstr(x: F) -> str:
@@ -654,6 +657,90 @@ def print_hypotheses(features: list[PacketFeatures]) -> None:
     print("    first-live order, component count, and sidecar needed by the Lean frontier.")
 
 
+def corr(xs: list[float], ys: list[float]) -> float:
+    if len(xs) != len(ys) or not xs:
+        return 0.0
+    mx = sum(xs) / len(xs)
+    my = sum(ys) / len(ys)
+    sx = math.sqrt(sum((x - mx) ** 2 for x in xs))
+    sy = math.sqrt(sum((y - my) ** 2 for y in ys))
+    if sx * sy == 0:
+        return 0.0
+    return sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / (sx * sy)
+
+
+def print_consecutive_zero_arc() -> None:
+    print("\n" + "=" * 100)
+    print("SUPPLEMENT: CONSECUTIVE ZERO ARC k=8..13")
+    print("=" * 100)
+    print(f"{'k':>3s} {'q0':>9s} {'real':>5s} {'nearest':>8s} {'gap7':>7s} roots |z|@arg")
+    for k in range(8, 14):
+        feat = compute_features(Packet(f"consec_{k}", "consecutive_arc", tuple(range(k)), "zero-arc supplement"))
+        root_bits = ", ".join(
+            f"{abs(z):.3f}@{math.degrees(math.atan2(z.imag, z.real)):+.1f}"
+            for z in feat.roots[:6]
+        )
+        print(
+            f"{k:3d} {fstr(feat.q[0]):>9s} {feat.n_real:5d}"
+            f" {feat.nearest_root_abs:8.3f} {feat.apex7_angle_gap:7.2f} {root_bits}"
+        )
+    print("  readout: consecutive rows keep all roots non-real; the middle pair passes")
+    print("  close to 2*360/7 at k=11, matching the HYP-3103 zero-arc hint.")
+
+
+def light_root_row(speeds: tuple[int, ...]) -> dict[str, float]:
+    q, _, _ = cell_profile(speeds)
+    roots = pgf_roots(q)
+    n_real, nearest, _, _ = root_features(roots)
+    lam, _, _ = phi4_fit(q)
+    return {
+        "n_real": float(n_real),
+        "nearest": nearest,
+        "lambda": lam,
+        "extreme": float(q[0] + q[6]),
+        "lyk8": float(10 * q[0] + q[3] + 10 * q[6]),
+    }
+
+
+def print_sample_correlations(sample_size: int = 120) -> None:
+    rng = np.random.default_rng(3108)
+    sample: list[dict[str, float]] = [
+        light_root_row(tuple(range(8))),
+        light_root_row(tuple(2 * i for i in range(8))),
+        light_root_row((0, 7, 8, 9, 10, 11, 12, 13)),
+    ]
+    for i in range(sample_size):
+        speeds = tuple([0] + sorted(int(x) for x in rng.choice(np.arange(1, 46), size=7, replace=False)))
+        sample.append(light_root_row(speeds))
+    print("\n" + "=" * 100)
+    print("SUPPLEMENT: ROOT/ENERGY CORRELATIONS ON DETERMINISTIC ANCHORED 8-SET SAMPLE")
+    print("=" * 100)
+    groups: dict[int, list[dict[str, float]]] = defaultdict(list)
+    for row in sample:
+        groups[int(row["n_real"])].append(row)
+    print("  #real -> count, mean(q0+q6), mean(L_yK8), max(L_yK8), mean phi4 lambda")
+    for key in sorted(groups):
+        rows = groups[key]
+        mean_ext = sum(row["extreme"] for row in rows) / len(rows)
+        mean_ly = sum(row["lyk8"] for row in rows) / len(rows)
+        max_ly = max(row["lyk8"] for row in rows)
+        mean_lam = sum(row["lambda"] for row in rows) / len(rows)
+        print(
+            f"    #real={key}: n={len(rows):3d} mean_ext={mean_ext:.4f}"
+            f" mean_Ly={mean_ly:.4f} max_Ly={max_ly:.4f} mean_lambda={mean_lam:.4f}"
+        )
+    real = [row["n_real"] for row in sample]
+    nearest = [row["nearest"] for row in sample]
+    lam = [row["lambda"] for row in sample]
+    ext = [row["extreme"] for row in sample]
+    ly = [row["lyk8"] for row in sample]
+    print(f"  corr(#real, q0+q6)={corr(real, ext):+.3f}")
+    print(f"  corr(nearest-root-modulus, q0+q6)={corr(nearest, ext):+.3f}")
+    print(f"  corr(phi4-lambda, L_yK8)={corr(lam, ly):+.3f}")
+    print("  readout: root confinement is a robust sidecar; phi4 curvature is much")
+    print("  noisier and should stay downstream of exact packet labels.")
+
+
 def main() -> None:
     print("HYP-3108 Lee-Yang/Savitch/Bravais/ear-lattice extremality scout -- codex S262")
     print("Incoming integration: HYP-3103 PGF roots, HYP-3104 maximizer currencies,")
@@ -666,6 +753,8 @@ def main() -> None:
     print_savitch_map()
     print_sidecar_tournament()
     print_hypotheses(features)
+    print_consecutive_zero_arc()
+    print_sample_correlations()
     print("\nDONE.")
 
 

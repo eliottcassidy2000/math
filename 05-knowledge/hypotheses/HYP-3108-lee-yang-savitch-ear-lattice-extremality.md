@@ -97,6 +97,16 @@ not just a scalar `p0` restatement.  It separates all-complex concentrated and
 wide rows from root-collision spread/break rows, while the ear/state sidecar
 changes at the same time.
 
+The post-merge supplement adds two reproducible checks.  First, the consecutive
+zero arc for `k=8..13` stays in the all-complex stratum; the `k=11` middle pair
+lands at `102.9°`, exactly the `2*360/7` angle to one decimal place.  Second, a
+deterministic anchored 8-set sample gives
+`corr(#real,q0+q6)=-0.372`, `corr(nearest-root-modulus,q0+q6)=+0.952`, and
+`corr(phi4-lambda,L_yK8)=+0.690`.  The root confinement signal is robust in
+this sample.  The quartic `phi4` coefficient is positive here but remains
+noisier and sign-sensitive across named packets, so it stays downstream of the
+root-curve sidecar.
+
 The Bravais map gives a full affine rank:
 
 ```text
