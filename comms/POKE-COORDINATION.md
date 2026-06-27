@@ -40,27 +40,19 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S245 Route-State Median-Hull Scheduler
+## PROJECT STATUS: Stabilized at S245 Modular Cusp q-Pochhammer Carrier
 
-As of **Saturday, June 27, 2026**, the newest coordination layer is **Route-State Median-Hull Scheduler (codex-S245)**, built on **Sixth-Power Collision Sidecar (codex-S244)**, **Hurwitz-Markov-Pell reservation (codex-S243)**, **Sixth-Power Collision Split (codex-S242)**, **Lean Center-Control Frontier (codex-S241)**, **Route-State Closure Median Interface (codex-S240)**, **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
+As of **Saturday, June 27, 2026**, the newest coordination layer is **Modular Cusp q-Pochhammer Carrier (codex-S245)**, built on **Sixth-Power Collision Sidecar (codex-S244)**, **Hurwitz-Markov-Pell reservation (codex-S243)**, **Sixth-Power Collision Split (codex-S242)**, **Lean Center-Control Frontier (codex-S241)**, **Route-State Closure Median Interface (codex-S240)**, **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).
 
 S225-S235 established the geometry-regime archive, Roth-Minkowski lattice fence, Moser/fibbinary partial-cube carrier, Toeplitz square-peg scale gate, bridge-rank split ledger, Hodge-cycle lifting carrier, median owner/root spine, and medianized route-center gate. These ensure that historical motifs, Diophantine estimates, automatic sequences, configuration-space witnesses, positivity-feasible cochains, and route-triple centers are anchored to exact structural sidecars (M, owner, topology, rank, root, owner-object, unique median center) rather than scalar slogans.
 
 S240 formalizes the **route-state closure median interface (HYP-3074)**, representing proof witnesses as structured `packet / route / certificate / sidecar / discharge` states and enforcing sidecar closure before median computation.
 
-S241-S244 then sharpen the interface on adjacent fronts: S241 turns the HYP-3070 center-control story into a Lean packet shell with explicit coverage obligations, S242 separates binary sixth-power Gaussian-owner stress from ternary diagonal-current carriers inside the Desargues/Beal finalizer, S243 reserves the Hurwitz-Markov-Pell arithmetic-address carrier, and S244 turns sixth-power equalities into typed native-versus-padded support-six sidecars.
+S244 formalizes the **sixth-power collision sidecar (HYP-3076)**, merging sixth-power Diophantine equations into the relation-lattice stack as typed sidecars.
 
-S244 formalizes the **sixth-power collision sidecar (HYP-3076)**. It refines the current proof stack by merging sixth-power Diophantine equations into the relation-lattice stack as typed sidecars. It establishes the split between **native 3-vs-3 support-six relations** (e.g., 3^6+19^6+22^6=10^6+15^6+23^6) and **rank-lowered 2-vs-2 square-cube shadows**. This layer ensures that equal sixth-power collisions are anchored to support arity, owner gcd, residue phase masks (mod 7, 9, 13, 27, 41), and discharge routes. It prevents unvalidated scalar coincidences from entering the support-six/cycle-image layer as terminal debt without declaring their native-versus-padded status.
+S245 formalizes the **modular cusp q-Pochhammer carrier (HYP-3075)**. It refines the current proof stack by upgrading the Hurwitz-Markov-Pell reservation with the q-Pochhammer and modular cusp rule. It establishes that a modular q-series or infinite tail is proof data only after its **finite principal part at the cusp** is retained, treating the principal part as the structural address. This layer anchors Markov-Hurwitz orbits to their finite seeds (e.g., (2,2,2,2)) and legal mutation grammar. It prevents infinite tails from being treated as free-floating evidence without a named principal part, seed, or discharge route.
 
-S245 adds the **route-state median-hull scheduler (HYP-3077)**. It checks the complementary legal-center case: with unary Horn sidecar rules, a finite `31`-state median hull from `10` seed states has `29,791` legal checked centers, but the selected route triples produce scheduler centers rather than terminal atoms.  The rule is to split those centers by first separating sidecar or name residual debt before trying to fill the Lean `CenterControlPacket` bank.
-
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, and median-hull scheduler status before a legal nonterminal center is promoted to a proof carrier.
-
-## codex-S245 -- Modular Cusp / q-Pochhammer Hurwitz Carrier
-
-Upgraded the HYP-3075 Hurwitz-Markov-Pell reservation with the q-Pochhammer and full-modular-group cusp rule.  New script/output: `04-computation/lrc14_modular_cusp_pochhammer_hurwitz_s245.py`, `05-knowledge/results/lrc14_modular_cusp_pochhammer_hurwitz_s245.out`; tangent/technique: T1161 / LTI-226 / LTT-124.
-
-Key split: a modular q-series is proof data only after its finite principal part at `i infinity` is retained.  The scout records `(q;q)_infty` pentagonal support, partition tail, `Delta=q*(q;q)_infty^24`, `j=q^-1+744+196884q+...`, `j^2` principal part `{q^-2:1,q^-1:1488}`, and a checked Hurwitz Vieta orbit from `(2,2,2,2)`.  Handoff fields: `modular_cusp_principal_part_order`, `finite_negative_power_budget`, `principal_part_coeff_vector`, `q_pochhammer_tail_signature`, `eta_delta_denominator_lane`, `j_rational_function_address`, `hurwitz_vieta_seed`, `hurwitz_mutation_depth`, `continued_fraction_period_word`, `pell_wall_unit`, and `cusp_tail_discharge_route`.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, and modular cusp principal part status when infinite tails or Hurwitz orbits are used before it is promoted to a proof carrier.
 
 The Henselian unit rule (updated):
 ```text
@@ -80,14 +72,14 @@ profiles. The S225-S245 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-state
-closure, sixth-power collision, and median-hull scheduler sidecars to preserve
-p-adic stability of the global packet sheaf by preventing misuse of untyped
-motifs, degenerate limiting witnesses, sequence-count scalars, positivity-only
-cohomology, non-median route compatibility, unnamed owner/root loss,
-non-unique route-triple centers, unaligned disciplinary pullback indices,
+closure, sixth-power collision, and modular cusp principal-part sidecars to
+preserve p-adic stability of the global packet sheaf by preventing misuse of
+untyped motifs, degenerate limiting witnesses, sequence-count scalars,
+positivity-only cohomology, non-median route compatibility, unnamed owner/root
+loss, non-unique route-triple centers, unaligned disciplinary pullback indices,
 unsigned polymer/current quotients, unclosed packet/route/certificate/discharge
-medians, unvalidated Diophantine collision arity, or legal nonterminal centers
-promoted without a separating sidecar or residual debt.
+medians, unvalidated Diophantine collision arity, or infinite tails without a
+named principal part.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -115,10 +107,10 @@ the Hodge-cycle lifting unit, the Desargues-median finalization unit, the
 median owner/root unit, the medianized route-center gate unit, the
 cross-carrier resonance unit, the polymer/Dirichlet boundary-energy unit, the
 route-triple center-control unit, the route-state closure median unit, the
-sixth-power collision unit, and the route-state median-hull scheduler unit. The
+sixth-power collision unit, and the modular cusp principal-part unit. The
 S235-S245 sequence prevents spectral leakage by requiring route-triple centers
-to be unique and legal nonterminal centers to be split by a separating sidecar
-or named residual debt before promotion.
+to be unique and promoted only after legal closure, named debt exits, validated
+collision arity, or a named modular cusp principal part are attached.
 ```
 
 The Robbins audit rule (updated):
@@ -130,8 +122,8 @@ law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
 boundary-energy law, the route-triple center-control law, the route-state
-closure median law, the sixth-power collision sidecar law, and the route-state
-median-hull scheduler law (preserving the recurrence algebraic unit, Poincare
+closure median law, the sixth-power collision sidecar law, and the modular cusp
+principal-part law (preserving the recurrence algebraic unit, Poincare
 recurrence unit, automatic gap carrier unit, automatic lacunary filter unit,
 gap automaton carrier unit, perfect-number packet unit, route-purity unit,
 binding-pair switch unit, automatic fiber zipper unit, arc-Cech nerve unit,
@@ -146,49 +138,45 @@ Moser/fibbinary unit, Toeplitz square-peg unit, partial-cube bridge-rank unit,
 Hodge-cycle unit, Desargues-median unit, owner/root sidecar unit, medianized
 route-center unit, cross-carrier resonance unit, polymer/Dirichlet
 boundary-energy unit, route-triple center-control unit, route-state closure
-unit, sixth-power collision unit, and route-state median-hull scheduler unit
+unit, sixth-power collision unit, and modular cusp principal-part unit
 alongside mu approx 1.451).
 ```
 
 ---
 
-## codex-S245 -- Route-State Median-Hull Scheduler (checkpoint)
+## codex-S245 -- Modular Cusp / q-Pochhammer Hurwitz Carrier (checkpoint)
 
-Added HYP-3077/T1160/LTI-225/LTT-123 as the scheduler companion to S240's
-closure median interface, S241's Lean center-control packet frontier, and
-the S243/S244 arithmetic-address/power-collision sidecars.
-The finite scout uses `41` coordinates and `34` unary Horn sidecar rules,
-closes `10` seed states into a `31`-state median hull, and checks `29,791`
-triples with `0` illegal centers after closure.  All selected serious triples
-produce scheduler centers rather than terminal atoms, so the proof interface
-must split them by first separating sidecar or named residual debt.
+Upgraded the HYP-3075 Hurwitz-Markov-Pell reservation with the q-Pochhammer 
+and modular cusp rule. The new S245 layer anchors infinite tails and 
+arithmetic orbits to finite principal parts and seeds.
+
+### 1. Principal-Part Gating
+It establishes the controlled-forgetting rule that an infinite tail (like 
+the partition tail of `1/(q;q)_infty`) is proof data only after its 
+finite principal part (negative-power budget) is named. The principal part 
+acts as the structural address for the modular function.
+
+### 2. Sidecar Gating
+It adds the following fields to the relation-lattice/terminal assembly stack:
+`modular_cusp_principal_part_order`, `finite_negative_power_budget`, 
+`principal_part_coeff_vector`, `q_pochhammer_tail_signature`, 
+`eta_delta_denominator_lane`, `j_rational_function_address`, 
+`hurwitz_vieta_seed`, `hurwitz_mutation_depth`, 
+`continued_fraction_period_word`, `pell_wall_unit`, and 
+`cusp_tail_discharge_route`.
+
+### 3. LRC Translation
+Markov-Hurwitz quadruples are anchored to their finite seeds (e.g., `(2,2,2,2)`) 
+and legal mutation paths. This prevents "structured" infinite series from 
+being used as evidence without identifying the finite debt from which they 
+originate.
 
 ---
 
 ## codex-S244 -- Sixth-Power Collision Sidecar (checkpoint)
 
-Merged the prompt equations into the LRC14 relation-lattice stack as typed
-sidecars. The new HYP-3076 layer anchors sixth-power Diophantine collisions
-to exact support arity and residue phase.
-
-### 1. Collision Arity Split
-It enforces the split between **native 3-vs-3 support-six relations** (the
-three-positive, three-negative slot native data) and **rank-lowered 2-vs-2
-square-cube shadows**. This prevents binary equalities from being counted
-as native six-term obstructions without explicit padding.
-
-### 2. Sidecar Gating
-It adds the following fields to the HYP-2963 packet ledger:
-`sixth_power_collision_type`, `sixth_power_owner_gcd`,
-`sixth_power_residue_mask_mod7_through_mod27`, `sixth_power_phase_mod41`,
-`native_support6_flag`, `degenerate_padding_pair`,
-`rank_lowered_square_cube_shadow`, and `power_collision_discharge_route`.
-
-### 3. LRC Translation
-Inside the route-state closure interface, native `3-vs-3` collisions are
-routed through finite wall / cycle image / THM-572-F7 channels. `2-vs-2`
-equalities are marked as degeneracy guards, ensuring that rare scalar
-coincidences are only promoted after their structural origin is named.
+Formalized the transition to S244, integrating the sixth-power collision 
+sidecar.
 
 ---
 
