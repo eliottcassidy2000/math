@@ -1,3 +1,34 @@
+## kind-pasteur-2026-06-27-S255 -- TOOL-3: the multi-far SPEC bound is ELEMENTARY, NOT EH/BV (HYP-3129)
+
+Owner task: TOOL-3 of the kps HYP-3121 synthesis -- does Bombieri-Vinogradov (proven, level 1/2) or
+Elliott-Halberstam (conjectural, level 1) bound SPEC = Sum_{n!=0} chat(n)ghat(n)* uniformly over the r=2..6
+multi-far family, closing the uniform R'>=c floor? Compute SPEC's resonance decomposition, identify dominant
+resonances, and the HONEST necessity of EH. Result: HYP-3129.
+
+ANSWER: **EH is NOT needed. BV is NOT needed. The bound is elementary harmonic analysis.** Three exact facts
+(scripts lrc14_spec_{resonance_lattice,level_distribution,singular_series,tail_control}_kpswf15.py):
+
+1. RESONANCE LATTICE. chat (R-safe coeffs) supported on gcd(R)Z; ghat (Q-lonely coeffs) supported ENTIRELY on
+   14Z (the 14 is built into every Q-factor 1_{||14m t||>=1/14}). So SPEC carried ONLY by L=lcm(gcd(R),14gcd(Q))Z.
+   VERIFIED: gcd(R)=1=>L=14Z, gcd(R)=3=>L=42Z (coprimality to 14 THINS the lattice, helps). Apex-7 trunk (n in 98Z)
+   suppressed since ahat(7j)=0.
+2. SINGULAR SERIES. chat(14N)=Sum_{relations Sum_r k_r r=14N} prod ahat(k_r), ahat(k)=-sin(pi k/7)/(pi k),
+   |ahat|<=1/(pi|k|), verified =exact coeff. An explicit Hardy-Littlewood series for a FIXED BOUNDED speed set
+   (<=84), absolutely convergent. There is NO unbounded modulus family q<=Q=x^theta to average over -- the actual
+   content of BV/EH is absent. Coeffs explicit elementary (not Lambda/mu).
+3. RIGOROUS UNIFORM FLOOR. SPEC=SPEC_low(exact finite, M=80)+SPEC_high; |SPEC_high|<=2(var_R/2-Sc(M))^{1/2}
+   (var_Q/2-Sg(M))^{1/2} via full-circle Parseval ceiling (unconditional, no truncation). MIN certified R'>=0.64178
+   over the multi-far family (r=2..6); certified <= actual in EVERY row. Tight because ghat lives entirely on 14Z
+   and only ~1-8% of chat's L2 mass lands on 14Z (quasi-independence quantified).
+
+PLACEMENT: closes HYP-3127 obligation 2 (the SPEC bound / constant c) UNCONDITIONALLY; supplies the equidistribution
+piece the concurrent HYP-3128 (kps-S254, Lee-Yang/Asano) isolated as "genuinely an equidistribution statement";
+confirms kps-S254/HYP-3125. EH would describe only the r->inf decouple limit (HYP-3127 Gaussian) -- irrelevant for
+r<=6. Honest gap: per-row exact + uniform mechanism; a finite constant-chase makes it a theorem for ALL (R,Q).
+Concurrency: same-machine kps-S254 ran simultaneously and grabbed HYP-3128; I deferred, renamed my result 3128->3129
+(its auto-checkpoint swept my files into commits dbcc2f7ae/1fa4b2563). The two are complementary (Asano OBSTRUCTION +
+elementary equidistribution CERTIFICATE = same conclusion from both sides).
+
 ## kind-pasteur-2026-06-27-S254 -- LRC(14) loneliness = danger-count partition function; the Lee-Yang DICHOTOMY + the rigorous Asano OBSTRUCTION (HYP-3128)
 
 Owner TOOL-2: frame the loneliness measure `∫ ∏_s φ_s` as a PARTITION FUNCTION and find an
