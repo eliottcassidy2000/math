@@ -4292,6 +4292,70 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-246, LTI-245, LTT-147, LTT-146, LTT-145, LTT-144, LTT-143, T1188,
   T1187, T1186, T1184, OPEN-Q-108.
 
+### LTT-153: Niche Archive Bridge Ledger
+
+- **Move:** Treat older niche work as candidate packet columns, then rank
+  those columns by a proof-carrier tournament.  Vertices are archive carriers
+  such as endpoint `Phi`/`P` activation fields, normalized interval floors,
+  LMR/magnitude/Horn/protected-branch gates, denominator-center profiles,
+  ET/Hensel fibers, CRT gear states, finite resonance atlases, endpoint
+  cocycles, coordinate-resurrection cover ranks / adjoint sections / concept
+  intents, relation-lattice walls, and automatic-shadow guardrails.
+- **LRC use:** HYP-3119/S269 merges the current HYP-3114 approximation route
+  and HYP-3115 root-lattice/Ising route with older failed or half-successful
+  threads; incoming HYP-3116 supplies the missing-input vector and
+  proof-carrier gate stack, incoming HYP-3117 supplies the proof-circuit packet
+  id, and incoming HYP-3118 supplies destroyed-coordinate vectors, repair-cover
+  ranks, adjoint sections, and concept intents for circuit-like shortcuts.
+  The S266/S267 update makes the key pairwise observable whether a
+  carrier preserves the LRC witness/observer-gluing/finite-address predicate
+  while feeding, lower-bounding, or repairing the HYP-2108/HYP-2112 endpoint
+  `Phi`/`P` activation circuit, then passing LMR, magnitude, Horn-closure, and
+  protected-branch checks.  The top result is practical: carry endpoint
+  activation and gate fields while moving HYP-3114 from raw direct-time
+  intervals to THM-565 slow/ruler intervals with HYP-2866 denominator-center
+  profiles, and move HYP-3115 wall classification through ET/Hensel,
+  CRT `2x7`, finite L7 resonance, repair-sheaf, and endpoint-kernel packet
+  fields.
+- **Preserves:** endpoint activation vector, `Phi` gap sum, `P` max
+  activation, LMR terminal state, magnitude cocycle, Horn closure,
+  protected-branch/no-naked-bridge status, endpoint-period numerator sidecar,
+  normalized interval floor, slow/ruler component word, denominator-center
+  prefix budget, ET+unit/Hensel fiber key, zero-root scale debt,
+  CRT `c=7,c=2` lift status, apex-stuck flag, low-denominator resonance id,
+  odometer rowdef word, anti-Bohr endpoint cocycle, relation-wall class,
+  proof-circuit missing-input vector, proof-circuit packet id,
+  coordinate-resurrection cover rank, adjoint-section status, concept intent,
+  and Ising domain-wall id.
+- **Forgets / guardrail:** raw direct-time length, named irrational or
+  transcendental constants, generic continued-fraction quality, raw Ising
+  wall counts, or a bare "CRT checked" flag are not proof carriers.  Each is
+  legal only after the missing endpoint owner, endpoint activation vector,
+  `Phi` kernel status, LMR wall state, magnitude cocycle, Horn sidecar
+  closure, protected branch status, normalized coordinate, Hensel unit root,
+  gear state, resonance id, proof-circuit missing-input vector,
+  proof-circuit packet id, coordinate-resurrection cover rank, adjoint
+  section, concept intent, or exceptional approximant list is retained.
+- **Tournament readout:** S269 is transitive:
+  `endpoint_phi_p_activation_circuit -> normalized_interval_denominator_center
+  -> et_hensel_fiber_zipper -> crt_level7_gear ->
+  finite_l7_resonance_odometer -> anti_bohr_boundary_cocycle ->
+  relation_lattice_ising_wall -> ostrowski_automatic_shadow ->
+  raw_direct_time_named_constants`, with weighted scores
+  `90,78,75,70,61,59,58,47,15`, score histogram `{0:1,...,8:1}`, no directed
+  3-cycles, singleton SCCs, and one Hamiltonian path.
+- **Next hook:** Build the two joined S269 scouts: normalized interval plus
+  endpoint activation/proof-carrier gates and denominator-center profiles over
+  HYP-3114/HYP-3098 rows, and ET/Hensel plus
+  CRT/resonance/missing-input/proof-circuit/coordinate-resurrection fields over
+  HYP-3098/HYP-3112 packets, HYP-3115 one-swap Ising domain walls, and
+  endpoint kernels.
+- **Pointers:** HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3098,
+  HYP-3082, HYP-3077, HYP-3024, HYP-3023, HYP-3020, HYP-3009, HYP-2995,
+  HYP-2866, HYP-2737, HYP-2730, HYP-2676, HYP-2108, HYP-2109, HYP-2112,
+  HYP-2081, HYP-2073, HYP-2072, THM-575, THM-565, THM-573,
+  LTI-255, LTI-251, LTI-250, LTT-153, LTT-149, LTT-148, T1194, OPEN-Q-108.
+
 ### LTT-149: Irrational/Transcendental Approximation Witness-Margin Sidecar
 
 - **Move:** Treat approximation data as proof-carrier sidecars only after an

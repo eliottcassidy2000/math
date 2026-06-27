@@ -65,6 +65,64 @@ first" gauge, so finite fitted classifiers such as `apex7_error<=5` remain
 missing-input alarms, not proof.  Next pull: build a HYP-2963 row ledger with `Phi`, `P`,
 endpoint-owner, `L/M/R`, magnitude-cocycle, root/ear, Horn-closure,
 protected-branch, proof-depth, uniform-family, and terminal-exit fields.
+augment LRC proof attempts, especially through circuit complexity.  Reserved
+HYP-3116/T1191/LTI-252/LTT-150 as a circuit lower-bound / missing-input ledger
+rather than another scalar-complexity analogy.  The lane will mine the old
+staircase Boolean-circuit and Walsh/carry work, observer-gluing and
+finite-address proof-DAG ledgers, Savitch midpoint sidecars, route-center
+median ledgers, and HYP-3115's finite-bank circuit warning.  Guardrail:
+finite fitted classifiers such as `apex7_error <= 5` are signals only until a
+uniform circuit basis, essential-input set, certificate minterms, and
+missing-input vector are recorded.
+## codex-2026-06-27-S269 -- Niche archive bridge ledger -- HYP-3119
+
+User asked to search through niche past work for further connections that
+augment LRC proof attempts and help close them.  Rebased to current
+`origin/main`, integrated incoming HYP-3114/HYP-3115, then fetched incoming
+HYP-3116 circuit lower-bound / missing-input work, incoming HYP-3117
+proof-circuit past-work recompilation, and incoming HYP-3118
+coordinate-resurrection sheaf work; renumbered this archive bridge to
+HYP-3119/T1194/LTI-255/LTT-153.  Mined older
+threads around bounded-denominator failure, THM-565 normalized intervals,
+HYP-2866 denominator-center budgets, HYP-3020/HYP-3024 discrepancy/Hensel
+zippers, HYP-2072/HYP-2073 CRT gear descent, HYP-2730/HYP-2737 finite L7
+resonance/odometer data, anti-Bohr endpoint/cocycle lanes, and
+Ostrowski/automatic shadows.
+
+Added `04-computation/lrc14_niche_archive_bridge_ledger_codex_s269.py` with
+stored output in
+`05-knowledge/results/lrc14_niche_archive_bridge_ledger_codex_s269.out`, plus
+HYP-3119/T1194/LTI-255/LTT-153.  The scout ranks archive carriers by whether
+they preserve the LRC predicate, repair known quotient failures, stay
+finite-checkable, compress packet fibers, integrate HYP-3114/HYP-3115, and
+name destroyed coordinates.  After a later rebase over the S266b augmentation
+of HYP-3116, the ledger promotes the HYP-2108/HYP-2112 endpoint `Phi`/`P`
+activation circuit to the gating spine: archive carriers are proof-facing only
+if they feed, lower-bound, or repair that activation circuit, or name the first
+missing input as residual debt.  Tournament Analysis is transitive with
+priority path `endpoint_phi_p_activation_circuit ->
+normalized_interval_denominator_center -> et_hensel_fiber_zipper ->
+crt_level7_gear -> finite_l7_resonance_odometer ->
+anti_bohr_boundary_cocycle -> relation_lattice_ising_wall ->
+ostrowski_automatic_shadow -> raw_direct_time_named_constants`.
+After another rebase over the completed S266 proof-carrier synthesis and S267
+coordinate-resurrection scout, S269's packet schema now also carries
+`LMR_terminal_state`, `magnitude_cocycle`, `horn_sidecar_closure_status`,
+`protected_branch_graph_status`, `no_naked_bridge_certificate`,
+`destroyed_coordinate_vector`, `repair_cover_rank`,
+`adjoint_section_status`, and `concept_lattice_intent_id`.
+
+The proof-frontier handoff is two tasks to work back and forth.  First,
+attach endpoint `Phi`/`P` activation fields to HYP-3114 direct-time intervals,
+upgrade them to THM-565 slow/ruler coordinates, and test HYP-2866
+denominator-center prefix profiles as lower bounds on `Phi`.  Second, attach
+ET/Hensel, CRT `2x7`, finite L7 resonance, HYP-3116 missing-input and
+proof-carrier gate fields, HYP-3117 proof-circuit packet ids, and HYP-3118
+coordinate-resurrection cover ranks / adjoint sections / concept intents to
+HYP-3098/HYP-3112 packets, then use those fields to classify HYP-3115
+one-swap Ising domain-wall edges and endpoint kernels.  Updated OPEN-Q-108 and the
+results/technique/tournament indexes so this bridge is findable from the
+active proof backlog.
 
 Completed the executable audit
 `04-computation/lrc14_circuit_missing_input_ledger_codex_s266.py` with stored

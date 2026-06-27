@@ -81,6 +81,8 @@ theta/crystallographic sidecar ledger / De Moivre fold / theta tail / orbifold q
 Minkowski/circuit/Ising carrier ledger / q-lattice body / proof DAG / partition-zero geometry
 Minkowski/circuit/Ising/PDE compiler / weak-form zero modes / proof-DAG sidecar gates
 circuit-certificate vector / Phi exact gap / endpoint P sign / LMR wall state / magnitude cocycle / Horn closure / protected branch terminal
+coordinate-resurrection sheaf / destroyed-coordinate cover / adjoint section / concept-lattice intent
+niche archive bridge ledger / endpoint Phi-P gate / normalized interval / ET-Hensel zipper / CRT-2x7 resonance
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -389,6 +391,7 @@ record what it destroys before asking it to prove anything.
 | LTI-251 | Irrational/transcendental approximation witness-margin sidecar | Positive witness interval, endpoint distance, max-speed margin, continued-fraction convergents, irrationality-measure class, exceptional approximants, Liouville spike schedule, denominator-shell grid hit | HYP-3114/S265 imports irrational and transcendental approximation only through a retained LRC margin: if `t` is a witness with margin `delta`, then every `p/q` with `|t-p/q|<delta/max(s_i)` is also a witness.  The exact scout finds AP13 has no positive component, while `AP12_tail84`, divisor-loaded `loaded_B6`, and `single_tail168` have widest direct-time lengths `3/1960`, `1/5880`, and `23/11760`; named algebraic/transcendental/Liouville-like constants hit those intervals only as sidecar examples.  Algebraic irrational targets can use Roth/Hurwitz finite-exception fences only with height and exceptional approximants; transcendental targets require explicit irrationality-measure or approximation-sequence sidecars; Liouville-type targets warn about lacunary denominator spikes.  This extends HYP-3062 and HYP-3075 while connecting to HYP-3088/HYP-3089 denominator-grid repair and HYP-3112 ear payloads. | HYP-3114, HYP-3112, HYP-3111, HYP-3109, HYP-3108, HYP-3098, HYP-3096, HYP-3089, HYP-3088, HYP-3075, HYP-3062, HYP-2866, THM-575, THM-565, THM-573, T1190, T1188, LTT-149, LTT-147, LTI-251, LTI-249, OPEN-Q-108 | Extend the exact interval-margin scout from direct-time named rows to THM-565 normalized slow/ruler-coordinate rows.  Emit `witness_interval`, `endpoint_margin`, `max_speed`, `robust_approximation_radius`, `grid_hit_bound`, `continued_fraction_first_hit`, `partial_quotient_spike`, `irrationality_measure_status`, `exceptional_approximant_list`, `liouville_spike_schedule`, destroyed coordinate, and terminal exit into HYP-3098/HYP-3112 packet rows. |
 | LTI-252 | Circuit missing-input kernel / proof-carrier certificate vector | Endpoint-cover activations, `Phi` gap sum, `P` max activation, proof-circuit inputs, essential-input sets, certificate minterms, missing-input vectors, repair covers, typed sidecar gates: HYP-2112 `Phi`, HYP-2108 endpoint-cover `P`, HYP-2109 `L/M/R`, HYP-3023 magnitude cocycle, HYP-3077 Horn closure, HYP-3082 protected branch graph | HYP-3116/S266 turns circuit complexity into a proof-facing missing-input discipline.  The broad audit models `LRC14Statement` as a shallow monotone proof circuit with `12` essential inputs and minterms `direct_witness`, `ap_gw_boundary`, or `finite_address AND observer_gluing AND endpoint_owner AND uniformity AND X`; ten tempting shortcuts close `0/10`, led by missing `finite_address`, `observer_gluing`, `endpoint_owner`, and `uniformity`.  The augmented endpoint-cover ledger mines `13` proof gates and ranks HYP-2112's `endpoint_phi_sum_gap` first: `P(S)` from HYP-2108 is the max activation and `Phi(C)=G(v)` from HYP-2112 is the sum activation equal to the exact gap.  The companion proof-carrier scout ranks typed sidecar gates by `(input_packet_schema, gate_basis, sidecar_closure, exact_gap_functional, route_purity, bridge_safety, uniform_family_parameter, terminal_exit)` and finds `38` edge flips against "smallest circuit first". | HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3109, HYP-3108, HYP-3107, HYP-3098, HYP-3083, HYP-3082, HYP-3077, HYP-3074, HYP-3054, HYP-3023, HYP-3016, HYP-2997, HYP-2991, HYP-2989, HYP-2981, HYP-2974, HYP-2791, HYP-2790, HYP-2744, HYP-2112, HYP-2109, HYP-2108, HYP-2963, THM-572, T1191, LTT-150, LTI-252, OPEN-Q-108 | Add `endpoint_cover_activation_vector`, `phi_gap_sum`, `phi_kernel_status`, `P_max_activation`, `simultaneous_resonance_winding_word`, `boolean_mobius_low_depth_cut`, `endpoint_period_numerator_sidecar`, `proof_circuit_missing_input_vector`, `proof_uniformity_schema`, `finite_address_packet`, `observer_gluing_certificate`, `Phi_gap`, `P_sign`, endpoint-owner word, `LMR_terminal_state`, `magnitude_cocycle`, Horn closure, protected-branch status, uniform-family parameter, `minimal_certificate_minterm`, `repair_cover`, and `terminal_exit_or_named_debt` to HYP-2963/HYP-3098/HYP-3107 rows before accepting a low-depth shortcut. |
 | LTI-254 | Coordinate-resurrection sheaf and adjoint repair calculus | Destroyed-coordinate ledger, minimal sidecar repair covers, concept-lattice intents, adjoint quotient/section pairs, bottleneck proof coordinates, theorem-to-signal map | HYP-3118/S267 executes the next abstraction after HYP-3116/HYP-3117: a quotient is useful only with the smallest legal sidecar, adjoint map, or sheaf section that resurrects the coordinate needed by the next proof obligation.  The scout models `17` sidecars and `11` shortcuts.  Base stalk is `finite_address + observer_gluing + endpoint_owner + uniformity`; live sections are root/ear, relation-lattice, component, cocycle, state-lift, and PDE carriers.  Scalar-like shortcuts require size-`4` repair covers (`40` minimal choices), live-section shortcuts require size-`3` covers, and the global proof route has `40` minimal covers.  It also maps Savitch, Bravais, Lee-Yang/PGF roots, `phi4`, and directed/odd/nested ears to new measurable signals. | HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3108, HYP-3107, HYP-3102, HYP-3098, HYP-3083, HYP-2963, T1193, LTT-152, LTI-254, OPEN-Q-108 | Add `destroyed_coordinate_vector`, `coordinate_resurrection_cover`, `adjoint_section_status`, `repair_cover_rank`, `concept_lattice_intent_id`, `core_stalk_presence`, `live_section_type`, `observer_ear_certificate_type`, `midpoint_certificate_depth_profile`, `pgf_zero_trajectory_signature`, `bravais_shape_wall_signature`, and `terminal_exit_or_named_debt` fields before promoting any scalar quotient. |
+| LTI-255 | Niche archive bridge ledger | Archive proof carriers and packet columns: endpoint `Phi`/`P` activation circuit, LMR/magnitude/Horn/protected-branch gates, normalized interval/denominator-center, ET+unit/Hensel zipper, CRT `2x7` gear, finite L7 resonance atlas, anti-Bohr endpoint cocycle, coordinate-resurrection cover ranks and concept intents, relation-lattice/Ising/circuit missing-input walls, Ostrowski automatic shadows | HYP-3119/S269 searches older proof-frontier work for connections that materially augment the current HYP-3114/HYP-3115 route.  After integrating the S266/S267 augmentations, the scout ranks carriers by whether they preserve the LRC predicate, repair known quotient failures, feed or lower-bound the exact HYP-2108/HYP-2112 endpoint `Phi`/`P` activation circuit, pass HYP-2109/HYP-3023/HYP-3077/HYP-3082 gate checks, compress packet fibers, integrate current approximation/root-lattice sidecars, and control destroyed coordinates.  It puts endpoint activation first, normalized THM-565 intervals plus HYP-2866 denominator-center profiles second, HYP-3020/HYP-3024 ET/Hensel zipper third, and CRT `14 -> 7 -> 2` gear fourth; raw direct-time named constants are last.  Incoming HYP-3116 supplies endpoint missing-input and proof-carrier gate fields, HYP-3117 supplies the proof-circuit packet id, and HYP-3118 supplies destroyed-coordinate vectors, cover ranks, adjoint sections, and concept intents. | HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3098, HYP-3082, HYP-3077, HYP-3024, HYP-3023, HYP-3020, HYP-2866, HYP-2730, HYP-2072, HYP-2108, HYP-2109, HYP-2112, THM-565, THM-573, T1194, LTT-153, LTI-255, OPEN-Q-108 | Build two joined scouts: endpoint activation/proof-carrier gates plus normalized interval/denominator-center profiles over HYP-3114/HYP-3098 rows, and ET/Hensel plus CRT/resonance/proof-circuit/coordinate-resurrection fields over HYP-3098/HYP-3112 packets, HYP-3115 one-swap Ising domain walls, and endpoint kernels. |
 
 ## Cross-Cutting Guardrails
 
@@ -2234,6 +2237,73 @@ packet fields for HYP-2963/HYP-3098/HYP-3107/HYP-3112 rows.  Add
 `midpoint_certificate_depth_profile`, `pgf_zero_trajectory_signature`,
 `bravais_shape_wall_signature`, `quartic_moment_wall_profile`, and
 `terminal_exit_or_named_debt`.
+
+### 82. LTI-255 Niche Archive Bridge Ledger
+
+Sources: HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3098,
+HYP-3082, HYP-3077, HYP-3024, HYP-3023, HYP-3020, HYP-3009, HYP-2995,
+HYP-2866, HYP-2737, HYP-2730, HYP-2676, HYP-2112, HYP-2109, HYP-2108,
+HYP-2081, HYP-2073, HYP-2072, THM-575, THM-565, THM-573.
+
+Carrier / vertex set: archive proof carriers and packet columns, not runners,
+named constants, raw denominators, or raw roots.  The S269 vertices are
+`endpoint_phi_p_activation_circuit`,
+`normalized_interval_denominator_center`, `et_hensel_fiber_zipper`,
+`crt_level7_gear`, `finite_l7_resonance_odometer`,
+`anti_bohr_boundary_cocycle`, `relation_lattice_ising_wall`,
+`ostrowski_automatic_shadow`, and `raw_direct_time_named_constants`.
+
+Pairwise observable / gauge: orient an edge toward the carrier that better
+preserves the LRC predicate, repairs a known quotient failure, remains
+finite-checkable, compresses HYP-2963/HYP-3098 packet fibers, integrates
+HYP-3114/HYP-3115, feeds or lower-bounds the endpoint `Phi`/`P` activation
+circuit, passes LMR/magnitude/Horn/protected-branch gates when needed, and
+names the coordinate it destroys.
+
+Preserves: endpoint activation vector, `Phi` gap sum, `P` max activation,
+LMR wall state, magnitude cocycle, Horn sidecar closure,
+protected-branch/no-naked-bridge status, endpoint-period numerator sidecar,
+normalized witness intervals, denominator-center prefix budgets,
+ET+unit/Hensel fiber keys, CRT `2x7` lift states, finite low-denominator L7
+resonance ids, anti-Bohr endpoint/cocycle payloads, and relation-lattice or
+Ising wall classes plus HYP-3116 missing-input vectors, HYP-3117
+proof-circuit packet ids, and HYP-3118 destroyed-coordinate vectors,
+coordinate-resurrection cover ranks, adjoint-section status, and concept
+intents before they feed observer-gluing or finite-address exits.
+
+Destroyed information: raw time, endpoint owner, endpoint activation vector,
+`Phi` kernel status, LMR wall state, magnitude cocycle, Horn sidecar closure,
+protected branch status, normalized coordinate, Hensel unit root, CRT gear
+state, low-denominator resonance id, relation wall class, proof-circuit
+missing-input vector, proof-circuit packet id, coordinate-resurrection cover
+rank, adjoint section, concept intent, exceptional approximant list, and
+automatic/Ostrowski endpoint debt unless explicitly retained.
+
+Best use: work two proof obligations back and forth.  First, upgrade
+HYP-3114 direct-time interval rows to THM-565 slow/ruler coordinates, attach
+endpoint activation fields, and test HYP-2866 denominator-center prefix
+majorization as a lower bound on `Phi`.  Second, add ET/Hensel, CRT `2x7`,
+finite L7 resonance, HYP-3116 missing-input/proof-carrier gates, HYP-3117
+proof-circuit, and HYP-3118 coordinate-resurrection cover-rank / adjoint /
+concept-intent fields to
+HYP-3098/HYP-3112 packets and compare them with HYP-3115 Ising domain-wall
+edges and endpoint kernels.
+
+Tournament fingerprint: S269 is transitive, with weighted scores
+`90,78,75,70,61,59,58,47,15`, score histogram `{0:1,...,8:1}`, no directed
+3-cycles, singleton SCCs, and one Hamiltonian path:
+`endpoint_phi_p_activation_circuit -> normalized_interval_denominator_center
+-> et_hensel_fiber_zipper -> crt_level7_gear ->
+finite_l7_resonance_odometer -> anti_bohr_boundary_cocycle ->
+relation_lattice_ising_wall -> ostrowski_automatic_shadow ->
+raw_direct_time_named_constants`.
+
+Failure mode: treating the archive as analogy rather than packet data.  Raw
+direct-time intervals, named irrational/transcendental constants, a generic
+continued-fraction slogan, a scalar Ising wall, or a CRT "checked" flag are
+not proof carriers unless the missing endpoint activation, endpoint owner,
+LMR/magnitude/Horn/protected-branch gate, normalized, Hensel, gear, resonance,
+proof-circuit input, and coordinate-resurrection coordinates are named.
 
 ### 72. LTI-243 Tournament Obstruction-Transfer Atlas
 

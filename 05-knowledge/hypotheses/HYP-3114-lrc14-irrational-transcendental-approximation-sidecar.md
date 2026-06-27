@@ -7,6 +7,7 @@ tangent: T1190
 technique: LTI-251
 tournament_technique: LTT-149
 related:
+  - HYP-3119
   - HYP-3115
   - HYP-3113
   - HYP-3112
@@ -181,6 +182,11 @@ exception list, and finite packet coordinate that survives the quotient.
 Post-rebase HYP-3115 supplies the exact anchored-bank
 Minkowski/circuit/Ising/De Moivre bridge that can test whether approximation
 sidecars align with relation pressure, root strata, and proof-circuit gates.
+Post-rebase HYP-3119 adds the niche archive bridge: direct-time intervals
+should now be upgraded to THM-565 normalized slow/ruler intervals with
+HYP-2866 denominator-center prefix profiles, then joined to ET/Hensel, CRT
+`2x7`, and finite L7 resonance fields before any approximation sidecar is
+treated as proof evidence.
 
 ## Assumption Challenge
 

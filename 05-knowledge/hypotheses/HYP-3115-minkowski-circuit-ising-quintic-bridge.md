@@ -8,6 +8,9 @@ result: 05-knowledge/results/lrc_minkowski_circuit_ising_quintic_bridge_codex_20
 reflections:
   - minkowski-circuit-ising-quintic-bridge-codex-20260627
 related:
+  - HYP-3119
+  - HYP-3118
+  - HYP-3117
   - HYP-3116
   - HYP-3111
   - HYP-3114
@@ -74,6 +77,12 @@ ear-payload extremality ledger, HYP-3113 owns the two-map root-lattice-ear
 synthesis, and HYP-3114 owns the irrational/transcendental approximation
 sidecar.  This HYP supplies the exact anchored-bank executable subscout that
 links those lanes.
+
+Post-rebase HYP-3119 supplies the niche archive bridge for the next wall
+classification pass: HYP-3115 one-swap Ising domain-wall edges should be
+joined to ET/Hensel fiber keys, CRT `2x7` gear states, finite L7 resonance
+ids, and normalized interval/denominator-center fields before a wall is
+called a legal root collision, observer-gluing exit, or forbidden debt.
 
 ## Exact Scout
 

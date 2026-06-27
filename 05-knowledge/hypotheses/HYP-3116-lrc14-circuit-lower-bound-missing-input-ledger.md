@@ -17,6 +17,7 @@ reflections:
   - lrc14-circuit-lower-bound-missing-input-ledger-codex-s266
   - lrc14-circuit-complexity-past-work-synthesis-codex-s266
 related:
+  - HYP-3119
   - HYP-3117
   - HYP-3115
   - HYP-3114

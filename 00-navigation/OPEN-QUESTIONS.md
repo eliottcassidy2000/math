@@ -68,6 +68,53 @@ exact gap, route-purity split, legal sidecar closure, protected branch
 terminal graph, or named THM-572/F7 debt. -> HYP-3116, HYP-3115, HYP-3111,
 HYP-3109, HYP-3108, HYP-3082, HYP-3077, HYP-3023, HYP-2112, HYP-2109,
 HYP-2108, HYP-2963, THM-572, LTI-252, LTT-150, T1191, OPEN-Q-108.
+**OPEN-Q-108 S269 niche archive bridge addendum:**
+HYP-3119 searches older proof-frontier work for connections that actually
+augment the HYP-3114/HYP-3115 route.  The S269 bridge scout ranks archive
+carriers by preserved LRC predicate, known-failure repair, finite checkability,
+packet compression, HYP-3114/HYP-3115 integration, closure potential,
+destroyed-coordinate control, and whether they feed or lower-bound the exact
+HYP-2108/HYP-2112 endpoint `Phi`/`P` activation circuit while retaining
+LMR wall state, magnitude cocycle, Horn closure, protected-branch status,
+coordinate-resurrection cover rank, adjoint section, and concept intent.
+Priority path:
+`endpoint_phi_p_activation_circuit -> normalized_interval_denominator_center
+-> et_hensel_fiber_zipper -> crt_level7_gear ->
+finite_l7_resonance_odometer -> anti_bohr_boundary_cocycle ->
+relation_lattice_ising_wall -> ostrowski_automatic_shadow ->
+raw_direct_time_named_constants`, with no directed 3-cycles and one
+Hamiltonian path.
+
+Open task: add the archive bridge fields before using any approximation,
+root-locus, CRT, or Ising-wall shortcut as proof evidence.  For HYP-3114 and
+HYP-3098 rows emit `endpoint_cover_activation_vector`, `phi_gap_sum`,
+`phi_kernel_status`, `P_max_activation`,
+`Phi_gap`, `P_sign`, `LMR_terminal_state`, `magnitude_cocycle`,
+`horn_sidecar_closure_status`, `protected_branch_graph_status`,
+`no_naked_bridge_certificate`, `endpoint_period_numerator_sidecar`,
+`uniform_family_parameter`, `normalized_interval_floor_status`,
+`slow_ruler_component_word`, `denominator_center_prefix_profile`,
+`largest_component_farey_center`, and `all_denominator_grid_bound`.  For
+HYP-3098/HYP-3112/HYP-3115 packet rows emit `ET_unit_fiber_key`,
+`hensel_unit_root_status`, `zero_root_scale_debt`, `crt_gear_state_2x7`,
+`crt_c7_lift_status`, `crt_c2_dyadic_lift_status`,
+`l7_ratio_resonance_id`, `odometer_rowdef_word`,
+`destroyed_coordinate_vector`, `coordinate_resurrection_cover`,
+`adjoint_section_status`, `repair_cover_rank`, `concept_lattice_intent_id`,
+`core_stalk_presence`, `live_section_type`, `anti_bohr_boundary_core_id`,
+`endpoint_owner_cocycle_id`, `short_relation_wall_class`,
+`proof_circuit_missing_input_vector`, `proof_circuit_packet_id`,
+`proof_carrier_gate_stack_id`, `coordinate_resurrection_repair_cover`,
+`ising_domain_wall_id`, `residual_kernel_exclusion_certificate`, and terminal
+observer-gluing/finite-address exit.
+The two live computations should be worked back and forth: normalized
+intervals with denominator-center budgets against endpoint `Phi`/`P`
+activation and proof-carrier gates, and ET/Hensel/CRT/resonance fields
+against HYP-3115 one-swap Ising domain-wall edges, endpoint kernels, and
+repair-sheaf covers. -> HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115,
+HYP-3114, HYP-3098, HYP-3082, HYP-3077, HYP-3024, HYP-3023, HYP-3020,
+HYP-2866, HYP-2730, HYP-2072, HYP-2108, HYP-2109, HYP-2112, THM-565,
+THM-573, LTI-255, LTT-153, T1194, OPEN-Q-108.
 
 **OPEN-Q-108 S264b PDE weak-form compiler addendum:**
 HYP-3111's canonical Minkowski/circuit/Ising/De Moivre atlas now has a PDE weak-form supplement.  Exact supplement verifies the De Moivre fold `x=z-a/z => x^5+5*a*x^3+5*a^2*x=z^5-a^5/z^5`, but the new content is the route `Lee-Yang/Ising transfer -> PDE weak form -> endpoint Phi gap -> observer gluing -> finite address`.  Open task: annotate HYP-2963/HYP-3107 residual rows with route type, mass/stiffness/boundary data, zero-mode status, low-height wall deletion status, root/free-energy packet, proof-DAG depth, and finite-address or observer-gluing exit. -> HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, HYP-3101, HYP-3062, HYP-2112, HYP-2108, THM-559, THM-538, OPEN-Q-108.
