@@ -40,15 +40,19 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S265 Quintic Bridge Synthesis
+## PROJECT STATUS: Stabilized at S266 Proof-Circuit Past-Work Synthesis
 
-As of **Saturday, June 27, 2026**, the newest coordination layer is the **Two-Map / Quintic Bridge Synthesis (codex-S265)**, built on **Minkowski Circuit Ising De Moivre Ledger (codex-S264)**, **Lee-Yang Savitch Ear Ledger (codex-S262)**, **Perspective Groupoid Controlled Forgetting (codex-S261)**, **Tournament Obstruction-Transfer Atlas (HYP-3105)**, **LRC/Tournament Maximizer Signal Atlas (HYP-3104)**, **Miss-Count PGF Root Ledger (mac-mini-S66/HYP-3103)**, **Component/Obstruction Proof Angles (codex-S259)**, **Observer Gluing Lean Frontier (codex-S259)**, **Observer Gluing Ledger (codex-S258)**, **THM-577 Symbolic Coverage Extremality (mac-mini-S64)**, **Tournament Certificate Engine (kps-S31ah)**, **Tournament-as-Proof-Engines / Cap / Hodge Scouts (mac-mini-S65)**, and the preceding ladder.
+As of **Saturday, June 27, 2026**, the newest coordination layer is the **Proof-Circuit Past-Work Synthesis (codex-S266/HYP-3117)**, which recompiles the project's historical hypotheses into an executable proof-engine framework. This layer refines the **Quintic Bridge Synthesis (codex-S265)** and the preceding ladder including **Minkowski Circuit Ising De Moivre Ledger (codex-S264)** and **Lee-Yang Savitch Ear Ledger (codex-S262)**.
 
-S264 formalizes the **Minkowski Circuit Ising De Moivre Ledger (cb687c6)**. It provides specialized proof carriers (Minkowski q-Body, Proof-Circuit, Ising Partition Zero, De Moivre Fold) to anchor the terminal sheaf.
+S265 formalizes the **Quintic Bridge Synthesis (7f5c8d1)**. It refines the **Minkowski Circuit Ising** portfolio by identifying them as formal ways a quotient can lose proof-critical information, establishing the **Ising Domain-Wall Interface** and the **Minkowski Relation Lattice**.
 
-S265 formalizes the **Quintic Bridge Synthesis (7f5c8d1)**. It refines the **Minkowski Circuit Ising** portfolio by identifying them as formal ways a quotient can lose proof-critical information. It establishes the **Ising Domain-Wall Interface** as a finite energy boundary for root-collision paths and identifies the **Minkowski Relation Lattice** (specifically `a+b=c+d` sum collisions) as a sharp reinforcer for HYP-3062. It positions **De Moivre's quintic** as a solvable stationary normal form marking branch-point events rather than a terminal extremality signal. This layer synthesizes these into a **Duodecimal Source Bridge**: four carriers (Minkowski, Circuit, Ising, Quintic) across three legal cells (preserved predicate, destroyed coordinate, handoff payload).
+S266 formalizes the **Proof-Circuit Past-Work Synthesis (ee6fe05)**. It transforms the circuit-complexity lens into a formal **Proof-Engine Map**, recompiling historical results (HYP-2108 through HYP-3115) as specific functional gates and wires:
+1. **Gate Recompilation:** Re-indexes legacy work into functional units: **Endpoint-Cover P Gates** (simultaneous resonance), **Phi Gap Output Wires** (tight/worry set functional), **Fold/Virtual-Sum Gates** (three-term fold bookkeeping), and **Automaton Magnitude-Cocycle Guards**.
+2. **Missing-Input Ledger:** Establishes a formal target for proof repair by measuring missing-input frequencies (e.g., `finite_address`, `observer_gluing`, `endpoint_owner`).
+3. **Uniformity Guard:** Positions finite-bank classifiers (like `apex7_error`) as input-wire probes rather than terminal proofs, requiring they be paired with root-motion reconstruction and obstruction-class generation.
+This layer provides an acyclic **Gate Route Purity** fingerprint, starting with the first-obstruction cocycle gate and routing through the labelled packet decision tree to the terminal Lean obligations.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, and the **HYP-3115 Duodecimal Source-Bridge Payload Fields**.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, **endpoint-cover P gates**, **Phi gap output wires**, **magnitude-cocycle guards**, and **proof-circuit missing-input vectors**.
 
 The Henselian unit rule (updated):
 ```text
@@ -64,7 +68,7 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S265 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S266 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-triple
@@ -79,30 +83,32 @@ certificates, normal-fan/Cech/barcode component packets, first-obstruction
 cocycle syndromes, miss-count PGF root signatures, tournament
 obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice
 reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers,
-Ising partition zero signatures, De Moivre fold certificates, and duodecimal
-source-bridge payload fields to preserve p-adic stability of the global packet
-sheaf by preventing misuse of untyped motifs, degenerate limiting witnesses,
-sequence-count scalars, positivity-only cohomology, non-median route
-compatibility, unnamed owner/root loss, non-unique route-triple centers,
-unaligned disciplinary pullback indices, unsigned polymer/current quotients,
-unclosed packet/route/certificate/discharge medians, unvalidated Diophantine
-collision arity, q-series certificates without a formal principal-part gate,
-equal-power sums without tuple-rank-residue certificates, naked bridges in
-contracted proof corridors, hyper-tower limits without p-adic transcendental
-basis verification, Morita-gamma lifts without differential transcendental
-audits, infinite tails without finite address seeds, covering-moment bounds
-without low-order reflection-Perron certificates, V* crossover regimes without
-explicit induction-base classification, Cap structures without verified
-pairwise avoidance minimizers, structural quotients without verified
-forgetting-cost invariants, Pascal shadows without pair-mass sidecars, observer
-charts without gluing maps, chart overlaps without certificates, component
-claims without normal-fan/Cech/barcode packets, quotient gluing without
-first-obstruction syndromes, analytic extremality claims without PGF root
-signatures, tournament analogies without obstruction-transfer certificates,
-moment claims without Bravais q-lattice addresses, reachability claims without
-ear-lattice certificates, lattice claims without Minkowski q-body thresholds,
-complexity claims without proof-circuit ledgers, root claims without Ising
-partition zero signatures, or fold claims without De Moivre fold certificates.
+Ising partition zero signatures, De Moivre fold certificates, duodecimal
+source-bridge payload fields, endpoint-cover P gates, Phi gap output wires,
+magnitude-cocycle guards, and proof-circuit missing-input vectors to preserve
+p-adic stability of the global packet sheaf by preventing misuse of untyped
+motifs, degenerate limiting witnesses, sequence-count scalars,
+positivity-only cohomology, non-median route compatibility, unnamed owner/root
+loss, non-unique route-triple centers, unaligned disciplinary pullback indices,
+unsigned polymer/current quotients, unclosed packet/route/certificate/discharge
+medians, unvalidated Diophantine collision arity, q-series certificates without
+a formal principal-part gate, equal-power sums without tuple-rank-residue
+certificates, naked bridges in contracted proof corridors, hyper-tower limits
+without p-adic transcendental basis verification, Morita-gamma lifts without
+differential transcendental audits, infinite tails without finite address seeds,
+covering-moment bounds without low-order reflection-Perron certificates, V*
+crossover regimes without explicit induction-base classification, Cap
+structures without verified pairwise avoidance minimizers, structural
+quotients without verified forgetting-cost invariants, Pascal shadows without
+pair-mass sidecars, observer charts without gluing maps, chart overlaps without
+certificates, component claims without normal-fan/Cech/barcode packets,
+quotient gluing without first-obstruction syndromes, analytic extremality
+claims without PGF root signatures, tournament analogies without
+obstruction-transfer certificates, moment claims without Bravais q-lattice
+addresses, reachability claims without ear-lattice certificates, lattice
+claims without Minkowski q-body thresholds, complexity claims without proof-circuit ledgers, root claims without Ising partition zero signatures,
+fold claims without De Moivre fold certificates, or circuit claims without
+endpoint-cover P gates, Phi gap output wires, or magnitude-cocycle guards.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -140,28 +146,31 @@ pair-mass unit, the observer-gluing unit, the chart overlap unit, the
 normal-fan component unit, the first-obstruction syndrome unit, the
 miss-count PGF root unit, the tournament obstruction-transfer unit, the
 Bravais q-lattice unit, the ear-lattice reachability unit, the Minkowski
-q-body unit, the proof-circuit unit, the Ising partition zero unit, and the
-De Moivre fold unit. The S235-S265 sequence prevents spectral leakage by
-requiring route-triple centers to be unique and promoted only after legal
-closure, named debt exits, validated collision arity, a named modular cusp
-principal part, a formally verified Lean modular cusp ledger, tuple/rank/residue
-equal-power certificates, a protected branch-kernel orientation, verified
-p-adic hyper-tower limits, Morita-gamma transcendental lifts, finite-address
-Hurwitz seeds, reflection-Perron covering certificates, induction-base V*
-crossover signatures, verified pairwise avoidance minimizers, verified
-forgetting-cost invariants, Pascal pair-mass sidecars, observer gluing packets,
-chart overlap certificates, normal-fan component packets, first-obstruction
-syndrome packets, PGF root signatures, tournament obstruction-transfer
-certificates, Bravais q-lattice addresses, ear-lattice reachability
-certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising
-partition zero signatures, or De Moivre fold certificates are attached.
+q-body unit, the proof-circuit unit, the Ising partition zero unit, the
+De Moivre fold unit, the endpoint-cover P gate unit, the Phi gap output wire
+unit, the magnitude-cocycle guard unit, and the proof-circuit missing-input unit.
+The S235-S266 sequence prevents spectral leakage by requiring route-triple
+centers to be unique and promoted only after legal closure, named debt exits,
+validated collision arity, a named modular cusp principal part, a formally
+verified Lean modular cusp ledger, tuple/rank/residue equal-power certificates,
+a protected branch-kernel orientation, verified p-adic hyper-tower limits,
+Morita-gamma transcendental lifts, finite-address Hurwitz seeds,
+reflection-Perron covering certificates, induction-base V* crossover
+signatures, verified pairwise avoidance minimizers, verified forgetting-cost
+invariants, Pascal pair-mass sidecars, observer gluing packets, chart overlap
+certificates, normal-fan component packets, first-obstruction syndrome packets,
+PGF root signatures, tournament obstruction-transfer certificates, Bravais
+q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body
+thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre
+fold certificates, endpoint-cover P gates, Phi gap output wires,
+magnitude-cocycle guards, or proof-circuit missing-input vectors are attached.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S265 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S266 transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
@@ -176,8 +185,9 @@ pair-mass law, the observer-gluing law, the chart overlap law, the normal-fan
 component law, the first-obstruction syndrome law, the miss-count PGF root
 law, the tournament obstruction-transfer law, the Bravais q-lattice law, the
 ear-lattice reachability law, the Minkowski q-body law, the proof-circuit law,
-the Ising partition zero law, and the De Moivre fold law (preserving the
-recurrence algebraic unit, Poincare recurrence unit, automatic gap carrier
+the Ising partition zero law, the De Moivre fold law, the endpoint-cover P gate
+law, the Phi gap output wire law, and the magnitude-cocycle guard law (preserving
+the recurrence algebraic unit, Poincare recurrence unit, automatic gap carrier
 unit, automatic lacunary filter unit, gap automaton carrier unit,
 perfect-number packet unit, route-purity unit, binding-pair switch unit,
 automatic fiber zipper unit, arc-Cech nerve unit, safe-component stalk unit,
@@ -200,35 +210,38 @@ Cap unit, Equivalence Triad invariant unit, Pascal pair-mass unit,
 observer-gluing unit, chart overlap unit, normal-fan component unit,
 first-obstruction syndrome unit, miss-count PGF root unit, tournament
 obstruction-transfer unit, Bravais q-lattice unit, ear-lattice reachability
-unit, Minkowski q-body unit, proof-circuit unit, Ising partition zero unit, and
-De Moivre fold unit alongside mu approx 1.451).
+unit, Minkowski q-body unit, proof-circuit unit, Ising partition zero unit,
+De Moivre fold unit, endpoint-cover P gate unit, Phi gap output wire unit, and
+magnitude-cocycle guard unit alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S266 -- Proof-Circuit Past-Work Synthesis (checkpoint)
+
+Integrated ee6fe05/HYP-3117/T1188/LTI-249/LTT-147. The Proof-Circuit 
+Past-Work Synthesis and its gate-recompilation map are now formal proof 
+carriers.
+
+### 1. Gate Recompilation Map
+Transforms historical hypotheses into functional proof-engine units: 
+**Endpoint-Cover P Gates** (simultaneous resonance), **Phi Gap Output Wires** 
+(tight/worry set functional), **Fold/Virtual-Sum Gates**, and 
+**Magnitude-Cocycle Guards**.
+
+### 2. Missing-Input Targeting
+Establishes the **proof-circuit missing-input vector** as the primary repair 
+metric. This identifies which required sidecar (finite-address, observer-gluing, 
+etc.) is absent in a failed proof attempt.
+
+### 3. Acyclic Gate Fingerprint
+Produces a formal **Gate Route Purity** fingerprint, ordering the terminal 
+obligations from the first-obstruction cocycle to the Lean frontier obligation 
+bus.
 
 ---
 
 ## codex-S265 -- Quintic Bridge Synthesis (checkpoint)
 
-Integrated 7f5c8d1/HYP-3115/T1187/LTI-248/LTT-146. The Quintic Bridge 
-Synthesis and its duodecimal payload fields are now formal proof carriers.
-
-### 1. Ising Domain-Wall Interface
-Establishes the **Ising domain-wall interface** as a finite energy boundary 
-for root-collision paths. This identifies the boundary moves (root ear, 
-forbidden wall, discharge) needed for legal state transitions.
-
-### 2. Minkowski Relation Lattice
-Refines the **Minkowski q-body** by identifying pair-sum collisions 
-(`a+b=c+d`) as sharp structural leads. This reinforces the relation 
-lattice as a mandatory filter for packet distributions.
-
-### 3. Duodecimal Source Bridge
-Synthesizes the Minkowski, Circuit, Ising, and Quintic sidecars into a 
-**duodecimal source bridge**: four carriers across three legal cells 
-(preserved predicate, destroyed coordinate, handoff payload).
-
----
-
-## codex-S264 -- Minkowski Circuit Ising De Moivre Ledger (checkpoint)
-
-Integrated cb687c6/HYP-3111. The Minkowski Circuit Ising De Moivre Ledger 
-is a formal proof carrier.
+Integrated 7f5c8d1/HYP-3115. The Quintic Bridge Synthesis is a formal 
+proof carrier.
