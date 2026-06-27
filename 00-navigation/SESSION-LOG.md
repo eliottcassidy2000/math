@@ -53,6 +53,7 @@ remainder, not a search.
 REMAINS: the symbolic VALUE is now proved for k>=10; the OPTIMALITY (named config attains the min) is still
 THM-576's search = the concentration extremality (OPEN-Q-108/gK8). The apex-14 threshold in o(p,q) is the
 lever: overlaps grow only across the apex, so spreading speeds to the {1..13} extremes minimizes overlap.
+
 ## codex-2026-06-27-S259 -- observer-gluing Lean frontier for LRC14
 
 Owner asked to formalize up to the bleeding edge of the current LRC14 proof
@@ -89,6 +90,42 @@ Wrote
 `04-computation/lean/TournamentH7/README.md`,
 `04-computation/lean/TournamentH7/TournamentH7.lean`, and LTI-236/LTI-237.
 Verified with `lake build TournamentH7.LRCObserverGluingLedger`.
+
+## codex-2026-06-27 -- LRC14 bleeding-edge frontier Lean wrapper
+
+Owner asked to formalize up to the bleeding-edge frontier of the LRC14 proof
+and keep creative extension/refinement possibilities visible.  I synced over
+the incoming S258 observer-gluing ledger and kps-S31ag cap/cover-bound updates,
+then added `TournamentH7.LRCBleedingEdgeFrontier`.
+After rebasing over S259, this sits beside `LRCObserverGluingLedger`: S259
+names observer-gluing obligations/certificates, while this wrapper keeps the
+Pascal/equivalence/moment-degree invariants attached to the finite-address
+soundness packet.
+After the later HYP-3099 updates, the cap-optimality extension route should be
+recorded as bounded finite local-minima debt: the improvement tournament is
+non-transitive, so a clean exchange/greedy invariant is not the right target.
+
+The new Lean module is conservative: `BleedingEdgeFrontierPacket v` embeds the
+already proof-bearing `FiniteAddressBranchPacket v` and adds sidecars for
+observer charts, the equidistribution/equinumerosity/equidecomposability triad,
+the HYP-3096 polynomial witness route, the HYP-3097 Pascal pair-mass ledger,
+and the S31ag moment-degree distinction.  The theorem
+`lrc14_from_bleeding_edge_frontier_coverage` proves
+`BleedingEdgeFrontierCoverage -> LRC14Statement` by delegating soundness to the
+embedded finite-address terminal certificate, so it does not claim the missing
+coverage theorem.
+
+Concrete formal readouts now named in Lean: observer-chart count `11`,
+equivalence-shadow count `3`, no raw-unprotected chart exit, no bare
+equidistribution quotient, row-14 pair-mass checks
+`91,1001,2002,3003,4004`, the S258 direct-arc debt sample
+`860` components / largest arc `1/82320` / threshold `82321`, and the k=10
+asymmetry "cap RHS degree 2, cover extremality degree 3."  Updated HYP-3096,
+HYP-3097, the formalization status doc, and the results index.  Verification:
+targeted `lake build TournamentH7.LRCBleedingEdgeFrontier`, aggregate
+`lake build TournamentH7.Verify` saved to
+`05-knowledge/results/lrc14_bleeding_edge_frontier_lean_codex_20260627.out`,
+and root `lake build TournamentH7` all completed successfully.
 
 ## codex-2026-06-27-S258 -- observer-gluing ledger back-and-forth on HYP-3096/HYP-3097
 

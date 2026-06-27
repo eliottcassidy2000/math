@@ -107,6 +107,11 @@
                                       ledger joining direct-arc, normalized
                                       arc, pair-scissors, CRT/Farey, and
                                       finite-address terminal certificates.
+    · TournamentH7.LRCBleedingEdgeFrontier — observer-gluing frontier wrapper
+                                      joining equivalence-triad, Pascal
+                                      pair-mass, polynomial-route, and
+                                      moment-degree sidecars to the
+                                      finite-address packet.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -194,4 +199,5 @@ import TournamentH7.LRCApexShell
 import TournamentH7.LRCModularCuspLedger
 import TournamentH7.LRCFiniteAddressBranchClosure
 import TournamentH7.LRCObserverGluingLedger
+import TournamentH7.LRCBleedingEdgeFrontier
 import TournamentH7.Verify

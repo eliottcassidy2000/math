@@ -234,6 +234,42 @@ antipodal-tie case reduces to `False` under `chartIsTerminal`, proved by
 `coarseWinding_degenerate_not_terminal`.  Thus coarse mod-14 H is formally a
 shadow unless a fine-scale tournament or packet-scissors sidecar is retained.
 
+## Lean Frontier Wrapper, 2026-06-27
+
+`TournamentH7.LRCBleedingEdgeFrontier` now gives this equivalence-triad idea a
+machine-checked packet shape.  It introduces:
+
+```text
+ObserverChartKind
+EquivalenceShadow
+EquivalenceTriadLedger
+PascalPairMassLedger
+CoverBoundMomentDegreeLedger
+BleedingEdgeFrontierPacket
+```
+
+The proof-bearing pieces are guardrails, not a new LRC proof.  Each
+`ObserverChartLedger` proves it is not using the illegal `raw_unprotected`
+exit; `EquivalenceTriadLedger` proves equidistribution is not used as a bare
+scalar quotient; and `PascalPairMassLedger` proves the row-14 checksum
+
+```text
+C(14,2)=91
+1001=11*91
+2002=22*91
+3003=33*91
+4004=44*91=1001+3003
+```
+
+The same module also records the S31ag moment-degree asymmetry as a formal
+field: at `k=10`, the cap RHS is still degree-2/pairwise, but the cover-bound
+extremality LHS is marked `degree3_needed`.  This is the Lean version of the
+main creative test: equal Pascal cap shadows are not proof equivalence until
+the sector-pair scissors packet and moment-degree debt are attached.  HYP-3099
+adds the matching tournament warning: the cap-improvement tournament is
+non-transitive, so the Pascal shadow should feed a bounded local-minima
+certificate rather than a presumed exchange proof.
+
 ## Tournament Analysis
 
 Vertices are invariant shadows and proof packets, not runners:

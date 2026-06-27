@@ -72,8 +72,24 @@ import TournamentH7.LRCWitnessPartA
 import TournamentH7.LRCL7Discrepancy
 import TournamentH7.LRCApexShell
 import TournamentH7.LRCTournamentStateLift
+import TournamentH7.LRCBleedingEdgeFrontier
 
 open Tournament
+
+/-! ### LRC14 bleeding-edge frontier observer packet -/
+
+theorem lrc14_bleeding_edge_frontier_packet_mreach_audit
+    {v : Fin 13 → ℤ}
+    (packet : LonelyRunner.LRC14.BleedingEdgeFrontierPacket v) :
+    (1 : ℝ) / 14 ≤ LonelyRunner.LRC14.Mreach v :=
+  LonelyRunner.LRC14.bleedingEdgeFrontierPacket_mreach packet
+#print axioms lrc14_bleeding_edge_frontier_packet_mreach_audit
+
+theorem lrc14_from_bleeding_edge_frontier_coverage_audit
+    (hcoverage : LonelyRunner.LRC14.BleedingEdgeFrontierCoverage) :
+    LonelyRunner.LRC14.LRC14Statement :=
+  LonelyRunner.LRC14.lrc14_from_bleeding_edge_frontier_coverage hcoverage
+#print axioms lrc14_from_bleeding_edge_frontier_coverage_audit
 
 /-! ### LRC14 denominator-14 binding-pair arithmetic -/
 

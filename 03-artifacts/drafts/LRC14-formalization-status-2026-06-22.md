@@ -35,6 +35,31 @@ producer target `ObserverGluingCoverage`.  The module is conservative over
 data is not a terminal proof carrier without fine-scale sidecars or an
 independent discharge.
 
+**2026-06-27 follow-up update (Codex):** `TournamentH7.LRCBleedingEdgeFrontier`
+now target-builds and is root-imported.  It is a conservative wrapper, not a
+new proof of LRC14: `BleedingEdgeFrontierPacket v` contains the existing
+proof-bearing `FiniteAddressBranchPacket v` plus observer-chart,
+equivalence-triad, polynomial witness-route, Pascal pair-mass, and
+moment-degree sidecars.  The new theorem
+`lrc14_from_bleeding_edge_frontier_coverage :
+BleedingEdgeFrontierCoverage -> LRC14Statement` is sorry-free because it
+delegates soundness to the embedded finite-address packet's terminal
+`Mreach >= 1/14` certificate.  The root `TournamentH7` target and
+`TournamentH7.Verify` both build after the import; the saved audit transcript
+is `05-knowledge/results/lrc14_bleeding_edge_frontier_lean_codex_20260627.out`.
+
+This formalizes the current "bleeding edge" without overclaiming the missing
+coverage theorem.  The packet now has Lean names for the creative invariants
+that should be tested next: observer charts as proof vertices; the
+equidistribution/equinumerosity/equidecomposability triad; the row-14
+pair-mass checksum `91,1001,2002,3003,4004`; the S258 direct-arc debt sample
+`860` components and largest arc `1/82320`; and the S31ag asymmetry that the
+k=10 cap RHS is degree-2/pairwise while the cover-bound extremality LHS needs a
+degree-3 certificate.  The later HYP-3099 tournament-proof-engine verdict fits
+this packet shape: cap optimality should be carried as bounded finite
+local-minima debt, since the improvement tournament is non-transitive, not as a
+bare exchange/greedy invariant.
+
 ---
 
 ## 1. The headline theorem (VERIFIED sorry-free) — TWO viable routes

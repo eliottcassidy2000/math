@@ -232,6 +232,27 @@ direct_lonely_component_bound:
      or a loss-controlled reduction from L(S) to the maxgap witness object.
 ```
 
+## Lean Frontier Wrapper, 2026-06-27
+
+`TournamentH7.LRCBleedingEdgeFrontier` makes this witness-route ledger a
+Lean-side sidecar.  Its `PolynomialWitnessLedger` records CRT lift status,
+direct component count, direct lonely-measure floor, largest-arc floor,
+denominator-net threshold, finite bad-denominator budget, destroyed coordinate,
+and terminal exit.  The default S258 sample records the divisor-loaded warning:
+`860` observed direct components, largest arc `1/82320`, and denominator-net
+threshold `82321`.
+
+The wrapper proves only the conservative theorem:
+
+```text
+BleedingEdgeFrontierCoverage -> LRC14Statement
+```
+
+by delegating soundness to the embedded `FiniteAddressBranchPacket`.  Thus the
+formal frontier is now precise: the missing work is constructing real
+packets/coverage for the residual rows, not proving that a raw direct-arc
+scalar is already legal.
+
 ## Tournament Analysis
 
 Vertices are proof obligations and retained sidecars, not runners:
