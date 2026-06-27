@@ -7,6 +7,17 @@ This is the authoritative, machine-verified status of the LRC(14) Lean proof.
 Everything below the line "VERIFIED" was confirmed by `#print axioms` / `lake build`
 on the current `origin/main`, not asserted.
 
+**2026-06-26 targeted update (Codex):** `TournamentH7.LRCMomentDual` now
+target-builds with `lake build TournamentH7.LRCMomentDual`; its theorem
+`TournamentH7.MomentDual.p0_le_Ly` prints only
+`[propext, Classical.choice, Quot.sound]`.  This verifies the THM-534
+moment-LP dual reduction
+`(slowμ (coverSet E)).toReal <= L_y(E,g)` from pointwise dual feasibility
+`g(n) >= 1[n=0]` for `n <= 6`.  It closes the integral-monotonicity wrapper;
+the remaining p0-route work is now exactly the certificate/extremality bridge
+which proves a feasible dual has `L_y(E,g) <= cap - delta` in the relevant
+shape family.
+
 ---
 
 ## 1. The headline theorem (VERIFIED sorry-free) — TWO viable routes
@@ -82,6 +93,13 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   small-cardinality vanishing, monotonicity, and the decorrelation-reduction
   wrapper for hp0cap.  KPS S31b wired `LRCFourteenSkeleton.p0` to this
   definition, so p0-route hypotheses now refer to the actual `coverSet` event.
+- `LRCMomentDual` — THM-534 moment-LP dual wrapper for the concrete cover atom:
+  if `g(n) >= 1[n=0]` for every possible miss count `n <= 6`, then
+  `(slowμ(coverSet E)).toReal <= ∫ x, g(missCount E x) dslowμ`.  Codex
+  2026-06-26 target-builds this standalone module and verifies
+  `p0_le_Ly` with no `sorryAx`.  The next formal object should be an exact
+  rational dual-certificate interface that supplies feasibility and the
+  family-specific `L_y <= cap - delta` bound.
 - `LRCArcComplexity` — finite support lemma for the THM-546/HYP-2840
   arc-complexity sharpening: pairwise disjoint exactly-one-miss cell families
   subordinate to a common breakpoint partition have total occupied count at
