@@ -1,0 +1,32 @@
+========================================================================================
+ base B=(0, 1, 2, 3, 4, 5, 6, 7)  p0(B)=0.32721
+========================================================================================
+
+(1) single-far decorrelation factor d(f)=p0(B u {f})/p0(B)  -> 6/7=0.8571 (Gaussian/free limit)?
+   f=   15: d(f)=1.04158   (1-d)*7 = -0.2911  [->1 means removes exactly 1/7]
+   f=   16: d(f)=1.11201   (1-d)*7 = -0.7840  [->1 means removes exactly 1/7]
+   f=   21: d(f)=1.13721   (1-d)*7 = -0.9605  [->1 means removes exactly 1/7]
+   f=   28: d(f)=1.08940   (1-d)*7 = -0.6258  [->1 means removes exactly 1/7]
+   f=   56: d(f)=1.08784   (1-d)*7 = -0.6149  [->1 means removes exactly 1/7]
+   f=  100: d(f)=1.10624   (1-d)*7 = -0.7437  [->1 means removes exactly 1/7]
+   f=  200: d(f)=1.09896   (1-d)*7 = -0.6927  [->1 means removes exactly 1/7]
+   f=  500: d(f)=1.10865   (1-d)*7 = -0.7605  [->1 means removes exactly 1/7]
+   f= 1000: d(f)=1.10717   (1-d)*7 = -0.7502  [->1 means removes exactly 1/7]
+
+(2)+(3) multi-far quasi-independence  R'_cov(F) = p0(BuF) p0(B)^(r-1) / prod p0(Bu{f})
+    (=1 = independent/Asano-factorized; FLOOR = min over placements)
+   separated r=2             : R'_cov = [0.9940, 0.9982, 0.9951]
+   resonant r=2 (mult of 7)  : R'_cov = [0.9985, 0.9893, 1.0221, 0.9934]
+   tight doublet r=2         : R'_cov = [1.0528, 1.0259, 1.0191]
+   separated r=3             : R'_cov = [0.9831, 0.9869]
+   resonant r=3              : R'_cov = [1.0120, 0.9803]
+   mixed r=3                 : R'_cov = [0.9850, 0.9876]
+   r=4 resonant              : R'_cov = [1.0042]
+
+   random scan (300, r=2..4, resonance-rich pool): MIN R'_cov = 0.8654 @ F=(28, 43, 49, 49)
+   overall FLOOR R'_cov = 0.9803 @ ('resonant r=3', (35, 49, 56))
+
+READING: d(f)->6/7 (Gaussian free-field decoupling, each far removes 1/7). R'_cov has a positive
+FLOOR (the Asano-contraction floor): the multi-far coverage quasi-factorizes over the far 'tips', the
+residual quasi-independence stays bounded away from 0 -- the multilinear (inclusion-exclusion) structure
+means Asano contraction applies, reducing the multi-far floor to the single-far factor (HYP-2829).
