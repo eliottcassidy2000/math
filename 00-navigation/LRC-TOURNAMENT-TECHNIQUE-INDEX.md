@@ -122,6 +122,10 @@ obligations, and proof-carrier interfaces.
   use LTT-133 after LTT-101/LTT-117/LTT-132 and make invariant carriers the
   vertices: cardinal shadow, scissors fiber, observer-cut orbit, distribution
   law, interaction-order defect, and named residual debt.
+- Need to glue the current LRC14 proof routes without choosing one scalar:
+  use LTT-134 after LTT-130/LTT-133 and make observer charts the vertices:
+  arithmetic lift, normalized arc, cap, moment, branch, and formal witness
+  readout.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3904,6 +3908,35 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2232, HYP-2872, HYP-2883, HYP-2949, HYP-3053, HYP-3054, HYP-3056,
   HYP-3072, HYP-3085, HYP-3088, HYP-3089, LTI-235, LTT-133, LTT-132,
   LTT-117, LTT-101, T1171, OPEN-Q-108.
+
+### LTT-134: Observer-Chart Gluing Tournament
+
+- **Move:** Treat each surviving proof route as an observer chart over the
+  same finite-address LRC14 packet, then tournament-rank charts by how much of
+  the LRC predicate they preserve under quotienting.
+- **LRC use:** HYP-3095/S256 synthesizes the route history as legal-forgetting
+  discipline.  The arithmetic chart keeps `I(13,7,1)`, c-lift, and level-7
+  sieve data; the normalized-arc chart keeps slow/ruler-coordinate witness
+  mass after THM-575; the cap chart keeps HYP-3090/HYP-3092 pairwise-Pascal
+  and deviation status; the moment chart keeps HYP-3085 gK8/reflection-Perron
+  data; the branch chart keeps HYP-3094 nested-refinement versus cross-handoff
+  words; and the formal chart keeps the Lean witness readout.
+- **Preserves:** the LRC witness predicate, chart overlaps, quotient map,
+  destroyed coordinate, sidecar/certificate/descent, finite-ruler status,
+  terminal exit, and named residual debt.
+- **Forgets / guardrail:** A chart may forget runners, residues, arcs, counts,
+  or safe mass only if another chart reconstructs the coordinate, annihilates
+  it dually, proves it fiber-constant, or routes the loss to named debt.
+- **Tournament vertices:** `arithmetic_lift_chart`, `normalized_arc_chart`,
+  `cap_pascal_chart`, `moment_perron_chart`, `branch_k33_chart`,
+  `formal_witness_chart`, and `raw_scalar_shadow`.
+- **Next hook:** Build `lrc14_observer_gluing_ledger` over the THM-573
+  residual and check every overlap map before any quotient is reused as a
+  theorem step.
+- **Pointers:** HYP-3095, HYP-3094, HYP-3093, HYP-3092, HYP-3091, HYP-3090,
+  HYP-3089, HYP-3088, HYP-3087, HYP-3085, HYP-3083, HYP-2990, THM-576,
+  THM-575, THM-574, THM-573, LTI-236, LTI-235, LTT-134, LTT-133, T1172,
+  OPEN-Q-108.
 
 ## Immediate Pull List
 

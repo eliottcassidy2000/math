@@ -18,6 +18,20 @@ discharge mode, and residual debt. -> HYP-3093, HYP-3092, HYP-3091, HYP-3090, TH
 discharge mode, and residual debt. -> HYP-3094, HYP-3090, THM-576, HYP-2187,
 HYP-2186, HYP-2949, HYP-3053, HYP-3056, HYP-3072, HYP-3085, LTI-235, LTT-133,
 T1171, OPEN-Q-108.
+**OPEN-Q-108 S256 observability-sheaf gluing addendum:**
+HYP-3095 reframes the remaining LRC14 proof as a gluing problem over legal
+observers, not as a search for one scalar invariant.  After THM-573/THM-574
+isolate the level-7/c-lift residual and THM-575 rejects raw denominator time,
+the theorem target is compatibility of four charts on the same finite-address
+packet: arithmetic (`I(13,7,1)`, mod-7/c-lift status), normalized arc
+(`P,E,V`, `G(P,E)`, component floor, finite-ruler threshold), cap
+(HYP-3090 pairwise-avoidance ratios), moment (HYP-3085
+gK8/`S2`/reflection-Perron control of the degree-7 invisible direction), and
+branch (HYP-3094 nested-refinement vs K33 cross-handoff).
+Open task: define overlap maps between these charts and prove each forgotten
+coordinate is reconstructed, dual-annihilated, constant on fibers, or routed
+to named residual debt. -> HYP-3095, HYP-3094, HYP-3093, HYP-3092, HYP-3090, HYP-3089, HYP-3088, HYP-3085,
+HYP-3083, HYP-2990, THM-575, THM-576, THM-574, THM-573, OPEN-Q-108.
 
 **OPEN-Q-108 S255 Conjecture 7.1 correction / normalized-arc addendum:**
 THM-575 refutes the paper's literal Conjecture 7.1 for `k=13`: divisor-loaded
@@ -55,12 +69,13 @@ THM-576/HYP-3090 adds the cap skeleton: pairwise avoidance gives the clean
 triangular caps for `k>=10`, while `k=8,9` and the first order-3 break are now
 explicit cap/deviation debt.
 HYP-3094 supplies the covering/K33 shuttle grammar for
+Incoming HYP-3094 supplies the covering/K33 shuttle grammar for
 nested-refinement and cross-handoff exits.
 Open task: build a `hyperoperation_grid_address` ledger over HYP-2963 and
 outside-bank normalizer attempts, then test whether danger-weighted operation
 cells route the THM-573 residual core to q-witness, covering/Node3,
 K33/THM-572, protected branch closure, or named residual debt without creating
-a naked bridge. -> HYP-3087, HYP-3085, HYP-3083, HYP-3004, HYP-3003, THM-523, THM-571,
+a naked bridge. -> HYP-3087, HYP-3092, HYP-3083, HYP-3004, HYP-3003, THM-523, THM-571,
 THM-572, THM-573, LTI-233, LTT-131, T1169, OPEN-Q-108.
 **OPEN-Q-108 S254 finite-address Lean packet addendum:** S254 adds
 `TournamentH7.LRCFiniteAddressBranchClosure`, which formalizes the HYP-3083
@@ -76,7 +91,7 @@ arithmetic sidecar, destroyed coordinate, protected bridge certificate,
 optional covering-moment dual ledger, median-center packet, and terminal floor
 `1/14 <= floor <= Mreach`.  Incoming HYP-3085-gK8 points the covering-moment
 producer toward a low-order pairwise `S2` / reflection-`3x3` Perron
-certificate, while incoming HYP-3085-covering/K33 supplies concrete
+certificate, while incoming HYP-3094 supplies concrete
 nested-refinement and cross-handoff shuttle rows for O2/O3; HYP-3087 supplies
 the operation-grid address scheduler that must preserve the LRC clock before
 feeding this Lean packet; HYP-3088-HYP-3089 identifies a compatible
@@ -85,7 +100,7 @@ Open task:
 replace the conservative wrapper with real producer theorems.  First
 instantiate an actual HYP-2963 low-apex, top-balanced covering-moment row with
 exact endpoint owner, feasible dual `g`, protected branch node, q-cusp ledger
-id, HYP-3085 pairwise/Perron certificate, HYP-3085 covering/K33 shuttle status,
+id, HYP-3085 pairwise/Perron certificate, HYP-3094 covering/K33 shuttle status,
 HYP-3087 operation-cell address, and terminal discharge; then generalize to
 global packet coverage and the K33/THM-572 state-lift producer. -> HYP-3087,
 HYP-3088, HYP-3089, HYP-3085, HYP-3084, HYP-3083, HYP-3082, HYP-3081,

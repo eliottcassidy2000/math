@@ -8,6 +8,7 @@ tournament_technique: LTT-130
 script: 04-computation/lrc14_o2_o3_shuttle_codex_s254.py
 result: 05-knowledge/results/lrc14_o2_o3_shuttle_codex_s254.out
 related:
+  - HYP-3085
   - HYP-3083
   - HYP-3087
   - HYP-3088
@@ -15,8 +16,6 @@ related:
   - HYP-3090
   - HYP-3091
   - HYP-3092
-  - HYP-3094
-  - HYP-3085
   - HYP-3084
   - HYP-3082
   - HYP-2965

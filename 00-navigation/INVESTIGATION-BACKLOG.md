@@ -15,6 +15,31 @@
 
 ---
 
+## Lead codex-2026-06-27-S256: LRC14 observability-sheaf gluing ledger
+
+**Status:** SYNTHESIS / proof-route abstraction; not proof (HYP-3093).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3095-lrc14-route-sophistication-hidden-observability-sheaf.md`
+and
+`07-reflections/lrc14-route-sophistication-hidden-observability-sheaf-codex-s256.md`.
+The repo history is best read as increasing discipline about legal forgetting:
+AP/GW is the additive equality shadow, tournaments became relation/sidecar
+observers, HYP-2963 packets made exact scale and endpoint owner first-class,
+HYP-2990 named the zipper/no-free-slider rule, HYP-3083 made finite-address
+branch closure the spine, and the paper/c-lift work explains why `14=2*7`
+leaves a degree-7 invisible direction.  THM-575 corrects the raw Conjecture 7.1
+observer: small denominator time is unstable under apex loading, so the live
+route must use normalized slow/ruler-coordinate witness mass after THM-573.
+**Next:** build an `lrc14_observer_gluing_ledger` over the THM-573 residual
+with fields for arithmetic chart (`I(13,7,1)`, mod-7/c-lift status),
+normalized arc chart (`P,E,V`, `G(P,E)`, component and finite-ruler data),
+cap chart (HYP-3090 pairwise-avoidance ratios), moment chart (HYP-3085
+gK8/`S2`/Perron data), branch chart (HYP-3092
+nested-refinement/K33 cross-handoff), forgotten coordinate, overlap map, and
+terminal exit/debt.  Test whether every quotient used by the route is
+reconstructible, dual-annihilated, fiber-constant, or explicitly routed.
+Namespace: HYP-3093 / HYP-3092 / HYP-3090 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S255: LRC14 Conjecture 7.1 raw-time refutation and normalized repair
 
 **Status:** PROVED refutation of paper Conjecture 7.1 as stated + repaired
@@ -120,6 +145,9 @@ now rows with `<= 6` multiples of `7`, so the vertical lane must record
 level-7 lift status rather than just multiple-of-14 status.  HYP-3090 adds
 cap/deviation status, and HYP-3094 adds the covering/K33 shuttle exit grammar
 for nested-refinement and cross-handoff grid classes.
+level-7 lift status rather than just multiple-of-14 status.  Incoming HYP-3092
+adds the covering/K33 shuttle exit grammar for nested-refinement and
+cross-handoff grid classes.
 **Next:** build a `hyperoperation_grid_address` ledger over HYP-2963 and
 outside-bank normalizer attempts with fields for `count_7_divisible`,
 `level7_lift_status`, `(p,q)`, `p+q`, `p*q`, power-stress word,

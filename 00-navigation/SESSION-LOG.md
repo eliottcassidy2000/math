@@ -48,6 +48,41 @@ separates {tight, generic, easy-cover, hard-cover}; the triple does. CRUX 1 = th
 form (meas>0 off the tight locus) of the gK8 p0<=cap bound. NOT a new bound; an organizing invariant + two
 recovered scales (mod-41 via D, V* via 1/lmax). Note: codex-S255 (concurrent) refuted Conjecture 7.1 in RAW
 time -- the meas=0<=>tight here is the normalized/level-set object, compatible; will reconcile next session.
+## codex-2026-06-27-S256 -- route sophistication synthesis; hidden observability sheaf
+
+Integrated the latest polynomial-method/c-lift work with the older route
+history and resolved the live HYP-3085 namespace collision.  The older
+covering-moment / K33 state-lift shuttle has moved from duplicate `HYP-3085`
+to `HYP-3092`; `HYP-3085` now names the mac-mini S60 gK8 low-order
+moment/Perron route, and incoming `HYP-3090` is reserved for the cap /
+pairwise-avoidance triangular-ratio thread.  Updated the hypothesis index, theorem/backlog/open
+question references, technique/tangent indexes, result index, and the S254
+hyperoperation references so the split is explicit.  Added
+`05-knowledge/hypotheses/HYP-3090-lrc14-caps-triangular-ratios.md` as a detail
+file for the incoming cap claim, tied to THM-576 and the kps cap scout.
+
+Added HYP-3095/T1172/LTI-236/LTT-134 and reflection
+`07-reflections/lrc14-route-sophistication-hidden-observability-sheaf-codex-s256.md`.
+Main synthesis: the cutting edge route has evolved from scalar/tight-locus
+census toward legal observability.  AP/GW is the additive equality shadow;
+tournament work learned relation-sidecar observers; HYP-2963 packets made
+scale, endpoint owner, and status first-class; HYP-2990 named the
+no-free-slider rule; HYP-3083 made finite-address branch closure the remaining
+proof spine; THM-573/THM-574 and the polynomial-method reflection explain why
+`14=2*7` leaves a degree-7 invisible direction; THM-575 explains why raw
+denominator time is the wrong observer and normalized slow/ruler-coordinate
+mass is needed.
+
+Reframe: LRC14 is a broken-field proof repaired by observability.  The hidden
+object is a finite-address observability sheaf whose arithmetic chart
+(`I(13,7,1)`, c-lifts, level-7 sieve), arc chart (normalized components and
+`V*`), cap chart (HYP-3090 pairwise avoidance), moment chart
+(gK8/`S2`/reflection-Perron), and branch chart (HYP-3094 covering/K33
+handoff) must glue to a witness at height `1/14` or to named
+residual debt.  Tournament Analysis uses observer charts rather than runners:
+finite-address observability sheaf > normalized level-7 apex peel > gK8
+moment-Perron chart > covering/K33 shuttle > hyperoperation grid > AP/GW
+census shadow > raw denominator pruning.
 
 ## codex-2026-06-27-S255 -- Conjecture 7.1 refuted in raw time; normalized-arc route repaired
 
@@ -102,7 +137,7 @@ paper's per-prime I(k,p,1) enumeration; both reduce to Conjecture 7.1(13) <=> un
 measure on covering tuples = CRUX 1 (gK8) + Node-3. Mutual dependency: paper proves LRC(<=12) = induction
 base unlocking THM-573; project adds the c=7 lift theorem + the analytic substitute.
 
-NAMESPACE: HYP-3085 DUPLICATE (mine gk8 / codex K33-shuttle) flagged in INDEX for codex to renumber. Net:
+NAMESPACE: former HYP-3085 duplicate resolved by codex-S256 after rebasing over the cap work: mac-mini S60 keeps HYP-3085 for gK8, incoming HYP-3090 belongs to the cap / pairwise-avoidance thread, and the codex K33-shuttle moved to HYP-3094. Net:
 LRC(14) NOT proved; endgame re-localized to the V*-bounded finite check + the two open lemmas (gK8 CRUX 1,
 Node-3), now also recognized as the paper's Conjecture 7.1(13).
 ## codex-2026-06-27-S252/S254-postrebase -- integrate S31ag polynomial-method bridge into finite-address LRC14 spine
@@ -295,6 +330,10 @@ HYP-3094 covering-moment / K33 state-lift shuttle: the hyperoperation grid
 should hand nested-refinement covering cells and cross-handoff K33 cells to
 that shuttle rather than collapsing them into raw safe-mass or product-lane
 scalars.
+Rebased over incoming HYP-3094, the covering-moment / K33 state-lift shuttle:
+the hyperoperation grid should hand nested-refinement covering cells and
+cross-handoff K33 cells to that shuttle rather than collapsing them into raw
+safe-mass or product-lane scalars.
 Renumbered the final hyperoperation artifact to HYP-3087/T1169 after incoming
 HYP-3086/T1168 claimed the sexy-prime pair-sieve transfer namespace.
 
@@ -336,7 +375,7 @@ correction, while incoming HYP-3085-gK8 supplies the likely
 producer route for the covering-moment exit: a low-order moment certificate led
 by the pairwise `S2` co-emptiness term and a reflection-symmetric `3x3` Perron
 bound, to be fed through the `CoveringMomentDualLedger` and terminal floor.
-Incoming HYP-3085-covering/K33 adds concrete nested-refinement versus
+Incoming HYP-3094 adds concrete nested-refinement versus
 cross-handoff rows for the O2/O3 shuttle.  Later incoming HYP-3087 supplies
 the hyperoperation/operation-grid scheduler for packet addresses, and incoming
 S31ag HYP-3088-HYP-3089 supplies a polynomial-method / Conjecture 7.1
@@ -464,6 +503,7 @@ Hensel seed, valuation, and terminal exit must be attached before a
 transcendental/discrepancy scalar can enter the proof route.
 
 ## codex-2026-06-27-S254 -- covering-moment / K33 state-lift shuttle (HYP-3091)
+## codex-2026-06-27-S254 -- covering-moment / K33 state-lift shuttle (HYP-3094)
 
 Worked the two selected HYP-3083 obligations back and forth after rebasing over
 the incoming S253 Hurwitz/q-cusp covering-bound spine and the S31af THM-573
@@ -481,6 +521,12 @@ decomposition and later used HYP-3090 for the triangular cap-ratio carrier.
 The scout audits three covering representatives and the three low-frontier K33
 representatives with exact `M`, optimizer `tau`, q-threshold, strict safe mass,
 safe components, active binders, endpoint-owner transitions, and grid class.
+HYP-3085 in its original session, later renumbered by codex-S256 to HYP-3092
+after incoming work claimed HYP-3085 for the gK8/Clebsch moment
+decomposition and HYP-3090 for the cap/pairwise-avoidance thread.  The scout audits three covering representatives and the three
+low-frontier K33 representatives with exact `M`, optimizer `tau`, q-threshold,
+strict safe mass, safe components, active binders, endpoint-owner transitions,
+and grid class.
 
 Main readout: covering rows are locally positive and route through
 `nested_refinement`, but K33 rows are also locally positive and must route
@@ -500,6 +546,7 @@ Incoming mac-mini S60 also updated the gK8/Clebsch low-order moment-LP route
 in `05-knowledge/hypotheses/HYP-3085-gk8-concentration-is-low-order-moment-s2-clebsch.md`.
 The integration is useful: the corrected S60 carrier is a reflection-symmetric
 Perron-mode moment bound candidate for O2, while HYP-3091 is the finite-address
+Perron-mode moment bound candidate for O2, while HYP-3094 is the finite-address
 shuttle that keeps that carrier separate from scalar-margin shortcuts and K33
 cross-handoff debt.
 

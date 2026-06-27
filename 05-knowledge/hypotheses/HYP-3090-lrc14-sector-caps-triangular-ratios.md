@@ -3,6 +3,9 @@ id: HYP-3090
 title: LRC14 sector caps are triangular pair-avoidance ratios
 status: VERIFIED EXACT cap skeleton / remaining deviation debt; not a proof of LRC14
 source: kind-pasteur-2026-06-27-S31ag + codex-2026-06-27-postrebase integration
+theorem: THM-576
+script: 04-computation/lrc14_cap_is_pair_avoidance_kps.py
+result: 05-knowledge/results/lrc14_cap_is_pair_avoidance_kps.out
 related:
   - THM-576
   - HYP-3083
@@ -49,6 +52,16 @@ order-3 break rather than another pairwise term.
 
 Numbering note: THM-575 is the separate raw-time Conjecture 7.1 refutation.
 The pairwise-avoidance cap theorem is THM-576.
+
+The concrete small-part version is:
+
+```text
+min_{|P|=j} meas(lonely(P)) = C(14-j, 2) / C(14, 2)
+```
+
+for `j=1,2,3`, with minimizers `{1}`, `{1,13}`, and `{1,12,13}`.
+The binding-row minimizers recorded by the exact scout are `{1,11,12,13}`
+for `j=4` and `{1,5,7,8,9}` for `j=5`.
 
 ## Proof-Spine Meaning
 

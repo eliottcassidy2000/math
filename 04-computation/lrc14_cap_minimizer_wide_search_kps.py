@@ -1,7 +1,7 @@
 """
 lrc14_cap_minimizer_wide_search_kps.py  (kind-pasteur-2026-06-27-S31ag)
 Double-check the canonical cap_8, cap_9 against a WIDER minimizer search.
-THM-575 found (over P subset {1..16}): j=4 min {1,11,12,13}=1979/4004=cap_9,
+THM-576 found (over P subset {1..16}): j=4 min {1,11,12,13}=1979/4004=cap_9,
 j=5 min {1,5,7,8,9}=2243/5880=cap_8. Verify no smaller meas(lonely(P)) exists
 over a larger range (P subset {1..28}, fixing 1 in P by dilation-normalization).
 """

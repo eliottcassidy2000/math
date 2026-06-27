@@ -138,7 +138,7 @@ Incoming HYP-3085-gK8 adds a sharper producer target for item 2: the
 covering-moment exit should likely be a low-order moment certificate, led by
 the pairwise sector co-emptiness `S2` term and ultimately reduced to an exact
 reflection-symmetric `3x3` Perron/eigenvalue bound rather than a full AP/GW
-census.  Incoming HYP-3085-covering/K33 adds concrete O2/O3 shuttle rows:
+census.  Incoming HYP-3094 adds concrete O2/O3 shuttle rows:
 nested-refinement rows should feed covering-moment discharge, while
 cross-handoff rows should feed the THM-572 state-lift producer.  In packet
 terms, both belong inside `CoveringMomentDualLedger`, protected-branch data,
@@ -198,7 +198,7 @@ global_packet_normalizer
 Lean verifies this carrier set has `12` vertices.  The path is a work-order:
 the first genuinely open theorem is still global packet coverage for the
 primitive covering residual with `1..6` multiples of `7`, followed by the
-HYP-3085 covering-moment/Perron certificate, the HYP-3085 covering/K33 shuttle,
+HYP-3085 covering-moment/Perron certificate, the HYP-3094 covering/K33 shuttle,
 and the K33 state-lift construction.
 
 ## Build Result

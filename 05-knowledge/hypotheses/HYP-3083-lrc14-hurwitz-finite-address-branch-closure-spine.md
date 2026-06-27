@@ -481,7 +481,7 @@ arithmetic address, protected branch certificate, covering-moment dual ledger,
 median-center packet, and terminal floor `1/14 <= witnessFloor <= Mreach`.
 Incoming HYP-3085-gK8 suggests the covering-moment producer should be a
 low-order pairwise `S2` / reflection-`3x3` Perron certificate, and incoming
-HYP-3085-covering/K33 supplies concrete nested-refinement versus cross-handoff
+HYP-3092 supplies concrete nested-refinement versus cross-handoff
 rows for the O2/O3 shuttle.  Incoming HYP-3087 supplies the adjacent
 hyperoperation/operation-grid address scheduler; it should feed this packet
 only after retaining `(p,q)`, danger, level-7 status, destroyed coordinate, and
