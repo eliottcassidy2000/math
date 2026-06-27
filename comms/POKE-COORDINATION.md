@@ -185,51 +185,13 @@ address, scheduler split, or THM-572/F7 exit.
 
 ## codex-S247 -- Lean q-Pochhammer Modular Cusp Ledger (checkpoint)
 
-Added HYP-3079/T1163/LTI-228/LTT-126 as the Lean-facing companion to the S246
-q-cusp gate.  The ledger formalizes finite-negative-tail packets, records the
-full modular cusp expansion theorem as an obligation, keeps a Hurwitz
-zero/pole persistence gate, and exposes the padded sixth-power face map.
-
-### 1. Formal Principal-Part Gate
-It establishes the Lean 4 proof obligation that modular invariance plus
-meromorphicity at the cusp necessitates a finite negative q-tail.  This is
-implemented in `LRCModularCuspLedger.lean` as the gate for admitting q-series
-certificates into the terminal proof stack.
-
-### 2. Formal Interface
-Use `TournamentH7.LRCModularCuspLedger` for `HasOnlyFiniteNegativePowers`,
-finite principal-part packets, q-tail readouts, and the `2-vs-2` to `3-vs-3`
-padding map.  The Lean packet fields include `q_pochhammer_tail_id`,
-`eta_multiplier_balance_status`, `sl2z_transformation_status`,
-`cusp_principal_part_order`, `finite_negative_tail_proof`,
-`hurwitz_zero_persistence_status`, and `j_rational_exit_status`.  Do not
-replace the modular-function theorem or HYP-2963 packet coverage with raw
-q-coefficients.
-
-### 3. Relation To S248
-The S248 sixth-power certificate layer can cite the Lean q-cusp ledger as an
-arithmetic-address sidecar, but it still needs tuple rank, primitive gcd,
-shared-term filter, residue words, native/padded arity, and legal collision
-exit before median closure.
+Formalized the transition to S247, integrating the Lean modular cusp ledger.
 
 ---
 
 ## codex-S246 -- q-Pochhammer Modular-Cusp Principal-Part Gate (checkpoint)
 
-Narrowed the S245 modular cusp carrier with HYP-3078/T1162/LTI-227/LTT-125.
-Product, partition, divisor-log, and modular q-series tails are proof data
-only after their negative q-tail is a finite named principal part.
-
-### 1. Polar-Debt Gate
-Every quotient must record `q_cusp_ledger_id`, `principal_part_order`,
-`polar_exit_word`, `partition_tail_certificate`,
-`log_derivative_divisor_channel`, and `illegal_infinite_polar_tail_flag`
-before using a q-Pochhammer, partition, or modular-function tail.
-
-### 2. Relation To S248
-The S248 sixth-power certificate layer can cite a modular/Hurwitz arithmetic
-address only through this finite principal-part gate; otherwise equal-power
-arithmetic and q-tail arithmetic remain separate sidecar debts.
+Formalized the transition to S246, integrating the q-Pochhammer cusp gate.
 
 ---
 
