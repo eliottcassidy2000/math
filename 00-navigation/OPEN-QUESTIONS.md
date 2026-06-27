@@ -3966,6 +3966,28 @@ is HYP-2424, not an open question.
 **OPEN-Q-001** Ã¢â‚¬â€ Resolved by opus-2026-03-05-S1 via THM-008 (mu triviality bound). See THM-008.
 **OPEN-Q-009** Ã¢â‚¬â€ Resolved by opus-2026-03-05-S1. mu(3-cycle at n=6) in {1,3}, determined by whether the 3 available vertices form a cyclic or transitive subtournament.
 
+## OPEN-Q-108 addendum (codex-2026-06-27-S265 follow-up): Irrational/transcendental approximation sidecar
+
+The approximation prompt has been merged into the HYP-3114/T1190/LTI-251
+frontier as a sidecar discipline rather than a shortcut.  Finite witness
+approximation belongs to
+Farey intervals, continued-fraction/Ostrowski words, denominator height, exact
+endpoint-owner data, and finite-address exits.  Algebraic near misses belong to
+Roth/Minkowski height data: relation lattice, covolume, successive minima,
+algebraic target, height, approximation exponent, root isolation, separation
+certificate, and exceptional approximants.  Power-resonance lanes belong to
+Baker-style `linear_forms_log_gap` certificates only after a genuine
+multiplicative relation has been extracted.  Transcendence labels are not LRC
+predicates: they must be accompanied by field-of-definition and
+algebraic-dependence data before any quotient may forget endpoint or root
+coordinates.  Next target: add these approximation fields to the
+finite-address branch-closure and Lee-Yang ear-payload ledgers for HYP-2963 and
+the THM-573 residual.  Entry: HYP-3114, HYP-3062, HYP-3108, HYP-3111,
+HYP-3112, HYP-3110, LTI-251, LTI-249, LTT-149, LTT-147.  HYP-3110 adds the
+finite De Moivre/Jacobi/theta case: branch approximations and theta tails must
+retain branch id, theta channel, translation lattice, and legal exit before
+being treated as proof data.
+
 ## OPEN-Q-108 addendum (codex-2026-06-24-S164): Kernel homotopy boundary-defect ledger
 
 HYP-2984 adds a kernel-deformation guardrail to the LRC14 endgame.  A smoothing

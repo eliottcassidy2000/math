@@ -175,3 +175,39 @@ not use Minkowski as a "large Bragg peak" crystallinity heuristic.  The
 Minkowski body must be reciprocal-flat and proof-native: inequalities should
 encode root stratum, segment clearance, entropy/flatness, finite-address
 status, and observer debt rather than raw lattice concentration.
+
+## Approximation Carrier Addendum
+
+The irrational/transcendental approximation layer sharpens each carrier in this
+atlas.
+
+Minkowski remains a finite q-lattice body statement.  Its approximation payload
+is `relation_lattice`, `covolume`, `successive_minima_profile`,
+`convex_body_id`, and a finite low-height wall ledger.  It should not be used
+as a generic "irrational spread" argument unless the body also records the
+Farey or continued-fraction parent interval that carries the LRC predicate.
+
+The Ising/Lee-Yang side keeps algebraic zero geometry.  Numerical zero angles
+must be paired with root isolation, coefficient height, and separation from the
+danger interval or from a rational `7`th-root direction.  This is where Roth
+and root-separation estimates can enter; the word "transcendental" by itself
+does not discharge a root-motion obligation.
+
+The De Moivre fold is an exact algebraic branch normal form.  Its fifth-root
+branch orbit destroys address data unless the finite-address sidecar records
+which branch is being used and how close it lies to any forbidden rational
+phase.  Required fields:
+
+```text
+algebraic_fold_branch_id
+branch_root_height_bound
+branch_isolating_interval
+farey_parent_interval
+branch_phase_separation_certificate
+```
+
+Baker-style linear forms in logarithms belong only to the power-resonance lane:
+if a carrier reduces a residual to a multiplicative equation or a two-block
+determinant gap, record `linear_forms_log_gap`, `low_height_resonance_list`,
+and the exact descent or debt exit.  Otherwise it remains an analogy, not a
+proof step.

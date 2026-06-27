@@ -7,8 +7,10 @@ tangent: T1190
 technique: LTI-251
 tournament_technique: LTT-149
 related:
+  - HYP-3113
   - HYP-3112
   - HYP-3111
+  - HYP-3110
   - HYP-3109
   - HYP-3108
   - HYP-3098
@@ -62,6 +64,12 @@ finite_interval_packet
   -> exact LRC component, length, margin, endpoint owners, and grid-hit bound;
 observer_gluing_packet
   -> HYP-3098/HYP-3112 route legality and destroyed-coordinate audit.
+root_angle_packet
+  -> rational-coefficient PGF root isolation, height, and separation;
+bravais_phase_packet
+  -> low-denominator resonance walls versus reciprocal-flat phase evidence;
+log_gap_packet
+  -> Baker-style linear-form gap only after a multiplicative relation exists.
 ```
 
 HYP-3062 already handles the Roth-Minkowski algebraic fence; HYP-3075 already
@@ -76,6 +84,61 @@ distinction between:
   spikes and cannot be quotient-forgotten;
 - the elementary LRC fact that every positive rational interval contains grid
   points at all large denominators.
+
+## Root, Lattice, And Log-Gap Extension
+
+The incoming HYP-3112/HYP-3113 root-lattice-ear frontier adds three places
+where approximation language can become theorem-facing if the right finite
+certificate is retained.
+
+First, Lee-Yang root angles are not generic transcendental data.  For a fixed
+packet, the miss-count PGF has rational coefficients, so its roots are
+algebraic.  A numerical angle close to a `7`th-root direction is useful only
+after recording:
+
+```text
+root_angle_algebraic_degree
+root_angle_height_bound
+root_angle_isolating_disk
+root_angle_farey_parent_interval
+root_angle_separation_certificate
+```
+
+Second, Bravais and Minkowski signals should distinguish low-denominator
+resonance walls from reciprocal-flat extremal phases.  Current bounded-bank
+evidence says high `p0` correlates with residue entropy and against large
+Bravais peaks, so the approximation sidecar should measure:
+
+```text
+bravais_badly_approximable_score
+continued_fraction_word_of_peak_phase
+resonance_wall_height
+exceptional_low_denominator_peaks
+```
+
+Third, Baker-style linear forms in logarithms belong only to lanes that have
+already extracted a multiplicative relation, such as a power-resonance gap or a
+two-block determinant gap.  Such rows should emit:
+
+```text
+linear_forms_log_gap
+low_height_resonance_list
+multiplicative_relation_lattice
+log_gap_exit
+```
+
+The rebased HYP-3110 De Moivre/Jacobi/crystallographic lane adds the finite
+algebraic/theta version of the same rule.  A De Moivre fold branch, theta tail,
+wallpaper quotient, or space-group quotient is approximation-relevant only
+after branch id, translation lattice, theta channel, stabilizer word, and
+finite-address or observer-gluing exit are named.  In particular, theta tails
+belong to finite principal-part / deleted-wall ledgers, not to a generic
+"transcendental function" shortcut.
+
+This keeps the pi/e lesson in scope: rationality, irrationality,
+algebraicity, and transcendence are not closed-enough proof coordinates by
+themselves.  The load-bearing datum is the retained field, height, dependence,
+exception list, and finite packet coordinate that survives the quotient.
 
 ## Assumption Challenge
 
@@ -101,3 +164,6 @@ approximants unless they are retained in the sidecar.
    lemma.
 3. Run Tournament Analysis over approximation carriers, with vertices chosen
    from proof obligations rather than from the constants themselves.
+4. Join the scout to the Lee-Yang ear-payload ledger by adding root isolation,
+   Farey parent, separation, and exceptional low-denominator resonance fields
+   to rows where roots approach `[-1,0]` or `7`th-root directions.

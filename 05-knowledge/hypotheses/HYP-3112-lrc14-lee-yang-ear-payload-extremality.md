@@ -235,12 +235,44 @@ ear_payload_edge_mass
 root_motion_reconstruction_status
 nested_ear_status
 danger_interval_collision_status
+farey_parent_interval
+continued_fraction_word
+ostrowski_residue_word
+root_angle_height_bound
+root_angle_separation_certificate
+exceptional_low_denominator_resonance
+field_of_definition_exit
 ```
 
 These should be added to the finite-address branch-closure / observer-gluing
 ledger whenever the route uses HYP-3103 roots, HYP-3104 maximizer signals,
 HYP-3106 perspective functors, HYP-3101 component packets, or HYP-3102
 first-obstruction quotients.
+
+## Approximation Merge
+
+The exact ear payload turns irrational/transcendental approximation into a
+finite proof-certificate question.  The payload `A_t(E,a)` is computed from
+sector incidences on a finite endpoint partition.  Therefore a proposed
+irrational witness time, a numerically observed Lee-Yang angle, or a
+transcendence analogy must be pulled back to the finite sidecar that decides
+which endpoint interval, Farey parent, or root-isolation disk carries the LRC
+predicate.
+
+Three guardrails follow.
+
+1. Root angles of `G_E` are algebraic after `E` is fixed, because `G_E` has
+   rational coefficients.  Angle proximity to the `7`th-root directions is
+   proof-facing only with coefficient height, root isolation, and an explicit
+   separation bound.
+2. Continued fractions and Ostrowski words are legal schedulers for finite
+   root/time localization, not substitutes for endpoint-owner data.  A future
+   ledger row should report the Farey parent interval for the last legal ear
+   and for any danger-interval contact.
+3. Far ears such as `+21` should be read as low-denominator resonance walls:
+   they can keep the root set complex while sharply reducing distance from
+   `[-1,0]`.  Such rows need `exceptional_low_denominator_resonance` or a
+   named debt exit before a quotient is allowed to forget the resonance.
 
 ## Bold Conjectures
 

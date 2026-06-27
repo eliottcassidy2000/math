@@ -195,6 +195,47 @@ residue entropy, not large Bragg peaks.  The Lee-Yang root wall is value-facing;
 Savitch and ears are proof-facing sidecars that explain when local descent is
 compressible and when a named trap needs a nonlocal packet.
 
+## Approximation Sidecar Merge
+
+The irrational/transcendental approximation prompt fits this lane as a
+certificate discipline for root angles, lattice phases, and reachability
+schedules.
+
+Root angles from the miss-count PGF are numerical shadows of algebraic data:
+`G_E(z)` has rational coefficients, so each root is algebraic after the packet
+is fixed.  A close angle to a `7`th-root direction is therefore not a theorem
+until the packet carries a degree/height bound, an isolating disk or interval,
+and a separation certificate from the relevant rational angle.  The field
+should be recorded as:
+
+```text
+root_angle_algebraic_degree
+root_angle_height_bound
+root_angle_isolating_disk
+root_angle_farey_parent_interval
+root_angle_separation_certificate
+```
+
+This also reframes the Bravais signal.  A large reciprocal peak is a rational
+resonance wall; the bounded-bank scan says the current high-`p0` packets are
+more reciprocal-flat and entropy-rich.  The possible hidden structure is closer
+to a finite "badly approximable residue phase" sidecar than to a crystalline
+Bragg maximizer.  The needed measurements are not only peak size, but:
+
+```text
+bravais_badly_approximable_score
+continued_fraction_word_of_peak_phase
+resonance_wall_height
+exceptional_low_denominator_peaks
+```
+
+Savitch midpoint schedules and ear decompositions add a second approximation
+interface.  Continued fractions, Ostrowski words, and Farey parent intervals
+can index the finite recursive cuts used to move from a numerical root or
+time estimate back to an exact packet state.  A future scout should ask whether
+strict-descent traps share a short `continued_fraction_word`, a common
+low-height resonance wall, or a named endpoint-owner obstruction.
+
 ## Current Hypotheses
 
 Strengthened:

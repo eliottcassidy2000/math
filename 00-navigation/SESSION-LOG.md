@@ -33,6 +33,40 @@ address.  Updated HYP-3110, OPEN-Q-108, LTI-247, LTT-145, the result index,
 and the reflection.
 
 ## codex-2026-06-27-S262 -- Lee-Yang sidecar supplement
+## codex-2026-06-27-S265 follow-up -- HYP-3114 approximation sidecar extension
+
+User asked to consider and merge in connections relating to approximation of
+irrational and transcendental numbers.  Rebased over incoming S265 work that
+had already claimed HYP-3113 and HYP-3114/T1190/LTI-251/LTT-149, then rebased
+again over the HYP-3110 De Moivre/Jacobi/crystallographic Lean sidecar.
+Extended HYP-3114 rather than opening a duplicate namespace, and merged the
+prompt into HYP-3062, HYP-3108, HYP-3110, HYP-3111, HYP-3112,
+LTI-249/LTI-251, LTT-147/LTT-149, OPEN-Q-108, and reflection
+`07-reflections/irrational-transcendental-approximation-sidecar-lrc14-codex-s265.md`.
+
+Main synthesis: approximation theory is a sidecar, not a proof shortcut.
+Finite witness approximation belongs to Farey parent intervals, continued
+fractions/Ostrowski words, denominator height, endpoint-owner data, exact `M`,
+and finite-address exits.  Algebraic near misses belong to Roth/Minkowski
+height data: relation lattice, covolume, successive minima, algebraic target,
+height, approximation exponent, root isolation, separation certificate, and
+exceptional approximants.  Power-resonance lanes belong to Baker-style
+`linear_forms_log_gap` certificates only after a true multiplicative relation
+has been extracted.  Transcendence labels are not LRC predicates; they must be
+paired with field-of-definition and algebraic-dependence data before a quotient
+may forget endpoint or root coordinates.
+
+Proof-frontier consequence: PGF roots have rational-coefficient algebraic
+data, so a root angle near a `7`th-root direction needs height/isolation and a
+separation certificate.  Bravais peaks are low-denominator resonance walls,
+while current high-`p0` rows look reciprocal-flat and entropy-rich.  Far
+one-runner ears such as `+21` should be treated as exceptional
+low-denominator resonance events that can keep roots complex while moving the
+root cloud toward `[-1,0]`.  Next concrete work: add the approximation fields
+to the finite-address branch-closure ledger and the Lee-Yang ear-payload
+ledger over HYP-2963 and the THM-573 residual.
+
+## codex-2026-06-27-S263 -- De Moivre/Jacobi/crystallographic frontier reservation -- HYP-3110
 
 User asked to work on Lee-Yang extremality toward the LRC proof, using full PGF root curves, `exp(-lambda S^4-bS^2)`, Savitch reachability, Bravais lattices, and ear decompositions as inspiration.  Pulled current mainline first and integrated the directly relevant incoming HYP-3103 miss-count PGF roots, HYP-3104 maximizer signal atlas, HYP-3105 obstruction-transfer atlas, HYP-3106 perspective functors, and HYP-3107 Lean proof-frontier ledger.  Completed the reserved HYP-3108/T1185 lane with `04-computation/lee_yang_savitch_ear_lattice_extremality_codex_s262.py`, stored output, and reflection `07-reflections/lee-yang-savitch-ear-lattice-extremality-codex-s262.md`.
 

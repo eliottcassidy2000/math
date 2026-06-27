@@ -140,6 +140,82 @@ The same sidecar links to:
   row that invokes "Minkowski count", Diophantine approximation, height,
   algebraicity, or low-height exceptional walls.
 
+## Irrational / Transcendental Approximation Merge
+
+The current LRC14 frontier needs a sharper split than "rational versus
+irrational" or "algebraic versus transcendental."  Those labels are not LRC
+predicates.  They become useful only after the approximation datum says what
+finite packet coordinate is being preserved.
+
+The merged sidecar has four layers:
+
+```text
+finite_witness_approximation:
+  Farey interval
+  continued-fraction / Ostrowski word
+  denominator height
+  endpoint-owner word
+  exact M or finite-address handoff
+
+algebraic_near_miss:
+  algebraic target
+  field degree
+  coefficient / height bound
+  approximation exponent
+  exceptional approximants
+  separation certificate
+
+logarithmic_or_power_resonance:
+  multiplicative relation lattice
+  linear form in logarithms
+  Baker-style gap scale
+  low-height resonance list
+  descent or residual-debt exit
+
+field_of_definition_warning:
+  rationality / irrationality status
+  algebraicity / transcendence status
+  algebraic-dependence status
+  destroyed coordinate
+  legal proof exit
+```
+
+For LRC14, the first layer is usually the proof-facing one: witness times,
+bad arcs, endpoint walls, and the `q=14*Vmax` covering-system reformulation
+are finite rational-grid objects.  Irrational or transcendental language enters
+as a limit, separation, or exceptional-set control, not as the witness itself.
+Continued fractions and Ostrowski words should identify the finite Farey parent
+interval that contains a proposed witness or root-angle event.
+
+The algebraic layer is needed when a quotient produces algebraic root angles,
+algebraic fold branches, or low-height q-lattice near misses.  Roth can fence
+an infinite algebraic leakage only after the finite exceptional approximants
+are named.  If the target may be transcendental or if algebraic dependence is
+unknown, the theorem-facing payload is the field/height/exception ledger, not
+the word "transcendental."
+
+The logarithmic layer is separate.  Baker/linear-form estimates are the right
+tool for power-resonance gaps such as Collatz-style `2^E-3^k` equations and
+for any LRC two-block determinant gap that has genuinely been reduced to a
+multiplicative relation.  That lane should emit `linear_forms_log_gap` and
+`low_height_resonance_list`, not a generic Diophantine exponent.
+
+New packet fields for any approximation-sensitive row:
+
+```text
+farey_parent_interval
+continued_fraction_word
+ostrowski_residue_word
+approximation_height_profile
+irrationality_exponent_proxy
+algebraic_degree_or_unknown
+root_angle_separation_certificate
+linear_forms_log_gap
+low_height_resonance_list
+algebraic_dependence_status
+field_of_definition_exit
+```
+
 ## Tournament Analysis
 
 Vertices are proof carriers and sidecar columns, not runners:

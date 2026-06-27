@@ -4251,16 +4251,24 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   (`A_mean=1.965291`) from far resonance (`A_mean=2.993492`).
 - **Preserves:** miss-count PGF coefficients, root multiset, negative-interval
   distance, axis gap, fugacity winner profile, `A_t`, parity/mean payload,
-  nested/far ear status, and root-motion reconstruction.
+  nested/far ear status, root-motion reconstruction, Farey parent intervals,
+  continued-fraction/Ostrowski localization words, algebraic root-height or
+  isolation certificates, and low-denominator resonance exits.
 - **Forgets / guardrail:** Root-realness alone is too coarse: a far-resonant
   row can remain in the complex-root stratum while approaching the danger
   interval.  A quotient that keeps `p0`, moments, pair mass, or final roots but
   drops `A_t` has forgotten the coordinate that predicts the next root motion.
+  Likewise, an irrational/transcendental approximation slogan is not a proof
+  carrier unless it is pulled back to finite endpoint data, root isolation,
+  algebraic height, exceptional approximants, or a named Baker/log-resonance
+  gap.
 - **Tournament vertices:** `nested_low_payload_ear`, `far_high_payload_ear`,
   `negative_interval_contact`, `root_axis_gap_event`,
   `payload_parity_split`, `root_motion_reconstruction`,
-  `component_bound_debt`, `first_obstruction_debt`, `K33_state_lift_debt`,
-  and `AP_GW_boundary_stop`.
+  `farey_parent_interval`, `continued_fraction_word`,
+  `root_angle_separation_certificate`, `component_bound_debt`,
+  `first_obstruction_debt`, `K33_state_lift_debt`, and
+  `AP_GW_boundary_stop`.
 - **Next hook:** Build `lrc14_lee_yang_ear_payload_ledger` over HYP-2963 and
   the THM-573 residual.  Test whether every root approaching `[-1,0]` is
   explained by high-mean payload, nonnested ear debt, component debt,
@@ -4288,11 +4296,18 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Preserves:** positive witness interval, endpoint distance, max-speed scale,
   continued-fraction convergents, partial quotient spikes, irrationality-measure
   status, exceptional approximants, Liouville spike schedule, finite-grid
-  bound, and terminal LRC route.
+  bound, root angle height/isolation/separation data, Bravais resonance-wall
+  height, Baker/log-gap data when a multiplicative relation is present, and
+  terminal LRC route.
 - **Forgets / guardrail:** "Transcendental" alone is not a bound.  A quotient
   that drops irrationality-measure data, exceptional approximants, or
   partial-quotient spikes cannot justify a finite-denominator conclusion.
-- **Pointers:** HYP-3114, HYP-3112, HYP-3111, HYP-3109, HYP-3108, HYP-3098,
+  Likewise, PGF root-angle proximity is theorem-facing only with algebraic
+  root isolation and a separation certificate, and Baker-style log estimates
+  are legal only after the multiplicative relation lattice is explicit.  The
+  HYP-3110 De Moivre/Jacobi lane adds the finite theta/branch version: branch
+  ids, theta channels, translation lattices, and legal exits must be retained.
+- **Pointers:** HYP-3114, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3098,
   HYP-3096, HYP-3089, HYP-3088, HYP-3075, HYP-3062, HYP-2866, THM-575,
   THM-565, THM-573, LTI-251, LTI-249, LTT-149, LTT-147, T1190, T1188,
   OPEN-Q-108.

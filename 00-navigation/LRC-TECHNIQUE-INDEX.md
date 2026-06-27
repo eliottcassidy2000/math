@@ -2099,6 +2099,12 @@ ear_payload_mean_level
 ear_payload_parity_bias
 root_motion_reconstruction_status
 nested_ear_status
+farey_parent_interval
+continued_fraction_word
+ostrowski_residue_word
+root_angle_height_bound
+root_angle_separation_certificate
+exceptional_low_denominator_resonance
 terminal_exit_or_named_debt
 ```
 
@@ -2106,6 +2112,14 @@ Seed guardrail: AP/consec and even-AP have `real=0/6` and
 `dist(roots,[-1,0])=0.9119`, but `single_far_21` is also complex-rooted and
 has distance only `0.2786`.  The distance and the ear payload are needed; the
 root-realness stratum alone is too coarse.
+
+Approximation guardrail: PGF root angles are algebraic after a packet is fixed,
+because the coefficients are rational.  A near `7`th-root direction, a
+negative-interval approach, or an irrational/transcendental analogy is usable
+only after a finite sidecar records the Farey parent interval, the
+continued-fraction/Ostrowski word, root height or isolating disk, separation
+certificate, and any low-denominator resonance wall.  Otherwise the route has
+scalarized a numerical approximation and lost the LRC predicate.
 
 Ear grammar: directed ears correspond to retained one-runner payloads, odd
 ears to `A_t` parity split, nested ears to AP-style legal refinement, and
@@ -2125,6 +2139,34 @@ root-curve ear map, HYP-3108's Lee-Yang/Savitch atlas, and HYP-3111's
 carrier-sidecar lane; test whether every root approaching `[-1,0]` is
 explained by high-mean payload, nonnested ear debt, component-bound debt,
 first-obstruction debt, K33/THM-572 state-lift debt, or AP/GW boundary status.
+
+### 79. LTI-251 Irrational/Transcendental Approximation Witness-Margin Sidecar
+
+Sources: HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3108,
+HYP-3098, HYP-3089, HYP-3088, HYP-3075, HYP-3062, THM-575, THM-573.
+
+Preserves: positive witness interval, endpoint distance, max-speed scale,
+continued-fraction/Ostrowski localization, denominator-shell grid hit,
+Roth/Minkowski height and exception data, algebraic root isolation, Bravais
+resonance-wall height, and Baker/log-gap data after a multiplicative relation
+has been extracted.
+
+LRC use: HYP-3114's margin rule converts an interior witness into rational
+grid witnesses; the HYP-3112/HYP-3113 extension applies the same discipline to
+PGF root angles, Bravais phase peaks, and power-resonance gaps.  Record
+`witness_interval`, `endpoint_margin`, `robust_approximation_radius`,
+`farey_parent_interval`, `continued_fraction_word`,
+`ostrowski_residue_word`, `root_angle_height_bound`,
+`root_angle_isolating_disk`, `root_angle_separation_certificate`,
+`exceptional_low_denominator_resonance`, `linear_forms_log_gap`,
+`low_height_resonance_list`, `theta_channel`, `algebraic_fold_branch_id`,
+destroyed coordinate, and terminal exit before an
+approximation claim is allowed to feed finite-address or observer-gluing data.
+
+Guardrail: rationality, irrationality, algebraicity, and transcendence are
+not LRC predicates by themselves.  They are legal only when field, height,
+dependence, exceptional approximants, and finite packet coordinates are
+retained or explicitly routed to named debt.
 
 ### 72. LTI-243 Tournament Obstruction-Transfer Atlas
 
