@@ -15,6 +15,48 @@
 
 ---
 
+## Lead codex-2026-06-27-S252: LRC14 finite-address branch-closure spine
+
+**Status:** SYNTHESIS / remaining-obligation map; not proof
+(HYP-3083/T1167/LTI-232/LTT-130).
+**Readout:** Expanded
+`05-knowledge/hypotheses/HYP-3083-lrc14-hurwitz-finite-address-branch-closure-spine.md`
+from a reservation into the integrated proof map, then rebased it over the
+S59 covering-bound redirect.  The current best synthesis is a finite-address
+exponential covering zipper:
+
+```text
+primitive covering 13-row
+  -> q-witness gate
+  -> apex-majority gamma descent or low-apex residue
+  -> one-large-speed peeler or top-balanced residue
+  -> finite-address packet
+  -> protected branch graph
+  -> strict witness / AP-GW boundary / C27 petal /
+     covering moment / K33-THM-572 lift / named residual debt
+  -> formal sidecar closure
+```
+
+Hurwitz/Markov/Pell walls, q-cusp principal parts, sixth-power collision
+certificates, route-median centers, apex-periodic covering rows, endpoint
+owners, and tournament kernels are all legal proof data only after their
+finite address and destroyed coordinate are retained or routed to named debt.
+The critical path is the covering bound for rows with multiples of `14`, not
+AP/GW census rigidity.  The live obligations are global finite-address
+normalizer, covering-moment/OPEN-Q-108 discharge, K33/THM-572 lift,
+branch-closure theorem, integer-vs-real/formal closure, and AP/GW census only
+if a boundary-equality route is chosen.
+**Next:** build `finite_address_branch_closure` with `source_row_or_family`,
+`low_apex_top_balanced_status`, `normalizer_exit_attempted`,
+`finite_address_word`,
+`preserved_lrc_predicate`, `destroyed_coordinate`,
+`required_sidecar_or_debt`, `protected_branch_node`, `bridge_status_raw`,
+`bridge_status_protected`, `terminal_exit`, `lean_formalization_status`, and
+`residual_debt_name`.  Treat any naked bridge as missing address/debt rather
+than as a scalar theorem shortcut.  First target the low-apex covering-moment
+family, then K33/THM-572 lift construction.
+Namespace: HYP-3083 / T1167 / LTI-232 / LTT-130.
+
 ## Lead codex-2026-06-26-S249: Robbins-Fermat-Catalan branch tournaments
 
 **Status:** SYNTHESIS / proof-network guardrail; not proof

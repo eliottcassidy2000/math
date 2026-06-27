@@ -8,13 +8,47 @@ NEW: reflection. The redirect: the proof is the covering bound (exponential/gamm
 
 ## codex-2026-06-27-S252 -- Hurwitz finite-address branch-closure spine (HYP-3083/T1167/LTI-232/LTT-130)
 
-Started the synthesis requested after incoming S245-S251: integrate Hurwitz
-finite-address thinking with the q-cusp, Lean, median-hull, sixth-power,
-Robbins, and branch-kernel layers.  Claimed HYP-3083/T1167/LTI-232/LTT-130 as
-the remaining-proof spine.  Stub claim: LRC14 should now be organized as
-global primitive-row reduction into finite-address packet rows, protected
-branch-graph entry, terminal discharge or named residual debt, and formal
-sidecar closure, rather than another scalar separator.
+Integrated the incoming S245-S251 work with the older LRC14 packet, topology,
+covering, and formalization threads, then rebased over the S59/S252b redirect
+that correctly puts the covering bound on the critical path and treats AP/GW
+census as an equality-route side theorem.  Expanded HYP-3083 from a reserved
+namespace into the current remaining-obligation map:
+
+```text
+primitive covering 13-row
+  -> q-witness gate
+  -> apex-majority gamma descent or low-apex residue
+  -> one-large-speed interval peeler or top-balanced residue
+  -> finite-address packet
+  -> protected branch graph
+  -> strict witness / AP-GW boundary / C27 petal /
+     covering moment / K33-THM-572 lift / named residual debt
+  -> formal sidecar closure
+```
+
+Main synthesis: Hurwitz/Markov/Pell walls, q-cusp principal parts, modular
+tails, sixth-power collision certificates, route-median centers,
+apex-periodic covering rows, endpoint owners, and tournament kernels are all
+proof-usable only after the finite address that made them extremal is
+retained.  Raw scalar shadows are the last object, not the theorem interface.
+
+What remains in LRC14 now splits into these concrete obligations:
+
+1. prove global finite-address normalizer / packet coverage for low-apex,
+   top-balanced covering rows;
+2. prove the covering-moment / positive-open discharge behind OPEN-Q-108;
+3. construct the K33/THM-572 tournament-state lift whenever invoked;
+4. promote the HYP-3082 no-naked-bridge audit to a branch-closure theorem over
+   the normalizer image;
+5. finish the integer-vs-real finite-ruler and Lean handoff glue;
+6. keep AP/GW census/shell-collapse as a side theorem unless a future proof
+   chooses a boundary-equality route.
+
+Added the S252 OPEN-Q-108 addendum and backlog lead for the next artifact:
+`finite_address_branch_closure`, a row ledger recording source family,
+low-apex/top-balanced status, finite address, preserved LRC predicate,
+destroyed coordinate, required sidecar/debt, raw/protected bridge status,
+terminal exit, formalization status, and residual debt name.
 
 ## codex-2026-06-27-S245 -- modular cusp / q-Pochhammer Hurwitz carrier (HYP-3075/T1161/LTI-226/LTT-124)
 
