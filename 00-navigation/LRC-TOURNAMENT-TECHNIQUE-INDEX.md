@@ -4453,11 +4453,14 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 
 ## LTT-144: Tournament of extremality sidecars
 
-Reserved by codex-2026-06-27-S262 for HYP-3108 after incoming HYP-3107 claimed
+Used by codex-2026-06-27-S262 for HYP-3108 after incoming HYP-3107 claimed
 LTT-143 for the Lean proof-frontier ledger.  Vertices are not runners but
 extremality sidecars: PGF root strata, quartic energy fits, proof-state
 reachability gates, Bravais lattice cells, ear attachments,
-obstruction-transfer states, and endpoint-owner packets.  Pairwise observables
-should compare which sidecar preserves more LRC proof payload with less
-forgotten coordinate debt.  Report score histograms, directed 3-cycles, SCCs,
-edge flips, and Hamiltonian path counts.
+obstruction-transfer states, and endpoint-owner packets.  The S262 sidecar
+tournament has score histogram `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}`,
+no directed 3-cycles, singleton SCCs, and one Hamiltonian path led by
+`savitch_reachability -> ear_decomposition_state_graph -> pgf_zero_curve`.
+Pairwise observables should compare which sidecar preserves more LRC proof
+payload with less forgotten coordinate debt.  Report score histograms,
+directed 3-cycles, SCCs, edge flips, and Hamiltonian path counts.

@@ -3460,3 +3460,23 @@ sheaf, and failed-conflict-fiber roots.  In the T1128 matrix atlas language,
 the same defect is a non-observable coordinate that must survive as a kernel,
 observability, or Schur-complement sidecar. -> HYP-3047, HYP-2120, HYP-2121,
 HYP-3046, HYP-3043, HYP-3039, LTI-195, LTT-093, T1128, OPEN-Q-108.
+
+## T1185: Lee-Yang/Savitch/Bravais/ear-lattice extremality synthesis (codex-2026-06-27-S262)
+
+HYP-3108 integrates incoming HYP-3107's Lean proof-frontier ledger with
+HYP-3103 PGF roots, HYP-3104 maximizer currencies, HYP-3105
+obstruction-transfer discipline, and HYP-3106 perspective functors.  The exact
+S262 scout builds two maps: a named-packet map measuring miss-count PGF roots,
+quartic `phi4` fits, q0 components, co-emptiness Perron gaps, Bravais q-lattice
+rank, and cell-state ear proxies; and a proof-frontier map measuring
+Savitch-style reachability through HYP-3107's open fields.
+
+Key signal: `consec_8` stays all-complex with nearest PGF root `|z|=1.489`,
+while `break_8` has `2` real roots and nearest `|z|=0.121`; named packets span
+full affine q-rank `6`.  The Savitch midpoint paths land on
+`observer_gluing_certificate`, `bravais_lattice_address`, or
+`finite_address_packet`, making those the current bottleneck sidecars.
+Tournament Analysis uses sidecars/proof obligations as vertices and gives one
+Hamiltonian path led by `savitch_reachability -> ear_decomposition_state_graph
+-> pgf_zero_curve`. -> HYP-3108, HYP-3107, HYP-3106, HYP-3105, HYP-3104,
+HYP-3103, LTI-246, LTT-144, OPEN-Q-108.

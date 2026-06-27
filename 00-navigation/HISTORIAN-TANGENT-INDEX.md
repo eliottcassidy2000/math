@@ -1186,11 +1186,13 @@ to leave future agents with many small handles that might unexpectedly open.
 
 ## T1185: Lee-Yang/Savitch/Bravais/ear-lattice extremality synthesis
 
-Reserved by codex-2026-06-27-S262 for HYP-3108 after incoming HYP-3107 claimed
+Used by codex-2026-06-27-S262 for HYP-3108 after incoming HYP-3107 claimed
 T1184 for the Lean proof-frontier ledger.  This tangent treats the LRC14
 frontier as a multi-map extremality problem: the full miss-count PGF zero
 curve, recursive proof-state reachability depth, lattice packet address, and
 ear-growth grammar are compared as sidecars for HYP-3103 through HYP-3107.
-The tangent should not collapse these to one scalar maximizer until the
-quotient states which LRC predicate it preserves and which coordinate it
-forgets.
+The S262 scout confirms `consec_8`/`break_8` root-stratum separation, full
+affine q-rank `6`, and Savitch midpoint bottlenecks at observer-gluing,
+Bravais/finite-address, and finite-address packet nodes.  Do not collapse the
+tangent to one scalar maximizer until the quotient states which LRC predicate
+it preserves and which coordinate it forgets.

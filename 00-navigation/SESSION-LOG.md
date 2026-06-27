@@ -27365,3 +27365,20 @@ will instead test PGF strata, proof-state gates, lattice cells, ear
 attachments, and proof obligations as tournament vertices.  Next steps are to
 read HYP-3103 through HYP-3107, build the exact signal scout, store output, and
 promote only the surviving invariants.
+
+Follow-up completed in the same session: added exact scout
+`04-computation/lee_yang_savitch_ear_lattice_extremality_codex_s262.py` and
+stored output
+`05-knowledge/results/lee_yang_savitch_ear_lattice_extremality_codex_s262.out`.
+The scout builds two maps.  The packet map confirms the S66 root signal in a
+broader bank: `consec_8` has `#real=0`, nearest root `|z|=1.489`, and apex-7
+angle gap `4.04 deg`, while `break_8` has `#real=2`, nearest `|z|=0.121`, and
+angle gap `20.91 deg`; named packets span full affine `q_t` rank `6`.  The
+proof-frontier map routes sidecars through Savitch-style midpoint certificates;
+midpoints land on `observer_gluing_certificate`, `bravais_lattice_address`, or
+`finite_address_packet`, matching HYP-3107's open fields.  Tournament Analysis
+uses sidecars/proof obligations as vertices, with score histogram
+`{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}`, no directed 3-cycles, singleton
+SCCs, and one Hamiltonian path led by `savitch_reachability ->
+ear_decomposition_state_graph -> pgf_zero_curve`.  Added reflection
+`07-reflections/lee-yang-savitch-ear-lattice-extremality-codex-s262.md`.

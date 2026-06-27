@@ -1,0 +1,130 @@
+HYP-3108 Lee-Yang/Savitch/Bravais/ear-lattice extremality scout -- codex S262
+Incoming integration: HYP-3103 PGF roots, HYP-3104 maximizer currencies,
+HYP-3105 obstruction-transfer discipline, HYP-3106 perspective functors,
+and HYP-3107 Lean proof-frontier open fields.
+
+====================================================================================================
+MAP 1: NAMED LRC PACKETS, PGF ROOTS, PHI4 FITS, LATTICE/EAR SIGNALS
+====================================================================================================
+name               fam                      q0     LyK8  real  nearest    gap7       lam         b     r2   c0     max0  states  ears  Perron
+consec_8          S66_pgf_bank          0.3272   3.5823     0    1.489    4.04    0.0040    0.0662  0.540   10  0.06122      32    14  0.6469
+even_AP_8         S66_pgf_bank          0.3272   3.5823     0    1.489    4.04    0.0040    0.0662  0.540   20  0.03061      32    14  0.6469
+break_8           S66_pgf_bank          0.0453   0.6853     2    0.121   20.91   -0.0186    0.5108  0.795    8  0.01099      45    40  0.5508
+top_cluster_8     S66_pgf_bank          0.1867   2.1400     0    1.244   13.35   -0.0024    0.2323  0.889   28  0.02289      53    48  0.6328
+random_spread_8   S66_pgf_bank          0.0115   0.3441     4    0.047   25.71   -0.0362    0.8876  0.954    9  0.00265      53    98  0.4910
+covering_8        S66_pgf_bank          0.0363   0.5865     2    0.107   20.26   -0.0236    0.5946  0.843    6  0.01020      46    42  0.5210
+cap_j1            HYP3104_cap_atoms     0.0000   1.4286     6    0.000   51.43    1.2358    1.5753  1.000    0  0.00000       7     1  4.2857
+cap_j2            HYP3104_cap_atoms     0.0000   0.2198     6    0.000   51.43   -0.6525    3.1685  1.000    0  0.00000      22    27  3.0422
+cap_j3_order3     HYP3104_cap_atoms     0.0000   0.5714     4    0.000   34.29    0.0464    0.4874  0.890    0  0.00000      38    30  2.1863
+cap_j4_dip        HYP3104_cap_atoms     0.0000   0.5235     4    0.000   34.00    0.0001    0.4664  0.948    0  0.00000      57    64  1.5347
+cap_j5_dip        HYP3104_cap_atoms     0.0000   0.5666     4    0.000   25.71   -0.0425    0.7586  0.947    0  0.00000      57    50  1.1149
+gw10              wide_binding_bank     0.4423   4.6208     0    1.726    6.56    0.0012    0.1540  0.512   27  0.03620      41    33  0.4376
+gw11              wide_binding_bank     0.5211   5.3660     0    1.778    3.15   -0.0029    0.2411  0.514   28  0.07398      48    27  0.3412
+gw12              wide_binding_bank     0.6063   6.1876     0    1.824    2.29   -0.0074    0.3341  0.558   34  0.05442      42    13  0.2731
+E_star_k12        wide_binding_bank     0.6157   6.2861     0    1.813    2.47   -0.0078    0.3404  0.550   31  0.05087      36    18  0.2848
+
+Legend: real=# real PGF roots; gap7=mean angular distance to 1,2,3 times 360/7;
+lam,b,r2 fit -log q_t to c + b*S^2 + lambda*S^4; c0/max0 are q0 component count/largest cell.
+
+BRAVAIS LATTICE ADDRESS MAP
+  affine rank of q-vectors across all packets: 6 (max 6 because sum q_t=1)
+  approximate q-lattice covolume proxy (product nonzero singular values): 0.0020864042
+  successive minima proxy (shortest independent q-differences):
+    0.021730  gw12 <-> E_star_k12
+    0.068706  break_8 <-> covering_8
+    0.090622  gw10 <-> gw11
+    0.102836  gw11 <-> gw12
+    0.130819  consec_8 <-> gw10
+    0.181688  random_spread_8 <-> covering_8
+  family HYP3104_cap_atoms: rank=4 covolume=0.0081973931
+  family S66_pgf_bank: rank=4 covolume=3.1336502e-06
+  family wide_binding_bank: rank=3 covolume=2.6250637e-05
+
+LEE-YANG / PHI4 EXTREMALITY READOUT
+  all-complex PGF rows: consec_8, even_AP_8, top_cluster_8, gw10, gw11, gw12, E_star_k12
+  root-collision rows with nearest |z|<0.25: break_8, random_spread_8, covering_8, cap_j1, cap_j2, cap_j3_order3, cap_j4_dip, cap_j5_dip
+  positive quartic lambda rows: 6/15
+  largest lambda packets: cap_j1:1.2358, cap_j3_order3:0.0464, consec_8:0.0040, even_AP_8:0.0040, gw10:0.0012
+  closest apex-7 angle packets: gw12:2.29deg, E_star_k12:2.47deg, gw11:3.15deg, consec_8:4.04deg, even_AP_8:4.04deg
+
+====================================================================================================
+MAP 2A: SAVITCH-STYLE REACHABILITY THROUGH CURRENT LRC14 FRONTIER OBLIGATIONS
+====================================================================================================
+  raw_residual_packet -> terminal_lrc14_statement: length=4
+    path: raw_residual_packet -> ear_state_transition -> observer_gluing_certificate -> finite_address_packet -> terminal_lrc14_statement
+    recursive midpoint schedule:
+      len<=4: raw_residual_packet -> observer_gluing_certificate -> terminal_lrc14_statement
+      len<=2: raw_residual_packet -> ear_state_transition -> observer_gluing_certificate
+      len<=2: observer_gluing_certificate -> finite_address_packet -> terminal_lrc14_statement
+  pgf_zero_curve_signal -> terminal_lrc14_statement: length=4
+    path: pgf_zero_curve_signal -> quartic_phi4_energy -> bravais_lattice_address -> finite_address_packet -> terminal_lrc14_statement
+    recursive midpoint schedule:
+      len<=4: pgf_zero_curve_signal -> bravais_lattice_address -> terminal_lrc14_statement
+      len<=2: pgf_zero_curve_signal -> quartic_phi4_energy -> bravais_lattice_address
+      len<=2: bravais_lattice_address -> finite_address_packet -> terminal_lrc14_statement
+  ear_state_transition -> terminal_lrc14_statement: length=3
+    path: ear_state_transition -> observer_gluing_certificate -> finite_address_packet -> terminal_lrc14_statement
+    recursive midpoint schedule:
+      len<=3: ear_state_transition -> finite_address_packet -> terminal_lrc14_statement
+      len<=2: ear_state_transition -> observer_gluing_certificate -> finite_address_packet
+  bravais_lattice_address -> terminal_lrc14_statement: length=2
+    path: bravais_lattice_address -> finite_address_packet -> terminal_lrc14_statement
+    recursive midpoint schedule:
+      len<=2: bravais_lattice_address -> finite_address_packet -> terminal_lrc14_statement
+  fine_modp_winding_transfer -> terminal_lrc14_statement: length=3
+    path: fine_modp_winding_transfer -> observer_gluing_certificate -> finite_address_packet -> terminal_lrc14_statement
+    recursive midpoint schedule:
+      len<=3: fine_modp_winding_transfer -> finite_address_packet -> terminal_lrc14_statement
+      len<=2: fine_modp_winding_transfer -> observer_gluing_certificate -> finite_address_packet
+
+  Remaining proof fields from incoming HYP-3107:
+    coverage extremality for k=8,9,10; finite local-minima certificate;
+    reflection-Perron/order-3/order-4 certificate; Node-3 peel;
+    finite-ruler normalized arc glue; fine mod-p winding transfer;
+    residual classifier to ObserverGluingCertificate or FiniteAddressBranchPacket.
+
+====================================================================================================
+MAP 2B: TOURNAMENT ANALYSIS ON EXTREMALITY SIDECARS
+====================================================================================================
+  vertices are sidecars/proof obligations, not runners.
+  axes: preserves_lrc_predicate, detects_root_collision, fits_lean_frontier, names_destroyed_coordinate, finite_checkable, tournament_transfer_safe, captures_gluing, computes_on_packets
+  score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+  scores: {'savitch_reachability': 9, 'ear_decomposition_state_graph': 8, 'pgf_zero_curve': 7, 'bravais_lattice_address': 6, 'coverage_component_profile': 5, 'reflection_perron_moment': 4, 'obstruction_transfer_ledger': 3, 'lean_frontier_open_fields': 2, 'quartic_phi4_energy': 1, 'raw_scalar_p0': 0}
+  directed_3cycles: 0
+  sccs: [['raw_scalar_p0'], ['quartic_phi4_energy'], ['lean_frontier_open_fields'], ['obstruction_transfer_ledger'], ['reflection_perron_moment'], ['coverage_component_profile'], ['bravais_lattice_address'], ['pgf_zero_curve'], ['ear_decomposition_state_graph'], ['savitch_reachability']]
+  Hamiltonian_path_count: 1
+  low-margin edge-flip risks:
+    margin=0: bravais_lattice_address vs coverage_component_profile
+    margin=0: bravais_lattice_address vs lean_frontier_open_fields
+    margin=0: bravais_lattice_address vs obstruction_transfer_ledger
+    margin=0: bravais_lattice_address vs reflection_perron_moment
+    margin=0: coverage_component_profile vs lean_frontier_open_fields
+    margin=0: coverage_component_profile vs obstruction_transfer_ledger
+    margin=0: coverage_component_profile vs reflection_perron_moment
+    margin=0: obstruction_transfer_ledger vs lean_frontier_open_fields
+    margin=0: quartic_phi4_energy vs raw_scalar_p0
+    margin=0: reflection_perron_moment vs lean_frontier_open_fields
+    margin=0: reflection_perron_moment vs obstruction_transfer_ledger
+    margin=0: savitch_reachability vs ear_decomposition_state_graph
+    margin=1: pgf_zero_curve vs bravais_lattice_address
+    margin=1: pgf_zero_curve vs coverage_component_profile
+  one retention path: savitch_reachability -> ear_decomposition_state_graph -> pgf_zero_curve -> bravais_lattice_address -> coverage_component_profile -> reflection_perron_moment -> obstruction_transfer_ledger -> lean_frontier_open_fields -> quartic_phi4_energy -> raw_scalar_p0
+
+SYNTHESIS: WHAT THIS SESSION ADVANCES
+  strengthened:
+    PGF root confinement is not just a scalar p0 restatement: consec_8 has 0 real roots, nearest |z|=1.489, while break_8 has 2 real roots, nearest |z|=0.121.
+    The Lee-Yang signal should be paired with component/ear data: root collision rows
+    also change the state-transition and q0-component sidecars, which HYP-3107 needs.
+    Bravais rank says the named packets occupy a full 6-dimensional q-lattice face;
+    a proof cannot reduce them to one moment without declaring lost coordinates.
+  bold but still speculative:
+    The phi4 lambda coefficient may be an extremality curvature coordinate.
+    Ear-excess in the cell-state graph may be the observer-gluing sidecar that
+    replaces raw H=7/H=21 analogies for LRC packets.
+    Savitch midpoint certificates suggest a finite recursive proof-state search,
+    but the hard theorem is still the coverage/observer certificate at the midpoint.
+  rejected simplification:
+    Raw scalar p0 and raw tournament H are too lossy.  They destroy the root stratum,
+    first-live order, component count, and sidecar needed by the Lean frontier.
+
+DONE.

@@ -2246,10 +2246,13 @@ obligation, and state exactly what the quotient preserves and destroys.
 
 ## LTI-246: Lee-Yang/Savitch/Bravais/ear-lattice extremality atlas
 
-Reserved by codex-2026-06-27-S262 for HYP-3108 after incoming HYP-3107 claimed
+Used by codex-2026-06-27-S262 for HYP-3108 after incoming HYP-3107 claimed
 LTI-245 for the Lean proof-frontier ledger.  The method compares residual LRC
 packets by five sidecars: miss-count PGF zero geometry, quartic Lee-Yang-style
 energy fit, Savitch-style recursive reachability depth in the proof-state
 graph, Bravais lattice rank/covolume of signal differences, and
-ear-decomposition gluing legality.  Use it only with a declared preserved LRC
-predicate, destroyed coordinate, and required sidecar list.
+ear-decomposition gluing legality.  The first exact scout finds full affine
+q-rank `6` across named packets and routes proof-state midpoint certificates
+through observer-gluing, Bravais/finite-address, and finite-address packet
+nodes.  Use it only with a declared preserved LRC predicate, destroyed
+coordinate, and required sidecar list.
