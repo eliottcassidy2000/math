@@ -89,6 +89,10 @@ obligations, and proof-carrier interfaces.
   collision rank, primitive gcd, shared-term filter, CRT residue words,
   optional Lean q-cusp arithmetic address, and legal collision exit before a
   `2-vs-2` or `3-vs-3` equality becomes proof data.
+- Need to test whether a proof quotient has become a load-bearing bridge:
+  use LTT-128 after LTT-126/LTT-125/LTT-123/LTT-119 and declare branch
+  carriers, endpoint kernel tournaments, reverse verification paths, q-cusp
+  guards, and named residual exits before contracting the branch graph.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3645,6 +3649,35 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   LTI-228, LTI-227, LTI-226, LTI-224, LTI-221, LTI-209, LTT-127, LTT-126,
   LTT-125, LTT-124, LTT-122, LTT-119, LTT-107, T1164, T1163, T1162, T1161,
   T1159, OPEN-Q-108.
+### LTT-128: Branch-Tournament Strong Orientation
+
+- **Move:** Treat proof branches and local exit kernels as the tournament
+  vertices, then apply Robbins' bridgelessness criterion to the proof graph
+  before any quotient contraction is trusted.
+- **LRC use:** HYP-3081/S248 turns "controlled forgetting" into a graph test
+  downstream of the HYP-3078 q-cusp scout and HYP-3079 Lean q-cusp ledger: a
+  forgotten coordinate is illegal when it is the only load-bearing bridge
+  between two certificate regions.  Legal branch corridors must have a reverse
+  verification mode, an endpoint kernel tournament, and a retained sidecar or
+  named residual exit.
+- **Tournament Analysis:** Vertices are proof carriers, not runners or arcs:
+  `labelled_packet_branch`, `Robbins_no_bridge_assembly`,
+  `small_tournament_kernel`, `endpoint_owner_closed_H1`,
+  `residual_capacitor_cut`, `power_lift_no_lift_guard`,
+  `q_cusp_polar_debt_guard`, `reverse_verification_path`, and
+  `raw_scalar_shadow`.  The gauge is which carrier better preserves the LRC
+  predicate under contraction; ties follow the declared reverse-verification
+  path.
+- **Next hook:** Add `branch_id`, `bridge_status`,
+  `reverse_verification_mode`, `endpoint_kernel_iso_class`,
+  `achievable_tournament_kernel_set`, `power_lift_guard`,
+  `q_cusp_polar_debt_guard`, and `destroyed_coordinate_exit` to HYP-2963
+  proof-graph rows, then compute naked bridges before and after sidecar
+  closure.
+- **Pointers:** HYP-3081, HYP-3079, HYP-3078, HYP-3077, HYP-3076, HYP-3075,
+  HYP-3074, HYP-3071, HYP-3070, HYP-3058, HYP-3057, HYP-3056, HYP-2963,
+  THM-572, LTI-230, LTI-228, LTI-227, LTI-225, LTI-221, LTT-128, LTT-126,
+  LTT-125, LTT-123, T1165, T1163, T1162, T1160, OPEN-Q-108.
 
 ## Immediate Pull List
 
