@@ -1,3 +1,11 @@
+## mac-mini-2026-06-27-S59 -- RE-PRIORITIZATION: the LRC(14) proof = the COVERING BOUND (exponential/periodicity), the census is the EASY case's extremal (NOT on the critical path)
+Owner: 4 Farey variations (a+b,a*b,b^a,a^b) + integrate work + comprehensive understanding of what REMAINS + creative synthesis. Reflection: the-proof-lives-at-the-exponential-variation-covering-bound-not-census.md.
+- **VERIFIED re-prioritization:** LRC(14) <=> [sets with a multiple of 14 have M>=1/14] (the COVERING BOUND). Non-mult-14 sets get M>=1/14 TRIVIALLY at t=1/14 (verified 2000 sets). The census {AP,GW} is non-mult-14 = the extremal of the EASY half, NOT on the critical path. The proof needs M>=1/14 (non-strict), WEAKER than the census (M>1/14 strict).
+- **4 Farey variations = hyperoperation = project scales:** a+b (additive: mediant/three-gap = the CENSUS, easy-case extremal); a*b (mult: a*b of 1/14 = 14=2*7 = the apex condition, mult-of-14 on observer); b^a (exp: apex-PERIODICITY, 14m is 1/14-periodic = kps's gamma-trick = THE PROOF); a^b (exp: Burnside 2^orbit / H=1+2^d).
+- **IMPROVED ARGUMENT (redirect):** the proof lives at the EXPONENTIAL (apex-periodicity) variation -- the covering bound via gamma-trick (kps) + Node 3 equidistribution (S46, verified: seed+{84,168,210} all M>=1/14). The ADDITIVE (census/three-gap, ~S51-S56) is the easy-case extremal, NOT needed. STOP proving the census; FINISH the covering bound.
+- **What remains (correctly scoped):** the gamma-trick residual (descent 14->7->2, S52) + effective Node 3 (Erdos-Turan) + induction base. NONE is the census/consec-maximizes.
+NEW: reflection. The redirect: the proof is the covering bound (exponential/gamma-trick), not the census (additive). NEXT: the team should focus the gamma-trick + Node 3 (covering bound), drop the census rigidity.
+
 ## codex-2026-06-27-S252 -- Hurwitz finite-address branch-closure spine (HYP-3083/T1167/LTI-232/LTT-130)
 
 Started the synthesis requested after incoming S245-S251: integrate Hurwitz
