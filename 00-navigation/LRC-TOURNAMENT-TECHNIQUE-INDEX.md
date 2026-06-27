@@ -115,7 +115,8 @@ obligations, and proof-carrier interfaces.
   `TournamentH7.LRCFiniteAddressBranchClosure.FiniteAddressBranchPacket`
   with a real low-apex/top-balanced covering-moment row, multiple-of-7
   residual count, feasible dual ledger, HYP-3085 pairwise/Perron certificate,
-  protected branch certificate, and terminal witness floor.
+  protected branch certificate, largest-arc floor status, and terminal witness
+  floor.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3823,13 +3824,13 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Next hook:** Instantiate one actual HYP-2963 low-apex/top-balanced
   covering-moment packet in this Lean shape, including a feasible dual `g`,
   HYP-3085-gK8 pairwise `S2` / reflection-`3x3` Perron certificate data,
-  HYP-3085 covering/K33 shuttle status, bridge-protection mode, q-cusp ledger
-  id, terminal floor, and K33/F7 status; then test whether parameterized
-  family extension introduces any naked bridge.
-- **Pointers:** HYP-3087, HYP-3085, HYP-3084, HYP-3083, HYP-3082, HYP-3081,
-  HYP-3079, HYP-3078, HYP-3075, HYP-2963, THM-523, THM-571, THM-572, THM-573,
-  LTI-234, LTI-233, LTI-232, LTI-231, LTT-132, LTT-131, LTT-130, LTT-129,
-  T1170, T1169, T1167, OPEN-Q-108.
+  HYP-3085 covering/K33 shuttle status, HYP-3089 largest-arc floor status,
+  bridge-protection mode, q-cusp ledger id, terminal floor, and K33/F7 status;
+  then test whether parameterized family extension introduces any naked bridge.
+- **Pointers:** HYP-3087, HYP-3088, HYP-3089, HYP-3085, HYP-3084, HYP-3083,
+  HYP-3082, HYP-3081, HYP-3079, HYP-3078, HYP-3075, HYP-2963, THM-523,
+  THM-571, THM-572, THM-573, LTI-234, LTI-233, LTI-232, LTI-231, LTT-132,
+  LTT-131, LTT-130, LTT-129, T1170, T1169, T1167, OPEN-Q-108.
 
 ## Immediate Pull List
 

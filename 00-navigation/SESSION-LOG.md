@@ -214,7 +214,10 @@ producer route for the covering-moment exit: a low-order moment certificate led
 by the pairwise `S2` co-emptiness term and a reflection-symmetric `3x3` Perron
 bound, to be fed through the `CoveringMomentDualLedger` and terminal floor.
 Incoming HYP-3085-covering/K33 adds concrete nested-refinement versus
-cross-handoff rows for the O2/O3 shuttle.
+cross-handoff rows for the O2/O3 shuttle.  Later incoming HYP-3087 supplies
+the hyperoperation/operation-grid scheduler for packet addresses, and incoming
+S31ag HYP-3088-HYP-3089 supplies a polynomial-method / Conjecture 7.1
+largest-arc producer target for the same terminal floor.
 
 Small formal checks: `qCuspSidecar_finite_principal_part` and
 `protectedBranch_no_raw_naked_bridge` are axiom-free; the

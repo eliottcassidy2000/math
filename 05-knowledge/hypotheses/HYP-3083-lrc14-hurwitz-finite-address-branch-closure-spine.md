@@ -388,8 +388,12 @@ HYP-3085-covering/K33 supplies concrete nested-refinement versus cross-handoff
 rows for the O2/O3 shuttle.  Incoming HYP-3087 supplies the adjacent
 hyperoperation/operation-grid address scheduler; it should feed this packet
 only after retaining `(p,q)`, danger, level-7 status, destroyed coordinate, and
-terminal exit.  No analytic normalizer, covering discharge, or K33 lift is
-asserted; those are the remaining producer theorems.
+terminal exit.  Incoming S31ag/HYP-3088-HYP-3089 supplies a second compatible
+terminal producer target: the polynomial-method paper's Conjecture 7.1 at
+`k=13` is a uniform largest-lonely-arc floor, which should feed the same
+`TerminalDischargeCertificate` inequalities in Lean.  No analytic normalizer,
+covering discharge, largest-arc proof, or K33 lift is asserted; those are the
+remaining producer theorems.
 
 ### O6. Boundary census only if the proof routes through equality
 

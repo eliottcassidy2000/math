@@ -170,6 +170,6 @@ project's witness machinery is revealed to be the engine for the paper's own Con
 next computational step (this session) is to *measure* `ℓ_max` over covering tuples and confirm the
 uniform floor `ℓ0` and the implied `D`.
 
-→ HYP-3087 (polynomial-method/CRT bridge), HYP-3088 (largest-arc ⟺ Conjecture 7.1(13)), THM-573,
+→ HYP-3088 (polynomial-method/CRT bridge), HYP-3089 (largest-arc ⟺ Conjecture 7.1(13)), THM-573,
 THM-565, THM-530, OPEN-Q-108, HYP-2866 (compatible), HYP-2602, mac-mini-S59/S60 (covering redirect,
 gK8), the-four-faces-of-14, [[lrc14-thread]], arXiv:2604.23906.
