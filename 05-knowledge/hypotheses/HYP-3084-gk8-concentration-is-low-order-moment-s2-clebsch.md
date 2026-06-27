@@ -97,11 +97,37 @@ moment-LP with a pairwise (Clebsch design-Hodge) extremal certificate** — comf
   diagonalizes the S2 form and certifies its consec extremum. This is the concrete step that would
   turn the synthesis into a certificate.
 
+## VERIFIED STRUCTURE (S60, `lrc_gk8_pairwise_covariance_structure_macmini_S60.py`) — corrects the naive design ID
+Forming the exact `7x7` matrix `M[i][j] = meas{sectors i,j both empty}` at `consec_k` (sector 0 pinned
+empty-measure 0 by `e=0`), the two clean guesses are BOTH **refuted**:
+- M is **NOT circulant** on the inner 6 sectors (no `Z/7` Gauss-sum/Fano structure at consec — the
+  base-path AP breaks the cyclic symmetry; `QR/NQR` test does not even apply).
+- M's spectrum is **NOT** a clean design `{a, b(mult m)}` (so not a literal biplane `4I+2J` Gram).
+
+What IS true and is the real certificate target:
+- **Reflection symmetry (Z/2):** the diagonal is palindromic, `[0, .272, .244, .239, .244, .272, .335]`
+  (k=8) — invariant under the involution `s ↦ 6−s` on inner sectors. This is the complement/reality
+  reflection `x ↦ −x` (HYP-2657), the **2-adic** symmetry — confirming the H4/2-adic FACE while
+  refuting the literal Clebsch-design realization. (The Clebsch graph is the right H4 *avatar* — the
+  cut-space of K5 — but the covariance is its own reflection-symmetric matrix, not the design Gram.)
+- **Dominant Perron mode:** one eigenvalue (`0.867 / 0.747 / 0.655` at k=8/9/10) is well-separated and
+  carries ~55% of the trace; it is the positively-correlated **concentration mode** (≈ all-ones on the
+  empty sectors). This single mode is *why* `S2` is large at consec and *why* the bound is a
+  concentration statement.
+
+**Revised route to CRUX 1:** not "diagonalize by a fixed design," but **bound the top (Perron)
+eigenvalue of the reflection-symmetric pairwise co-emptiness matrix M.** The `Z/2` reflection
+block-diagonalizes `M` into a symmetric (3-dim) and antisymmetric block — the half-tiling halving — and
+the Perron mode lives in the symmetric block. So `S2 = (1/2)(1^T M 1 − tr M)` is controlled by a
+**3x3 symmetric-block eigenvalue bound** (exact rationals), the genuinely tractable certificate.
+
 ## Next
-1. Compute the `15 x 15` (or `6 x 6` sector) pairwise co-emptiness covariance at the binding configs;
-   test for the Clebsch/biplane `4I+2J` eigenstructure; check whether its top eigenvector is the
-   consec/three-gap direction.
-2. If yes: write the low-order moment-LP certificate (S0..S4) with the pairwise block certified by
-   design-Hodge, closing CRUX 1 modulo the k=8 S3/S4 finite correction.
-3. Feed to the Lean track: extend `LRCGk8SingleFar.lean` with the moment-order-<=4 reduction and the
-   pairwise-block certificate (the design-Hodge eigenvalues are exact rationals).
+1. Block-diagonalize `M` by the `s↦6−s` reflection; extract the `3x3` symmetric block; bound its Perron
+   eigenvalue (hence `S2`) over admissible bounded configs — the finite, low-dim certificate for CRUX 1.
+2. Combine with the `−9S3+6S4` k=8 correction (the only non-pairwise obligation) and the HYP-2829 tail
+   (bounded finite + single-far THM-563 + r≥2-lower).
+3. Feed to Lean: extend `LRCGk8SingleFar.lean` with the moment-order-≤4 reduction and the `3x3`
+   reflection-block Perron bound (exact-rational eigenvalues).
+NOTE (honest): the literal "Clebsch `4I+2J` certifies S2" claim is REFUTED at consec; the surviving,
+sharper claim is the reflection-symmetric Perron bound. The H1↔H4 cross-level reading (a consec/additive
+extremal on a 2-adic/reflection carrier) stands.
