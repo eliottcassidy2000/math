@@ -1,0 +1,56 @@
+LRC14 owner-strip filtration synthesis (codex-2026-06-26-S205)
+source_threads=HYP-3041,HYP-3038,HYP-3037,HYP-3036,HYP-3035,HYP-3031,HYP-3018,HYP-2997
+
+[0] Hidden connection table
+HYP-2997: Cocycle normal form already split Haar `zeta` and endpoint-owner boundary cocycles.
+  hidden connection: Read S201 as a two-step cocycle: first nonzero `zeta`, then endpoint-owner boundary current.
+HYP-3018: Active-bottleneck normal fan retained endpoint owner sets and residue sums.
+  hidden connection: The S201 external owner strips are the same kind of normal-fan support, not a new scalar.
+HYP-3035: All 15 coarse residual first repairs are `owner_strip` after status protection.
+  hidden connection: The q=23 diagonal owner strip is a local instance of the same first-tooth mechanism.
+HYP-3036: Primitive safe decks route Q-witness rows while zero decks point to covering/q=14 layers.
+  hidden connection: Period data is a scheduler page before owner-strip geometry, not a replacement for it.
+HYP-3041: AP-tail puncture repair shows a mod-14 owner strip can still forget the hidden `m mod 13` clock.
+  hidden connection: Treat `q13_puncture_bit` and `ap_tail_certificate_kind` as primitive-period sidecars before owner strips are trusted.
+HYP-3038: The q=23 pair is a drop/add square with nonzero exact-M zeta and equal coarse endpoint word `B18Z6`.
+  hidden connection: `B18Z6` is only a scalar endpoint shadow; the external owner multiset is the splitting coordinate.
+
+[1] Proposed filtration
+E0: raw_shadow
+  retains: compression, low_cost
+  destroys: all geometry beyond the scalar or coarse word
+E1: status_gate
+  retains: status, topology, family_transfer, compression, low_cost
+  destroys: route scheduling inside strict-open residuals
+E2: primitive_period_deck
+  retains: status, route, primitive_period, family_transfer, compression, low_cost
+  destroys: q=14/boundary and owner-strip geometry
+E3: haar_zeta_grid
+  retains: status, route, haar_zeta, topology, family_transfer
+  destroys: which endpoint owner carries the diagonal boundary strip
+E4: endpoint_owner_strip
+  retains: status, route, haar_zeta, owner_strip, topology, family_transfer
+  destroys: nonlargest bars and explicit route labels
+E5: labelled_route_certificate
+  retains: status, route, primitive_period, haar_zeta, owner_strip, topology, family_transfer
+  destroys: nothing theorem-relevant after route is declared
+
+[2] Sharpened statement
+The post-status residual problem is not just route scheduling.  It is a short filtration: primitive-period decks route direct q-witness mass; HYP-3041 shows AP-tail prime clocks can repair owner-strip collisions; Haar zeta detects hidden drop/add diagonal charge; endpoint-owner strip is the first common boundary current that separates the remaining local route ambiguity before labelled route certificates are used.
+
+candidate local rule:
+  in a protected residual fiber, a route-mixed pair must either have positive primitive safe mass at q<=13 or a named AP-tail q=13/fixed-point clock, nonzero Haar/drop-add zeta leading to a q-diagonal, or an endpoint-owner strip that names the boundary current; otherwise it is genuine named F7/THM-572 debt.
+
+[3] Tournament Analysis
+vertices=filtration layers / proof carriers, not runners
+pairwise_observable=status,route,primitive_period,haar_zeta,owner_strip,topology,family_transfer,compression,low_cost
+switch=majority of retained proof coordinates; tie path=labelled_route_certificate>endpoint_owner_strip>haar_zeta_grid>primitive_period_deck>status_gate>raw_shadow
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1]
+hamiltonian_path_count=1
+path=endpoint_owner_strip>labelled_route_certificate>haar_zeta_grid>primitive_period_deck>status_gate>raw_shadow
+
+[4] Assumption challenge
+Alternate vertices considered: runners, residual fibers, denominators, drop pairs, add pairs, endpoint walls, safe bars, Haar squares, primitive periods, cocycle channels, normal-fan supports, and proof obligations.
+Chosen vertices are filtration layers because the preserved predicate is strict-open status plus route schedulability after quotienting.  This destroys raw runner identity, exact route labels before the last page, and scalar endpoint words such as B18Z6 unless the owner multiset is retained.

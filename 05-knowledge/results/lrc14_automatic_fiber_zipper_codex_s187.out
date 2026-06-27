@@ -1,0 +1,77 @@
+=== LRC14 automatic fiber zipper splitter S187 ===
+bank=HYP-2963 default rows single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5
+packets=21913
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, fixed circle sections, endpoint owners, residues,
+    residue-automaton fibers, persistence bars, magnitude cocycles,
+    C27/K33 packet labels, and proof obligations.
+  chosen vertices:
+    quotient/sidecar bundles over HYP-2963 packets.
+  preserved LRC predicate:
+    route-purity for the labelled theorem buckets, plus strict-open versus
+    boundary equality at threshold 1/14.
+  challenged assumption:
+    an automatic word is not a proof coordinate until its mixed fibers are
+    split by magnitude, safe topology, and packet labels.
+
+[1] Zipper split reports
+  split                     fibers    mixR    mixF    maxF  maxMix  purity
+  automatic_word               225     143     178    1179    1179   36.4%
+  residue_terminal_fiber     16555     265     265      30      30   98.3%
+  magnitude_cocycle          21909       0       0       2       0  100.0%
+  barcode_shadow             21913       0       0       1       0  100.0%
+  packet_zipper              21913       0       0       1       0  100.0%
+  route_labelled_packet      21913       0       0       1       0  100.0%
+
+  largest mixed fiber by split:
+    automatic_word: max_mixed=1179 routes={'Q-WITNESS': 1124, 'COVERING-MOMENT': 55}
+    residue_terminal_fiber: max_mixed=30 routes={'Q-WITNESS': 27, 'COVERING-MOMENT': 2, 'BOUNDARY-AP-GW': 1}
+    magnitude_cocycle: max_mixed=0 routes={}
+    barcode_shadow: max_mixed=0 routes={}
+    packet_zipper: max_mixed=0 routes={}
+    route_labelled_packet: max_mixed=0 routes={}
+
+[2] Proof readout
+  automatic_word is the side-channel warning layer; it has many mixed
+  route fibers.
+  residue_terminal_fiber sharply reduces but does not eliminate mixing.
+  magnitude_cocycle is the first tested non-route coordinate with zero
+  mixed theorem-route fibers on this bank.
+  barcode_shadow and packet_zipper then become certificate-anchor
+  refinements rather than the first purity repair.
+  route_labelled_packet is therefore not a shortcut; it is the endpoint
+  record that the proof should reconstruct by family lemmas.
+
+[3] Target automatic word MFCMMCCFFFCCC
+  rows=639
+  routes={'Q-WITNESS': 603, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 33}
+  families={'infinite q-witness family': 603, 'AP/Goddyn-Wong boundary family': 2, 'unit-petal sporadic family': 1, 'open-Haar loose family': 29, 'covering boundary-moment family': 4}
+  distinct M values=33
+  distinct residue-MFC fibers=181
+
+  residue_terminal_fiber: fibers=181 mixed_route=27
+    largest_mixed_rows=30 routes={'Q-WITNESS': 27, 'BOUNDARY-AP-GW': 1, 'COVERING-MOMENT': 2}
+      AP                                 M=   1/14 mu=        0 comps= 0 q0=14 route=BOUNDARY-AP-GW
+      magnitude liar 12->96              M=  8/101 mu=5219/840840 comps= 8 q0=14 route=COVERING-MOMENT
+      single swap 12->180                M=   3/37 mu=2833/315315 comps= 8 q0=14 route=COVERING-MOMENT
+      single swap 11->53                 M=   1/11 mu=71483/1350440 comps=10 q0=11 route=Q-WITNESS
+      two drop(11, 12)->add(25, 26)      M=   1/11 mu=24181/382200 comps=12 q0=11 route=Q-WITNESS
+      two drop(11, 13)->add(25, 27)      M=   1/11 mu=1021/13230 comps=20 q0=11 route=Q-WITNESS
+  magnitude_cocycle: fibers=638 mixed_route=0
+  barcode_shadow: fibers=639 mixed_route=0
+  packet_zipper: fibers=639 mixed_route=0
+
+[4] Tournament Analysis
+  vertices_are=quotient/sidecar bundles, not runners
+  observable=route purity, max mixed-fiber size, magnitude retention,
+             safe-topology retention, packet-label retention, finite-state
+             checkability, and proof cost
+  switch=majority comparison of observable vectors
+  tie_hamiltonian_path=automatic_word > residue_terminal_fiber > magnitude_cocycle > barcode_shadow > packet_zipper > route_labelled_packet
+  score_hist={0: 1, 1: 1, 3: 3, 5: 1}
+  directed_3cycles=1
+  scc_sizes=[3, 1, 1, 1]
+  hamiltonian_path_count=3
+  score_order=packet_zipper > barcode_shadow > magnitude_cocycle > route_labelled_packet > residue_terminal_fiber > automatic_word

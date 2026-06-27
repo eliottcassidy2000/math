@@ -1,0 +1,33 @@
+============================================================================
+ THE I(k,p,1) DESCENT 7 -> 14 = THE PROJECT'S COVERING CONDITION (k=13, k+1=14)
+============================================================================
+(1) LEVEL 7 :  [no (1/7)-witness  <=>  some v_i==0 mod 7 ]  counterexamples = 0/40000
+(2) LIFT 14 :  [no (1/14)-witness <=>  some v_i==0 mod 14]  counterexamples = 0/40000
+    improper fraction:  level-7 = 0.8409   level-14 = 0.5512
+    (theory: 1-(6/7)^13 = 0.8652 ;  1-(13/14)^13 = 0.6184)
+
+--- the RESCUE mechanism (odd mult of 7 vs mult of 14) ---
+   coord == 7 mod 14 (=odd mult of 7): has (1/14)-witness? True  -> RESCUED (proper)
+   coord == 14 mod 14 (=mult of 14): has (1/14)-witness? False  -> SURVIVES improper = COVERING
+
+============================================================================
+ (4) SMALL-k: improper fraction shrinks as the ansatz (1/d)Z refines (-> continuous)
+============================================================================
+   k=3 (1/4 target), ansatz (1/4)Z: improper fraction = 0.5478
+   k=3 (1/4 target), ansatz (1/8)Z: improper fraction = 0.3303
+   k=3 (1/4 target), ansatz (1/24)Z: improper fraction = 0.0657
+   k=3 (1/4 target), ansatz (1/120)Z: improper fraction = 0.0007
+
+   k=4 (1/5 target), ansatz (1/5)Z: improper fraction = 0.5513
+   k=4 (1/5 target), ansatz (1/10)Z: improper fraction = 0.3457
+   k=4 (1/5 target), ansatz (1/30)Z: improper fraction = 0.0767
+   k=4 (1/5 target), ansatz (1/150)Z: improper fraction = 0.0000
+
+   k=5 (1/6 target), ansatz (1/6)Z: improper fraction = 0.5740
+   k=5 (1/6 target), ansatz (1/12)Z: improper fraction = 0.3442
+   k=5 (1/6 target), ansatz (1/36)Z: improper fraction = 0.0728
+   k=5 (1/6 target), ansatz (1/180)Z: improper fraction = 0.0003
+
+INTERPRETATION: level-7 improper = covering mod 7 (coarse); one c=2 lift lands on covering mod 14
+= the project's exact covering condition. The (1/14)Z ansatz then FAILS on covering tuples, so a
+finer witness is needed -- where p0<=cap (gK8, continuous) REPLACES the paper's large-p enumeration.

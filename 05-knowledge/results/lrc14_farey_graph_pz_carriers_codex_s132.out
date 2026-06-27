@@ -1,0 +1,87 @@
+S132 LRC14 FAREY GRAPH / PZ CARRIER SYNTHESIS
+==============================================================================
+[Assumption challenge]
+  considered vertices: runners, Farey fractions, fraction payloads,
+    residual masks, K4 edges, half-cube cuts, sector-empty events, and
+    proof obligations.
+  chosen quotient: a role tournament on proof carriers, backed by exact
+    graph and sequence fingerprints.
+  preserved predicate: which carrier keeps the data needed for the
+    LRC14 binding-scale / state-lift proof target.
+  destroyed predicate: raw row-specific witnesses; those remain in
+    HYP-2930/HYP-2931 and the exact-period packet ledgers.
+
+[1] Unit-excess Farey child chain
+  p/q = p/(14p-1); q moves by +14, matching the apex-14 n+2 lane.
+  p   value   q   p+q   p*q   log(q^p)  log(p^q)
+   1    1/13  13    14    13     2.565     0.000
+   2    2/27  27    29    54     6.592    18.715
+   3    3/41  41    44   123    11.141    45.043
+   4    4/55  55    59   220    16.029    76.246
+   5    5/69  69    74   345    21.171   111.051
+   6    6/83  83    89   498    26.513   148.716
+   7    7/97  97   104   679    32.023   188.753
+   8   8/111 111   119   888    37.676   230.818
+   9   9/125 125   134  1125    43.455   274.653
+  10  10/139 139   149  1390    49.345   320.059
+  Delta q: [14, 14, 14, 14, 14, 14, 14, 14, 14]
+  Delta(p+q): [15, 15, 15, 15, 15, 15, 15, 15, 15]
+  Delta product: [41, 69, 97, 125, 153, 181, 209, 237, 265]
+  Delta^2 product: [28, 28, 28, 28, 28, 28, 28, 28]
+  readout: p+q is additive/linear, p*q is a quadratic area ledger,
+           power payloads are scale amplifiers rather than local addresses.
+
+[2] Graph carriers requested by the prompt
+  octahedron L(K4): {'vertices': 6, 'edges': 12, 'degree_hist': {4: 6}, 'triangles': 8, 'cycle_rank': 7}
+    readout: six packet vertices are K4 edges; cycle rank 7 is the apex-7 curl module.
+  Clebsch folded 5-cube: {'vertices': 16, 'edges': 40, 'degree_hist': {5: 16}, 'triangles': 0, 'cycle_rank': 25}
+    common-neighbor hist adjacent={0: 40} nonadjacent={2: 80}
+    closed-neighborhood design={'blocks': 16, 'block_size_hist': {6: 16}, 'point_rep_hist': {6: 16}, 'pair_rep_hist': {2: 120}}
+  halved 5-cube: {'vertices': 16, 'edges': 80, 'degree_hist': {10: 16}, 'triangles': 160, 'cycle_rank': 65}
+    identical to complement(Clebsch) under even representatives: True
+  readout: Clebsch/half-cube is the cut/covariance side; octahedron is
+           the support-six curl side.  Neither should be collapsed to a
+           raw runner tournament.
+
+[3] Paley-Zygmund / second-moment calibration
+  Toy model: six independent empty-sector indicators with a=(6/7)^k.
+  PZ lower-bounds P(N>0) by E[N]^2/E[N^2].  It is an existence tool,
+  but the repo's live wide cap needs HYP-2823's degree-4 moment target.
+  k   a          E[N]       exact P(N>0)  PZ bound   loss
+   8   0.291357   1.748143      0.873362   0.711557 0.161805
+   9   0.249735   1.498408      0.821643   0.666352 0.155291
+  10   0.214058   1.284350      0.764310   0.620372 0.143938
+  11   0.183479   1.100871      0.703650   0.574150 0.129499
+  12   0.157267   0.943604      0.641789   0.528234 0.113555
+  readout: second moment can guarantee nonzero witness mass, but it loses
+           too much for tight LRC14 cap comparison unless upgraded to the
+           labelled factorial-moment/Delsarte lane.
+
+[4] Tournament Analysis on seven proof carriers
+  vertices: proof carriers, not runners
+  observable: (theorem scale, label retention, LRC relevance, scalarization risk)
+  switch/gauge: lexicographically better role score wins
+  tie Hamiltonian path: listed carrier order
+    q_binding_scale        score=(4, 4, 4, 0) role=theorem coordinate
+    p_plus_q_additive      score=(3, 3, 4, -1) role=n+2 / Stern-Brocot ledger
+    p_times_q_product      score=(2, 4, 3, -2) role=multiplicative coimage side channel
+    octahedron_LK4         score=(2, 4, 4, -1) role=support-six current / face-curl carrier
+    Clebsch_halfcube       score=(1, 4, 3, -2) role=folded residual covariance carrier
+    PZ_second_moment       score=(1, 2, 3, -3) role=existence lower-bound / moment gateway
+    power_payloads         score=(0, 2, 2, -4) role=magnitude-leak stress tests
+  fingerprint: score_hist={6: 1, 5: 1, 3: 1, 4: 1, 2: 1, 1: 1, 0: 1} c3=0
+  Hamiltonian role order:
+    q_binding_scale > p_plus_q_additive > octahedron_LK4 > p_times_q_product > Clebsch_halfcube > PZ_second_moment > power_payloads
+
+[Proof readout]
+  HYP-2931's denominator verdict survives: q is the theorem coordinate.
+  The n+2 analogy is literal on unit-excess Farey children: q -> q+14.
+  The n*2/product analogy should be a side-channel area/coimage ledger,
+  not an ordering replacement for q.
+  Octahedral and Clebsch/half-cube carriers explain where labelled packet
+  covariance and curl data should go after the fraction address is kept.
+  Paley-Zygmund is useful only as an existence gateway; for the cap route
+  it must be upgraded to HYP-2823's degree-4 factorial moment inequality.
+  Next theorem target: a reduced |M14|<=6 atom should carry the labelled
+  address (e,q,p+q,p*q) plus Clebsch/octahedral packet data into either
+  HYP-2930's non-tight Farey class or HYP-2908's forbidden H=7 state lift.

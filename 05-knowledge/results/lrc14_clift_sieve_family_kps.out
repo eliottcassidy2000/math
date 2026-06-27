@@ -1,0 +1,10 @@
+Testing THM-574: |H_c| >= 14-c (c<=7), primitive => M > 1/14
+c=2: threshold |H_c|>=12  fired=0 failures(M<=1/14)=0  minM=1.00000
+c=3: threshold |H_c|>=11  fired=0 failures(M<=1/14)=0  minM=1.00000
+c=4: threshold |H_c|>=10  fired=0 failures(M<=1/14)=0  minM=1.00000
+c=5: threshold |H_c|>=9  fired=1500 failures(M<=1/14)=0  minM=0.10000
+c=6: threshold |H_c|>=8  fired=1474 failures(M<=1/14)=0  minM=0.09677
+c=7: threshold |H_c|>=7  fired=1500 failures(M<=1/14)=0  minM=0.10000
+
+Sharpness at c=7: |H_7|=6 sets (one below threshold) — dilated AP 2*{1..13} has |H_7|=1 only.
+  2*{1..13} |H_7|=1 M=0.07143 (should be 1/14, primitive? gcd=2)

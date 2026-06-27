@@ -1,0 +1,78 @@
+S119 LRC14 TIGHTNESS-STAR / THM-079 TEMPLATE AUDIT
+========================================================================
+
+1. Exact denominator-14 grid obstruction
+  checked 14|v*k <=> 14|v for k in (1, 3, 5, 9, 11, 13), v<500: failures=0
+  theorem: if S has no multiple of 14, every k/14 with k in the unit list survives.
+  contrapositive target: any strict counterexample must contain a multiple of 14.
+
+2. Exact tight boundary rows
+AP {1..13}:
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  M=1/14 = 0.071428571
+  argmax_count=6 argmaxes=(Fraction(1, 14), Fraction(3, 14), Fraction(5, 14), Fraction(9, 14), Fraction(11, 14), Fraction(13, 14))
+  denominators=[14]
+  denom14_survivors=(1, 3, 5, 9, 11, 13)
+    t=1/14: binders=(1, 13)
+    t=3/14: binders=(5, 9)
+    t=5/14: binders=(3, 11)
+    t=9/14: binders=(3, 11)
+    t=11/14: binders=(5, 9)
+    t=13/14: binders=(1, 13)
+
+GW {1..11,13,24}:
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  M=1/14 = 0.071428571
+  argmax_count=6 argmaxes=(Fraction(1, 14), Fraction(3, 14), Fraction(5, 14), Fraction(9, 14), Fraction(11, 14), Fraction(13, 14))
+  denominators=[14]
+  denom14_survivors=(1, 3, 5, 9, 11, 13)
+    t=1/14: binders=(1, 13)
+    t=3/14: binders=(5, 9)
+    t=5/14: binders=(3, 11)
+    t=9/14: binders=(3, 11)
+    t=11/14: binders=(5, 9)
+    t=13/14: binders=(1, 13)
+
+12-speed base {1..11,13}:
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+  M=1/12 = 0.083333333
+  argmax_count=4 argmaxes=(Fraction(1, 12), Fraction(5, 12), Fraction(7, 12), Fraction(11, 12))
+  denominators=[12]
+  denom14_survivors=(1, 3, 5, 9, 11, 13)
+    t=1/12: binders=(1, 11, 13)
+    t=5/12: binders=(5, 7)
+    t=7/12: binders=(5, 7)
+    t=11/12: binders=(1, 11, 13)
+
+3. Exact AP single-swap tight atlas, replacement v<= 80
+  tight rows total=14; non-AP tight rows=1; below-threshold rows=0
+    non-AP tight: remove 12, add 24, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), argmaxes=(Fraction(1, 14), Fraction(3, 14), Fraction(5, 14), Fraction(9, 14), Fraction(11, 14), Fraction(13, 14))
+  readout: in this atlas, the only non-AP tight atom is GW; no disproof row appears.
+  caveat: this is a bounded single-swap atlas, not the global sporadic-finiteness theorem.
+
+4. Exact q-covering necessary-condition window [1,18]
+  q-covering rows=966
+  minimum M=1/12 = 0.083333333
+  minimum row=(1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18) argmaxes=(Fraction(5, 24), Fraction(19, 24))
+  tight rows=0; below-threshold rows=0
+  readout: this bounded covering window has strict slack, min 1/12 > 1/14.
+  caveat: the window is evidence for Move B, not a proof of the bounded-core theorem.
+
+5. Tournament Analysis over proof carriers
+  vertices are proof carriers, not runners.
+  pairwise observable: which carrier preserves more of the LRC predicate at theorem level.
+  gauge: orient higher fidelity score -> lower; tie path is the listed order.
+  score_histogram={5: 1, 4: 1, 3: 1, 2: 1, 1: 1, 0: 1}
+  directed_3cycles=0
+  scc_count=6
+  hamiltonian_path_count=1
+  challenged assumption: the K3/H7 route can use any binary digraph shadow.
+  result: the carrier must be a tournament/OCF-realizable packet, per HYP-2908.
+
+6. Proof-template conclusion
+  Move A is supported by HYP-2906/HYP-2905: locally large speeds peel,
+  omit-prime gives direct witnesses, and dilation normalizes.
+  Move B is still exactly (*): prove tightness forces the denominator-14
+  AP/GW boundary, or equivalently prove the apex-7 over-cover state lift
+  into the forbidden connected K3 packet.  The script verifies the boundary
+  atoms and finite evidence, but it does not close (*).

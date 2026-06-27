@@ -1,0 +1,38 @@
+================================================================================================
+ CUMULANTS of the miss-count N for consec_k, and the phi^4 quadratic+quartic cap split
+================================================================================================
+  k | kappa1(mean) kappa2(var) kappa3(skew) kappa4(quartic) | exc.kurt k4/k2^2 | #real roots
+------------------------------------------------------------------------------------------------
+  8 |       1.6041      2.6120       3.7399        -0.78715 |          -0.1154 |           0
+  9 |       1.3813      2.5621       4.4482        +1.61085 |          +0.2454 |           0
+ 10 |       1.1931      2.4970       5.0150        +3.92042 |          +0.6288 |           0
+ 11 |       1.0404      2.3968       5.3902        +6.36081 |          +1.1073 |           0
+ 12 |       0.9381      2.2566       5.4345        +8.18705 |          +1.6077 |           0
+ 13 |       0.8401      2.1613       5.5764        +9.79673 |          +2.0973 |           0
+------------------------------------------------------------------------------------------------
+ excess kurtosis k4/k2^2 > 0 => LEPTOKURTIC/bimodal = double-well phi^4 (b<0) = max extreme-mass = gK8 extremizer.
+
+================================================================================================
+ THE phi^4 CAP SPLIT: cap_k = C(k+1,2)/91 (quadratic) - dip_k (quartic stabilizer)
+================================================================================================
+  k |        cap_k | C(k+1,2)/91 (b, quadratic) | dip_k (lambda, quartic) | quartic active?
+------------------------------------------------------------------------------------------------
+  8 |    2243/5880 |                36/91 |             1081/76440 | ACTIVE (binding)
+  9 |    1979/4004 |                45/91 |                 1/4004 | ACTIVE (binding)
+ 10 |        55/91 |                55/91 |                      0 | off (pure quadratic)
+ 11 |        66/91 |                66/91 |                      0 | off (pure quadratic)
+ 12 |          6/7 |                  6/7 |                      0 | off (pure quadratic)
+ 13 |            1 |                    1 |                      0 | off (pure quadratic)
+------------------------------------------------------------------------------------------------
+ The gK8 dual L_yK8 = 10 - 10 S1 + 10 S2 - 9 S3 + 6 S4: the +6 S4 QUARTIC term is nonzero only at the
+ k=8 binding row; k=9,10 duals stop at S3, k>=11 at S2. So the QUARTIC stabilizer S4 activates EXACTLY
+ where the cap dips below the quadratic pair-Pascal -- the phi^4 structure exp(-lambda S^4 - b S^2).
+
+================================================================================================
+ PROOF-RELEVANT READING
+================================================================================================
+ cap-extremality's only non-pairwise content (S63/S64) = the dip at k=8,9 = the QUARTIC term S4.
+ phi^4/Lee-Yang says the quartic STABILIZES (lambda>0 => bounded correction, right sign), and the
+ double-well (b<0, k4>0) is the bimodal extreme-mass that IS the gK8 extremizer. So 'bound the dip'
+ (the open obligation) = 'bound the quartic cumulant S4', a SINGLE 4th-moment bound with a guaranteed
+ sign -- the phi^4 reframe of coverage extremality.

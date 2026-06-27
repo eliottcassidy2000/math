@@ -1,0 +1,112 @@
+=== LRC14 arc-boundary path lift S198 ===
+bank=HYP-2963 default rows single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5
+packets=21913
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, individual danger arcs, endpoint cells, boundary
+    cocircuits, residues, Fourier modes, matroid circuits, path chains,
+    and proof obligations.
+  chosen vertices:
+    closed danger-arc Cech vertices and proof-carrier boundary operators.
+  preserved LRC predicate:
+    boundary/open status at threshold 1/14 and the exact closed-cover H1
+    obstruction that appears when no strict safe interval exists.
+  destroyed information:
+    raw runner order and scalar route labels; owner-deletion records only
+    the speeds supporting the H1 representative.
+  challenged assumption:
+    the useful homology object is not path homology of the runner
+    tournament.  It is the GF(2) boundary complex of danger arcs.
+
+[1] Targeted closed arc-boundary H1 audit
+  path_lift_rows=41
+  closed_h1_rows=2
+  status_counts={'boundary': 2}
+  source_family_counts={'named-frontier': 2}
+  apgw_path_cycle_rows=2
+  rows:
+    AP                                 status=boundary family=named-frontier mu=           0 C0/C1=1/1 d1=90  d2=84  rep_edges=58  owners=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) del=1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,12->0,13->0
+    GW 12->24                          status=boundary family=named-frontier mu=           0 C0/C1=1/1 d1=102 d2=90  rep_edges=58  owners=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24) del=1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,13->0,24->0
+
+[2] Residue-terminal status collisions with path lift
+  mixed_status_fibers=2
+  residue_status_collision[0] size=30 status={'boundary': 1, 'open': 29} h1={1: 1, 0: 29}
+    AP                                 status=boundary family=named-frontier mu=           0 C0/C1=1/1 d1=90  d2=84  rep_edges=58  owners=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) del=1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,12->0,13->0
+    magnitude liar 12->96              status=open     family=magnitude-liar mu= 5219/840840 C0/C1=8/0 d1=167 d2=140 rep_edges=0   owners=() del=-
+    residue liar 12->26                status=open     family=magnitude-liar mu=   426/35035 C0/C1=4/0 d1=101 d2=108 rep_edges=0   owners=() del=-
+    single swap 11->109                status=open     family=single-swap    mu= 8873/170040 C0/C1=14/0 d1=175 d2=168 rep_edges=0   owners=() del=-
+    single swap 11->123                status=open     family=single-swap    mu=39527/783510 C0/C1=12/0 d1=191 d2=184 rep_edges=0   owners=() del=-
+    single swap 11->151                status=open     family=single-swap    mu=120223/2308488 C0/C1=14/0 d1=217 d2=198 rep_edges=0   owners=() del=-
+    single swap 11->179                status=open     family=single-swap    mu=232049/4560920 C0/C1=16/0 d1=243 d2=220 rep_edges=0   owners=() del=-
+    single swap 11->25                 status=open     family=single-swap    mu=19297/382200 C0/C1=10/0 d1=95  d2=104 rep_edges=0   owners=() del=-
+    single swap 11->39                 status=open     family=single-swap    mu=  1251/25480 C0/C1=10/0 d1=109 d2=128 rep_edges=0   owners=() del=-
+    single swap 11->53                 status=open     family=single-swap    mu=71483/1350440 C0/C1=10/0 d1=123 d2=124 rep_edges=0   owners=() del=-
+    single swap 11->67                 status=open     family=single-swap    mu=246131/5121480 C0/C1=10/0 d1=137 d2=134 rep_edges=0   owners=() del=-
+    single swap 11->95                 status=open     family=single-swap    mu=25001/484120 C0/C1=12/0 d1=163 d2=156 rep_edges=0   owners=() del=-
+    single swap 12->110                status=open     family=single-swap    mu=       4/385 C0/C1=4/0 d1=185 d2=144 rep_edges=0   owners=() del=-
+    single swap 12->124                status=open     family=single-swap    mu=   426/35035 C0/C1=4/0 d1=199 d2=164 rep_edges=0   owners=() del=-
+    single swap 12->152                status=open     family=single-swap    mu=11549/1065064 C0/C1=4/0 d1=227 d2=180 rep_edges=0   owners=() del=-
+    single swap 12->166                status=open     family=single-swap    mu= 4981/528710 C0/C1=6/0 d1=239 d2=202 rep_edges=0   owners=() del=-
+    single swap 12->180                status=open     family=single-swap    mu= 2833/315315 C0/C1=8/0 d1=251 d2=214 rep_edges=0   owners=() del=-
+    single swap 12->54                 status=open     family=single-swap    mu=   426/35035 C0/C1=4/0 d1=129 d2=116 rep_edges=0   owners=() del=-
+    single swap 13->111                status=open     family=single-swap    mu=30827/1025640 C0/C1=12/0 d1=177 d2=158 rep_edges=0   owners=() del=-
+    single swap 13->125                status=open     family=single-swap    mu=66427/2425500 C0/C1=12/0 d1=191 d2=168 rep_edges=0   owners=() del=-
+    single swap 13->139                status=open     family=single-swap    mu=88507/2996840 C0/C1=12/0 d1=205 d2=186 rep_edges=0   owners=() del=-
+    single swap 13->153                status=open     family=single-swap    mu=18925/659736 C0/C1=12/0 d1=219 d2=194 rep_edges=0   owners=() del=-
+    single swap 13->167                status=open     family=single-swap    mu=92669/2945880 C0/C1=12/0 d1=233 d2=206 rep_edges=0   owners=() del=-
+    single swap 13->27                 status=open     family=single-swap    mu=13691/582120 C0/C1=12/0 d1=93  d2=104 rep_edges=0   owners=() del=-
+    single swap 13->55                 status=open     family=single-swap    mu= 4937/194040 C0/C1=12/0 d1=121 d2=120 rep_edges=0   owners=() del=-
+    single swap 13->83                 status=open     family=single-swap    mu=460507/16105320 C0/C1=12/0 d1=149 d2=146 rep_edges=0   owners=() del=-
+    single swap 13->97                 status=open     family=single-swap    mu=475529/18821880 C0/C1=12/0 d1=163 d2=156 rep_edges=0   owners=() del=-
+    two drop(11, 12)->add(25, 26)      status=open     family=two-swap       mu=24181/382200 C0/C1=12/0 d1=107 d2=126 rep_edges=0   owners=() del=-
+    two drop(11, 13)->add(25, 27)      status=open     family=two-swap       mu=  1021/13230 C0/C1=20/0 d1=99  d2=122 rep_edges=0   owners=() del=-
+    two drop(12, 13)->add(26, 27)      status=open     family=two-swap       mu=  1237/70070 C0/C1=4/0 d1=115 d2=110 rep_edges=0   owners=() del=-
+  residue_status_collision[1] size=11 status={'boundary': 1, 'open': 10} h1={1: 1, 0: 10}
+    GW 12->24                          status=boundary family=named-frontier mu=           0 C0/C1=1/1 d1=102 d2=90  rep_edges=58  owners=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24) del=1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,13->0,24->0
+    floor-odd GW iso impostor          status=open     family=impostor       mu= 6667/630630 C0/C1=8/0 d1=431 d2=330 rep_edges=0   owners=() del=-
+    single swap 12->108                status=open     family=single-swap    mu= 6497/945945 C0/C1=8/0 d1=179 d2=156 rep_edges=0   owners=() del=-
+    single swap 12->122                status=open     family=single-swap    mu=   236/23485 C0/C1=4/0 d1=197 d2=160 rep_edges=0   owners=() del=-
+    single swap 12->150                status=open     family=single-swap    mu=   426/35035 C0/C1=4/0 d1=225 d2=184 rep_edges=0   owners=() del=-
+    single swap 12->178                status=open     family=single-swap    mu= 5363/566930 C0/C1=6/0 d1=251 d2=202 rep_edges=0   owners=() del=-
+    single swap 12->38                 status=open     family=single-swap    mu=   426/35035 C0/C1=4/0 d1=113 d2=100 rep_edges=0   owners=() del=-
+    single swap 12->52                 status=open     family=single-swap    mu=   426/35035 C0/C1=4/0 d1=127 d2=124 rep_edges=0   owners=() del=-
+    single swap 12->94                 status=open     family=single-swap    mu=   278/29939 C0/C1=4/0 d1=169 d2=140 rep_edges=0   owners=() del=-
+    two drop(11, 12)->add(24, 25)      status=open     family=two-swap       mu=  1619/29400 C0/C1=10/0 d1=107 d2=110 rep_edges=0   owners=() del=-
+    two drop(12, 13)->add(24, 27)      status=open     family=two-swap       mu=  1531/52920 C0/C1=12/0 d1=105 d2=114 rep_edges=0   owners=() del=-
+
+[3] Coarse ET+unit status fibers
+  fibers=21702 mixed_status_fibers=0 packets_in_mixed_status=0
+  closed_h1_in_mixed_status=0
+  note=route-mixed open fibers are scheduled by HYP-3030; this script checks status/H1 purity without recomputing exact M.
+
+[4] Named boundary controls
+  AP                                 status=boundary family=named-frontier mu=           0 C0/C1=1/1 d1=90  d2=84  rep_edges=58  owners=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) del=1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,12->0,13->0
+  GW 12->24                          status=boundary family=named-frontier mu=           0 C0/C1=1/1 d1=102 d2=90  rep_edges=58  owners=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24) del=1->0,2->0,3->0,4->0,5->0,6->0,7->0,8->0,9->0,10->0,11->0,13->0,24->0
+  magnitude liar 12->96              status=open     family=magnitude-liar mu= 5219/840840 C0/C1=8/0 d1=167 d2=140 rep_edges=0   owners=() del=-
+
+[5] Tournament Analysis over proof carriers
+  vertices_are=proof carriers / boundary operators, not runners
+  pairwise_observable=status purity, H1 exactness, deletion persistence,
+                      topology retention, endpoint ownership, quotient
+                      defect visibility, and proof cost
+  tie_hamiltonian_path=arc_boundary_path_lift > owner_deletion_persistence > arc_cech_beta > coarse_et_unit_status > residue_terminal_word
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  score_order=arc_boundary_path_lift > arc_cech_beta > owner_deletion_persistence > coarse_et_unit_status > residue_terminal_word
+
+[6] Proof readout
+  1. On the targeted residue-collision/control surface, closed
+     danger-arc H1 occurs only on the AP/Goddyn-Wong boundary rows.
+  2. The residue-terminal boundary/open collisions are therefore not only
+     beta-separated; they have an explicit GF(2) boundary representative.
+  3. The lightweight full-bank status scan gives zero mixed boundary/open
+     fibers for the coarse ET+unit gate.  HYP-3030's route-mixed open
+     survivors should be scheduled only after this path-boundary topology
+     removes equality atoms.
+  4. Deleting any owner speed from the displayed AP/GW representative
+     kills the closed H1 signal in this carrier.  This is the old
+     deletion-persistence idea, but applied to danger arcs instead of
+     runner tournaments.

@@ -1,0 +1,163 @@
+LRC14 labelled-packet counterexample classifier
+==============================================================================
+single_limit=180, two_swap_limit=36, alias_depth=4, lcm_tail_max=5, workers=8
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, safe components, denominator walls, C27 shells,
+    source-spectrum packets, K33 incidence, covering combs, Fourier/moment
+    modes, and proof obligations.
+  chosen vertices:
+    labelled packet routes for possible counterexamples.
+  preserved LRC predicate:
+    exact M(S) >= 1/14, q-threshold, strict/open Haar mass, boundary debt,
+    C27 owner transfer, and K33/state-lift labels.
+  challenged assumption:
+    neither a raw tournament isomorphism class nor a scalar M bucket is allowed
+    to forget magnitude, boundary owners, or packet labels before discharge.
+
+[1] Labelled packet census
+  audited rows=21913
+  below threshold=0
+  tight rows=2: ['AP', 'GW 12->24']
+  M<=2/27 low packets=7
+  unknown packets=0
+  route counts:
+    Q-WITNESS                14676
+    BOUNDARY-AP-GW           2
+    BOUNDARY-PETAL-SPORADIC  4
+    K33-STATE-LIFT           3
+    COVERING-MOMENT          7228
+  family counts:
+    AP/Goddyn-Wong boundary family     2
+    K33/state-lift sporadic family     3
+    covering boundary-moment family    1188
+    infinite q-witness family          14676
+    open-Haar loose family             6040
+    unit-petal sporadic family         4
+
+[2] Low-frontier families and sporadics
+  selected rows=8
+  name                                        M  q0        mu route                    family
+  AP                                       1/14  14         0 BOUNDARY-AP-GW           AP/Goddyn-Wong boundary family
+      branch=tight-floor; transfer=perfect-transversal; packet=tight AP floor
+  GW 12->24                                1/14  14         0 BOUNDARY-AP-GW           AP/Goddyn-Wong boundary family
+      branch=tight-floor; transfer=H[12:g3] D[3:g3:11] Z[-]; packet=tight GW floor
+  near/K33 12->36                          3/41  14    1/1260 K33-STATE-LIFT           K33/state-lift sporadic family
+      branch=K33-unit-excess; transfer=H[12:g3] D[9:g9:20] Z[-]; packet=K33 state-lift obligation
+  P10+GW                                   2/27  14     1/980 BOUNDARY-PETAL-SPORADIC  unit-petal sporadic family
+      branch=C27-petal-two-block; transfer=H[10:g1,12:g3] D[3:g3:11,7:g1:11] Z[-]; packet=petal-plus-tight-GW discharge strip
+  petal 10->20                             2/27  14     1/980 BOUNDARY-PETAL-SPORADIC  unit-petal sporadic family
+      branch=C27-petal-two-block; transfer=H[10:g1] D[7:g1:11] Z[-]; packet=unit-petal discharge
+  petal 13->26                             2/27  14     1/182 BOUNDARY-PETAL-SPORADIC  unit-petal sporadic family
+      branch=C27-petal-two-block; transfer=H[13:g1] D[1:g1:11] Z[-]; packet=unit-petal discharge
+  P10+K33                                  2/27  14    4/2205 K33-STATE-LIFT           K33/state-lift sporadic family
+      branch=C27-petal-two-block; transfer=H[10:g1,12:g3] D[7:g1:11,9:g9:20] Z[-]; packet=petal-plus-K33 state-lift strip
+  two drop(12, 13)->add(26, 36)            3/37  14   79/8190 K33-STATE-LIFT           K33/state-lift sporadic family
+      branch=nonunit-excess-e5; transfer=H[12:g3,13:g1] D[1:g1:11,9:g9:20] Z[-]; packet=labelled but unproved recombination
+
+[3] Candidate labelled packet theorem
+  For every primitive 13-speed residual S, a source-spectrum packet P(S)
+  should land in exactly one theorem bucket:
+    (A) q-witness family: q_threshold(S)<=13.
+    (B) AP/GW boundary atoms: q=14, strict Haar interior 0, labelled packet AP/GW.
+    (C) unit-petal sporadics: C27 p=2 packet, positive open mass or rank-0 strip.
+    (D) K33 sporadics: nonunit packet producing TournamentStateLift.
+    (E) covering-moment family: q>14 or multiple-of-14 pressure; exact-period
+        boundary maps to positive gK8/L_y moment slack.
+    (F) new sporadic: any SOURCE-SPECTRUM-UNKNOWN packet.  In this audited bank,
+        its count is 0.
+
+  Computed pressure in the audited bank:
+    covering-moment rows=7228
+    K33/state-lift rows=3
+    unit-petal rows=4
+  This is a classification scaffold, not a proof of the global reduction.
+
+[4] Automatic / Fermat-Catalan sidecar audit
+  added fields:
+    automatic_word over M=Moser, F=fibbinary-not-Moser, C=carry-present;
+    lacunary tail/max ratios, q factorization, unit-excess flag,
+    perfect-power payload guard, and automatic_filter_exit.
+  automatic word fibers=225
+  mixed-route word fibers=143
+  mixed-family word fibers=178
+  unit-excess apex rows=169
+  rows with perfect-power payload guards=9606
+  rows with Moser n->2n phase breaks=21913
+  rows with fibbinary n->2n breaks=0
+  AP/GW boundary words: AP:MFCMMCCFFFCCC, GW 12->24:MFCMMCCFFFCCC
+  largest mixed automatic-word fibers:
+    MFCMMCCFFCCCC rows= 1179 routes={'Q-WITNESS': 1124, 'COVERING-MOMENT': 55}
+    MFCMMCFFFCCCC rows=  787 routes={'Q-WITNESS': 600, 'COVERING-MOMENT': 187}
+    MFCMCCFFFCCCC rows=  786 routes={'Q-WITNESS': 468, 'COVERING-MOMENT': 318}
+    MFCMMCCFFFCCC rows=  639 routes={'Q-WITNESS': 603, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 33}
+    MFCMMCCFFCCCF rows=  600 routes={'Q-WITNESS': 557, 'COVERING-MOMENT': 43}
+    MFCMCCFFCCCCC rows=  546 routes={'Q-WITNESS': 468, 'COVERING-MOMENT': 78}
+    MFCMMCFFCCCCC rows=  546 routes={'Q-WITNESS': 498, 'COVERING-MOMENT': 48}
+    MFCMMCCFFCCMC rows=  414 routes={'Q-WITNESS': 405, 'BOUNDARY-PETAL-SPORADIC': 2, 'COVERING-MOMENT': 7}
+  low-frontier sidecar rows:
+    AP                               word=MFCMMCCFFFCCC MFC=(3,4,6) tail=13/12 qfac=   2*7 power=none exit=boundary-equality
+    GW 12->24                        word=MFCMMCCFFFCCC MFC=(3,4,6) tail=24/13 qfac=   2*7 power=none exit=boundary-equality
+    near/K33 12->36                  word=MFCMMCCFFFCCF MFC=(3,5,5) tail=36/13 qfac=    41 power=none exit=state-lift-debt
+    P10+GW                           word=MFCMMCCFFCCMC MFC=(4,3,6) tail=  6/5 qfac=   3^3 power=q=27=3^3 exit=petal-discharge
+    petal 10->20                     word=MFCMMCCFFCCCM MFC=(4,3,6) tail=20/13 qfac=   3^3 power=q=27=3^3 exit=petal-discharge
+    petal 13->26                     word=MFCMMCCFFFCCC MFC=(3,4,6) tail= 13/6 qfac=   3^3 power=q=27=3^3 exit=petal-discharge
+    P10+K33                          word=MFCMMCCFFCCMF MFC=(4,4,5) tail=  9/5 qfac=   3^3 power=q=27=3^3 exit=state-lift-debt
+    two drop(12, 13)->add(26, 36)    word=MFCMMCCFFFCCF MFC=(3,5,5) tail=18/13 qfac=    37 power=none exit=state-lift-debt
+  verdict:
+    automatic words are useful packet sidecars, but mixed fibers show they
+    are not theorem-safe quotients unless exact M/q, endpoint geometry,
+    and route labels remain attached.
+
+[5] Binary fixed-margin swap-chain analogy
+  Fu-Qin-Wang arXiv:2606.22636 proves an inverse-polynomial spectral
+  gap for binary fixed-margin swap chains by comparing to two-row
+  heat-bath moves, reducing to three rows, then splitting a scalar count
+  sector from Johnson-harmonic non-scalar sectors.
+  LRC14 import:
+    scalar count sector       -> q_threshold, exact M, Farey excess
+    three-row reduction       -> AP/GW/petal/K33 local packet atlas
+    Johnson harmonic sectors  -> owner-labelled C27/K33/boundary modes
+    heat-bath comparison      -> packet-preserving local replacement moves
+  The proof lesson is conservative: prove comparisons only after conditioning
+  on the labels that make scalar count sectors honest.
+
+[6] Tournament Analysis
+  vertices are counterexample-classification routes, not runners.
+  pair observable:
+    exact scale retention, boundary retention, packet-owner retention,
+    state-lift visibility, covering visibility, anti-scalar guard.
+  switch:
+    route A -> route B iff A's retention vector is lexicographically >= B's.
+  tie Hamiltonian path:
+    COUNTEREXAMPLE -> Q-WITNESS -> BOUNDARY-AP-GW -> BOUNDARY-PETAL-SPORADIC -> K33-STATE-LIFT -> COVERING-MOMENT -> SHELL-ALIAS-LOOSE -> MAGNITUDE-LIAR-LOOSE -> SOURCE-SPECTRUM-UNKNOWN
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1} c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1, 1) hp=1
+
+[7] Machine-readable packet rows
+  representative rows only; pass --emit-all-rows for the full packet ledger
+  name|source|M|q|mu|route|family|auto|mfc|tail|qfac|power|exit|role
+  P13-shell alias 13->107|shell-alias|1/13|13|597139/20762280|Q-WITNESS|infinite q-witness family|MFCMMCCFFFCCC|3,4,6|107/12|13|none|direct-q-witness|direct denominator witness gives M(S) >= 1/q > 1/14
+  P13-shell alias 13->134|shell-alias|1/13|13|360179/13000680|Q-WITNESS|infinite q-witness family|MFCMMCCFFFCCC|3,4,6|67/6|13|none|direct-q-witness|direct denominator witness gives M(S) >= 1/q > 1/14
+  P13-shell alias 13->53|shell-alias|1/13|13|295261/10284120|Q-WITNESS|infinite q-witness family|MFCMMCCFFFCCC|3,4,6|53/12|13|none|direct-q-witness|direct denominator witness gives M(S) >= 1/q > 1/14
+  P13-shell alias 13->80|shell-alias|1/13|13|5231/194040|Q-WITNESS|infinite q-witness family|MFCMMCCFFFCCM|4,4,5|20/3|13|none|direct-q-witness|direct denominator witness gives M(S) >= 1/q > 1/14
+  scale-separated AP tail 200|scale-separated|1/13|13|9899/323400|Q-WITNESS|infinite q-witness family|MFCMMCCFFFCCC|3,4,6|50/3|13|none|direct-q-witness|direct denominator witness gives M(S) >= 1/q > 1/14
+  single swap 13->100|single-swap|1/13|13|701/21560|Q-WITNESS|infinite q-witness family|MFCMMCCFFFCCC|3,4,6|25/3|13|none|direct-q-witness|direct denominator witness gives M(S) >= 1/q > 1/14
+  single swap 13->101|single-swap|1/13|13|127565/3919608|Q-WITNESS|infinite q-witness family|MFCMMCCFFFCCC|3,4,6|101/12|13|none|direct-q-witness|direct denominator witness gives M(S) >= 1/q > 1/14
+  single swap 13->102|single-swap|1/13|13|9959/299880|Q-WITNESS|infinite q-witness family|MFCMMCCFFFCCC|3,4,6|17/2|13|none|direct-q-witness|direct denominator witness gives M(S) >= 1/q > 1/14
+  AP|named-frontier|1/14|14|0|BOUNDARY-AP-GW|AP/Goddyn-Wong boundary family|MFCMMCCFFFCCC|3,4,6|13/12|2*7|none|boundary-equality|endpoint-only labelled boundary atom
+  GW 12->24|named-frontier|1/14|14|0|BOUNDARY-AP-GW|AP/Goddyn-Wong boundary family|MFCMMCCFFFCCC|3,4,6|24/13|2*7|none|boundary-equality|endpoint-only labelled boundary atom
+  P10+GW|named-frontier|2/27|14|1/980|BOUNDARY-PETAL-SPORADIC|unit-petal sporadic family|MFCMMCCFFCCMC|4,3,6|6/5|3^3|q=27=3^3|petal-discharge|unit C27 p=2 packet has positive open mass or rank-0 discharge
+  petal 10->20|named-frontier|2/27|14|1/980|BOUNDARY-PETAL-SPORADIC|unit-petal sporadic family|MFCMMCCFFCCCM|4,3,6|20/13|3^3|q=27=3^3|petal-discharge|unit C27 p=2 packet has positive open mass or rank-0 discharge
+  petal 13->26|named-frontier|2/27|14|1/182|BOUNDARY-PETAL-SPORADIC|unit-petal sporadic family|MFCMMCCFFFCCC|3,4,6|13/6|3^3|q=27=3^3|petal-discharge|unit C27 p=2 packet has positive open mass or rank-0 discharge
+  two drop(10, 13)->add(20, 26)|two-swap|2/23|14|59/6370|BOUNDARY-PETAL-SPORADIC|unit-petal sporadic family|MFCMMCCFFCCMC|4,3,6|13/10|23|p+q=25=5^2|petal-discharge|unit C27 p=2 packet has positive open mass or rank-0 discharge
+  near/K33 12->36|named-frontier|3/41|14|1/1260|K33-STATE-LIFT|K33/state-lift sporadic family|MFCMMCCFFFCCF|3,5,5|36/13|41|none|state-lift-debt|nonunit packet must feed HYP-2908 / THM-572 state-lift
+  P10+K33|named-frontier|2/27|14|4/2205|K33-STATE-LIFT|K33/state-lift sporadic family|MFCMMCCFFCCMF|4,4,5|9/5|3^3|q=27=3^3|state-lift-debt|nonunit packet must feed HYP-2908 / THM-572 state-lift
+  two drop(12, 13)->add(26, 36)|two-swap|3/37|14|79/8190|K33-STATE-LIFT|K33/state-lift sporadic family|MFCMMCCFFFCCF|3,5,5|18/13|37|none|state-lift-debt|nonunit packet must feed HYP-2908 / THM-572 state-lift
+  single swap 13->39|single-swap|3/40|14|5/546|COVERING-MOMENT|open-Haar loose family|MFCMMCCFFFCCC|3,4,6|13/4|2^3*5|none|strict-safe-component|positive regular-open witness interval; not a counterexample
+  single swap 6->69|single-swap|3/40|14|19/10626|COVERING-MOMENT|open-Haar loose family|MFCMMCFFFCCCM|4,4,5|69/13|2^3*5|none|strict-safe-component|positive regular-open witness interval; not a counterexample
+  single swap 12->48|single-swap|4/53|14|13/5880|COVERING-MOMENT|open-Haar loose family|MFCMMCCFFFCCC|3,4,6|48/13|53|p=4=2^2|strict-safe-component|positive regular-open witness interval; not a counterexample
+  single swap 13->52|single-swap|4/53|14|1/84|COVERING-MOMENT|open-Haar loose family|MFCMMCCFFFCCC|3,4,6|13/3|53|p=4=2^2|strict-safe-component|positive regular-open witness interval; not a counterexample
+  single swap 13->65|single-swap|5/66|14|11/780|COVERING-MOMENT|open-Haar loose family|MFCMMCCFFFCCM|4,4,5|65/12|2*3*11|none|strict-safe-component|positive regular-open witness interval; not a counterexample
+  single swap 13->78|single-swap|6/79|14|29/1820|COVERING-MOMENT|open-Haar loose family|MFCMMCCFFFCCC|3,4,6|13/2|79|none|strict-safe-component|positive regular-open witness interval; not a counterexample
+  single swap 13->91|single-swap|7/92|14|223/12740|COVERING-MOMENT|open-Haar loose family|MFCMMCCFFFCCC|3,4,6|91/12|2^2*23|none|strict-safe-component|positive regular-open witness interval; not a counterexample
+  single swap 13->104|single-swap|8/105|14|37/1960|COVERING-MOMENT|open-Haar loose family|MFCMMCCFFFCCC|3,4,6|26/3|3*5*7|p=8=2^3|strict-safe-component|positive regular-open witness interval; not a counterexample

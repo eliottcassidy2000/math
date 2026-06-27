@@ -1,0 +1,225 @@
+LRC14 HOLISTIC HISTORY MINER
+============================
+repo_root: /Users/e/Documents/GitHub/math
+files_scanned: 1172
+logical_entries_scanned: 10214
+id_top: OPEN-Q-108:1237, HYP-2908:356, THM-369:346, THM-563:333, THM-401:329, THM-527:301, THM-534:274, THM-523:268, THM-572:265, THM-546:224, THM-398:213, THM-538:166
+
+ROUTE FAMILY CENSUS
+-------------------
+Unlabelled Quotients And Tournament Shadows
+  term_hits=11978 files=817 entries=3599
+  retention_weight=42110 tiered_score=11.472
+  top_entry: hits=720 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=357 retention=2553 00-navigation/TANGENTS.md:2:Combinatorics & Structure
+  top_entry: hits=272 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+  top_entry: hits=205 retention=2354 00-navigation/TANGENTS.md:1:Tangents, Rabbit Holes & Novel Ideas
+  top_entry: hits=194 retention=198 00-navigation/TANGENTS.md:9:Arc-Flip Approach (opus-S2 + kind-pasteur-S5, merged)
+
+Endpoint/Fold Certificate Calculus
+  term_hits=13438 files=912 entries=3789
+  retention_weight=55691 tiered_score=21.843
+  top_entry: hits=593 retention=2553 00-navigation/TANGENTS.md:2:Combinatorics & Structure
+  top_entry: hits=526 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=356 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+  top_entry: hits=237 retention=2354 00-navigation/TANGENTS.md:1:Tangents, Rabbit Holes & Novel Ideas
+  top_entry: hits=203 retention=2111 00-navigation/OPEN-QUESTIONS.md:1:Open Questions
+
+Exact q/Farey/Haar-Baire Fronts
+  term_hits=2438 files=246 entries=731
+  retention_weight=29088 tiered_score=31.851
+  top_entry: hits=187 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=126 retention=2354 00-navigation/TANGENTS.md:1:Tangents, Rabbit Holes & Novel Ideas
+  top_entry: hits=114 retention=2111 00-navigation/OPEN-QUESTIONS.md:1:Open Questions
+  top_entry: hits=99 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+  top_entry: hits=24 retention=67 00-navigation/SESSION-LOG.md:1550:codex-2026-06-24-S145 -- Borel/Baire/Haar and any-angle carrier
+
+C27/Unital/K33 State-Lift Labels
+  term_hits=2860 files=153 entries=616
+  retention_weight=26460 tiered_score=42.132
+  top_entry: hits=196 retention=2354 00-navigation/TANGENTS.md:1:Tangents, Rabbit Holes & Novel Ideas
+  top_entry: hits=171 retention=2111 00-navigation/OPEN-QUESTIONS.md:1:Open Questions
+  top_entry: hits=169 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=126 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+  top_entry: hits=22 retention=107 07-reflections/lrc14-skeleton-gate-missing-picture-codex-s149.md
+
+Wide/Relation-Lattice/gK8 Moment Control
+  term_hits=11376 files=565 entries=2325
+  retention_weight=35139 tiered_score=46.477
+  top_entry: hits=683 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=592 retention=2354 00-navigation/TANGENTS.md:1:Tangents, Rabbit Holes & Novel Ideas
+  top_entry: hits=444 retention=2111 00-navigation/OPEN-QUESTIONS.md:1:Open Questions
+  top_entry: hits=71 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+  top_entry: hits=62 retention=2553 00-navigation/TANGENTS.md:2:Combinatorics & Structure
+
+Labelled Packets, Fixed Margins, Gauntlets
+  term_hits=7540 files=740 entries=2570
+  retention_weight=46503 tiered_score=56.708
+  top_entry: hits=358 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=315 retention=2354 00-navigation/TANGENTS.md:1:Tangents, Rabbit Holes & Novel Ideas
+  top_entry: hits=280 retention=2111 00-navigation/OPEN-QUESTIONS.md:1:Open Questions
+  top_entry: hits=219 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+  top_entry: hits=142 retention=2553 00-navigation/TANGENTS.md:2:Combinatorics & Structure
+
+Moon-Core Apex/Lift/Comb Packets
+  term_hits=4967 files=586 entries=1972
+  retention_weight=32736 tiered_score=59.351
+  top_entry: hits=184 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=131 retention=2111 00-navigation/OPEN-QUESTIONS.md:1:Open Questions
+  top_entry: hits=115 retention=2354 00-navigation/TANGENTS.md:1:Tangents, Rabbit Holes & Novel Ideas
+  top_entry: hits=99 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+  top_entry: hits=87 retention=2553 00-navigation/TANGENTS.md:2:Combinatorics & Structure
+
+Boundary-Moment, NORK, Pinch Templates
+  term_hits=3329 files=396 entries=1322
+  retention_weight=29275 tiered_score=63.469
+  top_entry: hits=224 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=126 retention=2354 00-navigation/TANGENTS.md:1:Tangents, Rabbit Holes & Novel Ideas
+  top_entry: hits=111 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+  top_entry: hits=92 retention=2553 00-navigation/TANGENTS.md:2:Combinatorics & Structure
+  top_entry: hits=72 retention=2111 00-navigation/OPEN-QUESTIONS.md:1:Open Questions
+
+Endpoint-Credit, Twist, Count, Toeplitz Duals
+  term_hits=1500 files=317 entries=775
+  retention_weight=22104 tiered_score=65.240
+  top_entry: hits=62 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=46 retention=2354 00-navigation/TANGENTS.md:1:Tangents, Rabbit Holes & Novel Ideas
+  top_entry: hits=41 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+  top_entry: hits=40 retention=2111 00-navigation/OPEN-QUESTIONS.md:1:Open Questions
+  top_entry: hits=34 retention=2553 00-navigation/TANGENTS.md:2:Combinatorics & Structure
+
+Formal/Finite-Check Proof Interfaces
+  term_hits=22472 files=1097 entries=5877
+  retention_weight=59398 tiered_score=71.793
+  top_entry: hits=697 retention=2354 00-navigation/TANGENTS.md:1:Tangents, Rabbit Holes & Novel Ideas
+  top_entry: hits=528 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=474 retention=2111 00-navigation/OPEN-QUESTIONS.md:1:Open Questions
+  top_entry: hits=409 retention=2553 00-navigation/TANGENTS.md:2:Combinatorics & Structure
+  top_entry: hits=319 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+
+External Carriers And Analogy Reservoir
+  term_hits=4399 files=334 entries=1498
+  retention_weight=24722 tiered_score=16.351
+  top_entry: hits=199 retention=3712 05-knowledge/results/INDEX.md
+  top_entry: hits=158 retention=2553 00-navigation/TANGENTS.md:2:Combinatorics & Structure
+  top_entry: hits=154 retention=1991 00-navigation/CONCEPT-MAP.md:3:Tournaments
+  top_entry: hits=73 retention=198 00-navigation/TANGENTS.md:9:Arc-Flip Approach (opus-S2 + kind-pasteur-S5, merged)
+  top_entry: hits=64 retention=213 00-navigation/TANGENTS.md:19:T095: Score (1,2,2,2,3) — Unique Non-H-Determining Score at n=5 (opus-
+
+REFUTATION / GUARDRAIL SNIPPETS BY FAMILY
+-----------------------------------------
+Unlabelled Quotients And Tournament Shadows: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L7: | **LRC14 skeleton-gate missing-picture synthesis** | Finite proof-interface classifier composing Haar/Baire boundary skeletons, Jacobsthal gate, C27/unital transfers, derived profiles, and K33 routing | HYP-2960/S149 makes the current AP/GW proof picture exec
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L10: | **LRC14 missing-picture bridge** | Functorial conservation law from reduced residuals to typed proof packets | HYP-2954/S149 says the project is missing a quotient-preserving functor, not another scalar. It maps `reduced residual -> exact M/Farey branch -> H
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L15: | **LRC14 boundary-gap packet bridge** | Exact endpoint-collision certificate for the qdiv>14 covering branch | HYP-2965/S152 refines the F6 residual from HYP-2956/HYP-2962/HYP-2963 and sits inside HYP-2964's moon-core proof skeleton. Each strict safe componen
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L36: | **LRC14 operator sequence tournament** | Synthesis of Farey mutations as integer sequences and proof-carrier tournaments | HYP-2940/S137 keeps `q`, `p+q`, `p*q`, `q^p`, and `p^q` as labelled operator lanes, downstream of the HYP-2938/HYP-2939 pi/unital guard
+
+Endpoint/Fold Certificate Calculus: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L7: | **LRC14 skeleton-gate missing-picture synthesis** | Finite proof-interface classifier composing Haar/Baire boundary skeletons, Jacobsthal gate, C27/unital transfers, derived profiles, and K33 routing | HYP-2960/S149 makes the current AP/GW proof picture exec
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L9: | **LRC14 Haar-Baire taut boundary finite check** | Bounded exact check of the boundary-support lemma plus active owner skeletons for HBT*/Haar-Baire Wave | HYP-2951/S146 computes exact safe interval fronts as a local-database companion to HYP-2949 and HYP-295
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L10: | **LRC14 missing-picture bridge** | Functorial conservation law from reduced residuals to typed proof packets | HYP-2954/S149 says the project is missing a quotient-preserving functor, not another scalar. It maps `reduced residual -> exact M/Farey branch -> H
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L15: | **LRC14 boundary-gap packet bridge** | Exact endpoint-collision certificate for the qdiv>14 covering branch | HYP-2965/S152 refines the F6 residual from HYP-2956/HYP-2962/HYP-2963 and sits inside HYP-2964's moon-core proof skeleton. Each strict safe componen
+
+Exact q/Farey/Haar-Baire Fronts: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L7: | **LRC14 skeleton-gate missing-picture synthesis** | Finite proof-interface classifier composing Haar/Baire boundary skeletons, Jacobsthal gate, C27/unital transfers, derived profiles, and K33 routing | HYP-2960/S149 makes the current AP/GW proof picture exec
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L9: | **LRC14 Haar-Baire taut boundary finite check** | Bounded exact check of the boundary-support lemma plus active owner skeletons for HBT*/Haar-Baire Wave | HYP-2951/S146 computes exact safe interval fronts as a local-database companion to HYP-2949 and HYP-295
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L10: | **LRC14 missing-picture bridge** | Functorial conservation law from reduced residuals to typed proof packets | HYP-2954/S149 says the project is missing a quotient-preserving functor, not another scalar. It maps `reduced residual -> exact M/Farey branch -> H
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L15: | **LRC14 boundary-gap packet bridge** | Exact endpoint-collision certificate for the qdiv>14 covering branch | HYP-2965/S152 refines the F6 residual from HYP-2956/HYP-2962/HYP-2963 and sits inside HYP-2964's moon-core proof skeleton. Each strict safe componen
+
+C27/Unital/K33 State-Lift Labels: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L6: | **LRC14 twist-ladder dual certificate** | Global rational-phase certificate plus finite blocker hypergraph for failed ladders | HYP-2972/S155 attacks LRC14 from discrete twists `a/q`: if every speed is at distance at least `1/14` at one twist, the row is cer
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L7: | **LRC14 skeleton-gate missing-picture synthesis** | Finite proof-interface classifier composing Haar/Baire boundary skeletons, Jacobsthal gate, C27/unital transfers, derived profiles, and K33 routing | HYP-2960/S149 makes the current AP/GW proof picture exec
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L9: | **LRC14 Haar-Baire taut boundary finite check** | Bounded exact check of the boundary-support lemma plus active owner skeletons for HBT*/Haar-Baire Wave | HYP-2951/S146 computes exact safe interval fronts as a local-database companion to HYP-2949 and HYP-295
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L10: | **LRC14 missing-picture bridge** | Functorial conservation law from reduced residuals to typed proof packets | HYP-2954/S149 says the project is missing a quotient-preserving functor, not another scalar. It maps `reduced residual -> exact M/Farey branch -> H
+
+Wide/Relation-Lattice/gK8 Moment Control: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L15: | **LRC14 boundary-gap packet bridge** | Exact endpoint-collision certificate for the qdiv>14 covering branch | HYP-2965/S152 refines the F6 residual from HYP-2956/HYP-2962/HYP-2963 and sits inside HYP-2964's moon-core proof skeleton. Each strict safe componen
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L71: | **LRC small-q proof lab** | Uses easier even denominators as a proof-route discriminator for the LRC14 machinery | HYP-2898/S111 applies the LRC14 atoms to `q=8,10,12,14`, scanning exact primitive bounded banks `max(E)<=q`. The stable carriers are Bonferroni
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L72: | **LRC14 anchored AP-facing Fejer majorization** | Additive-energy route corrected from scalar monotonicity to anchored interval difference-profile plus signed sector labels | HYP-2889/S103 tests the HYP-2885 additive-energy branch on exact primitive banks k=
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L78: | **LRC14 seven-sector net cap** | Weaker sufficient endpoint for HYP-2602: a `1/7`-net must hit every fixed seventh-sector | HYP-2603 replaces the exact net set `N(E)={all gaps<=1/7}` by the larger sector-cover set `S7(E)`. Exact primitive bank over `k=8..13`
+
+Labelled Packets, Fixed Margins, Gauntlets: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L7: | **LRC14 skeleton-gate missing-picture synthesis** | Finite proof-interface classifier composing Haar/Baire boundary skeletons, Jacobsthal gate, C27/unital transfers, derived profiles, and K33 routing | HYP-2960/S149 makes the current AP/GW proof picture exec
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L10: | **LRC14 missing-picture bridge** | Functorial conservation law from reduced residuals to typed proof packets | HYP-2954/S149 says the project is missing a quotient-preserving functor, not another scalar. It maps `reduced residual -> exact M/Farey branch -> H
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L15: | **LRC14 boundary-gap packet bridge** | Exact endpoint-collision certificate for the qdiv>14 covering branch | HYP-2965/S152 refines the F6 residual from HYP-2956/HYP-2962/HYP-2963 and sits inside HYP-2964's moon-core proof skeleton. Each strict safe componen
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L21: | **LRC14 triangular affine-operator carrier** | Labelled product/depth carrier from triangular numbers, even perfect numbers, and affine words generated by `a(x)=x/2`, `b(x)=x+1` | HYP-2941 refutes the scalar equation `x*(2x-1)=2*log2(x)+1-x` by showing the e
+
+Moon-Core Apex/Lift/Comb Packets: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L7: | **LRC14 skeleton-gate missing-picture synthesis** | Finite proof-interface classifier composing Haar/Baire boundary skeletons, Jacobsthal gate, C27/unital transfers, derived profiles, and K33 routing | HYP-2960/S149 makes the current AP/GW proof picture exec
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L10: | **LRC14 missing-picture bridge** | Functorial conservation law from reduced residuals to typed proof packets | HYP-2954/S149 says the project is missing a quotient-preserving functor, not another scalar. It maps `reduced residual -> exact M/Farey branch -> H
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L15: | **LRC14 boundary-gap packet bridge** | Exact endpoint-collision certificate for the qdiv>14 covering branch | HYP-2965/S152 refines the F6 residual from HYP-2956/HYP-2962/HYP-2963 and sits inside HYP-2964's moon-core proof skeleton. Each strict safe componen
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L21: | **LRC14 triangular affine-operator carrier** | Labelled product/depth carrier from triangular numbers, even perfect numbers, and affine words generated by `a(x)=x/2`, `b(x)=x+1` | HYP-2941 refutes the scalar equation `x*(2x-1)=2*log2(x)+1-x` by showing the e
+
+Boundary-Moment, NORK, Pinch Templates: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L7: | **LRC14 skeleton-gate missing-picture synthesis** | Finite proof-interface classifier composing Haar/Baire boundary skeletons, Jacobsthal gate, C27/unital transfers, derived profiles, and K33 routing | HYP-2960/S149 makes the current AP/GW proof picture exec
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L10: | **LRC14 missing-picture bridge** | Functorial conservation law from reduced residuals to typed proof packets | HYP-2954/S149 says the project is missing a quotient-preserving functor, not another scalar. It maps `reduced residual -> exact M/Farey branch -> H
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L15: | **LRC14 boundary-gap packet bridge** | Exact endpoint-collision certificate for the qdiv>14 covering branch | HYP-2965/S152 refines the F6 residual from HYP-2956/HYP-2962/HYP-2963 and sits inside HYP-2964's moon-core proof skeleton. Each strict safe componen
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L86: | **Diagonal Frobenius support gate** | Product-quotient obstruction template: scalar supersingularity passes, but diagonal forms across partial Frobenius twists retain the curve-obstruction channel | Church arXiv:2508.14876 supplies a geometric support-gate m
+
+Endpoint-Credit, Twist, Count, Toeplitz Duals: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L6: | **LRC14 twist-ladder dual certificate** | Global rational-phase certificate plus finite blocker hypergraph for failed ladders | HYP-2972/S155 attacks LRC14 from discrete twists `a/q`: if every speed is at distance at least `1/14` at one twist, the row is cer
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L64: | **LRC14 support-6 coimage fiber atlas** | Finite projective mod-7 class table for the exact support-6 signed tail | HYP-2617 computes the direct coimage of HYP-2614's residue reciprocal identity: for speed residues `a_i=e_i mod 7` and Fourier residues `r_i i
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L72: | **LRC14 anchored AP-facing Fejer majorization** | Additive-energy route corrected from scalar monotonicity to anchored interval difference-profile plus signed sector labels | HYP-2889/S103 tests the HYP-2885 additive-energy branch on exact primitive banks k=
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L84: | **LRC14 marked ladder support gate** | Support-pressure refinement of HYP-2438: blocked denominators become runner hitting-set ledgers | For denominator `q`, mark which runners block each unit twist and compute `tau_q(S)`, the minimum support needed to block
+
+Formal/Finite-Check Proof Interfaces: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L6: | **LRC14 twist-ladder dual certificate** | Global rational-phase certificate plus finite blocker hypergraph for failed ladders | HYP-2972/S155 attacks LRC14 from discrete twists `a/q`: if every speed is at distance at least `1/14` at one twist, the row is cer
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L7: | **LRC14 skeleton-gate missing-picture synthesis** | Finite proof-interface classifier composing Haar/Baire boundary skeletons, Jacobsthal gate, C27/unital transfers, derived profiles, and K33 routing | HYP-2960/S149 makes the current AP/GW proof picture exec
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L9: | **LRC14 Haar-Baire taut boundary finite check** | Bounded exact check of the boundary-support lemma plus active owner skeletons for HBT*/Haar-Baire Wave | HYP-2951/S146 computes exact safe interval fronts as a local-database companion to HYP-2949 and HYP-295
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L10: | **LRC14 missing-picture bridge** | Functorial conservation law from reduced residuals to typed proof packets | HYP-2954/S149 says the project is missing a quotient-preserving functor, not another scalar. It maps `reduced residual -> exact M/Farey branch -> H
+
+External Carriers And Analogy Reservoir: 12 sampled guardrail entries
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L21: | **LRC14 triangular affine-operator carrier** | Labelled product/depth carrier from triangular numbers, even perfect numbers, and affine words generated by `a(x)=x/2`, `b(x)=x+1` | HYP-2941 refutes the scalar equation `x*(2x-1)=2*log2(x)+1-x` by showing the e
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L35: | **LRC14 pi/unital/flower alias guardrail** | Normalization and terminology guardrail for pi approximants, flower-family counts, and unital carriers | HYP-2938/S137 separates `22/7` as the rational/Farey pi approximant from `cuberoot(31)` as a better cubic al
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L39: | **LRC14 totient curvature** | Treats failure of tournament cell recurrences on `phi`/coprime density as the Euler-factor labels LRC must retain | HYP-2900/S113 refines HYP-2899 by applying full, even-half, and odd-half tournament slot recurrences to `phi`, `
+  - 00-navigation/CONCEPT-MAP.md:3:Tournaments:L41: | **Pollock Sierpinski carry-pair lift** | Tests whether Sierpinski/Waring dyadic intuition for Pollock lives in single residues or lifted defect-pair carry ledgers | HYP-2497: tetrahedral atoms are surjective mod `2^e` for `e<=12` in the scan, so pure single-
+
+CROSS-TOPIC RESERVOIR COUNTS
+----------------------------
+tiling:963, polynomial:938, triangular:813, euler:546, irreducible:285, unit distance:208, faulhaber:138, pollock:134, flower:110, pentagonal:93, pisano:71, tetrahedral:71, bunyakovsky:29
+
+CO-OCCURRENCE SPINE
+-------------------
+2183  Endpoint/Fold Certificate Calculus  <->  Formal/Finite-Check Proof Interfaces
+2019  Formal/Finite-Check Proof Interfaces  <->  Unlabelled Quotients And Tournament Shadows
+1682  Formal/Finite-Check Proof Interfaces  <->  Wide/Relation-Lattice/gK8 Moment Control
+1636  Formal/Finite-Check Proof Interfaces  <->  Labelled Packets, Fixed Margins, Gauntlets
+1481  Endpoint/Fold Certificate Calculus  <->  Unlabelled Quotients And Tournament Shadows
+1418  Moon-Core Apex/Lift/Comb Packets  <->  Formal/Finite-Check Proof Interfaces
+1363  Endpoint/Fold Certificate Calculus  <->  Labelled Packets, Fixed Margins, Gauntlets
+ 992  Labelled Packets, Fixed Margins, Gauntlets  <->  Unlabelled Quotients And Tournament Shadows
+ 951  External Carriers And Analogy Reservoir  <->  Formal/Finite-Check Proof Interfaces
+ 925  Endpoint/Fold Certificate Calculus  <->  Wide/Relation-Lattice/gK8 Moment Control
+ 909  Moon-Core Apex/Lift/Comb Packets  <->  Endpoint/Fold Certificate Calculus
+ 896  Boundary-Moment, NORK, Pinch Templates  <->  Formal/Finite-Check Proof Interfaces
+ 820  External Carriers And Analogy Reservoir  <->  Unlabelled Quotients And Tournament Shadows
+ 799  Boundary-Moment, NORK, Pinch Templates  <->  Endpoint/Fold Certificate Calculus
+ 772  Labelled Packets, Fixed Margins, Gauntlets  <->  Wide/Relation-Lattice/gK8 Moment Control
+ 745  Unlabelled Quotients And Tournament Shadows  <->  Wide/Relation-Lattice/gK8 Moment Control
+ 683  Moon-Core Apex/Lift/Comb Packets  <->  Unlabelled Quotients And Tournament Shadows
+ 623  Moon-Core Apex/Lift/Comb Packets  <->  Labelled Packets, Fixed Margins, Gauntlets
+
+TOURNAMENT ANALYSIS ON PROOF-ROUTE FAMILIES
+-------------------------------------------
+vertices: proof-route families, not runners, arcs, or raw residues
+pairwise_observable: which family keeps more of the LRC predicate payload (exact scale, open/boundary status, source labels, owner labels, and dual obstruction data)
+switch/gauge: higher tiered_score dominates; ties use the fixed historical Hamiltonian path listed below
+tie_hamiltonian_path: Unlabelled Quotients And Tournament Shadows -> External Carriers And Analogy Reservoir -> Endpoint/Fold Certificate Calculus -> Exact q/Farey/Haar-Baire Fronts -> C27/Unital/K33 State-Lift Labels -> Wide/Relation-Lattice/gK8 Moment Control -> Labelled Packets, Fixed Margins, Gauntlets -> Moon-Core Apex/Lift/Comb Packets -> Boundary-Moment, NORK, Pinch Templates -> Endpoint-Credit, Twist, Count, Toeplitz Duals -> Formal/Finite-Check Proof Interfaces
+score_histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+top_scores:
+  10  Formal/Finite-Check Proof Interfaces
+   9  Endpoint-Credit, Twist, Count, Toeplitz Duals
+   8  Boundary-Moment, NORK, Pinch Templates
+   7  Moon-Core Apex/Lift/Comb Packets
+   6  Labelled Packets, Fixed Margins, Gauntlets
+   5  Wide/Relation-Lattice/gK8 Moment Control
+   4  C27/Unital/K33 State-Lift Labels
+   3  Exact q/Farey/Haar-Baire Fronts
+   2  Endpoint/Fold Certificate Calculus
+   1  External Carriers And Analogy Reservoir
+   0  Unlabelled Quotients And Tournament Shadows
+directed_3_cycles: 0
+
+SYNTHESIS READOUT
+-----------------
+The mined history supports a one-way refinement pattern: scalar or unlabelled quotients are useful scouts, but every serious obstruction forces more payload to be retained.  The durable current object is a labelled packet sheaf over exact q/Farey/Haar fronts, C27/unital/K33 owner data, endpoint/boundary-moment charts, and several dual cones.  AP/Goddyn-Wong survive as common equality atoms; the live proof task is to show that no qdiv>14 zero-open packet can remain invisible to all packet labels and all dual certificates.

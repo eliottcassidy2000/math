@@ -1,0 +1,75 @@
+Perspective groupoid controlled-forgetting scout - codex S261
+==============================================================================
+
+1. SHIFTED A000568 / ROOTED-PERSPECTIVE LADDER
+m  U(m)  P_node(m)  U(m+1)  defect  node_depths
+1     1          1  1        0       [1, 1, 1, 1]
+2     1          2  2        0       [2, 2, 2, 2]
+3     2          4  4        0       [4, 4, 4, 4]
+4     4         12  12       0       [10, 12, 12, 12]
+5    12         48  56       8       [36, 47, 48, 48]
+6    56        296  456      160     [196, 280, 294, 296]
+
+Readout: the prompt's comparison is P_node(m) versus U(m+1).
+The first failure is m=5: P_node(5)=48, U(6)=56, defect=8.
+At m=6 the gap has widened: P_node(6)=296 versus U(7)=456.
+
+2. EXACT NON-NODE PERSPECTIVE CARRIERS
+m  arc_orbits  triple_orbits  transitive_triples  cyclic_triples  conflict_pair_orbits
+1           0              0                   0               0                    0
+2           1              0                   0               0                    0
+3           4              2                   1               1                    0
+4          16             12                   8               4                    0
+5          88             88                  64              24                    0
+6         704            928                 688             240                   32
+
+Conflict/Omega-style carriers first become nonzero at m=6; that is exactly where the shifted rooted-node gap is no longer a one-step toy.
+
+3. EDGE-SECTOR AND DIHEDRAL/CONVERSE LOSS AT U(6)
+size    : individual_sigs= 35; class_decks=55/56
+internal: individual_sigs= 59; class_decks=55/56
+cross   : individual_sigs=362; class_decks=56/56
+full    : individual_sigs=422; class_decks=56/56
+self_converse_classes_U6=12
+only_size_internal_collision=344,345; converse_pair=True
+Interpretation: sector size/internal quotients forget a dihedral/converse chirality coordinate; cross-sector orientation restores it.
+
+4. MISS-COUNT PGF ROOT SIDECAR (S66 INTEGRATION)
+consec_8   : #real=0/6  extreme_mass=0.3476  L_yK8=3.5823  roots(|z|,arg)=[(1.4886, -55.3), (1.4886, 55.3), (1.5814, -111.0), (1.5814, 111.0), (1.701, -154.2), (1.701, 154.2)]
+even_AP    : #real=0/6  extreme_mass=0.3476  L_yK8=3.5823  roots(|z|,arg)=[(1.4886, -55.3), (1.4886, 55.3), (1.5814, -111.0), (1.5814, 111.0), (1.701, -154.2), (1.701, 154.2)]
+top_cluster: #real=0/6  extreme_mass=0.1977  L_yK8=2.1400  roots(|z|,arg)=[(1.2438, -112.8), (1.2438, 112.8), (1.6328, -164.8), (1.6328, 164.8), (2.0295, -71.1), (2.0295, 71.1)]
+consec_8_root_mod_product=16.0333; q0/q6=16.0333
+Interpretation: PGF root structure is another sidecar.  A scalar miss-count moment is unsafe unless root-realness / zero-confinement is retained or proven irrelevant.
+
+5. TOURNAMENT ANALYSIS OVER PERSPECTIVE FUNCTORS
+Pairwise observable axes: root, extension, edge, cycle, topology, obstruction, analytic roots, dihedral, owner.
+Switch/gauge: orient by majority of retained axes; total retention minus cost breaks ties.
+vertices=['raw_A000568_class', 'node_k_depth_cache', 'exact_rooted_node', 'ordered_pair_extension', 'directed_edge_sector', 'cycle_chirality', 'transitive_clique_insertion', 'conflict_omega', 'dihedral_reflection_quotient', 'normal_fan_component_packet', 'first_obstruction_cocycle', 'miss_count_pgf_roots', 'endpoint_owner_packet']
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 6: 1, 7: 3, 8: 1, 10: 1, 11: 1, 12: 1}
+directed_3_cycles=4
+scc_sizes=[5, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=13
+one_priority_path=endpoint_owner_packet -> first_obstruction_cocycle -> directed_edge_sector -> ordered_pair_extension -> cycle_chirality -> dihedral_reflection_quotient -> normal_fan_component_packet -> conflict_omega -> transitive_clique_insertion -> miss_count_pgf_roots -> exact_rooted_node -> node_k_depth_cache -> raw_A000568_class
+
+Functor summary:
+  raw_A000568_class: root=none; action=S_n; next=add observer; sidecar=none
+  node_k_depth_cache: root=vertex color; action=Aut(T) on vertices; next=recover rooted view; sidecar=depth index
+  exact_rooted_node: root=marked vertex; action=Aut(T)_root; next=add observer; sidecar=incident word
+  ordered_pair_extension: root=old root + new observer; action=Aut(T) on ordered pair; next=unroot/delete; sidecar=endpoint role
+  directed_edge_sector: root=tail -> tip; action=edge stabilizer; next=sector quotient; sidecar=cross-sector orientation
+  cycle_chirality: root=directed 3-cycle; action=C3/D3 quotient; next=Omega conflict; sidecar=chirality word
+  transitive_clique_insertion: root=transitive triple; action=chain stabilizer; next=insert observer; sidecar=cut position
+  conflict_omega: root=cycle conflict pair; action=Omega automorphism; next=H/Omega certificate; sidecar=conflict incidence
+  dihedral_reflection_quotient: root=reflection orbit; action=D_n / converse; next=time reversal; sidecar=orientation owner
+  normal_fan_component_packet: root=safe component; action=normal-fan chamber; next=component bound; sidecar=Cech/barcode word
+  first_obstruction_cocycle: root=visible fiber pair; action=payload orbit; next=chart gluing; sidecar=obstruction syndrome
+  miss_count_pgf_roots: root=miss-count distribution; action=root multiset; next=moment bound; sidecar=real-root count
+  endpoint_owner_packet: root=observer endpoint owner; action=packet automorphism; next=formal certificate; sidecar=full owner ledger
+
+SYNTHESIS
+A k-depth node perspective is a cache functor: it recovers rooted memory and then stops.  Edge, cycle, clique, conflict, component, obstruction, dihedral, owner, and PGF-root perspectives are not deeper versions of that cache; they are sidecars for different next operations.
+For LRC14, the rule is to choose the functor whose root/action pair survives the immediate operation: add observer, delete/unroot, reflect, bound components, glue charts, push H/Omega certificates, or close a moment/PGF-root inequality.
+
+ASSUMPTION CHALLENGE
+Considered vertices: runners, tournament nodes, directed edges, ordered pairs, cycles, cliques, conflict pairs, dihedral orbits, safe components, obstruction cochains, miss-count roots, endpoint owners, matrix sidecar columns, and proof obligations.
+Chosen vertices: perspective functors.  Preserved predicate: the quotient's legality for the next LRC operation.  Destroyed data: labels, endpoint roles, cross-sector orientation, chirality, topology, obstruction, and analytic root structure unless the named sidecar carries it.

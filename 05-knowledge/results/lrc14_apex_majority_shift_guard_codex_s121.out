@@ -1,0 +1,32 @@
+LRC14 apex-majority shift guard (S121)
+
+1. Single-speed exact shift facts
+  ordinary profiles (gcd(speed,14)!=7): [(0, (0, 0)), (1, (1, 0)), (2, (1, 1))]
+  half-step profiles (gcd(speed,14)=7): [(0, (0, 0)), (7, (0, 7)), (7, (7, 0))]
+  failures: 0
+
+2. Consequence
+  If |R|<=6 and at most one r in R has gcd(r,14)=7,
+  then the union of forbidden shift classes has size at most 12:
+    no half-step: six ordinary speeds forbid at most 6*2=12 shifts;
+    one half-step: it forbids one parity class, and each ordinary
+      speed contributes at most one new shift in the opposite parity,
+      so at most 7+5=12 shifts.
+
+3. Sharp guardrail: two half-step speeds can cover all shifts
+  first grid cover found: (Fraction(3, 196), 7, (0, 2, 4, 6, 8, 10, 12), 399, (1, 3, 5, 7, 9, 11, 13))
+  named exact cover at u=2/49:
+    speed 7 forbids   (0, 2, 4, 6, 8, 10, 12)
+    speed 161 forbids (1, 3, 5, 7, 9, 11, 13)
+    union             (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+
+4. Tournament Analysis fingerprint
+  carriers=['below14_scaled_Q_margin', 'fourteen_lifts_t=(u+k)/14', 'ordinary_residual_shift_sieve', 'single_halfstep_parity_guard', 'generic_boundary_perturbation', 'two_halfstep_phase_collision']
+  score_histogram=[5, 4, 3, 2, 1, 0]
+  directed_edges=15
+  Hamiltonian path:
+    below14_scaled_Q_margin > fourteen_lifts_t=(u+k)/14 > ordinary_residual_shift_sieve > single_halfstep_parity_guard > generic_boundary_perturbation > two_halfstep_phase_collision
+
+Readout: THM-570 closes the apex-majority branch except for the
+two-or-more half-step residual collision, which is now the named
+HYP-2911 phase-alignment target.

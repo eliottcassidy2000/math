@@ -1,0 +1,94 @@
+LRC14 route-state closure median scout (codex S240)
+==========================================================
+
+State coordinates: 45
+States: 17
+Closure rules: 11
+
+Assumption challenge
+  Vertices are proof states, not runners: packet states, route obligations, certificate generators, sidecar coordinates, and discharge exits.
+  Preserved predicate: whether a serious route triple has a unique legal majority center after sidecars are attached.
+  Destroyed data: raw runner names, raw time geometry, and the distinction between two witnesses that agree on all retained proof coordinates.
+  Challenged assumption: discharge mode is not a label on a route; it must be a coordinate, otherwise median centers can look legal while hiding F7/THM-572 debt.
+
+Route triples
+----------------------------------------------------------
+automatic_partial_cube_router
+  states: automatic_word_shadow, partial_cube_bridge_rank, q_witness_exact_scale
+  note: Moser/fibbinary plus bridge rank must become a gated partial cube, not a raw automaton quotient.
+  raw median: FAIL; endpoint_owner, fibbinary_partial_cube, lrc_predicate, packet_scale_exact, topology_safe
+    raw missing: fibbinary/Moser data must be a gated partial-cube sidecar: missing gated_subcube_status, median_interval_status, theta_class_word
+  closed median: PASS; endpoint_owner, fibbinary_partial_cube, gated_subcube_status, lrc_predicate, magnitude_cocycle, median_interval_status, packet_scale_exact, theta_class_word, topology_safe
+    sidecars attached to automatic_word_shadow: gated_subcube_status, magnitude_cocycle, median_interval_status, native_transition_word, theta_class_word
+    sidecars attached to partial_cube_bridge_rank: bridge_rank_line_id, gated_subcube_status, median_interval_status, simplex_face_rank, theta_class_word
+
+hodge_toeplitz_fejer_phantom
+  states: hodge_positive_shadow, fejer_interval_certificate, toeplitz_square_scale
+  note: Positivity plus two analytic certificates is still phantom unless cycle image or debt is named.
+  raw median: FAIL; certificate_cycle_generators, endpoint_owner, hodge_positive_shadow, lrc_predicate, packet_scale_exact, topology_safe
+    raw missing: positive Hodge shadow must first be a closed packet cochain: missing cochain_closedness_status
+    raw missing: positive closed shadow has no cycle-class image and no named residual debt exit
+  closed median: FAIL; certificate_cycle_generators, cochain_closedness_status, endpoint_owner, hodge_positive_shadow, lrc_predicate, packet_scale_exact, topology_safe
+    closed missing: positive closed shadow has no cycle-class image and no named residual debt exit
+    sidecars attached to fejer_interval_certificate: cochain_closedness_status
+    sidecars attached to toeplitz_square_scale: cochain_closedness_status
+
+hodge_toeplitz_fejer_repaired
+  states: hodge_generated_cycle, fejer_interval_cycle, toeplitz_square_cycle
+  note: Checked cycle generators should medianize the Hodge/Toeplitz/Fejer route.
+  raw median: FAIL; certificate_cycle_generators, cycle_generator_checked, endpoint_owner, hodge_positive_shadow, lrc_predicate, packet_scale_exact, topology_safe
+    raw missing: positive Hodge shadow must first be a closed packet cochain: missing cochain_closedness_status
+    raw missing: checked cycle generators discharge the positive shadow: missing cycle_class_image_status, hodge_cycle_image
+    raw missing: positive closed shadow has no cycle-class image and no named residual debt exit
+  closed median: PASS; certificate_cycle_generators, cochain_closedness_status, cycle_class_image_status, cycle_generator_checked, endpoint_owner, hodge_cycle_image, hodge_positive_shadow, lrc_predicate, packet_scale_exact, topology_safe
+    sidecars attached to hodge_generated_cycle: cycle_class_image_status
+    sidecars attached to fejer_interval_cycle: cochain_closedness_status, cycle_class_image_status, hodge_cycle_image
+    sidecars attached to toeplitz_square_cycle: cochain_closedness_status, cycle_class_image_status, hodge_cycle_image
+
+named_residual_debt_exit
+  states: hodge_phantom_debt_state, k33_state_lift, f7_residual_debt
+  note: A phantom positive shadow can pass only by becoming an explicit F7/THM-572 debt exit.
+  raw median: PASS; discharge_named_debt, endpoint_owner, f7_state_lift_target, lrc_predicate, packet_scale_exact, residual_debt_exit, topology_safe
+  closed median: PASS; discharge_named_debt, endpoint_owner, f7_state_lift_target, lrc_predicate, packet_scale_exact, residual_debt_exit, topology_safe
+
+observer_cut_incompatible_repairs
+  states: observer_cut_sector, haar_zipper_square, residual_capacitor_cut
+  note: Observer-cut payload alone is not enough when its three repair lanes do not agree.
+  raw median: FAIL; endpoint_owner, lrc_predicate, observer_cut_payload, packet_scale_exact, topology_safe
+    raw missing: observer-cut payload has no cross-sector, cycle-image, or debt sidecar
+  closed median: FAIL; endpoint_owner, lrc_predicate, observer_cut_payload, packet_scale_exact, topology_safe
+    closed missing: observer-cut payload has no cross-sector, cycle-image, or debt sidecar
+    sidecars attached to haar_zipper_square: cycle_class_image_status
+
+Tournament Analysis
+----------------------------------------------------------
+  Pairwise observable: weighted retention score of proof-state coordinates, with a legal-center bonus.
+  Binary relation: A -> B when A retains the higher score; ties follow the declared Hamiltonian path.
+  Raw score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1}
+  Closed score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1}
+  Raw directed 3-cycles: 0
+  Closed directed 3-cycles: 0
+  Raw Hamiltonian path count: 1
+  Closed Hamiltonian path count: 1
+  Edge flips after legal sidecars: 59
+    flip q_witness_exact_scale vs automatic_word_shadow: raw q_witness_exact_scale, closed automatic_word_shadow
+    flip q_witness_exact_scale vs partial_cube_bridge_rank: raw q_witness_exact_scale, closed partial_cube_bridge_rank
+    flip q_witness_exact_scale vs fejer_interval_cycle: raw q_witness_exact_scale, closed fejer_interval_cycle
+    flip q_witness_exact_scale vs toeplitz_square_cycle: raw q_witness_exact_scale, closed toeplitz_square_cycle
+    flip q_witness_exact_scale vs hodge_generated_cycle: raw q_witness_exact_scale, closed hodge_generated_cycle
+    flip q_witness_exact_scale vs haar_zipper_square: raw q_witness_exact_scale, closed haar_zipper_square
+    flip ap_gw_boundary_atom vs automatic_word_shadow: raw ap_gw_boundary_atom, closed automatic_word_shadow
+    flip ap_gw_boundary_atom vs partial_cube_bridge_rank: raw ap_gw_boundary_atom, closed partial_cube_bridge_rank
+    flip ap_gw_boundary_atom vs fejer_interval_cycle: raw ap_gw_boundary_atom, closed fejer_interval_cycle
+    flip ap_gw_boundary_atom vs toeplitz_square_cycle: raw ap_gw_boundary_atom, closed toeplitz_square_cycle
+    flip ap_gw_boundary_atom vs hodge_generated_cycle: raw ap_gw_boundary_atom, closed hodge_generated_cycle
+    flip ap_gw_boundary_atom vs haar_zipper_square: raw ap_gw_boundary_atom, closed haar_zipper_square
+    ... 47 more flips
+  Closed tie Hamiltonian path:
+    toeplitz_square_cycle > fejer_interval_cycle > partial_cube_bridge_rank > hodge_generated_cycle > automatic_word_shadow > haar_zipper_square > k33_state_lift > residual_capacitor_cut > hodge_phantom_debt_state > f7_residual_debt > observer_cut_sector > roth_minkowski_wall > ap_gw_boundary_atom > q_witness_exact_scale > toeplitz_square_scale > fejer_interval_certificate > hodge_positive_shadow
+
+Proof-interface readout
+----------------------------------------------------------
+  Angle 1, automatic/partial-cube bridge: the raw automaton/Moser/fibbinary triple fails because the median remembers only `fibbinary_partial_cube`. After sidecars, the center becomes the gated partial-cube state with `theta_class_word`, `gated_subcube_status`, `median_interval_status`, and `magnitude_cocycle`; the non-majority witnesses still carry the native-transition and bridge-rank sidecars needed to audit the closure.
+  Angle 2, Hodge/Toeplitz/Fejer certificates: positivity and analytic certificates do not medianize unless the center has either `hodge_cycle_image` or `residual_debt_exit`.  The repaired triple passes only because checked cycle generators force `cycle_class_image_status`.
+  Interface claim to test next: every serious LRC14 route triple should be representable in this coordinate cube, and every failed median should name one of: missing gated sidecar, missing cycle image, missing observer-cut repair, or explicit F7/THM-572 debt.

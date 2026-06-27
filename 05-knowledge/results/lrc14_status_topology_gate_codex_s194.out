@@ -1,0 +1,153 @@
+=== LRC14 status-topology gate bridge S194 ===
+bank=HYP-2963 default rows single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5
+packets=21913
+
+[0] Assumption challenge
+  considered vertices:
+    runners, individual danger arcs, endpoint cells, boundary
+    cocircuits, residues, Fourier/ET clocks, p-adic unit roots,
+    magnitude fibers, barcode packets, and proof obligations.
+  chosen vertices:
+    proof gates: arc boundary cycle, coarse ET+unit status,
+    magnitude route split, barcode packet scheduler, residue word.
+  preserved LRC predicate:
+    boundary/open status for the question whether a strict safe
+    interval exists at threshold 1/14.
+  destroyed information:
+    raw runner identity, exact route labels, and full endpoint geometry
+    unless a later gate reattaches them.
+
+[1] Residue-terminal boundary/open collisions
+  fibers=16555 mixed_status=2 mixed_route=265 max_route_mixed=30
+  boundary_apgw_cycle=2 boundary_noncycle=0 open_with_closed_beta1=0 open_min_safe_topes=4
+  topology_classes={(1, 1, 6, 0, 0, 1): 2, (8, 0, 14, 0, 8, 7): 4, (4, 0, 10, 0, 4, 3): 10, (14, 0, 20, 0, 14, 13): 2, (12, 0, 18, 0, 12, 11): 13, (16, 0, 22, 0, 16, 15): 1, (10, 0, 16, 0, 10, 9): 5, (6, 0, 12, 0, 6, 5): 2, (20, 0, 26, 0, 20, 19): 1, (4, 0, 12, 0, 4, 3): 1}
+  residue_mixed_status_fiber[0] size=30 status={'boundary': 1, 'open': 29} routes={'BOUNDARY-AP-GW': 1, 'COVERING-MOMENT': 2, 'Q-WITNESS': 27}
+    AP                                 status=boundary route=BOUNDARY-AP-GW   M=   1/14 mu=           0 closed=(1,1) open=(6,0) topes=0  qdef=1  apgw_cycle=True
+    magnitude liar 12->96              status=open     route=COVERING-MOMENT  M=  8/101 mu= 5219/840840 closed=(8,0) open=(14,0) topes=8  qdef=7  apgw_cycle=False
+    single swap 12->180                status=open     route=COVERING-MOMENT  M=   3/37 mu= 2833/315315 closed=(8,0) open=(14,0) topes=8  qdef=7  apgw_cycle=False
+    residue liar 12->26                status=open     route=Q-WITNESS        M=   1/12 mu=   426/35035 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+    single swap 11->109                status=open     route=Q-WITNESS        M=   1/11 mu= 8873/170040 closed=(14,0) open=(20,0) topes=14 qdef=13 apgw_cycle=False
+    single swap 11->123                status=open     route=Q-WITNESS        M=   1/11 mu=39527/783510 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 11->151                status=open     route=Q-WITNESS        M=   1/11 mu=120223/2308488 closed=(14,0) open=(20,0) topes=14 qdef=13 apgw_cycle=False
+    single swap 11->179                status=open     route=Q-WITNESS        M=   1/11 mu=232049/4560920 closed=(16,0) open=(22,0) topes=16 qdef=15 apgw_cycle=False
+    single swap 11->25                 status=open     route=Q-WITNESS        M=   1/11 mu=19297/382200 closed=(10,0) open=(16,0) topes=10 qdef=9  apgw_cycle=False
+    single swap 11->39                 status=open     route=Q-WITNESS        M=   1/11 mu=  1251/25480 closed=(10,0) open=(16,0) topes=10 qdef=9  apgw_cycle=False
+    single swap 11->53                 status=open     route=Q-WITNESS        M=   1/11 mu=71483/1350440 closed=(10,0) open=(16,0) topes=10 qdef=9  apgw_cycle=False
+    single swap 11->67                 status=open     route=Q-WITNESS        M=   1/11 mu=246131/5121480 closed=(10,0) open=(16,0) topes=10 qdef=9  apgw_cycle=False
+    single swap 11->95                 status=open     route=Q-WITNESS        M=   1/11 mu=25001/484120 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 12->110                status=open     route=Q-WITNESS        M=   1/12 mu=       4/385 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+    single swap 12->124                status=open     route=Q-WITNESS        M=   1/12 mu=   426/35035 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+    single swap 12->152                status=open     route=Q-WITNESS        M=   1/12 mu=11549/1065064 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+    single swap 12->166                status=open     route=Q-WITNESS        M=   1/12 mu= 4981/528710 closed=(6,0) open=(12,0) topes=6  qdef=5  apgw_cycle=False
+    single swap 12->54                 status=open     route=Q-WITNESS        M=   1/12 mu=   426/35035 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+    single swap 13->111                status=open     route=Q-WITNESS        M=   1/13 mu=30827/1025640 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 13->125                status=open     route=Q-WITNESS        M=   1/13 mu=66427/2425500 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 13->139                status=open     route=Q-WITNESS        M=   1/13 mu=88507/2996840 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 13->153                status=open     route=Q-WITNESS        M=   1/13 mu=18925/659736 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 13->167                status=open     route=Q-WITNESS        M=   1/13 mu=92669/2945880 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 13->27                 status=open     route=Q-WITNESS        M=   1/13 mu=13691/582120 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 13->55                 status=open     route=Q-WITNESS        M=   1/13 mu= 4937/194040 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 13->83                 status=open     route=Q-WITNESS        M=   1/13 mu=460507/16105320 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 13->97                 status=open     route=Q-WITNESS        M=   1/13 mu=475529/18821880 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    two drop(11, 12)->add(25, 26)      status=open     route=Q-WITNESS        M=   1/11 mu=24181/382200 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    two drop(11, 13)->add(25, 27)      status=open     route=Q-WITNESS        M=   1/11 mu=  1021/13230 closed=(20,0) open=(26,0) topes=20 qdef=19 apgw_cycle=False
+    two drop(12, 13)->add(26, 27)      status=open     route=Q-WITNESS        M=   1/12 mu=  1237/70070 closed=(4,0) open=(12,0) topes=4  qdef=3  apgw_cycle=False
+  residue_mixed_status_fiber[1] size=11 status={'boundary': 1, 'open': 10} routes={'BOUNDARY-AP-GW': 1, 'COVERING-MOMENT': 2, 'Q-WITNESS': 8}
+    GW 12->24                          status=boundary route=BOUNDARY-AP-GW   M=   1/14 mu=           0 closed=(1,1) open=(6,0) topes=0  qdef=1  apgw_cycle=True
+    floor-odd GW iso impostor          status=open     route=COVERING-MOMENT  M=   6/73 mu= 6667/630630 closed=(8,0) open=(14,0) topes=8  qdef=7  apgw_cycle=False
+    single swap 12->108                status=open     route=COVERING-MOMENT  M=  9/113 mu= 6497/945945 closed=(8,0) open=(14,0) topes=8  qdef=7  apgw_cycle=False
+    single swap 12->122                status=open     route=Q-WITNESS        M=   1/12 mu=   236/23485 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+    single swap 12->150                status=open     route=Q-WITNESS        M=   1/12 mu=   426/35035 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+    single swap 12->178                status=open     route=Q-WITNESS        M=   1/12 mu= 5363/566930 closed=(6,0) open=(12,0) topes=6  qdef=5  apgw_cycle=False
+    single swap 12->38                 status=open     route=Q-WITNESS        M=   1/12 mu=   426/35035 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+    single swap 12->52                 status=open     route=Q-WITNESS        M=   1/12 mu=   426/35035 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+    single swap 12->94                 status=open     route=Q-WITNESS        M=   1/12 mu=   278/29939 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+    two drop(11, 12)->add(24, 25)      status=open     route=Q-WITNESS        M=   1/11 mu=  1619/29400 closed=(10,0) open=(16,0) topes=10 qdef=9  apgw_cycle=False
+    two drop(12, 13)->add(24, 27)      status=open     route=Q-WITNESS        M=   2/25 mu=  1531/52920 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+
+[2] Coarse ET+unit route-mixed fibers
+  fibers=21702 mixed_status=0 mixed_route=15 max_route_mixed=4
+  aggregate_status={'open': 38}
+  aggregate_routes={'COVERING-MOMENT': 15, 'Q-WITNESS': 23}
+  open_with_closed_beta1=0 open_min_safe_topes=4
+  topology_classes={(20, 0, 24, 0, 20, 19): 3, (10, 0, 14, 0, 10, 9): 1, (18, 0, 22, 0, 18, 17): 1, (12, 0, 16, 0, 12, 11): 9, (20, 0, 26, 0, 20, 19): 1, (8, 0, 14, 0, 8, 7): 4, (6, 0, 12, 0, 6, 5): 1, (4, 0, 10, 0, 4, 3): 2, (20, 0, 20, 0, 20, 19): 1, (12, 0, 12, 0, 12, 11): 2, (14, 0, 14, 0, 14, 13): 2, (10, 0, 16, 0, 10, 9): 2, (12, 0, 18, 0, 12, 11): 3, (6, 0, 10, 0, 6, 5): 1, (22, 0, 28, 0, 22, 21): 1, (16, 0, 22, 0, 16, 15): 1, (14, 0, 20, 0, 14, 13): 1, (8, 0, 8, 0, 8, 7): 2}
+  coarse_route_mixed_fiber[0] size=4 status={'open': 4} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 3} topology_classes={(20, 0, 24, 0, 20, 19): 1, (10, 0, 14, 0, 10, 9): 1, (18, 0, 22, 0, 18, 17): 1, (12, 0, 16, 0, 12, 11): 1}
+    single swap 11->99                 status=open     route=COVERING-MOMENT  M=   3/34 mu=119789/2522520 closed=(20,0) open=(24,0) topes=20 qdef=19 apgw_cycle=False
+    single swap 11->15                 status=open     route=Q-WITNESS        M=   1/11 mu=  4187/76440 closed=(10,0) open=(14,0) topes=10 qdef=9  apgw_cycle=False
+    single swap 11->155                status=open     route=Q-WITNESS        M=   1/11 mu=129251/2369640 closed=(18,0) open=(22,0) topes=18 qdef=17 apgw_cycle=False
+    single swap 11->71                 status=open     route=Q-WITNESS        M=   1/11 mu=148229/2713620 closed=(12,0) open=(16,0) topes=12 qdef=11 apgw_cycle=False
+  coarse_route_mixed_fiber[1] size=4 status={'open': 4} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 3} topology_classes={(20, 0, 26, 0, 20, 19): 1, (12, 0, 16, 0, 12, 11): 3}
+    single swap 13->143                status=open     route=COVERING-MOMENT  M= 11/144 mu= 4307/194040 closed=(20,0) open=(26,0) topes=20 qdef=19 apgw_cycle=False
+    single swap 13->115                status=open     route=Q-WITNESS        M=   1/13 mu=13469/405720 closed=(12,0) open=(16,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 13->31                 status=open     route=Q-WITNESS        M=   1/13 mu=194039/6015240 closed=(12,0) open=(16,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 13->59                 status=open     route=Q-WITNESS        M=   1/13 mu=53509/1635480 closed=(12,0) open=(16,0) topes=12 qdef=11 apgw_cycle=False
+  coarse_route_mixed_fiber[2] size=3 status={'open': 3} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2} topology_classes={(8, 0, 14, 0, 8, 7): 1, (6, 0, 12, 0, 6, 5): 1, (4, 0, 10, 0, 4, 3): 1}
+    single swap 10->180                status=open     route=COVERING-MOMENT  M= 18/187 mu= 6599/315315 closed=(8,0) open=(14,0) topes=8  qdef=7  apgw_cycle=False
+    single swap 10->152                status=open     route=Q-WITNESS        M=   1/10 mu=  1103/52668 closed=(6,0) open=(12,0) topes=6  qdef=5  apgw_cycle=False
+    single swap 10->26                 status=open     route=Q-WITNESS        M=   1/10 mu=  1520/63063 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+  coarse_route_mixed_fiber[3] size=3 status={'open': 3} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2} topology_classes={(20, 0, 20, 0, 20, 19): 1, (12, 0, 12, 0, 12, 11): 1, (14, 0, 14, 0, 14, 13): 1}
+    single swap 11->154                status=open     route=COVERING-MOMENT  M= 14/157 mu=  3953/76440 closed=(20,0) open=(20,0) topes=20 qdef=19 apgw_cycle=False
+    single swap 11->70                 status=open     route=Q-WITNESS        M=   1/11 mu=   587/10920 closed=(12,0) open=(12,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 11->98                 status=open     route=Q-WITNESS        M=   1/11 mu=28451/535080 closed=(14,0) open=(14,0) topes=14 qdef=13 apgw_cycle=False
+  coarse_route_mixed_fiber[4] size=3 status={'open': 3} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2} topology_classes={(10, 0, 16, 0, 10, 9): 1, (12, 0, 18, 0, 12, 11): 1, (4, 0, 10, 0, 4, 3): 1}
+    single swap 8->152                 status=open     route=COVERING-MOMENT  M= 19/159 mu=63191/1597596 closed=(10,0) open=(16,0) topes=10 qdef=9  apgw_cycle=False
+    single swap 8->180                 status=open     route=Q-WITNESS        M=    1/8 mu=12248/315315 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 8->26                  status=open     route=Q-WITNESS        M=    1/8 mu=   950/21021 closed=(4,0) open=(10,0) topes=4  qdef=3  apgw_cycle=False
+  coarse_route_mixed_fiber[5] size=3 status={'open': 3} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2} topology_classes={(12, 0, 16, 0, 12, 11): 2, (6, 0, 10, 0, 6, 5): 1}
+    single swap 9->99                  status=open     route=COVERING-MOMENT  M= 11/104 mu= 8363/168168 closed=(12,0) open=(16,0) topes=12 qdef=11 apgw_cycle=False
+    single swap 9->15                  status=open     route=Q-WITNESS        M=    1/9 mu=  3273/56056 closed=(6,0) open=(10,0) topes=6  qdef=5  apgw_cycle=False
+    single swap 9->155                 status=open     route=Q-WITNESS        M=    1/9 mu=15907/310310 closed=(12,0) open=(16,0) topes=12 qdef=11 apgw_cycle=False
+  coarse_route_mixed_fiber[6] size=2 status={'open': 2} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} topology_classes={(8, 0, 14, 0, 8, 7): 1, (12, 0, 18, 0, 12, 11): 1}
+    magnitude liar 12->96              status=open     route=COVERING-MOMENT  M=  8/101 mu= 5219/840840 closed=(8,0) open=(14,0) topes=8  qdef=7  apgw_cycle=False
+    single swap 11->123                status=open     route=Q-WITNESS        M=   1/11 mu=39527/783510 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+  coarse_route_mixed_fiber[7] size=2 status={'open': 2} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} topology_classes={(20, 0, 24, 0, 20, 19): 2}
+    single swap 11->121                status=open     route=COVERING-MOMENT  M= 11/124 mu=463493/9249240 closed=(20,0) open=(24,0) topes=20 qdef=19 apgw_cycle=False
+    single swap 11->163                status=open     route=Q-WITNESS        M=   1/11 mu=662279/12459720 closed=(20,0) open=(24,0) topes=20 qdef=19 apgw_cycle=False
+  coarse_route_mixed_fiber[8] size=2 status={'open': 2} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} topology_classes={(22, 0, 28, 0, 22, 21): 1, (12, 0, 16, 0, 12, 11): 1}
+    single swap 13->156                status=open     route=COVERING-MOMENT  M= 12/157 mu=58301/2522520 closed=(22,0) open=(28,0) topes=22 qdef=21 apgw_cycle=False
+    single swap 13->100                status=open     route=Q-WITNESS        M=   1/13 mu=   701/21560 closed=(12,0) open=(16,0) topes=12 qdef=11 apgw_cycle=False
+  coarse_route_mixed_fiber[9] size=2 status={'open': 2} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} topology_classes={(8, 0, 14, 0, 8, 7): 1, (12, 0, 18, 0, 12, 11): 1}
+    single swap 12->180                status=open     route=COVERING-MOMENT  M=   3/37 mu= 2833/315315 closed=(8,0) open=(14,0) topes=8  qdef=7  apgw_cycle=False
+    single swap 13->27                 status=open     route=Q-WITNESS        M=   1/13 mu=13691/582120 closed=(12,0) open=(18,0) topes=12 qdef=11 apgw_cycle=False
+  coarse_route_mixed_fiber[10] size=2 status={'open': 2} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} topology_classes={(16, 0, 22, 0, 16, 15): 1, (12, 0, 16, 0, 12, 11): 1}
+    single swap 13->117                status=open     route=COVERING-MOMENT  M=  9/118 mu= 4609/229320 closed=(16,0) open=(22,0) topes=16 qdef=15 apgw_cycle=False
+    single swap 13->61                 status=open     route=Q-WITNESS        M=   1/13 mu=130439/3945480 closed=(12,0) open=(16,0) topes=12 qdef=11 apgw_cycle=False
+  coarse_route_mixed_fiber[11] size=2 status={'open': 2} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} topology_classes={(14, 0, 20, 0, 14, 13): 1, (12, 0, 16, 0, 12, 11): 1}
+    single swap 13->104                status=open     route=COVERING-MOMENT  M=  8/105 mu=     37/1960 closed=(14,0) open=(20,0) topes=14 qdef=13 apgw_cycle=False
+    single swap 13->76                 status=open     route=Q-WITNESS        M=   1/13 mu=11143/335160 closed=(12,0) open=(16,0) topes=12 qdef=11 apgw_cycle=False
+  coarse_route_mixed_fiber[12] size=2 status={'open': 2} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} topology_classes={(8, 0, 8, 0, 8, 7): 1, (12, 0, 12, 0, 12, 11): 1}
+    single swap 8->56                  status=open     route=COVERING-MOMENT  M=    1/9 mu=  1471/42042 closed=(8,0) open=(8,0) topes=8  qdef=7  apgw_cycle=False
+    single swap 8->140                 status=open     route=Q-WITNESS        M=    1/8 mu=   556/15015 closed=(12,0) open=(12,0) topes=12 qdef=11 apgw_cycle=False
+  coarse_route_mixed_fiber[13] size=2 status={'open': 2} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} topology_classes={(8, 0, 14, 0, 8, 7): 1, (10, 0, 16, 0, 10, 9): 1}
+    single swap 8->24                  status=open     route=COVERING-MOMENT  M=   3/31 mu=   899/42042 closed=(8,0) open=(14,0) topes=8  qdef=7  apgw_cycle=False
+    single swap 8->150                 status=open     route=Q-WITNESS        M=    1/8 mu=20747/525525 closed=(10,0) open=(16,0) topes=10 qdef=9  apgw_cycle=False
+  coarse_route_mixed_fiber[14] size=2 status={'open': 2} routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} topology_classes={(8, 0, 8, 0, 8, 7): 1, (14, 0, 14, 0, 14, 13): 1}
+    single swap 10->70                 status=open     route=COVERING-MOMENT  M=   1/11 mu=   718/45045 closed=(8,0) open=(8,0) topes=8  qdef=7  apgw_cycle=False
+    two drop(10, 13)->add(14, 27)      status=open     route=Q-WITNESS        M=   1/10 mu=29959/582120 closed=(14,0) open=(14,0) topes=14 qdef=13 apgw_cycle=False
+
+[3] Tournament Analysis over proof gates
+  vertices_are=proof gates, not runners
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  score_order=arc_boundary_cycle_gate > coarse_et_unit_status_gate > magnitude_route_splitter > barcode_packet_scheduler > raw_residue_terminal_word
+
+[4] Proof readout
+  1. The residue-terminal quotient has exactly two boundary/open
+     collisions on the tested full bank.  They are AP and GW against
+     open impostors.
+  2. In those collisions, the boundary rows are exactly the AP/GW
+     arc-Cech cycle: closed arc beta=(1,1), open arc beta=(6,0),
+     zero safe topes, and six owner-current sums 0 mod 14.
+  3. Every open cohabitant in those two fibers has closed arc beta1=0
+     and at least four safe topes.  This gives a topology-first
+     separator for equality atoms before arithmetic route labels.
+  4. The coarse ET+unit gate has no boundary/open mixing.  Its 15
+     remaining route-mixed fibers contain 38 packets, all open, all
+     closed beta1=0.  Route mixing here is harmless for the direct
+     LRC predicate and can be scheduled later by magnitude/covering
+     certificates.
+  5. Candidate theorem: primitive zero-open packets must carry the
+     AP/GW arc-boundary cycle, or else the arc topology emits positive
+     safe topes and the coarse ET+unit gate is allowed to forget the
+     exact route while preserving status.

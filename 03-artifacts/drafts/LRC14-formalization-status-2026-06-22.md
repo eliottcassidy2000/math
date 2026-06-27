@@ -7,6 +7,59 @@ This is the authoritative, machine-verified status of the LRC(14) Lean proof.
 Everything below the line "VERIFIED" was confirmed by `#print axioms` / `lake build`
 on the current `origin/main`, not asserted.
 
+**2026-06-26 targeted update (Codex):** `TournamentH7.LRCMomentDual` now
+target-builds with `lake build TournamentH7.LRCMomentDual`; its theorem
+`TournamentH7.MomentDual.p0_le_Ly` prints only
+`[propext, Classical.choice, Quot.sound]`.  This verifies the THM-534
+moment-LP dual reduction
+`(slowμ (coverSet E)).toReal <= L_y(E,g)` from pointwise dual feasibility
+`g(n) >= 1[n=0]` for `n <= 6`.  It closes the integral-monotonicity wrapper;
+the remaining p0-route work is now exactly the certificate/extremality bridge
+which proves a feasible dual has `L_y(E,g) <= cap - delta` in the relevant
+shape family.
+
+**2026-06-27 targeted update (Codex S259):**
+`TournamentH7.LRCObserverGluingLedger` now target-builds with
+`lake build TournamentH7.LRCObserverGluingLedger`.  It formalizes the current
+observer-gluing frontier after S258: observer chart names, legal overlap
+discharge modes, destroyed-coordinate certificates, direct-arc
+denominator-net numerics, pair-scissors signatures, coarse mod-14 winding
+status, and `ObserverGluingCertificate`.  Its theorem
+`LonelyRunner.LRC14.lrc14_from_observer_gluing_coverage` proves that early
+gates plus proof-bearing observer-gluing certificates imply `LRC14Statement`.
+This does not discharge the missing coverage theorem; it names the current
+producer target `ObserverGluingCoverage`.  The module is conservative over
+`LRCFiniteAddressBranchClosure` via
+`observerGluingCoverage_of_cutting_edge`, and it formalizes the guardrail
+`coarseWinding_degenerate_not_terminal`: antipodal-tie coarse mod-14 winding
+data is not a terminal proof carrier without fine-scale sidecars or an
+independent discharge.
+
+**2026-06-27 follow-up update (Codex):** `TournamentH7.LRCBleedingEdgeFrontier`
+now target-builds and is root-imported.  It is a conservative wrapper, not a
+new proof of LRC14: `BleedingEdgeFrontierPacket v` contains the existing
+proof-bearing `FiniteAddressBranchPacket v` plus observer-chart,
+equivalence-triad, polynomial witness-route, Pascal pair-mass, and
+moment-degree sidecars.  The new theorem
+`lrc14_from_bleeding_edge_frontier_coverage :
+BleedingEdgeFrontierCoverage -> LRC14Statement` is sorry-free because it
+delegates soundness to the embedded finite-address packet's terminal
+`Mreach >= 1/14` certificate.  The root `TournamentH7` target and
+`TournamentH7.Verify` both build after the import; the saved audit transcript
+is `05-knowledge/results/lrc14_bleeding_edge_frontier_lean_codex_20260627.out`.
+
+This formalizes the current "bleeding edge" without overclaiming the missing
+coverage theorem.  The packet now has Lean names for the creative invariants
+that should be tested next: observer charts as proof vertices; the
+equidistribution/equinumerosity/equidecomposability triad; the row-14
+pair-mass checksum `91,1001,2002,3003,4004`; the S258 direct-arc debt sample
+`860` components and largest arc `1/82320`; and the S31ag asymmetry that the
+k=10 cap RHS is degree-2/pairwise while the cover-bound extremality LHS needs a
+degree-3 certificate.  The later HYP-3099 tournament-proof-engine verdict fits
+this packet shape: cap optimality should be carried as bounded finite
+local-minima debt, since the improvement tournament is non-transitive, not as a
+bare exchange/greedy invariant.
+
 ---
 
 ## 1. The headline theorem (VERIFIED sorry-free) — TWO viable routes
@@ -82,6 +135,13 @@ specific node (`hA` spreading, verified / or `hp0cap`, holds) plus the `nuConsec
   small-cardinality vanishing, monotonicity, and the decorrelation-reduction
   wrapper for hp0cap.  KPS S31b wired `LRCFourteenSkeleton.p0` to this
   definition, so p0-route hypotheses now refer to the actual `coverSet` event.
+- `LRCMomentDual` — THM-534 moment-LP dual wrapper for the concrete cover atom:
+  if `g(n) >= 1[n=0]` for every possible miss count `n <= 6`, then
+  `(slowμ(coverSet E)).toReal <= ∫ x, g(missCount E x) dslowμ`.  Codex
+  2026-06-26 target-builds this standalone module and verifies
+  `p0_le_Ly` with no `sorryAx`.  The next formal object should be an exact
+  rational dual-certificate interface that supplies feasibility and the
+  family-specific `L_y <= cap - delta` bound.
 - `LRCArcComplexity` — finite support lemma for the THM-546/HYP-2840
   arc-complexity sharpening: pairwise disjoint exactly-one-miss cell families
   subordinate to a common breakpoint partition have total occupied count at

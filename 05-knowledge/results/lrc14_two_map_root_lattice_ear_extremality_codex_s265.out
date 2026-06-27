@@ -1,0 +1,183 @@
+====================================================================================================
+MAP A: ROOT-CURVE EXTREMALITY TOURNAMENT
+====================================================================================================
+axes=predicate, curve, zeros, cumulants, extremality, transfer, computable, proof_exit
+tie_path=root_curve_zero_locus > Lee_Yang_zero_free_region > PGF_discriminant_break > miss_count_PGF_root_stratum > phi4_quartic_cumulant_stabilizer > tournament_Iomega_root_spectrum > full_PGF_coefficients > fugacity_rank_curve > single_value_p0 > raw_scalar_rank
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 7: 3, 9: 1}
+scores={'root_curve_zero_locus': 9, 'Lee_Yang_zero_free_region': 7, 'PGF_discriminant_break': 7, 'tournament_Iomega_root_spectrum': 7, 'miss_count_PGF_root_stratum': 5, 'phi4_quartic_cumulant_stabilizer': 4, 'full_PGF_coefficients': 3, 'fugacity_rank_curve': 2, 'single_value_p0': 1, 'raw_scalar_rank': 0}
+directed_3cycles=1
+SCCs=[['raw_scalar_rank'], ['single_value_p0'], ['fugacity_rank_curve'], ['full_PGF_coefficients'], ['phi4_quartic_cumulant_stabilizer'], ['miss_count_PGF_root_stratum'], ['Lee_Yang_zero_free_region', 'PGF_discriminant_break', 'tournament_Iomega_root_spectrum'], ['root_curve_zero_locus']]
+Hamiltonian_path_count=3
+selected_retention_path=root_curve_zero_locus > Lee_Yang_zero_free_region > PGF_discriminant_break > tournament_Iomega_root_spectrum > miss_count_PGF_root_stratum > phi4_quartic_cumulant_stabilizer > full_PGF_coefficients > fugacity_rank_curve > single_value_p0 > raw_scalar_rank
+
+vertex ledger:
+- root_curve_zero_locus
+  preserves: whole fugacity curve and zero geometry
+  destroys: direct interval topology unless packet sidecars are attached
+  next_signal: Lee-Yang zero-free region and discriminant boundary
+- Lee_Yang_zero_free_region
+  preserves: coverage extremality as absence of dangerous roots near the LRC evaluation
+  destroys: coefficient anatomy away from the certified region
+  next_signal: interval-certified zero exclusion for bounded banks
+- PGF_discriminant_break
+  preserves: root-collision transition between extremal regimes
+  destroys: why a collision happens unless paired with sidecars
+  next_signal: track k=8/k=9 break as discriminant sign crossing
+- miss_count_PGF_root_stratum
+  preserves: sector correlation and real-root count stratum
+  destroys: full coefficient source without q_t ledger
+  next_signal: join #real roots with exchange traps and gK8 bins
+- phi4_quartic_cumulant_stabilizer
+  preserves: fourth-moment stabilization and tail penalty
+  destroys: exact packet family unless tied to row labels
+  next_signal: measure quartic cumulant against boundary_mass_charge
+- tournament_Iomega_root_spectrum
+  preserves: parallel tournament hard-core gas root spectrum
+  destroys: LRC sector PGF semantics
+  next_signal: compare zero arcs of G_N and I(Omega,x)
+- full_PGF_coefficients
+  preserves: all q_t bins and moments
+  destroys: root geometry and phase-boundary signal
+  next_signal: compute roots, log-concavity, and nearest-zero distance
+- fugacity_rank_curve
+  preserves: rank changes as z moves from LRC to tournament-like fugacity
+  destroys: root mechanism unless zeros are attached
+  next_signal: rank-crossing table for representative packet families
+- single_value_p0
+  preserves: coverage value at z=0
+  destroys: all curve, root, and collision data
+  next_signal: use only with root-stratum or coefficient sidecar
+- raw_scalar_rank
+  preserves: cheap ordering
+  destroys: mechanism, sidecar legality, and proof exits
+  next_signal: demote to scout unless quotient is certified
+
+sample edge votes:
+  root_curve_zero_locus -> Lee_Yang_zero_free_region by 3:0
+  root_curve_zero_locus -> PGF_discriminant_break by 4:1
+  root_curve_zero_locus -> miss_count_PGF_root_stratum by 5:1
+  root_curve_zero_locus -> phi4_quartic_cumulant_stabilizer by 6:1
+  root_curve_zero_locus -> tournament_Iomega_root_spectrum by 3:1
+  root_curve_zero_locus -> full_PGF_coefficients by 6:1
+  root_curve_zero_locus -> fugacity_rank_curve by 5:0
+  root_curve_zero_locus -> single_value_p0 by 7:1
+  root_curve_zero_locus -> raw_scalar_rank by 7:1
+  Lee_Yang_zero_free_region -> PGF_discriminant_break by 2:1
+  Lee_Yang_zero_free_region -> miss_count_PGF_root_stratum by 3:1
+  Lee_Yang_zero_free_region -> phi4_quartic_cumulant_stabilizer by 5:2
+  tournament_Iomega_root_spectrum -> Lee_Yang_zero_free_region by 4:3
+  Lee_Yang_zero_free_region -> full_PGF_coefficients by 5:2
+
+====================================================================================================
+MAP B: MEMORY-LATTICE-EAR CERTIFICATE TOURNAMENT
+====================================================================================================
+axes=predicate, compression, lattice, ears, parity, quotient, computable, proof_exit
+tie_path=packet_sheaf_legal_exit > first_obstruction_cocycle > Savitch_midpoint_certificate > Bravais_shape_tensor > successive_minima_covolume > relation_lattice_basis > strong_ear_spine > odd_ear_parity_spine > nested_ear_series_parallel_spine > raw_runner_vertices
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+scores={'packet_sheaf_legal_exit': 9, 'first_obstruction_cocycle': 8, 'Savitch_midpoint_certificate': 7, 'Bravais_shape_tensor': 6, 'strong_ear_spine': 5, 'successive_minima_covolume': 4, 'odd_ear_parity_spine': 3, 'nested_ear_series_parallel_spine': 2, 'relation_lattice_basis': 1, 'raw_runner_vertices': 0}
+directed_3cycles=0
+SCCs=[['raw_runner_vertices'], ['relation_lattice_basis'], ['nested_ear_series_parallel_spine'], ['odd_ear_parity_spine'], ['successive_minima_covolume'], ['strong_ear_spine'], ['Bravais_shape_tensor'], ['Savitch_midpoint_certificate'], ['first_obstruction_cocycle'], ['packet_sheaf_legal_exit']]
+Hamiltonian_path_count=1
+selected_retention_path=packet_sheaf_legal_exit > first_obstruction_cocycle > Savitch_midpoint_certificate > Bravais_shape_tensor > strong_ear_spine > successive_minima_covolume > odd_ear_parity_spine > nested_ear_series_parallel_spine > relation_lattice_basis > raw_runner_vertices
+
+vertex ledger:
+- packet_sheaf_legal_exit
+  preserves: the LRC predicate with named reconstruction, annihilation, descent, or debt
+  destroys: nothing essential if all sidecars are populated
+  next_signal: use as the target interface for root/lattice/ear signals
+- first_obstruction_cocycle
+  preserves: the first hidden payload over a visible quotient fiber
+  destroys: direct value if the obstruction is only diagnostic
+  next_signal: generate or kill each root/lattice/ear syndrome
+- Savitch_midpoint_certificate
+  preserves: recursive reachability/compression with named midpoint sidecars
+  destroys: metric detail inside each subproblem
+  next_signal: bounded-depth witness recursion for observer charts
+- Bravais_shape_tensor
+  preserves: relation-lattice shape beyond shortest vector or covolume
+  destroys: ear/order certificates unless attached
+  next_signal: record Gram shape and automorphism chamber of relation lattice
+- successive_minima_covolume
+  preserves: Minkowski-style volume pressure with rank/covolume/minima
+  destroys: root curve and parity ear legality
+  next_signal: tie HYP-3062 fields to extremal rows
+- relation_lattice_basis
+  preserves: integer relations, low-height walls, signed tails
+  destroys: shape class and proof-certificate order
+  next_signal: add Bravais-shape and wall-deletion fields
+- strong_ear_spine
+  preserves: strong-connectivity certificates by labelled ears
+  destroys: lattice height and root curve unless coupled
+  next_signal: use ears as certificates for proof-obligation digraphs
+- odd_ear_parity_spine
+  preserves: factor-critical style odd parity certificate
+  destroys: metric relation-lattice geometry
+  next_signal: test parity of residual proof-obligation ears
+- nested_ear_series_parallel_spine
+  preserves: nested reducibility and no-crossing proof grammar
+  destroys: non-nested obstruction payload
+  next_signal: separate nested-refinement O2 from K33 cross-handoff O3
+- raw_runner_vertices
+  preserves: labelled speeds before quotient
+  destroys: proof obligation structure when used alone
+  next_signal: only use after a preserved predicate is declared
+
+sample edge votes:
+  packet_sheaf_legal_exit -> first_obstruction_cocycle by 1:0
+  packet_sheaf_legal_exit -> Savitch_midpoint_certificate by 4:0
+  packet_sheaf_legal_exit -> Bravais_shape_tensor by 5:1
+  packet_sheaf_legal_exit -> successive_minima_covolume by 6:2
+  packet_sheaf_legal_exit -> relation_lattice_basis by 6:2
+  packet_sheaf_legal_exit -> strong_ear_spine by 6:2
+  packet_sheaf_legal_exit -> odd_ear_parity_spine by 5:2
+  packet_sheaf_legal_exit -> nested_ear_series_parallel_spine by 5:1
+  packet_sheaf_legal_exit -> raw_runner_vertices by 7:1
+  first_obstruction_cocycle -> Savitch_midpoint_certificate by 4:1
+  first_obstruction_cocycle -> Bravais_shape_tensor by 4:1
+  first_obstruction_cocycle -> successive_minima_covolume by 5:2
+  first_obstruction_cocycle -> relation_lattice_basis by 5:2
+  first_obstruction_cocycle -> strong_ear_spine by 5:2
+
+====================================================================================================
+TWO-MAP ALIGNMENT TABLE
+====================================================================================================
+- single_value_p0 -> root_curve_zero_locus
+  paired with: raw_runner_vertices -> packet_sheaf_legal_exit
+  readout: the single value is not the object; the object is the curve plus the legal-forgetting ledger
+- PGF_discriminant_break
+  paired with: strong_ear_spine / nested_ear_series_parallel_spine
+  readout: a root collision should name the structural ear where the proof graph changes
+- Lee_Yang_zero_free_region
+  paired with: Savitch_midpoint_certificate
+  readout: zero exclusion can be certified recursively if each midpoint keeps the missing sidecar
+- phi4_quartic_cumulant_stabilizer
+  paired with: Bravais_shape_tensor / successive_minima_covolume
+  readout: quartic stabilization is a fourth-moment face of the relation-lattice shape, not only a scalar tail
+- tournament_Iomega_root_spectrum
+  paired with: odd_ear_parity_spine
+  readout: tournament root asymmetry and odd-ear parity both measure how cycle-packing avoids factorization
+- miss_count_PGF_root_stratum
+  paired with: first_obstruction_cocycle
+  readout: near-real roots are first-obstruction alarms: attach the payload before promoting the quotient
+
+new signals:
+  - PGF_zero_locus_signature
+  - nearest_zero_to_LRC_evaluation
+  - Lee_Yang_confinement_margin
+  - PGF_discriminant_break_index
+  - quartic_cumulant_stabilizer
+  - root_curve_vs_Iomega_arc_distance
+  - Savitch_midpoint_sidecar_depth
+  - Bravais_relation_shape_class
+  - successive_minima_anisotropy
+  - ear_certificate_type
+  - odd_ear_parity_debt
+  - nested_ear_crossing_defect
+  - root_lattice_ear_resonance_portfolio
+
+assumption challenge:
+  considered vertices: runners, gaps, sections, wall events, residues, cover arcs,
+  Fourier modes, PGF roots, relation lattices, Bravais cells, ears, obstruction
+  syndromes, and proof obligations.
+  selected vertices: signal families / proof carriers.  The quotient preserves
+  the named proof predicate only after the destroyed coordinate is recorded.

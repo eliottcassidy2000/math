@@ -1,0 +1,53 @@
+==============================================================================
+A. REFRAMING CHECK: every danger event has meas(D_s)=1/7 (exact)
+==============================================================================
+   meas(D_s)=1/7 for all sampled speeds: CONFIRMED
+==============================================================================
+B. Q-BLOCK Lee-Yang clearance vs r (apexes 14m), and union floor 1-r/7
+==============================================================================
+    r  meas(Q-lonely)     1-r/7  min|1-zeta|  Lee-Yang
+    1         0.85714   0.85714       7.0000       YES
+    2         0.73377   0.71429       5.7699       YES
+    3         0.67308   0.57143       3.7796       YES
+    4         0.56943   0.42857       2.7611       YES
+    5         0.47413   0.28571       2.3196       YES
+    6         0.40525   0.14286       1.7417       YES
+==============================================================================
+C. R-BLOCK Lee-Yang FAILS for |R|>=7 (the overcrowded big part)
+==============================================================================
+    |R|  meas(R-safe)  min|1-zeta|  Lee-Yang
+     12       0.01216       0.6467        NO
+     11       0.08382       0.7144        NO
+     10       0.09033       0.7812        NO
+      8       0.24399       0.9918        NO
+      7       0.38571       1.1448       YES
+==============================================================================
+D. COMONOTONE control: Lee-Yang NOT implied by k*p<1 (extreme {0:1-1/k,k:1/k}, kp=1)
+==============================================================================
+    k  min|1-zeta|  Lee-Yang
+    2       1.4142       YES
+    3       1.1522       YES
+    4       0.9332        NO
+    5       0.7785        NO
+    6       0.6671        NO
+    7       0.5839        NO
+    8       0.5196        NO
+==============================================================================
+E. JOINT floor R' (documented + synthetic r=2..6) -- equidistribution regime
+==============================================================================
+   tag          measR    measQ     both  R prime  indep both
+   r=1 doc    0.01216  0.85714  0.00536   0.5140     0.01042
+   r=2 doc    0.08382  0.73377  0.05692   0.9254     0.06150
+   r=3        0.09033  0.67308  0.05344   0.8789     0.06080
+   r=4        0.21480  0.56943  0.11917   0.9743     0.12231
+   r=5        0.24399  0.47413  0.10310   0.8913     0.11568
+   r=6        0.38571  0.40525  0.16661   1.0659     0.15631
+==============================================================================
+VERDICT
+==============================================================================
+   Lee-Yang/Asano CLEANLY proves the Q-block (apex sub-LRC, r<=6) factor positivity
+   (zero-free polydisk radius >=12; also union bound >= 1-r/7).  The R-block (>=7 speeds)
+   provably FAILS single-variable Lee-Yang, and the joint bidisk is NOT zero-free, so the
+   naive Asano-contraction route CANNOT certify the joint R'>=c floor.  This rigorously
+   matches and explains the documented 'Bonferroni fails / quasi-independence required'
+   finding (HYP-3121).  The joint floor is genuinely an equidistribution statement.

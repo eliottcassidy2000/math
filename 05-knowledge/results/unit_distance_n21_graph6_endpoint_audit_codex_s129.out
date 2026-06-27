@@ -1,0 +1,56 @@
+﻿S129 EXACT n=21 GRAPH6 ENDPOINT-UNIVERSALITY AUDIT
+====================================================
+
+Question: can the remaining u(22) proof be finished by showing that
+57-edge n=21 cores lose their unit Hamiltonian spine under one-vertex
+extension?  The graph-only answer below is no: the exact cores are
+endpoint-universal.
+
+core | endpoints | endpoint-pair lower | deletions traceable | ears | all incident | exact ears | degree hist | endpoint-options hist | branch cuts
+--- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+1 | 21/21 | 57 | 21/21 | 21/21 | 21/21 | 0 | {5: 18, 8: 3} | {5: 18, 8: 3} | 0, maxcomp=1
+2 | 21/21 | 57 | 21/21 | 21/21 | 21/21 | 1 | {3: 1, 4: 2, 5: 8, 6: 7, 7: 3} | {3: 1, 4: 2, 5: 8, 6: 7, 7: 3} | 0, maxcomp=1
+3 | 21/21 | 57 | 21/21 | 21/21 | 21/21 | 1 | {3: 1, 4: 2, 5: 9, 6: 5, 7: 4} | {3: 1, 4: 2, 5: 9, 6: 5, 7: 4} | 0, maxcomp=1
+4 | 21/21 | 57 | 21/21 | 21/21 | 21/21 | 1 | {3: 1, 4: 2, 5: 8, 6: 7, 7: 3} | {3: 1, 4: 2, 5: 8, 6: 7, 7: 3} | 0, maxcomp=1
+5 | 21/21 | 57 | 21/21 | 21/21 | 21/21 | 1 | {3: 1, 4: 3, 5: 6, 6: 8, 7: 3} | {3: 1, 4: 3, 5: 6, 6: 8, 7: 3} | 0, maxcomp=1
+
+GRAPH-ONLY EXTENSION READOUT
+----------------------------
+core 1: degree-4 neighbor sets endpoint-compatible 5985/5985; degree-5 sets 20349/20349
+core 2: degree-4 neighbor sets endpoint-compatible 5985/5985; degree-5 sets 20349/20349
+core 3: degree-4 neighbor sets endpoint-compatible 5985/5985; degree-5 sets 20349/20349
+core 4: degree-4 neighbor sets endpoint-compatible 5985/5985; degree-5 sets 20349/20349
+core 5: degree-4 neighbor sets endpoint-compatible 5985/5985; degree-5 sets 20349/20349
+
+Interpretation:
+- In all five exact graph6 cores, every vertex can be a Hamiltonian endpoint.
+- For every existing vertex v, every incident edge can serve as the reattachment
+  edge after deleting v; endpoint-options hist equals degree hist.
+- Therefore any positive-degree graph-only one-vertex extension of a 57-edge
+  core remains traceable by attaching the new vertex to a core endpoint.
+- So traceability/unit-spine arguments cannot prove u(22)<=60 by themselves.
+- The proof must forbid a realizable unit-cocyclic degree-4 neighbor set over
+  the five 57-edge cores, or else use the totally-unfaithful obstruction library.
+
+TOURNAMENT ANALYSIS OVER PROOF ROUTES
+Pairwise observable: which route can still affect the u(22)=60/61 bit after endpoint universality?
+Switch/gauge: proof power, geometry retained, n22 specificity, computability, and risk.
+  score=6 unit-cocyclic 4-set geometry
+  score=5 M_L exact extension census
+  score=4 endpoint universality audit
+  score=3 degree-deletion core ledger
+  score=2 totally-unfaithful obstruction library
+  score=1 raw graph traceability
+  score=0 raw edge count
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed_3cycles=0 scc=(1, 1, 1, 1, 1, 1, 1) H=1
+
+ASSUMPTION CHALLENGE
+--------------------
+Alternate vertices considered: graph vertices, deletion ears, endpoint masks,
+4-subsets of core vertices, candidate extension centres, unit-cocyclic sets,
+and totally-unfaithful obstruction packets.  The graph quotient preserves
+traceability and endpoint universality but destroys planar realization and
+circle-centre/cocyclicity constraints.  That destroyed geometry is exactly
+where the remaining u(22) proof has to live.
+

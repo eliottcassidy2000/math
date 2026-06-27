@@ -1,0 +1,80 @@
+S130 LRC14 MUTATED FAREY TOURNAMENT SCOUT
+==============================================================================
+[Assumption challenge]
+  considered vertices: Farey fractions, row families, payload variants, runners,
+    optimum witness scales, and proof obligations.
+  chosen binary relations: mutated-payload order on Farey nodes; proxy-risk order
+    on LRC rows; meta-tournaments on payload variants.
+  preserved predicate: binding-scale closeness to 1/14 via e/(14q).
+  destroyed information: exact safe neighborhoods and wall-state packets.
+
+[Unit-excess Farey child chain above 1/14]
+  p/q = p/(14p-1); q follows q -> q+14, the additive n+2-style lane at apex 14.
+  p  value   q   sum  product  log(q^p)  log(p^q)
+  1    1/13  13    14       13     2.565     0.000
+  2    2/27  27    29       54     6.592    18.715
+  3    3/41  41    44      123    11.141    45.043
+  4    4/55  55    59      220    16.029    76.246
+  5    5/69  69    74      345    21.171   111.051
+  6    6/83  83    89      498    26.513   148.716
+  7    7/97  97   104      679    32.023   188.753
+  8   8/111 111   119      888    37.676   230.818
+
+[Farey-order locality in [1/14,1/13], order 120]
+  vertices: reduced Farey fractions in the interval
+  observable: rank distance of adjacent Farey neighbors after mutated ordering
+  switch/gauge: smaller avg_jump / fewer inversions is better
+  q        nodes= 25 avg_jump=85/8 max_jump= 23 inversions=149
+  sum      nodes= 25 avg_jump=85/8 max_jump= 23 inversions=149
+  product  nodes= 25 avg_jump=85/8 max_jump= 23 inversions=149
+  denpow   nodes= 25 avg_jump=85/8 max_jump= 23 inversions=149
+  numpow   nodes= 25 avg_jump=85/8 max_jump= 22 inversions=148
+
+[LRC14 row-bank proxy analysis: 749 rows]
+  rows: AP/GW anchors, AP single replacements up to 70, and 12m tails
+  true key: M(S)-1/14 = e/(14q)
+  proxy key: e/W(p,q), with W one mutated Farey payload
+  agreement score = pairwise order agreement against true key
+  q        agree=258329 flip=     0 tie=21797 score=538455/560252
+  sum      agree=258329 flip=     0 tie=21797 score=538455/560252
+  product  agree=213778 flip= 43903 tie=22445 score=450001/560252
+      large inversion sep=35/732: swap 1->59 vs swap 12->70
+      large inversion sep=35/732: swap 1->59 vs swap 12->69
+  denpow   agree=170851 flip= 87478 tie=21797 score=363499/560252
+      large inversion sep=145/2501: near-miss 12->36 vs swap 1->59
+      large inversion sep=94/1647: swap 1->59 vs swap 13->26
+  numpow   agree=170890 flip= 87439 tie=21797 score=363577/560252
+      large inversion sep=145/2501: near-miss 12->36 vs swap 1->59
+      large inversion sep=94/1647: swap 1->59 vs swap 13->26
+
+[Selected row readout]
+  row                            M   e    q   sum   prod          q^p          p^q
+  AP                          1/14   0   14    15     14           14            1
+  GW 12->24                   1/14   0   14    15     14           14            1
+  residue-liar 12->26         1/12   2   12    13     12           12            1
+  near-miss 12->36            3/41   1   41    44    123        68921 36472996377170786403
+  swap 10->20                 2/27   1   27    29     54          729    134217728
+
+[Tournament Analysis on payload variants]
+  vertices: q, sum, product, denpow, numpow
+  risk observable: row-bank pairwise order agreement
+  locality observable: inverse Farey-order inversion count
+  tie Hamiltonian path: q -> sum -> product -> denpow -> numpow
+  risk     fingerprint: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1)) c3=0 scc=(1, 1, 1, 1, 1) hp=1
+  locality fingerprint: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1)) c3=0 scc=(1, 1, 1, 1, 1) hp=1
+  majority fingerprint: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1)) c3=0 scc=(1, 1, 1, 1, 1) hp=1
+  majority Hamiltonian order: q > sum > product > numpow > denpow
+
+[Proof readout]
+  The ordinary denominator q is not just a scale; it is the binding-scale label.
+  The sum payload p+q is the least destructive mutation: on the Farey child chain it
+  is exactly linear, and on the row bank it is close to q but still not exact.
+  The product payload p*q is the additive/multiplicative bridge: it remembers both
+  coordinates and echoes the repo's pair-sum/2n-1 shell arithmetic, but it creates
+  more global inversions than sum.
+  The power payloads are useful as magnitude amplifiers for unbounded false positives,
+  not as local proof denominators: they destroy too much Farey adjacency.
+  LRC14 target sharpened by this scout:
+    use q/binding-scale for the theorem; use sum/product as side-channel ledgers;
+    reserve power variants for detecting unbounded magnitude leakage in fixed-rule
+    tournament discriminators such as floor-odd or CF-parity.

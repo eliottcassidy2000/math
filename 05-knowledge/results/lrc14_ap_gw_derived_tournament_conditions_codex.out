@@ -1,0 +1,87 @@
+LRC14 DERIVED AP/GW TOURNAMENT NECESSARY-CONDITION ATLAS
+==============================================================================
+External analogies:
+  Tao-derived multiplicative functions: first coefficients of rigid
+    multiplicative identities over dual-number extensions.
+  Collatz/Farey lower-bound style: a cycle must live in a rational
+    approximant corridor; wrong Farey child means escape from the apex.
+
+[Row diagnostics: AP, GW, and nearby impostors]
+  name                   class q   M      fidx defect_kind             tangent             slots  gate tight
+  AP                     T0   14  1/14      0 zero                    zero                --     -     yes
+  petal 8->16            T1   14  2/23     -5 single_even_dipole      2-tangent           C->A   False no
+  petal 10->20           T2   14  2/27     -1 single_even_dipole      2-tangent           B->C   False no
+  GW 12->24              T3   14  1/14      0 single_even_dipole      2-tangent           A->B   True  yes
+  residue-liar 12->26    T0   12  1/12     -2 zero                    residue-vertical    A->A   -     no
+  Farey child 12->36     T4   14  3/41     -1 single_even_dipole      3-tangent           A->C   -     no
+  odd petal 13->26       T5   14  2/27     -1 other                   2-tangent           -->A   False no
+
+[Even antipodal binder-slot cycle]
+  slots: A={2,12}, B={4,10}, C={6,8}
+  AP has one binder in each slot.  An even tail petal moves one binder.
+  edge  row           M      Farey index  GW no-unit gate
+  C->A   8->16       2/23      -5        False
+  B->C  10->20       2/27      -1        False
+  A->B  12->24       1/14       0        True
+  Only A->B, the 12->24 edge, is tight at denominator 14.
+
+[Kuratowski/Wagner obstruction mediants]
+  Use vertex-per-edge density v/e, so disjoint union takes mediants.
+  mK5+nK33 gives (5m+6n)/(10m+9n).
+  m n  v/e     status
+  0 1  2/3     minimal obstruction atom
+  0 2  2/3     mixture; nonplanar but not new minimal atom
+  0 3  2/3     mixture; nonplanar but not new minimal atom
+  1 0  1/2     minimal obstruction atom
+  1 1  11/19   mixture; nonplanar but not new minimal atom
+  1 2  17/28   mixture; nonplanar but not new minimal atom
+  1 3  23/37   mixture; nonplanar but not new minimal atom
+  2 0  1/2     mixture; nonplanar but not new minimal atom
+  2 1  16/29   mixture; nonplanar but not new minimal atom
+  2 2  11/19   mixture; nonplanar but not new minimal atom
+  2 3  28/47   mixture; nonplanar but not new minimal atom
+  3 0  1/2     mixture; nonplanar but not new minimal atom
+  3 1  7/13    mixture; nonplanar but not new minimal atom
+  3 2  9/16    mixture; nonplanar but not new minimal atom
+  3 3  11/19   mixture; nonplanar but not new minimal atom
+  LRC transfer: mediants mix obstruction packets; they do not by themselves
+  create a new irreducible proof atom unless the labelled tournament class is new.
+
+[Tournament Analysis: derived condition strength]
+  universe: AP single replacements v<=300
+  relation: X -> Y iff X has a smaller pass set; ties by listed order
+  condition pass sizes:
+    q14_core               1770
+    unit_shell             1125
+    odd_skeleton            882
+    literal_unit_binders   1149
+    zsum_max               2988
+    even_dipole_or_zero     882
+    dual_number_tangent       4
+    jacobsthal_gate           2
+    ap_gw_kind                2
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  directed_3cycles=0, incomparable_pairs=12, flips=28
+
+[Convoluted necessary-condition stack for AP/GW-kind tightness]
+  NC0 primitive cardinality: |S|=13 and gcd(S)=1.
+  NC1 q-threshold exactness: q(S)=14, i.e. every q=2..13 is hit but 14 is not.
+  NC2 unit/apex shell: unit residues and residue 7 occur exactly once.
+  NC3 literal binders: the unique pairs in residues (1,13), (3,11), (5,9) sum to 14.
+  NC4 antipodal derivative zero: the total mod-14 antipodal binder count remains 6.
+  NC5 defect support: residue defect from AP is zero or a rank-one even-shell dipole.
+  NC6 dual-number tangent: the nonzero dipole is e_{2v mod 14}-e_v from one tail v.
+  NC7 binder-slot legality: the tangent edge lies in A,B,C with source->target defined by v->2v.
+  NC8 Jacobsthal/GW gate: [14-v,27-2v] contains no integer coprime to v.
+  NC9 Farey tight index: for exact M=p/q, q-14p=0; index -1 is a child/near-miss corridor.
+  NC10 terminal tournament class: the augmented class is the AP class with q=14 or the GW class.
+  NC11 quotient warning: raw tournament T0 also contains residue-liar 12->26, so q is external data.
+  NC12 state-lift target: a bad residual must map to an achieved augmented class, not merely a graph.
+
+[Summit readout]
+  AP is the zero tangent.  GW is the only single dual-number tangent that
+  preserves q=14, the unit binders, the antipodal derivative, and the
+  Jacobsthal no-unit window.  Other petal edges are achieved tournament
+  classes, but they are loose or arithmetically mislabelled.  A proof by
+  tournament isomorphism must therefore use augmented classes:
+    (tournament iso class, q-threshold, Farey index, residue-defect tangent).

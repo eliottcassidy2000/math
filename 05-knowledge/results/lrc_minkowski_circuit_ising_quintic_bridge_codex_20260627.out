@@ -1,0 +1,60 @@
+HYP-3115 Minkowski / circuit / Ising / de Moivre bridge scout
+anchored_bank_rows=1716
+
+Named rows:
+  consec_8: row=(0, 1, 2, 3, 4, 5, 6, 7), p0=0.32721, n_real=0, clearance=0.91189, nearest=1.48858, apex7=4.042, pair_rel=22, minkowski_pressure=1.85934, axis_walls=1, dm_residual=0.63368
+  nearest_root_competitor: row=(0, 2, 4, 6, 7, 8, 10, 12), p0=0.25578, n_real=0, clearance=0.80575, nearest=1.55621, apex7=10.176, pair_rel=13, minkowski_pressure=0.63969, axis_walls=1, dm_residual=0.66183
+  top_p0: row=(0, 1, 2, 3, 4, 5, 6, 7), p0=0.32721, n_real=0, clearance=0.91189, nearest=1.48858, apex7=4.042, pair_rel=22, minkowski_pressure=1.85934, axis_walls=1, dm_residual=0.63368
+
+Minkowski-style relation sidecar:
+  corr(p0, pair_relation_count)=+0.427
+  corr(p0, minkowski_pressure)=+0.407
+  relation_leader row=(0, 1, 2, 3, 4, 5, 6, 7) pair_rel=22 p0=0.32721
+  relation_leader row=(0, 2, 3, 4, 5, 6, 7, 8) pair_rel=19 p0=0.27364
+  relation_leader row=(0, 1, 2, 3, 4, 5, 6, 8) pair_rel=19 p0=0.20833
+  relation_leader row=(0, 2, 3, 4, 5, 6, 7, 9) pair_rel=18 p0=0.12370
+  relation_leader row=(0, 1, 2, 3, 4, 5, 7, 8) pair_rel=18 p0=0.09966
+
+Ising root-stratum graph:
+  one_swap_edges=36036
+  spin_counts={1: 290, -1: 1426}  (+1 means #real=0)
+  same_edges=25952, domain_wall_edges=10084, wall_fraction=0.27983
+  Ising_energy_J1=-15868, magnetization=-1136
+  transition_edges={(-1, -1): 24904, (-1, 1): 4988, (1, -1): 5096, (1, 1): 1048}
+
+Circuit-complexity sidecar:
+  target=max_p0_rows, max_p0=0.32721, target_row=(0, 1, 2, 3, 4, 5, 6, 7)
+  minimal_observed_non_p0_conjunction=['apex7_error<=5']
+  input_literals=1, false_positives=0, false_negatives=0
+  binary_AND_depth=0, unbounded_fanin_AND_depth=1
+  note=This is an observed finite-bank circuit, not a lower bound.
+
+de Moivre derivative-quintic sidecar:
+  corr(p0, -de_moivre_residual)=+0.348
+  dm_leader row=(0, 1, 2, 3, 4, 5, 6, 9) residual=0.43210 p0=0.18810 n_real=2
+  dm_leader row=(0, 1, 3, 4, 5, 6, 7, 8) residual=0.44514 p0=0.07755 n_real=2
+  dm_leader row=(0, 1, 2, 3, 5, 6, 7, 9) residual=0.47265 p0=0.08345 n_real=2
+  dm_leader row=(0, 1, 2, 3, 4, 5, 6, 8) residual=0.50400 p0=0.20833 n_real=2
+  dm_leader row=(0, 2, 3, 4, 5, 6, 7, 9) residual=0.50444 p0=0.12370 n_real=2
+  interpretation=G'(z) is quintic; residual measures distance to
+    translated de Moivre normal form x^5+a*x^3+(a^2/5)*x+b.
+
+Cross-signal correlations:
+  corr(segment_clearance, -Ising_axis_walls)=+0.334
+  corr(pair_relations, -de_moivre_residual)=+0.418
+  corr(n_real, de_moivre_residual)=-0.157
+
+Tournament Analysis:
+  vertices=['root_zero_locus', 'ising_domain_wall_tension', 'minkowski_relation_lattice', 'circuit_depth_sidecar', 'de_moivre_quintic_residual', 'bravais_q_lattice_rank', 'observer_gluing_certificate', 'single_scalar_p0']
+  axes=['preserves_lrc_predicate', 'retains_finite_witness', 'detects_phase_wall', 'certifiable', 'controlled_forgetting', 'computable', 'algebraic_structure', 'lower_bound_signal']
+  score_hist={0: 1, 2: 3, 4: 1, 5: 1, 6: 1, 7: 1}
+  scores={'root_zero_locus': 7, 'ising_domain_wall_tension': 2, 'minkowski_relation_lattice': 6, 'circuit_depth_sidecar': 5, 'de_moivre_quintic_residual': 2, 'bravais_q_lattice_rank': 2, 'observer_gluing_certificate': 4, 'single_scalar_p0': 0}
+  directed_3cycles=1
+  SCCs=[['single_scalar_p0'], ['bravais_q_lattice_rank', 'de_moivre_quintic_residual', 'ising_domain_wall_tension'], ['observer_gluing_certificate'], ['circuit_depth_sidecar'], ['minkowski_relation_lattice'], ['root_zero_locus']]
+  Hamiltonian_path_count=3
+  priority_path=root_zero_locus > minkowski_relation_lattice > circuit_depth_sidecar > observer_gluing_certificate > ising_domain_wall_tension > de_moivre_quintic_residual > bravais_q_lattice_rank > single_scalar_p0
+  assumption_challenge=vertices considered included runners, gaps,
+    relation-lattice vectors, Boolean gates, spin domains, stationary
+    quintic coefficients, PGF roots, Bravais cells, and proof obligations;
+    chosen vertices are proof sidecars, preserving predicate-retention
+    order and destroying raw row identity.

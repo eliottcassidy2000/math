@@ -1,0 +1,77 @@
+=== LRC14 residual topology-exception teeth S207 ===
+source=S199 residual tooth atlas + S200 primitive-period scheduler; single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5
+residual_fibers=15 residual_rows=38
+
+[0] Assumption challenge
+  considered vertices:
+    runners, route labels, residual fibers, topology buckets,
+    safe-component stalks, primitive denominator layers, wall-crossing
+    events, Haar zeta teeth, and proof obligations.
+  chosen vertices:
+    exception repair carriers acting on the two same-topology residual
+    buckets, not runners.
+  preserved LRC predicate:
+    strict-open boundary/open status after the coarse ET+unit gate.
+  destroyed information:
+    exact route labels until an owner-stalk or primitive-period tooth
+    separates the topology exception.
+  challenged assumption:
+    a topology failure need not be a new route family; here it is a
+    two-row owner-strip collar with an independent q<=13 deck split.
+
+[1] Topology exception census
+  topology_exception_fibers=2
+  topology_exception_buckets=2
+  topology_exception_rows=4
+  exception_drop_speeds=[9, 11]
+  all_exception_rows_single_swap=True
+  exception_route_counts={'COVERING-MOMENT': 2, 'Q-WITNESS': 2}
+  exception_status_counts={'open': 4}
+  covering_zero_primitive_deck_2_13=True
+  q_witness_first13_equals_drop_and_q0=True
+  coarse_stalk_splits_all_exceptions=True
+  primitive_deck_2_13_splits_all_exceptions=True
+
+[2] Same-topology buckets
+  exception[05.0] size=2 full_fiber_size=3 topology=(12, 0, 16, 0, 12, 11)
+    full_fiber_routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2} full_fiber_names=('single swap 9->99', 'single swap 9->15', 'single swap 9->155')
+    single swap 9->99        route=COVERING-MOMENT  drop=9  M= 11/104 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6  topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=5/693|owners=('5+',)->('1-', '5+')->('1-',)|h=11/104
+    single swap 9->155       route=Q-WITNESS        drop=9  M=    1/9 q0=9  first13=   9 first14=   9 deck13=(0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0) q14_count=6  topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=6/1085|owners=('1+',)->('1+', '10+', '8-')->('1-',)|h=1/9
+  exception[07.0] size=2 full_fiber_size=2 topology=(20, 0, 24, 0, 20, 19)
+    full_fiber_routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} full_fiber_names=('single swap 11->121', 'single swap 11->163')
+    single swap 11->121      route=COVERING-MOMENT  drop=11 M= 11/124 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6  topo=(20, 0, 24, 0, 20, 19) stalk=open|bars=20|len=5/847|owners=('3+',)->('3+', '9-')->('9-',)|h=11/124
+    single swap 11->163      route=Q-WITNESS        drop=11 M=   1/11 q0=11 first13=  11 first14=  11 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0) q14_count=6  topo=(20, 0, 24, 0, 20, 19) stalk=open|bars=20|len=41/7987|owners=('9+',)->('4+', '7-')->('7-',)|h=1/11
+
+[3] Split audit on exception rows
+  arc_topology_compact           buckets=2  mixed_route=2 max_bucket=2
+  coarse_safe_stalk              buckets=4  mixed_route=0 max_bucket=1
+  exact_safe_stalk               buckets=4  mixed_route=0 max_bucket=1
+  magnitude_cocycle              buckets=4  mixed_route=0 max_bucket=1
+  q_or_covering_certificate      buckets=3  mixed_route=0 max_bucket=2
+  first_primitive_safe_q_2_13    buckets=3  mixed_route=0 max_bucket=2
+  primitive_deck_2_13            buckets=3  mixed_route=0 max_bucket=2
+  route_label_sink               buckets=2  mixed_route=0 max_bucket=2
+
+[4] Tournament Analysis
+  vertices_are=exception repair carriers, not runners
+  observable=exception coverage, route split, nonroute legality, local owner signal, primitive-period alignment, compression, proof cost
+  switch=majority comparison of carrier vectors
+  tie_hamiltonian_path=topology_then_owner_stalk_rule > coarse_safe_stalk > primitive_deck_2_13 > arc_topology_compact > exact_safe_stalk > route_label_sink
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  first_hamiltonian_path=topology_then_owner_stalk_rule > primitive_deck_2_13 > coarse_safe_stalk > exact_safe_stalk > arc_topology_compact > route_label_sink
+  score_order=topology_then_owner_stalk_rule > primitive_deck_2_13 > coarse_safe_stalk > exact_safe_stalk > arc_topology_compact > route_label_sink
+
+[5] Proof readout
+  1. Arc topology fails on exactly two residual same-topology buckets,
+     and the failing rows are four single-swap collars at drops 9 and 11.
+  2. In each collar, the covering row has zero primitive safe mass for
+     q<=13, while the q-witness row has first primitive safe q equal
+     to its dropped speed and its q-witness threshold.
+  3. The coarse largest-safe-component stalk splits both topology
+     exceptions, so the exceptions are owner-strip repairs rather than
+     new boundary/open or route-label debt.
+  4. Candidate lemma: if a post-status residual coarse ET+unit fiber is
+     not split by compact arc topology, then it is an owner-stalk collar
+     whose primitive q<=13 deck also splits the Q-witness/covering route.

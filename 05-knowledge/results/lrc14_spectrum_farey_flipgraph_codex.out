@@ -1,0 +1,101 @@
+LRC14 SPECTRUM AS FAREY-LABELLED TOURNAMENT FLIP WALK
+==============================================================================
+[Farey child ladder above 1/14]
+  p/q = p/(14p-1); determinant q-14p = -1
+  p=1: 1/13   right parent K_{1,13}, sum=14, product=13, bipartite-planar
+  p=2: 2/27   child        K_{2,27}, sum=29, product=54, bipartite-planar
+  p=3: 3/41   child        K_{3,41}, sum=44, product=123, nonplanar/K33-minor
+  p=4: 4/55   child        K_{4,55}, sum=59, product=220, nonplanar/K33-minor
+  p=5: 5/69   child        K_{5,69}, sum=74, product=345, nonplanar/K33-minor
+  p=6: 6/83   child        K_{6,83}, sum=89, product=498, nonplanar/K33-minor
+  First child with a K_{3,3} carrier is 3/41, because 2/27 is K_{2,27}.
+
+[AP] known tight
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  q(S)=14; M=1/14; opt-times=(Fraction(1, 14), Fraction(3, 14), Fraction(5, 14)); tight: marked apex 1/14
+  marked packet: K_{1,14}, sum=15, product=14, bipartite-planar
+  Sigma intervals=92 classes=23 apex-class=C6 opt-class=C6 opt-class-measure=6617/27720
+  top class measures: C6:6617/27720, C9:383/3960, C0:1/12
+  flip histogram across breakpoints: {1: 8, 2: 20, 3: 8, 4: 12, 5: 8, 6: 12, 8: 4, 11: 8, 15: 4, 22: 4, 36: 2, 78: 1}
+  event multiplicity histogram: {1: 8, 2: 20, 3: 8, 4: 12, 5: 8, 6: 12, 8: 4, 11: 8, 15: 4, 22: 4, 36: 2, 78: 1}
+
+[GW 12->24] known tight, n*2 petal
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  q(S)=14; M=1/14; opt-times=(Fraction(1, 14), Fraction(3, 14), Fraction(5, 14)); tight: marked apex 1/14
+  marked packet: K_{1,14}, sum=15, product=14, bipartite-planar
+  Sigma intervals=344 classes=84 apex-class=C19 opt-class=C19 opt-class-measure=3186767/104984880
+  top class measures: C10:269882131/2677114440, C8:5552363/69535440, C27:41711/637560
+  flip histogram across breakpoints: {1: 260, 3: 28, 4: 12, 5: 8, 7: 12, 8: 4, 11: 8, 15: 4, 22: 4, 36: 2, 78: 1}
+  event multiplicity histogram: {1: 260, 3: 28, 4: 12, 5: 8, 7: 12, 8: 4, 11: 8, 15: 4, 22: 4, 36: 2, 78: 1}
+
+[11->24] coarser q=11 test
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 24)
+  q(S)=11; M=1/11; opt-times=(Fraction(1, 11), Fraction(2, 11), Fraction(3, 11), Fraction(4, 11), Fraction(5, 11)); loose-up: q(S)=11 coarser divisibility node
+  marked packet: K_{1,11}, sum=12, product=11, bipartite-planar
+  Sigma intervals=320 classes=94 apex-class=C48 opt-class=C8 opt-class-measure=3/544
+  top class measures: C48:4754287/51482970, C50:23077049/411863760, C23:86/1771
+  flip histogram across breakpoints: {1: 228, 2: 8, 3: 8, 4: 32, 5: 8, 7: 12, 9: 4, 11: 8, 16: 4, 23: 4, 36: 2, 78: 1}
+  event multiplicity histogram: {1: 228, 2: 8, 3: 8, 4: 32, 5: 8, 7: 12, 9: 4, 11: 8, 16: 4, 23: 4, 36: 2, 78: 1}
+
+[12->26] coarser q=12 residue-liar
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 26)
+  q(S)=12; M=1/12; opt-times=(Fraction(1, 12), Fraction(5, 12)); loose-up: q(S)=12 coarser divisibility node
+  marked packet: K_{1,12}, sum=13, product=12, bipartite-planar
+  Sigma intervals=388 classes=91 apex-class=C55 opt-class=C12 opt-class-measure=0
+  top class measures: C14:203094323/2059318800, C7:3104807/38630800, C15:2137/27720
+  flip histogram across breakpoints: {1: 296, 2: 28, 3: 8, 4: 12, 6: 20, 9: 4, 12: 8, 16: 4, 23: 4, 36: 2, 78: 1}
+  event multiplicity histogram: {1: 296, 2: 28, 3: 8, 4: 12, 6: 20, 9: 4, 12: 8, 16: 4, 23: 4, 36: 2, 78: 1}
+
+[13->26] q=14 first child test
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26)
+  q(S)=14; M=2/27; opt-times=(Fraction(2, 27),); loose-down: unit Farey child, det=-1
+  marked packet: K_{2,27}, sum=29, product=54, bipartite-planar
+  Sigma intervals=376 classes=78 apex-class=C6 opt-class=C6 opt-class-measure=101759447/1029659400
+  top class measures: C6:101759447/1029659400, C19:44430857/514829700, C15:146899/1970640
+  flip histogram across breakpoints: {1: 292, 2: 20, 3: 8, 4: 12, 6: 8, 7: 12, 8: 4, 12: 8, 15: 4, 22: 4, 36: 2, 78: 1}
+  event multiplicity histogram: {1: 292, 2: 20, 3: 8, 4: 12, 6: 8, 7: 12, 8: 4, 12: 8, 15: 4, 22: 4, 36: 2, 78: 1}
+
+[12->36] near-miss 3/41
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+  q(S)=14; M=3/41; opt-times=(Fraction(17, 41),); loose-down: unit Farey child, det=-1
+  marked packet: K_{3,41}, sum=44, product=123, nonplanar/K33-minor
+  Sigma intervals=644 classes=114 apex-class=C21 opt-class=C21 opt-class-measure=577712976221/7600186994400
+  top class measures: C21:577712976221/7600186994400, C25:240810859/3304429128, C24:296143543/4318288065
+  flip histogram across breakpoints: {1: 560, 2: 20, 3: 8, 4: 12, 5: 8, 7: 12, 8: 4, 12: 8, 15: 4, 22: 4, 36: 2, 78: 1}
+  event multiplicity histogram: {1: 560, 2: 20, 3: 8, 4: 12, 5: 8, 7: 12, 8: 4, 12: 8, 15: 4, 22: 4, 36: 2, 78: 1}
+
+[12->96] large Farey descendant
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 96)
+  q(S)=14; M=8/101; opt-times=(Fraction(42, 101),); loose-down: nonunit excess e=11, det=-11
+  marked packet: K_{8,101}, sum=109, product=808, nonplanar/K33-minor
+  Sigma intervals=2096 classes=149 apex-class=C76 opt-class=C30 opt-class-measure=376607096760742153/5132902334285171160
+  top class measures: C20:1357470258175065647/17965158169998099060, C30:376607096760742153/5132902334285171160, C15:2608441806128642581/35930316339996198120
+  flip histogram across breakpoints: {1: 2012, 2: 20, 3: 8, 4: 12, 5: 8, 6: 12, 8: 4, 12: 8, 15: 4, 22: 4, 36: 2, 78: 1}
+  event multiplicity histogram: {1: 2012, 2: 20, 3: 8, 4: 12, 5: 8, 6: 12, 8: 4, 12: 8, 15: 4, 22: 4, 36: 2, 78: 1}
+
+[8->16] small n*2 petal
+  S=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 16)
+  q(S)=14; M=2/23; opt-times=(Fraction(3, 23),); loose-down: nonunit excess e=5, det=-5
+  marked packet: K_{2,23}, sum=25, product=46, bipartite-planar
+  Sigma intervals=144 classes=56 apex-class=C10 opt-class=C11 opt-class-measure=1/60
+  top class measures: C18:17/140, C8:199/2520, C0:1/15
+  flip histogram across breakpoints: {1: 52, 2: 8, 3: 20, 4: 8, 5: 20, 7: 12, 9: 4, 12: 8, 15: 4, 24: 4, 36: 2, 78: 1}
+  event multiplicity histogram: {1: 52, 2: 8, 3: 20, 4: 8, 5: 20, 7: 12, 9: 4, 12: 8, 15: 4, 24: 4, 36: 2, 78: 1}
+
+[10->20] small n*2 petal
+  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20)
+  q(S)=14; M=2/27; opt-times=(Fraction(8, 27),); loose-down: unit Farey child, det=-1
+  marked packet: K_{2,27}, sum=29, product=54, bipartite-planar
+  Sigma intervals=240 classes=84 apex-class=C75 opt-class=C25 opt-class-measure=4843/108528
+  top class measures: C26:25/323, C12:87/1330, C0:1/19
+  flip histogram across breakpoints: {1: 148, 2: 8, 3: 28, 5: 12, 6: 8, 7: 12, 9: 4, 11: 8, 16: 4, 22: 4, 36: 2, 78: 1}
+  event multiplicity histogram: {1: 148, 2: 8, 3: 28, 5: 12, 6: 8, 7: 12, 9: 4, 11: 8, 16: 4, 22: 4, 36: 2, 78: 1}
+
+[Readout]
+  Class counts here use full directed tournament isomorphism over [0,1).
+  Folded, complement-merged, or endpoint-inclusive conventions may count differently.
+  Tight rows keep the marked node at 1/14.
+  Divisibility failures migrate upward to q(S)<14.
+  Farey-neighbor failures migrate downward to p/q with q-14p=-1.
+  The spectrum walk confirms the metagraph hook: phase breakpoints are arc-flip events,
+  generically single flips and at symmetric phases multi-flips.

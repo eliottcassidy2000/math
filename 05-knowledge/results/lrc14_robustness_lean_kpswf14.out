@@ -1,0 +1,12 @@
+floor-odd     : AP=(c3=80,H=2205423)  GW=(c3=74,H=1477605)
+reciprocal-stk: AP=(c3=73,H=1248969)  GW=(c3=79,H=2042115)
+CF-parity     : AP=(c3=68,H=478493)  GW=(c3=56,H=195217)
+
+loose bank: 789 rows
+
+ROBUSTNESS:
+cand           |  H-coll |  (c3,H)-coll
+floor-odd      |       0 |            0
+reciprocal-stk |       2 |            2
+CF-parity      |       0 |            0
+  reciprocal-stk full-sig collisions: [(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 33)]

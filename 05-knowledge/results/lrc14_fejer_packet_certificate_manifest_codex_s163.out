@@ -1,0 +1,58 @@
+S163 LRC14 FEJER PACKET CERTIFICATE MANIFEST
+========================================================================
+source_scaffold=04-computation/lrc14_packet_fejer_interval_scaffold_codex_s162.py
+taylor_terms=36
+records=5 certified_negative=5 failures=-
+
+Robbins bridge contract:
+  exact center -> Fejer degree -> divisor atom formula -> trig interval
+  -> negative upper bound -> packet fiber -> route handoff
+  A quotient may pass through this manifest only if those bridges are
+  retained or formally reconstructed.
+
+row=near/K33 12->36
+  packet_key=('K33-STATE-LIFT', 'K33/state-lift sporadic family', 'apex q=14', 'K33 state-lift obligation', 'True', 14)
+  safe_mu=1/1260 components=2 largest_width=1/2520
+  center=2089/5040 degree=159
+  interval_hi_sign=negative digits=(11523, 11526)
+  interval_hi=-10370620223000905723313060205697727947981195926738871899537525066151907332542772791922499...000000000000000000000000000000000000000000000000000000000000000000000000 (chars=23051)
+  certified_negative=True
+  must_retain=packet_key, center, degree, interval_hi, divisor_curried_atom_formula, route_handoff
+row=P10+GW
+  packet_key=('BOUNDARY-PETAL-SPORADIC', 'unit-petal sporadic family', 'apex q=14', 'petal-plus-tight-GW discharge strip', 'False', 14)
+  safe_mu=1/980 components=2 largest_width=1/1960
+  center=1161/3920 degree=280
+  interval_hi_sign=negative digits=(11571, 11574)
+  interval_hi=-79676654757741058365051813373917737041422342448988347098342171544742287582719122826207343...000000000000000000000000000000000000000000000000000000000000000000000000 (chars=23147)
+  certified_negative=True
+  must_retain=packet_key, center, degree, interval_hi, divisor_curried_atom_formula, route_handoff
+row=covering 12->168
+  packet_key=('COVERING-MOMENT', 'covering boundary-moment family', 'covering q>14', 'unknown low-frontier atom', 'False', 15)
+  safe_mu=263/30030 components=8 largest_width=23/11760
+  center=9767/23520 degree=63
+  interval_hi_sign=negative digits=(11530, 11535)
+  interval_hi=-19868553339074103193366127618371046518095939257251404392240233525905615891172968529121123...000000000000000000000000000000000000000000000000000000000000000000000000 (chars=23067)
+  certified_negative=True
+  must_retain=packet_key, center, degree, interval_hi, divisor_curried_atom_formula, route_handoff
+row=two drop(12, 13)->add(14, 29)
+  packet_key=('Q-WITNESS', 'infinite q-witness family', 'direct q<=13', 'unknown low-frontier atom', 'False', 12)
+  safe_mu=218923/5627160 components=14 largest_width=17/2156
+  center=347/4312 degree=41
+  interval_hi_sign=negative digits=(11465, 11471)
+  interval_hi=-22633424145724110304267655888019491859187155176410758467472997884292087444345651588014242...000000000000000000000000000000000000000000000000000000000000000000000000 (chars=22938)
+  certified_negative=True
+  must_retain=packet_key, center, degree, interval_hi, divisor_curried_atom_formula, route_handoff
+row=single swap 6->63
+  packet_key=('COVERING-MOMENT', 'open-Haar loose family', 'apex q=14', 'unknown low-frontier atom', 'False', 14)
+  safe_mu=1/294 components=4 largest_width=1/1176
+  center=377/2352 degree=266
+  interval_hi_sign=negative digits=(11542, 11546)
+  interval_hi=-32504880639293244381712455862512981220178722828563317276544579192782675272031993901548931...000000000000000000000000000000000000000000000000000000000000000000000000 (chars=23090)
+  certified_negative=True
+  must_retain=packet_key, center, degree, interval_hi, divisor_curried_atom_formula, route_handoff
+
+Theorem-facing readout:
+  These are packet-fiber certificates, not scalar row scores.  Robin-style
+  sigma/tau shadows may summarize divisor pressure, but Robbins-style
+  no-bridge assembly says the proof must retain the interval and packet
+  bridges until a formal checker verifies upper(Q)<0.

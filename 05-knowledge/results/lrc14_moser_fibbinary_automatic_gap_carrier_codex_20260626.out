@@ -1,0 +1,82 @@
+LRC14 Moser/Fibbinary Automatic Gap Carrier
+finite audit range: 0..16383 (2^14-1)
+
+## Finite Automata
+moser_binary_even_lsb (LSB-first)
+   dead: 0->dead, 1->dead
+  *even: 0->odd, 1->odd
+  *odd: 0->even, 1->dead
+fibbinary_no_adjacent_lsb (LSB-first)
+   dead: 0->dead, 1->dead
+  *last0: 0->last0, 1->last1
+  *last1: 0->last0, 1->dead
+moser_base4_digits_0_1 (MSB-first)
+   dead: 0->dead, 1->dead, 2->dead, 3->dead
+  *ok: 0->ok, 1->ok, 2->dead, 3->dead
+
+## First Values
+Moser-de Bruijn: [0, 1, 4, 5, 16, 17, 20, 21, 64, 65, 68, 69, 80, 81, 84, 85, 256, 257, 260, 261, 272, 273, 276, 277]
+Fibbinary: [0, 1, 2, 4, 5, 8, 9, 10, 16, 17, 18, 20, 21, 32, 33, 34, 36, 37, 40, 41, 42, 64, 65, 66, 68, 69, 72, 73, 74, 80, 81, 82]
+Moser subset of fibbinary through limit: True
+Binary DFA agrees with base-4 DFA through limit: True
+
+## Length Counts
+bits  moser/formula  fibbinary/formula  intersection
+   1      2/2             2/2             2
+   2      2/2             3/3             2
+   3      4/4             5/5             4
+   4      4/4             8/8             4
+   5      8/8            13/13            8
+   6      8/8            21/21            8
+   7     16/16           34/34           16
+   8     16/16           55/55           16
+   9     32/32           89/89           32
+  10     32/32          144/144          32
+  11     64/64          233/233          64
+  12     64/64          377/377          64
+  13    128/128         610/610         128
+  14    128/128         987/987         128
+
+## 2-adic And Carry Closure
+    moser  times2:    1/128  preserved, failed=127  first_failures=[1, 4, 5, 16, 17, 20, 21, 64]
+    moser  times4:   64/64   preserved, failed=0    first_failures=[]
+    moser   plus1:   64/128  preserved, failed=64   first_failures=[1, 5, 17, 21, 65, 69, 81, 85]
+fibbinary  times2:  610/610  preserved, failed=0    first_failures=[]
+fibbinary  times4:  377/377  preserved, failed=0    first_failures=[]
+fibbinary   plus1:  610/987  preserved, failed=377  first_failures=[2, 5, 10, 18, 21, 34, 37, 42]
+
+## Residues Mod 14
+    moser: counts=[10, 10, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9] min=9 max=10
+fibbinary: counts=[85, 52, 85, 54, 88, 54, 88, 53, 88, 55, 88, 55, 88, 54] min=52 max=88
+
+## Eventual-Period Stress
+This is only a finite stress test against treating raw value sets as SML zero sets.
+moser: none with period<=64, cutoff<=512, prefix<=2^14-1
+fibbinary: none with period<=64, cutoff<=512, prefix<=2^14-1
+
+## Tournament Analysis
+vertex-set challenge:
+  considered runners, gaps, fixed sections, residues, cover arcs, Fourier modes,
+  matroid circuits, and proof obligations; chose proof-language carriers because
+  the LRC predicate being tested is quotient safety under lost automaton state.
+features: packet_label_retention, 2adic_shift_control, carry_boundary_memory, gap_lacunarity, sml_eventual_period_guard, finite_automaton_exactness, lrc_transfer_safety
+tie Hamiltonian path: product_phase_automaton > fibbinary_2adic_shift_dfa > fermat_catalan_valuation_gate > sml_eventual_periodic_zero_gate > moser_base4_gap_dfa > ostrowski_hadamard_atom_gap > stick_potato_safe_geometry > raw_sequence_scalar_shadow
+score_hist: [(0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1)]
+directed_3cycles: 0
+scc_sizes: [1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count: 1
+score_order: product_phase_automaton > fibbinary_2adic_shift_dfa > fermat_catalan_valuation_gate > moser_base4_gap_dfa > sml_eventual_periodic_zero_gate > stick_potato_safe_geometry > ostrowski_hadamard_atom_gap > raw_sequence_scalar_shadow
+
+## Proof-Order Takeaway
+1. Moser-de Bruijn is an exact automatic subset of fibbinary, but its natural
+   base-4 gap coordinate is stable under n->4n, not n->2n.  LRC14 must retain
+   the even/odd 2-adic phase if this carrier is used.
+2. Fibbinary is the safer 2-adic normal-form language: n->2n preserves it,
+   while +1 exposes the carry boundary.  That matches the Zeckendorf/path
+   normal-form lane from HYP-3000/HYP-3003.
+3. Raw automatic value sets fail the finite SML-period stress here.  If a
+   Fermat-Catalan or linear-recurrence zero-set argument is imported, its
+   ultimately-periodic index coordinate must be explicit rather than inferred
+   from Moser/fibbinary membership.
+4. The ACM stick/potato paper is useful only as a largest-safe-component
+   geometry analogy; it does not supply arithmetic or automaton closure.

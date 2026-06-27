@@ -1,0 +1,91 @@
+﻿S156 LRC14 MULTIPLICITY-MOMENT DUAL
+==============================================================================
+one_max=160, two_max=36, three_max=24, q_min=14, root_degree=7, workers=8
+[0] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, residues, danger arcs, safe components, endpoint owners,
+    Fourier modes, multiplicity values, moment barriers, and proof gates.
+  chosen vertices:
+    integer multiplicity values X=0..13 and moment/barrier proof carriers.
+  preserved LRC predicate:
+    Pr[X=0]>0 is exactly positive strict Haar-open lonely time.
+  destroyed information:
+    location of the safe interval, endpoint ownership, and denominator-14
+    local geometry; those are intentionally delegated to other hypotheses.
+  challenged assumption:
+    do not start from apexes or packets.  Start from the global integer
+    random variable that a counterexample would force to avoid 0 a.e.
+
+barriers_loaded=195
+
+[1] Named rows
+  AP                                   qdiv=14  safe=         0 support=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) cert=none
+  GW 12->24                            qdiv=14  safe=         0 support=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) cert=none
+  covering 12->168                     qdiv=15  safe= 263/30030 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) cert=root:roots=1,2,3,6,7,11,12 E=-209101/83243160
+  covering 12->84                      qdiv=15  safe=563/105105 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) cert=binomial:B13=C(x-1,13) E=-563/105105
+  near K33 12->36                      qdiv=14  safe=    1/1260 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) cert=binomial:B13=C(x-1,13) E=-1/1260
+  petal 10->20                         qdiv=14  safe=     1/980 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) cert=binomial:B13=C(x-1,13) E=-1/980
+  petal 13->26                         qdiv=14  safe=     1/182 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) cert=binomial:B13=C(x-1,13) E=-1/182
+  repair drop(2,6)->add(17,42)         qdiv=15  safe=   43/3822 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) cert=root:roots=1,2,3,10,11,12,13 E=-148763/69369300
+  repair drop(4,6)->add(19,42)         qdiv=15  safe=1220/133133 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) cert=root:roots=1,2,3,10,11,12,13 E=-75947/1318016700
+
+[2] Global multiplicity-moment audit
+  rows=17104
+  banks={'0-swap': 1, '1-swap add<=160': 989, '2-swap add<=36': 6106, '3-swap add<=24': 10008}
+  zero_safe_rows=2
+  positive_safe_rows=17102
+  certified_by_barrier_family=17102
+  no_barrier_found_with_selected_family=2
+  min_positive_safe_mass=1/1260
+  max_multiplicity_hist={13: 17104}
+  certificate_degree_hist={('binomial', 13): 50, ('root', 4): 11, ('root', 5): 5116, ('root', 6): 10886, ('root', 7): 1039}
+
+  zero-safe rows:
+    0-swap             AP                                   qdiv=14  support=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+    1-swap add<=160    12->24                               qdiv=14  support=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+
+  hardest positive rows by selected certificate degree then safe mass:
+    1-swap add<=160    12->36                               safe=    1/1260 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-1/1260
+    1-swap add<=160    10->20                               safe=     1/980 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-1/980
+    2-swap add<=36     drop(10,12)->add(20,24)              safe=     1/980 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-1/980
+    1-swap add<=160    6->69                                safe=  19/10626 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-19/10626
+    2-swap add<=36     drop(10,12)->add(20,36)              safe=    4/2205 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-4/2205
+    1-swap add<=160    6->75                                safe=    4/1925 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-4/1925
+    1-swap add<=160    12->48                               safe=   13/5880 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-13/5880
+    1-swap add<=160    6->17                                safe=     1/364 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-1/364
+    1-swap add<=160    6->23                                safe=     1/364 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-1/364
+    1-swap add<=160    6->46                                safe=     1/364 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-1/364
+    2-swap add<=36     drop(6,10)->add(17,20)               safe=     1/364 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-1/364
+    1-swap add<=160    12->60                               safe=     1/294 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-1/294
+    1-swap add<=160    6->63                                safe=     1/294 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-1/294
+    1-swap add<=160    6->29                                safe=423/116116 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-423/116116
+    1-swap add<=160    6->81                                safe= 304/81081 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-304/81081
+    2-swap add<=36     drop(6,10)->add(20,23)               safe=   12/3185 support=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) binomial:B13=C(x-1,13) E=-12/3185
+
+[3] Tournament Analysis
+  vertices are proof carriers, not runners.
+  pair observable:
+    preserves no-lonely counterexample status, exact Haar distribution,
+    low-moment inequalities, AP/GW atom visibility, packet labels, and
+    resistance to scalarization.
+  switch/gauge:
+    majority over six retention coordinates; ties follow the displayed order.
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3_cycles=0
+  Hamiltonian path:
+    integer multiplicity histogram > dual moment barrier > AP/GW zero-safe atom > NORK pinch template > qdiv witness > apex aperture > raw safe mass > raw runner set
+
+[4] Proof-shaped readout
+  Necessary condition for a strict counterexample:
+    for every polynomial P with P(0)<0 and P(k)>=0 on k=1..13,
+    the exact multiplicity distribution must satisfy E[P(X_S)]>=0.
+  Thus every negative moment barrier is a rigorous lonely-time proof.
+  In this audit, zero-safe rows found: 2.
+  They are expected to be AP/GW boundary atoms in the sampled banks.
+  Positive rows missed by selected low-barrier family: 0.
+  Candidate theorem:
+    Multiplicity moment rigidity for LRC14: outside the AP/GW boundary
+    atoms, every primitive qdiv>=14 source-core row has a negative
+    admissible moment barrier, preferably one of the odd binomial
+    barriers or a bounded root barrier.  A counterexample must therefore
+    be moment-indistinguishable from AP/GW before packet labels are seen.

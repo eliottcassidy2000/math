@@ -60,6 +60,11 @@ known dense small configs), exact arithmetic over `ℚ(√3,√11)` (no float de
 - This resolves no open case. The genuine disproof of 61 is graph-side: kill all 61-edge candidates
   via the **totally-unfaithful** obstruction (Globus–Parshall / Alexeev–Mixon–Parshall) applied to
   the unit-cocyclic extension.
+- S129 adds a complementary negative lemma for the spine route: the five exact `n=21`, `57`-edge
+  graph6 cores are endpoint-universal. Every vertex deletion is traceable, every incident edge can
+  be the reattachment edge, and every graph-only degree-4 or degree-5 one-vertex extension preserves
+  a Hamiltonian unit spine. Therefore the missing obstruction in the `delta=4` route cannot be plain
+  traceability; it must be the faithful unit-cocyclic geometry or a totally-unfaithful subgraph.
 
 **Tournament/LRC bridge (directive):** the extension vertex's unit circle is the locus of 6th/CM
 roots of unity around it; the 18 `M_L` unit vectors are the `Cay(M_L,U)` generators. A degree-`d`

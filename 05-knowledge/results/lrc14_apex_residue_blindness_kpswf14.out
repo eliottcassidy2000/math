@@ -1,0 +1,16 @@
+units mod 14: [1, 3, 5, 9, 11, 13]
+residues mod 14: AP=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+                 12->26=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+                 12->96=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  (identical: True)
+
+  a= 1: residue-aligned apex tournaments AP==26==96 : True
+  a= 3: residue-aligned apex tournaments AP==26==96 : True
+  a= 5: residue-aligned apex tournaments AP==26==96 : True
+  a= 9: residue-aligned apex tournaments AP==26==96 : True
+  a=11: residue-aligned apex tournaments AP==26==96 : True
+  a=13: residue-aligned apex tournaments AP==26==96 : True
+
+EXHAUSTIVE VERDICT: apex tournament identical across AP/12->26/12->96 for ALL units: True
+=> the winding tournament at any apex phase a/14 depends ONLY on residues mod 14;
+   it is MAGNITUDE-BLIND, hence necessary-only for LRC tightness. QED (structural).

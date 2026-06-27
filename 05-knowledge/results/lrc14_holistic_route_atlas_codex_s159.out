@@ -1,0 +1,111 @@
+LRC14 holistic route atlas (codex S159)
+=======================================
+
+Corpus
+------
+markdown artifacts scanned with LRC signal: 2251
+canon theorem artifacts: 430
+hypothesis artifacts: 639
+forum post/comment artifacts: 50
+
+Route frequency
+---------------
+endpoint_core                 901
+moon_core_apex                663
+singular_series               608
+raw_tournament_guardrail      374
+fixed_margin_packet           320
+wide_decorrelation            316
+farey_exact_m                 299
+ap_gw_boundary                224
+moment_dual                   211
+c27_unital_k33                187
+qdiv_small_denominator        154
+boundary_moment_gk8           139
+observer_source               115
+haar_baire                    103
+lift_packet                    47
+nork_pinch                     41
+fourier_toeplitz               33
+twist_ladder                   22
+
+Historical phase density
+------------------------
+proved endpoint/qdiv base                    40
+signed/tournament witness experiments        68
+singular-series and density side             18
+gap-side q-witness covering reduction        27
+sector/wide/finite-core machinery            14
+apex and tournament-state closure             5
+induction/tournament/AP-GW setup             16
+Farey/C27/unital/K33 carrier phase           20
+Haar/source/gauntlet bridge                   8
+family-sporadic labelled packets              5
+Moon-core, lifts, boundary-moment             6
+dual-certificate convergence                  5
+
+Top route co-occurrences
+------------------------
+moon_core_apex + singular_series: 210
+endpoint_core + moon_core_apex: 194
+endpoint_core + fixed_margin_packet: 173
+ap_gw_boundary + endpoint_core: 147
+endpoint_core + raw_tournament_guardrail: 142
+endpoint_core + singular_series: 140
+endpoint_core + farey_exact_m: 139
+ap_gw_boundary + c27_unital_k33: 135
+moon_core_apex + raw_tournament_guardrail: 127
+endpoint_core + wide_decorrelation: 109
+c27_unital_k33 + endpoint_core: 109
+c27_unital_k33 + farey_exact_m: 105
+ap_gw_boundary + farey_exact_m: 104
+fixed_margin_packet + moon_core_apex: 100
+moon_core_apex + wide_decorrelation: 97
+c27_unital_k33 + haar_baire: 94
+endpoint_core + moment_dual: 92
+farey_exact_m + moon_core_apex: 90
+ap_gw_boundary + fixed_margin_packet: 86
+raw_tournament_guardrail + singular_series: 84
+singular_series + wide_decorrelation: 84
+endpoint_core + qdiv_small_denominator: 82
+ap_gw_boundary + haar_baire: 82
+endpoint_core + observer_source: 79
+farey_exact_m + fixed_margin_packet: 79
+
+Tournament Analysis
+-------------------
+vertices: proof carriers, not runners
+pairwise observable: predicate/exactness/labels/adaptability/dual/computation/anti-scalar retention
+score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1}
+directed_3cycles: 0
+SCC_sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Hamiltonian_path_count: 1
+tie/guiding Hamiltonian path:
+  endpoint_winding_dual > boundary_gap_lift_packet > twist_ladder_blocker > fixed_margin_labelled_packet > source_spectrum_pullback > qdiv_gate > danger_count_moment_dual > c27_unital_k33_state > exact_M_Farey > haar_baire_boundary > fourier_toeplitz_psd > singular_series_relation_lattice > raw_tournament_class > raw_scalar_mass
+
+carrier retention notes:
+- source_spectrum_pullback: preserves observer-source predicate through Farey/Haar/packet labels; destroys raw row identity and fine wall order.
+- endpoint_winding_dual: preserves open-cover failure as positive-winding endpoint circulation; destroys bulk Haar geometry away from active SCC.
+- fixed_margin_labelled_packet: preserves family/sporadic status with source and owner labels; destroys exact representative inside a packet fiber.
+- boundary_gap_lift_packet: preserves strict safe intervals and Q/R lift status; destroys global source spectrum outside the lift chart.
+- twist_ladder_blocker: preserves finite rational witness or adaptive blocker cover; destroys continuous intervals between selected twists.
+- danger_count_moment_dual: preserves count-cover obstruction through exact moment inequalities; destroys endpoint location and packet ownership.
+- fourier_toeplitz_psd: preserves phase-sensitive necessary PSD conditions for nonnegative cover excess; destroys direct interval ownership until eigenvectors are decoded.
+- c27_unital_k33_state: preserves C27 owner transfer, unit/nonunit fork, K33 state-lift debt; destroys off-shell magnitude unless Farey data is attached.
+- exact_M_Farey: preserves closed gap value and binding denominator branch; destroys why the branch is structurally forced.
+- haar_baire_boundary: preserves open-vs-boundary safe set and endpoint debt; destroys C27/K33 ownership unless reattached.
+- qdiv_gate: preserves small-denominator witness or covering-core necessity; destroys all structure after the first covering gate.
+- singular_series_relation_lattice: preserves density-side additive relation pressure; destroys closed-threshold gap and endpoint debt.
+- raw_tournament_class: preserves chosen pairwise ordering only; destroys qdiv, magnitude, endpoint owners, open mass.
+- raw_scalar_mass: preserves one numeric projection; destroys almost every theorem-relevant label.
+
+Synthesis readout
+-----------------
+1. The repo's earliest durable LRC move was endpoint/qdiv arithmetic, not enumeration.
+2. Raw tournament classes repeatedly served as front filters and falsifiers of lossy quotients.
+3. AP/GW evolved from examples into the unique tested closed-boundary equality stratum.
+4. The qdiv>14 branch became the true strict-counterexample branch after THM-523.
+5. THM-566 refuted fixed bounded-denominator closure and forced adaptive denominators.
+6. The modern object is a labelled source packet: qdiv, exact M/Farey, Haar boundary, C27/K33 owners, lift/moment data.
+7. Current dual routes are converging on the same negation: no open cover can survive all endpoint, moment, twist, and PSD certificates except AP/GW boundary atoms or a state-lift debt.
+

@@ -1,0 +1,99 @@
+LRC14 median owner/root sidecar audit
+Scope: proof-interface checklist; not a proof of LRC14.
+
+Toy median lift
+  C6 route triple (0,2,4) centers: []
+  Q3 sidecar triple (000,110,101) centers: ['100']
+
+Route-triple audit table
+- q23_endpoint_owner_center
+  coarse_fiber: B18Z6 q=23 petal/covering diagonal
+  route_triple: ('exact_M_diagonal', 'haar_zeta_square', 'endpoint_route')
+  coarse_shadow: same coarse endpoint word and M=2/23
+  median_center_status: empty -> unique
+  first_missing_sidecar: endpoint_owner_strip
+  sidecars_added: ('exact_M_zeta', 'endpoint_owner_strip', 'safe_component_body')
+  readout: Exact M and zeta diagnose the diagonal, but the owner strip names the center.
+- a000568_rootless_center
+  coarse_fiber: first rooted-perspective failure U(6)-P(5)=8
+  route_triple: ('node_root', 'directed_edge_sector', 'cycle_conflict')
+  coarse_shadow: node perspective cache sees only P(5)=48
+  median_center_status: empty -> unique
+  first_missing_sidecar: rootless_cycle_object
+  sidecars_added: ('rootless_cycle_object', 'ordered_pair_sector_deck', 'observer_cut_orbit')
+  readout: The [3,3] Burnside term has no fixed vertex, so the root object must change.
+- desargues_beal_owner_center
+  coarse_fiber: post-rectangle Desargues/Beal finalizer
+  route_triple: ('incidence_route', 'owner_route', 'arithmetic_collision_route')
+  coarse_shadow: girth-six incidence address without common-owner gate
+  median_center_status: empty -> unique
+  first_missing_sidecar: desargues_girth6_residue
+  sidecars_added: ('desargues_girth6_residue', 'beal_common_owner_gate', 'endpoint_owner_strip')
+  readout: A girth-six address is useful only when paired with owner/factor payload.
+- fejer_haar_ramanujan_center
+  coarse_fiber: harmonic certificate handoff fiber
+  route_triple: ('fejer_interval', 'haar_zeta', 'ramanujan_period')
+  coarse_shadow: small negative/scalar certificate without value-origin type
+  median_center_status: multiple -> unique
+  first_missing_sidecar: value_origin_type
+  sidecars_added: ('value_origin_type', 'primitive_period_deck', 'exact_M_zeta')
+  readout: Multiple centers mean the same number is playing incompatible proof roles.
+- observer_deletion_rectangle_center
+  coarse_fiber: observer/deletion/rectangle transport fiber
+  route_triple: ('observer_cut', 'deletion_parent', 'rectangle_hourglass')
+  coarse_shadow: observer quotient before the cut payload orbit is named
+  median_center_status: empty -> unique
+  first_missing_sidecar: observer_cut_orbit
+  sidecars_added: ('observer_cut_orbit', 'deletion_parent_fiber', 'rectangle_hourglass_residue')
+  readout: The center is the orbit of the cut payload, not the raw rooted class.
+- pair_good_barcode_center
+  coarse_fiber: pair-good decoy / barcode / normal-fan fiber
+  route_triple: ('pair_good_generator', 'barcode_owner', 'normal_fan_support')
+  coarse_shadow: raw pair-good count and barcode shadow
+  median_center_status: empty -> unique
+  first_missing_sidecar: active_owner_barcode_support
+  sidecars_added: ('active_owner_barcode_support', 'endpoint_owner_strip', 'residual_capacitor_cut')
+  readout: The proof object is the active owner/barcode tooth, not the decoy count.
+
+before_status_hist: {'empty': 5, 'multiple': 1}
+after_status_hist: {'unique': 6}
+
+Sidecar tournament
+  vertices are sidecar/proof-obligation objects, not runners.
+  pairwise observable: repaired route triples, preserved predicates, debt cost.
+  score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+  directed_3cycles: 0
+  scc_sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count: 1
+  ranked_path:
+    endpoint_owner_strip: repairs=3, preserves=3, debt=1
+    observer_cut_orbit: repairs=2, preserves=3, debt=1
+    exact_M_zeta: repairs=2, preserves=2, debt=1
+    active_owner_barcode_support: repairs=1, preserves=3, debt=2
+    value_origin_type: repairs=1, preserves=2, debt=1
+    primitive_period_deck: repairs=1, preserves=2, debt=1
+    rootless_cycle_object: repairs=1, preserves=2, debt=2
+    desargues_girth6_residue: repairs=1, preserves=2, debt=2
+    beal_common_owner_gate: repairs=1, preserves=2, debt=2
+    residual_capacitor_cut: repairs=1, preserves=2, debt=2
+    rectangle_hourglass_residue: repairs=1, preserves=2, debt=2
+    raw_scalar_count: repairs=0, preserves=0, debt=5
+
+Assumption challenge
+  considered_vertices: runners, gaps, circle sections, section boundaries,
+    wall crossings, residues, cover arcs, Fourier modes, matroid circuits,
+    proof obligations, owner objects, root objects
+  chosen_vertices: proof obligations plus owner/root/sidecar objects
+  preserved_lrc_predicate: boundary/open status and route schedulability
+  destroyed_information: median center when owner, root, value-origin,
+    observer-cut, rectangle/hourglass, or cocycle payload is forgotten
+
+Readout
+- The useful next table is not a larger scalar count.  It is the
+  case_id -> first_missing_sidecar ledger above, run on actual HYP-2963
+  coarse fibers.
+- q=23/B18Z6 points first at endpoint_owner_strip.
+- A000568/P(5)->U(6) points first at rootless_cycle_object.
+- Desargues/Beal points first at girth-six incidence plus common owner.
+- Multiple centers should be treated as value-origin ambiguity before
+  they are treated as new residual debt.

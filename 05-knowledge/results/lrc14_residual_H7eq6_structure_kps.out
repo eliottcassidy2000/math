@@ -1,0 +1,4 @@
+Primitive covering 13-sets with |H_7|=6: tested 3000
+  M > 1/14 (survives, benign): 3000/3000 = 100.0%
+  tight (M=1/14): 0   minM = 0.12000
+  lowest-M sets:

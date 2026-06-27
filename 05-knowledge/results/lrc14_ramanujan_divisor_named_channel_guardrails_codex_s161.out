@@ -1,0 +1,151 @@
+
+================================================================================================
+ARITHMETIC IDENTITIES AND WHAT THEY ARE ALLOWED TO FORGET
+================================================================================================
+checked n<= 80, q<=24 for Ramanujan formula
+  tau=sigma0     mismatches=[]
+  sum phi        mismatches=[]
+  phi=mu*id      mismatches=[]
+  psi=id*|mu|    mismatches=[]
+  sum J2         mismatches=[]
+  ramanujan      mismatches=[]
+
+Guardrail reading:
+  tau/sigma forget residue order and phase; use them only for divisor-size capacity.
+  phi/Jordan retain primitive unit capacity; use them for exact-period resource counts.
+  psi retains squarefree plus-support; use it as a support capacity, not as a route label.
+  Ramanujan c_q keeps the primitive cyclotomic shell but still forgets endpoint owners.
+
+================================================================================================
+NAMED LRC14 ROWS THROUGH DIVISOR AND RAMANUJAN QUOTIENTS
+================================================================================================
+row                  route              qdiv      safe_mu        lcm   tau    phi/lcm    psi/lcm  U14  U27  U41
+AP                   BOUNDARY-AP-GW       14            0 2^3*3^2*5*7*11*13   192   192/1001   2304/715    6    0    0
+GW 12->24            BOUNDARY-AP-GW       14            0 2^3*3^2*5*7*11*13   192   192/1001   2304/715    6    0    0
+residue liar 12->26  Q-WITNESS            12    426/35035 2^3*3^2*5*7*11*13   192   192/1001   2304/715    6    0    2
+near 12->36          K33-STATE-LIFT       14       1/1260 2^3*3^2*5*7*11*13   192   192/1001   2304/715    6    0    2
+petal 10->20         BOUNDARY-PETAL       14        1/980 2^3*3^2*5*7*11*13   192   192/1001   2304/715    6    2    0
+petal 13->26         BOUNDARY-PETAL       14        1/182 2^3*3^2*5*7*11*13   192   192/1001   2304/715    6    2    2
+P10+GW               BOUNDARY-PETAL       14        1/980 2^3*3^2*5*7*11*13   192   192/1001   2304/715    6    2    0
+P10+K33              K33-STATE-LIFT       14       4/2205 2^3*3^2*5*7*11*13   192   192/1001   2304/715    6    2    2
+covering 12->84      COVERING-MOMENT      15   563/105105 2^3*3^2*5*7*11*13   192   192/1001   2304/715    0    0    2
+covering 12->168     COVERING-MOMENT      15    263/30030 2^3*3^2*5*7*11*13   192   192/1001   2304/715    0    0    2
+covering 6->98       COVERING-MOMENT      15  1543/294294 2^3*3^2*5*7^2*11*13   288   192/1001   2304/715    0    0    0
+
+Ramanujan primitive-shell profiles c_14(v) over speeds:
+  AP                   ((-6, 1), (-1, 6), (1, 6))
+  GW 12->24            ((-6, 1), (-1, 6), (1, 6))
+  residue liar 12->26  ((-6, 1), (-1, 6), (1, 6))
+  near 12->36          ((-6, 1), (-1, 6), (1, 6))
+  petal 10->20         ((-6, 1), (-1, 6), (1, 6))
+  petal 13->26         ((-6, 1), (-1, 7), (1, 5))
+  P10+GW               ((-6, 1), (-1, 6), (1, 6))
+  P10+K33              ((-6, 1), (-1, 6), (1, 6))
+  covering 12->84      ((-6, 1), (-1, 5), (1, 6), (6, 1))
+  covering 12->168     ((-6, 1), (-1, 5), (1, 6), (6, 1))
+  covering 6->98       ((-6, 1), (-1, 5), (1, 6), (6, 1))
+
+Ramanujan primitive-shell profiles c_27(v) over speeds:
+  AP                   ((-9, 1), (0, 12))
+  GW 12->24            ((-9, 1), (0, 12))
+  residue liar 12->26  ((-9, 1), (0, 12))
+  near 12->36          ((-9, 2), (0, 11))
+  petal 10->20         ((-9, 1), (0, 12))
+  petal 13->26         ((-9, 1), (0, 12))
+  P10+GW               ((-9, 1), (0, 12))
+  P10+K33              ((-9, 2), (0, 11))
+  covering 12->84      ((-9, 1), (0, 12))
+  covering 12->168     ((-9, 1), (0, 12))
+  covering 6->98       ((-9, 1), (0, 12))
+
+Ramanujan primitive-shell profiles c_41(v) over speeds:
+  AP                   ((-1, 13),)
+  GW 12->24            ((-1, 13),)
+  residue liar 12->26  ((-1, 13),)
+  near 12->36          ((-1, 13),)
+  petal 10->20         ((-1, 13),)
+  petal 13->26         ((-1, 13),)
+  P10+GW               ((-1, 13),)
+  P10+K33              ((-1, 13),)
+  covering 12->84      ((-1, 13),)
+  covering 12->168     ((-1, 13),)
+  covering 6->98       ((-1, 13),)
+
+
+================================================================================================
+QUOTIENT COLLISION AUDIT
+================================================================================================
+qdiv_only: route-mixing collisions=1
+  collision -> AP:BOUNDARY-AP-GW, GW 12->24:BOUNDARY-AP-GW, near 12->36:K33-STATE-LIFT, petal 10->20:BOUNDARY-PETAL, petal 13->26:BOUNDARY-PETAL, P10+GW:BOUNDARY-PETAL, P10+K33:K33-STATE-LIFT
+open_state_only: route-mixing collisions=1
+  collision -> residue liar 12->26:Q-WITNESS, near 12->36:K33-STATE-LIFT, petal 10->20:BOUNDARY-PETAL, petal 13->26:BOUNDARY-PETAL, P10+GW:BOUNDARY-PETAL, P10+K33:K33-STATE-LIFT, covering 12->84:COVERING-MOMENT, covering 12->168:COVERING-MOMENT, covering 6->98:COVERING-MOMENT
+mod14_residue_multiset: route-mixing collisions=1
+  collision -> AP:BOUNDARY-AP-GW, residue liar 12->26:Q-WITNESS
+ramanujan_14_profile: route-mixing collisions=1
+  collision -> AP:BOUNDARY-AP-GW, GW 12->24:BOUNDARY-AP-GW, residue liar 12->26:Q-WITNESS, near 12->36:K33-STATE-LIFT, petal 10->20:BOUNDARY-PETAL, P10+GW:BOUNDARY-PETAL, P10+K33:K33-STATE-LIFT
+unit_counts_14_27_41: route-mixing collisions=2
+  collision -> residue liar 12->26:Q-WITNESS, near 12->36:K33-STATE-LIFT
+  collision -> petal 13->26:BOUNDARY-PETAL, P10+K33:K33-STATE-LIFT
+divisor_lcm_scalars: route-mixing collisions=1
+  collision -> AP:BOUNDARY-AP-GW, GW 12->24:BOUNDARY-AP-GW, residue liar 12->26:Q-WITNESS, near 12->36:K33-STATE-LIFT, petal 10->20:BOUNDARY-PETAL, petal 13->26:BOUNDARY-PETAL, P10+GW:BOUNDARY-PETAL, P10+K33:K33-STATE-LIFT, covering 12->84:COVERING-MOMENT, covering 12->168:COVERING-MOMENT
+guarded_packet_signature: route-mixing collisions=0
+
+Readout: scalar channels are features, not proof quotients, whenever they mix routes.
+The guarded packet signature is intentionally over-labelled; its job is to say what
+has not yet been proved safe to forget.
+
+================================================================================================
+TOURNAMENT ANALYSIS ON QUOTIENT CHANNELS
+================================================================================================
+vertices:
+  raw_divisor_counts: keeps=factor exponents; tau/sigma capacity
+    forgets=unit residues; primitive phase; endpoint owners; route labels
+  squarefree_psi_support: keeps=radical support; plus squarefree capacity
+    forgets=prime powers; unit residues; endpoint owners; signs
+  totient_jordan_unit_capacity: keeps=primitive exact-period counts; CRT unit capacity
+    forgets=unit arrangement; endpoint owners; K33/petal route labels
+  gcd_strata: keeps=which divisors of q each speed hits; imprimitive/unit split
+    forgets=cyclic phase inside each stratum; endpoint owners
+  ramanujan_primitive_shell: keeps=primitive cyclotomic phase by q; orthogonal shell projection
+    forgets=individual primitive residues; endpoint owners; state-lift debt
+  exact_period_packet: keeps=q/Farey predicate; unit residues; Ramanujan shell
+    forgets=continuous endpoint order unless attached; proof-family names
+  labelled_lrc_packet_sheaf: keeps=q/Farey; Haar open/boundary; endpoint owners; C27/K33/state labels; dual certificates
+    forgets=raw runner names when irrelevant
+
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed_3_cycles=0
+Hamiltonian path:
+  labelled_lrc_packet_sheaf > exact_period_packet > ramanujan_primitive_shell > gcd_strata > totient_jordan_unit_capacity > squarefree_psi_support > raw_divisor_counts
+
+Assumption challenge:
+  considered vertices: runners, residues, divisors, unit twists, gcd strata,
+    primitive Fourier modes, endpoint owners, C27/K33 packets, and proof obligations.
+  chosen vertices here: quotient channels.
+  preserved predicate: whether a channel retains enough payload to support the next
+    LRC implication without silently mixing AP/GW, q-witness, K33, petal, and covering routes.
+  destroyed information: raw runner identity when it is not part of the next predicate.
+
+================================================================================================
+HYP-2978 PROOF TARGET
+================================================================================================
+Ramanujan-divisor admissibility theorem target:
+
+  A quotient Q used in an LRC14 proof step is admissible only if every
+  coordinate it forgets is one of:
+    (1) invariant under the step's allowed moves;
+    (2) reconstructible from retained q/Farey, unit, gcd, and Ramanujan data;
+    (3) annihilated by a proved orthogonality or dual certificate; or
+    (4) placed in an explicit residual bucket with endpoint/state-lift labels.
+
+Concrete LRC14 route:
+  Use divisor/totient/Jordan/psi data as capacity ledgers.
+  Use Ramanujan c_q profiles as primitive-shell Fourier guards.
+  Then hand off to HYP-2974/2977 harmonic duals or HYP-2965/2969 endpoint
+  packets before claiming that a qdiv>14 zero-open packet cannot exist.
+
+Most important new falsifier:
+  two rows sharing a scalar divisor/Ramanujan signature but taking different
+  LRC proof routes.  The audit already exhibits this for qdiv/open-state/
+  residue-shell quotients, so those channels must remain labelled features,
+  not final proof quotients.

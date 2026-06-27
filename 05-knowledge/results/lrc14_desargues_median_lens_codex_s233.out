@@ -1,0 +1,77 @@
+LRC14 Desargues/median graph lens audit
+Median test: every triple has exactly one common interval node.
+Theta classes are Djokovic-Winkler components, used here as a sidecar sketch.
+
+== Desargues graph ==
+n: 20
+m: 30
+degree_hist: {3: 20}
+bipartite: True
+diameter: 5
+girth: 6
+cycle_lengths_le_16: {6: 20, 8: 30, 10: 132, 12: 150, 14: 420, 16: 360}
+median: False
+median_intersection_size_hist: {0: 160, 1: 1380}
+median_failure_count: 160
+theta_class_count: 5
+theta_class_sizes: [6, 6, 6, 6, 6]
+sample_median_failures:
+  (0, 2, 4, ())
+  (0, 2, 8, ())
+  (0, 2, 9, ())
+  (0, 2, 10, ())
+  (0, 3, 10, ())
+
+== Q4 hypercube ==
+n: 16
+m: 32
+degree_hist: {4: 16}
+bipartite: True
+diameter: 4
+girth: 4
+cycle_lengths_le_16: {4: 24, 6: 128, 8: 696, 10: 2112, 12: 5024, 14: 5376, 16: 1344}
+median: True
+median_intersection_size_hist: {1: 816}
+median_failure_count: 0
+theta_class_count: 4
+theta_class_sizes: [8, 8, 8, 8]
+
+== 4x4 grid ==
+n: 16
+m: 24
+degree_hist: {2: 4, 3: 8, 4: 4}
+bipartite: True
+diameter: 6
+girth: 4
+cycle_lengths_le_16: {4: 9, 6: 12, 8: 26, 10: 52, 12: 76, 14: 32, 16: 6}
+median: True
+median_intersection_size_hist: {1: 816}
+median_failure_count: 0
+theta_class_count: 6
+theta_class_sizes: [4, 4, 4, 4, 4, 4]
+
+== C6 cycle ==
+n: 6
+m: 6
+degree_hist: {2: 6}
+bipartite: True
+diameter: 3
+girth: 6
+cycle_lengths_le_16: {6: 1}
+median: False
+median_intersection_size_hist: {0: 2, 1: 54}
+median_failure_count: 2
+theta_class_count: 3
+theta_class_sizes: [2, 2, 2]
+sample_median_failures:
+  (0, 2, 4, ())
+  (1, 3, 5, ())
+
+Readout
+- Q4 and the 4x4 grid pass the median triple test: compatible sidecar
+  hyperplanes give unique three-route consensus states.
+- C6 is bipartite and small but fails medianity by triples with no
+  candidate center; even-cycle structure is not enough.
+- The Desargues graph is cubic, bipartite, girth 6, and has many median
+  failures.  As an LRC analogy it is a compact incidence/duality warning,
+  not a proof carrier by itself.

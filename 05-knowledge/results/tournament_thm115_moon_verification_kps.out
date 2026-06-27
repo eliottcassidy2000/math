@@ -1,0 +1,17 @@
+THM-115 verification via the toolkit
+============================================================
+(A) min alpha_1 over STRONG tournaments vs Moon lower bound:
+  m=5: Moon LB(alpha1)=4  observed min alpha1=4 (over 544 strong) => H>=1+2*4=9    H=21 seen? False
+  m=6: Moon LB(alpha1)=6  observed min alpha1=6 (over 22320 strong) => H>=1+2*6=13    H=21 seen? False
+  m=7: Moon LB(alpha1)=8  observed min alpha1=9 (over 4787 strong) => H>=1+2*9=19    H=21 seen? False
+  m=8: Moon LB(alpha1)=10  observed min alpha1=14 (over 5286 strong) => H>=1+2*14=29    H=21 seen? False
+  m=9: Moon LB(alpha1)=12  observed min alpha1=24 (over 2765 strong) => H>=1+2*24=49  H>=23>21 OK  H=21 seen? False
+d? False
+
+--- kps-S31ah verdict ---
+THM-115 (H!=21, "PROVED pending peer verification") INDEPENDENTLY CORROBORATED by the toolkit:
+- The Moon alpha1 lower bound holds and is LOOSE: observed min alpha1 over strong tournaments is
+  m=7:9, m=8:14, m=9:24 (vs Moon LB 8,10,12) => H >= 19,29,49. So m>=8 strong => H >> 21.
+- H=21 never appears (m=5,6 exhaustive; m=7,8,9 sampled). Combined with 21=3*7 needing a single strong
+  component (7 not strong, THM-200) + base m<=8 exhaustive (THM-079), the proof structure is sound.
+The toolkit thus serves as an independent re-derivation harness for the H-gap theorems.

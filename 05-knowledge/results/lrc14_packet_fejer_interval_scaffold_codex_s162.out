@@ -1,0 +1,84 @@
+S162 LRC14 PACKET-ANCHORED FEJER INTERVAL SCAFFOLD
+==============================================================================
+[0] Certificate object
+  Fejer form:
+    Q_d(x)=6/7+2*sum_{1<=k<=d}(1-k/(d+1))*c_k*cos(2*pi*k*x)
+    c_k=sum_{v|k, v in S} sin(pi*(k/v)/7)/(pi*(k/v))
+  interval backend:
+    rational pi enclosure width=1/1000000000000000000000000000000000000000000000000000000000000000000000000000
+    Taylor terms per sine/cosine=36
+  packet anchor:
+    P(S)=(route, family, q_class, packet_route, state_lift, q_threshold)
+
+[1] Assumption challenge / quotient guardrail
+  considered vertices:
+    runners, divisor fibers v|k, Fourier modes, Fejer centers, endpoint
+    owners, primitive q-phases, labelled packet routes, and proof obligations.
+  chosen vertices:
+    labelled packet fibers P(S) carrying explicit Fejer certificates.
+  preserved LRC predicate:
+    if danger arcs cover then F_S=C_S-1>=0, so every Fejer quadratic
+    form is nonnegative; an interval with upper endpoint <0 certifies
+    a strict safe interval for that packet fiber.
+  destroyed information:
+    raw endpoint order inside the packet; the certificate must record the
+    center, degree, and packet key so this loss is explicit.
+
+[2] Packet-row certificates
+  row=near/K33 12->36
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+    packet_key=('K33-STATE-LIFT', 'K33/state-lift sporadic family', 'apex q=14', 'K33 state-lift obligation', True, 14)
+    safe_mu=1/1260 components=2 largest_width=1/2520 center=2089/5040
+    Fejer degree=159
+    interval=[-0.0002377126606263549705340216868074629484505114463, -0.0002377126606263549705340216868074629484505114463]
+    interval_width=0.00000000000000000000000000000000000000000000000000000000000000000000000001239013685021762047684956404
+    certified_negative=True
+  row=P10+GW
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20, 24)
+    packet_key=('BOUNDARY-PETAL-SPORADIC', 'unit-petal sporadic family', 'apex q=14', 'petal-plus-tight-GW discharge strip', False, 14)
+    safe_mu=1/980 components=2 largest_width=1/1960 center=1161/3920
+    Fejer degree=280
+    interval=[-0.0009592948400524074311555710938682724650768366009, -0.0009592948400524074311555710938682724650768366009]
+    interval_width=0.00000000000000000000000000000000000000000000000000000000000000000000000001481890209973437574446951922
+    certified_negative=True
+  row=covering 12->168
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168)
+    packet_key=('COVERING-MOMENT', 'covering boundary-moment family', 'covering q>14', 'unknown low-frontier atom', False, 15)
+    safe_mu=263/30030 components=8 largest_width=23/11760 center=9767/23520
+    Fejer degree=63
+    interval=[-0.00001302029019999563702283189182141544526076912624, -0.00001302029019999563702283189182141544526076912624]
+    interval_width=0.000000000000000000000000000000000000000000000000000000000000000000000000008628413895701624680097267912
+    certified_negative=True
+  row=two drop(12, 13)->add(14, 29)
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 29)
+    packet_key=('Q-WITNESS', 'infinite q-witness family', 'direct q<=13', 'unknown low-frontier atom', False, 12)
+    safe_mu=218923/5627160 components=14 largest_width=17/2156 center=347/4312
+    Fejer degree=41
+    interval=[-0.0000003360914335949059109070700006794961426983815650, -0.0000003360914335949059109070700006794961426983815650]
+    interval_width=0.000000000000000000000000000000000000000000000000000000000000000000000000006945571805042209655776759136
+    certified_negative=True
+  row=single swap 6->63
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 63)
+    packet_key=('COVERING-MOMENT', 'open-Haar loose family', 'apex q=14', 'unknown low-frontier atom', False, 14)
+    safe_mu=1/294 components=4 largest_width=1/1176 center=377/2352
+    Fejer degree=266
+    interval=[-0.0002355514104642610102795242023859679392528205351, -0.0002355514104642610102795242023859679392528205351]
+    interval_width=0.00000000000000000000000000000000000000000000000000000000000000000000000001429225455068957816822780089
+    certified_negative=True
+
+[3] Robin/Robbins synthesis for the proof target
+  Robin's number-theory criterion is a scalar extremal inequality for
+  sigma(n)/n; it is useful here as a warning that divisor averages do not
+  remember phase labels by themselves.
+  Robbins' graph theorem is the better proof analogy: strong orientation
+  is possible exactly when the graph has no bridge.  For LRC14, the
+  certificate graph should be orientable only after packet labels retain
+  the load-bearing bridges: endpoint owner, q-phase, Toeplitz degree,
+  and K33/state-lift debt.
+
+[4] Next proof obligation
+  Promote this scaffold to a production certificate generator by:
+    (a) replacing the hard-coded pi enclosure with a formally cited backend;
+    (b) grouping rows by packet_key and proving shared interval templates;
+    (c) emitting Lean/arb-compatible rational interval certificates;
+    (d) extending from the selected hard rows to all HYP-2963 packet fibers.

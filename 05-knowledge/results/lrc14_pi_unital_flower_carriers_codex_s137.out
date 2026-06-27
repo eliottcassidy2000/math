@@ -1,0 +1,94 @@
+S137 LRC14 PI / UNITAL / FLOWER CARRIER SYNTHESIS
+==============================================================================
+[0] Assumption challenge
+  considered vertices:
+    petals, radian residues, full-circle phases, pi approximants,
+    q=3 unital points/blocks, algebraic unit maps, C27 shells,
+    Kpq owners, support-six packets, and proof obligations.
+  chosen quotient:
+    proof carriers with exact notes on what the pi/unital quotients forget.
+  preserved predicate:
+    whether the carrier keeps LRC14 branch, unit identity, pair coverage,
+    or state-lift owner data.
+  destroyed predicate:
+    raw safe-time geometry; exact M/Farey branch remains attached.
+
+[1] Pi approximants
+  pi = 3.141592653589793238462643383280
+  pi^3 - 31 = 0.006276680299820175476315067101
+  name             value                 signed error          abs error       role
+  22/7            3.142857142857142857  0.001264489267349619 0.001264489267349619  continued-fraction/radian-family
+  cuberoot(31)    3.141380652391393004 -0.000212001198400234 0.000212001198400234  cubic C27+4 / unital mnemonic
+  355/113         3.141592920353982301      2.66764189062E-7 2.66764189062E-7  control: strong pi convergent
+  readout:
+    cuberoot(31) is numerically closer to pi than 22/7 in absolute error,
+    but 22/7 is the quotient that explains the 22-family flower signal.
+
+[2] Flower from turning 1/pi radians
+  theta=1/pi = 0.318309886183790671537767526745 radians
+  radian-residue quotient:
+    1/pi ~= 7/22, so the model step on Z/22 is +7.
+    gcd(7,22)=1, hence all 22 radian-residue families are visited.
+    after 22 petals, actual angle differs from 7 radians by 0.002817496043394773830886.
+    max deviation from the 7/22 family grid over the first 22 petals is 0.002689428041422284111300.
+  full-circle quotient guardrail:
+    rotation number is theta/(2*pi)=1/(2*pi^2)=0.050660591821168885721939731605.
+    best   le_22: 1/20 err=0.000660591821168885721940
+    best  le_100: 4/79 err=0.000027680428763822430800
+    best  le_300: 15/296 err=0.000015083854506789953736
+    best le_1000: 23/454 err=2.01130372964498325E-7
+    substituting 22/7 gives full-circle model 49/968.
+  readout:
+    the 22 families are a real radian-address quotient, not a true
+    circle-closing period.  This is analogous to C27 shell transfer:
+    a useful quotient is allowed only after its forgotten geometry is named.
+
+[3] Geometric and algebraic unital distinctions
+  q=2: 2-(9,3,1) blocks=12 rep=4
+  q=3: 2-(28,4,1) blocks=63 rep=9  <-- v=28=2*14, v-1=27=C, k=4, b=63=7*9
+  q=4: 2-(65,5,1) blocks=208 rep=16
+  q=3 package:
+    q^3+1=28 equals the 2*14 antipodal/apex point count.
+    q^3=27 equals the C=2*14-1 shell in HYP-2937.
+    q+1=4 is the block size, and q^3+(q+1)=31.
+    Thus cuberoot(31) is a cubic-shell mnemonic: 31=27+4.
+  algebraic unital guardrail:
+    geometric unitals, unit groups, and unital maps are different.
+    For LRC14, the useful algebraic rule is unit preservation:
+    quotient maps should send the identity/floor object to the
+    identity carrier rather than erasing AP/GW or unit-visible shells.
+
+[4] Carrier Tournament Analysis
+  vertices: proof carriers, not runners.
+  observable:
+    (branch retention, typed visibility, unit preservation, pair coverage,
+     state-lift fit, scalar-decoy resistance).
+  switch/gauge: lexicographically larger role score wins.
+    exact_M_Farey_branch           score=(6, 5, 5, 2, 5, 5) role=keeps q and e=14p-q as theorem scale
+    marked_C27_shell_transfer      score=(5, 5, 5, 4, 4, 5) role=unit/nonunit shell holes and doubles from HYP-2937
+    bigraded_relation_signature    score=(5, 5, 4, 4, 4, 5) role=visible and hidden summand/multiplicand channels
+    Kpq_K33_incidence              score=(5, 4, 3, 4, 5, 4) role=complete-bipartite owner packet for p>=3
+    geometric_unital_28_4_1        score=(4, 4, 5, 5, 4, 5) role=q=3 pair-unique design with 28=2*14 points
+    algebraic_unital_maps          score=(4, 4, 5, 3, 4, 5) role=identity/unit-preserving quotient discipline
+    octa_Clebsch_packet            score=(4, 4, 3, 4, 5, 4) role=support-six current and folded covariance carriers
+    PZ_degree4_gateway             score=(3, 3, 2, 3, 3, 4) role=second moment only after upgrade to labelled degree-4 region
+    flower_22_radian_quotient      score=(2, 3, 3, 2, 2, 5) role=1/pi ~= 7/22 gives 22 near families modulo one radian
+    cuberoot31_cubic_shell         score=(2, 2, 3, 2, 2, 5) role=pi^3 ~= 31 = 27+4, a q=3 unital package mnemonic
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1} c3=0
+  Hamiltonian carrier order:
+    exact_M_Farey_branch > marked_C27_shell_transfer > bigraded_relation_signature > Kpq_K33_incidence > geometric_unital_28_4_1 > algebraic_unital_maps > octa_Clebsch_packet > PZ_degree4_gateway > flower_22_radian_quotient > cuberoot31_cubic_shell
+
+[5] Proof readout
+  Add the pi/unital ideas as conservative carriers, not proof scalars.
+  The flower's 22-family quotient is useful because 1/pi ~= 7/22
+  and +7 is a unit step on Z/22; it should be compared to unit-visible
+  C27 shell holes, not to a literal full-circle period.
+  The cuberoot(31) signal points to the q=3 unital package
+  31=27+4, linking C=27 with a block size 4 pair-design carrier.
+  The next theorem target is unchanged but better typed:
+    after exact M/Farey branch and C27 transfer are attached,
+    try a q=3 unital/pair-unique packet as a finite pair-coverage
+    interface for the p>=3 K33 owner branch or HYP-2908 state lift.
+  Guardrail:
+    none of 22/7, cuberoot(31), or the word 'unital' replaces q,
+    exact M(S), or the C27/K33 branch labels.

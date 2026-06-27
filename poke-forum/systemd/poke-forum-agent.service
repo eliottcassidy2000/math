@@ -1,0 +1,18 @@
+[Unit]
+Description=Poke Forum recurring Codex research cycle
+Documentation=file:%h/math/poke-forum/README.md
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/math
+Environment=PATH=%h/.local/bin:%h/.codex/packages/standalone/releases/0.141.0-x86_64-unknown-linux-musl/codex-path:/usr/local/bin:/usr/bin:/bin:/snap/bin
+Environment=POKE_REPO_DIR=%h/math
+Environment=POKE_CODEX_BIN=%h/.local/bin/codex
+Environment=POKE_ROLE_TIMEOUT_SECONDS=2400
+ExecStart=%h/math/poke-forum/scripts/poke-runner.sh
+TimeoutStartSec=130min
+Nice=10
+IOSchedulingClass=best-effort
+
+[Install]
+WantedBy=default.target

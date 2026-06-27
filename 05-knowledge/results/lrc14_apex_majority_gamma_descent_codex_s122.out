@@ -1,0 +1,44 @@
+LRC14 apex-majority gamma descent (S122)
+
+1. Exact shift-count maxima
+  mod14_halfstep_max: 7 witness=(7, Fraction(0, 1), 7)
+  mod14_ordinary_max: 2 witness=(2, Fraction(0, 1), 2)
+  mod7_unit_max: 1 witness=(1, Fraction(0, 1), 1)
+
+2. Primitive r14>=7 case split
+  columns: r14, residual, halfstep_in_residual, phase, bad_bound, surviving_points
+   7  6  0 14-phase bad<=12 survivors>= 2 OK
+   7  6  1 14-phase bad<=12 survivors>= 2 OK
+   7  6  2 7-phase  bad<= 4 survivors>= 3 OK
+   7  6  3 7-phase  bad<= 3 survivors>= 4 OK
+   7  6  4 7-phase  bad<= 2 survivors>= 5 OK
+   7  6  5 7-phase  bad<= 1 survivors>= 6 OK
+   7  6  6 7-phase  bad<= 0 survivors>= 7 OK
+   8  5  0 14-phase bad<=10 survivors>= 4 OK
+   8  5  1 14-phase bad<=11 survivors>= 3 OK
+   8  5  2 7-phase  bad<= 3 survivors>= 4 OK
+   8  5  3 7-phase  bad<= 2 survivors>= 5 OK
+   8  5  4 7-phase  bad<= 1 survivors>= 6 OK
+   8  5  5 7-phase  bad<= 0 survivors>= 7 OK
+   9  4  0 14-phase bad<= 8 survivors>= 6 OK
+   9  4  1 14-phase bad<=10 survivors>= 4 OK
+   9  4  2 7-phase  bad<= 2 survivors>= 5 OK
+   9  4  3 7-phase  bad<= 1 survivors>= 6 OK
+   9  4  4 7-phase  bad<= 0 survivors>= 7 OK
+  10  3  0 14-phase bad<= 6 survivors>= 8 OK
+  10  3  1 14-phase bad<= 9 survivors>= 5 OK
+  10  3  2 7-phase  bad<= 1 survivors>= 6 OK
+  10  3  3 7-phase  bad<= 0 survivors>= 7 OK
+  11  2  0 14-phase bad<= 4 survivors>=10 OK
+  11  2  1 14-phase bad<= 8 survivors>= 6 OK
+  11  2  2 7-phase  bad<= 0 survivors>= 7 OK
+  12  1  0 14-phase bad<= 2 survivors>=12 OK
+  12  1  1 14-phase bad<= 7 survivors>= 7 OK
+
+all case-split rows have a surviving lift: True
+
+Readout: the S121 two-halfstep obstruction is real for a raw
+14-shift sieve, but in the apex-majority branch it descends to the
+7-phase, where at least nine speeds are multiples of 7 and at most
+four residual speeds remain.  Each residual forbids at most one of
+the seven lifts, so a 7-phase lift survives.

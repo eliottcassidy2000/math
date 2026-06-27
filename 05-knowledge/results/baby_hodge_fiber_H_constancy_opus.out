@@ -1,0 +1,34 @@
+Total realized (c3,c5) fibers at n=6: 22
+Fibers where H is NOT single-valued (c3,c5 fails to determine H): [(2, 0), (5, 4), (4, 2), (7, 9), (6, 6), (7, 7)]
+=> (c3,c5) DOES determine H at n=6: False
+
+(c3,c5) -> H, implied alpha2=(H-1-2(c3+c5))/4:
+   c3= 0 c5= 0 -> H= 1  alpha2=0
+   c3= 1 c5= 0 -> H= 3  alpha2=0
+   c3= 2 c5= 0 -> H= 5  alpha2=0
+   c3= 2 c5= 0 -> H= 9  alpha2=1
+   c3= 3 c5= 1 -> H= 9  alpha2=0
+   c3= 4 c5= 1 -> H=11  alpha2=0
+   c3= 4 c5= 2 -> H=13  alpha2=0
+   c3= 4 c5= 2 -> H=17  alpha2=1
+   c3= 4 c5= 3 -> H=15  alpha2=0
+   c3= 4 c5= 4 -> H=17  alpha2=0
+   c3= 5 c5= 2 -> H=15  alpha2=0
+   c3= 5 c5= 4 -> H=19  alpha2=0
+   c3= 5 c5= 4 -> H=23  alpha2=1
+   c3= 5 c5= 6 -> H=27  alpha2=1
+   c3= 6 c5= 4 -> H=29  alpha2=2
+   c3= 6 c5= 5 -> H=23  alpha2=0
+   c3= 6 c5= 6 -> H=25  alpha2=0
+   c3= 6 c5= 6 -> H=29  alpha2=1
+   c3= 6 c5= 6 -> H=33  alpha2=2
+   c3= 6 c5= 7 -> H=31  alpha2=1
+   c3= 6 c5= 8 -> H=37  alpha2=2
+   c3= 7 c5= 7 -> H=33  alpha2=1
+   c3= 7 c5= 7 -> H=37  alpha2=2
+   c3= 7 c5= 9 -> H=33  alpha2=0
+   c3= 7 c5= 9 -> H=37  alpha2=1
+   c3= 8 c5= 6 -> H=45  alpha2=4
+   c3= 8 c5= 8 -> H=41  alpha2=2
+   c3= 8 c5=11 -> H=43  alpha2=1
+   c3= 8 c5=12 -> H=45  alpha2=1

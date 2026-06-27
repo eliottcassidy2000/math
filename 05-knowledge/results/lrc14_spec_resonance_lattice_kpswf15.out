@@ -1,0 +1,364 @@
+##############################################################################################
+# TOOL 3 : RESONANCE-LATTICE DECOMPOSITION OF SPEC  (multi-far r=2..6)
+#   chat on Lat(R), ghat on 14 Lat(Q)  =>  SPEC supported on resonance lattice
+#   Question: does BV/EH bound SPEC uniformly over the multi-far family?
+##############################################################################################
+==============================================================================================
+  (R={1..13}\{12} (12->14), Q={1} (r=1 far))  R(14-free)=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]  Q(multipliers, far=14Q)=[1]
+     full set S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14]
+==============================================================================================
+  meas(R-safe)            = 426/35035 = 0.01215927
+  meas(Q-lonely)          = 6/7 = 0.85714286
+  baseline = product      = 2556/245245 = 0.01042223
+  meas(both)              = 426/35035 = 0.01215927
+  SPEC (exact)            = 426/245245 = +0.00173704
+  R' = both/baseline      = 7/6 = 1.16666667
+  SPEC (spectral |n|<=3000) = +0.00173751  |err|=4.69e-07
+  -- LATTICE STRUCTURE --
+     gcd(R) = 1  =>  chat supported on 1 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 14 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = +0.00000000  (+0.00000 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = +0.00173751  (+0.16671 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=   42 (=    3*14 mod7=3)  term=+0.0024189  |chat|=0.011692 |ghat|=0.103443
+     n=   14 (=    1*14 mod7=1)  term=-0.0016069  |chat|=0.005818 |ghat|=0.138109
+     n=   28 (=    2*14 mod7=2)  term=+0.0016025  |chat|=0.006439 |ghat|=0.124432
+     n=   56 (=    4*14 mod7=4)  term=+0.0007443  |chat|=0.004797 |ghat|=0.077582
+     n=   70 (=    5*14 mod7=5)  term=-0.0006459  |chat|=0.006489 |ghat|=0.049773
+     n=   84 (=    6*14 mod7=6)  term=-0.0004777  |chat|=0.010376 |ghat|=0.023018
+     n=  126 (=    9*14 mod7=2)  term=-0.0004673  |chat|=0.008450 |ghat|=0.027652
+     n=  154 (=   11*14 mod7=4)  term=+0.0002706  |chat|=0.004795 |ghat|=0.028212
+     n=  168 (=   12*14 mod7=5)  term=+0.0002590  |chat|=0.006244 |ghat|=0.020739
+     n=  112 (=    8*14 mod7=1)  term=-0.0002042  |chat|=0.005913 |ghat|=0.017264
+     n=  140 (=   10*14 mod7=3)  term=-0.0001558  |chat|=0.002511 |ghat|=0.031033
+     n=  252 (=   18*14 mod7=4)  term=-0.0000796  |chat|=0.002310 |ghat|=0.017241
+
+==============================================================================================
+  (R={1..12}, Q={1,2} (far 14,28; drop 13))  R(14-free)=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  Q(multipliers, far=14Q)=[1, 2]
+     full set S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 28]
+==============================================================================================
+  meas(R-safe)            = 6617/194040 = 0.03410122
+  meas(Q-lonely)          = 11/14 = 0.78571429
+  baseline = product      = 6617/246960 = 0.02679381
+  meas(both)              = 521/27720 = 0.01879509
+  SPEC (exact)            = -7243/905520 = -0.00799872
+  R' = both/baseline      = 51058/72787 = 0.70147142
+  SPEC (spectral |n|<=3000) = -0.00799944  |err|=7.16e-07
+  -- LATTICE STRUCTURE --
+     gcd(R) = 1  =>  chat supported on 1 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 14 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = -0.00043470  (-0.01622 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = -0.00756473  (-0.28233 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=   28 (=    2*14 mod7=2)  term=-0.0031958  |chat|=0.008258 |ghat|=0.193487
+     n=   56 (=    4*14 mod7=4)  term=-0.0020875  |chat|=0.007466 |ghat|=0.139798
+     n=   84 (=    6*14 mod7=6)  term=-0.0008182  |chat|=0.005474 |ghat|=0.074740
+     n=  154 (=   11*14 mod7=4)  term=-0.0008051  |chat|=0.008703 |ghat|=0.046254
+     n=  126 (=    9*14 mod7=2)  term=-0.0005591  |chat|=0.004697 |ghat|=0.059517
+     n=  182 (=   13*14 mod7=6)  term=+0.0004185  |chat|=0.013018 |ghat|=0.016072
+     n=   14 (=    1*14 mod7=1)  term=-0.0003466  |chat|=0.002576 |ghat|=0.067279
+     n=   98 (=    7*14 mod7=0)  term=-0.0003448  |chat|=0.003791 |ghat|=0.045473
+     n=   42 (=    3*14 mod7=3)  term=-0.0002872  |chat|=0.003851 |ghat|=0.037289
+     n=  364 (=   26*14 mod7=5)  term=+0.0001633  |chat|=0.005487 |ghat|=0.014884
+     n=  336 (=   24*14 mod7=3)  term=-0.0001015  |chat|=0.002177 |ghat|=0.023300
+     n=  308 (=   22*14 mod7=1)  term=-0.0000998  |chat|=0.002448 |ghat|=0.020384
+
+==============================================================================================
+  (R={1..11}, Q={1,2,3} (r=3 far))  R(14-free)=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  Q(multipliers, far=14Q)=[1, 2, 3]
+     full set S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 28, 42]
+==============================================================================================
+  meas(R-safe)            = 10931/194040 = 0.05633375
+  meas(Q-lonely)          = 29/42 = 0.69047619
+  baseline = product      = 316999/8149680 = 0.03889711
+  meas(both)              = 149/3960 = 0.03762626
+  SPEC (exact)            = -10357/8149680 = -0.00127085
+  R' = both/baseline      = 306642/316999 = 0.96732797
+  SPEC (spectral |n|<=3000) = -0.00127319  |err|=2.34e-06
+  -- LATTICE STRUCTURE --
+     gcd(R) = 1  =>  chat supported on 1 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 14 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = +0.00009923  (+0.00255 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = -0.00137242  (-0.03528 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=   84 (=    6*14 mod7=6)  term=-0.0044435  |chat|=0.014089 |ghat|=0.157695
+     n=   42 (=    3*14 mod7=3)  term=+0.0035202  |chat|=0.013606 |ghat|=0.129362
+     n=   56 (=    4*14 mod7=4)  term=+0.0011439  |chat|=0.006022 |ghat|=0.094971
+     n=  182 (=   13*14 mod7=6)  term=+0.0010730  |chat|=0.013805 |ghat|=0.038865
+     n=   28 (=    2*14 mod7=2)  term=-0.0007633  |chat|=0.002604 |ghat|=0.146575
+     n=  154 (=   11*14 mod7=4)  term=-0.0007221  |chat|=0.004807 |ghat|=0.075110
+     n=   14 (=    1*14 mod7=1)  term=-0.0006244  |chat|=0.015737 |ghat|=0.019837
+     n=  168 (=   12*14 mod7=5)  term=-0.0005907  |chat|=0.006950 |ghat|=0.042492
+     n=   98 (=    7*14 mod7=0)  term=+0.0005018  |chat|=0.002957 |ghat|=0.084853
+     n=  210 (=   15*14 mod7=1)  term=+0.0004003  |chat|=0.004248 |ghat|=0.047111
+     n=  196 (=   14*14 mod7=0)  term=-0.0003307  |chat|=0.008397 |ghat|=0.019690
+     n=  140 (=   10*14 mod7=3)  term=-0.0002551  |chat|=0.003366 |ghat|=0.037888
+
+==============================================================================================
+  (R={1..10}, Q={1,2,3,4} (r=4 far))  R(14-free)=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  Q(multipliers, far=14Q)=[1, 2, 3, 4]
+     full set S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 28, 42, 56]
+==============================================================================================
+  meas(R-safe)            = 1217/8820 = 0.13798186
+  meas(Q-lonely)          = 13/21 = 0.61904762
+  baseline = product      = 15821/185220 = 0.08541734
+  meas(both)              = 797/8820 = 0.09036281
+  SPEC (exact)            = 229/46305 = +0.00494547
+  R' = both/baseline      = 16737/15821 = 1.05789773
+  SPEC (spectral |n|<=3000) = +0.00494191  |err|=3.56e-06
+  -- LATTICE STRUCTURE --
+     gcd(R) = 1  =>  chat supported on 1 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 14 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = -0.00084661  (-0.00991 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = +0.00578852  (+0.06777 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=   42 (=    3*14 mod7=3)  term=+0.0059284  |chat|=0.022914 |ghat|=0.129362
+     n=   70 (=    5*14 mod7=5)  term=+0.0015809  |chat|=0.015533 |ghat|=0.050886
+     n=  168 (=   12*14 mod7=5)  term=-0.0015632  |chat|=0.008296 |ghat|=0.094213
+     n=  210 (=   15*14 mod7=1)  term=+0.0007443  |chat|=0.007899 |ghat|=0.047111
+     n=  182 (=   13*14 mod7=6)  term=+0.0007160  |chat|=0.009211 |ghat|=0.038865
+     n=  196 (=   14*14 mod7=0)  term=-0.0005774  |chat|=0.004430 |ghat|=0.065163
+     n=  140 (=   10*14 mod7=3)  term=-0.0004992  |chat|=0.002620 |ghat|=0.095246
+     n=   14 (=    1*14 mod7=1)  term=-0.0004391  |chat|=0.011068 |ghat|=0.019837
+     n=   28 (=    2*14 mod7=2)  term=-0.0003221  |chat|=0.002126 |ghat|=0.075745
+     n=   84 (=    6*14 mod7=6)  term=-0.0002987  |chat|=0.001631 |ghat|=0.091540
+     n=  308 (=   22*14 mod7=1)  term=-0.0002984  |chat|=0.004114 |ghat|=0.036269
+     n=  154 (=   11*14 mod7=4)  term=-0.0002966  |chat|=0.001975 |ghat|=0.075110
+
+==============================================================================================
+  (R={1..9}, Q={1..5} (r=5 far))  R(14-free)=[1, 2, 3, 4, 5, 6, 7, 8, 9]  Q(multipliers, far=14Q)=[1, 2, 3, 4, 5]
+     full set S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 28, 42, 56, 70]
+==============================================================================================
+  meas(R-safe)            = 1597/8820 = 0.18106576
+  meas(Q-lonely)          = 53/105 = 0.50476190
+  baseline = product      = 84641/926100 = 0.09139510
+  meas(both)              = 419/4410 = 0.09501134
+  SPEC (exact)            = 3349/926100 = +0.00361624
+  R' = both/baseline      = 87990/84641 = 1.03956711
+  SPEC (spectral |n|<=3000) = +0.00360945  |err|=6.79e-06
+  -- LATTICE STRUCTURE --
+     gcd(R) = 1  =>  chat supported on 1 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 14 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = -0.00022906  (-0.00251 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = +0.00383851  (+0.04200 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=   42 (=    3*14 mod7=3)  term=+0.0039723  |chat|=0.019639 |ghat|=0.101134
+     n=   70 (=    5*14 mod7=5)  term=-0.0029139  |chat|=0.024445 |ghat|=0.059602
+     n=  210 (=   15*14 mod7=1)  term=+0.0027005  |chat|=0.010397 |ghat|=0.129866
+     n=  168 (=   12*14 mod7=5)  term=-0.0016699  |chat|=0.011784 |ghat|=0.070855
+     n=   28 (=    2*14 mod7=2)  term=+0.0015395  |chat|=0.016265 |ghat|=0.047327
+     n=  182 (=   13*14 mod7=6)  term=+0.0010872  |chat|=0.008856 |ghat|=0.061380
+     n=   56 (=    4*14 mod7=4)  term=+0.0006552  |chat|=0.002408 |ghat|=0.136064
+     n=  308 (=   22*14 mod7=1)  term=-0.0005889  |chat|=0.005940 |ghat|=0.049574
+     n=  280 (=   20*14 mod7=6)  term=-0.0005197  |chat|=0.003420 |ghat|=0.075969
+     n=  196 (=   14*14 mod7=0)  term=-0.0004913  |chat|=0.002831 |ghat|=0.086787
+     n=  154 (=   11*14 mod7=4)  term=-0.0004777  |chat|=0.002406 |ghat|=0.099260
+     n=  350 (=   25*14 mod7=4)  term=-0.0004320  |chat|=0.005081 |ghat|=0.042516
+
+==============================================================================================
+  (R={1..8}, Q={1..6} (r=6 MULTI-FAR, max))  R(14-free)=[1, 2, 3, 4, 5, 6, 7, 8]  Q(multipliers, far=14Q)=[1, 2, 3, 4, 5, 6]
+     full set S = [1, 2, 3, 4, 5, 6, 7, 8, 14, 28, 42, 56, 70, 84]
+==============================================================================================
+  meas(R-safe)            = 521/1960 = 0.26581633
+  meas(Q-lonely)          = 16/35 = 0.45714286
+  baseline = product      = 1042/8575 = 0.12151603
+  meas(both)              = 137/1176 = 0.11649660
+  SPEC (exact)            = -1033/205800 = -0.00501944
+  R' = both/baseline      = 23975/25008 = 0.95869322
+  SPEC (spectral |n|<=3000) = -0.00502777  |err|=8.33e-06
+  -- LATTICE STRUCTURE --
+     gcd(R) = 1  =>  chat supported on 1 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 14 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = -0.00061240  (-0.00504 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = -0.00441536  (-0.03634 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=   42 (=    3*14 mod7=3)  term=+0.0044655  |chat|=0.041413 |ghat|=0.053914
+     n=   70 (=    5*14 mod7=5)  term=-0.0044082  |chat|=0.026600 |ghat|=0.082860
+     n=  168 (=   12*14 mod7=5)  term=-0.0023252  |chat|=0.010350 |ghat|=0.112332
+     n=   56 (=    4*14 mod7=4)  term=-0.0015597  |chat|=0.006925 |ghat|=0.112608
+     n=   84 (=    6*14 mod7=6)  term=-0.0015560  |chat|=0.007049 |ghat|=0.110367
+     n=  210 (=   15*14 mod7=1)  term=+0.0014450  |chat|=0.007885 |ghat|=0.091627
+     n=  126 (=    9*14 mod7=2)  term=-0.0013792  |chat|=0.011451 |ghat|=0.060221
+     n=  196 (=   14*14 mod7=0)  term=-0.0013664  |chat|=0.006417 |ghat|=0.106477
+     n=  182 (=   13*14 mod7=6)  term=+0.0011170  |chat|=0.013573 |ghat|=0.041149
+     n=  308 (=   22*14 mod7=1)  term=-0.0008362  |chat|=0.006533 |ghat|=0.064002
+     n=   28 (=    2*14 mod7=2)  term=+0.0006907  |chat|=0.014629 |ghat|=0.023606
+     n=   98 (=    7*14 mod7=0)  term=+0.0005927  |chat|=0.003336 |ghat|=0.088845
+
+==============================================================================================
+  (R={1..9}, Q={1,3,5} (spread far))  R(14-free)=[1, 2, 3, 4, 5, 6, 7, 8, 9]  Q(multipliers, far=14Q)=[1, 3, 5]
+     full set S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 42, 70]
+==============================================================================================
+  meas(R-safe)            = 1597/8820 = 0.18106576
+  meas(Q-lonely)          = 68/105 = 0.64761905
+  baseline = product      = 27149/231525 = 0.11726163
+  meas(both)              = 1063/8820 = 0.12052154
+  SPEC (exact)            = 3019/926100 = +0.00325991
+  R' = both/baseline      = 111615/108596 = 1.02780029
+  SPEC (spectral |n|<=3000) = +0.00325521  |err|=4.69e-06
+  -- LATTICE STRUCTURE --
+     gcd(R) = 1  =>  chat supported on 1 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 14 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = +0.00015475  (+0.00132 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = +0.00310046  (+0.02644 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=   42 (=    3*14 mod7=3)  term=+0.0065707  |chat|=0.019639 |ghat|=0.167289
+     n=   70 (=    5*14 mod7=5)  term=-0.0057181  |chat|=0.024445 |ghat|=0.116959
+     n=  210 (=   15*14 mod7=1)  term=+0.0026023  |chat|=0.010397 |ghat|=0.125144
+     n=   28 (=    2*14 mod7=2)  term=+0.0015973  |chat|=0.016265 |ghat|=0.049102
+     n=  112 (=    8*14 mod7=1)  term=-0.0010093  |chat|=0.006270 |ghat|=0.080481
+     n=  182 (=   13*14 mod7=6)  term=+0.0009907  |chat|=0.008856 |ghat|=0.055932
+     n=  280 (=   20*14 mod7=6)  term=-0.0004556  |chat|=0.003420 |ghat|=0.066599
+     n=  154 (=   11*14 mod7=4)  term=-0.0003909  |chat|=0.002406 |ghat|=0.081218
+     n=  350 (=   25*14 mod7=4)  term=-0.0003513  |chat|=0.005081 |ghat|=0.034578
+     n=  336 (=   24*14 mod7=3)  term=-0.0002973  |chat|=0.004186 |ghat|=0.035508
+     n=  322 (=   23*14 mod7=2)  term=-0.0002624  |chat|=0.006931 |ghat|=0.018928
+     n=  196 (=   14*14 mod7=0)  term=-0.0002339  |chat|=0.002831 |ghat|=0.041314
+
+==============================================================================================
+  (R={1..9}, Q={2,3,5} (no q=1, gcd(Q)=1))  R(14-free)=[1, 2, 3, 4, 5, 6, 7, 8, 9]  Q(multipliers, far=14Q)=[2, 3, 5]
+     full set S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 28, 42, 70]
+==============================================================================================
+  meas(R-safe)            = 1597/8820 = 0.18106576
+  meas(Q-lonely)          = 68/105 = 0.64761905
+  baseline = product      = 27149/231525 = 0.11726163
+  meas(both)              = 1063/8820 = 0.12052154
+  SPEC (exact)            = 3019/926100 = +0.00325991
+  R' = both/baseline      = 111615/108596 = 1.02780029
+  SPEC (spectral |n|<=3000) = +0.00325386  |err|=6.05e-06
+  -- LATTICE STRUCTURE --
+     gcd(R) = 1  =>  chat supported on 1 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 14 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = +0.00015475  (+0.00132 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = +0.00309911  (+0.02643 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=   70 (=    5*14 mod7=5)  term=-0.0032847  |chat|=0.024445 |ghat|=0.067186
+     n=   42 (=    3*14 mod7=3)  term=+0.0025077  |chat|=0.019639 |ghat|=0.063846
+     n=  210 (=   15*14 mod7=1)  term=+0.0024108  |chat|=0.010397 |ghat|=0.115936
+     n=   28 (=    2*14 mod7=2)  term=+0.0020422  |chat|=0.016265 |ghat|=0.062780
+     n=  168 (=   12*14 mod7=5)  term=-0.0012110  |chat|=0.011784 |ghat|=0.051381
+     n=  182 (=   13*14 mod7=6)  term=+0.0008025  |chat|=0.008856 |ghat|=0.045308
+     n=  140 (=   10*14 mod7=3)  term=+0.0006653  |chat|=0.002829 |ghat|=0.117577
+     n=  126 (=    9*14 mod7=2)  term=+0.0006251  |chat|=0.007202 |ghat|=0.043398
+     n=  350 (=   25*14 mod7=4)  term=-0.0004775  |chat|=0.005081 |ghat|=0.046991
+     n=  308 (=   22*14 mod7=1)  term=-0.0004676  |chat|=0.005940 |ghat|=0.039360
+     n=   84 (=    6*14 mod7=6)  term=-0.0004178  |chat|=0.001312 |ghat|=0.159188
+     n=  224 (=   16*14 mod7=2)  term=-0.0004062  |chat|=0.004021 |ghat|=0.050510
+
+==============================================================================================
+  (R even gcd=2 {2..12}, Q={1,3,5})  R(14-free)=[2, 4, 6, 8, 10, 12]  Q(multipliers, far=14Q)=[1, 3, 5]
+     full set S = [2, 4, 6, 8, 10, 12, 14, 42, 70]
+==============================================================================================
+  meas(R-safe)            = 16/35 = 0.45714286
+  meas(Q-lonely)          = 68/105 = 0.64761905
+  baseline = product      = 1088/3675 = 0.29605442
+  meas(both)              = 4/15 = 0.26666667
+  SPEC (exact)            = -36/1225 = -0.02938776
+  R' = both/baseline      = 245/272 = 0.90073529
+  SPEC (spectral |n|<=3000) = -0.02939543  |err|=7.68e-06
+  -- LATTICE STRUCTURE --
+     gcd(R) = 2  =>  chat supported on 2 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 14 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = -0.00038830  (-0.00131 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = -0.02900714  (-0.09798 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=   14 (=    1*14 mod7=1)  term=-0.0110408  |chat|=0.088845 |ghat|=0.062135
+     n=   28 (=    2*14 mod7=2)  term=-0.0104566  |chat|=0.106477 |ghat|=0.049102
+     n=   42 (=    3*14 mod7=3)  term=-0.0098946  |chat|=0.029573 |ghat|=0.167289
+     n=   84 (=    6*14 mod7=6)  term=+0.0030895  |chat|=0.019612 |ghat|=0.078763
+     n=  182 (=   13*14 mod7=6)  term=+0.0009066  |chat|=0.008105 |ghat|=0.055932
+     n=  112 (=    8*14 mod7=1)  term=-0.0008701  |chat|=0.005406 |ghat|=0.080481
+     n=   70 (=    5*14 mod7=5)  term=+0.0007787  |chat|=0.003329 |ghat|=0.116959
+     n=  210 (=   15*14 mod7=1)  term=-0.0007588  |chat|=0.003032 |ghat|=0.125144
+     n=  154 (=   11*14 mod7=4)  term=-0.0005226  |chat|=0.003217 |ghat|=0.081218
+     n=   98 (=    7*14 mod7=0)  term=-0.0005025  |chat|=0.003800 |ghat|=0.066109
+     n=  126 (=    9*14 mod7=2)  term=+0.0002527  |chat|=0.008022 |ghat|=0.015747
+     n=  700 (=   50*14 mod7=1)  term=+0.0002275  |chat|=0.003394 |ghat|=0.033515
+
+==============================================================================================
+  (R gcd=3 {3,6,9,12}, Q={1,2,5})  R(14-free)=[3, 6, 9, 12]  Q(multipliers, far=14Q)=[1, 2, 5]
+     full set S = [3, 6, 9, 12, 14, 28, 70]
+==============================================================================================
+  meas(R-safe)            = 13/21 = 0.61904762
+  meas(Q-lonely)          = 47/70 = 0.67142857
+  baseline = product      = 611/1470 = 0.41564626
+  meas(both)              = 173/420 = 0.41190476
+  SPEC (exact)            = -11/2940 = -0.00374150
+  R' = both/baseline      = 1211/1222 = 0.99099836
+  SPEC (spectral |n|<=3000) = -0.00374843  |err|=6.93e-06
+  -- LATTICE STRUCTURE --
+     gcd(R) = 3  =>  chat supported on 3 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 42 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = +0.00005648  (+0.00014 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = -0.00380490  (-0.00915 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=  126 (=    9*14 mod7=2)  term=-0.0025792  |chat|=0.015158 |ghat|=0.085081
+     n=   42 (=    3*14 mod7=3)  term=-0.0011809  |chat|=0.065163 |ghat|=0.009061
+     n=  210 (=   15*14 mod7=1)  term=-0.0009971  |chat|=0.005157 |ghat|=0.096684
+     n=   84 (=    6*14 mod7=6)  term=+0.0009359  |chat|=0.009845 |ghat|=0.047530
+     n=  168 (=   12*14 mod7=5)  term=+0.0003208  |chat|=0.004923 |ghat|=0.032588
+     n=  336 (=   24*14 mod7=3)  term=-0.0001692  |chat|=0.002461 |ghat|=0.034369
+     n=  420 (=   30*14 mod7=2)  term=-0.0001233  |chat|=0.001969 |ghat|=0.031314
+     n=  378 (=   27*14 mod7=6)  term=+0.0001036  |chat|=0.005053 |ghat|=0.010248
+     n=  546 (=   39*14 mod7=4)  term=+0.0001020  |chat|=0.005013 |ghat|=0.010178
+     n= 1050 (=   75*14 mod7=5)  term=-0.0000756  |chat|=0.002607 |ghat|=0.014508
+     n=  630 (=   45*14 mod7=3)  term=-0.0000656  |chat|=0.003032 |ghat|=0.010815
+     n=  462 (=   33*14 mod7=5)  term=-0.0000340  |chat|=0.005924 |ghat|=0.002871
+
+==============================================================================================
+  (R coprime-ish {5,9,11,13}, Q={1,2,3})  R(14-free)=[5, 9, 11, 13]  Q(multipliers, far=14Q)=[1, 2, 3]
+     full set S = [5, 9, 11, 13, 14, 28, 42]
+==============================================================================================
+  meas(R-safe)            = 118/231 = 0.51082251
+  meas(Q-lonely)          = 29/42 = 0.69047619
+  baseline = product      = 1711/4851 = 0.35271078
+  meas(both)              = 53/154 = 0.34415584
+  SPEC (exact)            = -83/9702 = -0.00855494
+  R' = both/baseline      = 3339/3422 = 0.97574518
+  SPEC (spectral |n|<=3000) = -0.00855770  |err|=2.77e-06
+  -- LATTICE STRUCTURE --
+     gcd(R) = 1  =>  chat supported on 1 Z
+     gcd(Q) = 1  =>  Q-lonely (in t) supported on 14 Z  (=14*gcd(Q))
+     RESONANCE LATTICE L = lcm = 14 Z   (only these n give nonzero term)
+     trunk (n in 98 Z, apex-7 after pullback)  = +0.00105082  (+0.00298 * baseline)
+     nonzero shell (n in 14Z \ 98Z)            = -0.00960853  (-0.02724 * baseline)
+  -- TOP RESONANT FREQUENCIES (n, term, |chat|, |ghat|, n/14) --
+     n=   28 (=    2*14 mod7=2)  term=-0.0083892  |chat|=0.028617 |ghat|=0.146575
+     n=   42 (=    3*14 mod7=3)  term=-0.0053101  |chat|=0.020524 |ghat|=0.129362
+     n=   84 (=    6*14 mod7=6)  term=+0.0031661  |chat|=0.010039 |ghat|=0.157695
+     n=   70 (=    5*14 mod7=5)  term=+0.0018121  |chat|=0.017806 |ghat|=0.050886
+     n=   98 (=    7*14 mod7=0)  term=+0.0009586  |chat|=0.005649 |ghat|=0.084853
+     n=   14 (=    1*14 mod7=1)  term=-0.0007111  |chat|=0.017924 |ghat|=0.019837
+     n=  112 (=    8*14 mod7=1)  term=-0.0006757  |chat|=0.021781 |ghat|=0.015511
+     n=   56 (=    4*14 mod7=4)  term=-0.0006515  |chat|=0.003430 |ghat|=0.094971
+     n=  140 (=   10*14 mod7=3)  term=+0.0004864  |chat|=0.006419 |ghat|=0.037888
+     n=  182 (=   13*14 mod7=6)  term=+0.0002999  |chat|=0.003858 |ghat|=0.038865
+     n=  252 (=   18*14 mod7=4)  term=-0.0001911  |chat|=0.005093 |ghat|=0.018760
+     n=  238 (=   17*14 mod7=3)  term=+0.0001506  |chat|=0.003885 |ghat|=0.019381
+
+==============================================================================================
+SUMMARY: R', SPEC, resonance-lattice generator L, trunk vs shell
+==============================================================================================
+label                                            R-prime        SPEC       L      trunk      shell
+R={1..13}\{12} (12->14), Q={1} (r=1 far)         1.16667    0.001737      14   0.000000   0.001738
+R={1..12}, Q={1,2} (far 14,28; drop 13)          0.70147   -0.007999      14  -0.000435  -0.007565
+R={1..11}, Q={1,2,3} (r=3 far)                   0.96733   -0.001271      14   0.000099  -0.001372
+R={1..10}, Q={1,2,3,4} (r=4 far)                 1.05790    0.004945      14  -0.000847   0.005789
+R={1..9}, Q={1..5} (r=5 far)                     1.03957    0.003616      14  -0.000229   0.003839
+R={1..8}, Q={1..6} (r=6 MULTI-FAR, max)          0.95869   -0.005019      14  -0.000612  -0.004415
+R={1..9}, Q={1,3,5} (spread far)                 1.02780    0.003260      14   0.000155   0.003100
+R={1..9}, Q={2,3,5} (no q=1, gcd(Q)=1)           1.02780    0.003260      14   0.000155   0.003099
+R even gcd=2 {2..12}, Q={1,3,5}                  0.90074   -0.029388      14  -0.000388  -0.029007
+R gcd=3 {3,6,9,12}, Q={1,2,5}                    0.99100   -0.003741      42   0.000056  -0.003805
+R coprime-ish {5,9,11,13}, Q={1,2,3}             0.97575   -0.008555      14   0.001051  -0.009609
+
+  R' range over multi-far family: [0.70147, 1.16667]
+DONE.

@@ -1,0 +1,97 @@
+LRC14 side-channel repair ladder
+==============================================================================
+parameters: single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5 workers=8
+packets=21913 routes={'Q-WITNESS': 14676, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 4, 'K33-STATE-LIFT': 3, 'COVERING-MOMENT': 7228}
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, fixed circle sections, section boundaries, wall crossings,
+    residues, cover arcs, Fourier modes, endpoint owners, automatic states,
+    safe-component bars, packet labels, and proof obligations.
+  chosen vertices:
+    quotient-repair carriers joining automatic words to one side-channel.
+  preserved predicate tested:
+    open/boundary status and theorem route are checked for fiber constancy.
+  challenged assumption:
+    a finite automaton quotient is not proof data until every mixed fiber has
+    a declared magnitude, topology, endpoint, packet-label, or residual exit.
+
+[1] Quotient repair ladder
+  name                              fibers mixed_route mixed_status mixed_family max_fiber max_mixed routes note
+  automatic_word                      225         143            1          178      1179      1179      4 Moser/fibbinary word only
+  automatic_counts                     19          16            1           18      5274      5274      4 forgets order and magnitude
+  word_plus_q_class                   473           5            1            6      1124        32      3 word with coarse q sector
+  word_plus_q_threshold               779           5            1            6       344        32      3 word with exact q-threshold
+  word_plus_q_factor_power           1773         366            0          526       352       352      3 Fermat-Catalan / factor sidecar
+  word_plus_tail_bucket               367         213            1          282       789       789      3 coarse lacunary tail magnitude
+  word_plus_tail_exact               7355        2175            2         2213        21        18      3 exact tail magnitude cocycle
+  word_plus_M                        1784         366            0          528       352       352      3 exact LRC scale retained
+  word_plus_M_q                      2770           1            0            2       344         2      2 exact scale plus q-threshold
+  word_plus_boundary_topology        2795           1            0            2       107         2      2 safe-component topology and coarse mass
+  word_plus_packet_labels           21913           0            0            0         1         0      1 C27/K33/transfer labels reattached
+  word_plus_guarded_packet_no_route  21913           0            0            0         1         0      1 maximal non-route packet sidecar
+  word_plus_filter_exit               374           0            0          105      1124         0      1 uses route-derived exit; diagnostic only
+  word_plus_route                     374           0            0          105      1124         0      1 route is the target label; sanity check only
+
+[2] Largest mixed-route fibers by quotient
+  automatic_word: key='MFCMMCCFFCCCC' rows=1179 routes={'COVERING-MOMENT': 55, 'Q-WITNESS': 1124} status={'open': 1179}
+    sample=['two drop(10, 13)->add(23, 30)', 'two drop(10, 12)->add(14, 30)', 'two drop(10, 12)->add(15, 30)', 'two drop(10, 12)->add(19, 30)', 'two drop(10, 12)->add(22, 30)', 'two drop(10, 12)->add(23, 30)', 'two drop(10, 12)->add(25, 30)', 'two drop(10, 12)->add(26, 30)']
+  automatic_counts: key=(3, 4, 6) rows=5274 routes={'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 1568, 'Q-WITNESS': 3703} status={'boundary': 2, 'open': 5272}
+    sample=['P13-shell alias 13->107', 'P13-shell alias 13->134', 'P13-shell alias 13->53', 'scale-separated AP tail 200', 'single swap 13->100', 'single swap 13->101', 'single swap 13->102', 'single swap 13->103']
+  word_plus_q_class: key=('MFCMMCCFFFCCC', 'apex q=14') rows=32 routes={'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 29} status={'boundary': 2, 'open': 30}
+    sample=['AP', 'GW 12->24', 'petal 13->26', 'single swap 13->39', 'single swap 12->48', 'single swap 13->52', 'single swap 13->78', 'single swap 13->91']
+  word_plus_q_threshold: key=('MFCMMCCFFFCCC', 14) rows=32 routes={'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 29} status={'boundary': 2, 'open': 30}
+    sample=['AP', 'GW 12->24', 'petal 13->26', 'single swap 13->39', 'single swap 12->48', 'single swap 13->52', 'single swap 13->78', 'single swap 13->91']
+  word_plus_q_factor_power: key=('MFCMMCCFFCCCC', '3^2', 'q=9=3^2,p*q=9=3^2') rows=352 routes={'COVERING-MOMENT': 2, 'Q-WITNESS': 350} status={'open': 352}
+    sample=['single swap 9->100', 'single swap 9->101', 'single swap 9->102', 'single swap 9->103', 'single swap 9->104', 'single swap 9->105', 'single swap 9->106', 'single swap 9->107']
+  word_plus_tail_bucket: key=('MFCMMCCFFCCCC', '<=2') rows=789 routes={'COVERING-MOMENT': 22, 'Q-WITNESS': 767} status={'open': 789}
+    sample=['two drop(10, 13)->add(23, 30)', 'two drop(10, 12)->add(15, 30)', 'two drop(10, 12)->add(19, 30)', 'two drop(10, 12)->add(22, 30)', 'two drop(10, 12)->add(23, 30)', 'two drop(10, 12)->add(25, 30)', 'two drop(10, 12)->add(26, 30)', 'two drop(10, 12)->add(27, 30)']
+  word_plus_tail_exact: key=('MFCMMCCFFCCMC', Fraction(3, 2)) rows=18 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 17} status={'open': 18}
+    sample=['two drop(10, 12)->add(20, 30)', 'two drop(10, 13)->add(20, 30)', 'two drop(10, 11)->add(20, 30)', 'two drop(8, 13)->add(16, 24)', 'two drop(10, 11)->add(16, 24)', 'two drop(10, 12)->add(16, 24)', 'two drop(10, 13)->add(16, 24)', 'two drop(8, 11)->add(16, 24)']
+  word_plus_M: key=('MFCMMCCFFCCCC', Fraction(1, 9)) rows=352 routes={'COVERING-MOMENT': 2, 'Q-WITNESS': 350} status={'open': 352}
+    sample=['single swap 9->100', 'single swap 9->101', 'single swap 9->102', 'single swap 9->103', 'single swap 9->104', 'single swap 9->105', 'single swap 9->106', 'single swap 9->107']
+  word_plus_M_q: key=('MFCMMCCFFCCMC', Fraction(2, 23), 14) rows=2 routes={'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 1} status={'open': 2}
+    sample=['two drop(10, 13)->add(20, 26)', 'two drop(8, 12)->add(16, 24)']
+  word_plus_boundary_topology: key=('MFCMMCCFFFCCF', 14, 6, 13, '(1e-3,1e-2]') rows=2 routes={'COVERING-MOMENT': 1, 'K33-STATE-LIFT': 1} status={'open': 2}
+    sample=['two drop(12, 13)->add(26, 36)', 'single swap 12->72']
+  word_plus_packet_labels: route-pure
+  word_plus_guarded_packet_no_route: route-pure
+  word_plus_filter_exit: route-pure
+  word_plus_route: route-pure
+
+[3] AP/Goddyn-Wong word fiber repair
+  boundary word=MFCMMCCFFFCCC
+  raw word rows=639 routes={'Q-WITNESS': 603, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 33}
+  automatic_word                   same_AP_GW=True  AP_rows= 639 AP_routes={'Q-WITNESS': 603, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 33} GW_rows= 639 GW_routes={'Q-WITNESS': 603, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 33}
+  word_plus_q_threshold            same_AP_GW=True  AP_rows=  32 AP_routes={'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 29} GW_rows=  32 GW_routes={'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 29}
+  word_plus_q_factor_power         same_AP_GW=True  AP_rows=   2 AP_routes={'BOUNDARY-AP-GW': 2} GW_rows=   2 GW_routes={'BOUNDARY-AP-GW': 2}
+  word_plus_tail_bucket            same_AP_GW=True  AP_rows= 278 AP_routes={'Q-WITNESS': 272, 'BOUNDARY-AP-GW': 2, 'COVERING-MOMENT': 4} GW_rows= 278 GW_routes={'Q-WITNESS': 272, 'BOUNDARY-AP-GW': 2, 'COVERING-MOMENT': 4}
+  word_plus_tail_exact             same_AP_GW=False AP_rows=   4 AP_routes={'Q-WITNESS': 2, 'BOUNDARY-AP-GW': 1, 'COVERING-MOMENT': 1} GW_rows=   2 GW_routes={'Q-WITNESS': 1, 'BOUNDARY-AP-GW': 1}
+  word_plus_M                      same_AP_GW=True  AP_rows=   2 AP_routes={'BOUNDARY-AP-GW': 2} GW_rows=   2 GW_routes={'BOUNDARY-AP-GW': 2}
+  word_plus_M_q                    same_AP_GW=True  AP_rows=   2 AP_routes={'BOUNDARY-AP-GW': 2} GW_rows=   2 GW_routes={'BOUNDARY-AP-GW': 2}
+  word_plus_boundary_topology      same_AP_GW=True  AP_rows=   2 AP_routes={'BOUNDARY-AP-GW': 2} GW_rows=   2 GW_routes={'BOUNDARY-AP-GW': 2}
+  word_plus_packet_labels          same_AP_GW=False AP_rows=   1 AP_routes={'BOUNDARY-AP-GW': 1} GW_rows=   1 GW_routes={'BOUNDARY-AP-GW': 1}
+  word_plus_guarded_packet_no_route same_AP_GW=False AP_rows=   1 AP_routes={'BOUNDARY-AP-GW': 1} GW_rows=   1 GW_routes={'BOUNDARY-AP-GW': 1}
+
+[4] Tournament Analysis
+  vertices are quotient-repair carriers, not runners.
+  pairwise observable:
+    route purity, open/boundary purity, family purity, retained magnitude,
+    retained topology, retained packet labels, noncircularity, proof cost,
+    and discriminating fiber count.
+  switch/gauge:
+    A -> B iff A's observable vector is lexicographically >= B's.
+  tie Hamiltonian path:
+    automatic_word -> automatic_counts -> word_plus_q_class -> word_plus_q_threshold -> word_plus_q_factor_power -> word_plus_tail_bucket -> word_plus_tail_exact -> word_plus_M -> word_plus_M_q -> word_plus_boundary_topology -> word_plus_packet_labels -> word_plus_guarded_packet_no_route -> word_plus_filter_exit -> word_plus_route
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1} c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) hp=1
+  high-retention path:
+    word_plus_guarded_packet_no_route > word_plus_packet_labels > word_plus_route > word_plus_filter_exit > word_plus_M_q > word_plus_boundary_topology > word_plus_q_threshold > word_plus_q_class > automatic_counts > automatic_word > word_plus_tail_bucket > word_plus_q_factor_power > word_plus_M > word_plus_tail_exact
+
+[5] Proof-angle readout
+  automatic words alone are far from route-pure.
+  q-threshold and q-factor/power fields reduce but do not eliminate mixed fibers.
+  exact M attached to the automatic word already separates open/boundary status.
+  exact M is not enough for theorem-route purity; it still needs packet labels or topology.
+  the maximal non-route guarded packet signature is route-pure in this bank.
+  Candidate zipper theorem:
+    In any fixed automatic word fiber, the first nonzero repair cochain among exact M/q, boundary topology, C27/K33 transfer labels, tail magnitude, convergence/arc-Cech sidecars, and harmonic dual data either opens a strict component, descends to a known family, is killed by a dual certificate, or emits F7/THM-572 residual debt.

@@ -1,0 +1,148 @@
+S140 LRC14 C27 -> q=3 UNITAL BLOCK-LIFT SYNTHESIS
+==============================================================================
+[1] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, C27 residues, antipodal shells, hole/double statuses,
+    AP/GW labels, q=3 unital points, unital 4-blocks, branch-local
+    charts, S138 two-hole obligations, and S139 affine-depth packets.
+  chosen predicates:
+    raw test: can marked residue packets be simultaneous q=3 blocks?
+    calibrated test: what unique block completes each labelled pair?
+  quotient preserves:
+    C27 hole/double shell pair, branch label, lambda=1 incidence,
+    AP/GW anchor visibility, and transfer-component intersections.
+  quotient destroys:
+    exact time geometry, canonical S8 symmetry, and within-shell
+    orientation beyond the declared antipodal pair.
+  challenged assumption:
+    one unital chart should contain all low-frontier transfers.  The
+    raw lift says no; branch-local charts and calibrated completions work.
+
+[2] q=3 Hermitian unital sanity
+  GF(9) model: w^2=-1 over F3; Hermitian equation x^4+y^4+z^4=0.
+  projective unital points=28
+  non-tangent 4-point blocks=63
+  line intersection histogram={1: 28, 4: 63}
+  block_size_hist={4: 63}
+  point_replication_hist={9: 28}
+  pair_to_block entries=378 expected=378
+  secant pair multiplicity per block={6: 63}
+  block intersection histogram={0: 945, 1: 1008}
+  readout: two distinct unital blocks never share two points.
+
+[3] Raw C27 residue-pair block model
+  GW  GW H12->D3         branch=tight-floor          block=(3, 12, 15, 24)
+  K33 K33 H12->D9        branch=K33-unit-excess      block=(9, 12, 15, 18)
+  P10 petal H10->D7      branch=C27-petal-two-block  block=(7, 10, 17, 20)
+  P13 petal H13->D1      branch=C27-petal-two-block  block=(1, 13, 14, 26)
+  simultaneous low-frontier repeated pairs={(12, 15): 2}
+  obstruction:
+    GW and K33 both contain the C27 hole pair (12,15).  Since a q=3
+    unital has lambda=1, those two packets cannot both be blocks in
+    one unital chart under the raw residue-pair lift.
+
+[4] Global AP/GW-label block model
+  GW  block=('AP', 'D3', 'GW', 'H12')
+  K33 block=('AP', 'D9', 'GW', 'H12')
+  P10 block=('AP', 'D7', 'GW', 'H10')
+  P13 block=('AP', 'D1', 'GW', 'H13')
+  repeated pairs={('AP', 'GW'): 4, ('AP', 'H12'): 2, ('GW', 'H12'): 2}
+  readout:
+    treating AP and GW as two global points in every transfer block
+    repeats the pair (AP,GW).  AP/GW must be chart labels, branch
+    colors, or a single calibrated anchor, not universal vertices.
+
+[5] Branch-local q=3 unital chart test
+  tight chart: GW + both petals                 status=EMBEDS
+    desired_blocks=[(3, 12, 15, 24), (7, 10, 17, 20), (1, 13, 14, 26)]
+    example_unital_block_indices=[0, 33, 50]
+    example_unital_blocks=[(0, 1, 2, 3), (4, 5, 6, 7), (8, 9, 10, 11)]
+  K33 chart: near-miss + both petals            status=EMBEDS
+    desired_blocks=[(9, 12, 15, 18), (7, 10, 17, 20), (1, 13, 14, 26)]
+    example_unital_block_indices=[0, 33, 50]
+    example_unital_blocks=[(0, 1, 2, 3), (4, 5, 6, 7), (8, 9, 10, 11)]
+  global low frontier: GW + K33 + petals        status=FAIL(pair-repeat)
+    desired_blocks=[(3, 12, 15, 24), (9, 12, 15, 18), (7, 10, 17, 20), (1, 13, 14, 26)]
+    repeated_pairs={(12, 15): 2}
+  S138 splice drop(10,12)->add(20,24)           status=EMBEDS
+    desired_blocks=[(7, 10, 17, 20), (3, 12, 15, 24)]
+    example_unital_block_indices=[0, 33]
+    example_unital_blocks=[(0, 1, 2, 3), (4, 5, 6, 7)]
+  S138 splice drop(10,12)->add(20,36)           status=EMBEDS
+    desired_blocks=[(7, 10, 17, 20), (9, 12, 15, 18)]
+    example_unital_block_indices=[0, 33]
+    example_unital_blocks=[(0, 1, 2, 3), (4, 5, 6, 7)]
+  12-branch superposition only                  status=FAIL(pair-repeat)
+    desired_blocks=[(3, 12, 15, 24), (9, 12, 15, 18)]
+    repeated_pairs={(12, 15): 2}
+  splice readout:
+    The two S138 genuine two-hole rows are not new single unital
+    blocks.  Each is a two-block path: petal H10->D7 plus either
+    the GW block H12->D3 or the K33 near-miss block H12->D9.
+
+[6] AP/Goddyn-Wong calibrated pair-completion model
+  anchor_block_id=0
+  anchor labels=('AP', 'D3', 'GW', 'H12')
+  calibration: block(AP,GW) = block(H12,D3) = {AP,GW,H12,D3}.
+  guardrail:
+    this is noncanonical and AP/GW-calibrated, not a symmetric AP8
+    pair-slot model.  The invariant is unique pair completion.
+  transfer completions:
+    GW 12->24: M=1/14 branch=tight-floor
+      component H12->D3 lifts to block 0: ('AP', 'D3', 'GW', 'H12')
+    near-miss 12->36: M=3/41 branch=K33-unit-excess
+      component H12->D9 lifts to block 19: ('D10', 'D9', 'H12', 'H9')
+    petal 10->20: M=2/27 branch=C27-petal
+      component H10->D7 lifts to block 33: ('D7', 'D9', 'H10', 'H13')
+    petal 13->26: M=2/27 branch=C27-petal
+      component H13->D1 lifts to block 46: ('D1', 'D11', 'D12', 'H13')
+    splice 10,12 -> 20,24: M=2/27 branch=C27 two-hole splice
+      component H10->D7 lifts to block 33: ('D7', 'D9', 'H10', 'H13')
+      component H12->D3 lifts to block 0: ('AP', 'D3', 'GW', 'H12')
+      component block intersections=((),) union_size=8
+    splice 10,12 -> 20,36: M=2/27 branch=C27/K33 two-hole splice
+      component H10->D7 lifts to block 33: ('D7', 'D9', 'H10', 'H13')
+      component H12->D9 lifts to block 19: ('D10', 'D9', 'H12', 'H9')
+      component block intersections=(('D9',),) union_size=7
+  calibrated splice readout:
+    petal10 block=('D7', 'D9', 'H10', 'H13')
+    near/K33 block=('D10', 'D9', 'H12', 'H9')
+    10+12 -> 20+24 is a disjoint product of the petal block and AP/GW block.
+    10+12 -> 20+36 is a linked packet sharing D9:
+      AP/GW --H12-- near/K33 --D9-- petal10.
+
+[7] Tournament Analysis
+  proof-carrier vertices, not runners.
+  carrier observable:
+    theorem-scale retention, C27 predicate retention, lambda=1 incidence,
+    finite checkability, and anti-scalar guard.
+  carrier fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 hp=1
+  carrier Hamiltonian path:
+    exact M/Farey branch > C27 marked transfer > unital pair-repeat obstruction > branch-local q3 unital chart > calibrated AP/GW pair-completion > S138 two-block splice path > global AP/GW vertex model > raw unital analogy
+  calibrated-packet tournament:
+    observable: AP/GW visibility, unit/nonunit content, depth, K33 flag, smaller union.
+    splice 10,12 -> 20,24        score=(1, 2, 2, 0, -8)
+    GW 12->24                    score=(1, 1, 1, 0, -4)
+    splice 10,12 -> 20,36        score=(0, 2, 2, 1, -7)
+    petal 10->20                 score=(0, 2, 1, 0, -4)
+    near-miss 12->36             score=(0, 1, 1, 1, -4)
+    petal 13->26                 score=(0, 1, 1, 0, -4)
+    fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} c3=0 hp=1
+    Hamiltonian path:
+      splice 10,12 -> 20,24 > GW 12->24 > splice 10,12 -> 20,36 > petal 10->20 > near-miss 12->36 > petal 13->26
+
+[8] Verdict / POKE contribution
+  Negative global result:
+    the raw C27 residue-pair lift cannot put GW H12->D3 and K33
+    H12->D9 into the same q=3 unital, because the C27 pair (12,15)
+    would occur in two different blocks.
+  Positive local result:
+    each branch separately embeds into the q=3 unital incidence design,
+    and the S138 genuine two-hole rows lift as two-block splices.
+  Calibrated pair-completion result:
+    after AP/GW labels are attached to one Hermitian unital, each marked
+    pair has a unique completion; GW is the AP/GW anchor, and the
+    K33/petal near splice forms AP/GW--H12--near/K33--D9--petal10.
+  Proof-use refinement:
+    use the unital as a branch-local pair-unique chart and POKE forum
+    for transfer packets, not as scalar evidence or a universal atlas.

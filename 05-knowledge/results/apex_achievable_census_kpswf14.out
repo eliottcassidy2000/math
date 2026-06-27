@@ -1,0 +1,2609 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\apex_achievable_census_kpswf14.py:17: SyntaxWarning: invalid escape sequence '\{'
+  {1,...,13} = Z/14\{0} (only 13-subset).  For EACH unit phase a* the winding
+########################################################################
+# THREAD 1 (2)+(3): ACHIEVABLE apex tournaments + NECESSARY verdict
+# kind-pasteur-2026-06-22. No a-invariance assumed (it is FALSE).
+########################################################################
+# units mod 14 = [1, 3, 5, 9, 11, 13]
+
+AP apex at a*=1 isomorphic to STANDARD circulant R_13 (Z/13, beat next 6): True
+  standard R_13: score=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6), c3=91, H=3711175, self_conv=True, |Aut|=13
+  (Both are 'beat the next 6 clockwise'; AP on the 14-circle minus the hole,
+   standard on the 13-circle. They coincide as iso classes: the doubling map
+   x->2x mod 13... actually the AP residues 1..13 on Z/14 with arc {1..6}
+   reproduce the Z/13 circulant -- confirmed above.)
+
+########################################################################
+# LAYER 1: AP residues {1..13}, all optimum phases a* in units
+########################################################################
+
+------------------------------------------------------------------------
+  LAYER 1 (AP one-hole tiling, 6 unit phases): 6 distinct iso classes
+------------------------------------------------------------------------
+  score=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6)   <== REGULAR R_13
+     c3=91, H=3711175, self_conv=True, |Aut|=13, regular=True, sample_mult=1
+     witnesses: ['AP a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3394355, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['AP a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['AP a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['AP a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['AP a*=11']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['AP a*=13']
+
+  # REGULAR among AP apex tournaments: 1 (H=[3711175], at phase(s) [['AP a*=1']])
+
+########################################################################
+# LAYER 2: one-doubled/one-missing residue multisets, all a*
+########################################################################
+  enumerated 156 (missing,doubled) patterns x 6 phases
+
+------------------------------------------------------------------------
+  LAYER 2 (one-doubled-one-missing, all phases): 842 distinct iso classes
+------------------------------------------------------------------------
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3577045, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=6,a*=5', 'm=13,d=5,a*=5']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3577045, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=1,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3577045, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=5,a*=5']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3577045, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=2,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3577045, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=3,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3577045, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=4,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3577045, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=6,d=1,a*=13', 'm=7,d=1,a*=13']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3577045, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=5,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3577045, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=6,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3577045, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=6,a*=5']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=9,a*=5', 'm=13,d=8,a*=5']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=13,a*=1', 'm=13,d=12,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=8,a*=5']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=7,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=3
+     witnesses: ['m=6,d=13,a*=13', 'm=7,d=13,a*=13', 'm=8,d=13,a*=13']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=8,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=1,a*=13']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=7,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=9,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=8,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=10,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=9,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=11,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=10,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=12,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=9,a*=5']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=11,a*=1']
+  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+     c3=90, H=3551083, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=13,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3440393, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=8,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3440393, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=13,a*=13']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3436873, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=5,a*=3', 'm=13,d=4,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3436873, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=5,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3435259, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=1,a*=13']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3435259, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=6,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3418571, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=8,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3418571, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=9,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3418571, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=8,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3415811, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=3,a*=5', 'm=13,d=2,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3415811, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=1,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3415811, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=2,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3415811, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=3,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3415811, self_conv=False, |Aut|=1, regular=False, sample_mult=3
+     witnesses: ['m=6,d=2,a*=13', 'm=7,d=2,a*=13', 'm=8,d=2,a*=13']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3415811, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=4,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3415811, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=5,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3415811, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=6,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3415811, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=3,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3413437, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=6,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3413437, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=5,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3413437, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=6,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3412657, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=6,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3412657, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=3,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3394355, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=10,a*=3', 'm=13,d=9,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3394355, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=11,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3394355, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=12,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3394355, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=9,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3394355, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=13,a*=3']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3394355, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=8,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=12,a*=1', 'm=13,d=11,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=12,a*=5', 'm=13,d=11,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=11,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=13,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=13,a*=5']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=7,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=8,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=3
+     witnesses: ['m=6,d=12,a*=13', 'm=7,d=12,a*=13', 'm=8,d=12,a*=13']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=9,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=10,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=7,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=11,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=8,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=12,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=9,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=13,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=10,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3330163, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=9,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3330163, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=10,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3330163, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=10,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3330163, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=9,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3330163, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=13,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3330163, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=10,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3323273, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=4,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3323273, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=2,a*=13']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3323273, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=4,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3323273, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=4,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3323273, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=3,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3320887, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=1,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3320887, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=5,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3320887, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=1,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3280689, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=1,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3280689, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=2,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3280689, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=1,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3278393, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=1,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3278393, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=5,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3278393, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=5,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=10,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=13,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=12,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=11,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=11,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=11,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=11,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=12,a*=13']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=13,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=13,a*=13']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=10,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3265757, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=13,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=9,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=10,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=13,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=9,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=9,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=10,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=11,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=12,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=9,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=13,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=5,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=9,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=10,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3255479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=5,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3255479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=3,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3255479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=2,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3255479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=5,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3254911, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=1,a*=13']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3254911, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=3,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3254911, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=3,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3254911, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=3,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3232679, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=4,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3232679, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=3,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3232679, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=4,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3232679, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=4,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3231325, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=1,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3231325, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=1,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3231325, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=6,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3231325, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=1,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=7,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=7,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=11,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=11,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=12,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=13,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=8,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=9,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=10,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=11,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=12,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=13,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=3,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=11,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=11,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=12,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=13,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=7,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3223271, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=7,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3219511, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=13,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3219511, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=8,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3219511, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=13,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3219511, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=13,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3215147, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=4,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3215147, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=1,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3215147, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=1,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3215147, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=2,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3215147, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=3,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3215147, self_conv=False, |Aut|=1, regular=False, sample_mult=3
+     witnesses: ['m=6,d=3,a*=13', 'm=7,d=3,a*=13', 'm=8,d=3,a*=13']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3215147, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=4,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3215147, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=5,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3215147, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=6,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3215147, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=4,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=5,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=1,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=2,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=3,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=1,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=2,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=3,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=4,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=5,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=6,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=1,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=2,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3212425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=5,a*=3']
+  score=(4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=88, H=3211829, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=2,a*=1', 'm=13,d=1,a*=1']
+  score=(4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=88, H=3211829, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=3,a*=1']
+  score=(4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=88, H=3211829, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=4,a*=1']
+  score=(4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=88, H=3211829, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=5,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 8)
+     c3=88, H=3211829, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=2,a*=5']
+  score=(4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+     c3=88, H=3211829, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=6,a*=1']
+  score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 8)
+     c3=88, H=3211829, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=1,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3202799, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=11,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3195181, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=10,a*=11', 'm=13,d=9,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3180599, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=12,a*=9', 'm=13,d=11,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3179363, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=9,a*=3', 'm=13,d=8,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3179363, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=9,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3179363, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=7,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3179363, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=8,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3179363, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=7,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3179363, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=9,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3179363, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=8,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3179363, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=9,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3168053, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=2,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3168053, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=6,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3164569, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=3,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3161327, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=5,a*=11', 'm=13,d=4,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3146585, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=3,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3142369, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=3,a*=9', 'm=13,d=2,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3140279, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=6,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=11,a*=1', 'm=13,d=10,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=11,a*=5', 'm=13,d=10,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=10,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=12,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=13,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=7,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=8,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=9,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=3
+     witnesses: ['m=6,d=11,a*=13', 'm=7,d=11,a*=13', 'm=8,d=11,a*=13']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=10,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=11,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=12,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=7,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=13,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=8,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=9,a*=1']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=88, H=3139599, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=11,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=87, H=3104321, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=4,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=3101541, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=6,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=7,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=8,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=9,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=10,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=8,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=9,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=11,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=8,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=9,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=10,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=11,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=12,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=13,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=7,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=8,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=9,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3097953, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=12,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3095437, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=5,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=2,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=5,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=6,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=1,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=2,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=3,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=4,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=5,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=6,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=4,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=5,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=6,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3084225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=2,a*=3']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=87, H=3080105, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=2,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3079917, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=6,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3079917, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=1,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3079917, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=6,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3079917, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=6,a*=11']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=3075997, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=9,a*=9', 'm=13,d=8,a*=9']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=3075997, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=8,a*=9']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=3075997, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=9,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3072269, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=8,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3072269, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=11,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3072269, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=8,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3072269, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=10,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3072269, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=11,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3072269, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=13,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3072269, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=8,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3072269, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=11,a*=11']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=87, H=3059249, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=1,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3059095, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=1,a*=13']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=3056745, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=6,a*=9', 'm=13,d=5,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3054285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=12,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3054285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=11,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3054285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=8,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3054285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=11,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3054285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=11,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3054285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=11,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3054285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=3,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3054285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=12,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3054285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=13,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3054285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=11,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=7,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=12,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=8,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=9,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=10,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=9,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=11,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=9,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=12,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3051221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=7,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3041123, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=3,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3041123, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=3,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3041123, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=4,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3041123, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=3,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3040487, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=2,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3040487, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=5,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3040487, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=4,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3040487, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=2,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=87, H=3035813, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=5,a*=11']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=87, H=3035813, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=3,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=87, H=3035813, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=5,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3017319, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=9,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3017319, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=8,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3017319, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=10,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3017319, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=9,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3017319, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=5,a*=3']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=87, H=3016891, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=3,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=87, H=3016891, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=3,a*=9']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=87, H=3016891, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=5,a*=5']
+  score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=87, H=3016891, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=1,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3003275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=3,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3003275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=1,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3003275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=2,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3003275, self_conv=False, |Aut|=1, regular=False, sample_mult=3
+     witnesses: ['m=6,d=4,a*=13', 'm=7,d=4,a*=13', 'm=8,d=4,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3003275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=3,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3003275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=4,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3003275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=5,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3003275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=6,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3003275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=6,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3003275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=3,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3001717, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=6,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3001717, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=5,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=3001717, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=6,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2998391, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=6,a*=9']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2997515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=5,a*=9']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2997515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=3,a*=13']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=87, H=2997443, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=3,a*=1', 'm=13,d=2,a*=1']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=87, H=2997443, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=4,a*=1']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=87, H=2997443, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=5,a*=1']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=87, H=2997443, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=6,a*=1']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=87, H=2997443, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=1,a*=1']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+     c3=87, H=2997443, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=1,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2996907, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=8,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2996907, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=9,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2996907, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=8,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2972147, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=2,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2955905, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=4,a*=9', 'm=13,d=3,a*=9']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2948005, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=5,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2948005, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=3,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=7,a*=5', 'm=13,d=6,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=8,a*=5', 'm=13,d=7,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=10,a*=1', 'm=13,d=9,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=7,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=11,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=7,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=12,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=8,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=13,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=9,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=10,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=3
+     witnesses: ['m=6,d=10,a*=13', 'm=7,d=10,a*=13', 'm=8,d=10,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=11,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=12,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=13,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=7,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=7,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=8,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=87, H=2941087, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=8,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2934143, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=4,a*=13']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2930921, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=4,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2926177, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=3,a*=9']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2925287, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=6,a*=11', 'm=13,d=5,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2917205, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=5,a*=11']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2917205, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=5,a*=11']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2917205, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=3,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2878893, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=4,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2878893, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=1,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=13,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=10,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=13,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=8,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=12,a*=9']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=12,a*=9']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=11,a*=13']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=12,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=4,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=12,a*=13']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=13,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=10,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2872225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=1,a*=13']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2859261, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=1,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2859261, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=2,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2859261, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=1,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2838737, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=8,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2838737, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=10,a*=13']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2838737, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=13,a*=13']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2837647, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=6,a*=5']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2837647, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=1,a*=13']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=86, H=2837187, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=12,a*=13']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=86, H=2837187, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=13,a*=5']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=86, H=2837187, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=13,a*=13']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=86, H=2837187, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=2,a*=13']
+  score=(4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8)
+     c3=86, H=2837187, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=12,a*=5']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2817265, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=6,a*=3', 'm=13,d=5,a*=3']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2817265, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=5,a*=3']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2817265, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=6,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2817265, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=5,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2805815, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=5,a*=5', 'm=13,d=4,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2805815, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=4,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2805815, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=1,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2805815, self_conv=False, |Aut|=1, regular=False, sample_mult=3
+     witnesses: ['m=6,d=5,a*=13', 'm=7,d=5,a*=13', 'm=8,d=5,a*=13']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2805815, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=2,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2805815, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=3,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2805815, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=4,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2805815, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=5,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2805815, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=6,a*=1']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=4,a*=1', 'm=13,d=3,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=4,a*=3', 'm=13,d=3,a*=3']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=4,a*=5', 'm=13,d=3,a*=5']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=3,a*=5']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=5,a*=1']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=6,a*=1']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=3,a*=3']
+  score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=4,a*=3']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=1,a*=1']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=2,a*=1']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+     c3=86, H=2797883, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=4,a*=5']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2772773, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=3,a*=5']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2772773, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=5,a*=9']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=9,a*=1', 'm=13,d=8,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=10,a*=5', 'm=13,d=9,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=7,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=9,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=10,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=8,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=11,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=9,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=12,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=10,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=13,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=3
+     witnesses: ['m=6,d=9,a*=13', 'm=7,d=9,a*=13', 'm=8,d=9,a*=13']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=11,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=12,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=13,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=5,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=7,a*=1']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=10,a*=5']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2749501, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=4,a*=11']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=85, H=2747089, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=1,a*=9']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2743471, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=13,a*=9', 'm=13,d=12,a*=9']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2743471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=10,a*=3']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2743471, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=13,a*=3']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2733575, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=5,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=85, H=2731951, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=1,a*=11']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=85, H=2731951, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=1,a*=11']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2717045, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=3,a*=13']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2713333, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=2,a*=9', 'm=13,d=1,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2712281, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=3,a*=5']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2710903, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=3,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2710903, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=5,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=85, H=2695187, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=2,a*=11']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=85, H=2695187, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=4,a*=3']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=85, H=2695187, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=2,a*=11']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=85, H=2685991, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=1,a*=13']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2681035, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=10,a*=11']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2681035, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=9,a*=11']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2681035, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=11,a*=3']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2681035, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=10,a*=11']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2681035, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=12,a*=3']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2681035, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=4,a*=11']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2681035, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=9,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2675329, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=7,a*=9', 'm=13,d=6,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2675329, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=8,a*=9', 'm=13,d=7,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2675329, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=10,a*=9', 'm=13,d=9,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2675329, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=11,a*=9', 'm=13,d=10,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2675329, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=9,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2675329, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=8,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2667277, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=6,a*=5']
+  score=(5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=85, H=2646865, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=5,a*=5']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=7,a*=1', 'm=13,d=6,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=8,a*=1', 'm=13,d=7,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=13,a*=5', 'm=13,d=12,a*=5']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=8,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=9,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=12,a*=5']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=9,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=10,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=10,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=11,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=11,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=12,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=7,a*=13']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=3
+     witnesses: ['m=6,d=8,a*=13', 'm=7,d=8,a*=13', 'm=8,d=7,a*=13']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=12,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=13,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=13,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=1,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=2,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=3,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=4,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=5,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2641713, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=13,a*=5']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2638197, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=2,a*=5', 'm=13,d=1,a*=5']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2638197, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=1,a*=5']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2638197, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=7,d=1,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2638197, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=7,d=6,a*=13', 'm=8,d=6,a*=13']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2638197, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=2,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2638197, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=3,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2638197, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=4,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2638197, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=5,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2638197, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=2,a*=5']
+  score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+     c3=85, H=2638197, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=6,a*=1']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2630171, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=5,a*=1', 'm=13,d=4,a*=1']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2630171, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=6,a*=1']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2630171, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=6,a*=5']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2630171, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=1,a*=1']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2630171, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=2,a*=1']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7)
+     c3=85, H=2630171, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=3,a*=1']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2624309, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=13,a*=13']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2624309, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=10,a*=5']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2624309, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=11,a*=13']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2624309, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=9,a*=5']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2624309, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=11,a*=9']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=85, H=2624309, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=11,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2620083, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=5,a*=9', 'm=13,d=4,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2586019, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=11,a*=9']
+  score=(5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8)
+     c3=84, H=2568481, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=2,a*=13', 'm=13,d=1,a*=13']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2564191, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=13,a*=3']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2564191, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=10,a*=3']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2564191, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=11,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2560605, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=9,a*=11', 'm=13,d=8,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2560605, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=11,a*=11', 'm=13,d=10,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2560301, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=1,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2559943, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=10,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2559943, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=9,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2559943, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=10,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2559943, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=9,a*=11']
+  score=(5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8)
+     c3=84, H=2552779, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=3,a*=13']
+  score=(5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8)
+     c3=84, H=2533459, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=4,a*=13']
+  score=(4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7)
+     c3=84, H=2533459, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=2,a*=9']
+  score=(4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7)
+     c3=84, H=2533459, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=2,a*=9']
+  score=(4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7)
+     c3=84, H=2533459, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=6,a*=5']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2518945, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=8,a*=3']
+  score=(5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8)
+     c3=84, H=2514775, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=5,a*=13']
+  score=(4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7)
+     c3=84, H=2514775, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=6,a*=5']
+  score=(5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8)
+     c3=84, H=2514775, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=1,a*=9']
+  score=(5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8)
+     c3=84, H=2514775, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=5,a*=5']
+  score=(5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8)
+     c3=84, H=2514775, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=1,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2505137, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=4,a*=13']
+  score=(4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7)
+     c3=84, H=2502071, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=6,a*=1', 'm=13,d=5,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8)
+     c3=84, H=2502071, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=6,a*=13']
+  score=(4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7)
+     c3=84, H=2502071, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=1,a*=1']
+  score=(5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8)
+     c3=84, H=2502071, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=5,a*=5']
+  score=(4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7)
+     c3=84, H=2502071, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=2,a*=1']
+  score=(4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7)
+     c3=84, H=2502071, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=3,a*=1']
+  score=(4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7)
+     c3=84, H=2502071, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=4,a*=1']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 8, 8)
+     c3=84, H=2497371, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=6,a*=9']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 8, 8)
+     c3=84, H=2497371, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=2,a*=5']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 8, 8)
+     c3=84, H=2497371, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=6,a*=9']
+  score=(4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 8)
+     c3=84, H=2497371, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=1,a*=5']
+  score=(4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 8, 8)
+     c3=84, H=2497371, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=2,a*=13']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2496313, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=7,a*=3']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2496313, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=13,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2496313, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=1,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2496313, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=7,a*=3']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2496313, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=13,a*=11']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=83, H=2473149, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=6,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2451869, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=11,a*=3', 'm=13,d=10,a*=3']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2451869, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=13,a*=3', 'm=13,d=12,a*=3']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2451869, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=13,a*=13']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2451869, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=10,a*=3']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2451869, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=12,a*=3']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2451869, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=7,a*=5']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2451869, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=10,a*=13']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2451869, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=7,a*=5']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2451869, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=11,a*=3']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2451869, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=13,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2450267, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=12,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=83, H=2434539, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=6,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=84, H=2431487, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=9,a*=5']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2408831, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=13,a*=9']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=83, H=2408283, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=1,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=7,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=12,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=7,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=8,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=12,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=13,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=1,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=7,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=10,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=12,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=7,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2396327, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=12,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2376807, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=6,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2376807, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=2,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2376807, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=6,a*=11']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=83, H=2368479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=2,a*=3']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=83, H=2368479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=4,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2357729, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=13,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2357729, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=8,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2357729, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=13,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2356043, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=11,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2356043, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=8,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2356043, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=12,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2356043, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=11,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2356043, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=11,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2356043, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=8,a*=11']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=82, H=2354673, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=5,a*=9']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=83, H=2342369, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=2,a*=13']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2335907, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=2,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2335907, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=2,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2335907, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=6,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2334749, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=4,a*=5']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2334749, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=3,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2334749, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=3,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2334749, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=5,a*=13']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2334749, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=3,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2325573, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=13,a*=13']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2325573, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=9,a*=13']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2325573, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=10,a*=5']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 7, 7, 7, 8)
+     c3=83, H=2325413, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=4,a*=5']
+  score=(4, 5, 5, 5, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=83, H=2306025, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=2,a*=5']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2286447, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=7,a*=3', 'm=13,d=6,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2286447, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=8,a*=3', 'm=13,d=7,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2286447, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=7,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2286447, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=7,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2286447, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=8,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=83, H=2286447, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=9,a*=5']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=82, H=2280723, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=4,a*=9']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=82, H=2246019, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=6,a*=11']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=82, H=2246019, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=1,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=82, H=2246019, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=6,a*=11']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2244359, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=13,a*=13', 'm=13,d=12,a*=13']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2244359, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=7,a*=13']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2244359, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=8,a*=13']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2244359, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=9,a*=5']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2244359, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=12,a*=5']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2244359, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=2,a*=5']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2244359, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=7,a*=13']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2244359, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=8,a*=13']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2244359, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=13,a*=5']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=82, H=2244119, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=4,a*=11', 'm=13,d=3,a*=11']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=82, H=2231573, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=4,a*=11']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=82, H=2231573, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=4,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=82, H=2231573, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=2,a*=13']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=82, H=2230109, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=2,a*=11', 'm=13,d=1,a*=11']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=82, H=2213863, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=1,a*=11']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=82, H=2213863, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=6,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=82, H=2213863, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=1,a*=11']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2209749, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=1,a*=5']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2209749, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=6,a*=13']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=82, H=2202209, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=3,a*=3']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2190653, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=13,a*=9']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2190653, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=9,a*=5']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2190653, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=13,a*=9']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2190653, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=9,a*=13']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2190653, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=11,a*=13']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2172237, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=3,a*=3', 'm=13,d=2,a*=3']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2172237, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=2,a*=3']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2171333, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=12,a*=3', 'm=13,d=11,a*=3']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2171333, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=11,a*=3']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2171333, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=3,a*=3']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2171333, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=12,a*=3']
+  score=(4, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 8)
+     c3=82, H=2171333, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=10,a*=13']
+  score=(4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8)
+     c3=81, H=2163263, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=3,a*=13', 'm=13,d=2,a*=13']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=82, H=2162625, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=2,a*=3', 'm=13,d=1,a*=3']
+  score=(4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=82, H=2162625, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=2,a*=5']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=82, H=2162625, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=1,a*=3']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 7, 7, 7, 7, 8)
+     c3=82, H=2162625, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=2,a*=3']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=82, H=2158479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=11,a*=13']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=82, H=2158479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=12,a*=13']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=82, H=2158479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=9,a*=9']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=82, H=2158479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=8,a*=9']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=82, H=2158479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=12,a*=5']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=82, H=2158479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=9,a*=9']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=82, H=2158479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=13,a*=5']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=82, H=2158479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=8,a*=9']
+  score=(4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 7, 8, 8)
+     c3=82, H=2158479, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=3,a*=13']
+  score=(4, 4, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 8)
+     c3=81, H=2145625, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=2,a*=9']
+  score=(4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8)
+     c3=81, H=2131489, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=1,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=2131225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=9,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=2131225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=12,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=2131225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=8,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=2131225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=9,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=2131225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=5,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=2131225, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=8,a*=9']
+  score=(4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8)
+     c3=81, H=2095301, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=4,a*=13']
+  score=(4, 4, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 8)
+     c3=81, H=2079991, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=6,a*=3']
+  score=(4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8)
+     c3=81, H=2071703, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=3,a*=3']
+  score=(4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8)
+     c3=81, H=2067945, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=6,a*=13']
+  score=(4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8)
+     c3=81, H=2067945, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=2,a*=5']
+  score=(4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8)
+     c3=81, H=2067945, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=4,a*=9']
+  score=(4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8)
+     c3=81, H=2067945, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=4,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=2065111, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=13,a*=9']
+  score=(4, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 8)
+     c3=81, H=2061833, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=5,a*=13']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=2058041, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=4,a*=13']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=2058041, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=2,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=2057221, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=1,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 8)
+     c3=81, H=2051219, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=6,a*=3']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=2015017, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=7,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=2015017, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=10,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=2015017, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=7,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=2015017, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=10,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=1999817, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=12,a*=5']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=1999817, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=12,a*=13']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=1999817, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=10,a*=13']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=1999817, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=12,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=1999817, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=10,a*=5']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=1999817, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=12,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=1999817, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=2,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=81, H=1999817, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=13,a*=5']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1981593, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=7,a*=11', 'm=13,d=6,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1981593, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=8,a*=11', 'm=13,d=7,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1981593, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=12,a*=11', 'm=13,d=11,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1981593, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=13,a*=11', 'm=13,d=12,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1970911, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=11,a*=3']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1970911, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=12,a*=3']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1963923, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=4,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1959499, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=12,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1939901, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=3,a*=11', 'm=13,d=2,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1931311, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=8,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1931311, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=11,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1931311, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=8,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1931311, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=11,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1915489, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=13,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1915489, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=13,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1902113, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=1,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1902113, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=5,a*=13']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1892201, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=12,a*=13']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1892201, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=13,a*=5']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1892201, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=9,a*=13']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1892201, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=7,a*=5']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1892201, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=13,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1892201, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=1,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1892201, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=7,a*=5']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1892201, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=13,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1892201, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=12,a*=5']
+  score=(4, 4, 4, 6, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=80, H=1891563, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=1,a*=5']
+  score=(4, 4, 4, 6, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=80, H=1891563, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=5,a*=9']
+  score=(4, 4, 4, 6, 6, 6, 6, 6, 6, 7, 7, 8, 8)
+     c3=80, H=1891563, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=5,a*=9']
+  score=(4, 4, 5, 5, 6, 6, 6, 6, 6, 6, 8, 8, 8)
+     c3=80, H=1891563, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=3,a*=13']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1879211, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=7,a*=3']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1879211, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=12,a*=3']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1879211, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=2,a*=3']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1879211, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=7,a*=3']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1879211, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=11,a*=3']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1879211, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=13,a*=9']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=80, H=1864403, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=10,a*=5']
+  score=(4, 4, 4, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=79, H=1860765, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=5,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=12,a*=13', 'm=13,d=11,a*=13']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=7,a*=13']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=8,a*=13']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=7,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=10,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=7,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=10,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=10,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=13,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=1,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=7,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=10,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=12,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=7,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=10,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=7,a*=13']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1832715, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=8,a*=13']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 8, 8, 8)
+     c3=79, H=1808703, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=6,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 8, 8, 8)
+     c3=79, H=1808703, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=6,a*=11']
+  score=(4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 8, 8, 8)
+     c3=79, H=1796849, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=3,a*=13']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1795641, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=4,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1795641, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=4,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1795641, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=8,d=4,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1795641, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=6,a*=13']
+  score=(4, 4, 4, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=79, H=1788233, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=2,a*=9']
+  score=(4, 4, 4, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=79, H=1788233, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=6,d=4,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1780425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=7,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1780425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=10,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1780425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=4,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1780425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=7,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1780425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=9,a*=13']
+  score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8)
+     c3=79, H=1780425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=10,a*=13']
+  score=(4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8)
+     c3=78, H=1772931, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=4,a*=9']
+  score=(4, 4, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8)
+     c3=78, H=1772931, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=2,a*=3']
+  score=(4, 4, 4, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8)
+     c3=79, H=1759353, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=1,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8)
+     c3=78, H=1747511, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=4,a*=13', 'm=13,d=3,a*=13']
+  score=(4, 4, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8)
+     c3=78, H=1737121, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=2,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8)
+     c3=78, H=1733153, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=1,a*=9']
+  score=(4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8)
+     c3=78, H=1686425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=5,a*=13']
+  score=(4, 4, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8)
+     c3=78, H=1686425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=3,a*=11']
+  score=(4, 4, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8)
+     c3=78, H=1686425, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=3,a*=11']
+  score=(4, 4, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8)
+     c3=78, H=1680311, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=4,a*=5']
+  score=(4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8)
+     c3=78, H=1680311, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=2,a*=11']
+  score=(4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8)
+     c3=78, H=1680311, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=2,a*=11']
+  score=(4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8)
+     c3=78, H=1676985, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=6,a*=13']
+  score=(4, 4, 4, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8)
+     c3=78, H=1676985, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=1,a*=5']
+  score=(4, 4, 4, 5, 6, 6, 6, 6, 6, 7, 8, 8, 8)
+     c3=78, H=1647423, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=10,a*=13']
+  score=(4, 4, 4, 5, 6, 6, 6, 6, 6, 7, 8, 8, 8)
+     c3=78, H=1647423, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=11,a*=13']
+  score=(4, 4, 4, 5, 6, 6, 6, 6, 6, 7, 8, 8, 8)
+     c3=78, H=1647423, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=4,a*=13']
+  score=(4, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8)
+     c3=77, H=1602199, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=11,a*=11']
+  score=(4, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8)
+     c3=77, H=1602199, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=8,a*=11']
+  score=(4, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8)
+     c3=77, H=1602199, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=11,a*=11']
+  score=(4, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8)
+     c3=77, H=1602199, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=3,a*=11']
+  score=(4, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8)
+     c3=77, H=1602199, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=8,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1598965, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=7,a*=9']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1598965, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=10,a*=9']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1598965, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=13,a*=9']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1598965, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=4,a*=9']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1598965, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=7,a*=9']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1598965, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=10,a*=9']
+  score=(4, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8)
+     c3=77, H=1565285, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=5,a*=13']
+  score=(4, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8)
+     c3=77, H=1545521, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=11,a*=13']
+  score=(4, 4, 4, 5, 5, 6, 6, 6, 7, 7, 8, 8, 8)
+     c3=77, H=1545521, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=9,a*=13']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1523515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=7,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1523515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=12,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1523515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=7,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1523515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=12,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1523515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=2,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1523515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=7,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1523515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=9,d=12,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1523515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=7,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1523515, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=10,d=12,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1518273, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=4,d=2,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1490507, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=11,a*=13', 'm=13,d=10,a*=13']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1490507, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=7,a*=13']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1490507, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=3,d=8,a*=13']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1490507, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=7,a*=13']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1490507, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=8,a*=13']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1465017, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=11,d=6,a*=13']
+  score=(4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8)
+     c3=76, H=1462721, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=9,a*=13']
+  score=(4, 4, 4, 5, 5, 6, 6, 6, 6, 8, 8, 8, 8)
+     c3=76, H=1456587, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=4,a*=13']
+  score=(4, 4, 4, 4, 5, 6, 6, 7, 7, 7, 8, 8, 8)
+     c3=75, H=1434279, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=5,d=3,a*=11']
+  score=(4, 4, 4, 5, 5, 5, 6, 6, 7, 8, 8, 8, 8)
+     c3=75, H=1409411, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=5,a*=13', 'm=13,d=4,a*=13']
+  score=(4, 4, 4, 5, 5, 5, 6, 6, 7, 8, 8, 8, 8)
+     c3=75, H=1376385, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=6,a*=13']
+  score=(4, 4, 4, 4, 5, 6, 6, 6, 7, 8, 8, 8, 8)
+     c3=74, H=1293831, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=9,a*=13']
+  score=(4, 4, 4, 4, 5, 6, 6, 6, 7, 8, 8, 8, 8)
+     c3=74, H=1293831, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=10,a*=13']
+  score=(4, 4, 4, 4, 5, 6, 6, 6, 7, 8, 8, 8, 8)
+     c3=74, H=1293831, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=5,a*=13']
+  score=(4, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8)
+     c3=73, H=1236275, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=10,a*=13', 'm=13,d=9,a*=13']
+  score=(4, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8)
+     c3=73, H=1236275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=7,a*=13']
+  score=(4, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8)
+     c3=73, H=1236275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=2,d=8,a*=13']
+  score=(4, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8)
+     c3=73, H=1236275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=7,a*=13']
+  score=(4, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8)
+     c3=73, H=1236275, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=8,a*=13']
+  score=(4, 4, 4, 4, 5, 5, 6, 7, 7, 8, 8, 8, 8)
+     c3=73, H=1224969, self_conv=False, |Aut|=1, regular=False, sample_mult=1
+     witnesses: ['m=12,d=6,a*=13']
+  score=(4, 4, 4, 4, 5, 5, 6, 6, 8, 8, 8, 8, 8)
+     c3=72, H=1163043, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=6,a*=13', 'm=13,d=5,a*=13']
+  score=(4, 4, 4, 4, 4, 5, 6, 7, 8, 8, 8, 8, 8)
+     c3=70, H=1059237, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=7,a*=13', 'm=13,d=6,a*=13']
+  score=(4, 4, 4, 4, 4, 5, 6, 7, 8, 8, 8, 8, 8)
+     c3=70, H=1059237, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=8,a*=13', 'm=13,d=7,a*=13']
+  score=(4, 4, 4, 4, 4, 5, 6, 7, 8, 8, 8, 8, 8)
+     c3=70, H=1059237, self_conv=False, |Aut|=1, regular=False, sample_mult=2
+     witnesses: ['m=1,d=9,a*=13', 'm=13,d=8,a*=13']
+
+  # REGULAR among one-dipole apex tournaments: 0
+
+  GW {1..11,13,24} residues (multiset) = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13] (10 doubled, 12 missing).
+  GW apex tournaments by phase a*:
+    a*=1: score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7), c3=89, H=3351471, self_conv=False, |Aut|=1, regular=False
+    a*=3: score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7), c3=86, H=2876741, self_conv=False, |Aut|=1, regular=False
+    a*=5: score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7), c3=86, H=2772327, self_conv=False, |Aut|=1, regular=False
+    a*=9: score=(4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8), c3=80, H=2015017, self_conv=False, |Aut|=1, regular=False
+    a*=11: score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7), c3=88, H=3261013, self_conv=False, |Aut|=1, regular=False
+    a*=13: score=(4, 4, 5, 5, 5, 5, 6, 7, 7, 7, 7, 8, 8), c3=79, H=1780425, self_conv=False, |Aut|=1, regular=False
+
+########################################################################
+# PART 3: NECESSARY-BUT-INSUFFICIENT + MAGNITUDE BLINDNESS
+########################################################################
+Necessary: at the optimum a*=1 the apex residues must one-hole-tile Z/14,
+forcing them to {1..13} => the winding tournament is the REGULAR R_13.
+(A missing residue class => a lonely arc => loneliness > 1/14 there; so the
+ apex residues are forced to the full transversal {1..13}.)
+
+Magnitude blindness: replace AP speed 12 by 26 or 96 (both ==12 mod 14):
+  12->26: residues=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; a*=1 apex: score=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6), H=3711175, regular=True
+  12->96: residues=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; a*=1 apex: score=(6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6), H=3711175, regular=True
+  => 12->26 residues == 12->96 residues == AP residues {1..13}: True
+  => identical regular R_13 apex tournament, identical H=3711175, identical
+     full 6-phase apex profile -- yet 12->26 is LOOSE (q=12, M=1/12) and
+     12->96 is LOOSE (q=14 but large, off-apex escape). The apex tournament
+     CANNOT separate them: it is MAGNITUDE-BLIND (sees only residues mod 14).
+
+VERDICT: 'apex winding tournament (at a*=1) = regular R_13' is NECESSARY for
+tightness but NOT SUFFICIENT. The magnitude/max-gap distinction (tight vs
+loose) is invisible at the apex; it lives at Farey-neighbor scales (mod 41).

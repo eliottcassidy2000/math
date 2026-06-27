@@ -1,0 +1,18 @@
+V* crossover (L_arc drops below floor 0.0045) across covering families:
+family                             V*   L_arc@2  L_arc@V*  L_arc@2V*
+aliasing {1..12,14V}               15   0.00340   0.00408    0.00204
+top-bal {1..11,13,14V}             15   0.00408   0.00374    0.00204
+wide-doublet{1..11,14V,+1}         15   0.01044   0.00372    0.00187
+cap8-core {1,5,7,8,9,..,14V}       15   0.00271   0.00271    0.00135
+
+Expected (mac-mini-S61): V* ~ 200-234 across families = D = paper wall = 1/(14*l_core).
+Bounded-core floor l_core ~ 0.005-0.006; V* worst-case confirms one unified constant.
+
+--- kps-S31ag interpretation (handoff A) ---
+EXACT BOUND: any covering set with apex a=14V has largest RAW lonely arc <= 6/(7a) = 3/(49V),
+because the apex's own danger comb (width 1/(7a), spacing 1/a) leaves arcs <= (1-1/7)/a.
+=> the RAW direct arc is NOT bounded below; it decays as 3/(49V), uniformly across all 4 families.
+Raw-arc crossover (arc passes l_core~0.0045) = V ~ 3/(49*0.0045) ~ 14-15 (CONFIRMED uniform above).
+This is a DIFFERENT, much smaller constant than the witness-route V* atlas (~234): RAW vs NORMALIZED.
+mac-mini-S61's "bounded ~0.005 to V*~200" must be the NORMALIZED/peeled arc; the raw arc fails at ~15.
+The peeling/normalization (Node-3) IS the reduction from the failed raw arc to the witness object.

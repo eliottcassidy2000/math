@@ -2,59 +2,73 @@
 
 ## Task Chosen
 
-I chose one small Hamiltonian-path sanity check: re-verify the
-near-transitive single-arc flip formula for the transitive tournament
-`T_n`.
-
-The checked claim is THM-250:
+I chose one small exact verification already present in the root checkout:
+run `verify_phi2_indep.py` to sanity-check the closed-form two-far curvature
+quantity
 
 ```text
-H(T_n^(a,b)) = 2^(b-a-1) + 1,  if b-a >= 2
-H(T_n^(a,b)) = 1,              if b-a = 1
+Phi_2(B) = (2 p2(B) - p1(B)) / 49
 ```
 
-where `T_n^(a,b)` is obtained from the transitive tournament by reversing the
-single arc `a -> b`.
+for two finite base sets.
+
+This is a bounded formal-sector computation, not a new theorem namespace or a
+long LRC/tournament search.
 
 ## What I Did
 
-I ran a transient exact Held-Karp dynamic program for Hamiltonian path counts.
-For every `n = 3..11` and every single flipped arc `0 <= a < b < n`, I computed
-`H(T_n^(a,b))` and compared it with the formula above.  No floating-point
-arithmetic was used, and no retained script was added.
+I skimmed the navigation surface: `00-navigation/OPEN-QUESTIONS.md`,
+`00-navigation/INVESTIGATION-BACKLOG.md`, `00-navigation/CONCEPT-MAP.md`, and
+the required `00-navigation/CONCURRENT-SESSIONS.md`.  There was no `README` or
+`INDEX` file directly under `00-navigation/`; I also checked the repository
+root `README.md` for orientation.
+
+Then I ran:
+
+```bash
+python verify_phi2_indep.py
+```
+
+No retained script was added or changed.
 
 ## Concrete Result
 
-There were zero mismatches across all checked flips for `n = 3..11`.
-
-The values depend only on the distance `d = b-a`:
+The exact closed-form checks passed:
 
 ```text
-d=1  -> H=1
-d=2  -> H=3
-d=3  -> H=5
-d=4  -> H=9
-d=5  -> H=17
-d=6  -> H=33
-d=7  -> H=65
-d=8  -> H=129
-d=9  -> H=257
-d=10 -> H=513
+B = (0, 1, 2, 3, 4, 5, 6, 7)
+  p1(B) = 359/1470
+  p2(B) = 25/147
+  Phi_2(B) = 47/24010
+  EXPECTED = 47/24010
+  MATCH: True
+
+B = (0, 1, 2, 4, 8)
+  p1(B) = 0
+  p2(B) = 1/4
+  Phi_2(B) = 1/98
+  EXPECTED = 1/98
+  MATCH: True
 ```
 
-This extends the computational verification range stated in
-`01-canon/theorems/THM-250-flip-formula.md` from `n <= 9` to `n <= 11` for
-this independent DP check.
+The same run also sampled the finite coprime-pair convergence probe:
 
-One minor documentation issue surfaced: the theorem statement is consistent
-with the computation, but its corollary display includes `2` in the listed set
-of single-flip values.  Under the theorem's own distance convention, no checked
-single flip gives `H=2`; the set through `n` should be
-`{1, 3, 5, 9, 17, ..., 2^(n-2)+1}`.
+```text
+B = (0, 1, 2, 3, 4, 5, 6, 7)
+  I_B(101,211) - Phi_2 = -260737/511677110
+  I_B(211,401) - Phi_2 = -2033806/1015755055
+
+B = (0, 1, 2, 4, 8)
+  I_B(101,211) - Phi_2 = 14225/4176956
+  I_B(211,401) - Phi_2 = -50373/33167512
+```
+
+The verifiable outcome is the exact pass of the two hard-coded `Phi_2`
+expectations.
 
 ## Confidence Note
 
-Confidence is high for this narrow verification.  The computation used exact
-integer counts and independently checked every single flip through `n=11`.
-This is not a new proof of THM-250; it is a finite audit plus a small corollary
-typo detection.
+Confidence is high for this narrow check.  The script uses exact rational
+arithmetic over the sector breakpoint partition, and both asserted expected
+values matched exactly.  I did not claim anything new about the asymptotic
+convergence probe beyond recording the sampled differences from this run.

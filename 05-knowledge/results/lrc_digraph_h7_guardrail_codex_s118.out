@@ -1,0 +1,49 @@
+DIGRAPH H=7 GUARDRAIL FOR LRC14
+================================
+
+1. Tournament orientation bits: H=7 is absent in exact small spectra.
+   tournaments n=3: count=8, H=7 count=0, all H odd=True, values=[1, 3]
+   tournaments n=4: count=64, H=7 count=0, all H odd=True, values=[1, 3, 5]
+   tournaments n=5: count=1024, H=7 count=0, all H odd=True, values=[1, 3, 5, 9, 11, 13, 15]
+   tournaments n=6: count=32768, H=7 count=0, all H odd=True, values=[1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27]...
+
+2. Ordinary binary ordered-arc digraphs: H=7 is realizable.
+   n=1: max possible Hamiltonian paths is 1; H=7 impossible by size.
+   n=2: max possible Hamiltonian paths is 2; H=7 impossible by size.
+   n=3: max possible Hamiltonian paths is 6; H=7 impossible by size.
+   first n=4 simple digraph with H=7: bitmask=759
+   arcs=[(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 0), (2, 1), (3, 0)]
+   unordered pair-state profile={'one_forward': 2, 'both': 3, 'none': 1}
+   This is not a tournament: the binary states are ordered-arc present/absent,
+   not one-of-two orientations for every unordered pair.
+
+3. Oriented but incomplete graphs also show the danger of forgetting completeness.
+   oriented graphs on n=4 with H=7: 0
+   oriented graphs on n=5 with H=7: 1440
+   first n=5 oriented arcs=[(0, 3), (1, 2), (1, 4), (2, 3), (2, 4), (3, 1), (3, 4), (4, 0)]
+   profile={'none': 2, 'one_forward': 6, 'one_backward': 2}
+   These have at most one orientation per pair, but missing pairs break
+   the tournament completeness constraint that drives THM-200.
+
+4. Tie-free winding-tournament cells for AP7 avoid H=7.
+   E=[0, 1, 2, 3, 4, 5, 6], cells=24, H=7 cells=0
+   all cell H odd=True
+   cell H spectrum=[(1, 2), (33, 2), (105, 2), (123, 4), (137, 4), (151, 4), (175, 6)]
+   H at exact lonely point x=1/7 is 175
+
+5. Clique law is an abstract preimage, not a generic digraph obstruction.
+   I(K_1,2) = 3
+   I(K_2,2) = 5
+   I(K_3,2) = 7 <-- K3 gives 7
+   I(K_4,2) = 9
+   I(K_5,2) = 11
+
+CONCLUSION
+   The prompt's two facts are powerful only with the tournament/OCF
+   realizability hypothesis included.  Generic binary digraphs realize H=7,
+   while tournaments do not.  Therefore the LRC14 forbidden-clique route
+   must prove:
+       apex-7 over-cover => tournament conflict graph Omega = K3
+   (or an equivalent labelled OCF packet), not merely a binary digraph with
+   seven path/configuration states.  This works toward impossible-to-disprove:
+   once that correspondence is exact, THM-200 blocks the counterexample.

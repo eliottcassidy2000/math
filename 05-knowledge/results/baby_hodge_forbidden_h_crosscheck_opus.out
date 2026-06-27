@@ -1,0 +1,50 @@
+==============================================================================
+INDEPENDENT n=6 EXHAUSTIVE SWEEP (2^15 labeled tournaments, from scratch)
+==============================================================================
+THM-118 spot-check (200 random): c3=tr(A^3)/3 and c5=tr(A^5)/5 mismatches = 0
+
+--- (A) Realizable (c3,c5) region and per-fiber holes ---
+  c3=0: c5 in [0]
+  c3=1: c5 in [0]
+  c3=2: c5 in [0]
+  c3=3: c5 in [1]
+  c3=4: c5 in [1, 2, 3, 4]
+  c3=5: c5 in [2, 4, 6]  HOLES [3, 5]
+  c3=6: c5 in [4, 5, 6, 7, 8]
+  c3=7: c5 in [7, 9]  HOLES [8]
+  c3=8: c5 in [6, 8, 11, 12]  HOLES [7, 9, 10]
+
+  INTERIOR HOLES (c3,c5): [(5, 3), (5, 5), (7, 8), (8, 7), (8, 9), (8, 10)]
+  (8,10) in realized region? False  ->  it is a HOLE: True
+
+--- H spectrum at n=6 ---
+  realized H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  7 in H spectrum? False;  21 in H spectrum? False
+
+--- (B) KEY: (c3,c5) -> H-values, focus on c3=8 fiber (the (8,10) hole's home) ---
+  (8,6): H in [45],  alpha_2 in [4],  trA^5=30
+  (8,8): H in [41],  alpha_2 in [2],  trA^5=40
+  (8,11): H in [43],  alpha_2 in [1],  trA^5=55
+  (8,12): H in [45],  alpha_2 in [1],  trA^5=60
+  Neighbors of the (8,10) hole in-fiber: (8,8) carries H=[41], (8,11) carries H=[43].
+  Are those H-values themselves REALIZED (i.e. NOT in the forbidden set {7,21})? True  (neighbor H-set = [41, 43])
+
+--- (C) Score stratification: which score sequences give c3=8? ---
+  c3=8 score sequences: [(2, 2, 2, 3, 3, 3)]
+  Kendall-Moran c3 for score (2, 2, 2, 3, 3, 3) = C(6,3) - sum C(s_i,2) = 20 - 12 = 8
+  => c3=8 is EXACTLY the regular score class (2,2,2,3,3,3): True
+
+--- (D) Is the (8,10) hole moment-feasible? ---
+  c5=10 = midpoint convexity: 8 < 10 < 12 with c5=8 and c5=12 both realized at c3=8? True
+  trA^5=50 = (1/3)*40 + (2/3)*55 (realized c5=8->40, c5=11->55): True
+  skew-moment Hankel min-eig over sampled tournaments (stride 97): -8.034e-13  (>=~0 => PSD/Stieltjes)
+
+--- (E) Contrast: the H=7/21 obstruction (THM-029) vs the (8,10) hole ---
+  THM-029 mechanism: 3 pairwise-vertex-sharing 3-cycles force a common vertex,
+  whose induced 5-vertex subtournament (score 1,1,2,3,3) ALWAYS has a 5-cycle,
+  pushing alpha_1 from 3 to >=4. That is an alpha_1/alpha_2 (conflict-graph) event:
+  it changes H = 1+2*alpha_1+4*alpha_2, NOT a (c3,c5)=value coincidence.
+  The (8,10) hole sits at FIXED c3=8 (8 triangles, regular score) and is a c5/
+  power-sum exclusion (no spectrum has trA^5=50) -- a DIFFERENT layer.
+
+DONE.

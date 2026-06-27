@@ -1,0 +1,151 @@
+LRC14 analytic sieve / Kaczynski synthesis (codex S162)
+===============================================================
+
+Motif census
+------------
+lrc_source_kernel               2920
+prime_sum_goldbach              2364
+exponential_sum_core            1094
+totient_phi_packets              471
+mobius_mu_sums                   387
+smoothing_saddle_formula         367
+large_sieve_circle                86
+kaczynski_boundary                24
+
+Top motif co-occurrences
+------------------------
+lrc_source_kernel + prime_sum_goldbach: 716
+exponential_sum_core + lrc_source_kernel: 494
+exponential_sum_core + prime_sum_goldbach: 466
+lrc_source_kernel + totient_phi_packets: 242
+prime_sum_goldbach + totient_phi_packets: 227
+mobius_mu_sums + prime_sum_goldbach: 175
+lrc_source_kernel + mobius_mu_sums: 115
+prime_sum_goldbach + smoothing_saddle_formula: 113
+exponential_sum_core + mobius_mu_sums: 99
+exponential_sum_core + totient_phi_packets: 98
+exponential_sum_core + smoothing_saddle_formula: 91
+lrc_source_kernel + smoothing_saddle_formula: 87
+mobius_mu_sums + totient_phi_packets: 85
+exponential_sum_core + large_sieve_circle: 57
+large_sieve_circle + lrc_source_kernel: 53
+large_sieve_circle + prime_sum_goldbach: 51
+smoothing_saddle_formula + totient_phi_packets: 31
+large_sieve_circle + smoothing_saddle_formula: 29
+mobius_mu_sums + smoothing_saddle_formula: 29
+kaczynski_boundary + lrc_source_kernel: 23
+
+Selected local anchors
+----------------------
+exponential_sum_core:
+  - 00-navigation/CONCEPT-MAP.md
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md
+  - 00-navigation/INVESTIGATION-BACKLOG.md
+  - 00-navigation/OPEN-QUESTIONS.md
+  - 00-navigation/SESSION-LOG.md
+  - 00-navigation/TANGENTS.md
+kaczynski_boundary:
+  - 00-navigation/INVESTIGATION-BACKLOG.md
+  - 00-navigation/OPEN-QUESTIONS.md
+  - 00-navigation/SESSION-LOG.md
+  - 00-navigation/TANGENTS.md
+  - 01-canon/theorems/THM-548-lrc-two-far-curvature-bound.md
+  - 04-computation/lrc14_analytic_sieve_packet_weights_codex_s163.py
+large_sieve_circle:
+  - 00-navigation/CONCEPT-MAP.md
+  - 00-navigation/INVESTIGATION-BACKLOG.md
+  - 00-navigation/OPEN-QUESTIONS.md
+  - 00-navigation/SESSION-LOG.md
+  - 00-navigation/TANGENTS.md
+  - 01-canon/theorems/THM-498-cycle-spectrum-pollock-completeness-hierarchy.md
+lrc_source_kernel:
+  - 00-navigation/CONCEPT-MAP.md
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md
+  - 00-navigation/INVESTIGATION-BACKLOG.md
+  - 00-navigation/OPEN-QUESTIONS.md
+  - 00-navigation/SESSION-LOG.md
+  - 00-navigation/TANGENTS.md
+mobius_mu_sums:
+  - 00-navigation/CONCEPT-MAP.md
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md
+  - 00-navigation/INVESTIGATION-BACKLOG.md
+  - 00-navigation/OPEN-QUESTIONS.md
+  - 00-navigation/SESSION-LOG.md
+  - 00-navigation/TANGENTS.md
+prime_sum_goldbach:
+  - 00-navigation/CONCEPT-MAP.md
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md
+  - 00-navigation/INVESTIGATION-BACKLOG.md
+  - 00-navigation/OPEN-QUESTIONS.md
+  - 00-navigation/SESSION-LOG.md
+  - 00-navigation/TANGENTS.md
+smoothing_saddle_formula:
+  - 00-navigation/CONCEPT-MAP.md
+  - 00-navigation/INVESTIGATION-BACKLOG.md
+  - 00-navigation/OPEN-QUESTIONS.md
+  - 00-navigation/SESSION-LOG.md
+  - 00-navigation/TANGENTS.md
+  - 01-canon/theorems/THM-064-W-imaginary-evaluation.md
+totient_phi_packets:
+  - 00-navigation/CONCEPT-MAP.md
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md
+  - 00-navigation/INVESTIGATION-BACKLOG.md
+  - 00-navigation/OPEN-QUESTIONS.md
+  - 00-navigation/SESSION-LOG.md
+  - 00-navigation/TANGENTS.md
+
+Explicit Mobius/totient weight table
+------------------------------------
+N      sum_mu/n        sum_mu2/phi     sum_mu2/n      avg_phi/n
+   10   0.09047619    3.66666667    2.44285714    0.62238095
+   30  -0.03047507    4.73255772    3.10306914    0.61259611
+  100   0.03113153    5.91054415    3.83556713    0.60832682
+  300  -0.01051001    7.03284024    4.51048742    0.60838953
+ 1000   0.00441187    8.24004566    5.24239313    0.60815531
+ 3000  -0.00165965    9.33881455    5.91085505    0.60798456
+10000  -0.00208270    10.54334210    6.64341316    0.60793841
+20000   0.00140031    11.23619615    7.06451593    0.60793954
+
+Readout:
+- sum mu(n)/n is a cancellation diagnostic; it drifts toward 0 and should not be used as a positive density.
+- sum mu(n)^2/phi(n) is a slow sieve-capacity ledger; it records squarefree primitive packets rather than endpoint ownership.
+- avg phi(n)/n stabilizes near 6/pi^2, the coprime-density floor behind Farey/exact-period packets.
+
+Tournament Analysis
+-------------------
+vertices: proof modules, not runners or primes
+pairwise observable: LRC/exact/local-global/exponential/boundary/smoothing/audit retention
+score_hist: {0: 1, 1: 1, 3: 3, 5: 1, 6: 1, 7: 1}
+directed_3cycles: 1
+SCC_sizes: [3, 1, 1, 1, 1, 1]
+SCC_members:
+  - mobius_totient_packet_ledger, smoothing_saddle_explicit_formula, circle_large_sieve_decomposition
+  - lrc_labelled_source_kernel
+  - exponential_sum_engine
+  - kaczynski_boundary_resonance
+  - upper_bound_quadratic_sieve
+  - raw_scalar_prime_sum
+Hamiltonian_path_count: 3
+tie Hamiltonian path:
+  lrc_labelled_source_kernel > exponential_sum_engine > kaczynski_boundary_resonance > mobius_totient_packet_ledger > circle_large_sieve_decomposition > smoothing_saddle_explicit_formula > upper_bound_quadratic_sieve > raw_scalar_prime_sum
+retention path:
+  lrc_labelled_source_kernel > exponential_sum_engine > kaczynski_boundary_resonance > mobius_totient_packet_ledger > circle_large_sieve_decomposition > smoothing_saddle_explicit_formula > upper_bound_quadratic_sieve > raw_scalar_prime_sum
+
+Module notes
+------------
+- lrc_labelled_source_kernel: vector=(5, 5, 4, 4, 5, 4, 5); keeps qdiv, exact M/Farey, Haar boundary, endpoint owners, C27/K33, dual exits
+- exponential_sum_engine: vector=(4, 4, 4, 5, 4, 4, 4); the core analytic place where minor arcs, Fourier/Toeplitz, Ramanujan modes, and Weil/PV estimates live
+- kaczynski_boundary_resonance: vector=(4, 4, 3, 4, 5, 4, 4); Fatou/Kaczynski boundary values plus Bagemihl ambiguous approach sets; LRC resonances are the exceptional arcs
+- mobius_totient_packet_ledger: vector=(3, 5, 4, 3, 3, 3, 5); mu, phi, Ramanujan, and Div(D) packet laws before scalarization
+- circle_large_sieve_decomposition: vector=(3, 4, 5, 4, 3, 3, 4); major/minor arcs, local products, and large-sieve upper bounds as proof decomposition
+- smoothing_saddle_explicit_formula: vector=(3, 3, 4, 4, 4, 5, 3); choice of smoothing, saddle/explicit-formula kernels, and complex analytic localization
+- upper_bound_quadratic_sieve: vector=(2, 4, 4, 3, 2, 3, 3); upper-bound sieve as safe majorant; useful only if residual side channels remain named
+- raw_scalar_prime_sum: vector=(1, 1, 2, 1, 1, 1, 5); raw sums over primes or one numerical main term without packet labels
+
+Synthesis
+---------
+1. The Helfgott/Vinogradov template is not just 'add a variable'; it is main packet + exponential-sum minor-arc control + finite exceptional verification.
+2. For LRC14, qdiv/Farey/Ramanujan/totient data are the arithmetic main packet; endpoint owners and Haar boundary status are the singular-series labels.
+3. Kaczynski/Bagemihl boundary theory names the true-wide exceptional set: resonance approach arcs where Fatou-style decorrelated limits are insufficient.
+4. Large-sieve or upper-bound-sieve bounds are useful only as majorants after the residual packet labels survive; otherwise they repeat the scalar-quotient failure.
+5. The core missing lemma is an explicit exponential-sum/resonance estimate with adaptive smoothing: off-resonance minor arcs decay; resonant arcs reduce to finite Freiman/K33/AP-GW packets.

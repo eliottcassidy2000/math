@@ -1,0 +1,117 @@
+=== LRC14 Ramanujan route scheduler S200 ===
+source=S194 stored residual rows from 05-knowledge/results/lrc14_status_topology_gate_codex_s194.out
+bank=HYP-2963 default row generator single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5
+residual_packets=38 parsed_names=38
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, residue words, primitive denominator charts,
+    Ramanujan c_q modes, safe phase residues, coarse zipper fibers,
+    exact magnitude atoms, safe components, topology gates, and proof
+    obligations.
+  chosen vertices:
+    proof carriers: coarse ET+unit gate, first primitive safe q,
+    primitive count deck, Ramanujan trace deck, exact magnitude, and
+    raw residue terminal word.
+  preserved LRC predicate:
+    boundary/open status from HYP-3030, plus q<=13 closed-safe witness
+    availability for scheduling Q-WITNESS versus COVERING-MOMENT rows.
+  destroyed information:
+    exact M, exact safe interval lengths, full safe-component barcode,
+    and arc-Cech topology unless those coordinates are reattached.
+
+[1] Scheduler split audit on S194 residual route fibers
+  coarse_et_unit_gate              fibers=15  mixed_route=15 mixed_status=0  max_mixed=4  mixed_packets=38 mixed_routes={'Q-WITNESS': 23, 'COVERING-MOMENT': 15}
+  coarse_plus_first_q_2_13         fibers=30  mixed_route=0  mixed_status=0  max_mixed=0  mixed_packets=0  mixed_routes={}
+  coarse_plus_first_q_2_14         fibers=30  mixed_route=0  mixed_status=0  max_mixed=0  mixed_packets=0  mixed_routes={}
+  coarse_plus_primitive_deck_2_13  fibers=30  mixed_route=0  mixed_status=0  max_mixed=0  mixed_packets=0  mixed_routes={}
+  coarse_plus_primitive_deck_2_14  fibers=30  mixed_route=0  mixed_status=0  max_mixed=0  mixed_packets=0  mixed_routes={}
+  coarse_plus_ramanujan_trace_2_14 fibers=37  mixed_route=0  mixed_status=0  max_mixed=0  mixed_packets=0  mixed_routes={}
+
+[2] Coarse residual fibers with primitive-period labels
+  coarse_route_mixed_fiber[0] size=4 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 3}
+    single swap 11->99                 route=COVERING-MOMENT  M=   3/34 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 11->15                 route=Q-WITNESS        M=   1/11 q0=11 first13=  11 first14=  11 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0) q14_count=6
+    single swap 11->155                route=Q-WITNESS        M=   1/11 q0=11 first13=  11 first14=  11 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0) q14_count=6
+    single swap 11->71                 route=Q-WITNESS        M=   1/11 q0=11 first13=  11 first14=  11 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0) q14_count=6
+  coarse_route_mixed_fiber[1] size=4 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 3}
+    single swap 13->143                route=COVERING-MOMENT  M= 11/144 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 13->115                route=Q-WITNESS        M=   1/13 q0=13 first13=  13 first14=  13 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12) q14_count=6
+    single swap 13->31                 route=Q-WITNESS        M=   1/13 q0=13 first13=  13 first14=  13 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12) q14_count=6
+    single swap 13->59                 route=Q-WITNESS        M=   1/13 q0=13 first13=  13 first14=  13 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12) q14_count=6
+  coarse_route_mixed_fiber[2] size=3 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2}
+    single swap 10->180                route=COVERING-MOMENT  M= 18/187 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 10->152                route=Q-WITNESS        M=   1/10 q0=10 first13=  10 first14=  10 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0) q14_count=6
+    single swap 10->26                 route=Q-WITNESS        M=   1/10 q0=10 first13=  10 first14=  10 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0) q14_count=6
+  coarse_route_mixed_fiber[3] size=3 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2}
+    single swap 11->154                route=COVERING-MOMENT  M= 14/157 q0=15 first13=None first14=None deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=0
+    single swap 11->70                 route=Q-WITNESS        M=   1/11 q0=11 first13=  11 first14=  11 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0) q14_count=0
+    single swap 11->98                 route=Q-WITNESS        M=   1/11 q0=11 first13=  11 first14=  11 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0) q14_count=0
+  coarse_route_mixed_fiber[4] size=3 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2}
+    single swap 8->152                 route=COVERING-MOMENT  M= 19/159 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 8->180                 route=Q-WITNESS        M=    1/8 q0=8  first13=   8 first14=   8 deck13=(0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0) q14_count=6
+    single swap 8->26                  route=Q-WITNESS        M=    1/8 q0=8  first13=   8 first14=   8 deck13=(0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0) q14_count=6
+  coarse_route_mixed_fiber[5] size=3 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2}
+    single swap 9->99                  route=COVERING-MOMENT  M= 11/104 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 9->15                  route=Q-WITNESS        M=    1/9 q0=9  first13=   9 first14=   9 deck13=(0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0) q14_count=6
+    single swap 9->155                 route=Q-WITNESS        M=    1/9 q0=9  first13=   9 first14=   9 deck13=(0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0) q14_count=6
+  coarse_route_mixed_fiber[6] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1}
+    magnitude liar 12->96              route=COVERING-MOMENT  M=  8/101 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 11->123                route=Q-WITNESS        M=   1/11 q0=11 first13=  11 first14=  11 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0) q14_count=6
+  coarse_route_mixed_fiber[7] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1}
+    single swap 11->121                route=COVERING-MOMENT  M= 11/124 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 11->163                route=Q-WITNESS        M=   1/11 q0=11 first13=  11 first14=  11 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0) q14_count=6
+  coarse_route_mixed_fiber[8] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1}
+    single swap 13->156                route=COVERING-MOMENT  M= 12/157 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 13->100                route=Q-WITNESS        M=   1/13 q0=13 first13=  13 first14=  13 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12) q14_count=6
+  coarse_route_mixed_fiber[9] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1}
+    single swap 12->180                route=COVERING-MOMENT  M=   3/37 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 13->27                 route=Q-WITNESS        M=   1/13 q0=13 first13=  13 first14=  13 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12) q14_count=6
+  coarse_route_mixed_fiber[10] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1}
+    single swap 13->117                route=COVERING-MOMENT  M=  9/118 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 13->61                 route=Q-WITNESS        M=   1/13 q0=13 first13=  13 first14=  13 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12) q14_count=6
+  coarse_route_mixed_fiber[11] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1}
+    single swap 13->104                route=COVERING-MOMENT  M=  8/105 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 13->76                 route=Q-WITNESS        M=   1/13 q0=13 first13=  13 first14=  13 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12) q14_count=6
+  coarse_route_mixed_fiber[12] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1}
+    single swap 8->56                  route=COVERING-MOMENT  M=    1/9 q0=15 first13=None first14=None deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=0
+    single swap 8->140                 route=Q-WITNESS        M=    1/8 q0=8  first13=   8 first14=   8 deck13=(0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0) q14_count=0
+  coarse_route_mixed_fiber[13] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1}
+    single swap 8->24                  route=COVERING-MOMENT  M=   3/31 q0=14 first13=None first14=  14 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=6
+    single swap 8->150                 route=Q-WITNESS        M=    1/8 q0=8  first13=   8 first14=   8 deck13=(0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0) q14_count=6
+  coarse_route_mixed_fiber[14] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1}
+    single swap 10->70                 route=COVERING-MOMENT  M=   1/11 q0=15 first13=None first14=None deck13=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) q14_count=0
+    two drop(10, 13)->add(14, 27)      route=Q-WITNESS        M=   1/10 q0=10 first13=  10 first14=  10 deck13=(0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 12) q14_count=0
+
+[3] Deck readout
+  q_witness_packets=23 unique_deck13=6
+  covering_packets=15 unique_deck13=1
+  q_witness_deck13_counts={(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12): 7, (0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0): 7, (0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0): 2, (0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 12): 1, (0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0): 2, (0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0): 4}
+  covering_deck13_counts={(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0): 15}
+  theorem_hint=Q-WITNESS iff deck13 has positive mass on some primitive period <=13
+  guardrail=q=14 mass appears for many covering rows and is not a q<=13 theorem route
+
+[4] Tournament Analysis over scheduler carriers
+  vertices_are=proof carriers and exact-period decks, not runners
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  first_hamiltonian_path=primitive_count_deck_2_13 > first_safe_q_2_13 > ramanujan_trace_deck_2_14 > coarse_et_unit_status_gate > exact_magnitude_cocycle > raw_residue_terminal_word
+  score_order=primitive_count_deck_2_13 > first_safe_q_2_13 > ramanujan_trace_deck_2_14 > coarse_et_unit_status_gate > exact_magnitude_cocycle > raw_residue_terminal_word
+
+[5] Proof readout
+  1. S194 reduced the full-bank route debt to 15 strict-open
+     coarse ET+unit fibers containing 38 packets.
+  2. On those same packets, adding first primitive safe denominator
+     for 2<=q<=13 gives 30 fibers, 0 mixed route, 0 mixed status.
+  3. The full primitive count deck for 2<=q<=13 gives the same
+     route-pure scheduler without exact M, safe interval length, or
+     topology.
+  4. Ramanujan trace profiles c_q(v), 2<=q<=14, also separate the
+     residual route fibers, but they are a diagnostic unless paired
+     with the safe-phase inequality.
+  5. Candidate theorem target: after the coarse ET+unit status gate,
+     every residual Q-WITNESS row has positive primitive safe mass
+     on some q<=13, while every residual COVERING-MOMENT row has zero
+     such mass and must be routed by q=14/covering or by a later
+     boundary-moment certificate.

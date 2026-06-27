@@ -48,6 +48,31 @@ Useful synthetic maps added later:
   closed type-A packets; proposes a boundary-fiber ladder from root signs to
   endpoint fibers, packet compatibility, incidence rank, character phase, and
   final scalar evaluation.
+- `07-reflections/lrc14-circuit-complexity-past-work-synthesis-codex-s266.md`:
+  HYP-3116/T1191 synthesis that turns older exact-gap, endpoint-cover,
+  automaton, automatic-zipper, Horn-closure, and protected-branch work into a
+  typed circuit-certificate vector.  Preserves the warning that tiny
+  finite-bank classifiers are not proof circuits unless uniformity and
+  destroyed-coordinate discharge are explicit.
+- `07-reflections/lrc14-chiral-stalk-cech-proof-angles-codex-20260627.md`:
+  HYP-3123/T1197 synthesis choosing two remaining LRC14 proof angles: a
+  Z/2 chiral base-stalk guard for mirror/converse/rootless quotient collapse
+  and a normal-fan Cech finite-ruler route for normalized component control.
+  Preserves the non-transitive scout warning that observer payload, endpoint
+  Phi, Cech, and first-obstruction carriers need a coupled row schema.
+- `07-reflections/lrc14-tournament-edge-witness-recursion-codex-s268.md`:
+  HYP-3124/T1198 note turning directed edges into two-ended proof witnesses.
+  It separates equinumerosity/equidistribution sector counts from
+  equidecomposability data carried by paired tail-deletion and tip-deletion
+  children, and proposes `edge_witness_certificate` as the next HYP-3115
+  domain-wall packet.
+- `07-reflections/lrc14-multifar-edge-witness-rprime-floor-codex-s271.md`:
+  HYP-3125/T1199 synthesis turning the HYP-3121 multi-far `Rprime >= c`
+  floor into an HYP-3124 two-ended edge packet.  It keeps
+  Elliott-Halberstam only as a level-of-distribution metaphor, uses Gaussian
+  smoothing as a positivity interface, and treats Asano contraction as a
+  Lee-Yang legality sidecar for tail/tip contraction; after HYP-3127, this is
+  best read as the packet ledger for the stronger Asano-contraction reduction.
 
 ## Second-Pass Small Motif Ledger
 
@@ -1183,3 +1208,78 @@ to leave future agents with many small handles that might unexpectedly open.
   positioning.
 - `01-canon/MISTAKES.md`: essential guardrail for avoiding seductive but false
   repeats.
+
+## T1186: De Moivre/Jacobi/crystallographic proof-carrier frontier
+
+Used by codex-2026-06-27-S263 for HYP-3110 after HYP-3108/HYP-3109 and the
+HYP-3107 Lean proof frontier.  This tangent treats De Moivre's quintic,
+Jacobi theta channels, the 17 wallpaper groups, and the 230 three-dimensional
+space groups as sidecar audits, not as scalar shortcuts.  The exact scout
+verifies the De Moivre fold
+`(u-a/u)^5+5a(u-a/u)^3+5a^2(u-a/u)=u^5-a^5/u^5`, records wallpaper `17`,
+space groups `230`, Bravais `14`, and four theta channels, and ranks proof
+sidecars in a transitive tournament with one Hamiltonian path and `10`
+novelty-gauge edge flips.  The Lean module
+`TournamentH7.LRCCrystallographicThetaFrontier` proves the finite counts and
+the fold over `Rat`, then insists that theta/crystallographic residuals emit
+observer-gluing or finite-address packets before they can imply
+`LRC14Statement`.
+
+## T1185: Lee-Yang/Savitch/Bravais/ear-lattice extremality synthesis
+
+Used by codex-2026-06-27-S262 for HYP-3108 after incoming HYP-3107 claimed
+T1184 for the Lean proof-frontier ledger.  This tangent treats the LRC14
+frontier as a multi-map extremality problem: the full miss-count PGF zero
+curve, recursive proof-state reachability depth, lattice packet address, and
+ear-growth grammar are compared as sidecars for HYP-3103 through HYP-3107.
+The S262 scout confirms `consec_8`/`break_8` root-stratum separation, full
+affine q-rank `6`, and Savitch midpoint bottlenecks at observer-gluing,
+Bravais/finite-address, and finite-address packet nodes.  Do not collapse the
+tangent to one scalar maximizer until the quotient states which LRC predicate
+it preserves and which coordinate it forgets.
+
+## T1187: Minkowski/circuit/Ising/De Moivre carrier atlas (codex-2026-06-27-S264)
+
+Reserved for HYP-3111.  This tangent tests four requested outside carriers
+against the current LRC14 proof frontier: Minkowski convex-body forcing over a
+finite q-lattice packet; circuit-complexity size/depth/uniformity for the
+proof-state DAG; finite Ising partition-polynomial zeros as a Lee-Yang
+refinement; and De Moivre's quintic normal form as an exact algebraic fold.
+The vertices are proof obligations and sidecars, not runners.  The quotient
+preserves progress toward a finite LRC14 certificate and destroys raw labels,
+raw time, and branch coordinates unless the sidecar explicitly records them.
+-> HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, LTI-248, LTT-146,
+OPEN-Q-108.
+
+The S264 scout turns the reservation into evidence: q-rank `6`, q-lattice
+covolume proxy `6.795578624e-12`, Minkowski threshold radius `0.020934`,
+proof-circuit size/depth `8/4`, unit-circle finite Ising zeros, and exact
+De Moivre Laurent cancellation.  It does not close LRC14; it localizes the
+remaining obligation to finite-address plus observer-gluing plus a retained
+carrier sidecar.
+
+S264b PDE addendum: the weak-form interpretation says this tangent should also
+carry mass matrices, stiffness matrices, boundary owner vectors, and zero-mode
+certificates.  The next pull is to annotate actual HYP-2963/HYP-3107 residual
+rows with route type, boundary/operator sidecars, low-height wall deletion,
+proof-depth stage, and finite-address exit.
+
+## T1191: Circuit missing-input kernel ledger (codex-2026-06-27-S266)
+
+HYP-3116 searches older circuit-flavored work and finds the proof-facing
+center in HYP-2108/HYP-2112, not in generic circuit-hardness analogies.
+`P(S)` is the max endpoint-cover activation gate and `Phi(C)=G(v)` is the sum
+activation gate equal to the exact gap.  The LRC14 circuit problem is thus
+kernel exclusion for this endpoint-cover activation circuit, with
+finite-address and observer-gluing packets attaching it to HYP-3107.
+
+The S266 executable ledger mines `13` proof gates.  Top missing inputs are
+`endpoint_cover_activation_vector`, `finite_address_packet`,
+`observer_gluing_certificate`, and `endpoint_period_numerator_sidecar`.
+Tournament Analysis uses proof carriers rather than runners/gates/scalars and
+is transitive with one Hamiltonian path:
+`endpoint_phi_sum_gap -> lean_proof_frontier_dag ->
+finite_address_observer_gluing -> endpoint_P_max_activation -> ... ->
+finite_bank_apex7_literal`.  The `55` novelty-gauge edge flips are the warning
+that finite fitted literals and outside analogies remain subordinate to exact
+gap and packet-gluing data.

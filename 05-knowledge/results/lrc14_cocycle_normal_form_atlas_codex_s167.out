@@ -1,0 +1,281 @@
+S167 cocycle normal-form atlas for LRC14
+======================================================
+
+[1] Exact definitions
+---------------------
+Proof packet complex P:
+  vertices: labelled proof states, not automatically runners
+  edges: admissible quotient, handoff, wall-crossing, or comparison moves
+  2-cells: commuting proof squares, Haar squares, tournament triples, chart overlaps
+Coefficient groups:
+  integers/rationals for counts and moments; signs for topes; characters for periods
+Cochain:
+  a k-observable a assigns a value to k-cells of P
+Cocycle condition:
+  delta a = 0 on all cells whose boundary preserves the target LRC predicate
+Coboundary/certificate condition:
+  a = delta phi on a quotient fiber, or a dual certificate annihilates a
+Sound quotient condition:
+  every forgotten direction is fiber-constant, reconstructed, dual-annihilated,
+  or mapped to a named residual group such as F7/THM-572.
+
+[2] Cocycle carriers
+--------------------
+- labelled_packet_total_cocycle [mixed total class]
+  base: LRC proof-packet complex: rows, endpoint cells, exact M/Farey node, proof exits
+  cochain: all retained labels as one packet cochain
+  delta law: delta(packet)=0 on every declared commuting proof square
+  exit: fiber-constant, reconstructed, dual-annihilated, or routed to named residual
+  LRC pull: normal form: every usable quotient must say where each forgotten direction went
+  first nonzero family: not a residual family; this is the bookkeeping object
+  anchors: HYP-2996, HYP-2995, HYP-2994, HYP-2992, HYP-2990, HYP-2991, HYP-2987, LTI-147
+  retention vector: predicate=5, base_fiber=5, gauge_invariance=5, coboundary_test=5, dual_annihilator=5, local_to_global=5, formalizable=5, residual_named=5, anti_scalar_guard=5
+- haar_zipper_2cocycle [2-cocycle / square curl]
+  base: 2 x 2 Haar or fixed-margin tournament square
+  cochain: zeta(T)=T00-T01-T10+T11
+  delta law: fixed row/column margins imply only the mixed curl can move
+  exit: orthogonal cancellation, boundary stop, owner strip, cross handoff, nested descent, F7
+  LRC pull: row/column margins are unsafe unless zeta is retained or discharged
+  first nonzero family: F_zeta: unpaired mixed Haar curl after all zipper teeth fail
+  anchors: HYP-2991, HYP-2989, HYP-2595
+  retention vector: predicate=5, base_fiber=5, gauge_invariance=4, coboundary_test=5, dual_annihilator=4, local_to_global=5, formalizable=4, residual_named=5, anti_scalar_guard=5
+- endpoint_owner_boundary_cocycle [1-cocycle / boundary current]
+  base: regular-open circle cells cut by danger endpoints
+  cochain: signed endpoint owner current on the tope boundary graph
+  delta law: boundary owner current sums to zero around closed equality atoms
+  exit: AP/GW boundary cocircuit, open tope, or named wall residual
+  LRC pull: separates positive strict witnesses from closed endpoint-only atoms
+  first nonzero family: F_wall: no open tope and no AP/GW boundary cocircuit
+  anchors: HYP-2986, HYP-2984, HYP-2949
+  retention vector: predicate=5, base_fiber=5, gauge_invariance=4, coboundary_test=5, dual_annihilator=3, local_to_global=4, formalizable=5, residual_named=5, anti_scalar_guard=5
+- farey_excess_mediant_1cocycle [1-cocycle / determinant defect]
+  base: Farey edge path adjacent to 1/14
+  cochain: e(p/q)=14p-q and det((p,q),(p',q'))
+  delta law: mediant addition preserves primitive edge data only with determinant labels
+  exit: e=0 AP/GW equality, e=1 unit-excess child, e>1 non-tight branch
+  LRC pull: binding scale is q plus Farey excess, not product or numerator scalar alone
+  first nonzero family: F_farey: first nonzero excess class beyond the 1/14 boundary
+  anchors: HYP-2930, HYP-2931, HYP-2932, HYP-2945
+  retention vector: predicate=5, base_fiber=5, gauge_invariance=5, coboundary_test=4, dual_annihilator=3, local_to_global=5, formalizable=5, residual_named=5, anti_scalar_guard=5
+- c27_carry_lift_1cocycle [1-cocycle / covering carry]
+  base: C27 antipodal shell cover over residues
+  cochain: carry k in v=r+27k, plus gcd shell route
+  delta law: lift changes must preserve shell route and unit/nonunit monodromy
+  exit: unit petal discharge, GW D3 branch, K33 D9 state-lift debt
+  LRC pull: residue shadows lie unless the carry and gcd-shell route are retained
+  first nonzero family: F_carry: nonunit C27 monodromy, usually K33/D9
+  anchors: HYP-2937, HYP-2942, HYP-2171
+  retention vector: predicate=5, base_fiber=5, gauge_invariance=5, coboundary_test=4, dual_annihilator=3, local_to_global=4, formalizable=4, residual_named=5, anti_scalar_guard=5
+- fejer_toeplitz_dual_coboundary [dual coboundary / PSD annihilator]
+  base: Fourier moment cone of the danger multiplicity C_S(t)-1
+  cochain: finite Toeplitz moment functional or Fejer trigonometric square
+  delta law: covering would force every Toeplitz moment matrix to be PSD
+  exit: negative Fejer/Toeplitz certificate is a dual coboundary for a safe interval
+  LRC pull: low harmonic PSD failure is a certificate, not just a numerical shadow
+  first nonzero family: F_psd: harmonic moment cone fails to certify or fails to descend
+  anchors: HYP-2974, HYP-2981, HYP-2987
+  retention vector: predicate=5, base_fiber=4, gauge_invariance=4, coboundary_test=5, dual_annihilator=5, local_to_global=4, formalizable=5, residual_named=4, anti_scalar_guard=5
+- ramanujan_exact_period_character_cocycle [1-cocycle / exact-period character]
+  base: denominator and divisor lattice of primitive periods
+  cochain: Ramanujan exact-period packet c_q(a-b) with Mobius inversion labels
+  delta law: period projectors commute only when prime-power and endpoint labels are kept
+  exit: exact-period projector, prime-power side channel, or smoothing handoff
+  LRC pull: divisor quotients are unsafe without endpoint, qdiv, and prime-power labels
+  first nonzero family: F_period: exact-period character survives divisor quotient
+  anchors: HYP-2978, HYP-2979, HYP-2982
+  retention vector: predicate=4, base_fiber=4, gauge_invariance=5, coboundary_test=4, dual_annihilator=4, local_to_global=4, formalizable=5, residual_named=4, anti_scalar_guard=5
+- tope_cocircuit_wall_cocycle [oriented matroid cocycle]
+  base: hyperplane arrangement of danger endpoints
+  cochain: tope sign vector and boundary cocircuit owner pair
+  delta law: crossing a wall changes one sign and records the cocircuit
+  exit: open all-safe tope, AP/GW equality cocircuit, or forbidden wall packet
+  LRC pull: closed boundary debt and open witness mass must not be scalarized together
+  first nonzero family: F_cocircuit: wall packet not discharged by open-tope or equality atom
+  anchors: HYP-2986, HYP-2948, HYP-2951
+  retention vector: predicate=5, base_fiber=5, gauge_invariance=4, coboundary_test=5, dual_annihilator=3, local_to_global=4, formalizable=5, residual_named=5, anti_scalar_guard=5
+- tournament_path_h1_cocycle [1-cocycle modulo coboundaries]
+  base: tournament path-homology or proof-carrier tournament
+  cochain: edge comparison weights; triangle curl records nontransitive pressure
+  delta law: transitive triples kill curl; directed 3-cycles expose H^1/H^2 pressure
+  exit: score potential coboundary, SCC support residue, or named cyclic obstruction
+  LRC pull: tournament iso classes help only after the quotient states what labels survived
+  first nonzero family: F_tournament: non-potential tournament pressure class
+  anchors: beta1_upper_bound, HYP-2924, HYP-2990
+  retention vector: predicate=4, base_fiber=3, gauge_invariance=4, coboundary_test=5, dual_annihilator=2, local_to_global=4, formalizable=4, residual_named=4, anti_scalar_guard=4
+- boundary_moment_multichart_cocycle [chart-transition cocycle]
+  base: adaptive exact-period boundary-moment charts
+  cochain: missed-sector depth vector across denominator charts
+  delta law: one all-covered chart is harmless unless transition data also closes
+  exit: multi-chart feasible region, positive Haar image, or K33/state-lift debt
+  LRC pull: covering residuals need chart identity and transition labels
+  first nonzero family: F_chart: boundary-moment transition class fails to close
+  anchors: HYP-2969, HYP-2965, HYP-2968
+  retention vector: predicate=4, base_fiber=5, gauge_invariance=4, coboundary_test=3, dual_annihilator=4, local_to_global=4, formalizable=3, residual_named=5, anti_scalar_guard=5
+- state_lift_obstruction_class [named residual cohomology class]
+  base: TournamentStateLift / THM-572 residual sector
+  cochain: packet value agreeing with forbidden H=7 lift
+  delta law: all lower exits failed and the residual must be represented in the lift
+  exit: construct forbidden state lift or split the residual into earlier cocycles
+  LRC pull: F7 is not an exception bucket; it must be a named obstruction class
+  first nonzero family: F_lift: irreducible named state-lift obstruction
+  anchors: THM-572, HYP-2908, HYP-2963, LTI-039, HYP-2987, HYP-2991
+  retention vector: predicate=5, base_fiber=4, gauge_invariance=5, coboundary_test=3, dual_annihilator=3, local_to_global=5, formalizable=5, residual_named=5, anti_scalar_guard=5
+- curried_section_derivative_cocycle [1-cocycle / section derivative]
+  base: curried proof maps after freezing runners, endpoints, modes, or packet coordinates
+  cochain: difference between adjacent sections of a partially applied proof function
+  delta law: section derivatives must commute around frozen-coordinate squares
+  exit: reconstruct forgotten coordinate, prove section independence, or expose defect
+  LRC pull: curried functions are useful exactly when their section derivative is controlled
+  first nonzero family: F_section: frozen-coordinate derivative refuses to commute
+  anchors: HYP-2990, LRC technique index, curried-functions thread
+  retention vector: predicate=4, base_fiber=4, gauge_invariance=5, coboundary_test=4, dual_annihilator=3, local_to_global=4, formalizable=3, residual_named=4, anti_scalar_guard=5
+- raw_scalar_shadow [0-shadow / negative control]
+  base: unlabelled scalar summaries
+  cochain: one number such as residue class count, component count, or product value
+  delta law: none without an external theorem identifying the kernel
+  exit: diagnostic only after cocycle channels are already discharged
+  LRC pull: explains why residue, product, component, and iso-class shadows keep lying
+  first nonzero family: not a family; this is the anti-template
+  anchors: HYP-2990, HYP-2991, HYP-2978
+  retention vector: predicate=2, base_fiber=1, gauge_invariance=1, coboundary_test=1, dual_annihilator=1, local_to_global=1, formalizable=1, residual_named=1, anti_scalar_guard=1
+
+[3] Tournament Analysis
+-----------------------
+vertices: cocycle channels / proof obligations, not runners
+pairwise observable: coordinate-wise retention comparison
+switch/gauge: majority of strictly larger retention coordinates
+tie Hamiltonian path:
+  labelled_packet_total_cocycle > haar_zipper_2cocycle > endpoint_owner_boundary_cocycle > farey_excess_mediant_1cocycle > c27_carry_lift_1cocycle > fejer_toeplitz_dual_coboundary > ramanujan_exact_period_character_cocycle > tope_cocircuit_wall_cocycle > tournament_path_h1_cocycle > boundary_moment_multichart_cocycle > state_lift_obstruction_class > curried_section_derivative_cocycle > raw_scalar_shadow
+  labelled_packet_total_cocycle                score=12 vector=(5, 5, 5, 5, 5, 5, 5, 5, 5)
+  haar_zipper_2cocycle                         score=11 vector=(5, 5, 4, 5, 4, 5, 4, 5, 5)
+  farey_excess_mediant_1cocycle                score=10 vector=(5, 5, 5, 4, 3, 5, 5, 5, 5)
+  endpoint_owner_boundary_cocycle              score= 9 vector=(5, 5, 4, 5, 3, 4, 5, 5, 5)
+  tope_cocircuit_wall_cocycle                  score= 8 vector=(5, 5, 4, 5, 3, 4, 5, 5, 5)
+  c27_carry_lift_1cocycle                      score= 7 vector=(5, 5, 5, 4, 3, 4, 4, 5, 5)
+  state_lift_obstruction_class                 score= 6 vector=(5, 4, 5, 3, 3, 5, 5, 5, 5)
+  fejer_toeplitz_dual_coboundary               score= 5 vector=(5, 4, 4, 5, 5, 4, 5, 4, 5)
+  ramanujan_exact_period_character_cocycle     score= 4 vector=(4, 4, 5, 4, 4, 4, 5, 4, 5)
+  boundary_moment_multichart_cocycle           score= 3 vector=(4, 5, 4, 3, 4, 4, 3, 5, 5)
+  curried_section_derivative_cocycle           score= 2 vector=(4, 4, 5, 4, 3, 4, 3, 4, 5)
+  tournament_path_h1_cocycle                   score= 1 vector=(4, 3, 4, 5, 2, 4, 4, 4, 4)
+  raw_scalar_shadow                            score= 0 vector=(2, 1, 1, 1, 1, 1, 1, 1, 1)
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}
+directed_3cycles=0
+SCC_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Hamiltonian_path_count=1
+
+[4] Repository co-occurrence scan
+---------------------------------
+documents requested=22 present=22
+documents scanned:
+  00-navigation/LRC-TECHNIQUE-INDEX.md
+  comms/POKE-COORDINATION.md
+  05-knowledge/hypotheses/HYP-2996-lrc14-residual-section-packet-grid-verification.md
+  05-knowledge/hypotheses/HYP-2995-lrc14-cocycle-carrier-atlas.md
+  05-knowledge/hypotheses/HYP-2994-lrc14-cocycle-obstruction-atlas.md
+  05-knowledge/hypotheses/HYP-2992-lrc14-cocycle-sheaf-exactness.md
+  05-knowledge/hypotheses/HYP-2993-lrc14-zipper-theorem-pattern-atlas.md
+  05-knowledge/hypotheses/HYP-2991-lrc14-haar-zipper-cocycle.md
+  05-knowledge/hypotheses/HYP-2990-abstract-zipper-theorem-atlas.md
+  05-knowledge/hypotheses/HYP-2989-lrc14-haar-product-discrepancy-tournament-tiling.md
+  05-knowledge/hypotheses/HYP-2987-lrc14-certificate-handoff-atlas.md
+  05-knowledge/hypotheses/HYP-2986-lrc14-tope-wall-cocircuit.md
+  05-knowledge/hypotheses/HYP-2985-lrc14-admissible-smoothing-dispatcher.md
+  05-knowledge/hypotheses/HYP-2978-lrc14-ramanujan-divisor-quotient-guardrails.md
+  05-knowledge/hypotheses/HYP-2974-lrc14-fourier-toeplitz-dual-scout.md
+  05-knowledge/hypotheses/HYP-2969-lrc14-boundary-moment-packet-ledger.md
+  05-knowledge/hypotheses/HYP-2963-lrc14-labelled-packet-counterexample-audit.md
+  05-knowledge/hypotheses/HYP-2942-lrc14-c27-unital-block-lift.md
+  05-knowledge/hypotheses/HYP-2937-lrc14-c27-shell-transfer-spectrum.md
+  05-knowledge/hypotheses/HYP-2930-lrc14-farey-mediant-tournament-interface.md
+  05-knowledge/results/beta1_upper_bound.out
+  05-knowledge/results/heisenberg_frustration_bridge.out
+carrier marker hits:
+  tournament_path_h1_cocycle                   575
+  tope_cocircuit_wall_cocycle                  423
+  endpoint_owner_boundary_cocycle              412
+  fejer_toeplitz_dual_coboundary               346
+  curried_section_derivative_cocycle           318
+  haar_zipper_2cocycle                         289
+  c27_carry_lift_1cocycle                      252
+  ramanujan_exact_period_character_cocycle     247
+  state_lift_obstruction_class                 230
+  labelled_packet_total_cocycle                157
+  raw_scalar_shadow                            143
+  farey_excess_mediant_1cocycle                120
+  boundary_moment_multichart_cocycle           60
+strongest co-occurrences by document count:
+  raw_scalar_shadow                          <-> tournament_path_h1_cocycle                 docs=21
+  curried_section_derivative_cocycle         <-> tournament_path_h1_cocycle                 docs=19
+  endpoint_owner_boundary_cocycle            <-> tournament_path_h1_cocycle                 docs=19
+  state_lift_obstruction_class               <-> tournament_path_h1_cocycle                 docs=19
+  curried_section_derivative_cocycle         <-> raw_scalar_shadow                          docs=18
+  endpoint_owner_boundary_cocycle            <-> raw_scalar_shadow                          docs=18
+  endpoint_owner_boundary_cocycle            <-> state_lift_obstruction_class               docs=18
+  raw_scalar_shadow                          <-> state_lift_obstruction_class               docs=18
+  curried_section_derivative_cocycle         <-> endpoint_owner_boundary_cocycle            docs=17
+  curried_section_derivative_cocycle         <-> state_lift_obstruction_class               docs=17
+  fejer_toeplitz_dual_coboundary             <-> tournament_path_h1_cocycle                 docs=17
+  endpoint_owner_boundary_cocycle            <-> fejer_toeplitz_dual_coboundary             docs=16
+  fejer_toeplitz_dual_coboundary             <-> raw_scalar_shadow                          docs=16
+  fejer_toeplitz_dual_coboundary             <-> state_lift_obstruction_class               docs=16
+  c27_carry_lift_1cocycle                    <-> raw_scalar_shadow                          docs=15
+
+[5] AP/GW cocycle closure profile
+---------------------------------
+  qdiv/Farey        : e=14p-q is zero at the tight 1/14 boundary
+  endpoint/tope     : regular-open safe mass is zero; only boundary cocircuit debt remains
+  Haar zipper       : mixed zeta is stopped at a boundary atom, not a free slider
+  C27/Jacobsthal    : AP is base tiling; GW is the unique gated D3 acceleration
+  Fejer/Toeplitz    : PSD-failure certificates vanish because there is no positive safe interval
+  tournament        : raw iso class is insufficient; labelled optimum/Farey packet is the useful class
+  state lift        : no F7/THM-572 residual is invoked for AP/GW
+
+[6] Counterexample family normal form
+-------------------------------------
+A primitive LRC14 counterexample would need a first nonzero class:
+  F_zeta: unpaired mixed Haar curl after all zipper teeth fail
+  F_wall: no open tope and no AP/GW boundary cocircuit
+  F_farey: first nonzero excess class beyond the 1/14 boundary
+  F_carry: nonunit C27 monodromy, usually K33/D9
+  F_psd: harmonic moment cone fails to certify or fails to descend
+  F_period: exact-period character survives divisor quotient
+  F_cocircuit: wall packet not discharged by open-tope or equality atom
+  F_tournament: non-potential tournament pressure class
+  F_chart: boundary-moment transition class fails to close
+  F_lift: irreducible named state-lift obstruction
+  F_section: frozen-coordinate derivative refuses to commute
+If every listed class is a coboundary, dual-annihilated, or exits to AP/GW,
+the packet has no remaining typed place to hide; the only legal last bucket
+is the named state_lift_obstruction_class.
+
+[7] Assumption challenge
+------------------------
+alternate vertex sets considered:
+  runners, arcs, fixed circle sections, section boundaries, endpoint walls,
+  residues, cover arcs, Fourier modes, Haar tiles, divisor packets,
+  matroid cocircuits, chart overlaps, proof obligations, and cocycle channels.
+chosen vertices:
+  cocycle channels / proof obligations.
+preserved predicate:
+  strict witness, AP/GW equality, positive certificate, or named state-lift residual.
+destroyed information:
+  raw runner identity and continuous scalar order are intentionally destroyed;
+  exact M/Farey, endpoint owners, carry, Haar curl, period labels, and residual
+  class are retained because they are the current load-bearing cocycles.
+challenged assumption:
+  Tournament Analysis vertices do not need to be objects of the original problem;
+  here the useful tournament is over obstruction classes.
+
+[8] Cocycle normal-form theorem target
+--------------------------------------
+Candidate theorem:
+  For every reduced LRC14 packet, the retained proof data form a cocycle in
+  the packet complex.  If the packet has no strict safe interval, then each
+  non-boundary cocycle is either a coboundary on the quotient fiber, killed
+  by a dual certificate, transferred through a typed zipper tooth, or mapped
+  to the named F7/THM-572 obstruction class.  AP and GW are exactly the
+  zero-open boundary packets where all channels close before F7.
+Next finite test:
+  build HYP-2963 packet-level cocycle ledgers and record the first nonzero
+  class for every low-frontier row; no row should land in raw_scalar_shadow.

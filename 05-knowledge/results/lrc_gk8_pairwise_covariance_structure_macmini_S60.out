@@ -1,0 +1,29 @@
+==============================================================================
+ PAIRWISE SECTOR CO-EMPTINESS MATRIX M -- structure & spectrum at the binding config
+==============================================================================
+
+--- k=8  consec_8 ---
+  sector-0 row (should be ~0, pinned by e=0): max|M[0][j]| = 0.00e+00
+  diagonal (S1 marginals, meas{sector i empty}): [0.0000, 0.2718, 0.2435, 0.2388, 0.2435, 0.2718, 0.3347]
+  S1 = sum diag = 1.6041   S2 = sum_{i<j} = 1.7905
+  CIRCULANT on inner 6 sectors (M[i][j]=f(i-j mod 7))? False
+  spectrum of M (symmetrized): [0.0000, 0.0956, 0.1133, 0.1502, 0.1577, 0.2202, 0.8671]
+
+--- k=9  consec_9 ---
+  sector-0 row (should be ~0, pinned by e=0): max|M[0][j]| = 0.00e+00
+  diagonal (S1 marginals, meas{sector i empty}): [0.0000, 0.2291, 0.2163, 0.1973, 0.2163, 0.2291, 0.2932]
+  S1 = sum diag = 1.3813   S2 = sum_{i<j} = 1.5444
+  CIRCULANT on inner 6 sectors (M[i][j]=f(i-j mod 7))? False
+  spectrum of M (symmetrized): [0.0000, 0.0880, 0.0908, 0.1219, 0.1350, 0.1982, 0.7473]
+
+--- k=10  consec_10 ---
+  sector-0 row (should be ~0, pinned by e=0): max|M[0][j]| = 0.00e+00
+  diagonal (S1 marginals, meas{sector i empty}): [0.0000, 0.1945, 0.1871, 0.1774, 0.1871, 0.1945, 0.2525]
+  S1 = sum diag = 1.1931   S2 = sum_{i<j} = 1.3637
+  CIRCULANT on inner 6 sectors (M[i][j]=f(i-j mod 7))? False
+  spectrum of M (symmetrized): [0.0000, 0.0673, 0.0758, 0.1028, 0.1164, 0.1759, 0.6550]
+
+INTERPRETATION KEY:
+ - circulant on inner 6 + QR/NQR split  => the apex-7 / Gauss-sum / Fano (H2) face certifies S2
+ - eigenvalues of shape {a, b (mult m)}  => a design/SRG (Clebsch 4I+2J, H4) face certifies S2
+ - the consec extremum of S2 is then read from the top eigenvector / the QR-class sign

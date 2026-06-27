@@ -57,6 +57,40 @@ The triangular carrier data is useful for the gauge/flop pattern, but after
 `n=8` it is a compact beam carrier rather than an exact Harborth optimum.  Its
 role here is as a persistence lab, not an exact-optimal certificate.
 
+## S129 Exact-Core Endpoint Universality
+
+`04-computation/unit_distance_n21_graph6_endpoint_audit_codex_s129.py` runs the
+endpoint-mask audit on the five exact `n=21`, `57`-edge graph6 cores from S614.
+This completes the first next problem from S16 and gives a sharper redirect.
+
+For all five exact cores:
+
+```text
+full-core Hamiltonian endpoints: 21/21
+traceable deletions:             21/21
+endpoint-compatible deletions:   21/21
+all incident edges compatible:   21/21
+branch-cut vertices:             0
+```
+
+Even more strongly, the endpoint-options histogram equals the degree histogram.
+After deleting any vertex `v`, every neighbor of `v` can be chosen as an
+endpoint of some Hamiltonian path in `G\v`.
+
+The graph-only extension readout is therefore total:
+
+```text
+degree-4 neighbor sets compatible: 5985/5985 for each exact core
+degree-5 neighbor sets compatible: 20349/20349 for each exact core
+```
+
+Thus any positive-degree graph-only one-vertex extension of a `57`-edge
+`n=21` core preserves a Hamiltonian unit spine.  This means endpoint-ear
+traceability cannot prove `u(22)<=60` by itself.  It has instead isolated the
+missing side channel: a `61`-edge candidate must be killed by planar
+realizability, specifically by forbidding a realizable unit-cocyclic degree-4
+neighbor set over the exact cores, or by a totally-unfaithful obstruction.
+
 ## Answer to the Flop Question
 
 No graph-level unit Hamiltonian-path flop was observed in the tested carriers.
@@ -129,11 +163,12 @@ tournament obstruction.
 
 1. Run the endpoint-ear audit on the five stored exact `n=21`, `57`-edge
    graph6 cores from HYP-2176/HYP-2188, not just the Moser beam
-   representative.
-2. Add endpoint-ear compatibility to the `n=22` core-extension ledger.
+   representative.  **Done in S129:** all five are endpoint-universal.
+2. Replace the graph-only `n=22` extension ledger by a unit-cocyclic
+   degree-4 ledger over the five exact cores.
 3. Build the S/U/L impurity-word scanner promised by HYP-2249/T746 for exact
    and candidate `n=21/22` point sets.
 4. Prove a sufficient condition: high edge density plus no multi-branch
    separator forces at least one endpoint-compatible ear.
-5. Search specifically for spine-breaking attachments rather than higher edge
-   counts alone.
+5. Search specifically for unit-cocyclic but spine-preserving attachments; S129
+   shows spine-breaking attachments are not the graph-level obstruction.

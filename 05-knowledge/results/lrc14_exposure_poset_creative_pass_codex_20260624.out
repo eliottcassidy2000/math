@@ -1,0 +1,117 @@
+LRC14 EXPOSURE-POSET CREATIVE PROOF PASS
+==============================================================================
+rows=12015, max_degree=320, negative_tol=1e-08, single_limit=120, two_swap_limit=30, alias_depth=4, lcm_tail_max=5
+
+[0] Quotient declaration
+  considered vertices:
+    runners, gaps, fixed circle sections, wall crossings, residues,
+    safe components, denominator events, Fourier modes, packet families,
+    and proof obligations.
+  chosen vertices:
+    certificate/exposure channels.
+  preserved LRC predicate:
+    q-threshold, open-vs-boundary status, safe-component size,
+    divisor-curried Fejer certificate, packet labels, and K33/petal
+    side channels.
+  destroyed information:
+    full endpoint-owner incidence and exact family quantifiers; this is
+    a theorem-target finder, not a formal proof.
+  challenged assumption:
+    counting easy exposed rows is not enough; proof channels must expose
+    the low-margin q>=14 frontier without erasing labels.
+
+[1] Exposure census
+  zero-safe rows=2: ['AP', 'GW 12->24']
+  positive-safe rows=12013
+  positive rows with Fejer PSD dual=12013
+  unexposed rows=0
+  rows carrying UNEXPOSED_SOURCE_KERNEL=0
+
+[2] Channel exposure table
+  channel                        rows     weight   frontier     unique
+  Q_WITNESS                      8051  17881.482      0.000      0.000
+  AP_GW_TAUT_BOUNDARY               2     16.000     16.000     16.000
+  OPEN_HAAR_BRIDGE              12013  41483.621     14.496      0.000
+  FEJER_PSD_DUAL                12013  41483.621     14.496      0.000
+  K33_STATE_LIFT                    3     38.182     14.496      0.000
+  C27_PETAL_EXIT                    5     49.643      0.000      0.000
+  LATE_COVERING_PRESSURE          845   6237.096      0.000      0.000
+  HARD_FEJER_MARGIN                18    188.592     14.496      0.000
+  UNEXPOSED_SOURCE_KERNEL           0      0.000      0.000      0.000
+
+[3] Highest-severity q>=14 rows (top 24)
+  row                                          q          mu   deg         qform channels
+  near/K33 12->36                             14      1/1260   159 -2.377127e-04 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,K33_STATE_LIFT,OPEN_HAAR_BRIDGE
+  P10+K33                                     14      4/2205   124 -6.030755e-04 C27_PETAL_EXIT,FEJER_PSD_DUAL,HARD_FEJER_MARGIN,K33_STATE_LIFT,OPEN_HAAR_BRIDGE
+  drop(6)->63                                 14       1/294   266 -2.355514e-04 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,OPEN_HAAR_BRIDGE
+  P10+GW                                      14       1/980   280 -9.592948e-04 C27_PETAL_EXIT,FEJER_PSD_DUAL,HARD_FEJER_MARGIN,OPEN_HAAR_BRIDGE
+  drop(6)->86                                 14 1249/258258   134 -1.217415e-04 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,OPEN_HAAR_BRIDGE
+  two drop(4, 6)->add(17, 19)                 14     37/9044   127  -0.004589174 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,OPEN_HAAR_BRIDGE
+  two drop(10, 12)->add(24, 30)               14   263/48510   135 -7.586567e-04 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,OPEN_HAAR_BRIDGE
+  drop(6)->98                                 15 1543/294294   108  -0.001529641 FEJER_PSD_DUAL,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  drop(6)->34                                 14     29/4641   136 -7.509783e-04 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,OPEN_HAAR_BRIDGE
+  covering 12->84                             15  563/105105    64 -3.856768e-04 FEJER_PSD_DUAL,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  drop(6)->35                                 14   181/28028   135  -0.001257286 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,OPEN_HAAR_BRIDGE
+  two drop(6, 9)->add(18, 28)                 15 8263/504504   130  -0.002762009 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  drop(6)->56                                 15  943/168168    71  -0.004518025 FEJER_PSD_DUAL,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  two drop(5, 6)->add(14, 27)                 15 106507/3783780    61 -5.879285e-06 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  two drop(6, 9)->add(18, 23)                 14   373/45864   148  -0.003450151 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,OPEN_HAAR_BRIDGE
+  drop(6)->112                                15 2315/336336    71  -0.001597352 FEJER_PSD_DUAL,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  few-apex 6->28                              15       7/858   106 -8.604459e-04 FEJER_PSD_DUAL,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  covering 12->168                            15   263/30030    63 -1.302029e-05 FEJER_PSD_DUAL,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  hard two drop(6,10)->add(30,34)             14 1211/109395   144  -0.001083721 FEJER_PSD_DUAL,HARD_FEJER_MARGIN,OPEN_HAAR_BRIDGE
+  drop(6)->70                                 15       7/858    72 -8.591502e-04 FEJER_PSD_DUAL,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  two drop(6, 10)->add(20, 28)                15 3859/420420   107  -0.002225498 FEJER_PSD_DUAL,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  petal 10->20                                14       1/980   115  -0.001318832 C27_PETAL_EXIT,FEJER_PSD_DUAL,OPEN_HAAR_BRIDGE
+  drop(6)->84                                 15       7/858    71  -0.001597352 FEJER_PSD_DUAL,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+  drop6 fattening core add210                 16       7/858    71  -0.001597352 FEJER_PSD_DUAL,LATE_COVERING_PRESSURE,OPEN_HAAR_BRIDGE
+
+[4] Exposure-channel tournament
+  pair observable:
+    severity-weighted rows exposed by one channel and not the other;
+    ties use retention of q, boundary, open interval, harmonic dual,
+    packet label, state label, and anti-scalarization.
+  tie Hamiltonian path:
+    Q_WITNESS -> AP_GW_TAUT_BOUNDARY -> OPEN_HAAR_BRIDGE -> FEJER_PSD_DUAL -> K33_STATE_LIFT -> C27_PETAL_EXIT -> LATE_COVERING_PRESSURE -> HARD_FEJER_MARGIN -> UNEXPOSED_SOURCE_KERNEL
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  directed_3_cycles=0
+  sccs=(('Q_WITNESS',), ('AP_GW_TAUT_BOUNDARY',), ('OPEN_HAAR_BRIDGE',), ('FEJER_PSD_DUAL',), ('K33_STATE_LIFT',), ('C27_PETAL_EXIT',), ('LATE_COVERING_PRESSURE',), ('HARD_FEJER_MARGIN',), ('UNEXPOSED_SOURCE_KERNEL',))
+  scores:
+    OPEN_HAAR_BRIDGE             8
+    FEJER_PSD_DUAL               7
+    Q_WITNESS                    6
+    LATE_COVERING_PRESSURE       5
+    HARD_FEJER_MARGIN            4
+    C27_PETAL_EXIT               3
+    K33_STATE_LIFT               2
+    AP_GW_TAUT_BOUNDARY          1
+    UNEXPOSED_SOURCE_KERNEL      0
+
+[5] Creative proof target
+  Proposed exposure theorem:
+    Every primitive LRC14 source packet either has a q-witness, is one of
+    the AP/GW taut boundary atoms, exposes a positive Haar bridge with a
+    familywise Fejer interval certificate, or carries a labelled K33/petal
+    handoff whose state-lift theorem discharges it.
+
+  In this audit:
+    non-AP/GW zero-safe rows=0
+    hard Fejer-margin rows=18
+  The missing global lemma is not another scalar invariant.  It is a
+  no-hidden-kernel lemma: once the packet labels are retained, the only
+  zero-open kernel is AP/GW, and every positive packet has a uniform
+  interval-certificate assembly path.
+
+  Suggested next formal sublemma:
+    q>=14 and non-AP/GW source packets have either a positive endpoint
+    bridge whose largest component supports a Fejer certificate before
+    the first invisible speed, or a named K33/C27 state-lift label.
+    The hard rows below show where the quantified family proof should start:
+      P10+GW: q=14, mu=1/980, degree=280, qform=-9.592948e-04
+      drop(6)->63: q=14, mu=1/294, degree=266, qform=-2.355514e-04
+      near/K33 12->36: q=14, mu=1/1260, degree=159, qform=-2.377127e-04
+      two drop(6, 9)->add(18, 23): q=14, mu=373/45864, degree=148, qform=-0.003450151
+      hard two drop(6,10)->add(30,34): q=14, mu=1211/109395, degree=144, qform=-0.001083721
+      drop(6)->34: q=14, mu=29/4641, degree=136, qform=-7.509783e-04
+      two drop(10, 12)->add(24, 30): q=14, mu=263/48510, degree=135, qform=-7.586567e-04
+      drop(6)->35: q=14, mu=181/28028, degree=135, qform=-0.001257286

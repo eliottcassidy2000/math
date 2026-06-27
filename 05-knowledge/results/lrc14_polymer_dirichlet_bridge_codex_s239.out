@@ -1,0 +1,94 @@
+S239 LRC14 RENORMALIZED POLYMER / DIRICHLET BRIDGE SCOUT
+status: proof-interface synthesis; not a proof of LRC14
+namespace: HYP-3073 / T1155 / LTI-220 / LTT-118
+upstream rebase signal: HYP-3072 claimed cross-carrier pullback portfolio
+
+=== Cross-disciplinary pullback table ===
+stat_mech   | signed polymer gas                 | HYP-2540           | renormalize typed activities; reject absolute Mayer
+harmonic    | Poisson/theta finite cell          | HYP-2645           | use signed finite x-cell, not divergent dual envelope
+additive    | repeated-residue character kernel  | HYP-2632           | route saturated packets by mod-7 character channels
+electrical  | residual capacitor min-cut         | HYP-3037           | sidecars are first cuts, not scalar rankings
+Hodge       | cycle-class image                  | HYP-3066/HYP-3071  | generated rows discharge; phantom F7 is a basis atom
+portfolio   | cross-carrier pullback             | HYP-3072           | score carrier rows by preserved predicate and destroyed coordinate
+
+=== Signed relation-packet budget scout ===
+source: HYP-2645 finite x-cell / Poisson-theta table
+packet                 R6_box2  corr       corr/R6     density_vs_AP  coherence   route
+AP_core                    982  0.302731  0.00030828      1.000000   0.009661  finite AP / bounded-core certificate
+near_AP                    924  0.183854  0.00019898      0.940937   0.006048  signed wall transport / Freiman pocket
+odd_AP                     546  0.213476  0.00039098      0.556008   0.009136  odd-sector owner/current sidecar
+primes_ish                 414  0.009649  0.00002331      0.421589   0.000474  wide finite-cell / Poisson-theta route
+squares_sidon              156  0.000536  0.00000344      0.158859   0.000043  wide/Sidon fast signed convergence
+
+Interpretation:
+- Raw relation density is not a theorem currency: odd_AP has fewer R6
+  relations than near_AP but larger signed correction.
+- Wide/Sidon packets have tiny signed activities and should be routed
+  through finite-cell / Poisson-theta control, not an absolute Mayer sum.
+- AP-like packets are the slow signed-convergence sector and need bounded
+  core, Riesz-product, or cross-carrier pullback certificates.
+- Therefore the polymer grammar should be typed by packet class and
+  signed activity, not by raw support size or relation count.
+
+=== Dirichlet / Schur sidecar network ===
+Toy conductances use S237 first-tooth counts and cycle-template rank.
+raw_route_effective_conductance = 1/2 = 0.500000
+legal_sidecar_effective_conductance = 9 = 9.000000
+conductance_ratio_legal/raw = 18 = 18.000000
+raw_min_cut = 1 via source side ('coarse_residual_charge',)
+legal_min_cut_to_discharge = 27 via source side ('coarse_residual_charge',)
+legal_min_cut_to_phantom_f7 = 1 via source side ('arc_topology_tooth', 'coarse_residual_charge', 'coarse_safe_stalk', 'cycle_class_image', 'discharged', 'known_cycle_span', 'owner_strip_exit')
+
+Interpretation:
+- Collapsing to raw route labels leaves only a unit-capacity fake cut.
+- Keeping topology/stalk/cycle sidecars Schur-complements to a positive
+  energy certificate: the exact toy effective conductance is 9.
+- The named phantom F7 coordinate remains a one-unit side exit, matching
+  HYP-3071's 'outside the known cycle image' reading.
+- Proof target: legal quotients must preserve this boundary energy or
+  explicitly route the lost current to AP/GW, owner-strip, cycle span,
+  or named THM-572/F7 debt.
+
+=== Tournament Analysis ===
+Vertex candidates considered:
+  runners, route labels, packet rows, relation-lattice supports, polymers,
+  residual currents, sidecar boundary conditions, cycle-class atoms,
+  cross-carrier rows, and proof obligations.
+Chosen vertices: proof carriers and renormalization/energy obligations.
+Pairwise observable:
+  retained payload, positive test measure, signed cancellation, boundary
+  energy, finite-cell exactness, discharge specificity, cross-carrier reuse.
+Gauge: orient toward the carrier with lexicographically stronger payload.
+score_hist = {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3cycles = 0
+scc_sizes = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count = 1
+tie_hamiltonian_path:
+  renormalized_signed_polymer
+  dirichlet_schur_certificate
+  cross_carrier_pullback_portfolio
+  cycle_class_observability
+  riesz_positive_test_measure
+  residual_capacitor_min_cut
+  poisson_finite_cell
+  repeated_residue_character
+  absolute_mayer_shadow
+  raw_route_scalar
+
+=== Assumption Challenge ===
+Do not assume vertices are runners, routes, or median centers.
+For this scout, the useful vertices are proof carriers, typed polymers,
+and sidecar-energy obligations.  The preserved LRC predicate is: the
+sidecar-completed residual cannot cover/discharge illegally.  The
+destroyed data are individual runner labels, raw relation counts, and
+raw route labels.  The quotient is legal only if signed activity is
+renormalized by packet type or boundary current is preserved by a
+Dirichlet/Schur certificate.
+
+=== Next concrete theorem targets ===
+1. Polymer target: define packet activities by (packet_type, signed_activity,
+   finite_cell_route), then prove wide/Sidon and repeated-residue activities
+   are summable after AP-like cores are removed or certified.
+2. Dirichlet target: build the actual HYP-2963 residual sidecar graph and
+   show every admissible Schur complement preserves positive conductance
+   to named exits or isolates phantom F7 as a concrete boundary atom.

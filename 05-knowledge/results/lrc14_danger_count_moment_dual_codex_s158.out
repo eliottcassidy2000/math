@@ -1,0 +1,124 @@
+S158 LRC14 DANGER-COUNT MOMENT-DUAL PROBE
+==============================================================================
+max_degree=13, one_swap_limit=80
+[0] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, danger arcs, exact endpoints, safe intervals, lift packets,
+    danger-count states N=0..13, factorial moments, polynomial duals,
+    Fourier modes, boundary owners, proof obligations.
+  chosen primary vertices:
+    danger-count states and moment-dual certificates, not runners or lifts.
+  quotient preserves:
+    the cover predicate N(t)>=1, exact Haar distribution of N, AP/GW
+    equality visibility, and low-degree dual proof obligations.
+  quotient destroys:
+    where the safe interval sits, which endpoint owns a wall, and Q/R
+    lift geometry; these must be recovered only after the moment gate.
+  challenged assumption:
+    the next proof has to be an interval/lift construction.  A cover has
+    a purely count-theoretic shadow: N(t)>=1 everywhere.
+
+[1] Exact danger-count dual theorem
+  Let N(t)=#{s in S: ||s t||<1/14}.  Then
+    safe_mu(S) = mu(N=0).
+  For any polynomial P on {0,...,13} with
+    P(0)=1 and P(n)<=0 for every n>=1,
+  the pointwise inequality 1_{N=0} >= P(N) gives
+    safe_mu(S) >= E[P(N)].
+  Using the factorial basis P(n)=1+sum y_k*C(n,k),
+  E[P(N)] depends only on the moments E[C(N,k)].
+
+[library]
+  feasible dual vertices by degree: {1: 1, 2: 1, 3: 11, 4: 10, 5: 45, 6: 36, 7: 84, 8: 56, 9: 70, 10: 35, 11: 21, 12: 6, 13: 1}
+
+[2] Named-row danger-count dual audit
+  row                           safe_mu first +deg      best d8      best d9     best d13 dist prefix
+  AP                                  0          - -320917/204954750 -161507/340540200            0 {1:18572/35035, 2:108127/315315, 3:25/504, 4:29/840, 5:1/140, 6:3/196, ...}
+  GW 12->24                           0          - -21877/11891880 -1697651/4427022600            0 {1:17921/35035, 2:4085/11466, 3:24049/360360, 4:19/840, 5:11/840, 6:11/1176, ...}
+  near/K33 12->36                1/1260          9 -11339/11891880 1996039/4427022600       1/1260 {0:1/1260, 1:4934/9555, 2:32621/97020, 3:3407/40040, 4:47/2520, 5:19/1260, ...}
+  petal 10->20                    1/980          9 -2777/1524600 10753/28108080        1/980 {0:1/980, 1:8831/16170, 2:77639/252252, 3:134689/2522520, 4:43/840, 5:1/105, ...}
+  petal 13->26                    1/182          8 40163/11891880 21808909/4427022600        1/182 {0:1/182, 1:150963/280280, 2:78047/252252, 3:283/4095, 4:29/840, 5:1/140, ...}
+  P10+GW splice                   1/980          9 -18289/19819800 4351/11498760        1/980 {0:1/980, 1:218791/420420, 2:105013/315315, 3:171901/2522520, 4:1/24, 5:1/168, ...}
+  P10+K33 splice                 4/2205          9 -3019/6936930 2059/1642680       4/2205 {0:4/2205, 1:54458/105105, 2:101947/315315, 3:220201/2522520, 4:17/504, 5:1/126, ...}
+  covering 12->84            563/105105          8 302657/83243160 22118869/4427022600   563/105105 {0:563/105105, 1:42671/84084, 2:213197/630630, 3:313/3528, 4:103/5880, 5:23/1470, ...}
+  covering 12->168            263/30030          7 583157/83243160 37498519/4427022600    263/30030 {0:263/30030, 1:41813/84084, 2:441409/1261260, 3:73/882, 4:103/5880, 5:97/5880, ...}
+  few-apex 6->14                  7/858          7 4570661/631260630 359761/45173700        7/858 {0:7/858, 1:143413/315315, 2:1069351/2522520, 3:53/840, 4:1/105, 5:29/2940, ...}
+  few-apex 6->28                  7/858          7 9781/1486485 17396629/2213511300        7/858 {0:7/858, 1:149848/315315, 2:966391/2522520, 3:431/5880, 4:29/1470, 5:11/735, ...}
+  few-apex 12->168            263/30030          7 583157/83243160 37498519/4427022600    263/30030 {0:263/30030, 1:41813/84084, 2:441409/1261260, 3:73/882, 4:103/5880, 5:97/5880, ...}
+
+  readout:
+    AP and GW stay at nonpositive dual value until the full degree-13
+    interpolant, where the best bound is exactly 0.
+    Positive rows often need degree 8 or 9 before the count-only dual
+    sees the safe mass; this is a high-degree count obstruction, not a
+    low-degree second-moment proof.
+
+[3] One-swap AP-bank moment gate
+  audited rows: 871
+  zero safe-measure rows: 1
+  positive safe-measure rows: 870
+  first positive dual-degree histogram: {'5': 109, '6': 345, '7': 400, '8': 14, '9': 2, 'none': 1}
+  rows certified by degree <=9 dual: 870
+  worst degree-9 lower bound among positive rows: 10753/28108080 at drop(10)->20, safe_mu=1/980
+  smallest positive one-swap rows:
+    drop(12)->36       safe=    1/1260 first= 9 d9=1996039/4427022600 d13=    1/1260
+    drop(10)->20       safe=     1/980 first= 9 d9=10753/28108080 d13=     1/980
+    drop(6)->69        safe=  19/10626 first= 8 d9=11126201/7272965700 d13=  19/10626
+    drop(6)->75        safe=    4/1925 first= 8 d9=2877359/1581079500 d13=    4/1925
+    drop(12)->48       safe=   13/5880 first= 8 d9=144464/79053975 d13=   13/5880
+    drop(6)->17        safe=     1/364 first= 8 d9=36691/14373450 d13=     1/364
+    drop(6)->23        safe=     1/364 first= 8 d9=36691/14373450 d13=     1/364
+    drop(6)->46        safe=     1/364 first= 8 d9=410539/165294675 d13=     1/364
+
+[4] Active-set fingerprints
+  AP:
+    degree  8: value=-320917/204954750 active=(1, 2, 3, 5, 6, 10, 11, 13)
+    degree  9: value=-161507/340540200 active=(1, 2, 3, 5, 6, 9, 10, 12, 13)
+    degree 13: value=           0 active=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  GW 12->24:
+    degree  8: value=-21877/11891880 active=(1, 2, 3, 6, 7, 11, 12, 13)
+    degree  9: value=-1697651/4427022600 active=(1, 2, 3, 5, 6, 9, 10, 12, 13)
+    degree 13: value=           0 active=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  near/K33 12->36:
+    degree  8: value=-11339/11891880 active=(1, 2, 3, 6, 7, 11, 12, 13)
+    degree  9: value=1996039/4427022600 active=(1, 2, 3, 5, 6, 9, 10, 12, 13)
+    degree 13: value=      1/1260 active=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  covering 12->84:
+    degree  8: value=302657/83243160 active=(1, 2, 3, 6, 7, 11, 12, 13)
+    degree  9: value=22118869/4427022600 active=(1, 2, 3, 5, 6, 9, 10, 12, 13)
+    degree 13: value=  563/105105 active=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+
+  The active zero sets are not endpoint labels.  They are count-level
+  atoms: which danger multiplicities the dual polynomial must touch.
+  AP/GW are invisible to low-degree count duals for the same reason they
+  are equality atoms: their N-distribution keeps mass in many count levels.
+
+[5] Tournament Analysis: proof-carrier relation
+  vertices: proof carriers, not runners.
+  pair observable:
+    cover predicate retention, exact count distribution, low-degree
+    certificate strength, AP/GW equality visibility, finite-atlas fit,
+    and anti-scalarization.
+  switch/gauge:
+    lexicographic retention vector; ties use carrier name order.
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 hp=1
+  Hamiltonian path:
+    full danger-count distribution > degree-13 interpolating dual > degree-9 moment dual > endpoint/lift packet > gK8/Delsarte sector moment > Bonferroni pair moment > raw Haar safe measure > raw runner set
+
+[6] Theorem-facing readout
+  New lemma target:
+    Danger-count moment gate.  A strict LRC14 counterexample must have
+    safe_mu=0, hence every feasible count-dual polynomial has nonpositive
+    expectation.  Therefore any packet with a positive degree-R dual bound
+    is discharged without locating the witness interval.
+  What this pass found:
+    The route is not a cheap pair/second-moment proof.  Named hard rows
+    remain invisible through degree 6.  Degree 8/9 begins to separate
+    positive rows from AP/GW; degree 13 recovers exact safe mass.
+  How this differs from HYP-2968:
+    HYP-2968 proves positivity by exact Q/R lift intervals.  This route
+    forgets all lift geometry and asks whether the integer multiplicity
+    distribution alone already forces a safe set.
+  live next step: search for a universal degree <= 13 dual family
+    on fixed-margin labelled packets, or prove why AP/GW are the only
+    rows whose danger-count distribution defeats every low-degree dual.

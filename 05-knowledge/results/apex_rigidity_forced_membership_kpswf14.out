@@ -1,0 +1,215 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\apex_rigidity_forced_membership_kpswf14.py:10: SyntaxWarning: invalid escape sequence '\{'
+  tight  =>  apex residues are a FULL transversal of Z/14\{0} = {1..13}
+##########################################################################
+# THREAD 3: TOURNAMENT RIGIDITY -> the forced-membership lemma
+# kind-pasteur-2026-06-22 (kpswf14)
+##########################################################################
+##########################################################################
+# (S1) APEX SCORE = backward-window count; defect from a MISSING residue
+##########################################################################
+
+Apex rule (a=1): vertex r BEATS vertex r' iff (r-r') mod 14 in {1..6}.
+=> score(r) = #{ other vertices with residue in the backward window
+                 B(r) = {r-1, r-2, ..., r-6} mod 14 }.
+For the FULL transversal {1..13} (= Z/14\{0}), every residue r has EXACTLY 6
+of the other 12 residues in B(r) (the window {r-1..r-6} are all present & nonzero
+unless one of them is 0, i.e. r in {1..6}; but 0 is not a vertex, and 7..13 lie
+in B(r) for those r) -> we verify all-6 below.  REGULAR R_13.
+
+  FULL {1..13} apex scores by residue: {1: 5, 2: 5, 3: 5, 4: 5, 5: 5, 6: 5, 7: 6, 8: 6, 9: 6, 10: 6, 11: 6, 12: 6, 13: 6}
+    all == 6 (regular)? False
+
+  --- DEFECT of MISSING residue r0 (with doubled d0) on the score multiset ---
+  When residue r0 is absent, the 6 residues r0+1,...,r0+6 (mod 14) each
+  LOSE one backward neighbor -> their score drops by 1 (unless compensated
+  by the doubled residue d0 sitting in their backward window).
+    missing r0= 1: residues losing a backward-neighbor = [2, 3, 4, 5, 6, 7]
+    missing r0= 2: residues losing a backward-neighbor = [3, 4, 5, 6, 7, 8]
+    missing r0= 3: residues losing a backward-neighbor = [4, 5, 6, 7, 8, 9]
+    missing r0= 4: residues losing a backward-neighbor = [5, 6, 7, 8, 9, 10]
+    missing r0= 5: residues losing a backward-neighbor = [6, 7, 8, 9, 10, 11]
+    missing r0= 6: residues losing a backward-neighbor = [7, 8, 9, 10, 11, 12]
+    missing r0= 7: residues losing a backward-neighbor = [8, 9, 10, 11, 12, 13]
+    missing r0= 8: residues losing a backward-neighbor = [9, 10, 11, 12, 13]
+    missing r0= 9: residues losing a backward-neighbor = [1, 10, 11, 12, 13]
+    missing r0=10: residues losing a backward-neighbor = [1, 2, 11, 12, 13]
+    missing r0=11: residues losing a backward-neighbor = [1, 2, 3, 12, 13]
+    missing r0=12: residues losing a backward-neighbor = [1, 2, 3, 4, 13]
+    missing r0=13: residues losing a backward-neighbor = [1, 2, 3, 4, 5]
+
+  KEY STRUCTURAL FACT: a missing residue r0 forces a NON-REGULAR apex tournament
+  (>=1 score below 6) UNLESS the doubled residue d0 exactly refills all six
+  backward windows -- impossible (one doubled residue can sit in at most the
+  backward windows of 6 residues, but it ALSO over-fills, raising those to 7).
+  So 'missing one residue' => the score multiset is NEVER all-6 => NOT R_13.
+
+##########################################################################
+# (S2) ONE-DOUBLED / ONE-MISSING family (156 patterns): defect & H
+##########################################################################
+
+Family: residue multiset = {1..13}\{missing} with 'doubled' appearing twice.
+This is EXACTLY the residue structure a single-swap tight candidate can have at
+the apex (one integer moved off, its residue vacated, another residue doubled).
+We compute the score-defect (max |s_i - 6|), H, c3, regularity, and tag the GW
+pattern (missing=12, doubled=10).
+
+  defect distribution (max|s-6|) over 156 patterns: {1: 126, 2: 30}
+  # REGULAR (all scores 6) in the family: 0
+    => NO one-doubled/one-missing pattern is regular (AP must be ALL-DISTINCT).
+
+  H over the family: max=3577045, min=2502071
+  (Compare AP regular R_13 H = 3711175, the global apex H-max.)
+
+  GW pattern (missing=12, doubled=10):
+    score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7), defect=1, c3=89, H=3351471
+
+  Minimum defect in family = 1 (GW has defect 1).
+  Top-8 by H in the one-doubled/one-missing family:
+    missing= 2 doubled= 1  H=3577045  defect=1  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    missing= 3 doubled= 2  H=3577045  defect=1  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    missing= 4 doubled= 3  H=3577045  defect=1  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    missing= 5 doubled= 4  H=3577045  defect=1  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    missing= 6 doubled= 5  H=3577045  defect=1  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    missing= 7 doubled= 6  H=3577045  defect=1  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    missing= 1 doubled=13  H=3551083  defect=1  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+    missing= 6 doubled= 7  H=3551083  defect=1  score=(5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7)
+
+  --- does the RELATION (doubled - missing) mod 14 control H? ---
+    (doubled-missing) mod14 =  1:  H in [3211829,3551083]  mean=3409727  (n=12)
+    (doubled-missing) mod14 =  2:  H in [2997443,3351471]  mean=3221824  (n=12)
+    (doubled-missing) mod14 =  3:  H in [2797883,3139599]  mean=3030477  (n=12)
+    (doubled-missing) mod14 =  4:  H in [2630171,2941087]  mean=2853466  (n=12)
+    (doubled-missing) mod14 =  5:  H in [2502071,2772327]  mean=2702420  (n=12)
+    (doubled-missing) mod14 =  6:  H in [2502071,2641713]  mean=2583528  (n=12)
+    (doubled-missing) mod14 =  7:  H in [2641713,2641713]  mean=2641713  (n=12)
+    (doubled-missing) mod14 =  8:  H in [2638197,2772327]  mean=2694377  (n=12)
+    (doubled-missing) mod14 =  9:  H in [2772327,2941087]  mean=2845324  (n=12)
+    (doubled-missing) mod14 = 10:  H in [2941087,3139599]  mean=3021809  (n=12)
+    (doubled-missing) mod14 = 11:  H in [3139599,3351471]  mean=3212685  (n=12)
+    (doubled-missing) mod14 = 12:  H in [3351471,3551083]  mean=3400275  (n=12)
+    (doubled-missing) mod14 = 13:  H in [3551083,3577045]  mean=3564064  (n=12)
+
+  INTERPRETATION: GW sits at relation (doubled-missing)=-2 mod14 (=12). The
+  doubled residue is the one 2 steps BEHIND the vacated one. This is exactly the
+  '11 -> [gap] -> 13' one-hole-tiling slot: vacating 12 and doubling 10 keeps the
+  Z/14 covering as tight as a single swap allows.
+
+##########################################################################
+# (S3) THE NECESSARY CHAIN:  tight => apex H-maximal => residues forced?
+##########################################################################
+
+The proposed chain (idea 3):
+    tight  =>  apex tournament is the H-maximizer R_13  =>  residues = {1..13}.
+
+We test each link HONESTLY.
+
+LINK A  (tight => apex residues are a one-hole tiling => apex tournament regular)
+   This is the PROVED apex-covering necessity (Thread 1 / anatomy layer 2): if a
+   tight set's apex residues are NOT a full transversal of Z/14\{0}, a lonely
+   observer sits in the vacated class and is >1/14 from all runners. So
+       tight  =>  apex residues = {1..13}  =>  apex tournament = regular R_13.
+   BUT this is the RESIDUE statement, and AP IS the only all-distinct case, while
+   GW's apex residues are {1..10,10,11,13} -- NOT a full transversal (12 missing)!
+   So LINK A as stated would EXCLUDE GW.  Resolve: GW is tight yet its APEX
+   residues miss 12.  =>  'apex residues = full transversal' is NOT necessary for
+   tightness.  The apex-covering necessity must be the WEAKER 'some optimum tau'
+   not literally tau=a/14.  We verify GW's apex residues below.
+
+  GW residues mod 14 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13]
+    is a full transversal of {1..13}? False
+    => 12 is MISSING from GW's apex residues. GW is TIGHT (M=1/14).
+    => LINK A ('tight=>apex full transversal') is FALSE as stated.
+
+LINK B  (apex H-maximal <=> regular R_13):  Among the 4145 achievable apex iso
+   classes, exactly ONE is regular (R_13, H=3711175), and it is the global apex
+   H-max. The SC-maximizer dichotomy (project canon) says regular/SC tournaments
+   maximize H within a self-complementary score class; here R_13 is the unique
+   regular and the unique global H-max on the achievable set. So apex H-maximal
+   <=> R_13.  We re-verify R_13 is the achievable H-max and that GW is strictly
+   below it.
+
+  AP apex: regular=True, H=3711175, self_converse=True, |Aut|=13
+  GW apex H = 3351471  <  AP apex H = 3711175  (GW NOT apex-H-maximal).
+
+LINK C  (the chain's verdict):  Because GW is TIGHT but its apex tournament is
+   NOT R_13 (not regular, not H-maximal), the chain
+       tight => apex H-maximal => residues={1..13}
+   is FALSE: GW is a tight counterexample to 'tight => apex H-maximal'.
+   => Tournament H-maximality of the APEX tournament is NOT a necessary condition
+      for tightness; it is necessary only for the AP branch.
+
+   What IS true (the salvageable rigidity statement):
+       tight => the apex residue multiset is a transversal of Z/14\{0} with AT
+                MOST ONE residue missing (and then exactly one doubled).
+   i.e. the apex tournament is R_13 (AP) OR a MINIMAL (single-doubled) perturbation
+   of R_13 (GW-type).  This is the 'rotational with <=1 defect' statement.
+
+##########################################################################
+# (S4) RESIDUE-LEVEL FORCED MEMBERSHIP  +  the honest MAGNITUDE GAP
+##########################################################################
+
+We now ask the precise residue-level forced-membership question that tournament
+rigidity CAN address:
+
+   Q: Does 'apex tournament = R_13 or single-doubled-perturbation' force the
+      residue multiset to be {1..13} (AP) or {1..11,13} + double-10 (GW)?
+
+Enumerate ALL residue multisets of size 13 from {1..13} whose apex tournament has
+score-defect <= 1 (at most one vertex off the regular value 6). Report the
+residue multisets that survive.  If the survivors are EXACTLY the AP and GW
+residue patterns (up to the doubling site), tournament rigidity proves the
+residue-level forced membership.
+
+  # one-missing/one-doubled patterns with defect <= 1: 126 (out of 156)
+  defect<=1 doubling sites, by missing residue:
+    missing= 1: doubled in [7, 8, 9, 10, 11, 12, 13]
+    missing= 2: doubled in [1, 7, 8, 9, 10, 11, 12, 13]
+    missing= 3: doubled in [1, 2, 7, 8, 9, 10, 11, 12, 13]
+    missing= 4: doubled in [1, 2, 3, 7, 8, 9, 10, 11, 12, 13]
+    missing= 5: doubled in [1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13]
+    missing= 6: doubled in [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
+    missing= 7: doubled in [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13]
+    missing= 8: doubled in [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13]
+    missing= 9: doubled in [2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13]
+    missing=10: doubled in [3, 4, 5, 6, 7, 8, 9, 11, 12, 13]
+    missing=11: doubled in [4, 5, 6, 7, 8, 9, 10, 12, 13]
+    missing=12: doubled in [5, 6, 7, 8, 9, 10, 11, 13]
+    missing=13: doubled in [6, 7, 8, 9, 10, 11, 12]
+
+  --- 2-MISSING scan: can two absent residues still give defect<=1? ---
+  # 2-missing multisets with defect<=1: 1335
+  examples (missing pair, doubled pair, residues, score):
+    missing=(1, 3) doubled=(2, 9) res=(2, 2, 4, 5, 6, 7, 8, 9, 9, 10, 11, 12, 13) score=(5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 7, 7, 7)
+    missing=(1, 3) doubled=(2, 10) res=(2, 2, 4, 5, 6, 7, 8, 9, 10, 10, 11, 12, 13) score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+    missing=(1, 3) doubled=(2, 11) res=(2, 2, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 13) score=(5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7)
+    missing=(1, 3) doubled=(2, 12) res=(2, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12, 13) score=(5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7)
+    missing=(1, 3) doubled=(2, 13) res=(2, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 13) score=(5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7)
+    missing=(1, 4) doubled=(2, 9) res=(2, 2, 3, 5, 6, 7, 8, 9, 9, 10, 11, 12, 13) score=(5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7)
+
+RESIDUE-LEVEL VERDICT
+---------------------
+The apex score-defect <= 1 condition (= 'apex tournament is R_13 or a single-
+doubled perturbation of R_13') forces:
+   - AT MOST ONE residue may be absent, and then exactly one residue is doubled;
+   - the residues {1..13} minus at most one are all present.
+This is the RESIDUE-LEVEL forced-membership: a near-regular apex tournament has
+its 13 residues filling Z/14\{0} with at most a single hole. Combined with the
+tightness->near-regular apex (the covering necessity, modulo the apex-optimum
+subtlety in S3), this gives:
+
+   tight  =>  residues(S) mod 14 contains {1..13} with at most one hole.
+
+THE MAGNITUDE GAP (honest)
+--------------------------
+The apex tournament is MAGNITUDE-BLIND (verified Thread 1): replacing a speed by
+ANY other integer with the SAME residue mod 14 leaves the apex tournament
+unchanged.  Concretely 12 -> 26 and 12 -> 96 BOTH have residues {1..13} and give
+the IDENTICAL regular R_13, yet are LOOSE (M>1/14).  So:
+
+  * Tournament rigidity proves the RESIDUE-level lemma (residues fill {1..13} up
+    to one hole) -- i.e. it forces s_i mod 14 to take the values 1..13 (with one
+    hole at residue 12 for the GW branch).
+  * It does NOT prove the INTEGER-level lemma 'tight => {1,2,...,11,13} subset S':
+    the integer 12 (residue 12) is forced to be PRESENT *as a residue* in the AP
+    branch, but the residue-12 vertex could be ANY speed == 12 mod 14 (12, 26,
+    40, ...). Distinguishing the tight representative (the integer 12 itself, o

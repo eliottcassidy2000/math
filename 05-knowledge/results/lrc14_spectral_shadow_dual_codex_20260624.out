@@ -1,0 +1,137 @@
+﻿HYP-2977 / T1061 spectral-shadow dual probe for LRC14
+parameters: max_frequency=224 few_apex_worst=18 max_k14=6 max_multiplier=180
+[0] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, gaps, fixed sections, section boundaries, wall-crossing events,
+    residues, cover arcs, lift packets, Fourier modes, and proof obligations.
+  chosen vertices:
+    Fourier bands 1-7, 8-14, 15-28, 29-56, 57-112, 113-224.
+  LRC predicate preserved:
+    positive strict Haar mass is the L2 mass of 1_U, and a positive
+    Fejer convolution against 1_U is a spectral witness of nonempty U.
+  information destroyed:
+    endpoint-owner labels, C27 shell addresses, and exact packet family.
+  challenged assumption:
+    that the proof must locate a local boundary pinch.  This route asks
+    whether every live packet has a finite trigonometric shadow, or else
+    a high-frequency tail controlled by relation-lattice structure.
+
+[1] Exact safe set and Fourier visibility
+  row                                src              qdiv           mass     max_comp E<= 14 E<= 28 E<= 56 E<=112 E<=224  H90
+  AP                                 boundary           14              0            0  0.000  0.000  0.000  0.000  0.000    -
+  GW 12->24                          boundary           14              0            0  0.000  0.000  0.000  0.000  0.000    -
+  near 12->36                        named              14         1/1260       1/2520  0.012  0.022  0.044  0.090  0.177    -
+  petal 10->20                       named              14          1/980       1/1960  0.015  0.029  0.058  0.114  0.226    -
+  petal 13->26                       named              14          1/182        1/364  0.084  0.160  0.308  0.561  0.846    -
+  two-swap 10,12->20,24              named              14          1/980       1/1960  0.015  0.029  0.058  0.114  0.226    -
+  two-swap 10,12->20,36              named              14         4/2205       1/1960  0.013  0.027  0.051  0.104  0.204    -
+  covering 6->98                     covering           15    1543/294294        1/728  0.064  0.089  0.121  0.263  0.518    -
+  covering 12->84                    covering           15     563/105105       3/1960  0.064  0.117  0.223  0.352  0.414    -
+  covering 12->168                   covering           15      263/30030     23/11760  0.080  0.147  0.285  0.472  0.570    -
+  compact drop(6,)->14*(1,)          few-apex-worst     15          7/858       5/1848  0.103  0.152  0.208  0.454  0.758    -
+  stretched drop(6,)->14*(2,)        few-apex-worst     15          7/858       5/1848  0.103  0.152  0.208  0.454  0.758    -
+  compact drop(10, 12)->14*(5, 6)    few-apex-worst     15    4999/315315      19/8820  0.076  0.152  0.268  0.353  0.476    -
+  compact drop(10,)->14*(5,)         few-apex-worst     15      718/45045        3/980  0.103  0.214  0.387  0.513  0.679    -
+  stretched drop(10,)->14*(10,)      few-apex-worst     15    6313/315315        1/280  0.129  0.270  0.495  0.680  0.754    -
+  compact drop(7,)->14*(1,)          few-apex-worst     15  57191/2522520        3/784  0.117  0.177  0.265  0.537  0.743    -
+  compact drop(4, 12)->14*(1, 6)     few-apex-worst     15    9577/420420      15/4312  0.154  0.198  0.409  0.513  0.660    -
+  stretched drop(4, 12)->14*(6, 12)  few-apex-worst     15    9577/420420      15/4312  0.154  0.198  0.409  0.513  0.660    -
+  compact drop(13,)->14*(13,)        few-apex-worst     15    4637/194040        3/637  0.098  0.175  0.314  0.522  0.693    -
+  compact drop(6, 10)->14*(1, 5)     few-apex-worst     15       167/6930        3/980  0.094  0.190  0.330  0.494  0.703    -
+  compact drop(4,)->14*(1,)          few-apex-worst     15        97/4004       9/1232  0.247  0.287  0.661  0.854  0.927  154
+  stretched drop(4,)->14*(2,)        few-apex-worst     15        97/4004       9/1232  0.247  0.287  0.661  0.854  0.927  154
+  stretched drop(6, 10)->14*(6, 10)  few-apex-worst     15      601/24255       5/1848  0.100  0.198  0.356  0.532  0.678    -
+  stretched drop(4, 6)->14*(2, 6)    few-apex-worst     15      717/28028      15/4312  0.166  0.191  0.377  0.531  0.745    -
+  compact drop(5,)->14*(1,)          few-apex-worst     15    3617/140140        1/220  0.147  0.198  0.378  0.639  0.860    -
+  stretched drop(5,)->14*(2,)        few-apex-worst     15    3617/140140       9/1960  0.171  0.227  0.465  0.757  0.889    -
+  stretched drop(10, 12)->14*(12, 15 few-apex-worst     16   16433/630630     73/32340  0.111  0.217  0.379  0.544  0.627    -
+  stretched drop(13,)->14*(26,)      few-apex-worst     15  70181/2522520       3/1274  0.105  0.183  0.322  0.519  0.696    -
+
+[2] Dominant Fourier modes
+  AP: strict-safe mass zero; spectral shadow is zero.
+  GW 12->24: strict-safe mass zero; spectral shadow is zero.
+  near 12->36: 41:0.00079271, 35:0.00079264, 76:0.00079245, 6:0.00079096, 117:0.00079039
+  petal 10->20: 27:0.0010199, 54:0.0010182, 49:0.0010162, 76:0.0010162, 81:0.0010156
+  petal 13->26: 7:0.0054811, 14:0.0054412, 21:0.005375, 41:0.0053563, 34:0.0053508
+  two-swap 10,12->20,24: 27:0.0010199, 54:0.0010182, 49:0.0010162, 76:0.0010162, 81:0.0010156
+  two-swap 10,12->20,36: 76:0.0018086, 152:0.0017925, 59:0.0017664, 135:0.001766, 17:0.0017561
+  covering 6->98: 3:0.0051937, 6:0.0050467, 69:0.004904, 66:0.004883, 72:0.0048327
+  covering 12->84: 6:0.005348, 12:0.0053225, 18:0.0052801, 24:0.005221, 30:0.0051454
+  covering 12->168: 6:0.0087484, 12:0.0087198, 18:0.0086723, 24:0.008606, 30:0.0085213
+  compact drop(6,)->14*(1,): 3:0.0080851, 6:0.0078664, 69:0.0077183, 72:0.0076898, 66:0.007608
+  stretched drop(6,)->14*(2,): 3:0.0080851, 6:0.0078664, 69:0.0077183, 72:0.0076898, 66:0.007608
+  compact drop(10, 12)->14*(5, 6): 10:0.01403, 25:0.01369, 35:0.012694, 15:0.012392, 60:0.011496
+  compact drop(10,)->14*(5,): 5:0.015899, 10:0.015777, 15:0.015575, 20:0.015294, 25:0.014937
+  stretched drop(10,)->14*(10,): 5:0.019979, 10:0.019854, 15:0.019646, 20:0.019356, 25:0.018988
+  compact drop(7,)->14*(1,): 7:0.021757, 77:0.020227, 70:0.019532, 84:0.019324, 14:0.019093
+  compact drop(4, 12)->14*(1, 6): 6:0.020916, 40:0.01776, 38:0.016386, 34:0.016261, 46:0.016115
+  stretched drop(4, 12)->14*(6, 12): 6:0.020916, 40:0.01776, 38:0.016386, 34:0.016261, 46:0.016115
+  compact drop(13,)->14*(13,): 13:0.023533, 26:0.022471, 39:0.020804, 52:0.018673, 65:0.01625
+  compact drop(6, 10)->14*(1, 5): 15:0.021967, 30:0.016397, 40:0.016346, 25:0.015333, 55:0.015254
+  compact drop(4,)->14*(1,): 2:0.02394, 4:0.023089, 6:0.021696, 40:0.021295, 42:0.021134
+  stretched drop(4,)->14*(2,): 2:0.02394, 4:0.023089, 6:0.021696, 40:0.021295, 42:0.021134
+  stretched drop(6, 10)->14*(6, 10): 15:0.022725, 40:0.01756, 30:0.017383, 55:0.016908, 25:0.016227
+  stretched drop(4, 6)->14*(2, 6): 2:0.021507, 12:0.017461, 46:0.016463, 48:0.016048, 34:0.015203
+  compact drop(5,)->14*(1,): 5:0.024794, 55:0.023801, 60:0.023023, 50:0.022712, 10:0.02183
+  stretched drop(5,)->14*(2,): 5:0.024698, 55:0.023392, 50:0.023261, 60:0.021532, 10:0.021465
+  stretched drop(10, 12)->14*(12, 15): 10:0.021953, 60:0.020636, 25:0.019961, 35:0.019232, 50:0.017984
+  stretched drop(13,)->14*(26,): 13:0.02745, 26:0.026371, 39:0.02469, 52:0.022566, 65:0.020193
+
+[3] Fejer midpoint shadow
+  Values are Fejer_H * 1_U at the midpoint of the largest exact safe component.
+  Positive values are spectral witnesses for the already exact open set;
+  the proof target is to lower-bound one of these without enumerating endpoints.
+  row                                F 14 F 28 F 56 F112 F224
+  AP                                  0.00000  0.00000  0.00000  0.00000  0.00000
+  GW 12->24                           0.00000  0.00000  0.00000  0.00000  0.00000
+  near 12->36                         0.00605  0.01151  0.02263  0.04483  0.08910
+  petal 10->20                        0.00766  0.01480  0.02908  0.05760  0.11438
+  petal 13->26                        0.04147  0.07973  0.15571  0.30251  0.55807
+  two-swap 10,12->20,24               0.00766  0.01480  0.02908  0.05760  0.11438
+  two-swap 10,12->20,36               0.00778  0.01492  0.02912  0.05763  0.11440
+  covering 6->98                      0.03662  0.05932  0.08117  0.15836  0.30277
+  covering 12->84                     0.03626  0.06851  0.13147  0.23825  0.37085
+  covering 12->168                    0.04929  0.09317  0.17932  0.32861  0.51179
+  compact drop(6,)->14*(1,)           0.05847  0.10092  0.15785  0.30399  0.55193
+  stretched drop(6,)->14*(2,)         0.05847  0.10092  0.15785  0.30399  0.55193
+  compact drop(10, 12)->14*(5, 6)     0.05933  0.10967  0.19863  0.32938  0.46743
+  compact drop(10,)->14*(5,)          0.06337  0.12158  0.22872  0.39549  0.61045
+  stretched drop(10,)->14*(10,)       0.07863  0.15099  0.28456  0.49142  0.70254
+  compact drop(7,)->14*(1,)           0.06401  0.11869  0.21860  0.41330  0.70996
+  compact drop(4, 12)->14*(1, 6)      0.11246  0.16873  0.30095  0.47369  0.67607
+  stretched drop(4, 12)->14*(6, 12)   0.11246  0.16873  0.30095  0.47369  0.67607
+  compact drop(13,)->14*(13,)         0.07349  0.13908  0.26736  0.49805  0.79836
+  compact drop(6, 10)->14*(1, 5)      0.06367  0.12229  0.22877  0.39560  0.61050
+  compact drop(4,)->14*(1,)           0.15599  0.22981  0.40896  0.69518  0.89986
+  stretched drop(4,)->14*(2,)         0.15599  0.22981  0.40896  0.69518  0.89986
+  stretched drop(6, 10)->14*(6, 10)   0.05944  0.10223  0.15865  0.30457  0.55215
+  stretched drop(4, 6)->14*(2, 6)     0.11485  0.16941  0.30092  0.47384  0.67620
+  compact drop(5,)->14*(1,)           0.09300  0.15480  0.25491  0.47877  0.78329
+  stretched drop(5,)->14*(2,)         0.12122  0.17688  0.25917  0.48565  0.78946
+  stretched drop(10, 12)->14*(12, 15  0.07826  0.13861  0.22910  0.38418  0.53477
+  stretched drop(13,)->14*(26,)       0.07672  0.14379  0.26966  0.46307  0.63285
+
+[4] Tournament Analysis: frequency-band majority relation
+  vertices:
+    1-7, 8-14, 15-28, 29-56, 57-112, 113-224
+  pair observable:
+    band A -> band B iff A has larger Parseval band energy than B on
+    more audited positive rows; ties follow low-frequency Hamiltonian path.
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} c3=0 scc=(1, 1, 1, 1, 1, 1) hp=1
+  Hamiltonian path by outdegree:
+    113-224 > 57-112 > 29-56 > 15-28 > 1-7 > 8-14
+  close pair ledgers:
+    57-112 vs 113-224: 12-14
+
+[5] Proof readout
+  zero strict-mass rows in this audit: ['AP', 'GW 12->24']
+  positive rows audited: 26
+  smallest exact positive mass: 1/1260
+  smallest Fejer_14 midpoint value among positive rows: 0.00604909
+  rows not 90%-captured by H=224: ['near 12->36', 'petal 10->20', 'petal 13->26', 'two-swap 10,12->20,24', 'two-swap 10,12->20,36', 'covering 6->98', 'covering 12->84', 'covering 12->168'] ...
+  candidate theorem form:
+    In the post-THM-571 Moon core, either a bounded frequency packet
+    gives a positive Fejer/Beurling-Selberg minorant, or the energy is
+    forced into high bands whose relation-lattice tail is one of the
+    already labelled lift/K33/covering packets.  AP/GW are exactly the
+    zero-shadow atoms.

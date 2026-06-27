@@ -1,0 +1,239 @@
+HYP-3116 circuit lower-bound / missing-input ledger
+=====================================================
+
+proof gates mined: 13
+metric keys: exact_gap, kernel_exclusion, frontier_adjacency, sidecar_retention, quotient_leakage_control, formalizable, global_lift, uniformity, finite_checkability
+pairwise observable: weighted proof-payload retention, then exact metric vector, then declared tie Hamiltonian path
+assumption challenge: vertices are proof carriers and sidecar ledgers, not runners, arcs, Boolean gates, roots, or raw scalar values
+
+Core synthesis
+--------------
+The strongest old circuit bridge is HYP-2108/HYP-2112: P(S) is a MAX activation gate and Phi(C) is the SUM activation gate equal to the exact gap.
+Thus the LRC14 circuit task is a kernel-exclusion problem for an endpoint-cover activation circuit, not a generic P/poly lower-bound slogan.
+HYP-2791 supplies a small threshold-style Boolean cut, but HYP-2790 says the endpoint-period numerator and ownership sidecars must travel with it.
+
+Gate ledger
+-----------
+endpoint_phi_sum_gap: SUM activation Phi(C) = exact gap
+  anchors: HYP-2112, HYP-2108, S576
+  kind: ReLU/ramp endpoint-cover proof circuit
+  score: 149; vector=(5, 5, 4, 4, 5, 4, 4, 5, 4)
+  essential: endpoint_cover_activation_vector, component_midpoint_phase, component_length, multiple_of_n_configuration
+  missing: finite_address_packet, observer_gluing_certificate, residual_kernel_exclusion_certificate, endpoint_period_numerator_sidecar
+  minterms: Phi_sum_positive; Phi_kernel_empty_on_residual_packet
+  terminal: Phi(C)>0 gives the exact loose gap; kernel debt routes to named residual
+lean_proof_frontier_dag: Lean proof-frontier certificate DAG
+  anchors: HYP-3107, TournamentH7.LRCProofFrontier
+  kind: monotone proof-state circuit
+  score: 138; vector=(2, 4, 5, 5, 5, 5, 4, 5, 3)
+  essential: coverage_extremality, finite_address_packet, observer_gluing_certificate, fine_scale_winding_transfer
+  missing: coverage_extremality_producer, node3_effective_peel, finite_ruler_glue, fine_modp_winding_transfer
+  minterms: q_witness_gate; level7_sieve & dyadic_lift; finite_address_packet & observer_gluing_certificate
+  terminal: lrc14_from_bleeding_edge_frontier style theorem
+finite_address_observer_gluing: finite-address plus observer-gluing exit
+  anchors: HYP-3098, HYP-3107, HYP-3111
+  kind: terminal proof interface
+  score: 135; vector=(1, 4, 5, 5, 5, 5, 4, 5, 4)
+  essential: finite_address_packet, observer_gluing_certificate, route_legality_status
+  missing: endpoint_cover_activation_vector, carrier_certificate, chart_overlap_payload_difference
+  minterms: finite_address_packet & observer_gluing_certificate
+  terminal: observer-gluing theorem or finite-address branch theorem
+endpoint_P_max_activation: MAX activation P(S)>0 endpoint cover gate
+  anchors: HYP-2108, S575
+  kind: max-of-ramps cover positivity test
+  score: 125; vector=(4, 4, 3, 4, 4, 4, 3, 4, 4)
+  essential: midpoint_phase, component_length, v_equals_nw_clock
+  missing: residual_kernel_exclusion_certificate, finite_address_packet, observer_gluing_certificate, all_v_clock_family_status
+  minterms: one_endpoint_activation_positive
+  terminal: P(S)>0 iff loose for the tested cover circuit
+route_state_median_closure: route-state median/Horn closure circuit
+  anchors: HYP-3074, HYP-3070, HYP-3069
+  kind: Boolean sidecar closure circuit
+  score: 124; vector=(1, 3, 5, 5, 5, 4, 3, 5, 4)
+  essential: legal_sidecar_tree, median_center_signature, discharge_atom
+  missing: non_tautological_packet_witness_floor, endpoint_cover_activation_vector, residual_debt_basis_atom
+  minterms: unique_legal_median_center & specific_discharge_atom
+  terminal: center-control coverage implies LRC14 only after real packet witnesses
+haar_zipper_cocycle: Haar zipper fixed-margin cocycle
+  anchors: HYP-2991, HYP-2989, HYP-2997
+  kind: local switch / cocycle circuit
+  score: 116; vector=(2, 3, 3, 4, 5, 4, 3, 4, 5)
+  essential: haar_zeta, owner_strip_label
+  missing: endpoint_cover_activation_vector, packet_route_key, dual_annihilator_status
+  minterms: fixed_margin_plus_zeta_separates_fiber
+  terminal: quotient legality or first cocycle debt
+fourier_toeplitz_psd_dual: Fourier/Toeplitz PSD dual certificate
+  anchors: HYP-2974, HYP-2981, LTI-056
+  kind: linear-algebraic dual circuit
+  score: 110; vector=(3, 3, 3, 4, 4, 3, 3, 4, 3)
+  essential: Toeplitz_matrix, Fejer_vector, packet_key
+  missing: interval_arithmetic_certificate, endpoint_owner_decoding, finite_address_packet
+  minterms: negative_quadratic_form
+  terminal: PSD failure forces positive safe interval unless boundary-owned
+boolean_mobius_low_depth_cut: low-depth signed Boolean-Mobius cut
+  anchors: HYP-2791, HYP-2744
+  kind: threshold circuit over missed-sector atom types
+  score: 101; vector=(3, 3, 3, 2, 2, 5, 2, 4, 5)
+  essential: T1_atom, T2sep_atom, T2adj_atom
+  missing: endpoint_period_numerator_sidecar, speed_owner_sidecar, global_lift_from_k8_bank, height_phase_sidecar
+  minterms: 21*T1+57*T2sep+2*T2adj_positive
+  terminal: sharp k=8 bank cut; global lift still open
+lee_yang_root_ear_payload: Lee-Yang root curve plus ear payload
+  anchors: HYP-3112, HYP-3109, HYP-3108
+  kind: PGF/root-motion proof sidecar
+  score: 99; vector=(2, 2, 3, 4, 4, 3, 3, 3, 4)
+  essential: root_multiset, ear_payload_A_vector
+  missing: endpoint_owner_word, finite_address_packet, observer_gluing_certificate, root_collision_wall_label
+  minterms: root_wall_classified & ear_payload_reconstructs_extension
+  terminal: root wall, legal ear discharge, or named root-collision debt
+full_boolean_mobius_hierarchy: full Boolean-Mobius/Delsarte atom law
+  anchors: HYP-2744
+  kind: exact Boolean atom basis
+  score: 92; vector=(3, 2, 2, 3, 3, 4, 2, 3, 4)
+  essential: all_missed_sector_atoms, mobius_inversion
+  missing: small_signed_functional, endpoint_phase_connection, global_packet_lift
+  minterms: small_signed_functional_found
+  terminal: basis for finite signed cuts, not a terminal scalar
+endpoint_period_warning: endpoint-period numerator warning
+  anchors: HYP-2790
+  kind: guardrail against scalar Boolean transfer
+  score: 83; vector=(1, 2, 2, 3, 4, 3, 2, 3, 4)
+  essential: endpoint_period_numerator
+  missing: endpoint_period_numerator_sidecar, endpoint_cover_activation_vector, speed_owner_sidecar
+  minterms: endpoint_period_numerator_retained
+  terminal: guardrail: Boolean/type scalars do not transfer alone
+minkowski_circuit_ising_bridge: Minkowski/circuit/Ising/De Moivre cut-payload bridge
+  anchors: HYP-3111, HYP-3115
+  kind: source-carrier sidecar bundle
+  score: 77; vector=(1, 2, 3, 3, 3, 2, 2, 2, 4)
+  essential: proof_circuit_missing_input_vector, q_body_inequality_word
+  missing: endpoint_cover_activation_vector, proof_uniformity_schema, root_ear_lattice_legal_exit
+  minterms: finite_address_packet & observer_gluing_certificate & carrier_sidecar
+  terminal: pressure gauge; proof exit only through finite address and observer gluing
+finite_bank_apex7_literal: finite-bank apex7_error <= 5 literal
+  anchors: HYP-3115
+  kind: nonuniform fitted classifier
+  score: 31; vector=(1, 1, 1, 1, 0, 1, 0, 0, 5)
+  essential: apex7_error
+  missing: proof_uniformity_schema, endpoint_cover_activation_vector, finite_address_packet, observer_gluing_certificate, train_test_family_split
+  minterms: apex7_error_le_5_on_anchored_bank
+  terminal: warning signal only; not a proof circuit
+
+Top missing inputs
+------------------
+endpoint_cover_activation_vector: 6 gates -> finite_address_observer_gluing, route_state_median_closure, haar_zipper_cocycle, minkowski_circuit_ising_bridge, endpoint_period_warning, finite_bank_apex7_literal
+finite_address_packet: 5 gates -> endpoint_phi_sum_gap, endpoint_P_max_activation, fourier_toeplitz_psd_dual, lee_yang_root_ear_payload, finite_bank_apex7_literal
+observer_gluing_certificate: 4 gates -> endpoint_phi_sum_gap, endpoint_P_max_activation, lee_yang_root_ear_payload, finite_bank_apex7_literal
+endpoint_period_numerator_sidecar: 3 gates -> endpoint_phi_sum_gap, boolean_mobius_low_depth_cut, endpoint_period_warning
+residual_kernel_exclusion_certificate: 2 gates -> endpoint_phi_sum_gap, endpoint_P_max_activation
+speed_owner_sidecar: 2 gates -> boolean_mobius_low_depth_cut, endpoint_period_warning
+proof_uniformity_schema: 2 gates -> minkowski_circuit_ising_bridge, finite_bank_apex7_literal
+all_v_clock_family_status: 1 gates -> endpoint_P_max_activation
+coverage_extremality_producer: 1 gates -> lean_proof_frontier_dag
+node3_effective_peel: 1 gates -> lean_proof_frontier_dag
+finite_ruler_glue: 1 gates -> lean_proof_frontier_dag
+fine_modp_winding_transfer: 1 gates -> lean_proof_frontier_dag
+carrier_certificate: 1 gates -> finite_address_observer_gluing
+chart_overlap_payload_difference: 1 gates -> finite_address_observer_gluing
+non_tautological_packet_witness_floor: 1 gates -> route_state_median_closure
+residual_debt_basis_atom: 1 gates -> route_state_median_closure
+global_lift_from_k8_bank: 1 gates -> boolean_mobius_low_depth_cut
+height_phase_sidecar: 1 gates -> boolean_mobius_low_depth_cut
+small_signed_functional: 1 gates -> full_boolean_mobius_hierarchy
+endpoint_phase_connection: 1 gates -> full_boolean_mobius_hierarchy
+global_packet_lift: 1 gates -> full_boolean_mobius_hierarchy
+interval_arithmetic_certificate: 1 gates -> fourier_toeplitz_psd_dual
+endpoint_owner_decoding: 1 gates -> fourier_toeplitz_psd_dual
+packet_route_key: 1 gates -> haar_zipper_cocycle
+dual_annihilator_status: 1 gates -> haar_zipper_cocycle
+endpoint_owner_word: 1 gates -> lee_yang_root_ear_payload
+root_collision_wall_label: 1 gates -> lee_yang_root_ear_payload
+root_ear_lattice_legal_exit: 1 gates -> minkowski_circuit_ising_bridge
+train_test_family_split: 1 gates -> finite_bank_apex7_literal
+
+Top essential inputs
+--------------------
+component_length: 2
+finite_address_packet: 2
+observer_gluing_certificate: 2
+endpoint_cover_activation_vector: 1
+component_midpoint_phase: 1
+multiple_of_n_configuration: 1
+midpoint_phase: 1
+v_equals_nw_clock: 1
+coverage_extremality: 1
+fine_scale_winding_transfer: 1
+route_legality_status: 1
+legal_sidecar_tree: 1
+median_center_signature: 1
+discharge_atom: 1
+T1_atom: 1
+T2sep_atom: 1
+T2adj_atom: 1
+all_missed_sector_atoms: 1
+
+Most reused anchors
+-------------------
+HYP-2108: 2
+HYP-3107: 2
+HYP-3111: 2
+HYP-2744: 2
+HYP-3115: 2
+HYP-2112: 1
+S576: 1
+S575: 1
+TournamentH7.LRCProofFrontier: 1
+HYP-3098: 1
+HYP-3074: 1
+HYP-3070: 1
+HYP-3069: 1
+HYP-2791: 1
+HYP-2974: 1
+HYP-2981: 1
+LTI-056: 1
+HYP-2991: 1
+
+Tournament Analysis
+-------------------
+score_hist = {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}
+directed_3cycles = 0
+scc_sizes = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+sccs = [['endpoint_phi_sum_gap'], ['lean_proof_frontier_dag'], ['finite_address_observer_gluing'], ['endpoint_P_max_activation'], ['route_state_median_closure'], ['haar_zipper_cocycle'], ['fourier_toeplitz_psd_dual'], ['boolean_mobius_low_depth_cut'], ['lee_yang_root_ear_payload'], ['full_boolean_mobius_hierarchy'], ['endpoint_period_warning'], ['minkowski_circuit_ising_bridge'], ['finite_bank_apex7_literal']]
+hamiltonian_path_count = 1
+edge_flips_against_novelty_gauge = 55
+priority_path =
+  1. endpoint_phi_sum_gap
+  2. lean_proof_frontier_dag
+  3. finite_address_observer_gluing
+  4. endpoint_P_max_activation
+  5. route_state_median_closure
+  6. haar_zipper_cocycle
+  7. fourier_toeplitz_psd_dual
+  8. boolean_mobius_low_depth_cut
+  9. lee_yang_root_ear_payload
+  10. full_boolean_mobius_hierarchy
+  11. endpoint_period_warning
+  12. minkowski_circuit_ising_bridge
+  13. finite_bank_apex7_literal
+
+Circuit lower-bound readout
+---------------------------
+Any low-depth LRC14 shortcut omitting endpoint_cover_activation_vector has not reached the HYP-2108/HYP-2112 gap circuit.
+Any shortcut omitting both finite_address_packet and observer_gluing_certificate does not feed the HYP-3107 proof frontier.
+Any Boolean/type shortcut omitting endpoint_period_numerator_sidecar repeats the HYP-2790 scalar-transfer failure mode.
+The proof-facing lower bound is therefore: every terminal circuit must carry Phi/Phi-kernel data plus packet/gluing sidecars, or explicitly route the first missing input to named residual debt.
+
+Proposed packet fields
+----------------------
+- endpoint_cover_activation_vector
+- phi_gap_sum
+- phi_kernel_status
+- P_max_activation
+- simultaneous_resonance_winding_word
+- boolean_mobius_low_depth_cut
+- endpoint_period_numerator_sidecar
+- proof_circuit_missing_input_vector
+- proof_uniformity_schema
+- finite_address_packet
+- observer_gluing_certificate
+- walsh_degree_support_profile

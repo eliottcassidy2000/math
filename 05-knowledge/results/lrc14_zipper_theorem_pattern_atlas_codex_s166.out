@@ -1,0 +1,137 @@
+S166 ZIPPER THEOREM PATTERN ATLAS
+status: synthesis scout / proof-interface map, not an LRC14 proof
+namespace repair: HYP-2988=exposure, HYP-2989=minimal Haar square, HYP-2990=abstract zipper atlas, HYP-2991=local Haar zipper cocycle, HYP-2993=concrete LRC zipper pattern atlas, HYP-2992=Haar tile atlas
+
+Zipper theorem schema:
+  For every primitive packet P in a classified family F:
+    1. compute the left teeth L(P) and right teeth R(P) with labels attached;
+    2. if L(P) and R(P) meet compatibly, close the certificate;
+    3. if P lands on a declared stop, record the equality/boundary atom;
+    4. otherwise emit a residual whose labels are strong enough for the next theorem.
+
+  A quotient may forget coordinate z only if z is reconstructed by the opposite
+  tooth, annihilated by orthogonality or a boundary stop, or named in the residual.
+
+PATTERNS
+01. haar_fourier_product
+    domain: discrepancy / Haar product / tournament tiling
+    left: row-column or endpoint-wall fibers
+    right: mixed Haar products, fixed-margin switches, Fejer modes
+    stop: same-tile AP/GW boundary atom
+    residual: named mixed-product F7 harmonic coefficient
+    quotient warning: row and column margins forget the checkerboard sign
+    proof arrow: replace raw component count K by independent labelled mixed switches
+    related: HYP-2992, HYP-2989, HYP-2595, HYP-2594
+    retention_score: 105 vector=(3, 3, 2, 3, 2, 3, 3, 3)
+02. fejer_interval_packet
+    domain: Fourier-Toeplitz dual / interval certificates
+    left: exact safe component, rational center, packet fiber
+    right: divisor-curried Fejer atom bank and negative interval bound
+    stop: AP/GW PSD-blind equality atom
+    residual: family-compression or formal-interval backend debt
+    quotient warning: floating Fejer signs are useless after packet labels are dropped
+    proof arrow: compress HYP-2963 rows into reusable packet-family certificates
+    related: HYP-2981, HYP-2974, HYP-2963
+    retention_score: 100 vector=(3, 2, 3, 2, 3, 2, 3, 3)
+03. tope_cocircuit_wall
+    domain: oriented endpoint arrangement
+    left: open all-safe topes
+    right: all-safe boundary cocircuits with owner labels
+    stop: zero-dimensional AP/GW owner-sum wall
+    residual: no-tope/no-cocircuit forbidden wall packet
+    quotient warning: safe Haar mass blurs positive open witnesses with closed equality
+    proof arrow: classify forbidden wall packets by owner parity, wall slide, K33, or F7
+    related: HYP-2986, HYP-2951, HYP-2948
+    retention_score: 102 vector=(3, 2, 3, 3, 3, 2, 3, 2)
+04. exposure_poset_kernel
+    domain: proof-channel exposure audit
+    left: row witnesses and packet labels
+    right: q-witness, open-Haar, Fejer, K33/C27, pressure channels
+    stop: AP/GW taut boundary channel
+    residual: UNEXPOSED_SOURCE_KERNEL
+    quotient warning: a missing numerical witness is not a counterexample until all channels fail
+    proof arrow: prove the no-hidden-exposure-kernel lemma familywise
+    related: HYP-2988, HYP-2987, HYP-2981
+    retention_score: 101 vector=(3, 2, 2, 3, 3, 2, 3, 3)
+05. ramanujan_exact_period
+    domain: Ramanujan sums / primitive phases / divisor guardrails
+    left: primitive q-period phase packets
+    right: endpoint-owner sums, Fejer/Ramanujan projections, unit shells
+    stop: q=14 primitive trace of AP/GW owner cancellation
+    residual: prime-power or repeated-prime packet side channel
+    quotient warning: squarefree or gcd scalars erase q=25,27,36,63,84,98,168,280,4312
+    proof arrow: tensor primitive-period projectors with Haar owner grids
+    related: HYP-2979, HYP-2978, HYP-2982
+    retention_score: 96 vector=(3, 2, 2, 3, 2, 3, 3, 2)
+06. smoothing_kaczynski_policy
+    domain: analytic smoothing / Kaczynski-Abel boundary
+    left: kernel or smoothing policy
+    right: endpoint owner, exact period, far-approach boundary clock
+    stop: boundary-defect atom emitted by a failed homotopy
+    residual: state-lift obligation from failed admissible policies
+    quotient warning: large-sieve and Selberg weights are middle packets, not final certificates
+    proof arrow: turn every smoothing choice into a declared packet-family policy
+    related: HYP-2985, HYP-2984, HYP-2983, HYP-2982
+    retention_score: 95 vector=(2, 3, 2, 3, 2, 3, 3, 2)
+07. fixed_margin_johnson
+    domain: fixed-margin reductions / Johnson harmonic sectors
+    left: fixed margin or packet fibers
+    right: low-row core, count sector, Johnson harmonic sector
+    stop: finite core comparison
+    residual: named F7 Johnson-harmonic packet
+    quotient warning: count sectors are safe only after packet margins are fixed
+    proof arrow: define F7 as a preserved harmonic residual, not an unknown bucket
+    related: HYP-2987, HYP-2963, HYP-2956, arXiv:2606.22636
+    retention_score: 96 vector=(3, 3, 2, 3, 2, 3, 2, 2)
+08. apex_sheaf_gluing
+    domain: apex-lift sheaf / Vitali handoff
+    left: local cheap-pair sections over mod-7 or mod-27 charts
+    right: endpoint anchors, small-pair pinches, measure-positive covers
+    stop: AP/V* tie-wall section
+    residual: failed gluing that must create positive measure
+    quotient warning: round-class identity forgets the local section labels
+    proof arrow: prove local sections glue or obstruction positivity fires
+    related: HYP-2101, HYP-2104, THM-397, THM-398
+    retention_score: 91 vector=(2, 3, 3, 2, 2, 2, 3, 2)
+09. convolution_irreducibility_lift
+    domain: irreducible polynomials / coefficient tilings
+    left: visible coefficient boundary totals
+    right: hidden integral factor grid and value-factor token split
+    stop: fixed-divisor or Cohn prime place-value certificate
+    residual: no nontrivial convolution lift
+    quotient warning: coefficient profile forgets the hidden support/factor grid
+    proof arrow: port no-integral-lift certificates back to LRC packet ledgers and code supports
+    related: HYP-2452, HYP-2450, HYP-2430
+    retention_score: 99 vector=(2, 3, 2, 3, 3, 3, 3, 2)
+10. unit_distance_cyclotomic_norm
+    domain: unit-distance carriers / cyclotomic norm shells
+    left: finite additive patches or distance graph constraints
+    right: cyclotomic/norm shell and lattice-unit compatibility
+    stop: known lattice/equilateral/cyclotomic equality carrier
+    residual: non-product configuration with retained norm labels
+    quotient warning: Euclidean distance alone forgets algebraic unit and shell data
+    proof arrow: use norm-shell labels as a quotient guardrail for geometry transfers
+    related: unit-distance, cyclotomic, HYP-2978, HYP-2450
+    retention_score: 71 vector=(2, 2, 2, 2, 1, 3, 2, 1)
+
+TOURNAMENT ANALYSIS
+vertices=10
+pairwise_observable=retained theorem payload across predicate, local gluing, stops, residuals, formal checkability, transfer, anti-scalar guardrail, computable next test
+switch_gauge=dimensionwise majority; weighted score; fixed Hamiltonian tie path
+tie_path=haar_fourier_product > fejer_interval_packet > tope_cocircuit_wall > exposure_poset_kernel > ramanujan_exact_period > smoothing_kaczynski_policy > fixed_margin_johnson > apex_sheaf_gluing > convolution_irreducibility_lift > unit_distance_cyclotomic_norm
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3cycles=0
+SCC_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Hamiltonian_path_count=1
+scores=apex_sheaf_gluing:1, convolution_irreducibility_lift:5, exposure_poset_kernel:7, fejer_interval_packet:6, fixed_margin_johnson:3, haar_fourier_product:9, ramanujan_exact_period:4, smoothing_kaczynski_policy:2, tope_cocircuit_wall:8, unit_distance_cyclotomic_norm:0
+
+HIGH-LEVERAGE NEXT MOVES
+1. Haar-Fejer compression: group HYP-2963 packet rows by mixed Haar switch signatures before interval certificate generation.
+2. Ramanujan-Haar tensor zipper: attach primitive-period c_q labels to each endpoint-wall/Haar rectangle cell.
+3. No-hidden-kernel theorem split: prove exposure_poset_kernel has no residual after HYP-2992 typed coefficients and HYP-2981 interval certificates are attached.
+4. F7 definition: use fixed_margin_johnson to define a residual by preserved harmonic sector rather than by failure of known tests.
+5. Convolution-lift transfer: treat LRC blocker ledgers like coefficient boundary totals and search for hidden support-lift infeasibility certificates.
+6. Apex/Vitali transfer: use local section gluing as the measure-theoretic analogue of the Haar same-tile boundary stop.
+
+CORE HYPOTHESIS
+The LRC14 proof stack is converging on a labelled packet zipper: positive-open Haar/topes and negative Fejer/Toeplitz duals are the two sides; AP/GW are stops; K33/C27/petal/covering/F7 are named residual routes.  The missing proof should show that no primitive packet can remain after both sides close with quotient-safe labels attached.

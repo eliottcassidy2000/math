@@ -1,0 +1,216 @@
+S166 LRC14 COCYCLE OBSTRUCTION ATLAS
+status: proof-interface atlas / not an LRC14 proof
+namespace: HYP-2994 / T1077
+upstream signal: HYP-2992=Haar tile atlas, HYP-2993=zipper pattern atlas; this pass is the cochain/cocycle lift
+
+COCHAIN LEDGER
+C0: packet labels; endpoint-owner potentials; safe-section choices; Fejer rational centers; exact-period residues; state-lift route names
+C1: certificate handoff arrows; endpoint owner transfers; smoothing/kernel gauges; Ramanujan phase shifts; source-spectrum pullbacks; local section restrictions
+C2: fixed-margin Haar zeta squares; Haar tile curls; tope/cocircuit boundary curls; color-resonance squares; boundary moment curls; octahedral/K33 state-lift faces
+H2: unpaired mixed Haar mode; no-hidden-kernel survivor; Johnson-harmonic F7 sector; THM-572 state-lift obstruction
+
+OBSTRUCTION FACE DICTIONARY
+- fixed_margin_square: closed local 2-cocycle; discharge=retain zeta or pair by color-compatible discrepancy; anchor=HYP-2991
+- haar_fejer_dual_square: primal/dual coboundary check; discharge=match typed Haar packet to interval Fejer atom bank; anchor=HYP-2993/HYP-2981
+- endpoint_tope_boundary: boundary coboundary or declared stop; discharge=open tope gives witness; AP/GW cocircuit is a stop; anchor=HYP-2986
+- period_smoothing_square: torsion gauge; discharge=keep exact-period labels before smoothing or Selberg quotient; anchor=HYP-2979/HYP-2985
+- source_exposure_cech_face: Cech 1-cocycle; discharge=local exposure sections glue or emit UNEXPOSED_SOURCE_KERNEL; anchor=HYP-2988/HYP-2953
+- octahedral_harmonic_face: harmonic residual; discharge=failed local exits must construct HYP-2908/THM-572 state lift; anchor=HYP-2887/THM-572
+
+CARRIER ATLAS
+01. fixed_margin_haar_zeta
+    kind=closed_2_cocycle level=C2
+    domain=2x2 fixed-margin Haar/tournament switch
+    local_object=zeta(T)=T00-T01-T10+T11
+    differential_test=fixed row/column margins make the switch direction invisible unless zeta is retained
+    exactness_route=exact only after a packet potential reconstructs the mixed sign or a dual discrepancy cancels it
+    residual_if_not_exact=unpaired mixed Haar coefficient -> F7/THM-572
+    anchors=HYP-2991, HYP-2989, HYP-2595
+    preserves=boundary_topology, dual_certificate, formal_check, lrc_predicate, mixed_haar_sign, packet_fiber, residual_name
+    destroys=endpoint_owner, exact_scale, phase_period, family_compression, state_lift_route
+    retention=(3, 3, 2, 3, 1, 3, 3, 3, 3) weighted_score=136
+02. haar_tile_interaction_curl
+    kind=typed_2_cocycle level=C2
+    domain=dyadic Haar rectangle product atlas
+    local_object=orthogonal zero / same tile / owner strip / cross handoff / nested refinement
+    differential_test=product signs balance globally; labelled packet asymmetry is the curl to detect
+    exactness_route=owner strips and nested refinements become exact after the handoff arrow names owner/scale
+    residual_if_not_exact=zero-open packet with no typed coefficient -> same-tile stop or state-lift atom
+    anchors=HYP-2992, HYP-2993, HYP-2988
+    preserves=boundary_topology, endpoint_owner, family_compression, lrc_predicate, mixed_haar_sign, packet_fiber, residual_name
+    destroys=exact_scale, phase_period, dual_certificate, state_lift_route, formal_check
+    retention=(3, 3, 2, 3, 1, 3, 2, 3, 3) weighted_score=131
+03. certificate_handoff_delta
+    kind=1_coboundary_atlas level=C1
+    domain=HYP-2987 zipper handoff arrows
+    local_object=delta(packet certificate potential) along proof carriers
+    differential_test=each handoff must preserve the LRC predicate and name any coordinate it drops
+    exactness_route=a compatible certificate arrow is a coboundary between packet potentials
+    residual_if_not_exact=open arrow O1-O6, especially state-lift/F7 definition debt
+    anchors=HYP-2987, HYP-2990, HYP-2993
+    preserves=dual_certificate, endpoint_owner, exact_scale, family_compression, formal_check, lrc_predicate, packet_fiber, phase_period, residual_name, state_lift_route
+    destroys=boundary_topology, mixed_haar_sign
+    retention=(3, 3, 3, 2, 2, 3, 3, 3, 3) weighted_score=141
+04. tope_cocircuit_boundary_class
+    kind=boundary_coboundary_or_stop level=C1/C2
+    domain=oriented endpoint arrangement on R/Z
+    local_object=open tope boundary and zero-dimensional cocircuit
+    differential_test=boundary of a safe open cell is AP/GW-style owner-labelled equality
+    exactness_route=open topes are exact witness sections; cocircuits are declared stops
+    residual_if_not_exact=no-tope/no-cocircuit forbidden wall packet
+    anchors=HYP-2986, HYP-2951, HYP-2948
+    preserves=boundary_topology, dual_certificate, endpoint_owner, formal_check, lrc_predicate, residual_name
+    destroys=packet_fiber, exact_scale, phase_period, mixed_haar_sign, family_compression, state_lift_route
+    retention=(3, 2, 3, 3, 1, 3, 3, 3, 2) weighted_score=132
+05. exposure_kernel_cech_class
+    kind=cech_1_cocycle level=C1
+    domain=proof-channel exposure poset
+    local_object=local exposure covers glued over packet families
+    differential_test=all local exposure sections must agree on overlaps or emit UNEXPOSED_SOURCE_KERNEL
+    exactness_route=familywise no-hidden-kernel theorem makes the Cech class vanish
+    residual_if_not_exact=UNEXPOSED_SOURCE_KERNEL
+    anchors=HYP-2988, HYP-2963, HYP-2981
+    preserves=dual_certificate, family_compression, formal_check, lrc_predicate, packet_fiber, residual_name
+    destroys=endpoint_owner, exact_scale, phase_period, boundary_topology, mixed_haar_sign, state_lift_route
+    retention=(3, 3, 2, 3, 1, 3, 3, 3, 3) weighted_score=136
+06. fejer_interval_dual_coboundary
+    kind=dual_coboundary level=C1
+    domain=Fejer/Toeplitz interval certificates
+    local_object=negative interval certificate as a dual potential difference
+    differential_test=exact center, atom bank, and packet key must match the primal Haar/tope packet
+    exactness_route=interval backend proves the dual certificate is exact on a packet family
+    residual_if_not_exact=formal interval backend or family-compression debt
+    anchors=HYP-2981, HYP-2974, HYP-2963
+    preserves=dual_certificate, exact_scale, family_compression, formal_check, lrc_predicate, packet_fiber, residual_name
+    destroys=endpoint_owner, phase_period, boundary_topology, mixed_haar_sign, state_lift_route
+    retention=(3, 3, 3, 2, 1, 2, 3, 3, 3) weighted_score=130
+07. ramanujan_period_torsor
+    kind=torsion_1_cocycle level=C1
+    domain=Ramanujan exact-period packets
+    local_object=primitive-period phase torsor with c_q labels
+    differential_test=squarefree/gcd quotients must not erase prime-power exact periods
+    exactness_route=exact-period projector splits phase torsion before smoothing or Fejer handoff
+    residual_if_not_exact=prime-power side channel for q=25,27,36,63,84,98,168,280,4312
+    anchors=HYP-2979, HYP-2978, HYP-2982
+    preserves=dual_certificate, endpoint_owner, formal_check, lrc_predicate, packet_fiber, phase_period, residual_name
+    destroys=exact_scale, boundary_topology, mixed_haar_sign, family_compression, state_lift_route
+    retention=(3, 3, 2, 2, 3, 3, 2, 3, 2) weighted_score=130
+08. smoothing_homotopy_gauge
+    kind=gauge_1_cochain_with_boundary level=C1
+    domain=kernel homotopy and admissible smoothing
+    local_object=kernel deformation gauge plus boundary-defect atom
+    differential_test=homotopy is safe only inside strict open support or after boundary defect is named
+    exactness_route=open support radius makes the gauge exact on a packet; zero-open emits a stop
+    residual_if_not_exact=failed smoothing policy -> state-lift obligation
+    anchors=HYP-2984, HYP-2985, HYP-2983
+    preserves=boundary_topology, endpoint_owner, exact_scale, lrc_predicate, packet_fiber, residual_name, state_lift_route
+    destroys=phase_period, mixed_haar_sign, dual_certificate, family_compression, formal_check
+    retention=(3, 2, 3, 2, 2, 3, 2, 3, 2) weighted_score=126
+09. boundary_moment_curl
+    kind=moment_2_cocycle level=C2
+    domain=boundary-moment / danger-count ledgers
+    local_object=curl of endpoint moments around covering packets
+    differential_test=scalar moment shadows must agree with endpoint-owner and source-spectrum labels
+    exactness_route=moment dual closes only after packet ownership is attached
+    residual_if_not_exact=covering boundary-moment kernel or F7 harmonic sector
+    anchors=HYP-2969, HYP-2956, HYP-2954
+    preserves=boundary_topology, endpoint_owner, family_compression, lrc_predicate, packet_fiber, residual_name, state_lift_route
+    destroys=exact_scale, phase_period, mixed_haar_sign, dual_certificate, formal_check
+    retention=(3, 2, 2, 3, 1, 3, 2, 3, 2) weighted_score=121
+10. color_resonance_square
+    kind=global_2_cocycle level=C2
+    domain=colored discrepancy / CRT resonance
+    local_object=color-compatible mixed-mode square
+    differential_test=mixed Haar signs must pair with compatible color/CRT residue data
+    exactness_route=global resonance cancels a local mixed cocycle by signed pairing
+    residual_if_not_exact=unpaired color-incompatible mixed mode
+    anchors=HYP-2595, HYP-2594, HYP-2991
+    preserves=dual_certificate, lrc_predicate, mixed_haar_sign, packet_fiber, phase_period, residual_name
+    destroys=endpoint_owner, exact_scale, boundary_topology, family_compression, state_lift_route, formal_check
+    retention=(3, 2, 2, 3, 2, 3, 2, 3, 2) weighted_score=125
+11. source_spectrum_pullback
+    kind=observer_1_cocycle level=C1
+    domain=observer-source tournament movie
+    local_object=phase-indexed source pullback over Farey binding nodes
+    differential_test=source must survive pullback through phase, exact M, endpoint, and packet labels
+    exactness_route=q-witness or positive source interval makes the pullback exact
+    residual_if_not_exact=adaptive qdiv>14 source-kernel/state-lift debt
+    anchors=HYP-2953, HYP-2486, THM-523
+    preserves=boundary_topology, endpoint_owner, exact_scale, lrc_predicate, packet_fiber, phase_period, residual_name, state_lift_route
+    destroys=mixed_haar_sign, dual_certificate, family_compression, formal_check
+    retention=(3, 2, 2, 2, 2, 3, 2, 3, 2) weighted_score=120
+12. apex_sheaf_gluing_class
+    kind=cech_1_cocycle level=C1
+    domain=apex-lift certificate sheaf
+    local_object=local sections over mod-7/mod-27 charts
+    differential_test=sections glue on overlaps or failed gluing must force positive measure
+    exactness_route=local cheap-pair sections agree after endpoint-owner labels are kept
+    residual_if_not_exact=Vitali/AP-alignment gluing obstruction
+    anchors=HYP-2101, HYP-2104, THM-397, THM-398
+    preserves=boundary_topology, endpoint_owner, lrc_predicate, residual_name, state_lift_route
+    destroys=packet_fiber, exact_scale, phase_period, mixed_haar_sign, dual_certificate, family_compression, formal_check
+    retention=(2, 2, 2, 3, 1, 2, 2, 3, 1) weighted_score=103
+13. octahedral_hodge_current
+    kind=harmonic_2_residual level=H2
+    domain=octahedral/Clebsch/K33 state-lift current
+    local_object=divergence-free curl class on state-lift faces
+    differential_test=if local packet exits fail, the residual must carry a harmonic state-lift address
+    exactness_route=exact only after explicit HYP-2908/THM-572 state lift is built
+    residual_if_not_exact=named harmonic F7 sector
+    anchors=HYP-2887, HYP-2908, THM-572
+    preserves=boundary_topology, family_compression, formal_check, lrc_predicate, packet_fiber, residual_name, state_lift_route
+    destroys=endpoint_owner, exact_scale, phase_period, mixed_haar_sign, dual_certificate
+    retention=(3, 2, 1, 3, 2, 3, 2, 3, 2) weighted_score=119
+14. fixed_margin_johnson_F7
+    kind=named_harmonic_residual level=H2
+    domain=fixed-margin count sector plus Johnson-like harmonic sector
+    local_object=packet-preserved harmonic residual after count-sector reduction
+    differential_test=count sector may close while harmonic sector remains
+    exactness_route=define the harmonic coordinate and prove it vanishes or constructs state lift
+    residual_if_not_exact=F7 as a named Johnson-harmonic packet
+    anchors=HYP-2993, HYP-2987, HYP-2956, arXiv:2606.22636
+    preserves=family_compression, formal_check, lrc_predicate, packet_fiber, residual_name, state_lift_route
+    destroys=endpoint_owner, exact_scale, phase_period, boundary_topology, mixed_haar_sign, dual_certificate
+    retention=(3, 3, 1, 3, 2, 3, 2, 3, 2) weighted_score=125
+15. raw_scalar_shadow
+    kind=negative_control level=C0-shadow
+    domain=raw K, row/column margins, qdiv, density, or component count
+    local_object=visible scalar after quotienting all packet labels
+    differential_test=fails whenever two fibers share the scalar but differ by zeta, owner, period, or state route
+    exactness_route=none; must be lifted to a labelled carrier before theorem use
+    residual_if_not_exact=false quotient / hidden cocycle
+    anchors=HYP-2990, HYP-2991, HYP-2978
+    preserves=lrc_predicate
+    destroys=packet_fiber, endpoint_owner, exact_scale, phase_period, boundary_topology, mixed_haar_sign, dual_certificate, family_compression, state_lift_route, formal_check, residual_name
+    retention=(1, 0, 0, 0, 0, 0, 1, 0, 1) weighted_score=16
+
+CLASSIFICATION COUNTS
+kinds={'1_coboundary_atlas': 1, 'boundary_coboundary_or_stop': 1, 'cech_1_cocycle': 2, 'closed_2_cocycle': 1, 'dual_coboundary': 1, 'gauge_1_cochain_with_boundary': 1, 'global_2_cocycle': 1, 'harmonic_2_residual': 1, 'moment_2_cocycle': 1, 'named_harmonic_residual': 1, 'negative_control': 1, 'observer_1_cocycle': 1, 'torsion_1_cocycle': 1, 'typed_2_cocycle': 1}
+cochain_levels={'C0-shadow': 1, 'C1': 7, 'C1/C2': 1, 'C2': 4, 'H2': 2}
+sparsely_preserved_labels={'exact_scale': 4, 'mixed_haar_sign': 3, 'phase_period': 4}
+
+TOURNAMENT ANALYSIS
+vertices=15
+pairwise_observable=retained LRC predicate payload plus obstruction-control vector
+switch_gauge=dimensionwise majority over predicate/fiber/exactness/closedness/torsion/residual/formal/anti-scalar/computable fields
+tie_path=fixed_margin_haar_zeta > haar_tile_interaction_curl > certificate_handoff_delta > tope_cocircuit_boundary_class > exposure_kernel_cech_class > fejer_interval_dual_coboundary > ramanujan_period_torsor > smoothing_homotopy_gauge > boundary_moment_curl > color_resonance_square > source_spectrum_pullback > apex_sheaf_gluing_class > octahedral_hodge_current > fixed_margin_johnson_F7 > raw_scalar_shadow
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 6: 3, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1}
+directed_3cycles=1
+SCC_sizes=[3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Hamiltonian_path_count=3
+scores=apex_sheaf_gluing_class:1, boundary_moment_curl:4, certificate_handoff_delta:14, color_resonance_square:6, exposure_kernel_cech_class:12, fejer_interval_dual_coboundary:9, fixed_margin_haar_zeta:13, fixed_margin_johnson_F7:6, haar_tile_interaction_curl:10, octahedral_hodge_current:2, ramanujan_period_torsor:8, raw_scalar_shadow:0, smoothing_homotopy_gauge:6, source_spectrum_pullback:3, tope_cocircuit_boundary_class:11
+leader_path_by_score=certificate_handoff_delta > fixed_margin_haar_zeta > exposure_kernel_cech_class > tope_cocircuit_boundary_class > haar_tile_interaction_curl > fejer_interval_dual_coboundary > ramanujan_period_torsor > smoothing_homotopy_gauge > color_resonance_square > fixed_margin_johnson_F7 > boundary_moment_curl > source_spectrum_pullback > octahedral_hodge_current > apex_sheaf_gluing_class > raw_scalar_shadow
+
+COCYCLE READOUT
+1. Exact coboundaries are not optional bookkeeping: they are the only safe way to forget packet potentials.
+2. Closed but non-exact local squares are useful only when a dual certificate pairs them or a named residual receives them.
+3. Torsion/period classes are real proof data; squarefree and gcd quotients erase live prime-power packets.
+4. F7 should be defined as a preserved harmonic residual sector, not as the complement of known tests.
+5. The raw scalar shadow is the negative control: it preserves the slogan but destroys nearly every obstruction coordinate.
+
+NEXT COMPUTABLE TESTS
+1. Attach zeta signatures to HYP-2963 packet rows and count independent color-compatible mixed modes.
+2. Tensor Ramanujan c_q labels with Haar tile classes to catch q=25/27/36/63/84/98/168/280/4312 side channels.
+3. Group Fejer interval certificates by identical cocycle signature before interval generation.
+4. Build a no-hidden-kernel Cech check: every exposure cover overlap glues or emits a named residual.
+5. Define an F7 record with fields (packet fiber, mixed cocycle, harmonic sector, state-lift route, failed exits).

@@ -1,0 +1,193 @@
+HYP-3123 chiral/Cech proof-angle scout -- codex 2026-06-27
+This is route synthesis and payload bookkeeping, not a proof.
+
+====================================================================================================
+ANGLE SUMMARY
+====================================================================================================
+- chiral_base_stalk_guard
+  anchors=HYP-3106, HYP-3120, S369, S370, HYP-3056, HYP-3118
+  base_stalk_complete=True; missing=none
+  preserves=terminal packet equivalence after mirror/converse identifications
+  destroys_or_hides=raw class count, raw A000568 equality, and mirror-pair labels unless the Z/2 sidecar is retained
+  theorem_shape=If a quotient identifies a converse/mirror pair, either both fibers have the same finite-address or observer-gluing exit, or the chiral guard word is nonzero and routes to endpoint-owner, first-obstruction, or F7/THM-572 debt.
+  next_fields=chiral_guard_word, mirror_pair_id, cross_sector_orientation_word, endpoint_owner_cocycle, state_lift_sign, terminal_exit_or_named_debt
+- normal_fan_cech_finite_ruler
+  anchors=HYP-3101, HYP-3025, HYP-3018, HYP-3096, THM-565, THM-573
+  base_stalk_complete=True; missing=none
+  preserves=normalized component lower/upper control for the witness route
+  destroys_or_hides=exact scale, branch route, and endpoint owner if topological summaries are isolated
+  theorem_shape=Every non-tight THM-573 residual row has a normalized finite-ruler component packet, is an AP/GW closed-boundary H1 atom, or emits a named F7/THM-572 good-cover quotient defect.
+  next_fields=normal_fan_chamber_id, closed_arc_cech_beta, barcode_persistence_word, finite_ruler_denominator_threshold, owner_current_word, component_bound_status, terminal_exit_or_named_debt
+
+====================================================================================================
+CONTROLLED-FORGETTING LADDERS
+====================================================================================================
+chiral_guard:
+  L0: raw count coincidence
+      retained=A000568_count, self_converse_count, chiral_count
+      forgotten=edge sectors, endpoint owners, and cross-sector orientation
+      next_payload=ordered-pair or directed-edge sector deck
+  L1: edge-sector deck
+      retained=incident_sector_deck, sector_size_deck, sector_internal_deck
+      forgotten=converse/mirror orientation between sectors
+      next_payload=cross_sector_orientation_word
+  L2: Z/2 orientation local system
+      retained=cross_sector_orientation_word, mirror_pair_id, chiral_guard_word
+      forgotten=endpoint-owner and state-lift consequences
+      next_payload=endpoint_owner_cocycle + state_lift_sign
+  L3: base-stalk terminal guard
+      retained=finite_address, observer_gluing, endpoint_owner, uniformity, terminal_exit
+      forgotten=nothing terminal; failure becomes named debt
+      next_payload=finite-address exit, observer-gluing exit, or F7/THM-572 debt
+normal_fan_cech:
+  L0: raw direct component count
+      retained=component_count, largest_direct_arc, raw_time_largest_arc
+      forgotten=normalized slow/ruler scale and active owner geometry
+      next_payload=normalized chamber packet
+  L1: active normal-fan chamber
+      retained=normal_fan_chamber_id, active_support_word, owner_current_word
+      forgotten=closed/open topology and barcode persistence
+      next_payload=Cech/barcode packet
+  L2: Cech/barcode component packet
+      retained=closed_arc_cech_beta, open_tope_component_count, barcode_persistence_word
+      forgotten=finite denominator-net threshold
+      next_payload=finite_ruler_denominator_threshold
+  L3: finite-ruler terminal packet
+      retained=component_bound, finite_ruler_denominator_threshold, terminal_exit
+      forgotten=nothing terminal; failure becomes named AP/GW/F7 debt
+      next_payload=finite grid witness, AP/GW H1 atom, or F7/THM-572 debt
+
+====================================================================================================
+OBLIGATION BRIDGE MATRIX: TOP MATCHES
+====================================================================================================
+- score=59 normal_fan_cech_finite_ruler -> HYP-3101_component_bound
+  supplied=closed_arc_cech_beta, component_bound, finite_address, finite_ruler_denominator_threshold, normal_fan_chamber_id, owner_current_word
+  missing=terminal_exit
+- score=58 first_obstruction_syndrome_bridge -> HYP-3102_first_obstruction
+  supplied=F7_THM572_state_lift_status, certificate_cycle_image_status, cocycle_exactness, dual_annihilator_status, endpoint_owner, first_obstruction_basis_vector, observer_gluing
+  missing=none
+- score=54 lean_frontier_packet_bus -> HYP-3098_observer_gluing_rows
+  supplied=endpoint_owner, finite_address, observer_gluing, terminal_exit, uniformity
+  missing=observer_cut_payload_orbit
+- score=53 normal_fan_cech_finite_ruler -> THM-573_level7_residual
+  supplied=component_bound, endpoint_owner, finite_address, finite_ruler_denominator_threshold, normal_fan_chamber_id
+  missing=F7_THM572_state_lift_status
+- score=53 chiral_base_stalk_guard -> HYP-3112_lee_yang_ear_payload
+  supplied=chiral_guard_word, cross_sector_orientation_word, endpoint_owner, observer_gluing
+  missing=root_ear_payload, terminal_exit
+- score=52 chiral_base_stalk_guard -> HYP-3098_observer_gluing_rows
+  supplied=endpoint_owner, finite_address, observer_gluing, uniformity
+  missing=observer_cut_payload_orbit, terminal_exit
+- score=49 normal_fan_cech_finite_ruler -> HYP-3098_observer_gluing_rows
+  supplied=endpoint_owner, finite_address, observer_gluing, uniformity
+  missing=observer_cut_payload_orbit, terminal_exit
+- score=47 chiral_base_stalk_guard -> HYP-3102_first_obstruction
+  supplied=endpoint_owner, observer_gluing
+  missing=F7_THM572_state_lift_status, certificate_cycle_image_status, cocycle_exactness, dual_annihilator_status, first_obstruction_basis_vector
+- score=46 observer_cut_payload_orbit -> HYP-3112_lee_yang_ear_payload
+  supplied=cross_sector_orientation_word, endpoint_owner, observer_gluing, terminal_exit
+  missing=chiral_guard_word, root_ear_payload
+- score=46 observer_cut_payload_orbit -> HYP-3098_observer_gluing_rows
+  supplied=endpoint_owner, observer_cut_payload_orbit, observer_gluing, terminal_exit
+  missing=finite_address, uniformity
+- score=46 lean_frontier_packet_bus -> HYP-3112_lee_yang_ear_payload
+  supplied=endpoint_owner, observer_gluing, terminal_exit
+  missing=chiral_guard_word, cross_sector_orientation_word, root_ear_payload
+- score=46 chiral_base_stalk_guard -> THM-573_level7_residual
+  supplied=endpoint_owner, finite_address
+  missing=F7_THM572_state_lift_status, component_bound, finite_ruler_denominator_threshold, normal_fan_chamber_id
+- score=45 endpoint_phi_packet_receiver -> HYP-3098_observer_gluing_rows
+  supplied=endpoint_owner, finite_address, uniformity
+  missing=observer_cut_payload_orbit, observer_gluing, terminal_exit
+- score=44 normal_fan_cech_finite_ruler -> Lean_PartA_finite_ruler
+  supplied=component_bound, finite_ruler_denominator_threshold
+  missing=arcCount, goodSet_margin, rhoK_approximation, terminal_exit
+- score=43 lean_frontier_packet_bus -> THM-573_level7_residual
+  supplied=endpoint_owner, finite_address
+  missing=F7_THM572_state_lift_status, component_bound, finite_ruler_denominator_threshold, normal_fan_chamber_id
+- score=43 lean_frontier_packet_bus -> HYP-3102_first_obstruction
+  supplied=endpoint_owner, observer_gluing
+  missing=F7_THM572_state_lift_status, certificate_cycle_image_status, cocycle_exactness, dual_annihilator_status, first_obstruction_basis_vector
+- score=43 lean_frontier_packet_bus -> HYP-3101_component_bound
+  supplied=finite_address, terminal_exit
+  missing=closed_arc_cech_beta, component_bound, finite_ruler_denominator_threshold, normal_fan_chamber_id, owner_current_word
+- score=42 normal_fan_cech_finite_ruler -> HYP-3112_lee_yang_ear_payload
+  supplied=endpoint_owner, observer_gluing
+  missing=chiral_guard_word, cross_sector_orientation_word, root_ear_payload, terminal_exit
+
+====================================================================================================
+FIELD PROMOTION CANDIDATES
+====================================================================================================
+terminal_exit_or_named_debt: 4
+cross_sector_orientation_word: 2
+chiral_guard_word: 1
+mirror_pair_id: 1
+endpoint_owner_cocycle: 1
+state_lift_sign: 1
+normal_fan_chamber_id: 1
+closed_arc_cech_beta: 1
+barcode_persistence_word: 1
+finite_ruler_denominator_threshold: 1
+owner_current_word: 1
+component_bound_status: 1
+first_obstruction_basis_vector: 1
+certificate_cycle_image_status: 1
+dual_annihilator_status: 1
+F7_THM572_state_lift_status: 1
+syndrome_decoder_status: 1
+observer_cut_payload_orbit: 1
+incident_sector_deck: 1
+payload_orbit_terminal_status: 1
+endpoint_cover_activation_vector: 1
+Phi_gap: 1
+P_sign: 1
+proof_circuit_missing_input_vector: 1
+endpoint_phi_terminal_status: 1
+FiniteAddressBranchPacket: 1
+ObserverGluingCertificate: 1
+LRC14Statement_handoff: 1
+component_count: 1
+self_converse_count: 1
+chiral_count: 1
+
+====================================================================================================
+TOURNAMENT ANALYSIS
+====================================================================================================
+vertices=8
+score_hist={0: 1, 1: 1, 3: 2, 4: 2, 6: 1, 7: 1}
+directed_3cycles=2
+  cycle=normal_fan_cech_finite_ruler -> observer_cut_payload_orbit -> endpoint_phi_packet_receiver -> normal_fan_cech_finite_ruler
+  cycle=first_obstruction_syndrome_bridge -> observer_cut_payload_orbit -> endpoint_phi_packet_receiver -> first_obstruction_syndrome_bridge
+scc_sizes=[1, 1, 4, 1, 1]
+hamiltonian_path_count=5
+selected_priority_path=
+  chiral_base_stalk_guard (outscore=7)
+  lean_frontier_packet_bus (outscore=6)
+  normal_fan_cech_finite_ruler (outscore=4)
+  first_obstruction_syndrome_bridge (outscore=3)
+  observer_cut_payload_orbit (outscore=3)
+  endpoint_phi_packet_receiver (outscore=4)
+  raw_component_count_shadow (outscore=1)
+  raw_chirality_count_shadow (outscore=0)
+
+====================================================================================================
+CROSS-DISCIPLINARY CONNECTIONS
+====================================================================================================
+- Z/2 orientation local systems: chiral guard word; mirror/converse pairs become a local coefficient system over observer fibers
+- oriented matroid topes and cocircuits: normal-fan chambers, boundary cocircuit words, and endpoint-owner currents are the finite sign data of the route
+- persistent homology / nerve theorem: closed arc-Cech beta and barcode persistence are legal only with owners and finite-ruler thresholds
+- syndrome decoding: first obstruction is a finite syndrome: zero, generated, dual-annihilated, descended, or named as F7 debt
+- spin/domain-wall physics: Ising walls need chirality and endpoint Phi gates before wall tension becomes proof currency
+- observability and Schur complements: rootless perspective collisions should be tested by the first hidden observer-cut payload, not by deeper node memory
+
+====================================================================================================
+ASSUMPTION CHALLENGE
+====================================================================================================
+Alternate tournament vertex sets considered:
+  runners, gaps, fixed circle sections, section boundaries, wall-crossing events, residues,
+  cover arcs, Fourier modes, matroid circuits, normal-fan chambers, Cech cycles,
+  directed-edge sectors, mirror pairs, and proof obligations.
+Chosen vertices: proof mechanisms and support carriers.
+Preserved predicate: progress toward a finite LRC14 certificate via direct witness, AP/GW boundary atom, finite-address packet, observer-gluing certificate, or named F7/THM-572 debt.
+Destroyed information: object-level runner labels and raw scalar counts; they are accepted only after the chiral guard or Cech finite-ruler payload repairs the first forgotten coordinate.
+Challenged assumption: the remaining proof route is not another extremal scalar. It is probably a base-stalk maintenance problem with a Z/2 chiral guard and a normalized topological finite-ruler packet.

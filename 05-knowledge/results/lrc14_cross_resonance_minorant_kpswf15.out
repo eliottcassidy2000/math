@@ -1,0 +1,86 @@
+####################################################################################################
+# LRC(14)  CROSS-RESONANCE (R'-COUPLING) under the MINORANT  (kpswf15 part 3, HYP-3121)
+#   L(S) >= (R-floor)(Q-floor) + CROSS;  R' = 1 + CROSS/baseline;  cross-level = apex-14 N
+####################################################################################################
+
+  minorant: C^infty, delta=0.05, h0=int psi=0.75714
+
+====================================================================================================
+PER-SET: exact R', minorant CROSS, and CROSS by apex-14 cross-level N
+====================================================================================================
+
+  r=2: S=[1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 56, 70]
+     R=[1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13]  Q=[4, 5]
+     EXACT: meas(R-safe)=0.06930  meas(Q-lon)=0.74286  L=0.04277  R'=0.83076
+     MINOR: R-floor=0.00308  Q-floor=0.57275  full=int psi^R psi^Q=0.000348
+            baseline=(R-floor)(Q-floor)=0.001765  CROSS=full-baseline=-0.001417  R'_min=0.19720
+     CROSS by apex-14 level N (factored Rside*Qside):
+        N=-6: Rside=-1.554e-03  Qside=+3.583e-02  product=-5.568e-05
+        N=-5: Rside=+4.967e-04  Qside=-1.668e-01  product=-8.286e-05
+        N=-4: Rside=+2.293e-03  Qside=-1.655e-01  product=-3.796e-04
+        N=-3: Rside=-4.072e-04  Qside=+4.007e-02  product=-1.632e-05
+        N=-2: Rside=-2.871e-03  Qside=+3.633e-02  product=-1.043e-04
+        N=-1: Rside=+8.631e-05  Qside=+4.920e-02  product=+4.247e-06
+        N=+1: Rside=+8.631e-05  Qside=+4.920e-02  product=+4.247e-06
+        N=+2: Rside=-2.871e-03  Qside=+3.633e-02  product=-1.043e-04
+        N=+3: Rside=-4.072e-04  Qside=+4.007e-02  product=-1.632e-05
+        N=+4: Rside=+2.293e-03  Qside=-1.655e-01  product=-3.796e-04
+        N=+5: Rside=+4.967e-04  Qside=-1.668e-01  product=-8.286e-05
+        N=+6: Rside=-1.554e-03  Qside=+3.583e-02  product=-5.568e-05
+        sum over |N|<=6 = -0.001269   (vs direct CROSS -0.001417; tail |N|>6 super-poly)
+
+  r=3: S=[1, 2, 3, 4, 5, 6, 7, 9, 11, 13, 56, 70, 84]
+     R=[1, 2, 3, 4, 5, 6, 7, 9, 11, 13]  Q=[4, 5, 6]
+     EXACT: meas(R-safe)=0.08146  meas(Q-lon)=0.64762  L=0.03758  R'=0.71234
+     MINOR: R-floor=0.00308  Q-floor=0.43302  full=int psi^R psi^Q=0.000306
+            baseline=(R-floor)(Q-floor)=0.001335  CROSS=full-baseline=-0.001029  R'_min=0.22891
+     CROSS by apex-14 level N (factored Rside*Qside):
+        N=-6: Rside=-1.600e-03  Qside=-9.097e-02  product=+1.456e-04
+        N=-5: Rside=+5.390e-04  Qside=-1.484e-01  product=-7.998e-05
+        N=-4: Rside=+2.236e-03  Qside=-9.206e-02  product=-2.058e-04
+        N=-3: Rside=-3.615e-04  Qside=+1.866e-02  product=-6.745e-06
+        N=-2: Rside=-2.874e-03  Qside=+1.016e-01  product=-2.921e-04
+        N=-1: Rside=+8.000e-05  Qside=+5.868e-02  product=+4.694e-06
+        N=+1: Rside=+8.000e-05  Qside=+5.868e-02  product=+4.694e-06
+        N=+2: Rside=-2.874e-03  Qside=+1.016e-01  product=-2.921e-04
+        N=+3: Rside=-3.615e-04  Qside=+1.866e-02  product=-6.745e-06
+        N=+4: Rside=+2.236e-03  Qside=-9.206e-02  product=-2.058e-04
+        N=+5: Rside=+5.390e-04  Qside=-1.484e-01  product=-7.998e-05
+        N=+6: Rside=-1.600e-03  Qside=-9.097e-02  product=+1.456e-04
+        sum over |N|<=6 = -0.000869   (vs direct CROSS -0.001029; tail |N|>6 super-poly)
+
+  r=4: S=[1, 2, 3, 4, 5, 6, 9, 11, 13, 14, 56, 70, 84]
+     R=[1, 2, 3, 4, 5, 6, 9, 11, 13]  Q=[1, 4, 5, 6]
+     EXACT: meas(R-safe)=0.18253  meas(Q-lon)=0.54048  L=0.07743  R'=0.78484
+     MINOR: R-floor=0.05503  Q-floor=0.25387  full=int psi^R psi^Q=0.004966
+            baseline=(R-floor)(Q-floor)=0.013971  CROSS=full-baseline=-0.009006  R'_min=0.35542
+     CROSS by apex-14 level N (factored Rside*Qside):
+        N=-6: Rside=+3.050e-03  Qside=-2.074e-03  product=-6.326e-06
+        N=-5: Rside=+6.084e-03  Qside=-6.381e-02  product=-3.882e-04
+        N=-4: Rside=+7.646e-03  Qside=-4.431e-02  product=-3.388e-04
+        N=-3: Rside=+8.962e-03  Qside=+7.450e-04  product=+6.677e-06
+        N=-2: Rside=+2.046e-02  Qside=+7.250e-03  product=+1.484e-04
+        N=-1: Rside=+4.288e-02  Qside=-9.692e-02  product=-4.156e-03
+        N=+1: Rside=+4.288e-02  Qside=-9.692e-02  product=-4.156e-03
+        N=+2: Rside=+2.046e-02  Qside=+7.250e-03  product=+1.484e-04
+        N=+3: Rside=+8.962e-03  Qside=+7.450e-04  product=+6.677e-06
+        N=+4: Rside=+7.646e-03  Qside=-4.431e-02  product=-3.388e-04
+        N=+5: Rside=+6.084e-03  Qside=-6.381e-02  product=-3.882e-04
+        N=+6: Rside=+3.050e-03  Qside=-2.074e-03  product=-6.326e-06
+        sum over |N|<=6 = -0.009468   (vs direct CROSS -0.009006; tail |N|>6 super-poly)
+
+====================================================================================================
+FLOOR over the whole bank: exact R' and minorant R'_min
+====================================================================================================
+  EXACT  R' floor over bank = 0.47337  at S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 13, 14, 84]
+  => the coupling R' >= 0.4734 on this bank (the Node-3 quantity).
+
+  INTERPRETATION:
+   L(S) = R' * meas(R-safe) * meas(Q-lonely).
+   - meas(Q-lonely) >= c_r (apex block) : CLOSED uniformly by the minorant (part 2).
+   - R' >= c_R' (coupling)              : bounded below on the bank; the OPEN Node-3 floor.
+   - meas(R-safe) > 0                   : the 14-free wide-part loneliness.
+   The minorant CROSS sum shows the coupling is carried by the |N|=1 apex-14 cross-level
+   (7 in R, m=1 in Q), with a super-polynomial tail in |N| -- a UNIFORM (band-free) tail.
+
+DONE.

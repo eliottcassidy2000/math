@@ -1,0 +1,55 @@
+============================================================================================
+ INCLUSION-EXCLUSION ANATOMY of cap_k = meas(lonely(minimizer_j)),  k = 13-j
+============================================================================================
+
+ j=1 (k=12), minimizer P=[1]:
+   orders r=0..1: O0=1, O1=-1/7
+   ORDER_0+1 = 1 - j/7 = 6/7 = 0.85714
+   ORDER_2 (pairwise total, signed +) = 0 (target C(j,2)/91 = 0)
+   pairwise truncation O0+O1+O2 = 6/7 = 0.857143
+   ORDERS>=3 (net high-order) = 0 = 0.000000  (VANISH)
+   TRUE meas(lonely) = 6/7 = 0.857143
+   pair-Pascal C(14-j,2)/91 = 6/7 = 0.857143   dip = pascal - true = 0
+
+ j=2 (k=11), minimizer P=[1, 13]:
+   orders r=0..2: O0=1, O1=-2/7, O2=1/91
+   ORDER_0+1 = 1 - j/7 = 5/7 = 0.71429
+   ORDER_2 (pairwise total, signed +) = 1/91 (target C(j,2)/91 = 1/91)
+   pairwise truncation O0+O1+O2 = 66/91 = 0.725275
+   ORDERS>=3 (net high-order) = 0 = 0.000000  (VANISH)
+   TRUE meas(lonely) = 66/91 = 0.725275
+   pair-Pascal C(14-j,2)/91 = 66/91 = 0.725275   dip = pascal - true = 0
+
+ j=3 (k=10), minimizer P=[1, 12, 13]:
+   orders r=0..3: O0=1, O1=-3/7, O2=4/91, O3=-1/91
+   ORDER_0+1 = 1 - j/7 = 4/7 = 0.57143
+   ORDER_2 (pairwise total, signed +) = 4/91 (target C(j,2)/91 = 3/91)
+   pairwise truncation O0+O1+O2 = 8/13 = 0.615385
+   ORDERS>=3 (net high-order) = -1/91 = -0.010989  (nonzero = the DIP source)
+   TRUE meas(lonely) = 55/91 = 0.604396
+   pair-Pascal C(14-j,2)/91 = 55/91 = 0.604396   dip = pascal - true = 0
+
+ j=4 (k=9), minimizer P=[1, 11, 12, 13]:
+   orders r=0..4: O0=1, O1=-4/7, O2=23/231, O3=-7/156, O4=1/91
+   ORDER_0+1 = 1 - j/7 = 3/7 = 0.42857
+   ORDER_2 (pairwise total, signed +) = 23/231 (target C(j,2)/91 = 6/91)
+   pairwise truncation O0+O1+O2 = 122/231 = 0.528139
+   ORDERS>=3 (net high-order) = -37/1092 = -0.033883  (nonzero = the DIP source)
+   TRUE meas(lonely) = 1979/4004 = 0.494256
+   pair-Pascal C(14-j,2)/91 = 45/91 = 0.494505   dip = pascal - true = 1/4004
+
+ j=5 (k=8), minimizer P=[1, 5, 7, 8, 9]:
+   orders r=0..5: O0=1, O1=-5/7, O2=391/1960, O3=-199/1176, O4=41/504, O5=-1/63
+   ORDER_0+1 = 1 - j/7 = 2/7 = 0.28571
+   ORDER_2 (pairwise total, signed +) = 391/1960 (target C(j,2)/91 = 10/91)
+   pairwise truncation O0+O1+O2 = 951/1960 = 0.485204
+   ORDERS>=3 (net high-order) = -61/588 = -0.103741  (nonzero = the DIP source)
+   TRUE meas(lonely) = 2243/5880 = 0.381463
+   pair-Pascal C(14-j,2)/91 = 36/91 = 0.395604   dip = pascal - true = 1081/76440
+
+============================================================================================
+ READING
+============================================================================================
+ If ORDERS>=3 vanish for j<=3, then cap = O0+O1+O2 = pairwise truncation, and the only task is the
+ CLOSED FORM of ORDER_2 (the total pairwise overlap) = C(j,2)/91. Then cap = 1 - j/7 + C(j,2)/91 =
+ C(14-j,2)/91 SYMBOLICALLY (k>=10). The DIP at j=4,5 = the first nonvanishing ORDERS>=3 (triple/quad).

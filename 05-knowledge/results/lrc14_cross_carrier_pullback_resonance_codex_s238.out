@@ -1,0 +1,283 @@
+=== LRC14 cross-carrier pullback resonance scout S238 ===
+source=CPI carrier-pullback index + HYP-2963 residual-stack summaries
+carriers=22 obligations=9 core_axes=12
+
+[0] Assumption challenge
+  considered vertex sets:
+    runners, gaps, route labels, proof obligations, CPI carrier rows, hidden coordinates,
+    endpoint-owner strips, primitive decks, analytic clocks, automaton states,
+    partial-cube Theta classes, CRT roots, observer cuts, rectangle/hourglass residues,
+    Hodge cochains, median-center pages, state-lift sectors, and formal exits.
+  chosen tournament vertices:
+    proof-carrier pullbacks / CPI rows, not runners.
+  preserved LRC predicates:
+    boundary/open status, theorem route, exact scale, endpoint/topology, primitive period,
+    analytic certificate, automaton telemetry, observer-cut payload, cycle image status,
+    and formal discharge/debt labels, depending on the carrier.
+  destroyed information:
+    recorded carrier-by-carrier; a quotient is not legal unless the destroyed coordinate is
+    reconstructed, dual-annihilated, descended, AP/GW boundary, or named THM-572/F7 debt.
+
+[1] Duodecimal incident words over the core payload alphabet
+  alphabet=status,route,exact_scale,topology,owner,period_deck,analytic_certificate,automaton_partial_cube,crt_padic,observer_cut,hodge_cycle,formal_exit
+  labelled_packet_sheaf              word=111000000000 discipline=packet_sheaf           source=HYP-2963/CPI-020
+  closed_arc_cech_topology           word=100100000000 discipline=topology               source=HYP-3025/CPI-081
+  safe_stalk_barcode_normal_fan      word=100110000000 discipline=stalk_geometry         source=HYP-3029/HYP-3015/HYP-3018/CPI-076,CPI-078
+  endpoint_owner_strip_current       word=110010000000 discipline=owner_current          source=HYP-3042/HYP-3045/CPI-034
+  ramanujan_primitive_period_deck    word=010011000000 discipline=periodic_arithmetic    source=HYP-3036/CPI-043
+  mobius_squarefree_blindness_report word=000000000000 discipline=analytic_sieve         source=HYP-3032/CPI-053
+  haar_zeta_square                   word=100010100000 discipline=haar_harmonic          source=HYP-3038/HYP-2991/CPI-036,CPI-060
+  fejer_interval_backend             word=101000100000 discipline=analytic_certificate   source=HYP-2981/CPI-041
+  crt_padic_residual_tree            word=001001001000 discipline=arithmetic_crt         source=HYP-3033/CPI-056
+  automatic_partial_cube_sidecar     word=000000010000 discipline=automata_geometry      source=HYP-3063/HYP-3023/CPI-054,CPI-067,CPI-077
+  observer_extension_cut_payload     word=000000000100 discipline=observer_cut           source=HYP-3054/HYP-3056/CPI-071
+  rectangle_hourglass_diagonal_flow  word=000000000100 discipline=diagonal_flow          source=HYP-3065/HYP-3053/S217
+  hodge_cycle_lift                   word=000000000011 discipline=cohomology             source=HYP-3066/HYP-3071/CPI-033,CPI-061,CPI-065
+  median_route_center_control        word=010010000001 discipline=median_sidecar         source=HYP-3069/HYP-3070
+  toeplitz_square_scale_gate         word=001000100000 discipline=noncollapse_geometry   source=HYP-3064/CPI-042
+  roth_minkowski_low_height_wall     word=001000001000 discipline=diophantine_geometry   source=HYP-3062
+  k33_state_lift_incidence           word=010000000011 discipline=state_lift             source=THM-572/CPI-025
+  carrier_fusion_switchboard         word=111110001000 discipline=fusion                 source=HYP-3026/CPI-082
+  sidechannel_repair_ladder          word=110000000001 discipline=repair_ladder          source=HYP-3027/HYP-3028/HYP-3039
+  exact_farey_kpq_scale              word=011000000000 discipline=farey_incidence        source=HYP-2934/CPI-049,CPI-050,CPI-068
+  pair_good_blocker_grammar          word=100010000000 discipline=local_switch           source=HYP-3021/HYP-3022/CPI-080
+  hyperbolic_power_guard             word=001000010000 discipline=curvature_power        source=HYP-3058/CPI-072
+  reading: the useful object is the incident word plus the lost-coordinate ledger,
+  not the raw carrier name.  Several attractive carriers are sparse in the core word.
+
+[2] Single-carrier blindness report
+  labelled_packet_sheaf              payload=(0, 43, 21, 7, -3, -2) destroys=['analytic_certificate', 'owner', 'topology']
+    guardrail=unlabelled packets invite false analogies, but packet labels alone do not close a certificate
+    destroys_needed_by=residual_route_mixed_fibers:owner,topology; q23_squarefree_petal_covering:owner; automatic_partial_cube_route_purity:owner,topology; two_tail_ap_clock_search:owner; k33_f7_state_lift_exit:topology; analytic_certificate_backend:analytic_certificate,owner
+  closed_arc_cech_topology           payload=(0, 11, 6, 6, -3, -2) destroys=['exact_scale', 'period_deck', 'route']
+    guardrail=Cech topology separates boundary/open shape but forgets arithmetic period unless sidecars return
+    destroys_needed_by=residual_route_mixed_fibers:period_deck,route; q23_squarefree_petal_covering:exact_scale,period_deck,route; automatic_partial_cube_route_purity:exact_scale,route; two_tail_ap_clock_search:exact_scale,period_deck,route; k33_f7_state_lift_exit:exact_scale,route; observer_extension_rootless_payload:exact_scale; carrier_pullback_formalization:route; analytic_certificate_backend:exact_scale,period_deck; multi_scale_binding_spectrum:exact_scale,route
+  safe_stalk_barcode_normal_fan      payload=(0, 22, 12, 7, -2, -2) destroys=['period_deck', 'route']
+    guardrail=barcode shape is not a theorem route unless active support and owners remain attached
+    destroys_needed_by=residual_route_mixed_fibers:period_deck,route; q23_squarefree_petal_covering:period_deck,route; automatic_partial_cube_route_purity:route; two_tail_ap_clock_search:period_deck,route; k33_f7_state_lift_exit:route; carrier_pullback_formalization:route; analytic_certificate_backend:period_deck; multi_scale_binding_spectrum:route
+  endpoint_owner_strip_current       payload=(0, 29, 15, 6, -2, -2) destroys=['exact_scale', 'period_deck']
+    guardrail=owner strips can forget primitive clocks such as the AP-tail mod-13 split
+    destroys_needed_by=residual_route_mixed_fibers:period_deck; q23_squarefree_petal_covering:exact_scale,period_deck; automatic_partial_cube_route_purity:exact_scale; two_tail_ap_clock_search:exact_scale,period_deck; k33_f7_state_lift_exit:exact_scale; observer_extension_rootless_payload:exact_scale; analytic_certificate_backend:exact_scale,period_deck; multi_scale_binding_spectrum:exact_scale
+  ramanujan_primitive_period_deck    payload=(0, 31, 16, 6, -1, -3) destroys=['topology']
+    guardrail=period projectors must be endpoint-aware; squarefree divisor shadows merge live prime powers
+    destroys_needed_by=residual_route_mixed_fibers:topology; automatic_partial_cube_route_purity:topology; k33_f7_state_lift_exit:topology
+  mobius_squarefree_blindness_report payload=(0, 2, 1, 4, -4, -1) destroys=['owner', 'period_deck', 'prime_power_label', 'route']
+    guardrail=mu^2/phi is a capacity meter, not a final equality atom; it zeros repeated-prime routes
+    destroys_needed_by=residual_route_mixed_fibers:owner,period_deck,route; q23_squarefree_petal_covering:owner,period_deck,route; automatic_partial_cube_route_purity:owner,route; two_tail_ap_clock_search:owner,period_deck,route; k33_f7_state_lift_exit:route; carrier_pullback_formalization:route; analytic_certificate_backend:owner,period_deck; multi_scale_binding_spectrum:route
+  haar_zeta_square                   payload=(0, 22, 11, 6, -2, -2) destroys=['period_deck', 'route']
+    guardrail=row/column margins collide unless the mixed zeta coordinate is retained
+    destroys_needed_by=residual_route_mixed_fibers:period_deck,route; q23_squarefree_petal_covering:period_deck,route; automatic_partial_cube_route_purity:route; two_tail_ap_clock_search:period_deck,route; k33_f7_state_lift_exit:route; carrier_pullback_formalization:route; analytic_certificate_backend:period_deck; multi_scale_binding_spectrum:route
+  fejer_interval_backend             payload=(0, 27, 12, 6, -2, -3) destroys=['owner', 'route']
+    guardrail=floating Fejer values are invalid without packet key, center, degree, and interval backend
+    destroys_needed_by=residual_route_mixed_fibers:owner,route; q23_squarefree_petal_covering:owner,route; automatic_partial_cube_route_purity:owner,route; two_tail_ap_clock_search:owner,route; k33_f7_state_lift_exit:route; carrier_pullback_formalization:route; analytic_certificate_backend:owner; multi_scale_binding_spectrum:route
+  crt_padic_residual_tree            payload=(0, 25, 12, 6, -2, -3) destroys=['owner', 'topology']
+    guardrail=denominator-only p-adic trees lose endpoint owners and route family
+    destroys_needed_by=residual_route_mixed_fibers:owner,topology; q23_squarefree_petal_covering:owner; automatic_partial_cube_route_purity:owner,topology; two_tail_ap_clock_search:owner; k33_f7_state_lift_exit:topology; analytic_certificate_backend:owner
+  automatic_partial_cube_sidecar     payload=(0, 3, 1, 6, -4, -2) destroys=['exact_scale', 'owner', 'route', 'status']
+    guardrail=Moser/fibbinary membership is telemetry; it mixes status and route without exact packet sidecars
+    destroys_needed_by=residual_route_mixed_fibers:owner,route,status; q23_squarefree_petal_covering:exact_scale,owner,route; automatic_partial_cube_route_purity:exact_scale,owner,route,status; two_tail_ap_clock_search:exact_scale,owner,route; k33_f7_state_lift_exit:exact_scale,route; observer_extension_rootless_payload:exact_scale; carrier_pullback_formalization:route,status; analytic_certificate_backend:exact_scale,owner; multi_scale_binding_spectrum:exact_scale,route
+  observer_extension_cut_payload     payload=(0, 12, 6, 6, -3, -2) destroys=['exact_scale', 'route', 'status']
+    guardrail=observer cuts name the lost payload but do not certify boundary/open status by themselves
+    destroys_needed_by=residual_route_mixed_fibers:route,status; q23_squarefree_petal_covering:exact_scale,route; automatic_partial_cube_route_purity:exact_scale,route,status; two_tail_ap_clock_search:exact_scale,route; k33_f7_state_lift_exit:exact_scale,route; observer_extension_rootless_payload:exact_scale; carrier_pullback_formalization:route,status; analytic_certificate_backend:exact_scale; multi_scale_binding_spectrum:exact_scale,route
+  rectangle_hourglass_diagonal_flow  payload=(0, 6, 3, 6, -3, -2) destroys=['exact_scale', 'owner', 'route']
+    guardrail=rectangle residues are controlled-forgetting sidecars, not standalone LRC packets
+    destroys_needed_by=residual_route_mixed_fibers:owner,route; q23_squarefree_petal_covering:exact_scale,owner,route; automatic_partial_cube_route_purity:exact_scale,owner,route; two_tail_ap_clock_search:exact_scale,owner,route; k33_f7_state_lift_exit:exact_scale,route; observer_extension_rootless_payload:exact_scale; carrier_pullback_formalization:route; analytic_certificate_backend:exact_scale,owner; multi_scale_binding_spectrum:exact_scale,route
+  hodge_cycle_lift                   payload=(0, 12, 5, 6, -2, -3) destroys=['exact_scale', 'packet_key']
+    guardrail=rank/image language is legal only after actual packet cochains are emitted
+    destroys_needed_by=q23_squarefree_petal_covering:exact_scale; automatic_partial_cube_route_purity:exact_scale; two_tail_ap_clock_search:exact_scale; k33_f7_state_lift_exit:exact_scale; observer_extension_rootless_payload:exact_scale; analytic_certificate_backend:exact_scale; multi_scale_binding_spectrum:exact_scale
+  median_route_center_control        payload=(0, 39, 20, 7, -2, -3) destroys=['analytic_certificate', 'exact_scale']
+    guardrail=a raw route vocabulary center is not proof-compatible until legal sidecar pages are attached
+    destroys_needed_by=q23_squarefree_petal_covering:exact_scale; automatic_partial_cube_route_purity:exact_scale; two_tail_ap_clock_search:exact_scale; k33_f7_state_lift_exit:exact_scale; observer_extension_rootless_payload:exact_scale; analytic_certificate_backend:analytic_certificate,exact_scale; multi_scale_binding_spectrum:exact_scale
+  toeplitz_square_scale_gate         payload=(0, 19, 8, 6, -2, -3) destroys=['owner', 'route']
+    guardrail=approximate four-witness shadows must keep positive scale or route to named debt
+    destroys_needed_by=residual_route_mixed_fibers:owner,route; q23_squarefree_petal_covering:owner,route; automatic_partial_cube_route_purity:owner,route; two_tail_ap_clock_search:owner,route; k33_f7_state_lift_exit:route; carrier_pullback_formalization:route; analytic_certificate_backend:owner; multi_scale_binding_spectrum:route
+  roth_minkowski_low_height_wall     payload=(0, 17, 8, 6, -2, -3) destroys=['route', 'status']
+    guardrail=volume/height pressure is only a sidecar unless the deleted anti-cosets are named
+    destroys_needed_by=residual_route_mixed_fibers:route,status; q23_squarefree_petal_covering:route; automatic_partial_cube_route_purity:route,status; two_tail_ap_clock_search:route; k33_f7_state_lift_exit:route; carrier_pullback_formalization:route,status; multi_scale_binding_spectrum:route
+  k33_state_lift_incidence           payload=(0, 26, 12, 6, -2, -3) destroys=['exact_scale', 'topology']
+    guardrail=positive K33 incidence without state address is unfinished residual debt
+    destroys_needed_by=residual_route_mixed_fibers:topology; q23_squarefree_petal_covering:exact_scale; automatic_partial_cube_route_purity:exact_scale,topology; two_tail_ap_clock_search:exact_scale; k33_f7_state_lift_exit:exact_scale,topology; observer_extension_rootless_payload:exact_scale; analytic_certificate_backend:exact_scale; multi_scale_binding_spectrum:exact_scale
+  carrier_fusion_switchboard         payload=(0, 57, 29, 9, -1, -4) destroys=['formal_exit']
+    guardrail=a fused signature can still hide which subcarrier is load-bearing
+    destroys_needed_by=k33_f7_state_lift_exit:formal_exit; observer_extension_rootless_payload:formal_exit; carrier_pullback_formalization:formal_exit
+  sidechannel_repair_ladder          payload=(0, 32, 16, 6, -2, -3) destroys=['exact_scale', 'topology']
+    guardrail=a repair stage is only admissible when it names the first lost coordinate
+    destroys_needed_by=residual_route_mixed_fibers:topology; q23_squarefree_petal_covering:exact_scale; automatic_partial_cube_route_purity:exact_scale,topology; two_tail_ap_clock_search:exact_scale; k33_f7_state_lift_exit:exact_scale,topology; observer_extension_rootless_payload:exact_scale; analytic_certificate_backend:exact_scale; multi_scale_binding_spectrum:exact_scale
+  exact_farey_kpq_scale              payload=(0, 34, 16, 6, -2, -2) destroys=['owner', 'topology']
+    guardrail=product/farey shadows are unsafe without endpoint and packet-family sidecars
+    destroys_needed_by=residual_route_mixed_fibers:owner,topology; q23_squarefree_petal_covering:owner; automatic_partial_cube_route_purity:owner,topology; two_tail_ap_clock_search:owner; k33_f7_state_lift_exit:topology; analytic_certificate_backend:owner
+  pair_good_blocker_grammar          payload=(0, 17, 9, 7, -2, -2) destroys=['exact_scale', 'route']
+    guardrail=raw decoy count is misleading; generator and barcode/normal-fan sidecars must stay attached
+    destroys_needed_by=residual_route_mixed_fibers:route; q23_squarefree_petal_covering:exact_scale,route; automatic_partial_cube_route_purity:exact_scale,route; two_tail_ap_clock_search:exact_scale,route; k33_f7_state_lift_exit:exact_scale,route; observer_extension_rootless_payload:exact_scale; carrier_pullback_formalization:route; analytic_certificate_backend:exact_scale; multi_scale_binding_spectrum:exact_scale,route
+  hyperbolic_power_guard             payload=(0, 19, 8, 6, -3, -2) destroys=['owner', 'route', 'topology']
+    guardrail=the reciprocal-sum <1 condition is hyperbolic curvature debt, not an LRC quotient
+    destroys_needed_by=residual_route_mixed_fibers:owner,route,topology; q23_squarefree_petal_covering:owner,route; automatic_partial_cube_route_purity:owner,route,topology; two_tail_ap_clock_search:owner,route; k33_f7_state_lift_exit:route,topology; carrier_pullback_formalization:route; analytic_certificate_backend:owner; multi_scale_binding_spectrum:route
+
+[3] Obligation coverage and minimal cross-carrier portfolios
+  obligation=residual_route_mixed_fibers
+    reading=After coarse ET+unit, route-mixed fibers need topology/stalk first teeth plus owner and clock sidecars.
+    single carrier_fusion_switchboard         score=12/14 missing=period_deck,destroyed_coordinate
+    single safe_stalk_barcode_normal_fan      score=9/14 missing=route,period_deck,destroyed_coordinate
+    single endpoint_owner_strip_current       score=8/14 missing=topology,barcode_stalk,period_deck,destroyed_coordinate
+    single pair_good_blocker_grammar          score=7/14 missing=route,topology,period_deck,destroyed_coordinate
+    single labelled_packet_sheaf              score=7/14 missing=topology,barcode_stalk,owner,period_deck
+    cover size=3 disciplines=3 cost=7 :: labelled_packet_sheaf + safe_stalk_barcode_normal_fan + crt_padic_residual_tree
+    cover size=3 disciplines=3 cost=7 :: labelled_packet_sheaf + safe_stalk_barcode_normal_fan + ramanujan_primitive_period_deck
+    cover size=3 disciplines=3 cost=7 :: safe_stalk_barcode_normal_fan + ramanujan_primitive_period_deck + observer_extension_cut_payload
+  obligation=q23_squarefree_petal_covering
+    reading=The q=23 petal/covering pair needs zeta, owner strips, exact M, and a squarefree blindness warning.
+    single carrier_fusion_switchboard         score=8/12 missing=period_deck,squarefree_blindness
+    single ramanujan_primitive_period_deck    score=5/12 missing=exact_scale,haar_zeta,squarefree_blindness
+    single crt_padic_residual_tree            score=5/12 missing=haar_zeta,owner,squarefree_blindness,route
+    single labelled_packet_sheaf              score=4/12 missing=haar_zeta,owner,period_deck,squarefree_blindness
+    single haar_zeta_square                   score=4/12 missing=exact_scale,period_deck,squarefree_blindness,route
+    cover size=3 disciplines=3 cost=8 :: mobius_squarefree_blindness_report + crt_padic_residual_tree + carrier_fusion_switchboard
+    cover size=3 disciplines=3 cost=8 :: ramanujan_primitive_period_deck + mobius_squarefree_blindness_report + carrier_fusion_switchboard
+  obligation=automatic_partial_cube_route_purity
+    reading=Moser/fibbinary/partial-cube telemetry is useful only after exact scale, topology, owner, route, and status return.
+    single carrier_fusion_switchboard         score=10/13 missing=automaton_partial_cube
+    single labelled_packet_sheaf              score=6/13 missing=automaton_partial_cube,topology,owner
+    single hyperbolic_power_guard             score=6/13 missing=topology,owner,route,status
+    single safe_stalk_barcode_normal_fan      score=5/13 missing=automaton_partial_cube,exact_scale,route
+    single exact_farey_kpq_scale              score=5/13 missing=automaton_partial_cube,topology,owner,status
+    cover size=2 disciplines=2 cost=6 :: automatic_partial_cube_sidecar + carrier_fusion_switchboard
+    cover size=2 disciplines=2 cost=6 :: carrier_fusion_switchboard + hyperbolic_power_guard
+  obligation=two_tail_ap_clock_search
+    reading=Search two-tail AP-core residuals by primitive clock, fixed point, owner strip, exact M, and CRT sidecar.
+    single carrier_fusion_switchboard         score=8/11 missing=period_deck
+    single ramanujan_primitive_period_deck    score=7/11 missing=exact_scale,crt_padic
+    single crt_padic_residual_tree            score=7/11 missing=owner,route
+    single labelled_packet_sheaf              score=5/11 missing=period_deck,owner,crt_padic
+    single exact_farey_kpq_scale              score=5/11 missing=period_deck,owner,crt_padic
+    cover size=2 disciplines=2 cost=5 :: endpoint_owner_strip_current + crt_padic_residual_tree
+    cover size=2 disciplines=2 cost=6 :: crt_padic_residual_tree + median_route_center_control
+    cover size=2 disciplines=2 cost=6 :: ramanujan_primitive_period_deck + crt_padic_residual_tree
+  obligation=k33_f7_state_lift_exit
+    reading=K33/F7 debt must become a named state-lift cochain with formal exit and retained packet geometry.
+    single k33_state_lift_incidence           score=10/12 missing=topology,exact_scale
+    single hodge_cycle_lift                   score=8/12 missing=route,topology,exact_scale
+    single sidechannel_repair_ladder          score=4/12 missing=state_lift,hodge_cycle,topology,exact_scale
+    single median_route_center_control        score=4/12 missing=state_lift,hodge_cycle,topology,exact_scale
+    single carrier_fusion_switchboard         score=4/12 missing=state_lift,hodge_cycle,formal_exit
+    cover size=2 disciplines=2 cost=7 :: hodge_cycle_lift + carrier_fusion_switchboard
+    cover size=2 disciplines=2 cost=7 :: k33_state_lift_incidence + carrier_fusion_switchboard
+  obligation=observer_extension_rootless_payload
+    reading=A000568/rootless extension defects need observer cuts, rectangle/hourglass residues, root objects, and exact scale.
+    single observer_extension_cut_payload     score=7/11 missing=rectangle_residue,formal_exit,exact_scale
+    single rectangle_hourglass_diagonal_flow  score=5/11 missing=destroyed_coordinate,root_object,formal_exit,exact_scale
+    single median_route_center_control        score=5/11 missing=observer_cut,rectangle_residue,exact_scale
+    single labelled_packet_sheaf              score=3/11 missing=observer_cut,rectangle_residue,root_object,formal_exit
+    single sidechannel_repair_ladder          score=3/11 missing=observer_cut,rectangle_residue,root_object,exact_scale
+    cover size=3 disciplines=3 cost=7 :: labelled_packet_sheaf + rectangle_hourglass_diagonal_flow + median_route_center_control
+    cover size=3 disciplines=3 cost=7 :: rectangle_hourglass_diagonal_flow + median_route_center_control + exact_farey_kpq_scale
+    cover size=3 disciplines=3 cost=7 :: rectangle_hourglass_diagonal_flow + median_route_center_control + hyperbolic_power_guard
+  obligation=carrier_pullback_formalization
+    reading=A quotient is admissible only after the preserved predicate, destroyed coordinate, and legal exit are explicit.
+    single sidechannel_repair_ladder          score=10/12 missing=median_center
+    single median_route_center_control        score=10/12 missing=status
+    single labelled_packet_sheaf              score=7/12 missing=formal_exit,median_center
+    single k33_state_lift_incidence           score=5/12 missing=destroyed_coordinate,status,median_center
+    single endpoint_owner_strip_current       score=4/12 missing=formal_exit,destroyed_coordinate,median_center
+    cover size=2 disciplines=2 cost=5 :: closed_arc_cech_topology + median_route_center_control
+    cover size=2 disciplines=2 cost=5 :: endpoint_owner_strip_current + median_route_center_control
+    cover size=2 disciplines=2 cost=5 :: haar_zeta_square + median_route_center_control
+  obligation=analytic_certificate_backend
+    reading=Fejer/Ramanujan/Haar backends need packet-keyed intervals, primitive periods, zeta, exact M, and owners.
+    single fejer_interval_backend             score=7/12 missing=period_deck,haar_zeta,owner
+    single haar_zeta_square                   score=6/12 missing=fejer_interval,period_deck,exact_scale
+    single toeplitz_square_scale_gate         score=5/12 missing=fejer_interval,period_deck,haar_zeta,owner
+    single carrier_fusion_switchboard         score=5/12 missing=analytic_certificate,fejer_interval,period_deck
+    single crt_padic_residual_tree            score=4/12 missing=analytic_certificate,fejer_interval,haar_zeta,owner
+    cover size=3 disciplines=3 cost=8 :: haar_zeta_square + fejer_interval_backend + crt_padic_residual_tree
+    cover size=3 disciplines=3 cost=8 :: ramanujan_primitive_period_deck + haar_zeta_square + fejer_interval_backend
+    cover size=3 disciplines=3 cost=10 :: fejer_interval_backend + crt_padic_residual_tree + carrier_fusion_switchboard
+  obligation=multi_scale_binding_spectrum
+    reading=The spectrum/binding-scale route needs exact Farey scale with route and observer-cut sidecars.
+    single exact_farey_kpq_scale              score=9/10 missing=observer_cut
+    single labelled_packet_sheaf              score=6/10 missing=binding_scale,observer_cut
+    single carrier_fusion_switchboard         score=5/10 missing=binding_scale,qdiv,observer_cut
+    single hyperbolic_power_guard             score=3/10 missing=binding_scale,route,qdiv,observer_cut
+    single toeplitz_square_scale_gate         score=3/10 missing=binding_scale,route,qdiv,observer_cut
+    cover size=2 disciplines=2 cost=4 :: observer_extension_cut_payload + exact_farey_kpq_scale
+    cover size=2 disciplines=2 cost=4 :: rectangle_hourglass_diagonal_flow + exact_farey_kpq_scale
+
+[4] Global set-cover portfolios across all obligation axes
+  target_axes=['analytic_certificate', 'automaton_partial_cube', 'barcode_stalk', 'binding_scale', 'crt_padic', 'destroyed_coordinate', 'exact_scale', 'fejer_interval', 'formal_exit', 'haar_zeta', 'hodge_cycle', 'median_center', 'observer_cut', 'owner', 'period_deck', 'qdiv', 'rectangle_residue', 'root_object', 'route', 'squarefree_blindness', 'state_lift', 'status', 'topology']
+  cover size=9 disciplines=9 cost=23 :: mobius_squarefree_blindness_report + fejer_interval_backend + crt_padic_residual_tree + automatic_partial_cube_sidecar + rectangle_hourglass_diagonal_flow + hodge_cycle_lift + median_route_center_control + carrier_fusion_switchboard + exact_farey_kpq_scale
+  cover size=9 disciplines=9 cost=23 :: mobius_squarefree_blindness_report + fejer_interval_backend + crt_padic_residual_tree + automatic_partial_cube_sidecar + rectangle_hourglass_diagonal_flow + median_route_center_control + k33_state_lift_incidence + carrier_fusion_switchboard + exact_farey_kpq_scale
+  cover size=9 disciplines=9 cost=23 :: mobius_squarefree_blindness_report + fejer_interval_backend + crt_padic_residual_tree + rectangle_hourglass_diagonal_flow + hodge_cycle_lift + median_route_center_control + carrier_fusion_switchboard + exact_farey_kpq_scale + hyperbolic_power_guard
+  cover size=9 disciplines=9 cost=23 :: mobius_squarefree_blindness_report + fejer_interval_backend + crt_padic_residual_tree + rectangle_hourglass_diagonal_flow + median_route_center_control + k33_state_lift_incidence + carrier_fusion_switchboard + exact_farey_kpq_scale + hyperbolic_power_guard
+  cover size=9 disciplines=9 cost=23 :: ramanujan_primitive_period_deck + mobius_squarefree_blindness_report + fejer_interval_backend + automatic_partial_cube_sidecar + rectangle_hourglass_diagonal_flow + hodge_cycle_lift + median_route_center_control + carrier_fusion_switchboard + exact_farey_kpq_scale
+  cover size=9 disciplines=9 cost=23 :: ramanujan_primitive_period_deck + mobius_squarefree_blindness_report + fejer_interval_backend + automatic_partial_cube_sidecar + rectangle_hourglass_diagonal_flow + median_route_center_control + k33_state_lift_incidence + carrier_fusion_switchboard + exact_farey_kpq_scale
+  cover size=9 disciplines=9 cost=23 :: ramanujan_primitive_period_deck + mobius_squarefree_blindness_report + fejer_interval_backend + rectangle_hourglass_diagonal_flow + hodge_cycle_lift + median_route_center_control + carrier_fusion_switchboard + exact_farey_kpq_scale + hyperbolic_power_guard
+  cover size=9 disciplines=9 cost=23 :: ramanujan_primitive_period_deck + mobius_squarefree_blindness_report + fejer_interval_backend + rectangle_hourglass_diagonal_flow + median_route_center_control + k33_state_lift_incidence + carrier_fusion_switchboard + exact_farey_kpq_scale + hyperbolic_power_guard
+  reading: the first full covers appear only at size 9 in this finite atlas,
+  so no small universal scalar-like bundle is visible.  The recurring skeleton is
+  packet/fusion + owner/topology/stalk + period/analytic + observer/formal/state-lift.
+
+[5] Cross-disciplinary resonance pairs
+  score=(6, 2, 0, -4) disciplines=2 :: safe_stalk_barcode_normal_fan + rectangle_hourglass_diagonal_flow
+    union_axes=['barcode_stalk', 'edge_sector', 'fixed_path_flow', 'hourglass_residue', 'largest_stalk', 'line_potential', 'normal_fan', 'observer_cut', 'owner', 'rectangle_residue', 'safe_component', 'status', 'topology']
+  score=(6, 2, 0, -4) disciplines=2 :: safe_stalk_barcode_normal_fan + observer_extension_cut_payload
+    union_axes=['barcode_stalk', 'cut_signature', 'deletion_fiber', 'destroyed_coordinate', 'largest_stalk', 'normal_fan', 'observer_cut', 'owner', 'root_object', 'safe_component', 'source_mark', 'status', 'topology']
+  score=(6, 2, 0, -4) disciplines=2 :: safe_stalk_barcode_normal_fan + exact_farey_kpq_scale
+    union_axes=['barcode_stalk', 'binding_scale', 'exact_scale', 'farey_excess', 'kpq_incidence', 'largest_stalk', 'normal_fan', 'owner', 'qdiv', 'route', 'safe_component', 'status', 'topology']
+  score=(6, 2, 0, -4) disciplines=2 :: safe_stalk_barcode_normal_fan + automatic_partial_cube_sidecar
+    union_axes=['automaton_partial_cube', 'barcode_stalk', 'bit_phase', 'gated_subcube', 'largest_stalk', 'native_transition', 'normal_fan', 'owner', 'safe_component', 'simplex_face', 'status', 'theta_class', 'topology']
+  score=(6, 2, 0, -4) disciplines=2 :: rectangle_hourglass_diagonal_flow + pair_good_blocker_grammar
+    union_axes=['barcode_stalk', 'blocker_tooth', 'edge_sector', 'fixed_path_flow', 'generator_class', 'hourglass_residue', 'line_potential', 'normal_fan', 'observer_cut', 'owner', 'pair_blocker', 'rectangle_residue', 'status']
+  score=(6, 2, 0, -4) disciplines=2 :: rectangle_hourglass_diagonal_flow + hyperbolic_power_guard
+    union_axes=['automaton_partial_cube', 'edge_sector', 'exact_scale', 'fixed_path_flow', 'geometry_regime', 'hourglass_residue', 'line_potential', 'observer_cut', 'power_guard', 'rectangle_residue', 'safe_component', 'valuation_budget']
+  score=(6, 2, 0, -4) disciplines=2 :: rectangle_hourglass_diagonal_flow + exact_farey_kpq_scale
+    union_axes=['binding_scale', 'edge_sector', 'exact_scale', 'farey_excess', 'fixed_path_flow', 'hourglass_residue', 'kpq_incidence', 'line_potential', 'observer_cut', 'qdiv', 'rectangle_residue', 'route']
+  score=(6, 2, 0, -4) disciplines=2 :: pair_good_blocker_grammar + hyperbolic_power_guard
+    union_axes=['automaton_partial_cube', 'barcode_stalk', 'blocker_tooth', 'exact_scale', 'generator_class', 'geometry_regime', 'normal_fan', 'owner', 'pair_blocker', 'power_guard', 'safe_component', 'status', 'valuation_budget']
+
+[6] Cross-disciplinary resonance triples
+  score=(12, 3, 0, -6) disciplines=3 :: safe_stalk_barcode_normal_fan + rectangle_hourglass_diagonal_flow + exact_farey_kpq_scale
+    union_axes=['barcode_stalk', 'binding_scale', 'edge_sector', 'exact_scale', 'farey_excess', 'fixed_path_flow', 'hourglass_residue', 'kpq_incidence', 'largest_stalk', 'line_potential', 'normal_fan', 'observer_cut', 'owner', 'qdiv', 'rectangle_residue', 'route', 'safe_component', 'status', 'topology']
+  score=(12, 3, 0, -6) disciplines=3 :: safe_stalk_barcode_normal_fan + observer_extension_cut_payload + exact_farey_kpq_scale
+    union_axes=['barcode_stalk', 'binding_scale', 'cut_signature', 'deletion_fiber', 'destroyed_coordinate', 'exact_scale', 'farey_excess', 'kpq_incidence', 'largest_stalk', 'normal_fan', 'observer_cut', 'owner', 'qdiv', 'root_object', 'route', 'safe_component', 'source_mark', 'status', 'topology']
+  score=(12, 3, 0, -6) disciplines=3 :: safe_stalk_barcode_normal_fan + automatic_partial_cube_sidecar + rectangle_hourglass_diagonal_flow
+    union_axes=['automaton_partial_cube', 'barcode_stalk', 'bit_phase', 'edge_sector', 'fixed_path_flow', 'gated_subcube', 'hourglass_residue', 'largest_stalk', 'line_potential', 'native_transition', 'normal_fan', 'observer_cut', 'owner', 'rectangle_residue', 'safe_component', 'simplex_face', 'status', 'theta_class', 'topology']
+  score=(12, 3, 0, -6) disciplines=3 :: safe_stalk_barcode_normal_fan + automatic_partial_cube_sidecar + observer_extension_cut_payload
+    union_axes=['automaton_partial_cube', 'barcode_stalk', 'bit_phase', 'cut_signature', 'deletion_fiber', 'destroyed_coordinate', 'gated_subcube', 'largest_stalk', 'native_transition', 'normal_fan', 'observer_cut', 'owner', 'root_object', 'safe_component', 'simplex_face', 'source_mark', 'status', 'theta_class', 'topology']
+  score=(12, 3, 0, -6) disciplines=3 :: safe_stalk_barcode_normal_fan + automatic_partial_cube_sidecar + exact_farey_kpq_scale
+    union_axes=['automaton_partial_cube', 'barcode_stalk', 'binding_scale', 'bit_phase', 'exact_scale', 'farey_excess', 'gated_subcube', 'kpq_incidence', 'largest_stalk', 'native_transition', 'normal_fan', 'owner', 'qdiv', 'route', 'safe_component', 'simplex_face', 'status', 'theta_class', 'topology']
+  score=(12, 3, 0, -6) disciplines=3 :: rectangle_hourglass_diagonal_flow + pair_good_blocker_grammar + hyperbolic_power_guard
+    union_axes=['automaton_partial_cube', 'barcode_stalk', 'blocker_tooth', 'edge_sector', 'exact_scale', 'fixed_path_flow', 'generator_class', 'geometry_regime', 'hourglass_residue', 'line_potential', 'normal_fan', 'observer_cut', 'owner', 'pair_blocker', 'power_guard', 'rectangle_residue', 'safe_component', 'status', 'valuation_budget']
+  score=(12, 3, 0, -6) disciplines=3 :: rectangle_hourglass_diagonal_flow + exact_farey_kpq_scale + pair_good_blocker_grammar
+    union_axes=['barcode_stalk', 'binding_scale', 'blocker_tooth', 'edge_sector', 'exact_scale', 'farey_excess', 'fixed_path_flow', 'generator_class', 'hourglass_residue', 'kpq_incidence', 'line_potential', 'normal_fan', 'observer_cut', 'owner', 'pair_blocker', 'qdiv', 'rectangle_residue', 'route', 'status']
+  score=(12, 3, 0, -6) disciplines=3 :: observer_extension_cut_payload + pair_good_blocker_grammar + hyperbolic_power_guard
+    union_axes=['automaton_partial_cube', 'barcode_stalk', 'blocker_tooth', 'cut_signature', 'deletion_fiber', 'destroyed_coordinate', 'exact_scale', 'generator_class', 'geometry_regime', 'normal_fan', 'observer_cut', 'owner', 'pair_blocker', 'power_guard', 'root_object', 'safe_component', 'source_mark', 'status', 'valuation_budget']
+
+[7] Tournament Analysis
+  vertices_are=proof-carrier pullbacks / CPI rows, not runners
+  pairwise_observable=(full_obligation_count, weighted_axis_coverage, critical_axis_hits, payload_width, -destroyed_count, -cost)
+  gauge=orient toward more retained proof payload; ties use the CPI pullback tie path
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  tie_hamiltonian_path=carrier_fusion_switchboard > labelled_packet_sheaf > median_route_center_control > exact_farey_kpq_scale > sidechannel_repair_ladder > ramanujan_primitive_period_deck > endpoint_owner_strip_current > fejer_interval_backend > k33_state_lift_incidence > crt_padic_residual_tree > safe_stalk_barcode_normal_fan > haar_zeta_square > toeplitz_square_scale_gate > hyperbolic_power_guard > pair_good_blocker_grammar > roth_minkowski_low_height_wall > observer_extension_cut_payload > hodge_cycle_lift > closed_arc_cech_topology > rectangle_hourglass_diagonal_flow > automatic_partial_cube_sidecar > mobius_squarefree_blindness_report
+
+[8] Two creative proof angles extracted
+  angle A: blindness-pair proof
+    For every scalar or low-payload carrier, pair it with the carrier that restores
+    exactly the coordinate it destroys.  Examples: mu^2/phi pairs with Ramanujan/CRT
+    for prime powers; automata pair with exact Farey scale plus arc-Cech/owner;
+    observer cuts pair with formal exits plus exact scale.  The proof target is a
+    no-unpaid-forgetting lemma.
+  angle B: resonance-portfolio proof
+    Work with minimal portfolios per obligation instead of one master quotient.
+    The covering family, q=23 square, automatic fibers, and F7/K33 debt each need
+    a different three- or four-carrier packet.  Glue them by the formal exit ledger,
+    not by forcing all rows through one scalar invariant.
+
+[9] Next exact job
+  Emit actual HYP-2963 packet rows with these fields:
+    carrier_pullback_row_id, core_incident_word, preserved_lrc_predicate,
+    destroyed_coordinate, required_sidecar, blindness_pair_id, resonance_portfolio_id,
+    status_mixing_result, route_mixing_result, and legal_exit_status.
+  Then test whether the listed portfolios make the residual coarse fibers
+  status-pure and route-pure before any new theorem debt is named.

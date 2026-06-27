@@ -1,0 +1,120 @@
+=== LRC14 residual certificate teeth S197 ===
+source=05-knowledge/results/lrc14_status_topology_gate_codex_s194.out
+residual_rows=38 residual_fibers=15
+route_counts={'COVERING-MOMENT': 15, 'Q-WITNESS': 23}
+status_counts={'open': 38}
+
+[0] Assumption challenge
+  considered vertices:
+    runners, coarse residual fibers, exact routes, topology classes,
+    scale teeth, safe-tope buckets, magnitude values, and proof teeth.
+  chosen vertices:
+    residual proof carriers, not runners or route labels.
+  preserved LRC predicate:
+    boundary/open status is already pure; the carrier schedules open
+    residual route certificates without using route labels as a key.
+  destroyed information:
+    raw coarse ET address, exact magnitude except for a small unit/nonunit
+    scale tooth, and row identity.
+
+[1] Residual carrier audit
+  coarse_residual_fiber              fibers=15 mixed_route=15 max_mixed=4  mixed_status=0  :: S194 coarse ET+unit residual fiber id
+  topology_tooth                     fibers=18 mixed_route=3  max_mixed=9  mixed_status=0  :: closed/open arc Betti, safe tope count, quotient defect
+  unit_scale_tooth                   fibers=2  mixed_route=1  max_mixed=25 mixed_status=0  :: unit fraction q<=13 / unit q>=14 / nonunit scale
+  topology_bucket_plus_unit_scale    fibers=21 mixed_route=0  max_mixed=0  mixed_status=0  :: safe-topes/quotient-defect topology bucket joined to unit-scale tooth
+  topology_plus_unit_scale           fibers=21 mixed_route=0  max_mixed=0  mixed_status=0  :: full topology compact signature joined to unit-scale tooth
+  exact_M_fallback                   fibers=18 mixed_route=2  max_mixed=8  mixed_status=0  :: exact M value on the residual ledger
+
+[2] Remaining mixed pairs before the joined tooth
+  topology_tooth: mixed_route=3 max_mixed=9
+    routes={'Q-WITNESS': 8, 'COVERING-MOMENT': 1}
+      fiber=05 single swap 9->99                    route=COVERING-MOMENT  M= 11/104 mu= 8363/168168 topology=(12, 0, 16, 0, 12, 11) unit=nonunit-scale
+      fiber=00 single swap 11->71                   route=Q-WITNESS        M=   1/11 mu=148229/2713620 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=08 single swap 13->100                  route=Q-WITNESS        M=   1/13 mu=   701/21560 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=01 single swap 13->115                  route=Q-WITNESS        M=   1/13 mu=13469/405720 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=01 single swap 13->31                   route=Q-WITNESS        M=   1/13 mu=194039/6015240 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=01 single swap 13->59                   route=Q-WITNESS        M=   1/13 mu=53509/1635480 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=10 single swap 13->61                   route=Q-WITNESS        M=   1/13 mu=130439/3945480 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=11 single swap 13->76                   route=Q-WITNESS        M=   1/13 mu=11143/335160 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=05 single swap 9->155                   route=Q-WITNESS        M=    1/9 mu=15907/310310 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+    routes={'COVERING-MOMENT': 2, 'Q-WITNESS': 1}
+      fiber=07 single swap 11->121                  route=COVERING-MOMENT  M= 11/124 mu=463493/9249240 topology=(20, 0, 24, 0, 20, 19) unit=nonunit-scale
+      fiber=00 single swap 11->99                   route=COVERING-MOMENT  M=   3/34 mu=119789/2522520 topology=(20, 0, 24, 0, 20, 19) unit=nonunit-scale
+      fiber=07 single swap 11->163                  route=Q-WITNESS        M=   1/11 mu=662279/12459720 topology=(20, 0, 24, 0, 20, 19) unit=unit-q<=13
+    routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1}
+      fiber=04 single swap 8->152                   route=COVERING-MOMENT  M= 19/159 mu=63191/1597596 topology=(10, 0, 16, 0, 10, 9) unit=nonunit-scale
+      fiber=13 single swap 8->150                   route=Q-WITNESS        M=    1/8 mu=20747/525525 topology=(10, 0, 16, 0, 10, 9) unit=unit-q<=13
+  unit_scale_tooth: mixed_route=1 max_mixed=25
+    routes={'Q-WITNESS': 23, 'COVERING-MOMENT': 2}
+      fiber=14 single swap 10->70                   route=COVERING-MOMENT  M=   1/11 mu=   718/45045 topology=(8, 0, 8, 0, 8, 7) unit=unit-q<=13
+      fiber=12 single swap 8->56                    route=COVERING-MOMENT  M=    1/9 mu=  1471/42042 topology=(8, 0, 8, 0, 8, 7) unit=unit-q<=13
+      fiber=02 single swap 10->152                  route=Q-WITNESS        M=   1/10 mu=  1103/52668 topology=(6, 0, 12, 0, 6, 5) unit=unit-q<=13
+      fiber=02 single swap 10->26                   route=Q-WITNESS        M=   1/10 mu=  1520/63063 topology=(4, 0, 10, 0, 4, 3) unit=unit-q<=13
+      fiber=06 single swap 11->123                  route=Q-WITNESS        M=   1/11 mu=39527/783510 topology=(12, 0, 18, 0, 12, 11) unit=unit-q<=13
+      fiber=00 single swap 11->15                   route=Q-WITNESS        M=   1/11 mu=  4187/76440 topology=(10, 0, 14, 0, 10, 9) unit=unit-q<=13
+      fiber=00 single swap 11->155                  route=Q-WITNESS        M=   1/11 mu=129251/2369640 topology=(18, 0, 22, 0, 18, 17) unit=unit-q<=13
+      fiber=07 single swap 11->163                  route=Q-WITNESS        M=   1/11 mu=662279/12459720 topology=(20, 0, 24, 0, 20, 19) unit=unit-q<=13
+      fiber=03 single swap 11->70                   route=Q-WITNESS        M=   1/11 mu=   587/10920 topology=(12, 0, 12, 0, 12, 11) unit=unit-q<=13
+      fiber=00 single swap 11->71                   route=Q-WITNESS        M=   1/11 mu=148229/2713620 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=03 single swap 11->98                   route=Q-WITNESS        M=   1/11 mu=28451/535080 topology=(14, 0, 14, 0, 14, 13) unit=unit-q<=13
+      fiber=08 single swap 13->100                  route=Q-WITNESS        M=   1/13 mu=   701/21560 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=01 single swap 13->115                  route=Q-WITNESS        M=   1/13 mu=13469/405720 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=09 single swap 13->27                   route=Q-WITNESS        M=   1/13 mu=13691/582120 topology=(12, 0, 18, 0, 12, 11) unit=unit-q<=13
+      fiber=01 single swap 13->31                   route=Q-WITNESS        M=   1/13 mu=194039/6015240 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=01 single swap 13->59                   route=Q-WITNESS        M=   1/13 mu=53509/1635480 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=10 single swap 13->61                   route=Q-WITNESS        M=   1/13 mu=130439/3945480 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=11 single swap 13->76                   route=Q-WITNESS        M=   1/13 mu=11143/335160 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=12 single swap 8->140                   route=Q-WITNESS        M=    1/8 mu=   556/15015 topology=(12, 0, 12, 0, 12, 11) unit=unit-q<=13
+      fiber=13 single swap 8->150                   route=Q-WITNESS        M=    1/8 mu=20747/525525 topology=(10, 0, 16, 0, 10, 9) unit=unit-q<=13
+      fiber=04 single swap 8->180                   route=Q-WITNESS        M=    1/8 mu=12248/315315 topology=(12, 0, 18, 0, 12, 11) unit=unit-q<=13
+      fiber=04 single swap 8->26                    route=Q-WITNESS        M=    1/8 mu=   950/21021 topology=(4, 0, 10, 0, 4, 3) unit=unit-q<=13
+      fiber=05 single swap 9->15                    route=Q-WITNESS        M=    1/9 mu=  3273/56056 topology=(6, 0, 10, 0, 6, 5) unit=unit-q<=13
+      fiber=05 single swap 9->155                   route=Q-WITNESS        M=    1/9 mu=15907/310310 topology=(12, 0, 16, 0, 12, 11) unit=unit-q<=13
+      fiber=14 two drop(10, 13)->add(14, 27)        route=Q-WITNESS        M=   1/10 mu=29959/582120 topology=(14, 0, 14, 0, 14, 13) unit=unit-q<=13
+
+[3] Joined-tooth route scheduler
+  topology_plus_unit_scale fibers=21 mixed_route=0 mixed_status=0
+  compressed bucket version:
+    topology_bucket_plus_unit_scale fibers=21 mixed_route=0 mixed_status=0
+  pure route fibers by tooth:
+    tooth=((10, 0, 14, 0, 10, 9), 'unit-q<=13') size=1 routes={'Q-WITNESS': 1}
+    tooth=((10, 0, 16, 0, 10, 9), 'nonunit-scale') size=1 routes={'COVERING-MOMENT': 1}
+    tooth=((10, 0, 16, 0, 10, 9), 'unit-q<=13') size=1 routes={'Q-WITNESS': 1}
+    tooth=((12, 0, 12, 0, 12, 11), 'unit-q<=13') size=2 routes={'Q-WITNESS': 2}
+    tooth=((12, 0, 16, 0, 12, 11), 'nonunit-scale') size=1 routes={'COVERING-MOMENT': 1}
+    tooth=((12, 0, 16, 0, 12, 11), 'unit-q<=13') size=8 routes={'Q-WITNESS': 8}
+    tooth=((12, 0, 18, 0, 12, 11), 'unit-q<=13') size=3 routes={'Q-WITNESS': 3}
+    tooth=((14, 0, 14, 0, 14, 13), 'unit-q<=13') size=2 routes={'Q-WITNESS': 2}
+    tooth=((14, 0, 20, 0, 14, 13), 'nonunit-scale') size=1 routes={'COVERING-MOMENT': 1}
+    tooth=((16, 0, 22, 0, 16, 15), 'nonunit-scale') size=1 routes={'COVERING-MOMENT': 1}
+    tooth=((18, 0, 22, 0, 18, 17), 'unit-q<=13') size=1 routes={'Q-WITNESS': 1}
+    tooth=((20, 0, 20, 0, 20, 19), 'nonunit-scale') size=1 routes={'COVERING-MOMENT': 1}
+    tooth=((20, 0, 24, 0, 20, 19), 'nonunit-scale') size=2 routes={'COVERING-MOMENT': 2}
+    tooth=((20, 0, 24, 0, 20, 19), 'unit-q<=13') size=1 routes={'Q-WITNESS': 1}
+    tooth=((20, 0, 26, 0, 20, 19), 'nonunit-scale') size=1 routes={'COVERING-MOMENT': 1}
+    tooth=((22, 0, 28, 0, 22, 21), 'nonunit-scale') size=1 routes={'COVERING-MOMENT': 1}
+    tooth=((4, 0, 10, 0, 4, 3), 'unit-q<=13') size=2 routes={'Q-WITNESS': 2}
+    tooth=((6, 0, 10, 0, 6, 5), 'unit-q<=13') size=1 routes={'Q-WITNESS': 1}
+    tooth=((6, 0, 12, 0, 6, 5), 'unit-q<=13') size=1 routes={'Q-WITNESS': 1}
+    tooth=((8, 0, 14, 0, 8, 7), 'nonunit-scale') size=4 routes={'COVERING-MOMENT': 4}
+    tooth=((8, 0, 8, 0, 8, 7), 'unit-q<=13') size=2 routes={'COVERING-MOMENT': 2}
+
+[4] Tournament Analysis over residual proof carriers
+  vertices_are=residual proof carriers, not runners
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  score_order=topology_plus_unit_scale > topology_bucket_plus_unit_scale > unit_scale_tooth > topology_tooth > coarse_residual_fiber > exact_M_fallback
+
+[5] Proof readout
+  1. S194 leaves 15 route-mixed coarse ET+unit fibers, but all 38
+     packets are strict-open; this pass only schedules certificates.
+  2. Topology alone contracts the 15 mixed fibers to 3 mixed topology
+     classes, but a common open-topology class still mixes routes.
+  3. Unit-scale alone separates nonunit covering rows from most direct
+     q-witness rows, but unit-scale covering rows still mix with
+     unit q-witness rows.
+  4. Joining topology compact signature with the unit-scale tooth gives
+     21 residual fibers and 0 route-mixed fibers.
+  5. The compressed topology bucket joined to the same unit-scale tooth
+     gives the same purity on the stored S194 residual ledger.

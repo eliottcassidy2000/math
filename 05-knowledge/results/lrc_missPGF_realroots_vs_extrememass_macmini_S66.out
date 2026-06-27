@@ -1,0 +1,26 @@
+========================================================================================
+ #real-roots of miss-PGF  vs  extreme-mass (q0+q6)  vs  L_yK8   (k=8, 250 configs)
+========================================================================================
+  consec_8    : #real=0/6  extreme-mass=0.3476  L_yK8=3.5823  p0=0.3272
+  even-AP     : #real=0/6  extreme-mass=0.3476  L_yK8=3.5823  p0=0.3272
+  top-cluster : #real=0/6  extreme-mass=0.1977  L_yK8=2.1400  p0=0.1867
+
+  #real-roots -> mean extreme-mass, mean L_yK8, count:
+    #real=0: n= 26   mean extreme-mass=0.0838   mean L_yK8=1.0291   max L_yK8=3.5823
+    #real=2: n=201   mean extreme-mass=0.0363   mean L_yK8=0.5641   max L_yK8=0.9974
+    #real=4: n= 26   mean extreme-mass=0.0323   mean L_yK8=0.5402   max L_yK8=0.7328
+
+  corr(#real-roots, extreme-mass) = -0.366   (negative => fewer real roots <=> higher extreme-mass = the gK8 extremizer direction)
+
+========================================================================================
+ consec_8 roots in C (do they lie on a curve / relate to the apex 7?)
+========================================================================================
+   z = +0.8479 +1.2235i   |z|=1.4886  arg=+55.3 deg
+   z = +0.8479 -1.2235i   |z|=1.4886  arg=-55.3 deg
+   z = -0.5670 +1.4762i   |z|=1.5814  arg=+111.0 deg
+   z = -0.5670 -1.4762i   |z|=1.5814  arg=-111.0 deg
+   z = -1.5309 +0.7414i   |z|=1.7010  arg=+154.2 deg
+   z = -1.5309 -0.7414i   |z|=1.7010  arg=-154.2 deg
+   product of |roots| = 16.0333  (= q0/q6 = 16.0333)
+   all roots have |z|>1 (=> q is 'top-heavy enough' that G_N(z)>0 on [0,1]); 3 conjugate pairs = 
+   maximal NON-real-rootedness = maximal sector correlation = the gK8/extreme-mass extremizer.

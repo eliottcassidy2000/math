@@ -1,0 +1,100 @@
+##########################################################################################
+# TOOL 3 : SINGULAR-SERIES DECOMPOSITION + EH-NECESSITY VERDICT
+#   chat(14N) = sum over relations sum_r k_r r = 14N of prod ahat(k_r)
+#   ahat(k) = -sin(pi k/7)/(pi k),  ahat(7j)=0.  DIAGONAL = single relation (divisor sum).
+##########################################################################################
+==========================================================================================
+  (R={1..12}, Q={1,2} r=2 (worst R'=0.70))  R=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  Q=[1, 2]
+  baseline=0.026794  SPEC=-0.007999  R'=0.70147
+==========================================================================================
+  VERIFY chat(14N) = representation sum; SPEC diag-diag vs rest (kmax=40):
+    N=  1 (n=  14): chat=+0.00258-0.00000i (rep err=1.3e-03; |diag|=0.02283 |off|=0.02671)  |ghat|=0.06728  term=-0.000347
+    N=  2 (n=  28): chat=+0.00826-0.00000i (rep err=2.0e-03; |diag|=0.01423 |off|=0.02446)  |ghat|=0.19349  term=-0.003196
+    N=  3 (n=  42): chat=+0.00385-0.00000i (rep err=3.1e-03; |diag|=0.00422 |off|=0.01121)  |ghat|=0.03729  term=-0.000287
+    N=  4 (n=  56): chat=+0.00747-0.00000i (rep err=1.7e-03; |diag|=0.00317 |off|=0.00602)  |ghat|=0.13980  term=-0.002087
+    N=  5 (n=  70): chat=-0.00083+0.00000i (rep err=2.1e-04; |diag|=0.00569 |off|=0.00673)  |ghat|=0.00758  term=-0.000013
+    N=  6 (n=  84): chat=+0.00547+0.00000i (rep err=1.7e-03; |diag|=0.00381 |off|=0.00336)  |ghat|=0.07474  term=-0.000818
+    N=  7 (n=  98): chat=-0.00379-0.00000i (rep err=1.5e-04; |diag|=0.00000 |off|=0.00365)  |ghat|=0.04547  term=-0.000345
+    N=  8 (n= 112): chat=+0.00130+0.00000i (rep err=1.5e-03; |diag|=0.00285 |off|=0.00563)  |ghat|=0.02153  term=-0.000056
+  -> representation-sum match: 30/30 good (|err|<5e-3), max|err|=4.1e-03
+  -> SPEC (resonance window N<=30) = -0.008145  (exact full = -0.007999)
+  -> L1 bound (N<=30)         = 0.009627 = 0.3593*baseline   (the EH/BV target object)
+     SPEC diag-diag part          = +0.010486 = 0.3914*baseline   (single-relation divisor sums)
+     SPEC off contribution        = -0.018630 = -0.6953*baseline   (>=1 multi-relation)
+     tail bound |sum_{N>30}|   <= Vc*Vg/(4pi^2 *196) * 2/30 = 0.011580 = 0.4322*baseline
+==========================================================================================
+  (R={1..11}, Q={1,2,3} r=3)  R=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  Q=[1, 2, 3]
+  baseline=0.038897  SPEC=-0.001271  R'=0.96733
+==========================================================================================
+  VERIFY chat(14N) = representation sum; SPEC diag-diag vs rest (kmax=40):
+    N=  1 (n=  14): chat=+0.01574+0.00000i (rep err=1.5e-03; |diag|=0.02664 |off|=0.04389)  |ghat|=0.01984  term=-0.000624
+    N=  2 (n=  28): chat=+0.00260-0.00000i (rep err=1.6e-03; |diag|=0.01661 |off|=0.02082)  |ghat|=0.14658  term=-0.000763
+    N=  3 (n=  42): chat=-0.01361-0.00000i (rep err=3.1e-03; |diag|=0.00493 |off|=0.00556)  |ghat|=0.12936  term=+0.003520
+    N=  4 (n=  56): chat=-0.00602-0.00000i (rep err=1.3e-03; |diag|=0.00370 |off|=0.00841)  |ghat|=0.09497  term=+0.001144
+    N=  5 (n=  70): chat=-0.00113+0.00000i (rep err=7.9e-05; |diag|=0.00664 |off|=0.00769)  |ghat|=0.05089  term=-0.000115
+    N=  6 (n=  84): chat=+0.01409-0.00000i (rep err=2.7e-03; |diag|=0.00444 |off|=0.01231)  |ghat|=0.15769  term=-0.004444
+    N=  7 (n=  98): chat=+0.00296-0.00000i (rep err=6.1e-04; |diag|=0.00000 |off|=0.00357)  |ghat|=0.08485  term=+0.000502
+    N=  8 (n= 112): chat=+0.00067-0.00000i (rep err=1.5e-03; |diag|=0.00333 |off|=0.00551)  |ghat|=0.01551  term=+0.000021
+  -> representation-sum match: 29/30 good (|err|<5e-3), max|err|=5.4e-03
+  -> SPEC (resonance window N<=30) = -0.001459  (exact full = -0.001271)
+  -> L1 bound (N<=30)         = 0.015504 = 0.3986*baseline   (the EH/BV target object)
+     SPEC diag-diag part          = +0.011022 = 0.2834*baseline   (single-relation divisor sums)
+     SPEC off contribution        = -0.012480 = -0.3209*baseline   (>=1 multi-relation)
+     tail bound |sum_{N>30}|   <= Vc*Vg/(4pi^2 *196) * 2/30 = 0.027019 = 0.6946*baseline
+==========================================================================================
+  (R={1..8}, Q={1..6} r=6 max)  R=[1, 2, 3, 4, 5, 6, 7, 8]  Q=[1, 2, 3, 4, 5, 6]
+  baseline=0.121516  SPEC=-0.005019  R'=0.95869
+==========================================================================================
+  VERIFY chat(14N) = representation sum; SPEC diag-diag vs rest (kmax=40):
+    N=  1 (n=  14): chat=+0.00152-0.00000i (rep err=4.6e-04; |diag|=0.04230 |off|=0.04336)  |ghat|=0.01509  term=-0.000046
+    N=  2 (n=  28): chat=-0.01463-0.00000i (rep err=2.6e-04; |diag|=0.02637 |off|=0.01200)  |ghat|=0.02361  term=+0.000691
+    N=  3 (n=  42): chat=-0.04141+0.00000i (rep err=6.7e-04; |diag|=0.00782 |off|=0.03426)  |ghat|=0.05391  term=+0.004465
+    N=  4 (n=  56): chat=+0.00693-0.00000i (rep err=4.9e-04; |diag|=0.00587 |off|=0.00155)  |ghat|=0.11261  term=-0.001560
+    N=  5 (n=  70): chat=+0.02660-0.00000i (rep err=1.5e-04; |diag|=0.01055 |off|=0.01620)  |ghat|=0.08286  term=-0.004408
+    N=  6 (n=  84): chat=+0.00705+0.00000i (rep err=3.3e-04; |diag|=0.00705 |off|=0.00033)  |ghat|=0.11037  term=-0.001556
+    N=  7 (n=  98): chat=+0.00334-0.00000i (rep err=6.6e-05; |diag|=0.00000 |off|=0.00340)  |ghat|=0.08885  term=+0.000593
+    N=  8 (n= 112): chat=-0.01278+0.00000i (rep err=4.3e-04; |diag|=0.00529 |off|=0.00792)  |ghat|=0.00189  term=-0.000048
+  -> representation-sum match: 26/30 good (|err|<5e-3), max|err|=9.2e-03
+  -> SPEC (resonance window N<=30) = -0.005373  (exact full = -0.005019)
+  -> L1 bound (N<=30)         = 0.025291 = 0.2081*baseline   (the EH/BV target object)
+     SPEC diag-diag part          = +0.008107 = 0.0667*baseline   (single-relation divisor sums)
+     SPEC off contribution        = -0.013481 = -0.1109*baseline   (>=1 multi-relation)
+     tail bound |sum_{N>30}|   <= Vc*Vg/(4pi^2 *196) * 2/30 = 0.115796 = 0.9529*baseline
+==========================================================================================
+  (R gcd=2, Q={1,3,5} (worst SPEC=-0.029))  R=[2, 4, 6, 8, 10, 12]  Q=[1, 3, 5]
+  baseline=0.296054  SPEC=-0.029388  R'=0.90074
+==========================================================================================
+  VERIFY chat(14N) = representation sum; SPEC diag-diag vs rest (kmax=40):
+    N=  1 (n=  14): chat=+0.08885-0.00000i (rep err=3.2e-04; |diag|=0.00000 |off|=0.08917)  |ghat|=0.06213  term=-0.011041
+    N=  2 (n=  28): chat=+0.10648-0.00000i (rep err=3.9e-05; |diag|=0.00000 |off|=0.10644)  |ghat|=0.04910  term=-0.010457
+    N=  3 (n=  42): chat=+0.02957-0.00000i (rep err=3.9e-04; |diag|=0.00000 |off|=0.02996)  |ghat|=0.16729  term=-0.009895
+    N=  4 (n=  56): chat=+0.00668-0.00000i (rep err=1.5e-04; |diag|=0.00000 |off|=0.00683)  |ghat|=0.00479  term=-0.000064
+    N=  5 (n=  70): chat=-0.00333+0.00000i (rep err=4.8e-04; |diag|=0.00000 |off|=0.00381)  |ghat|=0.11696  term=+0.000779
+    N=  6 (n=  84): chat=-0.01961+0.00000i (rep err=1.3e-03; |diag|=0.00000 |off|=0.02094)  |ghat|=0.07876  term=+0.003089
+    N=  7 (n=  98): chat=-0.00380-0.00000i (rep err=8.4e-04; |diag|=0.00000 |off|=0.00464)  |ghat|=0.06611  term=-0.000502
+    N=  8 (n= 112): chat=-0.00541-0.00000i (rep err=1.4e-04; |diag|=0.00000 |off|=0.00526)  |ghat|=0.08048  term=-0.000870
+  -> representation-sum match: 30/30 good (|err|<5e-3), max|err|=4.7e-03
+  -> SPEC (resonance window N<=30) = -0.029525  (exact full = -0.029388)
+  -> L1 bound (N<=30)         = 0.040291 = 0.1361*baseline   (the EH/BV target object)
+     SPEC diag-diag part          = +0.000000 = 0.0000*baseline   (single-relation divisor sums)
+     SPEC off contribution        = -0.029525 = -0.0997*baseline   (>=1 multi-relation)
+     tail bound |sum_{N>30}|   <= Vc*Vg/(4pi^2 *196) * 2/30 = 0.081057 = 0.2738*baseline
+==========================================================================================
+SUMMARY: L1 bound split diagonal/off-diagonal (all over baseline)
+==========================================================================================
+label                                       R-prime  L1/base  diag/base  off/base  tail/base
+R={1..12}, Q={1,2} r=2 (worst R'=0.70)       0.7015   0.3593     0.0000    0.0000     0.4322
+R={1..11}, Q={1,2,3} r=3                     0.9673   0.3986     0.0000    0.0000     0.6946
+R={1..8}, Q={1..6} r=6 max                   0.9587   0.2081     0.0000    0.0000     0.9529
+R gcd=2, Q={1,3,5} (worst SPEC=-0.029)       0.9007   0.1361     0.0000    0.0000     0.2738
+
+EH-NECESSITY VERDICT:
+  - chat,ghat are EXPLICIT singular series for a FIXED bounded speed set (max 84).
+  - The N-sum is absolutely convergent with elementary 1/N^2 tails (BV/indicator TV).
+  - There is NO unbounded family of moduli to average over => the BV/EH 'level of
+    distribution' machinery has nothing to act on.  The only equidistribution used is
+    orthogonality of characters on a FIXED cyclic group (ahat supported on rZ): elementary.
+  - DIAGONAL (single-relation, divisor sum over r|14N) carries most of the L1 mass;
+    OFF-DIAGONAL is a geometrically smaller absolutely-summable correction.
+  => EH is NOT needed.  Not even BV.  The uniform bound is elementary harmonic analysis.
+DONE.

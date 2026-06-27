@@ -1,0 +1,128 @@
+================================================================================
+S219: duodecimal observer-extension / cut-payload synthesis
+================================================================================
+1. SHIFTED ROOTED-PERSPECTIVE LADDER
+   m  U(m)  P(m)  U(m+1)  defect  P/U(m+1)  defect/U(m+1)  root_tax=mU-P
+   1     1     1       1       0           1               0               0
+   2     1     2       2       0           1               0               0
+   3     2     4       4       0           1               0               2
+   4     4    12      12       0           1               0               4
+   5    12    48      56       8         6/7             1/7              12
+   6    56   296     456     160       37/57           20/57              40
+
+   First failure window:
+     P(5) = 48 = 4 * 12
+     U(6) = 56 = 4 * 12 + 8
+     48 + 12 = 60, so the exact count is not 48+12.
+     U(6) = P(5) + U(5) - U(4) = 48 + 12 - 4
+     defect = U(6)-P(5) = 8 = U(5)-U(4)
+     P(5)/U(6) = 6/7; defect/U(6) = 1/7
+     U(5)/U(6) = 3/14; U(4)/U(6) = 1/14
+     Denominator-14 form: 12/14 + 3/14 - 1/14 = 1.
+
+   Recurrence guardrail:
+     The identity U(6)=P(5)+U(5)-U(4) is exact at the first failure.
+     It is not a stable recurrence: U(7)-P(6)=160, but U(6)-U(5)=44.
+
+2. THE DOZEN BRIDGE P(4) = U(5) = SC(6)
+   object                                      value  fraction_of_U6
+   P(4): rooted 4-perspectives                         12          3/14
+   U(5): 5-tournament isomorphism classes              12          3/14
+   SC(6): self-converse 6-classes                      12          3/14
+   P(5): rooted 5-perspective cache                    48           6/7
+   U(6)-P(5): first observer-cut defect                 8           1/7
+   U(4): overlap subtracted by inclusion-exclusion      4          1/14
+   U(6): full 6-class quotient                         56             1
+
+   Exact relations:
+     P(4)=U(5)=SC(6)=12
+     P(5)=5*U(5)-SC(6)=60-12=48
+     U(6)=5*U(5)-U(4)=60-4=56
+     U(6)-P(5)=SC(6)-U(4)=12-4=8
+     Reading: the dozen is a control/fold slice; the additive defect is the
+     dozen after quotienting out the four-class overlap.
+
+3. INCIDENT WORDS, EDGE SECTORS, AND DELETION FIBERS
+   Ordered-pair / edge-sector readout from S213:
+     rooted_5_perspective_plus_incident_word     1408  ordered-pair 6-perspectives              1408/1408 exact
+     forget_endpoint_role                         704  directed-edge/unordered-pair perspectives role quotient
+     sector_size_deck                              35  individual signatures                    55/56 class decks
+     internal_sector_deck                          59  individual signatures                    55/56 class decks
+     cross_sector_orientation_deck                362  individual signatures                    56/56 class decks
+     full_ordered_pair_sector_deck                422  individual signatures                    56/56 class decks
+     The only 55/56 collision is a converse pair; cross-sector orientation separates it.
+
+   Deletion-fiber readout from S216 at 5 -> 6:
+     parent_aut_sizes_on_5_classes: {1: 7, 3: 4, 5: 1}; weighted_avg=2
+     diagonal_word_orbit_sizes: {1: 258, 3: 32, 5: 6}; weighted_avg=48/37
+     rooted_extension_orbits_per_6_class: {2: 5, 4: 10, 6: 41}; weighted_avg=37/7
+     raw_labelled_extensions_per_6_class: {2: 5, 4: 10, 6: 15, 8: 12, 10: 11, 12: 2, 14: 1}; weighted_avg=48/7
+     unique_deletion_parent_classes_per_6_class: {1: 3, 2: 6, 3: 13, 4: 13, 5: 17, 6: 4}; weighted_avg=215/56
+     max_repeated_deletion_parent_multiplicity_per_6_class: {1: 4, 2: 27, 3: 17, 4: 3, 5: 2, 6: 3}; weighted_avg=149/56
+     Rooted child presentations average 296/56 = 37/7 per unrooted 6-class.
+     Unique deletion-parent classes average 215/56; the sink quotient is not
+     just source class plus a scalar word count.
+
+4. RECTANGLE / HOURGLASS CYCLE RESIDUES
+   Local K_{k,k+1} lines:
+   k  lines  rank  rectangle_residue_dim
+   1      2     2                      0
+   2      6     4                      2
+   3     12     6                      6
+   4     20     8                     12
+   5     30    10                     20
+   6     42    12                     30
+   7     56    14                     42
+   The first dozen line block is K_{3,4}: 12 lines = 6 rank + 6 rectangles.
+
+   Global full flow and fixed-path flow:
+   n  full_lines full_rank full_red rect hour  fixed_lines fixed_rank fixed_red rect hour
+   4           8         5        3    2    1            2          2         0    0    0
+   5          20         9       11    8    3            8          5         3    2    1
+   6          40        14       26   20    6           20          9        11    8    3
+   7          70        20       50   40   10           40         14        26   20    6
+   Full redundancy = local rectangles + hourglass cycles.
+   Fixed-path redundancy = 2*C(n-2,3) + C(n-3,2).
+   These residues are the layer-flow version of observer-cut payload:
+   zero residue descends to potentials; nonzero residue names the hidden sidecar.
+
+5. OBSERVER-EXTENSION / CUT-PAYLOAD ABSTRACT
+   domain                         retained cut payload                         warning
+   A000568 perspectives           parent class + incident word + deletion fiber rooted cache alone loses the 8 first-failure states
+   ordered-pair edge sectors      tip/tail endpoint roles plus cross-sector orientation sector sizes/internal decks collide at 55/56; orientation gives 56/56
+   fixed-path diagonal flow       line potentials plus rectangle/hourglass residues raw k(k+1) lines duplicate; residues are the certificate
+   LRC endpoint-owner packets     observer source, owner strip, route/status payload apex/residue quotients are unsafe without magnitude and owner data
+   Haar/fixed-margin rectangles   2-by-2 zeta residue and owner-strip handoff  same rectangle law as the K_{k,k+1} parity carrier
+   pair-good decoy/residual capacitor blocker teeth, edge-tail/tip sectors, residual current counts are scouts; the generator key is a sidecar
+   matrix sidecar observability   rows are coarse-fiber pairs, columns are hidden coordinates a quotient is safe only when changing pairs are separated or discharged
+   tournament spectrum for LRC    set of winding iso classes across phases plus binding scale single apex class forgets magnitude; the spectrum keeps the cut
+
+   Controlled-forgetting rule:
+     A quotient may forget the observer-extension cut only if the target
+     predicate is fiber-constant, reconstructible from retained sidecars,
+     annihilated by a dual certificate, descended by a family lemma, or
+     routed to a named residual sector.  Otherwise keep the cut payload.
+
+6. TOURNAMENT ANALYSIS OVER CARRIERS
+   Pairwise observable: retained observer/cut/cycle payload minus quotient risk.
+   Switch/gauge: higher observer+cut+residue+LRC score orients the edge.
+   Vertices challenged: runners, arcs, gaps, layer boundaries, wall events,
+   residues, cover arcs, Fourier modes, matroid circuits, and proof obligations.
+   Chosen vertices are proof carriers, not raw runners.
+   score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+   directed_3cycles=0
+   SCC_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+   Hamiltonian_path_count=1
+   one Hamiltonian path:
+     endpoint_owner_packet_sheaf > observer_extension_cut_payload > cross_sector_orientation_word > deletion_parent_fiber_profile > rectangle_hourglass_cycle_residue > incident_word_orbit_under_aut > ordered_pair_edge_sector_deck > rooted_node_perspective_cache > fixed_path_half_tiling_shadow > raw_A000568_class_count > raw_labelled_word_count
+   edge_flips_from_input_order:
+     observer_extension_cut_payload > cross_sector_orientation_word
+
+BOTTOM LINE
+  The dozen is not the first-failure additive defect.  It is a reusable
+  control slice: P(4)=U(5)=SC(6)=12, source/sink diagonal words each give
+  12 slices at 5->6, and K_{3,4} is the first 12-line rectangle carrier.
+  The exact first-failure arithmetic is duodecimal inclusion-exclusion:
+  U(6)=48+12-4, or 12/14 + 3/14 - 1/14 = 1.  The missing 8 is the dozen
+  minus the four-class overlap, i.e. observer-extension cut payload after
+  controlled forgetting.

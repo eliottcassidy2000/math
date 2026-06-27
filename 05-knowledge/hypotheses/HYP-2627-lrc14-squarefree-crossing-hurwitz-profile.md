@@ -202,3 +202,30 @@ Next test: explain why the `12 -> 36` perturbation selects the adjacent
 four-block row `(5,6,6,7)`, and ask whether the repeated-residue packets in
 HYP-2626 can be parameterized directly by the squarefree profile of that tuple
 rather than by raw support tuples.
+
+## S246 Hurwitz/modular-cusp clarification
+
+HYP-3078 adds a separate Hurwitz use that should not be conflated with the
+Markov-Hurwitz mutation archetype above.  For q-Pochhammer and modular
+functions, the relevant Hurwitz theorem is the complex-analysis zero
+persistence theorem: a locally uniform limit of nonzero holomorphic functions
+is nonzero or identically zero.  Since finite q-Pochhammer products converge
+locally uniformly on `|q|<1` to a nonzero product, q-product limit arguments
+must retain zero/pole divisor data.
+
+The full modular group also changes the triangle-group picture.  Its orbifold
+signature is `(2,3,infinity)`, not `(2,3,7)`, and the cusp `infinity` turns the
+proof obligation into a finite q-principal-part ledger:
+
+```text
+full modular function
+-> SL2(Z) invariance
+-> meromorphic at infinity
+-> q-expansion has finitely many negative powers.
+```
+
+So HYP-2627 keeps Markov-Hurwitz as a recurrence and crossing-profile analogy,
+while HYP-3078 supplies the modular-cusp sidecar needed for q-series proof
+objects.  HYP-3079/S247 is the Lean-facing follow-up: it keeps the full
+modular-cusp theorem as an obligation and checks only the finite-tail,
+Hurwitz-gate, and padded sixth-power ledger glue.

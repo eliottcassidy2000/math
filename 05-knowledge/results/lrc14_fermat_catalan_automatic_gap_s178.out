@@ -1,0 +1,78 @@
+﻿LRC14 AUTOMATIC GAP / POWER-LIFT LEDGER SCOUT (S178)
+EXTERNAL SOURCE READOUT
+- 2-adic Littlewood paper arXiv:2506.04110: use Hurwitz multiplication-by-2 continued-fraction states as a dyadic packet analogy; reported lower-bound shift C>=15.
+- Ostrowski-Hadamard gap theorem: lacunary exponent support with p_{j+1}/p_j > lambda > 1 should be treated as a boundary/natural-frontier label, not a smooth tail.
+- Moser-de Bruijn sequence: powers-of-4 support / even binary digits / unique x+2y decomposition.
+- Fibbinary numbers: no adjacent binary ones, matching the path independent-set / Zeckendorf endpoint-debt language.
+- Fermat-Catalan input: use power equations as no-lift guards requiring cyclotomic/p-adic labels; do not scalarize perfect-power collisions.
+- ACM DOI 10.5555/1109557.1109610 is the polygon sticks/potatoes paper; here it contributes only an approximation/visibility guardrail.
+
+NAMED ROW AUTOMATIC-LANGUAGE LEDGER
+AP13: route=AP/GW boundary atom
+  word=MFCMMCCFFFCCC counts={'M': 3, 'F': 4, 'C': 6} tail_gap=13/12 max_gap=2
+  perfect_power_speeds=[(4, (2, 2)), (8, (2, 3)), (9, (3, 2))]
+  zeckendorf_gap_words=['single', 'single', 'single', '2', 'single', '3', '2', 'single', '4', '3', '2', '2.2', 'single']
+  moser_x_plus_2y_first_last=(1, 0) -> (5, 4)
+GW_12_to_24: route=AP/GW boundary atom
+  word=MFCMMCCFFFCCC counts={'M': 3, 'F': 4, 'C': 6} tail_gap=24/13 max_gap=2
+  perfect_power_speeds=[(4, (2, 2)), (8, (2, 3)), (9, (3, 2))]
+  zeckendorf_gap_words=['single', 'single', 'single', '2', 'single', '3', '2', 'single', '4', '3', '2', 'single', '4']
+  moser_x_plus_2y_first_last=(1, 0) -> (16, 4)
+K33_12_to_36: route=K33 state-lift / Fejer route
+  word=MFCMMCCFFFCCF counts={'M': 3, 'F': 5, 'C': 5} tail_gap=36/13 max_gap=36/13
+  perfect_power_speeds=[(4, (2, 2)), (8, (2, 3)), (9, (3, 2)), (36, (6, 2))]
+  zeckendorf_gap_words=['single', 'single', 'single', '2', 'single', '3', '2', 'single', '4', '3', '2', 'single', '6']
+  moser_x_plus_2y_first_last=(1, 0) -> (4, 16)
+petal_10_to_20: route=C27 petal route
+  word=MFCMMCCFFCCCM counts={'M': 4, 'F': 3, 'C': 6} tail_gap=20/13 max_gap=2
+  perfect_power_speeds=[(4, (2, 2)), (8, (2, 3)), (9, (3, 2))]
+  zeckendorf_gap_words=['single', 'single', 'single', '2', 'single', '3', '2', 'single', '4', '2', '2.2', 'single', '2.2']
+  moser_x_plus_2y_first_last=(1, 0) -> (20, 0)
+petal_13_to_26: route=C27 petal route
+  word=MFCMMCCFFFCCC counts={'M': 3, 'F': 4, 'C': 6} tail_gap=13/6 max_gap=13/6
+  perfect_power_speeds=[(4, (2, 2)), (8, (2, 3)), (9, (3, 2))]
+  zeckendorf_gap_words=['single', 'single', 'single', '2', 'single', '3', '2', 'single', '4', '3', '2', '2.2', '3']
+  moser_x_plus_2y_first_last=(1, 0) -> (16, 5)
+cover_12_to_84: route=covering moment / q-witness route
+  word=MFCMMCCFFFCCM counts={'M': 4, 'F': 4, 'C': 5} tail_gap=84/13 max_gap=84/13
+  perfect_power_speeds=[(4, (2, 2)), (8, (2, 3)), (9, (3, 2))]
+  zeckendorf_gap_words=['single', 'single', 'single', '2', 'single', '3', '2', 'single', '4', '3', '2', 'single', '2.2']
+  moser_x_plus_2y_first_last=(1, 0) -> (84, 0)
+q27_probe_tail260: route=Res_27 carry-owner probe
+  word=CCMCCFCCCCCCM counts={'M': 2, 'F': 1, 'C': 10} tail_gap=20/7 max_gap=20/7
+  perfect_power_speeds=[(49, (7, 2))]
+  zeckendorf_gap_words=['2', '5', 'single', '3.2', '7', '3', '2.4', '8', '4', '3.4', '2.6', '8', '5.3.3']
+  moser_x_plus_2y_first_last=(5, 1) -> (260, 0)
+
+UNIT-EXCESS p/(14p-1) PAYLOAD POWER CHECK
+p=1: q=13 p+q=14 p*q=13 powers={}
+p=2: q=27 p+q=29 p*q=54 powers={'q': (3, 3)}
+p=3: q=41 p+q=44 p*q=123 powers={}
+p=4: q=55 p+q=59 p*q=220 powers={'p': (2, 2)}
+p=5: q=69 p+q=74 p*q=345 powers={}
+p=6: q=83 p+q=89 p*q=498 powers={}
+p=7: q=97 p+q=104 p*q=679 powers={}
+p=8: q=111 p+q=119 p*q=888 powers={'p': (2, 3)}
+
+TOURNAMENT ANALYSIS OVER PROOF CARRIERS
+vertices_are=proof carriers, not runners
+score_labels=preserves_lrc_predicate, finite_state_checkable, keeps_packet_labels, guards_power_or_carry_lift, connects_to_existing_routes, resists_scalarization
+  labelled_packet_bank: total=30 scores=(5, 5, 5, 5, 5, 5)
+  fibbinary_zeckendorf_fsm: total=24 scores=(3, 5, 4, 3, 4, 5)
+  moser_square_x_plus_2y: total=24 scores=(3, 5, 4, 4, 3, 5)
+  ostrowski_hadamard_gap: total=23 scores=(4, 3, 5, 3, 4, 4)
+  fermat_catalan_power_guard: total=23 scores=(4, 3, 3, 5, 4, 4)
+  hurwitz_doubling_cf_state: total=23 scores=(3, 4, 4, 4, 4, 4)
+  potato_visibility_guard: total=16 scores=(2, 3, 3, 2, 3, 3)
+  raw_scalar_speed_word: total=6 scores=(1, 1, 1, 1, 1, 1)
+score_histogram={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed_3cycles=0
+hamiltonian_path_count=1
+hamiltonian_path_example=labelled_packet_bank > moser_square_x_plus_2y > fibbinary_zeckendorf_fsm > ostrowski_hadamard_gap > fermat_catalan_power_guard > hurwitz_doubling_cf_state > potato_visibility_guard > raw_scalar_speed_word
+
+PROOF-TARGET CONSEQUENCES
+1. Add automatic_language_class, fibbinary_carry_status, moser_even_bit_status, lacunary_gap_ratio, and power_lift_guard to HYP-2963 packets.
+2. A quotient may forget the automaton state only if the LRC predicate is fiber-constant, the state is reconstructible, a dual certificate annihilates it, or the packet is routed to AP/GW, C27, K33, Res_27, or covering residual debt.
+3. Moser/even-bit support is stricter than fibbinary/no-adjacent support: use it as a no-hidden-square-carry subfiber.
+4. Hadamard-lacunary tails should be certified by a boundary/frontier label before Fejer or Haar smoothing treats them as harmless.
+5. Fermat-Catalan style perfect-power payloads are guards against illegal lifts, not standalone LRC certificates.

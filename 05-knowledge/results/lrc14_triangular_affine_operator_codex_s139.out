@@ -1,0 +1,127 @@
+S139 LRC14 TRIANGULAR / AFFINE-OPERATOR CARRIER
+==============================================================================
+[0] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, gaps, affine words in a,b, dyadic depth profiles,
+    triangular/product lanes, perfect-number indices, C27 shells,
+    Kpq owners, cubic factor packets, logarithmic depth, and proof obligations.
+  chosen quotient:
+    proof carriers plus affine-word depth profiles; exact M/Farey data stays attached.
+  preserved predicate:
+    branch label, unit/composition order, pair-owner packet, and state-lift fit.
+  destroyed predicate:
+    exact safe-time geometry and row-specific witnesses.
+  challenged assumption:
+    the scalar equality or a raw triangular number can replace q or M(S).
+
+[1] Log/quadratic equality audit
+  x*(2x-1)=2*log2(x)+1-x is exactly equivalent to
+  x^2 = 1/2 + log2(x).
+  gap g(x)=x^2-1/2-log2(x) has its minimum at x=0.849321800288019.
+  minimum gap = 0.456964333972033 > 0, so there is no positive real solution.
+  sample gaps:
+    x=0.50: g(x)= 0.750000000000
+    x=0.75: g(x)= 0.477537499279
+    x=1.00: g(x)= 0.500000000000
+    x=2.00: g(x)= 2.500000000000
+    x=4.00: g(x)= 13.500000000000
+  readout: this is a curvature guardrail, not an identity.
+
+[2] Cubic factor packet from the prompt
+  C(x)=((x-1)/2)*(x/2)*(x-1/2) has roots 0, 1/2, 1.
+  It is a signed three-wall packet, analogous to depth-3/Bonferroni labels.
+  exact comparison with x^2-1/2:
+    x=1/2 : C(x)=0        x^2-1/2-C(x)=-1/4
+    x=3/4 : C(x)=-3/256   x^2-1/2-C(x)=19/256
+    x=1   : C(x)=0        x^2-1/2-C(x)=1/2
+    x=2   : C(x)=3/4      x^2-1/2-C(x)=11/4
+    x=4   : C(x)=21/2     x^2-1/2-C(x)=5
+  intersections with x^2-1/2 occur near 0.699650887534 and 5.336057118155.
+  readout: useful only as a typed three-factor carrier; it is not log2(x).
+
+[3] Triangular and perfect-number product lane
+  x*(2x-1)=T_{2x-1}.
+  If x=2^(r-1) and 2^r-1 is prime, this is the even perfect number
+  2^(r-1)*(2^r-1).
+    r= 2: x=    2  2^r-1=    3  T=       6  perfect
+    r= 3: x=    4  2^r-1=    7  T=      28  perfect
+    r= 4: x=    8  2^r-1=   15  T=     120  composite-index
+    r= 5: x=   16  2^r-1=   31  T=     496  perfect
+    r= 6: x=   32  2^r-1=   63  T=    2016  composite-index
+    r= 7: x=   64  2^r-1=  127  T=    8128  perfect
+    r= 8: x=  128  2^r-1=  255  T=   32640  composite-index
+    r= 9: x=  256  2^r-1=  511  T=  130816  composite-index
+    r=10: x=  512  2^r-1= 1023  T=  523776  composite-index
+    r=11: x= 1024  2^r-1= 2047  T= 2096128  composite-index
+    r=12: x= 2048  2^r-1= 4095  T= 8386560  composite-index
+    r=13: x= 4096  2^r-1= 8191  T=33550336  perfect
+  LRC14 product lane comparison on p/(14p-1):
+      p   p*(2p-1)   p*(14p-1)   difference from 7*p*(2p-1)
+      1          1           13            6
+      2          6           54           12
+      3         15          123           18
+      4         28          220           24
+      5         45          345           30
+      6         66          498           36
+      7         91          679           42
+  readout: perfect/triangular arithmetic belongs to the product side channel,
+  the same family as p*q, not to the binding denominator q.
+
+[4] Affine operators a(x)=x/2 and b(x)=x+1
+  left-to-right words produce x -> x/2^h + beta,
+  beta=sum 2^{-future_halves_at_each_b}.
+  noncommutator: ab(x)-ba(x)=1/2.
+  word families:
+    n=1 stair beta=     1/2 depths=[1]                    depth_sum=1   expected=T_1=1
+    n=1 block beta=     1/2 depths=[1]                    depth_sum=1   expected=1^2=1
+    n=1 tail  beta=       1 depths=[0]                    depth_sum=0   expected=0
+    n=2 stair beta=     3/4 depths=[2, 1]                 depth_sum=3   expected=T_2=3
+    n=2 block beta=     1/2 depths=[2, 2]                 depth_sum=4   expected=2^2=4
+    n=2 tail  beta=       2 depths=[0, 0]                 depth_sum=0   expected=0
+    n=3 stair beta=     7/8 depths=[3, 2, 1]              depth_sum=6   expected=T_3=6
+    n=3 block beta=     3/8 depths=[3, 3, 3]              depth_sum=9   expected=3^2=9
+    n=3 tail  beta=       3 depths=[0, 0, 0]              depth_sum=0   expected=0
+    n=4 stair beta=   15/16 depths=[4, 3, 2, 1]           depth_sum=10  expected=T_4=10
+    n=4 block beta=     1/4 depths=[4, 4, 4, 4]           depth_sum=16  expected=4^2=16
+    n=4 tail  beta=       4 depths=[0, 0, 0, 0]           depth_sum=0   expected=0
+    n=5 stair beta=   31/32 depths=[5, 4, 3, 2, 1]        depth_sum=15  expected=T_5=15
+    n=5 block beta=    5/32 depths=[5, 5, 5, 5, 5]        depth_sum=25  expected=5^2=25
+    n=5 tail  beta=       5 depths=[0, 0, 0, 0, 0]        depth_sum=0   expected=0
+    n=6 stair beta=   63/64 depths=[6, 5, 4, 3, 2, 1]     depth_sum=21  expected=T_6=21
+    n=6 block beta=    3/32 depths=[6, 6, 6, 6, 6, 6]     depth_sum=36  expected=6^2=36
+    n=6 tail  beta=       6 depths=[0, 0, 0, 0, 0, 0]     depth_sum=0   expected=0
+  readout: triangular numbers arise from the depth profile of a staircase
+  composition, while squares arise from block order.  Same letter counts,
+  different order labels.  That is exactly the anti-scalarization lesson.
+
+[5] Tournament Analysis on proof carriers
+  pairwise observable:
+    (branch retention, composition-order retention, unit preservation,
+     finite checkability, state-lift fit, scalar-decoy resistance).
+  switch/gauge: lexicographically larger role score wins; listed order breaks ties.
+    exact M/Farey branch                 score=(6, 6, 6, 5, 5, 6) role=keeps p/q, q, and excess e=14p-q
+    C27 two-swap splice                  score=(5, 6, 5, 5, 5, 6) role=unit petal plus 12-branch shell transfer
+    Kpq/K33 owner packet                 score=(5, 5, 4, 4, 6, 5) role=p>=3 incidence and forbidden-H state-lift address
+    affine depth profile                 score=(4, 6, 5, 5, 4, 6) role=keeps a/b composition order and dyadic halving depths
+    product triangular/perfect lane      score=(4, 4, 3, 5, 3, 5) role=p*(Np-1), perfect-number triangular side channel
+    cubic barrier carrier                score=(3, 4, 4, 4, 3, 5) role=three-wall signed factor packet
+    log/quadratic curvature guardrail    score=(3, 3, 3, 5, 2, 6) role=proves quadratic/product growth dominates log depth
+    raw scalar equality numerology       score=(1, 1, 1, 2, 1, 1) role=false equality if used without labels
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0
+  Hamiltonian carrier order:
+    exact M/Farey branch > C27 two-swap splice > Kpq/K33 owner packet > affine depth profile > product triangular/perfect lane > cubic barrier carrier > log/quadratic curvature guardrail > raw scalar equality numerology
+
+[6] Proof readout
+  The triangular/perfect-number idea adds a product-depth carrier:
+    p*(Np-1) generalizes x*(2x-1), and the affine a/b words explain
+    why order/depth labels matter as much as scalar size.
+  Apply it to LRC14 only after exact M/Farey branch and C27/K33 labels:
+    p=2 branch -> C27 unit-petal/two-swap splice;
+    p>=3 branch -> K33 owner packet plus octahedral/Clebsch side labels.
+  Candidate lemma refinement:
+    a low-gap non-AP/GW residual should carry an affine-depth packet whose
+    unit-visible entries force the C27 petal splice, or whose nonunit
+    depth entries expose the K33/octahedral/Clebsch state-lift packet.
+  This is not a proof of LRC14.  It is a new labelled packet interface
+  and a warning that the false log/quadratic equality must not be used
+  as a scalar theorem.

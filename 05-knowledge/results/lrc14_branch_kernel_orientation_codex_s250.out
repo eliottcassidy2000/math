@@ -1,0 +1,149 @@
+S250 LRC14 branch-kernel orientation audit
+==============================================================================
+namespace: HYP-3082 / T1166 / codex-2026-06-26-S250
+packet bank: single_limit=180, two_swap_limit=36, alias_depth=4, lcm_tail_max=5, workers=8
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, fixed circle sections, section boundaries, wall crossings,
+    residues, cover arcs, Fourier modes, matroid circuits, branch ears,
+    endpoint interfaces, observer-cut payloads, and proof obligations.
+  chosen vertices:
+    proof routes, residual sections, Haar grid exits, branch kernels,
+    no-lift guards, finalizer gates, and named residual debts.
+  preserved LRC predicate:
+    exact M>=1/14, q-threshold, open/boundary status, endpoint owner,
+    C27/K33 route handoff, section exit, power-lift guard, and residual name.
+  destroyed information:
+    raw runner identity, scalar M bucket, automatic word alone, and raw
+    power or graph numerology after their sidecars have been named.
+
+[1] Packet and branch census
+  audited packets=21913
+  routes:
+    BOUNDARY-AP-GW           2
+    BOUNDARY-PETAL-SPORADIC  4
+    COVERING-MOMENT          7228
+    K33-STATE-LIFT           3
+    Q-WITNESS                14676
+  sections:
+    ap_gw_boundary_section             2
+    covering_boundary_moment_section   1188
+    direct_q_witness_section           14676
+    k33_state_lift_section             3
+    open_haar_witness_section          6040
+    unit_petal_c27_strip_section       4
+  grids:
+    cross_handoff            3
+    horizontal_owner_strip   4
+    nested_refinement        1188
+    orthogonal_zero          14676
+    same_tile_indicator      2
+    vertical_owner_strip     6040
+  power-lift rows=9606
+  candidate F7 rows=0
+
+[2] Coarse route-fiber bridge audit
+  quotient=automatic_word
+    mixed_fibers=143 components=[5] route_edges=8 bridges=[]
+      MFCMMCCFFCCCC                                  rows= 1179 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      MFCMMCFFFCCCC                                  rows=  787 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      MFCMCCFFFCCCC                                  rows=  786 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      MFCMMCCFFFCCC                                  rows=  639 routes=('BOUNDARY-AP-GW', 'BOUNDARY-PETAL-SPORADIC', 'COVERING-MOMENT', 'Q-WITNESS')
+  quotient=branch
+    mixed_fibers=33 components=[4, 1] route_edges=6 bridges=[]
+      nonunit-excess-e11                             rows= 3295 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      nonunit-excess-e7                              rows= 3214 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      nonunit-excess-e6                              rows= 2756 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      nonunit-excess-e9                              rows= 2677 routes=('COVERING-MOMENT', 'Q-WITNESS')
+  quotient=q_factorization
+    mixed_fibers=36 components=[4, 1] route_edges=6 bridges=[]
+      17                                             rows= 3189 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      2^3                                            rows= 2755 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      7                                              rows= 2695 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      19                                             rows= 2661 routes=('COVERING-MOMENT', 'Q-WITNESS')
+  quotient=power_lift_guard
+    mixed_fibers=14 components=[5] route_edges=9 bridges=[]
+      none                                           rows=12307 routes=('BOUNDARY-AP-GW', 'COVERING-MOMENT', 'K33-STATE-LIFT', 'Q-WITNESS')
+      q=8=2^3,p+q=9=3^2,p*q=8=2^3                    rows= 2755 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      p+q=8=2^3                                      rows= 2695 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      q=9=3^2,p*q=9=3^2                              rows= 2101 routes=('COVERING-MOMENT', 'Q-WITNESS')
+  quotient=automatic_filter_exit
+    mixed_fibers=0 components=[1, 1, 1, 1, 1] route_edges=0 bridges=[]
+  quotient=automatic_word+q_factorization
+    mixed_fibers=375 components=[4, 1] route_edges=4 bridges=[('K33-STATE-LIFT', 'Q-WITNESS')]
+      MFCMMCCFFCCCC|3^2                              rows=  352 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      MFCMMCCFFCCCC|2*5                              rows=  345 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      MFCMCCFFFCCCC|19                               rows=  308 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      MCMMCCFFFCCCC|17                               rows=  244 routes=('COVERING-MOMENT', 'Q-WITNESS')
+  quotient=automatic_word+q_factorization+power_lift_guard
+    mixed_fibers=366 components=[4, 1] route_edges=4 bridges=[('K33-STATE-LIFT', 'Q-WITNESS')]
+      MFCMMCCFFCCCC|3^2|q=9=3^2,p*q=9=3^2            rows=  352 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      MFCMMCCFFCCCC|2*5|none                         rows=  345 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      MFCMCCFFFCCCC|19|none                          rows=  308 routes=('COVERING-MOMENT', 'Q-WITNESS')
+      MCMMCCFFFCCCC|17|none                          rows=  244 routes=('COVERING-MOMENT', 'Q-WITNESS')
+  readout: coarse quotients create route bridges; branch sidecars decide
+  whether those bridges are protected exits or real theorem obligations.
+
+[3] Robbins bridge audit
+  raw scalar star:
+    nodes=6 edges=5 bridges=5 naked_bridges=5
+  protected branch graph:
+    nodes=80 edges=83 bridges=69 naked_bridges=0
+    bridge_certificate_hist={'ap_gw_boundary_stop': 3, 'c27_owner_strip_discharge': 2, 'desargues_beal_finalizer': 1, 'direct_q_witness': 3, 'exact_schema': 2, 'grid_exit': 4, 'k33_state_lift_debt': 3, 'named_residual_debt': 1, 'positive_open_or_nested_refinement': 3, 'power_lift_sidecar': 39, 'route_kernel_declared': 1, 'section_exit': 7}
+    contracted_core_nodes=1 contracted_core_edges=0 contracted_core_bridges=0
+    contracted_core_strong_orientation_exists=True
+    naked bridge rows: none in this audited packet bank
+
+[4] Branch-kernel ledger rows
+  Q-WITNESS                section=direct_q_witness_section           grid=orthogonal_zero        rows=14676 power= 7779 low_frontier=  0 exit=direct-q-witness
+  COVERING-MOMENT          section=open_haar_witness_section          grid=vertical_owner_strip   rows= 6040 power= 1489 low_frontier=  0 exit=strict-safe-component
+  COVERING-MOMENT          section=covering_boundary_moment_section   grid=nested_refinement      rows= 1188 power=  333 low_frontier=  0 exit=strict-safe-component
+  BOUNDARY-PETAL-SPORADIC  section=unit_petal_c27_strip_section       grid=horizontal_owner_strip rows=    4 power=    4 low_frontier=  3 exit=petal-discharge
+  K33-STATE-LIFT           section=k33_state_lift_section             grid=cross_handoff          rows=    3 power=    1 low_frontier=  3 exit=state-lift-debt
+  BOUNDARY-AP-GW           section=ap_gw_boundary_section             grid=same_tile_indicator    rows=    2 power=    0 low_frontier=  2 exit=boundary-equality
+
+  low-frontier representatives:
+    AP                                 M=  1/14 q=14 mu=       0 route=BOUNDARY-AP-GW           section=ap_gw_boundary_section
+      branch=tight-floor; grid=same_tile_indicator; power=none; exit=boundary-equality
+    GW 12->24                          M=  1/14 q=14 mu=       0 route=BOUNDARY-AP-GW           section=ap_gw_boundary_section
+      branch=tight-floor; grid=same_tile_indicator; power=none; exit=boundary-equality
+    near/K33 12->36                    M=  3/41 q=14 mu=  1/1260 route=K33-STATE-LIFT           section=k33_state_lift_section
+      branch=K33-unit-excess; grid=cross_handoff; power=none; exit=state-lift-debt
+    P10+GW                             M=  2/27 q=14 mu=   1/980 route=BOUNDARY-PETAL-SPORADIC  section=unit_petal_c27_strip_section
+      branch=C27-petal-two-block; grid=horizontal_owner_strip; power=q=27=3^3; exit=petal-discharge
+    petal 10->20                       M=  2/27 q=14 mu=   1/980 route=BOUNDARY-PETAL-SPORADIC  section=unit_petal_c27_strip_section
+      branch=C27-petal-two-block; grid=horizontal_owner_strip; power=q=27=3^3; exit=petal-discharge
+    petal 13->26                       M=  2/27 q=14 mu=   1/182 route=BOUNDARY-PETAL-SPORADIC  section=unit_petal_c27_strip_section
+      branch=C27-petal-two-block; grid=horizontal_owner_strip; power=q=27=3^3; exit=petal-discharge
+    P10+K33                            M=  2/27 q=14 mu=  4/2205 route=K33-STATE-LIFT           section=k33_state_lift_section
+      branch=C27-petal-two-block; grid=cross_handoff; power=q=27=3^3; exit=state-lift-debt
+    two drop(12, 13)->add(26, 36)      M=  3/37 q=14 mu= 79/8190 route=K33-STATE-LIFT           section=k33_state_lift_section
+      branch=nonunit-excess-e5; grid=cross_handoff; power=none; exit=state-lift-debt
+
+[5] Tournament Analysis
+  vertices=branch carriers, section exits, gates, and proof debts; not runners
+  pairwise_observable=retained exact scale, boundary/open status, route
+  handoff, owner current, observer-cut payload, bridge protection, no-lift
+  discipline, and named residual exit
+  switch=lexicographic retained-payload vector; tie path listed below
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  tie_path=observer_cut_payload_orbit > Robbins_no_bridge_assembly > labelled_packet_bank > residual_section_exit > Haar_grid_exit > endpoint_owner_strip > C27_petal_branch > K33_state_lift_branch > covering_moment_branch > Fermat_Catalan_no_lift_guard > Desargues_Beal_finalizer_gate > named_residual_debt > raw_scalar_shadow
+
+[6] Theorem-facing readout
+  Bounded conclusion:
+    in the audited HYP-2963 bank, every hard non-AP/GW packet has a declared section/grid exit or named state-lift debt before the Robbins bridge test is applied.
+    hard non-AP/GW packets=7235
+    K33 named-debt packets=3
+    candidate F7 packets=0
+    protected branch graph has no naked bridge after known sidecars.
+
+  What this does not prove:
+    it does not prove the global reduction to the HYP-2963 bank, nor THM-572,
+    nor the family theorem for all covering tails.  It turns the next proof
+    obligation into a ledger statement: prove that every primitive residual
+    reaches this branch graph, then discharge K33/THM-572 and covering family
+    exits without creating a new naked bridge.

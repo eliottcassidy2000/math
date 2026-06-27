@@ -1,0 +1,112 @@
+LRC14 boundary-moment packet ledger
+==============================================================================
+single_limit=120, two_swap_limit=30, alias_depth=3, lcm_tail_max=5, full_bank=False, workers=8, denom_cap=140
+[0] Assumption challenge
+  considered vertices:
+    runners, residues, exact-period unit packets, missed-sector states,
+    qdiv gates, C27/K33 owner labels, boundary-moment vectors, and proof
+    obligations.
+  chosen vertices:
+    labelled packet routes plus exact-period missed-depth moment ledgers.
+  preserved LRC predicate:
+    strict-counterexample status through qdiv, exact M, Haar-open mass,
+    boundary debt, C27/K33 labels, and all-covered unit-packet tests.
+  destroyed information:
+    continuous torus geometry between probed denominators and the true gK8
+    feasible moment region.  This is a scout ledger, not the final bridge.
+  challenged assumption:
+    the COVERING-MOMENT bucket can remain a word.  It must emit a moment
+    signature, and any all-covered non-K33 signature is the next target.
+
+[1] Boundary-moment ledger census
+  source packets audited=35
+  moment ledgers emitted=29
+  below-threshold packets=0
+  zero-open packets=2
+  route counts:
+    BOUNDARY-AP-GW           2
+    BOUNDARY-PETAL-SPORADIC  4
+    COVERING-MOMENT          10
+    K33-STATE-LIFT           3
+    Q-WITNESS                16
+  kernel flags among emitted ledgers:
+    AP/GW-zero-open-equality               2
+    named-K33-state-lift                   3
+    positive-Haar-open                     10
+    q-witness-discharge                    10
+    unit-petal-named                       4
+
+[2] Route-level moment statistics
+  Q-WITNESS                n=  10 all-covered@D=  0 Ly_norm=[10, 10] extreme=[1, 1]
+  BOUNDARY-AP-GW           n=   2 all-covered@D=  0 Ly_norm=[10, 10] extreme=[1, 1]
+  BOUNDARY-PETAL-SPORADIC  n=   4 all-covered@D=  0 Ly_norm=[25/3, 10] extreme=[5/6, 1]
+  K33-STATE-LIFT           n=   3 all-covered@D=  0 Ly_norm=[10, 10] extreme=[1, 1]
+  COVERING-MOMENT          n=  10 all-covered@D=  7 Ly_norm=[35/4, 10] extreme=[7/8, 1]
+
+[3] Representative ledgers
+  name                               route                       D   state(c/b/s)           missed q0..q6       Ly flag
+  AP                                 BOUNDARY-AP-GW             14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 AP/GW-zero-open-equality
+  GW 12->24                          BOUNDARY-AP-GW             14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 AP/GW-zero-open-equality
+  unit petal splice drop(10,13)->add BOUNDARY-PETAL-SPORADIC    14          0/6/0   (5, 1, 0, 0, 0, 0, 0)     25/3 unit-petal-named
+  P10+GW                             BOUNDARY-PETAL-SPORADIC    14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 unit-petal-named
+  petal 10->20                       BOUNDARY-PETAL-SPORADIC    14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 unit-petal-named
+  petal 13->26                       BOUNDARY-PETAL-SPORADIC    14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 unit-petal-named
+  AP repair drop13 add182            COVERING-MOMENT            15          8/0/0   (7, 1, 0, 0, 0, 0, 0)     35/4 positive-Haar-open
+  divisor-loaded tail 84*5           COVERING-MOMENT            16          8/0/0   (7, 1, 0, 0, 0, 0, 0)     35/4 positive-Haar-open
+  drop6 fattening core add210        COVERING-MOMENT            16          8/0/0   (7, 1, 0, 0, 0, 0, 0)     35/4 positive-Haar-open
+  divisor-loaded tail 84             COVERING-MOMENT            15          8/0/0   (8, 0, 0, 0, 0, 0, 0)       10 positive-Haar-open
+  divisor-loaded tail 84*2           COVERING-MOMENT            15          8/0/0   (8, 0, 0, 0, 0, 0, 0)       10 positive-Haar-open
+  divisor-loaded tail 84*3           COVERING-MOMENT            15          8/0/0   (8, 0, 0, 0, 0, 0, 0)       10 positive-Haar-open
+  divisor-loaded tail 84*4           COVERING-MOMENT            15          8/0/0   (8, 0, 0, 0, 0, 0, 0)       10 positive-Haar-open
+  drop6 fattening core add180        COVERING-MOMENT            14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 positive-Haar-open
+  floor-odd GW iso impostor          COVERING-MOMENT            14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 positive-Haar-open
+  magnitude liar 12->96              COVERING-MOMENT            14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 positive-Haar-open
+  K33 larger marker drop(12,13)->add K33-STATE-LIFT             14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 named-K33-state-lift
+  P10+K33                            K33-STATE-LIFT             14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 named-K33-state-lift
+  near/K33 12->36                    K33-STATE-LIFT             14          0/6/0   (6, 0, 0, 0, 0, 0, 0)       10 named-K33-state-lift
+  GW-shell alias 12->105             Q-WITNESS                  12          0/0/4   (4, 0, 0, 0, 0, 0, 0)       10 q-witness-discharge
+  GW-shell alias 12->51              Q-WITNESS                  12          0/0/4   (4, 0, 0, 0, 0, 0, 0)       10 q-witness-discharge
+  GW-shell alias 12->78              Q-WITNESS                  12          0/0/4   (4, 0, 0, 0, 0, 0, 0)       10 q-witness-discharge
+  K33-shell alias 12->117            Q-WITNESS                  12          0/0/4   (4, 0, 0, 0, 0, 0, 0)       10 q-witness-discharge
+  K33-shell alias 12->63             Q-WITNESS                  12          0/0/4   (4, 0, 0, 0, 0, 0, 0)       10 q-witness-discharge
+  K33-shell alias 12->90             Q-WITNESS                  12          0/0/4   (4, 0, 0, 0, 0, 0, 0)       10 q-witness-discharge
+  P13-shell alias 13->107            Q-WITNESS                  13         0/0/12  (12, 0, 0, 0, 0, 0, 0)       10 q-witness-discharge
+  P13-shell alias 13->53             Q-WITNESS                  13         0/0/12  (12, 0, 0, 0, 0, 0, 0)       10 q-witness-discharge
+  P13-shell alias 13->80             Q-WITNESS                  13         0/0/12  (12, 0, 0, 0, 0, 0, 0)       10 q-witness-discharge
+  scale-separated AP tail 200        Q-WITNESS                  13         0/0/12  (12, 0, 0, 0, 0, 0, 0)       10 q-witness-discharge
+
+[4] Labelled packet theorem readout
+  Desired theorem shape:
+    Every primitive LRC14 row emits a fixed-margin labelled packet.
+    If it is strict-bad, qdiv>14 and its packet must sit in a covering
+    boundary-moment fiber.  That fiber either has positive Haar/moment
+    exit, carries a named K33 state-lift label, or is an explicit new
+    Johnson-harmonic sector.
+  audited dangerous moment-kernel rows=0
+    none in the emitted bounded ledger.
+  Next rigorous target:
+    replace this finite sector proxy by the true gK8/L_y feasible-region
+    map B_D and prove every COVERING-MOMENT fixed-margin fiber has positive
+    image unless it constructs HYP-2908/THM-572.
+
+[5] arXiv:2606.22636 proof-shape import
+  Fu-Qin-Wang prove a spectral gap for binary fixed-margin swap chains by
+  keeping fixed margins, comparing local swap dynamics to two-row heat-bath
+  moves, reducing to three rows, and splitting scalar count sectors from
+  Johnson harmonic sectors.
+  LRC translation used here:
+    fixed margins        -> labelled packet signatures
+    swap fiber           -> packet-preserving mutations
+    scalar sector        -> qdiv / exact M / Haar-open status
+    Johnson sectors      -> C27, K33, source-spectrum, boundary-moment
+    three-row reduction  -> triples of proof obligations, not runner triples
+
+[6] Tournament Analysis
+  vertices are proof layers / packet sectors, not runners.
+  pairwise observable:
+    which layer preserves strict-counterexample status and owner labels
+    before scalarization.
+  tie Hamiltonian path:
+    qdiv_gate -> exact_M_Farey -> Haar_Baire_front -> C27_K33_labels -> fixed_margin_packet -> boundary_moment_ledger -> TournamentStateLift -> raw_scalar_or_residue
+  fingerprint: score_hist={0: 1, 1: 1, 3: 2, 4: 1, 5: 1, 6: 2} c3=4 hp=17
+  scc=(6, 1, 1)

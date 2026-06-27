@@ -34,6 +34,11 @@ TournamentH7/
     ├── StaircaseBucketTransport.lean
     │                          concrete staircase transport checksums
     ├── LRCDeathChain.lean    finite LRC death-chain/live-depth quotient
+    ├── LRCFiniteAddressBranchClosure.lean
+    │                          S254 LRC14 finite-address branch-packet interface
+    ├── LRCObserverGluingLedger.lean
+    │                          S259 observer-chart gluing ledger for the
+    │                          direct-arc / pair-scissors / terminal interface
     └── Verify.lean           #print axioms audit
 ```
 
@@ -126,6 +131,48 @@ by transport matrices: empty source fibers give zero rows and empty target
 fibers give zero columns. For `goodCutBucket`, the exact finite image is
 `{0} ∪ {2,...,n-1}` for `n >= 3`, so buckets `1` and `n` are certified gaps.
 This is THM-355.
+
+`LRCFiniteAddressBranchClosure.lean` is the S254 Lean-facing interface for the
+current LRC14 proof frontier. It packages the HYP-3083 spine as a
+proof-bearing finite-address branch packet: q-cusp finite principal part,
+q-Pochhammer tail, Hurwitz arithmetic address, protected bridge certificate,
+moment-dual covering ledger, median-center packet, and terminal witness floor.
+The key conditional theorem is
+`LonelyRunner.LRC14.lrc14_from_cutting_edge_branch_coverage`: early gates
+plus low-apex/top-balanced finite-address packet coverage imply
+`LRC14Statement`. The module asserts no new analytic normalizer or K33 lift;
+those remain explicit producer obligations.
+
+`LRCObserverGluingLedger.lean` is the S259 Lean-facing continuation of that
+frontier after the S258 observer-gluing scout. It introduces observer charts,
+legal chart-overlap discharges, denominator-net numerics, pair-scissors
+signatures, coarse mod-14 winding status, and `ObserverGluingCertificate`.
+Its conditional theorem
+`LonelyRunner.LRC14.lrc14_from_observer_gluing_coverage` says that early gates
+plus observer-gluing certificates imply `LRC14Statement`. The module also
+embeds any existing `FiniteAddressBranchPacket` as an observer-gluing
+certificate, so it is conservative over the S254 interface. The theorem
+`coarseWinding_degenerate_not_terminal` records the current guardrail: the
+antipodal-tie coarse mod-14 winding chart is not a terminal proof carrier
+unless fine-scale sidecars or an independent terminal discharge are attached.
+
+`LRCProofFrontier.lean` is the S259 / HYP-3107 Lean-facing ledger for the next
+proof frontier. It records the solved pair-Pascal cap RHS, including the
+THM-577 symbolic dense cap values, keeps coverage extremality /
+reflection-Perron / Node-3 / finite-ruler / fine-scale winding transfer as
+named `Prop` obligations, and proves the conditional wiring
+`residual classifier + residual finite-address packets -> LRC14Statement`.
+It also exposes the observer-gluing route and the
+`LRCBleedingEdgeFrontier.lean` packet-wrapper route as producer targets, with
+an explicit experiment vertex for the equinumerosity / equidecomposability /
+equidistribution triad. It is a formal frontier map, not a proof of LRC14.
+
+`LRCCrystallographicThetaFrontier.lean` is the S263 / HYP-3110 sidecar ledger
+for the De Moivre/Jacobi/crystallographic frontier. It records exact counts
+for the 17 wallpaper groups, 230 three-dimensional space groups, 14 Bravais
+lattice types, and four Jacobi theta channels; proves the De Moivre quintic
+fold over `Rat`; and keeps theta/crystallographic residual production
+conditional on observer-gluing or finite-address packet output.
 
 ## Proof sketch
 

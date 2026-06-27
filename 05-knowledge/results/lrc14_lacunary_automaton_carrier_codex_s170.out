@@ -1,0 +1,98 @@
+Finite automata used as carry languages
+========================================================================================
+fibbinary DFA, bits read left-to-right after leading 1
+  state Z(last bit 0/start): 0->Z, 1->O
+  state O(last bit 1):       0->Z, 1->DEAD
+  accepted states: Z,O
+
+Moser-de Bruijn DFA, bits read least-significant first
+  state E(even bit position): 0->O, 1->O
+  state O(odd bit position):  0->E, 1->DEAD
+  accepted states: E,O after at least one 1
+  note: this language is a strict sparse sublanguage of fibbinary.
+
+Sequence growth and residue transversals
+========================================================================================
+first 13 fibbinary:        (1, 2, 4, 5, 8, 9, 10, 16, 17, 18, 20, 21, 32)
+first 13 Moser-de Bruijn:  (1, 4, 5, 16, 17, 20, 21, 64, 65, 68, 69, 80, 81)
+first fibbinary residues:  (1, 2, 17, 4, 5, 20, 21, 8, 9, 10, 81, 40, 41)
+first Moser residues:      (1, 16, 17, 4, 5, 20, 21, 64, 65, 80, 81, 68, 69)
+
+bit-width counts (exact)
+width  fibbinary      Moser
+    1          1          1
+    2          1          0
+    3          2          2
+    4          3          0
+    5          5          4
+    6          8          0
+    7         13          8
+    8         21          0
+    9         34         16
+   10         55          0
+   11         89         32
+   12        144          0
+
+Exact LRC14 row audit
+========================================================================================
+row                               max          M     margin     best t    safe_mass    longest  comp
+AP boundary                        13       1/14          0       1/14            0          0     0
+  residues: missing=- doubled=- zero_count=0
+  row: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+GW boundary 12->24                 24       1/14          0       1/14            0          0     0
+  residues: missing=[12] doubled=[10] zero_count=0
+  row: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+first13 fibbinary                  32       3/25     17/350       4/25 66077/399840      9/448    38
+  residues: missing=[11, 12, 13] doubled=[2, 4] zero_count=0
+  row: (1, 2, 4, 5, 8, 9, 10, 16, 17, 18, 20, 21, 32)
+first13 Moser                      81        1/6       2/21        1/6 4264747/40348854  457/72576    64
+  residues: missing=- doubled=- zero_count=0
+  row: (1, 4, 5, 16, 17, 20, 21, 64, 65, 68, 69, 80, 81)
+fibbinary residue transversal      81        1/6       2/21        1/6 8317919/55327860  397/45360    48
+  residues: missing=- doubled=- zero_count=0
+  row: (1, 2, 4, 5, 8, 9, 10, 17, 20, 21, 40, 41, 81)
+Moser residue transversal          81        1/6       2/21        1/6 4264747/40348854  457/72576    64
+  residues: missing=- doubled=- zero_count=0
+  row: (1, 4, 5, 16, 17, 20, 21, 64, 65, 68, 69, 80, 81)
+
+Readout:
+  * Fibbinary and Moser transversals can restore the mod-14 one-hole support,
+    but their exact M values are strict, so the automata do not create new
+    tight atoms in this scout.
+  * Moser is a useful negative-control: it is extremely finite-state and
+    no-carry, yet too magnitude-lacunary to preserve the LRC14 boundary.
+  * The largest-safe-component column is the circle analogue of the
+    large-stick/potato geometry prompt: it is exact and predicate-preserving.
+
+Tournament Analysis over proof carriers
+========================================================================================
+carrier                            scale  LRC  DFA carry  warn note
+farey_exact_M_scheduler                5    5    2     4     5 keeps M=p/q and e=14p-q before any quotient
+large_stick_safe_component             5    5    2     2     4 computes exact safe intervals / largest safe stick
+two_adic_hurwitz_transducer            4    4    5     5     4 finite-state dyadic carry lane suggested by 2LC
+fibbinary_no_adjacent_carry            3    3    5     4     3 path-width-one carry language; Zeckendorf-compatible
+moser_de_bruijn_base4_sparse           2    2    5     5     5 base-4 no-carry language; lacunary generator warning
+fermat_catalan_power_collision         2    2    1     4     4 scarcity of primitive power collisions; stress lane only
+ostrowski_hadamard_gap_guard           1    1    1     3     5 Hadamard gaps warn that lacunary analytic continuation is brittle
+raw_sequence_scalar                    1    1    2     1     1 sequence membership alone forgets scale, residues, owners
+
+score_hist={0: 1, 1: 1, 2: 1, 4: 2, 5: 2, 7: 1}
+directed_3cycles=2
+scc_sizes=[1, 1, 1, 1, 4]
+hamiltonian_path_count=5
+one Hamiltonian path by score:
+  1. farey_exact_M_scheduler
+  2. large_stick_safe_component
+  3. two_adic_hurwitz_transducer
+  4. fibbinary_no_adjacent_carry
+  5. moser_de_bruijn_base4_sparse
+  6. fermat_catalan_power_collision
+  7. ostrowski_hadamard_gap_guard
+  8. raw_sequence_scalar
+
+Synthesis for the LRC14 proof stack
+========================================================================================
+The Fermat-Catalan analogy should be used as scarcity discipline: power-like collisions are not a dense certificate source unless the exact primitive side channels are retained.
+The Ostrowski-Hadamard analogy is a warning, not a proof engine: Hadamard-lacunary supports are naturally boundary-rigid, so analytic continuation across forgotten packet labels is the wrong expectation.
+The actionable finite-automaton import is local: keep a small DFA or transducer for dyadic/Ostrowski carry states, but attach it to M=p/q, e=14p-q, residue ownership, and exact safe components.
+Next executable target: add automaton_state and carry_language fields to HYP-2963/HYP-3001 packet records, then test whether zero-open non-AP/GW residuals emit a nontrivial dyadic carry state or collapse to the known AP/GW boundary skeleton.

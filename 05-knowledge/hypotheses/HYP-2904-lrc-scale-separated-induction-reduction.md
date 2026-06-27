@@ -121,6 +121,27 @@ unbounded/non-covering cases, but it cannot by itself resolve the bounded
 covering core where all speeds are comparable.  That remaining base is the
 three-gap / AP-hull / Legendre-Venn finite extremality problem.
 
+## S117 local one-interval sharpening
+
+HYP-2906 gives the existence-first version of this induction atom.  If the
+seed has one witness margin `alpha>1/n` and max speed `m`, then the seed is
+safe on a connected interval of length `2(alpha-1/n)/m`.  The added speed's
+unsafe comb has tooth length `2/(nv)`, so `v>m/(n(alpha-1/n))` is enough.
+
+Using only `LRC(n-1)` gives `alpha=1/(n-1)` and therefore the sharp symbolic
+gate `v>(n-1)m`.  In the LRC14 row this is:
+
+`v_max > 13 v_second  ->  safe by LRC13`.
+
+This is stronger than the global component-budget threshold for one-speed
+existence.  It is weaker in a different direction: it gives a witness, not a
+positive measure floor, and it does not handle several large speeds whose
+individual ratios stay below the gate.  So the proof order should be:
+
+- first peel a locally large top speed by HYP-2906;
+- then use HYP-2904/KPS-S31v for density or multi-large budgets;
+- finally route top-balanced bounded cores to Node-2 extremality.
+
 ## Guardrail
 
 This is not a pure runner-count induction.  Dilation preserves the seed safe

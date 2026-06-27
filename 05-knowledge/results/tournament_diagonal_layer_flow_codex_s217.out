@@ -1,0 +1,44 @@
+================================================================================
+S217: tournament diagonal-layer flow and half-tiling quotient laws
+================================================================================
+1. LOCAL DIAGONAL-LAYER FLOW K_{k,k+1}
+   k  lines=k(k+1)  xor_rank=2k  redundancy  rectangle_generators
+   1             2            2           0                     0
+   2             6            4           2                     2
+   3            12            6           6                     6
+   4            20            8          12                    12
+   5            30           10          20                    20
+   6            42           12          30                    30
+   7            56           14          42                    42
+   8            72           16          56                    56
+   Redundancy k(k-1) is the cycle space of K_{k,k+1}: every 4-cycle says
+   L(a,b)+L(a,b')+L(a',b)+L(a',b')=0 over GF(2).
+   A spanning-tree basis of 2k lines determines all others by
+   L(a,b)=L(a,b0)+L(a0,b)+L(a0,b0).
+
+2. GLOBAL ADJACENT-LAYER FLOW
+   Full layers have sizes 1,2,...,n-1.  Fixed-path layers drop the path arcs.
+   n  U(n)  full_tiles  full_lines  full_rank  full_red  fixed_tiles  fixed_lines  fixed_rank  fixed_red  fixed_cube  Z2_path
+   2     1           1           0          0         0            0            0           0          0           1        1
+   3     2           3           2          2         0            1            0           0          0           2        2
+   4     4           6           8          5         3            3            2           2          0           8        6
+   5    12          10          20          9        11            6            8           5          3          64       40
+   6    56          15          40         14        26           10           20           9         11        1024      544
+   7   456          21          70         20        50           15           40          14         26       32768    16640
+   8  6880          28         112         27        85           21           70          20         50     2097152  1050624
+   Full redundancy equals 2*C(n-1,3)+C(n-2,2): local rectangle cycles
+   plus extra hourglass cycles linking adjacent layer bridges.
+
+3. FIXED-PATH HALF-TILINGS SURJECT TO A000568 CLASSES
+   A fixed Hamiltonian path gives 2^C(n-1,2) smaller half-tilings.
+   The fiber over an isomorphism class is H(T)/|Aut(T)|.
+   n=3: fixed_tilings=2 iso_classes=2 A000568=2 fiber_hist={1: 2} H_over_Aut_check=True
+   n=4: fixed_tilings=8 iso_classes=4 A000568=4 fiber_hist={1: 3, 5: 1} H_over_Aut_check=True
+   n=5: fixed_tilings=64 iso_classes=12 A000568=12 fiber_hist={1: 4, 3: 1, 5: 3, 9: 2, 11: 1, 13: 1} H_over_Aut_check=True
+   n=6: fixed_tilings=1024 iso_classes=56 A000568=56 fiber_hist={1: 6, 3: 2, 5: 5, 9: 6, 11: 4, 13: 2, 15: 4, 17: 2, 19: 2, 23: 4, 25: 2, 29: 4, 31: 2, 33: 3, 37: 5, 41: 1, 43: 2} H_over_Aut_check=True
+
+READING
+  A labelled tournament is a binary upper-triangular half-tiling modulo the full S_n relabelling action.  A fixed Hamiltonian path gives the smaller cube with C(n-1,2) free nonpath tiles; it surjects onto A000568 classes with uneven fiber H(T)/|Aut(T)|.
+  The proposed k^2+k inter-layer lines are algebraically redundant in a controlled way: they are a GF(2) coboundary/cut-space presentation.  K_{k,k+1} has k(k+1) pair lines but only 2k XOR rank; the k(k-1) surplus lines are 4-cycle duplication laws.  Globally the adjacent-layer flow has rank #tiles-1, so it reconstructs all tile bits up to global complement.
+  Path reversal plus converse is therefore a useful diagonal half-tiling quotient, but it is not A000568 by itself.  The Z2 fixed-path counts already exceed U(n) at n=4,5,6.  A000568 is the orbit count after the full relabeling/path-presentation redundancy is also divided out.
+  LRC translation: the line redundancies should be used as packet sidecars, not scalars.  Rectangle/4-cycle relations are local duplication laws; hourglass cycles are bridge-to-bridge duplication laws; Hamiltonian-path fibers are global duplication laws; diagonal fixed sets are path-reversal/converse duplication laws.

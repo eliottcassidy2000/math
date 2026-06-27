@@ -1,0 +1,117 @@
+S164 LRC14 CERTIFICATE HANDOFF ATLAS
+========================================================================
+Assumption challenge: vertices are proof carriers / obligations, not runners.
+Pairwise observable: retained LRC predicate payload across handoffs.
+
+Carrier tournament
+------------------
+score_hist: {0: 1, 1: 1, 2: 1, 4: 3, 6: 1, 7: 1, 8: 1}
+directed_3cycles: 1
+SCC_sizes: [1, 1, 3, 1, 1, 1, 1]
+Hamiltonian_path_count: 3
+tie/retention Hamiltonian path:
+  labelled_source_packet > exact_interval_fejer > ramanujan_exact_period > endpoint_bridge_graph > twist_ladder_blocker > danger_count_moment_dual > analytic_sieve_kaczynski > tournament_state_lift > raw_scalar_shadow
+
+Carrier roles
+-------------
+- labelled_source_packet: vector=(5, 5, 5, 5, 5, 5, 4, 4, 5)
+  role=root sheaf: qdiv/Farey/Haar/endpoint/C27/K33/state labels
+  must_retain=qdiv, exact_M_Farey, strict_vs_boundary, endpoint_owners, route
+  may_forget=raw runner order after packet key is fixed
+- exact_interval_fejer: vector=(5, 5, 4, 4, 3, 5, 5, 5, 4)
+  role=formal dual certificate target: Q_d(center)<0 on packet fibers
+  must_retain=packet_key, center, degree, atom_formula, interval_upper
+  may_forget=floating decimal shadow, raw endpoint list after center/component is fixed
+- ramanujan_exact_period: vector=(4, 4, 5, 3, 2, 4, 4, 4, 4)
+  role=primitive phase projector and late-q pre-splitter
+  must_retain=q, unit_residue, weak_vs_strict_witness, route_label
+  may_forget=speed names inside a primitive residue profile
+- endpoint_bridge_graph: vector=(4, 4, 3, 5, 5, 4, 4, 4, 4)
+  role=taut/positive bridge layer over danger endpoints
+  must_retain=left_owner, right_owner, bridge_sign, winding_or_potential
+  may_forget=global scalar safe mass after bridges are labelled
+- twist_ladder_blocker: vector=(4, 4, 4, 3, 2, 3, 5, 5, 4)
+  role=primal rational witness or finite speed-vs-twist blocker
+  must_retain=denominator_ladder, failed_twist_hypergraph, first_q
+  may_forget=continuous endpoint geometry after a twist witness is found
+- danger_count_moment_dual: vector=(4, 3, 2, 4, 1, 3, 5, 5, 3)
+  role=count-distribution Farkas/Delsarte dual
+  must_retain=count_histogram, dual_polynomial, degree, sign
+  may_forget=endpoint ownership, phase position
+- analytic_sieve_kaczynski: vector=(3, 4, 4, 3, 2, 4, 3, 3, 5)
+  role=large-sieve/circle-method/Kaczynski boundary middle certificate
+  must_retain=smoothing_kernel, exceptional_set, approach_class, exact_period_labels
+  may_forget=raw prime or Mobius scalar
+- tournament_state_lift: vector=(5, 3, 2, 2, 4, 5, 4, 5, 5)
+  role=terminal forbidden-H=7 state-lift endpoint
+  must_retain=packet_value, H(T)=7, conflict_tournament, realizability_map
+  may_forget=metric values after the conflict packet is built
+- raw_scalar_shadow: vector=(1, 1, 1, 1, 1, 1, 1, 1, 1)
+  role=unsafe summary: tau/sigma/raw mass/raw tournament class
+  must_retain=lost_label_certificate
+
+Packet handoff table
+--------------------
+- packet=qdiv<14 / direct q-witness
+  labelled_source_packet -> twist_ladder_blocker
+  status=closed in the current grammar
+  retained_predicate=existence of a strict rational witness
+  destroyed_without_guard=endpoint-owner route
+  open_arrow=global reduction must put every direct-witness packet here before scalarizing
+- packet=AP/Goddyn-Wong boundary atom
+  endpoint_bridge_graph -> labelled_source_packet
+  status=equality atom, not a strict counterexample
+  retained_predicate=zero strict-open mass with q=14 boundary owner skeleton
+  destroyed_without_guard=C27/GW hidden acceleration, closed boundary support
+  open_arrow=tight-locus census still must show no other global equality atom
+- packet=K33 / 12->36 and K33 splices
+  labelled_source_packet -> exact_interval_fejer
+  status=selected packet certified negative; state-lift endpoint remains theorem target
+  retained_predicate=positive safe interval or forbidden K33/H=7 conflict packet
+  destroyed_without_guard=state-lift owner labels, K33 incidence address
+  open_arrow=prove K33 family compression or construct the HYP-2908 state lift
+- packet=unit petal and P10+GW strip
+  labelled_source_packet -> exact_interval_fejer
+  status=selected P10+GW certified negative; C27 petal route available
+  retained_predicate=positive safe interval in the unit-petal packet
+  destroyed_without_guard=C27 unit-hole label, two-block splice order
+  open_arrow=prove the petal/two-block family template, not just named rows
+- packet=covering boundary-moment packets
+  endpoint_bridge_graph -> exact_interval_fejer
+  status=selected covering rows certified; full family needs multi-chart positivity
+  retained_predicate=strict safe component or positive boundary-moment image
+  destroyed_without_guard=apex lift section, moment chart, endpoint transition packet
+  open_arrow=build multi-chart gK8/L_y or Fejer family templates for all covering packets
+- packet=lcm-tail / finite-denominator wall
+  ramanujan_exact_period -> analytic_sieve_kaczynski
+  status=q<=42 twist evidence closes audited lcm tails; global fixed basis impossible
+  retained_predicate=adaptive exact-period witness or labelled Kaczynski resonance
+  destroyed_without_guard=prime-power denominator labels, approach class
+  open_arrow=prove dynamic ladder or admissible smoothed exponential-sum lemma
+- packet=SOURCE-SPECTRUM-UNKNOWN / F7
+  labelled_source_packet -> tournament_state_lift
+  status=only honest falsifier bucket
+  retained_predicate=simultaneous invisibility to all known primal/dual certificates
+  destroyed_without_guard=which certificate failed, residual sector label
+  open_arrow=define F7 and prove it is empty or constructs TournamentStateLift
+
+Open arrows for a proof
+-----------------------
+- O1 source-kernel exclusion: every primitive row enters this atlas.
+- O2 formal interval backend: replace prototype pi/trig intervals by checkable balls.
+- O3 family compression: selected Fejer/twist certificates lift to packet templates.
+- O4 admissible smoothing: analytic-sieve/Kaczynski quotients retain approach labels.
+- O5 state-lift construction: any zero-open non-AP/GW residual builds HYP-2908/THM-572.
+- O6 F7 definition: if a Johnson-harmonic residual sector exists, name its preserved predicate.
+
+Fixed-margin swap-chain import
+------------------------------
+Source pattern: arXiv:2606.22636 reduces fixed-margin swap chains to a
+low-row heat-bath core and then splits count sectors from Johnson harmonics.
+- fixed margins are labels: binary row/column margins behave like packet fibers: a comparison argument may move between chains only while preserving the margin fiber or recording its kernel.
+- reduce to a low-row core: the swap-chain proof reduces arbitrary margins to three rows; the LRC14 analogue is to reduce arbitrary primitive rows to a finite packet core before applying Fejer, twist, or state-lift certificates.
+- split count and harmonic sectors: the three-row analysis decomposes by column count and Johnson harmonic sectors; the LRC14 F7 bucket should be defined as a named harmonic residual sector, not as an anonymous failure of existing certificates.
+
+Zipper theorem candidate
+------------------------
+If O1-O6 hold, then every primitive LRC14 row either has a strict witness/dual certificate in the atlas, is the AP/GW equality atom, or constructs the forbidden HYP-2908/THM-572 state lift.  This would close LRC14.  The atlas does not prove O1-O6; it localizes them.

@@ -1,0 +1,79 @@
+S127 LRC14 TOURNAMENT-REALIZABILITY SUMMIT ATLAS
+========================================================================
+[Assumption challenge]
+  considered vertex sets:
+    runners/speeds, residues, gaps, fixed circle sections, section boundaries,
+    wall-crossing events, cover arcs, Fourier modes, matroid/cycle circuits,
+    and proof obligations/filters.
+  chosen here:
+    Z/14 apex points and denominator-14 runner phases, because these preserve
+    the exact half-clock cutoff where AP/GW bind.
+  challenged assumption:
+    raw runner tournaments are not enough.  The residue-liar and Farey
+    near-miss can share coarse winding data with tight rows while q(S) and
+    off-apex M separate them.  A proof must state both the tournament
+    realizability theorem and the arithmetic data the quotient intentionally
+    forgets.
+
+[Apex-clock tournament realizability]
+  vertices: seven selected points on Z/14Z
+  observable: clockwise displacement
+  switch/gauge: x->y iff 0 < y-x < 7; diameter/collision ties either excluded or
+    broken by the Hamiltonian path induced by increasing residue
+  quotient preserves: half-clock order class and diameter-tie count
+  quotient destroys: actual speed divisibility, runner labels, off-apex M
+
+  tie_policy=exclude: labelled rows=128, isomorphism classes=10
+    diameter_pair_hist={0: 128}
+    largest achieved classes:
+      class 01: count=  14, rep=(0, 1, 3, 5, 6, 9, 11), score_hist=((2, 1), (3, 5), (4, 1)), c3=13, scc=(7,), hp=151
+      class 02: count=  14, rep=(0, 1, 3, 4, 6, 9, 12), score_hist=((2, 2), (3, 3), (4, 2)), c3=12, scc=(7,), hp=123
+      class 03: count=  14, rep=(0, 1, 2, 4, 6, 10, 12), score_hist=((2, 3), (3, 1), (4, 3)), c3=11, scc=(7,), hp=105
+      class 04: count=  14, rep=(0, 1, 2, 5, 6, 10, 11), score_hist=((2, 2), (3, 3), (4, 2)), c3=12, scc=(7,), hp=137
+      class 05: count=  14, rep=(0, 1, 2, 3, 6, 11, 12), score_hist=((1, 1), (2, 2), (3, 1), (4, 2), (5, 1)), c3=8, scc=(7,), hp=47
+      class 06: count=  14, rep=(0, 1, 2, 3, 4, 6, 12), score_hist=((1, 2), (2, 1), (3, 1), (4, 1), (5, 2)), c3=5, scc=(7,), hp=33
+      class 07: count=  14, rep=(0, 1, 2, 4, 5, 6, 10), score_hist=((1, 1), (2, 1), (3, 3), (4, 1), (5, 1)), c3=9, scc=(7,), hp=51
+      class 08: count=  14, rep=(0, 1, 2, 3, 5, 6, 11), score_hist=((1, 1), (2, 2), (3, 1), (4, 2), (5, 1)), c3=8, scc=(7,), hp=47
+
+  tie_policy=path: labelled rows=3432, isomorphism classes=10
+    diameter_pair_hist={0: 128, 1: 1344, 2: 1680, 3: 280}
+    largest achieved classes:
+      class 01: count= 672, rep=(0, 1, 2, 3, 4, 9, 10), score_hist=((2, 1), (3, 5), (4, 1)), c3=13, scc=(7,), hp=151
+      class 02: count= 672, rep=(0, 1, 2, 3, 4, 8, 10), score_hist=((2, 2), (3, 3), (4, 2)), c3=12, scc=(7,), hp=123
+      class 03: count= 672, rep=(0, 1, 2, 3, 4, 8, 9), score_hist=((2, 3), (3, 1), (4, 3)), c3=11, scc=(7,), hp=105
+      class 04: count= 240, rep=(0, 1, 2, 3, 8, 9, 10), score_hist=((3, 7),), c3=14, scc=(7,), hp=175
+      class 05: count= 224, rep=(0, 1, 2, 4, 5, 10, 11), score_hist=((2, 2), (3, 3), (4, 2)), c3=12, scc=(7,), hp=137
+      class 06: count= 224, rep=(0, 1, 2, 3, 4, 5, 9), score_hist=((1, 1), (2, 2), (3, 1), (4, 2), (5, 1)), c3=8, scc=(7,), hp=47
+      class 07: count= 224, rep=(0, 1, 2, 3, 4, 5, 8), score_hist=((1, 2), (2, 1), (3, 1), (4, 1), (5, 2)), c3=5, scc=(7,), hp=33
+      class 08: count= 224, rep=(0, 1, 2, 3, 4, 5, 10), score_hist=((1, 1), (2, 1), (3, 3), (4, 1), (5, 1)), c3=9, scc=(7,), hp=51
+
+[Terminal runner-phase tournament classes]
+  vertices: the thirteen speeds in increasing-speed order
+  observable: residues s mod 14 at the denominator-14 apex
+  switch/gauge: half-clock cutoff; collisions and diameters broken by speed order
+  tie Hamiltonian path: increasing speed
+  quotient preserves: apex winding/tie class
+  quotient destroys: q-threshold divisibility and off-apex escape size
+
+  AP                       class=T0 q=14, M=1/14, denoms=[14] score_hist=((5, 6), (6, 1), (7, 6)) c3=85 scc=(13,) hp=2641713
+  GW 12->24                class=T1 q=14, M=1/14, denoms=[14] score_hist=((4, 2), (5, 4), (6, 1), (7, 4), (8, 2)) c3=79 scc=(13,) hp=1780425
+  loose 8->16              class=T2 q=14, M=2/23, denoms=[23] score_hist=((5, 2), (6, 9), (7, 2)) c3=89 scc=(13,) hp=3415811
+  loose 10->20             class=T3 q=14, M=2/27, denoms=[27] score_hist=((4, 2), (5, 4), (6, 1), (7, 4), (8, 2)) c3=79 scc=(13,) hp=1795641
+  residue-liar 12->26      class=T0 q=12, M=1/12, denoms=[12] score_hist=((5, 6), (6, 1), (7, 6)) c3=85 scc=(13,) hp=2641713
+  Farey near-miss 12->36   class=T4 q=14, M=3/41, denoms=[41] score_hist=((4, 4), (5, 2), (6, 1), (7, 2), (8, 4)) c3=73 scc=(13,) hp=1236275
+  class groups:
+    T0: AP, residue-liar 12->26
+    T1: GW 12->24
+    T2: loose 8->16
+    T3: loose 10->20
+    T4: Farey near-miss 12->36
+
+[Proof readout]
+  Tournament Analysis is useful only after three exact choices are fixed:
+    (1) vertex set, (2) pairwise observable/cutoff, (3) tie Hamiltonian path.
+  For the apex clock, the achieved tournament classes are a small finite
+  atlas inside the 2x7 clock.  For terminal AP/GW rows, the apex-winding
+  quotient separates some geometry but not the full LRC statement.
+  The next summit lemma should be a state lift:
+    bad LRC14 row -> achieved tournament/OCF class -> forbidden class absent,
+  with q-threshold and off-apex witness data carried outside the quotient.

@@ -1,0 +1,98 @@
+S145 LRC14 MEASURABLE RANK RECOMBINATION
+==============================================================================
+limit=40, workers=8
+[0] Assumption challenge
+  considered vertices:
+    runners, residues, cover arcs, C27 shells, unital blocks, Kpq minors,
+    affine words, owner-private addresses, Borel event codes, and proof obligations.
+  chosen vertices:
+    measurable proof-interface packets on the exact low frontier.
+  preserved LRC predicate:
+    positive Haar measure of GOOD ∩ G_P after exact M/Farey and packet labels.
+  challenged assumption:
+    a scalar low value M or a raw shell transfer is enough.  It is not;
+    the witness address and state-lift route must be retained.
+
+[1] Exact frontier recomputation
+  q>=14 exact rows audited=8674
+  M<=3/41 rows=3
+  M<=2/27 rows=7
+[2] Measurable recombination table for M<=2/27
+  rows=7
+  AP                               M= 1/14 branch=tight-floor           comps=-        depth_sum= 0 suffixes=[]         rank= 0 lift=False route=tight AP floor
+      code=Haar-safe base event
+      transfer=perfect-transversal
+  GW 12->24                        M= 1/14 branch=tight-floor           comps=GW       depth_sum= 3 suffixes=[3]        rank= 0 lift=False route=tight GW floor
+      code=AP/GW-calibrated Borel address
+      transfer=H[12:g3] D[3:g3:11] Z[-]
+  near-miss 12->36                 M= 3/41 branch=K33-unit-excess       comps=K33      depth_sum= 4 suffixes=[4]        rank= 1 lift=True  route=K33 state-lift obligation
+      code=nonunit K33/Kuratowski address
+      transfer=H[12:g3] D[9:g9:20] Z[-]
+  drop(10, 12)->add(20, 24)        M= 2/27 branch=C27-petal-two-block   comps=P10,GW   depth_sum= 7 suffixes=[4, 3]     rank= 0 lift=False route=petal-plus-tight-GW discharge strip
+      code=product Borel code: unit petal x AP/GW
+      transfer=H[10:g1,12:g3] D[3:g3:11,7:g1:11] Z[-]
+  drop(10, 12)->add(20, 36)        M= 2/27 branch=C27-petal-two-block   comps=P10,K33  depth_sum= 9 suffixes=[5, 4]     rank= 1 lift=True  route=petal-plus-K33 state-lift strip
+      code=product Borel code: unit petal x K33
+      transfer=H[10:g1,12:g3] D[7:g1:11,9:g9:20] Z[-]
+  swap 10->20                      M= 2/27 branch=C27-petal-two-block   comps=P10      depth_sum= 1 suffixes=[1]        rank= 0 lift=False route=unit-petal discharge
+      code=unit C27 petal address
+      transfer=H[10:g1] D[7:g1:11] Z[-]
+  swap 13->26                      M= 2/27 branch=C27-petal-two-block   comps=P13      depth_sum= 1 suffixes=[1]        rank= 0 lift=False route=unit-petal discharge
+      code=unit C27 petal address
+      transfer=H[13:g1] D[1:g1:11] Z[-]
+
+[3] Virtual linked-chain depth-14 audit
+  components: GW -> K33 -> P10
+  depths=[3, 4, 1] suffixes=[8, 5, 1] depth_sum=14 beta=137/256
+  all permutations of the same component multiset:
+    ('K33', 'GW', 'P10'): depth_sum=13 suffixes=[8, 4, 1]
+    ('GW', 'K33', 'P10'): depth_sum=14 suffixes=[8, 5, 1] <-- unique LRC14 depth
+    ('K33', 'P10', 'GW'): depth_sum=15 suffixes=[8, 4, 3]
+    ('GW', 'P10', 'K33'): depth_sum=17 suffixes=[8, 5, 4]
+    ('P10', 'K33', 'GW'): depth_sum=18 suffixes=[8, 7, 3]
+    ('P10', 'GW', 'K33'): depth_sum=19 suffixes=[8, 7, 4]
+  readout:
+    depth 14 is not a scalar equality.  It appears only when the
+    AP/GW block is followed by the nonunit K33 block and then by the
+    unit petal discharge address.  This is the order-sensitive state-lift
+    packet that HYP-2947 wants to construct from any surviving bad atom.
+
+[4] Haar/Borel quotient audit
+  global phase             | safe         | compact group translation on T=R/Z
+  C27 shell labels         | keep label   | finite labelled residue packet
+  q=3 unital chart         | keep chart   | branch-local pair-completion chart
+  Kpq/K33 minor flag       | keep flag    | graph-minor predicate, not a measure quotient
+  owner-private deletion   | mandatory    | HYP-2248 address tax
+  raw row scalar M only    | unsafe alone | forgets witness address
+  preserved predicate:
+    positive Haar measure of GOOD ∩ G_P after exact packet labels survive.
+  destroyed only after proof:
+    runner identity and raw residue labels, once a measurable invariant
+    action proves they do not affect the witness event.
+
+[5] Tournament Analysis: measurable proof interfaces
+  vertices are proof interfaces, not runners.
+  pair observable:
+    branch retention, address retention, measurability, state-lift fit,
+    extension-rank control, anti-scalar guard.
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1) hp=1
+  Hamiltonian path:
+    exact M/Farey branch > Haar/Borel witness carrier > C27 owner/carry shell code > q=3 unital local chart > affine order/depth code > K33/Kuratowski state-lift flag > PH bad-child rank > raw scalar count
+
+[6] Proof-attempt verdict
+  M<=3/41 rows in scan: 3
+  M<=2/27 rows in scan: 7
+  route_counts={'K33 state-lift obligation': 1, 'petal-plus-K33 state-lift strip': 1, 'petal-plus-tight-GW discharge strip': 1, 'tight AP floor': 1, 'tight GW floor': 1, 'unit-petal discharge': 2}
+  rank_counts={0: 5, 1: 2}
+  state_lift_obligations=['near-miss 12->36', 'drop(10, 12)->add(20, 36)']
+  unknown_low_frontier_atoms=0
+  No unknown atom appears in the exact M<=2/27 two-swap frontier.
+
+  What this would prove if globalized:
+    after AP-tail and q-threshold reductions, any low-frontier bad atom
+    recombines into either AP/GW tightness, a unit-petal discharge, or
+    a K33/state-lift obligation.  THM-572 already closes the endpoint
+    once the K33 packet is functorially lifted into tournament H=7.
+  Remaining hard theorem:
+    replace the finite two-swap ceiling by a structural theorem that every
+    primitive LRC14 counterexample reaches this measurable packet language.

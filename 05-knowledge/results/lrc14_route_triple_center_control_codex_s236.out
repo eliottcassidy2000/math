@@ -1,0 +1,79 @@
+﻿S236 LRC14 route-triple center-control addendum
+========================================================================
+Core rule
+raw_route_projection=clique_on_route_labels
+legal_interface=tree_over_packet/status/certificate/sidecar/discharge hubs
+serious_route_triple=raw projection has no center
+proof_safe=legal sidecars give exactly one theorem-facing center
+
+Graph median scout
+route_leaf_count=15
+all_route_leaf_triples=455
+raw_projection_unique_centers=0
+raw_projection_empty_centers=455
+legal_sidecar_unique_centers=455
+legal_sidecar_empty_centers=0
+
+Serious route triples
+open_residual_router: routes=('Q_WITNESS', 'COVERING_MOMENT', 'K33_STATE_LIFT')
+  raw_center_count=0 raw_center=[]
+  legal_center_count=1 legal_center=positive_residual_router
+  expected_center=positive_residual_router
+  reading=q witness, covering, and K33 must first agree on the open residual page
+boundary_pair_against_direct_witness: routes=('AP_BOUNDARY', 'GW_BOUNDARY', 'Q_WITNESS')
+  raw_center_count=0 raw_center=[]
+  legal_center_count=1 legal_center=boundary_router
+  expected_center=boundary_router
+  reading=two zero-open atoms force the AP/GW boundary page before direct-witness comparison
+harmonic_backend: routes=('FEJER_INTERVAL', 'RAMANUJAN_PROJECTOR', 'HAAR_ZETA')
+  raw_center_count=0 raw_center=[]
+  legal_center_count=1 legal_center=harmonic_certificate_backend
+  expected_center=harmonic_certificate_backend
+  reading=Fejer, Ramanujan, and Haar clocks must meet at a packet-keyed harmonic backend
+sidecar_guardrail_backend: routes=('MOSER_PARTIAL_CUBE', 'TOEPLITZ_SCALE_GATE', 'ROTH_MINKOWSKI_FENCE')
+  raw_center_count=0 raw_center=[]
+  legal_center_count=1 legal_center=guardrail_sidecar_hub
+  expected_center=guardrail_sidecar_hub
+  reading=external motifs must become legal sidecars before influencing the route
+state_lift_resonance: routes=('C27_PETAL', 'K33_STATE_LIFT', 'F7_THM572_DEBT')
+  raw_center_count=0 raw_center=[]
+  legal_center_count=1 legal_center=resonant_state_lift_router
+  expected_center=resonant_state_lift_router
+  reading=C27, K33, and F7/THM-572 share the state-lift residual interface
+primitive_owner_split: routes=('Q_WITNESS', 'AP_TAIL_Q13', 'COVERING_MOMENT')
+  raw_center_count=0 raw_center=[]
+  legal_center_count=1 legal_center=primitive_period_router
+  expected_center=primitive_period_router
+  reading=two primitive-clock legs force primitive-period control before owner-strip comparison
+
+Packet fields for HYP-2963 median manifests
+route_triple_center_control
+raw_route_clique_center_status
+legal_sidecar_tree_center_status
+median_center_expected_page
+center_page_depth
+center_page_majority_reason
+guardrail_sidecar_center
+center_control_exit
+
+Tournament Analysis
+vertices=proof-interface states and sidecar hubs, not runners
+alternate vertices considered=runners, gaps, route labels, certificates, sidecar columns, discharge exits, proof obligations
+chosen vertices=packet/route/certificate/sidecar/discharge proof states
+pairwise_observable=predicate retention, median uniqueness, sidecar legality, first-missing-sidecar clarity, discharge namedness, formal checkability
+switch=lexicographic retained-payload vector; ties follow the printed Hamiltonian path
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+tie_path=labelled_packet_sheaf > route_triple_center_control > medianized_route_center_gate > median_owner_root_spine > desargues_median_lens > boundary_status_gate > positive_residual_router > sidecar_observability_matrix > harmonic_certificate_backend > resonant_state_lift_router > primitive_period_router > raw_route_label_triangle
+
+Two proof angles selected
+angle_1=residual_route_triples: Q/covering/K33 and C27/K33/F7 must center at a named residual router
+angle_2=guardrail_sidecar_triples: Moser/Toeplitz/Roth carriers must center at a sidecar hub before route choice
+
+Next theorem target
+For every HYP-2963 coarse fiber, every route/status-changing triple should either:
+  (a) have a unique median center after the listed sidecars are attached;
+  (b) expose the first missing sidecar coordinate; or
+  (c) route to AP/GW boundary, Q-witness deck, owner-strip descent, harmonic certificate, or named F7/THM-572 debt.

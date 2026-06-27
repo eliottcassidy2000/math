@@ -1,0 +1,24 @@
+======================================================================
+LRC(14) LEVEL-7 LIFT SIEVE  (kps S31 cont.)
+======================================================================
+
+[V1/V4] Random 13-sets with |H|>=7 (>=7 multiples of 7): sieve + exact M.
+   tested 1500 sets with |H|>=7.
+   level-7 sieve certified: 1500/1500
+   exact M <= 1/14 (counterexamples to LRC14): 0/375 checked
+   => level-7 sieve fired on EVERY |H|>=7 set.  (Supports THM-571'.)
+
+[V2] Per-speed forbidden-lift count at level 7 (7-coprime b => <=1).
+   max forbidden lifts by a single 7-coprime speed over 20000 trials: 1
+   (claim: <=1, so 13-|H| coprime speeds forbid <= 13-|H| < 7 when |H|>=7)
+
+[V3] |H|=6 boundary: does the level-7 sieve fail (residual genuine)?
+   |H|=6 sets tested: 1500; level-7 sieve FAILED on 0 (0.0%).
+   => |H|=6 is below the sieve threshold: residual = covering sets with <=6 mult of 7.
+
+[Residual] After level-7 sieve, LRC(14) reduces to:
+   covering 13-sets with <= 6 multiples of 7  (=> <= 6 multiples of 14).
+   This is STRICTLY smaller than THM-571's |M14|<=6 residual:
+   it also kills every set with 7..12 multiples of 7 but < 7 multiples of 14.
+======================================================================
+DONE

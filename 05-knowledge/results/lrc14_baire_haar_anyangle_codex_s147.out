@@ -1,0 +1,81 @@
+S147 LRC14 BAIRE / HAAR / ANY-ANGLE CARRIER
+==============================================================================
+[0] Scope
+  Vertices considered: Borel events, Baire events, Haar measure, finite
+  endpoint boundaries, Field D*, Theta*, Block A*, ANYA, CWave, and a
+  sixth Haar-Baire Taut Wave* carrier.
+  Chosen quotient: regular-open event carriers with exact M/Farey and
+  C27/K33 owner labels retained.
+  Destroyed data: raw runner identities and unlabelled grid-edge paths.
+
+[1] Finite LRC14 circle events as Borel/Baire/Haar objects
+  danger(v) = {t in R/Z : ||v*t|| < 1/14}
+  each danger(v) is a finite union of arcs; finite Boolean combinations
+  are Borel, Baire, regular-open up to finite endpoint debt.
+
+  row                 danger_mu    safe_mu safe comps   bdry  raw bdry readout
+  AP                          1          0          0      1       182 no open Haar/Baire witness; endpoint-only residual
+  GW 12->24                   1          0          0      1       206 no open Haar/Baire witness; endpoint-only residual
+  near/K33 12->36     1259/1260     1/1260          2      5       230 positive open witness interval(s)
+  petal 10->20          979/980      1/980          2      5       202 positive open witness interval(s)
+  petal 13->26          181/182      1/182          2      5       208 positive open witness interval(s)
+
+[2] Haar / Baire / Borel guardrails
+  Haar theorem  : R/Z is a compact group, so normalized Haar measure exists and is unique; translations t -> t+a and speed maps t -> v*t preserve the measure scale used by LRC.
+  Borel sets    : finite arc unions and their Boolean combinations are Borel; exact endpoint choices belong to the measurable event layer, not to scalar numerology.
+  Baire sets    : on the metric circle these finite arc events also have the Baire property; finite boundaries are meagre, so category sees the same open witness components.
+  anti-collapse : positive Haar measure, comeagreness, and endpoint existence are different predicates; they agree only after regular-open and boundary labels are retained.
+
+[3] Any-angle path-planning carriers
+  algorithm                | path-planning role                                             | LRC14 carrier
+  Field D*                 | interpolates costs across grid cells during dynamic replanning | continuous interpolation warning; useful only after event labels
+  Theta* / Lazy Theta*     | uses line-of-sight parent skipping and lazy visibility checks  | direct witness shortcut, but only when exact obstruction labels survive
+  Block A*                 | uses a local path database over small grid blocks              | finite AP/GW/petal/K33 local atlas
+  ANYA                     | uses interval nodes and taut paths around obstacles            | safe-time intervals as nodes; taut wrap around C27/K33 walls
+  CWave                    | propagates geometric wavefront primitives                      | Haar wavefront of danger/safe arcs on the circle
+  Haar-Baire Taut Wave*    | regular-open Baire nodes with Haar measure and boundary debt   | sixth carrier: measurable taut wavefront with owner/carry labels
+
+[4] Proposed sixth algorithm: Haar-Baire Taut Wave*
+  State:
+    (regular-open Baire set U, Haar mass mu(U), finite boundary debt,
+     C27/K33 owner label, parent taut wall)
+  Expansion:
+    propagate wavefront arcs by circle translations and speed maps;
+    merge states only when Baire code, Haar mass, and owner/carry labels agree.
+  Line-of-sight replacement:
+    not 'segment visible?', but 'does a positive regular-open Haar/Baire witness
+    survive after deleting the known C27/K33 obstacle walls?'
+  Heuristic:
+    exact Farey excess e=14p-q, C27 shell depth, and boundary debt.
+  LRC proof use:
+    AP/GW are endpoint-only residuals; loose rows expose positive open
+    witness components; the state-lift branch must preserve the owner label
+    of the boundary wall that killed the open component.
+
+[5] Tournament Analysis on carriers
+  observable tuple:
+    measurability retention, interval-node strength, taut-wall retention,
+    finite-atlas fit, dynamic-update fit, scalar-decoy resistance
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0
+  conservative order:
+    1. Haar-Baire Taut Wave*
+    2. CWave
+    3. ANYA
+    4. Block A*
+    5. Theta* / Lazy Theta*
+    6. Field D*
+
+[6] POKE proof targets
+  T1. regular-open endpoint lemma: For finite LRC14 rows, replace every event by its regular-open interior plus finite boundary debt; prove Haar mass and Baire open components are unchanged.
+  T2. taut-wall ANYA lemma: If a loose row has a positive witness interval, its endpoint walls should wrap tautly around a named C27 shell or K33 incidence owner.
+  T3. lazy visibility lemma: Delay expensive owner/carry checks until a candidate interval is expanded, as Lazy Theta* delays line-of-sight checks.
+  T4. block database lemma: Cache the finite AP/GW/petal/K33 local atlas as Block A* caches local path tables.
+  T5. Haar wavefront lemma: Use normalized Haar measure on R/Z or finite tori as the invariant mass behind p0, GOOD, denseSet, and safeSet events.
+  T6. Baire obstruction lemma: Separate endpoint-only tight residuals from positive open witnesses by Baire category before scalar measure estimates enter.
+
+[7] Final readout
+  Borel/Baire/Haar language is useful for LRC14 only when it retains the
+  event algebra: regular-open witness intervals, finite boundary debt,
+  and owner/carry labels.  The creative path-planning analogue is not
+  another grid shortest-path algorithm; it is a measurable taut-wave
+  proof search over the C27/K33 wall arrangement.

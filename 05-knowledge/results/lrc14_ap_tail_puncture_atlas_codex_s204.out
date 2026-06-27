@@ -1,0 +1,83 @@
+=== LRC14 AP-tail puncture atlas S204 ===
+tail_family=S_m={1,...,12,m} max_tail=400 target_word=MFCMMCCFFFCCC
+bank=HYP-2963 target_rows=639 packets=639 single_limit=180 two_swap_limit=36
+
+[0] Assumption challenge
+  considered vertices:
+    runners, the AP core, tail parameter m, mod-14 owner strips,
+    q=13 punctures, exact-period witnesses, fixed-point equations,
+    safe-component stalks, route labels, and proof obligations.
+  chosen vertices:
+    AP-tail repair clocks and stalk quotients, not runners.
+  preserved LRC predicate:
+    existence of a strict witness for S_m={1,...,12,m}, and route
+    purity in the target AP/GW automatic fiber.
+  destroyed information:
+    raw runner identity beyond the AP-tail parameter, non-largest
+    components, and non-tail packet labels unless reattached.
+  challenged assumption:
+    a mod-14 owner strip is not a complete clock; it must be paired
+    with the q=13 puncture/fixed-point address.
+
+[1] AP-tail two-clock theorem
+  scanned_m=13..400
+  counts={'ap_boundary': 1, 'q13_puncture': 358, 'fixed_point_tail': 29}
+  non_strict_except_AP=0
+  min_strict_margin=1/378
+    min_margin_row m=26 kind=fixed_point_tail t=2/27 height=2/27
+  proof:
+    If 13 does not divide m, t=1/13 gives every speed a nonzero
+    residue mod 13, hence distance at least 1/13 > 1/14.
+    If m=13s and s>=2, t=s/(13s+1) makes runners 1 and m
+    bind at distance t.  For 2<=j<=12 in the AP core, the
+    distance is j*t or 1-j*t, and both are at least t; moreover
+    t>1/14 exactly when s>1.  The single exception s=1 is AP.
+
+[2] HYP-3029 residual tooth atlas
+  coarse_stalk_mixed_route_fibers=2
+  residual[1] size=2 routes={'Q-WITNESS': 1, 'COVERING-MOMENT': 1}
+    13->104                  route=COVERING-MOMENT  m=104 mod14= 6 mod13= 0 s=   8 cert=fixed_point_tail t=  8/105 h=  8/105 M=  8/105 stalk_len=  1/208 peak=  8/105
+    13->118                  route=Q-WITNESS        m=118 mod14= 6 mod13= 1 s=   - cert=q13_puncture     t=   1/13 h=   1/13 M=   1/13 stalk_len=  1/236 peak=  9/119
+  residual[2] size=2 routes={'Q-WITNESS': 1, 'COVERING-MOMENT': 1}
+    13->117                  route=COVERING-MOMENT  m=117 mod14= 5 mod13= 0 s=   9 cert=fixed_point_tail t=  9/118 h=  9/118 M=  9/118 stalk_len=  4/819 peak=  9/118
+    13->159                  route=Q-WITNESS        m=159 mod14= 5 mod13= 3 s=   - cert=q13_puncture     t=   1/13 h=   1/13 M=   1/13 stalk_len= 4/1113 peak=   3/40
+  readout:
+    The coarse stalk kept the same mod-14 owner strip but erased
+    whether the tail punctures q=13.  Reattaching the q=13 bit
+    or the explicit AP-tail certificate makes these fibers route-pure.
+
+[3] Repair-carrier ladder on the target automatic fiber
+  carrier                         fibers mixR maxMix mixRows purity
+  residue_terminal                   181   27     30     300  85.0%
+  coarse_stalk                       473    2      2       4  99.5%
+  coarse_plus_q13_bit                585    0      0       0 100.0%
+  coarse_plus_tail_certificate       585    0      0       0 100.0%
+  coarse_plus_peak_height            477    0      0       0 100.0%
+  exact_stalk                        515    0      0       0 100.0%
+  magnitude_cocycle                  546    0      0       0 100.0%
+
+[4] Tournament Analysis
+  vertices_are=repair clocks and proof carriers, not runners
+  observable=route_purity,max_mixed,exact_period_retention,owner_strip,
+             local_geometry,family_proof_scope,proof_cost
+  switch=majority comparison of observable vectors
+  tie_hamiltonian_path=residue_terminal > coarse_stalk > coarse_plus_q13_bit > coarse_plus_tail_certificate > coarse_plus_peak_height > exact_stalk > magnitude_cocycle
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  first_hamiltonian_path=coarse_plus_tail_certificate > coarse_plus_q13_bit > coarse_plus_peak_height > exact_stalk > magnitude_cocycle > coarse_stalk > residue_terminal
+
+[5] Proof readout
+  1. The AP-tail family S_m={1,...,12,m} is completely discharged
+     by the q=13 puncture clock plus the fixed-point tail clock.
+  2. The two S193 coarse-stalk residuals are not new F7 debt.  They
+     are controlled-kernel examples: mod-14 owner geometry collided,
+     and the missing coordinate was exactly m mod 13.
+  3. HYP-3031's zeta repair class for these teeth is nested
+     refinement with an owner-strip witness: the quotient may forget
+     the mixed coordinate only after proving the AP-tail formula.
+  4. New LRC14 target: identify other large automatic-fiber residuals
+     that are just AP-core plus one or two tail punctures, then prove
+     the same reciprocal fixed-point certificate before invoking
+     heavier Fejer/THM-572 machinery.

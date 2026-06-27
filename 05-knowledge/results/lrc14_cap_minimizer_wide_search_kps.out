@@ -1,0 +1,8 @@
+j=4: searched 2925 sets (1 in P, rest in 2..28)
+   min meas = 1979/4004 = 0.494256  at P=(1, 11, 12, 13)
+   canonical cap = 1979/4004  MATCH
+   smooth C(14-j,2)/91 = 45/91, dip = -1/4004
+j=5: searched 17550 sets (1 in P, rest in 2..28)
+   min meas = 2243/5880 = 0.381463  at P=(1, 5, 7, 8, 9)
+   canonical cap = 2243/5880  MATCH
+   smooth C(14-j,2)/91 = 36/91, dip = -1081/76440

@@ -51,6 +51,9 @@ import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCLowerThresholdNeighborhood
 import TournamentH7.LRCMreachConcrete
+import TournamentH7.LRCApex7Floor
+import TournamentH7.LRCUnitGrid14
+import TournamentH7.LRCBindingPair
 import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
@@ -67,8 +70,64 @@ import TournamentH7.LRCWitnessFloorConcrete
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCWitnessPartA
 import TournamentH7.LRCL7Discrepancy
+import TournamentH7.LRCApexShell
+import TournamentH7.LRCTournamentStateLift
+import TournamentH7.LRCBleedingEdgeFrontier
 
 open Tournament
+
+/-! ### LRC14 bleeding-edge frontier observer packet -/
+
+theorem lrc14_bleeding_edge_frontier_packet_mreach_audit
+    {v : Fin 13 → ℤ}
+    (packet : LonelyRunner.LRC14.BleedingEdgeFrontierPacket v) :
+    (1 : ℝ) / 14 ≤ LonelyRunner.LRC14.Mreach v :=
+  LonelyRunner.LRC14.bleedingEdgeFrontierPacket_mreach packet
+#print axioms lrc14_bleeding_edge_frontier_packet_mreach_audit
+
+theorem lrc14_from_bleeding_edge_frontier_coverage_audit
+    (hcoverage : LonelyRunner.LRC14.BleedingEdgeFrontierCoverage) :
+    LonelyRunner.LRC14.LRC14Statement :=
+  LonelyRunner.LRC14.lrc14_from_bleeding_edge_frontier_coverage hcoverage
+#print axioms lrc14_from_bleeding_edge_frontier_coverage_audit
+
+/-! ### LRC14 denominator-14 binding-pair arithmetic -/
+
+theorem lrc_binding_pair_dvd_audit (a si sj : ℤ)
+    (ha : IsCoprime (14 : ℤ) a)
+    (hi : si * a ≡ 1 [ZMOD 14])
+    (hj : sj * a ≡ -1 [ZMOD 14]) :
+    (14 : ℤ) ∣ si + sj :=
+  LonelyRunner.BindingPair.binding_pair_dvd a si sj ha hi hj
+#print axioms lrc_binding_pair_dvd_audit
+
+/-! ### LRC14 apex-shell arithmetic kernel -/
+
+theorem lrc_apex_shell_fourteen_dvd_pair_sum_audit (u v a m n D : ℤ)
+    (hcop : IsCoprime D a)
+    (hpos : 14 * (u * a - m * D) = D)
+    (hneg : 14 * (v * a - n * D) = -D) :
+    (14 : ℤ) ∣ u + v :=
+  LonelyRunner.ApexShell.fourteen_dvd_pair_sum_of_opposite_bindings
+    u v a m n D hcop hpos hneg
+#print axioms lrc_apex_shell_fourteen_dvd_pair_sum_audit
+
+/-! ### LRC14 tournament-state lift closure endpoint -/
+
+theorem lrc14_no_tournament_state_lift_audit
+    (L : LonelyRunner.TournamentStateLift) : False :=
+  LonelyRunner.no_tournament_state_lift L
+#print axioms lrc14_no_tournament_state_lift_audit
+
+theorem lrc14_not_bad_of_tournament_state_lift_audit {Bad : Prop}
+    (hLift : Bad → LonelyRunner.TournamentStateLift) : ¬ Bad :=
+  LonelyRunner.not_bad_of_tournament_state_lift hLift
+#print axioms lrc14_not_bad_of_tournament_state_lift_audit
+
+theorem lrc14_not_bad_of_H_eq_seven_lift_audit {Bad : Prop}
+    (hLift : Bad → ∃ n : ℕ, ∃ T : Tournament n, H T = 7) : ¬ Bad :=
+  LonelyRunner.not_bad_of_H_eq_seven_lift hLift
+#print axioms lrc14_not_bad_of_H_eq_seven_lift_audit
 
 /-! ### LRC14 HYP-2805 genuine-wide correction kernel -/
 
@@ -188,6 +247,28 @@ theorem lrc_concrete_lonely_of_mreach_ge_audit
     ∃ t : ℝ, LonelyRunner.Lonely 14 v t :=
   LonelyRunner.LRC14Concrete.lonely_of_Mreach_ge v hv hM
 #print axioms lrc_concrete_lonely_of_mreach_ge_audit
+
+/-! ### LRC14 denominator-14 unit-grid sieve and apex floor ### -/
+
+theorem lrc14_denom14_unit_lonely_iff_no_multiple_audit
+    {ι : Type*} (a : ℤ) (hcop : IsCoprime (14 : ℤ) a) (v : ι → ℤ) :
+    LonelyRunner.Lonely 14 v ((a : ℝ) / 14) ↔
+      ∀ i, ¬ ((14 : ℤ) ∣ v i) :=
+  LonelyRunner.UnitGrid14.denom14_unit_lonely_iff_no_multiple a hcop v
+#print axioms lrc14_denom14_unit_lonely_iff_no_multiple_audit
+
+theorem lrc14_counterexample_needs_multiple14_audit
+    {ι : Type*} (v : ι → ℤ) (hcex : ∀ t : ℝ, ¬ LonelyRunner.Lonely 14 v t) :
+    ∃ i, (14 : ℤ) ∣ v i :=
+  LonelyRunner.UnitGrid14.counterexample_needs_multiple14 v hcex
+#print axioms lrc14_counterexample_needs_multiple14_audit
+
+theorem lrc14_apex7_D14_never_certifies_audit
+    (S : Finset ℤ) (s : ℤ) (hsS : s ∈ S) (hs : (14 : ℤ) ∣ s) (a : ℤ) :
+    ∃ t ∈ S,
+      LonelyRunner.LRC14Concrete.nearInt ((t : ℝ) * ((a : ℝ) / 14)) < 1 / 14 :=
+  LonelyRunner.Apex7.D14_never_certifies S s hsS hs a
+#print axioms lrc14_apex7_D14_never_certifies_audit
 
 /-! ### LRC14 geometric gap-to-reach core -/
 

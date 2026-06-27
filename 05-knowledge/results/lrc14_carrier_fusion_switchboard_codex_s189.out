@@ -1,0 +1,57 @@
+LRC14 carrier-fusion switchboard (codex-2026-06-26-S189)
+source_threads=HYP-3025,HYP-3024,HYP-3023,HYP-3022,HYP-3021,HYP-3020,HYP-3018,HYP-3017,HYP-3016,HYP-3015,HYP-3014,HYP-3013,HYP-3009,HYP-2963
+external_prompts=2-adic_Littlewood_Hurwitz_doubling,Ostrowski-Hadamard_lacunarity,large_sticks_and_potatoes
+
+Exact row readout
+name route status M@t safe_mu bars longest_stick midpoint_slack chart endpoint_current magnitude automatic_word doubling_word
+AP13 | BOUNDARY-AP-GW | boundary | 1/14@1/14 | 0 | 0 | 0 | 0 | 1/14(6) | B6Z6 | id|h=0|d=0 | MFCMMCCFFFCCC | C>C:6,F>F:1,F>M:3,M>F:3
+GW_12_to_24 | BOUNDARY-AP-GW | boundary | 1/14@1/14 | 0 | 0 | 0 | 0 | 1/14(6) | B6Z6 | drop12_add24|h=24|d=12 | MFCMMCCFFFCCC | C>C:6,F>F:1,F>M:3,M>F:3
+K33_12_to_36 | K33-STATE-LIFT | open | 3/41@17/41 | 1/1260 | 2 | 1/2520 | 1/1008 | 1/14(6) | B10Z6 | drop12_add36|h=36|d=24 | MFCMMCCFFFCCF | C>C:5,F>F:2,F>M:3,M>F:3
+loose_12_to_26 | Q-WITNESS | open | 1/12@1/12 | 426/35035 | 4 | 1/245 | 1/98 | 1/12(4) | B14Z6 | drop12_add26|h=26|d=14 | MFCMMCCFFFCCC | C>C:6,F>F:1,F>M:3,M>F:3
+loose_12_to_96 | Q-WITNESS | open | 8/101@42/101 | 5219/840840 | 8 | 11/6720 | 11/2688 | 1/14(6) | B22Z6 | drop12_add96|h=96|d=84 | MFCMMCCFFFCCC | C>C:6,F>F:1,F>M:3,M>F:3
+GW_fiber_tail_12_to_38 | Q-WITNESS | open | 1/12@1/12 | 426/35035 | 4 | 1/245 | 1/98 | 1/12(4) | B14Z6 | drop12_add38|h=38|d=26 | MFCMMCCFFFCCC | C>C:6,F>F:1,F>M:3,M>F:3
+GW_fiber_tail_12_to_52 | Q-WITNESS | open | 1/12@1/12 | 426/35035 | 4 | 1/245 | 1/98 | 1/12(4) | B14Z6 | drop12_add52|h=52|d=40 | MFCMMCCFFFCCC | C>C:6,F>F:1,F>M:3,M>F:3
+GW_fiber_tail_12_to_150 | Q-WITNESS | open | 1/12@1/12 | 426/35035 | 4 | 1/245 | 1/98 | 1/12(4) | B14Z6 | drop12_add150|h=150|d=138 | MFCMMCCFFFCCC | C>C:6,F>F:1,F>M:3,M>F:3
+petal_10_to_20 | BOUNDARY-PETAL-SPORADIC | open | 2/27@8/27 | 1/980 | 2 | 1/1960 | 1/560 | 1/14(6) | B10Z6 | drop10_add20|h=20|d=10 | MFCMMCCFFCCCM | C>C:6,F>F:1,F>M:2,M>F:4
+petal_13_to_26 | BOUNDARY-PETAL-SPORADIC | open | 2/27@2/27 | 1/182 | 2 | 1/364 | 1/728 | 1/14(6) | B10Z6 | drop13_add26|h=26|d=13 | MFCMMCCFFFCCC | C>C:6,F>F:1,F>M:3,M>F:3
+P10_plus_GW | BOUNDARY-PETAL-SPORADIC | open | 2/27@8/27 | 1/980 | 2 | 1/1960 | 1/560 | 1/14(6) | B10Z6 | drop10.12_add20.24|h=24|d=22 | MFCMMCCFFCCMC | C>C:6,F>F:1,F>M:2,M>F:4
+P10_plus_K33 | K33-STATE-LIFT | open | 2/27@8/27 | 4/2205 | 4 | 1/1960 | 1/560 | 1/14(6) | B14Z6 | drop10.12_add20.36|h=36|d=34 | MFCMMCCFFCCMF | C>C:5,F>F:2,F>M:2,M>F:4
+cover_12_to_84 | COVERING-MOMENT | open | 7/89@37/89 | 563/105105 | 8 | 3/1960 | 3/784 | 17/41(2) | B16Z0 | drop12_add84|h=84|d=72 | MFCMMCCFFFCCM | C>C:5,F>F:1,F>M:3,M>F:4
+fibbinary_first13 | AUTOMATIC-OPEN-CONTROL | open | 3/25@4/25 | 66077/399840 | 38 | 9/448 | 9/896 | 1/11(10) | B78Z2 | drop3.6.7.11.12.13_add16.17.18.20.21.32|h=32|d=72 | MFMMFFFMMFMMF | F>F:2,F>M:4,M>F:7
+moser_de_bruijn_first13 | AUTOMATIC-OPEN-CONTROL | open | 1/6@1/6 | 4264747/40348854 | 64 | 457/72576 | 1591/145152 | 1/6(2) | B136Z8 | drop2.3.6.7.8.9.10.11.12.13_add16.17.20.21.64.65.68.69.80.81|h=81|d=420 | MMMMMMMMMMMMM | M>F:13
+
+Carrier quotient stress test
+key rows fibers mixed_status_fibers mixed_route_fibers largest_fiber
+raw_automatic_word | 15 | 8 | 1 | 1 | 8
+  mixed_status_examples: 'MFCMMCCFFFCCC'=>AP13,GW_12_to_24,loose_12_to_26,loose_12_to_96,GW_fiber_tail_12_to_38
+automatic_plus_chart_den | 15 | 9 | 1 | 1 | 4
+  mixed_status_examples: ('MFCMMCCFFFCCC', 14)=>AP13,GW_12_to_24,loose_12_to_96,petal_13_to_26
+automatic_plus_barcode_shape | 15 | 11 | 0 | 0 | 4
+automatic_plus_magnitude | 15 | 15 | 0 | 0 | 1
+endpoint_current_plus_chart | 15 | 8 | 0 | 1 | 4
+fusion_signature | 15 | 15 | 0 | 0 | 1
+
+Carrier-Fusion Tournament Analysis
+vertices=proof carriers and sidecar bundles, not runners/arcs
+pairwise_observable=predicate,exactness,topology,arithmetic,endpoint,route_split,family_transfer,computable,anti_scalar
+tie_hamiltonian_path=labelled_packet_fusion_signature>large_stick_potato_safe_body>lonely_profile_barcode>magnitude_cocycle_fiber>endpoint_current_cocycle>crt_solenoid_lift_chart>danger_count_dual_distribution>hurwitz_doubling_state>automatic_word_sidecar>raw_row_name
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+first_hamiltonian_path=labelled_packet_fusion_signature>magnitude_cocycle_fiber>large_stick_potato_safe_body>lonely_profile_barcode>endpoint_current_cocycle>crt_solenoid_lift_chart>danger_count_dual_distribution>hurwitz_doubling_state>automatic_word_sidecar>raw_row_name
+
+Switchboard readout
+best_creative_carriers:
+  large_stick_potato_safe_body = largest strict safe interval plus total safe body; geometric analogue of largest inscribed safe subset
+  labelled_packet_fusion_signature = status, barcode, CRT chart, endpoint current, magnitude cocycle, automatic word, danger-count dual
+  magnitude_cocycle_fiber = missing coordinate inside the AP/GW automatic-language fibers
+  hurwitz_doubling_state = useful 2-adic sidecar, but not an archimedean certificate
+leakage_rule:
+  automatic words and doubling states remain telemetry until fusion_signature or an equivalent packet theorem proves fiber purity
+smallest_positive_open_row=K33_12_to_36|mu=1/1260|stick=1/2520|slack=1/1008
+covering_chart_shift=cover_12_to_84|chart=17/41(2)|endpoint_current=B16Z0|magnitude=drop12_add84
+
+Assumption challenge
+Alternate vertices considered: runners, gaps, fixed circle sections, section boundaries, wall-crossing events, residues, cover arcs, Fourier modes, matroid circuits, persistence bars, CRT charts, doubling states, large safe sticks/potatoes, quotient fibers, and proof obligations.
+Chosen vertices are proof carriers.  The quotient preserves the LRC14 predicate only after strict-open status, exact safe topology, chart, endpoint current, magnitude cocycle, and sidecar words stay attached.  It destroys raw runner identity and rejects the assumption that Moser/fibbinary or 2-adic state is theorem-safe by itself.

@@ -1,0 +1,84 @@
+S142 LRC14 AFFINE-DEPTH UNITAL CHAIN
+==============================================================================
+[0] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, C27 residues, unital blocks, calibrated transfer pairs,
+    affine words, suffix-depth profiles, triangular strips, K33 flags,
+    and proof obligations.
+  chosen quotient:
+    calibrated S140 transfer components composed as affine a/b words.
+  quotient preserves:
+    C27 gcd depth, unital block intersections, branch order, and
+    exact M/Farey labels through external metadata.
+  quotient destroys:
+    exact safe-time geometry and any canonical AP8 symmetry.
+  challenged assumption:
+    the triangular/perfect-number motif is only scalar numerology.
+    Here it becomes a noncommutative depth-order certificate.
+
+[1] Component depths from C27 strata
+  depth = 1 + depth_gcd(hole) + depth_gcd(double),
+  where unit,gcd3,gcd9 strata have depths 0,1,2.
+  GW  GW 12->24          strata=(1, 1) depth=3 block=('AP', 'D3', 'GW', 'H12') note=AP/GW anchor block
+  K33 near-miss 12->36   strata=(1, 2) depth=4 block=('D10', 'D9', 'H12', 'H9') note=near/K33 block
+  P10 petal 10->20       strata=(0, 0) depth=1 block=('D7', 'D9', 'H10', 'H13') note=unit petal10 block
+  P13 petal 13->26       strata=(0, 0) depth=1 block=('D1', 'D11', 'D12', 'H13') note=unit petal13 block
+
+[2] S138 two-block splice affine strips
+  ('P10', 'GW'): component_depths=[1, 3] word=babaaa suffix_depths=[4, 3] depth_sum=7 beta=3/16 union_size=8 intersections=((),)
+  ('P10', 'K33'): component_depths=[1, 4] word=babaaaa suffix_depths=[5, 4] depth_sum=9 beta=3/32 union_size=7 intersections=(('D9',),)
+  ('GW', 'P10'): component_depths=[3, 1] word=baaaba suffix_depths=[4, 1] depth_sum=5 beta=9/16 union_size=8 intersections=((),)
+  ('K33', 'P10'): component_depths=[4, 1] word=baaaaba suffix_depths=[5, 1] depth_sum=6 beta=17/32 union_size=7 intersections=(('D9',),)
+  readout:
+    P10 then GW gives suffix depths [4,3] and sum 7.
+    P10 then K33 gives [5,4] and sum 9, one depth level higher.
+    Reversing the order changes the invariant.  The affine packet is
+    noncommutative, as required by the S140 branch-local rule.
+
+[3] S140 linked unital chain
+  linked order GW -> K33 -> P10: component_depths=[3, 4, 1] word=baaabaaaaba suffix_depths=[8, 5, 1] depth_sum=14 beta=137/256 union_size=10 intersections=(('H12',), (), ('D9',))
+  all permutations of the same depth multiset [3,4,1]:
+    depths=(1, 3, 4) suffix=[8, 7, 4] sum=19 beta=19/256
+    depths=(1, 4, 3) suffix=[8, 7, 3] sum=18 beta=35/256
+    depths=(3, 1, 4) suffix=[8, 5, 4] sum=17 beta=25/256
+    depths=(3, 4, 1) suffix=[8, 5, 1] sum=14 beta=137/256 <-- S140 linked order
+    depths=(4, 1, 3) suffix=[8, 4, 3] sum=15 beta=49/256
+    depths=(4, 3, 1) suffix=[8, 4, 1] sum=13 beta=145/256
+  readout:
+    The S140 path order gives suffix-depth sum 14 exactly.
+    The other five orders give 13,15,17,18,19.  Thus LRC14 appears
+    as an order-sensitive affine-depth signature, not as a raw count.
+    Triangular comparison: T_4=10, T_5=15;
+    depth 14 is the interior strip between nearby triangular totals,
+    selected by the AP/GW--H12--K33--D9--petal chain.
+
+[4] Tournament Analysis
+  vertices: proof carriers, not runners.
+  pairwise observable:
+    (M/Farey retention, unital incidence retention, affine order retention,
+     finite checkability, state-lift fit, anti-scalar guard).
+  switch/gauge: lexicographically larger role score wins.
+    exact M/Farey branch               score=(6, 6, 6, 5, 5, 6) role=keeps p/q, q, and excess e=14p-q
+    C27 unital calibrated chain        score=(5, 6, 6, 5, 5, 6) role=AP/GW--H12--near/K33--D9--petal10 packet
+    affine depth-14 signature          score=(5, 5, 5, 5, 5, 6) role=noncommutative depth sum 14 for linked S140 order
+    two-block splice strips            score=(5, 5, 5, 5, 4, 6) role=P10+GW and P10+K33 triangular-strip depths
+    Kpq/K33 owner packet               score=(5, 4, 4, 4, 6, 5) role=p>=3 incidence and forbidden-H state-lift address
+    triangular/perfect product lane    score=(4, 4, 4, 5, 3, 5) role=T_{2x-1} and p*(14p-1) product/coimage side channel
+    raw scalar equality                score=(1, 1, 1, 2, 1, 1) role=false equality if used without labels
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1} c3=0 hp=1
+  Hamiltonian carrier order:
+    exact M/Farey branch > C27 unital calibrated chain > affine depth-14 signature > two-block splice strips > Kpq/K33 owner packet > triangular/perfect product lane > raw scalar equality
+
+[5] Proof readout
+  HYP-2941 said to attach affine-depth packets after exact labels.
+  HYP-2942 supplies the calibrated labels.  Under the component-depth
+  rule above, the linked K33 path has affine suffix-depth sum 14.
+  Candidate lemma refinement:
+    In the second-gap frontier, any residual that reaches the calibrated
+    AP/GW--H12--near/K33--D9--petal10 path should carry the depth-14
+    affine signature.  Unit-only splices stay in lower triangular strips
+    and should discharge by C27 petal/two-swap rigidity; depth-14 linked
+    packets should feed the HYP-2908 / THM-572 forbidden-H state lift.
+  LRC14 is not proved here.  The contribution is a concrete packet
+  grammar that turns the repeated triangular/perfect-number prompt into
+  an order-sensitive invariant on the known low-frontier branches.

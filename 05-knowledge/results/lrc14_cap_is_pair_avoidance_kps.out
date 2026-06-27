@@ -1,0 +1,10 @@
+min_{|P|=j} meas(lonely(P)) vs C(14-j,2)/C(14,2):
+ j predicted C(14-j,2)/91     computed min            minimizer P match
+ 1                    6/7              6/7                   (1,) EXACT
+ 2                  66/91            66/91                (1, 13) EXACT
+ 3                  55/91            55/91            (1, 12, 13) EXACT
+ 4                  45/91        1979/4004        (1, 11, 12, 13) dev=-0.00025
+ 5                  36/91        2243/5880        (1, 5, 7, 8, 9) dev=-0.01414
+
+Interpretation: cap is the PAIRWISE (order-2) avoidance prob, exact for j<=3;
+j>=4 (k<=9) is where 3+-point correlation dips it below = the LRC(14) difficulty.

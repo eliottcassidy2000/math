@@ -57,6 +57,11 @@
                                       width scout.
     · TournamentH7.LRCMreachConcrete — concrete Mreach compactness bridge
                                       for the LRC14 reach-to-lonely step.
+    · TournamentH7.LRCApex7Floor — apex-7 denominator-14 obstruction.
+    · TournamentH7.LRCUnitGrid14 — exact denominator-14 unit-grid sieve.
+    · TournamentH7.LRCBindingPair — denominator-14 binding-pair arithmetic.
+    · TournamentH7.LRCTournamentStateLift — formal closure endpoint for
+                                      HYP-2908's tournament-state lift route.
     · TournamentH7.LRCWitnessAttainment — general `distZ`/margin witness
                                       attainment on a compact period.
     · TournamentH7.LRCWitnessAttainmentBridge — equivalence between the
@@ -87,7 +92,30 @@
                                       nodes plus exact arithmetic.
     · TournamentH7.LRCWitnessPartA — finite-Vmax error-budget glue for the
                                       LRC14 direct witness implication.
+    · TournamentH7.LRCMedianCenterControl — HYP-3070 route-triple
+                                      center-control interface and exact
+                                      formal gap to LRC14.
     · TournamentH7.LRCL7Discrepancy — Finite integer core of the L7 discrepancy.
+    · TournamentH7.LRCModularCuspLedger — S246 q-Pochhammer/modular-cusp
+                                      finite-principal-part ledger and
+                                      sixth-power collision face map.
+    · TournamentH7.LRCFiniteAddressBranchClosure — S254 finite-address
+                                      branch-packet interface joining q-cusp,
+                                      Hurwitz, protected-branch, moment-dual,
+                                      median-center, and terminal exits.
+    · TournamentH7.LRCObserverGluingLedger — S259 observer-chart gluing
+                                      ledger joining direct-arc, normalized
+                                      arc, pair-scissors, CRT/Farey, and
+                                      finite-address terminal certificates.
+    · TournamentH7.LRCBleedingEdgeFrontier — observer-gluing frontier wrapper
+                                      joining equivalence-triad, Pascal
+                                      pair-mass, polynomial-route, and
+                                      moment-degree sidecars to the
+                                      finite-address packet.
+    · TournamentH7.LRCProofFrontier — S259/HYP-3107 proof-frontier ledger
+                                      joining solved gates, cap arithmetic,
+                                      observer-gluing, and residual packet
+                                      producer obligations.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -149,6 +177,10 @@ import TournamentH7.LRCGk8SingleFar
 import TournamentH7.LRCDoubletWitnessFloor
 import TournamentH7.LRCLowerThresholdNeighborhood
 import TournamentH7.LRCMreachConcrete
+import TournamentH7.LRCApex7Floor
+import TournamentH7.LRCUnitGrid14
+import TournamentH7.LRCBindingPair
+import TournamentH7.LRCTournamentStateLift
 import TournamentH7.LRCGapReach
 import TournamentH7.LRCWitnessAttainment
 import TournamentH7.LRCWitnessAttainmentBridge
@@ -165,5 +197,13 @@ import TournamentH7.LRCWitnessFloorConcrete
 import TournamentH7.LRCFourteenSkeleton
 import TournamentH7.LRCWitnessBonferroni
 import TournamentH7.LRCWitnessPartA
+import TournamentH7.LRCMedianCenterControl
 import TournamentH7.LRCL7Discrepancy
+import TournamentH7.LRCApexShell
+import TournamentH7.LRCModularCuspLedger
+import TournamentH7.LRCFiniteAddressBranchClosure
+import TournamentH7.LRCObserverGluingLedger
+import TournamentH7.LRCBleedingEdgeFrontier
+import TournamentH7.LRCProofFrontier
+import TournamentH7.LRCCrystallographicThetaFrontier
 import TournamentH7.Verify

@@ -1,0 +1,83 @@
+================================================================================
+S216: TOURNAMENT DIAGONAL-LAYER TRANSPORT
+================================================================================
+1. DIAGONAL EXTENSION CENSUS
+   A parent n-class plus a binary diagonal word of length n builds a child (n+1)-class.
+   Word orbits under Aut(parent) are exactly rooted child classes; child sinks are unrooted classes.
+
+   n -> n+1  U(n)  raw=U(n)2^n  layer_orbits  rooted  U(n+1)  raw/rooted  rooted/U  source  sink  orbit=vertex_orbits
+   1 -> 2      1             2             2       2       1       1.000     2.000       1     1  True
+   2 -> 3      1             4             4       4       2       1.000     2.000       1     1  True
+   3 -> 4      2            16            12      12       4       1.333     3.000       2     2  True
+   4 -> 5      4            64            48      48      12       1.333     4.000       4     4  True
+   5 -> 6     12           384           296     296      56       1.297     5.286      12    12  True
+
+   DUPLICATION HISTOGRAMS AT THE FIRST SHIFTED FAILURE SURFACE (5 -> 6)
+   parent automorphism sizes among 5-classes: {1: 7, 3: 4, 5: 1}
+   diagonal word orbit sizes under parent automorphisms: {1: 258, 3: 32, 5: 6}
+   rooted extension orbits per 6-class: {2: 5, 4: 10, 6: 41}
+   raw labelled extensions per 6-class: {2: 5, 4: 10, 6: 15, 8: 12, 10: 11, 12: 2, 14: 1}
+   unique deletion-parent classes per 6-class: {1: 3, 2: 6, 3: 13, 4: 13, 5: 17, 6: 4}
+   max repeated deletion-parent multiplicity per 6-class: {1: 4, 2: 27, 3: 17, 4: 3, 5: 2, 6: 3}
+
+2. TWO-LAYER POSITION-LINE FLOW
+   Consecutive geometric layers have k and k+1 tile positions.
+   The complete carrier K_{k,k+1} has k(k+1) position-lines, while the binary labels are two words with 2k+1 bits.
+
+   k  K_edges  raw_word_pairs  stored_bits  line_profiles  aligned_profiles  score_cycle_profiles  cycle_values
+   1        2               8            3              6                 8                     8             2
+   2        6              32            5             12                20                    20             3
+   3       12             128            7             20                40                    40             4
+   4       20             512            9             30                70                    70             5
+   5       30            2048           11             42               112                   112             6
+   6       42            8192           13             56               168                   168             7
+
+   Exact laws:
+   - If a=sum(w) and b=sum(u), the K-line label counts are
+     N00=(k-a)(k+1-b), N01=(k-a)b, N10=a(k+1-b), N11=ab.
+   - Therefore N00*N11=N01*N10: every line-count matrix has rank one.
+   - The triangles using the two newest vertices are read only from aligned pairs
+     (w_i,u_i) and the link bit ell=u_k:
+     c3_newest_pair = #{i<k : w_i=ell and u_i!=ell}.
+   - Score flow is affine: old vertex i gains w_i+u_i, vertex k gains
+     k-sum(w)+u_k, and the newest vertex has outdegree k+1-sum(u).
+
+3. HALF-TILING / DIAGONAL-SYMMETRY CHECK
+   The half-tiling is the fixed-path converse fold.  It is a branch/fundamental-domain input, not generally an isomorphism-class count.
+
+   n  U(n)  rooted_P(n)  2^half(n-1)  2^half(n)  rho_orbits(n)  self_converse_classes
+   3     2            4             1          2              5                      2
+   4     4           12             2          4             34                      2
+   5    12           48             4         16            520                      8
+   6    56          296            16         64          16416                     12
+   7   456           -1            64        512        1048832                     -1
+
+   Readout:
+   - U(n) is not the count of binary half-tilings of size n-1 or n.
+   - Symmetry along the fold detects the self-converse branch locus; even that class count is not U(n-1) in general.
+   - The exact growth object is the diagonal extension orbit DAG: parent class + word orbit -> rooted child -> unrooted child sink.
+
+4. TOURNAMENT ANALYSIS OVER DIAGONAL-TRANSPORT CARRIERS
+   Vertices are proof carriers, not runners.
+   Observable: retained iso/aut/deletion/line/cycle/half/owner/automaton payload minus proof cost.
+   Switch: orient toward the carrier retaining more recoverable diagonal-transport payload; name order breaks exact ties.
+   vertices=['raw_labelled_diagonal_word', 'binary_half_tiling_shadow', 'K_position_line_profile', 'parent_aut_layer_orbit', 'aligned_triangle_flow', 'deletion_parent_fiber', 'diagonal_transport_sidecar', 'endpoint_owner_packet_sheaf', 'proof_obligation_automaton']
+   score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+   directed_3_cycles=0
+   scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+   hamiltonian_paths=1
+   one_hamiltonian_path=proof_obligation_automaton -> endpoint_owner_packet_sheaf -> diagonal_transport_sidecar -> deletion_parent_fiber -> parent_aut_layer_orbit -> aligned_triangle_flow -> K_position_line_profile -> binary_half_tiling_shadow -> raw_labelled_diagonal_word
+
+READING
+  The user's k^2+k lines are best interpreted as K_{k,k+1} on geometric tile positions, not as the complete graph between all binary words.
+  Once that is fixed, the redundancy is sharp: k(k+1) line labels are generated by only 2k+1 bits, and their count matrix satisfies a rank-one determinant law.
+  The recursive tournament DP should therefore carry parent automorphism word-orbits, aligned triangle-flow data, and deletion-parent fibers, then merge into unrooted class sinks.
+  At 5 -> 6, raw labelled diagonal extensions are 384, parent-aut word orbits are 296, and the unrooted sinks are 56.  The 296 rooted orbits match the sum of vertex-orbits over the 56 child classes.
+  Source and sink words are exact deletion slices: all-zero and all-one diagonal words give U(n) source/sink-rooted children.  Arbitrary words need the sidecar.
+  The half-tiling idea is still valuable, but as a converse-fold branch locus and complement-pair quotient.  It does not by itself enumerate tournament isomorphism classes.
+
+ASSUMPTION CHALLENGE
+  Considered vertices: runners, diagonal tile positions, K position-lines, binary layer words, parent-aut word orbits, deletion fibers, fixed circle sections, section boundaries, wall-crossing events, residues, cover arcs, Fourier modes, matroid circuits, endpoint owners, and proof obligations.
+  Selected quotient: diagonal transport sidecars preserve observer-source, incident-word, two-newest-triangle, deletion-parent, and endpoint-owner payloads needed for LRC safe-box routing.
+  Destroyed information: full labelled runner identity, full binary word order beyond the chosen sidecar, and raw scalar half-tiling counts.
+  Challenged assumption: isomorphism classes should equal half-tiling counts.  The safer statement is that class growth factors through diagonal word-orbits and deletion fibers, while half-tilings mark the converse-symmetric branch of that transport.

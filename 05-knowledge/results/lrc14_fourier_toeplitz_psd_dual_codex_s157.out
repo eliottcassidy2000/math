@@ -1,0 +1,73 @@
+S157 LRC14 TOEPLITZ PSD FOURIER DUAL
+==============================================================================
+max_degree=160, tolerance=1e-09
+[0] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, danger arcs, endpoints, Fourier modes, Toeplitz rows,
+    eigenvectors, trigonometric-square weights, and proof gates.
+  chosen vertices:
+    harmonic modes 0..d of f_S=C_S-1 and Toeplitz proof carriers.
+  preserved LRC predicate:
+    f_S>=0 a.e. is necessary for strict danger-arc cover.
+  destroyed information:
+    endpoint ownership and exact safe-component location; those must be
+    recovered from the eigenvector polynomial or other packet labels.
+  challenged assumption:
+    multiplicity histograms are not the only moment shadow.  The Fourier
+    Toeplitz shadow keeps location and can certify safe intervals.
+
+[1] Toeplitz PSD named-row scan
+  AP                                           first_neg=none                    d80:0.000139958 d96:2.48604e-05 d112:3.10389e-06 d128:3.08951e-07 d160:4.77841e-09
+  GW 12->24                                    first_neg=none                    d80:0.000775229 d96:0.000106924 d112:1.52865e-05 d128:3.01068e-06 d160:6.62724e-08
+  near K33 12->36                              first_neg= 101 eig=-0.00139412096  d32:0.128404 d48:0.0485639 d64:0.0185221 d80:0.00532427 d96:0.00224974
+  petal 10->20                                 first_neg=  70 eig=-0.000646243625  d16:0.232401 d24:0.161367 d32:0.129389 d48:0.0615808 d64:0.00870894
+  petal 13->26                                 first_neg=  37 eig=-0.00635340209  d8:0.351742 d16:0.196584 d24:0.0971001 d32:0.0137658
+  covering 12->84                              first_neg=  51 eig=-0.00406061915  d8:0.351742 d16:0.230656 d24:0.152184 d32:0.128404 d48:0.0266286
+  covering 12->168                             first_neg=  51 eig=-0.00406061915  d8:0.351742 d16:0.230656 d24:0.152184 d32:0.128404 d48:0.0266286
+  repair drop(2,6)->add(17,42)                 first_neg=  32 eig=-0.00116671036  d8:0.504225 d16:0.345217 d24:0.1821 d32:-0.00116671
+  repair drop(4,6)->add(19,42)                 first_neg=  57 eig=-0.000264327852  d8:0.496381 d16:0.381315 d24:0.299277 d32:0.201486 d48:0.0713563
+  loose q-witness 12->26                       first_neg=  59 eig=-0.00155903662  d8:0.351742 d16:0.230656 d24:0.152184 d32:0.11239 d48:0.0305678
+  hard one-swap 6->69                          first_neg=  56 eig=-0.00348596568  d8:0.363013 d16:0.256253 d24:0.188303 d32:0.112623 d48:0.0208947
+  hard one-swap 6->75                          first_neg=  56 eig=-0.00348596568  d8:0.363013 d16:0.256253 d24:0.188303 d32:0.112623 d48:0.0208947
+  hard one-swap 12->48                         first_neg=  53 eig=-0.000920171021  d8:0.351742 d16:0.230656 d24:0.152184 d32:0.128404 d48:0.0246294
+  hard two-swap drop(10,12)->add(20,24)        first_neg= 160 eig=-3.41792934e-05  d80:0.00617862 d96:0.00176469 d112:0.000291963 d128:8.69708e-05 d160:-3.41793e-05
+  hard two-swap drop(10,12)->add(20,36)        first_neg=  73 eig=-0.000247996409  d16:0.200814 d24:0.14183 d32:0.099443 d48:0.0350089 d64:0.00588221
+
+[2] Summary
+  rows=15
+  no_failure_through_160=2
+    no_failure: AP
+    no_failure: GW 12->24
+  first_negative_degree_buckets={'<=128': 3, '<=32': 1, '<=64': 8, '>128': 1}
+  boundary_atoms_expected_no_failure=AP and GW
+  near_K33_12->36_first_failure_degree=101 in this tolerance regime
+
+[3] Tournament Analysis
+  vertices are proof carriers, not runners:
+    Toeplitz PSD finite section
+    negative eigenvector / |p|^2 certificate
+    Fourier coefficients of C_S-1
+    multiplicity-moment barrier
+    endpoint-credit winding graph
+    boundary-moment packet ledger
+    raw runner set
+  pair observable:
+    retains counterexample necessity, harmonic degree, localization,
+    compatibility with moment barriers, and state-lift packet visibility.
+  switch/gauge:
+    Toeplitz certificate > eigenvector localization > Fourier coefficient
+    ledger > multiplicity histogram > endpoint packet > raw row.
+  fingerprint:
+    transitive proof-carrier tournament; directed_3_cycles=0; hp=1.
+
+[4] Proof-shaped readout
+  Necessary condition for strict counterexample:
+    every finite Toeplitz matrix T_d(fhat_S) is PSD.
+  Failure gives a rigorous dual certificate:
+    choose eigenvector c with c*T_d*c<0; then
+    integral (C_S(t)-1)*|sum c_j exp(2*pi*i*j*t)|^2 dt < 0,
+    forcing C_S(t)=0 on positive measure and hence M(S)>1/14.
+  Finite-bank signal:
+    AP/GW are PSD to numerical precision; all positive named hard rows
+    tested fail by degree <=160, with most failures already <=101
+    and several failures already <=64.

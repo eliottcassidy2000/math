@@ -1,0 +1,127 @@
+=== LRC14 zipper-fiber convergence scout S188 ===
+bank=HYP-2963 default rows single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5
+packets=21913
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, fixed circle sections, section boundaries, residues,
+    Fourier clocks, p-adic unit roots, zero-root scale debt, magnitude
+    cocycles, barcode fibers, packet labels, and proof obligations.
+  chosen vertices:
+    quotient/proof-carrier bundles over HYP-2963 packets.
+  preserved LRC predicate:
+    theorem-route purity and boundary/open safety at threshold 1/14.
+  destroyed information:
+    raw runner identity, exact endpoint owners, and full Fejer atom banks
+    until barcode/packet zipper fields are reattached.
+  challenged assumption:
+    Hensel information should be read through p-adic unit roots, not
+    through the forced nonunit zero root alone.
+
+[1] Zipper convergence table
+  split                      fibers    mixR    mixF    mixS    maxF  maxMix  purity
+  automatic_word                225     143     178       1    1179    1179   36.4%
+  residue_terminal_fiber      16555     265     265       2      30      30   98.3%
+    delta_vs_previous: fibers=+16330 mixR=+122 maxMix=-1149
+  residue_plus_et             21913       0       0       0       1       0  100.0%
+    delta_vs_previous: fibers=+5358 mixR=-265 maxMix=-30
+  residue_plus_unit_hensel    19301     220     221       2      22      22   98.8%
+    delta_vs_previous: fibers=-2612 mixR=+220 maxMix=+22
+  et_unit_convergence         21913       0       0       0       1       0  100.0%
+    delta_vs_previous: fibers=+2612 mixR=-220 maxMix=-22
+  coarse_et_unit_gate         21702      15      16       0       4       4   99.9%
+    delta_vs_previous: fibers=-211 mixR=+15 maxMix=+4
+  magnitude_cocycle           21909       0       0       0       2       0  100.0%
+    delta_vs_previous: fibers=+207 mixR=-15 maxMix=-4
+  magnitude_et_unit           21913       0       0       0       1       0  100.0%
+    delta_vs_previous: fibers=+4 mixR=+0 maxMix=+0
+  barcode_packet_zipper       21913       0       0       0       1       0  100.0%
+    delta_vs_previous: fibers=+0 mixR=+0 maxMix=+0
+
+  largest mixed fiber by split:
+    automatic_word: max_mixed=1179 routes={'Q-WITNESS': 1124, 'COVERING-MOMENT': 55} status={'open': 1179}
+    residue_terminal_fiber: max_mixed=30 routes={'Q-WITNESS': 27, 'COVERING-MOMENT': 2, 'BOUNDARY-AP-GW': 1} status={'open': 29, 'boundary': 1}
+    residue_plus_et: max_mixed=0 routes={} status={}
+    residue_plus_unit_hensel: max_mixed=22 routes={'Q-WITNESS': 19, 'COVERING-MOMENT': 2, 'BOUNDARY-AP-GW': 1} status={'open': 21, 'boundary': 1}
+    et_unit_convergence: max_mixed=0 routes={} status={}
+    coarse_et_unit_gate: max_mixed=4 routes={'Q-WITNESS': 3, 'COVERING-MOMENT': 1} status={'open': 4}
+    magnitude_cocycle: max_mixed=0 routes={} status={}
+    magnitude_et_unit: max_mixed=0 routes={} status={}
+    barcode_packet_zipper: max_mixed=0 routes={} status={}
+
+[2] Erdos-Turan and Henselian unit clocks
+  coarse_et_clock_fibers=1761 largest=242
+  hensel_unit_count_fibers=29 largest=7660
+  hensel_unit_exact_fibers=73 largest=7660
+  packets_with_singular_unit_root=3358
+  packets_with_zero_singular_debt=3203
+  readout:
+    ET clocks are global phase/discrepancy clocks; they split many
+    residue fibers but remain magnitude-blind.
+    Unit-Hensel roots are local lift clocks; zero-singular status is
+    separate scale debt and should not masquerade as a unit witness.
+
+[3] Target automatic word MFCMMCCFFFCCC
+  rows=639
+  routes={'Q-WITNESS': 603, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 1, 'COVERING-MOMENT': 33}
+  families={'infinite q-witness family': 603, 'AP/Goddyn-Wong boundary family': 2, 'unit-petal sporadic family': 1, 'open-Haar loose family': 29, 'covering boundary-moment family': 4}
+  distinct_M=33
+  distinct_ET_clocks=639
+  distinct_unit_rules=28
+
+  residue_terminal_fiber: fibers=181 mixed_route=27
+    largest_mixed_rows=30 routes={'Q-WITNESS': 27, 'BOUNDARY-AP-GW': 1, 'COVERING-MOMENT': 2}
+      AP                                 M=   1/14 mu=        0 q0=14 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=BOUNDARY-AP-GW
+      magnitude liar 12->96              M=  8/101 mu=5219/840840 q0=14 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=COVERING-MOMENT
+      single swap 12->180                M=   3/37 mu=2833/315315 q0=14 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=COVERING-MOMENT
+      single swap 11->53                 M=   1/11 mu=71483/1350440 q0=11 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=Q-WITNESS
+      two drop(11, 12)->add(25, 26)      M=   1/11 mu=24181/382200 q0=11 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 1, 0, 0)) route=Q-WITNESS
+      two drop(11, 13)->add(25, 27)      M=   1/11 mu=1021/13230 q0=11 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=Q-WITNESS
+  residue_plus_et: fibers=639 mixed_route=0
+  residue_plus_unit_hensel: fibers=294 mixed_route=28
+    largest_mixed_rows=22 routes={'Q-WITNESS': 19, 'BOUNDARY-AP-GW': 1, 'COVERING-MOMENT': 2}
+      AP                                 M=   1/14 mu=        0 q0=14 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=BOUNDARY-AP-GW
+      magnitude liar 12->96              M=  8/101 mu=5219/840840 q0=14 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=COVERING-MOMENT
+      single swap 12->180                M=   3/37 mu=2833/315315 q0=14 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=COVERING-MOMENT
+      single swap 11->95                 M=   1/11 mu=25001/484120 q0=11 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=Q-WITNESS
+      single swap 11->53                 M=   1/11 mu=71483/1350440 q0=11 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=Q-WITNESS
+      two drop(11, 13)->add(25, 27)      M=   1/11 mu=1021/13230 q0=11 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=Q-WITNESS
+  et_unit_convergence: fibers=639 mixed_route=0
+  coarse_et_unit_gate: fibers=585 mixed_route=9
+    largest_mixed_rows=4 routes={'Q-WITNESS': 3, 'COVERING-MOMENT': 1}
+      single swap 13->143                M= 11/144 mu=4307/194040 q0=14 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=COVERING-MOMENT
+      single swap 13->31                 M=   1/13 mu=194039/6015240 q0=13 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=Q-WITNESS
+      single swap 13->59                 M=   1/13 mu=53509/1635480 q0=13 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=Q-WITNESS
+      single swap 13->115                M=   1/13 mu=13469/405720 q0=13 unit=((2, 0, 0, 0), (3, 0, 0, 0), (7, 0, 0, 0)) route=Q-WITNESS
+  magnitude_cocycle: fibers=638 mixed_route=0
+  magnitude_et_unit: fibers=639 mixed_route=0
+
+[4] Tournament Analysis
+  vertices_are=quotient/proof-carrier bundles, not runners
+  observable=route purity, max mixed-fiber size, ET discrepancy,
+             Henselian unit stability, magnitude retention,
+             topology retention, packet-label retention, finite-state
+             checkability, and proof cost
+  switch=majority comparison of observable vectors
+  tie_hamiltonian_path=automatic_word > residue_terminal_fiber > residue_plus_et > residue_plus_unit_hensel > et_unit_convergence > coarse_et_unit_gate > magnitude_cocycle > magnitude_et_unit > barcode_packet_zipper
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 5: 2, 6: 2, 8: 1}
+  directed_3cycles=2
+  scc_sizes=[4, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=5
+  score_order=magnitude_et_unit > barcode_packet_zipper > magnitude_cocycle > et_unit_convergence > residue_plus_et > coarse_et_unit_gate > residue_plus_unit_hensel > residue_terminal_fiber > automatic_word
+
+[5] Proof readout
+  1. Erdos-Turan clocks improve the residue zipper, but they do not
+     replace exact magnitude; they are best read as a discrepancy
+     certificate scheduler.
+  2. The Henselian unit rule separates genuine unit-root lifting from
+     zero-root scale debt.  This makes p-adic data a routing rule,
+     not a scalar discriminator.
+  3. The magnitude cocycle is still the first tested non-route gate
+     with zero mixed theorem-route fibers on the full bank.  ET+unit
+     data explains which fibers should receive analytic or p-adic
+     certificates before that exact cocycle is discharged.
+  4. The next proof target is a convergence theorem: every residue
+     fiber either has a bounded ET discrepancy certificate, a unit
+     Hensel lift/zero-debt exit, a familywise magnitude formula,
+     or named K33/F7/THM-572 residual debt.

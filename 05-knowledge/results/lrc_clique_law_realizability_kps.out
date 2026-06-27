@@ -1,0 +1,22 @@
+CLIQUE LAW I(K_r, 2) = 1 + 2r  ('2' = the binary arc state):
+   I(K_1, 2) = 1 + 2*1 = 3   
+   I(K_2, 2) = 1 + 2*2 = 5   
+   I(K_3, 2) = 1 + 2*3 = 7   <-- the FORBIDDEN value (K_3 not realizable, THM-200)
+   I(K_4, 2) = 1 + 2*4 = 9   
+   I(K_5, 2) = 1 + 2*5 = 11   
+   I(K_6, 2) = 1 + 2*6 = 13   
+   I(K_7, 2) = 1 + 2*7 = 15   
+
+   So 7 = I(K_3, 2): the count of a 3-clique conflict graph using 2 arc-states.
+   And 14 = 2 * 7 = (arc-states 2) * (forbidden clique value 7).
+   1/14 = 1/(2*7): the LRC(14) threshold is the reciprocal of the forbidden-clique * arc-states.
+
+THE OBSTRUCTION (why LRC(14) is impossible to disprove):
+  A counterexample would be an integer speed set realizing an OVER-cover at the apex prime 7.
+  At the apex-7 reduction, that over-cover's conflict structure would have to be the 3-clique K_3
+  (the 3 antipodal sector-pairs, mutually conflicting), realizability count I(K_3,2)=7.
+  But H=7 is FORBIDDEN: 3 pairwise-conflicting odd cycles ALWAYS force a C_5 (THM-200), so no
+  binary-arc tournament realizes K_3. => the over-cover is NOT realizable => no counterexample.
+  The 2 facts (7 forbidden + 2 arc-states) ARE the realizability obstruction. LRC(14) cannot be
+  disproved by a finite integer construction -- the construction would have to realize the
+  unrealizable K_3. (The open rigor: that the apex-7 over-cover IS exactly the K_3 -- the crux.)

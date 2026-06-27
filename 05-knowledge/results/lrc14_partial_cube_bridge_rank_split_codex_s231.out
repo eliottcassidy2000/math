@@ -1,0 +1,89 @@
+================================================================================
+S231: LRC14 partial-cube bridge-rank split ledger
+================================================================================
+1. DOUBLED TRIANGULAR / SIMPLEX / BRIDGE TABLE
+   k  2*T_k=k(k+1)  simplex_edges  directed_edges  K_{k,k+1}  rank_2k  rect_red
+   1              2              1               2          2        2         0
+   2              6              3               6          6        4         2
+   3             12              6              12         12        6         6
+   4             20             10              20         20        8        12
+   5             30             15              30         30       10        20
+   6             42             21              42         42       12        30
+
+   reading: k(k+1) is simultaneously
+      - twice the edge count of the k-simplex Delta_k,
+      - the directed-edge / vertex-edge-incidence count of Delta_k,
+      - the line count of the K_{k,k+1} bridge between adjacent layers.
+   controlled-forgetting warning: the bridge has only 2k cut-potential rank;
+   the k(k-1) surplus is rectangle-cycle sidecar debt.
+
+2. FIBBINARY AS FIBONACCI CUBES
+   n  vertices  F_{n+2}  edges  theta_classes  median_closed  coord_edge_hist
+   1         2         2      1              1  True           {0: 1}
+   2         3         3      2              2  True           {0: 1, 1: 1}
+   3         5         5      5              3  True           {0: 2, 1: 1, 2: 2}
+   4         8         8     10              4  True           {0: 3, 1: 2, 2: 2, 3: 3}
+   5        13        13     20              5  True           {0: 5, 1: 3, 2: 4, 3: 3, 4: 5}
+   6        21        21     38              6  True           {0: 8, 1: 5, 2: 6, 3: 6, 4: 5, 5: 8}
+   7        34        34     71              7  True           {0: 13, 1: 8, 2: 10, 3: 9, 4: 10, 5: 8, 6: 13}
+   8        55        55    130              8  True           {0: 21, 1: 13, 2: 16, 3: 15, 4: 15, 5: 16, 6: 13, 7: 21}
+
+   reading: fibbinary words are independent sets of a path.
+   The Fibonacci cube Gamma_n is a median partial cube: coordinate cuts
+   survive, but adjacent coordinate pairs cannot both be active.
+
+3. MOSER-DE BRUIJN AS EVEN-BIT CUBES AND TWO-LANE PRODUCTS
+   m  M_m vertices  Q_m edges  theta  max_value  subset_fibbinary  product_vertices  product_edges
+   1             2         1      1          1  True                             4              4
+   2             4         4      2          5  True                            16             32
+   3             8        12      3         21  True                            64            192
+   4            16        32      4         85  True                           256           1024
+   5            32        80      5        341  True                          1024           5120
+   6            64       192      6       1365  True                          4096          24576
+
+   unique split x=a+2b with a,b in M_m for every 0<=x<4^m, m<=6: True
+   reading: one Moser lane is a coordinate cube on even binary positions;
+   two Moser lanes split all binary positions into even/odd partial-cube cuts.
+
+4. LRC SIDECAR FIELDS SUGGESTED BY THE PARTIAL-CUBE VIEW
+   - partial_cube_carrier_id
+   - theta_class_word
+   - fibbinary_forbidden_adjacency_mask
+   - zeckendorf_carry_boundary
+   - moser_even_lane_word
+   - moser_odd_lane_word
+   - moser_product_split_a_plus_2b
+   - simplex_oriented_edge_sector
+   - bridge_K_k_kplus1_line_id
+   - bridge_cut_potential_word
+   - rectangle_cycle_redundancy_class
+   - payload_exit_rule
+
+   theorem-facing rule: automaton membership is not the carrier;
+   the carrier is the partial-cube cut word plus the LRC packet sidecars
+   that tell whether forgotten cuts are reconstructed, killed, descended,
+   boundary-stopped, or emitted as named residual debt.
+
+5. TOURNAMENT ANALYSIS
+   vertices are proof carriers / quotient obligations, not runners.
+   pairwise observable: retained boundary-open status, exact scale,
+   coordinate cut, owner/topology route, and residual discharge.
+   gauge: orient toward the carrier retaining more predicate-bearing cuts.
+   score_hist = {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+   directed_3cycles = 0
+   scc_sizes = [1, 1, 1, 1, 1, 1, 1, 1]
+   hamiltonian_path_count = 1
+   tie Hamiltonian path:
+      labelled_lrc_packet_sheaf > partial_cube_cut_sidecar > fibonacci_cube_carry_boundary > moser_two_lane_product_cube > simplex_directed_edge_bridge > K_bridge_rank_one_sheet > automatic_language_membership > raw_doubled_triangular_scalar
+
+READING
+  Fibbinary and Moser-de Bruijn should be upgraded from automaton labels
+  to partial-cube cut carriers.  Fibbinary keeps a path-independent-set
+  median graph; Moser keeps even-bit cube cuts, and two Moser lanes split
+  every binary coordinate via x=a+2b.
+  The doubled triangular row 2,6,12,20,30,42 is the same k(k+1) count
+  seen as directed simplex edges and as K_{k,k+1} bridge lines.  It is
+  therefore a sector/incidence payload count, not independent proof mass.
+  For LRC14, the useful synthesis is a sidecar law: keep theta classes,
+  carry boundaries, Moser lane splits, simplex edge sectors, bridge line
+  potentials, and rectangle redundancies before scalarizing automatic data.

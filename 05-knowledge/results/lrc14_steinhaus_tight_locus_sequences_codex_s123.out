@@ -1,0 +1,109 @@
+S123 LRC14 STEINHAUS TIGHT-LOCUS SEQUENCE PROBE
+==============================================================================
+All values are exact Fractions.  No line below proves the global census.
+
+AP tight clock: S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  M=1/14 (0.071428571), argmax_count=3, denominators=[14]
+  argmaxes=(Fraction(1, 14), Fraction(3, 14), Fraction(5, 14))
+  apex_best_residue_distance=1, apex_locked=True
+  denominator-14 unit gap sequences:
+    a= 1: minResid=1, gapPart=((1, 14),), E=0, missing=(), extra=(), binders=(1, 13)
+    a= 3: minResid=1, gapPart=((1, 14),), E=0, missing=(), extra=(), binders=(5, 9)
+    a= 5: minResid=1, gapPart=((1, 14),), E=0, missing=(), extra=(), binders=(3, 11)
+    a= 9: minResid=1, gapPart=((1, 14),), E=0, missing=(), extra=(), binders=(3, 11)
+    a=11: minResid=1, gapPart=((1, 14),), E=0, missing=(), extra=(), binders=(5, 9)
+    a=13: minResid=1, gapPart=((1, 14),), E=0, missing=(), extra=(), binders=(1, 13)
+
+Goddyn-Wong tight clock: S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  M=1/14 (0.071428571), argmax_count=3, denominators=[14]
+  argmaxes=(Fraction(1, 14), Fraction(3, 14), Fraction(5, 14))
+  apex_best_residue_distance=1, apex_locked=True
+  denominator-14 unit gap sequences:
+    a= 1: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(12,), extra=((10, 1),), binders=(1, 13)
+    a= 3: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(8,), extra=((2, 1),), binders=(5, 9)
+    a= 5: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(4,), extra=((8, 1),), binders=(3, 11)
+    a= 9: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(10,), extra=((6, 1),), binders=(3, 11)
+    a=11: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(6,), extra=((12, 1),), binders=(5, 9)
+    a=13: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(2,), extra=((4, 1),), binders=(1, 13)
+
+near sporadic escape 24->36: S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+  M=3/41 (0.073170732), argmax_count=1, denominators=[41]
+  argmaxes=(Fraction(17, 41),)
+  apex_best_residue_distance=1, apex_locked=True
+  denominator-14 unit gap sequences:
+    a= 1: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(12,), extra=((8, 1),), binders=(1, 13)
+    a= 3: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(8,), extra=((10, 1),), binders=(5, 9)
+    a= 5: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(4,), extra=((12, 1),), binders=(3, 11)
+    a= 9: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(10,), extra=((2, 1),), binders=(3, 11)
+    a=11: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(6,), extra=((4, 1),), binders=(5, 9)
+    a=13: minResid=1, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(2,), extra=((6, 1),), binders=(1, 13)
+
+covering AP-core plus 84: S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+  M=7/89 (0.078651685), argmax_count=1, denominators=[89]
+  argmaxes=(Fraction(37, 89),)
+  apex_best_residue_distance=0, apex_locked=False
+  denominator-14 unit gap sequences:
+    a= 1: minResid=0, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(12,), extra=((0, 1),), binders=(84,)
+    a= 3: minResid=0, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(8,), extra=((0, 1),), binders=(84,)
+    a= 5: minResid=0, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(4,), extra=((0, 1),), binders=(84,)
+    a= 9: minResid=0, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(10,), extra=((0, 1),), binders=(84,)
+    a=11: minResid=0, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(6,), extra=((0, 1),), binders=(84,)
+    a=13: minResid=0, gapPart=((0, 1), (1, 12), (2, 1)), E=2, missing=(2,), extra=((0, 1),), binders=(84,)
+
+[A] Exact single-swap bank around AP
+  bound: replacement v<=80 (sequence-focused; broader v<=300 census exists in S51)
+  rows checked=884
+  profile keys=3
+  tight records=14; unique tight sets=2
+  below-threshold rows=0
+  apex-locked but globally loose rows=805
+  denom-14 direct-slack rows=0
+  apex-blocked nonlocked rows exact-checked=65
+  non-AP tight rows:
+    remove 12, add 24 -> S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), M=1/14, argmax=(Fraction(1, 14), Fraction(3, 14), Fraction(5, 14))
+  first apex-locked loose escapes:
+    remove 1, add 15 -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15), M=2/17, argmax=(Fraction(1, 17),)
+    remove 1, add 16 -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16), M=1/9, argmax=(Fraction(1, 18),)
+    remove 1, add 17 -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 17), M=2/15, argmax=(Fraction(1, 15),)
+    remove 1, add 18 -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 18), M=2/15, argmax=(Fraction(1, 15),)
+    remove 1, add 19 -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 19), M=2/15, argmax=(Fraction(1, 15),)
+    remove 1, add 20 -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 20), M=2/15, argmax=(Fraction(1, 15),)
+    remove 1, add 21 -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 21), M=2/15, argmax=(Fraction(1, 15),)
+    remove 1, add 22 -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 22), M=2/15, argmax=(Fraction(1, 15),)
+
+[B] Exact two-swap AP-neighborhood stress bank
+  bound: replacement values <=18
+  rows checked=1638
+  profile keys=8
+  denom-14 direct-slack rows=12
+  apex-blocked rows exact-checked=1626
+  apex-locked rows=1158
+  tight records=78; unique tight sets=1
+  below-threshold rows=0
+  non-AP tight rows found:
+    none
+  first apex-locked loose two-swap escapes:
+    remove (1, 2), add (1, 15) -> S=(1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15), M=2/19, argmax=(Fraction(9, 19),)
+    remove (1, 2), add (1, 16) -> S=(1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16), M=2/17, argmax=(Fraction(8, 17),)
+    remove (1, 2), add (1, 17) -> S=(1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 17), M=2/21, argmax=(Fraction(10, 21),)
+    remove (1, 2), add (1, 18) -> S=(1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 18), M=2/17, argmax=(Fraction(8, 17),)
+    remove (1, 2), add (2, 15) -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15), M=2/17, argmax=(Fraction(1, 17),)
+    remove (1, 2), add (2, 16) -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16), M=1/9, argmax=(Fraction(1, 18),)
+    remove (1, 2), add (2, 17) -> S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 17), M=2/15, argmax=(Fraction(1, 15),)
+
+[C] Bounded covering checksum
+  q-covering rows in [1,19]: 2058
+  min M=1/12 (0.083333333), row=(1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18), argmax=(Fraction(5, 24),)
+  tight rows=0, below-threshold rows=0
+
+[D] Sequence-level readout
+  AP gap word: every unit has partition ((1,14)), energy 0.
+  GW gap words: denominator-14 units keep one collision/missing packet in
+  a small Steinhaus-energy class; global exact-M, not residues alone,
+  isolates 12->24 from many residue-similar perturbations.
+  Proposed sharp target:
+    (1) apex-lock is a finite residue/gap-sequence filter;
+    (2) every non-AP/GW apex-locked reduced row has an off-apex escape
+        M(S)>1/14;
+    (3) scale-separated rows need the existing analytic comb/Weyl input.
+  This is a clearer form of the three-gap rigidity census, not a closure.

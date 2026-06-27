@@ -1,0 +1,13 @@
+k=8: cap=0.38146  max q0(actual)=0.32721  max deg2-LP bound=0.49637  -> FAILS (2 viol) -> needs dip
+k=9: cap=0.49426  max q0(actual)=0.41616  max deg2-LP bound=0.56675  -> FAILS (2 viol) -> needs dip
+k=10: cap=0.60440  max q0(actual)=0.50448  max deg2-LP bound=0.63074  -> FAILS (2 viol) -> needs dip
+k=11: cap=0.72527  max q0(actual)=0.58146  max deg2-LP bound=0.68305  -> CLOSES at degree-2 (pairwise)
+
+--- kps-S31ag finding: the COVER-BOUND moment-order ladder ---
+The exact degree-2 moment-LP closes the cover bound meas(S7)<=cap ONLY for k>=11.
+k=8,9,10 ALL need degree>=3 (k=10 fails degree-2 by only 0.027 = 0.631 vs cap 0.604).
+=> COVER-BOUND ladder: degree 2 (k>=11), degree 3 (k=9,10), degree 4 (k=8) [matches mac-mini L_yK9/L_yK8].
+ASYMMETRY with THM-576's CAP ladder (cap is degree-2/pairwise through k=10): the cap RHS is pairwise
+to k=10, but the cover-bound LHS extremality needs degree-3 at k=10. So the binding rows for the
+COVER BOUND are k=8,9,10 (not just the cap-dip rows k=8,9). The "dip" (mac-mini) and the cover-bound
+extremality are at slightly different k-thresholds: cap-dip starts k=9, cover-bound degree>2 starts k=10.

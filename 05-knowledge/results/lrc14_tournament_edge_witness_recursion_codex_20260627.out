@@ -1,0 +1,132 @@
+HYP-3124/S271 EDGE-WITNESS CLASS-DECK STRESS AUDIT
+script=04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py
+status=finite scout + synthesis; not a proof
+
+1. EDGE-WITNESS RECURSION ON SMALL TOURNAMENT CLASSES
+n  U(n)  mode                  unique_class_decks  collisions  max_fiber  fiber_hist
+3     2  sector_counts                          2           0          1 {1: 2}
+3     2  sector_internal                        2           0          1 {1: 2}
+3     2  roleless_children                      2           0          1 {1: 2}
+3     2  recursive_children                     2           0          1 {1: 2}
+3     2  full_edge_witness                      2           0          1 {1: 2}
+
+4     4  sector_counts                          4           0          1 {1: 4}
+4     4  sector_internal                        4           0          1 {1: 4}
+4     4  roleless_children                      4           0          1 {1: 4}
+4     4  recursive_children                     4           0          1 {1: 4}
+4     4  full_edge_witness                      4           0          1 {1: 4}
+
+5    12  sector_counts                         12           0          1 {1: 12}
+5    12  sector_internal                       12           0          1 {1: 12}
+5    12  roleless_children                     12           0          1 {1: 12}
+5    12  recursive_children                    12           0          1 {1: 12}
+5    12  full_edge_witness                     12           0          1 {1: 12}
+
+6    56  sector_counts                         55           1          2 {1: 54, 2: 1}
+6    56  sector_internal                       55           1          2 {1: 54, 2: 1}
+6    56  roleless_children                     56           0          1 {1: 56}
+6    56  recursive_children                    56           0          1 {1: 56}
+6    56  full_edge_witness                     56           0          1 {1: 56}
+
+2. INDIVIDUAL DIRECTED-EDGE TYPE COUNTS
+n  mode                  unique_edge_types
+3  sector_counts                         4
+3  sector_internal                       4
+3  roleless_children                     4
+3  recursive_children                    4
+3  full_edge_witness                     4
+
+4  sector_counts                        10
+4  sector_internal                      10
+4  roleless_children                    15
+4  recursive_children                   16
+4  full_edge_witness                    16
+
+5  sector_counts                        20
+5  sector_internal                      24
+5  roleless_children                    72
+5  recursive_children                   80
+5  full_edge_witness                    88
+
+6  sector_counts                        35
+6  sector_internal                      59
+6  roleless_children                   537
+6  recursive_children                  634
+6  full_edge_witness                   697
+
+3. WHERE RECURSION AND CROSS-SECTOR WORDS REPAIR EDGE QUOTIENTS
+n=5 sector_internal_edge_fibers=24
+n=5 nontrivial_sector_fibers=16
+n=5 sector_fibers_split_by_tail_tip_children=16
+n=5 recursive_fibers_split_by_cross_sector_word=6
+n=5 max_sector_fiber=16 max_recursive_fiber_after_child_pair=9
+n=6 sector_internal_edge_fibers=59
+n=6 nontrivial_sector_fibers=43
+n=6 sector_fibers_split_by_tail_tip_children=43
+n=6 recursive_fibers_split_by_cross_sector_word=16
+n=6 max_sector_fiber=76 max_recursive_fiber_after_child_pair=9
+
+4. CLASS-DECK COLLISION EXAMPLES
+mode=sector_internal collision_examples=1
+  fiber_size=2 converse_pair_seen=True reps=[344:score=(2, 2, 2, 3, 3, 3),c3=8,H=43; 345:score=(2, 2, 2, 3, 3, 3),c3=8,H=43]
+mode=recursive_children collision_examples=0
+mode=full_edge_witness collision_examples=0
+
+5. HYP-3125 HANDOFF CARRIER TOURNAMENT
+vertices=10 axes=['lrc_predicate_retention', 'multi_far_floor_adjacency', 'two_ended_recursion', 'destroyed_coordinate_control', 'average_distribution_power', 'zero_free_or_positive_correlation', 'finite_checkability', 'desmoothing_or_reconstruction', 'formalization_readiness']
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+selected_path=edge_tail_tip_recursive_witness > l2_cauchy_schwarz_tail_floor > cross_sector_orientation_word > gaussian_heat_kernel_smoothing > endpoint_phi_activation_gate > normal_fan_cech_finite_ruler > asano_endpoint_contraction > elliott_halberstam_level_packet > raw_bonferroni_scalar > raw_edge_count_shadow
+
+Carrier ledger:
+- edge_tail_tip_recursive_witness [two_ended_tournament_packet] score=9
+  preserves: the overlap predicate as a two-ended witness with both marginal deletion children
+  destroys/audits: exact time coordinate and high Fourier phase unless cross-sector or analytic sidecar is retained
+  next_test: add edge_witness_id, tail_child, tip_child, and cross_sector_orientation_word to few-apex rows
+- l2_cauchy_schwarz_tail_floor [existing_spectral_floor] score=8
+  preserves: a rigorous-style low-frequency exact sum plus Parseval tail bound for Rprime
+  destroys/audits: local endpoint ownership and the reason a bad frequency appears
+  next_test: turn lrc14_spectrum_L2tail_synthesis_kpswf12 into a finite HYP-3121 row certificate
+- cross_sector_orientation_word [observer_cut_sidecar] score=7
+  preserves: the first concrete orientation coordinate that repairs edge-sector quotient collapse
+  destroys/audits: the analytic size of the overlap if used without measure or Fourier data
+  next_test: test whether any multi-far packet collision survives sector counts plus orientation
+- gaussian_heat_kernel_smoothing [smooth_correlation_floor] score=6
+  preserves: a smoothed positive correlation floor with exponentially damped Fourier tails
+  destroys/audits: sharp boundary atoms unless a finite-ruler desmoothing margin is retained
+  next_test: prove smoothed Rprime_t >= c_t and desmooth through finite denominator thresholds
+- endpoint_phi_activation_gate [exact_gap_circuit_gate] score=5
+  preserves: the exact endpoint-cover gap sum and max activation from HYP-2108/HYP-2112
+  destroys/audits: distribution across residue channels if endpoint activations are scalarized
+  next_test: join Phi_gap, P_max_activation, and edge_witness_id in one packet schema
+- normal_fan_cech_finite_ruler [component_topology_floor] score=4
+  preserves: normalized component and finite-ruler payload for the few-apex floor
+  destroys/audits: tail/tip covariance and Fourier phases if topology is isolated
+  next_test: combine Cech beta, owner currents, and Gaussian/L2 floor certificates
+- asano_endpoint_contraction [multiaffine_zero_free_contraction] score=3
+  preserves: endpoint/tail-tip interaction variables while preserving a zero-free sector under contraction
+  destroys/audits: metric size of the safe arcs unless coefficients are tied back to Phi/P activation
+  next_test: build a two-end partition polynomial and check whether contraction preserves nonvanishing
+- elliott_halberstam_level_packet [average_distribution_schema] score=2
+  preserves: average residue-channel discrepancy control, analogous to level of distribution one
+  destroys/audits: worst individual residue/channel behavior and exact witness time
+  next_test: define finite channel errors over q, residue, edge-witness, and Fourier shells; prove an averaged bound
+- raw_bonferroni_scalar [negative_control] score=1
+  preserves: only the measure-sum obstruction that already fails on few-apex examples
+  destroys/audits: all correlation structure; it cannot see Rprime when mu(A)+mu(B)<1
+  next_test: keep only as a failure alarm, never as a closure route
+- raw_edge_count_shadow [negative_control] score=0
+  preserves: small tournament size telemetry
+  destroys/audits: tail/tip role, sector orientation, deletion recursion, and LRC predicate
+  next_test: use only to sanity-check finite enumeration
+
+6. HYP-3125 HANDOFF ROUTES FOR THE UNIFORM Rprime >= c FLOOR
+A. Edge-witness route: encode R-safe and Q-lonely as the two ends of a witness edge.  Tail and tip deletion children are the marginals; the cross-sector word is the covariance payload.  A collapse to empty intersection is legal only if a child or cross-sector coordinate names the debt.
+B. Elliott-Halberstam-style route: do not ask for every residue/fiber to be uniform.  Ask for a level-of-distribution average over channels (q, residue, edge_witness_id, Fourier shell).  This is an analogy, not a prime theorem import: the target is a finite discrepancy inequality whose averaged error is below the product mass.
+C. Gaussian route: heat-smooth the two indicator events, prove a smoothed positive correlation using damped Fourier tails, then desmooth through a finite-ruler margin.  This is the analytic sibling of the existing L2-Cauchy-Schwarz tail certificate.
+D. Asano route: make endpoint/tail-tip interactions multiaffine, then contract the two endpoint variables while preserving a zero-free sector. If the contracted polynomial remains nonvanishing in the legal sector and coefficients still read back to Phi/P activation, empty overlap is forbidden or routed to named debt.
+
+Assumption challenge:
+Chosen vertices here are edge witnesses, residue/Fourier channels, and proof carriers.  The preserved predicate for the handoff is the LRC14 covering witness R-safe intersect Q-lonely nonempty, equivalently a positive Rprime floor in HYP-3125.  The quotient destroys exact time, endpoint owner, phase, and sometimes tail/tip role.  Those coordinates must be retained, averaged with a finite error budget, resurrected by Gaussian/Asano/endpoint sidecars, or emitted as named HYP-2968/HYP-3121 debt before the HYP-3125 edge_floor_packet compresses them.

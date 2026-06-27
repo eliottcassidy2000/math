@@ -1,0 +1,8 @@
+logs/
+runtime/
+state/*.lock
+state/auth-required.md
+state/last-run.txt
+state/*.tmp
+scripts/__pycache__/
+*.pyc

@@ -1,0 +1,63 @@
+PI APPROXIMANTS
+22/7: 3.142857142857143
+  role: rational/Farey approximant
+  signed_error_vs_pi: +1.264489267349678e-03
+  abs_error_vs_pi: 1.264489267349678e-03
+  relative_error_ppm: 402.499435
+cuberoot(31): 3.141380652391393
+  role: cubic algebraic approximant
+  signed_error_vs_pi: -2.120011984003689e-04
+  abs_error_vs_pi: 2.120011984003689e-04
+  relative_error_ppm: 67.482077
+cuberoot(31)_is_better_than_22/7_by_abs_error_factor: 5.964538
+pi_cubed_minus_31: +6.276680299816206e-03
+
+FLOWER ROTATION NORMALIZATION
+literal_radian_step: theta = 1/pi radians
+  theta_rad: 0.318309886183791
+  turn_fraction: 0.050660591821169
+  if_pi_is_22/7_exactly_then_turn_fraction: 49/968 (period 968)
+  local_steps_per_turn: 19.739208802178716
+  best_closure_q<=100: q=79, turns=4, residual_rad=+1.373977980112073e-02
+  q=22_residual_rad: +7.196321888638089e-01
+  readout: literal 1/pi radians does not make a 22-period orbit.
+fractional_turn_step: step = 1/pi of a full turn = 2 radians
+  theta_rad: 2.000000000000000
+  exact_turn_fraction: 0.318309886183791
+  22/7_pi_gives_turn_fraction: 7/22
+  q=22_vs_7_turns_residual_rad: +1.770284974289638e-02
+  q=22_vs_7_turns_residual_turns: +2.817496043395047e-03
+  best_closure_q<=100: q=22, turns=7, residual_rad=+1.770284974289638e-02
+  readout: the 22-family flower belongs to the full-turn normalization,
+           because 1/pi turns is approximated by 7/22 turns.
+
+UNITAL TERMINOLOGY GUARDRAIL
+block_design_unital_q=3:
+  points: 28
+  block_size: 4
+  lambda: 1
+  blocks: 63
+  point_replication: 9
+  LRC use: secondary pair-frame candidate for C(8,2)=28 slots.
+  next test: lift HYP-2937 marked C27 transfers into q=3 unital
+             4-point blocks after category-1 AP/GW labels are attached.
+algebraic_unital:
+  meaning: an identity/unit is present, or a map preserves identity.
+  LRC use: metaphor for label-preserving quotient maps, not a design.
+residue_unit_shell:
+  meaning: gcd-class visibility such as g1 versus g3/g9 in C=27 shells.
+  LRC use: primary finite shell label in HYP-2937, not the word unital.
+
+PROOF-CARRIER ORDER
+angle normalization
+> exact M/Farey branch
+> C=27 unit/nonunit shell transfer
+> 22/7 and cuberoot(31) pi-approximant labels
+> q=3 unital pair-frame after category-1 labelling
+> algebraic unital identity-preservation metaphor
+> raw flower/family visual count
+
+ASSUMPTION CHALLENGED
+A visible 22-family flower should not be treated as an exact
+literal-radian invariant.  It is an aliasing witness for the
+1/pi-of-a-turn normalization and for the rational approximant 7/22.

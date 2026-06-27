@@ -1,0 +1,78 @@
+HYP-2937 MARKED C27 TRANSFERS INTO Q=3 UNITAL BLOCKS
+==============================================================================
+[q=3 Hermitian unital verification]
+  points=28; blocks=63
+  design={'blocks': 63, 'block_size_hist': {4: 63}, 'point_rep_hist': {9: 28}, 'pair_rep_hist': {1: 378}}
+  affine labels use C27 residues via base-3 digits r=d0+3*d1+9*d2:
+    r=0  -> (X,Y,Z)=(0, 0, 1)
+    r=1  -> (X,Y,Z)=(1, 2, 1)
+    r=2  -> (X,Y,Z)=(1, 1, 2)
+    r=3  -> (X,Y,Z)=(1, w, 2w)
+    r=4  -> (X,Y,Z)=(1, 2+w, 2+w)
+    r=5  -> (X,Y,Z)=(1, 1+w, 1+w)
+    r=6  -> (X,Y,Z)=(1, 2w, w)
+    r=7  -> (X,Y,Z)=(1, 2+2w, 2+2w)
+    r=8  -> (X,Y,Z)=(1, 1+2w, 1+2w)
+  warning: this is a C27 -> F3^3 digit lift, not a cyclic action lift.
+
+[AP/Goddyn-Wong labelled block statistics]
+  block stratum histogram:
+    ('gcd3', 'gcd3', 'gcd3', 'inf'): 2
+    ('gcd3', 'gcd3', 'unit', 'unit'): 9
+    ('gcd3', 'gcd9', 'unit', 'unit'): 12
+    ('gcd3', 'unit', 'unit', 'unit'): 12
+    ('gcd3', 'unit', 'unit', 'zero'): 6
+    ('gcd9', 'gcd9', 'inf', 'zero'): 1
+    ('gcd9', 'unit', 'unit', 'unit'): 4
+    ('inf', 'unit', 'unit', 'unit'): 6
+    ('unit', 'unit', 'unit', 'unit'): 9
+    ('unit', 'unit', 'unit', 'zero'): 2
+  block states involving GW hole/collision/core:
+    ('C27_gcd9_core', 'C27_gcd9_core', 'inf', 'zero'): 1
+    ('C27_gcd9_core', 'GW_collision_shell3', 'unit', 'unit'): 4
+    ('C27_gcd9_core', 'GW_hole_shell12', 'unit', 'unit'): 4
+    ('C27_gcd9_core', 'gcd3', 'unit', 'unit'): 4
+    ('C27_gcd9_core', 'unit', 'unit', 'unit'): 4
+    ('GW_collision_shell3', 'GW_collision_shell3', 'unit', 'unit'): 1
+    ('GW_collision_shell3', 'GW_hole_shell12', 'gcd3', 'inf'): 2
+    ('GW_collision_shell3', 'GW_hole_shell12', 'unit', 'unit'): 2
+    ('GW_collision_shell3', 'gcd3', 'unit', 'unit'): 2
+    ('GW_collision_shell3', 'unit', 'unit', 'unit'): 4
+    ('GW_collision_shell3', 'unit', 'unit', 'zero'): 2
+    ('GW_hole_shell12', 'GW_hole_shell12', 'unit', 'unit'): 1
+    ('GW_hole_shell12', 'gcd3', 'unit', 'unit'): 2
+    ('GW_hole_shell12', 'unit', 'unit', 'unit'): 4
+    ('GW_hole_shell12', 'unit', 'unit', 'zero'): 2
+
+[Marked C27 doubling transfers lifted to unital blocks]
+  transfer is shell a -> fold(2a mod 27); GW petal is 12 -> 3.
+   a -> b   strata        pair carriers  AP/GW mark
+   1 -> 2    unit->unit      4        4      
+   2 -> 4    unit->unit      4        4      
+   3 -> 6    gcd3->gcd3      4        4      inside nonunit C27 orbit
+   4 -> 8    unit->unit      4        4      
+   5 -> 10   unit->unit      4        3      
+   6 -> 12   gcd3->gcd3      4        4      
+   7 -> 13   unit->unit      4        4      
+   8 -> 11   unit->unit      4        4      
+   9 -> 9    gcd9->gcd9      2        1      gcd9 fixed core
+  10 -> 7    unit->unit      4        4      
+  11 -> 5    unit->unit      4        3      
+  12 -> 3    gcd3->gcd3      4        4      GW 12->24 petal: hole shell12 -> collision shell3
+  13 -> 1    unit->unit      4        4      
+
+[GW transfer carrier blocks]
+  {3, 5, 15, 17}  states=(GW_collision_shell3, unit, GW_hole_shell12, unit)
+  {3, 12, 21, inf}  states=(GW_collision_shell3, GW_hole_shell12, gcd3, inf)
+  {6, 15, 24, inf}  states=(gcd3, GW_hole_shell12, GW_collision_shell3, inf)
+  {12, 14, 24, 26}  states=(GW_hole_shell12, unit, GW_collision_shell3, unit)
+
+[Readout]
+  Positive: the q=3 unital gives a real lambda=1 block carrier: every
+  marked C27 point-pair transfer lands in a unique 4-point block.
+  Negative/guardrail: the natural 27-point affine chart is F3^3.  The
+  C27 cyclic carry is not an automorphism of this lift, so block patterns
+  are label-dependent unless a stronger C27-compatible marking is proved.
+  Useful proof role: use unital blocks as a pair-incidence ledger after
+  AP/GW shell labels are fixed; do not treat the unital as a standalone
+  LRC invariant.

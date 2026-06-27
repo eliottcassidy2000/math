@@ -1,0 +1,15 @@
+﻿'LonelyRunner.LRC14.routeLeaf_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ routeLeaf_card._native.native_decide.ax_1_1]
+'LonelyRunner.LRC14.routeTriple_card' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound,
+ routeTriple_card._native.native_decide.ax_1_1]
+'LonelyRunner.LRC14.raw_route_triples_centerless' depends on axioms: [propext, Quot.sound]
+'LonelyRunner.LRC14.legal_sidecar_triples_unique_center' depends on axioms: [propext, Quot.sound]
+'LonelyRunner.LRC14.primitive_owner_split_expected_center' does not depend on any axioms
+'LonelyRunner.LRC14.centerControlPacket_soundness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.LRC14.centerControlSoundness_from_packet' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.LRC14.lrc14_from_center_control' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LonelyRunner.LRC14.lrc14_from_center_control_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,24 @@
+========================================================================================================
+ THREE-SAMENESS FIBER on the LRC lonely set  L(S)={t: ||s t||>=1/14}   (kk1=14)
+========================================================================================================
+config                     | EQUINUM            | EQUIDECOMP (scissors)              | EQUIDIST
+                           | cover #res #arcs   | #len  D(min wit.)  1/lmax(worst)   | meas(L)
+--------------------------------------------------------------------------------------------------------
+AP {1..13} (tight)         | False   13     0   |    0  D=14       1/lmax=-        | 0.00000
+GW {1..11,13,24} (tight)   | False   12     0   |    0  D=14       1/lmax=-        | 0.00000
+generic non-covering       | False    9    76   |   38  D=6        1/lmax=186      | 0.10183
+easy-cover {1..12,14}      | True    13    12   |    6  D=13       1/lmax=308      | 0.02390
+hard-cover {1..11,13,84}   | True    13     8   |    4  D=41       1/lmax=653      | 0.00536
+hard-cover {1..11,13,168}  | True    13     8   |    4  D=41       1/lmax=511      | 0.00876
+hard-cover {1..11,13,840}  | True    13    12   |    4  D=41       1/lmax=980      | 0.01063
+--------------------------------------------------------------------------------------------------------
+READINGS (corrected):
+ * EQUIDIST  meas(L)=0  EXACTLY characterizes the TIGHT atoms (AP, GW both -> 0 arcs, meas 0).
+   The density face detects the extremal locus -- this is the witness floor hitting 0.
+ * EQUINUM (covering) is INDEPENDENT of tightness: AP is non-covering yet tight; a dilated AP is
+   covering AND tight (S60). So 'covering' is a cardinal shadow, predicate-blind to tightness.
+ * EQUIDECOMP has TWO scissors invariants, and they are DIFFERENT: D(S)=min witness denominator
+   (smallest d with ANY a/d lonely -- the easiest reassembly) stays small; 1/lmax (worst arc, the
+   S61 V* quantity) GROWS with the apex. D(S) <= 1/lmax; the V*~200 wall is the 1/lmax face, not D.
+ The fiber (covering | D, 1/lmax, #len | meas) is the 'fundamental nature': no single column
+ separates {tight, generic, easy-cover, hard-cover}; the TRIPLE does.  meas=0 = tightness detector.

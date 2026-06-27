@@ -1,0 +1,169 @@
+LRC14 skeleton-gate missing-picture scout
+========================================================================
+[1] Jacobsthal acceleration gate
+  gate_order=(12, 10, 6, 9, 8, 7, 5, 4, 3, 2, 13, 11, 1)
+  admissible_sites=[12]
+  v= 1 W=(13, 25) profile=(0, 0, -13, 1) gate=False
+  v= 2 W=(12, 23) profile=(0, 1, -12, 2) gate=False
+  v= 3 W=(11, 21) profile=(0, 1, -11, 3) gate=False
+  v= 4 W=(10, 19) profile=(0, 1, -10, 4) gate=False
+  v= 5 W=(9, 17) profile=(0, 1, -9, 5) gate=False
+  v= 6 W=(8, 15) profile=(0, 2, -8, 6) gate=False
+  v= 7 W=(7, 13) profile=(0, 1, -7, 7) gate=False
+  v= 8 W=(6, 11) profile=(0, 1, -6, 8) gate=False
+  v= 9 W=(5, 9) profile=(0, 1, -5, 9) gate=False
+  v=10 W=(4, 7) profile=(0, 2, -4, 10) gate=False
+  v=11 W=(3, 5) profile=(0, 0, -3, 11) gate=False
+  v=12 W=(2, 3) profile=(1, 2, -2, 12) gate=True
+  v=13 W=(1, 1) profile=(0, 0, -1, 13) gate=False
+
+[2] Named skeleton-gate row atlas
+  AP:
+    row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+    note=baseline tight boundary
+    strict_mass=0 comps=0 closed_pts=6 boundary_key=AP/GW-six-pair
+    covering=True endpoint_units=True unit_shell=True apex7=True gap=2 basic=True
+    transfer=AP
+    tags=('-',) gates=('-',)
+    first_failure=none_or_boundary_endpoint route=tight_AP_boundary
+    square_profile_hashes=(('12e768ec10b7', 6), ('7cb6d2fdf102', 1), ('dfccece3d9ae', 6))
+  GW_12_to_24:
+    row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+    note=Goddyn-Wong hidden D3 transfer
+    strict_mass=0 comps=0 closed_pts=6 boundary_key=AP/GW-six-pair
+    covering=True endpoint_units=True unit_shell=True apex7=True gap=2 basic=True
+    transfer=H12:g3 -> D3:g3@24
+    tags=('GW:D3-tight',) gates=((12, (2, 3), True),)
+    first_failure=none_or_boundary_endpoint route=tight_GW_hidden_D3_boundary
+    square_profile_hashes=(('08a8aed991bb', 1), ('21d5e6faac7b', 1), ('2ea78b5fda43', 1), ('7cb6d2fdf102', 1), ('8066cf817847', 1), ('85e4207b5f5c', 2), ('967a41e29171', 1), ('a49ee53a5834', 1), ('b2a8a9ed42a5', 1), ('b7095248c29e', 1), ('c4afb2e859ee', 1), ('f849af3fcccd', 1))
+  false_AP_residue_12_to_26:
+    row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 26)
+    note=same AP residues, lost multiple of 12
+    strict_mass=426/35035 comps=4 closed_pts=14 boundary_key=open-or-empty
+    covering=False endpoint_units=True unit_shell=True apex7=True gap=2 basic=False
+    transfer=H12:g3 -> D1:g1@26
+    tags=('H12->D1:unknown',) gates=('-',)
+    first_failure=covering_ok route=residue_liar_covering_failure
+    square_profile_hashes=(('12e768ec10b7', 6), ('7cb6d2fdf102', 1), ('dfccece3d9ae', 6))
+      front (15/182,13/154) ('13L',)->('11R',) slack=1/91
+      front (29/70,41/98) ('5L',)->('7R',) slack=1/98
+  near_12_to_36:
+    row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+    note=first D9/K33 Farey child
+    strict_mass=1/1260 comps=2 closed_pts=10 boundary_key=open-or-empty
+    covering=True endpoint_units=True unit_shell=True apex7=True gap=2 basic=True
+    transfer=H12:g3 -> D9:g9@36
+    tags=('K33:D9-open',) gates=('-',)
+    first_failure=strict_Haar_zero route=open_K33_state_lift_lane
+    square_profile_hashes=(('03fa216cc5fa', 2), ('3fcd4ef62771', 1), ('4e3ff704f114', 1), ('548541464b63', 1), ('6528d25a3433', 1), ('7cb6d2fdf102', 1), ('7ddf5a33edd3', 1), ('91b8c4ed6e94', 1), ('cf8275ce5afc', 1), ('e734af0c0278', 1), ('ece805e0b062', 1), ('f94bae065629', 1))
+      front (29/70,209/504) ('5L',)->('36R',) slack=1/1008
+      front (295/504,41/70) ('36L',)->('5R',) slack=1/1008
+  loose_gate_8_to_16:
+    row=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 16)
+    note=basic filters pass but Jacobsthal gate fails
+    strict_mass=263/25872 comps=6 closed_pts=18 boundary_key=open-or-empty
+    covering=True endpoint_units=True unit_shell=True apex7=True gap=2 basic=True
+    transfer=H8:g1 -> D11:g1@16
+    tags=('P8:gate-fail',) gates=((8, (6, 11), False),)
+    first_failure=all_doubled_sites_gate_admissible route=open_gate_fail_impostor
+    square_profile_hashes=(('08a8aed991bb', 1), ('21d5e6faac7b', 1), ('2ea78b5fda43', 1), ('7cb6d2fdf102', 1), ('8066cf817847', 1), ('85e4207b5f5c', 2), ('967a41e29171', 1), ('a49ee53a5834', 1), ('b2a8a9ed42a5', 1), ('b7095248c29e', 1), ('c4afb2e859ee', 1), ('f849af3fcccd', 1))
+      front (5/42,27/224) ('9L',)->('16R',) slack=3/448
+      front (29/224,13/98) ('16L',)->('7R',) slack=5/448
+  petal_10_to_20:
+    row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20)
+    note=unit C27 petal
+    strict_mass=1/980 comps=2 closed_pts=10 boundary_key=open-or-empty
+    covering=True endpoint_units=True unit_shell=True apex7=True gap=2 basic=True
+    transfer=H10:g1 -> D7:g1@20
+    tags=('P10:unit-petal',) gates=((10, (4, 7), False),)
+    first_failure=all_doubled_sites_gate_admissible route=open_unit_petal_discharge
+    square_profile_hashes=(('08a8aed991bb', 1), ('21d5e6faac7b', 1), ('2ea78b5fda43', 1), ('7cb6d2fdf102', 1), ('8066cf817847', 1), ('85e4207b5f5c', 2), ('967a41e29171', 1), ('a49ee53a5834', 1), ('b2a8a9ed42a5', 1), ('b7095248c29e', 1), ('c4afb2e859ee', 1), ('f849af3fcccd', 1))
+      front (29/98,83/280) ('7L',)->('20R',) slack=1/560
+      front (197/280,69/98) ('20L',)->('7R',) slack=1/560
+  petal_13_to_26:
+    row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26)
+    note=unit C27 petal
+    strict_mass=1/182 comps=2 closed_pts=10 boundary_key=open-or-empty
+    covering=True endpoint_units=True unit_shell=False apex7=True gap=3 basic=False
+    transfer=H13:g1 -> D1:g1@26
+    tags=('P13:unit-petal',) gates=((13, (1, 1), False),)
+    first_failure=full_unit_shell route=open_unit_petal_discharge
+    square_profile_hashes=(('1a25ccc6f74b', 1), ('28fe475c1b1f', 1), ('3ac36ab9607b', 1), ('5591ef7f0c58', 1), ('85d37ccd9d81', 1), ('af214a3e8c03', 1), ('bb8c6b7c0a22', 1), ('d23ac68751d8', 1), ('d8402b37bc5c', 1), ('dc62f76c444d', 1), ('e031edfb97c5', 1), ('f8247c05268e', 2))
+      front (1/14,27/364) ('1L',)->('26R',) slack=1/728
+      front (337/364,13/14) ('26L',)->('1R',) slack=1/728
+  splice_10_12_to_20_24:
+    row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20, 24)
+    note=P10 plus tight GW
+    strict_mass=1/980 comps=2 closed_pts=10 boundary_key=open-or-empty
+    covering=True endpoint_units=True unit_shell=True apex7=True gap=2 basic=True
+    transfer=H10:g1,H12:g3 -> D7:g1@20,D3:g3@24
+    tags=('GW:D3-tight', 'P10:unit-petal') gates=((10, (4, 7), False), (12, (2, 3), True))
+    first_failure=all_doubled_sites_gate_admissible route=open_splice_discharge
+    square_profile_hashes=(('0f3321d29aab', 1), ('1d951ace7dff', 1), ('3181069e46e8', 1), ('48af39da0502', 1), ('5004bbfd5271', 1), ('7cb6d2fdf102', 1), ('ad41b9677591', 1), ('ad6e407b9828', 1), ('bbe7a10d2627', 1), ('d5dcd80bfe3d', 1), ('dcc282eb9e70', 2), ('f7923dee4e98', 1))
+      front (29/98,83/280) ('7L',)->('20R',) slack=1/560
+      front (197/280,69/98) ('20L',)->('7R',) slack=1/560
+  splice_10_12_to_20_36:
+    row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20, 36)
+    note=P10 plus K33
+    strict_mass=4/2205 comps=4 closed_pts=14 boundary_key=open-or-empty
+    covering=True endpoint_units=True unit_shell=True apex7=True gap=2 basic=True
+    transfer=H10:g1,H12:g3 -> D7:g1@20,D9:g9@36
+    tags=('K33:D9-open', 'P10:unit-petal') gates=((10, (4, 7), False),)
+    first_failure=all_doubled_sites_gate_admissible route=open_K33_state_lift_lane
+    square_profile_hashes=(('0d0607889ff3', 2), ('3b32d0eca813', 1), ('3d51168081fe', 1), ('4041108ecdc5', 1), ('5183b22c6b55', 1), ('6cdeaf378fa5', 1), ('7cb6d2fdf102', 1), ('8d470e829eed', 2), ('a1f7bbe10606', 1), ('b358b580b1c2', 1), ('dd8714059390', 1))
+      front (29/98,83/280) ('7L',)->('20R',) slack=1/560
+      front (29/70,209/504) ('5L',)->('36R',) slack=1/1008
+
+[3] Finite single/double acceleration family audit
+  single_accelerations=13 route_hist={'duplicate_speed_not_candidate': 6, 'open_gate_fail_impostor': 3, 'open_unit_petal_discharge': 2, 'residue_liar_covering_failure': 1, 'tight_GW_hidden_D3_boundary': 1}
+  single_basic_pass_sites=[8, 10, 12]
+  single_basic_and_gate_pass_sites=[12]
+    single  8->16: mass=263/25872 gate=((8, (6, 11), False),) route=open_gate_fail_impostor
+    single 10->20: mass=   1/980 gate=((10, (4, 7), False),) route=open_unit_petal_discharge
+    single 12->24: mass=       0 gate=((12, (2, 3), True),) route=tight_GW_hidden_D3_boundary
+  double_accelerations=78 route_hist={'duplicate_speed_not_candidate': 54, 'open_basic_survivor_needs_next_label': 2, 'open_general_discharge': 1, 'open_splice_discharge': 15, 'residue_liar_covering_failure': 6}
+  double_basic_pass_sites=[(4, 8), (6, 12), (8, 10), (8, 12), (10, 12)]
+    double (4, 8): mass= 97/4004 gates=('-',) tags=('H4->D11:unknown',) route=open_basic_survivor_needs_next_label
+    double (6, 12): mass=   7/858 gates=('-',) tags=('H6->D3:unknown',) route=open_basic_survivor_needs_next_label
+    double (8, 10): mass=1447/129360 gates=((8, (6, 11), False), (10, (4, 7), False)) tags=('P10:unit-petal', 'P8:gate-fail') route=open_splice_discharge
+    double (8, 12): mass=263/25872 gates=((8, (6, 11), False), (12, (2, 3), True)) tags=('GW:D3-tight', 'P8:gate-fail') route=open_splice_discharge
+    double (10, 12): mass=   1/980 gates=((10, (4, 7), False), (12, (2, 3), True)) tags=('GW:D3-tight', 'P10:unit-petal') route=open_splice_discharge
+  double_boundary_only_sites=[]
+
+[4] Proof-lens tournament
+  criteria: residue_liar, open_boundary, site12, D3_D9_unit, state_lift, finite_check, anti_scalar
+  covering_divisibility          vector=(5, 1, 2, 1, 1, 5, 5) score=1 note=catches false AP residues such as 12->26
+  Haar_Baire_boundary_skeleton   vector=(3, 5, 2, 2, 2, 5, 5) score=6 note=splits endpoint-only rows from open fronts
+  Jacobsthal_gate                vector=(2, 2, 5, 2, 2, 5, 4) score=3 note=forces the only movable single site v=12
+  C27_unital_transfer            vector=(2, 3, 4, 5, 4, 4, 5) score=5 note=separates D3, D9, and unit-petal transfer branches
+  derived_relative_profile       vector=(2, 2, 3, 4, 3, 4, 4) score=3 note=detects first-fold profile classes after coarse shells fail
+  K33_state_lift                 vector=(1, 3, 2, 4, 5, 3, 5) score=3 note=routes D9/Farey child packets to HYP-2908/THM-572
+  raw_residue_multiset           vector=(0, 1, 1, 1, 0, 5, 1) score=0 note=useful ledger, but magnitude-blind and easy to spoof
+  score_hist={0: 1, 1: 1, 3: 3, 5: 1, 6: 1} directed_3cycles=1 hp_count=3
+  sccs=[('covering_divisibility',), ('Haar_Baire_boundary_skeleton',), ('Jacobsthal_gate', 'derived_relative_profile', 'K33_state_lift'), ('C27_unital_transfer',), ('raw_residue_multiset',)]
+  cycle_examples=[('Jacobsthal_gate', 'derived_relative_profile', 'K33_state_lift')]
+  Hamiltonian_path=Haar_Baire_boundary_skeleton > C27_unital_transfer > derived_relative_profile > K33_state_lift > Jacobsthal_gate > covering_divisibility > raw_residue_multiset
+
+[5] Missing-picture synthesis
+  The finite data supports a two-switch proof interface:
+    switch A: strict Haar mass > 0 gives an open witness interval.
+    switch B: strict Haar mass = 0 routes to boundary-owner skeletons.
+  AP and GW share the same boundary-owner skeleton, so Haar/Baire alone
+  cannot see the H12->D3 transfer.  The transfer must be carried by
+  C27/unital labels.
+  The Jacobsthal gate then says the only single hidden acceleration site
+  compatible with the AP/GW summit is v=12.  Among the 12-branches,
+  C27/unital labels split D3 (GW tight boundary) from D9 (open K33 lane).
+  Residue impostors such as 12->26 show why covering/divisibility must
+  precede raw residue or apex-tournament conclusions.
+
+  Candidate theorem shape:
+    after standard reductions, any primitive LRC14 endpoint atom with no
+    strict Haar witness has the AP/GW six-pair boundary skeleton; the
+    derived gate forces any hidden single acceleration to be 12; C27/unital
+    pair completion permits only the D3 tight branch, while D9 and unit
+    petals open Haar fronts or feed the K33/state-lift route.
+
+  What remains global:
+    prove every bad atom enters this skeleton-gate language, or prove the
+    complementary open-front/state-lift discharge for atoms outside it.

@@ -1,0 +1,120 @@
+================================================================================
+S223: observer-extension/cut payload and the 12-layer audit
+================================================================================
+1. COUNT ORIGINS AND THE 12-LAYER
+   U(n)=unrooted tournament classes, P(n)=rooted/node perspectives, SC(n)=self-converse classes.
+   n  U(n)  P(n)  SC(n)  P(n-1)->U(n)  local_K_{n-1,n}_rect
+   1     1     1      1  -             -                   
+   2     1     2      1  0             0                   
+   3     2     4      2  0             2                   
+   4     4    12      2  0             6                   
+   5    12    48      8  0             12                  
+   6    56   296     12  8             20                  
+
+   Exact 12 carriers near the first defect:
+   P(4) rooted perspectives                         = 12
+   U(5) unrooted classes                            = 12
+   source-word slice in 5->6 extension              = 12
+   sink-word slice in 5->6 extension                = 12
+   self-converse classes at n=6                     = 12
+   K_{4,5} rectangle cycle-space redundancy        = 12
+
+2. ARITHMETIC CORRECTION
+   48 + 12 is 60, not 56.
+   The first defect is U(6)-P(5) = 56-48 = 8.
+   The exact splice is U(6) = P(5) + U(5) - U(4) = 48+12-4 = 56.
+   This identity is a useful alarm, not yet a theorem: the 4 is the previous
+   parent/source layer that must be quotient-corrected when a source/sink
+   slice is merged into the arbitrary rooted-perspective cache.
+   Fractions of U(6): P(5)/U(6)=6/7, defect/U(6)=1/7, U(5)/U(6)=3/14, U(4)/U(6)=1/14.
+   Hence the correction reads 1 = 6/7 + 3/14 - 1/14; the net missing mass is 1/7.
+
+3. INCIDENT WORDS, SOURCE/SINK SLICES, AND DELETION FIBERS
+   parent Aut-size histogram at U(5): {1: 7, 3: 4, 5: 1}
+   Aut(parent)-word-orbit count histogram: {8: 1, 16: 4, 32: 7}
+   raw target classes per U(5) parent: {7: 1, 13: 4, 21: 3, 23: 3, 24: 1}
+   orbit-target classes per U(5) parent: {7: 1, 13: 4, 21: 3, 23: 3, 24: 1}
+   source/sink child sets: |source|=12, |sink|=12, overlap=4
+   SC(6) intersections: with source=2, with sink=2, with source_or_sink=2
+   deletion parent diversity over all U(6) classes: {1: 3, 2: 6, 3: 13, 4: 13, 5: 17, 6: 4}
+   deletion parent diversity over SC(6) classes: {1: 3, 2: 2, 3: 1, 4: 5, 5: 1}; parent classes touched=12/12
+   deletion deck collision histogram: {1: 48, 2: 4} (unique decks=52/56)
+
+   Parent rows (id aut word_orbits raw_targets orbit_targets source sink SC-targets):
+    1   1          32          21            21      1    1          3
+    2   3          16          13            13      2    4          2
+    3   1          32          23            23      3    6          6
+    4   3          16          13            13      4    8          1
+    5   1          32          24            24      5   11          4
+    6   1          32          23            23      6   13          6
+    7   1          32          21            21      7   15          3
+    8   3          16          13            13      8   17          2
+    9   1          32          23            23      9   19          3
+   10   3          16          13            13     22   44          1
+   11   1          32          21            21     23   45          3
+   12   5           8           7             7     30   51          1
+
+4. ORDERED-PAIR/EDGE SECTORS AND S217 RESIDUES
+   ordered-pair sector deck mode=size    : separates 55/56 classes
+   ordered-pair sector deck mode=internal: separates 55/56 classes
+   ordered-pair sector deck mode=cross   : separates 56/56 classes
+   ordered-pair sector deck mode=full    : separates 56/56 classes
+   C3 histogram over all U(6): {0: 1, 1: 4, 2: 4, 3: 4, 4: 10, 5: 8, 6: 12, 7: 8, 8: 5}
+   C3 histogram over SC(6):   {0: 1, 2: 2, 4: 2, 6: 4, 8: 3}
+   S217 local line law: K_{k,k+1} has k(k+1) lines, rank 2k, rectangle residue rank k(k-1).
+   For k=4 this residue rank is 12; for n=6 global rectangle/hourglass redundancy is 26.
+   Reading: ordered-pair cross sectors and S217 rectangle/hourglass cycles are the same kind of cut payload: a mixed coordinate killed by a scalar shadow but recoverable as a sidecar.
+
+5. OBSERVER-EXTENSION / CUT PAYLOAD ABSTRACT
+   Data form:
+     base quotient Q, observer/cut word sigma, stabilizer Aut(Q),
+     sidecar C(sigma), sink map Phi(Q,sigma), and legality exit.
+   Controlled-forgetting recurrence:
+     retained_{r+1} = (retained_r, C_r) / Aut(retained_r)
+     debt_r = kernel(C_r -> LRC predicate)
+     allow forgetting only if debt_r is reconstructed, annihilated,
+     descended to a smaller family, AP/GW equality, or named residual debt.
+
+   Applications across this repo:
+   problem                         retained shadow                    hidden payload
+   A000568/rooted perspective     rooted node type                   new observer incident word and cross-sector chirality
+     sidecar=ordered-pair sector deck / edge tail-tip sector word; exit=exact finite first-failure audit
+   LRC threshold packet           safe/open status near a boundary phase endpoint owner, period deck, route label
+     sidecar=labelled packet sheaf with hidden-coordinate ledger; exit=HYP-3039/HYP-3043 controlled-forgetting protocol
+   Residual capacitor cuts        mixed route pair survives coarse boundary type which generator/cut class blocks it
+     sidecar=finite min-cut payload plus owner strip; exit=pair-good decoy repair and capacitor first-cut IDs
+   Haar drop/add square           row/column margin shadow           mixed zeta T00-T01-T10+T11
+     sidecar=rectangle product residue; exit=exact zeta sign or dual annihilation
+   S217 fixed-path diagonal flow  line-count or half-tiling shadow   rectangle/hourglass cycle residue
+     sidecar=GF(2) cut-space basis on K_{k,k+1}; exit=sidecar admissibility; not a scalar count
+   Matrix sidecar observability   rank/spectrum/scalar invariant     hidden coordinate separating route/status fibers
+     sidecar=observability matrix column; exit=separate, reconstruct, annihilate, descend, or name debt
+   Moser/fibbinary automata       regular-language membership        scale, parity-position, carry boundary
+     sidecar=automaton state plus valuation/topology sidecar; exit=automatic telemetry before LRC handoff
+   Perfect-number/divisor lane    abundancy or Euler-product scalar  prime-power lane and divisor-lattice fiber
+     sidecar=divisor-lattice/SNF payload; exit=squarefree blindness repair
+   Fixed-path tournament atlas    Hamiltonian-path presentation      fiber H(T)/Aut(T) and path-reversal branch data
+     sidecar=presentation-fiber payload; exit=unrooted class quotient only after fiber audit
+   Proof-obligation automaton     coarse theorem stage               which obligation remains after a quotient
+     sidecar=named residual state plus legal exit; exit=agent coordination and next lemma target
+
+6. TOURNAMENT ANALYSIS OVER PAYLOAD CARRIERS
+   Vertices are proof carriers, not runners or tournament nodes.
+   Observable: retained cut payload, exact finite checkability, LRC predicate
+   relevance, and automaton/handoff value; proof cost breaks ties.
+   vertices=['raw_scalar_or_count', 'rooted_node_cache', 'incident_word_orbit', 'ordered_pair_sector_deck', 'rectangle_hourglass_residue', 'deletion_fiber_payload', 'endpoint_owner_packet', 'sidecar_observability_matrix', 'proof_obligation_automaton']
+   score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+   directed_3_cycles=0
+   scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+   hamiltonian_paths=1
+   one_hamiltonian_path=proof_obligation_automaton -> sidecar_observability_matrix -> endpoint_owner_packet -> rectangle_hourglass_residue -> deletion_fiber_payload -> ordered_pair_sector_deck -> incident_word_orbit -> rooted_node_cache -> raw_scalar_or_count
+
+READING
+  The user's 12 observation is real, but not as 48+12=56.  The exact nearby arithmetic is P(5)=48, U(6)=56, defect=8, with the splice 56=48+12-4 and fractions 1=6/7+3/14-1/14.
+  The recurring 12 layers are different facets of the same payload theme: P(4), U(5), source/sink extension slices in 5->6, SC(6), and the k=4 rectangle-cycle rank in S217.  Each is a controlled-forgetting boundary where a quotient is legal only after the cut coordinate is named.
+  The proposed carrier is observer-extension/cut payload: a rooted or coarse object plus the incident word, sector/cross-sector coupling, deletion fiber, rectangle/hourglass residue, endpoint owner, or proof obligation that was destroyed by the quotient.
+  LRC use: do not treat A000568, a half-tiling count, a matrix scalar, or an automaton state as the proof object unless its observer/cut payload has been retained, reconstructed, annihilated, descended, or routed to named debt.
+
+ASSUMPTION CHALLENGE
+  Considered vertices: runners, rooted nodes, directed edges, ordered pairs, incident words, deletion fibers, source/sink slices, self-converse branch loci, rectangle/hourglass cycles, endpoint owners, automaton states, divisor lanes, matrix columns, and proof obligations.
+  Selected quotient: proof carriers with explicit observer/cut payload.  Preserved predicate: LRC safe-box route/status information and tournament extension recoverability.  Destroyed information: labelled runner identity, raw word order, full half-tiling presentation, and scalar-only counts.

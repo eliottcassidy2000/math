@@ -1,0 +1,87 @@
+﻿HYP-2985: LRC14 smoothing dispatcher proof pass
+====================================================================
+
+Dispatcher readout
+------------------
+AP_GW_boundary_atom
+  final policy: hybrid_labelled_packet_sheaf  score=8
+  best local policy: kaczynski_abel_boundary  local_score=8
+  retained: c27_k33_state, endpoint_owner, exact_period_q, exact_scale, exceptional_boundary, lrc_predicate
+  missing: -
+  packet note: zero-open equality atom at q=14; do not demand Fejer negativity
+  local policy note: true-wide approach-class ledger; off resonance decorrelates, resonance reduces
+K33_near_12_to_36
+  final policy: fejer_toeplitz_interval  score=10
+  best local policy: fejer_toeplitz_interval  local_score=10
+  retained: c27_k33_state, endpoint_owner, exact_period_q, exact_scale, formal_interval, lrc_predicate, state_lift_handoff, strict_open_interval
+  missing: -
+  packet note: strict-open K33 packet; interval Fejer degree 159 is the current certificate shape
+  local policy note: finite interval certificate for positive-open packets
+P10_plus_GW_splice
+  final policy: hybrid_labelled_packet_sheaf  score=10
+  best local policy: fejer_toeplitz_interval  local_score=9
+  retained: c27_k33_state, endpoint_owner, exact_period_q, exact_scale, formal_interval, lrc_predicate, prime_power_q, strict_open_interval
+  missing: -
+  packet note: q=27/C27 splice; squarefree large-sieve weights erase the prime-power address
+  local policy note: finite interval certificate for positive-open packets
+petal_q27_unit_strip
+  final policy: hybrid_labelled_packet_sheaf  score=8
+  best local policy: fejer_toeplitz_interval  local_score=7
+  retained: c27_k33_state, exact_period_q, exact_scale, lrc_predicate, prime_power_q, strict_open_interval
+  missing: -
+  packet note: unit petal packets first seen at prime-power q=27
+  local policy note: finite interval certificate for positive-open packets
+covering_q41_or_q63_front
+  final policy: fejer_toeplitz_interval  score=8
+  best local policy: fejer_toeplitz_interval  local_score=8
+  retained: endpoint_owner, exact_period_q, exact_scale, formal_interval, lrc_predicate, strict_open_interval
+  missing: -
+  packet note: covering rows are positive-open but can look all-covered in one chart
+  local policy note: finite interval certificate for positive-open packets
+late_prime_power_denominator_wall
+  final policy: hybrid_labelled_packet_sheaf  score=8
+  best local policy: kaczynski_abel_boundary  local_score=7
+  retained: exact_period_q, exact_scale, exceptional_boundary, lrc_predicate, prime_power_q, smoothing_kernel
+  missing: -
+  packet note: HYP-2901 style late denominators: useful large-sieve normalizer, unsafe scalar endpoint
+  local policy note: true-wide approach-class ledger; off resonance decorrelates, resonance reduces
+truewide_off_resonance_far_packet
+  final policy: hybrid_labelled_packet_sheaf  score=7
+  best local policy: kaczynski_abel_boundary  local_score=7
+  retained: endpoint_owner, exact_scale, exceptional_boundary, lrc_predicate, smoothing_kernel
+  missing: -
+  packet note: Fatou/decorrelated boundary value plus signed Abel tail
+  local policy note: true-wide approach-class ledger; off resonance decorrelates, resonance reduces
+truewide_resonant_freiman_packet
+  final policy: hybrid_labelled_packet_sheaf  score=8
+  best local policy: kaczynski_abel_boundary  local_score=8
+  retained: c27_k33_state, endpoint_owner, exact_scale, exceptional_boundary, lrc_predicate, state_lift_handoff
+  missing: -
+  packet note: small relation-height far tuples; scale/Freiman reduce to a bounded atlas
+  local policy note: true-wide approach-class ledger; off resonance decorrelates, resonance reduces
+
+Quotient guardrail
+------------------
+A quotient may forget a label only if the LRC predicate is constant on the fiber, the label is reconstructible, a dual/orthogonality certificate annihilates it, or the missing label is routed to a named residual packet.
+In particular, mu^2/phi is a Selberg/large-sieve normalizer, not a final LRC14 certificate: it sees q=14 and prime q=41 but erases prime-power or repeated-prime packets such as q=25,27,36,63,84,98,168,280,4312.
+
+Four-regime theorem skeleton
+----------------------------
+- boundary equality: AP/GW are endpoint-owner/Kaczynski boundary atoms; no Fejer negative certificate should be expected.
+- positive finite packet: K33, petals, splices, coverings, and few-apex rows should receive Fejer interval certificates or Ramanujan exact-period witnesses.
+- late denominator minor arc: after small packets are killed, Selberg/large-sieve weights can bound families only with exact-period and boundary labels attached.
+- true-wide boundary: off-resonance far packets decorrelate by signed Abel/Kaczynski control; resonant far packets reduce by Freiman/scale to bounded finite atlases.
+
+Tournament Analysis
+-------------------
+vertices: smoothing/quotient policies, not runners
+pairwise observable: retained LRC predicate payload, exact-period data, boundary approach, interval formalizability, and state-lift handoff
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed_3cycles=0
+hamiltonian_paths=1
+Hamiltonian path:
+  hybrid_labelled_packet_sheaf > kaczynski_abel_boundary > fejer_toeplitz_interval > ramanujan_exact_period_projector > selberg_large_sieve_squarefree > mertens_mu_over_n_tail > raw_scalar_density
+
+New proof target
+----------------
+Prove an admissible-smoothing lemma on HYP-2963 packet fibers: every primitive packet is either AP/GW boundary equality, a labelled Fejer interval certificate, a Ramanujan exact-period prime-power handoff, an off-resonance Kaczynski/Abel decay packet, a Freiman-reduced resonant finite atlas row, or a HYP-2908/THM-572 state-lift obligation.

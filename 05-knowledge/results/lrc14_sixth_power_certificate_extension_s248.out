@@ -1,0 +1,61 @@
+LRC14 S248 SIXTH-POWER CERTIFICATE EXTENSION SCOUT
+================================================
+
+Bounded Diophantine carrier scan
+  pair equation bound: positive 1..250
+  pair unordered inputs checked: 31375
+  pair sums with more than one unordered pair: 0
+  first pair collision: none found in this positive bounded scan
+
+  triple equation bound: positive 1..80
+  triple unordered inputs checked: 88560
+  triple sums with more than one unordered triple: 5
+  nontrivial triple-pair collision certificates: 5
+  sample primitive certificates: 3/5
+  sample certificates with shared terms: 0/5
+
+Sixth-power residue alphabets
+  mod 14: (0, 1, 7, 8)
+  mod 27: (0, 1, 10, 19)
+  mod 41: (0, 1, 2, 4, 5, 8, 9, 10, 16, 18, 20, 21, 23, 25, 31, 32, 33, 36, 37, 39, 40)
+
+First triple collision certificates
+  sum=160426514 left=(3, 19, 22) right=(10, 15, 23) gcd_all=1 shared=() mod14_pow6=((1, 1, 8), (1, 1, 8))
+    mod27_pow6=((0, 1, 19), (0, 1, 19)) mod41_pow6=((21, 21, 32), (5, 10, 18)) primitive=True
+  sum=10267296896 left=(6, 38, 44) right=(20, 30, 46) gcd_all=2 shared=() mod14_pow6=((8, 8, 8), (8, 8, 8))
+    mod27_pow6=((0, 1, 10), (0, 1, 10)) mod41_pow6=((32, 32, 39), (4, 25, 33)) primitive=False
+  sum=95200890914 left=(15, 52, 65) right=(36, 37, 67) gcd_all=1 shared=() mod14_pow6=((1, 1, 8), (1, 1, 8))
+    mod27_pow6=((0, 10, 10), (0, 1, 19)) mod41_pow6=((5, 8, 33), (4, 5, 37)) primitive=True
+  sum=116950928706 left=(9, 57, 66) right=(30, 45, 69) gcd_all=3 shared=() mod14_pow6=((1, 1, 8), (1, 1, 8))
+    mod27_pow6=((0, 0, 0), (0, 0, 0)) mod41_pow6=((16, 16, 40), (2, 33, 37)) primitive=False
+  sum=176277173474 left=(23, 54, 73) right=(33, 47, 74) gcd_all=1 shared=() mod14_pow6=((1, 1, 8), (1, 1, 8))
+    mod27_pow6=((0, 1, 19), (0, 10, 10)) mod41_pow6=((2, 18, 40), (31, 31, 39)) primitive=True
+
+LRC carrier interpretation
+  two_lane_rigidity_gate:
+    The bounded pair scan found no positive non-permutation collision, so a two-lane equality should be treated as a no-hidden-pair gate with gcd, residue, and shared-term sidecars retained.
+  three_lane_resonance_graph:
+    The triple scan has bounded collisions, so a route triple can balance sixth-power mass without identifying lanes.  A legal proof state must carry a collision certificate before medianization.
+  controlled_forgetting_rule:
+    Forgetting from the certificate to the raw scalar sum destroys lane rank, primitive gcd, shared-term cancellation, and CRT residue words. The loss must be reconstructed, dual-annihilated, descended, stopped at AP/GW boundary, or routed to named F7/THM-572 debt.
+
+Tournament Analysis
+  vertices: proof obligations / sidecar carriers, not runners or numbers
+  pairwise observable: weighted retained payload axes
+  tie path: listed carrier order in the script
+  rank2_rigidity_gauge:
+    score_histogram={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+    directed_3_cycles=0
+    scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    hamiltonian_path_count=1
+    path=labelled_lrc_packet_sheaf > sixth_power_collision_certificate > two_lane_rigidity_gate > three_lane_resonance_graph > route_state_median_sidecar > ramanujan_crt_residue_word > roth_minkowski_height_fence > fermat_catalan_hyperbolic_pressure > partial_cube_simplex_lane > raw_equal_sum_scalar_shadow
+  rank3_resonance_gauge:
+    score_histogram={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+    directed_3_cycles=0
+    scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    hamiltonian_path_count=1
+    path=labelled_lrc_packet_sheaf > sixth_power_collision_certificate > three_lane_resonance_graph > route_state_median_sidecar > two_lane_rigidity_gate > partial_cube_simplex_lane > ramanujan_crt_residue_word > roth_minkowski_height_fence > fermat_catalan_hyperbolic_pressure > raw_equal_sum_scalar_shadow
+  edge_flips_between_gauges=5
+
+Assumption challenge
+  Do not map the carrier directly to runners or powers.  Useful vertices are the two-lane rigidity gate, the three-lane resonance graph, primitive gcd filters, shared-term cancellation filters, mod-14/mod-27/mod-41 residue packets, height/lattice fences, route-state median sidecars, and raw scalar shadows.  The LRC predicate preserved is legal discharge of packet/route/certificate/sidecar states; the destroyed information is the lane identity and residue/gcd payload behind equal sixth-power sums.

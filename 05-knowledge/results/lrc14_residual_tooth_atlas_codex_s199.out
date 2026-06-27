@@ -1,0 +1,111 @@
+=== LRC14 residual tooth atlas S199 ===
+bank=HYP-2963 default rows single_limit=180 two_swap_limit=36 alias_depth=4 lcm_tail_max=5
+residual_coarse_et_unit_fibers=15 rows=38
+
+[0] Assumption challenge
+  considered vertices:
+    runners, gaps, route labels, coarse ET fibers, p-adic unit roots,
+    arc-Cech topology classes, safe-component stalks, Haar zeta teeth,
+    q-witness certificates, covering-moment packets, and proof obligations.
+  chosen vertices:
+    repair teeth acting inside each residual coarse ET+unit fiber.
+  preserved LRC predicate:
+    boundary/open status at threshold 1/14; all audited residual rows are open.
+  destroyed information:
+    exact theorem route until a topology, stalk, magnitude, or certificate
+    tooth is reattached.
+  challenged assumption:
+    the 15 residual fibers are not a counting problem; they are a
+    finite list of local repair teeth.
+
+[1] Residual tooth reports
+  arc_topology_compact         buckets=34 mixed_fibers=2  mixed_buckets=2  max_mixed=2  pure_rows=34 class=owner_strip
+  coarse_safe_stalk            buckets=36 mixed_fibers=0  mixed_buckets=0  max_mixed=0  pure_rows=38 class=owner_strip
+  exact_safe_stalk             buckets=36 mixed_fibers=0  mixed_buckets=0  max_mixed=0  pure_rows=38 class=nested_refinement
+  magnitude_cocycle            buckets=38 mixed_fibers=0  mixed_buckets=0  max_mixed=0  pure_rows=38 class=nested_refinement
+  q_or_covering_certificate    buckets=30 mixed_fibers=0  mixed_buckets=0  max_mixed=0  pure_rows=38 class=nested_refinement
+  first_tooth_counts={'arc_topology_compact': 13, 'coarse_safe_stalk': 2}
+  first_repair_class_counts={'owner_strip': 15}
+
+[2] Fiber-by-fiber first tooth
+  fiber[00] size=4 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 3} status={'open': 4} q0_range=11-14 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 11->99                 route=COVERING-MOMENT  M=   3/34 q0=14 mu=119789/2522520 topo=(20, 0, 24, 0, 20, 19) stalk=open|bars=20|len=4/693|owners=('3+',)->('1-', '3+')->('1-',)|h=3/34
+    single swap 11->15                 route=Q-WITNESS        M=   1/11 q0=11 mu=  4187/76440 topo=(10, 0, 14, 0, 10, 9) stalk=open|bars=10|len=1/112|owners=('3+',)->('3+', '8-')->('8-',)|h=1/11
+    single swap 11->155                route=Q-WITNESS        M=   1/11 q0=11 mu=129251/2369640 topo=(18, 0, 22, 0, 18, 17) stalk=open|bars=18|len=1/217|owners=('1+',)->('5-', '6+')->('5-',)|h=1/11
+    single swap 11->71                 route=Q-WITNESS        M=   1/11 q0=11 mu=148229/2713620 topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=4/497|owners=('3+',)->('3+', '8-')->('1-',)|h=1/11
+  fiber[01] size=4 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 3} status={'open': 4} q0_range=13-14 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 13->143                route=COVERING-MOMENT  M= 11/144 q0=14 mu= 4307/194040 topo=(20, 0, 26, 0, 20, 19) stalk=open|bars=20|len=5/1001|owners=('1+',)->('1+', '3-')->('3-',)|h=11/144
+    single swap 13->115                route=Q-WITNESS        M=   1/13 q0=13 mu=13469/405720 topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=1/168|owners=('1+',)->('1+', '12-')->('12-',)|h=1/13
+    single swap 13->31                 route=Q-WITNESS        M=   1/13 q0=13 mu=194039/6015240 topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=1/168|owners=('1+',)->('1+', '12-')->('12-',)|h=1/13
+    single swap 13->59                 route=Q-WITNESS        M=   1/13 q0=13 mu=53509/1635480 topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=1/168|owners=('1+',)->('1+', '12-')->('12-',)|h=1/13
+  fiber[02] size=3 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2} status={'open': 3} q0_range=10-14 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 10->180                route=COVERING-MOMENT  M= 18/187 q0=14 mu= 6599/315315 topo=(8, 0, 14, 0, 8, 7) stalk=open|bars=8|len=13/3528|owners=('7+',)->('12-', '7+')->('12-',)|h=18/187
+    single swap 10->152                route=Q-WITNESS        M=   1/10 q0=10 mu=  1103/52668 topo=(6, 0, 12, 0, 6, 5) stalk=open|bars=6|len=3/532|owners=('12+',)->('13-', '3-', '7+')->('12-',)|h=1/10
+    single swap 10->26                 route=Q-WITNESS        M=   1/10 q0=10 mu=  1520/63063 topo=(4, 0, 10, 0, 4, 3) stalk=open|bars=4|len=4/637|owners=('7+',)->('13-', '3-', '7+')->('13-',)|h=1/10
+  fiber[03] size=3 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2} status={'open': 3} q0_range=11-15 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 11->154                route=COVERING-MOMENT  M= 14/157 q0=15 mu=  3953/76440 topo=(20, 0, 20, 0, 20, 19) stalk=open|bars=20|len=3/539|owners=('0+',)->('0-', '3+')->('0-',)|h=14/157
+    single swap 11->70                 route=Q-WITNESS        M=   1/11 q0=11 mu=   587/10920 topo=(12, 0, 12, 0, 12, 11) stalk=open|bars=12|len=31/3920|owners=('0+',)->('3+', '8-')->('8-',)|h=1/11
+    single swap 11->98                 route=Q-WITNESS        M=   1/11 q0=11 mu=28451/535080 topo=(14, 0, 14, 0, 14, 13) stalk=open|bars=14|len=45/5488|owners=('0+',)->('3+', '8-')->('8-',)|h=1/11
+  fiber[04] size=3 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2} status={'open': 3} q0_range=8-14 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 8->152                 route=COVERING-MOMENT  M= 19/159 q0=14 mu=63191/1597596 topo=(10, 0, 16, 0, 10, 9) stalk=open|bars=10|len=3/532|owners=('12+',)->('12+', '7-')->('12-',)|h=19/159
+    single swap 8->180                 route=Q-WITNESS        M=    1/8 q0=8  mu=12248/315315 topo=(12, 0, 18, 0, 12, 11) stalk=open|bars=12|len=1/210|owners=('12+',)->('1+', '7-', '9+')->('12-',)|h=1/8
+    single swap 8->26                  route=Q-WITNESS        M=    1/8 q0=8  mu=   950/21021 topo=(4, 0, 10, 0, 4, 3) stalk=open|bars=4|len=2/147|owners=('9+',)->('1+', '7-', '9+')->('7-',)|h=1/8
+  fiber[05] size=3 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 2} status={'open': 3} q0_range=9-14 first=coarse_safe_stalk/owner_strip topology_pure=False coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 9->99                  route=COVERING-MOMENT  M= 11/104 q0=14 mu= 8363/168168 topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=5/693|owners=('5+',)->('1-', '5+')->('1-',)|h=11/104
+    single swap 9->15                  route=Q-WITNESS        M=    1/9 q0=9  mu=  3273/56056 topo=(6, 0, 10, 0, 6, 5) stalk=open|bars=6|len=1/91|owners=('5+',)->('13-', '4-', '5+')->('13-',)|h=1/9
+    single swap 9->155                 route=Q-WITNESS        M=    1/9 q0=9  mu=15907/310310 topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=6/1085|owners=('1+',)->('1+', '10+', '8-')->('1-',)|h=1/9
+  fiber[06] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} status={'open': 2} q0_range=11-14 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    magnitude liar 12->96              route=COVERING-MOMENT  M=  8/101 q0=14 mu= 5219/840840 topo=(8, 0, 14, 0, 8, 7) stalk=open|bars=8|len=11/6720|owners=('5+',)->('12-', '5+')->('12-',)|h=8/101
+    single swap 11->123                route=Q-WITNESS        M=   1/11 q0=11 mu=39527/783510 topo=(12, 0, 18, 0, 12, 11) stalk=open|bars=12|len=2/287|owners=('11+',)->('3+', '8-')->('11-',)|h=1/11
+  fiber[07] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} status={'open': 2} q0_range=11-14 first=coarse_safe_stalk/owner_strip topology_pure=False coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 11->121                route=COVERING-MOMENT  M= 11/124 q0=14 mu=463493/9249240 topo=(20, 0, 24, 0, 20, 19) stalk=open|bars=20|len=5/847|owners=('3+',)->('3+', '9-')->('9-',)|h=11/124
+    single swap 11->163                route=Q-WITNESS        M=   1/11 q0=11 mu=662279/12459720 topo=(20, 0, 24, 0, 20, 19) stalk=open|bars=20|len=41/7987|owners=('9+',)->('4+', '7-')->('7-',)|h=1/11
+  fiber[08] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} status={'open': 2} q0_range=13-14 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 13->156                route=COVERING-MOMENT  M= 12/157 q0=14 mu=58301/2522520 topo=(22, 0, 28, 0, 22, 21) stalk=open|bars=22|len=11/2184|owners=('1+',)->('1+', '2-')->('2-',)|h=12/157
+    single swap 13->100                route=Q-WITNESS        M=   1/13 q0=13 mu=   701/21560 topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=1/168|owners=('1+',)->('1+', '12-')->('12-',)|h=1/13
+  fiber[09] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} status={'open': 2} q0_range=13-14 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 12->180                route=COVERING-MOMENT  M=   3/37 q0=14 mu= 2833/315315 topo=(8, 0, 14, 0, 8, 7) stalk=open|bars=8|len=1/504|owners=('5+',)->('12-', '5+')->('12-',)|h=3/37
+    single swap 13->27                 route=Q-WITNESS        M=   1/13 q0=13 mu=13691/582120 topo=(12, 0, 18, 0, 12, 11) stalk=open|bars=12|len=1/308|owners=('11+',)->('11+', '2-')->('2-',)|h=1/13
+  fiber[10] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} status={'open': 2} q0_range=13-14 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 13->117                route=COVERING-MOMENT  M=  9/118 q0=14 mu= 4609/229320 topo=(16, 0, 22, 0, 16, 15) stalk=open|bars=16|len=4/819|owners=('1+',)->('1+', '5-')->('5-',)|h=9/118
+    single swap 13->61                 route=Q-WITNESS        M=   1/13 q0=13 mu=130439/3945480 topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=1/168|owners=('1+',)->('1+', '12-')->('12-',)|h=1/13
+  fiber[11] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} status={'open': 2} q0_range=13-14 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 13->104                route=COVERING-MOMENT  M=  8/105 q0=14 mu=     37/1960 topo=(14, 0, 20, 0, 14, 13) stalk=open|bars=14|len=1/208|owners=('1+',)->('1+', '6-')->('6-',)|h=8/105
+    single swap 13->76                 route=Q-WITNESS        M=   1/13 q0=13 mu=11143/335160 topo=(12, 0, 16, 0, 12, 11) stalk=open|bars=12|len=1/168|owners=('1+',)->('1+', '12-')->('12-',)|h=1/13
+  fiber[12] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} status={'open': 2} q0_range=8-15 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 8->56                  route=COVERING-MOMENT  M=    1/9 q0=15 mu=  1471/42042 topo=(8, 0, 8, 0, 8, 7) stalk=open|bars=8|len=5/784|owners=('0+',)->('0+', '7-')->('7-',)|h=1/9
+    single swap 8->140                 route=Q-WITNESS        M=    1/8 q0=8  mu=   556/15015 topo=(12, 0, 12, 0, 12, 11) stalk=open|bars=12|len=3/490|owners=('0+',)->('1+', '7-', '9+')->('0-',)|h=1/8
+  fiber[13] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} status={'open': 2} q0_range=8-14 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 8->24                  route=COVERING-MOMENT  M=   3/31 q0=14 mu=   899/42042 topo=(8, 0, 14, 0, 8, 7) stalk=open|bars=8|len=11/2352|owners=('10+',)->('10+', '7-')->('7-',)|h=3/31
+    single swap 8->150                 route=Q-WITNESS        M=    1/8 q0=8  mu=20747/525525 topo=(10, 0, 16, 0, 10, 9) stalk=open|bars=10|len=1/175|owners=('10+',)->('1+', '7-', '9+')->('10-',)|h=1/8
+  fiber[14] size=2 routes={'COVERING-MOMENT': 1, 'Q-WITNESS': 1} status={'open': 2} q0_range=10-15 first=arc_topology_compact/owner_strip topology_pure=True coarse_stalk_pure=True exact_stalk_pure=True
+    single swap 10->70                 route=COVERING-MOMENT  M=   1/11 q0=15 mu=   718/45045 topo=(8, 0, 8, 0, 8, 7) stalk=open|bars=8|len=3/980|owners=('7+',)->('0-', '7+')->('0-',)|h=1/11
+    two drop(10, 13)->add(14, 27)      route=Q-WITNESS        M=   1/10 q0=10 mu=29959/582120 topo=(14, 0, 14, 0, 14, 13) stalk=open|bars=14|len=2/189|owners=('13+',)->('13+', '3-', '7+')->('3-',)|h=1/10
+
+[3] Certificate teeth
+  q_witness_rows=23 q0_hist={8: 4, 9: 2, 10: 3, 11: 7, 13: 7}
+  covering_rows=15 positive_covering_rows=15 min_covering_mu=5219/840840
+  topology_same-route-collision_fibers=2
+  coarse_stalk_same-route-collision_fibers=0
+
+[4] Tournament Analysis
+  vertices_are=repair teeth, not runners
+  observable=status preservation, route split, nonroute legality, locality, compression, proof cost
+  switch=majority comparison of tooth vectors
+  tie_hamiltonian_path=arc_topology_compact > coarse_safe_stalk > exact_safe_stalk > magnitude_cocycle > q_or_covering_certificate
+  score_hist={0: 1, 2: 3, 4: 1}
+  directed_3cycles=1
+  hamiltonian_path_count=3
+  score_order=arc_topology_compact > coarse_safe_stalk > exact_safe_stalk > q_or_covering_certificate > magnitude_cocycle
+
+[5] Proof readout
+  1. The 15 residual coarse ET+unit route-mixed fibers are finite
+     and all 38 packets in them are strict-open.
+  2. Arc topology alone separates most residual route collisions,
+     but some same-topology Q/covering pairs need a stalk or
+     magnitude/nested-refinement tooth.
+  3. The exact safe-component stalk and magnitude cocycle separate
+     every residual fiber without invoking boundary/open status.
+  4. Therefore the next proof object can be a residual tooth manifest:
+     for each coarse gate fiber, record the first legal non-route
+     tooth before falling back to explicit q/covering certificate labels.

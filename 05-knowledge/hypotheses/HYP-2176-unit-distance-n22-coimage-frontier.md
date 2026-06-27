@@ -87,7 +87,9 @@ planar picture is a coimage of a higher-dimensional arithmetic carrier.
    witness must extend one of the `56/57` cores by degree `5/4`.
 3. Build a geometry-aware extension solver: given a dense embedded `21`-core,
    enumerate possible points at unit distance from `4` or `5` core vertices
-   and test whether any new edges force `61`.
+   and test whether any new edges force `61`.  S129 shows that graph-only
+   Hamiltonian-spine compatibility is universal on the five exact `57`-edge
+   cores, so this solver must keep the geometric unit-cocyclic side channel.
 4. Turn the totally-unfaithful filter into a reusable obstruction library for
    candidate `61` graphs.
 

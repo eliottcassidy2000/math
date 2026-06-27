@@ -1,0 +1,31 @@
+S168 LRC tournament-technique multiverse index
+cards=78
+categories=9
+category_counts={'proof_sheaf_zipper': 9, 'tournament_metagraph': 10, 'packet_families': 8, 'topology_boundary_discrepancy': 10, 'harmonic_fourier_certificate': 8, 'arithmetic_sieve_series': 11, 'analytic_sieve_smoothing': 7, 'state_lift_geometry_cross': 8, 'computation_formal_forum': 7}
+dimension_coverage={'predicate': 30, 'formal': 40, 'residual': 22, 'transfer': 21, 'topology': 24, 'harmonic': 26, 'metagraph': 23, 'endpoint': 16, 'exact_scale': 17, 'arithmetic': 23}
+
+Tournament Analysis
+vertices=technique families, not runners
+pairwise_observable=rotating first-difference over retained LRC predicate dimensions
+dimensions=predicate, exact_scale, topology, endpoint, arithmetic, harmonic, metagraph, formal, residual, transfer
+tie_hamiltonian_path=proof_sheaf_zipper > tournament_metagraph > packet_families > topology_boundary_discrepancy > harmonic_fourier_certificate > arithmetic_sieve_series > analytic_sieve_smoothing > state_lift_geometry_cross > computation_formal_forum
+score_hist={2: 1, 3: 1, 4: 4, 5: 3}
+directed_3cycles=26
+scc_sizes=[9]
+edge_flips_against_tie_path=21
+hamiltonian_path_count=2397
+
+Summit-8 isomorphism projection
+n=8 vertices=proof_sheaf_zipper, tournament_metagraph, packet_families, topology_boundary_discrepancy, harmonic_fourier_certificate, arithmetic_sieve_series, analytic_sieve_smoothing, state_lift_geometry_cross
+canonical_edge_word=0000011000101000110000000000
+score_hist={2: 1, 3: 2, 4: 5}
+directed_3cycles=19
+scc_sizes=[8]
+hamiltonian_path_count=591
+
+Top next pulls
+1. C1 emitted-cocycle matrix on HYP-2963 packet banks.
+2. Packet schema with exact M/qdiv, Haar class, Ramanujan projector, Fejer manifest, endpoint owner, state-lift debt.
+3. Source-marked tournament spectra for AP, GW, K33, petal, covering, and hard Fejer rows.
+4. Fiber-mixing tests for mu, mu^2/phi, divisor, spectrum, and any proposed scalar.
+5. Formal F7 residual sector as state lift, harmonic current, or named cohomology class.

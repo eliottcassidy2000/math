@@ -1,0 +1,86 @@
+S134 LRC14 BIGRADED SUMMAND x MULTIPLICAND RELATION SIGNATURES
+==============================================================================
+[1] Named-row bigraded signatures
+    addition supplies shells; multiplication tests visibility.
+  row                          M br                       sum+  fold  visC  hidC qblk     C27 L/U/B/E/N/Z         K
+  AP                        1/14 tight-floor                 0    36    55    70    0        13/0/0/0/4/0      star
+  GW 12->24                 1/14 tight-floor                11    31    40    50    0        11/0/1/1/4/0      star
+  residue-liar 12->26       1/12 nonunit-excess             11    30    40    50    0        11/0/1/1/3/0      star
+  petal 10->20              2/27 C27-petal-two-block         7    32    39    51    0        11/0/1/1/4/0 two-block
+  petal 13->26              2/27 C27-petal-two-block        10    30    40    55    0        11/0/1/1/4/0 two-block
+  near-miss 12->36          3/41 K33-unit-excess            11    30    40    50    0        12/0/0/1/3/0  K33-wall
+  shiftAP +10               5/16 nonunit-excess              0     2     0   125    1         0/5/4/4/4/0  K33-wall
+  committed 84              7/89 nonunit-excess             11    30    40    50    0        12/0/0/1/3/0  K33-wall
+
+  C27 columns are lower/upper/both/empty/nonunit-events/zero-hits.
+  The shiftAP row is the calibration from HYP-2639: same AP-style
+  sumset and energy, but no observer-visible low folds in the original
+  LRC coordinate frame, so it is very safe despite identical raw additive
+  structure.
+
+[2] S130 row-bank branch summary
+  branch                  rows  avg sum+  avg fold  avg hidC  avg qblk                  K-ranks
+  C27-petal-two-block        2      17/2        31        53         0         {'two-block': 2}
+  K33-unit-excess            1        11        30        50         0          {'K33-wall': 1}
+  nonunit-excess           690  3614/345  6473/230 12383/230      1/46 {'K33-wall': 56, 'star': 319, 'two-block': 315}
+  q-parent-star             54    248/27     275/9   1510/27      1/54             {'star': 54}
+  tight-floor                2      11/2      67/2        60         0              {'star': 2}
+
+  Reading:
+    the exact M-branch already splits rows better than any raw additive
+    statistic, but the branch summary says which relation channel should
+    be kept after the split.  The C27 p=2 rows carry a two-block
+    multiplicand tag; K33 unit-excess rows carry three-owner incidence.
+
+[3] Extremes that explain why scalarizing fails
+  most visible folds:
+    AP                 M=  1/14 branch=tight-floor             fold= 36 sum+=  0 qblk=0
+    swap 12->14        M=  1/12 branch=nonunit-excess          fold= 35 sum+=  1 qblk=0
+    swap 13->14        M=  1/13 branch=q-parent-star           fold= 35 sum+=  1 qblk=0
+    swap 12->15        M=  1/12 branch=nonunit-excess          fold= 35 sum+=  2 qblk=0
+    swap 13->15        M=  1/13 branch=q-parent-star           fold= 35 sum+=  2 qblk=0
+    swap 10->14        M=  1/10 branch=nonunit-excess          fold= 34 sum+=  2 qblk=0
+  highest hidden balanced collision payload:
+    swap 1->14         M=   1/8 branch=nonunit-excess          hidC= 85 fold= 30 sum+=  0
+    swap 2->14         M=  2/17 branch=nonunit-excess          hidC= 80 fold= 31 sum+=  1
+    swap 1->16         M=   1/9 branch=nonunit-excess          hidC= 75 fold= 30 sum+=  2
+    swap 1->15         M=  2/17 branch=nonunit-excess          hidC= 75 fold= 31 sum+=  1
+    swap 2->15         M=  2/19 branch=nonunit-excess          hidC= 75 fold= 31 sum+=  2
+    swap 3->14         M=  2/19 branch=nonunit-excess          hidC= 75 fold= 31 sum+=  1
+  C27 nonunit shell events among q=14 rows:
+    swap 1->15         M=  2/17 branch=nonunit-excess          C27_nonunit= 5 L/U/B/E=11/0/1/1
+    swap 1->18         M=  2/15 branch=nonunit-excess          C27_nonunit= 5 L/U/B/E=11/0/1/1
+    swap 1->21         M=  2/15 branch=nonunit-excess          C27_nonunit= 5 L/U/B/E=11/0/1/1
+    swap 1->24         M=  2/15 branch=nonunit-excess          C27_nonunit= 5 L/U/B/E=11/0/1/1
+    swap 1->45         M=  6/47 branch=nonunit-excess          C27_nonunit= 5 L/U/B/E=11/0/1/1
+    swap 1->48         M=  2/15 branch=nonunit-excess          C27_nonunit= 5 L/U/B/E=11/0/1/1
+    swap 1->51         M=  2/15 branch=nonunit-excess          C27_nonunit= 5 L/U/B/E=11/0/1/1
+    swap 1->69         M=  2/15 branch=nonunit-excess          C27_nonunit= 5 L/U/B/E=11/0/1/1
+
+[4] Tournament Analysis on relation channels
+  vertices considered/challenged:
+    runners, exact fractions, C27 shells, folds, balanced collisions,
+    divisor blockers, Kpq incidence, raw energy, and proof obligations.
+  chosen vertices: typed relation channels.
+  pair observable: role score
+    (theorem scale, branch separation, sign visibility, multiplicand
+     clearance, old-repo maturity, scalar-decoy resistance)
+  switch/gauge: lexicographically larger role score wins.
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1) hp=1
+  first Hamiltonian path: q/Farey branch > C27 typed shell > multiplicand clearance > Kpq incidence > visible folds > hidden balanced shells > raw sumset/energy > raw runner vertices
+  old-repo-maturity-only gauge would flip 5 pairs.
+
+[5] Proof readout
+  The old summand/multiplicand graph does not replace the S130-S133
+  Farey split.  It refines it.
+  Refined proof interface:
+    (1) keep exact q/Farey branch as theorem scale;
+    (2) inside p=2, use C27 typed shell + multiplicand clearance;
+    (3) inside p>=3, use Kpq/K33 incidence + owner packets;
+    (4) inside relation-rich residuals, separate visible folds from
+        hidden balanced shells before applying additive-energy bounds.
+  Proposed next lemma:
+    every remaining non-AP/GW q=14 atom either has a C27 typed-shell
+    defect handled by petal/lift rigidity, or has a three-owner K33
+    incidence packet with enough sign-visible relation mass to feed the
+    HYP-2908 tournament-state lift.

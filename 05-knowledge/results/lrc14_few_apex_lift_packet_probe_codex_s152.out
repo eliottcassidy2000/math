@@ -1,0 +1,98 @@
+S152 LRC14 FEW-APEX LIFT-PACKET PROBE
+==============================================================================
+max_k14=6, max_multiplier=180, stretch=True, measure_check=14, exact_worst=4
+[0] Assumption challenge / quotient declaration
+  considered vertices:
+    runners, 14-multiple multipliers Q, residual speeds R, fourteen lifts,
+    q-divisor obligations, safe-interval components, boundary events,
+    Fourier modes, and proof obligations.
+  chosen primary vertices:
+    lift packets (u,k) and proof carriers, not raw runners.
+  quotient preserves:
+    qdiv>14, the Q/R split, |14Z cap S|, exact rational lift-safe mass,
+    and whether a strict Haar/Baire witness exists.
+  quotient destroys:
+    fine ownership of a residual interval and exact maximizing Farey node;
+    the worst rows are therefore sent back to exact M/Farey calculation.
+  challenged assumption:
+    the HYP-2961 L1 branch with |Q|>=7 is still live.  THM-571 closes
+    that apex-majority branch modulo below-frontier LRC input, so the
+    active covering side is the few-apex |Q|<=6 lift-packet branch.
+
+[1] Structured few-apex bank
+  audited qdiv>14 rows: 8190
+  rows with zero strict lift mass: 0
+  rows with no positive lift: 0
+  by |14Z cap S| and profile mode:
+    k14      mode   rows     min safe_t min open lifts     min Q-safe
+      1   compact     13     563/105105              2            6/7
+      1 stretched     13          7/858              2            6/7
+      2   compact     78    4999/315315              4          66/91
+      2 stretched     78    9577/420420              4           8/11
+      3   compact    286       151/4620              6       606/1001
+      3 stretched    286  46363/1261260              6       853/1386
+      4   compact    715 126767/2522520              6      1492/3003
+      4 stretched    715      681/12740              6       787/1540
+      5   compact   1287 178999/2522520              8        196/495
+      5 stretched   1287 180017/2522520              8    24677/57330
+      6   compact   1716   26366/315315              8    18071/60060
+      6 stretched   1716   21173/252252              8     9007/24255
+
+[2] Tightest lift packets, checked against direct Haar intervals
+       mode k14            removed                  Q mults       safe_t lifts max speed    check
+    compact   1              (12,)                     (6,)   563/105105     4        84       OK
+    compact   1               (6,)                     (1,)        7/858     2        14       OK
+  stretched   1               (6,)                     (2,)        7/858     2        28       OK
+  stretched   1              (12,)                    (12,)    263/30030     4       168       OK
+    compact   2           (10, 12)                   (5, 6)  4999/315315     6        84       OK
+    compact   1              (10,)                     (5,)    718/45045     4        70       OK
+  stretched   1              (10,)                    (10,)  6313/315315     4       140       OK
+    compact   1               (7,)                     (1,) 57191/2522520    12        14       OK
+    compact   2            (4, 12)                   (1, 6)  9577/420420     6        84       OK
+  stretched   2            (4, 12)                  (6, 12)  9577/420420     6       168       OK
+    compact   1              (13,)                    (13,)  4637/194040    12       182       OK
+    compact   2            (6, 10)                   (1, 5)     167/6930     6        70       OK
+    compact   1               (4,)                     (1,)      97/4004     2        14       OK
+  stretched   1               (4,)                     (2,)      97/4004     2        28       OK
+
+[2b] Optional exact M fallback for tightest lift packets
+       mode k14            removed                  Q mults       safe_t lifts        M           denoms
+    compact   1              (12,)                     (6,)   563/105105     4     7/89             [89] OK
+    compact   1               (6,)                     (1,)        7/858     2     2/23             [23] OK
+  stretched   1               (6,)                     (2,)        7/858     2     2/23             [23] OK
+  stretched   1              (12,)                    (12,)    263/30030     4   14/173            [173] OK
+  minimum exact M among displayed worst rows: 7/89
+
+[3] Lift-packet fingerprints
+  open lift count histogram: {2: 10, 4: 34, 6: 114, 8: 310, 10: 804, 12: 4578, 14: 2340}
+  minimum positive lift-mass buckets: {'<=1/200': 569, '>1/200': 7525, '<=1/1000': 96}
+  hardest rows by total safe_t mass are positive because at least one
+  exact lift interval survives; no endpoint-only packet appears in this bank.
+
+[4] Tournament Analysis: proof-carrier relation
+  vertices: proof carriers and packet quotients, not runners.
+  pair observable:
+    LRC predicate retention, Q/R split retention, lift interval exactness,
+    boundary label retention, state-lift compatibility, anti-scalar guard.
+  switch/gauge:
+    lexicographically larger retention vector wins; ties use listed order.
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 scc=(1, 1, 1, 1, 1, 1, 1, 1) hp=1
+  Hamiltonian path:
+    qdiv scalar witness > THM-571 apex-majority descent > few-apex lift packet > exact M/Farey fallback > boundary-moment bridge > K33/state lift endpoint > raw apex residue tournament > raw runner set
+
+[5] Theorem-facing readout
+  THM-571 reconciliation:
+    the |14Z cap S|>=7 apex-majority family should be removed from
+    the live HYP-2961 counterexample list, modulo the accepted
+    below-frontier LRC input used by THM-571.
+  Few-apex evidence:
+    every structured AP-replacement row with 1<=|14Z cap S|<=6 in this
+    qdiv>14 bank has positive exact lift-safe mass, so none is a
+    covering zero-open non-migration packet.
+    smallest exact lift-safe measure in this run is 563/105105.
+    optional exact M fallback displayed minimum 7/89.
+  Candidate lemma:
+    Fixed-margin few-apex lift theorem.  For primitive qdiv>14 rows
+    with at most six multiples of 14, a retained Q/R lift packet has
+    positive regular-open Haar mass unless it state-lifts to the K33
+    endpoint.  This is the F5/F6 boundary-moment bridge in executable form.

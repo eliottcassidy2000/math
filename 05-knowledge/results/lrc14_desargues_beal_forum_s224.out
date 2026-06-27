@@ -1,0 +1,45 @@
+S224 Desargues/Beal LRC14 forum scout
+========================================================================
+Desargues graph model
+nodes=20 edges=30
+degree_hist={3: 20}
+bipartite=True
+girth=6 diameter=5
+isomorphic_to_generalized_petersen_G_10_3=True
+cycle_counts_len_<=10={6: 20, 8: 30, 10: 132}
+automorphism_count=240
+vertex_orbit_sizes=[20]
+edge_orbit_sizes=[30]
+
+Beal-style perfect-power scout
+base_bound=80 exponent_bound=7
+hit_count=36 primitive_hit_count=0
+first_hits:
+  2^3 + 2^3 = 2^4  gcd=2
+  2^4 + 2^4 = 2^5  gcd=2
+  2^5 + 2^5 = 2^6  gcd=2
+  2^5 + 2^5 = 4^3  gcd=2
+  2^6 + 2^6 = 2^7  gcd=2
+  2^6 + 4^3 = 2^7  gcd=2
+  4^3 + 2^6 = 2^7  gcd=2
+  4^3 + 4^3 = 2^7  gcd=2
+  3^3 + 6^3 = 3^5  gcd=3
+  2^7 + 2^7 = 4^4  gcd=2
+  4^4 + 4^4 = 8^3  gcd=4
+  8^3 + 8^3 = 4^5  gcd=4
+
+Tournament Analysis
+vertices=proof carriers, not runners
+pairwise_observable=retained boundary/open status, route, exact scale, owner incidence, topology, arithmetic common-owner gate, harmonic certificate, visible automorphism orbit
+switch=lexicographic retained-payload vector; tie path listed below
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+tie_path=labelled_packet_sheaf > observer_cut_orbit_ledger > desargues_girth6_incidence_residue > beal_common_owner_gate > endpoint_owner_strip > residual_capacitor_min_cut > haar_zeta_cocycle > fejer_interval_certificate > raw_desargues_scalar > raw_beal_scalar
+
+Assumption challenge
+Candidate vertices considered: runners, graph vertices, Desargues point-line flags, exponent triples, packet sidecar fields, and proof obligations.  The useful quotient uses sidecar/proof obligations: it preserves boundary/open status and route schedulability, while raw Desargues or Beal scalars destroy owner names, exact speeds, and the observer-cut payload.
+
+Proof-use summary
+S217 rectangle/hourglass residues are 4-cycle/coboundary checks.  The Desargues graph has no 4-cycles and first exposes girth-6 incidence residue, so it is a candidate next sidecar for a residual that is invisible to rectangle tests.  Beal's common-factor pattern suggests the matching arithmetic gate: a primitive three-channel power collision should force a common owner/prime/packet coordinate or become named F7/THM-572 debt.

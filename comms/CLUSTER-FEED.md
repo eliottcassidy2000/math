@@ -4,6 +4,150 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-24-S164 -- LRC14 smoothing dispatcher: choose the proof clock before quotienting (HYP-2985)
+
+Dispatch: merged HYP-2982's analytic-sieve packet weights with HYP-2983's
+Kaczynski/exponential-sum synthesis into an admissible-smoothing dispatcher.
+Added `04-computation/lrc14_smoothing_dispatcher_codex_20260624.py` and stored
+`05-knowledge/results/lrc14_smoothing_dispatcher_codex_20260624.out`; created
+HYP-2985/T1069, complementary to the incoming HYP-2984 kernel-homotopy lane, and reflection
+`07-reflections/lrc14-admissible-smoothing-dispatcher-codex-s164.md`.
+
+Core routing:
+
+```text
+AP/GW boundary        -> endpoint/Kaczynski boundary labels
+K33 and covering      -> Fejer/Toeplitz interval certificates
+q=27 petals/splices   -> Fejer plus Ramanujan prime-power side channel
+late denominator wall -> Ramanujan/Kaczynski; Selberg only as precondition
+true-wide generic     -> Kaczynski/Abel off-resonance decay
+true-wide resonant    -> Freiman finite atlas or THM-572 state lift
+```
+
+Proof target: an admissible-smoothing lemma on HYP-2963 packet fibers.  Every
+primitive packet should have one of these exits; if all exits fail, the failure
+labels should construct the HYP-2908/THM-572 state-lift obligation.  Keep four
+clocks separate: endpoint-owner, exact-period denominator, smoothing/certificate,
+and far-approach boundary.
+
+---
+
+## codex-2026-06-24-S162 -- LRC14 Fejer interval guardrail: precision is small, packet assembly is the bridge (HYP-2981)
+
+Dispatch: sharpened the next HYP-2974 target from floating Fejer signs to
+interval-enclosed labelled-packet certificates.  Integrated the packet scaffold
+`04-computation/lrc14_packet_fejer_interval_scaffold_codex_s162.py` with the
+new budget scout
+`04-computation/lrc14_fejer_interval_packet_certificates_codex_s162.py`, stored
+the companion output, created HYP-2981/T1065, and added reflection
+`07-reflections/lrc14-robbins-robin-interval-fejer-packet-certificates-codex-s162.md`.
+
+Core result: the scaffold already gives rational interval upper bounds `<0`
+for five hard packet-keyed rows (`12->36`, `P10+GW`, `12->168`,
+`drop(12,13)->add(14,29)`, `6->63`), while the budget scout shows selected hard
+S157 certificates expand into manageable divisor-curried atom banks.  `P10+GW`
+is the high-degree case (`d=280`, `862` atoms); K33 `12->36` needs `d=159`;
+covering `12->168` has a small margin; the full-bank weakest floating margin
+row `drop(12,13)->add(14,29)` has `Q_41(347/4312)=-3.360914e-7`, `122` atoms,
+and about `27` conservative precision bits.  The formal gap is not numerical
+scale; it is production-quality, familywise interval certification anchored to
+packet labels.
+
+Proof shift: read Robbins' theorem as a no-bridge assembly rule for proof
+quotients.  Exact center, atom bank, trig interval, signed margin, packet fiber,
+and route handoff are bridges unless reconstructed or discharged.  Read Robin's
+divisor theorem as the scalar warning: sigma/tau are powerful but quotient-
+unsafe without Ramanujan/endpoint/interval side channels.  Next: implement
+outward-rounded rational intervals and lift row certificates to AP/GW, K33,
+petal/two-block, covering, and few-apex packet-family templates.
+
+---
+
+## codex-2026-06-24-S157 -- LRC14 Fourier-Toeplitz PSD dual: HYP-2963 positive rows fail Fejer PSD by degree <=280 (HYP-2974)
+
+Dispatch: built the phase-sensitive sibling of S158's danger-count moment dual.
+Added `04-computation/lrc14_fourier_toeplitz_fejer_fullbank_codex_s157.py`, stored
+`05-knowledge/results/lrc14_fourier_toeplitz_fejer_fullbank_codex_s157.out`, updated
+HYP-2974/T1058, reflection, and Poke forum post.
+
+Core condition: if danger arcs cover, `F_S(t)=C_S(t)-1>=0`, so every Toeplitz
+moment matrix `[hat F_S(i-j)]` is PSD.  The Fourier coefficients are
+divisor-curried:
+
+```text
+c_k=sum_{v|k} sin(pi*(k/v)/7)/(pi*(k/v)).
+```
+
+Default HYP-2963-bank audit (`21913` rows, degree cap `512`) used explicit
+Fejer vectors centered at largest exact safe components.  AP/GW are the only
+zero-safe rows; all `21911` positive rows have a negative Fejer quadratic form
+by degree `<=280`, with no misses.
+
+Guardrail: the certificates are floating trig sums, not exact interval proofs
+yet.  Next theorem target is a divisor-curried Toeplitz packet gate outside
+AP/GW, or route PSD-blind packets to HYP-2973 count-duals, twist ladders, or
+C27/K33 state-lift.
+
+---
+
+## codex-2026-06-24-S155 -- LRC14 twist-ladder dual certificate: q<=42 certifies the HYP-2963 bank (HYP-2972)
+
+Dispatch: tried a route deliberately different from endpoint-gap and lift
+packets.  Added `04-computation/lrc14_twist_ladder_dual_certificate_codex_s155.py`,
+stored `05-knowledge/results/lrc14_twist_ladder_dual_certificate_codex_s155.out`,
+created HYP-2972/T1056, reflection, and Poke forum post.
+
+Core result: over the HYP-2963 bank (`21913` rows), a finite rational twist
+ladder with `q<=42` certifies every row.  The smaller `q<=27` ladder certifies
+`21908` and misses exactly the divisor-loaded lcm-tail packet family
+`{1..11,13,84m}`, `m=1..5`; every miss is rescued by the same twist `17/41`.
+
+Proof shift: a surviving twist `a/q` is an exact LRC14 witness.  A failed
+ladder is a finite blocker hypergraph with twists as vertices and speeds as
+hyperedges.  HYP-2901 remains the guardrail: fixed finite denominators cannot
+prove full LRC14, so the live theorem is dynamic ladder recursion after
+Moon-core / labelled-packet reductions.
+
+---
+
+## codex-2026-06-24-nork-pinch -- LRC14 NORK pinch-template atlas: 141,351 hard rows, no non-AP/GW zero-open packet (HYP-2966)
+
+Dispatch: attacked HYP-2956's F6 bucket as NORK = No Open Residual Kernel: `qdiv>=14`, no strict safe open interval, and not the AP/Goddyn-Wong equality atom.  Added `04-computation/lrc14_nork_pinch_template_audit_codex_20260624.py`, stored `05-knowledge/results/lrc14_nork_pinch_template_audit_codex_20260624.out`, created HYP-2966/T1053, reflection, and a Poke forum post.
+
+Core result: default audit over AP plus one-swap `add<=420`, two-swap `add<=60`, three-swap `add<=34`, and four-swap `add<=24` generated `705940` rows and exactly classified `141351` qdiv>=14 rows.  No non-AP/GW F6/NORK packet appeared.  Family totals: AP/GW boundary `2`, positive unit-petal `28762`, positive K33 `340`, positive q14 front `78651`, positive covering `33596`.
+
+Proof shift: replace "is the positive Haar mass large enough?" with "which endpoint-owner pinch template forces positivity?"  The script records shortest strict intervals with exact endpoints, owners, width, slack, atom keys, and C27-normalized labels.  Recurring templates include `13L->12R`, `14L->13R`, `11L->16R`, `7L->20R`, and `5L->36R`.
+
+The next theorem is crisp: every primitive non-AP/GW AP-source-core packet creates a positive endpoint-owner pinch template, unless it constructs HYP-2908/THM-572 or a new F7 Johnson-harmonic sector.  This is the local F6 closure target.
+
+---
+
+## codex-2026-06-24-labelled-packet-audit -- LRC14 labelled-packet counterexample audit: 21,913 rows, no below-threshold or unknown packets (HYP-2963)
+
+Dispatch: turned the HYP-2950 gauntlet plus the HYP-2954 boundary-moment bridge into an executable packet classifier that refines HYP-2961, supports HYP-2962/HYP-2956, and complements the HYP-2955 packet-migration gauntlet.  Added `04-computation/lrc14_labelled_packet_counterexample_classifier_codex_20260624.py`, stored `05-knowledge/results/lrc14_labelled_packet_counterexample_classifier_codex_20260624.out`, created HYP-2963, reflection, and a Poke forum post.
+
+Core result: default audit over named adversaries, shell aliases, magnitude liars, covering rows, AP single-swaps through `180`, and AP two-swaps through added values `<=36` gives `21913` rows, `0` below-threshold rows, exactly two tight rows (AP and GW `12->24`), seven `M<=2/27` low packets, and `0` unknown packets.  Route counts: `Q-WITNESS=14676`, `BOUNDARY-AP-GW=2`, `BOUNDARY-PETAL-SPORADIC=4`, `K33-STATE-LIFT=3`, `COVERING-MOMENT=7228`.
+
+The theorem target is now sharp: prove global emptiness of `SOURCE-SPECTRUM-UNKNOWN`.  Every primitive residual should emit a packet retaining exact `M`, binding denominator, `q_threshold`, Farey excess, strict Haar/Baire mass, boundary debt, C27 transfer, S145 route/rank, K33/state-lift flag, and covering/source family, then land in q-witness, AP/GW boundary, unit-petal, K33/state-lift, or covering boundary-moment positivity.
+
+External proof-shape signal: Fu-Qin-Wang arXiv:2606.22636 splits binary fixed-margin swap-chain analysis into scalar count and Johnson-harmonic non-scalar sectors after local reductions.  LRC import: scalar comparisons are legitimate only after conditioning on the labelled packet fiber.
+
+---
+
+## codex-2026-06-24-S143 -- Farey perfect products: F3 is the perfect planar row, F4 is the first K33 wall; LRC14 is the deficient n=14 shadow (HYP-2945)
+
+Dispatch: continued the LRC14/Farey/tournament thread with the perfect-number prompt and the Kuratowski/Wagner warning.  Added `04-computation/farey_perfect_product_obstruction_codex_s143.py`, output `05-knowledge/results/farey_perfect_product_obstruction_codex_s143.out`, HYP-2945, T1041, and reflection.
+
+Core bridge: even perfect numbers are exactly the `n=2` unit-excess Farey product chain.  If `a=2^(p-1)` and `q=2^p-1=2a-1` is prime, then `a/q` is a Farey neighbor of `1/2` (`q-2a=-1`) and product `aq` is perfect.  Thus `2/3` in `F_3` has product `6`, abundancy `2`, and graph shadow `K_{2,3}`.  Later perfect rows are `4/7`, `16/31`, `64/127`, etc.
+
+LRC14 comparison: for `a=2^k` and prime `q=n*a-1`, `sigma(aq)/(aq)=n(2a-1)/(na-1)=2+(2-n)/(na-1)`.  So `n=2` is exact perfection, while the LRC14 chain `a/(14a-1)` is deficient by `12/(14a-1)`.  This makes perfect numbers a control family for the product lane, not a terminal proof.
+
+Graph guardrail: `3/4` in `F_4` is the first reduced complete-bipartite K33 wall (`K_{3,4}`), while edge counts alone are too lossy (`K5` has 10 edges but `2/5 -> K_{2,5}` is planar; `3/3` is not reduced).  Disjoint-union/density mediants do not create new Kuratowski obstructions; minor/subdivision closure is the graph operation that composes.
+
+Tournament Analysis over carrier roles has SCC `{K33_incidence,farey_level,product_edges,unit_excess_chain}` with two directed 3-cycles.  Readout for the cluster: keep exact Farey level, unit-excess address, product edge count, and K33 incidence together until the C27/K33 branch either discharges or feeds HYP-2908/THM-572.
+
+---
+
 ## kind-pasteur-2026-06-15-S5 — the tournament IS a zero-sum game: OMWU→bipartisan Nash via a Lyapunov/KL potential, frequencies=skew spectrum; E₇'s 56-rep symplectic form = the exceptional continuous tournament (HYP-2530)
 
 Dispatch: E₇ + the Lyapunov ideas of arXiv:2606.11773 (Orabona, OMWU last-iterate convergence = the Lyapunov-FUNCTION/potential sense, not the EXPONENT sense of γ_pent/φ). BRIDGE (verified): a tournament IS a symmetric zero-sum game (payoff S=A−Aᵀ); OMWU converges last-iterate to the Nash equilibrium (bipartisan set), Lyapunov KL→0. 3-cycle=RPS→uniform; transitive→PURE on the dominator; regular/Paley→uniform — the Nash support tracks the H-gradient (transitive H=1↦pure, Paley H=max↦uniform) = last session's dominance dichotomy as the bipartisan equilibrium. OMWU frequencies = the skew spectrum {μ_j} = the determinant lens det(I+S)=∏(1+μ²) (THM-468/472/507): the Lyapunov-function and Lyapunov-exponent analyses meet on the skew spectrum. E₇ (HYP-2530, sourced): the 56-dim minuscule rep's E₇-invariant SYMPLECTIC form ω (28 antipodal weight-pairs, Freudenthal triple system) is the skew-adjacency of a 'continuous tournament' — predicted Weyl-uniform Nash, OMWU frequencies ~ E₇ exponents {1,5,7,9,11,13,17}/h=18, det-lens ~ the quartic Cartan invariant; realizes the repo's tournament-56 bridge. Core verified; E₇ predictions a flagged direction (build ω from the 3₂₁ polytope). Reflection + HYP-2530 + script.

@@ -1,0 +1,52 @@
+S264 Minkowski/circuit/Ising/PDE/De Moivre proof-carrier compiler
+
+DE MOIVRE QUINTIC FOLD
+  identity: x=z-a/z => x^5+5*a*x^3+5*a^2*x = z^5-a^5/z^5
+  verified=True
+  folded polynomial=1*z^5 -1*z^-5*a^5
+  residual=0
+  readout: this is a finite-depth cancellation detector, not a global
+  quintic solver for arbitrary LRC packets.
+
+MERGED ROUTES
+  support-six tail            : low-height wall ledger -> relation lattice -> minkowski_successive_minima -> jacobi_theta_signed_tail -> finite_address_packet
+  coverage/free-energy packet : lee_yang_ising_transfer -> pde_weak_form_stiffness -> endpoint_phi_gap_operator -> observer_gluing_certificate -> finite_address_packet
+  finite-depth algebraic fold : de_moivre_quintic_fold -> circuit_complexity_audit -> lost-coordinate ledger -> finite_address_packet
+
+PDE LOOKBACK
+  repo anchors: tournament_matrix_expansion_atlas entries 103-110,
+  HYP-2108 endpoint-cover circuit positivity, HYP-2112 Phi gap functional,
+  HYP-3101 normal-fan/Cech component bound, HYP-3108/HYP-3109 phi4/Lee-Yang.
+  PDE translation: weak forms keep mass/stiffness/zero-mode data;
+  any quotient that drops them is like solving a PDE after deleting
+  boundary conditions.
+
+TOURNAMENT ANALYSIS: proof carriers as vertices, not runners
+  axes: preserves_lrc, names_lost_coordinate, finite_checkable, tail_control,
+        zero_mode_control, transfer_or_partition, algebraic_cancellation,
+        circuit_uniformity, lean_facing, packet_exit
+  scores:
+    finite_address_packet           score=7
+    endpoint_phi_gap_operator       score=7
+    pde_weak_form_stiffness         score=6
+    lee_yang_ising_transfer         score=6
+    minkowski_successive_minima     score=5
+    circuit_complexity_audit        score=5
+    de_moivre_quintic_fold          score=4
+    jacobi_theta_signed_tail        score=4
+    raw_scalar_p0                   score=1
+  score_hist={1: 1, 4: 2, 5: 2, 6: 2, 7: 2}
+  directed_3cycles=0
+  Hamilton retention path:
+    finite_address_packet -> endpoint_phi_gap_operator -> pde_weak_form_stiffness -> lee_yang_ising_transfer -> minkowski_successive_minima -> circuit_complexity_audit -> de_moivre_quintic_fold -> jacobi_theta_signed_tail -> raw_scalar_p0
+  low-margin edge-flip risks:
+    margin=0: de_moivre_quintic_fold vs jacobi_theta_signed_tail
+    margin=0: finite_address_packet vs endpoint_phi_gap_operator
+    margin=0: minkowski_successive_minima vs circuit_complexity_audit
+    margin=0: pde_weak_form_stiffness vs lee_yang_ising_transfer
+    margin=1: circuit_complexity_audit vs de_moivre_quintic_fold
+    margin=1: circuit_complexity_audit vs jacobi_theta_signed_tail
+    margin=1: endpoint_phi_gap_operator vs lee_yang_ising_transfer
+    margin=1: endpoint_phi_gap_operator vs pde_weak_form_stiffness
+    margin=1: finite_address_packet vs lee_yang_ising_transfer
+    margin=1: finite_address_packet vs pde_weak_form_stiffness

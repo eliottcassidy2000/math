@@ -1,10 +1,9 @@
 /-
   TournamentH7.LRCMomentDual  (mac-mini-2026-06-22-S29)
 
-  ⚠️ WIP — NOT YET BUILD-VERIFIED (written, API fixes applied after a first build pass,
-  but the verifying build was interrupted by a full disk).  Standalone module (not yet
-  root-imported), so it does not affect the team build.  Needs one `lake build
-  TournamentH7.LRCMomentDual` + any residual API fixes, then `#print axioms p0_le_Ly`.
+  Standalone module (not yet root-imported), so it does not affect the team build.
+  Target-build verified by codex-2026-06-26 with:
+      lake build TournamentH7.LRCMomentDual
 
   The THM-534 moment-LP dual reduction for hp0cap, formalized:
       p0(E) = slowμ(coverSet E)  ≤  L_y(E) := ∫ g(missCount) dslowμ
@@ -69,7 +68,7 @@ theorem coverSet_eq_missCount_zero (E : List ℤ) :
     Set.mem_iUnion, List.mem_toFinset, exists_prop]
   constructor
   · intro h j hj; exact h j hj.1 hj.2
-  · intro h j hj1 hj6; exact h j ⟨hj1, hj6⟩
+  · intro h j hj1 hj6; exact h ⟨hj1, hj6⟩
 
 /-- The witness floor functional `L_y(E) := ∫ g(missCount) dslowμ`. -/
 noncomputable def Ly (E : List ℤ) (g : ℕ → ℝ) : ℝ :=
@@ -91,7 +90,8 @@ theorem p0_le_Ly (E : List ℤ) (g : ℕ → ℝ)
     (slowμ (coverSet E)).toReal ≤ Ly E g := by
   have hcov : (slowμ (coverSet E)).toReal
       = ∫ x, Set.indicator (coverSet E) (fun _ => (1 : ℝ)) x ∂slowμ := by
-    rw [integral_indicator_const (1 : ℝ) (measurableSet_coverSet E)]; simp
+    rw [integral_indicator_const (1 : ℝ) (measurableSet_coverSet E)]
+    simp [Measure.real]
   rw [Ly, hcov]
   refine integral_mono ((integrable_const (1 : ℝ)).indicator (measurableSet_coverSet E))
     (integrable_g_missCount E g) (fun x => ?_)
@@ -99,7 +99,7 @@ theorem p0_le_Ly (E : List ℤ) (g : ℕ → ℝ)
   · have h0 : missCount E x = 0 := by rw [coverSet_eq_missCount_zero] at hx; exact hx
     rw [Set.indicator_of_mem hx, h0]
     simpa using hfeas 0 (by norm_num)
-  · rw [Set.indicator_of_not_mem hx]
+  · rw [Set.indicator_of_notMem hx]
     have hne : missCount E x ≠ 0 := by
       rw [coverSet_eq_missCount_zero] at hx; simpa using hx
     have h := hfeas (missCount E x) (missCount_le_six E x)

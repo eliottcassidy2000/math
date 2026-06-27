@@ -1,0 +1,64 @@
+# Fibonacci / Additive-Basis / Farey Bridge Scout
+
+## Fibonacci Rows
+Identity: F_n = sum_k binom(n-k-1,k).
+For n>=2 this is the rank vector of independent sets in path P_{n-2}.
+
+n= 1 F_n=  1 row=1                  zeck(F_n)=[1]
+n= 2 F_n=  1 row=1                  zeck(F_n)=[1]
+n= 3 F_n=  2 row=1+1                zeck(F_n)=[2]
+n= 4 F_n=  3 row=1+2                zeck(F_n)=[3]
+n= 5 F_n=  5 row=1+3+1              zeck(F_n)=[5]
+n= 6 F_n=  8 row=1+4+3              zeck(F_n)=[8]
+n= 7 F_n= 13 row=1+5+6+1            zeck(F_n)=[13]
+n= 8 F_n= 21 row=1+6+10+4           zeck(F_n)=[21]
+n= 9 F_n= 34 row=1+7+15+10+1        zeck(F_n)=[34]
+n=10 F_n= 55 row=1+8+21+20+5        zeck(F_n)=[55]
+n=11 F_n= 89 row=1+9+28+35+15+1     zeck(F_n)=[89]
+
+## Fermat Polygonal Bounded-Arity Check
+3-gonal atoms: max minimum summands through 250 = 3; first max witnesses=[5, 8, 14, 17, 19, 23, 26, 32, 33, 35, 40, 41]
+4-gonal atoms: max minimum summands through 250 = 4; first max witnesses=[7, 15, 23, 28, 31, 39, 47, 55, 60, 63, 71, 79]
+5-gonal atoms: max minimum summands through 250 = 5; first max witnesses=[9, 21, 31, 43, 55, 89]
+6-gonal atoms: max minimum summands through 250 = 6; first max witnesses=[11, 26]
+7-gonal atoms: max minimum summands through 250 = 7; first max witnesses=[13, 31]
+8-gonal atoms: max minimum summands through 250 = 8; first max witnesses=[15, 36]
+
+## Goldbach / Ternary Goldbach Sample Entropy
+binary unordered prime-pair counts: {20: 2, 50: 4, 100: 6, 200: 8}
+ternary unordered prime-triple counts: {101: 38, 501: 283, 999: 769}
+
+## LRC14 Unit-Excess Farey Payloads
+Rows are p/q = p/(14p-1), so e=14p-q=1.
+p= 1 q= 13 p+q= 14 pq=  13 digits(q^p)= 2 digits(p^q)=  1 route=AP/GW parent; Zeck(p+q)=[13, 1]; Zeck(pq)=[13]
+p= 2 q= 27 p+q= 29 pq=  54 digits(q^p)= 3 digits(p^q)=  9 route=C27 petal/two-block; Zeck(p+q)=[21, 8]; Zeck(pq)=[34, 13, 5, 2]
+p= 3 q= 41 p+q= 44 pq= 123 digits(q^p)= 5 digits(p^q)= 20 route=K33/state-lift/Fejer; Zeck(p+q)=[34, 8, 2]; Zeck(pq)=[89, 34]
+p= 4 q= 55 p+q= 59 pq= 220 digits(q^p)= 7 digits(p^q)= 34 route=K33/state-lift/Fejer; Zeck(p+q)=[55, 3, 1]; Zeck(pq)=[144, 55, 21]
+p= 5 q= 69 p+q= 74 pq= 345 digits(q^p)=10 digits(p^q)= 49 route=K33/state-lift/Fejer; Zeck(p+q)=[55, 13, 5, 1]; Zeck(pq)=[233, 89, 21, 2]
+p= 6 q= 83 p+q= 89 pq= 498 digits(q^p)=12 digits(p^q)= 65 route=K33/state-lift/Fejer; Zeck(p+q)=[89]; Zeck(pq)=[377, 89, 21, 8, 3]
+p= 7 q= 97 p+q=104 pq= 679 digits(q^p)=14 digits(p^q)= 82 route=K33/state-lift/Fejer; Zeck(p+q)=[89, 13, 2]; Zeck(pq)=[610, 55, 13, 1]
+p= 8 q=111 p+q=119 pq= 888 digits(q^p)=17 digits(p^q)=101 route=K33/state-lift/Fejer; Zeck(p+q)=[89, 21, 8, 1]; Zeck(pq)=[610, 233, 34, 8, 3]
+
+## Three Representation Currencies
+Goldbach: high-entropy sieve branch count.
+Fermat polygonal: bounded arity / residue absorber.
+Zeckendorf/Fibonacci: path-rank normal form / no-adjacent carry.
+Farey sum/product/power: affine check / incidence blow-up / magnitude stress.
+
+## Tournament Analysis
+Vertices are proof currencies, not runners.
+Pairwise observable: retained currency vector
+(quotient_safety, local_to_global, entropy_control, LRC_transfer, exact_normal_form).
+Gauge: coordinate majority; tie Hamiltonian path is listed order below.
+tie_path=['zeckendorf_normal_form', 'fibonacci_path_rank', 'farey_sum_affine_check', 'fermat_polygonal_bounded_arity', 'ternary_goldbach_smoothing', 'farey_product_incidence', 'binary_goldbach_sieve', 'farey_power_stress_test']
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=1
+score_path=['zeckendorf_normal_form', 'fibonacci_path_rank', 'farey_sum_affine_check', 'fermat_polygonal_bounded_arity', 'ternary_goldbach_smoothing', 'farey_product_incidence', 'binary_goldbach_sieve', 'farey_power_stress_test']
+
+Main readout: Fibonacci rows are not merely another sequence.
+They are the rank-polynomial layer between abundant hypergraphs and
+Zeckendorf uniqueness.  In LRC/Farey language, p+q is the additive
+safe quotient, pq is the incidence/product side channel, and powers
+are useful mostly because they reveal magnitude-blind false quotients.

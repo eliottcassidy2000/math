@@ -1,0 +1,741 @@
+# Expanded Tournament-Matrix Atlas - codex-S212
+
+This expands the S210 tournament matrix translation layer.
+New rows in this expansion: 165
+Combined named hooks with S210: 300
+Domains covered: 14
+
+## Core Readout
+
+A tournament is not just an adjacency matrix.  It can be read as a skew sign matrix, Hermitian operator iS, Laplacian, Markov kernel, boundary matrix, incidence matrix, transfer matrix, comparison game, or sidecar observability system.  Each matrix theorem below suggests a tournament proof carrier, but every carrier must name what it forgets.
+
+## Domain Counts
+
+- algebra representation: 12
+- analysis operators: 12
+- cs machine learning: 9
+- factorizations canonical forms: 12
+- finite fields coding: 10
+- games social choice: 8
+- graph combinatorics: 14
+- linear spectral: 18
+- matrix scaling positivity: 9
+- number theory arithmetic: 13
+- optimization algorithms: 12
+- physics control: 10
+- probability random: 12
+- topology geometry: 14
+
+## Expanded Atlas
+
+### Linear Spectral
+
+1. **Courant-Fischer min-max.**
+   Matrix statement: Eigenvalues of a Hermitian matrix are variational extrema over subspaces.
+   Tournament statement: Apply to iS for a tournament sign matrix: extremal modes are the strongest rank or cyclic directions, but the eigenvector support must be retained before using the mode as a proof carrier.
+
+2. **Rayleigh quotient.**
+   Matrix statement: x*Mx / x*x gives a one-vector spectral certificate.
+   Tournament statement: Use signed vectors on vertices, edges, or proof obligations to certify a cut, cycle, or residual direction in a tournament carrier.
+
+3. **Schur-Horn theorem.**
+   Matrix statement: The diagonal of a Hermitian matrix is majorized by its spectrum.
+   Tournament statement: Score or diagonal sidecars are only shadows of the full spectrum; any score-only tournament quotient needs a cyclic residual sidecar.
+
+4. **Lidskii inequalities.**
+   Matrix statement: Eigenvalues of sums obey majorization constraints.
+   Tournament statement: Split a tournament operator into ranking, cyclic, and packet-error blocks; impossible spectral majorizations become certificate failures.
+
+5. **Ky Fan extremal principle.**
+   Matrix statement: Sums of top eigenvalues optimize traces over projections.
+   Tournament statement: Choose a low-dimensional proof-carrier subspace by maximizing retained cyclic or owner payload, not by raw variance alone.
+
+6. **Davis-Kahan sin-theta theorem.**
+   Matrix statement: Spectral subspaces are stable under perturbations with a gap.
+   Tournament statement: An edge-flip or tail-add update changes the tournament spectral carrier predictably when a gap exists; no gap means the quotient is fragile.
+
+7. **Bauer-Fike theorem.**
+   Matrix statement: Eigenvalues of a diagonalizable matrix move within condition-scaled perturbation disks.
+   Tournament statement: A poorly conditioned tournament operator is a bad proof carrier: tiny hidden coordinates can move route labels.
+
+8. **Pseudospectrum.**
+   Matrix statement: Non-normal matrices can have large spectral instability.
+   Tournament statement: Adjacency A is non-normal; use pseudospectra to detect tournaments where eigenvalues understate transient cyclic pressure.
+
+9. **Spectral projectors.**
+   Matrix statement: Contour integrals isolate invariant spectral subspaces.
+   Tournament statement: Project tournament data onto ranking, cyclic, and exceptional modes while keeping the projector as the retained sidecar.
+
+10. **von Neumann trace inequality.**
+   Matrix statement: Trace pairings are bounded by singular-value alignments.
+   Tournament statement: Pair a tournament certificate matrix with a residual matrix; equality cases identify aligned hidden obstruction directions.
+
+11. **Loewner order.**
+   Matrix statement: PSD order compares quadratic forms.
+   Tournament statement: A matrix tournament certificate should state which quadratic tests it dominates; scalar domination is not enough.
+
+12. **Matrix monotone functions.**
+   Matrix statement: Functions preserving Loewner order have strong structure.
+   Tournament statement: If a tournament invariant is obtained by applying f(A), prove f preserves the order relevant to the LRC predicate.
+
+13. **Hadamard determinant inequality.**
+   Matrix statement: The determinant is bounded by row norm product.
+   Tournament statement: Extremal tournament sign matrices near conference/Hadamard objects may maximize volume while not maximizing Hamilton paths or LRC usefulness.
+
+14. **Fischer determinant inequality.**
+   Matrix statement: Principal minors of PSD matrices satisfy log-submodularity.
+   Tournament statement: Subtournament determinant data may have submodular structure; failures mark non-PSD or skew residual debt.
+
+15. **Sylvester rank inequality.**
+   Matrix statement: rank(AB) is bounded below by rank(A)+rank(B)-n.
+   Tournament statement: Composition of two tournament quotient maps loses at most a quantifiable dimension only when the matrix ranks are known.
+
+16. **Frobenius inner product.**
+   Matrix statement: tr(A*B) is the Euclidean pairing on matrices.
+   Tournament statement: Turn pairwise tournament comparisons into an inner-product geometry of proof carriers; orthogonal residuals are invisible to the chosen invariant.
+
+17. **Matrix sign function.**
+   Matrix statement: The sign of a matrix separates positive and negative spectral subspaces.
+   Tournament statement: For Hermitian iS, sign(iS) is a coarse cyclic phase carrier; test whether it preserves route/status labels.
+
+18. **Polarization identity.**
+   Matrix statement: Quadratic forms determine bilinear forms.
+   Tournament statement: If a tournament certificate is quadratic, recover the cross terms before quotienting, because those are often the hidden coupling payload.
+
+### Matrix Scaling Positivity
+
+19. **Birkhoff-von Neumann theorem.**
+   Matrix statement: A doubly stochastic matrix is a convex combination of permutation matrices.
+   Tournament statement: A softened tournament adjacency can be decomposed into orderings; residual mass outside near-permutation orderings measures cyclic ambiguity.
+
+20. **Sinkhorn-Knopp scaling.**
+   Matrix statement: Positive matrices can often be diagonally scaled to doubly stochastic form.
+   Tournament statement: Scale weighted tournament comparison matrices to remove degree bias, then study the remaining cyclic residual.
+
+21. **Perron complement.**
+   Matrix statement: Eliminating states in a nonnegative matrix gives a corrected Perron block.
+   Tournament statement: Deleting tournament vertices or proof states should use Perron/Schur complements, not raw deletion, if ranking pressure matters.
+
+22. **M-matrix theory.**
+   Matrix statement: Matrices with nonpositive off-diagonal and positive inverse encode monotone systems.
+   Tournament statement: A Laplacian-like tournament carrier with M-matrix structure gives monotone repair certificates; failure means feedback/cycle debt.
+
+23. **P-matrix theorem.**
+   Matrix statement: All principal minors positive has implications for complementarity uniqueness.
+   Tournament statement: If a tournament packet LCP has a P-matrix, route selection is unique; otherwise multiple residual routes may coexist.
+
+24. **Total positivity.**
+   Matrix statement: All minors positive force variation-diminishing behavior.
+   Tournament statement: A totally positive tournament feature matrix would forbid oscillating route changes; non-total-positive minors locate cycle witnesses.
+
+25. **Oscillatory matrices.**
+   Matrix statement: Totally nonnegative matrices with positivity in powers have ordered real spectra.
+   Tournament statement: If a tournament quotient becomes oscillatory, it is essentially order-like; cyclic information has probably been destroyed.
+
+26. **Stieltjes matrices.**
+   Matrix statement: Symmetric positive definite M-matrices have inverse positivity.
+   Tournament statement: Use for energy forms on tournament cut or proof-obligation graphs where inverse entries should be influence weights.
+
+27. **Hilbert projective metric contraction.**
+   Matrix statement: Positive maps contract projective distance.
+   Tournament statement: Repeated stochastic tournament updates may converge to a ranking pressure vector; contraction says nothing about exact cycle sidecars.
+
+### Factorizations Canonical Forms
+
+28. **Rational canonical form.**
+   Matrix statement: A matrix over a field decomposes into companion blocks.
+   Tournament statement: Tournament recurrences over finite fields, especially mod p sidecars, should report invariant factors instead of only eigenvalues.
+
+29. **Smith-McCoy for polynomial matrices.**
+   Matrix statement: Polynomial matrix equivalence exposes invariant factors.
+   Tournament statement: Dynamic tournament transfer matrices can have hidden periodic factors that eigenvalue samples miss.
+
+30. **Kronecker canonical form of pencils.**
+   Matrix statement: Matrix pencils classify generalized eigenvalue and singular structure.
+   Tournament statement: Use pencils lambda B - C for two competing tournament carriers; singular blocks are hidden coordinates neither carrier sees alone.
+
+31. **QZ decomposition.**
+   Matrix statement: A pair of matrices is triangularized for generalized eigenvalues.
+   Tournament statement: Compare adjacency and Laplacian, or score and cycle operators, without forcing them to commute.
+
+32. **Autonne-Takagi factorization.**
+   Matrix statement: Complex symmetric matrices diagonalize by unitary congruence.
+   Tournament statement: Symmetric lifts of tournament signs can expose phase-aligned cycle packets distinct from Hermitian iS spectra.
+
+33. **Williamson normal form.**
+   Matrix statement: Positive symplectic matrices have canonical symplectic eigenvalues.
+   Tournament statement: If a tournament carrier is built from paired edge/cycle coordinates, symplectic eigenvalues separate canonical coupled modes.
+
+34. **LDL transpose factorization.**
+   Matrix statement: Symmetric indefinite matrices factor into pivots and signs.
+   Tournament statement: Boundary or conflict forms for tournaments may be indefinite; pivot signs identify obstruction directions.
+
+35. **Rank-revealing QR.**
+   Matrix statement: QR with pivoting exposes numerical rank and important columns.
+   Tournament statement: Pick sidecar columns, such as owner, sector, primitive deck, by pivoted rank rather than intuition.
+
+36. **CUR decomposition.**
+   Matrix statement: A matrix can be approximated by selected rows and columns.
+   Tournament statement: Choose representative tournament vertices, edges, or proof fibers that explain most matrix signal while preserving exact residual checks.
+
+37. **Nonnegative matrix factorization.**
+   Matrix statement: A nonnegative matrix decomposes into additive latent parts.
+   Tournament statement: Decompose walk or danger-count matrices into latent route families; nonunique factors must not be mistaken for proof labels.
+
+38. **Independent component analysis.**
+   Matrix statement: A matrix factorization seeks statistically independent sources.
+   Tournament statement: Feature banks over tournaments may split into ranking, cycle, endpoint-owner, and arithmetic-clock components.
+
+39. **Butterfly factorization.**
+   Matrix statement: Fourier-like matrices admit fast multiscale factors.
+   Tournament statement: Circulant and residue tournaments should exploit butterfly/FFT structure before brute-force enumeration.
+
+### Graph Combinatorics
+
+40. **Lindstrom-Gessel-Viennot lemma.**
+   Matrix statement: Path families are determinants of path-count matrices.
+   Tournament statement: Nonintersecting path packets in a tournament carrier can become determinant certificates with visible path addresses.
+
+41. **All-minors matrix-tree theorem.**
+   Matrix statement: Laplacian minors count directed forests connecting boundary sets.
+   Tournament statement: Use minors to count redundancy of proof routes between source, obstruction, and certificate vertices.
+
+42. **Matrix forest theorem.**
+   Matrix statement: The inverse of I plus Laplacian counts rooted forests.
+   Tournament statement: Forest weights in carrier tournaments measure how strongly residual obligations attach to certificates.
+
+43. **Markov chain tree theorem.**
+   Matrix statement: Stationary probabilities equal weighted arborescence sums.
+   Tournament statement: Random-walk ranking in a tournament has a tree expansion; high rank pressure should be backed by arborescence sidecars.
+
+44. **Critical group and sandpile matrix.**
+   Matrix statement: Laplacian cokernels define finite abelian groups.
+   Tournament statement: Smith normal form of tournament carrier Laplacians exposes p-adic obstruction clocks.
+
+45. **BEST theorem via matrices.**
+   Matrix statement: Euler tours in directed graphs are counted by arborescences and degrees.
+   Tournament statement: For edge-state tournament carriers, Eulerian route counts factor into local degree data plus tree redundancy.
+
+46. **De Bruijn transfer matrices.**
+   Matrix statement: Words and overlaps are counted by adjacency matrices of state graphs.
+   Tournament statement: Automatic tournament shadows should keep state-transition matrices, not just accepted word labels.
+
+47. **Goulden-Jackson cluster matrix.**
+   Matrix statement: Forbidden-word counts are rational functions from overlap matrices.
+   Tournament statement: Forbidden tournament patterns can be counted by overlap matrices; overlaps are the hidden address coordinates.
+
+48. **Line digraph adjacency.**
+   Matrix statement: Edges become vertices and adjacency is incidence-compatible.
+   Tournament statement: When node perspectives lose information, pass to directed-edge matrices; this is exactly the edge-perspective lift.
+
+49. **Godsil-McKay switching matrices.**
+   Matrix statement: Certain switching operations preserve spectra.
+   Tournament statement: Cospectral tournaments or conflict graphs need switching sidecars; spectrum alone is not a complete proof state.
+
+50. **Spectral excess theorem.**
+   Matrix statement: Distance-regularity is characterized by spectral excess.
+   Tournament statement: A tournament carrier that looks distance-regular spectrally should be tested for exact distance or proof-depth regularity.
+
+51. **Walk-regularity.**
+   Matrix statement: Closed walk counts are independent of base vertex.
+   Tournament statement: If a tournament is walk-regular but not vertex-transitive, trace data has forgotten stabilizer or orbit information.
+
+52. **Incidence matrix of a hypergraph.**
+   Matrix statement: B B^T records co-incidence of blocks.
+   Tournament statement: Cycle, edge, or owner-block incidence matrices can replace raw tournament vertices in LRC proof carriers.
+
+53. **Krawtchouk matrices.**
+   Matrix statement: Hamming-scheme eigenmatrices diagonalize subset convolution.
+   Tournament statement: Boolean edge-flip layers of tournaments can be analyzed in Krawtchouk coordinates; low layers are not automatically safe quotients.
+
+### Finite Fields Coding
+
+54. **Generator matrices of codes.**
+   Matrix statement: Rows span a linear code.
+   Tournament statement: Treat selected tournament invariants as codewords; low distance means hidden coordinates are vulnerable to collisions.
+
+55. **Parity-check matrices.**
+   Matrix statement: Syndromes detect errors.
+   Tournament statement: A tournament quotient needs a parity-check sidecar that detects route/status-changing hidden errors.
+
+56. **MacWilliams transform.**
+   Matrix statement: Weight enumerators of a code and its dual are related by Krawtchouk matrices.
+   Tournament statement: Edge-flip weight distributions and dual obstruction checks should be paired, not used separately.
+
+57. **Delsarte linear programming.**
+   Matrix statement: Association-scheme eigenmatrices give bounds on codes.
+   Tournament statement: Tournaments in symmetric schemes, especially Paley/cyclotomic families, may admit LP bounds on forbidden cycle packets.
+
+58. **Reed-Solomon Vandermonde generator.**
+   Matrix statement: Evaluations of low-degree polynomials form MDS codes.
+   Tournament statement: Clock-sampling sidecars can be MDS-like: a few exact phases may reconstruct the hidden polynomial packet.
+
+59. **BCH parity matrices.**
+   Matrix statement: Consecutive roots enforce distance.
+   Tournament statement: For cyclic tournament residue words, root constraints can forbid small hidden defects.
+
+60. **LDPC Tanner matrix.**
+   Matrix statement: Sparse checks define iterative decoding.
+   Tournament statement: Large tournament proof ledgers should use sparse sidecar checks so local residual errors can be decoded.
+
+61. **Expander code matrices.**
+   Matrix statement: Graph expansion boosts distance.
+   Tournament statement: Carrier tournaments with expansion in their check matrix can tolerate local forgotten coordinates.
+
+62. **Hadamard code matrix.**
+   Matrix statement: Rows of a Hadamard matrix encode all linear characters.
+   Tournament statement: Conference and Paley tournament signs live near Hadamard codes; character rows should be exact sidecars.
+
+63. **Rank-metric codes.**
+   Matrix statement: Distance is matrix rank.
+   Tournament statement: Compare tournaments by rank distance of sign matrices to detect structural jumps not visible in Hamming edge distance.
+
+### Number Theory Arithmetic
+
+64. **SL2 continued-fraction matrices.**
+   Matrix statement: Continued fractions are products of 2 by 2 integer matrices.
+   Tournament statement: Farey and denominator clocks in LRC are matrix products; tournament state should keep the product, not only the final denominator.
+
+65. **Stern-Brocot matrices.**
+   Matrix statement: Left/right products enumerate rationals.
+   Tournament statement: Tournament threshold walks over Farey cells can be represented by L/R matrix words with exact ancestry.
+
+66. **Modular group generators S and T.**
+   Matrix statement: PSL2Z acts by integer matrices on the upper half-plane.
+   Tournament statement: Structured tournament transformations on rational phases may be modular actions with hidden cusp data.
+
+67. **Brandt matrices.**
+   Matrix statement: Quaternion ideal classes are connected by Hecke correspondences.
+   Tournament statement: Tournament isomorphism classes can be moved by prime correspondences; Brandt-like matrices record class-to-class transfer.
+
+68. **Hecke operator matrices.**
+   Matrix statement: Arithmetic correspondences act on modular forms.
+   Tournament statement: Prime-denominator tournament packets should be tested as Hecke-like transitions on class or sidecar spaces.
+
+69. **GCD matrices.**
+   Matrix statement: Entries gcd(i,j)^alpha have determinant factorizations.
+   Tournament statement: Divisor-sensitive tournament clocks should use gcd matrices to retain exact-period intersections.
+
+70. **LCM matrices.**
+   Matrix statement: Entries lcm(i,j) encode divisibility joins.
+   Tournament statement: A quotient that stores only lcm tails may lose prime-power coordinates; Smith form can expose them.
+
+71. **Divisor zeta matrix.**
+   Matrix statement: The poset matrix 1_{d divides n} has Mobius inverse.
+   Tournament statement: Exact-period packet ledgers are divisor-poset matrices; Mobius inversion should be explicit before scalarizing.
+
+72. **Redheffer matrix.**
+   Matrix statement: A determinant identity is equivalent to a Mertens sum.
+   Tournament statement: Divisibility/tournament incidence matrices can hide number-theoretic sums; determinant signs may flag hard arithmetic clocks.
+
+73. **Dedekind sum matrices.**
+   Matrix statement: Cotangent and modular reciprocity produce structured finite matrices.
+   Tournament statement: Two-large residue tails in LRC can be organized as Dedekind/cotangent channel matrices instead of absolute sums.
+
+74. **Kloosterman sum matrices.**
+   Matrix statement: Exponential sums over inverses form trace kernels.
+   Tournament statement: Reciprocal tournament clocks should retain inverse-residue matrices, especially when raw residue counts collide.
+
+75. **Character circulants.**
+   Matrix statement: Multiplicative characters define diagonalizable circulants.
+   Tournament statement: Quadratic/cyclotomic tournament orientations are exactly character-circulant sign matrices.
+
+76. **Period matrices.**
+   Matrix statement: Integrals over cycles produce matrices of arithmetic geometry.
+   Tournament statement: When tournament packets are boundary cycles, period-like matrices can record which cycles are genuinely independent.
+
+### Algebra Representation
+
+77. **Macaulay matrix.**
+   Matrix statement: Polynomial systems are solved by large coefficient matrices.
+   Tournament statement: Tournament feasibility constraints can be translated into polynomial systems; Macaulay rank detects hidden impossibility.
+
+78. **Bezoutian.**
+   Matrix statement: Common roots and stability are encoded by a bilinear matrix.
+   Tournament statement: Two tournament clocks collide if their Bezoutian degenerates; useful for scalar quotient failures.
+
+79. **Multiplication matrices in quotient rings.**
+   Matrix statement: Algebraic solutions are eigenvalues of multiplication operators.
+   Tournament statement: Finite tournament packet equations can be solved by multiplication matrices, with eigenvectors retaining labels.
+
+80. **Jacobian matrix.**
+   Matrix statement: Local rank gives dimension and singularity.
+   Tournament statement: A family of tournament deformations is locally rigid when its Jacobian over sidecar constraints has full rank.
+
+81. **Hessian matrix.**
+   Matrix statement: Second derivatives classify critical points.
+   Tournament statement: Extremal tournament invariants, such as Hamilton paths or energy, need Hessian directions to detect flat hidden coordinates.
+
+82. **McKay adjacency matrix.**
+   Matrix statement: Tensoring with a representation gives a graph matrix.
+   Tournament statement: Automorphism groups of symmetric tournaments act on edge/cycle modules; McKay matrices classify transfer between irreducible packets.
+
+83. **Fusion matrices.**
+   Matrix statement: Products in a fusion ring are matrices with nonnegative integer entries.
+   Tournament statement: Combining tournament proof carriers may obey fusion rules; noncommuting fusion means route order matters.
+
+84. **Modular S and T matrices.**
+   Matrix statement: A modular tensor category is controlled by two matrices.
+   Tournament statement: If tournament packet sectors have anyonic/modular behavior, S/T matrices separate charge sectors better than scalar counts.
+
+85. **Auslander-Reiten matrix.**
+   Matrix statement: Representation categories have translation quivers.
+   Tournament statement: Tournaments as complete quivers can be studied by module mutation; AR matrices may classify persistent cycle modules.
+
+86. **Cartan determinant theorem.**
+   Matrix statement: Finite type algebras have constrained Cartan matrices.
+   Tournament statement: A tournament mutation category with forbidden determinant values could certify impossible obstruction packets.
+
+87. **Exchange matrix mutation.**
+   Matrix statement: Cluster algebras mutate skew-symmetrizable matrices.
+   Tournament statement: Tournament sign matrices are skew inputs; mutation gives a controlled deformation grammar for edge and proof-coordinate flips.
+
+88. **Incidence algebra zeta matrix.**
+   Matrix statement: Poset convolution is matrix multiplication.
+   Tournament statement: Transitive subtournaments are total-order incidence algebras; nontransitive debt is exactly failure of a poset zeta model.
+
+### Topology Geometry
+
+89. **Cellular boundary matrix.**
+   Matrix statement: Homology is kernel of boundary modulo image.
+   Tournament statement: Tournament path, arc, or conflict complexes should expose obstruction cycles as nullspace classes.
+
+90. **Coboundary matrix.**
+   Matrix statement: Cohomology classes are quotient cocycles.
+   Tournament statement: A hidden coordinate can be a cocycle; if it is not a coboundary, no scalar quotient can kill it safely.
+
+91. **Cup product matrix.**
+   Matrix statement: Cohomology multiplication gives bilinear structure.
+   Tournament statement: Cycle interactions in tournament complexes need product data, not only Betti numbers.
+
+92. **Intersection form.**
+   Matrix statement: Manifold middle homology has a bilinear matrix.
+   Tournament statement: Pairing tournament cycles by intersection or overlap may identify owner-essential cycles.
+
+93. **Seifert matrix.**
+   Matrix statement: A knot's Seifert surface gives an asymmetric form.
+   Tournament statement: Directed cycle carriers are naturally asymmetric; Seifert-like matrices may distinguish orientation-reversal debt.
+
+94. **Alexander matrix.**
+   Matrix statement: Fox derivatives present knot modules.
+   Tournament statement: Tournament mutation relations can be differentiated into presentation matrices whose minors are invariants.
+
+95. **Goeritz matrix.**
+   Matrix statement: Checkerboard surfaces produce link signature matrices.
+   Tournament statement: Planar conflict diagrams from tournaments can use Goeritz forms to certify parity or signature obstructions.
+
+96. **Linking matrix.**
+   Matrix statement: Pairwise linking numbers assemble into a symmetric matrix.
+   Tournament statement: Cycle families in a tournament may have linking/overlap matrices; off-diagonal entries are interaction debt.
+
+97. **Dirac matrix.**
+   Matrix statement: A first-order operator squares to a Laplacian.
+   Tournament statement: Path complexes of tournaments may be better studied with Dirac operators than with Laplacians alone.
+
+98. **Hodge star matrix.**
+   Matrix statement: Metric duality maps k-forms to complementary forms.
+   Tournament statement: LRC endpoint arcs need a metric sidecar; the Hodge star records weights lost by pure incidence.
+
+99. **Persistent reduction matrix.**
+   Matrix statement: Column operations pair births and deaths.
+   Tournament statement: As thresholds move, tournament or danger-arc complexes emit barcodes; unpaired bars are residual proof debt.
+
+100. **Cayley-Menger determinant.**
+   Matrix statement: Distances determine simplex volume.
+   Tournament statement: Geometric realization of a tournament sign pattern is constrained by distance determinant feasibility.
+
+101. **Rigidity matrix.**
+   Matrix statement: Edge constraints have infinitesimal motion kernels.
+   Tournament statement: If a geometric tournament is rigid, only named wall crossings can change its orientation.
+
+102. **Stress matrix.**
+   Matrix statement: Self-stresses certify rigidity or tensegrity.
+   Tournament statement: Dual stress matrices can prove no continuous deformation removes a tournament obstruction.
+
+### Analysis Operators
+
+103. **Galerkin stiffness matrix.**
+   Matrix statement: Weak PDE forms become sparse PSD systems.
+   Tournament statement: LRC safe-set energy can be discretized on arcs; zero modes are boundary equality atoms.
+
+104. **Mass matrix.**
+   Matrix statement: Finite elements encode inner products by a mass matrix.
+   Tournament statement: A tournament carrier with weighted cells must keep the mass matrix or risk false orthogonality.
+
+105. **Finite-difference differentiation matrix.**
+   Matrix statement: Derivatives on grids become banded matrices.
+   Tournament statement: Wall-crossing sequences of tournaments can be differentiated to find first active hidden coordinates.
+
+106. **Chebyshev differentiation matrix.**
+   Matrix statement: Spectral collocation gives dense high-accuracy derivative matrices.
+   Tournament statement: Smooth parameterized tournament families can use spectral derivatives to locate exact threshold changes.
+
+107. **Fourier matrix.**
+   Matrix statement: DFT diagonalizes cyclic convolution.
+   Tournament statement: Residue tournaments should be Fourier-diagonalized before using any scalar residue statistic.
+
+108. **Wavelet transform matrix.**
+   Matrix statement: Multiscale basis matrices localize time and frequency.
+   Tournament statement: Tournament evolution over thresholds may have local jumps and global trends; wavelets separate them.
+
+109. **Convolution matrix.**
+   Matrix statement: Toeplitz/circulant matrices implement convolution.
+   Tournament statement: Pairwise danger patterns can be convolved exactly when translation symmetry exists; otherwise convolution is a lossy approximation.
+
+110. **Nyström matrix.**
+   Matrix statement: Integral operators are approximated by sampled kernels.
+   Tournament statement: Infinite or graphon tournaments can be sampled, but final residuals need exact finite sidecars.
+
+111. **Ulam matrix.**
+   Matrix statement: A dynamical system transfer operator is discretized by boxes.
+   Tournament statement: Threshold dynamics of tournament states can be approximated by a Markov matrix over quotient boxes.
+
+112. **Floquet monodromy matrix.**
+   Matrix statement: Periodic linear systems are classified by one-period transfer.
+   Tournament statement: Periodic tournament or automaton clocks should report monodromy; fixed points and multipliers are hidden clock data.
+
+113. **Carleman linearization matrix.**
+   Matrix statement: Nonlinear dynamics embed into infinite linear systems.
+   Tournament statement: Nonlinear tournament updates can be lifted to linear but infinite moment coordinates; finite truncations need residual bounds.
+
+114. **Resolvent identity.**
+   Matrix statement: Inverse shifts satisfy a precise difference formula.
+   Tournament statement: Compare tournament operators before/after an edge flip using resolvent updates; poles mark fragile proof carriers.
+
+### Optimization Algorithms
+
+115. **KKT matrix.**
+   Matrix statement: Optimality conditions combine Hessian and constraints.
+   Tournament statement: Tournament ranking, sidecar fitting, or LRC packet certification should emit the KKT residual, not just the optimum.
+
+116. **Barrier Hessian.**
+   Matrix statement: Interior-point methods use curvature of log barriers.
+   Tournament statement: Polyhedral tournament quotients have barrier curvature; flat directions are hidden coordinates.
+
+117. **Linear complementarity matrix.**
+   Matrix statement: LCP uniqueness and algorithms depend on matrix classes.
+   Tournament statement: Route selection among tournament proof obligations can be phrased as complementarity; P-matrix sidecars give uniqueness.
+
+118. **Monge array.**
+   Matrix statement: Quadrangle inequalities enable fast optimization.
+   Tournament statement: If tournament cost matrices are Monge after an ordering, the ordering is a real structural certificate.
+
+119. **Totally balanced matrices.**
+   Matrix statement: Certain set-cover matrices have integral polyhedra.
+   Tournament statement: Obstruction-cover matrices with total balance can be solved without fractional residual ambiguity.
+
+120. **Spectral sparsification.**
+   Matrix statement: A sparse PSD matrix approximates a Laplacian.
+   Tournament statement: Sparse proof-carrier matrices can approximate bulk behavior, but exceptions must list omitted edge/cycle sidecars.
+
+121. **Leverage scores.**
+   Matrix statement: Diagonal of projection matrices measures row influence.
+   Tournament statement: Rank tournament sidecar rows by leverage to find which hidden coordinates control route purity.
+
+122. **Matrix multiplicative weights.**
+   Matrix statement: PSD weights are updated to satisfy constraints.
+   Tournament statement: Iteratively search for tournament dual certificates while maintaining a PSD witness matrix.
+
+123. **Sum-of-squares moment matrix.**
+   Matrix statement: Polynomial nonnegativity is certified by PSD moment matrices.
+   Tournament statement: Forbidden tournament/LRC packets may have SOS certificates over edge or endpoint variables.
+
+124. **Lasserre hierarchy.**
+   Matrix statement: Moment matrices give increasingly tight polynomial relaxations.
+   Tournament statement: Use low levels as scouts, but record which tournament labels are lost at each relaxation.
+
+125. **Copositive programming.**
+   Matrix statement: Hard combinatorial problems can be exact over copositive cones.
+   Tournament statement: Feedback arc or clique-style tournament problems have copositive exact formulations; SDP is only a relaxation.
+
+126. **Interior-point normal equations.**
+   Matrix statement: Newton steps solve structured linear systems.
+   Tournament statement: The numerical conditioning of a tournament proof LP tells which sidecars are nearly dependent.
+
+### Probability Random
+
+127. **Absorbing Markov fundamental matrix.**
+   Matrix statement: N equals (I-Q)^{-1} and counts expected visits.
+   Tournament statement: In proof-state tournaments, expected visits before certificate absorption measure residual difficulty.
+
+128. **Detailed balance matrix equation.**
+   Matrix statement: pi_i P_ij = pi_j P_ji characterizes reversibility.
+   Tournament statement: A tournament random walk is generally irreversible; reversibilization destroys cyclic current and must be tracked.
+
+129. **Additive reversiblization.**
+   Matrix statement: P plus time reversal creates a reversible chain.
+   Tournament statement: Use reversible spectra as a prefilter, but keep antisymmetric current for Condorcet and LRC debt.
+
+130. **Fisher information matrix.**
+   Matrix statement: Curvature of log likelihood controls estimability.
+   Tournament statement: In noisy tournament models, parameters with low Fisher information are hidden coordinates; do not quotient them.
+
+131. **Cramer-Rao bound.**
+   Matrix statement: Estimator variance is bounded by inverse Fisher information.
+   Tournament statement: No tournament statistic can reliably recover a sidecar below this information threshold.
+
+132. **Marchenko-Pastur law.**
+   Matrix statement: Sample covariance eigenvalues have a universal bulk.
+   Tournament statement: Feature matrices of random tournaments should match MP baselines; outliers signal structure.
+
+133. **Circular law.**
+   Matrix statement: Eigenvalues of random non-Hermitian matrices fill a disk.
+   Tournament statement: Adjacency A of random tournaments has non-normal random-matrix behavior; compare before reading eigenvalue clouds as structure.
+
+134. **Girko hermitization.**
+   Matrix statement: Non-Hermitian spectra are studied through Hermitian block matrices.
+   Tournament statement: Tournament adjacency spectra should be hermitized when using rigorous random-matrix tools.
+
+135. **Free convolution.**
+   Matrix statement: Large random matrix sums have additive free laws.
+   Tournament statement: Tournament core plus random tail may be modeled by free convolution, with deviations as structured sidecars.
+
+136. **Dyson Brownian motion.**
+   Matrix statement: Eigenvalues evolve under matrix noise.
+   Tournament statement: Random edge flips induce spectral diffusion; barriers or stuck modes indicate rigid tournament structure.
+
+137. **BBP phase transition.**
+   Matrix statement: Spiked random matrices reveal signals past a threshold.
+   Tournament statement: A latent ranking spike in a random tournament is detectable only past a signal threshold; below it, cycle sidecars dominate.
+
+138. **Nonbacktracking spectral detection.**
+   Matrix statement: Community signals can emerge in nonbacktracking spectra.
+   Tournament statement: Edge-state tournament matrices may reveal block or proof-route structure invisible in adjacency spectra.
+
+### Cs Machine Learning
+
+139. **Spectral clustering matrix.**
+   Matrix statement: Eigenvectors of Laplacians cluster data.
+   Tournament statement: Cluster tournament proof states by Laplacian modes, then verify that each cluster is route-pure.
+
+140. **HITS authority-hub matrices.**
+   Matrix statement: A^T A and A A^T rank hubs and authorities.
+   Tournament statement: Tournament winners and validators can differ; compare hub/authority modes with cyclic residuals.
+
+141. **Graph neural message matrix.**
+   Matrix statement: Message passing repeatedly applies normalized adjacency.
+   Tournament statement: A GNN on tournaments is a learned WL/matrix quotient; inspect failures for hidden sidecars.
+
+142. **Attention matrix.**
+   Matrix statement: Rows of softmax scores mix tokens.
+   Tournament statement: A tournament can seed attention by pairwise dominance, but softmax loses antisymmetric exactness unless S is retained.
+
+143. **Neural tangent kernel matrix.**
+   Matrix statement: Training dynamics linearize through a kernel.
+   Tournament statement: Learned tournament invariants can be audited by NTK rank: low rank means likely hidden-coordinate collisions.
+
+144. **Kernel ridge inverse.**
+   Matrix statement: Predictions use (K+lambda I)^{-1}.
+   Tournament statement: A tournament kernel predictor should expose influence weights; high influence residuals deserve exact proof checks.
+
+145. **Graph transformer bias matrix.**
+   Matrix statement: Structural biases are added to attention logits.
+   Tournament statement: Encode tournament edge, cycle, and owner sidecars as separate bias matrices rather than one scalar feature.
+
+146. **Matrix completion with one-bit observations.**
+   Matrix statement: Signs of low-rank matrices can be recovered under assumptions.
+   Tournament statement: Near-transitive tournaments are one-bit low-rank data; cyclic tournaments violate the model in the residual.
+
+147. **Permutation equivariant matrices.**
+   Matrix statement: Equivariant linear maps have constrained block forms.
+   Tournament statement: Tournament neural features must respect isomorphism by simultaneous permutation conjugacy.
+
+### Games Social Choice
+
+148. **Payoff matrix minimax theorem.**
+   Matrix statement: Zero-sum games have equal max-min and min-max values.
+   Tournament statement: A tournament sign matrix is an antisymmetric game; mixed equilibria identify balanced cyclic cores.
+
+149. **Replicator dynamics matrix form.**
+   Matrix statement: Population shares evolve by payoff differences.
+   Tournament statement: Dominance dynamics on a tournament can cycle; equilibria expose nontransitive support.
+
+150. **Condorcet majority matrix.**
+   Matrix statement: Pairwise majority margins form a skew matrix.
+   Tournament statement: Social choice tournaments should keep margin magnitude, not only win orientation, when proving stability.
+
+151. **Borda score vector.**
+   Matrix statement: Row sums of the majority matrix rank alternatives.
+   Tournament statement: Borda is the score vector of A or S; it is a first-order shadow and needs cycle sidecars.
+
+152. **McGarvey realization matrix idea.**
+   Matrix statement: Any tournament can be realized as a majority relation.
+   Tournament statement: Matrix proof: majority tournaments are universal, so social-choice realizability alone gives no structural proof unless voter profile matrices are retained.
+
+153. **Maximal lottery equilibrium.**
+   Matrix statement: A skew payoff matrix defines a mixed equilibrium.
+   Tournament statement: Balanced support of a tournament game can be a canonical cyclic perspective, complementary to rooted node views.
+
+154. **Pairwise comparison consistency index.**
+   Matrix statement: Reciprocal matrices measure inconsistency by eigenvalues.
+   Tournament statement: Tournament inconsistency is not noise by default; high inconsistency may be the central cyclic object.
+
+155. **Elo update matrix.**
+   Matrix statement: Pairwise outcomes update latent ratings.
+   Tournament statement: Elo extracts a ranking pressure channel and discards exact cycle witnesses unless match history is retained.
+
+### Physics Control
+
+156. **Hamiltonian matrix.**
+   Matrix statement: Symplectic systems have paired eigenvalues.
+   Tournament statement: Edge-cycle coordinates may form Hamiltonian pairs; paired eigenvalues suggest conserved cyclic quantities.
+
+157. **Lindblad superoperator matrix.**
+   Matrix statement: Quantum Markov evolution acts on density matrices.
+   Tournament statement: Uncertainty over tournament classes can evolve by measurement; decoherence corresponds to forgetting labels.
+
+158. **Scattering S-matrix unitarity.**
+   Matrix statement: Incoming and outgoing amplitudes preserve probability.
+   Tournament statement: A proof quotient should conserve obligation mass: every incoming residual exits as certificate, descent, annihilation, or named debt.
+
+159. **Green function resolvent.**
+   Matrix statement: Poles of (zI-M)^{-1} identify modes.
+   Tournament statement: Tournament resolvent poles reveal persistent cycles or bottlenecks in proof-state dynamics.
+
+160. **Controllability Gramian.**
+   Matrix statement: Reachability energy is a PSD matrix.
+   Tournament statement: Edge flips or sidecar additions with low controllability energy are efficient proof moves.
+
+161. **Observability Gramian.**
+   Matrix statement: Output energy detects hidden states.
+   Tournament statement: A scalar invariant set is proof-safe only if its observability Gramian detects route/status-changing coordinates.
+
+162. **Algebraic Riccati equation.**
+   Matrix statement: Optimal feedback solves a matrix quadratic equation.
+   Tournament statement: Adaptive tournament querying should balance comparison cost against reduction in cyclic uncertainty.
+
+163. **Transfer matrix method for Ising models.**
+   Matrix statement: Partition functions are traces/products of local matrices.
+   Tournament statement: Layered tournament families can be counted by transfer matrices with weights for cycles, owners, or endpoints.
+
+164. **Kasteleyn orientation matrix.**
+   Matrix statement: Planar dimer counts are Pfaffians.
+   Tournament statement: Planar subcarriers inside tournaments may have Pfaffian certificates even when the whole tournament is nonplanar.
+
+165. **Dirac gamma matrices.**
+   Matrix statement: Clifford generators anticommute.
+   Tournament statement: Small parity-rich tournament signs can be represented by Clifford generators; anticommutation tracks cycle parity.
+
+## Tournament Analysis Over Domains
+
+Vertices are matrix-result domains, not tournament runners.
+Pairwise observable: retained exactness, incident/cycle payload, arithmetic hidden-clock payload, LRC sidecar usefulness, and computability.
+Switch: orient toward the domain that keeps more proof-relevant sidecar information before scalarizing.
+vertices=['algebra representation', 'analysis operators', 'cs machine learning', 'factorizations canonical forms', 'finite fields coding', 'games social choice', 'graph combinatorics', 'linear spectral', 'matrix scaling positivity', 'number theory arithmetic', 'optimization algorithms', 'physics control', 'probability random', 'topology geometry']
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1}
+directed_3_cycles=0
+hamiltonian_paths=1
+one_hamiltonian_path=topology geometry -> graph combinatorics -> optimization algorithms -> number theory arithmetic -> finite fields coding -> physics control -> games social choice -> algebra representation -> matrix scaling positivity -> analysis operators -> linear spectral -> factorizations canonical forms -> probability random -> cs machine learning
+
+## Next Formal Pulls
+
+1. Build a sidecar observability matrix whose rows are residual packet pairs and whose columns are candidate hidden coordinates.
+2. For HYP-3047 edge perspectives, emit four-sector block matrices, skew-cycle traces, and Schur-complement deletion corrections.
+3. Run Smith normal form on integer boundary/incidence sidecars when real or complex spectra merge packets.
+4. Treat each low-rank edge flip as a rank-2 skew update and compute determinant/resolvent/Pfaffian sensitivity.
+5. Use matrix-tree and forest counts on proof-carrier tournaments to measure redundancy of certificate routes.
+6. Use KKT/Farkas/SOS matrices to turn impossible residual packets into dual certificates.
+
+## Assumption Challenge
+
+The rows and columns need not be runners.  They may be directed edges, cycles, gaps, wall crossings, endpoint owners, denominator clocks, proof obligations, quotient fibers, cohomology classes, sidecar fields, or low-rank update directions.  The preserved predicate is whether the matrix carrier keeps enough information to decide the tournament or LRC proof obligation.  The destroyed information must be retained, reconstructed, dual-annihilated, descended, or routed to named debt.

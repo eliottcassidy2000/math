@@ -1,0 +1,50 @@
+================================================================================================
+ MISS-COUNT PGF  G_N(z)=sum q_t z^t   (k=8)   -- a NEW signal: roots, log-concavity, rank-flip
+================================================================================================
+
+ consec_8:
+   q = [0.3272, 0.2442, 0.1701, 0.1061, 0.0810, 0.0510, 0.0204]   (P(N=t), t=0..6)
+   G_N(0)=p0=0.32721   G_N(2)=6.5789   G_N(3)=39.2884
+   roots |z| (6): [1.489, 1.489, 1.581, 1.581, 1.701, 1.701]   #real=0/6   nearest root |z*|=1.4886
+   log-concavity defect min(q_t^2 - q_(t-1)q_(t+1)) = -0.00251  (NOT log-concave)
+
+ even-AP 2i:
+   q = [0.3272, 0.2442, 0.1701, 0.1061, 0.0810, 0.0510, 0.0204]   (P(N=t), t=0..6)
+   G_N(0)=p0=0.32721   G_N(2)=6.5789   G_N(3)=39.2884
+   roots |z| (6): [1.489, 1.489, 1.581, 1.581, 1.701, 1.701]   #real=0/6   nearest root |z*|=1.4886
+   log-concavity defect min(q_t^2 - q_(t-1)q_(t+1)) = -0.00251  (NOT log-concave)
+
+ break {1,5,7,8,9}+0:
+   q = [0.0453, 0.4113, 0.3267, 0.1226, 0.0556, 0.0275, 0.0110]   (P(N=t), t=0..6)
+   G_N(0)=p0=0.04528   G_N(2)=5.6274   G_N(3)=26.7192
+   roots |z| (6): [0.121, 1.643, 2.066, 2.066, 2.201, 2.201]   #real=2/6   nearest root |z*|=0.1212
+   log-concavity defect min(q_t^2 - q_(t-1)q_(t+1)) = -0.00313  (NOT log-concave)
+
+ top-cluster:
+   q = [0.1867, 0.2773, 0.2658, 0.1631, 0.0654, 0.0307, 0.0110]   (P(N=t), t=0..6)
+   G_N(0)=p0=0.18670   G_N(2)=5.8424   G_N(3)=28.5918
+   roots |z| (6): [1.244, 1.244, 1.633, 1.633, 2.030, 2.030]   #real=0/6   nearest root |z*|=1.2438
+   log-concavity defect min(q_t^2 - q_(t-1)q_(t+1)) = -0.00074  (NOT log-concave)
+
+ random-spread:
+   q = [0.0115, 0.2667, 0.4943, 0.2025, 0.0149, 0.0075, 0.0026]   (P(N=t), t=0..6)
+   G_N(0)=p0=0.01152   G_N(2)=4.7879   G_N(3)=15.6723
+   roots |z| (6): [0.047, 0.699, 2.011, 3.729, 4.194, 4.194]   #real=4/6   nearest root |z*|=0.0472
+   log-concavity defect min(q_t^2 - q_(t-1)q_(t+1)) = -0.00129  (NOT log-concave)
+
+ covering 0,14..:
+   q = [0.0363, 0.3803, 0.3854, 0.1214, 0.0404, 0.0259, 0.0102]   (P(N=t), t=0..6)
+   G_N(0)=p0=0.03630   G_N(2)=5.4386   G_N(3)=24.9315
+   roots |z| (6): [0.107, 1.322, 2.130, 2.130, 2.359, 2.359]   #real=2/6   nearest root |z*|=0.1066
+   log-concavity defect min(q_t^2 - q_(t-1)q_(t+1)) = -0.00151  (NOT log-concave)
+
+================================================================================================
+ RANK-FLIP: order the configs by G_N(z) at z=0 (LRC), z=2, z=3 (tournament fugacity)
+================================================================================================
+  z=0 (LRC p0)    : argmax=consec_8            consec_8 rank=1/6   order=['consec_8', 'even-AP ', 'top-clus', 'break {1', 'covering', 'random-s']
+  z=2             : argmax=consec_8            consec_8 rank=1/6   order=['consec_8', 'even-AP ', 'top-clus', 'break {1', 'covering', 'random-s']
+  z=3 (tourn)     : argmax=consec_8            consec_8 rank=1/6   order=['consec_8', 'even-AP ', 'top-clus', 'break {1', 'covering', 'random-s']
+
+  -> if consec flips from a top rank at z=0 to a low rank at z=3, the fugacity rank-flip (Route 5)
+     is reproduced; the NEW content is whether consec's ROOT structure (#real, nearest |z*|,
+     log-concavity) is extremal -- the analytic fingerprint behind 'consec is extremal at z=0'.
