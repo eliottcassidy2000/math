@@ -10,7 +10,8 @@ related:
   - THM-570     # 14-phase shift guard (subsumed by the single level-7 argument)
   - THM-568     # apex-shell divisibility (orthogonal: locates the optimum)
   - THM-523     # q=14 witness (the 14-free trivial half)
-  - HYP-3084    # refuted margin conjecture + the dilation/aliasing correction
+  - HYP-3084    # covering-margin refutation + level-7 sieve index companion
+  - HYP-3085    # O2/O3 shuttle + the dilation/aliasing correction
 results:
   - 04-computation/lrc_level7_sieve_kps.py
   - 05-knowledge/results/lrc_level7_sieve_kps.out
@@ -70,7 +71,7 @@ many threshold equalities strict, giving `M(S) > 1/14`. ∎
 - **Does NOT** close LRC(14). The residual (`<= 6` multiples of 7, equivalently a bounded core with
   `>= 7` speeds coprime to 7) is the genuine hard part and contains the tight cases — e.g. the
   primitive `{1..12,182}` (`M = 14/183`) and the non-primitive `2·{1..13}` (`M = 1/14`); both have
-  `|H| = 1`. See [[HYP-3084]] for the dilation/aliasing correction to the "covering has a margin" idea.
+  `|H| = 1`. See [[HYP-3085]] for the dilation/aliasing correction to the "covering has a margin" idea.
 
 ## The descent principle (why 7, and why it stops)
 The apex prime of `14 = 2·7` is `7`. The lift sieve at level `d` proves `M > 1/14` once `>= 7`
@@ -80,4 +81,4 @@ speeds are divisible by `d` *and* the `d`-coprime residual forbids `<= 1` lift e
 level 7 down to the `<= 6`-multiple-of-7 core, where no further arithmetic descent is available and
 the bounded-core / equidistribution machinery (Node-3, S31v) must take over.
 
-→ THM-571, THM-570, THM-568, THM-523, LRC<=13, HYP-3084, [[lrc14-thread]].
+→ THM-571, THM-570, THM-568, THM-523, LRC<=13, HYP-3084, HYP-3085, [[lrc14-thread]].

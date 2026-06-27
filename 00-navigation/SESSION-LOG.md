@@ -123,6 +123,60 @@ low-apex/top-balanced status, finite address, preserved LRC predicate,
 destroyed coordinate, required sidecar/debt, raw/protected bridge status,
 terminal exit, formalization status, and residual debt name.
 
+## codex-2026-06-27-S254 -- covering-moment / K33 state-lift shuttle (HYP-3085)
+
+Worked the two selected HYP-3083 obligations back and forth after rebasing over
+the incoming S253 Hurwitz/q-cusp covering-bound spine and the S31af THM-573
+level-7 lift sieve:
+
+```text
+O2 = covering-moment / OPEN-Q-108 gamma-Node3 positive-open discharge
+O3 = K33 / THM-572 state-lift construction
+```
+
+Added exact scout `04-computation/lrc14_o2_o3_shuttle_codex_s254.py`, stored
+`05-knowledge/results/lrc14_o2_o3_shuttle_codex_s254.out`, and created
+HYP-3085 after incoming work claimed HYP-3084 for the gK8/Clebsch moment
+decomposition.  The scout audits three covering representatives and the three
+low-frontier K33 representatives with exact `M`, optimizer `tau`, q-threshold,
+strict safe mass, safe components, active binders, endpoint-owner transitions,
+and grid class.
+
+Main readout: covering rows are locally positive and route through
+`nested_refinement`, but K33 rows are also locally positive and must route
+through `cross_handoff`.  Therefore raw safe mass is not a legal proof object.
+The covering theorem must be a uniform nested-refinement / owner-transition
+gamma-Node3 certificate unless cross-handoff debt is visible, and the K33
+theorem must construct the THM-572 TournamentStateLift from active-binder and
+endpoint-owner address data or name the first missing localized sidecar.
+
+Incoming THM-573 changes the O2 boundary: every row with at least seven
+multiples of `7` is now handled by the level-7 lift sieve, so S254 should be
+read inside the `<=6`-multiples-of-7 residual.  The incoming covering-margin
+stress also refutes the tempting scalar margin route after dilation/aliasing;
+the useful object remains nested-refinement / owner-transition address data.
+
+Incoming mac-mini S60 also updated the gK8/Clebsch low-order moment-LP route
+in `05-knowledge/hypotheses/HYP-3084-gk8-concentration-is-low-order-moment-s2-clebsch.md`.
+The integration is useful: the corrected S60 carrier is a reflection-symmetric
+Perron-mode moment bound candidate for O2, while HYP-3085 is the finite-address
+shuttle that keeps that carrier separate from scalar-margin shortcuts and K33
+cross-handoff debt.
+
+Concrete K33 binder targets for the next lift attempt:
+
+```text
+near/K33 12->36              (5,36)
+P10+K33                      (7,20)
+two drop(12,13)->add(26,36)  (1,36)
+```
+
+Tournament Analysis used proof carriers / finite-address fields, not runners,
+residues, or scalar safe mass, and gave a transitive path
+`finite_address_packet > covering_nested_refinement > k33_cross_handoff_lift
+> endpoint_owner_transition > exact_M_and_binders > safe_mass_scalar
+> raw_route_label > raw_runner_set`.
+
 ## codex-2026-06-27-S245 -- modular cusp / q-Pochhammer Hurwitz carrier (HYP-3075/T1161/LTI-226/LTT-124)
 
 User asked to merge q-Pochhammer series, the full-modular-group modular
