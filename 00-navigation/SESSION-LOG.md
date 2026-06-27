@@ -23,6 +23,34 @@ certificate -- closing the only non-pairwise content of the covering bound. Not 
 reframing (cap=pair-Pascal mass, margin=pair-complement, dip=higher-Pascal) + a web. Compatible with
 codex-S255/THM-575 (raw Conjecture 7.1 refuted by divisor loading; my pair-Pascal cap is on the
 bounded/normalized side).
+## codex-2026-06-27-S257 -- Pascal pair-mass companion to the three-sameness fiber
+
+Owner asked to consider equidecomposability and equinumerosity in addition to
+equidistribution, search past work for hidden perspectives, and relate
+`4004,3003,2002,1001` to Pascal's triangle and LRC.  Added
+HYP-3097/T1175 as the Pascal/pair-mass companion to mainline HYP-3091's
+lonely-set fiber, HYP-3092's verified pair-normalized cap mass, and HYP-3093's
+equivalence-triad audit, plus reflection
+`07-reflections/lrc14-three-equivalence-shadows-pascal-pair-mass-codex-s257.md`.
+
+Main readout: `C(14,2)=91`, `1001=11*91=C(14,4)`,
+`2002=22*91=C(14,5)`, `3003=33*91=C(14,6)`, and
+`4004=44*91=2*C(14,5)=C(14,4)+C(14,6)`.  The first three are literal
+row-14 Pascal entries; `4004` is the affine pair-mass completion.  Read with
+HYP-3090/HYP-3092, `cap_k=C(k+1,2)/91` is exact for `k>=10`, while
+`cap_9=45/91-1/4004`, so `4004` is the one-unit defect denominator where the
+clean triangular cap shadow first fails.
+
+Proposed invariant packet: equidistribution = measure/Weyl density shadow,
+equinumerosity = Pascal/base-count shadow, and equidecomposability =
+sector-pair scissors, endpoint owners, component topology, level-7 lift status,
+Farey `(p,q),p+q,p*q`, destroyed coordinate, and terminal exit.  Tournament
+vertices are invariant/proof packets, not runners or raw counts.  Next audit:
+add `pascal_pair_mass_unit`, `triangular_cap_shadow`,
+`cap_defect_numerator`, `sector_pair_scissors_signature`,
+`farey_additive_lane_mod_91`, and level-7 fields to HYP-2963-style packet
+rows, then test whether equal counts or equal cap shadows split by scissors
+data.
 
 ## mac-mini-2026-06-27-S62 -- three notions of sameness are the lonely set's fiber (equidecomp/equinum/equidist)
 
@@ -202,7 +230,7 @@ ledger over the normalized THM-573 residual.
 ## codex-2026-06-27-S255 -- polynomial-method witness-route ledger
 
 Merged the user's paper-method prompt with the incoming S31ag bridge and the
-past q-cusp / hyperoperation work.  Added HYP-3089/T1170/LTI-235/LTT-133 plus
+past q-cusp / hyperoperation work.  Added HYP-3096/T1176/LTI-237/LTT-135 plus
 reflection
 `07-reflections/lrc14-polynomial-method-witness-ledger-codex-s255.md`.
 
@@ -230,7 +258,7 @@ Integrated the hyperoperation `(p,q)` grid as an address chart retaining
 terminal exit.  Tournament Analysis uses proof obligations, not runners,
 residues, or raw grid cells.
 
-Next proof task: attach the HYP-3089 ledger fields to HYP-2963 and outside-bank
+Next proof task: attach the HYP-3096 ledger fields to HYP-2963 and outside-bank
 normalizer attempts, then prove the direct `1/14` lonely-set component bound
 for the THM-573 residual or reduce it with controlled loss to THM-565's
 maxgap witness object.

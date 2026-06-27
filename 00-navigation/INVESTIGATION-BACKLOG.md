@@ -39,6 +39,39 @@ nested-refinement/K33 cross-handoff), forgotten coordinate, overlap map, and
 terminal exit/debt.  Test whether every quotient used by the route is
 reconstructible, dual-annihilated, fiber-constant, or explicitly routed.
 Namespace: HYP-3093 / HYP-3092 / HYP-3090 / OPEN-Q-108.
+## Lead codex-2026-06-27-S257: LRC14 three equivalence shadows and Pascal pair-mass
+
+**Status:** SYNTHESIS / invariant proposal; not proof
+(HYP-3097/T1175).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3097-lrc14-three-equivalence-shadows-pascal-pair-mass.md`
+and
+`07-reflections/lrc14-three-equivalence-shadows-pascal-pair-mass-codex-s257.md`.
+This is the Pascal/pair-mass companion to HYP-3091's verified
+three-sameness fiber on the lonely set, HYP-3092's verified pair-normalized
+cap mass, and HYP-3093's broad equivalence-triad audit.  The prompt constants
+have pair-apex form:
+
+```text
+C(14,2)=91
+1001=11*91=C(14,4)
+2002=22*91=C(14,5)
+3003=33*91=C(14,6)
+4004=44*91=2*C(14,5)=C(14,4)+C(14,6)
+```
+
+Read with HYP-3090/HYP-3092, `cap_k=C(k+1,2)/91` is exact for `k>=10`, but
+`cap_9=45/91-1/4004`; the `4004` signal is therefore the affine pair-mass
+completion and the one-unit defect denominator, not just Pascal numerology.
+**Next:** add `pascal_pair_mass_unit`, `triangular_cap_shadow`,
+`cap_defect_numerator`, `sector_pair_scissors_signature`,
+`farey_additive_lane_mod_91`, `farey_product_lane_mod_91`,
+`level7_lift_status`, destroyed coordinate, and terminal exit to a HYP-2963
+packet audit.  Test whether equal base counts or equal cap shadows split by
+sector-pair scissors data.  Keep the assumption challenge explicit: raw
+runners, raw counts, and raw measure are shadows; the proof vertex is the
+invariant packet that preserves the LR predicate or names what was destroyed.
+Namespace: HYP-3097 / T1175 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-S255: LRC14 Conjecture 7.1 raw-time refutation and normalized repair
 
@@ -122,9 +155,9 @@ Namespace: THM-574 / THM-576 / HYP-3088 / HYP-3089 / HYP-3090 / HYP-3091 / HYP-3
 ## Lead codex-2026-06-27-S255: LRC14 polynomial-method witness-route ledger
 
 **Status:** SYNTHESIS / proof-obligation ledger; not proof
-(HYP-3089/T1170/LTI-235/LTT-133).
+(HYP-3096/T1176/LTI-237/LTT-135).
 **Readout:** Added
-`05-knowledge/hypotheses/HYP-3089-lrc14-polynomial-method-witness-route-ledger.md`
+`05-knowledge/hypotheses/HYP-3096-lrc14-polynomial-method-witness-route-ledger.md`
 and
 `07-reflections/lrc14-polynomial-method-witness-ledger-codex-s255.md`.
 The S31ag arXiv:2604.23906 bridge is now a concrete ledger: for `k=13`,
@@ -155,7 +188,7 @@ and exit.  The first theorem task is the direct `1/14` lonely-set component
 bound for the THM-573 residual, or a controlled reduction from THM-565's
 maxgap witness object.  Keep the equivalence direction honest: uniform
 largest-arc route -> Conjecture 7.1(13) -> LRC14.
-Namespace: HYP-3089 / T1170 / LTI-235 / LTT-133.
+Namespace: HYP-3096 / T1176 / LTI-237 / LTT-135.
 
 ## Lead codex-2026-06-27-S254: Sexy prime pair sieve transfer
 

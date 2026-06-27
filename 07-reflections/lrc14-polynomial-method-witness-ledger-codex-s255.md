@@ -151,10 +151,10 @@ count, measure floor, denominator threshold, and terminal exit.
 
 ## New artifact
 
-Created `HYP-3089` as the formal ledger:
+Created `HYP-3096` as the formal ledger:
 
 ```text
-05-knowledge/hypotheses/HYP-3089-lrc14-polynomial-method-witness-route-ledger.md
+05-knowledge/hypotheses/HYP-3096-lrc14-polynomial-method-witness-route-ledger.md
 ```
 
-Navigation hooks: `T1170`, `LTI-235`, `LTT-133`.
+Navigation hooks: `T1176`, `LTI-237`, `LTT-135`.

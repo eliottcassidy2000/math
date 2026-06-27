@@ -1,13 +1,14 @@
 ---
-id: HYP-3089
+id: HYP-3096
 title: LRC14 polynomial-method witness-route ledger
 status: SYNTHESIS / proof-obligation ledger; not a proof
 source: codex-2026-06-27-S255
-tangent: T1170
-technique: LTI-235
-tournament_technique: LTT-133
+tangent: T1176
+technique: LTI-237
+tournament_technique: LTT-135
 related:
   - HYP-3088
+  - HYP-3089
   - HYP-3084
   - HYP-3085
   - HYP-3083
@@ -22,7 +23,7 @@ related:
   - arXiv:2604.23906
 ---
 
-# HYP-3089: LRC14 Polynomial-Method Witness-Route Ledger
+# HYP-3096: LRC14 Polynomial-Method Witness-Route Ledger
 
 ## Claim
 

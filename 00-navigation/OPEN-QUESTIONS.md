@@ -33,11 +33,13 @@ coordinate is reconstructed, dual-annihilated, constant on fibers, or routed
 to named residual debt. -> HYP-3095, HYP-3094, HYP-3093, HYP-3092, HYP-3090, HYP-3089, HYP-3088, HYP-3085,
 HYP-3083, HYP-2990, THM-575, THM-576, THM-574, THM-573, OPEN-Q-108.
 **OPEN-Q-108 S257 three-equivalence-shadow addendum:**
-HYP-3091 reframes the cap and packet side of LRC14 through three separate
-shadows: equidistribution is the measure/Weyl density shadow, equinumerosity is
-the Pascal/base-count shadow, and equidecomposability is the retained
-sector-pair, endpoint-owner, component, level-7, and Farey-address scissors
-packet.  The prompt constants have a clean pair-apex form:
+HYP-3097 reframes the cap and packet side of LRC14 through three separate
+shadows as a Pascal/pair-mass companion to HYP-3091's lonely-set fiber,
+HYP-3092's pair-normalized cap mass, and HYP-3093's equivalence-triad audit:
+equidistribution is the measure/Weyl density shadow, equinumerosity is the
+Pascal/base-count shadow, and equidecomposability is the retained sector-pair,
+endpoint-owner, component, level-7, and Farey-address scissors packet.  The
+prompt constants have a clean pair-apex form:
 `C(14,2)=91`, `1001=11*91=C(14,4)`, `2002=22*91=C(14,5)`,
 `3003=33*91=C(14,6)`, and `4004=44*91=2*C(14,5)=C(14,4)+C(14,6)`.
 Read with HYP-3090, `cap_k=C(k+1,2)/91` is exact for `k>=10`, while
@@ -48,7 +50,8 @@ the clean triangular cap shadow first shows a one-unit defect.  Open task: add
 `level7_lift_status`, and destroyed-coordinate fields to a HYP-2963-style
 packet audit, then test whether rows equal in count or cap shadow split by
 sector-scissors data. -> HYP-3091, HYP-3090, HYP-3085, HYP-3089, HYP-3003,
-HYP-2187, THM-563, THM-576, OPEN-Q-108.
+HYP-3097, HYP-3093, HYP-3092, HYP-3094, HYP-3096, HYP-2187, THM-563, THM-576,
+OPEN-Q-108.
 
 **OPEN-Q-108 S255 Conjecture 7.1 correction / normalized-arc addendum:**
 THM-575 refutes the paper's literal Conjecture 7.1 for `k=13`: divisor-loaded
@@ -69,7 +72,7 @@ measured: `I(13,7,1)=covering mod 7`, `c=2` lift gives covering mod `14`, and
 direct arc decay begins past `V*`; the open work is the normalized peel and
 uniform residual certificate.
 **OPEN-Q-108 S255 polynomial-method witness-route ledger addendum:**
-HYP-3089 extends the S31ag arXiv:2604.23906 bridge into a concrete LRC14
+HYP-3096 extends the S31ag arXiv:2604.23906 bridge into a concrete LRC14
 proof-obligation ledger.  For `k=13`, the paper's field method fails at
 `k+1=14=2*7`; its composite fallback at prime factors is the project's
 descent `14 -> 7 -> 2`.  THM-573 is the `c=7` lift, while the live
@@ -91,9 +94,9 @@ outside-bank normalizer attempts with `count_7_divisible`,
 fields, finite bad-denominator budget, destroyed coordinate, and terminal
 exit.  Then prove the direct `1/14` lonely-set component bound for the THM-573
 residual, or give a controlled reduction from THM-565's maxgap witness object.
--> HYP-3089, HYP-3088, THM-573, THM-565, THM-530, HYP-3083, HYP-3084,
-HYP-3085, HYP-3003, HYP-3004, HYP-2866, LTI-235, LTT-133, T1170, OPEN-Q-108,
-arXiv:2604.23906.
+-> HYP-3096, HYP-3089, HYP-3088, THM-573, THM-565, THM-530, HYP-3083,
+HYP-3084, HYP-3085, HYP-3003, HYP-3004, HYP-2866, LTI-237, LTT-135, T1176,
+OPEN-Q-108, arXiv:2604.23906.
 
 **OPEN-Q-108 S254 hyperoperation grid-address addendum:**
 HYP-3087 turns the user's hyperoperation hierarchy on `(p,q)` and the older

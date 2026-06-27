@@ -1,9 +1,9 @@
 ---
-id: HYP-3091
+id: HYP-3097
 title: LRC14 three equivalence shadows and Pascal pair-mass invariant
 status: SYNTHESIS / invariant proposal; not a proof
 source: codex-2026-06-27-S257
-tangent: T1171
+tangent: T1175
 related:
   - HYP-2187
   - HYP-2998
@@ -14,12 +14,17 @@ related:
   - HYP-3087
   - HYP-3089
   - HYP-3090
+  - HYP-3091
+  - HYP-3092
+  - HYP-3093
+  - HYP-3094
+  - HYP-3096
   - THM-563
   - THM-576
   - OPEN-Q-108
 ---
 
-# HYP-3091: LRC14 Three Equivalence Shadows And Pascal Pair-Mass Invariant
+# HYP-3097: LRC14 Three Equivalence Shadows And Pascal Pair-Mass Invariant
 
 ## Claim
 
@@ -31,6 +36,13 @@ equidistribution:     measure / Weyl / density shadow
 equinumerosity:       cardinal / Pascal / Burnside shadow
 equidecomposability:  retained scissors fiber, sidecars, and obstruction data
 ```
+
+This is the Pascal/pair-mass companion to HYP-3091's lonely-set fiber,
+HYP-3092's verified pair-normalized cap mass, and HYP-3093's broad
+equivalence-triad audit: HYP-3091 records the three-sameness invariant
+`Phi(S)`, HYP-3092 verifies the cap-side pair mass, HYP-3093 names the
+forgetting-cost protocol, and this note asks where the row-14 Pascal counts,
+cap defects, and Farey pair-mass coordinates live inside that fiber.
 
 HYP-2187 already separated equinumerosity from equidecomposability for
 tournaments: equal counts or equal `H` values are only volume shadows unless the
@@ -82,7 +94,7 @@ This matters because the same numbers already occur in the LRC14 work:
 
 - THM-563's all-bounded-base finite check counts bases by binomial slices:
   `3003,3432,3003,2002,1001,364`.
-- HYP-3090 records the cap law
+- HYP-3090/HYP-3092 record the cap law
   `cap_k = C(k+1,2)/C(14,2)` for `k=10,11,12,13`.
 - The two binding deviations are
   `cap_9 = 45/91 - 1/4004` and
@@ -108,11 +120,11 @@ sector_scissors(E) = sector-pair avoidance matrix plus endpoint-owner data
 cap_defect(E) = triangular_pair_cap(E) - actual_cap_or_p0_bound(E)
 ```
 
-For `k>=10`, HYP-3090 says the cap shadow is pure triangular pair mass.  For
-`k=8,9`, the defect is the obstruction.  The new question is whether those
-defects are exactly the Dehn-like scissors part of the LRC object: invisible to
-equinumerosity, almost invisible to equidistribution, but visible in the
-sector-pair decomposition and route sidecars.
+For `k>=10`, HYP-3090/HYP-3092 say the cap shadow is pure triangular pair
+mass.  For `k=8,9`, the defect is the obstruction.  The new question is
+whether those defects are exactly the Dehn-like scissors part of the LRC
+object: invisible to equinumerosity, almost invisible to equidistribution, but
+visible in the sector-pair decomposition and route sidecars.
 
 ## Relation To Past Work
 
@@ -126,12 +138,13 @@ This synthesis uses four existing threads.
    `p+q`, `p*q` lanes are retained packet fields.  The row sum is a shadow;
    the row vector and carry/product fiber are proof data.
 
-3. **HYP-3085/HYP-3090/THM-576:** the cap side is pairwise avoidance.  The
-   sector-pair matrix is the first real scissors decomposition of the cap
-   shadow.
+3. **HYP-3085/HYP-3090/HYP-3092/THM-576:** the cap side is pairwise
+   avoidance.  The sector-pair matrix is the first real scissors decomposition
+   of the cap shadow.
 
-4. **HYP-3087/HYP-3089:** the hyperoperation and polynomial-method ledgers say
-   that `(p,q)`, `p+q`, `p*q`, CRT lift status, direct lonely components, and
+4. **HYP-3087/HYP-3089/HYP-3096:** the hyperoperation and polynomial-method
+   ledgers say that `(p,q)`, `p+q`, `p*q`, CRT lift status, direct lonely
+   components, and
    finite bad-denominator budgets must survive before an LRC witness route is
    legal.
 
@@ -223,4 +236,3 @@ Challenged assumption: `4004,3003,2002,1001` should be read only as Pascal
 triangle numerology.  The stronger reading is that Pascal counts are cardinal
 shadows of a pair-apex scissors object, and `4004` is the affine completion
 where the LRC cap defect is visible.
-

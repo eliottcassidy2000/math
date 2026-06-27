@@ -3,6 +3,14 @@
 The useful correction to the current LRC14 language is to keep three equality
 notions separate.
 
+This note is a Pascal/pair-mass companion to mainline HYP-3091's
+three-sameness fiber on the lonely set, HYP-3092's verified pair-normalized
+cap mass, and HYP-3093's equivalence-triad audit.  HYP-3091 gives the fiber
+`Phi(S)=(covering | D,1/lmax,arc-spectrum | meas)`; HYP-3092 verifies the
+cap-side pair mass; HYP-3093 names the forgetting-cost protocol.  This note
+asks how the row-14 counts, cap defects, and Farey pair-mass coordinates enter
+that fiber.
+
 Equidistribution is the analytic shadow: a large speed sweeps through a seed's
 safe set and removes the expected fraction.  This is the Node-3 story and the
 Weyl/single-far story.
@@ -30,9 +38,9 @@ C(14,2) = 91
 The first three are real row-14 Pascal entries.  The fourth is not a row-14
 entry; it is the affine completion of the `11,22,33,44` pair-mass scale.  That
 is exactly why it is interesting rather than suspicious.  It appears in
-`cap_9 = 45/91 - 1/4004`, while HYP-3090 says `cap_k=C(k+1,2)/91` is exact for
-`k>=10`.  So `4004` is the one-pair-mass denominator where the clean triangular
-cap law first fails.
+`cap_9 = 45/91 - 1/4004`, while HYP-3090/HYP-3092 say
+`cap_k=C(k+1,2)/91` is exact for `k>=10`.  So `4004` is the one-pair-mass
+denominator where the clean triangular cap law first fails.
 
 This suggests a new invariant family:
 
@@ -53,4 +61,3 @@ The most concrete test is small: add `pascal_pair_mass_unit`,
 `farey_additive_lane_mod_91` to a packet audit.  Then compare rows with the
 same base count or cap shadow.  If the route outcome splits by sector scissors
 but not by count, this HYP is doing real work.
-

@@ -126,6 +126,11 @@ obligations, and proof-carrier interfaces.
   use LTT-134 after LTT-130/LTT-133 and make observer charts the vertices:
   arithmetic lift, normalized arc, cap, moment, branch, and formal witness
   readout.
+- Need to connect the polynomial-method `I(k,p,1)` bottleneck to the LRC14
+  witness route:
+  use LTT-135 after LTT-131/LTT-132 and retain CRT lift status, direct
+  lonely-set component data, denominator-net threshold, q-cusp finite
+  bad-denominator budget, hyperoperation address fields, and terminal exit.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3938,6 +3943,47 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3089, HYP-3088, HYP-3087, HYP-3085, HYP-3083, HYP-2990, THM-576,
   THM-575, THM-574, THM-573, LTI-236, LTI-235, LTT-134, LTT-133, T1172,
   OPEN-Q-108.
+
+### LTT-135: Polynomial-Method Witness-Route Ledger
+
+- **Move:** Treat the polynomial-method paper bridge as a tournament on proof
+  obligations and retained witness sidecars, not on runners, residues, raw
+  denominator-grid rows, or operation-grid cells.
+- **LRC use:** HYP-3096/S255 turns the composite obstruction
+  `k+1=14=2*7` into a route ledger.  THM-573 is the `c=7` lift, the
+  live residual is primitive covering rows with `<=6` multiples of `7`, and
+  the remaining `c=2`/analytic debt is to replace the paper's `I(13,p,1)`
+  table by a largest-lonely-arc theorem for the direct `1/14` lonely set.
+  The proof-strength target is `mu(L(S))>=m0` plus
+  `components(L(S))<=A0`, giving `ell_max>=m0/A0` and denominator-net
+  witnesses for every sufficiently large `d`.
+- **Preserves:** LR predicate strengthened to a denominator-net witness,
+  CRT factor/lift status, direct lonely-set topology, exact denominator
+  clock, q-cusp finite-principal-part budget, hyperoperation address fields,
+  destroyed-coordinate label, and terminal exit.
+- **Forgets / guardrail:** Raw `I(k,p,1)` table rows, scalar LRC witnesses,
+  and static operation-grid coordinates are unsafe if they lose component
+  topology, endpoint ownership, finite bad-denominator debt, or the finite
+  packet compactness needed to pass from scalar LRC to Conjecture 7.1(13).
+- **Tournament vertices:** `largest_arc_denominator_net`,
+  `direct_lonely_component_bound`, `lonely_measure_floor`,
+  `crt_c7_level7_lift_THM573`, `crt_c2_dyadic_lift`,
+  `continuous_I_substitute`, `finite_principal_part_bad_denominator_budget`,
+  `hyperoperation_grid_address`, `polynomial_prime_field_packet`, and
+  `raw_I_table_enumeration`.
+- **Next hook:** Attach a `polynomial_method_witness_ledger` to HYP-2963 rows
+  and outside-bank normalizer attempts with `count_7_divisible`,
+  `crt_c7_lift_status`, `crt_c2_dyadic_lift_status`,
+  `I_discrete_grid_status`, `lonely_measure_floor`,
+  `direct_1_14_component_bound`, `largest_lonely_arc_floor`,
+  `denominator_net_threshold_D`, `(p,q),p+q,p*q,powers`, finite
+  bad-denominator budget, destroyed coordinate, and terminal exit.  Then prove
+  the direct `1/14` lonely-set component bound or a controlled reduction from
+  THM-565's maxgap witness object.
+- **Pointers:** HYP-3096, HYP-3089, HYP-3088, THM-573, THM-565, THM-530,
+  HYP-3083, HYP-3084, HYP-3085, HYP-3003, HYP-3004, HYP-2866, HYP-2827,
+  LTI-237, LTI-234, LTI-233, LTT-135, LTT-132, LTT-131, T1176, T1170,
+  T1169, OPEN-Q-108, arXiv:2604.23906.
 
 ## Immediate Pull List
 

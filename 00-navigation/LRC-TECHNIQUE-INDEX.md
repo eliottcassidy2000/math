@@ -1844,10 +1844,10 @@ Next contribution: implement an `omega_Q` packet schema over the HYP-2963 bank
 and fill it for Haar `zeta`, endpoint-credit, Ramanujan, Fejer, Farey/K33,
 C27/unital, carry-owner, product-rule, and boundary-moment quotients.
 
-### 65. LTI-235 Polynomial-Method Witness-Route Ledger
+### 66. LTI-237 Polynomial-Method Witness-Route Ledger
 
-Sources: HYP-3089, HYP-3088, THM-573, THM-565, THM-530, HYP-3083,
-HYP-3084, HYP-3085, arXiv:2604.23906.
+Sources: HYP-3096, HYP-3089, HYP-3088, THM-573, THM-565, THM-530,
+HYP-3083, HYP-3084, HYP-3085, arXiv:2604.23906.
 
 Preserves: the LR predicate strengthened to a denominator-net witness for all
 large `d`, plus CRT lift status, direct lonely-set topology, exact denominator
@@ -1877,7 +1877,7 @@ components(L(S)) <= A0
 => witnesses in (1/d)Z for all d >= ceil(A0/m0).
 ```
 
-Next contribution: attach the HYP-3089 ledger fields to HYP-2963 rows and
+Next contribution: attach the HYP-3096 ledger fields to HYP-2963 rows and
 outside-bank normalizer attempts, then prove the direct `1/14` lonely-set
 component bound or a controlled reduction from THM-565's maxgap witness object.
 
