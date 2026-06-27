@@ -3185,6 +3185,46 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2887, THM-572, LTI-218, LTI-217, LTI-216, LTI-215, LTI-214, LTI-213, LTI-212,
   LTI-210, LTI-203, LTT-116, LTT-115, LTT-114, LTT-113, LTT-112, LTT-111, LTT-110,
   LTT-108, LTT-101, T1153, T1152, T1151, T1150, T1149, T1148, OPEN-Q-108.
+
+### LTT-117: Cross-Carrier Pullback Resonance Tournament
+
+- **Move:** Treat CPI/HYP proof carriers as tournament vertices and audit the
+  payload they retain, the coordinates they destroy, and the portfolios needed
+  to cover active LRC obligations.
+- **LRC use:** HYP-3072/S238 encodes `22` carriers and `9` remaining proof
+  obligations.  The core duodecimal incident-word alphabet is status, route,
+  exact scale, topology, owner, period deck, analytic certificate,
+  automaton/partial cube, CRT/p-adic, observer cut, Hodge cycle, and formal
+  exit.  The first global cover of all `23` target axes appears only at size
+  `9`, so no small universal scalar-like carrier is visible; local obligations
+  still have compact covers.
+- **Preserves:** Which LRC predicate a carrier retains, which target axes a
+  portfolio covers, the destroyed-coordinate ledger, local blindness pairs,
+  resonance portfolio IDs, status/route mixing tests, and legal exit statuses.
+- **Forgets / guardrail:** A broad carrier can still hide which subcarrier is
+  load-bearing.  A sparse but attractive carrier, such as `mu^2/phi`, automaton
+  membership, observer cuts, or hyperbolic reciprocal pressure, is not a proof
+  quotient until the destroyed coordinate needed by the active obligation is
+  restored, dual-annihilated, descended, AP/GW boundary, or named THM-572/F7
+  debt.
+- **Tournament fingerprint:** vertices are proof-carrier pullbacks / CPI rows,
+  not runners.  Pairwise observable is `(full_obligation_count,
+  weighted_axis_coverage, critical_axis_hits, payload_width,
+  -destroyed_count, -cost)`.  The S238 tournament is transitive with score
+  histogram `{0:1,...,21:1}`, no directed 3-cycles, singleton SCCs, and one
+  Hamiltonian path headed by `carrier_fusion_switchboard >
+  labelled_packet_sheaf > median_route_center_control >
+  exact_farey_kpq_scale`.
+- **Next pull:** Emit actual HYP-2963 packet rows with
+  `carrier_pullback_row_id`, `core_incident_word`,
+  `preserved_lrc_predicate`, `destroyed_coordinate`, `required_sidecar`,
+  `blindness_pair_id`, `resonance_portfolio_id`, `status_mixing_result`,
+  `route_mixing_result`, and `legal_exit_status`, then test whether the
+  listed portfolios make residual coarse fibers status-pure and route-pure.
+- **Pointers:** HYP-3072, HYP-3071, HYP-3070, HYP-3069, HYP-3066,
+  HYP-3065, HYP-3063, HYP-3058, HYP-3039, HYP-3032, HYP-3029, HYP-3026,
+  HYP-2963, THM-572, LTI-219, LTI-218, LTT-117, LTT-116, T1154, CPI-001..CPI-090,
+  OPEN-Q-108.
 ## Immediate Pull List
 
 1. Expand the HYP-2963 labelled packet classifier with Haar tile class,

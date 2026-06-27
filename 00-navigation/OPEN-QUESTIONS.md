@@ -1,5 +1,19 @@
 # Open Questions
 
+**OPEN-Q-108 S238 cross-carrier pullback resonance addendum:** HYP-3072 turns
+the CPI pullback index into a finite proof-carrier portfolio audit.  The S238
+scout encodes `22` carriers and `9` remaining obligations over a duodecimal
+payload alphabet, and finds the first global cover of all `23` target axes
+only at size `9`.  Open task: emit actual HYP-2963 packet rows with
+`carrier_pullback_row_id`, `core_incident_word`, `preserved_lrc_predicate`,
+`destroyed_coordinate`, `required_sidecar`, `blindness_pair_id`,
+`resonance_portfolio_id`, `status_mixing_result`, `route_mixing_result`, and
+`legal_exit_status`; then test whether the listed local portfolios make
+residual coarse fibers status-pure and route-pure before any new theorem debt
+is named. -> HYP-3072, HYP-3071, HYP-3070, HYP-3069, HYP-3066, HYP-3065,
+HYP-3063, HYP-3058, HYP-3039, HYP-3032, HYP-3029, HYP-3026, HYP-2963,
+THM-572, LTI-219, LTT-117, T1154.
+
 **OPEN-Q-108 S236 route-triple center-control addendum:** HYP-3070 proposes a
 pre-Boolean legality gate for the final medianization interface. Raw route
 labels alone should behave like a centerless clique (`0/455` unique centers in

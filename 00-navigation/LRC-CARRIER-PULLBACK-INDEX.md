@@ -158,6 +158,7 @@ state_lift_geometry > computation_formal_forum
 | Analytic certificate backend | CPI-038, CPI-041, CPI-042, CPI-043, CPI-044, CPI-046, CPI-047, CPI-048, CPI-086 | Attach Fejer/Ramanujan/Haar/large-sieve proofs to exact packet fields. |
 | Tournament/metagraph transfer | CPI-001 through CPI-019, CPI-032, CPI-063, CPI-064, CPI-088 | Reuse tournament machinery while retaining source, threshold, endpoint, and scale marks. |
 | Series and arithmetic shadows | CPI-049 through CPI-056, CPI-066 through CPI-070 | Use Fibonacci, Zeckendorf, perfect numbers, Mobius, p-adic, and Farey structures as typed packet fields. |
+| Cross-carrier resonance portfolio | CPI-020, CPI-034, CPI-036, CPI-041, CPI-043, CPI-053, CPI-056, CPI-071, CPI-072, CPI-076, CPI-077, CPI-080, CPI-081, CPI-082 | Use HYP-3072's blindness-pair and resonance-portfolio audit: attach core incident words, destroyed coordinates, restoration sidecars, and legal exits before treating any carrier as a quotient. |
 
 ## Challenged Assumption
 

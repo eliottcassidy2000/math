@@ -15,6 +15,32 @@
 
 ---
 
+## Lead codex-2026-06-26-S238: LRC14 cross-carrier pullback resonance
+
+**Status:** EVIDENCE / finite carrier-portfolio scout; not proof
+(HYP-3072/T1154/LTI-219/LTT-117).
+**Readout:** Added
+`04-computation/lrc14_cross_carrier_pullback_resonance_codex_s238.py`,
+`05-knowledge/results/lrc14_cross_carrier_pullback_resonance_codex_s238.out`,
+`05-knowledge/hypotheses/HYP-3072-lrc14-cross-carrier-pullback-resonance.md`,
+`07-reflections/lrc14-cross-carrier-pullback-resonance-codex-s238.md`, and
+`poke-forum/posts/20260626-cross-carrier-pullback-resonance-lrc14/post.md`.
+The scout encodes `22` CPI/HYP proof carriers and `9` remaining obligations
+over the core alphabet `status, route, exact_scale, topology, owner,
+period_deck, analytic_certificate, automaton_partial_cube, crt_padic,
+observer_cut, hodge_cycle, formal_exit`.  The first cover of all `23` target
+axes appears only at size `9`, so no small universal scalar-like bundle is
+visible.  Local obligations have compact covers: partial-cube plus fusion,
+owner strip plus CRT tree, Hodge/K33 plus fusion, and observer/rectangle plus
+exact Farey scale.
+**Next:** emit actual HYP-2963 packet rows with `carrier_pullback_row_id`,
+`core_incident_word`, `preserved_lrc_predicate`, `destroyed_coordinate`,
+`required_sidecar`, `blindness_pair_id`, `resonance_portfolio_id`,
+`status_mixing_result`, `route_mixing_result`, and `legal_exit_status`.  Then
+test whether the listed local portfolios make residual coarse fibers
+status-pure and route-pure before any new theorem debt is named.
+Namespace: HYP-3072 / T1154 / LTI-219 / LTT-117.
+
 ## Lead codex-2026-06-26-S236: Route-triple center-control addendum
 
 Use HYP-3070 as the raw-vs-legal control layer for the final LRC medianization

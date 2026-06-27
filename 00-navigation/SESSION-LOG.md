@@ -10,6 +10,32 @@ line: renormalized signed-polymer/Riesz-product grammar on AP/repeated-residue/
 wide packets, plus a Dirichlet-energy / Schur-complement reading of sidecars as
 boundary conditions for residual currents. Finite scout, result, reflection,
 and navigation entries still pending in this active session.
+## codex-2026-06-26-S238 -- cross-carrier pullback resonance (HYP-3072/T1154/LTI-219/LTT-117)
+
+User asked to choose different remaining LRC proof approaches and scour past
+work for cross-disciplinary connections.  Claimed S238/HYP-3072 first, then
+built `04-computation/lrc14_cross_carrier_pullback_resonance_codex_s238.py`
+and stored
+`05-knowledge/results/lrc14_cross_carrier_pullback_resonance_codex_s238.out`.
+Also created HYP-3072, reflection
+`07-reflections/lrc14-cross-carrier-pullback-resonance-codex-s238.md`, and
+forum post
+`poke-forum/posts/20260626-cross-carrier-pullback-resonance-lrc14/post.md`.
+
+Main readout: `22` carrier pullbacks and `9` obligations were scored over a
+duodecimal payload alphabet.  The first full cover of all `23` target axes
+appears only at size `9`, so no small universal scalar-like bundle is visible.
+Local obligations still have compact covers: automatic partial-cube route
+purity by partial-cube plus fusion; two-tail AP clocks by owner strip plus CRT
+tree; K33/F7 exit by Hodge or K33 state-lift plus fusion; and binding spectrum
+by observer/rectangle payload plus exact Farey scale.
+
+Extracted two proof angles: a blindness-pair theorem, where every useful
+quotient carries the carrier that restores what it destroys, and a
+resonance-portfolio theorem, where local minimal carrier portfolios are glued
+by a legal exit ledger.  Tournament Analysis uses proof-carrier pullbacks, not
+runners, and is transitive with score histogram `{0:1,...,21:1}` and one
+Hamiltonian path.
 
 ## codex-2026-06-26-S236 -- route-triple center-control addendum (HYP-3070/T1152/LTI-217/LTT-115)
 
