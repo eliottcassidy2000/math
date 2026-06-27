@@ -72,6 +72,7 @@ q-cusp ledger / q-Pochhammer product tail / finite principal-part polar exits
 sixth-power certificate extension / lane tuple / collision rank / residue words / legal exit
 Hurwitz/q-cusp finite-address branch closure / protected proof graph / terminal discharge
 hyperoperation grid address / x+2 additive lane / x*2 product-depth lane / level-7 residual core
+polynomial-method witness ledger / CRT c=7,c=2 lifts / largest-arc denominator-net route
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -1842,6 +1843,43 @@ debt.
 Next contribution: implement an `omega_Q` packet schema over the HYP-2963 bank
 and fill it for Haar `zeta`, endpoint-credit, Ramanujan, Fejer, Farey/K33,
 C27/unital, carry-owner, product-rule, and boundary-moment quotients.
+
+### 65. LTI-235 Polynomial-Method Witness-Route Ledger
+
+Sources: HYP-3089, HYP-3088, THM-573, THM-565, THM-530, HYP-3083,
+HYP-3084, HYP-3085, arXiv:2604.23906.
+
+Preserves: the LR predicate strengthened to a denominator-net witness for all
+large `d`, plus CRT lift status, direct lonely-set topology, exact denominator
+clock, and terminal exit.
+
+Destroys if used alone: individual finite-field table rows, runner geometry,
+and raw hyperoperation-grid traversal order.  It also overclaims if
+Conjecture 7.1(13) is identified with scalar LRC14 without the uniform
+largest-arc theorem and finite-packet compactness.
+
+Best vertex sets: proof obligations, CRT factors, denominator-grid witness
+conditions, lonely intervals/components, finite bad-denominator budgets,
+hyperoperation address cells with lift status, and terminal exits.
+
+Pairwise observable / gauge: whether one carrier better preserves the LR
+predicate, reduces `c=7` or `c=2` lift debt, bounds or replaces `I(k,p,1)`,
+retains component topology, keeps a finite denominator budget, and names the
+destroyed coordinate.
+
+LRC use: replace the paper's expensive `I(13,p,1)` enumeration by the witness
+route
+
+```text
+mu(L(S)) >= m0
+components(L(S)) <= A0
+=> largest_arc(L(S)) >= m0/A0
+=> witnesses in (1/d)Z for all d >= ceil(A0/m0).
+```
+
+Next contribution: attach the HYP-3089 ledger fields to HYP-2963 rows and
+outside-bank normalizer attempts, then prove the direct `1/14` lonely-set
+component bound or a controlled reduction from THM-565's maxgap witness object.
 
 ## Pull Lists
 

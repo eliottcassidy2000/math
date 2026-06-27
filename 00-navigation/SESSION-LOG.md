@@ -199,6 +199,41 @@ gK8/Clebsch carrier, HYP-3091 remains the scissors-fiber carrier, and incoming
 HYP-3090/HYP-3092/THM-576 remain the pair-Pascal / pairwise-triangular cap
 carriers.  LRC(14) is still not proved; the next target is the observer-gluing
 ledger over the normalized THM-573 residual.
+## codex-2026-06-27-S255 -- polynomial-method witness-route ledger
+
+Merged the user's paper-method prompt with the incoming S31ag bridge and the
+past q-cusp / hyperoperation work.  Added HYP-3089/T1170/LTI-235/LTT-133 plus
+reflection
+`07-reflections/lrc14-polynomial-method-witness-ledger-codex-s255.md`.
+
+Main readout: the paper's composite `k+1=14=2*7` obstruction is the project's
+descent `14 -> 7 -> 2` in another language.  THM-573 is the `c=7` lift, and
+the remaining primitive covering core with `<=6` multiples of `7` carries the
+`c=2` dyadic/analytic debt.  The paper's `I(k,p,1)` bottleneck is the finite
+grid question `L(S) ∩ (1/p)Z`; the project route replaces that table by
+
+```text
+mu(L(S)) >= m0
+components(L(S)) <= A0
+=> largest_arc(L(S)) >= m0/A0
+=> witnesses in (1/d)Z for every d >= ceil(A0/m0).
+```
+
+This is the safe proof-strength route to Conjecture 7.1(13), hence LRC14, but
+not an automatic equivalence with scalar LRC14 unless the finite-packet
+compactness and direct `1/14` lonely-set component theorem are proved.
+
+Integrated the q-Pochhammer/full-modular-cusp idea as a finite-principal-part
+guardrail: bad denominator debt must be finite, generated, bounded, or named.
+Integrated the hyperoperation `(p,q)` grid as an address chart retaining
+`p+q`, `p*q`, power-stress lanes, CRT lift status, destroyed coordinate, and
+terminal exit.  Tournament Analysis uses proof obligations, not runners,
+residues, or raw grid cells.
+
+Next proof task: attach the HYP-3089 ledger fields to HYP-2963 and outside-bank
+normalizer attempts, then prove the direct `1/14` lonely-set component bound
+for the THM-573 residual or reduce it with controlled loss to THM-565's
+maxgap witness object.
 
 ## codex-2026-06-27-S257 -- equivalence triad invariant synthesis
 

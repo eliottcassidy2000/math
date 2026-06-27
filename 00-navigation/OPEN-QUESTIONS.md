@@ -51,6 +51,33 @@ Incoming mac-mini-S61 should be treated as the first two ledger columns already
 measured: `I(13,7,1)=covering mod 7`, `c=2` lift gives covering mod `14`, and
 direct arc decay begins past `V*`; the open work is the normalized peel and
 uniform residual certificate.
+**OPEN-Q-108 S255 polynomial-method witness-route ledger addendum:**
+HYP-3089 extends the S31ag arXiv:2604.23906 bridge into a concrete LRC14
+proof-obligation ledger.  For `k=13`, the paper's field method fails at
+`k+1=14=2*7`; its composite fallback at prime factors is the project's
+descent `14 -> 7 -> 2`.  THM-573 is the `c=7` lift, while the live
+`<=6`-multiples-of-7 residual carries the `c=2` dyadic/analytic debt.  The
+paper's `I(k,p,1)` bottleneck is the finite grid question
+`L(S) ∩ (1/p)Z`; the project replacement is to prove a uniform largest lonely
+arc by combining a measure floor with a direct `1/14` component bound:
+`mu(L(S))>=m0` and `components(L(S))<=A0` imply
+`ell_max>=m0/A0`, hence witnesses in `(1/d)Z` for every
+`d>=ceil(A0/m0)`.  This is the safe route to Conjecture 7.1(13) and then
+LRC14; do not collapse it to scalar LRC equivalence until the finite-packet
+compactness and direct component theorem are proved.
+Open task: build a `polynomial_method_witness_ledger` over HYP-2963 and
+outside-bank normalizer attempts with `count_7_divisible`,
+`crt_c7_lift_status`, `crt_c2_dyadic_lift_status`,
+`I_discrete_grid_status`, `lonely_measure_floor`,
+`direct_1_14_component_bound`, `largest_lonely_arc_floor`,
+`denominator_net_threshold_D`, hyperoperation `(p,q),p+q,p*q,powers`
+fields, finite bad-denominator budget, destroyed coordinate, and terminal
+exit.  Then prove the direct `1/14` lonely-set component bound for the THM-573
+residual, or give a controlled reduction from THM-565's maxgap witness object.
+-> HYP-3089, HYP-3088, THM-573, THM-565, THM-530, HYP-3083, HYP-3084,
+HYP-3085, HYP-3003, HYP-3004, HYP-2866, LTI-235, LTT-133, T1170, OPEN-Q-108,
+arXiv:2604.23906.
+
 **OPEN-Q-108 S254 hyperoperation grid-address addendum:**
 HYP-3087 turns the user's hyperoperation hierarchy on `(p,q)` and the older
 `x+2`/`x*2` space-filling grid into an operation-address packet carrier.  The

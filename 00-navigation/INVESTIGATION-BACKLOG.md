@@ -119,6 +119,43 @@ cap-formula/deviation regime, mod-41 `D`, V* regime, Node-3 peel status,
 gK8/p0 status, HYP-3094 shuttle status, finite-ruler threshold, and first
 missing sidecar.
 Namespace: THM-574 / THM-576 / HYP-3088 / HYP-3089 / HYP-3090 / HYP-3091 / HYP-3092 / HYP-3094 / T1172 / LTI-236 / LTT-134.
+## Lead codex-2026-06-27-S255: LRC14 polynomial-method witness-route ledger
+
+**Status:** SYNTHESIS / proof-obligation ledger; not proof
+(HYP-3089/T1170/LTI-235/LTT-133).
+**Readout:** Added
+`05-knowledge/hypotheses/HYP-3089-lrc14-polynomial-method-witness-route-ledger.md`
+and
+`07-reflections/lrc14-polynomial-method-witness-ledger-codex-s255.md`.
+The S31ag arXiv:2604.23906 bridge is now a concrete ledger: for `k=13`,
+the paper's composite `k+1=14=2*7` fallback matches the project descent
+`14 -> 7 -> 2`.  THM-573 is the `c=7` lift, while the remaining
+`<=6`-multiples-of-7 primitive covering core carries the `c=2` dyadic and
+analytic debt.  The paper's `I(k,p,1)` count is the finite denominator-grid
+question `L(S) ∩ (1/p)Z`; the project substitute is the largest-arc witness
+route:
+
+```text
+mu(L(S)) >= m0
+components(L(S)) <= A0
+=> largest_arc(L(S)) >= m0/A0
+=> witnesses in (1/d)Z for all d >= ceil(A0/m0).
+```
+
+This proves Conjecture 7.1(13) for the residual and then LRC14, but only after
+the direct `1/14` component bound or an equivalent reduction is proved.  The
+q-cusp finite-principal-part discipline becomes a finite bad-denominator
+budget, and the hyperoperation grid stays as a retained address chart
+`(p,q),p+q,p*q,powers` with CRT lift status and terminal exits.
+**Next:** attach a `polynomial_method_witness_ledger` to HYP-2963 rows and
+outside-bank normalizer attempts with CRT lift status, `I_discrete_grid_status`,
+lonely measure, direct component bound, largest arc, denominator threshold,
+hyperoperation address, finite bad-denominator budget, destroyed coordinate,
+and exit.  The first theorem task is the direct `1/14` lonely-set component
+bound for the THM-573 residual, or a controlled reduction from THM-565's
+maxgap witness object.  Keep the equivalence direction honest: uniform
+largest-arc route -> Conjecture 7.1(13) -> LRC14.
+Namespace: HYP-3089 / T1170 / LTI-235 / LTT-133.
 
 ## Lead codex-2026-06-27-S254: Sexy prime pair sieve transfer
 
