@@ -11,6 +11,7 @@ result: 05-knowledge/results/lee_yang_savitch_ear_lattice_extremality_codex_s262
 reflection: 07-reflections/lee-yang-savitch-ear-lattice-extremality-codex-s262.md
 related:
   - HYP-3107
+  - HYP-3109
   - HYP-3106
   - HYP-3105
   - HYP-3104
@@ -32,8 +33,9 @@ related:
 This lane reserves the S262 synthesis after integrating incoming HYP-3107's
 Lean proof-frontier ledger.  It merges the HYP-3103 miss-count PGF root signal,
 the HYP-3104 maximizer atlas, the HYP-3105 obstruction-transfer atlas, the
-HYP-3106 controlled-forgetting perspective groupoid, and HYP-3107's formal
-open fields with four additional lenses:
+HYP-3106 controlled-forgetting perspective groupoid, HYP-3107's formal open
+fields, and HYP-3109's completed root-curve/zero-real-ear scout with four
+additional lenses:
 
 ```text
 Lee-Yang extremality: the full PGF zero curve, not only a scalar moment.
@@ -59,8 +61,10 @@ attachments, and proof obligations.
 
 ## Work To Complete
 
-Completed in the S262 scout for the first finite map.  Further work is to lift
-the strongest signals from named packets to the HYP-2963 residual bank.
+Completed in the S262 scout for the first finite map, with HYP-3109 supplying
+the exhaustive anchored-bank Lee-Yang root-locus, quartic-profile, and
+zero-real one-swap ear-component subscout.  Further work is to lift the
+strongest shared signals from named packets to the HYP-2963 residual bank.
 
 ## Scout Results
 

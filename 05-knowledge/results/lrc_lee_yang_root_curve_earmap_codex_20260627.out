@@ -1,0 +1,134 @@
+================================================================================================
+NAMED ROWS: whole PGF roots, Lee-Yang clearance, and quartic potential
+================================================================================================
+
+consec_8        row=(0,1,2,3,4,5,6,7)
+  p0=0.32721  extreme=0.34762  L_yK8=3.58231 nreal=0  min|z|=1.48858  dist(roots,[-1,0])=0.91189
+  upper root angles=[55.3, 111.0, 154.2]  mean apex7 angle error=4.042 deg
+  quartic: phase=double-well  b=-0.10232 lambda=+0.00566 well_radius=3.005 r2=0.9783
+
+even_AP_8       row=(0,2,4,6,8,10,12,14)
+  p0=0.32721  extreme=0.34762  L_yK8=3.58231 nreal=0  min|z|=1.48858  dist(roots,[-1,0])=0.91189
+  upper root angles=[55.3, 111.0, 154.2]  mean apex7 angle error=4.042 deg
+  quartic: phase=double-well  b=-0.10232 lambda=+0.00566 well_radius=3.005 r2=0.9783
+
+top_cluster     row=(0,7,8,9,10,11,12,13)
+  p0=0.18670  extreme=0.19769  L_yK8=2.14003 nreal=0  min|z|=1.24384  dist(roots,[-1,0])=0.71792
+  upper root angles=[71.1, 112.8, 164.8]  mean apex7 angle error=13.350 deg
+  quartic: phase=double-well  b=-0.01858 lambda=+0.00827 well_radius=1.060 r2=0.9999
+
+break_spread    row=(0,1,5,7,8,9,11,13)
+  p0=0.04528  extreme=0.05627  L_yK8=0.68527 nreal=2  min|z|=0.12125  dist(roots,[-1,0])=0.00000
+  upper root angles=[62.7, 131.8]  mean apex7 angle error=999.000 deg
+  quartic: phase=double-well  b=-0.38892 lambda=+0.06202 well_radius=1.771 r2=0.9970
+
+covering_probe  row=(0,1,2,3,5,8,13,14)
+  p0=0.03630  extreme=0.04651  L_yK8=0.58647 nreal=2  min|z|=0.10659  dist(roots,[-1,0])=0.00000
+  upper root angles=[60.8, 143.3]  mean apex7 angle error=999.000 deg
+  quartic: phase=double-well  b=-0.37014 lambda=+0.06291 well_radius=1.715 r2=0.9884
+
+random_spread   row=(0,1,3,7,12,20,33,54)
+  p0=0.01152  extreme=0.01416  L_yK8=0.34413 nreal=4  min|z|=0.04724  dist(roots,[-1,0])=0.00000
+  upper root angles=[64.1]  mean apex7 angle error=999.000 deg
+  quartic: phase=double-well  b=-0.11698 lambda=+0.05531 well_radius=1.028 r2=0.9981
+
+================================================================================================
+CONSECUTIVE LADDER k=8..13: apex-7 root arc and phi4 phase
+================================================================================================
+k   p0       nreal  min|z|   seg_clear  apex7_err  b        lambda    phase
+8   0.32721   0     1.4886  0.9119       4.042  -0.1023  +0.0057  double-well
+9   0.41616   0     1.5306  1.0201       2.735  -0.0858  -0.0008  unstable-fit
+10  0.50448   0     1.5556  1.1295       1.821  -0.0435  -0.0095  unstable-fit
+11  0.58146   0     1.5890  1.2597       1.978  +0.0353  -0.0210  unstable-fit
+12  0.62411   0     1.6313  1.3458       1.878  +0.0520  -0.0249  unstable-fit
+13  0.67593   0     1.6537  1.4107       2.893  +0.1391  -0.0362  unstable-fit
+
+================================================================================================
+EXHAUSTIVE ANCHORED RESIDUE BANK: rows 0 union A, |A|=7, A subset {1..13}
+count=C(13,7)=1716
+================================================================================================
+#real -> count, max p0, mean p0, max L_yK8, phase counts
+   0: n= 290  max_p0=0.32721 mean_p0=0.10551  max_L_yK8=3.58231  phases={'double-well': 266, 'single-well': 20, 'unstable-fit': 4}
+   2: n=1426  max_p0=0.20833 mean_p0=0.05732  max_L_yK8=2.37381  phases={'double-well': 1411, 'single-well': 15}
+
+Top p0 rows:
+  (0,1,2,3,4,5,6,7)                  p0=0.32721 nreal=0 min|z|=1.4886 phase=double-well
+  (0,2,3,4,5,6,7,8)                  p0=0.27364 nreal=0 min|z|=1.4443 phase=double-well
+  (0,2,4,6,7,8,10,12)                p0=0.25578 nreal=0 min|z|=1.5562 phase=double-well
+  (0,1,3,5,7,9,11,13)                p0=0.23796 nreal=0 min|z|=1.5205 phase=single-well
+  (0,1,3,4,5,6,7,9)                  p0=0.23707 nreal=0 min|z|=1.1929 phase=double-well
+  (0,1,2,4,5,6,7,10)                 p0=0.22007 nreal=0 min|z|=1.3106 phase=double-well
+  (0,3,4,5,6,7,8,9)                  p0=0.21871 nreal=0 min|z|=1.4549 phase=double-well
+  (0,2,4,5,6,7,8,10)                 p0=0.21480 nreal=0 min|z|=1.1911 phase=double-well
+
+Top Lee-Yang segment-clearance rows:
+  (0,1,2,5,6,7,10,11)                clear=1.0516 p0=0.20915 nreal=0 phase=unstable-fit
+  (0,6,7,8,9,10,11,12)               clear=1.0344 p0=0.19467 nreal=0 phase=double-well
+  (0,1,2,6,7,10,11,12)               clear=0.9404 p0=0.18627 nreal=0 phase=unstable-fit
+  (0,4,5,6,7,8,9,10)                 clear=0.9348 p0=0.21332 nreal=0 phase=double-well
+  (0,5,6,7,8,9,10,11)                clear=0.9223 p0=0.19178 nreal=0 phase=double-well
+  (0,1,2,3,4,5,6,7)                  clear=0.9119 p0=0.32721 nreal=0 phase=double-well
+  (0,2,3,4,5,6,7,8)                  clear=0.9011 p0=0.27364 nreal=0 phase=double-well
+  (0,1,2,4,6,7,10,12)                clear=0.8795 p0=0.18844 nreal=0 phase=double-well
+
+Top nearest-root-radius rows:
+  (0,2,4,6,7,8,10,12)                min|z|=1.5562 p0=0.25578 nreal=0 phase=double-well
+  (0,1,3,5,7,9,11,13)                min|z|=1.5205 p0=0.23796 nreal=0 phase=single-well
+  (0,1,2,3,4,5,6,7)                  min|z|=1.4886 p0=0.32721 nreal=0 phase=double-well
+  (0,3,4,5,6,7,8,9)                  min|z|=1.4549 p0=0.21871 nreal=0 phase=double-well
+  (0,2,3,4,5,6,7,8)                  min|z|=1.4443 p0=0.27364 nreal=0 phase=double-well
+  (0,1,3,4,5,7,9,13)                 min|z|=1.3912 p0=0.18565 nreal=0 phase=double-well
+  (0,1,2,4,5,6,7,10)                 min|z|=1.3106 p0=0.22007 nreal=0 phase=double-well
+  (0,1,2,3,4,5,12,13)                min|z|=1.3067 p0=0.14890 nreal=0 phase=double-well
+
+Correlations over the residue bank:
+  corr(p0, -#real)               = +0.483
+  corr(p0, min root modulus)     = +0.899
+  corr(p0, segment clearance)    = +0.681
+  corr(p0, -apex7 angle error)   = +0.485
+  corr(p0, -quartic b)           = -0.395
+
+================================================================================================
+ROOT-STRATUM ONE-SWAP GRAPH: ear-map signals
+================================================================================================
+Full Johnson one-swap graph edges: 36036
+Root-count transition edges:
+  #real 0 <-> 0: 1048
+  #real 0 <-> 2: 10084
+  #real 2 <-> 2: 24904
+
+#real=0 stratum: vertices=290 edges=1048 components=1 largest=[290] cycle_rank=759
+  articulation_points=0
+  consec component size=290
+  boundary edges from #real=0 into other strata={2: 10084}
+  leading rows inside consec #real=0 component:
+    (0,1,2,3,4,5,6,7)                  p0=0.32721 min|z|=1.4886 clear=0.9119
+    (0,2,3,4,5,6,7,8)                  p0=0.27364 min|z|=1.4443 clear=0.9011
+    (0,2,4,6,7,8,10,12)                p0=0.25578 min|z|=1.5562 clear=0.8058
+    (0,1,3,5,7,9,11,13)                p0=0.23796 min|z|=1.5205 clear=0.7831
+    (0,1,3,4,5,6,7,9)                  p0=0.23707 min|z|=1.1929 clear=0.8519
+
+Ear reading:
+  A bidirected connected zero-real component is strongly connected, hence has
+  a directed ear decomposition.  The useful next test is not this tautology,
+  but whether a small seed around consec plus root-collision ears generates
+  the whole zero-real component before crossing into the #real=2 wall.
+
+================================================================================================
+TOURNAMENT ANALYSIS ON LEE-YANG SIGNALS
+================================================================================================
+vertices=['whole_pgf_curve', 'root_zero_locus', 'quartic_phi4_fit', 'zero_stratum_ear_graph', 'root_collision_discriminant', 'nearest_zero_clearance', 'real_root_count', 'factorial_moments', 'single_value_p0']
+axes=['predicate', 'whole_curve', 'root_geometry', 'phase_transition', 'local_graph', 'controlled_forgetting', 'computable', 'hypothesis_yield']
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+scores={'whole_pgf_curve': 7, 'root_zero_locus': 8, 'quartic_phi4_fit': 4, 'zero_stratum_ear_graph': 6, 'root_collision_discriminant': 5, 'nearest_zero_clearance': 3, 'real_root_count': 2, 'factorial_moments': 1, 'single_value_p0': 0}
+directed_3cycles=0
+SCCs=[['root_zero_locus'], ['whole_pgf_curve'], ['zero_stratum_ear_graph'], ['root_collision_discriminant'], ['quartic_phi4_fit'], ['nearest_zero_clearance'], ['real_root_count'], ['factorial_moments'], ['single_value_p0']]
+Hamiltonian_path_count=1
+one priority path=root_zero_locus > whole_pgf_curve > zero_stratum_ear_graph > root_collision_discriminant > quartic_phi4_fit > nearest_zero_clearance > real_root_count > factorial_moments > single_value_p0
+
+Assumption challenge:
+  Vertices considered: runners, gaps, sector boundaries, wall crossings,
+  residues, cover arcs, Fourier modes, PGF roots, quartic potential wells,
+  root-collision events, ear graph components, and proof obligations.
+  Chosen vertices: signals/proof obligations.  This preserves the question
+  'which coordinate must a proof retain next?' and destroys row identity.

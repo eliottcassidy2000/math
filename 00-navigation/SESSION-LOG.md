@@ -27362,9 +27362,9 @@ is residual LRC14 proof progress through a direct lonely interval, CRT/dyadic
 lift, or named obstruction-transfer sidecar.  The challenged assumption is
 that tournament vertices must be runners, arcs, or configurations; this lane
 will instead test PGF strata, proof-state gates, lattice cells, ear
-attachments, and proof obligations as tournament vertices.  Next steps are to
-read HYP-3103 through HYP-3107, build the exact signal scout, store output, and
-promote only the surviving invariants.
+attachments, and proof obligations as tournament vertices.  The initial plan
+was to read HYP-3103 through HYP-3107, build the exact signal scout, store
+output, and promote only the surviving invariants.
 
 Follow-up completed in the same session: added exact scout
 `04-computation/lee_yang_savitch_ear_lattice_extremality_codex_s262.py` and
@@ -27382,3 +27382,53 @@ uses sidecars/proof obligations as vertices, with score histogram
 SCCs, and one Hamiltonian path led by `savitch_reachability ->
 ear_decomposition_state_graph -> pgf_zero_curve`.  Added reflection
 `07-reflections/lee-yang-savitch-ear-lattice-extremality-codex-s262.md`.
+Post-rebase, HYP-3109 supplies the exhaustive anchored-bank root-curve/ear-map
+subscout while HYP-3107 remains the Lean proof-frontier ledger.
+
+## codex-2026-06-27 -- Lee-Yang root-curve extremality and zero-real ear map -- HYP-3109
+
+User asked to work on Lee-Yang extremality toward LRC, use the whole PGF curve
+and root structure rather than a single value, relate the maximizer question to
+tournaments, and treat ear decompositions as inspiration.
+
+Added `05-knowledge/hypotheses/HYP-3109-lee-yang-root-curve-earmap.md`,
+reflection `07-reflections/lee-yang-extremality-root-curve-earmap-codex-20260627.md`,
+script `04-computation/lrc_lee_yang_root_curve_earmap_codex_20260627.py`, and
+stored output
+`05-knowledge/results/lrc_lee_yang_root_curve_earmap_codex_20260627.out`.
+
+Post-rebase integration: HYP-3108 reserved the broader
+Lee-Yang/Savitch/Bravais/ear-lattice lane, so this completed root-curve scout
+was renumbered to HYP-3109.  Incoming HYP-3107 remains the Lean proof-frontier
+ledger.
+
+Main readout: the HYP-3103 PGF-zero signal strengthens from `#real` count to a
+whole-root-locus sidecar.  In the anchored bounded bank `0 union A`, `|A|=7`,
+`A subset {1..13}` (`1716` rows), `consec_8` is the unique `p0` and `L_yK8`
+leader.  It has `#real=0`, `min|z|=1.48858`, root-segment clearance
+`dist(roots,[-1,0])=0.91189`, upper root angles `[55.3,111.0,154.2]`, and
+apex-7 angle error `4.042 deg`.
+
+Bank strata: `#real=0` has `290` rows with max `p0=0.32721`; `#real=2` has
+`1426` rows with max `p0=0.20833`.  Correlations are
+`corr(p0,min|z|)=+0.899`, `corr(p0,segment-clearance)=+0.681`, and
+`corr(p0,-#real)=+0.483`.  Nearest-root radius alone is not a theorem:
+`(0,2,4,6,7,8,10,12)` beats `consec_8` on `min|z|` but not on `p0`.
+Therefore the proof signal must retain the full root locus/product/angles and
+zero-free segment clearance.
+
+The phi4 cue became a diagnostic: symmetrizing the miss-count law around `N=3`
+and fitting `V(s)=c+b*s^2+lambda*s^4` gives `consec_8` a double-well profile
+`b=-0.10232`, `lambda=+0.00566`, well radius about `3.005`.  The consecutive
+ladder destabilizes under this naive quartic for `k>=9`, so the next potential
+model should allow a moving center or sextic term rather than force the analogy.
+
+The zero-real one-swap stratum is graph-theoretic: `290` vertices, `1048`
+edges, one component, cycle rank `759`, zero articulation points, and `10084`
+boundary edges to `#real=2`.  Bidirected, it is strongly connected and hence
+has an ear decomposition; the actual theorem target is to generate it from an
+AP/consec root seed by labelled root-deformation ears before crossing the
+root-collision wall.  Proposed new signals: `root_zero_locus`,
+`lee_yang_segment_clearance`, `apex7_angle_error`, `quartic_phi4_profile`,
+`root_collision_discriminant`, `zero_real_ear_component`,
+`odd_ear_collision_parity`, and `nested_ear_width`.
