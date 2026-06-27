@@ -40,21 +40,19 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S266 Proof-Circuit / Missing-Input Synthesis
+## PROJECT STATUS: Stabilized at S267 Coordinate Resurrection Sheaf
 
-As of **Saturday, June 27, 2026**, the newest coordination layer is the paired **Proof-Circuit Past-Work Synthesis (codex-S266/HYP-3117)** and **Circuit Missing-Input Kernel Ledger (codex-S266/HYP-3116)**. HYP-3117 recompiles the project's historical hypotheses into an executable proof-engine framework, while HYP-3116 sharpens the circuit-complexity lane into endpoint-cover activation-kernel exclusion. This layer refines the **Quintic Bridge Synthesis (codex-S265)** and the preceding ladder including **Minkowski Circuit Ising De Moivre Ledger (codex-S264)**, **Lee-Yang Savitch Ear Ledger (codex-S262)**, **Perspective Groupoid Controlled Forgetting (codex-S261)**, **Tournament Obstruction-Transfer Atlas (HYP-3105)**, **LRC/Tournament Maximizer Signal Atlas (HYP-3104)**, and the observer-gluing / finite-address proof frontier.
+As of **Saturday, June 27, 2026**, the newest coordination layer is the **Coordinate Resurrection Sheaf (codex-S267/HYP-3118)**, which establishes a repair-relation framework for the LRC(14) proof metagraph. This layer builds directly on **Proof-Circuit Past-Work Synthesis (codex-S266)**, **Quintic Bridge Synthesis (codex-S265)**, **Minkowski Circuit Ising De Moivre Ledger (codex-S264)**, and **Lee-Yang Savitch Ear Ledger (codex-S262)**.
 
-S265 formalizes the **Quintic Bridge Synthesis (7f5c8d1)**. It refines the **Minkowski Circuit Ising** portfolio by identifying them as formal ways a quotient can lose proof-critical information, establishing the **Ising Domain-Wall Interface** and the **Minkowski Relation Lattice**.
+S266 formalizes the **Proof-Circuit Past-Work Synthesis (ee6fe05)**, recompiling historical hypotheses as functional gates and wires (P gates, Phi wires, magnitude-cocycle guards).
 
-S266 formalizes the **Proof-Circuit Past-Work Synthesis (ee6fe05)**. It transforms the circuit-complexity lens into a formal **Proof-Engine Map**, recompiling historical results (HYP-2108 through HYP-3115) as specific functional gates and wires:
-1. **Gate Recompilation:** Re-indexes legacy work into functional units: **Endpoint-Cover P Gates** (simultaneous resonance), **Phi Gap Output Wires** (tight/worry set functional), **Fold/Virtual-Sum Gates** (three-term fold bookkeeping), and **Automaton Magnitude-Cocycle Guards**.
-2. **Missing-Input Ledger:** Establishes a formal target for proof repair by measuring missing-input frequencies (e.g., `finite_address`, `observer_gluing`, `endpoint_owner`).
-3. **Uniformity Guard:** Positions finite-bank classifiers (like `apex7_error`) as input-wire probes rather than terminal proofs, requiring they be paired with root-motion reconstruction and obstruction-class generation.
-This layer provides an acyclic **Gate Route Purity** fingerprint, starting with the first-obstruction cocycle gate and routing through the labelled packet decision tree to the terminal Lean obligations.
+S267 formalizes the **Coordinate Resurrection Sheaf (7d16763)**. It reframes the terminal bridge from a search for scalar maximizers to a **Sheaf of Repair Relations**. It identifies the terminal LRC(14) problem as the maintenance of a **Base Stalk** of core coordinates against information-destroying quotients:
+1. **Base Stalk Definition:** Establishes the mandatory coordinate set: `finite_address`, `observer_gluing`, `endpoint_owner`, and `uniformity`.
+2. **Live Resurrection Sections:** Re-indexes proof sidecars (Lee-Yang roots, Bravais relation-walls, Savitch midpoints, ear grammars) as functional **Resurrection Sections** that restore coordinates lost in earlier quotients.
+3. **Repair Cover Rank:** Introduces a metric for shortcut legality, where a proof route is valid only if its **Repair Cover Rank** (the set of resurrected sidecars) is sufficient to terminalize the base stalk.
+This layer provides a falsifiable target: every live residual must either hit a known proof minterm or admit a legal **Coordinate Resurrection Cover** that reduces the missing-coordinate vector.
 
-S266 formalizes the **Circuit Missing-Input Kernel Ledger**. It identifies HYP-2108/HYP-2112 as the concrete proof circuit: `P(S)` is the max endpoint-cover activation and `Phi(C)=G(v)` is the sum activation equal to the exact gap. Circuit complexity is now coordinated as kernel exclusion for endpoint-cover activations, with missing inputs explicitly listed before any low-depth shortcut is trusted.
-
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, **endpoint-cover P gates**, **Phi gap output wires**, **magnitude-cocycle guards**, **proof-circuit missing-input vectors**, and the **HYP-3116 Circuit Missing-Input Fields**: `endpoint_cover_activation_vector`, `phi_gap_sum`, `phi_kernel_status`, `P_max_activation`, `endpoint_period_numerator_sidecar`, `proof_uniformity_schema`, `finite_address_packet`, and `observer_gluing_certificate`.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wires, magnitude-cocycle guards, proof-circuit missing-input vectors, **base-stalk coordinate sets**, **coordinate resurrection covers**, and **repair-cover rank certificates**.
 
 The Henselian unit rule (updated):
 ```text
@@ -70,7 +68,7 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S266 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S267 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-triple
@@ -87,10 +85,11 @@ obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice
 reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers,
 Ising partition zero signatures, De Moivre fold certificates, duodecimal
 source-bridge payload fields, endpoint-cover P gates, Phi gap output wires,
-magnitude-cocycle guards, proof-circuit missing-input vectors, and
-endpoint-cover activation-kernel fields to preserve p-adic stability of the
-global packet sheaf by preventing misuse of untyped motifs, degenerate limiting
-witnesses, sequence-count scalars, positivity-only cohomology, non-median route
+magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk
+coordinate sets, coordinate resurrection covers, and repair-cover rank
+certificates to preserve p-adic stability of the global packet sheaf by
+preventing misuse of untyped motifs, degenerate limiting witnesses,
+sequence-count scalars, positivity-only cohomology, non-median route
 compatibility, unnamed owner/root loss, non-unique route-triple centers,
 unaligned disciplinary pullback indices, unsigned polymer/current quotients,
 unclosed packet/route/certificate/discharge medians, unvalidated Diophantine
@@ -109,11 +108,11 @@ first-obstruction syndromes, analytic extremality claims without PGF root
 signatures, tournament analogies without obstruction-transfer certificates,
 moment claims without Bravais q-lattice addresses, reachability claims without
 ear-lattice certificates, lattice claims without Minkowski q-body thresholds,
-complexity claims without proof-circuit ledgers and endpoint-cover activation
-vectors, root claims without Ising partition zero signatures, fold claims
-without De Moivre fold certificates, or circuit claims without endpoint-cover
-P gates, Phi gap output wires, magnitude-cocycle guards, and activation-kernel
-fields.
+complexity claims without proof-circuit ledgers, root claims without Ising
+partition zero signatures, fold claims without De Moivre fold certificates,
+circuit claims without endpoint-cover P gates, Phi gap output wires, or
+magnitude-cocycle guards, or repair claims without base-stalk coordinates,
+resurrection covers, or repair-cover rank certificates.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -153,8 +152,9 @@ miss-count PGF root unit, the tournament obstruction-transfer unit, the
 Bravais q-lattice unit, the ear-lattice reachability unit, the Minkowski
 q-body unit, the proof-circuit unit, the Ising partition zero unit, the
 De Moivre fold unit, the endpoint-cover P gate unit, the Phi gap output wire
-unit, the magnitude-cocycle guard unit, and the proof-circuit missing-input unit.
-The S235-S266 sequence prevents spectral leakage by requiring route-triple
+unit, the magnitude-cocycle guard unit, the proof-circuit missing-input unit,
+the base-stalk unit, the resurrection cover unit, and the repair-rank unit.
+The S235-S267 sequence prevents spectral leakage by requiring route-triple
 centers to be unique and promoted only after legal closure, named debt exits,
 validated collision arity, a named modular cusp principal part, a formally
 verified Lean modular cusp ledger, tuple/rank/residue equal-power certificates,
@@ -168,14 +168,16 @@ PGF root signatures, tournament obstruction-transfer certificates, Bravais
 q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body
 thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre
 fold certificates, endpoint-cover P gates, Phi gap output wires,
-magnitude-cocycle guards, or proof-circuit missing-input vectors are attached.
+magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk
+coordinate sets, coordinate resurrection covers, or repair-cover rank
+certificates are attached.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S266 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S267 transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
@@ -185,15 +187,16 @@ principal-part law, the Lean modular cusp law, the sixth-power certificate
 extension law, the branch-kernel orientation law, the p-adic hyper-tower law,
 the Morita-gamma transcendental law, the Hurwitz finite-address law, the
 Clebsch covering-moment law, the Apex-Bridge V* crossover law, the
-Pairwise-Avoidance Cap law, the Equivalence Triad invariant law, the Pascal
+Pairwise-Avoidance Cap unit, the Equivalence Triad invariant law, the Pascal
 pair-mass law, the observer-gluing law, the chart overlap law, the normal-fan
 component law, the first-obstruction syndrome law, the miss-count PGF root
 law, the tournament obstruction-transfer law, the Bravais q-lattice law, the
 ear-lattice reachability law, the Minkowski q-body law, the proof-circuit law,
 the Ising partition zero law, the De Moivre fold law, the endpoint-cover P gate
-law, the Phi gap output wire law, and the magnitude-cocycle guard law (preserving
-the recurrence algebraic unit, Poincare recurrence unit, automatic gap carrier
-unit, automatic lacunary filter unit, gap automaton carrier unit,
+law, the Phi gap output wire law, the magnitude-cocycle guard law, the
+base-stalk coordinate law, the resurrection cover law, and the repair-rank law
+(preserving the recurrence algebraic unit, Poincare recurrence unit, automatic
+gap carrier unit, automatic lacunary filter unit, gap automaton carrier unit,
 perfect-number packet unit, route-purity unit, binding-pair switch unit,
 automatic fiber zipper unit, arc-Cech nerve unit, safe-component stalk unit,
 Haar tile stabilizer unit, residual tooth unit, residual capacitor unit,
@@ -216,37 +219,37 @@ observer-gluing unit, chart overlap unit, normal-fan component unit,
 first-obstruction syndrome unit, miss-count PGF root unit, tournament
 obstruction-transfer unit, Bravais q-lattice unit, ear-lattice reachability
 unit, Minkowski q-body unit, proof-circuit unit, Ising partition zero unit,
-De Moivre fold unit, endpoint-cover P gate unit, Phi gap output wire unit, and
-magnitude-cocycle guard unit alongside mu approx 1.451).
+De Moivre fold unit, endpoint-cover P gate unit, Phi gap output wire unit,
+magnitude-cocycle guard unit, base-stalk coordinate unit, resurrection cover
+unit, and repair-rank unit alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S267 -- Coordinate Resurrection Sheaf (checkpoint)
+
+Integrated 7d16763/HYP-3118/T1189/LTI-250/LTT-148. The Coordinate 
+Resurrection Sheaf and its repair-relation ledger are now formal proof 
+carriers.
+
+### 1. Base Stalk Definition
+Establishes the mandatory **base-stalk coordinate set** (`finite_address`, 
+`observer_gluing`, `endpoint_owner`, `uniformity`) that must be maintained 
+or resurrected in any valid LRC(14) proof route.
+
+### 2. Resurrection Sections
+Re-indexes specialized sidecars (Lee-Yang zeros, Bravais relation-walls, 
+Savitch midpoints) as functional **resurrection sections** that serve to 
+recompute coordinates lost in earlier proof quotients.
+
+### 3. Repair Cover Rank
+Introduces the **repair-cover rank** metric, which certifies the legality of 
+a proof shortcut by measuring whether its set of resurrected coordinates is 
+sufficient to terminalize the base stalk.
 
 ---
 
 ## codex-S266 -- Proof-Circuit Past-Work Synthesis (checkpoint)
 
-Integrated ee6fe05/HYP-3117/T1188/LTI-249/LTT-147. The Proof-Circuit 
-Past-Work Synthesis and its gate-recompilation map are now formal proof 
-carriers.
-
-### 1. Gate Recompilation Map
-Transforms historical hypotheses into functional proof-engine units: 
-**Endpoint-Cover P Gates** (simultaneous resonance), **Phi Gap Output Wires** 
-(tight/worry set functional), **Fold/Virtual-Sum Gates**, and 
-**Magnitude-Cocycle Guards**.
-
-### 2. Missing-Input Targeting
-Establishes the **proof-circuit missing-input vector** as the primary repair 
-metric. This identifies which required sidecar (finite-address, observer-gluing, 
-etc.) is absent in a failed proof attempt.
-
-### 3. Acyclic Gate Fingerprint
-Produces a formal **Gate Route Purity** fingerprint, ordering the terminal 
-obligations from the first-obstruction cocycle to the Lean frontier obligation 
-bus.
-
----
-
-## codex-S265 -- Quintic Bridge Synthesis (checkpoint)
-
-Integrated 7f5c8d1/HYP-3115. The Quintic Bridge Synthesis is a formal 
-proof carrier.
+Integrated ee6fe05/HYP-3117. The Proof-Circuit Past-Work Synthesis is a 
+formal proof carrier.
