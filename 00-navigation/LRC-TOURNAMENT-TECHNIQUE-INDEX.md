@@ -3842,12 +3842,13 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Move:** Treat equinumerosity, equidecomposability, and equidistribution as
   three different projections of a quotient, then tournament-rank the
   invariant carriers that make the quotient predicate-safe.
-- **LRC use:** HYP-3091/S257 gives the tuple
+- **LRC use:** HYP-3093/S257 gives the tuple
   `F_q=(cardinal_shadow, scissors_fiber, observer_cut_orbit,
   distribution_law, interaction_order_defect, named_residual_debt)`.  This
   reads Royle/even-graph counts, tournament scissors fibers, CH/model side
   channels, fixed-path tiling presentations, Haar/Baire events,
-  observer-cut orbits, and HYP-3090/THM-576 cap deviations through one
+  observer-cut orbits, the concrete HYP-3091 lonely-set fiber, and
+  HYP-3090/HYP-3092/THM-576 cap deviations through one
   controlled-forgetting audit.
 - **Preserves:** target-predicate separation across a quotient fiber,
   next-operation stability, retained scissors pieces, limiting distribution
@@ -3868,7 +3869,7 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   Royle/even count versus `(H,beta1,packet)` fibers, AP/GW endpoint-only
   boundary versus positive regular-open rows, and THM-576 pairwise cap rows
   versus `k=8,9` higher-order deviation constants.
-- **Pointers:** HYP-3091, HYP-3090, THM-576, HYP-2187, HYP-2186, HYP-2244,
+- **Pointers:** HYP-3093, HYP-3092, HYP-3091, HYP-3090, THM-576, HYP-2187, HYP-2186, HYP-2244,
   HYP-2232, HYP-2872, HYP-2883, HYP-2949, HYP-3053, HYP-3054, HYP-3056,
   HYP-3072, HYP-3085, HYP-3088, HYP-3089, LTI-235, LTT-133, LTT-132,
   LTT-117, LTT-101, T1171, OPEN-Q-108.

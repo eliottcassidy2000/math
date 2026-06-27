@@ -112,15 +112,26 @@ Owner asked to consider equidecomposability and equinumerosity in addition to
 equidistribution, search past work for hidden perspectives, and creatively find
 invariants that capture the fundamental nature of a mathematical situation.
 
-Added HYP-3091/T1171/LTI-235/LTT-133 plus reflection
+Added HYP-3093/T1171/LTI-235/LTT-133 plus reflection
 `07-reflections/equivalence-triad-invariants-codex-s257.md`.  The synthesis
 extracts one quotient audit from Royle/even-graph count shadows, tournament
 scissors data, CH/model side channels, fixed-path tiling presentation fibers,
 Baire/Haar event algebras, observer-cut orbit ledgers, HYP-3072 carrier
-portfolios, and incoming HYP-3090/THM-576 cap-pairwise-avoidance work:
+portfolios, the concrete HYP-3091 lonely-set fiber, and
+HYP-3090/HYP-3092/THM-576 cap-pairwise-avoidance work:
 
 `F_q=(cardinal_shadow, scissors_fiber, observer_cut_orbit, distribution_law,
 interaction_order_defect, named_residual_debt)`.
+
+Renumbered from HYP-3091 and then HYP-3092 during close-out after rebases
+revealed that mac-mini-2026-06-27-S62 had claimed HYP-3091 for the verified
+three-sameness fiber on the lonely set, and mac-mini-2026-06-27-S63 had claimed
+HYP-3092 for the pair-normalized Pascal cap.
+
+After rebasing over the kps-S31ag state-of-proof note, HYP-3093 treats
+HYP-3092/THM-576 as the solved RHS cap field and points the remaining
+interaction-order defect at LHS coverage extremality, order-3/order-4,
+reflection-Perron, and Node-3.
 
 Readout: equinumerosity is the count shadow; equidecomposability is the
 retained piece/fiber side channel; equidistribution is legal limiting

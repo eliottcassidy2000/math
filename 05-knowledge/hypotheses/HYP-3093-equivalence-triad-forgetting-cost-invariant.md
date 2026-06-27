@@ -1,11 +1,13 @@
 ---
-id: HYP-3091
+id: HYP-3093
 title: Equivalence triad forgetting-cost invariant
 status: SYNTHESIS / invariant program; no new theorem claimed
 source: codex-2026-06-27-S257
 tangent: T1171
 tags: [invariants, equinumerosity, equidecomposability, equidistribution, controlled-forgetting, lrc14, tournament-analysis]
 related:
+  - HYP-3091
+  - HYP-3092
   - HYP-2187
   - HYP-2186
   - HYP-2244
@@ -27,7 +29,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3091: Equivalence Triad Forgetting-Cost Invariant
+# HYP-3093: Equivalence Triad Forgetting-Cost Invariant
 
 This pass searches the older workspace for a more abstract invariant than
 raw equidistribution.  The recurring pattern is a triad:
@@ -95,10 +97,11 @@ side channel is restored.
    endpoint debt.  Positive Haar mass, endpoint-only residuals, and exact
    LRC loneliness are different predicates until boundary owners are retained.
 
-6. **Covering caps and pairwise avoidance.**  Incoming HYP-3090 and THM-576
-   make the cap side sharper: for small `j`, the minimum lonely mass is a
-   pairwise avoidance probability, while the binding `k=8,9` rows are exactly
-   where order-3 and higher corrections appear.  This is a clean
+6. **Covering caps and pairwise avoidance.**  Incoming HYP-3090/HYP-3092 and
+   THM-576 make the cap side sharper: for small `j`, the minimum lonely mass
+   is a pairwise avoidance probability / pair-Pascal occupancy mass, while the
+   binding `k=8,9` rows are exactly where order-3 and higher corrections
+   appear.  This is a clean
    interaction-order defect: pairwise equidistribution is almost the right
    invariant, and the remaining constants measure where it stops being exact.
 
@@ -221,8 +224,9 @@ This folds together the current mainline:
   normalized arc carriers.
 - HYP-3089 maps the paper's `I(13,7,1)` bridge to covering mod `7/14` and the
   `V*` crossover.
-- HYP-3085/THM-576 say the cap side is controlled by pairwise co-emptiness
-  until explicit higher-order deviations appear.
+- HYP-3092/THM-576 and the S31ag state-of-proof note say the cap RHS is now a
+  solved pairwise/Pascal field; the remaining interaction-order defect is the
+  LHS coverage extremality, order-3/order-4, reflection-Perron obligation.
 - HYP-3054/HYP-3056 say every quotient must name its next observer-cut orbit.
 
 So the current fundamental invariant is not "uniform distribution" alone.  It
@@ -312,7 +316,7 @@ target mathematical statement.
 ```
 
 It destroys direct proof content unless the tuple is instantiated on actual
-packet families.  That is why HYP-3091 is a synthesis and protocol, not a
+packet families.  That is why HYP-3093 is a synthesis and protocol, not a
 proof of LRC14 or of any cross-domain theorem.
 
 ## Next Pull

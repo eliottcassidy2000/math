@@ -10,7 +10,7 @@ same volume is not same scissors class;
 same limiting distribution is not legal forgetting until resonances are named.
 ```
 
-The synthesis is HYP-3091.  Its object is the forgetting-cost tuple:
+The synthesis is HYP-3093.  Its object is the forgetting-cost tuple:
 
 ```text
 F_q(x; P) =
@@ -27,6 +27,13 @@ fundamental nature of a mathematical situation.  Equinumerosity contributes the
 count shadow.  Equidecomposability contributes the piece/fiber side channel.
 Equidistribution contributes the limiting law that can make some side-channel
 forgetting harmless after resonance debt is removed.
+
+The adjacent HYP-3091 lonely-set fiber is the concrete LRC instance: covering
+is the count shadow, `(D,1/l_max,arc-spectrum)` is scissors data, and
+`meas(L)` is the distribution detector.
+
+The adjacent HYP-3092 cap result sharpens the cap face: pair-Pascal occupancy
+is the volume/moment shadow, and the `k=8,9` dips are the higher-order debt.
 
 The past-work anchors line up unusually well:
 
@@ -66,13 +73,17 @@ regular-open mass, when pairwise co-emptiness suffices, when S3/S4 deviations
 matter, and when remaining structure must be handed to Node-3, K33/THM-572,
 or a finite-address branch packet.
 
+After the S31ag state-of-proof update, the cap RHS is a solved
+HYP-3092/THM-576 pairwise/Pascal field.  The live LRC defect is the LHS
+coverage-extremality side: order-3/order-4, reflection-Perron, and Node-3.
+
 First practical test: build a tiny ledger for three known collisions, not a
 new broad search.
 
 ```text
 1. Royle/even graph count vs (H,beta1,packet) fibers.
 2. AP/GW endpoint-only boundary vs positive regular-open rows.
-3. HYP-3090/THM-576 pairwise cap rows vs k=8,9 deviation constants.
+3. HYP-3092/THM-576 solved pairwise cap rows vs k=8,9 deviation constants.
 ```
 
 If those three can be represented in one schema, the schema is probably the
