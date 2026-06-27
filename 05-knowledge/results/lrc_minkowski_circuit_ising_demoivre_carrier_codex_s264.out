@@ -1,0 +1,125 @@
+HYP-3111 Minkowski/circuit/Ising/De Moivre carrier scout -- codex S264
+This scout integrates HYP-3108/HYP-3109/HYP-3110 with the user-requested sources.
+
+External source hooks used:
+  Minkowski theorem: symmetric convex body volume threshold 2^n * covolume.
+  Circuit complexity: circuit size = gate count; depth = longest input-output path.
+  Lee-Yang/Ising: finite ferromagnetic partition zeros are the whole zero-set sidecar.
+  De Moivre quintic: x^5 + 5*a*x^3 + 5*a^2*x + b = 0 folds through y^2+b*y-a^5.
+
+================================================================================================
+MAP 1: MINKOWSKI q-LATTICE BODY SIDEcar
+================================================================================================
+q-vector rows used:
+  consec_8         q0=0.32721 q=('481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49')
+  even_AP_8        q0=0.32721 q=('481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49')
+  top_cluster      q0=0.18670 q=('470963/2522520', '34975/126126', '670427/2522520', '9143/56056', '3665/56056', '235/7644', '1/91')
+  break_spread     q0=0.04528 q=('114217/2522520', '518813/1261260', '446/1365', '309229/2522520', '779/14014', '5/182', '1/91')
+  covering_probe   q0=0.03630 q=('185/5096', '9691/25480', '14731/38220', '232/1911', '103/2548', '33/1274', '1/98')
+  random_spread    q0=0.01152 q=('838/72765', '7057/26460', '35968/72765', '58943/291060', '103/6930', '31/4158', '1/378')
+  cap_j2           q0=0.00000 q=('0', '0', '0', '0', '8/13', '33/91', '2/91')
+  cap_j4_dip       q0=0.00000 q=('0', '0', '425/1716', '414/1001', '755/3003', '131/1716', '1/91')
+  cap_j5_dip       q0=0.00000 q=('0', '1133/17640', '185/504', '1439/3528', '619/5880', '5/126', '1/63')
+  gw10             q0=0.44229 q=('52685/119119', '12659/63063', '78206/487305', '67799/595595', '1138/23205', '3/119', '1/119')
+  gw11             q0=0.52106 q=('5617/10780', '12503/64680', '533/4312', '195/2156', '575/12936', '89/4312', '1/154')
+  gw12             q0=0.60630 q=('117647/194040', '3739/19404', '15541/194040', '859/16170', '967/24255', '8/385', '1/140')
+  E_star_k12       q0=0.61572 q=('238949/388080', '1901/10780', '3491/38808', '641/12936', '269/7056', '31/1386', '1/126')
+
+affine q-rank from named packets: 6 (max 6)
+basis from consec_8 differences:
+  gw10             norm=0.130267
+  top_cluster      norm=0.184113
+  gw11             norm=0.211727
+  gw12             norm=0.306683
+  E_star_k12       norm=0.316415
+  break_spread     norm=0.365284
+Gram determinant: 88507698345980714252587739404734022559178361/1916585348639603744297090035779712543806616679006418370560000000000
+covolume proxy sqrt(det Gram): 6.795578624e-12
+Euclidean ball radius with volume = 2^rank*covolume: 0.020934
+shortest nonzero named q-difference: E_star_k12 <-> gw12 norm=0.021715
+longest named q-difference: E_star_k12 <-> cap_j2 norm=0.932616
+Minkowski ratios vol(B_R)/(2^rank*covolume):
+  shortest_named_diff    R=0.021715 ratio=1.245847
+  half_named_diameter    R=0.466308 ratio=122159719.591367
+  longest_named_diff     R=0.932616 ratio=7818222053.847487
+readout: Minkowski supplies a forcing threshold for a declared symmetric convex q-body; it does not by itself identify an LRC witness time.
+
+================================================================================================
+MAP 2: PROOF-STATE CIRCUIT COMPLEXITY SIDEcar
+================================================================================================
+inputs=10 gates(size)=8 depth=4 max_fanin=3
+truth-table satisfying assignments: 697 / 1024
+essential inputs (10): q_witness_gate, level7_sieve, dyadic_lift, pgf_root_curve, zero_real_ear_map, minkowski_lattice_body, ising_partition_zero, demoivre_fold, observer_gluing_certificate, finite_address_packet
+minimal certificate size histogram: {1: 1, 2: 1, 3: 1, 5: 2}
+minimal monotone certificates:
+  q_witness_gate
+  level7_sieve AND dyadic_lift
+  pgf_root_curve AND zero_real_ear_map AND minkowski_lattice_body AND observer_gluing_certificate AND finite_address_packet
+  pgf_root_curve AND zero_real_ear_map AND ising_partition_zero AND observer_gluing_certificate AND finite_address_packet
+  demoivre_fold AND observer_gluing_certificate AND finite_address_packet
+readout: the current proof frontier has a small monotone OR of exits, but observer_exit still needs finite_address_packet plus one carrier certificate.
+
+================================================================================================
+MAP 3: FINITE ISING PARTITION-ZERO SIDEcar
+================================================================================================
+path6      spins=6 edges=5 coeffs=[32, 64, 94, 106, 94, 64, 32]
+  max ||z|-1|=1.110e-16 nearest |angle|-360/7=23.103 deg upper_angles=[74.53, 110.64, 156.1]
+cycle6     spins=6 edges=6 coeffs=[64, 96, 132, 146, 132, 96, 64]
+  max ||z|-1|=1.110e-16 nearest |angle|-360/7=15.023 deg upper_angles=[66.45, 104.48, 154.09]
+carrier7   spins=7 edges=11 coeffs=[2048, 1984, 1584, 1368, 1368, 1584, 1984, 2048]
+  max ||z|-1|=1.110e-16 nearest |angle|-360/7=10.621 deg upper_angles=[40.81, 90.97, 136.42, 180.0]
+readout: these finite ferromagnetic packets keep zeros numerically on the unit circle; the useful LRC sidecar is the whole zero set, not one moment.
+
+================================================================================================
+MAP 4: DE MOIVRE QUINTIC FOLD SIDEcar
+================================================================================================
+identity_ok=True
+x = u - a/u
+x^5 + 5*a*x^3 + 5*a^2*x = u^5 - a^5*u^-5
+If y=u^5 and y^2 + b*y - a^5 = 0, then y - a^5/y = -b, so
+  x^5 + 5*a*x^3 + 5*a^2*x + b = 0.
+fold_depth=quintic -> auxiliary quadratic in y=u^5 -> five root-of-unity branches
+branch_orbit_size=5
+readout: De Moivre is the cleanest Lean-facing algebraic fold, but it preserves only a cancellation normal form unless paired with finite-address data.
+
+================================================================================================
+MAP 5: TOURNAMENT ANALYSIS ON PROOF-CARRIER SIDECARS
+================================================================================================
+vertices are proof carriers/obligations, not runners or arcs.
+axes=preserves_lrc_predicate, controls_destroyed_coordinate, finite_checkable, lean_facing, analytic_strength, algebraic_fold_exactness, handoff_legality
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+scores={'observer_gluing_certificate': 7, 'finite_address_packet': 8, 'lee_yang_root_curve': 4, 'zero_real_ear_map': 5, 'proof_circuit_complexity': 6, 'minkowski_lattice_body': 2, 'ising_partition_zero': 1, 'demoivre_quintic_fold': 3, 'raw_scalar_p0': 0}
+directed_3cycles=0
+sample_3cycles=[]
+SCCs=[['raw_scalar_p0'], ['ising_partition_zero'], ['minkowski_lattice_body'], ['demoivre_quintic_fold'], ['lee_yang_root_curve'], ['zero_real_ear_map'], ['proof_circuit_complexity'], ['observer_gluing_certificate'], ['finite_address_packet']]
+Hamiltonian_path_count=1
+low-margin edge-flip risks:
+  margin=0: lee_yang_root_curve -> demoivre_quintic_fold (3-3 axes)
+  margin=0: lee_yang_root_curve -> minkowski_lattice_body (2-2 axes)
+  margin=1: demoivre_quintic_fold -> minkowski_lattice_body (3-2 axes)
+  margin=1: finite_address_packet -> demoivre_quintic_fold (4-3 axes)
+  margin=1: finite_address_packet -> observer_gluing_certificate (2-1 axes)
+  margin=1: observer_gluing_certificate -> demoivre_quintic_fold (4-3 axes)
+  margin=1: observer_gluing_certificate -> ising_partition_zero (4-3 axes)
+  margin=1: observer_gluing_certificate -> minkowski_lattice_body (4-3 axes)
+  margin=1: observer_gluing_certificate -> zero_real_ear_map (4-3 axes)
+  margin=1: proof_circuit_complexity -> demoivre_quintic_fold (3-2 axes)
+  margin=1: zero_real_ear_map -> demoivre_quintic_fold (4-3 axes)
+  margin=2: demoivre_quintic_fold -> ising_partition_zero (3-1 axes)
+one priority path: finite_address_packet -> observer_gluing_certificate -> proof_circuit_complexity -> zero_real_ear_map -> lee_yang_root_curve -> demoivre_quintic_fold -> minkowski_lattice_body -> ising_partition_zero -> raw_scalar_p0
+
+================================================================================================
+SYNTHESIS
+================================================================================================
+strengthened:
+  Minkowski converts the Bravais/q-rank story into an explicit convex-body threshold.
+  Circuit complexity exposes the current proof frontier as a shallow monotone exit DAG.
+  The Ising finite-zero check supports keeping the entire Lee-Yang zero geometry.
+  De Moivre gives an exact algebraic fold that is plausibly formalizable.
+still open:
+  None of the four carriers proves the residual LRC14 observer certificate alone.
+  The live bridge remains: finite-address packet + observer gluing + root/ear sidecar.
+challenged assumption:
+  The tournament vertices need not be runners, gaps, arcs, or roots; in this scout
+  they are proof carriers.  This preserves route legality and destroys raw labels/time.
+DONE.

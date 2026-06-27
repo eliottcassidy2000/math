@@ -2290,3 +2290,17 @@ a finite Ising partition-zero packet refining the Lee-Yang whole-root curve,
 and De Moivre's quintic fold as an exact algebraic cancellation detector.
 Use it only after declaring preserved LRC predicate, destroyed coordinate,
 required sidecar list, and the reason a scalar-only quotient is insufficient.
+
+The S264 scout verifies affine q-rank `6`, q-lattice covolume proxy
+`6.795578624e-12`, Minkowski Euclidean threshold radius `0.020934`, proof
+circuit size/depth `8/4`, unit-circle Ising zeros on three finite
+ferromagnetic packets, and an exact Laurent proof of the De Moivre fold.
+Use this entry as a sidecar audit: the theorem route still requires
+finite-address plus observer-gluing data.
+
+Post-rebase S262 integration: HYP-3108's bounded-bank root-lattice supplement
+shows high `p0` is reciprocal-flat, not Bragg-crystalline
+(`corr(p0,Bravais_peak)=-0.430`, `corr(p0,residue_entropy)=+0.541`).  Any
+HYP-3111 Minkowski body should encode root stratum, entropy/flatness,
+segment clearance, finite-address status, and observer debt rather than raw
+lattice peak size.

@@ -4507,3 +4507,11 @@ The pairwise observable should orient toward the sidecar that preserves more
 `LRC14Statement`-relevant payload while destroying fewer labels, time
 coordinates, algebraic branch choices, or route-status fields.  Report score
 histograms, directed cycles, SCCs, edge flips, and Hamiltonian-path counts.
+
+The S264 scout reports score histogram
+`{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, no directed 3-cycles, singleton
+SCCs, and one Hamiltonian path:
+`finite_address_packet -> observer_gluing_certificate ->
+proof_circuit_complexity -> zero_real_ear_map -> lee_yang_root_curve ->
+demoivre_quintic_fold -> minkowski_lattice_body -> ising_partition_zero ->
+raw_scalar_p0`.

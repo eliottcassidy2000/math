@@ -27504,3 +27504,26 @@ algebraic fold/cancellation detector.  The preserved predicate is progress
 toward `LRC14Statement` through CRT/dyadic lift, observer gluing, root-locus
 and finite-address packets; destroyed coordinates are raw runner labels, raw
 time, algebraic branch choices, and scalar-only summaries.
+
+Completed the scout and stored
+`05-knowledge/results/lrc_minkowski_circuit_ising_demoivre_carrier_codex_s264.out`,
+with source
+`04-computation/lrc_minkowski_circuit_ising_demoivre_carrier_codex_s264.py`
+and reflection
+`07-reflections/minkowski-circuit-ising-demoivre-carrier-atlas-codex-s264.md`.
+
+Readout: named q-packets span affine rank `6`; q-lattice covolume proxy is
+`6.795578624e-12`; Euclidean Minkowski threshold radius is `0.020934`, just
+below the shortest named q-difference norm `0.021715`; proof-frontier circuit
+size/depth is `8/4`; finite ferromagnetic Ising packets keep zeros on the unit
+circle to numerical error; De Moivre's quintic fold is exact as a Laurent
+identity.  None of these proves LRC14 alone.  The live bridge remains
+`finite_address_packet + observer_gluing_certificate + retained sidecar`.
+
+Post-rebase integration: incoming S262 root-lattice reachability work says the
+bounded `{0}+7` bank is reciprocal-flat at high `p0`, not Bragg-crystalline
+(`corr(p0,Bravais_peak)=-0.430`, `corr(p0,residue_entropy)=+0.541`), and
+strict one-swap root-lattice descent has named traps with Savitch depth `3` for
+reachable cases.  Therefore the HYP-3111 Minkowski q-body should encode root
+stratum, entropy/flatness, segment clearance, finite-address status, and
+observer debt rather than raw lattice concentration.

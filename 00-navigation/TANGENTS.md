@@ -3498,3 +3498,10 @@ vertices are proof carriers, not runners, and every quotient must state the
 LRC predicate preserved and the raw labels/time/branch coordinates destroyed.
 -> HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, LTI-248, LTT-146,
 OPEN-Q-108.
+
+S264 scout readout: named q-packets have affine rank `6`; the q-lattice
+covolume proxy is `6.795578624e-12`; the Euclidean Minkowski threshold radius
+is `0.020934`; the proof circuit has size/depth `8/4`; finite Ising packets
+keep partition zeros on the unit circle to numerical error; and De Moivre's
+fold is verified exactly as a Laurent identity.  The live bridge remains
+finite-address plus observer-gluing plus a retained carrier sidecar.

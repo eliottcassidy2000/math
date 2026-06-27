@@ -1209,3 +1209,10 @@ preserves progress toward a finite LRC14 certificate and destroys raw labels,
 raw time, and branch coordinates unless the sidecar explicitly records them.
 -> HYP-3111, HYP-3110, HYP-3109, HYP-3108, HYP-3107, LTI-248, LTT-146,
 OPEN-Q-108.
+
+The S264 scout turns the reservation into evidence: q-rank `6`, q-lattice
+covolume proxy `6.795578624e-12`, Minkowski threshold radius `0.020934`,
+proof-circuit size/depth `8/4`, unit-circle finite Ising zeros, and exact
+De Moivre Laurent cancellation.  It does not close LRC14; it localizes the
+remaining obligation to finite-address plus observer-gluing plus a retained
+carrier sidecar.
