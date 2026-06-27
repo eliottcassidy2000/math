@@ -182,6 +182,12 @@ obligations, and proof-carrier interfaces.
   midpoint sidecars, and ear-certificate grammars as a coupled extremality map:
   use LTT-148 after LTT-146/LTT-144/LTT-145/LTT-143 and make proof-carrier sidecars the
   vertices rather than runners or scalar root counts.
+- Need to decide how a destroyed proof coordinate legally comes back:
+  use LTT-152 after LTT-150/LTT-148/LTT-147/LTT-146 and make reframes the
+  vertices: coordinate-resurrection sheaves, missing-input matroids, adjoint
+  quotient/section pairs, concept lattices, repair hypergraphs, and scalar
+  quotients.  Pairwise observable is retained LRC predicate plus minimal
+  repair cover, not raw signal strength.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -4355,6 +4361,28 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
 - **Pointers:** HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111,
   HYP-3108, HYP-3107, HYP-3098, HYP-3083, HYP-3074, HYP-3054, HYP-2997,
   HYP-2991, HYP-2963, LTI-252, LTT-150, T1191, OPEN-Q-108.
+
+### LTT-152: Tournament Of Coordinate-Resurrection Reframes
+
+- **Move:** Treat abstract proof reframes as tournament vertices.  Compare
+  coordinate-resurrection sheaves, missing-input matroids, adjoint
+  quotient/section pairs, concept lattices, repair hypergraphs, energy/entropy
+  duals, interval-margin functors, PDE weak-form compilers, and scalar
+  quotients by how they restore destroyed proof coordinates.
+- **LRC use:** HYP-3118/S267 follows HYP-3116's missing-input ledger and
+  HYP-3117's proof-circuit past-work compiler.  Once a
+  shortcut has a nonempty missing vector, the next question is which minimal
+  sidecar cover or adjoint section resurrects the coordinate exactly when the
+  next proof operation needs it.
+- **Preserves:** destroyed-coordinate vector, repaired coordinate set,
+  minimal repair cover, concept-lattice intent, adjoint section status,
+  bottleneck coordinate, terminal exit, and named debt.
+- **Forgets / guardrail:** raw signal strength is not the pairwise observable.
+  A scalar, root count, circuit gate count, lattice volume, energy, or named
+  theorem loses if it cannot repair the active missing coordinate.
+- **Pointers:** HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112,
+  HYP-3111, HYP-3108, HYP-3107, HYP-3102, HYP-3098, HYP-3083, HYP-2963,
+  LTI-254, LTI-252, LTT-152, LTT-150, T1193, OPEN-Q-108.
 
 ### LTT-141: Tournament Obstruction-Transfer Atlas
 

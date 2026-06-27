@@ -1,3 +1,7 @@
+## codex-2026-06-27-S267 -- LRC14 coordinate-resurrection sheaf and adjoint repair calculus -- HYP-3118
+
+Reserved HYP-3118/T1193/LTI-254/LTT-152 for a long abstract synthesis after HYP-3116's missing-input ledger and incoming HYP-3117's proof-circuit past-work compiler.  Planned computation: build a repair hypergraph over HYP-3112-HYP-3117 carriers, compute minimal repair covers and concept-lattice intents, and run Tournament Analysis on reframes rather than runners, roots, gates, or constants.  Status at reservation: no proof, scout pending.
+
 ## codex-2026-06-27-S266 -- circuit lower-bound missing-input ledger reservation -- HYP-3116
 
 Owner asked to search niche past work for further connections that might

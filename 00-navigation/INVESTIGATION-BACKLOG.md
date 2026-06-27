@@ -15,6 +15,24 @@
 
 ---
 
+## Lead codex-2026-06-27-S267: LRC14 coordinate-resurrection sheaf and adjoint repair calculus
+
+**Status:** RESERVED / abstract synthesis plus executable scout pending; not proof (HYP-3118/T1193).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3118-lrc14-coordinate-resurrection-sheaf.md`,
+`04-computation/lrc14_coordinate_resurrection_sheaf_codex_s267.py`,
+`05-knowledge/results/lrc14_coordinate_resurrection_sheaf_codex_s267.out`.
+
+Goal: after HYP-3116's missing-input ledger and HYP-3117's proof-circuit
+past-work compiler, model quotient repair as a coordinate-resurrection
+problem.  Compute minimal legal sidecar covers,
+concept-lattice intents, bottleneck coordinates, and a reframe tournament
+whose vertices are adjunction/sheaf/repair grammars rather than runners or
+scalar signals.
+
+Namespace: HYP-3118 / LTI-254 / LTT-152 / T1193 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S265: LRC14 irrational/transcendental approximation sidecar
 
 **Status:** EVIDENCE / exact interval-margin scout and sidecar synthesis; not
