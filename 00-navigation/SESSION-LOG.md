@@ -1,3 +1,29 @@
+## mac-mini-2026-06-27-S64 -- SYMBOLIC coverage extremality: closed-form arc overlap (apex-14) => cap_10, cap_11 symbolic
+
+Owner: work on symbolic coverage extremality. The seven-sector coverage extremal cap_k = min meas(lonely(P)),
+j=13-k (THM-576), had closed form cap_k=C(k+1,2)/91 PROVED only for j=1,2; j=3 (k=10) was exact-by-search.
+Closed it symbolically (THM-577; lrc_symbolic_overlap_closedform / lrc_symbolic_coverage_inclexcl _S64).
+
+KEY LEMMA (proved + verified 0/120 over p,q<=16): the forbidden-arc overlap has a CLOSED FORM
+  o(p,q) = 1/(7 max(p,q)) + (1/(7 p q)) * sum_{m>=1, 14m<p+q} (p+q-14m)   [gcd(p,q)=1]
+with the offset term switching ON iff p+q > 14 -- the apex 14=2*7 appears DIRECTLY as the threshold.
+Proof = CRT bijection (a,b)->aq-bp mod pq + arc-overlap geometry.
+
+THEOREM (symbolic): assembling the closed forms over the THM-576 minimizers (all coprime):
+  cap_11 = 1 - 2/7 + o(1,13) = 66/91 = C(12,2)/91   [j=2]
+  cap_10 = 1 - 3/7 + (o(1,12)+o(1,13)+o(12,13)) - F(1,12,13) = 4/7 + 3/91 = 55/91 = C(11,2)/91   [j=3, NEW]
+the triple F(1,12,13)=1/91=1/(7*13) = narrowest nested arc in the speed-1 container. Closes the VALUE half
+of THM-576's j=3 search-only case.
+
+THE DIP (k=8,9): cap_k = C(k+1,2)/91 - dip_j, dip_j = C(j,2)/91 - sum_{r>=2} O_r (inclusion-exclusion
+orders). dip=0 (j<=3), 1/4004 (j=4), 1081/76440 (j=5, where the minimizer BREAKS to middle-spread
+{1,5,7,8,9}). Each dip is a FINITE sum of closed-form o/F terms -> the binding rows are a finite symbolic
+remainder, not a search.
+
+REMAINS: the symbolic VALUE is now proved for k>=10; the OPTIMALITY (named config attains the min) is still
+THM-576's search = the concentration extremality (OPEN-Q-108/gK8). The apex-14 threshold in o(p,q) is the
+lever: overlaps grow only across the apex, so spreading speeds to the {1..13} extremes minimizes overlap.
+
 ## codex-2026-06-27-S258 -- observer-gluing ledger back-and-forth on HYP-3096/HYP-3097
 
 Owner asked to keep working on at least two proof-frontier tasks back and
