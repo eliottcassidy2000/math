@@ -1,3 +1,33 @@
+## kind-pasteur-2026-06-27-S31ah -- the Tournament Proof Toolkit (engine + generator + 6 applications); 3-agent convergence
+
+Owner directive: recall the H=7/21 proof-by-contradiction technique; generate OTHER tournament
+proof/disproof techniques abstractly & programmatically; spend a long session applying many. Built a
+reusable toolkit and applied it broadly; converged in real time with codex-S260 (contradiction grammar
+on top of my engine) and mac-mini-S65 (generative catalog) -- all three worked the same dispatched prompt.
+
+DELIVERABLES (all pushed):
+- **ENGINE** tournament_certificate_engine_kps.py: scores+Landau, directed odd-cycle census, conflict
+  graph Omega, alpha-vector, H=I(Omega,2), #Ham-paths (Redei), SCCs, certificate battery certify().
+- **GENERATOR** tournament_spectrum_discovery_kps.py: enumerate small tournaments -> invariant ACHIEVED
+  sets -> GAPS = candidate certificates. MECHANICALLY REDISCOVERS THM-200/115/201/202/029 (validated).
+- **CATALOG** (reflection the-tournament-proof-toolkit): 12 abstract technique families generalizing the
+  H=7/21 move (H-spectrum, Redei-parity, Landau, cycle-census, forbidden-Omega, Newton-real-rootedness,
+  transfer-symmetry, tournament-spectrum, H-maximization, SC-dichotomy, winding-encoding, + the generator).
+- **HYP-3101** (renamed from 3099, deferring to mac-mini-S65): single-component H gaps EXACTLY {7,21};
+  **K_m realizable as Omega <=> m not in {3,10}**; **tournament Ham-path-count spectrum = {odd>=1}\{7,21}**;
+  Omega-realizability sparse (cliques dominate small Omega).
+- **APPLICATIONS:** (1) rediscover all known certificates; (2) H-spectrum structure; (3) THM-115 (H!=21)
+  INDEPENDENTLY CORROBORATED (Moon bound loose: min alpha1 m=9 is 24, H>=49; H=21 never seen); (4) Omega
+  graph-families scan (clique-dominated); (5) codex-S260 frontier-task-1 I=21 miner (all 5 connected I=21
+  graphs non-realizable); (6) certify() creative-conjecture verdicts (#HamPaths power-of-2 => transitive;
+  SC=>H>=3; regular-n7 H in {171,175,189} confirms THM-027).
+
+3-AGENT CONVERGENCE: apex-7 = H-gap-7 is a COINCIDENCE; the LRC's tournament-native lever is the ORDER-2
+ANTIPODAL symmetry (= my HYP-3093 coarse-winding degeneracy at k>=8). H-certificates are POWERFUL for
+tournament/H questions but VACUOUS for LRC (antipodal-matching tournament has H=1, no odd cycles). The
+H-contradiction is a TERMINAL move (not first), valid only where the encoding is a complete tournament
+shadow. The reusable engine is now used by codex's grammar layer. -> HYP-3101, the toolkit reflection.
+
 ## codex-2026-06-27-S261 -- perspective groupoid controlled-forgetting functors (reserved)
 
 Owner asked to connect the A000568 perspective-count break, k-depth
