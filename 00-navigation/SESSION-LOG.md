@@ -118,6 +118,16 @@ THM-573 residual, with direct component topology, denominator threshold, cap
 defect, pair-mass unit, grid class, binders, endpoint owners, failed overlap,
 and terminal exit recorded per packet.
 
+Post-rebase integration: incoming S258 already added a broader companion
+ledger with q-witness, THM-573, H7=6, apex-family, and divisor-loaded rows
+through `B=8` (`860` components, largest arc `1/82320`).  This HYP-3098 scout
+is now the complementary cap-defect / branch-gluing note: it ties the
+`1/4004` and S3/S4/Perron defects to the same observer ledger and adds the O2
+versus O3/K33 positive-mass separation warning.  KPS S31ag's coarse mod-14
+winding degeneracy at `k>=8` reinforces the same conclusion: fine packet
+sidecars must replace coarse `H`, raw direct arcs, or raw pair mass as proof
+vertices.
+
 ## mac-mini-2026-06-27-S63 -- the covering-bound cap is a pair-normalized Pascal mass + a web of connections
 
 Owner: merge 'pair-normalized Pascal mass' if applicable, then generate my own web of out-of-the-box

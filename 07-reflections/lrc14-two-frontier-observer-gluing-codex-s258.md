@@ -29,6 +29,20 @@ affine pair-mass unit.  But pair mass does not know whether a positive packet
 is nested-refinement covering work or K33 cross-handoff debt.  So the branch
 chart must be glued in.
 
+After rebasing over the incoming S258 companion ledger, the split is sharper.
+The companion script samples a wider residual face: q-witness exits,
+THM-573 exits, H7=6, apex-family rows, and divisor-loaded rows through `B=8`.
+It shows the apex/divisor direction can shatter direct arcs down to
+`1/82320` with `860` components, while residue-count scissors signatures stay
+much coarser.  This scout adds the complementary cap-defect pressure: `j=4`
+is one `1/4004` unit, `j=5` is already S3/S4-or-Perron debt, and branch/K33
+handoff prevents positive mass from becoming a proof separator.
+
+KPS S31ag adds the same warning in tournament language: coarse mod-14 winding
+degenerates at `k>=8` by forced antipodal ties.  That lands exactly on the
+binding cap rows.  So the fine-scale packet sidecar is not optional; it is the
+coordinate that coarse `H`, raw pair mass, and raw direct arcs all lose.
+
 The hidden structure is the overlap map.  Each chart is allowed to forget
 something only when another chart pays for that loss.  Direct arc charts forget
 apex normalization.  Pascal charts forget branch handoff.  Branch charts forget

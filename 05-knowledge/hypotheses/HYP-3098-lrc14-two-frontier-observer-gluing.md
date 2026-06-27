@@ -8,6 +8,8 @@ technique: LTI-238
 tournament_technique: LTT-136
 script: 04-computation/lrc14_two_frontier_gluing_s258.py
 result: 05-knowledge/results/lrc14_two_frontier_gluing_s258.out
+companion_script: 04-computation/lrc14_observer_gluing_ledger_codex_s258.py
+companion_result: 05-knowledge/results/lrc14_observer_gluing_ledger_codex_s258.out
 related:
   - HYP-3097
   - HYP-3096
@@ -23,6 +25,7 @@ related:
   - HYP-3083
   - THM-576
   - THM-575
+  - THM-574
   - THM-573
   - OPEN-Q-108
 ---
@@ -89,6 +92,27 @@ Task B failure feeding Task A: pair mass and positive safe mass do not
 distinguish proof routes.  K33 cross-handoff rows are positive-open too, so
 the witness route must retain branch chart, active binders, endpoint owners,
 and terminal debt before using any scalar cap or measure.
+
+## Incoming Integration
+
+After rebasing over the incoming S258 companion ledger, the two scouts now play
+different roles.  `lrc14_observer_gluing_ledger_codex_s258.py` is the broader
+residual sampler: it attaches CRT status, H7/even pair shadows, residue-count
+scissors signatures, and Farey lanes to q-witness, THM-573 exit, H7=6, apex,
+and divisor-loaded rows.  Its strongest stress point is the divisor-loaded
+`B=8` row with `860` direct components and largest arc `1/82320`.
+
+This HYP-3098 scout is the cap-defect and branch-gluing compression test on a
+smaller shared table.  It adds the `j=4` one-unit `1/4004` defect, the
+`j=5` S3/S4-or-Perron defect, and the explicit warning that positive pair mass
+and positive direct measure still do not separate O2 nested-refinement rows
+from O3/K33 cross-handoff rows.
+
+The KPS S31ag close also fits the same pattern: the coarse mod-14 winding
+tournament degenerates at `k>=8` by forced antipodal ties, exactly where the
+cap side binds.  Therefore the next object cannot be coarse `H`, raw direct
+arc, or raw pair mass; it must be a fine-scale observer ledger carrying packet
+scissors and chart-overlap fields.
 
 ## Reframing
 
