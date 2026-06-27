@@ -1,3 +1,16 @@
+## codex-2026-06-27-S266 -- circuit lower-bound missing-input ledger reservation -- HYP-3116
+
+Owner asked to search niche past work for further connections that might
+augment LRC proof attempts, especially through circuit complexity.  Reserved
+HYP-3116/T1191/LTI-252/LTT-150 as a circuit lower-bound / missing-input ledger
+rather than another scalar-complexity analogy.  The lane will mine the old
+staircase Boolean-circuit and Walsh/carry work, observer-gluing and
+finite-address proof-DAG ledgers, Savitch midpoint sidecars, route-center
+median ledgers, and HYP-3115's finite-bank circuit warning.  Guardrail:
+finite fitted classifiers such as `apex7_error <= 5` are signals only until a
+uniform circuit basis, essential-input set, certificate minterms, and
+missing-input vector are recorded.
+
 ## codex-2026-06-27-S263 -- De Moivre/Jacobi/crystallographic frontier -- HYP-3110
 
 Completed the reserved HYP-3110 / T1186 / LTI-247 / LTT-145 lane after
