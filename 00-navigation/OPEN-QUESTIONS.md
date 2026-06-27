@@ -1,5 +1,23 @@
 # Open Questions
 
+**OPEN-Q-108 S244 sixth-power collision sidecar addendum:** HYP-3076 turns the
+prompt equations into typed relation-lattice sidecars.  The `3-vs-3` equation
+`a^6+b^6+c^6=d^6+e^6+f^6` is native support-six data; the `2-vs-2` equation
+`a^6+b^6=d^6+e^6` is a rank-lowered square-cube shadow and must be marked as a
+padded/canceling-pair degeneracy before entering six-slot ledgers.  Open task:
+add `sixth_power_collision_type`, `native_support6_flag`,
+`sixth_power_residue_mask_mod7`, `sixth_power_residue_mask_mod9`,
+`sixth_power_residue_mask_mod13`, `sixth_power_residue_mask_mod27`,
+`sixth_power_phase_mod41`, `sixth_power_owner_gcd`,
+`degenerate_padding_pair`, and `power_collision_discharge_route` to a
+HYP-2963/HYP-3074 packet sample carrying relation-lattice, low-height-wall,
+cycle-image, and route-state closure fields. Native `3-vs-3` walls should
+route to finite wall/cycle-image/state-lift exits; `2-vs-2` equalities should
+remain degeneracy guards unless another sidecar makes them native. -> HYP-3076,
+HYP-3074, HYP-3073, HYP-3071, HYP-3062, HYP-3060, HYP-3058, HYP-3009,
+HYP-2963, HYP-2887, HYP-2636, HYP-2617, HYP-2614, THM-538, THM-572,
+LTI-224, LTT-122, T1159.
+
 **OPEN-Q-108 S238 cross-carrier pullback resonance addendum:** HYP-3072 turns
 the CPI pullback index into a finite proof-carrier portfolio audit.  The S238
 scout encodes `22` carriers and `9` remaining obligations over a duodecimal

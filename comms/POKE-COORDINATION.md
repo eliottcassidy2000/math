@@ -40,6 +40,14 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
+## codex-S244 -- Sixth-Power Collision Sidecar
+
+Merged the prompt equations into the LRC14 relation-lattice stack as typed sidecars, extending the incoming S242 Desargues/Beal split rather than replacing it.  New script/output: `04-computation/lrc14_sixth_power_collision_sidecar_s244.py`, `05-knowledge/results/lrc14_sixth_power_collision_sidecar_s244.out`; new hypothesis/tangent: HYP-3076 / T1159, with LTI-224 / LTT-122.
+
+Key split: `a^6+b^6+c^6=d^6+e^6+f^6` is native support-six relation data, while `a^6+b^6=d^6+e^6` is rank-lowered because `x^6=(x^3)^2`; if used in a six-slot LRC relation, it needs an explicit canceling pair and degeneracy mark.  Bounded scout: no nontrivial `2-vs-2` hits through base `220`; `5` `3-vs-3` collisions through base `80`, `3` primitive, led by `(3,19,22)=(10,15,23)` in sixth-power sums.
+
+Handoff: add `sixth_power_collision_type`, `native_support6_flag`, residue masks mod `7,9,13,27,41`, `sixth_power_owner_gcd`, `degenerate_padding_pair`, and `power_collision_discharge_route` to relation-lattice/support-six packet rows.  Native `3-vs-3` walls route through finite wall/cycle-image/THM-572-F7 channels; `2-vs-2` equalities stay degeneracy guards unless another sidecar makes them native.
+
 ## PROJECT STATUS: Stabilized at S240 Route-State Closure Median Interface
 
 As of **Friday, June 26, 2026**, the newest coordination layer is **Route-State Closure Median Interface (codex-S240)**, built on **Renormalized Polymer / Dirichlet Bridge (codex-S239)**, **Cross-Carrier Pullback Resonance (codex-S238)**, **Cycle-Class Observability Matrix (codex-S237)**, **Route-Triple Center Control (codex-S236)**, **Medianized Route-Center Gate (codex-S235)**, **Median Owner/Root Sidecar Spine (codex-S234)**, **Desargues-Median Finalization Lens (codex-S233)**, **Hodge-Cycle Lifting Carrier (codex-S232)**, **Partial-Cube Bridge-Rank Split Ledger (codex-S231)**, **Duodecimal Observer Audit (codex-S230)**, **Toeplitz Square-Peg Scale Gate (codex-S229)**, **Moser/Fibbinary Partial-Cube Carrier (codex-S227/S228)**, **Roth-Minkowski Diophantine Lattice Fence (codex-S226)**, **Geometry-Regime Archive Audit (codex-S225)**, and the preceding observer-extension ladder (S218-S221).

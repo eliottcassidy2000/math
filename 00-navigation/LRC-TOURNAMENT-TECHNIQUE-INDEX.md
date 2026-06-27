@@ -68,6 +68,10 @@ obligations, and proof-carrier interfaces.
 - Need the final packet/route/certificate/sidecar/discharge proof interface:
   use LTT-119 after LTT-113 and run legal sidecar closure before judging
   coordinate-wise medians.
+- Need to import equal sixth-power equations into the LRC relation-lattice
+  stack:
+  use LTT-122 and separate native `3-vs-3` support-six collisions from
+  rank-lowered `2-vs-2` square-cube shadows before naming any residual debt.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -3340,6 +3344,46 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-2963, LTI-222, LTI-221, LTI-218, LTI-217, LTI-216, LTT-120, LTT-119,
   LTT-116, LTT-115, LTT-114, T1157, T1156, T1153, T1152, OPEN-Q-108,
   `TournamentH7.LRCMedianCenterControl`.
+
+### LTT-122: Sixth-Power Collision Sidecar
+
+- **Move:** Treat equal sixth-power equations as typed relation-lattice
+  sidecars.  The `3-vs-3` equation is a native six-term signed relation; the
+  `2-vs-2` equation is a rank-lowered square-cube shadow because
+  `x^6=(x^3)^2` and must be padded by a canceling pair before it can enter a
+  support-six ledger.
+- **LRC use:** HYP-3076/S244 extends the S242 HYP-3060 Desargues/Beal split by
+  adding a power-collision field to the support-six, coimage, low-height-wall,
+  and route-state closure stack, and parallels the S243 HYP-3075
+  Hurwitz-Markov-Pell rule that scalar coincidences need retained arithmetic
+  addresses.  The first bounded
+  primitive `3-vs-3` wall in the scout is `(3,19,22)=(10,15,23)` in sixth-power
+  sums; its residue masks collapse locally at mod `7,9,13,27` while mod `41`
+  retains phase.  This is exactly the controlled-forgetting warning: local
+  legality is not enough without exact scale and discharge sidecars.
+- **Preserves:** Native/padded support-six status, arity, owner gcd, residue
+  masks mod `7,9,13,27`, phase mod `41`, relation-lattice role, cycle-image
+  obligation, and discharge route.
+- **Forgets / guardrail:** Raw equal-power scalar data forgets whether the
+  relation is native six-slot data or a padded four-term shadow.  Raw bases and
+  runners are not the right tournament vertices; sidecar fields and proof
+  obligations are.
+- **Tournament fingerprint:** S244 uses proof-carrier sidecars as vertices and
+  is transitive:
+  `labelled_packet_sheaf > native_three_vs_three_support6_collision >
+  sixth_power_residue_phase_mask > route_state_closure_sidecar >
+  low_height_wall_ledger > owner_gcd_common_factor_gate >
+  padded_support6_canceling_pair >
+  rank_lowered_two_vs_two_square_cube_shadow > raw_equal_sixth_power_scalar`.
+- **Next pull:** Add `sixth_power_collision_type`, `native_support6_flag`,
+  `sixth_power_residue_masks`, `sixth_power_owner_gcd`,
+  `degenerate_padding_pair`, and `power_collision_discharge_route` to a
+  HYP-2963 packet sample already carrying relation-lattice, low-height-wall,
+  cycle-image, and route-state closure fields.
+- **Pointers:** HYP-3076, HYP-3075, HYP-3074, HYP-3073, HYP-3071, HYP-3066, HYP-3062,
+  HYP-3060, HYP-3058, HYP-3009, HYP-2963, HYP-2887, HYP-2636, HYP-2632,
+  HYP-2618, HYP-2617, HYP-2614, HYP-2608, THM-538, THM-572, LTI-224,
+  LTT-122, T1159, OPEN-Q-108.
 
 ## Immediate Pull List
 

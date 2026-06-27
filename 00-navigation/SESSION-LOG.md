@@ -1,3 +1,34 @@
+## codex-2026-06-27-S244 -- sixth-power collision sidecar (HYP-3076/T1159/LTI-224/LTT-122)
+
+User asked to merge ideas from the equations
+`a^6+b^6+c^6=d^6+e^6+f^6` and `a^6+b^6=d^6+e^6`.
+Added exact scout `04-computation/lrc14_sixth_power_collision_sidecar_s244.py`,
+stored `05-knowledge/results/lrc14_sixth_power_collision_sidecar_s244.out`,
+created HYP-3076 and reflection
+`07-reflections/lrc14-sixth-power-collision-sidecar-codex-s244.md`, and added
+T1159/LTI-224/LTT-122 navigation.
+
+Main split: the `3-vs-3` equation is native support-six data, while the
+`2-vs-2` equation is rank-lowered because `x^6=(x^3)^2`; if used in a
+six-slot LRC relation, it needs an explicit canceling pair and a degeneracy
+mark.  This extends the incoming S242 Desargues/Beal split by moving its
+binary-owner/ternary-current distinction into the support-six relation ledger.
+After rebasing over the S243 Hurwitz-Markov-Pell reservation, HYP-3076 also
+records the shared rule that scalar coincidences need retained arithmetic
+addresses before they become theorem data.
+Bounded scout finds no nontrivial `2-vs-2` hits through base `220`, but
+finds `5` `3-vs-3` collisions through base `80`, `3` primitive, led by
+`(3,19,22)=(10,15,23)` in sixth-power sums.  Residue masks collapse locally at
+mod `7,9,13,27`, while mod `41` retains magnitude-sensitive phase.  Tournament
+Analysis uses proof carriers and sidecar fields, not bases or runners; the
+carrier tournament is transitive with one Hamiltonian path.
+
+Next pull: add `sixth_power_collision_type`, `native_support6_flag`,
+`sixth_power_residue_masks`, `sixth_power_owner_gcd`,
+`degenerate_padding_pair`, and `power_collision_discharge_route` to a
+HYP-2963/HYP-3074 packet sample already carrying relation-lattice,
+low-height-wall, cycle-image, and route-state closure fields.
+
 ## codex-2026-06-26-S239 -- renormalized polymer / Dirichlet bridge (HYP-3073/T1155/LTI-220/LTT-118)
 ## codex-2026-06-26-S239 -- reserved renormalized polymer / Dirichlet bridge (HYP-3073)
 ## codex-2026-06-27-S242 -- sixth-power collision split for Desargues/Beal finalizer
