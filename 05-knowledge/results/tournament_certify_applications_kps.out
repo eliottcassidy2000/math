@@ -1,0 +1,42 @@
+====================================================================
+ CREATIVE-CONJECTURE VERDICTS (toolkit applied)
+====================================================================
+
+[C1] 'A tournament with #HamPaths a power of 2' => only the TRANSITIVE one.
+     Redei: #HamPaths is ODD; the only odd power of 2 is 1; #HamPaths=1 <=> transitive.
+     N=2^0=1: realizable -> forces transitive
+     N=2^1=2: FORBIDDEN (Redei: #HamPaths must be ODD)
+     N=2^2=4: FORBIDDEN (Redei: #HamPaths must be ODD)
+     N=2^3=8: FORBIDDEN (Redei: #HamPaths must be ODD)
+     N=2^4=16: FORBIDDEN (Redei: #HamPaths must be ODD)
+     N=2^5=32: FORBIDDEN (Redei: #HamPaths must be ODD)
+
+[C2] 'A tournament with exactly 7 (or 21) Hamiltonian paths' => IMPOSSIBLE.
+     N=7: FORBIDDEN -- #HamPaths=7 is a permanent gap (=H gap, THM-200/115)
+     N=21: FORBIDDEN -- #HamPaths=21 is a permanent gap (=H gap, THM-200/115)
+     N=9: realizable
+     N=11: realizable
+     N=189: realizable
+
+[C3] 'A strongly-connected tournament with H<3' => IMPOSSIBLE (SC has a 3-cycle => H>=3).
+     SC tournaments n<=6 with H<3: 0 (0 => verified)
+
+[C4] 'Regular tournament on n=7 has H in {171,175,189}' (THM-027 BIBD classes).
+     observed regular-n7 H values: [171, 175, 189]  (THM-027 predicts {171,175,189})
+
+[C5] 'H even' => IMPOSSIBLE (always odd). Sample check + certificate:
+     even-H tournaments in 5000 random n=6: 0 (0 => verified); certificate: H=1+2*sum
+
+[C6] DIOPHANTINE FILTER demo: #HamPaths(T)=N solvable iff N odd and N not in {7,21}.
+     => the COMPLETE Hamiltonian-path-count spectrum of all tournaments = {odd>=1}\{7,21}.
+
+[SELF-CERTIFY] full report on Paley T_7:
+     scores: [3, 3, 3, 3, 3, 3, 3]
+     landau_ok: True
+     H: 189
+     ham_paths: 189
+     ham_paths_odd: True
+     alpha: [1, 80, 7]
+     n_sccs: 1
+     H_forbidden: None
+     redei_violation: None
