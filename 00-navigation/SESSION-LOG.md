@@ -12,6 +12,20 @@ repo archaeology done enough to claim the lane; executable scout completed
 below after the S272 coordination rebase.
 Renumbered from provisional HYP-3136 after the rebase revealed that main had
 claimed HYP-3136 for the integrated multi-far floor closure.
+## codex-2026-06-27-S273 -- exact k=8 reflection-block resolvent scout
+
+Owner: push creatively toward the LRC14 proof by searching niche prior work and testing new connections around the current hard node.  Result: HYP-3139/T1204/LTI-265/LTT-163 plus exact script `04-computation/lrc14_k8_reflection_block_resolvent_codex_s273.py`.
+
+The session refocused the recent HYP-3132 De Moivre/biquadratic insight into a finite matrix obligation.  The pairwise sector co-emptiness matrix for `consec_8`, restricted to sectors `1..5`, is exactly symmetric under `s->6-s`.  The exact fold splits into:
+
+- inner reflected `2x2` shell page on `(1+5,2+4)`;
+- fixed-center coupling through sector `3`;
+- antisymmetric `2x2` nonmaximizing oscillation;
+- sector-`6` boundary leakage vector.
+
+Key exact readout: `S2_core_1..5=874/735`, `S2_boundary_with_sector6=442/735`, `S2_total=188/105`; the inner shell page has charpoly `(61740*x**2 - 47103*x + 5476)/61740` and eigenvalues about `0.14309,0.61983`; the full reflection-symmetric `3x3` block has top eigenvalue about `0.73066`.  Shell polynomial enumeration around center `3` shows HYP-3132's fold `(t-1)(t-2)(t-4)(t-5)` is the unique reflected four-root fold avoiding the boundary shell, with `y^2-5y+4` and discriminant `9`.
+
+Interpretation: HYP-3085's pairwise moment/Perron route, HYP-3122's `phi4` sign, and HYP-3132's solvable biquadratic are now the same finite packet.  HYP-3133's A000568 controlled-forgetting lesson reappears as a guardrail: the inner fold is usable only if center coupling and boundary leakage remain named sidecars.  Next proof task: prove the inner `2x2` shell bound, add center/boundary ceilings, then attach the `-9S3+6S4` / `phi4` correction inside the HYP-3107/THM-577 coverage-extremality interface.
 
 Completed the executable scout after rebasing over the S272 edge quotient
 coordination update.  Result stored in

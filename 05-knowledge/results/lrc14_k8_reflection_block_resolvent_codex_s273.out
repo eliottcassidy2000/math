@@ -1,0 +1,99 @@
+HYP-3139 / codex-2026-06-27-S273
+Exact k=8 reflection-block resolvent scout; executable evidence, not a proof.
+
+1. REFLECTED SHELL POLYNOMIALS AROUND CENTER 3
+shells=(1, 2) roots_t=(1, 2, 4, 5) y_poly=y**2 - 5*y + 4 discr=9 boundary=False <-- HYP-3132 inner fold
+shells=(1, 3) roots_t=(0, 2, 4, 6) y_poly=y**2 - 10*y + 9 discr=64 boundary=True
+shells=(2, 3) roots_t=(0, 1, 5, 6) y_poly=y**2 - 13*y + 36 discr=25 boundary=True
+Readout: the HYP-3132 quartic is the unique reflected 4-root fold using only the two inner shells.  Boundary-shell folds remain solvable, but they are not the k=8 bounded-core node.
+
+2. EXACT PAIRWISE CO-EMPTINESS REFLECTION BLOCKS
+
+--- consec_8 ---
+core_reflection_exact=True
+S2_core_1..5=874/735
+S2_boundary_with_sector6=442/735
+S2_total=188/105
+core_fraction_of_S2=0.664134
+reflection_symmetric_3x3_block_on_(1+5,2+4,3):
+  [       11/28,         5/21,       32/245]
+  [        5/21,      272/735,         5/49]
+  [      64/245,        10/49,      117/490]
+sym_charpoly=(1058841000*x**3 - 1060641750*x**2 + 228623465*x - 13832376)/1058841000
+sym_eigenvalues_float=[0.113461675, 0.157580467, 0.730658539]
+inner_shell_2x2_page_on_(1+5,2+4):
+  [       11/28,         5/21]
+  [        5/21,      272/735]
+shell_charpoly=(61740*x**2 - 47103*x + 5476)/61740
+shell_eigenvalues_float=[0.143094847, 0.619830323]
+center_shell_coupling=[32/245, 5/49, 64/245, 10/49]
+antisymmetric_2x2_block_on_(1-5,2-4):
+  [    443/2940,        5/147]
+  [       5/147,       86/735]
+anti_charpoly=(720300*x**2 - 192815*x + 11866)/720300
+anti_eigenvalues_float=[0.095890922, 0.171796152]
+boundary_sector6_vector=[149/1470, 311/2940, 117/980, 37/294, 73/490]
+
+--- consec_9 ---
+core_reflection_exact=True
+S2_core_1..5=507/490
+S2_boundary_with_sector6=999/1960
+S2_total=3027/1960
+core_fraction_of_S2=0.669970
+reflection_symmetric_3x3_block_on_(1+5,2+4,3):
+  [    639/1960,       83/392,       43/392]
+  [      83/392,      163/490,         5/56]
+  [      43/196,         5/28,       29/147]
+sym_charpoly=(2258860800*x**3 - 1933477280*x**2 + 346855124*x - 17263153)/2258860800
+sym_eigenvalues_float=[0.091162194, 0.132609508, 0.632180679]
+inner_shell_2x2_page_on_(1+5,2+4):
+  [    639/1960,       83/392]
+  [      83/392,      163/490]
+shell_charpoly=(3841600*x**2 - 2530360*x + 244403)/3841600
+shell_eigenvalues_float=[0.117576071, 0.541097398]
+center_shell_coupling=[43/392, 5/56, 43/196, 5/28]
+antisymmetric_2x2_block_on_(1-5,2-4):
+  [      37/280,        9/392]
+  [       9/392,         1/10]
+anti_charpoly=(3841600*x**2 - 891800*x + 48739)/3841600
+anti_eigenvalues_float=[0.088046173, 0.144096684]
+boundary_sector6_vector=[5/56, 41/490, 29/294, 31/294, 13/98]
+
+--- consec_10 ---
+core_reflection_exact=True
+S2_core_1..5=271/294
+S2_boundary_with_sector6=1559/3528
+S2_total=4811/3528
+core_fraction_of_S2=0.675951
+reflection_symmetric_3x3_block_on_(1+5,2+4,3):
+  [  5071/17640,       31/168,     359/3528]
+  [      31/168,      251/882,         5/63]
+  [    359/1764,        10/63,     313/1764]
+sym_charpoly=(12197848320*x**3 - 9142162848*x**2 + 1414421260*x - 60017723)/12197848320
+sym_eigenvalues_float=[0.075882987, 0.116360191, 0.557246618]
+inner_shell_2x2_page_on_(1+5,2+4):
+  [  5071/17640,       31/168]
+  [      31/168,      251/882]
+shell_charpoly=(62233920*x**2 - 35601048*x + 2972279)/62233920
+shell_eigenvalues_float=[0.101496605, 0.470555549]
+center_shell_coupling=[359/3528, 5/63, 359/1764, 10/63]
+antisymmetric_2x2_block_on_(1-5,2-4):
+  [    199/1960,       13/504]
+  [      13/504,       79/882]
+anti_charpoly=(62233920*x**2 - 11892888*x + 524551)/62233920
+anti_eigenvalues_float=[0.069071943, 0.12202783]
+boundary_sector6_vector=[11/168, 15/196, 313/3528, 2/21, 409/3528]
+
+3. PROOF-ROUTE INTERPRETATION
+The k=8 matrix has an exact reflection core on sectors 1..5.  The two reflected shell pairs (1,5) and (2,4) give a genuine 2x2 page, matching the degree-2 biquadratic reduction in HYP-3132; the fixed center sector 3 is an extra scalar coupling.  The all-positive S2/Perron witness lives in the full reflection-symmetric 3x3 block, while the antisymmetric 2x2 block is a nonmaximizing oscillation.  Sector 6 is a boundary leakage vector, not part of the HYP-3132 inner-shell biquadratic.  Therefore the next proof target can be made finite: bound the inner 2x2 shell page, control the center coupling and boundary vector, then attach the phi4 sign for the S3/S4 k=8 correction.
+Worpitzky/Eulerian path moments remain useful as coefficient-expansion vocabulary, but this scout says the load-bearing certificate is smaller: a reflected shell 2x2 page, a center-coupling scalar page, and a one-sector boundary page.
+
+4. TOURNAMENT ANALYSIS OVER PROOF CARRIERS
+vertices=exact_reflection_3x3_core_block,hyp3132_inner_biquadratic_fold,hyp3129_spec_resonance_certificate,hyp3133_a000568_middle_shadow,worpitzky_path_moment_vocabulary,antisymmetric_2x2_nonmax_block,boundary_sector6_leak_vector,raw_numeric_spectrum
+axes=preserves_status,preserves_route,exact_arithmetic,folds_k8_obligation,connects_spec_floor,connects_a000568,formalization_ready,scalar_guardrail
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed_3cycles=0
+selected_path=exact_reflection_3x3_core_block -> hyp3132_inner_biquadratic_fold -> hyp3129_spec_resonance_certificate -> boundary_sector6_leak_vector -> hyp3133_a000568_middle_shadow -> antisymmetric_2x2_nonmax_block -> worpitzky_path_moment_vocabulary -> raw_numeric_spectrum
+
+5. CANDIDATE LEMMA
+In the bounded-core k=8 row, after removing the pinned sector 0, the sectors 1..5 split under s->6-s into an inner reflected 2x2 shell page, a fixed-center coupling, an antisymmetric 2x2 oscillation, and a boundary-sector-6 leakage vector.  The HYP-3132 biquadratic roots are exactly the two inner reflected shells.  A proof of the 2x2 shell bound, plus center/boundary ceilings and the known phi4 sign, would close the k=8 dip without invoking any infinite tournament quotient or general quartic machinery.

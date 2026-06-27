@@ -14,6 +14,23 @@ named finite-address / observer-gluing debt before endpoint `Phi/P` is used.
 This is the bridge from the even gK8/phi4 dip bound to a proof-legal terminal
 packet. -> HYP-3138, HYP-3134, HYP-3132, HYP-3122, HYP-3118, HYP-3116,
 HYP-3110, HYP-3085, THM-577, LTI-264, LTT-162, T1203, OPEN-Q-108.
+**OPEN-Q-108 HYP-3139 k=8 reflection-block resolvent addendum:**
+HYP-3139 turns the HYP-3132 De Moivre/biquadratic insight into an exact
+finite matrix proof target.  In the `consec_8` pairwise sector co-emptiness
+matrix, sectors `1..5` are reflection-symmetric under `s->6-s` and split into
+an inner `2x2` shell page, center-sector coupling, antisymmetric oscillation,
+and sector-`6` boundary leakage.  Exact scout values include
+`S2_core_1..5=874/735`, `S2_boundary_with_sector6=442/735`, and
+`S2_total=188/105`; the inner shell page has eigenvalues about
+`0.14309,0.61983`.
+
+Open task: prove the inner reflected `2x2` shell bound, prove center and
+sector-`6` leakage ceilings that preserve the LRC predicate, and combine them
+with the HYP-3122 `phi4` sign for the `-9S3+6S4` correction.  The quotient is
+allowed to forget neither center coupling nor boundary leakage; otherwise it
+becomes another unsafe scalar shadow. -> HYP-3139, HYP-3138, HYP-3132, HYP-3122,
+HYP-3085, HYP-3133, HYP-3129, HYP-3131, THM-577, LTI-265, LTT-163, T1204,
+OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3133 A000568 edge-sandwich addendum:**
 HYP-3133 adds the field `a000568_extension_shadow` between HYP-3124's

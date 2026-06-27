@@ -112,6 +112,11 @@ obligations, and proof-carrier interfaces.
   use LTT-162 after LTT-161/LTT-160/LTT-152 and treat the even fold as a
   quotient operator with an odd-coordinate resurrection table or named
   finite-address / observer-gluing debt.
+- Need to make the HYP-3132 `k=8` biquadratic reduction exact:
+  use LTT-163 after LTT-162/LTT-161/LTT-160/LTT-159/LTT-158/LTT-144 and make proof pages the vertices:
+  exact reflection block, inner shell fold, SPEC certificate, A000568 shadow,
+  Worpitzky vocabulary, antisymmetric nonmax block, boundary leakage, and raw
+  spectrum.  The quotient may not forget center coupling or sector-6 leakage.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5301,3 +5306,45 @@ constant chase.
   finite-address / observer-gluing debt before endpoint `Phi/P` is invoked.
 - **Pointers:** HYP-3138, HYP-3134, HYP-3132, HYP-3122, HYP-3118, HYP-3116,
   HYP-3110, HYP-3085, THM-577, LTI-264, LTT-162, T1203, OPEN-Q-108.
+
+## LTT-163: Tournament Of k=8 Reflection-Block Proof Pages
+
+- **Move:** Make the proof pages of the HYP-3139 `k=8` reflection-block
+  decomposition into tournament vertices.  The vertices are not runners,
+  sectors, arcs, roots, or raw eigenvalues; they are retained proof carriers
+  and sidecars.
+- **LRC use:** HYP-3139 turns HYP-3132's De Moivre/biquadratic insight into a
+  finite proof target.  The pairwise co-emptiness matrix for `consec_8`
+  restricted to sectors `1..5` is exactly symmetric under `s->6-s` and splits
+  into inner-shell, center-coupling, antisymmetric, and boundary-leakage pages.
+  This gives a local packet route for the last bounded-core `k=8` node:
+  inner `2x2` shell bound + center/boundary ceilings + HYP-3122 `phi4` sign.
+- **Preserves:** bounded-core `k=8` coverage-extremality status, exact rational
+  pairwise `S2` data, HYP-3132 biquadratic shell roots, HYP-3122 higher-order
+  correction direction, and HYP-3133 controlled-forgetting guardrails.
+- **Forgets / guardrail:** the inner shell quotient alone forgets sector `3`
+  coupling and sector-`6` leakage.  Those fields must remain sidecars before
+  the quotient can feed HYP-3107/THM-577.  Raw numeric spectrum is telemetry
+  only.
+- **Pairwise observable:** majority retention over `preserves_status`,
+  `preserves_route`, `exact_arithmetic`, `folds_k8_obligation`,
+  `connects_spec_floor`, `connects_a000568`, `formalization_ready`, and
+  `scalar_guardrail`.
+- **Switch / tie path:** orient `A -> B` when `A` wins more retention axes.
+  Ties follow the Hamiltonian path
+  `exact_reflection_3x3_core_block -> hyp3132_inner_biquadratic_fold ->
+  hyp3129_spec_resonance_certificate -> hyp3133_a000568_middle_shadow ->
+  worpitzky_path_moment_vocabulary -> antisymmetric_2x2_nonmax_block ->
+  boundary_sector6_leak_vector -> raw_numeric_spectrum`.
+- **Fingerprint:** HYP-3139 reports `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}`,
+  no directed 3-cycles, and selected path
+  `exact_reflection_3x3_core_block -> hyp3132_inner_biquadratic_fold ->
+  hyp3129_spec_resonance_certificate -> boundary_sector6_leak_vector ->
+  hyp3133_a000568_middle_shadow -> antisymmetric_2x2_nonmax_block ->
+  worpitzky_path_moment_vocabulary -> raw_numeric_spectrum`.
+- **Next hook:** Convert the inner `2x2` shell page, center coupling, and
+  boundary leakage into exact rational inequalities; then add the HYP-3122
+  `phi4` sign and emit a HYP-3107/THM-577 coverage-extremality packet for the
+  last bounded-core row.
+- **Pointers:** HYP-3139, HYP-3138, HYP-3132, HYP-3122, HYP-3085, HYP-3133,
+  HYP-3129, HYP-3128, HYP-3131, THM-577, LTI-265, LTT-163, T1204, OPEN-Q-108.

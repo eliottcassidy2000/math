@@ -53,6 +53,7 @@ Fejer / Toeplitz certificate data
 Ramanujan / exact-period denominator labels
 Haar / Baire / discrepancy tile coefficients
 boundary-moment chart data
+k8 reflection-block resolvent / inner shell 2x2 page / center coupling / boundary-sector leakage
 Kaczynski / analytic smoothing approach class
 state-lift or F7 residual sector
 cochain / cocycle obstruction class
@@ -402,6 +403,7 @@ record what it destroys before asking it to prove anything.
 | LTI-262 | A000568 edge-envelope global consistency quotient | Lower four-sector composition envelope, upper paired tail/tip child envelope, A000568 middle quotient, envelope position, global-consistency class, edge-child gluing status | HYP-3134/S272 explains `10<12<16` and `20<56<80`: raw sector decks give `1,4,10,20,35`, paired child edge packets give `1,4,16,80,632`, and A000568 one vertex later sits between them (`12`, `56`, `456`).  The proof use is a controlled-forgetting rule: start with the safe HYP-3124 paired child packet, then quotient only by a named global-consistency rule. | HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3121, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-3047, T1201, LTT-160, LTI-262, OPEN-Q-108 | Add `envelope_position`, `global_consistency_class`, `edge_child_gluing_status`, `resonance_lattice_class`, `SPEC_bound_status`, and `terminal_exit_or_named_debt` to HYP-3125 edge-floor packets before quotienting away paired tail/tip child data. |
 | LTI-263 | Generating-function payload atlas | Miss-count PGF, signed SPEC Fourier series, A000568 count/cycle-index quotient, OCF independence polynomial/Walsh EGF, De Moivre/resolvent elementary-symmetric polynomial, IO walk determinant GF, hard-core/polymer partition function, repair-cover Hilbert series | HYP-3137/S273 compares generating functions by proof payload rather than by raw scalar evaluation after the HYP-3136 integrated floor synthesis.  The stored scout finds the smallest full-cover packet `signed_SPEC_resonance_series + A000568_cycle_index_quotient + miss_count_PGF_root_locus`: signed SPEC supplies support law/low modes/tail, A000568 supplies legal global quotienting of edge children, and PGF roots supply Q/far/bounded-core zero motion.  HYP-3138 now sharpens the De Moivre/resolvent carrier into a k=8 reflection-fold adjoint candidate. | HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3129, HYP-3118, HYP-3109, HYP-3108, HYP-3103, HYP-3054, HYP-2991, THM-077, THM-076, THM-059, T1202, LTT-161, LTI-263, OPEN-Q-108 | Attach `SPEC_support_sieve`, `edge_recursion_depth_PGF`, `global_consistency_class`, `PGF_root_trajectory_derivative`, `middle_layer_vector`, `k8_reflection_fold_adjoint`, `repair_cover_H(q)`, `Bravais_resonance_cell`, `Savitch_packet_depth`, and `terminal_exit_or_named_debt` to the current finite constant-chase packet before using any GF scalar. |
 | LTI-264 | k=8 reflection-fold coordinate resurrection | Even folded miss distribution, odd-coordinate resurrection table, De Moivre biquadratic resolvent word, endpoint `Phi/P` activation status, observer gluing or named debt | HYP-3138 tests the HYP-3132 k=8 De Moivre fold as a proof-legal quotient.  Folding `q` by `t<->6-t` gives `even_fold=(q0+q6,q1+q5,q2+q4,q3)`, which preserves `L_yK8=10q0+q3+10q6`.  Exact integer-grid audit over primitive k=8 banks span<=14/15/16 finds `0` fold collisions across `3431/6434/11432` rows, so the fold behaves like a finite adjoint lookup in these banks.  The best row has nonzero odd leakage, so the fold needs coordinate resurrection before endpoint/circuit proof use. | HYP-3138, HYP-3134, HYP-3132, HYP-3122, HYP-3118, HYP-3116, HYP-3110, HYP-3085, THM-577, T1203, LTT-162, LTI-264, OPEN-Q-108 | Prove a finite k=8 fold-adjoint lemma: the even fold determines odd leakage on the bounded-core bank or emits finite-address / observer-gluing debt before endpoint `Phi/P` is invoked. |
+| LTI-265 | k=8 reflection-block resolvent | Pairwise sector co-emptiness matrix, reflection core on sectors `1..5`, inner shell `2x2` page, center-sector coupling, antisymmetric nonmax block, sector-`6` boundary leakage, HYP-3132 biquadratic shell roots | HYP-3139/S273 makes HYP-3132's solvable De Moivre/biquadratic reduction exact at matrix level.  For `consec_8`, the core sectors `1..5` fold under `s->6-s`; the inner shell page on `(1+5,2+4)` is the boundary-free biquadratic fold `y^2-5y+4`, sector `3` is a fixed-center coupling, and sector `6` is leakage that must remain a sidecar.  Exact values include `S2_core=874/735`, `S2_boundary=442/735`, and top symmetric-block eigenvalue about `0.73066`. | HYP-3139, HYP-3138, HYP-3132, HYP-3122, HYP-3085, HYP-3133, HYP-3129, HYP-3128, HYP-3131, THM-577, T1204, LTT-163, LTI-265, OPEN-Q-108 | Prove the exact rational inner `2x2` shell bound, add center/boundary ceilings, and combine with the HYP-3122 `phi4` sign for the `-9S3+6S4` correction before claiming the `k=8` bounded-core dip is discharged. |
 
 ## Cross-Cutting Guardrails
 
@@ -3129,3 +3131,56 @@ observer gluing data, and any terminal finite-address coordinate.
 Next hook: prove a k=8 fold-adjoint lemma.  The even fold may carry the
 gK8/phi4 dip bound, but the proof packet must resurrect odd leakage or route
 it to named debt before endpoint/circuit proof obligations are used.
+
+## LTI-265: k=8 Reflection-Block Resolvent
+
+Used by codex-2026-06-27-S273 for HYP-3139/T1204.  This technique turns the
+HYP-3132 De Moivre/biquadratic reading of the `k=8` hard row into an exact
+finite block decomposition of the pairwise sector co-emptiness matrix.
+
+Carrier:
+
+```text
+k8_reflection_block_resolvent =
+  exact_pairwise_coemptiness_matrix
+  + reflection_core_on_sectors_1..5
+  + inner_shell_2x2_page_(1+5,2+4)
+  + center_sector_3_coupling
+  + antisymmetric_2x2_nonmax_block
+  + boundary_sector6_leakage_vector
+  + phi4_S3_S4_correction_status
+```
+
+Preserves: the HYP-3085/HYP-3132 bounded-core `k=8` proof obligation as an
+exact rational matrix packet.  The inner shell page is the boundary-free
+biquadratic fold `y^2-5y+4`; the center and boundary fields preserve the
+coordinates that the quotient would otherwise destroy.
+
+Destroys or audits: raw quartic-solvability numerology, raw spectral floats,
+and any quotient that keeps only the inner shell while silently dropping sector
+`3` or sector `6`.
+
+Executable readout:
+
+```text
+consec_8:
+  S2_core_1..5 = 874/735
+  S2_boundary_with_sector6 = 442/735
+  S2_total = 188/105
+  inner_shell_2x2 charpoly = (61740*x**2 - 47103*x + 5476)/61740
+  inner_shell_2x2 eigenvalues ~= 0.143094847, 0.619830323
+  full_symmetric_3x3 top eigenvalue ~= 0.730658539
+```
+
+The reflected-shell polynomial census around center `3` has exactly one
+boundary-free four-root fold:
+
+```text
+shells=(1,2), roots_t=(1,2,4,5), y_poly=y**2 - 5*y + 4, discr=9
+```
+
+Next hook: prove the exact rational bound for the inner reflected `2x2` shell
+page, prove center and sector-`6` leakage ceilings, and combine the packet with
+the HYP-3122 `phi4` sign for the `-9S3+6S4` correction.  The Lean-facing target
+is a HYP-3107/THM-577 `CoverageExtremality` producer for the last bounded-core
+`k=8` node.
