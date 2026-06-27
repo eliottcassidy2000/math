@@ -40,6 +40,36 @@ the guardrail: this is a controlled-forgetting diagnostic, not a naive Asano
 zero-free proof shortcut.
 
 Namespace: HYP-3133 / LTI-261 / LTT-159 / T1200 / OPEN-Q-108.
+## Lead codex-2026-06-27-S272: A000568 edge-envelope global-consistency quotient
+
+**Status:** EVIDENCE / executable edge-envelope scout; not proof
+(HYP-3134/T1201).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3134-a000568-edge-envelope-global-consistency-quotient.md`,
+`04-computation/a000568_edge_envelope_lrc14_codex_s272.py`,
+`05-knowledge/results/a000568_edge_envelope_lrc14_codex_s272.out`, and
+`07-reflections/a000568-edge-envelope-global-consistency-codex-s272.md`.
+
+Readout: the HYP-3124 lower envelope is raw four-sector size decks
+`1,4,10,20,35`; the upper envelope is sector plus paired endpoint-deletion
+children `1,4,16,80,632`; A000568 one vertex later sits between:
+`10 < U(5)=12 < 16`, `20 < U(6)=56 < 80`, and S272 verifies
+`35 < U(7)=456 < 632`.  Interpretation: A000568 is the global-consistency
+quotient inside the local edge-witness envelope.
+
+Post-fetch connection: HYP-3133's direct edge-sandwich scout, HYP-3132's
+integrated multi-far floor, HYP-3130's Gaussian/Beurling-Selberg minorant, and
+HYP-3131's far-zero outward motion are compatible; HYP-3134 is the quotient
+discipline for when those analytic certificates may forget local paired child
+payload.
+
+Next: add `envelope_position`, `global_consistency_class`,
+`edge_child_gluing_status`, `resonance_lattice_class`, `SPEC_bound_status`,
+and `terminal_exit_or_named_debt` to HYP-3125/HYP-3129 edge-floor packet rows
+before quotienting away paired tail/tip child data.
+
+Namespace: HYP-3134 / LTI-262 / LTT-160 / T1201 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-S271: LRC14 multi-far edge-witness Rprime floor
 

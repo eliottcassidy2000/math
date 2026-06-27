@@ -79,6 +79,11 @@ Useful synthetic maps added later:
   words and paired tail/tip deletion decks.  It proposes
   `a000568_extension_shadow` as a finite quotient stratifier for HYP-3129's
   SPEC constant chase.
+- `07-reflections/a000568-edge-envelope-global-consistency-codex-s272.md`:
+  HYP-3134/T1201 note on `10<12<16`, `20<56<80`, and `35<456<632`.  It reads
+  A000568 as a global-consistency quotient between raw four-sector edge
+  shadows and fully paired tail/tip child witnesses, and transfers that
+  controlled-forgetting rule to the LRC14 edge-floor packet.
 
 ## Second-Pass Small Motif Ledger
 

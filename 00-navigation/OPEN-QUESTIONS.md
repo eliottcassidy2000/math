@@ -13,6 +13,22 @@ The target dichotomy is: the middle shadow predicts a positive SPEC floor, one
 endpoint deletion improves the floor, or the row is a finite named
 resonance-lattice debt. -> HYP-3133, HYP-3129, HYP-3128, HYP-3127, HYP-3125,
 HYP-3124, HYP-3121, HYP-2968, LTI-261, LTT-159, T1200, OPEN-Q-108.
+**OPEN-Q-108 S272 A000568 edge-envelope quotient addendum:**
+HYP-3134 turns the count wedge `10<12<16`, `20<56<80`, and now
+`35<456<632` into a controlled-forgetting rule.  Raw four-sector decks are the
+lower envelope; paired tail/tip deletion-child signatures are the safe upper
+envelope; A000568 one vertex later is the global-consistency quotient between
+them.
+
+Open task: add `envelope_position`, `global_consistency_class`,
+`edge_child_gluing_status`, `resonance_lattice_class`, `SPEC_bound_status`, and
+`terminal_exit_or_named_debt` to the HYP-3125/HYP-3129 edge-floor packet.  A
+multi-far floor row may forget paired child data only after the
+global-consistency class proves that the HYP-3129 SPEC certificate and HYP-3124
+tail/tip child packet glue to the same LRC predicate. -> HYP-3134, HYP-3133, HYP-3132, HYP-3129,
+HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3121, HYP-3106,
+HYP-3054, HYP-3050, HYP-3049, HYP-3047, LTI-262, LTT-160, T1201,
+OPEN-Q-108.
 
 **OPEN-Q-108 S271 multi-far edge-witness Rprime floor addendum:**
 HYP-3125 turns the HYP-3121 `r=2..6` covering floor into an HYP-3124-style

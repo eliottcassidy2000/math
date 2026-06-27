@@ -231,6 +231,30 @@ OBLIGATIONS (named): (1) single-far Lee-Yang region = HYP-2829 as a zero-free po
 (2) the SPEC bound |SPEC|<=1-c via EH + signed cancellation (verified c~0.98 distinct); (3) recursion termination
 + r-monotonicity (r up => R' up, bottoming at r=1 closed + bounded core). The prize: the genuinely-open core of
 the covering bound reduced to a single-far Lee-Yang region + Asano + an EH-level spectrum bound.
+## codex-2026-06-27-S272 -- A000568 edge-envelope global-consistency quotient -- HYP-3134
+
+Explored the user's count pattern `12` between `10` and `16`, and `56`
+between `20` and `80`, after syncing incoming HYP-3128/HYP-3129 work.  Added
+`04-computation/a000568_edge_envelope_lrc14_codex_s272.py`, stored output
+`05-knowledge/results/a000568_edge_envelope_lrc14_codex_s272.out`, detail
+`05-knowledge/hypotheses/HYP-3134-a000568-edge-envelope-global-consistency-quotient.md`,
+and reflection `07-reflections/a000568-edge-envelope-global-consistency-codex-s272.md`.
+
+The exact scout computes the HYP-3124 edge envelope through `n=6`: raw
+four-sector decks are `1,4,10,20,35`, sector plus paired tail/tip deletion
+children are `1,4,16,80,632`, and A000568 one vertex later sits between:
+`10 < U(5)=12 < 16`, `20 < U(6)=56 < 80`, and
+`35 < U(7)=456 < 632`.  Interpretation: raw local sector shadow <
+global-consistency quotient < fully local two-ended edge witness.
+
+LRC14 transfer: HYP-3129's elementary SPEC floor is the load-bearing scalar
+certificate, but HYP-3134 says it should be attached to a HYP-3125/HYP-3124
+edge-floor packet until a named `global_consistency_class` and
+`edge_child_gluing_status` justify forgetting paired child data.  New packet
+fields proposed: `envelope_position`, `global_consistency_class`,
+`edge_child_gluing_status`, `resonance_lattice_class`, `SPEC_bound_status`,
+and `terminal_exit_or_named_debt`.
+
 ## codex-2026-06-27-S271 -- LRC14 multi-far edge-witness Rprime floor -- HYP-3125
 
 Integrated the new upstream HYP-3124/T1198 edge-witness recursion before

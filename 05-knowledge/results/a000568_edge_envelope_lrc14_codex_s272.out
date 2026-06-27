@@ -1,0 +1,42 @@
+HYP-3134 / codex-2026-06-27-S272
+A000568 edge-envelope scout; executable synthesis, not a proof.
+
+1. EDGE-SIGNATURE ENVELOPE
+n lower=C(n+1,3) sector+tail sector+tip upper=sector+child_pair U(n+1) wedge_span wedge_position
+2 1 1 1 1 2 0 NA
+3 4 4 4 4 4 0 NA
+4 10 14 14 16 12 6 0.333333
+5 20 52 52 80 56 60 0.600000
+6 35 274 274 632 456 597 0.705193
+
+Key rows:
+  n=4: 10 < A000568(5)=12 < 16
+  n=5: 20 < A000568(6)=56 < 80
+  n=6: 35 < A000568(7)=456 < 632
+
+2. INTERPRETATION
+lower envelope=four-sector composition around a directed edge; it is local equinumerosity/equidistribution only
+upper envelope=four-sector deck plus both endpoint-deletion children; it is the safe local two-ended witness
+A000568(n+1)=global tournament classes; it sits between as a global-consistency quotient of local edge witnesses
+LRC translation: raw scalar/SPEC sectors are too coarse, full edge packets are deliberately overcomplete, and the proof certificate should be the quotient where local edge witnesses glue globally without losing the LRC predicate.
+
+3. TOURNAMENT ANALYSIS OVER QUOTIENT CARRIERS
+vertices=proof carriers / quotient operators, not runners or scalar counts
+pairwise_observable=majority over axes a000568_wedge_explains,lrc_predicate_retention,controlled_forgetting,tail_tip_payload,global_gluing,spec_floor_transfer,finite_checkability,failure_guard
+switch=A->B when A wins more axes; ties use global_consistency_quotient -> paired_tail_tip_child_envelope -> A000568_middle_orbit_count -> observer_extension_cut_payload -> resonance_lattice_SPEC_certificate -> edge_floor_packet_schema -> asano_lee_yang_dichotomy -> raw_four_sector_composition -> raw_count_numerology
+score_hist={0: 1, 1: 1, 3: 3, 5: 1, 6: 1, 7: 1, 8: 1}
+directed_3cycles=1
+scc_sizes=[3, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count=3
+selected_hamiltonian_path=global_consistency_quotient -> edge_floor_packet_schema -> paired_tail_tip_child_envelope -> observer_extension_cut_payload -> A000568_middle_orbit_count -> resonance_lattice_SPEC_certificate -> asano_lee_yang_dichotomy -> raw_four_sector_composition -> raw_count_numerology
+
+Top carrier hooks:
+- global_consistency_quotient: preserves=the middle quotient between raw edge sectors and paired child signatures; next=define the quotient map from paired edge children to global A000568-like packets
+- edge_floor_packet_schema: preserves=R-safe -> Q-safe edge packet with deletion-child Rprime ratios and SPEC status; next=add envelope_position and global_consistency_class to edge_floor_packet rows
+- paired_tail_tip_child_envelope: preserves=four-sector deck plus both endpoint-deletion children; next=use as the safe upper envelope before quotienting by observer/gluing legality
+- observer_extension_cut_payload: preserves=the 12/48/56 cut-payload arithmetic and cross-sector orientation repair; next=reuse the 56=P(5)+U(5)-U(4) splice as a gluing normal form
+- A000568_middle_orbit_count: preserves=global isomorphism classes that sit inside the edge-witness envelope; next=treat A000568 as a consistency check, not as a standalone proof invariant
+- resonance_lattice_SPEC_certificate: preserves=the elementary SPEC floor through exact low modes plus Parseval tail; next=map edge-envelope gluing to resonance-lattice sidecar fields
+
+4. PROOF-FRONTIER CONSEQUENCE
+The count wedge suggests a proof tactic: start with the HYP-3124 paired child edge packet, then quotient only by a named global-consistency rule.  For LRC14 this means adding envelope_position, global_consistency_class, resonance_lattice_class, SPEC_bound_status, and edge_child_gluing_status to the HYP-3125 edge-floor packet.  HYP-3129 supplies the load-bearing SPEC certificate; the A000568 wedge supplies the controlled-forgetting discipline that prevents both under-refined scalar sectors and over-refined local child packets from becoming false proof endpoints.

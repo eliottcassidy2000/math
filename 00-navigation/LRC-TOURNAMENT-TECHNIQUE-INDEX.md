@@ -96,6 +96,10 @@ obligations, and proof-carrier interfaces.
   quotient between sector words and paired tail/tip child decks.  Treat it as
   a finite quotient stratifier for SPEC constant-chase rows, not as a new
   zero-free proof engine.
+- Need to decide when edge-child data can be legally forgotten:
+  use LTT-160 after LTT-157/LTT-158 and treat A000568 as a middle
+  global-consistency quotient between raw four-sector decks and fully paired
+  tail/tip child packets.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5167,3 +5171,36 @@ and monotonicity obligations.
   `sector word -> A000568 shadow -> paired child deck`.
 - **Pointers:** HYP-3133, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124,
   HYP-3123, HYP-3121, HYP-2968, LTI-261, LTT-159, T1200, OPEN-Q-108.
+
+## LTT-160: Tournament Of Edge-Envelope Quotient Carriers
+
+- **Move:** Use the wedge `sector_count(n) < A000568(n+1) <
+  sector_plus_child_pair_count(n)` as a controlled-forgetting test.  Vertices
+  are quotient carriers: global consistency quotient, edge-floor packet schema,
+  paired tail/tip child envelope, observer-extension cut payload, A000568
+  middle orbit count, resonance-lattice SPEC certificate, Asano/Lee-Yang
+  dichotomy, raw four-sector composition, and raw count numerology.
+- **LRC use:** HYP-3134/S272 extends the user's `10<12<16` and `20<56<80`
+  observation one row farther: `35 < A000568(7)=456 < 632`.  This says the
+  proof should start with safe paired edge children and quotient only through
+  a named global-consistency rule, not through raw sector counts.
+- **Preserves:** edge-sector deck, paired endpoint-deletion children, global
+  gluing status, observer-extension cut payload, HYP-3125 edge-floor packet
+  identity, and HYP-3129 resonance-lattice/SPEC certificate status.
+- **Forgets / guardrail:** raw A000568 counts, raw sector compositions, and
+  local child packets without a global quotient map are telemetry only.
+- **Fingerprint:** S272 reports
+  `score_hist={0:1,1:1,3:3,5:1,6:1,7:1,8:1}`, one directed 3-cycle, SCC
+  sizes `[3,1,1,1,1,1,1]`, three Hamiltonian paths, and selected path
+  `global_consistency_quotient -> edge_floor_packet_schema ->
+  paired_tail_tip_child_envelope -> observer_extension_cut_payload ->
+  A000568_middle_orbit_count -> resonance_lattice_SPEC_certificate ->
+  asano_lee_yang_dichotomy -> raw_four_sector_composition ->
+  raw_count_numerology`.
+- **Next hook:** Add `envelope_position`, `global_consistency_class`,
+  `edge_child_gluing_status`, `resonance_lattice_class`, and
+  `SPEC_bound_status` to real `r=2..6` edge-floor packet ledgers before
+  dropping paired tail/tip child data.
+- **Pointers:** HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124,
+  HYP-3123, HYP-3121, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-3047,
+  LTI-262, LTT-160, T1201, OPEN-Q-108.

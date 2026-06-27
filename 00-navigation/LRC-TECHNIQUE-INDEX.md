@@ -399,6 +399,7 @@ record what it destroys before asking it to prove anything.
 | LTI-259 | Tournament edge-witness recursion | Directed edge `tail -> tip` as proof carrier; endpoint role word, outside four-sector deck, paired tail-deletion/tip-deletion children, recursive child edge decks, observer-gluing payload orbit, missing-input vector, coordinate-resurrection sidecar or named debt | HYP-3124/S268 turns "tournament edges as witnesses" into an executable controlled-forgetting test.  The exact census through labelled tournaments `n<=5` shows sector words are local but too coarse: counts are `1,4,10,20`, while sector plus paired endpoint-deletion child signatures are `1,4,16,80`; at `n=5`, all `20` sector groups split by child pair.  The proof use is therefore not an edge count but `edge_witness_certificate = four_sector_deck + paired_endpoint_deletion_recursion + repair_sidecar_or_named_debt`. | HYP-3124, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3112, HYP-3108, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-2963, T1198, LTT-157, LTI-259, OPEN-Q-108 | Attach `edge_witness_certificate`, `edge_tail_tip_sector_word`, `tail_deletion_child_signature`, `tip_deletion_child_signature`, `recursive_tail_child_edge_deck`, `recursive_tip_child_edge_deck`, `edge_missing_input_vector`, `edge_repair_sidecar`, and `edge_terminal_exit` to HYP-3115 one-swap/domain-wall edges and HYP-3098 observer-gluing rows before using domain-wall counts or edge shortcuts. |
 | LTI-260 | Multi-far edge-witness Rprime floor | Lifted covering packets `R-safe -> Q-safe`, diagonal edge-sector mass `Rprime`, tail/tip deletion-child ratios, residue exception ledger, Gaussian smoothing width, finite-ruler desmoothing threshold, Asano/Lee-Yang contraction status, phi4 sign | HYP-3125/S271 joins HYP-3121's `r=2..6` floor with HYP-3124's two-ended edge witness.  The scout treats `Rprime=mu(R-safe and Q-safe)/(mu(R-safe)mu(Q-safe))` as a diagonal edge-sector mass.  Named Bonferroni-negative rows remain positive by quasi-independence (`0.513784`, `0.925326`); tail deletion often improves the floor, tip deletion exposes the multiple-of-14 side, and individual R/Q edge ratios stay near `1`, pointing to packet-level distribution rather than one bad pair.  Post-rebase HYP-3127 upgrades this from sidecar language to an Asano-contraction reduction, with S271 as the packet ledger. | HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121, HYP-3120, HYP-3118, HYP-3116, HYP-3112, HYP-3108, HYP-3106, HYP-3101, HYP-2968, HYP-2963, THM-573, THM-572, THM-082, T1199, LTT-158, LTI-260, OPEN-Q-108 | Add `edge_floor_packet`, `tail_deletion_child_Rprime`, `tip_deletion_child_Rprime`, `EH_level_distribution_proxy`, `major_arc_residue_exception_set`, `gaussian_heat_kernel_width`, `finite_ruler_desmoothing_threshold`, `asano_contraction_status`, `lee_yang_zero_free_after_contraction`, `phi4_kappa4_sign`, `normal_fan_chamber_id`, `chiral_guard_word`, `single_far_zero_free_polydisk_status`, `SPEC_bound_status`, `contraction_monotonicity_status`, and `terminal_exit_or_named_debt` before accepting any multi-far floor estimate. |
 | LTI-261 | A000568 edge-extension sandwich | `four_sector_tetrahedral_word`, `A000568_unlabeled_extension_shadow`, `paired_tail_tip_child_deck`, `SPEC_resonance_lattice_sidecar_or_named_debt` | HYP-3133 tests the user's `10 < 12 < 16` and `20 < 56 < 80` observation as a shifted quotient ladder.  Edge-local signatures on `m` vertices compare to A000568 unlabeled tournaments on `m+1` vertices: `m=4: 10 < 12 < 16`, `m=5: 20 < 56 < 80`, and `m=6: 35 < 456 < 632`.  The layer is diagnostic: sector word is equinumerosity, A000568 is the unrooted one-extra-vertex equidistribution/free-extension shadow, and paired children are equidecomposability. | HYP-3133, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3121, HYP-2968, T1200, LTT-159, LTI-261, OPEN-Q-108 | Add `a000568_extension_shadow` between `edge_tail_tip_sector_word` and deletion-child ratios in HYP-3125/HYP-3129 packet rows; use it to stratify finite SPEC constant-chase failures before escalating to paired child deck or named resonance debt. |
+| LTI-262 | A000568 edge-envelope global consistency quotient | Lower four-sector composition envelope, upper paired tail/tip child envelope, A000568 middle quotient, envelope position, global-consistency class, edge-child gluing status | HYP-3134/S272 explains `10<12<16` and `20<56<80`: raw sector decks give `1,4,10,20,35`, paired child edge packets give `1,4,16,80,632`, and A000568 one vertex later sits between them (`12`, `56`, `456`).  The proof use is a controlled-forgetting rule: start with the safe HYP-3124 paired child packet, then quotient only by a named global-consistency rule. | HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3128, HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3121, HYP-3106, HYP-3054, HYP-3050, HYP-3049, HYP-3047, T1201, LTT-160, LTI-262, OPEN-Q-108 | Add `envelope_position`, `global_consistency_class`, `edge_child_gluing_status`, `resonance_lattice_class`, `SPEC_bound_status`, and `terminal_exit_or_named_debt` to HYP-3125 edge-floor packets before quotienting away paired tail/tip child data. |
 
 ## Cross-Cutting Guardrails
 
@@ -2973,3 +2974,54 @@ Next hook: add `a000568_extension_shadow` to HYP-3125 edge-floor packets and
 rerun the HYP-3129 finite low-frequency SPEC row ledger.  A hard row should
 either have a middle shadow predicting a positive SPEC floor, improve under
 one endpoint deletion, or land in a named resonance-lattice debt class.
+
+## LTI-262: A000568 Edge-Envelope Global Consistency Quotient
+
+Used by codex-2026-06-27-S272 for HYP-3134/T1201.  This technique treats the
+prompted counts as an information envelope around directed-edge witnesses:
+
+```text
+raw four-sector deck count
+  < global consistency quotient
+  < paired tail/tip child edge packet
+```
+
+The exact S272 scout computes:
+
+```text
+n=4: 10 < A000568(5)=12  < 16
+n=5: 20 < A000568(6)=56  < 80
+n=6: 35 < A000568(7)=456 < 632
+```
+
+where the lower envelope is `C(n+1,3)` and the upper envelope is the observed
+HYP-3124 count of sector deck plus paired endpoint-deletion children.
+
+Preserves: local edge-sector data, tail/tip deletion children, global
+tournament consistency, observer-extension cut payload, and the legal
+quotient boundary between under-refined scalar shadows and over-refined local
+packets.
+
+Destroys or audits: raw count numerology, sector-only quotients, and any
+collapse of paired child data before a global gluing rule is named.
+
+LRC14 transfer: HYP-3129's elementary SPEC floor should not float as a scalar
+certificate.  Attach it to the HYP-3125 edge-floor packet, then quotient only
+after recording `global_consistency_class`, `edge_child_gluing_status`,
+`resonance_lattice_class`, and `SPEC_bound_status`.
+
+Tournament Analysis over quotient carriers has
+`score_hist={0:1,1:1,3:3,5:1,6:1,7:1,8:1}`, one directed 3-cycle, SCC sizes
+`[3,1,1,1,1,1,1]`, and three Hamiltonian paths.  Selected path:
+
+```text
+global_consistency_quotient
+-> edge_floor_packet_schema
+-> paired_tail_tip_child_envelope
+-> observer_extension_cut_payload
+-> A000568_middle_orbit_count
+-> resonance_lattice_SPEC_certificate
+-> asano_lee_yang_dichotomy
+-> raw_four_sector_composition
+-> raw_count_numerology
+```
