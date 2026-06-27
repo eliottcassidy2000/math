@@ -1,0 +1,41 @@
+======================================================================
+LRC(14) COVERING-BOUND INVESTIGATION  (kind-pasteur S31 cont.)
+======================================================================
+
+[Part 1] Reduction: every 14-FREE set has M >= 1/14 at t = 1/14.
+   tested 1128 random 14-free sets; t=1/14 fails on 0.
+   => 14-free half of LRC(14) is TRIVIAL (THM-523). Confirmed.
+
+[Part 2] Covering MARGIN: min M over covering sets (a multiple of 14 present).
+         If min M is bounded away from 1/14, the bound is *strictly* weaker
+         than the tight-locus census {AP,GW} (which sits exactly at 1/14).
+   consecutive blocks (covering): 184 sets, min M = 1/8 = 0.12500  at (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+   AP with one speed -> multiple of 14: 130 sets, min M = 1/13 = 0.07692  at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+   random 12-subsets of {1..20}\{14} + {14}: 40000 sets, min M = 1/13 = 0.07692  at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+   12-consecutive + a small multiple of 14: 14381 sets, min M = 1/8 = 0.12500  at (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+
+   OVERALL min M over all covering families tried: 1/13 = 0.07692
+   1/14 = 0.07143 ; 1/13 = 0.07692 ; 1/8 = 0.12500
+   => covering sets observed STRICTLY above 1/14 (margin >= 1/182 = 0.00549).
+      Margin vs 1/13? min >= 1/13 : True
+
+[Part 3] Optimized-gamma 14-lift sieve on |M14| <= 6 (the residual branch).
+         S = 14Q | R.  Fix Q-safe fine phase gamma (||q*gamma||>=1/14).
+         lifts t_m=(gamma+m)/14, m=0..13: 14Q safe at ALL; count R-forbidden lifts.
+         A surviving lift => M(S) >= 1/14 for THIS gamma.  Scan gamma over a grid.
+   Testing the sieve on the covering minimizers + structured |M14|<=6 sets:
+   |M14|=1 R-types(1/2/7)=5/6/1  M=0.1250  sieve=OK (gamma=1/14, m=13)  S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+   |M14|=1 R-types(1/2/7)=5/6/1  M=0.0769  sieve=OK (gamma=1/14, m=1)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+   |M14|=1 R-types(1/2/7)=5/6/1  M=0.0769  sieve=OK (gamma=1/14, m=1)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+   |M14|=1 R-types(1/2/7)=5/6/1  M=0.1250  sieve=OK (gamma=1/14, m=13)  S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+   |M14|=1 R-types(1/2/7)=5/6/1  M=0.0769  sieve=OK (gamma=1/14, m=1)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+   |M14|=2 R-types(1/2/7)=5/5/1  M=0.0833  sieve=OK (gamma=1/14, m=1)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 28)
+   |M14|=3 R-types(1/2/7)=4/5/1  M=0.0909  sieve=OK (gamma=1/14, m=1)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 28, 42)
+   |M14|=1 R-types(1/2/7)=5/6/1  M=0.1250  sieve=OK (gamma=1/14, m=13)  S=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+
+   lift-sieve failures: 0/8
+   (A sieve-fail does NOT mean M<1/14 -- only that THIS certificate didn't fire.)
+
+======================================================================
+DONE.
+======================================================================
