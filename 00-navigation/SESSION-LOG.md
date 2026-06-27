@@ -223,13 +223,13 @@ naive Asano shortcut after HYP-3128.
 ## codex-2026-06-27 -- post-rebase edge-witness integration of HYP-3128/HYP-3129
 
 After rebasing the HYP-3124 recursive edge-witness scout over the incoming
-HYP-3128/HYP-3129 Asano/SPEC work and then over HYP-3130/S69, integrated the
+HYP-3128/HYP-3129 Asano/SPEC work and then over HYP-3130/HYP-3131, integrated the
 correction into HYP-3124/LTI-259/LTT-157 and the S271 floor card
 LTI-260/LTT-158.  The edge packet now records four separate coordinates:
 `asano_obstruction_status` for the Lee-Yang zero in the overcrowded R/tail
 factor, `spec_resonance_floor_status` for the retained-edge certificate
 supplied by HYP-3129, `minorant_apex_floor_status` for HYP-3130's
-cap-matching apex block floor, and `bounded_core_binding_status` for S69's
+cap-matching apex block floor, and `bounded_core_binding_status` for HYP-3131's
 message that far tips push zeros outward while the bounded core remains the
 binding side.  This keeps the creative tail/tip recursion but prevents the
 stale reading where a collapsed Asano contraction is expected to prove the
@@ -237,12 +237,20 @@ joint floor by itself.
 
 Proof-frontier consequence: tournament edges-as-witness should be applied to
 the lifted covering edge `R-safe packet -> Q-lonely packet`.  The tip side can
-carry the apex zero-free/minorant packet and the S69 `rho >= 1.5589` far-tip
+carry the apex zero-free/minorant packet and the HYP-3131 `rho >= 1.5589` far-tip
 monotonicity; the tail side must preserve enough Fourier support to expose
 `L = lcm(gcd(R),14gcd(Q)) Z`, the exact low SPEC sum, and the Parseval tail.
 The next finite proof task is the closed-form constant chase behind the
 current certified floor `Rprime >= 0.64178`, plus packet attachment to
 HYP-2963/HYP-3098/HYP-3107 rows.
+
+Current refinement: HYP-3124 now states the edge information rule explicitly.
+Tip recursion carries Q/apex stabilizers (minorant, zero-free sidecars, and
+HYP-3131 far-pushes-out); tail recursion carries bounded-core coupling
+(retained SPEC lattice, exact low-frequency mass, and Parseval debt); the
+cross-sector orientation word carries the signed phase/covariance lost by a
+collapsed Asano contraction.  This reframes the next proof target as an
+edge-witness descent lemma plus the finite SPEC constant chase.
 
 ## mac-mini-2026-06-27-S68 -- the multi-far floor R'>=c is an ASANO contraction of single-far factors
 

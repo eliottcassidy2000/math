@@ -9,6 +9,7 @@ tournament_technique: LTT-157
 script: 04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py
 result: 05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out
 related:
+  - HYP-3131
   - HYP-3130
   - HYP-3129
   - HYP-3128
@@ -93,10 +94,10 @@ The existing sources already point at this shape:
 - HYP-3129 supplies the compatible repair: the multi-far `Rprime` floor is an
   elementary fixed-lattice SPEC bound on the retained `R-safe -> Q-lonely`
   edge, with a certified floor `Rprime >= 0.64178` on the tested family.
-- HYP-3130 and the S69 Lee-Yang polydisk scout say the far/apex tip side is
+- HYP-3130 and HYP-3131 (the S69 Lee-Yang polydisk scout) say the far/apex tip side is
   not the binding obstruction: Gaussian/Beurling-Selberg minorants close the
   apex block with cap-matching constants, single/multi-far additions to a good
-  base push PGF zeros outward (`rho >= 1.5589` in the S69 probes), and the
+  base push PGF zeros outward (`rho >= 1.5589` in the HYP-3131 probes), and the
   remaining work is the bounded-core/tail coupling plus signed SPEC.
 
 Challenged assumption: an edge is not just a relation between two vertices.
@@ -174,6 +175,32 @@ by this HYP-3124 witness card.  Read this supplement as evidence that the
 tail/tip deletion children and cross-sector word are genuine information
 coordinates before an `R-safe packet -> Q-safe packet` is compressed into the
 multi-far `Rprime` floor.
+
+## Edge Information Rule After HYP-3131/HYP-3132
+
+The useful abstraction is now an information split, not a pictorial edge
+analogy.  In the lifted covering packet
+
+```text
+R-safe packet -> Q-lonely packet
+```
+
+the tip recursion carries stabilizing information: Q/apex loneliness,
+Gaussian/Beurling-Selberg minorants, and HYP-3131's far-pushes-out Lee-Yang
+radius signal.  The tail recursion carries binding information: the bounded
+core, the retained SPEC lattice, exact low-frequency mass, and Parseval-tail
+debt.  The cross-sector orientation word is the signed coupling between those
+two child algebras; it is the phase information that is lost by a collapsed
+Asano contraction.
+
+This gives a sharper recursive proof obligation.  A legal edge quotient must
+show that every tip child either has a zero-free/minorant/far-push certificate
+or descends to a smaller Q child, and every tail child either has a
+bounded-core SPEC certificate or descends to a smaller bounded-core packet.
+If neither child closes, the first lost coordinate must be emitted as
+observer-gluing, coordinate-resurrection, finite-ruler, phi4 cumulant, or
+H7/F7 state-lift debt.  A future proof should treat this as an
+edge-witness descent lemma rather than as another scalar invariant.
 
 ## Integration With Existing Threads
 
@@ -257,7 +284,7 @@ it cannot certify the joint floor after the tail packet is collapsed to a
 single zero-free factor.  HYP-3129 then supplies the proof-facing floor field:
 `spec_resonance_floor_status` should record the resonance lattice, exact low
 SPEC sum, Parseval-tail certificate, and constant-chase debt for the retained
-two-ended edge packet.  HYP-3130 and S69 add the complementary orientation:
+two-ended edge packet.  HYP-3130 and HYP-3131 add the complementary orientation:
 the tip/far side carries `minorant_apex_floor_status` and Lee-Yang outward-root
 monotonicity, while `bounded_core_binding_status` names the tail-side core
 that still needs the signed coupling proof.  HYP-3122/S67's `phi4` quartic

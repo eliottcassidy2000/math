@@ -83,13 +83,24 @@ bound, with the current certified floor `Rprime >= 0.64178` on the tested
 multi-far family.  In packet terms, `asano_obstruction_status` is the alarm and
 `spec_resonance_floor_status` is the positive repair field.
 
-Incoming HYP-3130 and the S69 Lee-Yang polydisk scout add the orientation rule
+Incoming HYP-3130 and HYP-3131 add the orientation rule
 for that repair.  The far/apex tips are stabilizing: the minorant closes the
-apex block with cap-matching constants, and S69 finds multi-far nearest-zero
+apex block with cap-matching constants, and HYP-3131 finds multi-far nearest-zero
 radius still bounded away from the unit disk (`rho >= 1.5589` in the probes).
 The binding side is the bounded core/tail.  Edge recursion should therefore
 ask whether the tail child preserves the bounded-core SPEC/minorant coupling,
 not whether the far tips themselves create the obstruction.
+
+In the abstract information view, the directed edge is a three-part carrier:
+tip information, tail information, and the orientation/coupling word between
+them.  The HYP-3131 far-pushes-out signal belongs to the tip child; the
+HYP-3129 signed SPEC certificate belongs to the tail child; the
+cross-sector word is the phase/covariance sidecar that keeps those two child
+algebras from being collapsed into an illegal zero-free factor.  This is the
+candidate edge-witness descent lemma: close or descend every tip child by
+minorant/zero-free/far-push data, close or descend every tail child by
+bounded-core SPEC data, and emit the first lost coordinate as named debt when
+neither side closes.
 
 HYP-3122/S67's `phi4` quartic-stabilizer signal fits as an edge-wall stress
 test.  It is not yet a proof carrier by itself.  It becomes a proof-facing

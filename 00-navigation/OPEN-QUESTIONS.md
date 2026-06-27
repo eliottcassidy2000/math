@@ -71,10 +71,10 @@ Open task: build real `r=2..6` covering-packet rows with
 provisional EH/BV target by a sharper finite task: Asano/Lee-Yang certifies
 the apex/tip side and exposes the overcrowded R/tail obstruction, while the
 positive floor comes from the retained-edge SPEC resonance-lattice certificate
-with exact low frequencies plus a Parseval tail.  HYP-3130/S69 add that the
+with exact low frequencies plus a Parseval tail.  HYP-3130/HYP-3131 add that the
 far/apex tip side is already stabilizing: the minorant closes the apex block
 and the multi-far Lee-Yang radius remains `>=1.5589` in the probes, so the
-binding side is the bounded core/tail. -> HYP-3130, HYP-3129, HYP-3128,
+binding side is the bounded core/tail. -> HYP-3131, HYP-3130, HYP-3129, HYP-3128,
 HYP-3127, HYP-3125, HYP-3124, HYP-3123, HYP-3122, HYP-3121, HYP-3118,
 HYP-3116, HYP-3112, HYP-3108, HYP-3106, HYP-3101, HYP-2968, HYP-2963,
 THM-573, THM-572, THM-082, LTI-260, LTT-158, T1199, OPEN-Q-108.
@@ -172,8 +172,8 @@ debt before accepting an edge cut.  HYP-3127 turns the same tail/tip recursion
 into a possible Asano contraction order when endpoint children and zero-free
 polydisk sidecars survive; HYP-3128/HYP-3129 sharpen this by making Asano an
 obstruction alarm for the overcrowded tail and SPEC resonance-lattice analysis
-the positive repair field; HYP-3130/S69 add that far/apex tips are
-stabilizing and the bounded core/tail is binding. -> HYP-3130, HYP-3129,
+the positive repair field; HYP-3130/HYP-3131 add that far/apex tips are
+stabilizing and the bounded core/tail is binding. -> HYP-3131, HYP-3130, HYP-3129,
 HYP-3128, HYP-3127, HYP-3126, HYP-3125, HYP-3124, HYP-3123, HYP-3122,
 HYP-3121, HYP-3120, HYP-3119, HYP-3118, HYP-3116, HYP-3115, HYP-3112,
 HYP-3106, HYP-3054, HYP-3050, LTI-259, LTT-157, T1198, OPEN-Q-108.
