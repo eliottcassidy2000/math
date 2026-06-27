@@ -27,6 +27,44 @@ THREE APPLICATIONS (HYP-3099; each with a verification script):
 META: the techniques mostly DIAGNOSE and twice REFUTE a false bridge with evidence. The reusable LRC
 tournament levers that survived (order-2 antipodal odd-|Aut|, the non-transitivity of cap-optimality) both
 point at the same consec-maximizes crux. NOT new bounds; a toolkit + 3 honest verdicts.
+## codex-2026-06-27-S260 -- tournament-contradiction grammar and proof-frontier applications
+
+Owner asked to push the old tournament proof-by-contradiction idea as far out
+of the box as possible, especially the pattern where a constructed subproblem
+would force a tournament analogue with impossible `H=7` or `H=21`.
+
+Integrated incoming S31ah's certificate engine, the later S31ah
+single-component H ladder, mac-mini HYP-3099/S65's three concrete verdicts,
+the S258/S259 observer-gluing frontier, and the new
+`TournamentH7.LRCBleedingEdgeFrontier` wrapper, then added
+`04-computation/tournament_contradiction_grammar_codex_s260.py` with stored
+output `05-knowledge/results/tournament_contradiction_grammar_codex_s260.out`.
+The script builds a 24-technique tournament-certificate grammar and scores it
+against 12 current targets.  It rechecks the seed gates: H=7/H=21 are
+permanent gaps, even H is rejected, Landau rejects fake score shadows, and
+exact enumeration through `n<=5` has no even Hamiltonian-path counts.
+
+Main readout: coarse mod-14 winding needs trienerment/fine-scale repair before
+H tests; H=21 closure should be attacked through H/SCC/Omega/alpha-vector
+realizability with the K10 Omega package explicit; level-7/K33/F7 state-lift H
+contradictions are terminal only after complete-tournament pullback validity;
+HYP-2963 needs automaton, matrix-observability, median, and no-naked-bridge
+tournament sidecars before a forbidden H hit is promoted; and sexy-prime
+tournament work is a local residue-sieve sidecar, not a parity-breaking proof.
+The rebased incoming warnings are now part of the artifact: baby-Hodge holes
+are c5/spectral rather than forbidden-H events, and apex-7=H7 is a numerical
+coincidence rather than a legal bridge.
+The new Lean wrapper is the intended formal sink: the next implementation step
+is certificate-legality sidecar columns in `LRCBleedingEdgeFrontier`.
+
+Tournament Analysis uses certificate functors / proof obligations rather than
+runners.  The generated top-eight technique tournament has one directed
+3-cycle linking automaton-state routing, H forbidden-value testing, and
+no-naked-bridge protection, which is the useful warning: the H contradiction
+is a terminal certificate, but not always the first legal operation.
+
+Added HYP-3100, T1178, LTI-239, LTT-137, and
+`07-reflections/tournament-contradiction-grammar-and-applications-codex-s260.md`.
 
 ## mac-mini-2026-06-27-S64 -- SYMBOLIC coverage extremality: closed-form arc overlap (apex-14) => cap_10, cap_11 symbolic
 

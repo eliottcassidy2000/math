@@ -136,6 +136,10 @@ obligations, and proof-carrier interfaces.
   charts / proof obligations.  Retain overlap failures, normalized arc status,
   cap defect, branch/K33 handoff, endpoint-owner words, active binders, and
   terminal debt.
+- Need to use H=7/H=21 contradiction without overclaiming the encoding:
+  use LTT-137 after LTT-136 and make certificate functors / proof obligations
+  the vertices.  Run completeness, SCC, Omega, bridge-protection, and
+  sidecar-normalizer checks before treating a forbidden H hit as terminal.
 - Need an explicit owner-essential AP/GW closed boundary cycle:
   use LTT-080, plus LTT-076.
 - Need to use analytic clocks inside the side-channel repair ladder:
@@ -4029,6 +4033,46 @@ If none of these hold, the quotient is not a theorem; it is only a diagnostic.
   HYP-3092, HYP-3090, HYP-3089, HYP-3088, HYP-3085, HYP-3083, THM-577,
   THM-576, THM-575, THM-573, LTI-238, LTI-237, LTI-236, LTT-136, LTT-135,
   LTT-134, T1177, T1176, T1172, OPEN-Q-108.
+
+### LTT-137: Tournament-Contradiction Grammar
+
+- **Move:** Treat the H=7/H=21 contradiction method as one terminal
+  certificate inside a broader tournament grammar.  Vertices are certificate
+  functors and proof obligations; edges compare how well a technique preserves
+  the target predicate, names destroyed coordinates, and supplies a legal
+  terminal exit.
+- **LRC use:** HYP-3100/S260 integrates the S31ah certificate engine, incoming
+  HYP-3099/S65 applications, `TournamentH7.LRCBleedingEdgeFrontier`, and the
+  current observer-gluing frontier.  The generated grammar ranks trienerment
+  and fine-scale repair above raw H for coarse mod-14 winding, ranks
+  H/SCC/Omega/alpha-vector checks for H=21 closure with `K_10` now explicit,
+  and requires complete-tournament validation before applying H=7/H=21 to
+  THM-572/K33/F7 state-lift outputs.
+- **Preserves:** pulled-back tournament-certificate validity, LRC predicate
+  retention, complete-comparison status, SCC product structure, Omega
+  realizability, bridge protection, sidecar-normalizer status, residue-sieve
+  local bookkeeping, and no-hit necessary-condition profiles.
+- **Forgets / guardrail:** A tournament analogy is not theorem currency until
+  the encoding functor is explicit.  Loose digraph H-values, coarse winding
+  ties, raw route labels, scalar safe mass, and local residue channels can all
+  mimic tournament evidence while destroying the predicate that the proof needs.
+- **Tournament vertices:** `H_forbidden_value`, `Omega_shape_miner`,
+  `SCC_product_descent`, `trienerment_lift`, `proof_obligation_dominance`,
+  `automaton_state_normalizer`, `no_naked_bridge_orientation`,
+  `matrix_observability_column`, `residue_sieve_channel`, and
+  `proof_by_survival_profile`.
+- **Hamiltonian path:** S260's selected-frontier path is
+  `Automaton-state tournament > H forbidden-value certificate >
+  No-naked-bridge orientation > SCC product descent > Residue-sieve tournament
+  > H-max rigidity > Trienerment lift for ties > Matrix observability tournament`.
+- **Next hook:** Extend the Omega-realizability miner to `I(Omega,2)=21`
+  candidate components; build a fine mod-7 winding scout with score, cycle
+  census, Paley distance, skew spectrum, and tie-lift status; add
+  tournament-certificate columns to HYP-2963 packet rows and
+  `TournamentH7.LRCBleedingEdgeFrontier` before promoting any H contradiction.
+- **Pointers:** HYP-3100, HYP-3099, HYP-3098, HYP-3096, HYP-3097, HYP-3086,
+  THM-200, THM-202, THM-343, THM-573, THM-577, LTI-239, LTT-137, LTT-136,
+  T1178, T1177, `TournamentH7.LRCBleedingEdgeFrontier`, OPEN-Q-108.
 
 ## Immediate Pull List
 

@@ -1939,6 +1939,60 @@ Next contribution: populate the ledger fields
 `grid_class`, `active_binder_owner_word`, `endpoint_owner_transition_word`,
 `overlap_failure_chart`, and `terminal_exit_or_named_debt`.
 
+### 68. LTI-239 Tournament-Contradiction Grammar
+
+Sources: HYP-3100, HYP-3099, S31ah tournament certificate engine, HYP-3098,
+HYP-3096, HYP-3097, HYP-3086, THM-200, THM-202, THM-573, THM-577,
+`TournamentH7.LRCBleedingEdgeFrontier`.
+
+Preserves: explicit pullback validity for tournament certificates, complete
+comparison status, SCC factorization, Omega-realizability, score/Landau
+constraints, cycle-census spectra, bridge protection, sidecar-observability,
+and no-hit necessary-condition profiles.
+
+Destroys if used alone: the actual LRC predicate, exact metric scale,
+endpoint-owner geometry, route validity, and analytic number-theory strength.
+In particular, a loose digraph H-value, coarse mod-14 winding tie chart, or
+local fixed-gap residue tournament is not automatically a proof object.
+
+Best vertex sets: certificate functors, proof obligations, observer charts,
+Omega components, score sequences, sidecar columns, quotient maps,
+automaton states, finite residue channels, and branch-graph edges.  Runners
+are a possible vertex set only after the preserved predicate and destroyed
+coordinate are stated.
+
+Pairwise observable / gauge: score each certificate against each target by
+predicate retention, contradiction strength, repair value, sidecar cost, and
+destroyed-coordinate debt; orient one technique over another when it wins more
+target ledgers, breaking ties by fewer destroyed coordinates.
+
+LRC use: before applying the old `H in {7,21}` contradiction to a state-lift
+or observer-gluing residual, run the legality chain:
+
+```text
+encoding functor declared
+complete tournament or tie-aware lift verified
+preserved LRC predicate named
+destroyed coordinate discharged or named
+SCC/Omega/score/cycle/bridge sidecars checked
+terminal H or Omega contradiction promoted
+```
+
+S260 result: `04-computation/tournament_contradiction_grammar_codex_s260.py`
+and `05-knowledge/results/tournament_contradiction_grammar_codex_s260.out`
+generate `24` techniques over `12` targets, now rebased over HYP-3099's
+concrete application verdicts and S31ah's single-component H ladder.  The
+selected-frontier tournament has one directed 3-cycle among automaton-state
+routing, H forbidden-value testing, and no-naked-bridge protection, so the
+proof order is not a simple linear priority list.
+
+Next contribution: implement the `I(Omega,2)=21` Omega-realizability miner;
+run a fine mod-7 winding scout with score, cycle census, Paley distance, skew
+spectrum, and tie-lift status; add tournament-certificate columns to the
+HYP-2963 packet normalizer and `TournamentH7.LRCBleedingEdgeFrontier`; keep
+sexy-prime tournament work as a residue-sieve sidecar unless a
+parity/distribution theorem is supplied.
+
 ## Pull Lists
 
 ### Good First Contributions
