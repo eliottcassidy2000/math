@@ -10,6 +10,7 @@ script: 04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py
 result: 05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out
 reflection: 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md
 related:
+  - HYP-3243
   - HYP-3242
   - HYP-3241
   - HYP-3240
@@ -71,6 +72,7 @@ universal Phi14 saddle-index core
 shell L_y magic quartic
 normal-cone dual slack
 multi-chart proof split
+finite chamber carrier atlas
 AP Green algebraic-connectivity certificate
 bimodal phi4 diagonal extremizer
 AP self-dual Fejer equidistribution certificate
@@ -93,7 +95,7 @@ Brouwer trace-sign times SOS split
 
 ## Method
 
-The scout defines 102 motifs across 101 families, scans 8392 repo-local files,
+The scout defines 103 motifs across 102 families, scans 8395 repo-local files,
 and ranks each motif by a payload-retention score:
 
 ```text
@@ -111,10 +113,10 @@ the destroyed coordinate, the repair sidecar, and the risk label.
 ## Result Snapshot
 
 ```text
-repo_files_scanned=8392
-motifs=102
-families=101
-risk_hist={'analogy': 19, 'direct': 40, 'raw': 3, 'sidecar': 40}
+repo_files_scanned=8395
+motifs=103
+families=102
+risk_hist={'analogy': 19, 'direct': 41, 'raw': 3, 'sidecar': 40}
 directed_3cycles=0
 hamiltonian_path_count=1
 ```
@@ -122,22 +124,22 @@ hamiltonian_path_count=1
 Payload coverage in the atlas:
 
 ```text
-SIDE_CARRIER        72
+SIDE_CARRIER        73
 ANALYTIC_EQ         47
-QUOTIENT_LEGALITY   34
+QUOTIENT_LEGALITY   35
 CHEBYSHEV           23
-GEOMETRY            20
+GEOMETRY            21
 EDGE_PACKET         19
+TOEPLITZ            17
 AP_NORMAL           16
-TOEPLITZ            16
-TRAP_BOUNDARY       15
+TRAP_BOUNDARY       16
 PGF_ROOT            13
 COV_LAYER           11
 HB_PERRON            9
 SELBERG              9
 P_ADIC               9
 CIRCUIT              9
-GREEN_LORENTZIAN     7
+GREEN_LORENTZIAN     8
 ORDERED_TAIL         6
 ```
 
@@ -149,6 +151,7 @@ M101 universal Phi14 saddle-index core
 M080 shell L_y magic quartic
 M067 normal-cone dual slack
 M068 multi-chart proof split
+M103 finite chamber carrier atlas
 M095 AP Green algebraic-connectivity certificate
 M100 bimodal phi4 diagonal extremizer
 M093 AP self-dual Fejer equidistribution certificate
@@ -230,6 +233,7 @@ p mod 4             p=1 mod4 is pure SOS, while p=3 mod4 is sign times SOS.
 saddle index 3      Phi14 has 3 antipodal witness pairs, i.e. index=(p-1)/2.
 Phi_{14d}           covering-tight dilations retain explicit t=1/(14d) witnesses.
 cover nerve hole    LRC(14) asks the danger cover to retain a hole, not just a scalar cap.
+finite chamber      every primitive row should exit by open tope, equality core, chamber discharge, state lift, or named debt.
 ```
 
 The number 12 remains useful, but as chart/fiber bookkeeping: local maxima,
@@ -267,6 +271,7 @@ HYP-3235 totally-real cap field / conductor packet
 HYP-3236 Green conductance / algebraic-connectivity certificate
 HYP-3219 Brouwer trace-sign / even-odd SOS split
 HYP-3237 Vitali bulk-core Phi14 witness wall
+HYP-3243 topology / geometry / graph finite chamber atlas
 HYP-3242 danger-cover nerve / Euler-characteristic hole certificate
 HYP-3220 even-odd / positive-negative imaginary-quadratic wall
 HYP-3238 crossed even-positive / odd-negative packet
@@ -388,6 +393,13 @@ to retain a hole, with the lonely-point witness carried by a Borsuk-Ulam
 antipodal-pair sidecar.  This makes inclusion-exclusion proof-grade only when
 the nerve and its hole certificate survive the quotient.
 
+Incoming HYP-3243 adds M103.  The topology/geometry/graph route is useful
+because it packages visual proof objects as carriers with exit obligations:
+open safe topes, boundary cocircuits, AP/GW `Phi_14` equality, dilation
+`Phi_{14d}` equality, Toeplitz/Green/root-motion chamber discharge, state-lift
+`H=7` contradiction, or named residual debt.  The new atlas is therefore a
+finite chamber sidecar for M102 rather than a replacement scalar.
+
 The incoming Erdos-Turan / p-adic Littlewood / Davenport-Erdos forum synthesis
 reinforces existing sidecar motifs rather than creating a terminal shortcut:
 discrepancy control, p-adic retained addresses, and density lemmas feed the
@@ -468,6 +480,7 @@ p mod 4 imaginary-quadratic family-law status
 bimodal phi4 diagonal cumulant status
 universal Phi14 saddle-index / dilation-witness status
 danger-cover nerve / Euler-hole certificate status
+finite chamber tope/cocircuit/state-lift exit status
 induction-base dependency and Chen-Cusick floor-to-1/14 lift status
 ```
 

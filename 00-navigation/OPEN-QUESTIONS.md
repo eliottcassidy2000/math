@@ -192,11 +192,12 @@ HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153,
 T1336, LTI-336, LTT-236, OPEN-Q-108.
 **OPEN-Q-108 HYP-3226 small-pattern adjacency atlas addendum:**
 HYP-3226 turns the user's request for many small adjacent patterns into a
-typed payload ledger.  The scout scans 8392 repo-local files with 102 motifs
+typed payload ledger.  The scout scans 8395 repo-local files with 103 motifs
 and ranks by proof-payload retention, not raw analogy.  The strongest motifs
 are comb-overlap Gram kernel, universal `Phi_14` saddle-index core,
 shell `L_y` magic quartic, normal-cone dual
-slack, multi-chart proof split, AP Green algebraic-connectivity certificate,
+slack, multi-chart proof split, finite chamber carrier atlas,
+AP Green algebraic-connectivity certificate,
 bimodal phi4 diagonal extremizer, AP self-dual Fejer equidistribution
 certificate,
 three-gap/Stern-Brocot cap-kernel recursion,
@@ -236,6 +237,8 @@ HYP-3241/HYP-3240 add M101 (universal `Phi_14` saddle-index core with three anti
 witness pairs and explicit `Phi_{14d}` dilation-witness sidecar).
 HYP-3242 adds M102 (danger-cover nerve / Euler-characteristic hole certificate,
 with the lonely-point witness carried as a retained topological hole).
+HYP-3243 adds M103 (finite chamber carrier atlas, with open-tope, equality-core,
+finite-discharge, state-lift, and named-debt exits).
 The main
 guardrail is that famous-problem names such as Skewes, tau/Lindelof, Collatz,
 Pell, Markov/Hurwitz, and Moser-de Bruijn/fibbinary

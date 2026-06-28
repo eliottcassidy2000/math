@@ -731,11 +731,12 @@ updated
 and added
 `07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md`.
 
-Readout: 102 motifs over 101 families, scanned 8392 repo-local files, with
-risk histogram `{'analogy': 19, 'direct': 40, 'raw': 3, 'sidecar': 40}`.  The
+Readout: 103 motifs over 102 families, scanned 8395 repo-local files, with
+risk histogram `{'analogy': 19, 'direct': 41, 'raw': 3, 'sidecar': 40}`.  The
 motif-family tournament is transitive (`directed_3cycles=0`, one Hamiltonian
 path).  Top payload motifs: M073 comb-overlap Gram kernel, M101 universal Phi14 saddle-index core, M080 shell
 `L_y` magic quartic, normal-cone dual slack, multi-chart proof split,
+M103 finite chamber carrier atlas,
 M095 AP Green algebraic-connectivity certificate,
 M100 bimodal phi4 diagonal extremizer,
 M093 AP self-dual Fejer equidistribution certificate,
@@ -796,6 +797,8 @@ dilation-witness sidecar.
 Newest rebase integration folds in HYP-3242 as motif M102: danger-cover nerve
 / Euler-characteristic hole certificate, with the LRC witness retained as a
 topological hole rather than a scalar cap-only readout.
+HYP-3243 integration folds in motif M103: finite chamber carrier atlas, with
+open-tope, equality-core, finite-discharge, state-lift, and named-debt exits.
 Next best computation is to prove the HYP-3225/HYP-3227 trap table
 symbolically with Gram PSD, speed-1 peeling, order-3 overlap, shell `L_y`
 magic slack, Gamma0(7) coefficient-row compatibility, three-gap kernel
@@ -808,6 +811,7 @@ Vitali bulk-core `Phi_14` witness status, conductance/Fiedler,
 D7 Borsuk-Ulam sign-irrep status, p mod 4 imaginary-quadratic status,
 bimodal phi4 diagonal status, universal Phi14 saddle-index /
 dilation-witness status, danger-cover nerve / Euler-hole certificate status,
+finite chamber tope/cocircuit/state-lift exit status,
 conductance/Fiedler,
 M-matrix/Schur, Fejer/Delsarte, induction-base, and
 floor-to-1/14 lift columns.

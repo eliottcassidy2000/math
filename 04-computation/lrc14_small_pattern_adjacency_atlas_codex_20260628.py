@@ -784,6 +784,13 @@ MOTIFS: tuple[Motif, ...] = (
           "nerve / Euler-characteristic / Borsuk-Ulam hole sidecar",
           "direct",
           ("HYP-3242", "cover nerve", "Euler characteristic", "cover has a hole", "Borsuk-Ulam antipodal pair", "chi_meas")),
+    Motif("M103", "finite chamber carrier atlas", "finite-chamber-carrier-atlas",
+          "visual proof routes become proof-grade when every chamber has an open tope, equality core, discharge, state lift, or named debt",
+          ("GEOMETRY", "QUOTIENT_LEGALITY", "TRAP_BOUNDARY", "GREEN_LORENTZIAN", "TOEPLITZ", "SIDE_CARRIER"),
+          "raw visual, graph, or scalar route forgets endpoint owners, parity, and chamber exit",
+          "oriented tope/cocircuit / finite chamber / state-lift sidecar",
+          "direct",
+          ("HYP-3243", "oriented_matroid_topes_cocircuits", "circle_endpoint_arrangement", "cech_nerve_safe_components", "finite chamber", "state_lift_forbidden_H7")),
 )
 
 
@@ -998,6 +1005,7 @@ def main() -> None:
         ("saddle index 3", "The Phi14 tight core has 3 antipodal witness pairs: index=(p-1)/2."),
         ("Phi_{14d}", "Covering-tight dilations carry witnesses t=1/(14d), not a scalar base-core copy."),
         ("cover nerve hole", "LRC(14) asks the danger cover to have a hole, not just a scalar cap."),
+        ("finite chamber", "HYP-3243 asks each primitive row to exit by open tope, equality core, chamber discharge, state lift, or named debt."),
         ("1/23 -> 1/14", "Chen-Cusick supplies a floor-to-target lift; the 23/M=2/23 link is only bounded-bank coincidence."),
     ]
     for key, meaning in signals:
@@ -1055,6 +1063,10 @@ def main() -> None:
         "  Incoming HYP-3242 adds the topological carrier: cap is the "
         "Euler-characteristic/inclusion-exclusion shadow of the danger-cover "
         "nerve, while the lonely witness is the retained hole."
+        "  Incoming HYP-3243 then packages the visual route as a finite "
+        "chamber carrier atlas: endpoint topes, boundary cocircuits, Green/"
+        "Toeplitz discharge, root-motion, and state-lift exits are legal only "
+        "when the owner/parity/bulk-core sidecars survive."
     )
 
 

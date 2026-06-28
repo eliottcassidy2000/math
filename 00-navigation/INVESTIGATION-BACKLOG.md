@@ -162,13 +162,13 @@ HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor / chart / Fejer /
 conductor layer, HYP-3236/HYP-3219/HYP-3237's Green / Brouwer / Vitali
 boundary layer, HYP-3220/HYP-3238/HYP-3239's D7 / Borsuk-Ulam /
 `p mod 4` / bimodal phi4 diagonal layer, HYP-3241/HYP-3240 universal `Phi_14`
-saddle-index / `Phi_{14d}` dilation-witness core, and HYP-3242's danger-cover
-nerve / Euler-hole certificate, without treating
+saddle-index / `Phi_{14d}` dilation-witness core, HYP-3242's danger-cover
+nerve / Euler-hole certificate, and HYP-3243's finite chamber carrier atlas, without treating
 raw numerology as a proof carrier.
-Readout: 102 motifs across 101 families were scored by proof-payload retention
-over 8392 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
+Readout: 103 motifs across 102 families were scored by proof-payload retention
+over 8395 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
 universal `Phi_14` saddle-index core, shell `L_y` magic quartic, normal-cone dual slack,
-multi-chart proof split, AP Green algebraic-connectivity certificate,
+multi-chart proof split, finite chamber carrier atlas, AP Green algebraic-connectivity certificate,
 bimodal phi4 diagonal extremizer, AP self-dual Fejer equidistribution certificate,
 three-gap/Stern-Brocot cap-kernel recursion,
 danger-cover nerve hole certificate,
@@ -209,6 +209,9 @@ witness pairs and explicit `Phi_{14d}` dilation witnesses.
 HYP-3242 adds M102: the danger-cover nerve / Euler-characteristic hole
 certificate, making the LRC witness a retained topological hole rather than a
 scalar cap-only readout.
+HYP-3243 adds M103: the finite chamber carrier atlas, making visual routes
+usable only when each primitive row has an open tope, equality core, discharge,
+state-lift exit, or named residual debt.
 Famous-problem analogies remain sidecars until they name the LRC coordinate
 they preserve and the coordinate they destroy.  Incoming S283's
 Skewes/Helfgott-Ruzsa/Collatz/PFR
