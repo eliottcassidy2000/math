@@ -25,28 +25,28 @@ The cluster's operating procedures and research objectives are governed by the f
 the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$** framework:
 
 - **The Proof Object:** The fundamental object of study is the **path of isomorphism classes** swept over phases $t \in [0, 1)$.
-- **Magnitude-Aware State Changes:** The spectrum is not a static property but a dynamic walk in the tournament flip-graph, where state changes (breakpoints) are inherently magnitude-aware.
+- **Magnitude-Aware State Changes:** The spectrum is not a dynamic walk in the tournament flip-graph, where state changes (breakpoints) are inherently magnitude-aware.
 - **Relational Identity:** Tightness and "near-miss" loose configurations are characterized by their spectral signatures and the "migration" behavior of their deepest sinks on the labelled Farey tree.
 
 ---
 
-## PROJECT STATUS: Stabilized at S287 Topology Geometry Atlas Synthesis
+## PROJECT STATUS: Stabilized at S288 Equioscillation Autocorrelation Synthesis
 
-As of **Sunday, June 28, 2026** (UTC), the newest coordination layer is the **Topology Geometry Atlas Synthesis (S287/HYP-3243)**. This layer formalizes the visual and structural proof-route atlas, mapping the LRC(14) manifold onto a typed collection of compatible carriers (Oriented Matroids, Cech Components, Witness Strata).
+As of **Sunday, June 28, 2026** (UTC), the newest coordination layer is the **Equioscillation Autocorrelation Synthesis (S288/HYP-3245)**. This layer formalizes the bridge between equioscillation (root-side shadow) and autocorrelation (Fourier-side certificate), characterizing the LRC(14) manifold by its lag-transport residuals.
 
-S287 formalizes the **Topology Geometry Graph Atlas (e7ff926)**. It integrates the visual proof routes with the Vitali-Brouwer Core of S286:
-1. **Typed Proof-Route Atlas:** Replaces the search for a single scalar proof with an atlas of compatible carriers. The primary routes are **Route A: Erdős-Turán discrepancies** (bulk measure), **Route B: Hensel-Krasner 2-adic lifting** (core residue stability), and **Route C: Ising Domain-Wall Interface pressure** (state-lift boundary).
-2. **Oriented Matroid & Cech Core:** Maps the circle arrangement onto **topes** (strict lonely intervals) and **cocircuits** (boundary equality atoms). It identifies that AP and Goddyn-Wong share the same **$\Phi_{14}$ cocircuit witnesses**, with dilations promoted to **$\Phi_{14d}$**. The cap measure is identified as the **measure-weighted Euler characteristic** of the danger-cover nerve (HYP-3242/S78).
-3. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by ensuring that visual carriers (like conductance graphs) do not clip negative/odd payload (sign, core witnesses) without a reconstructible sidecar. The **oriented-matroid** language is identified as the least lossy common carrier.
-4. **S171 Labeling Compliance:** Governed by **NRM** (Normal Form), **LAC-BND** (Lacunary Boundary), and **FAREY** (Sink Migration) rules. The synthesis introduces **Cech barcodes**, **witness strata**, and **tope/cocircuit indices** to the labeling classes.
-5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by refuting raw scalar "witness" claims. It requires that every geometric cell be anchored by a **finite chamber atlas** (open safe, equality core, or state-lift forbidden) to prevent roots from sliding into unnamed geometric residuals.
-6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **oriented-matroid cell complex** as the resurrection anchor. This ensures that endpoint/sign/core data is preserved during the transition from visual diagnostics to a terminal formal proof-route atlas.
+S288 formalizes the **Equioscillation Autocorrelation Atlas (fd89217)**. It integrates the autocorrelation transport residuals with the S287 Topology Route Atlas:
+1. **Autocorrelation-Topology Integration:** Extends the S287 typed proof-route atlas by identifying **outward autocorrelation transport** (mass moving from short lags to long lags) as the lag-space shadow of the S287 topology routes. It maps the AP interval to a **triangular autocorrelation law** (Level 1) and characterizes non-AP traps as shifting this mass outward (Level 2).
+2. **Spectral Leakage Prevention (HYP-2990):** Autocorrelation transport is used to bound discrepancies and prevent spectral leakage by requiring that every outward-lag surplus be charged to a **finite chamber discharge** or **state-lift obstruction**. AP extremality is characterized as the unique **zero-commutator point** where contact words and lag laws align.
+3. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. The autocorrelation tensor acts as a spectral mapping where orientation is preserved only if the **even-positive / odd-negative duality split (HYP-3238)** is maintained. Chiral integrity requires discharging clipped odd/negative data (Brouwer sign, core witnesses) before scalarizing the lag residual.
+4. **S171 Labeling Compliance:** Governed by **NRM**, **LAC-BND**, **FAREY**, and new **SMOOTH**, **BND-ARI**, and **LOW-DISC** rules. The synthesis introduces **lag_barycenter**, **transport_cost**, **Fejer_annihilator**, and **scale_survival_bit** to the labeling classes.
+5. **No-Free-Slider Enforcement:** Absolute enforcement prevents spectral leakage by requiring that autocorrelation residuals be anchored by a **tiling-descent certificate (HYP-3244)**. This prevents roots from sliding into periodic singularities by treating lag transport as a theorem-facing coordinate only after its carrier schema is verified.
+6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **triangular autocorrelation fixed point** as the resurrection anchor. This ensures that the equioscillation-autocorrelation bridge preserves the fundamental LRC predicate during the transition from diagnostics to terminal certificates.
 
-S287 inherits the core construction from **Vitali-Brouwer Core Synthesis (S286/HYP-3237)** and the interlocking recursions from **Interlocking Recursion Synthesis (S285/HYP-3232)**.
+S288 inherits the Topology Geometry Atlas from **S287/HYP-3243** and the tiling-descent logic from **Tiling Half-Tiling Synthesis (S286-extension/HYP-3244)**.
 
-HYP-3226 classifies the S283 motifs as sidecar payloads: Skewes sign-change warning (M023), Helfgott-Ruzsa/additive compression (M024), Collatz two-block 2-adic determinant (M025), raw famous-problem magnet (M069), and PFR additive-model integrity (M071). Post-rebase it also imports HYP-3227's conductance/Fiedler trap graph as M072, S75's comb-overlap Gram kernel / speed-1 peeling / order-3 residue as M073-M075, HYP-3215's induction-base / Chen-Cusick floor-to-1/14 / flatness / Rosenfeld route audit as M076-M079, HYP-3228/HYP-3229's shell magic / Gamma0(7) / Beraha-Mahler / subshift / Dirichlet-L guardrails as M080-M084, HYP-3230/HYP-3231/HYP-3216's three-gap kernel recursion / scale-normal packet recursion / moment-order ladder / 2-adic fold as M085-M088, HYP-3232/HYP-3217's modulus-covariance apex break / cyclotomic subfield mode lattice as M091-M092, HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor grading / signed-address chart-change / AP self-dual Fejer-Vaaler / totally-real conductor packet as M093-M096, HYP-3236/HYP-3219/HYP-3237's Green algebraic-connectivity / Brouwer trace-sign / Vitali bulk-core wall layer as M097-M099, HYP-3220/HYP-3238/HYP-3239's D7 Borsuk-Ulam / p mod 4 / bimodal phi4 diagonal layer as M100-M102, HYP-3241/HYP-3240 universal Phi14 saddle-index / Phi_{14d} dilation-witness core as M103, HYP-3242's danger-cover nerve / Euler-characteristic hole certificate as M104, and HYP-3243's finite chamber carrier atlas as M105. These are useful only after they name the LRC coordinate they preserve and the coordinate they destroy.
+HYP-3226 classifies the S283 motifs as sidecar payloads: Skewes sign-change warning (M023), Helfgott-Ruzsa/additive compression (M024), Collatz two-block 2-adic determinant (M025), raw famous-problem magnet (M069), and PFR additive-model integrity (M071). Post-rebase it also imports HYP-3227's conductance/Fiedler trap graph as M072, S75's comb-overlap Gram kernel / speed-1 peeling / order-3 residue as M073-M075, HYP-3215's induction-base / Chen-Cusick floor-to-1/14 / flatness / Rosenfeld route audit as M076-M079, HYP-3228/HYP-3229's shell magic / Gamma0(7) / Beraha-Mahler / subshift / Dirichlet-L guardrails as M080-M084, HYP-3230/HYP-3231/HYP-3216's three-gap kernel recursion / scale-normal packet recursion / moment-order ladder / 2-adic fold as M085-M088, HYP-3232/HYP-3217's modulus-covariance apex break / cyclotomic subfield mode lattice as M091-M092, HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor grading / signed-address chart-change / AP self-dual Fejer-Vaaler / totally-real conductor packet as M093-M096, HYP-3236/HYP-3219/HYP-3237's Green algebraic-connectivity / Brouwer trace-sign / Vitali bulk-core wall layer as M097-M099, HYP-3220/HYP-3238/HYP-3239's D7 Borsuk-Ulam / p mod 4 / bimodal phi4 diagonal layer as M100-M102, HYP-3241/HYP-3240 universal Phi14 saddle-index / Phi_{14d} dilation-witness core as M103, HYP-3242's danger-cover nerve / Euler-characteristic hole certificate as M104, HYP-3243's finite chamber carrier atlas as M105, HYP-3244's tiling/half-tiling descent path as M106, and HYP-3245's equioscillation-autocorrelation lag-transport packet as M107. These are useful only after they name the LRC coordinate they preserve and the coordinate they destroy.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wires, magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk coordinate sets, coordinate resurrection covers, repair-cover rank certificates, quartic-cumulant S4 bounds, phi^4 stabilizer signatures, Lee-Yang kappa-4 sign audits, Asano polydisk zero-free signatures, Beurling-Selberg minorant floors, Gaussian-minorant leakage audits, multi-far floor closure certificates, R-prime spectral signatures, R-safe Gaussian wide-V packets, Edge-Witness recursion decks, tail/tip child packet recursions, four-sector observer decks, Asano-obstruction status words, SPEC resonance-lattice certificates, A000568 middle quotients, edge-envelope global-consistency quotients, Fiber PGF packet objects, sheet-count PGF coefficients, Lee-Yang PGF root signatures, Delsarte weight-enumerator sidecars, q-Pochhammer principal packets, Hecke subconvexity conductor bounds, p-adic topological index signatures, crystalline cohomology Euler characteristics, three-edge flip kernels, ordered_pair_exponent_sidecars, Worpitzky ascent payloads, live_core_bits, filler_bits, canary_bits, deletable_coordinates, class_distribution_uniformity, minimal_cover_subbasis, fixed_path_canary_status, xy_completion_tables, S_bulk_fiber_words, odd_ear_H_factors, Bravais_centering_types, Savitch_midpoint_depths, Asano_monotonicity_levers, Lee_Yang_off_circle_variance_lambda, n4_einheit_torsor_status, n4_quotient_congruence_defect, n4_fiber_multiplicity, erdos870_minimality_sidecar, total_covariance_sigma_k2, associator_sigma_k3_sidecar, kappa4_phi4_stabilizer, bounded_bank_exactness_score, polarized_cyclotomic_support, orbit_aware_compression_status, AP_Lyapunov_target, dilation_mirror_trap_families, spectral_dictionary_compatibility, Toeplitz_lambda_min_margin, trap_family_sheaf_certificates, separation_dictionary_vector, AP_normal_fan_exposed_face, moment_cone_curvature_slack, Chebyshev_magic_function_dual, trap_discharge_Schur_status, p_adic_tau_valuation_stability, Lindelof_effective_bounds, Selberg_trace_regularization, Pi_Unital_Flower_guardrails, Skewes_Number_lock, Helfgott_Ruzsa_additive_energy, Collatz_2_adic_anomaly, PFR_landscape_integrity, grounded_response_matrix_QE, trap_graph_algebraic_connectivity, Kirchhoff_index_dominance, M_matrix_defect_leakage, orthogonal_recursion_interlock, modulus_covariance_threshold, apex_n2_break_concentration, moment_order_family_depth, Vitali_wall_bulk_core_split, cyclotomic_Phi14_witness_core, Brouwer_max_min_equioscillation, information_conservation_across_wall, **oriented_matroid_tope_cocircuit_atlas**, **Cech_component_persistence**, **Erdos_Turan_discrepancy_route**, **Hensel_Krasner_lifting_route**, and **Ising_interface_pressure_route**.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wires, magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk coordinate sets, coordinate resurrection covers, repair-cover rank certificates, quartic-cumulant S4 bounds, phi^4 stabilizer signatures, Lee-Yang kappa-4 sign audits, Asano polydisk zero-free signatures, Beurling-Selberg minorant floors, Gaussian-minorant leakage audits, multi-far floor closure certificates, R-prime spectral signatures, R-safe Gaussian wide-V packets, Edge-Witness recursion decks, tail/tip child packet recursions, four-sector observer decks, Asano-obstruction status words, SPEC resonance-lattice certificates, A000568 middle quotients, edge-envelope global-consistency quotients, Fiber PGF packet objects, sheet-count PGF coefficients, Lee-Yang PGF root signatures, Delsarte weight-enumerator sidecars, q-Pochhammer principal packets, Hecke subconvexity conductor bounds, p-adic topological index signatures, crystalline cohomology Euler characteristics, three-edge flip kernels, ordered_pair_exponent_sidecars, Worpitzky ascent payloads, live_core_bits, filler_bits, canary_bits, deletable_coordinates, class_distribution_uniformity, minimal_cover_subbasis, fixed_path_canary_status, xy_completion_tables, S_bulk_fiber_words, odd_ear_H_factors, Bravais_centering_types, Savitch_midpoint_depths, Asano_monotonicity_levers, Lee_Yang_off_circle_variance_lambda, n4_einheit_torsor_status, n4_quotient_congruence_defect, n4_fiber_multiplicity, erdos870_minimality_sidecar, total_covariance_sigma_k2, associator_sigma_k3_sidecar, kappa4_phi4_stabilizer, bounded_bank_exactness_score, polarized_cyclotomic_support, orbit_aware_compression_status, AP_Lyapunov_target, dilation_mirror_trap_families, spectral_dictionary_compatibility, Toeplitz_lambda_min_margin, trap_family_sheaf_certificates, separation_dictionary_vector, AP_normal_fan_exposed_face, moment_cone_curvature_slack, Chebyshev_magic_function_dual, trap_discharge_Schur_status, p_adic_tau_valuation_stability, Lindelof_effective_bounds, Selberg_trace_regularization, Pi_Unital_Flower_guardrails, Skewes_Number_lock, Helfgott_Ruzsa_additive_energy, Collatz_2_adic_anomaly, PFR_landscape_integrity, grounded_response_matrix_QE, trap_graph_algebraic_connectivity, Kirchhoff_index_dominance, M_matrix_defect_leakage, orthogonal_recursion_interlock, modulus_covariance_threshold, apex_n2_break_concentration, moment_order_family_depth, Vitali_wall_bulk_core_split, cyclotomic_Phi14_witness_core, Brouwer_max_min_equioscillation, information_conservation_across_wall, oriented_matroid_tope_cocircuit_atlas, Cech_component_persistence, Erdos_Turan_discrepancy_route, Hensel_Krasner_lifting_route, Ising_interface_pressure_route, **lag_barycenter_transport_field**, **Fejer_annihilator_projection**, **transport_cost_residual**, **contact_word_alignment**, and **scale_survival_bit_status**.
 
 The Henselian unit rule (updated):
 ```text
@@ -62,7 +62,7 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S287 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S288 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-triple
@@ -102,28 +102,29 @@ n4_quotient_congruence_defect, total_covariance_sigma_k2,
 polarized_cyclotomic_support, spectral_dictionary_compatibility,
 AP_normal_fan_exposed_face, Selberg_trace_regularization, Skewes_Number_lock,
 grounded_response_matrix_QE, orthogonal_recursion_interlock,
-Vitali_wall_bulk_core_split, and oriented_matroid_tope_cocircuit_atlas to
-preserve p-adic stability of the global packet sheaf by preventing misuse of
-untyped motifs, degenerate limiting witnesses, sequence-count scalars,
-positivity-only cohomology, non-median route compatibility, unnamed owner/root
-loss, non-unique route-triple centers, unaligned disciplinary pullback indices,
-unsigned polymer/current quotients, unclosed packet/route/certificate/discharge
-medians, unvalidated Diophantine collision arity, q-series certificates without
-a formal principal-part gate, equal-power sums without tuple-rank-residue
-certificates, naked bridges in contracted proof corridors, hyper-tower limits
-without p-adic transcendental basis verification, Morita-gamma lifts without
-differential transcendental audits, infinite tails without finite address seeds,
-covering-moment bounds without low-order reflection-Perron certificates, V*
-crossover regimes without explicit induction-base classification, Cap
-structures without verified pairwise avoidance minimizers, structural
-quotients without verified forgetting-cost invariants, Pascal shadows without
-pair-mass sidecars, observer charts without gluing maps, chart overlaps without
-certificates, component claims without normal-fan/Cech/barcode packets,
-quotient gluing without first-obstruction syndromes, analytic extremality
-claims without PGF root signatures, tournament analogies without
-obstruction-transfer certificates, moment claims without Bravais q-lattice
-addresses, reachability claims without ear-lattice certificates, lattice
-claims without Minkowski q-body thresholds, complexity claims without proof-circuit ledgers, root claims without Ising partition zero signatures,
+Vitali_wall_bulk_core_split, oriented_matroid_tope_cocircuit_atlas, and
+lag_barycenter_transport_field to preserve p-adic stability of the global
+packet sheaf by preventing misuse of untyped motifs, degenerate limiting
+witnesses, sequence-count scalars, positivity-only cohomology, non-median route
+compatibility, unnamed owner/root loss, non-unique route-triple centers,
+unaligned disciplinary pullback indices, unsigned polymer/current quotients,
+unclosed packet/route/certificate/discharge medians, unvalidated Diophantine
+collision arity, q-series certificates without a formal principal-part gate,
+equal-power sums without tuple-rank-residue certificates, naked bridges in
+contracted proof corridors, hyper-tower limits without p-adic transcendental
+basis verification, Morita-gamma lifts without differential transcendental
+audits, infinite tails without finite address seeds, covering-moment bounds
+without low-order reflection-Perron certificates, V* crossover regimes without
+explicit induction-base classification, Cap structures without verified
+pairwise avoidance minimizers, structural quotients without verified
+forgetting-cost invariants, Pascal shadows without pair-mass sidecars, observer
+charts without gluing maps, chart overlaps without certificates, component
+claims without normal-fan/Cech/barcode packets, quotient gluing without
+first-obstruction syndromes, analytic extremality claims without PGF root
+signatures, tournament analogies without obstruction-transfer certificates,
+moment claims without Bravais q-lattice addresses, reachability claims without
+ear-lattice certificates, lattice claims without Minkowski q-body thresholds,
+complexity claims without proof-circuit ledgers, root claims without Ising partition zero signatures,
 fold claims without De Moivre fold certificates, circuit claims without
 endpoint-cover P gates, Phi gap output wires, magnitude-cocycle guards,
 repair claims without base-stalk coordinates, resurrection covers,
@@ -144,7 +145,7 @@ or Worpitzky ascent payloads, or live-core claims without filler_bits,
 canary_bits, deletable_coordinates, minimal_cover_subbasis,
 fixed_path_canary_status, xy_completion_tables, odd_ear_H_factors,
 Bravais_centering_types, Savitch_midpoint_depths, Asano_monotonicity_levers,
-n4_einheit_torsor_status, or oriented_matroid_tope_cocircuit_atlas.
+n4_einheit_torsor_status, or lag_barycenter_transport_field.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -204,8 +205,9 @@ the polarized_cyclotomic unit, the orbit_aware_compression unit, the
 spectral_dictionary unit, the spectral_payload_cube unit,
 the Selberg_trace_regularization unit, the Skewes_Number_lock unit, the
 grounded_response_matrix_QE unit, the orthogonal_recursion_interlock unit,
-the Vitali_wall_bulk_core_split unit, and the
-oriented_matroid_tope_cocircuit_atlas unit. The S235-S287 sequence prevents
+the Vitali_wall_bulk_core_split unit, the
+oriented_matroid_tope_cocircuit_atlas unit, and the
+lag_barycenter_transport_field unit. The S235-S288 sequence prevents
 spectral leakage by requiring route-triple centers to be unique and promoted
 only after legal closure, named debt exits, validated collision arity, a named
 modular cusp principal part, a formally verified Lean modular cusp ledger,
@@ -238,15 +240,15 @@ n4_quotient_congruence_defect, total_covariance_sigma_k2,
 associator_sigma_k3_sidecar, polarized_cyclotomic_support,
 spectral_dictionary_compatibility, Selberg_trace_regularization,
 Skewes_Number_lock, grounded_response_matrix_QE, orthogonal_recursion_interlock,
-Vitali_wall_bulk_core_split, or oriented_matroid_tope_cocircuit_atlas are
-attached.
+Vitali_wall_bulk_core_split, oriented_matroid_tope_cocircuit_atlas, or
+lag_barycenter_transport_field are attached.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S287 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S288 transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
@@ -282,34 +284,34 @@ polarized_cyclotomic_support law, orbit_aware_compression law,
 spectral_dictionary_compatibility law, spectral_payload_cube_synthesis law,
 Selberg_trace_regularization law, Skewes_Number_lock law,
 grounded_response_matrix_QE law, orthogonal_recursion_interlock law,
-Vitali_wall_bulk_core_split law, and oriented_matroid_tope_cocircuit_atlas law
-(preserving the recurrence algebraic unit, Poincare recurrence unit, automatic
-gap carrier unit, automatic lacunary filter unit, gap automaton carrier unit,
-perfect-number packet unit, route-purity unit, binding-pair switch unit,
-automatic fiber zipper unit, arc-Cech nerve unit, safe-component stalk unit,
-Haar tile stabilizer unit, residual tooth unit, residual capacitor unit,
-hidden statement unit, owner-strip filtration unit, comprehensive lens unit,
-endpoint owner transfer unit, tournament matrix unit, perspective-depth
-sidecar unit, edge perspective unit, edge/triple carrier unit, rooted extension
-unit, diagonal transport unit, fixed-path diagonal-flow unit, observer-cut
-payload unit, value-origin ledger unit, hyperbolic reciprocal sidecar unit,
-geometry-regime unit, Roth-Minkowski unit, Moser/fibbinary unit, Toeplitz
-square-peg unit, partial-cube bridge-rank unit, Hodge-cycle unit,
-Desargues-median unit, owner/root sidecar unit, medianized route-center unit,
-cross-carrier resonance unit, polymer/Dirichlet boundary-energy unit,
-route-triple center-control unit, route-state closure unit, sixth-power
-collision unit, modular cusp principal-part unit, Lean modular cusp unit,
-sixth-power certificate extension unit, branch-kernel orientation unit, p-adic
-hyper-tower unit, Morita-gamma transcendental unit, Hurwitz finite-address unit,
-Clebsch covering-moment unit, Apex-Bridge V* crossover unit, Pairwise-Avoidance
-Cap unit, Equivalence Triad invariant unit, Pascal pair-mass unit,
-observer-gluing unit, chart overlap unit, normal-fan component unit,
-first-obstruction syndrome unit, miss-count PGF root unit, tournament
-obstruction-transfer unit, Bravais q-lattice unit, ear-lattice reachability
-unit, Minkowski q-body unit, proof-circuit unit, Ising partition zero unit,
-De Moivre fold unit, endpoint-cover P gate unit, Phi gap output wire unit,
-magnitude-cocycle guard unit, base-stalk coordinate unit, resurrection cover
-unit, repair-rank unit, quartic-cumulant S4 unit, phi^4 stabilizer unit,
+Vitali_wall_bulk_core_split law, oriented_matroid_tope_cocircuit_atlas law,
+and lag_barycenter_transport_field law (preserving the recurrence algebraic
+unit, Poincare recurrence unit, automatic gap carrier unit, automatic lacunary
+filter unit, gap automaton carrier unit, perfect-number packet unit,
+route-purity unit, binding-pair switch unit, automatic fiber zipper unit,
+arc-Cech nerve unit, safe-component stalk unit, Haar tile stabilizer unit,
+residual tooth unit, residual capacitor unit, hidden statement unit,
+owner-strip filtration unit, comprehensive lens unit, endpoint owner transfer
+unit, tournament matrix unit, perspective-depth sidecar unit, edge perspective
+unit, edge/triple carrier unit, rooted extension unit, diagonal transport unit,
+fixed-path diagonal-flow unit, observer-cut payload unit, value-origin ledger
+unit, hyperbolic reciprocal sidecar unit, geometry-regime unit, Roth-Minkowski
+unit, Moser/fibbinary unit, Toeplitz square-peg unit, partial-cube bridge-rank
+unit, Hodge-cycle unit, Desargues-median unit, owner/root sidecar unit,
+medianized route-center unit, cross-carrier resonance unit, polymer/Dirichlet
+boundary-energy unit, route-triple center-control unit, route-state closure
+unit, sixth-power collision unit, modular cusp principal-part unit, Lean
+modular cusp unit, sixth-power certificate extension unit, branch-kernel
+orientation unit, p-adic hyper-tower unit, Morita-gamma transcendental unit,
+Hurwitz finite-address unit, Clebsch covering-moment unit, Apex-Bridge V*
+crossover unit, Pairwise-Avoidance Cap unit, Equivalence Triad invariant unit,
+Pascal pair-mass unit, observer-gluing unit, chart overlap unit, normal-fan
+component unit, first-obstruction syndrome unit, miss-count PGF root unit,
+tournament obstruction-transfer unit, Bravais q-lattice unit, ear-lattice
+reachability unit, Minkowski q-body unit, proof-circuit unit, Ising partition
+zero unit, De Moivre fold unit, endpoint-cover P gate unit, Phi gap output wire
+unit, magnitude-cocycle guard unit, base-stalk coordinate unit, resurrection
+cover unit, repair-rank unit, quartic-cumulant S4 unit, phi^4 stabilizer unit,
 kappa-4 sign unit, Asano zero-free unit, Beurling-Selberg minorant floor unit,
 Gaussian-minorant leakage unit, multi-far floor closure unit, R-prime spectral
 unit, R-safe wide-V unit, edge-witness recursion unit, tail/tip packet unit,
@@ -326,9 +328,37 @@ polarized_cyclotomic_support unit, orbit_aware_compression unit,
 spectral_dictionary_compatibility unit, spectral_payload_cube_synthesis
 unit, Selberg_trace_regularization unit, Skewes_Number_lock unit,
 grounded_response_matrix_QE unit, orthogonal_recursion_interlock unit,
-Vitali_wall_bulk_core_split unit, and oriented_matroid_tope_cocircuit_atlas unit
-alongside mu approx 1.451).
+Vitali_wall_bulk_core_split unit, oriented_matroid_tope_cocircuit_atlas unit,
+and lag_barycenter_transport_field unit alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S288 -- Equioscillation Autocorrelation Synthesis (checkpoint)
+
+Integrated fd89217/HYP-3245. Formalized the bridge between 
+equioscillation (root-side shadow) and autocorrelation (Fourier-side 
+certificate) via lag-transport residuals.
+
+### 1. Autocorrelation-Topology Integration
+Extends the S287 atlas by mapping **outward autocorrelation transport** 
+(low-lag deficit to outward-lag surplus) as the lag-space shadow of the S287 
+topology routes. Identifies AP as the **triangular autocorrelation law**.
+
+### 2. Spectral Leakage Prevention
+Prevents leakage under HYP-2990 by requiring every lag surplus to be 
+charged to a **finite chamber discharge** or **state-lift obstruction**. 
+Identifies AP as the unique **zero-commutator point** of the atlas.
+
+### 3. Chiral Guard Audit
+Evaluation reveals a **MIXED** signature. Orientation is preserved only if 
+clipped odd/negative data (Brouwer sign, witnesses) is discharged before 
+scalarizing. The tensor acts as a spectral mapping of the even/odd split.
+
+### 4. S171 & Resurrection
+Governed by **NRM**, **LAC-BND**, **FAREY**, and new **SMOOTH**, 
+**BND-ARI**, and **LOW-DISC** rules. Identifies the **triangular 
+autocorrelation fixed point** as the Resurrection Sheaf anchor.
 
 ---
 
@@ -337,30 +367,3 @@ alongside mu approx 1.451).
 Integrated e7ff926/HYP-3243. Formalized the visual and structural 
 proof-route atlas, mapping the manifold onto oriented-matroid topes and 
 cocircuits.
-
-### 1. Typed Proof-Route Atlas
-Maps the manifold onto a collection of carriers. Organized by **Route A** 
-(Erdős-Turán discrepancies), **Route B** (Hensel-Krasner 2-adic lifting), 
-and **Route C** (Ising interface pressure).
-
-### 2. Oriented Matroid & Cech Core
-Maps the circle arrangement onto **topes** (lonely intervals) and 
-**cocircuits** (equality atoms). Identifies AP/GW $\Phi_{14}$ cocircuit 
-witnesses. Identifies cap measure as the weighted Euler characteristic.
-
-### 3. Chiral Guard Audit
-Evaluation reveals a **MIXED** signature. Chiral integrity requires that 
-visual carriers do not clip negative/odd payload (sign, witnesses). 
-Oriented-matroid language is identified as the least lossy common carrier.
-
-### 4. S171 & Resurrection
-Governed by **NRM**, **LAC-BND**, and **FAREY** rules. Identifies the 
-**oriented-matroid cell complex** as the Resurrection Sheaf anchor to 
-secure endpoint/sign/core data.
-
----
-
-## codex-S286 -- Vitali-Brouwer Core Synthesis (checkpoint)
-
-Integrated 5e04179/HYP-3237. Formalized the **Vitali wall** bulk/core split 
-and the **Brouwer equioscillation** saddle.
