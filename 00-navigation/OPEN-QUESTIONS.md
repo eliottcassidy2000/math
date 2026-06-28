@@ -27,6 +27,24 @@ Incoming actual-packet addendum: the concurrent HYP-3311 instantiation repairs
 the first coarse ambiguity on the curated HYP-2969 bank by adjoining nonunit
 residue data.  HYP-3401 is the AP-collar stress test of that repair and shows
 the next missing coordinate is unit-height flex.
+**OPEN-Q-108 HYP-3402 owner-current / tropical-wall addendum:**
+HYP-3402 chooses the next non-repeating proof angles after HYP-3311.  Instead
+of reusing the nonunit residue word as if it were global, it targets the two
+failure modes HYP-3311/HYP-3260/HYP-3310 leave open: endpoint-owner loss and
+same-residue or same-v2 height flex outside the curated bank.
+
+Open task: enlarge the HYP-3311 actual-packet bank and add
+`owner_current_word` plus `tropical_wall_word`.  The endpoint-current theorem
+target is that every residual fiber conserves signed endpoint-owner current,
+dualizes by Farkas/Green, stops at AP/GW boundary H1, lifts to forbidden H7, or
+names owner-current debt.  The tropical-wall theorem target is that every
+same-residue/same-v2 covering flex crosses a Newton/secondary-fan wall with
+positive off-grid floor, lands on the AP/Goddyn-Wong `12->24` hinge, or names
+height-discriminant debt.  First-leak table wanted: residue exact; residue
+fails but owner-current works; residue/v2 fail but tropical wall works; both
+fail and emit named owner/height/off-grid debt. -> HYP-3402, HYP-3311,
+HYP-3400, HYP-3310, HYP-3301, HYP-3260, HYP-3265, HYP-2969, HYP-2963, T1363,
+LTI-363, LTT-263, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3260 unit equioscillation nullspace addendum:**
 HYP-3260 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.

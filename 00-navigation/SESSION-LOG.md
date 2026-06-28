@@ -32145,3 +32145,50 @@ Next hook: enlarge the same actual-packet tournament from the curated HYP-2969
 bank to a broader HYP-2963 residual sample.  The first failure of residue-word
 exactness should identify the next real sidecar: `v2`/height, endpoint owner,
 or off-grid-floor data.
+
+## codex-2026-06-28 -- Owner-current and tropical-wall proof angles -- HYP-3402
+
+Picked two remaining LRC14 proof angles different from HYP-3300
+observability/Morse, HYP-3301 sheaf/cusp exactness, HYP-3310 C6 factorization,
+and HYP-3311 residue-word instantiation:
+
+```text
+endpoint_owner_boundary_current
+tropical_height_discriminant_wall
+```
+
+Added:
+
+```text
+04-computation/lrc14_owner_current_tropical_wall_angles_codex_20260628.py
+05-knowledge/results/lrc14_owner_current_tropical_wall_angles_codex_20260628.out
+05-knowledge/hypotheses/HYP-3402-lrc14-owner-current-tropical-wall-angles.md
+07-reflections/lrc14-owner-current-tropical-wall-angles-codex-20260628.md
+```
+
+The scout ranks endpoint-current and tropical-wall tied at `score=89`.  The
+composite `owner_valuation_bicurrent` scores `85` but is explicitly demoted to
+a bridge.  The HYP-3311 mixed-fiber audit has `7` rows, with `coarse_base`
+leaving `1` mixed theorem-exit fiber.  `residue_word`, `owner_current`,
+`tropical_wall`, and `bicurrent` each leave `0` mixed fibers; `v2_word` leaves
+`1`.
+
+Interpretation: residue word remains useful but should not become the global
+theorem slogan.  The next real leak should be tested as endpoint-current loss
+or tropical height-wall crossing.  Tournament Analysis uses proof carriers and
+hidden sidecars as vertices, with no directed 3-cycles and one Hamiltonian
+path:
+
+```text
+endpoint_owner_boundary_current
+ -> tropical_height_discriminant_wall
+ -> owner_valuation_bicurrent
+ -> cluster_mutation_wall_crossing
+ -> ramanujan_projector_backend
+ -> boolean_minterm_certificate_dag
+ -> raw_residue_word_reuse
+```
+
+Next hook: enlarge the HYP-3311 bank and build a first-leak table: residue
+exact; residue fails but owner-current works; residue/v2 fail but tropical wall
+works; both fail and emit named owner/height/off-grid debt.

@@ -5974,3 +5974,18 @@ on `Phi`, not as a standalone scalar proof.
   `state_lift_H7`.  The target classification is exact, holonomy-repaired,
   endpoint-lifted, descended, AP/GW-stopped, positive boundary-moment image,
   qdiv-forbidden AP/GW kernel, K33/H7 debt, or a newly named zero-open kernel.
+
+## LEAD (codex-2026-06-28): owner-current and tropical-wall first-leak table
+- **Source:** HYP-3402, HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3260,
+  HYP-3265, HYP-2969, HYP-2963.
+- **Status:** OPEN.  HYP-3402 is a proof-angle scout over the HYP-3311 mixed
+  fiber; it is not yet an enlarged actual-packet theorem table.
+- **Next steps:** Extend the HYP-3311 actual-packet bank and add
+  `owner_current_word` plus `tropical_wall_word`.  Classify every mixed or
+  formerly mixed fiber as: residue exact; residue fails but owner-current
+  works; residue/v2 fail but tropical wall works; both fail and emit named
+  owner/height/off-grid debt.  The target owner-current exits are conserved
+  current, Farkas/Green dual certificate, AP/GW boundary H1, forbidden H7
+  state-lift sink, or named current debt.  The target tropical exits are
+  positive off-grid floor wall, AP/GW `12->24` hinge, or named
+  height-discriminant debt.

@@ -278,6 +278,11 @@ obligations, and proof-carrier interfaces.
   explicit first obstruction; the AP-collar scout says nonunit height misses
   the unit-height lift `13->27`, while all-residue height/flex kills the local
   obstruction.
+- Need a post-HYP-3311 angle that does not reuse residue words as the theorem:
+  use LTT-263 and make endpoint-owner currents, theorem-exit sources/sinks,
+  valuation owners, tropical wall words, Farkas/Green duals, AP/GW boundary H1
+  stops, and named owner/height/off-grid debts the vertices.  The top routes
+  are endpoint-owner boundary current and tropical height/discriminant wall.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -7616,3 +7621,40 @@ quotient_legality_status
   HYP-3230, HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223,
   HYP-3222, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3214, HYP-3205,
   HYP-3204, HYP-3202, HYP-3201, LTI-352, T1352, OPEN-Q-108.
+
+## LTT-263: Owner-Current / Tropical-Wall Proof-Carrier Tournament
+
+- **Move:** After HYP-3311, do not reuse the residue word as the new theorem
+  currency.  Make endpoint-owner currents, theorem-exit sources/sinks,
+  valuation owners, tropical wall words, Farkas/Green duals, AP/GW boundary H1
+  stops, forbidden H7 sinks, and named owner/height/off-grid debts the
+  tournament vertices.
+- **LRC use:** HYP-3402 targets the two places HYP-3311 leaves open:
+  endpoint-owner loss and same-residue/same-v2 height flex outside the curated
+  bank.  On the HYP-3311 seven-row mixed fiber, owner current and tropical wall
+  sidecars each separate theorem exits completely; `v2_word` alone does not.
+- **Preserves:** endpoint-owner memory, height-flex legality, off-grid floor
+  status, open/boundary exit, quotient descent legality, Farkas/Green dual
+  discharge, AP/GW boundary stop, and state-lift exit when carried as packet
+  fields.
+- **Forgets / guardrail:** owner-current alone may not prove analytic zero
+  control or height flex; tropical-wall alone may lose endpoint owners and odd
+  sign; raw residue-word reuse is already HYP-3311's bank-local separator, not
+  a global proof.
+- **Pairwise observable:** weighted retained proof obligations minus destroyed
+  endpoint/height/off-grid coordinates.
+- **Switch/gauge:** higher proof-carrier score; ties use fewer destroyed scarce
+  fields and then the declared Hamiltonian path.
+- **Exact fingerprint:** `score_hist={-1:1,43:1,57:1,70:1,85:1,89:2}`,
+  `directed_3cycles=0`, `hamiltonian_path_count=1`, and priority path
+  `endpoint_owner_boundary_current -> tropical_height_discriminant_wall ->
+  owner_valuation_bicurrent -> cluster_mutation_wall_crossing ->
+  ramanujan_projector_backend -> boolean_minterm_certificate_dag ->
+  raw_residue_word_reuse`.
+- **Next hook:** enlarge the actual packet bank and create the first-leak
+  table: residue exact; residue fails but owner-current works; residue/v2 fail
+  but tropical wall works; both fail and emit named owner/height/off-grid debt.
+- **Pointers:** HYP-3402, HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3300,
+  HYP-3266, HYP-3265, HYP-3260, HYP-3253, HYP-3247, HYP-3243, HYP-3236,
+  HYP-3225, HYP-3223, HYP-2969, HYP-2963, THM-523, LTI-363, T1363,
+  OPEN-Q-108.

@@ -1,0 +1,78 @@
+HYP-3402 LRC14 OWNER-CURRENT + TROPICAL-WALL PROOF-ANGLE SCOUT
+==============================================================================
+status=synthesis / theorem-target router; not an LRC14 proof
+new_handles=HYP-3402,T1363,LTI-363,LTT-263
+
+SELECTED REMAINING ANGLES
+  endpoint_owner_boundary_current score=89
+    family=Hodge/Farkas/flow proof carrier
+    preserves=endpoint_owner_memory,finite_checkability,formal_packet_schema,green_current_certificate,open_boundary_status,quotient_descent_legality,state_lift_exit
+    destroys=analytic_zero_control,height_flex_legality
+    test=Turn each residual fiber into a signed owner-current boundary. A legal quotient must conserve the current, route it to a dual Farkas/Green certificate, stop at AP/GW boundary H1, or name the first owner-current leak.
+    risk=owner currents can classify exits without proving the positive floor
+  tropical_height_discriminant_wall score=89
+    family=Newton polygon / secondary fan proof carrier
+    preserves=analytic_zero_control,finite_checkability,height_flex_legality,normal_fan_wall,off_grid_floor,quotient_descent_legality,residue_magnitude_split
+    destroys=endpoint_owner_memory,odd_sign_sidecar
+    test=Treat covering flex as a min-plus bend locus.  Same-residue or same-v2 rows must either cross a tropical wall with positive off-grid floor, land on the AP/GW 12->24 hinge, or expose a named height/discriminant debt.
+    risk=a tropical wall without endpoint owners can prove the wrong exit
+
+FULL CARRIER RANKING
+  endpoint_owner_boundary_current    score=  89 corpus_hits= 452
+  tropical_height_discriminant_wall  score=  89 corpus_hits= 459
+  owner_valuation_bicurrent          score=  85 corpus_hits= 869
+  cluster_mutation_wall_crossing     score=  70 corpus_hits= 837
+  ramanujan_projector_backend        score=  57 corpus_hits=2062
+  boolean_minterm_certificate_dag    score=  43 corpus_hits= 699
+  raw_residue_word_reuse             score=  -1 corpus_hits= 651
+
+COMPOSITE BRIDGE
+  owner_valuation_bicurrent score=85
+    use only after one of the two separate angles finds the first leak
+    or when enlarged packets need endpoint-owner and valuation owner together.
+
+HYP-3311 MIXED-FIBER SIDECAR AUDIT
+  source=the unique actual-packet coarse fiber from HYP-3311
+  rows=7 kernels={'positive-Haar-open': 3, 'unit-petal-named': 4}
+  coarse_base     fibers= 1 mixed_kernel_fibers=1 max_target_width=2
+  residue_word    fibers= 7 mixed_kernel_fibers=0 max_target_width=1
+  v2_word         fibers= 6 mixed_kernel_fibers=1 max_target_width=2
+  owner_current   fibers= 7 mixed_kernel_fibers=0 max_target_width=1
+  tropical_wall   fibers= 7 mixed_kernel_fibers=0 max_target_width=1
+  bicurrent       fibers= 7 mixed_kernel_fibers=0 max_target_width=1
+
+  minimal single/few sidecar repairs over coarse_base:
+    ('residue_word',)
+    ('owner_current',)
+    ('tropical_wall',)
+    ('bicurrent',)
+
+OWNER-CURRENT READOUT
+  owner_current treats theorem exits as signed boundary currents:
+    unit-petal-named rows are unit-boundary inflows;
+    positive-Haar-open rows are covering-floor outflows.
+  theorem target: the first endpoint-owner leak in an enlarged HYP-2963
+  bank must become a Farkas/Green dual certificate, AP/GW boundary H1,
+  forbidden H7 lift, or named residual owner-current debt.
+
+TROPICAL-WALL READOUT
+  v2_word alone repeats the HYP-3311 warning:
+    drop6 fattening core add180 and petal 10->20 share the same v2 word
+    but have different theorem exits.
+  tropical_wall adds the first bending owner / wall type and separates
+  that collision without using the full residue word.
+  theorem target: same-residue or same-v2 height flex must cross a
+  Newton/secondary-fan wall with positive off-grid floor, land on the
+  AP/GW 12->24 hinge, or emit height-discriminant debt.
+
+TOURNAMENT ANALYSIS
+  vertices=proof carriers and hidden sidecars, not runners/arcs
+  pairwise_observable=weighted retained proof obligations minus destroyed endpoint/height/off-grid coordinates
+  switch/gauge=higher proof-carrier score; ties use fewer destroyed scarce fields
+  score_hist={-1: 1, 43: 1, 57: 1, 70: 1, 85: 1, 89: 2}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  priority_path=endpoint_owner_boundary_current -> tropical_height_discriminant_wall -> owner_valuation_bicurrent -> cluster_mutation_wall_crossing -> ramanujan_projector_backend -> boolean_minterm_certificate_dag -> raw_residue_word_reuse
+
+CONCLUSION
+  The next two non-repeating proof angles are endpoint-owner boundary currents and tropical height/discriminant walls.  They attack the two places HYP-3311 leaves open: endpoint-owner loss and same-residue or same-v2 height flex outside the curated bank.  Residue words remain a good sidecar, but HYP-3402 demotes residue-only reuse because it is already bank-local evidence, not the global theorem.
