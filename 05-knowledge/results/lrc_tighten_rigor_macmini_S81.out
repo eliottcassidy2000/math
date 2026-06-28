@@ -1,0 +1,15 @@
+(c) CONSTRUCTION: tight-locus safe at the units of Z/(14d):
+  AP   d=1: 6/6 units are witnesses  ALL (rigorous)
+  GW   d=1: 6/6 units are witnesses  ALL (rigorous)
+  2AP  d=2: 12/12 units are witnesses  ALL (rigorous)
+  3AP  d=3: 12/12 units are witnesses  ALL (rigorous)
+
+(b) BOUNDED margin: AP single-swaps (r<=26), tight set + margin:
+  tight (M=1/14): [(12, 24)]  (= GW 12->24; rest are AP no-swaps)
+  margin: min M above 1/14 = 0.07405, gap = 0.00262
+
+(b) EQUIDISTRIBUTION pull: large v removal of seed lonely set (1/7 only generic):
+  v= 14: removed 0.730 of seed lonely (1/7=0.143); M(seed+v)=0.09090>1/14
+  v= 42: removed 0.243 of seed lonely (1/7=0.143); M(seed+v)=0.12000>1/14
+  v=140: removed 0.134 of seed lonely (1/7=0.143); M(seed+v)=0.13509>1/14
+  => resonant v=14 removes 0.73 (not 1/7); survivor positive => M>1/14. Argument = survivor positive, not 6/7.

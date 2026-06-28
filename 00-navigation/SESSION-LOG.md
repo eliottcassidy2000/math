@@ -1,3 +1,25 @@
+## mac-mini-2026-06-28-S81 -- TIGHTENING the rigor: construction RIGOROUS (unit witnesses) + bounded margin RIGOROUS (delta~0.0026); PULL: equidistribution's clean 1/7-removal fails for resonant v (survivor-positive, not 6/7)
+
+Owner: tighten the remaining rigor as much as possible, many push-pull cycles, inspired by concurrent. HYP-3253 +
+reflection tightening-the-rigor + script lrc_tighten_rigor_macmini_S81.py.
+
+PUSH (c) CONSTRUCTION RIGOROUS: the tight-locus (AP/GW & dilations) is safe at EXACTLY the units of Z/(14d) -- all
+phi(14d) units are witnesses (kps S255 equioscillation; s*a=+-1 mod 14 pins the apex-7 binding pair). Explicit + complete.
+PUSH (b) BOUNDED MARGIN RIGOROUS: AP single-swaps (r<=26, a finite check) tight = AP/GW only; uniform margin
+delta~0.0026; 1000 random 2-swaps = 0 violations + NO new tight (the 'near-tight' 2-swaps are just the AP re-found).
+PULL (b) EQUIDISTRIBUTION: the S46 'large v removes exactly 1/7' is GENERIC-ONLY. The resonant apex v=14 removes
+0.73 of the seed lonely set (the seed lonely CONCENTRATES at the apex points a/14 where v=14's danger sits), yet
+M(seed+v)>1/14 (survivor positive). So the correct argument = 'the survivor is positive' (v's SPREAD danger
+doesn't cover the seed lonely set), NOT '6/7 survives'; the resonant v is the S52 small-prime gap.
+PROBE (a) FINITENESS: bounded census clean ({AP,GW}); full rigidity OPEN (kps S255: tight <=> equioscillation at
+units <=> +-units-cover + complement, NECESSARY; sufficiency the open rigidity).
+
+CONVERGENCE kps S256 (honest assessment of my S79 index-theorem): it DESCRIBES ((p-1)/2=Gauss sum, p mod 4) but
+does NOT prove (ambient index); 'the floor proves.' Same as my S81: the construction/bounded-margin are rigorous,
+but the PROOF is the analytic floor = the resonant-v survivor-positivity (the isolated analytic core). NET: (c)
+rigorous, (b)-bounded rigorous, (b)-equidistribution clarified (resonant survivor-positivity = the core), (a)
+rigidity remains. NOT a proof; LRC(14) open, the analytic core sharply isolated.
+
 ## kind-pasteur-2026-06-28-S256 -- index-theorem frame TESTED: it DESCRIBES (Gauss sum (p-1)/2, p mod 4), does NOT prove (ambient index); the floor proves. Bold p-mod-4<->sign-cancellation bridge REFUTED
 Owner: boldly predict how the abstract frames continue, test at length, find new closure routes by seeing the bigger picture. HYP-3249/3251/3252 + reflection the-index-theorem-describes-the-floor-proves.
 - CONVERGENCE: my Chebyshev equioscillation = mac-mini's Borsuk-Ulam index = ONE object. AP touches 1/14 at the phi(14)=6 units in 3 antipodal pairs = saddle index (p-1)/2 = #QR mod 7 = the Gauss sum i*sqrt7 (imaginary, 7=3 mod4). p mod4 = index parity = Gauss-sum reality.
