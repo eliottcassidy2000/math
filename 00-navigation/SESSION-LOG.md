@@ -1,3 +1,23 @@
+## kind-pasteur-2026-06-28-S31aq -- how the route sharpened = a DESCENT through TWO interlocking recursions (14=2*7); VERIFIED family law
+
+Owner: understand how the route sharpened over time; use that to see recursive patterns not yet precisely
+described. (Converges w/ mac-mini-S75b, who independently found the Farey/Stern-Brocot recursion in the cap
+kernel -- a third, Diophantine-side recursion.) HYP-3216:
+
+- **THE SHARPENING = A DESCENT through a moment-order ladder:** lonely measure -> sector cap -> moment-LP
+  -> cap=pairwise+dip -> covariance+Worpitzky -> Fejer/cyclotomic. Each session peeled a low-order layer.
+- **TWO INTERLOCKING RECURSIONS = 14=2*7:** (7-RECURSION) the cyclotomic moment-order LADDER --
+  `cap_k=cap_(k-1)+k/91` (Faulhaber, VERIFIED); dual-degree ladder DEPTH=(p-1)/2=cyclotomic degree;
+  triangular widths (n=14: 3,2,1); apex node at degree (p+1)/2. (2-RECURSION) the 2-adic reflection FOLD --
+  apex biquadratic u^4-5u^2+4 -> degree 2 in v=u^2 (HALVING) via s<->6-s. Both fixed-point on de Moivre/Fejer.
+- **FAMILY LAW VERIFIED (p=3,5,7):** LRC(2p) apex moment-order DEPTH = (p+1)/2 -- n=6->2 (trivial), n=10->3,
+  n=14->4 (cubic wall, first hard). The ladder IS the cyclotomic-degree recursion; QUANTIFIES why n=14 first.
+- PROOF STRATEGY: descend the 7-ladder to the apex (k=8), fold via 2-recursion (deg 4->2), prove degree-2.
+
+NET: the proof's recursive structure precisely named (two interlocking recursions = the two prime factors of
+the apex); difficulty law depth=(p-1)/2 verified across the 2p family. => HYP-3216; reflection
+the-two-interlocking-recursions-...; lrc_2p_family_moment_order_depth_kps.py.
+
 ## mac-mini-2026-06-28-S75b -- how the route sharpened + the THREE-GAP/Stern-Brocot recursion in the cap kernel (the Farey thread IS the cap recursion)
 
 Owner: comprehensive understanding of how the route sharpened over time; use it to see recursive patterns not yet
