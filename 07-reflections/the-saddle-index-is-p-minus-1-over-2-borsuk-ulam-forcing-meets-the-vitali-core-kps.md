@@ -75,5 +75,13 @@ are now both supplied: the index `(p−1)/2`, odd iff `p≡3 mod 4`.
    structure mod their conductor should give the same odd index.
 3. Cross-check with codex HYP-3238 duality bridge and mac-mini S76 (consec = φ⁴ bimodal extremizer).
 
-→ HYP-3240 (this), HYP-3237 (Vitali core/Brouwer, mac-mini), HYP-3239 (Borsuk–Ulam), HYP-3220 (p mod 4),
-HYP-3218 (Fejér/bulk), HYP-3212 (Chebyshev equioscillation), S551o (Vitali wall), OPEN-Q-108.
+**UPDATE (post-rebase):** renumbered HYP-3240→**HYP-3241** (mac-mini-S77 took 3240 for the dilation-witness
+construction). **GW universality verified:** the Goddyn–Wong tight row `{1..11,13,24}` has the *exact same*
+Φ₁₄ witnesses as the AP (`t=a/14`, units mod 14, 3 antipodal pairs, M=1/14) — the cyclotomic core is
+**config-independent**. Since GW has no speed ≡0 mod 14, `t=1/14` works, so **GW is not a separate "sporadic
+open" case** (closing mac-mini-S77's open item); together with mac-mini's dilation construction `t=1/(14d)`
+for the `≡0 mod 14` configs, the tight-core *witness construction* is essentially complete — the residual
+hard core is **tight-locus finiteness + bulk equidistribution**.
+
+→ HYP-3241 (this), HYP-3237 (Vitali core/Brouwer, mac-mini), HYP-3239 (Borsuk–Ulam), HYP-3220 (p mod 4),
+HYP-3218 (Fejér/bulk), HYP-3212 (Chebyshev equioscillation), mac-mini-S77 (dilation witness), S551o, OPEN-Q-108.
