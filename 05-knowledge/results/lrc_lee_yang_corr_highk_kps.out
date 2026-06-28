@@ -1,0 +1,14 @@
+k=10: consec lam=0.00919 q0=0.5045 cap=0.6044 gap=+0.0999  consec=lam-argmin? True  corr(lam,cap-q0)=+0.859  (n=300)
+k=11: consec lam=0.01326 q0=0.5815 cap=0.7253 gap=+0.1438  consec=lam-argmin? True  corr(lam,cap-q0)=+0.895  (n=300)
+k=12: consec lam=0.01364 q0=0.6241 cap=0.8571 gap=+0.2330  consec=lam-argmin? False  corr(lam,cap-q0)=+0.887  (n=300)
+k=13: consec lam=0.01589 q0=0.6759 cap=1.0000 gap=+0.3241  consec=lam-argmin? False  corr(lam,cap-q0)=+0.825  (n=300)
+
+--- kps-S31ah k-dependence finding ---
+The Lee-Yang/phi^4 lambda-frame TRACKS consec-max EXACTLY: consec IS the lambda-argmin through k=11
+(k=8,9,10,11 True) and STOPS being it at k=12,13 (False) -- the SAME k=12 breakdown as consec-max
+(HYP-2780). corr(lambda, cap-q0) peaks +0.895 at k=11, declines to +0.825 at k=13. So the Lee-Yang
+extremality is a REPARAMETRIZATION of the coverage extremality (same binding rows, same k=12 break),
+NOT an independent bypass. It IS the right object for the BINDING rows k=8,9,10 (consec=lambda-argmin,
+corr +0.86-0.90), where the cap is tight. At k>=12 the cap is loose (gap +0.23,+0.32) so the break
+doesn't matter. CONCLUSION: the phi^4/Lee-Yang frame is the correct geometric picture of the binding-row
+coverage extremality; the Asano-monotonicity proof lever applies to k=8,9,10 specifically.
