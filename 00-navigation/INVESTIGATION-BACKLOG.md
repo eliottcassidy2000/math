@@ -15,6 +15,32 @@
 
 ---
 
+## Lead codex-2026-06-27-S274: Worpitzky pair-function three-edge quotient
+
+**Status:** RESERVED / executable scout pending; not proof
+(HYP-3144/T1209).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3144-lrc14-worpitzky-pair-function-three-edge-quotient.md`,
+`04-computation/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.py`,
+and `05-knowledge/results/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.out`.
+
+Goal: turn the user's three-edge prompt into a smallest-case quotient
+guardrail for the LRC14 generating-function proof packet.  The scout will
+verify the two score classes of labelled K3 tournaments, `T=(0,1,2)` and
+`C=(1,1,1)`, under single-edge flips.  Expected quotient matrix:
+`T->T` multiplicity `2`, `T->C` multiplicity `1`, `C->T` multiplicity `3`,
+`C->C` multiplicity `0`.  The same kernel should appear from three coin
+flips after quotienting to "two-to-one mix" and "all same."
+
+Pair-function reading: `a+b` and `a*b` survive unordered-pair quotient;
+`a^b` and `b^a` require an ordered sidecar.  LRC14 transfer: before
+scalarizing HYP-3140 fiber-PGF data, HYP-3141 tip/tail witnesses, HYP-3139
+reflection pages, or HYP-3143 exact-order packet bases, ask whether the target
+predicate is symmetric like sum/product or order-sensitive like exponentiation.
+
+Namespace: HYP-3144 / LTI-270 / LTT-168 / T1209 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S273: LRC14 generating-function payload atlas
 
 **Status:** EVIDENCE / executable payload atlas and tournament scout; not a

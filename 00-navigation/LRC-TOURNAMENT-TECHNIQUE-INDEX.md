@@ -134,6 +134,11 @@ obligations, and proof-carrier interfaces.
   tournament vertices: exact U4 cap certificate, biquadratic resolvent fold,
   Bravais flatness, Savitch repair depth, Lee-Yang root confinement, and
   A000568 global consistency.
+- Need the smallest edge-quotient guardrail for Worpitzky/pair-function data:
+  use LTT-168 after LTT-167/LTT-165/LTT-164/LTT-161 and make score classes,
+  edge-flip roles, pair-function carriers, and ordered sidecars the vertices.
+  The K3 kernel should explain which data is symmetric enough to quotient and
+  which data behaves like `a^b` versus `b^a`.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5560,3 +5565,29 @@ constant chase.
 - **Pointers:** HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138,
   HYP-3134, HYP-3133, HYP-3106, HYP-3002, HYP-2998, LTI-269, LTT-167,
   T1208, OPEN-Q-108.
+## LTT-168: Tournament Of Worpitzky Pair-Function Three-Edge Quotients
+
+- **Move:** Use the two score classes of labelled three-vertex tournaments as
+  the smallest edge-flip quotient: transitive `T=(0,1,2)` and cyclic
+  `C=(1,1,1)`.  Compare this with the three-coin quotient "two-to-one mix"
+  versus "all same", and attach pair-function carriers
+  `a+b`, `a*b`, `a^b`, `b^a`.
+- **LRC use:** HYP-3144/S274 turns the user's prompt into a finite
+  scalarization guardrail for HYP-3140 fiber-PGF coefficients and HYP-3141
+  edge tip/tail witnesses, now adjacent to HYP-3143's n=4 exact-order
+  subbasis audit.  The expected kernel `[[2,1],[3,0]]` separates symmetric
+  count data from the unique order-sensitive exit edge, just as unordered pair
+  functions preserve sum/product but destroy exponent order.
+- **Preserves:** class-size distribution, stationary labelled split, symmetric
+  pair functions, and Worpitzky/Eulerian ascent-count modes when the predicate
+  is constant on quotient fibers.
+- **Forgets / guardrail:** which transitive edge is the unique cyclic exit,
+  which endpoint is base/exponent in `a^b` versus `b^a`, Q-conditioned
+  fiber-PGF sidecars, tip/tail commutators, and boundary leakage.
+- **Next pull:** Run the scout and promote the reserved packet to evidence.
+  Then use its fields as a cheap preflight before quotienting HYP-3140
+  `F_R(y)`/`F_R,Q(y)`, HYP-3139 reflection-block pages, HYP-3141
+  edge-witness rows, or HYP-3143 packet subbases to single scalars.
+- **Pointers:** HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139,
+  HYP-3137, HYP-3134, HYP-3124, THM-084, LTI-270, LTT-168, T1209,
+  OPEN-Q-108.

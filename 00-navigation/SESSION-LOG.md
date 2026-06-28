@@ -1,3 +1,20 @@
+## codex-2026-06-27-S274 -- Worpitzky pair-function three-edge quotient -- HYP-3144
+
+Reserved HYP-3144/T1209/LTI-270/LTT-168 for the user's prompt connecting
+Worpitzky identity, pair functions `a*b`, `a+b`, `a^b`, `b^a`, and the
+two-class three-edge flip graph of tournaments on three vertices.  Rebased
+over S276, which claimed HYP-3143/T1208/LTI-269/LTT-167 for the n=4
+exact-order packet-subbasis audit; this K3 lane is now the smaller
+order-sensitive quotient preflight feeding that packet-basis discipline.
+Planned executable scout: verify the K3 score-class edge-flip matrix
+`[[2,1],[3,0]]`, identify it with the three-coin quotient
+all-same/two-to-one-mix kernel, test which pair functions survive unordered
+quotienting, check the `n=3` Worpitzky identity, and run Tournament Analysis
+over proof carriers rather than raw runners.  LRC14 purpose: add a smallest
+exact warning label before scalarizing HYP-3140 fiber-PGF coefficients,
+HYP-3141 edge tip/tail witnesses, HYP-3139 reflection-block leakage, or
+HYP-3143 exact-order packet bases.
+
 ## codex-2026-06-27-S273 -- LRC14 generating-function payload atlas -- HYP-3137
 
 Reserved HYP-3137/T1202/LTI-263/LTT-161 for a generating-function pass after
