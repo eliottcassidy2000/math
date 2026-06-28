@@ -1,3 +1,26 @@
+## kind-pasteur-2026-06-28-S31au -- FINALIZE: even-odd duality IS positive-negative duality; obstruction sign = p mod 4; n=14's wall = the IMAGINARY-QUADRATIC wall
+
+Owner: extend and finalize the previous session's work (HYP-3219 Brouwer factorization), considering past
+work on the even-odd duality and the positive-negative duality. HYP-3220:
+
+- **EVEN-ODD = POSITIVE-NEGATIVE (verified):** the de Moivre power sums p_k=a^k+b^k+c^k (a,b,c=2cos2pi j/7)
+  = -1,5,-4,13,-16,38,-57,117 have sign EXACTLY (-1)^k, because the dominant period -2cos(pi/7)=-1.8019 is a
+  NEGATIVE Perron root (p_k~(-1.8019)^k). Odd<=>negative, even<=>positive: ONE duality. Finalizes HYP-3219 --
+  the obstruction's neg sign = p_3=-4<0 (an ODD power sum); AM-GM defect p_3-3e_3=-7.
+- **COMPLEMENT = PARITY OPERATOR:** x->-x maps sector j->7-j (1<->6,2<->5,3<->4), SWAPPING even {2,4,6}<->odd
+  {1,3,5}. The positive-negative involution (complement / 2-adic fold / the "2" of 14=2*7) IS the even-odd
+  parity operator. ONE Z/2 = both dualities (conjugation = parity); de Moivre periods conjugation-FIXED (real subfield).
+- **FAMILY LAW (extension):** obstruction sign = disc sign = p mod 4. `(p-1)/2 ODD <=> p=3 mod4 <=> Gauss sum
+  IMAGINARY <=> NEGATIVE disc <=> the odd obstruction` -- ALL ONE FACT (verified p=3..23). n=10(p=5=1mod4):
+  Q(sqrt5) REAL, golden unit/periodic-CF/Pell -> SOLVABLE. n=14(p=7=3mod4): Q(sqrt-7) IMAGINARY, NO unit/Pell,
+  h(-7)=1 -> HARD. n=22(p=11=3) hard; n=26(p=13=1) SOS-side.
+- **REFRAME:** n=14's "cubic wall" IS the IMAGINARY-QUADRATIC wall. The real-unit/Pell/periodic-CF machinery
+  the n=10 proof uses DOESN'T EXIST for n=14 (imaginary field). ACTION: replace with imaginary-quadratic
+  class-number/Stark machinery (h(-7)=1, mac-mini S75e conductor + HYP-3215 Stark L'). The only obstacle =
+  the single SIGN BIT = p mod 4 (fixed, computable, not analytic).
+
+=> HYP-3220; reflection even-odd-IS-positive-negative-the-imaginary-quadratic-wall-p-mod-4-kps.md.
+
 ## kind-pasteur-2026-06-28-S31at -- BROUWER merge: the non-SOS cubic obstruction FACTORS into (topological degree/sign) x (SOS magnitude)
 
 Owner: merge in the Brouwer fixed-point theorem, think abstractly about what it and other things represent,
