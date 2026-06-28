@@ -48,6 +48,22 @@ classes aggregate to `F=(1,4,1)` while state-level PGF curves differ.  Thus a
 single value or even a class aggregate can erase the ordered function payload.
 
 Namespace: HYP-3144 / LTI-270 / LTT-168 / T1209 / OPEN-Q-108.
+## Lead codex-2026-06-27-S274: n=4 filler/canary shift-package quotient
+
+**Status:** SYNTHESIS / exact n=4 scout; not proof (HYP-3146/T1211).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3146-n4-shift-package-erdos870-filler-canary.md`,
+`04-computation/tournament_n4_shift_package_erdos870_codex_s274.py`,
+`05-knowledge/results/tournament_n4_shift_package_erdos870_codex_s274.out`,
+and `07-reflections/n4-shift-package-erdos870-filler-canary-codex-s274.md`.
+
+Readout: fixed-path cover has `S` fiber size `5`, while a finite scaffold
+makes `T,+,-,S` a two-bit shift package.  This is the canary/scaffold
+companion to HYP-3143's exact-order subbasis audit and HYP-3145's filler-core
+interface.  Next: attach
+filler/canary fields to HYP-3141/HYP-3142 ledgers and test if quotienting k=8
+packet fibers requires deletion-stable canaries or finite-filler congruence.
 
 ## Lead codex-2026-06-27-S273: LRC14 generating-function payload atlas
 

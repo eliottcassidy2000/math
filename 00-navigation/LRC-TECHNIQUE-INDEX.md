@@ -412,6 +412,7 @@ record what it destroys before asking it to prove anything.
 | LTI-269 | Tournament packet subbasis exact-order audit | Fixed filler plus free obstruction basis, with `packet_order`, lower-order exclusion, and collision sidecar/debt before quotienting class fibers | HYP-3143/S276 verifies the user's two n=4 tournament schemes.  The Hamiltonian-path tiling quotient is geometrically faithful but has class fiber `{T:1,+:1,-:1,S:5}`, so `S` leaks across flip orders `1,2,3`.  The partial-score `0,1,1,2` quotient has `12` witnesses, all with free edges a perfect matching; fixed filler `01,03,12,23` and free bits `x=02,y=13` give the exact basis `E->T,x->+,y->-,xy->S`.  Erdős-870 supplies the exact-order language: proof packets should be representable at the declared order and not below it. | HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3134, HYP-3133, HYP-3106, HYP-3002, HYP-2998, T1208, LTT-167, LTI-269, OPEN-Q-108 | Add `packet_order`, `first_packet_order`, `lower_order_leakage`, and `collision_sidecar_or_named_debt` to edge-witness, bounded-core, A000568, and unital/C27 ledgers; then search n=5/n=6 for minimal class bases with exact-order separation. |
 | LTI-270 | Worpitzky pair-function three-edge quotient | Score-class K3 edge-flip classes, three-coin quotient classes, symmetric pair functions `a+b`/`a*b`, ordered exponent sidecars `a^b`/`b^a`, Worpitzky ascent payload, fiber-PGF order-loss alarm | HYP-3144/S274 gives the smallest exact test for deciding when a generating-function or tournament quotient preserves a proof predicate, now feeding HYP-3143's exact-order subbasis audit.  The two-class K3 edge-flip kernel is `[[2,1],[3,0]]`: transitive `T=(0,1,2)` has two self-class edge flips and one cyclic exit, while cyclic `C=(1,1,1)` has three exits to `T`; normalized eigenmodes are `1,-1/3`.  The three-coin quotient has the same mix/same matrix.  Forward-edge PGFs show the warning: both classes aggregate to `F=(1,4,1)`, but state-level curves differ.  Sum/product pair functions survive unordered-pair quotient; exponentials require ordered edge sidecars. | HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3137, HYP-3134, HYP-3124, THM-084, T1209, LTT-168, LTI-270, OPEN-Q-108 | Attach `pair_function_order_word`, `ordered_pair_exponent_sidecar`, `three_edge_flip_kernel`, `worpitzky_ascent_payload`, `edge_flip_role`, `fiber_pgf_order_loss_alarm`, and `tip_tail_commutator_shadow` to HYP-3140/HYP-3141/HYP-3139/HYP-3143 packet rows before scalarizing any PGF or score-class statistic. |
 | LTI-271 | Filler-core quotient interface | Finite filler scaffold, partial score/residue profile, small core variable pair, quotient-congruence status, nonminimal fiber alarm, deletion/forgetting exit, formal interface target | HYP-3145 imports the useful part of the Erdos-870 formalization as proof architecture: package a sparse or low-dimensional core, surround it with deterministic finite fillers, and prove the boundary before the terminal theorem.  The n=4 tournament check makes the guardrail explicit: the fixed-Hamiltonian-path `a,b,c` table is only a representative atlas because its `S` fiber has five states, while a four-fixed-arc partial-score scaffold leaves a congruent two-arc `x,y` Klein-square core. | HYP-3145, HYP-3143, HYP-3136, HYP-3135, HYP-3134, HYP-3132, HYP-3129, HYP-3125, HYP-3124, HYP-3118, HYP-3107, HYP-3054, HYP-3049, T1210, LTT-169, LTI-271, OPEN-Q-108, davidturturean/erdos-870 | Add `filler_core_interface`, `finite_filler_scaffold`, `partial_score_or_residue_profile`, `core_variable_pair`, `quotient_congruence_status`, `nonminimal_fiber_alarm`, `deletion_or_forgetting_exit`, and `formal_interface_target` before using factorized floors or small tournament tables as proof carriers. |
+| LTI-272 | n=4 filler/canary shift-package quotient | Fixed-path three-chord cover, finite-filler two-bit scaffold, `S` fiber PGF, delete-one-stable canary representative, monotone OR compression, quotient congruence status | HYP-3146/S274 is the deletion-stability companion to HYP-3143's exact-order audit, HYP-3144's ordered-pair guardrail, and HYP-3145's filler-core boundary.  The fixed-path table is a cover with `S` fiber size `5`, `S(z)=z+3z^2+z^3`, and a delete-one-stable `abc` canary; the finite scaffold fixes four arcs with partial score `(0,1,1,2)` and leaves `x,y` so `E,x,y,xy=T,+,-,S` is a Klein-four shift package.  The compression `x=a OR c`, `y=b OR c` is class-preserving but not linear. | HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-3053, HYP-3049, T1211, LTT-170, LTI-272, OPEN-Q-108 | Add `shift_package_scaffold_id`, `fixed_path_cover_fiber_pgf`, `canary_cluster_fiber`, `delete_one_stable_representative`, `monotone_or_compression_word`, `finite_filler_arc_set`, `quotient_congruence_status`, and `deletion_stability_status` before using fixed-path or A000568 quotients inside HYP-3141/HYP-3142 packets. |
 
 ## Cross-Cutting Guardrails
 
@@ -3527,3 +3528,40 @@ Next hook: rewrite one HYP-3125/HYP-3129 multi-far row with
 `partial_score_or_residue_profile`, `core_variable_pair`,
 `quotient_congruence_status`, `nonminimal_fiber_alarm`,
 `deletion_or_forgetting_exit`, and `formal_interface_target`.
+
+## LTI-272: n=4 Filler/Canary Shift-Package Quotient
+
+Used by codex-2026-06-27-S274 for HYP-3146/T1211, after rebasing over
+HYP-3143/T1208's exact-order subbasis audit, HYP-3144/T1209's Worpitzky
+pair-function quotient guardrail, and HYP-3145/T1210's filler-core interface.
+This technique asks whether a quotient should retain redundant fiber mass as a
+canary cluster or add finite filler/scaffold data to become a shift package.
+
+Carrier:
+
+```text
+shift_package_filler_canary =
+  fixed_path_cover_fiber_pgf
+  + finite_filler_arc_set
+  + monotone_or_compression_word
+  + delete_one_stable_representative
+  + quotient_congruence_status
+  + terminal_exit_or_named_debt
+```
+
+Exact n=4 readout: fixed-path free chords `a=(0,2)`, `b=(1,3)`, `c=(0,3)`
+give `T,+,-,S`, but the full cube maps `S={c,ab,ac,bc,abc}` with
+`S(z)=z+3z^2+z^3`.  A finite scaffold fixing `0->2,0->3,2->1,1->3` leaves
+`x=(0,1)`, `y=(2,3)` and gives a true Klein-four shift package
+`E,x,y,xy=T,+,-,S`.  The bridge is `x=a OR c`, `y=b OR c`.
+
+LRC use: if the next operation is deletion, keep the canary fiber; if the next
+operation is gluing/classification, add finite filler until quotient congruence
+holds.  HYP-3143 supplies the exact-order/no-lower-order audit, HYP-3144
+supplies the ordered-pair/function sidecar warning, HYP-3145 supplies the
+filler-core boundary, and HYP-3146 supplies the canary-versus-scaffold policy
+for remaining fiber mass.
+
+Pointers: HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141,
+HYP-3140, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-3053, HYP-3049,
+LTI-272, LTT-170, T1211, OPEN-Q-108.

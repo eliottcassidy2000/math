@@ -145,6 +145,11 @@ obligations, and proof-carrier interfaces.
   small core variables, nonminimal fibers, and formal interface targets the
   tournament vertices.  Treat fixed-path class products as atlases until a
   congruence check says they can be used downstream.
+- Need to decide whether an n=4/fixed-path quotient should keep redundant
+  fiber mass or become a shift package:
+  use LTT-170 after LTT-160/LTT-165/LTT-166/LTT-167/LTT-168/LTT-169 and record
+  the finite filler scaffold, fixed-path fiber PGF, canary cluster, monotone OR
+  compression, and deletion-stability status before quotienting.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5634,3 +5639,30 @@ constant chase.
 - **Pointers:** HYP-3145, HYP-3143, HYP-3136, HYP-3135, HYP-3134, HYP-3132, HYP-3129,
   HYP-3125, HYP-3124, HYP-3118, HYP-3107, HYP-3054, HYP-3049, LTI-271,
   LTT-169, T1210, OPEN-Q-108, davidturturean/erdos-870.
+
+## LTT-170: Tournament Of Filler/Canary Shift-Package Carriers
+
+- **Move:** Rank proof-carrier interpretations of the two n=4 tournament
+  models: finite-filler scaffold, clustered canary S fiber, monotone OR
+  compression, fixed-path cube, edge tip/tail packet, fiber-PGF moment packet,
+  and raw class-count shadows.
+- **LRC use:** HYP-3146 says fixed-path quotients are legal only after deciding
+  whether redundant fiber mass is serving deletion stability or should be
+  killed by finite filler/scaffold data.  It is the canary/scaffold companion to
+  HYP-3143's exact-order audit, HYP-3144's ordered-pair guardrail, and
+  HYP-3145's filler-core interface, and feeds HYP-3141 edge packets and
+  HYP-3142 bounded-core exits.
+- **Pairwise observable:** majority over predicate retention, exactness,
+  quotient legality, fiber memory, deletion stability, and LRC transfer.
+- **Fingerprint:** `score_hist={0:1,1:1,3:2,4:2,6:1,7:1}`,
+  `directed_3cycles=2`, selected path
+  `edge_tip_tail_witness_packet -> finite_filler_scaffold_shift_package ->
+  clustered_canary_S_fiber -> monotone_OR_shift_package ->
+  fiber_PGF_moment_packet -> fixed_path_half_tiling_cube ->
+  raw_score_sequence_class -> raw_fixed_path_class_count`.
+- **Next pull:** Attach `shift_package_scaffold_id`, `canary_cluster_fiber`,
+  `monotone_or_compression_word`, and `deletion_stability_status` to
+  HYP-3141/HYP-3142 packet ledgers.
+- **Pointers:** HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141,
+  HYP-3140, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-3053, HYP-3049,
+  LTI-272, LTT-170, T1211, OPEN-Q-108.

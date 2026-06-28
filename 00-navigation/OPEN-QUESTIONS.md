@@ -1,5 +1,21 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3146 filler/canary shift-package addendum:**
+HYP-3146 imports the erdos-870 proof architecture only as a quotient-design
+rule, as a companion to HYP-3143's exact-order subbasis audit and HYP-3145's
+filler-core interface.  In the n=4
+fixed-path model, `S` has fiber `{c,ab,ac,bc,abc}` and PGF `z+3z^2+z^3`; the
+finite scaffold model fixes four arcs and turns `E,x,y,xy` into the exact
+`T,+,-,S` shift package.  The bridge is `x=a OR c`, `y=b OR c`.
+
+Open task: add `shift_package_scaffold_id`, `fixed_path_cover_fiber_pgf`,
+`canary_cluster_fiber`, `delete_one_stable_representative`, and
+`quotient_congruence_status` to HYP-3141/HYP-3142 packet rows, then test
+whether k=8 edge/fiber quotients need canary redundancy or finite filler
+scaffolds before quotienting. -> HYP-3146, HYP-3145, HYP-3143, HYP-3142,
+HYP-3141, HYP-3140, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-3053, HYP-3049,
+LTI-272, LTT-170, T1211, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3138 k=8 reflection-fold addendum:**
 HYP-3138 tests the quotient suggested by the HYP-3132 De Moivre/biquadratic
 hard-row reduction.  The even fold

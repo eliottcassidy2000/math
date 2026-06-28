@@ -14,6 +14,28 @@ over proof carriers rather than raw runners.  LRC14 purpose: add a smallest
 exact warning label before scalarizing HYP-3140 fiber-PGF coefficients,
 HYP-3141 edge tip/tail witnesses, HYP-3139 reflection-block leakage, or
 HYP-3143 exact-order packet bases.
+## codex-2026-06-27-S274 -- n=4 filler/canary shift-package quotient -- HYP-3146
+
+User asked to connect davidturturean/erdos-870 and two n=4 tournament modeling
+schemes to the LRC/tournament quotient stack.  Added HYP-3146/T1211/LTI-272/
+LTT-170 plus exact scout
+`04-computation/tournament_n4_shift_package_erdos870_codex_s274.py`.
+After rebasing over S276, HYP-3143/T1208/LTI-269/LTT-167 is the exact-order
+subbasis audit; after the later S274 rebase, HYP-3145/T1210/LTI-271/LTT-169 is
+the filler-core interface and this S274 packet is the filler/canary companion.
+
+Main result: the fixed-Hamiltonian-path model is a three-bit cover, not a
+group quotient.  With `a=(0,2)`, `b=(1,3)`, `c=(0,3)`, the full cube has
+`S={c,ab,ac,bc,abc}` and `S(z)=z+3z^2+z^3`; only `abc` is delete-one-stable.
+The finite-filler model fixes `0->2,0->3,2->1,1->3`, leaves `x=(0,1)`,
+`y=(2,3)`, partial score `(0,1,1,2)`, and makes `E,x,y,xy=T,+,-,S` a
+Klein-four shift package.  The bridge is `x=a OR c`, `y=b OR c`.
+
+Proof synthesis: erdos-870 contributes architecture, not a direct LRC theorem:
+finite fillers make shift packages, while canary clusters preserve
+deletion-stable nonminimality.  HYP-3141/HYP-3142 packet rows should explicitly
+state whether they are keeping redundant fiber mass or using finite
+filler/scaffold data to make quotienting legal.
 
 Scout completed in
 `04-computation/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.py`;

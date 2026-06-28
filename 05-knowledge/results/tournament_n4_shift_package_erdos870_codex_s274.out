@@ -1,0 +1,80 @@
+HYP-3146 / codex-2026-06-27-S274
+n=4 tournament shift-package scout inspired by Erdos-870 filler/canary logic
+
+External trigger: davidturturean/erdos-870 negative answer to Erdos Problem #870
+Transferable proof pattern: sparse core + finite filler gadget + shift package + canary cluster + deletion-stable nonminimality
+
+FIXED-PATH / HALF-TILING MODEL
+base path: 0->1->2->3; transitive base class T
+free chords: a=(0,2), b=(1,3), c=(0,3)
+restricted generator table matching the prompt:
+          E   a   b   c
+    E |   T   +   -   S
+    a |   +   T   S   S
+    b |   -   S   T   S
+    c |   S   S   S   T
+
+full F2^3 fixed-path fibers:
+  T: [()]
+  +: [('a',)]
+  -: [('b',)]
+  S: [('a', 'b'), ('c',), ('a', 'c'), ('b', 'c'), ('a', 'b', 'c')]
+fiber sizes: {'T': 1, '+': 1, '-': 1, 'S': 5}
+class PGFs by flip weight:
+  T: 1*z^0
+  +: 1*z^1
+  -: 1*z^1
+  S: 1*z^1 + 3*z^2 + 1*z^3
+S-fiber deletion robustness:
+  ('a', 'b'): delete-one children=['-', '+']; all_S=False
+  ('c',): delete-one children=['T']; all_S=False
+  ('a', 'c'): delete-one children=['S', '+']; all_S=False
+  ('b', 'c'): delete-one children=['S', '-']; all_S=False
+  ('a', 'b', 'c'): delete-one children=['S', 'S', 'S']; all_S=True
+
+FINITE-FILLER / TWO-BIT SHIFT-PACKAGE MODEL
+fixed scaffold arrows:
+  (0, 2): 0->2
+  (0, 3): 0->3
+  (1, 2): 2->1
+  (1, 3): 1->3
+partial outscore vector=(2, 1, 1, 0); sorted=(0, 1, 1, 2)
+x variable edge=(0, 1); y variable edge=(2, 3)
+restricted table from the prompt:
+          E   x   y
+    E |   T   +   -
+    x |   +   T   S
+    y |   -   S   T
+full Klein-four table after adding xy=S:
+          E   x   y  xy
+    E |   T   +   -   S
+    x |   +   T   S   -
+    y |   -   S   T   +
+   xy |   S   -   +   T
+
+CLASS-PRESERVING COMPRESSION FROM MODEL A TO MODEL B
+x = a OR c, y = b OR c.  The c chord is the clustered canary: it activates both endpoint variables.
+  abc=(0, 0, 0) -> xy=(0, 0); fixed-path=T; scaffold=T; ok=True
+  abc=(0, 0, 1) -> xy=(1, 1); fixed-path=S; scaffold=S; ok=True
+  abc=(0, 1, 0) -> xy=(0, 1); fixed-path=-; scaffold=-; ok=True
+  abc=(0, 1, 1) -> xy=(1, 1); fixed-path=S; scaffold=S; ok=True
+  abc=(1, 0, 0) -> xy=(1, 0); fixed-path=+; scaffold=+; ok=True
+  abc=(1, 0, 1) -> xy=(1, 1); fixed-path=S; scaffold=S; ok=True
+  abc=(1, 1, 0) -> xy=(1, 1); fixed-path=S; scaffold=S; ok=True
+  abc=(1, 1, 1) -> xy=(1, 1); fixed-path=S; scaffold=S; ok=True
+
+INTERPRETATION
+1. Model A is a fixed-path cover: F2^3 -> {T,+,-,S} with S fiber size 5.
+2. Model B is a finite-filler section: fixing one more arc makes {T,+,-,S} a two-bit shift package.
+3. The user tables are not both the same algebra: Model A is a generator-local absorbing-ideal table, not a congruence; Model B becomes the Klein four group once xy=S is named.
+4. Erdos-870 suggests a proof move for LRC packets: add finite filler/scaffold data until the quotient becomes a shift package, but keep canary-cluster redundancy when deletion stability is the predicate.
+5. Generating-function signal: Model A has S_PGF=z+3z^2+z^3, while Model B has S_PGF=z^2.  The whole difference is hidden fiber mass.
+
+TOURNAMENT ANALYSIS OVER PROOF-CARRIER INTERPRETATIONS
+vertices=proof carriers, not runners or raw arcs
+pairwise observable=majority over predicate retention, exactness, quotient legality, fiber memory, deletion stability, and LRC transfer
+switch=orient A->B when A wins more axes; ties prefer lower proof cost, then the listed guardrail path
+score_hist={0: 1, 1: 1, 3: 2, 4: 2, 6: 1, 7: 1}
+directed_3cycles=2
+edge_flips_against_listed_path=6
+selected_hamiltonian_path=edge_tip_tail_witness_packet -> finite_filler_scaffold_shift_package -> clustered_canary_S_fiber -> monotone_OR_shift_package -> fiber_PGF_moment_packet -> fixed_path_half_tiling_cube -> raw_score_sequence_class -> raw_fixed_path_class_count
