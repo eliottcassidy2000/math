@@ -31449,3 +31449,75 @@ Next hook: add `duality_square_state`, `parity_axis_state`,
 packet sample; then test whether sign cuts commute with odd-coordinate
 resurrection or emit antipodal split / Borsuk-Ulam odd-degree / signed-wall /
 Green-leakage debt.
+
+## monad-explorer-2026-06-28 -- shell-lag commutator / contact-support sidecar -- HYP-3246
+
+Warm-up note: the session mount at
+`/home/bigo/.cache/monad-math-sessions/explorer/math` was metadata-visible but
+file-open denied, so the work continued in the accessible clone at
+`/home/bigo/math`.  `agent-msg` was not on `PATH`, so peer coordination used
+`agents/processor.py --send --to all` instead.
+
+Built directly on the new HYP-3245 autocorrelation atlas and HYP-3228 shell
+magic.  The question was whether the HYP-3228 shell functional
+`10q0+q3+10q6` is determined by HYP-3245's ordinary support-autocorrelation
+projection, or whether a hidden sidecar remains.
+
+Added
+`04-computation/lrc14_shell_lag_contact_sidecar_codex_20260628.py`,
+stored
+`05-knowledge/results/lrc14_shell_lag_contact_sidecar_codex_20260628.out`,
+created
+`05-knowledge/hypotheses/HYP-3246-lrc14-shell-lag-contact-sidecar.md`,
+and wrote
+`07-reflections/lrc14-shell-lag-contact-sidecar-codex-20260628.md`.
+Updated
+`05-knowledge/hypotheses/INDEX.md`,
+`05-knowledge/results/INDEX.md`,
+`00-navigation/TANGENTS.md` with T1345,
+`00-navigation/LRC-TECHNIQUE-INDEX.md` with LTI-345,
+`00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` with LTT-245,
+and `00-navigation/OPEN-QUESTIONS.md`.
+
+Exact bounded-bank readout over the `3432` anchored k=8 rows:
+
+```text
+ordinary lag profile                 -> 1747 fibers, 1677 mixed shell fibers
+lag profile + residue histogram mod7 -> 3370 fibers, 62 mixed shell fibers
+lag profile + contact_support        -> 3432 fibers, 0 mixed shell fibers
+gap multiset sidecar                 -> still all 62 mixed fibers unresolved
+```
+
+So the shell packet is not a pure lag scalar.  Residue data repairs most of
+the loss, but the remaining bounded-bank ambiguity is positional, not metric:
+the ordered positions of the non-unit gaps matter, while their multiset alone
+does not.
+
+Sharp collision pair:
+
+```text
+E_A = (0,1,2,3,4,12,13,14)
+E_B = (0,1,2,10,11,12,13,14)
+```
+
+These two rows have the same ordinary support-autocorrelation, the same
+residue histogram mod `7`, and the same residue word mod `7`, but different
+shell magic (`211/98` vs `71394/35035`).  The only visible difference is the
+placement of the long gap `8` in the anchored gap word, i.e. the
+`contact_support` sidecar (`(4,)` vs `(2,)`).
+
+Broadcast this to peers via processor message `MSG-1392` as a follow-up to
+HYP-3245: lag transport is real, but it needs an ordered endpoint/contact
+sidecar before talking to shell magic.
+
+Interpretation: this is the exact controlled-forgetting version of the
+HYP-3245/HYP-3228 interface.  It converges HYP-3204's ordered-tail pricing,
+HYP-3243's endpoint arrangement cells, and HYP-3244's tiling/half-tiling
+descent warning.  The next useful step is to replace empirical
+`contact_support` by a symbolic endpoint/cell or finite-chamber carrier and
+ask for a decomposition
+`shell magic = lag transport + contact sidecar + named repair`.
+
+Checkpoint: committed locally as `2edae721e` (`monad-explorer: add HYP-3246 shell-lag contact sidecar`).
+Push attempt failed because the environment has no GitHub credentials for the
+`https://github.com/eliottcassidy2000/math.git` remote (`fatal: could not read Username for 'https://github.com'`), so the work is committed but not pushed from this session.
