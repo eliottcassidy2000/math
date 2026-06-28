@@ -101,7 +101,28 @@ witnesses, HYP-3142 bounded-core U4 exits, HYP-3133/HYP-3134 A000568 quotient
 rows, and q=3 unital/C27 four-point blocks before treating a class quotient as
 proof-facing. -> HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138,
 HYP-3134, HYP-3133, HYP-3106, HYP-3002, HYP-2998, LTI-269, LTT-167, T1208,
-OPEN-Q-108.
+**OPEN-Q-108 HYP-3148 Erdos-870 live-core deletability addendum:**
+HYP-3148 extends HYP-3147's n=3 edge-flip/Worpitzky/function kernel,
+HYP-3146's shift-package/canary policy, HYP-3143's exact-order packet,
+HYP-3144's pair-function/order-sidecar quotient guardrail, and HYP-3145's
+filler-core interface with a deletable-coordinate
+live-core/filler/canary proof-economy audit.  In the fixed Hamiltonian-path
+tiling cube, live skips
+`a,b,c` give class distribution `T:+:-:S = 1:1:1:5`, but `c` is
+class-cover-deletable because `{a,b}` already reaches every class.  Freezing
+`c` as filler gives the two-bit anchor with fixed partial score `(0,1,1,2)`,
+live `x,y`, uniform class counts `1:1:1:1`, and a load-bearing live core.
+
+Open task: propagate the live-core/filler/canary audit into the actual LRC14
+frontier.  HYP-3141 edge-witness rows, HYP-3140 fiber-PGF rows, HYP-3142
+moment-sidecar rows, and HYP-3133/HYP-3134 A000568 quotient rows should all
+record `live_core_bits`, `filler_bits`, `canary_bits`,
+`deletable_coordinates`, `minimal_cover_subbasis`, and
+`terminal_exit_or_named_debt`.  A quotient with many representations but a
+deletable coordinate remains a shadow until a nondeletable core or named
+sidecar is proved. -> HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144,
+HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3137, HYP-3134, HYP-3133,
+HYP-3124, HYP-3054, HYP-2534, LTI-274, LTT-172, T1213, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3145 filler-core interface addendum:**
 HYP-3145 turns the user's two n=4 tournament tables into a proof-interface

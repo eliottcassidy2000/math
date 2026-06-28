@@ -98,6 +98,16 @@ Useful synthetic maps added later:
   reduction, De Moivre biquadratic folding, Bravais residue-flatness, Savitch
   repair depth, Lee-Yang confinement, and A000568 controlled-forgetting into
   one terminal sidecar packet.
+- `07-reflections/erdos870-live-core-filler-canary-codex-s275.md`:
+  HYP-3148/T1213 note importing the Erdos-870 no-minimal-subbasis warning into
+  the user's two n=4 tournament tables.  It continues HYP-3143/T1208's
+  exact-order subbasis packet, HYP-3144/T1209's pair-function quotient
+  guardrail, and HYP-3145/T1210's filler-core interface by separating the
+  three-bit fixed-path tiling cube from the two-bit anchor as two proof
+  economies: live core, deterministic filler, canary/shift control, and
+  deletable coordinates.  The practical export is the ledger row
+  `live_core_bits + filler_bits + canary_bits + deletable_coordinates +
+  minimal_cover_subbasis + terminal_exit_or_named_debt`.
 
 ## Second-Pass Small Motif Ledger
 

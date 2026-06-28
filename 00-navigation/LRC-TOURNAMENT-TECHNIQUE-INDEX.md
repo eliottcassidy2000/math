@@ -154,6 +154,11 @@ obligations, and proof-carrier interfaces.
   use LTT-170 after LTT-160/LTT-165/LTT-166/LTT-167/LTT-168/LTT-169 and record
   the finite filler scaffold, fixed-path fiber PGF, canary cluster, monotone OR
   compression, and deletion-stability status before quotienting.
+- Need to decide whether a small tournament quotient has real proof support:
+  use LTT-172 after LTT-157/LTT-160/LTT-166/LTT-170/LTT-171 and audit live
+  core, filler, canary, deletable coordinates, class distribution, and
+  minimal-cover subbasis before treating witness multiplicity or score-class
+  multiplicity as proof evidence.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5703,4 +5708,44 @@ constant chase.
 - **Pointers:** HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143,
   HYP-3142, HYP-3141, HYP-3139, HYP-3138, HYP-3134, HYP-3133,
   HYP-3129, HYP-3124, HYP-3106, THM-084, LTI-273, LTT-171, T1212,
+  OPEN-Q-108.
+
+## LTT-172: Erdos-870 Live-Core/Filler Deletability Tables
+
+- **Move:** Read a colored tournament table as a proof economy:
+  live-core coordinates, deterministic filler, canary/shift controls,
+  deletable coordinates, class distribution, minimal-cover subbasis, and
+  terminal exit/debt.
+- **LRC use:** HYP-3148/S275 extends HYP-3147/S277, HYP-3146/S274,
+  HYP-3143/S276, HYP-3144/S274, and HYP-3145.  HYP-3147 gives the local
+  n=3 edge-flip/Worpitzky/function kernel, HYP-3146 gives the
+  shift-package/canary policy, HYP-3143 gives the exact-order subbasis audit,
+  HYP-3144 gives the pair-function/order-sidecar quotient guardrail, HYP-3145
+  gives the filler-core interface, and HYP-3148 adds the deletable-coordinate
+  live-core/filler/canary audit.
+  The user's fixed-path n=4 tiling cube and two-bit anchor are both correct
+  but carry different proof payloads.
+  The three-bit cube with live `a,b,c` has class distribution
+  `T:+:-:S = 1:1:1:5`, and the long diagonal `c` is class-cover-deletable
+  because `{a,b}` already reaches all four classes.  Freezing `c` as filler
+  gives a two-bit anchor with fixed partial score `(0,1,1,2)`, live `x,y`,
+  uniform counts `1:1:1:1`, and a load-bearing core.
+- **Preserves:** the distinction between representation abundance and minimal
+  proof support, the HYP-3124/HYP-3141 tail/tip packet rule, the HYP-3140
+  coefficient-packet rule, and the HYP-3142 sidecar-terminal rule.
+- **Forgets / guardrail:** the n=4 table itself is not an LRC14 proof and does
+  not import Erdos-870 as a black-box theorem.  It only supplies the audit
+  pattern: many witnesses do not prove a nondeletable support.
+- **Fingerprint:** proof-carrier tournament is transitive with selected path
+  `two_bit_canary_anchor -> erdos870_deletable_subbasis_audit ->
+  edge_witness_tip_tail_packet -> fixed_path_tiling_cube ->
+  score_sequence_color_table -> raw_A000568_class_count`.
+- **Next pull:** Add `live_core_bits`, `filler_bits`, `canary_bits`,
+  `deletable_coordinates`, `class_distribution`, `minimal_cover_subbasis`, and
+  `terminal_exit_or_named_debt` to tournament quotient ledgers.  Run the audit
+  on HYP-3141 edge rows and on HYP-3140/HYP-3142 coefficient/moment packets.
+- **Pointers:** HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143,
+  HYP-3142, HYP-3141, HYP-3140, HYP-3137, HYP-3134, HYP-3133, HYP-3124,
+  HYP-3054, HYP-2534, LTI-274, LTT-172, LTI-273, LTT-171, LTI-272,
+  LTT-170, LTI-271, LTT-169, LTI-270, LTT-168, LTI-269, LTT-167, T1213,
   OPEN-Q-108.

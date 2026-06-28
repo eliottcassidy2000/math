@@ -1,0 +1,67 @@
+HYP-3148 / codex-2026-06-27-S275
+Erdos-870 filler/canary lens for two n=4 tournament tables
+
+1. EXTERNAL PATTERN IMPORT
+Erdos-870 negative answer pattern:
+  large representation lower bound does not force a minimal subbasis
+  proof shape = order-two core + deterministic filler + clustered canary + deletability audit
+LRC/tournament translation:
+  class multiplicity is not proof support; keep live bits, filler bits, and deletion tests
+
+2. N=4 CLASSES
+  T: score_sequence=(0, 1, 2, 3)
+  S: score_sequence=(1, 1, 2, 2)
+  +: score_sequence=(0, 2, 2, 2)
+  -: score_sequence=(1, 1, 1, 3)
+
+3. SCHEME A: FIXED HAMILTONIAN PATH, LIVE SKIPS a,b,c
+    E: bits=(0, 0, 0, 0, 0, 0) score=(0, 1, 2, 3) class=T
+    a: bits=(0, 1, 0, 0, 0, 0) score=(0, 2, 2, 2) class=+
+    b: bits=(0, 0, 0, 0, 1, 0) score=(1, 1, 1, 3) class=-
+   ab: bits=(0, 1, 0, 0, 1, 0) score=(1, 1, 2, 2) class=S
+    c: bits=(0, 0, 1, 0, 0, 0) score=(1, 1, 2, 2) class=S
+   ac: bits=(0, 1, 1, 0, 0, 0) score=(1, 1, 2, 2) class=S
+   bc: bits=(0, 0, 1, 0, 1, 0) score=(1, 1, 2, 2) class=S
+  abc: bits=(0, 1, 1, 0, 1, 0) score=(1, 1, 2, 2) class=S
+  class_counts_full_cube={'T': 1, '+': 1, '-': 1, 'S': 5} entropy_bits=1.548795
+  minimal_all_class_covers=[('a', 'b')]
+  user_table_on_Eabc:
+          E  a  b  c
+      E |  T  +  -  S
+      a |  +  T  S  S
+      b |  -  S  T  S
+      c |  S  S  S  T
+
+4. SCHEME B: FIX FOUR ARCS, LIVE x,y
+  canonical_live: x=(0,2), y=(1,3); fixed={(0, 1):0, (0, 3):0, (1, 2):0, (2, 3):0}
+  fixed_partial_score=(0, 1, 1, 2) base_bits=(0, 0, 0, 0, 0, 0) base_class=T
+  class_counts_full_square={'T': 1, '+': 1, '-': 1, 'S': 1} entropy_bits=2.000000
+  minimal_all_class_covers=[('x', 'y')]
+  user_table_on_Exy:
+          E  x  y
+      E |  T  +  -
+      x |  +  T  S
+      y |  -  S  T
+  all_labelled_two_bit_anchors=24
+  anchor_pair_type_hist={'disjoint': 24}
+  anchor_free_pair_hist={((0, 1), (2, 3)): 8, ((0, 2), (1, 3)): 8, ((0, 3), (1, 2)): 8}
+
+5. SYNTHESIS
+  Scheme B is Scheme A with the long diagonal c frozen as deterministic filler.
+  This turns the skewed class distribution T:+:-:S = 1:1:1:5 into 1:1:1:1.
+  In Scheme A, c is class-cover-deletable because {a,b} already reaches T,+,-,S.
+  In Scheme B, both live bits are load-bearing; deleting x or y loses class coverage.
+  Erdos-870 warns that many representations can hide non-minimality; the LRC ledger should
+  therefore record live_core_bits, filler_bits, canary_bits, deletable_coordinates,
+  class_distribution, and terminal_exit_or_named_debt before using a tournament quotient.
+
+6. TOURNAMENT ANALYSIS OVER PROOF CARRIERS
+  vertices=6 axes=keeps_live_core,names_filler,detects_deletable_coordinate,separates_class_from_rep_count,preserves_edge_witness_payload,lrc_packet_handoff,lean_formalization_shape,failure_guardrail
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3cycles=0
+  selected_hamiltonian_path=two_bit_canary_anchor -> erdos870_deletable_subbasis_audit -> edge_witness_tip_tail_packet -> fixed_path_tiling_cube -> score_sequence_color_table -> raw_A000568_class_count
+  top_hooks:
+   - two_bit_canary_anchor: preserves=a minimal x/y core with one representation of each n=4 class; next=promote every LRC quotient to a live-core plus filler/canary packet
+   - erdos870_deletable_subbasis_audit: preserves=the warning that many representations need not imply minimal proof support; next=attach deletable-coordinate tests to edge/fiber/U4 ledgers
+   - edge_witness_tip_tail_packet: preserves=HYP-3141's Tail/Tip/Orbit/Comm/Exit fields for directed edges; next=add core/filler/canary words to edge_bounded_core_floor_exit
+   - fixed_path_tiling_cube: preserves=the original Hamiltonian-path tiling model and its three free skips; next=freeze the long diagonal c when the proof needs a minimal core

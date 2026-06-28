@@ -29006,3 +29006,37 @@ and HYP-3142 k=8 shell packets.  Test whether the local `-1/3` eigenmode
 aligns with HYP-3129 signed SPEC low modes, and treat the HYP-3139
 antisymmetric nonmax block as order-sensitive payload rather than disposable
 noise.
+
+## codex-2026-06-27-S275 -- Erdos-870 live-core deletability audit -- HYP-3148
+
+Integrated the user's two n=4 tournament-table models with the newly solved
+Erdos-870 proof-interface warning: many representations do not force a minimal
+subbasis.  This was renumbered to HYP-3148 after incoming S276 claimed
+HYP-3143/T1208/LTI-269/LTT-167 for the exact-order subbasis packet, incoming
+S274 claimed HYP-3144/T1209/LTI-270/LTT-168 for the Worpitzky pair-function
+quotient, incoming HYP-3145/T1210/LTI-271/LTT-169 claimed the filler-core
+interface, and incoming S274/HYP-3146/T1211/LTI-272/LTT-170 claimed the
+shift-package canary/scaffold policy, and incoming S277/HYP-3147/T1212/LTI-273/
+LTT-171 claimed the n=3 edge-flip/Worpitzky/function kernel; the S275
+contribution is the adjacent deletable-coordinate live-core/filler/canary audit.
+Added
+`04-computation/lrc14_erdos870_live_core_canary_scout_codex_s275.py`, stored
+`05-knowledge/results/lrc14_erdos870_live_core_canary_scout_codex_s275.out`,
+detail `05-knowledge/hypotheses/HYP-3148-erdos870-live-core-filler-canary.md`,
+and reflection `07-reflections/erdos870-live-core-filler-canary-codex-s275.md`.
+
+The exact scout verifies both requested tables.  The fixed Hamiltonian-path
+tiling cube with live skips `a,b,c` has class distribution
+`T:+:-:S = 1:1:1:5`; the long diagonal `c` is class-cover-deletable because
+`{a,b}` already reaches all four n=4 classes.  Freezing `c` as deterministic
+filler gives the two-bit anchor with fixed partial score `(0,1,1,2)`, live
+opposite skips `x,y`, uniform class distribution `1:1:1:1`, and a load-bearing
+live core.  There are `24` labelled two-bit anchors, all using disjoint live
+pairs.
+
+Synthesis: treat small tournament quotients as proof economies, not scalar
+counts.  Add `live_core_bits`, `filler_bits`, `canary_bits`,
+`deletable_coordinates`, `class_distribution`, `minimal_cover_subbasis`, and
+`terminal_exit_or_named_debt` to HYP-3141 edge rows and HYP-3140/HYP-3142
+coefficient/moment packets before using witness or class multiplicity as proof
+evidence.

@@ -78,6 +78,7 @@ normal-fan Cech barcode component ledger / direct L_14 component bound / finite-
 first-obstruction cocycle generation / observer-cut syndrome / certificate-cycle image
 Lee-Yang miss-count PGF root ledger / one-runner ear payload / root-motion reconstruction
 PGF root-locus / Lee-Yang zero-free margin / Bravais relation-lattice shape / ear-certificate type
+live-core/filler/canary tournament quotient / deletable-coordinate audit / minimal-cover subbasis
 theta/crystallographic sidecar ledger / De Moivre fold / theta tail / orbifold quotient audit
 Minkowski/circuit/Ising carrier ledger / q-lattice body / proof DAG / partition-zero geometry
 Minkowski/circuit/Ising/PDE compiler / weak-form zero modes / proof-DAG sidecar gates
@@ -414,6 +415,7 @@ record what it destroys before asking it to prove anything.
 | LTI-271 | Filler-core quotient interface | Finite filler scaffold, partial score/residue profile, small core variable pair, quotient-congruence status, nonminimal fiber alarm, deletion/forgetting exit, formal interface target | HYP-3145 imports the useful part of the Erdos-870 formalization as proof architecture: package a sparse or low-dimensional core, surround it with deterministic finite fillers, and prove the boundary before the terminal theorem.  The n=4 tournament check makes the guardrail explicit: the fixed-Hamiltonian-path `a,b,c` table is only a representative atlas because its `S` fiber has five states, while a four-fixed-arc partial-score scaffold leaves a congruent two-arc `x,y` Klein-square core. | HYP-3145, HYP-3143, HYP-3136, HYP-3135, HYP-3134, HYP-3132, HYP-3129, HYP-3125, HYP-3124, HYP-3118, HYP-3107, HYP-3054, HYP-3049, T1210, LTT-169, LTI-271, OPEN-Q-108, davidturturean/erdos-870 | Add `filler_core_interface`, `finite_filler_scaffold`, `partial_score_or_residue_profile`, `core_variable_pair`, `quotient_congruence_status`, `nonminimal_fiber_alarm`, `deletion_or_forgetting_exit`, and `formal_interface_target` before using factorized floors or small tournament tables as proof carriers. |
 | LTI-272 | n=4 filler/canary shift-package quotient | Fixed-path three-chord cover, finite-filler two-bit scaffold, `S` fiber PGF, delete-one-stable canary representative, monotone OR compression, quotient congruence status | HYP-3146/S274 is the deletion-stability companion to HYP-3143's exact-order audit, HYP-3144's ordered-pair guardrail, and HYP-3145's filler-core boundary.  The fixed-path table is a cover with `S` fiber size `5`, `S(z)=z+3z^2+z^3`, and a delete-one-stable `abc` canary; the finite scaffold fixes four arcs with partial score `(0,1,1,2)` and leaves `x,y` so `E,x,y,xy=T,+,-,S` is a Klein-four shift package.  The compression `x=a OR c`, `y=b OR c` is class-preserving but not linear. | HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-3053, HYP-3049, T1211, LTT-170, LTI-272, OPEN-Q-108 | Add `shift_package_scaffold_id`, `fixed_path_cover_fiber_pgf`, `canary_cluster_fiber`, `delete_one_stable_representative`, `monotone_or_compression_word`, `finite_filler_arc_set`, `quotient_congruence_status`, and `deletion_stability_status` before using fixed-path or A000568 quotients inside HYP-3141/HYP-3142 packets. |
 | LTI-273 | n=3 edge-flip Worpitzky/function kernel | Two-class edge-flip Markov kernel `C/T`, minority-edge gate, Worpitzky descent refinement of the transitive fiber, and ordered-vs-symmetric pair-function sidecar | HYP-3147/S277 gives the exact local triangle kernel: straight coin words are cyclic and `2:1` mixes are transitive; one-edge flips have transition matrix `[[0,1],[1/3,2/3]]`, stationary `(1/4,3/4)`, and eigenvalue `-1/3`.  Inside the transitive fiber, descents split `1,4,1`, the n=3 Worpitzky/Eulerian row.  The function quartet splits into symmetric shadows `a+b,a*b` and ordered channels `a^b,b^a`; only the ordered channel sees orientation. | HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3139, HYP-3138, HYP-3134, HYP-3133, HYP-3129, HYP-3124, HYP-3106, THM-084, T1212, LTT-171, LTI-273, OPEN-Q-108 | Add `edge_flip_class_kernel`, `minority_edge_gate`, `worpitzky_descent_word`, `ordered_function_payload`, and `symmetric_shadow_warning` to edge-witness and packet-basis ledgers; test whether the local `-1/3` mode aligns with HYP-3129 signed SPEC low modes. |
+| LTI-274 | Erdos-870 live-core/filler/canary deletability audit | Live core bits, deterministic filler bits, canary/shift controls, deletable coordinates, class distribution, minimal-cover subbasis, terminal exit/debt | HYP-3148/S275 extends HYP-3147's n=3 edge-flip/Worpitzky function kernel, HYP-3146's shift-package/canary policy, HYP-3143's exact-order subbasis packet, HYP-3144's pair-function/order-sidecar quotient guardrail, and HYP-3145's filler-core interface with the adjacent deletable-coordinate audit.  The fixed-path tiling cube with live skips `a,b,c` has class counts `T:+:-:S = 1:1:1:5`; `c` is class-cover-deletable because `{a,b}` already covers all four classes.  Freezing `c` as filler gives the two-bit anchor with fixed partial score `(0,1,1,2)`, live `x,y`, uniform class counts `1:1:1:1`, and load-bearing live core. | HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3137, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-2534, T1213, LTT-172, LTI-274, OPEN-Q-108 | Add `live_core_bits`, `filler_bits`, `canary_bits`, `deletable_coordinates`, `class_distribution`, `minimal_cover_subbasis`, and `terminal_exit_or_named_debt` to tournament quotient rows; reject witness/class multiplicity until a nondeletable core or named filler/canary debt is recorded. |
 
 ## Cross-Cutting Guardrails
 
@@ -3616,3 +3618,59 @@ Next hook: add `edge_flip_class_kernel`, `minority_edge_gate`,
 `symmetric_shadow_warning` to HYP-3141 edge witnesses and HYP-3143 packet
 bases.  Test whether the local `-1/3` eigenmode appears inside HYP-3129's
 signed SPEC low-frequency constant chase.
+
+Pointers: HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142,
+HYP-3141, HYP-3139, HYP-3138, HYP-3134, HYP-3133, HYP-3129, HYP-3124,
+HYP-3106, THM-084, LTI-273, LTT-171, T1212, OPEN-Q-108.
+
+## LTI-274: Erdos-870 Live-Core/Filler/Canary Deletability Audit
+
+Used by codex-2026-06-27-S275 for HYP-3148/T1213.  This technique treats the
+two n=4 tournament tables as proof-economy witnesses rather than as small
+classification facts.  It is a continuation of HYP-3147/LTI-273,
+HYP-3146/LTI-272, HYP-3143/LTI-269, HYP-3144/LTI-270, and HYP-3145/LTI-271:
+the n=3 edge-flip kernel names local orientation/function sidecars, shift
+packages decide canary fiber versus scaffold policy, exact-order subbasis
+excludes lower-order leakage, pair-function quotienting names ordered sidecars,
+filler-core interface names the retained small core, and live-core/filler/canary
+audit names which coordinates are load-bearing.  The import from Erdos-870 is
+the no-minimality warning: large representation counts can coexist with no
+minimal subbasis, so LRC quotients must name which coordinates are live and
+which are filler, canary, or deletable.
+
+Exact n=4 evidence:
+
+```text
+fixed-path tiling cube:
+  live skips a=(0,2), b=(1,3), c=(0,3)
+  class counts T:+:-:S = 1:1:1:5
+  minimal all-class cover = {a,b}
+  c is class-cover-deletable
+
+two-bit anchor:
+  fixed partial score = (0,1,1,2)
+  live x=(0,2), y=(1,3)
+  class counts T:+:-:S = 1:1:1:1
+  minimal all-class cover = {x,y}
+  all 24 labelled anchors use disjoint live pairs
+```
+
+Preserves: the difference between witness abundance and nondeletable proof
+support; the HYP-3124/HYP-3141 edge-witness discipline; the HYP-3140
+fiber-PGF and HYP-3142 moment-sidecar requirement that a scalar be backed by a
+typed packet.
+
+Destroys if used alone: global LRC coverage, actual residual legality, and any
+right to import additive-basis theorems as black boxes.  This is a ledger rule,
+not a proof shortcut.
+
+Next hook: annotate HYP-3141 edge rows and HYP-3140/HYP-3142 coefficient or
+moment rows with
+`live_core_bits + filler_bits + canary_bits + deletable_coordinates +
+minimal_cover_subbasis + terminal_exit_or_named_debt`.  If a coordinate is
+deletable under the quotient, either drop it from the terminal packet or name
+the sidecar that makes it proof-relevant.
+
+Pointers: HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143,
+HYP-3142, HYP-3141, HYP-3140, HYP-3137, HYP-3134, HYP-3133, HYP-3124,
+HYP-3054, HYP-2534, LTI-274, LTT-172, T1213, OPEN-Q-108.

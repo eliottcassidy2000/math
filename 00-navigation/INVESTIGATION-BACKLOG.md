@@ -64,6 +64,47 @@ companion to HYP-3143's exact-order subbasis audit and HYP-3145's filler-core
 interface.  Next: attach
 filler/canary fields to HYP-3141/HYP-3142 ledgers and test if quotienting k=8
 packet fibers requires deletion-stable canaries or finite-filler congruence.
+## Lead codex-2026-06-27-S275: Erdos-870 live-core deletability audit
+
+**Status:** SYNTHESIS / exact n=4 table scout; not proof
+(HYP-3148/T1213).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3148-erdos870-live-core-filler-canary.md`,
+`04-computation/lrc14_erdos870_live_core_canary_scout_codex_s275.py`,
+`05-knowledge/results/lrc14_erdos870_live_core_canary_scout_codex_s275.out`,
+and `07-reflections/erdos870-live-core-filler-canary-codex-s275.md`.
+
+Readout: this continues HYP-3143/S276's exact-order subbasis packet,
+HYP-3144/S274's pair-function/order-sidecar quotient guardrail, and HYP-3145's
+filler-core interface, and now HYP-3146/S274's shift-package canary/scaffold
+policy plus S277/HYP-3147's n=3 edge-flip/Worpitzky/function kernel, by adding
+the deletable-coordinate live-core/filler/canary audit.  The user's two n=4
+tournament tables are both
+exact.  The fixed
+Hamiltonian-path tiling cube with live skips `a,b,c` has class distribution
+`T:+:-:S = 1:1:1:5`; the long diagonal `c` is class-cover-deletable because
+`{a,b}` already reaches all four classes.  Freezing `c` as deterministic
+filler gives the two-bit anchor with fixed partial score `(0,1,1,2)`, live
+opposite skips `x,y`, uniform class distribution `1:1:1:1`, and load-bearing
+live core `{x,y}`.  The scout finds `24` labelled two-bit anchors, all with
+disjoint live pairs, split evenly across the three perfect matchings.
+
+LRC14 transfer: import the Erdos-870 no-minimal-subbasis warning as a quotient
+audit.  Many witnesses, score classes, or representations do not prove minimal
+support.  Add `live_core_bits`, `filler_bits`, `canary_bits`,
+`deletable_coordinates`, `class_distribution`, `minimal_cover_subbasis`,
+`edge_bounded_core_floor_exit`, and `terminal_exit_or_named_debt` to
+edge-witness, fiber-PGF, A000568, and k=8 sidecar rows before scalarizing.
+
+Next: run the live-core/filler/canary audit on HYP-3141 edge rows and on the
+HYP-3140/HYP-3142 coefficient/moment packets; a coordinate that is deletable in
+the local quotient should not be treated as part of the terminal proof payload.
+
+Namespace: HYP-3148 / LTI-274 / LTT-172 / T1213 / OPEN-Q-108.  Predecessor:
+HYP-3147 / LTI-273 / LTT-171 / T1212, HYP-3146 / LTI-272 / LTT-170 / T1211,
+HYP-3143 / LTI-269 / LTT-167 / T1208, HYP-3144 / LTI-270 / LTT-168 / T1209,
+and HYP-3145 / LTI-271 / LTT-169 / T1210.
 
 ## Lead codex-2026-06-27-S273: LRC14 generating-function payload atlas
 
