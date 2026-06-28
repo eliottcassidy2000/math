@@ -1,3 +1,32 @@
+## mac-mini-2026-06-27-S72 -- the Lee-Yang circle web: coverage=R^6, dip=off-circle phi^4, Galois<=S4, compression hierarchy
+
+Owner: merge a dense web (Lee-Yang circle=binomial=cap pair-Pascal+de-Moivre-Laplace, dip=phi^4 off-circle;
+extremality=circular zeros[low lambda]+large radius R, q0=q6*R^6; ear=odd-cycle/Omega; k=8 dual L_y=q0+q6+0.1q3
+=bimodality, consec maximizes it; flip-action is a transformation MONOID not V4, solvable via degree<=4 =>
+Galois<=S4; Newton-Maclaurin extremal at AP; compression failures beyond commutativity). HYP-3152 + reflection
+the-lee-yang-circle-web.
+
+VERIFIED (lrc_leeyang_circle_galois_newton_S72.py): q0 = q6*R^6 EXACT (Vieta), zeros NEAR a circle of radius
+R=(q0/q6)^(1/6)=1.59..1.96 (k=8..13, ratio 1.14-1.36). COVERAGE p0 = q6*R^6 IS A RADIUS. Two knobs: lambda->0
+(on circle) = binomial/Pascal/de-Moivre Gaussian = the EVEN face = cap=C(k+1,2)/91 (solvable); lambda>0
+(off-circle) = phi^4 = the dip = the ODD face = kappa3 = odd ear = Omega = Worpitzky. Extremality = large R +
+low lambda; consec extremizes.
+
+BIMODALITY + NEWTON-MACLAURIN: L_y=10q0+q3+10q6=10(q0+q6+0.1q3)=the bimodality functional; consec maximizes it.
+Newton defects p_k^2-p_(k-1)p_(k+1) ALL NEGATIVE at consec => consec = the EXTREMAL of the moment-inequality
+VIOLATION = max bimodality = max extreme-mass = 0 real roots (S66). One object, several names.
+
+GALOIS<=S4 (CORRECTS V4): the flip-action is a transformation MONOID (apex arc absorbing, T,+,-->S, swaps T<->S),
+NOT the group V4 (my S70/S71 V4 was the 2-arc slice). Rigorous solvability = dual degree<=4 => Galois<=S4 =>
+solvable by radicals; the specific gK8 duals have RATIONAL roots => trivial Galois (= why cap/dip are exact
+rationals). COMPRESSION HIERARCHY: linearity(score,even) exact n<=4 fails n=5; associativity(flip=XOR) always
+(monoid); invertibility(group) FAILS (absorbing apex collapses info); multiplicativity(H,cycle,odd)=irreducible.
+The absorbing apex arc = the tournament avatar of the apex prime 7 = the source of the off-circle odd content.
+
+TOWARD PROOF: cap = q6R^6(on-circle binomial) - dip(off-circle phi^4); bound the dip = [even biquadratic,
+solvable S70] + [odd Worpitzky/ear/kappa3, codex HYP-3147]; Galois<=S4 makes the even part explicit, the
+Lee-Yang circle keeps lambda small.
+
 ## kind-pasteur-2026-06-27-S31ah -- tournament proof TOOLKIT + the TWO MAPS (dual Lee-Yang extremality)
 
 Owner: (1) recall the H=7/21 impossibility-by-contradiction technique, generate OTHER tournament
