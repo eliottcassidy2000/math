@@ -11,3 +11,13 @@
   - DOUBLE zeros at the de Moivre angles 2cos(2pi j/7): the LP-SHARPNESS (config sits at the zeros)
   - = (de Moivre cubic)^2 = the Chebyshev V_7 equioscillation (HYP-3212)
   - the AP orbit's autocorrelation IS the Fejer kernel (the AP = sum of equispaced deltas)
+
+--- kps-S31ao: TWO magic functions (7-sector vs 14-clock) ---
+HONEST: the naive Fejer pairing sum_n (k-|n|)_+(7-|n|)_+ = 49k-112 = 7(7k-16) does NOT equal cap_k
+numerator C(k+1,2). So F_7 (the 7-SECTOR Fejer/de-Moivre magic function) does NOT directly give cap_k.
+RESOLUTION: cap_k = C(k+1,2)/C(14,2) is the JOHNSON SCHEME J(14,2) pair-Pascal magic function (mac-mini),
+on the 14-CLOCK (the 14 runners), NOT the 7-sector Fejer. So there are TWO cyclotomic/positive-definite
+magic functions: F_7 (7-sector, Fejer, de Moivre angles, the COVERAGE-PGF/Lee-Yang side) and the Johnson
+J(14,2) pair-Pascal (14-clock, the CAP binomial). They are related by the 14=2*7 / Joukowski(=trace)/CRT
+structure (the two maps, HYP-3099). Both are facets of Q(cos 2pi/7) (HYP-3213). The 7-sector F_7 governs
+the coverage extremality (the LHS, AP-maximality); the 14-clock Johnson governs the cap (the RHS bound).
