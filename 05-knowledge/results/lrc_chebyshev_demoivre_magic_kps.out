@@ -1,0 +1,11 @@
+=== Chebyshev / equioscillation structure of the de Moivre angles ===
+de Moivre angles [np.float64(-1.8019), np.float64(-0.445), np.float64(1.247)] = roots of x^3+x^2-2x-1
+Vieta-Lucas V_7(u) (2cos(7t) in u=2cos t): coeffs [np.float64(0.0), np.float64(-7.0), np.float64(0.0), np.float64(14.0), np.float64(0.0), np.float64(-7.0), np.float64(0.0), np.float64(1.0)]
+roots of V_7(u)=2: [np.float64(0.0)]  (should include the de Moivre angles + 2)
+(V_7-2)/(u-2) = [np.float64(1.0), np.float64(4.0), np.float64(2.0), np.float64(-6.0), np.float64(-3.0), np.float64(2.0), np.float64(1.0)] (a perfect square of the de Moivre cubic?)
+  de Moivre cubic squared = [np.float64(1.0), np.float64(4.0), np.float64(2.0), np.float64(-6.0), np.float64(-3.0), np.float64(2.0), np.float64(1.0)]
+  MATCH (de Moivre cubic appears as a DOUBLE factor = equioscillation/extremal signature): True
+
+=== Cohn-Elkies / Viazovska tie: dim 8 magic function = octonions = the apex multiplicative side ===
+  Viazovska dim-8 (E_8=octonion lattice) + dim-24 (Leech) magic functions from MODULAR forms.
+  LRC circle (1D, 7-fold) magic function should come from the CYCLOTOMIC (de Moivre) = the 7-fold modular/cyclotomic object.
