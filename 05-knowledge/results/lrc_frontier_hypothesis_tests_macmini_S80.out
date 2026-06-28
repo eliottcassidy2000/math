@@ -1,0 +1,13 @@
+CH2 index-theorem (witness peaks = (p-1)*d):
+  AP  : M=0.07143 peaks=6 index=3.0
+  GW  : M=0.07143 peaks=6 index=3.0
+  2AP : M=0.07143 peaks=12 index=6.0
+  3AP : M=0.07143 peaks=18 index=9.0
+
+H3c lcm-family (value-safe, M->1/12):
+  X= 7 lcm=    420: M=0.082350  M-1/14=+0.010921
+  X= 9 lcm=   2520: M=0.083167  M-1/14=+0.011738
+  X=11 lcm=  27720: M=0.083317  M-1/14=+0.011888
+  X=13 lcm= 360360: M=0.083329  M-1/14=+0.011901
+
+=> tight-locus = AP/GW dilations (M=1/14), isolated; lcm-family M->1/12 (margin). 1/12=0.08333 1/14=0.07143

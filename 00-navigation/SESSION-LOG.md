@@ -1,3 +1,24 @@
+## mac-mini-2026-06-28-S80 -- hypothesis tests: the covering bound holds with a UNIFORM MARGIN; tight-locus FINITE & ISOLATED (delta~0.0026); lcm-family VALUE-SAFE (M->1/12); witnesses=(p-1)*d confirm the index-theorem
+
+Owner: long session of creative hypotheses + testing for concrete progress on the LRC(14) frontier. HYP-3250 +
+reflection hypothesis-tests-the-covering-bound + script lrc_frontier_hypothesis_tests_macmini_S80.py.
+
+H1: covering bound HOLDS -- 0/600 random covering 13-sets violate M>=1/14 (random M~1/9, far from tight).
+CH2 (index-theorem CONFIRMED): witness peaks at M = (p-1)*d. AP/GW = 6 peaks (primitive index (p-1)/2=3 = the
+Borsuk-Ulam degree, odd for p=3 mod4); d*AP = 6d peaks (dilation replicates the index d times).
+H2/H3 (the MARGIN): tight-locus = AP/GW dilations (M=1/14), ISOLATED -- single-swap gap ~0.0017; near-tight
+perturbation gap delta~0.0026 (the near-tight = AP with one element DOUBLED, e.g. 10->20, M~0.074).
+H3c (KEY): the lcm-family S_X={1..11,13,lcm(2..X)} (the S45 'no finite witness certificate' family) is VALUE-SAFE:
+M -> 1/12 (NOT 1/14), margin ~0.012. So the DENOMINATOR obstruction (witness location grows) != the VALUE (M has
+a margin). Equidistribution LOCATES the witness; the BOUND M>=1/14 holds with room.
+
+PROOF STRUCTURE (the concrete progress): covering bound = {TIGHT-LOCUS: AP/GW dilations FINITE, M=1/14, constructed
+(S77 t=1/(14d)) + Borsuk-Ulam index (S79)} (+) {ALL ELSE: M >= 1/14 + delta UNIFORM MARGIN}. The tight-locus is
+finite + isolated; everything else (incl the lcm-family) is bounded away from 1/14. OPEN rigor: (a) tight-locus
+finiteness (the census = AP/GW only, the rigidity), (b) the uniform margin delta (no untested sequence -> 1/14),
+(c) construction/index. NOT a proof; the frontier STRUCTURE is now sharp. (Converges kps S255: LRC tight =
+min-max equioscillation on the apex unit group.)
+
 ## kind-pasteur-2026-06-27-S255 -- CHEBYSHEV/EQUIOSCILLATION unifying frame: LRC tight = min-max equioscillation on the apex unit group (Z/2q)*
 Owner: more unifying frames; keep pushing to a proof; capture the AP-equioscillation observation. HYP-3246/3247/3248.
 - THE FRAME: AP safety fn f_S(t)=min||st|| equioscillates at max 1/14 at the phi(14)=6 UNIT points a/14 (a in (Z/14)*), 3 antipodal pairs (1,13),(3,11),(5,9) mirror about t=1/2 = the Chebyshev/Kolmogorov signature of the min-M extremal. GW same 6 units. (HYP-3246.)
