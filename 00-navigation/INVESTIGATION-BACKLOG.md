@@ -49,6 +49,12 @@ debt and `0` exchange-margin violations, and the `11` non-AP HYP-3202 traps
 split into `8` negative-leakage-plus-odd-debt and `3`
 odd-debt-without-negative-leakage.
 
+Post-rebase HYP-3239 integration: the mac-mini S76 branch identifies the two
+targets as one bimodal/phi4 extremality under inclusion-exclusion parity; the
+kps S31av branch identifies the `p=7=3 mod 4` sign sidecar as the `D_7`
+sign representation / free-`Z2` Borsuk-Ulam packet.  Track this family tag
+when deciding whether the odd/negative sidecar is discharged.
+
 Compression guardrail: an even/positive quotient is proof-grade only when the
 odd/negative payload is zero, reconstructible, dual-annihilated, or retained
 as sidecar.  This is the HYP-3201 law-defect rule applied to associativity,

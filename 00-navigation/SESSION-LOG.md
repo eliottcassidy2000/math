@@ -106,7 +106,16 @@ exchange-margin violations, and the `11` non-AP HYP-3202 traps split into
 odd-debt-without-negative-leakage.  Next proof task: prove the `q3` exchange
 rate symbolically and glue it to HYP-3222 interlacing plus HYP-3220 sign.
 
--> HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
+Post-rebase integration: incoming HYP-3239 is directly compatible.  The
+mac-mini S76 branch collapses the even/positive and odd/negative proof targets
+to one bimodal/phi4 extremality via inclusion-exclusion parity.  The kps S31av
+branch refines the topological sign sidecar from generic Brouwer to
+`D_7`/Borsuk-Ulam in the `p=3 mod 4` case: complement is a free `Z/2`
+anti-automorphism, while `p=1 mod 4` remains the fixed-reflection Brouwer/SOS
+side.  For HYP-3238, this means the odd-negative sidecar should now carry a
+`sign_isotypic/free_Z2_or_fixed_reflection` family tag.
+
+-> HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
 HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223,
 HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
 HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153,

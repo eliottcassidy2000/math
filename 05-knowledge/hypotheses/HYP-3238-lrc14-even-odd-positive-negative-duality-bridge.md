@@ -10,6 +10,7 @@ script: 04-computation/lrc14_even_odd_positive_negative_bridge_codex_20260628.py
 result: 05-knowledge/results/lrc14_even_odd_positive_negative_bridge_codex_20260628.out
 reflection: 07-reflections/lrc14-even-odd-positive-negative-duality-bridge-codex-20260628.md
 related:
+  - HYP-3239
   - HYP-3237
   - HYP-3236
   - HYP-3235
@@ -320,6 +321,17 @@ Perron root `-2cos(pi/7)`.  The complement involution `x -> -x` swaps sector
 pairs `(1,6),(2,5),(3,4)` and is simultaneously the positive/negative fold
 and the even/odd parity operator.  For the LRC(2p) family, the sign obstruction
 is the `p mod 4` / imaginary-quadratic wall.
+
+Post-scout HYP-3239 adds two compatible refinements.  The mac-mini S76 branch
+says the even/positive covariance target and odd/negative associator target
+are one bimodal/phi4 extremality problem: inclusion-exclusion parity is the
+common source of even/odd and positive/negative signs.  The kps S31av branch
+says the same sign sidecar is the sign representation of `D_7`: `14=|D_7|`,
+the de Moivre cubic modes are the three two-dimensional irreps, and for
+`p=7=3 mod 4` the complement is an anti-automorphism with a free `Z/2` action.
+Thus the topological sidecar should be tagged more precisely as
+`Borsuk-Ulam/free-Z2` in the `p=3 mod 4` case, while Brouwer/SOS belongs to
+the fixed-reflection `p=1 mod 4` side of the family.
 
 HYP-3237 supplies the information-theoretic wall:
 

@@ -19,10 +19,18 @@ have positive `q3` debt with `0` exchange-margin violations, and the `11`
 non-AP HYP-3202 traps split into `8` negative-leakage-plus-odd-debt and `3`
 odd-debt-without-negative-leakage.
 
+HYP-3239 integration: the next sidecar refinement is representation-theoretic.
+The mac-mini S76 branch makes the two proof targets one bimodal/phi4
+extremality problem under inclusion-exclusion parity.  The kps S31av branch
+identifies the sign sidecar as the `D_7` sign representation/free `Z/2`
+Borsuk-Ulam packet for `p=7=3 mod 4`, while `p=1 mod 4` lives on the
+Brouwer/SOS fixed-reflection side.  Add this family tag before treating the
+odd/negative payload as discharged.
+
 Open task: prove the `q3` exchange-rate inequality symbolically, then glue it
 to HYP-3222 Hermite-Biehler interlacing and HYP-3220 Brouwer/parity sign.
 Negative covariance leakage is only one sidecar; the true odd/negative payload
-is the full parity/sign/core packet. -> HYP-3238, HYP-3237, HYP-3236, HYP-3235,
+is the full parity/sign/core packet. -> HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235,
 HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227,
 HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218,
 HYP-3217, HYP-3216, HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201,
