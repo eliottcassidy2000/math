@@ -20,6 +20,44 @@ HYP-3432, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424,
 HYP-3423, HYP-3422, HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3415,
 HYP-3129, HYP-2963, THM-523, LTI-393, LTT-293, T1393, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3434 gamma harmonic-sieve remainder addendum:**
+HYP-3434 follows HYP-3433's endpoint-spine finite-part ledger, HYP-3432's harmonic wall-budget sidecar, HYP-3431's corridor
+fence, and HYP-3430's scalar firewall and turns the Euler-Mascheroni/harmonic-sieve
+prompt into an exact one-branch compression identity.  For the HYP-3426 target
+`branch0 = E_safe minus B0_odd`,
+
+```text
+branch0_mass = naive_slack + overlap_tax
+```
+
+where
+
+```text
+naive_slack = |E_safe| - sum_o |E_safe cap B0_o|
+overlap_tax = sum_o |E_safe cap B0_o| - |E_safe cap union_o B0_o|.
+```
+
+On the `150`-row HYP-3429 endpoint-spine bank, exact identity and positive
+branch0 survivor hold `150/150`; naive slack is positive on `91/150` and
+negative on `59/150`; all `59` negative-slack rows are rescued by positive
+overlap tax.  The tightest rescue is `covering_AP_with_84`, with
+tax/deficit `1.090875`.
+
+Concrete task:
+
+```text
+prove either naive_slack >= 0 or a rank-2 endpoint-spine / conductance-cut
+certificate forces overlap_tax > -naive_slack
+```
+
+for every primitive covering row.  Euler-Mascheroni should be used only as
+the bounded harmonic denominator-prefix calibration; the proof must retain
+exact intersections, endpoint labels, and sidecar debt. -> HYP-3434,
+HYP-3433, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426,
+HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3418, HYP-3417,
+HYP-3415, HYP-3401, HYP-3236, HYP-3129, HYP-2963, THM-523, LTI-395,
+LTT-295, T1395, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3426 one-branch mirror / endpoint-support addendum:**
 HYP-3426 sharpens HYP-3425's two-branch target by using the mirror involution
 `u -> 1-u`.  Since it preserves `E_safe` and maps branch-0 survivors to

@@ -42,6 +42,42 @@ distinct budgets remain, and `1197` budgets have more than one wall signature.
 
 Next: use harmonic budget as a priority queue inside the endpoint-spine proof,
 but accept a certificate only with its exact interval, branch, and wall labels.
+## Lead codex-2026-06-28: Gamma harmonic-sieve overlap remainder
+
+**Status:** EVIDENCE / exact harmonic-sieve remainder audit; not proof
+(HYP-3434/T1395/LTI-395/LTT-295), extending HYP-3433's endpoint-spine
+finite-part ledger, HYP-3432's harmonic wall-budget sidecar, HYP-3431's
+corridor fence, HYP-3430's scalar firewall, HYP-3429's endpoint-spine
+certificate and HYP-3426's one-branch mirror reduction.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3434-lrc14-gamma-harmonic-sieve-remainder.md`,
+script
+`04-computation/lrc14_overlap_tax_harmonic_sieve_remainder_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_overlap_tax_harmonic_sieve_remainder_codex_20260628.out`,
+and
+`07-reflections/lrc14-overlap-tax-harmonic-sieve-remainder-codex-20260628.md`.
+
+Purpose: make the harmonic/compression angle exact.  In the one-branch target,
+
+```text
+branch0_mass = naive_slack + overlap_tax
+```
+
+with `naive_slack = |E_safe| - sum_o |E_safe cap B0_o|` and
+`overlap_tax = sum_o |E_safe cap B0_o| - |E_safe cap union_o B0_o|`.
+
+Readout on the `150`-row endpoint-spine bank: exact identity `150/150`,
+positive branch0 survivor `150/150`, naive slack positive `91/150`, naive
+slack negative `59/150`, positive overlap tax `150/150`, and all negative
+rows rescued `59/59`.  Tightest rescue is `{1..11,13,84}` with tax/deficit
+`1.090875`.
+
+Next: prove the dichotomy: either naive slack is nonnegative, or a rank-2
+endpoint-spine / conductance-cut certificate forces overlap tax above the
+deficit.  Treat Euler-Mascheroni only as harmonic denominator-prefix
+calibration.
 
 ## Lead codex-2026-06-28: One-branch mirror / endpoint-support certificates
 

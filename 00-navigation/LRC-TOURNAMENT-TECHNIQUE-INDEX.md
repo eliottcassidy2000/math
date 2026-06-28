@@ -371,6 +371,11 @@ obligations, and proof-carrier interfaces.
   lemmas, finite-part sidecars, and scalar firewalls the vertices.  Gamma is a
   tail normalizer only after the endpoint label, branch mask, and component
   window are retained.
+- Need to turn Euler-Mascheroni/harmonic-sieve intuition into an exact finite lemma:
+  use LTT-295 after LTT-294/LTT-293/LTT-292/LTT-291/LTT-290/LTT-289/LTT-288/LTT-287 and make
+  compression residues/proof carriers the vertices.  The theorem target is
+  `naive_slack >= 0` or endpoint-spine/conductance overlap tax beats the
+  deficit; gamma is only a denominator-prefix calibration.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -8462,6 +8467,40 @@ quotient_legality_status
 - **Pointers:** HYP-3433, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428,
   HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3421, HYP-3419, HYP-3417,
   HYP-3129, HYP-2982, HYP-2963, THM-523, LTI-394, T1394, OPEN-Q-108.
+
+## LTT-295: Harmonic-Sieve Overlap-Tax Tournament
+
+- **Move:** Rank proof carriers for the exact HYP-3434 first-sieve identity.
+  Vertices are exact overlap-tax sieve, endpoint-spine tax certificate,
+  conductance-graph overlap flow, two-adic even-child loss ledger,
+  odd-prefix gamma cap, raw harmonic union bound, and scalar gamma slogan.
+- **LRC use:** HYP-3434 keeps the one-branch survivor predicate after
+  HYP-3433/HYP-3432/HYP-3426/HYP-3429 by writing
+  `branch0_mass = naive_slack + overlap_tax`.  This makes the missing sidecar
+  of the scalar union bound explicit.
+- **Preserves:** exact one-branch survivor mass, the deficit that must be
+  repaired, endpoint-spine labels when used, and a possible graph/conductance
+  certificate for overlap.
+- **Forgets / guardrail:** raw harmonic sums forget intersections inside
+  `E_safe`; Euler-Mascheroni calibrates denominator prefixes but does not
+  prove the interval theorem.
+- **Pairwise observable:** predicate retention, finite exactness,
+  compression-loss accounting, endpoint-spine interface, two-adic induction
+  value, graph-cut flow value, and scalar-risk control.
+- **Switch/gauge:** orient toward higher retained proof payload; ties use the
+  declared proof-carrier order.
+- **Fingerprint:** score histogram `{13:1, 29:1, 47:1, 61:1, 62:1, 65:1,
+  66:1}`, no directed `3`-cycles, and Hamiltonian path
+  `exact_overlap_tax_sieve -> endpoint_spine_tax_certificate -> conductance_graph_overlap_flow -> two_adic_even_child_loss_ledger -> odd_prefix_gamma_cap -> raw_harmonic_union_bound -> scalar_gamma_slogan`.
+- **Next hook:** prove the dichotomy
+  `naive_slack >= 0` or `overlap_tax > -naive_slack` via a rank-2
+  endpoint-spine or conductance-cut certificate; start with the tight
+  `{1..11,13,84}` row and then generalize to the `59/150` negative-slack
+  rows.
+- **Pointers:** HYP-3434, HYP-3433, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425,
+  HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3418, HYP-3417, HYP-3415,
+  HYP-3401, HYP-3236, HYP-3129, HYP-2963, THM-523, LTI-395, T1395,
+  OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 

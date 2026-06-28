@@ -46,6 +46,39 @@ Thus `sum_{m=5}^M best_len=(H_M-H_4)/49`, and Euler-Mascheroni enters as the
 finite part `(gamma-H_4)/49` after subtracting `log(M)/49`.  Next target:
 prove the address lemma for all `m>=5`, then generalize labelled endpoint-tail
 finite parts without forgetting branch/component sidecars.
+## codex-2026-06-28 -- HYP-3434 gamma harmonic-sieve remainder
+
+Continued after the incoming HYP-3433 endpoint-spine finite-part ledger, HYP-3432 harmonic wall-budget sidecar, HYP-3431
+corridor fence, HYP-3430 scalar firewall, and HYP-3427/HYP-3428/HYP-3429
+endpoint-spine stack and pushed the Euler-Mascheroni prompt into an exact
+finite lemma target rather than a scalar-constant route.  Added
+HYP-3434/T1395/LTI-395/LTT-295 plus
+script/result/reflection:
+
+```text
+04-computation/lrc14_overlap_tax_harmonic_sieve_remainder_codex_20260628.py
+05-knowledge/results/lrc14_overlap_tax_harmonic_sieve_remainder_codex_20260628.out
+05-knowledge/hypotheses/HYP-3434-lrc14-gamma-harmonic-sieve-remainder.md
+07-reflections/lrc14-overlap-tax-harmonic-sieve-remainder-codex-20260628.md
+```
+
+The key exact identity is:
+
+```text
+branch0_mass = naive_slack + overlap_tax
+```
+
+where `naive_slack = |E_safe| - sum_o |E_safe cap B0_o|` and
+`overlap_tax = sum_o |E_safe cap B0_o| - |E_safe cap union_o B0_o|`.
+On the `150`-row HYP-3429 bank, exact identity and positive branch0 survivor
+hold `150/150`; naive slack is positive on `91/150`, negative on `59/150`,
+and all negative-slack rows are rescued by positive overlap tax.  The tightest
+rescue is `covering_AP_with_84`, tax/deficit `1.090875`.
+
+Next proof target: prove either nonnegative naive slack, or a rank-2
+endpoint-spine overlap-tax certificate beating the deficit.  Euler-Mascheroni
+only calibrates denominator-prefix compression; it is not the terminal proof
+vertex.
 
 ## codex-2026-06-28 -- HYP-3426 one-branch mirror / endpoint-support certificates
 
