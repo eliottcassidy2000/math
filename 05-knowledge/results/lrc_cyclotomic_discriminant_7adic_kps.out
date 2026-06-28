@@ -1,0 +1,14 @@
+=== Thread 3: the cyclotomic DISCRIMINANT 7^2 in the cap denominators ===
+de Moivre cubic x^3+x^2-2x-1 discriminant = 49 = {7: 2}  (=49=7^2)
+  (the real cubic subfield Q(cos 2pi/7) has discriminant 7^2; Q(zeta_7) has -7^5)
+
+cap/dip denominators -- 7-adic structure:
+  cap_8=2243/5880: denom=5880={2: 3, 3: 1, 5: 1, 7: 2}  v_7=2
+  dip_8=1081/76440: denom=76440={2: 3, 3: 1, 5: 1, 7: 2, 13: 1}  v_7=2
+  cap_9=1979/4004: denom=4004={2: 2, 7: 1, 11: 1, 13: 1}  v_7=1
+  dip_9=1/4004: denom=4004={2: 2, 7: 1, 11: 1, 13: 1}  v_7=1
+  cap_10=55/91: denom=91={7: 1, 13: 1}  v_7=1
+  m_P=14249/252252: denom=252252={2: 2, 3: 2, 7: 2, 11: 1, 13: 1}  v_7=2
+
+=> 91=7*13, 4004=4*7*11*13, 76440=2^3*3*5*7^2*13, 252252=2^2*3^2*7^2*11*13
+   the 7-power tracks the de Moivre/cyclotomic discriminant (7^1 in caps, 7^2 in the deeper dip/floor)
