@@ -1,0 +1,9 @@
+THE CUBIC MODE (extension of the project's Mobius/Eisenstein/Legendre): the chi_3 (order-3 character mod 7).
+cubic cosets (chi_3-classes) of (Z/7)*:  {1,6}, {2,5}, {3,4}
+  = zeta^j + zeta^(-j) = 2cos(2pi j/7) for j=1,2,3 = THE DE MOIVRE ANGLES {-1.8019,-0.445,1.247} EXACTLY.
+So the CUBIC MODE recursion = the chi_3-twisted inclusion-exclusion over the 3 cubic cosets = the 3 de
+Moivre periods = HYP-3216's moment-order ladder, NAMED as a signed recursion. Completes the mode family:
+  degree 1 Mobius (trivial)  | degree 2 Legendre (QR {1,2,4}/{3,5,6}, sqrt-7) | degree 3 CUBIC (de Moivre,
+  cosets {1,6}/{2,5}/{3,4})  | degree 6 sextic (Fejer F_7) | x the 2-adic Eisenstein (even) = 14=2*7.
+The cyclotomic degree (p-1)/2 is the unifying invariant: Legendre Venn-depth = moment-order ladder depth =
+de Moivre degree = #Gaussian periods. A+B-C is BOTH the even/Eisenstein mode AND the p=5 Legendre (2-set).
