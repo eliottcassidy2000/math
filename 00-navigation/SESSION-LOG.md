@@ -50,6 +50,59 @@ both score classes aggregate to `F=(1,4,1)`, but state-level F-curves differ,
 so class-level PGF equality can still erase order-sensitive proof data.
 Pair-function audit says `a+b` and `a*b` are unordered-safe, while `a^b` and
 `b^a` require an ordered sidecar except accidental equalities.
+## codex-2026-06-28-erdos870-tournament4 -- tournament-4 canary/filler quotient -- HYP-3149
+
+Prompt: leverage the recently formalized Erdos-870 negative answer and the
+user's two tournament-on-four-vertices modeling schemes to improve the LRC14
+proof search.  Added HYP-3149/T1214/LTI-275/LTT-173, executable scout
+`04-computation/lrc14_erdos870_tournament4_canary_filler_codex_20260628.py`,
+stored output
+`05-knowledge/results/lrc14_erdos870_tournament4_canary_filler_codex_20260628.out`,
+and reflection
+`07-reflections/lrc14-erdos870-tournament4-canary-filler-codex-20260628.md`.
+
+External import: the useful Erdos-870 pattern is not the additive theorem
+itself, but its proof interface: a low/order-two source becomes durable only
+after deterministic finite fillers, canary exactness, finite-shift uniformity,
+and a deletion/nonminimality sidecar are named.  The tournament-4 tables give
+the smallest exact analogue.  After fetch, incoming S276/HYP-3143 supplied the
+exact-order subbasis reading of the same data; this HYP-3149 lane was renumbered
+as the complementary canary/filler deletion-audit reading.  A later fetch showed
+S274/HYP-3144 had claimed the pair-function scalarization guardrail, and a
+later HYP-3145 claimed the broader Erdos-870 filler-core quotient scout, so
+this lane moved to HYP-3149/T1214/LTI-275/LTT-173 and now cross-links the
+adjacent quotient audits, including upstream HYP-3146's broader
+cover/scaffold shift-package package and HYP-3147's n=3 Worpitzky edge-flip
+kernel, plus HYP-3148's live-core deletability audit.
+
+With fixed Hamiltonian path `0->1->2->3`, free arcs
+`a=(0,2), b=(1,3), c=(0,3)` reproduce the prompt tiling table as
+`chi3(row xor col)`.  Fibers over the flip cube are `T={E}`, `+={a}`,
+`-={b}`, and `S={c,bc,ac,ab,abc}`.  Fixing `c` unflipped gives partial score
+sequence `(0,1,1,2)` and the exact two-source table on `x=a,y=b`:
+`E->T`, `x->+`, `y->-`, `xy->S`; the `c=1` slice sends all four completions
+to `S`.  Therefore the raw class table is not a group law on isomorphism
+classes.  It is a quotient map with a named canary/filler coordinate and a
+visible collision fiber.
+
+Tournament Analysis: vertices were proof carriers rather than runners or raw
+arcs.  Pairwise observable was retained proof payload under the
+order-two-source-plus-filler interface; the gauge favored payload over raw
+symmetry.  The resulting carrier tournament is transitive:
+`score_hist={0:1,...,7:1}`, no directed 3-cycles, one Hamiltonian path, and
+20 edge flips against the raw-symmetry gauge.  Chosen proof path:
+`fixed_c_xy_transversal -> erdos870_order2_plus_filler_interface ->
+tiling_hamiltonian_path_cube -> edge_tip_tail_information_packet ->
+S_bulk_collision_fiber -> fiber_pgf_or_distribution_sidecar ->
+raw_score_sequence_scalar -> raw_einheit_group_table_numerology`.
+
+Actionable packet for LRC14 edge/tip-tail quotients:
+`fixed_path_word + c_canary_status + xy_completion_table +
+S_bulk_fiber_words + deletion/restoration_sidecar +
+edge_tip_tail_exit_or_named_debt`.  Next test: every two-coordinate edge
+quotient used in HYP-3141/HYP-3140/HYP-3138/HYP-3139 should either exhibit an
+exact fixed canary/filler slice or emit the destroyed fiber and restoration
+debt before scalarization.
 
 ## codex-2026-06-27-S273 -- LRC14 generating-function payload atlas -- HYP-3137
 

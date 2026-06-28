@@ -15,6 +15,29 @@ whether k=8 edge/fiber quotients need canary redundancy or finite filler
 scaffolds before quotienting. -> HYP-3146, HYP-3145, HYP-3143, HYP-3142,
 HYP-3141, HYP-3140, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-3053, HYP-3049,
 LTI-272, LTT-170, T1211, OPEN-Q-108.
+**OPEN-Q-108 HYP-3149 tournament-4 canary/filler addendum:**
+HYP-3149 verifies that the user's two n=4 tournament tables are related by a
+canary/filler slice.  The fixed-Hamiltonian-path tiling cube has fibers
+`T={E}`, `+={a}`, `-={b}`, and `S={c,ab,ac,bc,abc}`.  Fixing the extra arc
+`c=(0,3)` unflipped gives the exact order-two table on `x=a,y=b` with partial
+score sequence `(0,1,1,2)`, while the `c=1` slice collapses all completions to
+`S`.
+
+Relation: HYP-3143 gives the exact-order subbasis guardrail for this same
+n=4 packet, HYP-3144 gives the adjacent pair-function scalarization alarm,
+HYP-3145 gives the broader filler-core interface, and HYP-3146 gives the
+cover/scaffold shift-package policy; HYP-3147 gives the n=3 edge-flip /
+Worpitzky kernel; HYP-3148 gives the live-core deletability audit.  HYP-3149 asks for the fixed-path canary/filler deletion
+audit that makes such a two-source quotient legal inside edge packets.
+
+Open task: prove a finite local edge-packet lemma saying that any two-source
+tournament quotient used in LRC14 must either name a canary/filler coordinate
+that gives an exact transversal, or emit its collision fiber as restoration /
+observer-gluing debt.  This should feed HYP-3141 edge-witness packets and the
+HYP-3140/HYP-3138/HYP-3139 quotient rows before scalarization. -> HYP-3149,
+HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3141, HYP-3140, HYP-3138, HYP-3137, HYP-3134, HYP-3133, HYP-3124,
+HYP-3118, HYP-3116, HYP-3093, HYP-3097, LTI-275, LTT-173, T1214,
+OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3138 k=8 reflection-fold addendum:**
 HYP-3138 tests the quotient suggested by the HYP-3132 De Moivre/biquadratic

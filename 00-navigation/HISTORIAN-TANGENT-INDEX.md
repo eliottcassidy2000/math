@@ -108,6 +108,17 @@ Useful synthetic maps added later:
   deletable coordinates.  The practical export is the ledger row
   `live_core_bits + filler_bits + canary_bits + deletable_coordinates +
   minimal_cover_subbasis + terminal_exit_or_named_debt`.
+- `07-reflections/lrc14-erdos870-tournament4-canary-filler-codex-20260628.md`:
+  HYP-3149/T1214 note refining HYP-3143's n=4 exact-order subbasis packet,
+  HYP-3144's pair-function scalarization guardrail, HYP-3145's filler-core
+  interface, HYP-3146's cover/scaffold policy, HYP-3147's n=3 edge-flip
+  kernel, and HYP-3148's live-core audit through the Erdos-870 order-two-source plus deterministic-filler
+  interface.  It proves
+  that the four-fixed-arc `x,y` table is the `c=0` canary slice of the
+  fixed-Hamiltonian-path three-bit tiling cube, while the `c=1` slice collapses
+  to the `S` fiber.  The proposed proof packet is
+  `fixed_path_word + c_canary_status + xy_completion_table +
+  S_bulk_fiber_words + deletion/restoration_sidecar + edge_tip_tail_exit`.
 
 ## Second-Pass Small Motif Ledger
 

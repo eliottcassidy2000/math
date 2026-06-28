@@ -159,6 +159,11 @@ obligations, and proof-carrier interfaces.
   core, filler, canary, deletable coordinates, class distribution, and
   minimal-cover subbasis before treating witness multiplicity or score-class
   multiplicity as proof evidence.
+- Need to use a two-coordinate tournament quotient without hiding its missing
+  coordinate:
+  use LTT-173 after LTT-172/LTT-171/LTT-170/LTT-166/LTT-165/LTT-162/LTT-160 and make proof
+  interfaces the vertices.  A fixed canary/filler coordinate must give an
+  exact transversal, or the collision fiber is named as restoration debt.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5749,3 +5754,43 @@ constant chase.
   HYP-3054, HYP-2534, LTI-274, LTT-172, LTI-273, LTT-171, LTI-272,
   LTT-170, LTI-271, LTT-169, LTI-270, LTT-168, LTI-269, LTT-167, T1213,
   OPEN-Q-108.
+
+## LTT-173: Tournament Of Canary/Filler Quotient Interfaces
+
+- **Move:** Treat the prompt's n=4 tables as values of quotient maps, not as a
+  group law on isomorphism classes.  This refines HYP-3143's exact-order
+  subbasis packet, HYP-3144's pair-function scalarization alarm, and
+  HYP-3145's filler-core interface, and specializes HYP-3146's
+  cover/scaffold shift-package policy, HYP-3147's n=3 edge-flip guardrail,
+  and HYP-3148's live-core deletability audit by making the fixed-path
+  canary/filler coordinate the tournament witness.  Tournament vertices are proof
+  interfaces: fixed `c` transversal, Erdos-870 order-two-plus-filler
+  interface, fixed-path tiling cube, HYP-3141 edge tip/tail information
+  packet, `S`-bulk collision fiber, fiber-PGF/distribution sidecar, raw score
+  sequence scalar, and raw Einheit table numerology.
+- **LRC use:** HYP-3149 verifies that the second `x,y` table is the `c=0`
+  canary/filler slice of the first `a,b,c` tiling cube.  The `c=0` slice is
+  the exact four-class transversal `E->T`, `x->+`, `y->-`, `xy->S`; the
+  `c=1` slice collapses every completion to `S`.  Therefore a two-coordinate
+  quotient is proof-legal only after the canary/filler coordinate is named.
+- **Preserves:** fixed path word, canary status, two-coordinate completion
+  table, `S` collision fiber, deletion/restoration sidecar, and edge
+  tip/tail exit.
+- **Forgets / guardrail:** raw score sequences and group-like tables forget
+  the missing coordinate and cannot distinguish faithful transversal from
+  `S`-bulk collapse.
+- **Fingerprint:** HYP-3149 reports a transitive proof-payload tournament with
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}`, no directed 3-cycles, one
+  Hamiltonian path, and `20` edge flips against a raw-symmetry gauge.  Selected
+  path:
+  `fixed_c_xy_transversal -> erdos870_order2_plus_filler_interface ->
+  tiling_hamiltonian_path_cube -> edge_tip_tail_information_packet ->
+  S_bulk_collision_fiber -> fiber_pgf_or_distribution_sidecar ->
+  raw_score_sequence_scalar -> raw_einheit_group_table_numerology`.
+- **Next hook:** Prove a finite local edge-packet lemma: every two-coordinate
+  tournament quotient used in HYP-3141 either has a fixed canary/filler slice
+  that is an exact transversal, or emits the collision fiber as restoration /
+  observer-gluing debt.
+- **Pointers:** HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3141, HYP-3140, HYP-3138, HYP-3137, HYP-3134,
+  HYP-3133, HYP-3124, HYP-3118, HYP-3116, HYP-3093, HYP-3097, LTI-275,
+  LTT-173, T1214, OPEN-Q-108.

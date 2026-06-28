@@ -416,6 +416,7 @@ record what it destroys before asking it to prove anything.
 | LTI-272 | n=4 filler/canary shift-package quotient | Fixed-path three-chord cover, finite-filler two-bit scaffold, `S` fiber PGF, delete-one-stable canary representative, monotone OR compression, quotient congruence status | HYP-3146/S274 is the deletion-stability companion to HYP-3143's exact-order audit, HYP-3144's ordered-pair guardrail, and HYP-3145's filler-core boundary.  The fixed-path table is a cover with `S` fiber size `5`, `S(z)=z+3z^2+z^3`, and a delete-one-stable `abc` canary; the finite scaffold fixes four arcs with partial score `(0,1,1,2)` and leaves `x,y` so `E,x,y,xy=T,+,-,S` is a Klein-four shift package.  The compression `x=a OR c`, `y=b OR c` is class-preserving but not linear. | HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-3053, HYP-3049, T1211, LTT-170, LTI-272, OPEN-Q-108 | Add `shift_package_scaffold_id`, `fixed_path_cover_fiber_pgf`, `canary_cluster_fiber`, `delete_one_stable_representative`, `monotone_or_compression_word`, `finite_filler_arc_set`, `quotient_congruence_status`, and `deletion_stability_status` before using fixed-path or A000568 quotients inside HYP-3141/HYP-3142 packets. |
 | LTI-273 | n=3 edge-flip Worpitzky/function kernel | Two-class edge-flip Markov kernel `C/T`, minority-edge gate, Worpitzky descent refinement of the transitive fiber, and ordered-vs-symmetric pair-function sidecar | HYP-3147/S277 gives the exact local triangle kernel: straight coin words are cyclic and `2:1` mixes are transitive; one-edge flips have transition matrix `[[0,1],[1/3,2/3]]`, stationary `(1/4,3/4)`, and eigenvalue `-1/3`.  Inside the transitive fiber, descents split `1,4,1`, the n=3 Worpitzky/Eulerian row.  The function quartet splits into symmetric shadows `a+b,a*b` and ordered channels `a^b,b^a`; only the ordered channel sees orientation. | HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3139, HYP-3138, HYP-3134, HYP-3133, HYP-3129, HYP-3124, HYP-3106, THM-084, T1212, LTT-171, LTI-273, OPEN-Q-108 | Add `edge_flip_class_kernel`, `minority_edge_gate`, `worpitzky_descent_word`, `ordered_function_payload`, and `symmetric_shadow_warning` to edge-witness and packet-basis ledgers; test whether the local `-1/3` mode aligns with HYP-3129 signed SPEC low modes. |
 | LTI-274 | Erdos-870 live-core/filler/canary deletability audit | Live core bits, deterministic filler bits, canary/shift controls, deletable coordinates, class distribution, minimal-cover subbasis, terminal exit/debt | HYP-3148/S275 extends HYP-3147's n=3 edge-flip/Worpitzky function kernel, HYP-3146's shift-package/canary policy, HYP-3143's exact-order subbasis packet, HYP-3144's pair-function/order-sidecar quotient guardrail, and HYP-3145's filler-core interface with the adjacent deletable-coordinate audit.  The fixed-path tiling cube with live skips `a,b,c` has class counts `T:+:-:S = 1:1:1:5`; `c` is class-cover-deletable because `{a,b}` already covers all four classes.  Freezing `c` as filler gives the two-bit anchor with fixed partial score `(0,1,1,2)`, live `x,y`, uniform class counts `1:1:1:1`, and load-bearing live core. | HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3137, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-2534, T1213, LTT-172, LTI-274, OPEN-Q-108 | Add `live_core_bits`, `filler_bits`, `canary_bits`, `deletable_coordinates`, `class_distribution`, `minimal_cover_subbasis`, and `terminal_exit_or_named_debt` to tournament quotient rows; reject witness/class multiplicity until a nondeletable core or named filler/canary debt is recorded. |
+| LTI-275 | Tournament-4 canary/filler quotient | Fixed Hamiltonian path word, deterministic canary arc, order-two `x,y` completion table, `S`-bulk collision fiber, deletion/restoration sidecar, edge tip/tail exit | HYP-3149 refines HYP-3143's exact-order subbasis packet, HYP-3144's pair-function scalarization alarm, HYP-3145's filler-core interface, HYP-3146's cover/scaffold shift-package policy, HYP-3147's n=3 edge-flip kernel, and HYP-3148's live-core deletability audit by importing the Erdos-870 filler/deletion audit into the smallest fixed-path tournament quotient.  The fixed-path tiling cube on arcs `a,b,c` has fibers `T={E}`, `+={a}`, `-={b}`, `S={c,ab,ac,bc,abc}`.  Fixing `c` unflipped gives partial score sequence `(0,1,1,2)` and the exact two-source table `E->T`, `x->+`, `y->-`, `xy->S`; the `c=1` slice collapses all four completions to `S`.  Thus `c` is a canary/filler coordinate, not harmless symmetry. | HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3141, HYP-3140, HYP-3138, HYP-3137, HYP-3134, HYP-3133, HYP-3124, HYP-3118, HYP-3116, HYP-3093, HYP-3097, T1214, LTT-173, LTI-275, OPEN-Q-108 | Add `fixed_path_word`, `c_canary_status`, `xy_completion_table`, `S_bulk_fiber_words`, `deletion_restoration_sidecar`, and `edge_tip_tail_exit_or_named_debt` before using a two-coordinate tournament quotient in HYP-3141 edge rows or HYP-3140/HYP-3138/HYP-3139 local packets. |
 
 ## Cross-Cutting Guardrails
 
@@ -3674,3 +3675,75 @@ the sidecar that makes it proof-relevant.
 Pointers: HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143,
 HYP-3142, HYP-3141, HYP-3140, HYP-3137, HYP-3134, HYP-3133, HYP-3124,
 HYP-3054, HYP-2534, LTI-274, LTT-172, T1213, OPEN-Q-108.
+
+## LTI-275: Tournament-4 Canary/Filler Quotient
+
+Used by codex-2026-06-28-erdos870-tournament4 for HYP-3149/T1214.  It refines
+the S276/HYP-3143 exact-order subbasis packet, S274/HYP-3144 pair-function
+scalarization alarm, HYP-3145 filler-core interface, HYP-3146
+cover/scaffold shift-package policy, HYP-3147 edge-flip/Worpitzky kernel, and
+HYP-3148 live-core deletability audit by using the smallest fixed-path
+tournament quotient as a proof-interface test case for the Erdos-870 pattern:
+
+```text
+order-two source + deterministic filler/canary + deletion/restoration guard.
+```
+
+In the fixed-Hamiltonian-path model, fix
+
+```text
+0 -> 1 -> 2 -> 3
+```
+
+and leave the non-path arcs
+
+```text
+a=(0,2), b=(1,3), c=(0,3).
+```
+
+The class map from the flip cube has fibers
+
+```text
+T={E}
++={a}
+-={b}
+S={c,ab,ac,bc,abc}
+```
+
+so the prompt's `E,a,b,c` table is a quotient map with a visible `S` bulk
+fiber, not a group law on classes.  Fixing `c` unflipped gives partial score
+sequence `(0,1,1,2)` and leaves the exact two-source table on `x=a,y=b`:
+
+```text
+E -> T
+x -> +
+y -> -
+xy -> S
+```
+
+The complementary `c=1` slice sends every `x,y` completion to `S`.  Therefore
+`c` is a deterministic canary/filler coordinate.  It is legal when fixed and
+audited; it is illegal when erased as raw table symmetry.
+
+Packet fields:
+
+```text
+fixed_path_word
+c_canary_status
+xy_completion_table
+S_bulk_fiber_words
+deletion_restoration_sidecar
+edge_tip_tail_exit_or_named_debt
+```
+
+Preserves: two-coordinate source structure, score-sequence class labels,
+which coordinate was fixed, the collision fiber, and the edge-packet exit.
+
+Destroys if used alone: the missing `c` coordinate, the distinction between
+faithful transversal and `S` bulk collapse, and any deletion/restoration
+obligation.
+
+Next hook: prove a finite local edge-packet lemma saying that any
+two-coordinate tournament quotient used in HYP-3141 must either name a
+canary/filler slice that makes the table faithful, or emit the collision fiber
+as restoration / observer-gluing debt.

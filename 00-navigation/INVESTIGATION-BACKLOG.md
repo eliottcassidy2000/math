@@ -105,6 +105,45 @@ Namespace: HYP-3148 / LTI-274 / LTT-172 / T1213 / OPEN-Q-108.  Predecessor:
 HYP-3147 / LTI-273 / LTT-171 / T1212, HYP-3146 / LTI-272 / LTT-170 / T1211,
 HYP-3143 / LTI-269 / LTT-167 / T1208, HYP-3144 / LTI-270 / LTT-168 / T1209,
 and HYP-3145 / LTI-271 / LTT-169 / T1210.
+## Lead codex-2026-06-28-erdos870-tournament4: tournament-4 canary/filler quotient
+
+**Status:** EVIDENCE / exact n=4 table scout and proof-interface transfer;
+not a proof (HYP-3149/T1214).
+
+Relation to incoming S276: HYP-3143 records the exact-order subbasis version
+of the same n=4 data.  HYP-3149 is the complementary canary/filler refinement:
+it names the coordinate whose deletion turns the two-bit source into a
+collision-prone quotient.  Relation to incoming S274: HYP-3144 records the
+three-edge pair-function scalarization guardrail, HYP-3145 records the broader
+Erdos-870 filler-core interface, HYP-3146 records the cover/scaffold
+shift-package policy, HYP-3147 records the n=3 edge-flip/Worpitzky kernel,
+and HYP-3148 records the live-core deletability audit; HYP-3149 names the
+concrete fixed-path canary sidecar inside the four-vertex packet.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3149-lrc14-erdos870-tournament4-canary-filler.md`,
+`04-computation/lrc14_erdos870_tournament4_canary_filler_codex_20260628.py`,
+`05-knowledge/results/lrc14_erdos870_tournament4_canary_filler_codex_20260628.out`,
+and `07-reflections/lrc14-erdos870-tournament4-canary-filler-codex-20260628.md`.
+
+Readout: the fixed-Hamiltonian-path tiling table is a three-bit quotient map,
+not a group law on isomorphism classes.  With free arcs
+`a=(0,2), b=(1,3), c=(0,3)`, the fibers are
+`T={E}`, `+={a}`, `-={b}`, and `S={c,ab,ac,bc,abc}`.  Fixing `c` unflipped
+gives the second prompt table on `x=a,y=b` and partial score sequence
+`(0,1,1,2)`; the `c=1` slice collapses every completion to `S`.
+
+Erdos-870 transfer: treat the two-coordinate `x,y` table like an order-two
+source, and treat `c` as a deterministic filler/canary coordinate whose
+deletion/restoration status must be audited before the quotient enters an
+LRC14 edge packet.
+
+Next: attach `tournament4_canary_filler_certificate`, `c_canary_status`,
+`xy_completion_table`, `S_bulk_fiber_words`, `deletion_restoration_sidecar`,
+and `edge_tip_tail_exit_or_named_debt` to HYP-3141 edge-witness rows and
+HYP-3140/HYP-3138/HYP-3139 local quotient packets.
+
+Namespace: HYP-3149 / LTI-275 / LTT-173 / T1214 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-S273: LRC14 generating-function payload atlas
 
