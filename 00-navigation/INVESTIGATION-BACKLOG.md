@@ -15,6 +15,28 @@
 
 ---
 
+## Lead codex-2026-06-28: Small-pattern adjacency atlas
+
+**Status:** RESERVED / active atlas build; not proof (HYP-3226/T1324).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md`,
+planned script
+`04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py`,
+planned result
+`05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out`,
+and planned reflection
+`07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md`.
+
+Goal: assemble a large but typed list of small motifs adjacent to the current
+LRC14 frontier, then classify each by payload preserved, payload destroyed,
+repair sidecar, normal-fan coordinate, trap-boundary use, and terminal-proof
+risk.  This is meant to connect HYP-3224's normal fan, HYP-3223's
+Green-current/Lorentzian classifiers, HYP-3222's HB/Perron exact legs,
+HYP-3221's analytic-equidistribution guardrail, and the coordination-only
+HYP-3225 spectral regularization motifs without treating raw numerology as a
+proof carrier.
+
 ## Lead codex-2026-06-28: Joukowski-Hermite-Biehler / Perron-Frobenius synthesis
 
 **Status:** SYNTHESIS / exact local scout; not proof (HYP-3222/T1306).

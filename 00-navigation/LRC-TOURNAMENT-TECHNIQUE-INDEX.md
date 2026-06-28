@@ -6413,3 +6413,27 @@ quotient_legality_status
   HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
   HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3139, HYP-3138, HYP-3132,
   THM-577, LTI-323, LTT-223, T1323, OPEN-Q-108.
+
+## LTT-224: Small-Pattern Payload Atlas Tournament
+
+- **Move:** Treat compact motifs as tournament vertices: doubled AP equality,
+  `11/12` trap boundary, Worpitzky/K3 flip kernel, Hermite-Biehler/Perron
+  exact legs, Chebyshev level-7 factor, Green-current bottleneck, Lorentzian
+  exchange circuit, p-adic/Selberg regularization sidecar, Collatz two-block
+  analogy, and raw numerology.
+- **LRC use:** HYP-3226 will score motifs by proof-payload retention against
+  the current HYP-3224 normal-fan frontier.  A motif is useful only if it
+  preserves or repairs one of AP support, Toeplitz moment-cone curvature,
+  covariance layers, ordered-tail pricing, finite trap discharge,
+  HB/Perron gluing, or analytic equidistribution guardrails.
+- **Preserves:** motif id, payload coordinate, destroyed coordinate,
+  required sidecar, trap-boundary use, and terminal-risk label.
+- **Forgets / guardrail:** raw constants, famous-problem names, and sequence
+  coincidences are not proof carriers until they name the LRC predicate they
+  preserve and the sidecar that repairs their quotient loss.
+- **Next hook:** Execute the motif census and build the payload-adjacency
+  tournament, with vertices as pattern families rather than runners, arcs, or
+  raw numbers.
+- **Pointers:** HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
+  HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, LTI-324,
+  LTT-224, T1324, OPEN-Q-108.
