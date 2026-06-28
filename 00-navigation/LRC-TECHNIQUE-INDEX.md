@@ -413,6 +413,7 @@ record what it destroys before asking it to prove anything.
 | LTI-270 | Worpitzky pair-function three-edge quotient | Score-class K3 edge-flip classes, three-coin quotient classes, symmetric pair functions `a+b`/`a*b`, ordered exponent sidecars `a^b`/`b^a`, Worpitzky ascent payload, fiber-PGF order-loss alarm | HYP-3144/S274 gives the smallest exact test for deciding when a generating-function or tournament quotient preserves a proof predicate, now feeding HYP-3143's exact-order subbasis audit.  The two-class K3 edge-flip kernel is `[[2,1],[3,0]]`: transitive `T=(0,1,2)` has two self-class edge flips and one cyclic exit, while cyclic `C=(1,1,1)` has three exits to `T`; normalized eigenmodes are `1,-1/3`.  The three-coin quotient has the same mix/same matrix.  Forward-edge PGFs show the warning: both classes aggregate to `F=(1,4,1)`, but state-level curves differ.  Sum/product pair functions survive unordered-pair quotient; exponentials require ordered edge sidecars. | HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3137, HYP-3134, HYP-3124, THM-084, T1209, LTT-168, LTI-270, OPEN-Q-108 | Attach `pair_function_order_word`, `ordered_pair_exponent_sidecar`, `three_edge_flip_kernel`, `worpitzky_ascent_payload`, `edge_flip_role`, `fiber_pgf_order_loss_alarm`, and `tip_tail_commutator_shadow` to HYP-3140/HYP-3141/HYP-3139/HYP-3143 packet rows before scalarizing any PGF or score-class statistic. |
 | LTI-271 | Filler-core quotient interface | Finite filler scaffold, partial score/residue profile, small core variable pair, quotient-congruence status, nonminimal fiber alarm, deletion/forgetting exit, formal interface target | HYP-3145 imports the useful part of the Erdos-870 formalization as proof architecture: package a sparse or low-dimensional core, surround it with deterministic finite fillers, and prove the boundary before the terminal theorem.  The n=4 tournament check makes the guardrail explicit: the fixed-Hamiltonian-path `a,b,c` table is only a representative atlas because its `S` fiber has five states, while a four-fixed-arc partial-score scaffold leaves a congruent two-arc `x,y` Klein-square core. | HYP-3145, HYP-3143, HYP-3136, HYP-3135, HYP-3134, HYP-3132, HYP-3129, HYP-3125, HYP-3124, HYP-3118, HYP-3107, HYP-3054, HYP-3049, T1210, LTT-169, LTI-271, OPEN-Q-108, davidturturean/erdos-870 | Add `filler_core_interface`, `finite_filler_scaffold`, `partial_score_or_residue_profile`, `core_variable_pair`, `quotient_congruence_status`, `nonminimal_fiber_alarm`, `deletion_or_forgetting_exit`, and `formal_interface_target` before using factorized floors or small tournament tables as proof carriers. |
 | LTI-272 | n=4 filler/canary shift-package quotient | Fixed-path three-chord cover, finite-filler two-bit scaffold, `S` fiber PGF, delete-one-stable canary representative, monotone OR compression, quotient congruence status | HYP-3146/S274 is the deletion-stability companion to HYP-3143's exact-order audit, HYP-3144's ordered-pair guardrail, and HYP-3145's filler-core boundary.  The fixed-path table is a cover with `S` fiber size `5`, `S(z)=z+3z^2+z^3`, and a delete-one-stable `abc` canary; the finite scaffold fixes four arcs with partial score `(0,1,1,2)` and leaves `x,y` so `E,x,y,xy=T,+,-,S` is a Klein-four shift package.  The compression `x=a OR c`, `y=b OR c` is class-preserving but not linear. | HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-3053, HYP-3049, T1211, LTT-170, LTI-272, OPEN-Q-108 | Add `shift_package_scaffold_id`, `fixed_path_cover_fiber_pgf`, `canary_cluster_fiber`, `delete_one_stable_representative`, `monotone_or_compression_word`, `finite_filler_arc_set`, `quotient_congruence_status`, and `deletion_stability_status` before using fixed-path or A000568 quotients inside HYP-3141/HYP-3142 packets. |
+| LTI-273 | n=3 edge-flip Worpitzky/function kernel | Two-class edge-flip Markov kernel `C/T`, minority-edge gate, Worpitzky descent refinement of the transitive fiber, and ordered-vs-symmetric pair-function sidecar | HYP-3147/S277 gives the exact local triangle kernel: straight coin words are cyclic and `2:1` mixes are transitive; one-edge flips have transition matrix `[[0,1],[1/3,2/3]]`, stationary `(1/4,3/4)`, and eigenvalue `-1/3`.  Inside the transitive fiber, descents split `1,4,1`, the n=3 Worpitzky/Eulerian row.  The function quartet splits into symmetric shadows `a+b,a*b` and ordered channels `a^b,b^a`; only the ordered channel sees orientation. | HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3139, HYP-3138, HYP-3134, HYP-3133, HYP-3129, HYP-3124, HYP-3106, THM-084, T1212, LTT-171, LTI-273, OPEN-Q-108 | Add `edge_flip_class_kernel`, `minority_edge_gate`, `worpitzky_descent_word`, `ordered_function_payload`, and `symmetric_shadow_warning` to edge-witness and packet-basis ledgers; test whether the local `-1/3` mode aligns with HYP-3129 signed SPEC low modes. |
 
 ## Cross-Cutting Guardrails
 
@@ -3565,3 +3566,53 @@ for remaining fiber mass.
 Pointers: HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141,
 HYP-3140, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-3053, HYP-3049,
 LTI-272, LTT-170, T1211, OPEN-Q-108.
+
+## LTI-273: n=3 Edge-Flip Worpitzky/Function Kernel
+
+Used by codex-2026-06-28-S277 for HYP-3147/T1212.  This technique treats the
+three-edge tournament as a local quotient kernel before building larger packet
+bases.
+
+With respect to a cyclic reference orientation, the three coin flips split as:
+
+```text
+straight HHH/TTT -> cyclic class C
+2:1 mixes       -> transitive class T
+```
+
+The one-edge-flip kernel is exact:
+
+```text
+P(C -> T) = 1
+P(T -> C) = 1/3
+P(T -> T) = 2/3
+pi(C,T) = (1/4,3/4)
+eigenvalues = 1, -1/3
+```
+
+The edge sidecar is the crucial extra datum: every edge of a cyclic triangle
+is a cycle-breaking gate, but a transitive triangle has exactly one minority
+edge whose flip closes the cycle.  The other two flips stay transitive.
+
+Worpitzky refines the transitive fiber.  The six source-to-sink orders have
+descent counts `1,4,1`, the Eulerian row in
+
+```text
+x^3 = binom(x+2,3) + 4 binom(x+1,3) + binom(x,3).
+```
+
+Function guardrail: `a+b` and `a*b` are symmetric shadows.  They survive
+orientation reversal and cannot certify edge flips.  The ordered channels
+`a^b,b^a` swap under reversal and can serve as an orientation payload.
+
+Preserves: two-class edge kernel, minority edge, Worpitzky descent word, and
+ordered endpoint function payload.
+
+Destroys if used alone: source-to-sink order inside `T`, which edge is the
+minority gate, and whether a pair function was symmetric or ordered.
+
+Next hook: add `edge_flip_class_kernel`, `minority_edge_gate`,
+`worpitzky_descent_word`, `ordered_function_payload`, and
+`symmetric_shadow_warning` to HYP-3141 edge witnesses and HYP-3143 packet
+bases.  Test whether the local `-1/3` eigenmode appears inside HYP-3129's
+signed SPEC low-frequency constant chase.

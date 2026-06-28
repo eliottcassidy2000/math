@@ -58,6 +58,10 @@ obligations, and proof-carrier interfaces.
   may forget first representation order:
   use LTT-167 and add `packet_order`, `lower_order_leakage`, and
   `collision_sidecar_or_named_debt`.
+- Need to study a triangle from the edge perspective before lifting to larger
+  packets:
+  use LTT-171 and keep the minority edge, Worpitzky descent word, and ordered
+  function channel.
 - Need to turn observer-extension/cut payload into an auditable quotient
   ledger:
   use LTT-101 after LTT-099/LTT-100 and record payload orbits modulo visible
@@ -5666,3 +5670,37 @@ constant chase.
 - **Pointers:** HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141,
   HYP-3140, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-3053, HYP-3049,
   LTI-272, LTT-170, T1211, OPEN-Q-108.
+
+## LTT-171: n=3 Edge-Flip Worpitzky Function Kernel
+
+- **Move:** Collapse the 3-edge flip cube to the two n=3 tournament score
+  classes, but keep the edge role sidecars that make the quotient legal:
+  minority edge, Worpitzky descent word, and ordered endpoint-function channel.
+- **LRC use:** HYP-3147/S277 gives the exact triangle kernel.  Straight coin
+  words `HHH,TTT` are cyclic `C`; the six `2:1` mixes are transitive `T`.
+  One-edge flips have Markov matrix `[[0,1],[1/3,2/3]]` on rows `C,T`,
+  stationary `(1/4,3/4)`, and nontrivial eigenvalue `-1/3`.  From `C`,
+  every edge is a `C->T` gate; from `T`, exactly one minority edge is the
+  `T->C` gate.  Inside `T`, Worpitzky descents split the six states as
+  `1,4,1`.  The pair functions split into symmetric shadows `a+b,a*b` and
+  ordered channels `a^b,b^a`.
+- **Pairwise observable:** compare proof carriers by orientation payload,
+  quotient guard strength, LRC transfer, Worpitzky signal, function-order
+  signal, and proof readiness.
+- **Fingerprint:** transitive proof-carrier tournament with score histogram
+  `{32:1,33:1,55:1,61:1,63:1,64:1,69:2}`, no directed 3-cycles, one
+  Hamiltonian path:
+  `edge_flip_markov_kernel_C_T -> minority_edge_gate_inside_T ->
+  packet_function_object_not_scalar ->
+  worpitzky_descent_refinement_of_T_fiber ->
+  ordered_exponential_channel_a_to_b ->
+  coin_straight_mixed_stationary_measure -> symmetric_sum_product_shadow ->
+  raw_score_class_two_nodes`.
+- **Next pull:** Add the local triangle fields to HYP-3141 edge witnesses,
+  HYP-3143 n=4 packet-basis rows, and HYP-3142 k=8 shell packets.  Test
+  whether the `-1/3` edge-kernel eigenmode aligns with HYP-3129 signed SPEC
+  low modes.
+- **Pointers:** HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143,
+  HYP-3142, HYP-3141, HYP-3139, HYP-3138, HYP-3134, HYP-3133,
+  HYP-3129, HYP-3124, HYP-3106, THM-084, LTI-273, LTT-171, T1212,
+  OPEN-Q-108.

@@ -28959,3 +28959,50 @@ matching bits, class fibers, squarefree representation words, proof-carrier
 sidecars, A000568 shadows, and bounded-core exit packets.  Preserved predicate:
 n=4 isomorphism class plus first representation order in Scheme B.  Destroyed
 unless sidecarred: raw labels, endpoint roles, and raw chord geometry.
+## codex-2026-06-28-S277 -- n=3 edge-flip Worpitzky/function kernel -- HYP-3147
+
+User asked to merge Worpitzky's identity, the function quartet
+`a*b,a+b,a^b,b^a`, and the tournament on three vertices viewed from its
+edges.  Rebased over the incoming forum note
+`poke-forum/post_1782607921783.md`; that note was base64-encoded speculative
+Champernowne/discrepancy/2-adic material, so it was treated only as a weak
+reminder that local/global edge-case quotients need sidecars, not as
+load-bearing evidence.
+
+Added `04-computation/tournament_n3_edge_flip_worpitzky_codex_s277.py`,
+stored output
+`05-knowledge/results/tournament_n3_edge_flip_worpitzky_codex_s277.out`,
+detail
+`05-knowledge/hypotheses/HYP-3147-n3-edge-flip-worpitzky-function-kernel.md`,
+and reflection
+`07-reflections/n3-edge-flip-worpitzky-function-kernel-codex-s277.md`.
+Renumbered this executable evidence lane to HYP-3147/T1212/LTI-273/LTT-171
+after incoming mainline work completed HYP-3144/T1209/LTI-270/LTT-168 and
+claimed HYP-3145 and HYP-3146 for the Erdős-870 filler-core and shift-package
+quotient lanes.  Updated the hypothesis/results indexes, T1212, LTI-273,
+LTT-171, and OPEN-Q-108.
+
+Exact kernel: use cyclic reference `0->1->2->0` and read the three edge
+orientations as coin flips.  Straight words `HHH,TTT` are cyclic `C` with
+score sequence `(1,1,1)`, while the six `2:1` mixes are transitive `T` with
+score sequence `(0,1,2)`.  One-edge flips collapse to the class transition
+matrix `[[0,1],[1/3,2/3]]` on rows `C,T`, with stationary distribution
+`(1/4,3/4)` and nontrivial eigenvalue `-1/3`.  From `C`, every edge flip is a
+`C->T` gate; from `T`, exactly one minority edge is the `T->C` gate and the
+other two are `T->T` self-class flips.
+
+Worpitzky refinement: inside the transitive fiber the six source-to-sink
+orders have descent counts `1,4,1`, the Eulerian row in
+`x^3 = binom(x+2,3)+4 binom(x+1,3)+binom(x,3)`.  Function split:
+`a+b` and `a*b` are symmetric/unordered shadows, while `a^b,b^a` are ordered
+channels that swap under edge reversal.  Candidate local packet:
+`C/T class + minority_edge_gate + Worpitzky_descent_word +
+ordered_function_channel`.
+
+LRC pull: add `edge_flip_class_kernel`, `minority_edge_gate`,
+`worpitzky_descent_word`, `ordered_function_payload`, and
+`symmetric_shadow_warning` to HYP-3141 edge witnesses, HYP-3143 packet bases,
+and HYP-3142 k=8 shell packets.  Test whether the local `-1/3` eigenmode
+aligns with HYP-3129 signed SPEC low modes, and treat the HYP-3139
+antisymmetric nonmax block as order-sensitive payload rather than disposable
+noise.

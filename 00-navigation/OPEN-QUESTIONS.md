@@ -119,6 +119,28 @@ The test row should use fixed sidecars to force the residue/apex scaffold, then
 leave a small signed SPEC/De Moivre core for HYP-3132/HYP-3136. -> HYP-3145,
 HYP-3136, HYP-3135, HYP-3134, HYP-3132, HYP-3129, HYP-3125, HYP-3124,
 HYP-3054, HYP-3053, HYP-3049, LTI-271, LTT-169, T1210, OPEN-Q-108.
+
+**OPEN-Q-108 HYP-3147 n=3 edge-flip Worpitzky/function addendum:**
+HYP-3147 refines the HYP-3144 local triangle-kernel lane and supplies an n=3
+sidecar for the HYP-3145/HYP-3146 filler-core audits by normalizing the
+class-flip counts and naming the eigenmode/sidecar data.  With a cyclic coin
+reference, straight words
+`HHH,TTT` are cyclic `C`, and the six `2:1` mixes are transitive `T`.  One
+edge flip gives the exact two-class kernel `[[0,1],[1/3,2/3]]` on rows `C,T`,
+with stationary distribution `(1/4,3/4)` and nontrivial eigenvalue `-1/3`.
+From `C` every edge breaks the cycle; from `T` exactly one minority edge
+closes the cycle.  Inside `T`, Worpitzky descents split the six
+source-to-sink orders as `1,4,1`.  Pair functions split into symmetric
+shadows `a+b,a*b` and ordered channels `a^b,b^a`.
+
+Open task: add `edge_flip_class_kernel`, `minority_edge_gate`,
+`worpitzky_descent_word`, `ordered_function_payload`, and
+`symmetric_shadow_warning` to HYP-3141 edge witnesses, HYP-3143 packet bases,
+and HYP-3142 k=8 shell packets.  Test whether the local `-1/3` eigenmode
+aligns with HYP-3129 signed SPEC low modes. -> HYP-3147, HYP-3146, HYP-3145,
+HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3139, HYP-3138, HYP-3129,
+HYP-3124, THM-084, LTI-273, LTT-171, T1212, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3133 A000568 edge-sandwich addendum:**
 HYP-3133 adds the field `a000568_extension_shadow` between HYP-3124's
 `edge_tail_tip_sector_word` and the paired endpoint-deletion child deck.  The
