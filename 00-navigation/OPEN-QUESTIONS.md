@@ -35,6 +35,39 @@ coordinate; do not route this floor through apex-7/Galois/census shortcuts. ->
 HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410,
 HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3129, HYP-2963, THM-523,
 LTI-383, LTT-283, T1383, OPEN-Q-108.
+**OPEN-Q-108 HYP-3423 q-uniform topology / q-specific arithmetic break addendum:**
+HYP-3423 turns the S85/HYP-3312 `C2 = Borsuk-Ulam` naming into a quotient
+legality rule.  The topological C2/BU charge is q-uniform, so it may certify
+only residue/equioscillation obligations.  It cannot by itself certify the
+q-specific Goddyn-Wong magnitude break.
+
+Executable readout over `q=3..22`:
+
+```text
+C2/BU residue charge: present on 20/20 rows
+canonical GW switch:  ON on 7/20 rows
+ON rows: q == 1 mod 3 = 4,7,10,13,16,19,22
+requested contrast: q=4,7 ON; q=5,6 off
+```
+
+Open concrete task: audit every proof route that invokes C2, Borsuk-Ulam,
+C6, Galois symmetry, or topological degree.  If the theorem obligation is
+residue/equioscillation, mark it legal.  If it claims a magnitude/GW/floor
+conclusion, require at least one of:
+
+```text
+HYP-3413 q-mod-3 / Eisenstein arithmetic switch
+HYP-3417 labelled owner-current packet
+S259/HYP-3418 two-adic covering-floor descent
+HYP-3415 Rprime / decorrelation floor input
+```
+
+The next useful theorem statement is a labelled-packet forgetting rule: a
+quotient that forgets q-specific magnitude data must either restrict its
+claim to the residue half or resurrect the magnitude coordinate before
+concluding. -> HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3413, HYP-3411,
+HYP-3312, HYP-3311, HYP-3310, HYP-3406, HYP-3405, HYP-2963, THM-523,
+LTI-384, LTT-284, T1384, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3417 owner-cut dual current addendum:**
 HYP-3417 sharpens the owner-support/Menger route into a concrete certificate

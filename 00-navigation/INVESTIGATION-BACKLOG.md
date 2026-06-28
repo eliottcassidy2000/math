@@ -47,6 +47,39 @@ Next: prove the interval-overlap lemma with finite-ruler, Helly, or exact
 interval-piercing bounds on `E_safe`.  Use the owner-cut work only to name
 finite packets where branch filters appear tight; the `2:g2` label in
 HYP-3419 is the finite owner-cut shadow of this two-adic coordinate.
+## Lead codex-2026-06-28: Q-uniform topology / q-specific arithmetic break guardrail
+
+**Status:** SYNTHESIS / executable proof-route guardrail; not proof
+(HYP-3423/T1384/LTI-384/LTT-284).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3423-lrc14-quniform-topology-arithmetic-break-guardrail.md`,
+script
+`04-computation/lrc14_quniform_topology_arithmetic_break_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_quniform_topology_arithmetic_break_codex_20260628.out`,
+and
+`07-reflections/lrc14-quniform-topology-arithmetic-break-codex-20260628.md`.
+
+Purpose: prevent a uniform topological/index argument from being used as a
+q-specific magnitude proof.  The route legalizes C2/Borsuk-Ulam and C6/Galois
+arguments for the residue/equioscillation half, but forces magnitude claims to
+carry arithmetic, owner-current, or floor sidecars.
+
+Readout: over `q=3..22`, the C2/BU residue charge is present on `20/20` rows,
+while the HYP-3413 canonical GW magnitude switch is ON only on `7/20` rows,
+exactly `q == 1 mod 3`.  This records the requested contrast: `q=4,7` ON and
+`q=5,6` off.
+
+Synthesis: HYP-3417's frontier cut `{2:g2,11:g1,13:g1}` remains valuable
+because it is one even-cover label plus two binding labels, but HYP-3423 marks
+it as a local owner-current certificate, not a replacement for the q-mod-3
+switch, S259/HYP-3418 two-adic descent, or HYP-3415 decorrelation floor.
+
+Next: audit the active proof stack for topology-to-magnitude inferences.  Every
+route invoking C2/BU, C6, Galois symmetry, or topological degree should declare
+whether it certifies residue/equioscillation only, or which sidecar resurrects
+the q-specific magnitude coordinate.
 
 ## Lead codex-2026-06-28: Owner-cut dual current certificate synthesis
 

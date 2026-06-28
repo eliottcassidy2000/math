@@ -80,6 +80,48 @@ directed `3`-cycles, one Hamiltonian path led by
 `finite_offgrid_transparency_lemma -> canonical_84m_binding_formula ->
 two_adic_even_speed_descent -> signed_SPEC_Rprime_constant_chase`).
 
+## codex-2026-06-28 -- HYP-3423 q-uniform topology / q-specific arithmetic break guardrail
+
+Pulled the latest mainline first; HYP-3417 had just landed as owner-cut dual
+certificates, then rebased over S259/HYP-3418 and HYP-3419.  Because S259 had
+already claimed HYP-3418 for the two-adic covering-floor sharpening, this
+session first moved the topology/arithmetic guardrail to HYP-3420, then after
+incoming S297/S298 claimed HYP-3420/T1381/LTI-381/LTT-281 for owner-cut chiral
+synthesis moved it again to HYP-3423/T1384/LTI-384/LTT-284.
+
+Added:
+
+```text
+04-computation/lrc14_quniform_topology_arithmetic_break_codex_20260628.py
+05-knowledge/results/lrc14_quniform_topology_arithmetic_break_codex_20260628.out
+05-knowledge/hypotheses/HYP-3423-lrc14-quniform-topology-arithmetic-break-guardrail.md
+07-reflections/lrc14-quniform-topology-arithmetic-break-codex-20260628.md
+```
+
+Core readout: the `13` nonzero mod-14 residues are exactly two regular C6
+orbits plus fixed apex `7`: units/binding, evens/covering, and `{7}`.  Over
+`q=3..22`, the C2/Borsuk-Ulam residue charge is present on all `20/20` rows,
+but the HYP-3413 canonical Goddyn-Wong magnitude switch is ON only on `7/20`,
+exactly `q == 1 mod 3`.  This makes the user's contrast formal: `q=4,7` ON;
+`q=5,6` off.  A q-uniform topological invariant cannot be the q-specific
+magnitude switch.
+
+Proof-route guardrail: topology/C6/C2-BU may certify residue or
+equioscillation.  Any quotient claiming magnitude, GW, or floor closure must
+restore at least one of HYP-3413 arithmetic, HYP-3417 labelled owner-current
+packets, S259/HYP-3418 two-adic descent, or HYP-3415 Rprime/decorrelation
+floor input.  HYP-3417's frontier cut `{2:g2,11:g1,13:g1}` is therefore a
+local finite owner-current echo of the residue/magnitude split, and after
+HYP-3419 the `2:g2` label is explicitly the live even-cover / two-adic
+coordinate rather than a replacement for the q-mod-3 switch or the covering
+floor theorem.
+
+Tournament Analysis uses proof-route obligations as vertices.  Fingerprint:
+`8` vertices, score histogram `{-27:1,13:3,14:1,19:1,30:1,50:1}`, no directed
+3-cycles, singleton SCCs, and one Hamiltonian path led by
+`HYP3415_decorrelation_floor_Rprime -> HYP3417_labelled_owner_current_packet ->
+HYP3413_q_mod_3_GW_arithmetic_switch`.
+
 ## kind-pasteur-2026-06-28-S257 -- the GALOIS reframe + the GW-doubling CRITERION q==1 mod3: built on mac-mini's hidden-C_3, fused with my census split & Q(sqrt-7) floor
 Owner: even more creative reframes, test ideas, be inspired by concurrent agents, push/pull many times toward full rigor. HYP-3411 + HYP-3413 + reflection the-galois-group-of-the-apex-prime-and-where-its-symmetry-breaks.
 - **GALOIS REFRAME (HYP-3411), building on mac-mini S83 hidden-C_3:** the 13 runners = TWO C_6=(Z/14)*-orbits + a fixed point: units {1,3,5,9,11,13} (binding skeleton) + evens {2,4,6,8,10,12} (covering) + {7} (fixed apex). C_6=C_2 x C_3. The two proof-halves are the two subfields of Q(zeta_7): Q(cos2pi/7) (cubic REAL, Gal=C_3, fixed by conj) = mac-mini's cap=C_3-trace/equioscillation; Q(sqrt-7) (quadratic IMAGINARY, Gal=C_2) = my floor/Gauss-sum. VERIFIED dichotomy: the RESIDUE/equioscillation half is C_6-INVARIANT (mult by any unit permutes {1..13}, M preserved => mac-mini's C_3 leap valid; closed via THM-568 at each unit optimum); the MAGNITUDE/census half BREAKS C_6 (only 12 flexes among the evens orbit). The symmetry-breaking IS the hard core.

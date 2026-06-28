@@ -6,6 +6,33 @@
 state what each lens preserves and destroys, and expose the common object they
 all seem to be pointing at.
 
+## Addendum 2026-06-28: Q-Uniform Topology / Q-Specific Arithmetic Break Lens
+
+HYP-3423 adds a guardrail to the controlled-forgetting thesis.  C2/Borsuk-Ulam
+and C6/Galois topology are q-uniform, so they can certify only the
+residue/equioscillation half.  The Goddyn-Wong magnitude break is q-specific:
+over `q=3..22`, the C2/BU residue charge is present on every row, but the
+canonical GW switch is ON only for `q == 1 mod 3`, including `q=4,7` and
+excluding `q=5,6`.
+
+Thus a quotient may forget q-specific magnitude data only if its conclusion is
+residue-uniform, or if it restores one of HYP-3413 arithmetic, HYP-3417
+labelled owner currents, S259/HYP-3418 two-adic descent, or HYP-3415 Rprime/decorrelation floor input before a
+magnitude conclusion.
+
+Packet fields to add where available:
+
+```text
+quniform_topology_status
+c2_borsuk_ulam_charge
+c6_residue_orbit_packet
+q_mod_3_arithmetic_switch
+magnitude_break_status
+owner_current_resurrection_status
+rprime_floor_handoff_status
+topology_to_magnitude_forbidden_debt
+```
+
 ## Addendum 2026-06-28: Scale-Normal Recursion Lens
 
 HYP-3231 adds a scale-normal reading of the whole map.  Under universal scale

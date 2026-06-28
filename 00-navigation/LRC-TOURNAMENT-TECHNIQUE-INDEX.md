@@ -302,6 +302,11 @@ obligations, and proof-carrier interfaces.
   owner signatures, BDH-style fiber variance, SC accessory fields, Krasner
   stability radii, and branch/scale guardrails the vertices.  Do not make
   raw constants or `exp(exp(exp(79)))` the vertices.
+- Need to audit a C2/BU, C6, or topological-degree route:
+  use LTT-284 after LTT-260/LTT-261/LTT-278/LTT-280/LTT-281 and make proof
+  obligations the vertices.  Topology may close residue/equioscillation only;
+  magnitude/GW/floor conclusions must keep HYP-3413 arithmetic, labelled
+  owner-current, S259/HYP-3418 two-adic descent, or HYP-3415 floor sidecars.
 - Need a post-HYP-3311 angle that does not reuse residue words as the theorem:
   use LTT-263 and make endpoint-owner currents, theorem-exit sources/sinks,
   valuation owners, tropical wall words, Farkas/Green duals, AP/GW boundary H1
@@ -8257,3 +8262,57 @@ quotient_legality_status
   HYP-3414, HYP-3412, HYP-3410, HYP-3310,
   HYP-3266, HYP-3265, HYP-3255, HYP-3140, HYP-3136, HYP-3129, HYP-3125,
   HYP-3124, HYP-2896, THM-523, LTI-382, T1382, OPEN-Q-108.
+
+## LTT-284: Q-Uniform Topology / Q-Specific Arithmetic Break Tournament
+
+- **Move:** Use proof-route obligations as tournament vertices, not runners,
+  subfields, or q-values.  The vertex set is the legal route stack:
+  HYP-3415 decorrelation floor, HYP-3417 labelled owner-current packet,
+  HYP-3413 q-mod-3 GW arithmetic switch, HYP-3416 quotient guardrail,
+  HYP-3411 C6 orbit packet, HYP-3312 C2/BU topological charge, real-cubic C3
+  trace/equioscillation, and the raw false route "topology closes magnitude."
+- **LRC use:** HYP-3423 prevents the recurring illegal compression where a
+  q-uniform topological charge is used to prove a q-specific magnitude break.
+  It was renumbered after S259 claimed HYP-3418 for the two-adic
+  covering-floor sharpening and incoming S297/S298 claimed HYP-3420/T1381/LTT-281
+  for owner-cut chiral synthesis.  The two-adic floor signal is now one of the
+  required magnitude sidecars.
+  The executable q-table shows C2/BU residue charge present on `20/20` rows
+  from `q=3..22`, while the canonical GW magnitude switch is ON only for
+  `q == 1 mod 3`.  Thus `q=4,7` are ON and `q=5,6` are off, although all four
+  have the same topological charge.
+- **Preserves:** the proof half each route can certify: residue/equioscillation,
+  q-specific magnitude/GW, local owner-current discharge, recursive quotient
+  legality, or covering-floor positivity.
+- **Forgets / guardrail:** raw topological degree forgets q-specific ON/OFF
+  magnitude data; raw q-mod-3 forgets local owner labels; raw owner-current
+  certificates forget the global arithmetic switch unless labelled as local;
+  raw scalar route names forget all of these.
+- **Pairwise observable:** preserved proof coordinate plus forbidden forgetting
+  debt.
+- **Switch/gauge:** higher route score; ties by declared priority.
+- **Exact fingerprint:** `vertices=8`,
+  `score_hist={-27:1, 13:3, 14:1, 19:1, 30:1, 50:1}`,
+  `directed_3cycles=0`, `scc_sizes=[1,1,1,1,1,1,1,1]`,
+  `hamiltonian_path_count=1`, and priority path
+  `HYP3415_decorrelation_floor_Rprime ->
+  HYP3417_labelled_owner_current_packet ->
+  HYP3413_q_mod_3_GW_arithmetic_switch ->
+  HYP3416_recursive_quotient_guardrail ->
+  HYP3411_C6_two_orbits_fixed_apex_packet ->
+  HYP3312_C2_BU_topological_charge ->
+  real_cubic_C3_trace_equioscillation ->
+  raw_topology_closes_magnitude_false_route`.
+- **Assumption challenge:** runners, gaps, sections, residues, C6 orbits,
+  subfields, q-rows, owner labels, floor packets, Fourier modes, matroid
+  circuits, proof obligations, and quotient policies were considered.  Proof
+  obligations are selected because the LRC predicate is "what can this route
+  certify without illegal forgetting?"
+- **Next hook:** audit every proof route invoking C2/BU, C6, or topological
+  degree.  Mark it legal for residue/equioscillation only, unless it carries
+  HYP-3413 arithmetic, HYP-3417 owner-current labels, S259/HYP-3418 two-adic
+  descent, or HYP-3415 floor input
+  before concluding magnitude/GW/floor.
+- **Pointers:** HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3413, HYP-3411,
+  HYP-3312, HYP-3311, HYP-3310, HYP-3406, HYP-3405, HYP-2963, THM-523,
+  LTI-384, T1384, OPEN-Q-108.

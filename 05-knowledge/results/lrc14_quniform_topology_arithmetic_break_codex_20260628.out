@@ -1,0 +1,83 @@
+HYP-3423: q-uniform topology versus q-specific magnitude arithmetic
+============================================================================
+
+C6 orbit decomposition of the 13 nonzero residues mod 14:
+  [1, 3, 5, 9, 11, 13]: unit/binding orbit
+  [2, 4, 6, 8, 10, 12]: even/covering orbit
+  [7]: fixed apex
+
+Subfield/proof-half ledger:
+  Q(cos 2pi/7): real cubic / C3 trace / cap-equioscillation residue half
+  Qsqrt(-7): imaginary quadratic / C2-BU sign / Gauss-floor orientation
+  Qsqrt(-3): Eisenstein gate / q mod 3 switch for GW magnitude doubling
+
+q-table using the HYP-3413 criterion for canonical GW doubling:
+  q  n   C2/BU residue charge  q%3  GW     arithmetic note
+   3  6  present                0   off    prime: no C3 gate  [canonical doubling off; small-n exotic is separate]
+   4  8  present                1    ON    composite: same q mod 3 switch, not prime-field evidence  [requested ON example]
+   5 10  present                2   off    prime: no C3 gate  [requested OFF example]
+   6 12  present                0   off    composite/off-row  [requested OFF example]
+   7 14  present                1    ON    prime: unit group has C3 / Eisenstein split  [requested ON example]
+   8 16  present                2   off    composite/off-row
+   9 18  present                0   off    composite/off-row
+  10 20  present                1    ON    composite: same q mod 3 switch, not prime-field evidence
+  11 22  present                2   off    prime: no C3 gate
+  12 24  present                0   off    composite/off-row
+  13 26  present                1    ON    prime: unit group has C3 / Eisenstein split
+  14 28  present                2   off    composite/off-row
+  15 30  present                0   off    composite/off-row
+  16 32  present                1    ON    composite: same q mod 3 switch, not prime-field evidence
+  17 34  present                2   off    prime: no C3 gate
+  18 36  present                0   off    composite/off-row
+  19 38  present                1    ON    prime: unit group has C3 / Eisenstein split
+  20 40  present                2   off    composite/off-row
+  21 42  present                0   off    composite/off-row
+  22 44  present                1    ON    composite: same q mod 3 switch, not prime-field evidence
+
+Immediate guardrail readout:
+  C2/BU residue charge present on 20/20 q-rows.
+  GW magnitude switch ON on 7/20 q-rows.
+  Requested contrast: q=4,7 are ON; q=5,6 are off.
+  Therefore a q-uniform topological flag cannot be the magnitude switch.
+
+Quotient guardrail theorem target:
+  A quotient may use C2/BU or C6 topology to close a residue/equioscillation
+  obligation.  If it claims a q-specific magnitude conclusion, it must retain
+  or restore at least one of:
+    (1) the HYP-3413 q mod 3 / Eisenstein arithmetic switch;
+    (2) the HYP-3417 labelled owner-current packet for local mixed fibers;
+    (3) the S259/HYP-3418 two-adic covering-floor descent signal;
+    (4) the HYP-3415 decorrelation floor / Rprime inequality.
+
+Tournament Analysis over proof-route vertices
+  Pairwise observable: preserved proof coordinate plus forbidden forgetting debt.
+  Switch/gauge: higher route score; ties use the declared priority path.
+  Vertices and scores:
+    HYP3415_decorrelation_floor_Rprime: score= 50; critical-path covering theorem: arithmetic/floor, not topology
+    HYP3413_q_mod_3_GW_arithmetic_switch: score= 19; q-specific magnitude/census switch; ON iff q==1 mod 3
+    HYP3417_labelled_owner_current_packet: score= 30; local finite certificate: one even-cover label plus binding labels
+    HYP3416_recursive_quotient_guardrail: score= 14; legal forgetting policy: mixed fibers must emit sidecars/debt
+    HYP3411_C6_two_orbits_fixed_apex_packet: score= 13; structural split: units, evens, fixed 7
+    HYP3312_C2_BU_topological_charge: score= 13; q-uniform residue charge; cannot select q=4,7 over q=5,6
+    real_cubic_C3_trace_equioscillation: score= 13; cap/equioscillation half in Q(cos 2pi/7)
+    raw_topology_closes_magnitude_false_route: score=-27; forbidden inference: uniform topological charge proves q-specific break
+  score_hist={-27: 1, 13: 3, 14: 1, 19: 1, 30: 1, 50: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  selected_path=
+    1. HYP3415_decorrelation_floor_Rprime
+    2. HYP3417_labelled_owner_current_packet
+    3. HYP3413_q_mod_3_GW_arithmetic_switch
+    4. HYP3416_recursive_quotient_guardrail
+    5. HYP3411_C6_two_orbits_fixed_apex_packet
+    6. HYP3312_C2_BU_topological_charge
+    7. real_cubic_C3_trace_equioscillation
+    8. raw_topology_closes_magnitude_false_route
+
+Assumption challenge:
+  Considered vertices: runners, residues, C6 orbits, subfields, q-rows,
+  owner labels, floor packets, proof obligations, and quotient policies.
+  Chosen vertices: proof-route obligations.  This preserves the LRC predicate
+  each route can actually certify and records what it destroys before any
+  scalar/topological compression is allowed.
