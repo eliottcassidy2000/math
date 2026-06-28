@@ -54,6 +54,38 @@ that collapse into one number field (HYP-3211/3212/3213):
 NET: LRC(14) not proved; the cap's full arithmetic/extremal structure unified under Q(cos 2pi/7); the
 rationality (= why the proof is finite/solvable) is the Chebyshev equioscillation; proof target sharpened
 to "consec = the unique equioscillating Cohn-Elkies-sharp config". => HYP-3211/3212/3213; 4 reflections.
+## codex-2026-06-28 -- HYP-3205 spectral dictionary compatibility
+
+Owner prompt: spend another long session pushing more creative synthesis
+toward the LRC proof frontier.  I integrated the incoming HYP-3202/HYP-3203
+covariance/cyclotomic work with S31al/S73d Toeplitz moment margin and HYP-3210
+Joukowski/Perron/Hermite-Biehler synthesis.
+
+- Added `04-computation/lrc_k8_spectral_dictionary_compatibility_codex_20260628.py`
+  and stored its exact run output.
+- Main readout: over the `3432` anchored bounded k=8 rows, AP/consec and its
+  doubled dilation are the only simultaneous maximizers across coverage `q0`,
+  `L_y`, `Sigma kappa_2`, all three covariance distance layers, AP residual
+  support, and Toeplitz `lambda_min`; primitive normal form leaves AP unique.
+- Rebase integration: incoming HYP-3204 ordered-tail exchange is read as the
+  coefficient chart for `L_y` inside this dictionary, pricing `q3` gains
+  against `q0+q6` loss while HYP-3205 keeps the layer/support/Toeplitz
+  compatibility sidecars intact.
+- The nearest non-AP dictionary decoy `(0,2,3,4,5,6,7,8)` still has nonzero
+  deficits in every measured coordinate.  This supports a certificate-Helly
+  or separating-hyperplane target rather than another scalar search.
+- Trap interpretation: the `11` primitive exchange traps and the `19` non-AP
+  left-compression traps should be treated as local stalks and discharged by
+  the first failed dictionary coordinate.  The normalized primary-discharge
+  histograms are exchange `{ap_support:5,d1:4,d2:2}` and left-compression
+  `{ap_support:8,d1:4,d2:2,q0:2,Ly:1,sk2:1,toeplitz:1}`.
+- Guardrail: Perron alignment remains explanatory but not terminal (AP rank
+  `2`), and raw cyclotomic norm is false as a theorem target (AP rank `19`).
+
+New handles: HYP-3205, T1305, LTI-305, LTT-205.  Next proof work: prove the
+small AP-tight dictionary intersection theorem and transport AP support or
+Toeplitz slack through the Joukowski/Hermite-Biehler bridge while keeping odd
+Worpitzky/associator debt named.
 
 ## mac-mini-2026-06-27-S73d -- the moment-problem merge: Caratheodory-Toeplitz + Griffiths/GKS + Verblunsky all read the LRC FM/AFM phase
 

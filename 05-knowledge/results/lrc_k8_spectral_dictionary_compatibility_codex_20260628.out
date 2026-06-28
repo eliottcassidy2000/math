@@ -1,0 +1,119 @@
+HYP-3205 k=8 spectral dictionary compatibility scout
+==============================================================================
+bank=anchored {0} union A, A subset [1,14], |A|=7
+rows_all=3432
+rows_primitive=3431
+AP=(0, 1, 2, 3, 4, 5, 6, 7)
+dilation_twin=(0, 2, 4, 6, 8, 10, 12, 14)
+AP_q=(Fraction(481, 1470), Fraction(359, 1470), Fraction(25, 147), Fraction(26, 245), Fraction(17, 210), Fraction(5, 98), Fraction(1, 49))
+dilation_q=(Fraction(481, 1470), Fraction(359, 1470), Fraction(25, 147), Fraction(26, 245), Fraction(17, 210), Fraction(5, 98), Fraction(1, 49))
+
+CHANNEL RANKS AGAINST AP
+coverage_q0: ap_rank=0 dilation_rank=1 all_beaters=0 all_ties=2 primitive_beaters=0 primitive_ties=1
+  ap_value=481/1470 (+0.32721088)
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=481/1470 (+0.32721088)
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 5, 7, 9, 11, 13), (0, 1, 3, 4, 5, 6, 7, 9), (0, 1, 2, 3, 4, 5, 6, 14)]
+Ly: ap_rank=0 dilation_rank=1 all_beaters=0 all_ties=2 primitive_beaters=0 primitive_ties=1
+  ap_value=2633/7350 (+0.35823129)
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=2633/7350 (+0.35823129)
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 5, 7, 9, 11, 13), (0, 1, 3, 4, 5, 6, 7, 9), (0, 1, 2, 3, 4, 5, 6, 14)]
+Sigma_kappa2: ap_rank=0 dilation_rank=1 all_beaters=0 all_ties=2 primitive_beaters=0 primitive_ties=1
+  ap_value=6237419/8643600 (+0.72162282)
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=6237419/8643600 (+0.72162282)
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 6, 7, 8, 10, 12), (0, 3, 4, 5, 6, 7, 8, 9)]
+distance_1: ap_rank=0 dilation_rank=1 all_beaters=0 all_ties=2 primitive_beaters=0 primitive_ties=1
+  ap_value=308509/1080450 (+0.28553751)
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=308509/1080450 (+0.28553751)
+  top5_non_AP_orbit=[(0, 1, 2, 3, 4, 5, 6, 8), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 4, 6, 7, 9, 12), (0, 2, 3, 5, 6, 8, 9, 11), (0, 1, 2, 4, 5, 6, 9, 10)]
+distance_2: ap_rank=0 dilation_rank=1 all_beaters=0 all_ties=2 primitive_beaters=0 primitive_ties=1
+  ap_value=547577/2160900 (+0.25340229)
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=547577/2160900 (+0.25340229)
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 3, 4, 5, 6, 7, 8, 9), (0, 2, 3, 4, 5, 6, 8, 12)]
+distance_3: ap_rank=0 dilation_rank=1 all_beaters=0 all_ties=2 primitive_beaters=0 primitive_ties=1
+  ap_value=225577/1234800 (+0.18268303)
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=225577/1234800 (+0.18268303)
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 5, 6, 7, 8, 10), (0, 1, 2, 3, 4, 5, 6, 8)]
+AP_residual_projection: ap_rank=0 dilation_rank=1 all_beaters=0 all_ties=2 primitive_beaters=0 primitive_ties=1
+  ap_value=39766/540225 (+0.07361007)
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=39766/540225 (+0.07361007)
+  top5_non_AP_orbit=[(0, 2, 4, 6, 7, 8, 10, 12), (0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 5, 6, 8, 10, 12), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 5, 6, 7, 8, 10)]
+Toeplitz_lambda_min: ap_rank=0 dilation_rank=1 all_beaters=0 all_ties=2 primitive_beaters=0 primitive_ties=1
+  ap_value=+0.0423047307
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=+0.0423047307
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 5, 7, 9, 11, 13), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 2, 3, 4, 5, 6, 14), (0, 3, 4, 5, 6, 7, 8, 9)]
+Perron_uniform_alignment: ap_rank=2 dilation_rank=3 all_beaters=2 all_ties=2 primitive_beaters=2 primitive_ties=1
+  ap_value=+0.9967842016
+  best=(0, 6, 8, 9, 10, 11, 12, 13) best_value=+0.9980849324
+  top5_non_AP_orbit=[(0, 6, 8, 9, 10, 11, 12, 13), (0, 3, 5, 6, 7, 8, 9, 11), (0, 4, 6, 7, 8, 9, 10, 12), (0, 2, 4, 5, 6, 7, 8, 10), (0, 3, 4, 5, 6, 7, 8, 9)]
+raw_cyclotomic_energy_MIN: ap_rank=19 dilation_rank=20 all_beaters=19 all_ties=2 primitive_beaters=19 primitive_ties=1
+  ap_value=39766/77175 (+0.51527049)
+  best=(0, 1, 2, 3, 11, 12, 13, 14) best_value=28179863/72144072 (+0.39060538)
+  top5_non_AP_orbit=[(0, 1, 2, 3, 11, 12, 13, 14), (0, 4, 5, 8, 9, 10, 13, 14), (0, 1, 4, 5, 6, 9, 10, 14), (0, 1, 4, 5, 9, 10, 13, 14), (0, 1, 2, 10, 11, 12, 13, 14)]
+
+COMPATIBILITY READOUT
+simultaneous_exact_maximizers=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 8, 10, 12, 14)]
+simultaneous_exact_plus_toeplitz_maximizers=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 8, 10, 12, 14)]
+dictionary_claim_candidate=AP and its 2x dilation are the only rows coherent
+across coverage, Ly, covariance, three distance layers, AP support, and Toeplitz margin.
+
+NEAREST NON-AP DICTIONARY DECOYS
+criterion=smallest maximum normalized deficit across q0,Ly,sk2,D1,D2,D3,AP-support,Toeplitz
+E=(0, 2, 3, 4, 5, 6, 7, 8) primitive=True max_norm=0.206062 sum_norm=1.109658 zeroish_channels=0 def_sk2=0.1434055544 def_ap_support=0.0057647277 def_toeplitz=0.0844938805 layer_defs=(0.0817898503,0.0354682945,0.0261474096)
+E=(0, 2, 4, 6, 7, 8, 10, 12) primitive=True max_norm=0.343762 sum_norm=1.718721 zeroish_channels=0 def_sk2=0.2628096800 def_ap_support=0.0032783794 def_toeplitz=0.1458043926 layer_defs=(0.1364451155,0.0772303207,0.0491342438)
+E=(0, 1, 3, 4, 5, 6, 7, 9) primitive=True max_norm=0.358294 sum_norm=1.935575 zeroish_channels=0 def_sk2=0.2530662764 def_ap_support=0.0062137690 def_toeplitz=0.2141146236 layer_defs=(0.1422134167,0.0601596686,0.0506931911)
+E=(0, 3, 4, 5, 6, 7, 8, 9) primitive=True max_norm=0.359514 sum_norm=2.197505 zeroish_channels=0 def_sk2=0.2786919352 def_ap_support=0.0108698536 def_toeplitz=0.1678860529 layer_defs=(0.1426974293,0.0626333453,0.0733611606)
+E=(0, 1, 2, 4, 5, 6, 7, 10) primitive=True max_norm=0.366802 sum_norm=2.368759 zeroish_channels=0 def_sk2=0.3174283863 def_ap_support=0.0097341386 def_toeplitz=0.1858925941 layer_defs=(0.1151756213,0.0971406590,0.1051121061)
+E=(0, 1, 2, 3, 4, 5, 6, 14) primitive=True max_norm=0.368160 sum_norm=2.285384 zeroish_channels=0 def_sk2=0.3306051877 def_ap_support=0.0081040307 def_toeplitz=0.1635178593 layer_defs=(0.1077264103,0.1248229904,0.0980557869)
+E=(0, 1, 3, 5, 7, 9, 11, 13) primitive=True max_norm=0.377761 sum_norm=2.149826 zeroish_channels=0 def_sk2=0.3080127912 def_ap_support=0.0118544235 def_toeplitz=0.1139353483 layer_defs=(0.1499399102,0.0909587958,0.0671140852)
+E=(0, 1, 2, 3, 4, 5, 6, 12) primitive=True max_norm=0.398419 sum_norm=2.586695 zeroish_channels=0 def_sk2=0.3223711185 def_ap_support=0.0082780323 def_toeplitz=0.2948900383 layer_defs=(0.1101860336,0.1263274562,0.0858576288)
+E=(0, 2, 3, 4, 6, 7, 8, 12) primitive=True max_norm=0.410505 sum_norm=2.725138 zeroish_channels=0 def_sk2=0.3686311548 def_ap_support=0.0078469619 def_toeplitz=0.2727511717 layer_defs=(0.1402161137,0.1347827294,0.0936323118)
+E=(0, 1, 2, 4, 6, 8, 10, 12) primitive=True max_norm=0.413173 sum_norm=2.707550 zeroish_channels=0 def_sk2=0.3301531480 def_ap_support=0.0108873617 def_toeplitz=0.2801056909 layer_defs=(0.0980956141,0.1256911183,0.1063664156)
+E=(0, 2, 4, 5, 6, 8, 10, 12) primitive=True max_norm=0.419648 sum_norm=2.657851 zeroish_channels=0 def_sk2=0.3262118215 def_ap_support=0.0058250035 def_toeplitz=0.3579478714 layer_defs=(0.1304808182,0.0929147577,0.1028162455)
+E=(0, 2, 4, 5, 6, 7, 8, 10) primitive=True max_norm=0.423716 sum_norm=2.341778 zeroish_channels=0 def_sk2=0.3115984370 def_ap_support=0.0063001527 def_toeplitz=0.2522703950 layer_defs=(0.1681802721,0.0909614339,0.0524567310)
+
+TRAP-SHEAF DISCHARGE TABLE
+arbitrary_exchange_primitive_local_maxima=12
+E=(0, 1, 2, 3, 4, 5, 6, 7) sk2=6237419/8643600 (+0.72162282) def_ap_support=0.0000000000 def_toeplitz=0.0000000000 layer_defs=(0.0000000000,0.0000000000,0.0000000000) neg_pairs=0 min_cov=1873/180075
+E=(0, 2, 4, 6, 7, 8, 10, 12) sk2=15863189/34574400 (+0.45881314) def_ap_support=0.0032783794 def_toeplitz=0.1458043926 layer_defs=(0.1364451155,0.0772303207,0.0491342438) neg_pairs=1 min_cov=-18127/1728720
+E=(0, 1, 3, 5, 7, 9, 11, 13) sk2=13707525658/33141183075 (+0.41361003) def_ap_support=0.0118544235 def_toeplitz=0.1139353483 layer_defs=(0.1499399102,0.0909587958,0.0671140852) neg_pairs=0 min_cov=199666/22317295
+E=(0, 1, 2, 3, 11, 12, 13, 14) sk2=872525041/2356706352 (+0.37023070) def_ap_support=0.0244993571 def_toeplitz=0.1927353740 layer_defs=(0.1086946592,0.1502979631,0.0923994976) neg_pairs=1 min_cov=-111050/13390377
+E=(0, 3, 6, 8, 9, 11, 12, 14) sk2=127840325/376515216 (+0.33953561) def_ap_support=0.0196336298 def_toeplitz=0.2491297389 layer_defs=(0.1175501824,0.1640023135,0.1005347094) neg_pairs=3 min_cov=-260119/10458756
+E=(0, 2, 3, 5, 6, 8, 11, 14) sk2=128212697/380318400 (+0.33711936) def_ap_support=0.0184611315 def_toeplitz=0.1984597373 layer_defs=(0.1093749338,0.1700025295,0.1051259923) neg_pairs=1 min_cov=-1333723/348625200
+E=(0, 6, 7, 8, 9, 10, 11, 12) sk2=3093938347/9412880400 (+0.32869199) def_ap_support=0.0151294950 def_toeplitz=0.2267314278 layer_defs=(0.1800292049,0.1138688575,0.0990327714) neg_pairs=0 min_cov=9281/2037420
+E=(0, 4, 5, 8, 9, 10, 13, 14) sk2=16918101923/52587662400 (+0.32171238) def_ap_support=0.0260635704 def_toeplitz=0.2244344496 layer_defs=(0.1329971738,0.1543068608,0.1126064066) neg_pairs=3 min_cov=-332789/33710040
+E=(0, 8, 9, 10, 11, 12, 13, 14) sk2=60533989231/192821428800 (+0.31393808) def_ap_support=0.0183310435 def_toeplitz=0.2220435187 layer_defs=(0.1979151094,0.1196640284,0.0901056010) neg_pairs=0 min_cov=423071/72235800
+E=(0, 1, 2, 3, 7, 8, 9, 10) sk2=15539491/103723200 (+0.14981693) def_ap_support=0.0408565104 def_toeplitz=0.4176245129 layer_defs=(0.1821862161,0.2256892833,0.1639303936) neg_pairs=4 min_cov=-4007/115248
+E=(0, 2, 5, 7, 9, 10, 12, 14) sk2=1341841/9724050 (+0.13799199) def_ap_support=0.0373975350 def_toeplitz=0.3645955363 layer_defs=(0.1837617042,0.2145367928,0.1853323332) neg_pairs=4 min_cov=-545449/19448100
+E=(0, 1, 4, 5, 7, 8, 11, 12) sk2=42136793/380318400 (+0.11079346) def_ap_support=0.0387612800 def_toeplitz=0.3997325334 layer_defs=(0.2186043311,0.2268572101,0.1653678138) neg_pairs=3 min_cov=-3198519/58104200
+naive_left_compression_local_maxima=20
+naive_left_compression_first_12=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 5, 7, 9, 11, 13), (0, 1, 2, 4, 6, 8, 10, 12), (0, 1, 2, 3, 11, 12, 13, 14), (0, 3, 6, 8, 9, 11, 12, 14), (0, 2, 3, 5, 6, 8, 11, 14), (0, 6, 7, 8, 9, 10, 11, 12), (0, 4, 5, 8, 9, 10, 13, 14), (0, 1, 2, 3, 4, 12, 13, 14), (0, 8, 9, 10, 11, 12, 13, 14)]
+exchange_trap_primary_discharge={'ap_support': 5, 'd1': 4, 'd2': 2}
+left_compression_non_AP_primary_discharge={'Ly': 1, 'ap_support': 8, 'd1': 4, 'd2': 2, 'q0': 2, 'sk2': 1, 'toeplitz': 1}
+
+ASSUMPTION CHALLENGE
+alternate_vertices_considered=runners,gaps,sections,boundaries,wall_crossings,residues,
+  cover_arcs,Fourier_modes,matroid_circuits,proof_obligations,certificate_channels
+chosen_vertices=certificate_channels plus bounded-bank rows as test objects
+preserves=LRC coverage/covariance extremality, dilation exception, trap identities,
+  root/moment/covariance sidecar coordinates
+forgets=literal runner identities, raw arc orientations, and any scalar-only proof story
+challenged_assumption=the obstruction is not a single max scalar; it is compatibility
+  failure across adjoint certificate languages.
+
+TOURNAMENT ANALYSIS: PROOF-CHANNEL DICTIONARY
+vertices=proof channels/certificates, not runners, gaps, arcs, roots, or constants
+pairwise_observable=retained certificate payload for k=8 covariance/coverage extremality
+switch/gauge=A->B iff channel_score(A)>channel_score(B), lexical tie break
+score_hist={-100: 1, -19: 1, -11: 1, -5: 1, 19: 1, 37: 1, 69: 1, 75: 1, 76: 1, 79: 1}
+directed_3cycles=0
+sccs=singletons under the score gauge
+hamiltonian_path_count=1
+priority_path=cyclic_distance_layer_bundle -> AP_residual_support_hyperplane -> Toeplitz_moment_margin -> total_covariance_scalar -> exchange_trap_sheaf -> orbit_aware_left_compression -> Perron_uniform_mode_diagnostic -> entropy_or_min_description_scalar -> one_seventh_associator_scalar -> raw_cyclotomic_norm
+
+PROOF-FRONTIER READOUT
+new_target_1=prove a certificate-Helly lemma: every primitive non-AP row violates
+  at least one of the layer/AP-support/Toeplitz certificates by a usable margin.
+new_target_2=treat the exchange and compression traps as sheaf stalks; discharge
+  each stalk by the first dictionary coordinate where it has visible deficit.
+new_target_3=transport Toeplitz moment-cone slack through the Joukowski/Hermite-Biehler
+  bridge to an even/odd interlacing statement, with Worpitzky/associator debt named.

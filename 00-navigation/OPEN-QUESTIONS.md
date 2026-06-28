@@ -30,6 +30,25 @@ numerology. -> HYP-3161, HYP-3154, HYP-3199, HYP-3160, HYP-3153, HYP-3152,
 HYP-3151, HYP-3150,
 HYP-3147, HYP-3142, HYP-3139, THM-577, LTI-279, LTT-177, T1218,
 
+**OPEN-Q-108 HYP-3205 spectral dictionary compatibility addendum:**
+HYP-3205 merges the current k=8 certificate languages into one exact
+bounded-bank dictionary.  AP/consec and its doubled dilation are the only
+simultaneous maximizers across coverage `q0`, `L_y`, total covariance
+`Sigma kappa_2`, distance layers `D1,D2,D3`, AP residual support, and Toeplitz
+`lambda_min`.  Primitive normal form removes the dilation tie.  The nearest
+non-AP decoy `(0,2,3,4,5,6,7,8)` still has nonzero deficits in every measured
+dictionary coordinate; Perron alignment is diagnostic only and raw
+cyclotomic norm is false as a terminal target.
+
+Open task: prove a small certificate-Helly/separation lemma whose AP-tight
+intersection is exactly the AP/dilation orbit, then discharge the `11`
+exchange traps and `19` non-AP left-compression traps by the first failed
+dictionary coordinate (layer, support, or Toeplitz).  Any proof shortcut must
+name the full certificate vector or explicitly sidecar the destroyed
+coordinate. -> HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3210, HYP-3201, HYP-3200,
+HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3138,
+HYP-3132, HYP-3117, HYP-3116, T1305, LTI-305, LTT-205, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3202 k=8 covariance attack-angle addendum:**
 HYP-3202 refines the HYP-3200 primitive `Sigma kappa_2` target into two
 proof programs over the exact bounded bank.  The cyclic-distance route splits

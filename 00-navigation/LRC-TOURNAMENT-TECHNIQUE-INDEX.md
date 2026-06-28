@@ -6221,3 +6221,35 @@ quotient_legality_status
   HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151,
   HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132,
   HYP-3122, THM-577, LTI-304, LTT-204, T1304, OPEN-Q-108.
+
+## LTT-205: Spectral Dictionary Compatibility Tournament
+
+- **Move:** Treat proof channels/certificates as tournament vertices:
+  covariance distance-layer bundle, AP residual support hyperplane, Toeplitz
+  moment margin, total covariance scalar, exchange trap sheaf,
+  orbit-aware left-compression, Perron uniform diagnostic, entropy/min-description
+  scalar, `1/7` associator scalar, and raw cyclotomic norm.
+- **LRC use:** HYP-3205 merges HYP-3202, HYP-3203, S31al/S73d, and HYP-3210
+  into one dictionary.  AP/consec and doubled AP are the only simultaneous
+  maximizers across `q0`, `L_y`, `Sigma kappa_2`, `D1,D2,D3`, AP support, and
+  Toeplitz `lambda_min`; primitive normal form leaves AP unique.
+- **Preserves:** certificate-vector payload, dilation exception, trap identity,
+  AP support direction, Toeplitz/moment slack, covariance layer localization,
+  and route status for Joukowski/Hermite-Biehler transport.
+- **Forgets / guardrail:** raw runner, sector, arc, Perron, entropy, exact
+  `1/7`, and cyclotomic-uniformity vertices are shadows unless they reconstruct
+  the full certificate vector or retain a named sidecar.
+- **Fingerprint:** transitive proof-channel tournament with
+  `score_hist={-100:1,-19:1,-11:1,-5:1,19:1,37:1,69:1,75:1,76:1,79:1}`,
+  no directed 3-cycles, singleton SCCs, one Hamiltonian path, and selected path:
+  `cyclic_distance_layer_bundle -> AP_residual_support_hyperplane ->
+  Toeplitz_moment_margin -> total_covariance_scalar -> exchange_trap_sheaf ->
+  orbit_aware_left_compression -> Perron_uniform_mode_diagnostic ->
+  entropy_or_min_description_scalar -> one_seventh_associator_scalar ->
+  raw_cyclotomic_norm`.
+- **Next hook:** Prove an AP-tight dictionary intersection theorem and use the
+  first failed coordinate to discharge exchange/compression traps; keep odd
+  Worpitzky/associator debt separate.
+- **Pointers:** HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3210, HYP-3201, HYP-3200,
+  HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3138,
+  HYP-3132, HYP-3117, HYP-3116, LTI-305, LTT-205, T1305, OPEN-Q-108.
