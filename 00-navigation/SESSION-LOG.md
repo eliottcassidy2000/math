@@ -90,6 +90,56 @@ into a sidecar/cut/child/local disk/debt, and recurse only after the forgotten
 coordinate is restored or named.  Next pull: attach HYP-3124 child decks to
 HYP-3406 owner-support fibers and compute owner-support Menger cut shores
 before analytic averaging.
+## codex-2026-06-28 -- HYP-3417 owner-cut dual certificate synthesis for LRC14
+
+Synced against incoming HYP-3409/HYP-3410 first, resolved the generated
+`agents/.session-state.json` autostash conflict to the upstream empty state,
+and dropped only the fresh autostash after confirming it contained no research
+content.  Built directly on HYP-3410's exact mixed-fiber substrate rather than
+creating another analogy atlas.
+
+Added HYP-3417/T1378/LTI-378/LTT-278 plus script/result/reflection:
+
+```text
+04-computation/lrc14_owner_cut_dual_certificate_synthesis_codex_20260628.py
+05-knowledge/results/lrc14_owner_cut_dual_certificate_synthesis_codex_20260628.out
+05-knowledge/hypotheses/HYP-3417-lrc14-owner-cut-dual-certificate-synthesis.md
+07-reflections/lrc14-owner-cut-dual-certificate-synthesis-codex-20260628.md
+```
+
+Core result: all three current HYP-3410 mixed fibers have labelled
+owner-current certificates with zero level `0` and margin `1`.  The height
+leak uses positive-debt `{5:g1}`.  The persistent `13->26` owner leak uses
+unit-island `{1:g1}` and has Mertens-cheapest positive-debt `{11:g1,13:g1}`.
+The `(72,20)` `10->20` frontier uses positive-debt
+`{2:g2,11:g1,13:g1}`, exactly one even-cover label plus two binding labels.
+
+The useful niche connection: the positive-debt Sophie audit gives
+`(core,cut)=(1,2)->13/5` and `(1,3)->25/13`, while the frontier's top
+finite-BDH variance label is `13:g1=49/50`.  This is recorded as a theorem
+target, not a proof: extend the enlarged bank and test whether every surviving
+mixed residue/height fiber has a bounded unit-island or positive-debt current,
+an exit-pure charal recursion step, or named owner/height/off-grid/state-lift
+debt.
+
+Rebase integration: after incoming S257 claimed HYP-3411/HYP-3413 for the
+Galois/GW residue-magnitude thread, this owner-current work was renumbered to
+HYP-3417, then rebased again after HYP-3414 owner-cut resurrection calculus,
+S258/HYP-3415 critical-path mapping, and HYP-3416 recursive quotient ladder
+landed.  The frontier cut
+`{2:g2,11:g1,13:g1}` is consistent with the S257
+"one covering magnitude label plus binding labels" picture, but it remains a
+local certificate obligation rather than the global `q == 1 mod 3` criterion
+or the HYP-3415 decorrelation floor theorem; HYP-3416 supplies the quotient
+stack where this owner-current layer should be used.
+
+Tournament Analysis uses proof obligations and labelled owner-current
+certificates as vertices, not runners or raw constants.  Fingerprint:
+`7` vertices, score histogram `{-23:1,20:1,25:1,33:1,34:1,57:1,59:1}`, no
+directed `3`-cycles, and priority path
+`owner_cut_dual_current_certificate -> positive_debt_hitting_set_theorem ->
+krasner_owner_core_instability_gate -> sophie_germain_channel_audit ->
+finite_mertens_budget_selector`.
 
 ## codex-2026-06-28 -- HYP-3409 recursive sidecar pattern atlas for LRC14
 
@@ -32572,6 +32622,13 @@ boundary-uniformization cut-stability atlas, HYP-3409/T1370 became the
 recursive sidecar pattern atlas, HYP-3410/T1371 became the charal recursion
 scout, and HYP-3411 was already occupied by the Galois reframe.  The scaffold remains downstream rather than conflicting: it proposes
 recursive cut/signature tests starting from the HYP-3406 sidecar chain
+The later special-function cut/signature scaffold was ultimately moved again to
+HYP-3412/T1373 after mainline HYP-3407/T1368 became the separate
+boundary-uniformization cut-stability atlas, HYP-3409/T1370 became the
+recursive sidecar pattern atlas, HYP-3410/T1371 became the charal recursion
+scout, and S257 claimed HYP-3411 for the Galois residue/magnitude reframe.  The
+scaffold remains downstream rather than conflicting: it proposes recursive
+cut/signature tests starting from the HYP-3406 sidecar chain
 `residue -> height -> owner_support`.
 
 Mesh notes already sent: `MSG-1403` claimed the enlarged-bank residue thread;

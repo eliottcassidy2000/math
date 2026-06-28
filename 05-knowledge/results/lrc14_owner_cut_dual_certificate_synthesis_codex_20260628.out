@@ -1,0 +1,84 @@
+HYP-3417 owner-cut dual certificate synthesis
+==============================================================================
+substrate=HYP-3410 exact mixed-fiber owner-label rows
+goal=turn visible owner cuts into labelled dual-current proof obligations
+zero_level=0 for the signed owner current
+
+## Fiber Certificates
+
+### height_leak_12_family
+rows=3 exit_hist={'positive-Haar-open': 2, 'unit-petal-named': 1}
+common_owner_core=('6:g2', '7:g7')
+krasner_core_projection_exit_pure=False
+projection_min_cut_size=1 first_projection_cuts=(('5:g1',),)
+unit_island_certificate=none
+positive_debt_certificate=positive_debt cut=('5:g1',) size=1 budget=1/5 margin=1 group_word=(('g1', 1),)
+positive_debt_certificate=score_hist_by_exit={'positive-Haar-open': Counter({1: 2}), 'unit-petal-named': Counter({0: 1})}
+selected_dual_certificate=positive_debt cut=('5:g1',) size=1 budget=1/5 margin=1 group_word=(('g1', 1),)
+selected_dual_certificate=score_hist_by_exit={'positive-Haar-open': Counter({1: 2}), 'unit-petal-named': Counter({0: 1})}
+selected_sophie_channels=(core=2, cut=1, plus=10, minus=2, product=20)
+positive_debt_sophie_channels=(core=2, cut=1, plus=10, minus=2, product=20, channel_owner_hits=[])
+top_finite_bdh_variance=5:g1:8/9
+
+### persistent_owner_leak_26_40_54_family
+rows=11 exit_hist={'positive-Haar-open': 10, 'unit-petal-named': 1}
+common_owner_core=('12:g2',)
+krasner_core_projection_exit_pure=False
+projection_min_cut_size=1 first_projection_cuts=(('1:g1',),)
+unit_island_certificate=unit_island cut=('1:g1',) size=1 budget=1 margin=1 group_word=(('g1', 1),)
+unit_island_certificate=score_hist_by_exit={'positive-Haar-open': Counter({0: 10}), 'unit-petal-named': Counter({1: 1})}
+positive_debt_certificate=positive_debt cut=('11:g1', '13:g1') size=2 budget=24/143 margin=1 group_word=(('g1', 2),)
+positive_debt_certificate=score_hist_by_exit={'positive-Haar-open': Counter({2: 6, 1: 4}), 'unit-petal-named': Counter({0: 1})}
+selected_dual_certificate=unit_island cut=('1:g1',) size=1 budget=1 margin=1 group_word=(('g1', 1),)
+selected_dual_certificate=score_hist_by_exit={'positive-Haar-open': Counter({0: 10}), 'unit-petal-named': Counter({1: 1})}
+selected_sophie_channels=(core=1, cut=1, plus=5, minus=1, product=5)
+positive_debt_sophie_channels=(core=1, cut=2, plus=13, minus=5, product=65, channel_owner_hits=[13])
+top_finite_bdh_variance=1:g1:200/121
+
+### height_persistent_owner_leak_10_20_drop_add_family
+rows=10 exit_hist={'positive-Haar-open': 9, 'unit-petal-named': 1}
+common_owner_core=('6:g2',)
+krasner_core_projection_exit_pure=False
+projection_min_cut_size=3 first_projection_cuts=(('11:g1', '13:g1', '1:g1'), ('11:g1', '13:g1', '2:g2'), ('11:g1', '2:g2', '7:g7'), ('13:g1', '1:g1', '5:g1'), ('13:g1', '2:g2', '5:g1'))
+unit_island_certificate=none
+positive_debt_certificate=positive_debt cut=('2:g2', '11:g1', '13:g1') size=3 budget=191/286 margin=1 group_word=(('g1', 2), ('g2', 1))
+positive_debt_certificate=score_hist_by_exit={'positive-Haar-open': Counter({2: 6, 1: 3}), 'unit-petal-named': Counter({0: 1})}
+selected_dual_certificate=positive_debt cut=('2:g2', '11:g1', '13:g1') size=3 budget=191/286 margin=1 group_word=(('g1', 2), ('g2', 1))
+selected_dual_certificate=score_hist_by_exit={'positive-Haar-open': Counter({2: 6, 1: 3}), 'unit-petal-named': Counter({0: 1})}
+selected_sophie_channels=(core=1, cut=3, plus=25, minus=13, product=325)
+positive_debt_sophie_channels=(core=1, cut=3, plus=25, minus=13, product=325, channel_owner_hits=[13])
+top_finite_bdh_variance=13:g1:49/50
+
+## Synthesis
+all_selected_certificates_have_positive_margin=1
+max_selected_cut_size=3
+max_positive_debt_cut_size=3
+frontier_cut_shape=one even-cover label plus two binding labels: {2:g2, 11:g1, 13:g1}
+s257_crosslink=local owner-current echo of the C3-gated residue/magnitude split; not the global q==1 mod3 GW criterion
+s258_guardrail=sidecar certificate; proof completion still needs the HYP-3415 decorrelation floor inequality
+h3416_ladder_fit=owner-current certificate layer inside the recursive quotient ladder
+sophie_13_recurrence=positive-debt cuts for the two owner leaks give (core,cut)=(1,2)->channels 13/5 and (1,3)->channels 25/13
+proof_obligation=extend the enlarged bank and prove every surviving mixed residue/height fiber has an owner-current certificate of bounded size, or emits named owner/height/state-lift debt
+hlw_guardrail=the scalar channel numbers are not a certificate unless the owner labels and zero-level current are retained
+
+## Tournament Analysis
+vertices=proof obligations and owner-current certificates, not runners
+pairwise_observable=exact mixed-fiber discharge plus retained labelled sidecars
+switch_gauge=higher weighted certificate score; ties by declared priority
+vertex_count=7
+score_hist={-23: 1, 20: 1, 25: 1, 33: 1, 34: 1, 57: 1, 59: 1}
+directed_3cycles=0
+hamiltonian_path_count=1
+priority_hamiltonian_path=
+  owner_cut_dual_current_certificate: score=59 keeps=['bounded_owner_cut', 'dual_margin', 'labelled_owner_payload', 'next_theorem_shape', 'recursive_bank_hook', 'separates_current_fibers'] loses=['raw_scalar_shadow']
+  positive_debt_hitting_set_theorem: score=57 keeps=['bounded_owner_cut', 'dual_margin', 'finite_budget_choice', 'next_theorem_shape', 'recursive_bank_hook', 'separates_current_fibers'] loses=[]
+  krasner_owner_core_instability_gate: score=34 keeps=['bounded_owner_cut', 'core_stability_guard', 'labelled_owner_payload', 'next_theorem_shape'] loses=['raw_scalar_shadow']
+  sophie_germain_channel_audit: score=33 keeps=['bounded_owner_cut', 'exact_algebraic_channel', 'finite_budget_choice', 'labelled_owner_payload'] loses=['recursive_bank_hook']
+  finite_mertens_budget_selector: score=25 keeps=['bounded_owner_cut', 'finite_budget_choice', 'labelled_owner_payload'] loses=['exact_algebraic_channel']
+  c3_7adic_2adic_group_split: score=20 keeps=['core_stability_guard', 'labelled_owner_payload', 'recursive_bank_hook'] loses=['dual_margin']
+  raw_named_constant_scalar: score=-23 keeps=['raw_scalar_shadow'] loses=['bounded_owner_cut', 'core_stability_guard', 'dual_margin', 'exact_algebraic_channel', 'finite_budget_choice', 'labelled_owner_payload', 'next_theorem_shape', 'recursive_bank_hook', 'separates_current_fibers']
+
+## Assumption Challenge
+considered_vertices=runners, residues, owner labels, owner cuts, signed currents, Sophie channels, Mertens budgets, Krasner cores, and proof obligations
+chosen_vertices=proof obligations and labelled owner-current certificates; this preserves theorem-exit separation and destroys raw row order
+challenged_assumption=a famous scalar or raw p-adic closeness can replace the endpoint-owner packet.  The computations keep the labels.

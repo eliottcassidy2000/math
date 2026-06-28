@@ -15,6 +15,53 @@
 
 ---
 
+## Lead codex-2026-06-28: Owner-cut dual current certificate synthesis
+
+**Status:** SYNTHESIS / exact owner-current certificate scout; not proof
+(HYP-3417/T1378/LTI-378/LTT-278).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3417-lrc14-owner-cut-dual-certificate-synthesis.md`,
+script
+`04-computation/lrc14_owner_cut_dual_certificate_synthesis_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_owner_cut_dual_certificate_synthesis_codex_20260628.out`,
+and
+`07-reflections/lrc14-owner-cut-dual-certificate-synthesis-codex-20260628.md`.
+
+Purpose: push HYP-3410's Menger-owner-cut route one step closer to a theorem
+by turning owner cuts into labelled signed-current certificates with declared
+zero level and margin.  This keeps the finite endpoint-owner packet instead of
+scalarizing to cut size, p-adic closeness, or a famous-problem name.
+
+Readout: all three current HYP-3410 mixed fibers have margin-1 certificates:
+
+```text
+height leak:       positive-debt {5:g1}
+13->26 owner leak: unit-island {1:g1}
+10->20 frontier:  positive-debt {2:g2,11:g1,13:g1}
+```
+
+The frontier cut is exactly one even-cover label plus two binding labels.  The
+positive-debt Sophie audit gives `(core,cut)=(1,2)->13/5` and
+`(1,3)->25/13`, matching the top frontier finite-BDH variance label
+`13:g1=49/50`.
+
+Rebase signal: incoming S257/HYP-3411-HYP-3413 makes the residue `C3` layer the
+gate for the global GW doubling criterion.  This lead is narrower: it keeps the
+same 7-adic/2-adic split visible inside the local frontier owner-current cut,
+but it still has to be extended into a bounded finite certificate theorem.
+After S258/HYP-3415, this lead is explicitly off the main proof-completion
+path unless it feeds the decorrelation floor inequality.
+Incoming HYP-3416 supplies the recursive quotient-ladder setting; HYP-3417 is
+one owner-current certificate layer for that stack, not a replacement for it.
+
+Next: extend the HYP-3406/HYP-3410 enlarged bank beyond `(72,20)`.  For every
+mixed residue/height fiber, compute the common owner core, unit-island current,
+Mertens-cheapest positive-debt current, signed-current margin, Sophie channel
+pair, and top finite-BDH variance label.  If no bounded owner current exists,
+name the first owner/height/off-grid/exact-period/state-lift debt.
+
 ## Lead codex-2026-06-28: Recursive sidecar pattern atlas
 
 **Status:** SYNTHESIS / executable recursion-pattern router; not proof

@@ -1,5 +1,51 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3417 owner-cut dual current addendum:**
+HYP-3417 sharpens the owner-support/Menger route into a concrete certificate
+obligation.  On the current HYP-3410 mixed fibers, all selected owner-current
+certificates have margin `1`:
+
+```text
+height leak:       positive-debt {5:g1}
+13->26 owner leak: unit-island {1:g1}
+10->20 frontier:  positive-debt {2:g2,11:g1,13:g1}
+```
+
+The frontier cut is one even-cover label plus two binding labels.  In the
+positive-debt orientation, the Sophie-Germain channel audit gives
+
+```text
+(core,cut)=(1,2) -> 13 and 5
+(core,cut)=(1,3) -> 25 and 13
+```
+
+and the same frontier has top finite-BDH variance `13:g1=49/50`.
+
+Rebased against S257, this should be tested as a local finite-owner certificate
+that is compatible with the `C3`-gated GW doubling criterion, not as a substitute
+for that global criterion.
+
+Open concrete task: extend the HYP-3406/HYP-3410 enlarged bank beyond
+`(single_limit,two_swap_limit)=(72,20)` and for every mixed residue/height
+fiber record:
+
+```text
+common owner core
+unit-island current, if any
+Mertens-cheapest positive-debt current, if any
+signed-current margin from zero level 0
+Sophie channel pair from core size and cut size
+finite-BDH top variance label
+terminal route or named debt if no bounded current exists
+```
+
+If the positive-debt cut size remains bounded by `3`, try to promote the
+pattern to a finite owner-current/Menger/Farkas lemma.  If it fails, the first
+failure should be named as owner, height, off-grid floor, exact-period, or
+state-lift debt. -> HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407,
+HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3310, HYP-3265,
+HYP-2963, THM-523, LTI-378, LTT-278, T1378, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3409 recursive sidecar pattern atlas addendum:**
 HYP-3409 abstracts the active HYP-3405/HYP-3406/HYP-3407/HYP-3408 route as a
 recursion over legal forgetful maps:

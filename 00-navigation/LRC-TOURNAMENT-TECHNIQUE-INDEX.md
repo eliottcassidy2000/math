@@ -8084,3 +8084,47 @@ quotient_legality_status
   HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401,
   HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-2969,
   HYP-2963, THM-523, LTI-374, T1374, OPEN-Q-108.
+
+## LTT-278: Owner-Cut Dual Current Certificate Tournament
+
+- **Move:** Use proof obligations and labelled owner-current certificates as
+  tournament vertices: owner-cut dual current, positive-debt hitting-set
+  theorem, Krasner owner-core instability gate, Sophie-Germain channel audit,
+  finite Mertens budget selector, C3/7-adic/2-adic group split, and raw named
+  scalar as negative control.
+- **LRC use:** HYP-3417 sharpens HYP-3410's owner-cut route by declaring the
+  zero level and margin of the signed current.  On the current exact mixed
+  fibers, selected certificates are `{5:g1}`, `{1:g1}`, and
+  `{2:g2,11:g1,13:g1}`, all with margin `1`.  The frontier certificate is one
+  even-cover label plus two binding labels.  Rebased over S257/HYP-3411-HYP-3413,
+  this is a local owner-current witness for the residue/magnitude split, not a
+  replacement for the global `q == 1 mod 3` GW-doubling criterion, and after S258/HYP-3415 it remains a sidecar to the decorrelation floor theorem.
+- **Preserves:** theorem-exit separation, endpoint-owner labels, owner group
+  split, zero-level current, bounded cut size, positive-debt/unit-island
+  orientation, and the next theorem obligation.
+- **Forgets / guardrail:** raw named constants, raw p-adic closeness, unlabelled
+  cut size, and bare Sophie channel numbers forget which finite owner packet
+  actually separates the exits.
+- **Pairwise observable:** exact mixed-fiber discharge plus retained labelled
+  sidecars.
+- **Switch/gauge:** higher weighted certificate score; ties by declared
+  priority.
+- **Exact fingerprint:** `vertices=7`,
+  `score_hist={-23:1, 20:1, 25:1, 33:1, 34:1, 57:1, 59:1}`,
+  `directed_3cycles=0`, `hamiltonian_path_count=1`, and priority path
+  `owner_cut_dual_current_certificate -> positive_debt_hitting_set_theorem ->
+  krasner_owner_core_instability_gate -> sophie_germain_channel_audit ->
+  finite_mertens_budget_selector -> c3_7adic_2adic_group_split ->
+  raw_named_constant_scalar`.
+- **Assumption challenge:** runners, residues, owner labels, owner cuts, signed
+  currents, Sophie channels, Mertens budgets, Krasner cores, and proof
+  obligations were considered.  The chosen vertices are proof obligations and
+  labelled owner-current certificates because the LRC predicate here is
+  theorem-exit separation, not raw row identity.
+- **Next hook:** extend the enlarged bank and test whether every surviving
+  mixed residue/height fiber has a bounded unit-island or positive-debt
+  owner-current certificate, an exit-pure charal recursion step, or named
+  owner/height/off-grid/state-lift debt.
+- **Pointers:** HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408,
+  HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3310,
+  HYP-3265, HYP-2963, THM-523, LTI-378, T1378, OPEN-Q-108.
