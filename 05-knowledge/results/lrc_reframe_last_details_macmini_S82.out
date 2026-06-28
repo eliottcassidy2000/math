@@ -1,0 +1,13 @@
+(b) resonant v covers the on-grid core; optimum dodges off-grid (bulk survives), M>1/14:
+  seed alone: M=0.14286 at t*=0.1429 (on-grid core 1/7)
+  seed+14: M=0.09090>1/14 at t*=0.8636  (dodged off exact a/14; v safe there)
+  seed+28: M=0.11110>1/14 at t*=0.8611  (dodged off exact a/14; v safe there)
+  seed+42: M=0.12000>1/14 at t*=0.1400  (dodged off exact a/14; v safe there)
+  seed+56: M=0.12500>1/14 at t*=0.1406  (dodged off exact a/14; v safe there)
+  => resonant case reduces to the GENERIC off-grid bulk bound (Vitali: v hits core, bulk survives).
+
+(a) rigidity = finite equioscillation system (3 sum-14 binding pairs at the units):
+  AP: residues mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  contains pairs [(1, 13), (3, 11), (5, 9)] (all 3: True)
+  GW: residues mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]  contains pairs [(1, 13), (3, 11), (5, 9)] (all 3: True)
+  => tight <=> 3 sum-14 pairs at units + complement-symmetric; integer 13-set solutions = AP/GW (+dilations).
+  Unified: the unit grid (Z/14)* is where tight is pinned (a) AND where resonant danger sits (b); off-grid bulk = generic.

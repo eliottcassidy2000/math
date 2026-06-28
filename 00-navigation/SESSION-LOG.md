@@ -1,3 +1,23 @@
+## mac-mini-2026-06-28-S82 -- REFRAMING the last two details to FIT: resonant survivor REDUCES to off-grid bulk; rigidity is a FINITE equioscillation system (both = the unit-grid core/bulk split)
+
+Owner: keep creatively reframing the last few details of LRC(14) to get them to fit; explore the repo for niche
+ideas. HYP-3255 + reflection reframing-the-last-two-details + script lrc_reframe_last_details_macmini_S82.py.
+
+REFRAME (b) resonant->generic (dissolves the S81 pull): a resonant v=14m has its danger ON the 14-grid (a/14);
+the seed's optimum DODGES off the exact a/14 (where v is safe) into the BULK; M>1/14 always (verified v=14: M=0.091
+off-grid; 28: 0.111 off; 42: 0.120; 56: 0.125). So the resonant case is NOT special -- it reduces to the off-grid
+GENERIC bound. Vitali: v hits the measure-zero core (a/14), the positive-measure bulk survives. The S81 '1/7-removal
+fails for resonant v' pull dissolves: no resonant exception; the analytic core is uniformly 'off-grid bulk has M>=1/14'.
+
+REFRAME (a) rigidity = a FINITE equioscillation system: tight <=> safety equioscillates at the 6 units (kps S255),
+pinned by the 3 sum-14 binding pairs {1,13},{3,11},{5,9} + complement symmetry (R=-R mod14); AP & GW both contain
+all 3 pairs (verified). Recasts the UNBOUNDED census as a FINITE Chebyshev system; solutions = AP/GW (+dilations).
+
+UNIFIED: the unit grid (Z/14)* is BOTH where tight is pinned (a) AND where resonant danger sits (b); the off-grid
+bulk = generic. The last two details = the on-grid (core/finite/equioscillation) vs off-grid (bulk/generic/
+equidistribution) split = the Vitali wall on both pieces at once. Residual: off-grid bulk positivity (b) +
+finite-system solution-count (a). NOT a proof; LRC(14) open, but the last two details now FIT one frame.
+
 ## mac-mini-2026-06-28-S81 -- TIGHTENING the rigor: construction RIGOROUS (unit witnesses) + bounded margin RIGOROUS (delta~0.0026); PULL: equidistribution's clean 1/7-removal fails for resonant v (survivor-positive, not 6/7)
 
 Owner: tighten the remaining rigor as much as possible, many push-pull cycles, inspired by concurrent. HYP-3253 +
