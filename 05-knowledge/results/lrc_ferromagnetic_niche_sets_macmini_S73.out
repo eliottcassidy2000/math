@@ -1,0 +1,28 @@
+============================================================================================
+ PART A -- FIXED SIZE (13 runners = LRC(14)): fair FM ranking (smallest spread = most ferromagnetic)
+============================================================================================
+13-set (+observer 0)                       R  p0(cov) circle spread frustration|Im|
+primes                                 2.272   0.4794         1.247         0.26360 <== FM GROUND STATE
+GW {1..11,13,24}                       2.200   0.6755         1.341         0.47310
+AP {1..13} (Paley/regular ground)      2.001   0.7047         1.361         0.47769
+2*AP {2..26} (dilation)                2.001   0.7047         1.361         0.47769
+squares {1,4,..,169}                   2.819   0.4244         2.258         0.78433
+random spread                          2.598   0.3884         2.766         0.98371
+Fibonacci                              3.188   0.3980         3.246         1.65902
+Sidon (Mian-Chowla)                    2.738   0.4065         3.339         0.97886
+dyadic {1,2,..,4096}                   4.796   0.4247         8.925        14.75463
+--------------------------------------------------------------------------------------------
+ de Moivre/cyclotomic FM ideal: 2cos(2pi j/7)=['-1.802', '-0.445', '1.247']; perfect circle spread=1.0
+
+============================================================================================
+ PART B -- COOLING: AP/consec at growing size k (= lowering temperature) -> spread -> 1 (FM circle)
+============================================================================================
+consec {0..k-1}        k       R circle spread frustration|Im|
+consec                 7   1.355         3.351         0.44073
+consec                 8   1.588         1.143         0.16880
+consec                 9   1.690         1.223         0.26394
+consec                10   1.780         1.260         0.36461
+consec                11   1.855         1.327         0.42399
+consec                12   1.907         1.332         0.43262
+consec                13   1.960         1.363         0.47637
+ => more runners = colder = tighter Lee-Yang circle: the FM ground state is the cold/full-AP limit.

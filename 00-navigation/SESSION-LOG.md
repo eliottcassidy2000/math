@@ -133,6 +133,22 @@ axis, with the 7th cyclotomic profile as the cap ideal and off-circle `Im(w)`
 as dip/real-rootedness defect.  HYP-3153 now treats this as a stability
 sidecar to test, not as a completed proof.
 
+S73b FERROMAGNETIC MERGE (owner: merge past ferromagnetic ideas + creative niche sets): the bridge IS the
+physics bridge. Merged the-antiferromagnetic-tournament (opus-S15: tournament=frustrated spin system,
+I(Omega,2)=hard-core repulsive PF, regular/Paley=Néel/AFM=H-max) + the-two-maps (kps-S31ah: tournament real-axis
+vs LRC circle = the two Lee-Yang loci) + my Joukowski bridge = the explicit map between kps's two loci. So
+TOURNAMENT=anti-ferromagnet (real axis, repulsive=>real-rooted); LRC coverage=ferromagnet (Lee-Yang circle);
+DIP=frustration; AP=unfrustrated FM config. CONVERGES with kps-S31ai (concurrent, top of log): consec = the
+FERROMAGNETIC ordered phase by total covariance Sigma kappa2 (max +0.722; dissociated go NEGATIVE=AFM); the odd
+residue kappa3=the ASSOCIATOR=non-associative apex-7. kps's kappa3 associator = my off-circle/dip; kps's
+covariance-FM = my coverage-FM. NICHE SETS (lrc_ferromagnetic_niche_sets_macmini_S73.py, FIXED size 13):
+**coverage and circle-tightness DECOUPLE** -- AP maximizes COVERAGE p0=0.705 but PRIMES have the TIGHTEST circle
+(spread 1.247 < AP 1.361); dyadic/geometric=the SPIN-GLASS (spread 8.9, |Im|=14.8, one far element=one dominant
+frustrated bond=codex multi-far). HONEST CAUTION: the Lee-Yang circle captures the GEOMETRY, NOT the LRC coverage
+coefficient (p0=q6*R^6 decouples b/c q6 varies); circle-tightness is NOT the proof handle. Commensuration (not
+cooling): consec circle tightest at k=8=7 runners on 7 sectors, then loosens. Dilation invariance re-verified
+(AP=2*AP). Updated HYP-3154 + reflection the-joukowski-de-moivre-bridge (added Ferromagnetic-merge section).
+
 ## mac-mini-2026-06-27-S72 -- the Lee-Yang circle web: coverage=R^6, dip=off-circle phi^4, Galois<=S4, compression hierarchy
 
 Owner: merge a dense web (Lee-Yang circle=binomial=cap pair-Pascal+de-Moivre-Laplace, dip=phi^4 off-circle;

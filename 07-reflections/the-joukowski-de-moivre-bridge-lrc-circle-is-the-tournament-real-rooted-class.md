@@ -63,6 +63,40 @@ block** because it has *interior Lee-Yang zeros* (HYP-3128/3132) — that is pre
 (dip > 0) here, and the apex/tip block being Lee-Yang-safe is the **on-circle** (cyclotomic) part. My bridge
 gives the geometry: the obstruction is the gap between `G_N` and the 7th-cyclotomic ideal, measured by `Im(w)`.
 
+## Ferromagnetic merge (S73b): tournament = AFM, LRC = FM, dip = frustration — and the decoupling the niche sets expose
+This bridge is the physics bridge between the project's two magnet pictures, which already existed separately:
+- **[[the-antiferromagnetic-tournament]]** (opus-S15): the tournament IS a frustrated spin system; `I(Omega,2)`
+  is the hard-core (repulsive) partition function; regular/Paley = the Néel/AFM ground state = the H-maximizer;
+  transitive = the fully-polarized ferromagnet. So the tournament side is **ANTI-ferromagnetic / repulsive**,
+  which is exactly why its zeros are **real** (Heilmann-Lieb, the repulsive-gas locus).
+- **[[the-two-maps-lee-yang-extremality-tournament-real-axis-lrc-circle-kps]]** (kps-S31ah): the two partition
+  functions are the two Lee-Yang loci — tournament `I(Omega,x)` real-axis, LRC `Q(z)` circle (the original
+  ferromagnetic-Ising Lee-Yang theorem). My Joukowski `w=z+R^2/z` is **the explicit map between kps's two
+  loci** — they are not two parallel facts but one object seen on the circle and on its real shadow.
+So: **TOURNAMENT = anti-ferromagnet (real axis); LRC coverage = ferromagnet (Lee-Yang circle); the dip / off-
+circle deviation = frustration; the AP is the unfrustrated FM configuration.** (φ⁴ HYP-3099: the dip = the
+quartic coupling λ that the off-circle motion turns on.)
+
+**BUT the niche-set test (`lrc_ferromagnetic_niche_sets_macmini_S73.py`) tempers this — coverage and circle-
+tightness DECOUPLE.** Fixed at 13 runners (= LRC(14)), ranking by circle spread `max|r|/min|r|`:
+```
+ primes      spread 1.247  (TIGHTEST circle / least frustrated)   p0=0.479
+ GW          1.341                                                 p0=0.676
+ AP {1..13}  1.361  (NOT tightest)                                 p0=0.705  (MAX coverage)
+ squares 2.26 ; random 2.77 ; Fibonacci 3.25 ; Sidon 3.34 ; dyadic 8.9 (MOST frustrated, |Im|=14.8)
+```
+The **AP maximizes coverage `p0`** (the LRC quantity) but is **not** the tightest Lee-Yang circle — the
+**primes** are. So "AP = tightest circle" (kps MAP 2, my opening) is really "**AP = max coverage**"; circle-
+tightness is a *separate* functional that the primes win. The reusable caution: **the Lee-Yang circle captures
+the GEOMETRY, not the LRC coverage coefficient** — `p0 = q6·R^6` decouples because `q6` (the all-missed mass)
+varies too (primes have larger `R` but smaller `q6`, netting lower `p0`). The off-circle↔coverage link is a
+loose heuristic, not a law; do not over-invest in circle-tightness as the proof handle. Two more honest reads:
+- **Commensuration, not cooling:** consec's circle is tightest at **k=8 = 7 runners on 7 sectors** (spread
+  1.14), then *loosens* to 1.36 by k=13 — a commensurate-filling effect, not "more runners = colder".
+- **dyadic/geometric is the spin-glass:** one far element (the multi-far of codex's program) blows the spread
+  to 8.9 and `|Im|` to 14.8 — the maximally frustrated, maximally off-circle configuration. The far element
+  "pushes a zero out" (codex HYP-3131) = a single dominant frustrated bond.
+
 ## Honest status
 - **EXACT / verified:** Joukowski sends circle->real; uniform PGF -> the de Moivre angles `2cos(2 pi j/7)`
   (the cyclotomic ideal = the cap); consec is max-coverage & min-off-circle (0/400 random exceptions, n=7,8,9);
