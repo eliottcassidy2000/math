@@ -1,0 +1,15 @@
+q6(AP{0..k-1}) = 1/(7(k-1)) (clumped extreme):
+  k=4: q6=0.04762  1/(7(k-1))=0.04762  match=True
+  k=5: q6=0.03571  1/(7(k-1))=0.03571  match=True
+  k=6: q6=0.02857  1/(7(k-1))=0.02857  match=True
+  k=7: q6=0.02381  1/(7(k-1))=0.02381  match=True
+  k=8: q6=0.02041  1/(7(k-1))=0.02041  match=True
+
+consec rank over 400 random 8-sets (beats = strictly better):
+  kappa2(EVEN,A)  : 0/400 random beat consec  (consec MAX)
+  kappa3(ODD,B)   : 0/400 random beat consec  (consec MAX)
+  kappa4(EVEN)    : 0/400 random beat consec  (consec MIN)
+  bimod q0+q6     : 0/400 random beat consec  (consec MAX)
+
+=> A (even k2) & B (odd k3) BOTH consec-maximized => ONE target (the bimodal/phi^4 extremizer);
+   consec MIN k4 = the phi^4 stabilizer. The two dualities = the IE parity = Eisenstein(+even)/Legendre(-odd).

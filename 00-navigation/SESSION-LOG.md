@@ -1,3 +1,26 @@
+## mac-mini-2026-06-28-S76 -- the two proof targets are ONE (consec=bimodal/φ⁴ extremizer); the even/odd + positive/negative dualities = the inclusion-exclusion parity (Eisenstein/Legendre)
+
+Owner: extend/finalize the Vitali-wall work; use the even/odd + positive/negative dualities; work two remaining
+proof targets back and forth, each inspiring the other. HYP-3239 + reflection the-two-targets-are-one + script
+lrc_even_odd_unification_macmini_S76.py. (Triple convergence: kps S31au + codex HYP-3238 + me, all on these dualities.)
+
+TARGETS: A (EVEN+POSITIVE, κ₂ covariance) + B (ODD+NEGATIVE, κ₃ associator/dip). BACK-AND-FORTH: A's contiguous-arc/
+FKG route failed (AP empty set contiguous only ~76-88%); pivot to B (cumulant tower) -> THE GEM: A & B are the SAME
+target. VERIFIED 0/400: consec JOINTLY maximizes κ₂(even), κ₃(odd), bimodality q0+q6, and MINIMIZES κ₄(even) = the
+bimodal/φ⁴-ordered extremizer (max variance + min kurtosis = sharp bimodal); q6(AP)=1/(7(k-1)) clean. So proving the
+bimodal extremality proves BOTH parities.
+
+THE DUALITIES = THE IE PARITY: cap = Σ(-1)^j S_j = [even S_j, POSITIVE = EISENSTEIN] - [odd S_j, NEGATIVE = LEGENDRE]
+(S75d/HYP-2901). even/odd = IE order-parity = cumulant parity; positive/negative = IE sign = Eisenstein/Legendre =
+FM/AFM covariance sign. REDUCTION: A & B both -> the cap q0 = consec minimizes 7-sector DISCREPANCY; even = cyclotomic
+SOS square F₇ (provable, S75e), odd = Φ₇ 7²-ramified dip (apex hardness). BULK/CORE BRIDGE: discrepancy = the SAME
+tool at coarse (bulk equidist, S74) & fine (core cap) scales, spanning both Vitali halves (S75f).
+
+CONVERGENCE: kps S31au (even-odd IS positive-negative; obstruction sign=p mod 4; n=14 wall = imaginary-quadratic
+Q(√-7), 7≡3 mod 4 -- the OTHER Q(ζ_7) subfield beside my cap's real cubic Q(cos2pi/7)); codex HYP-3238 (crossed-packet
+duality, my unification = its diagonal). All three: the two dualities are ONE, realized in the Q(ζ_7) subfield lattice.
+NOT a proof; collapses two targets to one + pins the dualities to the IE parity / cyclotomic subfields.
+
 ## kind-pasteur-2026-06-28-S31au -- FINALIZE: even-odd duality IS positive-negative duality; obstruction sign = p mod 4; n=14's wall = the IMAGINARY-QUADRATIC wall
 
 Owner: extend and finalize the previous session's work (HYP-3219 Brouwer factorization), considering past
