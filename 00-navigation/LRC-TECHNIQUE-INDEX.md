@@ -468,6 +468,7 @@ record what it destroys before asking it to prove anything.
 | LTI-369 | Exotic guardrail sidecar router | Owner-residue-height first-failure theorem, Krasner owner-lift stability gate, Sophie-Germain quartic factor split, Meissel-Mertens denominator entropy normalizer, HLW no-scalar-shadow guardrail, Ramanujan-Soldner zero-renormalization anchor, p-adic HLW firewall | HYP-3408 is the exact guardrail companion to HYP-3407.  It verifies that same-residue lifts `12->26`, `2->16`, and `13->27` are strict-open while tight `12->24` changes residue, so p-adic/Krasner language must stabilize contact-root and endpoint-owner packets rather than raw congruence.  It ranks the owner-residue-height theorem first, then Krasner owner-lift stability, then Sophie-Germain quartic splitting. | HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-2982, HYP-2214, T1369, LTT-269, LTI-369, OPEN-Q-108 | Extend HYP-3406 beyond `(72,20)` until `residue+owner_support` first fails; then record contact-root stability and try the Sophie-Germain quartic split on lost height/flex coordinates before admitting any analytic scalar route. |
 | LTI-370 | Recursive sidecar pattern atlas | Legal forgetful maps, mixed theorem-exit fibers, first destroyed sidecar, repaired quotient stack, owner-cut/Menger recursion, collar-to-bank lift, finite chamber terminal router, chiral child decks, Krasner/contact-root gates, Sophie-Germain factor channels, no-scalar-shadow firewall | HYP-3409 abstracts the current HYP-3405/HYP-3406/HYP-3407/HYP-3408 route as `legal quotient -> mixed theorem-exit fiber -> first missing sidecar -> repaired quotient -> next quotient`.  The technique treats LRC14 recursion as recursion over theorem-facing quotient maps rather than over runners, arcs, residues, or constants.  Top operators are mixed-fiber resurrection, owner-cut recursion, collar-to-bank lift, height-then-owner escalation, and finite chamber terminal routing. | HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3124, HYP-3123, HYP-3118, HYP-2982, HYP-2963, THM-523, T1370, LTT-270, LTI-370, OPEN-Q-108 | Implement a shared quotient/fiber/repaired-quotient API for HYP-3405 AP-vs-`13->27` and HYP-3406 owner leaks; extend past `(72,20)` until `residue+owner_support` first fails; build owner-support Menger graphs for `petal 13->26` and `petal 10->20`; add terminal-exit labels before analytic averaging. |
 | LTI-371 | Bring/Schwarz-Christoffel/BDH/Menger charal recursion | Five-exit branch alphabet, contact-polygon turn word, accessory endpoint-owner debt, finite owner-channel variance, Menger owner-label cuts, characteristic/chiral/arc-lift recursion under `+14` ladders | HYP-3410 executes the user's Bring radical, Schwarz-Christoffel, Barban-Davenport-Halberstam, Menger, and charal-signature prompts as the exact mixed-fiber slice adjacent to the HYP-3407 boundary/special-function route.  The strongest finite signal is owner-cut recursion: the height leak is separated by `5:g1`, the persistent owner leak by `1:g1`, and the `(72,20)` `10->20` frontier needs a size-3 owner cut led by `13:g1` variance.  Charal signatures expose stable positive-open ladders for `1/3/5 -> 26,40,54`, apex-bearing ladders for `12 -> 48,132`, and petal branches at `13 -> 26` and `10 -> 20`. | HYP-3410, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-3124, HYP-2969, HYP-2963, THM-523, T1371, LTT-271, LTI-371, OPEN-Q-108 | Enlarge the HYP-2963 first-failure bank and test whether every mixed fiber has exit-pure charal recursion, a bounded owner cut, a finite-BDH separating channel, Schwarz-Christoffel accessory reconstruction, or named owner/height/off-grid/state-lift debt. |
+| LTI-380 | Charal owner-cut recursion prototype | Minimal owner-cut sidecars, cut-core/frequency ledger, exact binary owner-label decision trees, charal purity levels, finite BDH label priority, bounded owner-cut theorem target, scalar-firewall gates | HYP-3419 is the second-pass implementation over incoming HYP-3410.  It computes exact owner-cut decision trees for the represented mixed fibers: old height and owner leaks are depth-1 one-label cuts, while the `10->20` frontier has minimum cut size `3`, empty core, and optimal tree `13:g1? -> positive-open else 11:g1? -> positive-open else 2:g2? -> positive-open else unit-petal`.  The theorem target is bounded owner-cut recursion, not a one-label owner theorem. | HYP-3419, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3124, HYP-2963, THM-523, T1380, LTT-280, LTI-380, OPEN-Q-108 | Extend the HYP-2963/HYP-3406 bank beyond `(72,20)` and track the first growth of minimal owner-cut size; if it stays bounded, attempt a finite owner-cut theorem or dual owner-current certificate; if it grows, classify the first growth as SC accessory debt, tropical/off-grid debt, state-lift debt, or named residual. |
 | LTI-373 | Special-function cut signature recursion | Recursive `charal_signature` sidecars, Bring radical branch alarms, Schwarz-Christoffel cut angles, BDH variance packets, Menger exit cuts, Soldner zero normalization, Sophie Germain quartic split, HLW separation, Krasner stability, Mertens residuals | HYP-3412 executes a post-HYP-3406 creative synthesis scout on the `(72,20)` expanded bank (`2431` rows).  Its CHARAL mixed-fiber ladder says residue leaves `3` mixed fibers; residue+height/`v2` leaves `2`; BDH variance leaves `3`; cut-angle, Krasner radius, and owner support each leave `0`; Sophie quartic and honest Bring branch alarm each leave `2`; PGF proxy leaves `1`.  The Menger-style separator table says the `14`-row owner leak, `12`-row petal `10->20` owner/height-persistent leak, and `3`-row height leak all admit one-sidecar covers by `SC_cut_angle`, `Krasner_radius`, or `owner_support`, while height/`v2` separates only some leaks. | HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, THM-523, T1373, LTT-273, LTI-373, OPEN-Q-108 | Enlarge beyond `(72,20)` and test whether `residue + cut_angle_word` and `residue + krasner_radius_word` remain exact.  If either fails, record the first collision and decide whether full owner support, exact cut labels, or PGF/root branch payload is the true next sidecar. |
 | LTI-374 | Owner-cut resurrection calculus | Cross-exit row-pair clauses, endpoint-owner symmetric differences, minimum owner-label transversals, binary cut-code buckets, terminal chamber router, dual/Farkas current readout | HYP-3414 turns HYP-3411/HYP-3412/HYP-3413/HYP-3409/HYP-3410 into a finite proof-facing calculus.  In each mixed theorem-exit fiber, every cross-exit row pair emits an owner-label clause; a legal owner cut is a hitting set whose cut-code buckets are theorem-exit pure.  Known values are singleton cuts `5:g1` and `1:g1` for the first two leaks, but the `(72,20)` `10->20` frontier has minimum cut size `3`, five minimum cuts, and empty core, so the live theorem is bounded owner transversals rather than a universal singleton owner label. | HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-2969, HYP-2963, THM-523, T1374, LTT-274, LTI-374, OPEN-Q-108 | Extend HYP-3406 beyond `(72,20)`, run the clause/transversal calculator on the first `residue+owner_support` failure if one appears, and add child-deck stability plus terminal-exit routing to every cut-pure fiber. |
 | LTI-378 | Owner-cut dual current certificate | Labelled owner-current cuts, unit-island labels, positive-debt hitting sets, zero-level signed current, Krasner common-core instability, Sophie-Germain cut channels, finite Mertens budget selector | HYP-3417 sharpens HYP-3410 by turning owner cuts into explicit margin-1 dual-current certificates over the current mixed fibers.  Selected certificates are `{5:g1}`, `{1:g1}`, and `{2:g2,11:g1,13:g1}`; the last is one even-cover label plus two binding labels, consistent with the incoming S257 residue/magnitude split but only as a local owner-current certificate.  Positive-debt Sophie channels recur through `13`: `(1,2)->13/5` and `(1,3)->25/13`, matching top frontier variance `13:g1`. | HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3310, HYP-3265, HYP-2963, THM-523, T1378, LTT-278, LTI-378, OPEN-Q-108 | Extend the enlarged bank and prove every surviving mixed residue/height fiber has a bounded unit-island or positive-debt owner-current certificate, an exit-pure charal recursion step, or named owner/height/off-grid/state-lift debt. |
@@ -6516,6 +6517,92 @@ calculus and record whether the minimum transversal remains bounded, grows, or
 names a new sidecar.  Also test endpoint deletion, mirror-swap, and `+14`
 child decks for transversal-number stability.
 
+## LTI-380: Charal Owner-Cut Recursion Prototype
+
+Created by codex-2026-06-28 for HYP-3419/T1380 as the second-pass finite
+recursion API over incoming HYP-3410.  This technique keeps HYP-3410's exact
+mixed fibers but turns the Menger/charal signal into cut-core statistics and
+binary owner-label decision trees.
+
+Carrier / vertex set:
+
+```text
+proof modules and guardrail gates, not owner labels or famous theorem names
+```
+
+Core recursion:
+
+```text
+charal quotient -> mixed theorem-exit fiber -> owner cut sidecar
+-> binary cut recursion -> terminal theorem exit or named debt
+```
+
+Exact readout:
+
+```text
+height_leak_12_family:
+  min_owner_cut_size = 1
+  core = 5:g1
+  tree = test 5:g1; yes positive-open, no unit-petal
+
+persistent_owner_leak_26_40_54_family:
+  min_owner_cut_size = 1
+  core = 1:g1
+  tree = test 1:g1; yes unit-petal, no positive-open
+
+height_persistent_owner_leak_10_20_drop_add_family:
+  min_owner_cut_size = 3
+  min_owner_cut_count = 5
+  core = empty
+  optimal tree =
+    test 13:g1
+      yes positive-open
+      no test 11:g1
+        yes positive-open
+        no test 2:g2
+          yes positive-open
+          no unit-petal
+```
+
+Main lesson: the one-label owner theorem is already too optimistic.  The
+proper finite lemma target is bounded owner-cut recursion, with a dual
+owner-current/Farkas certificate or named residual when the cut grows.
+
+Guardrail roles:
+
+```text
+Bring radical        -> branch alphabet only
+Schwarz-Christoffel  -> turn word plus accessory owner debt
+finite BDH           -> label-priority variance, not proof substitute
+Menger               -> bounded endpoint-owner separator theorem shape
+Krasner              -> owner/contact stability gate
+Sophie Germain       -> height/flex factor channel after live debt is named
+HLW                  -> no-scalar-shadow firewall
+Ramanujan-Soldner    -> zero-level normalization hygiene
+Meissel-Mertens      -> tail entropy after finite exceptions are named
+```
+
+Preserved LRC predicate: theorem-exit purity after controlled forgetting.
+
+Destroyed information if used naively: full row identity, scalar shadows, raw
+turn-only polygons, p-adic closeness without owner/contact stability, and
+global averages before finite exceptions are labelled.
+
+Tournament fingerprint: `8` proof modules, score histogram
+`{28:1, 31:1, 49:1, 57:1, 60:1, 70:1, 79:1, 80:1}`, no directed `3`-cycles,
+and priority path
+`M00 bounded owner-cut theorem -> M01 charal decision-tree API -> M02 finite BDH label variance -> M03 Krasner owner-stability gate -> M04 Schwarz-Christoffel accessory reconstruction -> M05 Sophie-Germain height-factor channel -> M07 Soldner-HLW-Mertens scalar firewall -> M06 Bring branch alphabet`.
+
+Anchors: HYP-3419, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406,
+HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301,
+HYP-3265, HYP-3124, HYP-2963, THM-523, LTT-280, T1380, OPEN-Q-108.
+
+Next agent hook: extend the HYP-2963/HYP-3406 bank beyond `(72,20)` and
+measure the first growth of minimal owner-cut size.  If it stays bounded, try
+to prove a finite owner-cut theorem; if it grows, record the first growth as
+Schwarz-Christoffel accessory debt, tropical/off-grid debt, state-lift debt,
+height-factor debt, or a named residual.
+
 ## LTI-365: Creative Reframe Lead Atlas
 
 Created by codex-2026-06-28 for HYP-3404/T1365. This technique is a ranked
@@ -6630,8 +6717,8 @@ owner-support failure for contact/root stability and quartic factor channels.
 
 ## LTI-370: Recursive Sidecar Pattern Atlas
 
-Created by codex-2026-06-28 for HYP-3409/T1370.  This technique extracts the
-recursive proof pattern shared by HYP-3405, HYP-3406, HYP-3407, and HYP-3408:
+Created by codex-2026-06-28 for the recursive-sidecar HYP-3409/T1370.  This
+technique extracts the proof pattern:
 
 ```text
 legal quotient -> mixed theorem-exit fiber -> first missing sidecar
@@ -6644,47 +6731,16 @@ Carrier / vertex set:
 recursion operators and proof obligations generated by mixed fibers
 ```
 
-The technique explicitly rejects runners, raw arcs, residues, named constants,
-and scalar analogies as the primary vertex set for this pass.  Those can become
-data inside a sidecar, but the recursive proof object is the legal forgetful
-map and its repair obligation.
-
-Preserved LRC predicate: theorem-exit purity, including boundary-tight,
-strict-open, positive-Haar-open, unit-petal-named, q-witness, state-lift/H7,
-AP/GW equality, or named finite debt.
-
-Destroyed information by the quotient: row order, raw runner identity, scalar
-motif values, unlabelled analytic shadows, and any sidecar not needed by the
-current theorem predicate.
-
-Top recursive operators:
-
-```text
-R00 mixed-fiber resurrection loop
-R01 owner-cut recursion
-R02 collar-to-bank lift
-R03 height-then-owner escalation
-R04 finite chamber terminal router
-R05 chiral child-deck recursion
-R06 local stability gate
-R07 quartic factor split
-R08 mean-square exception ledger
-R09 no-scalar-shadow firewall
-```
+Top recursive operators: mixed-fiber resurrection loop, owner-cut recursion,
+collar-to-bank lift, height-then-owner escalation, finite chamber terminal
+router, chiral child decks, local stability gates, quartic factor splits,
+mean-square exception ledgers, and no-scalar-shadow firewall.
 
 Best use: turn HYP-3405 AP-vs-`13->27` and HYP-3406 owner leaks into one
-quotient/fiber/repaired-quotient API.  A compression is legal only when the
-theorem exit is pure on its fibers.  A mixed fiber emits the first destroyed
+quotient/fiber/repaired-quotient API.  A compression is legal only when
+theorem exit is pure on its fibers; a mixed fiber emits the first destroyed
 sidecar, such as unit-height flex, endpoint owner support, exact period,
 contact-root stability, chiral child side, or named residual.
-
-Finite lemma pull: prove a sidecar priority chain instead of a flat packet
-catalogue.  Current data suggests:
-
-```text
-residue failure -> height/v2 repair -> height-persistent owner leak
--> owner-support repair -> owner-cut/chiral/terminal branch
-```
 
 Failure mode: adding another analytic/scalar route before every finite branch
 has a terminal label.  The terminal router must send branches to AP/GW,
@@ -6721,12 +6777,6 @@ signature levels, mixed fibers, cut interfaces, variance packets, branch alarms,
 local stability radii, and proof obligations
 ```
 
-Preserved LRC predicate: theorem-exit purity on compressed fibers.
-
-Destroyed information if used naively: height/flex, endpoint owner, cut
-position, variance residual, local p-adic or analytic stability radius, and
-full PGF/root-curve branch structure.
-
 Exact readout on the HYP-3406 `(72,20)` expanded bank:
 
 ```text
@@ -6743,29 +6793,24 @@ residue_plus_PGF_curve_proxy     mixed=1
 residue_plus_owner_support       mixed=0
 ```
 
-Best use: replay known mixed fibers, especially HYP-3406's height leak and
-endpoint-owner leak, and add the first signature coordinate that makes theorem
-exit a function again.  The current recursive signature chain to stress is:
+The recursive signature chain to stress is:
 
 ```text
 coarse packet -> residue word -> height/v2 -> owner support
 -> cut angle/current -> variance residual -> local stability radius
--> root/branch alarm.
+-> root/branch alarm
 ```
 
 Menger-style separator readout: the `14`-row owner leak, `12`-row petal
 `10->20` owner/height-persistent leak, and `3`-row height leak all have
 minimum one-sidecar covers by `SC_cut_angle`, `Krasner_radius`, or
-`owner_support`.  Height/`v2` repairs only some leaks.
+`owner_support`; height/`v2` repairs only some leaks.
 
-Failure mode: letting Bring radicals, Schwarz-Christoffel maps, BDH variance,
-Menger cuts, Soldner zero-points, Sophie Germain factorization, HLW,
+Shared failure mode: letting Bring radicals, Schwarz-Christoffel maps, BDH
+variance, Menger cuts, Soldner zero-points, Sophie Germain factorization, HLW,
 Krasner, or Mertens become decorative analogies.  They are useful only when
-they create a new finite signal, separation functional, or named debt.  Also
-watch for sidecar cheating: branch alarms and root proxies must not carry the
-target theorem exit.
+they create a finite signal, separation functional, or named debt.
 
 Anchors: HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406,
 HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150,
-HYP-3147, HYP-3143, LTT-273, T1373,
-OPEN-Q-108.
+HYP-3147, HYP-3143, THM-523, LTT-273, T1373, OPEN-Q-108.

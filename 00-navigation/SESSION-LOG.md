@@ -148,6 +148,54 @@ directed `3`-cycles, and priority path
 `owner_cut_dual_current_certificate -> positive_debt_hitting_set_theorem ->
 krasner_owner_core_instability_gate -> sophie_germain_channel_audit ->
 finite_mertens_budget_selector`.
+## codex-2026-06-28 -- HYP-3419 charal owner-cut recursion prototype for LRC14
+
+Owner asked for a long creative session around Bring radical,
+Schwarz-Christoffel, Barban-Davenport-Halberstam, Menger cuts, recursive
+charal signatures, and the Soldner/Sophie-Germain/HLW/Krasner/Mertens
+guardrails.  While syncing, incoming mainline had already added HYP-3410 for
+the broad Bring/Schwarz/BDH/Menger charal atlas.  This pass continues it with
+HYP-3419/T1380/LTI-380/LTT-280 plus script/result/reflection:
+
+```text
+04-computation/lrc14_charal_owner_cut_recursion_prototype_codex_20260628.py
+05-knowledge/results/lrc14_charal_owner_cut_recursion_prototype_codex_20260628.out
+05-knowledge/hypotheses/HYP-3419-lrc14-charal-owner-cut-recursion-prototype.md
+07-reflections/lrc14-charal-owner-cut-recursion-prototype-codex-20260628.md
+```
+
+Readout: HYP-3410's first two mixed fibers have exact depth-1 owner-cut
+decision trees (`5:g1` and `1:g1`).  The newer `10->20` frontier has minimum
+owner-cut size `3`, five minimum cuts, empty core, and optimal depth-3 tree:
+
+```text
+13:g1? -> positive-Haar-open
+else 11:g1? -> positive-Haar-open
+else 2:g2? -> positive-Haar-open
+else unit-petal-named
+```
+
+This refutes the tempting one-label owner theorem on the known frontier.  The
+new theorem target is bounded owner-cut recursion: every mixed charal fiber
+has a bounded endpoint-owner cut, dual owner-current/Farkas certificate, stable
+charal positive-open ladder, or named terminal debt.
+
+Guardrail integration: Bring is branch alphabet only; Schwarz-Christoffel is
+turn word plus accessory owner debt; finite BDH ranks labels; Menger supplies
+the theorem shape; Krasner is an owner/contact stability gate; Sophie-Germain
+is a height/flex factor channel after live debt is named; HLW, Soldner, and
+Mertens are scalar-firewall/normalizer fields.
+
+Rebased over concurrent S258/HYP-3415: the critical path is the single
+decorrelation floor after q-witness and LRC<=13 induction.  HYP-3419 should be
+used as an auxiliary finite exception router for that floor, not as a competing
+proof spine.
+
+Next proof pull: extend the HYP-2963/HYP-3406 bank beyond `(72,20)` and
+measure the first growth of minimal owner-cut size.  Bounded cut size suggests
+a finite Menger/Farkas owner-cut theorem; growth should be classified as SC
+accessory debt, tropical/off-grid debt, state-lift debt, height-factor debt,
+exact-period/BDH exception, or named residual.
 
 ## codex-2026-06-28 -- HYP-3409 recursive sidecar pattern atlas for LRC14
 
@@ -197,6 +245,15 @@ to the boundary-uniformization cut-stability atlas, HYP-3408 to the exotic
 guardrail atlas, HYP-3409 to the recursive sidecar pattern atlas, HYP-3410 to
 the adjacent charal recursion scout, and HYP-3411 to the Galois reframe entry.
 The artifact set is:
+## codex-2026-06-28 -- boundary-uniformization cut stability -- HYP-3407
+## codex-2026-06-28 -- special-function cut signature recursion -- HYP-3412
+
+Reserved and then executed the special-function cut signature scout as a long
+creative synthesis pass downstream of HYP-3406.  The artifact was renumbered to
+HYP-3412/T1373/LTI-373/LTT-273 after mainline assigned HYP-3407 to the
+boundary-uniformization cut-stability atlas, HYP-3408 to the exotic guardrail
+atlas, HYP-3409 to the recursive sidecar atlas, HYP-3410 to the charal
+recursion scout, and HYP-3419 to the owner-cut prototype.  The artifact set is:
 `04-computation/lrc14_special_function_cut_signature_recursion_codex_20260628.py`,
 `05-knowledge/results/lrc14_special_function_cut_signature_recursion_codex_20260628.out`,
 `05-knowledge/hypotheses/HYP-3412-lrc14-special-function-cut-signature-recursion.md`,

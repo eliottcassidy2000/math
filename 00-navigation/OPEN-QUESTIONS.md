@@ -45,6 +45,51 @@ failure should be named as owner, height, off-grid floor, exact-period, or
 state-lift debt. -> HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407,
 HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3310, HYP-3265,
 HYP-2963, THM-523, LTI-378, LTT-278, T1378, OPEN-Q-108.
+**OPEN-Q-108 HYP-3419 charal owner-cut recursion addendum:**
+HYP-3419 turns incoming HYP-3410's Bring/Schwarz/BDH/Menger/charal atlas into
+an exact finite cut-recursion API.  The represented HYP-3410 fibers have
+minimal owner-cut sizes:
+
+```text
+height_leak_12_family                         1  core 5:g1
+persistent_owner_leak_26_40_54_family         1  core 1:g1
+height_persistent_owner_leak_10_20_frontier   3  empty core
+```
+
+The `10->20` frontier has an optimal depth-`3` decision tree:
+
+```text
+13:g1? -> positive-Haar-open
+else 11:g1? -> positive-Haar-open
+else 2:g2? -> positive-Haar-open
+else unit-petal-named
+```
+
+S258/HYP-3415 changes the proof priority: this finite recursion is auxiliary
+to the q-witness + LRC<=13 + one decorrelation-floor route.  Use it to expose
+finite exception packets and named debts before proving `|SPEC| < product`,
+not as a replacement for the floor theorem.
+
+Post-rebase relation: HYP-3416 gives the recursive quotient-ladder template,
+HYP-3417 gives the owner-current certificate target, and HYP-3419 supplies the
+charal decision-tree test harness that should feed or falsify those targets.
+
+S259/HYP-3418 adds a sharper test: in the `10->20` frontier, the label `2:g2`
+is an even-cover / 2-adic coordinate.  Track whether future minimum owner-cut
+trees require such an even label; that is the finite combinatorial shadow of
+the proposed 2-adic covering-floor descent.
+
+Open task: extend the HYP-2963/HYP-3406 bank beyond `(72,20)` and measure the
+first growth of minimal owner-cut size.  If the cut size remains bounded by a
+small constant, attempt a finite Menger/Farkas owner-cut theorem.  If it grows,
+record the first growth mechanism as Schwarz-Christoffel accessory debt,
+tropical/off-grid debt, state-lift debt, height-factor debt, exact-period/BDH
+exception, or a new named residual.  Do not use Bring, Soldner, HLW,
+Meissel-Mertens, or any scalar average as proof support until finite owner-cut
+exceptions are labelled. -> HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410, HYP-3409, HYP-3408, HYP-3407,
+HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310,
+HYP-3301, HYP-3265, HYP-3124, HYP-2963, THM-523, T1380, LTI-380, LTT-280,
+OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3409 recursive sidecar pattern atlas addendum:**
 HYP-3409 abstracts the active HYP-3405/HYP-3406/HYP-3407/HYP-3408 route as a

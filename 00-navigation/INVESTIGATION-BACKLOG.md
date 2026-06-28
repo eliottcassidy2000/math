@@ -61,6 +61,39 @@ mixed residue/height fiber, compute the common owner core, unit-island current,
 Mertens-cheapest positive-debt current, signed-current margin, Sophie channel
 pair, and top finite-BDH variance label.  If no bounded owner current exists,
 name the first owner/height/off-grid/exact-period/state-lift debt.
+## Lead codex-2026-06-28: Charal owner-cut recursion prototype
+
+**Status:** SYNTHESIS / finite cut-recursion API prototype; not proof
+(HYP-3419/T1380/LTI-380/LTT-280).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3419-lrc14-charal-owner-cut-recursion-prototype.md`,
+script
+`04-computation/lrc14_charal_owner_cut_recursion_prototype_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_charal_owner_cut_recursion_prototype_codex_20260628.out`,
+and
+`07-reflections/lrc14-charal-owner-cut-recursion-prototype-codex-20260628.md`.
+
+Purpose: continue incoming HYP-3410 by turning the Menger/charal signal into a
+finite owner-cut decision-tree API.  The exact known cuts are:
+
+```text
+height leak:               cut size 1, core 5:g1
+persistent owner leak:     cut size 1, core 1:g1
+10->20 frontier leak:      cut size 3, empty core
+```
+
+The `10->20` frontier has optimal tree
+`13:g1? -> positive-open else 11:g1? -> positive-open else 2:g2? -> positive-open else unit-petal`.
+This rules out a one-label owner theorem on current evidence and points to a
+bounded owner-cut recursion theorem.
+
+Next: extend the HYP-2963/HYP-3406 bank beyond `(72,20)` and measure minimal
+owner-cut growth.  If cut size stays bounded, try a finite Menger/Farkas
+owner-cut theorem.  If it grows, classify the first growth as
+Schwarz-Christoffel accessory debt, tropical/off-grid debt, state-lift debt,
+height-factor debt, exact-period/BDH exception, or named residual.
 
 ## Lead codex-2026-06-28: Recursive sidecar pattern atlas
 

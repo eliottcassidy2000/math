@@ -1,0 +1,134 @@
+HYP-3419 CHARAL OWNER-CUT RECURSION PROTOTYPE
+status=SYNTHESIS / finite cut-recursion API prototype; not an LRC14 proof
+source=HYP-3410 exact mixed fibers + HYP-3408 guardrails + HYP-3409 recursion
+
+## Owner-Cut Recursion
+
+### height_leak_12_family
+rows=3 exit_hist={'positive-Haar-open': 2, 'unit-petal-named': 1}
+min_owner_cut_size=1
+min_owner_cut_count=1
+min_owner_cut_core=('5:g1',)
+top_labels_across_min_cuts=[(1, '5:g1')]
+first_min_cut=('5:g1',)
+greedy_tree_depth=1 leaves=2 residuals=0
+optimal_tree_depth=1 leaves=2 residuals=0
+optimal_tree=
+  test owner_label 5:g1 rows=3 exits=['positive-Haar-open', 'unit-petal-named']
+    yes -> EXIT positive-Haar-open rows=2 names=[GW-shell alias 12->132, single swap 12->48]
+    no  -> EXIT unit-petal-named rows=1 names=[P10+GW]
+
+### persistent_owner_leak_26_40_54_family
+rows=11 exit_hist={'positive-Haar-open': 10, 'unit-petal-named': 1}
+min_owner_cut_size=1
+min_owner_cut_count=1
+min_owner_cut_core=('1:g1',)
+top_labels_across_min_cuts=[(1, '1:g1')]
+first_min_cut=('1:g1',)
+greedy_tree_depth=1 leaves=2 residuals=0
+optimal_tree_depth=1 leaves=2 residuals=0
+optimal_tree=
+  test owner_label 1:g1 rows=11 exits=['positive-Haar-open', 'unit-petal-named']
+    yes -> EXIT unit-petal-named rows=1 names=[petal 13->26]
+    no  -> EXIT positive-Haar-open rows=10 names=[single swap 1->26, single swap 1->40, single swap 1->54, single swap 3->26, single swap 3->40, single swap 3->54, single swap 5->26, single swap 5->40, single swap 5->54, single swap 9->54]
+
+### height_persistent_owner_leak_10_20_drop_add_family
+rows=10 exit_hist={'positive-Haar-open': 9, 'unit-petal-named': 1}
+min_owner_cut_size=3
+min_owner_cut_count=5
+min_owner_cut_core=()
+top_labels_across_min_cuts=[(4, '13:g1'), (3, '2:g2'), (3, '11:g1'), (2, '5:g1'), (2, '1:g1'), (1, '7:g7')]
+first_min_cut=('11:g1', '13:g1', '1:g1')
+greedy_tree_depth=3 leaves=4 residuals=0
+optimal_tree_depth=3 leaves=4 residuals=0
+optimal_tree=
+  test owner_label 13:g1 rows=10 exits=['positive-Haar-open', 'unit-petal-named']
+    yes -> EXIT positive-Haar-open rows=7 names=[two drop(1, 10)->add(17, 20), two drop(1, 10)->add(19, 20), two drop(3, 10)->add(15, 20), two drop(3, 10)->add(17, 20), two drop(5, 10)->add(15, 20), two drop(5, 10)->add(17, 20), two drop(5, 10)->add(19, 20)]
+    no  -> test owner_label 11:g1 rows=3 exits=['positive-Haar-open', 'unit-petal-named']
+    no  ->   yes -> EXIT positive-Haar-open rows=1 names=[two drop(3, 10)->add(19, 20)]
+    no  ->   no  -> test owner_label 2:g2 rows=2 exits=['positive-Haar-open', 'unit-petal-named']
+    no  ->   no  ->   yes -> EXIT positive-Haar-open rows=1 names=[two drop(1, 10)->add(15, 20)]
+    no  ->   no  ->   no  -> EXIT unit-petal-named rows=1 names=[petal 10->20]
+
+## Charal Signature Purity Levels
+
+### height_leak_12_family
+raw_route                        mixed=0 fibers=2 largest_fiber=2
+turn_word                        mixed=0 fibers=3 largest_fiber=1
+owner_group_counts               mixed=0 fibers=3 largest_fiber=1
+turn+groups+apex                 mixed=0 fibers=3 largest_fiber=1
+charal_without_owner_labels      mixed=0 fibers=3 largest_fiber=1
+first_min_owner_cut              mixed=0 fibers=2 largest_fiber=2
+full_owner_labels                mixed=0 fibers=3 largest_fiber=1
+full_charal_signature            mixed=0 fibers=3 largest_fiber=1
+
+### persistent_owner_leak_26_40_54_family
+raw_route                        mixed=0 fibers=2 largest_fiber=10
+turn_word                        mixed=0 fibers=7 largest_fiber=3
+owner_group_counts               mixed=1 fibers=5 largest_fiber=4
+turn+groups+apex                 mixed=0 fibers=7 largest_fiber=3
+charal_without_owner_labels      mixed=0 fibers=9 largest_fiber=2
+first_min_owner_cut              mixed=0 fibers=2 largest_fiber=10
+full_owner_labels                mixed=0 fibers=7 largest_fiber=3
+full_charal_signature            mixed=0 fibers=9 largest_fiber=2
+
+### height_persistent_owner_leak_10_20_drop_add_family
+raw_route                        mixed=0 fibers=2 largest_fiber=9
+turn_word                        mixed=0 fibers=10 largest_fiber=1
+owner_group_counts               mixed=0 fibers=9 largest_fiber=2
+turn+groups+apex                 mixed=0 fibers=10 largest_fiber=1
+charal_without_owner_labels      mixed=0 fibers=10 largest_fiber=1
+first_min_owner_cut              mixed=0 fibers=6 largest_fiber=3
+full_owner_labels                mixed=0 fibers=10 largest_fiber=1
+full_charal_signature            mixed=0 fibers=10 largest_fiber=1
+
+## Guardrail-Gated Proof Roles
+- Bring radical: admitted=five-exit branch alphabet; guardrail=not a quintic formula; branch ambiguity must be killed by exact sidecars.
+- Schwarz-Christoffel: admitted=turn word plus accessory owner debt; guardrail=turns alone are demoted whenever owner labels separate exits.
+- Barban-Davenport-Halberstam: admitted=finite owner-channel variance; guardrail=variance ranks labels but never replaces the cut certificate.
+- Menger cuts: admitted=bounded endpoint-owner separator; guardrail=this is the theorem-shaped core after HYP-3410.
+- Krasner's lemma: admitted=owner/contact stability gate; guardrail=same-residue or p-adic-near moves are legal only with stable contact packets.
+- Sophie Germain identity: admitted=quartic height/flex split into two quadratic channels; guardrail=used only after a live height sidecar is named by the recursion.
+- Hermite-Lindemann-Weierstrass: admitted=no-scalar-shadow firewall; guardrail=transcendental shadows cannot certify finite rational packets.
+- Ramanujan-Soldner constant: admitted=zero-level normalization hygiene; guardrail=renormalizes branch potentials but does not split a mixed fiber.
+- Meissel-Mertens constant: admitted=tail-entropy label after finite exceptions; guardrail=global averages start only after owner-cut residuals are named.
+
+## Candidate Finite Lemma Shape
+For every expanded-bank mixed charal fiber after residue/height sidecars:
+  1. either a bounded endpoint-owner cut makes theorem_exit a function;
+  2. or the fiber admits a dual owner-current / Farkas certificate;
+  3. or a stable charal ladder preserves positive-Haar-open exit;
+  4. or it terminates at AP/GW, strict-open mass, q-witness, H7/state lift,
+     Schwarz-Christoffel accessory debt, exact-period/BDH exception,
+     height-factor debt, or a newly named finite residual.
+
+Known finite evidence from HYP-3410/HYP-3419:
+  height_leak_12_family cut_size=1
+  persistent_owner_leak_26_40_54_family cut_size=1
+  height_persistent_owner_leak_10_20_drop_add_family cut_size=3
+The new warning is that one-label owner theorems are already too optimistic;
+the plausible next theorem is bounded owner-cut recursion.
+
+## Tournament Analysis
+vertices=proof modules and guardrail gates, not runners/arcs/constants
+pairwise_observable=finite exactness + cut power + recursion - scalar risk
+switch=higher weighted score; ties by module code
+vertex_count=8
+score_hist={28: 1, 31: 1, 49: 1, 57: 1, 60: 1, 70: 1, 79: 1, 80: 1}
+directed_3cycles=0
+hamiltonian_path=M00 -> M01 -> M02 -> M03 -> M04 -> M05 -> M07 -> M06
+  M00 score=80 bounded owner-cut theorem; keeps=('exit_status', 'endpoint_owner', 'finite Menger cut', 'terminal debt'); destroys=('raw scalar analogy',)
+  M01 score=79 charal decision-tree API; keeps=('charal signature', 'binary owner tests', 'terminal exits'); destroys=('global theorem without recursion',)
+  M02 score=70 finite BDH label variance; keeps=('owner channel discrepancy', 'cut-label priority'); destroys=('prime-distribution black box',)
+  M03 score=60 Krasner owner-stability gate; keeps=('local contact/root stability', 'endpoint_owner', 'same-residue lifts'); destroys=('raw p-adic closeness',)
+  M04 score=57 Schwarz-Christoffel accessory reconstruction; keeps=('turn word', 'accessory owner debt', 'contact polygon'); destroys=('turn-only proof',)
+  M05 score=49 Sophie-Germain height-factor channel; keeps=('quartic height/flex debt', 'two quadratic channels'); destroys=('factor identity as terminal proof',)
+  M07 score=31 Soldner-HLW-Mertens scalar firewall; keeps=('zero-level hygiene', 'no-scalar-shadow', 'tail entropy labels'); destroys=('finite packet certificate', 'endpoint owner')
+  M06 score=28 Bring branch alphabet; keeps=('five theorem exits', 'branch normalization'); destroys=('quintic formula chase', 'owner labels')
+
+## Assumption Challenge
+Considered vertices: runners, owner labels, cut sets, charal turns, BDH labels,
+Bring branches, Schwarz-Christoffel prevertices, algebraic constants, and proof modules.
+Chosen vertices: proof modules and guardrail gates.  The preserved LRC predicate is
+theorem-exit purity after controlled forgetting; destroyed raw data is allowed only
+when a later mixed fiber demands it as a named sidecar.
