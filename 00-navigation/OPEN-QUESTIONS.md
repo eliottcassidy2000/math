@@ -5971,3 +5971,46 @@ ambient index description for the S-dependent proof? -> HYP-3253, HYP-3252,
 HYP-3251, HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245,
 HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3239, HYP-3228, HYP-3204,
 LTI-347, LTT-247, T1347, OPEN-Q-108.
+## OPEN-Q-108 addendum (codex-2026-06-28): observability basis plus Morse descent
+
+HYP-3300 reframes the remaining LRC14 proof frontier as two finite theorem
+targets rather than another scalar extremal.
+
+First target:
+
+```text
+Build the actual sidecar observability matrix.
+Rows are residual pairs whose LRC status, route status, or terminal exit can
+change after a quotient.  Columns are retained sidecars.  Every status-changing
+pair must be separated, reconstructed, dual-annihilated, descended, stopped at
+AP/Goddyn-Wong Phi14 boundary, or routed to named debt.
+```
+
+Second target:
+
+```text
+After those columns are retained, build an acyclic discrete-Morse matching on
+finite chamber packets.  Every noncritical chamber must have a legal descending
+wall.  Critical cells are strict open, unit-group Chebyshev boundary,
+AP/Goddyn-Wong Phi14, Phi14d dilation, finite trap discharge, state-lift H=7
+contradiction, or named debt.
+```
+
+The new columns to test are endpoint owner, boundary cocircuit, Phi witness
+address, dilation grid, Toeplitz slack, Green resistance, odd-negative payload,
+Lee-Yang root word, tiling descent packet, lag transport signature,
+unit-equioscillation index, binding complement-pair word, analytic/topological
+index equalizer, Gauss-sum index word, Borsuk-Ulam forcing-gap flag,
+Roth-Halasz discrepancy, Hensel-Krasner unit, state-lift H7, Cech hole, and
+ear payload.  The toy HYP-3300 matrix has full row rank over `GF(2)`, but the
+open problem is to instantiate it on real rows from HYP-2963, HYP-3202,
+HYP-3225, HYP-3236, HYP-3243, HYP-3244, HYP-3245, HYP-3246, HYP-3247,
+HYP-3248, HYP-3249, HYP-3253, HYP-3255, HYP-3257, and HYP-3258.
+
+This addendum folds HYP-3245's autocorrelation transport, HYP-3246/HYP-3247's
+Chebyshev unit-equioscillation packet, HYP-3248/HYP-3249's q-uniform
+Chebyshev/index-prediction packet, and S289's Roth-Halasz/Hensel-Krasner
+packet into the same controlled-forgetting law: they are useful columns or
+energy coordinates, not terminal replacements for the finite chamber proof. -> HYP-3300, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243,
+HYP-3238, HYP-3236, HYP-3225, HYP-3108, HYP-3069, HYP-3070, HYP-3048,
+LTI-346, LTT-246, T1346, OPEN-Q-108.

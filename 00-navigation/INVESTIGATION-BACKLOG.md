@@ -5802,3 +5802,23 @@ on `Phi`, not as a standalone scalar proof.
 - **(c) McShaneÃ¢â‚¬â€œHarris JIS 27 (2024):** verifier REACHED and text-mined the PDF Ã¢â‚¬â€ no spectrum/gap-freeness statement (novelty position strengthened); their per-level generating functions (A357242/48/57/66) vs our gap-free floor + the repo's H-distribution machinery is an open bridge. Moon's *Topics on Tournaments* cyclic-triples chapter still worth a skim for a folklore interval exercise before any external novelty claim.
 - **(d) Three-cubes ledger follow-ups (T773Ã¢â‚¬â€œT775):** rigidity-pruned k=114 search with honest exclusion bound (NOT expecting a hit; min coordinate > ~10^16 per BookerÃ¢â‚¬â€œSutherland); OnoÃ¢â‚¬â€œTrebat-Leder full text when web is stable; Hirschhorn closed-form vs our two recurrence-theoretic proofs; primitivity status of 192/375/600.
 - **Status:** OPEN, prioritized (a) > (c) > (b) > (d).
+
+## LEAD (codex-2026-06-28): instantiate HYP-3300 observability rows
+- **Source:** HYP-3300, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3236, HYP-3225,
+  HYP-3202, HYP-2963.
+- **Status:** OPEN.  HYP-3300 currently uses a toy residual-pair matrix with
+  full `GF(2)` row rank, not actual packet rows.
+- **Next steps:** Build a row dataset whose rows are real residual-pair
+  collisions from HYP-3202 trap neighborhoods, HYP-3225 trap sidecar classes,
+  HYP-3236 Green decoys, HYP-3243 chamber exits, HYP-3244 lift/compress
+  failures, and HYP-3245 lag-transport residuals.  Test column subsets
+  including endpoint owner, boundary cocircuit, Phi witness address, dilation
+  grid, Toeplitz slack, Green resistance, odd-negative payload, Lee-Yang root
+  word, tiling descent packet, lag transport, unit-equioscillation index,
+  binding complement-pair word, analytic/topological index equalizer,
+  Gauss-sum index word, Borsuk-Ulam forcing-gap flag, Roth-Halasz discrepancy,
+  Hensel-Krasner unit, state-lift H7, Cech hole, and ear payload.  Every
+  unresolved collision should become either a same-status equivalence, a
+  missing sidecar, or a named proof obstruction.  Then attempt the first
+  acyclic chamber matching using the same retained columns as Morse energy
+  coordinates.

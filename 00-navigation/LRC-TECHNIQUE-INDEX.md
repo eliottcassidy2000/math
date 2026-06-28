@@ -5342,6 +5342,73 @@ HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3226,
 HYP-3225, HYP-3224, HYP-3204, HYP-3203, HYP-3202, HYP-3138, LTT-245, T1345,
 OPEN-Q-108.
 
+## LTI-346: Observability-Matrix And Discrete-Morse Proof-Angle Program
+
+Objects:
+
+```text
+residual-pair rows
+sidecar observability columns
+finite chamber packets
+vector-valued Morse energy
+legal descending walls
+critical-cell exits
+```
+
+HYP-3300 selects two non-scalar remaining proof programs for LRC14:
+
+```text
+sidecar observability matrix
+finite chamber discrete-Morse descent
+```
+
+The observability theorem target is: for the actual residual rows, find a
+column basis that separates, reconstructs, dual-annihilates, descends, stops
+at AP/Goddyn-Wong `Phi_14` boundary, or names debt for every status-changing
+pair.  The current proposed columns are endpoint owner, boundary cocircuit,
+Phi witness address, dilation grid, Toeplitz normal-fan slack, Green
+resistance slack, odd-negative payload, Lee-Yang root word, tiling descent
+packet, lag transport signature, unit-equioscillation index, binding
+complement-pair word, analytic/topological index equalizer, Gauss-sum index
+word, Borsuk-Ulam forcing-gap flag, Roth-Halasz discrepancy, Hensel-Krasner
+unit, state-lift H7, Cech hole, and ear payload.  The toy scout has `13` rows,
+`20` columns, `GF(2)` rank `13`, and minimal hitting sets of size `5`.
+
+The Morse theorem target is: after the observability columns are attached,
+the finite chamber packet admits an acyclic matching.  Every noncritical
+chamber has a legal descending wall in a vector energy made from tope depth,
+Toeplitz deficit, Green excess, lag cost, unit-equioscillation defect,
+index-equality defect, Gauss-sum word depth, Borsuk-Ulam forcing-gap status,
+root collision depth, odd-negative debt, chart-change depth, Hensel unit
+failure, and state-lift distance.  Critical cells must be strict open,
+Chebyshev unit-group boundary, index-theorem prediction boundary or named
+forcing gap, AP/GW `Phi_14`, `Phi_{14d}` dilation, finite trap discharge,
+state-lift `H=7`, or named debt.
+
+Post-HYP-3253/HYP-3255/HYP-3257/HYP-3258 guardrail: index/equioscillation columns are
+descriptive until they are tied to S-dependent floor or margin data, contact
+holonomy, unit-nullspace blind-residue data, magnitude-level exact-cover data,
+or a finite endpoint-chamber certificate.
+
+Preserves: proof-status separation, compression legality, finite trap
+discharge, odd/sign sidecars, bulk/core handoff, scale-lift unit status, and
+state-lift exits.
+
+Destroys if scalarized: endpoint owner, odd-negative sign, finite chamber
+address, tiling descent packet, root-motion word, Hensel unit, and H=7
+state-lift obligation.
+
+Next hook: instantiate the HYP-3300 matrix on real HYP-2963, HYP-3202,
+HYP-3225, HYP-3236, HYP-3243, HYP-3244, HYP-3245, HYP-3248, HYP-3249,
+HYP-3253, HYP-3255, HYP-3257, and HYP-3258 residual rows, then list
+unresolved collisions under small column subsets.
+
+Pointers: HYP-3300, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250,
+HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243,
+HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236,
+HYP-3225, HYP-3108, HYP-3069, HYP-3070, HYP-3048, LTT-246, T1346,
+OPEN-Q-108.
+
 ## LTI-347: Contact-Holonomy Curvature Sheaf
 
 Created by codex-2026-06-28 for HYP-3253/T1347.

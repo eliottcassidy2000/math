@@ -31771,3 +31771,41 @@ Next hook: formulate the degree/index theorem on the full packet
 + covering 14-multiple kill switch`, then prove every blind motion stays in
 AP/Goddyn-Wong equality, opens an already-sufficient strict component, or
 enters the covering/floor branch.
+## codex-2026-06-28 -- Observability/Morse proof-angle synthesis -- HYP-3300
+
+Picked two different remaining LRC14 proof angles and turned them into a
+repo-local scout:
+`04-computation/lrc14_observability_morse_angles_codex_20260628.py`,
+`05-knowledge/results/lrc14_observability_morse_angles_codex_20260628.out`,
+`05-knowledge/hypotheses/HYP-3300-lrc14-observability-morse-proof-angles.md`,
+and `07-reflections/lrc14-observability-morse-proof-angles-codex-20260628.md`.
+
+Core synthesis: the next push should be a sidecar observability matrix plus an
+acyclic finite-chamber Morse descent.  The scout ranks
+`finite_chamber_discrete_morse_descent` first and
+`sidecar_observability_matrix` second, with odd-negative resurrection,
+Green/Toeplitz energy, Lee-Yang ear/root motion, tiling/half-tiling descent,
+lag/autocorrelation transport, median route closure, and
+Roth-Halasz/Hensel-Krasner lift packets becoming support columns.  Post-rebase
+integration adds HYP-3246/HYP-3247 as unit-equioscillation and binding
+complement-pair columns, then folds incoming HYP-3248/HYP-3249 into the
+matrix as q-uniform Chebyshev/index-prediction sidecars: analytic/topological
+index equalizer, Gauss-sum index word, and Borsuk-Ulam forcing-gap flag.  A
+later rebase over HYP-3253 adds the guardrail that those index packets describe
+the saddle; the proof certificate still needs floor/margin data, contact
+holonomy, or a finite endpoint-chamber lift.  A later HYP-3255/Q(sqrt-7)
+rebase adds the residue-vs-magnitude warning: residue data organizes the
+binding layer, but exact minimal-cover rigidity remains magnitude-level.
+HYP-3257/HYP-3258 then add explicit unit-nullspace and binding/covering
+census columns for that blind residue/height layer.
+
+The toy observability matrix has `13` residual-pair rows, `20` columns, and
+`GF(2)` rank `13`; minimal hitting sets have size `5`.  Tournament Analysis
+uses proof angles/sidecar carriers rather than runners or arcs, with no
+directed 3-cycles and priority path led by
+`finite_chamber_discrete_morse_descent -> sidecar_observability_matrix`.
+
+Next hook: instantiate the matrix on actual residual rows from HYP-2963,
+HYP-3202, HYP-3225, HYP-3236, HYP-3243, HYP-3244, HYP-3245, HYP-3246, HYP-3247,
+HYP-3253, HYP-3255, HYP-3257, and HYP-3258, then list unresolved row collisions
+as named missing sidecars or real obstructions.

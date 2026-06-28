@@ -7171,6 +7171,53 @@ quotient_legality_status
   HYP-3225, HYP-3224, HYP-3204, HYP-3203, HYP-3202, HYP-3138, LTI-345, T1345,
   OPEN-Q-108.
 
+## LTT-246: Observability/Morse Proof-Angle Tournament
+
+- **Move:** Treat proof angles and sidecar carriers as tournament vertices.
+  HYP-3300 ranks `finite_chamber_discrete_morse_descent`,
+  `sidecar_observability_matrix`, `odd_negative_duality_resurrection`,
+  `green_toeplitz_thomson_energy`, `lee_yang_ear_root_motion`,
+  `tiling_half_tiling_descent_span`, `lag_autocorrelation_transport`,
+  `median_route_center_closure`, `roth_halasz_hensel_lift_packet`, and
+  `raw_single_scalar_extremality`.
+- **Pairwise observable:** which angle preserves more LRC proof obligations
+  while destroying fewer scarce coordinates.
+- **Switch/gauge:** orient toward the larger weighted obligation score; ties
+  prefer fewer destroyed coordinates and then stable key order.
+- **LRC use:** The tournament says the next proof step should be a
+  column-basis theorem plus an acyclic chamber-descent theorem.  Chebyshev
+  unit-equioscillation, q-uniform index prediction, Gauss-sum index,
+  Borsuk-Ulam forcing-gap, Green, Toeplitz, Lee-Yang, tiling, autocorrelation,
+  odd-negative, Roth-Halasz, and Hensel-Krasner packets become columns or
+  energy coordinates rather than rival scalar proofs.  HYP-3253 tightens this:
+  index packets describe the tight saddle, while the terminal certificate must
+  still import floor/margin data, contact holonomy, or a finite chamber lift.
+  HYP-3255 adds that the `Q(sqrt-7)` residue layer organizes binding pairs,
+  but magnitude-level exact-cover rigidity decides tight versus loose rows.
+  HYP-3257/HYP-3258 add the unit rank-3 nullspace and binding/covering split
+  as explicit observability sidecars.
+- **Preserves:** strict open witnesses, AP/GW boundary equality, finite
+  discharge, sidecar reconstruction, compression legality, odd/sign payload,
+  scale-lift stability, and state-lift exits.
+- **Forgets / guardrail:** raw runner, raw arc, raw class count, raw lag
+  curve, raw root radius, and raw conductance scalar forget endpoint owners,
+  finite chamber addresses, odd-negative signs, and H=7 obligations.
+- **Fingerprint:** `score_hist={-24:1,42:1,53:1,54:1,56:1,57:2,60:1,87:1,96:1}`,
+  no directed 3-cycles, singleton SCCs, Hamiltonian path count `2`, and
+  priority path `finite_chamber_discrete_morse_descent ->
+  sidecar_observability_matrix -> odd_negative_duality_resurrection ->
+  green_toeplitz_thomson_energy -> lee_yang_ear_root_motion ->
+  tiling_half_tiling_descent_span -> lag_autocorrelation_transport ->
+  median_route_center_closure -> roth_halasz_hensel_lift_packet ->
+  raw_single_scalar_extremality`.
+- **Next hook:** Build a tournament over actual residual-row collisions under
+  candidate column bases; the first nontrivial SCC should name either a missing
+  sidecar or a real proof obstruction.
+- **Pointers:** HYP-3300, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250,
+  HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243,
+  HYP-3238, HYP-3236, HYP-3225, HYP-3108, HYP-3069, HYP-3070, HYP-3048,
+  LTI-346, T1346, OPEN-Q-108.
+
 ## LTT-247: Contact-Holonomy Curvature Tournament
 
 - **Created by:** codex-2026-06-28 for HYP-3253/T1347.
