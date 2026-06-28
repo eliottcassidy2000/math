@@ -53,6 +53,11 @@ near `1/7` associativity-defect ratio is a coincidence, and removing the anchor
 does not symmetrize the odd coverage distribution.  The odd `-9S3` Worpitzky
 face should therefore be treated as non-associative residual sidecar data that
 cannot be reconstructed from pairwise covariance alone.
+HYP-3200 then verifies this correction exactly on the bounded bank: consec has
+`Sigma kappa_3/S3=407891843/2855269200`, not `1/7`, no bank row has exact ratio
+`1/7`, while consec is rank `0/3431` for primitive `Sigma kappa_2`.  That turns
+the proof target away from an apex-prime scalar and toward a covariance theorem
+plus an odd associator sidecar.
 
 HYP-3199 adds the n=4 chart lesson that should travel with this K3 warning.
 The fixed-path `a,b,c` cube is only an abundant cover: `S` has five

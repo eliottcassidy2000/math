@@ -56,6 +56,37 @@ NET: LRC(14) not proved; the last node's even/degree-2 half (consec maximizes co
 EXHAUSTIVELY verified and recast as a ferromagnetic ground-state extremality with a clean phase transition.
 => HYP-3161, HYP-3160; scripts lrc_{associativity_17_exact_search, ferromagnetic_transition_covariance,
 fkg_ferromagnetic_check}_kps.py.
+## codex-2026-06-28 -- HYP-3200 exact k=8 cumulant universality check
+
+Owner: verify the renewed `1/7` associativity-compression claim against the
+prior HYP-3160/S31ai correction, and decide what survives for the LRC14 proof
+frontier.
+
+- Added `04-computation/lrc_k8_cumulant_universality_codex_20260628.py`, an
+  exact Fraction-based census over the anchored bounded bank
+  `E={0} union A`, `A subset {1,...,14}`, `|A|=7` (`3432` rows,
+  `3431` primitive).
+- Exact correction: for consec,
+  `Sigma_kappa3/S3=407891843/2855269200 = 0.142855827044`, so
+  `ratio-1/7=-3757/2855269200`.  There are `0` exact `1/7` rows in the all
+  bank and `0` in the primitive bank.
+- Surviving target: consec ranks `0/3431` for maximum primitive
+  `Sigma kappa_2` (`6237419/8643600`), while the all-bank rank `1/3432` is
+  caused by the nonprimitive even-AP dilation twin.
+- Entropy route remains refuted: consec is high entropy, not minimum
+  description (`consec_rank_entropy_MIN=3428/3431`,
+  `consec_rank_entropy_MAX=2/3431`).
+- `kappa4` is a phi4 stabilizer sidecar, not a standalone exact minimum:
+  `consec_rank_Sigma_kappa4_MIN=9/3431`.
+
+Net: do not pursue a theorem that `Sigma kappa_3/S3=1/7`.  The proof-facing
+upgrade is to prove primitive total-covariance extremality for `Sigma kappa_2`,
+then carry the odd Worpitzky/associator residue as named sidecar data.  Result
+stored in `05-knowledge/results/lrc_k8_cumulant_universality_codex_20260628.out`;
+detail file HYP-3200.  Rebase integration: incoming HYP-3161/S31aj independently
+settles the same `1/7` question across `k=4..10`, confirms `0` bounded-bank
+covariance beaters, and identifies `2002=C(14,5)=2*7*11*13` as Pascal/binomial
+configuration currency rather than an entropy proof signal.
 
 ## kind-pasteur-2026-06-27-S31ai -- the k=8 node = a FERROMAGNETIC covariance extremality (functions + info theory + associativity)
 

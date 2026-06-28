@@ -1,7 +1,7 @@
 ---
 id: HYP-3144
 title: "LRC14 Worpitzky Pair-Function Three-Edge Quotient"
-status: EVIDENCE / exact K3 quotient scout plus HYP-3147/S71/HYP-3150/3151/3152 integration; not a proof
+status: EVIDENCE / exact K3 quotient scout plus HYP-3147/S71/HYP-3150/3151/3152/HYP-3200 integration; not a proof
 date: 2026-06-27
 owner: codex-2026-06-27-S274
 tangent: T1209
@@ -15,6 +15,8 @@ reflections:
   - 07-reflections/worpitzky-pair-function-three-edge-quotient-codex-20260627.md
 anchors:
   - HYP-3142
+  - HYP-3200
+  - HYP-3161
   - HYP-3199
   - HYP-3160
   - HYP-3153
@@ -91,6 +93,12 @@ the odd `-9S3` Worpitzky face is the non-associative sidecar.  The follow-up
 S31ai correction keeps the covariance target but drops two tempting shortcuts:
 the associativity-defect ratio is not a universal `1/7`, and the odd part is
 not explained by a removable anchor residue.
+HYP-3200 makes that correction exact on the bounded bank
+`E={0} union A`, `A subset {1,...,14}`, `|A|=7`: consec has
+`Sigma kappa_3/S3=407891843/2855269200`, differs from `1/7` by
+`-3757/2855269200`, and no row has exact ratio `1/7`.  The surviving
+proof-facing result is that consec maximizes `Sigma kappa_2` among primitive
+rows (`0/3431`).
 HYP-3199 supplies the prompt-exact n=4 companion: the fixed-path `a,b,c` cube
 is an abundant cover whose `S` fiber has five representatives, while the
 partial-score `(0,1,1,2)` chart with live `x=a,y=b` is the exact Einheit
@@ -139,14 +147,14 @@ Worpitzky/Eulerian ascent basis and warning against reducing the HYP-3140
 fiber-PGF curve to a single value too early.
 
 This also sharpens the bounded-core meta-point from
-HYP-3132/HYP-3142/HYP-3150/HYP-3152/HYP-3160.  The hard LRC14 core stays below the
+HYP-3132/HYP-3142/HYP-3150/HYP-3152/HYP-3160/HYP-3200.  The hard LRC14 core stays below the
 Abel-Ruffini wall only if the proof packet keeps enough order to choose the
 right branch.  The k=8 even face is the solvable biquadratic/covariance side;
 the odd Worpitzky/minority-edge face is the orientation sidecar that prevents a
 false scalar compression.  The algebraic ceiling is the degree-four/S4 ceiling,
 and the proof target is now more concrete: prove the even total-covariance /
 excess co-emptiness extremality, then bound the odd Worpitzky/non-associative
-residual with its sidecars intact and without assuming a universal `1/7` or
+residual with its sidecars intact and without assuming a now-refuted universal `1/7` or
 anchor law.
 
 ## Signals

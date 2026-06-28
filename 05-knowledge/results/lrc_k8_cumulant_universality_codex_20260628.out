@@ -1,0 +1,61 @@
+HYP-3200 exact k=8 cumulant universality check
+========================================================================
+bank=anchored {0} union A, A subset [1,14], |A|=7
+rows_all=3432
+rows_primitive=3431
+consec=(0, 1, 2, 3, 4, 5, 6, 7)
+even_AP=(0, 2, 4, 6, 8, 10, 12, 14)
+
+CONSEC: E=(0, 1, 2, 3, 4, 5, 6, 7)
+  entropy=2.429346
+  Sigma_kappa2=6237419/8643600 = +0.721622819196
+  Sigma_kappa3=407891843/2117682000 = +0.192612414423
+  S3=991/735 = 1.348299319728
+  Sigma_kappa3/S3=407891843/2855269200 = 0.142855827044
+  Sigma_kappa4=-106418281/10376641800 = -0.010255560812
+
+EVEN_AP: E=(0, 2, 4, 6, 8, 10, 12, 14)
+  entropy=2.429346
+  Sigma_kappa2=6237419/8643600 = +0.721622819196
+  Sigma_kappa3=407891843/2117682000 = +0.192612414423
+  S3=991/735 = 1.348299319728
+  Sigma_kappa3/S3=407891843/2855269200 = 0.142855827044
+  Sigma_kappa4=-106418281/10376641800 = -0.010255560812
+
+ONE-SEVENTH TEST
+consec_ratio_minus_1/7=-3757/2855269200
+consec_ratio_equals_1/7=False
+rows_with_ratio_exactly_1/7_all=0
+rows_with_ratio_exactly_1/7_primitive=0
+ratio_min=-373095353191/15866102266560 at E=(0, 4, 5, 8, 9, 10, 13, 14) (-0.023515249487)
+ratio_max=1290454213/3951825696 at E=(0, 1, 3, 4, 6, 8, 12, 13) (0.326546338900)
+
+COVARIANCE / ENTROPY / KAPPA4 RANKS
+all: consec_rank_Sigma_kappa2_MAX=1/3432
+all: consec_rank_entropy_MIN=3428/3432
+all: consec_rank_entropy_MAX=3/3432
+all: consec_rank_Sigma_kappa4_MIN=9/3432
+all: consec_rank_Sigma_kappa4_MAX=3422/3432
+all: top5_Sigma_kappa2=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9)]
+primitive: consec_rank_Sigma_kappa2_MAX=0/3431
+primitive: consec_rank_entropy_MIN=3428/3431
+primitive: consec_rank_entropy_MAX=2/3431
+primitive: consec_rank_Sigma_kappa4_MIN=9/3431
+primitive: consec_rank_Sigma_kappa4_MAX=3421/3431
+primitive: top5_Sigma_kappa2=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 6, 7, 8, 10, 12)]
+
+BOTTOM LINE
+one_seventh_universal=False
+one_seventh_exact_for_consec=False
+covariance_max_robust_on_primitive_bounded_bank=True
+covariance_max_tie_on_all_bank=only dilation-like nonprimitive rows appear above primitive normal form
+entropy_min_description_route_refuted=True
+
+TOURNAMENT ANALYSIS
+vertices=proof signals, not runners/sectors
+pairwise_observable=which signal survives exact bounded-bank verification
+switch/gauge=A->B iff verification score(A)>score(B); ties lexical
+score_hist={99:1, 86:1, 74:1, 61:1, 43:1, 18:1, 5:1, 2:1}
+directed_3cycles=0
+hamiltonian_path_count=1
+priority_path=total_covariance_sigma_k2 -> bounded_bank_exactness -> kappa4_phi4_stabilizer -> associator_sigma_k3_sidecar -> random_3002_probe -> raw_scalar_defect_ratio -> entropy_min_description_route -> exact_one_seventh_ratio_claim

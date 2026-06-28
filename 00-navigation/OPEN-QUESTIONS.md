@@ -29,7 +29,26 @@ defect as a Lee-Yang stability sidecar; do not replace it by raw root-radius
 numerology. -> HYP-3161, HYP-3154, HYP-3199, HYP-3160, HYP-3153, HYP-3152,
 HYP-3151, HYP-3150,
 HYP-3147, HYP-3142, HYP-3139, THM-577, LTI-279, LTT-177, T1218,
-OPEN-Q-108.
+**OPEN-Q-108 HYP-3200 k=8 cumulant universality addendum:**
+HYP-3200 turns the HYP-3160/S31ai covariance and associator claims into an
+exact bounded-bank census, now read alongside HYP-3161/S31aj's broader
+ferromagnetic transition and "0 beaters" result.  On the anchored bank `E={0} union A`,
+`A subset {1,...,14}`, `|A|=7`, no row has `Sigma kappa_3/S3=1/7`.
+For consec the exact value is `407891843/2855269200`, differing from `1/7`
+by `-3757/2855269200`.  The robust theorem-facing signal is instead
+`Sigma kappa_2`: consec ranks `0/3431` for maximum total covariance among
+primitive rows, with only the nonprimitive even-AP dilation ahead in the
+all-bank.  Entropy is high rather than minimal, `kappa4` is only a phi4
+stabilizer sidecar, and the `2002=C(14,5)` cue belongs to Pascal/binomial
+configuration currency.
+
+Open task: prove the primitive-normal-form `Sigma kappa_2` extremality
+without using entropy or a scalar `1/7` shortcut, then attach the odd
+Worpitzky/associator residual with sidecar coordinates (`S3`, minority-edge
+gates, root-curve data, and terminal debt) intact. -> HYP-3200, HYP-3161,
+HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147,
+HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, HYP-3122, THM-577, T1300,
+LTI-300, LTT-200, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3151 Worpitzky function-compression resolvent addendum:**
 HYP-3151 executes HYP-3150's factor-through wall by turning the recent Worpitzky, pair-function, tournament-3,

@@ -5630,6 +5630,9 @@ constant chase.
   the k=8 node into an even degree-two variance/total-covariance target and
   an odd Worpitzky/non-associative sidecar; the S31ai follow-up refutes the
   universal `1/7` associativity-defect and odd-residue-anchor shortcuts.
+  HYP-3200 verifies this exactly on the bounded bank: no exact `1/7` rows,
+  consec ratio `407891843/2855269200`, and primitive `Sigma kappa_2` rank
+  `0/3431`.
   HYP-3199 adds the exact n=4 Einheit section/minimality audit, separating
   the abundant fixed-path cover from the proof-facing `x,y` chart.
 - **Preserves:** class-size distribution, stationary labelled split, symmetric
@@ -5981,3 +5984,37 @@ quotient_legality_status
   ear/Omega fields to the next k=8 hard-core runner.
 - **Pointers:** HYP-3199, HYP-3160, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3133, HYP-3124, HYP-3053,
   HYP-3049, HYP-3054, LTI-299, LTT-199, T1299, OPEN-Q-108.
+
+## LTT-200: k=8 Cumulant Verification Tournament
+
+- **Move:** Treat cumulant claims as proof-signal vertices and order them by
+  exact bounded-bank survival.  The live vertices are total covariance
+  `Sigma kappa_2`, bounded-bank exactness, phi4 `kappa4` stabilizer,
+  associator `Sigma kappa_3`, the random HYP-3160 probe, raw scalar defect
+  ratio, entropy/min-description, and the exact `1/7` claim.
+- **LRC use:** HYP-3200 resolves the immediate ambiguity around the k=8
+  hard node, integrating HYP-3161/S31aj's broader `k=4..10` and ferromagnetic
+  transition check.  The exact bounded-bank census refutes a universal or consec-exact
+  `Sigma kappa_3/S3=1/7` law (`0` exact rows; consec ratio
+  `407891843/2855269200`).  It preserves the useful theorem target:
+  consec is rank `0/3431` for primitive `Sigma kappa_2`, with only the
+  nonprimitive even-AP dilation tie in the all-bank.
+- **Preserves:** primitive normal form, total covariance extremality,
+  exact rational cumulants, entropy rank, dilation-tie status, and the
+  distinction between even covariance and odd associator data.
+- **Forgets / guardrail:** the raw ratio `0.14285...` forgets the exact
+  numerator deficit from `1/7`; entropy forgets that the extremal row is
+  spread rather than concentrated; `kappa4` forgets its role if promoted to
+  a standalone minimization theorem.
+- **Tournament readout:** vertices are proof signals, not runners or sectors.
+  The exact scout is transitive with priority path
+  `total_covariance_sigma_k2 -> bounded_bank_exactness ->
+  kappa4_phi4_stabilizer -> associator_sigma_k3_sidecar ->
+  random_3002_probe -> raw_scalar_defect_ratio ->
+  entropy_min_description_route -> exact_one_seventh_ratio_claim`.
+- **Next hook:** Prove the primitive-normal-form `Sigma kappa_2` inequality,
+  then attach odd Worpitzky/associator sidecars (`S3`, minority-edge gates,
+  root-curve data, terminal debt) without scalarizing them to `1/7`.
+- **Pointers:** HYP-3200, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152,
+  HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138,
+  HYP-3132, HYP-3122, THM-577, LTI-300, LTT-200, T1300, OPEN-Q-108.
