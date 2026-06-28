@@ -17,6 +17,7 @@ related:
   - HYP-3152
   - HYP-3151
   - HYP-3150
+  - HYP-3154
   - HYP-3161
   - HYP-3199
   - HYP-3149

@@ -19,6 +19,7 @@ related:
   - HYP-3151
   - HYP-3152
   - HYP-3153
+  - HYP-3154
   - HYP-3161
   - HYP-3199
   - HYP-3149
@@ -56,6 +57,7 @@ mainline_integrations:
   - 04-computation/lrc14_worpitzky_function_compression_resolvent_codex_s278.py
   - 05-knowledge/results/lrc14_worpitzky_function_compression_resolvent_codex_s278.out
   - 05-knowledge/hypotheses/HYP-3152-leeyang-circle-coverage-radius-galois-s4.md
+  - 07-reflections/the-joukowski-de-moivre-bridge-lrc-circle-is-the-tournament-real-rooted-class.md
   - 05-knowledge/hypotheses/HYP-3199-lrc14-n4-einheit-erdos870-tournament-models.md
   - 04-computation/lrc_coverage_lee_yang_lambda_kps.py
   - 05-knowledge/results/lrc_coverage_lee_yang_lambda_kps.out
@@ -437,6 +439,12 @@ k=10: corr(lambda, cap-q0)=+0.851
 This reinforces the HYP-3140/HYP-3109 rule: the whole PGF/root curve is proof
 payload.  A scalar value can be right for the wrong reason if it has forgotten
 root circularity or off-circle variance.
+
+HYP-3154 supplies the exact Joukowski/De Moivre geometry for that root payload:
+`w = z + R^2/z` sends the Lee-Yang circle to the real axis, while the uniform
+7-fold ideal maps to the de Moivre angles `2cos(2*pi*j/7)`.  In this packet,
+the bounded degree-4 ledger should therefore be read as a circle-to-real-axis
+stability guardrail, not merely as a lucky quartic formula.
 
 ## LRC14 Transfer
 

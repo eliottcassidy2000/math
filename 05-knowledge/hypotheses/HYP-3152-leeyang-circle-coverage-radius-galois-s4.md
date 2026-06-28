@@ -10,6 +10,7 @@ merges:
   - HYP-3147   # Worpitzky/ear = the ODD/off-circle face
 related:
   - HYP-3153   # Lee-Yang/Worpitzky/quartic compression packet follow-on
+  - HYP-3154   # Joukowski/De Moivre circle-to-real-axis bridge
   - HYP-3103   # the miss-PGF zeros = the circle
   - HYP-3122   # φ⁴ cumulants (κ₄ even, κ₃ odd)
   - THM-577    # cap = binomial pair-Pascal = the on-circle value

@@ -321,6 +321,11 @@ fiber and deletable `c`, while the partial-score `x,y` chart is the exact
 section.  This strengthens the HYP-3150/HYP-3161 rule: compression is legal
 only after the minimal chart and its deletion/restoration sidecar are named.
 
+Third rebase signal: HYP-3154 adds the Joukowski/De Moivre bridge
+`w = z + R^2/z`, sending the Lee-Yang circle to the real axis and the 7-fold
+ideal to de Moivre angles.  This makes HYP-3150's degree-4 guardrail a
+circle-to-real-axis stability packet rather than a standalone quartic analogy.
+
 Handoff: add `function_payload_type`, `ordered_pair_sidecar`,
 `state_level_pgf_split`, `compression_map_word`, `canary_filler_status`,
 `resolvent_degree_ceiling`, and `quotient_legality_status` to HYP-3140

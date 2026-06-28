@@ -11,6 +11,7 @@ related:
   - HYP-3151   # executable Worpitzky/function-compression scout
   - HYP-3152   # Lee-Yang/Galois correction
   - HYP-3153   # Lee-Yang/Worpitzky/quartic packet follow-on
+  - HYP-3154   # Joukowski/De Moivre bridge
   - HYP-3199   # n=4 Einheit/minimality chart
   - HYP-3122   # φ⁴ cumulants (the even/odd cumulants = the parity faces)
   - THM-577    # cap = the symmetric face, exact for |P|<=3 (compression works)
