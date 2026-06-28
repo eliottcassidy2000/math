@@ -40,19 +40,19 @@ This mandate reinforces the **"Honest Status"** of the cluster. By prioritizing 
 
 ---
 
-## PROJECT STATUS: Stabilized at S275 Erdos870 Live-Core Canary Lens
+## PROJECT STATUS: Stabilized at S276 Tournament-4 Canary Filler Lens
 
-As of **Sunday, June 28, 2026** (UTC), the newest coordination layer is the **Erdos870 Live-Core Canary Lens (S275/HYP-3148)**. This layer establishes a proof-economy watchdog that audits every quotient to distinguish between live coordinates, deterministic filler, and canary/shift controls.
+As of **Sunday, June 28, 2026** (UTC), the newest coordination layer is the **Tournament-4 Canary Filler Lens (S276/HYP-3149)**. This layer applies the Erdos-870 deletability audit directly to the 4-vertex tournament subbasis, establishing the exact relationship between live-core sources and deterministic fillers.
 
-S275 formalizes the **Erdos870 Live-Core Canary Lens (b04655a)**. It serves as an active watchdog over the **Three-Edge Pair-Function Quotient (HYP-3144)** and the **Edge-Witness Router**, ensuring the survival of orientation-sensitive data:
-1. **Live-Core Auditing:** Every row must now specify its `live_core_bits` vs. `filler_bits`. This prevents "cheap" deletable coordinates from being misidentified as load-bearing proof mass.
-2. **Canary Guardrail:** The `canary_bits` act as a sentinel for **zero-free factor leakage**. If a quotient destroys an ordered-edge "exponent" sidecar (HYP-3144), the canary triggers an **order_loss_alarm**, blocking premature scalar reduction in the Fiber PGF.
-3. **Proof Economy Certification:** Distinguishes between exploratory schemes (witness proliferation) and certificate forms (minimal live core). This enforces that the proof only "pays" for non-deletable coordinates anchored by the **Coordinate Resurrection Sheaf**.
-4. **Deletability Audit:** Maps class-distribution uniformity (1:1:1:1) to coordinate necessity, ensuring that terminal rows expose the minimal core required for the **finite constant-chase**.
+S276 formalizes the **Tournament-4 Canary Filler Lens (8bac773)**. It provides the definitive diagnostic for n=4 tournament quotients and their impact on the Edge-Witness router:
+1. **Live-Core vs. Canary (c-arc) Audit:** Identifies the `c=(0,3)` arc as the critical **canary/filler** coordinate over the `0->1->2->3` path. With `c` fixed (filler), the `x=a, y=b` live core provides a faithful four-class transversal. If `c` flips (canary trigger), the transversal collapses into a bulk `S` collision fiber.
+2. **Coin-Flip Quotient Verification:** Maps the `E,a,b,c` tournament table to a three-bit coin-flip kernel, revealing that the "all-same" vs "mixed" quotient destroys the orientation signature unless `c` is named as the canary status bit.
+3. **Zero-Free Leakage Protection:** Enforces that a two-coordinate source is only proof-faithful when the third coordinate is visible as a canary. This prevents the **Edge-Witness router** from accepting collapsed bulk fibers as valid terminal witnesses.
+4. **Finite Packet Lemma:** Establishes that every local edge quotient must either identify its canary/filler slice to remain faithful or emit its collision fiber as named **Coordinate Resurrection** debt.
 
-S275 also inherits the **Hecke SL(3,Z) Subconvexity**, **p-adic Atiyah-Singer Index**, and **Fiber PGF** stability from prior states, providing the complete spectral and topological oversight for terminal closure.
+S276 inherits the spectral and topological stability from **S275 (Live-Core Watchdog)**, **S274 (Subconvexity/p-adic Index)**, and the **Fiber PGF (S273)**.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wires, magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk coordinate sets, coordinate resurrection covers, repair-cover rank certificates, quartic-cumulant S4 bounds, phi^4 stabilizer signatures, Lee-Yang kappa-4 sign audits, Asano polydisk zero-free signatures, Beurling-Selberg minorant floors, Gaussian-minorant leakage audits, multi-far floor closure certificates, R-prime spectral signatures, R-safe Gaussian wide-V packets, Edge-Witness recursion decks, tail/tip child packet recursions, four-sector observer decks, Asano-obstruction status words, SPEC resonance-lattice certificates, A000568 middle quotients, edge-envelope global-consistency quotients, Fiber PGF packet objects, sheet-count PGF coefficients, Lee-Yang PGF root signatures, Delsarte weight-enumerator sidecars, q-Pochhammer principal packets, Hecke subconvexity conductor bounds, p-adic topological index signatures, crystalline cohomology Euler characteristics, three-edge flip kernels, ordered_pair_exponent_sidecars, Worpitzky ascent payloads, **live_core_bits**, **filler_bits**, **canary_bits**, **deletable_coordinates**, **class_distribution_uniformity**, and **minimal_cover_subbasis**.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wires, magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk coordinate sets, coordinate resurrection covers, repair-cover rank certificates, quartic-cumulant S4 bounds, phi^4 stabilizer signatures, Lee-Yang kappa-4 sign audits, Asano polydisk zero-free signatures, Beurling-Selberg minorant floors, Gaussian-minorant leakage audits, multi-far floor closure certificates, R-prime spectral signatures, R-safe Gaussian wide-V packets, Edge-Witness recursion decks, tail/tip child packet recursions, four-sector observer decks, Asano-obstruction status words, SPEC resonance-lattice certificates, A000568 middle quotients, edge-envelope global-consistency quotients, Fiber PGF packet objects, sheet-count PGF coefficients, Lee-Yang PGF root signatures, Delsarte weight-enumerator sidecars, q-Pochhammer principal packets, Hecke subconvexity conductor bounds, p-adic topological index signatures, crystalline cohomology Euler characteristics, three-edge flip kernels, ordered_pair_exponent_sidecars, Worpitzky ascent payloads, live_core_bits, filler_bits, canary_bits, deletable_coordinates, class_distribution_uniformity, minimal_cover_subbasis, **fixed_path_canary_status**, **xy_completion_tables**, and **S_bulk_fiber_words**.
 
 The Henselian unit rule (updated):
 ```text
@@ -68,7 +68,7 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S275 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S276 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-triple
@@ -101,9 +101,10 @@ subconvexity conductor bounds, p-adic topological index signatures,
 crystalline cohomology Euler characteristics, three-edge flip kernels,
 ordered_pair_exponent_sidecars, Worpitzky ascent payloads, live_core_bits,
 filler_bits, canary_bits, deletable_coordinates, class_distribution
-uniformity, and minimal_cover_subbasis to preserve p-adic stability of the
-global packet sheaf by preventing misuse of untyped motifs, degenerate limiting
-witnesses, sequence-count scalars, positivity-only cohomology, non-median route
+uniformity, minimal_cover_subbasis, fixed_path_canary_status, and
+xy_completion_tables to preserve p-adic stability of the global packet sheaf
+by preventing misuse of untyped motifs, degenerate limiting witnesses,
+sequence-count scalars, positivity-only cohomology, non-median route
 compatibility, unnamed owner/root loss, non-unique route-triple centers,
 unaligned disciplinary pullback indices, unsigned polymer/current quotients,
 unclosed packet/route/certificate/discharge medians, unvalidated Diophantine
@@ -140,8 +141,8 @@ claims without Hecke subconvexity conductor bounds, or index claims without
 p-adic topological index signatures or crystalline cohomology Euler
 characteristics, or three-edge claims without flip kernels,
 ordered_pair_exponent_sidecars, or Worpitzky ascent payloads, or live-core
-claims without filler_bits, canary_bits, deletable_coordinates, or
-minimal_cover_subbasis.
+claims without filler_bits, canary_bits, deletable_coordinates,
+minimal_cover_subbasis, fixed_path_canary_status, or xy_completion_tables.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -192,41 +193,42 @@ the global-consistency quotient unit, the Fiber PGF packet unit, the
 sheet-count PGF unit, the Lee-Yang root unit, the Delsarte weight unit,
 the q-Pochhammer principal unit, the Hecke subconvexity unit, the p-adic
 index unit, the three-edge flip unit, the ordered_pair_exponent unit, the
-Worpitzky ascent unit, the live_core unit, the filler unit, and the canary
-unit. The S235-S275 sequence prevents spectral leakage by requiring
-route-triple centers to be unique and promoted only after legal closure, named
-debt exits, validated collision arity, a named modular cusp principal part, a
-formally verified Lean modular cusp ledger, tuple/rank/residue equal-power
-certificates, a protected branch-kernel orientation, verified p-adic
-hyper-tower limits, Morita-gamma transcendental lifts, finite-address Hurwitz
-seeds, reflection-Perron covering certificates, induction-base V* crossover
-signatures, verified pairwise avoidance minimizers, verified forgetting-cost
-invariants, Pascal pair-mass sidecars, observer gluing packets, chart overlap
-certificates, normal-fan component packets, first-obstruction syndrome packets,
-PGF root signatures, tournament obstruction-transfer certificates, Bravais
-q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body
-thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre
-fold certificates, endpoint-cover P gates, Phi gap output wires,
-magnitude-cocycle guards, proof-circuit missing-input vectors, base-stalk
-coordinate sets, coordinate resurrection covers, repair-cover rank
-certificates, quartic-cumulant S4 bounds, phi^4 stabilizer signatures,
-Lee-Yang kappa-4 sign audits, Asano zero-free signatures, Beurling-Selberg
-minorant floors, Gaussian-minorant leakage audits, multi-far floor closure
-certificates, R-prime spectral signatures, R-safe Gaussian wide-V packets,
-edge-witness recursion decks, tail/tip child packet recursions, four-sector
-observer decks, SPEC resonance-lattice certificates, global-consistency
+Worpitzky ascent unit, the live_core unit, the filler unit, the canary
+unit, and the fixed_path_canary unit. The S235-S276 sequence prevents
+spectral leakage by requiring route-triple centers to be unique and promoted
+only after legal closure, named debt exits, validated collision arity, a named
+modular cusp principal part, a formally verified Lean modular cusp ledger,
+tuple/rank/residue equal-power certificates, a protected branch-kernel
+orientation, verified p-adic hyper-tower limits, Morita-gamma transcendental
+lifts, finite-address Hurwitz seeds, reflection-Perron covering certificates,
+induction-base V* crossover signatures, verified pairwise avoidance minimizers,
+verified forgetting-cost invariants, Pascal pair-mass sidecars, observer gluing
+packets, chart overlap certificates, normal-fan component packets,
+first-obstruction syndrome packets, PGF root signatures, tournament
+obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice
+reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers,
+Ising partition zero signatures, De Moivre fold certificates, endpoint-cover P
+gates, Phi gap output wires, magnitude-cocycle guards, proof-circuit
+missing-input vectors, base-stalk coordinate sets, coordinate resurrection
+covers, repair-cover rank certificates, quartic-cumulant S4 bounds, phi^4
+stabilizer signatures, Lee-Yang kappa-4 sign audits, Asano zero-free signatures,
+Beurling-Selberg minorant floors, Gaussian-minorant leakage audits, multi-far
+floor closure certificates, R-prime spectral signatures, R-safe Gaussian
+wide-V packets, edge-witness recursion decks, tail/tip child packet recursions,
+four-sector observer decks, SPEC resonance-lattice certificates, global-consistency
 quotients, Fiber PGF packet objects, sheet-count PGF coefficients, Lee-Yang PGF
 root signatures, Delsarte weight-enumerator sidecars, q-Pochhammer principal
 packets, Hecke subconvexity conductor bounds, p-adic topological index
 signatures, three-edge flip kernels, ordered_pair_exponent_sidecars, Worpitzky
-ascent payloads, live_core_bits, filler_bits, or canary_bits are attached.
+ascent payloads, live_core_bits, filler_bits, canary_bits, or
+fixed_path_canary_status are attached.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S275 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S276 transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
@@ -244,7 +246,7 @@ ear-lattice reachability law, the Minkowski q-body law, the proof-circuit law,
 the Ising partition zero law, the De Moivre fold law, the endpoint-cover P gate
 law, the Phi gap output wire law, the magnitude-cocycle guard law, the
 base-stalk coordinate law, the resurrection cover law, the repair-rank law, the
-quartic-cumulant S4 law, the phi^4 stabilizer law, the kappa-4 sign law, the
+quartic-cumulant S4 law, the phi^4 stabilizer unit, the kappa-4 sign unit, the
 Asano zero-free law, the Beurling-Selberg minorant floor law, the
 Gaussian-minorant leakage law, the multi-far floor closure law, the R-prime
 spectral law, the R-safe wide-V law, the edge-witness recursion law, the
@@ -254,33 +256,34 @@ packet law, the sheet-count PGF law, the Lee-Yang root law, the Delsarte weight
 law, the q-Pochhammer principal law, the Hecke subconvexity law, the p-adic
 index law, the three-edge flip kernel law, the ordered_pair_exponent sidecar
 law, the Worpitzky ascent payload law, the live_core_bit law, the filler_bit
-law, and the canary_bit law (preserving the recurrence algebraic unit, Poincare
-recurrence unit, automatic gap carrier unit, automatic lacunary filter unit,
-gap automaton carrier unit, perfect-number packet unit, route-purity unit,
-binding-pair switch unit, automatic fiber zipper unit, arc-Cech nerve unit,
-safe-component stalk unit, Haar tile stabilizer unit, residual tooth unit,
-residual capacitor unit, hidden statement unit, owner-strip filtration unit,
-comprehensive lens unit, endpoint owner transfer unit, tournament matrix unit,
-perspective-depth sidecar unit, edge perspective unit, edge/triple carrier
-unit, rooted extension unit, diagonal transport unit, fixed-path diagonal-flow
-unit, observer-cut payload unit, value-origin ledger unit, hyperbolic
-reciprocal sidecar unit, geometry-regime unit, Roth-Minkowski unit,
-Moser/fibbinary unit, Toeplitz square-peg unit, partial-cube bridge-rank unit,
-Hodge-cycle unit, Desargues-median unit, owner/root sidecar unit, medianized
-route-center unit, cross-carrier resonance unit, polymer/Dirichlet
-boundary-energy unit, route-triple center-control unit, route-state closure
-unit, sixth-power collision unit, modular cusp principal-part unit, Lean
-modular cusp unit, sixth-power certificate extension unit, branch-kernel
-orientation unit, p-adic hyper-tower unit, Morita-gamma transcendental unit,
-Hurwitz finite-address unit, Clebsch covering-moment unit, Apex-Bridge V*
-crossover unit, Pairwise-Avoidance Cap unit, Equivalence Triad invariant unit,
-Pascal pair-mass unit, observer-gluing unit, chart overlap unit, normal-fan
-component unit, first-obstruction syndrome unit, miss-count PGF root unit,
-tournament obstruction-transfer unit, Bravais q-lattice unit, ear-lattice
-reachability unit, Minkowski q-body unit, proof-circuit unit, Ising partition
-zero unit, De Moivre fold unit, endpoint-cover P gate unit, Phi gap output wire
-unit, magnitude-cocycle guard unit, base-stalk coordinate unit, resurrection
-cover unit, repair-rank unit, quartic-cumulant S4 unit, phi^4 stabilizer unit,
+law, the canary_bit law, and the fixed_path_canary law (preserving the
+recurrence algebraic unit, Poincare recurrence unit, automatic gap carrier
+unit, automatic lacunary filter unit, gap automaton carrier unit,
+perfect-number packet unit, route-purity unit, binding-pair switch unit,
+automatic fiber zipper unit, arc-Cech nerve unit, safe-component stalk unit,
+Haar tile stabilizer unit, residual tooth unit, residual capacitor unit,
+hidden statement unit, owner-strip filtration unit, comprehensive lens unit,
+endpoint owner transfer unit, tournament matrix unit, perspective-depth
+sidecar unit, edge perspective unit, edge/triple carrier unit, rooted extension
+unit, diagonal transport unit, fixed-path diagonal-flow unit, observer-cut
+payload unit, value-origin ledger unit, hyperbolic reciprocal sidecar unit,
+geometry-regime unit, Roth-Minkowski unit, Moser/fibbinary unit, Toeplitz
+square-peg unit, partial-cube bridge-rank unit, Hodge-cycle unit,
+Desargues-median unit, owner/root sidecar unit, medianized route-center unit,
+cross-carrier resonance unit, polymer/Dirichlet boundary-energy unit,
+route-triple center-control unit, route-state closure unit, sixth-power
+collision unit, modular cusp principal-part unit, Lean modular cusp unit,
+sixth-power certificate extension unit, branch-kernel orientation unit, p-adic
+hyper-tower unit, Morita-gamma transcendental unit, Hurwitz finite-address unit,
+Clebsch covering-moment unit, Apex-Bridge V* crossover unit, Pairwise-Avoidance
+Cap unit, Equivalence Triad invariant unit, Pascal pair-mass unit,
+observer-gluing unit, chart overlap unit, normal-fan component unit,
+first-obstruction syndrome unit, miss-count PGF root unit, tournament
+obstruction-transfer unit, Bravais q-lattice unit, ear-lattice reachability
+unit, Minkowski q-body unit, proof-circuit unit, Ising partition zero unit,
+De Moivre fold unit, endpoint-cover P gate unit, Phi gap output wire unit,
+magnitude-cocycle guard unit, base-stalk coordinate unit, resurrection cover
+unit, repair-rank unit, quartic-cumulant S4 unit, phi^4 stabilizer unit,
 kappa-4 sign unit, Asano zero-free unit, Beurling-Selberg minorant floor unit,
 Gaussian-minorant leakage unit, multi-far floor closure unit, R-prime spectral
 unit, R-safe wide-V unit, edge-witness recursion unit, tail/tip packet unit,
@@ -289,8 +292,31 @@ global-consistency quotient unit, Fiber PGF packet unit, sheet-count PGF unit,
 Lee-Yang root unit, Delsarte weight unit, q-Pochhammer principal unit,
 Hecke subconvexity unit, p-adic index unit, three-edge flip kernel unit,
 ordered_pair_exponent sidecar unit, Worpitzky ascent payload unit, live_core_bit
-unit, filler_bit unit, and canary_bit unit alongside mu approx 1.451).
+unit, filler_bit unit, canary_bit unit, and fixed_path_canary unit alongside
+mu approx 1.451).
 ```
+
+---
+
+## codex-S276 -- Tournament-4 Canary Filler Lens (checkpoint)
+
+Integrated 8bac773/HYP-3149. Applied the Erdos-870 live-core audit to the 
+n=4 tournament subbasis over fixed Hamiltonian paths.
+
+### 1. Canary/Filler Diagnostic
+Identifies the `c=(0,3)` arc as the critical **canary/filler** coordinate. 
+Fixing `c` (filler) yields a faithful two-coordinate `x,y` transversal; 
+flipping `c` (canary) collapses the completions into an bulk `S` fiber.
+
+### 2. Orientation Signature Protection
+Enforces that orientation-sensitive quotients are only faithful when the 
+missing coordinate is visible as a canary. This protects the **Edge-Witness 
+router** against bulk collisions and illegal zero-free factor leakage.
+
+### 3. Finite Packet Lemma
+Establishes the requirement for every local edge quotient to either identify 
+its canary slice or emit its collision fiber as named **Coordinate 
+Resurrection** debt.
 
 ---
 
@@ -298,26 +324,3 @@ unit, filler_bit unit, and canary_bit unit alongside mu approx 1.451).
 
 Integrated b04655a/HYP-3148. Established a proof-economy watchdog to audit 
 live, filler, and canary coordinates across the terminal stack.
-
-### 1. Live-Core vs. Filler Audit
-Every row must now differentiate between `live_core_bits` (non-deletable 
-proof mass) and `filler_bits` (deterministic scaffolding). This prevents 
-the proof from "paying" for redundant coordinates.
-
-### 2. Zero-Free Leakage Canary
-The `canary_bits` act as a sentinel for the **Three-Edge Pair-Function 
-Quotient (HYP-3144)**. If a quotient destroys an ordered orientation-word 
-(the "exponent"), the canary triggers an `order_loss_alarm`, blocking 
-premature scalarization in the Fiber PGF.
-
-### 3. Deletability Certification
-Identifies class-distribution uniformity as the diagnostic for deletable 
-coordinates, ensuring that terminal rows only retain the minimal live core 
-required for the **finite constant-chase**.
-
----
-
-## codex-S274 -- Three-Edge Pair-Function Quotient (checkpoint)
-
-Integrated c64339c/HYP-3144. Reserved finite guardrail for LRC14 
-generating-function packets using three-vertex edge-flip kernels.
