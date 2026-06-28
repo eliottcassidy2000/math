@@ -6251,3 +6251,35 @@ HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246,
 HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969,
 HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, LTI-356, LTT-256, T1356,
 OPEN-Q-108.
+
+## OPEN-Q-108 addendum (codex-2026-06-28): shadow-charge packet gluing
+
+HYP-3403 uses upstream HYP-3401 as the AP-collar exactness stress test and
+upstream HYP-3402 as the owner-current/tropical-wall companion, then
+instantiates the HYP-3400/HYP-3311 packet-gluing question on actual rows.
+Current answer:
+
+```text
+covering residue is the first low-cost theorem-exit repair;
+C3/index and Q(sqrt(-7)) are still descriptive;
+v2 alone fails;
+same-residue height debt is visible but not yet theorem-exit mixed.
+```
+
+Open concrete task: enlarge the bank from HYP-3311's curated HYP-2969 rows
+toward HYP-2963 and find the first failure of nonunit-residue exactness.  The
+failure must be classified as one of:
+
+```text
+v2 repair
+exact height repair
+endpoint-owner repair
+transfer/state-lift repair
+off-grid-floor repair
+new named residual debt
+```
+
+This is the current finite bridge between the creative index/Galois/sheaf
+reframes and a rigorous LRC14 proof packet. -> HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311,
+HYP-3310, HYP-3301, HYP-3265, HYP-3260, HYP-3258, HYP-3256, HYP-3254,
+HYP-3252, HYP-3249, LTI-364, LTT-264, T1364, OPEN-Q-108.

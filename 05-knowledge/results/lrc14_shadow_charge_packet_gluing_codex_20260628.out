@@ -1,0 +1,67 @@
+HYP-3403 shadow-charge packet gluing
+==============================================================================
+bank=HYP-3311 actual-packet rows over the curated HYP-2969 ledger
+rows=31
+kernel_flag_hist={'q-witness-discharge': 12, 'AP/GW-zero-open-equality': 2, 'unit-petal-named': 4, 'named-K33-state-lift': 3, 'positive-Haar-open': 10}
+route_hist={'Q-WITNESS': 12, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 4, 'K33-STATE-LIFT': 3, 'COVERING-MOMENT': 10}
+q_bucket_hist={'lt14': 12, 'eq14': 12, 'gt14': 7}
+
+CONTROLLED-FORGETTING SIDECARE TABLE
+  sidecar                              fibers kernel route transfer maxK maxR maxFiber
+  raw_coarse_sheaf_base                     6      1     1        6    2    2       10
+  ambient_index_unit_c3                    12      1     1        9    2    2        6
+  imaginary_quadratic_balance               8      1     1        7    2    2        7
+  c3_plus_qsqrt_binding_packet             16      1     1        8    2    2        6
+  covering_residue_sheaf                   25      0     0        3    1    1        5
+  two_adic_magnitude_gate                  24      1     1        4    2    2        4
+  residue_magnitude_cover_signature        29      0     0        1    1    1        3
+  three_shadow_packet                      29      0     0        1    1    1        3
+  exact_height_hinge_oracle                31      0     0        0    1    1        1
+  analytic_lifting_ledger                  31      0     0        0    1    1        1
+
+REFRAME FAILURE MODES
+  ambient C3 + Qsqrt(-7) binding packet: mixed_kernel_fibers=1
+    first_mixed_names=['drop6 fattening core add180', 'floor-odd GW iso impostor', 'magnitude liar 12->96', 'P10+GW', 'petal 10->20']
+    first_mixed_kernels=['positive-Haar-open', 'unit-petal-named']
+  2-adic v2 word alone: mixed_kernel_fibers=1
+    first_mixed_names=['drop6 fattening core add180', 'petal 10->20']
+    first_mixed_kernels=['positive-Haar-open', 'unit-petal-named']
+  nonunit residue word: mixed_kernel_fibers=0
+
+HEIGHT AND CUSP CHECKS
+  qdiv_gt14_rows=7
+  qdiv_gt14_kernel_hist={'positive-Haar-open': 7}
+  same_residue_height_debt_fibers=3
+  largest_same_residue_height_debt=['divisor-loaded tail 84', 'divisor-loaded tail 84*2', 'divisor-loaded tail 84*3', 'divisor-loaded tail 84*4', 'divisor-loaded tail 84*5']
+    divisor-loaded tail 84: kernel=positive-Haar-open, v2=(0, 1, 1, 1, 2, 2, 3), height=((0, 2, 21), (2, 1, 1), (4, 2, 1), (6, 1, 3), (7, 0, 7), (8, 3, 1), (10, 1, 5))
+    divisor-loaded tail 84*2: kernel=positive-Haar-open, v2=(0, 1, 1, 1, 2, 3, 3), height=((0, 3, 21), (2, 1, 1), (4, 2, 1), (6, 1, 3), (7, 0, 7), (8, 3, 1), (10, 1, 5))
+    divisor-loaded tail 84*3: kernel=positive-Haar-open, v2=(0, 1, 1, 1, 2, 2, 3), height=((0, 2, 63), (2, 1, 1), (4, 2, 1), (6, 1, 3), (7, 0, 7), (8, 3, 1), (10, 1, 5))
+    divisor-loaded tail 84*4: kernel=positive-Haar-open, v2=(0, 1, 1, 1, 2, 3, 4), height=((0, 4, 21), (2, 1, 1), (4, 2, 1), (6, 1, 3), (7, 0, 7), (8, 3, 1), (10, 1, 5))
+    divisor-loaded tail 84*5: kernel=positive-Haar-open, v2=(0, 1, 1, 1, 2, 2, 3), height=((0, 2, 105), (2, 1, 1), (4, 2, 1), (6, 1, 3), (7, 0, 7), (8, 3, 1), (10, 1, 5))
+
+TOURNAMENT ANALYSIS
+  vertices=proof sidecars / shadow-charge carriers, not runners or arcs
+  pairwise_observable=(mixed kernel fibers, mixed route fibers, payload cost, mixed transfer fibers, preserved charge)
+  switch_gauge=A -> B iff A has fewer mixed theorem-exit fibers, then lower payload debt
+  vertex_count=10
+  score_hist={(0, 0, 3, 3): 1, (0, 0, 4, 1): 1, (0, 0, 6, 1): 1, (0, 0, 7, 0): 1, (0, 0, 9, 0): 1, (1, 1, 1, 6): 1, (1, 1, 2, 7): 1, (1, 1, 2, 9): 1, (1, 1, 3, 4): 1, (1, 1, 3, 8): 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  priority_path=
+    covering_residue_sheaf: key=(0, 0, 3, 3, -50, 10), fibers=25, preserves=['kernel_exit', 'nonunit_residue', 'qdiv_cusp', 'route_exit', 'state_lift', 'strict_open'], destroys=['exact_height', 'nonunit_v2', 'quadratic_sign', 'unit_c3_slot']
+    residue_magnitude_cover_signature: key=(0, 0, 4, 1, -59, 20), fibers=29, preserves=['kernel_exit', 'nonunit_residue', 'nonunit_v2', 'qdiv_cusp', 'route_exit', 'state_lift', 'strict_open'], destroys=['exact_height', 'quadratic_sign', 'unit_c3_slot']
+    three_shadow_packet: key=(0, 0, 6, 1, -74, 30), fibers=29, preserves=['kernel_exit', 'nonunit_residue', 'nonunit_v2', 'qdiv_cusp', 'quadratic_sign', 'route_exit', 'state_lift', 'strict_open', 'unit_c3_slot'], destroys=['exact_height', 'transfer_exit']
+    analytic_lifting_ledger: key=(0, 0, 7, 0, -86, 40), fibers=31, preserves=['kernel_exit', 'nonunit_residue', 'nonunit_v2', 'qdiv_cusp', 'quadratic_sign', 'route_exit', 'state_lift', 'strict_open', 'transfer_exit', 'unit_c3_slot'], destroys=['exact_height']
+    exact_height_hinge_oracle: key=(0, 0, 9, 0, -42, 100), fibers=31, preserves=['exact_height', 'kernel_exit', 'qdiv_cusp', 'route_exit', 'state_lift', 'strict_open'], destroys=['nonunit_residue', 'nonunit_v2', 'quadratic_sign', 'unit_c3_slot']
+    raw_coarse_sheaf_base: key=(1, 1, 1, 6, -5, 90), fibers=6, preserves=['qdiv_cusp', 'state_lift', 'strict_open'], destroys=['exact_height', 'nonunit_residue', 'nonunit_v2', 'quadratic_sign', 'unit_c3_slot']
+    imaginary_quadratic_balance: key=(1, 1, 2, 7, -13, 70), fibers=8, preserves=['qdiv_cusp', 'quadratic_sign', 'state_lift', 'strict_open'], destroys=['exact_height', 'nonunit_residue', 'nonunit_v2', 'unit_c3_slot']
+    ambient_index_unit_c3: key=(1, 1, 2, 9, -15, 80), fibers=12, preserves=['qdiv_cusp', 'state_lift', 'strict_open', 'unit_c3_slot'], destroys=['exact_height', 'nonunit_residue', 'nonunit_v2', 'quadratic_sign']
+    two_adic_magnitude_gate: key=(1, 1, 3, 4, -14, 50), fibers=24, preserves=['nonunit_v2', 'qdiv_cusp', 'state_lift', 'strict_open'], destroys=['exact_height', 'nonunit_residue', 'quadratic_sign', 'unit_c3_slot']
+    c3_plus_qsqrt_binding_packet: key=(1, 1, 3, 8, -23, 60), fibers=16, preserves=['qdiv_cusp', 'quadratic_sign', 'state_lift', 'strict_open', 'unit_c3_slot'], destroys=['exact_height', 'nonunit_residue', 'nonunit_v2']
+
+CONCLUSION
+  The most creative-looking ambient reframes are descriptive on this bank, not terminal: C3+Qsqrt(-7) still leaves 1 mixed kernel fiber.
+  The first theorem-facing repair is the covering residue sheaf: mixed_kernel=0, mixed_route=0. The v2 word alone leaves mixed_kernel=1.
+  The three-shadow packet (unit C3 slot, quadratic balance, and nonunit residue/v2 cover signature) also separates the bank, but it is intentionally more expensive.  Use it as the gluing interface; use the exact height word only as a debt detector for same-residue moves, not as a proof quotient.
+  Assumption challenged: the tournament vertices need not be runners, arcs, or residues.  Here the useful vertices are proof sidecars and shadow-charge carriers.  Preserved predicate: theorem-exit separability for LRC14 packet rows.  Destroyed coordinate: exact height/endpoint owner/off-grid floor unless retained or routed to named debt.

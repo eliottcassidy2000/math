@@ -7658,3 +7658,41 @@ quotient_legality_status
   HYP-3266, HYP-3265, HYP-3260, HYP-3253, HYP-3247, HYP-3243, HYP-3236,
   HYP-3225, HYP-3223, HYP-2969, HYP-2963, THM-523, LTI-363, T1363,
   OPEN-Q-108.
+
+## LTT-264: Shadow-Charge Packet-Gluing Tournament
+
+- **Move:** Treat candidate LRC14 gluing sidecars as tournament vertices and
+  orient edges by theorem-exit separation before payload size.  This turns
+  creative reframes into a controlled-forgetting audit rather than a scalar
+  analogy contest.
+- **LRC use:** HYP-3403 compares ambient index/C3, `Q(sqrt(-7))` balance,
+  covering residue, `v2`, residue+magnitude cover signature, three-shadow
+  packets, exact height, and analytic-lifting ledgers on the HYP-3311 actual
+  packet bank, using upstream HYP-3401 as the AP-collar exactness companion
+  and upstream HYP-3402 as the owner-current/tropical-wall companion.
+- **Preserves:** theorem `kernel_flag`, route, covering residue, unit C3 slot,
+  quadratic sign, state-lift, and q-divisor/cusp status when those fields are
+  retained.
+- **Forgets / guardrail:** exact height, endpoint owner, off-grid floor, and
+  transfer state can be destroyed by low-cost quotients.  Exact-height and
+  analytic-lifting ledgers separate the bank but are penalized as high-payload
+  or row-hash-like carriers unless a lower sidecar fails.
+- **Fingerprint:** `10` vertices, score histogram `{(0,0,3,3):1,
+  (0,0,4,1):1, (0,0,6,1):1, (0,0,7,0):1, (0,0,9,0):1, (1,1,1,6):1,
+  (1,1,2,7):1, (1,1,2,9):1, (1,1,3,4):1, (1,1,3,8):1}`, no directed
+  3-cycles, singleton SCCs, one Hamiltonian path:
+  `covering_residue_sheaf -> residue_magnitude_cover_signature ->
+  three_shadow_packet -> analytic_lifting_ledger ->
+  exact_height_hinge_oracle -> raw_coarse_sheaf_base ->
+  imaginary_quadratic_balance -> ambient_index_unit_c3 ->
+  two_adic_magnitude_gate -> c3_plus_qsqrt_binding_packet`.
+- **Assumption challenge:** runners, gaps, sections, wall-crossing events,
+  residues, cover arcs, Fourier modes, and contact circuits were considered.
+  The chosen vertices are proof sidecars because the preserved predicate is
+  theorem-exit separability, not runner identity.
+- **Next hook:** enlarge the HYP-3311 bank toward HYP-2963, then rerun the
+  tournament and record whether covering residue remains the first repair or
+  the first failure requires `v2`, height, owner, transfer, or off-grid floor.
+- **Pointers:** HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301,
+  HYP-3265, HYP-3260, HYP-3258, HYP-3256, HYP-3254, HYP-3252, HYP-3249,
+  LTI-364, T1364, OPEN-Q-108.

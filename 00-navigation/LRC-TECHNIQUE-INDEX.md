@@ -6075,3 +6075,53 @@ Pointers: HYP-3402, HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3300,
 HYP-3266, HYP-3265, HYP-3260, HYP-3253, HYP-3247, HYP-3243, HYP-3236,
 HYP-3225, HYP-3223, HYP-2969, HYP-2963, THM-523, LTT-263, T1363,
 OPEN-Q-108.
+
+## LTI-364: Shadow-Charge Packet Gluing
+
+Created by codex-2026-06-28 for HYP-3403/T1364, downstream of upstream
+HYP-3401 and HYP-3402.  This technique tests the current creative LRC14
+reframes on actual theorem-facing packet rows by asking which sidecar first
+separates theorem exits under controlled forgetting.
+
+Carrier / vertex set:
+
+```text
+proof sidecars / shadow-charge carriers
+```
+
+Pairwise observable:
+
+```text
+mixed kernel fibers, mixed route fibers, payload cost, mixed transfer fibers,
+and preserved proof charge.
+```
+
+Readout on the HYP-3311 actual-packet bank:
+
+```text
+C3/index plus Q(sqrt(-7)) still leaves 1 mixed kernel fiber.
+nonunit covering residue leaves 0 mixed kernel and 0 mixed route fibers.
+v2 alone still leaves 1 mixed kernel fiber.
+residue+magnitude cover signature and three-shadow packet separate with
+higher payload cost.
+```
+
+Preserved LRC predicate: theorem-exit separability for LRC14 packet rows.
+
+Destroyed information: exact height, endpoint owner, transfer state, and
+off-grid floor unless retained, discharged, or named as debt.
+
+Best use: treat index/C3 and `Q(sqrt(-7))` as binding/residue descriptors,
+then use covering residue as the first theorem-facing repair and keep
+height/v2/owner as stress debt for enlarged banks.
+
+Failure mode: letting an exact-height or analytic-lifting ledger become a row
+hash before proving why that much payload is necessary.
+
+Anchors: HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3300,
+HYP-3266, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3256, HYP-3254,
+HYP-3252, HYP-3249, HYP-3248, HYP-3247, HYP-3246, LTT-264, T1364,
+OPEN-Q-108.
+
+Next agent hook: enlarge the actual-packet bank toward HYP-2963 and locate
+the first failure of nonunit-residue theorem-exit separation.

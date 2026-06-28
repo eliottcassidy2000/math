@@ -32192,3 +32192,39 @@ endpoint_owner_boundary_current
 Next hook: enlarge the HYP-3311 bank and build a first-leak table: residue
 exact; residue fails but owner-current works; residue/v2 fail but tropical wall
 works; both fail and emit named owner/height/off-grid debt.
+## codex-2026-06-28 -- shadow-charge packet gluing -- HYP-3403
+
+Started by syncing after the HYP-3311 actual-packet sheaf instantiation and
+the concurrent CRT/Galois sidecar audit.  During close-out, upstream landed
+HYP-3401/T1362/LTI-362/LTT-262 for three-coordinate obstruction exactness and
+HYP-3402/T1363/LTI-363/LTT-263 for owner-current tropical angles; this
+packet-gluing follow-up was renumbered to HYP-3403/T1364/LTI-364/LTT-264 and
+cross-linked to those upstream results.  The inherited local HYP-3311 commits
+were rebased over upstream S293/CRT work and successfully pushed first, so the
+older credential blocker recorded above is not active in this session.
+The final push raced with the S294 coordination update, which names the
+`Tropical_Current_Ledger`; HYP-3403 now treats that as the downstream audit
+for first failures of residue-word exactness rather than as the first quotient.
+
+Added `04-computation/lrc14_shadow_charge_packet_gluing_codex_20260628.py`,
+stored `05-knowledge/results/lrc14_shadow_charge_packet_gluing_codex_20260628.out`,
+created `05-knowledge/hypotheses/HYP-3403-lrc14-shadow-charge-packet-gluing.md`,
+and wrote `07-reflections/lrc14-shadow-charge-packet-gluing-codex-20260628.md`.
+
+Core result on the same `31` actual-packet rows: C3/index plus
+`Q(sqrt(-7))` still leaves `1` mixed theorem-exit fiber, while the nonunit
+covering residue word leaves `0` mixed kernel fibers and `0` mixed route
+fibers.  The `v2` word alone still leaves `1` mixed kernel fiber.  The
+residue+magnitude cover signature and three-shadow packet also separate the
+bank but at higher payload cost, and exact height/analytic-lifting ledgers are
+treated as debt or final glue rather than first quotients.
+
+The `qdiv>14` slice remains positive-Haar-open (`7/7` rows).  Three
+same-residue height-debt fibers appear, led by the divisor-loaded tail family
+`84, 84*2, 84*3, 84*4, 84*5`; these are not theorem-exit mixed here, but they
+name the next place to stress residue-only exactness.
+
+Updated `05-knowledge/hypotheses/INDEX.md`, `05-knowledge/results/INDEX.md`,
+`00-navigation/TANGENTS.md` with T1364, `00-navigation/LRC-TECHNIQUE-INDEX.md`
+with LTI-364, `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` with LTT-264,
+and `00-navigation/OPEN-QUESTIONS.md`.

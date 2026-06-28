@@ -3934,3 +3934,37 @@ HYP-3228, HYP-3227, HYP-3226, HYP-3225,
 HYP-3224, HYP-3223, HYP-3222, HYP-3220, HYP-3219, HYP-3218, HYP-3217,
 HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201, LTI-352, LTT-252,
 OPEN-Q-108.
+
+## T1364: LRC14 Shadow-Charge Packet Gluing
+
+HYP-3403 turns upstream HYP-3401, upstream HYP-3402, the HYP-3400
+conservation atlas, and the two HYP-3311 actual packet threads into a stricter
+controlled-forgetting test.  On the `31`-row
+actual-packet bank, the ambient C3/index and `Q(sqrt(-7))` shadows still leave
+one mixed theorem-exit fiber, so they are descriptors rather than terminal
+proof coordinates.  The nonunit covering residue word is the first low-cost
+repair: `0` mixed kernel fibers and `0` mixed route fibers.  The `v2` word
+alone still fails, while the full residue+magnitude cover signature and
+three-shadow packet separate at higher payload cost.
+
+The useful creative reframe is therefore a gluing rule:
+
+```text
+index/C3 and Q(sqrt(-7)) describe the binding saddle;
+covering residue separates the current packet exits;
+v2, exact height, endpoint owner, and off-grid floor are retained as named
+debt for same-residue enlarged rows.
+```
+
+Tournament vertices are proof sidecars, not runners or arcs.  Fingerprint:
+`10` vertices, `0` directed 3-cycles, singleton SCCs, one Hamiltonian path led
+by `covering_residue_sheaf -> residue_magnitude_cover_signature ->
+three_shadow_packet`.
+
+Next hook: enlarge the HYP-3311 test toward HYP-2963 and locate the first
+failure of residue-word exactness, then classify the missing repair as
+`v2`, height, endpoint owner, transfer/state-lift, or off-grid floor.
+
+-> HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3260,
+HYP-3258, HYP-3256, HYP-3254, HYP-3252, HYP-3249, LTI-364, LTT-264,
+OPEN-Q-108.
