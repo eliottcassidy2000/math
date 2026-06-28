@@ -41,6 +41,56 @@ HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
 HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153,
 HYP-3138, HYP-3004, HYP-2647, HYP-2637, THM-429, THM-426, T1338, LTI-338,
 LTT-238, OPEN-Q-108.
+HYP-3239 integration: the next sidecar refinement is representation-theoretic.
+The mac-mini S76 branch makes the two proof targets one bimodal/phi4
+extremality problem under inclusion-exclusion parity.  The kps S31av branch
+identifies the sign sidecar as the `D_7` sign representation/free `Z/2`
+Borsuk-Ulam packet for `p=7=3 mod 4`, while `p=1 mod 4` lives on the
+Brouwer/SOS fixed-reflection side.  Add this family tag before treating the
+odd/negative payload as discharged.
+
+HYP-3241 integration: add the equioscillation index.  For n=14 the `Phi_14`
+core witnesses are `3` antipodal pairs, and this index is both `(p-1)/2` and
+the de Moivre degree.  Its parity chooses the Borsuk-Ulam/free-`Z2` side
+versus the Brouwer/SOS side.
+
+HYP-3240/S77 guardrail: covering-tight dilations use witnesses
+`t=1/(14d)` in `Phi_{14d}`, so retain dilation witness data in the core
+sidecar.  Also do not compress the dip to a single `Q(sqrt(-7))` norm scalar.
+
+KPS exact witness check: AP `{1,...,13}` and Goddyn-Wong
+`{1,...,11,13,24}` share the same six primitive `Phi_14` witnesses
+`t=a/14`, so the base cyclotomic core is tight-locus invariant rather than
+AP-specific.  The remaining hard core starts when a speed divisible by `14`
+breaks the base witness and forces a dilation/sporadic sidecar.
+
+Open task: prove the `q3` exchange-rate inequality symbolically, then glue it
+to HYP-3222 Hermite-Biehler interlacing and HYP-3220 Brouwer/parity sign.
+Negative covariance leakage is only one sidecar; the true odd/negative payload
+is the full parity/sign/core packet. -> HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235,
+HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227,
+HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218,
+HYP-3217, HYP-3216, HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201,
+HYP-3200, HYP-3163, HYP-3153, T1338, LTI-338, LTT-238, OPEN-Q-108.
+
+**OPEN-Q-108 HYP-3243 topology/geometry/graph proof-route atlas addendum:**
+HYP-3243 packages the visual LRC14 proof routes as typed carriers rather than
+metaphors.  The route graph uses proof carriers as vertices: circle endpoint
+arrangements, oriented topes/cocircuits, Cech safe-component nerves, `D_7`
+Borsuk-Ulam index packets, `Phi_14/Phi_{14d}` witness strata, Green
+conductance graphs, Toeplitz/Fejer normal-fan faces, Lee-Yang root motion,
+ear payload graphs, finite chamber atlases, and state-lift obligations.
+Executable scout readout: `12` carriers, no directed 3-cycles, singleton SCCs,
+and Hamiltonian path led by `oriented_matroid_topes_cocircuits ->
+circle_endpoint_arrangement -> cech_nerve_safe_components`.  Open task: turn
+the atlas into a finite theorem schema where every primitive row has an open
+safe tope, AP/GW `Phi_14` equality, dilation `Phi_{14d}` equality, finite
+Toeplitz/Green/root-motion chamber discharge, state-lift `H=7`
+contradiction, or named residual debt. -> HYP-3243, HYP-3242, HYP-3241, HYP-3240,
+HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
+HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223, HYP-3222,
+HYP-3220, HYP-3201, HYP-3128, HYP-3123, HYP-3108, THM-572, T1340, LTI-340,
+LTT-240, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3228 cyclotomic Delsarte shell-magic addendum:**
 HYP-3228 makes the requested magic-function object explicit at the k=8

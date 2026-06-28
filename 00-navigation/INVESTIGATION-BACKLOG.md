@@ -15,6 +15,42 @@
 
 ---
 
+## Lead codex-2026-06-28: Topology/geometry/graph proof-route atlas
+
+**Status:** SYNTHESIS / executable proof-carrier tournament; not proof
+(HYP-3243/T1340).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3243-lrc14-topology-geometry-graph-proof-routes.md`,
+script
+`04-computation/lrc14_topology_geometry_graph_routes_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_topology_geometry_graph_routes_codex_20260628.out`,
+and
+`07-reflections/lrc14-topology-geometry-graph-proof-routes-codex-20260628.md`.
+
+Purpose: make the visual LRC14 routes load-bearing by treating pictures as
+typed proof carriers: circle endpoint arrangements, oriented topes/cocircuits,
+Cech safe-component nerves, `D_7` Borsuk-Ulam index packets,
+`Phi_14/Phi_{14d}` witness strata, Green conductance graphs,
+Toeplitz/Fejer normal-fan faces, Lee-Yang root motion, ear payload graphs,
+finite chamber atlases, and state-lift obligations.
+
+Readout: the witness side is now mostly organized by HYP-3240/HYP-3241
+(`Phi_14` for AP/GW and `Phi_{14d}` for dilations), so the remaining visual
+frontier is tight-locus finiteness, bulk equidistribution, and legal gluing
+across the Vitali core.  The carrier tournament has `12` vertices, no directed
+3-cycles, singleton SCCs, and Hamiltonian path led by
+`oriented_matroid_topes_cocircuits -> circle_endpoint_arrangement ->
+cech_nerve_safe_components`.  Proposed schema: every primitive row has an
+open safe tope, AP/GW `Phi_14` equality, dilation `Phi_{14d}` equality,
+finite Toeplitz/Green/root-motion chamber discharge, state-lift `H=7`
+contradiction, or named residual debt.
+
+Next: turn the schema into a finite chamber theorem with endpoint-owner
+cocircuits, Cech components, Green/Toeplitz labels, and `D_7` sign sidecars
+retained explicitly.
+
 ## Lead codex-2026-06-28: Even/odd positive/negative duality bridge
 
 **Status:** EVIDENCE / exact bounded-bank scout plus synthesis; not proof

@@ -44,6 +44,38 @@ concurrent work. HYP-3241 (renumbered from a 3240 collision w/ mac-mini-S77).
 
 => HYP-3241; reflection the-saddle-index-is-p-minus-1-over-2-borsuk-ulam-forcing-meets-the-vitali-core; results
    lrc_core_witnesses_universal_AP_GW, lrc_family_sos_vs_sign_obstruction.
+## codex-2026-06-28 -- HYP-3243 topology/geometry/graph proof-route atlas
+
+Owner: think about the underlying topology, geometry, and graphs of the LRC14
+proof and how visual/structural routes inspire other proof routes.
+
+Created HYP-3243/T1340/LTI-340/LTT-240 plus executable scout
+`lrc14_topology_geometry_graph_routes_codex_20260628.py` and result
+`lrc14_topology_geometry_graph_routes_codex_20260628.out`.  The atlas treats
+visual proof objects as typed carriers, not analogies: circle endpoint
+arrangements, oriented topes/cocircuits, Cech safe-component nerves, `D_7`
+Borsuk-Ulam index packets, `Phi_14/Phi_{14d}` witness strata, Green
+conductance graphs, Toeplitz/Fejer normal-fan faces, Lee-Yang root motion,
+ear payload graphs, finite chamber atlases, and state-lift obligations.
+
+Main synthesis: after HYP-3240/HYP-3241 and HYP-3242/S78 the witness construction side is mostly
+organized (`Phi_14` for AP/GW, `Phi_{14d}` for dilations), so the visual proof
+frontier is tight-locus finiteness plus bulk equidistribution plus legal
+bulk/core gluing.  The scout's Tournament Analysis uses proof carriers rather
+than runners or raw scalars: `12` vertices, score histogram
+`{-50:1,12:1,19:1,34:2,36:1,38:2,40:1,41:2,42:1}`, no directed 3-cycles,
+singleton SCCs, and Hamiltonian path led by
+`oriented_matroid_topes_cocircuits -> circle_endpoint_arrangement ->
+cech_nerve_safe_components -> d7_borsuk_ulam_index_packet ->
+cyclotomic_witness_strata`.  Proposed finite theorem schema: every primitive
+row has an open safe tope, AP/GW `Phi_14` equality, dilation `Phi_{14d}`
+equality, finite Toeplitz/Green/root-motion chamber discharge, state-lift
+`H=7` contradiction, or named residual debt.
+
+-> HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3235,
+HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3228, HYP-3227, HYP-3225,
+HYP-3224, HYP-3223, HYP-3222, HYP-3220, HYP-3201, HYP-3128, HYP-3123,
+HYP-3108, THM-572, T1340, LTI-340, LTT-240, OPEN-Q-108.
 
 ## mac-mini-2026-06-28-S77 -- pushes & pulls on the hard core: the D_7 unification + the EXPLICIT covering-witness construction (Phi_{14d}); the imaginary-quadratic-norm PULL
 

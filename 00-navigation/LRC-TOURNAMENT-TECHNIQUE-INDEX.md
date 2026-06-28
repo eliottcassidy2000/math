@@ -230,6 +230,11 @@ obligations, and proof-carrier interfaces.
   signed chart debt, and raw scalar shadows.  Do not promote even/positive
   compression unless the odd/negative payload is zero, reconstructible,
   dual-annihilated, or retained.
+- Need to turn topology/geometry/graph pictures into a proof schema:
+  use LTT-240 after LTT-238/LTT-236/LTT-156/LTT-144 and make topes,
+  cocircuits, Cech components, witness strata, conductance cuts, normal-fan
+  chambers, root-motion events, ear payloads, and state-lift obligations the
+  vertices.  Do not use runners or raw scalar pictures as terminal vertices.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -6820,3 +6825,48 @@ quotient_legality_status
   HYP-3218, HYP-3217, HYP-3216,
   HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163,
   HYP-3153, LTI-338, LTT-238, T1338, OPEN-Q-108.
+
+## LTT-240: Topology/Geometry/Graph Proof-Route Tournament
+
+- **Move:** Treat visual and structural proof carriers as tournament vertices:
+  `circle_endpoint_arrangement`, `oriented_matroid_topes_cocircuits`,
+  `cech_nerve_safe_components`, `d7_borsuk_ulam_index_packet`,
+  `cyclotomic_witness_strata`, `green_conductance_laplacian`,
+  `normal_fan_toeplitz_fejer`, `lee_yang_pgf_root_motion`,
+  `ear_payload_graph`, `bulk_spec_equidistribution`,
+  `state_lift_forbidden_H7`, and `raw_scalar_shadow`.
+- **LRC use:** HYP-3243 converts the user's visual/topological prompt into a
+  finite proof-route atlas.  After HYP-3240/HYP-3241, AP/GW share base
+  `Phi_14` witnesses and dilations use `Phi_{14d}`, so the remaining visual
+  frontier is tight-locus finiteness, bulk equidistribution, and legal gluing
+  across the Vitali core.
+- **Preserves:** strict open safe topes, closed equality cocircuits, endpoint
+  owners, `D_7` parity/sign sidecars, `Phi_14/Phi_{14d}` witness addresses,
+  Green/Toeplitz chamber slack, root-motion and ear payloads, and terminal
+  state-lift exits.
+- **Forgets / guardrail:** raw runner vertices, raw `lambda2`, raw `p0`, raw
+  component count, and raw measure can all mix open-safe mass, boundary
+  equality, and live sign/core debt.  They are diagnostics only.
+- **Pairwise observable:** which carrier preserves the LRC14 packet while
+  destroying fewer endpoint-owner, parity, cocircuit, bulk/core, and witness
+  coordinates.
+- **Switch/gauge:** orient toward the carrier with larger weighted obligation
+  payload, penalized by destroyed scarce coordinates; ties prefer fewer
+  destroyed coordinates and proximity to a finite formal atlas.
+- **Exact fingerprint:** `vertices=12`,
+  `score_hist={-50:1,12:1,19:1,34:2,36:1,38:2,40:1,41:2,42:1}`,
+  `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path:
+  `oriented_matroid_topes_cocircuits -> circle_endpoint_arrangement ->
+  cech_nerve_safe_components -> d7_borsuk_ulam_index_packet ->
+  cyclotomic_witness_strata -> normal_fan_toeplitz_fejer ->
+  lee_yang_pgf_root_motion -> ear_payload_graph -> state_lift_forbidden_H7 ->
+  green_conductance_laplacian -> bulk_spec_equidistribution ->
+  raw_scalar_shadow`.
+- **Next pull:** Build the finite chamber theorem whose exits are open safe
+  tope, AP/GW `Phi_14` equality, dilation `Phi_{14d}` equality, finite
+  Toeplitz/Green/root-motion discharge, state-lift `H=7` contradiction, or
+  named residual debt.
+- **Pointers:** HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236,
+  HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3228, HYP-3227,
+  HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3220, HYP-3201, HYP-3128,
+  HYP-3123, HYP-3108, THM-572, LTI-340, LTT-240, T1340, OPEN-Q-108.
