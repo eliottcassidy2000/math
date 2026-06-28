@@ -1,0 +1,3 @@
+ANGLE 2 EXHAUSTIVE: consec Toeplitz min-eigenvalue = 0.042305
+  over 3432 bounded k=8 clusters: configs beating consec = 0; argmax=(0, 1, 2, 3, 4, 5, 6, 7) (consec? True)
+  => consec MAXIMIZES the Toeplitz min-eigenvalue EXHAUSTIVELY

@@ -1,0 +1,14 @@
+consec_8: Sigma-kappa_2=0.72162  q0=0.32721
+
+=== ANGLE 1: GRIFFITHS MONOTONICITY (path config -> consec, is Sigma-k2 monotone up?) ===
+  monotone (non-decreasing) paths to consec: 3/60
+  non-monotone examples (Griffiths path FAILS naively):
+    (0, 1, 3, 4, 7, 8, 12, 16): [0.0364, -0.0274, -0.1281, 0.0022, 0.0806, 0.3561, 0.7216]
+    (0, 3, 4, 5, 7, 9, 13, 15): [0.116, -0.0072, -0.0894, -0.0692, -0.071, 0.197, 0.3361, 0.7216]
+    (0, 1, 7, 8, 10, 14, 15, 16): [-0.0679, -0.0436, -0.0151, 0.1585, 0.1404, 0.3561, 0.7216]
+  => Griffiths monotonicity needs the RIGHT path/partial-order (naive greedy insufficient)
+
+=== ANGLE 2: CARATHEODORY-TOEPLITZ margin (extremal at consec?) ===
+  consec Toeplitz(q) eigenvalues: min=0.04230 max=1.23565
+  consec Caratheodory min-eigenvalue rank: 300 (from below) / 0 (from above) of 301
+  => consec is EXTREMAL (rigid moment config)
