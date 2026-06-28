@@ -479,6 +479,7 @@ record what it destroys before asking it to prove anything.
 | LTI-391 | Euler-Mascheroni harmonic intercept firewall | Finite intercept `H_N-log N`, denominator-tail calibration, gamma/Mertens/loglog scalar collisions, endpoint-class preservation, sidecar retention rule | HYP-3430 tests whether Euler-Mascheroni tail calibration can replace the HYP-3429 endpoint certificate.  On `150` rows it finds `11` endpoint classes, gamma-intercept range `0.577339668..0.583156236`, same-max-speed mixed certificate bins `19/108`, rounded-4 gamma bins with mixed classes `21/30`, and rounded-6 mixed bins `19/108`; the `N=84` rows have identical intercept but different endpoint-spine classes. | HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3422, HYP-3417, HYP-3412, HYP-3408, HYP-3129, HYP-2963, THM-523, T1391, LTT-291, LTI-391, OPEN-Q-108 | Prove the scalar-firewall rule: harmonic/Mertens/loglog tail estimates may calibrate denominator entropy only after retaining endpoint-owner, wall-signature, two-adic loss, sheet, exact-period, or state-lift sidecar data. |
 | LTI-392 | Canonical corridor-fence certificate | Fixed low-core branch corridors, odd wall endpoint ownership, high even half-speed grid, disjoint bad-component fence lemma, all-`m` canonical `84m` relocation certificate, Helly generalization router | HYP-3431 converts the canonical `{1..11,13,84m}` wall-signature pattern from HYP-3427/HYP-3426 plus HYP-3428's loss ledger, HYP-3429's endpoint-spine audit, and HYP-3430's harmonic firewall into an all-`m` corridor-fence certificate.  The low core leaves fixed corridors `[8/49,6/35]` and `[29/35,41/49]`, each length `2/245`; the moving high even half-speed `42m` removes disjoint bad grid intervals of width `1/(294m)`.  Since the fixed corridor is longer than every moving bad component for all `m>=1`, no corridor is fully covered and the canonical tower has positive two-branch relocation. | HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3418, HYP-3415, HYP-3140, HYP-3129, HYP-2272, THM-523, T1392, LTT-292, LTI-392, LTT-291, LTI-391, LTT-290, LTI-390, LTT-288, LTI-388, LTT-287, LTI-387, OPEN-Q-108 | Generalize the corridor-fence test to non-canonical covering rows: find low-core branch corridors longer than all moving bad components; route failures back to HYP-3430 scalar-firewall sidecars, HYP-3429 endpoint-spine targets, HYP-3428 loss classes, HYP-3427 wall words, HYP-3426 endpoint-owner triples, HYP-3425 component Helly, owner-current exception labels, or energy-plus-sheet packets such as `(RE,q_zero_mass)`. |
 | LTI-393 | Euler-Mascheroni harmonic wall-budget sidecar | Exact reciprocal endpoint-owner budgets, harmonic/Mertens tail ranking, scalar collision guardrail, endpoint-spine priority queue, gamma-shadow firewall | HYP-3432 extends HYP-3430's intercept firewall, HYP-3429, and HYP-3427 by using the Euler-Mascheroni `H_N-log N` idea only as a harmonic-tail warning.  Exact audit uses rational budgets `sum 1/v`: HYP-3429 best spines have `150` rows, `144` distinct budgets, and only `2` shape-collisions, but the full HYP-3427 atlas has `5524` survivor windows, `1291` budgets, and `1197` budgets with more than one wall signature.  Therefore harmonic mass ranks endpoint debt but cannot replace branch/wall/interval certificates. | HYP-3432, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3412, HYP-3407, HYP-3129, HYP-2963, THM-523, T1393, LTT-293, LTI-393, OPEN-Q-108 | In the endpoint-spine proof, use reciprocal endpoint budget as a candidate-ordering sidecar only; accept a witness only with exact interval, branch, and endpoint wall labels. |
+| LTI-394 | Euler-Mascheroni endpoint-spine finite part | Labelled harmonic endpoint tails, canonical address `a_m=ceil(48m/7)`, E-only tail component `E:84m`, finite-part normalization `(gamma-H_4)/49`, endpoint-weight exchange, scalar-firewall guardrail | HYP-3433 extends HYP-3432/HYP-3431/HYP-3430/HYP-3429 by auditing `{1,...,11,13,84m}` through `m=180`.  From `m=5`, the best endpoint spine is exactly label `E:84m`, length `1/(49m)`, and interval `[(14a_m+1)/(588m),(14a_m+13)/(588m)]` with `a_m=ceil(48m/7)`; there are no checked tail/address failures and exact scaled residual `0`.  Summing gives `(H_M-H_4)/49`, so Euler-Mascheroni enters as the finite part after subtracting `log(M)/49`, not as a raw floor scalar. | HYP-3433, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3421, HYP-3419, HYP-3417, HYP-3129, HYP-2982, HYP-2963, THM-523, T1394, LTT-294, LTI-394, OPEN-Q-108 | Prove the canonical address lemma for all `m>=5`; then search for other labelled endpoint towers with `c/m` length and finite-part constants, while retaining endpoint labels, branch masks, and component geometry. |
 | LTI-373 | Special-function cut signature recursion | Recursive `charal_signature` sidecars, Bring radical branch alarms, Schwarz-Christoffel cut angles, BDH variance packets, Menger exit cuts, Soldner zero normalization, Sophie Germain quartic split, HLW separation, Krasner stability, Mertens residuals | HYP-3412 executes a post-HYP-3406 creative synthesis scout on the `(72,20)` expanded bank (`2431` rows).  Its CHARAL mixed-fiber ladder says residue leaves `3` mixed fibers; residue+height/`v2` leaves `2`; BDH variance leaves `3`; cut-angle, Krasner radius, and owner support each leave `0`; Sophie quartic and honest Bring branch alarm each leave `2`; PGF proxy leaves `1`.  The Menger-style separator table says the `14`-row owner leak, `12`-row petal `10->20` owner/height-persistent leak, and `3`-row height leak all admit one-sidecar covers by `SC_cut_angle`, `Krasner_radius`, or `owner_support`, while height/`v2` separates only some leaks. | HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, THM-523, T1373, LTT-273, LTI-373, OPEN-Q-108 | Enlarge beyond `(72,20)` and test whether `residue + cut_angle_word` and `residue + krasner_radius_word` remain exact.  If either fails, record the first collision and decide whether full owner support, exact cut labels, or PGF/root branch payload is the true next sidecar. |
 | LTI-374 | Owner-cut resurrection calculus | Cross-exit row-pair clauses, endpoint-owner symmetric differences, minimum owner-label transversals, binary cut-code buckets, terminal chamber router, dual/Farkas current readout | HYP-3414 turns HYP-3411/HYP-3412/HYP-3413/HYP-3409/HYP-3410 into a finite proof-facing calculus.  In each mixed theorem-exit fiber, every cross-exit row pair emits an owner-label clause; a legal owner cut is a hitting set whose cut-code buckets are theorem-exit pure.  Known values are singleton cuts `5:g1` and `1:g1` for the first two leaks, but the `(72,20)` `10->20` frontier has minimum cut size `3`, five minimum cuts, and empty core, so the live theorem is bounded owner transversals rather than a universal singleton owner label. | HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-2969, HYP-2963, THM-523, T1374, LTT-274, LTI-374, OPEN-Q-108 | Extend HYP-3406 beyond `(72,20)`, run the clause/transversal calculator on the first `residue+owner_support` failure if one appears, and add child-deck stability plus terminal-exit routing to every cut-pure fiber. |
 | LTI-382 | Off-grid resonance transparency / Rprime closure | Off-grid witness cells, resonant-speed distance ledger, `14Q` grid-kill check, canonical `84m` binding formula, 2-adic even-speed descent, signed-SPEC `Rprime` constant chase, fiber-PGF/edge-witness glue | HYP-3421 is the exact scout companion to HYP-3415's one-floor critical path, corrected by HYP-3418.  It verifies named off-grid optima with floors `1/12`, `1/8`, `1/9`, and canonical `{1..11,13,84m}` formula `t=(35m+2)/(84m+5)`, `M=7m/(84m+5)>1/14`; every checked resonant speed, including `14Q` tips, is safe at the selected full optima.  The technique recasts resonance as grid-local danger plus full-optimum transparency, while HYP-3418 keeps the floor on the 2-adic/even-speed descent route before the HYP-3129/HYP-3140 `Rprime` chase. | HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3412, HYP-3410, HYP-3310, HYP-3266, HYP-3265, HYP-3255, HYP-3140, HYP-3136, HYP-3129, HYP-3125, HYP-3124, HYP-2896, THM-523, T1382, LTT-282, LTI-382, OPEN-Q-108 | Prove the all-packet transparency classifier, the 2-adic even-speed descent, and the closed-form signed-SPEC `Rprime >= c` constant chase. |
@@ -7317,6 +7318,65 @@ Tournament fingerprint: score histogram `{8:1, 20:1, 33:1, 39:1, 51:1,
 Next agent hook: use reciprocal endpoint budget as a priority queue for
 candidate endpoint spines, but accept a witness only after restoring the exact
 interval, branch, and endpoint labels.
+
+## LTI-394: Euler-Mascheroni Endpoint-Spine Finite Part
+
+Created by codex-2026-06-28 for HYP-3433/T1394 after the HYP-3432
+wall-budget sidecar, HYP-3431 corridor-fence certificate, and HYP-3430
+Euler-Mascheroni scalar-firewall prompt.  This technique treats harmonic
+constants as finite-part sidecars attached to labelled endpoint tails, not as
+scalar floor certificates.
+
+Carrier / vertex set:
+
+```text
+endpoint family labels, tail addresses, harmonic tail atoms, branch masks,
+component windows, finite-part normalizers, and scalar-firewall controls
+```
+
+Canonical readout on `S_m={1,...,11,13,84m}` through `m=180`:
+
+```text
+eventual law begins at m=5
+best label = E:84m
+best length = 1/(49m)
+a_m = ceil(48m/7)
+best window = [(14a_m+1)/(588m), (14a_m+13)/(588m)]
+tail/address failures = []
+exact scaled residual = 0
+```
+
+Euler-Mascheroni role:
+
+```text
+sum_{m=5}^M best_len = (H_M-H_4)/49
+sum_{m=5}^M best_len - log(M)/49 -> (gamma-H_4)/49
+```
+
+Preserved LRC predicate: the selected endpoint window and branch/component
+sidecar for the HYP-3425/HYP-3429 relocation route.
+
+Destroyed information if scalarized: endpoint label `E:84m`, the component
+address `ceil(48m/7)`, the branch mask, and the odd/even wall clearances.
+
+Pairwise observable: retained predicate data plus endpoint exactness, tail
+compression, branch-sheet retention, owner-sidecar compatibility, finite-lemma
+usefulness, and scalar-risk control.
+
+Tournament fingerprint: score histogram `{17:1, 30:1, 43:1, 53:1, 57:2,
+64:2}`, no directed `3`-cycles, and Hamiltonian path
+`eventual_E_endpoint_harmonic_law -> H3429_endpoint_spine_certificate -> gamma_finite_part_sidecar -> endpoint_weight_exchange_rate -> Mertens_loglog_tail_normalizer -> total_good_measure_density_probe -> raw_window_count_growth -> raw_gamma_constant_scalar`.
+
+Next agent hook: prove the canonical address lemma for all `m>=5`.  A likely
+proof checks the seven residue classes of `m`, shows the component remains
+near `u=8/49`, and gives exact clearances to every fixed odd wall in
+`{1,...,11,13}`.  Then search for other labelled endpoint towers with
+`c/m` survivor length and finite-part constants.
+
+Anchors: HYP-3433, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428,
+HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3421, HYP-3419, HYP-3417,
+HYP-3129, HYP-2982, HYP-2963,
+THM-523, LTT-294, T1394, OPEN-Q-108.
 
 ## LTI-365: Creative Reframe Lead Atlas
 

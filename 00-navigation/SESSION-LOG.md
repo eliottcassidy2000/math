@@ -24,6 +24,28 @@ the proof certificate remains the exact interval plus branch plus wall word.
 Next proof hook: in the endpoint-spine lemma, use the lowest reciprocal owner
 budget as a search priority, but accept it only after checking the exact
 HYP-3429 endpoint certificate.
+## codex-2026-06-28 -- HYP-3433 Euler-Mascheroni endpoint-spine finite part
+
+Continued the HYP-3432 wall-budget, HYP-3431 corridor-fence, HYP-3430
+scalar-firewall, and HYP-3429 endpoint-spine route under the Euler-Mascheroni
+prompt.  Added HYP-3433/T1394/LTI-394/LTT-294 plus
+script/result/reflection:
+
+```text
+04-computation/lrc14_euler_mascheroni_endpoint_spine_ledger_codex_20260628.py
+05-knowledge/results/lrc14_euler_mascheroni_endpoint_spine_ledger_codex_20260628.out
+05-knowledge/hypotheses/HYP-3433-lrc14-euler-mascheroni-endpoint-spine-finite-part.md
+07-reflections/lrc14-euler-mascheroni-endpoint-spine-finite-part-codex-20260628.md
+```
+
+Exact canonical-tail audit on `{1,...,11,13,84m}` through `m=180`: from
+`m=5`, the best endpoint spine is `E:84m`, length `1/(49m)`, with selected
+address `a_m=ceil(48m/7)` and window
+`[(14a_m+1)/(588m),(14a_m+13)/(588m)]`; no checked tail or address failures.
+Thus `sum_{m=5}^M best_len=(H_M-H_4)/49`, and Euler-Mascheroni enters as the
+finite part `(gamma-H_4)/49` after subtracting `log(M)/49`.  Next target:
+prove the address lemma for all `m>=5`, then generalize labelled endpoint-tail
+finite parts without forgetting branch/component sidecars.
 
 ## codex-2026-06-28 -- HYP-3426 one-branch mirror / endpoint-support certificates
 

@@ -366,6 +366,11 @@ obligations, and proof-carrier interfaces.
   vertices.  The live guardrail is that harmonic budgets rank wall debt but
   collide across wall signatures, so exact branch/wall/interval labels remain
   load-bearing.
+- Need to use Euler-Mascheroni or Mertens-style constants on endpoint tails:
+  use LTT-294 after LTT-291/LTT-290 and make labelled endpoint-tail laws, address
+  lemmas, finite-part sidecars, and scalar firewalls the vertices.  Gamma is a
+  tail normalizer only after the endpoint label, branch mask, and component
+  window are retained.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -8422,6 +8427,41 @@ quotient_legality_status
   HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3419, HYP-3418, HYP-3417,
   HYP-3415, HYP-3412, HYP-3407, HYP-3129, HYP-2963, THM-523, LTI-393,
   T1393, OPEN-Q-108.
+
+## LTT-294: Euler-Mascheroni Endpoint-Spine Finite-Part Tournament
+
+- **Move:** Rank tail-normalizer proof carriers after the HYP-3429
+  endpoint-spine certificate.  Vertices are the eventual `E:84m` harmonic
+  law, the HYP-3429 endpoint-spine certificate, the gamma finite-part sidecar,
+  endpoint-weight exchange rate, Mertens/loglog tail normalizer, total
+  good-measure density probe, raw window-count growth, and raw gamma scalar as
+  the negative control.
+- **LRC use:** HYP-3433 audits the canonical tower `{1,...,11,13,84m}`
+  through `m=180`.  From `m=5`, the best spine is label `E:84m`, length
+  `1/(49m)`, and address `a_m=ceil(48m/7)` with interval
+  `[(14a_m+1)/(588m),(14a_m+13)/(588m)]`.  Summing the selected lengths gives
+  `(H_M-H_4)/49`, so Euler-Mascheroni appears as the finite part
+  `(gamma-H_4)/49` after subtracting `log(M)/49`.
+- **Preserves:** endpoint label, selected survivor window, branch/component
+  sidecar, exact harmonic tail law, and the HYP-3425/HYP-3429 relocation route.
+- **Forgets / guardrail:** raw gamma, raw total survivor measure, and raw
+  window-count growth forget the address, wall label, branch mask, and odd-wall
+  clearances.  They are telemetry until a labelled endpoint family is attached.
+- **Pairwise observable:** predicate retention, endpoint exactness, tail
+  compression, branch-sheet retention, owner-sidecar compatibility,
+  finite-lemma usefulness, and scalar-risk control.
+- **Switch/gauge:** orient toward higher retained proof payload; ties use the
+  declared proof path.
+- **Fingerprint:** score histogram `{17:1, 30:1, 43:1, 53:1, 57:2, 64:2}`,
+  no directed `3`-cycles, and Hamiltonian path
+  `eventual_E_endpoint_harmonic_law -> H3429_endpoint_spine_certificate -> gamma_finite_part_sidecar -> endpoint_weight_exchange_rate -> Mertens_loglog_tail_normalizer -> total_good_measure_density_probe -> raw_window_count_growth -> raw_gamma_constant_scalar`.
+- **Next hook:** prove the canonical address lemma for every `m>=5`, ideally
+  by seven residue classes and exact clearances from the component near
+  `u=8/49` to the fixed odd walls `{1,...,11,13}`.  Then search for other
+  endpoint towers with `c/m` windows and finite-part constants.
+- **Pointers:** HYP-3433, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428,
+  HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3421, HYP-3419, HYP-3417,
+  HYP-3129, HYP-2982, HYP-2963, THM-523, LTI-394, T1394, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 
