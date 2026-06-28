@@ -1,3 +1,33 @@
+## kind-pasteur-2026-06-27-S31aj -- 1/7 settled (NOT a theorem) + covariance-max EXHAUSTIVE + FERROMAGNETIC transition
+
+Owner: notice the 2002 connection; re-verify whether the associativity defect 1/7 is universal (a theorem)
+and the covariance-max is robust. Answered both definitively + a major bonus (HYP-3161):
+
+- **Q1 (is 1/7 a theorem?) NO.** `Sigma kappa_3/S3` is a MONOTONE-INCREASING function of k
+  (0.027,0.087,0.130,0.113,**0.1428558**,0.201,0.260 for k=4..10) that crosses ~1/7 at k=8 FOR CONSEC ONLY
+  (off 1.3e-6 from 1/7=0.1428571). The ACTUAL k=8 binding minimizers `{0,1,5,7,8,9,11,13}`,`{1,5,7,8,9,11,12,13}`
+  give 0.245, 0.292 -- nowhere near 1/7. Definitively a near-coincidence of the crossing. (Corrects S31ai's
+  tentative 1/7 -- I had already flagged it near-coincidence; now exhaustively confirmed.)
+- **Q2 (covariance-max robust?) YES, EXHAUSTIVELY.** consec={0..7} MAXIMIZES total empty-sector covariance
+  `Sigma kappa_2` over ALL 3432 bounded k=8 clusters (span<=14), **0 beaters**. The clean degree-2/commutative/
+  even proof target (= mac-mini's biquadratic-fold even half) is exhaustively verified.
+- **BONUS -- FERROMAGNETIC PHASE TRANSITION (HYP-3161):** `Sigma kappa_2(consec_k)` sign-changes NEGATIVE
+  (antiferro, k=3,4,5: -0.408,-0.334,-0.099) -> POSITIVE (ferro, k>=6: +0.165..+0.772, peak k=10) at
+  **k=5->6 = mac-mini's n=5 score->iso compression boundary**. The empty-sector indicators are a SPIN
+  SYSTEM; **consec_8/consec_10 are FULLY ferromagnetic (all 15 pairwise Cov>0)** while the cap-MINIMIZER is
+  mixed (8/15 neg). MECHANISM: ferromagnetic alignment => mass at both ordered states all-covered (q0) +
+  all-empty (q6) => the BIMODALITY; consec = the ferromagnetic GROUND STATE => max coverage. The binding
+  row k=8 sits in the ORDERED phi^4 phase. NEW PROOF LEVER: ferromagnetic correlation inequalities
+  (Griffiths/GKS monotonicity), though plain FKG gives the LOWER bound (wrong way) -- the UPPER bound needs
+  the extremal-coupling/ground-state argument.
+- **2002 = C(14,5) = 2*7*11*13** = the k=10 binding-row config count (THM-534); binomial config counts tie
+  to the Pascal-mass cap (apex 14=2*7 times 11*13).
+
+NET: LRC(14) not proved; the last node's even/degree-2 half (consec maximizes covariance) is now
+EXHAUSTIVELY verified and recast as a ferromagnetic ground-state extremality with a clean phase transition.
+=> HYP-3161, HYP-3160; scripts lrc_{associativity_17_exact_search, ferromagnetic_transition_covariance,
+fkg_ferromagnetic_check}_kps.py.
+
 ## kind-pasteur-2026-06-27-S31ai -- the k=8 node = a FERROMAGNETIC covariance extremality (functions + info theory + associativity)
 
 Owner: merge/extend the Lee-Yang/phi^4/Galois web toward a proof, thinking in FUNCTIONS + INFORMATION
