@@ -1,0 +1,124 @@
+HYP-3236 Green conductance / algebraic connectivity scout
+==============================================================================
+bank=anchored {0} union A, A subset [1,14], |A|=7
+rows_all=3432
+rows_primitive=3431
+conductance_graph=positive part of inner-sector empty covariance matrix
+green_kernel=Moore-Penrose inverse of weighted graph Laplacian
+negative_covariance_edges=retained as leakage sidecar, not erased
+positive_conductance_disconnected_rows=676
+first_disconnected_rows=[(0, 1, 2, 3, 4, 8, 11, 14), (0, 1, 2, 3, 4, 9, 10, 13), (0, 1, 2, 3, 4, 9, 10, 14), (0, 1, 2, 3, 4, 9, 11, 13), (0, 1, 2, 3, 4, 9, 11, 14), (0, 1, 2, 3, 5, 7, 9, 14), (0, 1, 2, 3, 5, 7, 10, 14), (0, 1, 2, 3, 5, 7, 11, 14), (0, 1, 2, 3, 5, 7, 13, 14), (0, 1, 2, 3, 5, 8, 9, 13)]
+
+AP GREEN PROFILE
+AP=(0, 1, 2, 3, 4, 5, 6, 7)
+dilation_twin=(0, 2, 4, 6, 8, 10, 12, 14)
+total_positive_conductance=0.721622819196
+negative_edges=0 negative_mass=0.000000000000
+lambda2_algebraic_connectivity=0.192033074001
+laplacian_eigvals=-0.000000000000,0.192033074001,0.278704158990,0.291269950895,0.327480748451,0.353757706055
+kirchhoff_index=108.654718079151
+mean_effective_resistance=7.243647871943
+max_effective_resistance=9.713313375596
+distance_effective_resistance=d1:6.710085829826, d2:7.345147613359, d3:7.675710172645
+bottleneck_pair=(1, 6)
+bottleneck_unit_current=R=9.713313375596, max_edge=(5, 6), max_abs_current=0.296441966913, current_entropy_bits=3.460234326390
+
+CONDUCTANCE / GREEN RANKS AGAINST AP
+lambda2_algebraic_connectivity_MAX: ap_rank=0 dilation_rank=1 all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+  ap_value=0.192033074001
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=0.192033074001
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 3, 4, 5, 6, 7, 8, 9), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 5, 7, 9, 11, 13)]
+total_positive_conductance_MAX: ap_rank=0 dilation_rank=1 all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+  ap_value=0.721622819196
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=0.721622819196
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 2, 3, 4, 5, 6, 9), (0, 1, 2, 3, 4, 5, 6, 12), (0, 2, 4, 6, 7, 8, 10, 12)]
+kirchhoff_index_MIN: ap_rank=0 dilation_rank=1 all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+  ap_value=108.654718079151
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=108.654718079151
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 6, 7, 8, 10, 12), (0, 3, 4, 5, 6, 7, 8, 9)]
+mean_effective_resistance_MIN: ap_rank=0 dilation_rank=1 all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+  ap_value=7.243647871943
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=7.243647871943
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 6, 7, 8, 10, 12), (0, 3, 4, 5, 6, 7, 8, 9)]
+max_effective_resistance_MIN: ap_rank=0 dilation_rank=1 all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+  ap_value=9.713313375596
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=9.713313375596
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 3, 4, 5, 6, 7, 8, 9), (0, 2, 4, 6, 7, 8, 10, 12), (0, 4, 5, 6, 7, 8, 9, 10)]
+distance_R1_MIN: ap_rank=0 dilation_rank=1 all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+  ap_value=6.710085829826
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=6.710085829826
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 4, 5, 6, 7, 9), (0, 3, 4, 5, 6, 7, 8, 9)]
+distance_R2_MIN: ap_rank=0 dilation_rank=1 all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+  ap_value=7.345147613359
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=7.345147613359
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 3, 4, 5, 6, 7, 8, 9), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 2, 3, 4, 5, 6, 8)]
+distance_R3_MIN: ap_rank=0 dilation_rank=1 all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+  ap_value=7.675710172645
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=7.675710172645
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 2, 3, 4, 5, 6, 8), (0, 3, 4, 5, 6, 7, 8, 9)]
+negative_edges_MIN: ap_rank=0 dilation_rank=6 all_beaters=0 primitive_beaters=0 all_ties=20 primitive_ties=19
+  ap_value=0.000000000000
+  best=(0, 1, 2, 3, 4, 5, 6, 7) best_value=0.000000000000
+  top5_non_AP_orbit=[(0, 1, 2, 3, 4, 5, 7, 13), (0, 1, 2, 4, 5, 6, 7, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 1, 3, 5, 7, 9, 11, 13), (0, 1, 5, 6, 7, 9, 10, 11)]
+
+TOP NON-AP GREEN DECOYS
+E=(0, 2, 3, 4, 5, 6, 7, 8) primitive=True lambda2=0.144321509290 kirchhoff=136.424340938360 maxR=12.847664881121 Rdist=(8.613291452791,9.093203062044,9.578373672837) neg_edges=1 neg_mass=0.004453237077
+E=(0, 3, 4, 5, 6, 7, 8, 9) primitive=True lambda2=0.126486148576 kirchhoff=177.329439703338 maxR=14.942906381881 Rdist=(11.462296785171,11.445184946800,12.558406208696) neg_edges=0 neg_mass=0.000000000000
+E=(0, 1, 3, 4, 5, 6, 7, 9) primitive=True lambda2=0.126388294606 kirchhoff=170.430105967558 maxR=13.974796819762 Rdist=(11.339689899646,10.852605057036,11.893726236830) neg_edges=0 neg_mass=0.000000000000
+E=(0, 2, 4, 6, 7, 8, 10, 12) primitive=True lambda2=0.113820536045 kirchhoff=173.325358101925 maxR=15.730609041900 Rdist=(11.170601066446,11.496078534559,11.998392019379) neg_edges=1 neg_mass=0.010485792957
+E=(0, 1, 3, 5, 7, 9, 11, 13) primitive=True lambda2=0.110831526196 kirchhoff=195.383171490455 maxR=16.111973010442 Rdist=(12.919486483940,12.418402264371,13.738745549780) neg_edges=0 neg_mass=0.000000000000
+E=(0, 4, 5, 6, 7, 8, 9, 10) primitive=True lambda2=0.109302608822 kirchhoff=199.379776790609 maxR=15.813193848833 Rdist=(13.988129469195,12.457049199493,13.430776689434) neg_edges=0 neg_mass=0.000000000000
+E=(0, 2, 4, 5, 6, 7, 8, 10) primitive=True lambda2=0.107582867659 kirchhoff=191.228379890178 maxR=18.210796601148 Rdist=(12.753800009543,12.426713454356,13.065162514137) neg_edges=1 neg_mass=0.005570364200
+E=(0, 1, 2, 5, 6, 7, 10, 11) primitive=True lambda2=0.100994930119 kirchhoff=216.067130161538 maxR=18.207956345110 Rdist=(13.119057650675,14.858433728671,15.235934652962) neg_edges=1 neg_mass=0.006082038820
+E=(0, 6, 7, 8, 9, 10, 11, 12) primitive=True lambda2=0.091718774089 kirchhoff=240.297734607352 maxR=19.023819040518 Rdist=(16.626426357529,15.034470315564,16.398650248377) neg_edges=0 neg_mass=0.000000000000
+E=(0, 7, 8, 9, 10, 11, 12, 13) primitive=True lambda2=0.091651006064 kirchhoff=268.051138584604 maxR=21.361120286557 Rdist=(18.860306329915,16.669161641431,18.080759745574) neg_edges=0 neg_mass=0.000000000000
+E=(0, 4, 6, 7, 8, 9, 10, 12) primitive=True lambda2=0.090339822706 kirchhoff=251.985812482139 maxR=19.281875532778 Rdist=(17.608796352519,15.166648343072,17.621717800836) neg_edges=0 neg_mass=0.000000000000
+E=(0, 1, 2, 4, 5, 6, 7, 10) primitive=True lambda2=0.089960780681 kirchhoff=202.484838506011 maxR=20.824305503569 Rdist=(11.827152432123,13.692259439787,14.977555829292) neg_edges=1 neg_mass=0.000467397843
+
+HYP-3202 EXCHANGE-TRAP GREEN DISCHARGE
+arbitrary_exchange_primitive_local_maxima=12
+E=(0, 1, 2, 3, 4, 5, 6, 7) sk2=0.721622819196 lambda2=0.192033074001 kirchhoff=108.654718079151 maxR=9.713313375596 bottleneck_pair=(1, 6) current_max_edge=(5, 6) neg_edges=0 neg_mass=0.000000000000 primary_green_discharge=AP
+E=(0, 2, 4, 6, 7, 8, 10, 12) sk2=0.458813139201 lambda2=0.113820536045 kirchhoff=173.325358101925 maxR=15.730609041900 bottleneck_pair=(1, 6) current_max_edge=(5, 6) neg_edges=1 neg_mass=0.010485792957 primary_green_discharge=maxR_excess
+E=(0, 1, 3, 5, 7, 9, 11, 13) sk2=0.413610027952 lambda2=0.110831526196 kirchhoff=195.383171490455 maxR=16.111973010442 bottleneck_pair=(1, 4) current_max_edge=(4, 6) neg_edges=0 neg_mass=0.000000000000 primary_green_discharge=kirchhoff_excess
+E=(0, 1, 2, 3, 11, 12, 13, 14) sk2=0.370230699408 lambda2=0.039870795214 kirchhoff=286.301604850211 maxR=37.207839702396 bottleneck_pair=(2, 6) current_max_edge=(5, 6) neg_edges=1 neg_mass=0.008293269114 primary_green_discharge=maxR_excess
+E=(0, 3, 6, 8, 9, 11, 12, 14) sk2=0.339535613881 lambda2=0.040216161562 kirchhoff=287.739579059418 maxR=37.619587599649 bottleneck_pair=(1, 6) current_max_edge=(5, 6) neg_edges=3 neg_mass=0.033744381263 primary_green_discharge=maxR_excess
+E=(0, 2, 3, 5, 6, 8, 11, 14) sk2=0.337119363670 lambda2=0.020764192925 kirchhoff=442.169828757419 maxR=66.821721943107 bottleneck_pair=(3, 6) current_max_edge=(1, 6) neg_edges=1 neg_mass=0.003825664352 primary_green_discharge=maxR_excess
+E=(0, 6, 7, 8, 9, 10, 11, 12) sk2=0.328691985399 lambda2=0.091718774089 kirchhoff=240.297734607352 maxR=19.023819040518 bottleneck_pair=(2, 5) current_max_edge=(2, 4) neg_edges=0 neg_mass=0.000000000000 primary_green_discharge=kirchhoff_excess
+E=(0, 4, 5, 8, 9, 10, 13, 14) sk2=0.321712377978 lambda2=0.025689593195 kirchhoff=386.248579527840 maxR=53.459744370691 bottleneck_pair=(2, 6) current_max_edge=(5, 6) neg_edges=3 neg_mass=0.011586607280 primary_green_discharge=maxR_excess
+E=(0, 8, 9, 10, 11, 12, 13, 14) sk2=0.313938080470 lambda2=0.089052125316 kirchhoff=255.672418384910 maxR=21.057860965734 bottleneck_pair=(2, 5) current_max_edge=(2, 6) neg_edges=0 neg_mass=0.000000000000 primary_green_discharge=kirchhoff_excess
+E=(0, 1, 2, 3, 7, 8, 9, 10) sk2=0.149816926204 lambda2=0.033571788650 kirchhoff=431.508955395375 maxR=48.340361461688 bottleneck_pair=(3, 6) current_max_edge=(2, 6) neg_edges=4 neg_mass=0.075530707370 primary_green_discharge=maxR_excess
+E=(0, 2, 5, 7, 9, 10, 12, 14) sk2=0.137991988935 lambda2=0.016336734005 kirchhoff=606.795921265124 maxR=87.637153930345 bottleneck_pair=(1, 6) current_max_edge=(3, 6) neg_edges=4 neg_mass=0.080333862948 primary_green_discharge=maxR_excess
+E=(0, 1, 4, 5, 7, 8, 11, 12) sk2=0.110793464108 lambda2=0.028588883487 kirchhoff=498.222565060385 maxR=51.432366465169 bottleneck_pair=(1, 6) current_max_edge=(4, 6) neg_edges=3 neg_mass=0.100367603948 primary_green_discharge=maxR_excess
+non_AP_trap_primary_green_discharge={'kirchhoff_excess': 3, 'maxR_excess': 8}
+
+ASSUMPTION CHALLENGE
+alternate_vertices_considered=runners,gaps,sector boundaries,wall crossings,
+  residues, covariance edges, conductance graphs, current paths, Fiedler modes,
+  Schur-complement edits, trap rows, proof obligations
+chosen_vertices=conductance graphs and Green-current certificate carriers
+preserves=AP covariance extremality, distance-layer payload, trap identity,
+  effective-resistance bottlenecks, algebraic-connectivity margins
+destroys=negative covariance signs unless leakage sidecar is retained; raw
+  runner/gap identities; odd Worpitzky debt
+challenged_assumption=positive association alone is enough; the graph must
+  retain where current flows and where negative leakage was clipped.
+
+TOURNAMENT ANALYSIS: GREEN-CURRENT CARRIERS
+vertices=conductance certificates and proof obligations, not runners or raw gaps
+pairwise_observable=which carrier preserves Green current plus leakage sidecar payload
+switch/gauge=A beats B iff route_score(A)>route_score(B); ties lexical
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+directed_3cycles=0
+sccs=singletons under the score gauge
+hamiltonian_path_count=1
+priority_path=algebraic_connectivity_lambda2 -> kirchhoff_green_resistance_profile -> distance_effective_resistance_channels -> schur_complement_trap_discharge -> positive_covariance_conductance_graph -> negative_covariance_leakage_sidecar -> spectral_dictionary_compatibility -> raw_total_positive_conductance -> raw_covariance_scalar -> plain_positive_association -> runner_gap_graph
+
+PROOF-FRONTIER READOUT
+readout_1=AP/doubled-AP are the only maximizers of lambda2 and total positive
+  conductance, and the only minimizers of Kirchhoff/mean/max Green resistance.
+readout_2=the HYP-3202 exchange traps have large effective-resistance excesses;
+  their primary Green discharges split between maxR bottlenecks, lambda2 loss,
+  Kirchhoff excess, and negative leakage.
+readout_3=Green conductance is a strong new dictionary coordinate, but the
+  positive-part construction is lossy; a proof must keep negative covariance
+  leakage and odd Worpitzky sidecars.

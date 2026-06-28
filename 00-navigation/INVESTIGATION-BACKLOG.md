@@ -159,6 +159,95 @@ pair-Plucker bottlenecks as valuated-matroid circuits and Green bottlenecks
 as Schur/Verblunsky/Fejer-Riesz slack; then check whether HYP-3204's central
 exchange-rate slack is a projection of the same Toeplitz chart.
 
+## Lead codex-2026-06-28: Green conductance / algebraic connectivity certificate
+
+**Status:** EVIDENCE / exact bounded-bank scout; not proof (HYP-3236/T1336).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3236-lrc14-green-conductance-connectivity.md`,
+`04-computation/lrc14_green_conductance_connectivity_codex_20260628.py`,
+`05-knowledge/results/lrc14_green_conductance_connectivity_codex_20260628.out`,
+and
+`07-reflections/lrc14-green-conductance-connectivity-codex-20260628.md`.
+
+Readout: HYP-3236 executes HYP-3223's electrical route.  It maps the
+empty-sector covariance matrix to the positive-part conductance graph on the
+six inner sectors, retains negative covariance as leakage sidecar, and reads
+the graph through Laplacian `lambda2`, Green kernel `L^+`, Kirchhoff index,
+distance effective-resistance channels, bottleneck unit-current profiles, and
+current entropy.  AP/consecutive and doubled AP are the only all-bank rows
+maximizing algebraic connectivity and total positive conductance, and the only
+rows minimizing Kirchhoff/mean/max/distance-layer Green resistance; primitive
+normal form leaves AP unique.  AP has `lambda2=0.192033074001`,
+`kirchhoff=108.654718079151`, and `maxR=9.713313375596`.  HYP-3202's `11`
+non-AP exchange traps all show Green resistance excess, split primarily as
+`kirchhoff_excess:3` and `maxR_excess:8`.
+
+Rebase integration: incoming HYP-3225/T1308 executes the trap-local
+Green/Lorentzian fingerprint scout and refines these traps into
+rank-2 Plucker, low-connectivity Green, AFM/Rayleigh, and mixed sidecar
+classes, with Toeplitz `lambda_min` still the universal first discharge.
+HYP-3236 is therefore the global all-bank conductance face; HYP-3225 is the
+finite-boundary taxonomy; HYP-3226 should ingest both as motifs.
+
+Mainline also claimed HYP-3227/T1325 for the broader sector/precision/trap
+conductance graph family.  Read HYP-3236 as the sharper positive-covariance
+Green-resistance extremality face inside that family.
+
+Newer mainline claimed HYP-3228/T1326 for the cyclotomic Delsarte shell-magic
+`L_y` coefficient face.  Compare HYP-3236 Green resistance slack to that shell
+magic deficit, but keep the quotient maps distinct until a packet map is
+proved.
+
+Latest mainline claimed HYP-3229 for the modular/arithmetic magic sidecar
+audit.  Treat its Gamma0(7), Dirichlet-L, Beraha/Mahler, and comb-overlap
+signals as coefficient engines that may feed HYP-3236 only through named
+sidecars.
+
+Second rebase integration: incoming HYP-3214 identifies the 7-sector
+Fejer/de Moivre magic function as AP autocorrelation and a positive-definite
+Delsarte kernel, while separating it from the 14-clock Johnson pair-Pascal
+cap.  Treat HYP-3236's conductance graph as the finite Green/Dirichlet sibling
+of that harmonic face, not as a scalar replacement for either Fejer or cap.
+
+Newest mainline renumbered the scale-invariance recursion ledger to HYP-3231
+and added HYP-3232 for the Mobius/Eisenstein/Legendre interlocking-recursion
+audit, with HYP-3230 remaining the three-gap/Farey cap-kernel thread and
+HYP-3216 carrying the two-recursion LRC(2p) family law.  Use them as a
+scale-compatibility test: HYP-3236 should lift from raw `lambda2` to a
+cut/Rayleigh/Thomson packet indexed by the three-gap/Farey cap-kernel address,
+or explain which Green slack is annihilated by the moment-order ladder,
+2-adic fold, and apex-half break.
+
+Latest incoming HYP-3217 adds the cubic/subfield-lattice mode: the de Moivre
+angles are the cubic Gaussian-period cosets inside the `Q(zeta_7)` tower.
+Next Green tests should therefore project Fiedler vectors, bottleneck currents,
+and distance-resistance channels onto the cubic cosets; otherwise the
+conductance graph may preserve scale data while losing the cyclotomic mode.
+
+Newest incoming HYP-3233 grades the recursion modes by cyclotomic factors
+`(x-1)^depth * Phi_d`, with the hard apex mode in the real `Phi_7`/de Moivre
+cubic factor.  HYP-3236 should therefore tag Laplacian eigenvectors, Green
+resolvent poles, Fiedler bottlenecks, and resistance channels by which
+cyclotomic factor they preserve or forget.
+
+The incoming HYP-3234 signed-address chart-change sheaf adds the coordinate
+guardrail: carry signed chart, local slot basis, chart-change map, and
+cancelled-slot debt before moving Green currents between recursion charts.
+
+Incoming HYP-3235 and HYP-3218 add the totally-real cyclotomic cap and Fejer
+proof-push.  Compare Green kernels and resistance slack directly to the Fejer
+square / Gauss-sum margin; a proof-grade Green coordinate should factor
+through that positive certificate or name its electrical residual.
+
+Next: compare Green slack against HYP-3224's AP-support, Toeplitz,
+distance-layer, and ordered-tail slacks on every bounded row.  Emit
+Schur-complement reduction words for the `11` non-AP traps and test whether
+the Green split is the same finite event as the Lorentzian/tropical-Plucker
+split proposed by HYP-3223.  Keep the positive-part compression honest:
+negative covariance leakage, Schur boundary terminals, and odd
+Worpitzky/Hermite-Biehler debt must remain as sidecars or be discharged.
+
 ## Lead codex-2026-06-28-S277: function-compression degree-4 guardrail
 ## Lead codex-2026-06-28-S279: Law-defect entropy compression
 

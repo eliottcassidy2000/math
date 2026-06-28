@@ -28,6 +28,77 @@ HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3210, HYP-3205, HYP-3204,
 HYP-3203, HYP-3202, HYP-3200, HYP-3153, HYP-3138, HYP-3132, T1326, LTI-326,
 LTT-226,
 OPEN-Q-108.
+**OPEN-Q-108 HYP-3236 Green conductance / algebraic connectivity addendum:**
+HYP-3236 executes the Green-current route proposed in HYP-3223.  It maps the
+empty-sector covariance matrix to a positive-part conductance graph on the six
+inner sectors, keeps negative covariance as a leakage sidecar, and reads the
+graph through the Laplacian spectral gap `lambda2`, the Green kernel
+`L^+`, Kirchhoff index, effective-resistance channels, and bottleneck unit
+currents.  Over the `3432` anchored bounded k=8 rows, AP/consecutive and the
+nonprimitive doubled AP dilation are the only rows maximizing algebraic
+connectivity and total positive conductance, and the only rows minimizing
+Kirchhoff, mean, max, and distance-layer effective resistance.  AP has
+`lambda2=0.192033074001`, `kirchhoff=108.654718079151`, and
+`maxR=9.713313375596`.  The `11` non-AP HYP-3202 exchange traps all have Green
+resistance excess, split primarily into `3` Kirchhoff-excess traps and `8`
+max-resistance bottleneck traps.
+
+Rebase integration: HYP-3225 supplies the trap-local fingerprint refinement.
+It says Toeplitz `lambda_min` remains the universal first discharge on the
+`12` local maxima, while the residual mechanisms split into rank-2 Plucker,
+Green low-connectivity, AFM/Rayleigh, and mixed sidecars.  Use HYP-3236 for
+the global all-bank conductance face and HYP-3225 for the finite-boundary
+taxonomy.
+
+Second rebase integration: HYP-3214 identifies the 7-sector magic function as
+the positive-definite Fejer kernel `F_7=(de Moivre cubic)^2`, equal to AP
+autocorrelation, and separates it from the 14-clock Johnson pair-Pascal cap.
+The open Green task should therefore try to glue Fejer/autocorrelation,
+Green/Dirichlet conductance, and pair-Pascal cap as distinct packet faces, not
+collapse them to one scalar.
+
+Third rebase integration: HYP-3231 supplies the universal scale-invariance
+recursion ledger, HYP-3232 supplies the Mobius/Eisenstein/Legendre
+interlocking-recursion audit at the apex half, HYP-3230 supplies the
+three-gap/Farey cap-kernel thread, and HYP-3216 supplies the LRC(2p)
+moment-order ladder with 2-adic reflection fold.  The open Green task should
+therefore test scale compatibility: lift `lambda2` to conductance cuts,
+Rayleigh quotients, or Thomson demands indexed by the cap-kernel address, or
+name the lost scale data as a sidecar.
+
+Fourth rebase integration: HYP-3217 adds the subfield-lattice/cubic de Moivre
+mode.  Test whether Fiedler vectors, bottleneck currents, and distance
+resistance channels project cleanly to the cubic Gaussian-period cosets
+`{1,6}`, `{2,5}`, `{3,4}`; otherwise Green connectivity has lost a live
+cyclotomic coordinate.
+
+Fifth rebase integration: HYP-3233 grades the recursion modes by cyclotomic
+factors `(x-1)^depth * Phi_d`.  Test whether the Green Laplacian spectrum,
+Green resolvent, Fiedler bottlenecks, and effective-resistance channels retain
+the `Phi_7`/de Moivre cubic mode or legally annihilate it.
+
+Sixth rebase integration: the HYP-3234 signed-address sheaf says full/even/odd
+recurrences are local signed charts with cancellation debt.  Green current
+transport should retain the signed chart, slot basis, and chart-change map
+before scalarizing to `lambda2` or resistance.
+
+Seventh rebase integration: HYP-3235 and HYP-3218 add the totally-real cap and
+cyclotomic Fejer proof-push.  Test whether the Green kernel/resistance slack
+factors through the Fejer square / Gauss-sum margin, or whether it carries a
+separate electrical residual.
+
+Open task: prove a Rayleigh/Thomson/Poincare conductance extremality theorem
+or show that Green slack is a projection of the HYP-3224 normal fan.  The
+positive-part conductance graph is a lossy compression, so any proof must keep
+negative covariance leakage, odd Worpitzky/Hermite-Biehler debt, and
+Schur-complement boundary sidecars.  Compare Green slack with Toeplitz
+`lambda_min`, AP-support slack, and HYP-3204 ordered-tail slack on the same
+rows; then emit Schur-complement reduction words for the `11` traps. ->
+HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3218, HYP-3217, HYP-3216, HYP-3214, HYP-3213, HYP-3212,
+HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201,
+HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153,
+T1336, LTI-336, LTT-236, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3222 Joukowski-Hermite-Biehler / Perron-Frobenius addendum:**
 HYP-3222 turns the incoming Perron, Toeplitz, Joukowski, and Hermite-Biehler
 ideas into two exact local certificates.  The HB leg certificate is

@@ -216,6 +216,12 @@ obligations, and proof-carrier interfaces.
   Schur-complement trap discharges, Lorentzian Hessian packets, valuated
   exchange slacks, and tropical Plucker defects the vertices.  Do not stop at
   raw covariance, raw local exchange, or positive association.
+- Need to test the Green-current route as an executable conductance graph:
+  use LTT-236 after LTT-223/LTT-207/LTT-206/LTT-202 and make algebraic
+  connectivity, Green resistance profiles, distance resistance channels,
+  Schur trap discharge, positive conductance graphs, negative leakage
+  sidecars, and Fiedler bottlenecks the vertices.  Do not let the
+  positive-part graph forget clipped negative covariance or odd Worpitzky debt.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -6675,3 +6681,72 @@ quotient_legality_status
 - **Pointers:** HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004,
   HYP-2902, HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553,
   THM-550, THM-549, THM-442, LTI-331, T1331, OPEN-Q-108.
+
+## LTT-236: Green Conductance Connectivity Tournament
+
+- **Move:** Treat conductance-certificate roles as tournament vertices:
+  algebraic connectivity `lambda2`, Kirchhoff/Green resistance profile,
+  distance effective-resistance channels, Schur-complement trap discharge,
+  positive covariance conductance graph, negative covariance leakage sidecar,
+  spectral dictionary compatibility, raw total positive conductance, raw
+  covariance scalar, plain positive association, and runner/gap graph.
+- **LRC use:** HYP-3236 executes HYP-3223's electrical route on the exact
+  HYP-3202/HYP-3205/HYP-3224 bounded k=8 bank.  AP/consecutive and doubled AP
+  are the only all-bank maximizers of `lambda2` and total positive conductance
+  and the only minimizers of Kirchhoff/mean/max/distance-layer Green
+  resistance.  The HYP-3202 non-AP exchange traps all have resistance excess,
+  split primarily between Kirchhoff excess and max-resistance bottlenecks.
+  This turns Green current into a proof-coordinate candidate for the HYP-3224
+  normal fan rather than another scalar diagnostic.
+- **HYP-3214 integration:** compare this Green/Dirichlet tournament to the
+  7-sector Fejer/de Moivre positive-definite autocorrelation kernel, but keep
+  the 14-clock Johnson pair-Pascal cap as a separate coordinate.  The lawful
+  vertex is the packet relation among Fejer slack, Green slack, cap slack, and
+  leakage sidecars, not any one scalar shadow.
+- **HYP-3231/HYP-3232/HYP-3216 integration:** add scale-recursion
+  compatibility as a tournament vertex family around HYP-3230's cap-kernel
+  address.  Raw `lambda2` forgets the three-gap/Farey address and the
+  apex-half break, so a proof-grade Green vertex should be a conductance-cut,
+  Rayleigh, or Thomson packet that survives the cap-kernel recursion and the
+  LRC(2p) moment-order ladder x 2-adic fold.
+- **HYP-3217 integration:** add cubic-mode compatibility as a modal tournament
+  sidecar.  Fiedler vectors, bottleneck currents, and resistance channels
+  should be compared against the cubic Gaussian-period cosets before the Green
+  scalar is allowed to stand for the Perron/HB/Joukowski side of the packet.
+- **HYP-3233 integration:** add cyclotomic-factor grading as a spectral
+  tournament sidecar.  Green resolvents and Fiedler data should record whether
+  they preserve, forget, or dual-annihilate the `Phi_7`/de Moivre cubic mode;
+  HYP-3234's signed-address sheaf also requires chart, slot-basis,
+  chart-change, and cancelled-slot-debt vertices before current data crosses
+  recursion charts.
+- **HYP-3235/HYP-3218 integration:** add the Fejer proof-push as the harmonic
+  comparison vertex: Green slack should factor through or stand dual to the
+  totally-real Fejer square / Gauss-sum margin.
+- **Preserves:** AP covariance extremality, distance-layer payload, trap
+  identity, effective-resistance bottlenecks, algebraic-connectivity margins,
+  and the AP/doubled-AP equality face.
+- **Forgets / guardrail:** the positive-part conductance graph clips negative
+  covariance signs.  Raw `lambda2`, raw conductance, and raw positive
+  association are illegal proof quotients unless negative leakage, odd
+  Worpitzky/Hermite-Biehler debt, and Schur boundary terminals are retained or
+  discharged.
+- **Fingerprint:** exact scout tournament is transitive with
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1}`, no directed
+  3-cycles, singleton SCCs, and one Hamiltonian path:
+  `algebraic_connectivity_lambda2 -> kirchhoff_green_resistance_profile ->
+  distance_effective_resistance_channels -> schur_complement_trap_discharge ->
+  positive_covariance_conductance_graph -> negative_covariance_leakage_sidecar
+  -> spectral_dictionary_compatibility -> raw_total_positive_conductance ->
+  raw_covariance_scalar -> plain_positive_association -> runner_gap_graph`.
+- **Next pull:** Compare Green slack with AP-support, Toeplitz, covariance
+  layer, ordered-tail, and Fejer-autocorrelation slack on all rows; then emit
+  Schur-complement reduction words for the `11` non-AP traps and test whether the
+  `kirchhoff_excess`/`maxR_excess` split matches Lorentzian or tropical
+  Plucker circuit types.  Also test whether Green cuts can be indexed by the
+  HYP-3230 cap-kernel recursion, HYP-3232 apex-break audit, HYP-3217
+  cubic-mode projection, HYP-3233 cyclotomic-factor grading, HYP-3234
+  signed-chart debt, and HYP-3235/HYP-3218 Fejer proof-push.
+- **Pointers:** HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3218, HYP-3217, HYP-3216, HYP-3214, HYP-3213,
+  HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
+  HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154,
+  HYP-3153, LTI-336, LTT-236, T1336, OPEN-Q-108.

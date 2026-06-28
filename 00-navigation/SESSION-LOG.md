@@ -548,6 +548,113 @@ New handles: HYP-3223, T1323, LTI-323, LTT-223.  Next scout: classify the
 `tropical_plucker_defect`, then test whether HYP-3203's AP support normal is
 also the exchange-chamber normal and whether HYP-3205's dictionary coordinate
 predicts the same discharge.
+
+## codex-2026-06-28 -- HYP-3236 green conductance / algebraic connectivity
+
+Owner prompt: extend the Green-current thread with conductance graphs,
+algebraic connectivity, and related concepts for the LRC14 proof frontier.
+Added `04-computation/lrc14_green_conductance_connectivity_codex_20260628.py`
+and stored
+`05-knowledge/results/lrc14_green_conductance_connectivity_codex_20260628.out`,
+then documented HYP-3236/T1336/LTI-336/LTT-236 plus the reflection
+`07-reflections/lrc14-green-conductance-connectivity-codex-20260628.md`.
+
+Core finding: map the empty-sector covariance matrix to the positive-part
+conductance graph on the six inner sectors, retain negative covariance as
+leakage sidecar, and read the Laplacian via `lambda2`, Green kernel
+`L^+`, Kirchhoff index, effective-resistance channels, bottleneck unit
+currents, and current entropy.  Over all `3432` anchored bounded k=8 rows,
+AP/consecutive and doubled AP are the only rows maximizing algebraic
+connectivity and total positive conductance, and the only rows minimizing
+Kirchhoff, mean, max, and distance-layer effective resistance.  Primitive
+normal form leaves AP unique.
+
+AP profile: `lambda2=0.192033074001`, `kirchhoff=108.654718079151`,
+`maxR=9.713313375596`, bottleneck pair `(1,6)`, bottleneck current entropy
+`3.460234326390` bits.  The closest non-AP Green decoy
+`(0,2,3,4,5,6,7,8)` already has `lambda2=0.144321509290`,
+`kirchhoff=136.424340938360`, `maxR=12.847664881121`, and one negative
+leakage edge.
+
+Trap discharge: HYP-3202's `11` non-AP arbitrary-exchange traps all have
+Green resistance excess, with primary split `kirchhoff_excess:3` and
+`maxR_excess:8`.  This gives a second boundary chart beside HYP-3224's
+Toeplitz trap discharge: local exchange fails on a finite trap manifold, the
+moment cone sees curvature deficit, and the conductance graph sees bottleneck
+resistance or leakage.
+
+Rebase integration: incoming HYP-3225/T1308 ran the trap-local
+Green/Lorentzian fingerprint scout.  It keeps Toeplitz `lambda_min` as the
+universal first trap discharge, then splits the `11` non-AP traps into
+rank-2 Plucker, low-connectivity Green, AFM/Rayleigh, and mixed sidecar
+classes.  HYP-3236 is the all-bank conductance/connectivity face; HYP-3225 is
+the finite trap taxonomy; HYP-3226 is the reserved motif atlas that should
+consume both.
+
+Mainline also claimed HYP-3227/T1325 for the broader sector/precision/trap
+conductance graph family.  This HYP-3236 packet is the sharper
+positive-covariance Green-resistance extremality face inside that family.
+
+Newer mainline claimed HYP-3228/T1326 for the cyclotomic Delsarte shell-magic
+`L_y` coefficient face.  HYP-3236 should compare its Green resistance slack to
+that shell-magic deficit without identifying the two quotients prematurely.
+
+Latest mainline claimed HYP-3229 for the modular/arithmetic magic sidecar
+audit.  Its Gamma0(7), Dirichlet-L, Beraha/Mahler, and comb-overlap signals
+are candidate coefficient engines for HYP-3236 only after the required
+sidecars are named.
+
+Second rebase integration: incoming HYP-3214 identifies the 7-sector
+Delsarte/Beurling-Selberg magic function as the Fejer kernel
+`F_7=(de Moivre cubic)^2`, positive-definite and equal to AP
+autocorrelation, while separating it from the 14-clock Johnson pair-Pascal
+cap.  The Green conductance packet should now be read as the finite
+Dirichlet-form sibling of that harmonic face, with cap/Fejer/Green kept
+distinct until a dual certificate glues them.
+
+Third rebase integration: incoming mainline renumbered the scale-invariance
+ledger to HYP-3231, added HYP-3232 for the Mobius/Eisenstein/Legendre
+interlocking-recursion audit, and kept HYP-3230 as the three-gap cap-kernel
+thread; the HYP-3216 updates verify the moment-order ladder x 2-adic
+reflection fold for the LRC(2p) family route.  This makes scale compatibility
+a required Green-side test: raw `lambda2` is too compressed to remember the
+three-gap/Farey cap-kernel address or the apex-half break, so the proof object
+should be a conductance-cut/Rayleigh/Thomson packet that either lifts through
+the recursion stack or carries the missing scale sidecar.
+
+Fourth rebase integration: incoming HYP-3217 identifies the three modes plus
+CUBIC/sextic with the subfield lattice of `Q(zeta_7)` and the 2-adic fold.
+For HYP-3236 this makes the de Moivre cubic mode a new Green-side sidecar:
+Fiedler vectors, bottleneck currents, and distance-resistance channels should
+be tested against the cubic Gaussian-period cosets before any scalar Green
+slack is treated as proof-grade.
+
+Fifth rebase integration: incoming HYP-3233 identifies recursion modes as
+cyclotomic factors `(x-1)^depth * Phi_d`, with the hard apex mode carried by
+the real `Phi_7`/de Moivre cubic.  HYP-3236 should now tag its Laplacian
+spectrum, Green resolvent, Fiedler bottlenecks, and resistance channels by
+which cyclotomic factor survives the conductance compression.
+
+Sixth rebase integration: incoming HYP-3234 signed-address chart-change sheaf
+warns that the full/even/odd recurrences are local signed charts, not global
+letter formulas.  HYP-3236 should carry signed chart, slot basis,
+chart-change map, and cancelled-slot debt when transporting Green current
+data through those recursions.
+
+Seventh rebase integration: incoming HYP-3235 and HYP-3218 push the harmonic
+side toward proof: the cap is totally real in `Q(cos(2*pi/7))`, the Fejer magic
+function is a totally positive cyclotomic square, and equidistribution becomes
+an explicit cyclotomic Fejer certificate.  HYP-3236 should compare its Green
+kernel/resistance slack to that Fejer square and Gauss-sum margin, or name the
+leftover electrical residual.
+
+Guardrail: the positive-part graph is a useful function of the covariance
+matrix, but it is a lossy compression.  A proof must retain negative
+covariance leakage, Schur-complement boundary terminals, and odd
+Worpitzky/Hermite-Biehler debt.  Next proof work: compare Green slack against
+AP-support, Toeplitz, covariance-layer, and ordered-tail slack on every row,
+then emit Schur-complement reduction words for the finite traps.
+
 ## codex-2026-06-28 -- HYP-3224 spectral payload cube / normal-fan synthesis
 
 Owner prompt: spend another long session pushing more creative abstract

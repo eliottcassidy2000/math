@@ -8,7 +8,25 @@ technique: LTI-323
 tournament_technique: LTT-223
 reflection: 07-reflections/lrc14-green-current-lorentzian-exchange-angles-codex-20260628.md
 related:
+  - HYP-3236
+  - HYP-3235
+  - HYP-3234
+  - HYP-3233
+  - HYP-3232
+  - HYP-3231
+  - HYP-3230
+  - HYP-3229
+  - HYP-3228
+  - HYP-3227
+  - HYP-3226
+  - HYP-3225
+  - HYP-3224
+  - HYP-3222
   - HYP-3221
+  - HYP-3218
+  - HYP-3217
+  - HYP-3214
+  - HYP-3216
   - HYP-3213
   - HYP-3212
   - HYP-3211
@@ -137,6 +155,39 @@ random local maxima.  They may be exactly the rows whose Schur-complement
 reduction preserves all three distance layers until a boundary leakage term is
 exposed.  In that reading, the trap discharge is a finite electrical
 network-reduction lemma rather than a finite list of rational inequalities.
+
+## Post-HYP-3236 Execution Note
+
+HYP-3236 executed this Green-current route on the full anchored bounded k=8
+bank.  The positive-part covariance conductance graph is AP-tight:
+consecutive and doubled AP are the only all-bank maximizers of algebraic
+connectivity `lambda2` and total positive conductance, and the only minimizers
+of Kirchhoff, mean, max, and distance-layer effective resistance.  The `11`
+non-AP arbitrary-exchange traps all have Green resistance excess, split
+primarily into `3` Kirchhoff-excess traps and `8` max-resistance bottleneck
+traps.
+
+The execution also sharpens the guardrail.  The map
+`C_E -> max(C_E,0)` is a lossy compression of the signed covariance kernel.
+The actual proof packet is therefore the conductance graph plus negative
+covariance leakage, Schur boundary terminals, and odd Worpitzky/Hermite-Biehler
+sidecars.  Raw positive association or raw `lambda2` alone is not the proof
+object.
+
+Concurrent HYP-3225 executed the trap-local half of the same proposal: the
+`11` non-AP exchange traps all discharge first through Toeplitz `lambda_min`,
+then split into Green, Rayleigh, and rank-2 Plucker sidecar classes.  Thus
+HYP-3223's "next scout" has become two complementary packets: HYP-3236 for
+all-bank conductance/connectivity extremality, and HYP-3225 for typed finite
+trap fingerprints.
+
+Incoming HYP-3214 adds the harmonic dual face: the 7-sector magic function is
+the positive-definite Fejer kernel `F_7=(de Moivre cubic)^2`, equal to AP
+autocorrelation, while the cap is the separate 14-clock Johnson pair-Pascal
+functional.  This makes the Green-current proposal sharper: try to derive the
+conductance Dirichlet form as a finite shadow of the Fejer/autocorrelation
+certificate, but do not identify the Green scalar, Fejer kernel, and cap until
+the lost coordinates have sidecars.
 
 ## Angle B: Lorentzian / Valuated Exchange Certificate
 

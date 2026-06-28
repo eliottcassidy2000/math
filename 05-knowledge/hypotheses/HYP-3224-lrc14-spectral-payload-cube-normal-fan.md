@@ -10,9 +10,25 @@ script: 04-computation/lrc14_spectral_payload_cube_codex_20260628.py
 result: 05-knowledge/results/lrc14_spectral_payload_cube_codex_20260628.out
 reflection: 07-reflections/lrc14-spectral-payload-cube-normal-fan-codex-20260628.md
 related:
+  - HYP-3236
+  - HYP-3235
+  - HYP-3234
+  - HYP-3233
+  - HYP-3232
+  - HYP-3231
+  - HYP-3230
+  - HYP-3229
+  - HYP-3228
+  - HYP-3227
+  - HYP-3226
+  - HYP-3225
   - HYP-3223
   - HYP-3222
   - HYP-3221
+  - HYP-3218
+  - HYP-3217
+  - HYP-3214
+  - HYP-3216
   - HYP-3213
   - HYP-3212
   - HYP-3211
@@ -209,6 +225,27 @@ packet.  They sharpen the interpretation of the dual certificate:
   co-emptiness finite differences.  HYP-3224 should treat those as candidate
   additional coordinates of the same normal fan, especially for classifying
   the `11` non-AP exchange traps.
+- HYP-3236 executes the Green-current/effective-resistance candidate.  The
+  positive covariance conductance graph adds an algebraic-connectivity face to
+  the payload cube: AP and doubled AP are the only rows maximizing `lambda2`
+  and total positive conductance and the only rows minimizing Green resistance
+  profiles.  All `11` non-AP exchange traps discharge by Green resistance
+  excess, split between Kirchhoff excess and max-resistance bottlenecks.  This
+  new face is legal only with negative covariance leakage and odd
+  Worpitzky/Hermite-Biehler sidecars retained.
+- HYP-3225 supplies the trap-local refinement of the same face.  Toeplitz
+  `lambda_min` remains the universal first discharge on the `12` local maxima,
+  while residual mechanisms split into rank-2 Plucker, Green low-connectivity,
+  AFM/Rayleigh, and mixed sidecars.  HYP-3236 should be read as the global
+  conductance face, HYP-3225 as its finite-boundary taxonomy, and HYP-3226 as
+  the motif atlas that should ingest both.
+- HYP-3214 identifies the 7-sector cyclotomic magic function as the Fejer
+  kernel `F_7=(de Moivre cubic)^2`, positive-definite and equal to AP
+  autocorrelation, while honestly separating it from the 14-clock Johnson
+  pair-Pascal cap.  This gives the payload cube a harmonic face adjacent to
+  HYP-3236's Green Dirichlet face: Fejer controls autocorrelation/coverage,
+  Green controls finite covariance conductance, and the cap remains a distinct
+  pair-normalized coordinate until a dual certificate glues them.
 - HYP-3211 separates the additive cyclotomic face from the multiplicative
   octonion/G2 face; for HYP-3224 this says the relevant normal cone is
   additive/cyclotomic, while octonion numerology is a productive negative
