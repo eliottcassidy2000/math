@@ -749,6 +749,27 @@ MOTIFS: tuple[Motif, ...] = (
           "Phi14 witness / Brouwer equioscillation sidecar",
           "direct",
           ("Vitali wall", "Phi_14", "core witnesses", "equioscillation")),
+    Motif("M098", "D7 Borsuk-Ulam sign-irrep certificate", "d7-borsuk-ulam",
+          "14=|D7| and the free Z2 sign irrep carries the odd-degree certificate",
+          ("QUOTIENT_LEGALITY", "ANALYTIC_EQ", "CHEBYSHEV", "GEOMETRY", "SIDE_CARRIER"),
+          "Brouwer fixed-point language assumes a reflection-fixed witness",
+          "Borsuk-Ulam odd-degree / sign-irrep sidecar",
+          "direct",
+          ("D_7", "Borsuk", "free Z_2", "anti-automorphism", "sign irrep")),
+    Motif("M099", "p mod 4 imaginary-quadratic wall", "pmod4-imaginary-wall",
+          "p=1 mod4 gives pure SOS while p=3 mod4 gives sign times SOS",
+          ("ANALYTIC_EQ", "CHEBYSHEV", "P_ADIC", "GEOMETRY", "SIDE_CARRIER"),
+          "real-unit/Pell machinery imported into the imaginary case",
+          "class-number/Stark / imaginary-quadratic sidecar",
+          "direct",
+          ("p mod 4", "imaginary-quadratic", "SIGN x SOS", "Q(sqrt-7)", "h(-7)")),
+    Motif("M100", "bimodal phi4 diagonal extremizer", "bimodal-phi4-diagonal",
+          "consecutive jointly maximizes kappa2, kappa3, q0+q6 and minimizes kappa4",
+          ("COV_LAYER", "ORDERED_TAIL", "ANALYTIC_EQ", "AP_NORMAL", "SIDE_CARRIER"),
+          "even and odd targets treated as independent scalar objectives",
+          "cumulant-tower / phi4 stabilizer diagonal sidecar",
+          "sidecar",
+          ("kappa_4", "phi^4", "bimodal", "q0+q6", "kappa3")),
 )
 
 
@@ -957,6 +978,9 @@ def main() -> None:
         ("lambda2 max", "AP maximizes positive-conductance algebraic connectivity."),
         ("Delta_even>=Delta_odd", "coverage node inequality splits even SOS from odd sign debt."),
         ("Phi14 core", "AP closed witnesses are the units mod 14 at the Vitali wall."),
+        ("14=|D7|", "The apex clock is the heptagon dihedral order; its sign irrep is the odd sidecar."),
+        ("p mod 4", "Pure SOS versus sign-times-SOS is the p=1 versus p=3 mod 4 family split."),
+        ("0/400 k2/k3/k4", "The random cumulant scout makes the two targets one bimodal phi4 diagonal."),
         ("1/23 -> 1/14", "Chen-Cusick supplies a floor-to-target lift; the 23/M=2/23 link is only bounded-bank coincidence."),
     ]
     for key, meaning in signals:
@@ -1003,7 +1027,11 @@ def main() -> None:
         "HYP-3237 adds a proof-facing boundary layer: AP is also the Green "
         "algebraic-connectivity and resistance optimum, the odd obstruction "
         "factors into Brouwer trace sign times SOS magnitude, and the Vitali wall "
-        "separates measure-rich bulk from the Phi14 cyclotomic witness core."
+        "separates measure-rich bulk from the Phi14 cyclotomic witness core.  "
+        "Incoming HYP-3220/HYP-3238/HYP-3239 refine that boundary again: the "
+        "odd topological side is a D7 sign-irrep/Borsuk-Ulam certificate, the "
+        "family split is p mod 4 pure-SOS versus sign-times-SOS, and the two "
+        "remaining cumulant targets collapse to a bimodal phi4 diagonal."
     )
 
 

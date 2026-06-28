@@ -192,17 +192,20 @@ HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153,
 T1336, LTI-336, LTT-236, OPEN-Q-108.
 **OPEN-Q-108 HYP-3226 small-pattern adjacency atlas addendum:**
 HYP-3226 turns the user's request for many small adjacent patterns into a
-typed payload ledger.  The scout scans 8377 repo-local files with 97 motifs
+typed payload ledger.  The scout scans 8384 repo-local files with 100 motifs
 and ranks by proof-payload retention, not raw analogy.  The strongest motifs
 are comb-overlap Gram kernel, shell `L_y` magic quartic, normal-cone dual
 slack, multi-chart proof split, AP Green algebraic-connectivity certificate,
 AP self-dual Fejer equidistribution
-certificate, three-gap/Stern-Brocot cap-kernel recursion,
+certificate, bimodal phi4 diagonal extremizer,
+three-gap/Stern-Brocot cap-kernel recursion,
 consecutive plus doubled AP, modulus-covariance apex break,
 Toeplitz lambda-min margin,
-certificate-Helly separation, single-arc peeling recursion,
+certificate-Helly separation, D7 Borsuk-Ulam sign-irrep certificate,
+single-arc peeling recursion,
 ordered-tail exchange-rate ratio, D1/D2/D3 covariance layers, Fejer-Riesz
-square, Chebyshev V7 double root, and the 11 non-AP exchange-trap ledger.
+square, Chebyshev V7 double root, the p mod 4 imaginary-quadratic wall, and
+the 11 non-AP exchange-trap ledger.
 HYP-3225 now supplies the first Green/Lorentzian trap-fingerprint table, and
 HYP-3214 upgrades the Fejer/Chebyshev motif to the explicit positive-definite
 `F_7` kernel.  HYP-3227 adds the conductance/Fiedler trap graph as motif M072,
@@ -224,6 +227,9 @@ certificate, and the totally-real cap-field conductor packet).
 HYP-3236/HYP-3219/HYP-3237 add M095-M097 (Green lambda2/Kirchhoff resistance
 certificate, Brouwer trace-sign times SOS split, and Vitali bulk-core `Phi_14`
 witness wall).
+HYP-3220/HYP-3238/HYP-3239 add M098-M100 (D7 Borsuk-Ulam sign-irrep
+certificate, p mod 4 imaginary-quadratic family law, and bimodal phi4
+cumulant diagonal).
 The main
 guardrail is that famous-problem names such as Skewes, tau/Lindelof, Collatz,
 Pell, Markov/Hurwitz, and Moser-de Bruijn/fibbinary
@@ -248,14 +254,17 @@ signed-address chart-change status, AP self-dual Fejer/Vaaler tail status,
 totally-real cap-field conductor/trace status,
 `Green_lambda2_Kirchhoff_resistance_status`,
 `Brouwer_trace_sign_SOS_split_status`,
-`Vitali_bulk_core_Phi14_witness_status`, and
+`Vitali_bulk_core_Phi14_witness_status`,
+`D7_Borsuk_Ulam_sign_irrep_status`,
+`Pmod4_imaginary_quadratic_family_status`,
+`Bimodal_phi4_cumulant_diagonal_status`, and
 `Induction_base_and_1_23_to_1_14_lift_status`.  If the rows
 collapse to exact identities or finite inequalities, use them as the finite
 boundary chart in the multi-chart proof: exchange/covariance off the trap
 manifold, moment-cone curvature on it, ordered-tail pricing for central mass,
 Fejer/Delsarte dual slack, and HB/Joukowski/Chebyshev gluing for the odd
 sidecar. -> HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
-HYP-3227, HYP-3215, HYP-3214, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200,
+HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3227, HYP-3220, HYP-3219, HYP-3215, HYP-3214, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200,
 T1324, LTI-324, LTT-224, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3222 Joukowski-Hermite-Biehler / Perron-Frobenius addendum:**

@@ -731,18 +731,20 @@ updated
 and added
 `07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md`.
 
-Readout: 97 motifs over 96 families, scanned 8377 repo-local files, with
-risk histogram `{'analogy': 19, 'direct': 36, 'raw': 3, 'sidecar': 39}`.  The
+Readout: 100 motifs over 99 families, scanned 8384 repo-local files, with
+risk histogram `{'analogy': 19, 'direct': 38, 'raw': 3, 'sidecar': 40}`.  The
 motif-family tournament is transitive (`directed_3cycles=0`, one Hamiltonian
 path).  Top payload motifs: M073 comb-overlap Gram kernel, M080 shell
 `L_y` magic quartic, normal-cone dual slack, multi-chart proof split,
 M095 AP Green algebraic-connectivity certificate,
 M093 AP self-dual Fejer equidistribution certificate,
+M100 bimodal phi4 diagonal extremizer,
 M085 three-gap/Stern-Brocot cap-kernel recursion, consecutive plus doubled AP,
 M089 modulus-covariance apex break, M074 single-arc peeling recursion,
 Toeplitz lambda-min margin,
-certificate-Helly separation,
-recursion, ordered-tail exchange-rate ratio, D1/D2/D3 covariance layers,
+certificate-Helly separation, M098 D7 Borsuk-Ulam sign-irrep certificate,
+ordered-tail exchange-rate ratio, D1/D2/D3 covariance layers,
+M099 p mod 4 imaginary-quadratic wall,
 M094 totally-real cap field conductor packet, the 11 non-AP exchange-trap ledger,
 Fejer-Riesz square, Chebyshev V7 double root, Lorentzian exchange chamber,
 M072 conductance/Fiedler trap graph, and M091 cyclotomic factor grading.
@@ -783,6 +785,9 @@ motifs M091-M094.
 Latest integration folds in HYP-3236/HYP-3219/HYP-3237 as motifs M095-M097:
 AP Green lambda2/Kirchhoff resistance certificate, Brouwer trace-sign times
 SOS split, and Vitali bulk-core `Phi_14` witness wall.
+Rebase integration folds in HYP-3220/HYP-3238/HYP-3239 as motifs M098-M100:
+D7 Borsuk-Ulam sign-irrep certificate, p mod 4 imaginary-quadratic family law,
+and bimodal phi4 diagonal extremizer.
 Next best computation is to prove the HYP-3225/HYP-3227 trap table
 symbolically with Gram PSD, speed-1 peeling, order-3 overlap, shell `L_y`
 magic slack, Gamma0(7) coefficient-row compatibility, three-gap kernel
@@ -792,6 +797,8 @@ cyclotomic factor grading, signed-address chart-change status, AP self-dual
 Fejer/Vaaler tail status, totally-real cap-field conductor/trace status,
 Green lambda2/Kirchhoff resistance status, Brouwer trace-sign/SOS split,
 Vitali bulk-core `Phi_14` witness status, conductance/Fiedler,
+D7 Borsuk-Ulam sign-irrep status, p mod 4 imaginary-quadratic status,
+bimodal phi4 diagonal status, conductance/Fiedler,
 M-matrix/Schur, Fejer/Delsarte, induction-base, and
 floor-to-1/14 lift columns.
 

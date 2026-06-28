@@ -159,19 +159,23 @@ Gram-kernel/peeling build, HYP-3215's proof-route audit, HYP-3228's shell
 magic dual, HYP-3229's modular sidecar audit, HYP-3230/HYP-3231/HYP-3216's
 recursion layer, HYP-3232/HYP-3217's mode lattice,
 HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor / chart / Fejer /
-conductor layer, and HYP-3236/HYP-3219/HYP-3237's Green / Brouwer / Vitali
-boundary layer without treating
+conductor layer, HYP-3236/HYP-3219/HYP-3237's Green / Brouwer / Vitali
+boundary layer, and HYP-3220/HYP-3238/HYP-3239's D7 / Borsuk-Ulam /
+`p mod 4` / bimodal phi4 diagonal layer without treating
 raw numerology as a proof carrier.
-Readout: 97 motifs across 96 families were scored by proof-payload retention
-over 8377 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
+Readout: 100 motifs across 99 families were scored by proof-payload retention
+over 8384 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
 shell `L_y` magic quartic, normal-cone dual slack,
 multi-chart proof split, AP Green algebraic-connectivity certificate,
-AP self-dual Fejer equidistribution certificate,
+AP self-dual Fejer equidistribution certificate, bimodal phi4 diagonal
+extremizer,
 three-gap/Stern-Brocot cap-kernel recursion,
 consecutive plus doubled AP, modulus-covariance apex break, Toeplitz lambda-min
-margin, certificate-Helly separation, single-arc peeling recursion,
+margin, certificate-Helly separation, D7 Borsuk-Ulam sign-irrep certificate,
+single-arc peeling recursion,
 ordered-tail exchange-rate ratio, and
-D1/D2/D3 covariance layers.  The useful small patterns cluster around seven
+D1/D2/D3 covariance layers, plus the p mod 4 imaginary-quadratic wall.  The
+useful small patterns cluster around seven
 payloads: normal-fan exposure, Toeplitz/moment curvature, covariance layers,
 ordered-tail pricing, finite trap discharge, HB/Perron gluing, and analytic
 equidistribution.  HYP-3225 now supplies the first Green/Lorentzian trap
@@ -195,6 +199,9 @@ equidistribution certificate, and the totally-real cap field conductor packet.
 HYP-3236/HYP-3219/HYP-3237 add M095-M097: AP Green
 algebraic-connectivity/resistance certificate, Brouwer trace-sign times SOS
 split, and the Vitali bulk-core `Phi_14` witness wall.
+HYP-3220/HYP-3238/HYP-3239 add M098-M100: D7 Borsuk-Ulam sign-irrep
+certificate, p mod 4 imaginary-quadratic family law, and bimodal phi4
+cumulant diagonal.
 Famous-problem analogies remain sidecars until they name the LRC coordinate
 they preserve and the coordinate they destroy.  Incoming S283's
 Skewes/Helfgott-Ruzsa/Collatz/PFR
@@ -211,7 +218,8 @@ modulus-covariance / subfield-mode status, cyclotomic factor grading,
 signed-address chart-change status, AP self-dual Fejer/Vaaler tail status,
 totally-real cap field conductor/trace status, Green lambda2/Kirchhoff
 resistance status, Brouwer trace-sign/SOS split status, Vitali bulk-core
-`Phi_14` witness status, and
+`Phi_14` witness status, D7 Borsuk-Ulam sign-irrep status, p mod 4
+imaginary-quadratic family-law status, bimodal phi4 diagonal status, and
 Fejer/Delsarte `F_7` slack as finite-boundary columns.
 
 ## Lead codex-2026-06-28: Joukowski-Hermite-Biehler / Perron-Frobenius synthesis

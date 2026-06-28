@@ -10,6 +10,8 @@ script: 04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py
 result: 05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out
 reflection: 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md
 related:
+  - HYP-3239
+  - HYP-3238
   - HYP-3237
   - HYP-3236
   - HYP-3235
@@ -32,6 +34,7 @@ related:
   - HYP-3223
   - HYP-3222
   - HYP-3221
+  - HYP-3220
   - HYP-3205
   - HYP-3204
   - HYP-3203
@@ -66,14 +69,17 @@ normal-cone dual slack
 multi-chart proof split
 AP Green algebraic-connectivity certificate
 AP self-dual Fejer equidistribution certificate
+bimodal phi4 diagonal extremizer
 three-gap Stern-Brocot cap-kernel recursion
 consecutive plus doubled AP
 modulus-covariance apex break
 Toeplitz lambda-min margin
 certificate-Helly separation
+D7 Borsuk-Ulam sign-irrep certificate
 single-arc peeling recursion
 ordered-tail exchange-rate ratio
 D1/D2/D3 covariance layer split
+p mod 4 imaginary-quadratic wall
 totally-real cap field conductor packet
 Vitali bulk-core Phi14 witness wall
 cyclotomic factor grading
@@ -82,7 +88,7 @@ Brouwer trace-sign times SOS split
 
 ## Method
 
-The scout defines 97 motifs across 96 families, scans 8377 repo-local files,
+The scout defines 100 motifs across 99 families, scans 8384 repo-local files,
 and ranks each motif by a payload-retention score:
 
 ```text
@@ -100,10 +106,10 @@ the destroyed coordinate, the repair sidecar, and the risk label.
 ## Result Snapshot
 
 ```text
-repo_files_scanned=8377
-motifs=97
-families=96
-risk_hist={'analogy': 19, 'direct': 36, 'raw': 3, 'sidecar': 39}
+repo_files_scanned=8384
+motifs=100
+families=99
+risk_hist={'analogy': 19, 'direct': 38, 'raw': 3, 'sidecar': 40}
 directed_3cycles=0
 hamiltonian_path_count=1
 ```
@@ -111,23 +117,23 @@ hamiltonian_path_count=1
 Payload coverage in the atlas:
 
 ```text
-SIDE_CARRIER        67
-ANALYTIC_EQ         42
-QUOTIENT_LEGALITY   31
-CHEBYSHEV           20
+SIDE_CARRIER        70
+ANALYTIC_EQ         45
+QUOTIENT_LEGALITY   32
+CHEBYSHEV           22
 EDGE_PACKET         19
+GEOMETRY            18
 TOEPLITZ            16
-GEOMETRY            16
-AP_NORMAL           14
+AP_NORMAL           15
 TRAP_BOUNDARY       14
 PGF_ROOT            13
-COV_LAYER           10
+COV_LAYER           11
 HB_PERRON            9
 SELBERG              9
+P_ADIC               9
 CIRCUIT              9
-P_ADIC               8
 GREEN_LORENTZIAN     7
-ORDERED_TAIL         5
+ORDERED_TAIL         6
 ```
 
 The priority path begins:
@@ -138,6 +144,7 @@ M080 shell L_y magic quartic
 M067 normal-cone dual slack
 M068 multi-chart proof split
 M095 AP Green algebraic-connectivity certificate
+M100 bimodal phi4 diagonal extremizer
 M093 AP self-dual Fejer equidistribution certificate
 M085 three-gap Stern-Brocot cap-kernel recursion
 M001 consecutive plus doubled AP
@@ -145,7 +152,9 @@ M089 modulus-covariance apex break
 M074 single-arc peeling recursion
 M005 Toeplitz lambda-min margin
 M066 certificate-Helly separation
+M098 D7 Borsuk-Ulam sign-irrep certificate
 M003 HYP-3204 exchange-rate ratio
+M099 p mod 4 imaginary-quadratic wall
 M006 D1/D2/D3 layer split
 M094 totally-real cap field conductor packet
 M002 11 non-AP exchange traps plus AP
@@ -208,6 +217,9 @@ disc=49            Q(cos2pi/7) puts the binding cap rows on the 7^2 conductor.
 lambda2 AP          AP has lambda2=0.192033074001, Kirchhoff=108.654718079151, and maxR=9.713313375596 in the positive-part Green graph.
 Delta even/odd      Brouwer trace-sign isolates the odd obstruction while the even side remains SOS-certifiable.
 Phi14 core          AP closed witnesses at n=14 are the units mod 14, i.e. the primitive Phi14 core.
+14=|D7|             n=14 is the heptagon dihedral order; the sign irrep carries the odd topological sidecar.
+p mod 4             p=1 mod4 is pure SOS, while p=3 mod4 is sign times SOS.
+0/400 k2/k3/k4      random cumulant scout makes the two targets one bimodal phi4 diagonal.
 ```
 
 The number 12 remains useful, but as chart/fiber bookkeeping: local maxima,
@@ -245,6 +257,9 @@ HYP-3235 totally-real cap field / conductor packet
 HYP-3236 Green conductance / algebraic-connectivity certificate
 HYP-3219 Brouwer trace-sign / even-odd SOS split
 HYP-3237 Vitali bulk-core Phi14 witness wall
+HYP-3220 even-odd / positive-negative imaginary-quadratic wall
+HYP-3238 crossed even-positive / odd-negative packet
+HYP-3239 D7 Borsuk-Ulam sign-irrep refinement
 HYP-3215 induction-base and 23/27/14 modulus route
 ```
 
@@ -340,6 +355,15 @@ at the Vitali wall: measure arguments control the bulk, while the measure-zero
 core must be handled by the `Phi_14` witness packet and Brouwer
 equioscillation sidecar.
 
+Incoming HYP-3220/HYP-3238/HYP-3239 add M098-M100 and refine M096.  The
+topological odd side should now be read as a `D_7` sign-irrep /
+Borsuk-Ulam odd-degree certificate rather than only Brouwer fixed-point
+language.  The family law is `p mod 4`: `p=1 mod4` gives pure SOS, while
+`p=3 mod4` gives sign times SOS and the imaginary-quadratic
+class-number/Stark sidecar.  The S76 cumulant scout then makes the two
+remaining targets one diagonal: AP/consecutive is the bimodal phi4 extremizer
+for `kappa2`, `kappa3`, `q0+q6`, and `kappa4`.
+
 The raw-famous-problem magnet is explicitly the sink motif: it destroys all
 LRC payload unless it is retyped into one of those coordinates.
 
@@ -410,6 +434,9 @@ totally-real cap field conductor / trace status
 Green lambda2 / Kirchhoff / effective-resistance certificate status
 Brouwer trace-sign times SOS split status
 Vitali bulk-core Phi14 witness status
+D7 Borsuk-Ulam sign-irrep status
+p mod 4 imaginary-quadratic family-law status
+bimodal phi4 diagonal cumulant status
 induction-base dependency and Chen-Cusick floor-to-1/14 lift status
 ```
 
