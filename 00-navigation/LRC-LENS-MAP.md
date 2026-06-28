@@ -8,7 +8,7 @@ all seem to be pointing at.
 
 ## Addendum 2026-06-28: Scale-Normal Recursion Lens
 
-HYP-3230 adds a scale-normal reading of the whole map.  Under universal scale
+HYP-3231 adds a scale-normal reading of the whole map.  Under universal scale
 invariance, every useful LRC14 carrier should first pass to a primitive
 projective scale orbit, then record the first coordinate that dilation does not
 kill.  The recurring route pattern is:
@@ -24,9 +24,10 @@ normalize scale
 This lens preserves `M(S)>=1/14` modulo nonzero scale and destroys absolute
 speed size, reset-calendar complexity, finite product-bound size, endpoint
 event order, and order-3 overlap constants unless sidecars restore them.  It
-connects THM-407 shell strata, THM-532 relation height, THM-573 primitive
-covering residuals, HYP-2963 packet labels, HYP-3083 finite addresses, and
-HYP-3229 Fejer/Gram/Gamma0 certificate debt into one recursion ledger.
+connects HYP-3230's three-gap cap-kernel recursion, THM-407 shell strata,
+THM-532 relation height, THM-573 primitive covering residuals, HYP-2963
+packet labels, HYP-3083 finite addresses, and HYP-3229 Fejer/Gram/Gamma0
+certificate debt into one recursion ledger.
 
 Packet fields to add where available:
 

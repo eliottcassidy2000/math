@@ -3713,8 +3713,8 @@ OPEN-Q-108.
 
 ## T1330: Universal scale-invariance recursion ledger (codex-2026-06-28)
 
-HYP-3230 names the route pattern that has been implicit across THM-407,
-THM-532, THM-573, HYP-2963, HYP-3083, and HYP-3229.  Under universal scale
+HYP-3231 names the route pattern that has been implicit across HYP-3230,
+THM-407, THM-532, THM-573, HYP-2963, HYP-3083, and HYP-3229.  Under universal scale
 invariance, the proof object is a primitive projective packet plus the first
 coordinate not killed by dilation.  The repeated move is:
 
@@ -3739,5 +3739,5 @@ Next hook: add `primitive_scale_gcd`, `scale_orbit_representative`,
 prove every quotient either descends, is sidecar-restored, or emits named
 residual debt.
 
--> HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-2963, THM-573,
+-> HYP-3231, HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-2963, THM-573,
 THM-532, THM-407, LTI-330, LTT-230, OPEN-Q-108.

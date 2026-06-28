@@ -1,5 +1,5 @@
 ---
-id: HYP-3230
+id: HYP-3231
 title: Universal scale invariance turns the LRC14 route into a scale-normal recursion ledger
 status: SYNTHESIS / route-sharpening ledger; not an LRC14 proof
 source: codex-2026-06-28
@@ -8,6 +8,7 @@ technique: LTI-330
 tournament_technique: LTT-230
 reflection: 07-reflections/lrc14-universal-scale-invariance-recursion-ledger-codex-20260628.md
 related:
+  - HYP-3230
   - HYP-3229
   - HYP-3228
   - HYP-3227
@@ -25,7 +26,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3230: Universal Scale Invariance As The LRC14 Recursion Ledger
+# HYP-3231: Universal Scale Invariance As The LRC14 Recursion Ledger
 
 ## Claim
 
@@ -61,6 +62,12 @@ This is why nonprimitive ties such as doubled AP are not counter-signals.
 They are gauge copies.  The real signal is always the first coordinate that
 does *not* descend through scale: nonunit residue stratum, endpoint owner,
 relation height, branch route, order-3 overlap, or certificate image.
+
+Push-time integration: mac-mini S75b concurrently claimed HYP-3230 for the
+three-gap/Stern-Brocot recursion in the cap kernel.  This HYP-3231 ledger is
+the route-level companion: HYP-3230 makes the order-2 cap-kernel recursion
+explicit, while HYP-3231 asks every quotient in the larger LRC14 route to be
+scale-normal, sidecar-restored, or named as residual debt.
 
 ## How The Route Sharpened
 

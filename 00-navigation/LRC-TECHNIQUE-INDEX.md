@@ -4639,7 +4639,7 @@ Fejer/Gram/Toeplitz certificate vector
 order-3 overlap debt
 ```
 
-HYP-3230 treats universal scale invariance as the organizing spine of the
+HYP-3231 treats universal scale invariance as the organizing spine of the
 current LRC14 route.  The technique is not merely "divide by gcd."  It is a
 ledger discipline: after scale normalization, every quotient must expose the
 first coordinate that scale did not kill and either discharge it, restore it
@@ -4671,5 +4671,5 @@ each active quotient for scale-fiber exactness.  Then connect S75/HYP-3229
 order-3 triple-overlap debt and HYP-3215/Rosenfeld wide scale separation to
 the same scale-normal recursion.
 
-Pointers: HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-3162,
+Pointers: HYP-3231, HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-3162,
 HYP-2963, THM-573, THM-532, THM-407, LTT-230, T1330, OPEN-Q-108.

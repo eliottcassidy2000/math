@@ -6614,7 +6614,7 @@ quotient_legality_status
   `route_state_medianization`, `fejer_gram_magic_certificate`,
   `green_toeplitz_trap_discharge`, `gamma0_7_coefficient_engine`, and
   `raw_scalar_or_sequence_shadow`.
-- **LRC use:** HYP-3230 names the scale-normal recursion that has been
+- **LRC use:** HYP-3231 names the scale-normal recursion that has been
   sharpening the route over time.  A proof carrier wins an edge when it keeps
   the scale-invariant LRC predicate, exposes the first coordinate not killed
   by dilation, remains formally checkable, and names any residual debt.
@@ -6636,6 +6636,6 @@ quotient_legality_status
   define `omega_Q` for each quotient and prove it descends, is
   sidecar-restored, is dual-annihilated, stops at AP/GW boundary, or emits
   named F7/THM-572/order-3-overlap debt.
-- **Pointers:** HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205,
+- **Pointers:** HYP-3231, HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205,
   HYP-3162, HYP-2963, THM-573, THM-532, THM-407, LTI-330, T1330,
   OPEN-Q-108.

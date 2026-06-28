@@ -5369,7 +5369,7 @@ OPEN-Q-108.
 
 ## OPEN-Q-108 addendum (codex-2026-06-28): scale-normal recursion audit
 
-HYP-3230 identifies a recurring route pattern under universal scale
+HYP-3231 identifies a recurring route pattern under universal scale
 invariance:
 
 ```text
@@ -5400,5 +5400,5 @@ debt?  If yes, the bounded Fejer/Gram/Gamma0 certificate and the wide
 Rosenfeld/relation-height branch become two instances of the same
 scale-normal recursion instead of separate proof technologies.
 
--> HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-2963, THM-573,
+-> HYP-3231, HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-2963, THM-573,
 THM-532, THM-407, LTI-330, LTT-230, T1330, OPEN-Q-108.

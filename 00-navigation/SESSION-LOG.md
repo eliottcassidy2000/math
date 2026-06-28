@@ -39,17 +39,23 @@ SYNTHESIS: the Farey/three-gap thread (HYP-2913; S59 I'd demoted it to "the cens
 shadow -- it IS the arithmetic recursion of the covering-bound cap kernel. The two halves (additive/census +
 covering/cap) MERGE: one object, census at coarse scale, cap-kernel recursion at fine scale. The cap closure runs
 through the continued-fraction (three-gap) recursion, not a config-blind certificate. NOT a proof; LRC(14) open.
-## codex-2026-06-28 -- HYP-3230 universal scale-invariance recursion ledger
+## codex-2026-06-28 -- HYP-3231 universal scale-invariance recursion ledger
 
 User prompt: assume scale invariance holds universally, keep pushing LRC, and
 understand how the route has sharpened over time to expose recursive structure
 not yet precisely described.
 
-Added `05-knowledge/hypotheses/HYP-3230-lrc14-universal-scale-recursion-ledger.md`
+Added `05-knowledge/hypotheses/HYP-3231-lrc14-universal-scale-recursion-ledger.md`
 and reflection
 `07-reflections/lrc14-universal-scale-invariance-recursion-ledger-codex-20260628.md`.
 Navigation updated with T1330, LTI-330, LTT-230, an OPEN-Q-108 addendum, and a
 scale-normal addendum to `00-navigation/LRC-LENS-MAP.md`.
+
+Namespace integration: the close-out rebase revealed mac-mini S75b had claimed
+HYP-3230 for the three-gap/Stern-Brocot recursion in the cap kernel.  This
+scale-normal route ledger is therefore HYP-3231 and treats HYP-3230 as the
+order-2 cap-kernel recursion instance inside the broader route-level
+renormalization pattern.
 
 Core synthesis: under `M(cS)=M(S)` / Lean `lonely_scale`, the active LRC14
 route is projective.  It has sharpened from scalar route currencies to a
