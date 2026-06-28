@@ -1,0 +1,17 @@
+EVEN/ODD decomposition of the coverage distribution q_t under reflection t<->6-t
+(L_y is reflection-symmetric => sees only q^even; q^odd = the anchor/apex residue)
+  consec_8          : q=[0.3272, 0.2442, 0.1701, 0.1061, 0.081, 0.051, 0.0204]
+                      odd-part L1 norm = 0.58912  (0 = reflection-symmetric)  q0=0.3272 q6=0.0204
+  consec_9          : q=[0.4162, 0.2221, 0.1378, 0.0939, 0.0663, 0.0459, 0.0179]
+                      odd-part L1 norm = 0.64592  (0 = reflection-symmetric)  q0=0.4162 q6=0.0179
+  rand              : q=[0.0404, 0.2872, 0.4406, 0.154, 0.0483, 0.021, 0.0084]
+                      odd-part L1 norm = 0.69061  (0 = reflection-symmetric)  q0=0.0404 q6=0.0084
+  no-anchor consec  : q=[0.3449, 0.2112, 0.1643, 0.1112, 0.0765, 0.0561, 0.0357]
+                      odd-part L1 norm = 0.55204  (0 = reflection-symmetric)  q0=0.3449 q6=0.0357
+
+--- kps-S31ai: anchor=odd-residue REFUTED ---
+The coverage distribution is INTRINSICALLY skewed toward N=0 (q0>>q6): odd-part L1 norm ~0.59-0.69 for ALL
+configs (consec, random, AND no-anchor consec 0.55). Removing the anchor (speed 0) does NOT symmetrize it
+(still q0=0.345, odd 0.55). So the asymmetry is intrinsic (coverage >> anti-coverage), NOT an anchor effect.
+The clean even/odd parity decomposition does not isolate the apex residue. DROP the anchor hypothesis.
+The robust result remains: consec maximizes Sigma-kappa_2 (covariance) = ferromagnetic phi^4 ordered phase.
