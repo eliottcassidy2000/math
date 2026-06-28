@@ -9,6 +9,8 @@ tournament_technique: LTT-157
 script: 04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py
 result: 05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out
 related:
+  - HYP-3145
+  - HYP-3143
   - HYP-3136
   - HYP-3135
   - HYP-3134
@@ -99,6 +101,12 @@ The existing sources already point at this shape:
 - HYP-3129 supplies the compatible repair: the multi-far `Rprime` floor is an
   elementary fixed-lattice SPEC bound on the retained `R-safe -> Q-lonely`
   edge, with a certified floor `Rprime >= 0.64178` on the tested family.
+- HYP-3143 adds the exact-order packet-subbasis audit, and HYP-3145 adds the
+  filler-core warning from the n=4 tournament tables: a fixed-path edge/arc
+  atlas can have noncongruent fibers, while a partial-score filler scaffold
+  can leave a genuine two-arc core.  Edge witnesses should therefore record
+  whether they are an atlas coordinate, a congruent quotient, or a
+  nonminimal/deletable-fiber alarm.
 - HYP-3130 and HYP-3131 (the S69 Lee-Yang polydisk scout) say the far/apex tip side is
   not the binding obstruction: Gaussian/Beurling-Selberg minorants close the
   apex block with cap-matching constants, single/multi-far additions to a good

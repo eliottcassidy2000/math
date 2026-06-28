@@ -87,6 +87,22 @@ proof-facing. -> HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138,
 HYP-3134, HYP-3133, HYP-3106, HYP-3002, HYP-2998, LTI-269, LTT-167, T1208,
 OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3145 filler-core interface addendum:**
+HYP-3145 turns the user's two n=4 tournament tables into a proof-interface
+test.  Fixed Hamiltonian path gives a good tiling atlas but not a congruent
+class algebra: the `S` class has five representatives (`c,bc,ac,ab,abc`) and
+therefore multiplication from `S` is ambiguous.  A partial-score filler model
+fixes four arcs with profile `(0,1,1,2)` and leaves two core arcs `x,y`; the
+closed `E,x,y,xy` table realizes `T,+,-,S` exactly as a Klein square.
+
+Open task: add `filler_core_interface`, `finite_filler_scaffold`,
+`partial_score_or_residue_profile`, `core_variable_pair`,
+`quotient_congruence_status`, `nonminimal_fiber_alarm`, and
+`formal_interface_target` to one real HYP-3125/HYP-3129 multi-far covering row.
+The test row should use fixed sidecars to force the residue/apex scaffold, then
+leave a small signed SPEC/De Moivre core for HYP-3132/HYP-3136. -> HYP-3145,
+HYP-3136, HYP-3135, HYP-3134, HYP-3132, HYP-3129, HYP-3125, HYP-3124,
+HYP-3054, HYP-3053, HYP-3049, LTI-271, LTT-169, T1210, OPEN-Q-108.
 **OPEN-Q-108 HYP-3133 A000568 edge-sandwich addendum:**
 HYP-3133 adds the field `a000568_extension_shadow` between HYP-3124's
 `edge_tail_tip_sector_word` and the paired endpoint-deletion child deck.  The

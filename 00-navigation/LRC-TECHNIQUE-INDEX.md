@@ -411,6 +411,7 @@ record what it destroys before asking it to prove anything.
 | LTI-268 | k=8 exact moment-resolvent sidecar | Exact `U4` 4-binomial-moment cap certificate, De Moivre biquadratic fold, Bravais full-residue-flatness, Savitch repair depth, Lee-Yang root confinement, A000568 global-consistency guard | HYP-3142/S273 tests the now-single k=8 hard node and provides the `bounded_core_U4_exit` for the HYP-3141/HYP-3140/HYP-3139/HYP-3138/HYP-3137/HYP-3136/HYP-3135 packet theorem.  Exact bounded-bank scans through `B=14` find `U4_over_cap_count=0`; the worst row is `consec_8`, with `U4=2633/7350`, `cap_8-U4=683/29400`, nearest root `1.488584`, no real roots, Bravais peak `1/8`, entropy `1`, mirror defect `0`, and `kappa4=-0.787150`. | HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3129, HYP-3122, HYP-3119, HYP-3118, HYP-3113, HYP-3111, HYP-3110, THM-577, T1207, LTT-166, LTI-268, OPEN-Q-108 | Prove global moment-majorization `U4(E) <= U4(consec_8)` for primitive k=8 bounded-core shapes; route non-flat spectra to strict slack and exceptions to Hensel/CRT `2x7` or named finite resonance debt. |
 | LTI-269 | Tournament packet subbasis exact-order audit | Fixed filler plus free obstruction basis, with `packet_order`, lower-order exclusion, and collision sidecar/debt before quotienting class fibers | HYP-3143/S276 verifies the user's two n=4 tournament schemes.  The Hamiltonian-path tiling quotient is geometrically faithful but has class fiber `{T:1,+:1,-:1,S:5}`, so `S` leaks across flip orders `1,2,3`.  The partial-score `0,1,1,2` quotient has `12` witnesses, all with free edges a perfect matching; fixed filler `01,03,12,23` and free bits `x=02,y=13` give the exact basis `E->T,x->+,y->-,xy->S`.  Erdős-870 supplies the exact-order language: proof packets should be representable at the declared order and not below it. | HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3134, HYP-3133, HYP-3106, HYP-3002, HYP-2998, T1208, LTT-167, LTI-269, OPEN-Q-108 | Add `packet_order`, `first_packet_order`, `lower_order_leakage`, and `collision_sidecar_or_named_debt` to edge-witness, bounded-core, A000568, and unital/C27 ledgers; then search n=5/n=6 for minimal class bases with exact-order separation. |
 | LTI-270 | Worpitzky pair-function three-edge quotient | Score-class K3 edge-flip classes, three-coin quotient classes, symmetric pair functions `a+b`/`a*b`, ordered exponent sidecars `a^b`/`b^a`, Worpitzky ascent payload, fiber-PGF order-loss alarm | HYP-3144/S274 claims the smallest exact test for deciding when a generating-function or tournament quotient preserves a proof predicate, now feeding HYP-3143's exact-order subbasis audit.  The two-class K3 edge-flip kernel has expected matrix `[[2,1],[3,0]]`: transitive `T=(0,1,2)` has two self-class edge flips and one cyclic exit, while cyclic `C=(1,1,1)` has three exits to `T`.  This is the three-coin quotient after identifying `T` with the two-to-one mix and `C` with all-same.  Sum/product pair functions survive unordered-pair quotient; exponentials require ordered edge sidecars. | HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3137, HYP-3134, HYP-3124, THM-084, T1209, LTT-168, LTI-270, OPEN-Q-108 | Run the scout, then attach `pair_function_order_word`, `ordered_pair_exponent_sidecar`, `three_edge_flip_kernel`, `worpitzky_ascent_payload`, `edge_flip_role`, `fiber_pgf_order_loss_alarm`, and `tip_tail_commutator_shadow` to HYP-3140/HYP-3141/HYP-3139/HYP-3143 packet rows before scalarizing any PGF or score-class statistic. |
+| LTI-271 | Filler-core quotient interface | Finite filler scaffold, partial score/residue profile, small core variable pair, quotient-congruence status, nonminimal fiber alarm, deletion/forgetting exit, formal interface target | HYP-3145 imports the useful part of the Erdos-870 formalization as proof architecture: package a sparse or low-dimensional core, surround it with deterministic finite fillers, and prove the boundary before the terminal theorem.  The n=4 tournament check makes the guardrail explicit: the fixed-Hamiltonian-path `a,b,c` table is only a representative atlas because its `S` fiber has five states, while a four-fixed-arc partial-score scaffold leaves a congruent two-arc `x,y` Klein-square core. | HYP-3145, HYP-3143, HYP-3136, HYP-3135, HYP-3134, HYP-3132, HYP-3129, HYP-3125, HYP-3124, HYP-3118, HYP-3107, HYP-3054, HYP-3049, T1210, LTT-169, LTI-271, OPEN-Q-108, davidturturean/erdos-870 | Add `filler_core_interface`, `finite_filler_scaffold`, `partial_score_or_residue_profile`, `core_variable_pair`, `quotient_congruence_status`, `nonminimal_fiber_alarm`, `deletion_or_forgetting_exit`, and `formal_interface_target` before using factorized floors or small tournament tables as proof carriers. |
 
 ## Cross-Cutting Guardrails
 
@@ -3464,3 +3465,61 @@ Next hook: run the HYP-3144 scout, then add
 `three_edge_flip_kernel`, `worpitzky_ascent_payload`, `edge_flip_role`,
 `fiber_pgf_order_loss_alarm`, and `tip_tail_commutator_shadow` to the active
 HYP-3140/HYP-3141/HYP-3139/HYP-3143 ledgers.
+
+## LTI-271: Filler-Core Quotient Interface
+
+Used by codex-2026-06-27-Erdos870 for HYP-3145/T1210.  This technique
+imports the useful part of the Erdos-870 solution as a proof-interface
+discipline rather than as an additive-basis theorem:
+
+```text
+deterministic finite fillers
+-> small retained core
+-> boundary deletion/nonminimality check
+-> terminal theorem
+```
+
+The n=4 tournament tables make the same distinction in miniature.  In the
+fixed-Hamiltonian-path model, the three free off-path arcs `a,b,c` reproduce
+the prompted representative table, but the quotient to isomorphism classes is
+not a congruence: the `S` fiber is `c,ab,ac,bc,abc`, so multiplying from an
+`S` representative has mixed outcomes.  In the partial-score model, four fixed
+arcs force profile `(0,1,1,2)` and the two remaining arcs `x,y` form an exact
+Klein-square core over `T,+,-,S`.
+
+Preserves: the LRC predicate only through a named boundary object:
+`finite_filler_scaffold`, `partial_score_or_residue_profile`,
+`core_variable_pair`, `quotient_congruence_status`, and
+`formal_interface_target`.
+
+Destroys or audits: fixed-path atlas coordinates, raw class-table products,
+many-to-one fibers, and factorized floor estimates that have not named what
+the deterministic fillers preserve.
+
+LRC14 transfer: use this before accepting HYP-3136's
+`Rprime * meas(R-safe) * meas(Q-lonely)` factorization as a proof step.  The
+finite-filler side should retain normalized residue, global-consistency,
+endpoint-owner, and paired tail/tip child data.  The core side should retain
+the signed SPEC low modes, the HYP-3132 k=8 De Moivre/phi4 packet, and any
+two-variable resolvent table that is actually congruent under the next
+operation.
+
+Tournament Analysis over proof carriers has
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, no directed 3-cycles, and selected
+path:
+
+```text
+erdos870_filler_interface
+-> quotient_congruence_audit
+-> partial_score_two_arc_core
+-> edge_witness_SPEC_packet
+-> nonminimal_deletable_fiber_alarm
+-> fixed_path_tiling_cube
+-> raw_n4_class_table
+```
+
+Next hook: rewrite one HYP-3125/HYP-3129 multi-far row with
+`filler_core_interface`, `finite_filler_scaffold`,
+`partial_score_or_residue_profile`, `core_variable_pair`,
+`quotient_congruence_status`, `nonminimal_fiber_alarm`,
+`deletion_or_forgetting_exit`, and `formal_interface_target`.

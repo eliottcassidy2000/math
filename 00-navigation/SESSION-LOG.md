@@ -101,6 +101,34 @@ carrier now has a concrete k=8 even-fold/odd-leakage resurrection lookup.
 Working thesis: the single evaluation is never the whole GF curve; the proof
 packet wants support law + signed tail + global edge quotient +
 root-motion/core bridge.
+## codex-2026-06-27 -- Erdos-870 filler interfaces and n=4 tournament quotient models -- HYP-3145
+
+User asked to leverage the recently formalized Erdos-870 work and compare two
+n=4 tournament modeling schemes.  Added HYP-3145, T1210, LTI-271, LTT-169,
+reflection `erdos870-n4-filler-quotient-models-codex-20260627.md`, script
+`04-computation/lrc14_erdos870_n4_filler_models_codex_20260627.py`, and stored
+output.
+
+Readout: the fixed-Hamiltonian-path tiling table is a representative atlas but
+not a congruent class algebra.  With `a=(0,2)`, `b=(1,3)`, `c=(0,3)`, the full
+fixed-path fiber is `T:E`, `+:a`, `-:b`, `S:{c,bc,ac,ab,abc}`; hence
+multiplication from an `S` representative is ambiguous.  The partial-score
+model fixes four arcs with profile `(0,1,1,2)` and leaves two core arcs
+`x=(0,1)`, `y=(2,3)`; the closed `E,x,y,xy` table realizes `T,+,-,S` exactly
+as a Klein square.
+
+LRC14 transfer: use fixed-path tilings as atlases and ambiguity alarms, but
+build proof rows as filler-core interfaces, in the Erdos-870 style: fixed
+finite fillers force the residue/score scaffold, then a small signed core is
+fed to HYP-3129/HYP-3132/HYP-3136.  New packet fields:
+`finite_filler_scaffold`, `partial_score_or_residue_profile`,
+`core_variable_pair`, `quotient_congruence_status`,
+`nonminimal_fiber_alarm`, `deletion_or_forgetting_exit`, and
+`formal_interface_target`.  Tournament Analysis is transitive with selected
+path `erdos870_filler_interface -> quotient_congruence_audit ->
+partial_score_two_arc_core -> edge_witness_SPEC_packet ->
+nonminimal_deletable_fiber_alarm -> fixed_path_tiling_cube ->
+raw_n4_class_table`.
 
 ## kind-pasteur-2026-06-27-S254 -- CLOSING the multi-far floor: Gaussian decouples (load-bearing), EH not needed, Asano diagnostic; L=R'*R-safe*Q-lonely reduced to a finite constant-chase
 Owner: close uniform R'>=c at the multi-far floor; consider Elliott-Halberstam, Gaussian functions, Asano contractions. Did all three (4-agent workflow + my Gaussian work). HYP-3125/3126/3136. (Converges with mac-mini-S69 "far elements push the zeros out".)

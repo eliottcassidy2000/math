@@ -139,6 +139,12 @@ obligations, and proof-carrier interfaces.
   edge-flip roles, pair-function carriers, and ordered sidecars the vertices.
   The K3 kernel should explain which data is symmetric enough to quotient and
   which data behaves like `a^b` versus `b^a`.
+- Need to reconcile fixed-path tiling tables with filler/core proof
+  interfaces:
+  use LTT-169 after LTT-160/LTT-157 and make finite fillers, quotient audits,
+  small core variables, nonminimal fibers, and formal interface targets the
+  tournament vertices.  Treat fixed-path class products as atlases until a
+  congruence check says they can be used downstream.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5501,6 +5507,7 @@ constant chase.
   HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3113, HYP-3112, HYP-3111, HYP-3110, HYP-3109, HYP-3103, HYP-3062,
   HYP-3056, HYP-3054, HYP-3053, HYP-3049, HYP-3045, HYP-2008, THM-571,
   HYP-2968, LTI-267, LTT-165, T1206, OPEN-Q-108.
+
 ## LTT-166: Tournament Of k=8 Resolvent Sidecars
 
 - **Move:** Put the proof sidecars for the single k=8 hard node in a
@@ -5532,6 +5539,7 @@ constant chase.
 - **Pointers:** HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3129,
   HYP-3122, HYP-3119, HYP-3118, HYP-3113, HYP-3111, HYP-3110, THM-577,
   LTI-268, LTT-166, T1207, OPEN-Q-108.
+
 ## LTT-167: Tournament Packet Subbasis Exact-Order Audit
 
 - **Move:** Treat a tournament quotient as a representation system, not just
@@ -5565,6 +5573,7 @@ constant chase.
 - **Pointers:** HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138,
   HYP-3134, HYP-3133, HYP-3106, HYP-3002, HYP-2998, LTI-269, LTT-167,
   T1208, OPEN-Q-108.
+
 ## LTT-168: Tournament Of Worpitzky Pair-Function Three-Edge Quotients
 
 - **Move:** Use the two score classes of labelled three-vertex tournaments as
@@ -5591,3 +5600,37 @@ constant chase.
 - **Pointers:** HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139,
   HYP-3137, HYP-3134, HYP-3124, THM-084, LTI-270, LTT-168, T1209,
   OPEN-Q-108.
+
+## LTT-169: Tournament Of Filler-Core Interface Carriers
+
+- **Move:** Treat small tournament tables as quotient-interface tests.  The
+  fixed-path `a,b,c` table is a representative atlas; the partial-score
+  `x,y` table is a congruent two-variable core after finite fillers have fixed
+  the profile `(0,1,1,2)`.
+- **LRC use:** HYP-3145 imports the Erdos-870 proof shape into LRC14: build
+  deterministic filler scaffolds first, leave a small core where signs or
+  representations actually vary, and expose deletion/nonminimality at that
+  boundary.  This is the guardrail before using HYP-3136-style factorized
+  floors as proof carriers.
+- **Preserves:** finite filler scaffold, partial score or residue profile,
+  core variable pair, quotient-congruence status, nonminimal-fiber alarm,
+  endpoint/tail-tip child sidecars, signed SPEC low modes, and formal
+  interface target.
+- **Forgets / guardrail:** fixed Hamiltonian path coordinates, raw
+  isomorphism-class products, scalar table numerology, and any many-to-one
+  fiber whose downstream multiplication or deletion behavior has not been
+  audited.  In HYP-3145 the `S` fiber `c,ab,ac,bc,abc` is exactly this alarm.
+- **Fingerprint:** The HYP-3145 scout uses seven proof carriers, reports
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, no directed 3-cycles, and
+  selected path `erdos870_filler_interface -> quotient_congruence_audit ->
+  partial_score_two_arc_core -> edge_witness_SPEC_packet ->
+  nonminimal_deletable_fiber_alarm -> fixed_path_tiling_cube ->
+  raw_n4_class_table`.
+- **Next hook:** Add `filler_core_interface`, `finite_filler_scaffold`,
+  `partial_score_or_residue_profile`, `core_variable_pair`,
+  `quotient_congruence_status`, `nonminimal_fiber_alarm`,
+  `deletion_or_forgetting_exit`, and `formal_interface_target` to one live
+  HYP-3125/HYP-3129 multi-far row.
+- **Pointers:** HYP-3145, HYP-3143, HYP-3136, HYP-3135, HYP-3134, HYP-3132, HYP-3129,
+  HYP-3125, HYP-3124, HYP-3118, HYP-3107, HYP-3054, HYP-3049, LTI-271,
+  LTT-169, T1210, OPEN-Q-108, davidturturean/erdos-870.

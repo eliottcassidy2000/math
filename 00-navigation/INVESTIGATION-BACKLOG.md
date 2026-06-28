@@ -176,6 +176,31 @@ strict slack; any exception should descend through a Hensel/CRT `2x7` sidecar
 or become named finite resonance debt.
 
 Namespace: HYP-3142 / LTI-268 / LTT-166 / T1207 / OPEN-Q-108.
+## Lead codex-2026-06-27-Erdos870: n=4 filler-core quotient interface
+
+**Status:** EVIDENCE / executable finite interface scout; not proof
+(HYP-3145/T1210).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3145-erdos870-n4-filler-quotient-models.md`,
+`04-computation/lrc14_erdos870_n4_filler_models_codex_20260627.py`,
+`05-knowledge/results/lrc14_erdos870_n4_filler_models_codex_20260627.out`,
+and `07-reflections/erdos870-n4-filler-quotient-models-codex-20260627.md`.
+
+Readout: Erdos-870 contributes an interface pattern rather than a direct LRC
+theorem: small core plus deterministic finite fillers, with deletion and
+nonminimality checked at the boundary.  The n=4 fixed-path tiling table is a
+representative atlas but the `S` fiber has five representatives, so the class
+quotient is not congruent.  The partial-score model fixes four arcs with
+profile `(0,1,1,2)` and leaves two core arcs `x=(0,1)`, `y=(2,3)`; the closed
+four-state table is congruent and realizes `T,+,-,S`.
+
+Next: instantiate `filler_core_interface` on one HYP-3125/HYP-3129 covering
+row before using HYP-3136.  The row should identify deterministic fillers,
+the small signed core, quotient-congruence status, nonminimal fiber alarms,
+and the formal interface target.
+
+Namespace: HYP-3145 / LTI-271 / LTT-169 / T1210 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-A000568: LRC14 A000568 edge-witness sandwich
 

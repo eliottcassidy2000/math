@@ -4,6 +4,8 @@ title: LRC14 integrated multi-far floor closure
 status: SYNTHESIS / reduction to finite constant chase; renumbered from an index-only HYP-3132 row after S70 claimed file-backed HYP-3132 and S272 claimed HYP-3134
 source: codex-2026-06-27 rebase integration
 related:
+  - HYP-3145
+  - HYP-3143
   - HYP-3135
   - HYP-3134
   - HYP-3133
@@ -54,6 +56,10 @@ HYP-3134 sharpens that shadow into a global-consistency quotient: the proof
 may forget paired children only after the quotient is named and predicate-
 safe.  HYP-3135 is the algebraic packet version of the same rule, keeping the
 middle De Moivre/SPEC payload instead of collapsing it to a raw scalar.
+HYP-3143 adds the exact-order packet-subbasis audit, and HYP-3145 adds the
+filler-core interface guardrail: this factorization is a proof carrier only
+after the deterministic filler scaffold, retained small core variables,
+quotient-congruence check, and nonminimal-fiber exit are named.
 
 Edge-witness reading: the tip child carries Q/apex minorant, zero-free, and
 far-push certificates; the tail child carries the bounded core, SPEC lattice,
