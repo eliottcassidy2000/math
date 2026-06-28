@@ -41,6 +41,55 @@ q-witness, state-lift/H7, exact-period exception, or named finite residual.
 Tournament Analysis uses proof obligations as vertices (`11` vertices, no
 directed 3-cycles, one Hamiltonian path led by
 `owner_cut_dual_certificate -> mixed_fiber_resurrection_api -> bounded_owner_cut_theorem`).
+## mac-mini-2026-06-28-S85 -- the C_6 = BORSUK-ULAM x INDEX: codex's transverse C_2=Q(sqrt-7) IS my S79 antipodal; topology is q-UNIFORM so it closes only the residue half (kps S257 q-specific magnitude break)
+
+Owner: continue S84, lose no work, extend + connect with incoming concurrent ideas. HYP-3312 + reflection
+the-c6-is-borsuk-ulam-times-index + script lrc_c6_is_bu_times_index_macmini_S85.py.
+
+NO WORK LOST: recovered cleanly after a finish_session rebase tangle (my commit was dangling at b9c4628e7; the
+earlier `git add -A` had swept in codex's WIP + codex's committed conflict markers). Reset to origin, restored my
+artifacts from scratchpad, rebuilt a clean commit with ONLY my S85 work. Preserved codex's HYP-3310/3311 C_6
+guardrail extension of my S84 reflection.
+
+EXTEND: codex named the field Q(zeta_7), Gal=C_6=C_2 x C_3, C_2=chi_7 TRANSVERSE to my C_3 skeleton (each pair
+{a,-a} has one QR+one NQR mod7) but left C_2 unnamed. NAMED: C_2 = the BORSUK-ULAM antipodal of my S79
+index-theorem (chi_7(-1)=-1, 7=3 mod4 => free Z_2 => BU+odd degree); = kps's complex conjugation a->-a. So
+C_6 = C_2(BU, Q(sqrt-7)) x C_3(index 3, Q(cos2pi/7)); index-theorem = the C_6 residue structure. Magnitude layer
+= doubling-shadow 2U=2*U; nonzero(14)=U U 2U U {7}; residues forced, only height free = the hinge.
+
+CONNECT (kps S257, same-day deep convergence): 13 runners = two C_6-orbits {units}+{evens} + fixed {7}; the two
+subfields carry the two halves (Q(cos2pi/7)=cap/equioscillation; Q(sqrt-7)=floor/Gauss sum); residue half
+C_6-symmetric (CLOSED via THM-568), magnitude half C_6-broken (hard core), and the break is q-SPECIFIC (doubling
+for q=4,7 but NOT q=5,6). SYNTHESIS (my key new point): the BU/topological-degree argument is q-UNIFORM, so it
+CANNOT detect the q-specific magnitude break -> topology/Galois/charge close ONLY the residue half and are
+structurally blind to the magnitude hard core. This is the exact mechanism of 'the frame describes, the floor
+proves' (kps S256): conserved topological charges = q-uniform residue seed; un-conserved magnitude = q-specific
+hard core. CHARGE (codex HYP-3400): C_2 charge = BU degree (odd) = conserved.
+
+NUMBERING: HYP-3312 = mine (this). NOTE for codex: HYP-3257 in the INDEX = my S83 hidden-C_3; codex's
+unit-nullspace file is also 3257 but not in the INDEX (orphan) -- please recatalog.
+
+NOT a proof; LRC(14) open. Residue half = 2 conserved charges (C_3 index + C_2 BU) = seed (rigorous via THM-568 +
+C_3); magnitude half = q-specific symmetry break = the hard core (no q-uniform argument can reach it).
+
+## codex-2026-06-28 -- HYP-3416 recursive quotient ladder
+
+Owner asked to notice more abstract recursive patterns in the LRC14 proof work.
+Added HYP-3416/T1375/LTI-375/LTT-275 plus script/result/reflection:
+
+```text
+04-computation/lrc14_recursive_quotient_ladder_codex_20260628.py
+05-knowledge/results/lrc14_recursive_quotient_ladder_codex_20260628.out
+05-knowledge/hypotheses/HYP-3416-lrc14-recursive-quotient-ladder.md
+07-reflections/lrc14-recursive-quotient-ladder-codex-20260628.md
+```
+
+Readout: the current proof stack repeats a quotient ladder: declare the
+preserved LRC predicate, audit theorem-exit purity, turn the first mixed fiber
+into a sidecar/cut/child/local disk/debt, and recurse only after the forgotten
+coordinate is restored or named.  Next pull: attach HYP-3124 child decks to
+HYP-3406 owner-support fibers and compute owner-support Menger cut shores
+before analytic averaging.
 
 ## codex-2026-06-28 -- HYP-3409 recursive sidecar pattern atlas for LRC14
 

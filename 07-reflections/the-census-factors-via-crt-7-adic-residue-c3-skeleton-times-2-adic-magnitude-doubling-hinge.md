@@ -105,5 +105,5 @@ named charge debt before it can be used as proof currency.
   object (the cover's deformation flex).
 
 Related: HYP-3311 (this), HYP-3400 (shadow-charge conservation), HYP-3310 (C6 residue-magnitude frame), HYP-3301 (sheaf exactness / cusp transfer), HYP-3265 (contact-graph case split), HYP-3257 (codex, unit nullspace), HYP-3258 (kps,
-census split), HYP-3259 (my S83 C₃, renamed from 3257 — ceded to codex), HYP-3300 (observability/Morse chamber
+census split), HYP-3312 (mac-mini S85: C₂ = the Borsuk-Ulam antipodal, C₆ = BU × index; topology q-uniform → closes only the residue half), HYP-3257 (mac-mini S83 hidden-C₃, in INDEX), HYP-3300 (observability/Morse chamber
 route), HYP-2909 (proved binding pair), HYP-3087 (kps CRT bridge), LTI-361, LTT-261, OPEN-Q-108.

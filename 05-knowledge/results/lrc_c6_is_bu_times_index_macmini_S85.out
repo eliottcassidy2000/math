@@ -1,0 +1,16 @@
+C_6 = C_2 x C_3 = Gal(Q(zeta_7)/Q):
+  C_3 = QRs mod7 = [1, 2, 4] (the squares, fixed field Q(sqrt-7));  C_2 = {1,6}={+-1} (chi7, fixed field Q(cos2pi/7))
+  chi7(-1)=chi7(6)=-1  (NQR because 7=3 mod4) => C_2 IS the antipodal sign = the BORSUK-ULAM Z_2 (S79)
+
+the 3 binding pairs {a,-a}: C_3 says WHICH pair (index degree, S83); C_2=chi7 says WHICH element (BU antipodal):
+  { 1,13} mod7=(1,6)  chi7=( 1,-1)  one QR + one NQR (C_2 transverse to C_3)
+  { 3,11} mod7=(3,4)  chi7=(-1, 1)  one QR + one NQR (C_2 transverse to C_3)
+  { 5, 9} mod7=(5,2)  chi7=(-1, 1)  one QR + one NQR (C_2 transverse to C_3)
+
+2-adic magnitude = the DOUBLING-SHADOW of the skeleton:
+  U (skeleton) = [1, 3, 5, 9, 11, 13];  2U mod14 = [2, 4, 6, 8, 10, 12] = the even covering layer;  {7} = ramified leftover
+  nonzero(14) = U ⊔ 2U ⊔ {7}  partition check: True
+
+SYNTHESIS: C_6 (residue) = C_2[BU antipodal, S79, Q(sqrt-7)] x C_3[index degree, S83, Q(cos2pi/7)].
+  The index-theorem (S79) captures all of C_6 but FORGETS the 2-adic height (codex's blind data) = the hard residual.
+  Charge view (codex HYP-3400): the C_2 charge = the Borsuk-Ulam degree (odd) = a conserved topological invariant.
