@@ -35,6 +35,11 @@ related:
 external_sources:
   - https://github.com/davidturturean/erdos-870
   - https://www.erdosproblems.com/870
+mainline_integrations:
+  - 04-computation/lrc_arc_cube_compression_parity_macmini_S71.py
+  - 05-knowledge/results/lrc_arc_cube_compression_parity_macmini_S71.out
+  - 04-computation/lrc_coverage_lee_yang_lambda_kps.py
+  - 05-knowledge/results/lrc_coverage_lee_yang_lambda_kps.out
 ---
 
 # HYP-3150: Function-Compression Below the Resolvent-Degree Wall
@@ -244,6 +249,67 @@ The nontrivial SCC is the useful surprise.  The small tournament kernels,
 PGF curves, canary/deletion fields, and k=8 even fold are not a linear ladder.
 They are a coupled packet: choosing one sidecar changes which compression is
 legal next.
+
+## Mainline Integration
+
+While this note was being completed, incoming mainline work added two directly
+relevant scouts.
+
+The S71 arc-cube compression scout reports:
+
+```text
+score sequence -> tournament isomorphism class:
+n=3: #iso=2,  #score=2, BIJECTIVE=True
+n=4: #iso=4,  #score=4, BIJECTIVE=True
+n=5: #iso=12, #score=9, BIJECTIVE=False
+```
+
+This is exactly the same factor-through lesson in a larger tournament cube:
+the commutative score/`a+b` face determines the quotient through n=4 and fails
+at n=5, where order-sensitive data is needed.
+
+S71 also aligns that failure with the LRC cap dip:
+
+```text
+k=8:  |P|=5, dip=1081/76440, large binding row
+k=9:  |P|=4, dip=1/4004, tiny edge row
+k>=10 |P|<=3, dip=0
+```
+
+So the k=8 obstruction appears exactly at the `n=5` compression boundary.
+Even more sharply, S71 splits the k=8 correction
+
+```text
+L_yK8 = 10S0 - 10S1 + 10S2 - 9S3 + 6S4
+```
+
+into:
+
+```text
+ODD  -9S3 = -12.135  orientation / Worpitzky / ordered side
+EVEN +6S4 =  +3.853  symmetric / biquadratic / sum-product side
+|odd|/|even| = 3.15
+```
+
+This upgrades HYP-3150's heuristic: the k=8 dip is not only
+`even biquadratic plus sidecar debt`; the odd/Worpitzky face dominates the
+local correction magnitude.
+
+The kps Lee-Yang lambda scout adds the root-curve version of the same lesson.
+For k=8,9,10 it measures off-circle variance
+`lambda = Var(|roots|/R)` of the coverage PGF.  Consecutive/AP rows are the
+most circular rows for k=8 and k=9 in the tested bank, and lambda correlates
+with the coverage gap:
+
+```text
+k=8:  corr(lambda, cap-q0)=+0.695
+k=9:  corr(lambda, cap-q0)=+0.752
+k=10: corr(lambda, cap-q0)=+0.851
+```
+
+This reinforces the HYP-3140/HYP-3109 rule: the whole PGF/root curve is proof
+payload.  A scalar value can be right for the wrong reason if it has forgotten
+root circularity or off-circle variance.
 
 ## LRC14 Transfer
 

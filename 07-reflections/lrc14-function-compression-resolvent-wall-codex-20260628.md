@@ -91,6 +91,43 @@ orientation, and deletion status are different functions.
    compression either has degree <=4 or has an even/filler/fiber sidecar that
    drops the effective degree.
 
+## Mainline Cross-Signal
+
+Incoming S71 sharpened the boundary after this scout was reserved:
+
+```text
+score sequence determines tournament iso class for n=3,4
+score sequence fails to determine iso class at n=5 (#iso=12, #score=9)
+```
+
+That is the same as saying the commutative face works through the K4 table and
+breaks precisely when order-sensitive data becomes unavoidable.  S71 then
+matches the break to the LRC cap dip:
+
+```text
+|P|<=3: dip=0
+|P|=4: tiny dip
+|P|=5: large k=8 binding dip
+```
+
+The parity split is even more suggestive:
+
+```text
+even +6S4 = symmetric / biquadratic / sum-product
+odd  -9S3 = antisymmetric / Worpitzky / ordered orientation
+|odd|/|even| = 3.15
+```
+
+So the proof route should not over-credit the even biquadratic side.  The odd
+Worpitzky/orientation side is the larger local correction and probably the
+place where the missing endpoint/order sidecar has to be paid.
+
+Incoming kps-S31ah adds the root-curve version: the AP/consecutive rows are
+most circular for k=8,9 in the tested bank, and off-circle variance lambda
+correlates positively with the coverage gap.  That makes "whole PGF curve"
+literal: root circularity is not a decorative signal, it is one of the
+coordinates that prevents illegal scalar compression.
+
 ## Working Rule
 
 Before a quotient enters the LRC14 proof packet, add:

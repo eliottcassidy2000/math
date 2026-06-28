@@ -56,6 +56,17 @@ stability.  The k=8 quartic shifts to `u^4-5u^2+4` and descends to
 has a largest SCC coupling k8 even fold, K4 OR compression, K3 kernel, fiber
 PGF curve, and canary/deletion sidecar.
 
+Mainline integration: after the checkpoint, S71 landed with the exact adjacent
+signal that score-sequence compression determines tournament iso class at
+n=3,4 but fails at n=5 (`#iso=12`, `#score=9`), matching the |P|=5/k=8
+binding dip.  Its k=8 parity split reads even `+6S4` as symmetric/
+biquadratic and odd `-9S3` as Worpitzky/orientation, with the odd term about
+3.15 times the even term.  kps-S31ah also landed a Lee-Yang lambda scan:
+off-circle root variance is minimized by consecutive/AP rows at k=8,9 in the
+tested bank and correlates with cap gap.  HYP-3150 now records both as
+evidence that the whole PGF/root curve and odd orientation sidecar are
+load-bearing.
+
 ## codex-2026-06-27-S274 -- Worpitzky pair-function three-edge quotient -- HYP-3144
 
 Reserved HYP-3144/T1209/LTI-270/LTT-168 for the user's prompt connecting
