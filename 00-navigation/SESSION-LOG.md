@@ -1,3 +1,42 @@
+## codex-2026-06-28 -- HYP-3409 recursive sidecar pattern atlas for LRC14
+
+Owner asked to notice more abstract recursive patterns in the LRC14 proof work.
+Added HYP-3409/T1370/LTI-370/LTT-270 plus script/result/reflection:
+
+```text
+04-computation/lrc14_recursive_sidecar_pattern_atlas_codex_20260628.py
+05-knowledge/results/lrc14_recursive_sidecar_pattern_atlas_codex_20260628.out
+05-knowledge/hypotheses/HYP-3409-lrc14-recursive-sidecar-pattern-atlas.md
+07-reflections/lrc14-recursive-sidecar-pattern-atlas-codex-20260628.md
+```
+
+Readout: the current HYP-3405/HYP-3406/HYP-3407/HYP-3408 route has a common
+recursive form:
+
+```text
+legal quotient -> mixed theorem-exit fiber -> first missing sidecar
+-> repaired quotient -> next quotient
+```
+
+The proof object should be treated as a stack of legal forgetful maps.  A
+quotient is legal only when theorem exits are pure on its fibers; otherwise the
+first destroyed coordinate becomes a sidecar, a terminal theorem exit, or named
+finite debt.
+
+Top ranked operators: mixed-fiber resurrection loop, owner-cut recursion,
+collar-to-bank lift, height-then-owner escalation, finite chamber terminal
+router, chiral child-deck recursion, local stability gate, quartic factor split,
+mean-square exception ledger, and no-scalar-shadow firewall.  Tournament
+Analysis uses recursion operators/proof obligations as vertices (`10`
+vertices, no directed 3-cycles, one Hamiltonian path
+`R00 -> R01 -> R02 -> R03 -> R04 -> R05 -> R06 -> R07 -> R08 -> R09`).
+
+Next proof pull: implement a shared quotient/fiber/repaired-quotient API for
+HYP-3405 AP-vs-`13->27` and HYP-3406 owner leaks; build the endpoint-owner
+Menger graph for `petal 13->26` and `petal 10->20`; extend HYP-3406 past
+`(72,20)` until `residue+owner_support` first fails or supports a finite
+owner-cut theorem.  Add terminal-exit labels before adding analytic averaging.
+
 ## codex-2026-06-28 -- boundary-uniformization cut stability -- HYP-3407
 
 Reserved HYP-3407/T1368/LTI-368/LTT-268 for a long creative synthesis pass

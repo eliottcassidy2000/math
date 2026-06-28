@@ -464,6 +464,7 @@ record what it destroys before asking it to prove anything.
 | LTI-367 | Expanded-bank residue / owner-support repair | Enlarged HYP-2963 banks, HYP-3311 coarse sheaf base, HYP-3310 residue / `v2` / exact-height sidecars, unit-slot / quadratic slot words, HYP-2975 endpoint-owner support word | HYP-3406 executes HYP-3404's residue-word breakpoint lead by extending HYP-3311/HYP-3402 from the curated bank to larger HYP-2963 banks, as the expanded-bank companion to HYP-3405's AP-collar finite lemma.  The nonunit residue word stops being exact immediately.  One leak is height-driven and repaired by `v2` / exact nonunit height, but the stronger persistent leaks are endpoint-owner-driven and survive residue+`v2` and residue+height.  `residue + owner_support` kills all mixed theorem-exit fibers on scanned banks through `(single_limit,two_swap_limit)=(72,20)`. | HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253, HYP-2975, HYP-2969, HYP-2963, THM-523, T1367, LTT-267, LTI-367, OPEN-Q-108 | Enlarge farther and locate the first failure of `residue + owner_support`; that next leak decides whether the real post-HYP-3406 sidecar is tropical/off-grid, unit-contact holonomy, or a new named debt. |
 | LTI-368 | Boundary-uniformization cut signature recursion | Proof-carrier router over recursive `charal_signature` sidecars, Schwarz-Christoffel boundary polygons/cut angles, endpoint-owner Menger cuts, Krasner collar disks, BDH/Mertens exceptional ledgers, recursive chiral child decks, Bring branch sheets/alarms, Soldner zero normalizers, Sophie-Germain quartic splits, and HLW separation guardrails | HYP-3407 executes the reserved post-HYP-3406 special-function scout by wrapping HYP-3405's AP-collar unit-height leak and HYP-3406's enlarged-bank endpoint-owner leak into one labelled packet theorem target.  After q-witness and AP/GW exits, an expanded-bank packet is either theorem-exit exact under `residue+owner_support` or emits a named first failure: unit-height disk exit, endpoint-owner Menger cut, SC accessory debt, exact-period/BDH exceptional fiber, recursive chiral mirror debt, state-lift/H7 label, or finite residual.  A signature level is legal only when theorem exits are pure on its fibers; scalar motif scores must keep full PGF/root-curve or branch payload whenever compression leaks. | HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253, HYP-3151, HYP-3150, HYP-3147, HYP-3143, HYP-3124, HYP-3123, HYP-2982, HYP-2963, THM-523, T1368, LTT-268, LTI-368, OPEN-Q-108 | Build the owner-support Menger graph for HYP-3406's petal/single-swap leaks, pair it with the HYP-3405 AP-vs-13->27 local disk/height-exit table, compute mixed-fiber counts along recursive signature levels, then add recursive chiral child decks before attempting a BDH/Mertens mean-square proof over enlarged banks. |
 | LTI-369 | Exotic guardrail sidecar router | Owner-residue-height first-failure theorem, Krasner owner-lift stability gate, Sophie-Germain quartic factor split, Meissel-Mertens denominator entropy normalizer, HLW no-scalar-shadow guardrail, Ramanujan-Soldner zero-renormalization anchor, p-adic HLW firewall | HYP-3408 is the exact guardrail companion to HYP-3407.  It verifies that same-residue lifts `12->26`, `2->16`, and `13->27` are strict-open while tight `12->24` changes residue, so p-adic/Krasner language must stabilize contact-root and endpoint-owner packets rather than raw congruence.  It ranks the owner-residue-height theorem first, then Krasner owner-lift stability, then Sophie-Germain quartic splitting. | HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-2982, HYP-2214, T1369, LTT-269, LTI-369, OPEN-Q-108 | Extend HYP-3406 beyond `(72,20)` until `residue+owner_support` first fails; then record contact-root stability and try the Sophie-Germain quartic split on lost height/flex coordinates before admitting any analytic scalar route. |
+| LTI-370 | Recursive sidecar pattern atlas | Legal forgetful maps, mixed theorem-exit fibers, first destroyed sidecar, repaired quotient stack, owner-cut/Menger recursion, collar-to-bank lift, finite chamber terminal router, chiral child decks, Krasner/contact-root gates, Sophie-Germain factor channels, no-scalar-shadow firewall | HYP-3409 abstracts the current HYP-3405/HYP-3406/HYP-3407/HYP-3408 route as `legal quotient -> mixed theorem-exit fiber -> first missing sidecar -> repaired quotient -> next quotient`.  The technique treats LRC14 recursion as recursion over theorem-facing quotient maps rather than over runners, arcs, residues, or constants.  Top operators are mixed-fiber resurrection, owner-cut recursion, collar-to-bank lift, height-then-owner escalation, and finite chamber terminal routing. | HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3124, HYP-3123, HYP-3118, HYP-2982, HYP-2963, THM-523, T1370, LTT-270, LTI-370, OPEN-Q-108 | Implement a shared quotient/fiber/repaired-quotient API for HYP-3405 AP-vs-`13->27` and HYP-3406 owner leaks; extend past `(72,20)` until `residue+owner_support` first fails; build owner-support Menger graphs for `petal 13->26` and `petal 10->20`; add terminal-exit labels before analytic averaging. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -6411,3 +6412,81 @@ HYP-3257, HYP-2982, HYP-2214, LTT-269, T1369, OPEN-Q-108.
 
 Next agent hook: extend HYP-3406 beyond `(72,20)`, then test the first surviving
 owner-support failure for contact/root stability and quartic factor channels.
+
+## LTI-370: Recursive Sidecar Pattern Atlas
+
+Created by codex-2026-06-28 for HYP-3409/T1370.  This technique extracts the
+recursive proof pattern shared by HYP-3405, HYP-3406, HYP-3407, and HYP-3408:
+
+```text
+legal quotient -> mixed theorem-exit fiber -> first missing sidecar
+-> repaired quotient -> next quotient
+```
+
+Carrier / vertex set:
+
+```text
+recursion operators and proof obligations generated by mixed fibers
+```
+
+The technique explicitly rejects runners, raw arcs, residues, named constants,
+and scalar analogies as the primary vertex set for this pass.  Those can become
+data inside a sidecar, but the recursive proof object is the legal forgetful
+map and its repair obligation.
+
+Preserved LRC predicate: theorem-exit purity, including boundary-tight,
+strict-open, positive-Haar-open, unit-petal-named, q-witness, state-lift/H7,
+AP/GW equality, or named finite debt.
+
+Destroyed information by the quotient: row order, raw runner identity, scalar
+motif values, unlabelled analytic shadows, and any sidecar not needed by the
+current theorem predicate.
+
+Top recursive operators:
+
+```text
+R00 mixed-fiber resurrection loop
+R01 owner-cut recursion
+R02 collar-to-bank lift
+R03 height-then-owner escalation
+R04 finite chamber terminal router
+R05 chiral child-deck recursion
+R06 local stability gate
+R07 quartic factor split
+R08 mean-square exception ledger
+R09 no-scalar-shadow firewall
+```
+
+Best use: turn HYP-3405 AP-vs-`13->27` and HYP-3406 owner leaks into one
+quotient/fiber/repaired-quotient API.  A compression is legal only when the
+theorem exit is pure on its fibers.  A mixed fiber emits the first destroyed
+sidecar, such as unit-height flex, endpoint owner support, exact period,
+contact-root stability, chiral child side, or named residual.
+
+Finite lemma pull: prove a sidecar priority chain instead of a flat packet
+catalogue.  Current data suggests:
+
+```text
+residue failure -> height/v2 repair -> height-persistent owner leak
+-> owner-support repair -> owner-cut/chiral/terminal branch
+```
+
+Failure mode: adding another analytic/scalar route before every finite branch
+has a terminal label.  The terminal router must send branches to AP/GW,
+strict-open mass, q-witness, H7/state lift, off-grid floor,
+exact-period/BDH exception, or a newly named finite residual.
+
+Tournament fingerprint: `10` recursion vertices, score histogram
+`{37:1, 42:1, 59:1, 66:1, 67:1, 74:1, 76:1, 81:1, 84:1, 88:1}`, no directed
+`3`-cycles, singleton SCCs, Hamiltonian path count `1`, and priority path
+`R00 -> R01 -> R02 -> R03 -> R04 -> R05 -> R06 -> R07 -> R08 -> R09`.
+
+Anchors: HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404,
+HYP-3403, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3265,
+HYP-3124, HYP-3123, HYP-3118, HYP-2982, HYP-2963, THM-523, LTT-270, T1370,
+OPEN-Q-108.
+
+Next agent hook: implement the shared mixed-fiber API, build the owner-support
+Menger graph for `petal 13->26` and `petal 10->20`, then extend the HYP-3406
+scan past `(72,20)` until `residue+owner_support` first fails or supports a
+finite owner-cut theorem.

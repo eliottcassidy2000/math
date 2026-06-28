@@ -1,5 +1,33 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3409 recursive sidecar pattern atlas addendum:**
+HYP-3409 abstracts the active HYP-3405/HYP-3406/HYP-3407/HYP-3408 route as a
+recursion over legal forgetful maps:
+
+```text
+legal quotient -> mixed theorem-exit fiber -> first missing sidecar
+-> repaired quotient -> next quotient
+```
+
+The proof object is not a single scalar invariant and not a recursion over raw
+runners/arcs.  A quotient is legal only when the theorem exit is pure on its
+fibers.  Otherwise the first destroyed coordinate must be restored as a
+sidecar, dualized, routed to a terminal theorem exit, or named as finite debt.
+
+Open task: implement the shared quotient/fiber/repaired-quotient API for the
+two live base cases: HYP-3405 AP-vs-`13->27` and HYP-3406 owner leaks.  Then
+extend HYP-3406 beyond `(72,20)` until `residue+owner_support` first fails or
+supports a finite owner-cut theorem.  The next concrete graph object is the
+endpoint-owner Menger graph for `petal 13->26` and `petal 10->20`.  Every
+unresolved branch should receive a terminal label before BDH/Mertens or other
+analytic averaging is allowed: AP/GW, strict-open mass, q-witness, H7/state
+lift, off-grid floor, exact-period/BDH exception, or named residual.
+Tournament Analysis uses recursion operators/proof obligations as vertices,
+not runners, raw arcs, residues, or constants. -> HYP-3409, HYP-3408,
+HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3401,
+HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3124, HYP-3123, HYP-3118,
+HYP-2982, HYP-2963, THM-523, T1370, LTI-370, LTT-270, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3407 boundary-uniformization cut stability addendum:**
 HYP-3407 reserves an executable creative synthesis route downstream of
 HYP-3406.  The intended move is to treat Bring radicals, Schwarz-Christoffel

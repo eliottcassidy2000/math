@@ -15,6 +15,39 @@
 
 ---
 
+## Lead codex-2026-06-28: Recursive sidecar pattern atlas
+
+**Status:** SYNTHESIS / executable recursion-pattern router; not proof
+(HYP-3409/T1370/LTI-370/LTT-270).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3409-lrc14-recursive-sidecar-pattern-atlas.md`,
+script
+`04-computation/lrc14_recursive_sidecar_pattern_atlas_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_recursive_sidecar_pattern_atlas_codex_20260628.out`,
+and
+`07-reflections/lrc14-recursive-sidecar-pattern-atlas-codex-20260628.md`.
+
+Purpose: turn the current abstract LRC14 proof pattern into a reusable finite
+lemma work queue.  The shared recursion is:
+
+```text
+legal quotient -> mixed theorem-exit fiber -> first missing sidecar
+-> repaired quotient -> next quotient
+```
+
+Readout: the top recursion operators are mixed-fiber resurrection, owner-cut
+recursion, collar-to-bank lift, height-then-owner escalation, and finite
+chamber terminal routing.  Tournament vertices are recursion operators/proof
+obligations, not runners, raw arcs, residues, or constants.
+
+Next: implement a shared quotient/fiber/repaired-quotient API for HYP-3405
+AP-vs-`13->27` and HYP-3406 owner leaks; build the owner-support Menger graph
+for `petal 13->26` and `petal 10->20`; extend HYP-3406 past `(72,20)` until
+`residue+owner_support` first fails or supports a finite owner-cut theorem.
+Add terminal-exit labels before using BDH/Mertens-style averages.
+
 ## Lead codex-2026-06-28: Special-function cut signature recursion
 
 **Status:** RESERVED / creative synthesis scaffold; executable evidence pending
