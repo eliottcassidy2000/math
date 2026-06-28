@@ -1,0 +1,63 @@
+LRC14 law-defect entropy compression scout
+source: codex-2026-06-28 / HYP-3201 / T1301 / LTI-301 / LTT-201
+
+Principle:
+  law L == target f factors through quotient q_L
+  failure(L) == H(f | q_L) > 0, hence a named sidecar is required
+
+Commutativity quotient: q(a,b)={a,b}
+  a+b          FACTORS  residual=0.000000 bits examples=none
+  a*b          FACTORS  residual=0.000000 bits examples=none
+  a^b          SIDECAR  residual=0.816327 bits examples=(1, 2)->{1: 1, 2: 1}; (1, 3)->{1: 1, 3: 1}; (1, 4)->{1: 1, 4: 1}; (1, 5)->{1: 1, 5: 1}
+  {a^b,b^a}    FACTORS  residual=0.000000 bits examples=none
+
+Associativity quotient: q(value tree)=ordered leaves (a,b,c)
+  (a+b)+c      FACTORS          residual=0.000000 bits nonconstant=0
+  (a*b)*c      FACTORS          residual=0.000000 bits nonconstant=0
+  (a-b)-c      BRACKET_SIDECAR  residual=0.800000 bits nonconstant=100
+    examples: (0, 0, 1)->{-1: 1, 1: 1}; (0, 0, 2)->{-2: 1, 2: 1}; (0, 0, 3)->{-3: 1, 3: 1}; (0, 0, 4)->{-4: 1, 4: 1}
+  (a^b)^c      BRACKET_SIDECAR  residual=0.515625 bits nonconstant=33
+    examples: (2, 1, 2)->{4: 1, 2: 1}; (2, 1, 3)->{8: 1, 2: 1}; (2, 1, 4)->{16: 1, 2: 1}; (2, 2, 3)->{64: 1, 256: 1}
+
+Idempotence/multiplicity quotient: q(word)=support(word)
+  max(word)    FACTORS                residual=0.000000 bits examples=none
+  sum(word)    MULTIPLICITY_SIDECAR   residual=0.666667 bits examples=(0, 1)->{1: 3, 2: 3}; (0, 2)->{2: 3, 4: 3}; (1, 2)->{4: 3, 5: 3}
+
+Distributivity quotient: identify two sides of a distributive rewrite
+  a*(b+c) over Z5    FACTORS          residual=0.000000 bits nonconstant=0
+  a+(b*c) over Z5    CONTEXT_SIDECAR  residual=0.640000 bits nonconstant=80
+    examples: (1, 0, 1)->{1: 1, 2: 1}; (1, 0, 2)->{1: 1, 3: 1}; (1, 0, 3)->{1: 1, 4: 1}; (1, 0, 4)->{1: 1, 0: 1}
+
+K4 fixed-path class action: quotient exact cube states to T,+,-,S
+  full action residual H(next_class | class,generator)=0.701205 bits
+  flip a: {'T': ['+'], 'S': ['-', 'S'], '-': ['S'], '+': ['T']}
+  flip b: {'T': ['-'], 'S': ['+', 'S'], '-': ['T'], '+': ['S']}
+  flip c: {'T': ['S'], 'S': ['+', '-', 'S', 'T'], '-': ['S'], '+': ['S']}
+  non-deterministic quotient fibers: ('S', 'a')->{'S': 4, '-': 1}; ('S', 'b')->{'S': 4, '+': 1}; ('S', 'c')->{'T': 1, '-': 1, '+': 1, 'S': 2}
+  readout: the class quotient is a transformation/relational monoid packet, not V4
+
+Lee-Yang radius compression sidecar
+  circle          product_radius=q0/q6=1.000000 log_radius_variance=0.00000000
+  phi4_off_circle product_radius=q0/q6=1.045476 log_radius_variance=0.05192603
+  readout: q0=q6*R^6 is exact only for the common-radius quotient;
+           off-circle variance is the phi4 sidecar, not scalar noise
+
+Tournament Analysis over proof carriers
+  vertices considered: functions, law quotients, bracket trees, supports,
+    distributive contexts, K4 class-action fibers, PGF roots, phi4 modes,
+    resolvent variables, and proof obligations
+  pairwise observable: retained proof payload under quotient legality,
+    sidecar explicitness, LRC transfer, root/function retention, and degree control
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  priority_path=
+    -> typed_factor_through_schema
+    -> law_defect_entropy_bits
+    -> root_curve_phi4_radius_sidecar
+    -> k8_odd_worpitzky_orientation_sidecar
+    -> k4_transformation_monoid_sidecar
+    -> associativity_bracket_sidecar
+    -> distributivity_context_sidecar
+    -> idempotence_multiplicity_sidecar
+    -> raw_scalar_value

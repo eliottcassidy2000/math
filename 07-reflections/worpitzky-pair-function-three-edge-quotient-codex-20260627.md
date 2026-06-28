@@ -44,7 +44,7 @@ Abel-Ruffini wall" means degree `<=4` and Galois `<=S4`, plus named sidecars
 for destroyed order data, not a blanket V4 quotient.
 
 The later HYP-3153/HYP-3160 pair turns the next target into a sharper split
-rather than a larger metaphor.  HYP-3153 reserves the Lee-Yang/Worpitzky/quartic
+rather than a larger metaphor.  HYP-3153 supplies the Lee-Yang/Worpitzky/quartic
 packet; HYP-3160 says the even k=8 face is degree-two variance, equivalently
 total covariance of empty-sector indicators, while entropy is the wrong
 principle.  Its S31ai follow-up makes the honest correction: consec maximizes

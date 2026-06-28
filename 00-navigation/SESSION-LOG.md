@@ -237,6 +237,63 @@ The absorbing apex arc = the tournament avatar of the apex prime 7 = the source 
 TOWARD PROOF: cap = q6R^6(on-circle binomial) - dip(off-circle phi^4); bound the dip = [even biquadratic,
 solvable S70] + [odd Worpitzky/ear/kappa3, codex HYP-3147]; Galois<=S4 makes the even part explicit, the
 Lee-Yang circle keeps lambda small.
+## codex-2026-06-28-S279 -- law-defect entropy compression -- HYP-3201
+
+User asked to keep thinking in terms of functions and information theory,
+explicitly including failures of compression beyond commutativity such as
+associativity, while merging the Lee-Yang/Pascal/phi4, k=8 dual, ear,
+transformation-monoid, Galois-degree, and Newton/Maclaurin motifs into the
+ongoing proof push.  Added HYP-3201/T1301/LTI-301/LTT-201 plus executable
+scout
+`04-computation/lrc14_law_defect_entropy_compression_codex_20260628.py`,
+stored output
+`05-knowledge/results/lrc14_law_defect_entropy_compression_codex_20260628.out`,
+and reflection
+`07-reflections/law-defect-entropy-function-compression-codex-s279.md`.
+
+Main synthesis: an algebraic law is a zero-entropy quotient theorem.  For a
+law quotient `q_L` and target function `f`, the proof-legal condition is
+`H(f|q_L)=0`; if the conditional entropy is positive, the proof packet owes a
+typed sidecar.  Commutativity failure is ordered-sidecar debt; associativity
+failure is bracketing debt; idempotence failure is multiplicity debt;
+distributivity failure is context debt; quotient-action failure is
+representative/action debt; root-circle failure is Lee-Yang/phi4 radius-spread
+debt; moment-law failure is cumulant debt.
+
+Exact scout readout: unordered-pair compression has residual `0` for
+`a+b,a*b`, `0.816327` bits for `a^b`, and `0` for `{a^b,b^a}`; forgetting
+brackets has residual `0` for addition/multiplication, `0.800000` bits for
+subtraction, and `0.515625` bits for exponentiation; support compression has
+residual `0` for `max` and `0.666667` bits for `sum`; distributivity rewrite
+over `Z5` has residual `0` for multiplication over addition and `0.640000`
+bits for false addition over multiplication.  The K4 fixed-path class action
+has residual `0.701205` bits with `flip c` sending `T,+,-` to `S` while
+`S->{T,+,-,S}`, confirming the user's correction that the quotient is a
+transformation/relational monoid packet, not literal `V4`.
+
+Lee-Yang/Pascal transfer: the common-radius quotient gives `q0=q6*R^6`; an
+off-circle root packet has positive log-radius variance and is the phi4
+sidecar.  Pair-normalized Pascal cap is the lawful exchangeable pair
+compression; the k=8,9 dip is higher-order residual.  Next hook: add
+`law_id`, `law_quotient_map`, `target_function`, `residual_entropy_bits`, and
+`sidecar_type` to one HYP-3140 fiber-PGF row, one HYP-3141 edge row, and the
+HYP-3142 k=8 packet, then discharge by zero residual entropy or retain the
+named sidecar.
+
+Post-fetch integration: incoming mainline claimed HYP-3152 for mac-mini's
+Lee-Yang circle/radius/Galois S4 web, HYP-3153 for the reserved
+Lee-Yang/Worpitzky/quartic packet, HYP-3154 for the Joukowski/De Moivre
+circle-to-real-rooted bridge, HYP-3160/HYP-3161 for KPS's k=8
+variance/covariance extremality and exact "1/7 is not a theorem" correction,
+HYP-3162 for the cyclotomic/Joukowski ideal, HYP-3199 for the n=4
+Einheit/minimality chart, and HYP-3200 for the exact bounded-bank cumulant
+check.  This lane was renumbered
+from its local HYP-3152/HYP-3161 claims to HYP-3201.  The connection is
+active: HYP-3160/HYP-3161 rule out ordinary row entropy as the k=8 extremal
+scalar while strengthening covariance/bimodality as the target function;
+HYP-3201 uses conditional entropy `H(target|quotient)` only to measure illegal
+compression sidecar debt.  HYP-3199 supplies the exact section/cover version
+of the monoid warning.
 
 ## kind-pasteur-2026-06-27-S31ah -- tournament proof TOOLKIT + the TWO MAPS (dual Lee-Yang extremality)
 

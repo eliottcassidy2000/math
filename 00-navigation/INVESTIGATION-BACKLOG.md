@@ -16,6 +16,44 @@
 ---
 
 ## Lead codex-2026-06-28-S277: function-compression degree-4 guardrail
+## Lead codex-2026-06-28-S279: Law-defect entropy compression
+
+**Status:** SYNTHESIS / exact finite scout; not proof (HYP-3201/T1301).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3201-law-defect-entropy-compression.md`,
+`04-computation/lrc14_law_defect_entropy_compression_codex_20260628.py`,
+`05-knowledge/results/lrc14_law_defect_entropy_compression_codex_20260628.out`,
+and `07-reflections/law-defect-entropy-function-compression-codex-s279.md`.
+
+Readout: this extends HYP-3150/HYP-3151's factor-through wall from
+commutativity to a general law-defect entropy calculus.  A law is a
+zero-entropy quotient statement `H(f|q_L)=0`; failed commutativity,
+associativity, idempotence, distributivity, action, root-circle, or moment
+laws produce ordered, bracket, multiplicity, context, representative/action,
+root-variance, or cumulant sidecars.  Exact finite residuals include
+`0.816327` bits for ordered exponentiation after unordered-pair compression,
+`0.800000` bits for subtraction after bracketing compression, `0.515625` bits
+for exponentiation after bracketing compression, and `0.701205` bits for the
+K4 fixed-path class action quotient.
+
+Post-fetch integration: renumbered from the initially local HYP-3152/HYP-3161
+claims to HYP-3201 after incoming mainline claimed HYP-3152 for the Lee-Yang
+circle radius web, HYP-3153 for the Lee-Yang/Worpitzky/quartic packet,
+HYP-3154 for the Joukowski/De Moivre bridge, HYP-3160/HYP-3161 for k=8
+covariance extremality plus the "1/7 is not a theorem" correction, HYP-3162
+for the cyclotomic/Joukowski ideal, HYP-3199 for the n=4 Einheit/minimality
+chart, and HYP-3200 for the exact bounded-bank cumulant check.  HYP-3201 uses conditional
+entropy as a quotient-defect diagnostic, so it is compatible with the warning
+that ordinary row entropy is not the k=8 extremal scalar.
+
+Next: put `law_id`, `law_quotient_map`, `target_function`,
+`residual_entropy_bits`, and `sidecar_type` on one HYP-3140 fiber-PGF row, one
+HYP-3141 edge-witness row, and the HYP-3142 k=8 packet.  A quotient should be
+used only after the target function has zero residual entropy or the named
+sidecar is retained.
+
+## Lead codex-2026-06-28: Function-compression resolvent-degree wall
 
 **Status:** EVIDENCE / executable factor-through scout; not proof
 (HYP-3150/T1215).

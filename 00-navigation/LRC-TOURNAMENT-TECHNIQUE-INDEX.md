@@ -181,6 +181,11 @@ obligations, and proof-carrier interfaces.
   quotient-congruence defect, deletion audit, compression-circuit preimage
   debt, K3 edge-kernel sidecar, and Lee-Yang/quartic degree-four ledger before
   treating a score-class table as algebra.
+- Need to measure why a law-like quotient failed:
+  use LTT-201 after LTT-177/LTT-175/LTT-174/LTT-171/LTT-166 and make law quotients,
+  target functions, residual entropy values, bracket/support/context/action
+  fibers, root-radius variance, and cumulant sidecars the vertices.  The
+  quotient is legal only at zero residual entropy or with retained sidecar debt.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5626,7 +5631,7 @@ constant chase.
   sum/product but destroy exponent order.  HYP-3147 names the same local
   coordinate as the minority-edge gate, S71 links its odd Worpitzky face to
   the k=8 `-9S3` correction, and the KPS lambda scan gives the root-curve
-  sidecar version.  HYP-3153 reserves the fused packet, while HYP-3160 splits
+  sidecar version.  HYP-3153 supplies the fused packet scout, while HYP-3160 splits
   the k=8 node into an even degree-two variance/total-covariance target and
   an odd Worpitzky/non-associative sidecar; the S31ai follow-up refutes the
   universal `1/7` associativity-defect and odd-residue-anchor shortcuts.
@@ -5984,7 +5989,6 @@ quotient_legality_status
   ear/Omega fields to the next k=8 hard-core runner.
 - **Pointers:** HYP-3199, HYP-3160, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3133, HYP-3124, HYP-3053,
   HYP-3049, HYP-3054, LTI-299, LTT-199, T1299, OPEN-Q-108.
-
 ## LTT-200: k=8 Cumulant Verification Tournament
 
 - **Move:** Treat cumulant claims as proof-signal vertices and order them by
@@ -6018,3 +6022,47 @@ quotient_legality_status
 - **Pointers:** HYP-3200, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152,
   HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138,
   HYP-3132, HYP-3122, THM-577, LTI-300, LTT-200, T1300, OPEN-Q-108.
+
+## LTT-201: Tournament Of Law-Defect Entropy Packets
+
+- **Move:** Make tournament vertices out of law quotients and their residual
+  entropy packets.  A law is a quotient-legality claim:
+  `H(target function | law quotient)=0`.  If the entropy is positive, the
+  missing coordinate is a typed sidecar: ordered, bracket, multiplicity,
+  context, representative/action, root-radius, or cumulant.
+- **LRC use:** HYP-3201/S279 extends HYP-3150/HYP-3151 from commutativity to
+  associativity, idempotence, distributivity, K4 action quotients, Lee-Yang
+  radius compression, and Newton/Maclaurin moment compression.  This lets an
+  LRC14 packet record not only that a quotient loses information, but which
+  law failed and how many residual bits remain in the fiber.
+- **Preserves:** target functions with zero residual entropy, explicit
+  sidecar types, action determinism status, monoid-vs-group status,
+  root-radius variance, moment/cumulant sidecar status, and terminal discharge.
+- **Forgets / guardrail:** raw scalar values, apparent group tables, and
+  moment/root summaries are unsafe if the target function still has residual
+  entropy on the quotient fiber.
+- **Fingerprint:** HYP-3201 reports a transitive proof-carrier tournament over
+  nine vertices with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`,
+  no directed 3-cycles, one Hamiltonian path, and priority path
+  `typed_factor_through_schema -> law_defect_entropy_bits ->
+  root_curve_phi4_radius_sidecar -> k8_odd_worpitzky_orientation_sidecar ->
+  k4_transformation_monoid_sidecar -> associativity_bracket_sidecar ->
+  distributivity_context_sidecar -> idempotence_multiplicity_sidecar ->
+  raw_scalar_value`.
+- **Next hook:** Put `residual_entropy_bits` and `sidecar_type` on one
+  HYP-3140 fiber-PGF row, one HYP-3141 edge-witness row, and the HYP-3142 k=8
+  moment packet.  Use zero residual entropy as the discharge condition before
+  invoking a law-like quotient.
+- **Incoming integration:** HYP-3201 was renumbered after mainline claimed
+  HYP-3152, HYP-3153, HYP-3154, HYP-3160/HYP-3161, HYP-3162, HYP-3199, and
+  HYP-3200.
+  Its entropy is conditional quotient-defect entropy, compatible with
+  HYP-3160 ruling out raw row entropy as the k=8 extremal scalar, with
+  HYP-3161 correcting the old `1/7` law scent, with HYP-3162 making the root
+  sidecar a 7th-cyclotomic/Joukowski defect, with HYP-3199 separating the
+  fixed-path cover from the exact n=4 Einheit chart, and with HYP-3200 making
+  the bounded-bank cumulant refutation exact.
+- **Pointers:** HYP-3201, HYP-3200, HYP-3162, HYP-3199, HYP-3161, HYP-3160, HYP-3154, HYP-3153,
+  HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3146, HYP-3142, HYP-3140,
+  HYP-3132, HYP-3122, HYP-3109, HYP-3092, THM-577, LTI-301, LTT-201, T1301,
+  OPEN-Q-108.

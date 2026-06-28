@@ -49,6 +49,38 @@ gates, root-curve data, and terminal debt) intact. -> HYP-3200, HYP-3161,
 HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147,
 HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, HYP-3122, THM-577, T1300,
 LTI-300, LTT-200, OPEN-Q-108.
+OPEN-Q-108.
+**OPEN-Q-108 HYP-3201 law-defect entropy addendum:**
+HYP-3201 extends HYP-3150/HYP-3151 by treating algebraic laws as zero-entropy
+quotient statements.  For a law quotient `q_L` and target proof function `f`,
+the legal condition is `H(f | q_L)=0`; if the entropy is positive, the packet
+must retain a typed sidecar.  Exact scout residuals include `0.816327` bits for
+`a^b` after unordered-pair compression, `0.800000` bits for subtraction after
+forgetting brackets, `0.515625` bits for exponentiation after forgetting
+brackets, `0.666667` bits for sum after support compression, `0.640000` bits
+for a false distributive rewrite over `Z5`, and `0.701205` bits for the K4
+fixed-path class action quotient.  The K4 relations make the user's correction
+explicit: the visible flip quotient is a transformation/relational monoid
+packet, not literal `V4`.
+
+Post-fetch integration: this lane was renumbered to HYP-3201 after incoming
+HYP-3152/HYP-3153/HYP-3154/HYP-3160/HYP-3161/HYP-3162/HYP-3199/HYP-3200.  Its use of
+conditional entropy is a quotient-defect diagnostic, not a claim that Shannon
+row entropy is the k=8 maximizer, and it should not promote the old `1/7`
+associativity-defect smell into a theorem.  HYP-3200 now makes that
+bounded-bank refutation exact.  HYP-3162 adds that the root sidecar must
+retain the 7th-cyclotomic/Joukowski target, not only a radius.
+
+Open task: instantiate `law_id`, `law_quotient_map`, `target_function`,
+`residual_entropy_bits`, `sidecar_type`, `root_radius_variance`,
+`action_determinism_status`, `monoid_or_group_status`, and
+`terminal_discharge_or_named_debt` on one HYP-3140 fiber-PGF row, one HYP-3141
+edge-witness row, and the HYP-3142 k=8 moment packet.  Then prove the target
+has zero residual entropy on the proposed quotient or identify the first
+sidecar that must be retained before scalarization. -> HYP-3201, HYP-3200, HYP-3162, HYP-3199,
+HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151,
+HYP-3150, HYP-3147, HYP-3146, HYP-3142, HYP-3141, HYP-3140, HYP-3132,
+HYP-3122, HYP-3109, HYP-3092, THM-577, LTI-301, LTT-201, T1301, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3151 Worpitzky function-compression resolvent addendum:**
 HYP-3151 executes HYP-3150's factor-through wall by turning the recent Worpitzky, pair-function, tournament-3,
@@ -147,7 +179,7 @@ KPS lambda adds the root-curve version of the warning.  Incoming HYP-3151 and
 HYP-3152 add two guardrails: the n=4 OR compression is nonlinear with no
 affine substitute, and the full flip action is a transformation monoid rather
 than V4, so the bounded-core dual should be recorded as degree `<=4` /
-Galois `<=S4` plus restoration sidecars.  HYP-3153 reserves the fused
+Galois `<=S4` plus restoration sidecars.  HYP-3153 supplies the fused
 Lee-Yang/Worpitzky/quartic packet, and HYP-3160 narrows the k=8 even side to
 the degree-two total-covariance extremality while leaving the odd `-9S3`
 Worpitzky/non-associative side as named proof debt.  The S31ai follow-up drops

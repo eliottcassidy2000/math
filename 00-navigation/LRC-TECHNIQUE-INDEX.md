@@ -91,6 +91,7 @@ tournament edge-witness tip-tail information packet / tip-tail commutator / repa
 Worpitzky pair-function three-edge quotient / K3 flip kernel / ordered exponent sidecar / fiber-PGF order-loss alarm
 Worpitzky function-compression resolvent bridge / target function id / fiber constancy / ordered sidecar / nonlinear OR canary compression / k8 biquadratic degree ceiling
 function-compression legality / unordered-safe functions / ordered sidecars / degree-4 resolvent ceiling / Abel-Ruffini debt
+law-defect entropy compression / law quotient / target function / residual entropy bits / typed sidecar / monoid-action and root-radius defect
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -423,6 +424,7 @@ record what it destroys before asking it to prove anything.
 | LTI-277 | Worpitzky function-compression resolvent bridge | Target function, swap parity, symmetric shadow, ordered sidecar, compression fiber, nonlinear OR canary map, k=8 biquadratic degree ceiling | HYP-3151/S278 executes HYP-3150's factor-through audit by merging the n=3 edge-flip kernel, n=4 canary/filler quotient, and k=8 resolvent into the rule that a quotient is legal only for functions constant on its fibers or with restored ordered/canary sidecars.  The scout verifies Worpitzky rows `1,4,1` and `1,11,11,1`, separates symmetric `a+b,a*b` from ordered `a^b,b^a`, proves `x=a OR c`, `y=b OR c` is the needed n=4 class-preserving compression with no affine substitute, and records the k=8 centered quartic `u^4-5u^2+4`, degree `4`. | HYP-3151, HYP-3150, HYP-3152, HYP-3153, HYP-3161, HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3132, HYP-3129, HYP-3124, T1216, LTT-175, LTI-277, OPEN-Q-108 | Add `target_function_id`, `function_swap_parity`, `compression_fiber_function_constancy`, `ordered_sidecar_status`, `canary_or_restoration_sidecar`, `resolvent_degree`, and `centered_odd_coefficient_status` before scalarizing edge, fiber-PGF, or k=8 moment packets. |
 | LTI-299 | n=4 Einheit chart minimality gate | Fixed-path tiling cover versus partial-score exact chart, `S`-fiber multiplicity, quotient-congruence defect, deletion/minimality audit, Erdos-870 representation-abundance guard, compression-circuit sidecar, Lee-Yang/quartic degree-four ledger | HYP-3199/codex-2026-06-27 is the prompt-exact n=4 deletion/minimality refinement underneath HYP-3161/HYP-3160/HYP-3153/HYP-3152 and HYP-3151/HYP-3150.  It compares two n=4 tournament charts after HYP-3148, HYP-3146/HYP-3145, HYP-3143, and HYP-3144, with HYP-3147 supplying the n=3 edge-kernel warning.  The fixed Hamiltonian path with chord flips `a,b,c` reproduces the prompt table but has fibers `T:{E}`, `+:{a}`, `-:{b}`, `S:{c,ab,ac,bc,abc}` and is not a group quotient.  The partial-score `(0,1,1,2)` chart with free `x=a,y=b` is an exact Einheit/Klein-four section.  Deletion audit marks `c` deletable in the cover and `x,y` essential in the exact chart.  The continuation identifies the cover-to-section compression `x=a OR c`, `y=b OR c`, keeps K3/Worpitzky/function sidecars separate, and proposes Lee-Yang binomial cap, `phi4` dip, `q0=q6*R^6`, `L_y=p0+p6+(1/10)*p3`, degree ceiling `4`, ear/Omega, Newton/Maclaurin AP, and covariance-extremality signals; HYP-3151 proves there is no affine substitute for the OR compression. | HYP-3199, HYP-3161, HYP-3160, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3133, HYP-3124, HYP-3053, HYP-3049, HYP-3054, T1299, LTT-199, LTI-299, OPEN-Q-108 | Add `n4_model_scheme_id`, `n4_fiber_multiplicity_by_class`, `n4_quotient_congruence_defect`, `n4_einheit_torsor_status`, `n4_deletable_arc_coordinate`, `n4_minimal_chart_status`, `erdos870_minimality_sidecar_status`, `n3_edge_flip_kernel`, `function_quartet_order_status`, `compression_circuit_profile`, `transformation_monoid_status`, `lee_yang_binomial_cap_status`, `phi4_off_circle_dip_status`, `large_radius_balance_q0_q6_R6`, `bounded_core_resolvent_degree_ceiling`, and `ear_omega_sidecar_status` before using fixed-path tiling or score-class abundance in edge-witness packets. |
 | LTI-300 | k=8 covariance extremality verifier | Exact cumulant census, primitive normal form, total covariance `Sigma kappa_2`, associator ratio `Sigma kappa_3/S3`, entropy rank, phi4 `kappa4` sidecar | HYP-3200/codex-2026-06-28 turns the HYP-3160/S31ai covariance and associator claims into an exact bounded-bank check over `3432` anchored rows, integrating the incoming HYP-3161/S31aj settlement that the `1/7` ratio is not a theorem and that covariance has no bounded-bank beaters.  It refutes the tempting universal `1/7` law exactly: consec has `Sigma kappa_3/S3=407891843/2855269200`, differs from `1/7` by `-3757/2855269200`, and no bank row has exact ratio `1/7`.  It confirms the useful primitive target: consec ranks `0/3431` for maximum `Sigma kappa_2`, with only the nonprimitive even-AP dilation tie in the all-bank.  Entropy is high, not minimal, and `kappa4` is retained as a stabilizer sidecar rather than an exact minimum theorem. | HYP-3200, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, HYP-3122, THM-577, T1300, LTT-200, LTI-300, OPEN-Q-108 | Prove primitive-normal-form `Sigma kappa_2` extremality, likely through reflection-fold/Perron/covariance or ferromagnetic comparison machinery; keep `Sigma kappa_3`, `S3`, minority-edge, root-curve, and terminal-debt sidecars instead of scalarizing the odd residual to `1/7`. |
+| LTI-301 | Law-defect entropy compression | Algebraic law quotients, target functions, conditional entropy residuals, typed sidecars, K4 action fibers, Lee-Yang root-radius packets, moment/cumulant defects | HYP-3201/S279 extends the function-compression rule beyond commutativity.  It treats each algebraic law as `H(f|q_L)=0`; failed commutativity, associativity, idempotence, distributivity, action, root-circle, or moment laws produce ordered, bracket, multiplicity, context, representative, root-variance, or cumulant sidecars.  The exact scout measures residuals for finite examples and confirms the K4 class quotient has nonzero action entropy, hence a monoid/relational packet rather than literal `V4`.  It is integrated with HYP-3152/HYP-3153/HYP-3154/HYP-3160/HYP-3161/HYP-3162/HYP-3199/HYP-3200: conditional entropy measures quotient defect, not row-extremal Shannon entropy or the corrected `1/7` law; the root sidecar now includes the 7th-cyclotomic/Joukowski target. | HYP-3201, HYP-3200, HYP-3162, HYP-3199, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3146, HYP-3142, HYP-3140, HYP-3132, HYP-3122, HYP-3109, HYP-3092, THM-577, T1301, LTT-201, LTI-301, OPEN-Q-108 | Add `law_id`, `law_quotient_map`, `target_function`, `residual_entropy_bits`, `sidecar_type`, `sidecar_zero_defect_status`, `root_radius_variance`, `action_determinism_status`, and `terminal_discharge_or_named_debt` before using any law-like quotient in HYP-3140/HYP-3141/HYP-3142 packets. |
 
 ## Cross-Cutting Guardrails
 
@@ -3489,7 +3491,7 @@ core cap dip appears.  Its k=8 correction splits into an even biquadratic
 `+6S4` face and a larger odd Worpitzky `-9S3` face.  The KPS lambda scan adds
 the root-curve version of the same warning: off-circle variance tracks the
 coverage gap, so scalar PGF values do not carry the whole proof payload.
-HYP-3153 reserves the fused Lee-Yang/Worpitzky/quartic packet.  HYP-3160 then
+HYP-3153 supplies the fused Lee-Yang/Worpitzky/quartic packet scout.  HYP-3160 then
 sharpens the even face to the degree-two variance/total-covariance extremality
 and leaves the odd `-9S3` Worpitzky/non-associative face as the sidecar debt.
 The S31ai follow-up keeps the covariance target but refutes universal `1/7`
@@ -4034,3 +4036,81 @@ using fixed-path tiling or score-class abundance as proof evidence.  Then add
 `n3_edge_flip_kernel`, `function_quartet_order_status`,
 `large_radius_balance_q0_q6_R6`, `bounded_core_resolvent_degree_ceiling`, and
 `ear_omega_sidecar_status` to the k=8 hard-core runner.
+## LTI-301: Law-Defect Entropy Compression
+
+Used by codex-2026-06-28-S279 for HYP-3201/T1301.  This technique extends
+the function-compression rule from individual quotients to algebraic laws:
+
+```text
+law L == H(target function | law quotient) = 0
+law failure == residual conditional entropy plus a named sidecar
+```
+
+The finite scout covers several law quotients:
+
+```text
+commutativity: unordered-pair quotient
+associativity: forget binary-tree bracketing
+idempotence: forget multiplicity and keep support
+distributivity: identify two rewrite sides
+class action: quotient exact K4 states to T,+,-,S
+root circle: compress root radii to one radius R
+```
+
+Exact residuals:
+
+```text
+a+b, a*b under unordered pairs: 0
+a^b under unordered pairs: 0.816327 bits
+subtraction under associativity quotient: 0.800000 bits
+exponentiation under associativity quotient: 0.515625 bits
+sum under support quotient: 0.666667 bits
+false addition-over-multiplication distributivity over Z5: 0.640000 bits
+K4 class action quotient: 0.701205 bits
+```
+
+Preserves: target functions whose residual entropy is zero, declared sidecar
+fields, and legal root/moment/action quotients.
+
+Destroys if used alone: orientation, bracketing, multiplicity, distributive
+context, exact representative action, root-radius spread, odd parity, and
+moment/cumulant data.
+
+Packet fields:
+
+```text
+law_id
+law_quotient_map
+target_function
+residual_entropy_bits
+sidecar_type
+sidecar_zero_defect_status
+law_failure_examples
+root_radius_variance
+action_determinism_status
+monoid_or_group_status
+moment_cumulant_sidecar
+terminal_discharge_or_named_debt
+```
+
+Next hook: instantiate the residual-entropy field on one HYP-3140 fiber-PGF
+row, one HYP-3141 edge-witness row, and the HYP-3142 k=8 moment packet.  A
+quotient may be used only after its target function has zero residual entropy
+or the named sidecar is retained.
+
+Incoming integration: HYP-3201 was renumbered after mainline claimed HYP-3152
+for the Lee-Yang circle/radius web, HYP-3153 for the
+Lee-Yang/Worpitzky/quartic packet, HYP-3154 for the Joukowski/De
+Moivre-Laplace bridge, HYP-3160/HYP-3161 for k=8 variance/covariance
+extremality and the corrected `1/7` warning, HYP-3162 for the 7th-cyclotomic
+Joukowski ideal / rational-approximation dip, and HYP-3199 for the exact n=4
+cover-versus-Einheit chart.  Incoming HYP-3200 supplies the exact bounded-bank
+cumulant check: no exact `1/7` law and covariance is the surviving
+degree-two target.  HYP-3201 uses conditional entropy as a
+quotient-defect diagnostic; it does not propose Shannon row entropy as the k=8
+maximizing scalar.
+
+Pointers: HYP-3201, HYP-3200, HYP-3162, HYP-3199, HYP-3161, HYP-3160, HYP-3154, HYP-3153,
+HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3146, HYP-3142, HYP-3140,
+HYP-3132, HYP-3122, HYP-3109, HYP-3092, THM-577, LTI-301, LTT-201, T1301,
+OPEN-Q-108.

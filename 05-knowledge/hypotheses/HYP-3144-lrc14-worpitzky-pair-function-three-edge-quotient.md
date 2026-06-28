@@ -86,7 +86,7 @@ that scalar PGF values are not enough.  HYP-3152 corrects the group-theoretic
 language around the two-bit picture: the useful slice can look Klein-four, but
 the full flip action is a transformation monoid with an absorbing apex arc.
 The solvability claim should therefore be stated as bounded degree `<=4` /
-Galois `<=S4`, not as a V4 law.  HYP-3153 reserves the executable packet that
+Galois `<=S4`, not as a V4 law.  HYP-3153 supplies the executable packet that
 should fuse these lanes, and HYP-3160 sharpens the k=8 node: the even
 biquadratic face is a degree-two variance/total-covariance extremality, while
 the odd `-9S3` Worpitzky face is the non-associative sidecar.  The follow-up
