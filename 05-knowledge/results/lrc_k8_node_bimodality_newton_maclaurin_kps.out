@@ -1,0 +1,12 @@
+=== THE k=8 NODE: consec=(0, 1, 2, 3, 4, 5, 6, 7) ===
+  L_yK8(bimodality)=0.35823  bimod(q0+q6)=0.34762  exkurt=-0.1154
+  E[N]=1.6041 var=2.6120 entropy=2.4293  R=1.5880 q6R6=0.32721 q0=0.32721
+  Newton p_k^2-p_(k-1)p_(k+1) (k=1..5): ['-0.00205', '-0.00009', '-0.00003', '-0.00002', '-0.00004']
+
+  Over 3002 k=8 clusters -- does consec EXTREMIZE each functional?
+   bimodality dual (MAX)           : consec rank=  1 (0=extremal)  argext=even-AP val=0.35823
+   q0+q6 raw bimodality (MAX)      : consec rank=  1 (0=extremal)  argext=even-AP val=0.34762
+   excess kurtosis kappa4 (MAX)    : consec rank=2994 (0=extremal)  argext=rand val=3.39118
+   variance (MAX)                  : consec rank=  1 (0=extremal)  argext=even-AP val=2.61196
+   entropy (MIN)                   : consec rank=3000 (0=extremal)  argext=rand val=1.77574
+   4th central moment (MAX)        : consec rank=  1 (0=extremal)  argext=even-AP val=19.67979
