@@ -46,6 +46,55 @@ UNIFIED: the unit grid (Z/14)* is BOTH where tight is pinned (a) AND where reson
 bulk = generic. The last two details = the on-grid (core/finite/equioscillation) vs off-grid (bulk/generic/
 equidistribution) split = the Vitali wall on both pieces at once. Residual: off-grid bulk positivity (b) +
 finite-system solution-count (a). NOT a proof; LRC(14) open, but the last two details now FIT one frame.
+## codex-2026-06-28 -- HYP-3266 formal/analytic proof-obligation ledger
+
+Owner asked to make as many LRC proof obligations formal and analytic as
+possible and state exactly where the proof stands.  I added the HYP-3266
+ledger plus script/result/reflection:
+
+```text
+04-computation/lrc14_formal_analytic_obligation_ledger_codex_20260628.py
+05-knowledge/results/lrc14_formal_analytic_obligation_ledger_codex_20260628.out
+05-knowledge/hypotheses/HYP-3266-lrc14-formal-analytic-proof-obligation-ledger.md
+07-reflections/lrc14-formal-analytic-proof-obligation-ledger-codex-20260628.md
+```
+
+Readout: `18` obligations, with `6` Lean-closed glue nodes, `3` finite-closed
+nodes, `1` conditional bridge, `1` evidence-only bridge, `5` open analytic
+nodes, `1` open rigidity node, and `1` false route.  The closed formal side is
+Mreach compactness, denominator-sieve saturation, cap/pair-Pascal algebra,
+small-k cover/p0 monotonicity, concrete goodSet/safeSet witness-floor readout,
+and gK8 finite imports.  The closed finite side is unit-witness construction,
+AP/GW bounded single-swap margin, and contact-holonomy quotient-curvature.
+
+The exact open cores are now O15 tight-locus rigidity through finite
+equioscillation plus blind sidecars, O12 off-grid bulk survivor positivity /
+Part A, O10 hp0cap, O11 corrected witnessG2/rhoGlob, O13 gK8 concentration,
+O14 doublet R-tail uniformity, and O09 residual finite-address /
+observer-gluing.  The old `rhoStar=2/7` path is marked false.  The proof route
+to prioritize is:
+
+```text
+prove O10 or O13
+  -> consume O06
+  -> prove O11/O12
+  -> use O00
+  -> LRC14
+```
+
+Parallel route: prove O15 full rigidity from finite equioscillation,
+blind residue/height sidecars, and the binding/covering split, then use
+HYP-3250's uniform-margin split on the complement.
+Tournament Analysis uses proof obligations as vertices, and the priority path
+starts `O15 -> O12 -> O10 -> O11 -> O13 -> O09`.
+
+Namespace repair in the same session: concurrent S81 had already claimed
+HYP-3253, so the earlier contact-holonomy packet is HYP-3267/T1347/LTI-347/
+LTT-247.  S81 remains HYP-3253.  A later rebase showed S82 owns HYP-3255,
+the unit-nullspace scout owns HYP-3257/T1348/LTI-348/LTT-248, and the
+binding/covering census split owns HYP-3258; this ledger is therefore
+HYP-3266/T1349/LTI-349/LTT-249.  HYP-3255 sharpens O12 to off-grid bulk
+positivity, while HYP-3257/HYP-3258/HYP-3259/HYP-3265 sharpen O15's rigidity interface.
 
 ## mac-mini-2026-06-28-S81 -- TIGHTENING the rigor: construction RIGOROUS (unit witnesses) + bounded margin RIGOROUS (delta~0.0026); PULL: equidistribution's clean 1/7-removal fails for resonant v (survivor-positive, not 6/7)
 
@@ -157,14 +206,14 @@ Owner: more unifying frames; keep pushing to a proof; capture the AP-equioscilla
 - UNIFIES CASE SPLIT: f_S(a/14)<1/14 <=> some s==0 mod14. [14-free: M>=1/14 via units = THM-523 q=14 as equioscillation] + [tight: units global max, no higher peak = census] + [covering: units killed = multi-far floor HYP-3132].
 - q-UNIFORM (3248): n=2q => phi(n)=q-1 units, (q-1)/2 pairs. LRC(2q) tight = Chebyshev extremal on (Z/2q)*, dim (q-1)/2 = mac-mini-S79 index (p-1)/2 (Borsuk-Ulam degree) -- CONVERGENCE (equioscillation dim = topological index).
 NET: q-uniform unifying frame reproducing THM-523, unifying the case split, tying binding-pairs/complement/q-uniformity, converging with mac-mini's index frame. Reflection: lonely-runner-as-chebyshev-equioscillation. Multi-far floor (HYP-3132) preserved.
-## codex-2026-06-28 -- HYP-3253 contact-holonomy curvature sheaf
+## codex-2026-06-28 -- HYP-3267 contact-holonomy curvature sheaf
 
 Owner asked for more creative unifying frames for the LRC and a proof push.
 After rebasing over the new HYP-3246 index-theorem frame, I first repaired the
 local namespace collision by renumbering the monad-explorer shell-lag sidecar
 to HYP-3247.  After a later rebase exposed HYP-3248 as the q-uniform
 Chebyshev frame and HYP-3249 as the bold index-prediction / forcing-gap frame,
-this packet was renumbered to HYP-3253/T1347/LTI-347/LTT-247:
+this packet was renumbered to HYP-3267/T1347/LTI-347/LTT-247:
 
 ```text
 global section / index     = HYP-3246 index-degree frame
@@ -178,7 +227,7 @@ New script:
 Stored result:
 `05-knowledge/results/lrc14_contact_holonomy_curvature_codex_20260628.out`.
 Created hypothesis:
-`05-knowledge/hypotheses/HYP-3253-lrc14-contact-holonomy-curvature-sheaf.md`.
+`05-knowledge/hypotheses/HYP-3267-lrc14-contact-holonomy-curvature-sheaf.md`.
 Reflection:
 `07-reflections/lrc14-contact-holonomy-curvature-sheaf-codex-20260628.md`.
 
@@ -211,7 +260,7 @@ or named residual debt compatible with the HYP-3246 odd index.
 ```
 
 Post-rebase integration: HYP-3249's P2 says the naive Borsuk-Ulam map can
-force a runner collision at the observer rather than a lonely point.  HYP-3253
+force a runner collision at the observer rather than a lonely point.  HYP-3267
 is therefore explicitly a local guardrail: the index route must retain
 cover-hole / endpoint-cell / contact-holonomy data so a topological zero cannot
 become the wrong zero.
@@ -220,7 +269,7 @@ Second post-rebase integration: origin/main added HYP-3250/HYP-3251/HYP-3252
 while this packet was local.  The contact-holonomy frame is now downstream of
 that verdict: HYP-3250 supplies the finite-tight-locus plus uniform-margin
 proof split, while HYP-3251/HYP-3252 warn that the index/equioscillation count
-describes the saddle rather than supplying S-dependent proof content.  HYP-3253
+describes the saddle rather than supplying S-dependent proof content.  HYP-3267
 therefore records local curvature data needed before a lag/residue packet can
 be assigned to the tight endpoint chamber, the margin/floor side, or named
 residual debt.
@@ -228,7 +277,7 @@ residual debt.
 Third post-rebase integration: the new reflection
 `the-index-theorem-describes-the-floor-proves.md` points past the failed
 p-mod-4/sign-cancellation bridge toward a `Q(sqrt(-7))` reorganization of the
-floor.  The HYP-3253 testable handoff is to pass floor packets through the
+floor.  The HYP-3267 testable handoff is to pass floor packets through the
 `zeta_7` contact-holonomy lift first, then ask whether the signed floor terms
 become positive or finite-chamber exact in the `Q(sqrt(-7))` basis.
 

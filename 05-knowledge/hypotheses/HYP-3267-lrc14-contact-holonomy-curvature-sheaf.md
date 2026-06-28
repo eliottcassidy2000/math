@@ -1,5 +1,5 @@
 ---
-id: HYP-3253
+id: HYP-3267
 title: LRC14 contact-holonomy curvature sheaf
 status: EVIDENCE / exact bounded-bank scout plus proof-frame synthesis; not an LRC14 proof
 source: codex-2026-06-28
@@ -10,6 +10,12 @@ script: 04-computation/lrc14_contact_holonomy_curvature_codex_20260628.py
 result: 05-knowledge/results/lrc14_contact_holonomy_curvature_codex_20260628.out
 reflection: 07-reflections/lrc14-contact-holonomy-curvature-sheaf-codex-20260628.md
 related:
+  - HYP-3265
+  - HYP-3259
+  - HYP-3258
+  - HYP-3257
+  - HYP-3255
+  - HYP-3254
   - HYP-3252
   - HYP-3251
   - HYP-3250
@@ -28,7 +34,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3253: LRC14 Contact-Holonomy Curvature Sheaf
+# HYP-3267: LRC14 Contact-Holonomy Curvature Sheaf
 
 ## Claim
 
@@ -40,6 +46,8 @@ calibrated boundary        = HYP-3246/HYP-3245 unit equioscillation
 local quotient curvature   = HYP-3247 shell-lag commutator
 connection repair          = zeta_7 contact holonomy
 frontier split             = HYP-3250 finite tight-locus + uniform margin
+unit contact graph         = HYP-3265 six-touch case split
+field floor sidecar        = HYP-3254 Qsqrt(-7) organization
 ```
 
 The new bounded-bank evidence is that HYP-3247's ordered contact sidecar has a
@@ -132,7 +140,7 @@ lag-space scalarization from erasing the endpoint coordinate that carries the
 index.  It also absorbs HYP-3249's P2 warning: the naive odd map may produce a
 runner at the observer rather than a lonely point, so the proof map must keep
 cover-hole / endpoint-cell data rather than only a signed nearest-runner
-coordinate.  HYP-3253 supplies a local version of that guardrail: the
+coordinate.  HYP-3267 supplies a local version of that guardrail: the
 lag/residue quotient becomes legal only after the endpoint/contact holonomy is
 kept or an endpoint chamber names the missing coordinate.  It also tightens
 HYP-3245/HYP-3247: the shell-lag commutator is not just "positional"; on the
@@ -142,13 +150,16 @@ Post-rebase integration with HYP-3250/HYP-3251/HYP-3252 makes the role more
 specific.  HYP-3250 says the proof frontier should split into finite
 tight-locus rigidity plus a uniform-margin floor.  HYP-3251 and HYP-3252 say
 the index/equioscillation count describes the AP saddle but does not by itself
-perform the S-dependent proof.  Contact holonomy is therefore not a new global
-obstruction; it is a local sidecar for deciding whether a lag/residue packet
-belongs to the tight endpoint chamber, descends to the floor/margin side, or
-has named residual curvature debt.  The new reflection
-`the-index-theorem-describes-the-floor-proves.md` points the next bridge toward
-`Q(sqrt(-7))`; HYP-3253's `zeta_7` holonomy is the finite local coordinate
-that should be tested before trying to reorganize the floor in that field.
+perform the S-dependent proof.  HYP-3254 organizes the floor side in the
+Qsqrt(-7) field, HYP-3257/HYP-3258/HYP-3259 sharpen the rigidity side, and
+HYP-3265 gives the explicit unit-contact graph.  Contact holonomy is therefore
+not a new global obstruction; it is a local sidecar for deciding whether a
+lag/residue packet belongs to the tight endpoint/contact chamber, descends to
+the floor/margin side, or has named residual curvature debt.  The new
+reflection `the-index-theorem-describes-the-floor-proves.md` points the next
+bridge toward `Q(sqrt(-7))`; HYP-3267's `zeta_7` holonomy is the finite local
+coordinate that should be tested before trying to reorganize the floor in that
+field.
 
 ## Assumption Challenge
 

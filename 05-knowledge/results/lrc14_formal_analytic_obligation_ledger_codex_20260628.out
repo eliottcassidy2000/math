@@ -1,0 +1,123 @@
+HYP-3266 formal/analytic LRC(14) proof-obligation ledger
+==============================================================================
+obligations=18
+status_counts=CLOSED_LEAN:6, CLOSED_FINITE:3, FINITE_IMPORT:0, CONDITIONAL_GLUE:1, EVIDENCE_ONLY:1, OPEN_ANALYTIC:5, OPEN_RIGIDITY:1, FALSE_ROUTE:1
+
+SUMMARY: WHERE WE STAND
+- closed Lean glue/kernels: 6
+- exact finite closures/imports: 3
+- conditional Lean glue: 1
+- evidence-only proposed bridges: 1
+- open analytic obligations: 5
+- open rigidity obligations: 1
+- refuted/obsolete routes retained as warnings: 1
+
+PRIORITY HAMILTONIAN PATH
+  O15 -> O12 -> O10 -> O11 -> O13 -> O09 -> O06 -> O14 -> O07 -> O00 -> O16 -> O02 -> O04 -> O01 -> O08 -> O03 -> O05 -> O17
+
+OBLIGATION TABLE
+| id | status | layer | title | formal boundary | next analytic step |
+| --- | --- | --- | --- | --- | --- |
+| O00 | CLOSED_LEAN | terminal formal glue | Concrete Mreach compactness readout | LRCMreachConcrete.lonely_of_Mreach_ge; LRCFourteenSkeleton.lonely_of_Mreach_ge | None. |
+| O01 | CLOSED_LEAN | early-gate formal glue | Denominator-sieve saturation gates | lrc14_no_multiple_of_14; lrc14_all_odd; lrc14_counterexample_saturated | No action. |
+| O02 | CLOSED_FINITE | finite arithmetic, not yet Lean-native | Tight-locus construction by unit witnesses | No file-backed Lean theorem yet; S81 script verifies unit witnesses. | None for construction; it is elementary. |
+| O03 | CLOSED_FINITE | finite exact check | Bounded AP/GW single-swap margin | No Lean theorem; S81 finite check reports AP/GW only and gap about 0.00262. | Extend to exhaustive two-swap/multi-swap rigidity or route to O15. |
+| O04 | CLOSED_LEAN | exact rational Lean ledger | Cap RHS / pair-Pascal ledger | capRat_eq_pairPascalMassRat_dense; capLedgerK8/K9/K10 | None. |
+| O05 | CLOSED_LEAN | elementary cover-set Lean proof | Small-k cover-set pigeonhole and p0 monotonicity | LRCCoverBound.coverSet_mono; slowmu_coverSet_eq_zero_of_card_lt_six | No action. |
+| O06 | CLOSED_LEAN | event-measure Lean proof | Concrete witness floor from p0 wide bound | LRCWitnessFloorConcrete.witness_pos_from_wide_bound_margin and goodSet variants | This transfers the burden to O10/O12, not a separate analytic gap. |
+| O07 | CLOSED_LEAN | Lean arithmetic + Delsarte feasibility | gK8 per-shape Delsarte and arithmetic imports | gK8_per_shape_bound; gK8_dual_feasible; gK8_singlefar_arithmetic_checksum | Remaining scalar concentration is O13. |
+| O08 | CLOSED_FINITE | exact bounded k=8 computation | Contact-holonomy quotient-curvature repair | HYP-3267 file-backed script: zeta7 contact holonomy kills 62 mixed fibers. | Test if the same sidecar improves O10/O12 floor packets. |
+| O09 | CONDITIONAL_GLUE | conditional Lean packet theorem | Residual packet to finite-address / observer-gluing certificates | LRCProofFrontier.ResidualToFiniteAddressPackets; lrc14_from_residual_packet_frontier | Analytic/finiteness exits still come from O10/O12/O15. |
+| O10 | OPEN_ANALYTIC | Lean reduction isolates analytic residual | Wide cover bound hp0cap for binding k=8..12 | LRCCoverBound.slowmu_coverSet_lt_cap_of_decorrelation | Prove resonant/Tornheim decorrelation, possibly after contact-holonomy/Qsqrt(-7) lift. |
+| O11 | OPEN_ANALYTIC | Lean arithmetic ledger is closed; measure floor is open | Corrected witnessG2/rhoGlob floor | witness_large_floor_from_rhoGlob_lower_bound; need rhoGlobFloorRat k <= rhoGlob(shape) | Prove lower bounds for the actual shape classes, not just the rational ledger. |
+| O12 | OPEN_ANALYTIC | finite-Vmax Lean algebra exists; event-level implication open | Part A / off-grid bulk survivor positivity | thm527_partA_density_pos_implies_reach; LRCWitnessPartA finite arc-budget lemmas | Prove off-grid bulk survivor positivity; the 14-grid core is measure-zero and not the generic survivor. |
+| O13 | OPEN_ANALYTIC | Prop isolated; arithmetic subchecks closed | gK8 concentration extremality | gK8_concentration_extremality(LyVal,k,boundedMax) | Prove single-far periodic sup and multi-far decorrelation margin. |
+| O14 | OPEN_ANALYTIC | finite ledger closed; analytic tail open | Doublet R-tail uniform bound | doublet_Rtail_uniform_bound(Rtail) | Prove sup_M>=15 |Rtail(M)| <= 12*zeta(3)*N/pi^3. |
+| O15 | OPEN_RIGIDITY | necessary conditions known; sufficiency open | Full tight-locus rigidity via finite equioscillation sidecars | No Lean Prop yet; should become finite equioscillation + blind sidecars => AP/GW/dilation. | Prove the finite equioscillation/contact-graph system plus blind residue/height ledger has only AP/GW/dilations, or name the residual family. |
+| O16 | EVIDENCE_ONLY | no formal statement yet | Qsqrt(-7) signed-floor reorganization | No Lean boundary; current status is a suggested basis change. | Test whether O10/O12 residual terms become sign-definite after the basis change. |
+| O17 | FALSE_ROUTE | kept only as conditional glue | Obsolete rhoStar 2/7 route | obsoleteRhoStarUniformFloor and lrc14_from_obsolete_rhoStar_floor | No action. |
+
+OPEN CORE
+O15 Full tight-locus rigidity via finite equioscillation sidecars
+  status: OPEN_RIGIDITY
+  depends_on: O02, O03
+  formal: State a finite normalized rigidity theorem with explicit normalizer and sidecar fields.
+  analytic: Prove the finite equioscillation/contact-graph system plus blind residue/height ledger has only AP/GW/dilations, or name the residual family.
+O12 Part A / off-grid bulk survivor positivity
+  status: OPEN_ANALYTIC
+  depends_on: O06, O11
+  formal: State the exact finite-ruler GOOD arcCount bound used by S81.
+  analytic: Prove off-grid bulk survivor positivity; the 14-grid core is measure-zero and not the generic survivor.
+O10 Wide cover bound hp0cap for binding k=8..12
+  status: OPEN_ANALYTIC
+  depends_on: O04, O05, O06
+  formal: Create explicit Prop for p0_decorr and exact finite Q tables.
+  analytic: Prove resonant/Tornheim decorrelation, possibly after contact-holonomy/Qsqrt(-7) lift.
+O11 Corrected witnessG2/rhoGlob floor
+  status: OPEN_ANALYTIC
+  depends_on: O06
+  formal: Replace opaque witnessG2/rhoGlob by the concrete goodSet measure where possible.
+  analytic: Prove lower bounds for the actual shape classes, not just the rational ledger.
+O13 gK8 concentration extremality
+  status: OPEN_ANALYTIC
+  depends_on: O07, O10
+  formal: Formalize r=0 finite, r=1 periodmax, r>=2 margin as separate Props.
+  analytic: Prove single-far periodic sup and multi-far decorrelation margin.
+O14 Doublet R-tail uniform bound
+  status: OPEN_ANALYTIC
+  depends_on: O07
+  formal: Define Rtail from the Python finite scout in Lean-friendly form.
+  analytic: Prove sup_M>=15 |Rtail(M)| <= 12*zeta(3)*N/pi^3.
+O16 Qsqrt(-7) signed-floor reorganization
+  status: EVIDENCE_ONLY
+  depends_on: O10, O12
+  formal: Define the signed floor coefficients in a Qsqrt(-7) basis.
+  analytic: Test whether O10/O12 residual terms become sign-definite after the basis change.
+
+LEAN-FACING NAMES TO KEEP GREEN
+  - LRCMreachConcrete.lonely_of_Mreach_ge
+  - LRCFourteenSkeleton.lrc14_from_witness_floor_cases_given_nodes
+  - LRCWitnessFloorConcrete.goodSet_witness_margin_from_wide_bound
+  - LRCCoverBound.slowmu_coverSet_lt_cap_of_decorrelation
+  - LRCWitnessPartA.finite_witness_pos_from_goodSet_margin_uniform_arc_bound_shapes
+  - LRCProofFrontier.lrc14_from_residual_packet_frontier
+  - LRCFourteenSkeleton.gK8_concentration_extremality
+  - LRCFourteenSkeleton.doublet_Rtail_uniform_bound
+
+TOURNAMENT ANALYSIS
+vertices=proof_obligations
+pairwise_observable=downstream proof mass unlocked with named formal boundary
+switch_gauge=A beats B iff priority(A)>priority(B)
+score_hist={0:1, 1:1, 2:1, 3:1, 4:1, 5:1, 6:1, 7:1, 8:1, 9:1, 10:1, 11:1, 12:1, 13:1, 14:1, 15:1, 16:1, 17:1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+edge_count=153
+edge_flips_against_raw_runner_gauge=not_applicable
+hamiltonian_path_count=1
+tie_hamiltonian_path=O15 -> O12 -> O10 -> O11 -> O13 -> O09 -> O06 -> O14 -> O07 -> O00 -> O16 -> O02 -> O04 -> O01 -> O08 -> O03 -> O05 -> O17
+
+ASSUMPTION CHALLENGE
+alternate_vertices_considered=runners,gaps,fixed_sections,section_boundaries,wall_crossings,residues,cover_arcs,Fourier_modes,matroid_cells,proof_obligations
+chosen_vertices=proof_obligations
+preserved_predicate=conditional route to Mreach>=1/14 and LRC14
+destroyed_information=row geometry, endpoint-owner cells, and exact residual family labels; these must re-enter through O08/O09/O10/O12/O15 sidecars
+
+DEPENDENCY EDGES
+  O02 -> O03
+  O04 -> O06
+  O04 -> O08
+  O01 -> O09
+  O05 -> O09
+  O04 -> O10
+  O05 -> O10
+  O06 -> O10
+  O06 -> O11
+  O06 -> O12
+  O11 -> O12
+  O07 -> O13
+  O10 -> O13
+  O07 -> O14
+  O02 -> O15
+  O03 -> O15
+  O10 -> O16
+  O12 -> O16

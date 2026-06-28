@@ -1,7 +1,7 @@
-HYP-3253 contact-holonomy / quotient-curvature scout
+HYP-3267 contact-holonomy / quotient-curvature scout
 ==============================================================================
 bank=anchored bounded k=8 rows E={0} union A, A subset [1,14], |A|=7
-rows=3432 elapsed_seconds=79.636
+rows=3432 elapsed_seconds=78.806
 lag+residue mixed_shell_fibers=62 mixed_rows=124
 mixed_fiber_size_hist={2: 62}
 contact_support_size_hist_on_mixed={1: 6, 2: 16, 3: 58, 4: 26, 5: 18}

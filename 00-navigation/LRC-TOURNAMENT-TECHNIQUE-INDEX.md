@@ -183,6 +183,11 @@ obligations, and proof-carrier interfaces.
   use LTT-173 after LTT-172/LTT-171/LTT-170/LTT-166/LTT-165/LTT-162/LTT-160 and make proof
   interfaces the vertices.  A fixed canary/filler coordinate must give an
   exact transversal, or the collision fiber is named as restoration debt.
+- Need to know exactly how close the LRC14 proof is:
+  use LTT-249 and make proof obligations, theorem interfaces, analytic
+  inequalities, finite packets, and false-route markers the vertices.  Do not
+  rank by inspiration alone; require each edge to say which downstream theorem
+  becomes formal when the source obligation closes.
 - Need to decide whether a quotient/compression is legally usable at all:
   use LTT-174 after LTT-173/LTT-171/LTT-170/LTT-166/LTT-163/LTT-162/LTT-161
   and make functions, fibers, sidecars, and resolvent variables the
@@ -7220,7 +7225,7 @@ quotient_legality_status
 
 ## LTT-247: Contact-Holonomy Curvature Tournament
 
-- **Created by:** codex-2026-06-28 for HYP-3253/T1347.
+- **Created by:** codex-2026-06-28 for HYP-3267/T1347.
 - **Vertices:** proof carriers rather than runners: `raw_runner_vertices`,
   `lag_plus_residue_histogram`, `gap_multiset`, `position_power_sums`,
   `ordered_contact_support`, `zeta7_contact_holonomy`,
@@ -7235,7 +7240,7 @@ quotient_legality_status
   endpoint_arrangement_cell -> zeta7_contact_holonomy ->
   ordered_contact_support -> position_power_sums -> gap_multiset ->
   lag_plus_residue_histogram -> raw_runner_vertices`.
-- **LRC use:** HYP-3253 turns the HYP-3247 shell-lag commutator from a raw
+- **LRC use:** HYP-3267 turns the HYP-3247 shell-lag commutator from a raw
   controlled-forgetting warning into a cyclotomic holonomy repair over the
   exact bounded bank.  The tournament ranks the connection coordinate below
   full endpoint cells/global index packets but above raw contact support and
@@ -7248,9 +7253,10 @@ quotient_legality_status
 - **Next hook:** instantiate the same tournament on primitive residual packets
   and require each edge to declare whether curvature descends, is killed by
   contact holonomy, lifts to endpoint chambers, or emits named debt.
-- **Pointers:** HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248,
-  HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
-  HYP-3239, HYP-3228, HYP-3204, LTI-347, T1347, OPEN-Q-108.
+- **Pointers:** HYP-3267, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255,
+  HYP-3254, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248, HYP-3247,
+  HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3239,
+  HYP-3228, HYP-3204, LTI-347, T1347, OPEN-Q-108.
 
 ## LTT-248: Unit Nullspace Proof-Carrier Tournament
 
@@ -7275,3 +7281,38 @@ quotient_legality_status
   after the blind ledger and safe-component/covering branches are glued in.
 - **Pointers:** HYP-3260, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242,
   HYP-3241, HYP-3132, HYP-2909, THM-523, LTI-348, T1348, OPEN-Q-108.
+
+## LTT-249: Formal/Analytic Proof-Obligation Tournament
+
+- **Created by:** codex-2026-06-28 for HYP-3266/T1349.
+- **Vertices:** proof obligations rather than runners: Lean-closed glue,
+  finite-import packets, conditional bridge nodes, evidence-only ideas, open
+  analytic inequalities, rigidity claims, and false routes.
+- **Pairwise observable:** downstream proof mass unlocked after the obligation
+  closes, with named theorem boundary, formal import boundary, and analytic
+  assumption boundary.
+- **Switch/gauge:** `A -> B` iff closing `A` gives a cleaner or more upstream
+  formal implication to LRC14 than closing `B`; ties follow the declared proof
+  DAG rather than numerical novelty.
+- **Fingerprint:** `18` vertices, score histogram `0..17`, directed 3-cycles
+  `0`, singleton SCCs, edge flips `0`, Hamiltonian path count `1`.
+- **Tie Hamiltonian path:** `O15 -> O12 -> O10 -> O11 -> O13 -> O09 -> O06 ->
+  O14 -> O07 -> O00 -> O16 -> O02 -> O04 -> O01 -> O08 -> O03 -> O05 -> O17`.
+- **LRC use:** HYP-3266 identifies the exact frontier.  Closed nodes include
+  Mreach compactness, denominator-sieve saturation, cap/pair-Pascal algebra,
+  small-k cover/p0 monotonicity, concrete goodSet/safeSet witness-floor
+  readout, gK8 finite imports, unit-witness construction, AP/GW bounded
+  single-swap margin, and contact-holonomy quotient-curvature repair.  Open
+  nodes are hp0cap, corrected witnessG2/rhoGlob, off-grid bulk survivor
+  positivity/Part A, gK8 concentration extremality, doublet R-tail uniformity,
+  residual finite-address/observer-gluing, and full tight-locus rigidity.
+  The `rhoStar=2/7` route is explicitly false.
+- **Next hook:** formalize theorem statements for O12, O10, and O13 first.
+  HYP-3255/S82 sharpens O12 to off-grid bulk survivor positivity.  In
+  parallel, prove O15 rigidity through HYP-3257's unit-blind ledger,
+  HYP-3258/HYP-3259's census/manifold split, HYP-3265's contact graph, and
+  HYP-3267's local holonomy sidecar, then use HYP-3250's margin for the
+  non-tight complement.
+- **Pointers:** HYP-3266, HYP-3267, HYP-3265, HYP-3259, HYP-3258, HYP-3257,
+  HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3247, HYP-3246,
+  HYP-3130, HYP-3129, THM-577, LTI-349, T1349, OPEN-Q-108.

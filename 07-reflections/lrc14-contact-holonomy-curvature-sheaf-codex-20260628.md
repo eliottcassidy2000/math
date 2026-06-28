@@ -27,7 +27,7 @@ cyclotomic positional.
 
 That is why the sheaf language is useful.  HYP-3246 wants a global nonzero
 index.  HYP-3245 gives a lag/autocorrelation projection.  HYP-3247 says that
-projection has curvature.  HYP-3253 identifies the small holonomy coordinate
+projection has curvature.  HYP-3267 identifies the small holonomy coordinate
 that kills that curvature on the bounded bank.
 
 The proof target becomes concrete:
@@ -46,7 +46,7 @@ kept when lag space talks to the shell/index packet.
 
 The newest HYP-3249 warning makes this sharper.  A naive odd
 Borsuk-Ulam map can vanish at a runner collision with the observer, which is
-the opposite of a lonely witness.  The HYP-3253 answer is not that holonomy
+the opposite of a lonely witness.  The HYP-3267 answer is not that holonomy
 proves the global theorem; it says the proof map must keep cover-hole or
 endpoint-cell data whenever it transports the index.  Losing that coordinate is
 exactly how a topological zero can become the wrong zero.

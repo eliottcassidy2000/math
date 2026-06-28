@@ -25,6 +25,36 @@ height moves cannot create new strict components outside the existing atlas or
 route them through the already-good safe-component / covering-floor branches.
 -> HYP-3260, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242, HYP-3241,
 HYP-3132, HYP-2909, THM-523, T1348, LTI-348, LTT-248, OPEN-Q-108.
+**OPEN-Q-108 HYP-3266 formal/analytic proof-obligation ledger addendum:**
+HYP-3266 turns the current LRC14 frontier into an auditable ledger rather than
+another unifying metaphor.  The ledger has `18` obligations with status counts
+`CLOSED_LEAN=6`, `CLOSED_FINITE=3`, `CONDITIONAL_GLUE=1`, `EVIDENCE_ONLY=1`,
+`OPEN_ANALYTIC=5`, `OPEN_RIGIDITY=1`, and `FALSE_ROUTE=1`.
+
+Closed Lean/event glue: Mreach compactness, denominator-sieve saturation,
+pair-Pascal/cap algebra, small-k cover/p0 monotonicity, the concrete
+goodSet/safeSet witness-floor readout, and gK8 finite imports.  Closed finite
+or exact computational packets: unit-witness construction, bounded AP/GW
+single-swap margin, and contact-holonomy quotient-curvature repair.
+
+Open theorem-facing cores: O15 full tight-locus rigidity; O12 off-grid bulk
+survivor positivity / Part A; O10 hp0cap wide cover bound for binding
+`k=8..12`; O11 corrected witnessG2/rhoGlob floor; O13 gK8 concentration
+extremality; O14 doublet R-tail uniformity; and O09 residual finite-address /
+observer-gluing.  The obsolete O17 `rhoStar=2/7` route is false.
+
+Open task: turn O12, O10, and O13 into exact theorem statements with formal
+hypotheses, because the current shortest proof path is
+`O15 -> O12 -> O10 -> O11 -> O13 -> O09`.  Parallel task: prove O15 rigidity
+from finite equioscillation plus blind residue/height sidecars and then let
+HYP-3250's uniform-margin split handle all non-tight rows.  Incoming HYP-3255
+sharpens O12 to the unit-grid core/off-grid bulk split; HYP-3257 warns that
+the unit frame has rank `3` and needs blind sidecars; HYP-3258 and HYP-3259
+split the census/manifold rigidity; HYP-3265 supplies the contact graph; and
+HYP-3267 supplies the local holonomy sidecar. -> HYP-3266, HYP-3267,
+HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3254, HYP-3253,
+HYP-3250, HYP-3248, HYP-3247, HYP-3246, HYP-3130, HYP-3129, THM-577,
+T1349, LTI-349, LTT-249, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3238 even/odd positive/negative duality bridge addendum:**
 HYP-3238 executes the proof bridge joining HYP-3236's positive Green graph,
@@ -5924,7 +5954,7 @@ HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3204, HYP-3203,
 HYP-3202, HYP-3138, LTI-345, LTT-245, T1345, OPEN-Q-108.
 ## OPEN-Q-108 addendum (codex-2026-06-28): contact-holonomy curvature repair
 
-HYP-3253 reframes the HYP-3247 shell-lag commutator as curvature of a quotient
+HYP-3267 reframes the HYP-3247 shell-lag commutator as curvature of a quotient
 square:
 
 ```text
@@ -6014,3 +6044,8 @@ packet into the same controlled-forgetting law: they are useful columns or
 energy coordinates, not terminal replacements for the finite chamber proof. -> HYP-3300, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243,
 HYP-3238, HYP-3236, HYP-3225, HYP-3108, HYP-3069, HYP-3070, HYP-3048,
 LTI-346, LTT-246, T1346, OPEN-Q-108.
+ambient index description for the S-dependent proof? -> HYP-3267, HYP-3265,
+HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3254, HYP-3252, HYP-3251,
+HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245, HYP-3244,
+HYP-3243, HYP-3242, HYP-3241, HYP-3239, HYP-3228, HYP-3204, LTI-347,
+LTT-247, T1347, OPEN-Q-108.

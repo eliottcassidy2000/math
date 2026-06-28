@@ -100,6 +100,7 @@ even-odd positive-negative bridge / Fejer-SOS magnitude / Brouwer-Borsuk sign si
 spectral payload cube / AP normal cone / Toeplitz moment-cone curvature / covariance layers / finite trap discharge
 green-lorentzian trap fingerprints / Toeplitz boundary chart / effective-resistance bottlenecks / conditional-Rayleigh debt / rank-2 pair-Plucker sidecars
 equioscillation-autocorrelation atlas / Fejer triangular AP law / outward-lag transport / Johnson-pair clock guardrail / typed motif sidecars
+formal-analytic proof-obligation ledger / Lean-closed glue / finite-closed packets / open analytic cores / rigidity node / false-route marker
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -5411,7 +5412,7 @@ OPEN-Q-108.
 
 ## LTI-347: Contact-Holonomy Curvature Sheaf
 
-Created by codex-2026-06-28 for HYP-3253/T1347.
+Created by codex-2026-06-28 for HYP-3267/T1347.
 
 Carrier / vertex set: quotient squares, contact holonomy coordinates,
 endpoint arrangement cells, and index packets; not raw runners.
@@ -5427,7 +5428,7 @@ quotient.
 Pairwise observable / gauge: compare two carriers by whether they kill
 lag/residue-to-shell curvature while naming the coordinate they forget.
 
-LRC use: HYP-3253 identifies the HYP-3247 shell-lag commutator as local
+LRC use: HYP-3267 identifies the HYP-3247 shell-lag commutator as local
 curvature of the lag/residue quotient.  Over the exact bounded k=8 bank,
 `(ordinary lag profile, residue histogram mod 7)` has `62` mixed HYP-3228
 shell-magic fibers; support size, gap multiset, min/max position, ordered gap
@@ -5456,9 +5457,10 @@ or endpoint/finite-chamber lift
 or named residual debt.
 ```
 
-Pointers: HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248,
-HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
-HYP-3239, HYP-3228, HYP-3204, LTT-247, T1347, OPEN-Q-108.
+Pointers: HYP-3267, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255,
+HYP-3254, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248, HYP-3247,
+HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3239,
+HYP-3228, HYP-3204, LTT-247, T1347, OPEN-Q-108.
 
 ## LTI-348: Unit Equioscillation Nullspace Packet
 
@@ -5490,3 +5492,59 @@ Chebyshev unit frame to the Q108 safe-component atlas.
 
 Pointers: HYP-3260, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242,
 HYP-3241, HYP-3132, HYP-2909, THM-523, LTT-248, T1348, OPEN-Q-108.
+
+## LTI-349: Formal/Analytic Proof-Obligation Ledger
+
+Created by codex-2026-06-28 for HYP-3266/T1349.
+
+Carrier / vertex set: named proof obligations, formal theorem interfaces,
+finite packets, analytic inequalities, rigidity statements, and false-route
+markers; not raw runners, arcs, or scalar row statistics.
+
+Preserved LRC predicate: whether the current proof route can actually derive
+`LRC14`, which theorem node supplies the implication, and which analytic or
+finite assumption remains unproved.
+
+Destroyed information if scalarized: the difference between Lean-closed glue,
+finite-imported computations, conditional theorem interfaces, heuristic
+evidence, open analytic inequalities, rigidity claims, and routes already
+known false.
+
+Pairwise observable / gauge: compare two obligations by downstream theorem
+mass unlocked after it is closed, penalizing obligations whose hypotheses are
+not yet formal theorem statements or whose payload has only bounded evidence.
+
+LRC use: HYP-3266 makes the frontier auditable.  The ledger has `18`
+obligations with status counts `CLOSED_LEAN=6`, `CLOSED_FINITE=3`,
+`CONDITIONAL_GLUE=1`, `EVIDENCE_ONLY=1`, `OPEN_ANALYTIC=5`,
+`OPEN_RIGIDITY=1`, and `FALSE_ROUTE=1`.  The live route is now:
+
+```text
+prove O10 hp0cap or O13 gK8 concentration
+  -> consume O06 concrete witness floor
+  -> prove O11/O12 witnessG2 and off-grid bulk survivor positivity
+  -> use O00 Mreach compactness
+  -> LRC14.
+```
+
+Parallel route: prove O15 tight-locus rigidity from finite equioscillation plus
+HYP-3257 blind residue/height sidecars, HYP-3258/HYP-3259 census/manifold
+splits, and HYP-3265 contact graph, then apply the HYP-3250 uniform-margin
+split to all non-tight rows.  The obsolete `rhoStar=2/7` route is marked false
+and should not be revived without a new statement.
+
+Tournament fingerprint: proof obligations are vertices.  The current gauge is
+transitive, with score histogram `0..17`, no directed `3`-cycles, singleton
+SCCs, edge flips `0`, and one Hamiltonian path beginning
+`O15 -> O12 -> O10 -> O11 -> O13 -> O09`.
+
+Next hook: turn each open analytic node into either a Lean-facing theorem
+interface with exact hypotheses or a finite verified import with explicit
+coverage limits.  Start with O12/O10/O13; they unlock the most proof mass.
+Read incoming HYP-3255/S82 as the O12 formulation and HYP-3257/HYP-3258/
+HYP-3259/HYP-3265 as the O15 formulation.  Use HYP-3267 as the local contact
+holonomy sidecar and HYP-3254 only for the Qsqrt(-7) floor sidecar.
+
+Pointers: HYP-3266, HYP-3267, HYP-3265, HYP-3259, HYP-3258, HYP-3257,
+HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3247, HYP-3246,
+HYP-3130, HYP-3129, THM-577, LTT-249, T1349, OPEN-Q-108.

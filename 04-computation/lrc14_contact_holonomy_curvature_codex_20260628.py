@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HYP-3253 scout: contact holonomy as quotient-curvature repair.
+"""HYP-3267 scout: contact holonomy as quotient-curvature repair.
 
 HYP-3246 frames LRC(14) as an index/equioscillation problem, HYP-3248 makes
 the Chebyshev boundary q-uniform, HYP-3249 warns that the naive odd map can
@@ -166,7 +166,7 @@ def main() -> None:
     elapsed = time.time() - start
     mixed = mixed_ac_hist_fibers(rows)
 
-    print("HYP-3253 contact-holonomy / quotient-curvature scout")
+    print("HYP-3267 contact-holonomy / quotient-curvature scout")
     print("=" * 78)
     print("bank=anchored bounded k=8 rows E={0} union A, A subset [1,14], |A|=7")
     print(f"rows={len(rows)} elapsed_seconds={elapsed:.3f}")
