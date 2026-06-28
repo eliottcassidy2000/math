@@ -44,6 +44,43 @@ single-arc peeling (Phi_1 collapse), three-gap kernel (Phi_7 Diophantine), momen
 (HYP-1881). The whole LRC(14) hardness = the single Phi_7 factor atop principal (x-1)^depth cell growth.
 NOT a proof; precisely names + extends the recursion family (the three modes = the first cyclotomic factors;
 the apex Phi_7 = the irreducible one carrying the difficulty).
+## codex-2026-06-28 -- HYP-3233 signed address chart-change sheaf
+
+User prompt: compare and extend the `A+B+C-D-E-F+G` recursion with the even
+`A+B-C`, the odd `A+B-C+D-E-F+G`, and any related concepts found in the repo.
+
+Added `05-knowledge/hypotheses/HYP-3233-signed-address-chart-change-recursion-sheaf.md`
+and reflection
+`07-reflections/signed-address-chart-change-sheaf-for-the-three-recursion-modes-codex-20260628.md`.
+Navigation updated with T1331, LTI-331, LTT-231, an OPEN-Q-108 chart-change
+legality addendum, and a signed-address addendum to `00-navigation/LRC-LENS-MAP.md`.
+
+Core synthesis: the three signed recurrences are local charts of one signed
+address sheaf, not global letter formulas.  Full `A+B+C-D-E-F+G` is the
+THM-442 full-staircase `B3` Mobius chart; even `A+B-C` is the THM-549/550
+complement-folded `B2` Eisenstein edge and matches HYP-3232's pure modulus
+fold while the cap kernel is scale-covariant; odd prompt-order
+`A+B-C+D-E-F+G` is the Legendre/`chi_7` word, but the corrected Venn geometry
+is `A+B+D-C-E-F+G` with corners `A,D,B`.  The same-size `C-D` cancellation is
+chart-change debt, not missing structure.
+
+Related concepts integrated: HYP-3231 scale-normal recursion, HYP-3232
+Mobius/Eisenstein/Legendre apex interlock, HYP-3230 three-gap cap kernel,
+HYP-3216 moment-depth ladder, HYP-2899 product-Mobius denominator ledger,
+HYP-2901/2902 parity-local address sheaf, HYP-2681 cube-root phase packets,
+HYP-2704 survival-depth quotient, THM-553 tile addresses, and HYP-3004
+dichotomy-recursion mode atlas.
+
+Proposed packet fields: `signed_address_chart`, `local_slot_basis`,
+`slot_size_vector`, `character_word`, `chart_change_map`,
+`cancelled_same_size_slots`, `fixed_line_or_apex_coordinate`,
+`apex_break_defect`, `denominator_exact_period_packet`,
+`moment_depth_target`, and `chart_change_discharge_or_debt`.
+
+No proof of LRC14 is claimed.  Next hook: add these chart fields to a
+HYP-2963/HYP-3083 packet sample and prove each chart change descends, is
+sidecar-restored, is dual-annihilated, stops at fixed-line/apex boundary, or
+emits named debt.
 
 ## mac-mini-2026-06-28-S75c -- INTERLOCKING recursions: the cap kernel is modulus-covariant down to the apex n/2=7, where it BREAKS (the three modes concentrate at the Eisenstein fold)
 

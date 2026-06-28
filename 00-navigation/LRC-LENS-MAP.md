@@ -42,6 +42,30 @@ scale_fiber_cocycle_status
 scale_normal_discharge_or_debt
 ```
 
+## Addendum 2026-06-28: Signed Address Chart-Change Lens
+
+HYP-3233 adds a chart-local reading of the recurring signed recursions.  The
+formulas
+
+```text
+A+B+C-D-E-F+G
+A+B-C
+A+B-C+D-E-F+G
+```
+
+are not global letter identities.  They are local charts over different
+carriers: the full Mobius `B3` staircase, the even Eisenstein `B2`
+complement-folded edge, and the odd Legendre Venn chart.  In the corrected
+odd geometry the formula is `A+B+D-C-E-F+G`, with corners `A,D,B`; the
+same-size `C-D` cancellation is chart-change debt and must remain as a
+sidecar before any scalar proof step.
+
+This lens preserves local slot ownership, fixed-line/apex coordinates,
+exact-period denominator packets, cube-root phase, survival-depth quotient
+data, and moment-depth targets.  It destroys global `A..G` identity and raw
+sign-word meaning unless the packet records `signed_address_chart`,
+`local_slot_basis`, `cancelled_same_size_slots`, and `apex_break_defect`.
+
 ## Central Readout
 
 The current evidence does not point to one decisive scalar, one universal

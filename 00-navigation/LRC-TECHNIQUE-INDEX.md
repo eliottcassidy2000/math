@@ -4673,3 +4673,55 @@ the same scale-normal recursion.
 
 Pointers: HYP-3231, HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-3162,
 HYP-2963, THM-573, THM-532, THM-407, LTT-230, T1330, OPEN-Q-108.
+
+## LTI-331: Signed Address Chart-Change Sheaf
+
+Objects:
+
+```text
+full_mobius_B3_chart
+even_eisenstein_B2_edge_chart
+odd_legendre_venn_chart
+product_divisor_mobius_chart
+cube_root_phase_chart
+survival_depth_quotient
+cap_kernel_modulus_chart
+```
+
+HYP-3233 upgrades the three signed recurrences into charted proof carriers.
+The technique is to attach a local slot basis before using any formula of the
+form `A+B+C-D-E-F+G`, `A+B-C`, or `A+B-C+D-E-F+G`.  The letters are not global:
+full Mobius, even Eisenstein, and odd Legendre charts preserve different
+coordinates and destroy different coordinates.
+
+Preserves: local generator slots, overlap-tax identity, complement fixed-line
+data, apex/fold coordinate, exact-period denominator packet, character word,
+moment-depth target, and scale-normal LRC predicate.
+
+Destroys if scalarized: global identity of `A..G`, the distinction between
+same-size `C` and `D` slots in the odd chart, sector/far-runner ownership,
+exact-period residue labels, and the apex-break defect.
+
+Packet fields:
+
+```text
+signed_address_chart
+local_slot_basis
+slot_size_vector
+character_word
+chart_change_map
+cancelled_same_size_slots
+fixed_line_or_apex_coordinate
+apex_break_defect
+denominator_exact_period_packet
+moment_depth_target
+chart_change_discharge_or_debt
+```
+
+Next hook: run a chart-change legality audit on HYP-2963/HYP-3083 packets.
+Each move full -> even -> odd -> survival/cap should be marked as descended,
+sidecar-restored, dual-annihilated, boundary-stopped, or named residual debt.
+
+Pointers: HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004,
+HYP-2902, HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553,
+THM-550, THM-549, THM-442, LTT-231, T1331, OPEN-Q-108.

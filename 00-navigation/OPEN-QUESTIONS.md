@@ -5402,3 +5402,46 @@ scale-normal recursion instead of separate proof technologies.
 
 -> HYP-3231, HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-2963, THM-573,
 THM-532, THM-407, LTI-330, LTT-230, T1330, OPEN-Q-108.
+
+## OPEN-Q-108 addendum (codex-2026-06-28): signed chart-change legality
+
+HYP-3233 identifies the three signed recurrences as local address charts:
+
+```text
+full Mobius:       A+B+C-D-E-F+G
+even Eisenstein:   A+B-C
+odd Legendre:      prompt A+B-C+D-E-F+G
+odd Venn geometry: A+B+D-C-E-F+G
+```
+
+Open question: can each chart transition used by the LRC14 proof route be
+made legal before scalarization?  The audit fields are:
+
+```text
+signed_address_chart
+local_slot_basis
+slot_size_vector
+character_word
+chart_change_map
+cancelled_same_size_slots
+fixed_line_or_apex_coordinate
+apex_break_defect
+denominator_exact_period_packet
+moment_depth_target
+chart_change_discharge_or_debt
+```
+
+The critical warning is the odd `C-D` cancellation: `C` and `D` have the same
+size but different chart roles.  If a proof collapses them before retaining
+the local Venn sidecar, it has lost exactly the geometry the half-tiling
+correction was meant to preserve.
+
+Subtarget: for a HYP-2963/HYP-3083 packet sample, prove every move among the
+full, even, odd, survival-depth, cube-root, exact-period, and cap-kernel
+charts either preserves the LRC predicate, reconstructs the lost coordinate,
+dual-annihilates it, stops at a fixed-line/apex boundary, or emits named
+residual debt.
+
+-> HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004, HYP-2902,
+HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553, THM-550, THM-549,
+THM-442, LTI-331, LTT-231, T1331, OPEN-Q-108.

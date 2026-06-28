@@ -6639,3 +6639,38 @@ quotient_legality_status
 - **Pointers:** HYP-3231, HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205,
   HYP-3162, HYP-2963, THM-573, THM-532, THM-407, LTI-330, T1330,
   OPEN-Q-108.
+
+## LTT-231: Signed Address Chart-Change Tournament
+
+- **Move:** Treat signed recursion charts as tournament vertices rather than
+  runners, arcs, or raw sign formulas.  Candidate vertices are
+  `scale_normal_packet_sheaf`, `cap_kernel_modulus_covariance`,
+  `odd_legendre_venn_chart`, `even_eisenstein_edge_chart`,
+  `full_mobius_B3_chart`, `product_divisor_mobius_chart`,
+  `cube_root_phase_chart`, `survival_depth_quotient`, and
+  `raw_scalar_sign_formula`.
+- **LRC use:** HYP-3233 says the three familiar formulas become proof-useful
+  only after their local slot basis and chart-change debt are named.  A chart
+  wins an edge when it preserves the LRC predicate, keeps local slots, exposes
+  same-size cancellations or fixed-line/apex singularities, and retains exact
+  denominator or moment-depth sidecars.
+- **Preserves:** signed local address, overlap-tax identity, fixed-line and
+  apex coordinates, exact-period packet capacity, cube-root phase, survival
+  depth, and terminal discharge/debt.
+- **Forgets / guardrail:** a raw sign word forgets which chart owns the
+  letters.  In particular, the odd `C-D` cancellation hides different local
+  slots and cannot be used as scalar simplification.
+- **Fingerprint:** synthesis tournament with score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, no directed 3-cycles, nine SCCs,
+  and one Hamiltonian path:
+  `scale_normal_packet_sheaf -> cap_kernel_modulus_covariance ->
+  odd_legendre_venn_chart -> even_eisenstein_edge_chart ->
+  full_mobius_B3_chart -> product_divisor_mobius_chart ->
+  cube_root_phase_chart -> survival_depth_quotient ->
+  raw_scalar_sign_formula`.
+- **Next hook:** Add chart fields to a HYP-2963/HYP-3083 sample and prove
+  every chart transition descends, is sidecar-restored, is dual-annihilated,
+  stops at a boundary, or emits named debt.
+- **Pointers:** HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004,
+  HYP-2902, HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553,
+  THM-550, THM-549, THM-442, LTI-331, T1331, OPEN-Q-108.

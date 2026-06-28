@@ -3741,3 +3741,33 @@ residual debt.
 
 -> HYP-3231, HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-2963, THM-573,
 THM-532, THM-407, LTI-330, LTT-230, OPEN-Q-108.
+
+## T1331: Signed address chart-change sheaf (codex-2026-06-28)
+
+HYP-3233 extends the scale-normal and interlocking-recursion synthesis by
+making the signed formulas chart-local.  The recurring strings
+`A+B+C-D-E-F+G`, even `A+B-C`, and odd `A+B-C+D-E-F+G` are not global
+letter formulas.  They are local signed-address charts:
+
+```text
+full Mobius B3 staircase
+even Eisenstein B2 complement-folded edge
+odd Legendre prompt word / corrected Venn chart A+B+D-C-E-F+G
+```
+
+The key correction is that odd slots `C` and `D` have the same size but
+different geometry: `C` is the `A cap B` edge, while `D` is a corner.  Their
+scalar cancellation is chart-change debt.  This connects THM-442,
+THM-549/550, HYP-2681 cube-root packets, HYP-2704 survival depth quotients,
+HYP-2899 product-Mobius exact-period packets, HYP-2901/2902 parity-local
+sheaves, HYP-3231 scale-normal recursion, and HYP-3232's apex fold break.
+
+Next hook: add `signed_address_chart`, `local_slot_basis`,
+`cancelled_same_size_slots`, `fixed_line_or_apex_coordinate`,
+`apex_break_defect`, and `moment_depth_target` to a HYP-2963/HYP-3083 packet
+sample, then prove each chart change preserves the LRC predicate,
+reconstructs the lost coordinate, or emits named debt.
+
+-> HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004, HYP-2902,
+HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553, THM-550, THM-549,
+THM-442, LTI-331, LTT-231, OPEN-Q-108.
