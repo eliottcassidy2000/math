@@ -1,7 +1,7 @@
 ---
 id: HYP-3144
 title: "LRC14 Worpitzky Pair-Function Three-Edge Quotient"
-status: RESERVED
+status: EVIDENCE
 date: 2026-06-27
 owner: codex-2026-06-27-S274
 tangent: T1209
@@ -28,7 +28,7 @@ anchors:
 
 # HYP-3144: LRC14 Worpitzky Pair-Function Three-Edge Quotient
 
-Status: RESERVED / executable scout pending; not a proof.
+Status: EVIDENCE / exact K3 quotient scout; not a proof.
 
 This lane claims the user's three-edge prompt as a finite guardrail for the
 LRC14 generating-function packet.  The model object is the quotient of
@@ -109,6 +109,135 @@ the HYP-3140 fiber-PGF curve to a single value too early.
 - `fiber_pgf_order_loss_alarm`
 - `tip_tail_commutator_shadow`
 
+## Scout Readout
+
+Script:
+`04-computation/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.py`.
+Stored output:
+`05-knowledge/results/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.out`.
+
+Exact labelled K3 enumeration gives class sizes `T=6`, `C=2`.  Single-edge
+flips give raw labelled counts:
+
+```text
+        to T  to C
+from T   12     6
+from C    6     0
+```
+
+Dividing by source-class size gives the quotient kernel:
+
+```text
+        to T  to C
+from T    2     1
+from C    3     0
+```
+
+The normalized Markov kernel has stationary distribution `{T:3/4,C:1/4}`,
+matching the labelled `6:2` class split, and eigenvalues `1` and `-1/3`
+(`3` and `-1` before normalization).  Edge roles split exactly as:
+
+```text
+adjacent_order_edge_returns_to_T: 12
+cycle_edge_breaks_to_T: 6
+long_source_sink_edge_exits_to_C: 6
+```
+
+Thus the transitive score class has one order-sensitive long-edge exit and two
+self-class adjacent-edge flips.  The score-class quotient preserves the
+transition multiplicities but forgets which edge is the unique exit.
+
+The three-coin quotient is isomorphic after identifying `T <-> mix` and
+`C <-> same`:
+
+```text
+        to mix  to same
+from mix    2        1
+from same   3        0
+```
+
+## Worpitzky / PGF Warning
+
+The forward-edge PGF audit is the sharpest evidence:
+
+```text
+class T aggregate_F=(1,4,1)
+  distinct F: (1,0,0)^1, (0,1,0)^4, (0,0,1)^1
+
+class C aggregate_F=(1,4,1)
+  distinct F: (1,2,0)^1, (0,2,1)^1
+```
+
+So both score classes have the same aggregate Worpitzky/Eulerian-looking
+payload `(1,4,1)`, while their state-level PGF curves differ.  This is the
+smallest executable witness for the user's "single value is never the whole
+PGF curve" rule.  The `n=3` Worpitzky identity
+
+```text
+x^3 = C(x,3) + 4 C(x+1,3) + C(x+2,3)
+```
+
+checks for `x=0..7`, but the scout warns not to identify that ascent basis
+with raw score-class counts.  It is the coordinate system for order-sensitive
+function payloads.
+
+## Pair-Function Readout
+
+Over samples `(2,3),(2,4),(4,2),(3,5),(5,3)`, `a+b` and `a*b` are invariant
+under swap in `5/5` cases.  `a^b` and `b^a` are swap-invariant only in `2/5`
+sample cases, exactly the accidental equality cases around `(2,4)` and
+`(4,2)`.  The proof packet therefore needs:
+
+```text
+unordered_pair_scalar_allowed: a+b, a*b
+ordered_pair_sidecar_required: a^b, b^a
+```
+
+LRC14 transfer: HYP-3140's `F_R(y)` / `F_R,Q(y)`, HYP-3141's tip/tail edge
+witness, HYP-3139's reflection-block leakage, and HYP-3143's packet order
+audit should all carry `pair_function_order_word` before scalarization.
+
+## Tournament Analysis
+
+Tournament Analysis used proof carriers rather than runners:
+
+```text
+pairwise_observable =
+  weighted retained proof payload:
+  exactness, order, curve, LRC transfer, quotient guard,
+  HYP-3143 compatibility, minimality
+binary_gauge =
+  A->B iff weighted payload score(A)>score(B);
+  ties use lexical Hamiltonian path
+score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1,1,1,1]
+hamiltonian_path_count=1
+selected_path =
+  ordered_pair_exponent_sidecar
+  -> three_edge_flip_kernel
+  -> worpitzky_ascent_payload
+  -> packet_subbasis_order_audit
+  -> fiber_pgf_conditional_curve
+  -> tip_tail_commutator_shadow
+  -> symmetric_sum_product_quotient
+  -> score_class_scalar
+  -> raw_single_value
+```
+
+## New Hypotheses
+
+1. The normalized `-1/3` antisymmetric K3 mode is a reusable order-loss
+   contraction signature for one-coordinate quotienting in HYP-3140 fiber
+   PGFs.
+2. HYP-3143's n=4 lower-order leakage is the K3 unique long-edge exit unfolded
+   by one more free bit.
+3. LRC14 scalar extremality should be phrased as a legal function-evaluation
+   theorem: symmetric functions may quotient; ordered exponent-like functions
+   require a sidecar or named debt.
+4. Worpitzky ascent payloads are the right coordinate for detecting when a PGF
+   equality at `x=1` hides an order-sensitive curve difference.
+
 ## Challenged Assumption
 
 Do not assume the tournament vertices are runners or raw arcs.  This scout will
@@ -120,11 +249,9 @@ the unique `T -> C` exit and whether a pair function is evaluated as `a^b` or
 
 ## Next Pull
 
-Implement the scout, store its output, then upgrade this file from RESERVED to
-EVIDENCE with:
-
-1. exact K3 labelled/quotient flip counts;
-2. exact coin-flip quotient isomorphism;
-3. pair-function survival table;
-4. Worpitzky `n=3` identity check;
-5. Tournament Analysis over proof carriers rather than runners.
+Attach `pair_function_order_word`, `ordered_pair_exponent_sidecar`,
+`three_edge_flip_kernel`, `worpitzky_ascent_payload`, `edge_flip_role`,
+`fiber_pgf_order_loss_alarm`, and `tip_tail_commutator_shadow` to the active
+HYP-3140/HYP-3141/HYP-3139/HYP-3143 packet rows.  Then test whether the
+`-1/3` antisymmetric mode or the class-level `aggregate_F=(1,4,1)` collision
+predicts which HYP-3140 fiber-PGF coefficient inequalities need a sidecar.

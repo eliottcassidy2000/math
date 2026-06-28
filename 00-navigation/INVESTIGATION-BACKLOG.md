@@ -17,7 +17,7 @@
 
 ## Lead codex-2026-06-27-S274: Worpitzky pair-function three-edge quotient
 
-**Status:** RESERVED / executable scout pending; not proof
+**Status:** EVIDENCE / exact K3 quotient scout; not proof
 (HYP-3144/T1209).
 
 Claimed files:
@@ -38,6 +38,14 @@ Pair-function reading: `a+b` and `a*b` survive unordered-pair quotient;
 scalarizing HYP-3140 fiber-PGF data, HYP-3141 tip/tail witnesses, HYP-3139
 reflection pages, or HYP-3143 exact-order packet bases, ask whether the target
 predicate is symmetric like sum/product or order-sensitive like exponentiation.
+
+Readout: stored scout verifies K3 class sizes `T=6,C=2`, quotient flip matrix
+`[[2,1],[3,0]]`, normalized eigenvalues `1,-1/3`, stationary split
+`{T:3/4,C:1/4}`, and the identical three-coin mix/same kernel.  The edge role
+ledger has `12` adjacent transitive self flips, `6` cycle-break flips, and `6`
+long source-sink exits.  The key Worpitzky/PGF warning is that both score
+classes aggregate to `F=(1,4,1)` while state-level PGF curves differ.  Thus a
+single value or even a class aggregate can erase the ordered function payload.
 
 Namespace: HYP-3144 / LTI-270 / LTT-168 / T1209 / OPEN-Q-108.
 

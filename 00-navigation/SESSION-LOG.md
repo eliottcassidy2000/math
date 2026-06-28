@@ -15,6 +15,20 @@ exact warning label before scalarizing HYP-3140 fiber-PGF coefficients,
 HYP-3141 edge tip/tail witnesses, HYP-3139 reflection-block leakage, or
 HYP-3143 exact-order packet bases.
 
+Scout completed in
+`04-computation/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.py`;
+stored output
+`05-knowledge/results/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.out`.
+Readout: labelled K3 class sizes `T=6,C=2`, quotient flip matrix
+`[[2,1],[3,0]]`, normalized eigenmodes `1,-1/3`, stationary distribution
+`{T:3/4,C:1/4}`, and the same matrix for three coin flips after quotienting
+to mix/same.  The transitive class loses the identity of its unique long
+source-sink exit edge.  The Worpitzky/PGF signal is stronger than expected:
+both score classes aggregate to `F=(1,4,1)`, but state-level F-curves differ,
+so class-level PGF equality can still erase order-sensitive proof data.
+Pair-function audit says `a+b` and `a*b` are unordered-safe, while `a^b` and
+`b^a` require an ordered sidecar except accidental equalities.
+
 ## codex-2026-06-27-S273 -- LRC14 generating-function payload atlas -- HYP-3137
 
 Reserved HYP-3137/T1202/LTI-263/LTT-161 for a generating-function pass after

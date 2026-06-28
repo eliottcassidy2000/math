@@ -5593,8 +5593,8 @@ constant chase.
 - **Forgets / guardrail:** which transitive edge is the unique cyclic exit,
   which endpoint is base/exponent in `a^b` versus `b^a`, Q-conditioned
   fiber-PGF sidecars, tip/tail commutators, and boundary leakage.
-- **Next pull:** Run the scout and promote the reserved packet to evidence.
-  Then use its fields as a cheap preflight before quotienting HYP-3140
+- **Next pull:** Propagate the stored K3 fields into active packet ledgers.
+  Use them as a cheap preflight before quotienting HYP-3140
   `F_R(y)`/`F_R,Q(y)`, HYP-3139 reflection-block pages, HYP-3141
   edge-witness rows, or HYP-3143 packet subbases to single scalars.
 - **Pointers:** HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139,
