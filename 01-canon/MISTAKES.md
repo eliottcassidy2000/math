@@ -2494,3 +2494,11 @@ MISTAKE-078 flagged that "verified-on-families ≠ uniform theorem" (correct, st
 **True status:** the O(1/f1) rate IS true (verified broadly: |err|*f1 bounded ~<= 0.75) but NOT proven; it needs a JOINT 2D Erdos-Turan/Koksma bound peeling the BOUNDED BASE from the FAST FAR-PAIR (not a single peel of f2). Verified-not-proved also: the r>=3 -> pairwise reduction, base-size domination, and "consec maximizes meas(S7)" (HYP-2602, open as a theorem).
 **Lean caveat (gap #7):** delsarte_bound_k8/k9/k11 prove the per-shape q0 <= L_y; the content is the readout identity (moment-LP functional = dual covector), and the bound is then trivial (q3,q6>=0). It does NOT formalize L_y <= cap (the extremality / cap content).
 **Lesson:** "reduced to a finite atlas + a numerically-verified rate" is NOT "closed". Do not cite THM-546 (single-far, bounded remainder) for the two-far joint limit. The genuine remaining input is the joint 2D ET-Koksma rate. -> HYP-2730, HYP-2738, THM-546, lrc_q108_L7_closure_kps.md.
+
+## MISTAKE-86: computing M(S)=max_t min_s||st|| with an INCOMPLETE breakpoint set underestimates M and reports FALSE tights
+
+**What happened (kind-pasteur-2026-06-28-S256):** A census probe over single-speed replacements of the AP used candidate breakpoints t = k/(2 s_i) and k/(s_i - s_j) only, OMITTING t = k/(s_i + s_j). This made M_of UNDERESTIMATE M(S) (it missed the true maximizer, which often sits at an s_i+s_j crossing), so ~23 single-replacements were reported as "tight" (M=1/14) when they are actually LOOSE (M>1/14). With the complete breakpoint set the census collapsed correctly to the single extra tight set GW (12->24).
+
+**The fix:** f_S(t)=min_i ||s_i t|| is piecewise linear; its local maxima (the candidates for max_t) occur where some ||s_i t|| has a kink (t=k/(2 s_i)) OR where two terms cross. Two terms ||s_i t||=||s_j t|| cross at BOTH t=k/(s_i - s_j) AND t=k/(s_i + s_j). The full candidate set is {k/(2 s_i)} U {k/(s_i - s_j)} U {k/(s_i + s_j)}. Sanity anchors: M(AP)=1/14, M(GW)=1/14, M({1..11,13,26})=1/12. Always include the s_i+s_j family; cross-check with a fine rational grid.
+
+**Lesson:** A "tight" verdict from an exact-rational M computation is only as good as the breakpoint set. Incomplete breakpoints give a one-sided error (underestimate M) that fabricates tights -- the most dangerous direction for a census.
