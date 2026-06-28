@@ -7,3 +7,17 @@ Is the empty-sector spin system FERROMAGNETIC (all pairwise Cov>0)?
   consec_10  : 15/15 pos, 0/15 neg covariances  min=+0.0164 max=+0.0688  FERROMAGNETIC (all>=0)
   minimizer  : 7/15 pos, 8/15 neg covariances  min=-0.0143 max=+0.0275  mixed
                neg pairs (|i-j|): [1, 1, 1, 2, 3, 3, 4, 5]
+
+--- kps-S31aj ferromagnetic GROUND-STATE mechanism ---
+consec_8, consec_10: ALL 15 pairwise covariances POSITIVE => genuinely FERROMAGNETIC at the binding rows.
+consec_6,7: mixed (the transition region; negatives at large |i-j|, i.e. distant sectors). The binding
+MINIMIZER {0,1,5,7,8,9,11,13}: 8/15 NEGATIVE => NOT ferromagnetic. So ferromagnetism DISTINGUISHES the
+coverage-MAXIMIZER (consec, all-positive) from the cap-MINIMIZER (mixed). MECHANISM: ferromagnetic
+alignment => the spins X_i (sector-empty indicators) align => mass concentrates at the two ordered states
+all-X=0 (all covered, q0) AND all-X=1 (all empty, q6) => the BIMODALITY q0+q6. consec = the fully-
+ferromagnetic GROUND STATE => maximizes the ordered-state probability => max coverage q0. This is the
+phi^4/Lee-Yang ORDERED PHASE made concrete as a spin system; the k=5->6 sign change is the critical point;
+consec is the ground state. PROOF OBSTRUCTION: "ferromagnetic ground state => max q0" needs a Griffiths/GKS
+monotonicity in the cluster-determined couplings (not free parameters). NOTE direction: FKG gives
+q0 >= prod(1-p_i) (LOWER bound, wrong way for the cap); the UPPER bound (consec is the MAX) needs the
+ground-state/extremal-coupling argument, not plain FKG.
