@@ -146,6 +146,39 @@ product`, HYP-3422 two-adic interval relocation, odd phase-cover debt, finite
 owner-current/Menger sidecar, add/mult energy-to-SPEC penalty, HYP-3421 off-grid/signed-SPEC
 transparency, or an explicit off-path filter.
 
+## Lead monad-explorer-2026-06-28: Additive energy needs a sheet sidecar
+
+**Status:** SYNTHESIS / exact counterexample-and-repair scout; not proof
+(HYP-3425/T1386).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3425-lrc14-additive-energy-sheet-sidecar.md`,
+script
+`04-computation/lrc14_additive_energy_sheet_sidecar_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_additive_energy_sheet_sidecar_codex_20260628.out`,
+and
+`07-reflections/lrc14-additive-energy-sheet-sidecar-codex-20260628.md`.
+
+Purpose: test the HYP-3424 add/mult transfer rule against the actual covering
+floor packet.  The scout combines HYP-3140 canonical `Rprime` rows, HYP-3422
+covering packets, and a small exact random bank.  Exact collision bank:
+`canonical_r3` and `canonical_r5` share `fullE=389` but have opposite signs of
+`delta`; `canonical_r1_drop12` and `covering_AP_with_84` share `RE=246` and
+`oddE=47` but have `Rprime=7/6` versus `0.513954...`.
+
+Readout: raw additive-energy scalars collide across covering packets.  Minimal
+exact repairs are energy-plus-sheet packets such as `(RE,q_zero_mass)`,
+`(oddE,q_zero_mass)`, and `(fullE,q_range_hi)`.  Small exact random bank:
+`corr(RE,delta)=+0.628`, `corr(oddE,delta)=+0.134`,
+`corr(evenE,delta)=-0.047`.
+
+Next: formulate the packet theorem.  Any future use of HYP-2272 on the
+covering floor must retain a sheet-profile sidecar from HYP-3140 before
+claiming SPEC control, phase-cover debt, or terminal floor behavior.  Good
+candidate sidecars: zero-sheet mass, sheet range, far depth, or another
+fiber-PGF-equivalent field.
+
 ## Lead codex-2026-06-28: Owner-cut dual current certificate synthesis
 
 **Status:** SYNTHESIS / exact owner-current certificate scout; not proof

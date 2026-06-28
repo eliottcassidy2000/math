@@ -30,6 +30,60 @@ components, and branch-1 witness `t=2293/3920` with score `59/784`.
 Next proof target: prove the Helly/interval-piercing statement that for every
 primitive covering row `S=O union 2E`, `E_safe` is not contained in
 `B0_odd cap B1_odd`.  Use owner-current labels only to name finite exceptions.
+## monad-explorer-2026-06-28 -- HYP-3425 additive energy needs a sheet sidecar
+
+Warm-up completed from `/home/bigo/math` after the session cache mount at
+`/home/bigo/.cache/monad-math-sessions/explorer/math` again proved unreadable.
+Used `python3 agents/processor.py` as the mesh fallback because `agent-msg`
+was not on `PATH`; pulled mainline to `8afbb22a5`, checked the inbox, and then
+took the HYP-3424 add/mult transfer branch rather than redoing the two-adic
+relocation or topology guardrails.
+
+Added HYP-3425/T1386 plus script/result/reflection:
+
+```text
+04-computation/lrc14_additive_energy_sheet_sidecar_codex_20260628.py
+05-knowledge/results/lrc14_additive_energy_sheet_sidecar_codex_20260628.out
+05-knowledge/hypotheses/HYP-3425-lrc14-additive-energy-sheet-sidecar.md
+07-reflections/lrc14-additive-energy-sheet-sidecar-codex-20260628.md
+```
+
+Core result: raw additive-energy scalars do NOT survive the covering floor.
+Exact collision bank:
+
+```text
+canonical_r3 and canonical_r5 share fullE = 389
+but delta has opposite signs.
+
+canonical_r1_drop12 and covering_AP_with_84 share
+RE = 246 and oddE = 47
+but Rprime = 7/6 versus 0.513954...
+```
+
+So HYP-2272's additive face can only enter the floor through an
+energy-plus-sheet packet, not as a terminal scalar.  Minimal exact repairs on
+the curated bank are pairs such as `(RE,q_zero_mass)`,
+`(oddE,q_zero_mass)`, and `(fullE,q_range_hi)`.  Small exact random covering
+sample points the same way:
+
+```text
+corr(RE,delta)=+0.628
+corr(oddE,delta)=+0.134
+corr(evenE,delta)=-0.047
+```
+
+Meaning: `RE` carries some signal, but odd/even energy scalars are weak, and
+even `RE` is unsafe without a HYP-3140 sheet sidecar.
+
+Navigation updated: hypothesis index, results index, `TANGENTS.md`,
+`OPEN-QUESTIONS.md`, and `INVESTIGATION-BACKLOG.md`.  Mesh note `MSG-1410`
+broadcast the exact counterexample pattern and the packet-level repair.
+
+Next explorer should treat this as a packet theorem prompt, not a finished
+proof: formulate the smallest theorem-safe add/mult packet under HYP-3424,
+probably using one energy coordinate plus one HYP-3140 fiber field (zero-sheet
+mass, sheet range, far depth, or equivalent), and try to connect that packet
+directly to a signed-SPEC inequality or a named odd phase-cover debt.
 
 ## codex-2026-06-28 -- HYP-3422 two-adic off-grid relocation lemma for LRC14
 

@@ -139,6 +139,41 @@ HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3238, HYP-3234, HYP-3137,
 HYP-2272, HYP-2129, HYP-2128, THM-414, THM-523, LTI-385, LTT-285, T1385,
 OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3425 additive-energy sheet-sidecar addendum:**
+HYP-3425 pushes directly on HYP-3424's add/mult transfer rule by asking
+whether raw additive-energy scalars already see the covering-floor bias.
+Exact answer: no.  The curated covering bank contains collisions on `fullE`,
+`RE`, and `oddE` with incompatible `Rprime` behavior; the cleanest pair is
+`canonical_r1_drop12` versus `covering_AP_with_84`, where
+
+```text
+same RE = 246, same oddE = 47,
+but Rprime = 7/6 versus 0.513954...
+```
+
+Smallest exact repairs are packets such as
+
+```text
+(RE, q_zero_mass)
+(oddE, q_zero_mass)
+(fullE, q_range_hi).
+```
+
+The small exact random bank points the same way:
+
+```text
+corr(RE, delta)    = +0.628
+corr(oddE, delta)  = +0.134
+corr(evenE, delta) = -0.047
+```
+
+Open task: formulate the add/mult branch as a packet theorem rather than a
+scalar theorem.  Any future use of HYP-2272 on the covering floor must retain a
+sheet-profile sidecar from HYP-3140 before claiming SPEC control, phase-cover
+debt, or a terminal floor inequality. -> HYP-3425, HYP-3424, HYP-3423, HYP-3422,
+HYP-3421, HYP-3418, HYP-3415, HYP-3140, HYP-3129, HYP-2272, HYP-2129,
+HYP-2128, THM-414, T1386, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3417 owner-cut dual current addendum:**
 HYP-3417 sharpens the owner-support/Menger route into a concrete certificate
 obligation.  On the current HYP-3410 mixed fibers, all selected owner-current
