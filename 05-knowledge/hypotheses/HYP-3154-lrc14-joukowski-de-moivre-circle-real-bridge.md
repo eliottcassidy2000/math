@@ -7,6 +7,9 @@ script: 04-computation/lrc_joukowski_resolvent_macmini_S73.py
 result: 05-knowledge/results/lrc_joukowski_resolvent_macmini_S73.out
 reflection: 07-reflections/the-joukowski-de-moivre-bridge-lrc-circle-is-the-tournament-real-rooted-class.md
 related:
+  - HYP-3162
+  - HYP-3202
+  - HYP-3203
   - HYP-3150
   - HYP-3151
   - HYP-3152

@@ -10,6 +10,9 @@ script: 04-computation/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.py
 result: 05-knowledge/results/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.out
 reflection: 07-reflections/lrc14-lee-yang-worpitzky-quartic-packet-codex-20260628.md
 related:
+  - HYP-3162
+  - HYP-3202
+  - HYP-3203
   - HYP-3161
   - HYP-3160
   - HYP-3199
@@ -17,9 +20,6 @@ related:
   - HYP-3152
   - HYP-3151
   - HYP-3150
-  - HYP-3154
-  - HYP-3161
-  - HYP-3199
   - HYP-3149
   - HYP-3147
   - HYP-3142
@@ -136,6 +136,17 @@ off-circle `Im(w)` / real-rootedness defect.  This is not a proof of the dip
 bound, but it tells the packet what not to forget: `joukowski_image_status`,
 `de_moivre_angle_status`, `off_circle_Imw_defect`, and the distinction
 between a Lee-Yang stability statement and a scalar root-radius proxy.
+
+With HYP-3162's cyclotomic ideal and HYP-3202's covariance-layer trap map as
+inputs, HYP-3203 sharpens that sidecar into
+a new exact target.  The raw norm-distance to the 7th-cyclotomic/uniform
+profile is not the AP extremal principle:
+`consec_8` is only rank `19` for minimum cyclotomic energy on the bounded bank.
+The useful root-locus inequality is directional:
+`<q(E)-1/7,q_AP-1/7> <= ||q_AP-1/7||^2`, sharp only at AP and doubled AP in
+the `3432`-row bounded k=8 scout.  HYP-3203 also refutes naive left-compression
+as a covariance proof route (`19` traps, `919` greedy stuck states), forcing
+compression to carry dilation/mirror/two-block trap sidecars.
 
 The Worpitzky packet reuses HYP-3151's exact data:
 

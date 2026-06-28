@@ -6150,3 +6150,37 @@ quotient_legality_status
   HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139,
   HYP-3138, HYP-3132, HYP-3122, THM-577, LTI-302, LTT-202, T1302,
   OPEN-Q-108.
+
+## LTT-203: Polarized Cyclotomic And Orbit-Aware Compression Tournament
+
+- **Move:** Treat proof moves as tournament vertices: AP-polarized
+  cyclotomic support, ferromagnetic covariance, orbit-aware compression,
+  dilation orbit sidecar, two-block trap sidecar, raw cyclotomic norm, raw
+  left-compression, and raw scalar p0.
+- **LRC use:** HYP-3203 gives two new routes for the remaining k=8 target
+  after HYP-3162/HYP-3163/HYP-3200/HYP-3201/HYP-3202.  The root-locus route
+  replaces "minimize distance to the 7th-cyclotomic profile" with the
+  directional support inequality
+  `<q(E)-1/7,q_AP-1/7> <= ||q_AP-1/7||^2`, sharp on the bounded k=8 bank
+  only at AP and doubled AP.  The compression route refutes naive
+  left-compression and promotes dilation/mirror/two-block trap sidecars before
+  applying any rearrangement lemma.
+- **Preserves:** AP residual direction, coverage/covariance support,
+  root-locus payload, dilation orbit status, local trap class, and
+  terminal exit-or-debt status.
+- **Forgets / guardrail:** raw cyclotomic norm forgets direction; raw
+  coordinate-left compression forgets dilation and two-block trap status; raw
+  scalar p0 hides the support certificate.
+- **Fingerprint:** transitive proof-move tournament with
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}`, no directed 3-cycles, one
+  Hamiltonian path:
+  `AP_polarized_cyclotomic_support -> ferromagnetic_covariance ->
+  orbit_aware_compression -> dilation_orbit_sidecar ->
+  two_block_trap_sidecar -> raw_cyclotomic_norm -> raw_left_compression ->
+  raw_scalar_p0`.
+- **Next hook:** Prove or refute the AP support inequality using signed SPEC
+  or moment-cone duality; classify the `19` local compression traps into
+  orbit sidecar families before trying another compression proof.
+- **Pointers:** HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
+  HYP-3154, HYP-3153, HYP-3161, HYP-3160, HYP-3152, HYP-3150, HYP-3138,
+  HYP-3132, HYP-3108, LTI-303, LTT-203, T1303, OPEN-Q-108.

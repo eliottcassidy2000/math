@@ -1,0 +1,62 @@
+=== HYP-3203: TWO NEW LRC14 PROOF ANGLES ===
+bounded anchored k=8 bank: 3432 sets
+AP q-vector: (Fraction(481, 1470), Fraction(359, 1470), Fraction(25, 147), Fraction(26, 245), Fraction(17, 210), Fraction(5, 98), Fraction(1, 49))
+
+covariance Sigma-kappa_2:
+  consec rank=0; doubled-dilation rank=1
+  best=(0, 1, 2, 3, 4, 5, 6, 7) value=6237419/8643600 (0.72162282)
+  consec value=6237419/8643600 (0.72162282)
+
+coverage q0:
+  consec rank=0; doubled-dilation rank=1
+  best=(0, 1, 2, 3, 4, 5, 6, 7) value=481/1470 (0.32721088)
+  consec value=481/1470 (0.32721088)
+
+L_y = q0+q6+q3/10:
+  consec rank=0; doubled-dilation rank=1
+  best=(0, 1, 2, 3, 4, 5, 6, 7) value=2633/7350 (0.35823129)
+  consec value=2633/7350 (0.35823129)
+
+raw cyclotomic energy MIN:
+  consec rank=19; doubled-dilation rank=20
+  best=(0, 1, 2, 3, 11, 12, 13, 14) value=28179863/72144072 (0.39060538)
+  consec value=39766/77175 (0.51527049)
+
+AP residual projection MAX:
+  consec rank=0; doubled-dilation rank=1
+  best=(0, 1, 2, 3, 4, 5, 6, 7) value=39766/540225 (0.07361007)
+  consec value=39766/540225 (0.07361007)
+
+cosine to AP residual ray MAX:
+  consec rank=0; doubled-dilation rank=1
+  best=(0, 1, 2, 3, 4, 5, 6, 7) value=1.0 (1.00000000)
+  consec value=1.0 (1.00000000)
+
+ANGLE A READOUT: polarized cyclotomic support
+  raw cyclotomic energy is NOT minimized by AP; AP rank is 19.
+  AP residual projection is maximized by: [(0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 8, 10, 12, 14)]
+  max projection: 39766/540225 (0.07361007)
+  proof target: show <q(E)-1/7, q(AP)-1/7> <= ||q(AP)-1/7||^2.
+  interpretation: prove a support hyperplane for the AP root-locus defect,
+  not a minimum-distance-to-cyclotomic theorem.
+
+ANGLE B READOUT: orbit-aware compression
+  naive left-compression local traps: 19
+  greedy paths stuck: 919 max successful steps: 7
+  first five traps:
+    (0, 1, 2, 3, 4, 11, 12, 13) cov= 571715/2186184 (0.26151275) best_delta= -119705/6558552 move= (11, 5)
+    (0, 1, 2, 3, 4, 12, 13, 14) cov= 1323571/4173624 (0.31712751) best_delta= -7379909/243461400 move= (12, 5)
+    (0, 1, 2, 3, 7, 8, 9, 10) cov= 15539491/103723200 (0.14981693) best_delta= -283379/25930800 move= (10, 6)
+    (0, 1, 2, 3, 9, 10, 11, 12) cov= 38957131/192099600 (0.20279652) best_delta= -832147/48024900 move= (9, 4)
+    (0, 1, 2, 3, 10, 11, 12, 13) cov= 5172731/18036018 (0.28680006) best_delta= -140333/5549544 move= (10, 4)
+  doubled AP dilation trap present: True
+  proof target: quotient by dilation/mirror/two-block trap sidecars before
+  applying compression; use AP residual projection as a Lyapunov/support
+  functional on the quotient.
+
+TOURNAMENT FINGERPRINT
+  vertices: ['AP_polarized_cyclotomic_support', 'ferromagnetic_covariance', 'orbit_aware_compression', 'dilation_orbit_sidecar', 'two_block_trap_sidecar', 'raw_cyclotomic_norm', 'raw_left_compression', 'raw_scalar_p0']
+  score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3cycles: 0
+  hamiltonian_path_count: 1
+  selected_path: AP_polarized_cyclotomic_support -> ferromagnetic_covariance -> orbit_aware_compression -> dilation_orbit_sidecar -> two_block_trap_sidecar -> raw_cyclotomic_norm -> raw_left_compression -> raw_scalar_p0

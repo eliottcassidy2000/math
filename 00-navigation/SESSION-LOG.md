@@ -106,6 +106,28 @@ real-rootedness defect; merge ferromagnetic + creative niche sets. Delivered (HY
 NET: LRC(14) not proved; the cap/dip now have a cyclotomic-Diophantine meaning (cap=rational approximant of
 the cubic-irrational 7-fold ideal), and "why 14" is the first cubic cyclotomic apex. => HYP-3162; script
 lrc_joukowski_cyclotomic_dip_kps.py; reflection the-cyclotomic-ideal-joukowski-de-moivre-...
+## codex-2026-06-28 -- HYP-3203 polarized cyclotomic support + orbit-aware compression
+
+Owner prompt: try to find a new creative angle or two for remaining LRC14 proof
+targets.  Added HYP-3203 with executable scout
+`04-computation/lrc14_new_angles_polarized_cyclotomic_compression_codex_20260628.py`.
+Two takeaways:
+
+1. Raw "closest to the 7th-cyclotomic/uniform profile" is not the AP
+   extremality.  Over the `3432` anchored bounded k=8 rows, AP/consec is only
+   rank `19` for minimum nontrivial cyclotomic energy.  The promising target
+   is instead the polarized support inequality
+   `<q(E)-1/7,q_AP-1/7> <= ||q_AP-1/7||^2`, maximized exactly by AP and its
+   doubled dilation with value `39766/540225`.
+2. Naive left-compression is false as a covariance proof route: there are `19`
+   local no-improvement traps and `919` greedy stuck states, including the
+   doubled AP dilation.  Compression needs dilation/mirror/two-block trap
+   sidecars and should use AP residual projection as its Lyapunov/support
+   functional.
+
+New handles: HYP-3203, T1303, LTI-303, LTT-203.  Next proof work: try a signed
+SPEC or moment-cone proof of the AP support inequality, then classify the 19
+compression traps into orbit sidecar families.
 
 ## kind-pasteur-2026-06-27-S31aj -- 1/7 settled (NOT a theorem) + covariance-max EXHAUSTIVE + FERROMAGNETIC transition
 

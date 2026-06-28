@@ -7,6 +7,9 @@ merges:
   - HYP-3147   # codex n=3 edge-flip Worpitzky kernel = the ODD/antisymmetric face
   - HYP-3132   # mac-mini k=8 biquadratic resolvent = the EVEN/symmetric face
 related:
+  - HYP-3162   # cyclotomic ideal / first-cubic-apex calibration
+  - HYP-3202   # covariance layer/trap attack angles
+  - HYP-3203   # polarized cyclotomic support + orbit-aware compression
   - HYP-3150   # function-compression guardrail
   - HYP-3151   # executable Worpitzky/function-compression scout
   - HYP-3152   # Lee-Yang/Galois correction
