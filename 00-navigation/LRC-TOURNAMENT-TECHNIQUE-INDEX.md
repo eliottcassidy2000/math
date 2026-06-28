@@ -168,7 +168,8 @@ obligations, and proof-carrier interfaces.
   use LTT-174 after LTT-173/LTT-171/LTT-170/LTT-166/LTT-163/LTT-162/LTT-161
   and make functions, fibers, sidecars, and resolvent variables the
   tournament vertices.  Test whether each observable factors through the
-  quotient, or record ordered/fiber/canary/odd-coordinate debt.
+  quotient, or record ordered/fiber/canary/odd-coordinate debt before invoking
+  the degree-4 bounded-core guardrail.
 - Need to decide whether the factor-through wall has executable local support:
   use LTT-175 after LTT-174/LTT-173/LTT-172/LTT-171/LTT-168/LTT-166 and make functions,
   compression fibers, ordered sidecars, canary coordinates, and resolvent
@@ -5822,32 +5823,50 @@ constant chase.
   HYP-3133, HYP-3124, HYP-3118, HYP-3116, HYP-3093, HYP-3097, LTI-275,
   LTT-173, T1214, OPEN-Q-108.
 
-## LTT-174: Tournament Of Function-Compression Sidecars
+## LTT-174: Tournament Of Function-Compression Degree Guards
 
 - **Move:** Treat every quotient used in the LRC14 endgame as a function
-  `q:X->Y` and every proof signal as an observable `f:X->Z`.  The central
-  question is whether `f` factors through `q`; non-factoring data must be
-  retained as a sidecar.  This packages the user's pair-function, K3, K4, and
-  k=8 resolvent prompts into one finite legality audit.
-- **LRC use:** HYP-3150 tests the small exact cases that currently sit
-  around the proof frontier: unordered pair functions, ordered exponentials,
-  the K3 `C/T` kernel, K4 OR compression/canary slices, fiber-PGF curves, and
-  the k=8 even biquadratic variable.  The purpose is to stop scalar or
-  class-count shortcuts at the point where they erase the LRC predicate.
+  `q:X->Y` and every proof signal as an observable `f:X->Z`.  A tournament
+  quotient is legal only if `f` factors through `q`, or if a sidecar
+  reconstructs what was forgotten.  This packages the user's pair-function,
+  K3, K4, PGF, and k=8 resolvent prompts into one finite legality audit.
+- **LRC use:** HYP-3150 completes the integration layer above
+  HYP-3143..HYP-3149.  It turns the prompt's quartet `a+b, a*b, a^b, b^a`
+  into a proof packet test: sum/product are unordered-safe shadows, while
+  exponentials are ordered channels needing tail/tip or base/exponent
+  sidecars.  The same rule decides whether HYP-3140 fiber PGFs, HYP-3141 edge
+  witnesses, and HYP-3142 k=8 resolvent sidecars can be scalarized.  HYP-3151
+  supplies the companion boundary signal: score compression is complete
+  through n=4 and fails at n=5, exactly where the k=8 odd Worpitzky sidecar
+  becomes load-bearing.
 - **Preserves:** quotient-fiber-constant observables, declared sidecar
-  payloads, effective compression degree, and terminal proof exit.
+  payloads, function payload type, Worpitzky basis curve, state-level PGF
+  split, n=4 canary/filler status, effective compression degree, and terminal
+  proof exit.
 - **Forgets / guardrail:** minority-edge identity, ordered endpoint function
   channels, Worpitzky descent words, full PGF/root curves, deletion stability,
-  canary/filler status, and odd coordinates of an even resolvent.
-- **Next hook:** Convert the audit into a reusable packet field for
-  HYP-3141/HYP-3140/HYP-3138/HYP-3139:
-  `compression_map`, `observable_factors_through`,
-  `ordered_sidecar_required`, `fiber_pgf_curve_status`,
-  `canary_deletion_status`, `even_resolvent_variable`, `effective_degree`,
-  and `terminal_exit_or_named_debt`.
-- **Pointers:** HYP-3150, HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145,
-  HYP-3144, HYP-3143, HYP-3142, HYP-3139, HYP-3138, HYP-3137, HYP-3135,
-  HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3122, THM-084, THM-577,
+  canary/filler status, odd coordinates of an even resolvent, and any degree-4
+  claim made before those functions are certified.
+- **Next pull:** Attach
+
+```text
+compression_map
+observable_factors_through
+function_payload_type
+unordered_pair_survival
+ordered_pair_sidecar
+state_level_pgf_split
+compression_map_word
+canary_filler_status
+resolvent_degree_ceiling
+abel_ruffini_wall_status
+quotient_legality_status
+```
+
+  to the HYP-3140/HYP-3141/HYP-3142 packet rows, then reject any scalar
+  compression that would create generic degree-5 Abel-Ruffini debt.
+- **Pointers:** HYP-3150, HYP-3151, HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3144,
+  HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3132,
   LTI-276, LTT-174, T1215, OPEN-Q-108.
 
 ## LTT-175: Tournament Of Function-Compression Legality Packets
@@ -5906,9 +5925,11 @@ constant chase.
   singleton SCCs, and one Hamiltonian path led by
   `HYP3152_leeyang_radius_root_curve -> HYP3151_function_legality_packet ->
   k8_Ly_bimodality_certificate`.
-- **Next hook:** Attach the packet to a live HYP-3141/HYP-3142 row and check
-  whether every scalar shortcut has the necessary root/odd-ear sidecar.
-- **Pointers:** HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3149, HYP-3147,
+- **Next hook:** Attach the packet to a live HYP-3141/HYP-3142 row and compare
+  the packet tournament with HYP-3150's function-compression tournament.  The
+  useful edge flips should identify which scalar shortcuts are proof-illegal
+  and whether every shortcut has the necessary root/odd-ear sidecar.
+- **Pointers:** HYP-3153, HYP-3161, HYP-3152, HYP-3151, HYP-3150, HYP-3149, HYP-3147,
   HYP-3142, HYP-3139, HYP-3109, HYP-3099, LTI-279, LTT-177, T1218,
   OPEN-Q-108.
 

@@ -205,12 +205,14 @@ its meaning. => HYP-3099, the two maps, the toolkit engine.
 Owner: think of everything as functions; the quartet a+b,a*b (symmetric/order-blind) vs a^b,b^a (asymmetric/
 order-aware); n=3 from the edges (coin flips); n=4 in 2 schemes (Klein-four group vs magma); compressions->tricks;
 Worpitzky. Merges codex HYP-3147 (n=3 edge kernel, eigenvalue -1/3, Worpitzky A(3,k)=[1,4,1]) with mac-mini S70
-(k=8 biquadratic) and S67 (phi^4). Result: HYP-3150 + reflection invariants-as-arc-cube-functions.
+(k=8 biquadratic) and S67 (phi^4). Result: HYP-3161 + reflection invariants-as-arc-cube-functions.
 
 THE COMPRESSION (verified): the SCORE (commutative a+b face) DETERMINES the iso class for n<=4 (n=3,4 bijective)
 and FAILS at n=5 (12 iso vs 9 scores). So at n<=4 the iso class is a group/linear function of the arcs -- WHY the
-owner's scheme 2 (2 free arcs) is a clean Klein-four V4, while scheme 1 (3 arcs) is the same data over-coordinatized
-(a magma). The TRICK: compress to the gauge where the symmetric face is a complete invariant => a group => computable.
+owner's scheme 2 (2 free arcs) is a clean Klein-four slice, while scheme 1 (3 arcs) is the same data
+over-coordinatized (a magma); S72 later corrects the full flip action to a transformation monoid with an absorbing
+apex arc, not a V4 group. The TRICK: compress to the gauge where the symmetric face is a complete invariant =>
+finite-degree computability.
 
 THE PAYOFF -- k=8 IS THE COMPRESSION BOUNDARY: the cap dip turns on EXACTLY at the n=4->5 boundary (|P|=13-k):
 k>=10 |P|<=3 dip=0; k=9 |P|=4 dip=1/4004 (tiny); k=8 |P|=5 dip=1081/76440 (LARGE). k=8 <=> |P|=5 = the quintic
@@ -225,22 +227,29 @@ ordered content (codex HYP-3147), DOMINANT (|odd|/|even|~3.15), a sum of n=3 edg
 solvable, S70] + [odd Worpitzky-weighted n=3 -1/3 sum, codex]. The owner's a+b,a*b vs a^b,b^a IS this parity
 decomposition; the dominant (odd) face is exactly what the score-compression cannot see.
 
-## codex-2026-06-28 -- function-compression resolvent-degree wall -- HYP-3150
+## codex-2026-06-28 / S277 -- function-compression degree-4 guardrail -- HYP-3150
 
-Reserved HYP-3150/T1215/LTI-276/LTT-174 for the user's request to merge
-Worpitzky pair functions, K3 edge-flip classes, K4 canary/filler tables, and
-the k=8 quartic resolvent into the LRC14 proof push.  The reserved scout will
-treat each compression as a function `q:X->Y` and each proof signal as an
-observable `f:X->Z`; a quotient is legal only when `f` factors through `q` or
-the missing payload is retained as a sidecar.
+Completed the reserved HYP-3150 prompt lane by integrating the Worpitzky/
+pair-function/K3/n4/canary cues with the incoming HYP-3143..HYP-3149 quotient
+stack.  During rebase, S71's score-compression parity note was moved to
+HYP-3161 so HYP-3150 remains the canonical function-compression wall,
+HYP-3151 remains the S278 executable continuation, and HYP-3153 remains the
+Lee-Yang/Worpitzky/quartic packet.  Added/
+finished HYP-3150/T1215/LTI-276/
+LTT-174, executable scout
+`04-computation/lrc14_function_compression_resolvent_degree_codex_s277.py`,
+stored output
+`05-knowledge/results/lrc14_function_compression_resolvent_degree_codex_s277.out`,
+and reflection
+`07-reflections/function-compression-resolvent-degree-codex-s277.md`.
 
-Planned exact checks: unordered pair functions `a+b,a*b` versus ordered
+Exact checks completed: unordered pair functions `a+b,a*b` versus ordered
 channels `a^b,b^a`; the K3 `C/T` kernel and its lost minority-edge,
 Worpitzky, and state-PGF sidecars; the K4 OR compression `x=a OR c`,
 `y=b OR c` and its canary/deletion debt; and the k=8 resolvent
-`(t-1)(t-2)(t-4)(t-5) = u^4-5u^2+4`, quadratic in `u^2`.  The speculative
-meta-claim to test is that LRC14 remains below the generic quintic wall
-because the current hard compressions have effective degree <=4 plus named
+`(t-1)(t-2)(t-4)(t-5) = u^4-5u^2+4`, quadratic in `u^2`.  The working
+meta-claim is now sharpened: LRC14 remains below the generic quintic wall only
+when the degree<=4 carrier is kept with its ordered/Worpitzky and PGF-root
 sidecars.
 ## codex-2026-06-28-S278 -- Worpitzky function-compression resolvent bridge -- HYP-3151
 
@@ -289,6 +298,34 @@ curve sidecar: AP/consec minimizes off-circle variance at k=8 and k=9, and
 that variance correlates with the coverage gap.  HYP-3151 therefore keeps
 ordered/Worpitzky and root-curve/lambda sidecars beside the degree-4
 resolvent ceiling.
+Readout: a quotient is theorem-legal only for functions constant on its fibers,
+or after a sidecar reconstructs the lost coordinate.  The scout verifies the
+pair-function split (`a+b,a*b` unordered-safe; `a^b,b^a` ordered), recomputes
+the K3 flip matrix `[[2,1],[3,0]]`, the three-coin mix/same analogue, the
+Worpitzky row `(1,4,1)`, and the n=4 compression `x=a OR c`, `y=b OR c`.
+Degree ledger: symmetric shadows degree 1, ordered/K3/n4 square channels
+degree 2, k=8 bounded-core quartic/biquadratic carrier degree 4, and generic
+degree-5 raw scalarization routed to Abel-Ruffini debt.
+
+Rebase signal: incoming HYP-3161/mac-mini S71 adds the arc-cube compression parity
+check.  Score->iso compression is bijective for n=3,4 and fails at n=5; the
+k=8 cap dip turns on at the same |P|=5 transition.  Its parity split is even
+`+6S4` = symmetric/biquadratic and odd `-9S3` = Worpitzky/orientation, with
+the odd side dominating.  This supports HYP-3150's rule that the degree-4
+guardrail is legal only after the ordered/Worpitzky function sidecar is
+retained.
+
+Second rebase signal: HYP-3199 turns the user's n=4 Einheit tables into a
+minimality chart.  The fixed-path `a,b,c` model is a cover with an `S` bulk
+fiber and deletable `c`, while the partial-score `x,y` chart is the exact
+section.  This strengthens the HYP-3150/HYP-3161 rule: compression is legal
+only after the minimal chart and its deletion/restoration sidecar are named.
+
+Handoff: add `function_payload_type`, `ordered_pair_sidecar`,
+`state_level_pgf_split`, `compression_map_word`, `canary_filler_status`,
+`resolvent_degree_ceiling`, and `quotient_legality_status` to HYP-3140
+fiber-PGF rows, HYP-3141 edge-witness rows, and HYP-3142 bounded-core sidecar
+rows before claiming any degree-4 terminal proof packet.
 
 Scout completed in
 `04-computation/lrc14_function_compression_resolvent_wall_codex_20260628.py`;

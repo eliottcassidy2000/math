@@ -1,15 +1,26 @@
 ---
 id: HYP-3150
-title: LRC14 function-compression packets may keep the hard core below the Abel-Ruffini wall
-status: EVIDENCE / executable factor-through scout and proof-packet proposal; not a proof
-source: codex-2026-06-28
+title: LRC14 function-compression packets and the degree-4 resolvent guardrail
+status: SYNTHESIS / two executable scouts plus S71/S72/S278/KPS mainline integrations; not a proof
+source: codex-2026-06-28 + codex-2026-06-28-S277
 tangent: T1215
 technique: LTI-276
 tournament_technique: LTT-174
 script: 04-computation/lrc14_function_compression_resolvent_wall_codex_20260628.py
 result: 05-knowledge/results/lrc14_function_compression_resolvent_wall_codex_20260628.out
 reflection: 07-reflections/lrc14-function-compression-resolvent-wall-codex-20260628.md
+additional_scripts:
+  - 04-computation/lrc14_function_compression_resolvent_degree_codex_s277.py
+additional_results:
+  - 05-knowledge/results/lrc14_function_compression_resolvent_degree_codex_s277.out
+additional_reflections:
+  - 07-reflections/function-compression-resolvent-degree-codex-s277.md
 related:
+  - HYP-3151
+  - HYP-3152
+  - HYP-3153
+  - HYP-3161
+  - HYP-3199
   - HYP-3149
   - HYP-3148
   - HYP-3147
@@ -28,7 +39,9 @@ related:
   - HYP-3133
   - HYP-3132
   - HYP-3129
+  - HYP-3124
   - HYP-3122
+  - HYP-3063
   - THM-084
   - THM-577
   - OPEN-Q-108
@@ -38,11 +51,18 @@ external_sources:
 mainline_integrations:
   - 04-computation/lrc_arc_cube_compression_parity_macmini_S71.py
   - 05-knowledge/results/lrc_arc_cube_compression_parity_macmini_S71.out
+  - 05-knowledge/hypotheses/HYP-3161-score-compression-boundary-is-k8-parity-split.md
+  - 05-knowledge/hypotheses/HYP-3151-worpitzky-function-compression-resolvent.md
+  - 04-computation/lrc14_worpitzky_function_compression_resolvent_codex_s278.py
+  - 05-knowledge/results/lrc14_worpitzky_function_compression_resolvent_codex_s278.out
+  - 05-knowledge/hypotheses/HYP-3152-leeyang-circle-coverage-radius-galois-s4.md
+  - 05-knowledge/hypotheses/HYP-3199-lrc14-n4-einheit-erdos870-tournament-models.md
   - 04-computation/lrc_coverage_lee_yang_lambda_kps.py
   - 05-knowledge/results/lrc_coverage_lee_yang_lambda_kps.out
+  - 05-knowledge/results/lrc_lee_yang_corr_highk_kps.out
 ---
 
-# HYP-3150: Function-Compression Below the Resolvent-Degree Wall
+# HYP-3150: Function Compression and the Degree-4 Guardrail
 
 ## Claim
 
@@ -202,9 +222,85 @@ odd sidecar         = sign/odd coordinate after even resolvent fold
 degree sidecar      = effective algebraic degree and wall alarm
 ```
 
+## S277 Exact Finite Scout
+
+The S277 scout
+`04-computation/lrc14_function_compression_resolvent_degree_codex_s277.py`
+stores its output at
+`05-knowledge/results/lrc14_function_compression_resolvent_degree_codex_s277.out`.
+It recomputes the same quotient laws with a second, more theorem-interface
+oriented ledger.
+
+Pair-function samples `(2,3),(2,4),(4,2),(3,5),(5,3),(4,4)` show that sum
+and product are swap-invariant, while the exponential channel is not:
+`(2,3)` gives `8` versus `9`, and `(3,5)` gives `243` versus `125`.
+Equalities such as `(2,4)` and `(4,2)` are accidents, not quotient laws.
+
+The K3 edge-flip computation recovers the quotient kernel in class-count form:
+
+```text
+        to T  to C
+from T    2     1
+from C    3     0
+```
+
+with labelled class sizes `T=6,C=2`, raw flip counts `T->T=12`,
+`T->C=6`, `C->T=6`, stationary distribution `T=3/4,C=1/4`, and eigenvalues
+`1,-1/3`.  The same matrix appears for three coin flips after quotienting to
+`mix` versus `same`.
+
+The role ledger is the proof payload:
+
+```text
+cycle_edge_breaks_to_T       6
+majority_edge_self_flip     12
+minority_edge_closes_cycle   6
+```
+
+Thus the score-class quotient knows transition multiplicity but forgets which
+edge is the minority gate.  The Worpitzky check verifies
+`x^3 = C(x+2,3) + 4*C(x+1,3) + C(x,3)` for `x=0..8`; the coefficient row
+`(1,4,1)` is a basis/curve payload, not a license to keep one value.
+
+For the n=4 tournament tables, S277 recomputes the fixed-path fibers:
+
+```text
+T = {E}
++ = {a}
+- = {b}
+S = {c, ab, ac, bc, abc}
+```
+
+and the monotone nonlinear compression:
+
+```text
+x = a OR c
+y = b OR c
+```
+
+This compression is class-preserving but does not preserve fiber arithmetic.
+It is the small finite model of the proof rule: `c` is filler when fixed and
+canary/restoration debt when erased.
+
+The synthesis degree ledger is:
+
+```text
+symmetric_pair_shadow          degree 1
+ordered_pair_channel           degree 2
+K3_edge_flip_kernel            degree 2
+N4_filler_canary_square        degree 2
+k8_bounded_core_resolvent      degree 4
+illegal_raw_scalarization      degree 5
+```
+
+Read as a guardrail, accepted packet carriers stay in degree `<=4`.  Generic
+degree-5 behavior is not compressed; it is routed to named Abel-Ruffini debt.
+This does not prove the terminal k=8 packet, but it states the admissibility
+condition before that packet can be used.
+
 ## Tournament Analysis
 
-The scout uses proof carriers as vertices, not runners or raw arcs.
+The first scout uses proof carriers as vertices, not runners or raw arcs.
 
 Pairwise observable:
 
@@ -250,12 +346,36 @@ PGF curves, canary/deletion fields, and k=8 even fold are not a linear ladder.
 They are a coupled packet: choosing one sidecar changes which compression is
 legal next.
 
+S277 also ran a second proof-carrier tournament with weighted retained payload
+as the pairwise observable.  That tournament is transitive:
+
+```text
+score_hist={17:1,35:1,62:1,64:1,68:1,72:1,76:1,79:1,82:1,85:1}
+directed_3cycles=0
+hamiltonian_path_count=1
+selected_path =
+  function_compression_legality_certificate
+  -> bounded_core_degree4_guardrail
+  -> fiber_PGF_full_curve_payload
+  -> ordered_pair_tip_tail_sidecar
+  -> n4_canary_filler_exact_transversal
+  -> n3_edge_flip_minoritary_gate
+  -> worpitzky_basis_curve
+  -> A000568_n_le_7_tameness_window
+  -> symmetric_sum_product_shadow
+  -> raw_scalar_class_count
+```
+
+The two tournament readouts should be kept together: the SCC readout says the
+sidecars mutually constrain legality, while the transitive readout gives the
+current proof-interface ordering once those sidecars are declared.
+
 ## Mainline Integration
 
 While this note was being completed, incoming mainline work added two directly
 relevant scouts.
 
-The S71 arc-cube compression scout reports:
+The HYP-3161/S71 arc-cube compression scout reports:
 
 ```text
 score sequence -> tournament isomorphism class:
@@ -295,6 +415,13 @@ This upgrades HYP-3150's heuristic: the k=8 dip is not only
 `even biquadratic plus sidecar debt`; the odd/Worpitzky face dominates the
 local correction magnitude.
 
+HYP-3199 adds the exact n=4 Einheit/minimality chart: the fixed-path
+`a,b,c` tiling table is a cover with `S={c,ab,ac,bc,abc}` and quotient
+ambiguity, while the partial-score `(0,1,1,2)` chart on `x,y` is the exact
+two-coordinate section.  This is the same legality rule in smaller clothing:
+representation abundance is not proof evidence until the minimal chart,
+deletable coordinate, and restoration sidecar are named.
+
 The kps Lee-Yang lambda scout adds the root-curve version of the same lesson.
 For k=8,9,10 it measures off-circle variance
 `lambda = Var(|roots|/R)` of the coverage PGF.  Consecutive/AP rows are the
@@ -318,13 +445,23 @@ The proof packet should add:
 ```text
 compression_map
 observable_factors_through
+function_payload_type
 fiber_collision_class
 ordered_sidecar_required
+unordered_pair_survival
+ordered_pair_sidecar
 fiber_pgf_curve_status
+state_level_pgf_split
+compression_map_word
 canary_deletion_status
+canary_filler_status
 even_resolvent_variable
+resolvent_degree_ceiling
 effective_degree
 quintic_wall_alarm
+abel_ruffini_wall_status
+finite_tameness_window
+quotient_legality_status
 terminal_exit_or_named_debt
 ```
 

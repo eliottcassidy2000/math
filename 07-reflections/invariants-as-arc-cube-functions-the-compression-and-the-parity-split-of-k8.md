@@ -74,6 +74,6 @@ decomposes into [even biquadratic, S70] + [odd Worpitzky-`−1/3` sum, codex] (t
 dip-onset all point to 5). The compression-trick meta — *find the gauge where the symmetric face is complete* —
 is the reusable lesson.
 
-Related: HYP-3150 (this), HYP-3147 (codex n=3 Worpitzky kernel = the odd face), HYP-3132 (k=8 biquadratic = the
+Related: HYP-3161 (this), HYP-3150 (function-compression guardrail), HYP-3151 (S278 function-compression scout), HYP-3147 (codex n=3 Worpitzky kernel = the odd face), HYP-3132 (k=8 biquadratic = the
 even face), HYP-3122 (φ⁴ cumulants), THM-577 (cap = symmetric face, exact for |P|≤3), THM-062/063 (deformed
 Eulerian), OPEN-Q-108.

@@ -15,6 +15,7 @@ external_source:
   - https://github.com/davidturturean/erdos-870/blob/main/Erdos870/MainTheorem.lean
 related:
   - HYP-3160
+  - HYP-3161
   - HYP-3153
   - HYP-3152
   - HYP-3151

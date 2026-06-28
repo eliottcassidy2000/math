@@ -52,6 +52,29 @@ needed function or name the first restoration debt. -> HYP-3151, HYP-3150, HYP-3
 HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142,
 HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3132, HYP-3129,
 HYP-3124, LTI-277, LTT-175, T1216, OPEN-Q-108.
+**OPEN-Q-108 HYP-3150 function-compression degree-guard addendum:**
+HYP-3150 integrates the HYP-3143..HYP-3149 tournament quotient stack into a
+function-compression rule.  A quotient is proof-legal only when the target
+function is constant on fibers or a sidecar reconstructs the forgotten
+coordinate.  The exact scout verifies the prompt's pair-function split
+(`a+b,a*b` unordered-safe; `a^b,b^a` ordered), the K3 edge-flip kernel
+`[[2,1],[3,0]]`, the three-coin analogue, Worpitzky row `(1,4,1)`, and the n=4
+compression `x=a OR c`, `y=b OR c`.
+
+Open task: attach a function-compression certificate to the HYP-3140 fiber-PGF
+rows, HYP-3141 directed edge witnesses, and HYP-3142 bounded-core sidecars.
+The certificate must record `function_payload_type`, `ordered_pair_sidecar`,
+`state_level_pgf_split`, `compression_map_word`, `canary_filler_status`,
+`resolvent_degree_ceiling`, and `quotient_legality_status`.  The k=8
+degree-4/quartic guardrail may be used only after this certificate shows that
+ordered, curve-level, canary/filler, and odd-resurrection functions have not
+been erased.  Incoming S71 adds the concrete parity warning: the k=8 cap dip
+splits into even biquadratic and dominant odd Worpitzky pieces exactly where
+score->iso compression first fails at n=5.  Otherwise the packet emits named
+Abel-Ruffini degree-5 debt. ->
+HYP-3150, HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3144, HYP-3143,
+HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3132, LTI-276, LTT-174,
+T1215, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3146 filler/canary shift-package addendum:**
 HYP-3146 imports the erdos-870 proof architecture only as a quotient-design

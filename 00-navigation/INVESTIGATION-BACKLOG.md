@@ -15,23 +15,25 @@
 
 ---
 
-## Lead codex-2026-06-28: Function-compression resolvent-degree wall
+## Lead codex-2026-06-28-S277: function-compression degree-4 guardrail
 
 **Status:** EVIDENCE / executable factor-through scout; not proof
 (HYP-3150/T1215).
+**Status:** SYNTHESIS / exact finite scout; not proof (HYP-3150/T1215).
 
 Claimed files:
 `05-knowledge/hypotheses/HYP-3150-lrc14-function-compression-resolvent-degree-wall.md`,
-`04-computation/lrc14_function_compression_resolvent_wall_codex_20260628.py`,
-and `05-knowledge/results/lrc14_function_compression_resolvent_wall_codex_20260628.out`.
+`04-computation/lrc14_function_compression_resolvent_degree_codex_s277.py`,
+`05-knowledge/results/lrc14_function_compression_resolvent_degree_codex_s277.out`,
+and `07-reflections/function-compression-resolvent-degree-codex-s277.md`.
 
-Goal: turn the user's Worpitzky/function/K3/K4/resolvent prompt into a
-general quotient-legality test.  For every compression `q:X->Y` and
-observable `f:X->Z`, ask whether `f` factors through `q`; if not, name the
-sidecar.  Initial exact checks: unordered pair functions versus ordered
-exponentials, K3 `C/T` kernel versus minority-edge/Worpitzky/PGF sidecars,
-K4 fixed-path cube versus `x=a OR c`, `y=b OR c`, and the k=8 quartic
-resolvent versus the even `v=u^2` fold.
+Readout: HYP-3150 integrates HYP-3143..HYP-3149 as a
+function-compression legality test.  A quotient is legal only if the target
+function is fiber-constant or a sidecar reconstructs the lost coordinate.
+The exact scout verifies the prompt's pair-function split (`a+b,a*b`
+unordered-safe; `a^b,b^a` ordered), the K3 quotient matrix `[[2,1],[3,0]]`,
+the coin mix/same analogue, Worpitzky row `(1,4,1)`, and the n=4 monotone
+compression `x=a OR c`, `y=b OR c`.
 
 Readout: stored scout verifies the factor-through split exactly.  The largest
 proof-carrier SCC couples the k8 even fold, K4 OR compression, K3 kernel,
@@ -44,6 +46,12 @@ the deepest k=8 node reducing to a quadratic in `u^2` after sidecars are
 accounted for.  Guardrail: do not use the Abel-Ruffini phrase as proof;
 verify exact factor-through maps and named destroyed coordinates.
 ## Lead codex-2026-06-28-S278: Worpitzky function-compression resolvent bridge
+Next: attach `function_payload_type`, `ordered_pair_sidecar`,
+`state_level_pgf_split`, `compression_map_word`, `canary_filler_status`,
+`resolvent_degree_ceiling`, and `quotient_legality_status` to HYP-3140
+fiber-PGF rows, HYP-3141 edge-witness rows, and HYP-3142 k=8 sidecar rows.
+Only then allow the degree-4/quartic bounded-core guardrail; otherwise route
+the row to named Abel-Ruffini degree-5 debt.
 
 **Status:** SYNTHESIS / exact finite scout; not proof (HYP-3151/T1216).
 

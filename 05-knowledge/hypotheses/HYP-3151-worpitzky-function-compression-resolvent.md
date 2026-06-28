@@ -11,6 +11,9 @@ result: 05-knowledge/results/lrc14_worpitzky_function_compression_resolvent_code
 reflection: 07-reflections/worpitzky-function-compression-resolvent-codex-s278.md
 related:
   - HYP-3150
+  - HYP-3152
+  - HYP-3153
+  - HYP-3161
   - HYP-3149
   - HYP-3148
   - HYP-3147

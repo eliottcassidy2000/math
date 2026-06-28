@@ -4,10 +4,12 @@ title: Coverage is a radius — q₀=q₆·R⁶ with the miss-PGF zeros near a c
 status: VERIFIED (q₀=q₆R⁶; near-circular zeros; Galois trivial/⊆S₄; Newton defects negative) + CORRECTION (monoid not V₄) + SYNTHESIS (λ=dip=odd face). Not a proof.
 source: mac-mini-2026-06-27-S72
 merges:
-  - HYP-3150   # the parity split even(biquadratic)/odd(Worpitzky) -- here = on-circle/off-circle
+  - HYP-3161   # the parity split even(biquadratic)/odd(Worpitzky) -- here = on-circle/off-circle
+  - HYP-3150   # function-compression guardrail
   - HYP-3132   # k=8 biquadratic = the EVEN face; CORRECTED: Galois<=S4, not V4
   - HYP-3147   # Worpitzky/ear = the ODD/off-circle face
 related:
+  - HYP-3153   # Lee-Yang/Worpitzky/quartic compression packet follow-on
   - HYP-3103   # the miss-PGF zeros = the circle
   - HYP-3122   # φ⁴ cumulants (κ₄ even, κ₃ odd)
   - THM-577    # cap = binomial pair-Pascal = the on-circle value
@@ -33,11 +35,6 @@ negative** — consec is the **extremal of the moment-inequality VIOLATION** = m
 0 real roots (S66). One object, several names.
 
 ## Rigorous solvability: Galois ⊆ S₄ (CORRECTING V₄)
-The flip-action is a transformation **MONOID** (the apex arc `c` is **absorbing**: `T,+,− → S`, swaps `T↔S`),
-**not** the group `V₄` (no inverses; my S70/S71 `V₄` was the 2-arc slice). Rigorous solvability:
-**dual degree ≤4 ⟹ Galois ⊆ S₄ ⟹ solvable by radicals**. The specific gK8 duals `(t−1)(t−2)(t−4)(t−5)`,
-`(t−2)(t−3)(t−6)` have **rational roots** ⟹ trivial Galois (split over ℚ) — *why cap/dip are exact rationals*.
-
 ## The compression hierarchy (beyond commutativity)
 What the iso-class arc-cube function respects: **linearity** (score, even) — exact n≤4, fails n=5;
 **associativity** (flip = XOR) — always (a monoid); **invertibility** (group) — FAILS (the absorbing apex

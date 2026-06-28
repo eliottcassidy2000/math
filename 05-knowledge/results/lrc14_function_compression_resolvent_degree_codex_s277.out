@@ -1,0 +1,97 @@
+HYP-3150 / codex-2026-06-28-S277
+Function-compression resolvent-degree guardrail
+status=exact finite scout plus synthesis; not an LRC14 proof
+
+1. PAIR FUNCTIONS AS QUOTIENT TESTS
+pair=(2, 3) sum_safe=True product_safe=True a^b=8 b^a=9 power_swap_equal=False ordered_gap=1
+pair=(2, 4) sum_safe=True product_safe=True a^b=16 b^a=16 power_swap_equal=True ordered_gap=0
+pair=(4, 2) sum_safe=True product_safe=True a^b=16 b^a=16 power_swap_equal=True ordered_gap=0
+pair=(3, 5) sum_safe=True product_safe=True a^b=243 b^a=125 power_swap_equal=False ordered_gap=118
+pair=(5, 3) sum_safe=True product_safe=True a^b=125 b^a=243 power_swap_equal=False ordered_gap=118
+pair=(4, 4) sum_safe=True product_safe=True a^b=256 b^a=256 power_swap_equal=True ordered_gap=0
+readout: sum/product are quotient-safe on unordered pairs; powers are ordered channels except accidental equalities.
+
+2. K3 EDGE-FLIP AND COIN KERNEL
+class_sizes={'C': 2, 'T': 6}
+raw_labelled_flip_counts:
+  from T: to T=12 to C=6
+  from C: to T=6 to C=0
+quotient_multiplicity_matrix_rows_T_C:
+  from T: to T=2 to C=1
+  from C: to T=3 to C=0
+normalized_markov_rows_T_C: from T=(2/3,1/3), from C=(1,0); stationary T=3/4,C=1/4; eigenvalues=1,-1/3
+edge_role_counts={'cycle_edge_breaks_to_T': 6, 'majority_edge_self_flip': 12, 'minority_edge_closes_cycle': 6}
+coin_kernel_rows_mix_same:
+  from mix: to mix=2 to same=1
+  from same: to mix=3 to same=0
+
+3. WORPITZKY BASIS WARNING
+identity: x^3 = C(x+2,3)+4*C(x+1,3)+C(x,3)
+  x=0: lhs=0 rhs=0 ok=True
+  x=1: lhs=1 rhs=1 ok=True
+  x=2: lhs=8 rhs=8 ok=True
+  x=3: lhs=27 rhs=27 ok=True
+  x=4: lhs=64 rhs=64 ok=True
+  x=5: lhs=125 rhs=125 ok=True
+  x=6: lhs=216 rhs=216 ok=True
+  x=7: lhs=343 rhs=343 ok=True
+  x=8: lhs=512 rhs=512 ok=True
+basis_coefficients=(1,4,1); this is a curve/basis payload, not permission to keep only a scalar.
+
+4. N4 CANARY/FILLER COMPRESSION
+fixed_path_fibers={'+': ['a'], '-': ['b'], 'S': ['c', 'bc', 'ac', 'ab', 'abc'], 'T': ['E']}
+compression=x=(a OR c), y=(b OR c)
+  word=a   class=+ -> xy=(1, 0) xy_class=+
+  word=b   class=- -> xy=(0, 1) xy_class=-
+  word=ab  class=S -> xy=(1, 1) xy_class=S
+  word=abc class=S -> xy=(1, 1) xy_class=S
+  word=ac  class=S -> xy=(1, 1) xy_class=S
+  word=bc  class=S -> xy=(1, 1) xy_class=S
+  word=c   class=S -> xy=(1, 1) xy_class=S
+  word=E   class=T -> xy=(0, 0) xy_class=T
+readout: the OR map is class-preserving but nonlinear; c is filler when fixed and a canary when erased.
+
+5. DEGREE LEDGER
+  symmetric_pair_shadow: degree=1; preserved=a+b and a*b survive unordered pair fibers; sidecar=none, if target predicate is symmetric; status=below Abel-Ruffini wall
+  ordered_pair_channel: degree=2; preserved=a^b,b^a orientation channel; sidecar=tail/tip or base/exponent sidecar; status=solvable by ordered sidecar, not by scalar quotient
+  K3_edge_flip_kernel: degree=2; preserved=C/T transition law with eigenmode -1/3; sidecar=minority-edge and Worpitzky descent word; status=quadratic-sized preflight
+  N4_filler_canary_square: degree=2; preserved=x,y exact four-class transversal after fixing c; sidecar=c-canary status plus S-bulk fiber; status=Klein-square source, no degree growth
+  k8_bounded_core_resolvent: degree=4; preserved=HYP-3132/HYP-3142 quartic/biquadratic U4 exit; sidecar=even fold plus odd-coordinate resurrection; status=deepest known live core; still below degree 5
+  illegal_raw_scalarization: degree=5; preserved=none: generic quintic-style branch loss; sidecar=route to named debt before theorem use; status=Abel-Ruffini wall / not accepted as proof currency
+meta_readout: the current hard core is useful because every accepted carrier stays at degree <= 4; degree 5 is routed to named debt.
+
+6. PROOF PACKET FIELDS
+  - function_payload_type
+  - unordered_pair_survival
+  - ordered_pair_sidecar
+  - three_edge_flip_kernel
+  - worpitzky_basis_curve
+  - state_level_pgf_split
+  - compression_map_word
+  - canary_filler_status
+  - resolvent_degree_ceiling
+  - abel_ruffini_wall_status
+  - finite_tameness_window
+  - quotient_legality_status
+  - terminal_exit_or_named_debt
+
+7. TOURNAMENT ANALYSIS
+vertices=proof carriers / function payloads, not runners or raw arcs
+pairwise_observable=retained order+curve payload, quotient legality, LRC transfer, and degree-control score
+binary_gauge=A beats B iff weighted retained payload is larger; lexical tie path
+score_hist={17: 1, 35: 1, 62: 1, 64: 1, 68: 1, 72: 1, 76: 1, 79: 1, 82: 1, 85: 1}
+outdegrees={'A000568_n_le_7_tameness_window': 2, 'bounded_core_degree4_guardrail': 8, 'fiber_PGF_full_curve_payload': 7, 'function_compression_legality_certificate': 9, 'n3_edge_flip_minoritary_gate': 4, 'n4_canary_filler_exact_transversal': 5, 'ordered_pair_tip_tail_sidecar': 6, 'raw_scalar_class_count': 0, 'symmetric_sum_product_shadow': 1, 'worpitzky_basis_curve': 3}
+directed_3cycles=0
+edge_flips_vs_lexical=15
+hamiltonian_path_count=1
+selected_path=
+  function_compression_legality_certificate
+  bounded_core_degree4_guardrail
+  fiber_PGF_full_curve_payload
+  ordered_pair_tip_tail_sidecar
+  n4_canary_filler_exact_transversal
+  n3_edge_flip_minoritary_gate
+  worpitzky_basis_curve
+  A000568_n_le_7_tameness_window
+  symmetric_sum_product_shadow
+  raw_scalar_class_count

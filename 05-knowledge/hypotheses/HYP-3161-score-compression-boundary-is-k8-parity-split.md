@@ -1,5 +1,5 @@
 ---
-id: HYP-3150
+id: HYP-3161
 title: The score→iso compression boundary (bijective n≤4, fails n=5) IS the k=8 LRC hard row — the cap dip turns on exactly at |P|=13-k crossing 4→5; and the dip's gK8 content -9S₃+6S₄ splits by PARITY into the EVEN biquadratic face (a+b/a·b, S70) and the ODD Worpitzky face (a^b/b^a, codex HYP-3147, dominant)
 status: VERIFIED (score→iso n≤4 bijective/n=5 fails; dip onset at |P|=4→5; parity split, odd dominates) + SYNTHESIS (the k=8 dip = even biquadratic + odd Worpitzky; the compression-trick). Not a proof.
 source: mac-mini-2026-06-27-S71
@@ -7,6 +7,11 @@ merges:
   - HYP-3147   # codex n=3 edge-flip Worpitzky kernel = the ODD/antisymmetric face
   - HYP-3132   # mac-mini k=8 biquadratic resolvent = the EVEN/symmetric face
 related:
+  - HYP-3150   # function-compression guardrail
+  - HYP-3151   # executable Worpitzky/function-compression scout
+  - HYP-3152   # Lee-Yang/Galois correction
+  - HYP-3153   # Lee-Yang/Worpitzky/quartic packet follow-on
+  - HYP-3199   # n=4 Einheit/minimality chart
   - HYP-3122   # φ⁴ cumulants (the even/odd cumulants = the parity faces)
   - THM-577    # cap = the symmetric face, exact for |P|<=3 (compression works)
   - THM-062    # deformed Eulerian (Worpitzky)
@@ -14,7 +19,7 @@ related:
 external: Worpitzky's identity; Eulerian numbers A(3,k)=[1,4,1]
 ---
 
-# HYP-3150 — The score-compression boundary is the k=8 hard row, split by parity
+# HYP-3161 — The score-compression boundary is the k=8 hard row, split by parity
 
 ## Invariants as arc-cube functions; the function quartet by parity
 An invariant is a function on `(Z/2)^{C(n,2)}`. The owner's four operations split an edge's endpoint pair:
@@ -23,10 +28,16 @@ An invariant is a function on `(Z/2)^{C(n,2)}`. The owner's four operations spli
 
 ## The compression (VERIFIED, `lrc_arc_cube_compression_parity_macmini_S71.py`)
 The SCORE (commutative `a+b` face) **determines the iso class for n≤4** (`n=3,4` bijective) and **FAILS at n=5**
-(12 iso vs 9 scores). So at n≤4 the iso class is a *group/linear* function of the arcs — why the owner's
-**scheme 2 is a clean Klein-four `V₄`** (the 2-arc slice closes into a group), while **scheme 1 (3 arcs) is the
-same data over-coordinatized** (a magma). The trick: **compress to the gauge where the symmetric face is a
-complete invariant ⟹ a group ⟹ computable.**
+(12 iso vs 9 scores). So at n≤4 the iso class has a low-degree coordinate chart: the owner's **scheme 2 is a
+clean Klein-four slice** (the 2-arc slice closes into a group), while **scheme 1 (3 arcs) is the same data
+over-coordinatized** (a magma). S72/HYP-3152 corrects the broader claim: the full flip action is a transformation
+monoid with an absorbing apex arc, not a V4 group. The trick: **compress to the gauge where the symmetric face is a
+complete invariant ⟹ finite-degree computability.**
+
+HYP-3199 sharpens this at n=4: the fixed-path `a,b,c` table is a high-multiplicity cover with a deletable
+`c`/`S`-bulk coordinate, while the partial-score `x,y` chart is the exact Einheit section.  The score boundary is
+therefore not just about class counts; it is about when the class chart has a minimal section plus named deletion
+sidecar.
 
 ## The payoff: k=8 IS the compression boundary
 The cap dip turns on exactly at the n=4→5 boundary (`|P|=13−k`):

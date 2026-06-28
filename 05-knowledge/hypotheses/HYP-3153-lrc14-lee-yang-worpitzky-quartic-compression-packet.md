@@ -17,6 +17,8 @@ related:
   - HYP-3152
   - HYP-3151
   - HYP-3150
+  - HYP-3161
+  - HYP-3199
   - HYP-3149
   - HYP-3147
   - HYP-3142
@@ -34,7 +36,7 @@ related:
 ## Claim
 
 This lane tests whether HYP-3151's executable function-compression calculus,
-HYP-3152's Lee-Yang circle/radius web, and the mac-mini HYP-3150 parity split
+HYP-3152's Lee-Yang circle/radius web, and the mac-mini HYP-3161 parity split
 can be fused into a proof-facing packet:
 
 ```text
