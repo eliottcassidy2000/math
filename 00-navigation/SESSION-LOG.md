@@ -20,6 +20,29 @@ hardness as the 7^2-ramified dip (bound via cyclotomic units / totally-positive 
 obstruction); descend the 3-head ramification (caveat THM-492: descent rescales modulus not threshold). CONVERGES
 kps S31ar (the de Moivre cubic = the missing recursion mode = the degree-3 subfield Q(cos2pi/7)) + my S75d
 (recursion modes=cyclotomic factors). NOT a proof; pins LRC(14) hardness as cyclotomic ramification at 7 (cap) & 3 (witness).
+## kind-pasteur-2026-06-28-S31as -- PROOF-PUSH: mac-mini's equidistribution FINISH = the explicit cyclotomic FEJER cert; the coherence fight dissolves
+
+Owner: mine the previous cyclotomic + niche work for insights that push the critical LRC angle. Mined
+mac-mini's "one obstruction" (HYP-3221: hard core = the coherent/comonotone worst case = the AP, Lee-Yang
+zero at lambda=7=1/p, margin 6; algebra fails, only equidistribution rescues; "invest in Erdos-Turan") and
+pushed it with the cyclotomic/Fejer work (HYP-3218). FOUR VERIFIED BRIDGES:
+
+1. **Lee-Yang MARGIN = phi(p):** `|lambda|-1 = p-1 = phi(p)` = the cyclotomic group order (verified p=3..13);
+   its half (p-1)/2 = the de Moivre/ladder depth. The equidistribution clearance IS the cyclotomic group.
+2. **|Gauss sum|^2 = 7 = the Lee-Yang zero:** `|g(chi_7)|^2=|sqrt(-7)|^2=7=lambda`. The apex prime IS the
+   Gauss-sum modulus -- arithmetic and analysis are the same number.
+3. **The equidistribution finish = the FEJER/ERDOS-TURAN kernel = my magic function** (HYP-3214): Erdos-Turan/
+   Vaaler are built from Fejer; AP autocorrelation = F_k; F_7=(de Moivre)^2. The finish is EXPLICIT & cyclotomic.
+4. **THE COHERENCE-VS-ARITHMETIC FIGHT DISSOLVES:** the AP autocorrelation = the Fejer kernel = SIMULTANEOUSLY
+   maximal coherence (worst case) AND the equidistribution certificate (rescue) -- ONE kernel. The AP is the
+   SELF-DUAL FIXED POINT on the critical surface (zero AT lambda=7, not inside); the phi(p)=6 positive-
+   definiteness reserve = the clearance. The AP doesn't lose the fight; it IS the marginal self-dual config.
+
+CONCRETE ACTION: the finishing estimate = the SIGNED Fejer/Vaaler tail bound E on `meas(L)=(6/7)^k(1-E)`,
+apex-lattice vanishing `c-hat(7|n)=0`, reserve phi(p) -- the signed cert THM-537 required = iterating
+mac-mini's PROVED single-arc peeling (S75) with the Bochner/Fejer Gram kernel. The obstruction = the cubic
+chi_3 mode (HYP-3217); easy = quadratic chi_7; finish = full Fejer (sextic). => HYP-3218; reflection
+the-equidistribution-finish-is-the-cyclotomic-fejer-certificate-...
 
 ## kind-pasteur-2026-06-28-S31ar -- the three signed recursions ARE the subfield lattice of Q(zeta_7); the cubic de Moivre is the missing mode
 
