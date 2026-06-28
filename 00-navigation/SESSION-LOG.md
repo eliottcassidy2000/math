@@ -1,3 +1,34 @@
+## kind-pasteur-2026-06-27-S31ai -- the k=8 node = a FERROMAGNETIC covariance extremality (functions + info theory + associativity)
+
+Owner: merge/extend the Lee-Yang/phi^4/Galois web toward a proof, thinking in FUNCTIONS + INFORMATION
+THEORY + failures of compression beyond commutativity (ASSOCIATIVITY). Attacked the single remaining node
+(k=8 bounded-core dip = mac-mini HYP-3132). Results (HYP-3160):
+
+- **The node as a function:** "consec maximizes `L_yK8 = q0 + q6 + (1/10)q3` (bimodality)" over k=8 clusters
+  (`q_t = meas{N=t}`, N = #empty inner sectors). SCAN (3002 clusters): consec is argmax (tied even-AP
+  dilation) of `L_yK8`, **Var(N)**, `mu4`, raw bimodality `q0+q6` -- ALL rank 0/1.
+- **INFORMATION THEORY rules out entropy:** consec has HIGH entropy (2.43, rank 3000/3002), NOT minimal --
+  the extremality is SPREAD (variance), not concentration. Kills entropy/min-description proof attempts.
+- **CLEANEST TARGET = total covariance `Sigma kappa_2`:** consec is the EXACT global max (rank 0/251,
+  +0.722); dissociated configs go NEGATIVE (antiferromagnetic). So consec = the unique FERROMAGNETIC/ORDERED
+  phi^4 phase: empty sectors form a CONTIGUOUS ARC (three-gap, THM-565). consec also MINIMIZES kappa_4 (phi^4
+  stabilizer sign). This = mac-mini's reflection-FOLD of the phi^4 quartic to DEGREE-2 (the biquadratic in u^2).
+- **ASSOCIATIVITY compression failure (owner cue):** the cumulant tower: kappa_2 (covariance) = COMMUTATIVE
+  pairwise (folds, provable); **kappa_3 = the ASSOCIATOR** (3-way joint emptiness does NOT factor through
+  pairwise -- irreducible 3-cocycle) = the odd `-9S3`/Worpitzky dip term (codex HYP-3147) = the NON-ASSOCIATIVE
+  apex-7 (Fano/octonion) residue. PARITY-SPLIT web closure: ALL odd structures align -- ODD ears
+  (factor-critical) = Omega (odd cycles) = kappa_3 (associator) = Worpitzky -9S3 = non-associative apex.
+  EVEN = commutative/biquadratic/S4/Var (provable, folds); ODD = the genuine apex obstruction.
+- **Newton/Maclaurin (owner cue):** the coverage PGF VIOLATES Newton (complex/off-circle roots); consec
+  maximizes the violation = the phi^4 ordered signature.
+- HONEST NEGATIVES: the associativity defect `Sigma-k3/S3=0.142856` is a near-coincidence (NOT 1/7, not
+  universal); the "anchor = odd residue" hypothesis REFUTED (intrinsic q0>>q6 skew, survives anchor removal).
+
+NET: LRC(14) not proved; the last node is now stated as **consec maximizes total empty-sector covariance**
+(degree-2, ferromagnetic, even/provable) **+ the odd Worpitzky/associator residue** (non-associative apex).
+=> HYP-3160; reflections the-k8-node-is-a-variance-extremality-..., the-two-maps-lee-yang-...; scripts
+lrc_k8_{node_bimodality_newton_maclaurin, associativity_cumulant_tower}_kps.py.
+
 ## mac-mini-2026-06-27-S72 -- the Lee-Yang circle web: coverage=R^6, dip=off-circle phi^4, Galois<=S4, compression hierarchy
 
 Owner: merge a dense web (Lee-Yang circle=binomial=cap pair-Pascal+de-Moivre-Laplace, dip=phi^4 off-circle;
