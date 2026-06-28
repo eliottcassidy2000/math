@@ -15,6 +15,39 @@
 
 ---
 
+## Lead codex-2026-06-28: Two-adic off-grid relocation lemma
+
+**Status:** EVIDENCE / exact interval scout; not proof
+(HYP-3422/T1383/LTI-383/LTT-283).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3422-lrc14-two-adic-offgrid-relocation.md`,
+script
+`04-computation/lrc14_two_adic_offgrid_relocation_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_two_adic_offgrid_relocation_codex_20260628.out`,
+and
+`07-reflections/lrc14-two-adic-offgrid-relocation-codex-20260628.md`.
+
+Purpose: make the corrected HYP-3418 covering-floor route concrete.  Split
+`S = O union 2E` and set `u=2t`; then even safety is the halved problem on `E`,
+while odd speeds impose two explicit lift filters.  The finite lemma target is
+
+```text
+E_safe(1/14) cap (odd_branch_0_good union odd_branch_1_good) != empty.
+```
+
+Readout on `24` audited covering rows: full exact `M(S)>=1/14`, off-`14`-grid
+optimizers, branch-0 certificates, branch-1 certificates, and either-branch
+relocation certificates all hold `24/24`; the naive nonresonant witness fails
+`24/24`.  Tight branch-union measure is `563/105105`; tight relocation score is
+`11/147`.
+
+Next: prove the interval-overlap lemma with finite-ruler, Helly, or exact
+interval-piercing bounds on `E_safe`.  Use the owner-cut work only to name
+finite packets where branch filters appear tight; the `2:g2` label in
+HYP-3419 is the finite owner-cut shadow of this two-adic coordinate.
+
 ## Lead codex-2026-06-28: Owner-cut dual current certificate synthesis
 
 **Status:** SYNTHESIS / exact owner-current certificate scout; not proof

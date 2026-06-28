@@ -1,3 +1,37 @@
+## codex-2026-06-28 -- HYP-3422 two-adic off-grid relocation lemma for LRC14
+
+Pushed the user's resonant-transparency prompt through the HYP-3418 correction:
+the covering floor is two-adic, so the useful finite lemma is not a
+coprime-to-14 reduction.  Added HYP-3422/T1383/LTI-383/LTT-283 plus
+script/result/reflection:
+
+```text
+04-computation/lrc14_two_adic_offgrid_relocation_codex_20260628.py
+05-knowledge/results/lrc14_two_adic_offgrid_relocation_codex_20260628.out
+05-knowledge/hypotheses/HYP-3422-lrc14-two-adic-offgrid-relocation.md
+07-reflections/lrc14-two-adic-offgrid-relocation-codex-20260628.md
+```
+
+Core identity: split `S = O union 2E`, set `u=2t`, and prove
+`E_safe(1/14)` intersects one of the two odd lift filters:
+
+```text
+t = u/2       requires ||o*u/2|| >= 1/14
+t = (u+1)/2   requires ||o*u/2|| <= 3/7
+```
+
+Exact audit on `24` covering rows: full `M(S)>=1/14` `24/24`, off-`14`-grid
+optimizers `24/24`, naive nonresonant witness failures `24/24`, branch-0 and
+branch-1 relocation certificates `24/24`, and either-branch verified
+certificates `24/24`.  Tight branch-union measure is `563/105105`; tight
+relocation score is `11/147`.
+
+Connection to concurrent work: HYP-3419's `2:g2` in the `10->20` owner-cut
+tree and HYP-3417's frontier current `{2:g2,11:g1,13:g1}` are finite owner-cut
+shadows of the same even-cover coordinate.  Use those labels to name tight
+packets, but prove the floor by the interval-overlap lemma, not by
+apex-7/Galois/census shortcuts.
+
 ## kind-pasteur-2026-06-28-S259 -- the COVERING FLOOR is 2-ADIC not 7-adic: even speeds are the binding obstruction; coprime-to-14 reduction FAILS; 2-adic descent route
 Owner: quick, high-density high-leverage insights on the cutting-edge question (the covering floor = the one inequality completing LRC(14)). HYP-3418, sharpening HYP-3415.
 - **NAIVE REDUCTION FAILS (0/400):** "covering S lonely via coprime-to-14 part R_nr lonely + resonant transparent" -- R_nr is all ODD, loneliest at t=1/2 (margin 1/2), but EVERY even speed dies there. So the R_nr-witness is useless; transparency holds only at the FULL M(S) optimum (correction to S258).

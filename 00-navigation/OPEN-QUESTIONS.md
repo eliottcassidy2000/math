@@ -1,5 +1,41 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3422 two-adic off-grid relocation addendum:**
+HYP-3422 converts the corrected HYP-3418 covering-floor story into a concrete
+finite interval lemma.  For a primitive covering row, split
+
+```text
+S = O union 2E,     u = 2t.
+```
+
+The even speeds are safe exactly when `E` is safe at `u`.  The two lifts impose
+explicit odd filters:
+
+```text
+t = u/2       requires ||o*u/2|| >= 1/14
+t = (u+1)/2   requires ||o*u/2|| <= 3/7
+```
+
+Open concrete task:
+
+```text
+prove E_safe(1/14) cap (odd_branch_0_good union odd_branch_1_good) != empty
+```
+
+for every primitive covering `13`-row.  This is the rigorous version of the
+"resonant survivor dissolves" slogan.  The naive coprime-to-14 witness fails
+because it usually chooses `t=1/2`, where every even speed dies; relocation
+keeps the even half as a smaller LRC packet and lets the odd half choose one of
+two branch filters.
+
+Next test: replace the `24`-row scout with a finite-ruler / Helly-style proof
+on rational interval families.  Use HYP-3417/HYP-3419 owner-current labels only
+to name finite exceptional packets, especially the visible `2:g2` even-cover
+coordinate; do not route this floor through apex-7/Galois/census shortcuts. ->
+HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410,
+HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3129, HYP-2963, THM-523,
+LTI-383, LTT-283, T1383, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3417 owner-cut dual current addendum:**
 HYP-3417 sharpens the owner-support/Menger route into a concrete certificate
 obligation.  On the current HYP-3410 mixed fibers, all selected owner-current

@@ -8066,6 +8066,43 @@ quotient_legality_status
   HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301,
   HYP-3265, HYP-3124, HYP-2963, THM-523, LTI-380, T1380, OPEN-Q-108.
 
+## LTT-283: Two-Adic Off-Grid Relocation Tournament
+
+- **Move:** Rank the proof obligations in the corrected HYP-3422
+  two-adic relocation route.  The tournament is over the exact lift identity,
+  branch-1 odd tolerance, even-half descent, owner-current sidecar labels,
+  nonresonant decorrelation floor, resonant grid transparency,
+  apex-7 offpath guardrail, and raw named analogies.
+- **LRC use:** For a covering row split `S = O union 2E` and `u=2t`.
+  Even speeds are safe at `t` exactly when `E` is safe at `u`; the two lifts
+  impose explicit odd filters.  The theorem target is
+  `E_safe(1/14) cap (odd_branch_0_good union odd_branch_1_good) != empty`.
+- **Preserves:** existence of a full LRC14 witness after a legal half-lift,
+  exact rational interval constraints, the two-adic descent coordinate, and
+  finite owner-current labels for tight packets.
+- **Forgets / guardrail:** the original `t` before branch selection,
+  misleading coprime-to-14 optimizer data, raw resonant-speed labels,
+  apex-7/Galois equality-census structure, and famous-constant analogies.
+- **Pairwise observable:** exactness plus proof leverage plus branch-overlap
+  strength, penalized for scalar or offpath shortcuts.
+- **Switch/gauge:** higher weighted score first; ties use module code.
+- **Fingerprint:** `8` vertices, score histogram
+  `{-30:1, 36:1, 52:1, 61:1, 65:1, 72:1, 74:1, 85:1}`, no directed
+  `3`-cycles, singleton SCCs, and Hamiltonian path
+  `R00_two_adic_lift_identity -> R01_branch_one_odd_tolerance -> R02_even_half_descent -> R03_owner_current_cut_sidecar -> R04_nonresonant_decorrelation_floor -> R05_resonant_grid_transparency -> R06_apex7_offpath_guardrail -> R07_raw_named_analogy`.
+- **Priority path meaning:** prove the exact doubling/lift identity first,
+  then branch-1 tolerance, then even-half descent.  Owner-current labels such
+  as `2:g2` are sidecars for tight packets.  Nonresonant decorrelation and
+  resonant transparency are downstream summaries, while apex-7 and named
+  constants remain guardrails.
+- **Next hook:** replace the `24`-row exact scout with a finite-ruler / Helly
+  interval proof over `E_safe` after removing the odd branch-bad intervals. If
+  the overlap can fail in a larger bank, name the first failure as two-adic
+  branch debt, owner-current debt, exact-period debt, or state-lift debt.
+- **Pointers:** HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415,
+  HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3129, HYP-2963,
+  THM-523, LTI-383, T1383, OPEN-Q-108.
+
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 
 - **Move:** Use recursive signature repairs as tournament vertices: residue,

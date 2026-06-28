@@ -1,0 +1,58 @@
+HYP-3422 TWO-ADIC OFF-GRID RELOCATION SCOUT
+==============================================================================
+Certificate identity:
+  S = O union 2E, u = 2t
+  even-safe:       ||e*u|| >= 1/14 for every e in E
+  odd branch 0:    ||o*u/2|| >= 1/14
+  odd branch 1:    ||o*u/2|| <= 3/7  (off-grid lift near t=1/2)
+
+A. Aggregate exact audit
+  rows audited:                         24
+  full exact M(S) >= 1/14:              24/24
+  full optimizer selected off 14-grid:  24/24
+  naive nonresonant witness fails:      24/24
+  branch-0 relocation certificates:     24/24
+  branch-1 relocation certificates:     24/24
+  either-branch certificates verified:  24/24
+  binding-role totals at selected exact optimizers:
+    odd_unit=22, even_R=17, seven_R=2, 14Q=8
+
+B. Tight rows
+  smallest branch-union measure: covering_AP_with_84
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    M=7/89 at t=37/89 den=89 off14=True binding={'14Q': 1, 'odd_unit': 1}
+    nonres M=1/2 at t=1/2; resonant_min_there=0
+    measures: even_safe=107/245, branch0=563/105105, branch1=563/105105
+    selected branch=1, t=2293/3920, score=59/784
+  smallest exact M(S): covering_AP_with_12_and_84
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 84)
+    M=1/13 at t=1/13 den=13 off14=True binding={'even_R': 1, 'odd_unit': 1}
+    nonres M=1/2 at t=1/2; resonant_min_there=0
+    measures: even_safe=97/245, branch0=5297/194040, branch1=5297/194040
+    selected branch=1, t=136/147, score=11/147
+  smallest relocation score: covering_AP_with_12_and_84
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 84)
+    M=1/13 at t=1/13 den=13 off14=True binding={'even_R': 1, 'odd_unit': 1}
+    nonres M=1/2 at t=1/2; resonant_min_there=0
+    measures: even_safe=97/245, branch0=5297/194040, branch1=5297/194040
+    selected branch=1, t=136/147, score=11/147
+
+C. Interpretation
+  The old transparency slogan is only safe after relocation.
+  The coprime/nonresonant optimum is usually t=1/2; resonant/even speeds die there.
+  The useful variable is u=2t: evens descend to E, odds become two branch filters.
+  Branch 1 is the off-grid lift: it keeps odds near half-integers while E supplies safety.
+  Proof target: show E_safe intersects at least one odd branch for every covering S.
+  If every hard row needs an even branch label, HYP-3418's 2-adic floor story is the right spine.
+
+D. Tournament Analysis
+  vertices are proof obligations, not runners/arcs/constants.
+  score_hist={-30: 1, 36: 1, 52: 1, 61: 1, 65: 1, 72: 1, 74: 1, 85: 1}
+  directed_3cycles=0
+  hamiltonian_path=R00_two_adic_lift_identity -> R01_branch_one_odd_tolerance -> R02_even_half_descent -> R03_owner_current_cut_sidecar -> R04_nonresonant_decorrelation_floor -> R05_resonant_grid_transparency -> R06_apex7_offpath_guardrail -> R07_raw_named_analogy
+
+Next exact lemma statement:
+  For S=O union 2E, prove that E_safe(1/14) intersects
+  odd_branch_0_good union odd_branch_1_good.  Use LRC<=13 on E,
+  then price only the odd branch filters; do not replace this by an
+  apex-7, Galois, or scalar-resonance shortcut.
