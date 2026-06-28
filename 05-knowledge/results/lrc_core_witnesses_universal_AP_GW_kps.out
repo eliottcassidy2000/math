@@ -1,0 +1,9 @@
+THE CYCLOTOMIC CORE IS CONFIG-INDEPENDENT: AP and Goddyn-Wong share the EXACT same Phi_14 witnesses (verified exact).
+Both tight configs at n=14 -- AP {1..13} and Goddyn-Wong {1..11,13,24} -- have M=1/14 achieved at IDENTICAL witnesses:
+  t = a/14 for a in units mod 14 = {1,3,5,9,11,13} = Phi_14 (the primitive 14th roots), all with M=1/14 EXACT.
+  3 antipodal pairs (1,13),(3,11),(5,9); binders at t=a/14 are {+-a^{-1} mod 14} = the antipodal pair.
+The witnesses are determined by the SHARED small residues {1..11,13} mod 14 (GW's 24=10 mod14 is never a binder).
+=> mac-mini's Vitali CORE construction (HYP-3237) is UNIFORM across the tight locus, not AP-specific; the
+   Borsuk-Ulam index 3 (= (p-1)/2, HYP-3240) and the equioscillation are config-independent on the core.
+ELEMENTARY (known via HYP-3084 aliasing): t=1/14 gives M>=1/14 for ANY config with no speed = 0 mod 14
+  (incl. both tight configs); the genuine hard core is configs with a speed divisible by 14 (cyclotomic-14 witness fails).
