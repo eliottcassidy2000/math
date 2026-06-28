@@ -1,0 +1,12 @@
+Forward-lead test: are the deep constants Dirichlet-L-value-flavored (rational, 7-power denom)?
+  cap_8=2243/5880: num=2243={2243: 1}  denom=5880={2: 3, 3: 1, 5: 1, 7: 2}
+  dip_8=1081/76440: num=1081={23: 1, 47: 1}  denom=76440={2: 3, 3: 1, 5: 1, 7: 2, 13: 1}
+  m_P=14249/252252: num=14249={14249: 1}  denom=252252={2: 2, 3: 2, 7: 2, 11: 1, 13: 1}
+  cap_10=55/91: num=55={5: 1, 11: 1}  denom=91={7: 1, 13: 1}
+
+  m_P numerator 14249 = {14249: 1}  (prime? for an L-value the numerator carries the Bernoulli)
+  cap_8 numerator 2243 = {2243: 1}
+  dip_8 numerator 1081 = {23: 1, 47: 1}
+  NOTE: cap is rational => consistent with a rational special L-value L(1-n,chi_7) (Siegel-Klingen),
+  NOT with a transcendental regulator; the L-value lead is for these RATIONAL caps, the
+  transcendental singular-series/lonely-measure is the regulator/L'(0) side (Stark).
