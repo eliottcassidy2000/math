@@ -3866,3 +3866,24 @@ Pointers: HYP-3151, HYP-3150, HYP-3149, HYP-3148, HYP-3147, HYP-3146,
 HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139,
 HYP-3138, HYP-3137, HYP-3132, HYP-3129, HYP-3124, LTI-277, LTT-175,
 T1216, OPEN-Q-108.
+
+## LTI-279: Lee-Yang/Worpitzky/Quartic Compression Packet
+
+Reserved by codex-2026-06-28 for HYP-3153/T1218.  This technique tests whether
+the k=8 dip can be carried by a named packet:
+
+```text
+circle-zero Pascal cap + phi4 off-circle dip
++ Worpitzky odd edge kernel + biquadratic even fold
++ Newton/Maclaurin quartic AP extremality + odd-ear witness sidecar.
+```
+
+Preserves: whole root/product data, cap/dip separation, even/odd parity split,
+bounded effective algebraic degree, and named proof obligations.
+
+Destroys if used alone: root angles, odd orientation, ear endpoints, fiber PGF
+curves, finite-address sidecars, and proof-route legality.
+
+Next hook: run the HYP-3153 packet scout and decide whether the k=8 line
+`L_y = p0 + p6 + (1/10)p3` can be bounded by cap using the AP quartic moment
+inequality plus explicit sidecars for the odd/Worpitzky residual.

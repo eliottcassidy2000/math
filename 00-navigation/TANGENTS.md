@@ -3599,3 +3599,14 @@ novelty-first gauge, which is the warning that fashionable outside analogies
 and finite fitted literals do not outrank exact gap circuits.
 -> HYP-3116, HYP-3115, HYP-3111, HYP-3107, HYP-2791, HYP-2790, HYP-2112,
 HYP-2108, LTI-252, LTT-150, OPEN-Q-108.
+
+## T1218: Lee-Yang/Worpitzky/quartic compression packet for the k=8 dip (codex-2026-06-28)
+
+Reserved by HYP-3153.  The lane will merge HYP-3151's factor-through scout,
+HYP-3152's Lee-Yang circle/radius web, mac-mini's parity split, Pascal cap
+mass, phi4 off-circle dip, Worpitzky odd kernels, odd-ear witnesses, and
+Newton/Maclaurin quartic AP extremality into one bounded-degree packet audit.
+Tournament vertices will be proof obligations rather than runners/arcs/classes.
+-> HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3149, HYP-3147, HYP-3142,
+HYP-3139, HYP-3109, HYP-3099, LTI-279, LTT-177,
+OPEN-Q-108.
