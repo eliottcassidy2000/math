@@ -119,7 +119,7 @@ HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3401,
 HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3124, HYP-3123, HYP-3118,
 HYP-2982, HYP-2963, THM-523, T1370, LTI-370, LTT-270, OPEN-Q-108.
 
-**OPEN-Q-108 HYP-3407 boundary-uniformization cut stability addendum:**
+**OPEN-Q-108 HYP-3407 special-function cut signature recursion addendum:**
 HYP-3407 reserves an executable creative synthesis route downstream of
 HYP-3406.  The intended move is to treat Bring radicals, Schwarz-Christoffel
 cut maps, Barban-Davenport-Halberstam variance, Menger cuts,
@@ -160,6 +160,28 @@ fibers. -> HYP-3410, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402,
 HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260,
 HYP-3257, HYP-3124, HYP-2969, HYP-2963, THM-523, T1371, LTI-371, LTT-271,
 OPEN-Q-108.
+**OPEN-Q-108 HYP-3420 owner-cut / chiral-recursion addendum:**
+HYP-3420 turns HYP-3406's endpoint-owner repair into a graph theorem target.
+On the scanned expanded HYP-2963 banks, residue-only theorem-exit fibers mix,
+but `residue_plus_owner_chiral_class` and `residue_plus_owner_support` have
+`0` mixed fibers.  On the largest bank `(60,16)`, the BDH-style
+pair-disagreement variance drops from residue-only `12` to owner/chiral-owner
+`0`, and both residue-mixed fibers have size-one endpoint-owner cuts:
+`('1:g1',)` for the `petal 13->26` versus positive-open `26/40/54` family,
+and `('5:g1',)` for the `P10+GW` / `GW-shell` / `12->48` fiber.
+
+Open task: prove or refute the endpoint-owner Menger-cut theorem.  For every
+residue-mixed theorem-exit fiber in the enlarged actual-packet bank, either
+find a small owner cut separating exit classes, prove the mirror/chiral owner
+class is stable enough to replace full support, or name the first failure as
+tropical/off-grid debt, unit-contact holonomy, state-lift debt, or
+Bring-style branch/monodromy debt.  Barban-Davenport-Halberstam variance,
+Schwarz-Christoffel accessory parameters, Krasner stability, and
+Meissel-Mertens/loglog calibration are admissible only as retained packet
+fields; raw constants and raw `exp(exp(exp(79)))` scale are not proof
+vertices. -> HYP-3420, HYP-3412, HYP-3410, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3301,
+HYP-3300, HYP-3265, HYP-3243, HYP-3238, HYP-3152, HYP-2982, HYP-2214,
+T1381, LTI-381, LTT-281, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3412 special-function cut signature recursion addendum:**
 HYP-3412 executes the broader exploratory synthesis route downstream of
@@ -346,7 +368,7 @@ Open concrete task: compute the owner-support Menger graph for the HYP-3406
 `petal 13->26` versus positive-open single-swap `26/40/54` families, then
 pair it with the HYP-3405 AP versus `13->27` unit-height local disk table.
 Only after those exceptional fibers are named should a BDH/Mertens mean-square
-bound be attempted over larger HYP-2963 banks. -> HYP-3407, HYP-3406,
+bound be attempted over larger HYP-2963 banks. -> HYP-3407, HYP-3410, HYP-3408, HYP-3406,
 HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301,
 HYP-3265, HYP-3124, HYP-3123, HYP-2982, HYP-2963, T1368, LTI-368, LTT-268,
 OPEN-Q-108.
@@ -6594,7 +6616,8 @@ HYP-3252, HYP-3249, LTI-364, LTT-264, T1364, OPEN-Q-108.
 HYP-3408 filters the Ramanujan-Soldner, Sophie Germain,
 Hermite-Lindemann-Weierstrass, Krasner, and Meissel-Mertens prompt through the
 current HYP-3406 owner-support repair route, as the exact guardrail companion
-to incoming HYP-3407's boundary-uniformization cut stability atlas.  Named
+to HYP-3407's special-function scaffold and HYP-3411's
+boundary-uniformization cut-stability atlas.  Named
 constants are not proof vertices.  The live vertices are proof obligations.
 
 Concrete readout:

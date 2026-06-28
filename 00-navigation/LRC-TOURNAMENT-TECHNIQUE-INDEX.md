@@ -291,6 +291,17 @@ obligations, and proof-carrier interfaces.
   obstruction vector, sidecar repair matrix, boundary atom classifier, and raw
   mixed-fiber scout.  Do not make rows, residues, or replacement speeds the
   vertices.
+- Need to translate a broad special-function/cut prompt into legal packet
+  coordinates:
+  use LTT-268 after LTT-267 and make signature levels, cut interfaces, mixed
+  fibers, variance packets, branch alarms, local stability radii, and proof
+  obligations the vertices.  Do not let famous constants or functions bypass
+  theorem-exit fiber tests.
+- Need to turn HYP-3406 owner support into a graph theorem:
+  use LTT-281 after LTT-267/LTT-271/LTT-273 and make owner-cut certificates, mirror/chiral
+  owner signatures, BDH-style fiber variance, SC accessory fields, Krasner
+  stability radii, and branch/scale guardrails the vertices.  Do not make
+  raw constants or `exp(exp(exp(79)))` the vertices.
 - Need a post-HYP-3311 angle that does not reuse residue words as the theorem:
   use LTT-263 and make endpoint-owner currents, theorem-exit sources/sinks,
   valuation owners, tropical wall words, Farkas/Green duals, AP/GW boundary H1
@@ -7838,59 +7849,91 @@ quotient_legality_status
   HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253, HYP-2975,
   HYP-2969, HYP-2963, THM-523, LTI-367, T1367, OPEN-Q-108.
 
-## LTT-268: Boundary-Uniformization Cut-Signature Tournament
+## LTT-268: Special-Function Cut Signature Recursion Tournament
 
-- **Move:** Use proof carriers and recursive signature repairs as tournament
-  vertices, not runners or raw arcs.  Vertices include the
-  boundary-uniformization Menger zipper, Krasner collar stability, recursive
-  chiral signature deck, BDH-Mertens owner discrepancy, Schwarz-Christoffel
-  accessory/cut-angle audit, Sophie-Germain quartic split, Meissel-Mertens
-  prime-channel budget, Bring branch-sheet/branch-alarm packet, HLW
-  exponential-independence guardrail, and Ramanujan-Soldner critical
-  normalizer.
-- **LRC use:** HYP-3407 combines HYP-3405 and HYP-3406 into a labelled
-  packet theorem target.  AP-collar boundary-vs-strict changes must cross the
-  unit-height disk exit found by HYP-3405; enlarged-bank residue/height
-  collisions must remember endpoint-owner support as in HYP-3406.  The
+- **Move:** Use recursive signature repairs as tournament vertices, not
+  runners or raw arcs.  Vertices include residue/height/owner sidecars,
+  Schwarz-Christoffel cut-angle words, BDH variance packets, Menger exit cuts,
+  Bring branch alarms, Soldner zero normalizations, Sophie Germain quartic
+  splits, HLW separation guards, Krasner local-stability radii, and Mertens
+  residual ledgers.
+- **LRC use:** HYP-3407 is the planned post-HYP-3406 creative scout.  Its
   legality test is function-compression exactness: theorem exit must be
-  constant on each compressed signature fiber, and any mixed fiber names the
-  next missing coordinate, cut, or branch payload.
-- **Preserves:** boundary-tight / strict-open / positive-Haar-open /
-  unit-petal / K33/H7 theorem exits, unit-height sidecar, endpoint-owner
-  support, height/v2 data, local disk stability, exact-period
-  exceptional-fiber ledger, branch/root-curve information, and recursive
-  chiral orientation when carried.
-- **Forgets / guardrail:** raw named constants, raw branch sheets, raw
-  Schwarz-Christoffel angle data, raw analytic averages, and scalar motif
-  scores can forget endpoint owner, exact cut location, accessory parameters,
-  height, exact period, variance residual, p-adic stability radius, PGF root
-  branch, and mirror side.
-- **Pairwise observable:** retained HYP-3405/HYP-3406 payload minus forgotten
-  sidecar debt, with mixed theorem-exit fiber reduction as the first
-  proof-facing statistic.
-- **Switch/gauge:** higher weighted carrier score; ties use carrier-code
-  Hamiltonian path.
-- **Exact fingerprint:** `vertices=10`, score histogram
-  `{21:1,35:1,44:1,45:1,46:1,56:1,58:1,61:1,63:1,68:1}`,
-  no directed `3`-cycles, one Hamiltonian path
-  `C01 -> C02 -> C04 -> C03 -> C09 -> C06 -> C10 -> C05 -> C07 -> C08`.
-- **Next hook:** compute the owner-support Menger graph for the HYP-3406
-  petal/single-swap fibers, pair it with the HYP-3405 local disk/height-exit
-  table, compute recursive signature mixed-fiber counts, then test whether
-  recursive chiral child decks separate the first owner leaks before a
-  BDH/Mertens mean-square pass.
-- **Pointers:** HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402,
-  HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265,
-  HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253, HYP-3151, HYP-3150,
-  HYP-3147, HYP-3143, HYP-3124, HYP-3123, HYP-2982, HYP-2963, THM-523,
-  LTI-368, T1368, OPEN-Q-108.
+  constant on each compressed signature fiber.  Any mixed fiber names the next
+  missing coordinate, cut, or branch payload.
+- **Preserves:** theorem-exit purity, first-failure order, owner-support
+  data, height/v2 data, and branch/root-curve information when those are
+  carried explicitly.
+- **Forgets / guardrail:** a scalar motif score can forget endpoint owner,
+  exact cut location, variance residual, p-adic stability radius, and PGF root
+  branch; the tournament must price those losses before orienting an edge.
+- **Planned observable:** reduction in mixed theorem-exit fibers plus the
+  number of destroyed coordinates made explicit.
+- **Switch/gauge:** fewer mixed fibers first; then fewer unpriced destroyed
+  coordinates; then smaller payload; ties follow the recursive signature
+  chain.
+- **Next hook:** HYP-3410 now implements the charal-recursion branch of this
+  scout, HYP-3412 implements the broad cut-signature scout, and HYP-3420
+  implements the exact owner-cut/chiral-owner audit.
+  Continue by testing the remaining cut-angle, variance-residual,
+  local-stability, and root/branch sidecars against the next owner-support
+  failure.
+- **Pointers:** HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311,
+  HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, LTI-368, T1368,
+  OPEN-Q-108.
+
+## LTT-281: Owner-Cut Chiral / Transcendence Carrier Tournament
+
+- **Move:** After HYP-3406, make proof carriers around owner-support repair
+  the tournament vertices: `owner_menger_cut_certificate`,
+  `chiral_owner_recursion_signature`, `bdh_fiber_variance_ledger`,
+  `krasner_hensel_owner_stability`, `schwarz_christoffel_owner_polygon`,
+  `sophie_germain_quartic_factor_gate`, `bring_radical_branch_guard`,
+  `hermite_lindemann_weierstrass_scale_guard`,
+  `meissel_mertens_loglog_calibration`, `ramanujan_soldner_balance_root`, and
+  `raw_exp_exp_exp_79_scale`.
+- **LRC use:** HYP-3420 concretizes HYP-3412/HYP-3410's scaffold by rebuilding the
+  HYP-3406 banks and showing that `residue_plus_owner_chiral_class` and
+  `residue_plus_owner_support` leave `0` mixed theorem-exit fibers on all
+  scanned banks.  On the largest bank, residue-only pair-disagreement variance
+  is `12`, residue+height variance is `3`, and owner/chiral-owner variance is
+  `0`.  The two residue-mixed fibers have size-one owner cuts `('1:g1',)` and
+  `('5:g1',)`.
+- **Preserves:** theorem-exit separability, endpoint-owner cut data,
+  mirror/chiral owner recursion, variance of mixed residue fibers, and the
+  branch/scale side conditions needed before importing special functions.
+- **Forgets / guardrail:** raw runners, raw residues, raw constants,
+  Ramanujan-Soldner numerology, and raw `exp(exp(exp(79)))` scale forget the
+  theorem predicate.  Bring radical and Hermite-Lindemann-Weierstrass are
+  branch/transcendence guardrails, not separators of known mixed fibers.
+- **Pairwise observable:** known HYP-3406 fiber repair plus preserved LRC
+  predicate plus formalization readiness minus analogy risk.
+- **Switch/gauge:** higher weighted carrier score first; ties use the declared
+  priority path.
+- **Fingerprint:** `score_hist={-10:1,14:1,24:1,27:1,34:1,38:1,53:1,55:1,60:1,65:1,83:1}`,
+  `directed_3cycles=0`, `hamiltonian_path_count=1`, and priority path
+  `owner_menger_cut_certificate -> chiral_owner_recursion_signature ->
+  bdh_fiber_variance_ledger -> krasner_hensel_owner_stability ->
+  schwarz_christoffel_owner_polygon -> sophie_germain_quartic_factor_gate ->
+  bring_radical_branch_guard -> hermite_lindemann_weierstrass_scale_guard ->
+  meissel_mertens_loglog_calibration -> ramanujan_soldner_balance_root ->
+  raw_exp_exp_exp_79_scale`.
+- **Assumption challenge:** runners, residues, speeds, raw constants, named
+  special functions, and huge scales were considered.  The chosen vertices are
+  proof carriers because the preserved predicate is theorem-exit exactness.
+- **Next hook:** Enlarge the HYP-3406 bank and prove bounded owner-cut size for
+  every residue-mixed fiber, or record the first failure as tropical/off-grid
+  debt, unit-contact holonomy, state-lift debt, or branch/monodromy debt.
+- **Pointers:** HYP-3420, HYP-3412, HYP-3410, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402,
+  HYP-3301, HYP-3300, HYP-3265, HYP-3243, HYP-3238, HYP-3152, HYP-2982,
+  HYP-2214, LTI-381, T1381, OPEN-Q-108.
 
 ## LTT-269: Exotic Guardrail Carrier Tournament
 
 - **Move:** Treat the prompt's named exotic objects as guardrail carriers only
   after they declare the LRC predicate and sidecar they preserve.  HYP-3408 is
-  the exact guardrail companion to incoming HYP-3407's boundary-uniformization
-  cut stability atlas.  It ranks eight carriers: owner-residue-height
+  the exact guardrail companion to HYP-3407's boundary-uniformization atlas and
+  HYP-3412's special-function cut-signature scout.  It ranks eight carriers: owner-residue-height
   first-failure theorem, Krasner owner-lift stability gate, Sophie-Germain
   quartic factor split, Meissel-Mertens denominator entropy normalizer, HLW
   no-scalar-shadow guardrail, Ramanujan-Soldner zero-renormalization anchor,

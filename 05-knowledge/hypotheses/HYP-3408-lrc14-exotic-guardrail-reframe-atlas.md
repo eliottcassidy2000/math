@@ -38,10 +38,12 @@ Hermite-Lindemann-Weierstrass theorem, Krasner's lemma, and Meissel-Mertens
 constant are useful for LRC14 only after they are translated into sidecar
 obligations.  They are not proof vertices by themselves.
 
-Namespace note: incoming mainline claimed HYP-3407/T1368/LTI-368/LTT-268 for
-the companion boundary-uniformization cut stability.  This atlas is the
-renumbered HYP-3408/T1369/LTI-369/LTT-269 exact guardrail readout for the same
-prompt neighborhood.
+Namespace note: the HYP-3407/T1368/LTI-368/LTT-268 lane records the
+boundary-uniformization cut-stability scaffold, while
+HYP-3412/T1373/LTI-373/LTT-273 records the executed special-function
+cut-signature scout.  This atlas is the renumbered
+HYP-3408/T1369/LTI-369/LTT-269 exact guardrail readout for the same prompt
+neighborhood.
 
 The proof-facing reframe is:
 

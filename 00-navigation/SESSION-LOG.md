@@ -284,6 +284,32 @@ Next hook: enlarge beyond `(72,20)` and stress the compressed owner shadows
 `cut_angle_word` and `krasner_radius_word` before replacing full
 endpoint-owner support in any theorem statement.
 
+## codex-2026-06-28 -- HYP-3420 owner-cut chiral transcendence synthesis
+
+Owner asked for a long creative pass around `exp(exp(exp(79)))`, Bring
+radicals, Schwarz-Christoffel maps, Barban-Davenport-Halberstam, Menger cuts,
+recursive chiral signatures, Ramanujan-Soldner, Sophie Germain,
+Hermite-Lindemann-Weierstrass, Krasner, and Meissel-Mertens.  Added
+HYP-3420/T1381/LTI-381/LTT-281 plus script/result/reflection as the concrete
+owner-cut audit following HYP-3410 and the HYP-3412 special-function scout:
+
+```text
+04-computation/lrc14_transcendence_cut_chiral_synthesis_codex_20260628.py
+05-knowledge/results/lrc14_transcendence_cut_chiral_synthesis_codex_20260628.out
+05-knowledge/hypotheses/HYP-3420-lrc14-owner-cut-chiral-transcendence-synthesis.md
+07-reflections/lrc14-owner-cut-chiral-transcendence-synthesis-codex-20260628.md
+```
+
+Concrete readout: on the scanned HYP-3406 expanded banks,
+`residue_plus_owner_chiral_class` and `residue_plus_owner_support` leave `0`
+mixed theorem-exit fibers.  On the largest bank `(60,16)`, residue-only
+pair-disagreement variance is `12`, residue+height variance is `3`, and
+owner/chiral-owner variance is `0`.  The two residue-mixed fibers have
+size-one owner cuts: `('1:g1',)` for the `petal 13->26` versus positive-open
+`26/40/54` family and `('5:g1',)` for the `P10+GW` / `GW-shell` / `12->48`
+fiber.  Next target: prove a bounded endpoint-owner Menger-cut theorem or
+name the first owner-cut failure.
+
 ## codex-2026-06-28 -- HYP-3410 Bring/Schwarz/BDH/Menger charal recursion for LRC14
 
 Owner asked for a long creative session around the Bring radical,

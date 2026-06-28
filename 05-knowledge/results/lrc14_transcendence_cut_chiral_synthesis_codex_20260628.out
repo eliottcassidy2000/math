@@ -1,0 +1,96 @@
+HYP-3420 transcendence / cut / chiral synthesis
+==============================================================================
+status=creative synthesis + exact HYP-3406 owner-support audit; not LRC14 proof
+scale_sentinel=N=exp(exp(exp(79))); logloglog(N)=79; raw magnitude is not a proof vertex
+
+BANK single_limit=20 two_swap_limit=4
+  rows=125
+  mixed_counts={'residue_only': 1, 'residue_plus_v2': 0, 'residue_plus_height': 0, 'residue_plus_owner_chiral_class': 0, 'residue_plus_owner_chiral_full': 0, 'residue_plus_owner_support': 0}
+  bdh_pair_disagreement_variance={'residue_only': 1, 'residue_plus_v2': 0, 'residue_plus_height': 0, 'residue_plus_owner_chiral_class': 0, 'residue_plus_owner_chiral_full': 0, 'residue_plus_owner_support': 0}
+  owner_cut_size_hist={1: 1}
+  chiral_sign_hist={-1: 91, 0: 2, 1: 32}
+  recursive_replacement_family_counts={}
+
+BANK single_limit=30 two_swap_limit=8
+  rows=252
+  mixed_counts={'residue_only': 2, 'residue_plus_v2': 1, 'residue_plus_height': 1, 'residue_plus_owner_chiral_class': 0, 'residue_plus_owner_chiral_full': 0, 'residue_plus_owner_support': 0}
+  bdh_pair_disagreement_variance={'residue_only': 4, 'residue_plus_v2': 3, 'residue_plus_height': 3, 'residue_plus_owner_chiral_class': 0, 'residue_plus_owner_chiral_full': 0, 'residue_plus_owner_support': 0}
+  owner_cut_size_hist={1: 2}
+  chiral_sign_hist={-1: 193, 0: 3, 1: 56}
+  recursive_replacement_family_counts={'petal->26': 1, 'single swap->26': 3}
+
+BANK single_limit=48 two_swap_limit=12
+  rows=484
+  mixed_counts={'residue_only': 2, 'residue_plus_v2': 1, 'residue_plus_height': 1, 'residue_plus_owner_chiral_class': 0, 'residue_plus_owner_chiral_full': 0, 'residue_plus_owner_support': 0}
+  bdh_pair_disagreement_variance={'residue_only': 8, 'residue_plus_v2': 3, 'residue_plus_height': 3, 'residue_plus_owner_chiral_class': 0, 'residue_plus_owner_chiral_full': 0, 'residue_plus_owner_support': 0}
+  owner_cut_size_hist={1: 2}
+  chiral_sign_hist={-1: 354, 0: 4, 1: 126}
+  recursive_replacement_family_counts={'petal->26': 1, 'single swap->26': 3, 'single swap->40': 3, 'single swap->48': 1}
+
+BANK single_limit=60 two_swap_limit=16
+  rows=872
+  mixed_counts={'residue_only': 2, 'residue_plus_v2': 1, 'residue_plus_height': 1, 'residue_plus_owner_chiral_class': 0, 'residue_plus_owner_chiral_full': 0, 'residue_plus_owner_support': 0}
+  bdh_pair_disagreement_variance={'residue_only': 12, 'residue_plus_v2': 7, 'residue_plus_height': 3, 'residue_plus_owner_chiral_class': 0, 'residue_plus_owner_chiral_full': 0, 'residue_plus_owner_support': 0}
+  owner_cut_size_hist={1: 2}
+  chiral_sign_hist={-1: 678, 0: 6, 1: 188}
+  recursive_replacement_family_counts={'petal->26': 1, 'single swap->26': 3, 'single swap->40': 3, 'single swap->48': 1, 'single swap->54': 4}
+
+LARGEST BANK OWNER-CUT EXAMPLES
+  fiber_size=11 min_owner_cut=('1:g1',)
+    single swap 1->26
+    single swap 1->40
+    single swap 1->54
+    single swap 3->26
+    single swap 3->40
+    single swap 3->54
+    single swap 5->26
+    single swap 5->40
+    single swap 5->54
+    single swap 9->54
+    petal 13->26
+  fiber_size=3 min_owner_cut=('5:g1',)
+    GW-shell alias 12->132
+    single swap 12->48
+    P10+GW
+
+NAMED EXTERNAL IDEAS AS PACKET FIELDS
+  Bring radical: keep degree-five branch/monodromy data; do not pretend radicals close the packet.
+  Schwarz-Christoffel: endpoint-owner support is the accessory parameter of the contact polygon.
+  Barban-Davenport-Halberstam: residue-only failure is a fiber-variance signal, killed by owner support here.
+  Menger cuts: minimal owner cuts separate mixed theorem exits in residue fibers.
+  Ramanujan-Soldner: useful only as a signed-current zero template, not as a raw constant.
+  Sophie Germain identity: factor quartic phi4 debt into quadratic gates when the quartic route is active.
+  Hermite-Lindemann-Weierstrass: transcendence shadows need side conditions before algebraic compression.
+  Krasner: owner-support persistence should become a p-adic/Hensel stability radius.
+  Meissel-Mertens: loglog channel budgets need the constant term only after packet labels are retained.
+
+CARRIER SCORES
+  owner_menger_cut_certificate               score= 83 field=minimal endpoint-owner cut separating mixed theorem exits; note=Directly measured on HYP-3406 mixed residue fibers.
+  chiral_owner_recursion_signature           score= 65 field=mirror class + chirality sign of endpoint-owner support; note=Keeps recursive owner orientation instead of scalar owner counts.
+  bdh_fiber_variance_ledger                  score= 60 field=Barban-Davenport-Halberstam-style mixed-fiber variance over residue packets; note=A second-moment alarm for residue packets before adding owner support.
+  krasner_hensel_owner_stability             score= 55 field=p-adic stability radius for residue/owner sidecar persistence; note=Useful after HYP-3406 because owner support persists across bank expansion.
+  schwarz_christoffel_owner_polygon          score= 53 field=contact polygon vertices plus endpoint-owner accessory parameters; note=Makes the SC accessory parameter the owner-support debt.
+  sophie_germain_quartic_factor_gate         score= 38 field=quartic phi4/off-circle correction split into two quadratic factors; note=Good for the quartic side, but it does not repair the HYP-3406 owner leak.
+  bring_radical_branch_guard                 score= 34 field=degree-five residual branch/monodromy sidecar rather than radical simplification; note=A warning for quintic residuals: keep branch data or use a special inverse.
+  hermite_lindemann_weierstrass_scale_guard  score= 27 field=transcendence side-condition ledger for exponential/root shadows; note=Guards against algebraizing raw exp/root shadows without side conditions.
+  meissel_mertens_loglog_calibration         score= 24 field=constant term in prime-channel/loglog exceptional-set budget; note=A calibration offset, not a separator of known mixed fibers.
+  ramanujan_soldner_balance_root             score= 14 field=zero-current balance point for cumulative signed owner charge; note=Only useful if converted into an owner-current zero theorem.
+  raw_exp_exp_exp_79_scale                   score=-10 field=raw magnitude N=exp(exp(exp(79))); note=Raw scale is intentionally demoted; only tower height/log channels matter.
+
+TOURNAMENT ANALYSIS
+  vertices=proof carriers and packet fields, not runners/raw scales/constants
+  pairwise_observable=known-fiber repair + preserved LRC predicate + formalization readiness - analogy risk
+  switch_gauge=A -> B iff A has larger weighted carrier score; ties use declared priority order
+  score_hist={-10: 1, 14: 1, 24: 1, 27: 1, 34: 1, 38: 1, 53: 1, 55: 1, 60: 1, 65: 1, 83: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  priority_path=owner_menger_cut_certificate -> chiral_owner_recursion_signature -> bdh_fiber_variance_ledger -> krasner_hensel_owner_stability -> schwarz_christoffel_owner_polygon -> sophie_germain_quartic_factor_gate -> bring_radical_branch_guard -> hermite_lindemann_weierstrass_scale_guard -> meissel_mertens_loglog_calibration -> ramanujan_soldner_balance_root -> raw_exp_exp_exp_79_scale
+  assumption_challenge=considered runners/residues/speeds/constants/huge scales; selected owner cuts, chiral signatures, variance ledgers, and branch/accessory sidecars because they preserve theorem-exit exactness.
+
+CONCLUSION
+  HYP-3406 makes owner support the next exact enlarged-bank repair.
+  The best new concrete route is an endpoint-owner Menger cut theorem:
+    every residue-mixed theorem-exit fiber has a small owner-support cut,
+    and recursive/chiral owner signatures explain the growing 26/40/54 families.
+  The Bring/SC/BDH/Krasner/Mertens/HLW/Sophie-Germain ideas are useful only
+    after translation into packet fields with destroyed-coordinate guardrails.

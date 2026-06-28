@@ -162,6 +162,45 @@ Next: enlarge beyond `(72,20)` and stress `residue + cut_angle_word` and
 `residue + krasner_radius_word`.  If either fails, record the first collision
 and decide whether full endpoint-owner support, exact cut labels, or PGF/root
 branch payload is the true next sidecar.
+Next: implement the scout by replaying the HYP-3406 height and endpoint-owner
+leaks as controlled-forgetting rows; then compute recursive
+`charal_signature` mixed-fiber counts, a toy Menger exit-cut certificate,
+motif-transfer rankings, and Tournament Analysis over proof carriers rather
+than runners.
+## Lead codex-2026-06-28: Owner-cut chiral transcendence synthesis
+
+**Status:** SYNTHESIS / exact HYP-3406 owner-cut audit plus creative carrier
+ranking; not proof (HYP-3420/T1381/LTI-381/LTT-281).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3420-lrc14-owner-cut-chiral-transcendence-synthesis.md`,
+script
+`04-computation/lrc14_transcendence_cut_chiral_synthesis_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_transcendence_cut_chiral_synthesis_codex_20260628.out`,
+and
+`07-reflections/lrc14-owner-cut-chiral-transcendence-synthesis-codex-20260628.md`.
+
+Purpose: translate the prompt's Bring radical, Schwarz-Christoffel,
+Barban-Davenport-Halberstam, Menger cut, chiral-signature, Ramanujan-Soldner,
+Sophie Germain, Hermite-Lindemann-Weierstrass, Krasner, Meissel-Mertens, and
+`exp(exp(exp(79)))` ideas into proof packet fields after HYP-3406.
+
+Readout: rebuilding the HYP-3406 expanded banks shows that
+`residue_plus_owner_chiral_class` and `residue_plus_owner_support` kill all
+mixed theorem-exit fibers on `(20,4),(30,8),(48,12),(60,16)`.  On the largest
+bank, the BDH-style pair-disagreement variance drops from residue-only `12`
+to owner/chiral-owner `0`.  Both residue-mixed fibers have size-one owner cuts:
+`('1:g1',)` for the `petal 13->26` versus positive-open `26/40/54` family,
+and `('5:g1',)` for the `P10+GW` / `GW-shell` / `12->48` fiber.
+
+Next: prove the endpoint-owner Menger-cut theorem for enlarged actual-packet
+fibers, or find the first failure.  The first failure should be routed to
+tropical/off-grid debt, unit-contact holonomy, state-lift debt, or
+Bring-style branch/monodromy debt.  Keep Tournament Analysis on proof carriers:
+owner cuts, chiral owner recursion, BDH variance, Krasner stability,
+Schwarz-Christoffel owner polygons, quartic factor gates, and branch guards;
+do not use raw constants or raw exp-tower scale as vertices.
 
 ## Lead codex-2026-06-28: Bring/Schwarz/BDH/Menger charal recursion
 
@@ -6287,7 +6326,7 @@ on `Phi`, not as a standalone scalar proof.
   height-discriminant debt.
 
 ## LEAD (codex-2026-06-28): boundary-uniformization Menger cut table
-- **Source:** HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3124,
+- **Source:** HYP-3407, HYP-3420, HYP-3412, HYP-3410, HYP-3408, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3124,
   HYP-3123, HYP-2982, HYP-2963.
 - **Status:** OPEN.  HYP-3407 ranks the boundary-uniformization Menger zipper
   first, but the owner-support graph has not yet been computed as a real
