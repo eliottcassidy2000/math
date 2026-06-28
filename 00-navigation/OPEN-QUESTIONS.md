@@ -18,6 +18,34 @@ one-color odd near-integer cover can consume every `E_safe` component. ->
 HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3419,
 HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523, LTI-387, LTT-287, T1387,
 OPEN-Q-108.
+**OPEN-Q-108 HYP-3427 two-branch wall-signature addendum:**
+HYP-3427 builds on HYP-3426 and strengthens the HYP-3425 positivity target by asking for an exact
+wall certificate for a survivor component.  For `S=O union 2E` and `u=2t`,
+name each good window by
+
+```text
+branch mask + left wall labels + right wall labels + midpoint binders
+```
+
+where `E:s` is an even wall, `O0:o` is a branch-0 odd near-integer wall, and
+`O1:o` is a branch-1 odd near-half wall.  Exact audit on `67` rows found
+survivor windows in every row, `5524` windows total, and only `27` global
+signature types.  The tight row `{1..11,13,84}` has four windows bounded by
+`E:84` and odd walls `5,7`.
+
+Concrete task:
+
+```text
+prove every primitive covering row has a survivor window with a bounded legal
+wall word
+```
+
+or emit the first missing coordinate as owner-current, sheet, exact-period,
+state-lift, or named two-adic debt.  This is stronger than proving positive
+measure: the proof must retain which exact walls define the component. ->
+HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
+HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3140, HYP-3129, HYP-2963,
+THM-523, LTI-388, LTT-288, T1388, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3425 two-branch obstruction / Helly addendum:**
 HYP-3425 sharpens the two-adic relocation lemma into a one-dimensional

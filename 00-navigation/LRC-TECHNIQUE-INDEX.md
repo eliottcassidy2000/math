@@ -474,6 +474,7 @@ record what it destroys before asking it to prove anything.
 | LTI-385 | Covering-floor duality transfer | Two-adic even floor descent, signed SPEC decorrelation floor, even-good/odd-phase cover debt, recursive quotient router, owner-current even-cover sidecar, add/mult energy-to-SPEC transfer, topology-to-magnitude guardrail, off-path 7-adic filter | HYP-3424 re-reads the even/odd, positive/negative, odd/even, and addition/multiplication dualities after S259/HYP-3418, now treating HYP-3423's topology/arithmetic guardrail, HYP-3421's off-grid transparency/Rprime branch, and HYP-3422's two-adic relocation lemma as floor-facing companions.  The odd/coprime witness at `t=1/2` is rejected because every even speed dies there; odd data becomes phase-cover debt, while even fold/two-adic descent is the floor carrier.  The scout keeps exact anchors `8*C(14,2)+1=27^2`, binders `even=376` vs `odd=279`, coprime transparency `0/400`, S558 wall slack `0`, HYP-3423 topology-to-magnitude guardrail, HYP-3422 interval relocation, HYP-3421 off-grid transparency/Rprime branch, HYP-3420 owner/chiral exactness, and frontier current `{2:g2,11:g1,13:g1}`. | HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3238, HYP-3234, HYP-3137, HYP-2272, HYP-2129, HYP-2128, THM-414, THM-523, T1385, LTT-285, LTI-385, OPEN-Q-108 | Formulate the covering-packet transfer lemma: every remaining covering packet after q-witness and LRC<=13 induction must feed `|SPEC| < product`, HYP-3422 two-adic interval relocation, odd phase-cover debt, finite owner/Menger sidecar, add/mult energy-to-SPEC penalty, HYP-3421 off-grid/signed-SPEC transparency, HYP-3423 topology-to-magnitude guardrail, or explicit off-path 7-adic/census filter. |
 | LTI-386 | Two-branch obstruction / Helly certificate | Two-color odd bad core, `B0_odd cap B1_odd`, even-safe component gaps, finite-ruler survivor windows, odd-pair obstruction graph, Helly/interval-piercing target | HYP-3425 sharpens HYP-3422, downstream of HYP-3424, by proving the relocation target can be written as `E_safe` minus a two-color bad core: branch-0 fails by odd near-integer intervals and branch-1 fails by odd near-half intervals.  Exact audit on `62` rows has positive two-branch good union `62/62`; the tight row `{1..11,13,84}` has `E_safe=107/245`, bad core `314/735`, good union `1/105`, and four surviving components. | HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523, T1386, LTT-286, LTI-386, OPEN-Q-108 | Prove that for every primitive covering row `S=O union 2E`, `E_safe` is not contained in `B0_odd cap B1_odd`; if a larger search finds failure, classify it by owner-current/even-cover labels or exact-period/state-lift debt. |
 | LTI-387 | One-branch mirror / endpoint-support certificates | Mirror involution `u -> 1-u`, one-color odd near-integer cover `B0_odd`, branch0/branch1 equality, endpoint-owner survivor labels, owner-triple certificates, component-local cover words | HYP-3426 sharpens HYP-3425 by proving the branch-1 interval family is the mirror image of branch 0, so the next finite lemma can be stated as `E_safe` not contained in `B0_odd`.  Exact audit on `162` rows has mirror identity, equal branch measures, positive one-branch survivor, selected branch-0 score `>=1/14`, and endpoint-labelled survivors all `162/162`; endpoint support histogram is `{1:353, 2:13103, 3:72}` with max support size `3`. | HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3419, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523, T1387, LTT-287, LTI-387, OPEN-Q-108 | Prove the one-branch interval-piercing lemma; classify endpoint-owner triples that can bound branch-0 survivors or force a full odd near-integer cover contradiction. |
+| LTI-388 | Two-branch wall-signature atlas | Survivor wall words, branch masks, even walls `E:s`, branch-0 odd walls `O0:o`, branch-1 odd walls `O1:o`, midpoint binder roles, bounded wall-alphabet theorem target | HYP-3427 builds on HYP-3426 and refines HYP-3425 by replacing positive survivor mass with exact wall certificates.  Audit on `67` rows has survivor windows `67/67`, `5524` total windows, `27` global signature types, branch masks `b0=2255, b1=2255, both=1014`, and binder roles `14Q=570, even_R=2425, odd_unit=2055, seven_R=474`.  The tight row `{1..11,13,84}` has four windows bounded by `E:84` and odd branch walls `5,7`. | HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3140, HYP-3129, HYP-2963, THM-523, T1388, LTT-288, LTI-388, OPEN-Q-108 | Prove a bounded wall-alphabet lemma for primitive covering rows; if it fails, classify the first missing wall coordinate as owner-current, sheet, exact-period, state-lift, or named two-adic debt before using any scalar measure. |
 | LTI-373 | Special-function cut signature recursion | Recursive `charal_signature` sidecars, Bring radical branch alarms, Schwarz-Christoffel cut angles, BDH variance packets, Menger exit cuts, Soldner zero normalization, Sophie Germain quartic split, HLW separation, Krasner stability, Mertens residuals | HYP-3412 executes a post-HYP-3406 creative synthesis scout on the `(72,20)` expanded bank (`2431` rows).  Its CHARAL mixed-fiber ladder says residue leaves `3` mixed fibers; residue+height/`v2` leaves `2`; BDH variance leaves `3`; cut-angle, Krasner radius, and owner support each leave `0`; Sophie quartic and honest Bring branch alarm each leave `2`; PGF proxy leaves `1`.  The Menger-style separator table says the `14`-row owner leak, `12`-row petal `10->20` owner/height-persistent leak, and `3`-row height leak all admit one-sidecar covers by `SC_cut_angle`, `Krasner_radius`, or `owner_support`, while height/`v2` separates only some leaks. | HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, THM-523, T1373, LTT-273, LTI-373, OPEN-Q-108 | Enlarge beyond `(72,20)` and test whether `residue + cut_angle_word` and `residue + krasner_radius_word` remain exact.  If either fails, record the first collision and decide whether full owner support, exact cut labels, or PGF/root branch payload is the true next sidecar. |
 | LTI-374 | Owner-cut resurrection calculus | Cross-exit row-pair clauses, endpoint-owner symmetric differences, minimum owner-label transversals, binary cut-code buckets, terminal chamber router, dual/Farkas current readout | HYP-3414 turns HYP-3411/HYP-3412/HYP-3413/HYP-3409/HYP-3410 into a finite proof-facing calculus.  In each mixed theorem-exit fiber, every cross-exit row pair emits an owner-label clause; a legal owner cut is a hitting set whose cut-code buckets are theorem-exit pure.  Known values are singleton cuts `5:g1` and `1:g1` for the first two leaks, but the `(72,20)` `10->20` frontier has minimum cut size `3`, five minimum cuts, and empty core, so the live theorem is bounded owner transversals rather than a universal singleton owner label. | HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-2969, HYP-2963, THM-523, T1374, LTT-274, LTI-374, OPEN-Q-108 | Extend HYP-3406 beyond `(72,20)`, run the clause/transversal calculator on the first `residue+owner_support` failure if one appears, and add child-deck stability plus terminal-exit routing to every cut-pure fiber. |
 | LTI-382 | Off-grid resonance transparency / Rprime closure | Off-grid witness cells, resonant-speed distance ledger, `14Q` grid-kill check, canonical `84m` binding formula, 2-adic even-speed descent, signed-SPEC `Rprime` constant chase, fiber-PGF/edge-witness glue | HYP-3421 is the exact scout companion to HYP-3415's one-floor critical path, corrected by HYP-3418.  It verifies named off-grid optima with floors `1/12`, `1/8`, `1/9`, and canonical `{1..11,13,84m}` formula `t=(35m+2)/(84m+5)`, `M=7m/(84m+5)>1/14`; every checked resonant speed, including `14Q` tips, is safe at the selected full optima.  The technique recasts resonance as grid-local danger plus full-optimum transparency, while HYP-3418 keeps the floor on the 2-adic/even-speed descent route before the HYP-3129/HYP-3140 `Rprime` chase. | HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3412, HYP-3410, HYP-3310, HYP-3266, HYP-3265, HYP-3255, HYP-3140, HYP-3136, HYP-3129, HYP-3125, HYP-3124, HYP-2896, THM-523, T1382, LTT-282, LTI-382, OPEN-Q-108 | Prove the all-packet transparency classifier, the 2-adic even-speed descent, and the closed-form signed-SPEC `Rprime >= c` constant chase. |
@@ -7008,6 +7009,71 @@ Next agent hook: classify endpoint-owner triples that can bound branch-0
 survivors.  Try to prove that a full one-color odd near-integer cover of
 `E_safe` forces an impossible endpoint alternation word or a named finite
 owner-current exception.
+
+## LTI-388: Two-Branch Wall-Signature Atlas
+
+Created by codex-2026-06-28 for HYP-3427/T1388 as the wall-certificate
+refinement of HYP-3425.  It keeps the exact boundaries of survivor windows
+instead of recording only their positive measure.
+
+Carrier / vertex set:
+
+```text
+survivor windows with branch mask, left wall labels, right wall labels,
+midpoint score binders, binder roles, and sidecar-debt exits
+```
+
+Wall labels:
+
+```text
+E:s    even wall:           ||(s/2)u|| = 1/14
+O0:o   branch-0 odd wall:   ||o u/2|| = 1/14
+O1:o   branch-1 odd wall:   ||o u/2|| = 3/7
+```
+
+Exact readout:
+
+```text
+rows audited:                  67
+rows with survivor windows:    67/67
+total survivor windows:        5524
+global signature types:        27
+branch masks:                  b0=2255, b1=2255, both=1014
+midpoint binder roles:         14Q=570, even_R=2425, odd_unit=2055, seven_R=474
+```
+
+Tight row `{1..11,13,84}`:
+
+```text
+(8/49,97/588)     width 1/588  b1  O1:7 -> E:84
+(33/196,6/35)     width 3/980  b1  E:84 -> O1:5
+(29/35,163/196)   width 3/980  b0  O0:5 -> E:84
+(491/588,41/49)   width 1/588  b0  E:84 -> O0:7
+```
+
+Preserved LRC predicate: existence of a legal two-adic survivor interval after
+the branch choice, with the exact walls that certify why the two-color bad
+core did not cover it.
+
+Destroyed information if scalarized: endpoint owners, wall types, active even
+or odd speed labels, binder roles, and whether the interval is branch-only or
+valid on both branches.
+
+Tournament fingerprint: proof-carrier vertices, score histogram
+`{-28:1, 49:1, 65:1, 73:1, 76:1, 81:1, 85:1}`, no directed `3`-cycles, and
+Hamiltonian path
+`W00_wall_signature_certificate -> W01_survivor_component_normal_form -> W02_branch_mask_descent_router -> W03_owner_current_wall_exception -> W04_energy_sheet_sidecar_join -> W05_raw_positive_measure_audit -> W06_named_analogy_without_walls`.
+
+Next agent hook: prove a bounded wall-alphabet lemma:
+
+```text
+Every primitive covering row has a survivor window whose wall word is legal
+and bounded, or emits named sidecar debt.
+```
+
+If the wall alphabet grows, record the first missing coordinate as
+owner-current, sheet, exact-period, state-lift, or named two-adic debt before
+trying another scalar floor estimate.
 
 ## LTI-365: Creative Reframe Lead Atlas
 

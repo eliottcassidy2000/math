@@ -25,6 +25,34 @@ histogram is `{1:353, 2:13103, 3:72}` with max support size `3`.
 
 Next proof target: classify endpoint-owner triples that can bound or destroy
 one-branch survivors, then prove a one-branch interval-piercing lemma.
+## codex-2026-06-28 -- HYP-3427 two-branch wall-signature atlas
+
+Continued the HYP-3425 two-branch obstruction route by replacing survivor
+mass with exact wall certificates.  Added HYP-3427/T1388/LTI-388/LTT-288 plus
+script/result/reflection:
+
+```text
+04-computation/lrc14_two_branch_wall_signature_atlas_codex_20260628.py
+05-knowledge/results/lrc14_two_branch_wall_signature_atlas_codex_20260628.out
+05-knowledge/hypotheses/HYP-3427-lrc14-two-branch-wall-signature-atlas.md
+07-reflections/lrc14-two-branch-wall-signature-atlas-codex-20260628.md
+```
+
+The certificate object is:
+
+```text
+branch mask + left wall labels + right wall labels + midpoint binders
+```
+
+with walls `E:s`, `O0:o`, and `O1:o`.  Exact audit on `67` rows found
+survivor windows `67/67`, `5524` total windows, `27` global signature types,
+and branch masks `b0=2255, b1=2255, both=1014`.  The tight row
+`{1..11,13,84}` has four survivor windows bounded by `E:84` and odd branch
+walls `5,7`.
+
+Next proof target: a bounded wall-alphabet lemma.  Prove that every primitive
+covering row has a legal survivor window wall word, or route the first failure
+to owner-current, sheet, exact-period, state-lift, or named two-adic debt.
 
 ## codex-2026-06-28 -- HYP-3425 two-branch obstruction / Helly certificate
 

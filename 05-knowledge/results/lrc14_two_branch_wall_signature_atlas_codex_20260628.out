@@ -1,0 +1,84 @@
+HYP-3427 TWO-BRANCH WALL-SIGNATURE ATLAS
+==============================================================================
+Question:
+  Can every HYP-3425 survivor window be named by exact left/right walls?
+  Window certificate = branch mask + endpoint wall labels + midpoint score binders.
+
+A. Aggregate exact wall audit
+  rows audited:                     67
+  rows with survivor windows:       67/67
+  total survivor windows:           5524
+  global signature types:           27
+  branch mask histogram:            {'b0': 2255, 'b1': 2255, 'both': 1014}
+  top wall-type histogram:          [(('E', 'E'), 2694), (('O1', 'E'), 585), (('E', 'O0'), 585), (('E', 'O1'), 557), (('O0', 'E'), 557), (('O1', 'O1'), 250)]
+  midpoint binder role histogram:   {'14Q': 570, 'even_R': 2425, 'odd_unit': 2055, 'seven_R': 474}
+  tight row by union measure:        covering_AP_with_84 (1/105)
+  thinnest window row:              random_covering_12 (1/211680)
+  richest signature row:            random_covering_08 (22 types)
+
+B. Tight-row wall certificate
+  row=covering_AP_with_84
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+  union_measure=1/105, branch0=563/105105, branch1=563/105105
+  W1: interval=(8/49,97/588) width=1/588 mask=b1
+      left=('O1:7',) right=('E:84',)
+      midpoint_score=25/336 binders=(7,)
+  W2: interval=(33/196,6/35) width=3/980 mask=b1
+      left=('E:84',) right=('O1:5',)
+      midpoint_score=59/784 binders=(5,)
+  W3: interval=(29/35,163/196) width=3/980 mask=b0
+      left=('O0:5',) right=('E:84',)
+      midpoint_score=59/784 binders=(5,)
+  W4: interval=(491/588,41/49) width=1/588 mask=b0
+      left=('E:84',) right=('O0:7',)
+      midpoint_score=25/336 binders=(7,)
+
+C. Canonical 84m tower signatures
+  m | windows | union | min_width | branch_masks | top_signature
+   1 |       4 |     1/105 |     1/588 | {'b0': 2, 'b1': 2} | ('b0', 'E', 'O0')
+   2 |       4 |   19/1470 |     1/392 | {'b0': 2, 'b1': 2} | ('b0', 'E', 'O0')
+   3 |       4 |   31/2205 |    5/1764 | {'b0': 2, 'b1': 2} | ('b0', 'E', 'O0')
+   4 |       4 |   43/2940 |     1/336 | {'b0': 2, 'b1': 2} | ('b0', 'E', 'O0')
+   5 |       4 |      1/70 |     3/980 | {'b0': 2, 'b1': 2} | ('b0', 'E', 'E')
+   6 |       6 |   31/2205 |    1/1960 | {'b0': 2, 'b1': 2, 'both': 2} | ('both', 'E', 'E')
+   7 |       6 | 143/10290 |  23/20580 | {'b0': 1, 'b1': 1, 'both': 4} | ('both', 'E', 'E')
+   8 |       8 |   27/1960 |    1/4704 | {'b0': 2, 'b1': 2, 'both': 4} | ('both', 'E', 'E')
+   9 |       8 |   31/2205 |    1/1764 | {'b0': 2, 'b1': 2, 'both': 4} | ('both', 'E', 'E')
+  10 |       8 |   41/2940 |    1/1176 | {'b0': 2, 'b1': 2, 'both': 4} | ('both', 'E', 'E')
+  11 |      10 |   16/1155 |   3/10780 | {'b0': 3, 'b1': 3, 'both': 4} | ('both', 'E', 'E')
+  12 |      10 |   31/2205 |  23/35280 | {'b0': 3, 'b1': 3, 'both': 4} | ('both', 'E', 'E')
+  13 |      10 |  136/9555 |  37/38220 | {'b0': 3, 'b1': 3, 'both': 4} | ('both', 'E', 'E')
+  14 |      10 |   97/6860 |  17/13720 | {'b0': 3, 'b1': 3, 'both': 4} | ('both', 'E', 'E')
+  15 |      12 |   61/4410 |    1/8820 | {'b0': 4, 'b1': 4, 'both': 4} | ('both', 'E', 'E')
+  16 |      14 |   27/1960 |   3/15680 | {'b0': 5, 'b1': 5, 'both': 4} | ('both', 'E', 'E')
+  17 |      14 |   58/4165 |  23/49980 | {'b0': 4, 'b1': 4, 'both': 6} | ('both', 'E', 'E')
+  18 |      14 |   31/2205 |    1/1512 | {'b0': 4, 'b1': 4, 'both': 6} | ('both', 'E', 'E')
+  19 |      14 |   66/4655 |    3/3724 | {'b0': 4, 'b1': 4, 'both': 6} | ('both', 'E', 'E')
+  20 |      14 |   83/5880 |  11/11760 | {'b0': 3, 'b1': 3, 'both': 8} | ('both', 'E', 'E')
+
+D. Global top wall signatures
+  ('b0', 'E', 'E'): 994
+  ('b1', 'E', 'E'): 994
+  ('both', 'E', 'E'): 706
+  ('b1', 'O1', 'E'): 498
+  ('b0', 'E', 'O0'): 498
+  ('b1', 'E', 'O1'): 486
+  ('b0', 'O0', 'E'): 486
+  ('b1', 'O1', 'O1'): 240
+  ('b0', 'O0', 'O0'): 240
+  ('both', 'O1', 'E'): 77
+  ('both', 'E', 'O0'): 77
+  ('both', 'O0', 'E'): 61
+
+E. Interpretation
+  Positive measure is not yet a proof certificate; exact wall signatures are closer.
+  The audited windows are bounded by small combinations of even walls and odd branch walls.
+  This suggests a finite certificate lemma: every covering row has a survivor window
+  whose left/right labels come from a bounded wall alphabet, or else a named owner
+  current, sheet, exact-period, or state-lift debt is emitted.
+
+F. Tournament Analysis
+  vertices are proof carriers/wall certificates, not runners or raw intervals.
+  score_hist={-28: 1, 49: 1, 65: 1, 73: 1, 76: 1, 81: 1, 85: 1}
+  directed_3cycles=0
+  hamiltonian_path=W00_wall_signature_certificate -> W01_survivor_component_normal_form -> W02_branch_mask_descent_router -> W03_owner_current_wall_exception -> W04_energy_sheet_sidecar_join -> W05_raw_positive_measure_audit -> W06_named_analogy_without_walls

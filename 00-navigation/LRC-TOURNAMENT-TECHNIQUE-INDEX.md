@@ -343,6 +343,10 @@ obligations, and proof-carrier interfaces.
   one-branch piercing lemma, endpoint-owner triples, component-local cover
   words, and scalar-firewall checks the vertices.  The proof carrier is
   `E_safe` not contained in `B0_odd`.
+- Need to turn HYP-3425 survivor mass into proof certificates:
+  use LTT-288 after LTT-286/LTT-285/LTT-283 and make survivor wall words the
+  vertices.  Branch masks, endpoint wall labels, midpoint binders, and
+  sidecar-debt exits are the payload; raw positive measure is only telemetry.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -8230,6 +8234,37 @@ quotient_legality_status
 - **Pointers:** HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421,
   HYP-3419, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523, LTI-387,
   T1387, OPEN-Q-108.
+
+## LTT-288: Two-Branch Wall-Signature Tournament
+
+- **Move:** Rank survivor-window certificates from HYP-3427.  Vertices are
+  wall-signature certificate, survivor component normal form, branch-mask
+  descent router, owner-current wall exception, energy-sheet sidecar join, raw
+  positive-measure audit, and named analogy without walls.
+- **LRC use:** HYP-3427 builds on HYP-3426 and strengthens HYP-3425 by requiring a survivor window to
+  carry its exact branch mask, endpoint walls, and midpoint binders.  The live
+  theorem target is a bounded wall-alphabet lemma for primitive covering rows.
+- **Preserves:** the legal two-adic survivor predicate, exact wall labels,
+  branch-only versus both-branch status, binder roles, and the sidecar exit if
+  the wall alphabet is not bounded.
+- **Forgets / guardrail:** raw positive measure forgets which walls certify
+  the interval; raw energy forgets sheet data; raw resonance/topology analogies
+  forget the two-adic branch and q-specific floor.
+- **Pairwise observable:** predicate retention, exact finite-ruler boundary
+  data, descent usefulness, owner/sheet repair value, and scalar-forgetting
+  risk.
+- **Switch/gauge:** orient toward certificates that retain exact walls and
+  can feed the two-adic descent; ties use the declared proof path.
+- **Fingerprint:** score histogram `{-28:1, 49:1, 65:1, 73:1, 76:1, 81:1, 85:1}`,
+  no directed `3`-cycles, and Hamiltonian path
+  `W00_wall_signature_certificate -> W01_survivor_component_normal_form -> W02_branch_mask_descent_router -> W03_owner_current_wall_exception -> W04_energy_sheet_sidecar_join -> W05_raw_positive_measure_audit -> W06_named_analogy_without_walls`.
+- **Next hook:** prove that every primitive covering row has a legal bounded
+  survivor wall word.  If not, record the first failure by missing wall type:
+  even-cover, odd branch, owner-current, sheet, exact-period, or state-lift
+  debt.
+- **Pointers:** HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421,
+  HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3140, HYP-3129,
+  HYP-2963, THM-523, LTI-388, T1388, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 

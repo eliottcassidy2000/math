@@ -44,6 +44,32 @@ all hold `162/162`.  Endpoint-owner support histogram is
 
 Next: classify endpoint-owner triples and prove that no one-color odd
 near-integer interval cover can consume every even-safe component.
+## Lead codex-2026-06-28: Two-branch wall-signature atlas
+
+**Status:** EVIDENCE / exact wall-certificate scout; not proof
+(HYP-3427/T1388/LTI-388/LTT-288), refining HYP-3425.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3427-lrc14-two-branch-wall-signature-atlas.md`,
+script
+`04-computation/lrc14_two_branch_wall_signature_atlas_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_two_branch_wall_signature_atlas_codex_20260628.out`,
+and
+`07-reflections/lrc14-two-branch-wall-signature-atlas-codex-20260628.md`.
+
+Purpose: turn positive survivor windows into exact certificates.  Each window
+is labelled by branch mask, endpoint wall labels, and midpoint binders, using
+wall types `E:s`, `O0:o`, and `O1:o`.
+
+Readout: `67` audited rows have survivor windows `67/67`; total survivor
+windows `5524`; global signature types `27`; branch masks
+`b0=2255, b1=2255, both=1014`.  The tight canonical row `{1..11,13,84}` has
+four windows bounded by `E:84` and odd walls `5,7`.
+
+Next: prove the bounded wall-alphabet lemma for primitive covering rows, or
+classify the first failure by owner-current, sheet, exact-period, state-lift,
+or named two-adic debt.
 
 ## Lead codex-2026-06-28: Two-branch obstruction / Helly certificate
 
