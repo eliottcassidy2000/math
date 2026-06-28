@@ -8474,3 +8474,45 @@ quotient_legality_status
 - **Pointers:** HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3413, HYP-3411,
   HYP-3312, HYP-3311, HYP-3310, HYP-3406, HYP-3405, HYP-2963, THM-523,
   LTI-384, T1384, OPEN-Q-108.
+
+## LTT-289: Two-Adic Descent Loss-Ledger Tournament
+
+- **Move:** Use proof carriers and descent ledgers as tournament vertices.
+  Compare them by how much floor/descent payload they retain after a halving
+  quotient, and penalize forgotten odd blockers, inductive-child data, and
+  labelled owner-current sidecars.
+- **LRC use:** HYP-3428 audits the HYP-3410/HYP-3417 AP-collar mixed fibers as
+  a proxy for HYP-3418's 2-adic covering-floor route, after renumbering around
+  incoming HYP-3419-HYP-3427.  All `23/23`
+  reconstructed rows fail the raw half witness, while `22/23` still have the
+  halved even child carrying the exact bottleneck at `u=2t*`.  HYP-3422,
+  HYP-3425, HYP-3426, and HYP-3427 are the direct covering-packet lift; this
+  tournament supplies their controlled-forgetting audit.
+- **Preserves:** critical-path floor target, exact row maximin, the halved
+  even-child packet, odd-blocker debt, owner-current/even-hinge labels, and
+  named terminal loss classes.
+- **Forgets / guardrail:** raw row order, raw runner identity, q-witness
+  non-covering exits, apex-7 census decoration, and unlabelled parity
+  reductions.
+- **Pairwise observable:** retained critical-path floor data minus forgotten
+  descent debt.
+- **Switch/gauge:** higher weighted retained payload; ties by stable carrier
+  name.
+- **Exact fingerprint:** `vertices=7`,
+  `score_hist={-12:1,6:1,16:1,24:1,34:1,36:1,55:1}`,
+  `directed_3cycles=0`, `hamiltonian_path_count=1`, and priority path
+  `two_adic_descent_loss_ledger -> owner_current_even_hinge ->
+  even_child_induction_packet -> odd_half_witness_failure_gate ->
+  q_witness_noncovering_exit -> apex7_census_offpath_guard ->
+  raw_coprime_to_14_reduction`.
+- **Assumption challenge:** runners, odd speeds, even speeds, v2 layers,
+  owner labels, halved child packets, q-witness exits, off-grid witnesses, and
+  proof obligations were considered.  The chosen vertices preserve the
+  covering-floor predicate and destroy raw row order.
+- **Next hook:** attach this loss-class tournament to the HYP-3427 wall-word
+  residual search; every failure of even-child transfer should be discharged by
+  bounded odd-blocker, owner-current, off-grid, sheet, state-lift, or named
+  residual debt.
+- **Pointers:** HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421,
+  HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410,
+  HYP-3406, HYP-3311, HYP-3265, THM-523, LTI-389, T1389, OPEN-Q-108.

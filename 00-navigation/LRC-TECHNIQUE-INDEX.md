@@ -7326,3 +7326,49 @@ unit-contact holonomy, state-lift debt, or Bring-style branch/monodromy debt.
 Anchors: HYP-3420, HYP-3412, HYP-3410, HYP-3408, HYP-3407, HYP-3406,
 HYP-3405, HYP-3404, HYP-3402, HYP-3301, HYP-3300, HYP-3265, HYP-3243,
 HYP-3238, HYP-3152, HYP-2982, HYP-2214, LTT-281, T1381, OPEN-Q-108.
+
+## LTI-389: Two-Adic Descent Loss Ledger
+
+Created by codex-2026-06-28 for HYP-3428/T1389, renumbered after mainline
+claimed HYP-3419-HYP-3427.  Use this technique when a halving or parity
+quotient is tempting but may destroy the witness coordinate.
+
+Carrier:
+
+```text
+packet = (odd blockers, halved even child under u=2t,
+          exact witness t*, owner-current/even-hinge sidecars,
+          named off-grid/state-lift debt)
+```
+
+Preserved LRC predicate: the covering-floor inequality or theorem-exit purity
+of the packet being compressed.
+
+Destroyed information if used naively: raw witness location, odd/even coupling
+at the displaced optimum, labelled endpoint-owner current, and exceptional
+rows where the even shift leaves odd binders active.
+
+Exact AP-collar proxy readout from HYP-3428:
+
+```text
+reconstructed_rows=23
+half_witness_failure_rows=23
+rows_with_even_binders=22
+rows_where_even_child_carries_M_at_u=2t*=22
+named_loss_classes={even_child_with_odd_coupling,
+                    odd_binder_after_even_shift,
+                    opaque_named_row_debt}
+```
+
+Best use: pair with HYP-3422/HYP-3425/HYP-3426/HYP-3427 on genuine covering
+packets `S=O union 2E`.  The desired theorem is not "odd subset lonely implies
+whole set lonely"; it is "the even-safe child is not swallowed by the
+one-branch odd bad core and every survivor has a bounded wall word, after
+paying bounded odd-blocker and owner-current debt."
+
+Failure mode: using the odd/coprime-to-14 witness at `t=1/2` without recording
+that every even speed vanishes there.
+
+Anchors: HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421,
+HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410,
+HYP-3406, HYP-3311, HYP-3265, THM-523, LTT-289, T1389, OPEN-Q-108.

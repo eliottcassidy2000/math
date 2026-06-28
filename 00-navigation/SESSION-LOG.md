@@ -33098,3 +33098,38 @@ Rebase integration: incoming HYP-3406 later extended the scan to `(72,20)` and
 frontier exposes a second height-persistent owner leak around `petal 10->20`
 versus two-drop/add-20 covering rows.  HYP-3408 now starts its next hook beyond
 that frontier.
+
+## codex-2026-06-28 -- two-adic descent loss ledger -- HYP-3428
+
+Continued the LRC14 proof push after HYP-3418's correction that the remaining
+covering floor is 2-adic/even-speed controlled.  Added the exact AP-collar
+loss-ledger scout:
+
+```text
+04-computation/lrc14_two_adic_descent_loss_ledger_codex_20260628.py
+05-knowledge/results/lrc14_two_adic_descent_loss_ledger_codex_20260628.out
+05-knowledge/hypotheses/HYP-3428-lrc14-two-adic-descent-loss-ledger.md
+07-reflections/lrc14-two-adic-descent-loss-ledger-codex-20260628.md
+```
+
+Readout: on the HYP-3410/HYP-3417 AP-collar mixed-fiber substrate,
+`23/23` reconstructed rows fail the raw `t=1/2` odd/coprime witness, `22/23`
+have even binders, and `22/23` have the halved even child carrying the exact
+maximin bottleneck at `u=2t*`.  Every reconstructed row is still
+`q-witness:14`, so this is a proxy/guardrail rather than a direct covering
+proof.  The next covering theorem should be a loss-ledger theorem: halved even
+child plus controlled odd blockers, or bounded owner-current/even-hinge,
+off-grid, state-lift, or named residual debt.
+
+Fetch integration: mainline had already claimed HYP-3419 through HYP-3427, so
+this ledger was renumbered to HYP-3428/T1389/LTI-389/LTT-289.  The incoming
+HYP-3422 two-adic off-grid relocation, HYP-3425 Helly certificate, HYP-3426
+mirror reduction, and HYP-3427 wall-signature atlas are the direct
+covering-packet lift; this HYP-3428 ledger is the controlled-forgetting audit
+and loss-class vocabulary for that route.
+
+Tournament vertices are proof carriers/descent ledgers, not runners.  The
+priority path is `two_adic_descent_loss_ledger -> owner_current_even_hinge ->
+even_child_induction_packet -> odd_half_witness_failure_gate ->
+q_witness_noncovering_exit -> apex7_census_offpath_guard ->
+raw_coprime_to_14_reduction`.

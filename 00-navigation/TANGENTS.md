@@ -4026,3 +4026,35 @@ Sophie-Germain quartic split on the lost height/flex coordinate.
 -> HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3401,
 HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-3257,
 HYP-2982, HYP-2214, LTI-369, LTT-269, OPEN-Q-108.
+
+## T1389: LRC14 Two-Adic Descent Loss Ledger
+
+HYP-3428 takes HYP-3418's "covering floor is 2-adic" correction and turns it
+into a legal-quotient guardrail.  It was renumbered after mainline claimed
+HYP-3419-HYP-3427.  The exact scout runs on HYP-3410/HYP-3417
+AP-collar mixed fibers, where every reconstructed row is non-covering
+`q-witness:14`; that limitation is intentional.  The goal is to see what a
+future covering-floor descent must remember.
+
+The signal is crisp: raw `t=1/2` odd/coprime witnesses fail on `23/23`
+reconstructed rows, while the halved even child still carries the exact
+bottleneck on `22/23`.  The lone exception is the named class
+`odd_binder_after_even_shift`.  Therefore the useful object is not an
+odd-speed reduction but a finite loss ledger:
+
+```text
+halved even child + odd blockers + owner-current/even-hinge labels.
+```
+
+The q-Pochhammer/modular sidecar contributes only a guardrail here: a quotient
+may forget raw tail data only after declaring its finite principal/loss part.
+
+Incoming bridge: HYP-3422 and HYP-3425 move to genuine covering packets via
+two-adic branch relocation and a Helly bad-core target; HYP-3426 and HYP-3427
+then sharpen this to mirror reduction and wall signatures.  This tangent
+supplies the AP-collar loss-class audit that tells that route what it is
+allowed to forget.
+
+-> HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
+HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410, HYP-3406,
+HYP-3311, HYP-3265, THM-523, LTI-389, LTT-289, OPEN-Q-108.
