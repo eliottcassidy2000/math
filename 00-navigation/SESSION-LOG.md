@@ -136,6 +136,83 @@ settles the same `1/7` question across `k=4..10`, confirms `0` bounded-bank
 covariance beaters, and identifies `2002=C(14,5)=2*7*11*13` as Pascal/binomial
 configuration currency rather than an entropy proof signal.
 
+## codex-2026-06-28 -- covariance Laplacian and associator-ear proof mechanism -- HYP-3163
+
+User asked for one or two new creative angles toward a remaining LRC14 proof
+target.  Continued from HYP-3160's k=8 variance/total-covariance target,
+HYP-3153's Lee-Yang/Worpitzky/quartic packet, and HYP-3199's n=4
+cover-vs-section guardrail.  Added
+`05-knowledge/hypotheses/HYP-3163-lrc14-covariance-laplacian-associator-ear-angles.md`
+and reflection
+`07-reflections/lrc14-covariance-laplacian-associator-ear-angles-codex-20260628.md`;
+updated HYP index, TANGENTS, backlog, OPEN-Q-108, and both LRC technique
+indexes.
+
+Mid-session fetch revealed incoming HYP-3154 and HYP-3161.  HYP-3154 adds the
+Joukowski/De Moivre bridge: Lee-Yang circle data maps to a real-rootedness
+defect sidecar.  HYP-3161 already exhaustively verifies the even covariance
+maximum: `consec_8` beats all `3432` bounded k=8 clusters and the covariance
+sign changes at `k=5->6`.  This packet was renumbered from the provisional
+HYP-3161 to HYP-3163 and reframed as a proof-mechanism search, not another
+verification pass.
+
+Final push-time rebase also integrated the executed HYP-3153 scout.  Its exact
+`L_y<=cap` margins, k=8 `-9S3+6S4` split, Worpitzky edge mode, biquadratic
+fold, Newton defects, and odd-ear examples are now named as the input columns
+for the proposed covariance-kernel / associator-cocycle scout.
+
+The same rebase revealed upstream HYP-3162, so this packet was finalized as
+HYP-3163.  HYP-3162's 7th-cyclotomic ideal / first-cubic-apex readout is now
+treated as a calibration sidecar: the next scout should preserve
+`cyclotomic_cubic_defect`, `de_moivre_angle_slack`, and
+`FM_AFM_bridge_status` while decomposing bounded k=8 rows into covariance
+slack and associator debt.
+
+Second push-time rebase integrated HYP-3200's exact anchored-bank cumulant
+audit.  The HYP-3163 target is now explicitly primitive normal form:
+consecutive is rank `0/3431` for `Sigma kappa_2`, the all-bank exception is
+the nonprimitive dilation twin, exact `Sigma kappa_3/S3=1/7` never occurs, and
+`kappa_4` stays a phi4 stabilizer sidecar rather than a standalone extremal
+claim.
+
+Third push-time rebase integrated HYP-3201's law-defect entropy lane.  This
+does not revive ordinary entropy as a row extremal scalar.  It adds
+conditional entropy `H(target|quotient)` as a quotient-legality check: zero
+means the target factors through the compression; positive residual means an
+ordered, bracket, action, root, cumulant, or other typed sidecar is still
+owed.
+
+Fourth push-time rebase integrated KPS-S31al's Toeplitz/Szego and
+random-current leads, which reused the HYP-3201 label in the session log.  The
+HYP-3163 packet disambiguates this from the S279 law-defect HYP-3201 file by
+naming it `kps-S31al`.  New scout fields: `toeplitz_lambda_min_margin`,
+`caratheodory_psd_margin`, `szego_fejer_route_status`,
+`random_current_coupling_order_status`, and
+`speed_path_nonmonotonicity_count`.
+
+Two proof angles were recorded.  The even angle promotes
+`Sigma kappa_2` from scalar telemetry to a covariance-kernel certificate:
+test `K_consec-K_E` for PSD on the legal sidecar subspace, or prove a
+Laplacian/Monge/conditionally-positive sector-distance rearrangement theorem.
+The odd angle treats the Worpitzky `-9S3` residue as a
+third-cumulant/associator cocycle whose boundary should be controlled by the
+K3 minority-edge mode, odd-ear recursion, n=4 canary/filler sidecars,
+reflection-fold resurrection, or named finite debt.
+
+New requested signals: `covariance_kernel_distance_profile`,
+`PSD_dual_slack_vector`, `monge_four_point_defect`,
+`conditional_negative_type_status`, `associator_triple_cocycle`,
+`odd_ear_surplus`, `worpitzky_boundary_mode`, and
+`even_covariance_odd_associator_exchange`, plus the HYP-3162 cyclotomic
+angle-defect columns and HYP-3200 primitive/dilation labels.  Tournament
+Analysis uses proof obligations and sector-pair/triple certificates as
+vertices, not runners or raw arcs.  Next pull: run a bounded k=8 scout over
+the HYP-3138/HYP-3139/HYP-3142/HYP-3160/HYP-3200 banks and ask whether every
+primitive competitor decomposes into even PSD/Monge slack plus odd
+associator/ear debt without losing the `q=7` cubic-apex signal, while every
+quotient reports zero law-defect entropy or a named sidecar.  In parallel,
+run the Toeplitz `lambda_min(T)` margin as the most concrete spectral route.
+
 ## kind-pasteur-2026-06-27-S31ai -- the k=8 node = a FERROMAGNETIC covariance extremality (functions + info theory + associativity)
 
 Owner: merge/extend the Lee-Yang/phi^4/Galois web toward a proof, thinking in FUNCTIONS + INFORMATION

@@ -52,6 +52,48 @@ Next: put `law_id`, `law_quotient_map`, `target_function`,
 HYP-3141 edge-witness row, and the HYP-3142 k=8 packet.  A quotient should be
 used only after the target function has zero residual entropy or the named
 sidecar is retained.
+## Lead codex-2026-06-28: Covariance Laplacian and associator-ear angles
+
+**Status:** SYNTHESIS / proof-angle proposal; not proof (HYP-3163/T1219).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3163-lrc14-covariance-laplacian-associator-ear-angles.md`
+and
+`07-reflections/lrc14-covariance-laplacian-associator-ear-angles-codex-20260628.md`.
+
+Goal: after incoming HYP-3161 exhaustively verifies `consec_8` as covariance
+max over `3432` bounded clusters, split the proof mechanism into two
+measurable tasks.  Even task: promote `Sigma kappa_2` to a covariance-kernel
+theorem and test PSD/Laplacian/Monge/conditionally-positive certificates for
+the consecutive row.  Odd task: promote the Worpitzky `-9S3` residue to an
+associator or third-cumulant cocycle, then control it by odd-ear recursion,
+K3 minority-edge lifts, n=4 canary/filler sources, reflection-fold
+resurrection, or named finite debt.  HYP-3154's Joukowski/De Moivre bridge
+adds the root-curve real-rootedness-defect sidecar.  The now-executed
+HYP-3153 scout supplies exact Lee-Yang/Worpitzky/quartic packet columns to
+join to these new covariance and associator columns.  HYP-3162's
+cyclotomic-ideal / first-cubic-apex packet adds the calibration columns
+`cyclotomic_cubic_defect`, `de_moivre_angle_slack`, and
+`FM_AFM_bridge_status`.  HYP-3200 adds the primitive-normal-form audit:
+consecutive is rank `0/3431` for `Sigma kappa_2`, the all-bank exception is
+the nonprimitive dilation twin, exact `1/7` is false, and `kappa_4` is a
+stabilizer sidecar.  HYP-3201 adds the quotient-legality audit: row entropy is
+not the objective, but `H(target|quotient)` should be zero or produce a named
+typed sidecar before any compression is used.  KPS-S31al adds the current best
+spectral route: `q_t` as a Toeplitz trigonometric moment matrix, with
+consecutive maximizing `lambda_min(T)` over all `3432` bounded k=8 rows, plus
+a random-current warning for the ferromagnetic route.
+
+Next scout should emit `covariance_kernel_distance_profile`,
+`PSD_dual_slack_vector`, `monge_four_point_defect`,
+`conditional_negative_type_status`, `associator_triple_cocycle`,
+`odd_ear_surplus`, `worpitzky_boundary_mode`, and
+`even_covariance_odd_associator_exchange`, while preserving the HYP-3162
+cyclotomic angle-defect columns and the HYP-3200 primitive/dilation labels,
+plus HYP-3201 `law_defect_entropy_bits` and
+`target_function_factor_through_status`, and KPS-S31al
+`toeplitz_lambda_min_margin` / `random_current_coupling_order_status`, over
+the bounded k=8 banks from HYP-3138/HYP-3139/HYP-3142/HYP-3160.
 
 ## Lead codex-2026-06-28: Function-compression resolvent-degree wall
 

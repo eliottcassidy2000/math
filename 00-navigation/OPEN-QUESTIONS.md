@@ -81,6 +81,51 @@ sidecar that must be retained before scalarization. -> HYP-3201, HYP-3200, HYP-3
 HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151,
 HYP-3150, HYP-3147, HYP-3146, HYP-3142, HYP-3141, HYP-3140, HYP-3132,
 HYP-3122, HYP-3109, HYP-3092, THM-577, LTI-301, LTT-201, T1301, OPEN-Q-108.
+**OPEN-Q-108 HYP-3163 covariance-Laplacian / associator-ear addendum:**
+HYP-3163 is the proof-mechanism follow-up to HYP-3161's exhaustive covariance
+max and ferromagnetic transition, with HYP-3154's Joukowski/De Moivre bridge
+as the root-curve sidecar and the executed HYP-3153 scout as the exact
+Lee-Yang/Worpitzky/quartic packet input.  HYP-3162 adds the cyclotomic
+calibration: the scout should preserve the `q=7` cubic-apex angle defect, not
+just rational `L_y` margins.  HYP-3200 adds primitive-normal-form bookkeeping:
+the theorem target is rank `0/3431` covariance extremality, the all-bank
+exception is the dilation twin, exact `1/7` is false, and `kappa_4` is only a
+stabilizer sidecar.  HYP-3201 adds a quotient-legality audit: use
+conditional entropy `H(target|quotient)` to test whether a compression is
+zero-defect or still owes a typed sidecar.  KPS-S31al adds a Toeplitz/Szego
+route: consecutive maximizes the Toeplitz moment-matrix `lambda_min(T)` over
+all `3432` bounded k=8 rows, while naive speed-path monotonicity fails and
+pushes the ferromagnetic route toward random currents.  It splits the current
+HYP-3160/HYP-3153 k=8
+node into two proof-facing currencies.  The even target
+is no longer just the scalar `Sigma kappa_2`; it is a covariance kernel that
+should be tested for PSD, Laplacian, Monge, conditionally-positive, or
+Schur/rearrangement certificates after known sidecars are retained.  The odd
+target is the Worpitzky `-9S3` residue, treated as an
+associator/third-cumulant cocycle whose boundary should be controlled by
+odd-ear recursion, K3 minority-edge lifts, n=4 canary/filler sources,
+reflection-fold resurrection, or named finite debt.
+
+Open task: build the bounded k=8 scout with
+`covariance_kernel_distance_profile`, `PSD_dual_slack_vector`,
+`monge_four_point_defect`, `conditional_negative_type_status`,
+`associator_triple_cocycle`, `odd_ear_surplus`,
+`worpitzky_boundary_mode`, `even_covariance_odd_associator_exchange`,
+`cyclotomic_cubic_defect`, `de_moivre_angle_slack`, and
+`FM_AFM_bridge_status`, plus `primitive_normal_form_status`,
+`dilation_twin_exception_id`, `one_seventh_claim_status`, and
+`kappa4_stabilizer_sidecar_status`, plus `law_defect_entropy_bits`,
+`target_function_factor_through_status`, `sidecar_zero_defect_status`, and
+`action_determinism_status`, plus `toeplitz_lambda_min_margin`,
+`caratheodory_psd_margin`, `szego_fejer_route_status`,
+`random_current_coupling_order_status`, and
+`speed_path_nonmonotonicity_count`.
+The target readout is an inequality template
+`odd_associator_excess <= even_covariance_slack + named_sidecar_debt`, plus a
+PSD/Monge certificate for the even covariance maximum. -> HYP-3163, HYP-3201,
+HYP-3200, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
+HYP-3199, HYP-3147, HYP-3142, HYP-3139, HYP-3138, HYP-3132, HYP-3124,
+HYP-3118, LTI-280, LTT-178, T1219, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3151 Worpitzky function-compression resolvent addendum:**
 HYP-3151 executes HYP-3150's factor-through wall by turning the recent Worpitzky, pair-function, tournament-3,

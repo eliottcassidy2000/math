@@ -175,6 +175,12 @@ obligations, and proof-carrier interfaces.
   compression fibers, ordered sidecars, canary coordinates, and resolvent
   obligations the vertices.  The target function must be fiber-constant or
   sidecar-restored.
+- Need to split the k=8 covariance target from the odd Worpitzky residue:
+  use LTT-178 after LTT-177/LTT-175/LTT-171/LTT-166 and make proof
+  obligations, covariance kernels, sector-pair/triple certificates,
+  associator cocycles, and odd-ear witnesses the vertices.  Do not force the
+  odd residue into a variance proof; charge it to even covariance slack or
+  named finite sidecar debt.
 - Need to separate n=4 tiling abundance from exact chart minimality:
   use LTT-199 after LTT-175/LTT-174/LTT-172/LTT-171/LTT-170/LTT-169/LTT-157/LTT-160/LTT-165 and make model/proof carriers the
   tournament vertices.  Carry the `S`-fiber multiplicity,
@@ -5939,6 +5945,49 @@ quotient_legality_status
   and whether every shortcut has the necessary root/odd-ear sidecar.
 - **Pointers:** HYP-3153, HYP-3161, HYP-3152, HYP-3151, HYP-3150, HYP-3149, HYP-3147,
   HYP-3142, HYP-3139, HYP-3109, HYP-3099, LTI-279, LTT-177, T1218,
+  OPEN-Q-108.
+
+## LTT-178: Tournament Of Covariance Kernels And Associator Ears
+
+- **Move:** Treat proof obligations and sector-pair/triple certificates as
+  tournament vertices: covariance Laplacian certificate, Monge rearrangement
+  certificate, sector-distance kernel profile, finite sidecar exception,
+  associator triple-cocycle, odd-ear shortening certificate, K3 minority-edge
+  lift, n=4 canary/filler source, Lee-Yang root ledger, and raw scalar
+  bimodality.
+- **LRC use:** HYP-3163 takes HYP-3160's total-covariance target, HYP-3161's
+  exhaustive covariance-max and ferromagnetic-transition result, HYP-3154's
+  Joukowski/De Moivre bridge, HYP-3162's 7th-cyclotomic / first-cubic-apex
+  calibration, HYP-3200's primitive-normal-form cumulant audit, HYP-3201's
+  law-defect quotient audit, KPS-S31al's Toeplitz/random-current packet, and
+  HYP-3153's odd/even Lee-Yang packet as proof currencies.  The even face should be attacked as a
+  PSD/Laplacian/Monge/conditionally-positive kernel theorem.  The odd
+  Worpitzky `-9S3` face should be attacked as an associator or
+  third-cumulant cocycle whose boundary is controlled by odd-ear recursion or
+  named sidecar debt.
+- **Preserves:** covariance extremality, root-curve sidecar status, even/odd
+  separation, the `q=7` cubic cyclotomic defect, K3 minority-edge data, n=4
+  canary/filler debt, primitive/dilation status, the exact `1/7` refutation,
+  zero-defect quotient status, Toeplitz `lambda_min(T)` margin, and terminal
+  proof exits.
+- **Forgets / guardrail:** raw runners, raw arcs, score classes, and raw
+  `L_y` values forget whether the proof needs pair covariance, triple
+  associator data, root angles, or representative preimages.
+- **Tie path:** `covariance_laplacian_psd_certificate ->
+  monge_rearrangement_certificate -> sector_distance_kernel_profile ->
+  associator_triple_cocycle -> odd_ear_shortening_certificate ->
+  finite_sidecar_exception_packet -> k3_minority_edge_lift ->
+  n4_canary_filler_source -> lee_yang_root_curve_ledger ->
+  raw_scalar_bimodality_value`.
+- **Next hook:** Build the bounded k=8 proof-carrier tournament and report
+  score histogram, SCCs, directed cycles, edge flips, and Hamiltonian-path
+  count.  In parallel, add covariance-kernel and associator fields to the
+  HYP-3138/HYP-3139/HYP-3142/HYP-3160/HYP-3200 bounded-row banks, with
+  HYP-3201 law-defect entropy attached to every proposed quotient and the
+  KPS-S31al Toeplitz margin run beside the covariance slack.
+- **Pointers:** HYP-3163, HYP-3201, HYP-3200, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152,
+  HYP-3151, HYP-3150, HYP-3199, HYP-3149, HYP-3147, HYP-3142, HYP-3139,
+  HYP-3138, HYP-3132, HYP-3124, HYP-3118, LTI-280, LTT-178, T1219,
   OPEN-Q-108.
 
 ## LTT-199: n=4 Einheit/Tiling Minimality Tournament
