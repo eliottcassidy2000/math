@@ -32472,11 +32472,13 @@ remains the creative lead atlas.  Navigation/index references were corrected
 accordingly in `TANGENTS`, `OPEN-QUESTIONS`, the hypothesis index, and the
 results index.
 
-The later recursive cut/signature scaffold was renumbered to
-HYP-3409/T1370 after mainline HYP-3407/T1368 became the separate
-boundary-uniformization cut-stability atlas.  The scaffold remains downstream
-rather than conflicting: it proposes recursive cut/signature tests starting
-from the HYP-3406 sidecar chain `residue -> height -> owner_support`.
+The later special-function cut/signature scaffold was ultimately renumbered to
+HYP-3411/T1372 after mainline HYP-3407/T1368 became the separate
+boundary-uniformization cut-stability atlas, HYP-3409/T1370 became the
+recursive sidecar pattern atlas, and HYP-3410/T1371 became the charal recursion
+scout.  The scaffold remains downstream rather than conflicting: it proposes
+recursive cut/signature tests starting from the HYP-3406 sidecar chain
+`residue -> height -> owner_support`.
 
 Mesh notes already sent: `MSG-1403` claimed the enlarged-bank residue thread;
 `MSG-1404` reported the exact split between the height leak and the stronger

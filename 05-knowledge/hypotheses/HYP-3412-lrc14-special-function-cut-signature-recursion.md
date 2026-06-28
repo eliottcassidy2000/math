@@ -1,15 +1,17 @@
 ---
-id: HYP-3409
+id: HYP-3412
 title: LRC14 special-function cut signature recursion
 status: EVIDENCE / executable creative synthesis; not an LRC14 proof
 source: codex-2026-06-28
-tangent: T1370
-technique: LTI-370
-tournament_technique: LTT-270
+tangent: T1373
+technique: LTI-373
+tournament_technique: LTT-273
 script: 04-computation/lrc14_special_function_cut_signature_recursion_codex_20260628.py
 result: 05-knowledge/results/lrc14_special_function_cut_signature_recursion_codex_20260628.out
 reflection: 07-reflections/lrc14-special-function-cut-signature-recursion-codex-20260628.md
 related:
+  - HYP-3410
+  - HYP-3409
   - HYP-3408
   - HYP-3407
   - HYP-3406
@@ -26,13 +28,17 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3409: LRC14 Special-Function Cut Signature Recursion
+# HYP-3412: LRC14 Special-Function Cut Signature Recursion
 
 Namespace note: this artifact was initially drafted against a local HYP-3407
 reservation, then renumbered to HYP-3409 after mainline assigned HYP-3407 to
 the boundary-uniformization cut-stability atlas and HYP-3408 to the exotic
-guardrail reframe atlas.  The content here is the special-function cut
-signature scout, now linked as a downstream evidence companion to both.
+guardrail reframe atlas.  It was renumbered again to HYP-3412 after mainline
+assigned HYP-3409 to the recursive sidecar pattern atlas, HYP-3410 to the
+Bring/Schwarz/BDH/Menger charal recursion scout, and an older index entry
+already occupied HYP-3411.  The content here is the measured special-function
+cut signature scout, now linked as a downstream evidence companion to those
+atlases.
 
 ## Claim
 
@@ -105,7 +111,7 @@ residue_plus_owner_support       0
 ```
 
 This extends HYP-3406 without contradicting it: full `owner_support_word`
-remains the exact trusted sidecar; HYP-3409 tests two cheaper shadows of that
+remains the exact trusted sidecar; HYP-3412 tests two cheaper shadows of that
 owner support, a Schwarz-Christoffel-style boundary turn word and a
 Krasner-style local owner-radius word.
 
