@@ -1,0 +1,16 @@
+COVERAGE EVEN/ODD BONFERRONI SPLIT at n=14 (p=7 sectors), k=8 binding node.
+q_0(coverage) = e_0 - e_1 + e_2 - e_3 + e_4 - e_5 + e_6 = EVEN_Bonferroni - ODD_Bonferroni,
+  e_j = sum over j-subsets of inner sectors of P(those j sectors all empty).
+
+config     q0        even(e0+e2+e4+e6)  odd(e1+e3+e5)   e_j=[e0..e6]
+consec_8   0.41616   3.1260             2.7099          [1, 1.3813, 1.5444, 1.1755, 0.5638, 0.1531, 0.0179]
+E2         0.40170   2.9781             2.5764          [1, 1.3535, 1.4539, 1.088,  0.5084, 0.1349, 0.0159]
+E3         0.27381   2.6857             2.4119          [1, 1.4012, 1.2607, 0.9036, 0.4131, 0.1071, 0.0119]
+spread     0.21969   2.6277             2.4081          [1, 1.5082, 1.2612, 0.8064, 0.3556, 0.0934, 0.011 ]
+
+KEY: consec MAXIMIZES q0. It has the HIGHEST even AND highest odd Bonferroni, but its even advantage
+EXCEEDS its odd advantage:  Delta_even(consec vs E2)=0.148 > Delta_odd=0.134  => Delta_q0=+0.014>0.
+=> THE NODE INEQUALITY: q0(consec)>=q0(E)  <=>  Delta_even >= Delta_odd.
+   EVEN Bonferroni = SOS/Bochner-positive (mac-mini S75e even half = the Fejer cyclotomic square).
+   ODD Bonferroni  = the obstruction = (trace SIGN) x (SOS magnitude) (Brouwer, HYP-3219).
+   CERTIFICATE STRUCTURE: the SOS even advantage dominates the sign-controlled odd advantage.
