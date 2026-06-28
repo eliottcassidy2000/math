@@ -1,0 +1,136 @@
+HYP-3410 Bring/Schwarz-Christoffel/BDH/Menger charal recursion scout
+==============================================================================
+substrate=HYP-3406 expanded-bank mixed fibers
+exit_alphabet=('q-witness-discharge', 'AP/GW-zero-open-equality', 'unit-petal-named', 'named-K33-state-lift', 'positive-Haar-open')
+charal=characteristic/chiral/arc-lift signature, not raw row identity
+
+## Row charal signatures
+
+### height_leak_12_family
+positive-Haar-open  | GW-shell alias 12->132       | turn=('U', 'E', 'A', 'U', 'U') | groups=(('g1', 3), ('g2', 1), ('g7', 1)) | charal=(('replace', 'swap', 12, 6), ('unit_slot', (2, 2, 2)), ('turn', ('U', 'E', 'A', 'U', 'U')), ('owner_groups', (('g1', 3), ('g2', 1), ('g7', 1))), ('apex', True), ('v2_span', 0, 3, 10), ('owner_labels', ('5:g1', '11:g1', '13:g1', '6:g2', '7:g7')))
+positive-Haar-open  | single swap 12->48           | turn=('U', 'E', 'A') | groups=(('g1', 1), ('g2', 1), ('g7', 1)) | charal=(('replace', 'swap', 12, 6), ('unit_slot', (2, 2, 2)), ('turn', ('U', 'E', 'A')), ('owner_groups', (('g1', 1), ('g2', 1), ('g7', 1))), ('apex', True), ('v2_span', 0, 4, 12), ('owner_labels', ('5:g1', '6:g2', '7:g7')))
+unit-petal-named    | P10+GW                       | turn=('E', 'A') | groups=(('g2', 1), ('g7', 1)) | charal=(('replace', 'named', None, None), ('unit_slot', (2, 2, 2)), ('turn', ('E', 'A')), ('owner_groups', (('g2', 1), ('g7', 1))), ('apex', True), ('v2_span', 0, 3, 12), ('owner_labels', ('6:g2', '7:g7')))
+
+### persistent_owner_leak_26_40_54_family
+positive-Haar-open  | single swap 1->26            | turn=('E', 'U') | groups=(('g1', 1), ('g2', 1)) | charal=(('replace', 'swap', 1, 12), ('unit_slot', (1, 2, 2)), ('turn', ('E', 'U')), ('owner_groups', (('g1', 1), ('g2', 1))), ('apex', False), ('v2_span', 0, 3, 11), ('owner_labels', ('13:g1', '12:g2')))
+positive-Haar-open  | single swap 1->40            | turn=('E', 'E', 'U') | groups=(('g1', 1), ('g2', 2)) | charal=(('replace', 'swap', 1, 12), ('unit_slot', (1, 2, 2)), ('turn', ('E', 'E', 'U')), ('owner_groups', (('g1', 1), ('g2', 2))), ('apex', False), ('v2_span', 0, 3, 13), ('owner_labels', ('13:g1', '2:g2', '12:g2')))
+positive-Haar-open  | single swap 1->54            | turn=('E', 'U') | groups=(('g1', 1), ('g2', 1)) | charal=(('replace', 'swap', 1, 12), ('unit_slot', (1, 2, 2)), ('turn', ('E', 'U')), ('owner_groups', (('g1', 1), ('g2', 1))), ('apex', False), ('v2_span', 0, 3, 11), ('owner_labels', ('13:g1', '12:g2')))
+positive-Haar-open  | single swap 3->26            | turn=('E', 'U', 'E', 'U') | groups=(('g1', 2), ('g2', 2)) | charal=(('replace', 'swap', 3, 12), ('unit_slot', (2, 1, 2)), ('turn', ('E', 'U', 'E', 'U')), ('owner_groups', (('g1', 2), ('g2', 2))), ('apex', False), ('v2_span', 0, 3, 11), ('owner_labels', ('11:g1', '13:g1', '6:g2', '12:g2')))
+positive-Haar-open  | single swap 3->40            | turn=('E', 'U', 'E', 'U') | groups=(('g1', 2), ('g2', 2)) | charal=(('replace', 'swap', 3, 12), ('unit_slot', (2, 1, 2)), ('turn', ('E', 'U', 'E', 'U')), ('owner_groups', (('g1', 2), ('g2', 2))), ('apex', False), ('v2_span', 0, 3, 13), ('owner_labels', ('11:g1', '13:g1', '6:g2', '12:g2')))
+positive-Haar-open  | single swap 3->54            | turn=('E', 'U', 'E', 'U') | groups=(('g1', 2), ('g2', 2)) | charal=(('replace', 'swap', 3, 12), ('unit_slot', (2, 1, 2)), ('turn', ('E', 'U', 'E', 'U')), ('owner_groups', (('g1', 2), ('g2', 2))), ('apex', False), ('v2_span', 0, 3, 11), ('owner_labels', ('11:g1', '13:g1', '6:g2', '12:g2')))
+positive-Haar-open  | single swap 5->26            | turn=('U', 'E', 'U', 'E', 'U') | groups=(('g1', 3), ('g2', 2)) | charal=(('replace', 'swap', 5, 12), ('unit_slot', (2, 2, 1)), ('turn', ('U', 'E', 'U', 'E', 'U')), ('owner_groups', (('g1', 3), ('g2', 2))), ('apex', False), ('v2_span', 0, 3, 11), ('owner_labels', ('9:g1', '11:g1', '13:g1', '10:g2', '12:g2')))
+positive-Haar-open  | single swap 5->40            | turn=('U', 'E', 'U', 'E', 'U') | groups=(('g1', 3), ('g2', 2)) | charal=(('replace', 'swap', 5, 12), ('unit_slot', (2, 2, 1)), ('turn', ('U', 'E', 'U', 'E', 'U')), ('owner_groups', (('g1', 3), ('g2', 2))), ('apex', False), ('v2_span', 0, 3, 13), ('owner_labels', ('9:g1', '11:g1', '13:g1', '10:g2', '12:g2')))
+positive-Haar-open  | single swap 5->54            | turn=('U', 'E', 'U', 'E') | groups=(('g1', 2), ('g2', 2)) | charal=(('replace', 'swap', 5, 12), ('unit_slot', (2, 2, 1)), ('turn', ('U', 'E', 'U', 'E')), ('owner_groups', (('g1', 2), ('g2', 2))), ('apex', False), ('v2_span', 0, 3, 11), ('owner_labels', ('9:g1', '11:g1', '10:g2', '12:g2')))
+positive-Haar-open  | single swap 9->54            | turn=('U', 'A', 'E', 'E', 'U', 'E', 'U') | groups=(('g1', 3), ('g2', 3), ('g7', 1)) | charal=(('replace', 'swap', 9, 12), ('unit_slot', (2, 2, 1)), ('turn', ('U', 'A', 'E', 'E', 'U', 'E', 'U')), ('owner_groups', (('g1', 3), ('g2', 3), ('g7', 1))), ('apex', True), ('v2_span', 0, 3, 11), ('owner_labels', ('5:g1', '11:g1', '13:g1', '8:g2', '10:g2', '12:g2', '7:g7')))
+unit-petal-named    | petal 13->26                 | turn=('U', 'E') | groups=(('g1', 1), ('g2', 1)) | charal=(('replace', 'swap', 13, 12), ('unit_slot', (1, 2, 2)), ('turn', ('U', 'E')), ('owner_groups', (('g1', 1), ('g2', 1))), ('apex', False), ('v2_span', 0, 3, 11), ('owner_labels', ('1:g1', '12:g2')))
+
+### height_persistent_owner_leak_10_20_drop_add_family
+positive-Haar-open  | two drop(1, 10)->add(15, 20) | turn=('U', 'E', 'E', 'A') | groups=(('g1', 1), ('g2', 2), ('g7', 1)) | charal=(('replace', 'named', None, None), ('unit_slot', (2, 2, 2)), ('turn', ('U', 'E', 'E', 'A')), ('owner_groups', (('g1', 1), ('g2', 2), ('g7', 1))), ('apex', True), ('v2_span', 0, 3, 11), ('owner_labels', ('1:g1', '2:g2', '6:g2', '7:g7')))
+positive-Haar-open  | two drop(1, 10)->add(17, 20) | turn=('E', 'U', 'E', 'U') | groups=(('g1', 2), ('g2', 2)) | charal=(('replace', 'named', None, None), ('unit_slot', (1, 3, 2)), ('turn', ('E', 'U', 'E', 'U')), ('owner_groups', (('g1', 2), ('g2', 2))), ('apex', False), ('v2_span', 0, 3, 11), ('owner_labels', ('3:g1', '13:g1', '2:g2', '6:g2')))
+positive-Haar-open  | two drop(1, 10)->add(19, 20) | turn=('E', 'U', 'E', 'A', 'U') | groups=(('g1', 2), ('g2', 2), ('g7', 1)) | charal=(('replace', 'named', None, None), ('unit_slot', (1, 2, 3)), ('turn', ('E', 'U', 'E', 'A', 'U')), ('owner_groups', (('g1', 2), ('g2', 2), ('g7', 1))), ('apex', True), ('v2_span', 0, 3, 11), ('owner_labels', ('5:g1', '13:g1', '2:g2', '6:g2', '7:g7')))
+positive-Haar-open  | two drop(3, 10)->add(15, 20) | turn=('E', 'A', 'U', 'U') | groups=(('g1', 2), ('g2', 1), ('g7', 1)) | charal=(('replace', 'named', None, None), ('unit_slot', (3, 1, 2)), ('turn', ('E', 'A', 'U', 'U')), ('owner_groups', (('g1', 2), ('g2', 1), ('g7', 1))), ('apex', True), ('v2_span', 0, 3, 11), ('owner_labels', ('11:g1', '13:g1', '6:g2', '7:g7')))
+positive-Haar-open  | two drop(3, 10)->add(17, 20) | turn=('E', 'U') | groups=(('g1', 1), ('g2', 1)) | charal=(('replace', 'named', None, None), ('unit_slot', (2, 2, 2)), ('turn', ('E', 'U')), ('owner_groups', (('g1', 1), ('g2', 1))), ('apex', False), ('v2_span', 0, 3, 11), ('owner_labels', ('13:g1', '6:g2')))
+positive-Haar-open  | two drop(3, 10)->add(19, 20) | turn=('U', 'E', 'A', 'U') | groups=(('g1', 2), ('g2', 1), ('g7', 1)) | charal=(('replace', 'named', None, None), ('unit_slot', (2, 1, 3)), ('turn', ('U', 'E', 'A', 'U')), ('owner_groups', (('g1', 2), ('g2', 1), ('g7', 1))), ('apex', True), ('v2_span', 0, 3, 11), ('owner_labels', ('5:g1', '11:g1', '6:g2', '7:g7')))
+positive-Haar-open  | two drop(5, 10)->add(15, 20) | turn=('U', 'E', 'A', 'U', 'U', 'E', 'U') | groups=(('g1', 4), ('g2', 2), ('g7', 1)) | charal=(('replace', 'named', None, None), ('unit_slot', (3, 2, 1)), ('turn', ('U', 'E', 'A', 'U', 'U', 'E', 'U')), ('owner_groups', (('g1', 4), ('g2', 2), ('g7', 1))), ('apex', True), ('v2_span', 0, 3, 11), ('owner_labels', ('1:g1', '9:g1', '11:g1', '13:g1', '6:g2', '12:g2', '7:g7')))
+positive-Haar-open  | two drop(5, 10)->add(17, 20) | turn=('U', 'E', 'U', 'U', 'U') | groups=(('g1', 4), ('g2', 1)) | charal=(('replace', 'named', None, None), ('unit_slot', (2, 3, 1)), ('turn', ('U', 'E', 'U', 'U', 'U')), ('owner_groups', (('g1', 4), ('g2', 1))), ('apex', False), ('v2_span', 0, 3, 11), ('owner_labels', ('3:g1', '9:g1', '11:g1', '13:g1', '6:g2')))
+positive-Haar-open  | two drop(5, 10)->add(19, 20) | turn=('U', 'E', 'A', 'U', 'E', 'U') | groups=(('g1', 3), ('g2', 2), ('g7', 1)) | charal=(('replace', 'named', None, None), ('unit_slot', (2, 2, 2)), ('turn', ('U', 'E', 'A', 'U', 'E', 'U')), ('owner_groups', (('g1', 3), ('g2', 2), ('g7', 1))), ('apex', True), ('v2_span', 0, 3, 11), ('owner_labels', ('5:g1', '11:g1', '13:g1', '6:g2', '12:g2', '7:g7')))
+unit-petal-named    | petal 10->20                 | turn=('E', 'A') | groups=(('g2', 1), ('g7', 1)) | charal=(('replace', 'swap', 10, 6), ('unit_slot', (2, 2, 2)), ('turn', ('E', 'A')), ('owner_groups', (('g2', 1), ('g7', 1))), ('apex', True), ('v2_span', 0, 3, 11), ('owner_labels', ('6:g2', '7:g7')))
+
+## Menger cuts and finite BDH variance
+
+### height_leak_12_family
+rows=3 exit_hist={'positive-Haar-open': 2, 'unit-petal-named': 1}
+minimum_owner_label_cut_size=1
+first_min_cuts=[('5:g1',)]
+top_channel_variance_labels=
+  5:g1: 8/9
+  13:g1: 2/9
+  11:g1: 2/9
+  7:g7: 0
+  6:g2: 0
+
+### persistent_owner_leak_26_40_54_family
+rows=11 exit_hist={'positive-Haar-open': 10, 'unit-petal-named': 1}
+minimum_owner_label_cut_size=1
+first_min_cuts=[('1:g1',)]
+top_channel_variance_labels=
+  1:g1: 200/121
+  13:g1: 162/121
+  11:g1: 98/121
+  10:g2: 32/121
+  9:g1: 18/121
+  6:g2: 18/121
+  8:g2: 2/121
+  7:g7: 2/121
+
+### height_persistent_owner_leak_10_20_drop_add_family
+rows=10 exit_hist={'positive-Haar-open': 9, 'unit-petal-named': 1}
+minimum_owner_label_cut_size=3
+first_min_cuts=[('11:g1', '13:g1', '1:g1'), ('11:g1', '13:g1', '2:g2'), ('11:g1', '2:g2', '7:g7'), ('13:g1', '1:g1', '5:g1'), ('13:g1', '2:g2', '5:g1')]
+top_channel_variance_labels=
+  13:g1: 49/50
+  11:g1: 1/2
+  7:g7: 9/50
+  5:g1: 9/50
+  2:g2: 9/50
+  9:g1: 2/25
+  3:g1: 2/25
+  1:g1: 2/25
+
+## Recursive ladder patterns
+ladder old_mod_key=(1, 12): names=['single swap 1->26', 'single swap 1->40', 'single swap 1->54']
+  exits=['positive-Haar-open', 'positive-Haar-open', 'positive-Haar-open']
+  turns=[('E', 'U'), ('E', 'E', 'U'), ('E', 'U')]
+  owners=[('12:g2', '13:g1'), ('12:g2', '13:g1', '2:g2'), ('12:g2', '13:g1')]
+ladder old_mod_key=(3, 12): names=['single swap 3->26', 'single swap 3->40', 'single swap 3->54']
+  exits=['positive-Haar-open', 'positive-Haar-open', 'positive-Haar-open']
+  turns=[('E', 'U', 'E', 'U'), ('E', 'U', 'E', 'U'), ('E', 'U', 'E', 'U')]
+  owners=[('11:g1', '12:g2', '13:g1', '6:g2'), ('11:g1', '12:g2', '13:g1', '6:g2'), ('11:g1', '12:g2', '13:g1', '6:g2')]
+ladder old_mod_key=(5, 12): names=['single swap 5->26', 'single swap 5->40', 'single swap 5->54']
+  exits=['positive-Haar-open', 'positive-Haar-open', 'positive-Haar-open']
+  turns=[('U', 'E', 'U', 'E', 'U'), ('U', 'E', 'U', 'E', 'U'), ('U', 'E', 'U', 'E')]
+  owners=[('10:g2', '11:g1', '12:g2', '13:g1', '9:g1'), ('10:g2', '11:g1', '12:g2', '13:g1', '9:g1'), ('10:g2', '11:g1', '12:g2', '9:g1')]
+ladder old_mod_key=(9, 12): names=['single swap 9->54']
+  exits=['positive-Haar-open']
+  turns=[('U', 'A', 'E', 'E', 'U', 'E', 'U')]
+  owners=[('10:g2', '11:g1', '12:g2', '13:g1', '5:g1', '7:g7', '8:g2')]
+ladder old_mod_key=(10, 6): names=['petal 10->20']
+  exits=['unit-petal-named']
+  turns=[('E', 'A')]
+  owners=[('6:g2', '7:g7')]
+ladder old_mod_key=(12, 6): names=['single swap 12->48', 'GW-shell alias 12->132']
+  exits=['positive-Haar-open', 'positive-Haar-open']
+  turns=[('U', 'E', 'A'), ('U', 'E', 'A', 'U', 'U')]
+  owners=[('5:g1', '6:g2', '7:g7'), ('11:g1', '13:g1', '5:g1', '6:g2', '7:g7')]
+ladder old_mod_key=(13, 12): names=['petal 13->26']
+  exits=['unit-petal-named']
+  turns=[('U', 'E')]
+  owners=[('12:g2', '1:g1')]
+
+## Proof-route reframes
+- Bring branch resolver: The five theorem exits form a quintic-like branch alphabet; normalization is useful only if the accessory owner/height fields make exit_status a function on packet fibers.
+- Schwarz-Christoffel polygon: Unit contacts are polygon vertices; owner_support is the accessory parameter word.  A polygon turn word without accessory debt can hide the exact off-unit endpoint owner.
+- Barban-Davenport-Halberstam channel variance: Use mean-square owner-channel imbalance on finite packet fibers as a route-pure discrepancy certificate; do not import prime-distribution theorems as black boxes.
+- Menger owner cut: Treat endpoint-owner labels as a cut system separating theorem exits; a proof must show every mixed fiber has a bounded owner cut or a named residual debt.
+- Charal recursion: Track characteristic/chiral/arc-lift signatures under +14 cusp ladders and endpoint deletion; persistent equality of this signature is the next candidate for a recursive no-new-kernel theorem.
+
+## Tournament Analysis
+vertices=proof carriers / sidecar transformations, not runners
+pairwise_observable=retained first-failure payload minus destroyed sidecars
+switch_gauge=higher weighted retained payload; ties by fewer destroyed sidecars
+vertex_count=7
+score_hist={-28: 1, 18: 1, 20: 1, 35: 1, 43: 1, 56: 1, 61: 1}
+directed_3cycles=0
+hamiltonian_path_count=1
+priority_hamiltonian_path=
+  menger_owner_cut_recursion: score=61 keeps=['endpoint_owner', 'finite_bank_exactness', 'first_failure_branch', 'globalization_path', 'owner_cut_separator', 'recursive_signature'] destroys=['raw_analogy']
+  charal_recursive_signature: score=56 keeps=['contact_polygon_turns', 'endpoint_owner', 'finite_bank_exactness', 'first_failure_branch', 'height_wall', 'recursive_signature'] destroys=['accessory_parameter_debt']
+  bdh_channel_discrepancy_packet: score=43 keeps=['channel_variance', 'endpoint_owner', 'finite_bank_exactness', 'first_failure_branch', 'globalization_path'] destroys=['contact_polygon_turns', 'height_wall']
+  schwarz_christoffel_contact_polygon: score=35 keeps=['accessory_parameter_debt', 'contact_polygon_turns', 'endpoint_owner', 'first_failure_branch'] destroys=['channel_variance', 'height_wall']
+  tropical_height_wall_backend: score=20 keeps=['finite_bank_exactness', 'height_wall', 'recursive_signature'] destroys=['accessory_parameter_debt', 'channel_variance', 'endpoint_owner']
+  bring_branch_resolvent: score=18 keeps=['first_failure_branch', 'globalization_path', 'quintic_exit_alphabet'] destroys=['contact_polygon_turns', 'endpoint_owner', 'height_wall']
+  raw_cross_discipline_analogy: score=-28 keeps=['raw_analogy'] destroys=['accessory_parameter_debt', 'channel_variance', 'contact_polygon_turns', 'endpoint_owner', 'finite_bank_exactness', 'first_failure_branch', 'globalization_path', 'height_wall', 'owner_cut_separator', 'recursive_signature']
+
+## Assumption challenge
+Considered vertices: runners, residues, owner labels, polygon turns, BDH channels, Menger cuts, Bring branches, deletion events, and proof obligations.
+Chosen vertices: proof carriers and sidecar transformations.  The quotient preserves LRC route status only when exit_status is constant on fibers or owner/height/accessory debt is restored.

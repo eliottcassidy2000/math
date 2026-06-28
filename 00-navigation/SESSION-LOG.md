@@ -56,6 +56,42 @@ measurable recursive LRC14 signature sidecars.  The core guardrail is still
 the function-compression rule: theorem exit must be constant on a compressed
 fiber, or the first missing coordinate becomes an explicit sidecar/debt.
 
+## codex-2026-06-28 -- HYP-3410 Bring/Schwarz/BDH/Menger charal recursion for LRC14
+
+Owner asked for a long creative session around the Bring radical,
+Schwarz-Christoffel mappings, Barban-Davenport-Halberstam, Menger cuts, and
+recursive patterns in "charal" signatures.  Added HYP-3410/T1371/LTI-371/
+LTT-271 plus script/result/reflection, realizing the Bring/Schwarz/BDH/Menger
+slice of the HYP-3407 boundary/special-function route on an exact HYP-3406
+substrate:
+
+```text
+04-computation/lrc14_bring_sc_bdh_menger_charal_recursion_codex_20260628.py
+05-knowledge/results/lrc14_bring_sc_bdh_menger_charal_recursion_codex_20260628.out
+05-knowledge/hypotheses/HYP-3410-lrc14-bring-schwarz-bdh-menger-charal-recursion.md
+07-reflections/lrc14-bring-schwarz-bdh-menger-charal-recursion-codex-20260628.md
+```
+
+Readout: the outside theories are useful only after translation into packet
+sidecars.  Bring is a five-exit branch resolver; Schwarz-Christoffel is a
+contact-polygon turn word plus accessory owner debt; BDH is finite
+owner-channel variance; Menger is endpoint-owner cut separation; charal is
+characteristic/chiral/arc-lift recursion.  On the HYP-3406 mixed fibers, the
+height leak has one-label owner cut `5:g1`, and the persistent owner leak has
+one-label owner cut `1:g1`.  The newer `(72,20)` `10->20` frontier has
+minimum owner cut size `3`, with first cuts including
+`('11:g1','13:g1','1:g1')` and top finite-BDH variance `13:g1=49/50`.
+
+Recursive signal: `1/3/5 -> 26,40,54` are stable positive-open `+14` ladders,
+`12 -> 48,132` carries the apex-7 turn, and `13 -> 26` plus `10 -> 20` are
+petal exits.
+Tournament Analysis uses proof carriers and sidecar transformations as
+vertices, with the path
+`menger_owner_cut_recursion -> charal_recursive_signature -> bdh_channel_discrepancy_packet -> schwarz_christoffel_contact_polygon -> tropical_height_wall_backend -> bring_branch_resolvent -> raw_cross_discipline_analogy`.
+Next pull: enlarge the HYP-2963 bank and test whether every mixed
+first-failure fiber has exit-pure charal recursion, a bounded owner cut,
+finite variance separator, accessory reconstruction, or named debt.
+
 ## codex-2026-06-28 -- HYP-3405 AP-collar finite lemma certificate for LRC14
 
 Owner asked to work vigorously on the concrete finite lemma target.  Added

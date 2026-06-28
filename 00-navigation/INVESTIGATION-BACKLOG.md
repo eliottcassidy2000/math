@@ -74,6 +74,42 @@ leaks as controlled-forgetting rows; then compute recursive
 motif-transfer rankings, and Tournament Analysis over proof carriers rather
 than runners.
 
+## Lead codex-2026-06-28: Bring/Schwarz/BDH/Menger charal recursion
+
+**Status:** SYNTHESIS / exact mixed-fiber sidecar scout; not proof
+(HYP-3410/T1371/LTI-371/LTT-271).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3410-lrc14-bring-schwarz-bdh-menger-charal-recursion.md`,
+script
+`04-computation/lrc14_bring_sc_bdh_menger_charal_recursion_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_bring_sc_bdh_menger_charal_recursion_codex_20260628.out`,
+and
+`07-reflections/lrc14-bring-schwarz-bdh-menger-charal-recursion-codex-20260628.md`.
+
+Purpose: realize the Bring/Schwarz/BDH/Menger slice of the HYP-3407
+boundary/special-function route on
+the user's Bring radical, Schwarz-Christoffel, Barban-Davenport-Halberstam,
+Menger-cut, and charal-signature prompts by converting them into exact
+first-failure packet sidecars over HYP-3406, not into raw analogy.
+
+Readout: the height leak has a one-label owner cut `5:g1` and top finite-BDH
+variance `5:g1=8/9`.  The persistent owner leak has a one-label owner cut
+`1:g1`, with `1:g1`, `13:g1`, and `11:g1` the strongest finite variance
+channels.  The `(72,20)` `10->20` frontier has minimum owner cut size `3`,
+with first cuts including `('11:g1','13:g1','1:g1')` and top variance
+`13:g1=49/50`.  The `+14` ladders preserve positive-open exits for `1/3/5 ->
+26,40,54`, retain apex-bearing turns for `12 -> 48,132`, and isolate petal
+exits at `13 -> 26` and `10 -> 20`.
+
+Next: enlarge the HYP-2963 mixed-fiber bank and test the recursive owner-cut
+theorem.  Every mixed first-failure fiber should become exit-pure under charal
+recursion, split by a bounded owner cut, split by finite channel variance,
+repaired by Schwarz-Christoffel accessory owner debt, or routed to named
+owner/height/off-grid/state-lift debt.  Keep Tournament Analysis on proof
+carriers and sidecar transformations, not runners or famous-problem names.
+
 ## Lead codex-2026-06-28: AP-collar finite lemma certificate
 
 **Status:** EVIDENCE / exact finite certificate for the HYP-3401 AP-collar

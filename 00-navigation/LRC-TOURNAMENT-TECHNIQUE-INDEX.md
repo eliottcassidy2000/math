@@ -296,6 +296,12 @@ obligations, and proof-carrier interfaces.
   valuation owners, tropical wall words, Farkas/Green duals, AP/GW boundary H1
   stops, and named owner/height/off-grid debts the vertices.  The top routes
   are endpoint-owner boundary current and tropical height/discriminant wall.
+- Need to turn Bring/Schwarz-Christoffel/BDH/Menger ideas into exact
+  post-HYP-3406 proof carriers:
+  use LTT-271 after LTT-267/LTT-265 and make proof carriers plus sidecar
+  transformations the vertices.  The top path should start with Menger
+  owner-cut recursion and charal recursive signatures; Bring is only a branch
+  resolver unless owner/height/accessory debt is restored.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -7944,4 +7950,49 @@ quotient_legality_status
 - **Pointers:** HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404,
   HYP-3403, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3265,
   HYP-3124, HYP-3123, HYP-3118, HYP-2982, HYP-2963, THM-523, LTI-370, T1370,
+  OPEN-Q-108.
+
+## LTT-271: Bring/Schwarz-Christoffel/BDH/Menger Charal Recursion Tournament
+
+- **Move:** Use proof carriers and sidecar transformations as vertices:
+  Menger owner cuts, charal recursive signatures, finite-BDH owner-channel
+  discrepancy, Schwarz-Christoffel contact polygons with accessory debt,
+  tropical height walls, Bring branch resolvents, and raw analogy.
+- **LRC use:** HYP-3410 realizes the Bring/Schwarz/BDH/Menger slice adjacent
+  to the HYP-3407 boundary/special-function route over the HYP-3406 mixed
+  fibers.
+  The owner labels `5:g1` and `1:g1` are literal one-label cuts separating
+  theorem exits in the height leak and persistent owner leak.  The newer
+  `(72,20)` `10->20` frontier has minimum owner cut size `3`, with first cuts
+  such as `('11:g1','13:g1','1:g1')`; finite-BDH variance ranks `13:g1` as
+  the leading separator there.
+- **Preserves:** first-failure branch, endpoint-owner data, accessory
+  parameter debt, finite bank exactness, owner-cut separability, recursive
+  `+14` signature, and height-wall debt when the carrier explicitly retains
+  them.
+- **Forgets / guardrail:** raw cross-disciplinary analogy forgets endpoint
+  owner, channel variance, contact turns, height walls, and exact theorem
+  exits.  Bring alone is not a proof route; it only names the branch alphabet.
+- **Pairwise observable:** retained first-failure payload minus destroyed
+  sidecars.
+- **Switch/gauge:** higher weighted retained payload first; ties by fewer
+  destroyed sidecars, then declared priority.
+- **Exact fingerprint:** `vertices=7`,
+  `score_hist={-28:1, 18:1, 20:1, 35:1, 43:1, 56:1, 61:1}`,
+  `directed_3cycles=0`, `hamiltonian_path_count=1`, and priority path
+  `menger_owner_cut_recursion -> charal_recursive_signature ->
+  bdh_channel_discrepancy_packet -> schwarz_christoffel_contact_polygon ->
+  tropical_height_wall_backend -> bring_branch_resolvent ->
+  raw_cross_discipline_analogy`.
+- **Assumption challenge:** runners, residues, owner labels, polygon turns,
+  BDH channels, Menger cuts, Bring branches, deletion events, and proof
+  obligations were considered.  The quotient preserves LRC route status only
+  when theorem exit is constant on fibers or owner/height/accessory debt is
+  restored.
+- **Next hook:** enlarge the HYP-2963 mixed-fiber bank and test the recursive
+  owner-cut theorem: exit-pure charal signature, bounded owner cut,
+  finite-BDH separating owner label, accessory reconstruction, or named debt.
+- **Pointers:** HYP-3410, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402,
+  HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260,
+  HYP-3257, HYP-3124, HYP-2969, HYP-2963, THM-523, LTI-371, T1371,
   OPEN-Q-108.

@@ -46,6 +46,29 @@ purity: if theorem exits mix in a signature fiber, the first missing
 coordinate must be restored, dualized, or named as debt. -> HYP-3407,
 HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151,
 HYP-3150, HYP-3147, HYP-3143, T1368, LTI-368, LTT-268, OPEN-Q-108.
+**OPEN-Q-108 HYP-3410 Bring/Schwarz/BDH/Menger charal recursion addendum:**
+HYP-3410 realizes the Bring/Schwarz/BDH/Menger slice of the HYP-3407
+boundary/special-function route by turning
+the Bring radical, Schwarz-Christoffel, Barban-Davenport-Halberstam,
+Menger-cut, and charal-signature prompts into exact packet sidecars over the
+HYP-3406 expanded-bank leaks.  The finite readout is sharp:
+the height leak has minimum owner-label cut `('5:g1',)` and top finite-BDH
+variance `5:g1=8/9`; the persistent owner leak has minimum owner-label cut
+`('1:g1',)` with top variance labels `1:g1`, `13:g1`, and `11:g1`; the
+`(72,20)` `10->20` frontier has minimum owner cut size `3`, first cuts
+including `('11:g1','13:g1','1:g1')`, and top variance `13:g1=49/50`.
+
+Open task: enlarge the HYP-2963 first-failure bank and try to prove the
+recursive owner-cut theorem.  For every mixed theorem-exit fiber, either the
+charal signature is exit-pure under `+14` recursion, a bounded Menger owner cut
+separates exits, finite owner-channel variance produces a separating owner
+label, Schwarz-Christoffel accessory debt restores the endpoint owner, or the
+fiber routes to named owner/height/off-grid/state-lift debt.  Bring remains a
+branch alphabet until those sidecars make theorem exit a function on packet
+fibers. -> HYP-3410, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402,
+HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260,
+HYP-3257, HYP-3124, HYP-2969, HYP-2963, THM-523, T1371, LTI-371, LTT-271,
+OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3405 AP-collar finite lemma certificate addendum:**
 HYP-3405 turns the HYP-3401 AP-collar obstruction into a certificate-shaped
