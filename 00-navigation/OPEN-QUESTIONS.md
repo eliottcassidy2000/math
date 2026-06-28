@@ -59,6 +59,29 @@ as K33/H7 debt.
 HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTI-361, LTT-261,
 OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3311 actual-packet sheaf instantiation addendum:**
+HYP-3311 turns HYP-3301's toy sheaf/cusp packet into a real theorem-facing
+bank test by instantiating it on the curated HYP-2969 boundary-moment rows
+with HYP-2963 packet labels, HYP-3265 six-unit contact data, and HYP-3310
+nonunit covering sidecars.  Exact readout: the coarse actual-packet sheaf
+base `(q threshold bucket, six-unit contact profile, strict-safe zero/nonzero,
+state-lift)` has exactly one mixed theorem-exit fiber of size `7`, mixing
+four `unit-petal-named` rows with three `positive-Haar-open` covering rows.
+Adding the nonunit residue word mod `14` kills the ambiguity completely,
+while the nonunit `v2` word alone does not.  All `7` qdiv>14 rows in the
+instantiated bank remain `positive-Haar-open`, so the current sample exhibits
+no new zero-open kernel.
+
+Open task: enlarge from the curated HYP-2969 bank to a broader HYP-2963
+residual sample and find the first real residue-word failure.  That failure
+should say which HYP-3301/HYP-3310 sidecar is actually next: `v2`/height,
+endpoint owner, or off-grid-floor data.  The explicit guardrail is HYP-3260:
+same-residue height moves already exist, so bank-local residue-word exactness
+is only a finite theorem-facing separator, not a global proof. -> HYP-3311,
+HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3259,
+HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-2995, HYP-2969, HYP-2963,
+THM-523, T1361, LTI-361, LTT-261, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3257 unit equioscillation nullspace addendum:**
 HYP-3257 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.
 The six unit active gradients at `a/14`, `a in (Z/14)*`, have exact rank `3`

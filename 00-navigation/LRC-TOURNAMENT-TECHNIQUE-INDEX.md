@@ -7111,6 +7111,40 @@ quotient_legality_status
   HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, LTI-360,
   T1360, OPEN-Q-108.
 
+## LTT-261: Actual-Packet Sidecar Tournament
+
+- **Move:** Treat actual-packet sidecars as tournament vertices over the
+  instantiated HYP-3301 coarse bank.  The vertices are
+  `nonunit_residue_word`, `transfer`, `nonunit_cover_signature`,
+  `chosen_denominator`, `nonunit_v2_word`, and `coarse_sheaf_base`.
+- **LRC use:** HYP-3311 instantiates HYP-3301 on the curated HYP-2969
+  theorem-facing bank.  The coarse packet
+  `(q bucket, six-unit contact profile, strict-safe zero/nonzero,
+  state-lift)` leaves exactly one mixed theorem-exit fiber, and the
+  HYP-3310 nonunit residue word kills it completely.  The nonunit `v2` word
+  alone still leaves one mixed fiber, so the first bank-local repair is
+  residue-side, not yet height-side.
+- **Preserves:** actual theorem-exit kernel flags, the coarse sheaf packet,
+  and one declared covering-layer sidecar.
+- **Forgets / guardrail:** bank-local separation is not a global proof
+  invariant; HYP-3260/HYP-3310 already warn that same-residue height moves can
+  escape residue-only data outside this bounded sample.
+- **Pairwise observable:** how many theorem-exit kernel collisions survive
+  after adjoining the sidecar to the coarse actual-packet sheaf base.
+- **Switch/gauge:** fewer mixed fibers first, then fewer lost structural
+  coordinates, then smaller payload.
+- **Exact fingerprint:** `directed_3cycles=0`,
+  `hamiltonian_path_count=1`, priority path
+  `nonunit_residue_word -> transfer -> nonunit_cover_signature ->
+  chosen_denominator -> nonunit_v2_word -> coarse_sheaf_base`.
+- **Next hook:** push the same tournament to a larger HYP-2963 residual bank
+  and record the first sidecar failure.  If residue word stops separating,
+  the first new SCC should identify whether the missing repair is `v2`/height,
+  endpoint owner, or off-grid-floor data.
+- **Pointers:** HYP-3311, HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265,
+  HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-2995,
+  HYP-2969, HYP-2963, THM-523, LTI-361, T1361, OPEN-Q-108.
+
 ## LTT-255: Equioscillation Contact-Graph Tournament
 
 - **Move:** Treat the six AP unit contacts as a proof-carrier graph.  Vertices

@@ -1,0 +1,50 @@
+HYP-3311 actual-packet sheaf instantiation
+==============================================================================
+bank=HYP-2969 curated theorem-facing packet bank
+rows=31
+kernel_flag_hist={'q-witness-discharge': 12, 'AP/GW-zero-open-equality': 2, 'unit-petal-named': 4, 'named-K33-state-lift': 3, 'positive-Haar-open': 10}
+route_hist={'Q-WITNESS': 12, 'BOUNDARY-AP-GW': 2, 'BOUNDARY-PETAL-SPORADIC': 4, 'K33-STATE-LIFT': 3, 'COVERING-MOMENT': 10}
+
+CONTROLLED-FORGETTING FIBER COUNTS
+  coarse_base                  fibers= 6 mixed_kernel_fibers=1 max_target_width=2
+  coarse_plus_denominator      fibers= 9 mixed_kernel_fibers=1 max_target_width=2
+  coarse_plus_v2_word          fibers=24 mixed_kernel_fibers=1 max_target_width=2
+  coarse_plus_residue_word     fibers=25 mixed_kernel_fibers=0 max_target_width=1
+  coarse_plus_cover_signature  fibers=29 mixed_kernel_fibers=0 max_target_width=1
+  coarse_plus_transfer         fibers=25 mixed_kernel_fibers=0 max_target_width=1
+
+COARSE MIXED FIBER
+  coarse_key=('eq14', (0, 6, 0), False, False)
+  names=['drop6 fattening core add180', 'floor-odd GW iso impostor', 'magnitude liar 12->96', 'P10+GW', 'petal 10->20', 'petal 13->26', 'unit petal splice drop(10,13)->add(20,26)']
+  per-row sidecars:
+    positive-Haar-open       drop6 fattening core add180 residue_word=(2, 4, 7, 8, 10, 12, 12) v2_word=(0, 1, 1, 2, 2, 2, 3) cover_sig=((2, 1), (4, 2), (7, 0), (8, 3), (10, 1), (12, 2), (12, 2))
+    positive-Haar-open       floor-odd GW iso impostor residue_word=(2, 4, 6, 7, 8, 10, 10) v2_word=(0, 1, 1, 1, 2, 3, 3) cover_sig=((2, 1), (4, 2), (6, 1), (7, 0), (8, 3), (10, 1), (10, 3))
+    positive-Haar-open       magnitude liar 12->96 residue_word=(2, 4, 6, 7, 8, 10, 12) v2_word=(0, 1, 1, 1, 2, 3, 5) cover_sig=((2, 1), (4, 2), (6, 1), (7, 0), (8, 3), (10, 1), (12, 5))
+    unit-petal-named         P10+GW residue_word=(2, 4, 6, 6, 7, 8, 10) v2_word=(0, 1, 1, 2, 2, 3, 3) cover_sig=((2, 1), (4, 2), (6, 1), (6, 2), (7, 0), (8, 3), (10, 3))
+    unit-petal-named         petal 10->20 residue_word=(2, 4, 6, 6, 7, 8, 12) v2_word=(0, 1, 1, 2, 2, 2, 3) cover_sig=((2, 1), (4, 2), (6, 1), (6, 2), (7, 0), (8, 3), (12, 2))
+    unit-petal-named         petal 13->26 residue_word=(2, 4, 6, 7, 8, 10, 12, 12) v2_word=(0, 1, 1, 1, 1, 2, 2, 3) cover_sig=((2, 1), (4, 2), (6, 1), (7, 0), (8, 3), (10, 1), (12, 1), (12, 2))
+    unit-petal-named         unit petal splice drop(10,13)->add(20,26) residue_word=(2, 4, 6, 6, 7, 8, 12, 12) v2_word=(0, 1, 1, 1, 2, 2, 2, 3) cover_sig=((2, 1), (4, 2), (6, 1), (6, 2), (7, 0), (8, 3), (12, 1), (12, 2))
+
+qdiv>14 COVERING ROWS
+  count=7
+  kernel_flags={'positive-Haar-open': 7}
+   q=15 AP repair drop13 add182      kernel=positive-Haar-open unit_profile=(6, 0, 0) residue_word=(0, 2, 4, 6, 7, 8, 10, 12)
+   q=15 divisor-loaded tail 84       kernel=positive-Haar-open unit_profile=(6, 0, 0) residue_word=(0, 2, 4, 6, 7, 8, 10)
+   q=15 divisor-loaded tail 84*2     kernel=positive-Haar-open unit_profile=(6, 0, 0) residue_word=(0, 2, 4, 6, 7, 8, 10)
+   q=15 divisor-loaded tail 84*3     kernel=positive-Haar-open unit_profile=(6, 0, 0) residue_word=(0, 2, 4, 6, 7, 8, 10)
+   q=15 divisor-loaded tail 84*4     kernel=positive-Haar-open unit_profile=(6, 0, 0) residue_word=(0, 2, 4, 6, 7, 8, 10)
+   q=16 divisor-loaded tail 84*5     kernel=positive-Haar-open unit_profile=(6, 0, 0) residue_word=(0, 2, 4, 6, 7, 8, 10)
+   q=16 drop6 fattening core add210  kernel=positive-Haar-open unit_profile=(6, 0, 0) residue_word=(0, 2, 4, 7, 8, 10, 12)
+
+TOURNAMENT ANALYSIS
+  vertices=actual-packet sidecars over the HYP-3301 coarse base
+  pairwise_observable=how many theorem-exit kernel collisions survive after adjoining the carrier
+  switch/gauge=fewer mixed fibers first, then fewer lost structural coordinates, then smaller payload
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  priority_path=nonunit_residue_word -> transfer -> nonunit_cover_signature -> chosen_denominator -> nonunit_v2_word -> coarse_sheaf_base
+  readout=the first real coarse-bank ambiguity is killed by the nonunit residue word; v2 data alone is weaker on this bank, and full cover signature is redundant here.
+
+CONCLUSION
+  On the curated HYP-2969 bank, HYP-3301's coarse actual-packet sheaf base has 1 mixed theorem-exit fiber.  Adding the HYP-3310 nonunit residue word kills that ambiguity (0 mixed fibers), while the nonunit v2 word alone leaves 1 mixed fiber.
+  Interpretation: the first actual-packet obstruction currently visible is a finite nonunit residue-word sidecar on the covering layer, not a new qdiv>14 zero-open kernel.  Caveat: HYP-3260/HYP-3310 still warn that same-residue height moves exist outside this bounded bank, so residue-word exactness is bank-local evidence, not a global proof.
