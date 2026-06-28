@@ -1,0 +1,11 @@
+VITALI WALL: BULK (positive measure) vs CORE (measure-zero, cyclotomic construction)
+  AP {1..13} CORE: meas{S>1/14} = 0.00000
+  generic BULK: meas{S>1/14} = 0.13574
+  AP closed witnesses t=a/14 (S>=1/14): a in [1, 3, 5, 9, 11, 13]
+  units mod 14 (= primitive 14th roots = Phi_14): [1, 3, 5, 9, 11, 13]   MATCH: True
+  EQUIOSCILLATION at t=1/14: runners at EXACTLY 1/14 = [1, 13] (= +-1 mod 14, the Brouwer max-min saddle)
+
+=> CORE witnesses = Phi_14 (units mod 14); equioscillation = Phi_7 de Moivre saddle (kps).
+   measure is BLIND at the core (meas=0); the cyclotomic construction (my S75d/e) is the core proof half.
+   PROOF SKELETON: LRC(14) = [BULK measure>0 (circle-method/equidist, S74)] (+) [CORE cyclotomic Phi_14
+   witnesses + Phi_7 equioscillation (S75d/e), Vitali=boundary, Brouwer/EVT=saddle attained].

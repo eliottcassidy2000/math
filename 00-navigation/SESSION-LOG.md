@@ -21,6 +21,26 @@ keep working toward a proof. HYP-3219:
   its FIXED sign topologically (Brouwer/degree=cyclotomic trace) + magnitude by SOS = a two-factor certificate.
 
 => HYP-3219; reflection brouwer-is-the-sign-the-cubic-obstruction-factors-into-degree-times-SOS-kps.md.
+## mac-mini-2026-06-28-S75f -- the VITALI WALL + BROUWER equioscillation: measure=bulk, cyclotomic construction=core; my cyclotomic work IS the core side
+
+Owner: see things as functions/information; let Brouwer's fixed-point + Vitali inspire; explore for proof gems.
+HYP-3237 + reflection the-vitali-wall-brouwer-equioscillation + script lrc_vitali_core_brouwer_macmini_S75.py.
+
+FUNCTION/INFO lens: the safety S(t)=min_i ||s_i t||, M=max_t S, LRC(14)=[M>=1/14]. Measure (circle-method) is
+info-rich on the bulk but carries ZERO info at a measure-zero max (can't tell empty from measure-zero-nonempty;
+the Vitali phenomenon). VITALI WALL (oracle S551o + VERIFIED): proof splits BULK (positive measure: generic
+meas{S>1/14}=0.136, circle-method/equidist works) (+) CORE (measure-ZERO: AP open-lonely meas=0, measure BLIND).
+**THE CORE WITNESSES ARE EXACTLY Phi_14:** for the AP, closed witnesses t=a/14 with S>=1/14 <=> a in {1,3,5,9,11,13}
+= units mod 14 = primitive 14th roots = Phi_14 (phi(14)=6). BROUWER/EVT: max_t S attained; at the core it
+EQUIOSCILLATES -- runners +-1 at exactly 1/14 = the max-min SADDLE = kps's Phi_7 de Moivre/Chebyshev equioscillation.
+
+GEM: my cyclotomic work IS the Vitali-CONSTRUCTION side -- S75d Phi_14 = the core witnesses; S75e cap in Q(cos2pi/7)
+/ Phi_7 = the equioscillation; S75b three-gap = the witness algorithm. PROOF SKELETON: LRC(14) = [BULK measure>0
+(S74 equidist)] (+) [CORE cyclotomic Phi_14 witnesses + Phi_7 equioscillation (S75d/e), Vitali=boundary,
+Brouwer=saddle]. INFO CONSERVED across the wall: measure-info -> 0 exactly as cyclotomic-arithmetic-info turns on
+(conductor 7^2 only in the core/binding rows). EXPLORE: Brouwer degree/index could TOPOLOGICALLY force a core
+witness (the construction analogue of the measure bound). NOT a proof; pins the proof ARCHITECTURE to the Vitali
+wall and places my cyclotomic program as the measure-blind core half.
 
 ## mac-mini-2026-06-28-S75e -- the cap is a totally-real CYCLOTOMIC quantity in Q(cos 2pi/7); magic fn = the cyclotomic SQUARE; apex hardness = the 7^2-conductor; n=14's TWO cyclotomic heads
 
