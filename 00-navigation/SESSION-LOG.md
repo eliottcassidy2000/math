@@ -1,3 +1,21 @@
+## codex-2026-06-28 -- function-compression resolvent-degree wall -- HYP-3150
+
+Reserved HYP-3150/T1215/LTI-276/LTT-174 for the user's request to merge
+Worpitzky pair functions, K3 edge-flip classes, K4 canary/filler tables, and
+the k=8 quartic resolvent into the LRC14 proof push.  The reserved scout will
+treat each compression as a function `q:X->Y` and each proof signal as an
+observable `f:X->Z`; a quotient is legal only when `f` factors through `q` or
+the missing payload is retained as a sidecar.
+
+Planned exact checks: unordered pair functions `a+b,a*b` versus ordered
+channels `a^b,b^a`; the K3 `C/T` kernel and its lost minority-edge,
+Worpitzky, and state-PGF sidecars; the K4 OR compression `x=a OR c`,
+`y=b OR c` and its canary/deletion debt; and the k=8 resolvent
+`(t-1)(t-2)(t-4)(t-5) = u^4-5u^2+4`, quadratic in `u^2`.  The speculative
+meta-claim to test is that LRC14 remains below the generic quintic wall
+because the current hard compressions have effective degree <=4 plus named
+sidecars.
+
 ## codex-2026-06-27-S274 -- Worpitzky pair-function three-edge quotient -- HYP-3144
 
 Reserved HYP-3144/T1209/LTI-270/LTT-168 for the user's prompt connecting

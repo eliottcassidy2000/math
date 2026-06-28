@@ -15,6 +15,32 @@
 
 ---
 
+## Lead codex-2026-06-28: Function-compression resolvent-degree wall
+
+**Status:** RESERVED / executable factor-through scout pending; not proof
+(HYP-3150/T1215).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3150-lrc14-function-compression-resolvent-degree-wall.md`,
+`04-computation/lrc14_function_compression_resolvent_wall_codex_20260628.py`,
+and `05-knowledge/results/lrc14_function_compression_resolvent_wall_codex_20260628.out`.
+
+Goal: turn the user's Worpitzky/function/K3/K4/resolvent prompt into a
+general quotient-legality test.  For every compression `q:X->Y` and
+observable `f:X->Z`, ask whether `f` factors through `q`; if not, name the
+sidecar.  Initial exact checks: unordered pair functions versus ordered
+exponentials, K3 `C/T` kernel versus minority-edge/Worpitzky/PGF sidecars,
+K4 fixed-path cube versus `x=a OR c`, `y=b OR c`, and the k=8 quartic
+resolvent versus the even `v=u^2` fold.
+
+Working hypothesis: the LRC14 hard core remains below the generic quintic
+wall because every current compression has effective degree at most `4`, with
+the deepest k=8 node reducing to a quadratic in `u^2` after sidecars are
+accounted for.  Guardrail: do not use the Abel-Ruffini phrase as proof;
+verify exact factor-through maps and named destroyed coordinates.
+
+Namespace: HYP-3150 / LTI-276 / LTT-174 / T1215 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S274: Worpitzky pair-function three-edge quotient
 
 **Status:** EVIDENCE / exact K3 quotient scout; not proof
