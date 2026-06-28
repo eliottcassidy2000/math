@@ -30224,3 +30224,53 @@ variance/total-covariance extremality and rules out entropy as the main
 functional.  HYP-3199 remains the n=4 exact-chart input: any covariance packet
 using the compression hierarchy should still retain `S`-fiber multiplicity,
 canary/deletion status, and quotient-congruence debt.
+
+## codex-2026-06-28 -- Green-current conductance graph scout -- HYP-3227
+
+Pulled the incoming HYP-3223/HYP-3224 Green-current and spectral payload-cube
+work into an executable continuation.  Added
+`04-computation/lrc_k8_green_current_conductance_graphs_codex_20260628.py`,
+stored
+`05-knowledge/results/lrc_k8_green_current_conductance_graphs_codex_20260628.out`,
+created
+`05-knowledge/hypotheses/HYP-3227-lrc14-green-current-conductance-graphs-algebraic-connectivity.md`,
+and wrote
+`07-reflections/lrc14-green-current-conductance-graphs-codex-20260628.md`.
+
+The scout runs the exact anchored bounded k=8 bank (`3432` rows) and reads the
+empty-sector covariance matrix in two electrical ways: positive covariance as
+sector conductance, and `C_E^{-1}` as a grounded Green precision graph.  AP
+and the doubled AP dilation have no beaters for all-ones Green energy,
+positive-covariance total weight/lambda2/min-degree/Kirchhoff, precision
+lambda2/Kirchhoff, and precision killing.  Guardrail: precision M-matrix
+defect has `181` primitive beaters, so the inverse-Green graph must carry a
+named defect sidecar rather than become a terminal scalar proof.
+
+Main new proof object: the trap-discharge conductance graph on the `11` non-AP
+HYP-3202 exchange traps plus HYP-3205/HYP-3224 certificate coordinates.  It is
+connected with all coordinates (`lambda2=2.719948208`), remains connected
+after deleting Toeplitz (`lambda2=2.537866286`), and remains connected using
+only Green-current coordinates (`lambda2=1.208613477`).  The Fiedler-positive
+defect island is
+`(0,2,4,6,7,8,10,12)`, `(0,1,2,3,7,8,9,10)`,
+`(0,2,5,7,9,10,12,14)`, and `(0,1,4,5,7,8,11,12)`, now the first finite
+Schur-complement/M-matrix-defect subcase.
+
+Updated `05-knowledge/hypotheses/INDEX.md`, `05-knowledge/results/INDEX.md`,
+`00-navigation/TANGENTS.md` with T1325, `00-navigation/LRC-TECHNIQUE-INDEX.md`
+with LTI-325, `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` with LTT-225,
+and `00-navigation/OPEN-QUESTIONS.md` with the Green-current trap-discharge
+OPEN-Q-108 addendum.
+
+Push-time rebase integration: origin/main claimed HYP-3225 for a local
+Green-current / Lorentzian trap-fingerprint scout and HYP-3226 for the
+small-pattern motif atlas while this work was local.  This packet was
+renumbered to HYP-3227.  The split is now: HYP-3225 classifies the local
+trap-neighborhood sidecar types, HYP-3226 will ingest them as motif atoms, and
+HYP-3227 supplies the full-bank conductance graph / algebraic-connectivity
+extension.
+
+Second push-time rebase integration: incoming HYP-3214 identifies the
+cyclotomic Delsarte/Beurling-Selberg magic function with the Fejer kernel
+`F_7`.  HYP-3227 now records this as the likely global dual to test against
+the Green-only trap graph weights and the precision-defect island.

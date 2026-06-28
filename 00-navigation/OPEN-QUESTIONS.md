@@ -5225,3 +5225,55 @@ these typed exits or is routed to AP/GW/F7/THM-572 named debt. -> HYP-3119,
 HYP-3118, HYP-3117, HYP-3116, HYP-3115, HYP-3114, HYP-3113, HYP-3112, HYP-3111, HYP-3107, HYP-3098,
 HYP-3083, HYP-3073, HYP-3056, HYP-2108, HYP-2112, HYP-2470, HYP-2471,
 HYP-2480, LTI-256, LTT-154, T1195, OPEN-Q-108.
+
+## OPEN-Q-108 addendum (codex-2026-06-28): Green-current conductance graph trap discharge
+
+HYP-3227 executes the full-bank conductance-graph part of the HYP-3223
+Green-current proposal against the current HYP-3205/HYP-3224 k=8 certificate
+bank, complementing HYP-3225's local Green/Lorentzian trap-fingerprint scout.
+The sector conductance graphs are
+strong enough to be retained: AP/consec and doubled AP have no beaters for
+all-ones Green energy, positive-covariance graph total weight/lambda2/
+min-degree/Kirchhoff, precision lambda2/Kirchhoff, and precision killing.
+The precision M-matrix defect is the guardrail (`181` primitive beaters), so
+`C_E^{-1}` cannot be used as a config-blind scalar proof.
+
+The new OPEN-Q-108 target is finite trap discharge by conductance graph.  Add
+fields:
+
+```text
+positive_covariance_conductance_graph
+cov_positive_lambda2
+cov_positive_kirchhoff
+negative_covariance_debt
+green_precision_graph
+precision_lambda2
+precision_kirchhoff
+precision_killing_abs
+precision_mmatrix_defect
+trap_discharge_graph_lambda2
+toeplitz_deleted_connectivity_status
+green_only_trap_connectivity_status
+fiedler_defect_island
+schur_complement_trap_exit
+terminal_conductance_discharge_or_named_debt
+```
+
+The exact finite readout is promising: the trap/certificate graph remains
+connected after deleting Toeplitz (`lambda2=2.537866286`) and remains
+connected using only Green-current coordinates (`lambda2=1.208613477`).  The
+first named finite subcase is the Fiedler-positive defect island:
+
+```text
+(0,2,4,6,7,8,10,12)
+(0,1,2,3,7,8,9,10)
+(0,2,5,7,9,10,12,14)
+(0,1,4,5,7,8,11,12)
+```
+
+New proof obligation: show legal exchange moves are Schur-complement or
+star-mesh edits of the Green precision graph, then prove every non-AP exchange
+trap has positive conductance to a retained HYP-3205/HYP-3224 certificate
+coordinate after deleting any nonessential scalar coordinate. -> HYP-3227,
+HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3205, HYP-3202, LTI-325, LTT-225, T1325,
+OPEN-Q-108.

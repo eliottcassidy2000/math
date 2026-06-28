@@ -10,6 +10,7 @@ script: 04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py
 result: 05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out
 reflection: 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md
 related:
+  - HYP-3227
   - HYP-3225
   - HYP-3224
   - HYP-3223
@@ -46,6 +47,7 @@ HYP-3202 finite exchange traps
 HYP-3222 Hermite-Biehler / Perron gluing sidecar
 HYP-3223 Green-current / Lorentzian trap classifiers
 HYP-3225 Green-current / Lorentzian trap fingerprints
+HYP-3227 conductance graph / Fiedler defect island
 ```
 
 ## Reserved Method

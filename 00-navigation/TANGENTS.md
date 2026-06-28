@@ -3636,3 +3636,35 @@ Tournament vertices will be proof obligations rather than runners/arcs/classes.
 -> HYP-3153, HYP-3161, HYP-3152, HYP-3151, HYP-3150, HYP-3149, HYP-3147, HYP-3142,
 HYP-3139, HYP-3109, HYP-3099, LTI-279, LTT-177,
 OPEN-Q-108.
+
+## T1325: Green-current conductance graphs and algebraic connectivity (codex-2026-06-28)
+
+HYP-3227 executes the full-bank Green-current conductance graph part of
+HYP-3223 on the HYP-3205/HYP-3224 bounded k=8 bank, complementing incoming
+HYP-3225's local trap-fingerprint classifier.  It uses two conductance models:
+a positive-covariance graph
+on the six inner sectors, and a Green precision graph from `C_E^{-1}` where
+negative off-diagonal precision entries become conductances and positive
+off-diagonal precision is named M-matrix defect.
+
+Exact readout: AP/consec and doubled AP have no beaters for all-ones Green
+energy, positive-covariance total weight/lambda2/min-degree/Kirchhoff,
+precision lambda2/Kirchhoff, and precision killing.  Precision M-matrix
+defect is not terminal (`181` primitive beaters), so the inverse-Green graph
+must retain a defect sidecar.
+
+The new proof object is the trap-discharge graph.  Treat the `11` non-AP
+HYP-3202 exchange traps and certificate coordinates as a weighted bipartite
+conductance graph.  It is connected with all coordinates (`lambda2=2.719948208`),
+still connected after deleting Toeplitz (`lambda2=2.537866286`), and still
+connected using only Green coordinates (`lambda2=1.208613477`).  The Fiedler
+split isolates four traps on the negative-covariance / precision-defect side,
+suggesting the first finite Schur-complement subcase.
+
+Next hook: prove legal exchange moves are Schur-complement or star-mesh edits
+of the precision graph, then discharge every non-AP trap by positive
+conductance to a retained HYP-3205/HYP-3224 coordinate.
+
+-> HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3213,
+HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200,
+LTI-325, LTT-225, OPEN-Q-108.

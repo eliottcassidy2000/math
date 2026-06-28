@@ -4470,3 +4470,85 @@ Pointers: HYP-3223, HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210,
 HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
 HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3139, HYP-3138, HYP-3132,
 THM-577, LTI-323, LTT-223, T1323, OPEN-Q-108.
+
+## LTI-325: Green-Current Conductance Graphs / Algebraic Connectivity
+
+Used by codex-2026-06-28 for HYP-3227/T1325.  This technique executes the
+full-bank conductance-graph part of the HYP-3223 Green-current proposal and
+plugs it into the HYP-3224 normal-fan certificate, complementing HYP-3225's
+local Green/Lorentzian trap-fingerprint classifier.
+
+Core models:
+
+```text
+positive_covariance_sector_graph:
+  vertices = six nonzero sectors
+  edge conductance = max(0, Cov(empty_i, empty_j))
+  negative covariance = sidecar debt
+
+Green_precision_graph:
+  C_E = empty-sector covariance Green kernel
+  Q_E = C_E^{-1}
+  edge conductance = max(0, -Q_E[i,j])
+  positive off-diagonal Q_E = M-matrix defect
+
+trap_discharge_conductance_graph:
+  vertices = non-AP exchange traps plus certificate coordinates
+  edge conductance = normalized coordinate deficit
+  algebraic connectivity = finite trap debt connectedness
+```
+
+Exact bounded-bank readout: AP/consec and doubled AP have no beaters for
+all-ones Green energy, positive-covariance total weight/lambda2/min-degree/
+Kirchhoff, precision lambda2/Kirchhoff, and precision killing.  Guardrail:
+precision M-matrix defect has `181` primitive beaters, so inverse-Green
+conductance is not a terminal scalar.
+
+Trap graph readout:
+
+```text
+all coordinates: lambda2 = 2.719948208
+without Toeplitz: lambda2 = 2.537866286
+Green-only: lambda2 = 1.208613477
+```
+
+Preserves: k=8 AP coverage/covariance predicate, HYP-3202 trap identity,
+covariance layer payload, AP support direction, Toeplitz/normal-fan
+coordinates, effective-resistance profiles, precision leakage, and finite
+discharge/debt.
+
+Destroys if scalarized: raw residue-conductance monotonicity, literal runner
+identity, and the distinction between capacity coordinates and M-matrix
+defect coordinates.
+
+Packet fields:
+
+```text
+positive_covariance_conductance_graph
+cov_positive_lambda2
+cov_positive_kirchhoff
+cov_effective_resistance_profile
+negative_covariance_debt
+green_precision_graph
+precision_lambda2
+precision_kirchhoff
+precision_killing_abs
+precision_mmatrix_defect
+trap_discharge_graph_lambda2
+toeplitz_deleted_connectivity_status
+green_only_trap_connectivity_status
+fiedler_defect_island
+schur_complement_trap_exit
+terminal_conductance_discharge_or_named_debt
+```
+
+Next hook: prove exchange moves are Schur-complement/star-mesh edits of
+`C_E^{-1}` and that every non-AP exchange trap has positive conductance to a
+retained HYP-3205/HYP-3224 certificate coordinate, even after deleting any
+nonessential coordinate.  Then test whether the HYP-3214 Fejer/Delsarte magic
+function slack dominates the Green-only trap weights.
+
+Pointers: HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222,
+HYP-3221, HYP-3214, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
+HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, THM-577,
+LTI-325, LTT-225, T1325, OPEN-Q-108.

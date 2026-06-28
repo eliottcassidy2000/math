@@ -10,6 +10,7 @@ script: 04-computation/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.p
 result: 05-knowledge/results/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.out
 reflection: 07-reflections/lrc14-green-lorentzian-trap-fingerprints-codex-20260628.md
 related:
+  - HYP-3227
   - HYP-3224
   - HYP-3223
   - HYP-3222
@@ -183,6 +184,12 @@ motif table should treat the five HYP-3225 trap classes as typed payload
 atoms, not as free-standing numerology.  In particular, `11/12` trap counts
 are useful only when attached to Toeplitz discharge plus Green/Rayleigh/
 Plucker repair sidecars.
+
+Post-rebase integration: HYP-3227 extends this local trap-neighborhood audit
+to the full anchored bounded k=8 bank and builds trap/certificate conductance
+graphs.  The two packets should be read together: HYP-3225 names the residual
+trap types, while HYP-3227 shows the trap/certificate graph remains connected
+without Toeplitz and even with Green-only coordinates.
 
 ## Tournament Analysis
 

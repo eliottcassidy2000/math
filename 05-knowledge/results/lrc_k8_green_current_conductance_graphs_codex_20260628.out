@@ -1,0 +1,188 @@
+HYP-3227 Green-current conductance graph scout
+==============================================================================
+bank=anchored bounded k=8: E={0} union A, A subset [1,14], |A|=7
+rows_all=3432 rows_primitive=3431
+consec=(0, 1, 2, 3, 4, 5, 6, 7)
+even_AP=(0, 2, 4, 6, 8, 10, 12, 14) primitive=False
+green_reading=Covariance matrix C is a grounded Green kernel; C^{-1} supplies conductances.
+guardrail=old raw residue conductance routes were refuted, so scalar ranks are sidecars only.
+SECTOR / GREEN-CONDUCTANCE SCALAR RANKS AGAINST CONSEC
+all_ones_green_energy_MAX:
+  consec_rank=0 beaters=0 ties=2 primitive_beaters=0 primitive_ties=1 even_AP_rank=0
+  consec_value=+2.611956129391
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9)]
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 3, 4, 5, 6, 7, 8, 9), (0, 2, 4, 6, 7, 8, 10, 12)]
+cov_positive_total_weight_MAX:
+  consec_rank=0 beaters=0 ties=2 primitive_beaters=0 primitive_ties=1 even_AP_rank=0
+  consec_value=+0.721622819196
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 2, 3, 4, 5, 6, 9)]
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 2, 3, 4, 5, 6, 9), (0, 1, 2, 3, 4, 5, 6, 12), (0, 2, 4, 6, 7, 8, 10, 12)]
+cov_positive_lambda2_MAX:
+  consec_rank=0 beaters=0 ties=2 primitive_beaters=0 primitive_ties=1 even_AP_rank=0
+  consec_value=+0.192033074001
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 3, 4, 5, 6, 7, 8, 9), (0, 1, 3, 4, 5, 6, 7, 9)]
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 3, 4, 5, 6, 7, 8, 9), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 5, 7, 9, 11, 13)]
+cov_positive_min_degree_MAX:
+  consec_rank=0 beaters=0 ties=2 primitive_beaters=0 primitive_ties=1 even_AP_rank=0
+  consec_value=+0.176504234347
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 3, 4, 6, 7, 8, 12)]
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 3, 4, 6, 7, 8, 12), (0, 3, 4, 5, 6, 7, 8, 9), (0, 2, 4, 6, 7, 8, 10, 12)]
+cov_positive_kirchhoff_MIN:
+  consec_rank=0 beaters=0 ties=2 primitive_beaters=0 primitive_ties=1 even_AP_rank=0
+  consec_value=+108.654718079151
+  top_rows=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 8, 10, 12, 14), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9)]
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 6, 7, 8, 10, 12), (0, 3, 4, 5, 6, 7, 8, 9)]
+negative_covariance_debt_MIN:
+  consec_rank=0 beaters=0 ties=20 primitive_beaters=0 primitive_ties=19 even_AP_rank=0
+  consec_value=+0.000000000000
+  top_rows=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 1, 2, 3, 4, 5, 7, 13), (0, 1, 2, 4, 5, 6, 7, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 1, 3, 5, 7, 9, 11, 13)]
+  top5_non_AP_orbit=[(0, 1, 2, 3, 4, 5, 7, 13), (0, 1, 2, 4, 5, 6, 7, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 1, 3, 5, 7, 9, 11, 13), (0, 1, 5, 6, 7, 9, 10, 11)]
+precision_lambda2_MAX:
+  consec_rank=0 beaters=0 ties=2 primitive_beaters=0 primitive_ties=1 even_AP_rank=0
+  consec_value=+2.599903805963
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 3, 4, 6, 7, 8, 12), (0, 1, 2, 3, 4, 5, 6, 12)]
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 3, 4, 6, 7, 8, 12), (0, 1, 2, 3, 4, 5, 6, 12), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 4, 5, 6, 7, 9)]
+precision_min_degree_MAX:
+  consec_rank=3 beaters=3 ties=2 primitive_beaters=3 primitive_ties=1 even_AP_rank=3
+  consec_value=+2.581711750707
+  top_rows=[(0, 2, 3, 4, 6, 7, 8, 12), (0, 1, 2, 3, 4, 6, 7, 12), (0, 1, 2, 3, 4, 5, 6, 12), (0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7)]
+  top5_non_AP_orbit=[(0, 2, 3, 4, 6, 7, 8, 12), (0, 1, 2, 3, 4, 6, 7, 12), (0, 1, 2, 3, 4, 5, 6, 12), (0, 1, 2, 3, 4, 6, 8, 12), (0, 2, 3, 4, 5, 6, 7, 8)]
+precision_kirchhoff_MIN:
+  consec_rank=0 beaters=0 ties=2 primitive_beaters=0 primitive_ties=1 even_AP_rank=0
+  consec_value=+6.605115167554
+  top_rows=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 12), (0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 3, 4, 6, 7, 8, 12)]
+  top5_non_AP_orbit=[(0, 1, 2, 3, 4, 5, 6, 12), (0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 3, 4, 6, 7, 8, 12), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 2, 3, 4, 6, 7, 12)]
+precision_mmatrix_defect_MIN:
+  consec_rank=181 beaters=181 ties=2 primitive_beaters=181 primitive_ties=1 even_AP_rank=181
+  consec_value=+0.611043393693
+  top_rows=[(0, 1, 5, 6, 7, 9, 10, 11), (0, 3, 4, 5, 6, 7, 8, 9), (0, 4, 5, 6, 7, 8, 9, 10), (0, 4, 6, 7, 8, 9, 10, 12), (0, 4, 6, 8, 9, 10, 12, 14)]
+  top5_non_AP_orbit=[(0, 1, 5, 6, 7, 9, 10, 11), (0, 3, 4, 5, 6, 7, 8, 9), (0, 4, 5, 6, 7, 8, 9, 10), (0, 4, 6, 7, 8, 9, 10, 12), (0, 4, 6, 8, 9, 10, 12, 14)]
+precision_killing_abs_MIN:
+  consec_rank=0 beaters=0 ties=2 primitive_beaters=0 primitive_ties=1 even_AP_rank=0
+  consec_value=+13.895458003620
+  top_rows=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 8, 10, 12, 14), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9)]
+  top5_non_AP_orbit=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 3, 4, 5, 6, 7, 8, 9), (0, 2, 4, 6, 7, 8, 10, 12)]
+
+CONSEC GREEN-CURRENT PAYLOAD
+  Sigma_kappa2=6237419/8643600 (+0.721622819196)
+  all_ones_green_energy=+2.611956129391
+  negative_covariance_debt=+0.000000000000
+  cov_positive_lambda2=+0.192033074001
+  cov_positive_kirchhoff=+108.654718079151
+  cov_avg_resistance={1: 6.710085829826262, 2: 7.345147613359275, 3: 7.675710172644753}
+  precision_lambda2=+2.599903805963
+  precision_kirchhoff=+6.605115167554
+  precision_mmatrix_defect=+0.611043393693
+  precision_killing_abs=+13.895458003620
+  precision_avg_resistance={1: 0.38655089600248926, 2: 0.43759342043220595, 3: 0.4968787170761943}
+
+HYP-3202 EXCHANGE TRAPS AS CONDUCTANCE NETWORKS
+  trap_count=12 including consec
+  E=(0, 1, 2, 3, 4, 5, 6, 7) sk2=+0.721622819 neg_pairs=0 cov_lam2=+0.192033074 cov_Kf=+108.654718 prec_lam2=+2.599903806 prec_Kf=+6.605115 Mdef=+0.611043 Toep_gap=+0.000000000
+  E=(0, 2, 4, 6, 7, 8, 10, 12) sk2=+0.458813139 neg_pairs=1 cov_lam2=+0.113820536 cov_Kf=+173.325358 prec_lam2=+2.183066070 prec_Kf=+8.239981 Mdef=+1.238791 Toep_gap=+0.145804393
+  E=(0, 1, 3, 5, 7, 9, 11, 13) sk2=+0.413610028 neg_pairs=0 cov_lam2=+0.110831526 cov_Kf=+195.383171 prec_lam2=+1.408100199 prec_Kf=+12.567240 Mdef=+0.024794 Toep_gap=+0.113935348
+  E=(0, 1, 2, 3, 11, 12, 13, 14) sk2=+0.370230699 neg_pairs=1 cov_lam2=+0.039870795 cov_Kf=+286.301605 prec_lam2=+0.701337648 prec_Kf=+17.137578 Mdef=+0.303763 Toep_gap=+0.192735374
+  E=(0, 3, 6, 8, 9, 11, 12, 14) sk2=+0.339535614 neg_pairs=3 cov_lam2=+0.040216162 cov_Kf=+287.739579 prec_lam2=+0.891059134 prec_Kf=+14.616845 Mdef=+0.841977 Toep_gap=+0.249129739
+  E=(0, 2, 3, 5, 6, 8, 11, 14) sk2=+0.337119364 neg_pairs=1 cov_lam2=+0.020764193 cov_Kf=+442.169829 prec_lam2=+0.385521215 prec_Kf=+24.947132 Mdef=+0.139049 Toep_gap=+0.198459737
+  E=(0, 6, 7, 8, 9, 10, 11, 12) sk2=+0.328691985 neg_pairs=0 cov_lam2=+0.091718774 cov_Kf=+240.297735 prec_lam2=+1.536695936 prec_Kf=+13.440043 Mdef=+0.227432 Toep_gap=+0.226731428
+  E=(0, 4, 5, 8, 9, 10, 13, 14) sk2=+0.321712378 neg_pairs=3 cov_lam2=+0.025689593 cov_Kf=+386.248580 prec_lam2=+0.684297176 prec_Kf=+17.470226 Mdef=+0.726473 Toep_gap=+0.224434450
+  E=(0, 8, 9, 10, 11, 12, 13, 14) sk2=+0.313938080 neg_pairs=0 cov_lam2=+0.089052125 cov_Kf=+255.672418 prec_lam2=+1.333446936 prec_Kf=+15.403110 Mdef=+0.096132 Toep_gap=+0.222043519
+  E=(0, 1, 2, 3, 7, 8, 9, 10) sk2=+0.149816926 neg_pairs=4 cov_lam2=+0.033571789 cov_Kf=+431.508955 prec_lam2=+0.934409909 prec_Kf=+18.879227 Mdef=+2.049880 Toep_gap=+0.417624513
+  E=(0, 2, 5, 7, 9, 10, 12, 14) sk2=+0.137991989 neg_pairs=4 cov_lam2=+0.016336734 cov_Kf=+606.795921 prec_lam2=+0.449173684 prec_Kf=+25.964032 Mdef=+1.709945 Toep_gap=+0.364595536
+  E=(0, 1, 4, 5, 7, 8, 11, 12) sk2=+0.110793464 neg_pairs=3 cov_lam2=+0.028588883 cov_Kf=+498.222565 prec_lam2=+0.965338088 prec_Kf=+19.265273 Mdef=+2.238804 Toep_gap=+0.399732533
+
+ALL CERTIFICATE/TRAP CONDUCTANCE GRAPH
+  active_coordinates=['AP_support', 'Toeplitz_lambda_min', 'D1_cov_layer', 'D2_cov_layer', 'D3_cov_layer', 'Sigma_kappa2', 'cov_positive_lambda2', 'cov_positive_kirchhoff', 'negative_covariance_debt', 'precision_lambda2', 'precision_kirchhoff', 'precision_mmatrix_defect']
+  nodes=23 edges=124 connected=True lambda2=+2.719948208 kirchhoff=+95.706022
+  primary_coordinate_counts={'D1_cov_layer': 4, 'cov_positive_lambda2': 3, 'precision_kirchhoff': 2, 'Toeplitz_lambda_min': 1, 'precision_mmatrix_defect': 1}
+  coordinate_weight={'AP_support': 3.4542333138369954, 'D1_cov_layer': 6.01496649456477, 'D2_cov_layer': 6.737961925215966, 'D3_cov_layer': 6.64041630722183, 'Sigma_kappa2': 6.451566136914625, 'Toeplitz_lambda_min': 6.597377512328789, 'cov_positive_kirchhoff': 5.23639442179595, 'cov_positive_lambda2': 7.821062653602666, 'negative_covariance_debt': 3.2298059979516163, 'precision_kirchhoff': 5.954590227712275, 'precision_lambda2': 6.587357513456246, 'precision_mmatrix_defect': 3.157472191842907}
+  family_weight={'covariance': 25.844910863917193, 'green_precision': 15.699419933011429, 'green_sector': 16.287263073350232, 'normal_fan': 10.051610826165787}
+  trap_primary_edges=
+    (0, 2, 4, 6, 7, 8, 10, 12) -> D1_cov_layer weight=+0.477854
+    (0, 1, 3, 5, 7, 9, 11, 13) -> D1_cov_layer weight=+0.525115
+    (0, 1, 2, 3, 11, 12, 13, 14) -> cov_positive_lambda2 weight=+0.792375
+    (0, 3, 6, 8, 9, 11, 12, 14) -> cov_positive_lambda2 weight=+0.790577
+    (0, 2, 3, 5, 6, 8, 11, 14) -> precision_kirchhoff weight=+0.947471
+    (0, 6, 7, 8, 9, 10, 11, 12) -> D1_cov_layer weight=+0.630492
+    (0, 4, 5, 8, 9, 10, 13, 14) -> cov_positive_lambda2 weight=+0.866223
+    (0, 8, 9, 10, 11, 12, 13, 14) -> D1_cov_layer weight=+0.693132
+    (0, 1, 2, 3, 7, 8, 9, 10) -> Toeplitz_lambda_min weight=+1.000000
+    (0, 2, 5, 7, 9, 10, 12, 14) -> precision_kirchhoff weight=+1.000000
+    (0, 1, 4, 5, 7, 8, 11, 12) -> precision_mmatrix_defect weight=+1.000000
+  fiedler_split_negative=['trap:(0, 1, 3, 5, 7, 9, 11, 13)', 'trap:(0, 1, 2, 3, 11, 12, 13, 14)', 'trap:(0, 3, 6, 8, 9, 11, 12, 14)', 'trap:(0, 2, 3, 5, 6, 8, 11, 14)', 'trap:(0, 6, 7, 8, 9, 10, 11, 12)', 'trap:(0, 4, 5, 8, 9, 10, 13, 14)', 'trap:(0, 8, 9, 10, 11, 12, 13, 14)', 'coord:AP_support', 'coord:Toeplitz_lambda_min', 'coord:D1_cov_layer', 'coord:D2_cov_layer', 'coord:D3_cov_layer', 'coord:Sigma_kappa2', 'coord:cov_positive_lambda2', 'coord:cov_positive_kirchhoff', 'coord:precision_lambda2', 'coord:precision_kirchhoff']
+  fiedler_split_positive=['trap:(0, 2, 4, 6, 7, 8, 10, 12)', 'trap:(0, 1, 2, 3, 7, 8, 9, 10)', 'trap:(0, 2, 5, 7, 9, 10, 12, 14)', 'trap:(0, 1, 4, 5, 7, 8, 11, 12)', 'coord:negative_covariance_debt', 'coord:precision_mmatrix_defect']
+
+GREEN-ONLY TRAP CONDUCTANCE GRAPH
+  active_coordinates=['cov_positive_lambda2', 'cov_positive_kirchhoff', 'negative_covariance_debt', 'precision_lambda2', 'precision_kirchhoff', 'precision_mmatrix_defect']
+  nodes=17 edges=58 connected=True lambda2=+1.208613477 kirchhoff=+97.184314
+  primary_coordinate_counts={'cov_positive_lambda2': 6, 'precision_lambda2': 1, 'precision_kirchhoff': 2, 'precision_mmatrix_defect': 2}
+  coordinate_weight={'cov_positive_kirchhoff': 5.23639442179595, 'cov_positive_lambda2': 7.821062653602666, 'negative_covariance_debt': 3.2298059979516163, 'precision_kirchhoff': 5.954590227712275, 'precision_lambda2': 6.587357513456246, 'precision_mmatrix_defect': 3.157472191842907}
+  family_weight={'green_precision': 15.699419933011429, 'green_sector': 16.287263073350232}
+  trap_primary_edges=
+    (0, 2, 4, 6, 7, 8, 10, 12) -> cov_positive_lambda2 weight=+0.407287
+    (0, 1, 3, 5, 7, 9, 11, 13) -> precision_lambda2 weight=+0.458403
+    (0, 1, 2, 3, 11, 12, 13, 14) -> cov_positive_lambda2 weight=+0.792375
+    (0, 3, 6, 8, 9, 11, 12, 14) -> cov_positive_lambda2 weight=+0.790577
+    (0, 2, 3, 5, 6, 8, 11, 14) -> precision_kirchhoff weight=+0.947471
+    (0, 6, 7, 8, 9, 10, 11, 12) -> cov_positive_lambda2 weight=+0.522380
+    (0, 4, 5, 8, 9, 10, 13, 14) -> cov_positive_lambda2 weight=+0.866223
+    (0, 8, 9, 10, 11, 12, 13, 14) -> cov_positive_lambda2 weight=+0.536267
+    (0, 1, 2, 3, 7, 8, 9, 10) -> precision_mmatrix_defect weight=+0.883936
+    (0, 2, 5, 7, 9, 10, 12, 14) -> precision_kirchhoff weight=+1.000000
+    (0, 1, 4, 5, 7, 8, 11, 12) -> precision_mmatrix_defect weight=+1.000000
+  fiedler_split_negative=['trap:(0, 1, 3, 5, 7, 9, 11, 13)', 'trap:(0, 1, 2, 3, 11, 12, 13, 14)', 'trap:(0, 3, 6, 8, 9, 11, 12, 14)', 'trap:(0, 2, 3, 5, 6, 8, 11, 14)', 'trap:(0, 6, 7, 8, 9, 10, 11, 12)', 'trap:(0, 4, 5, 8, 9, 10, 13, 14)', 'trap:(0, 8, 9, 10, 11, 12, 13, 14)', 'coord:cov_positive_lambda2', 'coord:cov_positive_kirchhoff', 'coord:precision_lambda2', 'coord:precision_kirchhoff']
+  fiedler_split_positive=['trap:(0, 2, 4, 6, 7, 8, 10, 12)', 'trap:(0, 1, 2, 3, 7, 8, 9, 10)', 'trap:(0, 2, 5, 7, 9, 10, 12, 14)', 'trap:(0, 1, 4, 5, 7, 8, 11, 12)', 'coord:negative_covariance_debt', 'coord:precision_mmatrix_defect']
+
+NO-TOEPLITZ TRAP CONDUCTANCE GRAPH
+  active_coordinates=['AP_support', 'D1_cov_layer', 'D2_cov_layer', 'D3_cov_layer', 'Sigma_kappa2', 'cov_positive_lambda2', 'cov_positive_kirchhoff', 'negative_covariance_debt', 'precision_lambda2', 'precision_kirchhoff', 'precision_mmatrix_defect']
+  nodes=22 edges=113 connected=True lambda2=+2.537866286 kirchhoff=+93.002526
+  primary_coordinate_counts={'D1_cov_layer': 4, 'cov_positive_lambda2': 3, 'precision_kirchhoff': 2, 'D2_cov_layer': 1, 'precision_mmatrix_defect': 1}
+  coordinate_weight={'AP_support': 3.4542333138369954, 'D1_cov_layer': 6.01496649456477, 'D2_cov_layer': 6.737961925215966, 'D3_cov_layer': 6.64041630722183, 'Sigma_kappa2': 6.451566136914625, 'cov_positive_kirchhoff': 5.23639442179595, 'cov_positive_lambda2': 7.821062653602666, 'negative_covariance_debt': 3.2298059979516163, 'precision_kirchhoff': 5.954590227712275, 'precision_lambda2': 6.587357513456246, 'precision_mmatrix_defect': 3.157472191842907}
+  family_weight={'covariance': 25.844910863917193, 'green_precision': 15.699419933011429, 'green_sector': 16.287263073350232, 'normal_fan': 3.4542333138369954}
+  trap_primary_edges=
+    (0, 2, 4, 6, 7, 8, 10, 12) -> D1_cov_layer weight=+0.477854
+    (0, 1, 3, 5, 7, 9, 11, 13) -> D1_cov_layer weight=+0.525115
+    (0, 1, 2, 3, 11, 12, 13, 14) -> cov_positive_lambda2 weight=+0.792375
+    (0, 3, 6, 8, 9, 11, 12, 14) -> cov_positive_lambda2 weight=+0.790577
+    (0, 2, 3, 5, 6, 8, 11, 14) -> precision_kirchhoff weight=+0.947471
+    (0, 6, 7, 8, 9, 10, 11, 12) -> D1_cov_layer weight=+0.630492
+    (0, 4, 5, 8, 9, 10, 13, 14) -> cov_positive_lambda2 weight=+0.866223
+    (0, 8, 9, 10, 11, 12, 13, 14) -> D1_cov_layer weight=+0.693132
+    (0, 1, 2, 3, 7, 8, 9, 10) -> D2_cov_layer weight=+0.890636
+    (0, 2, 5, 7, 9, 10, 12, 14) -> precision_kirchhoff weight=+1.000000
+    (0, 1, 4, 5, 7, 8, 11, 12) -> precision_mmatrix_defect weight=+1.000000
+  fiedler_split_negative=['trap:(0, 1, 3, 5, 7, 9, 11, 13)', 'trap:(0, 1, 2, 3, 11, 12, 13, 14)', 'trap:(0, 3, 6, 8, 9, 11, 12, 14)', 'trap:(0, 2, 3, 5, 6, 8, 11, 14)', 'trap:(0, 6, 7, 8, 9, 10, 11, 12)', 'trap:(0, 4, 5, 8, 9, 10, 13, 14)', 'trap:(0, 8, 9, 10, 11, 12, 13, 14)', 'coord:AP_support', 'coord:D1_cov_layer', 'coord:D2_cov_layer', 'coord:D3_cov_layer', 'coord:Sigma_kappa2', 'coord:cov_positive_lambda2', 'coord:cov_positive_kirchhoff', 'coord:precision_lambda2', 'coord:precision_kirchhoff']
+  fiedler_split_positive=['trap:(0, 2, 4, 6, 7, 8, 10, 12)', 'trap:(0, 1, 2, 3, 7, 8, 9, 10)', 'trap:(0, 2, 5, 7, 9, 10, 12, 14)', 'trap:(0, 1, 4, 5, 7, 8, 11, 12)', 'coord:negative_covariance_debt', 'coord:precision_mmatrix_defect']
+
+ASSUMPTION-CHALLENGE
+  alternate_vertices_considered=runners,gaps,sections,boundaries,wall_crossings,
+    residues,cover_arcs,Fourier_modes,matroid_circuits,proof_obligations,
+    inner_sector_nodes,trap_nodes,certificate_coordinate_nodes
+  chosen_vertices=inner sectors for response networks; traps+coordinates for discharge graph
+  preserves=LRC k=8 AP covariance/coverage extremality, HYP-3202 trap identities,
+    HYP-3205/HYP-3224 dictionary coordinates, and Green-kernel sidecar data
+  destroys=literal runner identity, raw residue-conductance monotonicity,
+    and any config-blind algebraic certificate promised by HYP-3221 to fail
+  challenged_assumption=algebraic connectivity is not a terminal scalar;
+    its proof value is whether it connects trap debt to sidecar coordinates.
+
+TOURNAMENT ANALYSIS
+  vertices=proof carriers/certificate graphs, not runners/arcs/sectors
+  pairwise_observable=AP rank + trap-discharge connectivity + sidecar retention
+  switch/gauge=A->B iff payload_score(A)>payload_score(B), lexical tie break
+  score_hist={9: 1, 22: 1, 48: 2, 96: 1, 101: 1}
+  directed_3cycles=0
+  scc_sizes=[1,1,1,1,1,1]
+  edge_flips_vs_raw_conductance_order=5
+  hamiltonian_path_count=1
+  priority_path=trap_discharge_conductance_graph -> normal_fan_dictionary -> green_without_toeplitz_sidecar -> positive_covariance_sector_graph -> green_precision_graph -> raw_residue_conductance_guardrail
+
+PROOF-FRONTIER READOUT
+  target_1=prove C_E^{-1} is a controlled grounded M-matrix after the correct
+    AP/dilation sidecar, or record positive off-diagonal precision as named debt.
+  target_2=upgrade HYP-3224 trap discharge from a Toeplitz-only star into a
+    conductance graph: remove Toeplitz and show Green/covariance/AP coordinates
+    still connect every non-AP exchange trap to a certificate boundary.
+  target_3=interpret exchange moves as Schur-complement edits of the precision
+    graph, then prove algebraic connectivity cannot improve at a non-AP trap
+    without creating one of the already measured normal-fan deficits.

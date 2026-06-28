@@ -6486,3 +6486,40 @@ quotient_legality_status
 - **Pointers:** HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
   HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, LTI-324,
   LTT-224, T1324, OPEN-Q-108.
+
+## LTT-225: Conductance-Graph Trap Discharge Tournament
+
+- **Move:** Treat certificate graphs as tournament vertices and trap/certificate
+  conductance as a proof-obligation graph.  The vertices are
+  `trap_discharge_conductance_graph`, `normal_fan_dictionary`,
+  `green_without_toeplitz_sidecar`, `positive_covariance_sector_graph`,
+  `green_precision_graph`, and `raw_residue_conductance_guardrail`.
+- **LRC use:** HYP-3227 executes the full-bank conductance-graph side of
+  HYP-3223's Green-current proposal on the HYP-3205/HYP-3224 exact k=8 bank,
+  complementing HYP-3225's local trap-fingerprint classifier.  Positive covariance and precision
+  conductance graphs give AP-tight capacity coordinates, but precision
+  M-matrix defect is a guardrail.  The load-bearing tournament object is the
+  trap-discharge graph: non-AP HYP-3202 traps are connected to certificate
+  coordinates by normalized deficit conductance.  Algebraic connectivity is
+  used as connectedness of proof debt, not as a standalone LRC scalar.
+- **Preserves:** exchange-trap identity, certificate-coordinate identity,
+  covariance-layer payload, AP support direction, Toeplitz/normal-fan status,
+  Green-current capacity metrics, M-matrix defect, and Fiedler-cut subcases.
+- **Forgets / guardrail:** runner or arc vertices forget certificate
+  coordinates; raw residue conductance forgets trap sidecars; precision
+  M-matrix defect cannot be minimized as a terminal AP scalar (`181` primitive
+  beaters).
+- **Fingerprint:** transitive proof-carrier tournament with
+  `score_hist={9:1,22:1,48:2,96:1,101:1}`, no directed 3-cycles, singleton
+  SCCs, `edge_flips_vs_raw_conductance_order=5`, and one Hamiltonian path:
+  `trap_discharge_conductance_graph -> normal_fan_dictionary ->
+  green_without_toeplitz_sidecar -> positive_covariance_sector_graph ->
+  green_precision_graph -> raw_residue_conductance_guardrail`.
+- **Next hook:** Use the Fiedler-positive defect island
+  `{(0,2,4,6,7,8,10,12), (0,1,2,3,7,8,9,10),
+  (0,2,5,7,9,10,12,14), (0,1,4,5,7,8,11,12)}` as the first finite
+  Schur-complement/M-matrix-defect case; prove every other trap discharges
+  through covariance/precision capacity or normal-fan coordinates.
+- **Pointers:** HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222,
+  HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
+  HYP-3201, HYP-3200, LTI-325, LTT-225, T1325, OPEN-Q-108.

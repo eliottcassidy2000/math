@@ -294,9 +294,31 @@ two-block trap status, boundary leakage, and odd Worpitzky/third-cumulant debt.
    into the electrical or Lorentzian certificate until the third-cumulant
    sidecar has its own discharge.
 
+## Execution Addendum: HYP-3227
+
+HYP-3225 executes the local trap-fingerprint audit promised above, and
+HYP-3227 executes the full-bank conductance-graph extension on the exact
+HYP-3205/HYP-3224 bounded k=8 bank.  HYP-3227 confirms that several
+Green-current coordinates are AP-tight sidecars:
+all-ones Green energy, positive-covariance sector graph lambda2/Kirchhoff,
+precision graph lambda2/Kirchhoff, and precision killing have no primitive
+beaters beyond the doubled AP equality row.  It also names the failure mode:
+precision M-matrix defect has `181` primitive beaters, so inverse-Green
+conductance is not a terminal scalar.
+
+The main upgrade is the trap-discharge graph.  The `11` non-AP exchange traps
+remain connected to certificate coordinates after Toeplitz is deleted
+(`lambda2=2.537866286`) and even using only Green-current coordinates
+(`lambda2=1.208613477`).  Therefore the next electrical target is a finite
+Schur-complement/star-mesh lemma for the trap graph, not another scalar
+conductance ranking.  Angle B should now be tested against the same trap
+graph: does the Lorentzian/valuated-exchange defect see the same
+Fiedler-positive M-matrix-defect island?
+
 ## Links
 
 HYP-3223 is a proof-angle synthesis over HYP-3222, HYP-3221, HYP-3213, HYP-3212,
 HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200,
 HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3139,
-HYP-3138, HYP-3132, THM-577, LTI-323, LTT-223, T1323, and OPEN-Q-108.
+HYP-3138, HYP-3132, HYP-3227, HYP-3226, HYP-3225, THM-577, LTI-323, LTI-325, LTT-223, LTT-225,
+T1323, T1325, and OPEN-Q-108.

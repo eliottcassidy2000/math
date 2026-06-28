@@ -343,6 +343,34 @@ vertex model is the proof object.  The stronger hypothesis is that LRC14's
 k=8 node is a small normal-fan diagram, and the proof must retain enough
 coordinates to see that diagram.
 
+## Green-Current Addendum: HYP-3227
+
+HYP-3225 classifies the local Green/Lorentzian fingerprints of the trap
+manifold; HYP-3227 adds full-bank Green-current conductance coordinates to
+this normal-fan story.  The AP/doubled-AP equality face survives several
+electrical metrics:
+
+```text
+all_ones_green_energy
+cov_positive_lambda2
+cov_positive_kirchhoff
+precision_lambda2
+precision_kirchhoff
+precision_killing_abs
+```
+
+But `precision_mmatrix_defect` is a guardrail with `181` primitive beaters,
+so the Green precision graph is a sidecar with named leakage, not a new
+terminal scalar.
+
+The trap result strengthens the two-chart theorem below.  The finite
+trap/certificate graph remains connected without Toeplitz
+(`lambda2=2.537866286`) and remains connected with only Green coordinates
+(`lambda2=1.208613477`).  Thus the moment-cone trap chart is supported by an
+independent Green-current discharge chart.  The next normal-fan rerun should
+include AP-tight Green coordinates while excluding or sidecar-marking the
+M-matrix defect.
+
 ## Next Tests
 
 1. Search for a Toeplitz/Fejer-Riesz/Verblunsky dual whose slack equals or
