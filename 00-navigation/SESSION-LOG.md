@@ -20,6 +20,31 @@ CONVERGENCE: kps S31au (even-odd IS positive-negative; obstruction sign=p mod 4;
 Q(√-7), 7≡3 mod 4 -- the OTHER Q(ζ_7) subfield beside my cap's real cubic Q(cos2pi/7)); codex HYP-3238 (crossed-packet
 duality, my unification = its diagonal). All three: the two dualities are ONE, realized in the Q(ζ_7) subfield lattice.
 NOT a proof; collapses two targets to one + pins the dualities to the IE parity / cyclotomic subfields.
+## kind-pasteur-2026-06-28-S31av -- 14=|D_7| (heptagon dihedral); LRC modes = D_7 irreps; n=14's certificate = BORSUK-ULAM (free Z_2), not Brouwer
+
+Owner: connect to imaginary roots, regular polygons on the complex unit circle, the tournament-dihedral link;
+look back at past work; keep pushing for an LRC(14) proof. HYP-3239:
+
+- **14 = |D_7|** = the dihedral symmetry group of the regular HEPTAGON (the 7 sectors as zeta_7^k on the
+  complex unit circle). D_7 irreps: 14 = 1^2+1^2+2^2+2^2+2^2 = TRIVIAL (Mobius/trace, HYP-3217 deg1) + SIGN
+  (the complement Z_2) + THREE 2-dim (chars 2cos 2pi k/7 = the de Moivre cubic). The HYP-3217 mode lattice =
+  the D_7 representation ring; the apex n=2p IS |D_p|.
+- **complement x->-x = the heptagon reflection = mult by -1**; aut vs anti-aut = p mod 4 (VERIFIED). p=5(n=10):
+  -1 residue -> AUT. **p=7(n=14): -1 NON-residue -> ANTI-AUT (T->T^op, orientation-REVERSING, SELF-CONVERSE)**.
+  Same p mod4 as the HYP-3220 disc sign.
+- **CERTIFICATE REFINEMENT:** Brouwer (HYP-3219) needs a reflection FIXED point = only p=1 mod4 (aut). For
+  n=14 (p=3 mod4) the reflection is an ANTI-aut, NO fixed orientation => Z_2 acts FREELY => **BORSUK-ULAM
+  (odd degree of a free Z_2), NOT Brouwer**. Witnesses = antipodal pairs (t*,-t*); existence by odd DEGREE =
+  the imaginary Gauss sum i*sqrt7 = the negative trace e1=-1 = the odd power sums -- all = the degree of the
+  free reflection. p=1 mod4: Brouwer/SOS/symmetric/REAL/even. p=3 mod4: Borsuk-Ulam/obstruction/antipodal/IMAGINARY/odd.
+- **FAMILY CONFIRM (result lrc_family_sos_vs_sign_obstruction):** p=5(n=10) obstruction = (a-b)^2 = +5 = PURE
+  SOS (a literal square) -> SOS+Brouwer closes it; p=7(n=14) = (trace)(SOS) = -7 = SIGN x SOS -> Borsuk-Ulam.
+  The sign obstruction is ISOLATED to p=3 mod4 (n=14,22); p=1 mod4 (n=10,26) is SOS/Brouwer. n=14 = the FIRST
+  nontrivial p=3 mod4 apex = first genuine Borsuk-Ulam/imaginary case (-7 Heegner => h=1, UFD).
+- **ACTIONS:** decompose cover bound into D_7-isotypic; certify SIGN-isotypic obstruction by Borsuk-Ulam odd
+  degree (not SOS); use h(-7)=1 UFD + conductor-7^2 (mac-mini S75e) + Stark L' (HYP-3215) for magnitude.
+
+=> HYP-3239; reflection 14-is-the-heptagon-dihedral-group-borsuk-ulam-not-brouwer-kps.md.
 
 ## kind-pasteur-2026-06-28-S31au -- FINALIZE: even-odd duality IS positive-negative duality; obstruction sign = p mod 4; n=14's wall = the IMAGINARY-QUADRATIC wall
 
