@@ -1,0 +1,30 @@
+============================================================================================
+ BUILDING the cyclotomic magic function: optimal minorant F<=1_lonely(P), ∫F -> cap
+============================================================================================
+ de Moivre / cyclotomic boundary points in x (j/7): [0.0, 0.1429, 0.2857, 0.4286, 0.5714, 0.7143, 0.8571, 1.0]
+
+ P={1,13} j=2 cap=66/91:  meas(lonely)=0.72528
+   N=  7: ∫F=-0.00000  gap=+0.72528  f̂>=0:True(0 neg)  active*7 mod1≈[np.float64(0.0), np.float64(0.01), np.float64(0.02), np.float64(0.03), np.float64(0.04), np.float64(0.05), np.float64(0.06), np.float64(0.07)]
+   N= 14: ∫F=0.37274  gap=+0.35254  f̂>=0:False(7 neg)  active*7 mod1≈[np.float64(0.03), np.float64(0.04), np.float64(0.11), np.float64(0.12), np.float64(0.19), np.float64(0.21), np.float64(0.22), np.float64(0.34)]
+   N= 28: ∫F=0.51178  gap=+0.21350  f̂>=0:False(8 neg)  active*7 mod1≈[np.float64(0.02), np.float64(0.04), np.float64(0.11), np.float64(0.12), np.float64(0.14), np.float64(0.15), np.float64(0.19), np.float64(0.21)]
+   N= 56: ∫F=0.59708  gap=+0.12820  f̂>=0:False(16 neg)  active*7 mod1≈[np.float64(0.0), np.float64(0.01), np.float64(0.03), np.float64(0.04), np.float64(0.05), np.float64(0.07), np.float64(0.09), np.float64(0.11)]
+
+ P={1,12,13} j=3:  meas(lonely)=0.60445
+   N=  7: ∫F=-0.00000  gap=+0.60445  f̂>=0:True(0 neg)  active*7 mod1≈[np.float64(0.0), np.float64(0.01), np.float64(0.02), np.float64(0.03), np.float64(0.04), np.float64(0.05), np.float64(0.06), np.float64(0.07)]
+   N= 14: ∫F=0.11036  gap=+0.49409  f̂>=0:False(6 neg)  active*7 mod1≈[np.float64(0.04), np.float64(0.12), np.float64(0.16), np.float64(0.19), np.float64(0.21), np.float64(0.35), np.float64(0.37), np.float64(0.38)]
+   N= 28: ∫F=0.26799  gap=+0.33645  f̂>=0:False(14 neg)  active*7 mod1≈[np.float64(0.0), np.float64(0.01), np.float64(0.02), np.float64(0.03), np.float64(0.04), np.float64(0.07), np.float64(0.12), np.float64(0.16)]
+   N= 56: ∫F=0.40298  gap=+0.20147  f̂>=0:False(24 neg)  active*7 mod1≈[np.float64(0.04), np.float64(0.05), np.float64(0.06), np.float64(0.07), np.float64(0.11), np.float64(0.12), np.float64(0.13), np.float64(0.16)]
+
+ P={1,11,12,13} j=4:  meas(lonely)=0.49431
+   N=  7: ∫F=-0.00000  gap=+0.49431  f̂>=0:True(0 neg)  active*7 mod1≈[np.float64(0.0), np.float64(0.01), np.float64(0.02), np.float64(0.03), np.float64(0.04), np.float64(0.05), np.float64(0.06), np.float64(0.07)]
+   N= 14: ∫F=-0.00000  gap=+0.49431  f̂>=0:True(0 neg)  active*7 mod1≈[np.float64(0.0), np.float64(0.01), np.float64(0.02), np.float64(0.03), np.float64(0.04), np.float64(0.05), np.float64(0.06), np.float64(0.07)]
+   N= 28: ∫F=0.10889  gap=+0.38542  f̂>=0:False(13 neg)  active*7 mod1≈[np.float64(0.04), np.float64(0.05), np.float64(0.1), np.float64(0.11), np.float64(0.12), np.float64(0.13), np.float64(0.14), np.float64(0.15)]
+   N= 56: ∫F=0.24487  gap=+0.24944  f̂>=0:False(28 neg)  active*7 mod1≈[np.float64(0.0), np.float64(0.04), np.float64(0.05), np.float64(0.06), np.float64(0.11), np.float64(0.12), np.float64(0.14), np.float64(0.19)]
+
+ P={1,5,7,8,9} j=5 k=8 BINDING:  meas(lonely)=0.38145
+   N=  7: ∫F=-0.00000  gap=+0.38145  f̂>=0:True(0 neg)  active*7 mod1≈[np.float64(0.0), np.float64(0.01), np.float64(0.02), np.float64(0.03), np.float64(0.04), np.float64(0.05), np.float64(0.06), np.float64(0.07)]
+   N= 14: ∫F=-0.00000  gap=+0.38145  f̂>=0:True(0 neg)  active*7 mod1≈[np.float64(0.0), np.float64(0.01), np.float64(0.02), np.float64(0.03), np.float64(0.04), np.float64(0.05), np.float64(0.06), np.float64(0.07)]
+   N= 28: ∫F=0.10132  gap=+0.28013  f̂>=0:False(15 neg)  active*7 mod1≈[np.float64(0.02), np.float64(0.07), np.float64(0.1), np.float64(0.11), np.float64(0.17), np.float64(0.18), np.float64(0.19), np.float64(0.22)]
+   N= 56: ∫F=0.17947  gap=+0.20199  f̂>=0:False(30 neg)  active*7 mod1≈[np.float64(0.0), np.float64(0.02), np.float64(0.03), np.float64(0.04), np.float64(0.07), np.float64(0.08), np.float64(0.11), np.float64(0.12)]
+============================================================================================
+ If ∫F->cap, f̂>=0, and active points sit at sector boundaries (j/7, the cyclotomic) => MAGIC FUNCTION.

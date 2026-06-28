@@ -1,3 +1,26 @@
+## mac-mini-2026-06-28-S75 -- BUILDING the magic function: the comb-overlap GRAM kernel (Bochner-automatic) + the PROVED single-arc peeling lemma
+
+Owner: build out the cyclotomic Delsarte/Beurling-Selberg magic function (the analytic resolution S74/kps-S31an
+converged on). HYP-3227 + reflection building-the-magic-function-... + 2 scripts.
+
+KEY LESSON (where it lives): NOT the spatial domain. Built the obvious trig-poly minorant F<=1_lonely (LP,
+lrc_cyclotomic_magic_function_S75.py) -- it is SLOW (gap 0.13 at deg 56 for {1,13}) and NOT Bochner (f-hat has
+negatives). The magic function IS the **comb-overlap GRAM KERNEL** K(p,q)=meas(D_p∩D_q)=<1_{D_p},1_{D_q}>, PSD/
+Bochner BY CONSTRUCTION (Gram matrix). cap=inclusion-exclusion with K (lrc_magic_function_resonance_domain_S75.py).
+
+PROVED LEMMA (single-arc dominance): for S∋1, speeds<=13, meas(∩_S D_p)=1/(7 max S). Proof: D_1=(−1/14,1/14) is
+one arc; for p<=13, 1/p>1/14 so only p's central tooth meets D_1; intersection=smallest central tooth=1/(7 max).
+Failures ONLY at speeds>=14 (apex modulus 14 = the lemma boundary). VERIFIED all S∋1, speeds<=13.
+PROVED peeling recursion: cap(P)=cap(P∖{1})−(1/7)(1−1/min(P∖{1})) for 1∈P, speeds<=13. Verified {1,13}→66/91,
+{1,5,7,8,9}→2243/5880=cap_8 (the BINDING row, exact). K(1,q)=1/(7q) (min antipode q=13); K(7,q)=1/49.
+
+CONVERGENCE with kps S31ao (HYP-3214, same owner task): kps built the FOURIER side -- the magic function = the
+FEJÉR KERNEL F_7 (F-hat=(7−|n|)_+ >=0, F_7(0)=49=7², double zeros at de Moivre, modular Γ_0(7) Eisenstein
+version, AP autocorrelation=F_k). My spatial Gram kernel = the Fourier dual of kps's F_7 (F_7(0)=49 = my
+K(7,q)=1/49); my Verblunsky (S73d) = kps's OPUC Christoffel-Darboux facet. kps=Fourier side; me=PROVED spatial
+side (single-arc lemma + peeling recursion). REMAINING: the same closure for P∖{1} (no single arc). NOT a full
+proof; LRC(14) open, but the magic function is now BUILT (both sides) + the cap peels on speed 1 in closed form.
+
 ## kind-pasteur-2026-06-28-S31ao -- the cyclotomic Delsarte/Beurling-Selberg magic function IS the Fejer kernel
 
 Owner: look for more modular magic functions; think cyclotomic Delsarte/Beurling-Selberg. Found the magic

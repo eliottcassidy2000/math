@@ -1,0 +1,33 @@
+==========================================================================================
+ THE PAIRWISE-OVERLAP CYCLOTOMIC KERNEL K(1,q) = meas(D_1 cap D_q)  (the magic function's core)
+==========================================================================================
+  q    K(1,q)=meas(D_1∩D_q)   vs 1/49 (independent)
+  1                     1/7      0.14286 vs 0.02041
+  2                    1/14      0.07143 vs 0.02041
+  3                    1/21      0.04762 vs 0.02041
+  4                    1/28      0.03571 vs 0.02041
+  5                    1/35      0.02857 vs 0.02041
+  6                    1/42      0.02381 vs 0.02041
+  7                    1/49      0.02041 vs 0.02041
+  8                    1/56      0.01786 vs 0.02041
+  9                    1/63      0.01587 vs 0.02041
+ 10                    1/70      0.01429 vs 0.02041
+ 11                    1/77      0.01299 vs 0.02041
+ 12                    1/84      0.01190 vs 0.02041
+ 13                    1/91      0.01099 vs 0.02041
+ min overlap at q=13 (= -1 mod 14): the LEAST-resonant pair => the cap minimizer {1,13}. CYCLOTOMIC.
+
+==========================================================================================
+ CAP RECONSTRUCTION via the magic function (inclusion-exclusion), checking the order where it BREAKS
+==========================================================================================
+  j   P (minimizer) order-1 (union)  order-2 (pairwise)       order-3    full=cap   known cap
+  2         (1, 13)          0.7143             0.72527       0.72527     0.72527     0.72527
+      -> order-2 (pairwise magic function) is EXACT: 66/91 = cap  [CYCLOTOMIC, f-hat>=0 Fejer]
+  3     (1, 12, 13)          0.5714             0.61538       0.60440     0.60440     0.60440
+  4 (1, 11, 12, 13)          0.4286             0.52814       0.48327     0.49426     0.49426
+      -> order-2 gives 0.52814; the ORDER-3 correction = -37/1092 = the binding deviation constant
+  5 (1, 5, 7, 8, 9)          0.2857             0.48520       0.31599     0.38146     0.38146
+      -> order-2 gives 0.48520; the ORDER-3 correction = -61/588 = the binding deviation constant
+==========================================================================================
+ MAGIC FUNCTION = order-2 pairwise overlap kernel (exact cap for j<=3) + order-3 correction (j=4,5).
+ The kernel K(p,q) is cyclotomic (min at antipode q=-1 mod14); the order-3 = the two hard constants.
