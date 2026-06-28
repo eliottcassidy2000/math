@@ -1,3 +1,25 @@
+## mac-mini-2026-06-27-S73d -- the moment-problem merge: Caratheodory-Toeplitz + Griffiths/GKS + Verblunsky all read the LRC FM/AFM phase
+
+Owner: merge Caratheodory-Toeplitz moment rigidity + antiferromagnetic Griffiths/GKS + a few self-generated
+concepts. They land on ONE object: the FM/AFM phase boundary of the coverage. HYP-3202 + reflection
+the-moment-problem-merge-... (lrc_caratheodory_toeplitz_griffiths_macmini_S73.py).
+
+FOUR classical lenses give the SAME split: Lee-Yang (zeros on/off circle) = Griffiths/GKS-I (Cov(X_i,X_j)>=0
+for consec k>=8, <0 for dissociated) = Caratheodory-Toeplitz (Toeplitz [q_{|i-j|}] PSD = valid circle measure
+for consec, NOT PSD for AFM) = Verblunsky/OPUC (|alpha_k|<1 interior for consec, >1 invalid for AFM). consec
+(k>=8)=FM on all four; dissociated=AFM on all four; FM begins at COMMENSURATE filling k=8 (k=7 fails all four).
+MERGE: even-half target (consec max Sigma Cov = codex HYP-3200) = GKS-II monotonicity; Lee-Yang circle =
+Caratheodory-Toeplitz moment-cone BOUNDARY (rigid finitely-supported = de Moivre/cyclotomic ideal). Self-gen
+extras: Verblunsky/OPUC (tested), Polya, Fejer-Riesz, Christoffel-Darboux, FKG/Harris.
+
+CONVERGENCE+COLLISION with kps S31al (independent SAME two cues from owner): kps SHARPER on Caratheodory --
+consec MAXIMIZES lambda_min(T) (the PSD margin, 0/3432 exhaustive) = most-interior moment config; and HONEST
+on Griffiths -- naive greedy speed-path is NON-monotone in Sigma-k2 (couplings not free => plain Griffiths
+fails, need RANDOM-CURRENT/Aizenman). My value-add = the four-lens unification + Verblunsky test + extras;
+integrated kps's two results. HYP COLLISION: my S73c HYP-3201 collided with codex-S279 + kps-S31al (both also
+3201); I CEDED -- renamed my S73c to HYP-3203. NOT a proof; LRC(14) open; the even half now sits in two
+classical theories (trig moment problem; ferromagnetic correlation inequalities).
+
 ## kind-pasteur-2026-06-27-S31al -- two new k=8-node angles: Caratheodory-Toeplitz (exhaustive) + ferromagnetic Griffiths
 
 Owner: a new creative angle or two on a remaining proof target. The remaining node = "consec maximizes
@@ -23,7 +45,7 @@ two-new-angles-caratheodory-toeplitz-and-ferromagnetic-griffiths-kps.md.
 
 Owner: a new creative angle or two on a remaining LRC(14) target. kps S31ai (HYP-3160) split the last bounded
 node (k=8) into EVEN (consec maximizes total empty-sector covariance Sigma Cov(X_i,X_j), degree-2/provable) +
-ODD (the -9S3 Worpitzky/associator/apex-7 residue, hard). One angle per half. HYP-3201 + reflection
+ODD (the -9S3 Worpitzky/associator/apex-7 residue, hard). One angle per half. HYP-3203 (renamed from HYP-3201, ceded to codex-S279/kps-S31al collision) + reflection
 two-creative-angles-for-the-k8-node.
 
 ANGLE A (even half, TESTED, strong -- lrc_covariance_circulant_perron_macmini_S73.py): the PERRON-FROBENIUS

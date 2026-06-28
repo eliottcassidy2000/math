@@ -1,0 +1,15 @@
+==================================================================================================
+ CARATHEODORY-TOEPLITZ (q moment rigidity, Polya) + GRIFFITHS/GKS (covariance sign) + VERBLUNSKY
+==================================================================================================
+set                      min Cov entry GKS(Cov>=0) q convex-decr (Polya) Toeplitz PSD?  maxRefl
+consec {0..6} (FM)            -0.03673          no                    no no(-3.02e-01)    2.323
+consec {0..7} (FM)             0.01040         YES                   dec           YES    0.746
+consec {0..12} (FM)            0.02171         YES                   dec           YES    0.146
+dissoc dyadic (AFM)           -0.10668          no                    no no(-5.82e-01)    9.200
+primes (AFM)                  -0.05630          no                    no no(-5.69e-01)   16.664
+random (AFM)                  -0.03383          no                    no no(-7.46e-01)  118.985
+--------------------------------------------------------------------------------------------------
+ Griffiths/GKS-I: Cov(X_i,X_j) >= 0 holds EXACTLY in the FM (consec) regime, FAILS in AFM (dissociated).
+ Caratheodory-Toeplitz: consec's miss-distribution q is CONVEX-DECREASING => positive-definite (Polya)
+   => PSD Toeplitz = a valid circle measure = the ferromagnetic/ordered (rigid) phase; AFM breaks PSD.
+ Verblunsky/Schur reflection coeffs |alpha_k|: closer to 1 = closer to the rigid boundary (finite support).

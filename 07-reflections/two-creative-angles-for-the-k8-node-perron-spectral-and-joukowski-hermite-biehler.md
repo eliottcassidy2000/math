@@ -78,5 +78,5 @@ proof.
   language (Perron-Frobenius; Hermite-Biehler/Eulerian) where standard machinery applies — the cleanest the
   k=8 node has been framed.
 
-Related: HYP-3201 (this), HYP-3160 (kps the node = covariance/associator), HYP-3132 (biquadratic), HYP-3147
+Related: HYP-3203 (this; renamed from HYP-3201, ceded to the codex-S279/kps-S31al collision), HYP-3160 (kps the node = covariance/associator), HYP-3132 (biquadratic), HYP-3147
 (Worpitzky odd), HYP-3154 (Joukowski bridge), the TRRT Lemmas A/B, THM-577 (cap), OPEN-Q-108.
