@@ -1,3 +1,25 @@
+## kind-pasteur-2026-06-27-S31al -- two new k=8-node angles: Caratheodory-Toeplitz (exhaustive) + ferromagnetic Griffiths
+
+Owner: a new creative angle or two on a remaining proof target. The remaining node = "consec maximizes
+coverage/covariance" at k=8. Delivered two fresh attack routes (HYP-3201):
+
+- **ANGLE 2 (Caratheodory-Toeplitz, EXHAUSTIVELY VERIFIED):** my Lee-Yang coverage circle (HYP-3099) IS
+  the trigonometric moment problem -- `{q_t}` a moment sequence, Toeplitz `T[j,k]=q_{|j-k|}` PSD, extremal
+  measures atomic on the circle (atoms = de Moivre angles). **consec MAXIMIZES `lambda_min(T)` (the
+  Caratheodory PSD margin) over ALL 3432 bounded k=8 clusters (0 beaters)** -- a NEW clean extremal
+  characterization (consec = most-interior moment config). Opens the Szego / Schur-Caratheodory-Fejer /
+  Verblunsky toolbox; `q0=tr(T)/7`=mean eigenvalue so the cover bound becomes a SPECTRAL inequality on T.
+  Trades the stalled moment-LP for Toeplitz spectral machinery -- the proof route of choice.
+- **ANGLE 1 (ferromagnetic Griffiths, lead):** empty-sector indicators ferromagnetic for k>=6 (HYP-3161),
+  consec = max-coupling ground state. But naive greedy speed-path config->consec is NON-monotone in
+  Sigma-k2 (3/60; dips through the ANTIFERRO phase) -- couplings aren't free params so plain Griffiths
+  fails on the speed-lattice; the RIGHT partial order is the coupling/coherence manifold via the
+  RANDOM-CURRENT representation (Aizenman). Clear sub-target.
+
+NET: LRC(14) not proved; two new machinery-backed routes on the last node, Angle 2 exhaustively verified
+with classical Toeplitz/Szego tools available. => HYP-3201; script + reflection
+two-new-angles-caratheodory-toeplitz-and-ferromagnetic-griffiths-kps.md.
+
 ## kind-pasteur-2026-06-27-S31ak -- the cyclotomic ideal: Joukowski/de Moivre + WHY n=14 = cubic cyclotomic degree
 
 Owner: rational approximations of irrationals/transcendentals; the ideal uniform PGF 1+z+...+z^6 (7-fold
