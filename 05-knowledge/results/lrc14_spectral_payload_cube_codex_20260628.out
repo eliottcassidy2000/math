@@ -1,0 +1,133 @@
+HYP-3224 spectral payload cube / normal-fan scout
+==============================================================================
+bank=anchored bounded k=8: E={0} union A, A subset [1,14], |A|=7
+rows_all=3432 rows_primitive=3431
+consec=(0, 1, 2, 3, 4, 5, 6, 7)
+even_AP=(0, 2, 4, 6, 8, 10, 12, 14) primitive=False
+consec_q=(Fraction(481, 1470), Fraction(359, 1470), Fraction(25, 147), Fraction(26, 245), Fraction(17, 210), Fraction(5, 98), Fraction(1, 49))
+even_AP_q=(Fraction(481, 1470), Fraction(359, 1470), Fraction(25, 147), Fraction(26, 245), Fraction(17, 210), Fraction(5, 98), Fraction(1, 49))
+
+RANKS OF THE SAME ROW IN DIFFERENT CURRENCIES
+coverage_q0_MAX:
+  consec_rank=0 beaters=0 ties=2 even_AP_rank=0
+  consec_value=481/1470 (+0.327210884354)
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 5, 7, 9, 11, 13)]
+bimod_q0_plus_q6_MAX:
+  consec_rank=0 beaters=0 ties=2 even_AP_rank=0
+  consec_value=73/210 (+0.347619047619)
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 4, 5, 6, 7, 9)]
+bimod_plus_q3_MAX:
+  consec_rank=0 beaters=0 ties=2 even_AP_rank=0
+  consec_value=667/1470 (+0.453741496599)
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 4, 5, 8, 9, 10, 13, 14), (0, 1, 4, 5, 9, 10, 13, 14), (0, 1, 3, 5, 7, 9, 11, 13)]
+L_y_MAX:
+  consec_rank=0 beaters=0 ties=2 even_AP_rank=0
+  consec_value=2633/7350 (+0.358231292517)
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 5, 7, 9, 11, 13)]
+Sigma_kappa2_MAX:
+  consec_rank=0 beaters=0 ties=2 even_AP_rank=0
+  consec_value=6237419/8643600 (+0.721622819196)
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9)]
+D1_cov_layer_MAX:
+  consec_rank=0 beaters=0 ties=2 even_AP_rank=0
+  consec_value=308509/1080450 (+0.285537507520)
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 1, 2, 3, 4, 5, 6, 8), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 4, 6, 7, 9, 12)]
+D2_cov_layer_MAX:
+  consec_rank=0 beaters=0 ties=2 even_AP_rank=0
+  consec_value=547577/2160900 (+0.253402286085)
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9)]
+D3_cov_layer_MAX:
+  consec_rank=0 beaters=0 ties=2 even_AP_rank=0
+  consec_value=225577/1234800 (+0.182683025591)
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 4, 5, 6, 7, 9)]
+AP_support_projection_MAX:
+  consec_rank=0 beaters=0 ties=2 even_AP_rank=0
+  consec_value=39766/540225 (+0.073610069878)
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 7, 8, 10, 12), (0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 5, 6, 8, 10, 12)]
+raw_cyclotomic_energy_MIN:
+  consec_rank=19 beaters=19 ties=2 even_AP_rank=19
+  consec_value=39766/77175 (+0.515270489148)
+  top_rows=[(0, 1, 2, 3, 11, 12, 13, 14), (0, 4, 5, 8, 9, 10, 13, 14), (0, 1, 4, 5, 6, 9, 10, 14), (0, 1, 4, 5, 9, 10, 13, 14), (0, 1, 2, 10, 11, 12, 13, 14)]
+Toeplitz_lambda_min_MAX:
+  consec_rank=0 beaters=0 ties=2 even_AP_rank=0
+  consec_value=+0.042304730706
+  top_rows=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 5, 7, 9, 11, 13), (0, 2, 4, 6, 7, 8, 10, 12)]
+Perron_uniform_alignment_MAX:
+  consec_rank=2 beaters=2 ties=2 even_AP_rank=2
+  consec_value=+0.996784201609
+  top_rows=[(0, 6, 8, 9, 10, 11, 12, 13), (0, 3, 5, 6, 7, 8, 9, 11), (0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 4, 6, 7, 8, 9, 10, 12)]
+
+NORMAL-FAN PAYLOAD CUBE
+  skyline_metrics=['ap_projection', 'toeplitz_lambda_min', 'D1', 'D2', 'D3', 'sigma_kappa2']
+  pareto_skyline_size=2
+  pareto_skyline_rows=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 8, 10, 12, 14)]
+  readout=if this remains stable beyond the bounded bank, the certificate is
+  a normal cone whose visible faces are AP support, Toeplitz interior, and
+  covariance distance layers, not three unrelated maxima.
+
+SIGNAL CORRELATIONS
+  AP_support vs Toeplitz_lambda_min: pearson=+0.605024 spearman=+0.576158
+  AP_support vs Sigma_kappa2: pearson=+0.777602 spearman=+0.731513
+  Toeplitz_lambda_min vs Sigma_kappa2: pearson=+0.858314 spearman=+0.866246
+  AP_support vs D1: pearson=+0.422477 spearman=+0.332985
+  AP_support vs D2: pearson=+0.734385 spearman=+0.682120
+  AP_support vs D3: pearson=+0.657505 spearman=+0.582007
+  Sigma_kappa2 vs Perron_align: pearson=+0.788154 spearman=+0.669266
+  AP_support vs Cyclotomic_energy: pearson=-0.323500 spearman=-0.251094
+
+FINITE TRAP DISCHARGE
+  arbitrary-exchange primitive local maxima=12 including consec
+  nonconsec_traps=11
+  trap=(0, 2, 4, 6, 7, 8, 10, 12) discharge_signal=Toeplitz_lambda_min raw_gap=+0.145804392591 neg_pairs=1 perron_align=0.995296
+  trap=(0, 1, 3, 5, 7, 9, 11, 13) discharge_signal=Toeplitz_lambda_min raw_gap=+0.113935348288 neg_pairs=0 perron_align=0.980467
+  trap=(0, 1, 2, 3, 11, 12, 13, 14) discharge_signal=Toeplitz_lambda_min raw_gap=+0.192735374025 neg_pairs=1 perron_align=0.947572
+  trap=(0, 3, 6, 8, 9, 11, 12, 14) discharge_signal=Toeplitz_lambda_min raw_gap=+0.249129738926 neg_pairs=3 perron_align=0.919002
+  trap=(0, 2, 3, 5, 6, 8, 11, 14) discharge_signal=Toeplitz_lambda_min raw_gap=+0.198459737348 neg_pairs=1 perron_align=0.927940
+  trap=(0, 6, 7, 8, 9, 10, 11, 12) discharge_signal=Toeplitz_lambda_min raw_gap=+0.226731427780 neg_pairs=0 perron_align=0.983050
+  trap=(0, 4, 5, 8, 9, 10, 13, 14) discharge_signal=Toeplitz_lambda_min raw_gap=+0.224434449599 neg_pairs=3 perron_align=0.927043
+  trap=(0, 8, 9, 10, 11, 12, 13, 14) discharge_signal=Toeplitz_lambda_min raw_gap=+0.222043518659 neg_pairs=0 perron_align=0.988688
+  trap=(0, 1, 2, 3, 7, 8, 9, 10) discharge_signal=Toeplitz_lambda_min raw_gap=+0.417624512866 neg_pairs=4 perron_align=0.679905
+  trap=(0, 2, 5, 7, 9, 10, 12, 14) discharge_signal=Toeplitz_lambda_min raw_gap=+0.364595536255 neg_pairs=4 perron_align=0.752667
+  trap=(0, 1, 4, 5, 7, 8, 11, 12) discharge_signal=Toeplitz_lambda_min raw_gap=+0.399732533443 neg_pairs=3 perron_align=0.229959
+  discharge_signal_counts={'Toeplitz_lambda_min': 11}
+
+ORDERED-TAIL EXCHANGE-RATE INTEGRATION
+  HYP-3204 lemma: (q3-q3_consec)_+ <= (q0+q6)_consec-(q0+q6)
+  primitive_rows_with_q3_gain=2879
+  exact_violations=0
+  worst_ratio=12882/17161 (+0.750655556203) at (0, 1, 4, 5, 9, 10, 13, 14)
+  worst_q3_gain=2147/19110 (+0.112349555207)
+  worst_bimod_loss=17161/114660 (+0.149668585383)
+  readout=central Worpitzky mass is priced by ordered-state bimodality,
+  so HYP-3204 is the coefficient face of the same normal-fan cube.
+
+CONSECUTIVE ROW SPECTRAL PAYLOAD
+  AP_support=39766/540225 (+0.073610069878)
+  Toeplitz_lambda_min=+0.042304730706
+  bimod_q0_plus_q6=73/210 (+0.347619047619)
+  bimod_plus_q3=667/1470 (+0.453741496599)
+  Sigma_kappa2=6237419/8643600 (+0.721622819196)
+  distance_layers=[308509/1080450 (+0.285537507520), 547577/2160900 (+0.253402286085), 225577/1234800 (+0.182683025591)]
+  Perron_lambda=+0.437162495578
+  Perron_uniform_alignment=+0.996784201609
+  raw_cyclotomic_energy=39766/77175 (+0.515270489148)
+
+ASSUMPTION-CHALLENGE
+  alternate vertices considered: proof currencies, moment-cone faces,
+  covariance layers, exchange traps, sidecar obligations, and spectral modes.
+  preserved predicate: k=8 AP/consecutive coverage/covariance extremality.
+  destroyed information: raw q-vector order, trap identity, and odd
+  Worpitzky/Hermite-Biehler interlacing unless explicit sidecars are kept.
+  challenged assumption: a single scalar such as cyclotomic norm, q0, or
+  covariance is the proof object; the scout instead treats them as a
+  commuting payload diagram with a normal-cone dual certificate.
+
+TOURNAMENT ANALYSIS
+  vertices=proof currencies, not runners/arcs/sectors
+  pairwise_observable=retained LRC proof payload under quotienting
+  switch/gauge=A->B iff A retains support+moment+layer+sidecar payload better
+  score_hist={96: 1, 93: 1, 90: 1, 84: 1, 78: 1, 73: 1, 64: 1, 42: 1, 21: 1, 11: 1}
+  directed_3cycles=0
+  scc_sizes=[1,1,1,1,1,1,1,1,1,1]
+  hamiltonian_path_count=1
+  priority_path=normal_fan_support_certificate -> moment_cone_toeplitz_lambda_min -> covariance_distance_layer_certificate -> spectral_trap_discharge -> joukowski_hermite_biehler_transport -> perron_uniform_mode_alignment -> exchange_gradient_bulk -> raw_total_covariance -> raw_cyclotomic_norm -> raw_left_compression

@@ -129,6 +129,45 @@ New handles: HYP-3223, T1323, LTI-323, LTT-223.  Next scout: classify the
 `tropical_plucker_defect`, then test whether HYP-3203's AP support normal is
 also the exchange-chamber normal and whether HYP-3205's dictionary coordinate
 predicts the same discharge.
+## codex-2026-06-28 -- HYP-3224 spectral payload cube / normal-fan synthesis
+
+Owner prompt: spend another long session pushing more creative abstract
+synthesis toward the LRC14 proof.  After pulling incoming HYP-3210
+Joukowski/Hermite-Biehler/Perron, HYP-3222 exact HB/Perron certificates,
+and HYP-3202 moment-problem merge work,
+added `04-computation/lrc14_spectral_payload_cube_codex_20260628.py` and
+stored `05-knowledge/results/lrc14_spectral_payload_cube_codex_20260628.out`.
+
+Core finding: over the `3432` anchored bounded k=8 rows, the six max-facing
+metrics `AP_support`, `Toeplitz_lambda_min`, `D1`, `D2`, `D3`, and
+`Sigma_kappa2` have Pareto skyline size `2`: consecutive `{0..7}` and the
+nonprimitive doubled AP dilation `{0,2,4,6,8,10,12,14}`.  Consecutive ties
+doubled AP for coverage, `L_y`, covariance, AP support projection
+`39766/540225`, all three covariance layers, and Toeplitz
+`lambda_min=0.042304730706`; raw cyclotomic energy remains a false scalar
+(`consec` rank `19` for minimum).
+
+New proof route: treat AP support, Toeplitz moment-cone interior, covariance
+layers, Perron alignment, ordered-tail exchange, and HB/Joukowski interlacing
+as a spectral payload cube / normal-fan diagram.  Rebase integration with
+incoming HYP-3204 adds the coefficient face: the scout reproduces the central
+exchange-rate lemma with `0` violations and worst ratio `12882/17161`, so
+central `q3` gain is priced by ordered-state `q0+q6` loss.  HYP-3202's `11`
+primitive exchange traps all have strict Toeplitz lambda-min deficits,
+and incoming HYP-3205 supplies the dictionary-intersection layer beneath the
+normal-fan reading.  This suggests a multi-chart theorem:
+exchange/covariance improvement off the
+finite trap manifold, Toeplitz/Schur/Verblunsky/Fejer-Riesz curvature on the
+trap boundary, ordered-tail pricing for the Worpitzky center, and
+Chebyshev/Cohn-Elkies/Hermite-Biehler/Joukowski as the magic-function gluing
+theorem.  Incoming HYP-3212/HYP-3213 make the dual-certificate target more
+specific: the level-7 Chebyshev/Cohn-Elkies/Delsarte magic function.
+Incoming HYP-3222 supplies the exact gluing sidecar this dual must carry:
+strict `E/O` Hermite-Biehler interlacing, Wronskian positivity, and the ideal
+C6 Perron quotient.
+
+Artifacts: HYP-3224 detail, T1307, LTI-307, LTT-207, OPEN-Q-108 addendum,
+reflection `07-reflections/lrc14-spectral-payload-cube-normal-fan-codex-20260628.md`.
 
 ## mac-mini-2026-06-27-S73d -- the moment-problem merge: Caratheodory-Toeplitz + Griffiths/GKS + Verblunsky all read the LRC FM/AFM phase
 

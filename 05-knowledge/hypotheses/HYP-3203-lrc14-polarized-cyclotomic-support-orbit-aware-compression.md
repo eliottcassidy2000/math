@@ -169,3 +169,13 @@ type: dilation, mirror, and two-block trap status.
    two-block sidecar families.
 3. Test whether AP residual projection remains sharp on larger bounded banks
    and primitive representatives after quotienting dilation.
+
+## Post-HYP-3224 Integration
+
+HYP-3224 confirms that the AP support functional is not isolated: when paired
+with Toeplitz `lambda_min`, covariance layers `D1,D2,D3`, and total
+covariance, the bounded-bank Pareto skyline is still exactly AP plus doubled
+AP.  It also shows that the `11` strongest primitive exchange traps are all
+discharged by strict Toeplitz moment-cone deficits.  Therefore the next
+support proof should look for a normal-cone dual certificate rather than only
+a linear inequality in the q-vector.

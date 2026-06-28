@@ -60,6 +60,39 @@ HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203,
 HYP-3202, HYP-3201, HYP-3200, HYP-3163,
 HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3139, HYP-3138,
 HYP-3132, THM-577, T1323, LTI-323, LTT-223, OPEN-Q-108.
+**OPEN-Q-108 HYP-3224 spectral payload cube / normal-fan addendum:**
+HYP-3224 integrates the HYP-3222 exact Joukowski/Hermite-Biehler/Perron
+certificate packet,
+HYP-3205 spectral dictionary compatibility, HYP-3204 ordered-tail exchange,
+HYP-3203 AP support, HYP-3202 covariance
+layers/traps, and the Caratheodory-Toeplitz lambda-min route into one exact
+bounded-bank payload cube, then reads incoming HYP-3212/HYP-3213 as the
+Chebyshev/Cohn-Elkies magic-function candidate for the dual.  Over the
+`3432` anchored k=8 rows, the metrics `AP_support`,
+`Toeplitz_lambda_min`, `D1`, `D2`, `D3`, and `Sigma_kappa2` have Pareto
+skyline size `2`, exactly consecutive and the nonprimitive doubled AP
+dilation.  Raw cyclotomic energy remains a false scalar (`consec` rank `19`
+for minimum).  HYP-3204's exchange-rate lemma is reproduced inside the scout:
+`0` violations and worst ratio `12882/17161`, so central `q3` gain is priced
+by `q0+q6` loss.  All `11` primitive arbitrary-exchange traps from HYP-3202
+have strict Toeplitz lambda-min deficits.
+
+Open task: construct the actual dual certificate behind this normal face.
+The strongest target is a Chebyshev/Cohn-Elkies/Delsarte/Farkas/Toeplitz/
+Fejer-Riesz/Schur/Verblunsky slack whose zero set is AP plus doubled AP,
+whose visible dictionary shadow is HYP-3205's AP-tight intersection, whose
+linear shadow is the AP support inequality, whose coefficient shadow is the
+HYP-3204 exchange-rate lemma, whose curvature shadow discharges the `11`
+exchange traps, and whose spectral shadow can be glued to the HYP-3222
+Joukowski/Hermite-Biehler even/odd interlacing and Perron quotient
+certificates.  A plausible proof
+shape is multi-chart: exchange/covariance improvement off the finite trap
+manifold, moment-cone curvature on the trap boundary, ordered-tail pricing
+for the odd central mass, and HB/Joukowski interlacing for the odd sidecar.
+-> HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205,
+HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161,
+HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3138,
+HYP-3132, T1307, LTI-307, LTT-207, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3153 Lee-Yang/Worpitzky/quartic packet addendum:**
 HYP-3153 combines HYP-3151's function-compression legality packet with

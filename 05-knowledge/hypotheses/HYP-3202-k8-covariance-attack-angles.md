@@ -163,6 +163,20 @@ The odd Worpitzky/associator channel remains separate.  Do not scalarize it
 to `1/7`; keep `S3`, minority-edge gates, PGF/root data, and terminal debt as
 sidecars.
 
+## Post-HYP-3224 Integration
+
+HYP-3224 reruns the `11` arbitrary-exchange traps against a larger spectral
+payload cube.  Every nonconsecutive trap has a strict Toeplitz `lambda_min`
+deficit, and the combined skyline of
+
+```text
+AP_support, Toeplitz_lambda_min, D1, D2, D3, Sigma_kappa2
+```
+
+is exactly consecutive plus the nonprimitive doubled AP dilation.  This
+sharpens the route: use exchange/covariance as the bulk chart, then use the
+Caratheodory-Toeplitz moment-cone chart to discharge the trap boundary.
+
 ## Artifacts
 
 - Script: `04-computation/lrc_k8_covariance_attack_angles_codex_20260628.py`

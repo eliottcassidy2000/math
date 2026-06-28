@@ -159,6 +159,12 @@ obligations, and proof-carrier interfaces.
   core, filler, canary, deletable coordinates, class distribution, and
   minimal-cover subbasis before treating witness multiplicity or score-class
   multiplicity as proof evidence.
+- Need to synthesize the k=8 spectral proof currencies:
+  use LTT-207 after LTT-203/LTT-202/LTT-201/LTT-178/LTT-177 and make normal
+  faces, moment-cone margins, covariance layers, exchange traps, Perron modes,
+  and Hermite-Biehler sidecars the vertices.  Treat raw cyclotomic norm and
+  raw left-compression as shadows until the AP normal cone and trap discharge
+  chart are explicit.
 - Need to use a two-coordinate tournament quotient without hiding its missing
   coordinate:
   use LTT-173 after LTT-172/LTT-171/LTT-170/LTT-166/LTT-165/LTT-162/LTT-160 and make proof
@@ -6307,6 +6313,56 @@ quotient_legality_status
   HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
   HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, THM-577,
   LTI-306, LTT-206, T1306, OPEN-Q-108.
+
+## LTT-207: Spectral Payload Cube And Normal-Fan Tournament
+
+- **Move:** Treat proof currencies as tournament vertices: normal-fan support
+  certificate, Toeplitz moment-cone lambda-min, covariance distance-layer
+  certificate, spectral trap discharge, Joukowski/Hermite-Biehler transport,
+  Perron uniform-mode alignment, ordered-tail exchange-rate pricing,
+  Chebyshev/Cohn-Elkies magic-function dual, exchange-gradient bulk, raw
+  total covariance, raw cyclotomic norm, and raw left-compression.
+- **LRC use:** HYP-3224 tests whether the current k=8 proof signals are
+  projections of one certificate.  Over the exact bounded bank, the metrics
+  `AP_support`, `Toeplitz_lambda_min`, `D1`, `D2`, `D3`, and
+  `Sigma_kappa2` have Pareto skyline size `2`: consecutive and the
+  nonprimitive doubled AP dilation.  It also reproduces HYP-3204's
+  exchange-rate lemma with `0` violations, so central `q3` gain is priced by
+  ordered-state `q0+q6` loss.  HYP-3205 is the dictionary-intersection layer
+  below this packet: AP/doubled AP are the only simultaneous tight rows for
+  the measured dictionary.  Incoming HYP-3212/HYP-3213 identify the plausible
+  dual as a level-7 Chebyshev/Cohn-Elkies/Delsarte magic function.  HYP-3222
+  supplies the exact gluing sidecar: strict `E/O` Hermite-Biehler interlacing
+  and an ideal C6 Perron quotient that the normal-fan certificate must
+  transport without dropping self-inversive or boundary covariance defects.
+  This promotes the next target from "find another scalar" to "construct the
+  normal-cone dual certificate."
+- **Preserves:** AP residual direction, Toeplitz moment-cone interior
+  margin, covariance layer locations, finite exchange-trap identities,
+  dilation equality status, Perron leading-mode data, and the
+  Hermite-Biehler/Joukowski interlacing sidecar.
+- **Forgets / guardrail:** raw cyclotomic norm forgets direction and fails
+  (`consec` rank `19` for minimum); raw covariance forgets the layer split;
+  raw Perron alignment is supportive but not a maximum by itself; raw
+  left-compression forgets the finite trap boundary.
+- **Fingerprint:** transitive proof-currency tournament with one Hamiltonian
+  path:
+  `normal_fan_support_certificate ->
+  moment_cone_toeplitz_lambda_min ->
+  covariance_distance_layer_certificate -> spectral_trap_discharge ->
+  joukowski_hermite_biehler_transport -> perron_uniform_mode_alignment ->
+  exchange_gradient_bulk -> raw_total_covariance -> raw_cyclotomic_norm ->
+  raw_left_compression`.
+- **Next hook:** Prove a multi-chart theorem: exchange/covariance improvement
+  off the finite trap manifold, Toeplitz/Schur/Verblunsky/Fejer-Riesz
+  curvature on the `11` traps, and HYP-3204 coefficient exchange for the
+  central Worpitzky mass.  Then identify the slack with the
+  Chebyshev/Cohn-Elkies magic function and the Joukowski/Hermite-Biehler
+  even/odd interlacing gap.
+- **Pointers:** HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210,
+  HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
+  HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
+  HYP-3138, HYP-3132, LTI-307, LTT-207, T1307, OPEN-Q-108.
 
 ## LTT-223: Green-Current And Lorentzian Exchange Tournament
 
