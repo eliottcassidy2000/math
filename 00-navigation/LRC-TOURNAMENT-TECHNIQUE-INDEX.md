@@ -165,6 +165,12 @@ obligations, and proof-carrier interfaces.
   and Hermite-Biehler sidecars the vertices.  Treat raw cyclotomic norm and
   raw left-compression as shadows until the AP normal cone and trap discharge
   chart are explicit.
+- Need to classify the finite HYP-3202 trap boundary after Toeplitz discharge:
+  use LTT-208 after LTT-207/LTT-223/LTT-202/LTT-201/LTT-178 and make trap
+  certificate sidecars the vertices.  Keep Toeplitz discharge as the boundary
+  chart, then separate Green effective-resistance bottlenecks, conditional
+  Rayleigh debt, and rank-2 pair-Plucker circuits before proving a finite trap
+  theorem.
 - Need to use a two-coordinate tournament quotient without hiding its missing
   coordinate:
   use LTT-173 after LTT-172/LTT-171/LTT-170/LTT-166/LTT-165/LTT-162/LTT-160 and make proof
@@ -6363,6 +6369,49 @@ quotient_legality_status
   HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
   HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
   HYP-3138, HYP-3132, LTI-307, LTT-207, T1307, OPEN-Q-108.
+
+## LTT-208: Green-Lorentzian Trap Fingerprint Tournament
+
+- **Move:** Use proof certificates and trap sidecars as tournament vertices:
+  Toeplitz trap discharge, Green effective-resistance profile, conditional
+  Rayleigh surplus census, rank-2 tropical Plucker gap, Schur payload exit,
+  covariance Hessian signature, raw positive covariance graph, plain exchange
+  local maximum, and runner/arc tournament shadow.
+- **LRC use:** HYP-3225 runs the HYP-3223 Green-current / Lorentzian proposal
+  on the HYP-3202 trap manifold.  The exact scout evaluates the `12`
+  arbitrary-swap local maxima plus all one-swap neighbors (`577` rows).  Every
+  local maximum selects `Toeplitz_lambda_min` as first HYP-3224/HYP-3205
+  dictionary discharge, while the `11` non-AP traps split into `6` rank-2
+  pair-Plucker bottlenecks, `2` low-connectivity Green bottlenecks, `2`
+  AFM/frustrated high-Rayleigh-debt rows, and `1` mixed sidecar.  This makes
+  the finite trap boundary a typed proof-circuit/filler-core object rather
+  than an anonymous exception list.
+- **Preserves:** primitive k=8 AP/consecutive covariance and coverage
+  predicate, trap identities, Toeplitz normal-fan discharge, current-leakage
+  sidecars, conditional-dependence sidecars, pair-Plucker circuit sidecars,
+  and the handoff to HYP-3222/HYP-3212/HYP-3213 spectral arithmetic.
+- **Forgets / guardrail:** runner or arc vertices are too lossy for this
+  target.  Raw `lambda2_ratio`, raw Plucker gap, or raw Rayleigh-negative
+  count cannot be terminal proof vertices, because AP itself has raw
+  Rayleigh-negative and Plucker sidecar signals.  Use them only relative to
+  Toeplitz/AP normal-cone discharge.
+- **Fingerprint:** transitive certificate tournament:
+  `score_hist={99:1,91:1,84:1,78:1,72:1,66:1,42:1,30:1,9:1}`,
+  `directed_3cycles=0`, `scc_sizes=[1,1,1,1,1,1,1,1,1]`, and
+  `hamiltonian_path_count=1`, with priority path
+  `toeplitz_trap_discharge -> green_effective_resistance_profile ->
+  conditional_rayleigh_surplus_census -> rank2_tropical_plucker_gap ->
+  schur_payload_exit -> covariance_hessian_signature ->
+  raw_positive_covariance_graph -> plain_exchange_local_maximum ->
+  runner_or_arc_tournament`.
+- **Next hook:** Prove the five trap classes symbolically; test persistence
+  at k=9/k=10; express pair-Plucker traps as valuated-matroid circuits and
+  Green bottlenecks as Schur/Verblunsky/Fejer-Riesz slack; check whether the
+  central `q3` exchange-rate slack of HYP-3204 is a projection of the same
+  Toeplitz chart; hand the typed motif atoms to HYP-3226.
+- **Pointers:** HYP-3225, HYP-3226, HYP-3224, HYP-3223, HYP-3222, HYP-3213, HYP-3212,
+  HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3163, HYP-3132, HYP-3143,
+  HYP-3148, HYP-3149, HYP-3199, LTI-308, LTT-208, T1308, OPEN-Q-108.
 
 ## LTT-223: Green-Current And Lorentzian Exchange Tournament
 

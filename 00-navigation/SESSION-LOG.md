@@ -1,3 +1,51 @@
+## codex-2026-06-28 -- HYP-3225 Green-Lorentzian trap fingerprints
+
+Owner prompt: continue extending the Lee-Yang/LRC/tournament ideas creatively
+toward proof targets, especially the finite HYP-3202 trap boundary and the
+Green-current/Lorentzian certificate proposal.
+
+Added `04-computation/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.py`
+and stored `05-knowledge/results/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.out`.
+The script evaluates the `12` HYP-3202 arbitrary-swap local maxima plus all
+one-swap neighbors (`577` rows), using pure-Python exact/floating linear
+algebra for Toeplitz discharge, positive-conductance Laplacian/effective
+resistance, covariance Hessian signature, conditional Rayleigh surplus, and
+rank-2 pair-Plucker gaps.
+
+Core finding: HYP-3224's Toeplitz moment-cone chart remains the universal
+first trap discharge.  All `12` local maxima select `Toeplitz_lambda_min` as
+the first HYP-3205/HYP-3224 dictionary coordinate.  The new signal is the
+sidecar taxonomy of the `11` non-AP traps: `6` rank-2 pair-Plucker
+bottlenecks, `2` Green low-connectivity bottlenecks, `2` AFM/frustrated
+high-Rayleigh-debt rows, and `1` mixed Green/Lorentzian sidecar.
+
+Interpretation: Toeplitz deficit is not the same as any single electrical or
+Lorentzian scalar (`corr(lambda2_ratio,deficit)=-0.636805`,
+`corr(plucker_gap,deficit)=+0.285960`, `corr(rayleigh_negative_count,deficit)=-0.247417`).
+Toeplitz is better read as the boundary chart that absorbs multiple trap
+mechanisms.  AP itself has raw conditional-Rayleigh negatives and a positive
+pair-Plucker gap, so those sidecars are classifiers, not terminal proof
+objectives.
+
+Tournament Analysis: vertices are proof certificates and sidecars, not
+runners/arcs/sectors.  The measured proof-certificate tournament is transitive
+with one Hamiltonian path led by `toeplitz_trap_discharge ->
+green_effective_resistance_profile -> conditional_rayleigh_surplus_census ->
+rank2_tropical_plucker_gap`.  Assumption challenge recorded: raw speed order,
+the full PGF root curve, and the HYP-3222 odd HB side are destroyed unless
+sidecars are retained.
+
+New proof target: replace the finite trap table by a finite theorem schema.
+Prove exchange/covariance improvement off the trap manifold; prove
+Toeplitz/Schur/Verblunsky/Fejer-Riesz curvature on the boundary; express the
+pair-Plucker traps as valuated-matroid circuits and Green traps as
+effective-resistance or Schur-complement bottlenecks; then test whether the
+same taxonomy persists at k=9/k=10 and projects to HYP-3204's central
+exchange-rate slack.
+
+Artifacts: HYP-3225 detail, T1308, LTI-308, LTT-208, OPEN-Q-108 addendum,
+reflection `07-reflections/lrc14-green-lorentzian-trap-fingerprints-codex-20260628.md`.
+
 ## mac-mini-2026-06-27-S74 -- abstract synthesis: THE ONE OBSTRUCTION (apex-7 = Lee-Yang zero at 1/p; algebra is worst-case, resolution is analytic) + octonion REFUTED
 
 Owner: another long session, even more creative + abstract + synthesize. Two threads (HYP-3221 + the octonion

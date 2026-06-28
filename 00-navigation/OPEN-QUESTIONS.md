@@ -94,6 +94,30 @@ HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161,
 HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3138,
 HYP-3132, T1307, LTI-307, LTT-207, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3225 Green-Lorentzian trap-fingerprint addendum:**
+HYP-3225 executes HYP-3223's proposed Green-current and Lorentzian trap
+fields on the `12` HYP-3202 arbitrary-swap local maxima plus all one-swap
+neighbors (`577` evaluated rows).  HYP-3224's Toeplitz boundary chart remains
+universal: every local maximum selects `Toeplitz_lambda_min` as first
+dictionary discharge.  The new information is the sidecar taxonomy of the
+`11` non-AP traps: `6` rank-2 pair-Plucker bottlenecks, `2` low-connectivity
+Green bottlenecks, `2` AFM/frustrated high-Rayleigh-debt rows, and `1` mixed
+Green/Lorentzian sidecar.  The correlations with Toeplitz deficit are mixed
+(`lambda2_ratio -0.636805`, Plucker gap `+0.285960`, Rayleigh-negative count
+`-0.247417`), so the moment-cone deficit should be treated as a chart switch,
+not as one electrical or valuated-matroid scalar in disguise.
+
+Open task: replace the finite trap table with a finite theorem schema.  Derive
+exact inequalities for the five trap classes; prove exchange/covariance
+improvement off the trap manifold; prove Toeplitz/Schur/Verblunsky/Fejer-Riesz
+curvature on the boundary; and express the pair-Plucker class as a
+valuated-matroid circuit and the Green class as an effective-resistance or
+Schur-complement bottleneck.  Then test whether the same classifier persists
+for k=9/k=10 and whether HYP-3204's central exchange-rate slack is a
+projection of the same Toeplitz chart. -> HYP-3225, HYP-3224, HYP-3223,
+HYP-3222, HYP-3213, HYP-3212, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
+HYP-3163, HYP-3132, T1308, LTI-308, LTT-208, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3153 Lee-Yang/Worpitzky/quartic packet addendum:**
 HYP-3153 combines HYP-3151's function-compression legality packet with
 HYP-3152's Lee-Yang radius web.  Exact scout output verifies `q0=q6*R^6`,

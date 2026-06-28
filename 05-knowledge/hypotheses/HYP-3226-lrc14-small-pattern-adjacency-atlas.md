@@ -45,7 +45,7 @@ ordered-tail q0+q6 versus q3 pricing
 HYP-3202 finite exchange traps
 HYP-3222 Hermite-Biehler / Perron gluing sidecar
 HYP-3223 Green-current / Lorentzian trap classifiers
-HYP-3225 spectral-regularization guardrails
+HYP-3225 Green-current / Lorentzian trap fingerprints
 ```
 
 ## Reserved Method

@@ -1,0 +1,89 @@
+HYP-3225 green-current / Lorentzian trap fingerprint scout
+==============================================================================
+bank=anchored bounded k=8: E={0} union A, A subset [1,14], |A|=7
+scope=HYP-3202 arbitrary-swap trap set plus all one-swap neighbors
+rows_evaluated=577
+arbitrary_swap_local_maxima=12 including consecutive (imported from HYP-3202)
+target=(0, 1, 2, 3, 4, 5, 6, 7)
+even_AP=(0, 2, 4, 6, 8, 10, 12, 14) primitive=False
+
+AP / CONSECUTIVE BASELINE FINGERPRINT
+  toeplitz_lambda_min=+0.042304730706
+  sigma_kappa2=6237419/8643600 (+0.721622819196)
+  positive_laplacian_lambda2=+0.192033074001
+  effective_resistance_by_distance=(6.710086,7.345148,7.675710)
+  positive_cut_min=+0.176504234347 mask=(1, 2, 3, 4, 5)
+  hessian_signature=(pos,zero,neg)=(6, 0, 0)
+  conditional_rayleigh_negatives=56
+  pair_tropical_plucker_max_gap=+0.458959814453 quad=(1, 2, 5, 6)
+
+TRAP FINGERPRINT TABLE
+  columns: E | class | dict_discharge | neg_pairs | lambda2_ratio | Rdist | rayleigh_neg | plucker_gap | best_toeplitz_exit_gain
+  E=(0, 1, 2, 3, 4, 5, 6, 7) | AP_terminal | Toeplitz_lambda_min(+0.000000) | neg_pairs=0 | lambda2_ratio=+1.000000 | Rdist=(6.710086,7.345148,7.675710) | rayleigh_neg=56 | plucker_gap=+0.458960 | toeplitz_exit_gain=-0.084493880476
+  E=(0, 2, 4, 6, 7, 8, 10, 12) | rank2_pair_plucker_bottleneck | Toeplitz_lambda_min(+3.446527) | neg_pairs=1 | lambda2_ratio=+0.592713 | Rdist=(11.170601,11.496079,11.998392) | rayleigh_neg=58 | plucker_gap=+0.519647 | toeplitz_exit_gain=-0.106466002436
+    bottleneck=maxR(1, 6)=15.730609 mincut=0.112768@(1, 2, 3, 4, 5) rayleigh_min=-18127/1728720@((), 1, 6) plucker_quad=(1, 2, 3, 4)
+    best_toeplitz_exit=(0, 2, 4, 5, 6, 7, 8, 10) best_ap_exit_gain=-0.002546624092 best_ap_exit=(0, 2, 4, 5, 6, 8, 10, 12)
+  E=(0, 1, 3, 5, 7, 9, 11, 13) | rank2_pair_plucker_bottleneck | Toeplitz_lambda_min(+2.693206) | neg_pairs=0 | lambda2_ratio=+0.577148 | Rdist=(12.919486,12.418402,13.738746) | rayleigh_neg=65 | plucker_gap=+0.367776 | toeplitz_exit_gain=-0.131767950615
+    bottleneck=maxR(1, 4)=16.111973 mincut=0.110193@(1,) rayleigh_min=-30037519/7647965325@((3,), 1, 6) plucker_quad=(1, 3, 4, 6)
+    best_toeplitz_exit=(0, 1, 3, 4, 5, 7, 9, 13) best_ap_exit_gain=+0.002006674893 best_ap_exit=(0, 1, 3, 5, 6, 7, 9, 11)
+  E=(0, 1, 2, 3, 11, 12, 13, 14) | green_low_connectivity_bottleneck | Toeplitz_lambda_min(+4.555882) | neg_pairs=1 | lambda2_ratio=+0.207625 | Rdist=(14.916248,20.907267,21.436806) | rayleigh_neg=78 | plucker_gap=+0.191087 | toeplitz_exit_gain=-0.021889545270
+    bottleneck=maxR(2, 6)=37.207840 mincut=0.035016@(1, 2, 3, 4, 5) rayleigh_min=-111050/13390377@((), 1, 6) plucker_quad=(2, 3, 5, 6)
+    best_toeplitz_exit=(0, 1, 2, 10, 11, 12, 13, 14) best_ap_exit_gain=+0.003597649516 best_ap_exit=(0, 1, 2, 3, 6, 11, 12, 14)
+  E=(0, 3, 6, 8, 9, 11, 12, 14) | rank2_pair_plucker_bottleneck | Toeplitz_lambda_min(+5.888933) | neg_pairs=3 | lambda2_ratio=+0.209423 | Rdist=(14.839728,20.857256,21.850932) | rayleigh_neg=56 | plucker_gap=+0.444550 | toeplitz_exit_gain=-0.029626780595
+    bottleneck=maxR(1, 6)=37.619588 mincut=0.036982@(1, 2, 3, 4, 5) rayleigh_min=-260119/10458756@((), 1, 6) plucker_quad=(1, 2, 5, 6)
+    best_toeplitz_exit=(0, 3, 5, 6, 8, 9, 11, 14) best_ap_exit_gain=+0.005323118734 best_ap_exit=(0, 3, 4, 6, 8, 9, 12, 14)
+  E=(0, 2, 3, 5, 6, 8, 11, 14) | rank2_pair_plucker_bottleneck | Toeplitz_lambda_min(+4.691195) | neg_pairs=1 | lambda2_ratio=+0.108128 | Rdist=(21.686673,32.542658,34.204635) | rayleigh_neg=58 | plucker_gap=+0.375202 | toeplitz_exit_gain=-0.080296782173
+    bottleneck=maxR(3, 6)=66.821722 mincut=0.017841@(1, 2, 3, 4, 5) rayleigh_min=-1333723/348625200@((), 3, 6) plucker_quad=(1, 3, 4, 6)
+    best_toeplitz_exit=(0, 3, 5, 6, 8, 9, 11, 14) best_ap_exit_gain=+0.009847706553 best_ap_exit=(0, 2, 3, 4, 5, 6, 8, 14)
+  E=(0, 6, 7, 8, 9, 10, 11, 12) | rank2_pair_plucker_bottleneck | Toeplitz_lambda_min(+5.359482) | neg_pairs=0 | lambda2_ratio=+0.477620 | Rdist=(16.626426,15.034470,16.398650) | rayleigh_neg=49 | plucker_gap=+0.371677 | toeplitz_exit_gain=-0.006895375284
+    bottleneck=maxR(2, 5)=19.023819 mincut=0.095257@(1, 2, 3, 5, 6) rayleigh_min=-123086927/37651521600@((6,), 1, 4) plucker_quad=(1, 2, 4, 6)
+    best_toeplitz_exit=(0, 7, 8, 9, 10, 11, 12, 13) best_ap_exit_gain=+0.005383787199 best_ap_exit=(0, 4, 6, 7, 8, 9, 10, 12)
+  E=(0, 4, 5, 8, 9, 10, 13, 14) | green_low_connectivity_bottleneck | Toeplitz_lambda_min(+5.305186) | neg_pairs=3 | lambda2_ratio=+0.133777 | Rdist=(18.819239,28.772110,29.658367) | rayleigh_neg=71 | plucker_gap=+0.154502 | toeplitz_exit_gain=+0.013757983539
+    bottleneck=maxR(2, 6)=53.459744 mincut=0.023146@(1, 2, 3, 4, 5) rayleigh_min=-332789/33710040@((), 4, 6) plucker_quad=(1, 2, 5, 6)
+    best_toeplitz_exit=(0, 1, 4, 5, 9, 10, 13, 14) best_ap_exit_gain=+0.006746464851 best_ap_exit=(0, 4, 5, 6, 8, 9, 10, 14)
+  E=(0, 8, 9, 10, 11, 12, 13, 14) | mixed_green_lorentzian_sidecar | Toeplitz_lambda_min(+5.248669) | neg_pairs=0 | lambda2_ratio=+0.463733 | Rdist=(18.136598,15.946280,17.051606) | rayleigh_neg=49 | plucker_gap=+0.168574 | toeplitz_exit_gain=-0.011583284405
+    bottleneck=maxR(2, 5)=21.057861 mincut=0.080976@(1, 3, 4, 5, 6) rayleigh_min=-5024530033/2121035716800@((6,), 1, 4) plucker_quad=(1, 2, 5, 6)
+    best_toeplitz_exit=(0, 7, 8, 9, 10, 11, 12, 13) best_ap_exit_gain=+0.003121089579 best_ap_exit=(0, 6, 8, 9, 10, 11, 12, 14)
+  E=(0, 1, 2, 3, 7, 8, 9, 10) | AFM_frustrated_high_rayleigh_debt | Toeplitz_lambda_min(+9.871816) | neg_pairs=4 | lambda2_ratio=+0.174823 | Rdist=(25.497169,30.997951,29.806671) | rayleigh_neg=56 | plucker_gap=+0.408806 | toeplitz_exit_gain=-0.044337022134
+    bottleneck=maxR(3, 6)=48.340361 mincut=0.030783@(1, 2, 3, 4, 5) rayleigh_min=-4007/115248@((), 1, 6) plucker_quad=(1, 3, 4, 6)
+    best_toeplitz_exit=(0, 1, 2, 3, 8, 9, 10, 11) best_ap_exit_gain=+0.013212704583 best_ap_exit=(0, 1, 2, 3, 4, 7, 8, 10)
+  E=(0, 2, 5, 7, 9, 10, 12, 14) | AFM_frustrated_high_rayleigh_debt | Toeplitz_lambda_min(+8.618316) | neg_pairs=4 | lambda2_ratio=+0.085073 | Rdist=(30.005075,45.957461,45.396648) | rayleigh_neg=65 | plucker_gap=+0.185037 | toeplitz_exit_gain=+0.010012816817
+    bottleneck=maxR(1, 6)=87.637154 mincut=0.014375@(1, 2, 3, 4, 5) rayleigh_min=-545449/19448100@((), 1, 5) plucker_quad=(1, 2, 5, 6)
+    best_toeplitz_exit=(0, 2, 4, 5, 7, 9, 12, 14) best_ap_exit_gain=+0.010810464775 best_ap_exit=(0, 2, 5, 6, 7, 10, 12, 14)
+  E=(0, 1, 4, 5, 7, 8, 11, 12) | rank2_pair_plucker_bottleneck | Toeplitz_lambda_min(+9.448885) | neg_pairs=3 | lambda2_ratio=+0.148875 | Rdist=(34.034877,30.786562,34.823074) | rayleigh_neg=53 | plucker_gap=+0.794974 | toeplitz_exit_gain=-0.028784029396
+    bottleneck=maxR(1, 6)=51.432366 mincut=0.043280@(1, 2, 3, 4, 5) rayleigh_min=-3198519/58104200@((), 1, 6) plucker_quad=(1, 4, 5, 6)
+    best_toeplitz_exit=(0, 1, 4, 5, 7, 8, 11, 14) best_ap_exit_gain=+0.012016405202 best_ap_exit=(0, 1, 2, 4, 5, 7, 8, 12)
+
+CLASSIFICATION SUMMARY
+  class_counts={'AP_terminal': 1, 'rank2_pair_plucker_bottleneck': 6, 'green_low_connectivity_bottleneck': 2, 'mixed_green_lorentzian_sidecar': 1, 'AFM_frustrated_high_rayleigh_debt': 2}
+  dictionary_discharge_counts={'Toeplitz_lambda_min': 12}
+  readout=Toeplitz remains the universal first dictionary discharge, but the traps split into Green/Rayleigh/Plucker sidecar types.
+
+GREEN-CURRENT SIGNALS VS TOEPLITZ DEFICIT
+  corr(lambda2_ratio, toeplitz_deficit)=-0.636805
+  corr(plucker_gap, toeplitz_deficit)=+0.285960
+  corr(rayleigh_negative_count, toeplitz_deficit)=-0.247417
+  interpretation=the moment-cone deficit is not identical to any one Green/Lorentzian scalar; it acts like a chart switch that sees all trap types.
+
+ASSUMPTION-CHALLENGE
+  alternate vertices considered: runners, arcs, sectors, covariance pairs,
+  positive-conductance graph cuts, conditional Rayleigh events, pair Plucker
+  quadruples, exchange moves, and proof-obligation charts.
+  chosen vertices: certificate types and trap-local sidecars.
+  preserved predicate: primitive k=8 AP/consecutive covariance/coverage
+  extremality plus HYP-3224 normal-fan discharge.
+  destroyed information: raw speed order, full PGF root curve, and
+  Hermite-Biehler odd side unless the named sidecars are retained.
+  challenged assumption: Toeplitz discharge should be a single scalar
+  explanation.  The scout treats Toeplitz as the boundary chart that
+  absorbs several nonisomorphic Green/Rayleigh/Plucker trap mechanisms.
+
+TOURNAMENT ANALYSIS
+  vertices=proof certificates, not runners/arcs/sectors
+  pairwise_observable=which certificate explains trap discharge while retaining sidecars
+  switch/gauge=A->B iff A keeps more normal-fan, moment, and trap-local payload
+  score_hist={99: 1, 91: 1, 84: 1, 78: 1, 72: 1, 66: 1, 42: 1, 30: 1, 9: 1}
+  directed_3cycles=0
+  scc_sizes=[1,1,1,1,1,1,1,1,1]
+  hamiltonian_path_count=1
+  priority_path=toeplitz_trap_discharge -> green_effective_resistance_profile -> conditional_rayleigh_surplus_census -> rank2_tropical_plucker_gap -> schur_payload_exit -> covariance_hessian_signature -> raw_positive_covariance_graph -> plain_exchange_local_maximum -> runner_or_arc_tournament

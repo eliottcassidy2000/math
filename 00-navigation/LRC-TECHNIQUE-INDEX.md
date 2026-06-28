@@ -96,6 +96,7 @@ covariance Laplacian / Monge sector kernel / associator triple-cocycle / odd-ear
 Joukowski-Hermite-Biehler and Perron packet / interlacing leg certificate / Perron alignment / Toeplitz margin / self-inversive defect
 green-current response kernel / effective-resistance profile / Schur-complement trap discharge / Lorentzian exchange chamber / tropical Plucker sidecar
 spectral payload cube / AP normal cone / Toeplitz moment-cone curvature / covariance layers / finite trap discharge
+green-lorentzian trap fingerprints / Toeplitz boundary chart / effective-resistance bottlenecks / conditional-Rayleigh debt / rank-2 pair-Plucker sidecars
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -435,6 +436,7 @@ record what it destroys before asking it to prove anything.
 | LTI-304 | k=8 ordered-tail exchange verifier | Upper empty-sector tails, stop-loss guardrail, bimodality `q0+q6`, central mass `q3`, exchange-rate inequality, local-compression trap count | HYP-3204/codex-2026-06-28 follows HYP-3210/HYP-3203/HYP-3202/HYP-3200 over the same exact anchored k=8 bank and finds a sharper theorem-facing split.  Full convex/stop-loss dominance is false (`3429` primitive rows beat consec somewhere; no primitive row dominates it in all stop-loss coordinates).  The upper ordered-tail barrier survives: `0` primitive beaters for `q0`, `q5`, `q6`, `tail_ge_4`, `tail_ge_5`, `tail_ge_6`, `stop_ge_3`, `stop_ge_4`, `stop_ge_5`, `bimod=q0+q6`, `bimod_plus_q3`, and `L_y`.  The live lemma is the central exchange-rate inequality `(q3-q3_consec)_+ <= (q0+q6)_consec-(q0+q6)`, with `0` exact violations and worst ratio `12882/17161`; it implies `q0+q6+q3` and hence `L_y` extremality in primitive normal form.  Guardrails: `tail_ge_3` and raw `q3` have many beaters, and greedy coordinate compression has hundreds of local maxima. | HYP-3204, HYP-3210, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, HYP-3122, THM-577, T1304, LTT-204, LTI-304, OPEN-Q-108 | Prove the primitive-normal-form exchange-rate lemma, then join it to a `q0+q6` bimodality atom from HYP-3202 distance-layer covariance or HYP-3200 ferromagnetic/reflection-fold machinery, with HYP-3210 carrying the odd Worpitzky/Hermite-Biehler interlacing sidecar.  Do not use full convex order, `tail_ge_3`, raw `q3`, entropy, or naive one-coordinate exchange as terminal proof routes. |
 | LTI-305 | k=8 spectral dictionary compatibility | Certificate vector, AP-tight face intersection, Toeplitz moment margin, AP support hyperplane, covariance distance layers, trap-sheaf discharge | HYP-3205/codex-2026-06-28 merges the current k=8 proof languages.  Exact bounded-bank evidence says AP/consec and doubled AP are the only simultaneous maximizers across `q0`, `L_y`, `Sigma kappa_2`, `D1,D2,D3`, AP support, and Toeplitz `lambda_min`; primitive normal form leaves AP unique.  The closest non-AP decoy `(0,2,3,4,5,6,7,8)` has nonzero deficits in every measured coordinate.  Perron alignment is only diagnostic and raw cyclotomic norm is false as a terminal extremal principle. | HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3210, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3138, HYP-3132, HYP-3117, HYP-3116, T1305, LTT-205, LTI-305, OPEN-Q-108 | Prove a certificate-Helly/separation lemma for the AP-tight dictionary intersection, then discharge exchange and compression traps by the first failed layer/support/Toeplitz coordinate; use the Joukowski/Hermite-Biehler bridge only with sidecars intact. |
 | LTI-307 | Spectral payload cube / normal-fan certificate | AP support, Toeplitz lambda-min, covariance layers `D1,D2,D3`, ordered-tail exchange `q0+q6` vs `q3`, total covariance, Perron alignment, exchange traps, moment-cone trap discharge | HYP-3224/codex-2026-06-28 integrates HYP-3205, the HYP-3222 exact Joukowski/Hermite-Biehler/Perron certificate packet, HYP-3210, HYP-3204, HYP-3203, HYP-3202, HYP-3201/KPS, HYP-3200, and incoming HYP-3212/HYP-3213 Chebyshev/Cohn-Elkies arithmetic into one bounded-bank payload cube.  Over the `3432` anchored k=8 rows, the six max-facing metrics `AP_support`, `Toeplitz_lambda_min`, `D1`, `D2`, `D3`, and `Sigma_kappa2` have Pareto skyline size `2`: consecutive and the nonprimitive doubled AP dilation.  Consecutive ties doubled AP for all those maxima, `q0+q6`, `q0+q6+q3`, and `L_y`; raw cyclotomic energy remains false (`consec` rank `19` for minimum).  The scout reproduces HYP-3204's central exchange-rate lemma with `0` violations and worst ratio `12882/17161`, and all `11` primitive arbitrary-exchange traps from HYP-3202 have strict Toeplitz lambda-min deficits. | HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3138, HYP-3132, T1307, LTT-207, LTI-307, OPEN-Q-108 | Search for an explicit Chebyshev/Cohn-Elkies/Delsarte/Toeplitz/Fejer-Riesz/Verblunsky dual whose slack controls the HYP-3205 dictionary intersection, AP support gap, ordered-tail exchange-rate slack, Toeplitz trap deficits, and the HYP-3222 HB/Perron gluing sidecar; prove exchange improvement off the trap manifold and moment-cone discharge on it. |
+| LTI-308 | Green-Lorentzian trap fingerprint classifier | HYP-3202 arbitrary-swap trap manifold, Toeplitz dictionary discharge, positive-conductance Laplacian, effective-resistance profiles, conditional Rayleigh surplus, rank-2 pair Plucker gaps, finite proof dispatcher | HYP-3225 executes HYP-3223's proposed Green-current / Lorentzian fields on the `12` HYP-3202 arbitrary-swap local maxima plus all one-swap neighbors (`577` evaluated rows).  All `12` rows select `Toeplitz_lambda_min` as the first HYP-3224/HYP-3205 dictionary discharge, but the `11` non-AP traps split into sidecar types: `rank2_pair_plucker_bottleneck:6`, `green_low_connectivity_bottleneck:2`, `AFM_frustrated_high_rayleigh_debt:2`, and `mixed_green_lorentzian_sidecar:1`.  The measured correlations show Toeplitz deficit is not identical to `lambda2_ratio`, Plucker gap, or Rayleigh-negative count; it acts as the boundary chart that absorbs several local mechanisms. | HYP-3225, HYP-3226, HYP-3224, HYP-3223, HYP-3222, HYP-3213, HYP-3212, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3163, HYP-3132, HYP-3143, HYP-3148, HYP-3149, HYP-3199, T1308, LTT-208, LTI-308, OPEN-Q-108 | Turn the five trap classes into exact symbolic inequalities; test whether k=9/k=10 or larger trap neighborhoods preserve the same class taxonomy; express the Plucker class as a valuated-matroid circuit and the Green class as Schur/Verblunsky/Fejer-Riesz slack; hand the resulting typed motifs to HYP-3226. |
 | LTI-323 | Green-current / Lorentzian exchange certificates | Empty-sector covariance response kernels, effective-resistance profiles, all-ones current energy, Schur-complement trap discharge, co-emptiness set functions, Lorentzian Hessian signatures, valuated exchange slacks, tropical Plucker defects | HYP-3223 turns the HYP-3202/HYP-3203 frontier into certificate targets that can feed HYP-3204's ordered-tail exchange route, with HYP-3205's spectral dictionary as the compatibility coordinate layer and HYP-3211/HYP-3212/HYP-3221 guardrails: stay on the additive/cyclotomic LRC face, respect the Chebyshev/Delsarte cap, and do not erase the analytic equidistribution obligation.  Electrical route: read the covariance matrix as a Green kernel so `Sigma kappa_2=1^T C 1` is all-ones current energy, distance layers are boundary conductance channels, exchange moves are Schur-complement/star-mesh edits, and the `11` non-AP local maxima are bottleneck networks.  Exchange route: read co-emptiness probabilities as a finite set function whose Rayleigh differences, third cumulants, AP support normal, and traps should lie in a Lorentzian or valuated-matroid chamber after dilation/mirror/two-block sidecars are retained. | HYP-3223, HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3139, HYP-3138, HYP-3132, THM-577, T1323, LTT-223, LTI-323, OPEN-Q-108 | Classify the HYP-3202 `12` local maxima by `effective_resistance_profile`, `thomson_energy_slack`, `schur_complement_exit`, `rayleigh_difference_matrix`, `lorentzian_hessian_signature`, `valuated_exchange_slack`, and `tropical_plucker_defect`; test whether HYP-3203's AP support normal is the same exposed exchange-chamber normal and whether HYP-3205's certificate vector supplies a Helly-style trap discharge. |
 | LTI-324 | Small-pattern adjacency atlas | Motif payload atoms, no-free-slider tax, normal-fan coordinate tags, trap-boundary use, repair sidecars, terminal-proof risk | HYP-3226 reserves a disciplined atlas for compact patterns around the LRC14 cutting edge.  Candidate motifs include doubled AP equality, the `11/12` trap boundary, Worpitzky/K3 flip kernels, `2,6,12,20,30,42`, HB/Perron exact legs, Chebyshev level-7 factors, p-adic/Selberg regularization guardrails, and Collatz/two-block analogues.  Each motif must be sorted by what LRC payload it preserves, what coordinate it destroys, which sidecar repairs the loss, and whether it belongs to the HYP-3224 normal fan or only to a speculative analogy layer. | HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, T1324, LTT-224, LTI-324, OPEN-Q-108 | Execute the atlas scout, then keep only motifs that attach to AP support, Toeplitz curvature, covariance layers, ordered-tail pricing, trap discharge, HB/Perron gluing, or the analytic equidistribution guardrail. |
 
@@ -4286,6 +4288,110 @@ HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
 HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
 HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, THM-577,
 LTI-306, LTT-206, T1306, OPEN-Q-108.
+
+## LTI-308: Green-Lorentzian Trap Fingerprint Classifier
+
+Used by codex-2026-06-28 for HYP-3225/T1308.  This technique executes the
+HYP-3223 certificate proposal on the known HYP-3202 trap manifold.
+
+Carrier / vertex set:
+
+```text
+HYP-3202 arbitrary-swap local maxima
+all one-swap neighbors of those rows
+Toeplitz discharge coordinate
+positive-conductance Laplacian
+effective-resistance profile
+conditional Rayleigh events
+rank-2 pair Plucker quadruples
+proof-certificate sidecar classes
+```
+
+Pairwise observable:
+
+```text
+which certificate explains trap discharge while retaining sidecars
+```
+
+Binary relation or gauge:
+
+```text
+A -> B iff A keeps more normal-fan, moment, and trap-local payload than B,
+or B is a shadow once A is retained.
+```
+
+Exact readout:
+
+```text
+rows_evaluated = 577
+local_maxima = 12
+dictionary_discharge_counts = {Toeplitz_lambda_min: 12}
+class_counts =
+  AP_terminal: 1
+  rank2_pair_plucker_bottleneck: 6
+  green_low_connectivity_bottleneck: 2
+  AFM_frustrated_high_rayleigh_debt: 2
+  mixed_green_lorentzian_sidecar: 1
+```
+
+Consecutive baseline:
+
+```text
+toeplitz_lambda_min = +0.042304730706
+Sigma_kappa2 = 6237419/8643600
+positive_laplacian_lambda2 = +0.192033074001
+effective_resistance_by_distance = (6.710086,7.345148,7.675710)
+hessian_signature = (6,0,0)
+conditional_rayleigh_negatives = 56
+pair_tropical_plucker_max_gap = +0.458959814453
+```
+
+Preserved LRC predicate: primitive k=8 AP/consecutive covariance and coverage
+extremality, HYP-3224 normal-fan trap discharge, HYP-3205 dictionary
+compatibility, and the finite HYP-3202 trap identities.
+
+Destroyed information if used alone: raw speed order, the full PGF/root
+curve, the HYP-3222 Hermite-Biehler odd side, and orbit/canary coordinates
+unless named sidecars are retained.
+
+Best use: turn the `11` non-AP exchange traps into a small finite theorem
+schema.  Prove exchange/covariance improvement off the trap manifold, then
+use Toeplitz/Fejer-Riesz/Verblunsky curvature on the finite boundary and
+Green/Rayleigh/Plucker sidecar inequalities for case structure.
+
+Failure mode: treating `lambda2_ratio`, Plucker gap, or Rayleigh-negative
+count as terminal scalar objectives.  AP itself has raw conditional-Rayleigh
+negatives and a positive pair Plucker gap, so those signals only become legal
+relative to Toeplitz/AP normal-cone discharge.
+
+Tournament fingerprint:
+
+```text
+score_hist = {99:1, 91:1, 84:1, 78:1, 72:1, 66:1, 42:1, 30:1, 9:1}
+directed_3cycles = 0
+scc_sizes = [1,1,1,1,1,1,1,1,1]
+hamiltonian_path_count = 1
+priority_path =
+  toeplitz_trap_discharge ->
+  green_effective_resistance_profile ->
+  conditional_rayleigh_surplus_census ->
+  rank2_tropical_plucker_gap ->
+  schur_payload_exit ->
+  covariance_hessian_signature ->
+  raw_positive_covariance_graph ->
+  plain_exchange_local_maximum ->
+  runner_or_arc_tournament
+```
+
+Next agent hook: derive exact inequalities for the five trap classes; rerun
+the classifier for k=9/k=10 or larger bounded neighborhoods; express the
+Plucker class as a valuated-matroid circuit; express the Green class as
+Schur/Verblunsky/Fejer-Riesz slack; and test whether HYP-3204's central
+exchange-rate slack is a projection of the same Toeplitz chart.
+
+Pointers: HYP-3225, HYP-3226, HYP-3224, HYP-3223, HYP-3222, HYP-3213, HYP-3212,
+HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3163, HYP-3132, HYP-3143,
+HYP-3148, HYP-3149, HYP-3199, LTI-308, LTT-208, T1308, OPEN-Q-108.
 
 ## LTI-323: Green-Current / Lorentzian Exchange Certificates
 

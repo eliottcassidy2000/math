@@ -33,9 +33,9 @@ LRC14 frontier, then classify each by payload preserved, payload destroyed,
 repair sidecar, normal-fan coordinate, trap-boundary use, and terminal-proof
 risk.  This is meant to connect HYP-3224's normal fan, HYP-3223's
 Green-current/Lorentzian classifiers, HYP-3222's HB/Perron exact legs,
-HYP-3221's analytic-equidistribution guardrail, and the coordination-only
-HYP-3225 spectral regularization motifs without treating raw numerology as a
-proof carrier.
+HYP-3221's analytic-equidistribution guardrail, and HYP-3225's
+Green-current/Lorentzian trap fingerprints without treating raw numerology as
+a proof carrier.
 
 ## Lead codex-2026-06-28: Joukowski-Hermite-Biehler / Perron-Frobenius synthesis
 
@@ -102,6 +102,34 @@ Next: on the `12` arbitrary-swap local maxima from HYP-3202, emit
 `11` decoys collapse to a few network/circuit types and whether HYP-3203's AP
 support normal is the same exposed chamber normal; also check whether HYP-3205
 predicts the same trap discharge.
+
+## Lead codex-2026-06-28: Green-Lorentzian trap fingerprint classifier
+
+**Status:** EVIDENCE / exact finite trap-neighborhood scout; not proof
+(HYP-3225/T1308).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3225-lrc14-green-lorentzian-trap-fingerprints.md`,
+`04-computation/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.py`,
+`05-knowledge/results/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.out`,
+and
+`07-reflections/lrc14-green-lorentzian-trap-fingerprints-codex-20260628.md`.
+
+Readout: HYP-3225 executes the previous lead's next scout on the `12`
+HYP-3202 arbitrary-swap local maxima plus all one-swap neighbors (`577`
+evaluated rows).  Every local maximum selects `Toeplitz_lambda_min` as first
+HYP-3224/HYP-3205 dictionary discharge.  The new content is a sidecar split:
+`6` rank-2 pair-Plucker bottlenecks, `2` low-connectivity Green bottlenecks,
+`2` AFM/frustrated high-Rayleigh-debt rows, and `1` mixed sidecar.  AP itself
+has raw Rayleigh-negative and pair-Plucker signals, so those sidecars are not
+terminal scalar objectives; they are legal only as relative trap classes under
+the Toeplitz/AP normal-cone chart.
+
+Next: turn the finite trap table into exact inequalities for those five
+classes; test the taxonomy at k=9/k=10 and in larger neighborhoods; express
+pair-Plucker bottlenecks as valuated-matroid circuits and Green bottlenecks
+as Schur/Verblunsky/Fejer-Riesz slack; then check whether HYP-3204's central
+exchange-rate slack is a projection of the same Toeplitz chart.
 
 ## Lead codex-2026-06-28-S277: function-compression degree-4 guardrail
 ## Lead codex-2026-06-28-S279: Law-defect entropy compression
