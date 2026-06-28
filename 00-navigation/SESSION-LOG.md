@@ -87,6 +87,25 @@ PROVABLY (no conjecture) -- the bridge lands the apex on the real axis where the
 Dovetails codex Asano (HYP-3127/3128/3132): off-circle = tail interior Lee-Yang zeros = the Asano obstruction;
 apex/tip on-circle = Lee-Yang-safe. NOT a proof; LRC(14) open. Next: prove G_N's single-runner factors give a
 Grace-Walsh-Szego/Asano argument keeping the Joukowski image real-rooted (in the stability class, not near it).
+## codex-2026-06-28 -- HYP-3153 Lee-Yang/Worpitzky/quartic packet follow-on
+
+Continued the LRC14 proof push after rebasing over HYP-3151 and HYP-3152.
+Reserved and executed HYP-3153/T1218/LTI-279/LTT-177 as a follow-on packet,
+not a duplicate namespace.  Exact scout
+`lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.py` verifies
+`q0=q6*R^6` for consec `k=8..13`, root-radius spread ratios
+`1.1427..1.3629`, pair-mass dips `1081/76440`, `1/4004`, then zero,
+`L_y=q0+q6+q3/10<=cap` for `k=8..10`, the k=8 identity
+`10q0+q3+10q6=10S0-10S1+10S2-9S3+6S4`, odd/even correction ratio
+`3.149364`, Worpitzky rows `(1,4,1)` and `(1,11,11,1)`, the biquadratic
+fold `u^4-5u^2+4 -> v^2-5v+4`, negative Newton defects, and finite odd-ear
+witness examples.  Tournament Analysis uses proof packets as vertices and is
+transitive with one Hamiltonian path led by HYP-3152 root curve, HYP-3151
+function legality, and k8 `L_y` bimodality.
+
+Remaining proof target: bound the off-circle dip/lambda as even biquadratic
+contribution plus odd Worpitzky/ear contribution, then attach the packet to a
+live HYP-3141/HYP-3142 row with root/odd sidecars preserved.
 
 ## mac-mini-2026-06-27-S72 -- the Lee-Yang circle web: coverage=R^6, dip=off-circle phi^4, Galois<=S4, compression hierarchy
 

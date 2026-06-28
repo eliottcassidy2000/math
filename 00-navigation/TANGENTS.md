@@ -3602,11 +3602,16 @@ HYP-2108, LTI-252, LTT-150, OPEN-Q-108.
 
 ## T1218: Lee-Yang/Worpitzky/quartic compression packet for the k=8 dip (codex-2026-06-28)
 
-Reserved by HYP-3153.  The lane will merge HYP-3151's factor-through scout,
-HYP-3152's Lee-Yang circle/radius web, mac-mini's parity split, Pascal cap
-mass, phi4 off-circle dip, Worpitzky odd kernels, odd-ear witnesses, and
+HYP-3153 merges HYP-3151's factor-through scout, HYP-3152's Lee-Yang
+circle/radius web, the HYP-3150 parity split, Pascal cap mass, phi4
+off-circle dip, Worpitzky odd kernels, odd-ear witnesses, and
 Newton/Maclaurin quartic AP extremality into one bounded-degree packet audit.
-Tournament vertices will be proof obligations rather than runners/arcs/classes.
--> HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3149, HYP-3147, HYP-3142,
-HYP-3139, HYP-3109, HYP-3099, LTI-279, LTT-177,
-OPEN-Q-108.
+Exact readout: `q0=q6*R^6` for consec `k=8..13`; `L_y<=cap` for `k=8..10`;
+k=8 `10q0+q3+10q6 = 10S0-10S1+10S2-9S3+6S4`; odd/even correction ratio
+`3.149364`; Worpitzky rows `(1,4,1)` and `(1,11,11,1)`; biquadratic fold
+`u^4-5u^2+4 -> v^2-5v+4`; negative Newton defects; and finite odd-ear
+witness examples.  Tournament vertices are proof obligations rather than
+runners/arcs/classes, with a transitive selected path led by HYP-3152 root
+curve, HYP-3151 function legality, and k8 `L_y` bimodality. -> HYP-3153,
+HYP-3152, HYP-3151, HYP-3150, HYP-3149, HYP-3147, HYP-3142, HYP-3139,
+HYP-3109, HYP-3099, LTI-279, LTT-177, OPEN-Q-108.

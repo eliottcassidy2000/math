@@ -54,6 +54,12 @@ Useful synthetic maps added later:
   typed circuit-certificate vector.  Preserves the warning that tiny
   finite-bank classifiers are not proof circuits unless uniformity and
   destroyed-coordinate discharge are explicit.
+- `07-reflections/lrc14-lee-yang-worpitzky-quartic-packet-codex-20260628.md`:
+  HYP-3153/T1218 packet synthesis joining HYP-3151 function-compression,
+  HYP-3152 Lee-Yang radius, the k=8 `L_y` moment identity, Worpitzky odd
+  kernels, the biquadratic fold, Newton/Maclaurin violation, and odd-ear
+  witness grammar.  Preserves the rule that raw `p0`, cap, or root radius is
+  not proof-legal without the off-circle/ordered sidecar.
 - `07-reflections/lrc14-chiral-stalk-cech-proof-angles-codex-20260627.md`:
   HYP-3123/T1197 synthesis choosing two remaining LRC14 proof angles: a
   Z/2 chiral base-stalk guard for mirror/converse/rootless quotient collapse

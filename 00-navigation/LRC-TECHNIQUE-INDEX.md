@@ -3893,8 +3893,8 @@ T1216, OPEN-Q-108.
 
 ## LTI-279: Lee-Yang/Worpitzky/Quartic Compression Packet
 
-Reserved by codex-2026-06-28 for HYP-3153/T1218.  This technique tests whether
-the k=8 dip can be carried by a named packet:
+Used by codex-2026-06-28 for HYP-3153/T1218.  This technique tests whether the
+k=8 dip can be carried by a named packet:
 
 ```text
 circle-zero Pascal cap + phi4 off-circle dip
@@ -3902,15 +3902,22 @@ circle-zero Pascal cap + phi4 off-circle dip
 + Newton/Maclaurin quartic AP extremality + odd-ear witness sidecar.
 ```
 
+The exact scout verifies `q0=q6*R^6`, root-radius spreads `1.1427..1.3629`,
+pair-mass dips `1081/76440`, `1/4004`, then zero, `L_y<=cap` for `k=8..10`,
+the k=8 `L_y` moment identity, Worpitzky rows `(1,4,1)` and `(1,11,11,1)`,
+the fold `u^4-5u^2+4 -> v^2-5v+4`, and finite odd-ear witness examples.
+
 Preserves: whole root/product data, cap/dip separation, even/odd parity split,
-bounded effective algebraic degree, and named proof obligations.
+bounded effective algebraic degree, named proof obligations, and the
+ordered/ear sidecars needed before scalarization.
 
 Destroys if used alone: root angles, odd orientation, ear endpoints, fiber PGF
 curves, finite-address sidecars, and proof-route legality.
 
-Next hook: run the HYP-3153 packet scout and decide whether the k=8 line
-`L_y = p0 + p6 + (1/10)p3` can be bounded by cap using the AP quartic moment
-inequality plus explicit sidecars for the odd/Worpitzky residual.
+Next hook: prove a packet lemma bounding the off-circle dip/lambda as even
+covariance/excess co-emptiness plus odd Worpitzky/ear/associator contribution,
+then attach it to a live HYP-3141 or HYP-3142 row with terminal
+exit-or-debt status.
 
 ## LTI-299: n=4 Einheit Chart Minimality Gate
 

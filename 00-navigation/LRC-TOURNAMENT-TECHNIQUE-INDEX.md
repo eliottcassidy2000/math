@@ -5890,18 +5890,24 @@ constant chase.
   Pascal cap packet, phi4 dip packet, Worpitzky odd kernel, biquadratic even
   fold, Newton quartic AP inequality, odd-ear witness packet, radius/product
   sidecar, and raw scalar warning.
-- **LRC use:** Reserved for HYP-3153.  The pairwise observable should rank
-  packets by factor-through legality, root-curve retention, parity separation,
-  degree control, AP extremality strength, ear/witness transfer, and named
-  sidecar debt.
+- **LRC use:** HYP-3153 ranks packets by factor-through legality, root-curve
+  retention, parity separation, degree control, AP extremality strength,
+  ear/witness transfer, and named sidecar debt.  The scout verifies the k=8
+  `L_y` moment identity, `|odd/even|=3.149364`, Worpitzky rows, the
+  biquadratic fold, negative Newton defects, and finite odd-ear witness
+  examples.
 - **Preserves:** proof-obligation order, whole-curve/root data, cap/dip
   separation, and terminal exit-or-debt status.
 - **Forgets / guardrail:** runners, raw arcs, score classes, and scalar p0
   alone are not legal vertices for this proof packet unless their destroyed
   coordinates are named.
-- **Next hook:** Run HYP-3153 and compare the packet tournament with HYP-3150's
-  function-compression tournament.  The useful edge flips should identify which
-  scalar shortcuts are proof-illegal.
+- **Fingerprint:** transitive proof-packet tournament with
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, no directed 3-cycles,
+  singleton SCCs, and one Hamiltonian path led by
+  `HYP3152_leeyang_radius_root_curve -> HYP3151_function_legality_packet ->
+  k8_Ly_bimodality_certificate`.
+- **Next hook:** Attach the packet to a live HYP-3141/HYP-3142 row and check
+  whether every scalar shortcut has the necessary root/odd-ear sidecar.
 - **Pointers:** HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3149, HYP-3147,
   HYP-3142, HYP-3139, HYP-3109, HYP-3099, LTI-279, LTT-177, T1218,
   OPEN-Q-108.

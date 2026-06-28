@@ -1,13 +1,14 @@
 ---
 id: HYP-3153
 title: LRC14 Lee-Yang/Worpitzky/quartic compression packets may make the k=8 dip a bounded-degree certificate
-status: RESERVED / executable packet scout pending; not a proof
+status: SYNTHESIS / exact finite packet scout; not a proof
 source: codex-2026-06-28
 tangent: T1218
 technique: LTI-279
 tournament_technique: LTT-177
 script: 04-computation/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.py
 result: 05-knowledge/results/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.out
+reflection: 07-reflections/lrc14-lee-yang-worpitzky-quartic-packet-codex-20260628.md
 related:
   - HYP-3152
   - HYP-3151
@@ -26,7 +27,7 @@ related:
 
 # HYP-3153: Lee-Yang/Worpitzky/Quartic Compression Packet
 
-## Reserved Claim
+## Claim
 
 This lane tests whether HYP-3151's executable function-compression calculus,
 HYP-3152's Lee-Yang circle/radius web, and the mac-mini HYP-3150 parity split
@@ -45,24 +46,110 @@ The executable target is not a proof of LRC14.  It should produce a finite
 certificate saying exactly which parts are algebraic identities, which parts
 are measured signals, and which parts remain proof obligations.
 
-## Planned Measurements
+## Evidence
 
-1. Reuse the known k=8..13 cap/dip rows and record the transition
-   `|P|=4 -> 5` as the first large off-circle correction.
-2. Treat the cap as pair-normalized Pascal / de Moivre-Laplace mass and the
-   dip as the fourth-order off-circle correction.
-3. Audit the reciprocal-root relation `q0 = q6 * prod |root_i|` and the
-   circle approximation `q0 ~= q6 * R^6` on named rows when available.
-4. Package the k=8 dual line
-   `L_y = p0 + p6 + (1/10)p3`
-   as a bimodality functional, and compare it against the cap row.
-5. Recheck the even/odd split: even side through the biquadratic
-   `u^4 - 5u^2 + 4`, odd side through the K3/Worpitzky `-1/3` kernel.
-6. Add the graph-theoretic witness language:
-   strongly connected ear decompositions, factor-critical odd ears, and
-   odd-cycle/Omega sidecars.
-7. Run Tournament Analysis on proof carriers rather than runners, arcs, or
-   raw class names.
+The scout
+`04-computation/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.py`
+verifies these packet components exactly, except where explicitly marked as a
+numeric root-radius sidecar:
+
+```text
+q0 = q6 * R^6 exact by Vieta for consec k=8..13
+root-radius spread numeric ratios = 1.1427, 1.2226, 1.2602, 1.3267, 1.3322, 1.3629
+pair_mass - cap dips = 1081/76440, 1/4004, 0, 0, 0, 0
+```
+
+For the k=8/9/10 bimodality functional,
+
+```text
+L_y = q0 + q6 + q3/10 <= cap
+k=8 margin = 683/29400
+k=9 margin = 106901/2102100
+k=10 margin = 69/910
+```
+
+For k=8 the scaled identity is exact:
+
+```text
+10q0 + q3 + 10q6
+= 10S0 - 10S1 + 10S2 - 9S3 + 6S4
+= 2633/735.
+```
+
+The correction split is:
+
+```text
+base = 1744/147
+odd  = -9S3 = -2973/245
+even =  6S4 = 944/245
+|odd/even| = 3.149364
+```
+
+This keeps the HYP-3150/S71 message precise: the even side is the solvable
+biquadratic face, while the odd side is the larger Worpitzky/ear sidecar.
+
+The Worpitzky packet reuses HYP-3151's exact data:
+
+```text
+K3 C/T edge-flip kernel = [[0,1],[1/3,2/3]]
+stationary(C,T) = (1/4,3/4)
+nontrivial eigenvalue = -1/3
+Eulerian rows = (1,4,1) and (1,11,11,1)
+```
+
+The even algebraic packet is:
+
+```text
+g(t) = (t-1)(t-2)(t-4)(t-5)
+u=t-3 gives u^4 - 5u^2 + 4
+v=u^2 gives v^2 - 5v + 4, discriminant 9.
+```
+
+The Newton/Maclaurin packet records all k=8 normalized moment defects as
+negative:
+
+```text
+-103487/2160900,
+-3670987/972405000,
+-1099703/1944810000,
+-226031/1944810000,
+-109/2881200.
+```
+
+The ear sidecar is not promoted to a theorem proof, but the scout verifies the
+finite witness grammar:
+
+```text
+C3 is factor-critical
+C3 plus a length-3 odd ear remains factor-critical
+directed C3 is strongly connected
+directed C3 plus a directed ear remains strongly connected
+```
+
+## Tournament Fingerprint
+
+Tournament Analysis uses proof packets as vertices.  The selected path is:
+
+```text
+HYP3152_leeyang_radius_root_curve
+-> HYP3151_function_legality_packet
+-> k8_Ly_bimodality_certificate
+-> odd_worpitzky_ear_packet
+-> even_biquadratic_galois_fold
+-> newton_ap_violation_packet
+-> pascal_cap_dip_table
+-> generic_quintic_wall_alarm
+-> raw_scalar_p0_only
+```
+
+Fingerprints:
+
+```text
+score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}
+directed_3cycles=0
+SCCs=singletons
+hamiltonian_path_count=1
+```
 
 ## Assumption Challenge
 
@@ -86,3 +173,13 @@ The Abel-Ruffini language remains only a route alarm.  The exact statement to
 test is smaller: the visible k=8 hard row decomposes into audited packets whose
 effective algebraic degrees are at most four, with the even part already
 folding to degree two.
+
+## Remaining Proof Obligations
+
+The scout leaves three load-bearing tasks:
+
+1. Bound the off-circle dip/lambda, not merely describe it.
+2. Prove the AP/consec `L_y` extremality in the required bank or route each
+   exception to an existing finite-address/observer-gluing packet.
+3. Carry the ordered/Worpitzky/ear sidecars through the LRC predicate before
+   scalarizing to `p0`, `cap`, or a root radius.

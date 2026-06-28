@@ -1,5 +1,22 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3153 Lee-Yang/Worpitzky/quartic packet addendum:**
+HYP-3153 combines HYP-3151's function-compression legality packet with
+HYP-3152's Lee-Yang radius web.  Exact scout output verifies `q0=q6*R^6`,
+`L_y=q0+q6+q3/10<=cap` for `k=8,9,10`, and the k=8 identity
+`10q0+q3+10q6=10S0-10S1+10S2-9S3+6S4`.  The split is concrete:
+`odd=-9S3=-2973/245`, `even=6S4=944/245`, so the odd Worpitzky/ear side is
+larger by factor `3.149364`.
+
+Open task: prove a packet lemma bounding the off-circle dip/lambda as
+`even biquadratic contribution + odd Worpitzky/ear contribution`, while
+retaining `root_radius_R6`, `root_radius_spread`, `Ly_margin`,
+`odd_worpitzky_mode`, `odd_ear_payload`, `factor_through_status`, and
+`terminal_exit_or_named_debt`.  A scalar `p0`, cap value, or root radius alone
+is not a legal terminal proof row. -> HYP-3153, HYP-3152, HYP-3151, HYP-3150,
+HYP-3147, HYP-3142, HYP-3139, THM-577, LTI-279, LTT-177, T1218,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3151 Worpitzky function-compression resolvent addendum:**
 HYP-3151 executes HYP-3150's factor-through wall by turning the recent Worpitzky, pair-function, tournament-3,
 tournament-4, and k=8-resolvent lanes into a single quotient-legality

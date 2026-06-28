@@ -74,6 +74,31 @@ named debt.
 
 Namespace: HYP-3151 / LTI-277 / LTT-175 / T1216 / OPEN-Q-108.
 
+## Lead codex-2026-06-28: Lee-Yang/Worpitzky/quartic compression packet
+
+**Status:** SYNTHESIS / exact finite packet scout; not proof
+(HYP-3153/T1218).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3153-lrc14-lee-yang-worpitzky-quartic-compression-packet.md`,
+`04-computation/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.py`,
+`05-knowledge/results/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.out`,
+and `07-reflections/lrc14-lee-yang-worpitzky-quartic-packet-codex-20260628.md`.
+
+Readout: HYP-3153 fuses HYP-3151's quotient-legality rule with HYP-3152's
+Lee-Yang radius web and HYP-3150's parity split.  Exact checks verify
+`q0=q6*R^6` for consec `k=8..13`, root-radius spreads `1.1427..1.3629`,
+pair-mass dips `1081/76440`, `1/4004`, then zero, and
+`L_y=q0+q6+q3/10 <= cap` for `k=8,9,10`.  The k=8 identity
+`10q0+q3+10q6 = 10S0-10S1+10S2-9S3+6S4` separates the even biquadratic fold
+from the larger odd Worpitzky/ear sidecar (`|odd/even|=3.149364`).
+
+Next: bound the off-circle dip/lambda as even biquadratic contribution plus
+odd Worpitzky/ear contribution, then attach the packet to a live HYP-3141 or
+HYP-3142 row without discarding the ordered sidecar.
+
+Namespace: HYP-3153 / LTI-279 / LTT-177 / T1218 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S274: Worpitzky pair-function three-edge quotient
 
 **Status:** EVIDENCE / exact K3 quotient scout; not proof
