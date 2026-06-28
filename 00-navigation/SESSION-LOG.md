@@ -1,3 +1,26 @@
+## mac-mini-2026-06-28-S75e -- the cap is a totally-real CYCLOTOMIC quantity in Q(cos 2pi/7); magic fn = the cyclotomic SQUARE; apex hardness = the 7^2-conductor; n=14's TWO cyclotomic heads
+
+Owner: revisit cyclotomic work, extend connections, improve the LRC(14) proof. HYP-3235 + reflection
+the-cap-is-a-totally-real-cyclotomic-quantity + script lrc_cap_cyclotomic_field_macmini_S75.py. (Converges
+STRONGLY with kps S31ar below: kps = the recursion subfield lattice of Q(zeta_7) + the de Moivre cubic as the
+MISSING mode; me = the CAP lives in that field, with the conductor in the binding rows + a 2nd head.)
+
+VERIFIED (sympy): (1) the cap/dip LIVE in F=Q(cos2pi/7) (real subfield of Q(zeta_7); deg 3, Galois C_3, disc=49=7^2,
+h=1, totally real; de Moivre cubic x^3+x^2-2x-1). The cyclotomic conductor 7 sits EXACTLY in the BINDING rows:
+cap_8 denom has 7^2, cap_9 has 7, easy rows k>=10 have dip=0 (no 7-power). The two binding constants = the RAMIFIED
+part of the cap in F. (2) The Fejer magic function F_7=(de Moivre cubic)^2 is a TOTALLY-POSITIVE SQUARE => the
+Delsarte/Bochner positivity (F-hat=(7-|n|)_+ >=0) IS the totally-real cyclotomic square. So the EVEN/coverage half
+is cyclotomic-SOS (= my S74 even=SOS), provable; sharper: Jackson F_7^2, de la Vallee-Poussin, modular Gamma_0(7)
+Eisenstein (Viazovska level-7). (3) n=14's TWO cyclotomic HEADS (both depth 3): 7-HEAD=14=2*7->Q(cos2pi/7)->Phi_7
+->Fejer square (the CAP); 3-HEAD=2n-1=27=3^3->doubling orbit ord_27(2)=18=phi(27)->ramification v_3=3 (the WITNESS,
+HYP-2436). n=14 = FIRST case where BOTH heads are hard.
+
+IMPROVEMENT: close the even half via the cyclotomic square (F_7, Jackson/modular sharpenings); locate the odd/apex
+hardness as the 7^2-ramified dip (bound via cyclotomic units / totally-positive C_3-trace; h=1 => no class
+obstruction); descend the 3-head ramification (caveat THM-492: descent rescales modulus not threshold). CONVERGES
+kps S31ar (the de Moivre cubic = the missing recursion mode = the degree-3 subfield Q(cos2pi/7)) + my S75d
+(recursion modes=cyclotomic factors). NOT a proof; pins LRC(14) hardness as cyclotomic ramification at 7 (cap) & 3 (witness).
+
 ## kind-pasteur-2026-06-28-S31ar -- the three signed recursions ARE the subfield lattice of Q(zeta_7); the cubic de Moivre is the missing mode
 
 Owner: see the similarities among the three signed recursions (Mobius A+B+C-D-E-F+G, Eisenstein A+B-C even,

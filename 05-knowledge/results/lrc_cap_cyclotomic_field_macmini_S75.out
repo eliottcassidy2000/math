@@ -1,0 +1,19 @@
+1) cap/dip in Q(cos2pi/7): the 7-conductor sits in the BINDING rows
+   k=8: cap= 2243/5880 dip=1081/76440 cap_denom={2: 3, 3: 1, 5: 1, 7: 2} 7-adic v7(dip_denom)=2
+   k=9: cap= 1979/4004 dip=    1/4004 cap_denom={2: 2, 7: 1, 11: 1, 13: 1} 7-adic v7(dip_denom)=1
+   k=10: cap=     55/91 dip=         0 cap_denom={7: 1, 13: 1} 7-adic v7(dip_denom)=-
+   k=11: cap=     66/91 dip=         0 cap_denom={7: 1, 13: 1} 7-adic v7(dip_denom)=-
+   k=12: cap=       6/7 dip=         0 cap_denom={7: 1} 7-adic v7(dip_denom)=-
+   k=13: cap=         1 dip=         0 cap_denom={} 7-adic v7(dip_denom)=-
+
+2) the de Moivre cubic field F=Q(cos2pi/7):
+   min poly=x**3 + x**2 - 2*x - 1  disc=49=7^2  degree=3  Galois=C_3  totally real (3 real roots)  h=1
+
+3) magic function F_7=(de Moivre cubic)^2 = totally-positive square (Bochner F-hat=(7-|n|)_+>=0):
+   F_7(t)=sin^2(7 pi t)/sin^2(pi t); F_7(0)=49=7^2; double zeros at de Moivre angles. The EVEN cap half is
+   this cyclotomic SQUARE (SOS-provable). Sharper: Jackson F_7^2, de la Vallee-Poussin, modular Gamma_0(7).
+
+4) n=14's TWO cyclotomic heads (both depth 3):
+   7-HEAD (cap):     14=2*7 -> 7 sectors -> Q(cos2pi/7) -> Phi_7 de Moivre -> Fejer square; depth (7-1)/2=3
+   3-HEAD (witness): 2n-1=27=3^3 -> doubling orbit ord_27(2)=18=phi(27); ramification v_3(27)=3 (HYP-2436)
+   => n=14 = first case where BOTH the 2*(apex prime) cap-head and the p^3 ramified witness-head are hard.
