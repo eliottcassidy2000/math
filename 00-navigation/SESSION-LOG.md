@@ -1,3 +1,28 @@
+## kind-pasteur-2026-06-28-S31ap -- IMPROVED proof route: integrating the 2024-25 literature + a critical base flag
+
+Owner: improve the LRC(14) proof route as much/as many ways as possible, integrate niche concepts. Searched
+the current literature and mapped each technique onto the project's two gaps (HYP-3215):
+
+- **CRITICAL FLAG:** the published frontier (Perarnau-Serra survey arXiv:2409.20160 / Wikipedia) is LRC
+  proven for `n<=10` RUNNERS (Rosenfeld 2025 n=8,9; n=10). The project's route uses LRC(<=13) as the base
+  (citing arXiv:2604.23906). **Verify that citation is real and proves <=13** -- if the true base is n<=10,
+  THM-573's lift is conditional on unproven n=11,12,13. (Flagged to the team.)
+- **GAP A (bounded node, consec-max coverage) -- 3 new geometry-of-numbers routes:** (1) my Fejer/Cohn-Elkies
+  magic function (HYP-3214): build the explicit LP F_7(sector)(x)F_k(orbit), double-zero sharpness, bypasses
+  THM-537; (2) the lonely-runner POLYHEDRON (Beck-Hosten-Schymura 2019: LRC<=>integer point) => a FLATNESS
+  statement (Khinchin), AP=flatness-extremal; (3) zonotope covering radius (Alcantara-Criado-Santos 2025 =
+  HYP-2764).
+- **GAP B (unbounded far speeds):** Rosenfeld's exponential-sum estimates (his n=8,9 method) sharpen Node-3
+  vs Tao's astronomical speed bound; Tao floor vs project 3/pi^2 (HYP-2856).
+- **BASELINE + 3 MODULI:** Chen-Cusick gives delta_14 >= 1/23 UNCONDITIONALLY (23=2n-5 prime). Three moduli:
+  23 (Chen-Cusick) / 27=2n-1 (pair-sum sieve THM-401) / 14=2*7 (apex/cyclotomic); proof = lift mod-23 ->
+  mod-14 (1/23 -> 1/14). View-obstruction (Cusick): critical side 13/15. HONEST: 1/23 is the FLOOR (below
+  1/14); the "23=M=2/23" link is a specific THM-566 coincidence, not structural -- hard cases sit at 1/14.
+
+NET: the route now has 3 angles for GAP A (Fejer-LP / polyhedron-flatness / zonotope), a lit-sharpened GAP B
+(Rosenfeld), and a proven baseline (Chen-Cusick). Main open actions: verify the base; build the Fejer-LP /
+polyhedron-flatness; import Rosenfeld's exact estimate. => HYP-3215; reflection improved-lrc14-proof-route-...
+
 ## mac-mini-2026-06-28-S75 -- BUILDING the magic function: the comb-overlap GRAM kernel (Bochner-automatic) + the PROVED single-arc peeling lemma
 
 Owner: build out the cyclotomic Delsarte/Beurling-Selberg magic function (the analytic resolution S74/kps-S31an
