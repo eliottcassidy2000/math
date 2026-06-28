@@ -1,0 +1,15 @@
+=== dual g(t) values on {0..6} (degree <=4 = SOLVABLE; note bimodal: mass at t=0,6) ===
+  k=8 (deg 4): g = ['1', '0', '0', '1/10', '0', '0', '1']  -> L_y = sum g(t) p_t
+  k=9 (deg 3): g = ['1', '5/18', '0', '0', '1/9', '1/6', '0']  -> L_y = sum g(t) p_t
+  k=10 (deg 3): g = ['1', '5/18', '0', '0', '1/9', '1/6', '0']  -> L_y = sum g(t) p_t
+  k=11 (deg 2): g = ['1', '1/2', '1/6', '0', '0', '1/6', '1/2']  -> L_y = sum g(t) p_t
+
+=== L_y = sum_t g(t) p_t for consec_k; verify <= cap_k AND consec maximizes ===
+  k=8: L_y(consec)=0.35823  cap=0.38146 (<=cap:True)  max L_y over bounded=0.35823 at consec (consec=max:True)
+  k=9: L_y(consec)=0.49288  cap=0.49426 (<=cap:True)  max L_y over bounded=0.49288 at consec (consec=max:True)
+  k=10: L_y(consec)=0.57008  cap=0.60440 (<=cap:True)  max L_y over bounded=0.57008 at consec (consec=max:True)
+
+=== k=8 dual IS the bimodality functional: L_y = p_0 + p_6 + (1/10) p_3 ===
+  g(0)=1, g(6)=1, g(3)=1/10, others=['0', '0', '0', '0']
+  L_y(consec_8) = p0+p6+p3/10 = 481/1470+1/49+26/245/10 = 2633/7350 = 0.35823
+  bimodality(p0+p6)=0.34762; degree-4 dual rewards EXTREMES => consec (three-gap, most bimodal) wins
