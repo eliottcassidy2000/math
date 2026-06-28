@@ -5,7 +5,7 @@ pattern is not useful because it is famous, pretty, or repeated across
 threads.  It is useful when it can be typed as a payload atom for the live
 LRC14 proof coordinates.
 
-The atlas scored 90 motifs across recent hypotheses, results, reflections,
+The atlas scored 94 motifs across recent hypotheses, results, reflections,
 coordination notes, and forum drafts.  The top of the ranking was
 proof-facing:
 
@@ -14,6 +14,7 @@ comb-overlap Gram kernel
 shell L_y magic quartic
 normal-cone dual slack
 multi-chart proof split
+AP self-dual Fejer equidistribution certificate
 three-gap Stern-Brocot cap-kernel recursion
 consecutive plus doubled AP
 modulus-covariance apex break
@@ -22,11 +23,13 @@ certificate-Helly separation
 single-arc peeling recursion
 ordered-tail exchange-rate ratio
 D1/D2/D3 covariance layer split
+totally-real cap field conductor packet
 11 non-AP exchange traps plus AP
 Fejer-Riesz square
 Chebyshev V7 double root
 Lorentzian exchange chamber
 conductance/Fiedler trap graph
+cyclotomic factor grading
 Green-current bottleneck
 ```
 
@@ -77,6 +80,14 @@ newest compression is that order, modulus, speed, and character modes all
 concentrate at the same apex fold, but still require signed recursion or
 L-value sidecars before becoming proof rows.
 
+Incoming HYP-3233/HYP-3234/HYP-3218/HYP-3235 add M091-M094.  M091 records the
+cyclotomic factor grading `(x-1)^depth*Phi_d`; M092 records the signed A..G
+chart-change debt; M093 upgrades equidistribution to an explicit self-dual
+Fejer/Vaaler certificate for AP autocorrelation; and M094 records the
+totally-real cap field `Q(cos2pi/7)` with conductor debt in the binding rows.
+These are not raw cyclotomic slogans: their proof value is the sidecar each
+forces into the packet before scalar cancellation is legal.
+
 ## The Expanded Currencies
 
 The patterns that matter currently spend a small set of named currencies:
@@ -99,6 +110,10 @@ scale-normal packet recursion
 moment-order ladder and 2-adic reflection fold
 modulus-covariance apex break
 subfield / character-mode lattice
+cyclotomic factor grading
+signed address chart-change legality
+AP self-dual Fejer / Vaaler certificate
+totally-real cap field conductor packet
 induction-base and moduli-bridge debt
 ```
 
@@ -190,6 +205,9 @@ Stern-Brocot order-2 cap kernels, scale-normal packets, the `LRC(2p)`
 moment-order ladder, and the 2-adic reflection fold.
 HYP-3232/HYP-3217 add the modulus-covariance apex break and the
 Mobius/Eisenstein/Legendre/cubic/sextic subfield-mode lattice.
+HYP-3233/HYP-3234/HYP-3218/HYP-3235 add the cyclotomic factor grading,
+signed-address chart debt, AP self-dual Fejer/Vaaler certificate, and
+totally-real cap-field conductor packet.
 
 The next move is the symbolic version of that table:
 
@@ -214,6 +232,10 @@ Scale_normal_packet_omega_Q_status
 Moment_order_ladder_and_2adic_fold_status
 Modulus_covariance_apex_break_status
 Subfield_character_mode_lattice_status
+Cyclotomic_factor_grading_Phi_d_status
+Signed_address_chart_change_status
+AP_self_dual_Fejer_Vaaler_tail_status
+Totally_real_cap_field_conductor_trace_status
 Induction_base_and_1_23_to_1_14_lift_status
 ```
 

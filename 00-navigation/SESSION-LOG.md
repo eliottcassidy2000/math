@@ -731,19 +731,20 @@ updated
 and added
 `07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md`.
 
-Readout: 90 motifs over 89 families, scanned 8363 repo-local files, with
-risk histogram `{'analogy': 19, 'direct': 29, 'raw': 3, 'sidecar': 39}`.  The
+Readout: 94 motifs over 93 families, scanned 8370 repo-local files, with
+risk histogram `{'analogy': 19, 'direct': 33, 'raw': 3, 'sidecar': 39}`.  The
 motif-family tournament is transitive (`directed_3cycles=0`, one Hamiltonian
 path).  Top payload motifs: M073 comb-overlap Gram kernel, M080 shell
 `L_y` magic quartic, normal-cone dual slack, multi-chart proof split,
+M093 AP self-dual Fejer equidistribution certificate,
 M085 three-gap/Stern-Brocot cap-kernel recursion, consecutive plus doubled AP,
 M089 modulus-covariance apex break, M074 single-arc peeling recursion,
 Toeplitz lambda-min margin,
-certificate-Helly separation, M074 single-arc peeling
-recursion, ordered-tail exchange-rate ratio, D1/D2/D3 covariance layers, the
-11 non-AP exchange-trap ledger, Fejer-Riesz square, Chebyshev V7 double root,
-Lorentzian exchange chamber, M072 conductance/Fiedler trap graph, and
-Green-current bottleneck.
+certificate-Helly separation,
+recursion, ordered-tail exchange-rate ratio, D1/D2/D3 covariance layers,
+M094 totally-real cap field conductor packet, the 11 non-AP exchange-trap ledger,
+Fejer-Riesz square, Chebyshev V7 double root, Lorentzian exchange chamber,
+M072 conductance/Fiedler trap graph, and M091 cyclotomic factor grading.
 
 Main synthesis: useful small patterns currently spend seven currencies:
 normal-fan exposure, Toeplitz/moment curvature, covariance layers,
@@ -758,6 +759,9 @@ cap kernels, scale-normal packet recursion, the `LRC(2p)` moment-order ladder,
 and the 2-adic reflection fold.
 HYP-3232/HYP-3217 add the modulus-covariance apex break and the
 cyclotomic subfield / cubic-mode lattice.
+HYP-3233/HYP-3234/HYP-3218/HYP-3235 add the cyclotomic factor grading,
+signed-address chart-change debt, AP self-dual Fejer/Vaaler certificate, and
+totally-real cap-field conductor packet.
 HYP-3225 now supplies the first Green/Lorentzian trap-fingerprint table, while
 HYP-3214 upgrades the Fejer/Chebyshev motif to the explicit positive-definite
 `F_7` kernel.
@@ -771,11 +775,15 @@ the earlier `23 = M=2/23` link demoted to bounded-bank coincidence.  Latest
 rebase integration folds in HYP-3228/HYP-3229 as motifs M080-M084.  Push-time
 integration folds in HYP-3230/HYP-3231/HYP-3216 as motifs M085-M088.
 Latest push-time integration folds in HYP-3232/HYP-3217 as motifs M089-M090.
+Newest push-time integration folds in HYP-3233/HYP-3234/HYP-3218/HYP-3235 as
+motifs M091-M094.
 Next best computation is to prove the HYP-3225/HYP-3227 trap table
 symbolically with Gram PSD, speed-1 peeling, order-3 overlap, shell `L_y`
 magic slack, Gamma0(7) coefficient-row compatibility, three-gap kernel
 recursion status, scale-normal `omega_Q` exactness, moment-order / 2-adic fold
 status, modulus-covariance apex-break status, subfield/chi_3 mode status,
+cyclotomic factor grading, signed-address chart-change status, AP self-dual
+Fejer/Vaaler tail status, totally-real cap-field conductor/trace status,
 conductance/Fiedler, M-matrix/Schur, Fejer/Delsarte, induction-base, and
 floor-to-1/14 lift columns.
 

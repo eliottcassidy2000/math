@@ -157,12 +157,15 @@ HYP-3221's analytic-equidistribution guardrail, HYP-3225's Green-current /
 Lorentzian trap fingerprints, HYP-3227's conductance/Fiedler graph, S75's
 Gram-kernel/peeling build, HYP-3215's proof-route audit, HYP-3228's shell
 magic dual, HYP-3229's modular sidecar audit, HYP-3230/HYP-3231/HYP-3216's
-recursion layer, and HYP-3232/HYP-3217's mode lattice without treating
+recursion layer, HYP-3232/HYP-3217's mode lattice, and
+HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor / chart / Fejer /
+conductor layer without treating
 raw numerology as a proof carrier.
-Readout: 90 motifs across 89 families were scored by proof-payload retention
-over 8363 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
+Readout: 94 motifs across 93 families were scored by proof-payload retention
+over 8370 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
 shell `L_y` magic quartic, normal-cone dual slack,
-multi-chart proof split, three-gap/Stern-Brocot cap-kernel recursion,
+multi-chart proof split, AP self-dual Fejer equidistribution certificate,
+three-gap/Stern-Brocot cap-kernel recursion,
 consecutive plus doubled AP, modulus-covariance apex break, Toeplitz lambda-min
 margin, certificate-Helly separation, single-arc peeling recursion,
 ordered-tail exchange-rate ratio, and
@@ -184,6 +187,9 @@ recursion, scale-normal packet recursion, the `LRC(2p)` moment-order ladder,
 and the 2-adic reflection fold.
 HYP-3232/HYP-3217 add M089-M090: modulus-covariance apex break and the
 cyclotomic subfield / character-mode lattice with the cubic de Moivre mode.
+HYP-3233/HYP-3234/HYP-3218/HYP-3235 add M091-M094: cyclotomic factor
+grading, signed address chart-change debt, AP self-dual Fejer/Vaaler
+equidistribution certificate, and the totally-real cap field conductor packet.
 Famous-problem analogies remain sidecars until they name the LRC coordinate
 they preserve and the coordinate they destroy.  Incoming S283's
 Skewes/Helfgott-Ruzsa/Collatz/PFR
@@ -196,7 +202,9 @@ precision M-matrix or Schur-complement debt, induction-base status,
 Chen-Cusick floor-to-1/14 lift status, shell `L_y` magic slack, Gamma0(7)
 coefficient-row compatibility, three-gap kernel-recursion status,
 scale-normal `omega_Q` exactness, moment-order / 2-adic fold status,
-modulus-covariance / subfield-mode status, and
+modulus-covariance / subfield-mode status, cyclotomic factor grading,
+signed-address chart-change status, AP self-dual Fejer/Vaaler tail status,
+totally-real cap field conductor/trace status, and
 Fejer/Delsarte `F_7` slack as finite-boundary columns.
 
 ## Lead codex-2026-06-28: Joukowski-Hermite-Biehler / Perron-Frobenius synthesis

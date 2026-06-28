@@ -192,10 +192,11 @@ HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153,
 T1336, LTI-336, LTT-236, OPEN-Q-108.
 **OPEN-Q-108 HYP-3226 small-pattern adjacency atlas addendum:**
 HYP-3226 turns the user's request for many small adjacent patterns into a
-typed payload ledger.  The scout scans 8363 repo-local files with 90 motifs
+typed payload ledger.  The scout scans 8370 repo-local files with 94 motifs
 and ranks by proof-payload retention, not raw analogy.  The strongest motifs
 are comb-overlap Gram kernel, shell `L_y` magic quartic, normal-cone dual
-slack, multi-chart proof split, three-gap/Stern-Brocot cap-kernel recursion,
+slack, multi-chart proof split, AP self-dual Fejer equidistribution
+certificate, three-gap/Stern-Brocot cap-kernel recursion,
 consecutive plus doubled AP, modulus-covariance apex break,
 Toeplitz lambda-min margin,
 certificate-Helly separation, single-arc peeling recursion,
@@ -215,7 +216,10 @@ Dirichlet-L/Stark denominator guardrails).  HYP-3230/HYP-3231/HYP-3216 add
 M085-M088 (three-gap/Stern-Brocot cap-kernel recursion, scale-normal packet
 recursion, the `LRC(2p)` moment-order ladder, and the 2-adic reflection fold);
 HYP-3232/HYP-3217 add M089-M090 (modulus-covariance apex break and the
-cyclotomic subfield / character-mode lattice).
+cyclotomic subfield / character-mode lattice); and
+HYP-3233/HYP-3234/HYP-3218/HYP-3235 add M091-M094 (cyclotomic factor
+grading, signed-address chart-change debt, AP self-dual Fejer/Vaaler
+certificate, and the totally-real cap-field conductor packet).
 The main
 guardrail is that famous-problem names such as Skewes, tau/Lindelof, Collatz,
 Pell, Markov/Hurwitz, and Moser-de Bruijn/fibbinary
@@ -235,7 +239,9 @@ traps from HYP-3202/HYP-3224.  Required columns are `trap_id`,
 shell `L_y` magic slack, Gamma0(7) coefficient-row compatibility, and
 three-gap kernel-recursion status, scale-normal `omega_Q` exactness,
 moment-order / 2-adic fold status,
-modulus-covariance / subfield-mode status, and
+modulus-covariance / subfield-mode status, cyclotomic factor grading,
+signed-address chart-change status, AP self-dual Fejer/Vaaler tail status,
+totally-real cap-field conductor/trace status, and
 `Induction_base_and_1_23_to_1_14_lift_status`.  If the rows
 collapse to exact identities or finite inequalities, use them as the finite
 boundary chart in the multi-chart proof: exchange/covariance off the trap

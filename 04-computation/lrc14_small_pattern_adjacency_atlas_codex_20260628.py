@@ -700,6 +700,34 @@ MOTIFS: tuple[Motif, ...] = (
           "chi_3 cubic-mode / L-value ladder sidecar",
           "sidecar",
           ("subfield lattice", "chi_3", "cubic de Moivre", "Gaussian periods")),
+    Motif("M091", "cyclotomic factor grading", "cyclotomic-factor-grading",
+          "mode=(x-1)^depth*Phi_d separates moment depth from character factor",
+          ("CHEBYSHEV", "ANALYTIC_EQ", "QUOTIENT_LEGALITY", "SIDE_CARRIER"),
+          "recurrence formula used without its character factor",
+          "Phi_d character / moment-depth grading sidecar",
+          "direct",
+          ("cyclotomic factors", "(x-1)^depth", "Phi_d", "character factor")),
+    Motif("M092", "signed address chart-change sheaf", "signed-chart-sheaf",
+          "A..G recurrences are local chart addresses, not global letters",
+          ("QUOTIENT_LEGALITY", "EDGE_PACKET", "CIRCUIT", "SIDE_CARRIER"),
+          "same sign word reused after forgetting local slots",
+          "signed_address_chart / chart_change_map sidecar",
+          "direct",
+          ("signed address", "chart-change", "A+B+D-C-E-F+G", "local address slots")),
+    Motif("M093", "AP self-dual Fejer equidistribution certificate", "fejer-equidistribution",
+          "AP autocorrelation is both maximal coherence and Fejer/Vaaler rescue",
+          ("ANALYTIC_EQ", "CHEBYSHEV", "AP_NORMAL", "PGF_ROOT", "SIDE_CARRIER"),
+          "coherence-vs-arithmetic split treated as two unrelated objects",
+          "signed Fejer/Vaaler tail with phi(p) reserve sidecar",
+          "direct",
+          ("coherence-vs-arithmetic", "Gauss sum", "phi(p)", "Fejer/Vaaler")),
+    Motif("M094", "totally-real cap field conductor packet", "totally-real-cap-field",
+          "cap/dip live in Q(cos2pi/7) and binding rows carry conductor 7^1,2",
+          ("CHEBYSHEV", "P_ADIC", "ANALYTIC_EQ", "TOEPLITZ", "SIDE_CARRIER"),
+          "field-name import without binding-row denominator control",
+          "cyclotomic-unit / totally-positive trace sidecar",
+          "direct",
+          ("Q(cos2pi/7)", "disc=49", "7^2-conductor", "totally-positive square")),
 )
 
 
@@ -900,6 +928,11 @@ def main() -> None:
         ("scale-normal", "primitive projective shape plus first surviving coordinate is the route recursion."),
         ("K fold x1/2", "modulus-covariance gives K^(2n)/K^(n)=1/2 until the apex break."),
         ("chi3 cosets", "cubic mode cosets {1,6}/{2,5}/{3,4} are the de Moivre angles."),
+        ("Phi_d grading", "recursion mode=(x-1)^depth*Phi_d separates moment depth from character."),
+        ("A..G local", "signed recurrences require chart addresses before cancellation is legal."),
+        ("|g(chi7)|^2=7", "Gauss-sum modulus equals the Lee-Yang apex zero and Fejer reserve."),
+        ("disc=49", "Q(cos2pi/7) puts the binding cap rows on the 7^2 conductor."),
+        ("2 heads", "n=14 has a 7-cap head and a 3^3 witness head, both depth 3."),
         ("1/23 -> 1/14", "Chen-Cusick supplies a floor-to-target lift; the 23/M=2/23 link is only bounded-bank coincidence."),
     ]
     for key, meaning in signals:
@@ -937,7 +970,12 @@ def main() -> None:
         "tower, the LRC(2p) moment-order depth law, and the 2-adic reflection "
         "fold.  Incoming HYP-3232/HYP-3217 adds the modulus-covariance apex "
         "break and the cyclotomic subfield/character-mode lattice, including "
-        "the cubic de Moivre chi_3 mode."
+        "the cubic de Moivre chi_3 mode.  Incoming HYP-3233/HYP-3234/HYP-3218/"
+        "HYP-3235 then tightens that layer: recursion modes factor as "
+        "(x-1)^depth*Phi_d, signed A..G recurrences need chart-change sidecars, "
+        "AP autocorrelation is the self-dual Fejer equidistribution certificate, "
+        "and the cap lives in the totally-real conductor-7 field with the binding "
+        "rows carrying the 7^2 ramification debt."
     )
 
 

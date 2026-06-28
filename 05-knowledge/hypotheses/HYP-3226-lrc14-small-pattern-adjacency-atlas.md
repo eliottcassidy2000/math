@@ -10,9 +10,13 @@ script: 04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py
 result: 05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out
 reflection: 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md
 related:
+  - HYP-3235
+  - HYP-3234
+  - HYP-3233
   - HYP-3232
   - HYP-3231
   - HYP-3230
+  - HYP-3218
   - HYP-3229
   - HYP-3228
   - HYP-3227
@@ -57,6 +61,7 @@ comb-overlap Gram kernel
 shell L_y magic quartic
 normal-cone dual slack
 multi-chart proof split
+AP self-dual Fejer equidistribution certificate
 three-gap Stern-Brocot cap-kernel recursion
 consecutive plus doubled AP
 modulus-covariance apex break
@@ -65,11 +70,13 @@ certificate-Helly separation
 single-arc peeling recursion
 ordered-tail exchange-rate ratio
 D1/D2/D3 covariance layer split
+totally-real cap field conductor packet
+cyclotomic factor grading
 ```
 
 ## Method
 
-The scout defines 90 motifs across 89 families, scans 8363 repo-local files,
+The scout defines 94 motifs across 93 families, scans 8370 repo-local files,
 and ranks each motif by a payload-retention score:
 
 ```text
@@ -87,10 +94,10 @@ the destroyed coordinate, the repair sidecar, and the risk label.
 ## Result Snapshot
 
 ```text
-repo_files_scanned=8363
-motifs=90
-families=89
-risk_hist={'analogy': 19, 'direct': 29, 'raw': 3, 'sidecar': 39}
+repo_files_scanned=8370
+motifs=94
+families=93
+risk_hist={'analogy': 19, 'direct': 33, 'raw': 3, 'sidecar': 39}
 directed_3cycles=0
 hamiltonian_path_count=1
 ```
@@ -98,21 +105,21 @@ hamiltonian_path_count=1
 Payload coverage in the atlas:
 
 ```text
-SIDE_CARRIER        60
-ANALYTIC_EQ         37
-QUOTIENT_LEGALITY   28
-EDGE_PACKET         18
-CHEBYSHEV           15
+SIDE_CARRIER        64
+ANALYTIC_EQ         40
+QUOTIENT_LEGALITY   30
+EDGE_PACKET         19
+CHEBYSHEV           18
+TOEPLITZ            15
 GEOMETRY            15
-TOEPLITZ            14
-AP_NORMAL           13
+AP_NORMAL           14
 TRAP_BOUNDARY       13
-PGF_ROOT            12
+PGF_ROOT            13
 COV_LAYER            9
 HB_PERRON            9
 SELBERG              9
-CIRCUIT              8
-P_ADIC               7
+CIRCUIT              9
+P_ADIC               8
 GREEN_LORENTZIAN     6
 ORDERED_TAIL         5
 ```
@@ -124,6 +131,7 @@ M073 comb-overlap Gram kernel
 M080 shell L_y magic quartic
 M067 normal-cone dual slack
 M068 multi-chart proof split
+M093 AP self-dual Fejer equidistribution certificate
 M085 three-gap Stern-Brocot cap-kernel recursion
 M001 consecutive plus doubled AP
 M089 modulus-covariance apex break
@@ -132,12 +140,14 @@ M005 Toeplitz lambda-min margin
 M066 certificate-Helly separation
 M003 HYP-3204 exchange-rate ratio
 M006 D1/D2/D3 layer split
+M094 totally-real cap field conductor packet
 M002 11 non-AP exchange traps plus AP
 M029 Fejer-Riesz square
 M009 Chebyshev V7 double root
 M004 AP support projection
 M020 Lorentzian exchange chamber
 M072 conductance/Fiedler trap graph
+M091 cyclotomic factor grading
 M019 Green-current bottleneck
 ```
 
@@ -179,6 +189,11 @@ depth=(p+1)/2      LRC(2p) apex moment depth matches the cyclotomic-degree law f
 scale-normal       primitive projective shape plus first surviving coordinate is the route recursion.
 K fold x1/2        modulus-covariance gives K^(2n)/K^(n)=1/2 until the apex break.
 chi3 cosets        cubic mode cosets {1,6}/{2,5}/{3,4} are the de Moivre angles.
+Phi_d grading      recursion mode=(x-1)^depth*Phi_d separates moment depth from character.
+A..G local         signed recurrences require chart addresses before cancellation is legal.
+|g(chi7)|^2=7      Gauss-sum modulus equals the Lee-Yang apex zero and Fejer reserve.
+disc=49            Q(cos2pi/7) puts the binding cap rows on the 7^2 conductor.
+2 heads            n=14 has a 7-cap head and a 3^3 witness head, both depth 3.
 1/23 -> 1/14       Chen-Cusick supplies a floor-to-target lift; the 23/M=2/23 link is only bounded-bank coincidence.
 ```
 
@@ -210,6 +225,10 @@ HYP-3231 scale-normal recursion ledger
 HYP-3216 LRC(2p) moment-order ladder and 2-adic fold
 HYP-3232 modulus-covariance apex break
 HYP-3217 cyclotomic subfield / character-mode lattice
+HYP-3233 cyclotomic factor grading
+HYP-3234 signed address chart-change sidecar
+HYP-3218 AP self-dual Fejer equidistribution certificate
+HYP-3235 totally-real cap field / conductor packet
 HYP-3215 induction-base and 23/27/14 modulus route
 ```
 
@@ -282,6 +301,15 @@ cyclotomic subfield/character-mode lattice, including the cubic de Moivre
 concentrates at the apex fold, and the character modes are usable only after
 they emit signed recursion packets or L-value sidecars.
 
+Incoming HYP-3233/HYP-3234/HYP-3218/HYP-3235 add M091-M094.  M091 grades
+recursion modes as `(x-1)^depth*Phi_d`, separating moment depth from character
+factor.  M092 makes the A..G signed recurrences local chart addresses, not
+global letters.  M093 identifies AP autocorrelation as the self-dual Fejer /
+Vaaler equidistribution certificate with Gauss-sum reserve.  M094 records the
+totally-real cap field `Q(cos2pi/7)` and the binding-row conductor debt
+`7^1,7^2`.  These are direct motifs only because each names the sidecar needed
+before the cyclotomic object can be used as a proof row.
+
 The raw-famous-problem magnet is explicitly the sink motif: it destroys all
 LRC payload unless it is retyped into one of those coordinates.
 
@@ -345,6 +373,10 @@ scale-normal packet / omega_Q exactness status
 LRC(2p) moment-order ladder and 2-adic fold status
 modulus-covariance apex-break status
 cyclotomic subfield / chi_3 mode status
+cyclotomic factor grading and Phi_d character status
+signed address chart-change legality status
+AP self-dual Fejer/Vaaler tail status
+totally-real cap field conductor / trace status
 induction-base dependency and Chen-Cusick floor-to-1/14 lift status
 ```
 

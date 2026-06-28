@@ -6491,13 +6491,14 @@ quotient_legality_status
   exact legs, Chebyshev level-7 factor, Green-current bottleneck, Lorentzian
   exchange circuit, p-adic/Selberg regularization sidecar, Collatz two-block
   analogy, and raw numerology.
-- **LRC use:** HYP-3226 scores 90 motifs by proof-payload retention against
+- **LRC use:** HYP-3226 scores 94 motifs by proof-payload retention against
   the current HYP-3224/HYP-3205 normal-fan frontier.  The useful motifs cluster
   around AP support, Toeplitz moment-cone curvature, covariance layers,
   ordered-tail pricing, finite trap discharge, HB/Perron gluing, and analytic
   equidistribution guardrails.  Top-ranked vertices include comb-overlap Gram
   kernel, shell `L_y` magic quartic, normal-cone dual slack, multi-chart proof
-  split, three-gap/Stern-Brocot cap-kernel recursion, consecutive plus
+  split, AP self-dual Fejer equidistribution certificate,
+  three-gap/Stern-Brocot cap-kernel recursion, consecutive plus
   doubled AP, modulus-covariance apex break, Toeplitz lambda-min margin,
   certificate-Helly separation,
   single-arc peeling recursion, ordered-tail exchange-rate ratio, D1/D2/D3
@@ -6519,6 +6520,9 @@ quotient_legality_status
   ladder, and the 2-adic reflection fold.
   HYP-3232/HYP-3217 add M089-M090: modulus-covariance apex break and the
   cyclotomic subfield / character-mode lattice.
+  HYP-3233/HYP-3234/HYP-3218/HYP-3235 add M091-M094: cyclotomic factor
+  grading, signed-address chart-change debt, AP self-dual Fejer/Vaaler
+  certificate, and totally-real cap-field conductor packet.
 - **Preserves:** motif id, payload coordinate, destroyed coordinate,
   required sidecar, trap-boundary use, and terminal-risk label.
 - **Forgets / guardrail:** raw constants, famous-problem names, and sequence
@@ -6534,9 +6538,12 @@ quotient_legality_status
   Fejer/Delsarte `F_7` slack as named columns, plus shell `L_y` magic slack,
   Gamma0(7) coefficient-row compatibility, three-gap kernel-recursion status,
   scale-normal `omega_Q` exactness, moment-order / 2-adic fold status,
-  modulus-covariance apex-break status, subfield/chi_3 mode status, the
+  modulus-covariance apex-break status, subfield/chi_3 mode status,
+  cyclotomic factor grading, signed-address chart-change status,
+  AP self-dual Fejer/Vaaler tail status, totally-real cap-field conductor
+  status, the
   induction-base audit, and Chen-Cusick floor-to-`1/14` lift status.
-- **Pointers:** HYP-3226, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3217, HYP-3216, HYP-3215, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
+- **Pointers:** HYP-3226, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3218, HYP-3217, HYP-3216, HYP-3215, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
   HYP-3214, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, LTI-324,
   LTT-224, T1324, OPEN-Q-108.
 
