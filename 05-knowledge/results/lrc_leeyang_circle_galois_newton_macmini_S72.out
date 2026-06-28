@@ -1,0 +1,29 @@
+============================================================================================
+ LEE-YANG CIRCLE: q0 = q6 * R^6 ; zeros near a circle of radius R ; dip = off-circle (phi^4)
+============================================================================================
+  k  R=(q0/q6)^1/6   zero radii [min,max] ratio     q0 vs q6*R^6       dip
+  8         1.5880        [1.489,1.701] r=1.143    0.3272=0.3272   0.01414
+  9         1.6901        [1.531,1.871] r=1.223    0.4162=0.4162   0.00025
+ 10         1.7798        [1.556,1.960] r=1.260    0.5045=0.5045   0.00000
+ 11         1.8547        [1.589,2.108] r=1.327    0.5815=0.5815   0.00000
+ 12         1.9067        [1.631,2.173] r=1.332    0.6241=0.6241   0.00000
+ 13         1.9605        [1.654,2.254] r=1.363    0.6759=0.6759   0.00000
+ => q0=q6*R^6 EXACT (Vieta); zeros NEAR a circle (ratio ~1.1-1.4) = LOW-lambda Lee-Yang; coverage=R^6.
+
+============================================================================================
+ GALOIS <= S4 SOLVABILITY (correcting the V4 claim) + the bimodality functional
+============================================================================================
+  k=8 quartic dual: roots [1, 2, 4, 5] all RATIONAL => Galois TRIVIAL; deg<=4 => Galois<=S4 => SOLVABLE
+  k=9,10 cubic dual: roots [2, 3, 6] all RATIONAL => Galois TRIVIAL; deg<=4 => Galois<=S4 => SOLVABLE
+  (the flip-action is a transformation MONOID -- apex arc absorbing, T,+,-->S -- not the group V4;
+   solvability is rigorous via deg<=4 => Galois<=S4 (S4 solvable), NOT via a V4 identification.)
+
+  k=8 dual L_y = 10 q0 + q3 + 10 q6 = 10*(q0+q6+0.1 q3) -- the BIMODALITY functional; L_y(consec_8)=3.5823
+    extreme mass q0+q6 = 0.3476 (the two modes); consec MAXIMIZES L_y (<= 10 cap).
+
+============================================================================================
+ NEWTON-MACLAURIN at the AP: consec is the EXTREMAL of the moment-inequality VIOLATION (max bimodality)
+============================================================================================
+  normalized means p_k=S_k/C(6,k): [1.0, 0.2673, 0.1194, 0.0674, 0.0428, 0.0289, 0.0204]
+  Newton defects p_k^2-p_(k-1)p_(k+1): [-0.04789, -0.00378, -0.00057, -0.00012, -4e-05]  (ALL < 0 = NON-log-concave = bimodal)
+  => consec = max Newton-violation = max bimodality = max extreme-mass = 0 real roots (S66) -- one object.
