@@ -5619,9 +5619,18 @@ constant chase.
 - **LRC use:** HYP-3144/S274 turns the user's prompt into a finite
   scalarization guardrail for HYP-3140 fiber-PGF coefficients and HYP-3141
   edge tip/tail witnesses, now adjacent to HYP-3143's n=4 exact-order
-  subbasis audit.  The expected kernel `[[2,1],[3,0]]` separates symmetric
-  count data from the unique order-sensitive exit edge, just as unordered pair
-  functions preserve sum/product but destroy exponent order.
+  subbasis audit and HYP-3145/HYP-3149 filler-core audits.  The exact kernel
+  `[[2,1],[3,0]]` separates symmetric count data from the unique
+  order-sensitive exit edge, just as unordered pair functions preserve
+  sum/product but destroy exponent order.  HYP-3147 names the same local
+  coordinate as the minority-edge gate, S71 links its odd Worpitzky face to
+  the k=8 `-9S3` correction, and the KPS lambda scan gives the root-curve
+  sidecar version.  HYP-3153 reserves the fused packet, while HYP-3160 splits
+  the k=8 node into an even degree-two variance/total-covariance target and
+  an odd Worpitzky/non-associative sidecar; the S31ai follow-up refutes the
+  universal `1/7` associativity-defect and odd-residue-anchor shortcuts.
+  HYP-3199 adds the exact n=4 Einheit section/minimality audit, separating
+  the abundant fixed-path cover from the proof-facing `x,y` chart.
 - **Preserves:** class-size distribution, stationary labelled split, symmetric
   pair functions, and Worpitzky/Eulerian ascent-count modes when the predicate
   is constant on quotient fibers.
@@ -5631,10 +5640,12 @@ constant chase.
 - **Next pull:** Propagate the stored K3 fields into active packet ledgers.
   Use them as a cheap preflight before quotienting HYP-3140
   `F_R(y)`/`F_R,Q(y)`, HYP-3139 reflection-block pages, HYP-3141
-  edge-witness rows, or HYP-3143 packet subbases to single scalars.
-- **Pointers:** HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139,
-  HYP-3137, HYP-3134, HYP-3124, THM-084, LTI-270, LTT-168, T1209,
-  OPEN-Q-108.
+  edge-witness rows, HYP-3143 packet subbases, or HYP-3145/HYP-3149 filler
+  quotients to single scalars.
+- **Pointers:** HYP-3199, HYP-3160, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
+  HYP-3149, HYP-3147, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141,
+  HYP-3140, HYP-3139, HYP-3137, HYP-3134, HYP-3124, THM-084, LTI-270,
+  LTT-168, T1209, OPEN-Q-108.
 
 ## LTT-169: Tournament Of Filler-Core Interface Carriers
 

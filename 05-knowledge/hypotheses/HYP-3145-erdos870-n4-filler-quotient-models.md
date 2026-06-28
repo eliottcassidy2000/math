@@ -11,6 +11,8 @@ result: 05-knowledge/results/lrc14_erdos870_n4_filler_models_codex_20260627.out
 external:
   - https://github.com/davidturturean/erdos-870
 related:
+  - HYP-3144
+  - HYP-3147
   - HYP-3143
   - HYP-3136
   - HYP-3135
@@ -43,6 +45,11 @@ the Hamiltonian-path cube has lower-order leakage, while a two-bit matching
 core has one squarefree representation per class.  This card extends that
 audit toward the LRC14 floor closure by naming the filler/core boundary fields
 that have to survive before a factorized estimate can be used as proof data.
+HYP-3144/HYP-3147 supply the smaller K3 preflight: a quotient may preserve the
+class kernel while losing the minority edge, Worpitzky descent word, and
+ordered-function channel.  The n=4 filler/core interface below should therefore
+be read as the first place where that local sidecar rule becomes a scaffold
+choice.
 
 In the fixed-Hamiltonian-path model, three off-path arcs `a,b,c` remain.  With
 the transitive state `E` and class names
@@ -112,6 +119,11 @@ interface discipline:
 - retain the small core where representations or signs actually vary;
 - prove deletion/nonminimality or quotient failure at the interface;
 - expose the proof boundary as a formal target before using it downstream.
+
+Before scalarizing a filler/core table, run the HYP-3144 pair-function test:
+sum/product-like observables may factor through the quotient, while
+exponent-like observables need an ordered or deletion sidecar.  HYP-3147's
+minority-edge gate is the local witness for exactly that missing coordinate.
 
 In LRC14 language, HYP-3136 should not be pushed as a scalar
 `Rprime*meas(R-safe)*meas(Q-lonely)` product without such a boundary.  The

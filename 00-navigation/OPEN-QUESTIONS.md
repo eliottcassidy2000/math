@@ -61,6 +61,38 @@ HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3141, HYP-3140, 
 HYP-3118, HYP-3116, HYP-3093, HYP-3097, LTI-275, LTT-173, T1214,
 OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3144 Worpitzky pair-function quotient addendum:**
+HYP-3144 verifies the K3 score-class flip quotient exactly:
+`T=(0,1,2)`, `C=(1,1,1)`, multiplicity matrix `[[2,1],[3,0]]`,
+stationary split `{T:3/4,C:1/4}`, and nontrivial mode `-1/3`.  The quotient
+preserves class transition counts but loses the unique transitive
+source-sink edge whose flip enters `C`.  It also shows why aggregate PGFs are
+not enough: both classes aggregate to `F=(1,4,1)`, while state-level curves
+differ.  HYP-3147 names the lost coordinate as the minority-edge gate, S71
+connects the same odd Worpitzky/order face to the k=8 `-9S3` correction, and
+KPS lambda adds the root-curve version of the warning.  Incoming HYP-3151 and
+HYP-3152 add two guardrails: the n=4 OR compression is nonlinear with no
+affine substitute, and the full flip action is a transformation monoid rather
+than V4, so the bounded-core dual should be recorded as degree `<=4` /
+Galois `<=S4` plus restoration sidecars.  HYP-3153 reserves the fused
+Lee-Yang/Worpitzky/quartic packet, and HYP-3160 narrows the k=8 even side to
+the degree-two total-covariance extremality while leaving the odd `-9S3`
+Worpitzky/non-associative side as named proof debt.  The S31ai follow-up drops
+the universal `1/7` associativity-defect and odd-residue-anchor interpretations;
+the durable target is excess co-emptiness / `Sigma kappa_2`.  HYP-3199 adds
+the n=4 Einheit minimality guardrail: the fixed-path `a,b,c` cube is an
+abundant cover, while the exact `x,y` chart is the proof-facing section; any
+use of the cover needs deletability/minimality sidecars.
+
+Open task: instantiate HYP-3150's factor-through test on one real frontier row.
+For each proposed compression in HYP-3140/HYP-3141/HYP-3139/HYP-3143/HYP-3145
+or HYP-3149, explicitly prove that the target observable factors through the
+quotient or retain `minority_edge_gate`, `ordered_pair_exponent_sidecar`,
+`worpitzky_descent_word`, and `fiber_pgf_order_loss_alarm` as sidecars. ->
+HYP-3199, HYP-3160, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3149,
+HYP-3147, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140,
+HYP-3139, HYP-3129, THM-084, LTI-270, LTT-168, T1209, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3138 k=8 reflection-fold addendum:**
 HYP-3138 tests the quotient suggested by the HYP-3132 De Moivre/biquadratic
 hard-row reduction.  The even fold

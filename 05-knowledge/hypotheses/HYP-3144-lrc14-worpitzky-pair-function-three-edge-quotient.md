@@ -1,7 +1,7 @@
 ---
 id: HYP-3144
 title: "LRC14 Worpitzky Pair-Function Three-Edge Quotient"
-status: EVIDENCE
+status: EVIDENCE / exact K3 quotient scout plus HYP-3147/S71/HYP-3150/3151/3152 integration; not a proof
 date: 2026-06-27
 owner: codex-2026-06-27-S274
 tangent: T1209
@@ -11,8 +11,18 @@ scripts:
   - 04-computation/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.py
 results:
   - 05-knowledge/results/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.out
+reflections:
+  - 07-reflections/worpitzky-pair-function-three-edge-quotient-codex-20260627.md
 anchors:
   - HYP-3142
+  - HYP-3199
+  - HYP-3160
+  - HYP-3153
+  - HYP-3152
+  - HYP-3151
+  - HYP-3150
+  - HYP-3147
+  - HYP-3145
   - HYP-3143
   - HYP-3141
   - HYP-3140
@@ -28,9 +38,9 @@ anchors:
 
 # HYP-3144: LRC14 Worpitzky Pair-Function Three-Edge Quotient
 
-Status: EVIDENCE / exact K3 quotient scout; not a proof.
+Status: EVIDENCE / exact K3 quotient scout plus HYP-3147/S71/HYP-3150/3151/3152 integration; not a proof.
 
-This lane claims the user's three-edge prompt as a finite guardrail for the
+This lane turns the user's three-edge prompt into a finite guardrail for the
 LRC14 generating-function packet.  The model object is the quotient of
 labelled three-vertex tournaments by score class:
 
@@ -39,7 +49,8 @@ labelled three-vertex tournaments by score class:
 
 Flipping one directed edge gives a two-node, three-edge quotient kernel.  From
 `C`, every edge flip exits to `T`.  From `T`, two edge flips stay in the
-transitive class and one edge flip enters `C`.  The expected quotient matrix is
+transitive class and one edge flip enters `C`.  The class-level multiplicity
+matrix is
 
 ```text
         to T  to C
@@ -49,15 +60,43 @@ from C    3     0
 
 The same kernel appears for three coin flips after quotienting by "all same"
 versus "two-to-one mix": the two-to-one class has two self flips and one exit
-to all-same; all-same has three exits.  The planned scout will verify this
-kernel exactly, compute its stationary distribution/eigenmodes, and compare it
-with the `6:2` labelled tournament split.
+to all-same; all-same has three exits.  The scout verifies this kernel exactly,
+computes its stationary distribution/eigenmodes, and compares it with the
+`6:2` labelled tournament split.
 
 Post-rebase placement: HYP-3143/S276 now owns the n=4 packet-subbasis
 exact-order audit.  This K3 lane is deliberately smaller: it studies the
 two-state edge-flip kernel before the n=4 lower-order leakage issue appears,
 then hands its order-sensitive sidecar fields upward to the HYP-3143 packet
 basis test.
+
+Later mainline work sharpened the lane rather than replacing it.  HYP-3147
+recasts the same two-state kernel with a cyclic coin reference and names the
+minority-edge gate inside the transitive fiber.  S71 then links the same
+order-sensitive face to the k=8 correction: score-to-iso compression is
+bijective through n=4 and fails at n=5, exactly where the bounded-core cap dip
+turns on; the odd Worpitzky `-9S3` part dominates the even biquadratic `+6S4`
+part.  HYP-3150 packages that as a completed factor-through audit, HYP-3151
+executes the same audit as a function-compression scout and proves the n=4
+`x=a OR c, y=b OR c` compression has no affine `GF(2)^3 -> GF(2)^2`
+replacement, and the KPS Lee-Yang lambda scout adds the root-curve warning
+that scalar PGF values are not enough.  HYP-3152 corrects the group-theoretic
+language around the two-bit picture: the useful slice can look Klein-four, but
+the full flip action is a transformation monoid with an absorbing apex arc.
+The solvability claim should therefore be stated as bounded degree `<=4` /
+Galois `<=S4`, not as a V4 law.  HYP-3153 reserves the executable packet that
+should fuse these lanes, and HYP-3160 sharpens the k=8 node: the even
+biquadratic face is a degree-two variance/total-covariance extremality, while
+the odd `-9S3` Worpitzky face is the non-associative sidecar.  The follow-up
+S31ai correction keeps the covariance target but drops two tempting shortcuts:
+the associativity-defect ratio is not a universal `1/7`, and the odd part is
+not explained by a removable anchor residue.
+HYP-3199 supplies the prompt-exact n=4 companion: the fixed-path `a,b,c` cube
+is an abundant cover whose `S` fiber has five representatives, while the
+partial-score `(0,1,1,2)` chart with live `x=a,y=b` is the exact Einheit
+section.  The class-preserving map `x=a OR c, y=b OR c` is small but lossy, so
+representation abundance must carry minimality/deletion sidecars before it can
+be used as proof evidence.
 
 ## Pair-Function Guardrail
 
@@ -76,8 +115,11 @@ summaries behave like `a+b` or `a*b` only when the target predicate is constant
 on quotient fibers.  Conditional fiber-PGF data from HYP-3140, edge tip/tail
 data from HYP-3141, and boundary/sector leakage data from HYP-3139 behave like
 `a^b` and `b^a`: their order is part of the proof object.  This hypothesis
-will test the small K3 kernel as a named `ordered_pair_exponent_sidecar`
-warning before scalarizing LRC generating functions.
+records the small K3 kernel as a named `ordered_pair_exponent_sidecar`
+warning before scalarizing LRC generating functions or HYP-3145/HYP-3149
+filler-core quotients.  HYP-3199 adds the adjacent n=4 rule: if a quotient uses
+the fixed-path cover, it must also record whether `c` is filler/deletable and
+whether the exact `x,y` Einheit section is available.
 
 ## Worpitzky Transfer
 
@@ -91,12 +133,23 @@ When does an ascent/edge-flip PGF remember only a score-class scalar, and when
 does it need the ordered edge/function sidecar?
 ```
 
-The K3 quotient should become the smallest exact diagnostic.  Its two modes
-should separate a symmetric count mode from an antisymmetric order-sensitive
-mode, echoing the Worpitzky/Eulerian ascent basis and warning against reducing
-the HYP-3140 fiber-PGF curve to a single value too early.
+The K3 quotient is the smallest exact diagnostic.  Its two modes separate a
+symmetric count mode from an antisymmetric order-sensitive mode, echoing the
+Worpitzky/Eulerian ascent basis and warning against reducing the HYP-3140
+fiber-PGF curve to a single value too early.
 
-## Planned Signals
+This also sharpens the bounded-core meta-point from
+HYP-3132/HYP-3142/HYP-3150/HYP-3152/HYP-3160.  The hard LRC14 core stays below the
+Abel-Ruffini wall only if the proof packet keeps enough order to choose the
+right branch.  The k=8 even face is the solvable biquadratic/covariance side;
+the odd Worpitzky/minority-edge face is the orientation sidecar that prevents a
+false scalar compression.  The algebraic ceiling is the degree-four/S4 ceiling,
+and the proof target is now more concrete: prove the even total-covariance /
+excess co-emptiness extremality, then bound the odd Worpitzky/non-associative
+residual with its sidecars intact and without assuming a universal `1/7` or
+anchor law.
+
+## Signals
 
 - `three_edge_flip_kernel`
 - `coin_flip_kernel_isomorphism`
@@ -240,8 +293,8 @@ selected_path =
 
 ## Challenged Assumption
 
-Do not assume the tournament vertices are runners or raw arcs.  This scout will
-use quotient classes, pair-function carriers, edge-flip roles, Worpitzky ascent
+Do not assume the tournament vertices are runners or raw arcs.  This scout uses
+quotient classes, pair-function carriers, edge-flip roles, Worpitzky ascent
 payloads, and LRC proof obligations as possible vertices.  The quotient
 preserves the class-size/stationary-count predicate, but destroys which edge is
 the unique `T -> C` exit and whether a pair function is evaluated as `a^b` or
@@ -252,6 +305,7 @@ the unique `T -> C` exit and whether a pair function is evaluated as `a^b` or
 Attach `pair_function_order_word`, `ordered_pair_exponent_sidecar`,
 `three_edge_flip_kernel`, `worpitzky_ascent_payload`, `edge_flip_role`,
 `fiber_pgf_order_loss_alarm`, and `tip_tail_commutator_shadow` to the active
-HYP-3140/HYP-3141/HYP-3139/HYP-3143 packet rows.  Then test whether the
-`-1/3` antisymmetric mode or the class-level `aggregate_F=(1,4,1)` collision
+HYP-3140/HYP-3141/HYP-3139/HYP-3143/HYP-3145/HYP-3149 packet rows.  Then test
+whether the `-1/3` antisymmetric mode, the class-level `aggregate_F=(1,4,1)`
+collision, the S71 odd `-9S3` dominance, or the KPS off-circle root variance
 predicts which HYP-3140 fiber-PGF coefficient inequalities need a sidecar.

@@ -84,12 +84,10 @@ Claimed files:
 `04-computation/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.py`,
 and `05-knowledge/results/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.out`.
 
-Goal: turn the user's three-edge prompt into a smallest-case quotient
-guardrail for the LRC14 generating-function proof packet.  The scout will
-verify the two score classes of labelled K3 tournaments, `T=(0,1,2)` and
-`C=(1,1,1)`, under single-edge flips.  Expected quotient matrix:
-`T->T` multiplicity `2`, `T->C` multiplicity `1`, `C->T` multiplicity `3`,
-`C->C` multiplicity `0`.  The same kernel should appear from three coin
+Readout: the stored scout verifies the two score classes of labelled K3
+tournaments, `T=(0,1,2)` and `C=(1,1,1)`, under single-edge flips.  The exact
+quotient matrix is `[[2,1],[3,0]]`, with normalized eigenvalues `1,-1/3` and
+stationary split `{T:3/4,C:1/4}`.  The same kernel appears from three coin
 flips after quotienting to "two-to-one mix" and "all same."
 
 Pair-function reading: `a+b` and `a*b` survive unordered-pair quotient;
@@ -105,6 +103,14 @@ ledger has `12` adjacent transitive self flips, `6` cycle-break flips, and `6`
 long source-sink exits.  The key Worpitzky/PGF warning is that both score
 classes aggregate to `F=(1,4,1)` while state-level PGF curves differ.  Thus a
 single value or even a class aggregate can erase the ordered function payload.
+
+HYP-3147 sharpens the same lane by naming the transitive fiber's minority-edge
+gate.  S71 then gives the frontier connection: score-to-isomorphism
+compression is safe through n=4 and first fails at n=5, while the k=8 cap dip
+splits into a larger odd Worpitzky `-9S3` face and a smaller even biquadratic
+`+6S4` face.  HYP-3150 turns this into a completed factor-through audit:
+before using HYP-3140/HYP-3141/HYP-3139/HYP-3143/HYP-3145/HYP-3149 quotients,
+prove the observable factors through the quotient or retain the sidecar.
 
 Namespace: HYP-3144 / LTI-270 / LTT-168 / T1209 / OPEN-Q-108.
 ## Lead codex-2026-06-27-S274: n=4 filler/canary shift-package quotient

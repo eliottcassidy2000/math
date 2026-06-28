@@ -214,20 +214,43 @@ load-bearing.
 
 ## codex-2026-06-27-S274 -- Worpitzky pair-function three-edge quotient -- HYP-3144
 
-Reserved HYP-3144/T1209/LTI-270/LTT-168 for the user's prompt connecting
+Completed HYP-3144/T1209/LTI-270/LTT-168 for the user's prompt connecting
 Worpitzky identity, pair functions `a*b`, `a+b`, `a^b`, `b^a`, and the
 two-class three-edge flip graph of tournaments on three vertices.  Rebased
-over S276, which claimed HYP-3143/T1208/LTI-269/LTT-167 for the n=4
-exact-order packet-subbasis audit; this K3 lane is now the smaller
-order-sensitive quotient preflight feeding that packet-basis discipline.
-Planned executable scout: verify the K3 score-class edge-flip matrix
-`[[2,1],[3,0]]`, identify it with the three-coin quotient
-all-same/two-to-one-mix kernel, test which pair functions survive unordered
-quotienting, check the `n=3` Worpitzky identity, and run Tournament Analysis
-over proof carriers rather than raw runners.  LRC14 purpose: add a smallest
-exact warning label before scalarizing HYP-3140 fiber-PGF coefficients,
-HYP-3141 edge tip/tail witnesses, HYP-3139 reflection-block leakage, or
-HYP-3143 exact-order packet bases.
+over S276/HYP-3143, so this K3 lane is now the smaller order-sensitive quotient
+preflight feeding the n=4 packet-basis discipline.
+
+Scout completed in
+`04-computation/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.py`;
+stored output
+`05-knowledge/results/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.out`.
+Readout: labelled K3 class sizes `T=6,C=2`, quotient flip matrix
+`[[2,1],[3,0]]`, normalized eigenmodes `1,-1/3`, stationary distribution
+`{T:3/4,C:1/4}`, and the same matrix for three coin flips after quotienting to
+mix/same.  The transitive class loses the identity of its unique long
+source-sink exit edge.  The Worpitzky/PGF signal is stronger than expected:
+both score classes aggregate to `F=(1,4,1)`, but state-level F-curves differ,
+so class-level PGF equality can still erase order-sensitive proof data.
+Pair-function audit says `a+b` and `a*b` are unordered-safe, while `a^b` and
+`b^a` require an ordered sidecar except accidental equalities.
+
+Later integration: HYP-3147 names the same local sidecar as the minority-edge
+gate, S71 links the odd Worpitzky face to the k=8 `-9S3` correction, HYP-3150
+packages the rule as a completed factor-through audit, and KPS lambda adds the
+root-curve sidecar warning.  Post-rebase HYP-3151/HYP-3152 sharpen the close:
+the n=4 OR compression is nonlinear with no affine replacement, and the full
+flip action is a transformation monoid; state the bounded-core tameness as
+degree `<=4` / Galois `<=S4`, not as a V4 group law.  Final rebase over
+HYP-3153/HYP-3160 sharpened the proof split again: the even k=8 face is the
+degree-two variance/total-covariance extremality, while the odd `-9S3`
+Worpitzky face is the non-associative residual to retain as sidecar debt.
+The later S31ai corrections also refute the tempting universal `1/7`
+associativity-defect and odd-residue-anchor shortcuts, so the robust next
+target is excess co-emptiness / `Sigma kappa_2`.  Final integration over
+HYP-3199 adds the n=4 Einheit minimality chart: fixed-path `a,b,c` is an
+abundant cover, exact `x,y` is the proof-facing section, and the OR compression
+must retain deletion/minimality sidecars.
+
 ## codex-2026-06-27-S274 -- n=4 filler/canary shift-package quotient -- HYP-3146
 
 User asked to connect davidturturean/erdos-870 and two n=4 tournament modeling
@@ -251,19 +274,6 @@ deletion-stable nonminimality.  HYP-3141/HYP-3142 packet rows should explicitly
 state whether they are keeping redundant fiber mass or using finite
 filler/scaffold data to make quotienting legal.
 
-Scout completed in
-`04-computation/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.py`;
-stored output
-`05-knowledge/results/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.out`.
-Readout: labelled K3 class sizes `T=6,C=2`, quotient flip matrix
-`[[2,1],[3,0]]`, normalized eigenmodes `1,-1/3`, stationary distribution
-`{T:3/4,C:1/4}`, and the same matrix for three coin flips after quotienting
-to mix/same.  The transitive class loses the identity of its unique long
-source-sink exit edge.  The Worpitzky/PGF signal is stronger than expected:
-both score classes aggregate to `F=(1,4,1)`, but state-level F-curves differ,
-so class-level PGF equality can still erase order-sensitive proof data.
-Pair-function audit says `a+b` and `a*b` are unordered-safe, while `a^b` and
-`b^a` require an ordered sidecar except accidental equalities.
 ## codex-2026-06-28-erdos870-tournament4 -- tournament-4 canary/filler quotient -- HYP-3149
 
 Prompt: leverage the recently formalized Erdos-870 negative answer and the
