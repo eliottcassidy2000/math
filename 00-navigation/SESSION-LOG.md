@@ -23,6 +23,27 @@ on the interlocking recursions / three modes at the apex.) HYP-3217:
 NET: the project's three modes + my recent threads = ONE object (the subfield lattice of Q(zeta_7) x 2-adic);
 the cubic de Moivre is the named missing mode; the cyclotomic degree (p-1)/2 unifies the Venn-depth, the
 ladder, and the periods. => HYP-3217; reflection the-three-modes-are-the-subfield-lattice-...
+## mac-mini-2026-06-28-S75d -- the recursion modes are CYCLOTOMIC FACTORS: each mode = (x-1)^depth · Φ_d (depth=moment-order, Φ_d=character)
+
+Owner: see the similarities among A+B+C-D-E-F+G (full), A+B-C (even), A+B+D-C-E-F+G (odd); extend; find others.
+HYP-3233 + reflection the-recursion-modes-are-cyclotomic-factors + script lrc_recursion_modes_cyclotomic_macmini_S75.py.
+
+THE UNIFIER (VERIFIED, sympy): all three are CYCLOTOMIC-FACTORED characteristic polynomials.
+  EVEN A+B-C: f(n)=2f(n-1)-f(n-2) -> char (x-1)^2
+  FULL A+B+C-D-E-F+G: f(n)=3f(n-1)-3f(n-2)+f(n-3) -> char (x-1)^3
+  ODD A+B+D-C-E-F+G: f(n)=2f(n-1)-2f(n-3)+f(n-4) -> char (x-1)^3*(x+1) = (x-1)^3*Phi_2
+TWO graded data: the (x-1)-MULTIPLICITY = the MOMENT-ORDER DEPTH (kps (p+1)/2; the moment-ladder cap_k=cap_(k-1)+k/91
+is the (x-1)^depth solution); the Phi_d FACTOR = the CHARACTER (Phi_1=Mobius/principal, Phi_2=chi_2 parity,
+Phi_3=chi_3 Eisenstein, real Phi_7=de Moivre cubic x^3+x^2-2x-1=chi_7 Legendre apex).
+
+EXTENSION = the cyclotomic factorization x^14-1 = Phi_1*Phi_2*Phi_7*Phi_14. The cap char poly =
+(x-1)^depth * Phi_2 * Phi_7 * Phi_14; **Phi_7 (the apex de Moivre cubic) is the IRREDUCIBLE hardness**, Phi_14 = the
+half-tiling 2*7 mixing (HYP-2690), Phi_2 = the parity/2-adic fold. Mobius = Eisenstein (+) Legendre by SIZE-PARITY.
+Other repo recursions on the same grading: Mode A (Phi_1/doubling H=1+2^d), Mode B (Phi_2 even-fold/Cayley-Dickson),
+single-arc peeling (Phi_1 collapse), three-gap kernel (Phi_7 Diophantine), moment-ladder ((x-1)^depth), column-row
+(HYP-1881). The whole LRC(14) hardness = the single Phi_7 factor atop principal (x-1)^depth cell growth.
+NOT a proof; precisely names + extends the recursion family (the three modes = the first cyclotomic factors;
+the apex Phi_7 = the irreducible one carrying the difficulty).
 
 ## mac-mini-2026-06-28-S75c -- INTERLOCKING recursions: the cap kernel is modulus-covariant down to the apex n/2=7, where it BREAKS (the three modes concentrate at the Eisenstein fold)
 
