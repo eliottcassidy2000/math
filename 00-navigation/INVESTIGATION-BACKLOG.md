@@ -119,6 +119,39 @@ repaired by Schwarz-Christoffel accessory owner debt, or routed to named
 owner/height/off-grid/state-lift debt.  Keep Tournament Analysis on proof
 carriers and sidecar transformations, not runners or famous-problem names.
 
+## Lead codex-2026-06-28: Owner-cut resurrection calculus
+
+**Status:** SYNTHESIS / exact clause-certificate calculus over known mixed
+fibers; not proof (HYP-3414/T1374/LTI-374/LTT-274).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3414-lrc14-owner-cut-resurrection-calculus.md`,
+script
+`04-computation/lrc14_owner_cut_resurrection_calculus_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_owner_cut_resurrection_calculus_codex_20260628.out`,
+and
+`07-reflections/lrc14-owner-cut-resurrection-calculus-codex-20260628.md`.
+
+Purpose: turn the HYP-3409/HYP-3410 owner-cut route into a finite
+Menger/Farkas certificate, integrating incoming HYP-3411/HYP-3412/HYP-3413.
+A different-exit row pair emits an endpoint-owner support symmetric-difference
+clause; a legal owner cut is a minimum hitting set whose cut-code buckets are
+theorem-exit pure.
+
+Readout: the height leak has `2` clauses and singleton cut `5:g1`; the
+persistent owner leak has `10` clauses and singleton cut `1:g1`; the
+`(72,20)` `10->20` frontier has `9` clauses, minimum cut size `3`, five
+minimum cuts, empty core, and cut union
+`11:g1,13:g1,1:g1,2:g2,5:g1,7:g7`.  This redirects the theorem target from a
+singleton-owner separator to a bounded owner-transversal lemma plus terminal
+chamber router.
+
+Next: extend HYP-3406 beyond `(72,20)` and run this clause/transversal
+calculus on the first `residue+owner_support` failure, if any.  Then test
+endpoint deletion, mirror-swap, and `+14` child decks for stability of
+transversal number and cut-code theorem-exit purity.
+
 ## Lead codex-2026-06-28: AP-collar finite lemma certificate
 
 **Status:** EVIDENCE / exact finite certificate for the HYP-3401 AP-collar

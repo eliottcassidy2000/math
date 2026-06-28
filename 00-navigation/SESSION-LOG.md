@@ -4,6 +4,35 @@ Owner: even more creative reframes, test ideas, be inspired by concurrent agents
 - **GW-CRITERION (HYP-3413), VERIFIED q=3..22 zero mismatches:** the canonical doubling (n-2)->2(n-2) keeps M=1/n EXACTLY when q==1 mod3 (ON for q=4,7,10,13,16,19,22). For prime q: q==1mod3 <=> 3|(q-1) <=> (Z/2q)* contains C_3 (mac-mini's pair-cycle) <=> cube roots of unity exist mod q <=> q SPLITS in the Eisenstein integers Z[omega]=Q(sqrt-3). So the MAGNITUDE symmetry-breaking (GW second tight set EXISTS) is GATED by the RESIDUE C_3 -- connecting the two halves causally. Predicts LRC(2q) census size: 1 (q!=1mod3, AP unique) vs >=2 (q==1mod3, AP+GW). n=14 (q=7=1mod3): GW exists; n=10,12 (q=5,6): census={AP} alone.
 - **THREE number fields now:** Q(sqrt-7) (apex, 7=3mod4, the floor), Q(cos2pi/7) (real cubic, the equioscillation/cap), Q(sqrt-3)=Q(omega) (Eisenstein, gates GW EXISTENCE via q's splitting). All from the apex prime 7 and its mod-3 class.
 NET: two creative reframes (Galois 2-orbit decomposition; GW=q==1mod3=Eisenstein-split) integrating mac-mini's C_3, my census split, my Q(sqrt-7). Residue half rigorous; magnitude half = the symmetry-breaking residual, now with a clean arithmetic switch (q mod 3). OPEN: the geometric mechanism (why cube-roots-of-unity mod q let 2(n-2) realign the cover) -- would make the GW-criterion a theorem.
+## codex-2026-06-28 -- HYP-3414 owner-cut resurrection calculus for LRC14
+
+Pursued the strongest proof-facing obligation from HYP-3409/HYP-3410: turn
+endpoint-owner cuts into exact dual certificates.  Added
+HYP-3414/T1374/LTI-374/LTT-274 plus script/result/reflection, integrating
+incoming HYP-3411/HYP-3412/HYP-3413:
+
+```text
+04-computation/lrc14_owner_cut_resurrection_calculus_codex_20260628.py
+05-knowledge/results/lrc14_owner_cut_resurrection_calculus_codex_20260628.out
+05-knowledge/hypotheses/HYP-3414-lrc14-owner-cut-resurrection-calculus.md
+07-reflections/lrc14-owner-cut-resurrection-calculus-codex-20260628.md
+```
+
+Readout: every cross-exit row pair in a mixed fiber now becomes an
+endpoint-owner support symmetric-difference clause; a legal owner cut is a
+minimum hitting set whose cut-code buckets are theorem-exit pure.  On the
+exact HYP-3410/HYP-3406 substrate, the height leak has `2` clauses and
+singleton cut `5:g1`, the persistent owner leak has `10` clauses and
+singleton cut `1:g1`, while the `(72,20)` `10->20` frontier has `9` clauses,
+minimum cut size `3`, five minimum cuts, and empty core.
+
+Proof correction: do not aim for a universal singleton-owner theorem.  The
+frontier data points to a bounded owner-transversal lemma, followed by a
+terminal chamber router to AP/GW boundary, strict/positive open mass,
+q-witness, state-lift/H7, exact-period exception, or named finite residual.
+Tournament Analysis uses proof obligations as vertices (`11` vertices, no
+directed 3-cycles, one Hamiltonian path led by
+`owner_cut_dual_certificate -> mixed_fiber_resurrection_api -> bounded_owner_cut_theorem`).
 
 ## codex-2026-06-28 -- HYP-3409 recursive sidecar pattern atlas for LRC14
 

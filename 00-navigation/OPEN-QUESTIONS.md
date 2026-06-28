@@ -97,6 +97,34 @@ HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405,
 HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150, HYP-3147,
 HYP-3143, T1373, LTI-373, LTT-273, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3414 owner-cut resurrection calculus addendum:**
+HYP-3414 converts the HYP-3409/HYP-3410 owner-cut route into a finite
+clause/transversal certificate, downstream of the incoming HYP-3411 Galois
+split, HYP-3412 special-function signature scout, and HYP-3413 GW-doubling
+criterion.  In a mixed theorem-exit fiber, every different-exit row pair emits
+a clause equal to the symmetric difference of the two rows' endpoint-owner
+supports.  A legal owner cut is a minimum hitting set for these clauses whose
+binary cut-code buckets are theorem-exit pure.
+
+Exact current readout: the height leak has `2` cross-exit clauses and
+singleton cut `5:g1`; the persistent owner leak has `10` clauses and singleton
+cut `1:g1`; the `(72,20)` `10->20` frontier has `9` clauses, minimum
+transversal size `3`, five minimum cuts, empty core, and cut union
+`11:g1,13:g1,1:g1,2:g2,5:g1,7:g7`.  This refutes the next-step hope for a
+universal singleton-owner separator and replaces it with a bounded
+owner-transversal theorem plus terminal chamber router.
+
+Open task: extend HYP-3406 beyond `(72,20)` and stop at the first
+`residue+owner_support` failure, if any.  Run the clause/transversal calculus
+on that first failure and decide whether the minimum cut size remains bounded,
+grows in a controlled child-deck way, or names a new sidecar.  Then add
+terminal routing for every cut-pure bucket: AP/GW boundary, strict/positive
+open mass, q-witness, state-lift/H7, exact-period exception, or named finite
+residual. -> HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409,
+HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401,
+HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-2969,
+HYP-2963, THM-523, T1374, LTI-374, LTT-274, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3405 AP-collar finite lemma certificate addendum:**
 HYP-3405 turns the HYP-3401 AP-collar obstruction into a certificate-shaped
 finite lemma target.  In the AP one-swap collar with replacement speed through

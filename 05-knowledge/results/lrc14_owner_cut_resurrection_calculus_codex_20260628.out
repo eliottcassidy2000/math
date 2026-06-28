@@ -1,0 +1,159 @@
+HYP-3414 LRC14 owner-cut resurrection calculus
+==============================================================================
+substrate=HYP-3410 exact HYP-3406 mixed fibers
+calculus=cross-exit clauses -> minimum owner transversals -> exit-pure cut codes
+## Owner-cut clause certificates
+
+### height_leak_12_family
+rows=3 exit_hist={'positive-Haar-open': 2, 'unit-petal-named': 1}
+cross_exit_clause_count=2
+minimum_transversal_size=1
+HYP3410_min_owner_cut_size=1
+minimum_cut_count=1
+minimum_cut_core=('5:g1',)
+minimum_cut_union=('5:g1',)
+minimum_cut_participation={'5:g1': 1}
+first_minimum_cut=('5:g1',)
+first_cut_exit_pure=True
+first_cut_code_table=
+  0: exits=['unit-petal-named'] rows=['P10+GW']
+  1: exits=['positive-Haar-open'] rows=['GW-shell alias 12->132', 'single swap 12->48']
+top_BDH_style_owner_variance=
+  5:g1: 8/9
+  13:g1: 2/9
+  11:g1: 2/9
+  7:g7: 0
+  6:g2: 0
+singleton_cut_failures=
+  11:g1 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  13:g1 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  6:g2 has mixed code 1 with exits=('positive-Haar-open', 'unit-petal-named')
+  7:g7 has mixed code 1 with exits=('positive-Haar-open', 'unit-petal-named')
+
+### persistent_owner_leak_26_40_54_family
+rows=11 exit_hist={'positive-Haar-open': 10, 'unit-petal-named': 1}
+cross_exit_clause_count=10
+minimum_transversal_size=1
+HYP3410_min_owner_cut_size=1
+minimum_cut_count=1
+minimum_cut_core=('1:g1',)
+minimum_cut_union=('1:g1',)
+minimum_cut_participation={'1:g1': 1}
+first_minimum_cut=('1:g1',)
+first_cut_exit_pure=True
+first_cut_code_table=
+  0: exits=['positive-Haar-open'] rows=['single swap 1->26', 'single swap 1->40', 'single swap 1->54', 'single swap 3->26', 'single swap 3->40', 'single swap 3->54', 'single swap 5->26', 'single swap 5->40', 'single swap 5->54', 'single swap 9->54']
+  1: exits=['unit-petal-named'] rows=['petal 13->26']
+top_BDH_style_owner_variance=
+  1:g1: 200/121
+  13:g1: 162/121
+  11:g1: 98/121
+  10:g2: 32/121
+  9:g1: 18/121
+singleton_cut_failures=
+  10:g2 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  11:g1 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  12:g2 has mixed code 1 with exits=('positive-Haar-open', 'unit-petal-named')
+  13:g1 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  2:g2 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  5:g1 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  6:g2 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  7:g7 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+
+### height_persistent_owner_leak_10_20_drop_add_family
+rows=10 exit_hist={'positive-Haar-open': 9, 'unit-petal-named': 1}
+cross_exit_clause_count=9
+minimum_transversal_size=3
+HYP3410_min_owner_cut_size=3
+minimum_cut_count=5
+minimum_cut_core=()
+minimum_cut_union=('11:g1', '13:g1', '1:g1', '2:g2', '5:g1', '7:g7')
+minimum_cut_participation={'13:g1': 4, '11:g1': 3, '2:g2': 3, '1:g1': 2, '5:g1': 2, '7:g7': 1}
+first_minimum_cut=('11:g1', '13:g1', '1:g1')
+first_cut_exit_pure=True
+first_cut_code_table=
+  000: exits=['unit-petal-named'] rows=['petal 10->20']
+  001: exits=['positive-Haar-open'] rows=['two drop(1, 10)->add(15, 20)']
+  010: exits=['positive-Haar-open'] rows=['two drop(1, 10)->add(17, 20)', 'two drop(1, 10)->add(19, 20)', 'two drop(3, 10)->add(17, 20)']
+  100: exits=['positive-Haar-open'] rows=['two drop(3, 10)->add(19, 20)']
+  110: exits=['positive-Haar-open'] rows=['two drop(3, 10)->add(15, 20)', 'two drop(5, 10)->add(17, 20)', 'two drop(5, 10)->add(19, 20)']
+  111: exits=['positive-Haar-open'] rows=['two drop(5, 10)->add(15, 20)']
+top_BDH_style_owner_variance=
+  13:g1: 49/50
+  11:g1: 1/2
+  7:g7: 9/50
+  5:g1: 9/50
+  2:g2: 9/50
+singleton_cut_failures=
+  11:g1 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  12:g2 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  13:g1 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  1:g1 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  2:g2 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  3:g1 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  5:g1 has mixed code 0 with exits=('positive-Haar-open', 'unit-petal-named')
+  6:g2 has mixed code 1 with exits=('positive-Haar-open', 'unit-petal-named')
+
+## Mixed-fiber resurrection API
+- Q0 coarse packet:
+    preserves=preserves theorem-row substrate and known exits
+    destroys=destroys residue/height/owner refinements; mixed fibers are expected
+    repair_rule=if mixed, emit first destroyed coordinate as sidecar debt
+- Q1 residue/C3/Qsqrt(-7) skeleton:
+    preserves=preserves the 7-adic binding layer and unit-pair symmetry
+    destroys=destroys 2-adic magnitude and endpoint-owner support
+    repair_rule=repairs curated-bank residue leaks but not expanded-bank leaks
+- Q2 residue plus v2/height:
+    preserves=preserves the 2-adic hinge and tropical height wall
+    destroys=destroys owner currents and SC accessory parameters
+    repair_rule=kills the first 12-family leak but not height-persistent owner leaks
+- Q3 residue plus owner_support:
+    preserves=preserves endpoint-owner cut coordinates
+    destroys=destroys raw row identity and scalar analogies
+    repair_rule=exact on HYP-3406 through (72,20); next task is first-failure search
+- Q4 owner-cut dual certificate:
+    preserves=preserves only the owner labels needed by a cut code
+    destroys=destroys irrelevant owner labels and row names
+    repair_rule=legal when every cut-code bucket has one theorem exit
+
+## Geometry/topology/graph synthesis
+incidence_complex=rows are 0-cells, cross-exit pairs are obstruction 1-cells, owner labels are cut hyperplanes, and a legal quotient is a collapse whose fibers do not identify two theorem exits.
+menger_to_farkas=each cross-exit pair contributes a clause requiring at least one distinguishing owner label; a minimum owner cut is the finite dual current hitting all obstruction clauses.
+schwarz_christoffel=turn words give the polygonal skeleton, but the accessory parameter is exactly the owner label set needed by the cut.
+bdh=variance is a search heuristic for energetic owner channels; it is not a certificate unless the induced cut code is exit-pure.
+bring=the five theorem exits are a branch alphabet; proof progress is making the branch label single-valued on the chosen quotient.
+recursive_charal=+14 ladders should be tested by whether child decks preserve the clause transversal number and the terminal exit router.
+
+## Strongest proof-facing theorem targets
+- owner-cut resurrection lemma: For every legal mixed theorem-exit fiber after the current q/AP/GW pre-routing, the cross-exit clause hypergraph has a bounded owner transversal whose cut code is theorem-exit pure, or the fiber emits a named residual debt.
+- owner-support exactness extension: Push HYP-3406 beyond (72,20).  If residue+owner_support first fails, save the failing mixed fiber and run this clause calculus on it.
+- terminal chamber router: Every cut-pure fiber must route to AP/GW boundary, strict/positive open mass, q-witness, state-lift/H7, exact-period exception, or a new finite residual; owner cuts alone are not terminal exits.
+- charal child-deck stability: Endpoint deletion, mirror swap, and +14 child decks should preserve transversal number and cut-pure terminal codes unless they cross a recorded owner/accessory wall.
+
+## Tournament Analysis
+vertices=proof-facing obligations, not runners, arcs, or owner labels
+alternate_vertices_considered=runners,gaps,sections,boundary events,residues,cover arcs,Fourier modes,matroid circuits,owner labels,proof obligations
+chosen_vertices=proof obligations generated by mixed-fiber resurrection
+pairwise_observable=weighted retained proof payload minus destroyed sidecars plus exact evidence
+switch_gauge=higher score; ties by fewer destroyed coordinates and priority
+preserved_predicate=theorem-exit purity on legal quotient fibers
+destroyed_information=row order, raw runner identity, irrelevant owner labels, scalar analogies
+vertex_count=11
+score_hist={-23: 1, 29: 1, 31: 1, 34: 1, 44: 1, 54: 1, 60: 1, 69: 1, 70: 1, 79: 1, 86: 1}
+directed_3cycles=0
+hamiltonian_path_count=1
+priority_hamiltonian_path=
+  O00 owner_cut_dual_certificate: score=86 keeps=['dual_certificate', 'exit_purity', 'finite_exactness', 'owner_cut'] destroys=['raw_analogy']
+  O01 mixed_fiber_resurrection_api: score=79 keeps=['exit_purity', 'finite_exactness', 'mixed_fiber_api', 'terminal_router'] destroys=['raw_analogy']
+  O02 bounded_owner_cut_theorem: score=70 keeps=['dual_certificate', 'globalization', 'owner_cut', 'terminal_router'] destroys=['height_wall']
+  O03 owner_support_exactness_extension: score=69 keeps=['finite_exactness', 'globalization', 'mixed_fiber_api', 'owner_cut'] destroys=['recursive_charal']
+  O05 collar_to_bank_owner_lift: score=60 keeps=['collar_to_bank', 'finite_exactness', 'height_wall', 'owner_cut'] destroys=['globalization']
+  O04 terminal_chamber_router: score=54 keeps=['exit_purity', 'globalization', 'terminal_router'] destroys=['raw_analogy']
+  O06 charal_child_deck_no_new_kernel: score=44 keeps=['owner_cut', 'recursive_charal', 'terminal_router'] destroys=['finite_exactness']
+  O08 schwarz_christoffel_accessory_lemma: score=34 keeps=['owner_cut', 'recursive_charal', 'sc_accessory'] destroys=['exit_purity']
+  O07 bdh_exception_ledger: score=31 keeps=['bdh_prefilter', 'globalization', 'terminal_router'] destroys=['dual_certificate', 'finite_exactness']
+  O09 bring_branch_normal_form: score=29 keeps=['bring_branch', 'exit_purity', 'terminal_router'] destroys=['dual_certificate', 'owner_cut']
+  O10 raw_analogy_rejection: score=-23 keeps=['raw_analogy'] destroys=['dual_certificate', 'exit_purity', 'finite_exactness', 'globalization', 'mixed_fiber_api', 'owner_cut', 'terminal_router']
+
+## Assumption challenge
+The challenged assumption is that the next LRC14 recursion should be over runners, residues, or special-function names.  The exact data says to recurse over legal quotients and the finite owner clauses created when those quotients identify distinct theorem exits.
