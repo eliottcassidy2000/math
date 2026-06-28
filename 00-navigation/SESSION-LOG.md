@@ -1,3 +1,31 @@
+## codex-2026-06-28 -- HYP-3426 one-branch mirror / endpoint-support certificates
+
+Pushed a new proof angle after HYP-3425.  The two-branch obstruction has a
+mirror reduction: `u -> 1-u` preserves `E_safe` and maps branch-0 survivors to
+branch-1 survivors.  This makes the next finite theorem target the one-color
+cover statement:
+
+```text
+E_safe is not contained in B0_odd.
+```
+
+Added HYP-3426/T1387/LTI-387/LTT-287 plus script/result/reflection:
+
+```text
+04-computation/lrc14_one_branch_mirror_endpoint_support_codex_20260628.py
+05-knowledge/results/lrc14_one_branch_mirror_endpoint_support_codex_20260628.out
+05-knowledge/hypotheses/HYP-3426-lrc14-one-branch-mirror-endpoint-support.md
+07-reflections/lrc14-one-branch-mirror-endpoint-support-codex-20260628.md
+```
+
+Exact audit on `162` rows: mirror identity `162/162`, equal branch measures
+`162/162`, positive one-branch survivor `162/162`, selected branch-0 score
+`>=1/14` `162/162`, endpoint-labelled survivors `162/162`.  Endpoint support
+histogram is `{1:353, 2:13103, 3:72}` with max support size `3`.
+
+Next proof target: classify endpoint-owner triples that can bound or destroy
+one-branch survivors, then prove a one-branch interval-piercing lemma.
+
 ## codex-2026-06-28 -- HYP-3425 two-branch obstruction / Helly certificate
 
 Extended the user's off-grid/resonance prompt after the new HYP-3421/HYP-3422

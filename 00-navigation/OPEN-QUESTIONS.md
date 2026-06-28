@@ -1,5 +1,24 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3426 one-branch mirror / endpoint-support addendum:**
+HYP-3426 sharpens HYP-3425's two-branch target by using the mirror involution
+`u -> 1-u`.  Since it preserves `E_safe` and maps branch-0 survivors to
+branch-1 survivors, the concrete theorem target can be reduced to
+
+```text
+prove E_safe is not contained in B0_odd
+```
+
+for every primitive covering `13`-row.  Exact audit on `162` rows gives mirror
+identity, equal branch measures, positive one-branch survivor, selected
+branch-0 score `>=1/14`, and endpoint-labelled survivors in every case.
+Endpoint-owner support histogram is `{1:353, 2:13103, 3:72}`, max support
+size `3`.  Next attempt: classify endpoint-owner triples and prove that no
+one-color odd near-integer cover can consume every `E_safe` component. ->
+HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3419,
+HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523, LTI-387, LTT-287, T1387,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3425 two-branch obstruction / Helly addendum:**
 HYP-3425 sharpens the two-adic relocation lemma into a one-dimensional
 obstruction statement.  For `S=O union 2E` and `u=2t`,

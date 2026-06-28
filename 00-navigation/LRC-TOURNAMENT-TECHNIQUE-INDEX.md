@@ -338,6 +338,11 @@ obligations, and proof-carrier interfaces.
   owner-current exception labels the vertices.  The raw resonance slogan is a
   negative control; the proof carrier is `E_safe` not contained in
   `B0_odd cap B1_odd`.
+- Need to remove branch ambiguity from the HYP-3425 interval theorem:
+  use LTT-287 after LTT-286/LTT-285 and make the mirror involution,
+  one-branch piercing lemma, endpoint-owner triples, component-local cover
+  words, and scalar-firewall checks the vertices.  The proof carrier is
+  `E_safe` not contained in `B0_odd`.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -8194,6 +8199,37 @@ quotient_legality_status
 - **Pointers:** HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419,
   HYP-3418, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523, LTI-386,
   T1386, OPEN-Q-108.
+
+## LTT-287: One-Branch Mirror / Endpoint-Support Tournament
+
+- **Move:** Rank the proof obligations in the HYP-3426 mirror reduction of
+  HYP-3425.  Vertices are the one-branch interval-piercing lemma, endpoint
+  owner triple certificate, mirror involution equivalence, component-local
+  cover decomposition, two-color bad-core identity, owner-current exception
+  router, and raw branch-mass lower bound as a negative control.
+- **LRC use:** For `S=O union 2E`, branch `1` is the mirror image of branch
+  `0` under `u -> 1-u`.  The theorem target becomes the one-color statement
+  `E_safe` is not contained in `B0_odd`.
+- **Preserves:** the full witness predicate after branch-0 selection, the
+  mirror branch, exact rational endpoints, endpoint-owner support, and
+  two-adic descent coordinates.
+- **Forgets / guardrail:** a scalar mass lower bound forgets endpoint owners;
+  the two-color core is useful but branch choice is not independent; owner
+  currents name exceptions but do not replace the interval theorem.
+- **Pairwise observable:** predicate retention, finite exactness, mirror
+  reduction, endpoint-support payload, two-adic induction value, owner-current
+  glue, and scalar-firewall strength.
+- **Switch/gauge:** orient toward higher retained proof-channel score; ties
+  use the declared proof path.
+- **Fingerprint:** score histogram `{32:1, 55:1, 57:1, 60:1, 61:1, 62:1,
+  65:1}`, no directed `3`-cycles, and Hamiltonian path
+  `one_branch_interval_piercing_lemma -> endpoint_owner_triple_certificate -> mirror_involution_branch_equivalence -> component_local_cover_decomposition -> two_color_bad_core_identity -> owner_current_exception_router -> raw_branch_mass_lower_bound`.
+- **Next hook:** classify endpoint-owner triples and prove that a full
+  one-color odd near-integer cover of `E_safe` is impossible, or route the
+  first failure to owner-current, exact-period, or state-lift debt.
+- **Pointers:** HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421,
+  HYP-3419, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523, LTI-387,
+  T1387, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 

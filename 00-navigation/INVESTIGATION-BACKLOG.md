@@ -15,6 +15,36 @@
 
 ---
 
+## Lead codex-2026-06-28: One-branch mirror / endpoint-support certificates
+
+**Status:** EVIDENCE / exact finite-ruler mirror and endpoint-support audit;
+not proof (HYP-3426/T1387/LTI-387/LTT-287).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3426-lrc14-one-branch-mirror-endpoint-support.md`,
+script
+`04-computation/lrc14_one_branch_mirror_endpoint_support_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_one_branch_mirror_endpoint_support_codex_20260628.out`,
+and
+`07-reflections/lrc14-one-branch-mirror-endpoint-support-codex-20260628.md`.
+
+Purpose: sharpen HYP-3425.  The involution `u -> 1-u` preserves `E_safe` and
+maps branch-0 survivor intervals to branch-1 survivor intervals, so the
+finite theorem target can be reduced to the one-color cover lemma:
+
+```text
+E_safe is not contained in B0_odd.
+```
+
+Readout on `162` rows: mirror identity, equal branch measures, positive
+one-branch survivor, selected score `>=1/14`, and endpoint-labelled survivors
+all hold `162/162`.  Endpoint-owner support histogram is
+`{1:353, 2:13103, 3:72}`, with max support size `3`.
+
+Next: classify endpoint-owner triples and prove that no one-color odd
+near-integer interval cover can consume every even-safe component.
+
 ## Lead codex-2026-06-28: Two-branch obstruction / Helly certificate
 
 **Status:** EVIDENCE / exact finite-ruler interval audit; not proof
