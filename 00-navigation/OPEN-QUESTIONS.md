@@ -32,6 +32,10 @@ core witnesses are `3` antipodal pairs, and this index is both `(p-1)/2` and
 the de Moivre degree.  Its parity chooses the Borsuk-Ulam/free-`Z2` side
 versus the Brouwer/SOS side.
 
+HYP-3240/S77 guardrail: covering-tight dilations use witnesses
+`t=1/(14d)` in `Phi_{14d}`, so retain dilation witness data in the core
+sidecar.  Also do not compress the dip to a single `Q(sqrt(-7))` norm scalar.
+
 Open task: prove the `q3` exchange-rate inequality symbolically, then glue it
 to HYP-3222 Hermite-Biehler interlacing and HYP-3220 Brouwer/parity sign.
 Negative covariance leakage is only one sidecar; the true odd/negative payload

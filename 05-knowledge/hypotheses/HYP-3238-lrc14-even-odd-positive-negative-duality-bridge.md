@@ -341,6 +341,13 @@ the equioscillation count.  Its parity is the family switch: odd index gives
 the free-`Z2` Borsuk-Ulam side, even index gives the fixed-reflection
 Brouwer/SOS side.
 
+The later HYP-3240/S77 core push adds two guardrails for this packet.  First,
+covering-tight dilations `d*{1,...,13}` have explicit cyclotomic witnesses
+`t=1/(14d)` in `Phi_{14d}`, so the core sidecar must retain dilation witness
+data rather than only the base `Phi_14` address.  Second, the dip is not simply
+a `Q(sqrt(-7))` norm, so the sign/core sidecar should not be overcompressed
+into an imaginary-quadratic norm scalar.
+
 HYP-3237 supplies the information-theoretic wall:
 
 ```text

@@ -146,6 +146,13 @@ equioscillation saddle index.  HYP-3238 should therefore carry an
 `equioscillation_index` sidecar whose parity selects Borsuk-Ulam/free-`Z2`
 versus Brouwer/SOS.
 
+Third post-rebase integration: mac-mini HYP-3240/S77 adds a core guardrail.
+Covering-tight dilations `d*{1,...,13}` are constructed by witnesses
+`t=1/(14d)` in `Phi_{14d}`, so HYP-3238's core sidecar should keep dilation
+witness data.  The same update warns that the dip is not just a
+`Q(sqrt(-7))` norm, so the sign/core sidecar cannot be collapsed to a single
+imaginary-quadratic norm scalar.
+
 -> HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
 HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223,
 HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
