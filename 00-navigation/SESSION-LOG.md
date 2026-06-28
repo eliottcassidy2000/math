@@ -1,3 +1,22 @@
+## codex-2026-06-28 -- special-function cut signature recursion -- HYP-3407
+
+Reserved HYP-3407/T1368/LTI-368/LTT-268 for a long creative synthesis pass
+downstream of HYP-3406.  The claimed artifact set is:
+`04-computation/lrc14_special_function_cut_signature_recursion_codex_20260628.py`,
+`05-knowledge/results/lrc14_special_function_cut_signature_recursion_codex_20260628.out`,
+`05-knowledge/hypotheses/HYP-3407-lrc14-special-function-cut-signature-recursion.md`,
+and
+`07-reflections/lrc14-special-function-cut-signature-recursion-codex-20260628.md`.
+
+Evidence is still pending at reservation time.  The intended test is to turn
+Bring radical branch alarms, Schwarz-Christoffel cut-angle data,
+Barban-Davenport-Halberstam variance, Menger cuts, Ramanujan-Soldner
+zero-points, Sophie Germain quartic factorization, Hermite-Lindemann-
+Weierstrass separation, Krasner stability, and Meissel-Mertens residuals into
+measurable recursive LRC14 signature sidecars.  The core guardrail is still
+the function-compression rule: theorem exit must be constant on a compressed
+fiber, or the first missing coordinate becomes an explicit sidecar/debt.
+
 ## codex-2026-06-28 -- HYP-3405 AP-collar finite lemma certificate for LRC14
 
 Owner asked to work vigorously on the concrete finite lemma target.  Added

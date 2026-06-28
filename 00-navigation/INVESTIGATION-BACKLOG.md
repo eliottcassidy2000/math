@@ -15,6 +15,32 @@
 
 ---
 
+## Lead codex-2026-06-28: Special-function cut signature recursion
+
+**Status:** RESERVED / creative synthesis scaffold; executable evidence pending
+(HYP-3407/T1368/LTI-368/LTT-268).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3407-lrc14-special-function-cut-signature-recursion.md`,
+script
+`04-computation/lrc14_special_function_cut_signature_recursion_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_special_function_cut_signature_recursion_codex_20260628.out`,
+and
+`07-reflections/lrc14-special-function-cut-signature-recursion-codex-20260628.md`.
+
+Purpose: translate a deliberately broad prompt set--Bring radical,
+Schwarz-Christoffel maps, Barban-Davenport-Halberstam variance, Menger cuts,
+Ramanujan-Soldner zero-points, Sophie Germain quartic splitting,
+Hermite-Lindemann-Weierstrass separation, Krasner stability, and
+Meissel-Mertens residuals--into testable LRC14 sidecar-recursion signals.
+
+Next: implement the scout by replaying the HYP-3406 height and endpoint-owner
+leaks as controlled-forgetting rows; then compute recursive
+`charal_signature` mixed-fiber counts, a toy Menger exit-cut certificate,
+motif-transfer rankings, and Tournament Analysis over proof carriers rather
+than runners.
+
 ## Lead codex-2026-06-28: AP-collar finite lemma certificate
 
 **Status:** EVIDENCE / exact finite certificate for the HYP-3401 AP-collar

@@ -1,5 +1,24 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3407 special-function cut signature recursion addendum:**
+HYP-3407 reserves an executable creative synthesis route downstream of
+HYP-3406.  The intended move is to treat Bring radicals, Schwarz-Christoffel
+cut maps, Barban-Davenport-Halberstam variance, Menger cuts,
+Ramanujan-Soldner zero-point normalization, Sophie Germain quartic splitting,
+Hermite-Lindemann-Weierstrass separation, Krasner stability, and
+Meissel-Mertens residuals as prompts for measurable LRC14 signature sidecars,
+not as proof imports.
+
+Open task: implement the scout and decide whether the post-HYP-3406
+sidecar chain can be written as a recursive `charal_signature`:
+residue character, height valuation, endpoint-owner support, cut
+angle/current, variance residual, local stability radius, and full
+PGF/root-curve branch alarm.  The legality test remains function-compression
+purity: if theorem exits mix in a signature fiber, the first missing
+coordinate must be restored, dualized, or named as debt. -> HYP-3407,
+HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151,
+HYP-3150, HYP-3147, HYP-3143, T1368, LTI-368, LTT-268, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3405 AP-collar finite lemma certificate addendum:**
 HYP-3405 turns the HYP-3401 AP-collar obstruction into a certificate-shaped
 finite lemma target.  In the AP one-swap collar with replacement speed through
