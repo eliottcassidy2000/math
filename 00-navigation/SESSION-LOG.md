@@ -1,3 +1,31 @@
+## kind-pasteur-2026-06-27-S31an -- grand synthesis: the cap IS the arithmetic of Q(cos 2pi/7) (Chebyshev/octonion/cyclotomic)
+
+Owner: another long session, even more creative + abstract + synthesize. Pushed three abstract threads
+that collapse into one number field (HYP-3211/3212/3213):
+
+- **HYP-3211 (octonion/G_2, productive NEGATIVE + synthesis):** 14=dim G_2=dim Aut(octonions), 7=Fano=G_2
+  7-rep. TEST: octonion does NOT organize the LRC associator (kappa_3 NOT doubling-invariant 2/20; sectors
+  REFLECTION-symmetric not QR). RESOLUTION: apex 7 = TWO exceptional structures -- MULTIPLICATIVE
+  (octonion/G_2/Fano = TOURNAMENT/H side) + ADDITIVE (cyclotomic Q(zeta_7)/de Moivre = LRC side). The
+  two-maps = this mult<->add duality; **Joukowski = the Galois TRACE zeta->zeta+conj=2cos**.
+- **HYP-3212 (Chebyshev, VERIFIED):** `V_7(u)-2 = (u-2)*(de Moivre cubic)^2` EXACTLY -- de Moivre angles =
+  the EQUIOSCILLATION (double-root) points of the 7-fold Chebyshev; cap = Chebyshev extremal. **The
+  equioscillation EXPLAINS the cap's RATIONALITY** (double root => perfect-square disc = mac-mini's disc-9
+  Q-collapse). Cover bound = Cohn-Elkies/Delsarte LP with the cyclotomic MAGIC FUNCTION (Hermite-Biehler =
+  f-hat>=0, Toeplitz lambda_min = PSD margin, Perron = principal mode = 4 faces of ONE magic function).
+- **Thread 3:** de Moivre cubic disc = 49 = 7^2, appears in the deep cap/dip denominators (dip_8, m_P have
+  v_7=2) = the cyclotomic conductor.
+- **HYP-3213 GRAND SYNTHESIS:** the cap/dip = the arithmetic of `F=Q(cos 2pi/7)` -- SIX facets (cyclotomic
+  ideal/Chebyshev/rationality/disc-7^2/Joukowski-trace/magic-fn) = ONE field. LRC(14) = the ADDITIVE 1-D
+  7-fold member of a MAGIC-FUNCTION EXCEPTIONAL-EXTREMAL FAMILY (Viazovska dim-8=E_8=octonion=MULTIPLICATIVE
+  sibling) = the heptagon's sphere-packing problem. LEADS: Stark/Dirichlet-L closed form (inconclusive --
+  numerators random-looking, but 7^2 conductor consistent), explicit Gamma_0(7) modular magic function,
+  Beraha B_7/Tutte, Mahler/Lehmer, subshift transfer-operator.
+
+NET: LRC(14) not proved; the cap's full arithmetic/extremal structure unified under Q(cos 2pi/7); the
+rationality (= why the proof is finite/solvable) is the Chebyshev equioscillation; proof target sharpened
+to "consec = the unique equioscillating Cohn-Elkies-sharp config". => HYP-3211/3212/3213; 4 reflections.
+
 ## mac-mini-2026-06-27-S73d -- the moment-problem merge: Caratheodory-Toeplitz + Griffiths/GKS + Verblunsky all read the LRC FM/AFM phase
 
 Owner: merge Caratheodory-Toeplitz moment rigidity + antiferromagnetic Griffiths/GKS + a few self-generated
