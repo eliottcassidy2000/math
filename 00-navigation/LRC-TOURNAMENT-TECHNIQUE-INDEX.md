@@ -7194,8 +7194,8 @@ quotient_legality_status
   still import floor/margin data, contact holonomy, or a finite chamber lift.
   HYP-3255 adds that the `Q(sqrt-7)` residue layer organizes binding pairs,
   but magnitude-level exact-cover rigidity decides tight versus loose rows.
-  HYP-3257/HYP-3258 add the unit rank-3 nullspace and binding/covering split
-  as explicit observability sidecars.
+  HYP-3260/HYP-3265/HYP-3258 add the unit rank-3 nullspace, contact-graph
+  case split, and binding/covering split as explicit observability sidecars.
 - **Preserves:** strict open witnesses, AP/GW boundary equality, finite
   discharge, sidecar reconstruction, compression legality, odd/sign payload,
   scale-lift stability, and state-lift exits.
@@ -7254,7 +7254,7 @@ quotient_legality_status
 
 ## LTT-248: Unit Nullspace Proof-Carrier Tournament
 
-- **Move:** Rank proof carriers for the HYP-3257 unit-nullspace gap, not
+- **Move:** Rank proof carriers for the HYP-3260 unit-nullspace gap, not
   runners or residue classes.  The vertices are `strict_safe_component_atlas`,
   `unit_plus_blind_residue_height_ledger`, `covering_14_multiple_kill_switch`,
   `unit_active_gradient_rank`, `full_unit_residue_signature`, and
@@ -7273,5 +7273,5 @@ quotient_legality_status
 - **Guardrail:** raw unit values and even the unit active-gradient rank forget
   same-residue height moves such as `2->16`; the unit index is terminal only
   after the blind ledger and safe-component/covering branches are glued in.
-- **Pointers:** HYP-3257, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242,
+- **Pointers:** HYP-3260, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242,
   HYP-3241, HYP-3132, HYP-2909, THM-523, LTI-348, T1348, OPEN-Q-108.

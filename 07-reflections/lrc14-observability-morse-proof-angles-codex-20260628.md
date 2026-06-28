@@ -51,10 +51,11 @@ contact holonomy, or a finite endpoint-chamber lift.
 Incoming HYP-3255 says the same in arithmetic language: the `Q(sqrt-7)`
 residue layer organizes binding pairs and QR/NQR signs, while the tight/loose
 decision is magnitude-level exact-cover rigidity.
-Incoming HYP-3257/HYP-3258 add the concrete missing columns: the unit active
-gradient has rank `3`, so the observability matrix must retain the blind
-residue/height ledger, strict safe-component atlas, covering `14`-multiple
-kill switch, and binding/covering census split.
+Incoming HYP-3260/HYP-3265/HYP-3258 add the concrete missing columns: the unit
+active gradient has rank `3`, the unit contact graph supplies the equality
+classifier, and the observability matrix must retain the blind residue/height
+ledger, strict safe-component atlas, covering `14`-multiple kill switch, and
+binding/covering census split.
 The incoming S289 discrepancy/lifting packet also fits only as columns.  The
 Roth-Halasz bound may control bulk chambers, and Hensel-Krasner may stabilize
 the scale-lift local unit.  Neither should be trusted as a terminal row until it
@@ -63,7 +64,8 @@ separates actual residual pairs.
 The next concrete computation should instantiate HYP-3300 on real packet rows:
 HYP-3202 traps, HYP-3225 trap sidecar classes, HYP-3236 Green decoys,
 HYP-3244 lift/compress failures, HYP-3245 lag-transport residuals, and
-HYP-3248/HYP-3249/HYP-3253/HYP-3255/HYP-3257/HYP-3258 index-prediction,
-floor-margin, residue, nullspace, census, and magnitude boundaries.  For
+HYP-3248/HYP-3249/HYP-3253/HYP-3255/HYP-3260/HYP-3265/HYP-3258
+index-prediction, floor-margin, residue, nullspace, contact-graph, census, and
+magnitude boundaries.  For
 each candidate column subset, list unresolved row collisions.  Those collisions
 are exactly the next proof obligations.

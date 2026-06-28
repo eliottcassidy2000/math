@@ -31728,7 +31728,7 @@ ask for a decomposition
 Checkpoint: committed locally as `2edae721e` (`monad-explorer: add HYP-3246 shell-lag contact sidecar`).
 Push attempt failed because the environment has no GitHub credentials for the
 `https://github.com/eliottcassidy2000/math.git` remote (`fatal: could not read Username for 'https://github.com'`), so the work is committed but not pushed from this session.
-## codex-2026-06-28 -- Unit equioscillation nullspace scout -- HYP-3257
+## codex-2026-06-28 -- Unit equioscillation nullspace scout -- HYP-3260
 
 Integrated the newly landed HYP-3246/HYP-3247 Chebyshev/equioscillation frame
 with the older safe-component and Q108 machinery by testing what the six unit
@@ -31746,25 +31746,38 @@ The one-swap AP collar up to added speed `84` has `923` rows, `317`
 unit-blind rows, exactly one unit-blind boundary-only row (`12->24`), and
 `316` positive unit-blind rows led by `12->36` with mass `1/1260`.
 
-Navigation updated: HYP-3257, result index, T1348, LTI-348, LTT-248,
+Navigation updated: HYP-3260, result index, T1348, LTI-348, LTT-248,
 OPEN-Q-108, and the reflection
 `07-reflections/lrc14-unit-equioscillation-nullspace-codex-20260628.md`.
 
 Fetch-time integration: origin/main added the q-uniform HYP-3248, the
 HYP-3249/HYP-3251/HYP-3252 index-theorem tests, and mac-mini S80/HYP-3250
-while this scout was local.  This scout was renumbered to HYP-3257.  The
+while this scout was local.  This scout was renumbered to HYP-3260.  The
 incoming verdict matches the nullspace readout: the unit index describes the
 ambient saddle and witness count, but the S-dependent proof work lives in
 tight-locus isolation, uniform margin/floor, and blind residue/height sidecars.
 During push, origin also added HYP-3253/S81, a contact-holonomy HYP-3253
 slot, HYP-3254's Q(sqrt-7) floor-SPEC reorganization, HYP-3255/S82, and
-HYP-3256; this scout was kept at HYP-3257.  S81's rigorous unit-witness
+HYP-3256; this scout was kept at HYP-3260.  S81's rigorous unit-witness
 construction and bounded single-swap margin support the same split, while its
 resonant survivor-positivity warning names the analytic branch that the blind
 ledger must feed.  HYP-3254 partially organizes that branch but still leaves
 the S-dependent floor proof as the content.  S82 and HYP-3256 sharpen the
 reason: unit-grid core, off-grid bulk, and apex residues are organizing
 coordinates, while tight-vs-loose remains magnitude/height-level.
+Final fetch integration: HYP-3258 gives the census version of the same split:
+six unit binding runners form the rigid residue skeleton, seven nonunit
+covering runners form the magnitude layer, and only `12 -> 24` is flexible.
+Incoming S83 then claimed HYP-3257 for the hidden `C3` orbit of the three
+binding pairs, so this scout was renamed to HYP-3260.  The `C3` orbit is the
+symmetry of the rank-3 unit coordinate; it does not remove the blind covering
+ledger.
+Incoming HYP-3259 then added the real-manifold version: unit binding speeds
+are infinitesimally rigid and covering speeds flex.  This scout remains the
+finite exact nullspace companion under HYP-3260.
+Incoming HYP-3265 then added the contact-graph case split.  The connection is
+exactly complementary: HYP-3265 is the unit-contact classifier, while HYP-3260
+records the rank-3 nullspace and blind sidecars that classifier must carry.
 
 Next hook: formulate the degree/index theorem on the full packet
 `unit rank-3 index + blind residue/height ledger + strict safe-component atlas
@@ -31796,8 +31809,8 @@ the saddle; the proof certificate still needs floor/margin data, contact
 holonomy, or a finite endpoint-chamber lift.  A later HYP-3255/Q(sqrt-7)
 rebase adds the residue-vs-magnitude warning: residue data organizes the
 binding layer, but exact minimal-cover rigidity remains magnitude-level.
-HYP-3257/HYP-3258 then add explicit unit-nullspace and binding/covering
-census columns for that blind residue/height layer.
+HYP-3260/HYP-3265/HYP-3258 then add explicit unit-nullspace, contact-graph,
+and binding/covering census columns for that blind residue/height layer.
 
 The toy observability matrix has `13` residual-pair rows, `20` columns, and
 `GF(2)` rank `13`; minimal hitting sets have size `5`.  Tournament Analysis

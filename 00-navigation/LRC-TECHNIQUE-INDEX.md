@@ -5385,10 +5385,10 @@ Chebyshev unit-group boundary, index-theorem prediction boundary or named
 forcing gap, AP/GW `Phi_14`, `Phi_{14d}` dilation, finite trap discharge,
 state-lift `H=7`, or named debt.
 
-Post-HYP-3253/HYP-3255/HYP-3257/HYP-3258 guardrail: index/equioscillation columns are
+Post-HYP-3253/HYP-3255/HYP-3260/HYP-3265/HYP-3258 guardrail: index/equioscillation columns are
 descriptive until they are tied to S-dependent floor or margin data, contact
-holonomy, unit-nullspace blind-residue data, magnitude-level exact-cover data,
-or a finite endpoint-chamber certificate.
+holonomy, unit-nullspace blind-residue data, contact-graph case splits,
+magnitude-level exact-cover data, or a finite endpoint-chamber certificate.
 
 Preserves: proof-status separation, compression legality, finite trap
 discharge, odd/sign sidecars, bulk/core handoff, scale-lift unit status, and
@@ -5488,5 +5488,5 @@ equality atom, opens a strict safe component already sufficient for LRC14,
 or enters the covering/floor branch.  This is the proof-facing bridge from the
 Chebyshev unit frame to the Q108 safe-component atlas.
 
-Pointers: HYP-3257, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242,
+Pointers: HYP-3260, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242,
 HYP-3241, HYP-3132, HYP-2909, THM-523, LTT-248, T1348, OPEN-Q-108.

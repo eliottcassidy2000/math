@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HYP-3257 scout: unit equioscillation nullspace for LRC14.
+"""HYP-3260 scout: unit equioscillation nullspace for LRC14.
 
 HYP-3246/3247 reframes the LRC14 tight problem as Chebyshev
 equioscillation at the six unit points a/14, a in (Z/14)*.  This scout tests
@@ -366,7 +366,7 @@ def tournament_fingerprint() -> dict[str, object]:
 
 
 def main() -> None:
-    print("HYP-3257 unit equioscillation nullspace scout")
+    print("HYP-3260 unit equioscillation nullspace scout")
     print("=" * 78)
     print("basis=HYP-3246/HYP-3247 Chebyshev unit equioscillation frame")
     print("question=what the six unit active gradients see and what they forget")

@@ -1,4 +1,4 @@
-HYP-3257 unit equioscillation nullspace scout
+HYP-3260 unit equioscillation nullspace scout
 ==============================================================================
 basis=HYP-3246/HYP-3247 Chebyshev unit equioscillation frame
 question=what the six unit active gradients see and what they forget

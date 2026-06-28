@@ -62,6 +62,12 @@ equality-branch carrier plus a dispatcher to the floor/margin machinery.
 S83 adds a useful symmetry refinement: the three binding-pair slots form one
 `C_3`/real-cyclotomic Galois orbit, so a proof can aim for one local
 binding-pair lemma plus equivariant transport around the contact graph.
+HYP-3260 gives the complementary nullspace audit: the contact graph is the
+right equality-branch carrier, but its unit active gradients have rank `3`
+and forget the nonunit residue/height and covering sidecars.
+HYP-3300 turns that into the next proof-program shape: make the contact graph
+and nullspace sidecars columns in an observability matrix, then use them as
+Morse boundary data in the finite chamber descent.
 
 The challenged assumption is that runners are the natural graph vertices.
 For this route the vertices are unit contacts, antipodal pairs, binder pairs,
@@ -69,6 +75,6 @@ boundary holes, covering kill-switches, and proof obligations.  A scalar
 safety value is only a shadow; the proof-grade object is the contact graph
 plus the sidecars that say whether it survives, opens, or is killed.
 
--> HYP-3265, HYP-3259, HYP-3258, HYP-3256, HYP-3255, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238,
+-> HYP-3265, HYP-3300, HYP-3260, HYP-3259, HYP-3258, HYP-3256, HYP-3255, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238,
 HYP-3237, HYP-3236, HYP-3218, HYP-3214, HYP-3132, HYP-2928, HYP-2909,
 THM-523, THM-530, T1355, LTI-355, LTT-255, OPEN-Q-108.

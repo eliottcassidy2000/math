@@ -1,5 +1,5 @@
 ---
-id: HYP-3257
+id: HYP-3260
 title: LRC14 unit equioscillation nullspace
 status: EVIDENCE / exact finite scout; not an LRC14 proof
 source: codex-2026-06-28
@@ -10,6 +10,11 @@ script: 04-computation/lrc14_unit_equioscillation_nullspace_codex_20260628.py
 result: 05-knowledge/results/lrc14_unit_equioscillation_nullspace_codex_20260628.out
 reflection: 07-reflections/lrc14-unit-equioscillation-nullspace-codex-20260628.md
 related:
+  - HYP-3300
+  - HYP-3265
+  - HYP-3259
+  - HYP-3258
+  - HYP-3257
   - HYP-3256
   - HYP-3255
   - HYP-3254
@@ -31,7 +36,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3257: LRC14 Unit Equioscillation Nullspace
+# HYP-3260: LRC14 Unit Equioscillation Nullspace
 
 ## Claim
 
@@ -110,8 +115,8 @@ Goddyn-Wong, near-miss positive rows, height moves, and covering-floor rows
 live.
 
 Fetch-time integration: incoming HYP-3250, HYP-3251/HYP-3252, HYP-3253/S81,
-HYP-3254's Q(sqrt-7) floor-SPEC reorganization, HYP-3255/S82, and HYP-3256
-sharpen this from both sides. HYP-3250's S80 tests
+HYP-3254's Q(sqrt-7) floor-SPEC reorganization, HYP-3255/S82, HYP-3256,
+HYP-3258, HYP-3259, and HYP-3265 sharpen this from both sides. HYP-3250's S80 tests
 say the tight locus behaves like AP/GW dilations plus a uniform-margin
 complement, with witness peaks `=(p-1)*d`.  HYP-3251/HYP-3252 say the index is
 ambient/descriptive rather than S-dependent proof content.  HYP-3253/S81 makes
@@ -121,6 +126,20 @@ HYP-3254 says the Q(sqrt-7) split partially organizes the floor SPEC but does
 not replace the S-dependent floor proof.  HYP-3255 reframes resonant danger as
 an on-grid core/off-grid bulk split, and HYP-3256 says the apex-7 residue layer
 organizes but does not decide the magnitude-level tight-vs-loose census.
+HYP-3258 gives the census version of the same split: unit runners form the
+binding skeleton, nonunit runners form the covering/magnitude layer, and only
+`12 -> 24` remains flexible.
+Incoming HYP-3257/S83 adds the C3 orbit view of the three binding pairs; this
+is compatible with the rank-3 readout because the rank-3 unit coordinate is
+the three-point C3 witness orbit, still separated from the blind covering layer.
+HYP-3259 gives the real-manifold version: unit binding speeds are
+infinitesimally rigid, while covering speeds supply the flex directions.
+HYP-3265 gives the contact-graph case-split version: the unit contact
+matching is the equality-branch classifier, and this nullspace audit is the
+warning that the classifier must retain blind residue/height and covering
+sidecars.
+HYP-3300 then promotes these sidecars into observability columns and Morse
+boundary data for a finite-chamber descent proof attempt.
 That is exactly the rank-3 nullspace warning: the unit index describes the
 saddle target, while the blind residue/height ledger and safe-component/floor
 branches carry the S-dependent work.

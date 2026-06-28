@@ -10,7 +10,11 @@ script: 04-computation/lrc14_equioscillation_contact_graph_codex_20260628.py
 result: 05-knowledge/results/lrc14_equioscillation_contact_graph_codex_20260628.out
 reflection: 07-reflections/lrc14-equioscillation-contact-graph-case-split-codex-20260628.md
 related:
-  - HYP-3265
+  - HYP-3300
+  - HYP-3260
+  - HYP-3259
+  - HYP-3258
+  - HYP-3257
   - HYP-3256
   - HYP-3255
   - HYP-3253
@@ -230,6 +234,12 @@ it equivariantly across the three-slot contact graph.
 HYP-3259 adds the geometric reading: the tight locus is a real manifold whose
 unit/binding coordinates are infinitesimally rigid while covering coordinates
 flex.  That is exactly the contact-graph split in differential form.
+HYP-3260 supplies the complementary nullspace warning: the same contact graph
+has only rank `3` over unit residues, so nonunit residue, height, and covering
+data must remain explicit sidecars.
+HYP-3300 packages that warning as an observability/Morse requirement: the
+contact graph can be a boundary column, not a scalar certificate that forgets
+the blind layer.
 
 ## Next Pull
 

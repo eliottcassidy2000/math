@@ -10,6 +10,15 @@ script: 04-computation/lrc14_observability_morse_angles_codex_20260628.py
 result: 05-knowledge/results/lrc14_observability_morse_angles_codex_20260628.out
 reflection: 07-reflections/lrc14-observability-morse-proof-angles-codex-20260628.md
 related:
+  - HYP-3265
+  - HYP-3260
+  - HYP-3259
+  - HYP-3258
+  - HYP-3257
+  - HYP-3256
+  - HYP-3255
+  - HYP-3253
+  - HYP-3250
   - HYP-3249
   - HYP-3248
   - HYP-3247
@@ -91,9 +100,10 @@ contact holonomy, or a finite endpoint-chamber certificate still has to prove
 the terminal step.  Incoming HYP-3255 adds the matching residue/magnitude
 warning: `Q(sqrt-7)` and the unit-grid organize the residue layer, but exact
 minimal-cover rigidity lives at the magnitude/equioscillation/census layer.
-Incoming HYP-3257/HYP-3258 turn that warning into explicit columns: unit
-rank-3 nullspace, blind residue/height ledger, strict safe-component atlas,
-covering 14-multiple kill switch, and binding/covering census split.
+Incoming HYP-3260/HYP-3265/HYP-3258 turn that warning into explicit columns:
+unit rank-3 nullspace, contact-graph case split, blind residue/height ledger,
+strict safe-component atlas, covering 14-multiple kill switch, and
+binding/covering census split.
 The S289 coordination layer supplies two useful but nonterminal columns:
 `Roth_Halasz_discrepancy_bound` for bulk chambers and
 `Hensel_Krasner_valuation_unit` for scale-lift stability.
@@ -284,7 +294,7 @@ Gauss-sum index word, and Borsuk-Ulam forcing-gap flag are boundary/core
 coordinates: they distinguish the unit-group Chebyshev packet and index
 prediction from the covering-floor handoff.  HYP-3253 turns this into a
 non-overclaim rule: index equality is a boundary label until paired with
-S-dependent margin, contact holonomy, unit-nullspace blind-residue data,
+S-dependent margin, contact holonomy, HYP-3260 unit-nullspace blind-residue data,
 magnitude-level exact-cover data, or endpoint-chamber descent data.
 HYP-3238/HYP-3239 odd-negative payloads are not decorations; they stop false
 positive-even terminal cells from being declared critical.

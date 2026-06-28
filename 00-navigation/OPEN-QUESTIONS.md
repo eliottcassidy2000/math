@@ -1,7 +1,7 @@
 # Open Questions
 
-**OPEN-Q-108 HYP-3257 unit equioscillation nullspace addendum:**
-HYP-3257 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.
+**OPEN-Q-108 HYP-3260 unit equioscillation nullspace addendum:**
+HYP-3260 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.
 The six unit active gradients at `a/14`, `a in (Z/14)*`, have exact rank `3`
 over residue coordinates `1..13`, not rank `6`.  They only see the three
 antipodal complement binders `(1,13)`, `(3,11)`, and `(5,9)`.  Nonunit
@@ -23,7 +23,7 @@ Open task: build the actual index/degree theorem on the full packet
 14-free witness fragment and tight-core naming, but it must either prove blind
 height moves cannot create new strict components outside the existing atlas or
 route them through the already-good safe-component / covering-floor branches.
--> HYP-3257, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242, HYP-3241,
+-> HYP-3260, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242, HYP-3241,
 HYP-3132, HYP-2909, THM-523, T1348, LTI-348, LTT-248, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3238 even/odd positive/negative duality bridge addendum:**
