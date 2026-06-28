@@ -54,6 +54,10 @@ obligations, and proof-carrier interfaces.
 - Need to connect discrepancy, two-dimensional Haar products, and tournament
   tiling repairs:
   use LTT-077 and add `zeta_repair_class` to the packet sidecar.
+- Need to audit fixed-path or tiling quotients that name the right classes but
+  may forget first representation order:
+  use LTT-167 and add `packet_order`, `lower_order_leakage`, and
+  `collision_sidecar_or_named_debt`.
 - Need to turn observer-extension/cut payload into an auditable quotient
   ledger:
   use LTT-101 after LTT-099/LTT-100 and record payload orbits modulo visible
@@ -5523,3 +5527,36 @@ constant chase.
 - **Pointers:** HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3136, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3131, HYP-3129,
   HYP-3122, HYP-3119, HYP-3118, HYP-3113, HYP-3111, HYP-3110, THM-577,
   LTI-268, LTT-166, T1207, OPEN-Q-108.
+## LTT-167: Tournament Packet Subbasis Exact-Order Audit
+
+- **Move:** Treat a tournament quotient as a representation system, not just
+  as a class-labeling scheme.  The basic fields are fixed filler, free
+  obstruction basis, first squarefree packet order, lower-order leakage, and
+  collision sidecar/debt.
+- **LRC use:** HYP-3143/S276 verifies the prompt's two n=4 models.  The
+  Hamiltonian-path tiling model with free chords `a=02,b=13,c=03` reproduces
+  the requested table but has full fiber `{T:1,+:1,-:1,S:5}`, so `S` appears
+  at flip orders `1,2,3`.  The partial-score `0,1,1,2` model has `12`
+  witnesses, all with free arcs a perfect matching; fixed filler
+  `01,03,12,23` and free bits `x=02,y=13` give `E->T,x->+,y->-,xy->S`.
+- **Pairwise observable:** compare quotient carriers by preserved class
+  information, injectivity, lower-order exclusion, sidecar repair, transfer to
+  current LRC packets, proof readiness, and novelty.  The tie Hamiltonian path
+  is lexicographic.
+- **Fingerprint:** transitive proof-carrier tournament with score histogram
+  `{37:1,46:1,58:1,60:1,62:1,70:1,72:1,74:1,75:1,76:1,77:1,81:1}`, no
+  directed 3-cycles, one Hamiltonian path:
+  `lrc_packet_subbasis_theorem -> two_bit_matching_basis_C4_filler ->
+  lower_order_exclusion_audit -> HYP3141_tip_tail_edge_packet ->
+  HYP3142_U4_sidecar_exit -> erdos870_random_core_unique_h2 ->
+  erdos870_power_two_filler_D -> A000568_global_class_shadow ->
+  erdos870_h3_cluster_repair -> schemeA_three_chord_tiling_cube ->
+  schemeA_S_collision_fiber -> raw_score_sequence_table`.
+- **Next pull:** Add `packet_order`, `first_packet_order`,
+  `lower_order_leakage`, and `collision_sidecar_or_named_debt` to HYP-3141
+  edge witnesses, HYP-3142 bounded-core sidecars, HYP-3133/HYP-3134
+  A000568 rows, and q=3 unital/C27 four-point blocks.  Then search n=5 and
+  n=6 for exact-order tournament class bases.
+- **Pointers:** HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138,
+  HYP-3134, HYP-3133, HYP-3106, HYP-3002, HYP-2998, LTI-269, LTT-167,
+  T1208, OPEN-Q-108.

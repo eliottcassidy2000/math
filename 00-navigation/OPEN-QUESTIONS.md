@@ -69,6 +69,24 @@ debt. -> HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3136, H
 HYP-3122, HYP-3119, HYP-3118, HYP-3113, HYP-3111, HYP-3110, THM-577,
 LTI-268, LTT-166, T1207, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3143 n=4 tournament packet-subbasis addendum:**
+HYP-3143 imports the exact-order discipline from the Erdős-870 minimal
+subbasis solution into tournament quotients.  For n=4, the Hamiltonian-path
+tiling quotient with chords `a=02,b=13,c=03` names the right four classes but
+has full fiber `{T:1,+:1,-:1,S:5}`, so `S` leaks across flip orders `1,2,3`.
+The partial-score `0,1,1,2` quotient has `12` witnesses, all with free arcs a
+perfect matching; fixed filler `01,03,12,23` and free bits `x=02,y=13` give
+the exact basis `E->T,x->+,y->-,xy->S`.
+
+Open task: search n=5 and n=6 partial assignments for minimal class bases
+with exact-order separation.  Add `packet_order`, `first_packet_order`,
+`lower_order_leakage`, and `collision_sidecar_or_named_debt` to HYP-3141 edge
+witnesses, HYP-3142 bounded-core U4 exits, HYP-3133/HYP-3134 A000568 quotient
+rows, and q=3 unital/C27 four-point blocks before treating a class quotient as
+proof-facing. -> HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138,
+HYP-3134, HYP-3133, HYP-3106, HYP-3002, HYP-2998, LTI-269, LTT-167, T1208,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3133 A000568 edge-sandwich addendum:**
 HYP-3133 adds the field `a000568_extension_shadow` between HYP-3124's
 `edge_tail_tip_sector_word` and the paired endpoint-deletion child deck.  The

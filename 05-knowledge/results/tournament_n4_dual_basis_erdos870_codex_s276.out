@@ -1,0 +1,78 @@
+HYP-3143 n=4 dual tournament bases and Erdős-870 subbasis lens
+source=codex-2026-06-28-S276
+prompt_url=https://github.com/davidturturean/erdos-870
+
+0. GLOBAL N=4 TOURNAMENT CLASS COUNTS
+edge_order=('01', '02', '03', '12', '13', '23')
+class_counts={'+': 8, '-': 8, 'S': 24, 'T': 24}
+score_class_key={(0,1,2,3):T, (1,1,2,2):S, (0,2,2,2):+, (1,1,1,3):-}
+
+1. SCHEME A: HAMILTONIAN-PATH TILING MODEL WITH THREE FREE CHORDS
+fixed_path=(0->1, 1->2, 2->3)
+free_chords={a:02, b:13, c:03}
+* | E | a | b | c
+--+---+---+---+--
+E | T | + | - | S
+a | + | T | S | S
+b | - | S | T | S
+c | S | S | S | T
+full_3bit_class_fiber={'+': 1, '-': 1, 'S': 5, 'T': 1}
+  state=E   flipped=()                 scores=(3, 2, 1, 0) class=T
+  state=a   flipped=('02',)            scores=(2, 2, 2, 0) class=+
+  state=b   flipped=('13',)            scores=(3, 1, 1, 1) class=-
+  state=ab  flipped=('02', '13')       scores=(2, 1, 2, 1) class=S
+  state=c   flipped=('03',)            scores=(2, 2, 1, 1) class=S
+  state=ac  flipped=('02', '03')       scores=(1, 2, 2, 1) class=S
+  state=bc  flipped=('03', '13')       scores=(2, 1, 1, 2) class=S
+  state=abc flipped=('02', '03', '13') scores=(1, 1, 2, 2) class=S
+readout=faithful_to_the_tiling_chords_but_not_a_unique_class_basis
+lower_order_exclusion_for_S=FAILS: S occurs at Hamming weights 1,2,3
+
+2. SCHEME B: PARTIAL SCORE 0,1,1,2 WITH TWO FREE ARCS
+matching_witness_count=12
+all_witnesses_have_free_edges_disjoint=True
+free_pair_orbit_counts={('01', '23'): 4, ('02', '13'): 4, ('03', '12'): 4}
+preferred_fixed_edges=(01,03,12,23) all forward; preferred_free_edges={x:02,y:13}
+partial_score_sorted=(0, 1, 1, 2)
+* | E | x | y
+--+---+---+--
+E | T | + | -
+x | + | T | S
+y | - | S | T
+  state=E  scores=(3, 2, 1, 0) class=T
+  state=x  scores=(2, 2, 2, 0) class=+
+  state=y  scores=(3, 1, 1, 1) class=-
+  state=xy scores=(2, 1, 2, 1) class=S
+readout=minimal_two_bit_class_basis_after_a_fixed_C4_filler
+lower_order_exclusion_for_S=HOLDS in squarefree flip-order: S occurs only as x*y
+
+3. ERDŐS-870 SUBBASIS TRANSFER
+- The erdos-870 proof strategy is representation economy: build unique order-h representations and exclude lower-order representations.
+- Scheme B is the n=4 tournament analogue of an order-2 subbasis: fixed C4 filler + two matching free bits represents T,+,-,S exactly once.
+- Scheme A is the useful but unsafe tiling quotient: it keeps all three chord directions, but S has a one-generator representative and several higher-order representatives.
+- Therefore the LRC packet theorem should ask for a quotient basis only after checking exact-order representation, not merely after checking class coverage.
+
+4. LRC14 PACKET THEOREM CANDIDATE
+packet_subbasis(P) = fixed_filler_sidecar + free_obstruction_basis + lower_order_exclusion + coordinate_resurrection_or_named_debt
+proposed_rule=an LRC quotient is legal only if each terminal obstruction class has a unique squarefree packet word of the declared order, or if the collision fiber is named and repaired.
+n4_transfer_to_current_frontier:
+  two_bit_matching_basis -> finite four-point/unital-block local carrier
+  fixed_C4_filler -> powers-of-two/carry-separated deterministic scaffold
+  SchemeA_S_collision -> quotient debt like HYP-3138 odd leakage or HYP-3139 boundary leakage
+  HYP-3141 edge packets -> attach tail/tip labels before quotienting an edge
+  HYP-3142 U4 exit -> terminal bounded-core sidecar that must not be reached by a lower-order word
+
+5. TOURNAMENT ANALYSIS OVER PROOF CARRIERS
+pairwise_observable=retained class information, injectivity, lower-order exclusion, sidecar repair, LRC transfer, proof readiness, novelty
+binary_gauge=edge A->B iff weighted retained-payload score(A)>score(B); tie Hamiltonian path is lexicographic
+score_hist={37: 1, 46: 1, 58: 1, 60: 1, 62: 1, 70: 1, 72: 1, 74: 1, 75: 1, 76: 1, 77: 1, 81: 1}
+directed_3cycles=0
+hamiltonian_path_count=1
+edge_flips_against_name_tie_path=6
+selected_path=lrc_packet_subbasis_theorem -> two_bit_matching_basis_C4_filler -> lower_order_exclusion_audit -> HYP3141_tip_tail_edge_packet -> HYP3142_U4_sidecar_exit -> erdos870_random_core_unique_h2 -> erdos870_power_two_filler_D -> A000568_global_class_shadow -> erdos870_h3_cluster_repair -> schemeA_three_chord_tiling_cube -> schemeA_S_collision_fiber -> raw_score_sequence_table
+
+6. NEXT TESTS
+A. Enumerate n=5/n=6 partial assignments and search for minimal class-bases whose fibers separate A000568 classes with lower-order exclusion.
+B. Add a packet-order column to HYP-3141 edge witnesses: which class can first be represented at order 0,1,2,... after fixed filler?
+C. Run the same exact-order audit on HYP-3142 bounded-core U4 sidecars: the terminal k=8 obstruction should not be reachable by a lower-order quotient word.
+D. Treat the q=3 unital four-point block as a C4+matching packet: boundary cycle is filler, matching diagonals are basis bits, and AP/Goddyn-Wong labels are sidecar colors.

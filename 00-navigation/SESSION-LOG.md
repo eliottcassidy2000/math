@@ -28838,3 +28838,43 @@ Bravais-flat root map, HYP-3118's Savitch repair-depth grammar, and HYP-3134's
 A000568 controlled-forgetting guard now point to the same theorem target:
 prove `U4(E) <= U4(consec_8)` globally, then close the k=8 node by exact
 rational arithmetic.
+## codex-2026-06-28-S276 -- n=4 tournament subbasis packet -- HYP-3143
+
+User asked to leverage the recently solved Erdős-870 problem and rethink the
+two n=4 tournament tables: the fixed-Hamiltonian-path tiling model with free
+arcs `a,b,c`, and the partial-score `0,1,1,2` model with free arcs `x,y`.
+Added `04-computation/tournament_n4_dual_basis_erdos870_codex_s276.py`,
+stored output
+`05-knowledge/results/tournament_n4_dual_basis_erdos870_codex_s276.out`,
+detail
+`05-knowledge/hypotheses/HYP-3143-n4-tournament-subbasis-erdos870.md`, and
+reflection
+`07-reflections/n4-tournament-subbasis-erdos870-codex-s276.md`.  Updated the
+hypothesis/results indexes, T1208, LTI-269, LTT-167, and OPEN-Q-108.
+
+Exact n=4 readout: the Hamiltonian-path tiling model fixes
+`0->1->2->3` and names chords `a=02,b=13,c=03`.  It reproduces the prompt's
+class-valued table, but the full 3-bit cube has class fiber
+`{T:1, +:1, -:1, S:5}`; hence `S` appears at squarefree flip orders `1,2,3`.
+This is a lower-order leakage failure.  The second model fixes four arcs with
+partial score sequence `0,1,1,2`.  Exhaustive search finds `12` witnesses, all
+with free arcs a perfect matching; the canonical fixed filler
+`01,03,12,23` and free bits `x=02,y=13` give the exact basis
+`E->T, x->+, y->-, xy->S`.
+
+Synthesis: the Erdős-870 solution suggests the right quotient guardrail is not
+mere coverage but exact-order representation.  Candidate LRC packet rule:
+`packet_subbasis = fixed_filler_sidecar + free_obstruction_basis +
+lower_order_exclusion + coordinate_resurrection_or_named_debt`.  A quotient
+may forget only when every terminal obstruction class has a unique squarefree
+packet word at the declared order, or when the collision fiber is named and
+repaired.  This plugs into HYP-3141 edge witnesses, HYP-3142 bounded-core U4
+exits, HYP-3138/HYP-3139 leakage repairs, and HYP-3133/HYP-3134 A000568
+global-consistency quotients.
+
+Assumption challenged: tournament vertices were not runners.  The explored
+vertices/carriers were labelled arc-flip states, fixed filler arcs, free
+matching bits, class fibers, squarefree representation words, proof-carrier
+sidecars, A000568 shadows, and bounded-core exit packets.  Preserved predicate:
+n=4 isomorphism class plus first representation order in Scheme B.  Destroyed
+unless sidecarred: raw labels, endpoint roles, and raw chord geometry.
