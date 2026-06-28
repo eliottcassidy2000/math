@@ -10,6 +10,14 @@ script: 04-computation/lrc14_modular_magic_sidecar_audit_codex_20260628.py
 result: 05-knowledge/results/lrc14_modular_magic_sidecar_audit_codex_20260628.out
 reflection: 07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md
 related:
+  - HYP-3245
+  - HYP-3237
+  - HYP-3236
+  - HYP-3235
+  - HYP-3234
+  - HYP-3233
+  - HYP-3232
+  - HYP-3230
   - HYP-3227
   - HYP-3226
   - HYP-3225
@@ -144,6 +152,12 @@ Fejer Fourier weights
 Gamma0(7) divisor coefficients
 comb-overlap Gram entries
 ```
+
+Post-rebase companion HYP-3245 adds the autocorrelation transport view of the
+same compatibility problem.  Its trap readout moves pair mass from short lags
+to outward lags, so the modular audit should treat subshift/transfer-operator
+autocorrelation as a proof-facing sidecar only when it preserves this lag
+transport and the Fejer/Gram payload.
 
 ## Guardrails
 
@@ -284,6 +298,6 @@ Destroys if scalarized:
   numbers", for the generalized Bernoulli / Dirichlet-L relation.
 - Royle's Beraha-number chromatic-root note for Beraha/Tutte context.
 
--> HYP-3229, HYP-3227, HYP-3215, HYP-3214, HYP-3213, HYP-3212, HYP-3205,
+-> HYP-3245, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3229, HYP-3227, HYP-3219, HYP-3215, HYP-3214, HYP-3213, HYP-3212, HYP-3205,
 HYP-3203, HYP-3201, HYP-3162, HYP-3161, HYP-3160, THM-577, T1329,
 LTI-329, LTT-229, OPEN-Q-108.

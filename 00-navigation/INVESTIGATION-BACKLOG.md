@@ -136,6 +136,84 @@ Toeplitz/trap sidecars for the center.
 Next: decompose the magic deficit into AP-support gap, HYP-3204 exchange-rate
 slack, and HYP-3224 Toeplitz/covariance trap-discharge slack; test whether the
 residual has a small sign-controlled Delsarte basis.
+## Lead codex-2026-06-28: Equioscillation / autocorrelation atlas
+
+**Status:** EVIDENCE / exact motif scout plus synthesis; not proof
+(HYP-3245/T1309).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3245-lrc14-equioscillation-autocorrelation-atlas.md`,
+`04-computation/lrc14_equioscillation_autocorrelation_atlas_codex_20260628.py`,
+`05-knowledge/results/lrc14_equioscillation_autocorrelation_atlas_codex_20260628.out`,
+and
+`07-reflections/lrc14-equioscillation-autocorrelation-atlas-codex-20260628.md`.
+
+Readout: HYP-3214's Fejer kernel is not just adjacent to autocorrelation:
+`F_7=(de Moivre cubic)^2` is the Chebyshev double-zero/equioscillation kernel,
+positive-definite Delsarte kernel, and triangular AP autocorrelation.  HYP-3245
+uses that equality model to define an out-correlation residual for HYP-3202
+traps.  Every non-AP local trap moves support-autocorrelation mass from lags
+`1..7` to lags `8..14`, with total residual zero.  The coarse transport is
+universal; the ripple type follows HYP-3225's Green/Rayleigh/Plucker classes.
+Incoming HYP-3227 is the conductance-graph companion, showing the same trap
+boundary remains connected to legal certificate exits.
+Incoming HYP-3228 is the shell-magic companion: it names the `L_y` contact
+vector whose deficit should be tested against the same lag-transport signal.
+Incoming HYP-3234 adds signed chart-change labels and HYP-3233 adds
+cyclotomic-factor labels, so the next lag scout must retain chart debt and
+Phi_7 debt instead of reporting a single scalar transport.  Incoming HYP-3235
+and HYP-3218 add cap-field conductor, Fejer-square, Gauss-sum margin, and AP
+self-duality labels.
+Incoming HYP-3229, HYP-3230, and HYP-3231 add the next labels to preserve:
+modular coefficient/subshift sidecars, three-gap/Farey recursion, and
+scale-normal survival status.
+Incoming HYP-3232 and HYP-3217 add two more labels: apex-fold side and
+cyclotomic mode.  Incoming HYP-3236, HYP-3237, and HYP-3219 add Green
+conductance, Vitali/Brouwer core-wall, and Brouwer trace-sign/SOS labels:
+`green_resistance_slack`, `lambda2_conductance_rank`,
+`negative_covariance_leakage`, `thomson_current_profile`,
+`fiedler_bottleneck_id`, `vitali_wall_side`, `brouwer_saddle_sign`,
+`phi14_core_witness`, `core_bulk_transport_status`, `brouwer_trace_sign`,
+`degree_sos_factorization`, and `even_odd_bonferroni_node_slack`.  Incoming
+HYP-3238 and HYP-3239 add even-positive/odd-negative compression and
+dihedral/Borsuk-Ulam sign-irrep labels: `positive_negative_duality_status`,
+`odd_negative_payload_reconstruction`, `dihedral_irrep_label`,
+`complement_antiautomorphism_sign`, `borsuk_ulam_index`,
+`imaginary_gauss_sum_sign`, and `phi4_bimodal_extremizer_rank`.  Incoming
+HYP-3240 and HYP-3241 add core-witness arithmetic labels:
+`equioscillation_saddle_index`, `phi14_core_universality_status`,
+`dilation_witness_grid`, `core_witness_break_reason`, and
+`imaginary_norm_route_status`.  Incoming HYP-3242 adds topology labels:
+`danger_nerve_euler_characteristic`, `lonely_hole_status`,
+`cech_betti_sidecar`, `topological_shadow_class`, and
+`cover_hole_witness_pair`.
+Incoming HYP-3243 adds proof-carrier labels:
+`oriented_matroid_tope_status`, `circle_endpoint_arrangement_cell`,
+`cech_safe_component_rank`, `finite_chamber_schema_status`,
+`state_lift_H7_obstruction`, and `proof_carrier_tournament_rank`.
+Incoming HYP-3244 adds controlled-forgetting labels:
+`tiling_witness_lift_status`, `half_tiling_descent_certificate`,
+`path_presentation_fiber_weight`, `parent_aut_word_orbit_id`,
+`rectangle_hourglass_residue`, `tail_tip_deletion_signature`, and
+`controlled_forgetting_span_status`.
+Executed HYP-3226 adds the motif-ledger labels:
+`small_pattern_motif_id`, `payload_preserved`, `payload_destroyed`,
+`repair_sidecar`, and `terminal_risk_label`.
+
+Next: prove or refute the signed transport lemma on the full bounded k=8
+bank.  Compare low-lag deficit and outward surplus with AP support,
+Toeplitz `lambda_min`, HYP-3228 magic deficit, HYP-3227 conductance-graph
+exits, HYP-3229 modular sidecar labels, HYP-3230 three-gap labels,
+HYP-3231 scale-recursion labels,
+HYP-3236 Green conductance labels, HYP-3237 Vitali/Brouwer labels,
+HYP-3219 Brouwer-sign/SOS labels,
+HYP-3238 even-positive/odd-negative labels, HYP-3239 dihedral/Borsuk-Ulam labels,
+HYP-3241 core-index labels, HYP-3240 dilation-witness labels, HYP-3242
+cover-hole labels, HYP-3243 finite chamber/state-lift labels, HYP-3226
+motif-ledger labels, HYP-3244 tiling/half-tiling descent labels, ordered-tail
+`q0+q6`, and HYP-3204 exchange-rate slack.
+Keep the two-clock guardrail from HYP-3214: 7-sector Fejer for coverage/LHS,
+14-clock Johnson pair-Pascal for cap/RHS.
 
 ## Lead codex-2026-06-28: Small-pattern adjacency atlas
 

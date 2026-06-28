@@ -115,7 +115,7 @@ AP-support gap, HYP-3204 ordered-tail exchange-rate slack, HYP-3224
 Toeplitz/covariance trap-discharge slack, and HYP-3222 Joukowski/HB gluing
 slack.  Test whether the residual is sign-controlled in a small Delsarte or
 moment basis and whether it extends beyond the bounded bank under primitive
-normal form. -> HYP-3228, HYP-3215, HYP-3214, HYP-3227, HYP-3226, HYP-3224, HYP-3223,
+normal form. -> HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3229, HYP-3228, HYP-3215, HYP-3214, HYP-3227, HYP-3226, HYP-3224, HYP-3223,
 HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3210, HYP-3205, HYP-3204,
 HYP-3203, HYP-3202, HYP-3200, HYP-3153, HYP-3138, HYP-3132, T1326, LTI-326,
 LTT-226,
@@ -275,6 +275,81 @@ Fejer/Delsarte dual slack, and HB/Joukowski/Chebyshev gluing for the odd
 sidecar. -> HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
 HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3227, HYP-3220, HYP-3219, HYP-3215, HYP-3214, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200,
 T1324, LTI-324, LTT-224, OPEN-Q-108.
+**OPEN-Q-108 HYP-3245 equioscillation / autocorrelation addendum:**
+HYP-3245 turns HYP-3214's exact Fejer result into a finite trap signal.  The
+level-7 object is simultaneously `(de Moivre cubic)^2`, the Chebyshev
+double-zero/equioscillation kernel, a positive-definite Delsarte kernel, and
+the triangular autocorrelation of an AP interval.  Against that AP row, every
+non-AP HYP-3202 trap moves ordinary speed-support autocorrelation mass
+outward: the residual sum on lags `1..7` is negative, the residual sum on
+lags `8..14` is equal and positive, and the total residual is zero.  The fine
+shape matches HYP-3225's trap sidecars: Plucker rows ripple, Green rows are
+more monotone transports, and the mixed row is nearly flat outward shift.
+The newest HYP-3229/HYP-3230/HYP-3231 route updates add required labels for
+this transport signal: modular/subshift coefficient sidecars,
+three-gap/Farey recursion status, and scale-normal survival status.  Upstream
+HYP-3236/HYP-3237/HYP-3219 add the electrical and topological companion
+labels: Green resistance slack, algebraic-connectivity rank, leakage,
+Thomson/Fiedler bottlenecks, Vitali bulk/core side, Brouwer saddle sign,
+Phi14 core witness status, Brouwer trace sign, degree/SOS factorization, and
+even/odd Bonferroni node slack.  HYP-3238/HYP-3239 add the newest symmetry
+labels: even-positive/odd-negative compression status, odd-negative payload
+reconstruction, `D_7` irrep label, complement anti-automorphism sign,
+Borsuk-Ulam index, imaginary Gauss-sum sign, and phi4 bimodal extremizer rank.
+HYP-3240/HYP-3241 add the core-witness arithmetic labels: equioscillation
+saddle index, AP/Goddyn-Wong `Phi_14` core universality, promoted
+`Phi_{14d}` dilation witness grid, core witness break reason, and
+imaginary-quadratic norm-route status.
+HYP-3242 adds topology labels: measured danger-nerve Euler characteristic,
+lonely cover-hole status, Cech/Betti sidecar, active topological shadow class,
+and cover-hole antipodal witness pair.
+HYP-3243 adds proof-carrier labels: oriented-matroid tope/cocircuit status,
+circle endpoint arrangement cell, Cech safe-component rank, finite chamber
+schema status, state-lift `H=7` obstruction, and proof-carrier tournament
+rank.  These labels decide whether out-correlation transport is attached to
+an open witness, known witness equality, finite chamber discharge,
+state-lift contradiction, or explicit residual debt.
+HYP-3244 adds the tiling/half-tiling descent gate: tiling witness lift,
+half-tiling descent certificate, path-presentation fiber weight,
+parent-automorphism word orbit, rectangle/hourglass residue, tail/tip
+deletion signature, and controlled-forgetting span status.
+
+Open task: prove a signed out-correlation transport lemma over the full
+bounded k=8 bank.  The target is not raw autocorrelation distance from AP; it
+is a sidecar-aware implication from short-lag deficit plus outward surplus to
+AP support gap, Toeplitz `lambda_min` slack, HYP-3228 shell-magic deficit,
+HYP-3236 Green resistance slack, HYP-3237 Vitali/Brouwer core-wall sign,
+HYP-3219 Brouwer trace-sign/SOS factorization, HYP-3238 even-positive /
+odd-negative compression debt, HYP-3239 sign-irrep/Borsuk-Ulam defect,
+HYP-3241 core-index witness status, HYP-3240 dilation-witness sidecar,
+HYP-3242 cover-hole survival, HYP-3243 finite chamber/state-lift carrier
+status, HYP-3244 tiling lift/half-tiling descent status, ordered-tail
+`q0+q6` loss, or HYP-3204 exchange-rate slack.  Keep the HYP-3214 guardrail: the 7-sector
+Fejer kernel governs coverage/LHS, while the cap/RHS lives on the 14-clock
+Johnson pair-Pascal scheme.  Next signals: small-pattern motif id, payload-preserved, payload-destroyed, repair-sidecar, terminal-risk label, contact word, lag barycenter,
+transport cost, Fejer annihilator projection, shell-lag commutator, sidecar
+entropy, scale-survival bit, apex-fold side, cyclotomic mode, chart-change
+class, cyclotomic factor signature, cap-field conductor, Fejer-square status,
+Gauss-sum margin, AP self-dual fixed-point status, Green resistance slack,
+lambda2 conductance rank, negative covariance leakage, Thomson current
+profile, Fiedler bottleneck id, Vitali wall side, Brouwer saddle sign, Phi14
+core witness, core/bulk transport status, Brouwer trace sign, degree/SOS
+factorization, even/odd Bonferroni node slack, positive/negative duality
+status, odd-negative payload reconstruction, dihedral irrep label,
+complement anti-automorphism sign, Borsuk-Ulam index, imaginary Gauss-sum
+sign, phi4 bimodal extremizer rank, equioscillation saddle index, Phi14 core
+universality status, dilation witness grid, core witness break reason, and
+imaginary norm-route status, danger-nerve Euler characteristic, lonely-hole
+status, Cech/Betti sidecar, topological shadow class, cover-hole witness
+pair, oriented-matroid tope status, circle endpoint arrangement cell,
+Cech safe-component rank, finite chamber schema status, state-lift `H=7`
+obstruction, proof-carrier tournament rank, tiling witness lift status,
+half-tiling descent certificate, path-presentation fiber weight,
+parent-automorphism word orbit, rectangle/hourglass residue, tail/tip
+deletion signature, and controlled-forgetting span status. -> HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3231, HYP-3229, HYP-3228, HYP-3227, HYP-3219, HYP-3218, HYP-3217, HYP-3214, HYP-3226, HYP-3225,
+HYP-3224, HYP-3223, HYP-3222, HYP-3213, HYP-3212, HYP-3205, HYP-3204,
+HYP-3203, HYP-3202, HYP-3163, HYP-3132, T1309, LTI-309, LTT-209,
+OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3222 Joukowski-Hermite-Biehler / Perron-Frobenius addendum:**
 HYP-3222 turns the incoming Perron, Toeplitz, Joukowski, and Hermite-Biehler
@@ -5691,7 +5766,7 @@ charts either preserves the LRC predicate, reconstructs the lost coordinate,
 dual-annihilates it, stops at a fixed-line/apex boundary, or emits named
 residual debt.
 
--> HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004, HYP-2902,
+-> HYP-3234, HYP-3236, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004, HYP-2902,
 HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553, THM-550, THM-549,
 THM-442, LTI-331, LTT-231, T1331, OPEN-Q-108.
 ## OPEN-Q-108 addendum (codex-2026-06-28): tiling/half-tiling descent criterion

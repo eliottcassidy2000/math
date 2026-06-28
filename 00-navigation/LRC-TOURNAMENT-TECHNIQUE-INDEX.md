@@ -171,6 +171,13 @@ obligations, and proof-carrier interfaces.
   chart, then separate Green effective-resistance bottlenecks, conditional
   Rayleigh debt, and rank-2 pair-Plucker circuits before proving a finite trap
   theorem.
+- Need to connect equioscillation with out-correlation without collapsing
+  clocks:
+  use LTT-209 after LTT-208/LTT-207/LTT-205/LTT-203 and make
+  motif/certificate families, autocorrelation residuals, and sidecar classes
+  the vertices.  Treat Fejer `F_7` as the 7-sector coverage kernel and
+  Johnson pair-Pascal as the 14-clock cap kernel; prove any transport claim
+  against AP support, Toeplitz slack, or `q0+q6` after sidecars are retained.
 - Need to use a two-coordinate tournament quotient without hiding its missing
   coordinate:
   use LTT-173 after LTT-172/LTT-171/LTT-170/LTT-166/LTT-165/LTT-162/LTT-160 and make proof
@@ -6432,6 +6439,96 @@ quotient_legality_status
   HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3163, HYP-3132, HYP-3143,
   HYP-3148, HYP-3149, HYP-3199, LTI-308, LTT-208, T1308, OPEN-Q-108.
 
+## LTT-209: Equioscillation-Autocorrelation Motif Tournament
+
+- **Move:** Use motif/certificate families as tournament vertices:
+  Fejer AP interval, Johnson pair-Pascal, Christoffel-Darboux/OPUC,
+  Welch/ETF simplex, difference-set two-level autocorrelation,
+  CAZAC/Zadoff-Chu, Golay complementary pair, Barker low-sidelobe row,
+  equiripple/Remez FIR, and tournament out-correlation.
+- **LRC use:** HYP-3245 extends HYP-3214's exact bridge
+  `Fejer F_7 = (de Moivre cubic)^2 = Chebyshev equioscillation =
+  positive-definite Delsarte kernel = triangular AP autocorrelation`.  It
+  then compares each HYP-3202 local trap to the AP ordinary
+  support-autocorrelation row.  Every non-AP trap loses short-lag mass
+  (`d=1..7`) and gains the same outward-lag mass (`d=8..14`); HYP-3225's
+  sidecar class controls the ripple.  HYP-3243 contributes finite
+  chamber/state-lift proof-carrier labels, HYP-3242 contributes
+  danger-nerve/cover-hole topology labels, HYP-3241 contributes saddle-index
+  and AP/Goddyn-Wong core-witness universality labels, HYP-3244 contributes
+  tiling-lift / half-tiling descent labels, HYP-3240 contributes
+  dilation-witness and non-norm guardrail labels, HYP-3239 contributes dihedral/Borsuk-Ulam
+  sign-irrep labels, HYP-3238 contributes even-positive/odd-negative
+  compression labels, HYP-3237 contributes Vitali/Brouwer
+  core-wall labels, HYP-3236 contributes Green conductance labels, HYP-3235
+  contributes cap-field/conductor and Fejer-square labels, HYP-3234
+  contributes signed chart-change labels, HYP-3233 contributes
+  cyclotomic-factor labels, HYP-3232 contributes apex-fold labels, HYP-3230
+  contributes three-gap cap-kernel labels, HYP-3231 contributes
+  scale-recursion survival labels, HYP-3219 contributes Brouwer
+  trace-sign/SOS labels, HYP-3229 contributes modular sidecars,
+  HYP-3228 contributes the shell `L_y` magic vector, and HYP-3227 contributes the companion conductance graph showing
+  the same traps stay connected to legal exits.
+- **Preserves:** Fejer double-zero payload, autocorrelation/positive-definite
+  payload, AP interval equality row, HYP-3224 normal-fan target, HYP-3225 trap
+  sidecar class, HYP-3244 controlled-forgetting descent payload, and the
+  two-clock warning separating 7-sector coverage from 14-clock cap.
+- **Forgets / guardrail:** raw runner or arc tournaments forget the
+  autocorrelation lags.  Raw autocorrelation distance from AP is too weak.
+  The proof-facing object is signed transport plus sidecar discharge.  Do not
+  replace the Johnson/pair-Pascal cap side by a naive Fejer product.
+- **Fingerprint:** transitive motif tournament:
+  `score_hist={100:1,95:1,91:1,86:1,80:1,76:1,72:1,65:1,60:1,45:1}`,
+  `directed_3cycles=0`, `scc_sizes=[1,1,1,1,1,1,1,1,1,1]`, and
+  `hamiltonian_path_count=1`, with priority path
+  `Fejer_AP_interval -> Johnson_pair_Pascal ->
+  Christoffel_Darboux_OPUC -> Welch_ETF_simplex ->
+  difference_set_two_level -> CAZAC_Zadoff_Chu ->
+  Golay_complementary_pair -> Barker_low_sidelobe ->
+  equiripple_FIR_Remez -> tournament_out_correlation`.
+- **Next hook:** Test the signed transport lemma over the full bounded k=8
+  bank: low-lag deficit plus outward surplus should control AP support gap,
+  Toeplitz `lambda_min` slack, HYP-3228 shell-magic deficit, HYP-3236 Green
+  resistance slack, Vitali/Brouwer core-wall sign, Brouwer trace-sign/SOS
+  factorization, HYP-3238 even-positive/odd-negative compression debt,
+  HYP-3239 dihedral/Borsuk-Ulam sign-irrep defect, HYP-3241 core-index witness
+  status, HYP-3240 dilation-witness sidecar, HYP-3242 cover-hole survival,
+  HYP-3243 finite chamber/state-lift carrier status, HYP-3244 tiling lift/half-tiling descent status, or ordered-tail
+  `q0+q6` loss after HYP-3225 sidecar class is retained and HYP-3244
+  tiling/half-tiling descent is certified.  Feed each accepted motif to HYP-3226 with `small_pattern_motif_id`, preserved payload, destroyed coordinate, repair sidecar, and terminal-risk fields.  Add contact word, lag barycenter, transport cost, Fejer
+  annihilator projection, shell-lag commutator, sidecar entropy, and
+  scale-survival bit before treating the quotient as theorem-safe.  Add
+  HYP-3232/HYP-3217 `apex_fold_side` and `cyclotomic_mode` labels when
+  comparing scale-normal residuals, HYP-3234 `chart_change_class` labels,
+  HYP-3233 `cyclotomic_factor_signature` labels, and HYP-3235/HYP-3218
+  `cap_field_conductor`, `fejer_square_status`, `gauss_sum_margin`, and
+  `ap_self_dual_fixed_point_status` labels.  Add HYP-3236
+  `green_resistance_slack`, `lambda2_conductance_rank`,
+  `negative_covariance_leakage`, `thomson_current_profile`, and
+  `fiedler_bottleneck_id`; HYP-3237 `vitali_wall_side`,
+  `brouwer_saddle_sign`, `phi14_core_witness`, and
+  `core_bulk_transport_status`; and HYP-3219 `brouwer_trace_sign`,
+  `degree_sos_factorization`, and `even_odd_bonferroni_node_slack`; HYP-3238
+  `positive_negative_duality_status` and
+  `odd_negative_payload_reconstruction`; and HYP-3239 `dihedral_irrep_label`,
+  `complement_antiautomorphism_sign`, `borsuk_ulam_index`,
+  `imaginary_gauss_sum_sign`, and `phi4_bimodal_extremizer_rank`; HYP-3241/HYP-3240
+  `equioscillation_saddle_index`, `phi14_core_universality_status`,
+  `dilation_witness_grid`, `core_witness_break_reason`, and
+  `imaginary_norm_route_status`, `danger_nerve_euler_characteristic`,
+  `lonely_hole_status`, `cech_betti_sidecar`, `topological_shadow_class`,
+  and `cover_hole_witness_pair`, then HYP-3243
+  `oriented_matroid_tope_status`, `circle_endpoint_arrangement_cell`,
+  `cech_safe_component_rank`, `finite_chamber_schema_status`,
+  `state_lift_H7_obstruction`, and `proof_carrier_tournament_rank`, then
+  HYP-3244 `tiling_witness_lift_status`,
+  `half_tiling_descent_certificate`, `path_presentation_fiber_weight`,
+  `parent_aut_word_orbit_id`, `rectangle_hourglass_residue`,
+  `tail_tip_deletion_signature`, and `controlled_forgetting_span_status`.
+- **Pointers:** HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3231, HYP-3229, HYP-3228, HYP-3227, HYP-3219, HYP-3218, HYP-3217, HYP-3214, HYP-3226, HYP-3225, HYP-3224, HYP-3223,
+  HYP-3222, HYP-3213, HYP-3212, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
+  HYP-3163, HYP-3132, LTI-309, LTT-209, T1309, OPEN-Q-108.
+
 ## LTT-223: Green-Current And Lorentzian Exchange Tournament
 
 - **Move:** Treat proof certificates as tournament vertices:
@@ -6635,10 +6732,13 @@ quotient_legality_status
   ordered_tail_exchange_price -> toeplitz_trap_discharge_sidecar ->
   cyclic_psd_regularization -> raw_cyclotomic_energy -> raw_q3_scalar`.
 - **Next hook:** Build a slack decomposition of `magic_deficit` into
-  AP-support, ordered-tail exchange, Toeplitz/covariance trap, and
-  Joukowski/HB components, then test whether the residual is a small
+  AP-support, HYP-3245 out-correlation transport, HYP-3236 Green resistance
+  slack, HYP-3237 Vitali/Brouwer core-wall sign, HYP-3219 Brouwer
+  trace-sign/SOS factorization, HYP-3238 even-positive/odd-negative
+  compression debt, HYP-3239 sign-irrep/Borsuk-Ulam defect, ordered-tail exchange, Toeplitz/covariance
+  trap, and Joukowski/HB components, then test whether the residual is a small
   Delsarte basis vector.
-- **Pointers:** HYP-3228, HYP-3215, HYP-3214, HYP-3227, HYP-3226, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
+- **Pointers:** HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3229, HYP-3228, HYP-3219, HYP-3215, HYP-3214, HYP-3227, HYP-3226, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
   HYP-3213, HYP-3212, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
   HYP-3200, HYP-3153, HYP-3138, HYP-3132, LTI-326, LTT-226, T1326,
   OPEN-Q-108.
@@ -6756,7 +6856,7 @@ quotient_legality_status
 - **Next hook:** Add chart fields to a HYP-2963/HYP-3083 sample and prove
   every chart transition descends, is sidecar-restored, is dual-annihilated,
   stops at a boundary, or emits named debt.
-- **Pointers:** HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004,
+- **Pointers:** HYP-3234, HYP-3236, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004,
   HYP-2902, HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553,
   THM-550, THM-549, THM-442, LTI-331, T1331, OPEN-Q-108.
 

@@ -10,6 +10,13 @@ script: 04-computation/lrc_k8_green_current_conductance_graphs_codex_20260628.py
 result: 05-knowledge/results/lrc_k8_green_current_conductance_graphs_codex_20260628.out
 reflection: 07-reflections/lrc14-green-current-conductance-graphs-codex-20260628.md
 related:
+  - HYP-3245
+  - HYP-3237
+  - HYP-3236
+  - HYP-3235
+  - HYP-3234
+  - HYP-3233
+  - HYP-3228
   - HYP-3226
   - HYP-3225
   - HYP-3224
@@ -84,11 +91,17 @@ the residual trap mechanisms into Green/Rayleigh/Plucker sidecar classes.
 HYP-3227 adds the graph-level fact that the trap/certificate conductance graph
 stays connected without Toeplitz and even under Green-only coordinates.
 
-Second rebase integration: HYP-3214 identifies the cyclotomic
-Delsarte/Beurling-Selberg magic function with the Fejer kernel `F_7`.  That
-gives a plausible global dual above the conductance graph: the next test is
-whether Fejer/Toeplitz slack dominates the Green-only trap weights and the
-precision-defect island.
+Post-rebase companion: HYP-3245 records the autocorrelation projection of the
+same finite boundary.  Its out-correlation residual says every non-AP trap
+moves support-pair mass from short lags to outward lags; this gives a natural
+lag-space shadow of the conductance graph's legal exits.
+
+Second rebase integration: HYP-3214 identifies the sector Fejer/PSD face,
+while HYP-3228 separates the shell `L_y` Delsarte magic vector from that
+positive Fejer clock.  Together with HYP-3245's lag transport, this gives a
+plausible global dual above the conductance graph: the next test is whether
+Fejer, shell-magic, and Toeplitz slack dominate the Green-only trap weights and
+the precision-defect island.
 
 ## Exact Scout Readout
 

@@ -8,6 +8,13 @@ technique: LTI-330
 tournament_technique: LTT-230
 reflection: 07-reflections/lrc14-universal-scale-invariance-recursion-ledger-codex-20260628.md
 related:
+  - HYP-3245
+  - HYP-3237
+  - HYP-3236
+  - HYP-3235
+  - HYP-3234
+  - HYP-3233
+  - HYP-3232
   - HYP-3230
   - HYP-3229
   - HYP-3228
@@ -180,6 +187,16 @@ HYP-3229 is the latest sharpened form: Gamma0(7) is a coefficient engine for
 finite LP/Toeplitz rows, while Stark, Beraha, Mahler, and subshift data remain
 sidecars until they preserve a named LRC predicate.
 
+Post-rebase companion HYP-3245 adds a lag-space test for that preservation:
+after scale normalization, an autocorrelation sidecar must say whether
+short-lag deficit and outward-lag surplus descend through the same primitive
+packet or whether they create a named scale/fiber debt.
+
+Incoming HYP-3232 is the separate interlocking-recursion companion: it locates
+where scale covariance breaks at the apex fold, so HYP-3231's scale-normal
+ledger should mark whether a signal survives below-apex three-gap scaling or
+falls into the antipode-half deviation sector.
+
 The newest hidden recursion is now order-theoretic:
 
 ```text
@@ -305,3 +322,7 @@ discharge order-3 overlap debt,
 prove the wide scale-separated branch,
 and verify or replace the global induction base.
 ```
+
+-> HYP-3245, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3219, HYP-3215, HYP-3214,
+HYP-3213, HYP-3212, HYP-3205, HYP-3162, HYP-2963, HYP-1969, THM-573,
+THM-532, THM-407, T1330, LTI-330, LTT-230, OPEN-Q-108.

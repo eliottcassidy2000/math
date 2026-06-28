@@ -10,6 +10,7 @@ script: 04-computation/tournament_tiling_half_tiling_interlock_codex_20260628.py
 result: 05-knowledge/results/tournament_tiling_half_tiling_interlock_codex_20260628.out
 reflection: 07-reflections/tiling-half-tiling-interlocking-recursions-codex-20260628.md
 related:
+  - HYP-3245
   - HYP-3243
   - HYP-3242
   - HYP-3241
@@ -94,6 +95,12 @@ atlas.  HYP-3244 supplies the
 missing tournament chart: lift to the witness-rich tiling cover, compress
 through the half-tiling quotient only when sidecars certify that the LRC
 predicate descends.
+
+Post-rebase companion HYP-3245 supplies the scalar projection this span should
+police: equioscillation/autocorrelation and out-correlation transport.  Its
+lag residuals are useful only after they name the HYP-3244 tiling lift,
+half-tiling descent certificate, fiber weight, parent-aut word orbit,
+rectangle/hourglass residue, and tail/tip deletion signature.
 
 ## Exact Readout
 
@@ -312,9 +319,10 @@ compressed section whose legality depends on sidecars.
 
 ## Next Pulls
 
-1. Attach this span to the HYP-3227 trap-discharge graph: each trap edge should
-   name its tiling lift, half-tiling descent certificate, and failed sidecar if
-   descent is not legal.
+1. Attach this span to the HYP-3227 trap-discharge graph and HYP-3245
+   out-correlation residuals: each trap edge should name its tiling lift,
+   half-tiling descent certificate, and failed sidecar if descent is not
+   legal.
 2. Combine HYP-3230's three-gap cap-kernel recursion, HYP-3232's
    modulus-covariance apex break, HYP-3234's signed chart-change debts,
    HYP-3235's totally-real Fejer-square packet, HYP-3236's Green-resistance
@@ -339,7 +347,7 @@ compressed section whose legality depends on sidecars.
    HYP-3218 Fejer/equidistribution proof-push before attempting a global LRC14
    proof.
 
--> HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234,
+-> HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234,
 HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227,
 HYP-3220, HYP-3219, HYP-3218, HYP-3216, HYP-3214, HYP-3053, HYP-3052,
 HYP-3051, HYP-3149, HYP-3143, HYP-3199, T1344, LTI-344, LTT-244,

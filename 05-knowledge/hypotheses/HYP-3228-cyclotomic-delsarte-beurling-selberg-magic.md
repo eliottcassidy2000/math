@@ -10,6 +10,20 @@ script: 04-computation/lrc_cyclotomic_delsarte_bs_magic_codex_20260628.py
 result: 05-knowledge/results/lrc_cyclotomic_delsarte_bs_magic_codex_20260628.out
 reflection: 07-reflections/cyclotomic-delsarte-beurling-selberg-magic-codex-20260628.md
 related:
+  - HYP-3245
+  - HYP-3242
+  - HYP-3241
+  - HYP-3240
+  - HYP-3239
+  - HYP-3238
+  - HYP-3237
+  - HYP-3236
+  - HYP-3235
+  - HYP-3234
+  - HYP-3233
+  - HYP-3232
+  - HYP-3230
+  - HYP-3229
   - HYP-3227
   - HYP-3226
   - HYP-3225
@@ -162,6 +176,28 @@ speed `1`.  HYP-3228 should be tested against that Gram/peeling coordinate:
 the shell `L_y` dual is a row-level coefficient witness, while the Gram kernel
 is a measure-domain PSD witness.
 
+Post-rebase companion HYP-3245 supplies the lag-space projection of the same
+split.  Its finite trap table says non-AP local maxima move ordinary
+speed-support autocorrelation mass from short lags to outward lags.  This is a
+natural sidecar candidate for decomposing `magic_deficit`: HYP-3228 names the
+shell-contact equation, while HYP-3245 records the transport that may connect
+that equation to AP support, Toeplitz slack, HYP-3236 Green resistance slack,
+Vitali/Brouwer core-wall sign, Brouwer trace-sign/SOS factorization, or
+ordered-tail pricing.  Incoming HYP-3232 is the separate apex-fold/modulus-covariance
+companion.
+Incoming HYP-3238 and HYP-3239 sharpen the sign bookkeeping for this handoff:
+shell magic cannot be compressed through the positive/even channel unless the
+odd/negative payload is zero, restored, dual-annihilated, or explicitly kept,
+and the `n=14` reflection packet should be tested in the dihedral sign irrep /
+Borsuk-Ulam chart, not only the Brouwer fixed-point chart.
+Incoming HYP-3240 and HYP-3241 sharpen the core witness bookkeeping: the shell
+deficit should distinguish primitive `Phi_14` core witnesses shared by AP and
+Goddyn-Wong from promoted `Phi_{14d}` dilation witnesses, and it should not
+collapse the dip to a single imaginary-quadratic norm scalar.
+Incoming HYP-3242 adds the topological reading: shell slack and lag transport
+should also be compared with danger-cover Euler characteristic, lonely-hole
+survival, and Cech/Betti sidecars.
+
 ## Proof-Frontier Use
 
 The next theorem-facing statement should not be "find a positive Fourier
@@ -217,6 +253,6 @@ quartic_shell_magic_contact
 -> raw_q3_scalar
 ```
 
--> HYP-3228, HYP-3215, HYP-3214, HYP-3226, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3213,
+-> HYP-3245, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3229, HYP-3228, HYP-3215, HYP-3214, HYP-3226, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3219, HYP-3213,
 HYP-3212, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3200,
 HYP-3153, HYP-3138, HYP-3132, T1326, LTI-326, LTT-226, OPEN-Q-108.

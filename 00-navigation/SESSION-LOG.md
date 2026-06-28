@@ -669,6 +669,107 @@ version, AP autocorrelation=F_k). My spatial Gram kernel = the Fourier dual of k
 K(7,q)=1/49); my Verblunsky (S73d) = kps's OPUC Christoffel-Darboux facet. kps=Fourier side; me=PROVED spatial
 side (single-arc lemma + peeling recursion). REMAINING: the same closure for P∖{1} (no single arc). NOT a full
 proof; LRC(14) open, but the magic function is now BUILT (both sides) + the cap peels on speed 1 in closed form.
+## codex-2026-06-28 -- HYP-3245 equioscillation / autocorrelation atlas
+
+Owner prompt: see connections between equioscillation and out-correlation;
+think abstractly, find similar objects, and extend the LRC14 proof push.
+
+Integrated incoming HYP-3214/KPS S31ao: the cyclotomic magic function is the
+Fejer kernel, with the necessary two-clock guardrail (`F_7` for the 7-sector
+coverage side, Johnson pair-Pascal for the 14-clock cap side).  Added
+`04-computation/lrc14_equioscillation_autocorrelation_atlas_codex_20260628.py`
+and stored
+`05-knowledge/results/lrc14_equioscillation_autocorrelation_atlas_codex_20260628.out`.
+
+Core finding: the equioscillation/autocorrelation bridge is literal at level
+7.  `Fejer F_7 = (de Moivre cubic)^2 = Chebyshev double-zero kernel =
+positive-definite Delsarte kernel = triangular AP autocorrelation`.  Comparing
+HYP-3202 trap supports against the AP support-autocorrelation row shows every
+non-AP trap shifts mass outward: lags `1..7` lose mass, lags `8..14` gain the
+same mass, and total residual is zero.  HYP-3225 sidecar classes explain the
+finer ripple: Plucker traps oscillate, Green split-block traps are near
+monotone transport, and the mixed sidecar is a flat outward shift.
+
+Added HYP-3245/T1309/LTI-309/LTT-209 and reflection
+`07-reflections/lrc14-equioscillation-autocorrelation-atlas-codex-20260628.md`.
+After rebasing over incoming HYP-3227 conductance graphs, this packet was
+kept as the autocorrelation companion to the trap-discharge graph.
+After rebasing over incoming HYP-3228 shell magic, the split is now three-way:
+HYP-3228 names the `L_y` shell-contact dual, HYP-3245 names lag-space
+transport, and HYP-3227 names trap-to-exit conductance.
+After rebasing over incoming HYP-3229/HYP-3230/HYP-3231, the next
+measurements should also label modular/subshift coefficient sidecars,
+three-gap/Farey recursion status, and scale-normal survival status for each
+outward-lag surplus.
+Extended the abstract prompt into new proposed fields: contact word, lag
+barycenter, transport cost, Fejer annihilator projection, shell-lag
+commutator, sidecar entropy, and scale-survival bit.  Working hypothesis: AP
+is the unique point where contact, Gram/autocorrelation, shell magic,
+conductance, modular, and scale-normal projections commute; non-AP traps are
+typed commutators needing sidecar discharge.
+After later mainline fetches, incoming HYP-3232 claimed the interlocking
+recursion namespace, HYP-3234 claimed the signed-chart recurrence namespace,
+HYP-3233 carried the cyclotomic-factor recurrence namespace, HYP-3235 claimed
+the cap-field/conductor namespace, HYP-3236 claimed Green conductance /
+algebraic connectivity, and HYP-3237 claimed the Vitali/Brouwer core-wall
+namespace.  A later push-reject fetch then brought in HYP-3238 for the
+even/odd positive/negative duality bridge and HYP-3239 for the
+dihedral/Borsuk-Ulam refinement, so this packet is finally renumbered to
+HYP-3245.
+Incoming HYP-3232/HYP-3217 add `apex_fold_side` and `cyclotomic_mode` as
+mandatory labels for the next autocorrelation scout.  Incoming HYP-3234 adds
+`chart_change_class`; HYP-3233 adds `cyclotomic_factor_signature`; HYP-3235
+and HYP-3218 add `cap_field_conductor`, `fejer_square_status`,
+`gauss_sum_margin`, and `ap_self_dual_fixed_point_status` so outward-lag
+residuals cannot hide chart, Phi_7, conductor, or margin debt.
+Incoming HYP-3236/HYP-3237/HYP-3219 add `green_resistance_slack`,
+`lambda2_conductance_rank`, `negative_covariance_leakage`,
+`thomson_current_profile`, `fiedler_bottleneck_id`, `vitali_wall_side`,
+`brouwer_saddle_sign`, `phi14_core_witness`, `core_bulk_transport_status`,
+`brouwer_trace_sign`, `degree_sos_factorization`, and
+`even_odd_bonferroni_node_slack`.
+Incoming HYP-3238/HYP-3239 add `positive_negative_duality_status`,
+`odd_negative_payload_reconstruction`, `dihedral_irrep_label`,
+`complement_antiautomorphism_sign`, `borsuk_ulam_index`,
+`imaginary_gauss_sum_sign`, and `phi4_bimodal_extremizer_rank`, so the
+out-correlation residual must record whether it is losing odd/negative payload
+or only expressing the sign representation of the heptagon reflection packet.
+After the final rebase, incoming HYP-3240/HYP-3241 add
+`equioscillation_saddle_index`, `phi14_core_universality_status`,
+`dilation_witness_grid`, `core_witness_break_reason`, and
+`imaginary_norm_route_status`: AP/Goddyn-Wong primitive `Phi_14` witnesses,
+promoted `Phi_{14d}` dilation witnesses, and the rejected `Q(sqrt(-7))` norm
+route are different core-side payloads.
+Incoming HYP-3242 adds `danger_nerve_euler_characteristic`,
+`lonely_hole_status`, `cech_betti_sidecar`, `topological_shadow_class`, and
+`cover_hole_witness_pair`, so lag transport should be checked against
+cover-hole survival in the danger nerve, not just against scalar slack.
+Incoming HYP-3243 adds `oriented_matroid_tope_status`,
+`circle_endpoint_arrangement_cell`, `cech_safe_component_rank`,
+`finite_chamber_schema_status`, `state_lift_H7_obstruction`, and
+`proof_carrier_tournament_rank`, so an out-correlation residual should be
+accepted only after the finite open-tope / witness-equality / chamber
+discharge / state-lift / named-debt schema is attached.
+After rebasing over the executed HYP-3226 atlas, the same residual should also
+carry `small_pattern_motif_id`, `payload_preserved`, `payload_destroyed`,
+`repair_sidecar`, and `terminal_risk_label`; the no-free-slider rule is now a
+first-class gate for every analogy motif.
+After rebasing over HYP-3244 tiling/half-tiling recursions, the residual also
+needs `tiling_witness_lift_status`, `half_tiling_descent_certificate`,
+`path_presentation_fiber_weight`, `parent_aut_word_orbit_id`,
+`rectangle_hourglass_residue`, `tail_tip_deletion_signature`, and
+`controlled_forgetting_span_status`; otherwise a clean lag transport may be a
+failed quotient descent.
+Next proof target: prove a signed out-correlation transport lemma from
+short-lag deficit plus outward surplus to AP support gap, Toeplitz slack,
+HYP-3228 magic deficit, HYP-3236 Green resistance slack, HYP-3237
+Vitali/Brouwer core-wall sign, HYP-3219 Brouwer trace-sign/SOS factorization,
+HYP-3238 even-positive/odd-negative compression debt, HYP-3239
+dihedral/Borsuk-Ulam sign-irrep defect, HYP-3241 core-index witness status,
+HYP-3240 dilation-witness sidecar, HYP-3242 cover-hole survival, HYP-3243
+finite chamber/state-lift carrier status, HYP-3244 tiling lift/half-tiling
+descent status, or ordered-tail `q0+q6` loss after retaining HYP-3225 sidecar
+class.
 
 ## kind-pasteur-2026-06-28-S31ao -- the cyclotomic Delsarte/Beurling-Selberg magic function IS the Fejer kernel
 

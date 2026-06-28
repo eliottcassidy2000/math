@@ -10,6 +10,7 @@ script: 04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py
 result: 05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out
 reflection: 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md
 related:
+  - HYP-3245
   - HYP-3243
   - HYP-3242
   - HYP-3241
@@ -277,6 +278,8 @@ HYP-3220 even-odd / positive-negative imaginary-quadratic wall
 HYP-3238 crossed even-positive / odd-negative packet
 HYP-3239 D7 Borsuk-Ulam sign-irrep refinement
 HYP-3215 induction-base and 23/27/14 modulus route
+HYP-3228 shell magic / Delsarte contact vector
+HYP-3245 equioscillation / autocorrelation motif atoms
 ```
 
 Incoming S283 added an additive-resonance coordination layer around Skewes,
@@ -399,6 +402,13 @@ open safe topes, boundary cocircuits, AP/GW `Phi_14` equality, dilation
 `Phi_{14d}` equality, Toeplitz/Green/root-motion chamber discharge, state-lift
 `H=7` contradiction, or named residual debt.  The new atlas is therefore a
 finite chamber sidecar for M102 rather than a replacement scalar.
+
+Post-rebase HYP-3245 adds the equioscillation/autocorrelation projection of
+the same discipline.  Its Fejer/AP interval atom is already present in M073
+and M093, while its out-correlation trap residual gives a new test column:
+short-lag deficit plus outward surplus is usable only when HYP-3226 names the
+motif payload retained, the coordinate destroyed, and the sidecar that repairs
+the loss.
 
 The incoming Erdos-Turan / p-adic Littlewood / Davenport-Erdos forum synthesis
 reinforces existing sidecar motifs rather than creating a terminal shortcut:

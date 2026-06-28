@@ -105,5 +105,27 @@ HYP-3224's normal-fan dual becomes concrete: the shell polynomial is the
 visible boundary equation, and the remaining coordinates are the sidecars
 that make its slack provable.
 
--> HYP-3228, HYP-3214, HYP-3224, HYP-3204, HYP-3203, HYP-3153, HYP-3138, HYP-3132,
+HYP-3245 now gives one candidate sidecar language for that residual: ordinary
+support autocorrelation moves outward on every non-AP finite trap.  That makes
+the shell-contact polynomial less isolated; it can be tested against lag
+transport, HYP-3236 Green resistance slack, Vitali/Brouwer core-wall sign,
+Brouwer trace-sign/SOS factorization, and ordered-tail pricing on the same
+trap boundary.
+
+The post-rebase HYP-3238/HYP-3239 packets add the missing sign audit: a
+positive/even shell projection is proof-grade only after odd/negative payload
+is zero, restored, annihilated by the dual, or carried as a sidecar, and the
+heptagon reflection obstruction should also be read in the dihedral sign-irrep
+/ Borsuk-Ulam chart.
+
+The HYP-3240/HYP-3241 packets add a core-witness audit: primitive `Phi_14`
+witnesses shared by AP and Goddyn-Wong, promoted `Phi_{14d}` dilation
+witnesses, and the rejected `Q(sqrt(-7))` norm scalar must remain separate
+when shell slack is compared to lag transport.
+
+HYP-3242 adds the topology audit: measured Euler characteristic of the
+danger-cover nerve, lonely-hole survival, and Cech/Betti sidecars should be
+kept separate from both shell scalar slack and lag-transport scalar slack.
+
+-> HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3229, HYP-3228, HYP-3219, HYP-3214, HYP-3224, HYP-3204, HYP-3203, HYP-3153, HYP-3138, HYP-3132,
 LTI-326, LTT-226, T1326, OPEN-Q-108.

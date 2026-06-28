@@ -1,0 +1,149 @@
+HYP-3245 equioscillation / autocorrelation atlas
+==============================================================================
+basis=HYP-3214 Fejer F7 = de Moivre^2 = AP autocorrelation
+extension=multitude atlas plus HYP-3202 trap out-correlation residuals
+
+EXACT / NUMERIC IDENTITIES
+  max |(de_moivre_cubic(2cos t))^2 - F7(t)| over grid = 7.923e-12
+  max F7(2pi*j/7), j=1..6 = 2.868e-30
+  max central slope at those zeros = 1.351e-10 (double-zero check)
+  Fejer_7 coefficients = {-6: 1, -5: 2, -4: 3, -3: 4, -2: 5, -1: 6, 0: 7, 1: 6, 2: 5, 3: 4, 4: 3, 5: 2, 6: 1}
+  interval_7 autocorr equals Fejer_7 coefficients: True
+  interval_8 center autocorr coeffs = {-7: 1, -6: 2, -5: 3, -4: 4, -3: 5, -2: 6, -1: 7, 0: 8, 1: 7, 2: 6, 3: 5, 4: 4, 5: 3, 6: 2, 7: 1}
+  Fano (7,3,1) difference-set periodic autocorr = [3, 1, 1, 1, 1, 1, 1]
+  Zadoff-Chu_7 max off-periodic-autocorr = 4.058e-15
+  Zadoff-Chu_7 spectrum magnitude ripple = 7.550e-15
+  Golay_pair_8 summed positive-lag sidelobes = [0, 0, 0, 0, 0, 0, 0]
+  Barker_7 positive-lag autocorr = [7, 0, -1, 0, -1, 0, -1]
+  simplex_7 offdiag=-0.166667 frame_potential=8.166667 Welch=8.166667
+
+LRC14 HYP-3202 TRAP OUT-CORRELATION TABLE
+  ordinary difference autocorr of speed support compared with AP interval
+  low_lag_deficit=sum residual lags 1..7; out_lag_surplus=sum residual lags 8..14
+  E=(0, 1, 2, 3, 4, 5, 6, 7) | AP_terminal | L1=0 max=0 sign_changes=0 low=0 out=0
+  E=(0, 2, 4, 6, 7, 8, 10, 12) | rank2_pair_plucker_bottleneck | L1=18 max=5 sign_changes=3 low=-6 out=6
+  E=(0, 1, 3, 5, 7, 9, 11, 13) | rank2_pair_plucker_bottleneck | L1=24 max=6 sign_changes=3 low=-9 out=9
+    residual=[0, -6, 0, -4, 1, -2, 2, 0, 3, 1, 2, 1, 1, 1, 0]
+  E=(0, 1, 2, 3, 11, 12, 13, 14) | green_low_connectivity_bottleneck | L1=32 max=4 sign_changes=1 low=-16 out=16
+    residual=[0, -1, -2, -3, -4, -3, -2, -1, 1, 2, 3, 4, 3, 2, 1]
+  E=(0, 3, 6, 8, 9, 11, 12, 14) | rank2_pair_plucker_bottleneck | L1=24 max=5 sign_changes=5 low=-9 out=9
+  E=(0, 2, 3, 5, 6, 8, 11, 14) | rank2_pair_plucker_bottleneck | L1=24 max=5 sign_changes=5 low=-9 out=9
+  E=(0, 6, 7, 8, 9, 10, 11, 12) | rank2_pair_plucker_bottleneck | L1=10 max=1 sign_changes=1 low=-5 out=5
+  E=(0, 4, 5, 8, 9, 10, 13, 14) | green_low_connectivity_bottleneck | L1=24 max=5 sign_changes=3 low=-9 out=9
+  E=(0, 8, 9, 10, 11, 12, 13, 14) | mixed_green_lorentzian_sidecar | L1=14 max=1 sign_changes=1 low=-7 out=7
+    residual=[0, -1, -1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, 1, 1]
+  E=(0, 1, 2, 3, 7, 8, 9, 10) | AFM_frustrated_high_rayleigh_debt | L1=20 max=3 sign_changes=1 low=-6 out=6
+  E=(0, 2, 5, 7, 9, 10, 12, 14) | AFM_frustrated_high_rayleigh_debt | L1=26 max=6 sign_changes=3 low=-8 out=8
+  E=(0, 1, 4, 5, 7, 8, 11, 12) | rank2_pair_plucker_bottleneck | L1=20 max=5 sign_changes=3 low=-6 out=6
+
+  class averages:
+    AFM_frustrated_high_rayleigh_debt: count=2 avg_L1=23.000 avg_sign_changes=2.000 low_values=[-8, -6] out_values=[6, 8]
+    AP_terminal: count=1 avg_L1=0.000 avg_sign_changes=0.000 low_values=[0] out_values=[0]
+    green_low_connectivity_bottleneck: count=2 avg_L1=28.000 avg_sign_changes=2.000 low_values=[-16, -9] out_values=[9, 16]
+    mixed_green_lorentzian_sidecar: count=1 avg_L1=14.000 avg_sign_changes=1.000 low_values=[-7] out_values=[7]
+    rank2_pair_plucker_bottleneck: count=6 avg_L1=20.000 avg_sign_changes=3.333 low_values=[-9, -6, -5] out_values=[5, 6, 9]
+  readout=every non-AP trap shifts autocorrelation mass outward: low_lag_deficit + out_lag_surplus = 0, but sidecar class controls the ripple shape.
+
+MOTIF ATLAS: EQUIOSCILLATION <-> AUTOCORRELATION
+  Fejer_AP_interval: eq=double zeros at nontrivial 7th roots / Chebyshev V7 sharpness | auto=triangular interval autocorrelation (7-|lag|)_+ | use=HYP-3214 sector magic function and AP orbit kernel | risk=naive F_k*F_7 pairing does not equal cap_k
+  Johnson_pair_Pascal: eq=14-clock pair-normalized cap face | auto=pair-count / Johnson-scheme inner distribution | use=cap side complementary to 7-sector Fejer | risk=wrong clock if collapsed to 7-sector kernel
+  Christoffel_Darboux_OPUC: eq=orthogonal-polynomial reproducing kernel peaks at support atoms | auto=Toeplitz moment kernel / Verblunsky reflection data | use=Toeplitz lambda-min and Fejer-Riesz trap chart | risk=forgets exchange sidecars
+  Welch_ETF_simplex: eq=all off-diagonal Gram entries equal | auto=constant correlation / frame-potential equality | use=model for AP equality face and Delsarte sharpness | risk=too symmetric for finite trap boundary
+  difference_set_two_level: eq=all nonzero cyclic lags equal | auto=two-level periodic autocorrelation | use=finite residue/design analogue of Fejer sharpness | risk=periodic model can erase endpoint owners
+  CAZAC_Zadoff_Chu: eq=constant magnitude spectrum | auto=zero nonzero periodic autocorrelation | use=perfect decorrelation guardrail for wide/far phases | risk=complex phases may not preserve integer-speed predicate
+  Golay_complementary_pair: eq=paired ripple cancellation | auto=sum of aperiodic sidelobes is zero | use=signed-pair analogue of L_y bypassing termwise majorants | risk=requires pair carrier, not single row
+  Barker_low_sidelobe: eq=small aperiodic sidelobes | auto=bounded +/-1 ripple | use=finite trap canary for near-sharp but non-perfect rows | risk=scarce examples; not a uniform theorem
+  equiripple_FIR_Remez: eq=alternating error extrema | auto=magnitude-square filter autocorrelation | use=algorithmic template for dual search | risk=continuous design may forget arithmetic sidecars
+  tournament_out_correlation: eq=score/outdegree balance | auto=out-neighborhood overlap A A^T | use=directed/out-correlation reading of proof-carrier tournaments | risk=raw runner tournament is too lossy
+
+PROPOSED NEXT SIGNAL FIELDS
+  contact_word: ordered signs/multiplicities at equality or root-contact nodes
+  lag_barycenter: center of mass of positive/negative autocorrelation residual
+  transport_cost: earthmover distance from AP triangular lag law to E
+  Fejer_annihilator_projection: lag residual component killed by the F7 double-zero kernel
+  shell_lag_commutator: mismatch between HYP-3228 shell slack and lag transport
+  sidecar_entropy: number of repair labels needed before the quotient is legal
+  small_pattern_motif_id: HYP-3226 motif id carrying the signal as a typed payload atom
+  payload_preserved: LRC coordinate retained by the motif or lag projection
+  payload_destroyed: coordinate lost by scalarizing the motif or lag residual
+  repair_sidecar: sidecar that restores the destroyed coordinate
+  terminal_risk_label: HYP-3226 direct/sidecar/analogy/raw risk tag
+  scale_survival_bit: whether the signal survives HYP-3231 scale recursion
+  apex_fold_side: HYP-3232 low/apex/antipode side of the lag residual
+  cyclotomic_mode: HYP-3217 mode carrying the residual after projection
+  chart_change_class: HYP-3234 signed chart needed to compare recurrence letters
+  cyclotomic_factor_signature: HYP-3233 (x-1)^depth * Phi_d tag
+  cap_field_conductor: HYP-3235 conductor seen by the cap/binding row
+  fejer_square_status: whether the residual respects the totally-positive F7 square
+  gauss_sum_margin: HYP-3218 Fejer/Vaaler margin tag
+  ap_self_dual_fixed_point_status: whether AP self-duality is retained
+  green_resistance_slack: HYP-3236 resistance excess relative to AP
+  lambda2_conductance_rank: HYP-3236 algebraic-connectivity rank among bounded rows
+  negative_covariance_leakage: lost covariance sign information after positive-part graphing
+  thomson_current_profile: unit-current bottleneck profile for the trap row
+  fiedler_bottleneck_id: Fiedler cut/channel that first detects the trap
+  vitali_wall_side: HYP-3237 bulk/core side of the witness packet
+  brouwer_saddle_sign: max-min saddle orientation at the core equioscillation
+  phi14_core_witness: primitive 14th-root witness status for the row
+  core_bulk_transport_status: whether measure bulk or cyclotomic core carries the proof
+  brouwer_trace_sign: HYP-3219 topological sign of the odd obstruction
+  degree_sos_factorization: degree/sign times SOS magnitude factorization tag
+  even_odd_bonferroni_node_slack: local slack at the even/odd Bonferroni split
+  positive_negative_duality_status: HYP-3238 even-positive/odd-negative packet split
+  odd_negative_payload_reconstruction: whether clipped odd/negative data is zero or restored
+  dihedral_irrep_label: HYP-3239 D7 irrep carrying the residual
+  complement_antiautomorphism_sign: whether complement acts as orientation-reversing anti-aut
+  borsuk_ulam_index: free Z2 odd-degree certificate tag
+  imaginary_gauss_sum_sign: i*sqrt(7) obstruction / sign-irrep orientation tag
+  phi4_bimodal_extremizer_rank: HYP-3239/HYP-3238 bimodal phi4 extremizer check
+  equioscillation_saddle_index: HYP-3241 antipodal Phi14 witness-pair count
+  phi14_core_universality_status: whether AP/Goddyn-Wong share the same core witnesses
+  dilation_witness_grid: HYP-3240 promoted Phi_{14d} witness grid for dilation rows
+  core_witness_break_reason: why the base Phi14 witness fails or survives
+  imaginary_norm_route_status: whether the Q(sqrt(-7)) norm scalar route is legal
+  danger_nerve_euler_characteristic: HYP-3242 measured nerve/Euler characteristic state
+  lonely_hole_status: whether the lonely witness is carried by a cover hole
+  cech_betti_sidecar: Cech/Betti label for the danger-cover obstruction
+  topological_shadow_class: which topology/combinatorics/representation shadow is active
+  cover_hole_witness_pair: Borsuk-Ulam antipodal pair attached to the cover hole
+  oriented_matroid_tope_status: HYP-3243 open-safe tope or boundary cocircuit state
+  circle_endpoint_arrangement_cell: endpoint/wall-crossing cell containing the residual
+  cech_safe_component_rank: safe-component nerve rank after open/closed separation
+  finite_chamber_schema_status: open safe / known witness / finite discharge / state lift / debt
+  state_lift_H7_obstruction: whether a residual atom lifts to the forbidden H=7 endpoint
+  proof_carrier_tournament_rank: HYP-3243 carrier priority before scalar lag transport is used
+  tiling_witness_lift_status: HYP-3244 fixed-path tiling-cover witness status
+  half_tiling_descent_certificate: fiber/aut/coboundary proof that quotienting preserves the LRC predicate
+  path_presentation_fiber_weight: H(T)/|Aut(T)| or named fiber debt attached to the carrier
+  parent_aut_word_orbit_id: incident-word orbit under parent automorphisms
+  rectangle_hourglass_residue: GF(2) coboundary residue detecting illegal compression
+  tail_tip_deletion_signature: tip/tail deletion payload retained through the span
+  controlled_forgetting_span_status: lift/compress/descent/fail-debt status for the residual
+
+TOURNAMENT ANALYSIS
+  vertices=certificate/motif families, not runners or raw arcs
+  pairwise_observable=which motif keeps both equioscillation and autocorrelation payload
+  switch/gauge=A->B iff A keeps the LRC predicate with fewer destroyed sidecars
+  score_hist={100: 1, 95: 1, 91: 1, 86: 1, 80: 1, 76: 1, 72: 1, 65: 1, 60: 1, 45: 1}
+  directed_3cycles=0
+  scc_sizes=[1,1,1,1,1,1,1,1,1,1]
+  hamiltonian_path_count=1
+  priority_path=Fejer_AP_interval -> Johnson_pair_Pascal -> Christoffel_Darboux_OPUC -> Welch_ETF_simplex -> difference_set_two_level -> CAZAC_Zadoff_Chu -> Golay_complementary_pair -> Barker_low_sidelobe -> equiripple_FIR_Remez -> tournament_out_correlation
+
+ASSUMPTION-CHALLENGE
+  alternate vertices considered: runners, sectors, Fourier modes, autocorrelation lags,
+  zeros/equioscillation nodes, Toeplitz moments, trap sidecars, Johnson pairs,
+  difference-set blocks, codewords, filter bands, and proof obligations.
+  HYP-3244 adds flip bits, deletion roots, rectangle/hourglass defects,
+  parent-automorphism word orbits, and tiling-cover fibers as alternate vertices.
+  chosen vertices: certificate/motif families plus LRC trap autocorrelation residuals.
+  preserved predicate: HYP-3214 Fejer magic-function identity, HYP-3224 normal-fan
+  AP extremality, HYP-3225 finite trap sidecar discharge, and HYP-3244
+  tiling-lift / half-tiling-descent legality.
+  destroyed information: exact LRC safe-set geometry, PGF root radii, endpoint owners,
+  finite chamber address, state-lift obligations, and analytic equidistribution
+  obligations unless routed to named sidecars; HYP-3244 adds Hamiltonian-path
+  presentation, canary/filler fiber mass, parent word-orbit identity,
+  rectangle/hourglass residue, and tail/tip deletion payload.
+  challenged assumption: equioscillation is only a root-location story.
+  The atlas treats it as the primal shadow of autocorrelation/positive-definiteness.
