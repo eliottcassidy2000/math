@@ -63,6 +63,47 @@ contact-holonomy curvature status, tiling descent status, and first proof
 exit; then test whether the
 named-residual-debt case is empty.  In parallel, test HYP-3246/HYP-3252's
 index equality as descriptor plus the HYP-3250 S-dependent floor as proof.
+## Lead mac-mini-2026-06-28-S84 + codex: LRC14 CRT/Galois sidecar audit
+
+**Status:** EVIDENCE / exact CRT and Galois-sidecar audit; proof-target
+refinement, not proof (HYP-3311/T1361).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3311-lrc14-crt-galois-sidecar-audit.md`,
+script `04-computation/lrc_census_crt_factorization_macmini_S84.py`,
+result `05-knowledge/results/lrc_census_crt_factorization_macmini_S84.out`,
+and reflection
+`07-reflections/the-census-factors-via-crt-7-adic-residue-c3-skeleton-times-2-adic-magnitude-doubling-hinge.md`.
+
+Purpose: make the owner's S84 insight proof-facing as an exact sidecar audit
+for HYP-3310's broader C6 residue-magnitude frame and as a small chart for
+HYP-3301's first-obstruction sheaf route.  After HYP-3400, it is also the
+concrete charge-conservation packet for the C3, quadratic, and height/flex
+coordinates.  The exact census split is
+`{1,...,13}=U union 2U union {7}` with units
+`U={1,3,5,9,11,13}`, even covering shadow `2U={2,4,6,8,10,12}`, and ramified
+apex `7`.  The bijection `u -> 2u mod 14` links binding units to even covering
+classes, but the packet also retains the `Q(zeta_7)` subfield lattice:
+the C3 quotient gives the binding-pair orbit, while the `Q(sqrt(-7))`
+quadratic character is transverse and cannot be forgotten.
+
+Readout: the proof should split into unit-contact rigidity plus covering-flex
+rigidity.  Unit contacts should be handled by HYP-2909 plus C3 propagation and
+HYP-3265's contact graph.  Killed contacts should route through HYP-3300-style
+observability/Morse chambers.  The open hard theorem is that the covering
+layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge, with
+all same-residue height impostors opening strict safe mass or entering named
+finite discharge.
+
+Next: build the finite covering-flex theorem for `2U+{7}` and attach it to
+the HYP-3265/HYP-3300 chamber classifier.  Record which quotient preserves the
+LRC predicate, which coordinate it destroys, and whether the loss is paid for
+by sidecar, descent, AP/GW boundary, `Phi14d` equality, strict open witness, or
+named debt.  HYP-3301's extra test: the first lost coordinate among C3,
+`chi_7`, and height/flex must be exact, holonomy-repaired, boundary-positive,
+AP/GW-forbidden, or named K33/H7 debt.  HYP-3400's extra test: the same lost
+coordinate must be preserved, transferred to a dual shadow, or explicitly
+charged as debt.
 
 ## Lead codex-2026-06-28: Topology/geometry/graph proof-route atlas
 

@@ -1,0 +1,61 @@
+HYP-3311 CRT/Galois sidecar audit of LRC14 census
+source=mac-mini-2026-06-28-S84 + codex extension
+
+1. CRT FACTORIZATION OF NONZERO CLASSES MOD 14
+units U=[1, 3, 5, 9, 11, 13]
+evens 2U=[2, 4, 6, 8, 10, 12]
+apex=7
+covering nonunits=[2, 4, 6, 7, 8, 10, 12]
+unit_to_even_shadow={1: 2, 3: 6, 5: 10, 9: 4, 11: 8, 13: 12}
+shadow_is_bijection_to_evens=True
+nonzero_partition_U_2U_apex=True
+
+2. CRT TABLE
+  s= 1: (mod2=1, mod7=1) chi7= 1 pair=(1, 13) c3_slot=0 :: unit / binding / 7-residue skeleton
+  s= 2: (mod2=0, mod7=2) chi7= 1 pair=- c3_slot=- :: even / 2-adic magnitude shadow
+  s= 3: (mod2=1, mod7=3) chi7=-1 pair=(3, 11) c3_slot=1 :: unit / binding / 7-residue skeleton
+  s= 4: (mod2=0, mod7=4) chi7= 1 pair=- c3_slot=- :: even / 2-adic magnitude shadow
+  s= 5: (mod2=1, mod7=5) chi7=-1 pair=(5, 9) c3_slot=2 :: unit / binding / 7-residue skeleton
+  s= 6: (mod2=0, mod7=6) chi7=-1 pair=- c3_slot=- :: even / 2-adic magnitude shadow
+  s= 7: (mod2=1, mod7=0) chi7= 0 pair=- c3_slot=- :: apex7 / ramified covering singleton
+  s= 8: (mod2=0, mod7=1) chi7= 1 pair=- c3_slot=- :: even / 2-adic magnitude shadow
+  s= 9: (mod2=1, mod7=2) chi7= 1 pair=(5, 9) c3_slot=2 :: unit / binding / 7-residue skeleton
+  s=10: (mod2=0, mod7=3) chi7=-1 pair=- c3_slot=- :: even / 2-adic magnitude shadow
+  s=11: (mod2=1, mod7=4) chi7= 1 pair=(3, 11) c3_slot=1 :: unit / binding / 7-residue skeleton
+  s=12: (mod2=0, mod7=5) chi7=-1 pair=- c3_slot=- :: even / 2-adic magnitude shadow
+  s=13: (mod2=1, mod7=6) chi7=-1 pair=(1, 13) c3_slot=0 :: unit / binding / 7-residue skeleton
+
+3. C6 = C2 x C3 SUBFIELD LATTICE INSIDE Q(zeta_7)
+C2 coordinate=quadratic character chi7, fixed field Q(sqrt(-7)).
+C3 coordinate=quotient by complex conjugation +/-1, fixed field Q(cos(2pi/7)).
+  sigma_1: chi7= 1 real_pair=(1, 6) fixes_Qsqrt_minus7=True fixes_real_cubic=True
+  sigma_2: chi7= 1 real_pair=(2, 5) fixes_Qsqrt_minus7=True fixes_real_cubic=False
+  sigma_3: chi7=-1 real_pair=(3, 4) fixes_Qsqrt_minus7=False fixes_real_cubic=False
+  sigma_4: chi7= 1 real_pair=(3, 4) fixes_Qsqrt_minus7=True fixes_real_cubic=False
+  sigma_5: chi7=-1 real_pair=(2, 5) fixes_Qsqrt_minus7=False fixes_real_cubic=False
+  sigma_6: chi7=-1 real_pair=(1, 6) fixes_Qsqrt_minus7=False fixes_real_cubic=True
+c3_pair_order_under_times3_mod14=[(1, 13), (3, 11), (5, 9)]
+each_binding_pair_has_one_QR_and_one_NQR=True
+readout=the C3 binding-pair quotient and the Q(sqrt(-7)) quadratic character are transverse sidecars.
+
+4. TWO-PRIME PROOF PACKET
+binding_layer = U, quotient by +/- gives the C3 orbit seeded by HYP-2909
+covering_layer = 2U plus ramified apex7; 2U is the 2-adic shadow of U
+hinge = 12 -> 24 is a height/doubling lift: it contains the old 12-kill lattice and adds interleaved 24-kills
+guardrail = residue equality alone is false proof currency; same-residue height lifts can be strict positive rows
+proof_target = prove unit-contact rigidity, then prove the covering-flex manifold has only AP/GW integer points
+
+5. TOURNAMENT ANALYSIS OVER PROOF CARRIERS
+pairwise_observable=preserved LRC predicate, binding detection, covering detection, field-lattice payload, rigidity target, proof readiness
+binary_gauge=A->B iff weighted proof-carrier score(A)>score(B); tie Hamiltonian path is lexicographic
+vertices=9
+score_hist={29: 1, 42: 1, 50: 1, 54: 1, 58: 1, 60: 1, 61: 1, 62: 1, 73: 1}
+directed_3cycles=0
+hamiltonian_path_count=1
+selected_path=crt_packet_U_plus_2U_plus_ramified7 -> c6_subfield_lattice_Qzeta7 -> c3_real_cubic_binding_pair_orbit -> apex7_ramified_covering_switch -> two_adic_unit_to_even_shadow_2U -> quadratic_Qsqrt_minus7_transverse_character -> hinge_12_to_24_height_lift -> raw_mod14_residue_table -> slogan_binding_units_covering_evens
+
+6. NEXT PROOF OBLIGATIONS
+A. Formalize unit-contact rigidity: tight rows retaining all six unit contacts force the C3 unit skeleton.
+B. Add the transverse Q(sqrt(-7)) character as a sidecar, not a replacement for the C3 quotient.
+C. Prove the covering layer 2U+{7} has a one-dimensional height flex and that its only integer tight lift is 12->24.
+D. Combine with HYP-3265/HYP-3300: killed unit contacts must route to off-unit covering/Morse chamber witnesses.

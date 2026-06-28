@@ -264,6 +264,13 @@ obligations, and proof-carrier interfaces.
   use LTT-256 and make proof carriers plus chart transitions the vertices.
   The top route is sheaf exactness of first obstruction cocycles, followed by
   Farey-cusp transfer of qdiv>14 boundary-moment kernels.
+- Need to split the LRC14 census into residue and magnitude layers without
+  losing field sidecars:
+  use LTT-261 after LTT-255/LTT-248/LTT-246 and make CRT packets, C6 subfield
+  lattice data, C3 binding-pair orbits, `Q(sqrt(-7))` sidecars, even-shadow
+  covering packets, ramified apex switches, and height hinges the vertices.
+  Do not let the slogan `units bind, evens cover` replace the transverse
+  quadratic character or the 2-adic height/flex ledger.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -7194,6 +7201,60 @@ quotient_legality_status
   HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230,
   HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523,
   LTI-356, T1356, OPEN-Q-108.
+
+## LTT-261: CRT/Galois Census Proof-Carrier Tournament
+
+- **Move:** Rank proof carriers for the HYP-3311 sidecar audit of the
+  HYP-3310 C6 residue-magnitude frame, rather than runners or residue
+  classes.  The vertices are
+  `crt_packet_U_plus_2U_plus_ramified7`, `c6_subfield_lattice_Qzeta7`,
+  `c3_real_cubic_binding_pair_orbit`,
+  `quadratic_Qsqrt_minus7_transverse_character`,
+  `two_adic_unit_to_even_shadow_2U`, `apex7_ramified_covering_switch`,
+  `hinge_12_to_24_height_lift`, `raw_mod14_residue_table`, and
+  `slogan_binding_units_covering_evens`.
+- **LRC use:** HYP-3311 complements HYP-3310 by verifying the exact split
+  `U union 2U union {7}` and turns the owner's S84 idea into a labelled
+  packet theorem target.  The C3 quotient carries unit-contact rigidity, the
+  quadratic `Q(sqrt(-7))` character is a transverse field sidecar, and the
+  `2U+{7}` layer carries the covering height/flex problem.  HYP-3301 supplies
+  the next theorem interface: if this tournament quotient forgets one of those
+  three coordinates, the loss should appear as an exact cocycle, zeta_7
+  holonomy repair, positive boundary-moment image, forbidden AP/GW kernel, or
+  named K33/H7 debt.  HYP-3400 gives the same rule as charge accounting:
+  every scalar shadow must preserve, transfer, or explicitly debt the C3,
+  quadratic, and height/flex charges.
+- **Preserves:** binding/covering layer, C3 binding-pair orbit, C6 subfield
+  lattice, ramified apex status, unit-to-even covering shadow, and the
+  `12->24` height hinge as a proof obligation.
+- **Forgets / guardrail:** raw residues and slogans forget QR/NQR
+  transversality, endpoint owners, off-unit components, same-residue height
+  impostors, and the finite chamber exit route.  The C3 quotient cannot
+  replace the quadratic sidecar, and neither sees the 2-adic height ledger.
+- **Pairwise observable:** preserved LRC predicate, binding detection,
+  covering detection, field-lattice payload, rigidity target, and proof
+  readiness.
+- **Switch/gauge:** `A -> B` iff the weighted proof-carrier score of `A`
+  exceeds that of `B`; ties use the lexicographic Hamiltonian path.
+- **Exact fingerprint:** `vertices=9`,
+  `score_hist={29:1,42:1,50:1,54:1,58:1,60:1,61:1,62:1,73:1}`,
+  `directed_3cycles=0`, `hamiltonian_path_count=1`, and selected path
+  `crt_packet_U_plus_2U_plus_ramified7 ->
+  c6_subfield_lattice_Qzeta7 ->
+  c3_real_cubic_binding_pair_orbit ->
+  apex7_ramified_covering_switch ->
+  two_adic_unit_to_even_shadow_2U ->
+  quadratic_Qsqrt_minus7_transverse_character ->
+  hinge_12_to_24_height_lift -> raw_mod14_residue_table ->
+  slogan_binding_units_covering_evens`.
+- **Next hook:** Formalize the packet theorem: C3/HYP-2909 forces the unit
+  skeleton when contacts survive; killed contacts enter HYP-3265/HYP-3300
+  off-unit/Morse chambers or HYP-3301 exactness/transfer kernels; and the
+  covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight
+  hinge.
+- **Pointers:** HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255,
+  HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, LTI-361, T1361,
+  OPEN-Q-108.
 
 ## LTT-244: Tiling/Half-Tiling Descent Tournament
 

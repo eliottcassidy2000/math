@@ -31977,3 +31977,48 @@ Next hook: instantiate HYP-3301 on actual packet rows from HYP-2963,
 HYP-2969, HYP-3253, and HYP-3265.  The first failure should name either an
 unspanned cocycle, a missing holonomy/endpoint/cusp sidecar, or the first real
 qdiv>14 zero-open kernel.
+## codex-2026-06-28 -- CRT/Galois sidecar audit -- HYP-3311
+
+Integrated the mac-mini S84 prompt into a proof-facing HYP-3311 packet,
+renumbered after fetch because incoming mainline claimed HYP-3260 and added
+HYP-3310 as the broader C6 residue-magnitude synthesis.  HYP-3311 is the exact
+sidecar audit complementing HYP-3310, and after the incoming HYP-3301 sheaf
+work it also serves as a three-coordinate overlap chart for first-obstruction
+exactness.  After incoming HYP-3400, it also instantiates the no-naked-quotient
+shadow-charge rule: the C3, quadratic, and height/flex coordinates must be
+preserved, transferred, or named as debt.  The exact census split is
+`U union 2U union {7}` for nonzero mod-14 classes:
+`U=(Z/14)^*={1,3,5,9,11,13}` is the binding unit skeleton, `2U` is the even
+covering shadow, and apex `7=(1 mod 2,0 mod 7)` is the ramified covering
+singleton.  The map `u -> 2u mod 14` is a bijection from units to even
+covering classes.
+
+The executable audit also makes the field guardrail explicit.  In
+`Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit
+`(1,13)->(3,11)->(5,9)`, while the `Q(sqrt(-7))` quadratic character is
+transverse: each binding pair contains one QR and one NQR.  So the proof
+packet must keep three coordinates visible: C3 unit skeleton, quadratic
+sidecar, and 2-adic covering height/flex ledger.
+
+Added `04-computation/lrc_census_crt_factorization_macmini_S84.py`, stored
+`05-knowledge/results/lrc_census_crt_factorization_macmini_S84.out`, created
+`05-knowledge/hypotheses/HYP-3311-lrc14-crt-galois-sidecar-audit.md`,
+updated the S84 reflection with the C6 subfield guardrail, and wired the
+navigation entries HYP-3311, result index, T1361, LTI-361, LTT-261,
+OPEN-Q-108, and the backlog.
+
+Tournament Analysis uses proof carriers rather than runners: `vertices=9`,
+`directed_3cycles=0`, `hamiltonian_path_count=1`, selected path
+`crt_packet_U_plus_2U_plus_ramified7 -> c6_subfield_lattice_Qzeta7 ->
+c3_real_cubic_binding_pair_orbit -> apex7_ramified_covering_switch ->
+two_adic_unit_to_even_shadow_2U -> quadratic_Qsqrt_minus7_transverse_character
+-> hinge_12_to_24_height_lift -> raw_mod14_residue_table ->
+slogan_binding_units_covering_evens`.
+
+Next hook: prove the labelled packet theorem.  Unit contacts surviving should
+be discharged by HYP-2909 plus C3 propagation; killed contacts should route
+through HYP-3265/HYP-3300 off-unit or Morse chambers or HYP-3301
+exactness/transfer kernels; and the covering layer `2U+{7}` should have only
+the AP/Goddyn-Wong `12->24` integer tight hinge.  HYP-3400 adds the scalar
+shadow test: no quotient may forget C3, `chi_7`, or height/flex charge without
+preservation, transfer, or named debt.

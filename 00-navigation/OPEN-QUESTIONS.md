@@ -25,6 +25,39 @@ HYP-3265, HYP-3259,
 HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250,
 HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909,
 THM-523, T1360, LTI-360, LTT-260, OPEN-Q-108.
+**OPEN-Q-108 HYP-3311 CRT/Galois sidecar audit addendum:**
+HYP-3311 complements the HYP-3310 C6 residue-magnitude frame by turning
+mac-mini S84 into an exact two-prime sidecar audit for LRC14, and gives
+HYP-3301 a three-coordinate chart on which first-obstruction exactness can
+be tested.  It also gives HYP-3400 a concrete no-naked-quotient packet:
+scalar shadows must preserve, transfer, or debt the C3, quadratic, and
+height/flex charges.
+The nonzero mod-14 classes split as `U union 2U union {7}` with
+`U=(Z/14)^*={1,3,5,9,11,13}`, even shadow `2U={2,4,6,8,10,12}`, and ramified
+apex `7`.  The map `u -> 2u mod 14` is a bijection from binding units to even
+covering classes, while the apex has CRT tag `(1 mod 2, 0 mod 7)` and belongs
+to the covering layer.
+
+Field-sidecar guardrail: inside `Q(zeta_7)`, `Gal=C6=C2 x C3`.  The C3
+quotient gives the real-cubic binding-pair orbit
+`(1,13)->(3,11)->(5,9)`, but the quadratic `Q(sqrt(-7))` character cuts
+transversely: every binding pair contains one QR and one NQR.  Therefore the
+C3 unit skeleton, the quadratic sidecar, and the 2-adic height/flex ledger are
+three different proof coordinates.
+
+Open task: prove the labelled packet theorem.  If all six unit contacts
+survive, HYP-2909 plus C3 propagation should force the unit skeleton.  If unit
+contacts are killed, HYP-3265/HYP-3300 should route the row to an off-unit
+covering/Morse chamber, strict open witness, `Phi14d` dilation equality, finite
+Toeplitz/Green/root-motion discharge, state-lift debt, or named residual.  If
+the covering layer stays boundary-tight, prove that `2U+{7}` has one
+height/flex dimension and only the AP/Goddyn-Wong `12->24` integer tight hinge.
+Equivalently, in HYP-3301 language, prove the first lost coordinate is exact,
+holonomy-repaired, boundary-positive, forbidden as an AP/GW kernel, or named
+as K33/H7 debt.
+-> HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253,
+HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTI-361, LTT-261,
+OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3257 unit equioscillation nullspace addendum:**
 HYP-3257 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.
