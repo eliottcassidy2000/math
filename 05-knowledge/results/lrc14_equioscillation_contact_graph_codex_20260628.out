@@ -1,0 +1,47 @@
+HYP-3265 LRC14 equioscillation contact graph
+status: exact structural scout, not an LRC14 proof
+
+units mod 14: (1, 3, 5, 9, 11, 13)
+antipodal unit pairs: ((1, 13), (3, 11), (5, 9))
+unit-pair -> binding complement-pair map: {(1, 13): (1, 13), (3, 11): (5, 9), (5, 9): (3, 11)}
+
+AP row: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  all six unit contacts touch 1/14: True
+  t=1/14 safety=1/14 binders=(1, 13) expected_pair=(1, 13) antipode=13/14
+  t=3/14 safety=1/14 binders=(5, 9) expected_pair=(5, 9) antipode=11/14
+  t=5/14 safety=1/14 binders=(3, 11) expected_pair=(3, 11) antipode=9/14
+  t=9/14 safety=1/14 binders=(3, 11) expected_pair=(3, 11) antipode=5/14
+  t=11/14 safety=1/14 binders=(5, 9) expected_pair=(5, 9) antipode=3/14
+  t=13/14 safety=1/14 binders=(1, 13) expected_pair=(1, 13) antipode=1/14
+
+GW row: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  all six unit contacts touch 1/14: True
+  t=1/14 safety=1/14 binders=(1, 13) expected_pair=(1, 13) antipode=13/14
+  t=3/14 safety=1/14 binders=(5, 9) expected_pair=(5, 9) antipode=11/14
+  t=5/14 safety=1/14 binders=(3, 11) expected_pair=(3, 11) antipode=9/14
+  t=9/14 safety=1/14 binders=(3, 11) expected_pair=(3, 11) antipode=5/14
+  t=11/14 safety=1/14 binders=(5, 9) expected_pair=(5, 9) antipode=3/14
+  t=13/14 safety=1/14 binders=(1, 13) expected_pair=(1, 13) antipode=1/14
+
+elementary case split at unit times:
+  if no speed is 0 mod 14, every unit a has f_S(a/14) >= 1/14
+  if some speed is 0 mod 14, every unit a is killed by that runner
+  tight means the six unit contacts are global maxima with no higher off-unit peak
+
+Tournament Analysis over proof carriers
+  pairwise observable: retained equioscillation proof payload minus destroyed sidecars
+  switch/gauge: orient toward higher weighted retained payload; ties use fewer destroyed coordinates
+  vertices=8
+  score_hist={-47: 1, 21: 1, 25: 1, 41: 1, 42: 2, 43: 1, 46: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path=unit_contact_matching -> antipodal_three_pair_quotient -> d7_index_degree_packet -> danger_nerve_boundary_holes -> covering_kill_switch -> kolmogorov_convex_hull -> bulk_equidistribution_glue -> raw_safety_scalar
+
+  unit_contact_matching: score=46 preserves=['antipodal_pair_index', 'case_split_power', 'compression_legality', 'unit_contact_exactness'] destroys=['bulk_core_gluing']
+  antipodal_three_pair_quotient: score=43 preserves=['antipodal_pair_index', 'case_split_power', 'compression_legality', 'danger_nerve_hole'] destroys=['covering_floor_route']
+  d7_index_degree_packet: score=42 preserves=['antipodal_pair_index', 'compression_legality', 'kolmogorov_local_min', 'unit_contact_exactness'] destroys=['bulk_core_gluing']
+  danger_nerve_boundary_holes: score=42 preserves=['bulk_core_gluing', 'case_split_power', 'compression_legality', 'danger_nerve_hole'] destroys=['antipodal_pair_index']
+  covering_kill_switch: score=41 preserves=['bulk_core_gluing', 'case_split_power', 'compression_legality', 'covering_floor_route'] destroys=['unit_contact_exactness']
+  kolmogorov_convex_hull: score=25 preserves=['compression_legality', 'kolmogorov_local_min', 'unit_contact_exactness'] destroys=['bulk_core_gluing', 'covering_floor_route']
+  bulk_equidistribution_glue: score=21 preserves=['bulk_core_gluing', 'compression_legality', 'covering_floor_route'] destroys=['antipodal_pair_index', 'unit_contact_exactness']
+  raw_safety_scalar: score=-47 preserves=[] destroys=['antipodal_pair_index', 'bulk_core_gluing', 'case_split_power', 'compression_legality', 'covering_floor_route', 'danger_nerve_hole', 'kolmogorov_local_min', 'unit_contact_exactness']

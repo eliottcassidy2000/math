@@ -118,6 +118,23 @@ HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223, HYP-3222,
 HYP-3220, HYP-3201, HYP-3128, HYP-3123, HYP-3108, THM-572, T1340, LTI-340,
 LTT-240, OPEN-Q-108.
 
+HYP-3265 contact-graph refinement: the AP/Goddyn-Wong six-touch picture is a
+smaller local carrier inside the HYP-3243 atlas.  Exact scout verifies the
+unit contacts `{1,3,5,9,11,13}/14`, antipodal pairs `(1,13),(3,11),(5,9)`,
+and complement-pair binders `{+a^{-1},-a^{-1}} mod 14`; the quotient contact
+map is `{1,13}->{1,13}`, `{3,11}->{5,9}`, `{5,9}->{3,11}`.  Open task:
+prove the contact-graph chamber classifier: surviving/global contact graph
+gives AP/GW equality core, surviving/non-global contact graph gives strict
+open row, killed contacts route to `Phi_{14d}` or covering-floor witnesses,
+and all remaining chambers discharge through finite Toeplitz/Green/root-motion
+or state-lift debt.  Read with HYP-3250's finite-tight-locus/uniform-margin
+evidence and HYP-3251/HYP-3252's guardrail that the index/Gauss-sum packet is
+ambient AP-saddle data, not an `S`-dependent proof by itself. -> HYP-3265,
+HYP-3252, HYP-3251, HYP-3250, HYP-3248, HYP-3246, HYP-3245, HYP-3243,
+HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3218,
+HYP-3214, HYP-3132, HYP-2928, HYP-2909, THM-523, THM-530, T1347, LTI-347,
+LTT-247, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3228 cyclotomic Delsarte shell-magic addendum:**
 HYP-3228 makes the requested magic-function object explicit at the k=8
 frontier.  The finite dual is

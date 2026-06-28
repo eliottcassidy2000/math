@@ -447,6 +447,7 @@ record what it destroys before asking it to prove anything.
 | LTI-336 | Green conductance / algebraic connectivity certificate | Positive-part covariance conductance graphs on the six inner sectors, graph Laplacian `L`, algebraic connectivity `lambda2`, Green kernel `L^+`, effective-resistance channels, Kirchhoff index, bottleneck unit-current profiles, negative covariance leakage sidecar | HYP-3236 executes the electrical side of HYP-3223 over the same `3432` anchored k=8 rows as HYP-3202/HYP-3205/HYP-3224.  Consecutive and doubled AP are the only all-bank maximizers of `lambda2` and total positive conductance and the only minimizers of Kirchhoff/mean/max/distance-layer Green resistance; primitive normal form leaves AP unique.  AP has `lambda2=0.192033074001`, `kirchhoff=108.654718079151`, and `maxR=9.713313375596`.  The HYP-3202 `11` non-AP arbitrary-exchange traps all show Green resistance excess, split into `3` Kirchhoff-excess and `8` max-resistance bottleneck primary discharges.  HYP-3214 supplies the harmonic sibling, the 7-sector Fejer/de Moivre positive-definite autocorrelation kernel, while the 14-clock pair-Pascal cap remains separate.  HYP-3231/HYP-3232/HYP-3216 add the scale-recursion compatibility test around the HYP-3230 cap-kernel address, HYP-3217 adds the cubic/subfield-lattice mode, HYP-3233 adds cyclotomic-factor grading, HYP-3234 adds signed-chart debt, and HYP-3235/HYP-3218 add the totally-real cap / Fejer proof-push: Green cuts, Thomson demands, Fiedler currents, and Green resolvents should remember the three-gap/Farey address, apex-half break, cubic Gaussian-period cosets, `Phi_7` factor, signed chart, and Fejer square margin, not only raw `lambda2`.  The positive-part conductance graph is deliberately lossy, so negative covariance leakage and odd Worpitzky/Hermite-Biehler sidecars remain part of the packet. | HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3218, HYP-3217, HYP-3216, HYP-3214, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, T1336, LTT-236, LTI-336, OPEN-Q-108 | Prove a Rayleigh/Thomson/Poincare conductance extremality, compare Green slack to AP-support/Toeplitz/distance-layer/Fejer-autocorrelation slack on every row, and emit Schur-complement reduction words for the `11` traps; reject raw positive association or raw conductance scalars unless leakage and odd sidecars are retained or discharged. |
 <<| LTI-338 | Even/odd positive/negative duality bridge | Crossed proof packet with even-positive magnitude certificates, odd-negative sign/core sidecars, `D_7` sign-isotypic data, Vitali bulk/core transfer, Hermite-Biehler interlacing, saddle-index parity, dilation-witness core data, negative Perron parity, and conditional-entropy compression audit | HYP-3238 executes the bridge that connects HYP-3236 Green conductance to HYP-3220/HYP-3219/HYP-3239/HYP-3241/HYP-3240/HYP-3237 sign/core work.  HYP-3220 makes the duality literal: de Moivre power sums `-1,5,-4,13,-16,38,-57,117` have sign `(-1)^k` from the negative Perron period `-2cos(pi/7)`, so even/odd and positive/negative are one complement/parity operator.  HYP-3239/HYP-3241 identify the odd sign sidecar as the `D_7` sign-isotypic / free-`Z2` Borsuk-Ulam / saddle-index packet for n=14, with Brouwer/SOS as the fixed-reflection family side; HYP-3240 adds the dilation-promoted `Phi_{14d}` witness guardrail.  Exact scout over `3432` anchored k=8 rows: AP has `q0=481/1470`, `q3=26/245`, `q6=1/49`, `q0+q6=73/210`, `L_y=2633/7350`, `lambda2=0.192033074001`, and is uniquely primitive-tight for `L_y`, `q0+q6`, and `lambda2`.  False terminals: `18` primitive non-AP rows have zero negative covariance leakage, `2754` primitive connected positive-graph non-AP rows exist, `2879` primitive rows have positive `q3` debt with `0` exchange-margin violations, and the `11` non-AP traps split into `8` negative-leakage-plus-odd-debt and `3` odd-debt-without-negative-leakage. | HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153, HYP-3138, HYP-3004, HYP-2647, HYP-2637, THM-429, THM-426, T1338, LTT-238, LTI-338, OPEN-Q-108 | Prove the `q3` exchange-rate inequality symbolically from HYP-3204 or the shell Delsarte dual; attach HYP-3222 HB interlacing to the three zero-negative-leakage traps with odd debt; compare HYP-3220 negative Perron sign, HYP-3241 saddle-index parity, and HYP-3240 dilation-witness status with HYP-3236 Fiedler/current data. |
 | LTI-340 | Topology/geometry/graph proof-route atlas | Circle endpoint arrangements, oriented topes/cocircuits, Cech safe-component nerves, `D_7` index packets, `Phi_14/Phi_{14d}` witness strata, Green conductance graphs, normal-fan/Toeplitz/Fejer faces, Lee-Yang roots, ear payloads, state-lift obligations | HYP-3243 turns visual proof routes into typed carriers.  After HYP-3240/HYP-3241 and HYP-3242/S78, the witness construction side is mostly organized: AP/GW share `Phi_14` witnesses, dilations use `Phi_{14d}` witnesses, and the cap has the Cech invariant `chi_meas(danger-cover nerve)`.  The remaining visual frontier is tight-locus finiteness plus bulk equidistribution plus legal bulk/core gluing.  The scout ranks `12` carriers with no directed 3-cycles and Hamiltonian path led by `oriented_matroid_topes_cocircuits -> circle_endpoint_arrangement -> cech_nerve_safe_components`. | HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3220, HYP-3201, HYP-3128, HYP-3123, HYP-3108, THM-572, T1340, LTT-240, LTI-340, OPEN-Q-108 | Prove the finite chamber schema: every primitive row has an open safe tope, AP/GW `Phi_14` equality, dilation `Phi_{14d}` equality, finite Toeplitz/Green/root-motion chamber discharge, state-lift `H=7` contradiction, or named residual debt. |
+| LTI-355 | Equioscillation contact-graph case split | Unit contact times `(Z/14)^*/14`, antipodal contact pairs, binding complement pairs `{+a^{-1},-a^{-1}}`, three-slot quotient, danger-cover holes, Kolmogorov active-gradient sidecar, covering kill switch | HYP-3265 turns the AP/Goddyn-Wong six-touch safety-function picture into an exact contact graph.  The six unit contacts split into three antipodal unit pairs and three binding complement-pair slots; 14-free rows are safe at every unit, rows with a `0 mod 14` speed kill the unit contacts and must move to an off-unit covering/floor route, and tight rows are those where the six contacts remain global with no higher off-unit peak. | HYP-3265, HYP-3259, HYP-3258, HYP-3256, HYP-3255, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3248, HYP-3246, HYP-3245, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3218, HYP-3214, HYP-3132, HYP-2928, HYP-2909, THM-523, THM-530, T1355, LTT-255, LTI-355, OPEN-Q-108 | Formalize the finite chamber theorem classifying rows by surviving global contact graph, strict off-unit peak, killed contacts with promoted `Phi_{14d}`/covering witness, or named residual debt; retain the graph/topology/geometry sidecars before scalarizing the safety function. |
 
 ## Cross-Cutting Guardrails
 
@@ -5150,6 +5151,73 @@ Anchors: HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236,
 HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3228, HYP-3227,
 HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3220, HYP-3201, HYP-3128,
 HYP-3123, HYP-3108, THM-572, LTI-340, LTT-240, T1340, OPEN-Q-108.
+
+## LTI-355: Equioscillation Contact-Graph Case Split
+
+Created by codex-2026-06-28 as the HYP-3265 detail-file addendum to the
+Chebyshev/equioscillation frame.
+
+Objects:
+
+```text
+unit contacts a/14 for a in (Z/14)*
+antipodal pairs under t -> 1-t
+binding complement pairs {+a^{-1}, -a^{-1}} mod 14
+danger-cover boundary holes
+covering kill-switch speeds s == 0 mod 14
+Kolmogorov active-gradient obligations
+```
+
+Technique:
+
+```text
+classify the unit-contact graph first
+then attach the sidecar that says whether it is global, opened, or killed
+```
+
+Preserves: unit witnesses, antipodal index, complement-pair binders, the
+THM-523 q=14 proof fragment, and the boundary-hole/topological reading of the
+six contacts.
+
+Destroys if scalarized: endpoint owners, off-unit peak structure, covering
+floor route, and the bulk/core gluing coordinate.
+
+Post-rebase guardrail: HYP-3250 makes the finite tight-locus plus uniform
+margin target more plausible, while HYP-3251/HYP-3252 say the
+Borsuk-Ulam/Gauss-sum index is ambient AP-saddle data and must be joined to an
+`S`-dependent floor or chamber discharge.
+
+Exact scout fingerprint:
+
+```text
+vertices = 8
+score_hist = {-47:1,21:1,25:1,41:1,42:2,43:1,46:1}
+directed_3cycles = 0
+scc_sizes = [1,1,1,1,1,1,1,1]
+hamiltonian_path =
+  unit_contact_matching
+  -> antipodal_three_pair_quotient
+  -> d7_index_degree_packet
+  -> danger_nerve_boundary_holes
+  -> covering_kill_switch
+  -> kolmogorov_convex_hull
+  -> bulk_equidistribution_glue
+  -> raw_safety_scalar
+```
+
+Next hook: prove the chamber classifier:
+
+```text
+surviving contact graph + global unit maximum -> AP/GW equality core
+surviving contact graph + higher off-unit peak -> strict open row
+killed unit contacts -> Phi_{14d} / covering-floor witness
+leftover chamber -> finite Toeplitz/Green/root-motion/state-lift debt
+```
+
+Pointers: HYP-3265, HYP-3259, HYP-3258, HYP-3256, HYP-3255, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3248, HYP-3246, HYP-3245, HYP-3243, HYP-3242,
+HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3218, HYP-3214,
+HYP-3132, HYP-2928, HYP-2909, THM-523, THM-530, T1355, LTT-255,
+OPEN-Q-108.
 
 ## LTI-344: Lift/Compress Span for Tiling and Half-Tiling Recursions
 

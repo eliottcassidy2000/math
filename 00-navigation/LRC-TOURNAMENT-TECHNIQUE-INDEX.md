@@ -242,6 +242,12 @@ obligations, and proof-carrier interfaces.
   cocircuits, Cech components, witness strata, conductance cuts, normal-fan
   chambers, root-motion events, ear payloads, and state-lift obligations the
   vertices.  Do not use runners or raw scalar pictures as terminal vertices.
+- Need to use the AP six-touch equioscillation picture without losing its
+  topology:
+  use LTT-255 after LTT-240/LTT-209/LTT-238 and make unit contacts,
+  antipodal pairs, complement-pair binders, danger-cover boundary holes,
+  covering kill-switches, and proof obligations the vertices.  Do not reduce
+  the picture to raw `M(S)` or a runner-level graph.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -7035,6 +7041,51 @@ quotient_legality_status
   HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3228, HYP-3227,
   HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3220, HYP-3201, HYP-3128,
   HYP-3123, HYP-3108, THM-572, LTI-340, LTT-240, T1340, OPEN-Q-108.
+
+## LTT-255: Equioscillation Contact-Graph Tournament
+
+- **Move:** Treat the six AP unit contacts as a proof-carrier graph.  Vertices
+  in the Tournament Analysis are `unit_contact_matching`,
+  `antipodal_three_pair_quotient`, `d7_index_degree_packet`,
+  `danger_nerve_boundary_holes`, `kolmogorov_convex_hull`,
+  `covering_kill_switch`, `bulk_equidistribution_glue`, and
+  `raw_safety_scalar`.
+- **LRC use:** HYP-3265 refines HYP-3246/HYP-3248 and HYP-3243 by making the
+  AP safety-function visual load-bearing.  AP and Goddyn-Wong share the six
+  contacts `{1,3,5,9,11,13}/14` and the same binding complement pairs.  The
+  contact graph proves the 14-free branch at the unit times and identifies
+  exactly when covering rows destroy that branch.
+- **Preserves:** unit witnesses, antipodal pair index, complement-pair
+  binders, danger-cover boundary holes, q=14 THM-523 case split, and the
+  local Chebyshev/Kolmogorov active-set obligation.
+- **Forgets / guardrail:** raw `M(S)`, raw runner graphs, or raw contact
+  counts forget endpoint owners, off-unit peaks, covering-floor sidecars, and
+  bulk/core gluing.
+- **Post-rebase guardrail:** HYP-3250 supports the finite tight-locus plus
+  uniform-margin chamber target, while HYP-3251/HYP-3252 say the
+  index/Gauss-sum packet describes the AP saddle and does not replace the
+  `S`-dependent covering-floor, decorrelation-margin, or finite-discharge
+  work.
+- **Pairwise observable:** retained equioscillation proof payload minus
+  destroyed sidecars.
+- **Switch/gauge:** orient toward higher weighted retained payload; ties use
+  fewer destroyed sidecars and then the more finite/formal carrier.
+- **Exact fingerprint:** `vertices=8`,
+  `score_hist={-47:1,21:1,25:1,41:1,42:2,43:1,46:1}`,
+  `directed_3cycles=0`, singleton SCCs, and Hamiltonian path
+  `unit_contact_matching -> antipodal_three_pair_quotient ->
+  d7_index_degree_packet -> danger_nerve_boundary_holes ->
+  covering_kill_switch -> kolmogorov_convex_hull ->
+  bulk_equidistribution_glue -> raw_safety_scalar`.
+- **Next hook:** Formalize the contact-graph chamber theorem: surviving and
+  global contact graph gives AP/GW equality core; surviving but non-global
+  contact graph gives a strict open row; killed contacts route to promoted
+  `Phi_{14d}` or covering-floor witnesses; any leftover chamber must discharge
+  by finite Toeplitz/Green/root-motion/state-lift debt.
+- **Pointers:** HYP-3265, HYP-3259, HYP-3258, HYP-3256, HYP-3255, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3248, HYP-3246, HYP-3245, HYP-3243, HYP-3242,
+  HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3218, HYP-3214,
+  HYP-3132, HYP-2928, HYP-2909, THM-523, THM-530, LTI-355, T1355,
+  OPEN-Q-108.
 
 ## LTT-244: Tiling/Half-Tiling Descent Tournament
 

@@ -98,6 +98,57 @@ finite + isolated; everything else (incl the lcm-family) is bounded away from 1/
 finiteness (the census = AP/GW only, the rigidity), (b) the uniform margin delta (no untested sequence -> 1/14),
 (c) construction/index. NOT a proof; the frontier STRUCTURE is now sharp. (Converges kps S255: LRC tight =
 min-max equioscillation on the apex unit group.)
+## codex-2026-06-28 -- HYP-3265 equioscillation contact graph detail-file addendum
+
+Owner: think about topology/geometry/graphs for LRC structural routes, with the
+AP safety function touching `1/14` at exactly six points in three antipodal
+pairs.
+
+Rebased over kps-S255's Chebyshev/equioscillation frame, then filled the
+reserved HYP-3265 detail file and added executable scout
+`lrc14_equioscillation_contact_graph_codex_20260628.py`.  Exact check:
+AP `{1,...,13}` and Goddyn-Wong `{1,...,11,13,24}` share the six unit
+witnesses `{1,3,5,9,11,13}/14`; binders are `{+a^{-1},-a^{-1}} mod 14`, with
+quotient contact map `{1,13}->{1,13}`, `{3,11}->{5,9}`, `{5,9}->{3,11}`.
+
+Main synthesis: the six-touch visual is a contact graph.  Topology reads it as
+six zero-measure danger-cover holes, geometry reads it as active max-min
+constraints, and graph theory reads it as three `K_{1,2}` stars or a perfect
+matching after antipodal quotient.  The elementary split is explicit:
+14-free rows are safe at all unit times, while a `0 mod 14` speed kills all
+unit contacts and forces an off-unit covering/floor route.  Tournament
+Analysis uses proof carriers as vertices (`8` vertices, no directed 3-cycles,
+singleton SCCs), led by `unit_contact_matching -> antipodal_three_pair_quotient
+-> d7_index_degree_packet -> danger_nerve_boundary_holes`.
+
+Next pull: formalize the contact-graph chamber theorem: surviving/global
+contact graph gives AP/GW equality core, surviving/non-global contact graph
+gives strict open, killed contacts route to `Phi_{14d}`/covering-floor
+witnesses, and residual chambers discharge through finite
+Toeplitz/Green/root-motion or state-lift debt.
+
+Post-rebase integration: incoming HYP-3250 supports exactly this
+finite-tight-locus plus uniform-margin chamber shape, while HYP-3251/HYP-3252
+warn that the Borsuk-Ulam/Gauss-sum index is ambient saddle data and that the
+floor remains the `S`-dependent proof content.  So the contact graph can
+organize the equality core, but killed or non-global contacts still need the
+covering floor, decorrelation margin, or finite discharge sidecar.
+
+Final rebase integration: mac-mini S81/S82 tighten the unit/dilation
+construction and bounded-margin branches; S82 reframes resonant multiples of
+`14` as off-grid bulk after an on-grid core hit; and kps Thread A/B says
+Q(sqrt(-7)) organizes the residue layer while the tight-vs-loose census is
+magnitude-level.  HYP-3265 therefore remains a finite contact-graph classifier
+for the equality branch plus a routing table to floor/margin sidecars.
+Incoming S83 adds the hidden-`C_3` refinement: the three binding-pair slots are
+one real-cyclotomic Galois orbit, so the proof route can try one local
+binding-pair lemma plus equivariant transport around the contact graph.
+HYP-3259 adds the differential version: unit/binding coordinates are rigid in
+the tight real manifold while covering coordinates flex.
+
+-> HYP-3265, HYP-3259, HYP-3258, HYP-3256, HYP-3255, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3248, HYP-3246, HYP-3245, HYP-3243, HYP-3242, HYP-3241,
+HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3218, HYP-3214, HYP-3132,
+HYP-2928, HYP-2909, THM-523, THM-530, T1355, LTI-355, LTT-255, OPEN-Q-108.
 
 ## kind-pasteur-2026-06-27-S255 -- CHEBYSHEV/EQUIOSCILLATION unifying frame: LRC tight = min-max equioscillation on the apex unit group (Z/2q)*
 Owner: more unifying frames; keep pushing to a proof; capture the AP-equioscillation observation. HYP-3246/3247/3248.
