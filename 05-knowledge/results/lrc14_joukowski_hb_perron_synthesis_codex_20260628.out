@@ -1,0 +1,86 @@
+HYP-3222 Joukowski/Hermite-Biehler + Perron-Frobenius synthesis
+========================================================================
+status=exact local certificates and quotient guardrails; not an LRC14 proof
+
+HERMITE-BIEHLER LEG CERTIFICATE
+========================================================================
+even raw fold: v^2 - 5v + 4 has roots 1,4
+negative-axis even leg: E(x)=x^2+5x+4 has roots -4,-1
+odd Eulerian/Worpitzky leg: O(x)=A_3(x)=x^2+4x+1
+odd roots=(-2-sqrt(3), -2+sqrt(3)) ~= (-3.732050807569, -0.267949192431)
+strict_interlacing: -4 < -2-sqrt(3) < -1 < -2+sqrt(3)
+Wronskian orientation:
+  W=E*O'-E'*O=x^2+6x+11=(x+3)^2+2 > 0 on R
+readout=the minimal k=8 even biquadratic leg and odd A_3 leg form a strict HB pair
+guardrail=this is a leg-level certificate; full miss-PGF still owes the self-inversive defect
+
+JOUKOWSKI / DE MOIVRE CERTIFICATE
+========================================================================
+cyclotomic real-axis polynomial: c(x)=x^3+x^2-2x-1
+de_moivre_roots_2cos(2pi*j/7)=-1.801937735805, -0.445041867913, +1.246979603717
+max_float_residual_in_cubic=8.882e-16
+readout=the Joukowski image of the 7th-root ideal is the real cubic axis
+guardrail=off-circle Im(w) and q_t R^t - q_{6-t} R^{6-t} remain named sidecars
+
+PERRON-FROBENIUS DISTANCE-QUOTIENT CERTIFICATE
+========================================================================
+input=HYP-3202 consecutive distance-layer sums D1,D2,D3
+D1=308509/1080450 = +0.285537507520
+D2=547577/2160900 = +0.253402286085
+D3=225577/1234800 = +0.182683025591
+Sigma_kappa2=6237419/8643600 = +0.721622819196
+
+ideal_C6_layer_weights:
+  w1=D1/6=308509/6482700 = +0.047589584587
+  w2=D2/6=547577/12965400 = +0.042233714347
+  w3=D3/3=225577/3704400 = +0.060894341864
+ideal_nonnegative_circulant_eigenvalues:
+  lambda_0=6237419/25930800 = +0.240540939732
+  lambda_1=-1440157/25930800 = -0.055538471624
+  lambda_2=-750151/25930800 = -0.028928957070
+  lambda_3=-1856803/25930800 = -0.071606082342
+  lambda_4=-750151/25930800 = -0.028928957070
+  lambda_5=-1440157/25930800 = -0.055538471624
+ones_Rayleigh=(1^T C 1)/6=6237419/25930800 = +0.240540939732
+pf_alignment_defect=lambda_max-ones_Rayleigh=0 = +0.000000000000
+row_sum_variance=0 on the quotient
+readout=after distance-layer quotienting, all-ones is exactly the Perron vector
+guardrail=the actual empty-sector covariance matrix has boundary/apex deviation; this quotient cannot replace that sidecar
+
+AFM SIGN-CONTRAST TOY
+signed_first_row=[0,-w1,+w2,-w3,+w2,-w1]
+  signed_lambda_0=-1856803/25930800 = -0.071606082342
+  signed_lambda_1=-750151/25930800 = -0.028928957070
+  signed_lambda_2=-1440157/25930800 = -0.055538471624
+  signed_lambda_3=6237419/25930800 = +0.240540939732
+  signed_lambda_4=-1440157/25930800 = -0.055538471624
+  signed_lambda_5=-750151/25930800 = -0.028928957070
+signed_top_mode=k3
+signed_ones_mode_lambda_0=-1856803/25930800 = -0.071606082342
+readout=coherence/sign pattern, not raw layer magnitudes alone, decides whether ones is Perron
+
+COMPRESSION / INFORMATION-THEORY GUARDRAILS
+========================================================================
+radius_only: preserves=q0=q6*R^6; destroys=root angles, Im(w), self-inversive defect; verdict=illegal unless the Lee-Yang circle defect is zero or retained
+total_covariance_only: preserves=Sigma_kappa2; destroys=D1/D2/D3 layer profile and Perron alignment; verdict=too lossy for the HYP-3202 proof route
+commutative_pair_mass: preserves=Pascal/binomial cap; destroys=odd Worpitzky associator and bracket/order sidecar; verdict=captures cap but not dip
+positive_association: preserves=nonnegative pair covariances; destroys=location of covariance mass and finite trap identity; verdict=FKG alone misses 19 primitive nonnegative decoys
+hb_leg_interlacing: preserves=E/O real-rooted interlacing; destroys=full miss-PGF self-inversive defect; verdict=promising only with Joukowski defect sidecar
+
+TOURNAMENT ANALYSIS
+========================================================================
+vertices=proof certificates/obligations, not runners, raw arcs, or sectors
+pairwise_observable=which carrier preserves more LRC14 proof payload toward the k=8 node
+switch/gauge=A beats B iff route_score(A)>route_score(B); ties lexical
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1,1,1,1,1]
+hamiltonian_path_count=1
+priority_path=hermite_biehler_interlacing_certificate -> perron_alignment_certificate -> toeplitz_caratheodory_margin -> distance_layer_pf_quotient -> self_inversive_defect_sidecar -> random_current_coupling_order -> law_defect_entropy_meter -> raw_total_covariance_scalar -> plain_positive_association -> row_entropy_scalar
+challenged_assumption=the best vertices are not runners; they are certificates plus sidecars
+
+NEXT PROOF OBLIGATIONS
+========================================================================
+1. Lift the exact E/O interlacing certificate through the Joukowski map while measuring self-inversive defect.
+2. Replace the ideal C6 PF quotient by a boundary-aware covariance matrix inequality.
+3. Join Toeplitz lambda_min, Perron alignment, distance layers, and random-current order into one spectral packet.

@@ -192,6 +192,12 @@ obligations, and proof-carrier interfaces.
   target functions, residual entropy values, bracket/support/context/action
   fibers, root-radius variance, and cumulant sidecars the vertices.  The
   quotient is legal only at zero residual entropy or with retained sidecar debt.
+- Need to glue Perron, Toeplitz, and Hermite-Biehler without erasing defects:
+  use LTT-206 after LTT-202/LTT-201/LTT-178/LTT-177/LTT-175 and make proof
+  certificates the vertices: HB leg interlacing, Perron alignment, Toeplitz
+  margin, distance-layer quotient, self-inversive defect, random-current
+  order, and law-defect meter.  Do not use raw covariance, positive
+  association, or row entropy as terminal vertices.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -6253,3 +6259,45 @@ quotient_legality_status
 - **Pointers:** HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3210, HYP-3201, HYP-3200,
   HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3138,
   HYP-3132, HYP-3117, HYP-3116, LTI-305, LTT-205, T1305, OPEN-Q-108.
+
+## LTT-206: Perron / Hermite-Biehler Spectral Packet Tournament
+
+- **Move:** Make proof certificates and their retained defects the tournament
+  vertices: Hermite-Biehler interlacing, Perron alignment, Toeplitz
+  Caratheodory margin, distance-layer PF quotient, self-inversive defect,
+  random-current coupling order, law-defect entropy meter, raw covariance,
+  positive association, and row entropy.
+- **LRC use:** HYP-3222 merges the S73c Perron/Hermite-Biehler port with
+  HYP-3202's layer quotient and S31al's Toeplitz route, now read beside
+  HYP-3212/HYP-3213 Chebyshev-cyclotomic arithmetic, HYP-3221's apex-7
+  obstruction, HYP-3205's spectral-dictionary compatibility layer, and
+  HYP-3204's ordered-tail exchange split.  The exact HB leg certificate is
+  `E=x^2+5x+4`, `O=x^2+4x+1`, strict interlacing, and
+  Wronskian `(x+3)^2+2>0`.  The exact PF quotient certificate is
+  `lambda0=(1^T C1)/6=6237419/25930800=lambda_max` on the ideal nonnegative
+  C6 distance-layer quotient.
+- **Preserves:** route-level proof payload, HB interlacing orientation,
+  Joukowski/self-inversive defect status, Perron alignment of the all-ones
+  mode, Toeplitz margin, distance-layer values, and law-defect guardrails.
+- **Forgets / guardrail:** raw covariance forgets layer and Perron structure;
+  positive association forgets where covariance mass sits; HB roots alone
+  forget the full miss-PGF self-inversive defect; row entropy is not the
+  extremal theorem.
+- **Tournament readout:** HYP-3222 reports a transitive tournament with
+  score histogram `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}`, no directed
+  3-cycles, one Hamiltonian path, and priority path
+  `hermite_biehler_interlacing_certificate -> perron_alignment_certificate ->
+  toeplitz_caratheodory_margin -> distance_layer_pf_quotient ->
+  self_inversive_defect_sidecar -> random_current_coupling_order ->
+  law_defect_entropy_meter -> raw_total_covariance_scalar ->
+  plain_positive_association -> row_entropy_scalar`.
+- **Next hook:** Lift the exact `E/O` interlacing through Joukowski with
+  self-inversive defect measured; replace the ideal PF quotient by a
+  boundary-aware covariance inequality; run Toeplitz `lambda_min`, Perron
+  alignment, distance layers, spectral-dictionary compatibility, ordered-tail
+  exchange, and random-current order together on the k=8 bank.
+- **Pointers:** HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210,
+  HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
+  HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
+  HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, THM-577,
+  LTI-306, LTT-206, T1306, OPEN-Q-108.

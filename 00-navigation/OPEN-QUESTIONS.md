@@ -1,5 +1,32 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3222 Joukowski-Hermite-Biehler / Perron-Frobenius addendum:**
+HYP-3222 turns the incoming Perron, Toeplitz, Joukowski, and Hermite-Biehler
+ideas into two exact local certificates.  The HB leg certificate is
+`E(x)=x^2+5x+4` with roots `-4,-1` and `O(x)=A_3(x)=x^2+4x+1` with roots
+`-2 +/- sqrt(3)`; they strictly interlace and `E O'-E' O=(x+3)^2+2>0`.
+The PF quotient certificate uses HYP-3202's consecutive layer sums
+`D1,D2,D3` to build an ideal nonnegative C6 quotient with
+`lambda0=(1^T C1)/6=6237419/25930800=lambda_max`.
+It should be read together with HYP-3212/HYP-3213's Chebyshev and
+`Q(cos(2pi/7))` arithmetic frame, HYP-3221's warning that config-blind
+algebraic certificates meet the apex-7 obstruction, and HYP-3204's
+ordered-tail exchange-rate target for the `L_y` side.  HYP-3205 adds the
+compatibility warning that Perron alignment is a diagnostic coordinate inside
+the AP-tight spectral dictionary, not the whole proof.
+
+Open task: lift the HB interlacing through the Joukowski map while measuring
+the self-inversive/off-circle defect, and replace the ideal C6 Perron quotient
+by a boundary-aware covariance matrix inequality.  Run Toeplitz
+`lambda_min(T)`, Perron alignment, distance-layer dominance, random-current
+order, and HYP-3201 residual-defect fields together; do not terminally
+compress to raw covariance, positive association, radius, or row entropy. ->
+HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205,
+HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161,
+HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147,
+HYP-3142, HYP-3139, HYP-3132, THM-577, T1306, LTI-306, LTT-206,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3153 Lee-Yang/Worpitzky/quartic packet addendum:**
 HYP-3153 combines HYP-3151's function-compression legality packet with
 HYP-3152's Lee-Yang radius web.  Exact scout output verifies `q0=q6*R^6`,

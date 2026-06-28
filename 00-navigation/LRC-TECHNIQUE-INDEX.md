@@ -93,6 +93,7 @@ Worpitzky function-compression resolvent bridge / target function id / fiber con
 function-compression legality / unordered-safe functions / ordered sidecars / degree-4 resolvent ceiling / Abel-Ruffini debt
 law-defect entropy compression / law quotient / target function / residual entropy bits / typed sidecar / monoid-action and root-radius defect
 covariance Laplacian / Monge sector kernel / associator triple-cocycle / odd-ear Worpitzky boundary
+Joukowski-Hermite-Biehler and Perron packet / interlacing leg certificate / Perron alignment / Toeplitz margin / self-inversive defect
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -431,6 +432,7 @@ record what it destroys before asking it to prove anything.
 | LTI-303 | Polarized cyclotomic support / orbit-aware compression | AP residual support functional, seventh-cyclotomic residual direction, dilation/mirror/two-block trap sidecars, covariance compression Lyapunov | HYP-3203 tests two new k=8 proof moves after HYP-3162/HYP-3163/HYP-3200/HYP-3201/HYP-3202.  Raw minimum cyclotomic/uniform residual is not the extremal principle: AP/consec is rank `19` for minimum nontrivial cyclotomic energy.  The useful root-locus inequality is directional: `<q(E)-1/7,q_AP-1/7> <= ||q_AP-1/7||^2`, maximized exactly by AP and its doubled dilation over all `3432` bounded anchored k=8 rows.  Naive left-compression is also false, with `19` local traps and `919` greedy stuck states, so compression must be orbit-aware and retain dilation/mirror/two-block trap sidecars. | HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3154, HYP-3153, HYP-3161, HYP-3160, HYP-3152, HYP-3150, HYP-3138, HYP-3132, HYP-3108, T1303, LTT-203, LTI-303, OPEN-Q-108 | Try to prove the AP support inequality via signed SPEC, moment cones, or Delsarte/MacWilliams support certificates; separately classify the `19` local compression traps and route them through named orbit sidecars before using any compression lemma. |
 | LTI-304 | k=8 ordered-tail exchange verifier | Upper empty-sector tails, stop-loss guardrail, bimodality `q0+q6`, central mass `q3`, exchange-rate inequality, local-compression trap count | HYP-3204/codex-2026-06-28 follows HYP-3210/HYP-3203/HYP-3202/HYP-3200 over the same exact anchored k=8 bank and finds a sharper theorem-facing split.  Full convex/stop-loss dominance is false (`3429` primitive rows beat consec somewhere; no primitive row dominates it in all stop-loss coordinates).  The upper ordered-tail barrier survives: `0` primitive beaters for `q0`, `q5`, `q6`, `tail_ge_4`, `tail_ge_5`, `tail_ge_6`, `stop_ge_3`, `stop_ge_4`, `stop_ge_5`, `bimod=q0+q6`, `bimod_plus_q3`, and `L_y`.  The live lemma is the central exchange-rate inequality `(q3-q3_consec)_+ <= (q0+q6)_consec-(q0+q6)`, with `0` exact violations and worst ratio `12882/17161`; it implies `q0+q6+q3` and hence `L_y` extremality in primitive normal form.  Guardrails: `tail_ge_3` and raw `q3` have many beaters, and greedy coordinate compression has hundreds of local maxima. | HYP-3204, HYP-3210, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, HYP-3122, THM-577, T1304, LTT-204, LTI-304, OPEN-Q-108 | Prove the primitive-normal-form exchange-rate lemma, then join it to a `q0+q6` bimodality atom from HYP-3202 distance-layer covariance or HYP-3200 ferromagnetic/reflection-fold machinery, with HYP-3210 carrying the odd Worpitzky/Hermite-Biehler interlacing sidecar.  Do not use full convex order, `tail_ge_3`, raw `q3`, entropy, or naive one-coordinate exchange as terminal proof routes. |
 | LTI-305 | k=8 spectral dictionary compatibility | Certificate vector, AP-tight face intersection, Toeplitz moment margin, AP support hyperplane, covariance distance layers, trap-sheaf discharge | HYP-3205/codex-2026-06-28 merges the current k=8 proof languages.  Exact bounded-bank evidence says AP/consec and doubled AP are the only simultaneous maximizers across `q0`, `L_y`, `Sigma kappa_2`, `D1,D2,D3`, AP support, and Toeplitz `lambda_min`; primitive normal form leaves AP unique.  The closest non-AP decoy `(0,2,3,4,5,6,7,8)` has nonzero deficits in every measured coordinate.  Perron alignment is only diagnostic and raw cyclotomic norm is false as a terminal extremal principle. | HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3210, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3138, HYP-3132, HYP-3117, HYP-3116, T1305, LTT-205, LTI-305, OPEN-Q-108 | Prove a certificate-Helly/separation lemma for the AP-tight dictionary intersection, then discharge exchange and compression traps by the first failed layer/support/Toeplitz coordinate; use the Joukowski/Hermite-Biehler bridge only with sidecars intact. |
+| LTI-306 | Joukowski-Hermite-Biehler / Perron-Frobenius packet | Hermite-Biehler even/odd legs, Joukowski self-inversive defect, Perron alignment of the covariance matrix, distance-layer quotient, Toeplitz margin, random-current order | HYP-3222/codex-2026-06-28 merges S73c Perron/HB, S31al Toeplitz/Caratheodory, HYP-3202 layer/trap evidence, and HYP-3201 law-defect compression, now read beside HYP-3212/HYP-3213 Chebyshev-cyclotomic arithmetic, HYP-3221 apex-7 obstruction, HYP-3205 spectral-dictionary compatibility, and HYP-3204 ordered-tail exchange.  The exact local HB certificate is `E=x^2+5x+4`, `O=x^2+4x+1`, strict interlacing `-4 < -2-sqrt(3) < -1 < -2+sqrt(3)`, and Wronskian `(x+3)^2+2>0`.  The exact PF quotient certificate uses HYP-3202 layer sums to build a nonnegative C6 quotient with `lambda0=(1^T C1)/6=6237419/25930800=lambda_max`, while an AFM sign toy moves the top mode to `k=3`. | HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, THM-577, T1306, LTT-206, LTI-306, OPEN-Q-108 | Lift the exact HB interlacing through Joukowski with the self-inversive defect retained; replace the ideal C6 Perron quotient by a boundary-aware covariance inequality; join Toeplitz `lambda_min`, Perron alignment, distance-layer dominance, spectral-dictionary compatibility, ordered-tail exchange, and random-current order into one packet. |
 
 ## Cross-Cutting Guardrails
 
@@ -4210,3 +4212,73 @@ Pointers: HYP-3201, HYP-3200, HYP-3162, HYP-3199, HYP-3161, HYP-3160, HYP-3154, 
 HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3146, HYP-3142, HYP-3140,
 HYP-3132, HYP-3122, HYP-3109, HYP-3092, THM-577, LTI-301, LTT-201, T1301,
 OPEN-Q-108.
+
+## LTI-306: Joukowski-Hermite-Biehler / Perron-Frobenius Packet
+
+Used by codex-2026-06-28 for HYP-3222/T1306.  This technique fuses the two
+current spectral readings of the k=8 node:
+
+```text
+even route = Perron alignment of the empty-sector covariance matrix
+odd route  = Hermite-Biehler interlacing after Joukowski transport
+```
+
+Exact local HB certificate:
+
+```text
+E(x)=x^2+5x+4, roots -4,-1
+O(x)=A_3(x)=x^2+4x+1, roots -2 +/- sqrt(3)
+-4 < -2-sqrt(3) < -1 < -2+sqrt(3)
+E O' - E' O = (x+3)^2+2 > 0
+```
+
+Exact local PF quotient certificate:
+
+```text
+D1=308509/1080450
+D2=547577/2160900
+D3=225577/1234800
+ideal C6 weights: w1=D1/6, w2=D2/6, w3=D3/3
+lambda0=(1^T C 1)/6=6237419/25930800=lambda_max
+pf_alignment_defect=0
+```
+
+Preserves: even/odd leg identities, interlacing orientation, Joukowski real
+axis target, self-inversive defect status, covariance distance layers, Perron
+alignment of the all-ones mode, Toeplitz/Caratheodory margin,
+spectral-dictionary compatibility status, and random-current/coupling-order
+status.
+
+Destroys if used alone: full miss-PGF self-inversive data, off-circle
+`Im(w)`, apex/boundary deviation in the actual covariance matrix, finite trap
+identity, and odd Worpitzky/ear sidecars.
+
+Packet fields:
+
+```text
+hb_even_leg_polynomial
+hb_odd_leg_polynomial
+hb_interlacing_status
+hb_wronskian_orientation
+joukowski_self_inversive_defect
+perron_alignment_cosine
+pf_alignment_defect
+distance_layer_values_D1_D2_D3
+toeplitz_lambda_min_margin
+random_current_coupling_order_status
+law_defect_entropy_meter
+terminal_spectral_packet_exit
+```
+
+Next hook: lift the exact `E/O` interlacing through the Joukowski map while
+measuring self-inversive defect; replace the ideal C6 Perron quotient with a
+boundary-aware covariance inequality; and run Toeplitz `lambda_min`, Perron
+alignment, distance-layer dominance, spectral-dictionary compatibility,
+ordered-tail exchange, and random-current order side by side on the bounded
+k=8 bank.
+
+Pointers: HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210,
+HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
+HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
+HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, THM-577,
+LTI-306, LTT-206, T1306, OPEN-Q-108.

@@ -133,6 +133,44 @@ across the team (oracle TRRT, mac-mini-S73c Perron+Joukowski-HB, my two-maps/cyc
 NET: LRC(14) not proved; the owner's three tools now form one coherent spectral picture, and the verified
 TRRT machinery ports to the LRC cover bound via Joukowski (one interlacing lemma). => HYP-3210; reflection
 the-joukowski-bridge-...; script lrc_perron_demoivre_covariance_kps.py.
+## codex-2026-06-28 -- HYP-3222 Joukowski-Hermite-Biehler / Perron-Frobenius synthesis
+
+Owner: merge the incoming Joukowski/Hermite-Biehler port, Perron-Frobenius
+route, Toeplitz/Caratheodory margin, and related concepts into the LRC14 k=8
+proof frontier.  Rebasing exposed HYP-3210 and HYP-3211 as the mainline
+Joukowski/apex-seven merge; this packet is the exact local-certificate
+addendum under the free HYP-3222 namespace.  The later fetch also adds
+HYP-3212/HYP-3213 Chebyshev/cyclotomic arithmetic, HYP-3221's apex-7
+obstruction warning plus octonion/Fano non-structural guardrail, and
+HYP-3205's spectral-dictionary compatibility layer plus HYP-3204's
+ordered-tail exchange target as required sidecars for this route.
+
+- Added `04-computation/lrc14_joukowski_hb_perron_synthesis_codex_20260628.py`
+  and stored
+  `05-knowledge/results/lrc14_joukowski_hb_perron_synthesis_codex_20260628.out`.
+- Exact HB leg certificate: the even fold `v^2-5v+4` becomes
+  `E(x)=x^2+5x+4` with roots `-4,-1`; the odd Eulerian/Worpitzky leg
+  `O(x)=A_3(x)=x^2+4x+1` has roots `-2 +/- sqrt(3)`; the roots strictly
+  interlace and `E O'-E' O=(x+3)^2+2>0`.
+- Exact Perron quotient certificate: HYP-3202's layer sums `D1,D2,D3` give
+  an ideal nonnegative C6 distance quotient with
+  `lambda0=(1^T C1)/6=6237419/25930800=lambda_max`, so the quotient-level
+  Perron-alignment defect is zero.  A signed AFM contrast moves the top mode
+  to `k=3`, so coherence/sign pattern is a retained coordinate.
+- Compression guardrail: radius-only, total-covariance-only, commutative
+  pair-mass, positive-association, and HB-leg-only quotients each forget a
+  different sidecar.  This is HYP-3201's residual-defect principle in spectral
+  form.
+- Added HYP-3222, T1306, LTI-306, LTT-206, OPEN-Q-108 and backlog entries,
+  and reflection
+  `07-reflections/joukowski-hb-perron-frobenius-synthesis-codex-20260628.md`.
+
+Next pull: run a boundary-aware Perron alignment test on actual empty-sector
+covariance matrices, and a Joukowski/HB lift that reports interlacing,
+Wronskian orientation, and self-inversive defect across the bounded k=8 bank;
+join those columns to Toeplitz `lambda_min`, distance layers, random-current
+order, spectral-dictionary compatibility, ordered-tail exchange-rate fields,
+and law-defect entropy fields.
 
 ## kind-pasteur-2026-06-27-S31al -- two new k=8-node angles: Caratheodory-Toeplitz (exhaustive) + ferromagnetic Griffiths
 

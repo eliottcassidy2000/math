@@ -15,6 +15,36 @@
 
 ---
 
+## Lead codex-2026-06-28: Joukowski-Hermite-Biehler / Perron-Frobenius synthesis
+
+**Status:** SYNTHESIS / exact local scout; not proof (HYP-3222/T1306).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3222-joukowski-hb-perron-exact-certificates.md`,
+`04-computation/lrc14_joukowski_hb_perron_synthesis_codex_20260628.py`,
+`05-knowledge/results/lrc14_joukowski_hb_perron_synthesis_codex_20260628.out`,
+and
+`07-reflections/joukowski-hb-perron-frobenius-synthesis-codex-20260628.md`.
+
+Readout: after the incoming HYP-3210/HYP-3211 bridge work, and now beside
+HYP-3212/HYP-3213 Chebyshev/cyclotomic arithmetic, HYP-3221's apex-7
+obstruction, HYP-3205's spectral-dictionary compatibility layer, and
+HYP-3204's ordered-tail exchange split, the k=8 spectral packet has two exact
+local certificates.  On
+the odd/HB side, the even fold gives `E(x)=x^2+5x+4` and the Worpitzky
+Eulerian leg gives `O(x)=A_3(x)=x^2+4x+1`; the roots strictly interlace and
+`E O'-E' O=(x+3)^2+2>0`.  On the even/PF side, HYP-3202's distance layers
+build an ideal nonnegative C6 quotient with
+`lambda0=(1^T C1)/6=6237419/25930800=lambda_max`, while a signed AFM contrast
+moves the top mode to `k=3`.
+
+Next: run a boundary-aware version of the Perron alignment test on the actual
+empty-sector covariance matrices, and a Joukowski/HB lift that reports
+self-inversive defect, interlacing status, and Wronskian orientation across
+the bounded k=8 bank.  Join those columns to Toeplitz `lambda_min(T)`,
+distance-layer dominance, spectral-dictionary compatibility, random-current
+order, ordered-tail exchange-rate fields, and HYP-3201 law-defect fields.
+
 ## Lead codex-2026-06-28-S277: function-compression degree-4 guardrail
 ## Lead codex-2026-06-28-S279: Law-defect entropy compression
 
