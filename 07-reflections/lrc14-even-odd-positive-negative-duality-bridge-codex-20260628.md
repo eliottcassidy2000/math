@@ -6,6 +6,21 @@ graph is a very strong AP-tight face.  The new synthesis says: yes, but that
 face is lawful only as a packet with the odd/negative coordinates retained or
 discharged.
 
+After the checkpoint rebase, incoming HYP-3220 made the bridge sharper than
+my initial wording.  Even/odd duality and positive/negative duality are not
+just parallel shadows: in the de Moivre chart they are the same `Z/2`
+parity/complement operator.  The verified power sums
+
+```text
+p1..p8 = -1,5,-4,13,-16,38,-57,117
+```
+
+have sign exactly `(-1)^k` because the dominant period is the negative Perron
+root `-2cos(pi/7)`.  Complement sends sectors `(1,6),(2,5),(3,4)`, so the
+positive-negative fold is also the even-odd parity operator.  That makes the
+bridge less poetic and more algebraic: one sign bit is being seen in several
+coordinate systems.
+
 The crossed picture is:
 
 ```text
@@ -64,8 +79,45 @@ Toeplitz/Green/ordered-tail discharges disagree.  That is where the proof
 packet will either lock together or tell us exactly which sidecar remains
 unpriced.
 
+The exact scout now does this over the `3432` anchored rows.  AP has
+
+```text
+q0 = 481/1470
+q3 = 26/245
+q6 = 1/49
+q0+q6 = 73/210
+L_y = 2633/7350
+lambda2 = 0.192033074001
+```
+
+AP and the doubled AP are the only all-bank tight rows for `L_y`, `q0+q6`,
+and `lambda2`; primitive normal form leaves AP unique.  But negative leakage
+alone is a false terminal: there are `19` primitive zero-negative-edge rows,
+so `18` primitive non-AP false terminals.  Connected positive graph is even
+worse as a terminal quotient: `2754` primitive connected non-AP rows.
+
+The ordered-tail bridge is cleaner than expected.  Among `2879` primitive
+rows with positive `q3` debt, the exchange margin has `0` violations, and
+the worst endpoint-bimodality gap per `q3` debt is `17161/12882`.  The `11`
+non-AP HYP-3202 traps split into `8` with negative leakage plus odd `q3` debt
+and `3` with odd `q3` debt but no negative covariance leakage.  Those three
+are the best finite reminder that "negative" in the bridge is not merely
+negative covariance; it is the full parity/sign sidecar.
+
+So the next theorem-facing object is:
+
+```text
+Fejer / Green / cap magnitude
+  plus
+HYP-3220 parity sign or HYP-3222 HB interlacing
+  plus
+HYP-3204 q3 exchange-rate pricing.
+```
+
+That packet feels much closer to a proof shape than any scalar did.
+
 -> HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
 HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223,
-HYP-3222, HYP-3221, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
+HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
 HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153,
 T1338, LTI-338, LTT-238, OPEN-Q-108.

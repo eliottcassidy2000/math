@@ -73,9 +73,13 @@ work on the even-odd duality and the positive-negative duality. HYP-3220:
 Owner: extend and finalize the previous Green-conductance session while
 considering past work on even/odd duality and positive/negative duality.
 
-Reserved HYP-3238/T1338/LTI-338/LTT-238 as the bridge packet joining
-HYP-3236, HYP-3219, and HYP-3237.  The new synthesis treats the proof frontier
-as a crossed duality:
+Reserved and then executed HYP-3238/T1338/LTI-338/LTT-238 as the bridge packet
+joining HYP-3236, HYP-3220, HYP-3219, and HYP-3237.  Incoming HYP-3220 makes
+the synthesis sharper: even/odd duality and positive/negative duality are one
+parity/complement operator in the de Moivre chart, with power sums
+`-1,5,-4,13,-16,38,-57,117` having sign `(-1)^k` from the negative Perron
+period `-2cos(pi/7)`.  The proof frontier is therefore a crossed duality with
+one sign operator:
 
 - even/positive side: Fejer square, cyclotomic SOS magnitude, pair-Pascal cap
   mass, covariance layers, positive Green conductance, Perron coherent mode,
@@ -88,15 +92,23 @@ Compression rule: an even/positive quotient is proof-grade only if the
 odd/negative payload is zero, reconstructible, dual-annihilated, or retained
 as sidecar.  This applies HYP-3201's law-defect test not only to
 commutativity but to associativity, positivity, evenness, measure, and
-scalarization failures.  Planned next step is the exact bounded-bank scout
-`lrc14_even_odd_positive_negative_bridge_codex_20260628.py`, which should
-count false terminals for positive/even compression and compare `q3`,
-`q0+q6`, Green slack, and negative leakage across the same `3432` rows as
-HYP-3236.
+scalarization failures.
+
+Exact scout `lrc14_even_odd_positive_negative_bridge_codex_20260628.py` over
+the same `3432` rows as HYP-3236: AP has `q0=481/1470`, `q3=26/245`,
+`q6=1/49`, `q0+q6=73/210`, `L_y=2633/7350`, and
+`lambda2=0.192033074001`.  AP is uniquely primitive-tight for `L_y`, `q0+q6`,
+and `lambda2`.  False-terminal audit: `18` primitive non-AP rows have zero
+negative covariance leakage, `2754` primitive connected positive-graph non-AP
+rows exist, `2879` primitive rows have positive `q3` debt with `0`
+exchange-margin violations, and the `11` non-AP HYP-3202 traps split into
+`8` negative-leakage-plus-odd-debt and `3`
+odd-debt-without-negative-leakage.  Next proof task: prove the `q3` exchange
+rate symbolically and glue it to HYP-3222 interlacing plus HYP-3220 sign.
 
 -> HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
 HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223,
-HYP-3222, HYP-3221, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
+HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
 HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153,
 T1338, LTI-338, LTT-238, OPEN-Q-108.
 

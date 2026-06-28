@@ -1,7 +1,7 @@
 ---
 id: HYP-3238
 title: LRC14 even/odd and positive/negative duality bridge
-status: RESERVED / synthesis bridge; exact scout planned; not an LRC14 proof
+status: EVIDENCE / exact bounded-bank scout plus synthesis; not an LRC14 proof
 source: codex-2026-06-28
 tangent: T1338
 technique: LTI-338
@@ -25,6 +25,7 @@ related:
   - HYP-3223
   - HYP-3222
   - HYP-3221
+  - HYP-3220
   - HYP-3219
   - HYP-3218
   - HYP-3217
@@ -183,9 +184,114 @@ bulk/core residual packet.  Equality forces AP; all-bank equality also permits
 the doubled AP dilation.
 ```
 
-This is not a proof yet.  The planned exact scout should measure which rows
-look falsely terminal under positive/even compression, especially rows with no
+This is not a proof yet.  The exact scout below measures which rows look
+falsely terminal under positive/even compression, especially rows with no
 negative covariance leakage and rows that are local exchange traps.
+
+## Exact Scout
+
+The script recomputes the same anchored bounded bank as HYP-3236:
+
+```text
+E = {0} union A, A subset {1,...,14}, |A|=7
+rows_all = 3432
+rows_primitive = 3431
+```
+
+It adds the duality-facing coordinates:
+
+```text
+endpoint_bimodality = q0 + q6
+odd_center_debt = max(0, q3(E) - q3(AP))
+L_y = q0 + q6 + q3/10
+positive Green slack = lambda2 / Kirchhoff / maxR deficits
+negative leakage = negative_edges / negative_mass
+```
+
+The AP profile is:
+
+```text
+AP_q0 = 481/1470 = 0.327210884354
+AP_q3 = 26/245 = 0.106122448980
+AP_q6 = 1/49 = 0.020408163265
+AP_q0_plus_q6 = 73/210 = 0.347619047619
+AP_L_y = 2633/7350 = 0.358231292517
+AP_lambda2 = 0.192033074001
+AP_kirchhoff = 108.654718079151
+AP_negative_edges = 0
+```
+
+HYP-3220 is not merely adjacent.  The scout records its parity certificate:
+
+```text
+de_moivre_power_sums p1..p8 = -1,5,-4,13,-16,38,-57,117
+sign pattern = (-1)^k
+dominant negative Perron period = -2cos(pi/7) = -1.801937735805
+complement pairs = (1,6),(2,5),(3,4)
+```
+
+So even/odd and positive/negative are the same `Z/2` complement/parity
+operator in the de Moivre chart.  HYP-3238 should therefore be read as a
+single-duality packet with two coordinate languages, not as two parallel
+analogies.
+
+AP is uniquely primitive-tight for the main positive/even coordinates:
+
+```text
+L_y_MAX:
+  all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+
+endpoint_bimodality_q0_plus_q6_MAX:
+  all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+
+lambda2_MAX:
+  all_beaters=0 primitive_beaters=0 all_ties=2 primitive_ties=1
+```
+
+The false-terminal warning is equally concrete:
+
+```text
+negative_edges_MIN:
+  all_ties=20 primitive_ties=19 primitive_false_ties=18
+
+negative_mass_MIN:
+  all_ties=20 primitive_ties=19 primitive_false_ties=18
+
+primitive_zero_negative_edges_rows = 19
+primitive_zero_negative_edges_nonAP_false_terminals = 18
+primitive_connected_positive_graph_nonAP_rows = 2754
+```
+
+Thus "no negative leakage" and "connected positive graph" are not proof
+conditions.  They are sidecar diagnostics.  AP is still separated by Green
+slack and `L_y`, but the negative/odd coordinate cannot be erased.
+
+The ordered-tail exchange proxy is clean on the bank:
+
+```text
+primitive_rows_with_positive_q3_debt = 2879
+q3_exchange_margin_violations_for_debt_rows = 0
+Ly_AP_max_violations = 0
+worst_endpoint_bimodality_gap_per_q3_debt =
+  17161/12882 = 1.332168917870
+  at E=(0,1,4,5,9,10,13,14)
+```
+
+Equivalently, the `L_y` dual prices all positive `q3` central debt by endpoint
+bimodality loss.  This is the finite table where HYP-3204's odd-center
+exchange rate meets HYP-3222/HYP-3220 sign/interlacing data.
+
+The HYP-3202 trap boundary splits through the bridge as:
+
+```text
+non_AP_trap_bridge_classes =
+  negative_leakage_plus_odd_q3_debt: 8
+  odd_q3_debt_without_negative_covariance: 3
+```
+
+The `3` traps with no negative covariance leakage are important: even on the
+finite trap boundary, negative leakage alone is not the odd sidecar.  Odd
+`q3` debt and Green resistance excess remain live.
 
 ## Relation To Earlier Packets
 
@@ -207,6 +313,13 @@ HYP-3235 and HYP-3218 make the even side more rigid: the cap lies in
 `Q(cos(2*pi/7))` and the Fejer magic is a totally positive cyclotomic square.
 HYP-3219 says the remaining obstruction is not lack of magnitude, but the
 sign/degree factor.
+
+HYP-3220 sharpens this into an identity of dualities.  The de Moivre power
+sums have sign exactly `(-1)^k` because the dominant period is the negative
+Perron root `-2cos(pi/7)`.  The complement involution `x -> -x` swaps sector
+pairs `(1,6),(2,5),(3,4)` and is simultaneously the positive/negative fold
+and the even/odd parity operator.  For the LRC(2p) family, the sign obstruction
+is the `p mod 4` / imaginary-quadratic wall.
 
 HYP-3237 supplies the information-theoretic wall:
 
@@ -246,23 +359,25 @@ Switch/gauge: orient `A -> B` when `A` can discharge a destroyed coordinate of
 If both preserve the same predicate, prefer the one with lower conditional
 residual `H(lost_duality_payload | carrier)`.
 
-Reserved fingerprint for the planned scout:
+Exact scout fingerprint:
 
 ```text
-score_hist = to be computed
-directed_3cycles = to be computed
-sccs = to be computed
-tie_hamiltonian_path =
+score_hist = {0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1}
+directed_3cycles = 0
+sccs = singletons
+hamiltonian_path_count = 1
+priority_path =
   even_positive_fejer_square
   -> green_dirichlet_positive_face
-  -> bulk_vitali_positive_measure
-  -> pair_pascal_cap_mass
-  -> toeplitz_normal_fan_slack
   -> odd_negative_brouwer_sign
   -> hermite_biehler_interlacing
+  -> bulk_core_vitali_transfer
+  -> pair_pascal_cap_mass
+  -> toeplitz_normal_fan_slack
   -> negative_covariance_leakage
   -> signed_chart_change_debt
   -> raw_lambda2_scalar
+  -> raw_connected_positive_graph
   -> raw_positive_association
 ```
 
@@ -276,7 +391,7 @@ matroid circuits, and proof obligations.
 Chosen vertices: proof obligations / information channels.  This choice
 preserves the crossed duality structure and directly records which quotient
 was legal.  It destroys row identity, but row identity is recoverable in the
-planned scout output by keeping exemplar rows and trap sidecars.
+scout output by keeping exemplar rows and trap sidecars.
 
 Challenged assumption: the positive/even side is the proof and the
 odd/negative side is error.  The stronger reading is that the proof needs a
@@ -285,11 +400,13 @@ core data.
 
 ## Next Work
 
-1. Build the exact HYP-3238 scout on the same `3432` anchored rows as
-   HYP-3236.
-2. Count false terminals for positive/even compression: rows with no negative
-   covariance leakage, rows with high Green connectivity, and HYP-3202 traps.
-3. Measure exchange-rate links between odd central debt (`q3`), endpoint
-   bimodality (`q0+q6`), Green slack, and negative leakage.
-4. Update this hypothesis from reserved synthesis to evidence after the scout
-   produces a bounded-bank table.
+1. Prove the `q3` exchange-rate inequality symbolically from the shell
+   Delsarte dual or HYP-3204 ordered-tail exchange, not only by bounded-bank
+   audit.
+2. Attach HYP-3222 Hermite-Biehler interlacing directly to the three
+   zero-negative-leakage exchange traps with positive `q3` debt.
+3. Compare the HYP-3220 negative Perron sign with Fiedler vectors and Green
+   bottleneck currents from HYP-3236.
+4. Lift the bridge beyond the bounded bank: determine which pieces are
+   exact finite k=8 facts and which persist as the LRC(2p) `p mod 4`
+   family-law sidecar.

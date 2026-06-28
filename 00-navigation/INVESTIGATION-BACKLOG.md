@@ -17,37 +17,47 @@
 
 ## Lead codex-2026-06-28: Even/odd positive/negative duality bridge
 
-**Status:** RESERVED / synthesis bridge; exact scout planned; not proof
+**Status:** EVIDENCE / exact bounded-bank scout plus synthesis; not proof
 (HYP-3238/T1338).
 
 Claimed files:
 `05-knowledge/hypotheses/HYP-3238-lrc14-even-odd-positive-negative-duality-bridge.md`,
-planned script
+script
 `04-computation/lrc14_even_odd_positive_negative_bridge_codex_20260628.py`,
-planned result
+result
 `05-knowledge/results/lrc14_even_odd_positive_negative_bridge_codex_20260628.out`,
 and
 `07-reflections/lrc14-even-odd-positive-negative-duality-bridge-codex-20260628.md`.
 
 Purpose: finalize the previous Green-conductance session by merging it with
-the even/odd and positive/negative dualities now visible in HYP-3219 and
-HYP-3237.  Even/positive data is Fejer square, SOS magnitude, pair-Pascal cap
+the even/odd and positive/negative dualities now visible in HYP-3220,
+HYP-3219, and HYP-3237.  HYP-3220 says these are one parity/complement
+operator: de Moivre power sums `-1,5,-4,13,-16,38,-57,117` have sign
+`(-1)^k` from the negative Perron period `-2cos(pi/7)`.  Even/positive data is Fejer square, SOS magnitude, pair-Pascal cap
 mass, covariance layers, positive Green conductance, Perron coherent mode,
 and bulk positive-measure equidistribution.  Odd/negative data is Worpitzky
 associator debt, Brouwer trace sign, Hermite-Biehler odd leg, negative
 covariance leakage, signed chart-change cancellation debt, and measure-zero
 cyclotomic core witnesses.
 
+Readout: AP has `q0=481/1470`, `q3=26/245`, `q6=1/49`, `q0+q6=73/210`,
+`L_y=2633/7350`, and `lambda2=0.192033074001`.  AP is uniquely primitive-tight
+for `L_y`, `q0+q6`, and `lambda2`.  The false-terminal audit finds `18`
+primitive non-AP rows with zero negative covariance leakage, `2754` primitive
+connected positive-graph non-AP rows, `2879` primitive rows with positive `q3`
+debt and `0` exchange-margin violations, and the `11` non-AP HYP-3202 traps
+split into `8` negative-leakage-plus-odd-debt and `3`
+odd-debt-without-negative-leakage.
+
 Compression guardrail: an even/positive quotient is proof-grade only when the
 odd/negative payload is zero, reconstructible, dual-annihilated, or retained
 as sidecar.  This is the HYP-3201 law-defect rule applied to associativity,
 positivity, evenness, measure, and scalarization failures.
 
-Next: run the bounded-bank scout over the same `3432` rows as HYP-3236.  Count
-false terminals for positive/even compression, especially rows with zero
-negative covariance leakage and the HYP-3202 exchange traps.  Compare `q3`,
-`q0+q6`, Green slack, and leakage, then test whether HYP-3204 exchange and
-HYP-3222 Hermite-Biehler data discharge the odd/negative sidecar.
+Next: prove the `q3` exchange-rate inequality symbolically from HYP-3204 or
+the shell Delsarte dual, attach HYP-3222 Hermite-Biehler interlacing to the
+three zero-negative-leakage traps with odd debt, and compare HYP-3220's
+negative Perron sign with HYP-3236 Fiedler/current data.
 
 ## Lead codex-2026-06-28: Cyclotomic Delsarte/Beurling-Selberg magic function
 

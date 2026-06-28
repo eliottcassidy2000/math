@@ -6769,10 +6769,13 @@ quotient_legality_status
   `negative_covariance_leakage`, `signed_chart_change_debt`,
   `raw_lambda2_scalar`, and `raw_positive_association`.
 - **LRC use:** HYP-3238 merges the previous HYP-3236 Green pass with
-  HYP-3219's Brouwer sign factorization and HYP-3237's Vitali bulk/core wall.
-  It turns the proof search into a legality tournament: an even/positive
-  quotient wins only if it retains or discharges the odd/negative coordinate
-  that it would otherwise destroy.
+  HYP-3220's even-odd = positive-negative finalization, HYP-3219's Brouwer
+  sign factorization, and HYP-3237's Vitali bulk/core wall.  HYP-3220 makes
+  the duality literal: the de Moivre power sums have sign `(-1)^k` because
+  the dominant period is the negative Perron root `-2cos(pi/7)`.  This turns
+  the proof search into a legality tournament: an even/positive quotient wins
+  only if it retains or discharges the odd/negative coordinate that it would
+  otherwise destroy.
 - **Preserves:** AP extremality, Fejer/SOS magnitude, Green conductance
   slack, central `q3` exchange debt, negative leakage, Brouwer sign,
   Hermite-Biehler odd leg, Vitali core witnesses, and the AP/doubled-AP
@@ -6786,21 +6789,28 @@ quotient_legality_status
 - **Switch/gauge:** orient toward the carrier that discharges a destroyed
   coordinate of the other carrier or has lower conditional residual
   `H(lost_duality_payload|carrier)`.
-- **Reserved fingerprint:** the planned scout will compute row-level false
-  terminals.  Provisional tie path:
+- **Exact fingerprint:** the HYP-3238 scout is transitive under this retained
+  payload gauge, with
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1}`,
+  no directed 3-cycles, singleton SCCs, and one Hamiltonian path:
   `even_positive_fejer_square -> green_dirichlet_positive_face ->
-  bulk_vitali_positive_measure -> pair_pascal_cap_mass ->
-  toeplitz_normal_fan_slack -> odd_negative_brouwer_sign ->
-  hermite_biehler_interlacing -> negative_covariance_leakage ->
+  odd_negative_brouwer_sign -> hermite_biehler_interlacing ->
+  bulk_core_vitali_transfer -> pair_pascal_cap_mass ->
+  toeplitz_normal_fan_slack -> negative_covariance_leakage ->
   signed_chart_change_debt -> raw_lambda2_scalar ->
-  raw_positive_association`.
-- **Next pull:** Run the HYP-3238 scout over the `3432` anchored k=8 rows.
-  Count rows that look terminal after positive/even compression but still
-  need an odd/negative sidecar, including zero-negative-leakage non-AP rows
-  and HYP-3202 traps.  Compare `q3`, `q0+q6`, Green slack, and leakage to
-  HYP-3204/HYP-3222 discharge data.
+  raw_connected_positive_graph -> raw_positive_association`.
+- **Scout readout:** AP is uniquely primitive-tight for `L_y`, `q0+q6`, and
+  `lambda2`; `18` primitive non-AP rows have zero negative covariance leakage;
+  `2754` primitive connected positive-graph non-AP rows exist; `2879`
+  primitive rows have positive `q3` debt with `0` exchange-margin violations;
+  the `11` non-AP traps split into `8` negative-leakage-plus-odd-debt and `3`
+  odd-debt-without-negative-leakage.
+- **Next pull:** Prove the `q3` exchange-rate inequality symbolically and glue
+  it to HYP-3222 Hermite-Biehler interlacing plus HYP-3220 parity/Brouwer
+  sign.  Also compare HYP-3220's negative Perron sign with HYP-3236 Fiedler
+  and bottleneck-current data.
 - **Pointers:** HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233,
   HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224,
-  HYP-3223, HYP-3222, HYP-3221, HYP-3219, HYP-3218, HYP-3217, HYP-3216,
+  HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216,
   HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163,
   HYP-3153, LTI-338, LTT-238, T1338, OPEN-Q-108.
