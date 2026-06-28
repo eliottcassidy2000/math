@@ -81,6 +81,41 @@ route invoking C2/BU, C6, Galois symmetry, or topological degree should declare
 whether it certifies residue/equioscillation only, or which sidecar resurrects
 the q-specific magnitude coordinate.
 
+## Lead codex-2026-06-28: Covering-floor duality transfer
+
+**Status:** SYNTHESIS / proof-routing scout; not proof
+(HYP-3424/T1385/LTI-385/LTT-285), with HYP-3423 topology/arithmetic guardrail,
+HYP-3422 two-adic relocation, and HYP-3421 off-grid transparency/Rprime
+closure as floor-facing companions.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3424-lrc14-covering-floor-duality-transfer.md`,
+script
+`04-computation/lrc14_covering_floor_duality_transfer_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_covering_floor_duality_transfer_codex_20260628.out`,
+and
+`07-reflections/lrc14-covering-floor-duality-transfer-codex-20260628.md`.
+
+Purpose: integrate prior even/odd, positive/negative, odd/even, and
+addition/multiplication duality work after the S259/HYP-3418 correction that
+the covering floor is 2-adic.  The odd/coprime witness at `t=1/2` is not a
+floor proof because every even speed dies there; odd data becomes phase-cover
+debt, and the even fold becomes the floor-bearing object.
+
+Readout: top transfer gates are two-adic even floor descent, signed SPEC
+decorrelation floor, even-good/odd-phase cover, recursive quotient sidecar
+router, and owner-current even-cover sidecar.  The tracked proof obligations
+have minimum covers of size `3`, led by two-adic descent plus signed SPEC floor
+plus either quotient router or owner sidecar.  Raw 7-adic/C3/Galois/census
+shadows are demoted unless they feed the floor.
+
+Next: turn the candidate router into a concrete lemma on covering packets:
+after q-witness and LRC<=13 induction, every packet should feed `|SPEC| <
+product`, HYP-3422 two-adic interval relocation, odd phase-cover debt, finite
+owner-current/Menger sidecar, add/mult energy-to-SPEC penalty, HYP-3421 off-grid/signed-SPEC
+transparency, or an explicit off-path filter.
+
 ## Lead codex-2026-06-28: Owner-cut dual current certificate synthesis
 
 **Status:** SYNTHESIS / exact owner-current certificate scout; not proof

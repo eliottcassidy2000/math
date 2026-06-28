@@ -1,0 +1,123 @@
+HYP-3424 COVERING-FLOOR DUALITY TRANSFER SCOUT
+status=SYNTHESIS / proof-routing scout; not an LRC14 proof
+source=HYP-3238/HYP-3234/HYP-2272/HYP-2128/HYP-2129 + S259/HYP-3418 + HYP-3423 + HYP-3422 + HYP-3421
+
+## Exact Anchors
+C(14,2)=91
+8*C(14,2)+1=729=27^2
+HYP-3418 binding counts at optima: even=376 odd=279; near_half=58/300
+HYP-3418 coprime-transparency test: 0/400
+S558 even-fold wall: AP/V* safe slack=0; random min safe slack about 0.10448
+HYP-3423 topology guardrail: q-uniform topology cannot close q-specific magnitude floors
+HYP-3422 interval relocation: E_safe half-lift branch overlap holds 24/24 on audited rows
+HYP-3421 off-grid/Rprime branch: resonance transparency feeds the signed SPEC floor
+HYP-3420 owner/chiral sidecar: residue+owner_chiral_class leaves 0 mixed fibers on scanned banks
+HYP-3417 frontier current: {2:g2,11:g1,13:g1}
+
+## Duality Transfer Signals
+- coprime_witness_failure [S259/HYP-3418]
+  readout: 0/400 covering sets satisfy the naive coprime-to-14 transparency test
+  transfer: odd/coprime data is a phase reservoir, not a standalone witness
+  verdict: reject odd-only witness reduction
+- even_binding_obstruction [S259/HYP-3418]
+  readout: binding speeds at the optimum: even=376 versus odd=279; near t=1/2 only 58/300
+  transfer: the floor witness is pulled by even speeds away from the odd-friendly point
+  verdict: promote 2-adic even descent
+- two_adic_interval_relocation [HYP-3422]
+  readout: E_safe intersects the union of two odd half-lift filters on all 24 audited covering rows
+  transfer: the even fold should become an interval-overlap lemma rather than a slogan
+  verdict: route the 2-adic branch through finite-ruler/Helly overlap
+- topology_magnitude_guardrail [HYP-3423]
+  readout: q-uniform C2/Borsuk-Ulam and C6 topology cannot prove q-specific magnitude floors
+  transfer: topological/Galois data is legal only after a q-specific floor sidecar is retained
+  verdict: block topology-to-magnitude scalarization
+- offgrid_rprime_companion [HYP-3421]
+  readout: resonant danger sits on the 14-grid while checked full optima are off-grid; canonical 84m rows feed Rprime
+  transfer: signed SPEC needs the off-grid transparency/Rprime closure, not a raw coprime reduction
+  verdict: route SPEC branch through the all-packet transparency classifier
+- even_good_window_wall [S558 even-fold measure reduction]
+  readout: AP and V* have safe slack 0; random samples have min safe slack about 0.10448
+  transfer: even-good windows exist, but odd danger can blanket them at the wall
+  verdict: replace measure counting by positional odd-phase theorem
+- frontier_even_owner_label [HYP-3420/HYP-3417/HYP-3419]
+  readout: HYP-3420 owner/chiral classes are exit-exact on scanned banks; HYP-3417 frontier current uses {2:g2,11:g1,13:g1}
+  transfer: finite sidecars already expose one even-cover label plus binding labels
+  verdict: route finite failures to owner-current/Menger sidecar
+- add_mult_energy_bridge [HYP-2272/HYP-2128/HYP-2129]
+  readout: 8*C(14,2)+1=27^2 and additive pair-sum face is multiplicative energy
+  transfer: additive abundance should become a SPEC or odd-phase debt, not a scalar endpoint
+  verdict: use add/mult only after floor payload is retained
+- c3_residue_off_path_filter [HYP-3411/HYP-3413/HYP-3415]
+  readout: C3/Galois/census closes residue/equality structure but not the covering floor
+  transfer: 7-adic residue structure is admissible only as a sidecar feeding the floor
+  verdict: demote terminal 7-adic proof attempts
+
+## Carrier Scores
+D00 score= 67 two_adic_even_floor_descent
+  covers=('critical_path_SPEC_floor', 'odd_phase_cover_debt', 'off_path_7adic_filter', 'two_adic_even_binding')
+  keeps=("even speed self-similarity e=2e'", 'HYP-3422 E_safe half-lift interval relocation', 'folded LRC<=13 floor window', 'binding-speed payload')
+  destroys=('raw odd/coprime witness at t=1/2', 'apex-7 census equality story')
+D01 score= 62 signed_SPEC_decorrelation_floor
+  covers=('add_mult_energy_penalty', 'critical_path_SPEC_floor', 'quotient_legality', 'two_adic_even_binding')
+  keeps=('|SPEC| < product', '14-grid resonance modes', 'HYP-3421 off-grid/Rprime transparency', 'Parseval/tail budget')
+  destroys=('finite owner labels unless sidecarred', 'raw pointwise witness geometry')
+D02 score= 59 even_good_odd_phase_cover
+  covers=('critical_path_SPEC_floor', 'odd_phase_cover_debt', 'two_adic_even_binding')
+  keeps=('even-good window G', 'odd danger arcs restricted to G', 'pinch/phase positions')
+  destroys=('union-bound total measure', 'odd-only lonely point at 1/2')
+D03 score= 57 recursive_quotient_sidecar_router
+  covers=('finite_owner_sidecar', 'odd_phase_cover_debt', 'quotient_legality', 'topology_magnitude_guardrail')
+  keeps=('theorem-exit purity', 'first destroyed coordinate', 'named terminal debt')
+  destroys=('row order', 'untyped scalar equality')
+D04 score= 50 owner_current_even_cover_sidecar
+  covers=('finite_owner_sidecar', 'quotient_legality', 'two_adic_even_binding')
+  keeps=('endpoint-owner current', '2:g2 even-cover label', 'binding labels 11:g1 and 13:g1')
+  destroys=('global SPEC inequality if used terminally',)
+D05 score= 37 additive_multiplicative_energy_transfer
+  covers=('add_mult_energy_penalty', 'critical_path_SPEC_floor')
+  keeps=('pair-sum shell', 'multiplicative energy of roots of unity', 'odd-square triangular modulus 27')
+  destroys=('2-adic depth', 'odd phase position inside G')
+D06 score= 24 parity_redei_odd_sector_guard
+  covers=('add_mult_energy_penalty', 'odd_phase_cover_debt')
+  keeps=('addition certifies multiplication mod 2', 'self-converse odd worry sector', 'flip-invariant parity')
+  destroys=('metric floor', 'SPEC magnitude', 'even binding displacement')
+D07 score= -9 c3_galois_residue_skeleton_filter
+  covers=('off_path_7adic_filter', 'quotient_legality', 'topology_magnitude_guardrail')
+  keeps=('unit C3 binding skeleton', 'Q(sqrt(-7)) transverse sidecar', 'GW q == 1 mod 3 gate')
+  destroys=('2-adic magnitude floor', 'covering optimum displacement')
+D08 score=-45 raw_7adic_or_scalar_shadow
+  covers=()
+  keeps=('apex-7 names', 'famous constants', 'one-number summaries')
+  destroys=('SPEC floor', 'even binding', 'odd phase cover', 'owner sidecars')
+
+## Minimal Obligation Covers
+obligations=('critical_path_SPEC_floor', 'two_adic_even_binding', 'odd_phase_cover_debt', 'quotient_legality', 'topology_magnitude_guardrail', 'finite_owner_sidecar', 'add_mult_energy_penalty', 'off_path_7adic_filter')
+minimum_cover_size=3
+cover=('D00', 'D01', 'D03') names=('two_adic_even_floor_descent', 'signed_SPEC_decorrelation_floor', 'recursive_quotient_sidecar_router')
+cover=('D00', 'D03', 'D05') names=('two_adic_even_floor_descent', 'recursive_quotient_sidecar_router', 'additive_multiplicative_energy_transfer')
+cover=('D00', 'D03', 'D06') names=('two_adic_even_floor_descent', 'recursive_quotient_sidecar_router', 'parity_redei_odd_sector_guard')
+cover=('D01', 'D03', 'D07') names=('signed_SPEC_decorrelation_floor', 'recursive_quotient_sidecar_router', 'c3_galois_residue_skeleton_filter')
+
+## Tournament Analysis
+vertices=proof obligations and transfer gates, not runners/arcs/residues/constants
+pairwise_observable=floor-feed + 2-adic payload + odd resurrection + quotient/topology legality + finite sidecar
+switch=higher weighted proof-facing score; ties by declared code order
+vertex_count=9
+score_hist={-45: 1, -9: 1, 24: 1, 37: 1, 50: 1, 57: 1, 59: 1, 62: 1, 67: 1}
+directed_3cycles=0
+hamiltonian_path=D00 -> D01 -> D02 -> D03 -> D04 -> D05 -> D06 -> D07 -> D08
+
+## Candidate Lemma Shape
+For every primitive LRC14 covering packet after the q-witness and LRC<=13 induction split, either:
+  1. the even-speed 2-adic descent supplies a signed-SPEC floor packet with |SPEC| < product;
+  2. HYP-3422 interval relocation supplies an E_safe half-lift overlap;
+  3. the even-good window remains but odd danger arcs emit a positional phase-cover debt;
+  4. the first mixed quotient is discharged by owner-current/Menger sidecar, with even-cover labels named;
+  5. HYP-3421 off-grid transparency routes the signed-SPEC/Rprime branch;
+  6. additive/multiplicative energy concentration converts to a low-SPEC penalty or named odd debt;
+  7. HYP-3423 blocks q-uniform topology/Galois data from closing a q-specific floor;
+  8. the packet is off-path 7-adic/census data and must be demoted unless it feeds one of the above.
+
+## Assumption Challenge
+Considered vertices: runners, gaps, fixed circle sections, section boundaries, wall-crossing events, residues, cover arcs, Fourier modes/SPEC bins, parity sectors, additive-pair shells, multiplicative-energy atoms, owner currents, quotient states, and proof obligations.
+Chosen vertices: proof obligations and duality-transfer gates.  The quotient preserves the LRC covering-floor predicate only when it feeds the SPEC floor, the 2-adic descent, odd phase debt, finite owner sidecars, or an explicit HYP-3423 legality/off-path filter.  It destroys raw row identity, terminal 7-adic numerology, and scalar shadows.

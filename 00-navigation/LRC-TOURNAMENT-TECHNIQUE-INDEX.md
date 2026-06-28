@@ -69,6 +69,10 @@ obligations, and proof-carrier interfaces.
 - Need owner/root-aware medianization:
   use LTT-113 after LTT-112 and record root object, owner object, coarse
   shadow, first missing sidecar, and sidecar rank before naming new debt.
+- Need to audit covering-floor dualities after S259:
+  use LTT-283 and make transfer gates/proof obligations the vertices; odd
+  data must become phase-cover debt, and even/two-adic data must feed SPEC or
+  a named finite sidecar.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -8107,6 +8111,47 @@ quotient_legality_status
 - **Pointers:** HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415,
   HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3129, HYP-2963,
   THM-523, LTI-383, T1383, OPEN-Q-108.
+
+## LTT-285: Covering-Floor Duality-Transfer Tournament
+
+- **Move:** Rank proof obligations and duality-transfer gates after the
+  S259/HYP-3418 correction that the covering floor is 2-adic.  Vertices are
+  two-adic even descent, signed SPEC floor, even-good/odd-phase cover,
+  recursive quotient router, owner-current even-cover sidecar, add/mult
+  energy transfer, parity guard, C3/Galois off-path filter, and raw scalar
+  shadow.
+- **LRC use:** HYP-3424 prevents old dualities from becoming false terminal
+  proofs and imports HYP-3423's topology/arithmetic guardrail, HYP-3422's
+  two-adic interval relocation, and HYP-3421's off-grid transparency/Rprime
+  route as floor-facing companions.  Odd/coprime data is phase-cover debt
+  because `t=1/2` kills every even speed; even fold/two-adic descent is the
+  floor carrier; add/mult energy must become low-SPEC penalty or named odd
+  debt.
+- **Preserves:** the covering-floor predicate only when a packet feeds
+  `|SPEC| < product`, two-adic descent, odd phase-cover debt, finite
+  owner-current/Menger sidecar, add/mult energy-to-SPEC penalty, or explicit
+  HYP-3423 legality/off-path 7-adic filter.
+- **Forgets / guardrail:** raw runners, residue-only C3/Galois shadows, odd
+  witness at `t=1/2`, raw additive parity, and famous constants or scalar
+  shadows that do not feed the floor.
+- **Pairwise observable:** floor-feed plus two-adic payload plus odd
+  resurrection plus quotient/topology legality plus finite sidecar, penalized
+  by scalar and off-path risk.
+- **Switch/gauge:** higher weighted proof-facing score first; ties use declared
+  code order.
+- **Fingerprint:** `9` vertices, score histogram
+  `{-45:1, -9:1, 24:1, 37:1, 50:1, 57:1, 59:1, 62:1, 67:1}`, no directed
+  `3`-cycles, singleton SCCs, and Hamiltonian path
+  `D00 -> D01 -> D02 -> D03 -> D04 -> D05 -> D06 -> D07 -> D08`.
+- **Next hook:** formulate the covering-packet transfer lemma: after
+  q-witness and LRC<=13 induction, every remaining packet routes to signed
+  SPEC, two-adic descent, odd phase-cover debt, finite owner sidecar,
+  add/mult energy penalty, HYP-3422 interval relocation, HYP-3421
+  off-grid/signed-SPEC transparency, HYP-3423 topology-to-magnitude guardrail,
+  or off-path 7-adic/census filter.
+- **Pointers:** HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415,
+  HYP-3238, HYP-3234, HYP-3137, HYP-2272, HYP-2129, HYP-2128, THM-414,
+  THM-523, LTI-385, T1385, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 

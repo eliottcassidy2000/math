@@ -69,6 +69,50 @@ concluding. -> HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3
 HYP-3312, HYP-3311, HYP-3310, HYP-3406, HYP-3405, HYP-2963, THM-523,
 LTI-384, LTT-284, T1384, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3424 covering-floor duality-transfer addendum:**
+HYP-3424 integrates the older even/odd, positive/negative, odd/even, and
+add/mult dualities with S259/HYP-3418, while using HYP-3423 topology/arithmetic
+guardrails, HYP-3422 two-adic interval relocation, and HYP-3421 off-grid
+transparency/Rprime closure as floor-facing companions.  The concrete
+correction is:
+
+```text
+odd/coprime witness at t=1/2 = rejected for the covering floor
+because every even speed dies there;
+even fold / two-adic descent = floor carrier;
+odd data = positional phase-cover debt.
+```
+
+The proof-router minimum covers are small: two-adic descent plus signed SPEC
+floor plus the recursive quotient legality router covers the tracked
+obligations, including HYP-3423's topology-to-magnitude guardrail.  Owner cuts
+remain finite sidecars rather than the legality carrier.  Incoming HYP-3422 supplies the two-adic interval relocation
+lemma, incoming HYP-3423 blocks q-uniform topology from proving q-specific
+magnitude/floor claims, incoming HYP-3420 supplies owner/chiral exactness on
+scanned banks, incoming HYP-3421 supplies the off-grid/Rprime transparency branch, and
+the frontier current `{2:g2,11:g1,13:g1}` should be read as a finite trace of
+the same two-adic floor debt.
+
+Open task: formulate and test a covering-packet transfer lemma.  After the
+q-witness and LRC<=13 induction split, every remaining packet should route to:
+
+```text
+|SPEC| < product,
+HYP-3422 two-adic interval relocation,
+odd phase-cover debt on the even-good window,
+finite owner-current/Menger sidecar,
+additive/multiplicative energy converted to low-SPEC penalty,
+HYP-3421 off-grid/signed-SPEC transparency,
+HYP-3423 topology-to-magnitude guardrail,
+or explicit off-path 7-adic/census filter.
+```
+
+Do not use C3/Galois/census or add/mult parity as terminal floor proofs unless
+the packet records which of those exits it feeds. -> HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419,
+HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3238, HYP-3234, HYP-3137,
+HYP-2272, HYP-2129, HYP-2128, THM-414, THM-523, LTI-385, LTT-285, T1385,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3417 owner-cut dual current addendum:**
 HYP-3417 sharpens the owner-support/Menger route into a concrete certificate
 obligation.  On the current HYP-3410 mixed fibers, all selected owner-current

@@ -71,6 +71,7 @@ route-state closure median state / packet-route-certificate-sidecar-discharge cl
 AP-collar finite lemma certificate / rational witness intervals / uniform strict floor / unit-height obstruction vector
 Bring/Schwarz-Christoffel/BDH/Menger charal recursion / branch exits / accessory owner debt / finite channel variance / owner cut / recursive signature
 owner-cut resurrection calculus / cross-exit owner clauses / minimum owner transversals / exit-pure cut codes / terminal router
+covering-floor duality transfer / two-adic even descent / signed SPEC floor / odd phase-cover debt / owner-current sidecar / topology-to-magnitude guardrail / off-path 7-adic filter
 sixth-power collision sidecar / native support-six vs padded square-cube shadow
 q-cusp ledger / q-Pochhammer product tail / finite principal-part polar exits
 sixth-power certificate extension / lane tuple / collision rank / residue words / legal exit
@@ -470,6 +471,7 @@ record what it destroys before asking it to prove anything.
 | LTI-371 | Bring/Schwarz-Christoffel/BDH/Menger charal recursion | Five-exit branch alphabet, contact-polygon turn word, accessory endpoint-owner debt, finite owner-channel variance, Menger owner-label cuts, characteristic/chiral/arc-lift recursion under `+14` ladders | HYP-3410 executes the user's Bring radical, Schwarz-Christoffel, Barban-Davenport-Halberstam, Menger, and charal-signature prompts as the exact mixed-fiber slice adjacent to the HYP-3407 boundary/special-function route.  The strongest finite signal is owner-cut recursion: the height leak is separated by `5:g1`, the persistent owner leak by `1:g1`, and the `(72,20)` `10->20` frontier needs a size-3 owner cut led by `13:g1` variance.  Charal signatures expose stable positive-open ladders for `1/3/5 -> 26,40,54`, apex-bearing ladders for `12 -> 48,132`, and petal branches at `13 -> 26` and `10 -> 20`. | HYP-3410, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-3124, HYP-2969, HYP-2963, THM-523, T1371, LTT-271, LTI-371, OPEN-Q-108 | Enlarge the HYP-2963 first-failure bank and test whether every mixed fiber has exit-pure charal recursion, a bounded owner cut, a finite-BDH separating channel, Schwarz-Christoffel accessory reconstruction, or named owner/height/off-grid/state-lift debt. |
 | LTI-380 | Charal owner-cut recursion prototype | Minimal owner-cut sidecars, cut-core/frequency ledger, exact binary owner-label decision trees, charal purity levels, finite BDH label priority, bounded owner-cut theorem target, scalar-firewall gates | HYP-3419 is the second-pass implementation over incoming HYP-3410.  It computes exact owner-cut decision trees for the represented mixed fibers: old height and owner leaks are depth-1 one-label cuts, while the `10->20` frontier has minimum cut size `3`, empty core, and optimal tree `13:g1? -> positive-open else 11:g1? -> positive-open else 2:g2? -> positive-open else unit-petal`.  The theorem target is bounded owner-cut recursion, not a one-label owner theorem. | HYP-3419, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3124, HYP-2963, THM-523, T1380, LTT-280, LTI-380, OPEN-Q-108 | Extend the HYP-2963/HYP-3406 bank beyond `(72,20)` and track the first growth of minimal owner-cut size; if it stays bounded, attempt a finite owner-cut theorem or dual owner-current certificate; if it grows, classify the first growth as SC accessory debt, tropical/off-grid debt, state-lift debt, or named residual. |
 | LTI-383 | Two-adic off-grid relocation | Doubling lift `S = O union 2E`, even-half safe set `E_safe`, two odd branch filters, finite-ruler interval overlap, explicit branch-bad intervals, owner-current sidecar labels for tight packets | HYP-3422 corrects the resonant-transparency route after HYP-3418: the naive nonresonant witness usually lands at `t=1/2` and kills evens, so the floor should be stated as `E_safe(1/14) cap (odd_branch_0_good union odd_branch_1_good) != empty` under `u=2t`.  Exact scout: `24/24` audited covering rows have full `M>=1/14`, off-`14`-grid optimizers, failed naive nonresonant witnesses, and branch relocation certificates. | HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3129, HYP-2963, THM-523, T1383, LTT-283, LTI-383, OPEN-Q-108 | Prove the interval-overlap lemma by finite-ruler, Helly, or exact interval-piercing methods on `E_safe`; use owner-cut labels such as `2:g2` only to name finite exceptions, not as a replacement for the two-adic branch theorem. |
+| LTI-385 | Covering-floor duality transfer | Two-adic even floor descent, signed SPEC decorrelation floor, even-good/odd-phase cover debt, recursive quotient router, owner-current even-cover sidecar, add/mult energy-to-SPEC transfer, topology-to-magnitude guardrail, off-path 7-adic filter | HYP-3424 re-reads the even/odd, positive/negative, odd/even, and addition/multiplication dualities after S259/HYP-3418, now treating HYP-3423's topology/arithmetic guardrail, HYP-3421's off-grid transparency/Rprime branch, and HYP-3422's two-adic relocation lemma as floor-facing companions.  The odd/coprime witness at `t=1/2` is rejected because every even speed dies there; odd data becomes phase-cover debt, while even fold/two-adic descent is the floor carrier.  The scout keeps exact anchors `8*C(14,2)+1=27^2`, binders `even=376` vs `odd=279`, coprime transparency `0/400`, S558 wall slack `0`, HYP-3423 topology-to-magnitude guardrail, HYP-3422 interval relocation, HYP-3421 off-grid transparency/Rprime branch, HYP-3420 owner/chiral exactness, and frontier current `{2:g2,11:g1,13:g1}`. | HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3238, HYP-3234, HYP-3137, HYP-2272, HYP-2129, HYP-2128, THM-414, THM-523, T1385, LTT-285, LTI-385, OPEN-Q-108 | Formulate the covering-packet transfer lemma: every remaining covering packet after q-witness and LRC<=13 induction must feed `|SPEC| < product`, HYP-3422 two-adic interval relocation, odd phase-cover debt, finite owner/Menger sidecar, add/mult energy-to-SPEC penalty, HYP-3421 off-grid/signed-SPEC transparency, HYP-3423 topology-to-magnitude guardrail, or explicit off-path 7-adic/census filter. |
 | LTI-373 | Special-function cut signature recursion | Recursive `charal_signature` sidecars, Bring radical branch alarms, Schwarz-Christoffel cut angles, BDH variance packets, Menger exit cuts, Soldner zero normalization, Sophie Germain quartic split, HLW separation, Krasner stability, Mertens residuals | HYP-3412 executes a post-HYP-3406 creative synthesis scout on the `(72,20)` expanded bank (`2431` rows).  Its CHARAL mixed-fiber ladder says residue leaves `3` mixed fibers; residue+height/`v2` leaves `2`; BDH variance leaves `3`; cut-angle, Krasner radius, and owner support each leave `0`; Sophie quartic and honest Bring branch alarm each leave `2`; PGF proxy leaves `1`.  The Menger-style separator table says the `14`-row owner leak, `12`-row petal `10->20` owner/height-persistent leak, and `3`-row height leak all admit one-sidecar covers by `SC_cut_angle`, `Krasner_radius`, or `owner_support`, while height/`v2` separates only some leaks. | HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, THM-523, T1373, LTT-273, LTI-373, OPEN-Q-108 | Enlarge beyond `(72,20)` and test whether `residue + cut_angle_word` and `residue + krasner_radius_word` remain exact.  If either fails, record the first collision and decide whether full owner support, exact cut labels, or PGF/root branch payload is the true next sidecar. |
 | LTI-374 | Owner-cut resurrection calculus | Cross-exit row-pair clauses, endpoint-owner symmetric differences, minimum owner-label transversals, binary cut-code buckets, terminal chamber router, dual/Farkas current readout | HYP-3414 turns HYP-3411/HYP-3412/HYP-3413/HYP-3409/HYP-3410 into a finite proof-facing calculus.  In each mixed theorem-exit fiber, every cross-exit row pair emits an owner-label clause; a legal owner cut is a hitting set whose cut-code buckets are theorem-exit pure.  Known values are singleton cuts `5:g1` and `1:g1` for the first two leaks, but the `(72,20)` `10->20` frontier has minimum cut size `3`, five minimum cuts, and empty core, so the live theorem is bounded owner transversals rather than a universal singleton owner label. | HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-2969, HYP-2963, THM-523, T1374, LTT-274, LTI-374, OPEN-Q-108 | Extend HYP-3406 beyond `(72,20)`, run the clause/transversal calculator on the first `residue+owner_support` failure if one appears, and add child-deck stability plus terminal-exit routing to every cut-pure fiber. |
 | LTI-382 | Off-grid resonance transparency / Rprime closure | Off-grid witness cells, resonant-speed distance ledger, `14Q` grid-kill check, canonical `84m` binding formula, 2-adic even-speed descent, signed-SPEC `Rprime` constant chase, fiber-PGF/edge-witness glue | HYP-3421 is the exact scout companion to HYP-3415's one-floor critical path, corrected by HYP-3418.  It verifies named off-grid optima with floors `1/12`, `1/8`, `1/9`, and canonical `{1..11,13,84m}` formula `t=(35m+2)/(84m+5)`, `M=7m/(84m+5)>1/14`; every checked resonant speed, including `14Q` tips, is safe at the selected full optima.  The technique recasts resonance as grid-local danger plus full-optimum transparency, while HYP-3418 keeps the floor on the 2-adic/even-speed descent route before the HYP-3129/HYP-3140 `Rprime` chase. | HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3412, HYP-3410, HYP-3310, HYP-3266, HYP-3265, HYP-3255, HYP-3140, HYP-3136, HYP-3129, HYP-3125, HYP-3124, HYP-2896, THM-523, T1382, LTT-282, LTI-382, OPEN-Q-108 | Prove the all-packet transparency classifier, the 2-adic even-speed descent, and the closed-form signed-SPEC `Rprime >= c` constant chase. |
@@ -6801,6 +6803,70 @@ Next agent hook: prove the interval-overlap lemma by finite-ruler, Helly, or
 exact interval-piercing estimates on `E_safe`.  If the lemma fails in a larger
 search, record the first failure as an owner-current, height, exact-period,
 state-lift, or named two-adic branch debt.
+
+## LTI-385: Covering-Floor Duality Transfer
+
+Created by codex-2026-06-28 for HYP-3424/T1385.  This technique reads prior
+duality work through the S259/HYP-3418 correction that the covering floor is
+2-adic, while importing HYP-3423's topology/arithmetic guardrail, HYP-3421's
+off-grid transparency/Rprime branch, and HYP-3422's two-adic interval
+relocation as floor-facing companions.
+
+Carrier / vertex set:
+
+```text
+proof obligations and duality-transfer gates, not runners, residues, or constants
+```
+
+Core transfer:
+
+```text
+even fold / two-adic descent
+-> signed SPEC decorrelation floor
+-> odd phase-cover debt or finite owner-current sidecar
+-> HYP-3423 topology-to-magnitude legality guardrail
+-> off-path filter for 7-adic census data
+```
+
+Exact anchors:
+
+```text
+C(14,2)=91
+8*C(14,2)+1=729=27^2
+HYP-3418 binders: even=376 odd=279
+HYP-3418 coprime transparency: 0/400
+S558 AP/V* safe slack: 0
+HYP-3423 topology guardrail: q-uniform topology cannot close q-specific magnitude floor
+HYP-3422 two-adic relocation: E_safe branch-overlap lemma is the interval form
+HYP-3421 off-grid/Rprime branch: resonance transparency feeds signed SPEC
+HYP-3420 owner/chiral sidecar: residue+owner_chiral_class leaves 0 mixed fibers on scanned banks
+HYP-3417 frontier current: {2:g2,11:g1,13:g1}
+```
+
+Preserved LRC predicate: the covering-floor predicate only after the packet
+feeds `|SPEC| < product`, two-adic descent, odd phase-cover debt, finite
+owner-current/Menger sidecar, add/mult energy-to-SPEC penalty, or an explicit
+HYP-3423 legality/off-path filter.
+
+Destroyed information if used naively: raw row identity, terminal C3/Galois
+census shadows, odd/coprime witness at `t=1/2`, additive/multiplicative parity
+without metric floor, and scalar summaries.
+
+Tournament fingerprint: `9` transfer gates, score histogram
+`{-45:1, -9:1, 24:1, 37:1, 50:1, 57:1, 59:1, 62:1, 67:1}`, no directed
+`3`-cycles, and priority path
+`D00 two_adic_even_floor_descent -> D01 signed_SPEC_decorrelation_floor -> D02 even_good_odd_phase_cover -> D03 recursive_quotient_sidecar_router -> D04 owner_current_even_cover_sidecar -> D05 additive_multiplicative_energy_transfer -> D06 parity_redei_odd_sector_guard -> D07 c3_galois_residue_skeleton_filter -> D08 raw_7adic_or_scalar_shadow`.
+
+Anchors: HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417,
+HYP-3416, HYP-3415, HYP-3238, HYP-3234, HYP-3137, HYP-2272, HYP-2129,
+HYP-2128, THM-414, THM-523, LTI-385, LTT-285, T1385, OPEN-Q-108.
+
+Next agent hook: turn the router into a concrete covering-packet lemma.  After
+q-witness and LRC<=13 induction, classify every remaining packet by which
+floor exit it feeds: signed SPEC, two-adic descent, odd phase cover, finite
+owner sidecar, add/mult energy penalty, HYP-3422 interval relocation,
+HYP-3421 off-grid/signed-SPEC transparency, HYP-3423 topology-to-magnitude
+guardrail, or off-path 7-adic filter.
 
 ## LTI-365: Creative Reframe Lead Atlas
 

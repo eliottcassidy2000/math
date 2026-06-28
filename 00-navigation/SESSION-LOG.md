@@ -32,6 +32,36 @@ shadows of the same even-cover coordinate.  Use those labels to name tight
 packets, but prove the floor by the interval-overlap lemma, not by
 apex-7/Galois/census shortcuts.
 
+## codex-2026-06-28 -- HYP-3424 covering-floor duality transfer
+
+Looked back through HYP-3238/HYP-3234 even/odd and positive/negative dualities,
+HYP-2272 additive face = multiplicative energy, HYP-2128/HYP-2129 add/mult
+parity, S558 even-fold measure reduction, incoming S259/HYP-3418, incoming
+HYP-3423 topology/arithmetic guardrail, incoming HYP-3422 two-adic interval
+relocation, incoming HYP-3420 owner/chiral exactness, and incoming HYP-3421
+off-grid transparency/Rprime closure.  Added HYP-3424/T1385/LTI-385/LTT-285 plus
+script/result/reflection:
+
+```text
+04-computation/lrc14_covering_floor_duality_transfer_codex_20260628.py
+05-knowledge/results/lrc14_covering_floor_duality_transfer_codex_20260628.out
+05-knowledge/hypotheses/HYP-3424-lrc14-covering-floor-duality-transfer.md
+07-reflections/lrc14-covering-floor-duality-transfer-codex-20260628.md
+```
+
+Readout: the odd/coprime witness at `t=1/2` is an illegal covering-floor
+scalarization because every even speed dies there.  The useful duality transfer
+is `even fold / two-adic descent -> signed SPEC floor -> odd phase-cover debt
+or finite owner-current sidecar -> topology-to-magnitude guardrail`.  Add/mult
+energy is useful only after it becomes SPEC penalty or named odd debt;
+C3/Galois/census data is an off-path filter unless it feeds the floor.
+HYP-3422 supplies the interval relocation form of the two-adic branch, and
+HYP-3421 supplies the off-grid/Rprime branch that should be fed by the
+signed-SPEC side; HYP-3423 is the guardrail preventing q-uniform topology from
+closing this q-specific magnitude floor.  Tournament Analysis uses transfer gates as
+vertices (`9` vertices, no directed 3-cycles, path
+`D00 -> D01 -> D02 -> D03 -> D04 -> D05 -> D06 -> D07 -> D08`).
+
 ## kind-pasteur-2026-06-28-S259 -- the COVERING FLOOR is 2-ADIC not 7-adic: even speeds are the binding obstruction; coprime-to-14 reduction FAILS; 2-adic descent route
 Owner: quick, high-density high-leverage insights on the cutting-edge question (the covering floor = the one inequality completing LRC(14)). HYP-3418, sharpening HYP-3415.
 - **NAIVE REDUCTION FAILS (0/400):** "covering S lonely via coprime-to-14 part R_nr lonely + resonant transparent" -- R_nr is all ODD, loneliest at t=1/2 (margin 1/2), but EVERY even speed dies there. So the R_nr-witness is useless; transparency holds only at the FULL M(S) optimum (correction to S258).
