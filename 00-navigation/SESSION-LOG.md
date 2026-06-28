@@ -31648,3 +31648,46 @@ ask for a decomposition
 Checkpoint: committed locally as `2edae721e` (`monad-explorer: add HYP-3246 shell-lag contact sidecar`).
 Push attempt failed because the environment has no GitHub credentials for the
 `https://github.com/eliottcassidy2000/math.git` remote (`fatal: could not read Username for 'https://github.com'`), so the work is committed but not pushed from this session.
+## codex-2026-06-28 -- Unit equioscillation nullspace scout -- HYP-3257
+
+Integrated the newly landed HYP-3246/HYP-3247 Chebyshev/equioscillation frame
+with the older safe-component and Q108 machinery by testing what the six unit
+contact points actually see.
+
+Main exact result: the active unit-gradient matrix has rank `3`, with rows
+corresponding to the three complement binders `(1,13)`, `(3,11)`, and `(5,9)`.
+Residues `2,4,6,7,8,10,12` are zero columns; residue `0 mod 14` is visible
+only through the covering kill switch.  AP, Goddyn-Wong `12->24`, the positive
+near-miss `12->36`, and the height decoy `2->16` can all share the unit
+projection; `2->16` even shares the mod-14 ledger while having strict safe mass
+`11/364`.
+
+The one-swap AP collar up to added speed `84` has `923` rows, `317`
+unit-blind rows, exactly one unit-blind boundary-only row (`12->24`), and
+`316` positive unit-blind rows led by `12->36` with mass `1/1260`.
+
+Navigation updated: HYP-3257, result index, T1348, LTI-348, LTT-248,
+OPEN-Q-108, and the reflection
+`07-reflections/lrc14-unit-equioscillation-nullspace-codex-20260628.md`.
+
+Fetch-time integration: origin/main added the q-uniform HYP-3248, the
+HYP-3249/HYP-3251/HYP-3252 index-theorem tests, and mac-mini S80/HYP-3250
+while this scout was local.  This scout was renumbered to HYP-3257.  The
+incoming verdict matches the nullspace readout: the unit index describes the
+ambient saddle and witness count, but the S-dependent proof work lives in
+tight-locus isolation, uniform margin/floor, and blind residue/height sidecars.
+During push, origin also added HYP-3253/S81, a contact-holonomy HYP-3253
+slot, HYP-3254's Q(sqrt-7) floor-SPEC reorganization, HYP-3255/S82, and
+HYP-3256; this scout was kept at HYP-3257.  S81's rigorous unit-witness
+construction and bounded single-swap margin support the same split, while its
+resonant survivor-positivity warning names the analytic branch that the blind
+ledger must feed.  HYP-3254 partially organizes that branch but still leaves
+the S-dependent floor proof as the content.  S82 and HYP-3256 sharpen the
+reason: unit-grid core, off-grid bulk, and apex residues are organizing
+coordinates, while tight-vs-loose remains magnitude/height-level.
+
+Next hook: formulate the degree/index theorem on the full packet
+`unit rank-3 index + blind residue/height ledger + strict safe-component atlas
++ covering 14-multiple kill switch`, then prove every blind motion stays in
+AP/Goddyn-Wong equality, opens an already-sufficient strict component, or
+enters the covering/floor branch.

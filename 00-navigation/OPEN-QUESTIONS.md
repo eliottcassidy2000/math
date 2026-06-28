@@ -1,5 +1,31 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3257 unit equioscillation nullspace addendum:**
+HYP-3257 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.
+The six unit active gradients at `a/14`, `a in (Z/14)*`, have exact rank `3`
+over residue coordinates `1..13`, not rank `6`.  They only see the three
+antipodal complement binders `(1,13)`, `(3,11)`, and `(5,9)`.  Nonunit
+residues `2,4,6,7,8,10,12` are zero columns, and residue `0 mod 14` appears
+only through the covering kill switch that changes unit status from `E6 K0 S0`
+to `E0 K6 S0`.
+
+Exact stress rows: AP and Goddyn-Wong `12->24` share the unit projection and
+remain boundary-only; near-miss `12->36` also shares the unit projection but
+has strict safe mass `1/1260`; petal `10->20` has mass `1/980`; and same-residue
+height move `2->16` shares both the unit projection and mod-14 residue ledger
+while having mass `11/364`.  The one-swap AP collar up to added speed `84`
+contains `317` unit-blind rows, exactly one unit-blind boundary row
+(`12->24`), and `316` positive unit-blind rows.
+
+Open task: build the actual index/degree theorem on the full packet
+`unit rank-3 index + blind residue/height ledger + strict safe-component atlas
++ covering 14-multiple kill switch`.  A proof may use the unit frame for the
+14-free witness fragment and tight-core naming, but it must either prove blind
+height moves cannot create new strict components outside the existing atlas or
+route them through the already-good safe-component / covering-floor branches.
+-> HYP-3257, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242, HYP-3241,
+HYP-3132, HYP-2909, THM-523, T1348, LTI-348, LTT-248, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3238 even/odd positive/negative duality bridge addendum:**
 HYP-3238 executes the proof bridge joining HYP-3236's positive Green graph,
 HYP-3220's even-odd = positive-negative finalization, HYP-3219's

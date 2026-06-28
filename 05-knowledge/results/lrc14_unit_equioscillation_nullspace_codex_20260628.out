@@ -1,0 +1,115 @@
+HYP-3257 unit equioscillation nullspace scout
+==============================================================================
+basis=HYP-3246/HYP-3247 Chebyshev unit equioscillation frame
+question=what the six unit active gradients see and what they forget
+
+[1] UNIT ACTIVE GRADIENT MATRIX
+  columns=residue classes 1..13
+  rows=unit points (1, 3, 5, 9, 11, 13)
+  rank=3 nullity=10
+  zero columns / invisible residues among 1..13 = [2, 4, 6, 7, 8, 10, 12]
+  nonunit residues mod 14 including covering residue = (0, 2, 4, 6, 7, 8, 10, 12)
+  row vectors:
+    a= 1: [(1, 1), (13, -1)]
+    a= 3: [(5, 1), (9, -1)]
+    a= 5: [(3, 1), (11, -1)]
+    a= 9: [(3, -1), (11, 1)]
+    a=11: [(5, -1), (9, 1)]
+    a=13: [(1, -1), (13, 1)]
+  readout=the local unit Chebyshev/index coordinate has only three antipodal binding rows; blind residue/height data are required sidecars.
+
+[2] NAMED ROW AUDIT
+  AP                 mass=       0 (0.000000000) comps= 0 closed= 6
+    unit=E6 K0 S0 full_pairs=3 unit_L1=0 unit_delta=0 nonunit_delta=0
+    note=tight AP unit equioscillation
+  GW 12->24          mass=       0 (0.000000000) comps= 0 closed= 6
+    unit=E6 K0 S0 full_pairs=3 unit_L1=0 unit_delta=0 nonunit_delta=10:+1,12:-1
+    note=tight Goddyn-Wong; unit projection unchanged
+  near 12->36        mass=  1/1260 (0.000793651) comps= 2 closed=10
+    unit=E6 K0 S0 full_pairs=3 unit_L1=0 unit_delta=0 nonunit_delta=8:+1,12:-1
+    note=first positive near-miss; unit projection unchanged
+  petal 10->20       mass=   1/980 (0.001020408) comps= 2 closed=10
+    unit=E6 K0 S0 full_pairs=3 unit_L1=0 unit_delta=0 nonunit_delta=6:+1,10:-1
+    note=positive petal; unit projection unchanged
+  petal 13->26       mass=   1/182 (0.005494505) comps= 2 closed=10
+    unit=E6 K0 S0 full_pairs=2 unit_L1=1 unit_delta=13:-1 nonunit_delta=12:+1
+    note=positive petal; drops unit residue 13
+  blind decoy 2->16  mass=  11/364 (0.030219780) comps= 2 closed=10
+    unit=E6 K0 S0 full_pairs=3 unit_L1=0 unit_delta=0 nonunit_delta=0
+    note=nonunit swap; unit projection unchanged
+  covering 12->84    mass=563/105105 (0.005356548) comps= 8 closed=16
+    unit=E0 K6 S0 full_pairs=3 unit_L1=0 unit_delta=0 nonunit_delta=0:+1,12:-1
+    note=covering row; 14-multiple kills unit points
+  covering 6->98     mass=1543/294294 (0.005243056) comps= 6 closed=12
+    unit=E0 K6 S0 full_pairs=3 unit_L1=0 unit_delta=0 nonunit_delta=0:+1,6:-1
+    note=covering row; 14-multiple kills unit points
+  key contrast: GW 12->24 and near 12->36 are identical to AP on the unit projection, but one is boundary-only and the other has strict mass 1/1260; 2->16 shows that even identical mod-14 blind residues can have strict mass.
+
+[3] ONE-SWAP AP COLLAR SCAN
+  rows=923 max_add=84
+  ('boundary', 'unit_blind', 'E6 K0 S0'): 1
+  ('positive', 'unit_blind', 'E0 K6 S0'): 42
+  ('positive', 'unit_blind', 'E6 K0 S0'): 274
+  ('positive', 'unit_visible', 'E0 K6 S0'): 36
+  ('positive', 'unit_visible', 'E6 K0 S0'): 570
+  unit-blind rows=317 boundary=1 positive=316
+  unit-blind boundary rows:
+    12->24   mass=0 (0.000000000) nonunit_delta=10:+1,12:-1
+  smallest unit-blind positive rows:
+    12->36   mass=1/1260 (0.000793651) components= 2 nonunit_delta=8:+1,12:-1
+    10->20   mass= 1/980 (0.001020408) components= 2 nonunit_delta=6:+1,10:-1
+    12->48   mass=13/5880 (0.002210884) components= 4 nonunit_delta=6:+1,12:-1
+    6->46    mass= 1/364 (0.002747253) components= 2 nonunit_delta=4:+1,6:-1
+    12->60   mass= 1/294 (0.003401361) components= 4 nonunit_delta=4:+1,12:-1
+    6->63    mass= 1/294 (0.003401361) components= 4 nonunit_delta=6:-1,7:+1
+    6->40    mass=43/10920 (0.003937729) components= 4 nonunit_delta=6:-1,12:+1
+    12->72   mass=283/64680 (0.004375387) components= 6 nonunit_delta=2:+1,12:-1
+    6->52    mass=9/2002 (0.004495504) components= 4 nonunit_delta=6:-1,10:+1
+    12->84   mass=563/105105 (0.005356548) components= 8 nonunit_delta=0:+1,12:-1
+    6->44    mass= 5/924 (0.005411255) components= 2 nonunit_delta=2:+1,6:-1
+    6->50    mass= 5/924 (0.005411255) components= 2 nonunit_delta=6:-1,8:+1
+  smallest exact-at-all-units positive rows:
+    12->36   mass=1/1260 (0.000793651) unit_L1=0 nonunit_delta=8:+1,12:-1
+    10->20   mass= 1/980 (0.001020408) unit_L1=0 nonunit_delta=6:+1,10:-1
+    6->69    mass=19/10626 (0.001788067) unit_L1=1 nonunit_delta=6:-1
+    6->75    mass=4/1925 (0.002077922) unit_L1=1 nonunit_delta=6:-1
+    12->48   mass=13/5880 (0.002210884) unit_L1=0 nonunit_delta=6:+1,12:-1
+    6->17    mass= 1/364 (0.002747253) unit_L1=1 nonunit_delta=6:-1
+    6->23    mass= 1/364 (0.002747253) unit_L1=1 nonunit_delta=6:-1
+    6->46    mass= 1/364 (0.002747253) unit_L1=0 nonunit_delta=4:+1,6:-1
+    12->60   mass= 1/294 (0.003401361) unit_L1=0 nonunit_delta=4:+1,12:-1
+    6->63    mass= 1/294 (0.003401361) unit_L1=0 nonunit_delta=6:-1,7:+1
+    6->29    mass=423/116116 (0.003642909) unit_L1=1 nonunit_delta=6:-1
+    6->81    mass=304/81081 (0.003749337) unit_L1=1 nonunit_delta=6:-1
+  first covering/killed rows:
+    12->84   mass=563/105105 (0.005356548) components= 8 nonunit_delta=0:+1,12:-1
+    6->56    mass=943/168168 (0.005607488) components= 4 nonunit_delta=0:+1,6:-1
+    6->14    mass= 7/858 (0.008158508) components= 4 nonunit_delta=0:+1,6:-1
+    6->28    mass= 7/858 (0.008158508) components= 4 nonunit_delta=0:+1,6:-1
+    6->42    mass= 7/858 (0.008158508) components= 4 nonunit_delta=0:+1,6:-1
+    6->70    mass= 7/858 (0.008158508) components= 4 nonunit_delta=0:+1,6:-1
+    6->84    mass= 7/858 (0.008158508) components= 4 nonunit_delta=0:+1,6:-1
+    12->70   mass=709/70070 (0.010118453) components= 4 nonunit_delta=0:+1,12:-1
+
+[4] TOURNAMENT ANALYSIS
+  vertices=proof carriers, not runners
+  pairwise_observable=which carrier decides threshold branch while retaining unit index and blind residue/height sidecars
+  switch/gauge=A beats B by majority over branch decision, unit index, blind residue/height, covering, endpoint, formalization criteria
+  strict_safe_component_atlas         vector=(5, 5, 4, 5, 5, 4) score=5 note=decides boundary-only vs positive open mass and keeps endpoints
+  unit_plus_blind_residue_height_ledger vector=(5, 4, 5, 4, 4, 5) score=4 note=keeps unit index plus blind residue and height sidecars
+  covering_14_multiple_kill_switch    vector=(4, 3, 4, 5, 4, 5) score=3 note=detects the covering branch where all unit points are killed
+  unit_active_gradient_rank           vector=(3, 5, 1, 2, 3, 5) score=2 note=computes the local Chebyshev/index coordinate but forgets nonunits
+  full_unit_residue_signature         vector=(3, 4, 2, 2, 3, 4) score=1 note=records the three binding complement pairs
+  raw_unit_values                     vector=(2, 3, 0, 1, 2, 5) score=0 note=knows only exact/slack/killed values at a/14
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3cycles=0
+  scc_sizes=[1,1,1,1,1,1]
+  hamiltonian_path_count=1
+  priority_path=strict_safe_component_atlas -> unit_plus_blind_residue_height_ledger -> covering_14_multiple_kill_switch -> unit_active_gradient_rank -> full_unit_residue_signature -> raw_unit_values
+
+[5] ASSUMPTION CHALLENGE
+  alternate vertices considered: runners, unit points, complement-pair binders, unit-gradient rows, nonunit residues, height/scale moves, cover arcs, safe components, and proof obligations.
+  chosen vertices: proof carriers plus the unit-gradient/nullspace split.
+  preserved predicate: the HYP-3246/HYP-3247 unit threshold certificate and the exact strict-safe/open-boundary distinction at delta=1/14.
+  destroyed information: nonunit residue placement, height/scale placement, higher safe peaks, endpoint-owner topology, and covering-floor behavior unless the blind sidecar is retained.
+  challenged assumption: equioscillation at the six unit points is already a complete local proof object.  It is a rank-3 index coordinate and must be glued to blind residue/height ledgers plus safe-component topology.

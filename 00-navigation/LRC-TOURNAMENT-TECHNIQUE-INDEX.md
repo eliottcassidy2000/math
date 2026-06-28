@@ -7119,6 +7119,7 @@ quotient_legality_status
   HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3226,
   HYP-3225, HYP-3224, HYP-3204, HYP-3203, HYP-3202, HYP-3138, LTI-345, T1345,
   OPEN-Q-108.
+
 ## LTT-247: Contact-Holonomy Curvature Tournament
 
 - **Created by:** codex-2026-06-28 for HYP-3253/T1347.
@@ -7152,3 +7153,27 @@ quotient_legality_status
 - **Pointers:** HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248,
   HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
   HYP-3239, HYP-3228, HYP-3204, LTI-347, T1347, OPEN-Q-108.
+
+## LTT-248: Unit Nullspace Proof-Carrier Tournament
+
+- **Move:** Rank proof carriers for the HYP-3257 unit-nullspace gap, not
+  runners or residue classes.  The vertices are `strict_safe_component_atlas`,
+  `unit_plus_blind_residue_height_ledger`, `covering_14_multiple_kill_switch`,
+  `unit_active_gradient_rank`, `full_unit_residue_signature`, and
+  `raw_unit_values`.
+- **Pairwise observable:** Which carrier decides the threshold branch while
+  retaining the unit index and blind residue/height sidecars.
+- **Switch/gauge:** `A -> B` when `A` wins a majority of branch-decision,
+  unit-index, blind-residue/height, covering, endpoint, and formalization
+  criteria.
+- **Fingerprint:** transitive tournament with score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1}`, no directed 3-cycles, singleton SCCs, and one
+  Hamiltonian path:
+  `strict_safe_component_atlas -> unit_plus_blind_residue_height_ledger ->
+  covering_14_multiple_kill_switch -> unit_active_gradient_rank ->
+  full_unit_residue_signature -> raw_unit_values`.
+- **Guardrail:** raw unit values and even the unit active-gradient rank forget
+  same-residue height moves such as `2->16`; the unit index is terminal only
+  after the blind ledger and safe-component/covering branches are glued in.
+- **Pointers:** HYP-3257, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242,
+  HYP-3241, HYP-3132, HYP-2909, THM-523, LTI-348, T1348, OPEN-Q-108.

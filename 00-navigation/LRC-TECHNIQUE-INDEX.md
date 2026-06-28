@@ -5273,6 +5273,7 @@ HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234,
 HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3226,
 HYP-3225, HYP-3224, HYP-3204, HYP-3203, HYP-3202, HYP-3138, LTT-245, T1345,
 OPEN-Q-108.
+
 ## LTI-347: Contact-Holonomy Curvature Sheaf
 
 Created by codex-2026-06-28 for HYP-3253/T1347.
@@ -5323,3 +5324,34 @@ or named residual debt.
 Pointers: HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248,
 HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
 HYP-3239, HYP-3228, HYP-3204, LTT-247, T1347, OPEN-Q-108.
+
+## LTI-348: Unit Equioscillation Nullspace Packet
+
+Use the six HYP-3246/HYP-3247 unit contact points as a local index coordinate,
+then immediately attach the sidecars it cannot see.  The exact gradient matrix
+has rank `3` and records only complement-pair binders `(1,13)`, `(3,11)`, and
+`(5,9)`.
+
+Technique:
+
+```text
+compute unit active-gradient rank
+record blind nonunit residue and height/scale ledgers
+separate covering rows by the 14-multiple unit-kill switch
+classify every blind move through strict safe components or equality atoms
+```
+
+Preserves: the unit threshold certificate, the three antipodal binding pairs,
+the 14-free witness fragment, and tight-core naming.
+
+Destroys if used alone: nonunit residue placement, same-residue height moves
+such as `2->16`, higher safe peaks, endpoint-owner topology, and covering-floor
+behavior.
+
+Next hook: prove that every unit-blind motion either stays in the AP/GW
+equality atom, opens a strict safe component already sufficient for LRC14,
+or enters the covering/floor branch.  This is the proof-facing bridge from the
+Chebyshev unit frame to the Q108 safe-component atlas.
+
+Pointers: HYP-3257, HYP-3247, HYP-3246, HYP-3245, HYP-3243, HYP-3242,
+HYP-3241, HYP-3132, HYP-2909, THM-523, LTT-248, T1348, OPEN-Q-108.
