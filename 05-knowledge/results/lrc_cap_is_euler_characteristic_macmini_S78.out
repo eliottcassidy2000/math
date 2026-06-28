@@ -1,0 +1,10 @@
+cap = chi_meas(danger-cover nerve) = inclusion-exclusion (the lonely set = the cover's HOLE):
+  P=(1, 13): chi_meas = 66/91 = 0.72527 = known cap 66/91  match=True
+  P=(1, 12, 13): chi_meas = 55/91 = 0.60440  match=--
+  P=(1, 11, 12, 13): chi_meas = 1979/4004 = 0.49426 = known cap 1979/4004  match=True
+  P=(1, 5, 7, 8, 9): chi_meas = 2243/5880 = 0.38146 = known cap 2243/5880  match=True
+
+=> the combinatorial cap (inclusion-exclusion) IS the topological Euler characteristic of the cover nerve.
+   The geometry is the unifying frame: cap=Euler char (combinatorics); lonely=hole (homology);
+   witness=Borsuk-Ulam antipodal pair / odd degree (symmetry topology, kps S31av, 14=|D_7|, 7=3 mod4);
+   torus diagonal density = equidistribution (Diophantine). Even/real=Brouwer/SOS; odd/imaginary=Borsuk-Ulam.

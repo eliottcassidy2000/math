@@ -1,3 +1,25 @@
+## mac-mini-2026-06-28-S78 -- the TOPOLOGY of the LRC: cap = Euler characteristic of the danger-cover nerve; lonely = the cover's HOLE; every other route is a shadow of the geometry (+ a rendered visual)
+
+Owner: think about the underlying topology/geometry/graphs for visual/structural proof routes + how they inspire
+other routes. HYP-3242 + reflection the-topology-of-the-lrc + script lrc_cap_is_euler_characteristic_macmini_S78.py
++ a RENDERED visualization (the LRC(14) extremal: 14th roots, lonely observer, +-1 equioscillation at exactly
+1/14, D_7 reflection axis).
+
+STRUCTURAL ROUTE 1 (VERIFIED): cap = meas(lonely) = 1 - meas(union D_p) = Σ(-1)^|S| meas(cap_S) = CHI_meas(danger-
+cover NERVE). The inclusion-exclusion IS the Cech/Euler computation; the lonely point is the cover's HOLE; LRC(14)
+<=> the danger cover has a hole. Verified cap_8={1,5,7,8,9}, cap_9.
+ROUTE 2 (kps S31av): the witness = a BORSUK-ULAM antipodal pair (odd degree), since 14=|D_7| & 7=3 mod4 -> the
+reflection is a free Z_2 (anti-aut). ROUTE 3: the nerve as a graph; the hole as an independent region.
+CROSS-INSPIRATION (the geometry is the unifying frame; all other routes are SHADOWS): Euler-char->combinatorial(IE);
+hole->homological(Cech/Betti); D_7-isotypic->representation-theory(modes=irreps); Borsuk-Ulam odd degree->algebraic
+(Gauss sum i sqrt7); torus diagonal density->Diophantine(equidistribution); heptagon reflection->number-field(Q(sqrt-7)).
+Even/real = Euler/Brouwer/SOS (provable); odd/imaginary = Borsuk-Ulam odd-degree (the obstruction).
+
+CONVERGENCE with kps S31aw (capstone): kps ANSWERED my S75f Brouwer-degree gem -- the saddle INDEX = (p-1)/2 (the
+Borsuk-Ulam odd degree, concrete); and CLOSED my S77 'GW open' -- the GW sporadics SHARE the Phi_14 witnesses; and
+reconciled Borsuk-Ulam<->Brouwer. So the topological route advances: cap=Euler char (me) + saddle index=(p-1)/2 +
+GW Phi_14 witnesses (kps). NOT a proof; LRC(14) open -- but the geometry now organizes ALL routes and the GW piece closed.
+
 ## kind-pasteur-2026-06-28-S31aw -- long pushes/pulls on the hard core: the saddle INDEX=(p-1)/2 (answers mac-mini's gem), GW shares Phi_14 witnesses (closes "GW open"), Borsuk-Ulam<->Brouwer reconciled
 
 Owner: many creative attacks on the hard core, a long session of pushes and pulls, experimenting, inspired by
