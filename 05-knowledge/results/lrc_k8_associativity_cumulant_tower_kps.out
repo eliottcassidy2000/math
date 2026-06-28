@@ -1,0 +1,28 @@
+=== consec_8 cumulant tower (associativity = kappa_3) ===
+  Sigma kappa_2 (covariance, COMMUTATIVE) = +0.72162
+  Sigma kappa_3 (ASSOCIATOR/3-cocycle)    = +0.19261   <-- associativity-compression failure
+  Sigma kappa_4 (4-way)                   = -0.01026
+  Newton-Maclaurin: m2=E[(N-3)^2]=4.56054  m4=E[(N-3)^4]=33.13197  m4-m2^2=+12.33341 (CS slack)
+  S3 (3-way joint emptiness, moment)=1.34830  S4=0.64218  dip(-9S3+6S4)=-8.28163
+  associativity DEFECT = Sigma kappa_3 / S3 = +0.1429 (0=associative, !=0 = fails)
+
+  Over random k=8 clusters -- consec rank for Sigma-kappa_r:
+   Sigma k2 (covariance)   : consec rank=0/251 (0=max)  consec val=+0.72162
+   Sigma k3 (ASSOCIATOR)   : consec rank=24/251 (0=max)  consec val=+0.19261
+   Sigma k4                : consec rank=248/251 (0=max)  consec val=-0.01026
+
+--- kps-S31ai honest conclusions (1/7 corrected) ---
+CORRECTION: the associativity defect Sigma-k3/S3 = 0.142856 for consec_8 is NEAR 1/7 (0.142857) but NOT
+exact (=407891843/2855269200) and NOT universal (varies 0.079-0.201 across configs). A near-coincidence,
+not a law. DROP the "=1/7" claim.
+ROBUST findings:
+ 1. consec MAXIMIZES total covariance Sigma-kappa_2 (rank 0/251, +0.72162) -- the clean COMMUTATIVE/degree-2
+    target. Dissociated configs go NEGATIVE (rand1 -0.10, rand2 -0.05): empty sectors ANTI-correlate.
+    => consec is the unique FERROMAGNETIC/ORDERED (phi^4) phase: empty sectors form a CONTIGUOUS ARC
+    (three-gap regularity, THM-565), maximizing pairwise co-emptiness over independence.
+ 2. consec does NOT maximize the associator Sigma-kappa_3 (rank 24) -- the associativity-failure is NOT
+    consec-extremal (consistent: the odd/Worpitzky/S3 part is the genuinely hard, non-consec-controlled half).
+ 3. consec MINIMIZES kappa_4 (rank 248, -0.010 = most negative = phi^4 stabilizer sign lambda>0).
+SHARPENED PROOF TARGET: consec maximizes Sigma-kappa_2 = S2 - Sum p_i p_j (centered covariance) = the
+EXCESS co-emptiness over independence = the arc-contiguity of empty sectors. This is the coherence-
+extremality (HYP-2780) at DEGREE-2, = mac-mini's biquadratic fold, = the ferromagnetic phi^4 order parameter.
