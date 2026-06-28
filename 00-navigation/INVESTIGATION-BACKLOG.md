@@ -70,6 +70,39 @@ four windows bounded by `E:84` and odd walls `5,7`.
 Next: prove the bounded wall-alphabet lemma for primitive covering rows, or
 classify the first failure by owner-current, sheet, exact-period, state-lift,
 or named two-adic debt.
+## Lead codex-2026-06-28: Component-spine endpoint certificate
+
+**Status:** EVIDENCE / exact endpoint-spine audit; not proof
+(HYP-3429/T1390/LTI-390/LTT-290), extending HYP-3428's two-adic loss ledger,
+HYP-3427's wall-signature atlas, and HYP-3425's Helly obstruction route while
+complementing HYP-3426's mirror reduction.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3429-lrc14-component-spine-certificate.md`,
+script
+`04-computation/lrc14_component_spine_certificate_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_component_spine_certificate_codex_20260628.out`,
+and
+`07-reflections/lrc14-component-spine-certificate-codex-20260628.md`.
+
+Purpose: compress the HYP-3425 interval-union target into low-rank endpoint
+certificates.  A survivor window is labelled by active endpoint walls:
+
+```text
+E  = even-safe wall
+B0 = branch-0 odd near-integer wall
+B1 = branch-1 odd near-half wall
+```
+
+Readout on `150` rows: positive survivor windows `150/150`, all survivor
+windows endpoint-labelled `15576/15576`, best endpoint-spine rank `<=2` on
+`150/150`, mixed even/odd spines on `148/150`, and both-branch windows on
+`149/150`.  Best-rank histogram `{1:47,2:103}`.
+
+Next: prove the endpoint-spine lemma: every primitive covering row has either
+an E-only free component or a rank-2 mixed endpoint spine, with owner-current
+labels used only for genuine exceptions.
 
 ## Lead codex-2026-06-28: Two-branch obstruction / Helly certificate
 

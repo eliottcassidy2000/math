@@ -53,6 +53,31 @@ walls `5,7`.
 Next proof target: a bounded wall-alphabet lemma.  Prove that every primitive
 covering row has a legal survivor window wall word, or route the first failure
 to owner-current, sheet, exact-period, state-lift, or named two-adic debt.
+## codex-2026-06-28 -- HYP-3429 component-spine endpoint certificate
+
+Pulled incoming HYP-3425/T1386 first; it had sharpened the two-adic relocation
+target into the two-color bad-core identity
+`relocation_good = E_safe minus (B0_odd cap B1_odd)`.  During rebase, incoming
+HYP-3426/T1387/LTI-387/LTT-287 supplied the one-branch mirror reduction,
+HYP-3427/T1388/LTI-388/LTT-288 supplied the wall-signature certificate atlas,
+and HYP-3428/T1389/LTI-389/LTT-289 supplied the two-adic loss ledger; this
+lane records the endpoint-spine rank compression on top of them.  Added
+HYP-3429/T1390/LTI-390/LTT-290 plus script/result/reflection:
+
+```text
+04-computation/lrc14_component_spine_certificate_codex_20260628.py
+05-knowledge/results/lrc14_component_spine_certificate_codex_20260628.out
+05-knowledge/hypotheses/HYP-3429-lrc14-component-spine-certificate.md
+07-reflections/lrc14-component-spine-certificate-codex-20260628.md
+```
+
+Readout: on a `150`-row exact bank, every row has positive survivor windows
+and a best endpoint-spine rank `<=2`; all `15576` survivor windows are
+endpoint-labelled.  Mixed even/odd endpoint spines occur in `148/150` rows,
+both-branch survivor windows in `149/150`, and the two no-mixed rows are
+E-only free components.  The new proof target is an endpoint-spine lemma:
+every primitive covering row has either an E-only free component or a rank-2
+mixed endpoint spine feeding HYP-3425/HYP-3422 relocation.
 
 ## codex-2026-06-28 -- HYP-3425 two-branch obstruction / Helly certificate
 

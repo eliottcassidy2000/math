@@ -347,6 +347,10 @@ obligations, and proof-carrier interfaces.
   use LTT-288 after LTT-286/LTT-285/LTT-283 and make survivor wall words the
   vertices.  Branch masks, endpoint wall labels, midpoint binders, and
   sidecar-debt exits are the payload; raw positive measure is only telemetry.
+- Need to compress the HYP-3428/HYP-3427/HYP-3426 survivor windows to endpoint-spine certificates:
+  use LTT-290 after LTT-289/LTT-288/LTT-287/LTT-286 and make endpoint labels/proof carriers the
+  vertices.  The live theorem is E-only free component or rank-2 mixed endpoint
+  spine, not a scalar survivor-mass estimate.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -8265,6 +8269,39 @@ quotient_legality_status
 - **Pointers:** HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421,
   HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3140, HYP-3129,
   HYP-2963, THM-523, LTI-388, T1388, OPEN-Q-108.
+
+## LTT-290: Component-Spine Endpoint Certificate Tournament
+
+- **Move:** Rank endpoint-spine proof carriers after HYP-3425's two-color
+  Helly obstruction, HYP-3426's mirror reduction, and HYP-3427's wall-signature
+  atlas, with HYP-3428's two-adic loss ledger as exception vocabulary.
+  Vertices are the two-endpoint spine certificate, mixed even/odd wall
+  certificate, E-only free component, Helly pair-piercing bound, branch-both
+  relocation window, owner-current exception router, and raw good-measure
+  scalar as a negative control.
+- **LRC use:** HYP-3429 keeps the actual relocation predicate by selecting a
+  survivor `u`-window and branch while compressing the active wall data to
+  rank at most `2` on the audited bank; HYP-3426 supplies branch symmetry and
+  HYP-3427 supplies the wall-word alphabet while HYP-3428 names loss exits.
+- **Preserves:** endpoint labels `E/B0/B1`, branch choice, survivor window
+  interval, and two-adic relocation witness.
+- **Forgets / guardrail:** scalar good measure forgets the active walls;
+  runner-level or component-count summaries forget the branch; owner-current
+  labels remain exception names only.
+- **Pairwise observable:** predicate retention, endpoint exactness, rank
+  compression, Helly usefulness, two-adic induction value, exception-router
+  value, and scalar-risk control.
+- **Switch/gauge:** orient toward higher proof-carrier total; ties use the
+  declared proof path.
+- **Fingerprint:** score histogram `{26:1, 51:1, 57:1, 58:2, 60:1, 63:1}`,
+  no directed `3`-cycles, and Hamiltonian path
+  `two_endpoint_spine_certificate -> mixed_even_odd_wall_certificate -> even_only_free_component -> helly_pair_piercing_bound -> branch_both_relocation_window -> owner_current_exception_router -> raw_good_measure_scalar`.
+- **Next hook:** prove every primitive covering row has either an E-only free
+  component or a rank-2 mixed endpoint spine; if not, route the first failure
+  to owner-current, exact-period, state-lift, or named two-adic branch debt.
+- **Pointers:** HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
+  HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523,
+  LTI-390, T1390, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 

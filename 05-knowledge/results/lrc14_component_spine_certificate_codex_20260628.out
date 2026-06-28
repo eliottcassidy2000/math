@@ -1,0 +1,79 @@
+HYP-3429 COMPONENT-SPINE CERTIFICATE SCOUT
+========================================================================
+Identity:
+  HYP-3425 gives relocation_good = E_safe minus (B0_odd cap B1_odd).
+  This scout searches for a low-rank endpoint spine inside relocation_good.
+  Endpoint labels: E=even-safe wall, B0=branch-0 odd wall, B1=branch-1 odd wall.
+
+A. Aggregate exact audit
+  rows audited:                         150
+  positive survivor window rows:        150/150
+  rows with all windows endpoint labels: 150/150
+  endpoint-labelled survivor windows:   15576/15576
+  total survivor windows:               15576
+  best endpoint-spine rank <= 2:         150/150
+  mixed even/odd endpoint spine exists: 148/150
+  both-branch survivor exists:          149/150
+  best-rank histogram:                  {1: 47, 2: 103}
+  best-branch histogram:                {(0,): 12, (0, 1): 92, (1,): 46}
+  best-kind histogram:                  {('B0',): 1, ('B0', 'B1'): 2, ('B0', 'E'): 14, ('B1',): 3, ('B1', 'E'): 14, ('E',): 116}
+
+B. Hard rows and exception shape
+  smallest low-rank spine: canonical_84m_ext_48
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 4032)
+    best=[4621/28224, 4633/28224] len=1/2352 branches=(1,) labels=E:4032
+    total_good_measure=31/2205
+  largest survivor-window count: random_spine_01
+    window_count=246
+    best=[1/672, 13/1652] len=253/39648 branches=(0, 1) labels=E:96,E:236
+    mixed=[225/1652, 111/791] len=771/186676 branches=(0,) labels=B0:113,E:236
+  rows without mixed even/odd spine: 2
+    canonical_84m_ext_35: best=[3361/20580, 3373/20580] len=1/1715 branches=(1,) labels=E:2940
+    two_tail_ext_15: best=[257/3430, 671/8820] len=71/61740 branches=(1,) labels=E:1260,E:1470
+  rows without both-branch survivor: 1
+    covering_AP_with_12_and_84: best=[85/588, 13/84] len=1/98 branches=(0,) labels=E:12,E:84
+
+C. Canonical 84m endpoint-spine extension
+  m | windows | best_rank | best_len | best_branches | best_labels
+   1 |       4 |         2 |    3/980 |        (0, 1) | B1:5,E:84
+   2 |       4 |         2 |  23/5880 |        (0, 1) | B1:5,E:168
+   3 |       4 |         2 |  37/8820 |        (0, 1) | B1:5,E:252
+   4 |       4 |         2 |  17/3920 |        (0, 1) | B1:5,E:336
+   5 |       4 |         1 |    1/245 |        (0, 1) | E:420
+   6 |       6 |         1 |    1/294 |        (0, 1) | E:504
+   7 |       6 |         1 |    1/343 |        (0, 1) | E:588
+   8 |       8 |         1 |    1/392 |        (0, 1) | E:672
+   9 |       8 |         1 |    1/441 |        (0, 1) | E:756
+  10 |       8 |         1 |    1/490 |        (0, 1) | E:840
+  11 |      10 |         1 |    1/539 |        (0, 1) | E:924
+  12 |      10 |         1 |    1/588 |        (0, 1) | E:1008
+  18 |      14 |         1 |    1/882 |        (0, 1) | E:1512
+  24 |      18 |         1 |   1/1176 |          (1,) | E:2016
+  30 |      22 |         1 |   1/1470 |          (1,) | E:2520
+  36 |      28 |         1 |   1/1764 |          (1,) | E:3024
+  42 |      30 |         1 |   1/2058 |          (1,) | E:3528
+  48 |      34 |         1 |   1/2352 |          (1,) | E:4032
+
+D. Proof interpretation
+  The Helly obstruction can be attacked through endpoints, not only measures.
+  In this bank every row has a survivor window whose active endpoint spine
+  has rank at most 2.  Most best spines are E-only, meaning a whole even-safe
+  component already dodges the odd two-color core.  Mixed E/B0 or E/B1 spines
+  record the genuine two-color wall cases; the two no-mixed rows are easier
+  E-only exceptions, not counterexamples.
+  Candidate finite lemma: every primitive covering row has either an E-only
+  free component or a mixed even/odd endpoint spine of rank at most 2.
+
+E. Tournament Analysis
+  vertices are proof carriers/endpoints, not runners or raw components.
+  axes=predicate_retention,endpoint_exactness,rank_compression,helly_usefulness,two_adic_induction,exception_router,scalar_risk_control
+  score_hist={26: 1, 51: 1, 57: 1, 58: 2, 60: 1, 63: 1}
+  directed_3cycles=0
+  hamiltonian_path=two_endpoint_spine_certificate -> mixed_even_odd_wall_certificate -> even_only_free_component -> helly_pair_piercing_bound -> branch_both_relocation_window -> owner_current_exception_router -> raw_good_measure_scalar
+
+F. Assumption challenge
+  Considered vertices: rows, runners, E_safe components, survivor windows,
+  interval endpoints, endpoint labels, odd-pair walls, branch choices, and
+  proof obligations.  Chosen vertices for the new compression are endpoint
+  labels and proof carriers.  This preserves the covering-floor predicate
+  only because each spine still selects an actual u-window and branch t.

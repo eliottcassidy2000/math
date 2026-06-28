@@ -46,6 +46,33 @@ measure: the proof must retain which exact walls define the component. ->
 HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
 HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3140, HYP-3129, HYP-2963,
 THM-523, LTI-388, LTT-288, T1388, OPEN-Q-108.
+**OPEN-Q-108 HYP-3429 component-spine endpoint certificate addendum:**
+HYP-3429 compresses the HYP-3428 two-adic loss ledger, HYP-3427 wall-signature
+target, and HYP-3425 Helly target from interval mass to endpoint-spine rank
+after HYP-3426 removes branch ambiguity.  In `u=2t` coordinates, survivor
+windows in
+
+```text
+E_safe minus (B0_odd cap B1_odd)
+```
+
+are labelled by active endpoint walls:
+
+```text
+E  = even-safe wall,
+B0 = branch-0 odd wall,
+B1 = branch-1 odd wall.
+```
+
+Exact audit on `150` rows gives best endpoint-spine rank `<=2` in every row,
+with rank histogram `{1:47,2:103}`.  Mixed even/odd spines appear in
+`148/150` rows; the two missing mixed rows are E-only free components, not
+failures.  Concrete open task: prove that every primitive covering row has
+either an E-only free component or a rank-2 mixed endpoint spine.  This would
+turn the HYP-3425 component theorem into a finite endpoint certificate lemma.
+-> HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
+HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523,
+LTI-390, LTT-290, T1390, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3425 two-branch obstruction / Helly addendum:**
 HYP-3425 sharpens the two-adic relocation lemma into a one-dimensional
