@@ -136,6 +136,24 @@ new named debt. -> HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, H
 HYP-3301, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253,
 HYP-2975, HYP-2969, HYP-2963, T1367, LTI-367, LTT-267, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3407 boundary-uniformization cut-stability addendum:**
+HYP-3407 asks whether the HYP-3405 unit-height collar leak and the HYP-3406
+endpoint-owner leak are instances of one labelled packet theorem.  Proposed
+target: after q-witness and AP/GW exits, every primitive expanded-bank packet
+is exact under `residue + owner_support`, or the first failure is a named
+unit-height disk exit, endpoint-owner Menger cut, Schwarz-Christoffel
+accessory debt, exact-period / BDH exceptional fiber, recursive chiral mirror
+debt, state-lift/H7 label, or finite residual.
+
+Open concrete task: compute the owner-support Menger graph for the HYP-3406
+`petal 13->26` versus positive-open single-swap `26/40/54` families, then
+pair it with the HYP-3405 AP versus `13->27` unit-height local disk table.
+Only after those exceptional fibers are named should a BDH/Mertens mean-square
+bound be attempted over larger HYP-2963 banks. -> HYP-3407, HYP-3406,
+HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301,
+HYP-3265, HYP-3124, HYP-3123, HYP-2982, HYP-2963, T1368, LTI-368, LTT-268,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3260 unit equioscillation nullspace addendum:**
 HYP-3260 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.
 **OPEN-Q-108 HYP-3310 C6 residue-magnitude factorization addendum:**

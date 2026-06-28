@@ -1,0 +1,96 @@
+HYP-3407 BOUNDARY-UNIFORMIZATION CUT-STABILITY ATLAS
+==============================================================================
+status=synthesis / executable proof-carrier router; not an LRC14 proof
+frontier_inputs=HYP-3405 AP-collar certificate + HYP-3406 owner-support repair
+new_lenses=Bring radical, Schwarz-Christoffel, BDH, Menger cuts, chiral recursion
+
+CURRENT HARD FACTS
+  HYP-3405: AP and GW 12->24 are the only boundary-tight AP-collar rows.
+  HYP-3405: every other AP-collar row through speed 84 is strict-open.
+  HYP-3405: the first AP-collar missing coordinate is unit-height (13,0)->(13,1).
+  HYP-3406: residue-only fails on enlarged banks.
+  HYP-3406: height/v2 repairs the first leak but not the stronger owner leak.
+  HYP-3406: residue + owner_support is exact through the scanned 872-row bank.
+
+RANKED CARRIERS
+  C01 score= 68  Boundary-uniformization Menger zipper
+      move: Model the forbidden arcs as a Schwarz-Christoffel contact polygon, then apply endpoint-owner min-cuts to decide which boundary channels must be resurrected when residue/height data collide.
+      first_test: On the HYP-3406 petal 13->26 vs single-swap 26/40/54 fiber, build the owner-support bipartite graph and compute the minimum endpoint cut separating unit-petal-named from positive-Haar-open.
+  C02 score= 63  Krasner collar stability
+      move: Treat AP-collar rows as local p-adic disks around contact roots. Krasner-style stability says a row cannot change theorem exit while all load-bearing roots stay inside the same labelled disks.
+      first_test: Attach p-adic disk labels to the HYP-3405 AP versus 13->27 fiber and verify that the unit-height lift (13,0)->(13,1) is exactly the first disk-exit coordinate.
+  C04 score= 61  Recursive chiral signature deck
+      move: Extend the HYP-3123/HYP-3124 cross-sector orientation lesson: recursively delete endpoint owners and record mirror/converse signature words so owner support cannot collapse with its mirror.
+      first_test: On the petal 13->26 fiber, compute owner-support child decks after deleting each active endpoint owner and check whether the recursive chiral word separates petal-named from positive-open rows.
+  C03 score= 58  BDH-Mertens owner discrepancy
+      move: Use Barban-Davenport-Halberstam as the model for a mean-square owner-residue discrepancy bound, with Meissel-Mertens prime-channel normalization tracking the cost of enlarging residue banks.
+      first_test: For the HYP-3406 enlarged banks, compute an L2 discrepancy between residue-only fiber exits and owner-support repaired exits; test whether the exceptional mass is confined to the two known families.
+  C09 score= 56  Schwarz-Christoffel accessory audit
+      move: Separate true boundary angles from accessory parameters.  If an SC polygon model changes endpoint-owner support through an accessory parameter, that parameter must be a sidecar.
+      first_test: Build the contact polygon for AP, GW 12->24, 12->36, and 13->27; identify which angle data are identical and which accessory field separates boundary from strict-open.
+  C06 score= 46  Sophie-Germain quartic split
+      move: Use a^4+4b^4=(a^2-2ab+2b^2)(a^2+2ab+2b^2) as a warning that quartic/Fejer moments may be secretly two owner channels, not one scalar mass.
+      first_test: For HYP-3406 owner-support words, split fourth-moment owner payloads into plus/minus quadratic factors and test whether one factor is the petal-vs-positive separator.
+  C10 score= 45  Meissel-Mertens prime-channel budget
+      move: Use sum_p<=x 1/p = log log x + B1 + o(1) as a channel-rank budget: each new prime or modulus layer costs a controlled loglog amount and must buy a real sidecar.
+      first_test: Compare sidecar payload cost for residue, v2, height, owner support, and exact period against the mixed-fiber reduction they actually purchase on HYP-3406 banks.
+  C05 score= 44  Bring branch-sheet packet
+      move: Use the Bring radical only as a branch-locus template: proof rows live on labelled sheets, and forbidden quotient moves are the ones that identify sheets with different theorem exits.
+      first_test: Represent HYP-3405 boundary rows and HYP-3406 owner leaks as sheet changes in a small branch graph; test whether the known leaks are exactly the first nontrivial monodromy edges.
+  C07 score= 35  HLW exponential-independence guardrail
+      move: Hermite-Lindemann-Weierstrass warns that independent exponential or Fourier channels cannot be collapsed to a small algebraic scalar unless the period lattice and relations are retained.
+      first_test: Audit any analytic-lifting ledger that separates HYP-3406 rows: does it prove relation invariance, or is it only a row hash over independent modes?
+  C08 score= 21  Ramanujan-Soldner critical normalizer
+      move: Use the Ramanujan-Soldner zero of li only as a sign-change normalizer: it can mark when an averaged prime-channel correction changes sign, not as a standalone LRC invariant.
+      first_test: Add a critical-normalization column to the BDH-Mertens discrepancy toy table and verify that it does not separate known fibers unless owner or height sidecars are also present.
+
+PROCEDURALLY GENERATED NEXT TESTS
+  G01 branch: retain sheet label; first failure should be unit-height lift; finite test = Bring branch graph on HYP-3405/HYP-3406 named fibers.
+  G02 boundary: retain endpoint owner; first failure should be endpoint-owner support; finite test = SC polygon/accessory audit on HYP-3405/HYP-3406 named fibers.
+  G03 cut: retain min cut; first failure should be exact-period boundary; finite test = Menger owner graph on HYP-3405/HYP-3406 named fibers.
+  G04 local: retain p-adic disk; first failure should be off-grid floor; finite test = Krasner collar on HYP-3405/HYP-3406 named fibers.
+  G05 analytic: retain mean-square deficit; first failure should be state-lift/H7 label; finite test = BDH-Mertens ledger on HYP-3405/HYP-3406 named fibers.
+  G06 recursive: retain chiral child deck; first failure should be unit-height lift; finite test = tail/tip owner recursion on HYP-3405/HYP-3406 named fibers.
+  G07 zipper theorem: compose boundary polygon -> owner min-cut -> Krasner local disk -> BDH exceptional ledger; any unclosed row must emit a named chiral or state-lift debt.
+
+BOUNDARY-UNIFORMIZATION THEOREM TARGET
+  For every primitive expanded-bank packet after q-witness and AP/GW exits:
+    either residue+owner_support is theorem-exit exact,
+    or the first failure is witnessed by one of:
+      unit-height disk exit, endpoint-owner Menger cut, SC accessory debt,
+      exact-period/BDH exceptional fiber, recursive chiral mirror debt,
+      state-lift/H7 label, or a newly named finite residual.
+  A quotient is proof-legal only if it preserves that sidecar, proves it
+  irrelevant on the fiber, or resurrects it by an explicit cut/stability map.
+
+TOURNAMENT ANALYSIS
+  vertices=proof carriers, not runners, arcs, raw constants, or raw residues
+  pairwise_observable=retained HYP-3405/HYP-3406 payload minus forgotten sidecar debt
+  switch_gauge=A -> B iff A has larger weighted carrier score; ties use code order
+  vertices=10
+  score_hist={21: 1, 35: 1, 44: 1, 45: 1, 46: 1, 56: 1, 58: 1, 61: 1, 63: 1, 68: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  priority_path=C01 -> C02 -> C04 -> C03 -> C09 -> C06 -> C10 -> C05 -> C07 -> C08
+
+ASSUMPTION CHALLENGE
+  Alternate vertices considered:
+    runners, gaps, fixed circle sections, section boundaries, wall crossings,
+    residues, cover arcs, Fourier modes, matroid circuits, endpoint cuts,
+    SC prevertices, p-adic root disks, branch sheets, prime moduli,
+    chiral child decks, and proof obligations.
+  Chosen vertices:
+    proof carriers, because the preserved predicate is theorem-exit exactness.
+  Preserved predicate:
+    boundary-tight vs strict-open vs positive-Haar-open vs unit-petal/K33/H7 debt.
+  Destroyed by naive quotients:
+    unit height, endpoint owner, accessory parameter, exact period, off-grid floor,
+    branch sheet, chiral orientation, and exceptional-fiber identity.
+
+CONCLUSION
+  The requested lenses converge on one disciplined move:
+    do not ask a quotient to remember less unless a labelled packet theorem
+    says exactly how the forgotten coordinate returns.
+  The highest-leverage next computation is the owner-support Menger graph on
+  the HYP-3406 petal/single-swap fibers, paired with the HYP-3405 Krasner-style
+  unit-height collar audit.

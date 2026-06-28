@@ -32392,3 +32392,36 @@ the repo remote is HTTPS and no GitHub credentials/token/SSH agent are
 available.  Next explorer should either provide auth and push these commits, or
 re-run the closeout from an authenticated environment before assuming the work
 is durable on the remote.
+
+## codex-2026-06-28 -- HYP-3407 boundary-uniformization cut stability
+
+Owner asked for a long creative session integrating Bring radicals,
+Schwarz-Christoffel maps, Barban-Davenport-Halberstam, Menger cuts, recursive
+chiral signatures, Ramanujan-Soldner, Sophie Germain, HLW, Krasner, and
+Meissel-Mertens into the LRC14 proof push.  Added HYP-3407/T1368/LTI-368/LTT-268
+plus script/result/reflection:
+
+```text
+04-computation/lrc14_boundary_uniformization_cut_stability_codex_20260628.py
+05-knowledge/results/lrc14_boundary_uniformization_cut_stability_codex_20260628.out
+05-knowledge/hypotheses/HYP-3407-lrc14-boundary-uniformization-cut-stability.md
+07-reflections/lrc14-boundary-uniformization-cut-stability-codex-20260628.md
+```
+
+Readout: the named lenses are useful only as controlled-forgetting guardrails.
+The top-ranked route is the boundary-uniformization Menger zipper
+(`score=68`), followed by Krasner collar stability (`63`), recursive chiral
+signature deck (`61`), BDH-Mertens owner discrepancy (`58`), and
+Schwarz-Christoffel accessory audit (`56`).  Tournament vertices are proof
+carriers, not runners, arcs, constants, or raw residue rows; fingerprint has
+`10` vertices, no directed 3-cycles, and priority path
+`C01 -> C02 -> C04 -> C03 -> C09 -> C06 -> C10 -> C05 -> C07 -> C08`.
+
+Main theorem target: every primitive expanded-bank packet after q-witness and
+AP/GW exits is either exact under `residue+owner_support`, or the first failure
+is unit-height disk exit, endpoint-owner Menger cut, SC accessory debt,
+exact-period / BDH exceptional fiber, recursive chiral mirror debt,
+state-lift/H7 label, or a newly named finite residual.  Next computation:
+construct the owner-support Menger graph for HYP-3406's petal/single-swap
+families and pair it with the HYP-3405 AP-vs-`13->27` unit-height local disk
+table before trying an averaged analytic theorem.

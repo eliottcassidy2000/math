@@ -7827,31 +7827,49 @@ quotient_legality_status
   HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253, HYP-2975,
   HYP-2969, HYP-2963, THM-523, LTI-367, T1367, OPEN-Q-108.
 
-## LTT-268: Special-Function Cut Signature Recursion Tournament
+## LTT-268: Boundary-Uniformization Cut-Signature Tournament
 
-- **Move:** Use recursive signature repairs as tournament vertices, not
-  runners or raw arcs.  Vertices include residue/height/owner sidecars,
-  Schwarz-Christoffel cut-angle words, BDH variance packets, Menger exit cuts,
-  Bring branch alarms, Soldner zero normalizations, Sophie Germain quartic
-  splits, HLW separation guards, Krasner local-stability radii, and Mertens
-  residual ledgers.
-- **LRC use:** HYP-3407 is the planned post-HYP-3406 creative scout.  Its
+- **Move:** Use proof carriers and recursive signature repairs as tournament
+  vertices, not runners or raw arcs.  Vertices include the
+  boundary-uniformization Menger zipper, Krasner collar stability, recursive
+  chiral signature deck, BDH-Mertens owner discrepancy, Schwarz-Christoffel
+  accessory/cut-angle audit, Sophie-Germain quartic split, Meissel-Mertens
+  prime-channel budget, Bring branch-sheet/branch-alarm packet, HLW
+  exponential-independence guardrail, and Ramanujan-Soldner critical
+  normalizer.
+- **LRC use:** HYP-3407 combines HYP-3405 and HYP-3406 into a labelled
+  packet theorem target.  AP-collar boundary-vs-strict changes must cross the
+  unit-height disk exit found by HYP-3405; enlarged-bank residue/height
+  collisions must remember endpoint-owner support as in HYP-3406.  The
   legality test is function-compression exactness: theorem exit must be
-  constant on each compressed signature fiber.  Any mixed fiber names the next
-  missing coordinate, cut, or branch payload.
-- **Preserves:** theorem-exit purity, first-failure order, owner-support
-  data, height/v2 data, and branch/root-curve information when those are
-  carried explicitly.
-- **Forgets / guardrail:** a scalar motif score can forget endpoint owner,
-  exact cut location, variance residual, p-adic stability radius, and PGF root
-  branch; the tournament must price those losses before orienting an edge.
-- **Planned observable:** reduction in mixed theorem-exit fibers plus the
-  number of destroyed coordinates made explicit.
-- **Switch/gauge:** fewer mixed fibers first; then fewer unpriced destroyed
-  coordinates; then smaller payload; ties follow the recursive signature
-  chain.
-- **Next hook:** implement the HYP-3407 scout and replace this reserved
-  tournament with exact fingerprints.
-- **Pointers:** HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311,
-  HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, LTI-368, T1368,
-  OPEN-Q-108.
+  constant on each compressed signature fiber, and any mixed fiber names the
+  next missing coordinate, cut, or branch payload.
+- **Preserves:** boundary-tight / strict-open / positive-Haar-open /
+  unit-petal / K33/H7 theorem exits, unit-height sidecar, endpoint-owner
+  support, height/v2 data, local disk stability, exact-period
+  exceptional-fiber ledger, branch/root-curve information, and recursive
+  chiral orientation when carried.
+- **Forgets / guardrail:** raw named constants, raw branch sheets, raw
+  Schwarz-Christoffel angle data, raw analytic averages, and scalar motif
+  scores can forget endpoint owner, exact cut location, accessory parameters,
+  height, exact period, variance residual, p-adic stability radius, PGF root
+  branch, and mirror side.
+- **Pairwise observable:** retained HYP-3405/HYP-3406 payload minus forgotten
+  sidecar debt, with mixed theorem-exit fiber reduction as the first
+  proof-facing statistic.
+- **Switch/gauge:** higher weighted carrier score; ties use carrier-code
+  Hamiltonian path.
+- **Exact fingerprint:** `vertices=10`, score histogram
+  `{21:1,35:1,44:1,45:1,46:1,56:1,58:1,61:1,63:1,68:1}`,
+  no directed `3`-cycles, one Hamiltonian path
+  `C01 -> C02 -> C04 -> C03 -> C09 -> C06 -> C10 -> C05 -> C07 -> C08`.
+- **Next hook:** compute the owner-support Menger graph for the HYP-3406
+  petal/single-swap fibers, pair it with the HYP-3405 local disk/height-exit
+  table, compute recursive signature mixed-fiber counts, then test whether
+  recursive chiral child decks separate the first owner leaks before a
+  BDH/Mertens mean-square pass.
+- **Pointers:** HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402,
+  HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265,
+  HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253, HYP-3151, HYP-3150,
+  HYP-3147, HYP-3143, HYP-3124, HYP-3123, HYP-2982, HYP-2963, THM-523,
+  LTI-368, T1368, OPEN-Q-108.

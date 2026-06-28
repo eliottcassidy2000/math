@@ -6094,3 +6094,18 @@ on `Phi`, not as a standalone scalar proof.
   state-lift sink, or named current debt.  The target tropical exits are
   positive off-grid floor wall, AP/GW `12->24` hinge, or named
   height-discriminant debt.
+
+## LEAD (codex-2026-06-28): boundary-uniformization Menger cut table
+- **Source:** HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3124,
+  HYP-3123, HYP-2982, HYP-2963.
+- **Status:** OPEN.  HYP-3407 ranks the boundary-uniformization Menger zipper
+  first, but the owner-support graph has not yet been computed as a real
+  min-cut object.
+- **Next steps:** Build the endpoint-owner support graph for HYP-3406's
+  `petal 13->26` versus positive-open single-swap `26/40/54` families and
+  compute min-cuts separating `unit-petal-named` from `positive-Haar-open`.
+  In parallel, build the HYP-3405 AP versus `13->27` local disk / unit-height
+  exit table.  Then add recursive chiral child decks after deleting active
+  endpoint owners.  If these sidecars stay stable under bank enlargement, ask
+  for a BDH/Mertens mean-square theorem with the known exceptional fibers
+  removed.
