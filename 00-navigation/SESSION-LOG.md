@@ -1,3 +1,28 @@
+## kind-pasteur-2026-06-28-S31aw -- long pushes/pulls on the hard core: the saddle INDEX=(p-1)/2 (answers mac-mini's gem), GW shares Phi_14 witnesses (closes "GW open"), Borsuk-Ulam<->Brouwer reconciled
+
+Owner: many creative attacks on the hard core, a long session of pushes and pulls, experimenting, inspired by
+concurrent work. HYP-3241 (renumbered from a 3240 collision w/ mac-mini-S77).
+
+- **PULL+RECONCILE:** mac-mini's Vitali wall (HYP-3237) splits LRC = BULK(measure) (+) CORE(cyclotomic); AP core
+  witnesses t=a/14 = units mod 14 = Phi_14. RECONCILED with my Borsuk-Ulam (HYP-3239): the 6 witnesses = 3
+  ANTIPODAL PAIRS (1,13),(3,11),(5,9) (free Z_2 complement), binders {+-a^{-1}}. mac-mini's BROUWER saddle (VALUE)
+  + my BORSUK-ULAM antipodal (SYMMETRY) = the SAME Phi_14 witness set, two faces. Verified S(t) for the AP
+  equioscillates at exactly the 6 units mod 14.
+- **PUSH (answers mac-mini's gem):** the equioscillation-saddle INDEX = #antipodal pairs = phi(2p)/2 = (p-1)/2 =
+  the de Moivre/Chebyshev equioscillation count (VERIFIED n=6..46). PARITY = p mod 4: ODD (n=14:3) -> Borsuk-Ulam
+  forcing; EVEN (n=10:2) -> Brouwer/SOS. The construction analogue of the measure bound.
+- **PUSH (GW universality, strongest):** the Goddyn-Wong tight row {1..11,13,24} has M=1/14 at the EXACT SAME
+  witnesses as the AP (t=a/14, units mod 14 = Phi_14, 3 antipodal pairs). The cyclotomic core is CONFIG-
+  INDEPENDENT. GW has no speed = 0 mod14, so t=1/14 works -- **CLOSES mac-mini-S77's "GW sporadics: open"**.
+  Combined with mac-mini's dilation witness t=1/(14d), the tight-core WITNESS CONSTRUCTION is essentially
+  COMPLETE; residual = {tight-locus finiteness} + {bulk equidistribution}.
+- **PULL (honest, dropped):** codex's moment-LP q_t (q6=1/49=1/7^2) are NOT the raw empty-sector distribution
+  (q6=1/91=1/(7*13)); the moment-LP factors out the 13 -> apex-7^2 conductor (matches mac-mini S75e). So the
+  tempting "codex q3 = my index 3" connection does NOT hold -- dropped.
+
+=> HYP-3241; reflection the-saddle-index-is-p-minus-1-over-2-borsuk-ulam-forcing-meets-the-vitali-core; results
+   lrc_core_witnesses_universal_AP_GW, lrc_family_sos_vs_sign_obstruction.
+
 ## mac-mini-2026-06-28-S77 -- pushes & pulls on the hard core: the D_7 unification + the EXPLICIT covering-witness construction (Phi_{14d}); the imaginary-quadratic-norm PULL
 
 Owner: many creative attacks on the hard core, a long session of pushes and pulls, inspired by concurrent work.
