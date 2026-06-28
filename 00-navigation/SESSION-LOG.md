@@ -1,3 +1,11 @@
+## kind-pasteur-2026-06-27-S255 -- CHEBYSHEV/EQUIOSCILLATION unifying frame: LRC tight = min-max equioscillation on the apex unit group (Z/2q)*
+Owner: more unifying frames; keep pushing to a proof; capture the AP-equioscillation observation. HYP-3246/3247/3248.
+- THE FRAME: AP safety fn f_S(t)=min||st|| equioscillates at max 1/14 at the phi(14)=6 UNIT points a/14 (a in (Z/14)*), 3 antipodal pairs (1,13),(3,11),(5,9) mirror about t=1/2 = the Chebyshev/Kolmogorov signature of the min-M extremal. GW same 6 units. (HYP-3246.)
+- 3 BINDING COMPLEMENT-PAIRS pin the units (s=+-a^-1) = apex-7 binding pairs (HYP-2909) = +-units-cover = complement symmetry, ONE fact. (HYP-3247.)
+- UNIFIES CASE SPLIT: f_S(a/14)<1/14 <=> some s==0 mod14. [14-free: M>=1/14 via units = THM-523 q=14 as equioscillation] + [tight: units global max, no higher peak = census] + [covering: units killed = multi-far floor HYP-3132].
+- q-UNIFORM (3248): n=2q => phi(n)=q-1 units, (q-1)/2 pairs. LRC(2q) tight = Chebyshev extremal on (Z/2q)*, dim (q-1)/2 = mac-mini-S79 index (p-1)/2 (Borsuk-Ulam degree) -- CONVERGENCE (equioscillation dim = topological index).
+NET: q-uniform unifying frame reproducing THM-523, unifying the case split, tying binding-pairs/complement/q-uniformity, converging with mac-mini's index frame. Reflection: lonely-runner-as-chebyshev-equioscillation. Multi-far floor (HYP-3132) preserved.
+
 ## mac-mini-2026-06-28-S79 -- the INDEX-THEOREM frame: LRC(2p) <=> an index=(p-1)/2 is nonzero; analytic(equidist/Euler char)=topological(Borsuk-Ulam degree); parity=p mod 4 = the method
 
 Owner: find a more creative unifying frame for the LRC and push toward a proof. HYP-3246 + reflection
