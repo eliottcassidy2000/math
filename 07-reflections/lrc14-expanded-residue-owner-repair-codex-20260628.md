@@ -55,7 +55,9 @@ HYP-3403: same-residue height debt is the stress target
 HYP-3404: residue-word breakpoint theorem is the top finite-lemma lead
 HYP-3405: AP-collar finite lemma certifies the unit-height companion case
 HYP-3406: yes, but the stronger stable leak is owner-side, not height-side
-HYP-3409: turn this sidecar chain into recursive cut/signature tests
+HYP-3409: abstract this as recursive sidecar-pattern routing
+HYP-3410: measure the adjacent Bring/Schwarz/BDH/Menger charal slice
+HYP-3412: turn this sidecar chain into recursive cut/signature tests
 ```
 
 In other words: tropical height walls explain the first leak, but endpoint

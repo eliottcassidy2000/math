@@ -51,10 +51,10 @@ Add terminal-exit labels before using BDH/Mertens-style averages.
 ## Lead codex-2026-06-28: Special-function cut signature recursion
 
 **Status:** EVIDENCE / executable creative synthesis; not an LRC14 proof
-(HYP-3409/T1370/LTI-370/LTT-270).
+(HYP-3412/T1373/LTI-373/LTT-273).
 
 Claimed files:
-`05-knowledge/hypotheses/HYP-3409-lrc14-special-function-cut-signature-recursion.md`,
+`05-knowledge/hypotheses/HYP-3412-lrc14-special-function-cut-signature-recursion.md`,
 script
 `04-computation/lrc14_special_function_cut_signature_recursion_codex_20260628.py`,
 result

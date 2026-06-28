@@ -7997,7 +7997,7 @@ quotient_legality_status
   HYP-3257, HYP-3124, HYP-2969, HYP-2963, THM-523, LTI-371, T1371,
   OPEN-Q-108.
 
-## LTT-272: Special-Function Cut Signature Recursion Tournament
+## LTT-273: Special-Function Cut Signature Recursion Tournament
 
 - **Move:** Use recursive signature repairs as tournament vertices, not
   runners or raw arcs.  Vertices include residue/height/owner sidecars,
@@ -8005,7 +8005,7 @@ quotient_legality_status
   Bring branch alarms, Soldner zero normalizations, Sophie Germain quartic
   splits, HLW separation guards, Krasner local-stability radii, and Mertens
   residual ledgers.
-- **LRC use:** HYP-3411 executes the post-HYP-3406 creative scout on the
+- **LRC use:** HYP-3412 executes the post-HYP-3406 creative scout on the
   `(72,20)` expanded bank (`2431` rows).  Its legality test is function-compression
   exactness: theorem exit must be constant on each compressed signature fiber.
   Exact ladder: residue leaves `3` mixed fibers, residue+height/`v2` leaves
@@ -8029,7 +8029,7 @@ quotient_legality_status
   `M01 -> M02 -> M03 -> M04 -> M05 -> M06 -> M07 -> M08 -> M09 -> M10`.
 - **Next hook:** enlarge beyond `(72,20)` and test whether the cut-angle and
   local-radius owner shadows remain exact or need full endpoint labels.
-- **Pointers:** HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406,
+- **Pointers:** HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406,
   HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150,
-  HYP-3147, HYP-3143, LTI-372, T1372,
+  HYP-3147, HYP-3143, LTI-373, T1373,
   OPEN-Q-108.

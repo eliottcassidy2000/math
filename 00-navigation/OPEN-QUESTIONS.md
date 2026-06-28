@@ -33,24 +33,19 @@ HYP-3407 reserves an executable creative synthesis route downstream of
 HYP-3406.  The intended move is to treat Bring radicals, Schwarz-Christoffel
 cut maps, Barban-Davenport-Halberstam variance, Menger cuts,
 Ramanujan-Soldner zero-point normalization, Sophie Germain quartic splitting,
-**OPEN-Q-108 HYP-3409 special-function cut signature recursion addendum:**
-HYP-3409 executes an exploratory synthesis route downstream of HYP-3406.  It
-treats Bring radicals, Schwarz-Christoffel cut maps,
-Barban-Davenport-Halberstam variance, Menger cuts, Ramanujan-Soldner
-zero-point normalization, Sophie Germain quartic splitting,
 Hermite-Lindemann-Weierstrass separation, Krasner stability, and
-Meissel-Mertens residuals as prompts for measurable LRC14 signature sidecars,
-not as proof imports.
+Meissel-Mertens residuals as theorem-carrier translations rather than
+proof imports.
 
-Open task: implement the scout and decide whether the post-HYP-3406
-sidecar chain can be written as a recursive `charal_signature`:
-residue character, height valuation, endpoint-owner support, cut
-angle/current, variance residual, local stability radius, and full
-PGF/root-curve branch alarm.  The legality test remains function-compression
-purity: if theorem exits mix in a signature fiber, the first missing
-coordinate must be restored, dualized, or named as debt. -> HYP-3407,
-HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151,
-HYP-3150, HYP-3147, HYP-3143, T1368, LTI-368, LTT-268, OPEN-Q-108.
+Open task: prove or refute the boundary-uniformization claim that every
+primitive expanded-bank packet after q-witness/AP-GW exits is either exact
+under `residue+owner_support` or has a first failure routed to unit-height
+disk debt, endpoint-owner Menger cut, Schwarz-Christoffel accessory debt,
+exact-period/BDH exceptional fiber, recursive chiral mirror debt, state-lift
+label, or named finite residual. -> HYP-3407, HYP-3406, HYP-3405, HYP-3404,
+HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143,
+T1368, LTI-368, LTT-268, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3410 Bring/Schwarz/BDH/Menger charal recursion addendum:**
 HYP-3410 realizes the Bring/Schwarz/BDH/Menger slice of the HYP-3407
 boundary/special-function route by turning
@@ -74,6 +69,16 @@ fibers. -> HYP-3410, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402,
 HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260,
 HYP-3257, HYP-3124, HYP-2969, HYP-2963, THM-523, T1371, LTI-371, LTT-271,
 OPEN-Q-108.
+
+**OPEN-Q-108 HYP-3412 special-function cut signature recursion addendum:**
+HYP-3412 executes the broader exploratory synthesis route downstream of
+HYP-3406.  It treats Bring radicals, Schwarz-Christoffel cut maps,
+Barban-Davenport-Halberstam variance, Menger cuts, Ramanujan-Soldner
+zero-point normalization, Sophie Germain quartic splitting,
+Hermite-Lindemann-Weierstrass separation, Krasner stability, and
+Meissel-Mertens residuals as prompts for measurable LRC14 signature sidecars,
+not as proof imports.
+
 Readout: on the HYP-3406 expanded bank through `(72,20)` (`2431` rows),
 residue alone leaves `3` mixed theorem-exit fibers; residue+`v2` and
 residue+exact height each leave `2`; BDH variance leaves `3`; cut angle,
@@ -88,10 +93,9 @@ Open task: enlarge beyond `(72,20)` and test whether the compressed owner
 signals (`cut_angle_word`, `krasner_radius_word`) remain exact.  If either
 fails, the first collision should decide whether full endpoint-owner support,
 exact cut labels, or full PGF/root branch payload is the true next sidecar. ->
-HYP-3409,
-HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311,
-HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, T1370, LTI-370,
-LTT-270, OPEN-Q-108.
+HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405,
+HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150, HYP-3147,
+HYP-3143, T1373, LTI-373, LTT-273, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3405 AP-collar finite lemma certificate addendum:**
 HYP-3405 turns the HYP-3401 AP-collar obstruction into a certificate-shaped

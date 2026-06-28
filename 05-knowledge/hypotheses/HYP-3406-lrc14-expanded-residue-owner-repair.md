@@ -10,6 +10,8 @@ script: 04-computation/lrc14_expanded_residue_owner_repair_codex_20260628.py
 result: 05-knowledge/results/lrc14_expanded_residue_owner_repair_codex_20260628.out
 reflection: 07-reflections/lrc14-expanded-residue-owner-repair-codex-20260628.md
 related:
+  - HYP-3412
+  - HYP-3410
   - HYP-3409
   - HYP-3408
   - HYP-3407
@@ -209,12 +211,13 @@ residue + owner_support
 eventually fails, and whether the next leak after that is tropical/off-grid,
 unit-contact holonomy, or a new named debt.
 
-HYP-3409 reserves one downstream way to do that test: make the sidecar chain
-recursive (`residue`, `height`, `owner_support`, cut/current, variance, and
-branch alarms) and accept a compressed signature only when theorem exits are
-pure on its fibers.  The incoming HYP-3407 boundary-uniformization atlas and
-HYP-3408 exotic guardrail atlas are complementary theorem-carrier maps rather
-than this special-function scout.
+HYP-3409 abstracts this as a recursive sidecar pattern atlas, HYP-3410 gives
+the adjacent Bring/Schwarz/BDH/Menger charal slice, and HYP-3412 measures one
+downstream way to test the chain: make `residue`, `height`, `owner_support`,
+cut/current, variance, and branch alarms recursive, and accept a compressed
+signature only when theorem exits are pure on its fibers.  The incoming
+HYP-3407 boundary-uniformization atlas and HYP-3408 exotic guardrail atlas are
+complementary theorem-carrier maps rather than this special-function scout.
 
 HYP-3408 supplies the exact guardrail companion: p-adic/Krasner language should
 stabilize contact-root and endpoint-owner packets rather than raw congruence,

@@ -1,3 +1,10 @@
+## kind-pasteur-2026-06-28-S257 -- the GALOIS reframe + the GW-doubling CRITERION q==1 mod3: built on mac-mini's hidden-C_3, fused with my census split & Q(sqrt-7) floor
+Owner: even more creative reframes, test ideas, be inspired by concurrent agents, push/pull many times toward full rigor. HYP-3411 + HYP-3413 + reflection the-galois-group-of-the-apex-prime-and-where-its-symmetry-breaks.
+- **GALOIS REFRAME (HYP-3411), building on mac-mini S83 hidden-C_3:** the 13 runners = TWO C_6=(Z/14)*-orbits + a fixed point: units {1,3,5,9,11,13} (binding skeleton) + evens {2,4,6,8,10,12} (covering) + {7} (fixed apex). C_6=C_2 x C_3. The two proof-halves are the two subfields of Q(zeta_7): Q(cos2pi/7) (cubic REAL, Gal=C_3, fixed by conj) = mac-mini's cap=C_3-trace/equioscillation; Q(sqrt-7) (quadratic IMAGINARY, Gal=C_2) = my floor/Gauss-sum. VERIFIED dichotomy: the RESIDUE/equioscillation half is C_6-INVARIANT (mult by any unit permutes {1..13}, M preserved => mac-mini's C_3 leap valid; closed via THM-568 at each unit optimum); the MAGNITUDE/census half BREAKS C_6 (only 12 flexes among the evens orbit). The symmetry-breaking IS the hard core.
+- **GW-CRITERION (HYP-3413), VERIFIED q=3..22 zero mismatches:** the canonical doubling (n-2)->2(n-2) keeps M=1/n EXACTLY when q==1 mod3 (ON for q=4,7,10,13,16,19,22). For prime q: q==1mod3 <=> 3|(q-1) <=> (Z/2q)* contains C_3 (mac-mini's pair-cycle) <=> cube roots of unity exist mod q <=> q SPLITS in the Eisenstein integers Z[omega]=Q(sqrt-3). So the MAGNITUDE symmetry-breaking (GW second tight set EXISTS) is GATED by the RESIDUE C_3 -- connecting the two halves causally. Predicts LRC(2q) census size: 1 (q!=1mod3, AP unique) vs >=2 (q==1mod3, AP+GW). n=14 (q=7=1mod3): GW exists; n=10,12 (q=5,6): census={AP} alone.
+- **THREE number fields now:** Q(sqrt-7) (apex, 7=3mod4, the floor), Q(cos2pi/7) (real cubic, the equioscillation/cap), Q(sqrt-3)=Q(omega) (Eisenstein, gates GW EXISTENCE via q's splitting). All from the apex prime 7 and its mod-3 class.
+NET: two creative reframes (Galois 2-orbit decomposition; GW=q==1mod3=Eisenstein-split) integrating mac-mini's C_3, my census split, my Q(sqrt-7). Residue half rigorous; magnitude half = the symmetry-breaking residual, now with a clean arithmetic switch (q mod 3). OPEN: the geometric mechanism (why cube-roots-of-unity mod q let 2(n-2) realign the cover) -- would make the GW-criterion a theorem.
+
 ## codex-2026-06-28 -- HYP-3409 recursive sidecar pattern atlas for LRC14
 
 Owner asked to notice more abstract recursive patterns in the LRC14 proof work.
@@ -37,17 +44,18 @@ Menger graph for `petal 13->26` and `petal 10->20`; extend HYP-3406 past
 `(72,20)` until `residue+owner_support` first fails or supports a finite
 owner-cut theorem.  Add terminal-exit labels before adding analytic averaging.
 
-## codex-2026-06-28 -- boundary-uniformization cut stability -- HYP-3407
-## codex-2026-06-28 -- special-function cut signature recursion -- HYP-3409
+## codex-2026-06-28 -- special-function cut signature recursion -- HYP-3412
 
 Reserved and then executed the special-function cut signature scout as a long
-creative synthesis pass downstream of HYP-3406.  The artifact was renumbered to
-HYP-3409/T1370/LTI-370/LTT-270 after mainline assigned HYP-3407 to the
-boundary-uniformization cut-stability atlas and HYP-3408 to the exotic
-guardrail atlas.  The artifact set is:
+creative synthesis pass downstream of HYP-3406.  The artifact was ultimately
+renumbered to HYP-3412/T1373/LTI-373/LTT-273 after mainline assigned HYP-3407
+to the boundary-uniformization cut-stability atlas, HYP-3408 to the exotic
+guardrail atlas, HYP-3409 to the recursive sidecar pattern atlas, HYP-3410 to
+the adjacent charal recursion scout, and HYP-3411 to the Galois reframe entry.
+The artifact set is:
 `04-computation/lrc14_special_function_cut_signature_recursion_codex_20260628.py`,
 `05-knowledge/results/lrc14_special_function_cut_signature_recursion_codex_20260628.out`,
-`05-knowledge/hypotheses/HYP-3409-lrc14-special-function-cut-signature-recursion.md`,
+`05-knowledge/hypotheses/HYP-3412-lrc14-special-function-cut-signature-recursion.md`,
 and
 `07-reflections/lrc14-special-function-cut-signature-recursion-codex-20260628.md`.
 
@@ -32473,10 +32481,10 @@ accordingly in `TANGENTS`, `OPEN-QUESTIONS`, the hypothesis index, and the
 results index.
 
 The later special-function cut/signature scaffold was ultimately renumbered to
-HYP-3411/T1372 after mainline HYP-3407/T1368 became the separate
+HYP-3412/T1373 after mainline HYP-3407/T1368 became the separate
 boundary-uniformization cut-stability atlas, HYP-3409/T1370 became the
-recursive sidecar pattern atlas, and HYP-3410/T1371 became the charal recursion
-scout.  The scaffold remains downstream rather than conflicting: it proposes
+recursive sidecar pattern atlas, HYP-3410/T1371 became the charal recursion
+scout, and HYP-3411 was already occupied by the Galois reframe.  The scaffold remains downstream rather than conflicting: it proposes
 recursive cut/signature tests starting from the HYP-3406 sidecar chain
 `residue -> height -> owner_support`.
 

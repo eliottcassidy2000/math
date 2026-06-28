@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HYP-3411 scout: special-function cut signature recursion for LRC14.
+"""HYP-3412 scout: special-function cut signature recursion for LRC14.
 
 This is a creative synthesis scout, not a proof.  Its discipline is the
 function-compression rule used throughout the current LRC14 work:
@@ -553,7 +553,7 @@ def print_motif_table(motifs: list[Motif]) -> None:
 
 
 def main() -> None:
-    print("HYP-3411 SPECIAL-FUNCTION CUT SIGNATURE RECURSION")
+    print("HYP-3412 SPECIAL-FUNCTION CUT SIGNATURE RECURSION")
     print("=" * 78)
     print("status=EVIDENCE / creative executable synthesis; not an LRC14 proof")
     print("source=HYP-3406 expanded-bank rows plus special-function/cut sidecar prompts")
