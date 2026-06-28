@@ -1,5 +1,30 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3238 even/odd positive/negative duality bridge addendum:**
+HYP-3238 reserves the proof bridge joining HYP-3236's positive Green graph,
+HYP-3219's Brouwer sign factorization, and HYP-3237's Vitali bulk/core wall.
+The proposed crossed packet is:
+even/positive = Fejer square, cyclotomic SOS magnitude, pair-Pascal cap mass,
+covariance layers, positive Green conductance, Perron coherent mode, and bulk
+positive-measure equidistribution; odd/negative = Worpitzky associator debt,
+Brouwer trace sign, Hermite-Biehler odd leg, negative covariance leakage,
+signed chart-change cancellation debt, and measure-zero cyclotomic core
+witnesses.
+
+Open task: make the compression law exact.  An even/positive quotient may be
+used as proof data only if the odd/negative payload is zero, reconstructible,
+dual-annihilated, or retained as sidecar.  Run the planned HYP-3238 scout over
+the `3432` anchored k=8 rows to count false terminals for positive/even
+compression: rows with no negative leakage but non-AP, rows with high Green
+connectivity but live odd sidecars, and HYP-3202 traps.  Compare `q3`,
+`q0+q6`, Green slack, and negative leakage, then test whether HYP-3204's
+ordered-tail exchange and HYP-3222's Hermite-Biehler interlacing provide the
+finite odd/negative discharge. -> HYP-3238, HYP-3237, HYP-3236, HYP-3235,
+HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227,
+HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3219, HYP-3218,
+HYP-3217, HYP-3216, HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201,
+HYP-3200, HYP-3163, HYP-3153, T1338, LTI-338, LTT-238, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3228 cyclotomic Delsarte shell-magic addendum:**
 HYP-3228 makes the requested magic-function object explicit at the k=8
 frontier.  The finite dual is

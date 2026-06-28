@@ -222,6 +222,14 @@ obligations, and proof-carrier interfaces.
   Schur trap discharge, positive conductance graphs, negative leakage
   sidecars, and Fiedler bottlenecks the vertices.  Do not let the
   positive-part graph forget clipped negative covariance or odd Worpitzky debt.
+- Need to merge the even/odd and positive/negative proof halves:
+  use LTT-238 after LTT-236/LTT-226/LTT-206/LTT-201 and make proof
+  obligations or retained information channels the vertices: Fejer/SOS
+  magnitude, Green positive conductance, Vitali bulk measure, pair-Pascal cap,
+  Toeplitz slack, Brouwer sign, Hermite-Biehler interlacing, negative leakage,
+  signed chart debt, and raw scalar shadows.  Do not promote even/positive
+  compression unless the odd/negative payload is zero, reconstructible,
+  dual-annihilated, or retained.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -6750,3 +6758,49 @@ quotient_legality_status
   HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
   HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154,
   HYP-3153, LTI-336, LTT-236, T1336, OPEN-Q-108.
+
+## LTT-238: Even/Odd Positive/Negative Duality Tournament
+
+- **Move:** Treat retained proof obligations as tournament vertices across the
+  crossed duality: `even_positive_fejer_square`,
+  `green_dirichlet_positive_face`, `bulk_vitali_positive_measure`,
+  `pair_pascal_cap_mass`, `toeplitz_normal_fan_slack`,
+  `odd_negative_brouwer_sign`, `hermite_biehler_interlacing`,
+  `negative_covariance_leakage`, `signed_chart_change_debt`,
+  `raw_lambda2_scalar`, and `raw_positive_association`.
+- **LRC use:** HYP-3238 merges the previous HYP-3236 Green pass with
+  HYP-3219's Brouwer sign factorization and HYP-3237's Vitali bulk/core wall.
+  It turns the proof search into a legality tournament: an even/positive
+  quotient wins only if it retains or discharges the odd/negative coordinate
+  that it would otherwise destroy.
+- **Preserves:** AP extremality, Fejer/SOS magnitude, Green conductance
+  slack, central `q3` exchange debt, negative leakage, Brouwer sign,
+  Hermite-Biehler odd leg, Vitali core witnesses, and the AP/doubled-AP
+  equality face.
+- **Forgets / guardrail:** raw `lambda2`, raw positive association, raw
+  Perron alignment, raw `L_y`, or raw measure mass can all be AP-tight while
+  forgetting sign, core, chart, or leakage payload.  They are tournament
+  vertices only as shadows unless a sidecar or dual-annihilator is present.
+- **Pairwise observable:** which carrier preserves the LRC14 predicate while
+  losing less of the crossed even/odd and positive/negative packet.
+- **Switch/gauge:** orient toward the carrier that discharges a destroyed
+  coordinate of the other carrier or has lower conditional residual
+  `H(lost_duality_payload|carrier)`.
+- **Reserved fingerprint:** the planned scout will compute row-level false
+  terminals.  Provisional tie path:
+  `even_positive_fejer_square -> green_dirichlet_positive_face ->
+  bulk_vitali_positive_measure -> pair_pascal_cap_mass ->
+  toeplitz_normal_fan_slack -> odd_negative_brouwer_sign ->
+  hermite_biehler_interlacing -> negative_covariance_leakage ->
+  signed_chart_change_debt -> raw_lambda2_scalar ->
+  raw_positive_association`.
+- **Next pull:** Run the HYP-3238 scout over the `3432` anchored k=8 rows.
+  Count rows that look terminal after positive/even compression but still
+  need an odd/negative sidecar, including zero-negative-leakage non-AP rows
+  and HYP-3202 traps.  Compare `q3`, `q0+q6`, Green slack, and leakage to
+  HYP-3204/HYP-3222 discharge data.
+- **Pointers:** HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233,
+  HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224,
+  HYP-3223, HYP-3222, HYP-3221, HYP-3219, HYP-3218, HYP-3217, HYP-3216,
+  HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163,
+  HYP-3153, LTI-338, LTT-238, T1338, OPEN-Q-108.
