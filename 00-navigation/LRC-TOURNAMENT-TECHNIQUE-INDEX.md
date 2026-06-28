@@ -198,6 +198,12 @@ obligations, and proof-carrier interfaces.
   margin, distance-layer quotient, self-inversive defect, random-current
   order, and law-defect meter.  Do not use raw covariance, positive
   association, or row entropy as terminal vertices.
+- Need to turn the k=8 covariance/trap frontier into proof certificates:
+  use LTT-223 after LTT-204/LTT-203/LTT-202/LTT-201/LTT-178/LTT-161 and make
+  Green-current certificates, effective-resistance profiles,
+  Schur-complement trap discharges, Lorentzian Hessian packets, valuated
+  exchange slacks, and tropical Plucker defects the vertices.  Do not stop at
+  raw covariance, raw local exchange, or positive association.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -6301,3 +6307,53 @@ quotient_legality_status
   HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
   HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, THM-577,
   LTI-306, LTT-206, T1306, OPEN-Q-108.
+
+## LTT-223: Green-Current And Lorentzian Exchange Tournament
+
+- **Move:** Treat proof certificates as tournament vertices:
+  green-current certificate, effective-resistance profile,
+  Rayleigh/Schur trap discharge, Lorentzian Hessian certificate, valuated
+  exchange certificate, tropical Plucker defect, finite trap sidecar,
+  polarized cyclotomic support, raw covariance scalar, plain speed exchange,
+  and plain positive association.
+- **LRC use:** HYP-3223 converts HYP-3202's covariance-layer/trap evidence and
+  HYP-3203's AP support/orbit-sidecar evidence into certificate targets that
+  can feed HYP-3204's ordered-tail exchange route.  HYP-3205 supplies the
+  compatibility dictionary that asks whether these new certificates are
+  coordinates of the same AP-tight face rather than extra scalars.
+  HYP-3211/HYP-3212/HYP-3221 add the guardrail: the certificate is on the
+  additive/cyclotomic LRC face, should respect the Chebyshev/Delsarte cap, and
+  cannot become a config-blind substitute for analytic equidistribution.
+  Electrical side: the covariance matrix is a Green kernel, `1^T C 1` is
+  all-ones current energy, and the `11` non-AP local maxima are bottleneck
+  networks.  Exchange side: co-emptiness probabilities form a finite set
+  function whose Rayleigh differences, third cumulants, AP support normal, and
+  trap defects should be tested for Lorentzian or valuated-matroid exchange
+  structure after sidecars are restored.
+- **Preserves:** primitive k=8 covariance/coverage predicate, distance-layer
+  payload, AP support direction, trap identity, orbit sidecars, current
+  leakage, exchange-circuit defects, and terminal discharge/debt.
+- **Forgets / guardrail:** runner, sector, and arc vertices are shadows for
+  this task.  Raw covariance forgets current location; plain local exchange
+  forgets finite trap sidecars; positive association forgets the HYP-3202
+  positive-pair decoys.
+- **Fingerprint:** proposed proof-carrier tournament is transitive with
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1}`, no directed
+  3-cycles, and one Hamiltonian path:
+  `green_current_certificate -> effective_resistance_profile ->
+  rayleigh_schur_trap_discharge -> lorentzian_hessian_certificate ->
+  valuated_exchange_certificate -> tropical_plucker_defect ->
+  finite_trap_sidecar -> polarized_cyclotomic_support ->
+  raw_covariance_scalar -> plain_speed_exchange ->
+  plain_positive_association`.
+- **Next hook:** On the `12` arbitrary-swap local maxima from HYP-3202, emit
+  `effective_resistance_profile`, `thomson_energy_slack`,
+  `schur_complement_exit`, `trap_network_bottleneck_id`,
+  `rayleigh_difference_matrix`, `lorentzian_hessian_signature`,
+  `valuated_exchange_slack`, `tropical_plucker_defect`, and
+  `sidecar_restored_exchange_status`; then test whether HYP-3205's first
+  failed dictionary coordinate predicts the same discharge.
+- **Pointers:** HYP-3223, HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210,
+  HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
+  HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3139, HYP-3138, HYP-3132,
+  THM-577, LTI-323, LTT-223, T1323, OPEN-Q-108.

@@ -44,6 +44,42 @@ self-inversive defect, interlacing status, and Wronskian orientation across
 the bounded k=8 bank.  Join those columns to Toeplitz `lambda_min(T)`,
 distance-layer dominance, spectral-dictionary compatibility, random-current
 order, ordered-tail exchange-rate fields, and HYP-3201 law-defect fields.
+## Lead codex-2026-06-28: Green-current / Lorentzian exchange certificates
+
+**Status:** SYNTHESIS / proof-angle proposal; not proof (HYP-3223/T1323).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3223-lrc14-green-current-lorentzian-exchange-angles.md`
+and
+`07-reflections/lrc14-green-current-lorentzian-exchange-angles-codex-20260628.md`.
+
+Readout: the latest k=8 evidence now asks for certificates, not another raw
+scalar.  Angle A reads the empty-sector covariance matrix as a Green kernel:
+`Sigma kappa_2=1^T C 1` is all-ones current energy, distance layers are
+boundary conductance channels, exchange moves are Schur-complement or
+star-mesh edits, and the HYP-3202 traps are finite bottleneck networks.  Angle
+B reads co-emptiness probabilities as a set function whose Rayleigh
+differences, third cumulants, AP support direction, and compression traps are
+finite differences in a Lorentzian / valuated-matroid chamber.
+Rebase integration: HYP-3211/HYP-3212/HYP-3221 say this certificate should
+stay on the additive/cyclotomic LRC face, respect the Chebyshev/Delsarte
+magic-function cap, and avoid becoming a config-blind replacement for the
+analytic equidistribution obligation.  HYP-3205 adds the spectral-dictionary
+compatibility layer: treat these Green-current and Lorentzian fields as
+candidate coordinates for the same AP-tight face, and compare their trap
+discharges with the first failed dictionary coordinate.
+Close-out namespace note: HYP-3222 is now the Joukowski/Hermite-Biehler/Perron
+exact-certificate packet on mainline, so this Green-current/Lorentzian packet
+uses HYP-3223/T1323/LTI-323/LTT-223.
+
+Next: on the `12` arbitrary-swap local maxima from HYP-3202, emit
+`effective_resistance_profile`, `thomson_energy_slack`,
+`schur_complement_exit`, `trap_network_bottleneck_id`,
+`rayleigh_difference_matrix`, `lorentzian_hessian_signature`,
+`valuated_exchange_slack`, and `tropical_plucker_defect`.  Check whether the
+`11` decoys collapse to a few network/circuit types and whether HYP-3203's AP
+support normal is the same exposed chamber normal; also check whether HYP-3205
+predicts the same trap discharge.
 
 ## Lead codex-2026-06-28-S277: function-compression degree-4 guardrail
 ## Lead codex-2026-06-28-S279: Law-defect entropy compression

@@ -94,6 +94,7 @@ function-compression legality / unordered-safe functions / ordered sidecars / de
 law-defect entropy compression / law quotient / target function / residual entropy bits / typed sidecar / monoid-action and root-radius defect
 covariance Laplacian / Monge sector kernel / associator triple-cocycle / odd-ear Worpitzky boundary
 Joukowski-Hermite-Biehler and Perron packet / interlacing leg certificate / Perron alignment / Toeplitz margin / self-inversive defect
+green-current response kernel / effective-resistance profile / Schur-complement trap discharge / Lorentzian exchange chamber / tropical Plucker sidecar
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -433,6 +434,7 @@ record what it destroys before asking it to prove anything.
 | LTI-304 | k=8 ordered-tail exchange verifier | Upper empty-sector tails, stop-loss guardrail, bimodality `q0+q6`, central mass `q3`, exchange-rate inequality, local-compression trap count | HYP-3204/codex-2026-06-28 follows HYP-3210/HYP-3203/HYP-3202/HYP-3200 over the same exact anchored k=8 bank and finds a sharper theorem-facing split.  Full convex/stop-loss dominance is false (`3429` primitive rows beat consec somewhere; no primitive row dominates it in all stop-loss coordinates).  The upper ordered-tail barrier survives: `0` primitive beaters for `q0`, `q5`, `q6`, `tail_ge_4`, `tail_ge_5`, `tail_ge_6`, `stop_ge_3`, `stop_ge_4`, `stop_ge_5`, `bimod=q0+q6`, `bimod_plus_q3`, and `L_y`.  The live lemma is the central exchange-rate inequality `(q3-q3_consec)_+ <= (q0+q6)_consec-(q0+q6)`, with `0` exact violations and worst ratio `12882/17161`; it implies `q0+q6+q3` and hence `L_y` extremality in primitive normal form.  Guardrails: `tail_ge_3` and raw `q3` have many beaters, and greedy coordinate compression has hundreds of local maxima. | HYP-3204, HYP-3210, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, HYP-3122, THM-577, T1304, LTT-204, LTI-304, OPEN-Q-108 | Prove the primitive-normal-form exchange-rate lemma, then join it to a `q0+q6` bimodality atom from HYP-3202 distance-layer covariance or HYP-3200 ferromagnetic/reflection-fold machinery, with HYP-3210 carrying the odd Worpitzky/Hermite-Biehler interlacing sidecar.  Do not use full convex order, `tail_ge_3`, raw `q3`, entropy, or naive one-coordinate exchange as terminal proof routes. |
 | LTI-305 | k=8 spectral dictionary compatibility | Certificate vector, AP-tight face intersection, Toeplitz moment margin, AP support hyperplane, covariance distance layers, trap-sheaf discharge | HYP-3205/codex-2026-06-28 merges the current k=8 proof languages.  Exact bounded-bank evidence says AP/consec and doubled AP are the only simultaneous maximizers across `q0`, `L_y`, `Sigma kappa_2`, `D1,D2,D3`, AP support, and Toeplitz `lambda_min`; primitive normal form leaves AP unique.  The closest non-AP decoy `(0,2,3,4,5,6,7,8)` has nonzero deficits in every measured coordinate.  Perron alignment is only diagnostic and raw cyclotomic norm is false as a terminal extremal principle. | HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3210, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3138, HYP-3132, HYP-3117, HYP-3116, T1305, LTT-205, LTI-305, OPEN-Q-108 | Prove a certificate-Helly/separation lemma for the AP-tight dictionary intersection, then discharge exchange and compression traps by the first failed layer/support/Toeplitz coordinate; use the Joukowski/Hermite-Biehler bridge only with sidecars intact. |
 | LTI-306 | Joukowski-Hermite-Biehler / Perron-Frobenius packet | Hermite-Biehler even/odd legs, Joukowski self-inversive defect, Perron alignment of the covariance matrix, distance-layer quotient, Toeplitz margin, random-current order | HYP-3222/codex-2026-06-28 merges S73c Perron/HB, S31al Toeplitz/Caratheodory, HYP-3202 layer/trap evidence, and HYP-3201 law-defect compression, now read beside HYP-3212/HYP-3213 Chebyshev-cyclotomic arithmetic, HYP-3221 apex-7 obstruction, HYP-3205 spectral-dictionary compatibility, and HYP-3204 ordered-tail exchange.  The exact local HB certificate is `E=x^2+5x+4`, `O=x^2+4x+1`, strict interlacing `-4 < -2-sqrt(3) < -1 < -2+sqrt(3)`, and Wronskian `(x+3)^2+2>0`.  The exact PF quotient certificate uses HYP-3202 layer sums to build a nonnegative C6 quotient with `lambda0=(1^T C1)/6=6237419/25930800=lambda_max`, while an AFM sign toy moves the top mode to `k=3`. | HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, THM-577, T1306, LTT-206, LTI-306, OPEN-Q-108 | Lift the exact HB interlacing through Joukowski with the self-inversive defect retained; replace the ideal C6 Perron quotient by a boundary-aware covariance inequality; join Toeplitz `lambda_min`, Perron alignment, distance-layer dominance, spectral-dictionary compatibility, ordered-tail exchange, and random-current order into one packet. |
+| LTI-323 | Green-current / Lorentzian exchange certificates | Empty-sector covariance response kernels, effective-resistance profiles, all-ones current energy, Schur-complement trap discharge, co-emptiness set functions, Lorentzian Hessian signatures, valuated exchange slacks, tropical Plucker defects | HYP-3223 turns the HYP-3202/HYP-3203 frontier into certificate targets that can feed HYP-3204's ordered-tail exchange route, with HYP-3205's spectral dictionary as the compatibility coordinate layer and HYP-3211/HYP-3212/HYP-3221 guardrails: stay on the additive/cyclotomic LRC face, respect the Chebyshev/Delsarte cap, and do not erase the analytic equidistribution obligation.  Electrical route: read the covariance matrix as a Green kernel so `Sigma kappa_2=1^T C 1` is all-ones current energy, distance layers are boundary conductance channels, exchange moves are Schur-complement/star-mesh edits, and the `11` non-AP local maxima are bottleneck networks.  Exchange route: read co-emptiness probabilities as a finite set function whose Rayleigh differences, third cumulants, AP support normal, and traps should lie in a Lorentzian or valuated-matroid chamber after dilation/mirror/two-block sidecars are retained. | HYP-3223, HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3139, HYP-3138, HYP-3132, THM-577, T1323, LTT-223, LTI-323, OPEN-Q-108 | Classify the HYP-3202 `12` local maxima by `effective_resistance_profile`, `thomson_energy_slack`, `schur_complement_exit`, `rayleigh_difference_matrix`, `lorentzian_hessian_signature`, `valuated_exchange_slack`, and `tropical_plucker_defect`; test whether HYP-3203's AP support normal is the same exposed exchange-chamber normal and whether HYP-3205's certificate vector supplies a Helly-style trap discharge. |
 
 ## Cross-Cutting Guardrails
 
@@ -4282,3 +4284,81 @@ HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
 HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
 HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, THM-577,
 LTI-306, LTT-206, T1306, OPEN-Q-108.
+
+## LTI-323: Green-Current / Lorentzian Exchange Certificates
+
+Used by codex-2026-06-28 for HYP-3223/T1323.  This technique turns the
+current k=8 covariance evidence into certificate fields.
+Rebase integration: HYP-3211/HYP-3212/HYP-3221 add the boundary condition that
+this is an additive/cyclotomic LRC-face certificate and must retain or hand off
+the arithmetic sidecars required by analytic equidistribution.  HYP-3205 adds
+the compatibility target: these fields should be tested as coordinates of the
+same AP-tight dictionary, and their trap discharges should match the first
+failed layer/support/Toeplitz coordinate when one exists.  HYP-3222 supplies
+the adjacent exact spectral-certificate sibling; HYP-3223 should not duplicate
+that Joukowski/Hermite-Biehler/Perron packet, only feed it with trap
+classification data.
+
+Electrical carrier:
+
+```text
+covariance matrix C_E = Green kernel / response matrix
+Sigma kappa_2 = 1^T C_E 1 = all-ones current energy
+distance layers D1,D2,D3 = boundary conductance channels
+exchange move = Schur-complement or star-mesh network edit
+trap row = bottleneck network with named leakage
+```
+
+Exchange carrier:
+
+```text
+co-emptiness set function F_E(A) = P(all sectors in A empty)
+pair covariance = Rayleigh difference
+third cumulant = associator/cocycle finite difference
+AP support inequality = exposed normal direction
+exchange trap = basis-exchange or tropical Plucker defect
+```
+
+Preserves: primitive k=8 covariance/coverage predicate, distance-layer
+payload, AP support direction, exchange-neighbor relation, trap identity,
+dilation/mirror/two-block sidecars, and terminal discharge/debt.
+
+Destroys if used alone: raw runner or arc tournaments forget current leakage
+and chamber sidecars; plain positive association forgets covariance location;
+plain local exchange forgets why the finite trap manifold is legal.
+
+Packet fields:
+
+```text
+green_kernel_id
+effective_resistance_profile
+thomson_energy_slack
+rayleigh_monotonicity_status
+schur_complement_exit
+star_mesh_reduction_word
+boundary_leakage_conductance
+trap_network_bottleneck_id
+all_ones_current_alignment
+dilation_orbit_gauge_status
+rayleigh_difference_matrix
+lorentzian_hessian_signature
+valuated_exchange_slack
+tropical_plucker_defect
+matroid_circuit_sidecar_id
+basis_exchange_trap_class
+strong_rayleigh_status
+m_concavity_status
+ap_chamber_normal_vector
+sidecar_restored_exchange_status
+terminal_network_or_exchange_discharge
+```
+
+Next hook: run the fields on the `12` arbitrary-swap local maxima from
+HYP-3202.  A useful first theorem is a finite classification: each non-AP trap
+has a named bottleneck/circuit type and a legal discharge, while AP is the only
+sidecar-free terminal row.
+
+Pointers: HYP-3223, HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210,
+HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
+HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3139, HYP-3138, HYP-3132,
+THM-577, LTI-323, LTT-223, T1323, OPEN-Q-108.

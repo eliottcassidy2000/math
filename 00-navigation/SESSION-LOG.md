@@ -86,6 +86,49 @@ New handles: HYP-3205, T1305, LTI-305, LTT-205.  Next proof work: prove the
 small AP-tight dictionary intersection theorem and transport AP support or
 Toeplitz slack through the Joukowski/Hermite-Biehler bridge while keeping odd
 Worpitzky/associator debt named.
+## codex-2026-06-28 -- HYP-3223 green-current and Lorentzian exchange certificate angles
+
+Owner prompt: try another creative angle or two for remaining LRC14 proof
+targets after the new covariance/trap, polarized support, Toeplitz/Perron, and
+Joukowski/Hermite-Biehler work landed.  Added HYP-3223 plus reflection
+`lrc14-green-current-lorentzian-exchange-angles-codex-20260628.md`.
+Push-time rebase integrated HYP-3211/HYP-3212/HYP-3221: the packet is now
+explicitly an additive/cyclotomic LRC-face certificate classifier, compatible
+with the Chebyshev/Delsarte magic-function cap and not a substitute for the
+analytic equidistribution route.  Rebase over HYP-3205 adds the dictionary
+compatibility reading: these certificates should become coordinates in the
+same AP-tight face and should predict the same first-failed-coordinate trap
+discharges.
+Close-out namespace note: after another origin update, HYP-3222 was claimed
+for the Joukowski/Hermite-Biehler/Perron exact-certificate packet.  This
+Green-current/Lorentzian packet moved to HYP-3223/T1323/LTI-323/LTT-223.
+
+- **Angle A:** read the empty-sector covariance matrix as a Green
+  kernel/response matrix.  `Sigma kappa_2=1^T C 1` becomes all-ones current
+  energy; cyclic-distance layers become boundary conductance channels;
+  exchange moves become Schur-complement/star-mesh edits; and the HYP-3202
+  non-AP local maxima become finite bottleneck networks to discharge by
+  effective-resistance profiles, Rayleigh slack, and boundary leakage.
+- **Angle B:** read co-emptiness probabilities as a set function.  Pair
+  covariance, third-cumulant/associator debt, AP support, and exchange traps
+  become finite differences in a Lorentzian / valuated-matroid chamber.  The
+  HYP-3202 traps may be tropical Plucker circuit events after
+  dilation/mirror/two-block sidecars are forgotten.
+- **Tournament Analysis:** vertices are proof carriers, not runners or arcs:
+  green-current certificate, effective-resistance profile,
+  Rayleigh/Schur trap discharge, Lorentzian Hessian certificate, valuated
+  exchange certificate, tropical Plucker defect, finite trap sidecar,
+  polarized support, raw covariance, plain exchange, and plain positive
+  association.  The pairwise observable is predicate retention plus named
+  destroyed-coordinate debt.
+
+New handles: HYP-3223, T1323, LTI-323, LTT-223.  Next scout: classify the
+`12` arbitrary-swap maxima from HYP-3202 by `effective_resistance_profile`,
+`schur_complement_exit`, `rayleigh_difference_matrix`,
+`lorentzian_hessian_signature`, `valuated_exchange_slack`, and
+`tropical_plucker_defect`, then test whether HYP-3203's AP support normal is
+also the exchange-chamber normal and whether HYP-3205's dictionary coordinate
+predicts the same discharge.
 
 ## mac-mini-2026-06-27-S73d -- the moment-problem merge: Caratheodory-Toeplitz + Griffiths/GKS + Verblunsky all read the LRC FM/AFM phase
 

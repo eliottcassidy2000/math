@@ -26,6 +26,40 @@ HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161,
 HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147,
 HYP-3142, HYP-3139, HYP-3132, THM-577, T1306, LTI-306, LTT-206,
 OPEN-Q-108.
+**OPEN-Q-108 HYP-3223 Green-current / Lorentzian exchange addendum:**
+HYP-3223 proposes two certificate routes for the remaining bounded k=8
+covariance/coverage target after HYP-3202, HYP-3203, and HYP-3205.  The
+spectral-dictionary packet HYP-3205 asks for a first-failed-coordinate
+discharge of traps; HYP-3223 asks whether Green-current and Lorentzian
+certificates are the missing coordinates that make that discharge structural.
+The electrical route
+reads the empty-sector covariance matrix as a Green kernel / response matrix:
+`Sigma kappa_2=1^T C 1` is all-ones current energy, cyclic-distance layers are
+boundary conductance channels, exchange moves are Schur-complement or
+star-mesh edits, and the `11` non-AP HYP-3202 local maxima are finite
+bottleneck networks.  The exchange route reads co-emptiness probabilities as a
+set function whose Rayleigh differences, third cumulants, AP support normal,
+and trap defects should live in a Lorentzian / valuated-matroid exchange
+chamber once dilation/mirror/two-block sidecars are retained.
+Rebase guardrail: HYP-3211/HYP-3212/HYP-3221 place this inside the
+additive/cyclotomic LRC face, under the Chebyshev/Delsarte magic-function cap,
+and warn that any config-blind algebraic version must still hand off to
+analytic equidistribution.
+
+Open task: classify the `12` arbitrary-swap local maxima by electrical and
+exchange-circuit certificate type.  Emit `effective_resistance_profile`,
+`thomson_energy_slack`, `schur_complement_exit`,
+`trap_network_bottleneck_id`, `rayleigh_difference_matrix`,
+`lorentzian_hessian_signature`, `valuated_exchange_slack`,
+`tropical_plucker_defect`, and `sidecar_restored_exchange_status`.  Test
+whether the `11` decoys collapse to a small finite bottleneck/circuit list,
+whether HYP-3203's AP support normal is also the exposed normal of the
+exchange chamber, and whether HYP-3205's dictionary coordinate that first
+fails on each trap predicts the same discharge. -> HYP-3223, HYP-3222,
+HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203,
+HYP-3202, HYP-3201, HYP-3200, HYP-3163,
+HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3139, HYP-3138,
+HYP-3132, THM-577, T1323, LTI-323, LTT-223, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3153 Lee-Yang/Worpitzky/quartic packet addendum:**
 HYP-3153 combines HYP-3151's function-compression legality packet with
