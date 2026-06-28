@@ -153,6 +153,13 @@ witness data.  The same update warns that the dip is not just a
 `Q(sqrt(-7))` norm, so the sign/core sidecar cannot be collapsed to a single
 imaginary-quadratic norm scalar.
 
+Fourth post-rebase integration: KPS's exact witness result
+`lrc_core_witnesses_universal_AP_GW_kps.out` shows AP and Goddyn-Wong share
+the same six `Phi_14` witnesses `t=a/14`.  This upgrades the base
+cyclotomic core from an AP witness packet to a tight-locus invariant; the
+sidecar must distinguish base `Phi_14`, dilation-promoted `Phi_{14d}`, and
+rows where a speed divisible by `14` breaks the base witness.
+
 -> HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
 HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223,
 HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,

@@ -39,6 +39,12 @@ and that index `(p-1)/2=3` is also the de Moivre degree and the saddle
 equioscillation count.  So the HYP-3238 sidecar should carry an index field,
 not merely a sign field.
 
+A later KPS witness check makes this more invariant than I had written it:
+AP and Goddyn-Wong share the exact same six `Phi_14` witnesses.  The base
+cyclotomic core is therefore a tight-locus packet, not an AP accident; the
+harder cases are the dilation-promoted `Phi_{14d}` witnesses and rows where a
+speed divisible by `14` destroys the base `t=a/14` certificate.
+
 The crossed picture is:
 
 ```text

@@ -348,6 +348,14 @@ data rather than only the base `Phi_14` address.  Second, the dip is not simply
 a `Q(sqrt(-7))` norm, so the sign/core sidecar should not be overcompressed
 into an imaginary-quadratic norm scalar.
 
+The KPS exact witness check `lrc_core_witnesses_universal_AP_GW_kps.out`
+turns the base core into a tight-locus invariant: AP `{1,...,13}` and
+Goddyn-Wong `{1,...,11,13,24}` attain `M=1/14` at exactly the same six
+primitive `Phi_14` witnesses `t=a/14`, grouped as antipodal pairs
+`(1,13),(3,11),(5,9)`.  Thus the `Phi_14` packet is not AP-specific; it is
+configuration-independent on the known tight locus, while the remaining hard
+core begins when a speed is divisible by `14` and the base witness fails.
+
 HYP-3237 supplies the information-theoretic wall:
 
 ```text

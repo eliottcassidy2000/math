@@ -36,6 +36,12 @@ HYP-3240/S77 guardrail: covering-tight dilations use witnesses
 `t=1/(14d)` in `Phi_{14d}`, so retain dilation witness data in the core
 sidecar.  Also do not compress the dip to a single `Q(sqrt(-7))` norm scalar.
 
+KPS exact witness check: AP `{1,...,13}` and Goddyn-Wong
+`{1,...,11,13,24}` share the same six primitive `Phi_14` witnesses
+`t=a/14`, so the base cyclotomic core is tight-locus invariant rather than
+AP-specific.  The remaining hard core starts when a speed divisible by `14`
+breaks the base witness and forces a dilation/sporadic sidecar.
+
 Open task: prove the `q3` exchange-rate inequality symbolically, then glue it
 to HYP-3222 Hermite-Biehler interlacing and HYP-3220 Brouwer/parity sign.
 Negative covariance leakage is only one sidecar; the true odd/negative payload
