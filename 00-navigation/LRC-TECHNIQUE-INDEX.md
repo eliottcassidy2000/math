@@ -103,6 +103,7 @@ equioscillation-autocorrelation atlas / Fejer triangular AP law / outward-lag tr
 formal-analytic proof-obligation ledger / Lean-closed glue / finite-closed packets / open analytic cores / rigidity node / false-route marker
 C6 residue-magnitude factorization / unit binding skeleton / even-cover plus apex-7 layer / 2-adic hinge / observability glue
 CRT/Galois census factorization / `U union 2U union {7}` / C3 binding-pair quotient / Q(sqrt(-7)) sidecar / 2-adic covering-flex ledger
+three-coordinate obstruction exactness / C3 binding skeleton / Q(sqrt(-7)) character / all-residue height-flex ledger / mixed-fiber first obstruction
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -455,6 +456,7 @@ record what it destroys before asking it to prove anything.
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
+| LTI-362 | Three-coordinate obstruction exactness | Quotient functions over the AP one-swap collar; sidecar packets `C3`, `Q(sqrt(-7))`, covering layer, unit/nonunit/all-residue height-flex ledgers; mixed boundary/strict fibers | HYP-3401 instantiates HYP-3301 on the HYP-3311 packet.  In the `924`-row AP collar through replacement speed `84`, only AP and GW `12->24` are boundary-tight.  Raw unit, raw residue, C3, quadratic, C3+quadratic, C3+quadratic+covering, and C3+quadratic+nonunit-height quotients all mix boundary-tight and strict-open rows.  The leak AP versus `13->27` shows nonunit height misses a unit-height lift.  The `height_completed_packet` has `0` mixed fibers, so the first obstruction is killed locally by C3 + quadratic + all-residue height/flex. | HYP-3401, HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-3255, HYP-3300, HYP-2909, THM-523, T1362, LTT-262, LTI-362, OPEN-Q-108 | Formalize the AP-collar exactness lemma, then globalize it by replacing full row-height retention with a finite chamber sidecar: AP/GW boundary, strict-open mass, `Phi14d` equality, Toeplitz/Green/root-motion discharge, state-lift debt, or named residual. |
 
 ## Cross-Cutting Guardrails
 
@@ -5515,6 +5517,72 @@ debt cell.
 Pointers: HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255,
 HYP-3400, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261,
 OPEN-Q-108.
+
+## LTI-362: Three-Coordinate Obstruction Exactness
+
+Created by codex-2026-06-28 for HYP-3401 as the first concrete
+HYP-3301 exactness test on the HYP-3311 packet.  The organizing rule is
+functional: a quotient is a compression function, and it is proof-legal only
+when the LRC exit predicate is constant on each fiber, reconstructible from a
+sidecar, dual-annihilated, or routed to named debt.
+
+Objects:
+
+```text
+AP one-swap collar, replacement speed <= 84
+boundary_tight versus strict_open exit status
+C3 binding skeleton
+Q(sqrt(-7)) quadratic character
+covering layer 2U+{7}
+unit height/flex ledger
+nonunit height/flex ledger
+all-residue height/flex ledger
+mixed quotient fiber = first obstruction
+```
+
+Exact readout:
+
+```text
+rows=924
+boundary_tight=2  (AP and GW 12->24)
+strict_open=922
+
+raw_unit_projection:                   mixed_fibers=1
+raw_mod14_residue_table:               mixed_fibers=2
+c3_binding_skeleton:                   mixed_fibers=1
+quadratic_Qsqrt_minus7_character:      mixed_fibers=1
+c3_plus_quadratic:                     mixed_fibers=1
+c3_plus_quadratic_plus_covering_layer: mixed_fibers=1
+c3_quadratic_nonunit_height_packet:    mixed_fibers=1
+height_completed_packet:               mixed_fibers=0
+full_height_residue_ledger:            mixed_fibers=0
+```
+
+The key leak is AP versus `13->27`: the latter is strict-open with mass
+`13691/582120`, but the nonunit height ledger does not see the unit-height
+lift.  Thus HYP-3311's nonunit covering-flex theorem is necessary but not
+locally sufficient; the exact AP-collar packet needs all-residue height/flex.
+
+Preserves: exit-status constancy on AP-collar fibers, C3 binding counts,
+quadratic QR/NQR/ramified counts, covering layer, and height/flex position.
+
+Destroys if scalarized: unit-height lifts, nonunit-height lifts, endpoint
+owners, strict safe mass, and the distinction between a useful field sidecar
+and a terminal proof invariant.
+
+Best use: finite O15 tight-locus rigidity.  Treat every mixed fiber as a
+first-obstruction cocycle and prove it is killed by a legal sidecar or exits
+through strict-open mass, AP/GW boundary, `Phi14d` equality, finite
+Toeplitz/Green/root-motion discharge, state-lift debt, or named residual.
+
+Failure mode: the `height_completed_packet` is exact on the collar partly
+because it retains almost row-level height data.  The global proof must replace
+this with a theorem-shaped chamber packet rather than declaring the full
+height ledger to be the final invariant.
+
+Pointers: HYP-3401, HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3266,
+HYP-3265, HYP-3260, HYP-3257, HYP-3255, HYP-3300, HYP-2909, THM-523, T1362,
+LTT-262, OPEN-Q-108.
 
 ## LTI-344: Lift/Compress Span for Tiling and Half-Tiling Recursions
 

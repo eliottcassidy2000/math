@@ -1,3 +1,46 @@
+## codex-2026-06-28 -- HYP-3401 three-coordinate obstruction exactness for LRC14
+
+Owner asked to keep pushing creative but rigorous LRC14 proof angles, with the
+recent even/odd, positive/negative, topology/geometry/graph, Joukowski/Hermite-
+Biehler, Perron, Green-current, and information-theory frames in mind.  Added
+HYP-3401/T1362/LTI-362/LTT-262 plus script/result/reflection:
+
+```text
+04-computation/lrc14_three_coordinate_obstruction_exactness_codex_20260628.py
+05-knowledge/results/lrc14_three_coordinate_obstruction_exactness_codex_20260628.out
+05-knowledge/hypotheses/HYP-3401-lrc14-three-coordinate-obstruction-exactness.md
+07-reflections/lrc14-three-coordinate-obstruction-exactness-codex-20260628.md
+```
+
+Readout: the AP one-swap collar through replacement speed `84` has `924` rows,
+with only AP and Goddyn-Wong `12->24` boundary-tight; all other `922` rows are
+strict-open.  Treating a quotient as a function and `exit_status` as the target
+predicate makes mixed fibers into explicit compression failures.  Raw unit,
+raw residue, C3, quadratic, C3+quadratic, C3+quadratic+covering, and
+C3+quadratic+nonunit-height quotients all have mixed boundary/strict fibers.
+The sharp leak is AP versus `13->27`, which is strict-open with mass
+`13691/582120` but invisible to the nonunit height ledger.
+
+The local repair is C3 + `Q(sqrt(-7))` + all-residue height/flex:
+`height_completed_packet` and `full_height_residue_ledger` have `0` mixed
+fibers.  This is not the LRC14 proof and not a claim that full row-height data
+is the final invariant.  It is the finite exactness lemma target: the first
+lost coordinate in the AP collar is real, named, and sidecar-killable.
+
+Incoming integration: monad-explorer's HYP-3311 actual-packet sheaf
+instantiation repairs the first curated HYP-2969 coarse ambiguity with nonunit
+residue data.  This run should be read as the AP-collar stress test of that
+packet: once boundary-tight versus strict-open fibers are tested, the next
+missing coordinate is unit-height flex.
+
+Tournament Analysis uses sidecar packets as vertices, not runners/residues:
+one Hamiltonian path led by
+`height_completed_packet -> height_flex_ledger -> c3_plus_quadratic_field_packet`.
+Next proof pull: formalize the AP-collar exactness lemma and then replace full
+height retention by a chamber theorem routing every height/flex perturbation to
+AP/GW boundary, strict-open mass, `Phi14d` equality, Toeplitz/Green/root-motion
+discharge, state-lift debt, or named residual.
+
 ## codex-2026-06-28 -- integrated C6 residue-magnitude factorization for LRC14
 Owner: integrate the user's binding/covering/hinge ideas into proof-route artifacts.  Added HYP-3310/T1360/LTI-360/LTT-260 plus script/result/reflection.
 - Exact CRT/C6 ledger: binding runners are units `(Z/14)*={1,3,5,9,11,13}`; covering runners are even residues `{2,4,6,8,10,12}` plus ramified apex `7`; multiplication by `3` cycles binder slots `(1,13)->(3,11)->(5,9)`.

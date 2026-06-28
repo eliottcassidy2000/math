@@ -1,0 +1,69 @@
+﻿HYP-3401 LRC14 three-coordinate obstruction exactness scout
+==============================================================================
+claim=first lost quotient coordinate should be an exact/sidecar obstruction
+status=finite exact AP-collar scout; not an LRC14 proof
+packet=C3 binding skeleton + Qsqrt(-7) character + height/flex ledger
+
+BANK
+one_swap_collar_max_new_speed=84
+rows=924
+exit_status_counts={'boundary_tight': 2, 'strict_open': 922}
+boundary_rows=2
+strict_open_rows=922
+
+NAMED ROWS
+  AP: row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) exit=boundary_tight mass=0 components=0 closed_points=6 contacts=EEEEEE c3=(2, 2, 2) qsqrt=(6, 1, 6) cover=(6, 1) unit_height=((1, 0), (3, 0), (5, 0), (9, 0), (11, 0), (13, 0)) nonunit_height=((2, 0), (4, 0), (6, 0), (7, 0), (8, 0), (10, 0), (12, 0))
+  GW_12_to_24: row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24) exit=boundary_tight mass=0 components=0 closed_points=6 contacts=EEEEEE c3=(2, 2, 2) qsqrt=(6, 1, 6) cover=(6, 1) unit_height=((1, 0), (3, 0), (5, 0), (9, 0), (11, 0), (13, 0)) nonunit_height=((2, 0), (4, 0), (6, 0), (7, 0), (8, 0), (10, 0), (10, 1))
+  positive_near_miss_12_to_36: row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36) exit=strict_open mass=1/1260 components=2 closed_points=10 contacts=EEEEEE c3=(2, 2, 2) qsqrt=(5, 1, 7) cover=(6, 1) unit_height=((1, 0), (3, 0), (5, 0), (9, 0), (11, 0), (13, 0)) nonunit_height=((2, 0), (4, 0), (6, 0), (7, 0), (8, 0), (8, 2), (10, 0))
+  petal_10_to_20: row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20) exit=strict_open mass=1/980 components=2 closed_points=10 contacts=EEEEEE c3=(2, 2, 2) qsqrt=(6, 1, 6) cover=(6, 1) unit_height=((1, 0), (3, 0), (5, 0), (9, 0), (11, 0), (13, 0)) nonunit_height=((2, 0), (4, 0), (6, 0), (6, 1), (7, 0), (8, 0), (12, 0))
+  same_residue_height_2_to_16: row=(1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16) exit=strict_open mass=11/364 components=2 closed_points=10 contacts=EEEEEE c3=(2, 2, 2) qsqrt=(6, 1, 6) cover=(6, 1) unit_height=((1, 0), (3, 0), (5, 0), (9, 0), (11, 0), (13, 0)) nonunit_height=((2, 1), (4, 0), (6, 0), (7, 0), (8, 0), (10, 0), (12, 0))
+  same_unit_height_13_to_27: row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 27) exit=strict_open mass=13691/582120 components=12 closed_points=30 contacts=EEEEEE c3=(2, 2, 2) qsqrt=(6, 1, 6) cover=(6, 1) unit_height=((1, 0), (3, 0), (5, 0), (9, 0), (11, 0), (13, 1)) nonunit_height=((2, 0), (4, 0), (6, 0), (7, 0), (8, 0), (10, 0), (12, 0))
+
+QUOTIENT MIXING AUDIT
+  raw_unit_projection: fibers=43 mixed_fibers=1 largest_mixed=318
+    example=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) boundary_tight mass=0 closed=6  ||  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 27) strict_open mass=13691/582120 closed=30
+  raw_mod14_residue_table: fibers=170 mixed_fibers=2 largest_mixed=66
+    example=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) boundary_tight mass=0 closed=6  ||  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 27) strict_open mass=13691/582120 closed=30
+  c3_binding_skeleton: fibers=13 mixed_fibers=1 largest_mixed=348
+    example=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) boundary_tight mass=0 closed=6  ||  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15) strict_open mass=5693/194040 closed=28
+  quadratic_Qsqrt_minus7_character: fibers=7 mixed_fibers=1 largest_mixed=372
+    example=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) boundary_tight mass=0 closed=6  ||  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 17) strict_open mass=105559/3298680 closed=28
+  c3_plus_quadratic: fibers=55 mixed_fibers=1 largest_mixed=132
+    example=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) boundary_tight mass=0 closed=6  ||  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 27) strict_open mass=13691/582120 closed=30
+  c3_plus_quadratic_plus_covering_layer: fibers=55 mixed_fibers=1 largest_mixed=132
+    example=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) boundary_tight mass=0 closed=6  ||  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 27) strict_open mass=13691/582120 closed=30
+  c3_quadratic_nonunit_height_packet: fibers=596 mixed_fibers=1 largest_mixed=31
+    example=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) boundary_tight mass=0 closed=6  ||  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 27) strict_open mass=13691/582120 closed=30
+  height_completed_packet: fibers=924 mixed_fibers=0 largest_mixed=0
+    example=none
+  full_height_residue_ledger: fibers=924 mixed_fibers=0 largest_mixed=0
+    example=none
+
+SIDECAR REPAIR AUDIT
+  raw_unit_projection: best_mixed_after_sidecar=0; unit_contact_status:1, covering_layer:1, unit_height_flex:1, nonunit_height_flex:1, full_height_flex:0, c3_quadratic_nonunit_height_packet:1, height_completed_packet:0
+  raw_mod14_residue_table: best_mixed_after_sidecar=0; unit_contact_status:2, covering_layer:2, unit_height_flex:2, nonunit_height_flex:1, full_height_flex:0, c3_quadratic_nonunit_height_packet:1, height_completed_packet:0
+  c3_binding_skeleton: best_mixed_after_sidecar=0; unit_contact_status:1, covering_layer:1, unit_height_flex:1, nonunit_height_flex:1, full_height_flex:0, c3_quadratic_nonunit_height_packet:1, height_completed_packet:0
+  quadratic_Qsqrt_minus7_character: best_mixed_after_sidecar=0; unit_contact_status:1, covering_layer:1, unit_height_flex:1, nonunit_height_flex:1, full_height_flex:0, c3_quadratic_nonunit_height_packet:1, height_completed_packet:0
+  c3_plus_quadratic: best_mixed_after_sidecar=0; unit_contact_status:1, covering_layer:1, unit_height_flex:1, nonunit_height_flex:1, full_height_flex:0, c3_quadratic_nonunit_height_packet:1, height_completed_packet:0
+  c3_plus_quadratic_plus_covering_layer: best_mixed_after_sidecar=0; unit_contact_status:1, covering_layer:1, unit_height_flex:1, nonunit_height_flex:1, full_height_flex:0, c3_quadratic_nonunit_height_packet:1, height_completed_packet:0
+
+READOUT
+  mixed fibers are concrete first-obstruction cocycles: the quotient cannot be proof currency until a sidecar kills the mixing.
+  c3_quadratic_nonunit_height_packet_mixed_fibers=1; height_completed_packet_mixed_fibers=0; full_height_residue_ledger_mixed_fibers=0
+  AP-collar result: C3 + quadratic + full height/flex separates boundary-tight from strict-open rows.
+  new sidecar debt: nonunit height alone misses unit-height lifts such as 13->27.
+
+TOURNAMENT ANALYSIS
+pairwise_observable=retained exit/status coordinates minus destroyed first-obstruction payload
+binary_gauge=A->B iff weighted retained proof payload is larger; ties use fewer destroyed sidecars
+vertices=8
+score_hist={-18: 1, -12: 1, 3: 1, 6: 1, 34: 1, 45: 1, 53: 1, 132: 1}
+directed_3cycles=0
+hamiltonian_path_count=1
+priority_path=height_completed_packet -> height_flex_ledger -> c3_plus_quadratic_field_packet -> contact_status_sidecar -> c3_binding_skeleton_only -> quadratic_character_only -> raw_residue_table -> raw_unit_projection
+
+NEXT PROOF TARGET
+  Formalize this AP-collar computation as the first finite lemma:
+  any quotient fiber mixing boundary-tight and strict-open rows has a nonzero first obstruction.
+  Partial sidecars locate the obstruction, but the AP-collar repair that kills all mixing is
+  the full C3 + Qsqrt(-7) + all-residue height/flex packet.

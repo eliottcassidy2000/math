@@ -271,6 +271,13 @@ obligations, and proof-carrier interfaces.
   covering packets, ramified apex switches, and height hinges the vertices.
   Do not let the slogan `units bind, evens cover` replace the transverse
   quadratic character or the 2-adic height/flex ledger.
+- Need to test whether the C3/quadratic/height packet is exact on actual
+  LRC14 rows:
+  use LTT-262 after LTT-261/LTT-256/LTT-255 and make sidecar packets, not
+  runners or residues, the vertices.  A mixed boundary/strict fiber is the
+  explicit first obstruction; the AP-collar scout says nonunit height misses
+  the unit-height lift `13->27`, while all-residue height/flex kills the local
+  obstruction.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -7289,6 +7296,51 @@ quotient_legality_status
 - **Pointers:** HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255,
   HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, LTI-361, T1361,
   OPEN-Q-108.
+
+## LTT-262: Three-Coordinate Obstruction Tournament
+
+- **Move:** Treat quotient sidecar packets as tournament vertices and rank
+  them by whether they preserve the LRC exit predicate on the AP one-swap
+  collar.  The vertices are `height_completed_packet`, `height_flex_ledger`,
+  `c3_plus_quadratic_field_packet`, `contact_status_sidecar`,
+  `c3_binding_skeleton_only`, `quadratic_character_only`,
+  `raw_residue_table`, and `raw_unit_projection`.
+- **LRC use:** HYP-3401 instantiates the HYP-3301 first-obstruction program on
+  HYP-3311's C3/quadratic/height packet.  In the `924`-row AP collar, AP and
+  GW `12->24` are the only boundary-tight rows.  A quotient with a fiber that
+  contains both boundary-tight and strict-open rows is not proof currency until
+  a sidecar kills the mixing.  The concrete leak AP versus `13->27` shows that
+  nonunit height alone is insufficient; all-residue height/flex kills the local
+  obstruction.
+- **Preserves:** boundary-tight versus strict-open status, C3 binding payload,
+  quadratic QR/NQR/ramified payload, covering layer, and unit/nonunit/all-height
+  sidecar distinctions.
+- **Forgets / guardrail:** raw unit or residue tables forget height; C3 forgets
+  the transverse quadratic sidecar; quadratic data forgets the C3 slot
+  structure; nonunit height forgets unit-height lifts.  Full height/flex is a
+  local exact repair, not yet a global minimal invariant.
+- **Pairwise observable:** retained exit/status coordinates minus destroyed
+  first-obstruction payload.
+- **Switch/gauge:** `A -> B` iff the weighted retained proof payload of `A` is
+  larger; ties use fewer destroyed sidecars.
+- **Fingerprint:** `vertices=8`,
+  `score_hist={-18:1, -12:1, 3:1, 6:1, 34:1, 45:1, 53:1, 132:1}`,
+  `directed_3cycles=0`, `hamiltonian_path_count=1`, and priority path
+  `height_completed_packet -> height_flex_ledger ->
+  c3_plus_quadratic_field_packet -> contact_status_sidecar ->
+  c3_binding_skeleton_only -> quadratic_character_only ->
+  raw_residue_table -> raw_unit_projection`.
+- **Assumption challenge:** runners, residues, unit contacts, and replacement
+  speeds were considered as possible vertices, but they are coordinates inside
+  a quotient.  The LRC predicate preserved by this tournament is proof-currency
+  exactness, so the vertices are sidecar packets.
+- **Next hook:** Prove the finite AP-collar exactness lemma, then globalize it
+  into a chamber theorem where every height/flex perturbation exits through
+  AP/GW boundary, strict-open mass, `Phi14d`, Toeplitz/Green/root-motion
+  discharge, state-lift debt, or named residual.
+- **Pointers:** HYP-3401, HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3266,
+  HYP-3265, HYP-3260, HYP-3257, HYP-3255, HYP-3300, HYP-2909, THM-523,
+  LTI-362, T1362, OPEN-Q-108.
 
 ## LTT-244: Tiling/Half-Tiling Descent Tournament
 

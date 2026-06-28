@@ -1,5 +1,33 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3401 three-coordinate obstruction exactness addendum:**
+HYP-3401 turns the HYP-3311 packet into an exact AP-collar
+first-obstruction test.  In the one-swap collar with replacement speeds
+through `84`, AP and Goddyn-Wong `12->24` are the only `2` boundary-tight rows
+among `924`; all other `922` rows are strict-open.  The quotient function
+view is decisive: if a compressed packet has a fiber containing both
+boundary-tight and strict-open rows, then `exit_status` is not a function of
+that packet and the lost coordinate must be restored, dualized, or named as
+debt.
+
+Readout: raw unit projection, raw mod-14 residue, C3 skeleton,
+`Q(sqrt(-7))` character, C3+quadratic, C3+quadratic+covering layer, and
+C3+quadratic+nonunit-height packet all have mixed fibers.  The key leak is AP
+versus `13->27`: it preserves the nonunit height ledger but is strict-open
+with mass `13691/582120`.  The `height_completed_packet` and
+`full_height_residue_ledger` have `0` mixed fibers.  Open task: formalize the
+finite AP-collar exactness lemma, then globalize it to O15 by proving that
+all height/flex changes route to AP/GW boundary, strict-open mass, `Phi14d`
+equality, finite Toeplitz/Green/root-motion discharge, state-lift debt, or
+named residual. -> HYP-3401, HYP-3311, HYP-3400, HYP-3310, HYP-3301,
+HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-3255, HYP-3300, HYP-2909,
+THM-523, T1362, LTI-362, LTT-262, OPEN-Q-108.
+
+Incoming actual-packet addendum: the concurrent HYP-3311 instantiation repairs
+the first coarse ambiguity on the curated HYP-2969 bank by adjoining nonunit
+residue data.  HYP-3401 is the AP-collar stress test of that repair and shows
+the next missing coordinate is unit-height flex.
+
 **OPEN-Q-108 HYP-3260 unit equioscillation nullspace addendum:**
 HYP-3260 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.
 **OPEN-Q-108 HYP-3310 C6 residue-magnitude factorization addendum:**

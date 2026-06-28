@@ -15,6 +15,47 @@
 
 ---
 
+## Lead codex-2026-06-28: Three-coordinate obstruction exactness in the AP collar
+
+**Status:** EVIDENCE / exact AP-collar first-obstruction scout; not proof
+(HYP-3401/T1362/LTI-362/LTT-262).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3401-lrc14-three-coordinate-obstruction-exactness.md`,
+script
+`04-computation/lrc14_three_coordinate_obstruction_exactness_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_three_coordinate_obstruction_exactness_codex_20260628.out`,
+and
+`07-reflections/lrc14-three-coordinate-obstruction-exactness-codex-20260628.md`.
+
+Purpose: instantiate the HYP-3301 first-obstruction sheaf idea on HYP-3311's
+concrete `C3 + Q(sqrt(-7)) + height/flex` packet.  Treat every quotient as a
+function from AP-collar rows to compressed packet data; a mixed fiber containing
+both boundary-tight and strict-open rows is the explicit compression failure.
+
+Readout: in the AP one-swap collar through replacement speed `84`, there are
+`924` rows, with only AP and Goddyn-Wong `12->24` boundary-tight and the other
+`922` strict-open.  Raw unit, raw residue, C3, quadratic, C3+quadratic,
+C3+quadratic+covering, and C3+quadratic+nonunit-height quotients all mix
+boundary-tight and strict-open rows.  The sharp leak is AP versus `13->27`,
+which has strict safe mass `13691/582120` while preserving the nonunit height
+ledger.  The `height_completed_packet` and full height/residue ledger have
+`0` mixed fibers.
+
+Integration with incoming monad-explorer work: its HYP-3311 actual-packet
+sheaf instantiation shows nonunit residue data repairs the first coarse
+ambiguity on the curated HYP-2969 bank.  This AP-collar scout is the next
+stress test: after that nonunit repair, unit-height flex is the first visible
+missing coordinate.
+
+Next: formalize the finite AP-collar exactness lemma, then globalize without
+making the packet tautological.  Replace full row-height retention by a chamber
+theorem: every height/flex perturbation should route to AP/GW boundary,
+strict-open mass, `Phi14d` equality, finite Toeplitz/Green/root-motion
+discharge, state-lift debt, or named residual.  Keep Tournament Analysis on
+sidecar packets rather than runners, residues, or raw replacement speeds.
+
 ## Lead codex-2026-06-28: Shadow-charge conservation atlas
 
 **Status:** SYNTHESIS / executable proof-route router; not proof
