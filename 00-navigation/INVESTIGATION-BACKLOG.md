@@ -161,18 +161,18 @@ recursion layer, HYP-3232/HYP-3217's mode lattice,
 HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor / chart / Fejer /
 conductor layer, HYP-3236/HYP-3219/HYP-3237's Green / Brouwer / Vitali
 boundary layer, and HYP-3220/HYP-3238/HYP-3239's D7 / Borsuk-Ulam /
-`p mod 4` / bimodal phi4 diagonal layer without treating
+`p mod 4` / bimodal phi4 diagonal layer, plus HYP-3240's universal `Phi_14`
+saddle-index / `Phi_{14d}` dilation-witness core, without treating
 raw numerology as a proof carrier.
-Readout: 100 motifs across 99 families were scored by proof-payload retention
-over 8384 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
-shell `L_y` magic quartic, normal-cone dual slack,
+Readout: 101 motifs across 100 families were scored by proof-payload retention
+over 8389 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
+universal `Phi_14` saddle-index core, shell `L_y` magic quartic, normal-cone dual slack,
 multi-chart proof split, AP Green algebraic-connectivity certificate,
-AP self-dual Fejer equidistribution certificate, bimodal phi4 diagonal
-extremizer,
+bimodal phi4 diagonal extremizer, AP self-dual Fejer equidistribution certificate,
 three-gap/Stern-Brocot cap-kernel recursion,
-consecutive plus doubled AP, modulus-covariance apex break, Toeplitz lambda-min
-margin, certificate-Helly separation, D7 Borsuk-Ulam sign-irrep certificate,
-single-arc peeling recursion,
+consecutive plus doubled AP, modulus-covariance apex break,
+D7 Borsuk-Ulam sign-irrep certificate, Toeplitz lambda-min
+margin, certificate-Helly separation, single-arc peeling recursion,
 ordered-tail exchange-rate ratio, and
 D1/D2/D3 covariance layers, plus the p mod 4 imaginary-quadratic wall.  The
 useful small patterns cluster around seven
@@ -202,6 +202,8 @@ split, and the Vitali bulk-core `Phi_14` witness wall.
 HYP-3220/HYP-3238/HYP-3239 add M098-M100: D7 Borsuk-Ulam sign-irrep
 certificate, p mod 4 imaginary-quadratic family law, and bimodal phi4
 cumulant diagonal.
+HYP-3240 adds M101: universal `Phi_14` saddle-index core with three antipodal
+witness pairs and explicit `Phi_{14d}` dilation witnesses.
 Famous-problem analogies remain sidecars until they name the LRC coordinate
 they preserve and the coordinate they destroy.  Incoming S283's
 Skewes/Helfgott-Ruzsa/Collatz/PFR
@@ -219,7 +221,8 @@ signed-address chart-change status, AP self-dual Fejer/Vaaler tail status,
 totally-real cap field conductor/trace status, Green lambda2/Kirchhoff
 resistance status, Brouwer trace-sign/SOS split status, Vitali bulk-core
 `Phi_14` witness status, D7 Borsuk-Ulam sign-irrep status, p mod 4
-imaginary-quadratic family-law status, bimodal phi4 diagonal status, and
+imaginary-quadratic family-law status, bimodal phi4 diagonal status,
+universal Phi14 saddle-index / dilation-witness status, and
 Fejer/Delsarte `F_7` slack as finite-boundary columns.
 
 ## Lead codex-2026-06-28: Joukowski-Hermite-Biehler / Perron-Frobenius synthesis

@@ -770,6 +770,13 @@ MOTIFS: tuple[Motif, ...] = (
           "cumulant-tower / phi4 stabilizer diagonal sidecar",
           "sidecar",
           ("kappa_4", "phi^4", "bimodal", "q0+q6", "kappa3")),
+    Motif("M101", "universal Phi14 saddle-index core", "phi14-saddle-index-core",
+          "Phi14 tight core has three antipodal witness pairs and index=(p-1)/2",
+          ("ANALYTIC_EQ", "QUOTIENT_LEGALITY", "CHEBYSHEV", "GEOMETRY", "AP_NORMAL", "SIDE_CARRIER"),
+          "AP-specific witness-core compression forgets GW, dilation, and sporadic carriers",
+          "Phi_{14d} dilation-witness / saddle-index sidecar",
+          "direct",
+          ("HYP-3240", "saddle index", "Phi_14 witnesses", "Phi_{14d}", "Goddyn-Wong", "antipodal pairs")),
 )
 
 
@@ -981,6 +988,8 @@ def main() -> None:
         ("14=|D7|", "The apex clock is the heptagon dihedral order; its sign irrep is the odd sidecar."),
         ("p mod 4", "Pure SOS versus sign-times-SOS is the p=1 versus p=3 mod 4 family split."),
         ("0/400 k2/k3/k4", "The random cumulant scout makes the two targets one bimodal phi4 diagonal."),
+        ("saddle index 3", "The Phi14 tight core has 3 antipodal witness pairs: index=(p-1)/2."),
+        ("Phi_{14d}", "Covering-tight dilations carry witnesses t=1/(14d), not a scalar base-core copy."),
         ("1/23 -> 1/14", "Chen-Cusick supplies a floor-to-target lift; the 23/M=2/23 link is only bounded-bank coincidence."),
     ]
     for key, meaning in signals:
@@ -1031,7 +1040,10 @@ def main() -> None:
         "Incoming HYP-3220/HYP-3238/HYP-3239 refine that boundary again: the "
         "odd topological side is a D7 sign-irrep/Borsuk-Ulam certificate, the "
         "family split is p mod 4 pure-SOS versus sign-times-SOS, and the two "
-        "remaining cumulant targets collapse to a bimodal phi4 diagonal."
+        "remaining cumulant targets collapse to a bimodal phi4 diagonal.  "
+        "Incoming HYP-3240 then makes the core portable: the AP/GW tight locus "
+        "shares the Phi14 witness core, its saddle index is (p-1)/2, and "
+        "dilations retain explicit Phi_{14d} witness data."
     )
 
 

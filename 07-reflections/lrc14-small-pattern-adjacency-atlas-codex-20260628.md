@@ -5,28 +5,29 @@ pattern is not useful because it is famous, pretty, or repeated across
 threads.  It is useful when it can be typed as a payload atom for the live
 LRC14 proof coordinates.
 
-The atlas scored 100 motifs across recent hypotheses, results, reflections,
+The atlas scored 101 motifs across recent hypotheses, results, reflections,
 coordination notes, and forum drafts.  The top of the ranking was
 proof-facing:
 
 ```text
 comb-overlap Gram kernel
+universal Phi14 saddle-index core
 shell L_y magic quartic
 normal-cone dual slack
 multi-chart proof split
 AP Green algebraic-connectivity certificate
-AP self-dual Fejer equidistribution certificate
 bimodal phi4 diagonal extremizer
+AP self-dual Fejer equidistribution certificate
 three-gap Stern-Brocot cap-kernel recursion
 consecutive plus doubled AP
 modulus-covariance apex break
+D7 Borsuk-Ulam sign-irrep certificate
 single-arc peeling recursion
 Toeplitz lambda-min margin
 certificate-Helly separation
-D7 Borsuk-Ulam sign-irrep certificate
 ordered-tail exchange-rate ratio
-D1/D2/D3 covariance layer split
 p mod 4 imaginary-quadratic wall
+D1/D2/D3 covariance layer split
 totally-real cap field conductor packet
 Vitali bulk-core Phi14 witness wall
 11 non-AP exchange traps plus AP
@@ -111,6 +112,13 @@ pure SOS in the real `p=1 mod4` case and sign-times-SOS in the imaginary
 and the odd `kappa3` target collapse to the bimodal phi4 extremizer, with
 `kappa4` acting as the stabilizer rather than an independent scalar.
 
+Incoming HYP-3240 adds M101 and moves it near the front of the atlas.  The
+new signal is not another raw cyclotomic slogan: the `Phi_14` tight core is
+shared by AP and Goddyn-Wong, consists of three antipodal witness pairs, and
+has saddle index `(p-1)/2`.  Covering-tight dilations must carry explicit
+`Phi_{14d}` witness data, so the core packet is portable only when the
+dilation/sporadic sidecar is retained.
+
 ## The Expanded Currencies
 
 The patterns that matter currently spend a small set of named currencies:
@@ -143,6 +151,7 @@ Vitali bulk-core Phi14 witness wall
 D7 sign-irrep / Borsuk-Ulam certificate
 p mod 4 imaginary-quadratic family law
 bimodal phi4 cumulant diagonal
+universal Phi14 saddle-index / dilation-witness core
 induction-base and moduli-bridge debt
 ```
 
@@ -245,6 +254,9 @@ HYP-3220/HYP-3238/HYP-3239 refine that layer: Borsuk-Ulam replaces raw
 Brouwer fixed-point language at the `D_7` sign irrep, the `p mod 4` law
 separates pure-SOS from sign-times-SOS families, and the S76 cumulant scout
 identifies the two proof targets as one bimodal phi4 diagonal.
+HYP-3240 adds the portability guardrail: the same `Phi_14` core can be shared
+across AP/GW tight rows and dilations only when saddle index and explicit
+`Phi_{14d}` witness data are retained.
 
 The next move is the symbolic version of that table:
 

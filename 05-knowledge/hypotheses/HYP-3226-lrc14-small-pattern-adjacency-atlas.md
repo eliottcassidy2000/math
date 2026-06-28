@@ -10,6 +10,7 @@ script: 04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py
 result: 05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out
 reflection: 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md
 related:
+  - HYP-3240
   - HYP-3239
   - HYP-3238
   - HYP-3237
@@ -64,22 +65,23 @@ normal-fan / trap-discharge payloads:
 
 ```text
 comb-overlap Gram kernel
+universal Phi14 saddle-index core
 shell L_y magic quartic
 normal-cone dual slack
 multi-chart proof split
 AP Green algebraic-connectivity certificate
-AP self-dual Fejer equidistribution certificate
 bimodal phi4 diagonal extremizer
+AP self-dual Fejer equidistribution certificate
 three-gap Stern-Brocot cap-kernel recursion
 consecutive plus doubled AP
 modulus-covariance apex break
+D7 Borsuk-Ulam sign-irrep certificate
 Toeplitz lambda-min margin
 certificate-Helly separation
-D7 Borsuk-Ulam sign-irrep certificate
 single-arc peeling recursion
 ordered-tail exchange-rate ratio
-D1/D2/D3 covariance layer split
 p mod 4 imaginary-quadratic wall
+D1/D2/D3 covariance layer split
 totally-real cap field conductor packet
 Vitali bulk-core Phi14 witness wall
 cyclotomic factor grading
@@ -88,7 +90,7 @@ Brouwer trace-sign times SOS split
 
 ## Method
 
-The scout defines 100 motifs across 99 families, scans 8384 repo-local files,
+The scout defines 101 motifs across 100 families, scans 8389 repo-local files,
 and ranks each motif by a payload-retention score:
 
 ```text
@@ -106,10 +108,10 @@ the destroyed coordinate, the repair sidecar, and the risk label.
 ## Result Snapshot
 
 ```text
-repo_files_scanned=8384
-motifs=100
-families=99
-risk_hist={'analogy': 19, 'direct': 38, 'raw': 3, 'sidecar': 40}
+repo_files_scanned=8389
+motifs=101
+families=100
+risk_hist={'analogy': 19, 'direct': 39, 'raw': 3, 'sidecar': 40}
 directed_3cycles=0
 hamiltonian_path_count=1
 ```
@@ -117,14 +119,14 @@ hamiltonian_path_count=1
 Payload coverage in the atlas:
 
 ```text
-SIDE_CARRIER        70
-ANALYTIC_EQ         45
-QUOTIENT_LEGALITY   32
-CHEBYSHEV           22
+SIDE_CARRIER        71
+ANALYTIC_EQ         46
+QUOTIENT_LEGALITY   33
+CHEBYSHEV           23
 EDGE_PACKET         19
-GEOMETRY            18
+GEOMETRY            19
+AP_NORMAL           16
 TOEPLITZ            16
-AP_NORMAL           15
 TRAP_BOUNDARY       14
 PGF_ROOT            13
 COV_LAYER           11
@@ -140,6 +142,7 @@ The priority path begins:
 
 ```text
 M073 comb-overlap Gram kernel
+M101 universal Phi14 saddle-index core
 M080 shell L_y magic quartic
 M067 normal-cone dual slack
 M068 multi-chart proof split
@@ -149,10 +152,10 @@ M093 AP self-dual Fejer equidistribution certificate
 M085 three-gap Stern-Brocot cap-kernel recursion
 M001 consecutive plus doubled AP
 M089 modulus-covariance apex break
+M098 D7 Borsuk-Ulam sign-irrep certificate
 M074 single-arc peeling recursion
 M005 Toeplitz lambda-min margin
 M066 certificate-Helly separation
-M098 D7 Borsuk-Ulam sign-irrep certificate
 M003 HYP-3204 exchange-rate ratio
 M099 p mod 4 imaginary-quadratic wall
 M006 D1/D2/D3 layer split
@@ -220,6 +223,8 @@ Phi14 core          AP closed witnesses at n=14 are the units mod 14, i.e. the p
 14=|D7|             n=14 is the heptagon dihedral order; the sign irrep carries the odd topological sidecar.
 p mod 4             p=1 mod4 is pure SOS, while p=3 mod4 is sign times SOS.
 0/400 k2/k3/k4      random cumulant scout makes the two targets one bimodal phi4 diagonal.
+saddle index 3      Phi14 has 3 antipodal witness pairs, i.e. index=(p-1)/2.
+Phi_{14d}           covering-tight dilations retain explicit t=1/(14d) witnesses.
 ```
 
 The number 12 remains useful, but as chart/fiber bookkeeping: local maxima,
@@ -364,6 +369,13 @@ class-number/Stark sidecar.  The S76 cumulant scout then makes the two
 remaining targets one diagonal: AP/consecutive is the bimodal phi4 extremizer
 for `kappa2`, `kappa3`, `q0+q6`, and `kappa4`.
 
+Incoming HYP-3240 adds M101.  The `Phi_14` tight core is not AP-specific:
+AP and Goddyn-Wong share the six primitive witnesses, grouped as three
+antipodal pairs.  The saddle index is `(p-1)/2`, its parity chooses the
+Borsuk-Ulam versus Brouwer/SOS side, and covering-tight dilations retain
+explicit `Phi_{14d}` witness data rather than copying the base core as a
+scalar.
+
 The raw-famous-problem magnet is explicitly the sink motif: it destroys all
 LRC payload unless it is retyped into one of those coordinates.
 
@@ -437,6 +449,7 @@ Vitali bulk-core Phi14 witness status
 D7 Borsuk-Ulam sign-irrep status
 p mod 4 imaginary-quadratic family-law status
 bimodal phi4 diagonal cumulant status
+universal Phi14 saddle-index / dilation-witness status
 induction-base dependency and Chen-Cusick floor-to-1/14 lift status
 ```
 
