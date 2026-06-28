@@ -124,6 +124,45 @@ detail file HYP-3202.  Tournament Analysis uses proof moves/signals as
 vertices, not runners or sectors, with priority path led by
 `cyclic_distance_covariance_layers -> exchange_gradient_bulk ->
 finite_critical_trap_manifold`.
+## codex-2026-06-28 -- HYP-3204 exact k=8 ordered-tail exchange scout
+
+Owner: find one or two new proof angles for a remaining LRC14 target after the
+HYP-3200/HYP-3161 k=8 covariance settlement.
+
+- Post-rebase integration: HYP-3210's Joukowski/Hermite-Biehler bridge gives
+  the natural proof home for the odd Worpitzky/interlacing sidecar, while this
+  packet prices `q3` gains against bimodality loss.
+- Later mainline integration: HYP-3211/HYP-3212 separate the negative
+  octonion/G2 multiplicative route from the positive cyclotomic/Chebyshev
+  cap route, reinforcing that this packet is a coefficient-exchange lemma,
+  not an apex-7 symmetry shortcut.
+- HYP-3221 and the de Moivre-denominator thread reinforce the same guardrail:
+  the closure route should be analytic/equidistribution, not config-blind
+  worst-case algebra.
+- Added `04-computation/lrc_k8_ordered_tail_exchange_codex_20260628.py`, an
+  exact Fraction-based scout over the same anchored bounded bank
+  `E={0} union A`, `A subset {1,...,14}`, `|A|=7`.
+- Negative result: full convex/stop-loss dominance is too strong.  `3429`
+  primitive rows beat consecutive speeds in some stop-loss coordinate, while
+  `0` primitive rows dominate consecutive speeds in all stop-loss coordinates.
+- Positive route: consecutive speeds have `0` primitive beaters for `q0`,
+  `q5`, `q6`, `tail_ge_4`, `tail_ge_5`, `tail_ge_6`, `stop_ge_3`,
+  `stop_ge_4`, `stop_ge_5`, `bimod=q0+q6`, `bimod_plus_q3`, and
+  `L_y=q0+q6+q3/10`.
+- New exchange lemma candidate:
+  `(q3-q3_consec)_+ <= (q0+q6)_consec-(q0+q6)` has `0` exact primitive-bank
+  violations.  The worst ratio is `12882/17161` at
+  `(0,1,4,5,9,10,13,14)`, so the lemma would imply both
+  `q0+q6+q3` and `L_y` extremality.
+- Guardrails: `tail_ge_3` has `431` primitive beaters, raw `q3` has `2879`,
+  and one-coordinate local compression has many traps (`432` local maxima for
+  `L_y`).
+- Tournament Analysis uses proof angles and tail functionals rather than
+  runners, gaps, sectors, or arcs.  Priority path:
+  `central_exchange_rate_lemma -> upper_stoploss_barrier ->
+  q0_bimodality_atom -> primitive_normal_form -> full_convex_order_route ->
+  single_step_compression_gradient -> raw_q3_maximization ->
+  raw_entropy_route`.
 
 ## kind-pasteur-2026-06-27-S31ak -- the cyclotomic ideal: Joukowski/de Moivre + WHY n=14 = cubic cyclotomic degree
 

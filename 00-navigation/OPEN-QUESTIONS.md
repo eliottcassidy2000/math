@@ -149,6 +149,29 @@ HYP-3200, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, 
 HYP-3199, HYP-3147, HYP-3142, HYP-3139, HYP-3138, HYP-3132, HYP-3124,
 HYP-3118, LTI-280, LTT-178, T1219, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3204 k=8 ordered-tail exchange addendum:**
+HYP-3204 refines the HYP-3210/HYP-3203/HYP-3202/HYP-3200/HYP-3161 hard-node target by separating a false
+global order from a surviving one-sided exchange lemma.  Full stop-loss /
+convex-order dominance is too strong: `3429` primitive rows beat consecutive
+speeds somewhere, and no primitive row dominates consecutive speeds in all
+stop-loss coordinates.  The upper ordered-tail barrier survives exactly, with
+`0` primitive beaters for `q0`, `q5`, `q6`, `tail_ge_4`, `tail_ge_5`,
+`tail_ge_6`, `stop_ge_3`, `stop_ge_4`, `stop_ge_5`, `q0+q6`,
+`q0+q6+q3`, and `L_y=q0+q6+q3/10`.
+
+Open task: prove the primitive-normal-form exchange lemma
+`(q3-q3_consec)_+ <= (q0+q6)_consec-(q0+q6)`, then join it to a proof of the
+`q0+q6` bimodality atom.  The exact scout has `0` violations and worst ratio
+`12882/17161`, strong enough to imply `q0+q6+q3` and hence `L_y`
+extremality.  Do not route this through full convex order, `tail_ge_3`, raw
+`q3`, entropy, or greedy one-coordinate compression; those are all exact
+guardrails.  HYP-3210 is the natural sidecar route for proving the odd
+Worpitzky/Hermite-Biehler interlacing leg rather than scalarizing `q3`.
+-> HYP-3204, HYP-3210, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
+HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
+HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132, HYP-3122,
+THM-577, T1304, LTI-304, LTT-204, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3151 Worpitzky function-compression resolvent addendum:**
 HYP-3151 executes HYP-3150's factor-through wall by turning the recent Worpitzky, pair-function, tournament-3,
 tournament-4, and k=8-resolvent lanes into a single quotient-legality

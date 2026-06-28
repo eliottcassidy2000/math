@@ -1,0 +1,65 @@
+HYP-3204 exact k=8 ordered-tail exchange scout
+========================================================================
+bank=anchored {0} union A, A subset [1,14], |A|=7
+rows_all=3432
+rows_primitive=3431
+consec=(0, 1, 2, 3, 4, 5, 6, 7)
+even_AP=(0, 2, 4, 6, 8, 10, 12, 14)
+consec_q=['481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49']
+even_AP_same_q=True
+
+FULL CONVEX ORDER CHECK
+consec_stoploss=['393/245', '1369/1470', '739/1470', '359/1470', '9/98', '1/49', '0']
+primitive: rows_with_some_stoploss_above_consec=3429
+primitive: rows_dominating_consec_in_stoploss_order=0
+primitive: low_stoploss_t0_above_consec=3429
+primitive: low_stoploss_t1_above_consec=2355
+primitive: low_stoploss_t2_above_consec=8
+all: rows_with_some_stoploss_above_consec=3429
+all: rows_dominating_consec_in_stoploss_order=0
+all: low_stoploss_t0_above_consec=3429
+all: low_stoploss_t1_above_consec=2355
+all: low_stoploss_t2_above_consec=8
+
+ONE-SIDED ORDERED-TAIL BARRIER
+primitive: q0: consec=481/1470 (0.327210884) above=0 ties=1 max=481/1470 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: q5: consec=5/98 (0.051020408) above=0 ties=1 max=5/98 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: q6: consec=1/49 (0.020408163) above=0 ties=1 max=1/49 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: tail_ge_4: consec=16/105 (0.152380952) above=0 ties=1 max=16/105 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: tail_ge_5: consec=1/14 (0.071428571) above=0 ties=1 max=1/14 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: tail_ge_6: consec=1/49 (0.020408163) above=0 ties=1 max=1/49 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: stop_ge_3: consec=359/1470 (0.244217687) above=0 ties=1 max=359/1470 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: stop_ge_4: consec=9/98 (0.091836735) above=0 ties=1 max=9/98 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: stop_ge_5: consec=1/49 (0.020408163) above=0 ties=1 max=1/49 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: bimod: consec=73/210 (0.347619048) above=0 ties=1 max=73/210 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: bimod_plus_q3: consec=667/1470 (0.453741497) above=0 ties=1 max=667/1470 at (0, 1, 2, 3, 4, 5, 6, 7)
+primitive: Ly: consec=2633/7350 (0.358231293) above=0 ties=1 max=2633/7350 at (0, 1, 2, 3, 4, 5, 6, 7)
+guardrail: tail_ge_3 is not enough
+primitive: tail_ge_3: consec=38/147 (0.258503401) above=431 ties=1 max=15097/42042 at (0, 2, 4, 6, 7, 9, 11, 13)
+guardrail: raw q3 is not a proof target
+primitive: q3: consec=26/245 (0.106122449) above=2879 ties=3 max=2959/10920 at (0, 1, 5, 6, 7, 8, 12, 13)
+
+CENTRAL-MASS EXCHANGE RATE
+primitive_q3_beaters=2879
+tested_inequality=(q3-q3_consec)_+ <= (bimod_consec-bimod)
+violations=0
+max_exchange_ratio=12882/17161 (0.750655556) at E=(0, 1, 4, 5, 9, 10, 13, 14)
+  bimod_loss=17161/114660 (0.149668585)
+  q3_gain=2147/19110 (0.112349555)
+  Ly_margin=19841/143325 (0.138433630)
+consequence: bimod_plus_q3 is also maximized by consec in primitive normal form
+
+LOCAL COMPRESSION GUARDRAIL
+single_step_local_maxima_Ly=432; sample=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 1, 2, 3, 4, 5, 6, 10), (0, 1, 2, 3, 4, 5, 6, 12), (0, 1, 2, 3, 4, 5, 6, 14), (0, 1, 2, 3, 4, 5, 9, 13), (0, 1, 2, 3, 4, 5, 12, 13), (0, 1, 2, 3, 4, 5, 13, 14), (0, 1, 2, 3, 4, 6, 7, 8)]
+single_step_local_maxima_bimod=420; sample=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 1, 2, 3, 4, 5, 6, 10), (0, 1, 2, 3, 4, 5, 6, 12), (0, 1, 2, 3, 4, 5, 6, 14), (0, 1, 2, 3, 4, 5, 9, 13), (0, 1, 2, 3, 4, 5, 12, 13), (0, 1, 2, 3, 4, 5, 13, 14), (0, 1, 2, 3, 4, 6, 7, 8)]
+single_step_local_maxima_Sigma_kappa2=363; sample=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 1, 2, 3, 4, 5, 6, 12), (0, 1, 2, 3, 4, 5, 6, 14), (0, 1, 2, 3, 4, 5, 9, 13), (0, 1, 2, 3, 4, 5, 12, 13), (0, 1, 2, 3, 4, 5, 13, 14), (0, 1, 2, 3, 4, 6, 7, 8), (0, 1, 2, 3, 4, 6, 7, 12)]
+guardrail: naive one-coordinate compression has many traps; use packet/exchange lemmas.
+
+TOURNAMENT ANALYSIS
+vertices=proof angles/signals, not runners or sectors
+pairwise_observable=exact bounded-bank survival score
+switch/gauge=A->B iff survival score(A)>survival score(B); ties lexical
+score_hist={100:1, 91:1, 83:1, 76:1, 34:1, 27:1, 19:1, 5:1}
+directed_3cycles=0
+hamiltonian_path_count=1
+priority_path=central_exchange_rate_lemma -> upper_stoploss_barrier -> q0_bimodality_atom -> primitive_normal_form -> full_convex_order_route -> single_step_compression_gradient -> raw_q3_maximization -> raw_entropy_route

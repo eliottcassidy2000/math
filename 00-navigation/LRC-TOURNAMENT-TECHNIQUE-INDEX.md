@@ -6184,3 +6184,40 @@ quotient_legality_status
 - **Pointers:** HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162,
   HYP-3154, HYP-3153, HYP-3161, HYP-3160, HYP-3152, HYP-3150, HYP-3138,
   HYP-3132, HYP-3108, LTI-303, LTT-203, T1303, OPEN-Q-108.
+
+## LTT-204: k=8 Ordered-Tail Exchange Tournament
+
+- **Move:** Treat coefficient/tail proof angles as tournament vertices and
+  compare them by exact bounded-bank survival.  The live vertices are central
+  exchange-rate lemma, upper stop-loss barrier, `q0+q6` bimodality atom,
+  primitive normal form, full convex order, single-step compression gradient,
+  raw `q3` maximization, and entropy.
+- **LRC use:** HYP-3204 splits the k=8 `L_y=q0+q6+q3/10` target into a
+  positive exchange route plus exact guardrails.  Full convex order is false:
+  `3429` primitive rows beat consec in some stop-loss coordinate, and no
+  primitive row dominates consec in all stop-loss coordinates.  The upper-tail
+  and bimodality functionals have no primitive beaters from `tail_ge_4` and
+  `stop_ge_3` upward.  The exact central exchange-rate check
+  `(q3-q3_consec)_+ <= (q0+q6)_consec-(q0+q6)` has `0` violations and worst
+  ratio `12882/17161`.
+- **Preserves:** primitive normal form, `L_y`, bimodality `q0+q6`, the named
+  central sidecar `q3`, high-tail and stop-loss coordinates, exact violation
+  counts, and local-compression trap counts.
+- **Forgets / guardrail:** the full miss-count distribution is not retained.
+  Raw `tail_ge_3`, raw `q3`, entropy, and one-coordinate local improvement
+  forget the exchange price and produce many false proof signals.
+- **Tournament readout:** vertices are proof angles/tail functionals, not
+  runners, gaps, sectors, or arcs.  The exact scout is transitive with
+  priority path
+  `central_exchange_rate_lemma -> upper_stoploss_barrier ->
+  q0_bimodality_atom -> primitive_normal_form -> full_convex_order_route ->
+  single_step_compression_gradient -> raw_q3_maximization ->
+  raw_entropy_route`.
+- **Next hook:** Prove the exchange-rate lemma in primitive normal form and
+  join it to HYP-3202's covariance-layer route or HYP-3200's
+  covariance/ferromagnetic route for the `q0+q6` atom, while HYP-3210 carries
+  the Worpitzky/minority-edge and Lee-Yang/Joukowski/Hermite-Biehler sidecars.
+- **Pointers:** HYP-3204, HYP-3210, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163,
+  HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151,
+  HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132,
+  HYP-3122, THM-577, LTI-304, LTT-204, T1304, OPEN-Q-108.
