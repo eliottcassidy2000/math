@@ -15,6 +15,391 @@
 
 ---
 
+## Lead codex-2026-06-27-S274: Worpitzky pair-function three-edge quotient
+
+**Status:** EVIDENCE / exact K3 quotient scout; not proof
+(HYP-3144/T1209).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3144-lrc14-worpitzky-pair-function-three-edge-quotient.md`,
+`04-computation/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.py`,
+and `05-knowledge/results/lrc14_worpitzky_pair_function_three_edge_quotient_codex_20260627.out`.
+
+Goal: turn the user's three-edge prompt into a smallest-case quotient
+guardrail for the LRC14 generating-function proof packet.  The scout will
+verify the two score classes of labelled K3 tournaments, `T=(0,1,2)` and
+`C=(1,1,1)`, under single-edge flips.  Expected quotient matrix:
+`T->T` multiplicity `2`, `T->C` multiplicity `1`, `C->T` multiplicity `3`,
+`C->C` multiplicity `0`.  The same kernel should appear from three coin
+flips after quotienting to "two-to-one mix" and "all same."
+
+Pair-function reading: `a+b` and `a*b` survive unordered-pair quotient;
+`a^b` and `b^a` require an ordered sidecar.  LRC14 transfer: before
+scalarizing HYP-3140 fiber-PGF data, HYP-3141 tip/tail witnesses, HYP-3139
+reflection pages, or HYP-3143 exact-order packet bases, ask whether the target
+predicate is symmetric like sum/product or order-sensitive like exponentiation.
+
+Readout: stored scout verifies K3 class sizes `T=6,C=2`, quotient flip matrix
+`[[2,1],[3,0]]`, normalized eigenvalues `1,-1/3`, stationary split
+`{T:3/4,C:1/4}`, and the identical three-coin mix/same kernel.  The edge role
+ledger has `12` adjacent transitive self flips, `6` cycle-break flips, and `6`
+long source-sink exits.  The key Worpitzky/PGF warning is that both score
+classes aggregate to `F=(1,4,1)` while state-level PGF curves differ.  Thus a
+single value or even a class aggregate can erase the ordered function payload.
+
+Namespace: HYP-3144 / LTI-270 / LTT-168 / T1209 / OPEN-Q-108.
+## Lead codex-2026-06-27-S274: n=4 filler/canary shift-package quotient
+
+**Status:** SYNTHESIS / exact n=4 scout; not proof (HYP-3146/T1211).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3146-n4-shift-package-erdos870-filler-canary.md`,
+`04-computation/tournament_n4_shift_package_erdos870_codex_s274.py`,
+`05-knowledge/results/tournament_n4_shift_package_erdos870_codex_s274.out`,
+and `07-reflections/n4-shift-package-erdos870-filler-canary-codex-s274.md`.
+
+Readout: fixed-path cover has `S` fiber size `5`, while a finite scaffold
+makes `T,+,-,S` a two-bit shift package.  This is the canary/scaffold
+companion to HYP-3143's exact-order subbasis audit and HYP-3145's filler-core
+interface.  Next: attach
+filler/canary fields to HYP-3141/HYP-3142 ledgers and test if quotienting k=8
+packet fibers requires deletion-stable canaries or finite-filler congruence.
+## Lead codex-2026-06-27-S275: Erdos-870 live-core deletability audit
+
+**Status:** SYNTHESIS / exact n=4 table scout; not proof
+(HYP-3148/T1213).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3148-erdos870-live-core-filler-canary.md`,
+`04-computation/lrc14_erdos870_live_core_canary_scout_codex_s275.py`,
+`05-knowledge/results/lrc14_erdos870_live_core_canary_scout_codex_s275.out`,
+and `07-reflections/erdos870-live-core-filler-canary-codex-s275.md`.
+
+Readout: this continues HYP-3143/S276's exact-order subbasis packet,
+HYP-3144/S274's pair-function/order-sidecar quotient guardrail, and HYP-3145's
+filler-core interface, and now HYP-3146/S274's shift-package canary/scaffold
+policy plus S277/HYP-3147's n=3 edge-flip/Worpitzky/function kernel, by adding
+the deletable-coordinate live-core/filler/canary audit.  The user's two n=4
+tournament tables are both
+exact.  The fixed
+Hamiltonian-path tiling cube with live skips `a,b,c` has class distribution
+`T:+:-:S = 1:1:1:5`; the long diagonal `c` is class-cover-deletable because
+`{a,b}` already reaches all four classes.  Freezing `c` as deterministic
+filler gives the two-bit anchor with fixed partial score `(0,1,1,2)`, live
+opposite skips `x,y`, uniform class distribution `1:1:1:1`, and load-bearing
+live core `{x,y}`.  The scout finds `24` labelled two-bit anchors, all with
+disjoint live pairs, split evenly across the three perfect matchings.
+
+LRC14 transfer: import the Erdos-870 no-minimal-subbasis warning as a quotient
+audit.  Many witnesses, score classes, or representations do not prove minimal
+support.  Add `live_core_bits`, `filler_bits`, `canary_bits`,
+`deletable_coordinates`, `class_distribution`, `minimal_cover_subbasis`,
+`edge_bounded_core_floor_exit`, and `terminal_exit_or_named_debt` to
+edge-witness, fiber-PGF, A000568, and k=8 sidecar rows before scalarizing.
+
+Next: run the live-core/filler/canary audit on HYP-3141 edge rows and on the
+HYP-3140/HYP-3142 coefficient/moment packets; a coordinate that is deletable in
+the local quotient should not be treated as part of the terminal proof payload.
+
+Namespace: HYP-3148 / LTI-274 / LTT-172 / T1213 / OPEN-Q-108.  Predecessor:
+HYP-3147 / LTI-273 / LTT-171 / T1212, HYP-3146 / LTI-272 / LTT-170 / T1211,
+HYP-3143 / LTI-269 / LTT-167 / T1208, HYP-3144 / LTI-270 / LTT-168 / T1209,
+and HYP-3145 / LTI-271 / LTT-169 / T1210.
+## Lead codex-2026-06-28-erdos870-tournament4: tournament-4 canary/filler quotient
+
+**Status:** EVIDENCE / exact n=4 table scout and proof-interface transfer;
+not a proof (HYP-3149/T1214).
+
+Relation to incoming S276: HYP-3143 records the exact-order subbasis version
+of the same n=4 data.  HYP-3149 is the complementary canary/filler refinement:
+it names the coordinate whose deletion turns the two-bit source into a
+collision-prone quotient.  Relation to incoming S274: HYP-3144 records the
+three-edge pair-function scalarization guardrail, HYP-3145 records the broader
+Erdos-870 filler-core interface, HYP-3146 records the cover/scaffold
+shift-package policy, HYP-3147 records the n=3 edge-flip/Worpitzky kernel,
+and HYP-3148 records the live-core deletability audit; HYP-3149 names the
+concrete fixed-path canary sidecar inside the four-vertex packet.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3149-lrc14-erdos870-tournament4-canary-filler.md`,
+`04-computation/lrc14_erdos870_tournament4_canary_filler_codex_20260628.py`,
+`05-knowledge/results/lrc14_erdos870_tournament4_canary_filler_codex_20260628.out`,
+and `07-reflections/lrc14-erdos870-tournament4-canary-filler-codex-20260628.md`.
+
+Readout: the fixed-Hamiltonian-path tiling table is a three-bit quotient map,
+not a group law on isomorphism classes.  With free arcs
+`a=(0,2), b=(1,3), c=(0,3)`, the fibers are
+`T={E}`, `+={a}`, `-={b}`, and `S={c,ab,ac,bc,abc}`.  Fixing `c` unflipped
+gives the second prompt table on `x=a,y=b` and partial score sequence
+`(0,1,1,2)`; the `c=1` slice collapses every completion to `S`.
+
+Erdos-870 transfer: treat the two-coordinate `x,y` table like an order-two
+source, and treat `c` as a deterministic filler/canary coordinate whose
+deletion/restoration status must be audited before the quotient enters an
+LRC14 edge packet.
+
+Next: attach `tournament4_canary_filler_certificate`, `c_canary_status`,
+`xy_completion_table`, `S_bulk_fiber_words`, `deletion_restoration_sidecar`,
+and `edge_tip_tail_exit_or_named_debt` to HYP-3141 edge-witness rows and
+HYP-3140/HYP-3138/HYP-3139 local quotient packets.
+
+Namespace: HYP-3149 / LTI-275 / LTT-173 / T1214 / OPEN-Q-108.
+
+## Lead codex-2026-06-27-S273: LRC14 generating-function payload atlas
+
+**Status:** EVIDENCE / executable payload atlas and tournament scout; not a
+proof (HYP-3137/T1202).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3137-lrc14-generating-function-payload-atlas.md`,
+`04-computation/lrc14_generating_function_payload_atlas_codex_s273.py`,
+`05-knowledge/results/lrc14_generating_function_payload_atlas_codex_s273.out`.
+
+Goal: compare generating functions by retained proof payload rather than raw
+scalar value.  Candidate carriers: miss-count PGF, signed SPEC/resonance
+Fourier series, A000568 count/cycle-index quotient, OCF independence
+polynomial/Walsh EGF, De Moivre/resolvent elementary-symmetric polynomial,
+Irving-Omar walk determinant GF, and hard-core/polymer partition function.
+The scout should declare which LRC predicate survives, what coefficient/root/
+quotient/tail coordinate is retained, what is destroyed by scalar evaluation,
+and what terminal exit or named debt remains.
+
+Readout: the stored scout finds the smallest full-cover packet
+`signed_SPEC_resonance_series + A000568_cycle_index_quotient +
+miss_count_PGF_root_locus`, covering all twelve tracked obligations from
+`Q_apex_floor` through `destroyed_coordinate_guard`.  Tournament fingerprints:
+12 carriers, 66 edges, score histogram `0..11`, 0 directed 3-cycles, singleton
+SCCs, Hamiltonian path count 1, and every typed payload beats
+`raw_scalar_evaluation`.
+
+Next fields to attach to finite constant-chase rows: `SPEC_support_sieve`,
+`edge_recursion_depth_PGF`, `global_consistency_class`,
+`PGF_root_trajectory_derivative`, `middle_layer_vector`,
+`k8_reflection_fold_adjoint`, `repair_cover_H(q)`,
+`Bravais_resonance_cell`, `Savitch_packet_depth`, and
+`terminal_exit_or_named_debt`.  Post-rebase HYP-3138 supplies the concrete
+k=8 fold-adjoint lookup for the resolvent carrier.
+
+Namespace: HYP-3137 / LTI-263 / LTT-161 / T1202 / OPEN-Q-108.  The atlas
+cross-references HYP-3136 as the integrated multi-far floor closure it is
+meant to feed.
+## Lead codex-2026-06-27-k8-reflection-fold: k=8 reflection-fold coordinate resurrection
+
+**Status:** EVIDENCE / executable bounded-bank quotient audit; not proof
+(HYP-3138/T1203).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3138-lrc14-k8-reflection-fold-resurrection.md`,
+`04-computation/lrc14_k8_reflection_fold_resurrection_codex_20260627.py`,
+`05-knowledge/results/lrc14_k8_reflection_fold_resurrection_codex_20260627.out`,
+and `07-reflections/lrc14-k8-reflection-fold-resurrection-codex-20260627.md`.
+
+Readout: HYP-3132's De Moivre hard-row fold gives the even biquadratic
+coordinate, but HYP-3138 checks the destroyed coordinates directly.  For k=8,
+folding the miss distribution by `t <-> 6-t`,
+`even_fold=(q0+q6,q1+q5,q2+q4,q3)`, is injective on the tested primitive
+bounded banks span<=14,15,16 (`3431`, `6434`, `11432` rows and `0` collision
+fibers).  The top row remains `(0,1,2,3,4,5,6,7)` with
+`L_yK8=2633/735`, margin `10*cap8-L_yK8=683/2940`, and nonzero odd leakage
+`(451/1470,142/735,131/1470)`.
+
+Next: prove a finite k=8 fold-adjoint lemma.  The even fold may carry the
+gK8/phi4 dip bound, but endpoint `Phi/P`, observer gluing, and finite-address
+exits need either the odd-coordinate resurrection table or named debt.
+
+Namespace: HYP-3138 / LTI-264 / LTT-162 / T1203 / OPEN-Q-108.
+## Lead codex-2026-06-27-S273: LRC14 fiber-PGF Rprime certificate
+
+**Status:** EVIDENCE / exact generating-function scout; not proof
+(HYP-3140/T1205).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3140-lrc14-fiber-pgf-rprime-certificate.md`,
+`04-computation/lrc14_fiber_pgf_certificate_codex_s273.py`,
+`05-knowledge/results/lrc14_fiber_pgf_certificate_codex_s273.out`,
+and `07-reflections/lrc14-fiber-pgf-rprime-certificate-codex-s273.md`.
+
+Readout: this refines HYP-3136's integrated multi-far factorization at its
+remaining `Rprime` factor and supplies a concrete coefficient carrier for the
+completed HYP-3137 generating-function payload atlas.  For `S=R union 14Q`,
+pass to `u=14t` and count the R-safe lifts
+`N_R(u)=#{a: (u+a)/14 is R-safe}`.  Then
+`Rprime=E[N_R | Q-lonely]/E[N_R]` exactly.  The scout computes exact
+sheet-count PGFs `F_R(y)` and Q-masked PGFs `F_R,Q(y)`.  The HYP-3129 worst
+targeted row `R={1,...,12}`, `Q={1,2}` becomes a two-coefficient defect:
+`F_R=7243/13860*y^0+6617/13860*y^1`,
+`F_R,Q=7243/13860*y^0+521/1980*y^1`, and
+`Rprime=51058/72787=0.701471...`.
+
+LRC14 placement: HYP-3129's signed SPEC certificate is the Fourier transform
+of this finite fiber-PGF moment inequality.  Pointwise positive-sheet
+positivity is false in low rows, so the live target is the conditional
+first-moment bound
+`F_R,Q'(1)/F_R,Q(1) >= c*F_R'(1)/F_R(1)` over legal residual packets.  This
+integrates HYP-3137/HYP-3136, Lee-Yang PGFs, Delsarte/MacWilliams transforms,
+q-Pochhammer tail warnings, Moser/fibbinary partial-cube sidecars, and HYP-3134 quotient
+legality.
+
+Next: enumerate the legal post-HYP-3131 residual packet family, attach
+`fiber_pgf_word` and `Q_masked_fiber_pgf_word` to HYP-3125 edge-floor packets,
+and translate the HYP-3129 low-frequency SPEC certificate into coefficient
+moments of `F_R,Q`.
+
+Namespace: HYP-3139 / LTI-265 / LTT-163 / T1204 / OPEN-Q-108.
+## Lead codex-2026-06-27-S273: k=8 resolvent sidecar certificate
+
+**Status:** EVIDENCE / exact bounded-bank scout through B=14; not proof
+(HYP-3142/T1207).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3142-k8-resolvent-sidecar-certificate.md`,
+`04-computation/lrc14_k8_resolvent_sidecar_scout_codex_s273.py`,
+`05-knowledge/results/lrc14_k8_resolvent_sidecar_scout_codex_s273.out`,
+`05-knowledge/results/lrc14_k8_resolvent_sidecar_scout_codex_s273_B14.out`,
+and `07-reflections/k8-resolvent-sidecar-certificate-codex-s273.md`.
+
+Readout: the current one-node frontier can be attacked by an exact 4-moment
+sidecar.  For primitive k=8 bounded rows, `B=13` scans `1716` rows and `B=14`
+scans `3431`; both have `U4_over_cap_count=0`.  The worst row is exactly
+`consec_8`, with `U4=2633/7350`, `cap_8-U4=683/29400`, nearest PGF root
+`1.488584`, no real roots, Bravais residue counts `(2,1,1,1,1,1,1)`, peak
+`1/8`, entropy `1`, mirror defect `0`, and `kappa4=-0.787150`.
+
+Connection to niche past work: HYP-3140 supplies the fiber-PGF `Rprime`
+moment, HYP-3137 supplies the generating-function payload lens, HYP-3138
+supplies reflection-fold coordinate resurrection, HYP-3136/HYP-3135 supply
+the surrounding multi-far floor and resolvent-packet theorem shape, HYP-3132
+supplies the biquadratic De Moivre fold, HYP-3113 supplies the
+Bravais-flat/Lee-Yang map, HYP-3118 supplies Savitch repair-depth language,
+and HYP-3134 supplies the controlled-forgetting guard before dropping
+edge-child payload.
+
+Next: prove global moment-majorization `U4(E) <= U4(consec_8)` for all
+primitive k=8 bounded-core shapes.  Non-flat residue spectra should give
+strict slack; any exception should descend through a Hensel/CRT `2x7` sidecar
+or become named finite resonance debt.
+
+Namespace: HYP-3142 / LTI-268 / LTT-166 / T1207 / OPEN-Q-108.
+## Lead codex-2026-06-27-Erdos870: n=4 filler-core quotient interface
+
+**Status:** EVIDENCE / executable finite interface scout; not proof
+(HYP-3145/T1210).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3145-erdos870-n4-filler-quotient-models.md`,
+`04-computation/lrc14_erdos870_n4_filler_models_codex_20260627.py`,
+`05-knowledge/results/lrc14_erdos870_n4_filler_models_codex_20260627.out`,
+and `07-reflections/erdos870-n4-filler-quotient-models-codex-20260627.md`.
+
+Readout: Erdos-870 contributes an interface pattern rather than a direct LRC
+theorem: small core plus deterministic finite fillers, with deletion and
+nonminimality checked at the boundary.  The n=4 fixed-path tiling table is a
+representative atlas but the `S` fiber has five representatives, so the class
+quotient is not congruent.  The partial-score model fixes four arcs with
+profile `(0,1,1,2)` and leaves two core arcs `x=(0,1)`, `y=(2,3)`; the closed
+four-state table is congruent and realizes `T,+,-,S`.
+
+Next: instantiate `filler_core_interface` on one HYP-3125/HYP-3129 covering
+row before using HYP-3136.  The row should identify deterministic fillers,
+the small signed core, quotient-congruence status, nonminimal fiber alarms,
+and the formal interface target.
+
+Namespace: HYP-3145 / LTI-271 / LTT-169 / T1210 / OPEN-Q-108.
+
+## Lead codex-2026-06-27-A000568: LRC14 A000568 edge-witness sandwich
+
+**Status:** EVIDENCE / executable quotient scout; not proof
+(HYP-3133/T1200).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3133-lrc14-a000568-edge-sandwich.md`,
+`04-computation/lrc14_a000568_edge_sandwich_codex_20260627.py`,
+`05-knowledge/results/lrc14_a000568_edge_sandwich_codex_20260627.out`,
+and `07-reflections/lrc14-a000568-edge-sandwich-codex-20260627.md`.
+
+Readout: the user's `12` and `56` observation is a shifted quotient sandwich.
+HYP-3124 edge-local signatures on `m` vertices compare to A000568 unlabeled
+tournaments on `m+1` vertices: `m=4: 10 < 12 < 16`,
+`m=5: 20 < 56 < 80`, and `m=6: 35 < 456 < 632`.  Sector word is the
+equinumerosity layer, A000568 is the unrooted one-extra-vertex
+equidistribution/free-extension shadow, and paired tail/tip child deck is the
+equidecomposability layer.
+
+Next: add `a000568_extension_shadow` to HYP-3125 edge-floor packets and use it
+to stratify HYP-3129's finite low-frequency SPEC constant chase.  HYP-3128 is
+the guardrail: this is a controlled-forgetting diagnostic, not a naive Asano
+zero-free proof shortcut.
+
+Namespace: HYP-3133 / LTI-261 / LTT-159 / T1200 / OPEN-Q-108.
+## Lead codex-2026-06-27-S272: A000568 edge-envelope global-consistency quotient
+
+**Status:** EVIDENCE / executable edge-envelope scout; not proof
+(HYP-3134/T1201).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3134-a000568-edge-envelope-global-consistency-quotient.md`,
+`04-computation/a000568_edge_envelope_lrc14_codex_s272.py`,
+`05-knowledge/results/a000568_edge_envelope_lrc14_codex_s272.out`, and
+`07-reflections/a000568-edge-envelope-global-consistency-codex-s272.md`.
+
+Readout: the HYP-3124 lower envelope is raw four-sector size decks
+`1,4,10,20,35`; the upper envelope is sector plus paired endpoint-deletion
+children `1,4,16,80,632`; A000568 one vertex later sits between:
+`10 < U(5)=12 < 16`, `20 < U(6)=56 < 80`, and S272 verifies
+`35 < U(7)=456 < 632`.  Interpretation: A000568 is the global-consistency
+quotient inside the local edge-witness envelope.
+
+Post-fetch connection: HYP-3133's direct edge-sandwich scout, HYP-3132's
+integrated multi-far floor, HYP-3130's Gaussian/Beurling-Selberg minorant, and
+HYP-3131's far-zero outward motion are compatible; HYP-3134 is the quotient
+discipline for when those analytic certificates may forget local paired child
+payload.
+
+Next: add `envelope_position`, `global_consistency_class`,
+`edge_child_gluing_status`, `resonance_lattice_class`, `SPEC_bound_status`,
+and `terminal_exit_or_named_debt` to HYP-3125/HYP-3129 edge-floor packet rows
+before quotienting away paired tail/tip child data.
+
+Namespace: HYP-3134 / LTI-262 / LTT-160 / T1201 / OPEN-Q-108.
+## Lead codex-2026-06-27-S272: LRC14 resolvent-packet middle-layer synthesis
+
+**Status:** SYNTHESIS / proof-target refinement; not proof (HYP-3135).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3135-lrc14-resolvent-packet-middle-layer-synthesis.md`,
+`04-computation/lrc14_resolvent_packet_synthesis_codex_s272.py`,
+`05-knowledge/results/lrc14_resolvent_packet_synthesis_codex_s272.out`,
+and `07-reflections/lrc14-resolvent-packet-synthesis-codex-s272.md`.
+
+Readout: the user's De Moivre-style quintic gives a concrete controlled-
+forgetting lesson.  The resolvent roots `2,-4,8,-16` have elementary symmetric
+layers `e1=-10`, `e2=-120`, `e3=320`, `e4=1024`; hence `120` and `320` are
+pair/triple branch payloads, not standalone roots.  The real branch expression
+`fifthroot(2)-fifthroot(4)+fifthroot(8)-fifthroot(16)` checks against the
+quintic.  Prior repo motifs with 120/320 mostly mark finite middle layers:
+cycle-pair corrections, bounded 0/320 resonant-center checks, support-six
+signed cancellation, cap slack, fixed-path/tournament scale, torsion moats,
+and q^120 modular support horizons.
+
+LRC14 placement: Q/apex block is closed by HYP-3130/HYP-3128; far additions
+help by HYP-3131; HYP-3133/HYP-3134 add the A000568 edge-extension quotient
+stratifier and global-consistency quotient discipline; the absolute minorant
+envelope is ruled out; HYP-3129/HYP-3132 give the signed SPEC coupling
+certificate and need closed-form constant chasing; and S70 sharpens the
+bounded core to the k=8 biquadratic coefficient bound.  The remaining proof
+should be framed as a bounded-core plus
+middle-payload packet theorem retaining Q-floor constants, signed SPEC
+low/tail, Lee-Yang radius, far-push status, edge tail/tip deletion sectors,
+and finite-address or observer-gluing exits.
+
+Next: turn the HYP-3129 per-row exact certificate into a uniform symbolic
+constant; prove far-pushes-out for all far placements; make the S70 k=8
+reflection-fold/biquadratic coefficient bound rigorous; formalize the
+bounded-core `rho>1 => Rprime>=c` bridge; attach HYP-3124/HYP-3125 edge-witness
+fields to real covering packets.
+
+Namespace: HYP-3135 / OPEN-Q-108.
+
 ## Lead codex-2026-06-27-S271: LRC14 multi-far edge-witness Rprime floor
 
 **Status:** EVIDENCE / executable edge-floor synthesis scout; not proof
@@ -121,6 +506,8 @@ the normalized component payload for the `r=2..6` multi-far floor.  HYP-3122's
 phi4 stabilizer and the HYP-3124 edge-witness recursion scout are natural
 stress tests for the chiral guard through cumulant/ear parity and tail/tip
 sectors.
+phi4 stabilizer and HYP-3124's edge-witness recursion are natural stress
+tests for the chiral guard through cumulant/ear parity and tail/tip sectors.
 
 Next: run a joined packet ledger over HYP-2963/HYP-3098/HYP-3107/HYP-3112
 with chiral guard fields, normal-fan/Cech finite-ruler fields, first-obstruction
@@ -155,6 +542,56 @@ Next: attach `edge_witness_certificate`, `edge_tail_tip_sector_word`,
 `recursive_tail_child_edge_deck`, `recursive_tip_child_edge_deck`,
 `edge_missing_input_vector`, `edge_repair_sidecar`, and `edge_terminal_exit`
 to HYP-3115 one-swap/domain-wall edges and HYP-3098 observer-gluing rows.
+## Lead codex-2026-06-27: LRC14 recursive tournament-edge witness packet
+
+**Status:** EVIDENCE / exact small-tournament information audit and packet
+schema; not proof (HYP-3124/T1198).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3124-lrc14-tournament-edge-witness-recursion.md`,
+`04-computation/lrc14_tournament_edge_witness_recursion_codex_20260627.py`,
+`05-knowledge/results/lrc14_tournament_edge_witness_recursion_codex_20260627.out`.
+
+Readout: the scout treats a directed edge `tail -> tip` as a recursive proof
+witness retaining the outside four-sector observer deck, the tail child after
+deleting the tip, the tip child after deleting the tail, and both child edge
+decks.  Through all unlabeled tournaments on `n<=6`, score sequences separate
+only `22/56` classes at `n=6`, the depth-0 edge-sector deck separates `55/56`,
+and depth-1/depth-2 recursive edge-witness decks separate `56/56` with no
+collisions.  The proof-lens tournament is transitive and led by
+`recursive_edge_witness_packet`, then `edge_coordinate_resurrection_guard`,
+then `tail_tip_child_pair`, then `decorrelation_edge_floor`, then
+`h7_state_lift_edge_boundary`.
+
+Integration: this row now treats HYP-3122/S67 as the phi4 quartic wall stress
+and HYP-3123/S270 as the chiral/Cech orientation guard.  HYP-3124 is the
+edge-local packet that tests whether those signals still point back to
+tail/tip children, observer sectors, and named destroyed-coordinate repairs.
+Incoming HYP-3128/HYP-3129 add the next correction: Asano/Lee-Yang certifies
+the apex/tip side but exposes the overcrowded tail obstruction, so the
+positive multi-far floor must be recorded as a retained-edge SPEC
+resonance-lattice certificate, not as a collapsed zero-free tail contraction.
+HYP-3130/HYP-3131 add the companion orientation: the far/apex tip side is
+stabilizing (minorant apex floor plus Lee-Yang roots pushed outward), and the
+bounded-core/tail side is binding.
+
+Next refinement: formulate the edge-witness descent lemma explicitly.  In an
+`R-safe -> Q-lonely` packet, tip children must close or descend by
+minorant/zero-free/far-push data, tail children must close or descend by
+bounded-core SPEC data, and cross-sector orientation must carry the signed
+coupling unless it is replaced by named observer-gluing, coordinate-
+resurrection, finite-ruler, phi4, or H7/F7 debt.
+
+Next: attach `edge_witness_recursion_id`, `tail_child_packet`,
+`tip_child_packet`, `four_sector_observer_deck`, `child_deck_asymmetry`,
+`coordinate_resurrection_status`, `decorrelation_floor_status`,
+`asano_obstruction_status`, `spec_resonance_floor_status`,
+`minorant_apex_floor_status`, `bounded_core_binding_status`,
+`state_lift_boundary_status`, `phi4_edge_wall_status`, and
+`terminal_exit_or_named_debt` to HYP-2963/HYP-3098/HYP-3107 packet rows.  Use
+the edge witness as a legal sidecar for observer gluing, coordinate
+resurrection, HYP-3121 lift-and-decorrelate cuts, and zero-mass H7/F7
+state-lift boundaries; keep raw H or raw sector counts as alarms only.
 
 Namespace: HYP-3124 / LTI-259 / LTT-157 / T1198 / OPEN-Q-108.
 

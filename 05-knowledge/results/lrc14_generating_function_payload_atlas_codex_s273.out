@@ -1,0 +1,153 @@
+﻿HYP-3137 / codex-2026-06-27-S273
+LRC14 GENERATING-FUNCTION PAYLOAD ATLAS
+status: executable synthesis scout; not a proof
+MAP 1: GENERATING-FUNCTION CARRIERS BY RETAINED PAYLOAD
+carrier | total | covers | preserves | destroys
+- signed_SPEC_resonance_series [Fourier / singular-series GF] total=84
+  anchors: HYP-3129, HYP-3136, HYP-3135, LTI-260
+  covers: Rprime_signed_low, SPEC_parseval_tail, closed_form_uniform_constants, coefficient_middle_layer, destroyed_coordinate_guard
+  preserves: exact low resonance on 14Z plus a Parseval-controlled signed tail
+  destroys if scalarized: edge-local child ownership if it is reported as one Fourier scalar
+  signal: SPEC_support_sieve = (resonance_lattice, low_modes, L2_tail, sign_budget)
+  next: turn HYP-3129 representative constants into a closed-form finite packet theorem
+- resolvent_elementary_symmetric_GF [De Moivre / resolvent elementary-symmetric GF] total=76
+  anchors: HYP-3138, HYP-3132, HYP-3135, THM-577, HYP-3122
+  covers: bounded_core_k8_phi4, coefficient_middle_layer, closed_form_uniform_constants, far_push_zero_motion
+  preserves: pair/triple middle layers such as -e2=120 and e3=320
+  destroys if scalarized: edge quotient legality unless it is joined to the packet ledger
+  signal: middle_layer_vector = (e2, e3, kappa2, kappa4, phi4_sign, k8_even_fold)
+  next: use HYP-3138's fold-adjoint lookup to turn the k=8 biquadratic fold into a coefficient inequality
+- edge_witness_recursion_OGF [ordinary GF of edge witness decks by recursion depth] total=73
+  anchors: HYP-3124, HYP-3125, HYP-3136, ce3529219
+  covers: edge_tail_tip_children, finite_address_observer_gluing, destroyed_coordinate_guard, R_safe_positive
+  preserves: tail/tip deletion children, recursive child decks, and orientation words
+  destroys if scalarized: global economy of the quotient unless joined to A000568 or observer gluing
+  signal: edge_recursion_depth_PGF = sum_d (#safe edge decks at depth d) u^d
+  next: attach depth-1/depth-2 edge packets to every finite SPEC row before quotienting
+- A000568_cycle_index_quotient [unlabeled tournament OGF / cycle-index quotient] total=70
+  anchors: HYP-3133, HYP-3134, HYP-3135, LTI-262
+  covers: global_consistency_quotient, edge_tail_tip_children, finite_address_observer_gluing, destroyed_coordinate_guard
+  preserves: the middle quotient between raw sector decks and paired child packets
+  destroys if scalarized: endpoint roles unless the quotient map is marked
+  signal: global_consistency_class = orbit(edge_packet)/legal_gluing
+  next: stratify HYP-3129 finite rows by sector -> A000568 shadow -> paired children
+- repair_cover_Hilbert_series [Hilbert/Poincare series of coordinate-resurrection covers] total=67
+  anchors: HYP-3118, HYP-3116, HYP-3120, LTI-254
+  covers: finite_address_observer_gluing, destroyed_coordinate_guard, global_consistency_quotient
+  preserves: minimal sidecar covers, proof obligations, and quotient sections
+  destroys if scalarized: analytic floor constants unless joined to SPEC/PGF carriers
+  signal: repair_cover_H(q) = sum_c (#minimal repair covers of size c) q^c
+  next: make every scalar quotient report the minimal sidecar that resurrects its lost coordinate
+- walsh_ocf_support_EGF [Walsh support EGF / OCF factorization] total=67
+  anchors: THM-077, THM-076, THM-059, 05-knowledge/variables/W-polynomial.md
+  covers: coefficient_middle_layer, closed_form_uniform_constants, destroyed_coordinate_guard
+  preserves: which coefficient supports survive: even path components and telescoping blocks
+  destroys if scalarized: direct LRC predicate unless translated into resonance supports
+  signal: support_survival_word = (allowed supports, cancellation involution, telescoper)
+  next: copy the THM-076 constant-term/hockey-stick pattern into the HYP-3129 mode sum
+- miss_count_PGF_root_locus [danger-count PGF and Lee-Yang root locus] total=64
+  anchors: HYP-3128, HYP-3131, HYP-3132, HYP-3136
+  covers: Q_apex_floor, bounded_core_k8_phi4, far_push_zero_motion, R_safe_positive
+  preserves: the whole miss-count distribution and zero motion under far additions
+  destroys if scalarized: signed coupling and tail constants if reduced to P(M=0) or nearest root
+  signal: PGF_root_trajectory = sorted roots of E[z^M] under far-push and tail deletion
+  next: prove the bounded-core implication rho>1 => Rprime>=c or name the gap
+- trivariate_master_GF [W/F/master polynomial and Eulerian deformation GF] total=62
+  anchors: THM-059, THM-114, THM-293, 05-knowledge/variables/F-polynomial.md
+  covers: coefficient_middle_layer, closed_form_uniform_constants, destroyed_coordinate_guard
+  preserves: a two-axis deformation where evaluation is visibly lossy
+  destroys if scalarized: LRC signs and edge gluing unless a sidecar restores them
+  signal: evaluation_loss_vector = (axis, derivative, killed coefficients)
+  next: use as the warning template for P(M=0), Rprime, and raw A000568 evaluation
+- hard_core_independence_partition [hard-core / polymer partition function] total=59
+  anchors: THM-209, THM-114, THM-341, HYP-3128
+  covers: Q_apex_floor, coefficient_middle_layer, far_push_zero_motion
+  preserves: power-of-two independent-cycle hierarchy and polymer cluster expansions
+  destroys if scalarized: edge endpoints and LRC resonance lattice if used generically
+  signal: polymer_cluster_signature = (activity, incompatible pairs, Mayer blocks)
+  next: test whether edge-floor rows have a small polymer cluster expansion after quotienting
+- IO_walk_determinant_GF [Irving-Omar determinant/permanent walk GF] total=51
+  anchors: Irving-Omar arXiv:2412.10572, T118, INV-046, THM-467
+  covers: coefficient_middle_layer, closed_form_uniform_constants
+  preserves: det/per and odd-trace log-derivative data from walk/cycle covers
+  destroys if scalarized: endpoint conditioning and LRC predicate without extra variables
+  signal: odd_trace_logderivative = coefficients of tr(A^(2k+1))/(2k+1)
+  next: use only as a matrix-algebra analogy unless endpoint-conditioned variables are added
+- q_pochhammer_modular_tail_GF [q-series/product tail guardrail] total=42
+  anchors: LTT-125, q-series principal-part ledgers, modular cusp guardrails
+  covers: SPEC_parseval_tail, closed_form_uniform_constants
+  preserves: finite principal parts and named polar exits for infinite products
+  destroys if scalarized: local LRC packet data if imported as modular decoration
+  signal: principal_part_tail_certificate = (finite part, pole ledger, tail bound)
+  next: keep as a guardrail for any product-form SPEC or theta tail expression
+- raw_scalar_evaluation [negative-control scalar] total=7
+  anchors: negative-control
+  covers: NONE
+  preserves: the visible number: P(M=0), Rprime, A000568(n), root radius, or a residual
+  destroys if scalarized: almost every proof coordinate needed by HYP-3136
+  signal: scalar_shadow_alarm = scalar_value_without_payload
+  next: never use as a proof carrier unless a sidecar restores the lost coordinates
+
+MAP 2: LRC14 REMAINING OBLIGATIONS AND BEST CARRIER SUPPORT
+- Q_apex_floor: miss_count_PGF_root_locus, hard_core_independence_partition
+- R_safe_positive: edge_witness_recursion_OGF, miss_count_PGF_root_locus
+- Rprime_signed_low: signed_SPEC_resonance_series
+- SPEC_parseval_tail: signed_SPEC_resonance_series, q_pochhammer_modular_tail_GF
+- bounded_core_k8_phi4: resolvent_elementary_symmetric_GF, miss_count_PGF_root_locus
+- far_push_zero_motion: resolvent_elementary_symmetric_GF, miss_count_PGF_root_locus, hard_core_independence_partition
+- edge_tail_tip_children: edge_witness_recursion_OGF, A000568_cycle_index_quotient
+- global_consistency_quotient: A000568_cycle_index_quotient, repair_cover_Hilbert_series
+- finite_address_observer_gluing: edge_witness_recursion_OGF, A000568_cycle_index_quotient, repair_cover_Hilbert_series
+- closed_form_uniform_constants: signed_SPEC_resonance_series, resolvent_elementary_symmetric_GF, walsh_ocf_support_EGF, trivariate_master_GF, IO_walk_determinant_GF, q_pochhammer_modular_tail_GF
+- coefficient_middle_layer: signed_SPEC_resonance_series, resolvent_elementary_symmetric_GF, walsh_ocf_support_EGF, trivariate_master_GF, hard_core_independence_partition, IO_walk_determinant_GF
+- destroyed_coordinate_guard: signed_SPEC_resonance_series, edge_witness_recursion_OGF, A000568_cycle_index_quotient, repair_cover_Hilbert_series, walsh_ocf_support_EGF, trivariate_master_GF
+
+SMALLEST FULL-COVER PACKETS
+- size=3 score=218: signed_SPEC_resonance_series + A000568_cycle_index_quotient + miss_count_PGF_root_locus
+  covers 12/12 obligations
+
+TOURNAMENT ANALYSIS OVER GF CARRIERS
+vertices=12 edges=66
+score histogram={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+directed 3-cycles=0
+SCCs=[['raw_scalar_evaluation'], ['q_pochhammer_modular_tail_GF'], ['IO_walk_determinant_GF'], ['hard_core_independence_partition'], ['trivariate_master_GF'], ['miss_count_PGF_root_locus'], ['walsh_ocf_support_EGF'], ['repair_cover_Hilbert_series'], ['A000568_cycle_index_quotient'], ['resolvent_elementary_symmetric_GF'], ['edge_witness_recursion_OGF'], ['signed_SPEC_resonance_series']]
+Hamiltonian path count=1
+selected Hamiltonian path:
+  signed_SPEC_resonance_series -> edge_witness_recursion_OGF -> resolvent_elementary_symmetric_GF -> A000568_cycle_index_quotient -> repair_cover_Hilbert_series -> walsh_ocf_support_EGF -> miss_count_PGF_root_locus -> trivariate_master_GF -> hard_core_independence_partition -> IO_walk_determinant_GF -> q_pochhammer_modular_tail_GF -> raw_scalar_evaluation
+
+PAIRWISE EDGE FLIPS AGAINST RAW SCALAR
+- signed_SPEC_resonance_series beats raw_scalar_evaluation
+- resolvent_elementary_symmetric_GF beats raw_scalar_evaluation
+- edge_witness_recursion_OGF beats raw_scalar_evaluation
+- A000568_cycle_index_quotient beats raw_scalar_evaluation
+- repair_cover_Hilbert_series beats raw_scalar_evaluation
+- walsh_ocf_support_EGF beats raw_scalar_evaluation
+- miss_count_PGF_root_locus beats raw_scalar_evaluation
+- trivariate_master_GF beats raw_scalar_evaluation
+- hard_core_independence_partition beats raw_scalar_evaluation
+- IO_walk_determinant_GF beats raw_scalar_evaluation
+- q_pochhammer_modular_tail_GF beats raw_scalar_evaluation
+
+NEW SIGNALS TO MEASURE
+- SPEC_support_sieve: Walsh support theorem -> HYP-3129 resonance support: record which signed modes survive, not only their sum.
+- edge_recursion_depth_PGF: Ear-decomposition analogy: count proof-edge decks by recursive depth and mark tail/tip ownership.
+- global_consistency_class: A000568 wedge as quotient legality: local sectors < global quotient < paired children.
+- PGF_root_trajectory_derivative: Measure how zeros move under far addition and endpoint deletion, not just nearest-root radius.
+- middle_layer_vector: Track pair/triple elementary symmetric layers, cumulants, and phi4 sign as the bounded-core payload.
+- k8_reflection_fold_adjoint: Use HYP-3138's even fold as a finite lookup that preserves gK8 while resurrecting odd leakage or naming debt.
+- repair_cover_H(q): Hilbert series for minimal sidecars needed to resurrect coordinates destroyed by each quotient.
+- Bravais_resonance_cell: Record the lattice cell/chamber of low SPEC modes; quotient shapes without a cell address are unsafe.
+- Savitch_packet_depth: Try repeated-squaring style proof reachability: can edge packets be joined in logarithmic depth?
+
+BOLD CURRENT HYPOTHESES
+- signed_SPEC_resonance_series: The LRC analogue of the Walsh support theorem is not PGF roots, but the support law that only the right signed modes survive.
+- resolvent_elementary_symmetric_GF: The proof may close by bounding one reflected u^2 coefficient, with HYP-3138 supplying the finite odd-coordinate resurrection table.
+- edge_witness_recursion_OGF: The ear-decomposition theorems hint that the missing witness is a typed ear word for proof packets, not a new scalar invariant.
+- A000568_cycle_index_quotient: A000568 is useful because it is neither local nor fully resolved: it is exactly a controlled forgetting tax.
+- repair_cover_Hilbert_series: Bravais-lattice language belongs here: quotient cells need a lattice address, not just a shape name.
+- walsh_ocf_support_EGF: Savitch-style reachability may appear as repeated halving of proof obligations over surviving coefficient supports.
+- miss_count_PGF_root_locus: The whole PGF curve matters, but the load-bearing coordinate may be its zero-motion derivative under endpoint deletion.
+- trivariate_master_GF: The right LRC GF may be a two-variable deformation: one axis for danger count, one for edge/observer ownership.
+
+WORKING REFRAIN
+The single evaluation is never the whole GF curve.  The proof packet wants a small, typed payload: support law + signed tail + edge quotient + middle coefficient layer + finite observer exit.

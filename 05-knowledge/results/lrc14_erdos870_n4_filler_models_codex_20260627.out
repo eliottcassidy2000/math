@@ -1,0 +1,61 @@
+HYP-3145 / codex-2026-06-27
+ERDOS-870 FILLER INTERFACES AND TWO N=4 TOURNAMENT MODELS
+
+Class names:
+  +: score=(0, 2, 2, 2)
+  -: score=(1, 1, 1, 3)
+  S: score=(1, 1, 2, 2)
+  T: score=(0, 1, 2, 3)
+
+MODEL 1: FIXED HAMILTONIAN PATH / THREE-FREE-ARC TILING
+Base path 0->1->2->3, transitive E, with a=(0,2), b=(1,3), c=(0,3).
+Representative xor table:
+        E   a   b   c
+  E |   T   +   -   S
+  a |   +   T   S   S
+  b |   -   S   T   S
+  c |   S   S   S   T
+Full fixed-path fiber over all 2^3 off-path states:
+  T: ['E']
+  +: ['a']
+  -: ['b']
+  S: ['c', 'bc', 'ac', 'ab', 'abc']
+Noncongruence alarm: multiplying from an S representative is ambiguous.
+  S * a can land in ['-', 'S']
+  S * b can land in ['+', 'S']
+  S * c can land in ['+', '-', 'S', 'T']
+
+MODEL 2: PARTIAL-SCORE FILLER / TWO-FREE-ARC CORE
+Fixed partial score profile: (0, 1, 1, 2)
+One exact realization:
+  fixed arc (0, 2) as 2->0
+  fixed arc (0, 3) as 0->3
+  fixed arc (1, 2) as 1->2
+  fixed arc (1, 3) as 1->3
+  x toggles arc (0, 1)
+  y toggles arc (2, 3)
+  E full score=(0, 1, 2, 3)
+User-facing partial table:
+        E   x   y
+  E |   T   +   -
+  x |   +   T   S
+  y |   -   S   T
+Closed Klein-square table, with xy representing S:
+        E   x   y  xy
+  E |   T   +   -   S
+  x |   +   T   S   -
+  y |   -   S   T   +
+ xy |   S   -   +   T
+
+ERDOS-870 TRANSFER
+- Treat the four fixed arcs as finite fillers that force the residue/score scaffold.
+- Treat x,y as the order-two core; all four class states are reached without quotient ambiguity.
+- The fixed-path tiling cube is an atlas, but its S fiber is nonminimal/deletable data.
+- LRC14 analogue: choose filler sidecars first, then leave a small signed core for SPEC/resolvent checks.
+- Formalization lesson: expose the interface boundary before proving the terminal theorem.
+
+TOURNAMENT ANALYSIS
+vertices=7
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed_3cycles=0
+selected_path=erdos870_filler_interface -> quotient_congruence_audit -> partial_score_two_arc_core -> edge_witness_SPEC_packet -> nonminimal_deletable_fiber_alarm -> fixed_path_tiling_cube -> raw_n4_class_table

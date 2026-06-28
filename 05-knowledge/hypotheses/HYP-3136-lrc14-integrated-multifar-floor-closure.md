@@ -1,0 +1,67 @@
+---
+id: HYP-3136
+title: LRC14 integrated multi-far floor closure
+status: SYNTHESIS / reduction to finite constant chase; renumbered from an index-only HYP-3132 row after S70 claimed file-backed HYP-3132 and S272 claimed HYP-3134
+source: codex-2026-06-27 rebase integration
+related:
+  - HYP-3145
+  - HYP-3143
+  - HYP-3135
+  - HYP-3134
+  - HYP-3133
+  - HYP-3132
+  - HYP-3131
+  - HYP-3130
+  - HYP-3129
+  - HYP-3128
+  - HYP-3127
+  - HYP-3126
+  - HYP-3125
+  - HYP-3124
+  - THM-546
+  - THM-530
+  - OPEN-Q-108
+---
+
+# HYP-3136: Integrated Multi-Far Floor Closure
+
+This card preserves the earlier index-only "integrated multi-far floor"
+claim after incoming S70 claimed the file-backed HYP-3132 namespace for the
+k=8 De Moivre biquadratic resolvent and S272 claimed HYP-3134 for the
+A000568 edge-envelope quotient.
+
+For a covering packet `S = R union 14Q`, with `R` 14-free and
+`2 <= |Q| <= 6`, the proof target factors as
+
+```text
+L(S) = Rprime(S) * meas(R-safe) * meas(Q-lonely).
+```
+
+The current synthesis assigns the three factors to three proof tools:
+
+- `meas(Q-lonely) >= c_r > 0`: HYP-3130 supplies the Gaussian/Beurling-
+  Selberg minorant and cap-matching Q/apex floor, modulo the THM-546 peel.
+- `meas(R-safe) > 0`: HYP-3125/HYP-3126 supply wide-V Gaussian/equidistribution
+  decoupling to a bounded core.
+- `Rprime(S) >= c`: HYP-3129 supplies the retained-edge signed SPEC
+  certificate, with representative-family floor `>= 0.64178` and remaining
+  closed-form finite constant chase.
+
+HYP-3131 says far tips push Lee-Yang zeros outward, so the far side is
+stabilizing rather than binding.  HYP-3132 sharpens the bounded-core tail:
+the remaining hard node is the k=8 phi4/De Moivre biquadratic resolvent.
+HYP-3133 adds an A000568 middle shadow for stratifying the finite SPEC rows
+before escalating to paired tail/tip children or named resonance debt.
+HYP-3134 sharpens that shadow into a global-consistency quotient: the proof
+may forget paired children only after the quotient is named and predicate-
+safe.  HYP-3135 is the algebraic packet version of the same rule, keeping the
+middle De Moivre/SPEC payload instead of collapsing it to a raw scalar.
+HYP-3143 adds the exact-order packet-subbasis audit, and HYP-3145 adds the
+filler-core interface guardrail: this factorization is a proof carrier only
+after the deterministic filler scaffold, retained small core variables,
+quotient-congruence check, and nonminimal-fiber exit are named.
+
+Edge-witness reading: the tip child carries Q/apex minorant, zero-free, and
+far-push certificates; the tail child carries the bounded core, SPEC lattice,
+and k=8 resolvent obligation; the cross-sector orientation word carries the
+signed coupling that becomes `Rprime`.

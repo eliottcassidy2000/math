@@ -2,6 +2,20 @@
 
 **Purpose:** Complete, structured database of every mathematical concept, object, technique, and connection in this project. Organized for rapid lookup by future Claude instances. Created by kind-pasteur-2026-03-07-S34.
 
+**Latest k=8 reflection-block addendum:** codex-2026-06-27-S273 adds
+HYP-3139/T1204/LTI-265/LTT-163, making the HYP-3132 De Moivre/biquadratic
+resolvent visible as an exact finite pairwise-moment block.  In the
+`consec_8` co-emptiness matrix, sectors `1..5` fold under `s->6-s` into an
+inner shell `2x2` page on `(1+5,2+4)`, center coupling through sector `3`, an
+antisymmetric nonmax block, and sector-`6` boundary leakage.  The unique
+boundary-free reflected shell fold is `roots_t=(1,2,4,5)` with `y^2-5y+4` and
+discriminant `9`.  This ties HYP-3085's pairwise `S2`/Perron route, HYP-3122's
+`phi4` sign, HYP-3132's solvable quartic, and HYP-3133's controlled-forgetting
+lesson into one final packet: prove the inner `2x2` shell bound, retain
+center/boundary sidecars, and attach the `-9S3+6S4` correction.  Entry:
+HYP-3139, HYP-3138, HYP-3132, HYP-3122, HYP-3085, HYP-3133, LTI-265, LTT-163,
+reflection `07-reflections/lrc14-k8-reflection-block-resolvent-codex-s273.md`.
+
 **Latest approximation sidecar addendum:** codex-2026-06-27-S265 follow-up
 extends HYP-3114/T1190/LTI-251/LTT-149 by merging
 irrational/transcendental approximation into the LRC14 frontier as a sidecar,

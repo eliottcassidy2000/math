@@ -73,6 +73,52 @@ Useful synthetic maps added later:
   smoothing as a positivity interface, and treats Asano contraction as a
   Lee-Yang legality sidecar for tail/tip contraction; after HYP-3127, this is
   best read as the packet ledger for the stronger Asano-contraction reduction.
+- `07-reflections/lrc14-a000568-edge-sandwich-codex-20260627.md`:
+  HYP-3133/T1200 synthesis turning the user's `10 < 12 < 16` and
+  `20 < 56 < 80` observation into a middle quotient between HYP-3124 sector
+  words and paired tail/tip deletion decks.  It proposes
+  `a000568_extension_shadow` as a finite quotient stratifier for HYP-3129's
+  SPEC constant chase.
+- `07-reflections/a000568-edge-envelope-global-consistency-codex-s272.md`:
+  HYP-3134/T1201 note on `10<12<16`, `20<56<80`, and `35<456<632`.  It reads
+  A000568 as a global-consistency quotient between raw four-sector edge
+  shadows and fully paired tail/tip child witnesses, and transfers that
+  controlled-forgetting rule to the LRC14 edge-floor packet.
+- `07-reflections/lrc14-k8-reflection-fold-resurrection-codex-20260627.md`:
+  HYP-3138/T1203 audit of the k=8 hard-row reflection fold.  It connects
+  HYP-3132 De Moivre biquadratic symmetry, HYP-3122 gK8/phi4, HYP-3116
+  endpoint circuit gates, HYP-3118 coordinate resurrection, HYP-3110 theta /
+  crystallographic quotient audits, and HYP-3134 global-consistency warnings.
+  Exact bounded-bank check: the even fold is injective through span<=16, but
+  the top row has nonzero odd leakage, so the next theorem target is a
+  finite fold-adjoint lemma rather than an odd-coordinate erasure claim.
+- `07-reflections/k8-resolvent-sidecar-certificate-codex-s273.md`:
+  HYP-3142/T1207 note turning the single k=8 hard node into the exact theorem
+  target `U4(E) <= U4(consec_8)`.  It ties HYP-3141/HYP-3140/HYP-3139/HYP-3138/HYP-3137/HYP-3136/HYP-3135 packet
+  reduction, De Moivre biquadratic folding, Bravais residue-flatness, Savitch
+  repair depth, Lee-Yang confinement, and A000568 controlled-forgetting into
+  one terminal sidecar packet.
+- `07-reflections/erdos870-live-core-filler-canary-codex-s275.md`:
+  HYP-3148/T1213 note importing the Erdos-870 no-minimal-subbasis warning into
+  the user's two n=4 tournament tables.  It continues HYP-3143/T1208's
+  exact-order subbasis packet, HYP-3144/T1209's pair-function quotient
+  guardrail, and HYP-3145/T1210's filler-core interface by separating the
+  three-bit fixed-path tiling cube from the two-bit anchor as two proof
+  economies: live core, deterministic filler, canary/shift control, and
+  deletable coordinates.  The practical export is the ledger row
+  `live_core_bits + filler_bits + canary_bits + deletable_coordinates +
+  minimal_cover_subbasis + terminal_exit_or_named_debt`.
+- `07-reflections/lrc14-erdos870-tournament4-canary-filler-codex-20260628.md`:
+  HYP-3149/T1214 note refining HYP-3143's n=4 exact-order subbasis packet,
+  HYP-3144's pair-function scalarization guardrail, HYP-3145's filler-core
+  interface, HYP-3146's cover/scaffold policy, HYP-3147's n=3 edge-flip
+  kernel, and HYP-3148's live-core audit through the Erdos-870 order-two-source plus deterministic-filler
+  interface.  It proves
+  that the four-fixed-arc `x,y` table is the `c=0` canary slice of the
+  fixed-Hamiltonian-path three-bit tiling cube, while the `c=1` slice collapses
+  to the `S` fiber.  The proposed proof packet is
+  `fixed_path_word + c_canary_status + xy_completion_table +
+  S_bulk_fiber_words + deletion/restoration_sidecar + edge_tip_tail_exit`.
 
 ## Second-Pass Small Motif Ledger
 

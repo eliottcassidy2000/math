@@ -9,6 +9,9 @@ tournament_technique: LTT-158
 script: 04-computation/lrc14_multifar_edge_witness_floor_codex_s271.py
 result: 05-knowledge/results/lrc14_multifar_edge_witness_floor_codex_s271.out
 related:
+  - HYP-3133
+  - HYP-3129
+  - HYP-3128
   - HYP-3127
   - HYP-3124
   - HYP-3123
@@ -61,6 +64,7 @@ edge_floor_packet =
   + tip_Q_safe_packet
   + outside_four_sector_deck
   + edge_tail_tip_sector_word
+  + a000568_extension_shadow
   + tail_deletion_child_Rprime
   + tip_deletion_child_Rprime
   + Rprime_lower_bound_candidate
@@ -191,6 +195,26 @@ needed to audit HYP-3127's three obligations:
 
 Read this HYP-3125 artifact as the local diagnostic and packet ledger for the
 HYP-3127 reduction, not as a competing route.
+
+## Post-HYP-3133 Middle Quotient
+
+HYP-3133 adds a finite quotient between the sector word and the full paired
+child deck.  In the small exact tournament census, A000568 on `m+1` unlabeled
+tournaments sits between HYP-3124 edge-local sector words on `m` vertices and
+paired tail/tip child signatures:
+
+```text
+m=4: 10 < 12 < 16
+m=5: 20 < 56 < 80
+m=6: 35 < 456 < 632
+```
+
+For this HYP-3125 packet, the practical field is
+`a000568_extension_shadow`.  It should sit between `edge_tail_tip_sector_word`
+and the deletion-child `Rprime` ratios.  Its role is not to prove zero-free
+Asano contraction; HYP-3128 forbids that shortcut across the crowded `R` tail.
+Its role is to stratify HYP-3129's finite low-frequency SPEC rows before
+escalating to the full paired endpoint-deletion deck.
 
 ## Next Theorem Target
 

@@ -1,0 +1,71 @@
+HYP-3142 / codex-2026-06-27-S273
+k=8 resolvent sidecar scout; executable synthesis, not a proof.
+
+1. RESOLVENT FOLD
+g(t)=(t-1)(t-2)(t-4)(t-5); with u=t-3:
+  coefficients u^4..u^0 = [1, 0, -5, 0, 4]
+  odd_coefficients_zero = True
+  discriminant in y=u^2 = 9 = 3^2
+  y_roots = (1, 4)
+
+2. EXACT BOUNDED-BANK U4 SCAN
+B=13; primitive rows scanned=1716
+cap_8=2243/5880 = 0.381462585034
+U4_over_cap_count=0
+Lee_Yang_nearest_root_gt_1_count=25
+Bravais_full_residue_flat_count=256
+phi4_kappa4_negative_count=4
+Savitch_sidecar_depth_hist={0: 3, 1: 18, 2: 259, 3: 1436}
+
+Worst rows by cap_8-U4:
+  E=(0, 1, 2, 3, 4, 5, 6, 7) q0=481/1470 U4=2633/7350 slack=683/29400 nearest=1.488584 real_roots=0 bravais_peak=0.125000 entropy=1.000000 mirror=0 kappa4=-0.787150 depth=0 residues=(2, 1, 1, 1, 1, 1, 1)
+  E=(0, 2, 3, 4, 5, 6, 7, 8) q0=1609/5880 U4=297/980 slack=461/5880 nearest=1.444319 real_roots=0 bravais_peak=0.125000 entropy=1.000000 mirror=0 kappa4=+0.192973 depth=1 residues=(2, 1, 1, 1, 1, 1, 1)
+  E=(0, 2, 4, 6, 7, 8, 10, 12) q0=188/735 U4=16399/58800 slack=6031/58800 nearest=1.556207 real_roots=0 bravais_peak=0.125000 entropy=1.000000 mirror=0 kappa4=+0.874732 depth=1 residues=(2, 1, 1, 1, 1, 1, 1)
+  E=(0, 1, 3, 5, 7, 9, 11, 13) q0=6821/28665 U4=278503/1051050 slack=489733/4204200 nearest=1.520488 real_roots=0 bravais_peak=0.125000 entropy=1.000000 mirror=0 kappa4=-0.466564 depth=0 residues=(2, 1, 1, 1, 1, 1, 1)
+  E=(0, 1, 3, 4, 5, 6, 7, 9) q0=697/2940 U4=2309/8820 slack=2111/17640 nearest=1.192855 real_roots=0 bravais_peak=0.125000 entropy=1.000000 mirror=0 kappa4=+1.553636 depth=1 residues=(2, 1, 1, 1, 1, 1, 1)
+  E=(0, 3, 4, 5, 6, 7, 8, 9) q0=643/2940 U4=21859/88200 slack=5893/44100 nearest=1.454910 real_roots=0 bravais_peak=0.125000 entropy=1.000000 mirror=0 kappa4=+0.955628 depth=1 residues=(2, 1, 1, 1, 1, 1, 1)
+  E=(0, 1, 2, 4, 5, 6, 7, 10) q0=647/2940 U4=727/2940 slack=263/1960 nearest=1.310590 real_roots=0 bravais_peak=0.125000 entropy=1.000000 mirror=0 kappa4=+1.445704 depth=1 residues=(2, 1, 1, 1, 1, 1, 1)
+  E=(0, 4, 5, 6, 7, 8, 9, 10) q0=3763/17640 U4=8431/35280 slack=5027/35280 nearest=1.125125 real_roots=0 bravais_peak=0.125000 entropy=1.000000 mirror=0 kappa4=+1.177516 depth=1 residues=(2, 1, 1, 1, 1, 1, 1)
+  E=(0, 1, 2, 5, 6, 7, 10, 11) q0=1691/8085 U4=38641/161700 slack=15361/107800 nearest=1.073980 real_roots=0 bravais_peak=0.125000 entropy=1.000000 mirror=0 kappa4=-0.334822 depth=0 residues=(2, 1, 1, 1, 1, 1, 1)
+  E=(0, 2, 4, 5, 6, 7, 8, 10) q0=421/1960 U4=467/1960 slack=421/2940 nearest=1.191099 real_roots=0 bravais_peak=0.125000 entropy=1.000000 mirror=0 kappa4=+2.162691 depth=1 residues=(2, 1, 1, 1, 1, 1, 1)
+
+Top rows by actual q0=meas(S7):
+  E=(0, 1, 2, 3, 4, 5, 6, 7) q0=481/1470 U4=2633/7350 slack=683/29400 nearest=1.488584 kappa4=-0.787150 depth=0
+  E=(0, 2, 3, 4, 5, 6, 7, 8) q0=1609/5880 U4=297/980 slack=461/5880 nearest=1.444319 kappa4=+0.192973 depth=1
+  E=(0, 2, 4, 6, 7, 8, 10, 12) q0=188/735 U4=16399/58800 slack=6031/58800 nearest=1.556207 kappa4=+0.874732 depth=1
+  E=(0, 1, 3, 5, 7, 9, 11, 13) q0=6821/28665 U4=278503/1051050 slack=489733/4204200 nearest=1.520488 kappa4=-0.466564 depth=0
+  E=(0, 1, 3, 4, 5, 6, 7, 9) q0=697/2940 U4=2309/8820 slack=2111/17640 nearest=1.192855 kappa4=+1.553636 depth=1
+  E=(0, 1, 2, 4, 5, 6, 7, 10) q0=647/2940 U4=727/2940 slack=263/1960 nearest=1.310590 kappa4=+1.445704 depth=1
+  E=(0, 3, 4, 5, 6, 7, 8, 9) q0=643/2940 U4=21859/88200 slack=5893/44100 nearest=1.454910 kappa4=+0.955628 depth=1
+  E=(0, 2, 4, 5, 6, 7, 8, 10) q0=421/1960 U4=467/1960 slack=421/2940 nearest=1.191099 kappa4=+2.162691 depth=1
+  E=(0, 4, 5, 6, 7, 8, 9, 10) q0=3763/17640 U4=8431/35280 slack=5027/35280 nearest=1.125125 kappa4=+1.177516 depth=1
+  E=(0, 1, 2, 5, 6, 7, 10, 11) q0=1691/8085 U4=38641/161700 slack=15361/107800 nearest=1.073980 kappa4=-0.334822 depth=0
+
+Correlations over bounded bank:
+  corr(U4,q0)=+0.997660
+  corr(U4,nearest_root)=+0.905012
+  corr(U4,bravais_peak)=-0.547962
+  corr(U4,residue_entropy)=+0.265502
+  corr(U4,kappa4)=-0.566836
+  corr(U4,sidecar_depth)=-0.775201
+
+3. INTERPRETATION
+In the integrated route, this scout supplies the bounded_core_U4_exit after the HYP-3141 edge-witness tip/tail packet, HYP-3140 fiber-PGF Rprime certificate, HYP-3137 generating-function payload atlas, HYP-3138 reflection-fold repair table, HYP-3139 reflection-block proof pages, HYP-3136 multi-far floor packet, and incoming HYP-3135 resolvent-packet middle layer.
+The bounded-bank evidence says the exact 4-moment U4 sidecar is a terminal cap certificate on all scanned k=8 rows.  The worst row is consec_8, with U4=2633/7350 and cap_8-U4=683/29400.
+The worst stalk is Bravais-flat, mirror-even, Lee-Yang confined, and phi4-negative, matching the HYP-3132 biquadratic fold.  Non-flat rows gain slack; rows without the phi4 sign still close by U4, so phi4 is a stabilizer/explainer rather than the whole terminal certificate.
+Proof target: prove a global moment-majorization theorem that U4(E) is maximized by the consecutive/full-residue-flat stalk, then HYP-3132's single k=8 node closes by exact rational arithmetic.
+
+4. TOURNAMENT ANALYSIS OVER SIDECAR CARRIERS
+vertices=9 axes=closes_k8_cap_node,finite_exact_certificate,preserves_lrc_predicate,explains_resolvent_fold,resurrects_destroyed_coordinate,connects_niche_work,failure_guardrail,formalization_path
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+directed_3cycles=0
+hamiltonian_path_count_capped=1
+selected_hamiltonian_path=exact_4moment_U4_cap_certificate -> biquadratic_resolvent_fold -> savitch_midpoint_repair_depth -> bravais_residue_flatness -> lee_yang_root_confinement -> coordinate_resurrection_sheaf -> a000568_edge_global_consistency -> phi4_kappa4_stabilizer -> raw_scalar_meas_S7
+
+Top carrier hooks:
+- exact_4moment_U4_cap_certificate: preserves=an exact rational terminal upper bound for q0 at the k=8 node; next=prove U4(E) is maximized by the consecutive/full-residue-flat stalk
+- biquadratic_resolvent_fold: preserves=the De Moivre fold g(u+3)=u^4-5u^2+4 with square discriminant; next=turn the kappa4 obligation into a degree-2 coefficient inequality
+- savitch_midpoint_repair_depth: preserves=a small missing-sidecar depth after the exact terminal gate is tried; next=use depth as the finite induction measure for remaining row families
+- bravais_residue_flatness: preserves=the full-residue flat stalk that carries the worst bounded-bank rows; next=prove non-flat residue spectra strictly improve the U4 slack
+- lee_yang_root_confinement: preserves=nearest-root and real-root strata guarding the phi4 side; next=show rows with near roots have a named U4 or endpoint-deletion repair
+- coordinate_resurrection_sheaf: preserves=which coordinate each quotient destroyed and which sidecar restores it; next=record repair_cover_rank for every k=8 row family

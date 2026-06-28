@@ -1,0 +1,168 @@
+HYP-3140 / codex-2026-06-27-S273
+14-sheet fiber PGF certificate for the LRC14 Rprime floor
+Refines the HYP-3136 integrated multi-far factorization at its Rprime factor
+
+ASSUMPTION CHALLENGE
+Vertices need not be runners.  This scout uses u-fibers and sheet-count coefficients as vertices/observables; runners are remembered only through the R-safe sheet packet.  The preserved predicate is the LRC14 covering floor Rprime>0.  The destroyed information is the identity of individual safe sheets unless the PGF coefficient or global-consistency sidecar keeps it.
+
+IDENTITY
+N_R(u)=number of R-safe lifts (u+a)/14, a=0..13
+Rprime = E[N_R(u) | Q-lonely] / E[N_R(u)]
+
+====================================================================================================
+canonical r=1: drop 12, Q={1}
+R=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+Q=(1,)   far speeds=(14,)
+----------------------------------------------------------------------------------------------------
+F_R(y)        = 31/35*y^0 + 292/5005*y^1 + 8/143*y^2
+F_R,Q(y)      = 26/35*y^0 + 292/5005*y^1 + 8/143*y^2
+E[N_R]        = 852/5005 = 0.17022977
+E[N_R | Q]    = 142/715 = 0.19860140
+Q mass        = 6/7 = 0.85714286
+Q sheet range = 0..2; Q zero sheet mass=26/35
+Rprime fiber  = 7/6 = 1.16666667
+direct check  = measR 426/35035, measQ 6/7, both 426/35035, Rprime 7/6; identity_ok=True
+====================================================================================================
+canonical r=2: drop 13, Q={1,2} (HYP-3129 worst)
+R=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+Q=(1, 2)   far speeds=(14, 28)
+----------------------------------------------------------------------------------------------------
+F_R(y)        = 7243/13860*y^0 + 6617/13860*y^1
+F_R,Q(y)      = 7243/13860*y^0 + 521/1980*y^1
+E[N_R]        = 6617/13860 = 0.47741703
+E[N_R | Q]    = 3647/10890 = 0.33489440
+Q mass        = 11/14 = 0.78571429
+Q sheet range = 0..1; Q zero sheet mass=7243/13860
+Rprime fiber  = 51058/72787 = 0.70147142
+direct check  = measR 6617/194040, measQ 11/14, both 521/27720, Rprime 51058/72787; identity_ok=True
+====================================================================================================
+canonical r=3: R={1..11}, Q={1,2,3}
+R=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+Q=(1, 2, 3)   far speeds=(14, 28, 42)
+----------------------------------------------------------------------------------------------------
+F_R(y)        = 667/1980*y^0 + 8111/13860*y^1 + 1/33*y^2 + 1/21*y^3
+F_R,Q(y)      = 4009/13860*y^0 + 4481/13860*y^1 + 1/33*y^2 + 1/21*y^3
+E[N_R]        = 10931/13860 = 0.78867244
+E[N_R | Q]    = 7301/9570 = 0.76290491
+Q mass        = 29/42 = 0.69047619
+Q sheet range = 0..3; Q zero sheet mass=4009/13860
+Rprime fiber  = 306642/316999 = 0.96732797
+direct check  = measR 10931/194040, measQ 29/42, both 149/3960, Rprime 306642/316999; identity_ok=True
+====================================================================================================
+canonical r=4: R={1..10}, Q={1,2,3,4}
+R=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+Q=(1, 2, 3, 4)   far speeds=(14, 28, 42, 56)
+----------------------------------------------------------------------------------------------------
+F_R(y)        = 2/7*y^1 + 49/90*y^2 + 11/90*y^3 + 1/21*y^4
+F_R,Q(y)      = 13/84*y^1 + 104/315*y^2 + 109/1260*y^3 + 1/21*y^4
+E[N_R]        = 1217/630 = 1.93174603
+E[N_R | Q]    = 797/390 = 2.04358974
+Q mass        = 13/21 = 0.61904762
+Q sheet range = 1..4; Q zero sheet mass=0
+Rprime fiber  = 16737/15821 = 1.05789773
+direct check  = measR 1217/8820, measQ 13/21, both 797/8820, Rprime 16737/15821; identity_ok=True
+====================================================================================================
+canonical r=5: R={1..9}, Q={1..5}
+R=(1, 2, 3, 4, 5, 6, 7, 8, 9)
+Q=(1, 2, 3, 4, 5)   far speeds=(14, 28, 42, 56, 70)
+----------------------------------------------------------------------------------------------------
+F_R(y)        = 1/28*y^1 + 11/18*y^2 + 11/60*y^3 + 11/90*y^4 + 1/21*y^5
+F_R,Q(y)      = 1/28*y^1 + 67/252*y^2 + 41/420*y^3 + 73/1260*y^4 + 1/21*y^5
+E[N_R]        = 1597/630 = 2.53492063
+E[N_R | Q]    = 419/159 = 2.63522013
+Q mass        = 53/105 = 0.50476190
+Q sheet range = 1..5; Q zero sheet mass=0
+Rprime fiber  = 87990/84641 = 1.03956711
+direct check  = measR 1597/8820, measQ 53/105, both 419/4410, Rprime 87990/84641; identity_ok=True
+====================================================================================================
+canonical r=6: R={1..8}, Q={1..6}
+R=(1, 2, 3, 4, 5, 6, 7, 8)
+Q=(1, 2, 3, 4, 5, 6)   far speeds=(14, 28, 42, 56, 70, 84)
+----------------------------------------------------------------------------------------------------
+F_R(y)        = 5/42*y^2 + 5/12*y^3 + 1/4*y^4 + 1/10*y^5 + 1/15*y^6 + 1/21*y^7
+F_R,Q(y)      = 1/14*y^2 + 4/21*y^3 + 17/140*y^4 + 1/28*y^5 + 1/70*y^6 + 1/42*y^7
+E[N_R]        = 521/140 = 3.72142857
+E[N_R | Q]    = 685/192 = 3.56770833
+Q mass        = 16/35 = 0.45714286
+Q sheet range = 2..7; Q zero sheet mass=0
+Rprime fiber  = 23975/25008 = 0.95869322
+direct check  = measR 521/1960, measQ 16/35, both 137/1176, Rprime 23975/25008; identity_ok=True
+====================================================================================================
+spread far: R={1..9}, Q={1,3,5}
+R=(1, 2, 3, 4, 5, 6, 7, 8, 9)
+Q=(1, 3, 5)   far speeds=(14, 42, 70)
+----------------------------------------------------------------------------------------------------
+F_R(y)        = 1/28*y^1 + 11/18*y^2 + 11/60*y^3 + 11/90*y^4 + 1/21*y^5
+F_R,Q(y)      = 1/28*y^1 + 47/126*y^2 + 41/420*y^3 + 59/630*y^4 + 1/21*y^5
+E[N_R]        = 1597/630 = 2.53492063
+E[N_R | Q]    = 1063/408 = 2.60539216
+Q mass        = 68/105 = 0.64761905
+Q sheet range = 1..5; Q zero sheet mass=0
+Rprime fiber  = 111615/108596 = 1.02780029
+direct check  = measR 1597/8820, measQ 68/105, both 1063/8820, Rprime 111615/108596; identity_ok=True
+====================================================================================================
+gcd-loaded R: even R, Q={1,3,5}
+R=(2, 4, 6, 8, 10, 12)
+Q=(1, 3, 5)   far speeds=(14, 42, 70)
+----------------------------------------------------------------------------------------------------
+F_R(y)        = 5/12*y^4 + 1/3*y^6 + 1/20*y^8 + 1/30*y^10 + 1/6*y^12
+F_R,Q(y)      = 37/140*y^4 + 29/105*y^6 + 1/20*y^8 + 1/30*y^10 + 1/42*y^12
+E[N_R]        = 32/5 = 6.40000000
+E[N_R | Q]    = 98/17 = 5.76470588
+Q mass        = 68/105 = 0.64761905
+Q sheet range = 4..12; Q zero sheet mass=0
+Rprime fiber  = 245/272 = 0.90073529
+direct check  = measR 16/35, measQ 68/105, both 4/15, Rprime 245/272; identity_ok=True
+====================================================================================================
+gcd-loaded R: triples, Q={1,2,5}
+R=(3, 6, 9, 12)
+Q=(1, 2, 5)   far speeds=(14, 28, 70)
+----------------------------------------------------------------------------------------------------
+F_R(y)        = 1/3*y^7 + 1/6*y^8 + 1/2*y^10
+F_R,Q(y)      = 43/210*y^7 + 1/6*y^8 + 3/10*y^10
+E[N_R]        = 26/3 = 8.66666667
+E[N_R | Q]    = 1211/141 = 8.58865248
+Q mass        = 47/70 = 0.67142857
+Q sheet range = 7..10; Q zero sheet mass=0
+Rprime fiber  = 1211/1222 = 0.99099836
+direct check  = measR 13/21, measQ 47/70, both 173/420, Rprime 1211/1222; identity_ok=True
+====================================================================================================
+coprime-ish sparse R, Q={1,2,3}
+R=(5, 9, 11, 13)
+Q=(1, 2, 3)   far speeds=(14, 28, 42)
+----------------------------------------------------------------------------------------------------
+F_R(y)        = 139/429*y^6 + 152/429*y^7 + 24/143*y^8 + 2/13*y^9
+F_R,Q(y)      = 1231/6006*y^6 + 307/1001*y^7 + 24/143*y^8 + 1/91*y^9
+E[N_R]        = 236/33 = 7.15151515
+E[N_R | Q]    = 2226/319 = 6.97805643
+Q mass        = 29/42 = 0.69047619
+Q sheet range = 6..9; Q zero sheet mass=0
+Rprime fiber  = 3339/3422 = 0.97574518
+direct check  = measR 118/231, measQ 29/42, both 53/154, Rprime 3339/3422; identity_ok=True
+====================================================================================================
+SUMMARY
+case                                                Rprime        E[N]      E[N|Q]      Q zero   Q range
+canonical r=1: drop 12, Q={1}                      1.16667     0.17023     0.19860     0.74286      0..2
+canonical r=2: drop 13, Q={1,2} (HYP-3129 worst)   0.70147     0.47742     0.33489     0.52258      0..1
+canonical r=3: R={1..11}, Q={1,2,3}                0.96733     0.78867     0.76290     0.28925      0..3
+canonical r=4: R={1..10}, Q={1,2,3,4}              1.05790     1.93175     2.04359     0.00000      1..4
+canonical r=5: R={1..9}, Q={1..5}                  1.03957     2.53492     2.63522     0.00000      1..5
+canonical r=6: R={1..8}, Q={1..6}                  0.95869     3.72143     3.56771     0.00000      2..7
+spread far: R={1..9}, Q={1,3,5}                    1.02780     2.53492     2.60539     0.00000      1..5
+gcd-loaded R: even R, Q={1,3,5}                    0.90074     6.40000     5.76471     0.00000     4..12
+gcd-loaded R: triples, Q={1,2,5}                   0.99100     8.66667     8.58865     0.00000     7..10
+coprime-ish sparse R, Q={1,2,3}                    0.97575     7.15152     6.97806     0.00000      6..9
+
+Worst targeted row: canonical r=2: drop 13, Q={1,2} (HYP-3129 worst) with Rprime=0.70147142. It is visible as a low-degree fiber-PGF defect: Q-safe mass still contains y^0 and y^1 coefficients, so min-sheet positivity is too crude; the right finite theorem is a conditional first-moment bound.
+
+PROOF TARGET EMITTED
+For every legal residual row, prove coefficientwise or moment-form inequality E[N_R | Q-lonely] >= c * E[N_R] for the 14-sheet PGF. HYP-3129's SPEC certificate is exactly the Fourier transform of this finite PGF statement; HYP-3134 supplies the legality condition for forgetting individual sheets after the global-consistency class is named.
+====================================================================================================
+TOURNAMENT ANALYSIS OVER GENERATING-FUNCTION PROOF CARRIERS
+vertices=proof carriers, not runners, arcs, or raw speed rows
+pairwise observable=axis majority over predicate retention, exact identity, coefficient data, finite checkability, quotient legality, SPEC transfer, tail bounds, zero-free signal, and sidecar memory
+switch=give A->B when A wins more axes; ties use the listed guardrail order
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed_3cycles=0
+edge_flips_against_raw_scalar=7
+selected_hamiltonian_path=fiber_pgf_conditional_mean -> signed_SPEC_resonance_lattice -> edge_child_global_quotient -> lee_yang_root_pgf -> macwilliams_weight_enumerator -> q_pochhammer_modular_tail -> moser_fibbinary_partial_cube -> raw_scalar_Rprime

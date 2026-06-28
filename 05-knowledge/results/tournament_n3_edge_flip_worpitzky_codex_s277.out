@@ -1,0 +1,86 @@
+HYP-3147 n=3 edge-flip Worpitzky/function kernel
+source=codex-2026-06-28-S277
+
+1. TWO CLASS / THREE EDGE GRAPH
+coin_reference=cyclic orientation 0->1->2->0; H keeps reference, T flips reference
+class_rule=straight coin words HHH/TTT are cyclic C; 2:1 mixes are transitive T
+class_counts={'C': 2, 'T': 6}
+per_state:
+  HHH: class=C weight=0 scores=(1, 1, 1) order=None descents=None
+    flips=01->THH/T, 02->HTH/T, 12->HHT/T
+  HHT: class=T weight=1 scores=(1, 0, 2) order=(2, 0, 1) descents=1
+    flips=01->THT/T, 02->HTT/T, 12->HHH/C
+  HTH: class=T weight=1 scores=(2, 1, 0) order=(0, 1, 2) descents=0
+    flips=01->TTH/T, 02->HHH/C, 12->HTT/T
+  HTT: class=T weight=2 scores=(2, 0, 1) order=(0, 2, 1) descents=1
+    flips=01->TTT/C, 02->HHT/T, 12->HTH/T
+  THH: class=T weight=1 scores=(0, 2, 1) order=(1, 2, 0) descents=1
+    flips=01->HHH/C, 02->TTH/T, 12->THT/T
+  THT: class=T weight=2 scores=(0, 1, 2) order=(2, 1, 0) descents=2
+    flips=01->HHT/T, 02->TTT/C, 12->THH/T
+  TTH: class=T weight=2 scores=(1, 2, 0) order=(1, 0, 2) descents=1
+    flips=01->HTH/T, 02->THH/T, 12->TTT/C
+  TTT: class=C weight=3 scores=(1, 1, 1) order=None descents=None
+    flips=01->HTT/T, 02->THT/T, 12->TTH/T
+
+2. COLLAPSED FLIP COUNTS AND MARKOV KERNEL
+directed_flip_counts={('C', 'T'): 6, ('T', 'C'): 6, ('T', 'T'): 12}
+per_vertex_outdegrees: C->T=3; T->C=1 and T->T=2 on average/exactly
+class_transition_matrix_rows_C_T=[[0,1],[1/3,2/3]]
+stationary_distribution=(C=1/4,T=3/4), matching straight/mixed coin split 2/8 and 6/8
+eigenvalues=(1,-1/3); the negative eigenvalue is the tiny three-edge oscillation left after class collapse
+
+3. EDGE-LABEL COUNTS
+  ('C', '01', 'T'): 2
+  ('C', '02', 'T'): 2
+  ('C', '12', 'T'): 2
+  ('T', '01', 'C'): 2
+  ('T', '01', 'T'): 4
+  ('T', '02', 'C'): 2
+  ('T', '02', 'T'): 4
+  ('T', '12', 'C'): 2
+  ('T', '12', 'T'): 4
+readout=from a cyclic state every edge is a C->T gate; from a transitive state exactly one minority edge is a T->C gate
+
+4. WORPITZKY REFINEMENT
+transitive_fiber_descent_counts={0: 1, 1: 4, 2: 1}
+Eulerian_A(3,k)=(1,4,1), so Worpitzky splits the six transitive states into 1+4+1
+identity_check=x^3=C(x+2,3)+4*C(x+1,3)+C(x,3)
+  x=0: lhs=0 rhs=0 ok=True
+  x=1: lhs=1 rhs=1 ok=True
+  x=2: lhs=8 rhs=8 ok=True
+  x=3: lhs=27 rhs=27 ok=True
+  x=4: lhs=64 rhs=64 ok=True
+  x=5: lhs=125 rhs=125 ok=True
+  x=6: lhs=216 rhs=216 ok=True
+  x=7: lhs=343 rhs=343 ok=True
+  x=8: lhs=512 rhs=512 ok=True
+readout=Worpitzky does not replace the C/T kernel; it refines the T fiber by ordered path descents
+
+5. FUNCTION QUARTET ON EDGE VALUES
+  pair=1,2: sum=3 product=2 exponents=(1, 2) ordered_gap=1
+  pair=1,3: sum=4 product=3 exponents=(1, 3) ordered_gap=2
+  pair=2,3: sum=5 product=6 exponents=(8, 9) ordered_gap=1
+commutative_channels=a+b,a*b; ordered_channels=a^b,b^a
+readout=sum/product see an undirected edge shadow; exponentials remember which endpoint is base and which is exponent
+
+6. LRC PACKET TRANSFER
+n3_edge_kernel_packet = class(C/T) + minority_edge_gate + Worpitzky_descent_word + ordered_function_channel
+guardrail=symmetric pair functions alone cannot certify an edge-flip quotient, because they are blind to arc orientation
+HYP3141_update=add edge_flip_class_kernel, minority_edge_gate, and ordered_function_payload to edge witnesses
+HYP3142_update=read the antisymmetric nonmax block as order-sensitive payload, not as disposable noise
+HYP3143_update=packet_order should be computed after separating straight-vs-mixed and then Worpitzky-refining the transitive fiber
+
+7. TOURNAMENT ANALYSIS OVER PROOF CARRIERS
+pairwise_observable=orientation payload, quotient guard strength, LRC transfer, Worpitzky signal, function-order signal, proof readiness
+binary_gauge=edge A->B iff weighted proof-carrier score(A)>score(B); tie Hamiltonian path is lexicographic
+score_hist={32: 1, 33: 1, 55: 1, 61: 1, 63: 1, 64: 1, 69: 2}
+directed_3cycles=0
+hamiltonian_path_count=1
+selected_path=edge_flip_markov_kernel_C_T -> minority_edge_gate_inside_T -> packet_function_object_not_scalar -> worpitzky_descent_refinement_of_T_fiber -> ordered_exponential_channel_a_to_b -> coin_straight_mixed_stationary_measure -> symmetric_sum_product_shadow -> raw_score_class_two_nodes
+
+8. NEXT TESTS
+A. Add these fields to the n=4 packet-basis scout: minority/majority flip role, Worpitzky descent word on every transitive subtriangle, and ordered-function payload.
+B. For HYP-3141 edge witnesses, compute the two-state edge kernel on every 3-vertex shadow around a directed proof edge.
+C. For HYP-3142, ask whether the k=8 antisymmetric shell is bounded by summing n=3 ordered-function oscillations with Worpitzky descent weights.
+D. For LRC Rprime rows, treat C/T transitions as a small signed Markov kernel and test whether the -1/3 eigenmode aligns with the HYP-3129 signed SPEC low modes.

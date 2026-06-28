@@ -1,0 +1,56 @@
+DE MOIVRE RESOLVENT CHECK
+resolvent roots: [2, -4, 8, -16]
+elementary symmetric layers: e1=-10, e2=-120, e3=320, e4=1024
+quartic coefficients from roots: [1, 10, -120, -320, 1024]
+quartic: x^4 + 10*x^3 - 120*x^2 - 320*x + 1024
+reading: 120 = -e2 is the pair layer; 320 = e3 is the triple layer.
+
+REAL QUINTIC ROOT CHECK
+branch expression: fifthroot(2) - fifthroot(4) + fifthroot(8) - fifthroot(16)
+x ~= -0.396194115857709
+x^5 + 20*x^3 + 20*x^2 + 30*x + 10 ~= 7.105e-15
+
+A000568 SANDWICH WINDOW FROM HYP-3131 / HYP-3134
+ n   C(n,3)   A000568(n)   2*(n-1)!/3   status
+ 4        4            4             4   inside
+ 5       10           12            16   inside
+ 6       20           56            80   inside
+ 7       35          456           480   inside
+ 8       56         6880          3360   breaks
+
+SELECTED 120/320 MOTIFS ALREADY IN THE REPO
+- pair/triple cycle correction: 05-knowledge/variables/cycle-counts.md
+  c_2 contains -120*bc33: a middle interaction correction, not a raw count.
+- bounded resonant-center audit: 00-navigation/SESSION-LOG.md
+  HYP-2852 recorded a provable 0/320 bounded-V resonant-center floor check.
+- support-six signed cancellation: 00-navigation/SESSION-LOG.md
+  HYP-2608 used 320 random six-support vectors to expose residue-addressed reciprocal sums.
+- cap/slack signal: 00-navigation/SESSION-LOG.md
+  k=13 cap rows reported +0.320 slack: margin, not theorem by itself.
+- tournament/fixed-path scale: 07-reflections/the-blue-line-morse-theory.md
+  120 appears as 5! labelled tournament mass and fixed-path/profile scale.
+- torsion moat: 07-reflections/lonely-runner-recursive-metrics-s376.md
+  n=15 order-3 puncture moat has missed-cell count 120.
+- modular/support horizon: 07-reflections/eta-powers-type-II-and-matroid-support-gates.md
+  q^120 is a finite support horizon where sparsity becomes modular control.
+
+CURRENT LRC14 REMAINING-PROOF MAP
+- Q/apex block: closed as a positive factor
+  HYP-3130 exact c_r floors; HYP-3128 Lee-Yang Q-block; HYP-3129 union/SPEC agreement.
+- far additions: help rather than obstruct
+  HYP-3131: far elements push miss-PGF zeros outward; multi-far reduces to bounded core.
+- global quotient discipline: A000568 wedge is a proof-legality signal
+  HYP-3134: A000568 sits between raw edge sectors and paired tail/tip child packets as a global-consistency quotient.
+- assembled multi-far floor: factorized into three named proof fields
+  HYP-3136: L(S)=Rprime*meas(R-safe)*meas(Q-lonely), with Q/apex minorant, R-safe wide-V/bounded-core floor, and signed SPEC coupling.
+- Rprime coupling: certified but not fully theorem-packaged
+  HYP-3129/HYP-3136: signed SPEC gives Rprime >= 0.64178 on the tested family; needs closed-form constant chase.
+- absolute minorant envelope: ruled out
+  HYP-3130: B1/h0 > 1, so the proof must use sign cancellation, not absolute Schur mass.
+- bounded core: main proof bottleneck
+  HYP-3122/HYP-3132(S70)/HYP-3131: the remaining core is the k=8 phi4 dip, now a solvable biquadratic resolvent plus the rho>1 => Rprime>=c bridge.
+- packet legality: still required
+  HYP-3116/HYP-3124/HYP-3125: retain edge tail/tip sectors, finite address, observer-gluing, Phi/P, or name debt.
+
+SYNTHESIS
+The example quartic teaches the useful lesson: the branch roots are simple, but the load-bearing data live in the middle elementary-symmetric payload (-120, 320).  The LRC14 analogue is to stop promoting raw p0, raw root radius, or raw tournament counts alone.  The current proof packet should carry Q-floor constants, signed SPEC low/tail, Lee-Yang radius/far-push status, edge tail/tip deletion sectors, a named global-consistency quotient, and the HYP-3136 assembled multi-far factorization.  The remaining work is a closed-form middle-layer packet theorem, sharpened by S70 to a k=8 biquadratic/phi4 coefficient bound.
