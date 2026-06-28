@@ -41,6 +41,14 @@ claim was a near-coincidence, and `anchor=odd-residue` is false.  So the next
 lemma should be a pairwise covariance lemma for the even fold, with the odd
 Worpitzky/associator channel retained as genuine sidecar debt.
 
+HYP-3161 strengthens this again: the covariance maximum is exhaustive over all
+`3432` bounded k=8 clusters, and the binding rows are genuinely
+ferromagnetic in the sector-spin sense.  Consec k=8 and k=10 have all 15
+pairwise covariances positive; a minimizer has mixed signs.  The next lemma is
+therefore not "FKG proves the upper bound" but "the consecutive cluster is the
+ferromagnetic ground state/extremal coupling that maximizes the ordered-state
+mass."
+
 The main proof lesson is negative but useful: raw scalar `p0`, raw root radius,
 or raw cap numerology is not a legal proof object.  The packet has to carry the
 off-circle coordinate and the ordered/odd ear sidecar until a real LRC

@@ -114,6 +114,13 @@ also says consec does not maximize the associator `Sigma-kappa_3`, exact
 `1/7` was a near-coincidence, and `anchor=odd-residue` is refuted; the odd
 Worpitzky/associator term remains separate sidecar debt.
 
+The later HYP-3161 covariance pass upgrades this from sampled evidence to an
+exhaustive bounded-k=8 check: consec maximizes `Sigma-kappa_2` over all
+`3432` bounded k=8 clusters with zero beaters.  It also identifies the
+mechanism as ferromagnetic ordering: k=8 and k=10 consec have all 15 pairwise
+covariances positive, while minimizers are mixed.  The proof hook is now a
+ground-state/extremal-coupling lemma, not a plain FKG bound.
+
 The later HYP-3199 n=4 Einheit chart also connects: the fixed-path `a,b,c`
 model is a cover with a lossy five-state `S` fiber, while the partial-score
 `x,y` section is the exact chart.  HYP-3153 should therefore import n=4 table

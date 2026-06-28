@@ -18,13 +18,16 @@ is not a legal terminal proof row.  Post-HYP-3160 correction: this route should
 not use entropy, excess kurtosis, `anchor=odd-residue`, or exact `1/7`
 associativity as terminal invariants; the verified even target is
 `Sigma-kappa_2`, while the odd `Sigma-kappa_3`/Worpitzky channel remains
-separate debt.  Post-HYP-3199 correction: any n=4 tournament-table use must
+separate debt.  Post-HYP-3161 correction: the even target is now
+exhaustively checked over all `3432` bounded k=8 clusters and should be
+phrased as a ferromagnetic ground-state/extremal-coupling lemma, not as plain
+FKG.  Post-HYP-3199 correction: any n=4 tournament-table use must
 also carry exact-chart/deletable-`c` minimality data, since the fixed-path
 `a,b,c` cover has a lossy high-multiplicity `S` fiber.  Post-HYP-3154
 correction: carry the Joukowski image `w=z+R^2/z` and off-circle `Im(w)`
 defect as a Lee-Yang stability sidecar; do not replace it by raw root-radius
-numerology. -> HYP-3154, HYP-3199, HYP-3160, HYP-3153, HYP-3152, HYP-3151,
-HYP-3150,
+numerology. -> HYP-3161, HYP-3154, HYP-3199, HYP-3160, HYP-3153, HYP-3152,
+HYP-3151, HYP-3150,
 HYP-3147, HYP-3142, HYP-3139, THM-577, LTI-279, LTT-177, T1218,
 OPEN-Q-108.
 

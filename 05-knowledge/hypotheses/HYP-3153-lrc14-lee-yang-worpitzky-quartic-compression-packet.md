@@ -10,6 +10,7 @@ script: 04-computation/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.py
 result: 05-knowledge/results/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.out
 reflection: 07-reflections/lrc14-lee-yang-worpitzky-quartic-packet-codex-20260628.md
 related:
+  - HYP-3161
   - HYP-3160
   - HYP-3199
   - HYP-3154
@@ -102,6 +103,17 @@ maximize the associator `Sigma-kappa_3`, and minimizes `kappa_4`; the
 Therefore this packet should first try to prove a covariance/excess
 co-emptiness lemma for the even fold, then carry the odd `-9S3`
 Worpitzky/associator term as separate sidecar debt.
+
+Post-rebase integration with HYP-3161 upgrades that covariance sentence from
+sampled evidence to an exhaustive bounded-k=8 signal: consec maximizes
+`Sigma-kappa_2` over all `3432` bounded k=8 clusters with zero beaters.  It
+also confirms the exact-`1/7` associativity claim is false beyond
+near-coincidence, and identifies the mechanism as ferromagnetic ordering:
+`Sigma-kappa_2(consec_k)` changes sign between k=5 and k=6, and at the
+binding rows k=8 and k=10 all 15 pairwise sector covariances are positive.
+The proof target should therefore be stated as a ferromagnetic
+ground-state/extremal-coupling lemma; plain FKG gives a lower bound in the
+wrong direction and is not a terminal proof.
 
 Post-rebase integration with HYP-3199 adds the n=4 minimality guardrail.  The
 fixed-Hamiltonian-path `a,b,c` model is a tiling cover with a five-state `S`
@@ -214,7 +226,7 @@ The scout leaves three load-bearing tasks:
 
 1. Prove the even covariance/excess co-emptiness bound
    `Sigma-kappa_2` first; do not route this through entropy, excess kurtosis,
-   anchor residue, or exact `1/7` associativity heuristics.
+   anchor residue, exact `1/7` associativity heuristics, or plain FKG alone.
 2. Prove the AP/consec `L_y` extremality in the required bank or route each
    exception to an existing finite-address/observer-gluing packet.
 3. Carry the ordered/Worpitzky/ear sidecars through the LRC predicate before
