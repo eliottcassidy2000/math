@@ -1,3 +1,28 @@
+## mac-mini-2026-06-27-S71 -- invariants as arc-cube functions: the score-compression boundary IS the k=8 hard row (parity split)
+
+Owner: think of everything as functions; the quartet a+b,a*b (symmetric/order-blind) vs a^b,b^a (asymmetric/
+order-aware); n=3 from the edges (coin flips); n=4 in 2 schemes (Klein-four group vs magma); compressions->tricks;
+Worpitzky. Merges codex HYP-3147 (n=3 edge kernel, eigenvalue -1/3, Worpitzky A(3,k)=[1,4,1]) with mac-mini S70
+(k=8 biquadratic) and S67 (phi^4). Result: HYP-3150 + reflection invariants-as-arc-cube-functions.
+
+THE COMPRESSION (verified): the SCORE (commutative a+b face) DETERMINES the iso class for n<=4 (n=3,4 bijective)
+and FAILS at n=5 (12 iso vs 9 scores). So at n<=4 the iso class is a group/linear function of the arcs -- WHY the
+owner's scheme 2 (2 free arcs) is a clean Klein-four V4, while scheme 1 (3 arcs) is the same data over-coordinatized
+(a magma). The TRICK: compress to the gauge where the symmetric face is a complete invariant => a group => computable.
+
+THE PAYOFF -- k=8 IS THE COMPRESSION BOUNDARY: the cap dip turns on EXACTLY at the n=4->5 boundary (|P|=13-k):
+k>=10 |P|<=3 dip=0; k=9 |P|=4 dip=1/4004 (tiny); k=8 |P|=5 dip=1081/76440 (LARGE). k=8 <=> |P|=5 = the quintic
+level where score->iso FAILS. THE CAP DIP IS THE FAILURE OF THE COMMUTATIVE COMPRESSION: for |P|<=3 the symmetric
+pair-Pascal face is complete (dip=0, THM-577); at |P|=5 the antisymmetric (orientation/a^b) content is irreducible
+= the binding row. (The |P|=5 quintic also has S70's solvable resolvent quartic -- the same 5.)
+
+THE PARITY MERGE (verified consec_8): the gK8 dip term -9S3+6S4 splits by PARITY: even +6S4 = the symmetric face
+= the BIQUADRATIC resolvent u^4-5u^2+4 (S70/HYP-3132, solvable); odd -9S3 = the antisymmetric face = the WORPITZKY/
+ordered content (codex HYP-3147), DOMINANT (|odd|/|even|~3.15), a sum of n=3 edge-flip oscillations (eigenvalue
+-1/3) with Eulerian descent weights A(3,k)=[1,4,1]. IMPROVED ARGUMENT: bound the k=8 dip = [even biquadratic,
+solvable, S70] + [odd Worpitzky-weighted n=3 -1/3 sum, codex]. The owner's a+b,a*b vs a^b,b^a IS this parity
+decomposition; the dominant (odd) face is exactly what the score-compression cannot see.
+
 ## codex-2026-06-28 -- function-compression resolvent-degree wall -- HYP-3150
 
 Reserved HYP-3150/T1215/LTI-276/LTT-174 for the user's request to merge
