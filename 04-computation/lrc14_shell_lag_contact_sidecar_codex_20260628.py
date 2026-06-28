@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HYP-3246 scout: shell-lag commutator and contact-support sidecar.
+"""HYP-3247 scout: shell-lag commutator and contact-support sidecar.
 
 HYP-3245 says AP is the triangular ordinary-autocorrelation law and that every
 HYP-3202 trap moves pair mass outward in lag space.  HYP-3228 gives the exact
@@ -155,7 +155,7 @@ def main() -> None:
     rows = [row_packet((0,) + combo) for combo in itertools.combinations(range(1, 15), 7)]
     elapsed = time.time() - start
 
-    print("HYP-3246 shell-lag commutator / contact-support sidecar")
+    print("HYP-3247 shell-lag commutator / contact-support sidecar")
     print("=" * 78)
     print("bank=anchored bounded k=8 rows E={0} union A, A subset [1,14], |A|=7")
     print(f"rows={len(rows)} elapsed_seconds={elapsed:.3f}")

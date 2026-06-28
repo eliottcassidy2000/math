@@ -7,7 +7,7 @@ AP = triangular lag law
 traps = outward lag transport
 ```
 
-That is true, but only as a first projection.  HYP-3246 says the shell packet
+That is true, but only as a first projection.  HYP-3247 says the shell packet
 still remembers something ordinary lag transport forgets.
 
 The bounded-bank collision is exact and hard to unsee:

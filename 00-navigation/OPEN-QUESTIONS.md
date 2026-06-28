@@ -5828,7 +5828,7 @@ LTI-344, LTT-244, T1344, OPEN-Q-108.
 
 ## OPEN-Q-108 addendum (codex-2026-06-28): shell-lag commutator and contact-support repair
 
-HYP-3246 turns HYP-3245's lag-side heuristic into a bounded exact
+HYP-3247 turns HYP-3245's lag-side heuristic into a bounded exact
 controlled-forgetting test against HYP-3228 shell magic.  The scout shows:
 
 ```text
@@ -5874,8 +5874,57 @@ contact_support
 ```
 
 and then show that every shell-visible lag residual either descends through
-that carrier or routes to named debt. -> HYP-3246, HYP-3245, HYP-3244,
+that carrier or routes to named debt. -> HYP-3247, HYP-3246, HYP-3245, HYP-3244,
 HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237,
 HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230,
 HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3204, HYP-3203,
 HYP-3202, HYP-3138, LTI-345, LTT-245, T1345, OPEN-Q-108.
+## OPEN-Q-108 addendum (codex-2026-06-28): contact-holonomy curvature repair
+
+HYP-3253 reframes the HYP-3247 shell-lag commutator as curvature of a quotient
+square:
+
+```text
+base quotient Q(E) = (ordinary lag profile, residue histogram mod 7)
+curvature = nonconstant HYP-3228 shell magic on a Q-fiber
+connection repair = contact_holonomy(E) = sum_{j in contact_support(E)} zeta_7^j
+```
+
+Exact bounded-bank readout over the `3432` anchored k=8 rows:
+
+```text
+Q mixed shell fibers                 = 62
+support size repair                  = 62 mixed fibers remain
+gap multiset repair                  = 62 mixed fibers remain
+min/max position repair              = 14 mixed fibers remain
+ordered gap values repair            =  9 mixed fibers remain
+position sum mod 7 / power sums      =  2 mixed fibers remain
+ordered contact support repair       =  0 mixed fibers remain
+zeta_7 contact holonomy repair       =  0 mixed fibers remain
+```
+
+Caveat: the holonomy is not a terminal global quotient because empty and full
+contact support both have zero first moment.  It is a connection coordinate
+over lag+residue and must stay paired with endpoint-cell or finite-chamber
+sidecars when the empty/full ambiguity is live.
+
+New proof obligation:
+
+```text
+For every primitive residual packet, prove that the lag/residue quotient has
+zero shell curvature, or that zeta_7 contact holonomy kills the curvature, or
+that the packet lifts to an endpoint arrangement / finite chamber, or else
+name the residual debt.
+```
+
+This is the local counterpart of HYP-3246's global index frame: local
+curvature must not hide the endpoint coordinate that carries the odd
+Borsuk-Ulam/index obstruction.  HYP-3249 sharpens the guardrail: the repaired
+map must force a cover-hole/lonely witness, not a runner collision at the
+observer.  After HYP-3250/HYP-3251/HYP-3252, the open question is more
+precise: can this local holonomy distinguish finite tight endpoint chambers
+from packets that must fall to the uniform-margin floor, without mistaking the
+ambient index description for the S-dependent proof? -> HYP-3253, HYP-3252,
+HYP-3251, HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245,
+HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3239, HYP-3228, HYP-3204,
+LTI-347, LTT-247, T1347, OPEN-Q-108.

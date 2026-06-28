@@ -7092,7 +7092,7 @@ quotient_legality_status
   `circle_endpoint_arrangement_cell`, `lag_plus_contact_word`,
   `lag_plus_contact_support`, `lag_plus_residue_histogram`,
   `lag_plus_gap_multiset`, and `lag_profile_only`.
-- **LRC use:** HYP-3246 turns HYP-3245's ordinary lag transport into a
+- **LRC use:** HYP-3247 turns HYP-3245's ordinary lag transport into a
   controlled-forgetting audit against HYP-3228 shell magic.  Exact bounded-bank
   readout: lag profile alone leaves `1677` mixed shell fibers; residue
   histogram cuts that to `62`; ordered contact support kills the ambiguity;
@@ -7114,8 +7114,41 @@ quotient_legality_status
   HYP-3244 tiling-lift / half-tiling-descent failures, then ask for a
   symbolic shell decomposition
   `lag transport + contact sidecar + named repair`.
-- **Pointers:** HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
+- **Pointers:** HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
   HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234,
   HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3226,
   HYP-3225, HYP-3224, HYP-3204, HYP-3203, HYP-3202, HYP-3138, LTI-345, T1345,
   OPEN-Q-108.
+## LTT-247: Contact-Holonomy Curvature Tournament
+
+- **Created by:** codex-2026-06-28 for HYP-3253/T1347.
+- **Vertices:** proof carriers rather than runners: `raw_runner_vertices`,
+  `lag_plus_residue_histogram`, `gap_multiset`, `position_power_sums`,
+  `ordered_contact_support`, `zeta7_contact_holonomy`,
+  `endpoint_arrangement_cell`, and `index_degree_sheaf`.
+- **Pairwise observable:** which carrier kills lag/residue-to-shell curvature
+  while retaining the LRC predicate needed by HYP-3228/HYP-3245/HYP-3246.
+- **Switch/gauge:** `A -> B` iff `B` preserves strictly more curvature/index
+  payload and names any destroyed coordinate.
+- **Fingerprint:** score histogram has eight singleton scores, directed
+  3-cycles `0`, singleton SCCs, edge flips `0`, Hamiltonian path count `1`.
+- **Tie Hamiltonian path:** `index_degree_sheaf ->
+  endpoint_arrangement_cell -> zeta7_contact_holonomy ->
+  ordered_contact_support -> position_power_sums -> gap_multiset ->
+  lag_plus_residue_histogram -> raw_runner_vertices`.
+- **LRC use:** HYP-3253 turns the HYP-3247 shell-lag commutator from a raw
+  controlled-forgetting warning into a cyclotomic holonomy repair over the
+  exact bounded bank.  The tournament ranks the connection coordinate below
+  full endpoint cells/global index packets but above raw contact support and
+  scalar gap/position summaries.  HYP-3249's forcing-gap warning is retained:
+  a carrier that sends the index to a runner collision rather than a
+  cover-hole/lonely witness is not terminal.  HYP-3250/HYP-3251/HYP-3252 make
+  the ranking stricter: the index packet describes the tight saddle, while
+  the terminal proof still needs S-dependent floor/margin data or a finite
+  endpoint-chamber certificate.
+- **Next hook:** instantiate the same tournament on primitive residual packets
+  and require each edge to declare whether curvature descends, is killed by
+  contact holonomy, lifts to endpoint chambers, or emits named debt.
+- **Pointers:** HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248,
+  HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
+  HYP-3239, HYP-3228, HYP-3204, LTI-347, T1347, OPEN-Q-108.

@@ -1,5 +1,5 @@
 ---
-id: HYP-3246
+id: HYP-3247
 title: LRC14 shell-lag commutator and contact-support sidecar
 status: EVIDENCE / exact bounded-bank scout; not an LRC14 proof
 source: codex-2026-06-28
@@ -11,6 +11,7 @@ result: 05-knowledge/results/lrc14_shell_lag_contact_sidecar_codex_20260628.out
 reflection: 07-reflections/lrc14-shell-lag-contact-sidecar-codex-20260628.md
 related:
   - HYP-3245
+  - HYP-3246
   - HYP-3244
   - HYP-3243
   - HYP-3242
@@ -38,13 +39,13 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3246: LRC14 Shell-Lag Commutator and Contact-Support Sidecar
+# HYP-3247: LRC14 Shell-Lag Commutator and Contact-Support Sidecar
 
 ## Claim
 
 HYP-3245 treats AP as the triangular ordinary-autocorrelation law and records
 outward lag transport on the HYP-3202 trap boundary.  HYP-3228 gives the exact
-shell functional `10q0+q3+10q6`.  HYP-3246 asks whether those two projections
+shell functional `10q0+q3+10q6`.  HYP-3247 asks whether those two projections
 commute on the bounded k=8 bank.
 
 They do not.  Ordinary support autocorrelation is a lossy quotient for the
@@ -158,7 +159,7 @@ This bounded-bank result sharpens several nearby packets:
 - HYP-3245: outward lag transport is useful, but not terminal; it needs a
   contact-sidecar.
 - HYP-3228: shell magic is not a pure lag functional.
-- HYP-3204: the ordered-tail exchange route was already positional; HYP-3246
+- HYP-3204: the ordered-tail exchange route was already positional; HYP-3247
   identifies one exact bounded-bank positional payload.
 - HYP-3243: the repair wants a circle endpoint arrangement cell rather than a
   scalar lag count.

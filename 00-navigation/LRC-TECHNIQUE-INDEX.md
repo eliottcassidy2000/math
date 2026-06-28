@@ -5229,7 +5229,7 @@ anchored gap word
 contact support = positions of non-unit gaps
 ```
 
-HYP-3246 is the finite controlled-forgetting audit for the HYP-3245 to
+HYP-3247 is the finite controlled-forgetting audit for the HYP-3245 to
 HYP-3228 projection.  The core bounded-bank result is exact:
 
 ```text
@@ -5268,8 +5268,58 @@ HYP-3204 ordered-tail exchange, and HYP-3244 tiling/half-tiling descent
 labels; then ask for a symbolic shell decomposition
 `lag transport + contact sidecar + named repair`.
 
-Pointers: HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
+Pointers: HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
 HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234,
 HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3226,
 HYP-3225, HYP-3224, HYP-3204, HYP-3203, HYP-3202, HYP-3138, LTT-245, T1345,
 OPEN-Q-108.
+## LTI-347: Contact-Holonomy Curvature Sheaf
+
+Created by codex-2026-06-28 for HYP-3253/T1347.
+
+Carrier / vertex set: quotient squares, contact holonomy coordinates,
+endpoint arrangement cells, and index packets; not raw runners.
+
+Preserved LRC predicate: the HYP-3228 shell-magic value as it feeds the
+HYP-3245/HYP-3246 proof route.
+
+Destroys if used alone: full endpoint/contact support in rare global fibers;
+empty and full contact support both have zero first `zeta_7` moment.  Therefore
+the holonomy is a connection coordinate over lag+residue, not a global terminal
+quotient.
+
+Pairwise observable / gauge: compare two carriers by whether they kill
+lag/residue-to-shell curvature while naming the coordinate they forget.
+
+LRC use: HYP-3253 identifies the HYP-3247 shell-lag commutator as local
+curvature of the lag/residue quotient.  Over the exact bounded k=8 bank,
+`(ordinary lag profile, residue histogram mod 7)` has `62` mixed HYP-3228
+shell-magic fibers; support size, gap multiset, min/max position, ordered gap
+values, and scalar position sums fail somewhere; full contact support and the
+first cyclotomic contact moment `sum zeta_7^j` both leave `0` mixed fibers.
+This ties HYP-3246's global index frame and HYP-3248's q-uniform
+equioscillation boundary to a local holonomy repair, while retaining the
+HYP-3249 guardrail that a naive odd map can force a runner collision instead
+of a lonely cover-hole witness.  After HYP-3250/HYP-3251/HYP-3252, this should
+be used as a local sidecar for the finite-tight-locus / uniform-margin split:
+the index describes the saddle, and contact holonomy decides which endpoint
+coordinate cannot be forgotten before the S-dependent floor takes over.
+
+Tournament fingerprint: transitive under the bounded-bank shell-magic gauge,
+with Hamiltonian path `index_degree_sheaf -> endpoint_arrangement_cell ->
+zeta7_contact_holonomy -> ordered_contact_support -> position_power_sums ->
+gap_multiset -> lag_plus_residue_histogram -> raw_runner_vertices`.
+
+Next hook: prove a symbolic curvature theorem for the primitive residual
+packet:
+
+```text
+zero quotient curvature
+or zeta_7 contact-holonomy repair
+or endpoint/finite-chamber lift
+or named residual debt.
+```
+
+Pointers: HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248,
+HYP-3247, HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
+HYP-3239, HYP-3228, HYP-3204, LTT-247, T1347, OPEN-Q-108.

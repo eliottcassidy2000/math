@@ -35,6 +35,91 @@ Owner: more unifying frames; keep pushing to a proof; capture the AP-equioscilla
 - UNIFIES CASE SPLIT: f_S(a/14)<1/14 <=> some s==0 mod14. [14-free: M>=1/14 via units = THM-523 q=14 as equioscillation] + [tight: units global max, no higher peak = census] + [covering: units killed = multi-far floor HYP-3132].
 - q-UNIFORM (3248): n=2q => phi(n)=q-1 units, (q-1)/2 pairs. LRC(2q) tight = Chebyshev extremal on (Z/2q)*, dim (q-1)/2 = mac-mini-S79 index (p-1)/2 (Borsuk-Ulam degree) -- CONVERGENCE (equioscillation dim = topological index).
 NET: q-uniform unifying frame reproducing THM-523, unifying the case split, tying binding-pairs/complement/q-uniformity, converging with mac-mini's index frame. Reflection: lonely-runner-as-chebyshev-equioscillation. Multi-far floor (HYP-3132) preserved.
+## codex-2026-06-28 -- HYP-3253 contact-holonomy curvature sheaf
+
+Owner asked for more creative unifying frames for the LRC and a proof push.
+After rebasing over the new HYP-3246 index-theorem frame, I first repaired the
+local namespace collision by renumbering the monad-explorer shell-lag sidecar
+to HYP-3247.  After a later rebase exposed HYP-3248 as the q-uniform
+Chebyshev frame and HYP-3249 as the bold index-prediction / forcing-gap frame,
+this packet was renumbered to HYP-3253/T1347/LTI-347/LTT-247:
+
+```text
+global section / index     = HYP-3246 index-degree frame
+calibrated boundary        = HYP-3245/HYP-3246 unit equioscillation
+local quotient curvature   = HYP-3247 shell-lag commutator
+connection repair          = zeta_7 contact holonomy
+```
+
+New script:
+`04-computation/lrc14_contact_holonomy_curvature_codex_20260628.py`.
+Stored result:
+`05-knowledge/results/lrc14_contact_holonomy_curvature_codex_20260628.out`.
+Created hypothesis:
+`05-knowledge/hypotheses/HYP-3253-lrc14-contact-holonomy-curvature-sheaf.md`.
+Reflection:
+`07-reflections/lrc14-contact-holonomy-curvature-sheaf-codex-20260628.md`.
+
+Exact bounded-bank readout over the `3432` anchored k=8 rows: the base
+quotient `(ordinary support-autocorrelation, residue histogram mod 7)` has
+`62` mixed HYP-3228 shell-magic fibers, all of size `2`.  Failed repairs:
+support size leaves `62`, gap multiset leaves `62`, min/max position leaves
+`14`, ordered gap values leave `9`, and position sum / power sums leave `2`.
+Successful repairs: full ordered contact support leaves `0`, and the exact
+first contact Fourier moment
+
+```text
+contact_holonomy(E) = sum_{j in contact_support(E)} zeta_7^j
+```
+
+also leaves `0`.
+
+Caveat: holonomy is not a global terminal quotient, since empty and full
+contact support both map to zero.  The proof-facing statement is narrower:
+holonomy is the connection coordinate over lag+residue that kills the local
+shell curvature exposed by HYP-3247.
+
+Proof target left behind:
+
+```text
+For every primitive residual packet, prove zero quotient curvature,
+or zeta_7 contact-holonomy repair,
+or endpoint / finite-chamber lift,
+or named residual debt compatible with the HYP-3246 odd index.
+```
+
+Post-rebase integration: HYP-3249's P2 says the naive Borsuk-Ulam map can
+force a runner collision at the observer rather than a lonely point.  HYP-3253
+is therefore explicitly a local guardrail: the index route must retain
+cover-hole / endpoint-cell / contact-holonomy data so a topological zero cannot
+become the wrong zero.
+
+Second post-rebase integration: origin/main added HYP-3250/HYP-3251/HYP-3252
+while this packet was local.  The contact-holonomy frame is now downstream of
+that verdict: HYP-3250 supplies the finite-tight-locus plus uniform-margin
+proof split, while HYP-3251/HYP-3252 warn that the index/equioscillation count
+describes the saddle rather than supplying S-dependent proof content.  HYP-3253
+therefore records local curvature data needed before a lag/residue packet can
+be assigned to the tight endpoint chamber, the margin/floor side, or named
+residual debt.
+
+Third post-rebase integration: the new reflection
+`the-index-theorem-describes-the-floor-proves.md` points past the failed
+p-mod-4/sign-cancellation bridge toward a `Q(sqrt(-7))` reorganization of the
+floor.  The HYP-3253 testable handoff is to pass floor packets through the
+`zeta_7` contact-holonomy lift first, then ask whether the signed floor terms
+become positive or finite-chamber exact in the `Q(sqrt(-7))` basis.
+
+## codex-2026-06-28 -- namespace repair after HYP-3246 collision
+
+After rebasing the local monad-explorer shell-lag sidecar over `origin/main`,
+the namespace collision became visible: mac-mini S79 had already claimed
+HYP-3246 for the Chebyshev/index-theorem frame.  The shell-lag commutator
+sidecar is therefore renumbered to HYP-3247, with its detail file moved to
+`05-knowledge/hypotheses/HYP-3247-lrc14-shell-lag-contact-sidecar.md`.
+The original local commit message still says HYP-3246, but the current
+canonical hypothesis id for that packet is HYP-3247.  HYP-3246 now refers to
+the index/equioscillation frame.
 
 ## mac-mini-2026-06-28-S79 -- the INDEX-THEOREM frame: LRC(2p) <=> an index=(p-1)/2 is nonzero; analytic(equidist/Euler char)=topological(Borsuk-Ulam degree); parity=p mod 4 = the method
 
@@ -31450,7 +31535,7 @@ packet sample; then test whether sign cuts commute with odd-coordinate
 resurrection or emit antipodal split / Borsuk-Ulam odd-degree / signed-wall /
 Green-leakage debt.
 
-## monad-explorer-2026-06-28 -- shell-lag commutator / contact-support sidecar -- HYP-3246
+## monad-explorer-2026-06-28 -- shell-lag commutator / contact-support sidecar -- HYP-3247
 
 Warm-up note: the session mount at
 `/home/bigo/.cache/monad-math-sessions/explorer/math` was metadata-visible but
@@ -31468,7 +31553,7 @@ Added
 stored
 `05-knowledge/results/lrc14_shell_lag_contact_sidecar_codex_20260628.out`,
 created
-`05-knowledge/hypotheses/HYP-3246-lrc14-shell-lag-contact-sidecar.md`,
+`05-knowledge/hypotheses/HYP-3247-lrc14-shell-lag-contact-sidecar.md`,
 and wrote
 `07-reflections/lrc14-shell-lag-contact-sidecar-codex-20260628.md`.
 Updated

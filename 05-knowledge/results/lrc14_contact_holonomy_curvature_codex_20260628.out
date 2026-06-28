@@ -1,0 +1,55 @@
+HYP-3253 contact-holonomy / quotient-curvature scout
+==============================================================================
+bank=anchored bounded k=8 rows E={0} union A, A subset [1,14], |A|=7
+rows=3432 elapsed_seconds=79.636
+lag+residue mixed_shell_fibers=62 mixed_rows=124
+mixed_fiber_size_hist={2: 62}
+contact_support_size_hist_on_mixed={1: 6, 2: 16, 3: 58, 4: 26, 5: 18}
+
+REPAIR FEATURES OVER lag+residue FIBERS
+  support_size             fibers=3370 mixed_shell_fibers= 62
+  position_sum_mod7        fibers=3430 mixed_shell_fibers=  2
+  position_power_sums      fibers=3430 mixed_shell_fibers=  2
+  minmax_position          fibers=3418 mixed_shell_fibers= 14
+  ordered_gap_values       fibers=3423 mixed_shell_fibers=  9
+  gap_multiset             fibers=3370 mixed_shell_fibers= 62
+  contact_support          fibers=3432 mixed_shell_fibers=  0
+  zeta7_contact_holonomy   fibers=3432 mixed_shell_fibers=  0
+
+WHY A SCALAR POSITION SUM IS NOT ENOUGH
+  first_bad_position_sum_mod7=5 magic_values=[Fraction(5989, 5460), Fraction(126097, 90090)]
+    E=(0, 1, 3, 5, 9, 10, 11, 13) magic=126097/90090 support=(1, 2, 3, 6) holonomy=(-1, 0, 0, 0, -1, -1) gaps=(1, 2, 2, 4, 1, 1, 2)
+    E=(0, 2, 3, 4, 8, 10, 12, 13) magic=5989/5460 support=(0, 3, 4, 5) holonomy=(1, 0, 0, 1, 1, 1) gaps=(2, 1, 1, 4, 2, 2, 1)
+
+CURVATURE READOUT
+  base_quotient=(ordinary lag profile, residue histogram mod 7)
+  curvature=nonconstant HYP-3228 shell magic on one base-quotient fiber
+  nonzero_curvature_fibers=62
+  lift_by_ordered_contact_support: nonzero_curvature_fibers=0
+  lift_by_zeta7_contact_holonomy: nonzero_curvature_fibers=0
+  interpretation=the shell-lag commutator is a cyclotomic endpoint holonomy.
+
+HOLONOMY CAVEAT
+  holonomy_keys=127 support_collision_keys=1
+  zero_holonomy_supports=[(), (0, 1, 2, 3, 4, 5, 6)]
+  readout=the holonomy is a connection coordinate over lag+residue, not a global terminal quotient.
+
+ASSUMPTION CHALLENGE
+  alternate vertices considered: runners, gaps, fixed circle sections, section boundaries,
+  wall-crossing events, residues, cover arcs, Fourier modes, matroid/topes, and proof obligations.
+  chosen quotient vertices=lag/residue fibers lifted by a zeta_7 contact holonomy.
+  preserved LRC predicate=the HYP-3228 shell-magic value as it feeds the HYP-3245/HYP-3246 proof route.
+  destroyed by the base quotient=endpoint placement of contact defects; destroyed by holonomy alone=full support in rare global fibers.
+  challenged assumption=the ordered endpoint sidecar must remain a raw support set.
+  bounded-bank answer=the first cyclotomic contact moment is enough over the lag+residue connection.
+
+TOURNAMENT ANALYSIS
+vertices=proof carriers, not runners: quotient squares, holonomy, endpoint cells, and index packets
+pairwise_observable=which carrier kills lag/residue-to-shell curvature while retaining the LRC predicate
+switch/gauge=A->B iff B preserves strictly more curvature/index payload with a named destroyed coordinate
+score_hist={99: 1, 95: 1, 91: 1, 88: 1, 55: 1, 35: 1, 25: 1, 15: 1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1,1,1]
+edge_flips=0 under the bounded-bank shell-magic gauge
+hamiltonian_path_count=1
+tie_hamiltonian_path=index_degree_sheaf -> endpoint_arrangement_cell -> zeta7_contact_holonomy -> ordered_contact_support -> position_power_sums -> gap_multiset -> lag_plus_residue_histogram -> raw_runner_vertices

@@ -1,4 +1,4 @@
-HYP-3246 shell-lag commutator / contact-support sidecar
+HYP-3247 shell-lag commutator / contact-support sidecar
 ==============================================================================
 bank=anchored bounded k=8 rows E={0} union A, A subset [1,14], |A|=7
 rows=3432 elapsed_seconds=59.740
