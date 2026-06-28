@@ -45,6 +45,30 @@ fails but owner-current works; residue/v2 fail but tropical wall works; both
 fail and emit named owner/height/off-grid debt. -> HYP-3402, HYP-3311,
 HYP-3400, HYP-3310, HYP-3301, HYP-3260, HYP-3265, HYP-2969, HYP-2963, T1363,
 LTI-363, LTT-263, OPEN-Q-108.
+**OPEN-Q-108 HYP-3404 creative reframe lead-atlas addendum:**
+HYP-3404 converts the latest creative LRC14 session into an executable
+first-failure queue anchored to the actual-packet sheaf instantiation and the
+HYP-3401 AP-collar unit-height obstruction, with HYP-3402 owner-current /
+tropical-wall sidecars and HYP-3403 shadow-charge packet gluing now first in
+the failure test.  The bank-local fact is sharp:
+`31` HYP-2969/HYP-2963 rows have one mixed coarse theorem-exit fiber of size
+`7`; adjoining the nonunit residue word kills all mixed fibers, while adjoining
+`v2` alone leaves one; all `7` qdiv>14 rows are `positive-Haar-open`.
+
+Open task: enlarge the actual-packet sheaf to a broader HYP-2963 residual
+sample and find the first residue-word mixed fiber.  If none appears, try for
+a familywise residue-word exactness theorem.  If one appears, first compute
+the owner-current word, tropical-wall word, colored CRT half-boundary deficit
+(HYP-2593/HYP-2595), shadow-charge sidecar, and endpoint-owner deletion cut;
+only then escalate to the covering-flex Hessian, denominator-curvature
+transport, or Haar-Baire owner-strip zipper.  The first failure must be named
+as unit or nonunit height/flex, endpoint owner/current, tropical off-grid floor, exact period,
+K33/H7, state-lift debt, or a new finite trap.  Tournament Analysis
+uses proof-reframe leads as vertices (`15` vertices, no directed 3-cycles,
+priority path `R01 -> R11 -> R14 -> R04 -> R05 -> R02 -> R03 -> R15 -> R06 -> R07 -> R08 -> R09 -> R12 -> R13 -> R10`).
+-> HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3300, HYP-3266,
+HYP-3265, HYP-3260, HYP-3257, HYP-3253, HYP-2969, HYP-2963, HYP-2595,
+HYP-2593, T1365, LTI-365, LTT-265, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3260 unit equioscillation nullspace addendum:**
 HYP-3260 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.

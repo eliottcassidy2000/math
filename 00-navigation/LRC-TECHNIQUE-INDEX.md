@@ -104,6 +104,9 @@ formal-analytic proof-obligation ledger / Lean-closed glue / finite-closed packe
 C6 residue-magnitude factorization / unit binding skeleton / even-cover plus apex-7 layer / 2-adic hinge / observability glue
 CRT/Galois census factorization / `U union 2U union {7}` / C3 binding-pair quotient / Q(sqrt(-7)) sidecar / 2-adic covering-flex ledger
 three-coordinate obstruction exactness / C3 binding skeleton / Q(sqrt(-7)) character / all-residue height-flex ledger / mixed-fiber first obstruction
+endpoint-owner current and tropical height wall / owner-current word / tropical wall word / first-leak debt table
+shadow-charge packet gluing / C3-index shadow / Q(sqrt(-7)) sign shadow / covering-residue separator / height debt detector
+creative reframe lead atlas / residue-word breakpoint / colored half-boundary sieve / endpoint deletion-cut-current resurrection / tropical-wall handoff / covering-flex Hessian
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -454,6 +457,8 @@ record what it destroys before asking it to prove anything.
 | LTI-355 | Equioscillation contact-graph case split | Unit contact times `(Z/14)^*/14`, antipodal contact pairs, binding complement pairs `{+a^{-1},-a^{-1}}`, three-slot quotient, danger-cover holes, Kolmogorov active-gradient sidecar, covering kill switch | HYP-3265 turns the AP/Goddyn-Wong six-touch safety-function picture into an exact contact graph.  The six unit contacts split into three antipodal unit pairs and three binding complement-pair slots; 14-free rows are safe at every unit, rows with a `0 mod 14` speed kill the unit contacts and must move to an off-unit covering/floor route, and tight rows are those where the six contacts remain global with no higher off-unit peak. | HYP-3265, HYP-3259, HYP-3258, HYP-3256, HYP-3255, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3248, HYP-3246, HYP-3245, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3218, HYP-3214, HYP-3132, HYP-2928, HYP-2909, THM-523, THM-530, T1355, LTT-255, LTI-355, OPEN-Q-108 | Formalize the finite chamber theorem classifying rows by surviving global contact graph, strict off-unit peak, killed contacts with promoted `Phi_{14d}`/covering witness, or named residual debt; retain the graph/topology/geometry sidecars before scalarizing the safety function. |
 | LTI-361 | Actual-packet sheaf instantiation | Curated HYP-2969 theorem-facing packet bank, HYP-2963 packet labels, HYP-3265 six-unit contact profile, HYP-3310 nonunit residue word / `v2` word / cover signature, controlled-forgetting fiber statistics | HYP-3311 instantiates HYP-3301 on actual packet rows.  The coarse sheaf base `(q bucket, six-unit contact profile, strict-safe zero/nonzero, state-lift)` has exactly one mixed theorem-exit fiber, and the HYP-3310 nonunit residue word kills it completely while the nonunit `v2` word alone does not.  All `7` qdiv>14 rows in the instantiated bank remain `positive-Haar-open`, so the bank shows no new zero-open kernel.  The result is bank-local because HYP-3260/HYP-3310 already warn that same-residue height moves can defeat residue-only data globally. | HYP-3311, HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-2995, HYP-2969, HYP-2963, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Enlarge from the curated HYP-2969 bank to a broader HYP-2963 residual sample and locate the first real residue-word failure; that failure should name the next necessary sidecar (`v2`/height, endpoint owner, or off-grid floor). |
 | LTI-363 | Endpoint-owner current and tropical height wall | Signed endpoint-owner boundary currents, Farkas/Green dual certificates, AP/GW boundary H1 stops, forbidden H7 sinks, valuation owners, Newton/secondary-fan bends, same-residue/same-v2 height flex, off-grid floor walls | HYP-3402 picks two post-HYP-3311 proof angles that do not repeat observability/Morse, sheaf/cusp exactness, or residue-word reuse.  `endpoint_owner_boundary_current` and `tropical_height_discriminant_wall` tie at score `89`; the composite `owner_valuation_bicurrent` scores `85` but is only a bridge.  On the HYP-3311 seven-row mixed fiber, `owner_current` and `tropical_wall` each split theorem exits completely, while `v2_word` leaves one mixed fiber. | HYP-3402, HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3253, HYP-3247, HYP-3243, HYP-3236, HYP-3225, HYP-3223, HYP-2969, HYP-2963, THM-523, T1363, LTT-263, LTI-363, OPEN-Q-108 | Enlarge the HYP-3311 bank with `owner_current_word` and `tropical_wall_word`; build the first-leak table: residue exact, residue fails but owner-current works, residue/v2 fail but tropical wall works, or both fail and emit named owner/height/off-grid debt. |
+| LTI-364 | Shadow-charge packet gluing | Proof sidecars / shadow-charge carriers: C3/index shadow, `Q(sqrt(-7))` sign shadow, covering residue, `v2`, height, transfer, and analytic-lifting ledgers | HYP-3403 tests controlled forgetting on the HYP-3311 actual-packet bank.  C3/index plus `Q(sqrt(-7))` remain descriptive but leave one mixed theorem-exit fiber; nonunit covering residue leaves zero mixed kernel and route fibers; `v2` alone remains too weak; exact height and analytic lifting separate the bank but are high-payload or row-hash-like unless a lower sidecar fails. | HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3256, HYP-3254, HYP-3252, HYP-3249, HYP-3248, HYP-3247, HYP-3246, T1364, LTT-264, LTI-364, OPEN-Q-108 | Enlarge the actual-packet bank toward HYP-2963 and record whether covering residue remains the first repair or the first failure requires `v2`, height, owner, transfer, or off-grid floor. |
+| LTI-365 | Creative reframe lead atlas | Proof-reframe leads, residue-word breakpoint search, colored half-boundary deficit, endpoint-owner deletion cuts, tropical wall handoff, shadow-charge packet gluing, covering-flex Hessian, denominator-curvature transport | HYP-3404 turns the current creative LRC14 proof session into an executable first-failure queue.  It anchors on the HYP-3311 actual-packet bank, imports HYP-3401's AP-collar unit-height leak, treats HYP-3402 owner-current/tropical-wall words as the first dynamic sidecars, and imports HYP-3403 shadow-charge packet gluing as the low-cost controlled-forgetting table.  The atlas ranks fifteen proof leads and puts the residue-word breakpoint theorem first, followed by colored-resonance half-boundary sieve, endpoint deletion-cut Menger theorem, covering-flex Hessian, shadow-charge Farkas ledger, denominator-curvature transport, and Haar-Baire owner-strip zipper. | HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-3253, HYP-2969, HYP-2963, HYP-2595, HYP-2593, T1365, LTT-265, LTI-365, OPEN-Q-108 | Enlarge the actual-packet sheaf to broader HYP-2963 rows.  For the first residue-word mixed fiber, compute owner-current, tropical-wall, shadow-charge sidecar, colored CRT half-boundary, endpoint deletion-cut, low odd Faulhaber moment, and covering-flex nullspace data before escalating to a symbolic rank-one theorem. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -6125,3 +6130,64 @@ OPEN-Q-108.
 
 Next agent hook: enlarge the actual-packet bank toward HYP-2963 and locate
 the first failure of nonunit-residue theorem-exit separation.
+
+## LTI-365: Creative Reframe Lead Atlas
+
+Created by codex-2026-06-28 for HYP-3404/T1365. This technique is a ranked
+proof-route generator anchored to actual packet data rather than to a new
+scalar statistic, and is the follow-on router after HYP-3401's AP-collar
+unit-height obstruction exactness scout and HYP-3402's owner-current /
+tropical-wall proof-angle scout, with HYP-3403 shadow-charge packet gluing
+as its newest controlled-forgetting input.
+
+Carrier / vertex set:
+
+```text
+proof-reframe leads
+```
+
+The lead vertices are residue-word breakpoint, colored-resonance
+half-boundary sieve, endpoint deletion-cut Menger theorem, covering-flex
+Hessian, shadow-charge Farkas ledger, denominator-curvature transport,
+Haar-Baire owner-strip zipper, Worpitzky/Faulhaber finite-difference ladder,
+taut-wave interval routing, petal-positive separator polynomial,
+Ramanujan-period projector breakpoint, unlabelled-tournament sidecar
+metagraph, Mayer-gas parity reality reduction, analytic-lifting stability
+ledger, and bulk-core charge conservation.
+
+Pairwise observable: weighted proof leverage, scored by actual-packet
+pressure, finite checkability, globalization path, sidecar discipline,
+covering-layer relevance, novelty, formalizability, and risk.
+
+Binary relation or gauge: `A -> B` iff `A` has higher weighted proof leverage;
+ties use the lead-id Hamiltonian path.
+
+Preserved LRC predicate: whether a primitive packet exits by q-witness, AP/GW
+boundary, petal/K33 named debt, positive-open covering mass, or a new
+zero-open kernel.
+
+Destroyed information if used naively: height/flex, endpoint owner, exact
+period, off-grid floor, and the transverse `Q(sqrt(-7))` sidecar.
+
+Best use: drive the next computation.  Enlarge the actual-packet sheaf until
+nonunit residue-word exactness first fails, then test colored
+half-boundary cancellation, endpoint deletion-cut resurrection, owner-current
+conservation, tropical-wall leakage, and shadow-charge packet gluing before
+falling to the harder Hessian/curvature routes.
+
+Failure mode: a lead atlas can become decorative if a route does not name its
+first finite test and the exact sidecar it preserves or destroys.
+
+Tournament fingerprint: `15` proof-lead vertices, no directed `3`-cycles,
+singleton SCCs, Hamiltonian path count `1`, and priority path
+`R01 -> R11 -> R14 -> R04 -> R05 -> R02 -> R03 -> R15 -> R06 -> R07 -> R08 -> R09 -> R12 -> R13 -> R10`.
+
+Anchors: HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3300,
+HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-3253, HYP-2969, HYP-2963,
+HYP-2595, HYP-2593, LTT-265, T1365, OPEN-Q-108.
+
+Next agent hook: run the actual-packet sheaf instantiation on a broader
+HYP-2963 residual sample.  If residue-word exactness fails, compute the
+owner-current word, tropical-wall word, shadow-charge sidecar, colored CRT
+half-boundary deficit, and endpoint-owner deletion cut for the first mixed
+fiber before trying to prove the covering-flex rank-one theorem.

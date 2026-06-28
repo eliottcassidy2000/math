@@ -44,6 +44,25 @@ S294 formalizes the **LRC14 Tropical-Current Synthesis (de2ae7c)**. It refines t
 
 S294 inherits the Analytic-Lifting Refinement from **S293/c78f46f** and the C6 Residue-Magnitude Factorization from **S292/0517e13**.
 
+### codex-2026-06-28 HYP-3404 Creative Reframe Lead Atlas
+
+HYP-3404 adds a proof-route queue anchored to the actual-packet sheaf
+instantiation, HYP-3401's AP-collar unit-height obstruction, HYP-3402's
+owner-current / tropical-wall sidecars, and HYP-3403's shadow-charge packet
+gluing: `31` actual packet rows, one mixed
+coarse theorem-exit fiber of size `7`, residue word exact on the bank, `v2`
+not exact, all `7` qdiv>14 rows positive-Haar-open, nonunit height missing the
+strict-open `13->27` unit-height lift in the AP collar, and owner-current /
+tropical-wall words already splitting the known mixed fiber, while HYP-3403
+shows C3/index and `Q(sqrt(-7))` are descriptive shadows rather than terminal
+separators.  Agents should next enlarge the HYP-2963 packet bank until
+residue-word exactness first fails.  The first failure should be tested first
+against owner-current, tropical-wall, shadow-charge gluing, colored CRT
+half-boundary cancellation, and endpoint-owner deletion-cut resurrection
+before escalating to the covering-flex Hessian or denominator-curvature route.
+Tournament priority:
+`R01 -> R11 -> R14 -> R04 -> R05 -> R02 -> R03 -> R15 -> R06 -> R07 -> R08 -> R09 -> R12 -> R13 -> R10`.
+
 HYP-3226 classifies the S283 motifs as sidecar payloads: Skewes sign-change warning (M023), Helfgott-Ruzsa/additive compression (M024), Collatz two-block 2-adic determinant (M025), raw famous-problem magnet (M069), and PFR additive-model integrity (M071). Post-rebase it also imports HYP-3227's conductance/Fiedler trap graph as M072, S75's comb-overlap Gram kernel / speed-1 peeling / order-3 residue as M073-M075, HYP-3215's induction-base / Chen-Cusick floor-to-1/14 / flatness / Rosenfeld route audit as M076-M079, HYP-3228/HYP-3229's shell magic / Gamma0(7) / Beraha-Mahler / subshift / Dirichlet-L guardrails as M080-M084, HYP-3230/HYP-3231/HYP-3216's three-gap kernel recursion / scale-normal packet recursion / moment-order ladder / 2-adic fold as M085-M088, HYP-3232/HYP-3217's modulus-covariance apex break / cyclotomic subfield mode lattice as M091-M092, HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor grading / signed-address chart-change / AP self-dual Fejer-Vaaler / totally-real conductor packet as M093-M096, HYP-3236/HYP-3219/HYP-3237's Green algebraic-connectivity / Brouwer trace-sign / Vitali bulk-core wall layer as M097-M099, HYP-3220/HYP-3238/HYP-3239's D7 Borsuk-Ulam / p mod 4 / bimodal phi4 diagonal layer as M100-M102, HYP-3241/HYP-3240 universal Phi14 saddle-index / Phi_{14d} dilation-witness core as M103, HYP-3242's danger-cover nerve / Euler-characteristic hole certificate as M104, HYP-3243's finite chamber carrier atlas as M105, HYP-3244's tiling/half-tiling descent path as M106, HYP-3245's equioscillation-autocorrelation lag-transport packet as M107, S289's Roth-Hensel discrepancy-lifting packet as M108, S290's Chebyshev-unit equioscillation packet as M109, S291's Galois-residue rigidity packet as M110, S292's C6 residue-magnitude factorization packet as M111, S293's analytic-lifting refinement packet as M112, and S294's tropical-current integration packet as M113. These are useful only after they name the LRC coordinate they preserve and the coordinate they destroy.
 
 HYP-3402 adds the next post-HYP-3311 proof-angle layer: endpoint-owner

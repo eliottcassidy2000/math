@@ -32228,3 +32228,68 @@ Updated `05-knowledge/hypotheses/INDEX.md`, `05-knowledge/results/INDEX.md`,
 `00-navigation/TANGENTS.md` with T1364, `00-navigation/LRC-TECHNIQUE-INDEX.md`
 with LTI-364, `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` with LTT-264,
 and `00-navigation/OPEN-QUESTIONS.md`.
+## codex-2026-06-28 -- creative proof-reframe lead atlas -- HYP-3404
+
+Continued the LRC14 proof push by forcing the newest exact actual-packet
+sheaf result through a wider creative lead generator.  Pulled mainline first
+and integrated the incoming actual-packet HYP-3311 signal: the curated
+HYP-2969/HYP-2963 bank has `31` rows, one mixed coarse theorem-exit fiber of
+size `7`, `0` residue-word mixed fibers, `1` v2-word mixed fiber, and all
+`7` qdiv>14 rows are `positive-Haar-open`.  After fetching incoming mainline,
+the new HYP-3401 AP-collar exactness scout was integrated as a direct signal:
+nonunit height still leaks AP versus strict-open `13->27`, so unit-height/flex
+must remain in the first-failure debt menu.  After the next rebase, HYP-3402's
+owner-current / tropical-wall proof-angle scout was also integrated: the first
+residue-word failure should now be tested against current leakage and
+tropical height-wall crossing before escalation.  A subsequent upstream push
+claimed HYP-3403/T1364/LTI-364/LTT-264 for shadow-charge packet gluing; that
+result was integrated as the low-cost controlled-forgetting table saying
+C3/index and `Q(sqrt(-7))` are descriptive, covering residue is the first
+separator, `v2` alone is weak, and height remains same-residue debt.  The atlas
+was renumbered to HYP-3404/T1365/LTI-365/LTT-265.
+
+Added
+`04-computation/lrc14_creative_reframe_lead_atlas_codex_20260628.py`, stored
+`05-knowledge/results/lrc14_creative_reframe_lead_atlas_codex_20260628.out`,
+created
+`05-knowledge/hypotheses/HYP-3404-lrc14-creative-reframe-lead-atlas.md`, and
+wrote
+`07-reflections/lrc14-creative-reframe-lead-atlas-codex-20260628.md`.
+Navigation updated with HYP-3404, result index, T1365, LTI-365, LTT-265,
+OPEN-Q-108, backlog, Poke coordination, and this session log.
+
+The atlas ranks `15` proof leads using Tournament Analysis over proof
+reframes, not runners or arcs.  Top path:
+
+```text
+R01 residue-word breakpoint theorem
+-> R11 colored-resonance half-boundary sieve
+-> R14 endpoint deletion-cut Menger theorem
+-> R04 rank-one covering-flex Hessian
+-> R05 shadow-charge Farkas ledger
+-> R02 denominator-curvature transport
+-> R03 Haar-Baire owner-strip zipper
+-> R15 Worpitzky-Faulhaber finite-difference ladder
+-> R06 taut-wave interval routing
+-> R07 petal-positive separator polynomial
+-> R08 Ramanujan-period projector breakpoint
+-> R09 unlabelled-tournament sidecar metagraph
+-> R12 Mayer-gas parity reality reduction
+-> R13 analytic-lifting stability ledger
+-> R10 bulk-core charge conservation theorem
+```
+
+Assumption challenge recorded: alternate tournament vertices considered were
+packet fibers, sidecar bundles, quotient maps, denominator transports,
+endpoint events, Haar rectangles, charge reservoirs, deletion decks, and
+theorem exits.  The chosen vertices are proof leads.  Preserved predicate is
+the theorem-exit class; destroyed if naively quotiented are height/flex,
+endpoint owner, exact period, off-grid floor, and the transverse
+`Q(sqrt(-7))` sidecar.
+
+Next hook: enlarge the actual-packet sheaf instantiation to broader HYP-2963
+residual samples.  For the first residue-word mixed fiber, compute the colored
+CRT half-boundary deficit, owner-current word, tropical-wall word,
+shadow-charge sidecar, endpoint-owner deletion cut, low odd Faulhaber moment ladder, and
+covering-flex Jacobian nullspace before attempting the symbolic covering-flex
+rank-one theorem.

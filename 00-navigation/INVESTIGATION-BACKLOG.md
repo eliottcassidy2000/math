@@ -55,6 +55,46 @@ theorem: every height/flex perturbation should route to AP/GW boundary,
 strict-open mass, `Phi14d` equality, finite Toeplitz/Green/root-motion
 discharge, state-lift debt, or named residual.  Keep Tournament Analysis on
 sidecar packets rather than runners, residues, or raw replacement speeds.
+## Lead codex-2026-06-28: Creative proof-reframe first-failure atlas
+
+**Status:** SYNTHESIS / executable proof-route generator; not proof
+(HYP-3404/T1365/LTI-365/LTT-265).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3404-lrc14-creative-reframe-lead-atlas.md`,
+script
+`04-computation/lrc14_creative_reframe_lead_atlas_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_creative_reframe_lead_atlas_codex_20260628.out`,
+and
+`07-reflections/lrc14-creative-reframe-lead-atlas-codex-20260628.md`.
+
+Purpose: force the creative LRC14 reframes into a falsifiable queue anchored
+on actual packet data, the HYP-3401 AP-collar unit-height obstruction,
+HYP-3402 owner-current / tropical-wall sidecars, and HYP-3403 shadow-charge
+packet gluing.  The HYP-2969/HYP-2963
+actual-packet bank has `31` rows, one mixed coarse
+theorem-exit fiber of size `7`, `0` residue-word mixed fibers, `1` v2-word
+mixed fiber, and all `7` qdiv>14 rows are `positive-Haar-open`.
+
+Readout: the atlas ranks `15` proof leads as tournament vertices, not runners
+or arcs.  The priority path is
+`R01 -> R11 -> R14 -> R04 -> R05 -> R02 -> R03 -> R15 -> R06 -> R07 -> R08 -> R09 -> R12 -> R13 -> R10`.
+The top route is the residue-word breakpoint theorem: enlarge the sheaf until
+nonunit residue-word exactness first fails, then prove no failure or name the
+first failure as unit or nonunit height/flex, endpoint owner, off-grid floor,
+exact period, K33/H7, state-lift debt, or finite trap.  The extra
+forced-exploration routes
+that rose high are colored-resonance half-boundary sieve (HYP-2593/HYP-2595)
+and endpoint deletion-cut/Menger resurrection, now preceded by HYP-3402's
+owner-current/tropical-wall first-leak table and HYP-3403's shadow-charge
+controlled-forgetting table.
+
+Next: run the actual-packet sheaf instantiation on broader HYP-2963 residual
+samples.  For the first mixed residue-word fiber, compute colored CRT
+half-boundary deficit, owner-current word, tropical-wall word, shadow-charge
+sidecar, endpoint-owner deletion cut, low odd Faulhaber moment ladder, and
+covering-flex Jacobian nullspace before trying a symbolic proof.
 
 ## Lead codex-2026-06-28: Shadow-charge conservation atlas
 

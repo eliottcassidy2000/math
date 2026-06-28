@@ -194,6 +194,13 @@ obligations, and proof-carrier interfaces.
   tournament vertices.  Test whether each observable factors through the
   quotient, or record ordered/fiber/canary/odd-coordinate debt before invoking
   the degree-4 bounded-core guardrail.
+- Need to choose the next creative but rigorous LRC14 proof reframe after the
+  actual-packet sheaf result:
+  use LTT-265 and make proof-reframe leads the tournament vertices.  Start
+  with residue-word breakpoint; if the first mixed residue fiber appears,
+  test HYP-3402 owner-current/tropical-wall sidecars, HYP-3403 shadow-charge
+  packet gluing, colored half-boundary cancellation, and endpoint deletion-cut
+  resurrection before moving to the covering-flex Hessian.
 - Need to decide whether the factor-through wall has executable local support:
   use LTT-175 after LTT-174/LTT-173/LTT-172/LTT-171/LTT-168/LTT-166 and make functions,
   compression fibers, ordered sidecars, canary coordinates, and resolvent
@@ -7696,3 +7703,44 @@ quotient_legality_status
 - **Pointers:** HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301,
   HYP-3265, HYP-3260, HYP-3258, HYP-3256, HYP-3254, HYP-3252, HYP-3249,
   LTI-364, T1364, OPEN-Q-108.
+
+## LTT-265: Creative Proof-Reframe Lead Tournament
+
+- **Move:** Treat candidate proof reframes as tournament vertices and rank
+  them by proof leverage after pricing destroyed sidecars.  HYP-3404 uses
+  fifteen vertices: residue-word breakpoint, colored-resonance half-boundary
+  sieve, endpoint deletion-cut Menger theorem, covering-flex Hessian,
+  shadow-charge Farkas ledger, denominator-curvature transport,
+  Haar-Baire zipper, Worpitzky/Faulhaber ladder, taut-wave routing,
+  petal-positive separator, Ramanujan-period projector, sidecar metagraph,
+  Mayer-gas parity reality reduction, analytic-lifting stability, and
+  bulk-core charge conservation.
+- **LRC use:** This converts the current creative session into an ordered
+  theorem-search queue.  The actual-packet bank has one mixed coarse fiber of
+  size `7`; the nonunit residue word kills it, while `v2` alone does not.
+  HYP-3401 shows unit-height/flex still leaks in the AP collar, and HYP-3402
+  shows owner-current and tropical-wall sidecars split the known mixed fiber.
+  HYP-3403 then prices the C3/index, `Q(sqrt(-7))`, covering residue, and
+  magnitude/height shadows as a controlled-forgetting gluing table.
+  Therefore the leading theorem is a first-failure statement: enlarge the
+  packet bank until residue-word exactness first fails, then prove the failure
+  is a named height/flex, endpoint-owner/current, tropical off-grid-floor,
+  exact-period, K33/H7, or state-lift debt.
+- **Preserves:** theorem-exit class, actual-packet sidecar discipline,
+  qdiv/covering relevance, and the no-free-slider rule for residue, height,
+  endpoint owner, exact period, off-grid floor, and `Q(sqrt(-7))`.
+- **Forgets / guardrail:** raw runner, raw arc, raw tournament class, and raw
+  scalar scores are deliberately excluded.  A lead is useful only if it states
+  the sidecar it preserves, the sidecar it destroys, and its first finite test.
+- **Fingerprint:** `15` vertices, score histogram
+  `{31:1,32:3,34:2,35:1,36:1,38:2,39:2,41:1,42:1,48:1}`, no directed
+  `3`-cycles, singleton SCCs, and Hamiltonian path
+  `R01 -> R11 -> R14 -> R04 -> R05 -> R02 -> R03 -> R15 -> R06 -> R07 -> R08 -> R09 -> R12 -> R13 -> R10`.
+- **Next hook:** instantiate a broader HYP-2963 packet bank.  For the first
+  residue-word mixed fiber, compute: owner-current word, tropical-wall word,
+  shadow-charge sidecar, colored CRT half-boundary deficit, endpoint-owner
+  deletion cut, low odd Faulhaber moment ladder, and covering-flex Jacobian
+  nullspace.
+- **Pointers:** HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3300,
+  HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-3253, HYP-2969, HYP-2963,
+  HYP-2595, HYP-2593, LTI-365, T1365, OPEN-Q-108.
