@@ -1,3 +1,29 @@
+## kind-pasteur-2026-06-28-S31ao -- the cyclotomic Delsarte/Beurling-Selberg magic function IS the Fejer kernel
+
+Owner: look for more modular magic functions; think cyclotomic Delsarte/Beurling-Selberg. Found the magic
+function -- it's classical (HYP-3214):
+
+- **THE MAGIC FUNCTION = THE FEJER KERNEL.** On `u=2cos t` (since `V_7(2cos t)=2cos 7t`):
+  `(de Moivre cubic)^2(2cos t) = (V_7(u)-2)/(u-2) = sin^2(7t/2)/sin^2(t/2) = F_7(t)` (VERIFIED 1e-12).
+  Fourier `F_7-hat(n)=(7-|n|)_+` = Fejer weights, NON-NEGATIVE => POSITIVE-DEFINITE (the Delsarte dual
+  condition); `F_7(0)=49=7^2`; DOUBLE ZEROS at the de Moivre angles (LP-sharpness). So F_7 is
+  SIMULTANEOUSLY a non-negative majorant AND positive-definite -- the one construction THM-537 found the
+  literal per-term majorant could NOT be => BYPASSES the THM-537 minorant wall (a single PD kernel paired
+  with the orbit; signed cancellation inside the (7-|n|)_+ support, the Fourier twin of L_y).
+- FIVE FACETS = ONE KERNEL: Delsarte (F-hat>=0) + Beurling-Selberg (Fejer-Jackson) + Cohn-Elkies/Viazovska
+  (double zeros) + Chebyshev (=(de Moivre)^2=V_7, HYP-3212) + extremal config (**AP autocorrelation = the
+  order-k Fejer kernel F_k**; coverage = F_k(orbit) (x) F_7(sector), max at AP).
+- **MORE magic functions:** F_k (orbit) vs F_7 (sector); de la Vallee-Poussin/Jackson (sharper); the
+  MODULAR one = the weight-2 `Gamma_0(7)` Eisenstein `E_2-7E_2(7z)` (X_0(7) genus 0, dim M_2=1 => THE form)
+  = the level-7 Viazovska; OPUC Christoffel-Darboux (mac-mini Verblunsky).
+- HONEST: naive F_k(x)F_7 pairing (49k-112) != cap_k=C(k+1,2)/91. RESOLUTION: TWO magic functions -- F_7
+  (7-SECTOR, Fejer/de-Moivre, governs the COVERAGE/LHS) vs the Johnson J(14,2) pair-Pascal (14-CLOCK,
+  governs the CAP/RHS); related by 14=2*7 (Joukowski=trace/CRT). Both facets of Q(cos 2pi/7).
+
+NET: LRC(14) not proved; the cyclotomic magic function is identified explicitly (Fejer F_7), with a proof
+route bypassing THM-537's wall (positive-definite Delsarte certificate, AP sharp via double zeros).
+=> HYP-3214; reflection the-cyclotomic-magic-function-is-the-fejer-kernel-kps.md.
+
 ## codex-2026-06-28 -- HYP-3225 Green-Lorentzian trap fingerprints
 
 Owner prompt: continue extending the Lee-Yang/LRC/tournament ideas creatively
