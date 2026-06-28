@@ -360,6 +360,12 @@ obligations, and proof-carrier interfaces.
   certificates, not runners or measures, the vertices.  Fixed low corridors,
   endpoint owners, high-grid component width, and the disjoint fence lemma are
   the proof carriers.
+- Need to keep Euler-Mascheroni/Mertens tails as endpoint-spine sidecars:
+  use LTT-293 after LTT-290/LTT-289/LTT-288 and make endpoint certificates,
+  harmonic budgets, reciprocal-tail ranks, and gamma-shadow normalizers the
+  vertices.  The live guardrail is that harmonic budgets rank wall debt but
+  collide across wall signatures, so exact branch/wall/interval labels remain
+  load-bearing.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -8382,6 +8388,40 @@ quotient_legality_status
 - **Pointers:** HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425,
   HYP-3424, HYP-3422, HYP-3417, HYP-3412, HYP-3408, HYP-3129, HYP-2963,
   THM-523, LTI-391, T1391, OPEN-Q-108.
+
+## LTT-293: Euler-Mascheroni Harmonic Wall-Budget Tournament
+
+- **Move:** Rank exact endpoint-wall certificates against harmonic/Mertens
+  sidecars after HYP-3430, HYP-3429, and HYP-3427.  Vertices are endpoint wall
+  certificates, rank-2 component spines, two-adic loss ledgers, harmonic owner
+  budgets, Mertens reciprocal-tail ranks, gamma-shadow normalizers, and named
+  constant scalar shortcuts.
+- **LRC use:** HYP-3432 shows that reciprocal endpoint budgets are useful for
+  prioritizing candidate wall debt, but not for proving a survivor.  Best
+  HYP-3429 spines have only `2` scalar shape-collisions across `150` rows,
+  while the full HYP-3427 atlas has `1197` budgets with more than one wall
+  signature.  The tournament therefore promotes exact certificates and demotes
+  scalar-tail shortcuts.
+- **Preserves:** when paired with HYP-3429/HYP-3427, the actual survivor
+  interval, branch choice, endpoint labels, and two-adic relocation witness.
+- **Forgets / guardrail:** a harmonic scalar alone forgets branch orientation,
+  endpoint wall type, interval width, and wall word; Euler-Mascheroni/gamma
+  language is only a normalizer warning.
+- **Pairwise observable:** predicate retention, wall exactness,
+  tail-budget signal, two-adic compatibility, collision safety, and proof
+  readiness.
+- **Switch/gauge:** orient toward higher proof-carrier total; ties use the
+  declared proof path.
+- **Fingerprint:** score histogram `{8:1, 20:1, 33:1, 39:1, 51:1, 53:1,
+  56:1}`, no directed `3`-cycles, and Hamiltonian path
+  `endpoint_wall_certificate -> component_spine_rank2 -> two_adic_loss_ledger -> harmonic_owner_budget_sidecar -> mertens_reciprocal_tail_rank -> gamma_shadow_normalizer -> named_constant_scalar_shortcut`.
+- **Next hook:** in endpoint-spine search, use the lowest reciprocal owner
+  budget as a candidate-ordering heuristic, then restore the exact interval,
+  branch, and endpoint labels before accepting the witness.
+- **Pointers:** HYP-3432, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425,
+  HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3419, HYP-3418, HYP-3417,
+  HYP-3415, HYP-3412, HYP-3407, HYP-3129, HYP-2963, THM-523, LTI-393,
+  T1393, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 

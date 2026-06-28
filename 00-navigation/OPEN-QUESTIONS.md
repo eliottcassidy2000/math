@@ -1,5 +1,25 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3432 Euler-Mascheroni harmonic wall-budget addendum:**
+HYP-3432 extends HYP-3430's Euler-Mascheroni scalar-firewall audit by testing
+whether a Mertens-style reciprocal endpoint budget can help the LRC14
+endpoint-spine proof.  The exact answer is: yes as a priority sidecar, no as a
+certificate.  Attach to each endpoint wall set the rational budget
+
+```text
+sum_{endpoint owner v} 1/v.
+```
+
+On HYP-3429 best spines, this budget is nearly separating (`144` distinct
+budgets across `150` rows, only `2` branch/kind collisions).  On the full
+HYP-3427 wall atlas, it is far too lossy: `5524` windows give `1291` budgets,
+and `1197` budgets have more than one wall signature.  Concrete open task:
+prove the endpoint-spine lemma with exact interval/branch/wall labels, using
+the harmonic budget only to choose which candidate wall debt to try first. ->
+HYP-3432, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424,
+HYP-3423, HYP-3422, HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3415,
+HYP-3129, HYP-2963, THM-523, LTI-393, LTT-293, T1393, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3426 one-branch mirror / endpoint-support addendum:**
 HYP-3426 sharpens HYP-3425's two-branch target by using the mirror involution
 `u -> 1-u`.  Since it preserves `E_safe` and maps branch-0 survivors to

@@ -15,6 +15,34 @@
 
 ---
 
+## Lead codex-2026-06-28: Euler-Mascheroni harmonic wall-budget sidecar
+
+**Status:** SYNTHESIS / exact rational harmonic sidecar audit; not proof
+(HYP-3432/T1393/LTI-393/LTT-293), extending HYP-3430's scalar firewall,
+HYP-3429's endpoint-spine certificate, and HYP-3427's wall-signature atlas.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3432-lrc14-euler-mascheroni-wall-budget.md`,
+script
+`04-computation/lrc14_euler_mascheroni_wall_budget_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_euler_mascheroni_wall_budget_codex_20260628.out`,
+and
+`07-reflections/lrc14-euler-mascheroni-wall-budget-codex-20260628.md`.
+
+Purpose: convert the Euler-Mascheroni prompt from HYP-3430's scalar-intercept
+firewall into an exact finite sidecar.  Instead of using `gamma` or logs as a
+certificate, attach to each endpoint wall set the rational reciprocal budget
+`sum 1/v`.
+
+Readout: on `150` HYP-3429 best endpoint spines, there are `144` distinct
+budgets and only `2` scalar shape-collisions; budget range is
+`1/4032..89/420`.  On all `5524` HYP-3427 wall windows, however, only `1291`
+distinct budgets remain, and `1197` budgets have more than one wall signature.
+
+Next: use harmonic budget as a priority queue inside the endpoint-spine proof,
+but accept a certificate only with its exact interval, branch, and wall labels.
+
 ## Lead codex-2026-06-28: One-branch mirror / endpoint-support certificates
 
 **Status:** EVIDENCE / exact finite-ruler mirror and endpoint-support audit;

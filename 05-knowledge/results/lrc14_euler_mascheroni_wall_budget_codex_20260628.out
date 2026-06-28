@@ -1,0 +1,69 @@
+HYP-3432 EULER-MASCHERONI HARMONIC WALL-BUDGET SCOUT
+==============================================================================
+Identity:
+  Euler-Mascheroni enters only as the H_N - log(N) tail analogy.
+  The executable audit uses exact rational reciprocal budgets over endpoint owners.
+  Verdict target: harmonic budgets may rank wall debt, but cannot replace walls.
+
+A. Finite harmonic normalizers
+  H_14 exact:                         1171733/360360
+  reciprocal budget of 2,7,14:        5/7
+  reciprocal budget of units mod 14:  11662/6435
+  No floating log or gamma value is used; this is a rational sidecar audit.
+
+B. HYP-3429 endpoint-spine harmonic budgets
+  endpoint-spine rows audited:        150
+  distinct best-spine budgets:        144
+  best-spine kind histogram:          {('B0',): 1, ('B0', 'B1'): 2, ('B0', 'E'): 14, ('B1',): 3, ('B1', 'E'): 14, ('E',): 116}
+  scalar budget shape-collisions:     2
+  minimum best-spine budget:          1/4032 at canonical_84m_ext_48 labels=E:4032
+  maximum best-spine budget:          89/420 at covering_AP_with_84 labels=B1:5,E:84
+  minimum endpoint reciprocal share:  715/8928419 at canonical_84m_ext_48
+  maximum endpoint reciprocal share:  137847056256/411769125631 at random_covering_04
+  top best-spine scalar collisions:
+    budget=1/154 rows=3 shapes=[((0, 1), ('E',)), ((1,), ('E',))] sample_rows=['even_frontier_probe', 'multi_far_84_154', 'two_tail_drop_01']
+    budget=1/588 rows=2 shapes=[((0, 1), ('E',)), ((1,), ('E',))] sample_rows=['canonical_84m_07', 'two_tail_ext_13']
+
+C. HYP-3427 all-window wall-budget collision audit
+  survivor windows audited:           5524
+  distinct wall-owner budgets:        1291
+  budgets with >1 wall signature:     1197
+  largest scalar collisions:
+    budget=53/3480 windows=22 signature_types=8 sample_signatures=[('b0', 'E', 'O0'), ('b0', 'O0', 'E'), ('b1', 'E', 'O1'), ('b1', 'O1', 'E'), ('both', 'E', 'O0')] sample_rows=['random_covering_07', 'random_covering_22', 'random_covering_25']
+    budget=337/28210 windows=14 signature_types=8 sample_signatures=[('b0', 'E', 'O0'), ('b0', 'O0', 'E'), ('b0', 'O1', 'E'), ('b1', 'E', 'O0'), ('b1', 'E', 'O1')] sample_rows=['random_covering_13', 'random_covering_15']
+    budget=327/26690 windows=14 signature_types=8 sample_signatures=[('b0', 'E', 'O0'), ('b0', 'O0', 'E'), ('b1', 'E', 'O1'), ('b1', 'O1', 'E'), ('both', 'E', 'O0')] sample_rows=['random_covering_07']
+    budget=57/4060 windows=12 signature_types=8 sample_signatures=[('b0', 'E', 'O0'), ('b0', 'O0', 'E'), ('b0', 'O1', 'E'), ('b1', 'E', 'O0'), ('b1', 'E', 'O1')] sample_rows=['random_covering_03', 'random_covering_25']
+    budget=15/1406 windows=10 signature_types=8 sample_signatures=[('b0', 'E', 'O0'), ('b0', 'E', 'O1'), ('b0', 'O0', 'E'), ('b1', 'E', 'O1'), ('b1', 'O0', 'E')] sample_rows=['random_covering_15']
+    budget=293/20760 windows=10 signature_types=8 sample_signatures=[('b0', 'E', 'O0'), ('b0', 'O0', 'E'), ('b1', 'E', 'O1'), ('b1', 'O1', 'E'), ('both', 'E', 'O0')] sample_rows=['random_covering_17', 'random_covering_31']
+    budget=3/182 windows=8 signature_types=8 sample_signatures=[('b0', 'E', 'O0'), ('b0', 'O0', 'E'), ('b0', 'O1', 'E'), ('b1', 'E', 'O0'), ('b1', 'E', 'O1')] sample_rows=['random_covering_16']
+    budget=13/840 windows=16 signature_types=7 sample_signatures=[('b0', 'E', 'E'), ('b0', 'E', 'O0'), ('b0', 'O0', 'E'), ('b1', 'E', 'E'), ('b1', 'E', 'O1')] sample_rows=['random_covering_01', 'random_covering_25', 'random_covering_34']
+
+D. Tight canonical row as a harmonic sidecar
+  row={1..11,13,84}; harmonic labels are transparent, walls are decisive.
+  W1: mask=b1 width=1/588 owners=(7, 84) budget=13/84 labels=(('E', 84), ('O1', 7))
+  W2: mask=b1 width=3/980 owners=(5, 84) budget=89/420 labels=(('E', 84), ('O1', 5))
+  W3: mask=b0 width=3/980 owners=(5, 84) budget=89/420 labels=(('E', 84), ('O0', 5))
+  W4: mask=b0 width=1/588 owners=(7, 84) budget=13/84 labels=(('E', 84), ('O0', 7))
+
+E. Proof interpretation
+  The harmonic/Mertens budget is useful as an owner-debt priority queue:
+    small budget = far-tail endpoint owners, often E-only spine debt;
+    large budget = low-owner mixed walls, often the true obstruction boundary.
+  But the scalar budget collides across branch masks and wall signatures.
+  Therefore an Euler-Mascheroni-style tail normalizer can only be a sidecar
+  attached to HYP-3427/HYP-3429 endpoint windows, not a floor certificate.
+
+F. Tournament Analysis
+  vertices are proof carriers and tail sidecars, not runners.
+  axes=predicate_retention,wall_exactness,tail_budget_signal,two_adic_compatibility,collision_safety,proof_readiness
+  score_hist={8: 1, 20: 1, 33: 1, 39: 1, 51: 1, 53: 1, 56: 1}
+  directed_3cycles=0
+  hamiltonian_path=endpoint_wall_certificate -> component_spine_rank2 -> two_adic_loss_ledger -> harmonic_owner_budget_sidecar -> mertens_reciprocal_tail_rank -> gamma_shadow_normalizer -> named_constant_scalar_shortcut
+
+G. Assumption challenge
+  Considered vertices: runners, gaps, circle sections, endpoint walls,
+  wall-crossing events, owner reciprocal budgets, Mertens tails, gamma
+  shadows, component spines, and proof obligations.
+  The chosen quotient preserves the LRC predicate only when paired with
+  an actual survivor window and branch.  It destroys branch orientation,
+  endpoint type, interval width, and the exact wall word if used alone.

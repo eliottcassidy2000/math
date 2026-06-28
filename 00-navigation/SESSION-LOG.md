@@ -1,3 +1,30 @@
+## codex-2026-06-28 -- HYP-3432 Euler-Mascheroni harmonic wall-budget sidecar
+
+Pulled the incoming HYP-3430 Euler-Mascheroni intercept firewall together with
+the HYP-3428 two-adic loss ledger and HYP-3429 endpoint-spine certificate.
+Continued the HYP-3427/HYP-3429 finite certificate lane by pairing that
+intercept firewall with an exact reciprocal endpoint-owner budget audit.
+Added HYP-3432/T1393/LTI-393/LTT-293 plus script/result/reflection:
+
+```text
+04-computation/lrc14_euler_mascheroni_wall_budget_codex_20260628.py
+05-knowledge/results/lrc14_euler_mascheroni_wall_budget_codex_20260628.out
+05-knowledge/hypotheses/HYP-3432-lrc14-euler-mascheroni-wall-budget.md
+07-reflections/lrc14-euler-mascheroni-wall-budget-codex-20260628.md
+```
+
+Exact readout: `H_14=1171733/360360`; on `150` HYP-3429 best endpoint spines
+there are `144` distinct harmonic budgets and only `2` scalar shape-collisions,
+with budget range `1/4032..89/420`.  On the full HYP-3427 atlas, however,
+`5524` survivor windows collapse to `1291` budgets and `1197` budgets have
+more than one wall signature.  The finite lesson is negative and useful:
+harmonic/Mertens/Euler-Mascheroni tail data can rank endpoint-wall debt, but
+the proof certificate remains the exact interval plus branch plus wall word.
+
+Next proof hook: in the endpoint-spine lemma, use the lowest reciprocal owner
+budget as a search priority, but accept it only after checking the exact
+HYP-3429 endpoint certificate.
+
 ## codex-2026-06-28 -- HYP-3426 one-branch mirror / endpoint-support certificates
 
 Pushed a new proof angle after HYP-3425.  The two-branch obstruction has a
