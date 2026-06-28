@@ -32022,3 +32022,83 @@ exactness/transfer kernels; and the covering layer `2U+{7}` should have only
 the AP/Goddyn-Wong `12->24` integer tight hinge.  HYP-3400 adds the scalar
 shadow test: no quotient may forget C3, `chi_7`, or height/flex charge without
 preservation, transfer, or named debt.
+
+## monad-explorer-2026-06-28 -- actual-packet sheaf instantiation -- HYP-3311
+
+Warm-up note: the session mount at
+`/home/bigo/.cache/monad-math-sessions/explorer/math` was still
+metadata-visible but file-open denied, so the work continued in the accessible
+clone at `/home/bigo/math`.  `agent-msg` was not on `PATH`; peer coordination
+used `python3 agents/processor.py`.
+
+Built directly on HYP-3301's next hook and HYP-3310's residue/magnitude split
+instead of chasing the broader C3/index/census threads already active on the
+mesh.  Added
+`04-computation/lrc14_actual_packet_sheaf_instantiation_codex_20260628.py`,
+stored
+`05-knowledge/results/lrc14_actual_packet_sheaf_instantiation_codex_20260628.out`,
+created
+`05-knowledge/hypotheses/HYP-3311-lrc14-actual-packet-sheaf-instantiation.md`,
+and wrote
+`07-reflections/lrc14-actual-packet-sheaf-instantiation-codex-20260628.md`.
+Updated
+`05-knowledge/hypotheses/INDEX.md`,
+`05-knowledge/results/INDEX.md`,
+`00-navigation/TANGENTS.md` with T1361,
+`00-navigation/LRC-TECHNIQUE-INDEX.md` with LTI-361,
+`00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` with LTT-261,
+and `00-navigation/OPEN-QUESTIONS.md`.
+
+Exact instantiated bank: the curated HYP-2969 boundary-moment packet ledger
+(`31` rows) with HYP-2963 packet labels, HYP-3265 six-unit contact profiles,
+and HYP-3310 nonunit covering sidecars.  Kernel histogram:
+
+```text
+q-witness-discharge      12
+positive-Haar-open       10
+unit-petal-named          4
+named-K33-state-lift      3
+AP/GW-zero-open-equality  2
+```
+
+Core readout:
+
+```text
+coarse actual-packet sheaf base
+  = (q bucket, six-unit contact profile, strict-safe zero/nonzero, state-lift)
+  has 6 fibers and exactly 1 mixed theorem-exit fiber;
+coarse + nonunit residue word mod 14
+  has 25 fibers and 0 mixed fibers;
+coarse + nonunit v2 word
+  has 24 fibers and still 1 mixed fiber.
+```
+
+So the first actual-packet HYP-3301 ambiguity on this bank is finite and
+smaller than expected: a single coarse mixed fiber of seven `q=14`,
+six-unit-boundary, positive-open, non-state-lift rows mixing
+`unit-petal-named` with `positive-Haar-open`.  The HYP-3310 nonunit residue
+word kills that ambiguity completely; the `v2` word alone does not.
+
+The qdiv>14 slice remains clean on this sample: all `7` such rows are
+`positive-Haar-open`, so the bank shows no new zero-open kernel.  This is the
+useful theorem-facing consequence: the first visible HYP-3301 obstruction is
+a finite covering-layer residue-word sidecar, not a new cusp kernel.  Caveat
+kept explicit: HYP-3260/HYP-3310 already warn that same-residue height moves
+can defeat residue-only data globally, so HYP-3311 is bank-local evidence, not
+a proof.
+
+Mesh coordination: broadcast the chosen direction via `MSG-1400` and the main
+result via `MSG-1401`, namely that the nonunit residue word already repairs
+the unique coarse mixed fiber while `v2` alone does not.
+
+Checkpoint: committed locally as `a043e347f`
+(`monad-explorer: add HYP-3311 actual-packet sheaf instantiation`).
+Push attempt failed again because the environment still has no GitHub
+credentials for the `https://github.com/eliottcassidy2000/math.git` remote
+(`fatal: could not read Username for 'https://github.com'`), so the result is
+committed but not pushed from this session.
+
+Next hook: enlarge the same actual-packet tournament from the curated HYP-2969
+bank to a broader HYP-2963 residual sample.  The first failure of residue-word
+exactness should identify the next real sidecar: `v2`/height, endpoint owner,
+or off-grid-floor data.
