@@ -1,3 +1,36 @@
+## codex-2026-06-28 -- HYP-3425 two-branch obstruction / Helly certificate
+
+Extended the user's off-grid/resonance prompt after the new HYP-3421/HYP-3422
+mainline work and the upstream HYP-3424 covering-floor duality transfer.
+HYP-3421 verifies full-optimum resonant transparency, and HYP-3422 turns the
+correction into the two-adic relocation lemma.  HYP-3425 sharpens the exact
+finite target:
+
+```text
+relocation_good = E_safe cap (branch0_good union branch1_good)
+                = E_safe minus (B0_odd cap B1_odd).
+```
+
+Here `B0_odd` is the union of odd near-integer bad intervals in `o*u/2`, and
+`B1_odd` is the union of odd near-half bad intervals.  Added
+HYP-3425/T1386/LTI-386/LTT-286 plus script/result/reflection:
+
+```text
+04-computation/lrc14_two_branch_obstruction_helly_codex_20260628.py
+05-knowledge/results/lrc14_two_branch_obstruction_helly_codex_20260628.out
+05-knowledge/hypotheses/HYP-3425-lrc14-two-branch-obstruction-helly.md
+07-reflections/lrc14-two-branch-obstruction-helly-codex-20260628.md
+```
+
+Exact audit on `62` rows: positive two-branch good union `62/62`, selected
+relocation score `>=1/14` `62/62`.  Tight row `{1..11,13,84}` has
+`E_safe=107/245`, bad core `314/735`, good union `1/105`, four surviving
+components, and branch-1 witness `t=2293/3920` with score `59/784`.
+
+Next proof target: prove the Helly/interval-piercing statement that for every
+primitive covering row `S=O union 2E`, `E_safe` is not contained in
+`B0_odd cap B1_odd`.  Use owner-current labels only to name finite exceptions.
+
 ## codex-2026-06-28 -- HYP-3422 two-adic off-grid relocation lemma for LRC14
 
 Pushed the user's resonant-transparency prompt through the HYP-3418 correction:

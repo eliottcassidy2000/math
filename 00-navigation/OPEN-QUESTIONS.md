@@ -1,5 +1,31 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3425 two-branch obstruction / Helly addendum:**
+HYP-3425 sharpens the two-adic relocation lemma into a one-dimensional
+obstruction statement.  For `S=O union 2E` and `u=2t`,
+
+```text
+relocation_good = E_safe cap (branch0_good union branch1_good)
+                = E_safe minus (B0_odd cap B1_odd).
+```
+
+`B0_odd` means some odd speed is too near an integer in `o*u/2`; `B1_odd`
+means some odd speed is too near a half-integer.  The concrete theorem target:
+
+```text
+prove E_safe is not contained in B0_odd cap B1_odd
+```
+
+for every primitive covering `13`-row.  Exact audit on `62` rows found positive
+two-branch good union and selected relocation score `>=1/14` in every case.
+The tight row `{1..11,13,84}` leaves total good measure `1/105` over four
+surviving finite-ruler windows.  Next attempt: prove a Helly/interval-piercing
+bound on components of `E_safe`; use HYP-3424 for the covering-floor duality
+handoff and HYP-3417/HYP-3419 owner-current labels only to name finite
+exceptions. -> HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421,
+HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3129, HYP-2963,
+THM-523, LTI-386, LTT-286, T1386, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3422 two-adic off-grid relocation addendum:**
 HYP-3422 converts the corrected HYP-3418 covering-floor story into a concrete
 finite interval lemma.  For a primitive covering row, split

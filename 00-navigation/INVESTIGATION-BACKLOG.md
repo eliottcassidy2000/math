@@ -15,6 +15,36 @@
 
 ---
 
+## Lead codex-2026-06-28: Two-branch obstruction / Helly certificate
+
+**Status:** EVIDENCE / exact finite-ruler interval audit; not proof
+(HYP-3425/T1386/LTI-386/LTT-286), downstream of HYP-3424's
+covering-floor duality transfer.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3425-lrc14-two-branch-obstruction-helly.md`,
+script
+`04-computation/lrc14_two_branch_obstruction_helly_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_two_branch_obstruction_helly_codex_20260628.out`,
+and
+`07-reflections/lrc14-two-branch-obstruction-helly-codex-20260628.md`.
+
+Purpose: sharpen HYP-3422's relocation target.  For `S=O union 2E`,
+`u=2t`, write the failure as a two-color odd bad core:
+
+```text
+relocation_good = E_safe minus (B0_odd cap B1_odd).
+```
+
+Readout on `62` rows: positive two-branch good union `62/62`; selected
+relocation score `>=1/14` `62/62`; tight canonical row `{1..11,13,84}` has
+good union `1/105` over four surviving components.
+
+Next: prove the Helly/interval-piercing lemma that `E_safe` is not contained
+in `B0_odd cap B1_odd` for every primitive covering row, then feed the result
+into the HYP-3422 two-adic descent.
+
 ## Lead codex-2026-06-28: Two-adic off-grid relocation lemma
 
 **Status:** EVIDENCE / exact interval scout; not proof

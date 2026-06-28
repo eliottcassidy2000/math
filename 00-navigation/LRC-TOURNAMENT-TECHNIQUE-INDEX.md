@@ -332,6 +332,12 @@ obligations, and proof-carrier interfaces.
   vertices.  Off-grid transparency, canonical `84m` binding, 2-adic
   even-speed descent, signed-SPEC `Rprime`, fiber-PGF moments, edge-witness
   packets, owner routers, and unit core rigidity are the candidate carriers.
+- Need to prove the HYP-3422 relocation overlap as an interval theorem:
+  use LTT-286 after LTT-285/LTT-283/LTT-282 and make proof obligations, even-safe
+  components, two-color odd bad cores, surviving component gaps, and
+  owner-current exception labels the vertices.  The raw resonance slogan is a
+  negative control; the proof carrier is `E_safe` not contained in
+  `B0_odd cap B1_odd`.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -8152,6 +8158,42 @@ quotient_legality_status
 - **Pointers:** HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415,
   HYP-3238, HYP-3234, HYP-3137, HYP-2272, HYP-2129, HYP-2128, THM-414,
   THM-523, LTI-385, T1385, OPEN-Q-108.
+
+## LTT-286: Two-Branch Obstruction / Helly Tournament
+
+- **Move:** Rank the proof obligations in the HYP-3425 finite-ruler
+  refinement of HYP-3422 after HYP-3424's covering-floor duality transfer.
+  Vertices are the two-branch bad-core identity,
+  component-gap Helly certificate, two-adic descent induction,
+  owner-current exception router, canonical `84m` survivor windows,
+  signed-SPEC `Rprime` floor, and the raw resonance slogan as a negative
+  control.
+- **LRC use:** For `S=O union 2E` and `u=2t`, relocation succeeds exactly on
+  `E_safe minus (B0_odd cap B1_odd)`.  The theorem target is to prove that
+  `E_safe` is not contained in the two-color odd bad core for every primitive
+  covering row.
+- **Preserves:** the full witness predicate after branch selection, exact
+  rational interval components, finite-ruler survivor windows, and the
+  two-adic descent coordinate.
+- **Forgets / guardrail:** a scalarized mass estimate forgets which component
+  survives; a raw resonance slogan forgets the two-color obstruction; topology
+  alone is q-uniform and cannot close this q-specific floor branch.
+- **Pairwise observable:** predicate retention, finite exactness, Helly shape,
+  two-adic induction value, owner-current glue, `Rprime` glue, and failure
+  guardrails.
+- **Switch/gauge:** orient toward higher total proof-carrier score; ties use
+  the declared proof path.
+- **Fingerprint:** score histogram `{21:1, 55:2, 56:1, 60:2, 61:1}`, no
+  directed `3`-cycles, and Hamiltonian path
+  `two_branch_bad_core_identity -> component_gap_helly_certificate -> two_adic_descent_induction -> owner_current_exception_router -> canonical_84m_surviving_windows -> signed_SPEC_Rprime_floor -> raw_resonance_transparency_slogan`.
+- **Next hook:** prove the component theorem
+  `E_safe not subset B0_odd cap B1_odd` by Helly, finite-ruler, or
+  interval-piercing estimates.  If a larger search finds a failure, route it
+  to owner-current/even-cover, exact-period, state-lift, or named two-adic
+  branch debt.
+- **Pointers:** HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419,
+  HYP-3418, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523, LTI-386,
+  T1386, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 
