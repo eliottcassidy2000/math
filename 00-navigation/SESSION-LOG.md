@@ -120,6 +120,12 @@ model is a cover with a lossy five-state `S` fiber, while the partial-score
 data only with minimality/deletion/congruence sidecars, especially the
 deletable `c` coordinate and the cover-to-chart circuit.
 
+The later HYP-3154 Joukowski/De Moivre bridge connects on the Lee-Yang side:
+`w=z+R^2/z` maps the circle-rooted coverage PGF to the real-rooted tournament
+axis, with the 7th cyclotomic profile as the cap ideal and off-circle `Im(w)`
+as dip/real-rootedness defect.  HYP-3153 now treats this as a stability
+sidecar to test, not as a completed proof.
+
 ## mac-mini-2026-06-27-S72 -- the Lee-Yang circle web: coverage=R^6, dip=off-circle phi^4, Galois<=S4, compression hierarchy
 
 Owner: merge a dense web (Lee-Yang circle=binomial=cap pair-Pascal+de-Moivre-Laplace, dip=phi^4 off-circle;

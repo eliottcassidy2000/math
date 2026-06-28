@@ -54,6 +54,13 @@ partial-score `(0,1,1,2)` section with `x,y`.  The compression
 packet should carry the n=4 minimality/deletion fields beside the
 Lee-Yang/quartic fields, not just the class table.
 
+HYP-3154 adds the geometric bridge I would keep as a sidecar in the next
+scout: `w=z+R^2/z` turns the Lee-Yang circle into the real-rooted De Moivre
+axis, with the 7th cyclotomic profile as the cap ideal and off-circle `Im(w)`
+as the dip defect.  This reframes the missing inequality as a stability
+question, but it is still only a carrier until a Grace-Walsh-Szego or Asano
+argument preserves the LRC predicate.
+
 Assumption challenged: tournament vertices are proof packets here, not
 runners, arcs, isomorphism classes, or score sequences.  The tournament
 fingerprint is transitive with one Hamiltonian path led by the HYP-3152

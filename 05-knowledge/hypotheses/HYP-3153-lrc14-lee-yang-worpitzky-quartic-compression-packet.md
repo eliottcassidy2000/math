@@ -12,6 +12,7 @@ reflection: 07-reflections/lrc14-lee-yang-worpitzky-quartic-packet-codex-2026062
 related:
   - HYP-3160
   - HYP-3199
+  - HYP-3154
   - HYP-3152
   - HYP-3151
   - HYP-3150
@@ -112,6 +113,15 @@ must carry `n4_minimal_chart_status`, `n4_deletable_arc_coordinate`, and
 `n4_quotient_congruence_defect` before the Lee-Yang, Worpitzky, or quartic
 signals are scalarized.
 
+Post-rebase integration with HYP-3154 adds the Joukowski/De Moivre sidecar.
+The map `w=z+R^2/z` sends the Lee-Yang circle `|z|=R` to the real interval
+`[-2R,2R]`, so the on-circle/cap ideal becomes the real-rooted de Moivre
+profile of the 7th cyclotomic polynomial.  In that language the dip is
+off-circle `Im(w)` / real-rootedness defect.  This is not a proof of the dip
+bound, but it tells the packet what not to forget: `joukowski_image_status`,
+`de_moivre_angle_status`, `off_circle_Imw_defect`, and the distinction
+between a Lee-Yang stability statement and a scalar root-radius proxy.
+
 The Worpitzky packet reuses HYP-3151's exact data:
 
 ```text
@@ -210,3 +220,6 @@ The scout leaves three load-bearing tasks:
 3. Carry the ordered/Worpitzky/ear sidecars through the LRC predicate before
    scalarizing to `p0`, `cap`, or a root radius; when the n=4 model is used,
    also carry the HYP-3199 minimality/deletable-`c` sidecar.
+4. Test whether the HYP-3154 Joukowski image can be promoted from sidecar to a
+   stability lemma; until then, treat `Im(w)` as a defect coordinate, not a
+   terminal proof row.
