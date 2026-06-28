@@ -1,3 +1,12 @@
+## codex-2026-06-28 -- integrated C6 residue-magnitude factorization for LRC14
+Owner: integrate the user's binding/covering/hinge ideas into proof-route artifacts.  Added HYP-3310/T1360/LTI-360/LTT-260 plus script/result/reflection.
+- Exact CRT/C6 ledger: binding runners are units `(Z/14)*={1,3,5,9,11,13}`; covering runners are even residues `{2,4,6,8,10,12}` plus ramified apex `7`; multiplication by `3` cycles binder slots `(1,13)->(3,11)->(5,9)`.
+- Cyclotomic clarification: `Gal(Q(zeta_7)/Q) ~= C6`; quotient by conjugation gives the `C3` binding-slot action, while the order-3 subgroup fixes `Q(sqrt(-7))`.  These are complementary projections of the same package.
+- Hinge caveat: `12->24` is a 2-adic/magnitude hinge with `v2:2->3` and odd part `3`, but changes mod-14 residue `12->10`; it must be carried as a magnitude sidecar, not a residue-only quotient.
+- Tournament Analysis uses proof carriers, not runners: `9` vertices, no directed 3-cycles, singleton SCCs, one Hamiltonian path led by `observability_morse_glue -> c6_unit_group -> seven_adic_residue_skeleton -> two_adic_magnitude_layer`.
+- Rebase integration: incoming HYP-3266 makes this an O15 tight-locus rigidity / O12 off-grid bulk / O16 `Q(sqrt(-7))` signed-floor coordinate dictionary.
+- Next proof pull: one binding pair plus `C3` transport; even-cover/apex-7 floor; magnitude-hinge classification; HYP-3300/HYP-3266 observability and obligation columns for residue, `v2`, apex ramification, endpoint owner, unit-contact graph, and off-grid floor.
+
 ## kind-pasteur-2026-06-28-S256b -- chased Q(sqrt-7) + the census back-and-forth: the CENSUS SPLITS (rigid unit-skeleton + ONE Jacobsthal doubling); tight locus is a real manifold; caught a breakpoint MISTAKE
 Owner: chase the Q(sqrt-7) conjecture + a few other LRC(14) obligations, back-and-forth when stuck. HYP-3254/3256/3258/3259 + MISTAKE-86 + reflection the-census-splits-rigid-unit-skeleton-and-one-doubling.
 - **THREAD A (Q(sqrt-7) floor, HYP-3254):** chi_7(n) is USELESS on the original frequencies (the covering far-speeds are 14*Q => SPEC lives entirely on the ramified 7|n locus where chi_7=0). But in the LIFTED variable k=n/14, chi_7(k) DOES organize the SPEC: split primes (QR) POSITIVE, inert (NQR) negative, ramified negative -- the Q(sqrt-7) splitting structure. ORGANIZES but does NOT prove positivity (SPEC sign depends on Q's spread; slightly negative for clustered Q). Partial.

@@ -1,0 +1,109 @@
+# LRC14 C6 Residue-Magnitude Factorization Scout
+
+modulus = 14 = 2 * 7
+units_mod14 = (1, 3, 5, 9, 11, 13)
+nonunits_mod14 = (2, 4, 6, 7, 8, 10, 12)
+even_cover = (2, 4, 6, 8, 10, 12)
+apex7 = 7
+QR_mod7 = (1, 2, 4), NQR_mod7 = (3, 5, 6)
+C6 generator 3 mod 14 powers = (1, 3, 9, 13, 11, 5)
+C3 antipodal binder orbit under *3 = ((1, 13), (3, 11), (5, 9))
+
+Cyclotomic readout:
+- Gal(Q(zeta_7)/Q) ~= (Z/7)^* ~= (Z/14)^* is C6.
+- quotient by conjugation +/-1 gives the C3 action on binder slots.
+- the order-3 subgroup fixes the quadratic field Q(sqrt(-7)).
+- therefore the C3 slot action and Q(sqrt(-7)) are complementary
+  projections of the same C6 cyclotomic package, not rival scalars.
+
+## CRT residue layer
+residue | crt_mod2_mod7 | gcd_with_14 | chi7 | layer
+--- | --- | --- | --- | ---
+1 | (1, 1) | 1 | 1 | unit_binding
+2 | (0, 2) | 2 | 1 | even_cover
+3 | (1, 3) | 1 | -1 | unit_binding
+4 | (0, 4) | 2 | 1 | even_cover
+5 | (1, 5) | 1 | -1 | unit_binding
+6 | (0, 6) | 2 | -1 | even_cover
+7 | (1, 0) | 7 | 0 | ramified_apex7_cover
+8 | (0, 1) | 2 | 1 | even_cover
+9 | (1, 2) | 1 | 1 | unit_binding
+10 | (0, 3) | 2 | -1 | even_cover
+11 | (1, 4) | 1 | 1 | unit_binding
+12 | (0, 5) | 2 | -1 | even_cover
+13 | (1, 6) | 1 | -1 | unit_binding
+
+## Unit contact/binder ledger
+unit_time | antipode | inverse | binding_pair | binding_pair_mod7 | chi7_pair
+--- | --- | --- | --- | --- | ---
+1/14 | 13 | 1 | (1, 13) | (1, 6) | (1, -1)
+3/14 | 11 | 5 | (5, 9) | (5, 2) | (-1, 1)
+5/14 | 9 | 3 | (3, 11) | (3, 4) | (-1, 1)
+9/14 | 5 | 11 | (3, 11) | (3, 4) | (-1, 1)
+11/14 | 3 | 9 | (5, 9) | (5, 2) | (-1, 1)
+13/14 | 1 | 13 | (1, 13) | (1, 6) | (1, -1)
+
+## Named tight rows
+name | residue_set_mod14 | preserves_all_unit_binders | contains_speed_0_mod14 | nonunit_residue_set
+--- | --- | --- | --- | ---
+AP | (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) | True | False | (2, 4, 6, 7, 8, 10, 12)
+Goddyn-Wong_12_to_24 | (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) | True | False | (2, 4, 6, 7, 8, 10)
+
+## 12->24 hinge
+from_speed: 12
+to_speed: 24
+from_mod14: 12
+to_mod14: 10
+from_crt: (0, 5)
+to_crt: (0, 3)
+from_v2: 2
+to_v2: 3
+v2_delta: 1
+from_odd_part: 3
+to_odd_part: 3
+from_layer: even_cover
+to_layer: even_cover
+mod14_preserved: False
+unit_contact_killer: False
+readout: doubling stays in the even covering branch and raises v2 by 1; it changes residue 12 mod 14 to 10 mod 14, so it is a magnitude sidecar rather than a residue-only quotient
+
+## Proof-route theorem target
+1. prove one binding-pair lemma, then C3-transport it to all three slots
+2. split the covering layer into even cover residues and the ramified apex 7
+3. classify magnitude-side flex inside the covering branch; 12->24 is the live hinge
+4. glue residue and magnitude layers through the HYP-3300 observability/Morse packet
+5. route failures to strict off-grid bulk, covering floor, finite chamber discharge, or named debt
+
+## Tournament Analysis
+vertices_are = proof carriers / sidecar columns, not runners
+pairwise_observable = retained LRC predicate coordinates minus destroyed sidecars
+switch_gauge = higher weighted retained payload; ties by fewer destroyed sidecars and priority
+vertex_count = 9
+score_hist = {-26: 1, 13: 1, 21: 1, 28: 1, 33: 1, 41: 1, 47: 1, 57: 1, 127: 1}
+directed_3cycles = 0
+scc_sizes = [1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count = 1
+priority_hamiltonian_path =
+  observability_morse_glue: score=127, keeps=['apex7_ramification', 'c2_conjugation', 'c3_transport', 'c6_unit_group', 'controlled_forgetting_guardrail', 'covering_floor_route', 'finite_chamber_classifier', 'jacobsthal_hinge', 'observability_glue', 'offgrid_bulk_floor', 'seven_adic_residue', 'two_adic_magnitude', 'unit_contact_certificate'], destroys=['exact_runner_names']
+  c6_unit_group: score=57, keeps=['c2_conjugation', 'c3_transport', 'c6_unit_group', 'controlled_forgetting_guardrail', 'qr_nqr_character', 'seven_adic_residue', 'unit_contact_certificate'], destroys=['apex7_ramification', 'jacobsthal_hinge', 'offgrid_bulk_floor', 'two_adic_magnitude']
+  seven_adic_residue_skeleton: score=47, keeps=['apex7_ramification', 'c2_conjugation', 'c3_transport', 'qr_nqr_character', 'seven_adic_residue', 'unit_contact_certificate'], destroys=['jacobsthal_hinge', 'offgrid_bulk_floor', 'two_adic_magnitude']
+  two_adic_magnitude_layer: score=41, keeps=['controlled_forgetting_guardrail', 'covering_floor_route', 'finite_chamber_classifier', 'jacobsthal_hinge', 'two_adic_magnitude'], destroys=['c2_conjugation', 'c3_transport', 'qr_nqr_character', 'seven_adic_residue', 'unit_contact_certificate']
+  jacobsthal_doubling_hinge_12_24: score=33, keeps=['covering_floor_route', 'finite_chamber_classifier', 'jacobsthal_hinge', 'two_adic_magnitude'], destroys=['c2_conjugation', 'c3_transport', 'exact_runner_names', 'qr_nqr_character', 'seven_adic_residue']
+  ramified_apex7_cover: score=28, keeps=['apex7_ramification', 'covering_floor_route', 'offgrid_bulk_floor', 'seven_adic_residue'], destroys=['c2_conjugation', 'c3_transport', 'jacobsthal_hinge', 'two_adic_magnitude', 'unit_contact_certificate']
+  c3_binding_slot_orbit: score=21, keeps=['c3_transport', 'seven_adic_residue', 'unit_contact_certificate'], destroys=['apex7_ramification', 'c2_conjugation', 'jacobsthal_hinge', 'offgrid_bulk_floor', 'qr_nqr_character', 'two_adic_magnitude']
+  c2_qr_nqr_conjugation: score=13, keeps=['c2_conjugation', 'qr_nqr_character', 'seven_adic_residue'], destroys=['apex7_ramification', 'c3_transport', 'jacobsthal_hinge', 'offgrid_bulk_floor', 'two_adic_magnitude']
+  raw_runner_partition: score=-26, keeps=['exact_runner_names'], destroys=['apex7_ramification', 'c2_conjugation', 'c3_transport', 'c6_unit_group', 'controlled_forgetting_guardrail', 'covering_floor_route', 'finite_chamber_classifier', 'jacobsthal_hinge', 'observability_glue', 'offgrid_bulk_floor', 'qr_nqr_character', 'seven_adic_residue', 'two_adic_magnitude', 'unit_contact_certificate']
+
+## Assumption challenge
+Candidate vertices considered:
+- runners
+- gaps
+- fixed circle sections
+- section boundaries
+- wall-crossing events
+- residue/CRT fibers
+- cover arcs
+- Fourier/cyclotomic modes
+- matroid contact circuits
+- proof obligations / sidecar columns
+Chosen vertices are proof obligations because the quotient preserves the LRC predicate only after unit contacts, covering floor, 2-adic magnitude, apex ramification, and hinge data are all either retained or explicitly discharged.

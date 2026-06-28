@@ -253,6 +253,12 @@ obligations, and proof-carrier interfaces.
   antipodal pairs, complement-pair binders, danger-cover boundary holes,
   covering kill-switches, and proof obligations the vertices.  Do not reduce
   the picture to raw `M(S)` or a runner-level graph.
+- Need to factor the AP/GW skeleton into residue and magnitude layers:
+  use LTT-260 after LTT-255/LTT-248/LTT-246 and make sidecar columns the
+  vertices: `C6` unit group, `C3` binder orbit, `C2`/QR-NQR conjugation,
+  7-adic residue skeleton, 2-adic magnitude layer, ramified apex-7 cover,
+  `12->24` hinge, and observability/Morse glue.  Treat `12->24` as a
+  magnitude-side hinge, not a residue-preserving quotient.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -7046,6 +7052,52 @@ quotient_legality_status
   HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3228, HYP-3227,
   HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3220, HYP-3201, HYP-3128,
   HYP-3123, HYP-3108, THM-572, LTI-340, LTT-240, T1340, OPEN-Q-108.
+
+## LTT-260: C6 Residue-Magnitude Sidecar Tournament
+
+- **Move:** Factor the AP/Goddyn-Wong skeleton into residue and magnitude
+  sidecar carriers before ranking proof routes.  The tournament vertices are
+  `observability_morse_glue`, `c6_unit_group`,
+  `seven_adic_residue_skeleton`, `two_adic_magnitude_layer`,
+  `jacobsthal_doubling_hinge_12_24`, `ramified_apex7_cover`,
+  `c3_binding_slot_orbit`, `c2_qr_nqr_conjugation`, and
+  `raw_runner_partition`.
+- **LRC use:** HYP-3310 integrates the user's split with HYP-3265's
+  six-touch contact graph, HYP-3266's proof-obligation ledger, and HYP-3300's
+  observability/Morse scaffold.
+  Binding runners are units, covering runners are evens plus apex `7`, and
+  the Goddyn-Wong `12->24` hinge is a 2-adic/magnitude move inside the even
+  covering branch.  Its obligation use is O15 tight-locus rigidity, O12
+  off-grid bulk survivor positivity, and O16 `Q(sqrt(-7))` signed-floor
+  reorganization.
+- **Preserves:** unit contacts, the `C6` unit group, `C3` binder-slot
+  transport, `C2` antipodal/QR-NQR conjugation, 7-adic residue, 2-adic
+  magnitude, apex-7 ramification, covering-floor route, finite-chamber status,
+  and the hinge flag when carried together.
+- **Forgets / guardrail:** The residue skeleton does not see exact height or
+  off-grid floor.  The hinge has `v2:2->3` but changes residue `12 mod14` to
+  `10 mod14`, so it is not a residue-preserving quotient.  Raw runner names
+  preserve identity but not proof legality.
+- **Pairwise observable:** retained LRC predicate coordinates minus destroyed
+  sidecars.
+- **Switch/gauge:** orient toward higher weighted retained payload; ties use
+  fewer destroyed sidecars and then priority.
+- **Exact fingerprint:** `vertices=9`,
+  `score_hist={-26:1,13:1,21:1,28:1,33:1,41:1,47:1,57:1,127:1}`,
+  `directed_3cycles=0`, singleton SCCs, `hamiltonian_path_count=1`, and path
+  `observability_morse_glue -> c6_unit_group ->
+  seven_adic_residue_skeleton -> two_adic_magnitude_layer ->
+  jacobsthal_doubling_hinge_12_24 -> ramified_apex7_cover ->
+  c3_binding_slot_orbit -> c2_qr_nqr_conjugation -> raw_runner_partition`.
+- **Next hook:** Prove one binding pair and transport by `C3`; split
+  even-cover/apex-7 floor; classify the magnitude hinge with `12->24` as the
+  live equality flex; add observability columns for residue, `v2`, apex
+  ramification, endpoint owner, unit-contact graph, and off-grid floor before
+  quotienting.
+- **Pointers:** HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257,
+  HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246,
+  HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, LTI-360,
+  T1360, OPEN-Q-108.
 
 ## LTT-255: Equioscillation Contact-Graph Tournament
 

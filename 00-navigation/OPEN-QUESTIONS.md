@@ -2,6 +2,32 @@
 
 **OPEN-Q-108 HYP-3260 unit equioscillation nullspace addendum:**
 HYP-3260 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.
+**OPEN-Q-108 HYP-3310 C6 residue-magnitude factorization addendum:**
+HYP-3310 integrates the AP/Goddyn-Wong contact graph with the user's
+`14=2*7` layer split.  The exact scout records binding runners as the units
+`(Z/14)*={1,3,5,9,11,13}`, covering runners as even residues plus the ramified
+apex `7`, and the `C3` binder orbit `(1,13)->(3,11)->(5,9)` inside the
+`C6` cyclotomic unit group.  `Q(sqrt(-7))` is the complementary quadratic
+field fixed by the order-3 subgroup of `Gal(Q(zeta_7)/Q)`, so it organizes
+the 7-adic residue skeleton but is not a terminal scalar proof.
+
+Crucial caveat: the Goddyn-Wong hinge `12->24` has `v2:2->3` and fixed odd
+part `3`, but changes mod-14 residue `12->10`; it is a magnitude sidecar in
+the even covering branch, not a residue-preserving quotient.  Open task:
+prove the four-part interface: one binding-pair lemma plus `C3` transport;
+even-cover/apex-7 covering-floor positivity; a magnitude-hinge theorem
+isolating `12->24`; and HYP-3300 observability columns preventing residue,
+`v2`, apex ramification, endpoint owner, unit-contact graph, and off-grid
+floor from being forgotten.  Rebased over HYP-3266, this feeds O15
+tight-locus rigidity, O12 off-grid bulk survivor positivity, and O16
+`Q(sqrt(-7))` signed-floor reorganization. -> HYP-3310, HYP-3300, HYP-3266,
+HYP-3265, HYP-3259,
+HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250,
+HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909,
+THM-523, T1360, LTI-360, LTT-260, OPEN-Q-108.
+
+**OPEN-Q-108 HYP-3257 unit equioscillation nullspace addendum:**
+HYP-3257 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.
 The six unit active gradients at `a/14`, `a in (Z/14)*`, have exact rank `3`
 over residue coordinates `1..13`, not rank `6`.  They only see the three
 antipodal complement binders `(1,13)`, `(3,11)`, and `(5,9)`.  Nonunit
