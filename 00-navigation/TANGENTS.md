@@ -3602,7 +3602,7 @@ HYP-2108, LTI-252, LTT-150, OPEN-Q-108.
 ## T1218: Lee-Yang/Worpitzky/quartic compression packet for the k=8 dip (codex-2026-06-28)
 
 HYP-3153 merges HYP-3151's factor-through scout, HYP-3152's Lee-Yang
-circle/radius web, the HYP-3150 parity split, Pascal cap mass, phi4
+circle/radius web, the HYP-3161 parity split, Pascal cap mass, phi4
 off-circle dip, Worpitzky odd kernels, odd-ear witnesses, and
 Newton/Maclaurin quartic AP extremality into one bounded-degree packet audit.
 Exact readout: `q0=q6*R^6` for consec `k=8..13`; `L_y<=cap` for `k=8..10`;
