@@ -1,0 +1,79 @@
+HYP-3431 CANONICAL CORRIDOR-FENCE CERTIFICATE
+==============================================================================
+Assumption challenge:
+  alternate vertices considered: runners, fixed corridors, corridor walls,
+  high-grid wall events, odd branch walls, even half-speeds, owner labels,
+  Fourier modes, and proof obligations.
+  chosen tournament vertices: proof carriers / wall certificates.
+  preserved predicate: two-branch relocation for S_m={1..11,13,84m}.
+  destroyed if scalarized: endpoint ownership, branch choice, and the
+  distinction between fixed low corridors and moving high-grid holes.
+
+A. Fixed low-core corridor identity
+  odd core O=(1, 3, 5, 7, 9, 11, 13)
+  low even half-speeds=(1, 2, 3, 4, 5)
+  low-good corridors after odd two-branch filters:
+    [8/49, 6/35], length=2/245
+    [29/35, 41/49], length=2/245
+  total low-good measure=4/245
+  endpoint owners:
+    left corridor:  B1 odd 7 wall -> B1 odd 5 wall
+    right corridor: B0 odd 5 wall -> B0 odd 7 wall
+
+B. All-m fence lemma
+  moving high even half-speed: N=42m
+  high bad interval width=1/(7N)=1/(294m)
+  high bad gap=6/(7N)=1/(49m)
+  fixed corridor length=2/245
+  symbolic margin corridor_length - high_width = (12m-5)/(1470m), positive for every m>=1
+  proof-margin failures checked for m<=400: []
+  conclusion: no connected fixed corridor can be covered by the disjoint
+  high-grid bad intervals; every m>=1 has a surviving relocation window.
+
+C. Exact tower audit from the closed form
+  m | components | good_measure | min_gap | max_gap | witness_t | score
+   1 |          4 |        1/105 |    1/588 |    3/980 | 1369/2352 |   25/336
+   2 |          4 |      19/1470 |    1/392 |  23/5880 |  913/1568 |   17/224
+   3 |          4 |      31/2205 |   5/1764 |  37/8820 |  587/1008 |   11/144
+   4 |          4 |      43/2940 |    1/336 |  17/3920 | 5479/9408 | 103/1344
+   5 |          4 |         1/70 |    3/980 |    1/245 | 2283/3920 |   43/560
+   6 |          6 |      31/2205 |   1/1960 |    1/294 | 8219/14112 | 155/2016
+   7 |          6 |    143/10290 | 23/20580 |    1/343 |  685/1176 |   13/168
+   8 |          8 |      27/1960 |   1/4704 |    1/392 | 10945/18816 | 193/2688
+   9 |          8 |      31/2205 |   1/1764 |    1/441 | 4105/7056 |  73/1008
+  10 |          8 |      41/2940 |   1/1176 |    1/490 |   391/672 |     7/96
+  11 |         10 |      16/1155 |  3/10780 |    1/539 | 15055/25872 | 271/3696
+  12 |         10 |      31/2205 | 23/35280 |    1/588 | 1825/3136 |   33/448
+  13 |         10 |     136/9555 | 37/38220 |    1/637 | 17795/30576 | 323/4368
+  14 |         10 |      97/6860 | 17/13720 |    1/686 | 1369/2352 |   25/336
+  15 |         12 |      61/4410 |   1/8820 |    1/735 | 20521/35280 | 361/5040
+  16 |         14 |      27/1960 |  3/15680 |    1/784 | 7297/12544 | 129/1792
+  17 |         14 |      58/4165 | 23/49980 |    1/833 | 3323/5712 |   59/816
+  18 |         14 |      31/2205 |   1/1512 |    1/882 | 24631/42336 | 439/6048
+  19 |         14 |      66/4655 |   3/3724 |    1/931 | 8667/14896 | 155/2128
+  20 |         14 |      83/5880 | 11/11760 |    1/980 | 27371/47040 | 491/6720
+  worst good measure in m<=40: 1/105 at m=1
+  worst component gap in m<=40: 1/21168 at m=36
+
+D. Proof route extracted
+  The canonical 84m tower no longer needs a finite Helly search:
+  after the HYP-3426 mirror reduction, HYP-3428 loss-ledger audit,
+  HYP-3429 endpoint-spine compression, and HYP-3430 scalar firewall,
+  prove the fixed low corridor identity once, then apply the disjoint
+  high-grid fence lemma.
+  The next generalization is to look for rows whose
+  low core leaves a corridor longer than the widest remaining moving bad
+  interval.  Rows that fail this corridor test return to HYP-3430
+  scalar firewall, HYP-3429 endpoint-spine targets, HYP-3428 loss
+  classes, HYP-3427 wall words, HYP-3426 endpoint-owner triples,
+  HYP-3425 component Helly,
+  owner-current exception routing, or an
+  energy-plus-sheet packet such as (RE,q_zero_mass) or
+  (fullE,q_range_hi); raw energy scalars remain a negative control.
+
+E. Tournament Analysis
+  vertices are proof carriers, not runners or raw intervals.
+  axes=predicate_retention,symbolic_exactness,all_m_strength,helly_extension,two_adic_induction,owner_exception_glue,guardrail_value
+  score_hist={28: 1, 54: 1, 56: 1, 58: 1, 59: 1, 61: 1, 62: 1}
+  directed_3cycles=0
+  hamiltonian_path=high_grid_fence_lemma -> canonical_84m_all_m_certificate -> two_branch_helly_generalization -> fixed_low_corridor_identity -> endpoint_wall_ownership_dictionary -> owner_current_exception_router -> raw_measure_table

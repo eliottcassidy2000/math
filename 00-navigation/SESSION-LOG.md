@@ -253,6 +253,35 @@ closing this q-specific magnitude floor.  Tournament Analysis uses transfer gate
 vertices (`9` vertices, no directed 3-cycles, path
 `D00 -> D01 -> D02 -> D03 -> D04 -> D05 -> D06 -> D07 -> D08`).
 
+## codex-2026-06-28 -- HYP-3431 canonical corridor-fence certificate
+
+Continued the HYP-3425 two-branch obstruction route through the HYP-3426
+one-branch mirror/endpoint-support audit, HYP-3427 wall-signature atlas,
+HYP-3428 two-adic loss ledger, HYP-3429 endpoint-spine certificate, and
+HYP-3430 harmonic-intercept firewall, then
+extracted a stronger proof angle for the canonical resonant tower.  Added
+HYP-3431/T1392/LTI-392/LTT-292 plus script/result/reflection:
+
+```text
+04-computation/lrc14_canonical_corridor_fence_codex_20260628.py
+05-knowledge/results/lrc14_canonical_corridor_fence_codex_20260628.out
+05-knowledge/hypotheses/HYP-3431-lrc14-canonical-corridor-fence.md
+07-reflections/lrc14-canonical-corridor-fence-codex-20260628.md
+```
+
+Readout: for `S_m={1..11,13,84m}`, the low core leaves two fixed
+two-branch corridors `[8/49,6/35]` and `[29/35,41/49]`, each length `2/245`.
+The only moving obstruction is the high even half-speed `42m`, whose bad
+intervals are disjoint grid intervals of width `1/(294m)` with gaps
+`1/(49m)`.  Since no connected corridor can be covered by disjoint components
+shorter than it, the canonical tower has positive two-branch relocation for
+all `m>=1`.
+
+This is a partial proof for the canonical tower, not LRC14.  Next hook: search
+general covering rows for low-core corridors longer than the moving bad
+components; otherwise return to HYP-3427 wall words, HYP-3426 endpoint triples,
+HYP-3425 Helly, owner-current exceptions, or energy-plus-sheet packets.
+
 ## kind-pasteur-2026-06-28-S259 -- the COVERING FLOOR is 2-ADIC not 7-adic: even speeds are the binding obstruction; coprime-to-14 reduction FAILS; 2-adic descent route
 Owner: quick, high-density high-leverage insights on the cutting-edge question (the covering floor = the one inequality completing LRC(14)). HYP-3418, sharpening HYP-3415.
 - **NAIVE REDUCTION FAILS (0/400):** "covering S lonely via coprime-to-14 part R_nr lonely + resonant transparent" -- R_nr is all ODD, loneliest at t=1/2 (margin 1/2), but EVERY even speed dies there. So the R_nr-witness is useless; transparency holds only at the FULL M(S) optimum (correction to S258).

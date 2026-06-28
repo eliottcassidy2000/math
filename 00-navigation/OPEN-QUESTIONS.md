@@ -73,6 +73,39 @@ turn the HYP-3425 component theorem into a finite endpoint certificate lemma.
 -> HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
 HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523,
 LTI-390, LTT-290, T1390, OPEN-Q-108.
+**OPEN-Q-108 HYP-3431 canonical corridor-fence addendum:**
+HYP-3431 closes the canonical `{1..11,13,84m}` two-branch relocation family
+for every `m>=1`, downstream of HYP-3426's one-branch mirror/endpoint-owner
+audit, HYP-3427's wall-signature atlas, HYP-3428's two-adic loss ledger,
+HYP-3429's endpoint-spine certificate, and HYP-3430's harmonic-intercept
+firewall, by a fixed-corridor / high-grid fence lemma.  In the `S_m=O union
+2E`, `u=2t`
+variables, the low core leaves
+two fixed corridors:
+
+```text
+[8/49,6/35]      B1 odd 7 wall -> B1 odd 5 wall
+[29/35,41/49]    B0 odd 5 wall -> B0 odd 7 wall
+```
+
+Each corridor has length `2/245`.  The moving high half-speed `42m` has
+disjoint bad intervals of width `1/(294m)`, so no connected corridor can be
+covered by those bad intervals.  This gives positive relocation windows for
+the entire canonical tower, not just the HYP-3425 finite audit.
+
+Open concrete task: generalize the corridor-fence test.  For a primitive
+covering row, strip the moving high/flex speeds and compute whether the low
+packet leaves a branch corridor longer than every remaining moving bad
+component.  If yes, use the fence lemma and emit the HYP-3429 endpoint spine.
+If no, return the row to HYP-3430 scalar-firewall sidecars, HYP-3429 rank-2
+spine targets, HYP-3428 loss classes, HYP-3427 wall words, HYP-3426
+endpoint-owner triples, HYP-3425's component-gap Helly target, or
+HYP-3420/HYP-3417 owner-current exception labels. ->
+HYP-3431, HYP-3430, HYP-3429, HYP-3428,
+HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3422, HYP-3421, HYP-3418,
+HYP-3415, HYP-3129, THM-523, T1392, LTI-392, LTT-292, LTI-391, LTT-291,
+LTI-390, LTT-290, LTI-388, LTT-288,
+LTI-387, LTT-287, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3430 Euler-Mascheroni harmonic intercept addendum:**
 HYP-3430 tests whether the finite harmonic intercept

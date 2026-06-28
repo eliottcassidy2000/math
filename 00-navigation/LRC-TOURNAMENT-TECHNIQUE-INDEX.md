@@ -355,6 +355,11 @@ obligations, and proof-carrier interfaces.
   use LTT-291 after LTT-290/LTT-289/LTT-288 and make scalar guardrails plus
   retained sidecars the vertices.  The live theorem is a scalar-firewall rule,
   not an analytic tail estimate.
+- Need to extract canonical base cases from the HYP-3425/HYP-3426/HYP-3427
+  interval target: use LTT-292 after LTT-288/LTT-287/LTT-286 and make wall
+  certificates, not runners or measures, the vertices.  Fixed low corridors,
+  endpoint owners, high-grid component width, and the disjoint fence lemma are
+  the proof carriers.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -8175,6 +8180,48 @@ quotient_legality_status
 - **Pointers:** HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415,
   HYP-3238, HYP-3234, HYP-3137, HYP-2272, HYP-2129, HYP-2128, THM-414,
   THM-523, LTI-385, T1385, OPEN-Q-108.
+
+## LTT-292: Canonical Corridor-Fence Tournament
+
+- **Move:** Rank wall certificates for the canonical `84m` tower after
+  HYP-3430/HYP-3429/HYP-3428/HYP-3427/HYP-3426/HYP-3425: fixed low corridor identity, high-grid fence lemma, all-`m`
+  canonical certificate, two-branch Helly generalization, endpoint wall
+  ownership, owner-current exception router, and raw measure table as negative
+  control.
+- **LRC use:** HYP-3431 proves the canonical tower
+  `{1,2,3,4,5,6,7,8,9,10,11,13,84m}` has positive two-branch relocation for
+  every `m>=1`.  The low core leaves fixed corridors `[8/49,6/35]` and
+  `[29/35,41/49]`, each length `2/245`; the high half-speed `42m` removes
+  disjoint bad components of width `1/(294m)`, too short to cover a connected
+  corridor.
+- **Preserves:** the two-branch relocation predicate for the canonical tower,
+  endpoint wall ownership, branch choice, and the high-grid disjointness
+  certificate.
+- **Forgets / guardrail:** scalarizing to the good measure forgets why the
+  window survives; the proof is the corridor/fence structure.  This is a
+  canonical base lemma, the no-debt HYP-3428 loss-ledger case, the all-`m`
+  canonical HYP-3429 endpoint-spine specialization, and the exact sidecar that
+  HYP-3430 says harmonic scalars must retain, not the full covering-floor
+  theorem.
+- **Pairwise observable:** predicate retention, symbolic exactness, all-`m`
+  strength, Helly extension value, two-adic induction value, owner-exception
+  glue, and guardrail value.
+- **Switch/gauge:** higher total carrier score first; ties use the declared
+  proof path.
+- **Fingerprint:** score histogram
+  `{28:1,54:1,56:1,58:1,59:1,61:1,62:1}`, no directed `3`-cycles, and path
+  `high_grid_fence_lemma -> canonical_84m_all_m_certificate -> two_branch_helly_generalization -> fixed_low_corridor_identity -> endpoint_wall_ownership_dictionary -> owner_current_exception_router -> raw_measure_table`.
+- **Next hook:** implement a corridor-fence classifier for non-canonical
+  covering rows.  Rows with a low-core branch corridor longer than all moving
+  bad components exit by the fence lemma and emit the HYP-3429 endpoint spine;
+  the rest return to HYP-3430 scalar-firewall sidecars, HYP-3429 rank-2 spine
+  targets, HYP-3428 loss classes, HYP-3425 component Helly, HYP-3427 wall words, HYP-3426
+  endpoint-owner triples, owner-current exception routing, or the
+  energy-plus-sheet sidecar before any signed-SPEC or phase-debt claim.
+- **Pointers:** HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423,
+  HYP-3422, HYP-3421, HYP-3418, HYP-3415, HYP-3140, HYP-3129, HYP-2272,
+  THM-523, LTI-392, LTT-291, LTI-391, LTT-290, LTI-390, LTT-288, LTI-388, LTT-287, LTI-387,
+  T1392, OPEN-Q-108.
 
 ## LTT-286: Two-Branch Obstruction / Helly Tournament
 

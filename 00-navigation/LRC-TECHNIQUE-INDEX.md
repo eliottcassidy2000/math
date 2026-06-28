@@ -477,6 +477,7 @@ record what it destroys before asking it to prove anything.
 | LTI-388 | Two-branch wall-signature atlas | Survivor wall words, branch masks, even walls `E:s`, branch-0 odd walls `O0:o`, branch-1 odd walls `O1:o`, midpoint binder roles, bounded wall-alphabet theorem target | HYP-3427 builds on HYP-3426 and refines HYP-3425 by replacing positive survivor mass with exact wall certificates.  Audit on `67` rows has survivor windows `67/67`, `5524` total windows, `27` global signature types, branch masks `b0=2255, b1=2255, both=1014`, and binder roles `14Q=570, even_R=2425, odd_unit=2055, seven_R=474`.  The tight row `{1..11,13,84}` has four windows bounded by `E:84` and odd branch walls `5,7`. | HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3140, HYP-3129, HYP-2963, THM-523, T1388, LTT-288, LTI-388, OPEN-Q-108 | Prove a bounded wall-alphabet lemma for primitive covering rows; if it fails, classify the first missing wall coordinate as owner-current, sheet, exact-period, state-lift, or named two-adic debt before using any scalar measure. |
 | LTI-390 | Component-spine endpoint certificate | Endpoint-labelled survivor windows, low-rank `E/B0/B1` wall spines, E-only free components, mixed even/odd endpoint walls, both-branch survivor windows, Helly endpoint compression | HYP-3429 extends HYP-3428/HYP-3427/HYP-3425 and complements HYP-3426 by compressing the survivor-window problem from loss/wall certificates to endpoint-spine rank after branch symmetry is exposed.  Exact audit on `150` rows has positive survivor windows `150/150`, endpoint-labelled survivor windows `15576/15576`, best endpoint-spine rank `<=2` on `150/150`, mixed even/odd endpoint spines on `148/150`, and both-branch survivor windows on `149/150`; the smallest best spine is `canonical_84m_ext_48` with length `1/2352` and label `E:4032`. | HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523, T1390, LTT-290, LTI-390, OPEN-Q-108 | Prove every primitive covering row has either an E-only free component or a rank-2 mixed endpoint spine; then feed the selected endpoint window and branch into HYP-3428/HYP-3427/HYP-3426/HYP-3425/HYP-3422 relocation. |
 | LTI-391 | Euler-Mascheroni harmonic intercept firewall | Finite intercept `H_N-log N`, denominator-tail calibration, gamma/Mertens/loglog scalar collisions, endpoint-class preservation, sidecar retention rule | HYP-3430 tests whether Euler-Mascheroni tail calibration can replace the HYP-3429 endpoint certificate.  On `150` rows it finds `11` endpoint classes, gamma-intercept range `0.577339668..0.583156236`, same-max-speed mixed certificate bins `19/108`, rounded-4 gamma bins with mixed classes `21/30`, and rounded-6 mixed bins `19/108`; the `N=84` rows have identical intercept but different endpoint-spine classes. | HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3422, HYP-3417, HYP-3412, HYP-3408, HYP-3129, HYP-2963, THM-523, T1391, LTT-291, LTI-391, OPEN-Q-108 | Prove the scalar-firewall rule: harmonic/Mertens/loglog tail estimates may calibrate denominator entropy only after retaining endpoint-owner, wall-signature, two-adic loss, sheet, exact-period, or state-lift sidecar data. |
+| LTI-392 | Canonical corridor-fence certificate | Fixed low-core branch corridors, odd wall endpoint ownership, high even half-speed grid, disjoint bad-component fence lemma, all-`m` canonical `84m` relocation certificate, Helly generalization router | HYP-3431 converts the canonical `{1..11,13,84m}` wall-signature pattern from HYP-3427/HYP-3426 plus HYP-3428's loss ledger, HYP-3429's endpoint-spine audit, and HYP-3430's harmonic firewall into an all-`m` corridor-fence certificate.  The low core leaves fixed corridors `[8/49,6/35]` and `[29/35,41/49]`, each length `2/245`; the moving high even half-speed `42m` removes disjoint bad grid intervals of width `1/(294m)`.  Since the fixed corridor is longer than every moving bad component for all `m>=1`, no corridor is fully covered and the canonical tower has positive two-branch relocation. | HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3418, HYP-3415, HYP-3140, HYP-3129, HYP-2272, THM-523, T1392, LTT-292, LTI-392, LTT-291, LTI-391, LTT-290, LTI-390, LTT-288, LTI-388, LTT-287, LTI-387, OPEN-Q-108 | Generalize the corridor-fence test to non-canonical covering rows: find low-core branch corridors longer than all moving bad components; route failures back to HYP-3430 scalar-firewall sidecars, HYP-3429 endpoint-spine targets, HYP-3428 loss classes, HYP-3427 wall words, HYP-3426 endpoint-owner triples, HYP-3425 component Helly, owner-current exception labels, or energy-plus-sheet packets such as `(RE,q_zero_mass)`. |
 | LTI-373 | Special-function cut signature recursion | Recursive `charal_signature` sidecars, Bring radical branch alarms, Schwarz-Christoffel cut angles, BDH variance packets, Menger exit cuts, Soldner zero normalization, Sophie Germain quartic split, HLW separation, Krasner stability, Mertens residuals | HYP-3412 executes a post-HYP-3406 creative synthesis scout on the `(72,20)` expanded bank (`2431` rows).  Its CHARAL mixed-fiber ladder says residue leaves `3` mixed fibers; residue+height/`v2` leaves `2`; BDH variance leaves `3`; cut-angle, Krasner radius, and owner support each leave `0`; Sophie quartic and honest Bring branch alarm each leave `2`; PGF proxy leaves `1`.  The Menger-style separator table says the `14`-row owner leak, `12`-row petal `10->20` owner/height-persistent leak, and `3`-row height leak all admit one-sidecar covers by `SC_cut_angle`, `Krasner_radius`, or `owner_support`, while height/`v2` separates only some leaks. | HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, THM-523, T1373, LTT-273, LTI-373, OPEN-Q-108 | Enlarge beyond `(72,20)` and test whether `residue + cut_angle_word` and `residue + krasner_radius_word` remain exact.  If either fails, record the first collision and decide whether full owner support, exact cut labels, or PGF/root branch payload is the true next sidecar. |
 | LTI-374 | Owner-cut resurrection calculus | Cross-exit row-pair clauses, endpoint-owner symmetric differences, minimum owner-label transversals, binary cut-code buckets, terminal chamber router, dual/Farkas current readout | HYP-3414 turns HYP-3411/HYP-3412/HYP-3413/HYP-3409/HYP-3410 into a finite proof-facing calculus.  In each mixed theorem-exit fiber, every cross-exit row pair emits an owner-label clause; a legal owner cut is a hitting set whose cut-code buckets are theorem-exit pure.  Known values are singleton cuts `5:g1` and `1:g1` for the first two leaks, but the `(72,20)` `10->20` frontier has minimum cut size `3`, five minimum cuts, and empty core, so the live theorem is bounded owner transversals rather than a universal singleton owner label. | HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-2969, HYP-2963, THM-523, T1374, LTT-274, LTI-374, OPEN-Q-108 | Extend HYP-3406 beyond `(72,20)`, run the clause/transversal calculator on the first `residue+owner_support` failure if one appears, and add child-deck stability plus terminal-exit routing to every cut-pure fiber. |
 | LTI-382 | Off-grid resonance transparency / Rprime closure | Off-grid witness cells, resonant-speed distance ledger, `14Q` grid-kill check, canonical `84m` binding formula, 2-adic even-speed descent, signed-SPEC `Rprime` constant chase, fiber-PGF/edge-witness glue | HYP-3421 is the exact scout companion to HYP-3415's one-floor critical path, corrected by HYP-3418.  It verifies named off-grid optima with floors `1/12`, `1/8`, `1/9`, and canonical `{1..11,13,84m}` formula `t=(35m+2)/(84m+5)`, `M=7m/(84m+5)>1/14`; every checked resonant speed, including `14Q` tips, is safe at the selected full optima.  The technique recasts resonance as grid-local danger plus full-optimum transparency, while HYP-3418 keeps the floor on the 2-adic/even-speed descent route before the HYP-3129/HYP-3140 `Rprime` chase. | HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3412, HYP-3410, HYP-3310, HYP-3266, HYP-3265, HYP-3255, HYP-3140, HYP-3136, HYP-3129, HYP-3125, HYP-3124, HYP-2896, THM-523, T1382, LTT-282, LTI-382, OPEN-Q-108 | Prove the all-packet transparency classifier, the 2-adic even-speed descent, and the closed-form signed-SPEC `Rprime >= c` constant chase. |
@@ -6872,6 +6873,90 @@ floor exit it feeds: signed SPEC, two-adic descent, odd phase cover, finite
 owner sidecar, add/mult energy penalty, HYP-3422 interval relocation,
 HYP-3421 off-grid/signed-SPEC transparency, HYP-3423 topology-to-magnitude
 guardrail, or off-path 7-adic filter.
+
+## LTI-392: Canonical Corridor-Fence Certificate
+
+Created by codex-2026-06-28 for HYP-3431/T1392 as the all-`m` base-case
+certificate extracted from HYP-3427's wall-signature atlas, HYP-3426's
+one-branch mirror/endpoint-support audit, HYP-3428's two-adic loss ledger,
+HYP-3429's endpoint-spine certificate, HYP-3430's harmonic-intercept firewall,
+and HYP-3425's two-branch Helly target.
+
+Carrier / vertex set:
+
+```text
+proof carriers and wall certificates:
+fixed low corridors, odd wall endpoint owners, moving high-grid walls,
+disjoint component fence lemma, canonical tower certificate,
+Helly generalization router, owner exception router
+```
+
+Exact identity:
+
+```text
+S_m = {1,2,3,4,5,6,7,8,9,10,11,13,84m}
+S_m = O union 2E,    u=2t
+O = {1,3,5,7,9,11,13}
+E_low = {1,2,3,4,5}
+```
+
+The low core leaves exactly two fixed branch-good corridors:
+
+```text
+[8/49, 6/35]      length 2/245
+[29/35, 41/49]    length 2/245
+```
+
+Endpoint ownership:
+
+```text
+left corridor:  B1 odd 7 wall -> B1 odd 5 wall
+right corridor: B0 odd 5 wall -> B0 odd 7 wall
+```
+
+The only moving obstruction in the canonical tower is the high even half-speed
+`N=42m`; its bad grid intervals have width `1/(7N)=1/(294m)` and gap
+`1/(49m)`.
+
+Proof lemma:
+
+```text
+2/245 > 1/(294m) for every m>=1.
+```
+
+Since the high-grid bad intervals are disjoint, a connected fixed corridor
+cannot be covered by those components.  Thus every canonical tower row has a
+positive two-branch relocation window.
+
+In HYP-3428 ledger language, this is the no-debt case: the even child has one
+moving high-grid packet, the odd blockers are endpoint walls `5` and `7`, and
+the owner/current sidecar is replaced by the fence inequality.  In HYP-3429
+spine language, it proves the canonical rank-`<=2` endpoint-spine pattern for
+all `m`, with fixed odd walls and the moving even wall `E:84m`.  In HYP-3430
+firewall language, it is the retained exact wall sidecar that a harmonic tail
+estimate cannot replace.
+
+Preserved LRC predicate: two-branch relocation for the canonical
+`{1..11,13,84m}` tower.
+
+Destroyed information if used naively: endpoint wall ownership, branch choice,
+and the separation between fixed low corridors and moving high-grid holes.
+
+Tournament fingerprint: score histogram
+`{28:1,54:1,56:1,58:1,59:1,61:1,62:1}`, no directed `3`-cycles, and path
+`high_grid_fence_lemma -> canonical_84m_all_m_certificate -> two_branch_helly_generalization -> fixed_low_corridor_identity -> endpoint_wall_ownership_dictionary -> owner_current_exception_router -> raw_measure_table`.
+
+Anchors: HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423,
+HYP-3422, HYP-3421, HYP-3418, HYP-3415, HYP-3140, HYP-3129, HYP-2272,
+THM-523, LTT-292, LTT-291, LTT-290, LTT-288, LTT-287, T1392, OPEN-Q-108.
+
+Next agent hook: implement a corridor-fence classifier for non-canonical
+covering rows.  Strip moving high/flex speeds, compute low-core branch
+corridors, and compare corridor lengths to moving bad-component widths.  Rows
+without a fence certificate return to HYP-3427 wall words, HYP-3426
+endpoint-owner triples, HYP-3425 component Helly, owner-current exception
+routing, or the additive-energy sheet sidecar
+`(energy coordinate, q_zero_mass/q_range_hi)`.
 
 ## LTI-386: Two-Branch Obstruction / Helly Certificate
 

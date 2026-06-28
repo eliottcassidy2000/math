@@ -190,6 +190,38 @@ Next: prove the interval-overlap lemma with finite-ruler, Helly, or exact
 interval-piercing bounds on `E_safe`.  Use the owner-cut work only to name
 finite packets where branch filters appear tight; the `2:g2` label in
 HYP-3419 is the finite owner-cut shadow of this two-adic coordinate.
+## Lead codex-2026-06-28: Canonical corridor-fence certificate
+
+**Status:** PARTIAL PROOF / all-`m` canonical relocation certificate; not full
+LRC14 proof (HYP-3431/T1392/LTI-392/LTT-292).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3431-lrc14-canonical-corridor-fence.md`,
+script
+`04-computation/lrc14_canonical_corridor_fence_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_canonical_corridor_fence_codex_20260628.out`,
+and
+`07-reflections/lrc14-canonical-corridor-fence-codex-20260628.md`.
+
+Purpose: convert the tight canonical `84m` evidence downstream of HYP-3426's
+one-branch mirror/endpoint-owner audit, HYP-3427's wall-signature atlas,
+HYP-3428's two-adic loss ledger, HYP-3429's endpoint-spine certificate,
+HYP-3430's harmonic-intercept firewall, and HYP-3425's Helly target into an
+all-`m` wall proof.  The low odd/even core
+leaves fixed corridors
+`[8/49,6/35]` and `[29/35,41/49]`, each of length `2/245`; the moving high
+even half-speed `42m` removes only disjoint grid intervals of width
+`1/(294m)`.  Since a connected corridor is longer than every moving bad
+component for every `m>=1`, the canonical tower has positive two-branch
+relocation for all `m`.
+
+Next: search non-canonical covering rows for the same structure: a low-core
+branch corridor longer than all moving bad components.  If found, route by the
+corridor-fence lemma; otherwise fall back to HYP-3430 scalar-firewall sidecars,
+HYP-3429 endpoint-spine targets, HYP-3428 loss classes, HYP-3425 component
+Helly, or owner-current exception labels.
+
 ## Lead codex-2026-06-28: Q-uniform topology / q-specific arithmetic break guardrail
 
 **Status:** SYNTHESIS / executable proof-route guardrail; not proof
