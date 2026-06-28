@@ -1,0 +1,14 @@
+=== consec_8 covariance matrix C ===
+  eigenvalues (desc): [np.float64(0.4372), np.float64(0.2184), np.float64(0.1576), np.float64(0.1472), np.float64(0.1129), np.float64(0.0955)]
+  Perron (largest) lambda_max=0.4372, eigenvector alignment with UNIFORM 1: 0.9968 (1=mac-mini's claim)
+  1^T C 1 = 2.6120  vs 6*lambda_max = 2.6230
+  de Moivre angles [np.float64(-1.8019), np.float64(-0.445), np.float64(1.247)]; cyclotomic 7-fold
+  trace(C)=1.1687  sum-offdiag(=2*Sigma-k2)=1.4432
+=== consec_10 covariance matrix C ===
+  eigenvalues (desc): [np.float64(0.4175), np.float64(0.1746), np.float64(0.1164), np.float64(0.101), np.float64(0.0757), np.float64(0.0671)]
+  Perron (largest) lambda_max=0.4175, eigenvector alignment with UNIFORM 1: 0.9979 (1=mac-mini's claim)
+  1^T C 1 = 2.4970  vs 6*lambda_max = 2.5049
+  de Moivre angles [np.float64(-1.8019), np.float64(-0.445), np.float64(1.247)]; cyclotomic 7-fold
+  trace(C)=0.9522  sum-offdiag(=2*Sigma-k2)=1.5448
+
+de Moivre leading (most negative) angle: -1.8019 (the cyclotomic ground mode, S31ak dominant Joukowski lock)
