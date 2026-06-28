@@ -79,6 +79,29 @@ E-only free components.  The new proof target is an endpoint-spine lemma:
 every primitive covering row has either an E-only free component or a rank-2
 mixed endpoint spine feeding HYP-3425/HYP-3422 relocation.
 
+## codex-2026-06-28 -- HYP-3430 Euler-Mascheroni harmonic intercept firewall
+
+Added HYP-3430/T1391/LTI-391/LTT-291 as a scalar guardrail on top of the
+HYP-3429 endpoint-spine bank.  The executable audit tests whether the finite
+intercept `H_N - log N` can certify endpoint-spine proof classes.
+
+```text
+04-computation/lrc14_euler_mascheroni_harmonic_intercept_codex_20260628.py
+05-knowledge/results/lrc14_euler_mascheroni_harmonic_intercept_codex_20260628.out
+05-knowledge/hypotheses/HYP-3430-lrc14-euler-mascheroni-harmonic-intercept.md
+07-reflections/lrc14-euler-mascheroni-harmonic-intercept-codex-20260628.md
+```
+
+Readout: on `150` rows, there are `11` endpoint certificate classes, gamma
+intercept range `0.577339668..0.583156236`, same-max-speed mixed certificate
+bins `19/108`, rounded-4 gamma bins with mixed classes `21/30`, and rounded-6
+mixed bins `19/108`.  The `N=84` collision has identical `H_84-log 84` for
+mixed `B1+E` certificates and an `E` branch-specific certificate.
+
+Next proof rule: Euler-Mascheroni/Mertens/loglog tail data may calibrate
+denominator entropy only after it names the sidecar it preserves: endpoint
+owner, wall signature, two-adic loss, sheet, exact period, or state-lift debt.
+
 ## codex-2026-06-28 -- HYP-3425 two-branch obstruction / Helly certificate
 
 Extended the user's off-grid/resonance prompt after the new HYP-3421/HYP-3422

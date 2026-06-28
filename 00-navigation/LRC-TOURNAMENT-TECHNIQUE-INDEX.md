@@ -351,6 +351,10 @@ obligations, and proof-carrier interfaces.
   use LTT-290 after LTT-289/LTT-288/LTT-287/LTT-286 and make endpoint labels/proof carriers the
   vertices.  The live theorem is E-only free component or rank-2 mixed endpoint
   spine, not a scalar survivor-mass estimate.
+- Need to prevent Euler-Mascheroni/Mertens tails from replacing endpoint certificates:
+  use LTT-291 after LTT-290/LTT-289/LTT-288 and make scalar guardrails plus
+  retained sidecars the vertices.  The live theorem is a scalar-firewall rule,
+  not an analytic tail estimate.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -8302,6 +8306,35 @@ quotient_legality_status
 - **Pointers:** HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
   HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523,
   LTI-390, T1390, OPEN-Q-108.
+
+## LTT-291: Euler-Mascheroni Harmonic Intercept Firewall Tournament
+
+- **Move:** Rank scalar guardrails against retained proof carriers after
+  HYP-3429.  Vertices are endpoint-spine certificate, wall-signature
+  certificate, two-adic loss ledger, harmonic-intercept calibrator,
+  Mertens/loglog tail budget, and raw Euler-Mascheroni scalar.
+- **LRC use:** HYP-3430 shows that `H_N - log N` tracks scale but does not
+  determine endpoint-spine class.  Same-max-speed bins have mixed certificate
+  classes `19/108`, and the `N=84` collision has identical harmonic intercept
+  but different endpoint classes.
+- **Preserves:** denominator-tail calibration only when paired with endpoint
+  owner, wall word, two-adic loss class, sheet profile, exact-period data, or
+  state-lift debt.
+- **Forgets / guardrail:** raw Euler-Mascheroni, Mertens, or loglog scalars
+  forget branch choice, active walls, endpoint class, and owner pressure.
+- **Pairwise observable:** retained covering-floor proof payload versus scalar
+  calibration value and forgetting risk.
+- **Switch/gauge:** orient toward higher retained proof payload; ties use the
+  declared proof path.
+- **Fingerprint:** score histogram `{12:1, 29:1, 31:1, 41:2, 43:1}`, no
+  directed `3`-cycles, and Hamiltonian path
+  `endpoint_spine_certificate -> wall_signature_certificate -> two_adic_loss_ledger -> harmonic_intercept_calibrator -> mertens_loglog_tail_budget -> raw_euler_mascheroni_scalar`.
+- **Next hook:** prove a scalar-firewall lemma for the covering floor: every
+  harmonic/loglog tail estimate must declare and retain the finite sidecar
+  that preserves the relocation predicate.
+- **Pointers:** HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425,
+  HYP-3424, HYP-3422, HYP-3417, HYP-3412, HYP-3408, HYP-3129, HYP-2963,
+  THM-523, LTI-391, T1391, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 

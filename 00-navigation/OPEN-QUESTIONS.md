@@ -74,6 +74,25 @@ turn the HYP-3425 component theorem into a finite endpoint certificate lemma.
 HYP-3419, HYP-3418, HYP-3417, HYP-3415, HYP-3129, HYP-2963, THM-523,
 LTI-390, LTT-290, T1390, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3430 Euler-Mascheroni harmonic intercept addendum:**
+HYP-3430 tests whether the finite harmonic intercept
+
+```text
+H_N - log N
+```
+
+can certify the HYP-3429 endpoint-spine class.  It cannot: the HYP-3429 bank
+has `11` endpoint certificate classes, same-max-speed mixed certificate bins
+`19/108`, and rounded-4 gamma bins with mixed classes `21/30`.  The `N=84`
+collision has the same intercept for mixed `B1+E` certificates and an `E`
+branch-specific certificate.  Concrete open task: prove a scalar-firewall
+rule saying any Euler-Mascheroni/Mertens/loglog tail estimate used in the
+covering floor must carry endpoint-owner, wall-signature, two-adic loss,
+sheet, exact-period, or state-lift sidecar data.
+-> HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424,
+HYP-3422, HYP-3417, HYP-3412, HYP-3408, HYP-3129, HYP-2963, THM-523,
+LTI-391, LTT-291, T1391, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3425 two-branch obstruction / Helly addendum:**
 HYP-3425 sharpens the two-adic relocation lemma into a one-dimensional
 obstruction statement.  For `S=O union 2E` and `u=2t`,

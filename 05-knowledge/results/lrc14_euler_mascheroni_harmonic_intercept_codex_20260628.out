@@ -1,0 +1,59 @@
+HYP-3430 EULER-MASCHERONI HARMONIC INTERCEPT FIREWALL
+==============================================================================
+Question:
+  Does the finite intercept H_N - log N certify the LRC14 endpoint-spine class?
+  Treat Euler-Mascheroni as tail calibration, not as a replacement witness.
+
+A. Aggregate readout on the HYP-3429 bank
+  rows audited:                         150
+  endpoint certificate classes:          11
+  gamma intercept range:                 0.577339668 .. 0.583156236
+  Euler-Mascheroni reference:             0.577215665
+  largest finite intercept error:         0.005940571
+  same-max-speed bins with mixed classes: 19/108
+  rounded-4 gamma bins with mixed classes:21/30
+  rounded-6 gamma bins with mixed classes:19/108
+  class histogram:                       {'B1+E/rank2/branches2': 10, 'E/rank2/branches1': 22, 'E/rank1/branches2': 19, 'E/rank1/branches1': 28, 'E/rank2/branches2': 47, 'B0/rank2/branches1': 1, 'B1+E/rank2/branches1': 4, 'B0+E/rank2/branches2': 11, 'B0+E/rank2/branches1': 3, 'B1/rank2/branches2': 3, 'B0+B1/rank2/branches2': 2}
+
+B. What gamma sees and what it forgets
+  corr(gamma_intercept, best_rank):       +0.676986
+  corr(gamma_intercept, has_mixed_spine): +0.139189
+  corr(gamma_intercept, log_best_length): +0.852948
+  corr(gamma_intercept, window_count):    +0.344096
+  corr(owner_pressure, log_best_length):  +0.278058
+  readout: gamma mostly tracks height/scale; endpoint labels decide the proof class.
+
+C. Same gamma intercept, different proof certificates
+  example max_speed=84
+    canonical_84m_01: class=B1+E/rank2/branches2, gamma_intercept=0.583156236, owner_pressure=0.211904762, windows=4
+    covering_AP_with_12_and_84: class=E/rank2/branches1, gamma_intercept=0.583156236, owner_pressure=0.095238095, windows=12
+    covering_AP_with_84: class=B1+E/rank2/branches2, gamma_intercept=0.583156236, owner_pressure=0.211904762, windows=4
+
+D. Extremal finite intercept rows
+  smallest: canonical_84m_ext_48, N=4032, class=E/rank1/branches1, gamma_intercept=0.577339668, error=0.000124003, log_best_len=-7.763021
+  largest: covering_AP_with_84, N=84, class=B1+E/rank2/branches2, gamma_intercept=0.583156236, error=0.005940571, log_best_len=-5.788940
+
+E. Canonical 84m tower
+  m | max_speed | gamma_intercept | gamma_error | class | owner_pressure
+   1 |        84 | 0.583156236 | 0.005940571 | B1+E/rank2/branches2 | 0.211904762
+   2 |       168 | 0.580188903 | 0.002973238 | B1+E/rank2/branches2 | 0.205952381
+   3 |       252 | 0.579198480 | 0.001982815 | B1+E/rank2/branches2 | 0.203968254
+   4 |       336 | 0.578703022 | 0.001487357 | B1+E/rank2/branches2 | 0.202976190
+   5 |       420 | 0.578405669 | 0.001190004 | E/rank1/branches2  | 0.002380952
+   6 |       504 | 0.578207400 | 0.000991735 | E/rank1/branches2  | 0.001984127
+  12 |      1008 | 0.577711615 | 0.000495950 | E/rank1/branches2  | 0.000992063
+  24 |      2016 | 0.577463660 | 0.000247995 | E/rank1/branches1  | 0.000496032
+  36 |      3024 | 0.577381000 | 0.000165335 | E/rank1/branches1  | 0.000330688
+  48 |      4032 | 0.577339668 | 0.000124003 | E/rank1/branches1  | 0.000248016
+
+F. Tournament Analysis
+  vertices=proof carriers and scalar guardrails, not runners or constants
+  axes=predicate_retention,endpoint_payload,harmonic_calibration,tail_exception_router,scalar_firewall
+  score_hist={12: 1, 29: 1, 31: 1, 41: 2, 43: 1}
+  directed_3cycles=0
+  hamiltonian_path=endpoint_spine_certificate -> wall_signature_certificate -> two_adic_loss_ledger -> harmonic_intercept_calibrator -> mertens_loglog_tail_budget -> raw_euler_mascheroni_scalar
+
+G. Assumption challenge
+  considered_vertices=rows, max speeds, harmonic tails, endpoint owners, wall signatures, loss classes, survivor windows, and proof obligations
+  chosen_vertices=proof carriers plus scalar guardrails; the quotient preserves the covering-floor predicate only when endpoint data is retained
+  challenged_assumption=Euler-Mascheroni or Mertens constants can replace the finite endpoint-spine certificate

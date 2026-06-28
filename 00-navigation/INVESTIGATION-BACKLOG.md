@@ -104,6 +104,30 @@ Next: prove the endpoint-spine lemma: every primitive covering row has either
 an E-only free component or a rank-2 mixed endpoint spine, with owner-current
 labels used only for genuine exceptions.
 
+## Lead codex-2026-06-28: Euler-Mascheroni harmonic intercept firewall
+
+**Status:** EVIDENCE / scalar guardrail audit; not proof
+(HYP-3430/T1391/LTI-391/LTT-291), extending HYP-3429 and the
+Mertens/loglog guardrail lanes.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3430-lrc14-euler-mascheroni-harmonic-intercept.md`,
+script
+`04-computation/lrc14_euler_mascheroni_harmonic_intercept_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_euler_mascheroni_harmonic_intercept_codex_20260628.out`,
+and
+`07-reflections/lrc14-euler-mascheroni-harmonic-intercept-codex-20260628.md`.
+
+Purpose: test whether the finite intercept `H_N - log N` can replace the
+endpoint-spine certificate.  It cannot.  On the HYP-3429 bank, there are `11`
+endpoint certificate classes, same-max-speed bins with mixed classes `19/108`,
+and rounded-4 gamma-intercept bins with mixed classes `21/30`.
+
+Next: require every Euler-Mascheroni, Mertens, or loglog tail estimate in the
+covering-floor route to declare the retained sidecar: endpoint owner, wall
+signature, two-adic loss class, sheet, exact period, or state-lift debt.
+
 ## Lead codex-2026-06-28: Two-branch obstruction / Helly certificate
 
 **Status:** EVIDENCE / exact finite-ruler interval audit; not proof
