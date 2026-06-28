@@ -1,3 +1,28 @@
+## mac-mini-2026-06-28-S75c -- INTERLOCKING recursions: the cap kernel is modulus-covariant down to the apex n/2=7, where it BREAKS (the three modes concentrate at the Eisenstein fold)
+
+Owner: interlocking recursions + tiling/half-tiling + moment-order depth, leveraged for LRC. HYP-3232 + reflection
+interlocking-recursions-... + script lrc_modulus_covariance_eisenstein_fold_macmini_S75.py. (Converges STRONGLY
+with kps S31aq below + integrates HYP-2900/2901 three modes + HYP-2690 half-tiling DP.)
+
+THREE ORTHOGONAL interlocking recursions = the three modes (HYP-2900/2901): Möbius (moment ORDER j / IE),
+Eisenstein (MODULUS n, even fold 14→7→2), Legendre (SPEED ratio a/b, three-gap = my kernel HYP-3230). Composition
+14=Eisenstein(14→7)∘Legendre(7) on the Möbius floor, computed by the half-tiling (β,τ) DP (HYP-2690), moment-depth
+dichotomy (tight→Bonferroni-3, slack→equidist (6/7)^r).
+
+TESTED: the kernel is MODULUS-COVARIANT K^(n)(a,b)=(2/n)h(a,b) (h = modulus-free three-gap invariant) for
+n>=2*max(speed); the Eisenstein fold n→2n is exactly x1/2 (ratio 2 verified). It BREAKS at the apex n/2: at n=7
+the (3,5),(4,7),(5,8) fold-ratios deviate (8/3,4,22/5) and gap-counts change. So speeds <=7 (=n/2) are clean
+modulus-free three-gap (low moment-depth); speeds 8..13 (the ANTIPODE half, >n/2) DEVIATE = the binding constants
+= the ENTIRE LRC(14) difficulty. The moment-depth interlocks monotonically with speed-vs-apex (speed 1=total
+collapse/peel; <=7=low; >7=binding). The three recursions CONCENTRATE at the apex 7=n/2.
+
+CONVERGENCE with kps S31aq (same owner task): kps QUANTIFIED the moment-order DEPTH = (p+1)/2 (family law, VERIFIED
+n=6→2,10→3,14→4=cubic wall first hard) via TWO recursions (7=cyclotomic moment-order ladder cap_k=cap_(k-1)+k/91;
+2=2-adic reflection fold biquadratic halving). My modulus-covariance break at n/2 is WHERE that depth (p+1)/2 is
+reached (the antipode half). THREE axes (order=kps moment-depth, modulus=Eisenstein fold, speed=my three-gap break),
+ONE concentration point (apex 7=n/2), ONE depth (p+1)/2. kps credits my S75b three-gap as the third (Diophantine)
+recursion. NOT a proof; locates the difficulty precisely (antipode-half deviation at the Eisenstein fold, depth 4).
+
 ## kind-pasteur-2026-06-28-S31aq -- how the route sharpened = a DESCENT through TWO interlocking recursions (14=2*7); VERIFIED family law
 
 Owner: understand how the route sharpened over time; use that to see recursive patterns not yet precisely
