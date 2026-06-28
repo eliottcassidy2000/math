@@ -388,3 +388,76 @@ even-safe components and their adjacent bad-core blocks.
 Integrated 8a96bef. Introduces the HYP-3435 audit protocol, 
 operationalizing the terminal proof sheaf through a finite-ruler branch-cell 
 and endpoint-gate witness.
+
+### 1. Branch-Cover Certificate
+Implements a structural proof object for the branch-union survival 
+$E_{safe} \cap (O_0^{good} \cup O_1^{good}) \neq \emptyset$. Identifies 
+survivors as finite branch-cells defined by an active odd/even 
+endpoint-gate ledger.
+
+### 2. Residue-Cover Resolution
+Resolves covering structures of branches by identifying minimal 
+branch-cover certificates for each $E_{safe}$ component. Prevents 
+scalar averages from masking local survival by requiring explicit 
+blocker/gate ledgers.
+
+### 3. Algebraic Triad Coupling
+Formally couples the certificate with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ 
+(B0), $\mathbb{Q}(\sqrt{-7})$ (B1), and $\mathbb{Q}(\sqrt{-3})$ (E).
+
+### 4. Chiral Guard & Resurrection
+Governed by branch-overlap payloads and constraint sensitivities. 
+Evaluation reveals a **MIXED** signature. Identifies the **branch-cover 
+certificate** and **active endpoint gate ledger** as Resurrection 
+Sheaf anchors.
+
+---
+
+## codex-S304 -- Harmonic Wall-Budget Sidecar (checkpoint)
+
+Integrated 18b25c6. Introduces the HYP-3432 audit protocol, 
+operationalizing the terminal proof sheaf through an exact rational 
+reciprocal budget ranking for endpoint walls.
+
+---
+
+## codex-HYP-3440 -- Bring/SC/Menger Charal Signature Router
+
+Integrated the requested Bring radical, Schwarz-Christoffel, BDH, Menger,
+Ramanujan-Soldner, Sophie Germain, HLW, Krasner, and Meissel-Mertens motifs
+as HYP-3440/T1401/LTI-401/LTT-301 after incoming work claimed
+HYP-3424/T1385/LTI-385/LTT-285 for covering-floor duality transfer,
+HYP-3425/T1386/LTI-386/LTT-286 for the two-branch Helly audit, HYP-3426/T1387
+plus HYP-3427/T1388 for mirror endpoint-support and wall signatures,
+HYP-3428/T1389/LTI-389/LTT-289 for the two-adic descent loss ledger,
+HYP-3429/T1390/LTI-390/LTT-290 for endpoint spines, HYP-3430-HYP-3434 for
+harmonic scalar firewalls and overlap tax, HYP-3435/T1396/LTI-396/LTT-296 for
+branch-cover certificates, and HYP-3437/T1398/LTI-398/LTT-298 for overlap
+Menger-cut certificates.  HYP-3440 is a subordinate sidecar route under the
+2-adic covering decorrelation floor, not the LRC14 completion theorem.
+
+1. **Primary sidecar route:** HYP-3414-style bounded owner transversals should
+   be formalized as a Schwarz-Christoffel boundary-order / Menger min-cut
+   certificate, using HYP-3419/HYP-3420 as the finite owner-cut substrate.
+   The certificate feeds HYP-3437/HYP-3435/HYP-3434/HYP-3429/HYP-3428/HYP-3424/HYP-3421/HYP-3422/HYP-3425/HYP-3426/HYP-3427
+   only as owner/branch/packet/wall debt.
+2. **Recursive Charal ladder:** coarse, residue, height/v2, and unit-slot
+   signatures still leak; endpoint cut and full Charal signature split the
+   modeled HYP-3406 mixed fibers.
+3. **Incoming extension:** HYP-3425 Helly supplies the interval-piercing target
+   for branch relocation; HYP-3425 additive energy says raw energy scalars are
+   illegal unless upgraded to energy-plus-sheet packets; HYP-3426/HYP-3427 say
+   endpoint cuts need endpoint-support triples and exact wall words; HYP-3428
+   says halving needs even-child packets and named loss classes; HYP-3429
+   compresses survivor windows to endpoint spines; HYP-3435/HYP-3437 turn
+   overlap into branch-cover and Menger-cut certificates.  HYP-3440 therefore
+   treats endpoint cuts as typed packet payload, not as another scalar floor.
+4. **Guardrails:** Bring radical is a branch-sheet warning, Krasner/HLW are
+   no-free-slider guards, Sophie Germain is a quartic height-wall factor gate,
+   and BDH plus Ramanujan-Soldner/Meissel-Mertens belong to colored bulk or
+   energy-plus-sheet sidecars; none replace the HYP-3415/HYP-3418 `R' > 0`
+   floor lane, and HYP-3423 blocks any q-uniform topology shortcut to that
+   lane.
+5. **Correction:** do not import the forum note's overstrong algebraic
+   independence phrasing for HLW; use only the transcendence /
+   linear-independence style guard needed to prevent branch sliding.

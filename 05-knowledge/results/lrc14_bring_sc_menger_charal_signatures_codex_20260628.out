@@ -1,0 +1,80 @@
+HYP-3440 BRING / SCHWARZ-CHRISTOFFEL / MENGER CHARAL SIGNATURE SCOUT
+==============================================================================
+status=synthesis / recursive-sidecar router; not an LRC14 proof
+new_handles=HYP-3440,T1401,LTI-401,LTT-301
+base=HYP-3406 enlarged-bank residue failure and owner-support repair
+upstream=HYP-3407/HYP-3408/HYP-3409/HYP-3410/HYP-3411/HYP-3412/HYP-3413/HYP-3414/HYP-3416/HYP-3417/HYP-3419/HYP-3420/HYP-3421/HYP-3422/HYP-3423/HYP-3424/HYP-3425/HYP-3426/HYP-3427/HYP-3428/HYP-3429/HYP-3430-HYP-3437 boundary, guardrail, recursive-sidecar, charal-recursion, Galois, special-function, GW-gate, owner-cut, quotient-ladder, owner-current, cut-decision-tree, chiral-owner, off-grid-transparency, two-adic-relocation, q-uniform-topology guardrail, floor-transfer, Helly-obstruction, energy-sheet packet, one-branch mirror, wall-signature, two-adic-loss, endpoint-spine, scalar-firewall, corridor-fence, harmonic-budget, overlap-tax, branch-cover, bad-core extractor, and overlap Menger-cut atlases
+critical_path=HYP-3415/HYP-3418: non-covering is closed by q-witness; covering needs the single decorrelation floor inequality, now a 2-adic even-speed descent problem rather than an apex-7 census problem
+topology_guardrail=HYP-3423: SC/Menger boundary language may certify q-uniform order or owner-cut legality, but q-specific magnitude and floor claims must restore HYP-3413 arithmetic, HYP-3417 owner currents, or HYP-3418/HYP-3421/HYP-3422 two-adic floor data
+incoming_extension=HYP-3424 makes floor transfer the parent router; HYP-3425 Helly supplies the branch-relocation interval target; parallel HYP-3425 additive energy requires energy-plus-sheet packets. HYP-3426 reduces branch choice to one-branch endpoint-support triples; HYP-3427 upgrades positive windows to wall signatures; HYP-3428 records halving/descent loss classes; HYP-3429 compresses survivor windows to endpoint spines; HYP-3430-HYP-3434 block scalar harmonic compression; HYP-3435 turns branch survival into endpoint-gate certificates; HYP-3437 reserves the overlap-tax Menger-cut extractor. HYP-3440 endpoint cuts may feed those packets only as owner/branch/wall debt.
+
+SELECTED ANGLES
+  schwarz_christoffel_owner_polygon score=107
+    family=boundary prevertex / polygonal side order carrier
+    preserves=boundary_order,endpoint_cut_resurrection,finite_checkability,height_flex_leak,owner_support_exactness,quotient_legality
+    destroys=bulk_prime_floor
+    theorem_use=Read each actual-packet fiber as a polygonal boundary word.  The theorem exit must be invariant under legal prevertex moves, or the first changed side is the endpoint-owner debt.
+    guardrail=conformal language cannot replace exact endpoint intervals or side order
+  menger_endpoint_cut_resurrection score=94
+    family=min-cut / max-flow proof carrier
+    preserves=endpoint_cut_resurrection,finite_checkability,owner_support_exactness,quotient_legality,residue_breakpoint
+    destroys=bulk_prime_floor,colored_variance_floor
+    theorem_use=Turn the HYP-3406 owner-support repair into a min-cut theorem: a quotient may forget endpoint owners only when a bounded owner transversal makes every cut-code bucket theorem-exit pure.
+    guardrail=a cut table is only useful if it proves a max-flow/min-cut dual, not just a label
+
+FULL MOTIF RANKING
+  schwarz_christoffel_owner_polygon          score= 107 corpus_hits=3725
+  menger_endpoint_cut_resurrection           score=  94 corpus_hits= 942
+  bring_radical_branch_kernel                score=  52 corpus_hits=3337
+  krasner_hlw_no_free_slider_guard           score=  51 corpus_hits= 542
+  barban_davenport_halberstam_variance_gate  score=  43 corpus_hits=1549
+  sophie_germain_quartic_factor_gate         score=  43 corpus_hits=2477
+  ramanujan_soldner_mertens_bulk_zero        score=  -1 corpus_hits= 845
+
+RECURSIVE CHARAL SIGNATURE LADDER
+  C0_coarse              fibers= 1 mixed=1 largest_mixed=14 fields=('coarse_base',)
+  C1_residue_branch      fibers= 2 mixed=2 largest_mixed=11 fields=('coarse_base', 'residue_word')
+  C2_height_or_v2        fibers= 5 mixed=1 largest_mixed= 8 fields=('coarse_base', 'residue_word', 'height_word')
+  C3_unit_slot           fibers= 9 mixed=1 largest_mixed= 3 fields=('coarse_base', 'residue_word', 'height_word', 'unit_slot')
+  C4_endpoint_cut        fibers=10 mixed=0 largest_mixed= 0 fields=('coarse_base', 'residue_word', 'endpoint_cut_word')
+  C5_charal_signature    fibers=10 mixed=0 largest_mixed= 0 fields=('coarse_base', 'charal_signature')
+
+MINIMAL REPAIRS OVER C1_residue_branch
+  ('owner_support',)
+  ('endpoint_cut_word',)
+  ('boundary_sector',)
+  ('branch_sheet',)
+  ('charal_signature',)
+
+MIXED FIBER DIAGNOSTICS AT C2_height_or_v2
+  fiber_key=(('eq14', 'six_unit_boundary', 'expanded_residue_failure'), 'R13_to_26_family', 'H13_to_26') size=8 kernels={'positive-Haar-open': 7, 'unit-petal-named': 1}
+    positive-Haar-open  single swap 1->26        unit_slot=(1, 2, 2) cut=('12', '13')
+    positive-Haar-open  single swap 1->54        unit_slot=(1, 2, 2) cut=('12', '13')
+    positive-Haar-open  single swap 3->26        unit_slot=(2, 1, 2) cut=('11', '12', '13', '6')
+    positive-Haar-open  single swap 3->54        unit_slot=(2, 1, 2) cut=('11', '12', '13', '6')
+    positive-Haar-open  single swap 5->26        unit_slot=(2, 2, 1) cut=('10', '11', '12', '13', '9')
+    positive-Haar-open  single swap 5->54        unit_slot=(2, 2, 1) cut=('10', '11', '12', '9')
+    positive-Haar-open  single swap 9->54        unit_slot=(2, 2, 1) cut=('10', '11', '12', '13', '5', '7', '8')
+    unit-petal-named    petal 13->26             unit_slot=(1, 2, 2) cut=('1', '12')
+
+REQUESTED MOTIF INTERPRETATION
+  Bring radical: branch-sheet warning for illegal quintic scalarization.
+  Schwarz-Christoffel: owner supports are polygon sides / prevertex order.
+  Barban-Davenport-Halberstam: variance gate for colored CRT bulk fibers.
+  Menger cuts: exact carrier for endpoint-owner resurrection.
+  Ramanujan-Soldner + Meissel-Mertens: prime/log bulk normalization only.
+  Sophie Germain: quartic two-petal factor gate for height-wall sidecars.
+  Krasner: p-adic branch stability for same-residue height moves.
+  Hermite-Lindemann-Weierstrass: no-free-slider guard, not an owner separator.
+
+TOURNAMENT ANALYSIS
+  vertices=proof motifs / recursive sidecars, not runners or arcs
+  pairwise_observable=retained current proof obligations minus destroyed owner/height/variance/stability coordinates
+  switch/gauge=higher motif score; ties use motif name
+  score_hist={-1: 1, 43: 2, 51: 1, 52: 1, 94: 1, 107: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  priority_path=schwarz_christoffel_owner_polygon -> menger_endpoint_cut_resurrection -> bring_radical_branch_kernel -> krasner_hlw_no_free_slider_guard -> barban_davenport_halberstam_variance_gate -> sophie_germain_quartic_factor_gate -> ramanujan_soldner_mertens_bulk_zero
+
+CONCLUSION
+  The best HYP-3440 route is to keep the lower-payload motif router subordinate to HYP-3419/HYP-3420's concrete owner-cut evidence, HYP-3421/HYP-3422's off-grid/two-adic floor route, HYP-3423's topology/arithmetic guardrail, HYP-3424's floor-transfer router, the paired HYP-3425 Helly / energy-sheet sidecars, HYP-3426's one-branch mirror endpoint-support audit, HYP-3427's wall-signature atlas, HYP-3428's two-adic descent loss ledger, HYP-3429's endpoint-spine certificate, HYP-3435's branch-cover certificate, and HYP-3437's overlap-tax Menger-cut target: formalize owner-support exactness as a bounded owner-transversal / Menger min-cut / Schwarz-Christoffel boundary-order theorem, then feed that certificate into the recursive quotient ladder.  HYP-3414 blocks a universal singleton-owner shortcut, and HYP-3417 gives margin-1 owner-current witnesses on the current fibers.  This remains off the LRC14 critical path unless it helps the HYP-3415/HYP-3418 covering floor: the completion theorem is the uniform R' > 0 decorrelation inequality, sharpened to a 2-adic even-speed descent route.  Bring radicals, Krasner stability, and HLW enter as branch/no-free-slider guards after the endpoint cut is retained; BDH and Meissel-Mertens belong to named bulk/floor, wall-signature, or energy-plus-sheet sidecars, not to the local HYP-3406 leak.

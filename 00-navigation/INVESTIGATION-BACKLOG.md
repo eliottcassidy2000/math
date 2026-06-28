@@ -6912,3 +6912,35 @@ on `Phi`, not as a standalone scalar proof.
   rank-`<=5` endpoint-labelled odd-blocker overlap core, or find and name the
   first exception.  Attach HYP-3429/HYP-3427 endpoint/wall labels to the cut
   core so HYP-3436's two-color bad-core extractor can use the same sidecar.
+## LEAD (codex-2026-06-28): endpoint-cut resurrection from Charal signatures
+- **Source:** HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406,
+  HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-2969, HYP-2963.
+- **Status:** OPEN.  HYP-3429 executes the requested Bring/SC/Menger
+  endpoint-cut slice after HYP-3412's special-function sidecar scout and
+  HYP-3414's owner-cut resurrection calculus, now integrated with HYP-3416's
+  recursive quotient ladder, HYP-3417's owner-current certificates,
+  HYP-3419's size-3/depth-3 owner-cut decision-tree warning, and HYP-3420's
+  chiral-owner exactness audit.  HYP-3421/HYP-3422 now give the floor-facing
+  off-grid transparency and two-adic relocation lane, HYP-3423 gives the
+  topology/arithmetic guardrail, HYP-3424 gives the transfer ledger, and the
+  paired HYP-3425 threads give the Helly interval target plus the
+  energy-plus-sheet packet guard, while HYP-3426/HYP-3427 sharpen the endpoint
+  payload into one-branch endpoint-support triples and exact wall words.
+  HYP-3428 supplies the two-adic loss ledger that any halving shortcut must
+  feed instead of bypassing.  HYP-3429 sits under that caveat: this lead
+  is a certificate sidecar over the HYP-3406 mixed fibers, not yet a theorem,
+  not a q-uniform topology shortcut, and not a raw energy scalar route to the
+  q-specific floor.
+- **Next steps:** Build an explicit endpoint-owner deletion graph for every
+  residue-plus-height mixed fiber.  Compute min cuts, owner-support paths,
+  margin-1 owner currents, and the corresponding Schwarz-Christoffel boundary
+  word.  Prove or refute: bounded endpoint cuts reconstruct
+  theorem-exit-pure cut-code buckets whenever residue+height leaks, then feed
+  that sidecar into HYP-3424/HYP-3422/HYP-3425/HYP-3426/HYP-3427 only as owner/branch/packet/wall debt
+  payload.  Use HYP-3423 to reject any proof quotient that converts SC/Menger boundary
+  order into a magnitude conclusion without restoring arithmetic, owner-current,
+  or two-adic floor data.
+  If a cut fails, name the owner-cut debt before invoking Bring branch
+  addresses, Krasner stability, HLW no-free-slider guards, BDH variance,
+  Sophie Germain quartic factors, or Ramanujan-Soldner/Meissel-Mertens bulk
+  constants.

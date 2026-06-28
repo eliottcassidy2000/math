@@ -491,6 +491,8 @@ record what it destroys before asking it to prove anything.
 | LTI-378 | Owner-cut dual current certificate | Labelled owner-current cuts, unit-island labels, positive-debt hitting sets, zero-level signed current, Krasner common-core instability, Sophie-Germain cut channels, finite Mertens budget selector | HYP-3417 sharpens HYP-3410 by turning owner cuts into explicit margin-1 dual-current certificates over the current mixed fibers.  Selected certificates are `{5:g1}`, `{1:g1}`, and `{2:g2,11:g1,13:g1}`; the last is one even-cover label plus two binding labels, consistent with the incoming S257 residue/magnitude split but only as a local owner-current certificate.  Positive-debt Sophie channels recur through `13`: `(1,2)->13/5` and `(1,3)->25/13`, matching top frontier variance `13:g1`. | HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3310, HYP-3265, HYP-2963, THM-523, T1378, LTT-278, LTI-378, OPEN-Q-108 | Extend the enlarged bank and prove every surviving mixed residue/height fiber has a bounded unit-island or positive-debt owner-current certificate, an exit-pure charal recursion step, or named owner/height/off-grid/state-lift debt. |
 | LTI-381 | Owner-cut chiral transcendence synthesis | Endpoint-owner Menger cuts, mirror/chiral owner-support classes, BDH-style pair-disagreement variance, Schwarz-Christoffel owner accessory parameters, Krasner/Hensel stability radii, Bring branch guards, transcendence/loglog scale guardrails | HYP-3420 concretizes the owner-cut branch after HYP-3406, HYP-3410, and HYP-3412.  Rebuilding the expanded banks shows `residue_plus_owner_chiral_class` and `residue_plus_owner_support` leave `0` mixed fibers on all scanned banks.  On the largest bank, residue-only variance is `12`, owner/chiral-owner variance is `0`, and both residue-mixed fibers have size-one owner cuts: `('1:g1',)` for the `petal 13->26` versus positive-open `26/40/54` family and `('5:g1',)` for the `P10+GW` / `GW-shell` / `12->48` fiber. | HYP-3420, HYP-3412, HYP-3410, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3301, HYP-3300, HYP-3265, HYP-3243, HYP-3238, HYP-3152, HYP-2982, HYP-2214, T1381, LTT-281, LTI-381, OPEN-Q-108 | Prove or refute the endpoint-owner Menger-cut theorem for enlarged actual-packet fibers; if it fails, route the first failure to tropical/off-grid, unit-contact holonomy, state-lift, or Bring-style branch debt. |
 | LTI-384 | Q-uniform topology / q-specific arithmetic break guardrail | C2/Borsuk-Ulam residue charge, C6 orbit split, q-mod-3 Eisenstein switch, labelled owner-current packet, two-adic floor descent, Rprime floor handoff, forbidden topology-to-magnitude inference | HYP-3423 turns the `C2 = Borsuk-Ulam` synthesis into a quotient legality rule, renumbered after S259 claimed HYP-3418 for the two-adic covering-floor sharpening and incoming S297/S298 claimed HYP-3420 for owner-cut chiral synthesis.  The C2/BU topological charge is q-uniform and can close only residue/equioscillation obligations.  The canonical Goddyn-Wong magnitude break is q-specific: the HYP-3413 switch is ON only for `q == 1 mod 3`, giving `q=4,7` ON and `q=5,6` OFF.  Therefore any quotient claiming a q-specific magnitude conclusion must retain or restore HYP-3413 arithmetic, HYP-3417 labelled owner currents, S259/HYP-3418 two-adic descent, or HYP-3415 decorrelation floor data. | HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3413, HYP-3411, HYP-3312, HYP-3311, HYP-3310, HYP-3406, HYP-3405, HYP-2963, THM-523, T1384, LTT-284, LTI-384, OPEN-Q-108 | Audit every proof route that invokes C2/BU, C6, or topological degree: if the route concludes residue/equioscillation, mark it legal; if it concludes magnitude/GW/floor, demand q-mod-3 arithmetic, labelled owner-current sidecars, S259/HYP-3418 two-adic descent, or Rprime floor input before accepting the quotient. |
+| LTI-389 | Two-adic descent loss ledger | Halving quotient audit, odd blockers, halved even child under `u=2t`, exact witness loss classes, owner-current/even-hinge sidecars, named off-grid/state-lift debt | HYP-3428 audits the HYP-3410/HYP-3417 AP-collar mixed fibers as a legal-quotient proxy for HYP-3418's two-adic covering-floor route.  On reconstructed rows, the raw half witness fails `23/23`, `22/23` rows keep even binders, and `22/23` rows have the halved even child carrying the exact bottleneck at `u=2t*`; the remaining loss is named, not collapsed into a scalar. | HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410, HYP-3406, HYP-3311, HYP-3265, THM-523, T1389, LTT-289, LTI-389, OPEN-Q-108 | Attach the loss classes to HYP-3427 wall-word residual search and prove that every failed even-child transfer is paid by bounded odd-blocker, owner-current, off-grid, sheet, state-lift, or named residual debt. |
+| LTI-401 | Bring/Schwarz-Christoffel/Menger Charal signature router | Proof motifs and recursive sidecars; owner-support boundary words, Menger endpoint cuts, Bring branch alarms, Krasner/HLW no-free-slider guards, BDH variance packets, Sophie Germain quartic gates, Soldner/Mertens bulk normalization, energy-plus-sheet packets, endpoint-support triples, wall signatures | HYP-3440 is a lower-payload endpoint-cut motif slice downstream of HYP-3428's two-adic loss ledger, HYP-3424's covering-floor duality transfer, the paired HYP-3425 Helly/energy-sheet scouts, HYP-3426's one-branch mirror endpoint-support audit, and HYP-3427's wall-signature atlas, as well as HYP-3421/HYP-3422 off-grid/two-adic floor scouts and HYP-3423 topology/arithmetic guardrail.  The scout ranks Schwarz-Christoffel owner polygon and Menger endpoint cut first because they preserve endpoint-owner support in the broken magnitude/owner layer, while branch, stability, variance, quartic, energy, and log-prime motifs are guarded packet sidecars.  HYP-3424 says owner/additive data must be packetized before touching the floor; HYP-3425 says relocation needs a Helly/interval target and energy needs a sheet sidecar; HYP-3426/HYP-3427 say endpoint cuts should become one-branch endpoint-support triples and exact wall words. | HYP-3440, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3254, HYP-3247, HYP-3123, HYP-2969, HYP-2963, THM-523, T1401, LTT-301, LTI-401, OPEN-Q-108 | Prove bounded endpoint-owner deletion transversals for every residue-plus-height mixed fiber, express the same certificate as a Schwarz-Christoffel boundary word, and feed it into HYP-3428/HYP-3424/HYP-3422/HYP-3425/HYP-3426/HYP-3427 only as owner/branch/packet/wall debt without mistaking it for the floor theorem, the Helly interval lemma, an energy scalar shortcut, or a wall-free geometric analogy. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -7950,6 +7952,11 @@ Anchors: HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406,
 HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150,
 HYP-3147, HYP-3143, THM-523, LTT-273, T1373, OPEN-Q-108.
 
+Follow-on: HYP-3420/LTI-381 records the focused owner-cut/chiral audit, and
+HYP-3428/LTI-389 records a lower-payload Bring/SC/Menger endpoint-cut motif
+slice of the same boundary-uniformization, guardrail, recursive sidecar, exact
+charal-recursion, and Galois symmetry-breaking program.
+
 ## LTI-381: Owner-Cut Chiral Transcendence Synthesis
 
 Created by codex-2026-06-28 for HYP-3420/T1381.  This is the focused
@@ -8035,3 +8042,86 @@ that every even speed vanishes there.
 Anchors: HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421,
 HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410,
 HYP-3406, HYP-3311, HYP-3265, THM-523, LTT-289, T1389, OPEN-Q-108.
+
+## LTI-401: Bring/Schwarz-Christoffel/Menger Charal Signature Router
+
+Created by codex-2026-06-28 for HYP-3440/T1401, downstream of HYP-3428's
+two-adic descent loss ledger, HYP-3412's special-function cut signature scout,
+HYP-3414's owner-cut resurrection calculus, HYP-3416's recursive quotient
+ladder, HYP-3417's owner-current certificate synthesis, HYP-3407's
+boundary-uniformization cut-stability atlas, HYP-3408's exotic guardrail
+atlas, HYP-3409's recursive sidecar pattern atlas, HYP-3410's exact
+charal-recursion packet, HYP-3411's Galois symmetry-breaking reframe,
+HYP-3413's GW gate, HYP-3423's topology/arithmetic guardrail, HYP-3424's
+covering-floor transfer router, the HYP-3425 Helly audit, the HYP-3425
+additive-energy sheet sidecar, HYP-3426's one-branch mirror endpoint-support
+audit, HYP-3427's wall-signature atlas, and HYP-3406's expanded-bank
+owner-support repair.  HYP-3415/HYP-3418 supply the critical-path caveat: the
+LRC14 completion theorem is the covering decorrelation floor, sharpened to a
+2-adic even-speed descent route, so this technique is a sidecar/certificate
+router unless it feeds that floor with HYP-3423-approved arithmetic,
+owner-current, two-adic, Helly-interval, energy-plus-sheet, endpoint-support,
+or wall-signature payload.
+
+Carrier / vertex set:
+
+```text
+proof motifs and recursive sidecars
+```
+
+Move: reinterpret requested outside motifs as controlled-forgetting sidecars.
+The live HYP-3406 signal is not a new scalar: residue+height still leaks,
+while residue+endpoint-owner support separates the scanned bank.  Therefore
+the theorem-facing technique is to turn owner-support exactness into a
+Schwarz-Christoffel boundary-order / Menger min-cut certificate.
+
+Recursive signature ladder:
+
+```text
+C0 coarse -> C1 residue -> C2 height/v2 -> C3 unit slot
+```
+
+still leaves a mixed theorem-exit fiber, while:
+
+```text
+C4 endpoint cut
+C5 Charal signature
+```
+
+leave none in the model.
+
+Preserved LRC predicate: theorem-exit separability for the enlarged
+HYP-3406 mixed fibers.
+
+Destroyed information if used naively: Bring radical alone forgets endpoint
+owners; BDH and Meissel-Mertens/Ramanujan-Soldner forget the local owner cut;
+Krasner/HLW preserve branch stability but not owner support; Sophie Germain
+sees quartic height walls but not endpoint cuts.
+
+Best use: formalize the endpoint-owner deletion cut as the next lemma.  Then
+use Schwarz-Christoffel boundary words as its geometric presentation and keep
+Bring/Krasner/HLW/Sophie-Germain/BDH/log-prime motifs as guarded sidecars.
+Use HYP-3417's margin-1 owner currents as the finite dual format and HYP-3416
+as the recursion protocol; after HYP-3424/HYP-3425, any additive or BDH payload
+must keep an explicit sheet profile before it can feed SPEC or phase debt; after
+HYP-3426/HYP-3427, any endpoint-cut payload must keep endpoint-support triples
+and wall labels.
+
+Failure mode: letting famous constants or quintic branch language replace the
+exact endpoint-owner support coordinate, or trying to prove the universal
+singleton-owner theorem that HYP-3414's size-3 frontier refutes; also letting
+q-uniform topology or boundary order stand in for the q-specific magnitude
+floor that HYP-3423 says must restore arithmetic/floor sidecars; also letting
+endpoint cuts replace the HYP-3425 Helly interval proof or letting energy
+scalars replace HYP-3425 energy-plus-sheet packets; also letting geometric
+SC/Menger language replace HYP-3427 wall signatures.
+
+Anchors: HYP-3440, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433,
+HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426,
+HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419,
+HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412,
+HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406,
+HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301,
+HYP-3265, HYP-3260, HYP-3259, HYP-3258,
+HYP-3257, HYP-3256, HYP-3254, HYP-3247, HYP-3123, HYP-2969, HYP-2963,
+THM-523, LTT-301, LTI-401, T1401, OPEN-Q-108.

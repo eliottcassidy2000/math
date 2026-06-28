@@ -33442,3 +33442,77 @@ is either canonical corridor-fence, has a noncanonical bounded rescue core, or
 routes through HYP-3436 survivors, endpoint-spine/wall ledgers, owner-current,
 exact-period/state-lift, or signed-SPEC.  Tournament vertices will be proof
 obligations/bridge carriers rather than runners or scalar masses.
+## codex-2026-06-28 -- Bring/SC/Menger Charal signature router -- HYP-3429
+
+Started from current `origin/main` after integrating HYP-3403 through HYP-3406.
+The incoming HYP-3406 result is the anchor: nonunit residue is bank-local,
+residue+height still leaves one enlarged-bank mixed theorem-exit fiber, and
+residue+owner-support separates the scanned banks.  During rebase this entry
+was renumbered to HYP-3429/T1390/LTI-390/LTT-290 so the incoming HYP-3412
+special-function scout and HYP-3414 owner-cut resurrection calculus remain
+intact.  Later rebases also brought in the HYP-3407 boundary-uniformization
+cut-stability atlas, HYP-3408 exotic guardrail atlas, HYP-3409 recursive
+sidecar pattern atlas, HYP-3410 exact charal-recursion packet, HYP-3411 Galois
+reframe, HYP-3413 GW gate, HYP-3416 recursive quotient ladder, HYP-3417
+owner-current certificate synthesis, HYP-3419 charal owner-cut recursion
+prototype, HYP-3420 owner-cut chiral synthesis, HYP-3421 off-grid resonance
+transparency, HYP-3422 two-adic off-grid relocation, HYP-3423 q-uniform
+topology / q-specific arithmetic guardrail, and the
+HYP-3415/HYP-3418 critical-path correction.  A later fetch brought in
+HYP-3424/T1385/LTI-385/LTT-285 as the covering-floor duality transfer plus two
+HYP-3425/T1386 follow-ons: the two-branch Helly audit and the additive-energy
+sheet sidecar.  Another incoming pair then added HYP-3426/T1387 one-branch
+mirror endpoint-support certificates and HYP-3427/T1388 wall-signature
+certificates.  A final incoming update claimed HYP-3428/T1389/LTI-389/LTT-289
+for the two-adic descent loss ledger, so the local Bring/SC/Menger work was
+renumbered to HYP-3440/T1401/LTI-401/LTT-301 and recorded as their lower-payload endpoint-cut
+motif slice, not the completion theorem: the live LRC14 proof lane is still the
+covering decorrelation floor `R' > 0`, sharpened by HYP-3421/HYP-3422 to
+off-grid transparency plus a two-adic relocation interval problem, routed by
+HYP-3424, audited by HYP-3428's loss ledger, and policed by
+HYP-3423/HYP-3425/HYP-3426/HYP-3427 so q-uniform topology, endpoint-cut
+metaphors, raw energy scalars, halving shortcuts, and wall-free geometric
+analogies do not replace q-specific arithmetic/floor/packet/wall sidecars.
+After rebasing over HYP-3429-HYP-3437, this router is subordinate to endpoint
+spines, scalar firewalls, corridor fences, overlap-tax identities, branch-cover
+endpoint-gate ledgers, and the HYP-3437 overlap-tax Menger-cut extractor.
+
+New artifacts:
+`04-computation/lrc14_bring_sc_menger_charal_signatures_codex_20260628.py`,
+`05-knowledge/hypotheses/HYP-3440-lrc14-bring-sc-menger-charal-signatures.md`,
+`05-knowledge/results/lrc14_bring_sc_menger_charal_signatures_codex_20260628.out`,
+and
+`07-reflections/lrc14-bring-sc-menger-charal-signatures-codex-20260628.md`.
+
+The scout ranks requested motifs as typed sidecars, not proof shortcuts.
+Top path:
+
+```text
+schwarz_christoffel_owner_polygon
+-> menger_endpoint_cut_resurrection
+-> bring_radical_branch_kernel
+-> krasner_hlw_no_free_slider_guard
+-> barban_davenport_halberstam_variance_gate
+-> sophie_germain_quartic_factor_gate
+-> ramanujan_soldner_mertens_bulk_zero
+```
+
+Recursive Charal signature ladder on the HYP-3406 mixed-fiber model:
+coarse has one mixed fiber, residue branch has two, height/v2 and unit-slot
+still leak, but endpoint cut and full Charal signature leave zero mixed fibers.
+Conclusion: formalize HYP-3414-style bounded owner transversals as a
+Schwarz-Christoffel boundary-order / Menger min-cut theorem, use HYP-3417's
+margin-1 currents as the finite dual certificates, and feed the result into
+HYP-3416's recursive quotient ladder.  HYP-3419 shows the `10->20` frontier
+blocks a universal singleton-owner shortcut with a size-3/depth-3 owner
+decision tree; HYP-3420 shows owner/chiral-owner sidecars kill scanned mixed
+fibers.  HYP-3421/HYP-3422 show where this sidecar can matter to the proof:
+it should name endpoint-owner or branch debt for the two-adic floor route if
+relocation fails.  HYP-3423 says that even a successful SC/Menger boundary
+certificate cannot become a q-specific magnitude proof without arithmetic,
+owner-current, or two-adic floor payload.  Bring, Krasner, HLW, BDH, Sophie Germain,
+Ramanujan-Soldner, and Meissel-Mertens remain guarded sidecars until the
+endpoint cut is retained,
+and none replace the HYP-3415/HYP-3418 floor inequality.  Also recorded the
+correction that the forum HLW note should be read as a
+transcendence/linear-independence guard, not an algebraic-independence theorem.

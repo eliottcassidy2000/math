@@ -7175,4 +7175,50 @@ Ramanujan-Soldner remain guardrails until converted to exact finite
 inequalities. -> HYP-3408, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402,
 HYP-3401, HYP-3407, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265,
 HYP-3260, HYP-3257, HYP-2982, HYP-2214, LTI-369, LTT-269, T1369,
+## OPEN-Q-108 addendum (codex-2026-06-28): endpoint-cut resurrection lemma
+
+HYP-3429 executes the requested Bring/SC/Menger slice after HYP-3412's
+special-function sidecar scout, HYP-3414's owner-cut resurrection calculus,
+HYP-3416's recursive quotient ladder, HYP-3417's owner-current certificates,
+HYP-3419's finite owner-cut decision-tree prototype, and HYP-3420's
+chiral-owner exactness audit, then HYP-3421's off-grid transparency scout and
+HYP-3422's two-adic relocation lemma, plus HYP-3423's topology/arithmetic
+guardrail, HYP-3424's covering-floor transfer router, the HYP-3425 Helly
+interval target, the HYP-3425 additive-energy sheet sidecar, HYP-3426's
+one-branch endpoint-support audit, HYP-3427's wall-signature atlas, and
+HYP-3428's two-adic descent loss ledger, with
+HYP-3407/HYP-3408/HYP-3409/HYP-3410/HYP-3411/HYP-3413 supplying boundary,
+guardrail, recursion, charal, Galois, and GW-gate context.
+HYP-3415/HYP-3418 keep this off the completion path unless it helps the
+2-adic covering-floor theorem.  HYP-3429 should feed owner/branch/packet/wall
+debt into that floor route through HYP-3428/HYP-3424/HYP-3422/HYP-3425/HYP-3426/HYP-3427
+certificates, not replace it,
+and HYP-3423 blocks q-uniform topology from standing in for q-specific
+magnitude arithmetic.  It
+reroutes the requested Bring radical,
+Schwarz-Christoffel, BDH, Menger,
+Ramanujan-Soldner, Sophie Germain, HLW, Krasner, and Meissel-Mertens motifs
+through the exact HYP-3406 enlarged-bank leak.  The live open lemma is:
+
+```text
+For every residue-plus-height mixed fiber in the enlarged actual-packet bank,
+a bounded endpoint-owner deletion transversal makes every cut-code bucket
+theorem-exit pure, or the row emits named owner-cut debt.
+```
+
+Schwarz-Christoffel boundary words should be the geometric presentation of the
+same certificate.  Bring/Krasner/HLW are branch/no-free-slider guardrails;
+BDH and Meissel-Mertens/Ramanujan-Soldner are colored bulk-floor sidecars;
+Sophie Germain is a quartic height-wall factor gate.  HYP-3425 adds that raw
+energy or BDH-like bulk summaries must keep a sheet-profile sidecar, and
+HYP-3426/HYP-3427 add that endpoint cuts must keep endpoint-support triples
+and exact wall words, and HYP-3428 adds that halving must keep even-child
+packets plus named loss classes.  None of these should
+replace the endpoint-owner cut, and HYP-3414 rules out a universal
+singleton-owner shortcut; use HYP-3417's margin-1 currents as the dual
+certificate format. -> HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409,
+HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311,
+HYP-3310, HYP-3301, HYP-3265,
+HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3254, HYP-3247,
+HYP-3123, HYP-2969, HYP-2963, THM-523, LTI-390, LTT-290, T1390,
 OPEN-Q-108.

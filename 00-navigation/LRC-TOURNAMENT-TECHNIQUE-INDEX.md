@@ -7943,7 +7943,9 @@ quotient_legality_status
   chain.
 - **Next hook:** HYP-3410 now implements the charal-recursion branch of this
   scout, HYP-3412 implements the broad cut-signature scout, and HYP-3420
-  implements the exact owner-cut/chiral-owner audit.
+  implements the exact owner-cut/chiral-owner audit.  HYP-3428/LTT-289 records
+  the lower-payload Bring/SC/Menger endpoint-cut motif tournament under the
+  HYP-3415/HYP-3418 floor caveat.
   Continue by testing the remaining cut-angle, variance-residual,
   local-stability, and root/branch sidecars against the next owner-support
   failure.
@@ -8909,3 +8911,76 @@ quotient_legality_status
 - **Pointers:** HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421,
   HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410,
   HYP-3406, HYP-3311, HYP-3265, THM-523, LTI-389, T1389, OPEN-Q-108.
+
+## LTT-301: Bring/SC/Menger Charal Motif Tournament
+
+- **Move:** Use proof motifs and recursive sidecars as vertices.  The motifs
+  are Bring branch kernel, Schwarz-Christoffel owner polygon, BDH variance
+  gate, Menger endpoint cut, Ramanujan-Soldner/Meissel-Mertens bulk zero,
+  Sophie Germain quartic factor gate, and Krasner/HLW no-free-slider guard.
+- **LRC use:** HYP-3440 is the Bring/SC/Menger endpoint-cut slice downstream of
+  HYP-3428's two-adic loss ledger, the HYP-3412 special-function sidecar
+  tournament, HYP-3414 owner-cut resurrection calculus, HYP-3416 recursive
+  quotient ladder, HYP-3417 owner-current certificates, HYP-3419/HYP-3420
+  owner-cut evidence, and HYP-3421/HYP-3422 off-grid/two-adic floor scouts,
+  plus HYP-3423's q-uniform topology / q-specific arithmetic guardrail,
+  HYP-3424's covering floor transfer router, the HYP-3425 Helly interval
+  target, the parallel HYP-3425 additive-energy sheet sidecar, HYP-3426's
+  one-branch mirror endpoint-support audit, and HYP-3427's wall-signature atlas, with
+  HYP-3407/HYP-3408/HYP-3409/HYP-3410/HYP-3411/HYP-3413 supplying boundary,
+  guardrail, recursion, charal, Galois, and GW gate context.  HYP-3415/HYP-3418
+  supply the critical-path caveat: LRC14 completion is the covering
+  decorrelation floor, now a 2-adic even-speed descent problem, so this
+  tournament is a certificate sidecar unless it feeds that floor.  It keeps
+  HYP-3406's exact enlarged-bank lesson:
+  residue+height still leaves one mixed theorem-exit fiber, but
+  residue+owner-support separates the scanned bank.  The tournament therefore
+  ranks boundary-order and endpoint-cut carriers ahead of branch, variance,
+  transcendence, and log-prime motifs.  HYP-3414 blocks the universal
+  singleton-owner shortcut and HYP-3417 supplies margin-1 finite currents,
+  turning the sidecar target into bounded owner transversals with
+  theorem-exit-pure cut-code buckets.  HYP-3424/HYP-3425 add a stricter packet
+  rule: endpoint cuts feed owner/branch debt, while additive/BDH bulk data
+  must keep sheet coordinates before feeding SPEC or phase debt.  HYP-3426 and
+  HYP-3427 further require endpoint-support triples and exact wall words before
+  any SC/Menger geometric presentation is used.  After HYP-3429-HYP-3437, this
+  tournament is best read as the boundary/min-cut vocabulary for endpoint
+  spines, harmonic scalar firewalls, branch-cover certificates, and the
+  overlap-tax Menger-cut extractor.
+- **Preserves:** owner-support exactness, endpoint-cut resurrection, boundary
+  order, branch-sheet address, p-adic stability, colored variance floor, and
+  quotient legality when carried as packet fields.
+- **Forgets / guardrail:** famous constants and generic quintic language do
+  not see endpoint owners.  HLW is used only as a no-free-slider guard; do not
+  import the overstrong algebraic-independence wording from the forum note.
+  HYP-3423 also blocks q-uniform topology or boundary order from standing in
+  for q-specific magnitude arithmetic or the `R' > 0` floor.  HYP-3425 blocks
+  boundary metaphors from replacing the Helly interval proof and blocks raw
+  energy scalars from replacing energy-plus-sheet packets.  HYP-3427 blocks
+  wall-free geometric analogy from replacing the exact survivor-window wall
+  signature.
+- **Pairwise observable:** retained current proof obligations minus destroyed
+  owner/height/variance/stability coordinates.
+- **Switch/gauge:** higher motif score; ties use motif name.
+- **Exact fingerprint:** `score_hist={-1:1,43:2,51:1,52:1,94:1,107:1}`,
+  `directed_3cycles=0`, `hamiltonian_path_count=1`, and priority path
+  `schwarz_christoffel_owner_polygon -> menger_endpoint_cut_resurrection ->
+  bring_radical_branch_kernel -> krasner_hlw_no_free_slider_guard ->
+  barban_davenport_halberstam_variance_gate ->
+  sophie_germain_quartic_factor_gate ->
+  ramanujan_soldner_mertens_bulk_zero`.
+- **Next hook:** prove bounded endpoint-owner deletion transversals for every
+  residue-plus-height mixed fiber, express the same certificate as a
+  Schwarz-Christoffel boundary word, and route it into HYP-3437/HYP-3435/HYP-3434/HYP-3429/HYP-3428/HYP-3424/HYP-3422/HYP-3425/HYP-3426/HYP-3427
+  only as owner/branch/packet/wall debt payload, not as a replacement for the
+  floor theorem, the Helly interval lemma, HYP-3423's arithmetic guardrail, or
+  HYP-3427's wall-signature certificate.
+- **Pointers:** HYP-3440, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433,
+  HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426,
+  HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3419,
+  HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412,
+  HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406,
+  HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301,
+  HYP-3265, HYP-3260, HYP-3259,
+  HYP-3258, HYP-3257, HYP-3256, HYP-3254, HYP-3247, HYP-3123, HYP-2969,
+  HYP-2963, THM-523, LTI-401, T1401, OPEN-Q-108.
