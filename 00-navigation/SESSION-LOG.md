@@ -114,6 +114,12 @@ also says consec does not maximize the associator `Sigma-kappa_3`, exact
 `1/7` was a near-coincidence, and `anchor=odd-residue` is refuted; the odd
 Worpitzky/associator term remains separate sidecar debt.
 
+The later HYP-3199 n=4 Einheit chart also connects: the fixed-path `a,b,c`
+model is a cover with a lossy five-state `S` fiber, while the partial-score
+`x,y` section is the exact chart.  HYP-3153 should therefore import n=4 table
+data only with minimality/deletion/congruence sidecars, especially the
+deletable `c` coordinate and the cover-to-chart circuit.
+
 ## mac-mini-2026-06-27-S72 -- the Lee-Yang circle web: coverage=R^6, dip=off-circle phi^4, Galois<=S4, compression hierarchy
 
 Owner: merge a dense web (Lee-Yang circle=binomial=cap pair-Pascal+de-Moivre-Laplace, dip=phi^4 off-circle;

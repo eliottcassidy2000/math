@@ -11,6 +11,7 @@ result: 05-knowledge/results/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260
 reflection: 07-reflections/lrc14-lee-yang-worpitzky-quartic-packet-codex-20260628.md
 related:
   - HYP-3160
+  - HYP-3199
   - HYP-3152
   - HYP-3151
   - HYP-3150
@@ -100,6 +101,16 @@ maximize the associator `Sigma-kappa_3`, and minimizes `kappa_4`; the
 Therefore this packet should first try to prove a covariance/excess
 co-emptiness lemma for the even fold, then carry the odd `-9S3`
 Worpitzky/associator term as separate sidecar debt.
+
+Post-rebase integration with HYP-3199 adds the n=4 minimality guardrail.  The
+fixed-Hamiltonian-path `a,b,c` model is a tiling cover with a five-state `S`
+fiber, while the partial-score `(0,1,1,2)` model is the exact two-coordinate
+Einheit chart `T=E,+ = x,- = y,S=x+y`.  The cover-to-chart map
+`x=a OR c`, `y=b OR c`, `S=c OR (a and b)` is a lossy monotone circuit, not a
+group quotient.  Thus any use of the tournament-4 table inside this packet
+must carry `n4_minimal_chart_status`, `n4_deletable_arc_coordinate`, and
+`n4_quotient_congruence_defect` before the Lee-Yang, Worpitzky, or quartic
+signals are scalarized.
 
 The Worpitzky packet reuses HYP-3151's exact data:
 
@@ -197,4 +208,5 @@ The scout leaves three load-bearing tasks:
 2. Prove the AP/consec `L_y` extremality in the required bank or route each
    exception to an existing finite-address/observer-gluing packet.
 3. Carry the ordered/Worpitzky/ear sidecars through the LRC predicate before
-   scalarizing to `p0`, `cap`, or a root radius.
+   scalarizing to `p0`, `cap`, or a root radius; when the n=4 model is used,
+   also carry the HYP-3199 minimality/deletable-`c` sidecar.

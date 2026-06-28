@@ -46,6 +46,14 @@ or raw cap numerology is not a legal proof object.  The packet has to carry the
 off-circle coordinate and the ordered/odd ear sidecar until a real LRC
 predicate-preserving map consumes them.
 
+HYP-3199 adds the parallel n=4 caution.  The fixed-path `a,b,c` tournament
+table is a cover with a high-multiplicity `S` fiber; the exact chart is the
+partial-score `(0,1,1,2)` section with `x,y`.  The compression
+`x=a OR c`, `y=b OR c`, `S=c OR (a and b)` is useful, but it forgets whether
+`S` came from the canary edge `c` or from the live pair.  So the HYP-3153
+packet should carry the n=4 minimality/deletion fields beside the
+Lee-Yang/quartic fields, not just the class table.
+
 Assumption challenged: tournament vertices are proof packets here, not
 runners, arcs, isomorphism classes, or score sequences.  The tournament
 fingerprint is transitive with one Hamiltonian path led by the HYP-3152
