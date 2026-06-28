@@ -1,0 +1,29 @@
+==============================================================================================
+ THE ONE OBSTRUCTION: algebraic certificates are WORST-CASE; comonotone fails at k=7; equidist succeeds
+==============================================================================================
+  k   P(M=0) comonotone   P(M=0) equidist  P(M=0) apex comb  Bonf-2 lower
+  2         5/7 (0.714)            0.7347            0.7857         0.735
+  3         4/7 (0.571)            0.6297            0.6905         0.633
+  4         3/7 (0.429)            0.5398            0.6190         0.551
+  5         2/7 (0.286)            0.4627            0.5048         0.490
+  6         1/7 (0.143)            0.3966            0.4571         0.449
+  7           0 (0.000)            0.3399            0.3347         0.429
+  8           0 (0.000)            0.2914            0.2658         0.429
+  9           0 (0.000)            0.2497            0.1811         0.449
+ 10           0 (0.000)            0.2141            0.1380         0.490
+----------------------------------------------------------------------------------------------
+ Lee-Yang: min|lam-zero| of Xi(lam)=G_M(1-lam); zero INSIDE unit disk => algebraic certificate FAILS
+  k  equidist min|zero|  #inside disk  comonotone min|zero|  #inside
+  2               7.000             0                 1.871        0
+  3               7.000             0                 1.054        0
+  4               6.999             0                 0.742        2
+  5               6.993             0                 0.588        2
+  6               6.976             0                 0.515        2
+  7               6.948             0                 1.000        0
+  8               6.892             0        (no dist k>=7)        -
+  9               6.817             0        (no dist k>=7)        -
+ 10               6.707             0        (no dist k>=7)        -
+==============================================================================================
+ READOUT: comonotone (worst case) P(M=0)->0 at k=7 (saturation, 7 x 1/7 = full circle); equidist &
+ the ACTUAL apex comb stay POSITIVE for all k (equidistribution). Algebraic certs see the worst case
+ => fail at k=7; the proof must use the apex comb's EQUIDISTRIBUTION (analytic), not a worst-case cert.
