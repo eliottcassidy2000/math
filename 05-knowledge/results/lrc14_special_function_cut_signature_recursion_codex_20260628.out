@@ -1,3 +1,103 @@
-HYP-3407 special-function cut signature recursion
-status=RESERVED
-evidence_pending=True
+HYP-3409 SPECIAL-FUNCTION CUT SIGNATURE RECURSION
+==============================================================================
+status=EVIDENCE / creative executable synthesis; not an LRC14 proof
+source=HYP-3406 expanded-bank rows plus special-function/cut sidecar prompts
+bank=single_limit=72 two_swap_limit=20
+
+rows=2431 kernel_hist={'q-witness-discharge': 1553, 'AP/GW-zero-open-equality': 2, 'unit-petal-named': 3, 'named-K33-state-lift': 2, 'positive-Haar-open': 871}
+
+CHARAL SIGNATURE MIXED-FIBER LADDER
+  legality=test whether kernel/theorem exit is a function of the signature
+  coarse_only                      mixed_kernel_fibers= 1 attrs=coarse_base
+  residue_only                     mixed_kernel_fibers= 3 attrs=residue_word
+  residue_plus_v2                  mixed_kernel_fibers= 2 attrs=residue_word,v2_word
+  residue_plus_exact_height        mixed_kernel_fibers= 2 attrs=residue_word,exact_height_word
+  residue_plus_unit_qsqrt7         mixed_kernel_fibers= 2 attrs=residue_word,unit_qsqrt7_word
+  residue_plus_BDH_variance        mixed_kernel_fibers= 3 attrs=residue_word,bdh_variance_packet
+  residue_plus_cut_angle           mixed_kernel_fibers= 0 attrs=residue_word,cut_angle_word
+  residue_plus_krasner_radius      mixed_kernel_fibers= 0 attrs=residue_word,krasner_radius_word
+  residue_plus_sophie_quartic      mixed_kernel_fibers= 2 attrs=residue_word,sophie_quartic_word
+  residue_plus_branch_alarm        mixed_kernel_fibers= 2 attrs=residue_word,branch_alarm_word
+  residue_plus_PGF_curve_proxy     mixed_kernel_fibers= 1 attrs=residue_word,pgf_curve_word
+  residue_plus_owner_support       mixed_kernel_fibers= 0 attrs=residue_word,owner_support_word
+
+MENGER-STYLE FIRST-SEPARATOR TABLE
+  owner_leak_petal_vs_single_swaps: size=14 kernels={'positive-Haar-open': 13, 'unit-petal-named': 1}
+    sample=single swap 1->26, single swap 1->40, single swap 1->54, single swap 1->68, single swap 3->26, single swap 3->40, single swap 3->54, single swap 3->68, ...
+    separating_sidecars=['unit_qsqrt7', 'SC_cut_angle', 'Krasner_radius', 'owner_support']
+  owner_height_leak_petal_10_vs_two_drops: size=12 kernels={'positive-Haar-open': 11, 'unit-petal-named': 1}
+    sample=two drop(1, 10)->add(15, 20), two drop(1, 10)->add(17, 20), two drop(1, 10)->add(19, 20), two drop(2, 10)->add(16, 20), two drop(3, 10)->add(15, 20), two drop(3, 10)->add(17, 20), two drop(3, 10)->add(19, 20), two drop(4, 10)->add(18, 20), ...
+    separating_sidecars=['SC_cut_angle', 'Krasner_radius', 'PGF_curve_proxy', 'owner_support']
+  height_leak_P10_GW_vs_GW_shell: size=3 kernels={'positive-Haar-open': 2, 'unit-petal-named': 1}
+    sample=GW-shell alias 12->132, single swap 12->48, P10+GW
+    separating_sidecars=['v2', 'exact_height', 'SC_cut_angle', 'Krasner_radius', 'Sophie_quartic', 'Bring_branch_alarm', 'PGF_curve_proxy', 'owner_support']
+  minimum_sidecar_covers=[('SC_cut_angle',), ('Krasner_radius',), ('owner_support',)]
+  readout=one owner/cut-style sidecar separates all residue-mixed leak families; height handles only some.
+
+FINITE ALGEBRA CHECKS
+  Sophie_Germain_identity_tests=64 failures=0
+  identity=a^4+4b^4=(a^2-2ab+2b^2)(a^2+2ab+2b^2)
+  readout=quartic splitting is a safe degree-four sidecar, not a terminal LRC proof.
+
+MOTIF TRANSFER RANKING
+  M01 score=45 Endpoint-owner Menger cut
+      signal=owner_support_word
+      rule=Treat mixed fibers as source-sink ambiguity; a sidecar is useful if it is a small separator hitting every bad path.
+      destroys_if_naive=('height-only repair', 'raw residue exactness')
+  M02 score=42 Schwarz-Christoffel owner polygon
+      signal=cut_angle_word
+      rule=Read endpoint-owner support as polygonal boundary turns; aggregate angles are tested against full owner labels.
+      destroys_if_naive=('endpoint labels if only angles are retained',)
+  M03 score=42 Krasner local owner ball
+      signal=krasner_radius_word
+      rule=If nearby owner supports lie in the same finite local ball, lift the theorem exit without re-solving the packet.
+      destroys_if_naive=('global endpoint identity',)
+  M04 score=38 Full PGF/root-curve branch payload
+      signal=pgf_curve_word
+      rule=The single value is not the whole curve; keep residue, height, and owner root-curve proxies before scalarizing.
+      destroys_if_naive=('state-level curve', 'ordered edge channel')
+  M05 score=34 Sophie Germain quartic split
+      signal=sophie_quartic_word
+      rule=Use a quartic split as the degree-four safety valve before any Abel-Ruffini/Bring alarm fires.
+      destroys_if_naive=('odd owner channel if factorized too early',)
+  M06 score=31 Barban-Davenport-Halberstam variance ledger
+      signal=bdh_variance_packet
+      rule=Track mean-square residue failure across packet fibers instead of trusting a pointwise residue scalar.
+      destroys_if_naive=('endpoint owner', 'exact height')
+  M07 score=27 Bring radical quintic alarm
+      signal=branch_alarm_word
+      rule=When a compressed fiber exposes five or more unresolved branches, stop solving by scalar radicals and attach branch data.
+      destroys_if_naive=('owner labels', 'PGF branch')
+  M08 score=26 Hermite-Lindemann-Weierstrass separation guard
+      signal=ordered_branch_channel
+      rule=Treat exponentials/root branches as ordered functions; do not collapse channels that only symmetric shadows preserve.
+      destroys_if_naive=('unordered scalar shadow',)
+  M09 score=21 Ramanujan-Soldner first-zero normalization
+      signal=zero_crossing_anchor
+      rule=Use the first zero of a signed residual as a normalization anchor for the first-failure search.
+      destroys_if_naive=('owner/height coordinates if only a zero is kept',)
+  M10 score=20 Meissel-Mertens residual correction
+      signal=mertens_residual_word
+      rule=After the main density term, keep the residual correction as its own sidecar rather than absorbing it into noise.
+      destroys_if_naive=('local owner channels', 'root branches')
+
+TOURNAMENT ANALYSIS
+  vertices=motif-to-sidecar transfer rules, not runners or arcs
+  pairwise_observable=weighted proof leverage after pricing destroyed coordinates
+  switch=fewer mixed fibers / more explicit sidecars / lower risk
+  vertices=10
+  score_hist={20: 1, 21: 1, 26: 1, 27: 1, 31: 1, 34: 1, 38: 1, 42: 2, 45: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  priority_path=M01 -> M02 -> M03 -> M04 -> M05 -> M06 -> M07 -> M08 -> M09 -> M10
+
+CONCLUSION
+  HYP-3406's endpoint-owner support remains the live separator.
+  Schwarz-Christoffel cut angles and Krasner local balls are promising
+  compressions of owner support, but they must be tested against full
+  endpoint labels; BDH/Mertens variance is useful as a residual ledger,
+  not as a terminal scalar.  Bring/HLW/root-curve language is best used
+  as a branch alarm: when a quotient hides ordered or degree-five payload,
+  keep the whole PGF/root structure or name the debt.  The recursive
+  CHARAL chain to try next is residue -> height/v2 -> owner support ->
+  cut current -> local stability -> full root/branch payload.

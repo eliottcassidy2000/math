@@ -50,11 +50,11 @@ Add terminal-exit labels before using BDH/Mertens-style averages.
 
 ## Lead codex-2026-06-28: Special-function cut signature recursion
 
-**Status:** RESERVED / creative synthesis scaffold; executable evidence pending
-(HYP-3407/T1368/LTI-368/LTT-268).
+**Status:** EVIDENCE / executable creative synthesis; not an LRC14 proof
+(HYP-3409/T1370/LTI-370/LTT-270).
 
 Claimed files:
-`05-knowledge/hypotheses/HYP-3407-lrc14-special-function-cut-signature-recursion.md`,
+`05-knowledge/hypotheses/HYP-3409-lrc14-special-function-cut-signature-recursion.md`,
 script
 `04-computation/lrc14_special_function_cut_signature_recursion_codex_20260628.py`,
 result
@@ -68,11 +68,20 @@ Ramanujan-Soldner zero-points, Sophie Germain quartic splitting,
 Hermite-Lindemann-Weierstrass separation, Krasner stability, and
 Meissel-Mertens residuals--into testable LRC14 sidecar-recursion signals.
 
-Next: implement the scout by replaying the HYP-3406 height and endpoint-owner
-leaks as controlled-forgetting rows; then compute recursive
-`charal_signature` mixed-fiber counts, a toy Menger exit-cut certificate,
-motif-transfer rankings, and Tournament Analysis over proof carriers rather
-than runners.
+Readout: on the HYP-3406 `(72,20)` expanded bank (`2431` rows), residue alone
+leaves `3` mixed theorem-exit fibers; residue+`v2` and residue+exact height
+each leave `2`; BDH variance leaves `3`; cut angle, Krasner radius, and full
+owner support each leave `0`; Sophie quartic and honest Bring branch alarm
+each leave `2`, while PGF/root proxy leaves `1`.  The `14`-row owner leak,
+`12`-row petal `10->20` owner/height-persistent leak, and `3`-row height leak
+all have minimum one-sidecar covers by `SC_cut_angle`, `Krasner_radius`, or
+`owner_support`.  Motif tournament path:
+`M01 -> M02 -> M03 -> M04 -> M05 -> M06 -> M07 -> M08 -> M09 -> M10`.
+
+Next: enlarge beyond `(72,20)` and stress `residue + cut_angle_word` and
+`residue + krasner_radius_word`.  If either fails, record the first collision
+and decide whether full endpoint-owner support, exact cut labels, or PGF/root
+branch payload is the true next sidecar.
 
 ## Lead codex-2026-06-28: Bring/Schwarz/BDH/Menger charal recursion
 

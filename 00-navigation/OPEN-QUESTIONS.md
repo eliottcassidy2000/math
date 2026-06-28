@@ -33,6 +33,11 @@ HYP-3407 reserves an executable creative synthesis route downstream of
 HYP-3406.  The intended move is to treat Bring radicals, Schwarz-Christoffel
 cut maps, Barban-Davenport-Halberstam variance, Menger cuts,
 Ramanujan-Soldner zero-point normalization, Sophie Germain quartic splitting,
+**OPEN-Q-108 HYP-3409 special-function cut signature recursion addendum:**
+HYP-3409 executes an exploratory synthesis route downstream of HYP-3406.  It
+treats Bring radicals, Schwarz-Christoffel cut maps,
+Barban-Davenport-Halberstam variance, Menger cuts, Ramanujan-Soldner
+zero-point normalization, Sophie Germain quartic splitting,
 Hermite-Lindemann-Weierstrass separation, Krasner stability, and
 Meissel-Mertens residuals as prompts for measurable LRC14 signature sidecars,
 not as proof imports.
@@ -69,6 +74,24 @@ fibers. -> HYP-3410, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402,
 HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260,
 HYP-3257, HYP-3124, HYP-2969, HYP-2963, THM-523, T1371, LTI-371, LTT-271,
 OPEN-Q-108.
+Readout: on the HYP-3406 expanded bank through `(72,20)` (`2431` rows),
+residue alone leaves `3` mixed theorem-exit fibers; residue+`v2` and
+residue+exact height each leave `2`; BDH variance leaves `3`; cut angle,
+Krasner radius, and owner support each leave `0`; Sophie quartic and honest
+Bring branch alarm each leave `2`, while PGF/root proxy leaves `1`.  The
+Menger-style first-separator table says the `14`-row owner leak, the `12`-row
+petal `10->20` owner/height-persistent leak, and the `3`-row height leak all
+have one-sidecar covers by `SC_cut_angle`, `Krasner_radius`, or
+`owner_support`.
+
+Open task: enlarge beyond `(72,20)` and test whether the compressed owner
+signals (`cut_angle_word`, `krasner_radius_word`) remain exact.  If either
+fails, the first collision should decide whether full endpoint-owner support,
+exact cut labels, or full PGF/root branch payload is the true next sidecar. ->
+HYP-3409,
+HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311,
+HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, T1370, LTI-370,
+LTT-270, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3405 AP-collar finite lemma certificate addendum:**
 HYP-3405 turns the HYP-3401 AP-collar obstruction into a certificate-shaped

@@ -38,23 +38,42 @@ Menger graph for `petal 13->26` and `petal 10->20`; extend HYP-3406 past
 owner-cut theorem.  Add terminal-exit labels before adding analytic averaging.
 
 ## codex-2026-06-28 -- boundary-uniformization cut stability -- HYP-3407
+## codex-2026-06-28 -- special-function cut signature recursion -- HYP-3409
 
-Reserved HYP-3407/T1368/LTI-368/LTT-268 for a long creative synthesis pass
-downstream of HYP-3406.  The claimed artifact set is:
+Reserved and then executed the special-function cut signature scout as a long
+creative synthesis pass downstream of HYP-3406.  The artifact was renumbered to
+HYP-3409/T1370/LTI-370/LTT-270 after mainline assigned HYP-3407 to the
+boundary-uniformization cut-stability atlas and HYP-3408 to the exotic
+guardrail atlas.  The artifact set is:
 `04-computation/lrc14_special_function_cut_signature_recursion_codex_20260628.py`,
 `05-knowledge/results/lrc14_special_function_cut_signature_recursion_codex_20260628.out`,
-`05-knowledge/hypotheses/HYP-3407-lrc14-special-function-cut-signature-recursion.md`,
+`05-knowledge/hypotheses/HYP-3409-lrc14-special-function-cut-signature-recursion.md`,
 and
 `07-reflections/lrc14-special-function-cut-signature-recursion-codex-20260628.md`.
 
-Evidence is still pending at reservation time.  The intended test is to turn
-Bring radical branch alarms, Schwarz-Christoffel cut-angle data,
-Barban-Davenport-Halberstam variance, Menger cuts, Ramanujan-Soldner
-zero-points, Sophie Germain quartic factorization, Hermite-Lindemann-
-Weierstrass separation, Krasner stability, and Meissel-Mertens residuals into
-measurable recursive LRC14 signature sidecars.  The core guardrail is still
-the function-compression rule: theorem exit must be constant on a compressed
-fiber, or the first missing coordinate becomes an explicit sidecar/debt.
+The executable scout imports HYP-3406's actual `(72,20)` expanded bank
+(`2431` rows) and turns Bring radical branch alarms, Schwarz-Christoffel
+cut-angle data, Barban-Davenport-Halberstam variance, Menger cuts,
+Ramanujan-Soldner zero-points, Sophie Germain quartic factorization,
+Hermite-Lindemann-Weierstrass separation, Krasner stability, and
+Meissel-Mertens residuals into measurable recursive LRC14 signature sidecars.
+The core guardrail is still the function-compression rule: theorem exit must
+be constant on a compressed fiber, or the first missing coordinate becomes an
+explicit sidecar/debt.
+
+Exact ladder: residue alone leaves `3` mixed fibers; residue+`v2` and
+residue+exact height each leave `2`; BDH variance leaves `3`; cut-angle,
+Krasner radius, and owner support each leave `0`; Sophie quartic and honest
+Bring branch alarm each leave `2`, while PGF/root proxy leaves `1`.  Menger
+readout: the `14`-row owner leak, `12`-row petal `10->20`
+owner/height-persistent leak, and `3`-row height leak all have one-sidecar
+covers by `SC_cut_angle`, `Krasner_radius`, or `owner_support`; height/`v2`
+only handles some leaks.  Motif tournament path:
+`M01 -> M02 -> M03 -> M04 -> M05 -> M06 -> M07 -> M08 -> M09 -> M10`.
+
+Next hook: enlarge beyond `(72,20)` and stress the compressed owner shadows
+`cut_angle_word` and `krasner_radius_word` before replacing full
+endpoint-owner support in any theorem statement.
 
 ## codex-2026-06-28 -- HYP-3410 Bring/Schwarz/BDH/Menger charal recursion for LRC14
 
@@ -32453,9 +32472,11 @@ remains the creative lead atlas.  Navigation/index references were corrected
 accordingly in `TANGENTS`, `OPEN-QUESTIONS`, the hypothesis index, and the
 results index.
 
-Rebased the `(72,20)` extension over incoming HYP-3407/T1368.  That scaffold is
-downstream rather than conflicting: it proposes recursive cut/signature tests
-starting from the HYP-3406 sidecar chain `residue -> height -> owner_support`.
+The later recursive cut/signature scaffold was renumbered to
+HYP-3409/T1370 after mainline HYP-3407/T1368 became the separate
+boundary-uniformization cut-stability atlas.  The scaffold remains downstream
+rather than conflicting: it proposes recursive cut/signature tests starting
+from the HYP-3406 sidecar chain `residue -> height -> owner_support`.
 
 Mesh notes already sent: `MSG-1403` claimed the enlarged-bank residue thread;
 `MSG-1404` reported the exact split between the height leak and the stronger
