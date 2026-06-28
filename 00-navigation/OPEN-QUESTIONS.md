@@ -93,6 +93,28 @@ priority path `R01 -> R11 -> R14 -> R04 -> R05 -> R02 -> R03 -> R15 -> R06 -> R0
 HYP-3265, HYP-3260, HYP-3257, HYP-3253, HYP-2969, HYP-2963, HYP-2595,
 HYP-2593, T1365, LTI-365, LTT-265, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3406 expanded residue-owner repair addendum:**
+HYP-3406 executes HYP-3404's residue-word breakpoint lead as the expanded-bank
+companion to HYP-3405's AP-collar finite-lemma certificate and the first
+enlarged-bank version of HYP-3402's first-leak table.  On the expanded
+HYP-2963 banks through
+`(single_limit,two_swap_limit)=(60,16)`, the nonunit residue word is no
+longer exact.  The first failure is height-driven:
+`P10+GW` collides with `GW-shell alias 12->132`, and `v2` / exact nonunit
+height repairs that collision.  But the stronger stable failure is
+endpoint-owner-driven: `petal 13->26` collides with positive-open single swaps
+into `26`, later `40` and `54`, while sharing the same residue word, `v2`
+word, and exact nonunit height word.
+
+Exact readout: `residue + owner_support` kills all mixed theorem-exit fibers on
+the scanned enlarged banks, while `residue + v2` and `residue + height` still
+leave `1` mixed fiber.  Open task: enlarge farther and locate the first
+failure of `owner_support`.  That next failure would decide whether the real
+post-HYP-3406 sidecar is tropical/off-grid, exact unit-contact holonomy, or a
+new named debt. -> HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310,
+HYP-3301, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253,
+HYP-2975, HYP-2969, HYP-2963, T1367, LTI-367, LTT-267, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3260 unit equioscillation nullspace addendum:**
 HYP-3260 sharpens the HYP-3246/HYP-3247 Chebyshev/equioscillation frame.
 **OPEN-Q-108 HYP-3310 C6 residue-magnitude factorization addendum:**

@@ -461,6 +461,7 @@ record what it destroys before asking it to prove anything.
 | LTI-364 | Shadow-charge packet gluing | Proof sidecars / shadow-charge carriers: C3/index shadow, `Q(sqrt(-7))` sign shadow, covering residue, `v2`, height, transfer, and analytic-lifting ledgers | HYP-3403 tests controlled forgetting on the HYP-3311 actual-packet bank.  C3/index plus `Q(sqrt(-7))` remain descriptive but leave one mixed theorem-exit fiber; nonunit covering residue leaves zero mixed kernel and route fibers; `v2` alone remains too weak; exact height and analytic lifting separate the bank but are high-payload or row-hash-like unless a lower sidecar fails. | HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3256, HYP-3254, HYP-3252, HYP-3249, HYP-3248, HYP-3247, HYP-3246, T1364, LTT-264, LTI-364, OPEN-Q-108 | Enlarge the actual-packet bank toward HYP-2963 and record whether covering residue remains the first repair or the first failure requires `v2`, height, owner, transfer, or off-grid floor. |
 | LTI-365 | Creative reframe lead atlas | Proof-reframe leads, residue-word breakpoint search, colored half-boundary deficit, endpoint-owner deletion cuts, tropical wall handoff, shadow-charge packet gluing, covering-flex Hessian, denominator-curvature transport | HYP-3404 turns the current creative LRC14 proof session into an executable first-failure queue.  It anchors on the HYP-3311 actual-packet bank, imports HYP-3401's AP-collar unit-height leak, treats HYP-3402 owner-current/tropical-wall words as the first dynamic sidecars, and imports HYP-3403 shadow-charge packet gluing as the low-cost controlled-forgetting table.  The atlas ranks fifteen proof leads and puts the residue-word breakpoint theorem first, followed by colored-resonance half-boundary sieve, endpoint deletion-cut Menger theorem, covering-flex Hessian, shadow-charge Farkas ledger, denominator-curvature transport, and Haar-Baire owner-strip zipper. | HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-3253, HYP-2969, HYP-2963, HYP-2595, HYP-2593, T1365, LTT-265, LTI-365, OPEN-Q-108 | Enlarge the actual-packet sheaf to broader HYP-2963 rows.  For the first residue-word mixed fiber, compute owner-current, tropical-wall, shadow-charge sidecar, colored CRT half-boundary, endpoint deletion-cut, low odd Faulhaber moment, and covering-flex nullspace data before escalating to a symbolic rank-one theorem. |
 | LTI-366 | AP-collar finite lemma certificate | Exact rational safe-interval witnesses, AP/GW boundary atoms, uniform strict-open mass floor, quotient obstruction fiber, unit-height repair vector, sidecar repair matrix | HYP-3405 turns HYP-3401 into a finite theorem target.  Over the AP one-swap collar through speed `84`, AP and Goddyn-Wong `12->24` are the only boundary-tight rows; the other `922` rows have verified rational strict-open intervals with floor `1/1260`, uniquely at `12->36`.  The HYP-3311 nonunit-height packet has one mixed fiber of size `31`, witnessed by AP versus strict-open `13->27`; the missing coordinate is the unit-height lift `(13,0)->(13,1)`. | HYP-3405, HYP-3401, HYP-3404, HYP-3403, HYP-3402, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-3255, THM-523, T1366, LTT-266, LTI-366, OPEN-Q-108 | Formalize the finite certificate as a paper/Lean-facing lemma, then globalize it by replacing row-height retention with a chamber sidecar routing height/flex moves to AP/GW boundary, strict-open mass, `Phi14d`, Toeplitz/Green/root-motion discharge, state-lift debt, or named residual. |
+| LTI-367 | Expanded-bank residue / owner-support repair | Enlarged HYP-2963 banks, HYP-3311 coarse sheaf base, HYP-3310 residue / `v2` / exact-height sidecars, unit-slot / quadratic slot words, HYP-2975 endpoint-owner support word | HYP-3406 executes HYP-3404's residue-word breakpoint lead by extending HYP-3311/HYP-3402 from the curated bank to larger HYP-2963 banks, as the expanded-bank companion to HYP-3405's AP-collar finite lemma.  The nonunit residue word stops being exact immediately.  One leak is height-driven and repaired by `v2` / exact nonunit height, but the stronger persistent leak is endpoint-owner-driven and survives residue+`v2` and residue+height.  `residue + owner_support` kills all mixed theorem-exit fibers on scanned banks through `(single_limit,two_swap_limit)=(60,16)`. | HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253, HYP-2975, HYP-2969, HYP-2963, THM-523, T1367, LTT-267, LTI-367, OPEN-Q-108 | Enlarge farther and locate the first failure of `residue + owner_support`; that next leak decides whether the real post-HYP-3406 sidecar is tropical/off-grid, unit-contact holonomy, or a new named debt. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -6187,6 +6188,58 @@ Anchors: HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, H
 HYP-3266, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3256, HYP-3254,
 HYP-3252, HYP-3249, HYP-3248, HYP-3247, HYP-3246, LTT-264, T1364,
 OPEN-Q-108.
+
+## LTI-367: Expanded-Bank Residue / Owner-Support Repair
+
+Created by monad-explorer-2026-06-28 for HYP-3406/T1367, downstream of
+HYP-3404's residue-word breakpoint lead, HYP-3405's AP-collar finite lemma,
+HYP-3311, and HYP-3402.  This
+technique stress-tests HYP-3311's residue-word repair on enlarged HYP-2963
+packet banks and asks which next sidecar really restores theorem-exit
+exactness.
+
+Carrier / vertex set:
+
+```text
+residue-word repair sidecars over the coarse actual-packet sheaf base
+```
+
+Pairwise observable:
+
+```text
+how many mixed theorem-exit fibers survive after adjoining the sidecar
+on enlarged packet banks.
+```
+
+Readout on enlarged banks through `(single_limit,two_swap_limit)=(60,16)`:
+
+```text
+residue only fails in two ways:
+  1. height-driven leak: P10+GW vs GW-shell alias 12->132
+  2. endpoint-owner leak: petal 13->26 vs positive-open single swaps
+
+residue + v2 still leaves 1 mixed fiber.
+residue + exact nonunit height still leaves 1 mixed fiber.
+residue + owner_support leaves 0 mixed fibers.
+```
+
+Preserved LRC predicate: theorem-exit separability on enlarged theorem-facing
+packet banks.
+
+Destroyed information: endpoint-owner support if only residue/height data is
+kept; exact unit-slot identity if only counts are kept.
+
+Best use: after HYP-3311, test residue-word claims on enlarged banks before
+promoting them to theorem currency.  If the row survives residue+height, route
+immediately to endpoint-owner support instead of continuing to recycle the
+covering ledger.
+
+Failure mode: treating a height repair as global when the stronger stable leak
+is owner-side.
+
+Anchors: HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301, HYP-3265,
+HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253, HYP-2975, HYP-2969,
+HYP-2963, LTT-267, T1367, OPEN-Q-108.
 
 Next agent hook: enlarge the actual-packet bank toward HYP-2963 and locate
 the first failure of nonunit-residue theorem-exit separation.

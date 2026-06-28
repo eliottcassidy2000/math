@@ -7792,3 +7792,35 @@ quotient_legality_status
 - **Pointers:** HYP-3404, HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3300,
   HYP-3266, HYP-3265, HYP-3260, HYP-3257, HYP-3253, HYP-2969, HYP-2963,
   HYP-2595, HYP-2593, LTI-365, T1365, OPEN-Q-108.
+
+## LTT-267: Expanded-Bank Residue / Owner-Support Repair Tournament
+
+- **Move:** Use sidecar repairs over the coarse actual-packet sheaf base as
+  tournament vertices and orient edges by how many mixed theorem-exit fibers
+  survive on enlarged HYP-2963 banks.
+- **LRC use:** HYP-3406 executes HYP-3404's residue-breakpoint lead as the
+  expanded-bank companion to HYP-3405's AP-collar finite lemma and shows the
+  first residue leak is height-driven
+  (`P10+GW` versus `GW-shell alias 12->132`), but the stronger stable leak is
+  endpoint-owner-driven (`petal 13->26` versus the positive-open single-swap
+  `26`/`40`/`54` families).  The first leak is repaired by `v2` / exact
+  height; the stronger leak is first repaired by endpoint-owner support.
+- **Preserves:** coarse theorem exit, nonunit residue, nonunit height/flex,
+  unit-slot occupancy, quadratic slot sign, and endpoint-owner support when
+  those are carried as packet fields.
+- **Forgets / guardrail:** residue-only data is only a curated-bank separator;
+  residue+height still forgets which endpoint-owner channels support the
+  positive boundary; unit-slot counts are descriptive but not exact.
+- **Pairwise observable:** number of mixed theorem-exit fibers left after
+  adjoining the sidecar on enlarged packet banks.
+- **Switch/gauge:** fewer mixed fibers first, then fewer forgotten
+  load-bearing coordinates, then smaller payload.
+- **Exact fingerprint:** `directed_3cycles=0`, `hamiltonian_path_count=1`, and
+  priority path `residue_plus_owner_support -> residue_plus_unit_qsqrt7 ->
+  residue_plus_v2 -> residue_plus_height -> residue_plus_unit_slot ->
+  residue_only`.
+- **Next hook:** after enlarging farther, log the first failure of
+  `residue_plus_owner_support` as the next true post-HYP-3406 sidecar need.
+- **Pointers:** HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310, HYP-3301,
+  HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253, HYP-2975,
+  HYP-2969, HYP-2963, THM-523, LTI-367, T1367, OPEN-Q-108.

@@ -1,0 +1,111 @@
+HYP-3406 EXPANDED RESIDUE / OWNER-SUPPORT REPAIR
+==============================================================================
+status=evidence / enlarged HYP-2963 bank stress test; not an LRC14 proof
+source=HYP-3311 actual-packet instantiation + HYP-3402 owner-current angle
+banks=single_limit/two_swap_limit in {(20,4),(30,8),(48,12),(60,16)}
+
+BANK single_limit=20 two_swap_limit=4
+  rows=125 kernel_hist={'q-witness-discharge': 61, 'AP/GW-zero-open-equality': 2, 'unit-petal-named': 3, 'named-K33-state-lift': 2, 'positive-Haar-open': 57}
+  sidecar audit over coarse_base + ...
+  residue_only                mixed_kernel_fibers=1
+  residue_plus_v2             mixed_kernel_fibers=0
+  residue_plus_height         mixed_kernel_fibers=0
+  residue_plus_unit_slot      mixed_kernel_fibers=1
+  residue_plus_unit_qsqrt7    mixed_kernel_fibers=1
+  residue_plus_owner_support  mixed_kernel_fibers=0
+
+  residue-only mixed fibers
+  fiber size=2 kernels={'positive-Haar-open': 1, 'unit-petal-named': 1}
+    positive-Haar-open   GW-shell alias 12->132       route=COVERING-MOMENT          unit_slot=(2, 2, 2) owner_support=('11:g1', '13:g1', '5:g1', '6:g2', '7:g7') v2=(0, 1, 1, 1, 2, 2, 3)
+    unit-petal-named     P10+GW                       route=BOUNDARY-PETAL-SPORADIC  unit_slot=(2, 2, 2) owner_support=('6:g2', '7:g7') v2=(0, 1, 1, 2, 2, 3, 3)
+
+BANK single_limit=30 two_swap_limit=8
+  rows=252 kernel_hist={'q-witness-discharge': 122, 'AP/GW-zero-open-equality': 2, 'unit-petal-named': 3, 'named-K33-state-lift': 2, 'positive-Haar-open': 123}
+  sidecar audit over coarse_base + ...
+  residue_only                mixed_kernel_fibers=2
+  residue_plus_v2             mixed_kernel_fibers=1
+  residue_plus_height         mixed_kernel_fibers=1
+  residue_plus_unit_slot      mixed_kernel_fibers=2
+  residue_plus_unit_qsqrt7    mixed_kernel_fibers=1
+  residue_plus_owner_support  mixed_kernel_fibers=0
+
+  residue-only mixed fibers
+  fiber size=4 kernels={'positive-Haar-open': 3, 'unit-petal-named': 1}
+    positive-Haar-open   single swap 1->26            route=COVERING-MOMENT          unit_slot=(1, 2, 2) owner_support=('12:g2', '13:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 3->26            route=COVERING-MOMENT          unit_slot=(2, 1, 2) owner_support=('11:g1', '12:g2', '13:g1', '6:g2') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 5->26            route=COVERING-MOMENT          unit_slot=(2, 2, 1) owner_support=('10:g2', '11:g1', '12:g2', '13:g1', '9:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    unit-petal-named     petal 13->26                 route=BOUNDARY-PETAL-SPORADIC  unit_slot=(1, 2, 2) owner_support=('12:g2', '1:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+  fiber size=2 kernels={'positive-Haar-open': 1, 'unit-petal-named': 1}
+    positive-Haar-open   GW-shell alias 12->132       route=COVERING-MOMENT          unit_slot=(2, 2, 2) owner_support=('11:g1', '13:g1', '5:g1', '6:g2', '7:g7') v2=(0, 1, 1, 1, 2, 2, 3)
+    unit-petal-named     P10+GW                       route=BOUNDARY-PETAL-SPORADIC  unit_slot=(2, 2, 2) owner_support=('6:g2', '7:g7') v2=(0, 1, 1, 2, 2, 3, 3)
+
+BANK single_limit=48 two_swap_limit=12
+  rows=484 kernel_hist={'q-witness-discharge': 234, 'AP/GW-zero-open-equality': 2, 'unit-petal-named': 3, 'named-K33-state-lift': 2, 'positive-Haar-open': 243}
+  sidecar audit over coarse_base + ...
+  residue_only                mixed_kernel_fibers=2
+  residue_plus_v2             mixed_kernel_fibers=1
+  residue_plus_height         mixed_kernel_fibers=1
+  residue_plus_unit_slot      mixed_kernel_fibers=2
+  residue_plus_unit_qsqrt7    mixed_kernel_fibers=1
+  residue_plus_owner_support  mixed_kernel_fibers=0
+
+  residue-only mixed fibers
+  fiber size=7 kernels={'positive-Haar-open': 6, 'unit-petal-named': 1}
+    positive-Haar-open   single swap 1->26            route=COVERING-MOMENT          unit_slot=(1, 2, 2) owner_support=('12:g2', '13:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 1->40            route=COVERING-MOMENT          unit_slot=(1, 2, 2) owner_support=('12:g2', '13:g1', '2:g2') v2=(0, 1, 1, 1, 2, 2, 3, 3)
+    positive-Haar-open   single swap 3->26            route=COVERING-MOMENT          unit_slot=(2, 1, 2) owner_support=('11:g1', '12:g2', '13:g1', '6:g2') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 3->40            route=COVERING-MOMENT          unit_slot=(2, 1, 2) owner_support=('11:g1', '12:g2', '13:g1', '6:g2') v2=(0, 1, 1, 1, 2, 2, 3, 3)
+    positive-Haar-open   single swap 5->26            route=COVERING-MOMENT          unit_slot=(2, 2, 1) owner_support=('10:g2', '11:g1', '12:g2', '13:g1', '9:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 5->40            route=COVERING-MOMENT          unit_slot=(2, 2, 1) owner_support=('10:g2', '11:g1', '12:g2', '13:g1', '9:g1') v2=(0, 1, 1, 1, 2, 2, 3, 3)
+    unit-petal-named     petal 13->26                 route=BOUNDARY-PETAL-SPORADIC  unit_slot=(1, 2, 2) owner_support=('12:g2', '1:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+  fiber size=3 kernels={'positive-Haar-open': 2, 'unit-petal-named': 1}
+    positive-Haar-open   GW-shell alias 12->132       route=COVERING-MOMENT          unit_slot=(2, 2, 2) owner_support=('11:g1', '13:g1', '5:g1', '6:g2', '7:g7') v2=(0, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 12->48           route=COVERING-MOMENT          unit_slot=(2, 2, 2) owner_support=('5:g1', '6:g2', '7:g7') v2=(0, 1, 1, 1, 2, 3, 4)
+    unit-petal-named     P10+GW                       route=BOUNDARY-PETAL-SPORADIC  unit_slot=(2, 2, 2) owner_support=('6:g2', '7:g7') v2=(0, 1, 1, 2, 2, 3, 3)
+
+BANK single_limit=60 two_swap_limit=16
+  rows=872 kernel_hist={'q-witness-discharge': 471, 'AP/GW-zero-open-equality': 2, 'unit-petal-named': 3, 'named-K33-state-lift': 2, 'positive-Haar-open': 394}
+  sidecar audit over coarse_base + ...
+  residue_only                mixed_kernel_fibers=2
+  residue_plus_v2             mixed_kernel_fibers=1
+  residue_plus_height         mixed_kernel_fibers=1
+  residue_plus_unit_slot      mixed_kernel_fibers=2
+  residue_plus_unit_qsqrt7    mixed_kernel_fibers=1
+  residue_plus_owner_support  mixed_kernel_fibers=0
+
+  residue-only mixed fibers
+  fiber size=11 kernels={'positive-Haar-open': 10, 'unit-petal-named': 1}
+    positive-Haar-open   single swap 1->26            route=COVERING-MOMENT          unit_slot=(1, 2, 2) owner_support=('12:g2', '13:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 1->40            route=COVERING-MOMENT          unit_slot=(1, 2, 2) owner_support=('12:g2', '13:g1', '2:g2') v2=(0, 1, 1, 1, 2, 2, 3, 3)
+    positive-Haar-open   single swap 1->54            route=COVERING-MOMENT          unit_slot=(1, 2, 2) owner_support=('12:g2', '13:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 3->26            route=COVERING-MOMENT          unit_slot=(2, 1, 2) owner_support=('11:g1', '12:g2', '13:g1', '6:g2') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 3->40            route=COVERING-MOMENT          unit_slot=(2, 1, 2) owner_support=('11:g1', '12:g2', '13:g1', '6:g2') v2=(0, 1, 1, 1, 2, 2, 3, 3)
+    positive-Haar-open   single swap 3->54            route=COVERING-MOMENT          unit_slot=(2, 1, 2) owner_support=('11:g1', '12:g2', '13:g1', '6:g2') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 5->26            route=COVERING-MOMENT          unit_slot=(2, 2, 1) owner_support=('10:g2', '11:g1', '12:g2', '13:g1', '9:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 5->40            route=COVERING-MOMENT          unit_slot=(2, 2, 1) owner_support=('10:g2', '11:g1', '12:g2', '13:g1', '9:g1') v2=(0, 1, 1, 1, 2, 2, 3, 3)
+    positive-Haar-open   single swap 5->54            route=COVERING-MOMENT          unit_slot=(2, 2, 1) owner_support=('10:g2', '11:g1', '12:g2', '9:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 9->54            route=COVERING-MOMENT          unit_slot=(2, 2, 1) owner_support=('10:g2', '11:g1', '12:g2', '13:g1', '5:g1', '7:g7', '8:g2') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+    unit-petal-named     petal 13->26                 route=BOUNDARY-PETAL-SPORADIC  unit_slot=(1, 2, 2) owner_support=('12:g2', '1:g1') v2=(0, 1, 1, 1, 1, 2, 2, 3)
+  fiber size=3 kernels={'positive-Haar-open': 2, 'unit-petal-named': 1}
+    positive-Haar-open   GW-shell alias 12->132       route=COVERING-MOMENT          unit_slot=(2, 2, 2) owner_support=('11:g1', '13:g1', '5:g1', '6:g2', '7:g7') v2=(0, 1, 1, 1, 2, 2, 3)
+    positive-Haar-open   single swap 12->48           route=COVERING-MOMENT          unit_slot=(2, 2, 2) owner_support=('5:g1', '6:g2', '7:g7') v2=(0, 1, 1, 1, 2, 3, 4)
+    unit-petal-named     P10+GW                       route=BOUNDARY-PETAL-SPORADIC  unit_slot=(2, 2, 2) owner_support=('6:g2', '7:g7') v2=(0, 1, 1, 2, 2, 3, 3)
+
+TOURNAMENT ANALYSIS
+  vertices=sidecar repairs over the coarse actual-packet sheaf base
+  pairwise_observable=number of mixed theorem-exit fibers surviving on enlarged banks
+  priority_path=residue_plus_owner_support -> residue_plus_unit_qsqrt7 -> residue_plus_v2 -> residue_plus_height -> residue_plus_unit_slot -> residue_only
+  directed_3cycles=0
+  hamiltonian_path_count=1
+
+CONCLUSION
+  The nonunit residue word is only a curated-bank separator.
+  On the expanded HYP-2963 banks, the first leak is height-driven
+    (P10+GW vs GW-shell alias 12->132),
+  but the stronger leak is endpoint-owner-driven
+    (petal 13->26 vs the positive-open single-swap 26-family).
+  Exact readout through single_limit=60 and two_swap_limit=16:
+    residue+v2 and residue+exact_height still leave mixed theorem-exit fibers,
+    while residue+owner_support kills all mixed kernel fibers.
+  So HYP-3402's endpoint-owner current route is the next exact repair
+  on the enlarged bank; tropical height data explains only the first subcase.
