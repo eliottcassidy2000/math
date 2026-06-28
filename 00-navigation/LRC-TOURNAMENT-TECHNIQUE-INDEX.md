@@ -7084,3 +7084,38 @@ quotient_legality_status
   HYP-3231, HYP-3230, HYP-3229, HYP-3227, HYP-3239, HYP-3238, HYP-3220, HYP-3219,
   HYP-3218, HYP-3216, HYP-3053, HYP-3149, HYP-3199, LTI-344, T1344,
   OPEN-Q-108.
+
+## LTT-245: Lag/Contact Support Tournament
+
+- **Move:** Treat lag-side shell projections as proof-carrier vertices rather
+  than as scalar statistics.  The tournament ranks `half_tiling_descent_sidecar`,
+  `circle_endpoint_arrangement_cell`, `lag_plus_contact_word`,
+  `lag_plus_contact_support`, `lag_plus_residue_histogram`,
+  `lag_plus_gap_multiset`, and `lag_profile_only`.
+- **LRC use:** HYP-3246 turns HYP-3245's ordinary lag transport into a
+  controlled-forgetting audit against HYP-3228 shell magic.  Exact bounded-bank
+  readout: lag profile alone leaves `1677` mixed shell fibers; residue
+  histogram cuts that to `62`; ordered contact support kills the ambiguity;
+  gap multiset does not.  The tournament-side moral is that shell packet data
+  is carried by an ordered endpoint/contact label, not by sizes alone.
+- **Preserves:** shell magic, endpoint/contact placement, finite bounded-bank
+  witness distinction, and the bridge to HYP-3243 endpoint cells and
+  HYP-3244 descent sidecars.
+- **Forgets / guardrail:** raw lag profile and raw gap multiset forget where
+  long gaps sit; those are diagnostics only.
+- **Fingerprint:** transitive tournament with score histogram
+  `{99:1,95:1,91:1,86:1,57:1,31:1,25:1}`, no directed 3-cycles, singleton
+  SCCs, and Hamiltonian path
+  `half_tiling_descent_sidecar -> circle_endpoint_arrangement_cell ->
+  lag_plus_contact_word -> lag_plus_contact_support ->
+  lag_plus_residue_histogram -> lag_plus_gap_multiset -> lag_profile_only`.
+- **Next hook:** compare `contact_support` and `contact_word` to HYP-3204
+  ordered-tail exchange rows, HYP-3243 endpoint arrangement cells, and
+  HYP-3244 tiling-lift / half-tiling-descent failures, then ask for a
+  symbolic shell decomposition
+  `lag transport + contact sidecar + named repair`.
+- **Pointers:** HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
+  HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234,
+  HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3226,
+  HYP-3225, HYP-3224, HYP-3204, HYP-3203, HYP-3202, HYP-3138, LTI-345, T1345,
+  OPEN-Q-108.

@@ -1,0 +1,58 @@
+HYP-3246 shell-lag commutator / contact-support sidecar
+==============================================================================
+bank=anchored bounded k=8 rows E={0} union A, A subset [1,14], |A|=7
+rows=3432 elapsed_seconds=59.740
+
+COARSE FIBER COUNTS
+  ac fibers=1747 mixed_magic_fibers=1677
+  ac+hist fibers=3370 mixed_magic_fibers=62
+  ac+hist+contact_support fibers=3432 mixed_magic_fibers=0
+  readout=ordinary lag profile is highly mixed; residue histogram repairs most but not all;
+           ordered contact-support kills the remaining bounded-bank ambiguity.
+
+MIXED-WITNESS: ac only
+  first mixed ac fiber
+  E=(0, 1, 2, 3, 4, 5, 6, 8) magic=997/420 hist=(1, 2, 1, 1, 1, 1, 1) resword=(0, 1, 2, 3, 4, 5, 6, 1) gaps=(1, 1, 1, 1, 1, 1, 2) contact_support=(6,)
+  E=(0, 2, 3, 4, 5, 6, 7, 8) magic=297/98 hist=(2, 1, 1, 1, 1, 1, 1) resword=(0, 2, 3, 4, 5, 6, 0, 1) gaps=(2, 1, 1, 1, 1, 1, 1) contact_support=(0,)
+
+MIXED-WITNESS: ac + residue histogram
+  first mixed ac+hist fiber
+  E=(0, 1, 2, 3, 4, 5, 6, 14) magic=2519/980 hist=(2, 1, 1, 1, 1, 1, 1) resword=(0, 1, 2, 3, 4, 5, 6, 0) gaps=(1, 1, 1, 1, 1, 1, 8) contact_support=(6,)
+  E=(0, 8, 9, 10, 11, 12, 13, 14) magic=57097/25480 hist=(2, 1, 1, 1, 1, 1, 1) resword=(0, 1, 2, 3, 4, 5, 6, 0) gaps=(8, 1, 1, 1, 1, 1, 1) contact_support=(0,)
+
+REFINEMENT INSIDE THE 62 MIXED ac+hist FIBERS
+  unresolved after adding gap_multiset=62
+  unresolved after adding contact_support=0
+  readout=the missing sidecar is positional.  Gap sizes alone do not repair the
+           shell functional; the positions of the non-unit gaps do.
+
+GAP-MULTISET FAILURE WITNESS
+  E=(0, 1, 2, 3, 4, 5, 6, 14) magic=2519/980 resword=(0, 1, 2, 3, 4, 5, 6, 0) gaps=(1, 1, 1, 1, 1, 1, 8) gap_multiset=(8,) contact_support=(6,)
+  E=(0, 8, 9, 10, 11, 12, 13, 14) magic=57097/25480 resword=(0, 1, 2, 3, 4, 5, 6, 0) gaps=(8, 1, 1, 1, 1, 1, 1) gap_multiset=(8,) contact_support=(0,)
+  bucket_by_gap_multiset:
+    (8,): [Fraction(57097, 25480), Fraction(2519, 980)]
+
+SHARP COLLISION PAIR
+  E=(0, 1, 2, 3, 4, 12, 13, 14) magic=211/98 q0+q6=1507/7644 q3=347/1911 ac=(8, 6, 4, 2, 1, 0, 0, 0, 1, 2, 3, 3, 3, 2, 1) hist=(2, 1, 1, 1, 1, 1, 1) resword=(0, 1, 2, 3, 4, 5, 6, 0) gaps=(1, 1, 1, 1, 8, 1, 1) contact_support=(4,)
+  E=(0, 1, 2, 10, 11, 12, 13, 14) magic=71394/35035 q0+q6=77309/420420 q3=41819/210210 ac=(8, 6, 4, 2, 1, 0, 0, 0, 1, 2, 3, 3, 3, 2, 1) hist=(2, 1, 1, 1, 1, 1, 1) resword=(0, 1, 2, 3, 4, 5, 6, 0) gaps=(1, 1, 8, 1, 1, 1, 1) contact_support=(2,)
+  readout=same ordinary lag profile, same residue histogram, and same residue word mod 7;
+           only the position of the long gap changes, and the shell functional changes with it.
+
+ASSUMPTION CHALLENGE
+  alternate vertices considered: raw lag fibers, residue histograms, gap multisets,
+  ordered contact-support, full contact words, circle endpoint cells, and tiling lifts.
+  chosen sidecar=ordered positions of the non-unit gaps in the anchored gap word.
+  preserved predicate=HYP-3228 shell magic and HYP-3245 lag-side transport.
+  destroyed information by lag-only projection=which endpoint cell the long gaps occupy.
+  challenged assumption=autocorrelation plus residue data already names the shell packet.
+  Exact bank evidence says no: ordered contact support is still needed.
+
+TOURNAMENT ANALYSIS
+vertices=quotients/sidecars for the HYP-3245 -> HYP-3228 projection
+pairwise_observable=how much shell magic survives the lag-space projection
+switch/gauge=A->B iff A preserves more shell/contact/endpoint payload
+score_hist={99: 1, 95: 1, 91: 1, 86: 1, 57: 1, 31: 1, 25: 1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1,1]
+hamiltonian_path_count=1
+priority_path=half_tiling_descent_sidecar -> circle_endpoint_arrangement_cell -> lag_plus_contact_word -> lag_plus_contact_support -> lag_plus_residue_histogram -> lag_plus_gap_multiset -> lag_profile_only

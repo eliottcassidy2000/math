@@ -5216,3 +5216,60 @@ Pointers: HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3237, HYP-3236, 
 HYP-3231, HYP-3230, HYP-3229, HYP-3227, HYP-3239, HYP-3238, HYP-3220, HYP-3219,
 HYP-3218, HYP-3216, HYP-3053, HYP-3149, HYP-3199, LTT-244, T1344,
 OPEN-Q-108.
+
+## LTI-345: Shell-Lag Commutator / Contact-Support Sidecar
+
+Objects:
+
+```text
+ordinary support-autocorrelation fiber
+shell magic 10q0+q3+10q6
+residue histogram mod 7
+anchored gap word
+contact support = positions of non-unit gaps
+```
+
+HYP-3246 is the finite controlled-forgetting audit for the HYP-3245 to
+HYP-3228 projection.  The core bounded-bank result is exact:
+
+```text
+lag profile only                 -> 1677 mixed shell fibers
+lag profile + residue histogram  -> 62 mixed shell fibers
+lag profile + contact support    -> 0 mixed shell fibers
+gap multiset sidecar             -> still 62 mixed fibers
+```
+
+So the shell packet loses a positional coordinate under ordinary lag
+projection; the missing repair is an ordered endpoint/contact sidecar, not a
+size-only sidecar.
+
+It complements HYP-3245's outward lag transport, HYP-3228's shell dual,
+HYP-3204's ordered-tail pricing, HYP-3243's endpoint/cell atlas, and
+HYP-3244's lift/compress descent criterion.
+
+Technique:
+
+```text
+project row -> lag fiber
+measure shell-magic mixing
+restore residue histogram
+test whether sizes or positions of non-unit gaps repair the shell packet
+```
+
+Preserves: shell magic, ordered endpoint/contact placement, and a finite
+theorem-facing repair coordinate.
+
+Destroys if scalarized: circle endpoint arrangement cell, contact-word
+placement, and the bounded-bank distinction between same-size versus
+same-position gap defects.
+
+Next hook: compare `contact_support` directly with HYP-3243 endpoint cells,
+HYP-3204 ordered-tail exchange, and HYP-3244 tiling/half-tiling descent
+labels; then ask for a symbolic shell decomposition
+`lag transport + contact sidecar + named repair`.
+
+Pointers: HYP-3246, HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241,
+HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234,
+HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3226,
+HYP-3225, HYP-3224, HYP-3204, HYP-3203, HYP-3202, HYP-3138, LTT-245, T1345,
+OPEN-Q-108.
