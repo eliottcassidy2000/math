@@ -5010,3 +5010,69 @@ Anchors: HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236,
 HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3228, HYP-3227,
 HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3220, HYP-3201, HYP-3128,
 HYP-3123, HYP-3108, THM-572, LTI-340, LTT-240, T1340, OPEN-Q-108.
+
+## LTI-344: Lift/Compress Span for Tiling and Half-Tiling Recursions
+
+Objects:
+
+```text
+fixed-Hamiltonian-path tiling cube C_n
+half-tiling / incident-word orbit DAG
+path-presentation fiber H(T)/|Aut(T)|
+parent automorphism word orbit
+rectangle/hourglass coboundary residue
+tail/tip deletion packet
+```
+
+HYP-3244 separates the witness recursion from the quotient recursion.  The
+tiling cover is where explicit exchanges, edge flips, canary/filler arcs, and
+tail/tip witnesses live.  The half-tiling quotient is where automorphism
+orbits, rooted child classes, and `K_{k,k+1}` coboundary laws certify legal
+compression.
+
+It complements HYP-3231's scale-normal ledger, HYP-3232's
+modulus-covariance apex-break recursion, HYP-3234's signed chart sheaf,
+HYP-3235's totally-real Fejer-square packet, HYP-3236's Green conductance
+face, HYP-3237's Vitali core split, HYP-3238's crossed even/positive versus
+odd/negative legality bridge, HYP-3239's `D_7`/Borsuk-Ulam sign-isotypic
+refinement, incoming HYP-3240's dilation-witness guardrail, incoming HYP-3241's
+equioscillation saddle-index and shared AP/Goddyn-Wong `Phi_14` core,
+incoming HYP-3242's Euler/Cech-hole invariant, incoming HYP-3243's topology
+graph proof-route atlas, HYP-3220's positive/negative parity wall, HYP-3219's
+Brouwer/sign merge, and HYP-3218's Fejer/equidistribution proof-push by
+supplying the finite tournament descent test for whether a quotient step
+preserved the LRC predicate.
+
+Technique:
+
+```text
+build witness in C_n
+attach fiber/orbit/coboundary/deletion sidecars
+compress to the half-tiling quotient only if the sidecars descend
+route every failed descent to named proof debt
+```
+
+Preserves: explicit witness coordinates, class-orbit legality, fixed-path
+fiber multiplicity, rectangle/hourglass consistency, and the LRC predicate
+being transported.
+
+Destroys if scalarized: Hamiltonian-path presentation, endpoint owner labels,
+canary/filler `S`-fiber mass, route status, and active certificate
+coordinates.
+
+Next hook: use this span as the finite interface between HYP-3227
+trap-discharge witnesses, HYP-3230's three-gap/Stern-Brocot cap-kernel
+recursion, HYP-3232's speed-`>n/2` modulus-break deviations, HYP-3234's
+chart-change debts, HYP-3235's conductor-7 Fejer-square packet, HYP-3236's
+Green-resistance slack, HYP-3237's Vitali core witnesses, HYP-3238's
+odd/negative payload audit (`18` zero-negative false terminals and trap split
+`8+3`), HYP-3239's `D_7`/bimodal-discrepancy audit, HYP-3240's
+dilation-witness guardrail, HYP-3241's saddle-index/GW-core packet,
+HYP-3242's Euler/Cech-hole packet, HYP-3243's topology graph proof-route atlas,
+HYP-3219's sign/degree sidecar, HYP-3220's parity-sign wall, and HYP-3218's
+equidistribution certificate route.
+
+Pointers: HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
+HYP-3231, HYP-3230, HYP-3229, HYP-3227, HYP-3239, HYP-3238, HYP-3220, HYP-3219,
+HYP-3218, HYP-3216, HYP-3053, HYP-3149, HYP-3199, LTT-244, T1344,
+OPEN-Q-108.

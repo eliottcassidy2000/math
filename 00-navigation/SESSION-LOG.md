@@ -556,6 +556,72 @@ endpoint owners, triple overlaps, and proof obligations.  Preserved predicate:
 reset-calendar complexity, finite product-bound size, endpoint event order, and
 order-3 overlap constants.
 
+## codex-2026-06-28 -- Tiling/half-tiling interlocking recursions -- HYP-3244
+
+Owner prompt: think two interlocking recursions, the tiling model and the
+half-tiling model.  Added
+`04-computation/tournament_tiling_half_tiling_interlock_codex_20260628.py`,
+stored
+`05-knowledge/results/tournament_tiling_half_tiling_interlock_codex_20260628.out`,
+created
+`05-knowledge/hypotheses/HYP-3244-tiling-half-tiling-interlocking-recursions.md`,
+and wrote
+`07-reflections/tiling-half-tiling-interlocking-recursions-codex-20260628.md`.
+
+Core synthesis: the fixed-Hamiltonian-path tiling cube is the witness-rich
+recursion, while the half-tiling/incident-word orbit DAG is the compression
+recursion.  They form a controlled-forgetting span, not a scalar quotient.  The
+span commutes only with sidecars: `H(T)/|Aut(T)|` path-presentation fiber,
+parent automorphism incident-word orbit, rectangle/hourglass coboundary
+residue, and tail/tip deletion signature.
+
+Concurrency integration: after inspecting origin/main and the later push
+rejection, HYP-3231 is the scale-normal route recursion ledger, HYP-3232 is the
+modulus-covariance Eisenstein-fold/apex-break recursion, HYP-3233 is the
+cyclotomic-factor layer, HYP-3234 is the signed-address chart-change sheaf, and
+HYP-3235 is the totally-real cyclotomic field / Fejer-square packet, HYP-3236
+is the Green conductance / algebraic connectivity packet, and HYP-3219 is the
+Brouwer/sign factorization sidecar.  After later concurrent pushes, HYP-3237
+became the Vitali-wall / Brouwer equioscillation core-construction packet and
+HYP-3220 became the even-odd/positive-negative parity wall.  A later HYP-3238
+push named the crossed even-positive/odd-negative compression bridge.  After
+the HYP-3239/S76 push, the same interface also routes failed descent to the
+`D_7`/Borsuk-Ulam sign-isotypic certificate and to the bimodal-discrepancy
+diagonal.  Later mainline pushes claimed HYP-3240 for the hard-core
+dilation-witness construction and HYP-3241 for the equioscillation
+saddle-index `(p-1)/2` plus shared AP/Goddyn-Wong `Phi_14` core.  Still later,
+mainline claimed HYP-3242 for the Euler/Cech-hole topology packet and HYP-3243
+for the topology graph proof-route atlas, so this tiling/half-tiling packet
+moved to HYP-3244 and treats those as dilation-witness, topological-degree,
+Euler-hole, and topology-route sidecars.  It tests when small tiling/half-tiling
+quotients preserve the LRC predicate those route-level recursions act on.
+The HYP-3238 scout later made the crossed-duality sidecar exact: zero
+negative covariance has `18` primitive non-AP false terminals, and the `11`
+non-AP HYP-3202 traps split into `8` negative-leakage-plus-odd-`q3` debts and
+`3` odd-`q3` debts without negative leakage.
+
+Exact readout: the n=4 fixed-path chart uses flips `a=(0,2)`, `b=(1,3)`,
+`c=(0,3)` and has fibers `T:{E}`, `+:{a}`, `-:{b}`,
+`S:{c,ab,ac,bc,abc}`.  The half chart fixes arcs `2->0, 3->0, 1->2, 3->1`
+for partial score `[0,1,1,2]` and uses free bits `x=(2,3)`, `y=(0,1)` to
+realize `E,x,y,xy -> T,+,-,S`.  Through n=6, fixed-path fibers satisfy
+`H(T)/|Aut(T)|`; the half-tiling recursion has `5->6` rooted orbit count
+`296` and unrooted sink count `56`; the layer bridge law is
+`rank(K_{k,k+1})=2k`, redundancy `k(k-1)`.
+
+Proof-frontier hook: attach the lift/compress descent criterion to HYP-3227
+trap-discharge edges, HYP-3236 Green-resistance traps, HYP-3238
+crossed-duality sidecars, HYP-3239 `D_7`/bimodality sidecars, HYP-3220 parity
+sidecars, HYP-3219 sign sidecars, HYP-3237 Vitali-core witnesses, and
+HYP-3218's Fejer/equidistribution proof-push.  Each finite trap witness should
+name its tiling lift, half-tiling
+descent certificate, and failed sidecar if quotienting is illegal.
+Navigation updated: `05-knowledge/hypotheses/INDEX.md`,
+`05-knowledge/results/INDEX.md`, `00-navigation/TANGENTS.md` with T1344,
+`00-navigation/LRC-TECHNIQUE-INDEX.md` with LTI-344,
+`00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` with LTT-244, and
+`00-navigation/OPEN-QUESTIONS.md` with an OPEN-Q-108 descent addendum.
+
 ## kind-pasteur-2026-06-28-S31ap -- IMPROVED proof route: integrating the 2024-25 literature + a critical base flag
 
 Owner: improve the LRC(14) proof route as much/as many ways as possible, integrate niche concepts. Searched

@@ -1,0 +1,115 @@
+================================================================================
+HYP-3244: two interlocking recursions -- tiling model and half-tiling model
+================================================================================
+1. THE TWO n=4 CHARTS
+   Fixed-path tiling chart: base path 0->1->2->3; free flips
+   a=(0,2), b=(1,3), c=(0,3) from the transitive orientation.
+   Full fixed-path fibers:
+     T: ['E']
+     +: ['a']
+     -: ['b']
+     S: ['ab', 'c', 'ac', 'bc', 'abc']
+   Prompt table as XOR-on-generators followed by isomorphism class:
+       *    E   a   b   c
+       E |  T   +   -   S
+       a |  +   T   S   S
+       b |  -   S   T   S
+       c |  S   S   S   T
+
+   Half-tiling chart: fixed arcs 2->0, 3->0, 1->2, 3->1.
+   The fixed partial outdegree vector is [0,1,1,2].
+   Free bits are x=(2,3) and y=(0,1).
+       *    E   x   y
+       E |  T   +   -
+       x |  +   T   S
+       y |  -   S   T
+   Readout: the half chart is a four-state section, while the fixed-path
+   chart has an S-fiber of size 5.  The missing payload is not noise;
+   it is the canary/filler sidecar that later recurs as H(T)/|Aut(T)|.
+
+2. FIXED-PATH TILING COVER RECURSION
+   n  fixed_cube  U(n)  fiber_hist  H(T)/|Aut(T)| check
+   3           2     2  {1: 2}  True
+   4           8     4  {1: 3, 5: 1}  True
+   5          64    12  {1: 4, 3: 1, 5: 3, 9: 2, 11: 1, 13: 1}  True
+   6        1024    56  {1: 6, 3: 2, 5: 5, 9: 6, 11: 4, 13: 2, 15: 4, 17: 2, 19: 2, 23: 4, 25: 2, 29: 4, 31: 2, 33: 3, 37: 5, 41: 1, 43: 2}  True
+   This recursion is witness-rich: it keeps path and flip coordinates,
+   but its quotient map to A000568 is many-to-one.
+
+3. HALF-TILING / INCIDENT-WORD ORBIT RECURSION
+   parent n-class + incident word orbit under Aut(parent) -> rooted child -> unrooted sink
+   n->n+1  U(n)  raw=U(n)2^n  word_orbits  rooted  U(n+1)  orbit=rooted  rooted/U
+   1->2      1             2            2       2       1          True     2.000
+   2->3      1             4            4       4       2          True     2.000
+   3->4      2            16           12      12       4          True     3.000
+   4->5      4            64           48      48      12          True     4.000
+   5->6     12           384          296     296      56          True     5.286
+   First large bookkeeping surface 5->6:
+     incident-word orbit sizes = {1: 258, 3: 32, 5: 6}
+     rooted orbits per 6-class = {2: 5, 4: 10, 6: 41}
+     raw extensions per 6-class = {2: 5, 4: 10, 6: 15, 8: 12, 10: 11, 12: 2, 14: 1}
+   This recursion is quotient-efficient: it sees rooted classes exactly,
+   but it does not remember a chosen Hamiltonian path or flip witness.
+
+4. COBoundary LAWS FOR THE HALF-TILING COMPRESSION
+   Consecutive layer bridge K_{k,k+1}: lines=k(k+1), GF(2) rank=2k.
+   k  lines  rank  rectangle_redundancy
+   1      2     2                      0
+   2      6     4                      2
+   3     12     6                      6
+   4     20     8                     12
+   5     30    10                     20
+   6     42    12                     30
+   7     56    14                     42
+   Rectangle law: L(a,b)+L(a,b')+L(a',b)+L(a',b')=0.
+   A nonzero rectangle or hourglass residue means the quotient forgot
+   real LRC payload: owner, route, active support, or proof-obligation status.
+
+5. INTERLOCKING RECURSION INVARIANT
+   Let C_n be the fixed-path tiling cube and U_n the A000568 orbit set.
+   The useful object is a span, not a plain quotient:
+
+       C_n  --tiling add/free diagonal-->  C_{n+1}
+        |                                  |
+        v  quotient with fiber sidecar     v
+       U_n --Aut(parent)-word orbit-----> rooted U_{n+1} -> U_{n+1}
+
+   The square commutes only after adding sidecars:
+   path-presentation fiber H(T)/|Aut(T)|, parent automorphism word orbit,
+   rectangle/hourglass coboundary residue, and tail/tip deletion signature.
+   The n=4 S-fiber of size 5 is the smallest visible warning; the 5->6
+   surface makes it numerical: fixed-path cover=1024, rooted orbits=296,
+   unrooted classes=56.
+
+   LRC translation:
+   - Tiling recursion builds explicit witnesses and exchange moves.
+   - Half-tiling recursion compresses by symmetry and detects legal quotienting.
+   - The proof should alternate: lift to tiling for a witness, compress through
+     half-tiling only when sidecars certify that the LRC predicate descends.
+   - HYP-3216/HYP-3230/HYP-3231/HYP-3232/HYP-3233/HYP-3234/HYP-3235
+     and HYP-3218 supply the LRC-side ladder/fold/three-gap/scale/
+     modulus/chart/Fejer recursions; this packet supplies the
+     tournament-side lift/compress interface.
+
+6. TOURNAMENT ANALYSIS OVER PROOF CARRIERS
+   Vertices are proof carriers, not runners or arcs.
+   Observable: LRC predicate retained through lift/compress recursion minus quotient risk.
+   Switch: orient toward the carrier that keeps a witness and certifies descent.
+   vertices=['tail_tip_deletion_sidecar', 'tiling_witness_lift', 'half_tiling_orbit_compression', 'parent_aut_incident_word_orbit', 'coboundary_rectangle_hourglass_law', 'fiber_debt_H_over_Aut', 'n4_canary_filler_section', 'lrc_fejer_gram_recursion_bridge', 'raw_fixed_path_cube_count', 'raw_A000568_class_count']
+   score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+   directed_3_cycles=0
+   scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+   hamiltonian_paths=1
+   one_hamiltonian_path=tail_tip_deletion_sidecar -> tiling_witness_lift -> half_tiling_orbit_compression -> parent_aut_incident_word_orbit -> coboundary_rectangle_hourglass_law -> fiber_debt_H_over_Aut -> n4_canary_filler_section -> lrc_fejer_gram_recursion_bridge -> raw_fixed_path_cube_count -> raw_A000568_class_count
+
+ASSUMPTION CHALLENGE
+   Considered vertices: runners, arcs, gaps, fixed circle sections, section
+   boundaries, wall-crossing events, residues, cover arcs, Fourier modes,
+   matroid circuits, flip bits, deletion roots, rectangle defects, and proof
+   obligations.
+   Chosen vertices: proof carriers for the two recursions.
+   Preserves: explicit witnesses, orbit legality, fiber multiplicity,
+   coboundary consistency, and LRC sidecar descent.
+   Destroys if scalarized: runner labels, Hamiltonian-path presentation,
+   canary/filler S-fiber mass, endpoint ownership, and active certificate
+   coordinates.

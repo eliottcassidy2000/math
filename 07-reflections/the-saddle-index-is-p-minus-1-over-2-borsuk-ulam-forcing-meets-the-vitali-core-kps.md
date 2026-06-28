@@ -55,7 +55,7 @@ Brouwer route (no Borsuk–Ulam needed) — which is why `n=10,26,34` are the *e
 LRC(14) = BULK (meas{S>1/14}>0, circle-method/equidistribution; mac-mini S74, kps HYP-3218 Fejér)
         ⊕ CORE (Vitali wall; witnesses t=a/14 = Φ₁₄; mac-mini HYP-3237)
               ├ VALUE: equioscillation ±1/14  (Brouwer/EVT saddle; de Moivre/Chebyshev Φ₇)
-              └ FORCING: saddle index = (p−1)/2 = 3 ODD  ⇒  Borsuk–Ulam lower bound M≥1/14   ← THIS (HYP-3240)
+              └ FORCING: saddle index = (p−1)/2 = 3 ODD  ⇒  Borsuk–Ulam lower bound M≥1/14   ← THIS (HYP-3241)
 ```
 The core's two needs — *locate* the saddle (Brouwer/equioscillation) and *force* its value (a degree count) —
 are now both supplied: the index `(p−1)/2`, odd iff `p≡3 mod 4`.

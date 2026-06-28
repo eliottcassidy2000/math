@@ -5694,3 +5694,59 @@ residual debt.
 -> HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004, HYP-2902,
 HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553, THM-550, THM-549,
 THM-442, LTI-331, LTT-231, T1331, OPEN-Q-108.
+## OPEN-Q-108 addendum (codex-2026-06-28): tiling/half-tiling descent criterion
+
+HYP-3244 reframes the prompt's tiling model and half-tiling model as two
+interlocking recursions.  The fixed-path tiling cube builds explicit witnesses;
+the half-tiling incident-word orbit recursion compresses by symmetry.  The
+packet is complementary to HYP-3231's scale-normal ledger and HYP-3232's
+modulus-covariance apex break, and it tests HYP-3234's signed chart-change
+debts, HYP-3235's conductor-7 Fejer-square packet, HYP-3236's Green-resistance
+slack, HYP-3237's Vitali core/bulk split, HYP-3219's sign/degree sidecar, and
+HYP-3238's crossed even-positive/odd-negative bridge, HYP-3220's
+positive/negative parity wall, HYP-3239's `D_7`/Borsuk-Ulam sign-isotypic
+refinement and bimodal-discrepancy diagonal, and HYP-3218's
+Fejer/equidistribution proof-push on finite tournament carriers.  Incoming
+HYP-3240 supplies the hard-core dilation-witness guardrail, while incoming
+HYP-3241 supplies the saddle-index sidecar `(p-1)/2` and shared
+AP/Goddyn-Wong `Phi_14` core, deciding whether the quotient should retain an
+antipodal degree obstruction.  Incoming HYP-3242 supplies the Euler/Cech-hole
+invariant and incoming HYP-3243 supplies the topology graph route atlas.  The
+addendum asks which finite tournament
+quotients preserve those LRC-side recursion predicates.  The open proof
+question is whether the finite LRC14 trap witnesses can be lifted and
+compressed through the following descent criterion:
+
+```text
+tiling witness descends through the half-tiling quotient
+  if fiber sidecar is constant or accounted for,
+  parent-aut word orbit is named,
+  rectangle/hourglass residues vanish or are dual-annihilated,
+  and tail/tip deletion packets preserve the target LRC predicate.
+```
+
+Exact small evidence:
+
+```text
+n=4 fixed-path S-fiber has size 5
+n=6 fixed-path cover has 1024 states over 56 classes
+5->6 incident-word orbit recursion has 296 rooted orbits over 56 classes
+K_{k,k+1} coboundary rank is 2k with redundancy k(k-1)
+```
+
+HYP-3238 adds the exact crossed-duality warning to this open question:
+zero-negative covariance is not a legal terminal quotient (`18` primitive
+non-AP false terminals), and the HYP-3202 non-AP trap split is `8`
+negative-leakage-plus-odd-`q3` debts and `3` odd-`q3` debts without negative
+leakage.
+
+New proof obligation: attach this descent packet to every HYP-3227
+trap-discharge edge.  Each edge should declare its tiling lift, half-tiling
+descent certificate, and failed sidecar if quotienting is illegal.  Then test
+whether HYP-3230's three-gap cap-kernel kinks correspond to named
+rectangle/hourglass residues in the half-tiling compression, and whether
+HYP-3232's speed-`>n/2` deviations are exactly the same failed-descent
+events. -> HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235,
+HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3227,
+HYP-3220, HYP-3219, HYP-3218, HYP-3216, HYP-3053, HYP-3149, HYP-3199,
+LTI-344, LTT-244, T1344, OPEN-Q-108.

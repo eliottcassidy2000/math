@@ -3776,3 +3776,54 @@ reconstructs the lost coordinate, or emits named debt.
 -> HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004, HYP-2902,
 HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553, THM-550, THM-549,
 THM-442, LTI-331, LTT-231, OPEN-Q-108.
+## T1344: Tiling/Half-Tiling Interlocking Recursions (codex-2026-06-28)
+
+HYP-3244 turns the prompt's two tournament charts into a controlled-forgetting
+span.  The fixed-Hamiltonian-path tiling cube is the witness-rich recursion;
+the half-tiling/incident-word orbit DAG is the compression recursion.  The
+span commutes only with sidecars:
+
+```text
+path-presentation fiber H(T)/|Aut(T)|
+parent automorphism incident-word orbit
+rectangle/hourglass coboundary residue
+tail/tip deletion signature
+```
+
+This is complementary to HYP-3231's scale-normal route recursion,
+HYP-3232's modulus-covariance recursion, HYP-3234's signed-address
+chart-change debts, HYP-3235's totally-real Fejer-square packet, and
+HYP-3236's Green conductance packet, HYP-3237's Vitali core split,
+HYP-3238's crossed even-positive/odd-negative bridge, HYP-3220's
+positive/negative parity wall, HYP-3239's `D_7`/Borsuk-Ulam sign-isotypic
+refinement, incoming HYP-3240's dilation-witness guardrail, incoming
+HYP-3241's equioscillation saddle-index and shared AP/Goddyn-Wong `Phi_14`
+core, incoming HYP-3242's Euler/Cech-hole invariant, incoming HYP-3243's
+topology graph proof-route atlas, HYP-3219's Brouwer/sign sidecar, and
+HYP-3218's Fejer/equidistribution
+proof-push.  Those packets act on
+scale/modulus/speed/chart/cyclotomic/Green/core/dilation/topology/duality/dihedral/index/parity/sign
+coordinates, while this tangent gives the tournament lift/compress interface
+that decides when a small-model quotient has preserved the LRC predicate.
+
+Exact small readout: the n=4 fixed-path flips `a=(0,2)`, `b=(1,3)`,
+`c=(0,3)` have `S`-fiber `['ab','c','ac','bc','abc']`, while the four-fixed
+half-chart with partial score `[0,1,1,2]` and free `x=(2,3), y=(0,1)` gives
+`E,x,y,xy -> T,+,-,S`.  Through n=6, fixed-path fibers satisfy
+`H(T)/|Aut(T)|`; the half-tiling recursion has `5->6` rooted orbit count
+`296` and unrooted sink count `56`; the layer bridge law is
+`rank(K_{k,k+1})=2k`, redundancy `k(k-1)`.
+
+Proof use: build finite LRC witnesses in the tiling cover, then compress
+through the half-tiling quotient only when the sidecars certify descent.  The
+next finite test is to attach this span to HYP-3227 trap-discharge edges and
+HYP-3236/HYP-3237/HYP-3238/HYP-3239/HYP-3220/HYP-3219/HYP-3218 certificate
+routes.  The HYP-3238 scout supplies a concrete warning: zero negative
+covariance has `18` primitive non-AP false terminals, and the HYP-3202
+non-AP trap split is `8` negative-leakage-plus-odd-`q3` debts and `3`
+odd-`q3` debts without negative leakage.
+
+-> HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234,
+HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3227, HYP-3220,
+HYP-3219, HYP-3218, HYP-3216, HYP-3053, HYP-3149, HYP-3199, LTI-344,
+LTT-244, OPEN-Q-108.

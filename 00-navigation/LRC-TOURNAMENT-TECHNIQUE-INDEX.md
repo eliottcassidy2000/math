@@ -6935,3 +6935,52 @@ quotient_legality_status
   HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3228, HYP-3227,
   HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3220, HYP-3201, HYP-3128,
   HYP-3123, HYP-3108, THM-572, LTI-340, LTT-240, T1340, OPEN-Q-108.
+
+## LTT-244: Tiling/Half-Tiling Descent Tournament
+
+- **Move:** Treat the two recursion models as proof-carrier vertices rather
+  than as rival counts.  The tournament ranks `tail_tip_deletion_sidecar`,
+  `tiling_witness_lift`, `half_tiling_orbit_compression`,
+  `parent_aut_incident_word_orbit`, `coboundary_rectangle_hourglass_law`,
+  `fiber_debt_H_over_Aut`, `n4_canary_filler_section`,
+  `lrc_fejer_gram_recursion_bridge`, `raw_fixed_path_cube_count`, and
+  `raw_A000568_class_count`.
+- **LRC use:** HYP-3244 supplies a controlled-forgetting test for moving from
+  explicit tiling witnesses to half-tiling quotient statements.  The pairwise
+  observable is LRC predicate retained through lift/compress recursion minus
+  quotient risk.  This is the tournament-side interface for the LRC-side
+  ladder/fold/three-gap/scale/modulus recursions in HYP-3216, HYP-3230,
+  HYP-3231, HYP-3232, HYP-3233, HYP-3234, HYP-3235, HYP-3236, HYP-3237,
+  HYP-3238, HYP-3239, incoming HYP-3240's dilation-witness guardrail,
+  incoming HYP-3241's saddle-index/GW-core sidecar, incoming HYP-3242's
+  Euler/Cech-hole invariant, incoming HYP-3243's topology route atlas,
+  HYP-3220, HYP-3219, and HYP-3218.
+- **Preserves:** tail/tip deletion packets, flip witnesses, parent-aut word
+  orbits, fixed-path fiber debt, rectangle/hourglass consistency, and explicit
+  descent certificates.
+- **Forgets / guardrail:** raw fixed-path cube size and raw A000568 class
+  count forget canary/filler `S`-fiber mass, Hamiltonian-path presentation,
+  endpoint ownership, and active certificate coordinates.
+- **Fingerprint:** transitive tournament with score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}`, no directed 3-cycles,
+  singleton SCCs, and one Hamiltonian path:
+  `tail_tip_deletion_sidecar -> tiling_witness_lift ->
+  half_tiling_orbit_compression -> parent_aut_incident_word_orbit ->
+  coboundary_rectangle_hourglass_law -> fiber_debt_H_over_Aut ->
+  n4_canary_filler_section -> lrc_fejer_gram_recursion_bridge ->
+  raw_fixed_path_cube_count -> raw_A000568_class_count`.
+- **Next hook:** Attach the descent tournament to HYP-3227 trap-discharge
+  edges so every finite trap witness declares its tiling lift, half-tiling
+  descent certificate, and failed sidecar if quotienting is illegal.  Compare
+  each failure with HYP-3234 chart-change debt, HYP-3235 conductor debt,
+  HYP-3236 Green-resistance debt, HYP-3237 Vitali core debt, HYP-3238
+  crossed-duality payload debt (`18` zero-negative false terminals; non-AP trap
+  split `8+3`), HYP-3239 dihedral/Borsuk-Ulam degree debt, HYP-3240
+  dilation-witness debt, HYP-3241 saddle-index/GW-core debt, HYP-3242
+  Euler/Cech-hole debt, HYP-3243 topology-route debt, and HYP-3219 sign/degree
+  debt, with HYP-3220 as the parity-sign refinement, before scalarizing.
+- **Pointers:** HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233,
+  HYP-3232,
+  HYP-3231, HYP-3230, HYP-3229, HYP-3227, HYP-3239, HYP-3238, HYP-3220, HYP-3219,
+  HYP-3218, HYP-3216, HYP-3053, HYP-3149, HYP-3199, LTI-344, T1344,
+  OPEN-Q-108.
