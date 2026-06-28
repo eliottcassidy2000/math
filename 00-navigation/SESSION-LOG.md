@@ -19,6 +19,32 @@ coverage/covariance" at k=8. Delivered two fresh attack routes (HYP-3201):
 NET: LRC(14) not proved; two new machinery-backed routes on the last node, Angle 2 exhaustively verified
 with classical Toeplitz/Szego tools available. => HYP-3201; script + reflection
 two-new-angles-caratheodory-toeplitz-and-ferromagnetic-griffiths-kps.md.
+## mac-mini-2026-06-27-S73c -- two creative angles for the k=8 node: a Perron spectral route (even half, TESTED) + a Joukowski-Hermite-Biehler port (odd half)
+
+Owner: a new creative angle or two on a remaining LRC(14) target. kps S31ai (HYP-3160) split the last bounded
+node (k=8) into EVEN (consec maximizes total empty-sector covariance Sigma Cov(X_i,X_j), degree-2/provable) +
+ODD (the -9S3 Worpitzky/associator/apex-7 residue, hard). One angle per half. HYP-3201 + reflection
+two-creative-angles-for-the-k8-node.
+
+ANGLE A (even half, TESTED, strong -- lrc_covariance_circulant_perron_macmini_S73.py): the PERRON-FROBENIUS
+spectral route. The 6x6 empty-sector covariance C has the all-ones vector 1 as its PERRON eigenvector for consec
+(cos 0.94->0.999 as k grows; 1^T C1 = 2.161 ~ 6*lambda_max = 2.165), but 1 is ORTHOGONAL to Perron for
+dissociated (cos 0.02-0.09). FM/AFM sign split is SPECTRAL: consec puts 1 in the POSITIVE Perron mode (+1.44,
+ferromagnetic), dissociated in the NEGATIVE spectrum (-0.2..-0.6, antiferromagnetic). NOT exactly circulant
+(apex boundary ~0.05); Perron-alignment is the content. This gives the spectral REASON for codex HYP-3200's
+exact result (consec maximizes Sigma kappa2, 0/3431 over the bounded bank). Sharpened even-half target =
+Perron-Frobenius: 1 = Perron eigenvector of C.
+
+ANGLE B (odd half, PROPOSED, one leg closed): the JOUKOWSKI -> HERMITE-BIEHLER port. The dip = even (biquadratic,
+real-rooted S70) + odd (Worpitzky). NEW provable leg: the odd Worpitzky term is REAL-ROOTED because the Eulerian
+polynomials A_n(t) are (Frobenius 1910, verified A_3..A_5). So BOTH HB legs real-rooted -> only INTERLACING
+remains = the SAME condition as TRRT Lemma B (verified tournaments n=6-9), transported to the LRC circle by my
+Joukowski bridge (HYP-3154). CAVEAT: G_N not exactly self-inversive (q_t R^t != q_{6-t} R^{6-t}), so HB-on-circle
+is approximate; interlacing is the open content.
+
+CONVERGENCE: codex HYP-3200 (consec maximizes Sigma kappa2 exactly, 0/3431) = my Angle A target; kps S31ak picked
+up my Joukowski/de Moivre cyclotomic bridge (WHY n=14=cubic cyclotomic). NOT a proof; LRC(14) open. Both targets
+now in classical spectral (Perron) / stability (Hermite-Biehler/Eulerian) language.
 
 ## kind-pasteur-2026-06-27-S31ak -- the cyclotomic ideal: Joukowski/de Moivre + WHY n=14 = cubic cyclotomic degree
 
