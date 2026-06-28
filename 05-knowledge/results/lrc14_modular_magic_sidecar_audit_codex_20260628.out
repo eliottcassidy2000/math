@@ -1,0 +1,66 @@
+=== HYP-3229 modular magic sidecar audit for LRC(14) ===
+
+[1] Exact Fejer / de-Moivre / Chebyshev identity
+V_7(u) = u^7 - 7*u^5 + 14*u^3 - 7*u
+m(u) = u^3 + u^2 - 2*u - 1
+(V_7(u)-2)/(u-2) = u^6 + 2*u^5 - 3*u^4 - 6*u^3 + 2*u^2 + 4*u + 1
+m(u)^2 = u^6 + 2*u^5 - 3*u^4 - 6*u^3 + 2*u^2 + 4*u + 1
+identity_exact = True
+disc(m) = 49 = 7^2
+Fejer coefficients: -6:1, -5:2, -4:3, -3:4, -2:5, -1:6, 0:7, 1:6, 2:5, 3:4, 4:3, 5:2, 6:1
+
+[2] Beraha/Tutte and Mahler sidecars
+minimal polynomial for B_7 = 2 + 2cos(2pi/7): B^3 - 5*B^2 + 6*B - 1
+B_7 numeric = 3.246979603717467
+Mahler(m) numeric = 2.246979603717467
+Mahler(m) - (B_7 - 1) = 0.000e+00
+status = arithmetic height sidecar; not yet a certificate inequality
+
+[3] Explicit Gamma0(7) Eisenstein candidate
+E_7(tau) := (7 E_2(7 tau) - E_2(tau))/6
+q^1..q^28 coefficients:
+[4, 12, 16, 28, 24, 48, 4, 60, 52, 72, 48, 112, 56, 12, 96, 124, 72, 156, 80, 168, 16, 144, 96, 240, 124, 168, 160, 28]
+multiples of 7 retain the local conductor correction a_n=4*sigma1(n)-28*sigma1(n/7)
+certificate use = q-expansion generator for a level-7 LP dual sidecar
+
+[4] Dirichlet-L / Stark sidecar at conductor 7
+raw B_2(a/7) denominator lcm = 294
+principal: B_2,chi = -1; L(-1,chi) = 1/2; den_lcm=2
+even primitive chi_2: B_2,chi = 8/7 - 4/7*omega; L(-1,chi) = -4/7 + 2/7*omega; den_lcm=7
+even primitive chi_4: B_2,chi = 12/7 + 4/7*omega; L(-1,chi) = -6/7 - 2/7*omega; den_lcm=7
+guardrail = 7^2 appears in the sampling grid/discriminant, but L(-1,chi) denominators contract
+status = inconclusive for a closed cap formula; retain as conductor-7 sidecar, not proof core
+
+[5] Comb-overlap Gram kernel bridge (mac-mini S75 integration)
+K(p,q) := meas(D_p cap D_q) = <1_Dp, 1_Dq> is PSD by construction
+S75 proved the single-arc row K(1,q)=1/(7q), q<=13:
+K(1,1)=1/7, K(1,2)=1/14, K(1,3)=1/21, K(1,4)=1/28, K(1,5)=1/35, K(1,6)=1/42, K(1,7)=1/49, K(1,8)=1/56, K(1,9)=1/63, K(1,10)=1/70, K(1,11)=1/77, K(1,12)=1/84, K(1,13)=1/91
+K(7,q) constant sidecar = 1/49
+single-arc peeling: cap(P)=cap(P\{1})-(1/7)*(1-1/min(P\{1})) for speeds <=13
+certificate use = finite spatial Gram basis dual to the Fejer Fourier kernel
+remaining debt = order-3 triple-overlap constants, not the order-2 PSD kernel
+
+[6] Subshift / transfer-operator compression
+word autocorrelation of P(z)=1+...+z^6: {-6: 1, -5: 2, -4: 3, -3: 4, -2: 5, -1: 6, 0: 7, 1: 6, 2: 5, 3: 4, 4: 3, 5: 2, 6: 1}
+P(z)P(z^-1) has the same triangular Fejer coefficients and double 7th-root zeros
+rank-one block transfer Perron eigenvalue = 7; square mass at theta=0 = 49
+use = model AP as the unique rank-one/equioscillating transfer state before perturbation
+
+[7] Tournament Analysis over proof carriers
+vertices = ['fejer_demoivre_kernel', 'comb_overlap_gram_kernel', 'johnson_14_cap_kernel', 'gamma0_7_eisenstein_sidecar', 'toeplitz_green_conductance_bridge', 'subshift_transfer_operator', 'dirichlet_l_stark_sidecar', 'beraha_tutte_sidecar', 'mahler_lehmer_height_sidecar', 'raw_arithmetic_numerology_guardrail']
+pairwise observable = certificate payload, then formal checkability, then risk
+score_hist = {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3_cycles = 0
+hamiltonian_path = fejer_demoivre_kernel -> comb_overlap_gram_kernel -> johnson_14_cap_kernel -> toeplitz_green_conductance_bridge -> gamma0_7_eisenstein_sidecar -> subshift_transfer_operator -> beraha_tutte_sidecar -> dirichlet_l_stark_sidecar -> mahler_lehmer_height_sidecar -> raw_arithmetic_numerology_guardrail
+
+Assumption challenge:
+- Rejected vertices: runners, arcs, roots, q-coefficients, and famous constants alone.
+- Chosen vertices: proof carriers, because the LRC predicate is certificate payload retention.
+- Preserves: Fejer positivity/PSD, comb-Gram positivity, double-zero sharpness, cap-vs-sector split, conductor-7 labels.
+- Destroys: literal runner identity, raw height/numerology, and any unlabelled scalar extremality.
+
+Next proof tasks emitted by this audit:
+1. Match Gamma0(7) E_7 coefficients to the S75 comb-overlap Gram basis for finite LP rows.
+2. Prove Fejer/Gamma0/Gram slack dominates green-current trap weights and isolates order-3 debt.
+3. Feed successful rows into HYP-3215 Gap A while keeping the induction-base flag separate.
+4. Treat Dirichlet-L, Beraha, Mahler, and subshift data as sidecars until they preserve an LRC predicate.

@@ -30362,3 +30362,58 @@ Second push-time rebase integration: incoming HYP-3214 identifies the
 cyclotomic Delsarte/Beurling-Selberg magic function with the Fejer kernel
 `F_7`.  HYP-3227 now records this as the likely global dual to test against
 the Green-only trap graph weights and the precision-defect island.
+
+## codex-2026-06-28 -- Modular magic sidecar audit -- HYP-3229
+
+Continued the LRC14 proof-route push by turning the Stark/Dirichlet-L,
+Gamma0(7), Beraha/Tutte, Mahler/Lehmer, and subshift-transfer prompt into an
+exact sidecar audit around HYP-3214.  Added
+`04-computation/lrc14_modular_magic_sidecar_audit_codex_20260628.py`, stored
+`05-knowledge/results/lrc14_modular_magic_sidecar_audit_codex_20260628.out`,
+created
+`05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md`, and
+wrote
+`07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md`.
+
+Exact readout: `(V_7(u)-2)/(u-2)=(u^3+u^2-2u-1)^2`,
+`disc=49`, Fejer coefficients `(7-|n|)_+`, `B_7` polynomial
+`B^3-5B^2+6B-1`, and `Mahler(m)=B_7-1`.  The proof core is now stated as a
+two-kernel target: the `F_7` Fejer/de-Moivre sector kernel plus the Johnson
+`J(14,2)` cap kernel.
+
+The new proof-facing sidecar is
+`E_7(tau)=(7E_2(7tau)-E_2(tau))/6`, whose q-coefficients are
+`4*sigma_1(n)` away from multiples of `7` and
+`4*sigma_1(n)-28*sigma_1(n/7)` on the 7-core.  This is now the candidate
+coefficient engine for finite LP/Toeplitz certificates.
+
+Important guardrail: the direct Dirichlet-L/Stark test is inconclusive.  The
+de-Moivre field has discriminant `7^2`, but normalized even primitive
+`L(-1,chi)` values modulo 7 have denominator `7`, not `49`.  Therefore
+Stark/Dirichlet-L, Beraha/Tutte, Mahler/Lehmer, and subshift transfer stay as
+sidecars until each preserves a named LRC predicate.
+
+Navigation updated: `05-knowledge/hypotheses/INDEX.md`,
+`05-knowledge/results/INDEX.md`, `00-navigation/TANGENTS.md` with T1329,
+`00-navigation/LRC-TECHNIQUE-INDEX.md` with LTI-329,
+`00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` with LTT-229, and
+`00-navigation/OPEN-QUESTIONS.md` with a Gamma0(7) OPEN-Q-108 addendum.
+
+Fetch-time integration: origin/main added HYP-3215 while this work was local.
+HYP-3229 now explicitly treats Gamma0(7) as a candidate coefficient engine
+for HYP-3215's Fejer/Cohn-Elkies LP Gap A, while keeping HYP-3215's
+induction-base verification flag separate from this bounded certificate
+audit.
+
+Second fetch-time integration: origin/main then added mac-mini S75, building
+the magic function as the comb-overlap Gram kernel
+`K(p,q)=meas(D_p cap D_q)=<1_Dp,1_Dq>`.  HYP-3229 and its script now treat
+that Gram kernel as the finite spatial dual of HYP-3214's Fejer Fourier
+kernel, with `K(1,q)=1/(7q)`, `K(7,q)=1/49`, and the single-arc peeling
+recursion printed in the result artifact.  The remaining certificate debt is
+now sharpened to order-3 triple-overlap constants, not order-2 PSD.
+
+Next hook: emit Gamma0(7)-generated finite certificate rows and test whether
+Fejer/Gamma0(7)/S75-Gram slack dominates the HYP-3227 Green-only
+trap-discharge weights and precision-defect island, then connect successful
+rows to the HYP-3215 LP/polyhedron-flatness route.

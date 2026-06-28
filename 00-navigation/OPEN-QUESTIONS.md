@@ -5305,3 +5305,64 @@ trap has positive conductance to a retained HYP-3205/HYP-3224 certificate
 coordinate after deleting any nonessential scalar coordinate. -> HYP-3227,
 HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3205, HYP-3202, LTI-325, LTT-225, T1325,
 OPEN-Q-108.
+
+## OPEN-Q-108 addendum (codex-2026-06-28): Gamma0(7) modular magic sidecar
+
+HYP-3229 audits the modular/arithmetic inspirations around the HYP-3214
+Fejer magic-function route and integrates HYP-3215's new literature-facing
+Gap A: Gamma0(7) is a candidate coefficient engine for the finite
+Fejer/Cohn-Elkies LP, not evidence for the separate induction-base flag.
+Mac-mini S75 adds the finite spatial side: the comb-overlap Gram kernel
+`K(p,q)=meas(D_p cap D_q)`, with `K(1,q)=1/(7q)`, `K(7,q)=1/49`, and
+automatic PSD.  The proof core becomes the three-kernel split:
+
+```text
+F_7 sector kernel = Fejer / de-Moivre / Chebyshev positive-definite slack
+comb-overlap Gram kernel = finite spatial/Bochner certificate
+Johnson J(14,2) kernel = 14-clock cap mass
+```
+
+The promising new certificate engine is the explicit level-7 Eisenstein
+sidecar
+
+```text
+E_7(tau) = (7E_2(7tau)-E_2(tau))/6
+a_n = 4*sigma_1(n) - 28*sigma_1(n/7) if 7|n
+a_n = 4*sigma_1(n) otherwise
+```
+
+Add fields:
+
+```text
+fejer_demoivre_kernel_id
+johnson_14_cap_kernel_id
+gamma0_7_eisenstein_coefficients
+comb_overlap_gram_kernel_entries
+single_arc_peeling_recursion
+order3_triple_overlap_debt
+level7_divisor_fiber_correction
+dirichlet_l_denominator_guardrail
+beraha_height_sidecar
+mahler_measure_sidecar
+subshift_autocorrelation_sidecar
+fejer_slack_dominates_green_trap_weight
+terminal_modular_certificate_or_named_sidecar_debt
+```
+
+Guardrail: a direct Stark/Dirichlet-L closed form for the cap is still
+inconclusive.  The de-Moivre field has discriminant `49` and the Bernoulli
+sampling grid sees conductor 7, but normalized even primitive `L(-1,chi)`
+values modulo 7 have denominator `7`, not `49`.  Beraha/Tutte
+(`B^3-5B^2+6B-1`), Mahler/Lehmer (`Mahler(m)=B_7-1`), and subshift transfer
+(`P(z)P(z^-1)` gives Fejer autocorrelation) are retained only as sidecars
+until they discharge a named packet.
+
+New proof obligation: build Gamma0(7)-generated / S75 Gram finite LP/Toeplitz
+certificate rows, then test whether Fejer/Gamma0(7)/Gram slack dominates the
+HYP-3227 Green-only trap-discharge weights and the four-trap precision-defect
+island.  Successful rows should feed HYP-3215's Fejer/Cohn-Elkies
+LP/polyhedron-flatness route, while the S75 order-3 triple-overlap constants
+remain named debt. -> HYP-3229, HYP-3227, HYP-3215, HYP-3214,
+HYP-3213, HYP-3212, HYP-3205,
+HYP-3203, HYP-3201, HYP-3162, HYP-3161, HYP-3160, LTI-329, LTT-229, T1329,
+OPEN-Q-108.

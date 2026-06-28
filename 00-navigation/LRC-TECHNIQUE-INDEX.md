@@ -4553,3 +4553,73 @@ Pointers: HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222,
 HYP-3221, HYP-3214, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
 HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, THM-577,
 LTI-325, LTT-225, T1325, OPEN-Q-108.
+
+## LTI-329: Modular Magic Sidecar Certificate Engine
+
+Objects:
+
+```text
+F_7 sector Fejer/de-Moivre kernel
+comb-overlap Gram kernel
+Johnson J(14,2) cap kernel
+Gamma0(7) Eisenstein coefficient sidecar
+Dirichlet-L/Stark conductor sidecar
+Beraha/Tutte and Mahler/Lehmer height sidecars
+subshift transfer autocorrelation
+```
+
+HYP-3229 separates proof payload from arithmetic inspiration.  It also
+integrates HYP-3215 by making Gamma0(7) a candidate coefficient engine for
+the Fejer/Cohn-Elkies LP Gap A, without treating that as evidence for the
+separate HYP-3215 induction-base flag.  After mac-mini S75, the finite
+spatial certificate target is the comb-overlap Gram kernel
+`K(p,q)=meas(D_p cap D_q)=<1_Dp,1_Dq>`, with `K(1,q)=1/(7q)` for `q<=13`
+and `K(7,q)=1/49`.  The exact core
+remains
+
+```text
+(V_7(u)-2)/(u-2) = (u^3+u^2-2u-1)^2
+disc = 49
+F_7-hat(n) = (7-|n|)_+
+```
+
+The new technique is to use
+`E_7(tau)=(7E_2(7tau)-E_2(tau))/6` as a level-7 divisor-fiber coefficient
+source for finite LP/Toeplitz certificates.  Its q-coefficients keep the
+7-core correction visible, which is the side channel a proof needs before
+quotienting.
+
+Preserves: Fejer positivity/PSD, double-zero sharpness, Johnson cap-vs-sector
+split, level-7 coefficient provenance, Toeplitz/Green trap-discharge targets,
+comb-overlap Gram positivity, and conductor labels.
+
+Destroys if scalarized: runner identity, raw Beraha/Mahler height,
+Dirichlet-L denominator numerology, and unlabelled modular analogy.
+
+Packet fields:
+
+```text
+fejer_demoivre_kernel_id
+johnson_14_cap_kernel_id
+gamma0_7_eisenstein_coefficients
+comb_overlap_gram_kernel_entries
+single_arc_peeling_recursion
+order3_triple_overlap_debt
+level7_divisor_fiber_correction
+dirichlet_l_denominator_guardrail
+beraha_height_sidecar
+mahler_measure_sidecar
+subshift_autocorrelation_sidecar
+fejer_slack_dominates_green_trap_weight
+terminal_modular_certificate_or_named_sidecar_debt
+```
+
+Next hook: emit Gamma0(7)-generated / S75 Gram finite certificate rows and
+test whether Fejer/Gamma0(7)/Gram slack dominates HYP-3227 Green-only trap
+conductance weights and the four-trap precision-defect island, then connect
+the rows to HYP-3215's LP/polyhedron-flatness route and isolate order-3
+triple-overlap debt.
+
+Pointers: HYP-3229, HYP-3227, HYP-3215, HYP-3214, HYP-3213, HYP-3212, HYP-3205,
+HYP-3203, HYP-3201, HYP-3162, HYP-3161, HYP-3160, THM-577, LTT-229,
+T1329, OPEN-Q-108.

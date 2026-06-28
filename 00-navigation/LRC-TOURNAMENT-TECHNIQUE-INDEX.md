@@ -6558,3 +6558,48 @@ quotient_legality_status
   HYP-3213, HYP-3212, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
   HYP-3200, HYP-3153, HYP-3138, HYP-3132, LTI-326, LTT-226, T1326,
   OPEN-Q-108.
+
+## LTT-229: Modular Magic Proof-Carrier Tournament
+
+- **Move:** Treat modular/arithmetic objects as proof carriers, not as raw
+  constants.  Vertices are `fejer_demoivre_kernel`,
+  `comb_overlap_gram_kernel`, `johnson_14_cap_kernel`,
+  `toeplitz_green_conductance_bridge`, `gamma0_7_eisenstein_sidecar`,
+  `subshift_transfer_operator`, `beraha_tutte_sidecar`,
+  `dirichlet_l_stark_sidecar`, `mahler_lehmer_height_sidecar`, and
+  `raw_arithmetic_numerology_guardrail`.
+- **LRC use:** HYP-3229 audits the Stark/Dirichlet-L, Gamma0(7),
+  Beraha/Tutte, Mahler/Lehmer, and transfer-operator inspirations around
+  HYP-3214.  The pairwise observable is certificate payload retained, then
+  formal checkability, then risk.  This keeps the Fejer/de-Moivre and Johnson
+  kernels at the proof core, puts the Gamma0(7) Eisenstein q-expansion in the
+  coefficient-engine slot, and demotes raw arithmetic coincidences to sidecar
+  debt until they preserve a named LRC predicate.  HYP-3215's incoming
+  Fejer/Cohn-Elkies LP Gap A gives this tournament a concrete destination:
+  Gamma0(7)-generated rows should feed that LP route, while the induction-base
+  flag stays outside this tournament.
+- **S75 integration:** the comb-overlap Gram kernel is the finite spatial dual
+  of Fejer, with `K(1,q)=1/(7q)`, `K(7,q)=1/49`, automatic PSD, and
+  remaining order-3 triple-overlap debt.
+- **Preserves:** Fejer positivity/PSD, double-zero sharpness, Johnson cap
+  mass, level-7 q-coefficient provenance, Toeplitz/Green trap-discharge
+  targets, and explicit sidecar labels.
+- **Forgets / guardrail:** runner, root, q-coefficient, Beraha, Mahler, and
+  L-value vertices are shadows unless the retained predicate is specified.
+  The direct Dirichlet-L test does not produce a conductor-49 cap formula:
+  normalized even primitive `L(-1,chi)` values have denominator `7`.
+- **Fingerprint:** transitive tournament with score histogram
+  `{0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}`, no directed 3-cycles, and one
+  Hamiltonian path:
+  `fejer_demoivre_kernel -> comb_overlap_gram_kernel ->
+  johnson_14_cap_kernel ->
+  toeplitz_green_conductance_bridge -> gamma0_7_eisenstein_sidecar ->
+  subshift_transfer_operator -> beraha_tutte_sidecar ->
+  dirichlet_l_stark_sidecar -> mahler_lehmer_height_sidecar ->
+  raw_arithmetic_numerology_guardrail`.
+- **Next hook:** Build a Gamma0(7)-generated / S75 Gram finite certificate
+  basis, compare its slack against HYP-3227 Green-only trap-discharge weights,
+  then connect successful rows to HYP-3215's Fejer/Cohn-Elkies LP route.
+- **Pointers:** HYP-3229, HYP-3227, HYP-3215, HYP-3214, HYP-3213, HYP-3212,
+  HYP-3205, HYP-3203, HYP-3201, HYP-3162, HYP-3161, HYP-3160, LTI-329,
+  LTT-229, T1329, OPEN-Q-108.

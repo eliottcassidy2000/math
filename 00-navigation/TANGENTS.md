@@ -3669,3 +3669,44 @@ conductance to a retained HYP-3205/HYP-3224 coordinate.
 -> HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3213,
 HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200,
 LTI-325, LTT-225, OPEN-Q-108.
+
+## T1329: Modular magic sidecar audit for the Fejer certificate route (codex-2026-06-28)
+
+HYP-3229 turns the Stark/Gamma0(7)/Beraha/Mahler/subshift prompt into a
+certificate-payload triage around HYP-3214, and integrates the incoming
+HYP-3215 route by treating Gamma0(7) as a candidate coefficient engine for
+the Fejer/Cohn-Elkies LP Gap A while leaving HYP-3215's induction-base flag
+separate.  It also integrates mac-mini S75's comb-overlap Gram kernel as the
+finite spatial dual of Fejer.  Exact algebraic core:
+
+```text
+(V_7(u)-2)/(u-2) = (u^3+u^2-2u-1)^2
+disc(u^3+u^2-2u-1) = 49
+F_7-hat(n) = (7-|n|)_+
+K(1,q) = 1/(7q), q<=13
+K(7,q) = 1/49
+```
+
+The proof-facing new sidecar is the explicit level-7 Eisenstein candidate
+`E_7(tau)=(7E_2(7tau)-E_2(tau))/6`, with q-coefficients
+`4*sigma_1(n)` away from multiples of `7` and
+`4*sigma_1(n)-28*sigma_1(n/7)` on the 7-core.  This should be used as a
+finite coefficient source for LP/Toeplitz certificates, not as a loose
+modular analogy.
+
+Guardrails: the direct Dirichlet-L/Stark test is inconclusive.  Raw
+Bernoulli sampling sees the conductor-7 grid and the field discriminant is
+`7^2`, but normalized even primitive `L(-1,chi)` values have denominator
+`7`.  Beraha/Tutte and Mahler/Lehmer are exact sidecars
+(`B_7` polynomial `B^3-5B^2+6B-1`, `Mahler(m)=B_7-1`), while the subshift
+operator records `P(z)P(z^-1)` as the same triangular Fejer autocorrelation.
+
+Next hook: build Gamma0(7)-generated / S75 Gram finite certificate rows and
+test whether Fejer/Gamma0(7)/Gram slack dominates the HYP-3227 Green-only
+trap-discharge weights and precision-defect island; then connect those rows
+to HYP-3215's polyhedron-flatness/LP route while isolating S75's order-3
+triple-overlap debt.
+
+-> HYP-3229, HYP-3227, HYP-3215, HYP-3214, HYP-3213, HYP-3212, HYP-3205,
+HYP-3203, HYP-3201, HYP-3162, HYP-3161, HYP-3160, LTI-329, LTT-229,
+OPEN-Q-108.
