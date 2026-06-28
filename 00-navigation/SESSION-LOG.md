@@ -13,6 +13,38 @@ Owner: quick but deeply creative -- the highest-leverage way to complete LRC(14)
 - **THE ONE NEW THEOREM = a single inequality.** meas(R-safe AND Q-lonely) = sum_k ghat(k) Rhat_safe(14k); k=0 = product; need R'=1+SPEC/product>0, i.e. |SPEC|<product, uniformly. = mac-mini's certified R'>=0.642 + the resonant residual. EVERYTHING ELSE is elementary, inductive, or a tool for THIS.
 - **THE RESONANT SURVIVOR DISSOLVES (verified).** A resonant R-speed (mult of 2 or 7) has its danger ON the 14-grid; but 14Q is dangerous on the grid so Q-lonely is OFF it; there the resonant speed is SAFE (transparent). Verified: covering S with 7 in R / many evens -> optimum t* off-grid (denom 12,8,9), ALL resonant speeds safe (||s t*||=0.083..0.5), M>1/14. So the floor depends only on NON-resonant speeds (decorrelate, R'>=0.642). Resonance HELPS.
 NET: highest-leverage completion map -- LRC(14) = [q-witness] + [LRC<=13 induction] + [ONE floor inequality R'>0], and the floor's only feared subtlety (resonance) dissolves by transparency. The single action to complete LRC(14): finish the uniform floor (non-resonant R'>=0.642 + resonant transparency), NOT the census. OPEN: the transparency LEMMA (optimum off-grid + resonant speeds safe there) would remove the resonant case wholesale.
+## codex-2026-06-28 -- HYP-3421 off-grid resonance transparency and Rprime closure
+
+Extended the incoming HYP-3415 critical-path map with an exact-rational
+companion scout.  HYP-3415 reduces LRC14 to q-witness, LRC<=13 induction, and
+one covering decorrelation floor `R' > 0`; HYP-3421 attacks the resonant part
+of that floor as finite off-grid transparency plus the HYP-3129/HYP-3140
+`Rprime` constant chase.  After fetching S259, this entry was corrected to
+retain HYP-3418's warning: off-grid transparency is a full-optimum lemma, not
+a coprime-to-14 reduction, and the remaining covering floor is 2-adic/even.
+
+Added HYP-3421/T1382/LTI-382/LTT-282 plus script/result/reflection:
+
+```text
+04-computation/lrc14_offgrid_resonance_transparency_rprime_closure_codex_20260628.py
+05-knowledge/results/lrc14_offgrid_resonance_transparency_rprime_closure_codex_20260628.out
+05-knowledge/hypotheses/HYP-3421-lrc14-offgrid-resonance-transparency-rprime-closure.md
+07-reflections/lrc14-offgrid-resonance-transparency-rprime-closure-codex-20260628.md
+```
+
+Exact readout: named optima are off the `14`-grid with floors `1/12`, `1/8`,
+`1/9`, and `7/89`; every checked resonant speed (multiple of `2` or `7`,
+including `14Q` tips) is safe at the selected optima.  The canonical tower
+`{1..11,13,84m}` verifies through `m=8` with
+`t=(35m+2)/(84m+5)`, `M=7m/(84m+5)>1/14`, active pair `(5,84m)`.
+
+Proof-facing obligation: prove the all-packet transparency classifier, then
+prove the 2-adic even-speed descent and finish the closed-form
+signed-SPEC/fiber-PGF `Rprime >= c` constant chase.  Tournament Analysis uses
+proof carriers as vertices (`9` vertices, no
+directed `3`-cycles, one Hamiltonian path led by
+`finite_offgrid_transparency_lemma -> canonical_84m_binding_formula ->
+two_adic_even_speed_descent -> signed_SPEC_Rprime_constant_chase`).
 
 ## kind-pasteur-2026-06-28-S257 -- the GALOIS reframe + the GW-doubling CRITERION q==1 mod3: built on mac-mini's hidden-C_3, fused with my census split & Q(sqrt-7) floor
 Owner: even more creative reframes, test ideas, be inspired by concurrent agents, push/pull many times toward full rigor. HYP-3411 + HYP-3413 + reflection the-galois-group-of-the-apex-prime-and-where-its-symmetry-breaks.

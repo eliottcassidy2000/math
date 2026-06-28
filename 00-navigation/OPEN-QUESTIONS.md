@@ -89,6 +89,28 @@ Meissel-Mertens, or any scalar average as proof support until finite owner-cut
 exceptions are labelled. -> HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3410, HYP-3409, HYP-3408, HYP-3407,
 HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310,
 HYP-3301, HYP-3265, HYP-3124, HYP-2963, THM-523, T1380, LTI-380, LTT-280,
+**OPEN-Q-108 HYP-3421 off-grid resonance transparency addendum:**
+HYP-3421 extends HYP-3415's critical-path map.  HYP-3415 reduces LRC14 to
+q-witness for non-covering rows, LRC<=13 for the `Q` half of covering rows,
+and one uniform covering decorrelation floor `R' > 0`.  HYP-3421 says the
+resonant part of that floor should be finite and geometric: resonant speeds
+put danger on the `14`-grid, while `Q`-lonely witnesses are off-grid, so the
+same resonant speeds are transparent or binding-safe where they would need to
+obstruct.  HYP-3418 corrects the tempting shortcut: this is not a
+coprime-to-14 reduction, because the odd subpacket prefers `t=1/2` where even
+speeds die; the floor still needs a 2-adic even-speed descent.
+
+Open task: prove the all-packet transparency classifier.  Every covering
+residual packet should route to q-witness, denominator-floor transparency,
+the canonical `{1..11,13,84m}` binding formula, a positive owner packet, a
+signed-SPEC/fiber-PGF `Rprime` certificate, or named terminal debt.  After
+that classifier, prove the HYP-3418 2-adic descent and finish the closed-form
+HYP-3129/HYP-3140 constant chase for
+`Rprime = E[N_R | Q]/E[N_R]`.  Tournament Analysis uses proof carriers as
+vertices, not runners, gaps, residues, cover arcs, Fourier modes, or scalar
+floor values. -> HYP-3421, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3412, HYP-3410,
+HYP-3310, HYP-3266, HYP-3265, HYP-3255, HYP-3140, HYP-3136, HYP-3129,
+HYP-3125, HYP-3124, HYP-2896, THM-523, T1382, LTI-382, LTT-282,
 OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3409 recursive sidecar pattern atlas addendum:**

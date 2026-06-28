@@ -94,6 +94,38 @@ owner-cut growth.  If cut size stays bounded, try a finite Menger/Farkas
 owner-cut theorem.  If it grows, classify the first growth as
 Schwarz-Christoffel accessory debt, tropical/off-grid debt, state-lift debt,
 height-factor debt, exact-period/BDH exception, or named residual.
+## Lead codex-2026-06-28: Off-grid resonance transparency and Rprime closure
+
+**Status:** SYNTHESIS / exact-rational transparency scout; not proof
+(HYP-3421/T1382/LTI-382/LTT-282), companion to HYP-3415 and HYP-3418.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3421-lrc14-offgrid-resonance-transparency-rprime-closure.md`,
+script
+`04-computation/lrc14_offgrid_resonance_transparency_rprime_closure_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_offgrid_resonance_transparency_rprime_closure_codex_20260628.out`,
+and
+`07-reflections/lrc14-offgrid-resonance-transparency-rprime-closure-codex-20260628.md`.
+
+Purpose: extend HYP-3415's critical-path map by proving the resonant part of
+the one remaining floor inequality is a finite full-optimum off-grid
+transparency problem, not a separate analytic survivor, while retaining
+HYP-3418's correction that the covering floor is still 2-adic.
+
+Readout: named optima are off the `14`-grid with visible floors `1/12`,
+`1/8`, and `1/9`; the canonical `{1..11,13,84m}` tower has
+`t=(35m+2)/(84m+5)`, `M=7m/(84m+5)>1/14`; all checked resonant speeds
+(multiples of `2` or `7`, including `14Q` tips) are safe at the selected
+off-grid optima.  Tournament vertices are proof carriers, not runners or
+residues.
+
+Next: prove the all-packet transparency classifier, then prove HYP-3418's
+2-adic even-speed descent and finish the symbolic HYP-3129/HYP-3140
+`Rprime = E[N_R | Q]/E[N_R]` constant chase.  The classifier
+must route every residual packet to q-witness, denominator-floor transparency,
+the canonical binding formula, 2-adic descent, positive owner packet,
+signed-SPEC/fiber-PGF certificate, or named terminal debt.
 
 ## Lead codex-2026-06-28: Recursive sidecar pattern atlas
 

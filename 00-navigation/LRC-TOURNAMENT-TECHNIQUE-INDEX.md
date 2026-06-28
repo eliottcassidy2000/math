@@ -318,6 +318,11 @@ obligations, and proof-carrier interfaces.
   mixed-fiber clause hypergraphs the vertices.  Cross-exit row pairs are the
   observable, owner-label transversals are the Menger/Farkas certificate, and
   cut-code theorem-exit purity is the legality test.
+- Need to make HYP-3415's one-floor critical path proof-facing:
+  use LTT-282 and make proof carriers, not runners or resonant speeds, the
+  vertices.  Off-grid transparency, canonical `84m` binding, 2-adic
+  even-speed descent, signed-SPEC `Rprime`, fiber-PGF moments, edge-witness
+  packets, owner routers, and unit core rigidity are the candidate carriers.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -8171,3 +8176,47 @@ quotient_legality_status
 - **Pointers:** HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408,
   HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3310,
   HYP-3265, HYP-2963, THM-523, LTI-378, T1378, OPEN-Q-108.
+
+## LTT-282: Off-Grid Resonance Transparency Tournament
+
+- **Move:** Use proof carriers as vertices for the HYP-3415 one-floor
+  critical path.  Vertices are transparency lemmas, binding formulas, 2-adic
+  even-speed descents, signed-SPEC constant chases, fiber-PGF moments,
+  edge-witness packets, owner routers, unit-core rigidity, and raw resonance
+  worries.
+- **LRC use:** HYP-3421 verifies that named resonant speeds are safe at
+  selected off-grid optima and turns the resonant survivor into a finite
+  full-optimum transparency classifier feeding HYP-3418's 2-adic descent and
+  the `Rprime` decorrelation floor.
+- **Preserves:** existence of a witness time with all distances `>=1/14`,
+  off-grid witness location, resonant safety distances, `14Q` grid-kill
+  behavior, and the `Rprime` interface.
+- **Forgets / guardrail:** raw runners, arcs, residues, cover arcs, Fourier
+  modes, scalar floor denominators, endpoint-owner data, and low/tail SPEC
+  constants unless those are retained as sidecars.
+- **Pairwise observable:** retained proof payload, exact finite evidence,
+  resonance transparency, `Rprime` interface quality, core-rigidity interface,
+  formalization readiness, quotient legality, and failure guardrails.
+- **Switch/gauge:** majority over observable axes; ties follow the declared
+  proof path.
+- **Exact fingerprint:** `vertices=9`, `edges=36`,
+  `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`,
+  `directed_3cycles=0`, `hamiltonian_path_count=1`, and priority path
+  `finite_offgrid_transparency_lemma -> canonical_84m_binding_formula ->
+  two_adic_even_speed_descent -> signed_SPEC_Rprime_constant_chase ->
+  edge_witness_tail_tip_packet ->
+  fiber_PGF_conditional_moment -> owner_cut_terminal_router ->
+  unit_core_equioscillation_rigidity -> raw_resonant_survivor_worry`.
+- **Assumption challenge:** runners, gaps, fixed circle sections, section
+  boundaries, wall-crossing events, residues, cover arcs, Fourier modes,
+  witness times, off-grid cells, `14Q` tips, PGF coefficients, and proof
+  obligations were considered.  The chosen quotient preserves the LRC witness
+  predicate and destroys raw resonance data unless off-grid cells and packet
+  sidecars are retained.
+- **Next hook:** prove the all-packet transparency classifier, then prove the
+  HYP-3418 2-adic descent and finish the symbolic HYP-3129/HYP-3140
+  `Rprime >= c` constant chase.
+- **Pointers:** HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415,
+  HYP-3414, HYP-3412, HYP-3410, HYP-3310,
+  HYP-3266, HYP-3265, HYP-3255, HYP-3140, HYP-3136, HYP-3129, HYP-3125,
+  HYP-3124, HYP-2896, THM-523, LTI-382, T1382, OPEN-Q-108.

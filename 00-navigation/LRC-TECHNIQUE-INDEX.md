@@ -471,6 +471,7 @@ record what it destroys before asking it to prove anything.
 | LTI-380 | Charal owner-cut recursion prototype | Minimal owner-cut sidecars, cut-core/frequency ledger, exact binary owner-label decision trees, charal purity levels, finite BDH label priority, bounded owner-cut theorem target, scalar-firewall gates | HYP-3419 is the second-pass implementation over incoming HYP-3410.  It computes exact owner-cut decision trees for the represented mixed fibers: old height and owner leaks are depth-1 one-label cuts, while the `10->20` frontier has minimum cut size `3`, empty core, and optimal tree `13:g1? -> positive-open else 11:g1? -> positive-open else 2:g2? -> positive-open else unit-petal`.  The theorem target is bounded owner-cut recursion, not a one-label owner theorem. | HYP-3419, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3124, HYP-2963, THM-523, T1380, LTT-280, LTI-380, OPEN-Q-108 | Extend the HYP-2963/HYP-3406 bank beyond `(72,20)` and track the first growth of minimal owner-cut size; if it stays bounded, attempt a finite owner-cut theorem or dual owner-current certificate; if it grows, classify the first growth as SC accessory debt, tropical/off-grid debt, state-lift debt, or named residual. |
 | LTI-373 | Special-function cut signature recursion | Recursive `charal_signature` sidecars, Bring radical branch alarms, Schwarz-Christoffel cut angles, BDH variance packets, Menger exit cuts, Soldner zero normalization, Sophie Germain quartic split, HLW separation, Krasner stability, Mertens residuals | HYP-3412 executes a post-HYP-3406 creative synthesis scout on the `(72,20)` expanded bank (`2431` rows).  Its CHARAL mixed-fiber ladder says residue leaves `3` mixed fibers; residue+height/`v2` leaves `2`; BDH variance leaves `3`; cut-angle, Krasner radius, and owner support each leave `0`; Sophie quartic and honest Bring branch alarm each leave `2`; PGF proxy leaves `1`.  The Menger-style separator table says the `14`-row owner leak, `12`-row petal `10->20` owner/height-persistent leak, and `3`-row height leak all admit one-sidecar covers by `SC_cut_angle`, `Krasner_radius`, or `owner_support`, while height/`v2` separates only some leaks. | HYP-3412, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3301, HYP-3151, HYP-3150, HYP-3147, HYP-3143, THM-523, T1373, LTT-273, LTI-373, OPEN-Q-108 | Enlarge beyond `(72,20)` and test whether `residue + cut_angle_word` and `residue + krasner_radius_word` remain exact.  If either fails, record the first collision and decide whether full owner support, exact cut labels, or PGF/root branch payload is the true next sidecar. |
 | LTI-374 | Owner-cut resurrection calculus | Cross-exit row-pair clauses, endpoint-owner symmetric differences, minimum owner-label transversals, binary cut-code buckets, terminal chamber router, dual/Farkas current readout | HYP-3414 turns HYP-3411/HYP-3412/HYP-3413/HYP-3409/HYP-3410 into a finite proof-facing calculus.  In each mixed theorem-exit fiber, every cross-exit row pair emits an owner-label clause; a legal owner cut is a hitting set whose cut-code buckets are theorem-exit pure.  Known values are singleton cuts `5:g1` and `1:g1` for the first two leaks, but the `(72,20)` `10->20` frontier has minimum cut size `3`, five minimum cuts, and empty core, so the live theorem is bounded owner transversals rather than a universal singleton owner label. | HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-2969, HYP-2963, THM-523, T1374, LTT-274, LTI-374, OPEN-Q-108 | Extend HYP-3406 beyond `(72,20)`, run the clause/transversal calculator on the first `residue+owner_support` failure if one appears, and add child-deck stability plus terminal-exit routing to every cut-pure fiber. |
+| LTI-382 | Off-grid resonance transparency / Rprime closure | Off-grid witness cells, resonant-speed distance ledger, `14Q` grid-kill check, canonical `84m` binding formula, 2-adic even-speed descent, signed-SPEC `Rprime` constant chase, fiber-PGF/edge-witness glue | HYP-3421 is the exact scout companion to HYP-3415's one-floor critical path, corrected by HYP-3418.  It verifies named off-grid optima with floors `1/12`, `1/8`, `1/9`, and canonical `{1..11,13,84m}` formula `t=(35m+2)/(84m+5)`, `M=7m/(84m+5)>1/14`; every checked resonant speed, including `14Q` tips, is safe at the selected full optima.  The technique recasts resonance as grid-local danger plus full-optimum transparency, while HYP-3418 keeps the floor on the 2-adic/even-speed descent route before the HYP-3129/HYP-3140 `Rprime` chase. | HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3412, HYP-3410, HYP-3310, HYP-3266, HYP-3265, HYP-3255, HYP-3140, HYP-3136, HYP-3129, HYP-3125, HYP-3124, HYP-2896, THM-523, T1382, LTT-282, LTI-382, OPEN-Q-108 | Prove the all-packet transparency classifier, the 2-adic even-speed descent, and the closed-form signed-SPEC `Rprime >= c` constant chase. |
 | LTI-378 | Owner-cut dual current certificate | Labelled owner-current cuts, unit-island labels, positive-debt hitting sets, zero-level signed current, Krasner common-core instability, Sophie-Germain cut channels, finite Mertens budget selector | HYP-3417 sharpens HYP-3410 by turning owner cuts into explicit margin-1 dual-current certificates over the current mixed fibers.  Selected certificates are `{5:g1}`, `{1:g1}`, and `{2:g2,11:g1,13:g1}`; the last is one even-cover label plus two binding labels, consistent with the incoming S257 residue/magnitude split but only as a local owner-current certificate.  Positive-debt Sophie channels recur through `13`: `(1,2)->13/5` and `(1,3)->25/13`, matching top frontier variance `13:g1`. | HYP-3417, HYP-3416, HYP-3415, HYP-3414, HYP-3413, HYP-3412, HYP-3411, HYP-3410, HYP-3409, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3311, HYP-3310, HYP-3265, HYP-2963, THM-523, T1378, LTT-278, LTI-378, OPEN-Q-108 | Extend the enlarged bank and prove every surviving mixed residue/height fiber has a bounded unit-island or positive-debt owner-current certificate, an exit-pure charal recursion step, or named owner/height/off-grid/state-lift debt. |
 | LTI-381 | Owner-cut chiral transcendence synthesis | Endpoint-owner Menger cuts, mirror/chiral owner-support classes, BDH-style pair-disagreement variance, Schwarz-Christoffel owner accessory parameters, Krasner/Hensel stability radii, Bring branch guards, transcendence/loglog scale guardrails | HYP-3420 concretizes the owner-cut branch after HYP-3406, HYP-3410, and HYP-3412.  Rebuilding the expanded banks shows `residue_plus_owner_chiral_class` and `residue_plus_owner_support` leave `0` mixed fibers on all scanned banks.  On the largest bank, residue-only variance is `12`, owner/chiral-owner variance is `0`, and both residue-mixed fibers have size-one owner cuts: `('1:g1',)` for the `petal 13->26` versus positive-open `26/40/54` family and `('5:g1',)` for the `P10+GW` / `GW-shell` / `12->48` fiber. | HYP-3420, HYP-3412, HYP-3410, HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3402, HYP-3301, HYP-3300, HYP-3265, HYP-3243, HYP-3238, HYP-3152, HYP-2982, HYP-2214, T1381, LTT-281, LTI-381, OPEN-Q-108 | Prove or refute the endpoint-owner Menger-cut theorem for enlarged actual-packet fibers; if it fails, route the first failure to tropical/off-grid, unit-contact holonomy, state-lift, or Bring-style branch debt. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
@@ -6603,6 +6604,58 @@ measure the first growth of minimal owner-cut size.  If it stays bounded, try
 to prove a finite owner-cut theorem; if it grows, record the first growth as
 Schwarz-Christoffel accessory debt, tropical/off-grid debt, state-lift debt,
 height-factor debt, or a named residual.
+
+## LTI-382: Off-Grid Resonance Transparency And Rprime Closure
+
+Created by codex-2026-06-28 for HYP-3421/T1382, as the exact scout companion
+to HYP-3415's critical-path map.
+
+Carrier / vertex set:
+
+```text
+off-grid witness cells, resonant distance ledgers, 14Q grid-kill checks,
+canonical binding formulas, Rprime proof carriers, and proof obligations
+```
+
+Preserved LRC predicate: existence of a time with all speeds at distance
+`>= 1/14`, plus theorem-exit purity before any quotient is used in a proof.
+
+Destroyed information if used naively: the witness time, endpoint owners,
+tail/tip deletion children, fiber sheet counts, and signed-SPEC low/tail
+constants.
+
+Exact readout:
+
+```text
+visible floors = 1/12, 1/8, 1/9
+global named-row resonant distance range = 7/89..1/2
+canonical tower:
+  S_m = {1,2,3,4,5,6,7,8,9,10,11,13,84m}
+  t_m = (35m+2)/(84m+5)
+  M(S_m) = 7m/(84m+5) > 1/14
+  active pair = (5,84m)
+```
+
+Best use: remove "resonant survivor" as a free-floating analytic worry at the
+full optimum.  Resonance puts danger on the `14`-grid; `Q`-lonely witnesses
+live off-grid; there the resonant speeds are safe.  HYP-3418 blocks the
+stronger coprime-to-14 shortcut and keeps the remaining floor on the 2-adic
+even-speed descent plus `Rprime` decorrelation route.
+
+Failure mode: proving transparency only for named rows, then pretending the
+coprime/non-resonant subpacket is enough.  The proof still needs an all-packet
+classifier, HYP-3418's 2-adic descent, and the HYP-3140 identity
+`Rprime = E[N_R | Q]/E[N_R]` before closing the signed-SPEC constant chase.
+
+Anchors: HYP-3421, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415,
+HYP-3414, HYP-3412, HYP-3410, HYP-3310,
+HYP-3266, HYP-3265, HYP-3255, HYP-3140, HYP-3136, HYP-3129, HYP-3125,
+HYP-3124, HYP-2896, THM-523, LTT-282, T1382, OPEN-Q-108.
+
+Next agent hook: build the all-packet transparency classifier, run the
+2-adic even-speed descent on the survivors, then translate every remaining
+row to signed-SPEC/fiber-PGF/edge-witness `Rprime` data with a closed-form
+lower bound.
 
 ## LTI-365: Creative Reframe Lead Atlas
 
