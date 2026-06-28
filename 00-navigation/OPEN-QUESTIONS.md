@@ -190,6 +190,42 @@ HYP-3252, HYP-3251, HYP-3250, HYP-3248, HYP-3246, HYP-3245, HYP-3243,
 HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3218,
 HYP-3214, HYP-3132, HYP-2928, HYP-2909, THM-523, THM-530, T1347, LTI-347,
 LTT-247, OPEN-Q-108.
+**OPEN-Q-108 HYP-3400 shadow-charge conservation addendum:**
+HYP-3400 proposes the current proof-router version of the topology/duality
+stack: all useful shadows should preserve, transfer, or name debt for a
+conserved proof-charge packet.  Incoming HYP-3246/HYP-3252 contribute the
+index-theorem reservoir: analytic Cech/Euler index, topological
+Borsuk-Ulam degree, and Gauss-sum index, with the forcing gap to actual
+loneliness retained as debt.  HYP-3250 contributes the S-dependent
+uniform-margin floor, HYP-3254/HYP-3256/HYP-3258/HYP-3259 sharpen the
+residue/magnitude, binding/covering census, and tight-locus manifold split,
+HYP-3265 adds the unit-contact graph case split, and HYP-3253 contributes the
+contact-holonomy curvature repair for shell-lag/residue quotients.  HYP-3300
+adds the observability/Morse audit for finite chamber scalarizations. Reservoirs are index theorem,
+uniform-margin floor, contact-holonomy curvature, cyclotomic witness address,
+tiling lift/descent, Cech/Euler hole, `D_7` Borsuk-Ulam sign,
+Lee-Yang/Joukowski/Hermite-Biehler root motion, state-lift obstruction,
+Green/Dirichlet current, bulk discrepancy/Hensel density, normal-fan/Toeplitz
+slack, autocorrelation transport, law-defect entropy, and raw scalar shadow.
+The finite theorem schema is: every primitive LRC14 packet exits by index
+nonvanishing with the forcing gap filled, open tope/hole, `Phi_14/Phi_{14d}`
+core witness, bulk density floor, contact-graph case split, observable Morse descent, finite trap discharge, curvature-holonomy
+discharge, legal lift/descent, state-lift contradiction, or named residual debt.
+
+Open task: make the schema testable by turning every HYP-3202 non-AP trap into
+a charge-discharge row with autocorrelation transport, Green resistance
+excess, Toeplitz slack, normal-fan first failed coordinate, `D_7` sign payload,
+root-motion class, contact-holonomy curvature status, tiling descent status,
+and first proof exit.  Then try to prove the named-residual-debt case is empty,
+first in the bounded bank and then as a finite chamber theorem.  Also test the
+HYP-3246/HYP-3252 index equality as descriptor plus HYP-3250's S-dependent
+floor as proof. -> HYP-3400, HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246,
+HYP-3245, HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239,
+HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
+HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224,
+HYP-3223, HYP-3222, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3214,
+HYP-3205, HYP-3204, HYP-3202, HYP-3201, T1352, LTI-352, LTT-252,
+OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3228 cyclotomic Delsarte shell-magic addendum:**
 HYP-3228 makes the requested magic-function object explicit at the k=8

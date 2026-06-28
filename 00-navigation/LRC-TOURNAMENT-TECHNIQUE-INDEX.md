@@ -7419,3 +7419,53 @@ quotient_legality_status
 - **Pointers:** HYP-3266, HYP-3267, HYP-3265, HYP-3259, HYP-3258, HYP-3257,
   HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3247, HYP-3246,
   HYP-3130, HYP-3129, THM-577, LTI-349, T1349, OPEN-Q-108.
+
+## LTT-252: Shadow-Charge Reservoir Tournament
+
+- **Move:** Treat proof-charge reservoirs as tournament vertices.  A reservoir
+  is a typed packet that preserves LRC proof obligations, destroys some
+  coordinates, transfers charge to other reservoirs, and names a proof exit or
+  debt.
+- **LRC use:** HYP-3400 merges incoming HYP-3246/HYP-3252 index-theorem
+  degree charge, HYP-3242 Cech/Euler holes, HYP-3243 topology
+  carriers, HYP-3244 lift/descent sidecars, HYP-3245
+  equioscillation/autocorrelation transport, HYP-3238/HYP-3239 crossed
+  parity/sign duality, HYP-3236 Green conductance, HYP-3253 contact-holonomy
+  quotient curvature, HYP-3310 C6 residue/magnitude factorization, HYP-3266
+  proof-obligation ledger, HYP-3265 contact graph, HYP-3300 observability/Morse audit,
+  HYP-3260 unit-nullspace sidecar, HYP-3254/HYP-3256/HYP-3258/HYP-3259 census and tight-locus-manifold sidecars, HYP-3228 shell
+  `L_y`, and discrepancy/Hensel bulk floors into one no-naked-quotient router.
+- **Preserves:** witness address, open-hole status, odd sign, bulk density,
+  finite trap discharge, Green current, analytic zero control, quotient descent
+  legality, scale-lift legality, tight-locus finiteness, and formalizable
+  exits, and contact-holonomy memory.
+- **Forgets / guardrail:** raw scalar shadows collapse endpoint owners, odd
+  sign, bulk/core wall, root-radius sidecars, quotient curvature, quotient
+  fibers, and state-lift functors.  Law-defect entropy is a failure detector,
+  not a terminal proof carrier.
+- **Fingerprint:** `15` reservoirs, score histogram `{-87:1,-3:1,43:1,50:1,55:1,56:1,65:1,67:1,68:2,70:1,71:1,75:1,77:1,90:1}`, no directed
+  3-cycles, singleton SCCs, one Hamiltonian path:
+  `index_theorem_degree_charge -> uniform_margin_floor_charge -> contact_holonomy_curvature_charge -> cyclotomic_witness_address_charge ->
+  tiling_lift_descent_charge ->
+  cech_euler_hole_charge -> d7_borsuk_ulam_sign_charge ->
+  lee_yang_root_motion_charge -> state_lift_obstruction_charge ->
+  green_dirichlet_current_charge -> bulk_discrepancy_density_charge ->
+  normal_fan_toeplitz_slack_charge -> autocorrelation_transport_charge ->
+  law_defect_entropy_charge -> raw_scalar_shadow`.
+- **Assumption challenge:** alternate vertices considered were runners, arcs,
+  endpoint walls, Fourier modes, autocorrelation lags, graph cuts, Cech holes,
+  state-lift atoms, tiling fibers, Hensel lift classes, contact-support
+  holonomy classes, and proof obligations.
+  The chosen vertices are reservoirs; lower-level objects are payload fields
+  inside reservoirs.
+- **Next hook:** Build the HYP-3202 trap charge table and check whether Cech
+  boundary, Green current, autocorrelation lag transport, normal-fan slack,
+  root-motion collision, contact-holonomy curvature, and state-lift
+  obstruction balance to a named exit for every non-AP trap.  In parallel,
+  test index equality as descriptor plus the S-dependent floor as proof.
+- **Pointers:** HYP-3400, HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245,
+  HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238,
+  HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231,
+  HYP-3230, HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223,
+  HYP-3222, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3214, HYP-3205,
+  HYP-3204, HYP-3202, HYP-3201, LTI-352, T1352, OPEN-Q-108.

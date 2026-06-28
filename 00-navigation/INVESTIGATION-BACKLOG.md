@@ -15,6 +15,55 @@
 
 ---
 
+## Lead codex-2026-06-28: Shadow-charge conservation atlas
+
+**Status:** SYNTHESIS / executable proof-route router; not proof
+(HYP-3400/T1352/LTI-352/LTT-252).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3400-lrc14-shadow-charge-conservation-atlas.md`,
+script
+`04-computation/lrc14_shadow_charge_conservation_atlas_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_shadow_charge_conservation_atlas_codex_20260628.out`,
+and
+`07-reflections/lrc14-shadow-charge-conservation-atlas-codex-20260628.md`.
+
+Purpose: look for a more creative unifying frame for the LRC14 proof search by
+treating topology, duality, autocorrelation, conductance, discrepancy, root
+motion, and lift/descent as shadows of one conserved proof-charge packet.
+A quotient is legal only if it preserves witness-bearing payload, transfers it
+to a dual shadow, or emits named debt.
+
+Readout: the scout uses proof-charge reservoirs, not runners/arcs/lags/scalars,
+as Tournament Analysis vertices.  Incoming HYP-3246/HYP-3252 are integrated
+as `index_theorem_degree_charge`: analytic Cech/Euler index, topological
+Borsuk-Ulam degree, and Gauss-sum index are candidate shadows of one charge,
+with the forcing gap to actual loneliness retained as debt.  Reservoirs are
+index theorem, uniform-margin floor, contact-holonomy curvature, cyclotomic
+witness address, tiling lift/descent, Cech/Euler hole, `D_7` Borsuk-Ulam sign,
+Lee-Yang root motion, state-lift obstruction, Green/Dirichlet current, bulk discrepancy/Hensel density,
+normal-fan/Toeplitz slack, autocorrelation transport, law-defect entropy, and
+raw scalar shadow.  HYP-3253 contact holonomy is integrated as quotient
+curvature: shell-lag residuals must have zero curvature, exact `zeta_7`
+holonomy discharge, endpoint-cell lift, or named curvature debt.  HYP-3254,
+HYP-3256, and HYP-3258 add the residue/magnitude split and binding/covering
+census warning inside the uniform-margin reservoir.  HYP-3265 adds the
+unit-contact graph case split before the safety function is scalarized, and
+HYP-3300 adds the observability/Morse audit after sidecars attach.  The
+tournament has `15` vertices, no directed 3-cycles,
+singleton SCCs, and one Hamiltonian path led by
+`index_theorem_degree_charge -> uniform_margin_floor_charge -> contact_holonomy_curvature_charge -> cyclotomic_witness_address_charge ->
+tiling_lift_descent_charge -> cech_euler_hole_charge`.
+
+Next: convert the HYP-3202 non-AP traps into a charge-discharge table with
+autocorrelation transport, Green resistance excess, Toeplitz slack,
+normal-fan first failed coordinate, `D_7` sign payload, root-motion class,
+contact-holonomy curvature status, tiling descent status, and first proof
+exit; then test whether the
+named-residual-debt case is empty.  In parallel, test HYP-3246/HYP-3252's
+index equality as descriptor plus the HYP-3250 S-dependent floor as proof.
+
 ## Lead codex-2026-06-28: Topology/geometry/graph proof-route atlas
 
 **Status:** SYNTHESIS / executable proof-carrier tournament; not proof

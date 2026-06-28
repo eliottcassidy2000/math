@@ -323,6 +323,61 @@ SUBSUMES all prior frames as two computations of ONE index: cyclotomic (de Moivr
 right reflection map (the index theorem itself); (2) the coincidence sits at the 1/14 threshold (equioscillation =
 index condition). NOT a proof; LRC(14) open -- but the most unifying frame yet, converting n=14's hardness into a
 parity (odd-degree) push. (HYP namespace heavily contended: 3243-3245 collided; this is HYP-3246.)
+## codex-2026-06-28 -- HYP-3400 shadow-charge conservation atlas
+
+Owner: look for more creative unifying frames for LRC and keep pushing toward
+a proof.
+
+Created HYP-3400/T1352/LTI-352/LTT-252 plus executable scout
+`lrc14_shadow_charge_conservation_atlas_codex_20260628.py`, result
+`lrc14_shadow_charge_conservation_atlas_codex_20260628.out`, and reflection
+`lrc14-shadow-charge-conservation-atlas-codex-20260628.md`.
+
+Main synthesis: current LRC14 proof frames can be read as shadows of conserved
+proof charge.  A quotient is legal only if it preserves witness-bearing
+payload, transfers it to a dual shadow, or emits named debt.  This extends the
+HYP-3201 law-defect compression rule from commutativity/associativity failures
+to LRC proof packets.
+
+Reservoirs: index-theorem degree, uniform-margin floor, contact-holonomy
+curvature, cyclotomic witness address, tiling lift/descent, Cech/Euler hole,
+`D_7` Borsuk-Ulam sign,
+Lee-Yang/Joukowski/Hermite-Biehler root motion, state-lift obstruction,
+Green/Dirichlet current, bulk discrepancy/Hensel density,
+normal-fan/Toeplitz slack, autocorrelation transport, law-defect entropy, and
+raw scalar shadow.  The index reservoir integrates incoming HYP-3246/HYP-3252:
+analytic Cech/Euler index, topological Borsuk-Ulam degree, and Gauss-sum index
+are candidate shadows of one charge, with the forcing gap from degree to
+lonely point retained as debt.  The new contact-holonomy reservoir integrates
+upstream HYP-3253: shell-lag/residue quotient curvature must be killed by exact
+`zeta_7` holonomy, lifted to endpoint cells, or named as curvature debt.
+Upstream HYP-3300/HYP-3265/HYP-3254/HYP-3256/HYP-3258/HYP-3259 also sharpen the
+uniform-margin reservoir: `Q(sqrt(-7))` organizes the residue layer, while the
+magnitude-level binding/covering census split and tight-locus manifold remain
+the floor payload, and the unit-contact graph supplies a finite case split
+before scalarizing safety; observability/Morse columns audit the resulting
+finite chamber packet.
+
+Tournament Analysis uses reservoirs rather than runners/arcs/lags/scalars:
+`15` vertices, score histogram `{-87:1,-3:1,43:1,50:1,55:1,56:1,65:1,67:1,68:2,70:1,71:1,75:1,77:1,90:1}`, no directed
+3-cycles, singleton SCCs, and one Hamiltonian path led by
+`index_theorem_degree_charge -> uniform_margin_floor_charge -> contact_holonomy_curvature_charge -> cyclotomic_witness_address_charge ->
+tiling_lift_descent_charge -> cech_euler_hole_charge`.
+
+Proposed finite theorem schema: every primitive LRC14 packet exits by index
+nonvanishing with the forcing gap filled, open tope/hole, `Phi_14/Phi_{14d}`
+witness, bulk density floor, contact-graph case split, observable Morse descent, finite trap discharge, curvature-holonomy
+discharge, legal lift/descent, state-lift contradiction, or named residual
+debt.  Next: build the HYP-3202
+trap charge-discharge table, test the HYP-3246/HYP-3252 index equality/gap,
+and try to empty the named-residual-debt case.
+
+-> HYP-3400, HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245, HYP-3244,
+HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237,
+HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230,
+HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222,
+HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3214, HYP-3205, HYP-3204,
+HYP-3202, HYP-3201, T1352, LTI-352, LTT-252, OPEN-Q-108.
 
 ## mac-mini-2026-06-28-S78 -- the TOPOLOGY of the LRC: cap = Euler characteristic of the danger-cover nerve; lonely = the cover's HOLE; every other route is a shadow of the geometry (+ a rendered visual)
 

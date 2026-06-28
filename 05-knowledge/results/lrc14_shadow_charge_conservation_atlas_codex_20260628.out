@@ -1,0 +1,206 @@
+﻿HYP-3400 shadow-charge conservation atlas
+==============================================================================
+claim=proof routes are shadows of conserved witness-bearing charge
+status=synthesis scout / proof-route router; not an LRC14 proof
+principle=each quotient must preserve charge, transfer it to a dual shadow, or emit named debt
+
+CONSERVATION LAWS
+  index_equality_law: Analytic Cech/Euler charge and topological Borsuk-Ulam degree are two proposed shadows of the same index, but the S-dependent floor and forcing gap must be supplied separately.
+  no_naked_quotient: A shadow is legal only if every destroyed payload is reconstructed, dual-annihilated, or named as debt.
+  curvature_holonomy_law: A quotient with nonzero shell-lag commutator carries curvature; a legal compression either kills it by zeta7 contact holonomy, lifts to endpoint cells, or names curvature debt.
+  contact_graph_case_law: The six unit contacts form a proof graph: surviving global contacts route to the AP/GW core, surviving non-global contacts give a strict open row, and killed contacts require a promoted covering/floor witness.
+  observability_morse_law: A finite chamber scalarization is legal only after observability columns separate hidden coordinates and the vector Morse energy either descends or names the critical debt.
+  bulk_core_transfer: Positive-measure discrepancy charge can vanish at the Vitali core only when Phi_14/Phi_{14d} witness charge turns on.
+  even_odd_positive_negative_balance: Even/positive Fejer, covariance, and conductance shadows must carry or discharge the odd/negative D7 sign charge.
+  boundary_current_law: Green current, Cech boundary, normal-fan slack, and autocorrelation transport are four shadows of the same finite-boundary discharge.
+  lift_descent_law: A proof built in a witness-rich cover may descend through a quotient only with fiber, automorphism, coboundary, and deletion sidecars.
+  root_radius_law: Circular Lee-Yang/Joukowski zeros explain low-defect structure, while off-circle phi4/root-collision debt must be priced explicitly.
+
+PROOF EXITS
+  index_nonvanishing: analytic chi / topological degree / Gauss-sum index is nonzero and the forcing gap from degree to lonely point is filled by an S-dependent floor
+  open_tope_or_hole: the danger-cover complement has a certified open component/hole carrying a lonely witness
+  core_phi14_or_phi14d: the packet is AP/GW/core-tight or a covering-tight dilation with explicit promoted witness
+  bulk_density_floor: ET/Roth/Halasz/SPEC/Hensel data gives positive mass away from the Vitali core
+  finite_trap_discharge: Toeplitz, Green, autocorrelation, normal-fan, or root-motion sidecars strictly discharge the trap
+  contact_graph_case_split: unit-contact graph survives globally, survives with strict off-unit peak, or is killed with promoted covering witness
+  observable_morse_descent: observability matrix separates hidden packet coordinates and vector Morse energy descends or names critical debt
+  curvature_holonomy_discharge: lag/residue residuals have zero curvature, holonomy-killed curvature, or endpoint-cell lift
+  legal_lift_descent: tiling/observer/finite-address lift descends through all quotient sidecars
+  state_lift_contradiction: the surviving residual atom maps faithfully to the forbidden H=7 state
+  named_residual_debt: the route fails honestly and records the exact missing payload
+
+RESERVOIR LEDGER
+  index_theorem_degree_charge score=90
+    metaphor=analytic Euler/Cech index equals topological Borsuk-Ulam degree
+    shadows=analytic chi; topological degree; Gauss-sum index
+    preserves=core_phi14_witness,formalizable_exit,odd_negative_sign,open_hole_witness,quotient_descent_legality,tight_locus_finiteness
+    destroys=bulk_density_floor
+    transfers_to=cech_euler_hole_charge,d7_borsuk_ulam_sign_charge
+    exit=nonzero index plus S-dependent floor, or named forcing-gap debt
+    compression_failure=ambient index describes the saddle but does not supply the S-dependent floor
+  uniform_margin_floor_charge score=77
+    metaphor=finite tight locus, contact-graph case split, and uniform margin away from AP/GW/dilations
+    shadows=tight-locus census; unit contact graph; covering margin; decorrelation floor
+    preserves=bulk_density_floor,finite_trap_discharge,formalizable_exit,quotient_descent_legality,scale_lift_legality,tight_locus_finiteness
+    destroys=core_phi14_witness,endpoint_owner_memory
+    transfers_to=bulk_discrepancy_density_charge,state_lift_obstruction_charge
+    exit=finite tight locus plus uniform positive margin for all other rows
+    compression_failure=random/census margin evidence still needs a rigorous uniform theorem
+  contact_holonomy_curvature_charge score=75
+    metaphor=shell-lag quotient curvature repaired by zeta7 contact holonomy
+    shadows=shell-lag commutator; zeta7 contact holonomy; connection coordinate
+    preserves=contact_holonomy_memory,core_phi14_witness,endpoint_owner_memory,finite_trap_discharge,formalizable_exit,quotient_descent_legality
+    destroys=analytic_zero_control,bulk_density_floor
+    transfers_to=cyclotomic_witness_address_charge,tiling_lift_descent_charge
+    exit=zero curvature, holonomy-killed curvature, endpoint-cell lift, or named curvature debt
+    compression_failure=first Fourier holonomy is a connection coordinate, not a global terminal quotient
+  cyclotomic_witness_address_charge score=71
+    metaphor=Phi_14 core witnesses and Phi_{14d} dilation witness grid
+    shadows=Phi_14 units; Phi_{14d} promoted grid; de Moivre cubic
+    preserves=core_phi14_witness,endpoint_owner_memory,formalizable_exit,odd_negative_sign,quotient_descent_legality,scale_lift_legality
+    destroys=bulk_density_floor,tight_locus_finiteness
+    transfers_to=lee_yang_root_motion_charge,d7_borsuk_ulam_sign_charge
+    exit=explicit primitive witness or promoted dilation witness
+    compression_failure=single-field norm scalars miss the binding-row dip
+  tiling_lift_descent_charge score=70
+    metaphor=fixed-path tiling cover descends through half-tiling quotient with sidecars
+    shadows=path-presentation fiber; parent automorphism word orbit; rectangle/hourglass residue
+    preserves=endpoint_owner_memory,finite_trap_discharge,formalizable_exit,quotient_descent_legality,tight_locus_finiteness
+    destroys=bulk_density_floor
+    transfers_to=normal_fan_toeplitz_slack_charge,state_lift_obstruction_charge
+    exit=lifted witness, certified descent, or named rectangle/hourglass debt
+    compression_failure=orbit counts forget canary/filler fibers unless sidecars are attached
+  cech_euler_hole_charge score=68
+    metaphor=cap as measured Euler characteristic; lonely witness as cover hole
+    shadows=danger-cover nerve; Cech/Betti barcode; inclusion-exclusion
+    preserves=bulk_density_floor,endpoint_owner_memory,formalizable_exit,open_hole_witness,quotient_descent_legality
+    destroys=odd_negative_sign
+    transfers_to=d7_borsuk_ulam_sign_charge,green_dirichlet_current_charge
+    exit=open safe component, cover-hole witness, or named closed-boundary debt
+    compression_failure=Euler characteristic can cancel holes unless Betti/owner sidecars survive
+  d7_borsuk_ulam_sign_charge score=68
+    metaphor=odd antipodal index on the heptagon reflection quotient
+    shadows=D7 sign irrep; i*sqrt(7) Gauss sign; Borsuk-Ulam index
+    preserves=core_phi14_witness,endpoint_owner_memory,formalizable_exit,odd_negative_sign,quotient_descent_legality
+    destroys=bulk_density_floor
+    transfers_to=cyclotomic_witness_address_charge,cech_euler_hole_charge
+    exit=free-Z2 antipodal witness pair or odd-sign contradiction
+    compression_failure=positive/even quotients erase the sign-isotypic payload
+  lee_yang_root_motion_charge score=67
+    metaphor=PGF root confinement, Joukowski/Hermite-Biehler, and off-circle phi4 dip
+    shadows=Lee-Yang roots; Joukowski fold; Hermite-Biehler interlacing
+    preserves=analytic_zero_control,core_phi14_witness,finite_trap_discharge,formalizable_exit,quotient_descent_legality
+    destroys=endpoint_owner_memory
+    transfers_to=normal_fan_toeplitz_slack_charge,cyclotomic_witness_address_charge
+    exit=zero-free region, HB interlacing, or named root-collision debt
+    compression_failure=circle-root ideals fail on overcrowded tail blocks without SPEC debt
+  state_lift_obstruction_charge score=65
+    metaphor=finite state lift to forbidden H=7 / residual named debt
+    shadows=H=7 obstruction; observer gluing; finite-address packet
+    preserves=endpoint_owner_memory,formalizable_exit,odd_negative_sign,quotient_descent_legality,tight_locus_finiteness
+    destroys=analytic_zero_control,bulk_density_floor
+    transfers_to=tiling_lift_descent_charge,d7_borsuk_ulam_sign_charge
+    exit=residual atom lifts to forbidden state or becomes named debt
+    compression_failure=state labels prove nothing unless packet-to-state functor is faithful
+  green_dirichlet_current_charge score=56
+    metaphor=positive covariance conductance, Fiedler cut, and Thomson current
+    shadows=lambda2; effective resistance; Dirichlet energy
+    preserves=bulk_density_floor,finite_trap_discharge,formalizable_exit,green_current_certificate,quotient_descent_legality
+    destroys=core_phi14_witness,odd_negative_sign
+    transfers_to=autocorrelation_transport_charge,cech_euler_hole_charge
+    exit=strict resistance excess or Fiedler bottleneck discharge
+    compression_failure=positive-part conductance clips negative covariance and odd payload
+  bulk_discrepancy_density_charge score=55
+    metaphor=Roth/Halasz/Erdos-Turan bulk floor plus Hensel/Krasner local lifts
+    shadows=discrepancy height; ET clocks; p-adic unit-root lift
+    preserves=analytic_zero_control,bulk_density_floor,formalizable_exit,quotient_descent_legality,scale_lift_legality
+    destroys=core_phi14_witness,endpoint_owner_memory
+    transfers_to=cyclotomic_witness_address_charge,cech_euler_hole_charge
+    exit=positive measure floor, ET/Hensel split, or local-lift debt
+    compression_failure=density is blind at the Vitali core and to exact owners
+  normal_fan_toeplitz_slack_charge score=50
+    metaphor=moment-cone face, Toeplitz lambda slack, shell dual L_y
+    shadows=normal fan; Toeplitz PSD margin; k=8 shell magic dual
+    preserves=finite_trap_discharge,formalizable_exit,quotient_descent_legality,tight_locus_finiteness
+    destroys=bulk_density_floor,core_phi14_witness
+    transfers_to=autocorrelation_transport_charge,lee_yang_root_motion_charge
+    exit=separating hyperplane, shell contact, or finite chamber inequality
+    compression_failure=PSD and shell faces can overprice q3 and forget root witnesses
+  autocorrelation_transport_charge score=43
+    metaphor=AP Fejer autocorrelation; non-AP traps transport mass outward
+    shadows=Fejer F7; Gram/Bochner lag profile; out-correlation residual
+    preserves=finite_trap_discharge,formalizable_exit,green_current_certificate,quotient_descent_legality
+    destroys=core_phi14_witness,endpoint_owner_memory
+    transfers_to=green_dirichlet_current_charge,normal_fan_toeplitz_slack_charge
+    exit=lag-transport inequality routed to trap class sidecar
+    compression_failure=lag profiles do not remember which endpoint owner caused the ripple
+  law_defect_entropy_charge score=-3
+    metaphor=failed laws emit conditional-entropy sidecars instead of being quotiented away
+    shadows=commutativity defect; associativity defect; distributivity defect
+    preserves=formalizable_exit,quotient_descent_legality
+    destroys=bulk_density_floor,core_phi14_witness,endpoint_owner_memory,finite_trap_discharge,open_hole_witness
+    transfers_to=tiling_lift_descent_charge,state_lift_obstruction_charge
+    exit=typed sidecar ledger for every illegal compression
+    compression_failure=this is the failure detector, not the proof-carrying charge itself
+  raw_scalar_shadow score=-87
+    metaphor=single number such as p0, lambda2, entropy, or root radius
+    shadows=diagnostic scalar
+    preserves=none
+    destroys=analytic_zero_control,bulk_density_floor,contact_holonomy_memory,core_phi14_witness,endpoint_owner_memory,finite_trap_discharge,formalizable_exit,green_current_certificate,odd_negative_sign,open_hole_witness,quotient_descent_legality,scale_lift_legality,tight_locus_finiteness
+    transfers_to=none
+    exit=none without a legal carrier
+    compression_failure=collapses the proof packet below the LRC predicate
+
+OBLIGATION COVERAGE
+  open_hole_witness: index_theorem_degree_charge | cech_euler_hole_charge
+  core_phi14_witness: index_theorem_degree_charge | contact_holonomy_curvature_charge | cyclotomic_witness_address_charge | d7_borsuk_ulam_sign_charge
+  bulk_density_floor: uniform_margin_floor_charge | cech_euler_hole_charge | green_dirichlet_current_charge | bulk_discrepancy_density_charge
+  finite_trap_discharge: uniform_margin_floor_charge | contact_holonomy_curvature_charge | tiling_lift_descent_charge | lee_yang_root_motion_charge
+  tight_locus_finiteness: index_theorem_degree_charge | uniform_margin_floor_charge | tiling_lift_descent_charge | state_lift_obstruction_charge
+  odd_negative_sign: index_theorem_degree_charge | cyclotomic_witness_address_charge | d7_borsuk_ulam_sign_charge | state_lift_obstruction_charge
+  quotient_descent_legality: index_theorem_degree_charge | uniform_margin_floor_charge | contact_holonomy_curvature_charge | cyclotomic_witness_address_charge
+  formalizable_exit: index_theorem_degree_charge | uniform_margin_floor_charge | contact_holonomy_curvature_charge | cyclotomic_witness_address_charge
+  scale_lift_legality: uniform_margin_floor_charge | cyclotomic_witness_address_charge | bulk_discrepancy_density_charge
+  analytic_zero_control: lee_yang_root_motion_charge | bulk_discrepancy_density_charge
+  endpoint_owner_memory: contact_holonomy_curvature_charge | cyclotomic_witness_address_charge | tiling_lift_descent_charge | cech_euler_hole_charge
+  green_current_certificate: green_dirichlet_current_charge | autocorrelation_transport_charge
+  contact_holonomy_memory: contact_holonomy_curvature_charge
+
+PROPOSED FINITE THEOREM SCHEMA
+  primitive LRC14 packet
+    -> index_nonvanishing
+    -> open_tope_or_hole
+    or core_phi14_or_phi14d
+    or bulk_density_floor
+    or contact_graph_case_split
+    or observable_morse_descent
+    or finite_trap_discharge
+    or curvature_holonomy_discharge
+    or legal_lift_descent
+    or state_lift_contradiction
+    or named_residual_debt
+
+TOURNAMENT ANALYSIS
+  vertices=proof-charge reservoirs, not runners/arcs/lags/scalars
+  pairwise_observable=which reservoir preserves more weighted LRC obligations with fewer destroyed payloads
+  switch/gauge=A->B iff A carries more conserved charge after debt pricing
+  score_hist={-87: 1, -3: 1, 43: 1, 50: 1, 55: 1, 56: 1, 65: 1, 67: 1, 68: 2, 70: 1, 71: 1, 75: 1, 77: 1, 90: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  priority_path=index_theorem_degree_charge -> uniform_margin_floor_charge -> contact_holonomy_curvature_charge -> cyclotomic_witness_address_charge -> tiling_lift_descent_charge -> cech_euler_hole_charge -> d7_borsuk_ulam_sign_charge -> lee_yang_root_motion_charge -> state_lift_obstruction_charge -> green_dirichlet_current_charge -> bulk_discrepancy_density_charge -> normal_fan_toeplitz_slack_charge -> autocorrelation_transport_charge -> law_defect_entropy_charge -> raw_scalar_shadow
+
+ASSUMPTION-CHALLENGE
+  alternate vertices considered: runners, arcs, endpoint walls, Fourier modes, autocorrelation lags, graph cuts, Cech holes, unit-contact graphs, observability columns, Morse chambers, state-lift atoms, tiling fibers, Hensel lift classes, contact-support holonomy classes, and proof obligations.
+  chosen vertices: reservoirs of proof charge; lower-level objects are payload fields inside reservoirs.
+  preserved predicate: LRC14 witness existence or a legal route to one of the finite proof exits.
+  destroyed information: endpoint owner, odd sign, bulk/core wall, root radius sidecar, quotient curvature, quotient fiber, and state-lift functor unless explicitly retained.
+  challenged assumption: a scalar extremality certificate is the proof. The atlas treats scalars as shadows of a higher-charge packet.
+
+NEXT PROOF-FACING TESTS
+  1. Turn every HYP-3202 non-AP trap into a charge-discharge row.
+  2. Add a Cech/Green/autocorrelation boundary-current identity for traps.
+  3. Attach ET/Hensel bulk charge to the Vitali-wall bulk/core splitter.
+  4. Test index equality as descriptor plus the S-dependent floor as proof.
+  5. Thread contact-holonomy curvature through every lag/residue quotient.
+  6. Formalize no-naked-quotient as a reusable lemma over packet maps.

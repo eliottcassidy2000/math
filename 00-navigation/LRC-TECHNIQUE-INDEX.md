@@ -5714,3 +5714,82 @@ holonomy sidecar and HYP-3254 only for the Qsqrt(-7) floor sidecar.
 Pointers: HYP-3266, HYP-3267, HYP-3265, HYP-3259, HYP-3258, HYP-3257,
 HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3247, HYP-3246,
 HYP-3130, HYP-3129, THM-577, LTT-249, T1349, OPEN-Q-108.
+
+## LTI-352: Shadow-Charge Conservation Atlas
+
+Created by codex-2026-06-28 for HYP-3400/T1352. This technique treats the
+current LRC14 proof object as a packet of conserved proof charge rather than
+as a scalar extremality certificate.
+
+Carrier / vertex set:
+
+```text
+proof-charge reservoirs
+```
+
+The reservoirs are index-theorem degree, uniform-margin floor,
+contact-holonomy curvature, cyclotomic witness address, tiling lift/descent,
+Cech/Euler hole, `D_7` Borsuk-Ulam sign,
+Lee-Yang/Joukowski/Hermite-Biehler root motion, state-lift obstruction,
+Green/Dirichlet current, bulk discrepancy/Hensel density, normal-fan/Toeplitz
+slack, autocorrelation transport, law-defect entropy, and raw scalar shadow.
+The index-theorem reservoir integrates incoming HYP-3246/HYP-3252: analytic
+Cech/Euler index, topological Borsuk-Ulam degree, and Gauss-sum index are
+candidate shadows of the same charge, with the forcing gap to an actual lonely
+point retained as debt.  The uniform-margin reservoir absorbs HYP-3310,
+HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3254, HYP-3256, HYP-3258, and
+HYP-3259 as C6 residue/magnitude, observability/Morse, proof-obligation,
+contact-graph, unit-nullspace, binding/covering census, and
+tight-locus-manifold sidecars.  The contact-holonomy reservoir integrates upstream HYP-3253:
+shell-lag quotient curvature must be killed by exact `zeta_7` holonomy,
+lifted to endpoint cells, or named as curvature debt.
+
+Pairwise observable: which reservoir preserves more weighted LRC obligations
+with fewer destroyed payloads.
+
+Binary relation or gauge: `A -> B` iff `A` carries more conserved charge after
+debt pricing.
+
+Preserved LRC predicate: witness existence, or legal routing to one of the
+finite proof exits:
+
+```text
+index_nonvanishing
+open_tope_or_hole
+core_phi14_or_phi14d
+bulk_density_floor
+contact_graph_case_split
+observable_morse_descent
+finite_trap_discharge
+curvature_holonomy_discharge
+legal_lift_descent
+state_lift_contradiction
+named_residual_debt
+```
+
+Destroyed information: endpoint owner, odd sign, bulk/core wall, root radius
+sidecar, quotient curvature, quotient fiber, Green negative leakage, and
+state-lift functor unless explicitly retained.
+
+Best use: organize heterogeneous proof routes into a single finite packet
+theorem. The strongest target is to prove that every primitive LRC14 packet
+exits by one of the named exits and that the `named_residual_debt` set is
+empty.
+
+Failure mode: treating "proof charge" as metaphor rather than as a ledger.
+Each route must still declare preserved fields, destroyed fields, transfers,
+and proof exits.
+
+Anchors: HYP-3400, HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245,
+HYP-3244, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238,
+HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231,
+HYP-3230, HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223,
+HYP-3222, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3214, HYP-3205,
+HYP-3204, HYP-3202, HYP-3201, LTT-252, T1352, OPEN-Q-108.
+
+Next agent hook: turn every HYP-3202 non-AP trap into a charge-discharge row
+with autocorrelation transport, Green resistance excess, Toeplitz slack,
+normal-fan first failed coordinate, `D_7` sign payload, root-motion class,
+contact-holonomy curvature status, tiling descent status, and first proof
+exit. In parallel, test the index equality as descriptor plus the
+S-dependent floor as proof.
