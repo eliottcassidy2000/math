@@ -1,0 +1,91 @@
+
+===== MAP 1: tournament I(Omega,x) root structure, n=5 =====
+  H | alpha-vector | #roots realrooted? | min|root| (Lee-Yang edge) | root nearest 0
+  H=    15 a=(1, 7) roots=1 real=True min|r|=0.1429 near0=-0.1429+0.0000j <== H-MAX
+  H=    13 a=(1, 6) roots=1 real=True min|r|=0.1667 near0=-0.1667+0.0000j
+  H=    11 a=(1, 5) roots=1 real=True min|r|=0.2000 near0=-0.2000+0.0000j
+  H=     9 a=(1, 4) roots=1 real=True min|r|=0.2500 near0=-0.2500+0.0000j
+  H=     5 a=(1, 2) roots=1 real=True min|r|=0.5000 near0=-0.5000+0.0000j
+  H=     3 a=(1, 1) roots=1 real=True min|r|=1.0000 near0=-1.0000+0.0000j
+  H=     1 a=[1] roots=0 real=True min|r|=inf near0=-
+  --> smallest min|root| config: H=15 min|r|=0.14286 (is it H-max? True)
+  --> H-max config min|root| = 0.14286
+  --> distinct alpha-classes: 7; real-rooted fraction: 1.000
+
+===== MAP 1: tournament I(Omega,x) root structure, n=6 =====
+  H | alpha-vector | #roots realrooted? | min|root| (Lee-Yang edge) | root nearest 0
+  H=    45 a=(1, 14, 4) roots=2 real=True min|r|=0.0729 near0=-0.0729+0.0000j <== H-MAX
+  H=    45 a=(1, 20, 1) roots=2 real=True min|r|=0.0501 near0=-0.0501+0.0000j <== H-MAX
+  H=    43 a=(1, 19, 1) roots=2 real=True min|r|=0.0528 near0=-0.0528+0.0000j
+  H=    41 a=(1, 16, 2) roots=2 real=True min|r|=0.0630 near0=-0.0630+0.0000j
+  H=    37 a=(1, 14, 2) roots=2 real=True min|r|=0.0722 near0=-0.0722+0.0000j
+  H=    37 a=(1, 16, 1) roots=2 real=True min|r|=0.0627 near0=-0.0627+0.0000j
+  H=    33 a=(1, 16) roots=1 real=True min|r|=0.0625 near0=-0.0625+0.0000j
+  H=    33 a=(1, 12, 2) roots=2 real=True min|r|=0.0845 near0=-0.0845+0.0000j
+  H=    33 a=(1, 14, 1) roots=2 real=True min|r|=0.0718 near0=-0.0718+0.0000j
+  H=    31 a=(1, 13, 1) roots=2 real=True min|r|=0.0774 near0=-0.0774+0.0000j
+  H=    29 a=(1, 10, 2) roots=2 real=True min|r|=0.1021 near0=-0.1021+0.0000j
+  H=    29 a=(1, 12, 1) roots=2 real=True min|r|=0.0839 near0=-0.0839+0.0000j
+  --> smallest min|root| config: H=45 min|r|=0.05013 (is it H-max? True)
+  --> H-max config min|root| = 0.07295
+  --> distinct alpha-classes: 27; real-rooted fraction: 1.000
+
+===== MAP 1: tournament I(Omega,x) root structure, n=7 =====
+  H | alpha-vector | #roots realrooted? | min|root| (Lee-Yang edge) | root nearest 0
+  H=   171 a=(1, 65, 10) roots=2 real=True min|r|=0.0154 near0=-0.0154+0.0000j <== H-MAX
+  H=   159 a=(1, 59, 10) roots=2 real=True min|r|=0.0170 near0=-0.0170+0.0000j
+  H=   159 a=(1, 55, 12) roots=2 real=True min|r|=0.0183 near0=-0.0183+0.0000j
+  H=   159 a=(1, 65, 7) roots=2 real=True min|r|=0.0154 near0=-0.0154+0.0000j
+  H=   159 a=(1, 61, 9) roots=2 real=True min|r|=0.0164 near0=-0.0164+0.0000j
+  H=   157 a=(1, 54, 12) roots=2 real=True min|r|=0.0186 near0=-0.0186+0.0000j
+  H=   155 a=(1, 57, 10) roots=2 real=True min|r|=0.0176 near0=-0.0176+0.0000j
+  H=   153 a=(1, 60, 8) roots=2 real=True min|r|=0.0167 near0=-0.0167+0.0000j
+  H=   153 a=(1, 56, 10) roots=2 real=True min|r|=0.0179 near0=-0.0179+0.0000j
+  H=   151 a=(1, 59, 8) roots=2 real=True min|r|=0.0170 near0=-0.0170+0.0000j
+  H=   151 a=(1, 55, 10) roots=2 real=True min|r|=0.0182 near0=-0.0182+0.0000j
+  H=   151 a=(1, 51, 12) roots=2 real=True min|r|=0.0197 near0=-0.0197+0.0000j
+  --> smallest min|root| config: H=159 min|r|=0.01541 (is it H-max? False)
+  --> H-max config min|root| = 0.01542
+  --> distinct alpha-classes: 164; real-rooted fraction: 1.000
+
+===== MAP 2: LRC coverage PGF Q(z)=sum q_t z^t root structure, k=8 =====
+  coverage q0 | name | min|root| | max|root| | roots(mod) | all on circle?
+  q0=0.3272 consec     min|r|=1.489 max|r|=1.701 mods=[1.701,1.701,1.489,1.489,1.581,1.581] circle?=False <== COV-MAX
+  q0=0.3272 even-AP    min|r|=1.489 max|r|=1.701 mods=[1.701,1.701,1.489,1.489,1.581,1.581] circle?=False <== COV-MAX
+  q0=0.2177 single-far min|r|=1.147 max|r|=3.103 mods=[3.103,3.103,1.590,1.590,1.147,1.147] circle?=False
+  q0=0.0954 rand       min|r|=0.827 max|r|=2.943 mods=[2.943,2.943,2.465,0.915,0.827,0.827] circle?=False
+  q0=0.0717 rand       min|r|=0.205 max|r|=2.236 mods=[2.236,2.236,2.155,1.785,1.785,0.205] circle?=False
+  q0=0.0702 rand       min|r|=0.217 max|r|=2.430 mods=[2.430,2.430,2.183,2.183,1.608,0.217] circle?=False
+  q0=0.0653 rand       min|r|=0.268 max|r|=2.667 mods=[2.667,2.667,2.058,2.058,1.131,0.268] circle?=False
+  q0=0.0593 rand       min|r|=0.254 max|r|=2.996 mods=[2.996,2.996,1.821,1.484,1.484,0.254] circle?=False
+  q0=0.0578 rand       min|r|=0.206 max|r|=2.395 mods=[2.395,2.395,1.912,1.583,1.583,0.206] circle?=False
+  q0=0.0553 rand       min|r|=0.430 max|r|=3.090 mods=[3.090,3.090,2.014,2.014,0.534,0.430] circle?=False
+  --> consec coverage=0.3272 (max? True), min|root|=1.4886, max|root|=1.7010
+
+===== MAP 2: LRC coverage PGF Q(z)=sum q_t z^t root structure, k=9 =====
+  coverage q0 | name | min|root| | max|root| | roots(mod) | all on circle?
+  q0=0.4162 consec     min|r|=1.531 max|r|=1.871 mods=[1.871,1.871,1.685,1.685,1.531,1.531] circle?=False <== COV-MAX
+  q0=0.4162 even-AP    min|r|=1.531 max|r|=1.871 mods=[1.871,1.871,1.685,1.685,1.531,1.531] circle?=False <== COV-MAX
+  q0=0.3721 single-far min|r|=1.597 max|r|=2.591 mods=[2.591,2.591,1.597,1.597,1.787,1.787] circle?=False
+  q0=0.1837 rand       min|r|=1.048 max|r|=2.489 mods=[2.489,2.489,1.993,1.993,1.048,1.048] circle?=False
+  q0=0.1621 rand       min|r|=0.752 max|r|=2.614 mods=[2.614,2.614,2.115,1.550,1.550,0.752] circle?=False
+  q0=0.1362 rand       min|r|=0.691 max|r|=2.582 mods=[2.569,2.569,2.582,2.582,0.691,0.691] circle?=False
+  q0=0.1334 rand       min|r|=0.445 max|r|=2.499 mods=[2.470,2.470,2.499,1.617,1.617,0.445] circle?=False
+  q0=0.1224 rand       min|r|=0.447 max|r|=2.269 mods=[2.269,2.269,1.900,1.900,1.546,0.447] circle?=False
+  q0=0.1220 rand       min|r|=0.499 max|r|=2.613 mods=[2.613,2.613,1.888,1.709,1.709,0.499] circle?=False
+  q0=0.1201 rand       min|r|=0.380 max|r|=2.410 mods=[2.310,2.310,2.410,2.410,1.285,0.380] circle?=False
+  --> consec coverage=0.4162 (max? True), min|root|=1.5306, max|root|=1.8714
+
+===== MAP 2: LRC coverage PGF Q(z)=sum q_t z^t root structure, k=10 =====
+  coverage q0 | name | min|root| | max|root| | roots(mod) | all on circle?
+  q0=0.5045 consec     min|r|=1.556 max|r|=1.960 mods=[1.960,1.960,1.849,1.849,1.556,1.556] circle?=False <== COV-MAX
+  q0=0.5045 even-AP    min|r|=1.556 max|r|=1.960 mods=[1.960,1.960,1.849,1.849,1.556,1.556] circle?=False <== COV-MAX
+  q0=0.4570 single-far min|r|=1.693 max|r|=2.351 mods=[2.060,2.060,2.351,2.351,1.693,1.693] circle?=False
+  q0=0.2266 rand       min|r|=0.817 max|r|=2.232 mods=[2.232,2.232,2.134,2.134,1.627,0.817] circle?=False
+  q0=0.2243 rand       min|r|=0.823 max|r|=2.308 mods=[2.308,2.308,2.065,2.065,1.764,0.823] circle?=False
+  q0=0.2241 rand       min|r|=1.055 max|r|=2.448 mods=[2.448,2.448,2.274,2.274,1.055,1.055] circle?=False
+  q0=0.2216 rand       min|r|=1.119 max|r|=2.406 mods=[2.406,2.406,2.119,2.119,1.119,1.119] circle?=False
+  q0=0.2176 rand       min|r|=0.955 max|r|=2.490 mods=[2.379,2.379,2.490,2.490,0.955,0.955] circle?=False
+  q0=0.2137 rand       min|r|=0.952 max|r|=2.577 mods=[2.230,2.230,2.577,2.577,0.952,0.952] circle?=False
+  q0=0.2077 rand       min|r|=0.573 max|r|=2.253 mods=[2.187,2.187,2.253,2.253,2.091,0.573] circle?=False
+  --> consec coverage=0.5045 (max? True), min|root|=1.5556, max|root|=1.9603
