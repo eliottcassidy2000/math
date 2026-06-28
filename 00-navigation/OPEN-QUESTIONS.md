@@ -190,6 +190,60 @@ HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, 
 HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201,
 HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153,
 T1336, LTI-336, LTT-236, OPEN-Q-108.
+**OPEN-Q-108 HYP-3226 small-pattern adjacency atlas addendum:**
+HYP-3226 turns the user's request for many small adjacent patterns into a
+typed payload ledger.  The scout scans 8363 repo-local files with 90 motifs
+and ranks by proof-payload retention, not raw analogy.  The strongest motifs
+are comb-overlap Gram kernel, shell `L_y` magic quartic, normal-cone dual
+slack, multi-chart proof split, three-gap/Stern-Brocot cap-kernel recursion,
+consecutive plus doubled AP, modulus-covariance apex break,
+Toeplitz lambda-min margin,
+certificate-Helly separation, single-arc peeling recursion,
+ordered-tail exchange-rate ratio, D1/D2/D3 covariance layers, Fejer-Riesz
+square, Chebyshev V7 double root, and the 11 non-AP exchange-trap ledger.
+HYP-3225 now supplies the first Green/Lorentzian trap-fingerprint table, and
+HYP-3214 upgrades the Fejer/Chebyshev motif to the explicit positive-definite
+`F_7` kernel.  HYP-3227 adds the conductance/Fiedler trap graph as motif M072,
+with no-Toeplitz and green-only trap graphs still connected; this is a
+finite-discharge sidecar, not a terminal conductance scalar.  S75 adds
+M073-M075 (comb-overlap Gram kernel, speed-1 peeling, order-3 residues);
+HYP-3215 adds M076-M079 (induction-base audit, Chen-Cusick floor-to-`1/14`,
+polyhedron/zonotope flatness, Rosenfeld exponential sums); and
+HYP-3228/HYP-3229 add M080-M084 (shell magic `10q0+q3+10q6`, Gamma0(7)
+Eisenstein coefficients, Beraha/Mahler height, subshift transfer, and
+Dirichlet-L/Stark denominator guardrails).  HYP-3230/HYP-3231/HYP-3216 add
+M085-M088 (three-gap/Stern-Brocot cap-kernel recursion, scale-normal packet
+recursion, the `LRC(2p)` moment-order ladder, and the 2-adic reflection fold);
+HYP-3232/HYP-3217 add M089-M090 (modulus-covariance apex break and the
+cyclotomic subfield / character-mode lattice).
+The main
+guardrail is that famous-problem names such as Skewes, tau/Lindelof, Collatz,
+Pell, Markov/Hurwitz, and Moser-de Bruijn/fibbinary
+remain sidecars until they name the LRC coordinate they preserve and the
+coordinate they destroy.  Incoming S283 adds Helfgott-Ruzsa/additive energy
+and PFR to that same sidecar cluster.
+
+Open task: prove the HYP-3225 table symbolically for the 11 non-AP exchange
+traps from HYP-3202/HYP-3224.  Required columns are `trap_id`,
+`first_failed_dictionary_coordinate`, `Gram_kernel_PSD_coordinate`,
+`Speed_1_peeling_status`, `Order_3_overlap_residue`,
+`Toeplitz_lambda_min_slack`,
+`Green_current_bottleneck_type`, `Conductance_graph_lambda2_or_Fiedler_cut`,
+`Lorentzian_exchange_defect`,
+`Precision_M_matrix_or_Schur_complement_debt`, and
+`Worpitzky_or_HB_sidecar_debt`, plus Fejer/Delsarte `F_7` slack and
+shell `L_y` magic slack, Gamma0(7) coefficient-row compatibility, and
+three-gap kernel-recursion status, scale-normal `omega_Q` exactness,
+moment-order / 2-adic fold status,
+modulus-covariance / subfield-mode status, and
+`Induction_base_and_1_23_to_1_14_lift_status`.  If the rows
+collapse to exact identities or finite inequalities, use them as the finite
+boundary chart in the multi-chart proof: exchange/covariance off the trap
+manifold, moment-cone curvature on it, ordered-tail pricing for central mass,
+Fejer/Delsarte dual slack, and HB/Joukowski/Chebyshev gluing for the odd
+sidecar. -> HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
+HYP-3227, HYP-3215, HYP-3214, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200,
+T1324, LTI-324, LTT-224, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3222 Joukowski-Hermite-Biehler / Perron-Frobenius addendum:**
 HYP-3222 turns the incoming Perron, Toeplitz, Joukowski, and Hermite-Biehler

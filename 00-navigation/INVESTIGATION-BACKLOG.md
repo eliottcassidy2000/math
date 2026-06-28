@@ -139,15 +139,13 @@ residual has a small sign-controlled Delsarte basis.
 
 ## Lead codex-2026-06-28: Small-pattern adjacency atlas
 
-**Status:** RESERVED / active atlas build; not proof (HYP-3226/T1324).
+**Status:** EXECUTED / evidence atlas; not proof (HYP-3226/T1324).
 
-Claimed files:
+Files:
 `05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md`,
-planned script
 `04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py`,
-planned result
 `05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out`,
-and planned reflection
+and
 `07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md`.
 
 Goal: assemble a large but typed list of small motifs adjacent to the current
@@ -155,9 +153,51 @@ LRC14 frontier, then classify each by payload preserved, payload destroyed,
 repair sidecar, normal-fan coordinate, trap-boundary use, and terminal-proof
 risk.  This is meant to connect HYP-3224's normal fan, HYP-3223's
 Green-current/Lorentzian classifiers, HYP-3222's HB/Perron exact legs,
-HYP-3221's analytic-equidistribution guardrail, and HYP-3225's
-Green-current/Lorentzian trap fingerprints without treating raw numerology as
-a proof carrier.
+HYP-3221's analytic-equidistribution guardrail, HYP-3225's Green-current /
+Lorentzian trap fingerprints, HYP-3227's conductance/Fiedler graph, S75's
+Gram-kernel/peeling build, HYP-3215's proof-route audit, HYP-3228's shell
+magic dual, HYP-3229's modular sidecar audit, HYP-3230/HYP-3231/HYP-3216's
+recursion layer, and HYP-3232/HYP-3217's mode lattice without treating
+raw numerology as a proof carrier.
+Readout: 90 motifs across 89 families were scored by proof-payload retention
+over 8363 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
+shell `L_y` magic quartic, normal-cone dual slack,
+multi-chart proof split, three-gap/Stern-Brocot cap-kernel recursion,
+consecutive plus doubled AP, modulus-covariance apex break, Toeplitz lambda-min
+margin, certificate-Helly separation, single-arc peeling recursion,
+ordered-tail exchange-rate ratio, and
+D1/D2/D3 covariance layers.  The useful small patterns cluster around seven
+payloads: normal-fan exposure, Toeplitz/moment curvature, covariance layers,
+ordered-tail pricing, finite trap discharge, HB/Perron gluing, and analytic
+equidistribution.  HYP-3225 now supplies the first Green/Lorentzian trap
+fingerprint table, and HYP-3214 turns the Fejer/Chebyshev motif into the
+explicit positive-definite `F_7` kernel.  HYP-3227 adds M072, the
+conductance/Fiedler trap graph, as a finite-discharge sidecar rather than a
+terminal scalar.  S75 adds M073-M075 (Gram kernel, speed-1 peeling, order-3
+overlap residues), while HYP-3215 adds M076-M079 (induction base,
+Chen-Cusick floor-to-1/14, polyhedron/zonotope flatness, Rosenfeld Node-3).
+HYP-3228/HYP-3229 add M080-M084: shell magic `10q0+q3+10q6`,
+Gamma0(7) Eisenstein coefficients, Beraha/Mahler height, subshift transfer,
+and Dirichlet-L/Stark denominator guardrails.
+HYP-3230/HYP-3231/HYP-3216 add M085-M088: three-gap/Stern-Brocot cap-kernel
+recursion, scale-normal packet recursion, the `LRC(2p)` moment-order ladder,
+and the 2-adic reflection fold.
+HYP-3232/HYP-3217 add M089-M090: modulus-covariance apex break and the
+cyclotomic subfield / character-mode lattice with the cubic de Moivre mode.
+Famous-problem analogies remain sidecars until they name the LRC coordinate
+they preserve and the coordinate they destroy.  Incoming S283's
+Skewes/Helfgott-Ruzsa/Collatz/PFR
+additive-resonance layer is absorbed here as typed sidecar material, not as a
+terminal shortcut.
+
+Next: prove the HYP-3225/HYP-3227 trap table symbolically and add
+Gram-kernel PSD, speed-1 peeling, order-3 overlap, conductance/Fiedler cuts,
+precision M-matrix or Schur-complement debt, induction-base status,
+Chen-Cusick floor-to-1/14 lift status, shell `L_y` magic slack, Gamma0(7)
+coefficient-row compatibility, three-gap kernel-recursion status,
+scale-normal `omega_Q` exactness, moment-order / 2-adic fold status,
+modulus-covariance / subfield-mode status, and
+Fejer/Delsarte `F_7` slack as finite-boundary columns.
 
 ## Lead codex-2026-06-28: Joukowski-Hermite-Biehler / Perron-Frobenius synthesis
 

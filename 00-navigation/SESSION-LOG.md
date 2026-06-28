@@ -717,6 +717,67 @@ against that Gram/peeling coordinate.  The next proof
 target is a slack decomposition using
 AP-support gap, HYP-3204 ordered-tail exchange-rate slack, HYP-3224
 Toeplitz/covariance trap slack, and HYP-3222 Joukowski/HB gluing slack.
+## codex-2026-06-28 -- HYP-3226 small-pattern adjacency atlas
+
+Owner prompt: look for small patterns adjacent to the cutting edge of the LRC
+proof and assemble a large quantity without letting raw numerology become a
+proof substitute.
+
+Created and executed
+`04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py`, stored
+`05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out`,
+updated
+`05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md`,
+and added
+`07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md`.
+
+Readout: 90 motifs over 89 families, scanned 8363 repo-local files, with
+risk histogram `{'analogy': 19, 'direct': 29, 'raw': 3, 'sidecar': 39}`.  The
+motif-family tournament is transitive (`directed_3cycles=0`, one Hamiltonian
+path).  Top payload motifs: M073 comb-overlap Gram kernel, M080 shell
+`L_y` magic quartic, normal-cone dual slack, multi-chart proof split,
+M085 three-gap/Stern-Brocot cap-kernel recursion, consecutive plus doubled AP,
+M089 modulus-covariance apex break, M074 single-arc peeling recursion,
+Toeplitz lambda-min margin,
+certificate-Helly separation, M074 single-arc peeling
+recursion, ordered-tail exchange-rate ratio, D1/D2/D3 covariance layers, the
+11 non-AP exchange-trap ledger, Fejer-Riesz square, Chebyshev V7 double root,
+Lorentzian exchange chamber, M072 conductance/Fiedler trap graph, and
+Green-current bottleneck.
+
+Main synthesis: useful small patterns currently spend seven currencies:
+normal-fan exposure, Toeplitz/moment curvature, covariance layers,
+ordered-tail pricing, finite trap discharge, Hermite-Biehler/Perron gluing,
+and analytic equidistribution, with HYP-3227 adding finite
+conductance/Fiedler debt as a live sidecar, S75 adding Gram-kernel/peeling /
+order-3 debt, HYP-3215 adding induction-base/moduli-bridge debt, and
+HYP-3228/HYP-3229 adding shell magic, Gamma0(7) coefficient rows,
+Beraha/Mahler/subshift sidecars, and Dirichlet-L/Stark denominator guardrails.
+HYP-3230/HYP-3231/HYP-3216 add the recursion layer: three-gap/Stern-Brocot
+cap kernels, scale-normal packet recursion, the `LRC(2p)` moment-order ladder,
+and the 2-adic reflection fold.
+HYP-3232/HYP-3217 add the modulus-covariance apex break and the
+cyclotomic subfield / cubic-mode lattice.
+HYP-3225 now supplies the first Green/Lorentzian trap-fingerprint table, while
+HYP-3214 upgrades the Fejer/Chebyshev motif to the explicit positive-definite
+`F_7` kernel.
+Famous-problem names stay sidecars until they name both the LRC coordinate
+they preserve and the coordinate they destroy.  Rebase integration: incoming
+S283's Skewes/Helfgott-Ruzsa/Collatz/PFR additive-resonance layer is absorbed
+as sidecar motifs, not as a competing terminal proof route.  Later rebase
+integration also absorbs S75's comb-overlap Gram kernel and HYP-3215's
+Chen-Cusick floor-to-1/14 / polyhedron / Rosenfeld proof-route audit, with
+the earlier `23 = M=2/23` link demoted to bounded-bank coincidence.  Latest
+rebase integration folds in HYP-3228/HYP-3229 as motifs M080-M084.  Push-time
+integration folds in HYP-3230/HYP-3231/HYP-3216 as motifs M085-M088.
+Latest push-time integration folds in HYP-3232/HYP-3217 as motifs M089-M090.
+Next best computation is to prove the HYP-3225/HYP-3227 trap table
+symbolically with Gram PSD, speed-1 peeling, order-3 overlap, shell `L_y`
+magic slack, Gamma0(7) coefficient-row compatibility, three-gap kernel
+recursion status, scale-normal `omega_Q` exactness, moment-order / 2-adic fold
+status, modulus-covariance apex-break status, subfield/chi_3 mode status,
+conductance/Fiedler, M-matrix/Schur, Fejer/Delsarte, induction-base, and
+floor-to-1/14 lift columns.
 
 ## mac-mini-2026-06-27-S74 -- abstract synthesis: THE ONE OBSTRUCTION (apex-7 = Lee-Yang zero at 1/p; algebra is worst-case, resolution is analytic) + octonion REFUTED
 
