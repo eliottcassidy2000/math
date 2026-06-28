@@ -1,0 +1,3 @@
+de Moivre angles 2cos(2pi j/7), j=1,2,3 : ['-1.8019', '-0.4450', '1.2470']
+uniform PGF 1+z+..+z^6 -> Joukowski (R=1): ['-1.8019', '-0.4450', '1.2470'] (EXACT cyclotomic = the cap ideal)
+=> cap = the 7th-cyclotomic ideal; dip = deviation from 7-fold symmetry = Im(w). VERIFIED S73.

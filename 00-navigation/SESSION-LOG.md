@@ -28,6 +28,35 @@ NET: LRC(14) not proved; the last node is now stated as **consec maximizes total
 (degree-2, ferromagnetic, even/provable) **+ the odd Worpitzky/associator residue** (non-associative apex).
 => HYP-3160; reflections the-k8-node-is-a-variance-extremality-..., the-two-maps-lee-yang-...; scripts
 lrc_k8_{node_bimodality_newton_maclaurin, associativity_cumulant_tower}_kps.py.
+## mac-mini-2026-06-27-S73 -- the Joukowski/De Moivre bridge: LRC circle = tournament real-rooted class; ideal=7th cyclotomic; dip=off-7-fold deviation
+
+Owner: explore deeply for the niche connection(s) that help close LRC(14); test bold ideas as I go. The
+frontier (S72) reduced the covering bound to BOUNDING THE DIP (off-circle/odd content; cap=binomial exact).
+The niche connection found + tested: the two halves of the WHOLE project are the two classical zeros-on-a-curve
+theorems, bridged by the Joukowski/De Moivre map w = z + R^2/z. HYP-3154 + reflection
+the-joukowski-de-moivre-bridge.
+
+THE BRIDGE: tournament side I(Omega,x) is REAL-ROOTED (claw-free => Chudnovsky-Seymour, zeros on neg real
+axis); LRC side miss-PGF G_N(z) is CIRCLE-ROOTED (Lee-Yang, zeros |z|=R, coverage p0=q6*R^6, 7 sectors mod 7).
+w=z+R^2/z sends the circle (z=R e^{i th}) to the REAL axis (w=2R cos th) -- this IS the S70 "De Moivre
+resolvent", now explained geometrically.
+
+VERIFIED EXACT (lrc_joukowski_resolvent_macmini_S73.py): the uniform/ideal PGF 1+z+..+z^6 (perfect 7-fold
+symmetry = the cap = binomial) has zeros = the 7th roots of unity; Joukowski image = the DE MOIVRE ANGLES
+2cos(2 pi j/7) = {-1.8019,-0.4450,1.2470} EXACTLY. So cap = the 7-cyclotomic ideal; DIP = deviation from
+perfect 7-fold symmetry = Im(w) = the real-rootedness DEFECT of the resolvent.
+
+VERIFIED ROBUST: consec is max-coverage & min-off-circle -- 0/400 random sets beat consec p0 at n=7,8,9;
+resolvent root j=3 pinned at 2cos(6pi/7); x2 scale-invariance (2*{0..7} identical = the 14=2*7 face). The
+Im<->p0 scalar correlation is LOOSE on random sets (-0.03..-0.42); the clean content is the extremality.
+
+REFRAME (toward proof, NOT a proof): dip>=0 <=> resolvent stays real-rooted <=> Lee-Yang/stability for G_N,
+and real-rootedness is the tournament side's PROVED property (Chudnovsky-Seymour). The apex prime 7 < 9 (the
+claw-free threshold), so the apex-7 winding tournament (circulant C_7, S57) has Omega claw-free => I real-rooted
+PROVABLY (no conjecture) -- the bridge lands the apex on the real axis where the theorem is a theorem.
+Dovetails codex Asano (HYP-3127/3128/3132): off-circle = tail interior Lee-Yang zeros = the Asano obstruction;
+apex/tip on-circle = Lee-Yang-safe. NOT a proof; LRC(14) open. Next: prove G_N's single-runner factors give a
+Grace-Walsh-Szego/Asano argument keeping the Joukowski image real-rooted (in the stability class, not near it).
 
 ## mac-mini-2026-06-27-S72 -- the Lee-Yang circle web: coverage=R^6, dip=off-circle phi^4, Galois<=S4, compression hierarchy
 
