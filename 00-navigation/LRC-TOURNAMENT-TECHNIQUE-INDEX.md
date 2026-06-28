@@ -6534,7 +6534,7 @@ quotient_legality_status
   HYP-3220/HYP-3238/HYP-3239 add M098-M100: D7 Borsuk-Ulam sign-irrep
   certificate, p mod 4 imaginary-quadratic family law, and bimodal phi4
   cumulant diagonal.
-  HYP-3240 adds M101: universal Phi14 saddle-index core with explicit
+  HYP-3241/HYP-3240 add M101: universal Phi14 saddle-index core with explicit
   Phi_{14d} dilation-witness sidecar.
 - **Preserves:** motif id, payload coordinate, destroyed coordinate,
   required sidecar, trap-boundary use, and terminal-risk label.
@@ -6560,7 +6560,7 @@ quotient_legality_status
   status, bimodal phi4 diagonal status, universal Phi14 saddle-index /
   dilation-witness status, the
   induction-base audit, and Chen-Cusick floor-to-`1/14` lift status.
-- **Pointers:** HYP-3226, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3215, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
+- **Pointers:** HYP-3226, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3215, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
   HYP-3214, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, LTI-324,
   LTT-224, T1324, OPEN-Q-108.
 

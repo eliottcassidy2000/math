@@ -161,11 +161,11 @@ recursion layer, HYP-3232/HYP-3217's mode lattice,
 HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor / chart / Fejer /
 conductor layer, HYP-3236/HYP-3219/HYP-3237's Green / Brouwer / Vitali
 boundary layer, and HYP-3220/HYP-3238/HYP-3239's D7 / Borsuk-Ulam /
-`p mod 4` / bimodal phi4 diagonal layer, plus HYP-3240's universal `Phi_14`
+`p mod 4` / bimodal phi4 diagonal layer, plus HYP-3241/HYP-3240 universal `Phi_14`
 saddle-index / `Phi_{14d}` dilation-witness core, without treating
 raw numerology as a proof carrier.
 Readout: 101 motifs across 100 families were scored by proof-payload retention
-over 8389 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
+over 8390 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
 universal `Phi_14` saddle-index core, shell `L_y` magic quartic, normal-cone dual slack,
 multi-chart proof split, AP Green algebraic-connectivity certificate,
 bimodal phi4 diagonal extremizer, AP self-dual Fejer equidistribution certificate,
@@ -202,7 +202,7 @@ split, and the Vitali bulk-core `Phi_14` witness wall.
 HYP-3220/HYP-3238/HYP-3239 add M098-M100: D7 Borsuk-Ulam sign-irrep
 certificate, p mod 4 imaginary-quadratic family law, and bimodal phi4
 cumulant diagonal.
-HYP-3240 adds M101: universal `Phi_14` saddle-index core with three antipodal
+HYP-3241/HYP-3240 add M101: universal `Phi_14` saddle-index core with three antipodal
 witness pairs and explicit `Phi_{14d}` dilation witnesses.
 Famous-problem analogies remain sidecars until they name the LRC coordinate
 they preserve and the coordinate they destroy.  Incoming S283's

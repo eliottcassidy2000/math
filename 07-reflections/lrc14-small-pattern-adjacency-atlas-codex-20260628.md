@@ -112,12 +112,17 @@ pure SOS in the real `p=1 mod4` case and sign-times-SOS in the imaginary
 and the odd `kappa3` target collapse to the bimodal phi4 extremizer, with
 `kappa4` acting as the stabilizer rather than an independent scalar.
 
-Incoming HYP-3240 adds M101 and moves it near the front of the atlas.  The
+Incoming HYP-3241/HYP-3240 add M101 and move it near the front of the atlas.  The
 new signal is not another raw cyclotomic slogan: the `Phi_14` tight core is
 shared by AP and Goddyn-Wong, consists of three antipodal witness pairs, and
 has saddle index `(p-1)/2`.  Covering-tight dilations must carry explicit
 `Phi_{14d}` witness data, so the core packet is portable only when the
 dilation/sporadic sidecar is retained.
+
+The new Erdos-Turan / p-adic Littlewood / Davenport-Erdos forum synthesis is
+useful in the same disciplined way: it reinforces discrepancy, p-adic, and
+density sidecars for analytic equidistribution, but it is not a proof object
+until the retained coordinate and destroyed coordinate are explicit.
 
 ## The Expanded Currencies
 

@@ -771,12 +771,12 @@ MOTIFS: tuple[Motif, ...] = (
           "sidecar",
           ("kappa_4", "phi^4", "bimodal", "q0+q6", "kappa3")),
     Motif("M101", "universal Phi14 saddle-index core", "phi14-saddle-index-core",
-          "Phi14 tight core has three antipodal witness pairs and index=(p-1)/2",
+          "HYP-3241 saddle index and HYP-3240 dilation witnesses share the Phi14 core",
           ("ANALYTIC_EQ", "QUOTIENT_LEGALITY", "CHEBYSHEV", "GEOMETRY", "AP_NORMAL", "SIDE_CARRIER"),
           "AP-specific witness-core compression forgets GW, dilation, and sporadic carriers",
           "Phi_{14d} dilation-witness / saddle-index sidecar",
           "direct",
-          ("HYP-3240", "saddle index", "Phi_14 witnesses", "Phi_{14d}", "Goddyn-Wong", "antipodal pairs")),
+          ("HYP-3241", "HYP-3240", "saddle index", "Phi_14 witnesses", "Phi_{14d}", "Goddyn-Wong", "antipodal pairs")),
 )
 
 
@@ -1041,9 +1041,9 @@ def main() -> None:
         "odd topological side is a D7 sign-irrep/Borsuk-Ulam certificate, the "
         "family split is p mod 4 pure-SOS versus sign-times-SOS, and the two "
         "remaining cumulant targets collapse to a bimodal phi4 diagonal.  "
-        "Incoming HYP-3240 then makes the core portable: the AP/GW tight locus "
-        "shares the Phi14 witness core, its saddle index is (p-1)/2, and "
-        "dilations retain explicit Phi_{14d} witness data."
+        "Incoming HYP-3241/HYP-3240 then makes the core portable: the AP/GW "
+        "tight locus shares the Phi14 witness core, its saddle index is "
+        "(p-1)/2, and dilations retain explicit Phi_{14d} witness data."
     )
 
 

@@ -731,7 +731,7 @@ updated
 and added
 `07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md`.
 
-Readout: 101 motifs over 100 families, scanned 8389 repo-local files, with
+Readout: 101 motifs over 100 families, scanned 8390 repo-local files, with
 risk histogram `{'analogy': 19, 'direct': 39, 'raw': 3, 'sidecar': 40}`.  The
 motif-family tournament is transitive (`directed_3cycles=0`, one Hamiltonian
 path).  Top payload motifs: M073 comb-overlap Gram kernel, M101 universal Phi14 saddle-index core, M080 shell
@@ -789,7 +789,7 @@ SOS split, and Vitali bulk-core `Phi_14` witness wall.
 Rebase integration folds in HYP-3220/HYP-3238/HYP-3239 as motifs M098-M100:
 D7 Borsuk-Ulam sign-irrep certificate, p mod 4 imaginary-quadratic family law,
 and bimodal phi4 diagonal extremizer.
-Latest rebase integration folds in HYP-3240 as motif M101: universal Phi14
+Latest rebase integration folds in HYP-3241/HYP-3240 as motif M101: universal Phi14
 saddle-index core with three antipodal witness pairs and explicit Phi_{14d}
 dilation-witness sidecar.
 Next best computation is to prove the HYP-3225/HYP-3227 trap table

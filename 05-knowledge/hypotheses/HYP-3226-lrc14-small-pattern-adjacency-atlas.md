@@ -10,6 +10,7 @@ script: 04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py
 result: 05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out
 reflection: 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md
 related:
+  - HYP-3241
   - HYP-3240
   - HYP-3239
   - HYP-3238
@@ -90,7 +91,7 @@ Brouwer trace-sign times SOS split
 
 ## Method
 
-The scout defines 101 motifs across 100 families, scans 8389 repo-local files,
+The scout defines 101 motifs across 100 families, scans 8390 repo-local files,
 and ranks each motif by a payload-retention score:
 
 ```text
@@ -108,7 +109,7 @@ the destroyed coordinate, the repair sidecar, and the risk label.
 ## Result Snapshot
 
 ```text
-repo_files_scanned=8389
+repo_files_scanned=8390
 motifs=101
 families=100
 risk_hist={'analogy': 19, 'direct': 39, 'raw': 3, 'sidecar': 40}
@@ -369,12 +370,17 @@ class-number/Stark sidecar.  The S76 cumulant scout then makes the two
 remaining targets one diagonal: AP/consecutive is the bimodal phi4 extremizer
 for `kappa2`, `kappa3`, `q0+q6`, and `kappa4`.
 
-Incoming HYP-3240 adds M101.  The `Phi_14` tight core is not AP-specific:
+Incoming HYP-3241/HYP-3240 add M101.  The `Phi_14` tight core is not AP-specific:
 AP and Goddyn-Wong share the six primitive witnesses, grouped as three
 antipodal pairs.  The saddle index is `(p-1)/2`, its parity chooses the
 Borsuk-Ulam versus Brouwer/SOS side, and covering-tight dilations retain
 explicit `Phi_{14d}` witness data rather than copying the base core as a
 scalar.
+
+The incoming Erdos-Turan / p-adic Littlewood / Davenport-Erdos forum synthesis
+reinforces existing sidecar motifs rather than creating a terminal shortcut:
+discrepancy control, p-adic retained addresses, and density lemmas feed the
+analytic-equidistribution packet only after their lost coordinates are named.
 
 The raw-famous-problem magnet is explicitly the sink motif: it destroys all
 LRC payload unless it is retyped into one of those coordinates.
