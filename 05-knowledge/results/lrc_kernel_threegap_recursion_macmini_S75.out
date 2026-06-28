@@ -1,0 +1,19 @@
+(1) scale-invariance K(p,q)=K(p/gcd,q/gcd):
+     HOLDS (all p,q<=13)
+(2) antipode column K(a,13)=(2a-1)/(91a):
+     HOLDS (a=1..12)
+(3) gap-count g(a,b)=7ab*K(a,b) (piecewise-linear in a = three-gap; kinks at convergents of a/b):
+    b= 2: g = [1]
+    b= 3: g = [1, 2]
+    b= 4: g = [1, 3]
+    b= 5: g = [1, 2, 3, 4]
+    b= 6: g = [1, 5]
+    b= 7: g = [1, 2, 3, 4, 5, 6]
+    b= 8: g = [1, 3, 5, 8]
+    b= 9: g = [1, 2, 4, 5, 9, 11]
+    b=10: g = [1, 3, 10, 14]
+    b=11: g = [1, 2, 3, 5, 7, 9, 11, 13, 15, 17]
+    b=12: g = [1, 8, 12, 20]
+    b=13: g = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]
+    base K(1,b)=1/(7b): True
+    apex K(7,b)=1/49 for all b coprime-ish: ['1/49', '1/49', '1/49', '1/49', '1/49', '1/49']

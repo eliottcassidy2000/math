@@ -1,3 +1,25 @@
+## mac-mini-2026-06-28-S75b -- how the route sharpened + the THREE-GAP/Stern-Brocot recursion in the cap kernel (the Farey thread IS the cap recursion)
+
+Owner: comprehensive understanding of how the route sharpened over time; use it to see recursive patterns not yet
+precisely described. HYP-3230 + reflection how-the-route-sharpened-... + script lrc_kernel_threegap_recursion_S75.py.
+
+ROUTE SHARPENING (a self-similar zoom into the apex-7): LRC(14) → covering bound (S59, narrows the SET CLASS) →
+the cap = min meas(lonely) (THM-534, problem→NUMBER) → cap=C(k+1,2)/91 + 2 binding constants (THM-576, the
+FORMULA+hard rows) → the magic function = Fejér/Gram kernel (S75, the CERTIFICATE) → single-arc peeling recursion
+(S75, peel speed 1) → the kernel's three-gap recursion (this). Monotone: problem→set-class→number→formula→kernel→
+recursion→arithmetic recursion. The apex-7 recurs at EVERY level (7 sectors, /91, F_7(0)=49=7², single-arc fails
+exactly at apex 14, K(7,b)=1/49) -- the route is the same skeleton at finer scales.
+
+THE RECURSION (VERIFIED): the magic-function kernel K(a,b)=meas(D_a∩D_b)=g(a,b)/(7ab), where g(a,b)=7ab·K is
+PIECEWISE-LINEAR in a with kinks at the continued-fraction convergents of a/b = the THREE-GAP (Steinhaus) theorem.
+Scale-invariance K(p,q)=K(p/gcd,q/gcd) (all p,q≤13); ANTIPODE K(a,13)=(2a-1)/(91a) (all a, single regime, numerators
+the odd numbers); base K(1,b)=1/(7b) (single-arc lemma); apex K(7,b)=1/49.
+
+SYNTHESIS: the Farey/three-gap thread (HYP-2913; S59 I'd demoted it to "the census/easy case") is NOT the easy
+shadow -- it IS the arithmetic recursion of the covering-bound cap kernel. The two halves (additive/census +
+covering/cap) MERGE: one object, census at coarse scale, cap-kernel recursion at fine scale. The cap closure runs
+through the continued-fraction (three-gap) recursion, not a config-blind certificate. NOT a proof; LRC(14) open.
+
 ## kind-pasteur-2026-06-28-S31ap -- IMPROVED proof route: integrating the 2024-25 literature + a critical base flag
 
 Owner: improve the LRC(14) proof route as much/as many ways as possible, integrate niche concepts. Searched
