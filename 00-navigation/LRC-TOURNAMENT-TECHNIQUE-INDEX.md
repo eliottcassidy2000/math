@@ -285,6 +285,12 @@ obligations, and proof-carrier interfaces.
   explicit first obstruction; the AP-collar scout says nonunit height misses
   the unit-height lift `13->27`, while all-residue height/flex kills the local
   obstruction.
+- Need the AP-collar exactness statement as a finite theorem target:
+  use LTT-266 after LTT-262 and make proof-carrier certificates the vertices:
+  strict-open witness certificate, height-completed oracle, unit-height
+  obstruction vector, sidecar repair matrix, boundary atom classifier, and raw
+  mixed-fiber scout.  Do not make rows, residues, or replacement speeds the
+  vertices.
 - Need a post-HYP-3311 angle that does not reuse residue words as the theorem:
   use LTT-263 and make endpoint-owner currents, theorem-exit sources/sinks,
   valuation owners, tropical wall words, Farkas/Green duals, AP/GW boundary H1
@@ -7353,6 +7359,48 @@ quotient_legality_status
 - **Pointers:** HYP-3401, HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3266,
   HYP-3265, HYP-3260, HYP-3257, HYP-3255, HYP-3300, HYP-2909, THM-523,
   LTI-362, T1362, OPEN-Q-108.
+
+## LTT-266: AP-Collar Finite Lemma Certificate Tournament
+
+- **Move:** Treat finite-lemma proof carriers as tournament vertices and rank
+  them by how much of the AP-collar lemma they certify without hidden sidecar
+  debt.  The vertices are `strict_open_witness_certificate`,
+  `height_completed_oracle`, `unit_height_obstruction_vector`,
+  `sidecar_repair_matrix`, `boundary_atom_classifier`, and
+  `raw_mixed_fiber_scout`.
+- **LRC use:** HYP-3405 turns HYP-3401 into a certificate-shaped finite lemma:
+  AP and Goddyn-Wong `12->24` are the only boundary-tight rows in the
+  `924`-row AP one-swap collar through speed `84`; every other row has a
+  rational strict-open witness, and the uniform strict-open mass floor is
+  `1/1260`, uniquely at `12->36`.
+- **Preserves:** boundary atom classification, explicit strict-open interval
+  witnesses, quantitative mass floor, nonunit-height mixed-fiber detection,
+  and the unit-height repair vector `(13,0)->(13,1)`.
+- **Forgets / guardrail:** raw runners, residues, replacement speeds, and
+  contact-status shadows are not proof vertices here.  They are coordinates
+  inside the certificate and can forget which sidecar actually repairs the
+  mixed AP versus `13->27` fiber.
+- **Observable:** finite-lemma certificate power minus quotient illegality.
+- **Switch/gauge:** `A -> B` iff `A` proves a larger portion of the finite
+  lemma with less hidden sidecar debt; ties follow the declared Hamiltonian
+  path.
+- **Fingerprint:** `vertices=6`,
+  `score_hist={-18:1, 11:1, 24:1, 46:1, 52:1, 59:1}`,
+  `directed_3cycles=0`, `hamiltonian_path_count=1`, and priority path
+  `strict_open_witness_certificate -> height_completed_oracle ->
+  unit_height_obstruction_vector -> sidecar_repair_matrix ->
+  boundary_atom_classifier -> raw_mixed_fiber_scout`.
+- **Assumption challenge:** runners, gaps, fixed circle sections, endpoint
+  owners, residues, cover arcs, and replacement speeds were considered as
+  possible vertices.  They were rejected because the preserved predicate is
+  certificate legality, not row identity.
+- **Next hook:** Formalize the finite AP-collar certificate as a theorem and
+  then replace row-height retention by a finite chamber sidecar that routes
+  height/flex moves to AP/GW boundary, strict-open mass, `Phi14d`,
+  Toeplitz/Green/root-motion discharge, state-lift debt, or named residual.
+- **Pointers:** HYP-3405, HYP-3401, HYP-3404, HYP-3403, HYP-3402, HYP-3400,
+  HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-3257,
+  HYP-3255, THM-523, LTI-366, T1366, OPEN-Q-108.
 
 ## LTT-244: Tiling/Half-Tiling Descent Tournament
 

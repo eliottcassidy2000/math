@@ -1,3 +1,36 @@
+## codex-2026-06-28 -- HYP-3405 AP-collar finite lemma certificate for LRC14
+
+Owner asked to work vigorously on the concrete finite lemma target.  Added
+HYP-3405/T1366/LTI-366/LTT-266 plus script/result/reflection:
+
+```text
+04-computation/lrc14_ap_collar_finite_lemma_certificate_codex_20260628.py
+05-knowledge/results/lrc14_ap_collar_finite_lemma_certificate_codex_20260628.out
+05-knowledge/hypotheses/HYP-3405-lrc14-ap-collar-finite-lemma-certificate.md
+07-reflections/lrc14-ap-collar-finite-lemma-certificate-codex-20260628.md
+```
+
+Readout: the AP one-swap collar through replacement speed `84` has `924` rows.
+AP and Goddyn-Wong `12->24` are the only boundary-tight rows; the other `922`
+rows have exact rational strict-open witness intervals.  The uniform
+strict-open mass lower bound is `1/1260`, uniquely at `12->36`, with certificate
+digest `c40c24d7746f05a708a9b625afeedcfae5d6fff8e8e39ba892b4325cd5b1e148`.
+
+The quotient repair matrix sharpened HYP-3401: the HYP-3311
+nonunit-height packet has one mixed boundary/strict fiber of size `31`.  AP
+and strict-open `13->27` share unit contacts, C3, `Q(sqrt(-7))`, covering
+layer, and nonunit height; the first missing coordinate is the unit-height lift
+`(13,0)->(13,1)`.  Unit-height/full-height/height-completed sidecars split the
+fiber; unit contacts, covering layer, and nonunit height do not.
+
+Tournament Analysis uses finite-lemma proof carriers as vertices, not runners,
+residues, or replacement speeds.  The priority path is
+`strict_open_witness_certificate -> height_completed_oracle -> unit_height_obstruction_vector -> sidecar_repair_matrix -> boundary_atom_classifier -> raw_mixed_fiber_scout`.
+Next proof pull: formalize this finite certificate, then globalize it by
+replacing row-height retention with a finite chamber theorem routing height/flex
+to AP/GW boundary, strict-open mass, `Phi14d`, Toeplitz/Green/root-motion
+discharge, state-lift debt, or named residual.
+
 ## codex-2026-06-28 -- HYP-3401 three-coordinate obstruction exactness for LRC14
 
 Owner asked to keep pushing creative but rigorous LRC14 proof angles, with the

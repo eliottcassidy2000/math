@@ -127,6 +127,12 @@ The obstruction is killed by the C3 + Q(sqrt(-7)) + all-residue height/flex
 packet, and is not killed by the C3 + Q(sqrt(-7)) + nonunit-height packet.
 ```
 
+HYP-3405 strengthens this into a certificate-grade finite target: the same
+`924` rows have exact rational safe-interval witnesses for every non-boundary
+row, a uniform strict-open mass floor `1/1260` uniquely at `12->36`, and a
+sidecar repair matrix isolating the first missing coordinate as the unit-height
+lift `(13,0)->(13,1)` in the AP versus `13->27` fiber.
+
 This is not yet the LRC14 theorem.  It is a local exactness lemma for the O15
 tight-locus rigidity program.  The next global step is to replace the finite
 collar ledger by a chamber theorem:

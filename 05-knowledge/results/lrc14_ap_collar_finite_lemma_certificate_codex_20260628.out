@@ -1,0 +1,75 @@
+﻿HYP-3405 AP-collar finite lemma certificate
+==============================================================================
+status=exact finite certificate; proof-engineering target, not LRC14 proof
+lemma_domain=AP one-swap collar with replacement speed <= 84
+certificate_digest=c40c24d7746f05a708a9b625afeedcfae5d6fff8e8e39ba892b4325cd5b1e148
+
+FINITE LEMMA A: BOUNDARY ATOMS
+rows=924
+boundary_tight_count=2
+strict_open_count=922
+covered_or_debt_count=0
+  boundary row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) closed_contacts=[1/14, 3/14, 5/14, 9/14, 11/14, 13/14]
+  boundary row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24) closed_contacts=[1/14, 3/14, 5/14, 9/14, 11/14, 13/14]
+
+FINITE LEMMA B: STRICT-OPEN WITNESSES
+all_strict_rows_have_verified_open_interval=True
+uniform_strict_mass_lower_bound=1/1260
+lower_bound_attainers=1
+  min row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36) mass=1/1260 witnesses=(29/70, 209/504) length=1/2520, (295/504, 41/70) length=1/2520
+max_strict_component_count=20
+max_safe_endpoint_denominator=1176
+component_count_hist={2: 49, 4: 364, 6: 164, 8: 129, 10: 86, 12: 111, 14: 13, 16: 3, 20: 3}
+
+FINITE LEMMA C: QUOTIENT OBSTRUCTION TABLE
+  raw_unit_projection: fibers=43 mixed_fibers=1 largest_mixed=318
+  raw_mod14_residue_table: fibers=170 mixed_fibers=2 largest_mixed=66
+  c3_binding_skeleton: fibers=13 mixed_fibers=1 largest_mixed=348
+  quadratic_Qsqrt_minus7_character: fibers=7 mixed_fibers=1 largest_mixed=372
+  c3_plus_quadratic: fibers=55 mixed_fibers=1 largest_mixed=132
+  c3_plus_quadratic_plus_covering_layer: fibers=55 mixed_fibers=1 largest_mixed=132
+  c3_quadratic_nonunit_height_packet: fibers=596 mixed_fibers=1 largest_mixed=31
+  height_completed_packet: fibers=924 mixed_fibers=0 largest_mixed=0
+  full_height_residue_ledger: fibers=924 mixed_fibers=0 largest_mixed=0
+
+FINITE LEMMA D: FIRST OBSTRUCTION VECTOR
+mixed_nonunit_packet_fibers=1
+mixed_fiber_size=31
+mixed_fiber_boundary_count=1
+mixed_fiber_strict_count=30
+boundary_exemplar=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+strict_exemplar=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 27)
+strict_exemplar_mass=13691/582120
+strict_exemplar_witness=(71/154, 13/28)
+shared_contact_status=EEEEEE
+shared_c3=(2, 2, 2)
+shared_quadratic=(6, 1, 6)
+shared_covering=(6, 1)
+nonunit_height_delta=((), ())
+unit_height_delta=((((13, 0), 1),), (((13, 1), 1),))
+
+SIDECAR REPAIR MATRIX FOR NONUNIT PACKET
+  unit_contact_status: mixed_fibers_after_join=1
+  covering_layer: mixed_fibers_after_join=1
+  unit_height_flex: mixed_fibers_after_join=0
+  nonunit_height_flex: mixed_fibers_after_join=1
+  full_height_flex: mixed_fibers_after_join=0
+  height_completed_packet: mixed_fibers_after_join=0
+
+CERTIFIED FINITE LEMMA TARGET
+  AP and GW 12->24 are the only boundary-tight rows in the finite collar.
+  Every other row has a verified strict-open interval and mass >= 1/1260.
+  The C3 + Qsqrt(-7) + nonunit-height packet has one mixed fiber.
+  The first displayed obstruction is the unit-height lift (13,0)->(13,1).
+  Joining the unit-height sidecar kills the mixed fiber on this collar.
+
+TOURNAMENT ANALYSIS
+vertices=finite-lemma proof carriers, not runners/residues/replacement speeds
+pairwise_observable=certificate checkability + obstruction localization + globalization cost
+switch_gauge=A -> B iff A retains more finite-lemma proof payload with less destroyed chamber data
+vertices=6
+score_hist={-18: 1, 11: 1, 24: 1, 46: 1, 52: 1, 59: 1}
+directed_3cycles=0
+hamiltonian_path_count=1
+priority_path=strict_open_witness_certificate -> height_completed_oracle -> unit_height_obstruction_vector -> sidecar_repair_matrix -> boundary_atom_classifier -> raw_mixed_fiber_scout
+assumption_challenge=considered runners/gaps/sections/residues/wall-crossings; selected finite-lemma proof carriers because the preserved predicate is certificate-grade boundary-vs-strict exactness

@@ -15,6 +15,45 @@
 
 ---
 
+## Lead codex-2026-06-28: AP-collar finite lemma certificate
+
+**Status:** EVIDENCE / exact finite certificate for the HYP-3401 AP-collar
+lemma; not proof (HYP-3405/T1366/LTI-366/LTT-266).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3405-lrc14-ap-collar-finite-lemma-certificate.md`,
+script
+`04-computation/lrc14_ap_collar_finite_lemma_certificate_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_ap_collar_finite_lemma_certificate_codex_20260628.out`,
+and
+`07-reflections/lrc14-ap-collar-finite-lemma-certificate-codex-20260628.md`.
+
+Purpose: convert the HYP-3401 quotient-mixing scout into a concrete finite
+lemma target.  Every AP-collar non-boundary row should have an explicit
+strict-open witness, and every quotient failure should name its missing sidecar
+rather than remaining an analogy.
+
+Readout: in the AP one-swap collar through replacement speed `84`, there are
+`924` rows.  AP and Goddyn-Wong `12->24` are the only boundary-tight rows; the
+other `922` rows have exact rational strict-open witness intervals.  The
+uniform strict-open mass lower bound is `1/1260`, uniquely at `12->36`.
+
+Compression failure: the HYP-3311 nonunit-height packet has one mixed
+boundary/strict fiber of size `31`.  AP and strict-open `13->27` share unit
+contact status, C3 skeleton, `Q(sqrt(-7))` character, covering layer, and
+nonunit height, but differ by the unit-height lift `(13,0)->(13,1)`.  The
+repair matrix says unit-height/full-height/height-completed data kills the
+fiber; unit contacts, covering layer, and nonunit height do not.
+
+Next: formalize the finite lemma as a certificate with two boundary atoms,
+922 open-interval witnesses, the `1/1260` floor, and the unit-height
+obstruction vector.  Then globalize by replacing row-height retention with a
+finite chamber theorem routing every height/flex move to AP/GW boundary,
+strict-open mass, `Phi14d`, finite Toeplitz/Green/root-motion discharge,
+state-lift debt, or named residual.  Keep Tournament Analysis on proof
+carriers, not runners, residues, or replacement speeds.
+
 ## Lead codex-2026-06-28: Three-coordinate obstruction exactness in the AP collar
 
 **Status:** EVIDENCE / exact AP-collar first-obstruction scout; not proof

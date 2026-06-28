@@ -59,6 +59,11 @@ Incoming HYP-3403 adds the shadow-charge packet-gluing rule: C3/index and
 `Q(sqrt(-7))` shadows are descriptive, the covering residue word is the
 first low-cost separating sidecar on the bank, `v2` alone is too weak, and
 height remains a same-residue debt detector.
+HYP-3405 upgrades the AP-collar side of this queue to a certificate-grade
+finite lemma: AP and Goddyn-Wong `12->24` are the only boundary atoms, all
+other collar rows are strict-open with rational witnesses and floor `1/1260`,
+and the first obstruction vector is exactly the unit-height lift
+`(13,0)->(13,1)` in the AP versus `13->27` fiber.
 
 Namespace note: incoming mainline claimed `HYP-3401/T1362/LTI-362/LTT-262`
 for the three-coordinate obstruction exactness scout, and then

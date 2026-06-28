@@ -1,5 +1,28 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3405 AP-collar finite lemma certificate addendum:**
+HYP-3405 turns the HYP-3401 AP-collar obstruction into a certificate-shaped
+finite lemma target.  In the AP one-swap collar with replacement speed through
+`84`, exact rational arithmetic verifies `924` rows: AP and Goddyn-Wong
+`12->24` are the only boundary-tight rows, and all other `922` rows have
+strict-open witness intervals.  The uniform strict-open mass floor is
+`1/1260`, uniquely at `12->36`.
+
+Open task: formalize this finite lemma in the proof pipeline.  The statement
+should name the two boundary atoms, attach rational witness intervals to all
+non-boundary rows, and record the quotient repair matrix.  The HYP-3311
+nonunit-height packet has one mixed boundary/strict fiber of size `31`; AP
+versus strict-open `13->27` shows the missing coordinate is the unit-height
+lift `(13,0)->(13,1)`.  C3, `Q(sqrt(-7))`, covering layer, unit contacts, and
+nonunit height are not enough; unit-height/full-height/height-completed
+sidecars split the fiber.  The global O15 task remains to replace full
+row-height retention by a chamber theorem routing height/flex moves to AP/GW,
+strict-open mass, `Phi14d`, Toeplitz/Green/root-motion discharge,
+state-lift debt, or named residual. -> HYP-3405, HYP-3401, HYP-3404,
+HYP-3403, HYP-3402, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3266,
+HYP-3265, HYP-3260, HYP-3257, HYP-3255, THM-523, T1366, LTI-366, LTT-266,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3401 three-coordinate obstruction exactness addendum:**
 HYP-3401 turns the HYP-3311 packet into an exact AP-collar
 first-obstruction test.  In the one-swap collar with replacement speeds
