@@ -10,6 +10,7 @@ script: 04-computation/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.py
 result: 05-knowledge/results/lrc14_lee_yang_worpitzky_quartic_packet_codex_20260628.out
 reflection: 07-reflections/lrc14-lee-yang-worpitzky-quartic-packet-codex-20260628.md
 related:
+  - HYP-3160
   - HYP-3152
   - HYP-3151
   - HYP-3150
@@ -87,6 +88,18 @@ even =  6S4 = 944/245
 
 This keeps the HYP-3150/S71 message precise: the even side is the solvable
 biquadratic face, while the odd side is the larger Worpitzky/ear sidecar.
+
+Post-rebase integration with HYP-3160/S31ai sharpens the even face.  The
+degree-two target is not entropy and not excess kurtosis: it is total
+covariance / excess co-emptiness `Sigma-kappa_2`.  HYP-3160 verifies that
+consec/even-AP co-maximize `L_yK8`, `q0+q6`, `Var(N)`, and `mu4` in the
+3002-row k=8 scout, while entropy and excess kurtosis are not extremal.  Its
+cumulant tower further says consec maximizes `Sigma-kappa_2`, does not
+maximize the associator `Sigma-kappa_3`, and minimizes `kappa_4`; the
+`anchor=odd-residue` and exact `1/7` associativity shortcuts are refuted.
+Therefore this packet should first try to prove a covariance/excess
+co-emptiness lemma for the even fold, then carry the odd `-9S3`
+Worpitzky/associator term as separate sidecar debt.
 
 The Worpitzky packet reuses HYP-3151's exact data:
 
@@ -178,7 +191,9 @@ folding to degree two.
 
 The scout leaves three load-bearing tasks:
 
-1. Bound the off-circle dip/lambda, not merely describe it.
+1. Prove the even covariance/excess co-emptiness bound
+   `Sigma-kappa_2` first; do not route this through entropy, excess kurtosis,
+   anchor residue, or exact `1/7` associativity heuristics.
 2. Prove the AP/consec `L_y` extremality in the required bank or route each
    exception to an existing finite-address/observer-gluing packet.
 3. Carry the ordered/Worpitzky/ear sidecars through the LRC predicate before

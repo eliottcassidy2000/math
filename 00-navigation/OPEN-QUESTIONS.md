@@ -9,11 +9,16 @@ HYP-3152's Lee-Yang radius web.  Exact scout output verifies `q0=q6*R^6`,
 larger by factor `3.149364`.
 
 Open task: prove a packet lemma bounding the off-circle dip/lambda as
-`even biquadratic contribution + odd Worpitzky/ear contribution`, while
+`even covariance/excess-co-emptiness contribution + odd Worpitzky/ear
+associator contribution`, while
 retaining `root_radius_R6`, `root_radius_spread`, `Ly_margin`,
 `odd_worpitzky_mode`, `odd_ear_payload`, `factor_through_status`, and
 `terminal_exit_or_named_debt`.  A scalar `p0`, cap value, or root radius alone
-is not a legal terminal proof row. -> HYP-3153, HYP-3152, HYP-3151, HYP-3150,
+is not a legal terminal proof row.  Post-HYP-3160 correction: this route should
+not use entropy, excess kurtosis, `anchor=odd-residue`, or exact `1/7`
+associativity as terminal invariants; the verified even target is
+`Sigma-kappa_2`, while the odd `Sigma-kappa_3`/Worpitzky channel remains
+separate debt. -> HYP-3160, HYP-3153, HYP-3152, HYP-3151, HYP-3150,
 HYP-3147, HYP-3142, HYP-3139, THM-577, LTI-279, LTT-177, T1218,
 OPEN-Q-108.
 

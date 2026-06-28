@@ -32,6 +32,15 @@ The even part is the biquadratic `u^4-5u^2+4`, which folds through `v=u^2`.
 The odd part is the larger term: `-9S3` has magnitude about `3.15` times
 `6S4`, matching the Worpitzky/edge-flip sidecar from HYP-3147/HYP-3151.
 
+After rebasing over HYP-3160/S31ai, the even half has a cleaner name:
+total covariance / excess co-emptiness `Sigma-kappa_2`.  The landed scans
+verify that consec/even-AP co-maximize `Var(N)`, `mu4`, raw bimodality, and
+`L_yK8`, but not entropy or excess kurtosis.  The cumulant tower also warns
+that consec does not maximize the associator `Sigma-kappa_3`, the exact `1/7`
+claim was a near-coincidence, and `anchor=odd-residue` is false.  So the next
+lemma should be a pairwise covariance lemma for the even fold, with the odd
+Worpitzky/associator channel retained as genuine sidecar debt.
+
 The main proof lesson is negative but useful: raw scalar `p0`, raw root radius,
 or raw cap numerology is not a legal proof object.  The packet has to carry the
 off-circle coordinate and the ordered/odd ear sidecar until a real LRC
@@ -46,7 +55,8 @@ certificate.
 Next proof target: bound the off-circle dip/lambda as
 
 ```text
-even biquadratic contribution + odd Worpitzky/ear contribution,
+even covariance/excess-co-emptiness contribution
++ odd Worpitzky/ear/associator contribution,
 ```
 
 then attach the resulting certificate to a live HYP-3141/HYP-3142 row without

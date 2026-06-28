@@ -107,6 +107,13 @@ Remaining proof target: bound the off-circle dip/lambda as even biquadratic
 contribution plus odd Worpitzky/ear contribution, then attach the packet to a
 live HYP-3141/HYP-3142 row with root/odd sidecars preserved.
 
+Post-rebase integration with HYP-3160/S31ai sharpens that target: the even
+fold should now be stated as total covariance / excess co-emptiness
+`Sigma-kappa_2`, not entropy or excess kurtosis.  The landed cumulant tower
+also says consec does not maximize the associator `Sigma-kappa_3`, exact
+`1/7` was a near-coincidence, and `anchor=odd-residue` is refuted; the odd
+Worpitzky/associator term remains separate sidecar debt.
+
 ## mac-mini-2026-06-27-S72 -- the Lee-Yang circle web: coverage=R^6, dip=off-circle phi^4, Galois<=S4, compression hierarchy
 
 Owner: merge a dense web (Lee-Yang circle=binomial=cap pair-Pascal+de-Moivre-Laplace, dip=phi^4 off-circle;
