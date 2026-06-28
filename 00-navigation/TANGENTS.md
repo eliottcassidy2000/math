@@ -3710,3 +3710,34 @@ triple-overlap debt.
 -> HYP-3229, HYP-3227, HYP-3215, HYP-3214, HYP-3213, HYP-3212, HYP-3205,
 HYP-3203, HYP-3201, HYP-3162, HYP-3161, HYP-3160, LTI-329, LTT-229,
 OPEN-Q-108.
+
+## T1330: Universal scale-invariance recursion ledger (codex-2026-06-28)
+
+HYP-3230 names the route pattern that has been implicit across THM-407,
+THM-532, THM-573, HYP-2963, HYP-3083, and HYP-3229.  Under universal scale
+invariance, the proof object is a primitive projective packet plus the first
+coordinate not killed by dilation.  The repeated move is:
+
+```text
+normalize scale
+-> split the surviving residue/route/topology coordinate
+-> attach a legal sidecar
+-> discharge an easy branch
+-> recurse on the primitive residual.
+```
+
+The sharpening history is now explicit: proof currencies replaced scalars;
+THM-407 made shell strata `gcd(a,27)=1,3,9`; THM-532 made high relation height
+the scale-free generic branch; THM-573 left only primitive covering rows with
+`<=6` multiples of 7; the packet/sheaf stack named route, owner, topology,
+period, zeta, and residual debt; and HYP-3229 moved the bounded node to a
+Fejer/Gram/Toeplitz/Gamma0 certificate vector with order-3 overlap debt.
+
+Next hook: add `primitive_scale_gcd`, `scale_orbit_representative`,
+`dilation_fixed_boundary`, `nonunit_residue_stratum`,
+`scale_destroyed_payload`, and `renormalization_depth` to packet ledgers, then
+prove every quotient either descends, is sidecar-restored, or emits named
+residual debt.
+
+-> HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-2963, THM-573,
+THM-532, THM-407, LTI-330, LTT-230, OPEN-Q-108.

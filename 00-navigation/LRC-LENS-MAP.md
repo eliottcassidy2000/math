@@ -6,6 +6,41 @@
 state what each lens preserves and destroys, and expose the common object they
 all seem to be pointing at.
 
+## Addendum 2026-06-28: Scale-Normal Recursion Lens
+
+HYP-3230 adds a scale-normal reading of the whole map.  Under universal scale
+invariance, every useful LRC14 carrier should first pass to a primitive
+projective scale orbit, then record the first coordinate that dilation does not
+kill.  The recurring route pattern is:
+
+```text
+normalize scale
+-> split surviving residue/route/topology coordinate
+-> attach sidecar
+-> discharge easy branch
+-> recurse on primitive packet.
+```
+
+This lens preserves `M(S)>=1/14` modulo nonzero scale and destroys absolute
+speed size, reset-calendar complexity, finite product-bound size, endpoint
+event order, and order-3 overlap constants unless sidecars restore them.  It
+connects THM-407 shell strata, THM-532 relation height, THM-573 primitive
+covering residuals, HYP-2963 packet labels, HYP-3083 finite addresses, and
+HYP-3229 Fejer/Gram/Gamma0 certificate debt into one recursion ledger.
+
+Packet fields to add where available:
+
+```text
+primitive_scale_gcd
+scale_orbit_representative
+dilation_fixed_boundary
+nonunit_residue_stratum
+scale_destroyed_payload
+renormalization_depth
+scale_fiber_cocycle_status
+scale_normal_discharge_or_debt
+```
+
 ## Central Readout
 
 The current evidence does not point to one decisive scalar, one universal

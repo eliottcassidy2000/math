@@ -4623,3 +4623,53 @@ triple-overlap debt.
 Pointers: HYP-3229, HYP-3227, HYP-3215, HYP-3214, HYP-3213, HYP-3212, HYP-3205,
 HYP-3203, HYP-3201, HYP-3162, HYP-3161, HYP-3160, THM-577, LTT-229,
 T1329, OPEN-Q-108.
+
+## LTI-330: Scale-Normal Recursion Ledger
+
+Objects:
+
+```text
+primitive scale orbit
+dilation-fixed boundary row
+nonunit residue stratum
+relation-height branch
+labelled packet sidecar
+route-state median
+Fejer/Gram/Toeplitz certificate vector
+order-3 overlap debt
+```
+
+HYP-3230 treats universal scale invariance as the organizing spine of the
+current LRC14 route.  The technique is not merely "divide by gcd."  It is a
+ledger discipline: after scale normalization, every quotient must expose the
+first coordinate that scale did not kill and either discharge it, restore it
+with a sidecar, or name residual debt.
+
+Preserves: `M(S)>=1/14` modulo nonzero scaling, primitive projective shape,
+route label, exact scale-sensitive residue stratum, endpoint/topology owner,
+relation height, certificate image, and named residual exit.
+
+Destroys if scalarized: absolute speed size, reset-calendar complexity,
+finite product-bound size, endpoint event order, nonunit shell strata, and
+order-3 overlap constants.
+
+Packet fields:
+
+```text
+primitive_scale_gcd
+scale_orbit_representative
+dilation_fixed_boundary
+nonunit_residue_stratum
+scale_destroyed_payload
+renormalization_depth
+scale_fiber_cocycle_status
+scale_normal_discharge_or_debt
+```
+
+Next hook: add these fields to the HYP-2963/HYP-3083 packet ledgers and audit
+each active quotient for scale-fiber exactness.  Then connect S75/HYP-3229
+order-3 triple-overlap debt and HYP-3215/Rosenfeld wide scale separation to
+the same scale-normal recursion.
+
+Pointers: HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205, HYP-3162,
+HYP-2963, THM-573, THM-532, THM-407, LTT-230, T1330, OPEN-Q-108.

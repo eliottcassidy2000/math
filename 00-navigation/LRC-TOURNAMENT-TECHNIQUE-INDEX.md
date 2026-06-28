@@ -6603,3 +6603,39 @@ quotient_legality_status
 - **Pointers:** HYP-3229, HYP-3227, HYP-3215, HYP-3214, HYP-3213, HYP-3212,
   HYP-3205, HYP-3203, HYP-3201, HYP-3162, HYP-3161, HYP-3160, LTI-329,
   LTT-229, T1329, OPEN-Q-108.
+
+## LTT-230: Scale-Normal Proof-Route Tournament
+
+- **Move:** Treat scale-normal proof states as tournament vertices rather than
+  runners, raw arcs, or raw constants.  Candidate vertices are
+  `lean_lonely_scale`, `primitive_projective_shape`,
+  `twisted_shell_gcd_strata`, `level7_lift_sieve`,
+  `relation_height_split`, `labelled_packet_sheaf`,
+  `route_state_medianization`, `fejer_gram_magic_certificate`,
+  `green_toeplitz_trap_discharge`, `gamma0_7_coefficient_engine`, and
+  `raw_scalar_or_sequence_shadow`.
+- **LRC use:** HYP-3230 names the scale-normal recursion that has been
+  sharpening the route over time.  A proof carrier wins an edge when it keeps
+  the scale-invariant LRC predicate, exposes the first coordinate not killed
+  by dilation, remains formally checkable, and names any residual debt.
+- **Preserves:** `M(S)>=1/14` modulo nonzero scale, primitive projective shape,
+  nonunit residue stratum, endpoint-owner/topology sidecars, route labels,
+  relation height, certificate image, and terminal exit.
+- **Forgets / guardrail:** raw speed size, reset-calendar complexity, finite
+  product-bound size, endpoint event order, and order-3 overlap constants are
+  destroyed unless recorded as sidecars.  Nonprimitive AP/GW ties are gauge
+  copies, not new primitive extremizers.
+- **Fingerprint:** synthesis tournament, not a new computation.  Expected
+  selected Hamiltonian path:
+  `primitive_projective_shape -> level7_lift_sieve ->
+  relation_height_split -> labelled_packet_sheaf ->
+  route_state_medianization -> fejer_gram_magic_certificate ->
+  green_toeplitz_trap_discharge -> gamma0_7_coefficient_engine ->
+  raw_scalar_or_sequence_shadow`.
+- **Next hook:** Run a packet-level scale-fiber audit on HYP-2963/HYP-3083:
+  define `omega_Q` for each quotient and prove it descends, is
+  sidecar-restored, is dual-annihilated, stops at AP/GW boundary, or emits
+  named F7/THM-572/order-3-overlap debt.
+- **Pointers:** HYP-3230, HYP-3229, HYP-3215, HYP-3214, HYP-3205,
+  HYP-3162, HYP-2963, THM-573, THM-532, THM-407, LTI-330, T1330,
+  OPEN-Q-108.

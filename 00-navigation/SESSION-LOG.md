@@ -19,6 +19,54 @@ SYNTHESIS: the Farey/three-gap thread (HYP-2913; S59 I'd demoted it to "the cens
 shadow -- it IS the arithmetic recursion of the covering-bound cap kernel. The two halves (additive/census +
 covering/cap) MERGE: one object, census at coarse scale, cap-kernel recursion at fine scale. The cap closure runs
 through the continued-fraction (three-gap) recursion, not a config-blind certificate. NOT a proof; LRC(14) open.
+## codex-2026-06-28 -- HYP-3230 universal scale-invariance recursion ledger
+
+User prompt: assume scale invariance holds universally, keep pushing LRC, and
+understand how the route has sharpened over time to expose recursive structure
+not yet precisely described.
+
+Added `05-knowledge/hypotheses/HYP-3230-lrc14-universal-scale-recursion-ledger.md`
+and reflection
+`07-reflections/lrc14-universal-scale-invariance-recursion-ledger-codex-20260628.md`.
+Navigation updated with T1330, LTI-330, LTT-230, an OPEN-Q-108 addendum, and a
+scale-normal addendum to `00-navigation/LRC-LENS-MAP.md`.
+
+Core synthesis: under `M(cS)=M(S)` / Lean `lonely_scale`, the active LRC14
+route is projective.  It has sharpened from scalar route currencies to a
+scale-normal recursion ledger:
+
+```text
+normalize scale
+-> split first coordinate not killed by dilation
+-> attach a sidecar
+-> discharge an easy branch
+-> recurse on the primitive residual.
+```
+
+The same pattern is visible in THM-407 (`gcd(a,27)=1,3,9` shell strata),
+THM-532 (scale-invariant seven-sector mass plus relation-height residual),
+THM-573 (primitive covering residual with `<=6` multiples of 7), HYP-2963 and
+the packet/sheaf stack (route/topology/owner/period/zeta sidecars), HYP-3083
+(finite-address branch closure), and HYP-3229 (Fejer/Gram/Gamma0 certificate
+route with order-3 triple-overlap debt).
+
+New packet fields proposed: `primitive_scale_gcd`,
+`scale_orbit_representative`, `dilation_fixed_boundary`,
+`nonunit_residue_stratum`, `scale_destroyed_payload`,
+`renormalization_depth`, `scale_fiber_cocycle_status`, and
+`scale_normal_discharge_or_debt`.  Next hook: run a packet-level scale-fiber
+audit on HYP-2963/HYP-3083 quotients and prove each forgotten coordinate
+descends, is sidecar-restored, is dual-annihilated, stops at AP/GW boundary, or
+emits named residual debt.
+
+Tournament Analysis: vertices are scale-normal proof states and proof
+obligations, not runners by default.  Alternate vertex sets considered:
+runners, gaps, fixed circle sections, section boundaries, wall-crossing events,
+residues, cover arcs, Fourier modes, Haar rectangles, matroid circuits,
+endpoint owners, triple overlaps, and proof obligations.  Preserved predicate:
+`M(S)>=1/14` modulo nonzero scale.  Destroyed coordinates: absolute speed size,
+reset-calendar complexity, finite product-bound size, endpoint event order, and
+order-3 overlap constants.
 
 ## kind-pasteur-2026-06-28-S31ap -- IMPROVED proof route: integrating the 2024-25 literature + a critical base flag
 
