@@ -6491,7 +6491,7 @@ quotient_legality_status
   exact legs, Chebyshev level-7 factor, Green-current bottleneck, Lorentzian
   exchange circuit, p-adic/Selberg regularization sidecar, Collatz two-block
   analogy, and raw numerology.
-- **LRC use:** HYP-3226 scores 101 motifs by proof-payload retention against
+- **LRC use:** HYP-3226 scores 102 motifs by proof-payload retention against
   the current HYP-3224/HYP-3205 normal-fan frontier.  The useful motifs cluster
   around AP support, Toeplitz moment-cone curvature, covariance layers,
   ordered-tail pricing, finite trap discharge, HB/Perron gluing, and analytic
@@ -6500,8 +6500,8 @@ quotient_legality_status
   normal-cone dual slack, multi-chart proof split, AP Green
   algebraic-connectivity certificate, bimodal phi4 diagonal extremizer,
   AP self-dual Fejer equidistribution certificate,
-  three-gap/Stern-Brocot cap-kernel recursion, consecutive plus
-  doubled AP, modulus-covariance apex break, Toeplitz lambda-min margin,
+  three-gap/Stern-Brocot cap-kernel recursion, danger-cover nerve hole
+  certificate, consecutive plus doubled AP, modulus-covariance apex break, Toeplitz lambda-min margin,
   certificate-Helly separation, D7 Borsuk-Ulam sign-irrep certificate,
   single-arc peeling recursion, ordered-tail exchange-rate ratio, D1/D2/D3
   covariance layers, p mod 4 imaginary-quadratic wall, totally-real
@@ -6536,6 +6536,9 @@ quotient_legality_status
   cumulant diagonal.
   HYP-3241/HYP-3240 add M101: universal Phi14 saddle-index core with explicit
   Phi_{14d} dilation-witness sidecar.
+  HYP-3242 adds M102: danger-cover nerve / Euler-characteristic hole
+  certificate, retaining the LRC witness as a topological hole rather than a
+  cap-only scalar.
 - **Preserves:** motif id, payload coordinate, destroyed coordinate,
   required sidecar, trap-boundary use, and terminal-risk label.
 - **Forgets / guardrail:** raw constants, famous-problem names, and sequence
@@ -6558,9 +6561,9 @@ quotient_legality_status
   trace-sign/SOS split status, Vitali bulk-core `Phi_14` witness status, D7
   Borsuk-Ulam sign-irrep status, p mod 4 imaginary-quadratic family-law
   status, bimodal phi4 diagonal status, universal Phi14 saddle-index /
-  dilation-witness status, the
+  dilation-witness status, danger-cover nerve / Euler-hole certificate status, the
   induction-base audit, and Chen-Cusick floor-to-`1/14` lift status.
-- **Pointers:** HYP-3226, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3215, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
+- **Pointers:** HYP-3226, HYP-3242, HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3215, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
   HYP-3214, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, LTI-324,
   LTT-224, T1324, OPEN-Q-108.
 

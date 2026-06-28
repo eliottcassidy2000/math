@@ -777,6 +777,13 @@ MOTIFS: tuple[Motif, ...] = (
           "Phi_{14d} dilation-witness / saddle-index sidecar",
           "direct",
           ("HYP-3241", "HYP-3240", "saddle index", "Phi_14 witnesses", "Phi_{14d}", "Goddyn-Wong", "antipodal pairs")),
+    Motif("M102", "danger-cover nerve hole certificate", "cover-nerve-hole",
+          "LRC witness is the hole in the danger-cover nerve, read by Euler inclusion-exclusion",
+          ("GEOMETRY", "QUOTIENT_LEGALITY", "ANALYTIC_EQ", "TRAP_BOUNDARY", "SIDE_CARRIER"),
+          "measure or inclusion-exclusion scalar forgets the cover nerve and hole witness",
+          "nerve / Euler-characteristic / Borsuk-Ulam hole sidecar",
+          "direct",
+          ("HYP-3242", "cover nerve", "Euler characteristic", "cover has a hole", "Borsuk-Ulam antipodal pair", "chi_meas")),
 )
 
 
@@ -990,6 +997,7 @@ def main() -> None:
         ("0/400 k2/k3/k4", "The random cumulant scout makes the two targets one bimodal phi4 diagonal."),
         ("saddle index 3", "The Phi14 tight core has 3 antipodal witness pairs: index=(p-1)/2."),
         ("Phi_{14d}", "Covering-tight dilations carry witnesses t=1/(14d), not a scalar base-core copy."),
+        ("cover nerve hole", "LRC(14) asks the danger cover to have a hole, not just a scalar cap."),
         ("1/23 -> 1/14", "Chen-Cusick supplies a floor-to-target lift; the 23/M=2/23 link is only bounded-bank coincidence."),
     ]
     for key, meaning in signals:
@@ -1044,6 +1052,9 @@ def main() -> None:
         "Incoming HYP-3241/HYP-3240 then makes the core portable: the AP/GW "
         "tight locus shares the Phi14 witness core, its saddle index is "
         "(p-1)/2, and dilations retain explicit Phi_{14d} witness data."
+        "  Incoming HYP-3242 adds the topological carrier: cap is the "
+        "Euler-characteristic/inclusion-exclusion shadow of the danger-cover "
+        "nerve, while the lonely witness is the retained hole."
     )
 
 

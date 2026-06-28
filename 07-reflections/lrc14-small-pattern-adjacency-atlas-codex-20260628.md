@@ -5,7 +5,7 @@ pattern is not useful because it is famous, pretty, or repeated across
 threads.  It is useful when it can be typed as a payload atom for the live
 LRC14 proof coordinates.
 
-The atlas scored 101 motifs across recent hypotheses, results, reflections,
+The atlas scored 102 motifs across recent hypotheses, results, reflections,
 coordination notes, and forum drafts.  The top of the ranking was
 proof-facing:
 
@@ -19,6 +19,7 @@ AP Green algebraic-connectivity certificate
 bimodal phi4 diagonal extremizer
 AP self-dual Fejer equidistribution certificate
 three-gap Stern-Brocot cap-kernel recursion
+danger-cover nerve hole certificate
 consecutive plus doubled AP
 modulus-covariance apex break
 D7 Borsuk-Ulam sign-irrep certificate
@@ -119,6 +120,12 @@ has saddle index `(p-1)/2`.  Covering-tight dilations must carry explicit
 `Phi_{14d}` witness data, so the core packet is portable only when the
 dilation/sporadic sidecar is retained.
 
+Incoming HYP-3242 adds M102.  Its cover-nerve reading is a useful unification:
+cap/inclusion-exclusion is the scalar shadow, while the LRC witness is the
+retained hole in the danger cover.  This is close to the three-gap
+inclusion-exclusion debt but sharper, because it names the topological packet
+that must survive any quotient.
+
 The new Erdos-Turan / p-adic Littlewood / Davenport-Erdos forum synthesis is
 useful in the same disciplined way: it reinforces discrepancy, p-adic, and
 density sidecars for analytic equidistribution, but it is not a proof object
@@ -157,6 +164,7 @@ D7 sign-irrep / Borsuk-Ulam certificate
 p mod 4 imaginary-quadratic family law
 bimodal phi4 cumulant diagonal
 universal Phi14 saddle-index / dilation-witness core
+danger-cover nerve / Euler-hole certificate
 induction-base and moduli-bridge debt
 ```
 
