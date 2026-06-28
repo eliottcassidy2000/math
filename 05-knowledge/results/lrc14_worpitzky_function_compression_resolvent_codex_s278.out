@@ -1,0 +1,73 @@
+HYP-3151 / codex-2026-06-28-S278
+Worpitzky/function compression bridge for LRC14
+namespace=HYP-3151/T1216/LTI-277/LTT-175
+
+1. N=3 TWO-CLASS EDGE-FLIP KERNEL
+counts={('C', 'T'): 6, ('T', 'C'): 6, ('T', 'T'): 12}
+matrix_rows_C_T=((Fraction(0, 1), Fraction(1, 1)), (Fraction(1, 3), Fraction(2, 3)))
+stationary_C_T=(Fraction(1, 4), Fraction(3, 4))
+eigenvalues=(Fraction(1, 1), Fraction(-1, 3))
+
+2. WORPITZKY DESCENT BASIS
+degree_3_eulerian_row=(1, 4, 1)
+degree_3_identity_verified=True
+degree_3_sample_rows=[(0, 0, 0), (1, 1, 1), (2, 8, 8), (3, 27, 27), (4, 64, 64)]
+degree_4_eulerian_row=(1, 11, 11, 1)
+degree_4_identity_verified=True
+degree_4_sample_rows=[(0, 0, 0), (1, 1, 1), (2, 16, 16), (3, 81, 81), (4, 256, 256)]
+
+3. FUNCTION ORDER AUDIT
+ordered_pair_count=42
+symmetric_invariant_counts={'a+b': 42, 'a*b': 42}
+ordered_invariant_counts={'a^b': 2, 'ordered_pair(a^b,b^a)': 2}
+ordered_examples=[(2, 3, 8, 9), (2, 5, 32, 25), (2, 6, 64, 36), (2, 7, 128, 49), (3, 2, 9, 8), (3, 4, 81, 64)]
+rule=symmetric functions survive unordered quotient; ordered functions need orientation sidecar
+
+4. N=4 CANARY OR-COMPRESSION
+class_preserving_OR=True
+affine_class_preserving_count=0
+rows=(a,b,c),class,OR(x,y),target_class,ok
+  ((0, 0, 0), 'T', (0, 0), 'T', True)
+  ((0, 0, 1), 'S', (1, 1), 'S', True)
+  ((0, 1, 0), '-', (0, 1), '-', True)
+  ((0, 1, 1), 'S', (1, 1), 'S', True)
+  ((1, 0, 0), '+', (1, 0), '+', True)
+  ((1, 0, 1), 'S', (1, 1), 'S', True)
+  ((1, 1, 0), 'S', (1, 1), 'S', True)
+  ((1, 1, 1), 'S', (1, 1), 'S', True)
+fiber_by_xy={'(0, 0)': [(0, 0, 0)], '(1, 0)': [(1, 0, 0)], '(0, 1)': [(0, 1, 0)], '(1, 1)': [(0, 0, 1), (0, 1, 1), (1, 0, 1), (1, 1, 0), (1, 1, 1)]}
+rule=the useful compression is nonlinear OR, not a GF(2) linear quotient
+
+5. K=8 DEGREE-4 RESOLVENT CEILING
+roots_t=(1, 2, 4, 5)
+coefficients_t_high_to_low=(1, -12, 49, -78, 40)
+roots_u=(-2, -1, 1, 2)
+coefficients_u_high_to_low=(1, 0, -5, 0, 4)
+odd_centered_coefficients=(0, 0)
+u2_quadratic_discriminant=9
+degree_ceiling=4
+below_abel_ruffini_quintic_wall=True
+worpitzky_degree4_row=(1, 11, 11, 1)
+rule=bounded-core dual reaches degree 4 at k=8, still below the Abel-Ruffini quintic wall
+
+6. TOURNAMENT ANALYSIS OVER PROOF CARRIERS
+score_hist={15: 1, 24: 1, 49: 1, 54: 1, 59: 1, 61: 1, 67: 1, 73: 1}
+directed_3cycles=0
+hamiltonian_path_count=1
+selected_path=['function_legal_packet_schema', 'nonlinear_or_canary_compression', 'k8_biquadratic_resolvent_ceiling', 'worpitzky_descent_function_basis', 'n3_edge_flip_minus_one_third_kernel', 'ordered_exponential_sidecar', 'symmetric_sum_product_shadow', 'raw_score_class_compression']
+
+7. PROPOSED PACKET FIELDS
+  target_function_id
+  function_swap_parity
+  symmetric_shadow_status
+  ordered_sidecar_status
+  edge_flip_kernel_mode
+  minority_edge_gate
+  worpitzky_descent_word
+  compression_map_kind
+  compression_fiber_function_constancy
+  canary_or_restoration_sidecar
+  resolvent_degree
+  centered_odd_coefficient_status
+  abel_ruffini_wall_status
+  terminal_exit_or_named_debt

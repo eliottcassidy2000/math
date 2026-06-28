@@ -78,6 +78,53 @@ Worpitzky, and state-PGF sidecars; the K4 OR compression `x=a OR c`,
 meta-claim to test is that LRC14 remains below the generic quintic wall
 because the current hard compressions have effective degree <=4 plus named
 sidecars.
+## codex-2026-06-28-S278 -- Worpitzky function-compression resolvent bridge -- HYP-3151
+
+User asked to merge Worpitzky's identity, the ordered/unordered function split
+`a*b,a+b,a^b,b^a`, the n=3 edge-flip kernel, two n=4 tournament quotient
+schemes, information compression, and the bounded-core degree-4/Abel-Ruffini
+meta-point into continued LRC14 proof progress.  After incoming main claimed
+HYP-3150/T1215/LTI-276/LTT-174 as the reserved factor-through wall, this lane
+became the exact executable continuation HYP-3151/T1216/LTI-277/LTT-175.  Added executable scout
+`04-computation/lrc14_worpitzky_function_compression_resolvent_codex_s278.py`,
+stored output
+`05-knowledge/results/lrc14_worpitzky_function_compression_resolvent_codex_s278.out`,
+and reflection
+`07-reflections/worpitzky-function-compression-resolvent-codex-s278.md`.
+
+Main synthesis: the proof-facing object is a target function plus a compression,
+not a raw tournament class or scalar.  A quotient is legal only when the target
+function is constant on fibers or when an ordered/canary sidecar reconstructs
+the destroyed coordinate.  Exact finite checks verify the n=3 `C/T` kernel
+`P(C->T)=1`, `P(T->C)=1/3`, `P(T->T)=2/3`, stationary `(1/4,3/4)`,
+eigenvalue `-1/3`; Worpitzky/Eulerian rows `1,4,1` and `1,11,11,1`; and the
+function split where `a+b,a*b` are symmetric shadows but `a^b,b^a` are ordered
+channels.
+
+The n=4 bridge is the nonlinear compression `x=a OR c`, `y=b OR c`; it is
+class-preserving on the fixed-path cube, and exhaustive search finds no affine
+`GF(2)^3 -> GF(2)^2` replacement.  The k=8 bridge is the centered quartic
+`(t-1)(t-2)(t-4)(t-5)=u^4-5u^2+4` at `u=t-3`, with zero odd centered
+coefficients, discriminant `9`, and degree ceiling `4`.  Therefore the
+bounded-core dual remains in the solvable quartic window.
+
+Tournament Analysis used proof-function legality packets as vertices rather
+than runners/arcs/classes.  The selected path begins
+`function_legal_packet_schema -> nonlinear_or_canary_compression ->
+k8_biquadratic_resolvent_ceiling`, so progress on the n=4 canary compression
+feeds the k=8 resolvent packet, and failure of affine compression becomes a
+positive sidecar rule.
+
+Incoming-main integration after the rebase: HYP-3150 reserved the same
+factor-through wall, so S278 was renumbered to HYP-3151 as its executable
+continuation.  S71's arc-cube scout adds that score->iso compression is
+bijective through `n<=4` and fails at `n=5`, exactly at the k=8 `|P|=5`
+binding boundary, and splits the k=8 dip into even `+6S4` biquadratic data and
+odd `-9S3` Worpitzky/order data.  KPS's Lee-Yang lambda scout adds the root
+curve sidecar: AP/consec minimizes off-circle variance at k=8 and k=9, and
+that variance correlates with the coverage gap.  HYP-3151 therefore keeps
+ordered/Worpitzky and root-curve/lambda sidecars beside the degree-4
+resolvent ceiling.
 
 Scout completed in
 `04-computation/lrc14_function_compression_resolvent_wall_codex_20260628.py`;

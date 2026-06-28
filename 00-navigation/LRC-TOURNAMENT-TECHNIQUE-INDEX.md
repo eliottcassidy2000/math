@@ -169,6 +169,11 @@ obligations, and proof-carrier interfaces.
   and make functions, fibers, sidecars, and resolvent variables the
   tournament vertices.  Test whether each observable factors through the
   quotient, or record ordered/fiber/canary/odd-coordinate debt.
+- Need to decide whether the factor-through wall has executable local support:
+  use LTT-175 after LTT-174/LTT-173/LTT-172/LTT-171/LTT-168/LTT-166 and make functions,
+  compression fibers, ordered sidecars, canary coordinates, and resolvent
+  obligations the vertices.  The target function must be fiber-constant or
+  sidecar-restored.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5827,3 +5832,37 @@ constant chase.
   HYP-3144, HYP-3143, HYP-3142, HYP-3139, HYP-3138, HYP-3137, HYP-3135,
   HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3122, THM-084, THM-577,
   LTI-276, LTT-174, T1215, OPEN-Q-108.
+
+## LTT-175: Tournament Of Function-Compression Legality Packets
+
+- **Move:** Make the tournament vertices proof-function legality packets:
+  target functions, compression fibers, ordered sidecars, Worpitzky descent
+  words, canary coordinates, and k=8 resolvent obligations.  The edge gauge
+  favors packets that preserve the function actually used by the proof row,
+  not packets that merely preserve a class label or scalar.
+- **LRC use:** HYP-3151/S278 executes HYP-3150's finite bridge.  In the n=3 kernel,
+  Worpitzky refines the transitive fiber and the function split separates
+  symmetric shadows from ordered channels.  In the n=4 kernel, the legal
+  compression is nonlinear, `x=a OR c`, `y=b OR c`, and no affine map can
+  replace it.  In the k=8 hard node, the target descends to the biquadratic
+  `u^4-5u^2+4`, so the bounded core remains degree `4`.
+- **Preserves:** target-function id, swap parity, fiber-constancy status,
+  ordered/canary restoration, minority-edge gate, Worpitzky descent word,
+  resolvent degree, centered odd coefficient status, and terminal exit.
+- **Forgets / guardrail:** raw score classes, raw PGF values, affine-looking
+  quotient maps, raw A000568 counts, and raw quartic coefficients are unsafe
+  until the function they are meant to serve is named.
+- **Fingerprint:** HYP-3151 reports a transitive proof-carrier tournament over
+  eight legality packets, no directed 3-cycles, one Hamiltonian path, and
+  selected path beginning
+  `function_legal_packet_schema -> nonlinear_or_canary_compression ->
+  k8_biquadratic_resolvent_ceiling`.
+- **Next hook:** Put the LTT-175 fields on one live HYP-3141 edge witness,
+  one HYP-3140 fiber-PGF coefficient row, and one HYP-3142 k=8 moment row.
+  The row is discharged only if the target function is constant on the
+  proposed compression fibers or a named sidecar restores the destroyed
+  coordinate.
+- **Pointers:** HYP-3151, HYP-3150, HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145,
+  HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138,
+  HYP-3137, HYP-3132, HYP-3129, HYP-3124, LTI-277, LTT-175, T1216,
+  OPEN-Q-108.

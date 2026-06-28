@@ -119,6 +119,15 @@ Useful synthetic maps added later:
   to the `S` fiber.  The proposed proof packet is
   `fixed_path_word + c_canary_status + xy_completion_table +
   S_bulk_fiber_words + deletion/restoration_sidecar + edge_tip_tail_exit`.
+- `07-reflections/worpitzky-function-compression-resolvent-codex-s278.md`:
+  HYP-3151/T1216 note executing HYP-3150's factor-through wall by merging the n=3 edge-flip/Worpitzky kernel, n=4
+  canary/filler quotient compression, ordered-vs-symmetric function channels,
+  and the k=8 biquadratic resolvent into one controlled-forgetting rule:
+  quotient legality is target-function dependent.  It treats functions,
+  compression fibers, ordered sidecars, canary coordinates, and resolvent
+  obligations as the tournament vertices, and exports the packet row
+  `target_function_id + function_swap_parity + fiber_constancy +
+  ordered_sidecar_status + canary_or_restoration_sidecar + resolvent_degree`.
 
 ## Second-Pass Small Motif Ledger
 

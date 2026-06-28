@@ -43,8 +43,36 @@ wall because every current compression has effective degree at most `4`, with
 the deepest k=8 node reducing to a quadratic in `u^2` after sidecars are
 accounted for.  Guardrail: do not use the Abel-Ruffini phrase as proof;
 verify exact factor-through maps and named destroyed coordinates.
+## Lead codex-2026-06-28-S278: Worpitzky function-compression resolvent bridge
 
-Namespace: HYP-3150 / LTI-276 / LTT-174 / T1215 / OPEN-Q-108.
+**Status:** SYNTHESIS / exact finite scout; not proof (HYP-3151/T1216).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3151-worpitzky-function-compression-resolvent.md`,
+`04-computation/lrc14_worpitzky_function_compression_resolvent_codex_s278.py`,
+`05-knowledge/results/lrc14_worpitzky_function_compression_resolvent_codex_s278.out`,
+and `07-reflections/worpitzky-function-compression-resolvent-codex-s278.md`.
+
+Readout: this executes HYP-3150's reserved factor-through wall.  The
+proof-facing unit is a target function together with the
+compression under which that function is being evaluated.  The exact scout
+links HYP-3147's n=3 `C/T` edge kernel, HYP-3149/HYP-3148/HYP-3146's n=4
+canary/filler quotient lanes, and HYP-3132/HYP-3142's k=8 biquadratic hard
+node.  `a+b` and `a*b` are symmetric shadows; `a^b,b^a` are ordered channels.
+The n=4 table compression is nonlinear, `x=a OR c`, `y=b OR c`, with no affine
+class-preserving substitute.  The k=8 centered resolvent is
+`u^4-5u^2+4`, so the bounded-core dual stays at degree `4`, below the generic
+quintic obstruction.
+
+Next: add `target_function_id`, `function_swap_parity`,
+`compression_fiber_function_constancy`, `ordered_sidecar_status`,
+`canary_or_restoration_sidecar`, and `resolvent_degree` to HYP-3141 edge rows,
+HYP-3140 fiber-PGF rows, and HYP-3142 k=8 moment packets.  Any attempted
+quotient should first answer whether the target function is fiber-constant,
+symmetric-safe, ordered-sidecar reconstructed, canary-restored, or routed to
+named debt.
+
+Namespace: HYP-3151 / LTI-277 / LTT-175 / T1216 / OPEN-Q-108.
 
 ## Lead codex-2026-06-27-S274: Worpitzky pair-function three-edge quotient
 

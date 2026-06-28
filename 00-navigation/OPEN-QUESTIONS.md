@@ -1,5 +1,27 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3151 Worpitzky function-compression resolvent addendum:**
+HYP-3151 executes HYP-3150's factor-through wall by turning the recent Worpitzky, pair-function, tournament-3,
+tournament-4, and k=8-resolvent lanes into a single quotient-legality
+question.  A compression is legal for a proof row only when the row's target
+function is constant on compression fibers, or when an ordered/canary sidecar
+restores the destroyed coordinate.  The exact scout verifies the n=3 `C/T`
+kernel, Worpitzky rows `1,4,1` and `1,11,11,1`, the symmetric-vs-ordered
+split of `a+b,a*b` versus `a^b,b^a`, the n=4 nonlinear OR compression
+`x=a OR c`, `y=b OR c` with no affine substitute, and the k=8 centered
+resolvent `u^4-5u^2+4`.
+
+Open task: instantiate a real HYP-3141/HYP-3140/HYP-3142 row schema with
+`target_function_id`, `function_swap_parity`,
+`compression_fiber_function_constancy`, `ordered_sidecar_status`,
+`canary_or_restoration_sidecar`, `resolvent_degree`,
+`centered_odd_coefficient_status`, and `terminal_exit_or_named_debt`.  Then
+audit one live edge/fiber/k=8 packet and either prove fiber constancy for the
+needed function or name the first restoration debt. -> HYP-3151, HYP-3150, HYP-3149,
+HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142,
+HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3132, HYP-3129,
+HYP-3124, LTI-277, LTT-175, T1216, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3146 filler/canary shift-package addendum:**
 HYP-3146 imports the erdos-870 proof architecture only as a quotient-design
 rule, as a companion to HYP-3143's exact-order subbasis audit and HYP-3145's

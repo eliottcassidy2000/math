@@ -89,6 +89,7 @@ tournament edge-witness recursion / tail-tip sector word / paired endpoint-delet
 edge-extension A000568 sandwich / unrooted one-extra-vertex shadow / paired child deck / SPEC resonance sidecar
 tournament edge-witness tip-tail information packet / tip-tail commutator / repair sidecar / A000568 envelope / phi4-Ising-De Moivre-resolvent middle payloads
 Worpitzky pair-function three-edge quotient / K3 flip kernel / ordered exponent sidecar / fiber-PGF order-loss alarm
+Worpitzky function-compression resolvent bridge / target function id / fiber constancy / ordered sidecar / nonlinear OR canary compression / k8 biquadratic degree ceiling
 ```
 
 A quotient may forget a coordinate only when the LRC predicate is constant on
@@ -418,6 +419,7 @@ record what it destroys before asking it to prove anything.
 | LTI-274 | Erdos-870 live-core/filler/canary deletability audit | Live core bits, deterministic filler bits, canary/shift controls, deletable coordinates, class distribution, minimal-cover subbasis, terminal exit/debt | HYP-3148/S275 extends HYP-3147's n=3 edge-flip/Worpitzky function kernel, HYP-3146's shift-package/canary policy, HYP-3143's exact-order subbasis packet, HYP-3144's pair-function/order-sidecar quotient guardrail, and HYP-3145's filler-core interface with the adjacent deletable-coordinate audit.  The fixed-path tiling cube with live skips `a,b,c` has class counts `T:+:-:S = 1:1:1:5`; `c` is class-cover-deletable because `{a,b}` already covers all four classes.  Freezing `c` as filler gives the two-bit anchor with fixed partial score `(0,1,1,2)`, live `x,y`, uniform class counts `1:1:1:1`, and load-bearing live core. | HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3137, HYP-3134, HYP-3133, HYP-3124, HYP-3054, HYP-2534, T1213, LTT-172, LTI-274, OPEN-Q-108 | Add `live_core_bits`, `filler_bits`, `canary_bits`, `deletable_coordinates`, `class_distribution`, `minimal_cover_subbasis`, and `terminal_exit_or_named_debt` to tournament quotient rows; reject witness/class multiplicity until a nondeletable core or named filler/canary debt is recorded. |
 | LTI-275 | Tournament-4 canary/filler quotient | Fixed Hamiltonian path word, deterministic canary arc, order-two `x,y` completion table, `S`-bulk collision fiber, deletion/restoration sidecar, edge tip/tail exit | HYP-3149 refines HYP-3143's exact-order subbasis packet, HYP-3144's pair-function scalarization alarm, HYP-3145's filler-core interface, HYP-3146's cover/scaffold shift-package policy, HYP-3147's n=3 edge-flip kernel, and HYP-3148's live-core deletability audit by importing the Erdos-870 filler/deletion audit into the smallest fixed-path tournament quotient.  The fixed-path tiling cube on arcs `a,b,c` has fibers `T={E}`, `+={a}`, `-={b}`, `S={c,ab,ac,bc,abc}`.  Fixing `c` unflipped gives partial score sequence `(0,1,1,2)` and the exact two-source table `E->T`, `x->+`, `y->-`, `xy->S`; the `c=1` slice collapses all four completions to `S`.  Thus `c` is a canary/filler coordinate, not harmless symmetry. | HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3141, HYP-3140, HYP-3138, HYP-3137, HYP-3134, HYP-3133, HYP-3124, HYP-3118, HYP-3116, HYP-3093, HYP-3097, T1214, LTT-173, LTI-275, OPEN-Q-108 | Add `fixed_path_word`, `c_canary_status`, `xy_completion_table`, `S_bulk_fiber_words`, `deletion_restoration_sidecar`, and `edge_tip_tail_exit_or_named_debt` before using a two-coordinate tournament quotient in HYP-3141 edge rows or HYP-3140/HYP-3138/HYP-3139 local packets. |
 | LTI-276 | Function-compression factor-through audit | Quotient maps `q:X->Y`, observables `f:X->Z`, unordered and ordered pair functions, K3/K4 tournament fibers, fiber-PGF curves, canary sidecars, and k=8 even-resolvent variables | HYP-3150 runs a scout for the user's compression/resolvent synthesis.  The governing test is whether `f` is constant on fibers of `q`; if not, the forgotten payload must be an ordered, fiber, deletion, or odd-coordinate sidecar.  Exact readout joins HYP-3147/HYP-3144 K3 order loss, HYP-3149/HYP-3146 K4 OR compression and canary status, and HYP-3142/HYP-3132 k=8 quartic-to-biquadratic fold; the proof-carrier tournament has a coupled SCC among these sidecars rather than a simple scalar ladder. | HYP-3150, HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3139, HYP-3138, HYP-3137, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3122, THM-084, THM-577, T1215, LTT-174, LTI-276, OPEN-Q-108 | Add `compression_map`, `observable_factors_through`, `fiber_collision_class`, `ordered_sidecar_required`, `fiber_pgf_curve_status`, `canary_deletion_status`, `even_resolvent_variable`, `effective_degree`, `quintic_wall_alarm`, and `terminal_exit_or_named_debt` before promoting any quotient, scalar, or degree-drop analogy in the LRC14 proof packet. |
+| LTI-277 | Worpitzky function-compression resolvent bridge | Target function, swap parity, symmetric shadow, ordered sidecar, compression fiber, nonlinear OR canary map, k=8 biquadratic degree ceiling | HYP-3151/S278 executes HYP-3150's factor-through audit by merging the n=3 edge-flip kernel, n=4 canary/filler quotient, and k=8 resolvent into the rule that a quotient is legal only for functions constant on its fibers or with restored ordered/canary sidecars.  The scout verifies Worpitzky rows `1,4,1` and `1,11,11,1`, separates symmetric `a+b,a*b` from ordered `a^b,b^a`, proves `x=a OR c`, `y=b OR c` is the needed n=4 class-preserving compression with no affine substitute, and records the k=8 centered quartic `u^4-5u^2+4`, degree `4`. | HYP-3151, HYP-3150, HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3132, HYP-3129, HYP-3124, T1216, LTT-175, LTI-277, OPEN-Q-108 | Add `target_function_id`, `function_swap_parity`, `compression_fiber_function_constancy`, `ordered_sidecar_status`, `canary_or_restoration_sidecar`, `resolvent_degree`, and `centered_odd_coefficient_status` before scalarizing edge, fiber-PGF, or k=8 moment packets. |
 
 ## Cross-Cutting Guardrails
 
@@ -3800,3 +3802,67 @@ terminal_exit_or_named_debt
 The Abel-Ruffini language is only a guardrail: the executable claim is that
 the current hard core has bounded, audited compression degree and never relies
 on an unmarked generic quintic.
+
+## LTI-277: Worpitzky Function-Compression Resolvent Bridge
+
+Used by codex-2026-06-28-S278 for HYP-3151/T1216.  This technique executes
+HYP-3150's factor-through audit and reframes HYP-3147's n=3 edge kernel,
+HYP-3149/HYP-3148/HYP-3146's n=4 canary/filler quotients, and
+HYP-3132/HYP-3142's k=8 biquadratic hard node as instances of one rule:
+
+```text
+a compression is legal for a target function only if the target is constant
+on compression fibers, or a sidecar reconstructs the destroyed coordinate.
+```
+
+The prompt's function quartet is the local schema:
+
+```text
+a+b, a*b   symmetric shadows
+a^b, b^a   ordered channels
+```
+
+The exact finite scout verifies:
+
+```text
+n=3 kernel: P(C->T)=1, P(T->C)=1/3, P(T->T)=2/3
+Worpitzky rows: 1,4,1 and 1,11,11,1
+n=4 compression: x=a OR c, y=b OR c
+affine GF(2)^3 -> GF(2)^2 substitutes: 0
+k=8 centered resolvent: u^4 - 5u^2 + 4
+```
+
+Preserves: target-function legality, symmetric-vs-ordered status, minority-edge
+gate, canary restoration status, and resolvent degree.
+
+Destroys if used alone: orientation, the canary coordinate, membership in the
+folded `S` bulk fiber, odd centered coefficients, and any function not constant
+on the chosen quotient fibers.
+
+Packet fields:
+
+```text
+target_function_id
+function_swap_parity
+symmetric_shadow_status
+ordered_sidecar_status
+edge_flip_kernel_mode
+minority_edge_gate
+worpitzky_descent_word
+compression_map_kind
+compression_fiber_function_constancy
+canary_or_restoration_sidecar
+resolvent_degree
+centered_odd_coefficient_status
+abel_ruffini_wall_status
+terminal_exit_or_named_debt
+```
+
+Next hook: instantiate these fields on one live HYP-3141 edge row, one
+HYP-3140 fiber-PGF row, and one HYP-3142 k=8 moment row.  The row either proves
+fiber constancy for its target function or names the first restoration debt.
+
+Pointers: HYP-3151, HYP-3150, HYP-3149, HYP-3148, HYP-3147, HYP-3146,
+HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139,
+HYP-3138, HYP-3137, HYP-3132, HYP-3129, HYP-3124, LTI-277, LTT-175,
+T1216, OPEN-Q-108.
