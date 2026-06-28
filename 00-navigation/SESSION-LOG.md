@@ -1,3 +1,41 @@
+## kind-pasteur-2026-06-27-S31ah -- tournament proof TOOLKIT + the TWO MAPS (dual Lee-Yang extremality)
+
+Owner: (1) recall the H=7/21 impossibility-by-contradiction technique, generate OTHER tournament
+proof/disproof techniques abstractly+programmatically, apply many; then (2) Lee-Yang extremality, phi^4
+`exp(-lambda S^4 - b S^2)`, "the whole PGF curve and its root structure" not single values, "two
+comprehensive maps, the gold is in them", "what maximizes LRC values relating to tournaments", ear
+decompositions, Bravais, Savitch; bold/wild hypotheses + new signals. Delivered (converged real-time with
+codex-S260, mac-mini-S65):
+
+- **Tournament certificate ENGINE + 12-technique CATALOG** (`tournament_certificate_engine_kps.py`,
+  reflection `the-tournament-proof-toolkit-...`): generalized H=7/21 impossibility into A) spectrum-
+  membership (H-spectrum, Redei parity, Landau, cycle-census), B) Omega-realizability (forbidden subgraphs,
+  Newton real-rootedness, metagraph), C) algebraic/spectral, D) extremal (H-max), E) winding-encoding +
+  a programmatic GENERATOR (spectrum-gap discovery). Self-test passes (Paley T_7 H=189). 3-agent verdict:
+  validated for tournament/Omega questions; VACUOUS for LRC (apex-7 != H-gap-7, a coincidence).
+
+- **HYP-3099 THE TWO MAPS (dual Lee-Yang extremality) -- the gold:** stop measuring single values, measure
+  partition-function ROOTS. MAP 1 (tournament): `I(Omega,x)` REAL-ROOTED n<=7 (Lee-Yang on neg real axis),
+  **H-max = a zero hugging 0** (min|root| 0.143->0.073->0.015, n=5,6,7 -> Lee-Yang edge at origin =
+  BIBD max-alpha1 reframed). MAP 2 (LRC): the **coverage PGF** `Q(z)=sum q_t z^t` has 6 zeros in 3 conj
+  pairs on a near-CIRCLE |z|~1.6, **AP=tightest circle**. THE GOLD: the two extremalities = the two
+  classical Lee-Yang loci (real axis=observer-blind tournament; circle=observer-relative LRC = owner's
+  tournament/tiling split). **phi^4:** coverage PGF = Lee-Yang locus of `exp(-lambda S^4 - b S^2)`; AP
+  MINIMIZES `lambda=Var(|roots|/R)` (off-circle variance = quartic coupling), VERIFIED global argmin k=8..11,
+  corr(lambda, cap-q0)=+0.70->0.90. UNIFIES mac-mini cap=Pascal-mass (binomial=circular zeros) + dip=phi^4
+  off-circle correction. k-DEP: lambda-frame TRACKS consec-max exactly (consec=argmin through k=11, breaks
+  k=12,13 = HYP-2780) -- a reparametrization, SHARP on binding rows k=8,9,10.
+
+- **Wild structures (reflection `wild-structures-...`):** #ears=C(n-1,2)=#tiles (ear decomp = cycle-space);
+  ODD ears=Omega => new H odd-ear recursion lead (HYP-3100 cand). Bravais-14=2*7=apex, dim seq 1,5,14,64
+  (HYP-3101). Savitch=two-scale witness t=s/14+r/p, (k+1)/2 exponent (HYP-3102). PROOF LEVER: Asano
+  monotonicity (off-circle zeros lower q0 => q0<=cap) on binding rows.
+
+NEW SIGNALS created: min|root| (Lee-Yang edge), root-spread/lambda (phi^4 coupling = extremality
+functional), circle radius R, odd-ear H-factor, Savitch depth. NET: LRC(14) not proved; the binding-row
+coverage extremality now has a GEOMETRIC (Lee-Yang circle / phi^4) picture giving mac-mini's Hankel-dip
+its meaning. => HYP-3099, the two maps, the toolkit engine.
+
 ## mac-mini-2026-06-27-S71 -- invariants as arc-cube functions: the score-compression boundary IS the k=8 hard row (parity split)
 
 Owner: think of everything as functions; the quartet a+b,a*b (symmetric/order-blind) vs a^b,b^a (asymmetric/
