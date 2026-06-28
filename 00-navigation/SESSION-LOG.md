@@ -19,6 +19,31 @@ fails, need RANDOM-CURRENT/Aizenman). My value-add = the four-lens unification +
 integrated kps's two results. HYP COLLISION: my S73c HYP-3201 collided with codex-S279 + kps-S31al (both also
 3201); I CEDED -- renamed my S73c to HYP-3203. NOT a proof; LRC(14) open; the even half now sits in two
 classical theories (trig moment problem; ferromagnetic correlation inequalities).
+## kind-pasteur-2026-06-27-S31am -- the Joukowski bridge: tournament TRRT and LRC cover bound are ONE Hermite-Biehler theorem
+
+Owner: merge Joukowski + Hermite-Biehler + Perron-Frobenius into the LRC effort. These were converging
+across the team (oracle TRRT, mac-mini-S73c Perron+Joukowski-HB, my two-maps/cyclotomic). Merged them
+(HYP-3210), advancing rather than duplicating:
+
+- **THE BRIDGE:** Joukowski `w=z+1/z` conformally maps the project's two maps (HYP-3099) onto each other --
+  tournament `I(Omega,x)` real-rooted (TRRT, oracle's `I=A+xB` + Hermite-Biehler interlacing, Lemmas A/B
+  verified to n=9) on the REAL AXIS; the LRC cover bound on the CIRCLE; de Moivre angles = the 7-fold ideal
+  skeleton. So **the LRC cover bound = the Joukowski image of the tournament TRRT = the SAME Hermite-Biehler
+  interlacing theorem.** PORTS: TRRT `I=A+xB` <-> LRC dual even(biquadratic) (+) x*odd(Eulerian/Worpitzky);
+  **TRRT Lemma B (interlacing) <-> the LRC even/odd interlacing = the cover bound** (one inherited lemma
+  closes BOTH).
+- **PERRON-FROBENIUS (verified+refined mac-mini Angle A):** for consec the covariance C is entrywise
+  non-negative (ferromagnetic) => PF applies, dominant eigenvector ~99.7% UNIFORM (1), `1^T C 1 ~ 6 lambda_max`
+  (HONEST: anchor breaks exactness; antiferro k<=5 => neg entries => PF fails = the FM-transition is the
+  Perron boundary). Root-side PF eigenvalue = de Moivre ground angle -1.8019.
+- **NODE SPECTRAL TOOLBOX (all consec):** Caratheodory-Toeplitz lambda_min-max (EXHAUSTIVE) + PF ferromagnetic
+  uniform + Hermite-Biehler even/odd interlacing + Joukowski/de-Moivre = 4 faces of "consec is spectrally
+  extremal". CAVEAT: coverage PGF only NEAR-circle so HB rigorous on the DUAL legs (exactly real-rooted),
+  not Q. COLLISION: HYP-3201 taken by both mac-mini(Perron/HB) and me(Caratheodory/Toeplitz) -- flagged.
+
+NET: LRC(14) not proved; the owner's three tools now form one coherent spectral picture, and the verified
+TRRT machinery ports to the LRC cover bound via Joukowski (one interlacing lemma). => HYP-3210; reflection
+the-joukowski-bridge-...; script lrc_perron_demoivre_covariance_kps.py.
 
 ## kind-pasteur-2026-06-27-S31al -- two new k=8-node angles: Caratheodory-Toeplitz (exhaustive) + ferromagnetic Griffiths
 
