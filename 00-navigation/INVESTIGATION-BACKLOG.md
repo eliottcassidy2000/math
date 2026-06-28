@@ -5822,3 +5822,24 @@ on `Phi`, not as a standalone scalar proof.
   missing sidecar, or a named proof obstruction.  Then attempt the first
   acyclic chamber matching using the same retained columns as Morse energy
   coordinates.
+
+## LEAD (codex-2026-06-28): instantiate HYP-3301 sheaf/cusp rows
+- **Source:** HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253,
+  HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230,
+  HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523.
+- **Status:** OPEN.  HYP-3301 currently uses a toy chart-overlap exactness
+  packet with full `GF(2)` row rank, not actual labelled packet rows.
+- **Next steps:** Build row data for the overlap failures
+  `unit_contact_to_danger_nerve`, `lag_residue_to_shell_magic`,
+  `index_degree_to_floor_gap`, `residue_to_magnitude_split`,
+  `chart_change_to_first_obstruction`, `exact_period_to_boundary_moment`,
+  `covering_to_state_lift_kernel`, `farey_cusp_to_scale_normal`,
+  `polygon_contact_to_endpoint_owner`, and
+  `renormalized_kernel_to_named_debt`.  Test sidecars
+  `first_obstruction_cocycle`, `zeta7_contact_holonomy`,
+  `endpoint_arrangement_cell`, `exact_period_boundary`,
+  `boundary_moment_image`, `Farey_parent_interval`, `cusp_principal_part`,
+  `renormalization_depth`, `AP_GW_kernel_status`, `K33_kernel_label`, and
+  `state_lift_H7`.  The target classification is exact, holonomy-repaired,
+  endpoint-lifted, descended, AP/GW-stopped, positive boundary-moment image,
+  qdiv-forbidden AP/GW kernel, K33/H7 debt, or a newly named zero-open kernel.

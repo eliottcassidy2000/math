@@ -31880,3 +31880,45 @@ Next hook: instantiate the matrix on actual residual rows from HYP-2963,
 HYP-3202, HYP-3225, HYP-3236, HYP-3243, HYP-3244, HYP-3245, HYP-3246, HYP-3247,
 HYP-3253, HYP-3255, HYP-3257, and HYP-3258, then list unresolved row collisions
 as named missing sidecars or real obstructions.
+
+## codex-2026-06-28 -- Sheaf exactness and Farey-cusp transfer proof angles -- HYP-3301
+
+Picked two remaining LRC14 proof angles deliberately different from HYP-3300's
+observability/Morse pair and turned them into a repo-local scout:
+`04-computation/lrc14_sheaf_cusp_transfer_angles_codex_20260628.py`,
+`05-knowledge/results/lrc14_sheaf_cusp_transfer_angles_codex_20260628.out`,
+`05-knowledge/hypotheses/HYP-3301-lrc14-sheaf-exactness-cusp-transfer.md`,
+and `07-reflections/lrc14-sheaf-exactness-cusp-transfer-codex-20260628.md`.
+
+Core synthesis: the next different proof push should be a first-obstruction
+sheaf exactness theorem plus a Farey-cusp renormalization transfer theorem.
+The scout ranks `first_obstruction_sheaf_exactness` first (`score=117`) and
+`farey_cusp_renormalization_transfer` second (`score=112`).  Supporting
+carriers are the HYP-3265 contact-graph kernel classifier, the HYP-3255/HYP-3257
+Q(sqrt-7) residue-to-magnitude lift, the old boundary-moment chain map,
+Schwarz-Christoffel contact polygons, proof-circuit missing-input checks,
+hyperbolic reciprocal/Fermat-Catalan defect, and Mertens/loglog scale entropy.
+
+The toy exactness packet has `10` chart-overlap rows, `23` sidecar columns,
+and `GF(2)` rank `10`; minimal hitting sets have size `5`.  The target theorem
+is that every first obstruction cocycle is exact, killed by `zeta_7` contact
+holonomy, lifted to an endpoint/finite chamber, descended, stopped at AP/GW
+equality, or routed to named K33/H7/state-lift debt.
+
+The cusp-transfer packet uses potential
+`(covering_depth,cusp_height,kernel_unknown,sidecar_debt)` and isolates the
+bad transition `F3_qgt14_exact_period_cover -> F7_unknown_zero_open_kernel`.
+Every good transition either yields positive boundary-moment slack, proves
+the AP/GW kernel illegal in `qdiv>14`, or routes to K33/H7 debt.
+
+Tournament Analysis uses proof carriers and chart transitions, not runners or
+arcs.  Fingerprint: no directed 3-cycles, singleton SCCs, Hamiltonian path
+count `1`, and priority path
+`first_obstruction_sheaf_exactness -> farey_cusp_renormalization_transfer ->
+contact_graph_kernel_classifier -> qsqrt7_residue_to_magnitude_lift ->
+boundary_moment_chain_map`.
+
+Next hook: instantiate HYP-3301 on actual packet rows from HYP-2963,
+HYP-2969, HYP-3253, and HYP-3265.  The first failure should name either an
+unspanned cocycle, a missing holonomy/endpoint/cusp sidecar, or the first real
+qdiv>14 zero-open kernel.

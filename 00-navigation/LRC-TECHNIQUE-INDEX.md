@@ -451,6 +451,7 @@ record what it destroys before asking it to prove anything.
 | LTI-340 | Topology/geometry/graph proof-route atlas | Circle endpoint arrangements, oriented topes/cocircuits, Cech safe-component nerves, `D_7` index packets, `Phi_14/Phi_{14d}` witness strata, Green conductance graphs, normal-fan/Toeplitz/Fejer faces, Lee-Yang roots, ear payloads, state-lift obligations | HYP-3243 turns visual proof routes into typed carriers.  After HYP-3240/HYP-3241 and HYP-3242/S78, the witness construction side is mostly organized: AP/GW share `Phi_14` witnesses, dilations use `Phi_{14d}` witnesses, and the cap has the Cech invariant `chi_meas(danger-cover nerve)`.  The remaining visual frontier is tight-locus finiteness plus bulk equidistribution plus legal bulk/core gluing.  The scout ranks `12` carriers with no directed 3-cycles and Hamiltonian path led by `oriented_matroid_topes_cocircuits -> circle_endpoint_arrangement -> cech_nerve_safe_components`. | HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3220, HYP-3201, HYP-3128, HYP-3123, HYP-3108, THM-572, T1340, LTT-240, LTI-340, OPEN-Q-108 | Prove the finite chamber schema: every primitive row has an open safe tope, AP/GW `Phi_14` equality, dilation `Phi_{14d}` equality, finite Toeplitz/Green/root-motion chamber discharge, state-lift `H=7` contradiction, or named residual debt. |
 | LTI-355 | Equioscillation contact-graph case split | Unit contact times `(Z/14)^*/14`, antipodal contact pairs, binding complement pairs `{+a^{-1},-a^{-1}}`, three-slot quotient, danger-cover holes, Kolmogorov active-gradient sidecar, covering kill switch | HYP-3265 turns the AP/Goddyn-Wong six-touch safety-function picture into an exact contact graph.  The six unit contacts split into three antipodal unit pairs and three binding complement-pair slots; 14-free rows are safe at every unit, rows with a `0 mod 14` speed kill the unit contacts and must move to an off-unit covering/floor route, and tight rows are those where the six contacts remain global with no higher off-unit peak. | HYP-3265, HYP-3259, HYP-3258, HYP-3256, HYP-3255, HYP-3253, HYP-3252, HYP-3251, HYP-3250, HYP-3248, HYP-3246, HYP-3245, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3218, HYP-3214, HYP-3132, HYP-2928, HYP-2909, THM-523, THM-530, T1355, LTT-255, LTI-355, OPEN-Q-108 | Formalize the finite chamber theorem classifying rows by surviving global contact graph, strict off-unit peak, killed contacts with promoted `Phi_{14d}`/covering witness, or named residual debt; retain the graph/topology/geometry sidecars before scalarizing the safety function. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
+| LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 
 ## Cross-Cutting Guardrails
 
@@ -5299,6 +5300,91 @@ Pointers: HYP-3265, HYP-3259, HYP-3258, HYP-3256, HYP-3255, HYP-3253, HYP-3252, 
 HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3218, HYP-3214,
 HYP-3132, HYP-2928, HYP-2909, THM-523, THM-530, T1355, LTT-255,
 OPEN-Q-108.
+
+## LTI-356: Sheaf Exactness And Farey-Cusp Transfer
+
+Created by codex-2026-06-28 for HYP-3301/T1356.
+
+Objects:
+
+```text
+quotient/observer overlap cochains
+first forgotten payload cocycle
+zeta_7 contact holonomy
+endpoint arrangement lift
+exact-period packet boundary
+boundary-moment image
+Farey parent interval
+cusp principal part
+AP/GW kernel status
+K33/H7 state-lift debt
+```
+
+Technique:
+
+```text
+build chart-overlap exactness first
+then transfer qdiv>14 packets through the cusp/boundary-moment kernel
+```
+
+Preserves: boundary/open status, chart-gluing legality, covering-residual
+exits, exact-period ownership, scale normality, endpoint/topology, and
+residue-to-magnitude split.
+
+Destroys if scalarized: first obstruction cocycle, endpoint owner, accessory
+parameter, exact-period owner, cusp principal part, AP/GW kernel status, and
+H7 debt.
+
+Executable scout fingerprint:
+
+```text
+top proof carriers:
+  first_obstruction_sheaf_exactness       score 117
+  farey_cusp_renormalization_transfer    score 112
+
+toy exactness packet:
+  rows = 10
+  cols = 23
+  GF(2) rank = 10
+  minimal hitting-set size = 5
+
+tournament:
+  directed_3cycles = 0
+  scc_sizes = [1,1,1,1,1,1,1,1,1,1]
+  hamiltonian_path_count = 1
+```
+
+The sheaf theorem target:
+
+```text
+Every first obstruction cochain is exact, killed by zeta_7 contact holonomy,
+lifted to an endpoint/finite chamber, descended, stopped at AP/GW equality,
+or routed to named K33/H7/state-lift debt.
+```
+
+The cusp-transfer theorem target:
+
+```text
+Every qdiv>14 exact-period boundary has positive boundary-moment image,
+or lies in a kernel forbidden by qdiv>14,
+or lies in named K33/H7 debt,
+or supplies the first genuine unknown zero-open kernel class.
+```
+
+Cross-disciplinary guardrail: Cech/sheaf exactness, local-system holonomy,
+Farey/modular cusps, Schwarz-Christoffel accessory parameters, Mertens/loglog
+scale entropy, and Fermat-Catalan/Hurwitz/Markov hyperbolic defects are useful
+only after they declare preserved LRC predicate, destroyed coordinate, repair
+sidecar, and terminal exit.
+
+Next hook: instantiate the HYP-3301 exactness rows on actual HYP-2963,
+HYP-2969, HYP-3253, and HYP-3265 packet data, then classify the first
+unspanned cocycle or the first qdiv>14 zero-open kernel.
+
+Pointers: HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253,
+HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230,
+HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523,
+LTT-256, T1356, OPEN-Q-108.
 
 ## LTI-344: Lift/Compress Span for Tiling and Half-Tiling Recursions
 

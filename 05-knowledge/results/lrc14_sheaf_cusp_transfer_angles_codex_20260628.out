@@ -1,0 +1,149 @@
+HYP-3301 LRC14 SHEAF EXACTNESS + CUSP TRANSFER PROOF-ANGLE SCOUT
+==============================================================================
+goal=pick two remaining proof angles different from HYP-3300's observability/Morse pair: first-obstruction sheaf exactness and Farey-cusp renormalization transfer.
+ANGLE PRIORITY TABLE
+  B01 score=117 first_obstruction_sheaf_exactness
+      family=Cech/local-system exactness route
+      preserves=chart_gluing_exactness,boundary_open_status,topological_hole,endpoint_owner,finite_checkability,state_lift_exit
+      destroys=raw_chart_scalar
+      test=Build the quotient/observer overlap cochain complex; prove every first obstruction is exact, killed by contact holonomy, lifted to an endpoint chamber, descended, stopped at AP/GW equality, or named as state-lift debt.
+      cross_links=HYP-3253, HYP-3242, HYP-3234, HYP-3102, Cech cohomology, local systems, Hodge decomposition, LDPC syndrome
+      risk=a sheaf label is empty unless each chart overlap gets an explicit payload
+  B02 score=112 farey_cusp_renormalization_transfer
+      family=modular/Farey scale-transfer route
+      preserves=covering_residual_exit,scale_normality,arithmetic_period,bulk_floor_margin,formal_packet_schema,residue_magnitude_split
+      destroys=single_denominator_view
+      test=Turn qdiv>14 covering rows into a scale-normal Farey-cusp transition: exact-period boundary -> boundary-moment image -> positive floor, impossible AP/GW kernel, K33/H7 debt, or a named new zero-open kernel.
+      cross_links=HYP-2963, HYP-2969, HYP-3230, HYP-3231, THM-573, Farey tree, modular cusp, renormalization group
+      risk=must not turn the cusp tree into a metaphor without exact packet labels
+  B04 score= 77 contact_graph_kernel_classifier
+      family=unit-contact equality-core route
+      preserves=boundary_open_status,topological_hole,residue_magnitude_split,finite_checkability
+      destroys=covering_residual_exit
+      test=Classify surviving six-unit contact graphs into AP/GW equality, strict off-unit margin, killed-unit covering route, or debt.
+      cross_links=HYP-3265, HYP-3257, HYP-3255, THM-523, Chebyshev equioscillation
+      risk=unit contacts do not see same-residue height moves or covering floors
+  B05 score= 77 qsqrt7_residue_to_magnitude_lift
+      family=Galois residue/magnitude split route
+      preserves=residue_magnitude_split,boundary_open_status,arithmetic_period,finite_checkability
+      destroys=bulk_floor_margin
+      test=Use the C3 orbit over Q(cos 2pi/7) as residue skeleton, then force a magnitude-level certificate for tight/loose separation.
+      cross_links=HYP-3255, HYP-3257, Q(sqrt(-7)), Galois orbit, Hurwitz-7
+      risk=residue symmetry organizes the equality core but does not prove the floor
+  B03 score= 76 boundary_moment_chain_map
+      family=exact-period to moment-dual route
+      preserves=covering_residual_exit,arithmetic_period,bulk_floor_margin,finite_checkability
+      destroys=endpoint_owner,topological_hole
+      test=Prove the signed exact-period packet boundary maps to the HYP-2704 missed-depth/gK8 currency with only AP/GW, K33, H7, or positive image kernels.
+      cross_links=HYP-2954, HYP-2969, HYP-2704, gK8, Ramanujan exact-period packets
+      risk=moment positivity is unsafe if the exact-period owner labels are dropped
+  B06 score= 56 schwarz_christoffel_contact_polygon
+      family=polygon-angle / accessory-parameter route
+      preserves=boundary_open_status,endpoint_owner,topological_hole
+      destroys=arithmetic_period,bulk_floor_margin
+      test=Read contact times as polygon vertices and destroyed off-unit geometry as accessory-parameter debt; useful only if the polygon word is tied to endpoint owners and exact period packets.
+      cross_links=Schwarz-Christoffel mapping, HYP-3265, normal-fan Cech bars, contact graph
+      risk=beautiful polygon grammar can hide the arithmetic route labels
+  B09 score= 52 proof_circuit_uniform_gate_test
+      family=complexity missing-input route
+      preserves=formal_packet_schema,finite_checkability,chart_gluing_exactness
+      destroys=bulk_floor_margin,arithmetic_period
+      test=Use circuit inputs as a regression test: any proof shortcut that drops finite address, observer gluing, or exact-period packet fields cannot compute the residual predicate.
+      cross_links=HYP-3116, circuit complexity, proof DAG, missing-input vector
+      risk=organizes proof obligations but rarely supplies the inequality itself
+  B08 score= 49 hyperbolic_reciprocal_defect
+      family=Fermat-Catalan / orbifold deficit route
+      preserves=formal_packet_schema,scale_normality,residue_magnitude_split
+      destroys=boundary_open_status,endpoint_owner
+      test=Treat sum(1/a_i)<1 as a hyperbolic-defect warning for triple cusp widths: useful to classify route curvature, not to close the LRC inequality directly.
+      cross_links=Fermat-Catalan, Hurwitz theorem, Markov numbers, hyperbolic orbifolds
+      risk=the reciprocal bound becomes numerology unless tied to a packet triple
+  B07 score= 44 loglog_mertens_scale_entropy
+      family=scale-hierarchy entropy route
+      preserves=scale_normality,formal_packet_schema,arithmetic_period
+      destroys=endpoint_owner,topological_hole,state_lift_exit
+      test=Use Mertens/Hardy-Ramanujan loglog behavior as a complexity bound on obstruction-prime ledgers, not as a witness inequality.
+      cross_links=Mertens, Hardy-Ramanujan, loglog, renormalization depth, HYP-2145
+      risk=complexity thinness is not an LRC certificate without packet exits
+  B10 score=-33 raw_cross_discipline_analogy
+      family=discarded baseline
+      preserves=formal_packet_schema
+      destroys=boundary_open_status,endpoint_owner,covering_residual_exit,topological_hole,bulk_floor_margin
+      test=Name external theorems without declaring preserved predicate, destroyed coordinate, and terminal handoff.
+      cross_links=warning baseline
+      risk=this is the failure mode the scout is trying to avoid
+
+FIRST-OBSTRUCTION / SHEAF EXACTNESS PACKET
+  rows=10 cols=23 gf2_rank=10
+  columns=unit_contact_matching, danger_nerve_hole, endpoint_arrangement_cell, zeta7_contact_holonomy, shell_lag_commutator, index_degree_packet, floor_margin_certificate, signed_address_word, first_obstruction_cocycle, repair_cover_rank, Qsqrt7_residue_orbit, magnitude_jump_anchor, unit_nullspace, exact_period_boundary, boundary_moment_image, Farey_parent_interval, cusp_principal_part, renormalization_depth, hensel_unit, K33_kernel_label, state_lift_H7, schwarz_christoffel_turning_word, accessory_parameter_debt
+  unit_contact_to_danger_nerve: unit_contact_matching, danger_nerve_hole, endpoint_arrangement_cell, zeta7_contact_holonomy
+  lag_residue_to_shell_magic: endpoint_arrangement_cell, zeta7_contact_holonomy, shell_lag_commutator, first_obstruction_cocycle
+  index_degree_to_floor_gap: danger_nerve_hole, zeta7_contact_holonomy, index_degree_packet, floor_margin_certificate
+  residue_to_magnitude_split: floor_margin_certificate, Qsqrt7_residue_orbit, magnitude_jump_anchor, unit_nullspace
+  chart_change_to_first_obstruction: signed_address_word, first_obstruction_cocycle, repair_cover_rank
+  exact_period_to_boundary_moment: exact_period_boundary, boundary_moment_image, Farey_parent_interval, hensel_unit
+  covering_to_state_lift_kernel: exact_period_boundary, boundary_moment_image, K33_kernel_label, state_lift_H7
+  farey_cusp_to_scale_normal: Farey_parent_interval, cusp_principal_part, renormalization_depth, hensel_unit
+  polygon_contact_to_endpoint_owner: unit_contact_matching, endpoint_arrangement_cell, schwarz_christoffel_turning_word, accessory_parameter_debt
+  renormalized_kernel_to_named_debt: repair_cover_rank, boundary_moment_image, renormalization_depth, K33_kernel_label, state_lift_H7
+
+  minimal chart-sidecar hitting sets:
+    unit_contact_matching, floor_margin_certificate, first_obstruction_cocycle, exact_period_boundary, renormalization_depth
+    unit_contact_matching, floor_margin_certificate, first_obstruction_cocycle, boundary_moment_image, Farey_parent_interval
+    unit_contact_matching, floor_margin_certificate, first_obstruction_cocycle, boundary_moment_image, cusp_principal_part
+    unit_contact_matching, floor_margin_certificate, first_obstruction_cocycle, boundary_moment_image, renormalization_depth
+    unit_contact_matching, floor_margin_certificate, first_obstruction_cocycle, boundary_moment_image, hensel_unit
+    unit_contact_matching, floor_margin_certificate, first_obstruction_cocycle, Farey_parent_interval, K33_kernel_label
+    unit_contact_matching, floor_margin_certificate, first_obstruction_cocycle, Farey_parent_interval, state_lift_H7
+    unit_contact_matching, floor_margin_certificate, first_obstruction_cocycle, hensel_unit, K33_kernel_label
+    unit_contact_matching, floor_margin_certificate, first_obstruction_cocycle, hensel_unit, state_lift_H7
+    endpoint_arrangement_cell, floor_margin_certificate, signed_address_word, exact_period_boundary, renormalization_depth
+    endpoint_arrangement_cell, floor_margin_certificate, signed_address_word, boundary_moment_image, Farey_parent_interval
+    endpoint_arrangement_cell, floor_margin_certificate, signed_address_word, boundary_moment_image, cusp_principal_part
+    ... 27 more
+  readout=the sheaf route asks for exactness of overlap payloads. A quotient is legal only if its first obstruction is exact, repaired by holonomy, lifted to an endpoint chamber, descended, stopped at AP/GW, or named as debt.
+
+FAREY-CUSP RENORMALIZATION TRANSFER PACKET
+  potential=(covering_depth,cusp_height,kernel_unknown,sidecar_debt)
+  F0_qdiv_witness: potential=(0, 0, 0, 0) exit=terminal loose witness with M >= 1/qdiv > 1/14
+  F1_q14_unit_contact_core: potential=(1, 0, 0, 0) exit=AP/GW equality or strict off-unit margin by contact classifier
+  F2_q14_killed_contact_covering: potential=(2, 1, 0, 1) exit=promote to Phi_14d or covering floor sidecar
+  F3_qgt14_exact_period_cover: potential=(3, 2, 1, 1) exit=exact-period boundary feeds boundary-moment map
+  F4_positive_boundary_moment_image: potential=(1, 1, 0, 0) exit=strict covering floor witness
+  F5_AP_GW_kernel_in_covering: potential=(2, 1, 1, 0) exit=forbidden by qdiv>14 unless scale labels were lost
+  F6_K33_H7_named_kernel: potential=(2, 1, 1, 1) exit=route to K33/state-lift theorem debt
+  F7_unknown_zero_open_kernel: potential=(4, 3, 2, 2) exit=the actual remaining target: prove empty or name new sidecar
+
+  transition deltas:
+    F3_qgt14_exact_period_cover -> F4_positive_boundary_moment_image: delta=(2, 1, 1, 1) via B_D positive image
+    F3_qgt14_exact_period_cover -> F5_AP_GW_kernel_in_covering: delta=(1, 1, 0, 1) via kernel test
+    F3_qgt14_exact_period_cover -> F6_K33_H7_named_kernel: delta=(1, 1, 0, 0) via state-lift exception
+    F3_qgt14_exact_period_cover -> F7_unknown_zero_open_kernel: delta=(-1, -1, -1, -1) via unspanned obstruction
+    F2_q14_killed_contact_covering -> F3_qgt14_exact_period_cover: delta=(-1, -1, -1, 0) via covering promotion
+    F1_q14_unit_contact_core -> F0_qdiv_witness: delta=(1, 0, 0, 0) via strict off-unit peak
+    F1_q14_unit_contact_core -> F2_q14_killed_contact_covering: delta=(-1, -1, 0, -1) via unit contacts killed
+  readout=the only bad transition is the unknown zero-open kernel. Every useful cusp move either lowers the packet to a witness, emits positive boundary-moment slack, proves the AP/GW kernel impossible in qdiv>14, or routes to K33/H7 debt.
+
+CROSS-DISCIPLINARY SYNTHESIS
+  sheaf theory: Cech overlaps become the actual proof surface; first forgotten payloads are cocycles, and a proof is an exactness statement with named harmonic/state-lift residues.
+  local systems: zeta7 contact holonomy is a connection coordinate; it repairs lag/residue curvature locally without pretending to be a global terminal quotient.
+  modular/Farey geometry: qdiv and exact-period packets should move on a cusp tree; the principal part is the packet handoff, not a decorative modular analogy.
+  Schwarz-Christoffel: unit contacts look like polygon vertices; the accessory parameter is precisely the off-unit endpoint-owner debt that a polygon word would otherwise hide.
+  Mertens/loglog: scale hierarchies bound proof complexity through obstruction-prime ledgers, but loglog thinness is not a witness.
+  Fermat-Catalan/Hurwitz/Markov: sum reciprocal < 1 is best read as a hyperbolic triple-cusp defect; in LRC it can label route curvature only after a concrete triple of packet widths is declared.
+
+TOURNAMENT ANALYSIS
+  vertices=proof carriers and chart transitions, not runners or arcs
+  pairwise_observable=which carrier preserves boundary/open status, chart gluing, covering exits, scale normality, owner/topology, residue/magnitude split, and formal packet schema while destroying fewer coordinates
+  switch/gauge=A->B iff A has larger weighted proof-carrier score; ties prefer fewer destroyed coordinates and then stable key order
+  score_hist={-33: 1, 44: 1, 49: 1, 52: 1, 56: 1, 76: 1, 77: 2, 112: 1, 117: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  priority_path=first_obstruction_sheaf_exactness -> farey_cusp_renormalization_transfer -> contact_graph_kernel_classifier -> qsqrt7_residue_to_magnitude_lift -> boundary_moment_chain_map -> schwarz_christoffel_contact_polygon -> proof_circuit_uniform_gate_test -> hyperbolic_reciprocal_defect -> loglog_mertens_scale_entropy -> raw_cross_discipline_analogy
+
+ASSUMPTION-CHALLENGE
+  alternate vertices considered: runners, gaps, unit contacts, endpoint sections, wall crossings, residues, exact-period packets, cover arcs, Fourier modes, matroid cocircuits, Cech overlaps, cusp states, boundary-moment kernels, and proof obligations.
+  chosen vertices: proof carriers plus chart transitions.  This preserves LRC status only through explicit boundary/open, exactness, covering-exit, scale-normal, owner/topology, residue/magnitude, and state-lift fields.
+  destroyed by runner/arc or raw analogy quotients: endpoint owner, accessory parameter, exact-period owner, cusp principal part, first obstruction cocycle, AP/GW kernel status, and H7 debt.
+  challenged assumption: the remaining proof is just a stronger extremal inequality.  This scout suggests an exactness theorem plus a cusp-transfer theorem.

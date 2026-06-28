@@ -6075,3 +6075,41 @@ HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3254, HYP-3252, HYP-3251,
 HYP-3250, HYP-3249, HYP-3248, HYP-3247, HYP-3246, HYP-3245, HYP-3244,
 HYP-3243, HYP-3242, HYP-3241, HYP-3239, HYP-3228, HYP-3204, LTI-347,
 LTT-247, T1347, OPEN-Q-108.
+
+## OPEN-Q-108 addendum (codex-2026-06-28): sheaf exactness plus Farey-cusp transfer
+
+HYP-3301 picks two proof angles that are deliberately different from the
+HYP-3300 observability/Morse pair.
+
+First target:
+
+```text
+Build the quotient/observer overlap cochain complex.
+Every first obstruction cocycle must be exact, killed by zeta_7 contact
+holonomy, lifted to an endpoint/finite chamber, descended, stopped at
+AP/Goddyn-Wong equality, or routed to named K33/H7/state-lift debt.
+```
+
+Second target:
+
+```text
+Classify the qdiv>14 Farey-cusp transfer kernel.
+Every exact-period boundary should have positive boundary-moment image, lie
+in an AP/GW kernel forbidden by qdiv>14, lie in named K33/H7 debt, or name
+the first genuinely new zero-open kernel.
+```
+
+The toy HYP-3301 exactness packet has `10` chart-overlap rows, `23` sidecar
+columns, full `GF(2)` rank `10`, and minimal hitting sets of size `5`.
+The cusp-transfer packet isolates the bad transition
+`F3_qgt14_exact_period_cover -> F7_unknown_zero_open_kernel`.
+
+Next concrete open task: instantiate these rows on real packet data from
+HYP-2963, HYP-2969, HYP-3253, and HYP-3265, retaining
+`first_obstruction_cocycle`, `zeta7_contact_holonomy`,
+`exact_period_boundary`, `boundary_moment_image`, `cusp_principal_part`,
+`AP_GW_kernel_status`, and `K33/H7_state_lift_status`. -> HYP-3301,
+HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246,
+HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969,
+HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, LTI-356, LTT-256, T1356,
+OPEN-Q-108.

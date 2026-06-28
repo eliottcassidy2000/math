@@ -259,6 +259,11 @@ obligations, and proof-carrier interfaces.
   7-adic residue skeleton, 2-adic magnitude layer, ramified apex-7 cover,
   `12->24` hinge, and observability/Morse glue.  Treat `12->24` as a
   magnitude-side hinge, not a residue-preserving quotient.
+- Need to choose a post-HYP-3300 proof angle without repeating
+  observability/Morse:
+  use LTT-256 and make proof carriers plus chart transitions the vertices.
+  The top route is sheaf exactness of first obstruction cocycles, followed by
+  Farey-cusp transfer of qdiv>14 boundary-moment kernels.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -7143,6 +7148,52 @@ quotient_legality_status
   HYP-3241, HYP-3240, HYP-3238, HYP-3237, HYP-3236, HYP-3218, HYP-3214,
   HYP-3132, HYP-2928, HYP-2909, THM-523, THM-530, LTI-355, T1355,
   OPEN-Q-108.
+
+## LTT-256: Sheaf/Cusp Proof-Carrier Tournament
+
+- **Move:** Treat proof carriers and chart transitions as tournament
+  vertices.  HYP-3301 ranks `first_obstruction_sheaf_exactness`,
+  `farey_cusp_renormalization_transfer`, `contact_graph_kernel_classifier`,
+  `qsqrt7_residue_to_magnitude_lift`, `boundary_moment_chain_map`,
+  `schwarz_christoffel_contact_polygon`,
+  `proof_circuit_uniform_gate_test`, `hyperbolic_reciprocal_defect`,
+  `loglog_mertens_scale_entropy`, and `raw_cross_discipline_analogy`.
+- **Pairwise observable:** which carrier preserves boundary/open status,
+  chart gluing, covering exits, scale normality, owner/topology, the
+  residue/magnitude split, and formal packet schema while destroying fewer
+  coordinates.
+- **Switch/gauge:** orient toward larger weighted proof-carrier score; ties
+  prefer fewer destroyed coordinates and then stable key order.
+- **LRC use:** The tournament says the next different proof step should be an
+  exactness theorem plus a cusp-transfer theorem.  Contact graph,
+  Q(sqrt-7)/C3 residue structure, boundary moments, Schwarz-Christoffel
+  contact polygons, circuit missing-input ledgers, Mertens/loglog scale
+  entropy, and Fermat-Catalan/Hurwitz/Markov hyperbolic defects become chart
+  fields rather than standalone proofs.
+- **Preserves:** first obstruction cocycle status, Cech/danger-cover holes,
+  endpoint owner, exact-period boundary, boundary-moment image,
+  scale-normal/Farey-cusp address, AP/GW kernel status, and K33/H7 debt.
+- **Forgets / guardrail:** raw runner, raw arc, raw analogy label, raw contact
+  count, raw denominator, or raw hyperbolic reciprocal forgets endpoint
+  owners, accessory parameters, exact-period owners, cusp principal parts,
+  AP/GW kernel legality, and state-lift debt.
+- **Fingerprint:** `score_hist={-33:1,44:1,49:1,52:1,56:1,76:1,77:2,112:1,117:1}`,
+  no directed 3-cycles, singleton SCCs, Hamiltonian path count `1`, and
+  priority path `first_obstruction_sheaf_exactness ->
+  farey_cusp_renormalization_transfer -> contact_graph_kernel_classifier ->
+  qsqrt7_residue_to_magnitude_lift -> boundary_moment_chain_map ->
+  schwarz_christoffel_contact_polygon -> proof_circuit_uniform_gate_test ->
+  hyperbolic_reciprocal_defect -> loglog_mertens_scale_entropy ->
+  raw_cross_discipline_analogy`.
+- **Next hook:** Build the actual chart-overlap tournament on packet rows from
+  HYP-2963, HYP-2969, HYP-3253, and HYP-3265.  Each nontransitive SCC should
+  name either the first unspanned cocycle, a missing holonomy/endpoint
+  sidecar, a positive boundary-moment discharge, a forbidden AP/GW qdiv>14
+  kernel, K33/H7 debt, or a new zero-open kernel.
+- **Pointers:** HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253,
+  HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230,
+  HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523,
+  LTI-356, T1356, OPEN-Q-108.
 
 ## LTT-244: Tiling/Half-Tiling Descent Tournament
 
