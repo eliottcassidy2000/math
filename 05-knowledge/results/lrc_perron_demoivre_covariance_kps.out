@@ -12,3 +12,10 @@
   trace(C)=0.9522  sum-offdiag(=2*Sigma-k2)=1.5448
 
 de Moivre leading (most negative) angle: -1.8019 (the cyclotomic ground mode, S31ak dominant Joukowski lock)
+
+--- kps-S31ap honest refinement (Chen-Cusick 23) ---
+The near-tight configs ({1..12,182} M=0.0765 denom 183; {1..11,13,84} M=0.0786 denom 89) sit JUST ABOVE
+1/14, NOT at 2/23. So Chen-Cusick's 1/23=0.0435 is the unconditional FLOOR (well below 1/14), and the hard
+part is closing 1/23 -> 1/14. The "23 = project's M=2/23 worst case" link (HYP-3215) is a SPECIFIC
+bounded-D coincidence (THM-566), NOT a universal structural identity -- the general hard cases are at 1/14
+with various denoms. The Chen-Cusick baseline is real but does not shortcut the 1/23->1/14 closing.
