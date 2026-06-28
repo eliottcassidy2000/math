@@ -1,0 +1,13 @@
+(Z/14)* = [1, 3, 5, 9, 11, 13] = C_6 (gen 3: [1, 3, 9, 13, 11, 5])
+x3 orbit of {1,13}: [(1, 13), (3, 11), (5, 9)]  single C_3 orbit = the 3 binding pairs? True
+
+the SAME C_3, six ways (all = 3):
+  |(Z/14)*/{+-1}| = 3
+  #QR mod 7 = 3 (QRs=[1, 2, 4])
+  de Moivre cubic = x**3 + x**2 - 2*x - 1, degree 3 = |Gal(Q(cos2pi/7))| = C_3
+  index (p-1)/2 for p=7 = 3
+
+LEAP: HYP-2909 (one binding pair, PROVED+Lean) = ONE C_3-orbit point; C_3 (x3) generates the other 2
+  => the full equioscillation at the 6 units (kps S255) from the proved single pair + the C_3 symmetry.
+  cap = C_3-trace in Q(cos2pi/7) (rational, disc 7^2, S75e). Rigidity & equidist = C_3-equivariant residuals.
+  DIRECTION: run the proof on the C_3 witness space / Q(cos2pi/7), not the 13-dim config space.

@@ -1,3 +1,21 @@
+## mac-mini-2026-06-28-S83 -- the HIDDEN C_3: the LRC(14) witness space is a SINGLE C_3-Galois orbit; LEAP = run the proof C_3-equivariantly from the PROVED single binding pair (HYP-2909)
+
+Owner: see more underlying hidden structure + make a creative leap on direction. HYP-3257 + reflection
+the-hidden-c3 + script lrc_hidden_c3_witness_orbit_macmini_S83.py.
+
+HIDDEN STRUCTURE (CONFIRMED): the 3 binding-pair witnesses {1,13},{3,11},{5,9} form ONE C_3-Galois orbit (x3
+mod14 cycles them). And this C_3 is the SAME object six ways (all = 3): (Z/14)*/{+-1} = (Z/7)*/{+-1} (CRT) =
+Gal(Q(cos2pi/7)/Q) = #de Moivre angles 2cos(2pi j/7) = index (p-1)/2 = #QR mod 7. So LRC(14) is fundamentally a
+C_3-statement; the witness space is one C_3-orbit; the cap lives in the C_3-fixed field Q(cos2pi/7) (S75e).
+
+LEAP (DIRECTION): run the proof C_3-EQUIVARIANTLY. (1) HYP-2909 (one binding pair, PROVED+Lean) = ONE orbit-point;
+(2) C_3 (x3) generates the other 2 -> the full equioscillation at the 6 units (kps S255) from the proved single
+pair + symmetry (no new binding-pair proof needed); (3) cap = the C_3-trace Tr_{Q(cos2pi/7)/Q} (rational =
+Galois-invariant, disc 7^2); (4) the last two details (S82) become C_3-equivariant residuals: rigidity (a) = the
+C_3-finite-system (only AP/GW), equidist (b) = the C_3-symmetric off-grid bulk. DIRECTION-CHANGE: stop attacking
+on the 13-dim config space; run on the C_3 witness space / Q(cos2pi/7) -- one symmetry on one field, the proved
+input (HYP-2909) is a single orbit-point. NOT a proof; LRC(14) open, but the remaining work is now C_3-framed.
+
 ## mac-mini-2026-06-28-S82 -- REFRAMING the last two details to FIT: resonant survivor REDUCES to off-grid bulk; rigidity is a FINITE equioscillation system (both = the unit-grid core/bulk split)
 
 Owner: keep creatively reframing the last few details of LRC(14) to get them to fit; explore the repo for niche
