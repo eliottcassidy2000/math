@@ -5,7 +5,7 @@ pattern is not useful because it is famous, pretty, or repeated across
 threads.  It is useful when it can be typed as a payload atom for the live
 LRC14 proof coordinates.
 
-The atlas scored 94 motifs across recent hypotheses, results, reflections,
+The atlas scored 97 motifs across recent hypotheses, results, reflections,
 coordination notes, and forum drafts.  The top of the ranking was
 proof-facing:
 
@@ -14,23 +14,26 @@ comb-overlap Gram kernel
 shell L_y magic quartic
 normal-cone dual slack
 multi-chart proof split
+AP Green algebraic-connectivity certificate
 AP self-dual Fejer equidistribution certificate
 three-gap Stern-Brocot cap-kernel recursion
 consecutive plus doubled AP
 modulus-covariance apex break
+single-arc peeling recursion
 Toeplitz lambda-min margin
 certificate-Helly separation
-single-arc peeling recursion
 ordered-tail exchange-rate ratio
 D1/D2/D3 covariance layer split
 totally-real cap field conductor packet
+Vitali bulk-core Phi14 witness wall
 11 non-AP exchange traps plus AP
 Fejer-Riesz square
 Chebyshev V7 double root
-Lorentzian exchange chamber
 conductance/Fiedler trap graph
+Lorentzian exchange chamber
 cyclotomic factor grading
 Green-current bottleneck
+Brouwer trace-sign times SOS split
 ```
 
 That ordering is a useful sanity check.  The search did not elevate raw
@@ -88,6 +91,15 @@ totally-real cap field `Q(cos2pi/7)` with conductor debt in the binding rows.
 These are not raw cyclotomic slogans: their proof value is the sidecar each
 forces into the packet before scalar cancellation is legal.
 
+Incoming HYP-3236/HYP-3219/HYP-3237 add M095-M097.  M095 turns the Green
+conductance graph into a direct AP extremality signal: AP and doubled AP are
+the only all-bank optimizers of algebraic connectivity, total positive
+conductance, and Green effective-resistance measures, provided the negative
+covariance leakage remains attached.  M096 separates the Brouwer trace-sign
+obstruction from the SOS magnitude.  M097 makes the Vitali wall explicit:
+bulk measure arguments and the measure-zero `Phi_14` core witnesses are
+different proof carriers and must be glued, not averaged.
+
 ## The Expanded Currencies
 
 The patterns that matter currently spend a small set of named currencies:
@@ -114,6 +126,9 @@ cyclotomic factor grading
 signed address chart-change legality
 AP self-dual Fejer / Vaaler certificate
 totally-real cap field conductor packet
+Green algebraic-connectivity / resistance certificate
+Brouwer trace-sign / SOS split
+Vitali bulk-core Phi14 witness wall
 induction-base and moduli-bridge debt
 ```
 
@@ -208,6 +223,10 @@ Mobius/Eisenstein/Legendre/cubic/sextic subfield-mode lattice.
 HYP-3233/HYP-3234/HYP-3218/HYP-3235 add the cyclotomic factor grading,
 signed-address chart debt, AP self-dual Fejer/Vaaler certificate, and
 totally-real cap-field conductor packet.
+HYP-3236/HYP-3219/HYP-3237 add the newest boundary layer: Green
+algebraic-connectivity/resistance extremality, Brouwer trace-sign times SOS
+magnitude, and the Vitali wall split between bulk measure and the `Phi_14`
+core construction.
 
 The next move is the symbolic version of that table:
 
@@ -236,6 +255,9 @@ Cyclotomic_factor_grading_Phi_d_status
 Signed_address_chart_change_status
 AP_self_dual_Fejer_Vaaler_tail_status
 Totally_real_cap_field_conductor_trace_status
+Green_lambda2_Kirchhoff_resistance_status
+Brouwer_trace_sign_SOS_split_status
+Vitali_bulk_core_Phi14_witness_status
 Induction_base_and_1_23_to_1_14_lift_status
 ```
 
@@ -243,4 +265,6 @@ If those columns become exact identities or finite inequalities, the
 multi-chart proof shape gets much sharper: exchange/covariance off the finite
 trap manifold, moment-cone curvature on the boundary, ordered-tail pricing for
 the central mass, Fejer/Delsarte slack for the dual face, and
-HB/Joukowski/Chebyshev gluing for the odd sidecar.
+HB/Joukowski/Chebyshev gluing for the odd sidecar, with the Green, Brouwer,
+and Vitali columns preventing the next compression from erasing the boundary
+information it needs to prove.

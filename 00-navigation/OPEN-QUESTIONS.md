@@ -192,10 +192,11 @@ HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153,
 T1336, LTI-336, LTT-236, OPEN-Q-108.
 **OPEN-Q-108 HYP-3226 small-pattern adjacency atlas addendum:**
 HYP-3226 turns the user's request for many small adjacent patterns into a
-typed payload ledger.  The scout scans 8370 repo-local files with 94 motifs
+typed payload ledger.  The scout scans 8377 repo-local files with 97 motifs
 and ranks by proof-payload retention, not raw analogy.  The strongest motifs
 are comb-overlap Gram kernel, shell `L_y` magic quartic, normal-cone dual
-slack, multi-chart proof split, AP self-dual Fejer equidistribution
+slack, multi-chart proof split, AP Green algebraic-connectivity certificate,
+AP self-dual Fejer equidistribution
 certificate, three-gap/Stern-Brocot cap-kernel recursion,
 consecutive plus doubled AP, modulus-covariance apex break,
 Toeplitz lambda-min margin,
@@ -220,6 +221,9 @@ cyclotomic subfield / character-mode lattice); and
 HYP-3233/HYP-3234/HYP-3218/HYP-3235 add M091-M094 (cyclotomic factor
 grading, signed-address chart-change debt, AP self-dual Fejer/Vaaler
 certificate, and the totally-real cap-field conductor packet).
+HYP-3236/HYP-3219/HYP-3237 add M095-M097 (Green lambda2/Kirchhoff resistance
+certificate, Brouwer trace-sign times SOS split, and Vitali bulk-core `Phi_14`
+witness wall).
 The main
 guardrail is that famous-problem names such as Skewes, tau/Lindelof, Collatz,
 Pell, Markov/Hurwitz, and Moser-de Bruijn/fibbinary
@@ -241,7 +245,10 @@ three-gap kernel-recursion status, scale-normal `omega_Q` exactness,
 moment-order / 2-adic fold status,
 modulus-covariance / subfield-mode status, cyclotomic factor grading,
 signed-address chart-change status, AP self-dual Fejer/Vaaler tail status,
-totally-real cap-field conductor/trace status, and
+totally-real cap-field conductor/trace status,
+`Green_lambda2_Kirchhoff_resistance_status`,
+`Brouwer_trace_sign_SOS_split_status`,
+`Vitali_bulk_core_Phi14_witness_status`, and
 `Induction_base_and_1_23_to_1_14_lift_status`.  If the rows
 collapse to exact identities or finite inequalities, use them as the finite
 boundary chart in the multi-chart proof: exchange/covariance off the trap

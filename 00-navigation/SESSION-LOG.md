@@ -731,11 +731,12 @@ updated
 and added
 `07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md`.
 
-Readout: 94 motifs over 93 families, scanned 8370 repo-local files, with
-risk histogram `{'analogy': 19, 'direct': 33, 'raw': 3, 'sidecar': 39}`.  The
+Readout: 97 motifs over 96 families, scanned 8377 repo-local files, with
+risk histogram `{'analogy': 19, 'direct': 36, 'raw': 3, 'sidecar': 39}`.  The
 motif-family tournament is transitive (`directed_3cycles=0`, one Hamiltonian
 path).  Top payload motifs: M073 comb-overlap Gram kernel, M080 shell
 `L_y` magic quartic, normal-cone dual slack, multi-chart proof split,
+M095 AP Green algebraic-connectivity certificate,
 M093 AP self-dual Fejer equidistribution certificate,
 M085 three-gap/Stern-Brocot cap-kernel recursion, consecutive plus doubled AP,
 M089 modulus-covariance apex break, M074 single-arc peeling recursion,
@@ -745,6 +746,8 @@ recursion, ordered-tail exchange-rate ratio, D1/D2/D3 covariance layers,
 M094 totally-real cap field conductor packet, the 11 non-AP exchange-trap ledger,
 Fejer-Riesz square, Chebyshev V7 double root, Lorentzian exchange chamber,
 M072 conductance/Fiedler trap graph, and M091 cyclotomic factor grading.
+M096/M097 add the Brouwer trace-sign/SOS split and the Vitali bulk-core
+`Phi_14` witness wall as required boundary sidecars.
 
 Main synthesis: useful small patterns currently spend seven currencies:
 normal-fan exposure, Toeplitz/moment curvature, covariance layers,
@@ -777,6 +780,9 @@ integration folds in HYP-3230/HYP-3231/HYP-3216 as motifs M085-M088.
 Latest push-time integration folds in HYP-3232/HYP-3217 as motifs M089-M090.
 Newest push-time integration folds in HYP-3233/HYP-3234/HYP-3218/HYP-3235 as
 motifs M091-M094.
+Latest integration folds in HYP-3236/HYP-3219/HYP-3237 as motifs M095-M097:
+AP Green lambda2/Kirchhoff resistance certificate, Brouwer trace-sign times
+SOS split, and Vitali bulk-core `Phi_14` witness wall.
 Next best computation is to prove the HYP-3225/HYP-3227 trap table
 symbolically with Gram PSD, speed-1 peeling, order-3 overlap, shell `L_y`
 magic slack, Gamma0(7) coefficient-row compatibility, three-gap kernel
@@ -784,7 +790,9 @@ recursion status, scale-normal `omega_Q` exactness, moment-order / 2-adic fold
 status, modulus-covariance apex-break status, subfield/chi_3 mode status,
 cyclotomic factor grading, signed-address chart-change status, AP self-dual
 Fejer/Vaaler tail status, totally-real cap-field conductor/trace status,
-conductance/Fiedler, M-matrix/Schur, Fejer/Delsarte, induction-base, and
+Green lambda2/Kirchhoff resistance status, Brouwer trace-sign/SOS split,
+Vitali bulk-core `Phi_14` witness status, conductance/Fiedler,
+M-matrix/Schur, Fejer/Delsarte, induction-base, and
 floor-to-1/14 lift columns.
 
 ## mac-mini-2026-06-27-S74 -- abstract synthesis: THE ONE OBSTRUCTION (apex-7 = Lee-Yang zero at 1/p; algebra is worst-case, resolution is analytic) + octonion REFUTED

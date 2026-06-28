@@ -10,6 +10,8 @@ script: 04-computation/lrc14_small_pattern_adjacency_atlas_codex_20260628.py
 result: 05-knowledge/results/lrc14_small_pattern_adjacency_atlas_codex_20260628.out
 reflection: 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md
 related:
+  - HYP-3237
+  - HYP-3236
   - HYP-3235
   - HYP-3234
   - HYP-3233
@@ -20,6 +22,7 @@ related:
   - HYP-3229
   - HYP-3228
   - HYP-3227
+  - HYP-3219
   - HYP-3217
   - HYP-3216
   - HYP-3215
@@ -61,6 +64,7 @@ comb-overlap Gram kernel
 shell L_y magic quartic
 normal-cone dual slack
 multi-chart proof split
+AP Green algebraic-connectivity certificate
 AP self-dual Fejer equidistribution certificate
 three-gap Stern-Brocot cap-kernel recursion
 consecutive plus doubled AP
@@ -71,12 +75,14 @@ single-arc peeling recursion
 ordered-tail exchange-rate ratio
 D1/D2/D3 covariance layer split
 totally-real cap field conductor packet
+Vitali bulk-core Phi14 witness wall
 cyclotomic factor grading
+Brouwer trace-sign times SOS split
 ```
 
 ## Method
 
-The scout defines 94 motifs across 93 families, scans 8370 repo-local files,
+The scout defines 97 motifs across 96 families, scans 8377 repo-local files,
 and ranks each motif by a payload-retention score:
 
 ```text
@@ -94,10 +100,10 @@ the destroyed coordinate, the repair sidecar, and the risk label.
 ## Result Snapshot
 
 ```text
-repo_files_scanned=8370
-motifs=94
-families=93
-risk_hist={'analogy': 19, 'direct': 33, 'raw': 3, 'sidecar': 39}
+repo_files_scanned=8377
+motifs=97
+families=96
+risk_hist={'analogy': 19, 'direct': 36, 'raw': 3, 'sidecar': 39}
 directed_3cycles=0
 hamiltonian_path_count=1
 ```
@@ -105,22 +111,22 @@ hamiltonian_path_count=1
 Payload coverage in the atlas:
 
 ```text
-SIDE_CARRIER        64
-ANALYTIC_EQ         40
-QUOTIENT_LEGALITY   30
+SIDE_CARRIER        67
+ANALYTIC_EQ         42
+QUOTIENT_LEGALITY   31
+CHEBYSHEV           20
 EDGE_PACKET         19
-CHEBYSHEV           18
-TOEPLITZ            15
-GEOMETRY            15
+TOEPLITZ            16
+GEOMETRY            16
 AP_NORMAL           14
-TRAP_BOUNDARY       13
+TRAP_BOUNDARY       14
 PGF_ROOT            13
-COV_LAYER            9
+COV_LAYER           10
 HB_PERRON            9
 SELBERG              9
 CIRCUIT              9
 P_ADIC               8
-GREEN_LORENTZIAN     6
+GREEN_LORENTZIAN     7
 ORDERED_TAIL         5
 ```
 
@@ -131,6 +137,7 @@ M073 comb-overlap Gram kernel
 M080 shell L_y magic quartic
 M067 normal-cone dual slack
 M068 multi-chart proof split
+M095 AP Green algebraic-connectivity certificate
 M093 AP self-dual Fejer equidistribution certificate
 M085 three-gap Stern-Brocot cap-kernel recursion
 M001 consecutive plus doubled AP
@@ -142,13 +149,16 @@ M003 HYP-3204 exchange-rate ratio
 M006 D1/D2/D3 layer split
 M094 totally-real cap field conductor packet
 M002 11 non-AP exchange traps plus AP
+M097 Vitali bulk-core Phi14 witness wall
 M029 Fejer-Riesz square
 M009 Chebyshev V7 double root
 M004 AP support projection
-M020 Lorentzian exchange chamber
 M072 conductance/Fiedler trap graph
+M020 Lorentzian exchange chamber
 M091 cyclotomic factor grading
 M019 Green-current bottleneck
+M086 scale-normal packet recursion
+M096 Brouwer trace-sign times SOS split
 ```
 
 ## Small Signals Worth Keeping
@@ -195,6 +205,9 @@ A..G local         signed recurrences require chart addresses before cancellatio
 disc=49            Q(cos2pi/7) puts the binding cap rows on the 7^2 conductor.
 2 heads            n=14 has a 7-cap head and a 3^3 witness head, both depth 3.
 1/23 -> 1/14       Chen-Cusick supplies a floor-to-target lift; the 23/M=2/23 link is only bounded-bank coincidence.
+lambda2 AP          AP has lambda2=0.192033074001, Kirchhoff=108.654718079151, and maxR=9.713313375596 in the positive-part Green graph.
+Delta even/odd      Brouwer trace-sign isolates the odd obstruction while the even side remains SOS-certifiable.
+Phi14 core          AP closed witnesses at n=14 are the units mod 14, i.e. the primitive Phi14 core.
 ```
 
 The number 12 remains useful, but as chart/fiber bookkeeping: local maxima,
@@ -229,6 +242,9 @@ HYP-3233 cyclotomic factor grading
 HYP-3234 signed address chart-change sidecar
 HYP-3218 AP self-dual Fejer equidistribution certificate
 HYP-3235 totally-real cap field / conductor packet
+HYP-3236 Green conductance / algebraic-connectivity certificate
+HYP-3219 Brouwer trace-sign / even-odd SOS split
+HYP-3237 Vitali bulk-core Phi14 witness wall
 HYP-3215 induction-base and 23/27/14 modulus route
 ```
 
@@ -310,6 +326,20 @@ totally-real cap field `Q(cos2pi/7)` and the binding-row conductor debt
 `7^1,7^2`.  These are direct motifs only because each names the sidecar needed
 before the cyclotomic object can be used as a proof row.
 
+Incoming HYP-3236 adds M095.  The positive-part covariance conductance graph
+is lossy, but it gives a direct AP extremality coordinate: consecutive and
+doubled AP are the only all-bank maximizers of `lambda2` and total positive
+conductance and the only minimizers of Kirchhoff and effective-resistance
+profiles.  The required sidecar is explicit negative covariance leakage plus
+the bottleneck effective-resistance row that explains each non-AP trap.
+
+Incoming HYP-3219/HYP-3237 add M096-M097.  M096 says the odd de Moivre cubic
+obstruction should be carried as Brouwer trace sign times SOS magnitude, not
+forced into a pure square certificate.  M097 says the proof architecture splits
+at the Vitali wall: measure arguments control the bulk, while the measure-zero
+core must be handled by the `Phi_14` witness packet and Brouwer
+equioscillation sidecar.
+
 The raw-famous-problem magnet is explicitly the sink motif: it destroys all
 LRC payload unless it is retyped into one of those coordinates.
 
@@ -377,6 +407,9 @@ cyclotomic factor grading and Phi_d character status
 signed address chart-change legality status
 AP self-dual Fejer/Vaaler tail status
 totally-real cap field conductor / trace status
+Green lambda2 / Kirchhoff / effective-resistance certificate status
+Brouwer trace-sign times SOS split status
+Vitali bulk-core Phi14 witness status
 induction-base dependency and Chen-Cusick floor-to-1/14 lift status
 ```
 

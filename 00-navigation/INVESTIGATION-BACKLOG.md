@@ -157,14 +157,16 @@ HYP-3221's analytic-equidistribution guardrail, HYP-3225's Green-current /
 Lorentzian trap fingerprints, HYP-3227's conductance/Fiedler graph, S75's
 Gram-kernel/peeling build, HYP-3215's proof-route audit, HYP-3228's shell
 magic dual, HYP-3229's modular sidecar audit, HYP-3230/HYP-3231/HYP-3216's
-recursion layer, HYP-3232/HYP-3217's mode lattice, and
+recursion layer, HYP-3232/HYP-3217's mode lattice,
 HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor / chart / Fejer /
-conductor layer without treating
+conductor layer, and HYP-3236/HYP-3219/HYP-3237's Green / Brouwer / Vitali
+boundary layer without treating
 raw numerology as a proof carrier.
-Readout: 94 motifs across 93 families were scored by proof-payload retention
-over 8370 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
+Readout: 97 motifs across 96 families were scored by proof-payload retention
+over 8377 repo-local files.  The strongest motifs were comb-overlap Gram kernel,
 shell `L_y` magic quartic, normal-cone dual slack,
-multi-chart proof split, AP self-dual Fejer equidistribution certificate,
+multi-chart proof split, AP Green algebraic-connectivity certificate,
+AP self-dual Fejer equidistribution certificate,
 three-gap/Stern-Brocot cap-kernel recursion,
 consecutive plus doubled AP, modulus-covariance apex break, Toeplitz lambda-min
 margin, certificate-Helly separation, single-arc peeling recursion,
@@ -190,6 +192,9 @@ cyclotomic subfield / character-mode lattice with the cubic de Moivre mode.
 HYP-3233/HYP-3234/HYP-3218/HYP-3235 add M091-M094: cyclotomic factor
 grading, signed address chart-change debt, AP self-dual Fejer/Vaaler
 equidistribution certificate, and the totally-real cap field conductor packet.
+HYP-3236/HYP-3219/HYP-3237 add M095-M097: AP Green
+algebraic-connectivity/resistance certificate, Brouwer trace-sign times SOS
+split, and the Vitali bulk-core `Phi_14` witness wall.
 Famous-problem analogies remain sidecars until they name the LRC coordinate
 they preserve and the coordinate they destroy.  Incoming S283's
 Skewes/Helfgott-Ruzsa/Collatz/PFR
@@ -204,7 +209,9 @@ coefficient-row compatibility, three-gap kernel-recursion status,
 scale-normal `omega_Q` exactness, moment-order / 2-adic fold status,
 modulus-covariance / subfield-mode status, cyclotomic factor grading,
 signed-address chart-change status, AP self-dual Fejer/Vaaler tail status,
-totally-real cap field conductor/trace status, and
+totally-real cap field conductor/trace status, Green lambda2/Kirchhoff
+resistance status, Brouwer trace-sign/SOS split status, Vitali bulk-core
+`Phi_14` witness status, and
 Fejer/Delsarte `F_7` slack as finite-boundary columns.
 
 ## Lead codex-2026-06-28: Joukowski-Hermite-Biehler / Perron-Frobenius synthesis

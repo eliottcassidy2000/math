@@ -728,6 +728,27 @@ MOTIFS: tuple[Motif, ...] = (
           "cyclotomic-unit / totally-positive trace sidecar",
           "direct",
           ("Q(cos2pi/7)", "disc=49", "7^2-conductor", "totally-positive square")),
+    Motif("M095", "AP Green algebraic-connectivity certificate", "green-connectivity",
+          "AP maximizes lambda2 and positive conductance, minimizes Green resistance",
+          ("GREEN_LORENTZIAN", "COV_LAYER", "TRAP_BOUNDARY", "TOEPLITZ", "SIDE_CARRIER"),
+          "positive-part conductance graph clips negative covariance leakage",
+          "negative_mass / effective-resistance bottleneck sidecar",
+          "direct",
+          ("lambda2_algebraic_connectivity", "Kirchhoff", "effective resistance", "negative_mass")),
+    Motif("M096", "Brouwer trace-sign times SOS split", "brouwer-trace-sign",
+          "odd cubic obstruction = trace sign times SOS magnitude 7",
+          ("ANALYTIC_EQ", "CHEBYSHEV", "GEOMETRY", "SIDE_CARRIER"),
+          "trying to force the odd obstruction into a pure SOS certificate",
+          "Brouwer degree / trace-sign sidecar",
+          "direct",
+          ("Brouwer", "trace sign", "Delta_even", "Delta_odd")),
+    Motif("M097", "Vitali bulk-core Phi14 witness wall", "vitali-core-wall",
+          "measure handles bulk while Phi14 closed witnesses handle the core",
+          ("ANALYTIC_EQ", "QUOTIENT_LEGALITY", "CHEBYSHEV", "SIDE_CARRIER"),
+          "measure-positive proof reused at a measure-zero core",
+          "Phi14 witness / Brouwer equioscillation sidecar",
+          "direct",
+          ("Vitali wall", "Phi_14", "core witnesses", "equioscillation")),
 )
 
 
@@ -933,6 +954,9 @@ def main() -> None:
         ("|g(chi7)|^2=7", "Gauss-sum modulus equals the Lee-Yang apex zero and Fejer reserve."),
         ("disc=49", "Q(cos2pi/7) puts the binding cap rows on the 7^2 conductor."),
         ("2 heads", "n=14 has a 7-cap head and a 3^3 witness head, both depth 3."),
+        ("lambda2 max", "AP maximizes positive-conductance algebraic connectivity."),
+        ("Delta_even>=Delta_odd", "coverage node inequality splits even SOS from odd sign debt."),
+        ("Phi14 core", "AP closed witnesses are the units mod 14 at the Vitali wall."),
         ("1/23 -> 1/14", "Chen-Cusick supplies a floor-to-target lift; the 23/M=2/23 link is only bounded-bank coincidence."),
     ]
     for key, meaning in signals:
@@ -975,7 +999,11 @@ def main() -> None:
         "(x-1)^depth*Phi_d, signed A..G recurrences need chart-change sidecars, "
         "AP autocorrelation is the self-dual Fejer equidistribution certificate, "
         "and the cap lives in the totally-real conductor-7 field with the binding "
-        "rows carrying the 7^2 ramification debt."
+        "rows carrying the 7^2 ramification debt.  Incoming HYP-3236/HYP-3219/"
+        "HYP-3237 adds a proof-facing boundary layer: AP is also the Green "
+        "algebraic-connectivity and resistance optimum, the odd obstruction "
+        "factors into Brouwer trace sign times SOS magnitude, and the Vitali wall "
+        "separates measure-rich bulk from the Phi14 cyclotomic witness core."
     )
 
 

@@ -1,109 +1,109 @@
 HYP-3226 small-pattern adjacency atlas
 ========================================================================
-repo_files_scanned=8370
-motifs=94
-families=93
-risk_hist={'analogy': 19, 'direct': 33, 'raw': 3, 'sidecar': 39}
-score_hist={-2: 1, 6: 2, 8: 1, 9: 2, 10: 2, 11: 2, 12: 2, 13: 5, 14: 3, 15: 6, 16: 3, 17: 6, 18: 8, 19: 9, 20: 4, 21: 2, 22: 9, 23: 4, 24: 4, 25: 1, 26: 3, 27: 2, 28: 1, 29: 1, 30: 3, 31: 1, 32: 2, 33: 1, 36: 3, 38: 1}
+repo_files_scanned=8377
+motifs=97
+families=96
+risk_hist={'analogy': 19, 'direct': 36, 'raw': 3, 'sidecar': 39}
+score_hist={-2: 1, 6: 2, 8: 1, 9: 2, 10: 2, 11: 2, 12: 2, 13: 5, 14: 3, 15: 6, 16: 3, 17: 6, 18: 8, 19: 9, 20: 4, 21: 2, 22: 9, 23: 5, 24: 3, 25: 2, 26: 4, 27: 2, 28: 1, 29: 1, 30: 3, 31: 1, 32: 2, 33: 1, 34: 1, 36: 3, 38: 1}
 directed_3cycles=0
 hamiltonian_path_count=1
-priority_path=M073 -> M080 -> M067 -> M068 -> M093 -> M085 -> M001 -> M089 -> M074 -> M005 -> M066 -> M003 -> M006 -> M094 -> M002 -> M029 -> M009 -> M004 -> M020 -> M072 -> M091 -> M019 -> M012 -> M086 -> M010 -> M011 -> M007 -> M090 -> M078 -> M083 -> M037 -> M053 -> M025 -> M033 -> M015 -> M030 -> M065 -> M008 -> M081 -> M064 -> M076 -> M031 -> M092 -> M088 -> M077 -> M014 -> M057 -> M038 -> M036 -> M040 -> M013 -> M084 -> M041 -> M018 -> M043 -> M051 -> M032 -> M016 -> M039 -> M042 -> M046 -> M079 -> M075 -> M054 -> M087 -> M028 -> M056 -> M026 -> M022 -> M027 -> M045 -> M058 -> M049 -> M024 -> M052 -> M061 -> M034 -> M059 -> M044 -> M047 -> M071 -> M082 -> M021 -> M035 -> M060 -> M070 -> M063 -> M048 -> M050 -> M055 -> M017 -> M062 -> M023 -> M069
+priority_path=M073 -> M080 -> M067 -> M068 -> M095 -> M093 -> M085 -> M001 -> M089 -> M074 -> M005 -> M066 -> M003 -> M006 -> M094 -> M002 -> M097 -> M029 -> M009 -> M004 -> M072 -> M020 -> M091 -> M019 -> M012 -> M086 -> M096 -> M010 -> M011 -> M007 -> M090 -> M078 -> M083 -> M037 -> M053 -> M025 -> M033 -> M030 -> M015 -> M065 -> M008 -> M081 -> M064 -> M076 -> M031 -> M092 -> M088 -> M077 -> M014 -> M057 -> M038 -> M036 -> M040 -> M013 -> M084 -> M041 -> M018 -> M043 -> M051 -> M032 -> M016 -> M039 -> M042 -> M046 -> M079 -> M075 -> M054 -> M087 -> M028 -> M056 -> M026 -> M022 -> M027 -> M045 -> M058 -> M049 -> M024 -> M052 -> M061 -> M034 -> M059 -> M044 -> M047 -> M071 -> M082 -> M021 -> M035 -> M060 -> M070 -> M063 -> M048 -> M050 -> M055 -> M017 -> M062 -> M023 -> M069
 
 Payload Coverage
 ------------------------------------------------------------------------
-SIDE_CARRIER       64
-ANALYTIC_EQ        40
-QUOTIENT_LEGALITY  30
+SIDE_CARRIER       67
+ANALYTIC_EQ        42
+QUOTIENT_LEGALITY  31
+CHEBYSHEV          20
 EDGE_PACKET        19
-CHEBYSHEV          18
-TOEPLITZ           15
-GEOMETRY           15
+TOEPLITZ           16
+GEOMETRY           16
 AP_NORMAL          14
-TRAP_BOUNDARY      13
+TRAP_BOUNDARY      14
 PGF_ROOT           13
-COV_LAYER           9
+COV_LAYER          10
 HB_PERRON           9
 SELBERG             9
 CIRCUIT             9
 P_ADIC              8
-GREEN_LORENTZIAN    6
+GREEN_LORENTZIAN    7
 ORDERED_TAIL        5
 
 Top Motifs By Payload-Retention Score
 ------------------------------------------------------------------------
 keyword_hit_count=repo-local triage support; generic counts are capped and not proof strength.
-M073 score=38 risk=direct  hits=115  family=magic-gram :: comb-overlap Gram kernel
+M073 score=38 risk=direct  hits=119  family=magic-gram :: comb-overlap Gram kernel
      payloads=TOEPLITZ,CHEBYSHEV,AP_NORMAL,ANALYTIC_EQ,COV_LAYER
      repair=Gram/Bochner autocorrelation sidecar
-M080 score=36 risk=direct  hits=16   family=finite-shell-magic :: shell L_y magic quartic
+M080 score=36 risk=direct  hits=17   family=finite-shell-magic :: shell L_y magic quartic
      payloads=TOEPLITZ,CHEBYSHEV,AP_NORMAL,ORDERED_TAIL,ANALYTIC_EQ
      repair=finite Delsarte/Newton shell-dual sidecar
-M067 score=36 risk=direct  hits=10980 family=dual-certificate :: normal-cone dual slack
+M067 score=36 risk=direct  hits=11038 family=dual-certificate :: normal-cone dual slack
      payloads=AP_NORMAL,TOEPLITZ,ORDERED_TAIL,COV_LAYER
      repair=shared slack decomposition
-M068 score=36 risk=direct  hits=8441 family=chart-proof :: multi-chart proof split
+M068 score=36 risk=direct  hits=8505 family=chart-proof :: multi-chart proof split
      payloads=TRAP_BOUNDARY,TOEPLITZ,HB_PERRON,ORDERED_TAIL
      repair=chart-overlap certificate
+M095 score=34 risk=direct  hits=207  family=green-connectivity :: AP Green algebraic-connectivity certificate
+     payloads=GREEN_LORENTZIAN,COV_LAYER,TRAP_BOUNDARY,TOEPLITZ,SIDE_CARRIER
+     repair=negative_mass / effective-resistance bottleneck sidecar
 M093 score=33 risk=direct  hits=313  family=fejer-equidistribution :: AP self-dual Fejer equidistribution certificate
      payloads=ANALYTIC_EQ,CHEBYSHEV,AP_NORMAL,PGF_ROOT,SIDE_CARRIER
      repair=signed Fejer/Vaaler tail with phi(p) reserve sidecar
-M085 score=32 risk=direct  hits=384  family=cap-kernel-recursion :: three-gap Stern-Brocot cap-kernel recursion
+M085 score=32 risk=direct  hits=398  family=cap-kernel-recursion :: three-gap Stern-Brocot cap-kernel recursion
      payloads=TOEPLITZ,CHEBYSHEV,ANALYTIC_EQ,GEOMETRY,SIDE_CARRIER
      repair=order-3 overlap / inclusion-exclusion sidecar
-M001 score=32 risk=direct  hits=80   family=equality-face :: consecutive plus doubled AP
+M001 score=32 risk=direct  hits=94   family=equality-face :: consecutive plus doubled AP
      payloads=AP_NORMAL,TOEPLITZ,COV_LAYER,ORDERED_TAIL
      repair=dilation equality sidecar
-M089 score=31 risk=direct  hits=60   family=modulus-covariance :: modulus-covariance apex break
+M089 score=31 risk=direct  hits=55   family=modulus-covariance :: modulus-covariance apex break
      payloads=TOEPLITZ,ANALYTIC_EQ,GEOMETRY,TRAP_BOUNDARY,SIDE_CARRIER
      repair=antipode-half deviation / order-3 correction sidecar
 M074 score=30 risk=direct  hits=518  family=single-arc :: single-arc peeling recursion
      payloads=AP_NORMAL,ANALYTIC_EQ,QUOTIENT_LEGALITY,SIDE_CARRIER
      repair=peeling-recursion endpoint sidecar
-M005 score=30 risk=direct  hits=927  family=moment-cone :: Toeplitz lambda-min margin
+M005 score=30 risk=direct  hits=948  family=moment-cone :: Toeplitz lambda-min margin
      payloads=TOEPLITZ,TRAP_BOUNDARY,AP_NORMAL
      repair=lambda-min margin / Schur sidecar
-M066 score=30 risk=direct  hits=633  family=convex-certificate :: certificate-Helly separation
+M066 score=30 risk=direct  hits=640  family=convex-certificate :: certificate-Helly separation
      payloads=AP_NORMAL,TOEPLITZ,TRAP_BOUNDARY
      repair=Helly/Farkas sidecar
-M003 score=29 risk=direct  hits=563  family=coefficient-pricing :: HYP-3204 exchange-rate ratio
+M003 score=29 risk=direct  hits=566  family=coefficient-pricing :: HYP-3204 exchange-rate ratio
      payloads=ORDERED_TAIL,TRAP_BOUNDARY,AP_NORMAL
      repair=ordered-state bimodality sidecar
-M006 score=28 risk=direct  hits=4739 family=covariance :: D1/D2/D3 layer split
+M006 score=28 risk=direct  hits=4742 family=covariance :: D1/D2/D3 layer split
      payloads=COV_LAYER,GREEN_LORENTZIAN,TRAP_BOUNDARY
      repair=distance-layer profile
-M094 score=27 risk=direct  hits=10   family=totally-real-cap-field :: totally-real cap field conductor packet
+M094 score=27 risk=direct  hits=11   family=totally-real-cap-field :: totally-real cap field conductor packet
      payloads=CHEBYSHEV,P_ADIC,ANALYTIC_EQ,TOEPLITZ,SIDE_CARRIER
      repair=cyclotomic-unit / totally-positive trace sidecar
-M002 score=27 risk=direct  hits=162  family=trap-boundary :: 11 non-AP exchange traps plus AP
+M002 score=27 risk=direct  hits=177  family=trap-boundary :: 11 non-AP exchange traps plus AP
      payloads=TRAP_BOUNDARY,TOEPLITZ,COV_LAYER
      repair=moment-cone trap discharge
-M029 score=26 risk=sidecar hits=3654 family=positive-trig :: Fejer-Riesz square
+M097 score=26 risk=direct  hits=195  family=vitali-core-wall :: Vitali bulk-core Phi14 witness wall
+     payloads=ANALYTIC_EQ,QUOTIENT_LEGALITY,CHEBYSHEV,SIDE_CARRIER
+     repair=Phi14 witness / Brouwer equioscillation sidecar
+M029 score=26 risk=sidecar hits=3706 family=positive-trig :: Fejer-Riesz square
      payloads=TOEPLITZ,AP_NORMAL,CHEBYSHEV
      repair=explicit square factor sidecar
-M009 score=26 risk=sidecar hits=1219 family=magic-function :: Chebyshev V7 double root
+M009 score=26 risk=sidecar hits=1229 family=magic-function :: Chebyshev V7 double root
      payloads=CHEBYSHEV,AP_NORMAL,ANALYTIC_EQ
      repair=Delsarte/Cohn-Elkies dual certificate
-M004 score=26 risk=direct  hits=1072 family=root-locus :: AP support projection
+M004 score=26 risk=direct  hits=1131 family=root-locus :: AP support projection
      payloads=AP_NORMAL,PGF_ROOT,CHEBYSHEV
      repair=AP residual polarization
-M020 score=25 risk=sidecar hits=546  family=valuated-exchange :: Lorentzian exchange chamber
-     payloads=GREEN_LORENTZIAN,TRAP_BOUNDARY,AP_NORMAL
-     repair=valuated matroid / tropical Plucker sidecar
-M072 score=24 risk=direct  hits=223  family=conductance-graph :: conductance/Fiedler trap graph
+M072 score=25 risk=direct  hits=289  family=conductance-graph :: conductance/Fiedler trap graph
      payloads=GREEN_LORENTZIAN,TRAP_BOUNDARY,CIRCUIT,SIDE_CARRIER
      repair=Fiedler-cut / Schur-complement sidecar
-M091 score=24 risk=direct  hits=49   family=cyclotomic-factor-grading :: cyclotomic factor grading
+M020 score=25 risk=sidecar hits=564  family=valuated-exchange :: Lorentzian exchange chamber
+     payloads=GREEN_LORENTZIAN,TRAP_BOUNDARY,AP_NORMAL
+     repair=valuated matroid / tropical Plucker sidecar
+M091 score=24 risk=direct  hits=57   family=cyclotomic-factor-grading :: cyclotomic factor grading
      payloads=CHEBYSHEV,ANALYTIC_EQ,QUOTIENT_LEGALITY,SIDE_CARRIER
      repair=Phi_d character / moment-depth grading sidecar
-M019 score=24 risk=sidecar hits=723  family=network :: Green-current bottleneck
+M019 score=24 risk=sidecar hits=765  family=network :: Green-current bottleneck
      payloads=GREEN_LORENTZIAN,COV_LAYER,TRAP_BOUNDARY
      repair=effective-resistance profile
-M012 score=24 risk=direct  hits=647  family=worpitzky :: Worpitzky rows 1,4,1 and 1,11,11,1
-     payloads=EDGE_PACKET,HB_PERRON,QUOTIENT_LEGALITY
-     repair=Eulerian / odd sidecar
-M086 score=23 risk=sidecar hits=83   family=scale-normal-recursion :: scale-normal recursion ledger
-     payloads=QUOTIENT_LEGALITY,ANALYTIC_EQ,SIDE_CARRIER,CIRCUIT,GEOMETRY
-     repair=scale-fiber exactness / omega_Q sidecar
 
 Pattern Ledger
 ------------------------------------------------------------------------
@@ -112,25 +112,31 @@ M073 | comb-overlap Gram kernel | family=magic-gram | risk=direct
   payloads: TOEPLITZ,CHEBYSHEV,AP_NORMAL,ANALYTIC_EQ,COV_LAYER
   destroyed: spatial minorant LP scalar
   repair_sidecar: Gram/Bochner autocorrelation sidecar
-  hits=115 sources=07-reflections/building-the-magic-function-it-is-the-comb-overlap-gram-kernel-bochner-automatic.md:26; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:11; 05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:10; 07-reflections/how-the-route-sharpened-and-the-three-gap-stern-brocot-recursion-in-the-cap-kernel.md:9
+  hits=119 sources=07-reflections/building-the-magic-function-it-is-the-comb-overlap-gram-kernel-bochner-automatic.md:26; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:11; 05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:10; 07-reflections/how-the-route-sharpened-and-the-three-gap-stern-brocot-recursion-in-the-cap-kernel.md:9
 M080 | shell L_y magic quartic | family=finite-shell-magic | risk=direct
   pattern: f(n)=((n-1)(n-2)(n-4)(n-5))/4 gives 10q0+q3+10q6
   payloads: TOEPLITZ,CHEBYSHEV,AP_NORMAL,ORDERED_TAIL,ANALYTIC_EQ
   destroyed: cyclic PSD positivity as false terminal certificate
   repair_sidecar: finite Delsarte/Newton shell-dual sidecar
-  hits=16 sources=05-knowledge/hypotheses/HYP-3228-cyclotomic-delsarte-beurling-selberg-magic.md:5; 05-knowledge/results/lrc_cyclotomic_delsarte_bs_magic_codex_20260628.out:3; 07-reflections/cyclotomic-delsarte-beurling-selberg-magic-codex-20260628.md:2; 07-reflections/the-periodicity-method-is-a-single-far-tool.md:1
+  hits=17 sources=05-knowledge/hypotheses/HYP-3228-cyclotomic-delsarte-beurling-selberg-magic.md:5; 05-knowledge/results/lrc_cyclotomic_delsarte_bs_magic_codex_20260628.out:3; 07-reflections/cyclotomic-delsarte-beurling-selberg-magic-codex-20260628.md:2; 07-reflections/the-periodicity-method-is-a-single-far-tool.md:1
 M067 | normal-cone dual slack | family=dual-certificate | risk=direct
   pattern: one dual controls many visible faces
   payloads: AP_NORMAL,TOEPLITZ,ORDERED_TAIL,COV_LAYER
   destroyed: another isolated scalar
   repair_sidecar: shared slack decomposition
-  hits=10980 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:336; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:329; 00-navigation/CONCEPT-MAP.md:261; 00-navigation/INVESTIGATION-BACKLOG.md:232
+  hits=11038 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:345; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:337; 00-navigation/CONCEPT-MAP.md:261; 00-navigation/INVESTIGATION-BACKLOG.md:238
 M068 | multi-chart proof split | family=chart-proof | risk=direct
   pattern: bulk exchange plus boundary moment cone plus odd gluing
   payloads: TRAP_BOUNDARY,TOEPLITZ,HB_PERRON,ORDERED_TAIL
   destroyed: single global move theorem
   repair_sidecar: chart-overlap certificate
-  hits=8441 sources=05-knowledge/results/lrc14_twofar_survival_currency_boundary_codex_s64.out:400; 00-navigation/CONCEPT-MAP.md:240; 00-navigation/LRC-TECHNIQUE-INDEX.md:222; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:213
+  hits=8505 sources=05-knowledge/results/lrc14_twofar_survival_currency_boundary_codex_s64.out:400; 00-navigation/CONCEPT-MAP.md:240; 00-navigation/LRC-TECHNIQUE-INDEX.md:227; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:217
+M095 | AP Green algebraic-connectivity certificate | family=green-connectivity | risk=direct
+  pattern: AP maximizes lambda2 and positive conductance, minimizes Green resistance
+  payloads: GREEN_LORENTZIAN,COV_LAYER,TRAP_BOUNDARY,TOEPLITZ,SIDE_CARRIER
+  destroyed: positive-part conductance graph clips negative covariance leakage
+  repair_sidecar: negative_mass / effective-resistance bottleneck sidecar
+  hits=207 sources=05-knowledge/results/lrc14_green_conductance_connectivity_codex_20260628.out:36; 05-knowledge/results/lrc_k8_green_current_conductance_graphs_codex_20260628.out:34; 05-knowledge/hypotheses/HYP-3236-lrc14-green-conductance-connectivity.md:24; 00-navigation/LRC-TECHNIQUE-INDEX.md:16
 M093 | AP self-dual Fejer equidistribution certificate | family=fejer-equidistribution | risk=direct
   pattern: AP autocorrelation is both maximal coherence and Fejer/Vaaler rescue
   payloads: ANALYTIC_EQ,CHEBYSHEV,AP_NORMAL,PGF_ROOT,SIDE_CARRIER
@@ -142,19 +148,19 @@ M085 | three-gap Stern-Brocot cap-kernel recursion | family=cap-kernel-recursion
   payloads: TOEPLITZ,CHEBYSHEV,ANALYTIC_EQ,GEOMETRY,SIDE_CARRIER
   destroyed: pairwise kernel mistaken for full cap proof
   repair_sidecar: order-3 overlap / inclusion-exclusion sidecar
-  hits=384 sources=07-reflections/how-the-route-sharpened-and-the-three-gap-stern-brocot-recursion-in-the-cap-kernel.md:27; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:15; 00-navigation/INVESTIGATION-BACKLOG.md:15; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:14
+  hits=398 sources=07-reflections/how-the-route-sharpened-and-the-three-gap-stern-brocot-recursion-in-the-cap-kernel.md:27; 00-navigation/INVESTIGATION-BACKLOG.md:17; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:16; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:14
 M001 | consecutive plus doubled AP | family=equality-face | risk=direct
   pattern: two-row skyline / primitive uniqueness
   payloads: AP_NORMAL,TOEPLITZ,COV_LAYER,ORDERED_TAIL
   destroyed: primitive-vs-dilation distinction
   repair_sidecar: dilation equality sidecar
-  hits=80 sources=00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:12; 00-navigation/LRC-TECHNIQUE-INDEX.md:11; 05-knowledge/hypotheses/HYP-3224-lrc14-spectral-payload-cube-normal-fan.md:5; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:4
+  hits=94 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:14; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:13; 05-knowledge/hypotheses/HYP-3224-lrc14-spectral-payload-cube-normal-fan.md:6; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:5
 M089 | modulus-covariance apex break | family=modulus-covariance | risk=direct
   pattern: K^(2n)/K^(n)=1/2 until the apex n/2 break in the antipode half
   payloads: TOEPLITZ,ANALYTIC_EQ,GEOMETRY,TRAP_BOUNDARY,SIDE_CARRIER
   destroyed: clean scale law used past its apex range
   repair_sidecar: antipode-half deviation / order-3 correction sidecar
-  hits=60 sources=05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:14; 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md:9; 07-reflections/interlocking-recursions-the-cap-kernel-is-modulus-covariant-down-to-the-apex-where-it-breaks.md:9; comms/POKE-COORDINATION.md:7
+  hits=55 sources=05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:14; 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md:9; 07-reflections/interlocking-recursions-the-cap-kernel-is-modulus-covariant-down-to-the-apex-where-it-breaks.md:9; 05-knowledge/results/lrc_modulus_covariance_eisenstein_fold_macmini_S75.out:6
 M074 | single-arc peeling recursion | family=single-arc | risk=direct
   pattern: speed-1 tooth gives meas(intersection)=1/(7 max S)
   payloads: AP_NORMAL,ANALYTIC_EQ,QUOTIENT_LEGALITY,SIDE_CARRIER
@@ -166,97 +172,109 @@ M005 | Toeplitz lambda-min margin | family=moment-cone | risk=direct
   payloads: TOEPLITZ,TRAP_BOUNDARY,AP_NORMAL
   destroyed: PSD yes/no scalar
   repair_sidecar: lambda-min margin / Schur sidecar
-  hits=927 sources=00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:79; 00-navigation/LRC-TECHNIQUE-INDEX.md:76; 05-knowledge/results/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.out:60; 05-knowledge/hypotheses/HYP-3224-lrc14-spectral-payload-cube-normal-fan.md:42
+  hits=948 sources=00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:80; 00-navigation/LRC-TECHNIQUE-INDEX.md:78; 05-knowledge/results/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.out:60; 05-knowledge/hypotheses/HYP-3224-lrc14-spectral-payload-cube-normal-fan.md:44
 M066 | certificate-Helly separation | family=convex-certificate | risk=direct
   pattern: small dictionary intersection forces AP
   payloads: AP_NORMAL,TOEPLITZ,TRAP_BOUNDARY
   destroyed: coordinate-by-coordinate maxima only
   repair_sidecar: Helly/Farkas sidecar
-  hits=633 sources=07-reflections/lrc-helly-entropy-accounting-the-three-order-parameters-s598.md:41; 05-knowledge/results/helly_entropy_accounting_s601.out:25; 00-navigation/LRC-TECHNIQUE-INDEX.md:22; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:18
+  hits=640 sources=07-reflections/lrc-helly-entropy-accounting-the-three-order-parameters-s598.md:41; 05-knowledge/results/helly_entropy_accounting_s601.out:25; 00-navigation/LRC-TECHNIQUE-INDEX.md:22; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:20
 M003 | HYP-3204 exchange-rate ratio | family=coefficient-pricing | risk=direct
   pattern: q3 gain priced by q0+q6 loss
   payloads: ORDERED_TAIL,TRAP_BOUNDARY,AP_NORMAL
   destroyed: raw central mass q3
   repair_sidecar: ordered-state bimodality sidecar
-  hits=563 sources=05-knowledge/results/lrc14_genuinewide_gK8_overlay_codex_s78.out:84; 05-knowledge/hypotheses/HYP-3204-k8-ordered-tail-exchange.md:33; 00-navigation/LRC-TECHNIQUE-INDEX.md:33; 05-knowledge/results/lrc_gk8_swap_monotone_macmini_0622s23.out:28
+  hits=566 sources=05-knowledge/results/lrc14_genuinewide_gK8_overlay_codex_s78.out:84; 05-knowledge/hypotheses/HYP-3204-k8-ordered-tail-exchange.md:33; 00-navigation/LRC-TECHNIQUE-INDEX.md:33; 05-knowledge/results/lrc_gk8_swap_monotone_macmini_0622s23.out:28
 M006 | D1/D2/D3 layer split | family=covariance | risk=direct
   pattern: three cyclic-distance covariance faces
   payloads: COV_LAYER,GREEN_LORENTZIAN,TRAP_BOUNDARY
   destroyed: total covariance only
   repair_sidecar: distance-layer profile
-  hits=4739 sources=05-knowledge/results/lrc14_pair_good_decoy_barcode_normal_fan_codex_s186.out:222; 05-knowledge/results/lrc14_genuinewide_generalized_doublet_exact_codex_s78.out:164; 05-knowledge/results/lrc_apex_denominator_lemma_kps.out:156; 05-knowledge/results/beta2_rank_structure.out:143
+  hits=4742 sources=05-knowledge/results/lrc14_pair_good_decoy_barcode_normal_fan_codex_s186.out:222; 05-knowledge/results/lrc14_genuinewide_generalized_doublet_exact_codex_s78.out:164; 05-knowledge/results/lrc_apex_denominator_lemma_kps.out:156; 05-knowledge/results/beta2_rank_structure.out:143
 M094 | totally-real cap field conductor packet | family=totally-real-cap-field | risk=direct
   pattern: cap/dip live in Q(cos2pi/7) and binding rows carry conductor 7^1,2
   payloads: CHEBYSHEV,P_ADIC,ANALYTIC_EQ,TOEPLITZ,SIDE_CARRIER
   destroyed: field-name import without binding-row denominator control
   repair_sidecar: cyclotomic-unit / totally-positive trace sidecar
-  hits=10 sources=05-knowledge/results/lrc_cap_cyclotomic_field_macmini_S75.out:5; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:3; 07-reflections/the-cap-is-a-totally-real-cyclotomic-quantity-and-n14s-two-cyclotomic-heads.md:1; 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md:1
+  hits=11 sources=05-knowledge/results/lrc_cap_cyclotomic_field_macmini_S75.out:5; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:3; 07-reflections/the-vitali-wall-brouwer-equioscillation-and-the-cyclotomic-core-construction.md:1; 07-reflections/the-cap-is-a-totally-real-cyclotomic-quantity-and-n14s-two-cyclotomic-heads.md:1
 M002 | 11 non-AP exchange traps plus AP | family=trap-boundary | risk=direct
   pattern: 11/12 local maxima ledger
   payloads: TRAP_BOUNDARY,TOEPLITZ,COV_LAYER
   destroyed: bulk exchange monotonicity
   repair_sidecar: moment-cone trap discharge
-  hits=162 sources=05-knowledge/results/lrc14_spectral_payload_cube_codex_20260628.out:19; 00-navigation/LRC-TECHNIQUE-INDEX.md:17; 05-knowledge/hypotheses/HYP-3224-lrc14-spectral-payload-cube-normal-fan.md:16; 05-knowledge/results/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.out:14
+  hits=177 sources=05-knowledge/results/lrc14_spectral_payload_cube_codex_20260628.out:19; 00-navigation/LRC-TECHNIQUE-INDEX.md:19; 05-knowledge/hypotheses/HYP-3224-lrc14-spectral-payload-cube-normal-fan.md:18; 05-knowledge/results/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.out:14
+M097 | Vitali bulk-core Phi14 witness wall | family=vitali-core-wall | risk=direct
+  pattern: measure handles bulk while Phi14 closed witnesses handle the core
+  payloads: ANALYTIC_EQ,QUOTIENT_LEGALITY,CHEBYSHEV,SIDE_CARRIER
+  destroyed: measure-positive proof reused at a measure-zero core
+  repair_sidecar: Phi14 witness / Brouwer equioscillation sidecar
+  hits=195 sources=07-reflections/the-vitali-wall-brouwer-equioscillation-and-the-cyclotomic-core-construction.md:25; comms/POKE-COORDINATION.md:20; 07-reflections/the-cap-is-a-chebyshev-equioscillation-extremal-and-a-cohn-elkies-magic-function-kps.md:16; 05-knowledge/results/lrc_vitali_core_brouwer_macmini_S75.out:8
 M029 | Fejer-Riesz square | family=positive-trig | risk=sidecar
   pattern: PSD Toeplitz slack factorization
   payloads: TOEPLITZ,AP_NORMAL,CHEBYSHEV
   destroyed: factor existence without endpoint slack
   repair_sidecar: explicit square factor sidecar
-  hits=3654 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:126; 00-navigation/CONCEPT-MAP.md:121; 00-navigation/INVESTIGATION-BACKLOG.md:117; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:116
+  hits=3706 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:136; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:123; 00-navigation/INVESTIGATION-BACKLOG.md:122; 00-navigation/CONCEPT-MAP.md:121
 M009 | Chebyshev V7 double root | family=magic-function | risk=sidecar
   pattern: V7(u)-2 has squared de Moivre cubic
   payloads: CHEBYSHEV,AP_NORMAL,ANALYTIC_EQ
   destroyed: raw cyclotomic numerology
   repair_sidecar: Delsarte/Cohn-Elkies dual certificate
-  hits=1219 sources=07-reflections/the-cap-is-a-chebyshev-equioscillation-extremal-and-a-cohn-elkies-magic-function-kps.md:33; 05-knowledge/results/chebyshev_sieve.out:26; 05-knowledge/results/chebyshev_sieve_s92n.out:23; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:22
+  hits=1229 sources=07-reflections/the-cap-is-a-chebyshev-equioscillation-extremal-and-a-cohn-elkies-magic-function-kps.md:33; 05-knowledge/results/chebyshev_sieve.out:26; 05-knowledge/results/chebyshev_sieve_s92n.out:23; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:22
 M004 | AP support projection | family=root-locus | risk=direct
   pattern: polarized cyclotomic support, not raw norm
   payloads: AP_NORMAL,PGF_ROOT,CHEBYSHEV
   destroyed: raw closest-to-uniform cyclotomic norm
   repair_sidecar: AP residual polarization
-  hits=1072 sources=00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:31; 07-reflections/the-cap-is-a-totally-real-cyclotomic-quantity-and-n14s-two-cyclotomic-heads.md:30; 05-knowledge/results/lrc_k8_spectral_dictionary_compatibility_codex_20260628.out:30; 00-navigation/INVESTIGATION-BACKLOG.md:30
-M020 | Lorentzian exchange chamber | family=valuated-exchange | risk=sidecar
-  pattern: co-emptiness finite differences as exchange slacks
-  payloads: GREEN_LORENTZIAN,TRAP_BOUNDARY,AP_NORMAL
-  destroyed: orbit/mirror/two-block sidecars
-  repair_sidecar: valuated matroid / tropical Plucker sidecar
-  hits=546 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:43; 05-knowledge/results/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.out:42; 05-knowledge/results/lrc14_tourmap_first-return-dynamics_kps-S2-wf.out:36; 05-knowledge/hypotheses/HYP-3223-lrc14-green-current-lorentzian-exchange-angles.md:31
+  hits=1131 sources=00-navigation/INVESTIGATION-BACKLOG.md:35; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:33; 07-reflections/the-cap-is-a-totally-real-cyclotomic-quantity-and-n14s-two-cyclotomic-heads.md:30; 05-knowledge/results/lrc_k8_spectral_dictionary_compatibility_codex_20260628.out:30
 M072 | conductance/Fiedler trap graph | family=conductance-graph | risk=direct
   pattern: trap-discharge graph with algebraic-connectivity defect island
   payloads: GREEN_LORENTZIAN,TRAP_BOUNDARY,CIRCUIT,SIDE_CARRIER
   destroyed: scalar conductance ranking
   repair_sidecar: Fiedler-cut / Schur-complement sidecar
-  hits=223 sources=05-knowledge/results/metagraph_eigenvectors_s267.out:52; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:17; 00-navigation/LRC-TECHNIQUE-INDEX.md:17; 05-knowledge/hypotheses/HYP-3227-lrc14-green-current-conductance-graphs-algebraic-connectivity.md:16
+  hits=289 sources=05-knowledge/results/metagraph_eigenvectors_s267.out:52; 00-navigation/LRC-TECHNIQUE-INDEX.md:28; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:26; 05-knowledge/hypotheses/HYP-3236-lrc14-green-conductance-connectivity.md:18
+M020 | Lorentzian exchange chamber | family=valuated-exchange | risk=sidecar
+  pattern: co-emptiness finite differences as exchange slacks
+  payloads: GREEN_LORENTZIAN,TRAP_BOUNDARY,AP_NORMAL
+  destroyed: orbit/mirror/two-block sidecars
+  repair_sidecar: valuated matroid / tropical Plucker sidecar
+  hits=564 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:45; 05-knowledge/results/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.out:42; 05-knowledge/results/lrc14_tourmap_first-return-dynamics_kps-S2-wf.out:36; 05-knowledge/hypotheses/HYP-3223-lrc14-green-current-lorentzian-exchange-angles.md:32
 M091 | cyclotomic factor grading | family=cyclotomic-factor-grading | risk=direct
   pattern: mode=(x-1)^depth*Phi_d separates moment depth from character factor
   payloads: CHEBYSHEV,ANALYTIC_EQ,QUOTIENT_LEGALITY,SIDE_CARRIER
   destroyed: recurrence formula used without its character factor
   repair_sidecar: Phi_d character / moment-depth grading sidecar
-  hits=49 sources=05-knowledge/results/lrc_totient_tiling_recursion_s110.out:9; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:6; 05-knowledge/results/lrc_recursion_modes_cyclotomic_macmini_S75.out:5; 05-knowledge/results/what_each_number_is.out:4
+  hits=57 sources=05-knowledge/results/lrc_totient_tiling_recursion_s110.out:9; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:6; 05-knowledge/results/lrc_recursion_modes_cyclotomic_macmini_S75.out:5; 05-knowledge/results/what_each_number_is.out:4
 M019 | Green-current bottleneck | family=network | risk=sidecar
   pattern: covariance as response matrix
   payloads: GREEN_LORENTZIAN,COV_LAYER,TRAP_BOUNDARY
   destroyed: current location
   repair_sidecar: effective-resistance profile
-  hits=723 sources=05-knowledge/results/lrc_additive_energy_c3_threadA.out:34; 05-knowledge/results/lrc_schur_crossblock_lever.out:30; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:26; 00-navigation/LRC-TECHNIQUE-INDEX.md:25
+  hits=765 sources=05-knowledge/results/lrc_additive_energy_c3_threadA.out:34; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:32; 00-navigation/LRC-TECHNIQUE-INDEX.md:32; 05-knowledge/results/lrc_schur_crossblock_lever.out:30
 M012 | Worpitzky rows 1,4,1 and 1,11,11,1 | family=worpitzky | risk=direct
   pattern: Eulerian ascent payload
   payloads: EDGE_PACKET,HB_PERRON,QUOTIENT_LEGALITY
   destroyed: ordered descent word
   repair_sidecar: Eulerian / odd sidecar
-  hits=647 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:68; 05-knowledge/results/worpitzky_W_poly.out:48; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:41; 00-navigation/INVESTIGATION-BACKLOG.md:40
+  hits=662 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:71; 05-knowledge/results/worpitzky_W_poly.out:48; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:43; 00-navigation/INVESTIGATION-BACKLOG.md:41
 M086 | scale-normal recursion ledger | family=scale-normal-recursion | risk=sidecar
   pattern: normalize scale, expose first surviving coordinate, attach sidecar, recurse
   payloads: QUOTIENT_LEGALITY,ANALYTIC_EQ,SIDE_CARRIER,CIRCUIT,GEOMETRY
   destroyed: scale quotient without emitted cocycle
   repair_sidecar: scale-fiber exactness / omega_Q sidecar
-  hits=83 sources=05-knowledge/hypotheses/HYP-3231-lrc14-universal-scale-recursion-ledger.md:15; 00-navigation/LRC-TECHNIQUE-INDEX.md:13; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:9; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:6
+  hits=92 sources=05-knowledge/hypotheses/HYP-3231-lrc14-universal-scale-recursion-ledger.md:15; 00-navigation/LRC-TECHNIQUE-INDEX.md:13; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:9; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:7
+M096 | Brouwer trace-sign times SOS split | family=brouwer-trace-sign | risk=direct
+  pattern: odd cubic obstruction = trace sign times SOS magnitude 7
+  payloads: ANALYTIC_EQ,CHEBYSHEV,GEOMETRY,SIDE_CARRIER
+  destroyed: trying to force the odd obstruction into a pure SOS certificate
+  repair_sidecar: Brouwer degree / trace-sign sidecar
+  hits=87 sources=07-reflections/brouwer-is-the-sign-the-cubic-obstruction-factors-into-degree-times-SOS-kps.md:22; comms/POKE-COORDINATION.md:15; 07-reflections/the-vitali-wall-brouwer-equioscillation-and-the-cyclotomic-core-construction.md:12; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:8
 M010 | Lee-Yang apex zero at 1/p=7 | family=analytic-obstruction | risk=direct
   pattern: config-blind certificates fail at apex 7
   payloads: ANALYTIC_EQ,PGF_ROOT,SIDE_CARRIER
   destroyed: algebraic closure without equidistribution
   repair_sidecar: effective equidistribution / Weyl sidecar
-  hits=5533 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:124; 05-knowledge/results/lrc14_parity_carry_bridge_s654.out:116; 05-knowledge/results/recursive_tiling_s20cv.out:89; 05-knowledge/results/lrc_apex_tile_s529.out:89
+  hits=5543 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:126; 05-knowledge/results/lrc14_parity_carry_bridge_s654.out:116; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:90; 05-knowledge/results/recursive_tiling_s20cv.out:89
 M011 | K3 flip kernel | family=edge-packet | risk=direct
   pattern: two-state edge flip kernel with minority edge debt
   payloads: EDGE_PACKET,QUOTIENT_LEGALITY,PGF_ROOT
@@ -268,13 +286,13 @@ M007 | Perron all-ones mode | family=spectral-mode | risk=sidecar
   payloads: HB_PERRON,COV_LAYER,GREEN_LORENTZIAN
   destroyed: raw Perron alignment as terminal maximum
   repair_sidecar: boundary-aware covariance matrix sidecar
-  hits=597 sources=05-knowledge/results/antiferromagnetic_tournament_s15.out:37; 05-knowledge/results/degree4_max_mechanism.out:34; 00-navigation/LRC-TECHNIQUE-INDEX.md:32; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:31
+  hits=612 sources=05-knowledge/results/antiferromagnetic_tournament_s15.out:37; 05-knowledge/results/degree4_max_mechanism.out:34; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:32; 00-navigation/LRC-TECHNIQUE-INDEX.md:32
 M090 | cyclotomic subfield mode lattice | family=subfield-mode-lattice | risk=sidecar
   pattern: Mobius/Eisenstein/Legendre/cubic/sextic modes form the Q(zeta7) tower
   payloads: CHEBYSHEV,SELBERG,ANALYTIC_EQ,P_ADIC,SIDE_CARRIER
   destroyed: character-mode analogy without signed recursion packet
   repair_sidecar: chi_3 cubic-mode / L-value ladder sidecar
-  hits=45 sources=07-reflections/the-three-modes-are-the-subfield-lattice-of-Q-zeta-7-and-the-cubic-de-moivre-is-the-missing-mode-kps.md:13; 05-knowledge/results/reframing_b_char6.out:6; 05-knowledge/results/lrc_cubic_mode_chi3_extension_kps.out:4; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:3
+  hits=49 sources=07-reflections/the-three-modes-are-the-subfield-lattice-of-Q-zeta-7-and-the-cubic-de-moivre-is-the-missing-mode-kps.md:13; 05-knowledge/results/reframing_b_char6.out:6; 05-knowledge/results/lrc_cubic_mode_chi3_extension_kps.out:4; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:3
 M078 | polyhedron-zonotope flatness route | family=geometry-of-numbers | risk=sidecar
   pattern: LRC as lattice point / covering-radius flatness certificate
   payloads: GEOMETRY,ANALYTIC_EQ,QUOTIENT_LEGALITY,SIDE_CARRIER
@@ -286,13 +304,13 @@ M083 | subshift transfer Perron defect | family=transfer-operator | risk=sidecar
   payloads: PGF_ROOT,HB_PERRON,ANALYTIC_EQ,SIDE_CARRIER
   destroyed: symbolic dynamics analogy without retained predicate
   repair_sidecar: transfer-matrix slack / Perron-defect sidecar
-  hits=73 sources=05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:9; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:7; 07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md:6; 05-knowledge/results/lrc_symbolic_dynamics_s541.out:5
+  hits=75 sources=05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:9; 05-knowledge/hypotheses/HYP-3226-lrc14-small-pattern-adjacency-atlas.md:7; 07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md:6; 05-knowledge/results/lrc_symbolic_dynamics_s541.out:5
 M037 | odd/even ratio 3.149364 | family=odd-dominance | risk=direct
   pattern: odd Worpitzky term dominates even fold
   payloads: HB_PERRON,EDGE_PACKET,SIDE_CARRIER
   destroyed: even-only proof
   repair_sidecar: odd associator sidecar
-  hits=31945 sources=05-knowledge/results/king_tight_bound_analysis.out:2492; 05-knowledge/results/odd_even_ratio_limit.out:1001; 05-knowledge/results/all_forms_chromatic_s708.out:448; 05-knowledge/results/lrc14_genuinewide_generalized_doublet_exact_codex_s78.out:378
+  hits=32007 sources=05-knowledge/results/king_tight_bound_analysis.out:2492; 05-knowledge/results/odd_even_ratio_limit.out:1001; 05-knowledge/results/all_forms_chromatic_s708.out:448; 05-knowledge/results/lrc14_genuinewide_generalized_doublet_exact_codex_s78.out:378
 M053 | A000568 n<=7 tameness | family=tameness-window | risk=sidecar
   pattern: bounded-core below Abel-Ruffini wall
   payloads: QUOTIENT_LEGALITY,EDGE_PACKET,HB_PERRON
@@ -304,49 +322,49 @@ M025 | Collatz two-block determinant | family=two-block-adic | risk=sidecar
   payloads: P_ADIC,QUOTIENT_LEGALITY,ANALYTIC_EQ
   destroyed: density-blind residual set
   repair_sidecar: Baker/linear-forms sidecar
-  hits=1454 sources=07-reflections/lrc-collatz-the-same-two-block-question-s596.md:47; 05-knowledge/results/cauldron_two_block_adversarial_s620.out:38; 05-knowledge/results/collatz_rapidity_s116n.out:36; 00-navigation/INVESTIGATION-BACKLOG.md:36
+  hits=1460 sources=07-reflections/lrc-collatz-the-same-two-block-question-s596.md:47; 05-knowledge/results/cauldron_two_block_adversarial_s620.out:38; 00-navigation/INVESTIGATION-BACKLOG.md:37; 05-knowledge/results/collatz_rapidity_s116n.out:36
 M033 | Beurling-Selberg minorant floor | family=minorant | risk=sidecar
   pattern: analytic lower envelope for wide arcs
   payloads: ANALYTIC_EQ,TOEPLITZ,SIDE_CARRIER
   destroyed: minorant scalar without leakage audit
   repair_sidecar: Gaussian leakage / endpoint sidecar
-  hits=714 sources=05-knowledge/hypotheses/HYP-3130-lrc14-gaussian-beurling-selberg-minorant.md:39; comms/POKE-COORDINATION.md:33; 00-navigation/LRC-TECHNIQUE-INDEX.md:31; 05-knowledge/results/hidden_circles_s198.out:26
-M015 | degree-4 resolvent ceiling | family=resolvent | risk=sidecar
-  pattern: u^4-5u^2+4 below quintic wall
-  payloads: HB_PERRON,QUOTIENT_LEGALITY,CHEBYSHEV
-  destroyed: odd coordinate debt
-  repair_sidecar: biquadratic plus Worpitzky sidecar
-  hits=686 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:56; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:39; 00-navigation/INVESTIGATION-BACKLOG.md:30; 05-knowledge/hypotheses/HYP-3150-lrc14-function-compression-resolvent-degree-wall.md:27
+  hits=722 sources=05-knowledge/hypotheses/HYP-3130-lrc14-gaussian-beurling-selberg-minorant.md:39; comms/POKE-COORDINATION.md:33; 00-navigation/LRC-TECHNIQUE-INDEX.md:33; 05-knowledge/results/hidden_circles_s198.out:26
 M030 | Verblunsky/Schur parameters | family=opuc | risk=sidecar
   pattern: moment-cone boundary coordinates
   payloads: TOEPLITZ,TRAP_BOUNDARY,SIDE_CARRIER
   destroyed: PSD margin compressed to one eigenvalue
   repair_sidecar: Schur parameter word
-  hits=683 sources=05-knowledge/results/lrc_additive_energy_c3_threadA.out:34; 05-knowledge/results/lrc_schur_crossblock_lever.out:30; 00-navigation/LRC-TECHNIQUE-INDEX.md:23; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:20
+  hits=711 sources=05-knowledge/results/lrc_additive_energy_c3_threadA.out:34; 05-knowledge/results/lrc_schur_crossblock_lever.out:30; 00-navigation/LRC-TECHNIQUE-INDEX.md:28; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:25
+M015 | degree-4 resolvent ceiling | family=resolvent | risk=sidecar
+  pattern: u^4-5u^2+4 below quintic wall
+  payloads: HB_PERRON,QUOTIENT_LEGALITY,CHEBYSHEV
+  destroyed: odd coordinate debt
+  repair_sidecar: biquadratic plus Worpitzky sidecar
+  hits=690 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:57; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:40; 00-navigation/INVESTIGATION-BACKLOG.md:31; 05-knowledge/hypotheses/HYP-3150-lrc14-function-compression-resolvent-degree-wall.md:27
 M065 | controlled-forgetting ladder | family=meta-rule | risk=direct
   pattern: k-depth observers require retained sidecars
   payloads: QUOTIENT_LEGALITY,EDGE_PACKET,SIDE_CARRIER
   destroyed: observer depth collapse
   repair_sidecar: observer-extension payload
-  hits=4851 sources=00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:361; 00-navigation/LRC-TECHNIQUE-INDEX.md:361; 00-navigation/INVESTIGATION-BACKLOG.md:167; 00-navigation/CONCEPT-MAP.md:159
+  hits=4864 sources=00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:362; 00-navigation/LRC-TECHNIQUE-INDEX.md:362; 00-navigation/INVESTIGATION-BACKLOG.md:167; 00-navigation/CONCEPT-MAP.md:159
 M008 | Hermite-Biehler E/O legs | family=stability-glue | risk=direct
   pattern: E=x^2+5x+4, O=x^2+4x+1
   payloads: HB_PERRON,CHEBYSHEV,PGF_ROOT
   destroyed: full miss-PGF self-inversive defect
   repair_sidecar: Joukowski off-circle sidecar
-  hits=110 sources=00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:14; 07-reflections/two-creative-angles-for-the-k8-node-perron-spectral-and-joukowski-hermite-biehler.md:10; 00-navigation/LRC-TECHNIQUE-INDEX.md:9; 05-knowledge/results/hermite_biehler_check.out:7
+  hits=121 sources=00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:15; 00-navigation/LRC-TECHNIQUE-INDEX.md:11; 07-reflections/two-creative-angles-for-the-k8-node-perron-spectral-and-joukowski-hermite-biehler.md:10; 05-knowledge/hypotheses/HYP-3224-lrc14-spectral-payload-cube-normal-fan.md:8
 M081 | Gamma0(7) Eisenstein coefficient engine | family=modular-coefficients | risk=sidecar
   pattern: E_7=(7E_2(7tau)-E_2(tau))/6 supplies level-7 divisor fibers
   payloads: CHEBYSHEV,SELBERG,ANALYTIC_EQ,SIDE_CARRIER
   destroyed: raw modular-form name without finite LP rows
   repair_sidecar: match q-coefficients to comb-overlap Gram and Toeplitz rows
-  hits=71 sources=07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md:12; 05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:12; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:6; 00-navigation/LRC-TECHNIQUE-INDEX.md:6
+  hits=73 sources=07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md:12; 05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:12; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:6; 00-navigation/LRC-TECHNIQUE-INDEX.md:6
 M064 | HYP-2990 no-free-slider | family=meta-rule | risk=direct
   pattern: forget only with zero defect or repair sidecar
   payloads: QUOTIENT_LEGALITY,SIDE_CARRIER,CIRCUIT
   destroyed: all compressed scalar routes
   repair_sidecar: residual defect meter
-  hits=3017 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:438; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:419; 00-navigation/CONCEPT-MAP.md:201; 00-navigation/INVESTIGATION-BACKLOG.md:140
+  hits=3076 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:444; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:425; 00-navigation/CONCEPT-MAP.md:201; 00-navigation/INVESTIGATION-BACKLOG.md:145
 M076 | induction-base critical flag | family=literature-base | risk=direct
   pattern: published frontier may be n<=10 rather than n<=13
   payloads: ANALYTIC_EQ,QUOTIENT_LEGALITY,SIDE_CARRIER
@@ -364,19 +382,19 @@ M092 | signed address chart-change sheaf | family=signed-chart-sheaf | risk=dire
   payloads: QUOTIENT_LEGALITY,EDGE_PACKET,CIRCUIT,SIDE_CARRIER
   destroyed: same sign word reused after forgetting local slots
   repair_sidecar: signed_address_chart / chart_change_map sidecar
-  hits=49 sources=05-knowledge/hypotheses/HYP-3234-signed-address-chart-change-recursion-sheaf.md:14; 07-reflections/signed-address-chart-change-sheaf-for-the-three-recursion-modes-codex-20260628.md:5; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:5; 00-navigation/LRC-TECHNIQUE-INDEX.md:5
+  hits=56 sources=05-knowledge/hypotheses/HYP-3234-signed-address-chart-change-recursion-sheaf.md:14; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:6; 00-navigation/LRC-TECHNIQUE-INDEX.md:6; 07-reflections/signed-address-chart-change-sheaf-for-the-three-recursion-modes-codex-20260628.md:5
 M088 | 2-adic reflection fold | family=reflection-fold | risk=sidecar
   pattern: s -> 6-s complement halves the k=8 degree-4 packet to a quadratic fold
   payloads: HB_PERRON,CHEBYSHEV,QUOTIENT_LEGALITY,SIDE_CARRIER
   destroyed: degree halving without odd-coordinate debt
   repair_sidecar: even/odd Worpitzky-HB gluing sidecar
-  hits=27 sources=07-reflections/the-two-interlocking-recursions-cyclotomic-ladder-and-2adic-fold-kps.md:4; 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md:3; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:2; 00-navigation/LRC-TECHNIQUE-INDEX.md:2
+  hits=28 sources=07-reflections/the-two-interlocking-recursions-cyclotomic-ladder-and-2adic-fold-kps.md:4; 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md:3; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:2; 00-navigation/LRC-TECHNIQUE-INDEX.md:2
 M077 | Chen-Cusick 23-to-14 lift | family=modulus-bridge | risk=sidecar
   pattern: baseline 1/23 is a floor to lift toward the 1/14 apex target
   payloads: ANALYTIC_EQ,GEOMETRY,SIDE_CARRIER
   destroyed: starting the proof from scratch
   repair_sidecar: mod-23 floor sidecar; 23/M=2/23 is bounded-bank coincidence only
-  hits=4295 sources=05-knowledge/results/lrc14_state_transfer_dp_codex_s58.out:81; 05-knowledge/results/lrc14_parked_centering_kps-S2-wf.out:70; 05-knowledge/results/lrc14_peeling_chain_mac-mini-2026-06-17-S3.out:62; 05-knowledge/results/lrc_tournament_two_neighbor_s461.out:51
+  hits=4316 sources=05-knowledge/results/lrc14_state_transfer_dp_codex_s58.out:81; 05-knowledge/results/lrc14_parked_centering_kps-S2-wf.out:70; 05-knowledge/results/lrc14_peeling_chain_mac-mini-2026-06-17-S3.out:62; 05-knowledge/results/lrc_tournament_two_neighbor_s461.out:51
 M014 | n=4 OR compression | family=finite-chart | risk=direct
   pattern: x=a OR c, y=b OR c
   payloads: QUOTIENT_LEGALITY,EDGE_PACKET,SIDE_CARRIER
@@ -394,13 +412,13 @@ M038 | n=5 score-compression failure | family=compression-wall | risk=direct
   payloads: QUOTIENT_LEGALITY,EDGE_PACKET
   destroyed: score sequence scalar
   repair_sidecar: iso/fiber sidecar
-  hits=43419 sources=05-knowledge/results/sum_b1_deletion_analysis.out:4980; 05-knowledge/results/king_tight_bound_analysis.out:1296; 05-knowledge/results/euler_char_analysis.out:1102; 05-knowledge/results/beta2_rank_surplus.out:1084
+  hits=43441 sources=05-knowledge/results/sum_b1_deletion_analysis.out:4980; 05-knowledge/results/king_tight_bound_analysis.out:1296; 05-knowledge/results/euler_char_analysis.out:1102; 05-knowledge/results/beta2_rank_surplus.out:1084
 M036 | 1/7 scalar refutation | family=apex-prime | risk=direct
   pattern: near 1/7 but no exact law
   payloads: ANALYTIC_EQ,SIDE_CARRIER
   destroyed: universal apex-prime scalar
   repair_sidecar: named associator residual
-  hits=22864 sources=05-knowledge/results/orbit_cycle_extraction.out:1025; 05-knowledge/results/odd_even_ratio_limit.out:212; 00-navigation/LRC-TECHNIQUE-INDEX.md:174; 05-knowledge/results/lrc14_state_transfer_dp_codex_s58.out:172
+  hits=22879 sources=05-knowledge/results/orbit_cycle_extraction.out:1025; 05-knowledge/results/odd_even_ratio_limit.out:212; 00-navigation/LRC-TECHNIQUE-INDEX.md:174; 05-knowledge/results/lrc14_state_transfer_dp_codex_s58.out:172
 M040 | S fiber multiplicity five | family=fiber-warning | risk=direct
   pattern: T,+,- singletons but S has five fibers
   payloads: QUOTIENT_LEGALITY,EDGE_PACKET
@@ -412,19 +430,19 @@ M013 | pair functions a+b,a*b,a^b,b^a | family=function-quotient | risk=direct
   payloads: QUOTIENT_LEGALITY,EDGE_PACKET
   destroyed: ordered channel
   repair_sidecar: ordered-pair sidecar
-  hits=1431 sources=05-knowledge/results/copart_resonance_proof.out:116; 05-knowledge/results/zero_sum_walsh_analysis.out:50; 05-knowledge/results/degree2_algebraic_proof.out:44; 00-navigation/LRC-TECHNIQUE-INDEX.md:42
+  hits=1435 sources=05-knowledge/results/copart_resonance_proof.out:116; 05-knowledge/results/zero_sum_walsh_analysis.out:50; 05-knowledge/results/degree2_algebraic_proof.out:44; 00-navigation/LRC-TECHNIQUE-INDEX.md:42
 M084 | Dirichlet-L/Stark denominator guardrail | family=l-value-guardrail | risk=sidecar
   pattern: mod-7 L(-1,chi) denominators contract to 7 despite discriminant 7^2
   payloads: SELBERG,ANALYTIC_EQ,P_ADIC,SIDE_CARRIER
   destroyed: conductor-49 intuition promoted to cap formula
   repair_sidecar: explicit L-value denominator audit sidecar
-  hits=72 sources=05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:11; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:8; 07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md:7; 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md:5
+  hits=74 sources=05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:11; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:8; 07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md:7; 07-reflections/lrc14-small-pattern-adjacency-atlas-codex-20260628.md:5
 M041 | edge-perspective tip-tail packet | family=edge-perspective | risk=sidecar
   pattern: directed edge as observer with tip/tail children
   payloads: EDGE_PACKET,QUOTIENT_LEGALITY,SIDE_CARRIER
   destroyed: node-only perspective
   repair_sidecar: tip-tail sector word
-  hits=4951 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:169; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:161; 00-navigation/CONCEPT-MAP.md:85; 00-navigation/INVESTIGATION-BACKLOG.md:82
+  hits=4958 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:170; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:162; 00-navigation/CONCEPT-MAP.md:85; 00-navigation/INVESTIGATION-BACKLOG.md:83
 M018 | A000568 perspective break | family=perspective-functor | risk=sidecar
   pattern: node/edge perspective count defect
   payloads: QUOTIENT_LEGALITY,EDGE_PACKET,SIDE_CARRIER
@@ -436,7 +454,7 @@ M043 | normal-fan Cech barcode | family=component-packet | risk=sidecar
   payloads: AP_NORMAL,SIDE_CARRIER,GEOMETRY
   destroyed: component scalar
   repair_sidecar: Cech/barcode certificate
-  hits=909 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:117; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:107; 00-navigation/INVESTIGATION-BACKLOG.md:84; 05-knowledge/results/lrc14_cross_carrier_pullback_resonance_codex_s238.out:43
+  hits=911 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:117; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:107; 00-navigation/INVESTIGATION-BACKLOG.md:84; 05-knowledge/results/lrc14_cross_carrier_pullback_resonance_codex_s238.out:43
 M051 | square-peg four-witness gate | family=four-witness | risk=sidecar
   pattern: rectangle/hourglass residue packet
   payloads: TOEPLITZ,GEOMETRY,SIDE_CARRIER
@@ -454,7 +472,7 @@ M016 | duodecimal trap/equality count | family=duodecimal | risk=sidecar
   payloads: TRAP_BOUNDARY,EDGE_PACKET,SIDE_CARRIER
   destroyed: why 12 appears in different charts
   repair_sidecar: chart id and fiber sidecar
-  hits=274 sources=05-knowledge/results/morse_deep_s20x.out:20; 00-navigation/CONCEPT-MAP.md:16; 00-navigation/LRC-TECHNIQUE-INDEX.md:15; 05-knowledge/results/morse_minima_proof_89.out:14
+  hits=278 sources=05-knowledge/results/morse_deep_s20x.out:20; 00-navigation/CONCEPT-MAP.md:16; 00-navigation/LRC-TECHNIQUE-INDEX.md:15; 05-knowledge/results/morse_minima_proof_89.out:14
 M039 | K4 Einheit exact section | family=finite-basis | risk=direct
   pattern: two-free-arc matching section
   payloads: QUOTIENT_LEGALITY,EDGE_PACKET,SIDE_CARRIER
@@ -466,13 +484,13 @@ M042 | observer-cut payload | family=observer | risk=sidecar
   payloads: QUOTIENT_LEGALITY,SIDE_CARRIER,CIRCUIT
   destroyed: unnamed observer loss
   repair_sidecar: observer gluing sidecar
-  hits=2549 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:275; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:259; 05-knowledge/results/lrc14_coordinate_resurrection_sheaf_codex_s267.out:149; 00-navigation/INVESTIGATION-BACKLOG.md:113
+  hits=2562 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:276; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:260; 05-knowledge/results/lrc14_coordinate_resurrection_sheaf_codex_s267.out:149; 00-navigation/INVESTIGATION-BACKLOG.md:113
 M046 | circuit complexity ledger | family=proof-circuit | risk=sidecar
   pattern: proof-DAG missing input vector
   payloads: CIRCUIT,QUOTIENT_LEGALITY,SIDE_CARRIER
   destroyed: black-box proof step
   repair_sidecar: proof-circuit gate sidecar
-  hits=1462 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:138; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:106; 05-knowledge/results/lrc14_circuit_complexity_past_work_synthesis_codex_s266.out:75; 05-knowledge/hypotheses/HYP-3116-lrc14-circuit-lower-bound-missing-input-ledger.md:59
+  hits=1464 sources=00-navigation/LRC-TECHNIQUE-INDEX.md:138; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:107; 05-knowledge/results/lrc14_circuit_complexity_past_work_synthesis_codex_s266.out:75; 05-knowledge/hypotheses/HYP-3116-lrc14-circuit-lower-bound-missing-input-ledger.md:59
 M079 | Rosenfeld exponential-sum Node-3 route | family=far-speed | risk=sidecar
   pattern: large-speed branch controlled by modern exponential-sum estimates
   payloads: ANALYTIC_EQ,SELBERG,SIDE_CARRIER
@@ -484,7 +502,7 @@ M075 | order-3 overlap correction constants | family=triple-overlap | risk=sidec
   payloads: ANALYTIC_EQ,PGF_ROOT,SIDE_CARRIER
   destroyed: order-2 Gram kernel as complete proof
   repair_sidecar: triple-overlap / associator residue sidecar
-  hits=228 sources=05-knowledge/results/lonely_runner_cycle_s372.out:18; 07-reflections/building-the-magic-function-it-is-the-comb-overlap-gram-kernel-bochner-automatic.md:11; 00-navigation/LRC-TECHNIQUE-INDEX.md:10; 07-reflections/signed-lrc-fold-collisions-and-the-order-3-silent-flip-s703.md:9
+  hits=226 sources=05-knowledge/results/lonely_runner_cycle_s372.out:18; 07-reflections/building-the-magic-function-it-is-the-comb-overlap-gram-kernel-bochner-automatic.md:11; 00-navigation/LRC-TECHNIQUE-INDEX.md:10; 07-reflections/signed-lrc-fold-collisions-and-the-order-3-silent-flip-s703.md:9
 M054 | series-parallel nested ear | family=ear-decomposition | risk=sidecar
   pattern: nested/odd/directed ear grammar
   payloads: EDGE_PACKET,TRAP_BOUNDARY,SIDE_CARRIER
@@ -496,13 +514,13 @@ M087 | LRC(2p) moment-order ladder | family=moment-order-ladder | risk=sidecar
   payloads: CHEBYSHEV,ANALYTIC_EQ,SIDE_CARRIER
   destroyed: family-depth law used as local certificate
   repair_sidecar: finite p=7 certificate plus base-flag sidecar
-  hits=105 sources=07-reflections/interlocking-recursions-the-cap-kernel-is-modulus-covariant-down-to-the-apex-where-it-breaks.md:13; 05-knowledge/results/lrc_2p_family_moment_order_depth_kps.out:13; 07-reflections/the-two-interlocking-recursions-cyclotomic-ladder-and-2adic-fold-kps.md:10; 05-knowledge/results/verify_thm481_eqr_agentv.out:10
+  hits=102 sources=07-reflections/interlocking-recursions-the-cap-kernel-is-modulus-covariant-down-to-the-apex-where-it-breaks.md:13; 05-knowledge/results/lrc_2p_family_moment_order_depth_kps.out:13; 07-reflections/the-two-interlocking-recursions-cyclotomic-ladder-and-2adic-fold-kps.md:10; 05-knowledge/results/verify_thm481_eqr_agentv.out:10
 M028 | Hensel-Newton 2-adic edge case | family=p-adic-lift | risk=sidecar
   pattern: local singular lifting guardrail
   payloads: P_ADIC,QUOTIENT_LEGALITY,SIDE_CARRIER
   destroyed: assuming lift without singular residue audit
   repair_sidecar: Hensel-Newton/Krasner sidecar
-  hits=892 sources=00-navigation/INVESTIGATION-BACKLOG.md:35; 00-navigation/CONCEPT-MAP.md:24; 05-knowledge/results/unified_number_atlas.out:23; 07-reflections/adic-column-families.md:22
+  hits=898 sources=00-navigation/INVESTIGATION-BACKLOG.md:36; 00-navigation/CONCEPT-MAP.md:24; 05-knowledge/results/unified_number_atlas.out:23; 07-reflections/adic-column-families.md:22
 M056 | Tutte/Potts deletion-contraction | family=dc-recursion | risk=sidecar
   pattern: tie induction as deletion-contraction
   payloads: CIRCUIT,EDGE_PACKET,PGF_ROOT
@@ -526,7 +544,7 @@ M027 | BDH variance packet | family=prime-residue | risk=analogy
   payloads: ANALYTIC_EQ,SELBERG,SIDE_CARRIER
   destroyed: prime residue theorem as raw import
   repair_sidecar: conductor/residue-family sidecar
-  hits=3907 sources=00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:105; 00-navigation/LRC-TECHNIQUE-INDEX.md:103; 05-knowledge/results/mod_identity_deep.out:81; 05-knowledge/results/lonely_runner_scalar_excision_s371.out:57
+  hits=3983 sources=00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:115; 00-navigation/LRC-TECHNIQUE-INDEX.md:112; 05-knowledge/results/mod_identity_deep.out:81; 05-knowledge/results/lonely_runner_scalar_excision_s371.out:57
 M045 | Minkowski q-body threshold | family=geometry-number | risk=analogy
   pattern: lattice/height fence for Diophantine estimates
   payloads: GEOMETRY,ANALYTIC_EQ,SIDE_CARRIER
@@ -574,7 +592,7 @@ M059 | Paley/QR eigenvalue packet | family=paley | risk=analogy
   payloads: EDGE_PACKET,PGF_ROOT,SIDE_CARRIER
   destroyed: Paley analogy without quotient map
   repair_sidecar: Gauss-sum/eigenvalue sidecar
-  hits=7078 sources=00-navigation/INVESTIGATION-BACKLOG.md:149; 05-knowledge/results/gauss_sum_power_identity.out:109; 05-knowledge/results/dihedral_tournament_geometry.out:90; 05-knowledge/results/schur_disjointness_proof.out:81
+  hits=7090 sources=00-navigation/INVESTIGATION-BACKLOG.md:151; 05-knowledge/results/gauss_sum_power_identity.out:109; 05-knowledge/results/dihedral_tournament_geometry.out:90; 05-knowledge/results/schur_disjointness_proof.out:81
 M044 | Desargues median route center | family=median | risk=analogy
   pattern: route compatibility via median center
   payloads: GEOMETRY,QUOTIENT_LEGALITY,SIDE_CARRIER
@@ -598,25 +616,25 @@ M082 | Beraha/Mahler height gauge | family=beraha-height | risk=sidecar
   payloads: CHEBYSHEV,PGF_ROOT,SIDE_CARRIER
   destroyed: height constant mistaken for inequality
   repair_sidecar: height-to-slack comparison sidecar
-  hits=51 sources=05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:10; 07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md:7; 05-knowledge/results/lrc14_modular_magic_sidecar_audit_codex_20260628.out:7; 07-reflections/the-cyclotomic-ideal-joukowski-de-moivre-and-rational-approximation-of-the-dip-kps.md:5
+  hits=53 sources=05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:10; 07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md:7; 05-knowledge/results/lrc14_modular_magic_sidecar_audit_codex_20260628.out:7; 07-reflections/the-cyclotomic-ideal-joukowski-de-moivre-and-rational-approximation-of-the-dip-kps.md:5
 M021 | Selberg trace regularization | family=spectral-regularizer | risk=analogy
   pattern: regularize spectral error terms
   payloads: SELBERG,ANALYTIC_EQ,SIDE_CARRIER
   destroyed: noncompact spectral leakage
   repair_sidecar: principal-part / trace sidecar
-  hits=167 sources=comms/POKE-COORDINATION.md:15; 05-knowledge/results/lrc14_endgame_conversion_workflow_kps_s13.out:10; 00-navigation/INVESTIGATION-BACKLOG.md:10; 05-knowledge/results/lrc14_widebound_bandlimited_threshold_opus_0620s7.out:9
+  hits=168 sources=comms/POKE-COORDINATION.md:15; 05-knowledge/results/lrc14_endgame_conversion_workflow_kps_s13.out:10; 00-navigation/INVESTIGATION-BACKLOG.md:10; 05-knowledge/results/lrc14_widebound_bandlimited_threshold_opus_0620s7.out:9
 M035 | 2002 Pascal/binomial currency | family=pascal | risk=analogy
   pattern: C(14,5)=2*7*11*13
   payloads: SIDE_CARRIER,ANALYTIC_EQ
   destroyed: entropy proof handle
   repair_sidecar: Pascal pair-mass sidecar
-  hits=2020 sources=05-knowledge/results/fibonacci_pascal_3strand.out:38; 00-navigation/LRC-TECHNIQUE-INDEX.md:33; 00-navigation/INVESTIGATION-BACKLOG.md:29; 05-knowledge/results/category_3strand_pascal.out:26
+  hits=2030 sources=05-knowledge/results/fibonacci_pascal_3strand.out:38; 00-navigation/LRC-TECHNIQUE-INDEX.md:35; 00-navigation/INVESTIGATION-BACKLOG.md:30; 05-knowledge/results/category_3strand_pascal.out:26
 M060 | Beraha/Mahler/subshift hint | family=symbolic-dynamics | risk=analogy
   pattern: root loci as subshift/Mahler boundary
   payloads: PGF_ROOT,CHEBYSHEV,SIDE_CARRIER
   destroyed: symbolic-dynamics name without root packet
   repair_sidecar: root-locus packet sidecar
-  hits=222 sources=05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:18; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:15; 05-knowledge/results/lrc14_modular_magic_sidecar_audit_codex_20260628.out:14; 07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md:13
+  hits=227 sources=05-knowledge/hypotheses/HYP-3229-lrc14-modular-magic-sidecar-audit.md:18; 00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md:15; 05-knowledge/results/lrc14_modular_magic_sidecar_audit_codex_20260628.out:14; 07-reflections/lrc14-modular-magic-sidecar-audit-codex-20260628.md:13
 M070 | forum base64 draft warning | family=coordination | risk=sidecar
   pattern: forum posts may carry motifs but require decoding and typing
   payloads: CIRCUIT,QUOTIENT_LEGALITY
@@ -628,7 +646,7 @@ M063 | Lindelof horizontal zeros | family=lindelof | risk=raw
   payloads: SELBERG,ANALYTIC_EQ,SIDE_CARRIER
   destroyed: assuming LH as proof input
   repair_sidecar: explicit hypothesis boundary sidecar
-  hits=2377 sources=05-knowledge/results/lrc14_global_threshold_ladder_codex.out:144; 05-knowledge/results/independence_poly_exploration_s24.out:83; 00-navigation/INVESTIGATION-BACKLOG.md:56; 05-knowledge/results/zeta_tournament_s116n.out:47
+  hits=2381 sources=05-knowledge/results/lrc14_global_threshold_ladder_codex.out:144; 05-knowledge/results/independence_poly_exploration_s24.out:83; 00-navigation/INVESTIGATION-BACKLOG.md:57; 05-knowledge/results/zeta_tournament_s116n.out:47
 M048 | Moser-de Bruijn sparse basis | family=sparse-basis | risk=analogy
   pattern: unique base-4 digit support
   payloads: QUOTIENT_LEGALITY,SIDE_CARRIER
@@ -710,9 +728,12 @@ A..G local         signed recurrences require chart addresses before cancellatio
 |g(chi7)|^2=7      Gauss-sum modulus equals the Lee-Yang apex zero and Fejer reserve.
 disc=49            Q(cos2pi/7) puts the binding cap rows on the 7^2 conductor.
 2 heads            n=14 has a 7-cap head and a 3^3 witness head, both depth 3.
+lambda2 max        AP maximizes positive-conductance algebraic connectivity.
+Delta_even>=Delta_odd coverage node inequality splits even SOS from odd sign debt.
+Phi14 core         AP closed witnesses are the units mod 14 at the Vitali wall.
 1/23 -> 1/14       Chen-Cusick supplies a floor-to-target lift; the 23/M=2/23 link is only bounded-bank coincidence.
 
 Synthesis
 ------------------------------------------------------------------------
 The useful small patterns cluster around seven proof payloads: normal-fan exposure, Toeplitz/moment curvature, covariance layers, ordered-tail pricing, finite trap discharge, HB/Perron gluing, and analytic equidistribution.  Patterns outside those payloads are not discarded, but they remain sidecars until they name the coordinate they preserve and the coordinate they destroy.
-With HYP-3225 now supplying the first trap-fingerprint table, the next high-value computation is symbolic discharge: prove the trap classes by first failed dictionary coordinate, Toeplitz slack, Green-current bottleneck type, conductance/Fiedler cut, Lorentzian/Plucker defect, M-matrix/Schur-complement debt, Worpitzky/HB sidecar debt, and Fejer/Delsarte F7 slack.  HYP-3227 makes that conductance graph payload concrete: it is a sidecar discharge ledger, not a terminal scalar ranking.  Incoming S75/S31ap adds a second layer of concrete payloads: comb-overlap Gram kernels, speed-1 peeling, order-3 overlap residues, the induction-base audit, and the Chen-Cusick/polyhedron-zonotope/Rosenfeld route split.  Incoming HYP-3228/HYP-3229 adds the finite shell magic coordinate 10q0+q3+10q6, the Gamma0(7) Eisenstein coefficient sidecar, the Beraha/Mahler height gauge, the subshift transfer Perron-defect sidecar, and the Dirichlet-L/Stark denominator guardrail.  Incoming HYP-3230/HYP-3231/HYP-3216 then names the recursion layer: the three-gap/Stern-Brocot order-2 cap kernel, the scale-normal packet tower, the LRC(2p) moment-order depth law, and the 2-adic reflection fold.  Incoming HYP-3232/HYP-3217 adds the modulus-covariance apex break and the cyclotomic subfield/character-mode lattice, including the cubic de Moivre chi_3 mode.  Incoming HYP-3233/HYP-3234/HYP-3218/HYP-3235 then tightens that layer: recursion modes factor as (x-1)^depth*Phi_d, signed A..G recurrences need chart-change sidecars, AP autocorrelation is the self-dual Fejer equidistribution certificate, and the cap lives in the totally-real conductor-7 field with the binding rows carrying the 7^2 ramification debt.
+With HYP-3225 now supplying the first trap-fingerprint table, the next high-value computation is symbolic discharge: prove the trap classes by first failed dictionary coordinate, Toeplitz slack, Green-current bottleneck type, conductance/Fiedler cut, Lorentzian/Plucker defect, M-matrix/Schur-complement debt, Worpitzky/HB sidecar debt, and Fejer/Delsarte F7 slack.  HYP-3227 makes that conductance graph payload concrete: it is a sidecar discharge ledger, not a terminal scalar ranking.  Incoming S75/S31ap adds a second layer of concrete payloads: comb-overlap Gram kernels, speed-1 peeling, order-3 overlap residues, the induction-base audit, and the Chen-Cusick/polyhedron-zonotope/Rosenfeld route split.  Incoming HYP-3228/HYP-3229 adds the finite shell magic coordinate 10q0+q3+10q6, the Gamma0(7) Eisenstein coefficient sidecar, the Beraha/Mahler height gauge, the subshift transfer Perron-defect sidecar, and the Dirichlet-L/Stark denominator guardrail.  Incoming HYP-3230/HYP-3231/HYP-3216 then names the recursion layer: the three-gap/Stern-Brocot order-2 cap kernel, the scale-normal packet tower, the LRC(2p) moment-order depth law, and the 2-adic reflection fold.  Incoming HYP-3232/HYP-3217 adds the modulus-covariance apex break and the cyclotomic subfield/character-mode lattice, including the cubic de Moivre chi_3 mode.  Incoming HYP-3233/HYP-3234/HYP-3218/HYP-3235 then tightens that layer: recursion modes factor as (x-1)^depth*Phi_d, signed A..G recurrences need chart-change sidecars, AP autocorrelation is the self-dual Fejer equidistribution certificate, and the cap lives in the totally-real conductor-7 field with the binding rows carrying the 7^2 ramification debt.  Incoming HYP-3236/HYP-3219/HYP-3237 adds a proof-facing boundary layer: AP is also the Green algebraic-connectivity and resistance optimum, the odd obstruction factors into Brouwer trace sign times SOS magnitude, and the Vitali wall separates measure-rich bulk from the Phi14 cyclotomic witness core.
