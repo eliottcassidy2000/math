@@ -2,12 +2,14 @@
 
 **OPEN-Q-108 HYP-3238 even/odd positive/negative duality bridge addendum:**
 HYP-3238 executes the proof bridge joining HYP-3236's positive Green graph,
-HYP-3220's even-odd = positive-negative finalization, HYP-3219's Brouwer sign
-factorization, and HYP-3237's Vitali bulk/core wall.  HYP-3220 makes the
-duality literal: de Moivre power sums `-1,5,-4,13,-16,38,-57,117` have sign
-`(-1)^k` because the dominant period is the negative Perron root
-`-2cos(pi/7)`, and complement pairs `(1,6),(2,5),(3,4)` are both the
-positive/negative fold and even/odd parity operator.
+HYP-3220's even-odd = positive-negative finalization, HYP-3219's
+sign-times-SOS factorization, HYP-3239's `D_7`/Borsuk-Ulam family split,
+HYP-3241's saddle-index sidecar, HYP-3240's dilation-witness core guardrail,
+and HYP-3237's Vitali bulk/core wall.  HYP-3220 makes the duality literal:
+de Moivre power sums `-1,5,-4,13,-16,38,-57,117` have sign `(-1)^k` because
+the dominant period is the negative Perron root `-2cos(pi/7)`, and complement
+pairs `(1,6),(2,5),(3,4)` are both the positive/negative fold and even/odd
+parity operator.
 
 Exact scout readout over the `3432` anchored k=8 rows: AP has
 `q0=481/1470`, `q3=26/245`, `q6=1/49`, `q0+q6=73/210`,
@@ -19,37 +21,26 @@ have positive `q3` debt with `0` exchange-margin violations, and the `11`
 non-AP HYP-3202 traps split into `8` negative-leakage-plus-odd-debt and `3`
 odd-debt-without-negative-leakage.
 
-HYP-3239 integration: the next sidecar refinement is representation-theoretic.
-The mac-mini S76 branch makes the two proof targets one bimodal/phi4
-extremality problem under inclusion-exclusion parity.  The kps S31av branch
-identifies the sign sidecar as the `D_7` sign representation/free `Z/2`
-Borsuk-Ulam packet for `p=7=3 mod 4`, while `p=1 mod 4` lives on the
-Brouwer/SOS fixed-reflection side.  Add this family tag before treating the
-odd/negative payload as discharged.
-
-HYP-3240 integration: add the equioscillation index.  For n=14 the `Phi_14`
-core witnesses are `3` antipodal pairs, and this index is both `(p-1)/2` and
-the de Moivre degree.  Its parity chooses the Borsuk-Ulam/free-`Z2` side
-versus the Brouwer/SOS side.
-
-HYP-3240/S77 guardrail: covering-tight dilations use witnesses
-`t=1/(14d)` in `Phi_{14d}`, so retain dilation witness data in the core
-sidecar.  Also do not compress the dip to a single `Q(sqrt(-7))` norm scalar.
-
-KPS exact witness check: AP `{1,...,13}` and Goddyn-Wong
-`{1,...,11,13,24}` share the same six primitive `Phi_14` witnesses
-`t=a/14`, so the base cyclotomic core is tight-locus invariant rather than
-AP-specific.  The remaining hard core starts when a speed divisible by `14`
-breaks the base witness and forces a dilation/sporadic sidecar.
+Sidecar refinement: HYP-3239 identifies the sign sidecar as the `D_7` sign
+representation/free `Z/2` Borsuk-Ulam packet for `p=7=3 mod 4`, while
+`p=1 mod 4` lives on the Brouwer/SOS fixed-reflection side.  HYP-3241 adds
+the equioscillation index: the n=14 `Phi_14` core witnesses are `3` antipodal
+pairs, and this index is both `(p-1)/2` and the de Moivre degree.  HYP-3240
+adds the core-dilation guardrail: covering-tight dilations use witnesses
+`t=1/(14d)` in `Phi_{14d}`, and the dip cannot be compressed to a single
+`Q(sqrt(-7))` norm scalar.
 
 Open task: prove the `q3` exchange-rate inequality symbolically, then glue it
-to HYP-3222 Hermite-Biehler interlacing and HYP-3220 Brouwer/parity sign.
-Negative covariance leakage is only one sidecar; the true odd/negative payload
-is the full parity/sign/core packet. -> HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235,
-HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227,
-HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218,
-HYP-3217, HYP-3216, HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201,
-HYP-3200, HYP-3163, HYP-3153, T1338, LTI-338, LTT-238, OPEN-Q-108.
+to HYP-3222 Hermite-Biehler interlacing, HYP-3220 parity sign, HYP-3241
+saddle-index parity, and HYP-3240 dilation-witness status.  Negative
+covariance leakage is only one sidecar; the true odd/negative payload is the
+full parity/sign/core packet. -> HYP-3241, HYP-3240, HYP-3239, HYP-3238,
+HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231,
+HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223, HYP-3222,
+HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
+HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153,
+HYP-3138, HYP-3004, HYP-2647, HYP-2637, THM-429, THM-426, T1338, LTI-338,
+LTT-238, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3228 cyclotomic Delsarte shell-magic addendum:**
 HYP-3228 makes the requested magic-function object explicit at the k=8

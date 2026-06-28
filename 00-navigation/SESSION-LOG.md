@@ -133,9 +133,16 @@ one sign operator:
 - even/positive side: Fejer square, cyclotomic SOS magnitude, pair-Pascal cap
   mass, covariance layers, positive Green conductance, Perron coherent mode,
   and bulk positive-measure equidistribution.
-- odd/negative side: Worpitzky associator debt, Brouwer trace sign,
-  Hermite-Biehler odd leg, negative covariance leakage, signed chart-change
-  cancellation debt, and measure-zero cyclotomic core witnesses.
+- odd/negative side: Worpitzky associator debt, Brouwer fixed-point or
+  Borsuk-Ulam free-`Z_2` degree sign, Hermite-Biehler odd leg, negative
+  covariance leakage, signed chart-change cancellation debt, `D_7`
+  sign-isotypic data, and measure-zero cyclotomic core witnesses.
+
+Rebase integration signal: HYP-3239 sharpened the topological slot after this
+bridge was first drafted.  The bridge now treats `p = 1 mod 4` as the
+Brouwer/SOS fixed-point side and `p = 3 mod 4` (including n=14) as the
+Borsuk-Ulam/anti-automorphism/free-`Z_2` side, not as a generic Brouwer-only
+sign channel.
 
 Compression rule: an even/positive quotient is proof-grade only if the
 odd/negative payload is zero, reconstructible, dual-annihilated, or retained
@@ -164,7 +171,7 @@ anti-automorphism, while `p=1 mod 4` remains the fixed-reflection Brouwer/SOS
 side.  For HYP-3238, this means the odd-negative sidecar should now carry a
 `sign_isotypic/free_Z2_or_fixed_reflection` family tag.
 
-Second post-rebase integration: HYP-3240 reconciles the apparent Brouwer vs
+Second post-rebase integration: HYP-3241 reconciles the apparent Brouwer vs
 Borsuk-Ulam naming split.  The AP `Phi_14` witnesses are `3` antipodal pairs;
 that index `phi(14)/2=(7-1)/2=3` is both the de Moivre degree and the
 equioscillation saddle index.  HYP-3238 should therefore carry an
@@ -185,9 +192,12 @@ cyclotomic core from an AP witness packet to a tight-locus invariant; the
 sidecar must distinguish base `Phi_14`, dilation-promoted `Phi_{14d}`, and
 rows where a speed divisible by `14` breaks the base witness.
 
--> HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
+-> HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
 HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223,
 HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
+-> HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233,
+HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224,
+HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
 HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153,
 T1338, LTI-338, LTT-238, OPEN-Q-108.
 
@@ -31018,3 +31028,44 @@ Next hook: emit Gamma0(7)-generated finite certificate rows and test whether
 Fejer/Gamma0(7)/S75-Gram slack dominates the HYP-3227 Green-only
 trap-discharge weights and precision-defect island, then connect successful
 rows to the HYP-3215 LP/polyhedron-flatness route.
+
+## codex-2026-06-28 -- Even/odd and positive/negative duality bridge extension -- HYP-3238
+
+Continued and finalized the prior signed-address chart session by integrating
+the repo's even/odd and positive/negative duality work into the newly landed
+HYP-3238 bridge:
+`05-knowledge/hypotheses/HYP-3238-lrc14-even-odd-positive-negative-duality-bridge.md`
+and `07-reflections/lrc14-even-odd-positive-negative-duality-bridge-codex-20260628.md`.
+
+Core synthesis: HYP-3234 solved the local-letter problem for the three signed
+recursions; HYP-3238 adds the two-axis state needed before scalarizing:
+
+```text
+even/odd           = 2-adic fold versus coordinate resurrection
+positive/negative  = observer-blind gauge versus pair-visible cut/orientation
+```
+
+The bridge integrates HYP-3138's even fold / odd leakage, THM-426/429's
+sign-as-cut law, HYP-3219's sign-times-SOS magnitude, HYP-3220's
+verified even-odd = positive-negative finalization, HYP-3239's
+Brouwer/Borsuk-Ulam family split, HYP-3236's positive conductance plus
+negative leakage, HYP-2637's relation-parity sign bridge, HYP-2647's signed
+wall transport ledger, and HYP-3237's Vitali bulk/core handoff.  The
+HYP-3219/HYP-3239 inequality
+`Delta_even(SOS) >= Delta_odd(obstruction)` is now recorded as the diagonal
+target of the bridge.
+
+Updated HYP-3234 with a finalization addendum and expanded packet fields,
+extended the HYP-3238 index/OPEN-Q-108/LRC lens map entries, removed the stale
+duplicate bottom-index text left over from the HYP-3233 -> HYP-3234 renumbering,
+and folded the extra commutation/sign-cut targets into the existing T1338,
+LTI-338, and LTT-238 bridge namespace.
+
+Next hook: add `duality_square_state`, `parity_axis_state`,
+`sign_axis_state`, `topological_certificate_type`,
+`topological_trace_or_degree_sign`, `D7_action_status`,
+`sign_isotypic_component`, `sos_magnitude_certificate`,
+`negative_leakage_sidecar`, and `bulk_core_handoff` to a HYP-2963/HYP-3083
+packet sample; then test whether sign cuts commute with odd-coordinate
+resurrection or emit antipodal split / Borsuk-Ulam odd-degree / signed-wall /
+Green-leakage debt.

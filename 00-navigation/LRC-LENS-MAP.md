@@ -67,6 +67,46 @@ data, and moment-depth targets.  It destroys global `A..G` identity and raw
 sign-word meaning unless the packet records `signed_address_chart`,
 `local_slot_basis`, `cancelled_same_size_slots`, and `apex_break_defect`.
 
+## Addendum 2026-06-28: Even/Odd And Positive/Negative Duality Lens
+
+HYP-3238 finalizes the signed-chart lens by adding the two coupled axes that
+the repo has repeatedly rediscovered:
+
+```text
+even/odd           = 2-adic fold versus coordinate resurrection
+positive/negative  = observer-blind gauge versus pair-visible cut/orientation
+```
+
+The square explains why HYP-3138 odd leakage, THM-426/429 sign cuts,
+HYP-3219 trace sign times SOS magnitude, HYP-3220
+even-odd = positive-negative, HYP-3239's Brouwer/Borsuk-Ulam family split,
+HYP-3236 positive conductance with negative leakage, and HYP-3237 Vitali
+bulk/core handoff keep meeting the same proof node.  The even side carries
+Fejer/SOS magnitude and positive certificate faces; the odd side carries
+resurrection, antipodal split, `D_7` sign-isotypic data, and topological
+trace/degree sign; the positive/negative side is a cut/leakage ledger, not a
+scalar good/bad split.
+
+Packet fields to add where available:
+
+```text
+duality_square_state
+parity_axis_state
+even_fold_certificate
+odd_coordinate_resurrection
+sign_axis_state
+sign_cut_status
+topological_certificate_type
+topological_trace_or_degree_sign
+D7_action_status
+sign_isotypic_component
+sos_magnitude_certificate
+positive_conductance_packet
+negative_leakage_sidecar
+bulk_core_handoff
+terminal_duality_discharge_or_debt
+```
+
 ## Central Readout
 
 The current evidence does not point to one decisive scalar, one universal

@@ -96,7 +96,7 @@ covariance Laplacian / Monge sector kernel / associator triple-cocycle / odd-ear
 Joukowski-Hermite-Biehler and Perron packet / interlacing leg certificate / Perron alignment / Toeplitz margin / self-inversive defect
 green-current response kernel / effective-resistance profile / Schur-complement trap discharge / Lorentzian exchange chamber / tropical Plucker sidecar
 green-conductance graph / algebraic connectivity / Green resistance / negative covariance leakage sidecar / Fiedler bottleneck
-even-odd positive-negative bridge / Fejer-SOS magnitude / Brouwer sign sidecar / Vitali bulk-core transfer / lawful compression audit
+even-odd positive-negative bridge / Fejer-SOS magnitude / Brouwer-Borsuk sign sidecar / Vitali bulk-core transfer / lawful compression audit
 spectral payload cube / AP normal cone / Toeplitz moment-cone curvature / covariance layers / finite trap discharge
 green-lorentzian trap fingerprints / Toeplitz boundary chart / effective-resistance bottlenecks / conditional-Rayleigh debt / rank-2 pair-Plucker sidecars
 ```
@@ -443,7 +443,7 @@ record what it destroys before asking it to prove anything.
 | LTI-324 | Small-pattern adjacency atlas | Motif payload atoms, no-free-slider tax, normal-fan coordinate tags, trap-boundary use, repair sidecars, terminal-proof risk | HYP-3226 reserves a disciplined atlas for compact patterns around the LRC14 cutting edge.  Candidate motifs include doubled AP equality, the `11/12` trap boundary, Worpitzky/K3 flip kernels, `2,6,12,20,30,42`, HB/Perron exact legs, Chebyshev level-7 factors, p-adic/Selberg regularization guardrails, and Collatz/two-block analogues.  Each motif must be sorted by what LRC payload it preserves, what coordinate it destroys, which sidecar repairs the loss, and whether it belongs to the HYP-3224 normal fan or only to a speculative analogy layer. | HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, T1324, LTT-224, LTI-324, OPEN-Q-108 | Execute the atlas scout, then keep only motifs that attach to AP support, Toeplitz curvature, covariance layers, ordered-tail pricing, trap discharge, HB/Perron gluing, or the analytic equidistribution guardrail. |
 | LTI-326 | Cyclotomic Delsarte shell magic function | Shell-contact polynomial, Delsarte/Newton binomial dual, Joukowski/Chebyshev cubic, AP-support normal alignment, ordered-tail central repair, cyclic PSD overpricing guardrail | HYP-3228 identifies the exact k=8 `L_y` dual as the finite magic function `f(n)=((n-1)(n-2)(n-4)(n-5))/4`, values `[10,0,0,1,0,0,10]`, hence `E[f(N)]=10q0+q3+10q6=10L_y`.  Its Newton/Delsarte face is `10S0-10S1+10S2-9S3+6S4`; its cyclotomic face is `P(z)=10+z^3+10z^6`, `z^-3P=10(u^3-3u)+1`.  The exact bounded-bank scout finds no primitive beaters and the usual doubled AP all-bank tie.  AP support has the same equality set and positive deficit-ratio control, but the centered vectors are not identical; literal cyclic nonnegative completion would require central `rho>=18.019...`, so after HYP-3214, the positive sector Fejer kernel is a distinct face; PSD positivity is a guardrail, not this shell certificate. | HYP-3228, HYP-3215, HYP-3214, HYP-3226, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3200, HYP-3153, HYP-3138, HYP-3132, T1326, LTT-226, LTI-326, OPEN-Q-108 | Decompose `magic_deficit` into AP-support gap, HYP-3204 exchange-rate slack, HYP-3224 Toeplitz/covariance trap slack, and HYP-3222 Joukowski/HB gluing slack; test whether the residual has a small sign-controlled Delsarte basis and whether the packet extends beyond the bounded bank under primitive normal form. |
 | LTI-336 | Green conductance / algebraic connectivity certificate | Positive-part covariance conductance graphs on the six inner sectors, graph Laplacian `L`, algebraic connectivity `lambda2`, Green kernel `L^+`, effective-resistance channels, Kirchhoff index, bottleneck unit-current profiles, negative covariance leakage sidecar | HYP-3236 executes the electrical side of HYP-3223 over the same `3432` anchored k=8 rows as HYP-3202/HYP-3205/HYP-3224.  Consecutive and doubled AP are the only all-bank maximizers of `lambda2` and total positive conductance and the only minimizers of Kirchhoff/mean/max/distance-layer Green resistance; primitive normal form leaves AP unique.  AP has `lambda2=0.192033074001`, `kirchhoff=108.654718079151`, and `maxR=9.713313375596`.  The HYP-3202 `11` non-AP arbitrary-exchange traps all show Green resistance excess, split into `3` Kirchhoff-excess and `8` max-resistance bottleneck primary discharges.  HYP-3214 supplies the harmonic sibling, the 7-sector Fejer/de Moivre positive-definite autocorrelation kernel, while the 14-clock pair-Pascal cap remains separate.  HYP-3231/HYP-3232/HYP-3216 add the scale-recursion compatibility test around the HYP-3230 cap-kernel address, HYP-3217 adds the cubic/subfield-lattice mode, HYP-3233 adds cyclotomic-factor grading, HYP-3234 adds signed-chart debt, and HYP-3235/HYP-3218 add the totally-real cap / Fejer proof-push: Green cuts, Thomson demands, Fiedler currents, and Green resolvents should remember the three-gap/Farey address, apex-half break, cubic Gaussian-period cosets, `Phi_7` factor, signed chart, and Fejer square margin, not only raw `lambda2`.  The positive-part conductance graph is deliberately lossy, so negative covariance leakage and odd Worpitzky/Hermite-Biehler sidecars remain part of the packet. | HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3229, HYP-3228, HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3218, HYP-3217, HYP-3216, HYP-3214, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3162, HYP-3161, HYP-3160, HYP-3154, HYP-3153, T1336, LTT-236, LTI-336, OPEN-Q-108 | Prove a Rayleigh/Thomson/Poincare conductance extremality, compare Green slack to AP-support/Toeplitz/distance-layer/Fejer-autocorrelation slack on every row, and emit Schur-complement reduction words for the `11` traps; reject raw positive association or raw conductance scalars unless leakage and odd sidecars are retained or discharged. |
-| LTI-338 | Even/odd positive/negative duality bridge | Crossed proof packet with even-positive magnitude certificates, odd-negative sign/core sidecars, Vitali bulk/core transfer, Hermite-Biehler interlacing, negative Perron parity, and conditional-entropy compression audit | HYP-3238 executes the bridge that connects HYP-3236 Green conductance to HYP-3220/HYP-3219/HYP-3237 sign/core work.  HYP-3220 makes the duality literal: de Moivre power sums `-1,5,-4,13,-16,38,-57,117` have sign `(-1)^k` from the negative Perron period `-2cos(pi/7)`, so even/odd and positive/negative are one complement/parity operator.  Exact scout over `3432` anchored k=8 rows: AP has `q0=481/1470`, `q3=26/245`, `q6=1/49`, `q0+q6=73/210`, `L_y=2633/7350`, `lambda2=0.192033074001`, and is uniquely primitive-tight for `L_y`, `q0+q6`, and `lambda2`.  False terminals: `18` primitive non-AP rows have zero negative covariance leakage, `2754` primitive connected positive-graph non-AP rows exist, `2879` primitive rows have positive `q3` debt with `0` exchange-margin violations, and the `11` non-AP traps split into `8` negative-leakage-plus-odd-debt and `3` odd-debt-without-negative-leakage. | HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153, T1338, LTT-238, LTI-338, OPEN-Q-108 | Prove the `q3` exchange-rate inequality symbolically from HYP-3204 or the shell Delsarte dual; attach HYP-3222 HB interlacing to the three zero-negative-leakage traps with odd debt; compare HYP-3220 negative Perron sign with HYP-3236 Fiedler/current data. |
+| LTI-338 | Even/odd positive/negative duality bridge | Crossed proof packet with even-positive magnitude certificates, odd-negative sign/core sidecars, `D_7` sign-isotypic data, Vitali bulk/core transfer, Hermite-Biehler interlacing, saddle-index parity, dilation-witness core data, negative Perron parity, and conditional-entropy compression audit | HYP-3238 executes the bridge that connects HYP-3236 Green conductance to HYP-3220/HYP-3219/HYP-3239/HYP-3241/HYP-3240/HYP-3237 sign/core work.  HYP-3220 makes the duality literal: de Moivre power sums `-1,5,-4,13,-16,38,-57,117` have sign `(-1)^k` from the negative Perron period `-2cos(pi/7)`, so even/odd and positive/negative are one complement/parity operator.  HYP-3239/HYP-3241 identify the odd sign sidecar as the `D_7` sign-isotypic / free-`Z2` Borsuk-Ulam / saddle-index packet for n=14, with Brouwer/SOS as the fixed-reflection family side; HYP-3240 adds the dilation-promoted `Phi_{14d}` witness guardrail.  Exact scout over `3432` anchored k=8 rows: AP has `q0=481/1470`, `q3=26/245`, `q6=1/49`, `q0+q6=73/210`, `L_y=2633/7350`, `lambda2=0.192033074001`, and is uniquely primitive-tight for `L_y`, `q0+q6`, and `lambda2`.  False terminals: `18` primitive non-AP rows have zero negative covariance leakage, `2754` primitive connected positive-graph non-AP rows exist, `2879` primitive rows have positive `q3` debt with `0` exchange-margin violations, and the `11` non-AP traps split into `8` negative-leakage-plus-odd-debt and `3` odd-debt-without-negative-leakage. | HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153, HYP-3138, HYP-3004, HYP-2647, HYP-2637, THM-429, THM-426, T1338, LTT-238, LTI-338, OPEN-Q-108 | Prove the `q3` exchange-rate inequality symbolically from HYP-3204 or the shell Delsarte dual; attach HYP-3222 HB interlacing to the three zero-negative-leakage traps with odd debt; compare HYP-3220 negative Perron sign, HYP-3241 saddle-index parity, and HYP-3240 dilation-witness status with HYP-3236 Fiedler/current data. |
 
 ## Cross-Cutting Guardrails
 
@@ -4852,7 +4852,8 @@ even / positive:
   bulk positive-measure equidistribution
 
 odd / negative:
-  Worpitzky associator debt, Brouwer trace sign, Hermite-Biehler odd leg,
+  Worpitzky associator debt, Brouwer/Borsuk-Ulam topological sign,
+  Hermite-Biehler odd leg,
   negative covariance leakage, signed chart-change cancellation debt,
   measure-zero cyclotomic core witnesses
 ```
@@ -4877,13 +4878,15 @@ magnitude and odd/negative sign/core information.  When both retain the same
 predicate, prefer lower conditional residual `H(lost_duality_payload|carrier)`.
 
 Preserved LRC predicate: AP coverage/covariance extremality, Green
-conductance slack, Fejer/SOS magnitude, central `q3` exchange debt, Brouwer
-sign, Vitali bulk/core split, and the AP/doubled-AP equality face.
+conductance slack, Fejer/SOS magnitude, central `q3` exchange debt,
+topological trace/degree sign, Vitali bulk/core split, and the AP/doubled-AP
+equality face.
 
 Destroyed information if misused: negative covariance signs, Worpitzky odd
-center, Brouwer degree/sign, Hermite-Biehler odd leg, chart-change
-cancellation data, measure-zero core witnesses, and boundary terminals needed
-for associative Schur/star-mesh composition.
+center, Brouwer fixed-point side, Borsuk-Ulam free-`Z/2` degree side,
+Hermite-Biehler odd leg, chart-change cancellation data, measure-zero core
+witnesses, and boundary terminals needed for associative Schur/star-mesh
+composition.
 
 Best use: as a legality test before promoting Green conductance, Fejer
 positivity, Perron alignment, `L_y`, or any scalar normal-fan coordinate to a
@@ -4918,10 +4921,12 @@ non-AP trap bridge classes:
 Next agent hook: prove the `q3` exchange-rate inequality symbolically from
 HYP-3204 or the shell Delsarte dual; attach HYP-3222 HB interlacing to the
 three zero-negative-leakage traps with odd debt; compare HYP-3220 negative
-Perron sign with HYP-3236 Fiedler/current data.
+Perron sign and HYP-3241 saddle-index parity with HYP-3236 Fiedler/current
+data; keep `D_7` sign-isotypic and topological-certificate fields explicit.
 
-Anchors: HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233,
-HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224,
-HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216,
+Anchors: HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236,
+HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227,
+HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219,
+HYP-3218, HYP-3217, HYP-3216,
 HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163,
 HYP-3153, LTI-338, LTT-238, T1338, OPEN-Q-108.

@@ -34,11 +34,14 @@ the even/odd and positive/negative dualities now visible in HYP-3220,
 HYP-3219, and HYP-3237.  HYP-3220 says these are one parity/complement
 operator: de Moivre power sums `-1,5,-4,13,-16,38,-57,117` have sign
 `(-1)^k` from the negative Perron period `-2cos(pi/7)`.  Even/positive data is Fejer square, SOS magnitude, pair-Pascal cap
+the even/odd and positive/negative dualities now visible in HYP-3219,
+HYP-3220, HYP-3239, and HYP-3237.  Even/positive data is Fejer square, SOS magnitude, pair-Pascal cap
 mass, covariance layers, positive Green conductance, Perron coherent mode,
 and bulk positive-measure equidistribution.  Odd/negative data is Worpitzky
-associator debt, Brouwer trace sign, Hermite-Biehler odd leg, negative
-covariance leakage, signed chart-change cancellation debt, and measure-zero
-cyclotomic core witnesses.
+associator debt, Brouwer fixed-point or Borsuk-Ulam free-`Z/2` degree sign,
+Hermite-Biehler odd leg, negative covariance leakage, signed chart-change
+cancellation debt, `D_7` sign-isotypic data, and measure-zero cyclotomic core
+witnesses.
 
 Readout: AP has `q0=481/1470`, `q3=26/245`, `q6=1/49`, `q0+q6=73/210`,
 `L_y=2633/7350`, and `lambda2=0.192033074001`.  AP is uniquely primitive-tight
@@ -55,7 +58,7 @@ kps S31av branch identifies the `p=7=3 mod 4` sign sidecar as the `D_7`
 sign representation / free-`Z2` Borsuk-Ulam packet.  Track this family tag
 when deciding whether the odd/negative sidecar is discharged.
 
-HYP-3240 adds the matching index field: for n=14 the AP `Phi_14` witness set
+HYP-3241 adds the matching index field: for n=14 the AP `Phi_14` witness set
 has `3` antipodal pairs, equal to `(p-1)/2` and the de Moivre degree.  The
 parity of this equioscillation index selects Borsuk-Ulam/free-`Z2` versus
 Brouwer/SOS in the family law.

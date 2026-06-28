@@ -32,7 +32,7 @@ HYP-3238 perfectly: the sidecar is a sign-isotypic packet, and the family law
 chooses whether it is a fixed-point Brouwer/SOS packet or a free-antipodal
 Borsuk-Ulam packet.
 
-Then HYP-3240 resolves the apparent naming conflict: the Brouwer saddle and
+Then HYP-3241 resolves the apparent naming conflict: the Brouwer saddle and
 the Borsuk-Ulam antipodal witness packet are two views of the same `Phi_14`
 core witness set.  At n=14 those six unit witnesses form `3` antipodal pairs,
 and that index `(p-1)/2=3` is also the de Moivre degree and the saddle
@@ -53,8 +53,10 @@ even / positive:
   positive Green conductance, Perron coherent mode, bulk measure.
 
 odd / negative:
-  Brouwer sign, Worpitzky associator, Hermite-Biehler odd leg,
+  Brouwer/Borsuk-Ulam topological sign, Worpitzky associator,
+  Hermite-Biehler odd leg,
   negative covariance leakage, signed chart-change debt,
+  odd-coordinate resurrection, antipodal split data,
   measure-zero cyclotomic core witnesses.
 ```
 
@@ -66,6 +68,33 @@ works in the positive-measure region, while AP sits on a measure-zero core
 where cyclotomic arithmetic replaces measure information.  The same pattern
 appears when `C_E` is compressed to `G_+(E)`: positivity becomes usable only
 after the clipped negative coordinate is kept somewhere.
+
+The rebase added HYP-3220, which sharpens the bridge: even-odd duality is
+positive-negative duality through the same `Z/2` complement/parity operator.
+So the packet should now keep two explicit axes:
+
+```text
+even/odd           = 2-adic fold versus coordinate resurrection
+positive/negative  = observer-blind gauge versus pair-visible cut/orientation
+```
+
+The rebase also added HYP-3239, which sharpens the topological slot.  For
+`p = 1 mod 4`, the complement/reflection is orientation-preserving and the
+fixed-point/Brouwer/SOS reading is the right side of the family.  For n=14
+(`p = 7 = 3 mod 4`), the reflection is an anti-automorphism, the `Z/2` action
+is free, and the sign side is Borsuk-Ulam odd degree on the `D_7`
+sign-isotypic component.  So the bridge should carry the theorem type, not
+just a scalar sign.
+
+```text
+topological_certificate_type = Brouwer_fixed_point | Borsuk_Ulam_free_Z2
+D7_action_status             = aut | anti_aut
+sign_isotypic_component      = retained | discharged | named_debt
+```
+
+The HYP-3234 signed-address chart tells us which full/even/odd recursion owns
+the local letters.  HYP-3238 tells us which parity and sign coordinates survive
+that chart change.
 
 The information-theory translation is simple and sharp:
 
@@ -96,12 +125,33 @@ ordered-tail exchange looks like the finite pricing theorem: central odd
 `q3` debt is paid by endpoint bimodality loss.  HYP-3236's Green graph then
 becomes the electrical realization of the positive/even magnitude side.
 
+Practical packet fields to add to the next bounded-bank audit:
+
+```text
+parity_axis_state
+even_fold_certificate
+odd_coordinate_resurrection
+antipodal_split_status
+sign_axis_state
+sign_cut_status
+topological_trace_or_degree_sign
+D7_action_status
+sign_isotypic_component
+sos_magnitude_certificate
+positive_conductance_packet
+negative_leakage_sidecar
+bulk_core_handoff
+terminal_duality_discharge_or_debt
+```
+
 The next scout should not merely re-rank AP.  It should count the false
 terminals: rows with no negative covariance leakage but still non-AP, rows
 whose Green score is high but whose odd sidecar is live, and traps where the
-Toeplitz/Green/ordered-tail discharges disagree.  That is where the proof
-packet will either lock together or tell us exactly which sidecar remains
-unpriced.
+Toeplitz/Green/ordered-tail discharges disagree.  It should also test whether
+sign cuts commute with odd-coordinate resurrection; failures should be named
+as antipodal split, Borsuk-Ulam odd-degree debt, signed-wall transport, Green
+negative leakage, or Brouwer trace-sign debt.  That is where the proof packet
+will either lock together or tell us exactly which sidecar remains unpriced.
 
 The exact scout now does this over the `3432` anchored rows.  AP has
 
@@ -140,8 +190,9 @@ HYP-3204 q3 exchange-rate pricing.
 
 That packet feels much closer to a proof shape than any scalar did.
 
--> HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
-HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223,
-HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
-HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153,
+-> HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234,
+HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223,
+HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216,
+HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153,
+HYP-3138, HYP-3004, HYP-2647, HYP-2637, THM-429, THM-426,
 T1338, LTI-338, LTT-238, OPEN-Q-108.

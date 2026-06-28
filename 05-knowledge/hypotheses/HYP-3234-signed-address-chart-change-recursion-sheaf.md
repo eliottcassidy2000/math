@@ -8,18 +8,30 @@ technique: LTI-331
 tournament_technique: LTT-231
 reflection: 07-reflections/signed-address-chart-change-sheaf-for-the-three-recursion-modes-codex-20260628.md
 related:
+  - HYP-3239
+  - HYP-3238
+  - HYP-3237
+  - HYP-3236
+  - HYP-3235
   - HYP-3232
   - HYP-3233
   - HYP-3231
   - HYP-3230
+  - HYP-3220
+  - HYP-3219
   - HYP-3216
+  - HYP-3138
   - HYP-3004
   - HYP-2902
   - HYP-2901
   - HYP-2899
+  - HYP-2647
+  - HYP-2637
   - HYP-2704
   - HYP-2685
   - HYP-2681
+  - THM-429
+  - THM-426
   - THM-553
   - THM-550
   - THM-549
@@ -115,6 +127,39 @@ moment_depth_target
 destroyed_coordinate_sidecar
 terminal_discharge_or_debt
 ```
+
+Post-HYP-3238 finalization: this signed-address sheaf is the chart-local base
+of the even/odd and positive/negative duality square.  The additional axes are:
+
+```text
+even/odd          = fold versus coordinate resurrection
+positive/negative = observer-blind gauge versus pair-visible cut/orientation
+```
+
+So the proof packet must now carry both local chart data and duality-axis data:
+
+```text
+parity_axis_state
+even_fold_certificate
+odd_coordinate_resurrection
+sign_axis_state
+sign_cut_status
+topological_certificate_type
+topological_trace_or_degree_sign
+D7_action_status
+sign_isotypic_component
+sos_magnitude_certificate
+positive_conductance_packet
+negative_leakage_sidecar
+bulk_core_handoff
+```
+
+This connects HYP-3138's even fold / odd leakage, THM-426/429's sign-as-cut
+law, HYP-3219's `trace sign * SOS magnitude` obstruction, HYP-3236's
+positive-conductance / negative-leakage packet, and HYP-3237's
+Vitali bulk/core handoff.  HYP-3234 answers "which signed chart owns the
+letters"; HYP-3238 answers "which parity and sign coordinates survive the
+chart change."
 
 ## Similarities Across The Recursions
 

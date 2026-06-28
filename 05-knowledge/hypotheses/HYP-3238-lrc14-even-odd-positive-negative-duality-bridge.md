@@ -10,6 +10,7 @@ script: 04-computation/lrc14_even_odd_positive_negative_bridge_codex_20260628.py
 result: 05-knowledge/results/lrc14_even_odd_positive_negative_bridge_codex_20260628.out
 reflection: 07-reflections/lrc14-even-odd-positive-negative-duality-bridge-codex-20260628.md
 related:
+  - HYP-3241
   - HYP-3240
   - HYP-3239
   - HYP-3237
@@ -38,6 +39,12 @@ related:
   - HYP-3202
   - HYP-3201
   - HYP-3200
+  - HYP-3138
+  - HYP-3004
+  - HYP-2647
+  - HYP-2637
+  - THM-429
+  - THM-426
   - HYP-3163
   - HYP-3153
   - OPEN-Q-108
@@ -57,7 +64,7 @@ even / positive side:
   bulk positive-measure equidistribution
 
 odd / negative side:
-  Worpitzky associator, Brouwer trace sign, Hermite-Biehler interlacing,
+  Worpitzky associator, topological trace/degree sign, Hermite-Biehler interlacing,
   negative covariance leakage, chart-change cancellation debt,
   measure-zero cyclotomic core witnesses
 ```
@@ -84,6 +91,62 @@ Thus HYP-3236's positive-part Green graph is a powerful certificate face, but
 not a proof object by itself; HYP-3219's Brouwer sign and HYP-3222's
 Hermite-Biehler even/odd interlacing are the complementary data that explain
 which clipped coordinates may be discharged.
+
+Post-HYP-3220 finalization: the bridge is not merely an analogy between two
+different dichotomies.  HYP-3220 verifies that even-odd duality is
+positive-negative duality through the same `Z/2` complement/parity operator.
+For the packet language here, this means:
+
+```text
+even/odd           = 2-adic fold versus coordinate resurrection
+positive/negative  = observer-blind gauge versus pair-visible cut/orientation
+```
+
+Post-HYP-3239 refinement: the topological side is family-sensitive.  In the
+`p = 1 mod 4` / orientation-preserving case the sign side can be read as a
+Brouwer fixed-point/SOS channel; in the `p = 3 mod 4` / orientation-reversing
+case relevant to n=14, the same `Z/2` acts freely, so the odd/negative
+certificate is Borsuk-Ulam odd degree on the `D_7` sign-isotypic component.
+Thus `Brouwer trace sign` below should be read as the older fixed-point face
+of a broader topological sign slot:
+
+```text
+topological_certificate_type = Brouwer_fixed_point | Borsuk_Ulam_free_Z2
+D7_action_status             = aut | anti_aut
+sign_isotypic_component      = retained | discharged | named_debt
+```
+
+The full/even/odd signed recursions from HYP-3234 should therefore carry both
+axes before scalarization:
+
+```text
+parity_axis_state
+even_fold_certificate
+odd_coordinate_resurrection
+antipodal_split_status
+sign_axis_state
+sign_cut_status
+same_side_difference_owner
+across_cut_sum_owner
+topological_trace_or_degree_sign
+D7_action_status
+sign_isotypic_component
+sos_magnitude_certificate
+positive_conductance_packet
+negative_leakage_sidecar
+bulk_core_handoff
+terminal_duality_discharge_or_debt
+```
+
+The HYP-3219 node inequality
+
+```text
+Delta_even(SOS) >= Delta_odd(obstruction)
+```
+
+is the diagonal target of this bridge: even algebraic magnitude must dominate
+the odd topological sign obstruction after chart, parity, and sign sidecars are
+retained.
 
 ## Why This Extends The Previous Session
 
@@ -121,6 +184,13 @@ The magnitude is even/positive; the sign is odd/topological.  Therefore the
 odd half should not be forced into an SOS certificate.  It should be carried
 as a sign, degree, or interlacing sidecar until a dual certificate annihilates
 it.
+
+Incoming HYP-3239 sharpens which topological theorem owns that sign.  At
+n=14, `14 = |D_7|`, the complement is the heptagon reflection, and
+`7 = 3 mod 4` makes the reflection an anti-automorphism of the tournament.
+The sign slot is therefore not merely a Brouwer fixed point; it is the
+Borsuk-Ulam odd degree of a free `Z/2` action, witnessed by the imaginary
+Gauss sum / negative trace / odd power-sum datum.
 
 ## Compression Failures Beyond Commutativity
 
@@ -166,9 +236,11 @@ even_positive_certificate:
   positive Green conductance and Rayleigh/Thomson slack.
 
 odd_negative_sidecar:
-  Worpitzky q3 center debt, associator cocycle, Brouwer trace sign,
-  Hermite-Biehler odd polynomial, negative covariance leakage,
-  signed-address chart-change cancellation debt.
+  Worpitzky q3 center debt, associator cocycle, Brouwer/Borsuk-Ulam
+  topological sign, Hermite-Biehler odd polynomial, negative covariance leakage,
+  signed-address chart-change cancellation debt, odd-coordinate resurrection,
+  antipodal split status, D7 sign-isotypic component,
+  sign-cut pair-sum ownership.
 
 bulk_core_transfer:
   Vitali wall, positive-measure equidistribution,
@@ -334,7 +406,7 @@ Thus the topological sidecar should be tagged more precisely as
 `Borsuk-Ulam/free-Z2` in the `p=3 mod 4` case, while Brouwer/SOS belongs to
 the fixed-reflection `p=1 mod 4` side of the family.
 
-HYP-3240 then reconciles the words "Brouwer saddle" and "Borsuk-Ulam packet":
+HYP-3241 then reconciles the words "Brouwer saddle" and "Borsuk-Ulam packet":
 the AP core witnesses are the same `Phi_14` set, grouped into `3` antipodal
 pairs.  The index is `phi(14)/2=(7-1)/2=3`, equal to the de Moivre degree and
 the equioscillation count.  Its parity is the family switch: odd index gives
@@ -368,6 +440,12 @@ pair-Pascal mass live on the positive/even face, while Brouwer sign,
 negative covariance, and core witnesses are the sidecar that prevents illegal
 compression.
 
+THM-426 and THM-429 supply the pair-visible sign law: a sign pattern is a cut,
+same-side pairs remain differences, and cross-cut pairs become sums.  HYP-2637
+and HYP-2647 supply older additive/multiplicative and wall-transport versions
+of the same bridge.  Thus "positive/negative" is not witness freedom; it is a
+cut/orientation ledger whose lost data must be retained or discharged.
+
 ## Tournament Analysis
 
 Vertices are proof obligations and retained information channels, not runners:
@@ -379,6 +457,7 @@ bulk_vitali_positive_measure
 pair_pascal_cap_mass
 toeplitz_normal_fan_slack
 odd_negative_brouwer_sign
+odd_negative_borsuk_ulam_degree
 hermite_biehler_interlacing
 negative_covariance_leakage
 signed_chart_change_debt
@@ -405,6 +484,7 @@ priority_path =
   even_positive_fejer_square
   -> green_dirichlet_positive_face
   -> odd_negative_brouwer_sign
+  -> odd_negative_borsuk_ulam_degree
   -> hermite_biehler_interlacing
   -> bulk_core_vitali_transfer
   -> pair_pascal_cap_mass
@@ -445,3 +525,7 @@ core data.
 4. Lift the bridge beyond the bounded bank: determine which pieces are
    exact finite k=8 facts and which persist as the LRC(2p) `p mod 4`
    family-law sidecar.
+5. Add explicit `topological_certificate_type`, `D7_action_status`,
+   `sign_isotypic_component`, and `saddle_index_parity` fields to the next
+   scout/reflection packet so HYP-3239/HYP-3241 sidecars do not collapse back
+   to a scalar sign.

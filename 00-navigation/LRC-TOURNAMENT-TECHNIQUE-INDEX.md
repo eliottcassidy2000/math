@@ -6763,23 +6763,26 @@ quotient_legality_status
 
 - **Move:** Treat retained proof obligations as tournament vertices across the
   crossed duality: `even_positive_fejer_square`,
-  `green_dirichlet_positive_face`, `bulk_vitali_positive_measure`,
+  `green_dirichlet_positive_face`, `bulk_core_vitali_transfer`,
   `pair_pascal_cap_mass`, `toeplitz_normal_fan_slack`,
   `odd_negative_brouwer_sign`, `hermite_biehler_interlacing`,
   `negative_covariance_leakage`, `signed_chart_change_debt`,
-  `raw_lambda2_scalar`, and `raw_positive_association`.
+  `raw_lambda2_scalar`, `raw_connected_positive_graph`, and
+  `raw_positive_association`.
 - **LRC use:** HYP-3238 merges the previous HYP-3236 Green pass with
-  HYP-3220's even-odd = positive-negative finalization, HYP-3219's Brouwer
-  sign factorization, and HYP-3237's Vitali bulk/core wall.  HYP-3220 makes
+  HYP-3220's even-odd = positive-negative finalization, HYP-3219's
+  sign-times-SOS factorization, HYP-3239/HYP-3241's Brouwer/Borsuk-Ulam
+  saddle-index sidecar, HYP-3240's dilation-witness guardrail, and HYP-3237's
+  Vitali bulk/core wall.  HYP-3220 makes
   the duality literal: the de Moivre power sums have sign `(-1)^k` because
   the dominant period is the negative Perron root `-2cos(pi/7)`.  This turns
   the proof search into a legality tournament: an even/positive quotient wins
   only if it retains or discharges the odd/negative coordinate that it would
   otherwise destroy.
 - **Preserves:** AP extremality, Fejer/SOS magnitude, Green conductance
-  slack, central `q3` exchange debt, negative leakage, Brouwer sign,
-  Hermite-Biehler odd leg, Vitali core witnesses, and the AP/doubled-AP
-  equality face.
+  slack, central `q3` exchange debt, negative leakage, topological
+  trace/degree sign, `D_7` sign-isotypic data, Hermite-Biehler odd leg,
+  Vitali core witnesses, and the AP/doubled-AP equality face.
 - **Forgets / guardrail:** raw `lambda2`, raw positive association, raw
   Perron alignment, raw `L_y`, or raw measure mass can all be AP-tight while
   forgetting sign, core, chart, or leakage payload.  They are tournament
@@ -6807,10 +6810,13 @@ quotient_legality_status
   odd-debt-without-negative-leakage.
 - **Next pull:** Prove the `q3` exchange-rate inequality symbolically and glue
   it to HYP-3222 Hermite-Biehler interlacing plus HYP-3220 parity/Brouwer
-  sign.  Also compare HYP-3220's negative Perron sign with HYP-3236 Fiedler
-  and bottleneck-current data.
-- **Pointers:** HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233,
-  HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224,
-  HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216,
+  sign, and keep HYP-3239/HYP-3241's `D_7` sign-isotypic / saddle-index
+  sidecar explicit alongside HYP-3240's dilation-witness status.  Also compare
+  HYP-3220's negative Perron sign with HYP-3236 Fiedler and bottleneck-current
+  data.
+- **Pointers:** HYP-3241, HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236,
+  HYP-3235, HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227,
+  HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219,
+  HYP-3218, HYP-3217, HYP-3216,
   HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163,
   HYP-3153, LTI-338, LTT-238, T1338, OPEN-Q-108.
