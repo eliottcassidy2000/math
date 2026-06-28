@@ -44,16 +44,22 @@ single-arc peeling (Phi_1 collapse), three-gap kernel (Phi_7 Diophantine), momen
 (HYP-1881). The whole LRC(14) hardness = the single Phi_7 factor atop principal (x-1)^depth cell growth.
 NOT a proof; precisely names + extends the recursion family (the three modes = the first cyclotomic factors;
 the apex Phi_7 = the irreducible one carrying the difficulty).
-## codex-2026-06-28 -- HYP-3233 signed address chart-change sheaf
+## codex-2026-06-28 -- HYP-3234 signed address chart-change sheaf
 
 User prompt: compare and extend the `A+B+C-D-E-F+G` recursion with the even
 `A+B-C`, the odd `A+B-C+D-E-F+G`, and any related concepts found in the repo.
 
-Added `05-knowledge/hypotheses/HYP-3233-signed-address-chart-change-recursion-sheaf.md`
+Added `05-knowledge/hypotheses/HYP-3234-signed-address-chart-change-recursion-sheaf.md`
 and reflection
 `07-reflections/signed-address-chart-change-sheaf-for-the-three-recursion-modes-codex-20260628.md`.
 Navigation updated with T1331, LTI-331, LTT-231, an OPEN-Q-108 chart-change
 legality addendum, and a signed-address addendum to `00-navigation/LRC-LENS-MAP.md`.
+
+Namespace integration: the close-out rebase revealed mac-mini S75d had claimed
+HYP-3233 for the cyclotomic-factor classification of the same recursion
+modes.  This signed-address chart-change sheaf is therefore HYP-3234 and
+treats HYP-3233 as the characteristic-polynomial/character layer it must
+sidecar before using the recurrences in proof packets.
 
 Core synthesis: the three signed recurrences are local charts of one signed
 address sheaf, not global letter formulas.  Full `A+B+C-D-E-F+G` is the

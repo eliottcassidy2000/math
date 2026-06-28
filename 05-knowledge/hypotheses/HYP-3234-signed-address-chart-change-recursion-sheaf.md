@@ -1,5 +1,5 @@
 ---
-id: HYP-3233
+id: HYP-3234
 title: Signed address chart-change sheaf for the Mobius, Eisenstein, and Legendre recursions
 status: SYNTHESIS / proof-carrier extension; not an LRC14 proof
 source: codex-2026-06-28
@@ -9,6 +9,7 @@ tournament_technique: LTT-231
 reflection: 07-reflections/signed-address-chart-change-sheaf-for-the-three-recursion-modes-codex-20260628.md
 related:
   - HYP-3232
+  - HYP-3233
   - HYP-3231
   - HYP-3230
   - HYP-3216
@@ -26,7 +27,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3233: Signed Address Chart-Change Sheaf
+# HYP-3234: Signed Address Chart-Change Sheaf
 
 ## Claim
 
@@ -86,9 +87,16 @@ Eisenstein: modulus fold
 Legendre:   speed ratio / three-gap kernel
 ```
 
-HYP-3233 adds the chart-change law: before any one of those modes is used, the
+HYP-3234 adds the chart-change law: before any one of those modes is used, the
 packet must record which signed address chart it is in and which coordinates
 are destroyed by moving to the next chart.
+
+Push-time integration: mac-mini S75d concurrently claimed HYP-3233 for the
+cyclotomic-factor reading of these recursion modes.  This HYP-3234 ledger is
+the sidecar-legality companion: HYP-3233 identifies the characteristic
+polynomial / character factor, while HYP-3234 identifies the local chart,
+destroyed coordinate, and repair sidecar needed before that factor is used in
+an LRC proof packet.
 
 The proof packet should therefore carry:
 

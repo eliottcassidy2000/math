@@ -4688,7 +4688,8 @@ survival_depth_quotient
 cap_kernel_modulus_chart
 ```
 
-HYP-3233 upgrades the three signed recurrences into charted proof carriers.
+HYP-3234 upgrades the three signed recurrences into charted proof carriers,
+as the sidecar-legality companion to HYP-3233's cyclotomic-factor layer.
 The technique is to attach a local slot basis before using any formula of the
 form `A+B+C-D-E-F+G`, `A+B-C`, or `A+B-C+D-E-F+G`.  The letters are not global:
 full Mobius, even Eisenstein, and odd Legendre charts preserve different
@@ -4722,6 +4723,6 @@ Next hook: run a chart-change legality audit on HYP-2963/HYP-3083 packets.
 Each move full -> even -> odd -> survival/cap should be marked as descended,
 sidecar-restored, dual-annihilated, boundary-stopped, or named residual debt.
 
-Pointers: HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004,
+Pointers: HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004,
 HYP-2902, HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553,
 THM-550, THM-549, THM-442, LTT-231, T1331, OPEN-Q-108.

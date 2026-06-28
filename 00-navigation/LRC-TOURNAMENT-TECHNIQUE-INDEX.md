@@ -6649,8 +6649,9 @@ quotient_legality_status
   `full_mobius_B3_chart`, `product_divisor_mobius_chart`,
   `cube_root_phase_chart`, `survival_depth_quotient`, and
   `raw_scalar_sign_formula`.
-- **LRC use:** HYP-3233 says the three familiar formulas become proof-useful
-  only after their local slot basis and chart-change debt are named.  A chart
+- **LRC use:** HYP-3234 says the three familiar formulas become proof-useful
+  only after their local slot basis and chart-change debt are named; this is
+  the sidecar-legality companion to HYP-3233's cyclotomic-factor layer.  A chart
   wins an edge when it preserves the LRC predicate, keeps local slots, exposes
   same-size cancellations or fixed-line/apex singularities, and retains exact
   denominator or moment-depth sidecars.
@@ -6671,6 +6672,6 @@ quotient_legality_status
 - **Next hook:** Add chart fields to a HYP-2963/HYP-3083 sample and prove
   every chart transition descends, is sidecar-restored, is dual-annihilated,
   stops at a boundary, or emits named debt.
-- **Pointers:** HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004,
+- **Pointers:** HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004,
   HYP-2902, HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553,
   THM-550, THM-549, THM-442, LTI-331, T1331, OPEN-Q-108.

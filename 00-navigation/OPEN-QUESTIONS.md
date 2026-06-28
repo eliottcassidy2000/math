@@ -5405,7 +5405,8 @@ THM-532, THM-407, LTI-330, LTT-230, T1330, OPEN-Q-108.
 
 ## OPEN-Q-108 addendum (codex-2026-06-28): signed chart-change legality
 
-HYP-3233 identifies the three signed recurrences as local address charts:
+HYP-3234 identifies the three signed recurrences as local address charts,
+complementing HYP-3233's cyclotomic-factor classification:
 
 ```text
 full Mobius:       A+B+C-D-E-F+G
@@ -5442,6 +5443,6 @@ charts either preserves the LRC predicate, reconstructs the lost coordinate,
 dual-annihilates it, stops at a fixed-line/apex boundary, or emits named
 residual debt.
 
--> HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004, HYP-2902,
+-> HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004, HYP-2902,
 HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553, THM-550, THM-549,
 THM-442, LTI-331, LTT-231, T1331, OPEN-Q-108.

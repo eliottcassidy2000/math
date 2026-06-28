@@ -3744,8 +3744,9 @@ THM-532, THM-407, LTI-330, LTT-230, OPEN-Q-108.
 
 ## T1331: Signed address chart-change sheaf (codex-2026-06-28)
 
-HYP-3233 extends the scale-normal and interlocking-recursion synthesis by
-making the signed formulas chart-local.  The recurring strings
+HYP-3234 extends the scale-normal and interlocking-recursion synthesis by
+making the signed formulas chart-local, as the sidecar-legality companion to
+HYP-3233's cyclotomic-factor layer.  The recurring strings
 `A+B+C-D-E-F+G`, even `A+B-C`, and odd `A+B-C+D-E-F+G` are not global
 letter formulas.  They are local signed-address charts:
 
@@ -3768,6 +3769,6 @@ Next hook: add `signed_address_chart`, `local_slot_basis`,
 sample, then prove each chart change preserves the LRC predicate,
 reconstructs the lost coordinate, or emits named debt.
 
--> HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004, HYP-2902,
+-> HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3216, HYP-3004, HYP-2902,
 HYP-2901, HYP-2899, HYP-2704, HYP-2685, HYP-2681, THM-553, THM-550, THM-549,
 THM-442, LTI-331, LTT-231, OPEN-Q-108.

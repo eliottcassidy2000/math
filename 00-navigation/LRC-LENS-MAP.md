@@ -44,7 +44,8 @@ scale_normal_discharge_or_debt
 
 ## Addendum 2026-06-28: Signed Address Chart-Change Lens
 
-HYP-3233 adds a chart-local reading of the recurring signed recursions.  The
+HYP-3234 adds a chart-local reading of the recurring signed recursions,
+complementing HYP-3233's cyclotomic-factor reading.  The
 formulas
 
 ```text
