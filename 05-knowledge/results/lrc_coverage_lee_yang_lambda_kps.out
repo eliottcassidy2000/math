@@ -1,0 +1,33 @@
+
+=== k=8  cap=0.3815 ===
+  consec: q0=0.3272 (cap gap +0.0543)  R=1.5880  lambda(phi4)=0.00300  palindrome-resid=0.62119
+  consec lambda-RANK among 501 configs: 0 (0 = MOST circular)
+  global argmin-lambda: consec lam=0.00300 q0=0.3272 (is consec? True)
+  corr(lambda, cap-q0) = +0.695  (lambda controls the coverage gap?)
+  R(consec)=1.58795  R^6=16.0333 = q0/q6 = 16.0333
+  consec root mags: ['1.4886', '1.4886', '1.5814', '1.5814', '1.7010', '1.7010']
+
+=== k=9  cap=0.4943 ===
+  consec: q0=0.4162 (cap gap +0.0781)  R=1.6901  lambda(phi4)=0.00679  palindrome-resid=0.67897
+  consec lambda-RANK among 501 configs: 0 (0 = MOST circular)
+  global argmin-lambda: consec lam=0.00679 q0=0.4162 (is consec? True)
+  corr(lambda, cap-q0) = +0.752  (lambda controls the coverage gap?)
+  R(consec)=1.69008  R^6=23.3048 = q0/q6 = 23.3048
+  consec root mags: ['1.5306', '1.5306', '1.6853', '1.6853', '1.8714', '1.8714']
+
+=== k=10  cap=0.6044 ===
+  consec: q0=0.5045 (cap gap +0.0999)  R=1.7798  lambda(phi4)=0.00919  palindrome-resid=0.72999
+  consec lambda-RANK among 501 configs: 1 (0 = MOST circular)
+  global argmin-lambda: rand lam=0.00599 q0=0.3412 (is consec? False)
+  corr(lambda, cap-q0) = +0.851  (lambda controls the coverage gap?)
+  R(consec)=1.77977  R^6=31.7821 = q0/q6 = 31.7821
+  consec root mags: ['1.5556', '1.5556', '1.8487', '1.8487', '1.9603', '1.9603']
+
+--- kps-S31ah refined conclusion ---
+AP/consec MINIMIZES the phi^4 coupling lambda=Var(|roots|/R) (off-circle variance) -- global argmin at
+k=8,9 (rank 0 over 500 configs), rank 1 at k=10. lambda CORRELATES with the coverage gap (cap-q0):
++0.695 (k=8), +0.752 (k=9), +0.851 (k=10) -- STRENGTHENING with k (the Lee-Yang frame is more relevant
+at the binding rows). Full extremality = max(q6*R^6): circular zeros (low lambda) AND large radius R.
+R(consec)=1.588,1.690,1.780 for k=8,9,10; R^6 = q0/q6 exactly (Vieta). Palindrome-residual ~0.65 (the
+circle is APPROXIMATE, lambda>0). UNIFIES mac-mini cap=Pascal-mass (binomial=circular zeros) + dip=phi^4
+lambda-correction. The coverage PGF is a NEAR-Lee-Yang-circle polynomial; AP = the most-circular member.
