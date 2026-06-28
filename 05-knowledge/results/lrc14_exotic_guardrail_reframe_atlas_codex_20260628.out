@@ -1,0 +1,98 @@
+HYP-3408 EXOTIC GUARDRAIL REFRAME ATLAS
+==============================================================================
+status=synthesis/evidence; not an LRC14 proof
+source=HYP-3404 creative atlas + HYP-3406 owner-support repair
+
+RAMANUJAN-SOLDNER ZERO CHECK
+  computed_root=1.451369234883381
+  li(root)=-4.854e-16
+  in_known_window=True
+  LRC14 use: zero-level/renormalization guardrail only, not a packet proof.
+
+SOPHIE-GERMAIN QUARTIC FACTOR CHECK
+  checked_pairs=361
+  max_abs_identity_residual=0
+  live height/flex examples: a,b -> plus_factor, minus_factor, product
+    (13,1) ->   197,   145,    28565
+    (12,1) ->   170,   122,    20740
+    (12,2) ->   200,   104,    20800
+    (13,2) ->   229,   125,    28625
+    ( 7,2) ->    85,    29,     2465
+  LRC14 use: exact split of quartic height debt into two quadratic channels.
+
+KRASNER-STYLE LOCAL-LIFT STABILITY TABLE
+  move                         exit            mass          mod14 mod7  v2 old->new  v7 old->new  v2(delta) v7(delta)
+  Goddyn-Wong hinge 12->24     boundary-tight 0            False False  2-> 3         0-> 0         2         0
+  same residue 12->26          strict-open    426/35035    True  True   2-> 1         0-> 0         1         1
+  same residue 2->16           strict-open    11/364       True  True   1-> 4         0-> 0         1         1
+  unit height 13->27           strict-open    13691/582120 True  True   0-> 0         0-> 0         1         1
+  near hinge 12->36            strict-open    1/1260       False False  2-> 2         0-> 0         3         0
+  petal owner row 13->26       strict-open    1/182        False False  0-> 1         0-> 0         0         0
+  single owner row 1->26       strict-open    11/182       False False  0-> 1         0-> 0         0         0
+  single owner row 3->26       strict-open    3/91         False False  0-> 1         0-> 0         0         0
+  single owner row 5->26       strict-open    589/20020    False True   0-> 1         0-> 0         0         1
+  Readout: same mod14 lifts can be strict, while 12->24 is tight but
+  changes residue.  Krasner-style stability must include contact/owner
+  roots, not raw p-adic closeness alone.
+
+MEISSEL-MERTENS PRIME-RECIPROCAL CHECK
+  x       pi(x)   sum_p<=x 1/p     sum-loglog(x)
+      14       6    1.344022644    0.373600863
+      41      13    1.617114107    0.305119873
+    4312     590    2.388229666    0.263676490
+  200000   17984    2.763614132    0.261680547
+  LRC14 use: denominator tail entropy; HYP-2982 labels prime-power loss.
+
+RANKED EXOTIC GUARDRAIL CARRIERS
+  X00 score= 45  Owner-residue-height first-failure theorem
+      use=Use the exotic ideas only as gates around the HYP-3406 theorem route: residue failures must be repaired by owner support, height/flex, or named debt.
+      first_test=Extend HYP-3406 beyond (72,20) until residue+owner_support first fails; classify the next leak.
+  X01 score= 43  Krasner owner-lift stability gate
+      use=Treat p-adic closeness as useful only when the owner/contact root packet is stable; instability emits owner or height debt.
+      first_test=For same-residue lifts such as 12->26, 2->16, and 13->27, test whether owner/contact roots change before accepting a local p-adic lift.
+  X02 score= 38  Sophie-Germain quartic factor split
+      use=Split quartic height/flex obstructions into two quadratic sign channels before feeding the covering-flex Hessian route.
+      first_test=Apply the identity to the first unit-height leak 13->27 and to Worpitzky/Faulhaber fourth-difference packets.
+  X03 score= 22  Meissel-Mertens denominator entropy normalizer
+      use=Use prime reciprocal/loglog scale only as a labelled tail normalizer for denominator sieves, never as a finite AP-collar certificate.
+      first_test=Attach HYP-2982 Phi/G labels before using any Mertens or large-sieve tail estimate.
+  X04 score= 21  HLW no-scalar-shadow guardrail
+      use=Use Hermite-Lindemann-Weierstrass as a warning: a transcendental analytic shadow cannot certify a finite rational LRC packet until translated into exact algebraic inequalities.
+      first_test=Before using exp/log/pi-like shadows, demand an exact rational sidecar or a named discarded-coordinate debt.
+  X05 score= 14  Ramanujan-Soldner zero-renormalization anchor
+      use=Use the li zero as a metaphor for choosing a declared zero level in analytic boundary integrals; it supplies no LRC14 inequality by itself.
+      first_test=If a boundary integral appears, record its subtraction point and prove the sign with rational/interval data.
+  X06 score=  8  p-adic HLW claim firewall
+      use=Do not accept a p-adic transcendence slogan as a proof step; require the actual convergence domain, theorem statement, and finite packet translation.
+      first_test=Reject SHA placeholders and route any p-adic exponential claim to an exact sidecar ledger.
+  X07 score= -9  Raw exotic-constant scalar
+      use=Negative control: a bag of named constants with no preserved LRC predicate.
+      first_test=This should lose every pairwise comparison.
+
+TOURNAMENT ANALYSIS
+  vertices=proof carriers/guardrails, not constants, runners, or arcs
+  pairwise_observable=weighted proof leverage with exact sidecar retention
+  tie_hamiltonian_path=carrier id
+  score_hist={-9: 1, 8: 1, 14: 1, 21: 1, 22: 1, 38: 1, 43: 1, 45: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  priority_path=
+    X00:Owner-residue-height first-failure theorem
+    X01:Krasner owner-lift stability gate
+    X02:Sophie-Germain quartic factor split
+    X03:Meissel-Mertens denominator entropy normalizer
+    X04:HLW no-scalar-shadow guardrail
+    X05:Ramanujan-Soldner zero-renormalization anchor
+    X06:p-adic HLW claim firewall
+    X07:Raw exotic-constant scalar
+
+ASSUMPTION CHALLENGE
+  Rejected vertex set: named constants as proof vertices.
+  Adopted vertex set: sidecar obligations and theorem exits.
+  Preserved predicate: boundary-tight, strict-open, positive-Haar-open,
+    unit-petal-named, AP/GW equality, or named debt.
+  Destroyed by naive scalar quotient: endpoint owner support, height/flex,
+    exact period, p-adic contact-root stability, and finite witness mass.
+  Concrete next theorem target: residue+owner_support exactness on enlarged
+    HYP-2963 banks, with Krasner-style lift instability and Sophie-Germain
+    quartic factors used only after they name the lost coordinate.

@@ -3973,3 +3973,42 @@ failure of residue-word exactness, then classify the missing repair as
 -> HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311, HYP-3310, HYP-3301, HYP-3265, HYP-3260,
 HYP-3258, HYP-3256, HYP-3254, HYP-3252, HYP-3249, LTI-364, LTT-264,
 OPEN-Q-108.
+
+## T1369: LRC14 Exotic Guardrail Reframe Atlas
+
+HYP-3408 converts the Ramanujan-Soldner, Sophie Germain,
+Hermite-Lindemann-Weierstrass, Krasner, and Meissel-Mertens prompt into
+sidecar obligations for the current HYP-3406 owner-support route, as the exact
+guardrail companion to incoming HYP-3407's boundary-uniformization cut signature
+recursion stub.  The exact scout verifies the Ramanujan-Soldner zero by
+li-series, checks the
+Sophie-Germain identity over `361` integer pairs with zero residual, estimates
+the Meissel-Mertens prime-reciprocal constant through `200000`, and recomputes
+AP-collar move masses.
+
+The key proof signal is p-adic: same-residue lifts `12->26`, `2->16`, and
+`13->27` are strict-open, while the tight Goddyn-Wong hinge `12->24` changes
+residue.  So a Krasner-style route cannot use raw congruence as the predicate;
+it must stabilize the contact/root and endpoint-owner packet, and emit
+height/owner debt when that packet changes.
+
+The second live proof hook is Sophie-Germain factorization: quartic
+height/flex debt may split into two quadratic sign channels before entering
+the HYP-3404 covering-flex Hessian or Worpitzky/Faulhaber ladder.  Meissel-
+Mertens remains denominator-tail entropy, HLW remains no-scalar-shadow hygiene,
+and Ramanujan-Soldner remains zero-renormalization hygiene.
+
+Tournament vertices are proof carriers/guardrails, not constants, runners, or
+arcs.  Priority path:
+`owner-residue-height first-failure theorem -> Krasner owner-lift stability
+gate -> Sophie-Germain quartic factor split -> Meissel-Mertens denominator
+entropy -> HLW no-scalar-shadow -> Ramanujan-Soldner zero anchor -> p-adic
+HLW firewall -> raw exotic-constant scalar`.
+
+Next hook: extend HYP-3406 beyond `(72,20)` until `residue+owner_support` first fails; for that
+first failure, record the p-adic/contact-root stability word and attempt the
+Sophie-Germain quartic split on the lost height/flex coordinate.
+
+-> HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3401,
+HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260, HYP-3257,
+HYP-2982, HYP-2214, LTI-369, LTT-269, OPEN-Q-108.

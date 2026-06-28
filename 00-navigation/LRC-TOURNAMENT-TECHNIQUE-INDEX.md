@@ -7873,3 +7873,39 @@ quotient_legality_status
   HYP-3260, HYP-3259, HYP-3258, HYP-3257, HYP-3253, HYP-3151, HYP-3150,
   HYP-3147, HYP-3143, HYP-3124, HYP-3123, HYP-2982, HYP-2963, THM-523,
   LTI-368, T1368, OPEN-Q-108.
+
+## LTT-269: Exotic Guardrail Carrier Tournament
+
+- **Move:** Treat the prompt's named exotic objects as guardrail carriers only
+  after they declare the LRC predicate and sidecar they preserve.  HYP-3408 is
+  the exact guardrail companion to incoming HYP-3407's boundary-uniformization
+  cut stability atlas.  It ranks eight carriers: owner-residue-height
+  first-failure theorem, Krasner owner-lift stability gate, Sophie-Germain
+  quartic factor split, Meissel-Mertens denominator entropy normalizer, HLW
+  no-scalar-shadow guardrail, Ramanujan-Soldner zero-renormalization anchor,
+  p-adic HLW claim firewall, and raw exotic constants as negative control.
+- **LRC use:** The tournament pushes the prompt back into the active
+  HYP-3406 route.  Exact AP-collar moves show same-residue lifts `12->26`,
+  `2->16`, and `13->27` are strict-open, while the tight `12->24` hinge
+  changes residue.  So the live Krasner analogy is contact/root and
+  endpoint-owner stability, not raw p-adic closeness.  The live Sophie-Germain
+  use is an exact quartic-to-quadratic split for height/flex obstructions.
+- **Preserves:** theorem-exit class, endpoint-owner support, height/flex,
+  p-adic contact-root stability, denominator-tail labels, and exact finite
+  witness mass when those are carried explicitly.
+- **Forgets / guardrail:** named constants, transcendence slogans, and
+  loglog/Mertens scalars forget packet route, owner support, exact period, and
+  height data unless repaired by a sidecar.
+- **Pairwise observable:** weighted proof leverage with exact sidecar
+  retention.
+- **Switch/gauge:** higher weighted score first; ties use carrier-id order.
+- **Fingerprint:** `8` vertices, score histogram
+  `{-9:1, 8:1, 14:1, 21:1, 22:1, 38:1, 43:1, 45:1}`, no directed
+  `3`-cycles, singleton SCCs, Hamiltonian path count `1`, and priority path
+  `X00 -> X01 -> X02 -> X03 -> X04 -> X05 -> X06 -> X07`.
+- **Next hook:** after extending HYP-3406 beyond `(72,20)`, run the first
+  `residue+owner_support` failure through the Krasner owner-lift gate and the
+  Sophie-Germain quartic split before admitting any analytic scalar route.
+- **Pointers:** HYP-3408, HYP-3407, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402,
+  HYP-3401, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265, HYP-3260,
+  HYP-3257, HYP-2982, HYP-2214, LTI-369, T1369, OPEN-Q-108.

@@ -1,4 +1,4 @@
-## codex-2026-06-28 -- special-function cut signature recursion -- HYP-3407
+## codex-2026-06-28 -- boundary-uniformization cut stability -- HYP-3407
 
 Reserved HYP-3407/T1368/LTI-368/LTT-268 for a long creative synthesis pass
 downstream of HYP-3406.  The claimed artifact set is:
@@ -32425,3 +32425,55 @@ state-lift/H7 label, or a newly named finite residual.  Next computation:
 construct the owner-support Menger graph for HYP-3406's petal/single-swap
 families and pair it with the HYP-3405 AP-vs-`13->27` unit-height local disk
 table before trying an averaged analytic theorem.
+## codex-2026-06-28 -- exotic guardrail reframe atlas -- HYP-3408
+
+Synced against the live mainline first.  The local duplicate
+`HYP-3301/T1356/LTI-356/LTT-256` checkpoint conflicted with incoming shared
+work, and mainline already contained stronger C6/CRT and owner-support lanes
+under HYP-3310/HYP-3311/HYP-3406, so the superseded local checkpoint was
+skipped during rebase.  A later push revealed that incoming mainline had
+claimed `HYP-3407/T1368/LTI-368/LTT-268` for boundary-uniformization cut signature
+recursion, so this exact guardrail companion was renumbered to
+`HYP-3408/T1369/LTI-369/LTT-269`.
+
+New exact scout:
+`04-computation/lrc14_exotic_guardrail_reframe_atlas_codex_20260628.py`.
+Stored output:
+`05-knowledge/results/lrc14_exotic_guardrail_reframe_atlas_codex_20260628.out`.
+New hypothesis and reflection:
+`05-knowledge/hypotheses/HYP-3408-lrc14-exotic-guardrail-reframe-atlas.md`
+and
+`07-reflections/lrc14-exotic-guardrail-reframe-atlas-codex-20260628.md`.
+
+Core result: the exotic prompt is useful only after conversion to sidecar
+obligations.  Same-residue lifts `12->26`, `2->16`, and `13->27` are
+strict-open, while the tight Goddyn-Wong hinge `12->24` changes residue.
+Therefore Krasner-style reasoning must stabilize the contact/root and
+endpoint-owner packet, not raw p-adic closeness.  Sophie-Germain factorization
+is the second live hook: it exactly splits quartic height/flex debt into two
+quadratic channels for the unit-height obstruction and covering-flex Hessian.
+Meissel-Mertens is a denominator-tail normalizer, HLW is a no-scalar-shadow
+guardrail, and Ramanujan-Soldner is zero-renormalization hygiene.
+
+Tournament Analysis uses proof carriers/guardrails as vertices.  Priority path:
+
+```text
+X00 owner-residue-height first-failure theorem
+-> X01 Krasner owner-lift stability gate
+-> X02 Sophie-Germain quartic factor split
+-> X03 Meissel-Mertens denominator entropy normalizer
+-> X04 HLW no-scalar-shadow guardrail
+-> X05 Ramanujan-Soldner zero-renormalization anchor
+-> X06 p-adic HLW claim firewall
+-> X07 raw exotic-constant scalar
+```
+
+Next hook: extend HYP-3406 beyond `(72,20)` until `residue+owner_support` first fails; for the
+first failure, record the p-adic/contact-root stability word and try the
+Sophie-Germain quartic split before adding any analytic scalar route.
+
+Rebase integration: incoming HYP-3406 later extended the scan to `(72,20)` and
+`2431` rows.  `residue+owner_support` still has zero mixed fibers, and the new
+frontier exposes a second height-persistent owner leak around `petal 10->20`
+versus two-drop/add-20 covering rows.  HYP-3408 now starts its next hook beyond
+that frontier.

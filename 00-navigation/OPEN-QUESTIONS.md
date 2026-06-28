@@ -1,6 +1,6 @@
 # Open Questions
 
-**OPEN-Q-108 HYP-3407 special-function cut signature recursion addendum:**
+**OPEN-Q-108 HYP-3407 boundary-uniformization cut stability addendum:**
 HYP-3407 reserves an executable creative synthesis route downstream of
 HYP-3406.  The intended move is to treat Bring radicals, Schwarz-Christoffel
 cut maps, Barban-Davenport-Halberstam variance, Menger cuts,
@@ -6391,3 +6391,43 @@ This is the current finite bridge between the creative index/Galois/sheaf
 reframes and a rigorous LRC14 proof packet. -> HYP-3403, HYP-3402, HYP-3401, HYP-3400, HYP-3311,
 HYP-3310, HYP-3301, HYP-3265, HYP-3260, HYP-3258, HYP-3256, HYP-3254,
 HYP-3252, HYP-3249, LTI-364, LTT-264, T1364, OPEN-Q-108.
+
+## OPEN-Q-108 addendum (codex-2026-06-28): exotic guardrail sidecars
+
+HYP-3408 filters the Ramanujan-Soldner, Sophie Germain,
+Hermite-Lindemann-Weierstrass, Krasner, and Meissel-Mertens prompt through the
+current HYP-3406 owner-support repair route, as the exact guardrail companion
+to incoming HYP-3407's boundary-uniformization cut stability atlas.  Named
+constants are not proof vertices.  The live vertices are proof obligations.
+
+Concrete readout:
+
+```text
+12->24 is boundary-tight but changes residue;
+12->26, 2->16, and 13->27 keep residue but are strict-open.
+```
+
+Incoming HYP-3406 now extends this test through `(single_limit,two_swap_limit)
+= (72,20)` with `2431` rows, `residue+owner_support` still exact, and a second
+height-persistent owner leak around `petal 10->20` versus two-drop/add-20 rows.
+
+Open task: extend HYP-3406 beyond `(72,20)` until `residue+owner_support`
+first fails, if it does.  For that first failure, record:
+
+```text
+p-adic/contact-root stability word
+endpoint-owner support word
+height/flex word
+Sophie-Germain quartic factor channels
+denominator-tail labels only if a tail estimate is used
+```
+
+The Krasner-style criterion should be stated as owner/contact stability, not
+as raw p-adic closeness.  The Sophie-Germain identity should be tested as a
+quartic-height obstruction splitter for HYP-3405's unit-height leak and
+HYP-3404's covering-flex Hessian route.  Meissel-Mertens, HLW, and
+Ramanujan-Soldner remain guardrails until converted to exact finite
+inequalities. -> HYP-3408, HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402,
+HYP-3401, HYP-3407, HYP-3311, HYP-3310, HYP-3301, HYP-3266, HYP-3265,
+HYP-3260, HYP-3257, HYP-2982, HYP-2214, LTI-369, LTT-269, T1369,
+OPEN-Q-108.
