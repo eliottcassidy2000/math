@@ -1,3 +1,27 @@
+## mac-mini-2026-06-28-S77 -- pushes & pulls on the hard core: the D_7 unification + the EXPLICIT covering-witness construction (Phi_{14d}); the imaginary-quadratic-norm PULL
+
+Owner: many creative attacks on the hard core, a long session of pushes and pulls, inspired by concurrent work.
+HYP-3240 + reflection pushes-and-pulls-on-the-hard-core + script lrc_hardcore_attacks_macmini_S77.py. Hard core =
+the CORE construction (measure-zero tight configs; measure blind, S75f Vitali wall). Inspired by kps S31av
+(14=|D_7|, Borsuk-Ulam, p mod 4 SOS) + S31au (even-odd=positive-negative, Q(sqrt-7) wall).
+
+PUSH 1 (D_7 unification): 14=|D_7|=|C_7 x| Z_2 unifies my modes -- C_7(rotation)=Legendre/de Moivre/Phi_7;
+Z_2(reflection)=Eisenstein/Phi_2 fold; cap modes = D_7 irreps (trivial+sign + three 2-dim); kps's Borsuk-Ulam =
+topological Brouwer (S75f). The dihedral D_7 is the single symmetry behind both recursion modes.
+
+PUSH 2 (covering-witness construction, VERIFIED -- the strongest push): the covering-tight locus = dilations
+d*{1..13} (contain a mult of 14). The apex-7 floor blocks t=a/14 but PROMOTES the witness to the finer cyclotomic
+grid t=1/(14d) in Phi_{14d} (M=1/14 verified d=2,3,4,7,14). So the covering-tight DILATION case is CONSTRUCTED by
+an explicit cyclotomic witness -- the Vitali-core 'construction not measure' made concrete for the covering case.
+
+PULL 1 (honest dead end): the dip is NOT a Q(sqrt-7) norm a^2+ab+2b^2 (dip_8 num 1081=23*47, 47 inert/non-QR mod 7,
+odd power) -- the imaginary-quadratic-norm positivity route is closed. (The Q(sqrt-7) wall is still the right
+NON-SOS diagnosis, kps, but the dip's positivity is not norm-positivity.)
+
+NARROWED hard core: {dilations: CONSTRUCTED via t=1/(14d)} + {GW sporadics: topological/specific witness, open} +
+{tight-locus finiteness, open} + {bulk equidistribution, open}. The dilation construction is a genuine reduction.
+NOT a proof; LRC(14) open. (HYP NOTE: my S76 HYP-3239 collides with kps-S31av HYP-3239 (14=|D_7|); both pushed.)
+
 ## mac-mini-2026-06-28-S76 -- the two proof targets are ONE (consec=bimodal/φ⁴ extremizer); the even/odd + positive/negative dualities = the inclusion-exclusion parity (Eisenstein/Legendre)
 
 Owner: extend/finalize the Vitali-wall work; use the even/odd + positive/negative dualities; work two remaining

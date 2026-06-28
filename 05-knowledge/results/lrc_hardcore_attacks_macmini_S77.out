@@ -1,0 +1,17 @@
+PUSH 2 -- covering-tight dilation witness t=1/(14d) (Phi_{14d}); apex-7 floor promotes off the 14-grid:
+  d= 2: mult-of-14 in set=[14]; t=1/28; M=1/14 (=1/14? True)
+  d= 3: mult-of-14 in set=none; t=1/42; M=1/14 (=1/14? True)
+  d= 4: mult-of-14 in set=[28]; t=1/56; M=1/14 (=1/14? True)
+  d= 5: mult-of-14 in set=none; t=1/70; M=1/14 (=1/14? True)
+  d= 7: mult-of-14 in set=[14, 28, 42, 56, 70, 84]; t=1/98; M=1/14 (=1/14? True)
+  d=14: mult-of-14 in set=[14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 182]; t=1/196; M=1/14 (=1/14? True)
+  => covering-tight DILATION case CONSTRUCTED: explicit witness t=1/(14d).
+
+PULL 1 -- dip Q(sqrt-7)-norm test (a^2+ab+2b^2, disc -7):
+  1081=23*47 (dip_8 num): norm? None
+  23 (2 mod7, QR, split): norm? (-5, 2)
+  47 (5 mod7, non-QR, inert): norm? None
+  => 1081 NOT a norm (47 inert at odd power); the dip is not a clean imaginary-quadratic norm. PULL.
+
+PUSH 1 -- 14=|D_7|=|C_7 x| Z_2: C_7=Legendre/de Moivre/Phi_7 (rotation); Z_2=Eisenstein/Phi_2 (reflection).
+  cap modes = D_7 irreps (trivial+sign from Z_2; three 2-dim from C_7); Borsuk-Ulam (kps) = topological Brouwer (S75f).
