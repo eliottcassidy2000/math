@@ -1,3 +1,29 @@
+## kind-pasteur-2026-06-28-S31ar -- the three signed recursions ARE the subfield lattice of Q(zeta_7); the cubic de Moivre is the missing mode
+
+Owner: see the similarities among the three signed recursions (Mobius A+B+C-D-E-F+G, Eisenstein A+B-C even,
+Legendre A+B+D-C-E-F+G odd) and extend; find other relevant ones via deep dive. (Converges w/ mac-mini-S75c
+on the interlocking recursions / three modes at the apex.) HYP-3217:
+
+- **DECODED (deep dive of codex-S114/HYP-2901):** the three modes reproduce `h(n)=floor((n-1)^2/4)` and ARE
+  **Gaussian-period/character recursions = the SUBFIELD LATTICE of Q(zeta_7)** (divisors of 6=phi(7)) x the
+  2-adic Eisenstein: deg1=Q(Mobius/mu); deg2=Q(sqrt-7)(Legendre, quadratic chi_7, Gauss sum sqrt-7 VERIFIED);
+  **deg3=Q(cos2pi/7)(the CUBIC de Moivre mode = my HYP-3216, the project's MISSING 4th mode)**; deg6=Q(zeta_7)
+  (sextic = Fejer F_7=(de Moivre)^2, HYP-3214).
+- **CUBIC MODE VERIFIED:** the chi_3 (order-3 char mod 7) cubic cosets {1,6}/{2,5}/{3,4} = zeta^j+zeta^-j =
+  2cos(2pi j/7) = the de Moivre angles EXACTLY. So HYP-3216's moment-order ladder IS the order-3-character
+  recursion, named as a signed recursion.
+- **UNIFYING NUMBER = cyclotomic degree (p-1)/2:** the Legendre Venn-DEPTH ((p-1)/2-set Venn; VERIFIED p=3,5,7;
+  p=5 -> `A+B-C` the 2-set!) = the moment-order ladder depth (HYP-3216) = the de Moivre degree = #Gaussian
+  periods. **A+B-C is BOTH the even/Eisenstein mode AND the p=5 Legendre** -- one Venn growing with the apex.
+- **14=2*7 = Eisenstein(2-adic fold) x [Q(zeta_7) subfield tower Mobius->Legendre->CUBIC->sextic]** = HYP-3216's
+  two interlocking recursions. OTHER MODES: mac-mini-S75b Farey = the L-function (Diophantine) face
+  (Mobius=zeta, Legendre=L(chi_7), cubic=L(chi_3)); Worpitzky/Eulerian odd-dip (HYP-3147)=cubic-odd residue;
+  h(n) pronic/square = the 2-vs-7 split. EXTENSION: the L-value ladder (cap/dip=L(1-n,chi), disc 7^2).
+
+NET: the project's three modes + my recent threads = ONE object (the subfield lattice of Q(zeta_7) x 2-adic);
+the cubic de Moivre is the named missing mode; the cyclotomic degree (p-1)/2 unifies the Venn-depth, the
+ladder, and the periods. => HYP-3217; reflection the-three-modes-are-the-subfield-lattice-...
+
 ## mac-mini-2026-06-28-S75c -- INTERLOCKING recursions: the cap kernel is modulus-covariant down to the apex n/2=7, where it BREAKS (the three modes concentrate at the Eisenstein fold)
 
 Owner: interlocking recursions + tiling/half-tiling + moment-order depth, leveraged for LRC. HYP-3232 + reflection
