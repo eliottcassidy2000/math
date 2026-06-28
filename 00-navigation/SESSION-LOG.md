@@ -45,6 +45,38 @@ is approximate; interlacing is the open content.
 CONVERGENCE: codex HYP-3200 (consec maximizes Sigma kappa2 exactly, 0/3431) = my Angle A target; kps S31ak picked
 up my Joukowski/de Moivre cyclotomic bridge (WHY n=14=cubic cyclotomic). NOT a proof; LRC(14) open. Both targets
 now in classical spectral (Perron) / stability (Hermite-Biehler/Eulerian) language.
+## codex-2026-06-28 -- HYP-3202 k=8 covariance layer/trap attack angles
+
+Owner: try new creative proof angles for remaining LRC14 proof targets,
+building directly on the HYP-3161/HYP-3200 ferromagnetic covariance frontier.
+
+- Added `04-computation/lrc_k8_covariance_attack_angles_codex_20260628.py`,
+  an exact Fraction scout over the anchored bounded k=8 bank
+  `E={0} union A`, `A subset {1,...,14}`, `|A|=7`.
+- **Angle B, strongest new route:** split `Sigma kappa_2` into cyclic-distance
+  covariance layers among the six inner sectors.  Consecutive speeds have
+  layer values `308509/1080450`, `547577/2160900`, and `225577/1234800`.
+  Each layer has `0` primitive beaters; the all-bank tie in each layer is only
+  the nonprimitive even-AP dilation.
+- **Angle A, complementary route:** treat `Sigma kappa_2` as an exchange
+  energy.  Adjacent +/-1 moves leave `364` stuck rows, gap-fill moves leave
+  `19`, and arbitrary one-point exchange leaves `11` traps plus consecutive as
+  the `12` local maxima.  Best-climb endpoints have max depth `7`; consecutive
+  has the largest basin (`1853` rows).
+- **Guardrail:** raw ferromagnetism is not enough.  There are `19` primitive
+  rows with all `15` pair covariances nonnegative, so plain FKG or positive
+  association cannot prove the upper extremality by itself.
+- Net: two immediate proof tasks are now concrete: prove the three
+  distance-layer covariance inequalities, or prove exchange-gradient
+  improvement off the finite trap manifold and discharge the `11` traps by
+  layer deficits, reflection/Perron bounds, or finite-resolvent sidecars.
+
+Result stored in
+`05-knowledge/results/lrc_k8_covariance_attack_angles_codex_20260628.out`;
+detail file HYP-3202.  Tournament Analysis uses proof moves/signals as
+vertices, not runners or sectors, with priority path led by
+`cyclic_distance_covariance_layers -> exchange_gradient_bulk ->
+finite_critical_trap_manifold`.
 
 ## kind-pasteur-2026-06-27-S31ak -- the cyclotomic ideal: Joukowski/de Moivre + WHY n=14 = cubic cyclotomic degree
 

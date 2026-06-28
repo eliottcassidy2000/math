@@ -6115,3 +6115,38 @@ quotient_legality_status
   HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3146, HYP-3142, HYP-3140,
   HYP-3132, HYP-3122, HYP-3109, HYP-3092, THM-577, LTI-301, LTT-201, T1301,
   OPEN-Q-108.
+
+## LTT-202: k=8 Covariance Layer/Trap Tournament
+
+- **Move:** Treat proof moves/signals as tournament vertices: cyclic-distance
+  covariance layers, exchange-gradient bulk, finite critical-trap manifold,
+  ferromagnetic positive-pair sidecar, raw total covariance scalar, plain FKG,
+  entropy/min-description, and the `1/7` associator scalar.
+- **LRC use:** HYP-3202 turns HYP-3200's surviving primitive
+  `Sigma kappa_2` target into two attack routes.  First, split the `15` pair
+  covariances by cyclic distance `1,2,3`; consecutive speeds have layer values
+  `308509/1080450`, `547577/2160900`, and `225577/1234800`, with no primitive
+  beaters in any layer.  Second, use exchange-gradient moves: adjacent moves
+  leave `364` stuck rows, gap-fill leaves `19`, and arbitrary one-point
+  exchange leaves `11` traps plus consecutive as the local maxima.
+- **Preserves:** layer-specific covariance payload, primitive/dilation equality
+  status, exchange-neighbor relation, finite trap identity, best-climb basin
+  data, and the positive-pair guardrail.
+- **Forgets / guardrail:** runner, sector, or arc vertices are not the primary
+  quotient here; a raw FKG/positive-association theorem forgets location of
+  covariance mass, since `19` primitive rows have all `15` pair covariances
+  nonnegative.
+- **Tournament readout:** the exact scout is transitive with one Hamiltonian
+  path:
+  `cyclic_distance_covariance_layers -> exchange_gradient_bulk ->
+  finite_critical_trap_manifold -> ferromagnetic_positive_pair_sidecar ->
+  raw_total_covariance_scalar -> plain_FKG_monotonicity ->
+  entropy_min_description -> one_seventh_associator_scalar`.
+- **Next hook:** Prove three distance-layer inequalities, or prove bulk
+  exchange-gradient improvement away from the named traps and discharge each
+  trap by a distance-layer deficit, reflection/Perron bound, or finite
+  resolvent sidecar.
+- **Pointers:** HYP-3202, HYP-3200, HYP-3163, HYP-3201, HYP-3161, HYP-3160, HYP-3154, HYP-3153,
+  HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139,
+  HYP-3138, HYP-3132, HYP-3122, THM-577, LTI-302, LTT-202, T1302,
+  OPEN-Q-108.

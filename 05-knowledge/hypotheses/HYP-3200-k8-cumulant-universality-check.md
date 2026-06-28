@@ -113,6 +113,11 @@ total empty-sector covariance Sigma kappa_2, then attach the odd Worpitzky /
 associator residual without forgetting its sidecar coordinates.
 ```
 
+HYP-3202 refines this task into two concrete proof routes: prove the three
+cyclic-distance covariance layer inequalities separately, or prove an
+exchange-gradient lemma away from the finite `11`-trap critical manifold and
+then discharge those traps by layer deficits or finite sidecars.
+
 ## Artifacts
 
 - Script: `04-computation/lrc_k8_cumulant_universality_codex_20260628.py`
@@ -120,7 +125,7 @@ associator residual without forgetting its sidecar coordinates.
 
 ## Links
 
-HYP-3200 refines HYP-3160 and should be read with HYP-3161, HYP-3154,
+HYP-3200 refines HYP-3160 and should be read with HYP-3202, HYP-3161, HYP-3154,
 HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3147, HYP-3144, HYP-3142,
 HYP-3139, HYP-3138, HYP-3132, HYP-3122, THM-577, and the Pascal-pair-mass
 `2002=C(14,5)` thread.

@@ -29,6 +29,28 @@ defect as a Lee-Yang stability sidecar; do not replace it by raw root-radius
 numerology. -> HYP-3161, HYP-3154, HYP-3199, HYP-3160, HYP-3153, HYP-3152,
 HYP-3151, HYP-3150,
 HYP-3147, HYP-3142, HYP-3139, THM-577, LTI-279, LTT-177, T1218,
+
+**OPEN-Q-108 HYP-3202 k=8 covariance attack-angle addendum:**
+HYP-3202 refines the HYP-3200 primitive `Sigma kappa_2` target into two
+proof programs over the exact bounded bank.  The cyclic-distance route splits
+the `15` pair covariances among the six inner sectors into distance layers
+`d=1,2,3`.  Consecutive speeds have layer values `308509/1080450`,
+`547577/2160900`, and `225577/1234800`; each layer has `0` primitive beaters
+and only the nonprimitive even-AP dilation tie in the all-bank.  The exchange
+route treats covariance as an energy: adjacent +/-1 moves leave `364` stuck
+rows, gap-fill moves leave `19`, and arbitrary one-point exchange leaves
+`11` named traps plus consecutive as local maxima.
+
+Open task: prove either the three layer inequalities
+`D1(E)<=D1(consec)`, `D2(E)<=D2(consec)`, `D3(E)<=D3(consec)`, or prove a
+bulk exchange-gradient lemma away from the finite trap manifold and discharge
+the traps by layer deficits, reflection/Perron bounds, or finite-resolvent
+sidecars.  Guardrail: positive association is not enough, since `19`
+primitive rows have all `15` pair covariances nonnegative. -> HYP-3202,
+HYP-3200, HYP-3161, HYP-3160, HYP-3154, HYP-3153, HYP-3152, HYP-3151,
+HYP-3150, HYP-3147, HYP-3144, HYP-3142, HYP-3139, HYP-3138, HYP-3132,
+HYP-3122, THM-577, T1302, LTI-302, LTT-202, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3200 k=8 cumulant universality addendum:**
 HYP-3200 turns the HYP-3160/S31ai covariance and associator claims into an
 exact bounded-bank census, now read alongside HYP-3161/S31aj's broader

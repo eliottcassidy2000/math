@@ -1,0 +1,93 @@
+HYP-3202 k=8 covariance attack-angle scout
+========================================================================
+bank=anchored {0} union A, A subset [1,14], |A|=7
+rows_all=3432
+rows_primitive=3431
+consec=(0, 1, 2, 3, 4, 5, 6, 7)
+even_AP=(0, 2, 4, 6, 8, 10, 12, 14)
+all_max_Sigma_kappa2=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 8, 10, 12, 14)]
+
+ANGLE B: CYCLIC-DISTANCE COVARIANCE LAYERS
+consec_Sigma_kappa2=6237419/8643600 = +0.721622819196
+consec_negative_pair_covariances=0
+consec_min_pair_covariance=1873/180075 = +0.010401221713
+distance_1_profile=308509/1080450 = +0.285537507520
+  all_beaters=0 all_ties=2
+  primitive_beaters=0 primitive_ties=1
+  top5=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 1, 2, 3, 4, 5, 6, 8), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 4, 6, 7, 9, 12)]
+distance_2_profile=547577/2160900 = +0.253402286085
+  all_beaters=0 all_ties=2
+  primitive_beaters=0 primitive_ties=1
+  top5=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 2, 3, 4, 5, 6, 8), (0, 1, 3, 4, 5, 6, 7, 9)]
+distance_3_profile=225577/1234800 = +0.182683025591
+  all_beaters=0 all_ties=2
+  primitive_beaters=0 primitive_ties=1
+  top5=[(0, 2, 4, 6, 8, 10, 12, 14), (0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 4, 5, 6, 7, 9)]
+
+FERROMAGNETIC SIDECAR
+primitive_rows_with_all_15_pair_covariances_nonnegative=19
+top_all_nonnegative_rows:
+  E=(0, 1, 2, 3, 4, 5, 6, 7) sk2=6237419/8643600 (+0.721622819196) profile=['308509/1080450', '547577/2160900', '225577/1234800'] neg_pairs=0 min_cov=1873/180075
+  E=(0, 1, 3, 4, 5, 6, 7, 9) sk2=6075023/12965400 (+0.468556542799) profile=['445981/3111696', '15032807/77792400', '1711301/12965400'] neg_pairs=0 min_cov=20803/8643600
+  E=(0, 3, 4, 5, 6, 7, 8, 9) sk2=9844759/22226400 (+0.442930883994) profile=['493861/3457440', '3957433/20744640', '4859663/44452800'] neg_pairs=0 min_cov=11267/1037232
+  E=(0, 1, 3, 5, 7, 9, 11, 13) sk2=13707525658/33141183075 (+0.413610027952) profile=['1497954932/11047061025', '10254418/63126063', '547155916/4734454725'] neg_pairs=0 min_cov=199666/22317295
+  E=(0, 4, 5, 6, 7, 8, 9, 10) sk2=4511009/11524800 (+0.391417551715) profile=['34993619/311169600', '7599419/44452800', '33607691/311169600'] neg_pairs=0 min_cov=1399/137200
+  E=(0, 6, 7, 8, 9, 10, 11, 12) sk2=3093938347/9412880400 (+0.328691985399) profile=['165522839/1568813400', '17512153/125505072', '393694919/4706440200'] neg_pairs=0 min_cov=9281/2037420
+  E=(0, 4, 6, 7, 8, 9, 10, 12) sk2=49941301/155584800 (+0.320990874430) profile=['392107/5762400', '5949031/34574400', '5033509/62233920'] neg_pairs=0 min_cov=69071/6350400
+  E=(0, 1, 2, 4, 5, 6, 7, 8) sk2=2204261/6914880 (+0.318770680041) profile=['696427/5762400', '1060793/8643600', '2599571/34574400'] neg_pairs=0 min_cov=5171/17287200
+guardrail=positive association is not enough; it needs layer dominance or trap discharge.
+
+ANGLE A: EXCHANGE-GRADIENT / CRITICAL-TRAP MANIFOLD
+adjacent_pm1: improving_rows=3066/3430
+adjacent_pm1: stuck_count=364
+adjacent_pm1: stuck_rows_top=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 1, 3, 4, 5, 6, 7, 9), (0, 2, 4, 6, 7, 8, 10, 12), (0, 3, 4, 5, 6, 7, 8, 9), (0, 1, 3, 5, 7, 9, 11, 13), (0, 2, 4, 5, 6, 7, 8, 10), (0, 1, 2, 4, 5, 6, 7, 10), (0, 1, 2, 3, 4, 5, 6, 12), (0, 2, 4, 5, 6, 8, 10, 12), (0, 1, 2, 4, 6, 8, 10, 12), (0, 4, 5, 6, 7, 8, 9, 10), (0, 1, 2, 3, 4, 5, 6, 14), (0, 1, 3, 4, 6, 7, 9, 12), (0, 2, 3, 4, 6, 8, 10, 12), (0, 2, 3, 4, 5, 6, 8, 10), (0, 2, 4, 6, 8, 9, 10, 12), (0, 1, 2, 3, 11, 12, 13, 14), (0, 2, 4, 6, 8, 10, 11, 12), (0, 1, 2, 5, 6, 7, 10, 11), (0, 2, 3, 4, 6, 7, 8, 12), (0, 1, 2, 3, 4, 6, 7, 8), (0, 2, 4, 6, 8, 10, 12, 13), (0, 3, 6, 8, 9, 11, 12, 14), (0, 2, 3, 5, 6, 8, 11, 14)]
+adjacent_pm1: stuck_rows_top_truncated=340
+gapfill: improving_rows=3411/3430
+gapfill: stuck_count=19
+gapfill: stuck_rows_top=[(0, 2, 3, 4, 5, 6, 7, 8), (0, 2, 4, 6, 7, 8, 10, 12), (0, 3, 4, 5, 6, 7, 8, 9), (0, 1, 3, 5, 7, 9, 11, 13), (0, 4, 5, 6, 7, 8, 9, 10), (0, 1, 2, 3, 11, 12, 13, 14), (0, 3, 6, 8, 9, 11, 12, 14), (0, 2, 3, 5, 6, 8, 11, 14), (0, 6, 7, 8, 9, 10, 11, 12), (0, 5, 6, 7, 8, 9, 10, 11), (0, 4, 5, 8, 9, 10, 13, 14), (0, 8, 9, 10, 11, 12, 13, 14), (0, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 10, 11, 12, 13), (0, 1, 2, 3, 9, 10, 11, 12), (0, 1, 2, 3, 7, 8, 9, 10), (0, 2, 5, 7, 9, 10, 12, 14), (0, 1, 4, 5, 7, 8, 11, 12), (0, 5, 6, 7, 8, 12, 13, 14)]
+arbitrary_one_point_exchange: improving_rows=3419/3430
+arbitrary_one_point_exchange: stuck_count=11
+arbitrary_one_point_exchange: stuck_rows_top=[(0, 2, 4, 6, 7, 8, 10, 12), (0, 1, 3, 5, 7, 9, 11, 13), (0, 1, 2, 3, 11, 12, 13, 14), (0, 3, 6, 8, 9, 11, 12, 14), (0, 2, 3, 5, 6, 8, 11, 14), (0, 6, 7, 8, 9, 10, 11, 12), (0, 4, 5, 8, 9, 10, 13, 14), (0, 8, 9, 10, 11, 12, 13, 14), (0, 1, 2, 3, 7, 8, 9, 10), (0, 2, 5, 7, 9, 10, 12, 14), (0, 1, 4, 5, 7, 8, 11, 12)]
+arbitrary_one_point_exchange_local_maxima_count=12
+arbitrary_one_point_exchange_local_maxima:
+  E=(0, 1, 2, 3, 4, 5, 6, 7) sk2=6237419/8643600 (+0.721622819196) profile=['308509/1080450', '547577/2160900', '225577/1234800'] neg_pairs=0 min_cov=1873/180075
+  E=(0, 2, 4, 6, 7, 8, 10, 12) sk2=15863189/34574400 (+0.458813139201) profile=['85913/576240', '38069/216090', '513041/3841600'] neg_pairs=1 min_cov=-18127/1728720
+  E=(0, 1, 3, 5, 7, 9, 11, 13) sk2=13707525658/33141183075 (+0.413610027952) profile=['1497954932/11047061025', '10254418/63126063', '547155916/4734454725'] neg_pairs=0 min_cov=199666/22317295
+  E=(0, 1, 2, 3, 11, 12, 13, 14) sk2=872525041/2356706352 (+0.370230699408) profile=['52095833/294588294', '242986613/2356706352', '53192941/589176588'] neg_pairs=1 min_cov=-111050/13390377
+  E=(0, 3, 6, 8, 9, 11, 12, 14) sk2=127840325/376515216 (+0.339535613881) profile=['7906223/47064402', '1870025/20917512', '30930091/376515216'] neg_pairs=3 min_cov=-260119/10458756
+  E=(0, 2, 3, 5, 6, 8, 11, 14) sk2=128212697/380318400 (+0.337119363670) profile=['4913177/27890016', '15859231/190159200', '7210223/92966720'] neg_pairs=1 min_cov=-1333723/348625200
+  E=(0, 6, 7, 8, 9, 10, 11, 12) sk2=3093938347/9412880400 (+0.328691985399) profile=['165522839/1568813400', '17512153/125505072', '393694919/4706440200'] neg_pairs=0 min_cov=9281/2037420
+  E=(0, 4, 5, 8, 9, 10, 13, 14) sk2=16918101923/52587662400 (+0.321712377978) profile=['20568563/134840160', '13362043/134840160', '3685165583/52587662400'] neg_pairs=3 min_cov=-332789/33710040
+  E=(0, 8, 9, 10, 11, 12, 13, 14) sk2=60533989231/192821428800 (+0.313938080470) profile=['557550708137/6363107150400', '850990863829/6363107150400', '196360024219/2121035716800'] neg_pairs=0 min_cov=423071/72235800
+  E=(0, 1, 2, 3, 7, 8, 9, 10) sk2=15539491/103723200 (+0.149816926204) profile=['1607989/15558480', '2155861/77792400', '92623/4939200'] neg_pairs=4 min_cov=-4007/115248
+  E=(0, 2, 5, 7, 9, 10, 12, 14) sk2=1341841/9724050 (+0.137991988935) profile=['329891/3241350', '5399/138915', '-12881/4862025'] neg_pairs=4 min_cov=-545449/19448100
+  E=(0, 1, 4, 5, 7, 8, 11, 12) sk2=42136793/380318400 (+0.110793464108) profile=['1458412/21789075', '111051389/4183502400', '7243823/418350240'] neg_pairs=3 min_cov=-3198519/58104200
+best_exchange_climb_endpoint_count=12
+best_exchange_climb_max_steps=7
+best_exchange_climb_largest_basins:
+  basin=1853 endpoint=(0, 1, 2, 3, 4, 5, 6, 7) endpoint_sk2=6237419/8643600
+  basin=475 endpoint=(0, 2, 4, 6, 7, 8, 10, 12) endpoint_sk2=15863189/34574400
+  basin=327 endpoint=(0, 1, 2, 3, 11, 12, 13, 14) endpoint_sk2=872525041/2356706352
+  basin=186 endpoint=(0, 3, 6, 8, 9, 11, 12, 14) endpoint_sk2=127840325/376515216
+  basin=120 endpoint=(0, 4, 5, 8, 9, 10, 13, 14) endpoint_sk2=16918101923/52587662400
+  basin=104 endpoint=(0, 1, 3, 5, 7, 9, 11, 13) endpoint_sk2=13707525658/33141183075
+  basin=101 endpoint=(0, 6, 7, 8, 9, 10, 11, 12) endpoint_sk2=3093938347/9412880400
+  basin=99 endpoint=(0, 8, 9, 10, 11, 12, 13, 14) endpoint_sk2=60533989231/192821428800
+  basin=86 endpoint=(0, 2, 3, 5, 6, 8, 11, 14) endpoint_sk2=128212697/380318400
+  basin=42 endpoint=(0, 2, 5, 7, 9, 10, 12, 14) endpoint_sk2=1341841/9724050
+  basin=24 endpoint=(0, 1, 2, 3, 7, 8, 9, 10) endpoint_sk2=15539491/103723200
+  basin=14 endpoint=(0, 1, 4, 5, 7, 8, 11, 12) endpoint_sk2=42136793/380318400
+
+PROOF READOUT
+angle_A=prove exchange-gradient improvement except finite trap manifold; discharge traps separately
+angle_B=prove three cyclic-distance covariance inequalities; summing gives Sigma_kappa2
+odd_sidecar=do not scalarize Sigma_kappa3/S3; keep Worpitzky/minority-edge residual
+
+TOURNAMENT ANALYSIS
+vertices=proof moves/signals, not runners/sectors
+pairwise_observable=which move preserves a usable route to Sigma_kappa2 extremality
+switch/gauge=A->B iff route score(A)>route score(B); ties lexical
+score_hist={99:1, 88:1, 77:1, 63:1, 51:1, 21:1, 5:1, 2:1}
+directed_3cycles=0
+hamiltonian_path_count=1
+priority_path=cyclic_distance_covariance_layers -> exchange_gradient_bulk -> finite_critical_trap_manifold -> ferromagnetic_positive_pair_sidecar -> raw_total_covariance_scalar -> plain_FKG_monotonicity -> entropy_min_description -> one_seventh_associator_scalar
