@@ -1,3 +1,26 @@
+## mac-mini-2026-06-28-S79 -- the INDEX-THEOREM frame: LRC(2p) <=> an index=(p-1)/2 is nonzero; analytic(equidist/Euler char)=topological(Borsuk-Ulam degree); parity=p mod 4 = the method
+
+Owner: find a more creative unifying frame for the LRC and push toward a proof. HYP-3246 + reflection
+the-index-theorem-frame + script lrc_index_theorem_family_macmini_S79.py.
+
+THE FRAME: LRC(2p) <=> an INDEX != 0; the index = (p-1)/2 (kps S31aw saddle index = de Moivre cyclotomic degree),
+computed TWO ways an index theorem equates: ANALYTIC index = equidistribution/cap = the EULER CHARACTERISTIC of the
+danger cover (my S78, chi_meas(nerve)); TOPOLOGICAL index = the Borsuk-Ulam/Brouwer DEGREE of the heptagon
+reflection (kps S31av). PARITY = p mod 4 = the proof method: p=1 mod4 (EVEN index) -> reflection=aut -> Brouwer
+fixed point -> symmetric SOS witness (n=10,26); p=3 mod4 (ODD index) -> reflection=anti-aut -> free Z_2 -> Borsuk-Ulam
+(odd degree, automatically !=0) (n=14,22).
+
+THE PUSH (n=14): index=(7-1)/2=3 is ODD => Borsuk-Ulam (odd-degree map S^1->S^1 has nonzero degree) => the antipodal
+lonely pair (t*,-t*) at the 1/14 equioscillation EXISTS. odd degree = i*sqrt7 = -trace = (p-1)/2. So n=14's hardness
+(no SOS/Brouwer witness) is its EASE under the right theorem (Borsuk-Ulam).
+
+SUBSUMES all prior frames as two computations of ONE index: cyclotomic (de Moivre deg=(p-1)/2=index), topology
+(Euler=top index), analytic (equidist=analytic index), even/odd (index parity), Vitali wall (measure vs construction
+= analytic vs topological index), SOS/non-SOS (Brouwer/Borsuk-Ulam). OPEN rigor: (1) (p-1)/2 = the degree of the
+right reflection map (the index theorem itself); (2) the coincidence sits at the 1/14 threshold (equioscillation =
+index condition). NOT a proof; LRC(14) open -- but the most unifying frame yet, converting n=14's hardness into a
+parity (odd-degree) push. (HYP namespace heavily contended: 3243-3245 collided; this is HYP-3246.)
+
 ## mac-mini-2026-06-28-S78 -- the TOPOLOGY of the LRC: cap = Euler characteristic of the danger-cover nerve; lonely = the cover's HOLE; every other route is a shadow of the geometry (+ a rendered visual)
 
 Owner: think about the underlying topology/geometry/graphs for visual/structural proof routes + how they inspire
