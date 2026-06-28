@@ -7803,8 +7803,10 @@ quotient_legality_status
   first residue leak is height-driven
   (`P10+GW` versus `GW-shell alias 12->132`), but the stronger stable leak is
   endpoint-owner-driven (`petal 13->26` versus the positive-open single-swap
-  `26`/`40`/`54` families).  The first leak is repaired by `v2` / exact
-  height; the stronger leak is first repaired by endpoint-owner support.
+  `26`/`40`/`54`/`68` families, plus the `(72,20)` `petal 10->20` versus
+  positive-open two-drop/add-20 fiber).  The first leak is repaired by `v2` /
+  exact height; the stronger leaks are first repaired by endpoint-owner
+  support.
 - **Preserves:** coarse theorem exit, nonunit residue, nonunit height/flex,
   unit-slot occupancy, quadratic slot sign, and endpoint-owner support when
   those are carried as packet fields.

@@ -30,7 +30,13 @@ So the enlarged-bank obstruction is not "height is missing" in any simple
 sense.  The real missing coordinate is which endpoint-owner channels are
 active at the positive boundary.  Once that owner-support word is added, the
 mixed fibers disappear on every scanned bank up through
-`single_limit=60`, `two_swap_limit=16`.
+`single_limit=72`, `two_swap_limit=20`.
+
+The frontier extension adds useful pressure: at `(72,20)` there are now two
+height-persistent mixed fibers.  The old `petal 13->26` family remains, and a
+new `petal 10->20` fiber collides with positive-open two-drop/add-20 rows even
+after exact nonunit height is retained.  The owner-support word still splits
+both.
 
 This feels like the right hidden connection to preserve:
 
@@ -49,6 +55,7 @@ HYP-3403: same-residue height debt is the stress target
 HYP-3404: residue-word breakpoint theorem is the top finite-lemma lead
 HYP-3405: AP-collar finite lemma certifies the unit-height companion case
 HYP-3406: yes, but the stronger stable leak is owner-side, not height-side
+HYP-3407: turn this sidecar chain into recursive cut/signature tests
 ```
 
 In other words: tropical height walls explain the first leak, but endpoint

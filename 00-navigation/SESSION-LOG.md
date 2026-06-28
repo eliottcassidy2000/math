@@ -32356,13 +32356,15 @@ residue-breakpoint lead plus HYP-3402/HYP-3403/HYP-3311.
 
 New exact enlarged-bank audit: the HYP-3311 nonunit residue word is only a
 curated-bank separator.  On enlarged HYP-2963 banks
-`(single_limit,two_swap_limit)=(20,4),(30,8),(48,12),(60,16)`, the first
-failure is height-driven (`P10+GW` versus `GW-shell alias 12->132`) and is
-repaired by `v2` / exact nonunit height, but the stronger persistent failure is
-endpoint-owner-driven (`petal 13->26` versus positive-open single swaps into
-`26`, later `40` and `54`) and survives residue+`v2` plus residue+height.
+`(single_limit,two_swap_limit)=(20,4),(30,8),(48,12),(60,16),(72,20)`, the
+first failure is height-driven (`P10+GW` versus `GW-shell alias 12->132`) and
+is repaired by `v2` / exact nonunit height, but the stronger persistent failure
+is endpoint-owner-driven (`petal 13->26` versus positive-open single swaps into
+`26`, later `40`, `54`, and `68`) and survives residue+`v2` plus
+residue+height.  The `(72,20)` frontier adds a second height-persistent
+owner-side fiber, `petal 10->20` versus positive-open two-drop/add-20 rows.
 `residue + owner_support` kills all mixed theorem-exit fibers on every scanned
-bank through the largest sample (`872` rows).  Stored artifacts:
+bank through the largest sample (`2431` rows).  Stored artifacts:
 `04-computation/lrc14_expanded_residue_owner_repair_codex_20260628.py`,
 `05-knowledge/hypotheses/HYP-3406-lrc14-expanded-residue-owner-repair.md`,
 `05-knowledge/results/lrc14_expanded_residue_owner_repair_codex_20260628.out`,
@@ -32375,6 +32377,10 @@ the session: the enlarged-bank result stays at
 remains the creative lead atlas.  Navigation/index references were corrected
 accordingly in `TANGENTS`, `OPEN-QUESTIONS`, the hypothesis index, and the
 results index.
+
+Rebased the `(72,20)` extension over incoming HYP-3407/T1368.  That scaffold is
+downstream rather than conflicting: it proposes recursive cut/signature tests
+starting from the HYP-3406 sidecar chain `residue -> height -> owner_support`.
 
 Mesh notes already sent: `MSG-1403` claimed the enlarged-bank residue thread;
 `MSG-1404` reported the exact split between the height leak and the stronger

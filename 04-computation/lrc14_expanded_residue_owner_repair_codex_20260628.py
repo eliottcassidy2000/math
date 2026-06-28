@@ -30,6 +30,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 THRESHOLD = Fraction(1, 14)
+BANKS = ((20, 4), (30, 8), (48, 12), (60, 16), (72, 20))
 
 
 def load_module(name: str, relpath: str):
@@ -227,7 +228,9 @@ def print_selected_fibers(rows: list[ExpandedRow], sidecars: tuple[str, ...], ma
     print()
 
 
-def print_bank_report(single_limit: int, two_swap_limit: int) -> None:
+def print_bank_report(
+    single_limit: int, two_swap_limit: int, show_height_fibers: bool = False
+) -> None:
     rows = build_rows(single_limit, two_swap_limit)
     print(f"BANK single_limit={single_limit} two_swap_limit={two_swap_limit}")
     print(
@@ -237,6 +240,9 @@ def print_bank_report(single_limit: int, two_swap_limit: int) -> None:
     print_sidecar_table(rows)
     print("  residue-only mixed fibers")
     print_selected_fibers(rows, ("residue_word",))
+    if show_height_fibers:
+        print("  residue+height mixed fibers")
+        print_selected_fibers(rows, ("residue_word", "exact_height_word"))
 
 
 def print_conclusion() -> None:
@@ -246,7 +252,7 @@ def print_conclusion() -> None:
     print("    (P10+GW vs GW-shell alias 12->132),")
     print("  but the stronger leak is endpoint-owner-driven")
     print("    (petal 13->26 vs the positive-open single-swap 26-family).")
-    print("  Exact readout through single_limit=60 and two_swap_limit=16:")
+    print("  Exact readout through single_limit=72 and two_swap_limit=20:")
     print("    residue+v2 and residue+exact_height still leave mixed theorem-exit fibers,")
     print("    while residue+owner_support kills all mixed kernel fibers.")
     print("  So HYP-3402's endpoint-owner current route is the next exact repair")
@@ -258,11 +264,18 @@ def main() -> None:
     print("=" * 78)
     print("status=evidence / enlarged HYP-2963 bank stress test; not an LRC14 proof")
     print("source=HYP-3311 actual-packet instantiation + HYP-3402 owner-current angle")
-    print("banks=single_limit/two_swap_limit in {(20,4),(30,8),(48,12),(60,16)}")
+    print(
+        "banks=single_limit/two_swap_limit in "
+        "{(20,4),(30,8),(48,12),(60,16),(72,20)}"
+    )
     print()
 
-    for single_limit, two_swap_limit in ((20, 4), (30, 8), (48, 12), (60, 16)):
-        print_bank_report(single_limit, two_swap_limit)
+    for index, (single_limit, two_swap_limit) in enumerate(BANKS):
+        print_bank_report(
+            single_limit,
+            two_swap_limit,
+            show_height_fibers=index == len(BANKS) - 1,
+        )
 
     print("TOURNAMENT ANALYSIS")
     print("  vertices=sidecar repairs over the coarse actual-packet sheaf base")

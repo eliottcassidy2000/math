@@ -10,6 +10,7 @@ script: 04-computation/lrc14_expanded_residue_owner_repair_codex_20260628.py
 result: 05-knowledge/results/lrc14_expanded_residue_owner_repair_codex_20260628.out
 reflection: 07-reflections/lrc14-expanded-residue-owner-repair-codex-20260628.md
 related:
+  - HYP-3407
   - HYP-3405
   - HYP-3404
   - HYP-3403
@@ -58,11 +59,11 @@ subcase.
 ## Exact Readout
 
 The executable audit enlarges the bank from the curated HYP-2969 sample to
-four HYP-2963 banks:
+five HYP-2963 banks:
 
 ```text
 (single_limit, two_swap_limit) =
-  (20,4), (30,8), (48,12), (60,16).
+  (20,4), (30,8), (48,12), (60,16), (72,20).
 ```
 
 Controlled-forgetting summary:
@@ -79,10 +80,13 @@ Controlled-forgetting summary:
 
 (60,16): residue 2 mixed, residue+v2 1, residue+height 1,
          residue+unit_qsqrt7 1, residue+owner_support 0
+
+(72,20): residue 3 mixed, residue+v2 2, residue+height 2,
+         residue+unit_qsqrt7 2, residue+owner_support 0
 ```
 
 So the owner-support repair stays exact through the largest scanned bank
-(`872` rows).
+(`2431` rows).
 
 ## First Leak: Height
 
@@ -139,6 +143,8 @@ This family grows on larger banks:
 ```text
 (48,12): add single swaps *->40
 (60,16): add single swaps *->54 and 9->54
+(72,20): add single swaps *->68 and a second height-persistent
+         owner leak, petal 10->20 versus two-drop/add-20 rows
 ```
 
 The same phenomenon persists: residue, `v2`, and exact nonunit height remain
@@ -155,6 +161,9 @@ Examples:
 petal 13->26      owner_support = (12:g2, 1:g1)
 single swap 1->26 owner_support = (12:g2, 13:g1)
 single swap 3->26 owner_support = (11:g1, 12:g2, 13:g1, 6:g2)
+petal 10->20      owner_support = (6:g2, 7:g7)
+drop(1,10)->15,20 owner_support = (1:g1, 2:g2, 6:g2, 7:g7)
+drop(3,10)->17,20 owner_support = (13:g1, 6:g2)
 P10+GW            owner_support = (6:g2, 7:g7)
 GW-shell 12->132  owner_support = (11:g1, 13:g1, 5:g1, 6:g2, 7:g7)
 ```
@@ -197,6 +206,11 @@ residue + owner_support
 
 eventually fails, and whether the next leak after that is tropical/off-grid,
 unit-contact holonomy, or a new named debt.
+
+Incoming HYP-3407 reserves one downstream way to do that test: make the sidecar
+chain recursive (`residue`, `height`, `owner_support`, cut/current, variance,
+and branch alarms) and accept a compressed signature only when theorem exits
+are pure on its fibers.
 
 ## Tournament Analysis
 

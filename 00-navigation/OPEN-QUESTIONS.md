@@ -117,17 +117,19 @@ HYP-3406 executes HYP-3404's residue-word breakpoint lead as the expanded-bank
 companion to HYP-3405's AP-collar finite-lemma certificate and the first
 enlarged-bank version of HYP-3402's first-leak table.  On the expanded
 HYP-2963 banks through
-`(single_limit,two_swap_limit)=(60,16)`, the nonunit residue word is no
+`(single_limit,two_swap_limit)=(72,20)`, the nonunit residue word is no
 longer exact.  The first failure is height-driven:
 `P10+GW` collides with `GW-shell alias 12->132`, and `v2` / exact nonunit
 height repairs that collision.  But the stronger stable failure is
 endpoint-owner-driven: `petal 13->26` collides with positive-open single swaps
-into `26`, later `40` and `54`, while sharing the same residue word, `v2`
-word, and exact nonunit height word.
+into `26`, later `40`, `54`, and `68`, while sharing the same residue word,
+`v2` word, and exact nonunit height word.  The `(72,20)` frontier adds a
+second height-persistent owner leak: `petal 10->20` collides with positive-open
+two-drop/add-20 rows.
 
 Exact readout: `residue + owner_support` kills all mixed theorem-exit fibers on
 the scanned enlarged banks, while `residue + v2` and `residue + height` still
-leave `1` mixed fiber.  Open task: enlarge farther and locate the first
+leave `2` mixed fibers.  Open task: enlarge farther and locate the first
 failure of `owner_support`.  That next failure would decide whether the real
 post-HYP-3406 sidecar is tropical/off-grid, exact unit-contact holonomy, or a
 new named debt. -> HYP-3406, HYP-3405, HYP-3404, HYP-3403, HYP-3402, HYP-3311, HYP-3310,
