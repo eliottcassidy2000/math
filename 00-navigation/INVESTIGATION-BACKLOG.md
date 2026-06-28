@@ -387,6 +387,48 @@ covering floor must retain a sheet-profile sidecar from HYP-3140 before
 claiming SPEC control, phase-cover debt, or terminal floor behavior.  Good
 candidate sidecars: zero-sheet mass, sheet range, far depth, or another
 fiber-PGF-equivalent field.
+## Lead codex-2026-06-28: Two-adic branch-cover certificate
+
+**Status:** EVIDENCE / finite-ruler interval-certificate stress; not proof
+(HYP-3435/T1396/LTI-396/LTT-296).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3435-lrc14-two-adic-branch-cover-certificate.md`,
+script
+`04-computation/lrc14_two_adic_branch_cover_certificate_codex_20260628.py`,
+result
+`05-knowledge/results/lrc14_two_adic_branch_cover_certificate_codex_20260628.out`,
+and
+`07-reflections/lrc14-two-adic-branch-cover-certificate-codex-20260628.md`.
+
+Purpose: make HYP-3422's interval relocation, HYP-3425's two-color bad-core
+identity, HYP-3426's mirror reduction, HYP-3427's wall atlas, and HYP-3428's
+loss ledger proof-facing by recording finite-ruler certificates: chosen branch
+cells, active odd/even endpoint gates, and deletion sensitivities for both odd
+blockers and even gates.  The incoming HYP-3430 Euler-Mascheroni firewall is
+absorbed as a guardrail: scalar tails calibrate only after endpoint/branch
+sidecars survive.  The incoming HYP-3431 canonical corridor-fence proof is the
+all-`m` base case this general extractor must reproduce.  HYP-3432 adds the
+reciprocal wall-budget sidecar as an endpoint-debt priority queue, not as a
+replacement for exact interval/branch/wall labels.  The theorem target is no
+longer a scalar branch measure; it is that any attempted cover of
+`E_safe(1/14)` by odd low-bad and odd high-bad interval families must emit a
+small endpoint-gate ledger.
+
+Readout: `135` primitive covering rows audited (`15` structured, `120` random);
+certificate success, branch0 positivity, branch1 positivity, and both-branch
+positivity all `135/135`.  Tight AP-with-84 row has even-safe measure `107/245`,
+branch measures `563/105105`, branch union `1/105`, selected witness
+`t=2293/3920`, and score `59/784`.  Finite-bank minimum selected score is
+`1283/17160`, margin `401/120120` over `1/14`.
+
+Creative extension: invert the witness script into a minimal-cover extractor.
+For each even-safe component, enumerate the low-odd and high-odd bad intervals,
+then emit the smallest active odd/even endpoint certificate if their
+intersection covers the component.  Compare those certificates against
+HYP-3417/HYP-3420 owner-current routers, HYP-3423 topology-to-magnitude
+legality, HYP-3424's two-adic transfer lemma, and HYP-3432's reciprocal-budget
+ranking of endpoint debt.
 
 ## Lead codex-2026-06-28: Owner-cut dual current certificate synthesis
 

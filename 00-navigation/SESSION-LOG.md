@@ -270,6 +270,43 @@ proof: formulate the smallest theorem-safe add/mult packet under HYP-3424,
 probably using one energy coordinate plus one HYP-3140 fiber field (zero-sheet
 mass, sheet range, far depth, or equivalent), and try to connect that packet
 directly to a signed-SPEC inequality or a named odd phase-cover debt.
+## codex-2026-06-28 -- HYP-3435 two-adic branch-cover certificate
+
+Extended the HYP-3422 two-adic relocation lemma after HYP-3425's bad-core
+identity, HYP-3426's mirror reduction, HYP-3427's wall atlas, HYP-3428's loss
+ledger, HYP-3429's endpoint-spine certificate, HYP-3430's Euler-Mascheroni
+scalar firewall, HYP-3431's canonical corridor-fence partial proof, and
+HYP-3432's harmonic wall-budget sidecar, plus HYP-3424's covering-floor
+transfer by turning branch overlap into a finite-ruler certificate object.
+Added HYP-3435/T1396/LTI-396/LTT-296 plus
+script/result/reflection:
+
+```text
+04-computation/lrc14_two_adic_branch_cover_certificate_codex_20260628.py
+05-knowledge/results/lrc14_two_adic_branch_cover_certificate_codex_20260628.out
+05-knowledge/hypotheses/HYP-3435-lrc14-two-adic-branch-cover-certificate.md
+07-reflections/lrc14-two-adic-branch-cover-certificate-codex-20260628.md
+```
+
+Exact stress bank: `135` primitive covering rows (`15` structured and `120`
+deterministic random), with certificate success `135/135`, branch0 positive
+`135/135`, branch1 positive `135/135`, and both branches positive `135/135`.
+The tight AP-with-84 row still gives the smallest branch-union certificate:
+`even_safe=107/245`, branch measures `563/105105`, union `1/105`, selected
+branch `1`, `u=333/1960`, `t=2293/3920`, and selected score `59/784`.
+
+Proof shift: the next theorem object is not raw branch measure.  It is a
+minimal endpoint-gate ledger for any attempted cover of `E_safe` by odd low-bad
+and odd high-bad interval families.  Active roles across the stress bank include
+`odd_unit`, `even_R`, `seven_R`, and `14Q`, so the branch proof must keep role
+data until owner-current sidecars, HYP-3423 legality, or signed-SPEC descent
+discharge it.  The HYP-3430 firewall is now phrased as a local rule: analytic
+tail scalars may calibrate denominator entropy only after endpoint-owner,
+branch-cell, wall/loss, exact-period, or state-lift sidecars survive.  HYP-3431
+is the all-`m` canonical base case the general extractor should reproduce
+before handling non-canonical covers.  HYP-3432 supplies the exact reciprocal
+wall-budget priority queue for endpoint debt, but the accepted certificate must
+still retain interval, branch, wall, and owner labels.
 
 ## codex-2026-06-28 -- HYP-3422 two-adic off-grid relocation lemma for LRC14
 

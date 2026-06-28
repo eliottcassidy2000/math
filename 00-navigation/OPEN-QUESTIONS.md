@@ -357,6 +357,66 @@ sheet-profile sidecar from HYP-3140 before claiming SPEC control, phase-cover
 debt, or a terminal floor inequality. -> HYP-3425, HYP-3424, HYP-3423, HYP-3422,
 HYP-3421, HYP-3418, HYP-3415, HYP-3140, HYP-3129, HYP-2272, HYP-2129,
 HYP-2128, THM-414, T1386, OPEN-Q-108.
+**OPEN-Q-108 HYP-3435 two-adic branch-cover certificate addendum:**
+HYP-3435 converts HYP-3422's overlap target, HYP-3425's two-color bad-core
+identity, HYP-3426's mirror reduction, HYP-3427's wall atlas, HYP-3428's
+loss ledger, HYP-3429's endpoint-spine certificate, and HYP-3430's
+Euler-Mascheroni scalar-firewall lesson into a finite-ruler certificate
+problem, with HYP-3431's all-`m` canonical corridor-fence proof as the base
+case to reproduce and HYP-3432's harmonic wall-budget sidecar as a lawful
+endpoint-debt ordering heuristic.  Instead of asking only for positive branch
+measure, record:
+
+```text
+component J of E_safe(1/14)
+branch cell or failure cover on J
+odd low-bad blockers for branch 0
+odd high-bad blockers for branch 1
+even endpoint gates defining J
+active equality roles at any selected witness
+```
+
+Exact stress readout:
+
+```text
+rows_audited=135
+certificate_success=135/135
+branch0_positive=135/135
+branch1_positive=135/135
+both_branches_positive=135/135
+min_branch_union_measure=1/105
+min_selected_score=1283/17160
+selected_score_margin=401/120120
+```
+
+The tight AP-with-84 row has branch-union measure `1/105`; this is small but
+finite, and its active selected binder is speed `5`.  Across the stress bank,
+active roles include `odd_unit`, `even_R`, `seven_R`, and `14Q`, so a proof may
+not quotient to a single arithmetic role without resurrecting endpoint-gate
+data.  Likewise, HYP-3430 says harmonic/Mertens/loglog tail scalars may
+calibrate denominator entropy only after endpoint-owner, wall/loss,
+branch-cell, exact-period, or state-lift sidecars survive.
+HYP-3432 adds the exact reciprocal-budget corollary: harmonic mass may rank
+which endpoint ledger to test first, but cannot replace branch, wall, interval,
+and owner labels.
+
+Open task: build the minimal-cover extractor.  For every component of
+`E_safe`, enumerate the finite ruler endpoints from odd low-bad, odd high-bad,
+and even gates.  If a component is fully covered by
+
+```text
+(union odd_low_bad) cap (union odd_high_bad),
+```
+
+emit the smallest endpoint-gate certificate.  If no such certificate survives
+the HYP-3417/HYP-3420 owner-current router, HYP-3423 legality guardrail, and
+HYP-3424 two-adic transfer, while HYP-3431 supplies the canonical
+corridor-fence base case, HYP-3432 orders endpoint-budget debt, and HYP-3430
+blocks scalar-tail closure without sidecars, promote the branch-overlap target
+to a finite lemma. -> HYP-3435, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
+HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3129, HYP-2963,
+THM-523, LTI-396, LTT-296, T1396, LTI-393, LTT-293, T1393, LTI-392,
+LTT-292, T1392, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3417 owner-cut dual current addendum:**
 HYP-3417 sharpens the owner-support/Menger route into a concrete certificate

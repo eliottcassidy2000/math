@@ -73,6 +73,12 @@ obligations, and proof-carrier interfaces.
   use LTT-283 and make transfer gates/proof obligations the vertices; odd
   data must become phase-cover debt, and even/two-adic data must feed SPEC or
   a named finite sidecar.
+- Need to make HYP-3422's branch overlap theorem finite and checkable:
+  use LTT-296 after LTT-283/LTT-285/LTT-291/LTT-292/LTT-293 and make branch cells,
+  endpoint-gate ledgers, Helly overlap obligations, canonical corridor-fence
+  reproduction, two-adic descent, owner-current routing, scalar-firewall
+  compliance, and signed-SPEC exits the vertices.  Raw branch measure is only
+  a shadow.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -8501,6 +8507,55 @@ quotient_legality_status
   HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3418, HYP-3417, HYP-3415,
   HYP-3401, HYP-3236, HYP-3129, HYP-2963, THM-523, LTI-395, T1395,
   OPEN-Q-108.
+
+## LTT-296: Two-Adic Branch-Cover Certificate Tournament
+
+- **Move:** Replace scalar branch-overlap stress with a finite-ruler
+  certificate tournament.  Vertices are branch-cell certificates, Helly-style
+  overlap theorem, two-adic descent induction, active endpoint-gate sensitivity
+  ledger, owner-current exception router, signed-SPEC constant chase,
+  topology/magnitude guardrail, and raw branch measure as a negative control.
+- **LRC use:** HYP-3435 makes HYP-3422's target, HYP-3425's two-color
+  bad-core identity, HYP-3426's mirror reduction, HYP-3427's wall atlas,
+  HYP-3428's loss ledger, and HYP-3432's reciprocal wall-budget priority
+  sidecar checkable on finite interval ledgers.  A
+  covering packet should either have an explicit branch cell inside
+  `E_safe(1/14)` or emit a minimal cover by odd low-bad and odd high-bad
+  intervals, with even endpoint gates attached.  That minimal cover is the
+  object a proof can classify.  HYP-3430 adds the scalar-firewall rule: harmonic
+  or Mertens tails can calibrate denominator entropy only after these endpoint
+  sidecars are retained.  HYP-3431 supplies the canonical `84m` corridor-fence
+  base case the tournament should reproduce before generalizing.  HYP-3432
+  supplies a lawful ordering heuristic for endpoint debt, but a winning vertex
+  still needs the exact branch, wall, and interval labels.
+- **Preserves:** exact two-adic branch-overlap certificate, active endpoint
+  roles, and routing hooks for owner-current, topology-legality, and
+  signed-SPEC exits.
+- **Forgets / guardrail:** raw runners, raw residues, aggregate branch measure,
+  and any quotient that erases which speed owns a branch endpoint.  Active
+  roles in the stress bank include `odd_unit`, `even_R`, `seven_R`, and `14Q`,
+  so single-role scalarization or Euler-Mascheroni tail-only scalarization is
+  unsafe.  HYP-3432's wall-budget scalar is therefore a ranking sidecar, not a
+  certificate quotient.
+- **Pairwise observable:** certificate exactness, branch overlap, two-adic
+  induction payload, endpoint-gate sensitivity, owner-current routing value,
+  signed-SPEC compatibility, topology/magnitude legality, and scalar-shadow
+  penalty.
+- **Switch/gauge:** higher weighted proof-facing score first; ties use declared
+  code order.
+- **Fingerprint:** `8` vertices, score histogram
+  `{-5:1, 51:1, 69:2, 77:1, 90:1, 93:1, 97:1}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `C00_finite_ruler_branch_cell_certificate -> C01_helly_interval_overlap_theorem -> C02_two_adic_descent_induction -> C03_active_constraint_sensitivity_ledger -> C04_owner_current_exception_router -> C05_signed_SPEC_constant_chase -> C06_topology_magnitude_guardrail -> C07_raw_branch_measure_scalar`.
+- **Next hook:** write the minimal-cover extractor.  For each `E_safe`
+  component, enumerate all odd low-bad and odd high-bad subintervals and emit
+  the smallest endpoint-gate cover if they cover the component.  Then prove
+  each emitted certificate descends two-adically, routes through owner-current,
+  violates HYP-3423 quotient legality, or feeds HYP-3421/HYP-3129 signed-SPEC.
+- **Pointers:** HYP-3435, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
+  HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3129, HYP-2963,
+  THM-523, LTI-396, LTT-296, T1396, LTI-393, LTT-293, T1393, LTI-392,
+  LTT-292, T1392, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 

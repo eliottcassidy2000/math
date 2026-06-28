@@ -1,0 +1,180 @@
+HYP-3435 TWO-ADIC BRANCH-COVER CERTIFICATE SCOUT
+status=EVIDENCE / finite-ruler interval certificate stress; not a proof
+source=HYP-3422 + HYP-3424, with HYP-3423 legality guardrail, HYP-3430 scalar firewall, HYP-3431 corridor base case, and HYP-3432 wall-budget sidecar
+
+## Aggregate Branch-Cover Audit
+rows_audited=135
+structured_rows=15
+random_rows=120
+certificate_success=135/135
+branch0_positive=135/135
+branch1_positive=135/135
+both_branches_positive=135/135
+selected_branch_hist={0: 72, 1: 63}
+active_role_hist_top=[((('odd_unit', 1),), 56), ((('even_R', 1),), 46), ((('seven_R', 1),), 17), ((('14Q', 1),), 16)]
+
+## Smallest Branch-Union Certificates
+  covering_AP_with_84
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    odd=7, even=6, even_safe=107/245 in 26 components
+    branch0=563/105105, branch1=563/105105, union=1/105 in 4 components
+    selected branch=1, u=333/1960, t=2293/3920, score=59/784
+    active_speeds=(5,), active_roles={'odd_unit': 1}
+    top odd blockers=7:207341/1261260, 1:6/49, 11:1543/12740, 9:8675/84084
+    top even gates=6:1201/21021, 2:205/3822, 8:13/294, 10:373/9009
+  ap_omit_12_tail_84x01
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    odd=7, even=6, even_safe=107/245 in 26 components
+    branch0=563/105105, branch1=563/105105, union=1/105 in 4 components
+    selected branch=1, u=333/1960, t=2293/3920, score=59/784
+    active_speeds=(5,), active_roles={'odd_unit': 1}
+    top odd blockers=7:207341/1261260, 1:6/49, 11:1543/12740, 9:8675/84084
+    top even gates=6:1201/21021, 2:205/3822, 8:13/294, 10:373/9009
+  ap_omit_12_tail_84x02
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168)
+    odd=7, even=6, even_safe=423/980 in 48 components
+    branch0=263/30030, branch1=263/30030, union=19/1470 in 4 components
+    selected branch=1, u=1993/11760, t=13753/23520, score=359/4704
+    active_speeds=(5,), active_roles={'odd_unit': 1}
+    top odd blockers=7:198761/1261260, 1:6/49, 11:4499/38220, 9:8389/84084
+    top even gates=6:753/14014, 2:397/7644, 8:9/196, 10:373/9009
+  ap_omit_12_tail_84x08
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 672)
+    odd=7, even=6, even_safe=1697/3920 in 172 components
+    branch0=4397/420420, branch1=4397/420420, union=27/1960 in 8 components
+    selected branch=1, u=37/224, t=261/448, score=5/64
+    active_speeds=(7,), active_roles={'seven_R': 1}
+    top odd blockers=7:114497/720720, 1:6/49, 11:18061/152880, 9:33413/336336
+    top even gates=6:4661/84084, 2:75/1456, 8:109/2352, 10:20459/504504
+  ap_omit_12_tail_84x11
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 924)
+    odd=7, even=6, even_safe=3496/8085 in 240 components
+    branch0=4397/420420, branch1=4397/420420, union=16/1155 in 10 components
+    selected branch=1, u=51/308, t=359/616, score=7/88
+    active_speeds=(7,), active_roles={'seven_R': 1}
+    top odd blockers=7:199151/1261260, 1:6/49, 11:49879/420420, 9:8389/84084
+    top even gates=6:2311/42042, 2:311/6006, 8:151/3234, 10:5183/126126
+  ap_omit_12_tail_84x07
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 588)
+    odd=7, even=6, even_safe=2222/5145 in 156 components
+    branch0=4397/420420, branch1=4397/420420, union=143/10290 in 6 components
+    selected branch=1, u=97/588, t=685/1176, score=13/168
+    active_speeds=(7,), active_roles={'seven_R': 1}
+    top odd blockers=7:1395617/8828820, 1:6/49, 11:4499/38220, 9:8389/84084
+    top even gates=6:7978/147147, 2:461/8918, 8:16/343, 10:36983/882882
+
+## Smallest Selected Relocation Scores
+  random_covering_097
+    speeds=(1, 11, 49, 60, 72, 75, 84, 89, 101, 129, 130, 140, 165)
+    odd=8, even=5, even_safe=571/1260 in 152 components
+    branch0=2239548631627/17062886540700, branch1=2239548631627/17062886540700, union=189965313799/812518406700 in 142 components
+    selected branch=0, u=1283/8580, t=1283/17160, score=1283/17160
+    active_speeds=(1,), active_roles={'odd_unit': 1}
+    top odd blockers=49:21255379267/487511044020, 75:100270792403/2437555220100, 129:12963323731/328132433475, 165:165224221912/4265721635175
+    top even gates=60:109660582373/2437555220100, 130:3442785421/79362262980, 140:10895095969/262505946780, 72:6619048729/162503681340
+  covering_AP_with_84
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    odd=7, even=6, even_safe=107/245 in 26 components
+    branch0=563/105105, branch1=563/105105, union=1/105 in 4 components
+    selected branch=1, u=333/1960, t=2293/3920, score=59/784
+    active_speeds=(5,), active_roles={'odd_unit': 1}
+    top odd blockers=7:207341/1261260, 1:6/49, 11:1543/12740, 9:8675/84084
+    top even gates=6:1201/21021, 2:205/3822, 8:13/294, 10:373/9009
+  ap_omit_12_tail_84x01
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    odd=7, even=6, even_safe=107/245 in 26 components
+    branch0=563/105105, branch1=563/105105, union=1/105 in 4 components
+    selected branch=1, u=333/1960, t=2293/3920, score=59/784
+    active_speeds=(5,), active_roles={'odd_unit': 1}
+    top odd blockers=7:207341/1261260, 1:6/49, 11:1543/12740, 9:8675/84084
+    top even gates=6:1201/21021, 2:205/3822, 8:13/294, 10:373/9009
+  ap_omit_12_tail_84x02
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168)
+    odd=7, even=6, even_safe=423/980 in 48 components
+    branch0=263/30030, branch1=263/30030, union=19/1470 in 4 components
+    selected branch=1, u=1993/11760, t=13753/23520, score=359/4704
+    active_speeds=(5,), active_roles={'odd_unit': 1}
+    top odd blockers=7:198761/1261260, 1:6/49, 11:4499/38220, 9:8389/84084
+    top even gates=6:753/14014, 2:397/7644, 8:9/196, 10:373/9009
+  ap_omit_12_tail_84x03
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 252)
+    odd=7, even=6, even_safe=953/2205 in 70 components
+    branch0=3119/315315, branch1=3119/315315, union=31/2205 in 4 components
+    selected branch=1, u=2987/17640, t=20627/35280, score=541/7056
+    active_speeds=(5,), active_roles={'odd_unit': 1}
+    top odd blockers=7:200191/1261260, 1:6/49, 11:13627/114660, 9:25453/252252
+    top even gates=6:3460/63063, 2:589/11466, 8:41/882, 10:1693/42042
+  ap_omit_12_tail_84x04
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 336)
+    odd=7, even=6, even_safe=2543/5880 in 88 components
+    branch0=4397/420420, branch1=4397/420420, union=43/2940 in 4 components
+    selected branch=1, u=1327/7840, t=9167/15680, score=241/3136
+    active_speeds=(5,), active_roles={'odd_unit': 1}
+    top odd blockers=7:399667/2522520, 1:6/49, 11:8933/76440, 9:16921/168168
+    top even gates=6:4661/84084, 2:781/15288, 8:55/1176, 10:373/9009
+
+## Tightest Even-Safe Windows
+  random_covering_007
+    speeds=(8, 12, 52, 56, 72, 88, 103, 104, 118, 120, 136, 148, 155)
+    odd=2, even=11, even_safe=418281361/2753330580 in 84 components
+    branch0=3010336057087/27173370402360, branch1=3010336057087/27173370402360, union=649943249141/4395692270970 in 88 components
+    selected branch=1, u=179/2856, t=3035/5712, score=57/238
+    active_speeds=(120,), active_roles={'even_R': 1}
+    top odd blockers=103:23589/5811260, 155:23589/5811260
+    top even gates=56:4221869/83795635, 88:2445196010767/49817845737660, 120:42734948229/976820504660, 72:2802546667517/74726768606490
+  random_covering_053
+    speeds=(20, 26, 34, 44, 54, 82, 92, 104, 114, 152, 156, 161, 168)
+    odd=1, even=12, even_safe=45257146126/288124441605 in 86 components
+    branch0=321073017103/2304995532840, branch1=321073017103/2304995532840, union=45257146126/288124441605 in 86 components
+    selected branch=0, u=65/2128, t=65/4256, score=373/2128
+    active_speeds=(54,), active_roles={'even_R': 1}
+    top odd blockers=161:0
+    top even gates=20:1145407/27292265, 54:753133895/20954504844, 44:7889338013/230499553284, 168:2713/87906
+  random_covering_044
+    speeds=(11, 28, 32, 52, 64, 80, 84, 114, 128, 154, 158, 162, 174)
+    odd=1, even=12, even_safe=271986929143/1581159932352 in 108 components
+    branch0=467709229991/3162319864704, branch1=467709229991/3162319864704, union=271986929143/1581159932352 in 108 components
+    selected branch=1, u=269/34104, t=34373/68208, score=269/2436
+    active_speeds=(28,), active_roles={'14Q': 1}
+    top odd blockers=11:0
+    top even gates=80:37073909/945669816, 52:309359635069/7905799661760, 154:64687283/2000455380, 158:19509247099/608138435520
+  random_covering_089
+    speeds=(14, 21, 30, 78, 88, 96, 104, 108, 126, 138, 151, 165, 174)
+    odd=3, even=10, even_safe=1741633379/10095125040 in 120 components
+    branch0=1234655413/11725876008, branch1=1234655413/11725876008, union=7854546757/52564271760 in 132 components
+    selected branch=1, u=177/1472, t=1649/2944, score=233/1472
+    active_speeds=(14,), active_roles={'14Q': 1}
+    top odd blockers=151:188144/11061505, 165:6909937/424850580, 21:170651419/14114480380
+    top even gates=30:1104583891/21171720570, 96:526555649/10095125040, 174:24333/586040, 78:7725668737/190545485130
+
+## Certificate Lower Bounds In This Stress Bank
+min_even_safe_measure=418281361/2753330580
+min_branch_union_measure=1/105
+min_selected_score=1283/17160
+threshold_1_over_14=1/14
+selected_score_margin=401/120120
+
+## Sensitivity Interpretation
+Deleting one of the listed odd blockers enlarges the certified branch-union cell by the displayed exact amount.
+Deleting one of the listed even gates enlarges E_safe before the odd filters are applied.
+The theorem-shaped object is therefore not a scalar branch measure, but a finite-ruler cell plus its active odd/even endpoint gates.
+HYP-3430-style harmonic/Mertens/loglog scalars may calibrate denominator entropy only after those sidecars survive.
+HYP-3431's canonical corridor-fence proof is the all-m base case for this general endpoint-gate extractor.
+HYP-3432-style reciprocal wall budgets may rank endpoint debt, but cannot replace exact branch/wall/interval labels.
+A failed future row should emit a minimal odd/even endpoint cover; otherwise the Helly/interval theorem should prove that no such cover exists.
+
+## Tournament Analysis
+vertices=proof obligations and certificate interfaces, not runners/arcs/residues
+pairwise_observable=certificate exactness + branch overlap + two-adic induction payload + exception routing + scalar-firewall compliance
+switch=higher weighted proof-facing score; ties by declared code order
+score_hist={-5: 1, 51: 1, 69: 2, 77: 1, 90: 1, 93: 1, 97: 1}
+directed_3cycles=0
+hamiltonian_path=C00_finite_ruler_branch_cell_certificate -> C01_helly_interval_overlap_theorem -> C02_two_adic_descent_induction -> C03_active_constraint_sensitivity_ledger -> C04_owner_current_exception_router -> C05_signed_SPEC_constant_chase -> C06_topology_magnitude_guardrail -> C07_raw_branch_measure_scalar
+
+## Candidate Lemma Refinement
+For S=O union 2E, it is enough to prove that every finite component of
+E_safe(1/14) has an endpoint-gate ledger that cannot be covered by both
+odd branch-bad interval families.  Equivalently, any attempted cover of
+E_safe by odd branch-bad intervals must expose a small active odd/even
+endpoint certificate; HYP-3420/HYP-3417 owner-current labels then route
+the finite exceptions, while HYP-3423 blocks topology-only closure.
