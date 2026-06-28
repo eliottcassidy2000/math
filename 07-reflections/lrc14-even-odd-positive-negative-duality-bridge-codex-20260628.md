@@ -32,6 +32,13 @@ HYP-3238 perfectly: the sidecar is a sign-isotypic packet, and the family law
 chooses whether it is a fixed-point Brouwer/SOS packet or a free-antipodal
 Borsuk-Ulam packet.
 
+Then HYP-3240 resolves the apparent naming conflict: the Brouwer saddle and
+the Borsuk-Ulam antipodal witness packet are two views of the same `Phi_14`
+core witness set.  At n=14 those six unit witnesses form `3` antipodal pairs,
+and that index `(p-1)/2=3` is also the de Moivre degree and the saddle
+equioscillation count.  So the HYP-3238 sidecar should carry an index field,
+not merely a sign field.
+
 The crossed picture is:
 
 ```text
@@ -127,7 +134,7 @@ HYP-3204 q3 exchange-rate pricing.
 
 That packet feels much closer to a proof shape than any scalar did.
 
--> HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
+-> HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
 HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223,
 HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
 HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153,

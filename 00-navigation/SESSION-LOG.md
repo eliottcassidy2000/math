@@ -139,7 +139,14 @@ anti-automorphism, while `p=1 mod 4` remains the fixed-reflection Brouwer/SOS
 side.  For HYP-3238, this means the odd-negative sidecar should now carry a
 `sign_isotypic/free_Z2_or_fixed_reflection` family tag.
 
--> HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
+Second post-rebase integration: HYP-3240 reconciles the apparent Brouwer vs
+Borsuk-Ulam naming split.  The AP `Phi_14` witnesses are `3` antipodal pairs;
+that index `phi(14)/2=(7-1)/2=3` is both the de Moivre degree and the
+equioscillation saddle index.  HYP-3238 should therefore carry an
+`equioscillation_index` sidecar whose parity selects Borsuk-Ulam/free-`Z2`
+versus Brouwer/SOS.
+
+-> HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235, HYP-3234, HYP-3233, HYP-3232,
 HYP-3231, HYP-3230, HYP-3228, HYP-3227, HYP-3225, HYP-3224, HYP-3223,
 HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218, HYP-3217, HYP-3216, HYP-3214,
 HYP-3205, HYP-3204, HYP-3202, HYP-3201, HYP-3200, HYP-3163, HYP-3153,

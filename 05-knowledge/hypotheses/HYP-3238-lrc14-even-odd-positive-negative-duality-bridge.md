@@ -10,6 +10,7 @@ script: 04-computation/lrc14_even_odd_positive_negative_bridge_codex_20260628.py
 result: 05-knowledge/results/lrc14_even_odd_positive_negative_bridge_codex_20260628.out
 reflection: 07-reflections/lrc14-even-odd-positive-negative-duality-bridge-codex-20260628.md
 related:
+  - HYP-3240
   - HYP-3239
   - HYP-3237
   - HYP-3236
@@ -332,6 +333,13 @@ the de Moivre cubic modes are the three two-dimensional irreps, and for
 Thus the topological sidecar should be tagged more precisely as
 `Borsuk-Ulam/free-Z2` in the `p=3 mod 4` case, while Brouwer/SOS belongs to
 the fixed-reflection `p=1 mod 4` side of the family.
+
+HYP-3240 then reconciles the words "Brouwer saddle" and "Borsuk-Ulam packet":
+the AP core witnesses are the same `Phi_14` set, grouped into `3` antipodal
+pairs.  The index is `phi(14)/2=(7-1)/2=3`, equal to the de Moivre degree and
+the equioscillation count.  Its parity is the family switch: odd index gives
+the free-`Z2` Borsuk-Ulam side, even index gives the fixed-reflection
+Brouwer/SOS side.
 
 HYP-3237 supplies the information-theoretic wall:
 

@@ -27,10 +27,15 @@ Borsuk-Ulam packet for `p=7=3 mod 4`, while `p=1 mod 4` lives on the
 Brouwer/SOS fixed-reflection side.  Add this family tag before treating the
 odd/negative payload as discharged.
 
+HYP-3240 integration: add the equioscillation index.  For n=14 the `Phi_14`
+core witnesses are `3` antipodal pairs, and this index is both `(p-1)/2` and
+the de Moivre degree.  Its parity chooses the Borsuk-Ulam/free-`Z2` side
+versus the Brouwer/SOS side.
+
 Open task: prove the `q3` exchange-rate inequality symbolically, then glue it
 to HYP-3222 Hermite-Biehler interlacing and HYP-3220 Brouwer/parity sign.
 Negative covariance leakage is only one sidecar; the true odd/negative payload
-is the full parity/sign/core packet. -> HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235,
+is the full parity/sign/core packet. -> HYP-3240, HYP-3239, HYP-3238, HYP-3237, HYP-3236, HYP-3235,
 HYP-3234, HYP-3233, HYP-3232, HYP-3231, HYP-3230, HYP-3228, HYP-3227,
 HYP-3225, HYP-3224, HYP-3223, HYP-3222, HYP-3221, HYP-3220, HYP-3219, HYP-3218,
 HYP-3217, HYP-3216, HYP-3214, HYP-3205, HYP-3204, HYP-3202, HYP-3201,

@@ -55,6 +55,11 @@ kps S31av branch identifies the `p=7=3 mod 4` sign sidecar as the `D_7`
 sign representation / free-`Z2` Borsuk-Ulam packet.  Track this family tag
 when deciding whether the odd/negative sidecar is discharged.
 
+HYP-3240 adds the matching index field: for n=14 the AP `Phi_14` witness set
+has `3` antipodal pairs, equal to `(p-1)/2` and the de Moivre degree.  The
+parity of this equioscillation index selects Borsuk-Ulam/free-`Z2` versus
+Brouwer/SOS in the family law.
+
 Compression guardrail: an even/positive quotient is proof-grade only when the
 odd/negative payload is zero, reconstructible, dual-annihilated, or retained
 as sidecar.  This is the HYP-3201 law-defect rule applied to associativity,
