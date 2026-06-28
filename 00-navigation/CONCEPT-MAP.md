@@ -2,6 +2,32 @@
 
 **Purpose:** Complete, structured database of every mathematical concept, object, technique, and connection in this project. Organized for rapid lookup by future Claude instances. Created by kind-pasteur-2026-03-07-S34.
 
+**Latest n=4 Einheit/minimality addendum:** codex-2026-06-27 adds
+HYP-3199/T1299/LTI-299/LTT-199 as a prompt-exact deletion-minimality
+refinement of HYP-3148's live-core audit, HYP-3146's shift-package/canary
+packet, HYP-3145's filler-core interface, HYP-3143's n=4 packet-subbasis audit, and HYP-3144's
+pair-function quotient,
+separating fixed-path tiling abundance
+from exact chart minimality in the user's n=4 tournament models.  The fixed
+Hamiltonian-path table with chord flips `a,b,c` is a cover: the full cube has
+`S:{c,ab,ac,bc,abc}` and score-class multiplication is not a group quotient.
+The partial-score `(0,1,1,2)` chart with free `x=a,y=b` is the exact
+Einheit/Klein-four section `T=E`, `+=x`, `-=y`, `S=x+y`.  Deletion audit marks
+`c` as cover filler while `x,y` are essential.  The Erdos-870 connection is
+the recurring guardrail: representation abundance does not certify a minimal
+proof basis, so LRC edge-witness packets should retain fiber multiplicity,
+quotient-congruence defect, chart status, and deletion/minimality sidecars
+before promoting a score-class or tiling count.  The continued packet adds the
+lossy compression circuit `x=a OR c`, `y=b OR c`, reuses the K3 edge kernel
+`[[0,1],[1/3,2/3]]` as a minority-edge gate, keeps Worpitzky `1,4,1` as a
+separate descent sidecar, and proposes a Lee-Yang/quartic/resolvent ledger:
+Pascal/binomial cap, `phi4` dip, `q0=q6*R^6` radius balance,
+`L_y=p0+p6+(1/10)p3`, degree-four bounded core below the generic quintic wall,
+ear/Omega recursive witnesses, and Newton/Maclaurin quartic AP extremality.
+Entry: HYP-3199, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3133,
+HYP-3124, HYP-3053, LTI-299, LTT-199, reflection
+`07-reflections/lrc14-n4-einheit-minimality-tournament-models-codex-20260627.md`.
+
 **Latest k=8 reflection-block addendum:** codex-2026-06-27-S273 adds
 HYP-3139/T1204/LTI-265/LTT-163, making the HYP-3132 De Moivre/biquadratic
 resolvent visible as an exact finite pairwise-moment block.  In the

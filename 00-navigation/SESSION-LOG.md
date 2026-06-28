@@ -29307,3 +29307,83 @@ counts.  Add `live_core_bits`, `filler_bits`, `canary_bits`,
 `terminal_exit_or_named_debt` to HYP-3141 edge rows and HYP-3140/HYP-3142
 coefficient/moment packets before using witness or class multiplicity as proof
 evidence.
+## codex-2026-06-27 -- n=4 Einheit/Erdos-870 tournament chart minimality -- HYP-3199
+
+Worked the user's two n=4 tournament modeling schemes and the suggested
+Erdos-870 connection into an executable cover-vs-section audit.  Renumbered
+this lane to HYP-3199/T1299/LTI-299/LTT-199 after incoming S276 claimed
+HYP-3143/T1208/LTI-269/LTT-167 for the broader n=4 packet-subbasis scout and
+incoming S274 claimed HYP-3144/T1209/LTI-270/LTT-168 for the Worpitzky
+pair-function quotient guardrail.  After a later fetch, origin also claimed
+HYP-3145/T1210/LTI-271/LTT-169 for the Erdos-870 filler-core interface, then
+HYP-3146/T1211/LTI-272/LTT-170 for the shift-package/canary packet and
+HYP-3147/T1212/LTI-273/LTT-171 for the n=3 edge-flip kernel, then
+HYP-3148/T1213/LTI-274/LTT-172 for the live-core deletability audit.  This
+packet is therefore deliberately scoped as the prompt-exact
+Einheit/minimality refinement at HYP-3199/T1299/LTI-299/LTT-199.
+Added
+`04-computation/lrc14_n4_einheit_minimality_tournament_scout_codex_20260627.py`,
+stored output
+`05-knowledge/results/lrc14_n4_einheit_minimality_tournament_scout_codex_20260627.out`,
+detail
+`05-knowledge/hypotheses/HYP-3199-lrc14-n4-einheit-erdos870-tournament-models.md`,
+and reflection
+`07-reflections/lrc14-n4-einheit-minimality-tournament-models-codex-20260627.md`.
+
+The scout verifies the prompt's fixed-Hamiltonian-path table with chord flips
+`a,b,c`, but the full cube exposes the hidden fiber structure:
+`T:{E}`, `+:{a}`, `-:{b}`, and `S:{c,ab,ac,bc,abc}`.  Therefore the fixed-path
+tiling model is an abundant cover, not a group quotient; class products such
+as `S*S` are ambiguous after representatives are forgotten.  The partial-score
+`(0,1,1,2)` model with free `x=a,y=b` is the exact Einheit/Klein-four chart:
+`T=E`, `+=x`, `-=y`, `S=x+y`.
+
+Deletion audit is the useful new proof sidecar.  In the tiling cover, deleting
+`c` still reaches all four score classes, while deleting `a` or `b` does not.
+In the exact chart, deleting either `x` or `y` loses a sign class.  This makes
+the Erdos-870 transfer precise enough for LRC work: representation abundance
+cannot certify minimality, so fixed-path tiling and score-class signals should
+carry `n4_fiber_multiplicity_by_class`, `n4_quotient_congruence_defect`,
+`n4_einheit_torsor_status`, `n4_deletable_arc_coordinate`,
+`n4_minimal_chart_status`, and `erdos870_minimality_sidecar_status` before
+feeding HYP-3141 edge-witness rows.
+
+Continuation in the same session extended HYP-3199 beyond cover-vs-section
+minimality.  The scout now prints the n=3 edge-flip kernel
+`C3 -> 3*T3`, `T3 -> 1*C3 + 2*T3`, normalized as
+`[[0,1],[1/3,2/3]]`, with stationary distribution `(1/4,3/4)` and
+eigenvalue `-1/3`; Worpitzky `1,4,1` is kept as a descent sidecar rather than
+identified with the kernel.  Pair functions are split into symmetric
+shadows `a+b,a*b` and ordered payloads `a^b,b^a`.
+
+The new compression trick is explicit: Scheme A maps to Scheme B by the
+monotone circuit `x=a OR c`, `y=b OR c`, so
+`S=c OR (a and b)`.  This preserves score class but destroys the witness of
+whether `S` came from the apex/canary edge or from the live pair.  Consequently
+the projected `c` action is a transformation monoid, not a `V4` action on
+score classes.
+
+The packet also adds a Lee-Yang/quartic/resolvent signal ledger for the next
+hard-core runner: binomial/Pascal cap with de Moivre-Laplace bulk, `phi4`
+off-circle dip, reciprocal balance `q0=q6*R^6`, k=8 bimodality functional
+`L_y=p0+p6+(1/10)*p3`, bounded-core degree ceiling `4`, Abel-Ruffini
+quintic-wall status, ear/Omega recursive witnesses, and Newton/Maclaurin
+quartic AP extremality.  Tournament Analysis now includes
+`compression_circuit_canary_map`, `lee_yang_quartic_resolvent_packet`,
+`n3_edge_flip_worpitzky_kernel`, and `ear_omega_recursive_witness` in the
+carrier path.
+
+Rebase integration: origin/main added HYP-3150/HYP-3151, HYP-3152/HYP-3153,
+and the S72 Lee-Yang circle packet while this work was local.  HYP-3199 is
+therefore kept as the prompt-exact n=4 deletion/minimality chart under
+HYP-3151's broader factor-through legality rule and HYP-3153's reserved
+Lee-Yang/Worpitzky/quartic packet.  HYP-3151 proves the `x=a OR c`,
+`y=b OR c` compression has no affine substitute; S72/HYP-3152 verifies the
+`q0=q6*R^6`, transformation-monoid, degree-`<=4`, and Newton/Maclaurin
+bimodality signals in the current Lee-Yang circle language.
+
+Final rebase integration: incoming HYP-3160 sharpens the k=8 target to
+variance/total-covariance extremality and rules out entropy as the main
+functional.  HYP-3199 remains the n=4 exact-chart input: any covariance packet
+using the compression hierarchy should still retain `S`-fiber multiplicity,
+canary/deletion status, and quotient-congruence debt.

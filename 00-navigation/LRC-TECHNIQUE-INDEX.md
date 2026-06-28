@@ -420,6 +420,7 @@ record what it destroys before asking it to prove anything.
 | LTI-275 | Tournament-4 canary/filler quotient | Fixed Hamiltonian path word, deterministic canary arc, order-two `x,y` completion table, `S`-bulk collision fiber, deletion/restoration sidecar, edge tip/tail exit | HYP-3149 refines HYP-3143's exact-order subbasis packet, HYP-3144's pair-function scalarization alarm, HYP-3145's filler-core interface, HYP-3146's cover/scaffold shift-package policy, HYP-3147's n=3 edge-flip kernel, and HYP-3148's live-core deletability audit by importing the Erdos-870 filler/deletion audit into the smallest fixed-path tournament quotient.  The fixed-path tiling cube on arcs `a,b,c` has fibers `T={E}`, `+={a}`, `-={b}`, `S={c,ab,ac,bc,abc}`.  Fixing `c` unflipped gives partial score sequence `(0,1,1,2)` and the exact two-source table `E->T`, `x->+`, `y->-`, `xy->S`; the `c=1` slice collapses all four completions to `S`.  Thus `c` is a canary/filler coordinate, not harmless symmetry. | HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3141, HYP-3140, HYP-3138, HYP-3137, HYP-3134, HYP-3133, HYP-3124, HYP-3118, HYP-3116, HYP-3093, HYP-3097, T1214, LTT-173, LTI-275, OPEN-Q-108 | Add `fixed_path_word`, `c_canary_status`, `xy_completion_table`, `S_bulk_fiber_words`, `deletion_restoration_sidecar`, and `edge_tip_tail_exit_or_named_debt` before using a two-coordinate tournament quotient in HYP-3141 edge rows or HYP-3140/HYP-3138/HYP-3139 local packets. |
 | LTI-276 | Function-compression factor-through audit | Quotient maps `q:X->Y`, observables `f:X->Z`, unordered and ordered pair functions, K3/K4 tournament fibers, fiber-PGF curves, canary sidecars, and k=8 even-resolvent variables | HYP-3150 runs a scout for the user's compression/resolvent synthesis.  The governing test is whether `f` is constant on fibers of `q`; if not, the forgotten payload must be an ordered, fiber, deletion, or odd-coordinate sidecar.  Exact readout joins HYP-3147/HYP-3144 K3 order loss, HYP-3149/HYP-3146 K4 OR compression and canary status, and HYP-3142/HYP-3132 k=8 quartic-to-biquadratic fold; the proof-carrier tournament has a coupled SCC among these sidecars rather than a simple scalar ladder. | HYP-3150, HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3139, HYP-3138, HYP-3137, HYP-3135, HYP-3134, HYP-3133, HYP-3132, HYP-3129, HYP-3122, THM-084, THM-577, T1215, LTT-174, LTI-276, OPEN-Q-108 | Add `compression_map`, `observable_factors_through`, `fiber_collision_class`, `ordered_sidecar_required`, `fiber_pgf_curve_status`, `canary_deletion_status`, `even_resolvent_variable`, `effective_degree`, `quintic_wall_alarm`, and `terminal_exit_or_named_debt` before promoting any quotient, scalar, or degree-drop analogy in the LRC14 proof packet. |
 | LTI-277 | Worpitzky function-compression resolvent bridge | Target function, swap parity, symmetric shadow, ordered sidecar, compression fiber, nonlinear OR canary map, k=8 biquadratic degree ceiling | HYP-3151/S278 executes HYP-3150's factor-through audit by merging the n=3 edge-flip kernel, n=4 canary/filler quotient, and k=8 resolvent into the rule that a quotient is legal only for functions constant on its fibers or with restored ordered/canary sidecars.  The scout verifies Worpitzky rows `1,4,1` and `1,11,11,1`, separates symmetric `a+b,a*b` from ordered `a^b,b^a`, proves `x=a OR c`, `y=b OR c` is the needed n=4 class-preserving compression with no affine substitute, and records the k=8 centered quartic `u^4-5u^2+4`, degree `4`. | HYP-3151, HYP-3150, HYP-3149, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3139, HYP-3138, HYP-3137, HYP-3132, HYP-3129, HYP-3124, T1216, LTT-175, LTI-277, OPEN-Q-108 | Add `target_function_id`, `function_swap_parity`, `compression_fiber_function_constancy`, `ordered_sidecar_status`, `canary_or_restoration_sidecar`, `resolvent_degree`, and `centered_odd_coefficient_status` before scalarizing edge, fiber-PGF, or k=8 moment packets. |
+| LTI-299 | n=4 Einheit chart minimality gate | Fixed-path tiling cover versus partial-score exact chart, `S`-fiber multiplicity, quotient-congruence defect, deletion/minimality audit, Erdos-870 representation-abundance guard, compression-circuit sidecar, Lee-Yang/quartic degree-four ledger | HYP-3199/codex-2026-06-27 is the prompt-exact n=4 deletion/minimality refinement underneath HYP-3160/HYP-3153/HYP-3152 and HYP-3151/HYP-3150.  It compares two n=4 tournament charts after HYP-3148, HYP-3146/HYP-3145, HYP-3143, and HYP-3144, with HYP-3147 supplying the n=3 edge-kernel warning.  The fixed Hamiltonian path with chord flips `a,b,c` reproduces the prompt table but has fibers `T:{E}`, `+:{a}`, `-:{b}`, `S:{c,ab,ac,bc,abc}` and is not a group quotient.  The partial-score `(0,1,1,2)` chart with free `x=a,y=b` is an exact Einheit/Klein-four section.  Deletion audit marks `c` deletable in the cover and `x,y` essential in the exact chart.  The continuation identifies the cover-to-section compression `x=a OR c`, `y=b OR c`, keeps K3/Worpitzky/function sidecars separate, and proposes Lee-Yang binomial cap, `phi4` dip, `q0=q6*R^6`, `L_y=p0+p6+(1/10)*p3`, degree ceiling `4`, ear/Omega, Newton/Maclaurin AP, and covariance-extremality signals; HYP-3151 proves there is no affine substitute for the OR compression. | HYP-3199, HYP-3160, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3133, HYP-3124, HYP-3053, HYP-3049, HYP-3054, T1299, LTT-199, LTI-299, OPEN-Q-108 | Add `n4_model_scheme_id`, `n4_fiber_multiplicity_by_class`, `n4_quotient_congruence_defect`, `n4_einheit_torsor_status`, `n4_deletable_arc_coordinate`, `n4_minimal_chart_status`, `erdos870_minimality_sidecar_status`, `n3_edge_flip_kernel`, `function_quartet_order_status`, `compression_circuit_profile`, `transformation_monoid_status`, `lee_yang_binomial_cap_status`, `phi4_off_circle_dip_status`, `large_radius_balance_q0_q6_R6`, `bounded_core_resolvent_degree_ceiling`, and `ear_omega_sidecar_status` before using fixed-path tiling or score-class abundance in edge-witness packets. |
 
 ## Cross-Cutting Guardrails
 
@@ -3887,3 +3888,101 @@ curves, finite-address sidecars, and proof-route legality.
 Next hook: run the HYP-3153 packet scout and decide whether the k=8 line
 `L_y = p0 + p6 + (1/10)p3` can be bounded by cap using the AP quartic moment
 inequality plus explicit sidecars for the odd/Worpitzky residual.
+
+## LTI-299: n=4 Einheit Chart Minimality Gate
+
+Used by codex-2026-06-27 for HYP-3199/T1299.  This technique refines the
+HYP-3148 live-core audit, HYP-3145 filler-core interface, and HYP-3146 shift-package/canary lane by
+separating two prompt-exact ways to model the user's n=4 tournament table:
+after HYP-3150/HYP-3151 and HYP-3152/HYP-3153, read it as the exact n=4
+deletion/minimality chart feeding the broader factor-through and
+Lee-Yang/Worpitzky/quartic compression ledgers.
+
+```text
+Scheme A = fixed Hamiltonian path + chord flips a,b,c
+Scheme B = partial-score (0,1,1,2) seed + free flips x=a,y=b
+```
+
+Scheme A is a tiling cover.  It reproduces the local table, but the full
+fixed-path cube has a five-state `S` fiber:
+
+```text
+T:{E}
++:{a}
+-:{b}
+S:{c,ab,ac,bc,abc}
+```
+
+The score-class product is therefore not a congruence: `S*S` may become
+`+`, `-`, `S`, or `T` depending on hidden representatives.  Scheme B is the
+exact chart:
+
+```text
+T = Einheit = E
++ = x
+- = y
+S = x+y
+```
+
+The Erdos-870 lesson is imported as a guardrail: many representations do not
+certify a minimal proof basis.  In this model, `c` is deletable in the cover,
+while `x,y` are essential in the exact chart.
+
+Continuation signals added in the same HYP-3199 packet:
+
+```text
+x = a OR c
+y = b OR c
+S = c OR (a and b)
+```
+
+This is the class-preserving compression from the three-flip cover to the
+two-coordinate chart.  It is a small monotone circuit with shared canary `c`,
+not a group quotient; it forgets whether `S` came from the apex/canary edge or
+from the live pair.  The projected `c` action is therefore a transformation
+monoid on score classes rather than `V4`.
+
+Pair this with the K3 edge kernel and function sidecars:
+
+```text
+K3 random-edge kernel on (C3,T3) = [[0,1],[1/3,2/3]]
+minority_edge_gate = from T3 exactly one flipped edge reaches C3
+Worpitzky degree-three descent word = 1,4,1
+symmetric functions = a+b, a*b
+ordered functions = a^b, b^a
+```
+
+For the Lee-Yang route, treat the following as a ledger of signals rather
+than as a scalar proof:
+
+```text
+lee_yang_binomial_cap_status
+phi4_off_circle_dip_status
+large_radius_balance_q0_q6_R6
+k8_bimodality_functional = p0+p6+(1/10)*p3
+bounded_core_resolvent_degree_ceiling = 4
+abel_ruffini_wall_status
+ear_omega_sidecar_status
+newton_maclaurin_quartic_AP_status
+```
+
+Preserves: exact section status, quotient-congruence status, deletion
+minimality, fiber multiplicity, the difference between cover coordinates and
+chart coordinates, the compression circuit, ordered-versus-symmetric function
+payload, and the bounded-core degree-four solvability sidecar.
+
+Destroys if used alone: hidden `S` representatives, the fact that `c` is
+filler, the non-group nature of the fixed-path score quotient, the lost
+preimage of the compression circuit, and whether the Lee-Yang/quartic signal
+is cap, dip, radius, or resolvent data.
+
+Next hook: attach `n4_fiber_multiplicity_by_class`,
+`n4_quotient_congruence_defect`, `n4_einheit_torsor_status`,
+`n4_deletable_arc_coordinate`, `n4_minimal_chart_status`,
+`erdos870_representation_abundance_status`, and
+`erdos870_minimality_sidecar_status` to HYP-3141 edge-witness rows before
+using fixed-path tiling or score-class abundance as proof evidence.  Then add
+`compression_circuit_profile`, `transformation_monoid_status`,
+`n3_edge_flip_kernel`, `function_quartet_order_status`,
+`large_radius_balance_q0_q6_R6`, `bounded_core_resolvent_degree_ceiling`, and
+`ear_omega_sidecar_status` to the k=8 hard-core runner.

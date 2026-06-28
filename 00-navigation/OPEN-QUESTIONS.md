@@ -168,6 +168,45 @@ deletable coordinate remains a shadow until a nondeletable core or named
 sidecar is proved. -> HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144,
 HYP-3143, HYP-3142, HYP-3141, HYP-3140, HYP-3137, HYP-3134, HYP-3133,
 HYP-3124, HYP-3054, HYP-2534, LTI-274, LTT-172, T1213, OPEN-Q-108.
+**OPEN-Q-108 HYP-3199 n=4 Einheit/Erdos-870 chart addendum:**
+HYP-3199 separates the user's two n=4 tournament models as a prompt-exact
+deletion-minimality refinement of HYP-3148's live-core audit,
+HYP-3146's shift-package/canary packet, HYP-3145's filler-core interface,
+HYP-3143's packet-subbasis audit, and HYP-3144's pair-function
+quotient guardrail.  The fixed-path
+tiling table with flips `a,b,c` is an abundant cover: `S` has five
+representatives `c,ab,ac,bc,abc`, and score-class multiplication is not a
+well-defined quotient.  The partial-score `(0,1,1,2)` chart with free
+`x=a,y=b` is the exact Einheit/Klein-four chart.  Deletion audit marks `c`
+deletable in the cover and `x,y` essential in the exact chart.  The Erdos-870
+connection is a guardrail: many representations do not certify a minimal
+subbasis or proof chart.
+
+Continuation: after HYP-3150/HYP-3151 and HYP-3152/HYP-3153, HYP-3199 is the
+prompt-exact n=4 deletion/minimality chart feeding the factor-through and
+Lee-Yang/Worpitzky/quartic ledgers.  It also identifies the class-preserving compression
+`x=a OR c`, `y=b OR c`, with `S=c OR (a and b)`.  This is a small monotone
+circuit, not a legal group quotient by itself, and the projected `c` action is
+a transformation monoid rather than `V4`.  The same packet imports the K3
+edge kernel `[[0,1],[1/3,2/3]]`, Worpitzky `1,4,1`, and
+ordered-versus-symmetric pair-function split as sidecars, then proposes the
+Lee-Yang/quartic bounded-core ledger: binomial/Pascal cap, `phi4` dip,
+`q0=q6*R^6`, `L_y=p0+p6+(1/10)*p3`, degree ceiling `4`, Abel-Ruffini wall
+status, ear/Omega recursive witness, Newton/Maclaurin AP extremality, and the
+HYP-3160 variance/total-covariance target.
+
+Open task: add `n4_fiber_multiplicity_by_class`,
+`n4_quotient_congruence_defect`, `n4_einheit_torsor_status`,
+`n4_deletable_arc_coordinate`, and `erdos870_minimality_sidecar_status` to the
+HYP-3141 edge-witness packet before using fixed-path tiling or score-class
+abundance.  Then test every n=4 partial-score seed for exact chart status and
+route non-sections to named quotient debt.  Add `compression_circuit_profile`,
+`transformation_monoid_status`, `n3_edge_flip_kernel`,
+`function_quartet_order_status`, `large_radius_balance_q0_q6_R6`,
+`bounded_core_resolvent_degree_ceiling`, and `ear_omega_sidecar_status` to the
+next k=8 hard-core runner. -> HYP-3199, HYP-3160, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141,
+HYP-3133, HYP-3124, HYP-3053, HYP-3049, HYP-3054, LTI-299, LTT-199, T1299,
+OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3145 filler-core interface addendum:**
 HYP-3145 turns the user's two n=4 tournament tables into a proof-interface

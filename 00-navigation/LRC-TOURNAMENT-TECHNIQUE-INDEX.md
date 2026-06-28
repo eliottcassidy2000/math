@@ -174,6 +174,12 @@ obligations, and proof-carrier interfaces.
   compression fibers, ordered sidecars, canary coordinates, and resolvent
   obligations the vertices.  The target function must be fiber-constant or
   sidecar-restored.
+- Need to separate n=4 tiling abundance from exact chart minimality:
+  use LTT-199 after LTT-175/LTT-174/LTT-172/LTT-171/LTT-170/LTT-169/LTT-157/LTT-160/LTT-165 and make model/proof carriers the
+  tournament vertices.  Carry the `S`-fiber multiplicity,
+  quotient-congruence defect, deletion audit, compression-circuit preimage
+  debt, K3 edge-kernel sidecar, and Lee-Yang/quartic degree-four ledger before
+  treating a score-class table as algebra.
 - Need a q-series/product/modular quotient guardrail:
   use LTT-125 after LTT-124/LTT-123/LTT-122/LTT-119/LTT-118/LTT-116 and require a finite principal
   part with named polar exits before using q-Pochhammer, partition, divisor,
@@ -5888,3 +5894,52 @@ constant chase.
 - **Pointers:** HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3149, HYP-3147,
   HYP-3142, HYP-3139, HYP-3109, HYP-3099, LTI-279, LTT-177, T1218,
   OPEN-Q-108.
+
+## LTT-199: n=4 Einheit/Tiling Minimality Tournament
+
+- **Move:** Treat the n=4 modeling schemes as proof carriers rather than as
+  score labels.  Compare the fixed-path tiling cover, exact `x,y` Einheit
+  chart, deletion/minimality sidecar, Erdos-870 abundance warning, `S`-fiber
+  multiplicity alarm, compression-circuit canary map, K3 edge/Worpitzky
+  kernel, Lee-Yang/quartic resolvent packet, ear/Omega recursive witness,
+  partial-score seed, score-sequence shadow, and raw flip table.
+- **LRC use:** HYP-3199 is the prompt-exact n=4 deletion/minimality chart
+  below HYP-3160/HYP-3153/HYP-3152 and HYP-3151/HYP-3150's function-compression legality packet.  It refines
+  HYP-3148, HYP-3146, HYP-3145, HYP-3143, and HYP-3144 by showing that the user's fixed-path table is locally
+  correct but not a group quotient on score classes.  The full fixed-path cube
+  has `S:{c,ab,ac,bc,abc}`; class products are ambiguous after fibers are
+  forgotten.  The partial-score `(0,1,1,2)` model with `x=a,y=b` is the exact
+  Klein-four chart, and deletion audit marks `c` as cover filler while `x,y`
+  are essential.  The class-preserving cover-to-chart compression is
+  `x=a OR c`, `y=b OR c`, so `S=c OR (a and b)`; this makes the projected
+  `c` action a transformation monoid rather than `V4`.  The same packet keeps
+  the K3 edge kernel `[[0,1],[1/3,2/3]]`, Worpitzky `1,4,1`, and
+  ordered-versus-symmetric pair-function sidecars distinct from the n=4 chart.
+- **Preserves:** exact quotient status, section choice, fiber multiplicity,
+  deletion/minimality, whether a tournament table is a cover or an algebra,
+  compression preimage debt, K3 minority-edge status, function-order payload,
+  and Lee-Yang/quartic bounded-core degree-four sidecars.
+- **Forgets / guardrail:** raw score-class tables forget which representatives
+  lie in the `S` fiber, whether `c` is filler, and whether multiplication is
+  well-defined.  Raw scalar Lee-Yang or moment values forget whether they are
+  cap, dip, radius, or resolvent data.  Abundance should therefore be paired
+  with `erdos870_minimality_sidecar_status`, and bounded-core signals should
+  carry `bounded_core_resolvent_degree_ceiling`, `abel_ruffini_wall_status`,
+  and `ear_omega_sidecar_status`.
+- **Tournament readout:** vertices are model/proof carriers, not runners, raw
+  arcs, or score labels.  The HYP-3199 scout is transitive with
+  `score_hist={1:1,2:1,7:1,9:1,10:1,17:2,22:2,23:2,24:1}`, no directed 3-cycles,
+  and one Hamiltonian path:
+  `minimality_deletion_sidecar -> compression_circuit_canary_map ->
+  lee_yang_quartic_resolvent_packet -> einheit_xy_exact_chart ->
+  n3_edge_flip_worpitzky_kernel -> ear_omega_recursive_witness ->
+  erdos870_abundance_nonminimality_gate -> S_class_multiplicity_alarm ->
+  tiling_path_cube_cover -> partial_score_0112_seed ->
+  score_sequence_family_shadow -> raw_flip_name_table`.
+- **Next hook:** Add the n=4 minimality fields to HYP-3141 edge-witness rows,
+  then test other n=4 partial-score seeds and HYP-3053 fixed-path half-tiling
+  fibers for the same cover-vs-section split.  Add K3 edge-kernel,
+  compression-circuit, Lee-Yang cap/dip/radius, degree-four resolvent, and
+  ear/Omega fields to the next k=8 hard-core runner.
+- **Pointers:** HYP-3199, HYP-3160, HYP-3153, HYP-3152, HYP-3151, HYP-3150, HYP-3148, HYP-3147, HYP-3146, HYP-3145, HYP-3144, HYP-3143, HYP-3142, HYP-3141, HYP-3133, HYP-3124, HYP-3053,
+  HYP-3049, HYP-3054, LTI-299, LTT-199, T1299, OPEN-Q-108.
