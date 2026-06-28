@@ -6523,3 +6523,38 @@ quotient_legality_status
 - **Pointers:** HYP-3227, HYP-3226, HYP-3225, HYP-3224, HYP-3223, HYP-3222,
   HYP-3221, HYP-3213, HYP-3212, HYP-3211, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
   HYP-3201, HYP-3200, LTI-325, LTT-225, T1325, OPEN-Q-108.
+
+## LTT-226: Cyclotomic Delsarte Shell-Magic Tournament
+
+- **Move:** Treat proof currencies as vertices: quartic shell contact,
+  Delsarte/Newton dual, Joukowski/Chebyshev cubic, AP-support normal,
+  ordered-tail exchange price, Toeplitz/covariance trap discharge, cyclic PSD
+  regularization, raw cyclotomic energy, and raw `q3`.
+- **LRC use:** HYP-3228 gives the exact visible coefficient vector for the
+  k=8 `L_y` dual.  The tournament separates the useful finite magic packet
+  from two tempting but false terminal compressions: raw cyclotomic norm and
+  literal cyclic nonnegative Fourier positivity.  Rebase integration with
+  HYP-3214: the positive sector-side Fejer kernel `F_7` is a distinct
+  cyclotomic magic face; this section tracks the shell `L_y` Delsarte dual.
+- **Preserves:** `L_y` shell functional, magic-deficit slack, AP support
+  direction, Delsarte moment identity, Joukowski level-7 arithmetic, and the
+  need for ordered-tail and trap-discharge sidecars.
+- **Forgets / guardrail:** shell quotients forget sector identity, covariance
+  pair labels, and exchange-neighbor witnesses.  Cyclic PSD positivity forgets
+  the tight central `q3` price and would require `rho>=18.019...` instead of
+  the actual `rho=1`.
+- **Fingerprint:** exact scout tournament is transitive with
+  `score_hist={100:1,96:1,91:1,88:1,83:1,74:1,42:1,25:1,18:1}`, no directed
+  3-cycles, and one Hamiltonian path:
+  `quartic_shell_magic_contact -> delsarte_newton_binomial_dual ->
+  joukowski_chebyshev_cubic -> ap_polarized_support_normal ->
+  ordered_tail_exchange_price -> toeplitz_trap_discharge_sidecar ->
+  cyclic_psd_regularization -> raw_cyclotomic_energy -> raw_q3_scalar`.
+- **Next hook:** Build a slack decomposition of `magic_deficit` into
+  AP-support, ordered-tail exchange, Toeplitz/covariance trap, and
+  Joukowski/HB components, then test whether the residual is a small
+  Delsarte basis vector.
+- **Pointers:** HYP-3228, HYP-3215, HYP-3214, HYP-3227, HYP-3226, HYP-3224, HYP-3223, HYP-3222, HYP-3221,
+  HYP-3213, HYP-3212, HYP-3210, HYP-3205, HYP-3204, HYP-3203, HYP-3202,
+  HYP-3200, HYP-3153, HYP-3138, HYP-3132, LTI-326, LTT-226, T1326,
+  OPEN-Q-108.

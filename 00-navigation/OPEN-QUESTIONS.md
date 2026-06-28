@@ -1,5 +1,33 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3228 cyclotomic Delsarte shell-magic addendum:**
+HYP-3228 makes the requested magic-function object explicit at the k=8
+frontier.  The finite dual is
+`f(n)=((n-1)(n-2)(n-4)(n-5))/4`, with shell values
+`[10,0,0,1,0,0,10]`, so `E[f(N)]=10q0+q3+10q6=10L_y`.  The Delsarte form is
+`10S0-10S1+10S2-9S3+6S4`; the cyclotomic/Joukowski form is
+`z^-3(10+z^3+10z^6)=10(u^3-3u)+1`.  Exact bounded-bank readout: no primitive
+magic beaters, one primitive tie, and the known doubled AP all-bank tie.  AP
+support has the same equality set and controls the magic deficit by positive
+ratios, but it is not the same direction.  Guardrail: requiring literal
+nonnegative cyclic Fourier/Fejer positivity would force central coefficient
+`rho>=18.019377358048`, while the correct shell Delsarte packet has `rho=1`.
+Rebase integration with HYP-3214 separates the two cyclotomic magic faces:
+the positive sector-side Fejer kernel `F_7` is the Fourier/PSD magic function,
+while HYP-3228 is the shell `L_y` Delsarte dual that must be glued to it and
+to the ordered-tail sidecars.
+
+Open task: prove a slack decomposition for the magic deficit using the current
+sidecars rather than a false PSD scalar:
+AP-support gap, HYP-3204 ordered-tail exchange-rate slack, HYP-3224
+Toeplitz/covariance trap-discharge slack, and HYP-3222 Joukowski/HB gluing
+slack.  Test whether the residual is sign-controlled in a small Delsarte or
+moment basis and whether it extends beyond the bounded bank under primitive
+normal form. -> HYP-3228, HYP-3215, HYP-3214, HYP-3227, HYP-3226, HYP-3224, HYP-3223,
+HYP-3222, HYP-3221, HYP-3213, HYP-3212, HYP-3210, HYP-3205, HYP-3204,
+HYP-3203, HYP-3202, HYP-3200, HYP-3153, HYP-3138, HYP-3132, T1326, LTI-326,
+LTT-226,
+OPEN-Q-108.
 **OPEN-Q-108 HYP-3222 Joukowski-Hermite-Biehler / Perron-Frobenius addendum:**
 HYP-3222 turns the incoming Perron, Toeplitz, Joukowski, and Hermite-Biehler
 ideas into two exact local certificates.  The HB leg certificate is

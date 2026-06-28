@@ -1,0 +1,84 @@
+HYP-3228 cyclotomic Delsarte/Beurling-Selberg magic-function scout
+==============================================================================
+bank=anchored {0} union A, A subset [1,14], |A|=7
+rows_all=3432
+rows_primitive=3431
+consec=(0, 1, 2, 3, 4, 5, 6, 7)
+even_AP=(0, 2, 4, 6, 8, 10, 12, 14)
+consec_q=[481/1470, 359/1470, 25/147, 26/245, 17/210, 5/98, 1/49]
+even_AP_same_q=True
+
+SHELL MAGIC FUNCTION
+f(n)=((n-1)(n-2)(n-4)(n-5))/4
+centered v=n-3 form=(v^2-1)(v^2-4)/4
+shell_values_f0..f6=[10, 0, 0, 1, 0, 0, 10]
+nonnegative_on_integer_shells=True
+contact_zero_shells=[1, 2, 4, 5]
+positive_shells=[0, 3, 6]
+interpretation=endpoint bimodality plus one central Worpitzky repair
+
+DELSARTE / NEWTON-BINOMIAL FORM
+newton_binomial_coefficients=[10, -10, 10, -9, 6, 0, 0]
+identity_holds_on_shells_0..6=True
+identity=10*S0 -10*S1 +10*S2 -9*S3 +6*S4
+where Sj=E[binom(N,j)] for miss count N
+
+CYCLOTOMIC / JOUKOWSKI FORM
+P(z)=10 + z^3 + 10 z^6
+self_reciprocal=z^6 P(1/z)=P(z)
+z^-3 P(z)=10(z^3+z^-3)+1 = 10(u^3-3u)+1, u=z+z^-1
+real_7th_cyclotomic_cubic=C(u)=u^3+u^2-2u-1
+reduction_mod_C(u)=-10u^2-10u+11
+m=1: u=2cos(2pi*1/7)=+1.246979603717; M(u)=-17.019377358048; reduced=-17.019377358048
+m=2: u=2cos(2pi*2/7)=-0.445041867913; M(u)=+13.469796037175; reduced=+13.469796037175
+m=3: u=2cos(2pi*3/7)=-1.801937735805; M(u)=-3.450418679126; reduced=-3.450418679126
+cyclic_nonnegative_completion_requires_central_rho_at_least=18.019377358048 at root_index=6
+current_central_rho=1.000000000000
+incoming_HYP3214=positive sector-side magic is the Fejer kernel F7
+guardrail=this shell Ly dual is distinct; cyclic PSD positivity would overprice the q3 repair
+
+EXACT BOUNDED-BANK EXTREMALITY
+primitive: magic=10q0+q3+10q6 beaters=0 ties=1 max=2633/735 at (0, 1, 2, 3, 4, 5, 6, 7)
+all: magic=10q0+q3+10q6 beaters=0 ties=2 max=2633/735 at (0, 2, 4, 6, 8, 10, 12, 14)
+consec_magic=2633/735 (3.582312925170)
+consec_Ly=2633/7350 (0.358231292517)
+magic_equals_10Ly_on_all_rows=True
+all_bank_magic_ties=[(0, 1, 2, 3, 4, 5, 6, 7), (0, 2, 4, 6, 8, 10, 12, 14)]
+
+AP SUPPORT NORMAL ALIGNMENT
+primitive: ap_support beaters=0 ties=1 max=39766/540225 at (0, 1, 2, 3, 4, 5, 6, 7)
+all: ap_support beaters=0 ties=2 max=39766/540225 at (0, 2, 4, 6, 8, 10, 12, 14)
+primitive_deficit_ratio=magic_deficit/support_deficit, excluding consec
+min_ratio=7390327/146434 (50.468654821) at E=(0, 4, 5, 8, 9, 10, 13, 14)
+  magic_deficit=150823/114660 support_deficit=73217/2809170
+max_ratio=6857550/28337 (241.999858842) at E=(0, 2, 4, 6, 7, 8, 10, 12)
+  magic_deficit=311/392 support_deficit=28337/8643600
+projection_alpha_magic_centered_onto_AP_support=157290/19883 (7.910778052)
+cosine_magic_vs_AP_support=0.182704091
+residual_vector=[110184/19883, -75592/19883, -63929/19883, -33988/19883, -49912/19883, -45204/19883, 158441/19883]
+readout=AP support is a coercive normal, but not the whole magic vector
+
+NEAR-CHALLENGER SNAPSHOT
+magic_rank_0: E=(0, 1, 2, 3, 4, 5, 6, 7) magic=2633/735 deficit=0 ap_support_deficit=0
+magic_rank_1: E=(0, 2, 3, 4, 5, 6, 7, 8) magic=297/98 deficit=811/1470 ap_support_deficit=12457/2160900
+magic_rank_2: E=(0, 2, 4, 6, 7, 8, 10, 12) magic=16399/5880 deficit=311/392 ap_support_deficit=28337/8643600
+magic_rank_3: E=(0, 1, 3, 5, 7, 9, 11, 13) magic=278503/105105 deficit=32672/35035 ap_support_deficit=61052/5150145
+magic_rank_4: E=(0, 1, 3, 4, 5, 6, 7, 9) magic=2309/882 deficit=4253/4410 ap_support_deficit=20141/3241350
+magic_rank_5: E=(0, 1, 2, 3, 4, 5, 6, 14) magic=2519/980 deficit=85/84 ap_support_deficit=4378/540225
+magic_rank_6: E=(0, 3, 4, 5, 6, 7, 8, 9) magic=21859/8820 deficit=1391/1260 ap_support_deficit=35233/3241350
+magic_rank_7: E=(0, 1, 2, 4, 5, 6, 7, 10) magic=727/294 deficit=233/210 ap_support_deficit=14023/1440600
+primitive_support_pattern_count=1
+most_common_support_patterns=[((0, 1, 2, 3, 4, 5, 6), 3431)]
+
+TOURNAMENT ANALYSIS
+vertices=proof currencies: shells, modes, normals, traps, and proof obligations
+alternate_vertex_sets_considered=miss-count shells; Laurent modes; AP-support normal; exchange traps; sector-boundary events
+chosen_quotient_preserves=L_y shell functional and q-vector support direction
+chosen_quotient_destroys=individual sector identity, covariance-pair labels, and exchange-neighbor witnesses
+challenged_assumption=cyclotomic magic need not be a nonnegative cyclic Fourier kernel
+pairwise_observable=retained LRC proof payload plus exact bounded-bank survival
+switch/gauge=A->B iff payload score(A)>payload score(B); ties lexical
+score_hist={100:1, 96:1, 91:1, 88:1, 83:1, 74:1, 42:1, 25:1, 18:1}
+directed_3cycles=0
+hamiltonian_path_count=1
+priority_path=quartic_shell_magic_contact -> delsarte_newton_binomial_dual -> joukowski_chebyshev_cubic -> ap_polarized_support_normal -> ordered_tail_exchange_price -> toeplitz_trap_discharge_sidecar -> cyclic_psd_regularization -> raw_cyclotomic_energy -> raw_q3_scalar

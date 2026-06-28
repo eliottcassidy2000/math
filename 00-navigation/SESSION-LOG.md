@@ -94,6 +94,46 @@ exchange-rate slack.
 
 Artifacts: HYP-3225 detail, T1308, LTI-308, LTT-208, OPEN-Q-108 addendum,
 reflection `07-reflections/lrc14-green-lorentzian-trap-fingerprints-codex-20260628.md`.
+## codex-2026-06-28 -- HYP-3228 cyclotomic Delsarte shell-magic function
+
+Worked the requested magic-function thread into an exact finite k=8 packet.
+Added
+`04-computation/lrc_cyclotomic_delsarte_bs_magic_codex_20260628.py`,
+stored output
+`05-knowledge/results/lrc_cyclotomic_delsarte_bs_magic_codex_20260628.out`,
+detail
+`05-knowledge/hypotheses/HYP-3228-cyclotomic-delsarte-beurling-selberg-magic.md`,
+and reflection
+`07-reflections/cyclotomic-delsarte-beurling-selberg-magic-codex-20260628.md`.
+Navigation handles: HYP-3228, T1326, LTI-326, LTT-226.
+
+Core readout: the k=8 `L_y` dual is the shell polynomial
+`f(n)=((n-1)(n-2)(n-4)(n-5))/4`, values `[10,0,0,1,0,0,10]`, so
+`E[f(N)]=10q0+q3+10q6=10L_y`.  The Newton/Delsarte form is
+`10S0-10S1+10S2-9S3+6S4`, and the cyclotomic/Joukowski form is
+`z^-3(10+z^3+10z^6)=10(u^3-3u)+1`, reducing modulo the real seventh
+cyclotomic cubic to `-10u^2-10u+11`.
+
+Exact bounded-bank check over `3432` anchored rows: no primitive magic
+beaters, one primitive tie, and the usual doubled AP all-bank tie.  AP support
+has the same equality set and positive magic-deficit/support-deficit ratios,
+but the centered directions have cosine only `0.182704091`.  Therefore AP
+support is a coercive normal, not the whole magic vector.
+
+Guardrail: literal cyclic nonnegative completion of `10+rho z^3+10z^6` on
+seventh roots would need `rho>=18.019377358048`, while the shell Delsarte
+packet has `rho=1`.  Rebase integration with HYP-3214 separates the positive
+sector-side Fejer kernel `F_7` from this shell `L_y` dual; they are two
+cyclotomic magic faces that should be glued, not conflated.  Second rebase
+integration: HYP-3215 places the Fejer/Cohn-Elkies LP face in a larger
+polyhedron/exponential-sum route and flags the induction base, so HYP-3228 is
+a shell-dual coordinate for that route rather than a standalone close.  Latest
+rebase integration: mac-mini S75's HYP-3227 comb-overlap Gram kernel is the
+measure-domain PSD dual and single-arc peeling face; HYP-3228 should be tested
+against that Gram/peeling coordinate.  The next proof
+target is a slack decomposition using
+AP-support gap, HYP-3204 ordered-tail exchange-rate slack, HYP-3224
+Toeplitz/covariance trap slack, and HYP-3222 Joukowski/HB gluing slack.
 
 ## mac-mini-2026-06-27-S74 -- abstract synthesis: THE ONE OBSTRUCTION (apex-7 = Lee-Yang zero at 1/p; algebra is worst-case, resolution is analytic) + octonion REFUTED
 

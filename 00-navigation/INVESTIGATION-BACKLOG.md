@@ -15,6 +15,34 @@
 
 ---
 
+## Lead codex-2026-06-28: Cyclotomic Delsarte/Beurling-Selberg magic function
+
+**Status:** EVIDENCE / exact bounded-bank synthesis; not proof
+(HYP-3228/T1326).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3228-cyclotomic-delsarte-beurling-selberg-magic.md`,
+`04-computation/lrc_cyclotomic_delsarte_bs_magic_codex_20260628.py`,
+`05-knowledge/results/lrc_cyclotomic_delsarte_bs_magic_codex_20260628.out`,
+and
+`07-reflections/cyclotomic-delsarte-beurling-selberg-magic-codex-20260628.md`.
+
+Readout: the k=8 `L_y` dual is the shell magic polynomial
+`((n-1)(n-2)(n-4)(n-5))/4`, values `[10,0,0,1,0,0,10]`, with
+Delsarte/Newton form `10S0-10S1+10S2-9S3+6S4` and Joukowski form
+`10(u^3-3u)+1`.  It has no primitive bounded-bank beaters and only the known
+doubled AP all-bank tie.  AP support has the same equality set and positive
+deficit-ratio control, but the centered directions are not identical.  Guardrail:
+cyclic nonnegative completion would need central coefficient `rho>=18.019...`,
+so raw Fejer/PSD positivity is too expensive.  After HYP-3214, treat the
+positive sector-side Fejer kernel `F_7` and this shell `L_y` Delsarte dual as
+distinct cyclotomic magic faces to glue; use ordered-tail exchange and
+Toeplitz/trap sidecars for the center.
+
+Next: decompose the magic deficit into AP-support gap, HYP-3204 exchange-rate
+slack, and HYP-3224 Toeplitz/covariance trap-discharge slack; test whether the
+residual has a small sign-controlled Delsarte basis.
+
 ## Lead codex-2026-06-28: Small-pattern adjacency atlas
 
 **Status:** RESERVED / active atlas build; not proof (HYP-3226/T1324).
