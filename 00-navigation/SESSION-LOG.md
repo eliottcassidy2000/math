@@ -1,3 +1,32 @@
+## kind-pasteur-2026-06-27-S31ak -- the cyclotomic ideal: Joukowski/de Moivre + WHY n=14 = cubic cyclotomic degree
+
+Owner: rational approximations of irrationals/transcendentals; the ideal uniform PGF 1+z+...+z^6 (7-fold
+symmetry) Joukowski-maps to the de Moivre angles {2cos(2pi j/7)}; cap=cyclotomic ideal, dip=Im(w)=
+real-rootedness defect; merge ferromagnetic + creative niche sets. Delivered (HYP-3162):
+
+- **GEOMETRY (verified):** Joukowski w=z+1/z sends the 7th roots of unity EXACTLY to the de Moivre angles
+  {-1.8019,-0.4450,1.2470} = roots of the cyclotomic cubic x^3+x^2-2x-1 (real subfield of Q(zeta_7)). My
+  coverage-PGF zeros (3 conj pairs near |z|=R, HYP-3099) R-normalized-Joukowski APPROACH these de Moivre
+  angles as k->inf (dist 0.380->0.212->0.169; DOMINANT mode LOCKED at k=8: Re(w)1=-1.804 vs -1.8019). So
+  the owner's map LINEARIZES my Lee-Yang circle. HONEST: "dip=Im(w)" is qualitative not exact (defect
+  0.174 != dip 0.014; consec doesn't min raw defect).
+- **REFRAME:** dip = the RATIONAL-APPROXIMATION defect of the binomial/Pascal cap C(k+1,2)/91 (RATIONAL)
+  against the cyclotomic (CUBIC-IRRATIONAL) ideal -- rational because the apex resolvent De-Moivre-collapses
+  to Q (disc 9, HYP-3132); residual Im(w) = the odd/Worpitzky/non-associative half (HYP-3160).
+- **WHY n=14 FIRST-OPEN (verified, clean):** the apex q-fold cyclotomic ideal 2cos(2pi/q) has degree
+  phi(q)/2: q=3(n=6)->1 RATIONAL, q=5(n=10)->2 quadratic/golden (PERIODIC CF, tractable), **q=7(n=14)->3
+  CUBIC (NON-periodic CF, the Diophantine WALL)**. composite-2q n=6,10 SOLVED (deg<=2); n=14 first-open =
+  first apex whose cyclotomic ideal is a cubic irrational (Lagrange periodic-CF fails; heptagon non-
+  constructible). The Diophantine face of the 14=2*7 apex wall.
+- **FERROMAGNETIC MERGE (HYP-3161):** ferro order (k>=6) = cyclotomic onset; dominant zero locks to the
+  cyclotomic ground mode -1.8019; de Moivre angles = ordered normal modes; antiferro(k<=5)=pre-cyclotomic.
+- **NICHE LEADS:** Beraha B_7=2+2cos(2pi/7)=3.247 (chromatic/Tutte), Lagrange/Markoff spectrum,
+  PSL(2,7)/Fano/Klein-quartic, Salem/Pisot dyadic-vs-cyclotomic towers.
+
+NET: LRC(14) not proved; the cap/dip now have a cyclotomic-Diophantine meaning (cap=rational approximant of
+the cubic-irrational 7-fold ideal), and "why 14" is the first cubic cyclotomic apex. => HYP-3162; script
+lrc_joukowski_cyclotomic_dip_kps.py; reflection the-cyclotomic-ideal-joukowski-de-moivre-...
+
 ## kind-pasteur-2026-06-27-S31aj -- 1/7 settled (NOT a theorem) + covariance-max EXHAUSTIVE + FERROMAGNETIC transition
 
 Owner: notice the 2002 connection; re-verify whether the associativity defect 1/7 is universal (a theorem)
