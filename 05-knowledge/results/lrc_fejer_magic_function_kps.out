@@ -1,0 +1,13 @@
+=== The cyclotomic magic function = the FEJER KERNEL F_7 ===
+  max |(de Moivre cubic at 2cos t)^2 - Fejer_7(t)| = 2.47e-12  (=0 => IDENTICAL)
+  F_7(0) = 49.0 (=49=7^2);  double zeros at t=2pi j/7 (the de Moivre/7th-root angles)
+  Fourier coeffs F_7-hat(n) (should be (7-|n|)_+, the Fejer weights):
+    ['-6:1.0', '-5:2.0', '-4:3.0', '-3:4.0', '-2:5.0', '-1:6.0', '0:7.0', '1:6.0', '2:5.0', '3:4.0', '4:3.0', '5:2.0', '6:1.0']
+  => F_7-hat(n) = (7-|n|)_+ >= 0  => POSITIVE-DEFINITE (the Delsarte/Beurling-Selberg magic-function condition)
+
+=== This IS the cyclotomic Delsarte magic function ===
+  - non-negative (Fejer): the majorant condition
+  - F-hat >= 0 (Fejer weights): positive-definite, the Delsarte dual condition
+  - DOUBLE zeros at the de Moivre angles 2cos(2pi j/7): the LP-SHARPNESS (config sits at the zeros)
+  - = (de Moivre cubic)^2 = the Chebyshev V_7 equioscillation (HYP-3212)
+  - the AP orbit's autocorrelation IS the Fejer kernel (the AP = sum of equispaced deltas)
