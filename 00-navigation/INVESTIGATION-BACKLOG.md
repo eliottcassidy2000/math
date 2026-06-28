@@ -17,7 +17,7 @@
 
 ## Lead codex-2026-06-28: Function-compression resolvent-degree wall
 
-**Status:** RESERVED / executable factor-through scout pending; not proof
+**Status:** EVIDENCE / executable factor-through scout; not proof
 (HYP-3150/T1215).
 
 Claimed files:
@@ -32,6 +32,11 @@ sidecar.  Initial exact checks: unordered pair functions versus ordered
 exponentials, K3 `C/T` kernel versus minority-edge/Worpitzky/PGF sidecars,
 K4 fixed-path cube versus `x=a OR c`, `y=b OR c`, and the k=8 quartic
 resolvent versus the even `v=u^2` fold.
+
+Readout: stored scout verifies the factor-through split exactly.  The largest
+proof-carrier SCC couples the k8 even fold, K4 OR compression, K3 kernel,
+fiber-PGF curve sidecar, and canary/deletion sidecar, so these are a packet
+rather than a linear ladder.
 
 Working hypothesis: the LRC14 hard core remains below the generic quintic
 wall because every current compression has effective degree at most `4`, with

@@ -5807,7 +5807,7 @@ constant chase.
   question is whether `f` factors through `q`; non-factoring data must be
   retained as a sidecar.  This packages the user's pair-function, K3, K4, and
   k=8 resolvent prompts into one finite legality audit.
-- **LRC use:** HYP-3150 will test the small exact cases that currently sit
+- **LRC use:** HYP-3150 tests the small exact cases that currently sit
   around the proof frontier: unordered pair functions, ordered exponentials,
   the K3 `C/T` kernel, K4 OR compression/canary slices, fiber-PGF curves, and
   the k=8 even biquadratic variable.  The purpose is to stop scalar or

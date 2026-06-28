@@ -41,6 +41,21 @@ meta-claim to test is that LRC14 remains below the generic quintic wall
 because the current hard compressions have effective degree <=4 plus named
 sidecars.
 
+Scout completed in
+`04-computation/lrc14_function_compression_resolvent_wall_codex_20260628.py`;
+stored output
+`05-knowledge/results/lrc14_function_compression_resolvent_wall_codex_20260628.out`;
+reflection
+`07-reflections/lrc14-function-compression-resolvent-wall-codex-20260628.md`.
+Readout: sum/product factor through unordered-pair quotienting; exponentials
+need ordered sidecars.  K3 class quotient preserves the edge-flip kernel but
+not exit-edge set, Worpitzky descent, or state PGF curve.  K4 OR compression
+preserves class but not flip weight, word, canary status, or deletion
+stability.  The k=8 quartic shifts to `u^4-5u^2+4` and descends to
+`v^2-5v+4` in `v=u^2`, with odd-coordinate sidecar debt.  Tournament Analysis
+has a largest SCC coupling k8 even fold, K4 OR compression, K3 kernel, fiber
+PGF curve, and canary/deletion sidecar.
+
 ## codex-2026-06-27-S274 -- Worpitzky pair-function three-edge quotient -- HYP-3144
 
 Reserved HYP-3144/T1209/LTI-270/LTT-168 for the user's prompt connecting
