@@ -1,0 +1,35 @@
+========================================================================================
+ OCTONION/FANO TEST: is kappa_3 (3-way emptiness associator) structured by the Singer/Fano lines?
+ Fano (Singer) lines mod 7 = translates of QR {1,2,4}:
+    (0, 1, 3)
+    (0, 2, 6)
+    (0, 4, 5)
+    (1, 2, 4)
+    (1, 5, 6)
+    (2, 3, 5)
+    (3, 4, 6)
+========================================================================================
+
+ consec {0..6}:  Fano-line triples (not thru 0): 4;  non-line: 16
+   mean kappa_3  LINE = +0.00925 (sd 0.00631)   NON-LINE = +0.00906 (sd 0.01221)   ratio +1.021
+     LINE (1, 2, 4): kappa_3=+0.01949
+     LINE (1, 5, 6): kappa_3=+0.00434
+     LINE (2, 3, 5): kappa_3=+0.00374
+     LINE (3, 4, 6): kappa_3=+0.00941
+
+ consec {0..7}:  Fano-line triples (not thru 0): 4;  non-line: 16
+   mean kappa_3  LINE = +0.00968 (sd 0.00735)   NON-LINE = +0.00962 (sd 0.01324)   ratio +1.006
+     LINE (1, 2, 4): kappa_3=+0.02150
+     LINE (1, 5, 6): kappa_3=+0.00142
+     LINE (2, 3, 5): kappa_3=+0.00893
+     LINE (3, 4, 6): kappa_3=+0.00687
+
+ consec {0..12}:  Fano-line triples (not thru 0): 4;  non-line: 16
+   mean kappa_3  LINE = +0.01564 (sd 0.00605)   NON-LINE = +0.01624 (sd 0.00885)   ratio +0.963
+     LINE (1, 2, 4): kappa_3=+0.02544
+     LINE (1, 5, 6): kappa_3=+0.00895
+     LINE (2, 3, 5): kappa_3=+0.01470
+     LINE (3, 4, 6): kappa_3=+0.01346
+========================================================================================
+ If LINE vs NON-LINE kappa_3 differ systematically => the associator carries Fano/octonion structure.
+ (apex-7 = octonion imaginary units; 14=2*7 = one Cayley-Dickson doubling past the octonion.)

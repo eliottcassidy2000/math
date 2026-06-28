@@ -1,3 +1,32 @@
+## mac-mini-2026-06-27-S74 -- abstract synthesis: THE ONE OBSTRUCTION (apex-7 = Lee-Yang zero at 1/p; algebra is worst-case, resolution is analytic) + octonion REFUTED
+
+Owner: another long session, even more creative + abstract + synthesize. Two threads (HYP-3221 + the octonion
+refutation), strongly convergent with kps S31an.
+
+S74 -- THE ONE OBSTRUCTION (HYP-3221, reflection the-one-obstruction-..., script lrc_one_obstruction_...):
+the project's many "hard halves" are ONE object with eight faces (universal even/odd table: kappa3 associator
+= odd Bonferroni terms = R-block interior Lee-Yang zero = cycle space = non-SOS/Motzkin = non-associative
+apex-7 = odd Worpitzky residue). The even/abelian/SOS/Q-block/pairwise side is provable (Perron/Caratheodory/
+Hermite-Biehler). NEW EXACT: the equidistributed danger comb is Binomial(k,1/7), PGF (6/7+z/7)^k, Lee-Yang zero
+at lambda=1-z=7=1/p -- THE APEX PRIME 7 IS LITERALLY THE PARTITION-FUNCTION ZERO, margin 1/p-1=6 growing like k.
+META-THEOREM (tested): the comonotone WORST CASE saturates at k=7 (7x1/7=full circle) with interior zeros at
+k=4,5,6 (=Bonferroni failure=Asano block=non-SOS gap, all at once); the equidist/actual apex comb stays POSITIVE.
+So every config-blind algebraic certificate (Lee-Yang zero-free, Bonferroni, Asano, moment-LP, SOS) MUST fail
+at k=7; the resolution is config-specific ANALYTIC equidistribution. FM TWIST: the AP (coverage-maximizer) = the
+comonotone worst case = FM coherent phase; integer-speed arithmetic (equidist, margin 6) defeats coherence.
+
+S74b -- OCTONION REFUTED + two-towers (reflection two-towers-..., script lrc_octonion_associator_fano_...): tested
+whether kappa3 literally carries octonion/Fano structure (Singer lines mod 7 = QR translates {1,2,4}). NEGATIVE:
+Fano-line vs non-line kappa3 ratio ~1.00 at all k -- NO Fano structure. CONVERGES with kps S31an/HYP-3211 (same
+refutation independently). kps's sharper RESOLUTION (adopted): apex 7 = TWO structures -- octonion/G2/Fano =
+MULTIPLICATIVE/TOURNAMENT side; cyclotomic Q(cos 2pi/7)/de Moivre = ADDITIVE/LRC side; my Joukowski = the Galois
+TRACE zeta->2cos. And kps's HYP-3212/3213: the cover bound = Cohn-Elkies/Delsarte LP with a cyclotomic MAGIC
+FUNCTION (de Moivre = Chebyshev equioscillation, disc 49=7^2 => cap rationality); my 4 angles (Joukowski/HB/
+Caratheodory/Perron) = 4 faces of ONE magic function. So S74's "resolution must be analytic" + kps's "the
+analysis is the Delsarte magic function" = SAME: the finishing tool = the cyclotomic Beurling-Selberg/Delsarte
+extremal; LRC(14) = the 1-D 7-fold member of the magic-function exceptional-extremal family (Viazovska E8 =
+octonion/multiplicative sibling) = the heptagon's sphere-packing problem. NOT a proof; LRC(14) open.
+
 ## kind-pasteur-2026-06-27-S31an -- grand synthesis: the cap IS the arithmetic of Q(cos 2pi/7) (Chebyshev/octonion/cyclotomic)
 
 Owner: another long session, even more creative + abstract + synthesize. Pushed three abstract threads
