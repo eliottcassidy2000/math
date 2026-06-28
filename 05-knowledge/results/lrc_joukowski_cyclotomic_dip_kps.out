@@ -1,0 +1,17 @@
+de Moivre angles (ideal 7-fold, Joukowski of 7th roots of unity): [np.float64(-1.8019), np.float64(-0.445), np.float64(1.247)]
+cyclotomic cubic x^3+x^2-2x-1
+
+=== consec_8 (R=1.5880) ===
+  Joukowski Re(w) = [np.float64(-1.8043), np.float64(-0.7171), np.float64(1.1416)]  vs de Moivre [np.float64(-1.8019), np.float64(-0.445), np.float64(1.247)]  (dist 0.3798)
+  Joukowski Im(w) = [np.float64(0.06), np.float64(0.0078), np.float64(0.1063)]  total DEFECT=0.17406  dip_8=0.01414
+=== consec_9 (R=1.6901) ===
+  Joukowski Re(w) = [np.float64(-1.8593), np.float64(-0.5933), np.float64(1.2409)]  vs de Moivre [np.float64(-1.8019), np.float64(-0.445), np.float64(1.247)]  (dist 0.2118)
+  Joukowski Im(w) = [np.float64(0.0776), np.float64(0.0054), np.float64(0.1562)]  total DEFECT=0.23918  dip_9=0.00025
+=== consec_10 (R=1.7798) ===
+  Joukowski Re(w) = [np.float64(-1.8281), np.float64(-0.5196), np.float64(1.3148)]  vs de Moivre [np.float64(-1.8019), np.float64(-0.445), np.float64(1.247)]  (dist 0.1685)
+  Joukowski Im(w) = [np.float64(0.0803), np.float64(0.0734), np.float64(0.2049)]  total DEFECT=0.35855  dip_10=0.00000
+
+=== defect vs coverage over k=8 clusters (does consec MINIMIZE the cyclotomic defect?) ===
+  consec defect=0.17406 q0=0.3272  rank=38/401 (0=min defect)
+  min-defect config: defect=0.00000 q0=0.0510 (is consec? False)
+  corr(cyclotomic defect, coverage q0) = +0.159  (defect lowers coverage?)
