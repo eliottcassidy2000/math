@@ -44,6 +44,10 @@ H3486 = load_module(
     "lrc14_random031_seam_complement_fiber_graph_codex_20260629.py",
 )
 H3481 = H3486.H3481
+H3493 = load_module(
+    "hyp3493_for_hyp3520",
+    "lrc14_random031_relative_seam_sheaf_codex_20260629.py",
+)
 
 
 @dataclass(frozen=True)
@@ -97,6 +101,55 @@ class QuotientCandidate:
 
 def compact_counter(counter: Counter) -> dict:
     return dict(sorted(counter.items(), key=lambda item: str(item[0])))
+
+
+def owner_boundary_word(
+    seam_owners: tuple[int, ...],
+    bypass_owners: tuple[int, ...],
+    dead_island_owners: tuple[int, ...],
+) -> tuple[str, ...]:
+    bypass = set(bypass_owners)
+    dead = set(dead_island_owners)
+    word = []
+    for owner in seam_owners:
+        if owner in bypass:
+            word.append("P")
+        elif owner in dead:
+            word.append("D")
+        else:
+            word.append("O")
+    return tuple(word)
+
+
+def sheaf_quotient_report(components, target_by_rel):
+    keys = {
+        "flow_class": lambda component: component.flow_class,
+        "allowed_exit": lambda component: component.allowed_exit,
+        "owner_union": lambda component: component.owner_union,
+        "owner_union_size": lambda component: len(component.owner_union),
+        "endpoint_ranks": lambda component: component.endpoint_ranks,
+        "branch_hist": lambda component: tuple(sorted(component.branch_hist.items())),
+        "size": lambda component: component.size,
+        "mirror_closed": lambda component: component.mirror_closed,
+        "sheet_pgf_bucket": lambda component: component.sheet_pgf_bucket,
+    }
+    rows = []
+    for name, fn in keys.items():
+        buckets: dict[object, set[str]] = {}
+        examples: dict[object, list[str]] = {}
+        for component in components:
+            key = fn(component)
+            buckets.setdefault(key, set()).add(target_by_rel[component.rel_id])
+            examples.setdefault(key, [])
+            if len(examples[key]) < 4:
+                examples[key].append(component.rel_id)
+        mixed = {
+            key: sorted(values)
+            for key, values in buckets.items()
+            if len(values) > 1
+        }
+        rows.append((name, len(buckets), len(mixed), mixed, examples))
+    return rows
 
 
 def owner_union_from_gates(gates) -> tuple[int, ...]:
@@ -415,6 +468,28 @@ def main() -> None:
         sorted(candidates, key=lambda candidate: (-candidate.score(boundary_debt), candidate.tie_rank))
     )
     score_hist = Counter(candidate.score(boundary_debt) for candidate in candidates)
+    sheaf_components = H3493.build_sheaf_components()
+    sheaf_bypass_components = [
+        component for component in sheaf_components if component.flow_class == "pure_bypass"
+    ]
+    if len(sheaf_bypass_components) != 1:
+        raise RuntimeError(
+            f"expected one HYP-3493 pure bypass component, found {len(sheaf_bypass_components)}"
+        )
+    sheaf_bypass = sheaf_bypass_components[0]
+    sheaf_word = owner_boundary_word(seam_owners, sheaf_bypass.owner_union, dead_owner_union)
+    sheaf_target_by_rel = {
+        component.rel_id: (
+            "pure_bypass_owner_boundary_debt"
+            if component.flow_class == "pure_bypass"
+            else "local_discharge_or_freehole_context"
+        )
+        for component in sheaf_components
+    }
+    sheaf_free_owner_unions = Counter(
+        component.owner_union for component in sheaf_components if component.flow_class == "free_hole"
+    )
+    sheaf_flow_hist = Counter(component.flow_class for component in sheaf_components)
 
     print("HYP-3520 RANDOM031 OWNER-BOUNDARY PERSISTENCE")
     print("status=EVIDENCE / finite owner-cobordism and quotient-price certificate; not an LRC14 proof")
@@ -491,6 +566,36 @@ def main() -> None:
             f"{candidate.missing(boundary_debt)} | {candidate.extra(boundary_debt)} | "
             f"{candidate.retained} | {candidate.repair}"
         )
+    print()
+
+    print("## Seam-Sheaf Compression Canary")
+    print("source=HYP-3493 relative seam-sheaf component table")
+    print("target=pure_bypass_owner_boundary_debt versus local discharge/free-hole context")
+    print(f"sheaf_component_count={len(sheaf_components)}")
+    print(f"sheaf_flow_class_hist={compact_counter(sheaf_flow_hist)}")
+    print(f"sheaf_pure_bypass_rel_id={sheaf_bypass.rel_id}")
+    print(f"sheaf_pure_bypass_owner_word={sheaf_bypass.owner_union}")
+    print(f"owner_boundary_persistence_word={''.join(sheaf_word)}")
+    print(f"free_hole_owner_union_hist={compact_counter(sheaf_free_owner_unions)}")
+    print("quotient | bucket_count | mixed_bucket_count | safe")
+    for name, bucket_count, mixed_count, mixed, examples in sheaf_quotient_report(
+        sheaf_components,
+        sheaf_target_by_rel,
+    ):
+        safe = mixed_count == 0
+        print(f"{name} | {bucket_count} | {mixed_count} | {safe}")
+        if mixed_count:
+            shown = 0
+            for key, values in mixed.items():
+                print(f"  mixed_key={key!r} targets={tuple(values)} examples={tuple(examples[key])}")
+                shown += 1
+                if shown >= 4:
+                    break
+    print(
+        "canary_verdict=flow_class, allowed_exit, owner_union, and sheet_pgf_bucket "
+        "preserve the debt target; owner count, endpoint rank, branch histogram, "
+        "size, and mirror closure are illegal scalar compressions here."
+    )
     print()
 
     print("## Reframe")

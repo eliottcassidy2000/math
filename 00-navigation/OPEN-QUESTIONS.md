@@ -28,7 +28,9 @@ and `external_horizontal_ports=0`.  Open proof task: formalize a terminal
 owner-current/relative-H1 lemma compatible with HYP-3490 and HYP-3493; do not
 use raw `12`, raw `282`, component-pair, delta-route, bypass-owner-only,
 dead-island-only, or global-flow quotients unless they explicitly repair the
-destroyed owner-boundary coordinate. -> HYP-3520, HYP-3512, HYP-3494,
+destroyed owner-boundary coordinate.  The HYP-3493 seam-sheaf canary adds that
+owner count, endpoint rank, branch histogram, size, and mirror closure also
+mix `R01` with discharged context. -> HYP-3520, HYP-3512, HYP-3494,
 HYP-3493, HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3483, HYP-3481,
 HYP-3402, HYP-3034, LTI-520, LTT-420, T1520.
 

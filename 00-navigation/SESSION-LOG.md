@@ -1,3 +1,24 @@
+## codex-2026-06-29 -- HYP-3520 seam-sheaf compression canary
+
+After a push race, rebased onto incoming HYP-3520 owner-current certificate
+and HYP-3521 terminal ledger work.  Kept the stronger owner-current/quotient
+price certificate as the HYP-3520 base, then extended its executable with a
+HYP-3493 seam-sheaf compression canary:
+
+```text
+owner_boundary_persistence_word=PDPPOOO
+free_hole_owner_union_hist={():14}
+safe quotients: flow_class, allowed_exit, owner_union, sheet_pgf_bucket
+unsafe quotients: owner_union_size, endpoint_ranks, branch_hist, size,
+                  mirror_closed
+```
+
+Interpretation: the owner-current matrix reconstructs the seam-only debt
+`(45,147,169,173)`, while the HYP-3493 canary proves several tempting scalar
+component summaries merge pure bypass `R01` with ordinary discharged context.
+The random031 terminal lemma should retain an owner word, pure-bypass exit
+label, legal sheet-PGF bucket, or an equivalent named repair sidecar.
+
 ## codex-2026-06-29 -- HYP-3520 owner-boundary persistence reservation
 
 Prompt: work creatively on owner-boundary persistence.

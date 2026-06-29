@@ -27,6 +27,15 @@ phase block all miss the seam-only owners entirely.  So HYP-3512's coordinate
 resurrection rule has a concrete first test: any random031 quotient must say
 which owner-boundary coordinate it destroys and how it repairs it.
 
+The HYP-3493 seam-sheaf table adds a second, more local canary.  Over its
+`79` legal components the pure bypass still has word `PDPPOOO`, and the
+free-hole components are owner-empty.  But owner count, endpoint rank, branch
+balance, component size, and mirror closure each merge `R01` with discharged
+context.  The legal small quotients are `flow_class`, `allowed_exit`,
+`owner_union`, and `sheet_pgf_bucket`.  This is the same lesson in a smaller
+language: compression is allowed only when the owner-boundary predicate stays
+constant on the quotient fibers.
+
 Assumption challenge: I considered runners, raw gates, arcs, u-fibers, fixed
 circle sections, section boundaries, wall-crossing events, residues, cover
 arcs, free-hole packets, owner rows, hard-component owner maps, relative-H1

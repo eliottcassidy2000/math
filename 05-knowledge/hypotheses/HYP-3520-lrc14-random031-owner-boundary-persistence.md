@@ -155,6 +155,49 @@ This is the coordinate-resurrection discipline from HYP-3512 made local: a
 quotient is legal only after it names the first destroyed coordinate and its
 repair sidecar.
 
+## Seam-Sheaf Compression Canary
+
+The script also imports the HYP-3493 relative seam-sheaf table and tests the
+owner-boundary target against local discharge/free-hole context.  This is a
+different compression question from the owner-current matrix: it asks which
+component-level summaries accidentally identify the pure bypass stalk `R01`
+with ordinary discharged components.
+
+Exact readout:
+
+```text
+sheaf_component_count=79
+sheaf_flow_class_hist={'free_hole':14,'pure_bypass':1,'rank2_routed':64}
+sheaf_pure_bypass_rel_id=R01
+sheaf_pure_bypass_owner_word=(23,93,113)
+owner_boundary_persistence_word=PDPPOOO
+free_hole_owner_union_hist={():14}
+```
+
+Safe component quotients:
+
+```text
+flow_class
+allowed_exit
+owner_union
+sheet_pgf_bucket
+```
+
+Unsafe component quotients:
+
+```text
+owner_union_size: mixed at key 3
+endpoint_ranks: mixed at key (2,)
+branch_hist: mixed at key ((0,6),(1,6))
+size: mixed at key 12
+mirror_closed: mixed at key True
+```
+
+So the owner-current certificate and the seam-sheaf canary agree on the same
+rule: the proof may compress the random031 terminal packet only after keeping
+an owner word, pure-bypass exit label, legal sheet-PGF bucket, or equivalent
+named repair sidecar.
+
 ## Reframe
 
 The pure bypass is not a hidden wall and not a failed rank-2 route.  It is an

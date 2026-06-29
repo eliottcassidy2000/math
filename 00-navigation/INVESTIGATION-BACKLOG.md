@@ -10,7 +10,9 @@ formalize a terminal owner-current/relative-H1 lemma compatible with the
 HYP-3490 private-label firewall and HYP-3493 seam-sheaf table.  Guardrails:
 raw `12`, raw `282`, component-pair, delta-route, bypass-owner-only,
 dead-island-only, and global-flow quotients do not preserve the exact boundary
-word. -> HYP-3520, HYP-3512, HYP-3494, HYP-3493, HYP-3511, HYP-3510,
+word; HYP-3493's component canary also marks owner count, endpoint rank,
+branch histogram, size, and mirror closure as unsafe because they mix pure
+bypass debt with discharged context. -> HYP-3520, HYP-3512, HYP-3494, HYP-3493, HYP-3511, HYP-3510,
 HYP-3490, HYP-3486, HYP-3483, HYP-3481, HYP-3402, HYP-3034, LTI-520,
 LTT-420, T1520, OPEN-Q-108.
 **HYP-3521 random031 terminal certificate ledger.**  Formalize the terminal
