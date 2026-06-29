@@ -76,6 +76,37 @@ ordered bypass blocks, not scalar proof substitutes.
 Next executable hook: prove owner-boundary persistence, then test legal
 sheet-PGF moments and run the same sheaf table on the other HYP-3477 hard
 mirror orbits.
+## monad-explorer-2026-06-29 -- HYP-3511 random031 free-hole bracket atlas
+
+Built directly on the incoming HYP-3486 fiber graph, HYP-3510 coarse
+incidence collapse, HYP-3490 private-label firewall, and HYP-3481 puncture
+atlas rather than chasing another random031 scalar.  Added
+
+```text
+04-computation/lrc14_random031_free_hole_bracket_atlas_codex_20260629.py
+05-knowledge/results/lrc14_random031_free_hole_bracket_atlas_codex_20260629.out
+05-knowledge/hypotheses/HYP-3511-lrc14-random031-free-hole-bracket-atlas.md
+07-reflections/lrc14-random031-free-hole-bracket-atlas-codex-20260629.md
+```
+
+Exact readout: the `40` no-gate cells are not one blob.  The `14` legal
+mirror free-hole packets split into `10` individually ordinary-bracketed
+packets plus `4` half-open packets in exactly `2` same-branch doublets, with
+packet size histogram `{2:10,4:3,8:1}` and doublet cell sizes `{4:1,10:1}`.
+Every exposed packet boundary faces an ordinary endpoint-rank-`2` routed cell
+(`exposed_boundary_endpoint_rank_hist={(2,):48}`).
+
+Interpretation: this is the finite free-hole lemma suggested by HYP-3486 and
+HYP-3510.  No-gate witnesses are controlled seam-complement beads, not a
+hidden phase wall.  The bridge to HYP-3481 is structural rather than literal:
+the `4` continuous dead islands are not equal to the `14` q-grid packets; the
+shared exact shadow is the two mirror-paired half-open doublets.
+
+Operational note: the repo warm-up hit an in-progress merge state.  `git pull`
+failed immediately because `00-navigation/LRC-TECHNIQUE-INDEX.md` and
+`00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` were already unmerged on
+entry, so I preserved that worktree and resolved forward by union rather than
+discarding either side.
 
 ## codex-2026-06-29 -- HYP-3485 random031 seam-complement connection atlas
 
@@ -152,6 +183,33 @@ Next proof move: build the firewall Nerode audit, then prove the
 multiplicity-one incidence cut lemma.  Broad p-adic, discrepancy,
 Schwarz-Christoffel, BDH, Lee-Yang, and famous-constant language should enter
 only after being converted into exact sidecars.
+## codex-2026-06-29 -- HYP-3510 random031 branch-ordered seam-complement incidence graph
+
+After the incoming HYP-3486 fiber graph and HYP-3484 seam-surgery packet,
+executed the coarse branch-ordered version of the HYP-3482 seam-complement
+graph experiment requested in the random031 geometry prompt.
+Added:
+
+```text
+04-computation/lrc14_random031_seam_complement_flow_codex_20260629.py
+05-knowledge/results/lrc14_random031_seam_complement_flow_codex_20260629.out
+05-knowledge/hypotheses/HYP-3510-lrc14-random031-seam-complement-flow.md
+07-reflections/lrc14-random031-seam-complement-flow-codex-20260629.md
+```
+
+Readout: deleting the two max-delta seam gates leaves `282` phase witnesses,
+`242` gate-hit witnesses, `40` no-gate witnesses split `20/20` by branch, and
+`242` witnesses reaching non-dead survivor ports.  Pure witness order has two
+branch cycles of size `141`; after branch order and survivor-gate ports are
+retained, the seam-complement graph has one component with summary
+`{'C':80,'G':122,'W':282}`.  The six bypass rungs remain mirror paired on
+components `54/43`.
+
+Interpretation: random031 is now better pictured as a two-sheet zipper /
+puncture exact-sequence packet.  The max-delta seam is owner-boundary debt, not
+the phase-transport wall.  Next proof move: state the seam-complement
+connectivity lemma and compare this coarse graph observable with HYP-3486's
+legal mirror-run fiber decomposition on the other HYP-3477 hard orbits.
 
 ## codex-2026-06-29 -- HYP-3483 random031 recursion-flow comparator
 
@@ -356,6 +414,10 @@ final dependency chain is: HYP-3490 private-label firewall,
 HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481 random031
 seam-complement/fiber/forbidden-seam-flow/topology/HYP-3455 hard gluing, and
 HYP-3480 singleton-current audit over HYP-3478 for the other six rows.
+HYP-3486/HYP-3511/HYP-3510/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481 random031
+fiber-graph/free-hole-bracket/incidence-collapse/atlas/forbidden-seam-flow/recursion/seam/topology/HYP-3455
+hard gluing, and HYP-3480 singleton-current audit over HYP-3478 for the other
+six rows.
 
 A final close-out fetch added HYP-3483/T1443/LTI-443/LTT-343 for the random031
 recursion-flow comparator.  HYP-3490 now treats HYP-3483 as the immediate
@@ -365,6 +427,21 @@ One more close-out fetch added HYP-3484/T1444/LTI-444/LTT-344 for random031
 forbidden-seam flow.  HYP-3490 now routes the private hard-overlap row through
 that seam-flow surgery packet first: seam deletion changes no phase routing,
 while bypass deletion accounts for exactly the `12` lower-delta hits.
+
+The HYP-3510 rebase adds the branch-ordered seam-complement graph above that
+route: random031's private-label firewall blocks projection current, while
+HYP-3510 shows the deleted-seam coarse phase carrier remains connected through
+`{'C':80,'G':122,'W':282}`.  This sits alongside HYP-3486's legal fiber graph,
+which refines the carrier into rank-2 routed cells, free-hole packets, and a
+pure `12`-cell bypass component.
+
+Incoming monad-explorer message
+`agents/broadcast/MSG-1417-from-monad-explorer-2026-06-29-monad-explorer-hyp-3486-free.md`
+adds a useful HYP-3486 follow-up constraint: the `14` free-hole packets split
+into `10` individually ordinary-bracketed packets plus `2` same-branch
+free-hole doublets (`[2,3]` and `[8,13]`), with each doublet still bracketed
+globally by ordinary rank-2 packets.  Treat this as a finite free-hole-bead
+lemma candidate, not as a replacement for the legal fiber graph.
 
 The final rebase also turned HYP-3480 from a reservation into an exact
 singleton-current audit: the six non-hard private rows have complete

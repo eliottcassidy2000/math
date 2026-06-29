@@ -37,6 +37,26 @@ HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, HYP-3451, HYP-3438,
 HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3025, HYP-3023, HYP-3311,
 HYP-3408, LTI-453, LTT-353, T1453.
 
+**OPEN-Q-108 HYP-3511 random031 free-hole bracket addendum:**
+HYP-3511 sharpens the HYP-3486 free-hole packet and the HYP-3510 coarse
+incidence collapse.  After deleting the max-delta seam, the `40` no-gate
+cells are not diffuse debt:
+
+```text
+14 legal mirror packets
+= 10 individually ordinary-bracketed packets
++ 4 half-open packets in 2 same-branch doublets
+```
+
+Every exposed side of every packet or doublet faces an ordinary endpoint-rank-2
+routed cell.  Open proof task: state the random031 free-hole lemma in this
+packet grammar and localize any remaining puncture/owner-boundary debt to the
+two half-open doublets, not to the whole `40`-cell free-hole carrier.
+Guardrail: HYP-3481's `4` dead islands are not literally the same object as
+the `14` q-grid free-hole packets; the exact shared shadow is only the two
+mirror-paired half-open doublets. -> HYP-3511, HYP-3510, HYP-3490, HYP-3486,
+HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460,
+HYP-3455, LTI-511, LTT-411, T1511.
 **OPEN-Q-108 HYP-3485 random031 seam-complement connections addendum:**
 HYP-3485 synthesizes the past-work routes around seam complement and bypass
 flow.  The promising proof object is relative, not scalar:
@@ -67,13 +87,14 @@ HYP-3486 sharpens the seam-complement proof target.  It is not necessary, and
 not exact, to force all `282` q=`14V` witnesses through survivor gates.  After
 the max-delta seam is deleted, `242` cells route through endpoint-rank-`2`
 gates and the remaining `40` cells are mirror-closed free-hole witnesses in
-`14` packets.  The lower-delta bypass is one pure `12`-cell mirror component
+`14` packets, now refined by HYP-3511 into `10` ordinary-bracketed packets
+plus `2` same-branch bracketed doublets.  The lower-delta bypass is one pure `12`-cell mirror component
 on hard components `(43,54)` with owners `(23,93,113)`.  Open proof task:
-prove the rank-2 route lemma, the mirror free-hole lemma, and the pure bypass
+prove the rank-2 route lemma, the free-hole bracket lemma, and the pure bypass
 discharge lemma, then repeat the fiber-graph audit on the other HYP-3477 hard
 mirror orbits.  Guardrail: vertical half-turn gluing is not class-preserving,
 so `n*2` must be carried as an address sidecar, not a topology quotient. ->
-HYP-3486, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477,
+HYP-3486, HYP-3511, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477,
 HYP-3460, HYP-3455, LTI-446, LTT-346, OPEN-Q-108.
 carrying HYP-3490 private-label firewall marks on currentless components, and
 treating low-rank escapes as boundary.  Prove every q=`14V` phase-flow
@@ -91,6 +112,28 @@ multiplicity-one incidence cut lemma, stress HYP-3484's `C=27` seam/bypass
 packet, and run a function-compression constancy table for the
 projection-edge-deletion target. -> HYP-3491, HYP-3490, HYP-3484, HYP-3474,
 HYP-3437, HYP-3419, HYP-3151, HYP-3150, LTI-451, LTT-351, T1451.
+**OPEN-Q-108 HYP-3510 random031 seam-complement graph addendum:**
+HYP-3510 extends HYP-3484's seam surgery by turning the HYP-3482 experiment
+into a graph.  After deleting the two max-delta seam gates of
+`random_covering_031`, the pure phase witnesses form two branch cycles of size
+`141`, but branch order plus survivor-gate ports make one seam-complement
+component:
+
+```text
+phase_witnesses=282
+gate_hit_witnesses=242
+no_gate_witnesses=40
+no_gate_by_branch={0:20,1:20}
+escape_hit_witnesses=242
+seam_complement_components_after_branch_order=1
+seam_complement_summaries=[{'C':80,'G':122,'W':282}]
+```
+
+Open proof task: formalize the two-sheet zipper / puncture exact-sequence
+lemma.  The max-delta seam should be treated as owner-boundary debt; the
+seam complement carries phase transport to survivor ports. -> HYP-3510,
+HYP-3511, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
+HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, LTI-510, LTT-410, T1510.
 
 **OPEN-Q-108 HYP-3483 random031 recursion addendum:**
 HYP-3483 answers the `n+2` versus `n*2` prompt by refusing the false choice.
@@ -266,6 +309,14 @@ a structural no-go for the whole adjacent-label carrier. -> HYP-3490,
 HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480,
 HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3472, HYP-3455, HYP-3453,
 HYP-3451, THM-523, LTI-450, LTT-350, T1450, OPEN-Q-108.
+Open proof task: formalize the private-label lemma, then route
+`random_covering_031` through HYP-3486 legal fiber graph, HYP-3511 free-hole bracket atlas, HYP-3510 coarse incidence collapse, HYP-3485 connection atlas, HYP-3484 forbidden-seam flow, HYP-3483 recursion flow, HYP-3482 seam, HYP-3481 topology, and HYP-3455 seven-owner gluing,
+and route the other six small-touch/no-hard rows through HYP-3480's singleton-current audit over
+HYP-3478 geometry, then owner-current, endpoint-spine, exact-period/state-lift,
+two-adic, or signed-SPEC exits.  This replaces "try a larger pair-current" with
+a structural no-go for the whole adjacent-label carrier. -> HYP-3490,
+HYP-3511, HYP-3510, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3472, HYP-3455,
+HYP-3453, HYP-3451, THM-523, LTI-450, LTT-350, T1450, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3476 exception-frontier router addendum:**
 HYP-3476 compares the HYP-3472 boundary-current exception frontier with the

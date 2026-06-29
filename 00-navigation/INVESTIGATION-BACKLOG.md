@@ -50,13 +50,43 @@ one endpoint-rank-`2` seam-complement gate and `40` cells are already
 free-hole witnesses.  The legal horizontal+mirror graph has `79` components:
 `64` ordinary rank-2 components, one pure `12`-cell bypass component on
 components `(43,54)` with owners `(23,93,113)`, and `14` mirror-closed
-free-hole packets.  Guardrail: mirror is class-preserving, but vertical
+free-hole packets.  HYP-3511 now sharpens those `40` free-hole cells into
+`10` individually bracketed packets plus `2` same-branch bracketed doublets.
+Guardrail: mirror is class-preserving, but vertical
 half-turn gluing mixes free-hole and ordinary cells, so `n*2` is an address
 projection rather than a legal sheet quotient.  Next proof target: formalize
-the rank-2 routing/free-hole/pure-bypass trichotomy and run the same graph on
-the other HYP-3477 hard mirror orbits. -> HYP-3486, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482,
+the rank-2 routing/free-hole-bracket/pure-bypass trichotomy and run the same graph on
+the other HYP-3477 hard mirror orbits. -> HYP-3486, HYP-3511, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482,
 HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, LTI-446,
 LTT-346, OPEN-Q-108.
+**HYP-3511 random031 free-hole bracket atlas.**  Refines HYP-3486's legal
+fiber graph and HYP-3510's coarse seam-complement carrier by classifying the
+`40` no-gate cells.  Exact split: `14` legal mirror packets with size
+histogram `{2:10,4:3,8:1}`; `10` packets are individually ordinary-bracketed
+on both sheets, while the remaining `4` half-open packets form exactly `2`
+same-branch doublets.  Every exposed boundary faces an ordinary
+endpoint-rank-`2` routed cell.  Proof pull: no-gate witnesses are controlled
+branch-order beads rather than a hidden wall; the terminal random031 packet
+should split into rank-2 route, free-hole bracket, and pure bypass lemmas. ->
+HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483,
+HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, LTI-511, LTT-411,
+OPEN-Q-108.
+**HYP-3510 random031 branch-ordered seam-complement incidence graph.**  Extends
+HYP-3486's fiber graph from the coarse connectedness side and executes the
+HYP-3482 experiment as an incidence collapse: delete the two max-delta seam
+gates, route all `282` q=`14V`
+witnesses through the remaining branch-compatible survivor gates, and add
+branch-order/mirror sidecars.  Exact readout: pure witness flow has two branch
+cycles of size `141`, but the seam-complement graph after branch order and gate
+ports has one component `{'C':80,'G':122,'W':282}`; `242` witnesses hit
+low-rank survivor ports, `40` no-gate witnesses split `20/20` by branch, and
+the `12` bypass witnesses are six mirror-paired rungs on components `54/43`.
+Proof pull: random031 is a two-sheet zipper / puncture exact-sequence packet.
+The max-delta seam is owner-boundary debt, not phase-transport wall, but the
+one-component collapse must be refined through HYP-3486's legal
+rank-2/free-hole/pure-bypass fiber trichotomy. -> HYP-3510, HYP-3486,
+HYP-3511, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480,
+HYP-3479, HYP-3477, HYP-3460, HYP-3455, LTI-510, LTT-410, OPEN-Q-108.
 
 **HYP-3483 random031 recursion-flow comparator.**  HYP-3481 makes
 `random_covering_031` a mirror-punctured annulus with a bypassed saddle seam;
@@ -245,6 +275,9 @@ HYP-3479 hard/current join, HYP-3480 singleton-current reservation, and
 HYP-3481/HYP-3482/HYP-3483/HYP-3484/HYP-3485/HYP-3486 random031 topology,
 seam, recursion-flow, forbidden-seam-flow, connection, and seam-complement
 fiber graph atlases.
+HYP-3481/HYP-3482/HYP-3483/HYP-3484/HYP-3485/HYP-3486/HYP-3511/HYP-3510 random031
+topology, seam, recursion-flow, forbidden-seam-flow, seam-complement atlas,
+legal fiber graph, free-hole bracket atlas, and coarse incidence collapse.
 
 HYP-3490 tests the label-multiplicity reason HYP-3476 cannot close the seven
 random projection-edge exceptions.  Result: `private_firewall_rows=7/130`,
@@ -263,6 +296,8 @@ HYP-3486 seam-complement fiber graph/HYP-3485 connection atlas/HYP-3484
 forbidden-seam flow/HYP-3483 recursion flow/HYP-3482 seam/HYP-3481
 topology/HYP-3455 gluing and the other six private/no-hard rows through
 HYP-3480's singleton-current audit over HYP-3478 geometry, then owner-current,
+HYP-3486 legal fiber graph/HYP-3511 free-hole bracket/HYP-3510 incidence collapse/HYP-3485 atlas/HYP-3484 forbidden-seam flow/HYP-3483 recursion flow/HYP-3482 seam/HYP-3481 topology/HYP-3455 gluing and the other six private/no-hard rows
+through HYP-3480's singleton-current audit over HYP-3478 geometry, then owner-current,
 endpoint-spine, exact-period/state-lift, two-adic, or signed-SPEC exits.
 
 ## Lead codex-2026-06-29: zero-edge singleton-current audit

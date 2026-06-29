@@ -167,6 +167,24 @@ Build the seam-complement graph:
 4. Repeat for the other seven hard mirror orbits from HYP-3477 to distinguish
    zero-hit seams from genuine phase walls.
 
+HYP-3486 and HYP-3510 have now executed complementary versions of the graph
+steps, after HYP-3484's seam-surgery packet.  HYP-3486 is the legal two-adic
+fiber graph; HYP-3510 is the coarse branch-ordered incidence collapse:
+
+```text
+04-computation/lrc14_random031_seam_complement_flow_codex_20260629.py
+05-knowledge/results/lrc14_random031_seam_complement_flow_codex_20260629.out
+```
+
+HYP-3510 finds two pure branch witness cycles of size `141`, but after branch
+order and survivor-gate ports are retained the deleted-seam complement has one
+component with summary `{'C':80,'G':122,'W':282}`.  HYP-3486 refines that
+carrier into `242` rank-2 routed cells, `40` free-hole cells in `14`
+mirror-closed packets, and one pure `12`-cell bypass component.  Thus the
+remaining hard work is not to find a phase path across the seam; it is to
+prove which parts of the coarse connectivity survive the legal fiber graph and
+then discharge the owner-boundary seam debt.
+
 Expected theorem shape:
 
 ```text
@@ -233,5 +251,7 @@ and the additive-rim versus two-adic-fold distinction.
 ## Status
 
 Evidence only, not a proof.  HYP-3482 turns `random031` from an exception name
-into a finite topological proof packet.  The next hard work is the
+into a finite topological proof packet.  HYP-3484 supplies the seam-surgery
+readout, HYP-3486 supplies the legal fiber graph, and HYP-3510 supplies the
+coarse branch-ordered incidence collapse; the next hard work is the
 seam-complement flow theorem.

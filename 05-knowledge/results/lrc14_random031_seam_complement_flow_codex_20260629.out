@@ -1,0 +1,66 @@
+HYP-3510 RANDOM031 SEAM-COMPLEMENT PHASE-FLOW GRAPH
+status=EVIDENCE / graph experiment; not an LRC14 proof
+row=random_covering_031
+
+## Deleted Seam
+hard_seam_gate_count=2
+  deleted_seam_gate=component=43 branch=branch0 delta=7 interval=[71/161,349/791]
+  deleted_seam_gate=component=54 branch=branch1 delta=7 interval=[442/791,90/161]
+hard_gate_hits_before_deletion=0
+complement_gate_count=136
+
+## Witness Flow
+phase_witnesses=282
+gate_hit_witnesses=242
+no_gate_witnesses=40
+no_gate_by_branch={0: 20, 1: 20}
+escape_hit_witnesses=242
+bypass_witnesses=12
+chosen_route_hist={'edge_singleton_parent_gate': 76, 'edge_survivor_residual': 58, 'mixed_owner_residual': 66, 'owner_current_small_delta': 42}
+chosen_delta_hist={2: 118, 3: 40, 4: 62, 5: 16, 6: 6}
+top_chosen_components=[(7, 9), (30, 9), (67, 9), (90, 9), (17, 6), (54, 6), (80, 6), (43, 6)]
+
+## Seam-Complement Graph
+pure_branch_witness_cycles=2
+pure_branch_witness_cycle_sizes=[141, 141]
+incidence_components=120
+incidence_component_size_hist={1: 40, 3: 28, 4: 10, 5: 4, 6: 10, 7: 10, 8: 8, 9: 6, 13: 4}
+seam_complement_components_after_branch_order=1
+seam_complement_summaries=[{'C': 80, 'G': 122, 'W': 282}]
+mirror_completed_phase_components=1
+mirror_completed_summaries=[{'C': 80, 'G': 122, 'W': 282}]
+
+## Bypass Rungs
+bypass_by_branch={0: ((679, 7, '97/173', 54), (680, 8, '680/1211', 54), (681, 9, '681/1211', 54), (682, 10, '682/1211', 54), (683, 11, '683/1211', 54), (684, 12, '684/1211', 54)), 1: ((1738, 2, '527/1211', 43), (1739, 3, '528/1211', 43), (1740, 4, '529/1211', 43), (1741, 5, '530/1211', 43), (1742, 6, '531/1211', 43), (1743, 7, '76/173', 43))}
+bypass_mirror_pair_count=6
+  bypass_pair=a679/phase7/branch0/c54 <-> a1743/phase7/branch1/c43
+  bypass_pair=a680/phase8/branch0/c54 <-> a1742/phase6/branch1/c43
+  bypass_pair=a681/phase9/branch0/c54 <-> a1741/phase5/branch1/c43
+  bypass_pair=a682/phase10/branch0/c54 <-> a1740/phase4/branch1/c43
+  bypass_pair=a683/phase11/branch0/c54 <-> a1739/phase3/branch1/c43
+  bypass_pair=a684/phase12/branch0/c54 <-> a1738/phase2/branch1/c43
+
+## Reframe
+R1 two-sheet zipper: the pure 282-witness flow has two branch cycles, but after deleting the forbidden seam the remaining survivor-gate ports already fuse them into one seam-complement component.  The mirror involution then certifies the same one-component carrier, while the six bypass rungs touch the seam components without crossing max-delta gates.
+R2 puncture exact sequence: the 40 no-gate witnesses are not a new obstruction in this graph; they lie on the branch-sheet flow between gate ports.  The proof debt is therefore at the owner-boundary seam, not in missing phase transport.
+
+## Prediction
+P1: a formal seam-complement lemma should use branch-sheet connectedness plus mirror completion, not only the scalar bypass count 12.
+P2: the hard seam should be treated as an owner-boundary insertion whose complement has complete phase transport to low-rank survivor ports; any remaining obstruction should name owner-current, two-adic, or signed-SPEC debt.
+
+## Tournament Analysis
+vertices=('two_sheet_zipper_flow_component', 'mirror_completed_seam_complement_graph', 'bypass_rung_pairing', 'owner_boundary_puncture_sequence', 'branch_sheet_no_gate_interior', 'raw_bypass_count_12', 'raw_witness_count_282')
+pairwise_observable=phase connectivity + mirror completion + seam deletion + owner-boundary retention
+switch=higher retained terminal proof payload
+score_hist={16: 1, 20: 1, 58: 1, 69: 1, 74: 1, 87: 1, 91: 1}
+directed_3cycles=0
+hamiltonian_path=two_sheet_zipper_flow_component -> mirror_completed_seam_complement_graph -> bypass_rung_pairing -> owner_boundary_puncture_sequence -> branch_sheet_no_gate_interior -> raw_bypass_count_12 -> raw_witness_count_282
+
+## Assumption Challenge
+Considered vertices: runners, gaps, fixed sections, section boundaries,
+wall-crossing events, residues, cover arcs, Fourier modes, dead islands,
+witnesses, survivor gates, branch sheets, mirror rungs, and proof
+obligations.  Chosen vertices are witness/gate/component proof carriers;
+they preserve the random031 seam-complement discharge predicate and
+destroy raw runner order only after replacing it with phase connectivity,
+mirror completion, bypass rungs, and owner-boundary sidecars.

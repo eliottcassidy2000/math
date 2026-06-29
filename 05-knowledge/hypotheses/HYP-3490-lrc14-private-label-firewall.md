@@ -2,7 +2,7 @@
 id: HYP-3490
 title: LRC14 private-label firewall audit
 status: EVIDENCE / all-union currentless-row firewall plus Lean ledger; not an LRC14 proof
-source: codex-2026-06-29 continuation of HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3472, HYP-3476, HYP-3477, HYP-3475, and HYP-3451
+source: codex-2026-06-29 continuation of HYP-3511, HYP-3510, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3472, HYP-3476, HYP-3477, HYP-3475, and HYP-3451
 tangent: T1450
 technique: LTI-450
 tournament_technique: LTT-350
@@ -12,6 +12,8 @@ lean_module: 04-computation/lean/TournamentH7/TournamentH7/LRCPrivateLabelFirewa
 lean_result: 05-knowledge/results/lrc14_private_label_firewall_lean_codex_20260629.out
 reflection: 07-reflections/lrc14-private-label-firewall-codex-20260629.md
 related:
+  - HYP-3511
+  - HYP-3510
   - HYP-3486
   - HYP-3485
   - HYP-3484
@@ -137,7 +139,7 @@ branch-unit gate pairs.  The executable split is now clean rows
 asymmetric row `random_covering_001`, and cover-delta minimum-shadow rows
 `random_covering_039`, `random_covering_074`; `random_covering_031` remains
 the `0/4` complete-branch-unit hard control routed through
-HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481.
+HYP-3486/HYP-3511/HYP-3510/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481.
 
 Lean module `TournamentH7.LRCPrivateLabelFirewall` records the finite HYP-3490
 premise as a sorry-free ledger: the seven private rows, the unique

@@ -1,0 +1,54 @@
+HYP-3511 RANDOM031 FREE-HOLE BRACKET ATLAS
+status=EVIDENCE / exact free-hole packet atlas; not an LRC14 proof
+row=random_covering_031
+
+## Free-Hole Packet Split
+free_hole_packets=14
+packet_size_hist={2: 10, 4: 3, 8: 1}
+individually_bracketed_packets=10
+individually_bracketed_size_hist={2: 7, 4: 3}
+half_open_packets=4
+half_open_size_hist={2: 3, 8: 1}
+half_open_cluster_count=2
+half_open_cluster_packet_size_hist={2: 2}
+half_open_cluster_cell_size_hist={4: 1, 10: 1}
+reading=10 packets are individually ordinary-bracketed on both sheets; the only same-branch free-hole adjacency is carried by 4 packets in 2 doublets.
+
+## Exposed Ordinary Boundaries
+all_exposed_boundaries_ordinary=True
+exposed_boundary_endpoint_rank_hist={(2,): 48}
+reading=every exposed free-hole boundary faces an ordinary endpoint-rank-2 routed packet.
+
+## Half-Open Doublets
+cluster=(2, 3)
+  packet=2 size=2
+    branch=0 u=(1149,) phases=(1,) left=('free_hole', ()) right=('ordinary', (93,))
+    branch=1 u=(62,) phases=(13,) left=('ordinary', (4,)) right=('free_hole', ())
+  packet=3 size=2
+    branch=0 u=(1139,) phases=(5,) left=('ordinary', (90,)) right=('free_hole', ())
+    branch=1 u=(72,) phases=(9,) left=('free_hole', ()) right=('ordinary', (7,))
+cluster=(8, 13)
+  packet=8 size=2
+    branch=0 u=(447,) phases=(13,) left=('ordinary', (35,)) right=('free_hole', ())
+    branch=1 u=(764,) phases=(1,) left=('free_hole', ()) right=('ordinary', (62,))
+  packet=13 size=8
+    branch=0 u=(453, 454, 455, 456) phases=(5, 6, 7, 8) left=('free_hole', ()) right=('ordinary', (38,))
+    branch=1 u=(755, 756, 757, 758) phases=(6, 7, 8, 9) left=('ordinary', (59,)) right=('free_hole', ())
+
+## Reframe
+R1: The free-hole carrier is not 14 unrelated holes.  Ten packets are already ordinary-bracketed, and the remaining four packets come in two same-branch doublets whose exposed sides are still ordinary rank-2 boundaries.
+R2: This is the finite free-hole lemma suggested by HYP-3486/HYP-3510.  Every no-gate witness lies in a controlled branch-order bead of the seam complement, not in a detached phase wall.
+R3: The puncture relation to HYP-3481 is suggestive but not literal.  The continuous dead-island count is 4, while the discrete free-hole packet count is 14; the exact shared structure is the two mirror-paired half-open doublets.
+
+## Prediction
+P1: A proof-safe random031 free-hole lemma should split the packet into 10 ordinary-bracketed single packets plus 2 ordinary-bracketed doublets.
+P2: The two half-open doublets are the only place where branch-order no-gate adjacency survives.  Any puncture-sidecar or owner-boundary debt should localize there, not across the whole 40-cell free-hole packet.
+P3: Combined with HYP-3486's rank-2 routing and pure 12-cell bypass, this removes the last temptation to treat the free-hole packet as a hidden wall.
+
+## Tournament Analysis
+vertices=('ordinary_bracketed_single_packet', 'half_open_doublet_packet', 'exposed_rank2_boundary', 'same_branch_free_adjacency_cluster', 'mirror_packet_pairing', 'free_hole_count_shadow', 'raw_40_cell_shadow')
+pairwise_observable=free-hole bracketing + rank2 boundary retention + doublet localization + puncture-shadow guardrail
+switch=higher retained seam-complement free-hole discharge payload
+score_hist={14:1,40:1,68:1,76:1,84:1,92:1,98:1}
+directed_3cycles=0
+hamiltonian_path=ordinary_bracketed_single_packet -> half_open_doublet_packet -> exposed_rank2_boundary -> same_branch_free_adjacency_cluster -> mirror_packet_pairing -> free_hole_count_shadow -> raw_40_cell_shadow

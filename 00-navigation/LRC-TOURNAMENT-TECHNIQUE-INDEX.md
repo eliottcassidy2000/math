@@ -240,6 +240,21 @@ obligations, and proof-carrier interfaces.
   one pure `12`-cell bypass component.  The legal quotient is mirror, not
   vertical half-turn gluing; `n*2` is an address sidecar that must remember
   sheet occupancy.
+- Need the coarse random031 seam-complement incidence collapse:
+  use LTT-410 after LTT-346/LTT-345/LTT-344/LTT-343/LTT-342/LTT-341 and make
+  witness/gate/component proof carriers, branch sheets, mirror rungs, no-gate
+  interiors, HYP-3486 fiber-refinement guardrails, and owner-boundary debt the
+  vertices.  HYP-3510 deletes the max-delta seam in the coarse graph carrier
+  and finds one branch-ordered seam-complement component
+  `{'C':80,'G':122,'W':282}`; this preserves global connectedness but must not
+  replace HYP-3486's legal fiber trichotomy.
+- Need the random031 free-hole packet as a local lemma:
+  use LTT-411 after LTT-410/LTT-346/LTT-345/LTT-344 and make individually
+  bracketed free-hole packets, half-open doublets, exposed rank-2 ordinary
+  boundaries, mirror packet pairs, puncture-shadow guardrails, and raw
+  `40`-cell shadows the vertices.  HYP-3511 shows the `14` legal mirror
+  packets split into `10` bracketed singles plus `2` bracketed doublets, with
+  every exposed boundary facing an ordinary endpoint-rank-`2` routed cell.
 - Need to explain why random pair-currents cannot work:
   use LTT-350 after LTT-336/LTT-337/LTT-338/LTT-339/LTT-340/LTT-341/LTT-342/LTT-343/LTT-344 and make dead-cover
   blocker labels with multiplicity sidecars, E/branch-touched private labels,
@@ -10299,13 +10314,78 @@ quotient_legality_status
 - **Fingerprint:** `7` vertices, score histogram
   `{12:1,65:1,71:1,75:1,82:1,88:1,96:1}`, no directed `3`-cycles, and path
   `rank2_seam_complement_discharge -> legal_mirror_run_graph -> pure_twelve_cell_bypass_component -> free_hole_mirror_packets -> vertical_halfturn_guardrail -> fiber_occupancy_word -> raw_282_witness_count`.
-- **Next hook:** formalize the rank-2 route lemma, mirror free-hole lemma, and
-  pure bypass discharge lemma; then repeat the fiber graph on the other
+- **Next hook:** formalize the rank-2 route lemma, HYP-3511 free-hole bracket
+  lemma, and pure bypass discharge lemma; then repeat the fiber graph on the other
   HYP-3477 hard mirror orbits and splice with HYP-3490's private-label
   firewall explanation.
-- **Pointers:** HYP-3486, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
+- **Pointers:** HYP-3486, HYP-3511, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
   HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, THM-523, LTI-446,
   LTT-346, T1446, OPEN-Q-108.
+
+## LTT-411: Random031 Free-Hole Bracket Atlas Tournament
+
+- **Move:** Use local free-hole proof carriers as vertices:
+  ordinary-bracketed single packet, half-open doublet packet, exposed rank-2
+  boundary, same-branch free adjacency cluster, mirror packet pairing,
+  free-hole count shadow, and raw 40-cell shadow.
+- **LRC use:** HYP-3511 refines HYP-3486's `40` free-hole cells in `14`
+  legal mirror packets.  Ten packets are individually ordinary-bracketed on
+  both sheets; the remaining four half-open packets form exactly two
+  same-branch doublets.  Every exposed side faces an ordinary endpoint-rank-2
+  routed cell.
+- **Preserves:** legal mirror packets, branch-order boundary neighbors,
+  exposed endpoint rank, same-branch free adjacency, mirror pairing, and the
+  random031 free-hole discharge predicate.
+- **Forgets / guardrail:** raw counts `40` and `14` forget the bracket
+  grammar.  Equating q-grid packet count with the four continuous dead islands
+  overstates the puncture analogy; only the half-open doublets are the exact
+  shared shadow.
+- **Pairwise observable:** bracket retention, rank-2 exposed boundary,
+  doublet localization, mirror packet payload, puncture-shadow safety, and
+  scalar penalty.
+- **Switch/gauge:** higher retained seam-complement free-hole discharge
+  payload; ties prefer rank-2 exposed boundary before raw counts.
+- **Fingerprint:** `7` vertices, score histogram
+  `{14:1,40:1,68:1,76:1,84:1,92:1,98:1}`, no directed `3`-cycles, and path
+  `ordinary_bracketed_single_packet -> half_open_doublet_packet -> exposed_rank2_boundary -> same_branch_free_adjacency_cluster -> mirror_packet_pairing -> free_hole_count_shadow -> raw_40_cell_shadow`.
+- **Next hook:** prove the free-hole bracket lemma and splice it between
+  HYP-3486's rank-2 routed-cell lemma and pure 12-cell bypass lemma.
+- **Pointers:** HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3485, HYP-3484,
+  HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, THM-523,
+  LTI-511, LTT-411, T1511, OPEN-Q-108.
+
+## LTT-410: Random031 Branch-Ordered Incidence Graph Tournament
+
+- **Move:** Use coarse graph proof carriers as vertices: one branch-ordered
+  seam-complement incidence component, two pure branch witness cycles,
+  survivor-gate port stitching, mirror-completed bypass rungs, branch-sheet
+  no-gate interior, HYP-3486 fiber-refinement guardrail, and raw witness count.
+- **LRC use:** HYP-3510 reruns the HYP-3482 graph target as a coarse
+  witness/gate/component incidence collapse.  After deleting the two max-delta
+  seam gates, branch order plus survivor-gate ports make one component
+  `{'C':80,'G':122,'W':282}`.  HYP-3486 then refines that coarse component
+  into `79` legal mirror-run components, so HYP-3510 is a connectedness
+  certificate rather than the final topology.
+- **Preserves:** coarse phase connectivity, branch-order cycles,
+  survivor-gate port incidence, non-dead component reachability, mirror
+  completion, bypass rung pairing, and terminal random031 discharge predicate.
+- **Forgets / guardrail:** raw counts `282`, `40`, or `12` forget the
+  one-component incidence carrier; the one-component carrier itself forgets
+  HYP-3486's free-hole/rank-2/bypass fiber trichotomy.
+- **Pairwise observable:** coarse connectivity, seam deletion, mirror
+  completion, fiber-refinement safety, owner-boundary retention, and scalar
+  penalty.
+- **Switch/gauge:** higher retained terminal proof payload, with HYP-3486
+  fiber legality breaking ties above coarse connectedness.
+- **Fingerprint:** `7` vertices, score histogram
+  `{16:1,20:1,58:1,69:1,74:1,87:1,91:1}`, no directed `3`-cycles, and path
+  `two_sheet_zipper_flow_component -> mirror_completed_seam_complement_graph -> bypass_rung_pairing -> owner_boundary_puncture_sequence -> branch_sheet_no_gate_interior -> raw_bypass_count_12 -> raw_witness_count_282`.
+- **Next hook:** prove which parts of the HYP-3510 incidence collapse survive
+  under HYP-3486's legal mirror-run graph and use the surviving pieces as the
+  Lean-facing random031 terminal interface.
+- **Pointers:** HYP-3510, HYP-3511, HYP-3486, HYP-3490, HYP-3485, HYP-3484, HYP-3483,
+  HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455,
+  THM-523, LTI-510, LTT-410, T1510, OPEN-Q-108.
 
 ## LTT-350: Private-Label Firewall Tournament
 
@@ -10339,9 +10419,9 @@ quotient_legality_status
   path
   `F00_private_label_firewall_theorem -> F01_random031_private_hard_overlap -> F02_small_touch_private_packet -> F03_ap84_nonprivate_pair_current -> F04_edge_support_label_axis -> F05_raw_pair_current_count -> F06_raw_exception_name`.
 - **Next hook:** formalize the multiplicity-one projection lemma, then route
-  `random_covering_031` through HYP-3486 seam-complement fiber graph plus
-  HYP-3485 connection atlas plus HYP-3484 forbidden-seam flow plus HYP-3483
-  recursion flow plus HYP-3482 seam plus HYP-3481 topology plus
+  `random_covering_031` through HYP-3486 legal fiber graph plus HYP-3511
+  free-hole bracket atlas plus HYP-3510 coarse incidence collapse plus HYP-3485 connection atlas plus HYP-3484
+  forbidden-seam flow plus HYP-3483 recursion flow plus HYP-3482 seam plus HYP-3481 topology plus
   HYP-3455/HYP-3477/HYP-3460 and the other six
   private-firewall rows through HYP-3480's singleton-current audit over
   HYP-3478 mirror-singleton geometry: complete branch-unit touches on `14/14`
@@ -10349,8 +10429,7 @@ quotient_legality_status
   pairs, clean rows `062/086/101`, asymmetric row `001`, and cover-delta
   minimum-shadow rows `039/074`, then owner-current, endpoint-spine,
   exact-period/state-lift, two-adic, or signed-SPEC debt.
-- **Pointers:** HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482,
-  HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475,
+- **Pointers:** HYP-3490, HYP-3511, HYP-3510, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475,
   HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523,
   LTI-450, LTT-350, T1450, OPEN-Q-108.
 
