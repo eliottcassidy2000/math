@@ -158,12 +158,15 @@ obligations, and proof-carrier interfaces.
   quotient preserves low-rank E/branch escape status but must retain ordered
   sidecars because single-gate branch orientation is forgotten.
 - Need to route the HYP-3472/HYP-3475 exception frontier:
-  use LTT-336 after LTT-332/LTT-335/LTT-334 and make terminal route packets,
-  random031 overlap, hard-current rows, AP84 edge-only rows, small-touch
-  no-hard rows, route-label sidecars, and scalar shadows the vertices.  The
-  quotient preserves the terminal discharge lane after the low-rank E/branch
-  producer fires, and must retain sidecar `R` unless a reconstruction theorem
-  is proved.
+  use LTT-336 after LTT-332/LTT-335/LTT-334 and make AP pair-current packets,
+  zero-edge singleton-current packets, random031 overlap, hard-current rows,
+  AP84 edge-only rows, small-touch no-hard rows, route-label sidecars, and
+  scalar shadows the vertices.  HYP-3476 shows the two AP separating-only rows
+  close by selected non-mirror pairs, while the seven random edge exceptions
+  are edgeless singleton projections; its router also proves the sole
+  hard/currentless overlap is `random_covering_031`.  The quotient preserves
+  the terminal discharge lane after the low-rank E/branch producer fires, and
+  must retain sidecar `R` unless a reconstruction theorem is proved.
 - Need to discharge HYP-3475 hard mirror-orbit debt:
   use LTT-337 after LTT-335/LTT-332/LTT-336 and make hard mirror orbits,
   q=`14V` phase-grid hit patterns, lower-delta E/branch projection currents,

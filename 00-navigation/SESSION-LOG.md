@@ -21,6 +21,25 @@ E/branch gate words, and the unit-delta versus cover-delta split.  The
 tournament vertices will be singleton components, mirror-paired components,
 owner-pair labels, touching gate events, and proof obligations rather than
 runners or raw row names.
+## codex-2026-06-29 -- HYP-3476/HYP-3477 residual reconciliation
+
+After fetching the latest mainline, integrated the concurrent HYP-3476
+pair-current audit, HYP-3476 exception-frontier router, and HYP-3477 hard
+mirror-orbit discharge as stronger separated artifacts than the local combined
+audit.  Removed stale reserved HYP-3476/HYP-3477 index breadcrumbs and updated
+the LTT-336 routing note from "test pair currents" to the completed split:
+
+```text
+ordinary rows: HYP-3472 separating current
+AP currentless rows: HYP-3476 two-gate pair-current packet
+hard rows outside random031: HYP-3477 lower-delta projection-current packet
+six non-AP currentless/non-hard rows: zero-edge singleton-current packet
+random031: HYP-3455/HYP-3460 gluing and phase-branch clause
+```
+
+This makes the next proof target narrower: prove the six small-touch
+zero-edge rows harmless, then close the random031 gluing clause without
+forgetting route sidecar `R`.
 
 ## codex-2026-06-29 -- HYP-3477 hard mirror-orbit discharge audit
 
@@ -51,7 +70,7 @@ LRC14 proof.  Pulled the incoming HYP-3474 partition-lattice and HYP-3475
 mirror-orbit work, then claimed a different graph-current direction:
 HYP-3476/T1436/LTI-436/LTT-336.
 
-Reserved artifacts:
+Artifacts:
 
 ```text
 04-computation/lrc14_dead_cover_pair_current_codex_20260629.py
@@ -81,6 +100,14 @@ rows at `random_covering_031`, while the colored gate unit-delta split's
 `random_covering_074`.  The remaining zero-edge rows
 `random_covering_001`, `random_covering_062`, `random_covering_086`, and
 `random_covering_101` are the cleanest singleton-current test cases.
+
+Readout: target HYP-3472's seven projection-edge exceptions and the two extra
+separating-current exceptions.  The completed audit enumerated `9113`
+low-rank E/branch gate pairs, including `165` exact mirror pairs.  Pair
+current closes the two AP rows but none of the seven random rows; the random
+exception projections are edgeless singleton projections, so they need a
+zero-edge singleton-current/owner-current packet rather than bigger pair
+enumeration.
 
 ## codex-2026-06-29 -- HYP-3476 exception-frontier router
 

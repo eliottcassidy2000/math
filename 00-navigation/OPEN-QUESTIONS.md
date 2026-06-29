@@ -151,12 +151,15 @@ packet becomes two mirror colors.  The live non-AP debt is finite and named:
 `8` mirror orbits have cover-delta `>=7`, lying on seven random rows, with
 `random_covering_022` carrying the unique delta-`8` orbit.
 
-Open proof task: discharge those eight hard mirror orbits by
-HYP-3455/HYP-3451 gluing/conductance, endpoint-spine/wall lift,
-owner-current imbalance, two-adic descent, HYP-3460 phase-branch bypass, or
-signed-SPEC/Rprime debt. -> HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3470, HYP-3462, HYP-3461,
-HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438,
-HYP-3436, HYP-2595, THM-523, LTI-435, LTT-335, T1435, OPEN-Q-108.
+HYP-3477 now discharges `7/8` hard mirror orbits by lower-delta E/branch
+projection currents.  The remaining open task from this hard-family ledger is
+therefore the unique `random_covering_031` orbit: prove the HYP-3455/HYP-3460
+seven-owner gluing and phase-branch clause, or route it by owner-current,
+two-adic descent, signed-SPEC/Rprime, or state-lift debt. -> HYP-3477,
+HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3470, HYP-3462,
+HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451,
+HYP-3438, HYP-3436, HYP-2595, THM-523, LTI-437, LTI-435, LTT-337, LTT-335,
+T1437, T1435, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3476 pair-current addendum:**
 HYP-3476 tests whether HYP-3472's single-gate exceptions are artifacts of a
