@@ -1,0 +1,54 @@
+HYP-3483 RANDOM031 RECURSION FLOW COMPARATOR
+status=EVIDENCE / exact recursion-sidecar scout; not an LRC14 proof
+row=random_covering_031
+
+## Core comparison
+model_A=n+2 boundary insertion: seam carries owner boundary
+model_B=n*2 two-adic pullback: phase flow moves in u=2t sheets
+verdict=controlled_span; use n*2 for flow and keep n+2 as boundary debt
+scores={'two_adic_pullback_n_times_2': 74, 'boundary_insertion_n_plus_2': 38, 'controlled_span': 130}
+
+## Two-adic bypass evidence
+phase_witnesses=282
+hard_gate_hits=0
+bypass_hits=12
+branch_balance={0: 6, 1: 6}
+component_balance={43: 6, 54: 6}
+phase_blocks_by_branch={0: (7, 8, 9, 10, 11, 12), 1: (2, 3, 4, 5, 6, 7)}
+u_blocks_by_branch={0: ('97/173', '680/1211', '681/1211', '682/1211', '683/1211', '684/1211'), 1: ('527/1211', '528/1211', '529/1211', '530/1211', '531/1211', '76/173')}
+block_tests=phase_consecutive=True u_grid_step=True mirror_pairs=6
+  mirror_hit_pair=a679/phase7/b0/c54 <-> a1743/phase7/b1/c43
+  mirror_hit_pair=a680/phase8/b0/c54 <-> a1742/phase6/b1/c43
+  mirror_hit_pair=a681/phase9/b0/c54 <-> a1741/phase5/b1/c43
+  mirror_hit_pair=a682/phase10/b0/c54 <-> a1740/phase4/b1/c43
+  mirror_hit_pair=a683/phase11/b0/c54 <-> a1739/phase3/b1/c43
+  mirror_hit_pair=a684/phase12/b0/c54 <-> a1738/phase2/b1/c43
+
+## Boundary insertion evidence
+dead_island_owners=(23, 45, 93, 113)
+seam_owners=(23, 45, 93, 113, 147, 169, 173)
+bypass_owners=(23, 93, 113)
+seam_only_owners=(45, 147, 169, 173)
+dead_not_bypass_owners=(45,)
+rescue_plus_apex=(173,)
+owner_reading=the seam is the n+2-style boundary carrier: it adds owners absent from the bypass, including the apex owner 173.
+
+## Prediction
+P1: a formal random031 terminal packet should not choose between the two recursions.  It should state a span lemma: if the seven-owner seam has zero hard phase flux and the u=2t sheets have balanced mirror bypass blocks, then the only remaining obstruction is named owner-current/two-adic/SPEC debt.
+P2: the proof carrier should keep the ordered six-hit blocks (branch0 phases 7..12, branch1 phases 2..7).  Collapsing them to the scalar count 12 loses the mirror-pullback certificate.
+
+## Tournament Analysis
+vertices=('controlled_span_seam_boundary_plus_twoadic_bypass', 'two_adic_phase_pullback_blocks', 'mirror_bypass_hit_pairing', 'seven_owner_boundary_insertion', 'dead_island_puncture_word', 'raw_bypass_hit_count', 'raw_owner_count')
+pairwise_observable=recursion predicate retention + flow payload + owner boundary + scalar firewall
+switch=higher retained recursion/proof payload first
+score_hist={16: 1, 20: 1, 38: 1, 47: 1, 64: 1, 74: 1, 130: 1}
+directed_3cycles=0
+hamiltonian_path=controlled_span_seam_boundary_plus_twoadic_bypass -> two_adic_phase_pullback_blocks -> mirror_bypass_hit_pairing -> dead_island_puncture_word -> seven_owner_boundary_insertion -> raw_bypass_hit_count -> raw_owner_count
+
+## Assumption challenge
+Considered vertices: runners, gaps, fixed circle sections, section
+boundaries, wall-crossing events, residues, cover arcs, Fourier modes,
+dead islands, seam gates, phase-flow hits, owner labels, recursion
+operators, and proof obligations.  Chosen carrier is not runners or
+raw arcs; it preserves the random031 terminal discharge predicate by
+retaining both the owner-boundary seam and the two-adic bypass flow.

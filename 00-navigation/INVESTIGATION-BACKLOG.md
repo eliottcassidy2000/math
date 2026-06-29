@@ -1,5 +1,16 @@
 # Investigation Backlog
 
+**HYP-3483 random031 recursion-flow comparator.**  HYP-3481 makes
+`random_covering_031` a mirror-punctured annulus with a bypassed saddle seam;
+HYP-3483 tests which recursion sidecar explains that shape.  The exact answer
+is a controlled span: `n*2`/two-adic pullback explains the moving phase flow
+via two mirror-paired six-hit blocks, while `n+2` boundary insertion explains
+the seven-owner seam debt.  Next proof target: a span lemma retaining
+owner-boundary seam plus ordered two-adic bypass blocks before discharging to
+local island/bypass current or named owner/two-adic/SPEC debt. -> HYP-3483,
+HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455,
+LTI-443, LTT-343, OPEN-Q-108.
+
 **Purpose:** Systematic catalog of every lead, reference, connection, and unexplored direction extracted from the repo. Claude agents should consult this before choosing what to work on, and add new leads as they emerge. Prioritized by potential impact on proving OCF (Claim A).
 
 **Last full repo scour:** opus-2026-03-06-S10

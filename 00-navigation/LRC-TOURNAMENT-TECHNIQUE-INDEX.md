@@ -10148,3 +10148,30 @@ quotient_legality_status
   HYP-3477, HYP-3476, HYP-3460, HYP-3455, HYP-3451, HYP-3438, THM-523,
   LTI-442, LTT-342, T1442,
   OPEN-Q-108.
+
+## LTT-343: Random031 Recursion-Flow Comparator Tournament
+
+- **Move:** Use recursion/proof carriers as vertices: controlled span,
+  two-adic phase-pullback blocks, mirror bypass hit-pairing, seven-owner
+  boundary insertion, dead-island puncture word, raw bypass hit count, and raw
+  owner count.
+- **LRC use:** HYP-3483 says the HYP-3482/HYP-3481 random031 topology should
+  be formalized as a span, not a choice between old recursion metaphors.  The
+  flow is `n*2` two-adic pullback; the seam owner boundary is `n+2` insertion
+  debt.
+- **Preserves:** ordered six-hit phase blocks, branch/component balance,
+  mirror hit pairing, seam owner boundary, bypass owner subset, and terminal
+  random031 discharge predicate.
+- **Forgets / guardrail:** raw count `12`, raw owner count `7`, or the row name
+  alone destroys the recursion certificate.
+- **Pairwise observable:** recursion predicate retention, flow payload, owner
+  boundary payload, mirror pairing, and scalar firewall.
+- **Switch/gauge:** higher retained recursion/proof payload first.
+- **Fingerprint:** `7` vertices, score histogram
+  `{16:1,20:1,38:1,47:1,64:1,74:1,130:1}`, no directed `3`-cycles, and path
+  `controlled_span_seam_boundary_plus_twoadic_bypass -> two_adic_phase_pullback_blocks -> mirror_bypass_hit_pairing -> dead_island_puncture_word -> seven_owner_boundary_insertion -> raw_bypass_hit_count -> raw_owner_count`.
+- **Next hook:** write the terminal span lemma beside the HYP-3481
+  mirror-puncture and bypassed-saddle lemmas.
+- **Pointers:** HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479,
+  HYP-3477, HYP-3460, HYP-3455, HYP-3234, HYP-3232, HYP-3230, HYP-3418,
+  THM-523, LTI-443, LTT-343, T1443, OPEN-Q-108.

@@ -1,3 +1,23 @@
+## codex-2026-06-29 -- HYP-3483 random031 recursion-flow comparator
+
+Built directly on incoming HYP-3482/HYP-3481 instead of duplicating their
+topology atlases.
+Added `04-computation/lrc14_random031_recursion_flow_comparator_codex_20260629.py`
+and stored
+`05-knowledge/results/lrc14_random031_recursion_flow_comparator_codex_20260629.out`,
+plus HYP-3483/T1443/LTI-443/LTT-343 and reflection
+`07-reflections/lrc14-random031-recursion-flow-comparator-codex-20260629.md`.
+
+Exact finding: random031 should be read as a controlled span between two
+recursion sidecars.  The flow mechanism is `n*2`/two-adic pullback: q=`14V`
+has `282` witnesses, `hard_gate_hits=0`, `bypass_hits=12`, branch/component
+balance `6/6`, and two consecutive six-hit mirror blocks, branch0 phases
+`7..12` on component `54` and branch1 phases `2..7` on component `43`.  The
+`n+2` side is the owner-boundary seam: seam owners
+`(23,45,93,113,147,169,173)` versus bypass owners `(23,93,113)`.  Prediction:
+formalize a span lemma that keeps both sidecars; the scalar count `12` is too
+lossy.
+
 ## codex-2026-06-29 -- HYP-3481 random031 topology atlas
 
 Prompt: look for creative ways to reframe the underlying geometry/topology of

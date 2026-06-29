@@ -1,5 +1,15 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3483 random031 recursion addendum:**
+HYP-3483 answers the `n+2` versus `n*2` prompt by refusing the false choice.
+For `random_covering_031`, the bypass flow is `n*2`/two-adic: two consecutive
+six-hit mirror blocks in `u=2t`, branch/component balanced `6/6`, and paired by
+`a <-> q-a`.  The seam debt is `n+2`: seven owners on the boundary, with seam-
+only owners `(45,147,169,173)`.  Can this be formalized as a terminal span
+lemma: seven-owner seam plus two-adic bypass blocks imply local discharge or
+named owner/two-adic/SPEC debt? -> HYP-3483, HYP-3482, HYP-3481, HYP-3480,
+HYP-3479, HYP-3477, HYP-3460, HYP-3455, LTI-443, LTT-343.
+
 **OPEN-Q-108 HYP-3481 random031 topology addendum:**
 HYP-3481 sharpens the unique hard/currentless overlap `random_covering_031`
 after HYP-3479 reduces hard-orbit discharge to separating-current transfer plus
