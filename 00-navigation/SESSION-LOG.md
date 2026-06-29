@@ -41,7 +41,20 @@ The tight AP-with-84 row has four one-gate edge words with labels
 Next proof hook: prove the gate-word obstruction.  Survivor mass is legal only
 after reconstructing or routing adjacent bad-core covers, endpoint labels,
 branch mask, and parent even wall through corridor-fence, endpoint-spine,
-owner-current, two-adic loss, overlap-cut, or signed-SPEC sidecars.
+owner-current, two-adic loss, overlap-cut, or signed-SPEC sidecars.  Added the
+gate-word audit script, stored result, hypothesis, and reflection:
+
+```text
+04-computation/lrc14_survivor_gate_word_audit_codex_20260629.py
+05-knowledge/results/lrc14_survivor_gate_word_audit_codex_20260629.out
+05-knowledge/hypotheses/HYP-3438-lrc14-survivor-gate-word-audit.md
+07-reflections/lrc14-survivor-gate-word-audit-codex-20260629.md
+```
+
+Rebase integration: incoming HYP-3450/HYP-3451 add the component-cover
+obstruction and conductance-router sibling.  Use their whole-component
+branch-alive/dead projection to choose obstruction cuts, then use HYP-3438's
+gate words to classify the mixed components inside those cuts.
 
 ## codex-2026-06-29 -- HYP-3436 minimal bad-core cover extractor
 

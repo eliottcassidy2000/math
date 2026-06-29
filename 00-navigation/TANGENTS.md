@@ -59,9 +59,11 @@ endpoints `E|E`.  Tight AP-with-84 has four one-gate edge words matching the
 HYP-3431 corridor-fence shadow.  Proof pull: prove that the survivor gate word
 forces a relocation witness, corridor-fence route, endpoint-spine sidecar,
 owner-current debt, overlap-cut bridge, two-adic loss, or signed-SPEC route
-before scalar survivor measure or harmonic-tail compression is allowed. ->
-HYP-3438,
-HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3428,
+before scalar survivor measure or harmonic-tail compression is allowed.
+HYP-3450/HYP-3451 supply the whole-component branch-alive/dead conductance
+projection; use it to choose obstruction cuts, then classify mixed components
+by these HYP-3438 gate words. -> HYP-3438, HYP-3451, HYP-3450, HYP-3437,
+HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3428,
 HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, THM-523,
 LTI-399, LTT-299, OPEN-Q-108.
 **T1397** [codex-2026-06-29] #lrc14 #two-adic #bad-core #minimal-cover #finite-ruler #endpoint-gates #HYP-3436.

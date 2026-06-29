@@ -30,19 +30,20 @@ result
 and
 `07-reflections/lrc14-survivor-gate-word-audit-codex-20260629.md`.
 
-Purpose: decompose mixed `E_safe` components from HYP-3436 into exact gate
-words of adjacent bad-core blocks and survivor gaps, retaining endpoint labels,
-minimal B0/B1 cover owners, branch mask, and parent even wall.
-
 Readout: on the `135`-row HYP-3436 bank, `6228` mixed components emit `8702`
 survivor gates.  Branch masks are `both:1064`, `branch0:3819`,
 `branch1:3819`; adjacency is `left_bad_edge:3515`, `right_bad_edge:3515`,
 `two_sided:1672`; all parent endpoints are `E|E`.  Tight AP-with-84 has four
 one-gate edge words matching the corridor-fence shadow.
 
-Next: prove whether every survivor gate routes through corridor-fence,
-endpoint-spine, owner-current, overlap-cut, two-adic loss, signed-SPEC, or a
-new named residual before any scalar compression is allowed.
+Next: prove the survivor-gate no-gluing lemma.  Canonical `E:84` gates should
+route through HYP-3431 corridor-fence; noncanonical multi-owner and two-sided
+gates should route through HYP-3437/HYP-3439 endpoint-Menger rescue cores.
+HYP-3450/HYP-3451 supply the component-cover conductance sibling: use their
+branch-alive/dead projection to choose obstruction cuts, then classify the
+mixed components inside those cuts by the HYP-3438 gate words before any scalar
+compression is allowed.
+
 ## Lead codex-2026-06-29: Rescue-core bridge certificate
 
 **Status:** EVIDENCE / AP-tail bridge audit; not proof

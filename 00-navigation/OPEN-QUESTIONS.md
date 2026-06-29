@@ -75,18 +75,24 @@ endpoints `E|E`.  Each gate word retains:
 bad-core block / survivor gap / bad-core block
 + endpoint wall labels
 + adjacent minimal B0/B1 owner covers
++ cover-owner deltas
 + branch mask
 + parent even wall
 ```
 
-Concrete task: prove whether every survivor gate forces a relocation witness,
-corridor-fence route, endpoint-spine certificate, owner-current debt,
-overlap-cut bridge, two-adic loss route, signed-SPEC route, or named residual.
-Raw survivor measure, mixed-component counts, harmonic budgets, and topology
-labels are not certificates unless they reconstruct or route this gate word. ->
-HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,
-HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129,
-THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.
+Concrete task: prove the survivor-gate no-gluing lemma.  Every legal survivor
+gate should either give a relocation witness, match the HYP-3431
+corridor-fence route, admit a bounded HYP-3437/HYP-3439 endpoint-Menger
+rescue-core certificate, or emit endpoint-spine, owner-current, exact-period,
+state-lift, two-adic loss, signed-SPEC/Rprime, or named residual debt.  Raw
+survivor measure, mixed-component counts, harmonic budgets, and topology labels
+are not certificates unless they reconstruct or route this exact gate word.
+HYP-3450/HYP-3451 now give the component-cover sibling: choose obstruction
+cuts in the branch-alive/dead conductance projection, then classify the mixed
+components inside those cuts by the HYP-3438 gate words. -> HYP-3438,
+HYP-3451, HYP-3450, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
+HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
+HYP-3129, THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.
 **OPEN-Q-108 HYP-3436 minimal bad-core cover extractor addendum:**
 HYP-3436 completes the HYP-3435 inversion and makes the current LRC14 covering
 target sharper.  Work with

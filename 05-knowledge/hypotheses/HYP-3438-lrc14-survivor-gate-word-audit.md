@@ -10,6 +10,8 @@ script: 04-computation/lrc14_survivor_gate_word_audit_codex_20260629.py
 result: 05-knowledge/results/lrc14_survivor_gate_word_audit_codex_20260629.out
 reflection: 07-reflections/lrc14-survivor-gate-word-audit-codex-20260629.md
 related:
+  - HYP-3451
+  - HYP-3450
   - HYP-3437
   - HYP-3436
   - HYP-3435
@@ -146,6 +148,12 @@ owner-current exceptions, HYP-3428 two-adic loss, HYP-3437 overlap-cut bridge,
 or HYP-3129 signed-SPEC.  Raw survivor measure, mixed-component counts,
 harmonic budgets, and topology labels are negative controls unless they
 reconstruct one of those sidecars.
+
+Rebase integration: HYP-3450/HYP-3451 are the whole-component sibling of this
+gate-word quotient.  They choose obstruction cuts in the branch-alive/dead
+component-cover projection; HYP-3438 then classifies the mixed components
+inside those cuts by endpoint labels, adjacent cover deltas, branch masks, and
+parent even walls.
 
 ## Tournament Analysis
 

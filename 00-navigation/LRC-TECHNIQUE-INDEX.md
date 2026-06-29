@@ -7755,6 +7755,10 @@ corridor-fence instance, an endpoint-spine sidecar, an owner-current exception,
 a two-adic loss/debt term, an overlap-cut bridge, a signed-SPEC route, or a
 named residual.
 
+HYP-3450/HYP-3451 provide the whole-component branch-alive/dead conductance
+projection.  Use that graph layer to choose obstruction cuts, then use LTI-399
+gate words to classify the mixed components inside the selected cuts.
+
 Assumption challenge for the planned audit: runners, gaps, fixed sections,
 section boundaries, wall-crossing events, residues, cover arcs, endpoint walls,
 branch-bad owners, cover-pair deltas, mixed even components, survivor gaps, and
@@ -7762,7 +7766,7 @@ proof obligations remain candidate vertices.  The selected quotient should
 preserve the relocation predicate and record what endpoint/owner data it
 forgets.
 
-Anchors: HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
+Anchors: HYP-3438, HYP-3451, HYP-3450, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
 HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
 HYP-3129, THM-523, LTT-299, T1399, OPEN-Q-108.
 

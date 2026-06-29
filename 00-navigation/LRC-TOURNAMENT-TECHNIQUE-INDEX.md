@@ -8680,8 +8680,10 @@ quotient_legality_status
   G06_owner_current_exception_router -> G07_signed_SPEC_route ->
   G08_raw_survivor_measure`.
 - **Next hook:** prove the gate-word obstruction or name the first residual
-  gate family that cannot route through the listed sidecars.
-- **Pointers:** HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
+  gate family that cannot route through the listed sidecars.  Pair this with
+  HYP-3450/HYP-3451: choose obstruction cuts in the whole-component
+  branch-alive/dead projection, then classify mixed components by gate words.
+- **Pointers:** HYP-3438, HYP-3451, HYP-3450, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
   HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
   HYP-3129, THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.
 

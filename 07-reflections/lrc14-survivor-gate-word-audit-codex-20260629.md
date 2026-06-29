@@ -44,6 +44,11 @@ endpoint-spine/wall certificate, owner-current exception, two-adic loss,
 overlap-cut bridge, or signed-SPEC.  Raw survivor measure and harmonic budgets
 remain negative controls.
 
+HYP-3450/HYP-3451 now give the component-cover sibling.  Their
+branch-alive/dead conductance projection can choose the obstruction cut, while
+HYP-3438 supplies the local gate words needed to decide whether each mixed
+component in that cut opens a branch or emits named debt.
+
 ## Assumption Challenge
 
 Runners, gaps, fixed sections, section boundaries, wall-crossing events,
