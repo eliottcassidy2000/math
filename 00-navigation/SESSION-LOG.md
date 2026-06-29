@@ -1,3 +1,22 @@
+## codex-2026-06-29 -- HYP-3523 release-test addendum
+
+Prompt: use the spigot algorithm as inspiration for LRC14 proof work.
+
+Rebased onto the incoming executable certificate spigot and kept the
+non-duplicative contribution as a micro quotient-release guardrail in
+HYP-3523.  Added the ranking:
+
+```text
+full_spigot_packet > owner_filtration_without_route
+  > transport_plus_bracket > HYP3520_owner_current_only
+  > terminal_class_only > raw_counts > raw_seven_owner_shadow
+```
+
+The point is information-theoretic: compression is legal only when it emits a
+certified prefix and keeps residual `(45,173)` plus route `R`; raw counts and
+raw seven-owner shadows are shorter or larger in the wrong way, but not
+sufficient statistics for terminal emission.
+
 ## codex-2026-06-29 -- HYP-3524 random031 spigot/hydrotope scout
 
 Prompt: integrate spigot algorithms and arXiv:2606.28280 as inspiration for

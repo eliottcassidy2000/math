@@ -42,6 +42,16 @@ pure bypass owner-filtration digit with residual (45,173)
 Every output still carries the HYP-3513 route sidecar `R` and the vertical
 halfturn guard.
 
+The smaller release/hold quotient test is a useful companion to the stream:
+`full_spigot_packet` is the only tested carrier that emits transport, branch
+lift, and free-hole caps while still holding both residual `(45,173)` and
+route `R`.  The failure modes are instructive: `owner_filtration_without_route`
+drops the private-firewall route, `transport_plus_bracket` drops residual and
+route, and raw counts or raw seven-owner shadows either emit no certified
+prefix or hide the carry split.  So the information-theoretic slogan is not
+"compress harder"; it is "compress only to a sufficient statistic for terminal
+emission."
+
 Assumption challenge: consider vertices such as output certificates, carry
 states, proof obligations, quotient guards, owner rows, free-hole packets,
 fixed sections, and boundary events.  The chosen tournament vertices are

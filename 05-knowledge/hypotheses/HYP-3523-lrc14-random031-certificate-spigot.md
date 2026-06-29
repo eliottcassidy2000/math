@@ -86,6 +86,27 @@ HYP-3490/HYP-3513 private-firewall route sidecar.  Every emitted certificate
 also carries the vertical-halfturn guard; the vertical address projection is
 not a legal sheet gluing.
 
+## Micro Release Test
+
+A second, smaller quotient test is useful for future proof compression.  The
+safe bypass packet is the only carrier in the tested family that both emits
+the certified prefix and keeps all typed carry:
+
+```text
+full_spigot_packet              score=87
+owner_filtration_without_route  score=68  illegal_loss=HYP-3490 route
+transport_plus_bracket          score=26  illegal_loss=residual_pair,route
+HYP3520_owner_current_only      score=21  illegal_loss=branch_lift,route
+terminal_class_only             score=-1  illegal_loss=owner,residual,route
+raw_counts                      score=-21 illegal_loss=owner layers,route,free-hole type
+raw_seven_owner_shadow          score=-28 illegal_loss=transport,bracket,residual,route
+```
+
+This is not a second proof object; it is a compression guardrail.  It says a
+candidate quotient may forget raw phase, runner, or count head data only after
+the emitted proof packet is certified and the residual/route tail remains
+named.
+
 ## Proof Pull
 
 1. Formalize ordinary route certificates as immediate spigot digits.
