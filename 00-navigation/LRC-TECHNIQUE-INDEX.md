@@ -34,6 +34,33 @@ safe components, gaps, sections, endpoints, residues, wall crossings, exact
 period packets, Fourier modes, Haar tiles, quotient fibers, state-lift sectors,
 and proof obligations first.
 
+## LTI-525 - Random031 proof-contract router
+
+Carrier / vertex set: terminal proof contracts and required sidecar
+obligations: ordinary route emission, free-hole single emission, free-hole
+doublet buffer/emission, bypass transport emitter, bypass bracket-lift
+emitter, residual pair close-tail, route sidecar `R`, vertical-halfturn guard,
+and forbidden quotient cuts.
+Pairwise observable: whether a contract preserves terminal discharge while
+declaring every consumed certificate, emitted owner tail, remaining tail, and
+forbidden quotient shortcut.
+Binary relation or gauge: higher proof-readiness, lower hidden-tail risk, and
+lower scalar-forgetting risk; ties use dependency order.
+Preserved LRC predicate: legal terminal discharge for the remaining
+random031 packet.
+Destroyed information: raw counts, chamber volumes, residue shadows,
+owner-count shadows, and vertical gluing erase contract fields unless the
+contract records a reconstructing sidecar.
+Best use: turn HYP-3521/HYP-3523/HYP-3524 into a Lean-facing theorem skeleton
+instead of a growing list of notes.
+Failure mode: hiding the residual `(45,173)` or route sidecar `R` behind a
+scalar quotient.
+Anchors: HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520,
+HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486, T1525, LTT-425.
+Next agent hook: implement the contract audit and report which clauses are
+ready for formalization, which remain proof debt, and which quotient shortcuts
+are explicitly forbidden.
+
 ## LTI-523 - Random031 certificate spigot
 
 Carrier / vertex set: proof-output states in a terminal certificate stream:

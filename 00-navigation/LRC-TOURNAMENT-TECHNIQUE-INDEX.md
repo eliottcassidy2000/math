@@ -39,6 +39,25 @@ boundaries, wall-crossing events, residue packets, cover arcs, Fourier modes,
 Haar rectangles, matroid topes/cocircuits, Fejer atom banks, state-lift
 obligations, and proof-carrier interfaces.
 
+## LTT-425 - Proof-Contract Router Tournament
+
+- **Move:** Treat proof contracts and sidecar obligations as tournament
+  vertices, orienting edges by terminal-readiness, hidden-tail exposure, and
+  quotient-forgetting risk.
+- **LRC use:** Turns the random031 evidence stack into a finite theorem
+  interface: ordinary route, free-hole single/doublet, bypass transport,
+  bracket lift, residual pair, route sidecar `R`, and vertical guard.
+- **Preserves:** consumed certificate, emitted owner tail, remaining tail,
+  required sidecars, forbidden quotient shortcuts, and Lean-facing theorem
+  shape.
+- **Forgets / guardrail:** raw component counts, owner counts, residue
+  chambers, scalar hydrotope volumes, and vertical halfturn gluing are illegal
+  unless the contract proves they reconstruct the terminal predicate.
+- **Next pull:** Execute HYP-3525 and classify each clause as formal-ready,
+  executable-evidence-only, or unresolved proof debt.
+- **Pointers:** HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520,
+  HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486, T1525, LTI-525.
+
 ## LTT-420 - Owner-Boundary Sidecar Tournament
 
 - **Move:** Use owner-boundary proof carriers as vertices:

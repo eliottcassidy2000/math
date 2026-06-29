@@ -162,6 +162,20 @@ Proof pull: prove the row-free multiplicity-one incidence-cut lemma for
 `I/Q`, but retain route sidecar `R` in terminal dispatch until a
 route-reconstruction theorem is actually proved.
 
+## codex-2026-06-29 -- HYP-3525 proof-contract router reservation
+
+Prompt: deepen understanding of the repo's LRC14 proof strategies and
+creatively leverage them toward closure.
+
+Reserved HYP-3525/T1525/LTI-525/LTT-425 for a random031 proof-contract
+router.  The motivation is that HYP-3521/HYP-3523/HYP-3524 have converted the
+hard random031 packet into a finite terminal interface: ordinary route
+emission, free-hole single/doublet emission, bypass transport emission,
+bracket lift, residual pair `(45,173)`, HYP-3513 route sidecar `R`, and the
+HYP-3486 vertical guard.  Planned executable: report each terminal clause with
+required sidecars, consumed certificates, emitted/remaining tails, forbidden
+quotient shortcuts, and a Lean-facing theorem skeleton.
+
 ## codex-2026-06-29 -- HYP-3520 random031 owner-boundary persistence
 
 Prompt: work creatively on owner-boundary persistence after the incoming
