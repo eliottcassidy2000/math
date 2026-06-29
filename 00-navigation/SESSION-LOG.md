@@ -33399,3 +33399,24 @@ spines, HYP-3427 wall words, HYP-3428 loss ledgers, owner-current,
 exact-period/state-lift, or signed-SPEC debt.  Tournament Analysis uses proof
 carriers, not runners; priority path begins
 `atomic_interval_arrangement -> overlap_tax_menger_core -> endpoint_spine_cut_lift`.
+
+## codex-2026-06-29 -- reserve rescue-core bridge certificate -- HYP-3438
+
+Reserved HYP-3438/T1399/LTI-399/LTT-299 for the next finite bridge after
+HYP-3437 and HYP-3436.  The planned computation will join HYP-3437's
+one-branch overlap rescue cores with HYP-3436's two-color bad-core survivor
+ledger, then separate the canonical HYP-3431 corridor-fence family from
+noncanonical rows.
+
+Honest status: stub only at reservation time.  No computation has yet been run
+under HYP-3438.  Claimed artifacts:
+`04-computation/lrc14_rescue_core_bridge_certificate_codex_20260629.py`,
+`05-knowledge/results/lrc14_rescue_core_bridge_certificate_codex_20260629.out`,
+and
+`07-reflections/lrc14-rescue-core-bridge-certificate-codex-20260629.md`.
+
+Proof target: every primitive covering row with negative one-branch naive slack
+is either canonical corridor-fence, has a noncanonical bounded rescue core, or
+routes through HYP-3436 survivors, endpoint-spine/wall ledgers, owner-current,
+exact-period/state-lift, or signed-SPEC.  Tournament vertices will be proof
+obligations/bridge carriers rather than runners or scalar masses.

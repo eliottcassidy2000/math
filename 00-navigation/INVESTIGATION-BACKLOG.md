@@ -37,6 +37,29 @@ minimal B0/B1 cover owners, branch mask, and parent even wall.
 Next: execute the audit, then test whether survivor gates route through
 corridor-fence, endpoint-spine, owner-current, two-adic loss, signed-SPEC, or a
 new named residual before any scalar compression is allowed.
+## Lead codex-2026-06-29: Rescue-core bridge certificate
+
+**Status:** RESERVED STUB / computation pending; not proof
+(HYP-3438/T1399/LTI-399/LTT-299), continuing HYP-3437's one-branch
+overlap-tax cut certificate and HYP-3436's two-color bad-core cover extractor.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3438-lrc14-rescue-core-bridge-certificate.md`,
+script
+`04-computation/lrc14_rescue_core_bridge_certificate_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_rescue_core_bridge_certificate_codex_20260629.out`,
+and
+`07-reflections/lrc14-rescue-core-bridge-certificate-codex-20260629.md`.
+
+Purpose: join the one-branch rescue-core ledger to the two-color survivor
+ledger.  The first proof-facing split to test is canonical corridor-fence
+family versus noncanonical bounded rescue-core compression.
+
+Next: audit the combined HYP-3436/HYP-3437 stress banks and the canonical
+`84m` tower.  Try to certify that rank `6` is only canonical, noncanonical
+negative-slack rows need rank at most `5`, and any residual high-rank case
+routes through endpoint-spine/wall, owner-current, state-lift, or signed-SPEC.
 
 ## Lead codex-2026-06-28: Euler-Mascheroni harmonic wall-budget sidecar
 
