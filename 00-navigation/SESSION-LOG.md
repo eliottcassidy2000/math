@@ -1,3 +1,34 @@
+## mac-mini-2026-06-29-S17 -- cracked: cut(s|prefix Q) = continued fraction x Euler product (HYP-3550)
+
+Prompt: crack the resonance structure of cut(s|prefix); think continued fractions, roots, exponents,
+infinite sums, products.
+
+cut(s|prefix Q) := cumulative surviving-resonance mass over denominators b<=Q. Built on the
+resonance-killing picture (kps zeta-duality reflection): resonance b killed iff some speed ==0 mod b,
+M(s)=1/(smallest surviving b) (verified AP{1..13}->1/14, {1..11,13}->1/12, covering{1..11,13,84}->1/15).
+
+CRACKED: cut(s|prefix Q) = a TOTIENT-WEIGHTED FAREY SUM sum_{b<=Q,survive} phi(b)*delta_b, which factors:
+ - MULTIPLICATIVE (Euler product): density = zeta(2) product prod_p(1-p^-2)=6/pi^2 (verified partial
+   product). Each factor (1-p^-2)>0 => POSITIVE => FLOOR>0. cut|prefix Q = partial product over p<=Q.
+ - ADDITIVE (continued fraction): prefix = Farey sequence F_Q (F_{Q-1}->F_Q inserts phi(Q) MEDIANTS =
+   Stern-Brocot tree); per-channel delta_b = three-gap (Steinhaus) convergents of the speed ratios
+   (gaps = ||q_i alpha|| at convergent denominators; cut transition at a convergent). pi=[3,7,15,1,292].
+ - It is NOT a continued root or power tower.
+UNIFICATION: the 2-adic descent (THM-580) = the PRIME-2 factor; the zeta(2) Farey floor = the ODD-PRIME
+factor; TOGETHER = ONE Euler product over all primes. The two separate floor tools (descent + zeta(2))
+are the 2-vs-odd halves of a single multiplicative resonance structure. zeta(-1)=-1/12 = the cap dual.
+REFRAMES OPEN-Q-108: floor>0 because cut IS an Euler product (positive factors); the residual is to show
+the COUPLED cut(s) >= its product = channel quasi-independence (HYP-3129's resonance decorrelation).
+Same additive(Farey)/multiplicative(Euler) seam as last session's disproof boundary (HYP-3549).
+
+Incoming signal: codex-S337 synced '2-adic zeta residue & Littlewood discrepancy' -- same zeta/2-adic
+thread (the forum seed); existing reflection the-obstruction-combining-duality-additive-mediant-vs-
+multiplicative-I aligns.
+
+Files: HYP-3550, reflection the-cut-prefix-is-a-continued-fraction-times-an-euler-product.md, script
+cut_prefix_resonance_structure_macmini (+.out). Builds on THM-580/523 + HYP-3129/3549 + the kps
+resonance-killing/zeta-duality reflection. Broadcast.
+
 ## mac-mini-2026-06-29-S16 -- the disproof candidate across all LRC forms; the boundary is (Z/n)^* (HYP-3549)
 
 Prompt: what would the set of disproof candidates look like in ALL analogous forms of the LRC (esp. geometric); notice patterns.

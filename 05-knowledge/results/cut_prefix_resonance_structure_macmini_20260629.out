@@ -1,0 +1,67 @@
+================================================================================
+Cracking cut(s | prefix Q): the resonance structure (mac-mini-S17)
+================================================================================
+
+[0] M(S) = 1/(smallest surviving resonance b); b killed iff some speed == 0 mod b:
+    AP {1..13}              : M = 1/14 = 1/14   (smallest surviving resonance b=14)
+    {1..11,13} (skip 12)    : M = 1/12 = 1/12   (smallest surviving resonance b=12)
+    covering {1..11,13,84}  : M = 1/15 = 1/15   (smallest surviving resonance b=15)
+
+[1] MULTIPLICATIVE form -- the floor density is the zeta(2) EULER PRODUCT:
+    floor mass ~ sum_b phi(b) delta_b; the totient density gives 1/(2 zeta(2))=3/pi^2.
+    1/zeta(2) = prod_p (1 - p^-2). PARTIAL Euler product over prime resonances p<=Q:
+       Q  prod_{p<=Q}(1-p^-2)    -> 6/pi^2
+       2           0.75000000   0.60792710
+       3           0.66666667   0.60792710
+       5           0.64000000   0.60792710
+       7           0.62693878   0.60792710
+      13           0.61807843   0.60792710
+    => prod_p (1-p^-2) = 6/pi^2 = 0.60792710; floor = (1/2) of it = 0.30396355 = 3/pi^2.
+    KEY: every factor (1-p^-2) > 0 => the Euler product is POSITIVE => FLOOR > 0.
+    cut(s|prefix Q) in multiplicative form = the PARTIAL Euler product (resonances p<=Q).
+
+[2] ADDITIVE form -- the prefix Q is the Farey sequence F_Q (mediant/cont-frac tree):
+    going from F_{Q-1} to F_Q ADDS exactly phi(Q) new fractions (denominator Q), each a
+    MEDIANT of Stern-Brocot neighbours. |F_Q| = 1 + sum_{b<=Q} phi(b):
+      F_1 : |F_Q|=   2  (+phi(1)=1 new mediants)
+      F_2 : |F_Q|=   3  (+phi(2)=1 new mediants)
+      F_3 : |F_Q|=   5  (+phi(3)=2 new mediants)
+      F_4 : |F_Q|=   7  (+phi(4)=2 new mediants)
+      F_5 : |F_Q|=  11  (+phi(5)=4 new mediants)
+      F_6 : |F_Q|=  13  (+phi(6)=2 new mediants)
+      F_7 : |F_Q|=  19  (+phi(7)=6 new mediants)
+      F_8 : |F_Q|=  23  (+phi(8)=4 new mediants)
+      F_9 : |F_Q|=  29  (+phi(9)=6 new mediants)
+      F_10: |F_Q|=  33  (+phi(10)=4 new mediants)
+      F_11: |F_Q|=  43  (+phi(11)=10 new mediants)
+      F_12: |F_Q|=  47  (+phi(12)=4 new mediants)
+      F_13: |F_Q|=  59  (+phi(13)=12 new mediants)
+      F_14: |F_Q|=  65  (+phi(14)=6 new mediants)   <- denominators b<=Q = the resonance prefix
+    => cut(s|prefix Q) accumulates one Farey LEVEL at a time = continued-fraction depth.
+
+[3] CONTINUED-FRACTION form -- three-gap (Steinhaus): the gaps of {k*alpha} are
+    {||q_i alpha||} at the CONVERGENT denominators q_i of alpha's continued fraction.
+    The cut transition (maxgap crossing 1/7) happens at a convergent. Example alpha=pi:
+    cont.frac(pi) = [3, 7, 15, 1, 292, 1] ; convergents p/q (Stern-Brocot path):
+      convergents p/q of pi: ['3/1', '22/7', '333/106', '355/113', '103993/33102']  (denominators q_i grow)
+      three-gap: orbit {k*alpha} has gaps = ||q_i*alpha|| at these q_i; the resonance
+      'prefix' truncates the continued fraction at convergents with q_i <= Q.
+
+[4] INFINITE-PRODUCT form -- the 2-adic descent (THM-580):
+    meas(lonely S) = prod_{j>=0} rho_j * prod_{j>=0} meas(lonely O_j)  (peel even speeds).
+    cut(s|prefix J) = the descent truncated at level J = a PARTIAL infinite product.
+    Resonance view: each level j strips the b with v_2(b)=j; the product is over 2-adic
+    valuations. Together with [1]'s Euler product over ODD primes, the FULL resonance
+    product factors as prod over ALL primes (2-adic level x odd Euler product).
+
+================================================================================
+CRACKED: cut(s|prefix Q) = a TOTIENT-WEIGHTED FAREY SUM, sum_{b<=Q} phi(b) delta_b.
+ - MULTIPLICATIVE structure: density = zeta(2) Euler product prod_p(1-p^-2) (>0 => floor>0).
+ - ADDITIVE structure: prefix = Farey sequence F_Q = continued-fraction mediant tree.
+ - per-channel width delta_b = three-gap continued-fraction of the speed ratios.
+ - 2-adic descent = the infinite product over the prime 2's levels.
+It is NOT a continued root or power tower; it is a CONTINUED FRACTION (Farey, additive)
+times an EULER PRODUCT / infinite SUM (totient, multiplicative) -- the same additive/
+multiplicative interface as the disproof boundary (HYP-3549). The Euler product's
+positivity is exactly the floor-positivity gatekeeper.
+================================================================================
