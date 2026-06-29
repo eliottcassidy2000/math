@@ -9116,3 +9116,39 @@ quotient_legality_status
   HYP-3436, HYP-3435, HYP-3434, HYP-3432, HYP-3429, HYP-3427, HYP-3426,
   HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-411,
   LTT-311, T1411, OPEN-Q-108.
+
+## LTT-312: AP84 Tail Phase Tournament
+
+- **Move:** Treat the canonical AP-with-`84m` tail as a phase tournament over
+  proof carriers.  Vertices are the `m=5` rank-one endpoint phase, HYP-3433
+  tail address certificate, connected dead-projection family, mod-35 Beatty
+  escape clock, `m=3` paired-cover rank drop, raw dead-fraction peak scalar,
+  and raw component-count slope.
+- **LRC use:** HYP-3452 gives the AP-tail lift promised by HYP-3451 a concrete
+  interface.  For `{1,2,...,11,13,84m}`, checked through `m=70`, the best
+  component is mixed `E:84m/B1:5` for `m=1..4`, then becomes the rank-one
+  `E:84m/E:84m` HYP-3433 interval of length `1/(49m)` for `m>=5`.  Paired
+  dead-cover rank drops to `<=2` from `m=3`, and dead-cover projection is
+  connected throughout the checked range.
+- **Preserves:** endpoint labels, rank-one phase threshold, branch-union
+  escape predicate, dead-cover rank, projection connectivity, and the mod-35
+  escape-count sidecar.
+- **Forgets / guardrail:** raw dead fraction and component count are lossy.
+  The checked dead-fraction maximum moves to residue artifact `m=35`, while
+  the proof-relevant endpoint phase begins at `m=5`.
+- **Pairwise observable:** phase threshold, endpoint retention, graph
+  connectivity, residue-clock payload, and scalar-risk penalty.
+- **Switch/gauge:** higher retained proof payload first; ties use the AP-tail
+  proof route.
+- **Fingerprint:** `7` vertices, score histogram
+  `{20:1, 23:1, 49:1, 51:1, 55:1, 56:1, 58:1}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `m5_rank_one_endpoint_phase -> H3433_tail_address_certificate -> connected_dead_projection_family -> mod35_beatty_escape_clock -> m3_dead_pair_rank_drop -> dead_fraction_peak_scalar -> raw_component_count_slope`.
+- **Next hook:** prove finite transients `m=1..4`, prove the rank-one
+  `E:84m/E:84m` endpoint interval for every `m>=5`, and derive the period-`35`
+  Beatty escape clock from low-corridor floor counts before using Menger,
+  Green-current, or conductance sidecars.
+- **Pointers:** HYP-3452, HYP-3451, HYP-3450, HYP-3436, HYP-3435, HYP-3434,
+  HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422,
+  HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-412, LTT-312, T1412,
+  OPEN-Q-108.

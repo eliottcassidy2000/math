@@ -1,3 +1,29 @@
+## codex-2026-06-29 -- HYP-3452 AP84 tail component phase
+
+Continued the HYP-3451 component-cover graph route by isolating the canonical
+AP-with-`84m` family as a proof-facing base theorem rather than a vague danger
+cluster.  Added HYP-3452/T1412/LTI-412/LTT-312 plus script/result/reflection:
+
+```text
+04-computation/lrc14_ap84_tail_component_phase_codex_20260629.py
+05-knowledge/results/lrc14_ap84_tail_component_phase_codex_20260629.out
+05-knowledge/hypotheses/HYP-3452-lrc14-ap84-tail-component-phase.md
+07-reflections/lrc14-ap84-tail-component-phase-codex-20260629.md
+```
+
+Exact audit through `m=70` for `{1,2,...,11,13,84m}`: the rank-one
+`E:84m/E:84m` endpoint phase begins at `m=5`, with no HYP-3433 interval
+failures after that point; paired dead-cover rank drops to `<=2` from `m=3`;
+the dead-cover projection is connected from `m=1`; and every alive component
+is a low-rank escape in the checked range.  The best interval for `m>=5` is
+`[(14ceil(48m/7)+1)/(588m),(14ceil(48m/7)+13)/(588m)]` with length `1/(49m)`.
+
+New proof hook: split the AP-tail graph theorem into finite transients
+`m=1..4`, rank-one harmonic tail `m>=5`, and a period-`35` Beatty escape-count
+identity `escapes(m)=2*(floor(12m/35)+d[m mod 35])`.  Raw dead fraction is now
+known to be a residue shadow: in the checked range it peaks at `m=35`, not at
+the proof transition `m=5`.
+
 ## codex-2026-06-29 -- HYP-3438 survivor-gate word audit
 
 Executed the immediate HYP-3436 follow-up.  HYP-3438/T1399/LTI-399/LTT-299 now

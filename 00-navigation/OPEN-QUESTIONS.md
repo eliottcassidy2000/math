@@ -1,5 +1,38 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3452 AP84 tail component-phase addendum:**
+HYP-3452 sharpens the HYP-3451 instruction "prove the AP-with-84 graph base
+case, then lift to AP-with-84m tails."  On the canonical family
+
+```text
+S_m = {1,2,...,11,13,84m}
+```
+
+the checked component-cover phase through `m=70` is:
+
+```text
+rank_one_EE_endpoint_phase_start=5
+dead_pair_rank_le_2_start=3
+connected_dead_projection_start=1
+hyp3433_interval_failures_after_phase=[]
+```
+
+For `m>=5`, the best component-cover escape is exactly the HYP-3433 interval
+
+```text
+I_m=[(14ceil(48m/7)+1)/(588m),(14ceil(48m/7)+13)/(588m)]
+```
+
+with endpoint labels `E:84m/E:84m` and length `1/(49m)`.  Concrete task:
+prove this interval survives all fixed odd/even walls for every `m>=5`, then
+handle `m=1..4` as finite mixed `E/B1` transients.  The remaining component
+boundary count should be proved by the checked period-`35` Beatty law
+`escapes(m)=2*(floor(12m/35)+d[m mod 35])`.  Raw dead fraction is a warning
+shadow: extending the AP-tail range moves its checked maximum to residue
+artifact `m=35`, while the proof clock begins at `m=5`. -> HYP-3452,
+HYP-3451, HYP-3450, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431,
+HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129,
+HYP-2963, THM-523, LTI-412, LTT-312, T1412, OPEN-Q-108.
 **OPEN-Q-108 HYP-3438 survivor-gate word audit addendum:**
 HYP-3438 turns HYP-3436's survivor gaps into exact gate words.  On the
 `135`-row bank, `6228` mixed `E_safe` components emit `8702` survivor gates:
