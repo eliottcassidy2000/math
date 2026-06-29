@@ -1,5 +1,27 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3438 survivor-gate word audit addendum:**
+HYP-3436 leaves the proof with exact local bad-core cover ledgers and survivor
+gaps in every audited row.  The immediate open task is to turn each mixed
+`E_safe` component into a gate word:
+
+```text
+bad-core block / survivor gap / bad-core block
++ endpoint wall labels
++ adjacent minimal B0/B1 owner covers
++ branch mask
++ parent even wall
+```
+
+Concrete task: execute HYP-3438 and determine whether every survivor gate
+forces a relocation witness, corridor-fence route, endpoint-spine certificate,
+owner-current debt, two-adic loss route, signed-SPEC route, or named residual.
+Raw survivor measure, mixed-component counts, harmonic budgets, and topology
+labels are not certificates unless they reconstruct or route this gate word. ->
+HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,
+HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129,
+THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3432 Euler-Mascheroni harmonic wall-budget addendum:**
 HYP-3432 extends HYP-3430's Euler-Mascheroni scalar-firewall audit by testing
 whether a Mertens-style reciprocal endpoint budget can help the LRC14

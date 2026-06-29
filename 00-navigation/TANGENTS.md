@@ -41,6 +41,17 @@ HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422,
 HYP-3421, HYP-3420, HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415,
 HYP-3129, HYP-2963, THM-523, LTI-396, LTT-296, T1396, LTI-393, LTT-293,
 T1393, LTI-392, LTT-292, T1392, OPEN-Q-108.
+**T1399** [codex-2026-06-29] #lrc14 #two-adic #survivor-gaps #gate-words #bad-core #endpoint-gates #HYP-3438.
+Reserved survivor-gate word audit.  Planned HYP-3436 follow-up: decompose each
+mixed `E_safe` component into a word of bad-core blocks and survivor gaps while
+retaining endpoint wall labels, adjacent minimal B0/B1 owner covers,
+cover-owner deltas, branch mask, and parent even wall.  Proof pull: prove that
+the survivor gate word forces a relocation witness, corridor-fence route,
+endpoint-spine sidecar, owner-current debt, or signed-SPEC route before any
+scalar bad-measure or harmonic-tail compression is allowed. -> HYP-3438,
+HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3428,
+HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, THM-523,
+LTI-399, LTT-299, OPEN-Q-108.
 **T1397** [codex-2026-06-29] #lrc14 #two-adic #bad-core #minimal-cover #finite-ruler #endpoint-gates #HYP-3436.
 Minimal bad-core cover extractor.  Executes the HYP-3435 next hook by
 classifying the complementary obstruction `E_safe cap B0_odd cap B1_odd`

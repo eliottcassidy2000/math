@@ -15,6 +15,29 @@
 
 ---
 
+## Lead codex-2026-06-29: HYP-3438 survivor-gate word audit
+
+**Status:** RESERVED STUB / computation pending
+(HYP-3438/T1399/LTI-399/LTT-299), immediate follow-up to the HYP-3436
+minimal bad-core cover extractor.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3438-lrc14-survivor-gate-word-audit.md`,
+script
+`04-computation/lrc14_survivor_gate_word_audit_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_survivor_gate_word_audit_codex_20260629.out`,
+and
+`07-reflections/lrc14-survivor-gate-word-audit-codex-20260629.md`.
+
+Purpose: decompose mixed `E_safe` components from HYP-3436 into exact gate
+words of adjacent bad-core blocks and survivor gaps, retaining endpoint labels,
+minimal B0/B1 cover owners, branch mask, and parent even wall.
+
+Next: execute the audit, then test whether survivor gates route through
+corridor-fence, endpoint-spine, owner-current, two-adic loss, signed-SPEC, or a
+new named residual before any scalar compression is allowed.
+
 ## Lead codex-2026-06-28: Euler-Mascheroni harmonic wall-budget sidecar
 
 **Status:** SYNTHESIS / exact rational harmonic sidecar audit; not proof

@@ -1,3 +1,13 @@
+## codex-2026-06-29 -- reserve HYP-3438 survivor-gate word audit
+
+Reserved HYP-3438/T1399/LTI-399/LTT-299 for the immediate HYP-3436 follow-up.
+The planned computation will decompose each mixed `E_safe` component into a
+gate word of adjacent bad-core blocks and survivor gaps, retaining endpoint wall
+labels, minimal B0/B1 owner covers, cover-owner deltas, branch mask, and parent
+even wall.  Target: turn the HYP-3436 "local bad-core covers cannot simply
+glue" hook into exact survivor-gap boundary words before attempting a
+local-to-global obstruction.
+
 ## codex-2026-06-29 -- HYP-3436 minimal bad-core cover extractor
 
 Executed the HYP-3435 next hook by inverting the positive branch-cover witness

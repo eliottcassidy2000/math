@@ -8636,6 +8636,26 @@ quotient_legality_status
   HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3418,
   HYP-3415, HYP-3129, THM-523, LTI-398, LTT-298, T1398, OPEN-Q-108.
 
+## LTT-299: Survivor-Gate Word Tournament
+
+- **Move:** Use survivor-gate proof carriers as vertices: gate-word exactness,
+  adjacent bad-core cover deltas, endpoint-wall alternation, corridor-fence
+  recognizer, endpoint-spine sidecar, owner-current route, two-adic loss route,
+  signed-SPEC route, and raw survivor-measure shortcut as a negative control.
+- **LRC use:** HYP-3438 is reserved to sharpen HYP-3436's local-to-global hook.
+  HYP-3436 shows every audited row has survivors, but the next proof object is
+  the exact word around each survivor gap inside a mixed `E_safe` component.
+- **Preserves:** branch-relocation predicate, survivor interval, endpoint wall
+  labels, adjacent B0/B1 cover owners, parent even wall, and legal sidecar
+  route.
+- **Forgets / guardrail:** raw survivor measure, mixed-component counts,
+  harmonic budgets, and topology-only labels cannot certify the gap unless they
+  reconstruct or route the exact gate word.
+- **Next hook:** execute the audit and compute the tournament fingerprint.
+- **Pointers:** HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
+  HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
+  HYP-3129, THM-523, LTI-399, LTT-299, T1399, OPEN-Q-108.
+
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 
 - **Move:** Use recursive signature repairs as tournament vertices: residue,
