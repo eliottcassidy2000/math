@@ -1,0 +1,34 @@
+================================================================================
+Palindromic Hamiltonian path parity -- the odd index (mac-mini-S6)
+================================================================================
+
+[Paley tournaments T_p, p=3 mod4, self-converse via phi(x) = -x mod p]
+  Paley_3 (n=3): H(T)=3 (ODD), rho:HP->HP=True, involution=True, #palindromic=1 (ODD), H==#palin mod2: True
+      example palindromic path: (2, 0, 1)  (rho = (2, 0, 1))
+  Paley_7 (n=7): H(T)=189 (ODD), rho:HP->HP=True, involution=True, #palindromic=9 (ODD), H==#palin mod2: True
+      example palindromic path: (1, 2, 3, 0, 4, 5, 6)  (rho = (1, 2, 3, 0, 4, 5, 6))
+  Paley_11 (n=11): H(T)=95095 (ODD), rho:HP->HP=True, involution=True, #palindromic=185 (ODD), H==#palin mod2: True
+      example palindromic path: (1, 2, 3, 6, 7, 0, 4, 5, 8, 9, 10)  (rho = (1, 2, 3, 6, 7, 0, 4, 5, 8, 9, 10))
+
+[Small self-converse tournaments by search, n=4,5]
+  SC_n4_#1 (n=4): H(T)=1 (ODD), rho:HP->HP=True, involution=True, #palindromic=1 (ODD), H==#palin mod2: True
+      example palindromic path: (3, 2, 1, 0)  (rho = (3, 2, 1, 0))
+  SC_n4_#2 (n=4): H(T)=1 (ODD), rho:HP->HP=True, involution=True, #palindromic=1 (ODD), H==#palin mod2: True
+      example palindromic path: (3, 2, 0, 1)  (rho = (3, 2, 0, 1))
+  SC_n4_#3 (n=4): H(T)=1 (ODD), rho:HP->HP=True, involution=True, #palindromic=1 (ODD), H==#palin mod2: True
+      example palindromic path: (3, 0, 2, 1)  (rho = (3, 0, 2, 1))
+   n=4: 48 self-converse tournaments (with involutory phi) found
+  SC_n5_#1 (n=5): H(T)=1 (ODD), rho:HP->HP=True, involution=True, #palindromic=1 (ODD), H==#palin mod2: True
+      example palindromic path: (4, 3, 2, 1, 0)  (rho = (4, 3, 2, 1, 0))
+  SC_n5_#2 (n=5): H(T)=1 (ODD), rho:HP->HP=True, involution=True, #palindromic=1 (ODD), H==#palin mod2: True
+      example palindromic path: (4, 3, 2, 0, 1)  (rho = (4, 3, 2, 0, 1))
+  SC_n5_#3 (n=5): H(T)=1 (ODD), rho:HP->HP=True, involution=True, #palindromic=1 (ODD), H==#palin mod2: True
+      example palindromic path: (4, 3, 0, 2, 1)  (rho = (4, 3, 0, 2, 1))
+   n=5: 704 self-converse tournaments (with involutory phi) found
+
+================================================================================
+Conclusion: for self-converse T with involutory anti-aut phi, rho=phi.reverse
+is an involution on Ham paths => H(T) == #palindromic (mod2); Redei (H odd)
+=> ODD number of palindromic Ham paths >=1.  This is the sigma-ODD index
+(witness side); the LRC lonely measure is the sigma-EVEN index (existence).
+================================================================================
