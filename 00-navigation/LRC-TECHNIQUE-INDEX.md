@@ -34,6 +34,27 @@ safe components, gaps, sections, endpoints, residues, wall crossings, exact
 period packets, Fourier modes, Haar tiles, quotient fibers, state-lift sectors,
 and proof obligations first.
 
+## LTI-531 - Large-span gentle denominator atlas
+
+Carrier / vertex set: exact bounded-span banks, structured large-span row
+families, and denominator witness families.
+Pairwise observable: attacker clearance above `thr_k=1-gp_min(k)`, retention
+of witness sidecars, denominator support, and scalar-forgetting penalty.
+Binary relation or gauge: higher exact attacker margin first; ties prefer rows
+with reusable denominator sidecars and smaller finite proof obligations.
+Preserved LRC predicate: the THM-530 union-bound floor for `k=8..11` plus the
+existence of a sidecar-retained finite witness bank.
+Destroyed information: raw span, raw `max_D`, and isolated boundary grid
+points forget continuous volume and reconstructed-cover alignment.
+Best use: turn HYP-3530's bounded-core evidence into a larger-span gentle
+lemma or a finite bank handoff.
+Failure mode: mistaking a positive `max_D rho_D` boundary artifact for a
+positive-measure theorem.
+Anchors: HYP-3531, HYP-3530, THM-530, THM-531, THM-578, HYP-3529, T1531,
+LTT-431.
+Next agent hook: execute the larger-span/structured-family atlas and isolate
+the smallest exact margin to `thr_k`.
+
 ## LTI-528 - Random031 proof-contract router execution
 
 Carrier / vertex set: executable proof-contract clauses and sidecar

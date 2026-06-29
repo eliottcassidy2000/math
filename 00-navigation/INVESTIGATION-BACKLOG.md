@@ -1,5 +1,18 @@
 # Investigation Backlog
 
+**HYP-3531 large-span gentle / denominator atlas.**  Continue HYP-3530 on
+both requested fronts.  For the union-bound lane, push the exact
+`k<12` attacker scan beyond `span<=k+5` and stress structured families:
+one-tail rows, two-tail rows, perforated APs, even-lattice bridge rows, and
+sparse large-span probes.  The attacker predicate is
+`mu_1/7(E) < thr_k := 1 - gp_min(k)` for `k=8,9,10,11`; a successful scan
+should report exact margins to `thr_k`, below-consecutive counts, and
+near-attackers.  For the denominator lane, attach `rho_D` routing diagnostics
+to the worst gentle rows: small-q, `7m`, `14m`, and other-grid families, while
+retaining the HYP-3530 caveat that `max_D rho_D` is a certificate bank and not
+a positive-measure theorem by itself. -> HYP-3531, HYP-3530, THM-530,
+THM-531, THM-578, HYP-3529, LTI-531, LTT-431, T1531, OPEN-Q-108.
+
 **HYP-3527 random031 proof-contract router.**  Formalize the finite
 proof-interface contract now computed from HYP-3521/HYP-3523/HYP-3524/HYP-3525/HYP-3526.
 The router reports eight clauses and a sharp closure ledger:

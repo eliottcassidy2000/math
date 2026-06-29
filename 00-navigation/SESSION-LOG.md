@@ -109,6 +109,20 @@ volumes remain unsafe canaries.  Next proof pull: formalize
 `Random031Contract` with explicit `R`, vertical guard, and the residual
 no-hidden-tail lemma.
 
+## codex-2026-06-29 -- HYP-3531 large-span gentle denominator atlas reservation
+
+Prompt: work back and forth on the multi-denominator `max_D rho*_D` criterion
+and push the unconditional union-bound floor below `k=12` using the
+gentle/attacker structure.
+
+Fetched incoming HYP-3530, which already defines `rho_D` and scans the
+bounded-core attacker bank through `span<=k+5` for k=8..11.  Reserved
+HYP-3531/T1531/LTI-531/LTT-431 for the continuation: exact larger-span banks,
+structured attacker/gentle probes, and denominator-family routing for the
+worst rows.  The live predicate remains
+`mu_1/7(E) >= thr_k := 1 - gp_min(k)`; `max_D rho_D` is kept as a sidecar
+certificate bank rather than a stand-alone positive-measure theorem.
+
 ## codex-2026-06-29 -- HYP-3523 release-test addendum
 
 Prompt: use the spigot algorithm as inspiration for LRC14 proof work.

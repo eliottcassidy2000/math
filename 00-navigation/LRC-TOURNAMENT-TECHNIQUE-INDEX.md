@@ -39,6 +39,22 @@ boundaries, wall-crossing events, residue packets, cover arcs, Fourier modes,
 Haar rectangles, matroid topes/cocircuits, Fejer atom banks, state-lift
 obligations, and proof-carrier interfaces.
 
+## LTT-431 - Gentle/Attacker Denominator Tournament
+
+- **Move:** Treat row families and denominator witness families as tournament
+  vertices, not runners or individual arcs.
+- **LRC use:** Extends HYP-3530 by deciding whether all larger-span
+  `k<12` rows are gentle for the THM-530 union-bound floor, while also
+  recording which denominator banks route finite witnesses.
+- **Preserves:** exact `mu_1/7(E)-thr_k` attacker margin, bounded/structured
+  family label, continuous witness status, and denominator sidecar family.
+- **Forgets / guardrail:** raw span, raw `max_D`, and isolated boundary grid
+  witnesses do not by themselves prove a positive-measure floor.
+- **Next pull:** Run HYP-3531 and report the worst exact larger-span margin,
+  structured-family minima, and denominator-family routing for those rows.
+- **Pointers:** HYP-3531, HYP-3530, THM-530, THM-531, THM-578, HYP-3529,
+  T1531, LTI-531, OPEN-Q-108.
+
 ## LTT-428 - Executable Proof-Contract Router Tournament
 
 - **Move:** Treat executable theorem clauses as tournament vertices and orient
