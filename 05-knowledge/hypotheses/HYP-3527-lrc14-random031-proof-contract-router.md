@@ -1,15 +1,17 @@
 ---
-id: HYP-3525
+id: HYP-3527
 title: LRC14 random031 proof-contract router
 status: RESERVED / proof-interface synthesis after HYP-3523/HYP-3524; evidence pending executable audit
 source: codex-2026-06-29 synthesis of random031 terminal, spigot, hydrotope, owner-boundary, firewall, and quotient-guardrail lanes
-tangent: T1525
-technique: LTI-525
-tournament_technique: LTT-425
+tangent: T1527
+technique: LTI-527
+tournament_technique: LTT-427
 script: 04-computation/lrc14_random031_proof_contract_router_codex_20260629.py
 result: 05-knowledge/results/lrc14_random031_proof_contract_router_codex_20260629.out
 reflection: 07-reflections/lrc14-random031-proof-contract-router-codex-20260629.md
 related:
+  - HYP-3526
+  - HYP-3525
   - HYP-3524
   - HYP-3523
   - HYP-3522
@@ -26,9 +28,14 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-3525: LRC14 Random031 Proof-Contract Router
+# HYP-3527: LRC14 Random031 Proof-Contract Router
 
 ## Claim Reservation
+
+This lane was renamed from a local HYP-3525 reservation after concurrent
+mainline work claimed HYP-3525 for the guarded-emission atlas and HYP-3526 for
+the route-sidecar spigot dispatch.  HYP-3527 now explicitly treats those two
+packets as inputs.
 
 The recent random031 stack has enough finite structure to expose a proof
 contract rather than another scalar scout.  The proposed contract should list:
@@ -49,6 +56,8 @@ The goal is to join:
 HYP-3521 terminal ledger
 HYP-3523 certificate spigot
 HYP-3524 no-hidden-tail emitter
+HYP-3525 guarded emission atlas
+HYP-3526 route-sidecar dispatch
 HYP-3522 owner filtration
 HYP-3520 owner-boundary persistence
 HYP-3513 route sidecar R

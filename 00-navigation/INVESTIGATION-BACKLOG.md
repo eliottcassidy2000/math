@@ -1,17 +1,19 @@
 # Investigation Backlog
 
-**HYP-3525 random031 proof-contract router.**  Build the finite
-proof-interface contract now suggested by HYP-3521/HYP-3523/HYP-3524.  The
-contract should list each terminal clause, its required sidecars, consumed
+**HYP-3527 random031 proof-contract router.**  Build the finite
+proof-interface contract now suggested by HYP-3521/HYP-3523/HYP-3524/HYP-3525/HYP-3526.
+The contract should list each terminal clause, its required sidecars, consumed
 certificate, emitted tail, remaining tail, forbidden quotient shortcuts, and
 Lean-facing theorem shape.  Required clauses: ordinary route emission,
 free-hole single bracket emission, free-hole doublet buffer/emission, bypass
 transport emit `(23,93,113)`, bypass bracket-lift emit `(147,169)`, residual
-pair close-tail `(45,173)`, HYP-3513 route sidecar `R`, and the HYP-3486
-vertical-halfturn guard.  Tournament vertices are proof contracts and sidecar
-obligations, not runners/raw witnesses/chamber volumes. -> HYP-3525,
-HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511,
-HYP-3510, HYP-3490, HYP-3486, LTI-525, LTT-425, T1525, OPEN-Q-108.
+pair close-tail `(45,173)`, HYP-3513 route sidecar `R`, guarded-emission
+holdbacks from HYP-3525, route-dispatch separation from HYP-3526, and the
+HYP-3486 vertical-halfturn guard.  Tournament vertices are proof contracts and
+sidecar obligations, not runners/raw witnesses/chamber volumes. -> HYP-3527,
+HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520,
+HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486, LTI-527, LTT-427, T1527,
+OPEN-Q-108.
 
 **HYP-3524 random031 spigot/hydrotope residual scout.**  Turn the HYP-3524
 emitter schedule into a no-hidden-tail lemma.  Exact schedule:

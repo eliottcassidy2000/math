@@ -39,7 +39,7 @@ boundaries, wall-crossing events, residue packets, cover arcs, Fourier modes,
 Haar rectangles, matroid topes/cocircuits, Fejer atom banks, state-lift
 obligations, and proof-carrier interfaces.
 
-## LTT-425 - Proof-Contract Router Tournament
+## LTT-427 - Proof-Contract Router Tournament
 
 - **Move:** Treat proof contracts and sidecar obligations as tournament
   vertices, orienting edges by terminal-readiness, hidden-tail exposure, and
@@ -53,10 +53,11 @@ obligations, and proof-carrier interfaces.
 - **Forgets / guardrail:** raw component counts, owner counts, residue
   chambers, scalar hydrotope volumes, and vertical halfturn gluing are illegal
   unless the contract proves they reconstruct the terminal predicate.
-- **Next pull:** Execute HYP-3525 and classify each clause as formal-ready,
+- **Next pull:** Execute HYP-3527 and classify each clause as formal-ready,
   executable-evidence-only, or unresolved proof debt.
-- **Pointers:** HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520,
-  HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486, T1525, LTI-525.
+- **Pointers:** HYP-3527, HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522,
+  HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
+  T1527, LTI-527.
 
 ## LTT-420 - Owner-Boundary Sidecar Tournament
 
