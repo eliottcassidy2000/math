@@ -1,0 +1,41 @@
+================================================================================
+Rotational tournaments, A038375, and the doubling tower (mac-mini-S10)
+================================================================================
+
+[1] Circulant H-spectrum (n odd): verify n|H, opt_circ vs A038375
+  n=3: #circ=2, opt_circ=3 {3: 1}, A038375=3 (opt==a: True), n|H for ALL circ: True, Paley H=3, opt/n=1
+  n=5: #circ=4, opt_circ=15 {3: 1, 5: 1}, A038375=15 (opt==a: True), n|H for ALL circ: True, Paley H=10, opt/n=3
+  n=7: #circ=8, opt_circ=189 {3: 3, 7: 1}, A038375=189 (opt==a: True), n|H for ALL circ: True, Paley H=189, opt/n=27
+  n=9: #circ=16, opt_circ=3357 {3: 2, 373: 1}, A038375=3357 (opt==a: True), n|H for ALL circ: True, Paley H=None, opt/n=373
+  n=11: #circ=32, opt_circ=95095 {5: 1, 7: 1, 11: 1, 13: 1, 19: 1}, A038375=95095 (opt==a: True), n|H for ALL circ: True, Paley H=95095, opt/n=8645
+  n=13: #circ=64, opt_circ=3711175 {5: 2, 13: 1, 19: 1, 601: 1}, A038375=3450756 (opt==a: False), n|H for ALL circ: True, Paley H=1579968, opt/n=285475
+
+[2] Divisibility criterion: n | A038375(n)?  (vertex-transitive maximizer?)
+  n=1: a=1, n|a: True  (a/n=1.0)
+  n=2: a=1, n|a: False  (a/n=1/2)
+  n=3: a=3, n|a: True  (a/n=1.0)   <- circulant-optimal (THM-338)
+  n=4: a=5, n|a: False  (a/n=5/4)
+  n=5: a=15, n|a: True  (a/n=3.0)   <- circulant-optimal (THM-338)
+  n=6: a=45, n|a: False  (a/n=45/6)
+  n=7: a=189, n|a: True  (a/n=27.0)   <- circulant-optimal (THM-338)
+  n=8: a=661, n|a: False  (a/n=661/8)
+  n=9: a=3357, n|a: True  (a/n=373.0)   <- circulant-optimal (THM-338)
+  n=10: a=15745, n|a: False  (a/n=15745/10)
+  n=11: a=95095, n|a: True  (a/n=8645.0)   <- circulant-optimal (THM-338)
+  n=12: a=555573, n|a: False  (a/n=555573/12)
+  n=13: a=3450756, n|a: False  (a/n=3450756/13)   <- circulant SUBoptimal (THM-338)
+
+[3] The doubling tower (THM-448): self-similar B_0 recursion + n|H
+  T_3 (order 4): |N+(0)|=1, B_0(T_3) == T_1? matches-prev-level: n/a; H=3 {3: 1}, n|H: True
+  T_7 (order 8): |N+(0)|=3, B_0(T_7) == T_5? matches-prev-level: True; H=189 {3: 3, 7: 1}, n|H: True
+  T_15 (order 16): |N+(0)|=7, B_0(T_15) == T_13? matches-prev-level: True; H=198335025 {3: 2, 5: 2, 7: 1, 125927: 1}, n|H: True
+
+  B_0 self-similarity chain (out-neighborhood of vertex 0 = previous level):
+    B_0(T_15): size 7 (=T_7?), H(B_0)=189, H(T_7)=189, H-match: True
+    B_0(T_7): size 3 (=T_3?), H(B_0)=3, H(T_3)=3, H-match: True
+
+================================================================================
+MERGE: rotational R_n vertex-transitive => n|H=n*(odd) (THM-584 generalized);
+circulant maximizes A038375 for n=3,5,7,9,11 (=> n|a(n)), fails n>=13;
+the doubling tower is self-similar (B_0(T_{2m-1})=T_{m-1}) on Mersenne 2^k-1.
+================================================================================
