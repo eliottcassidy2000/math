@@ -162,22 +162,37 @@ Proof pull: prove the row-free multiplicity-one incidence-cut lemma for
 `I/Q`, but retain route sidecar `R` in terminal dispatch until a
 route-reconstruction theorem is actually proved.
 
-## codex-2026-06-29 -- HYP-3527 proof-contract router reservation
+## codex-2026-06-29 -- HYP-3527 proof-contract router evidence
 
 Prompt: deepen understanding of the repo's LRC14 proof strategies and
 creatively leverage them toward closure.
 
-Reserved HYP-3527/T1527/LTI-527/LTT-427 for a random031 proof-contract router
-after concurrent mainline work assigned HYP-3525 to guarded emission and
-HYP-3526 to route-sidecar dispatch.  The motivation is that
-HYP-3521/HYP-3523/HYP-3524/HYP-3525/HYP-3526 have converted the hard random031
-packet into a finite terminal interface: ordinary route emission, free-hole
-single/doublet emission, bypass transport emission, bracket lift, residual
-pair `(45,173)`, HYP-3513 route sidecar `R`, guarded-emission holdbacks,
-route-dispatch separation, and the HYP-3486 vertical guard.  Planned
-executable: report each terminal clause with required sidecars, consumed
-certificates, emitted/remaining tails, forbidden quotient shortcuts, and a
-Lean-facing theorem skeleton.
+Promoted HYP-3527/T1527/LTI-527/LTT-427 from reservation to executable
+evidence after concurrent mainline work assigned HYP-3525 to guarded emission
+and HYP-3526 to route-sidecar dispatch.  Added:
+
+```text
+04-computation/lrc14_random031_proof_contract_router_codex_20260629.py
+05-knowledge/results/lrc14_random031_proof_contract_router_codex_20260629.out
+05-knowledge/hypotheses/HYP-3527-lrc14-random031-proof-contract-router.md
+07-reflections/lrc14-random031-proof-contract-router-codex-20260629.md
+```
+
+Main readout: the hard pair is now handled as a forbidden seam whose complement
+carries phase flow, not as a wall.  The finite contract integrates
+HYP-3521/HYP-3523/HYP-3524/HYP-3525/HYP-3526/HYP-3522/HYP-3520/HYP-3513/HYP-3511/HYP-3486
+into eight clauses.  Exact facts include `77` terminal certificates, tail
+sizes `(7,4,2,2)`, unemitted tail `(45,173)`, `route_pure_by_R=True`,
+`route_pure_by_IQ=False`, all existing axes plus `I/Q` still mixing route
+`1/7`, vertical present `48/282`, and `7` vertical-glued mixed components.
+
+Closure ledger: `3` formal-ready clauses, `4` carry-required clauses, and one
+open-tail lemma.  The ready interfaces are ordinary route emission, free-hole
+single emission, and free-hole doublet buffered emission.  The carry clauses
+are bypass transport, bypass bracket lift, private/firewall route sidecar,
+and the vertical-halfturn guard.  The only remaining open tail is
+`residual_pair_close_tail`: prove the two-owner no-hidden-tail boundary lemma
+for `(45,173)` with route `R`.
 
 ## codex-2026-06-29 -- HYP-3520 random031 owner-boundary persistence
 

@@ -1,5 +1,31 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3527 proof-contract router addendum:** Can the random031
+proof be closed by formalizing the eight contract clauses and proving the
+single residual close-tail lemma?
+
+HYP-3527 turns the current stack into a finite proof interface:
+
+```text
+formal_ready_interface=3
+carry_required=4
+open_tail_lemma=1
+open_tail_lemma=residual_pair_close_tail
+```
+
+The ready clauses are ordinary route emission, free-hole single emission, and
+free-hole doublet buffered emission.  The carry clauses are bypass transport
+`(23,93,113)`, bypass bracket lift `(147,169)`, private/firewall route
+sidecar dispatch, and the vertical-halfturn guard.  The remaining proof task
+is to show that residual owners `(45,173)` discharge as a no-hidden-tail
+owner-boundary terminal when route `R`, the residual pair, owner-support
+chamber, and the HYP-3522/HYP-3524 emitter state are retained.  No residue
+chamber, sliced-box volume, owner count, raw witness count, or vertical
+halfturn gluing may replace those sidecars without a reconstruction theorem.
+-> HYP-3527, HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521,
+HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486, LTI-527,
+LTT-427, T1527.
+
 **OPEN-Q-108 HYP-3524 spigot/hydrotope residual addendum:** Can the
 random031 residual pair `(45,173)` be proved to be a no-hidden-tail terminal
 after transport and branch-boundary emitters fire?

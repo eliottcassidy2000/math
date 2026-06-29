@@ -53,8 +53,10 @@ obligations, and proof-carrier interfaces.
 - **Forgets / guardrail:** raw component counts, owner counts, residue
   chambers, scalar hydrotope volumes, and vertical halfturn gluing are illegal
   unless the contract proves they reconstruct the terminal predicate.
-- **Next pull:** Execute HYP-3527 and classify each clause as formal-ready,
-  executable-evidence-only, or unresolved proof debt.
+- **Next pull:** HYP-3527 is executed: formalize the three formal-ready
+  clauses, keep the four carry-required sidecars explicit, and close the sole
+  unresolved proof debt `residual_pair_close_tail` for `(45,173)` with route
+  `R`.
 - **Pointers:** HYP-3527, HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522,
   HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
   T1527, LTI-527.

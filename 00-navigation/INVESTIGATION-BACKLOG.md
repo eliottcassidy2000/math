@@ -1,16 +1,18 @@
 # Investigation Backlog
 
-**HYP-3527 random031 proof-contract router.**  Build the finite
-proof-interface contract now suggested by HYP-3521/HYP-3523/HYP-3524/HYP-3525/HYP-3526.
-The contract should list each terminal clause, its required sidecars, consumed
-certificate, emitted tail, remaining tail, forbidden quotient shortcuts, and
-Lean-facing theorem shape.  Required clauses: ordinary route emission,
-free-hole single bracket emission, free-hole doublet buffer/emission, bypass
-transport emit `(23,93,113)`, bypass bracket-lift emit `(147,169)`, residual
-pair close-tail `(45,173)`, HYP-3513 route sidecar `R`, guarded-emission
-holdbacks from HYP-3525, route-dispatch separation from HYP-3526, and the
-HYP-3486 vertical-halfturn guard.  Tournament vertices are proof contracts and
-sidecar obligations, not runners/raw witnesses/chamber volumes. -> HYP-3527,
+**HYP-3527 random031 proof-contract router.**  Formalize the finite
+proof-interface contract now computed from HYP-3521/HYP-3523/HYP-3524/HYP-3525/HYP-3526.
+The router reports eight clauses and a sharp closure ledger:
+`formal_ready_interface=3`, `carry_required=4`, `open_tail_lemma=1`.
+Ready theorem interfaces are ordinary route emission, free-hole single
+emission, and free-hole doublet buffered emission.  Carry-required clauses are
+bypass transport `(23,93,113)`, bypass bracket lift `(147,169)`,
+private/firewall route sidecar dispatch, and the HYP-3486 vertical-halfturn
+guard.  The sole open-tail clause is `residual_pair_close_tail`: prove the
+two-owner no-hidden-tail boundary lemma for `(45,173)` with route `R`,
+owner-support chamber, and no scalar residue/volume shortcut.  Tournament
+vertices are proof contracts and sidecar obligations, not runners/raw
+witnesses/chamber volumes. -> HYP-3527,
 HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520,
 HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486, LTI-527, LTT-427, T1527,
 OPEN-Q-108.

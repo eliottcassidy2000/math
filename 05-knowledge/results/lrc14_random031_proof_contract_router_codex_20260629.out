@@ -1,0 +1,133 @@
+HYP-3527 RANDOM031 PROOF-CONTRACT ROUTER
+status=EVIDENCE / finite proof-interface contract; not an LRC14 proof
+row=random_covering_031
+
+## Integrated Inputs
+terminal_ledger=HYP-3521
+certificate_spigot=HYP-3523
+owner_emitter_and_hydrotope_canary=HYP-3524
+guarded_emission_schema=HYP-3525
+route_sidecar_dispatch=HYP-3526
+owner_filtration=HYP-3522
+owner_boundary_persistence=HYP-3520
+firewall_route_sidecar=HYP-3513
+free_hole_brackets=HYP-3511
+vertical_guardrail=HYP-3486
+
+## Exact Terminal / Carry Facts
+cell_terminal_hist={'free_hole_doublet_packet': 14, 'free_hole_single_bracket_packet': 26, 'ordinary_rank2_route_component': 230, 'pure_bypass_owner_boundary_component': 12}
+component_terminal_hist={'free_hole_doublet_packet': 4, 'free_hole_single_bracket_packet': 10, 'ordinary_rank2_route_component': 64, 'pure_bypass_owner_boundary_component': 1}
+terminal_certificate_count_after_doublet_collapse=77
+spigot_safety={'cumulative_sizes': (0, 3, 5, 5), 'tail_sizes': (7, 4, 2, 2), 'monotone_cumulative': True, 'monotone_tail': True, 'no_duplicate_emit': True, 'emitted_owners': (23, 93, 113, 147, 169), 'unemitted_tail': (45, 173)}
+route_facts={'source': '05-knowledge/results/lrc14_spigot_route_sidecar_dispatch_codex_20260629.out', 'private_status_pure_by_I': True, 'private_status_pure_by_Q': True, 'route_pure_by_IQ': False, 'route_mixed_by_IQ': (2, 130), 'route_pure_by_all_existing_plus_IQ': False, 'route_mixed_by_all_existing_plus_IQ': (1, 7), 'route_pure_by_R': True}
+vertical_guard_facts={'vertical_present_cells': 48, 'witness_cells': 282, 'vertical_pair_class_counts': Counter({('free_hole', 'ordinary'): 14, ('ordinary', 'ordinary'): 8, ('free_hole', 'free_hole'): 2}), 'vertical_glued_component_count': 69, 'vertical_mixed_component_count': 7}
+
+## Guarded Emission Sanity
+route_sidecar: ('emit:private_firewall_status', 'emit:h3490_route', "hold:random031_terminal_class:missing=('allowed_exit', 'flow_class', 'sheet_pgf_bucket')", "hold:owner_residual_pair:missing=('branch_boundary_lift', 'residual_pair', 'transport_word')", 'hold:raw_count:missing=never theorem-facing by itself')
+safe_sheaf_head: ('hold:private_firewall_status:missing=colored axis or incidence/projection sidecar', 'hold:h3490_route:missing=route sidecar R', 'emit:random031_terminal_class', "hold:owner_residual_pair:missing=('R', 'branch_boundary_lift', 'residual_pair', 'transport_word')", 'hold:raw_count:missing=never theorem-facing by itself')
+owner_filtration_ready: ('emit:private_firewall_status', 'emit:h3490_route', "hold:random031_terminal_class:missing=('allowed_exit', 'flow_class', 'sheet_pgf_bucket')", 'emit:owner_residual_pair', 'hold:raw_count:missing=never theorem-facing by itself')
+raw_count_shadow: ('hold:private_firewall_status:missing=colored axis or incidence/projection sidecar', 'hold:h3490_route:missing=route sidecar R', "hold:random031_terminal_class:missing=('allowed_exit', 'flow_class', 'sheet_pgf_bucket')", "hold:owner_residual_pair:missing=('R', 'branch_boundary_lift', 'residual_pair', 'transport_word')", 'emit:raw_count')
+
+## Contract Clauses
+ordinary_route_emit: status=formal_ready_interface score=94
+  consumes=('64 ordinary components', '230 cells')
+  emits=('ordinary endpoint-rank-2 route certificate',)
+  remaining_tail=()
+  required_sidecars=('endpoint_rank2_route', 'route_R', 'vertical_halfturn_guard')
+  forbidden_quotients=('raw_242_gate_routed_slogan', 'vertical_halfturn_gluing')
+  evidence=('HYP-3521 ordinary terminal split', 'HYP-3486 endpoint-rank-2 seam-complement exits')
+  theorem_shape=ordinary_route_emit(component) -> terminal_discharge
+  proof_debt=formal endpoint-rank-2 route lemma
+free_hole_single_emit: status=formal_ready_interface score=90
+  consumes=('10 single packets', '26 cells')
+  emits=('ordinary-bracketed free-hole certificate',)
+  remaining_tail=()
+  required_sidecars=('HYP3511_single_bracket', 'route_R', 'vertical_halfturn_guard')
+  forbidden_quotients=('raw_free_hole_count_40', 'puncture_count_shadow')
+  evidence=('HYP-3511 ordinary-bracketed singles', 'HYP-3523 emit_after_single_bracket_carry')
+  theorem_shape=free_hole_single_emit(packet) -> terminal_discharge
+  proof_debt=formal HYP-3511 single-bracket lemma
+free_hole_doublet_buffer_emit: status=formal_ready_interface score=88
+  consumes=('4 half-open components', '14 cells')
+  emits=('2 collapsed doublet certificates',)
+  remaining_tail=()
+  required_sidecars=('HYP3511_doublet_wait', 'HYP3511_same_branch_doublet', 'route_R', 'vertical_halfturn_guard')
+  forbidden_quotients=('immediate_first_half_emission', 'raw_free_hole_count_40')
+  evidence=('HYP-3523 two held predigits later emitted', 'HYP-3511 same-branch doublet clusters')
+  theorem_shape=free_hole_doublet_buffer(first, second) -> terminal_discharge
+  proof_debt=formal doublet buffer/mate lemma
+bypass_transport_emit: status=carry_required score=82
+  consumes=('12 pure-bypass cells', 'seven-owner seam input')
+  emits=('23', '93', '113')
+  remaining_tail=('45', '147', '169', '173')
+  required_sidecars=('HYP3522_transport_word_constancy', 'route_R', 'owner_word')
+  forbidden_quotients=('bypass_owner_word_only', 'raw_bypass_count_12')
+  evidence=('HYP-3522 transport word', 'HYP-3524 S1_transport_emitter')
+  theorem_shape=emit_transport(seven_owner_state) -> four_owner_tail_state
+  proof_debt=prove transport-word constancy on pure bypass
+bypass_bracket_lift_emit: status=carry_required score=80
+  consumes=('four-owner tail after transport',)
+  emits=('147', '169')
+  remaining_tail=('45', '173')
+  required_sidecars=('HYP3522_branch_boundary_lift', 'route_R', 'ordinary_boundary_neighbors')
+  forbidden_quotients=('transport_plus_boundary_without_split', 'residue_mod14_chamber_shadow')
+  evidence=('HYP-3522 branch-boundary ordinary neighbors', 'HYP-3524 S2_branch_boundary_lift_emitter')
+  theorem_shape=emit_bracket_lift(four_owner_state) -> residual_pair_state
+  proof_debt=prove adjacent ordinary branch-boundary lift
+private_firewall_route_sidecar: status=carry_required score=78
+  consumes=('I/Q private incidence cut', 'terminal route request')
+  emits=('private firewall status', 'route only with R')
+  remaining_tail=('route_R',)
+  required_sidecars=('I_or_Q_for_private_status', 'R_for_terminal_route')
+  forbidden_quotients=('I/Q_as_route', 'all_existing_axes_plus_IQ_as_route')
+  evidence=('private_status_pure_by_I=True', 'private_status_pure_by_Q=True', 'route_pure_by_IQ=False', 'route_pure_by_R=True')
+  theorem_shape=private_cut(I/Q) plus route_R -> terminal_route_dispatch
+  proof_debt=prove I/Q row-free incidence cut; keep R unless route reconstruction is proved
+vertical_halfturn_guard: status=carry_required score=74
+  consumes=('u=2t branch-sheet projection',)
+  emits=('address projection only',)
+  remaining_tail=('vertical_not_glued',)
+  required_sidecars=('vertical_halfturn_not_glued',)
+  forbidden_quotients=('vertical_halfturn_sheet_gluing',)
+  evidence=('vertical_present_cells=48/282', 'vertical_mixed_component_count=7')
+  theorem_shape=vertical_halfturn_guard -> quotient_legality
+  proof_debt=formalize vertical halfturn as address projection, not topology quotient
+residual_pair_close_tail: status=open_tail_lemma score=63
+  consumes=('residual owners (45,173)',)
+  emits=('terminal owner-boundary discharge',)
+  remaining_tail=('45', '173')
+  required_sidecars=('residual_pair', 'route_R', 'owner_support_chamber', 'no_hidden_tail')
+  forbidden_quotients=('hydrotope_signature_residue_mod14', 'hydrotope_signature_centered_residue', 'hydrotope_signature_filtration_layer', 'sliced_box_volume_*', 'raw_counts_7_5_2')
+  evidence=('HYP-3524 residual tail isolated as (45,173)', "safe_owner_quotients=('full_filtration_word', 'transport_plus_boundary_word', 'hydrotope_signature_owner_support_cells', 'route_sidecar_R')", "residual_bucket_sizes={'residue_mod14': 3, 'centered_residue': 5, 'owner_support_cells': 1, 'filtration_layer': 15}")
+  theorem_shape=close_tail(residual_pair_state, route_R) -> terminal_discharge
+  proof_debt=prove two-owner no-hidden-tail residual boundary lemma
+
+## Closure Ledger
+status_hist={'carry_required': 4, 'formal_ready_interface': 3, 'open_tail_lemma': 1}
+formal_ready_count=3
+carry_required_count=4
+open_tail_lemma_count=1
+open_tail_lemma=residual_pair_close_tail
+not_closed_reason=the residual pair (45,173) still needs a two-owner no-hidden-tail boundary lemma
+
+## Lean Skeleton
+ordinary_route_emit: ordinary_route_emit(component) -> terminal_discharge
+free_hole_single_emit: free_hole_single_emit(packet) -> terminal_discharge
+free_hole_doublet_buffer_emit: free_hole_doublet_buffer(first, second) -> terminal_discharge
+bypass_transport_emit: emit_transport(seven_owner_state) -> four_owner_tail_state
+bypass_bracket_lift_emit: emit_bracket_lift(four_owner_state) -> residual_pair_state
+private_firewall_route_sidecar: private_cut(I/Q) plus route_R -> terminal_route_dispatch
+vertical_halfturn_guard: vertical_halfturn_guard -> quotient_legality
+residual_pair_close_tail: close_tail(residual_pair_state, route_R) -> terminal_discharge
+
+## Tournament Analysis
+vertices=proof contracts and sidecar obligations, not runners, raw witnesses, chamber volumes, or owner counts
+pairwise_observable=formal readiness + hidden-tail risk + scalar-forgetting risk
+switch=higher proof-readiness score; ties use dependency order
+score_hist={63: 1, 74: 1, 78: 1, 80: 1, 82: 1, 88: 1, 90: 1, 94: 1}
+directed_3cycles=0
+hamiltonian_path=ordinary_route_emit -> free_hole_single_emit -> free_hole_doublet_buffer_emit -> bypass_transport_emit -> bypass_bracket_lift_emit -> private_firewall_route_sidecar -> vertical_halfturn_guard -> residual_pair_close_tail
+
+## Assumption Challenge
+Considered vertices: runners, arcs, witness cells, terminal certificates, sidecars, contracts, route fibers, owner tails, hydrotope chambers, quotient cuts, and proof obligations.
+Chosen vertices are proof contracts plus sidecar obligations.  This preserves the random031 terminal predicate by retaining consumed certificate, emitted tail, remaining tail, route R, owner filtration, free-hole carry, and vertical guard fields before any scalar quotient is allowed.

@@ -52,15 +52,16 @@ Destroyed information: raw counts, chamber volumes, residue shadows,
 owner-count shadows, and vertical gluing erase contract fields unless the
 contract records a reconstructing sidecar.
 Best use: turn HYP-3521/HYP-3523/HYP-3524 into a Lean-facing theorem skeleton
-instead of a growing list of notes.
+instead of a growing list of notes.  HYP-3527 now reports `3`
+formal-ready clauses, `4` carry-required clauses, and `1` open-tail lemma.
 Failure mode: hiding the residual `(45,173)` or route sidecar `R` behind a
 scalar quotient.
 Anchors: HYP-3527, HYP-3526, HYP-3525, HYP-3524, HYP-3523, HYP-3522,
 HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
 T1527, LTT-427.
-Next agent hook: implement the contract audit and report which clauses are
-ready for formalization, which remain proof debt, and which quotient shortcuts
-are explicitly forbidden.
+Next agent hook: formalize `ordinary_route_emit`, `free_hole_single_emit`,
+and `free_hole_doublet_buffer_emit`; then close `residual_pair_close_tail` by
+proving the two-owner `(45,173)` no-hidden-tail boundary lemma with route `R`.
 
 ## LTI-523 - Random031 certificate spigot
 
