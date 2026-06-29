@@ -65,6 +65,38 @@ random031_seven_owner_clause -> typed_gate_word -> raw_gate_count ->
 raw_dead_fraction`. -> HYP-3472, HYP-3473, HYP-3471, HYP-3462, HYP-3470, HYP-3455,
 HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-3417, HYP-3129,
 THM-523, LTI-432, LTT-332, T1432, OPEN-Q-108.
+**OPEN-Q-108 HYP-3475 colored gate mirror-orbit addendum:**
+HYP-3475 instantiates the colored-extension orbit promised by HYP-3461 on the
+HYP-3471 typed gate reservoir, complementing HYP-3472's boundary-current
+sidecar, HYP-3473's Lean producer interface, and HYP-3474's quotient-legality
+partition lattice.  Every survivor gate in the `135`-row
+HYP-3438/HYP-3453 bank belongs to a two-gate mirror orbit:
+
+```text
+8702 survivor gates -> 4351 mirror orbits
+fixed_orbits=0
+unpaired_or_duplicate_gates=0
+dead_rows_with_e_branch_low_rank_orbit=130/130
+```
+
+The quotient preserves the proof-facing predicate
+
+```text
+dead_components(row)>0 => row has a low-rank E/branch mirror orbit.
+```
+
+It also compresses the colored payload: typed gate colors become `186`
+mirror-orbit colors, structural sidecars become `82`, and the AP84 four-color
+packet becomes two mirror colors.  The live non-AP debt is finite and named:
+`8` mirror orbits have cover-delta `>=7`, lying on seven random rows, with
+`random_covering_022` carrying the unique delta-`8` orbit.
+
+Open proof task: discharge those eight hard mirror orbits by
+HYP-3455/HYP-3451 gluing/conductance, endpoint-spine/wall lift,
+owner-current imbalance, two-adic descent, HYP-3460 phase-branch bypass, or
+signed-SPEC/Rprime debt. -> HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3470, HYP-3462, HYP-3461,
+HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438,
+HYP-3436, HYP-2595, THM-523, LTI-435, LTT-335, T1435, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3458 AP84 coloring-recursion addendum:**
 HYP-3458 reconnects the AP84 endpoint-clock work with HYP-2247/HYP-2243

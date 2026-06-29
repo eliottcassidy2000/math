@@ -1,0 +1,78 @@
+HYP-3475 COLORED GATE MIRROR-ORBIT AUDIT
+status=EVIDENCE / exact mirror-orbit quotient audit; not an LRC14 proof
+source=HYP-3438 survivor gates + HYP-3471 typed gate reservoir + HYP-3461 orbit schema
+siblings=HYP-3462 AP84 splice, HYP-3470 AP84 color grid, HYP-3460 phase-branch pullback
+
+## Assumption Challenge
+alternate vertices considered: runners, residues, typed endpoint colors,
+individual survivor gates, mirror gate pairs, fixed circle sections,
+component boundaries, cover arcs, hard delta gates, and proof obligations.
+chosen carrier vertices: mirror orbits of colored survivor gates.
+preserved predicate: gate-extension gluing debt plus low-rank/E-branch
+escape availability under the exact t -> 1-t involution.
+destroyed by scalarization: which member of a mirror pair carries branch0
+or branch1 orientation; retained sidecar is the ordered typed/structural pair.
+
+## Aggregate Mirror-Orbit Ledger
+rows_audited=135
+survivor_gates=8702
+mirror_orbits=4351
+orbit_size_hist={2: 4351}
+fixed_orbits=0
+unpaired_or_duplicate_gates=0
+low_rank_mirror_orbits=4333
+high_rank_mirror_orbits=18
+e_branch_low_rank_orbits=3501
+same_branch_low_rank_orbits=741
+cross_branch_low_rank_orbits=91
+dead_rows_with_e_branch_low_rank_orbit=130/130
+dead_rows_without_e_branch_low_rank_orbit=[]
+
+## Orbit Compression
+typed_mirror_orbit_palette_size=186
+structural_mirror_orbit_palette_size=82
+delta_orbit_hist={2: 3372, 3: 500, 4: 354, 5: 88, 6: 29, 7: 7, 8: 1}
+top_typed_orbits={('B1:7|E:0', 'E:0|B0:7'): 79, ('B0:1|E:0', 'E:0|B1:1'): 73, ('B1:13|E:0', 'E:0|B0:13'): 61, ('B1:5|E:0', 'E:0|B0:5'): 61, ('B0:1|E:8', 'E:8|B1:1'): 61, ('B0:5|E:0', 'E:0|B1:5'): 60, ('B0:3|E:0', 'E:0|B1:3'): 57, ('B0:7|E:0', 'E:0|B1:7'): 56, ('B0:7|E:6', 'E:6|B1:7'): 55, ('B1:1|E:0', 'E:0|B0:1'): 55, ('B1:1|E:6', 'E:6|B0:1'): 55, ('B1:9|E:0', 'E:0|B0:9'): 53, ('B0:1|E:6', 'E:6|B1:1'): 53, ('B1:3|E:0', 'E:0|B0:3'): 51 ...}
+top_structural_orbits={(('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)): 1287, (('B0|E', 'branch0', 'left_bad_edge', 1, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 1)): 1229, (('B0|B0', 'branch0', 'two_sided', 2, 0), ('B1|B1', 'branch1', 'two_sided', 0, 2)): 396, (('B1|E', 'both', 'left_bad_edge', 1, 1), ('E|B0', 'both', 'right_bad_edge', 1, 1)): 198, (('B0|E', 'both', 'left_bad_edge', 1, 1), ('E|B1', 'both', 'right_bad_edge', 1, 1)): 195, (('B0|B0', 'branch0', 'two_sided', 2, 2), ('B1|B1', 'branch1', 'two_sided', 2, 2)): 137, (('B0|E', 'branch0', 'left_bad_edge', 2, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 2)): 95, (('B0|E', 'branch0', 'left_bad_edge', 1, 2), ('E|B1', 'branch1', 'right_bad_edge', 2, 1)): 88, (('B1|E', 'branch1', 'left_bad_edge', 2, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 2)): 81, (('B1|E', 'branch1', 'left_bad_edge', 1, 2), ('E|B0', 'branch0', 'right_bad_edge', 2, 1)): 78, (('B0|B0', 'branch0', 'two_sided', 2, 1), ('B1|B1', 'branch1', 'two_sided', 1, 2)): 50, (('B0|B0', 'branch0', 'two_sided', 3, 0), ('B1|B1', 'branch1', 'two_sided', 0, 3)): 45 ...}
+
+## AP84 Mirror Packet
+ap_orbit_palette=[('B0:5|E:0', 'E:0|B1:5'), ('B1:7|E:0', 'E:0|B0:7')]
+rows_with_ap_orbit=68/135
+dead_rows_with_ap_orbit=67/130
+
+## Hard Delta Mirror-Orbit Debt
+hard_orbits_delta_ge_7=8
+hard_orbit_rows=['random_covering_022', 'random_covering_031', 'random_covering_049', 'random_covering_078', 'random_covering_080', 'random_covering_085', 'random_covering_113']
+  row=random_covering_022 delta=8 components=(17, 84) typed_pair=('B0:7|B0:3', 'B1:3|B1:7') structural_pair=(('B0|B0', 'both', 'two_sided', 4, 4), ('B1|B1', 'both', 'two_sided', 4, 4)) intervals=('[9/49,223/1197]', '[974/1197,40/49]')
+  row=random_covering_022 delta=7 components=(10, 91) typed_pair=('B0:5|B0:3', 'B1:3|B1:5') structural_pair=(('B0|B0', 'branch0', 'two_sided', 3, 4), ('B1|B1', 'branch1', 'two_sided', 4, 3)) intervals=('[40/399,104/1015]', '[911/1015,359/399]')
+  row=random_covering_031 delta=7 components=(43, 54) typed_pair=('B0:9|B0:1', 'B1:1|B1:9') structural_pair=(('B0|B0', 'branch0', 'two_sided', 3, 4), ('B1|B1', 'branch1', 'two_sided', 4, 3)) intervals=('[71/161,349/791]', '[442/791,90/161]')
+  row=random_covering_049 delta=7 components=(7, 100) typed_pair=('B0:1|B0:5', 'B1:5|B1:1') structural_pair=(('B0|B0', 'both', 'two_sided', 3, 4), ('B1|B1', 'both', 'two_sided', 4, 3)) intervals=('[71/1085,55/819]', '[764/819,1014/1085]')
+  row=random_covering_078 delta=7 components=(19, 78) typed_pair=('B0:11|B1:13', 'B0:13|B1:11') structural_pair=(('B0|B1', 'branch0', 'two_sided', 4, 3), ('B0|B1', 'branch1', 'two_sided', 3, 4)) intervals=('[183/875,244/1155]', '[911/1155,692/875]')
+  row=random_covering_080 delta=7 components=(33, 72) typed_pair=('B0:1|B0:9', 'B1:9|B1:1') structural_pair=(('B0|B0', 'branch0', 'two_sided', 4, 3), ('B1|B1', 'branch1', 'two_sided', 3, 4)) intervals=('[302/945,286/889]', '[603/889,643/945]')
+  row=random_covering_085 delta=7 components=(3, 148) typed_pair=('B0:13|B1:1', 'B0:1|B1:13') structural_pair=(('B0|B1', 'branch0', 'two_sided', 3, 4), ('B0|B1', 'branch1', 'two_sided', 4, 3)) intervals=('[15/497,2/63]', '[61/63,482/497]')
+  row=random_covering_113 delta=7 components=(33, 124) typed_pair=('B0:5|B0:3', 'B1:3|B1:5') structural_pair=(('B0|B0', 'both', 'two_sided', 4, 3), ('B1|B1', 'both', 'two_sided', 3, 4)) intervals=('[204/1001,230/1113]', '[883/1113,797/1001]')
+
+## Minimum E-Branch Orbit Per Dead Row
+min_e_branch_orbit_typed_hist={('B1:7|E:0', 'E:0|B0:7'): 10, ('B0:7|E:6', 'E:6|B1:7'): 7, ('B1:1|E:12', 'E:12|B0:1'): 6, ('B1:3|E:10', 'E:10|B0:3'): 6, ('B0:5|E:0', 'E:0|B1:5'): 4, ('B0:9|E:0', 'E:0|B1:9'): 4, ('B0:1|E:8', 'E:8|B1:1'): 4, ('B0:3|E:6', 'E:6|B1:3'): 4, ('B1:11|E:2', 'E:2|B0:11'): 4, ('B0:1|E:6', 'E:6|B1:1'): 4, ('B0:11|E:0', 'E:0|B1:11'): 4, ('B0:13|E:0', 'E:0|B1:13'): 3, ('B1:9|E:0', 'E:0|B0:9'): 3, ('B1:3|E:0', 'E:0|B0:3'): 3 ...}
+min_e_branch_orbit_struct_hist={(('B0|E', 'branch0', 'left_bad_edge', 1, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 1)): 59, (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)): 51, (('B1|E', 'branch1', 'left_bad_edge', 1, 2), ('E|B0', 'branch0', 'right_bad_edge', 2, 1)): 6, (('B1|E', 'branch1', 'left_bad_edge', 2, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 2)): 4, (('B0|E', 'branch0', 'left_bad_edge', 1, 2), ('E|B1', 'branch1', 'right_bad_edge', 2, 1)): 3, (('B0|E', 'branch0', 'left_bad_edge', 2, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 2)): 3, (('B0|E', 'branch0', 'left_bad_edge', 2, 2), ('E|B1', 'branch1', 'right_bad_edge', 2, 2)): 1, (('B1|E', 'branch1', 'left_bad_edge', 2, 2), ('E|B0', 'branch0', 'right_bad_edge', 2, 2)): 1, (('B1|E', 'both', 'left_bad_edge', 1, 1), ('E|B0', 'both', 'right_bad_edge', 1, 1)): 1, (('B0|E', 'branch0', 'left_bad_edge', 3, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 3)): 1}
+min_e_branch_orbit_samples=[('covering_AP_with_84', ('B1:7|E:0', 'E:0|B0:7'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (3, 22), '1/588'), ('multi_far_84_154', ('B1:7|E:0', 'E:0|B0:7'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (8, 43), '1/588'), ('ap_omit_12_tail_84x01', ('B1:7|E:0', 'E:0|B0:7'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (3, 22), '1/588'), ('ap_omit_12_tail_84x02', ('B1:7|E:0', 'E:0|B0:7'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (7, 40), '1/392'), ('ap_omit_12_tail_84x03', ('B1:7|E:0', 'E:0|B0:7'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (11, 58), '5/1764'), ('ap_omit_12_tail_84x04', ('B1:7|E:0', 'E:0|B0:7'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (15, 72), '1/336'), ('ap_omit_12_tail_84x05', ('B1:7|E:0', 'E:0|B0:7'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (19, 88), '3/980'), ('ap_omit_12_tail_84x06', ('B0:5|E:0', 'E:0|B1:5'), (('B0|E', 'branch0', 'left_bad_edge', 1, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 1)), (25, 106), '1/1960'), ('ap_omit_12_tail_84x07', ('B0:5|E:0', 'E:0|B1:5'), (('B0|E', 'branch0', 'left_bad_edge', 1, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 1)), (29, 126), '23/20580'), ('ap_omit_12_tail_84x08', ('B1:7|E:0', 'E:0|B0:7'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (30, 141), '1/4704'), ('ap_omit_12_tail_84x09', ('B1:7|E:0', 'E:0|B0:7'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (34, 161), '1/1764'), ('ap_omit_12_tail_84x10', ('B1:7|E:0', 'E:0|B0:7'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (38, 175), '1/1176'), ('ap_omit_12_tail_84x11', ('B0:5|E:0', 'E:0|B1:5'), (('B0|E', 'branch0', 'left_bad_edge', 1, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 1)), (46, 193), '3/10780'), ('ap_omit_12_tail_84x12', ('B0:5|E:0', 'E:0|B1:5'), (('B0|E', 'branch0', 'left_bad_edge', 1, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 1)), (50, 207), '23/35280'), ('even_frontier_tail_168', ('B1:5|E:0', 'E:0|B0:5'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (25, 42), '3/1960'), ('random_covering_000', ('B1:1|E:10', 'E:10|B0:1'), (('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)), (52, 127), '3/147560')]
+
+## Lemma Target
+Audited finite form:
+  every survivor gate in the 135-row bank belongs to an exact two-gate
+  mirror orbit; no fixed or unpaired gate occurs.
+  dead_components(row)>0 still implies a low-rank E/branch mirror orbit.
+  cover-delta debt >=7 is confined to 8 mirror orbits on 7 random rows.
+This upgrades HYP-3471 from colored gate words to colored gate orbits.
+The next proof obligation is a finite hard-orbit discharge: route those
+8 same/cross-branch two-sided orbits through HYP-3455/HYP-3451, or name
+owner-current, two-adic, endpoint-spine, phase-branch, or signed-SPEC debt.
+
+## Tournament Analysis
+vertices=mirror-orbit proof carriers, not individual gates or raw counts
+pairwise_observable=predicate retention + mirror payload + typed color payload + hard-delta localization + scalar firewall
+switch=higher proof-facing carrier score; ties use declared route order
+axes=predicate_retention,mirror_payload,typed_color_payload,delta_debt_localization,ap_packet_splice,random_gluing_sidecar,scalar_firewall
+score_hist={6: 1, 41: 1, 54: 1, 56: 1, 60: 1, 62: 1, 64: 2}
+directed_3cycles=0
+hamiltonian_path=M00_exact_mirror_orbit_quotient -> M01_hard_delta_orbit_ledger -> M02_dead_row_e_branch_orbit -> M03_typed_mirror_color_pair -> M04_ap84_two_orbit_packet -> M05_phase_branch_hit_sidecar -> M06_single_gate_color_word -> M07_raw_gate_count

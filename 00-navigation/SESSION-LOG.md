@@ -79,6 +79,39 @@ separating-current transfer off the named exceptions.  Route `random_covering_03
 through HYP-3455, the AP84 base rows through HYP-3462/HYP-3470, and the six
 remaining random exceptions through owner-current/two-adic/signed-SPEC/state-lift
 debt.
+## codex-2026-06-29 -- HYP-3475 colored gate mirror-orbit audit
+
+Prompt: spend another similar session, continuing the coloring/extension push
+toward LRC14.  Rebased over the incoming HYP-3472 boundary-current audit,
+HYP-3473 Lean formalization, HYP-3474 partition-lattice audit, HYP-3462 AP84
+corridor splice, HYP-3470 AP84 color grid, and HYP-3471 colored gate reservoir, then added
+HYP-3475/T1435/LTI-435/LTT-335 plus script/result/reflection:
+
+```text
+04-computation/lrc14_colored_gate_mirror_orbit_codex_20260629.py
+05-knowledge/results/lrc14_colored_gate_mirror_orbit_codex_20260629.out
+05-knowledge/hypotheses/HYP-3475-lrc14-colored-gate-mirror-orbit.md
+07-reflections/lrc14-colored-gate-mirror-orbit-codex-20260629.md
+```
+
+Core readout: `8702` HYP-3438 survivor gates form `4351` exact two-gate mirror
+orbits, with no fixed gates and no unpaired/duplicate gates.  The dead-row
+gate implication from HYP-3471 survives the quotient:
+`dead_rows_with_e_branch_low_rank_orbit=130/130`.  Typed mirror-orbit palette
+size is `186`, structural mirror-orbit palette size is `82`, and the AP84
+four-color packet compresses to two mirror colors.
+
+Synthesis: the proof carrier after coloring is the mirror orbit, not the
+single gate.  HYP-3475 is the mirror-orbit sibling to the HYP-3472
+dead-cover current route and the HYP-3474 quotient-legality route.  The
+strongest new obligation is the finite hard-orbit discharge:
+`8` mirror orbits with cover-delta `>=7` on seven random rows, including a
+unique delta-`8` orbit on `random_covering_022`.  HYP-3455's random031 pair is
+now one member of this complete hard-family ledger.
+
+Next hook: discharge the eight hard orbits through HYP-3455/HYP-3451,
+endpoint-spine/wall, owner-current, two-adic descent, HYP-3460 phase-branch
+bypass, or signed-SPEC/Rprime debt.
 
 ## codex-2026-06-29 -- HYP-3458 AP84 coloring-recursion bridge
 

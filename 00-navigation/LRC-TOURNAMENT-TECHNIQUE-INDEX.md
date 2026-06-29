@@ -151,6 +151,12 @@ obligations, and proof-carrier interfaces.
   packets, count ledgers, and global coverage fields the vertices.  Runners,
   raw colors, and raw gates are only shadows unless they produce
   `Mreach >= 1/14`.
+- Need the colored gate reservoir to carry extension/mirror data:
+  use LTT-335 after LTT-331/LTT-321/LTT-315/LTT-313 and make colored
+  survivor-gate mirror orbits, typed endpoint-pair colors, structural orbit
+  sidecars, hard delta orbits, and AP84 two-orbit packets the vertices.  The
+  quotient preserves low-rank E/branch escape status but must retain ordered
+  sidecars because single-gate branch orientation is forgotten.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9809,3 +9815,42 @@ quotient_legality_status
   HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
   HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3436, HYP-3431, HYP-2595,
   HYP-2594, HYP-2593, THM-523, LTI-434, LTT-334, T1434, OPEN-Q-108.
+
+## LTT-335: Colored Gate Mirror-Orbit Tournament
+
+- **Move:** Treat the mirror orbit of colored survivor gates as the tournament
+  vertex, instead of individual gates, runners, arcs, residues, or raw color
+  counts.  Vertices are exact mirror quotient, hard-delta orbit ledger,
+  dead-row E/branch orbit, typed mirror color pair, AP84 two-orbit packet,
+  phase-branch hit sidecar, single-gate color word, and raw gate count.
+- **LRC use:** HYP-3475 instantiates HYP-3461's colored gate-extension orbit
+  schema on the HYP-3471 typed gate reservoir, as the mirror-orbit sibling to
+  HYP-3472/HYP-3473/HYP-3474.  All `8702` survivor gates in
+  the current `135`-row bank form `4351` two-gate mirror orbits with no fixed
+  or unpaired gates, and every dead-component row keeps a low-rank E/branch
+  mirror orbit.  The non-AP transfer is reduced to the eight delta-`>=7`
+  mirror orbits on seven random rows.
+- **Preserves:** low-rank E/branch escape status, typed endpoint residue
+  pairs, branch mask, adjacency sidecar, cover-delta vectors, AP84 mirror
+  packet status, and the hard-orbit ledger needed by HYP-3455/HYP-3451.
+- **Forgets / guardrail:** the individual branch orientation of one member of
+  a mirror pair is quotient data, not theorem data.  Keep ordered typed and
+  structural sidecars until HYP-3451/HYP-3455/HYP-3460/HYP-3462 or named debt
+  discharges the orbit.
+- **Pairwise observable:** predicate retention, mirror payload, typed color
+  payload, structural sidecar retention, hard-delta localization, AP packet
+  splice value, phase-branch bypass value, and scalar penalty.
+- **Switch/gauge:** higher retained proof payload first; ties follow the
+  mirror-orbit discharge route.
+- **Fingerprint:** `8` vertices, score histogram
+  `{6:1,41:1,54:1,56:1,60:1,62:1,64:2}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `M00_exact_mirror_orbit_quotient -> M01_hard_delta_orbit_ledger -> M02_dead_row_e_branch_orbit -> M03_typed_mirror_color_pair -> M04_ap84_two_orbit_packet -> M05_phase_branch_hit_sidecar -> M06_single_gate_color_word -> M07_raw_gate_count`.
+- **Next hook:** prove the finite hard-orbit discharge for the `8` delta-`>=7`
+  mirror orbits.  Routes allowed by the current ledger are HYP-3455/HYP-3451
+  gluing or conductance, endpoint-spine/wall lift, owner-current imbalance,
+  two-adic descent, HYP-3460 phase-branch bypass, or signed-SPEC/Rprime debt.
+- **Pointers:** HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3470,
+  HYP-3462, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453,
+  HYP-3451, HYP-3438, HYP-3436,
+  HYP-2595, THM-523, LTI-435, LTT-335, T1435, OPEN-Q-108.

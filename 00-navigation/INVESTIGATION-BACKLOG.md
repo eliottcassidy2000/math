@@ -81,6 +81,36 @@ debt.  Tournament vertices were proof carriers and obligations, not runners:
 projection cut, separating current, E/branch implication, AP84 closed packet,
 random031 seven-owner gluing clause, typed gate word, raw gate count, and raw
 dead fraction.
+## Lead codex-2026-06-29: Colored gate mirror-orbit audit
+
+**Status:** EVIDENCE / exact mirror-orbit quotient audit; not proof
+(HYP-3475/T1435/LTI-435/LTT-335), instantiating HYP-3461's colored
+gate-extension orbit schema on top of HYP-3471's typed gate reservoir, as the
+mirror-orbit sibling to HYP-3472's boundary-current audit, HYP-3473's Lean
+formalization interface, and HYP-3474's partition-lattice quotient guardrail.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3475-lrc14-colored-gate-mirror-orbit.md`,
+script
+`04-computation/lrc14_colored_gate_mirror_orbit_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_colored_gate_mirror_orbit_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-colored-gate-mirror-orbit-codex-20260629.md`.
+
+Readout: the full HYP-3438/HYP-3453 bank has `8702` survivor gates forming
+`4351` exact two-gate mirror orbits, with `fixed_orbits=0` and
+`unpaired_or_duplicate_gates=0`.  The quotient keeps HYP-3471's dead-row
+escape target: `dead_rows_with_e_branch_low_rank_orbit=130/130`.  Typed gate
+colors compress to `186` mirror-orbit colors, structural sidecars to `82`, and
+the AP84 four-color packet compresses to two mirror colors.
+
+Next: prove the finite hard-orbit discharge for the `8` mirror orbits with
+cover-delta `>=7`, on rows `random_covering_022`, `random_covering_031`,
+`random_covering_049`, `random_covering_078`, `random_covering_080`,
+`random_covering_085`, and `random_covering_113`.  Route them through
+HYP-3455/HYP-3451, endpoint-spine/wall, owner-current, two-adic descent,
+HYP-3460 phase-branch bypass, or signed-SPEC/Rprime debt.
 
 ## Lead codex-2026-06-29: AP84 coloring-recursion bridge
 
