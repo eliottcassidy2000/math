@@ -1,3 +1,31 @@
+## codex-2026-06-29 -- HYP-3436 minimal bad-core cover extractor
+
+Executed the HYP-3435 next hook by inverting the positive branch-cover witness
+and classifying the obstruction `E_safe cap B0_odd cap B1_odd`.  Added
+HYP-3436/T1397/LTI-397/LTT-297 plus script/result/reflection:
+
+```text
+04-computation/lrc14_minimal_bad_core_cover_extractor_codex_20260629.py
+05-knowledge/results/lrc14_minimal_bad_core_cover_extractor_codex_20260629.out
+05-knowledge/hypotheses/HYP-3436-lrc14-minimal-bad-core-cover-extractor.md
+07-reflections/lrc14-minimal-bad-core-cover-extractor-codex-20260629.md
+```
+
+Exact readout on the same `135` primitive covering rows as HYP-3435: survivors
+in `135/135`; across `17164` even-safe components, `3770` are fully bad,
+`6228` mixed, and `7166` clean; `11670` bad-core components and `15868`
+survivor components.  Minimal cover pairs are mostly `(1,1)` (`10288`
+components), with max total odd-owner cover size `6`; endpoint support size
+stays `<=3`.  Tight AP-with-84 has `bad_core=314/735`, survivor `1/105`, `22`
+fully bad even components, `4` mixed components, and cover pairs
+`(1,1):14,(1,2):6,(2,1):6`.
+
+Next proof hook: prove a local-to-global gluing impossibility for these B0/B1
+cover ledgers, or route the first compatible full cover to corridor-fence,
+endpoint-spine, two-adic loss, owner-current, topology-legality, or signed-SPEC
+debt.  Raw bad-core mass and harmonic tails remain scalar firewalls, not proof
+certificates.
+
 ## codex-2026-06-28 -- HYP-3432 Euler-Mascheroni harmonic wall-budget sidecar
 
 Pulled the incoming HYP-3430 Euler-Mascheroni intercept firewall together with

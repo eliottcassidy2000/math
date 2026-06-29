@@ -8557,6 +8557,45 @@ quotient_legality_status
   THM-523, LTI-396, LTT-296, T1396, LTI-393, LTT-293, T1393, LTI-392,
   LTT-292, T1392, OPEN-Q-108.
 
+## LTT-297: Minimal Bad-Core Cover Extractor Tournament
+
+- **Move:** Invert the branch-cover witness tournament.  Vertices are local
+  bad-core component ledgers, minimal odd-owner subcovers, endpoint gate/wall
+  labels, survivor-gap tax certificates, overlap-tax bridge, owner-current
+  exception router, two-adic descent loss ledger, topology/magnitude legality
+  guard, and raw bad-measure shortcut as a negative control.
+- **LRC use:** HYP-3436 classifies the obstruction
+  `E_safe cap B0_odd cap B1_odd` after HYP-3435.  On `135` primitive covering
+  rows, all rows still have survivors, but the bad-core complement now has an
+  exact local cover language: `11670` bad-core components, mostly `(1,1)`
+  branch-owner covers, with maximum total cover size `6` and endpoint support
+  size `<=3`.  A counterexample must glue these local ledgers across every
+  even-safe component without leaving a survivor or named sidecar debt.
+- **Preserves:** two-adic branch-overlap predicate, branch color, minimal
+  B0/B1 odd-owner words, even endpoint gates, survivor gaps, and routing hooks.
+- **Forgets / guardrail:** raw runner identity inside a component is secondary,
+  but scalarizing to bad-core mass, harmonic tails, endpoint budget, or
+  topology class destroys the actual cover ledger.  Those scalars are allowed
+  only as ordering or calibration sidecars.
+- **Pairwise observable:** predicate retention, cover exactness, endpoint
+  payload, two-adic compatibility, owner-current route value,
+  topology-legality, and scalar-firewall safety.
+- **Switch/gauge:** higher proof-facing weighted score first; ties use declared
+  code order.
+- **Fingerprint:** `9` vertices, score histogram
+  `{-3:1,66:1,77:1,78:1,84:1,91:1,95:1,97:1,99:1}`, no directed `3`-cycles,
+  and Hamiltonian path
+  `B00_local_bad_core_component_ledger -> B01_minimal_odd_owner_subcovers -> B02_endpoint_gate_wall_labels -> B03_survivor_gap_tax_certificate -> B04_overlap_tax_bridge -> B05_owner_current_exception_router -> B06_two_adic_descent_loss_ledger -> B07_topology_magnitude_legality_guard -> B08_scalar_bad_measure_shortcut`.
+- **Next hook:** prove a local-to-global gluing impossibility for the emitted
+  bad-core covers; if gluing survives, route the first compatible full cover to
+  HYP-3431 corridor-fence structure, HYP-3429 endpoint spines, HYP-3428
+  two-adic loss debt, HYP-3417/HYP-3420 owner-current, HYP-3423 legality, or
+  HYP-3421/HYP-3129 signed-SPEC.
+- **Pointers:** HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3432, HYP-3431,
+  HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424,
+  HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3417, HYP-3129, HYP-2963,
+  THM-523, LTI-397, LTT-297, T1397, OPEN-Q-108.
+
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 
 - **Move:** Use recursive signature repairs as tournament vertices: residue,

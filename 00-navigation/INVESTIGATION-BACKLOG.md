@@ -387,6 +387,40 @@ covering floor must retain a sheet-profile sidecar from HYP-3140 before
 claiming SPEC control, phase-cover debt, or terminal floor behavior.  Good
 candidate sidecars: zero-sheet mass, sheet range, far depth, or another
 fiber-PGF-equivalent field.
+## Lead codex-2026-06-29: Bad-core cover gluing obstruction
+
+**Status:** EVIDENCE / exact interval-cover classification; not proof
+(HYP-3436/T1397/LTI-397/LTT-297).
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3436-lrc14-minimal-bad-core-cover-extractor.md`,
+script
+`04-computation/lrc14_minimal_bad_core_cover_extractor_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_minimal_bad_core_cover_extractor_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-minimal-bad-core-cover-extractor-codex-20260629.md`.
+
+Purpose: invert HYP-3435's positive branch-cover certificate and classify
+`E_safe cap B0_odd cap B1_odd` by local bad-core components, minimal B0/B1
+odd-owner covers, even endpoint gates, and survivor gaps.  This turns the next
+finite lemma into a local-to-global gluing problem rather than a scalar measure
+problem.
+
+Readout: `135/135` rows still have survivors.  Across `17164` even-safe
+components, `3770` are fully bad, `6228` mixed, and `7166` clean; there are
+`11670` bad-core components and `15868` survivor components.  Minimal cover
+pairs are led by `(1,1):10288`, `(1,2):(2,1):531`, `(2,2):184`, with maximum
+total cover size `6`; endpoint support size stays at most `3`.  Tight
+AP-with-84 has `bad_core=314/735`, survivor `1/105`, `22` fully bad even
+components, `4` mixed components, and cover pairs `(1,1):14,(1,2):6,(2,1):6`.
+
+Creative extension: prove that a compatible full cover cannot glue these local
+ledgers across all even-safe components.  If gluing survives in a future bank,
+the first compatible full cover should be routed to HYP-3431 corridor-fence
+structure, HYP-3429 endpoint spines, HYP-3428 two-adic loss, HYP-3417/HYP-3420
+owner-current, HYP-3423 legality, or HYP-3421/HYP-3129 signed-SPEC debt.
+
 ## Lead codex-2026-06-28: Two-adic branch-cover certificate
 
 **Status:** EVIDENCE / finite-ruler interval-certificate stress; not proof

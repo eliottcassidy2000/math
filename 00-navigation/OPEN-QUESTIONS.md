@@ -400,23 +400,38 @@ HYP-3432 adds the exact reciprocal-budget corollary: harmonic mass may rank
 which endpoint ledger to test first, but cannot replace branch, wall, interval,
 and owner labels.
 
-Open task: build the minimal-cover extractor.  For every component of
-`E_safe`, enumerate the finite ruler endpoints from odd low-bad, odd high-bad,
-and even gates.  If a component is fully covered by
+**OPEN-Q-108 HYP-3436 bad-core gluing addendum:**
+HYP-3436 executes the minimal-cover extractor requested by HYP-3435.  On `135`
+primitive covering rows, every row has a survivor, but the complementary bad
+core now has a finite labelled language:
 
 ```text
-(union odd_low_bad) cap (union odd_high_bad),
+total_E_components=17164
+E_components_fully_bad=3770
+E_components_mixed=6228
+E_components_clean=7166
+bad_core_components=11670
+survivor_components=15868
+max_cover_total=6
+max_endpoint_support_size=3
 ```
 
-emit the smallest endpoint-gate certificate.  If no such certificate survives
-the HYP-3417/HYP-3420 owner-current router, HYP-3423 legality guardrail, and
-HYP-3424 two-adic transfer, while HYP-3431 supplies the canonical
-corridor-fence base case, HYP-3432 orders endpoint-budget debt, and HYP-3430
-blocks scalar-tail closure without sidecars, promote the branch-overlap target
-to a finite lemma. -> HYP-3435, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
-HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3129, HYP-2963,
-THM-523, LTI-396, LTT-296, T1396, LTI-393, LTT-293, T1393, LTI-392,
-LTT-292, T1392, OPEN-Q-108.
+The tight AP-with-84 row has `bad_core=314/735`, survivor `1/105`, `22` fully
+bad even components, `4` mixed components, and local cover pairs
+`(1,1):14,(1,2):6,(2,1):6`.
+
+Open task: prove the local-to-global gluing obstruction.  A counterexample must
+glue the emitted minimal B0/B1 odd-owner covers across all even-safe components
+without leaving a survivor.  If such gluing appears in a larger bank, route the
+first compatible full cover to corridor-fence, endpoint-spine, two-adic loss,
+owner-current, topology-legality, or signed-SPEC debt before accepting any
+scalar summary. -> HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3432,
+HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425,
+HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3417, HYP-3129,
+HYP-2963, THM-523, LTI-397, LTT-297, T1397, OPEN-Q-108.
+
+Supersedes the older HYP-3435 open task to build the extractor.  The remaining
+task is the gluing obstruction above, with the same sidecar routers retained.
 
 **OPEN-Q-108 HYP-3417 owner-cut dual current addendum:**
 HYP-3417 sharpens the owner-support/Menger route into a concrete certificate
