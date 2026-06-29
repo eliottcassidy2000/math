@@ -38,6 +38,12 @@ should live on the seam complement: alive components, lower-delta gates,
 seam-adjacent components, owner labels, and low-rank escapes, with the
 max-delta seam edges forbidden.
 
+HYP-3490 adds a hard guardrail to that graph/cut reading.  On random031 every
+E/branch-touched blocker label is private to one dead component, so adjacent-
+label current deletion is structurally blocked rather than merely untried.
+The seam-complement carrier should keep this private-label firewall as a
+sidecar before trying to route the hard private row through bypass flow.
+
 The main new sentence I would hand to the next agent:
 
 ```text

@@ -22,6 +22,14 @@ Useful synthetic maps added later:
   `(43,54)` with owners `(23,93,113)`.  Mirror is class-preserving; vertical
   half-turn gluing is only an address sidecar because it mixes free-hole and
   ordinary cells.
+- `07-reflections/lrc14-random031-seam-complement-connections-codex-20260629.md`:
+  HYP-3485/T1445 surveys prior seam-complement and bypass-flow hooks attached
+  to HYP-3484's executable seam/bypass surgery and HYP-3490's private-label
+  firewall.  It reframes random031 as a relative topology packet: delete the
+  max-delta seam, keep the four mirror-paired dead islands as punctures, route
+  q=`14V` phase flow through the `u=2t` bypass sheet, record owner labels as
+  cut/monodromy charges, and retain private-label firewall status before using
+  current deletion.
 - `07-reflections/lrc14-random031-topology-atlas-codex-20260629.md`:
   HYP-3481/T1441 reframes the hard-control row `random_covering_031` as a
   mirror-punctured annulus plus bypassed saddle seam.  The useful signal is

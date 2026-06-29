@@ -4,12 +4,14 @@
 HYP-3481/HYP-3482/HYP-3483 picture into the next executable audit.  Build a
 relative seam-complement object: delete the max-delta gates on components
 `43/54`, mark the four dead islands as punctures, use lower-delta gates as
-flow edges, and mark low-rank escapes as boundary.  Then test the HYP-3485
+flow edges, carry HYP-3490 private-label firewall status on currentless
+components, and mark low-rank escapes as boundary.  Then test the HYP-3485
 prediction that every phase-flow component reaches escape before it would need
-the forbidden seam.  Useful imports: HYP-3023 zipper guardrails, HYP-3034
-Cech/path-lift owner-deletion persistence, HYP-3422/HYP-3428 two-adic branch
-relocation, HYP-3437/HYP-3451 Menger/Green/current cut tests, and HYP-3140
-sheet-count moments. -> HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477,
+the forbidden seam.  Useful imports: HYP-3490 label-multiplicity firewall,
+HYP-3023 zipper guardrails, HYP-3034 Cech/path-lift owner-deletion persistence,
+HYP-3422/HYP-3428 two-adic branch relocation, HYP-3437/HYP-3451
+Menger/Green/current cut tests, and HYP-3140 sheet-count moments.
+-> HYP-3485, HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477,
 HYP-3460, HYP-3455, HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140,
 HYP-3034, HYP-3023, LTI-445, LTT-345, T1445, OPEN-Q-108.
 **HYP-3486 random031 seam-complement fiber graph.**  HYP-3486 executes the

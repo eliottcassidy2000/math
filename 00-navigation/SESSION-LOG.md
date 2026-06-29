@@ -4,7 +4,9 @@ Prompt: look through past possible connections for seam complement or bypass
 flow.  Pulled incoming HYP-3483 first and used it as live signal.  A later
 pull brought in HYP-3484 as the executable forbidden-seam flow geometry, so
 this bridge was renumbered to HYP-3485 and now treats HYP-3484 as its
-computational anchor.
+computational anchor.  A final concurrent pull brought in HYP-3490; this atlas
+now keeps its private-label firewall as the no-current-deletion sidecar for
+random031.
 
 Added HYP-3485/T1445/LTI-445/LTT-345 plus reflection:
 
@@ -19,13 +21,15 @@ mirror-paired dead islands as punctures, route phase-flow worldlines through
 the `u=2t` bypass sheet, and record owner labels as cut/monodromy charges.
 Past-work bridge: HYP-3455 gives the seven-owner gluing clause, HYP-3460 gives
 zero hard hits and lower-delta bypass, HYP-3477 isolates random031 as the only
-hard-orbit bypass case, HYP-3023 supplies zipper guardrails, HYP-3034 supplies
-relative Cech/path-lift tests, HYP-3422/HYP-3428 supply the two-adic branch
-engine, HYP-3437/HYP-3451 supply Menger/Green/current escape tests, and
-HYP-3140 suggests a local sheet-count moment.
+hard-orbit bypass case, HYP-3490 blocks adjacent-label current deletion by
+private labels, HYP-3023 supplies zipper guardrails, HYP-3034 supplies relative
+Cech/path-lift tests, HYP-3422/HYP-3428 supply the two-adic branch engine,
+HYP-3437/HYP-3451 supply Menger/Green/current escape tests, and HYP-3140
+suggests a local sheet-count moment.
 
 Next executable hook: build the seam-complement graph or relative H1 complex,
-delete seam gates `(43,54)`, mark low-rank escapes as boundary, and prove
+delete seam gates `(43,54)`, mark low-rank escapes as boundary, carry
+HYP-3490 private-label firewall status on currentless components, and prove
 every q=`14V` phase-flow component reaches escape before needing the forbidden
 seam.
 ## codex-2026-06-29 -- HYP-3486 random031 seam-complement fiber graph

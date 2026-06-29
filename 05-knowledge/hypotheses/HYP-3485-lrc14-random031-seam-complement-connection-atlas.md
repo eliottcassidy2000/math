@@ -2,12 +2,13 @@
 id: HYP-3485
 title: LRC14 random031 seam-complement connection atlas
 status: SYNTHESIS / past-work bridge and experiment design; not an LRC14 proof
-source: codex-2026-06-29 continuation of HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140, HYP-3034, and HYP-3023
+source: codex-2026-06-29 continuation of HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140, HYP-3034, and HYP-3023
 tangent: T1445
 technique: LTI-445
 tournament_technique: LTT-345
 reflection: 07-reflections/lrc14-random031-seam-complement-connections-codex-20260629.md
 related:
+  - HYP-3490
   - HYP-3484
   - HYP-3483
   - HYP-3482
@@ -41,14 +42,15 @@ delete the max-delta seam
 keep the four mirror-paired punctures
 route phase-flow worldlines through the two-adic bypass sheet
 record owner labels as cut / monodromy charges
+retain private-label firewall status before current deletion
 ```
 
 This is not a new proof.  It is a connection atlas: older LRC work already
 contains several pieces of the same structure under different names.
 After a concurrent update, HYP-3484 is the executable forbidden-seam flow
 geometry; HYP-3485 should be read as the bridge that explains why that
-computation is connected to older zipper, Cech, Menger, two-adic, and PGF
-routes.
+computation is connected to older zipper, Cech, Menger, two-adic, private-label,
+and PGF routes.
 
 ## Past Connections
 
@@ -123,7 +125,17 @@ non-random031 hard orbit -> lower-delta projection-current cut
 random031 hard orbit     -> relative seam-complement bypass theorem
 ```
 
-### 4. Zipper work says what the quotient may forget
+### 4. Private-label firewall says current deletion is the wrong carrier
+
+HYP-3490 adds a new guardrail from the concurrent private-label firewall audit:
+the seven random currentless rows are exactly those whose E/branch-touched
+blocker labels are private to one dead component.  For random031 this means
+adjacent-label current deletion is not a missing clever pair; it is the wrong
+carrier.  The seam-complement proof must retain the firewall as a sidecar and
+route the hard private row through HYP-3484/HYP-3483/HYP-3482/HYP-3481 rather
+than through more E/branch deletion.
+
+### 5. Zipper work says what the quotient may forget
 
 HYP-3023 warns that automatic/residue words are unsafe until the magnitude
 cocycle, barcode, or packet zipper is retained.  For random031 the analogous
@@ -149,9 +161,10 @@ owner charges
 branch orientation
 ordered bypass blocks
 low-rank escape reachability
+private-label firewall status
 ```
 
-### 5. Cech/path-lift work suggests a relative H1 test
+### 6. Cech/path-lift work suggests a relative H1 test
 
 HYP-3034 used closed danger-arc Cech representatives and owner-deletion
 persistence to distinguish AP/GW boundary equality atoms.  Random031 is not an
@@ -173,7 +186,7 @@ every nontrivial relative cycle in the seam complement either
   or is exactly one of the two six-hit bypass worldlines.
 ```
 
-### 6. Two-adic relocation is the bypass engine
+### 7. Two-adic relocation is the bypass engine
 
 HYP-3422 states the exact lift:
 
@@ -197,7 +210,7 @@ bypass phase flow = n*2 / u=2t pullback
 The bypass is the two-adic object.  The seam is the owner-boundary object.  A
 proof should not choose one recursion and erase the other.
 
-### 7. Menger/overlap-tax and conductance become escape tests
+### 8. Menger/overlap-tax and conductance become escape tests
 
 HYP-3437 made overlap tax into a labelled cut core.  HYP-3451 made dead
 components and branch-coloured blockers into a conductance/router graph.
@@ -206,7 +219,9 @@ For random031 this suggests replacing "there are no dead-cover projection
 edges" with:
 
 ```text
-run Menger/Green/current tests on the seam complement, not on the dead islands
+run Menger/Green/current tests on the seam complement, not on the dead islands,
+and do not use adjacent-label current deletion when HYP-3490 says labels are
+private
 ```
 
 The dead islands are punctures; they are not the graph on which the flow runs.
@@ -218,11 +233,12 @@ lower-delta bypass gates
 seam-adjacent components
 low-rank escapes
 owner labels
+private-label firewall marks
 ```
 
 and two forbidden edges: the max-delta seam gates.
 
-### 8. Fiber-PGF suggests a local sheet-count inequality
+### 9. Fiber-PGF suggests a local sheet-count inequality
 
 HYP-3140 rewrites the Rprime floor as a conditional first-moment statement
 over sheet counts.  A random031 analogue would define

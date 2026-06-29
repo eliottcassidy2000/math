@@ -523,7 +523,7 @@ record what it destroys before asking it to prove anything.
 | LTI-442 | Random031 punctured-cylinder forbidden seam | Dead-island punctures, mirror-paired components, max-delta seam components, seven-owner seam layers, lower-delta phase-flow bypass, additive owner rim versus doubling branch fold | HYP-3482 extends the HYP-3481 topology atlas by treating the hard pair `(43,54)` as a forbidden max-delta seam whose complement carries phase flow.  Four isolated dead islands form two mirror pairs, the seam carries owners `(23,45,93,113,147,169,173)`, and the 282 phase witnesses live on the seam complement with zero hard-seam hits and 12 lower-delta bypass hits on the same components. | HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460, HYP-3455, HYP-3451, HYP-3438, THM-523, T1442, LTT-342, LTI-442, OPEN-Q-108 | Build a seam-complement graph: remove the max-delta hard pair, route all q=`14V` phase witnesses through lower-delta branch-compatible gates, and prove every phase-flow component reaches low-rank escape before it would need the forbidden seam. |
 | LTI-443 | Random031 recursion-flow comparator | `n*2` two-adic phase-flow blocks, `n+2` owner-boundary seam, mirror hit-pairing, ordered six-hit bypass windows, span lemma sidecar | HYP-3483 compares the recursion readings behind HYP-3482/HYP-3481.  The moving flow is `n*2`: q=`14V` has `282` witnesses, zero hard-gate hits, `12` lower-delta bypass hits, exact branch/component balance `6/6`, and two consecutive six-hit mirror blocks in `u=2t`.  The stationary seam is `n+2`: seam owners `(23,45,93,113,147,169,173)` versus bypass owners `(23,93,113)`. | HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460, HYP-3455, HYP-3234, HYP-3232, HYP-3230, HYP-3418, THM-523, T1443, LTT-343, LTI-443, OPEN-Q-108 | Prove a controlled span lemma: seven-owner seam boundary plus ordered two-adic bypass blocks discharges random031 or emits named owner-current/two-adic/SPEC debt. |
 | LTI-444 | Random031 forbidden-seam flow geometry | Mirror-punctured cylinder, four isolated dead islands, max-delta seven-owner seam, q=14V phase-flow complement, lower-delta same-component bypass, C=27 carry/doubling split | HYP-3484 refines the HYP-3483 recursion-flow comparator, the HYP-3482 punctured-cylinder seam atlas, and the HYP-3481 random031 topology atlas after HYP-3479.  The hard pair on components `(43,54)` is not a phase wall: it has max delta `7`, carries all seven owner labels, and receives `0` compatible q=`14V` phase hits.  The same components are hit exactly `12` times through two lower-delta mirror bypass gates, split `6+6`; deleting the seam changes no phase routing, while deleting the bypass gates loses exactly `12` gate hits.  HYP-3480 confirms random031 has `0/4` branch-unit singleton-current components, so it stays outside the six-row mirror-unit packet. | HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-2241, THM-523, T1444, LTT-344, LTI-444, OPEN-Q-108 | Prove the random031 terminal clause as forbidden seam plus complement flow.  Retain the lower-delta bypass and `C=27` carry/doubling sidecar before using wall, delta, owner-count, or raw phase-hit scalars. |
-| LTI-445 | Random031 seam-complement connection atlas | Relative H1 seam complement, four punctures, owner monodromy seam word, ordered two-adic bypass blocks, Menger/Green escape graph, zipper quotient ladder, local sheet-count moment | HYP-3485 synthesizes past possible connections for seam complement and bypass flow around incoming HYP-3484.  Random031 should be modeled as `cylinder - punctures - forbidden seam`: delete the max-delta seam, keep dead islands as punctures, route flow through the `u=2t` bypass sheet, and record owner labels as cut/monodromy charges.  It connects HYP-3023 zipper guardrails, HYP-3034 relative Cech/path lifts, HYP-3422/HYP-3428 two-adic branch relocation, HYP-3437/HYP-3451 Menger/current escape tests, and HYP-3140 sheet-count moments. | HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3023, THM-523, T1445, LTT-345, LTI-445, OPEN-Q-108 | Build the relative seam-complement graph or H1 complex and test whether every phase-flow component reaches a low-rank escape before using the forbidden seam. |
+| LTI-445 | Random031 seam-complement connection atlas | Relative H1 seam complement, four punctures, owner monodromy seam word, ordered two-adic bypass blocks, private-label firewall sidecar, Menger/Green escape graph, zipper quotient ladder, local sheet-count moment | HYP-3485 synthesizes past possible connections for seam complement and bypass flow around incoming HYP-3484, now with HYP-3490 as the no-current-deletion sidecar for random031's private touched labels.  Random031 should be modeled as `cylinder - punctures - forbidden seam`: delete the max-delta seam, keep dead islands as punctures, route flow through the `u=2t` bypass sheet, record owner labels as cut/monodromy charges, and retain private-label firewall status before using current deletion.  It connects HYP-3023 zipper guardrails, HYP-3034 relative Cech/path lifts, HYP-3422/HYP-3428 two-adic branch relocation, HYP-3437/HYP-3451 Menger/current escape tests, HYP-3490 label multiplicity, and HYP-3140 sheet-count moments. | HYP-3485, HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3023, THM-523, T1445, LTT-345, LTI-445, OPEN-Q-108 | Build the relative seam-complement graph or H1 complex, carry the HYP-3490 private-label firewall, and test whether every phase-flow component reaches a low-rank escape before using the forbidden seam. |
 | LTI-446 | Random031 seam-complement fiber graph | Two-adic cylinder coordinate `u=2t mod 1`, branch sheets, legal horizontal+mirror flow components, endpoint-rank-2 routing, free-hole packets, pure 12-cell bypass, vertical half-turn quotient guardrail | HYP-3486 executes the HYP-3482 seam-complement graph target.  The 282 witnesses occupy 258/1211 base fibers.  After deleting the max-delta seam, 242 cells hit exactly one endpoint-rank-2 gate and 40 cells are free-hole witnesses.  The legal horizontal+mirror graph has 79 components: 64 ordinary rank-2 components, one pure 12-cell bypass component on `(43,54)` with owners `(23,93,113)`, and 14 mirror-closed free-hole packets. | HYP-3486, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, HYP-3438, THM-523, T1446, LTT-346, LTI-446, OPEN-Q-108 | Prove the finite trichotomy: rank-2 routed witness cells discharge, free-hole packets discharge as already-safe phase holes, and the pure bypass component discharges the hard seam boundary or emits named owner/two-adic/SPEC debt.  Do not identify vertical half-turn fibers without a sidecar. |
 | LTI-450 | Private-label firewall audit | Dead-cover blocker label multiplicity, E/branch-touched private labels, all-union projection-edge firewall, random031 hard-overlap split, small-touch/no-hard packet | HYP-3490 explains HYP-3476's pair-current failure: the seven HYP-3472 random projection-edge exceptions are exactly the rows where every E/branch-touched blocker label has dead-cover multiplicity `1`.  Hence no union of adjacent E/branch gate labels can delete a projection edge. | HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523, T1450, LTT-350, LTI-450, OPEN-Q-108 | Formalize the multiplicity-one projection lemma; route random031 through HYP-3484 forbidden-seam flow/HYP-3483 recursion/HYP-3482 seam/HYP-3481 topology/HYP-3455 gluing and the other six private/no-hard rows through HYP-3480's singleton-current audit over HYP-3478 small-touch geometry, owner-current, endpoint-spine, exact-period/state-lift, two-adic, or signed-SPEC debt. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
@@ -9776,22 +9776,26 @@ LTI-450, LTT-350, T1450, OPEN-Q-108.
 ## LTI-445: Random031 Seam-Complement Connection Atlas
 
 Created by codex-2026-06-29 for HYP-3485/T1445/LTT-345.  This technique
-keeps HYP-3484 as the executable forbidden-seam flow geometry and records the
+keeps HYP-3484 as the executable forbidden-seam flow geometry, carries
+HYP-3490 as the private-label no-current-deletion sidecar, and records the
 past-work bridge that makes the geometry proof-facing.
 
 Carrier / vertex set: relative H1 seam-complement classes, four mirror-paired
 punctures, owner monodromy along the max-delta seam, ordered `u=2t` bypass
-blocks, Menger/Green escape graphs, zipper quotient states, local sheet-count
-moments, and the raw scalar shadow as a negative control.
+blocks, private-label firewall marks, Menger/Green escape graphs, zipper
+quotient states, local sheet-count moments, and the raw scalar shadow as a
+negative control.
 
 Preserved LRC predicate: whether the random031 terminal clause can be proved
 after deleting the max-delta seam while retaining punctures, lower-delta bypass
-flow, owner labels, and low-rank escape boundaries.
+flow, owner labels, private-label firewall status, and low-rank escape
+boundaries.
 
 Destroyed information: quotienting to a raw wall, delta, owner count, or phase
 hit count forgets at least one essential sidecar.  The legal quotient must
 remember zero hard-seam phase hits, the two lower-delta same-component bypass
-gates, four punctures, and the seven-owner seam word.
+gates, four punctures, the seven-owner seam word, and the HYP-3490
+private-label multiplicity obstruction.
 
 Past-work connections:
 
@@ -9799,6 +9803,7 @@ Past-work connections:
 HYP-3455  seven-owner gate gluing -> owner monodromy charge
 HYP-3460  phase-color pullback -> measured bypass flow
 HYP-3477  hard-orbit discharge -> random031 as unique seam case
+HYP-3490  private-label firewall -> adjacent-label current deletion is blocked
 HYP-3023  zipper guardrails -> quotient may forget only after sidecars
 HYP-3034  Cech/path lift -> relative H1 audit
 HYP-3422/HYP-3428 -> two-adic branch relocation
@@ -9812,6 +9817,7 @@ Tournament Analysis: vertices are proof obligations rather than runners:
 relative_H1_seam_complement
 two_adic_ordered_bypass_blocks
 owner_monodromy_seam_word
+private_label_firewall_sidecar
 menger_green_escape_graph
 zipper_quotient_ladder
 fiber_pgf_sheet_moment
@@ -9819,15 +9825,16 @@ raw_scalar_shadow
 ```
 
 Pairwise observable is retained LRC predicate, relative-topology payload,
-two-adic bypass payload, owner-charge payload, escape-boundary payload, and
-scalar-forgetting penalty.  The tie Hamiltonian path is the displayed order
-from relative H1 through raw shadow.
+two-adic bypass payload, owner-charge payload, private-label firewall payload,
+escape-boundary payload, and scalar-forgetting penalty.  The tie Hamiltonian
+path is the displayed order from relative H1 through raw shadow.
 
 Best use: build the seam-complement graph or relative H1 complex with low-rank
-escapes as boundary, then test whether every q=`14V` phase-flow component
-reaches escape before using the forbidden seam.  A positive result would turn
-HYP-3484 from an exact geometric readout into a terminal random031 theorem.
+escapes as boundary and private-label firewall marks on currentless components,
+then test whether every q=`14V` phase-flow component reaches escape before
+using the forbidden seam.  A positive result would turn HYP-3484 from an exact
+geometric readout into a terminal random031 theorem.
 
-Pointers: HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477,
+Pointers: HYP-3485, HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477,
 HYP-3460, HYP-3455, HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140,
 HYP-3034, HYP-3023, THM-523, LTI-445, LTT-345, T1445, OPEN-Q-108.
