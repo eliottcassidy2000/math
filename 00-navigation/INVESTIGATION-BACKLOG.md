@@ -42,6 +42,35 @@ Tournament vertices should be proof carriers and obligations: pair-current
 cut, mirror-pair current, single-gate current, HYP-3473 formal packet,
 partition-lattice guardrail, and scalar shadows.  Record explicitly which
 predicate is preserved and which interval/branch information is destroyed.
+## Lead codex-2026-06-29: exception-frontier router sidecar
+
+**Status:** EVIDENCE / finite packet-router audit; not proof
+(HYP-3476/T1436/LTI-436/LTT-336), joining HYP-3472 boundary-current
+exceptions with HYP-3475 hard mirror-orbit debt.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3476-lrc14-exception-frontier-router.md`,
+script
+`04-computation/lrc14_exception_frontier_router_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_exception_frontier_router_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-exception-frontier-router-codex-20260629.md`.
+
+Readout: the currentless boundary frontier and hard mirror-orbit frontier
+intersect only at `random_covering_031`.  Six hard rows already have
+separating currents; six non-AP currentless rows have no hard orbit and best
+touching-gate adjacent delta in `{2,3}`; the two AP84 currentless rows route to
+the closed AP84 packet.  No subset of HYP-3474 axes `K,N,T,S,F,C,M,A`
+preserves the six-label terminal route partition, so sidecar `R` is required
+unless reconstructed.
+
+Next: prove the six small-touch/no-hard rows are harmless by bounded
+owner-current, endpoint-spine, two-adic, exact-period, or signed-SPEC debt:
+`random_covering_001`, `random_covering_039`, `random_covering_062`,
+`random_covering_074`, `random_covering_086`, and `random_covering_101`.
+Use tournament vertices as terminal proof packets, not runners or raw row
+names.
 
 ## Lead codex-2026-06-29: dead-cover boundary-current audit
 

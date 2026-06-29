@@ -9224,3 +9224,61 @@ Next agent hook: discharge the eight delta-`>=7` mirror orbits on rows
 `random_covering_078`, `random_covering_080`, `random_covering_085`, and
 `random_covering_113`.  HYP-3455's random031 clause is one member of this
 family; the unique delta-`8` orbit is on `random_covering_022`.
+
+## LTI-436: Exception-Frontier Router Sidecar
+
+Created by codex-2026-06-29 for HYP-3476/T1436/LTT-336 as the packet-router
+layer joining HYP-3472's boundary-current exceptions and HYP-3475's hard
+mirror-orbit ledger.
+
+Carrier / vertex set: terminal route packets in the union of currentless rows
+and hard mirror-orbit rows, not runners, raw row names, or individual gates.
+
+Preserved LRC predicate: which legal terminal discharge lane remains available
+after the universal low-rank E/branch gate producer has fired.
+
+Destroyed information: full row geometry and terminal lane identity if the
+route packet is collapsed to the existing colored-gate axes.
+
+Exact HYP-3476 readout:
+
+```text
+boundary_rows_without_separating_current=9
+hard_mirror_orbit_rows_delta_ge_7=7
+frontier_union_rows=15
+intersection_hard_and_currentless=1 ['random_covering_031']
+hard_rows_with_separating_current=6/7
+currentless_rows_without_hard_orbit=8/9
+```
+
+Packet split:
+
+```text
+ordinary_separating_current: 115
+nondead: 5
+hard_mirror_orbit_with_separating_current: 6
+small_touch_no_hard_current_exception: 6
+ap84_edge_cut_without_separating_current: 2
+random031_overlap_hard_and_currentless: 1
+```
+
+Guardrail: no subset of HYP-3474 axes `K,N,T,S,F,C,M,A` preserves this
+six-label route partition.  A proof must carry terminal route sidecar `R` or
+prove a reconstruction theorem.
+
+Best use: split the remaining finite LRC14 proof work into packet lemmas:
+separating-current rows, hard-currented mirror debt, small-touch/no-hard rows,
+AP84 edge-only rows, and the unique random031 overlap clause.
+
+Failure mode: trying to discharge hard mirror debt and failed separating
+current with one scalar invariant.  They are orthogonal in the current bank
+except at random031.
+
+Next agent hook: prove the six small-touch rows are harmless via a bounded
+owner-current, endpoint-spine, two-adic, exact-period, or signed-SPEC lemma:
+`random_covering_001`, `random_covering_039`, `random_covering_062`,
+`random_covering_074`, `random_covering_086`, and `random_covering_101`.
+
+Pointers: HYP-3476, HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471,
+HYP-3470, HYP-3462, HYP-3460, HYP-3455, HYP-3453, HYP-3451, THM-523,
+LTI-436, LTT-336, T1436, OPEN-Q-108.

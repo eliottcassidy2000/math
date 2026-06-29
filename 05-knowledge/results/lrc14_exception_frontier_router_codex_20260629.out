@@ -1,0 +1,136 @@
+HYP-3476 LRC14 EXCEPTION-FRONTIER ROUTER
+status=EVIDENCE / finite packet-router audit; not an LRC14 proof
+source=HYP-3472 boundary-current exceptions + HYP-3475 hard mirror-orbit debt
+
+## Assumption Challenge
+alternate vertices considered: runners, gaps, fixed circle sections,
+section boundaries, wall-crossing events, residues, cover arcs,
+individual survivor gates, mirror orbits, dead-cover labels, quotient
+fibers, and proof obligations.
+chosen carrier vertices: terminal exception packets in the union of
+boundary-current failures and hard mirror-orbit rows.
+preserved predicate: which legal terminal exit can discharge an LRC14
+row after the universal E/branch gate producer has fired.
+destroyed by scalarization: whether the row is hard-but-currented,
+small-touch-but-not-hard, AP84 edge-only, or the unique random031 overlap.
+
+## Frontier Orthogonality
+rows_audited=135
+dead_rows=130
+boundary_rows_without_projection_edge_cut=7 ['random_covering_001', 'random_covering_031', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+boundary_rows_without_separating_current=9 ['covering_AP_with_84', 'ap_omit_12_tail_84x01', 'random_covering_001', 'random_covering_031', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+hard_mirror_orbit_rows_delta_ge_7=7 ['random_covering_022', 'random_covering_031', 'random_covering_049', 'random_covering_078', 'random_covering_080', 'random_covering_085', 'random_covering_113']
+frontier_union_rows=15 ['ap_omit_12_tail_84x01', 'covering_AP_with_84', 'random_covering_001', 'random_covering_022', 'random_covering_031', 'random_covering_039', 'random_covering_049', 'random_covering_062', 'random_covering_074', 'random_covering_078', 'random_covering_080', 'random_covering_085', 'random_covering_086', 'random_covering_101', 'random_covering_113']
+intersection_hard_and_currentless=1 ['random_covering_031']
+hard_rows_with_separating_current=6/7 ['random_covering_022', 'random_covering_049', 'random_covering_078', 'random_covering_080', 'random_covering_085', 'random_covering_113']
+currentless_rows_without_hard_orbit=8/9 ['ap_omit_12_tail_84x01', 'covering_AP_with_84', 'random_covering_001', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+
+## Terminal Packet Distribution
+route_hist_all_rows={'ap84_edge_cut_without_separating_current': 2, 'hard_mirror_orbit_with_separating_current': 6, 'nondead': 5, 'ordinary_separating_current': 115, 'random031_overlap_hard_and_currentless': 1, 'small_touch_no_hard_current_exception': 6}
+route_hist_frontier={'ap84_edge_cut_without_separating_current': 2, 'hard_mirror_orbit_with_separating_current': 6, 'random031_overlap_hard_and_currentless': 1, 'small_touch_no_hard_current_exception': 6}
+ap84_edge_only_rows=['ap_omit_12_tail_84x01', 'covering_AP_with_84']
+small_touch_no_hard_rows=['random_covering_001', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+small_touch_best_delta_range=(2, 3)
+small_touch_best_current_hist={(1, 1): 5, (2, 1): 1}
+
+## Frontier Row Ledger
+row=ap_omit_12_tail_84x01 route=ap84_edge_cut_without_separating_current
+  flags=ap84=True dead=True no_edge=False no_separating=True hard_orbits=0 hard_max_delta=0
+  best_boundary_cut=gate=[8/49,97/588] kind=B1|E labels=('B0:13', 'B1:7') removed_edges=20 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  min_e_branch_orbit=typed_pair=('B1:7|E:0', 'E:0|B0:7') structural_pair=(('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)) components=(3, 22) min_length=1/588
+row=covering_AP_with_84 route=ap84_edge_cut_without_separating_current
+  flags=ap84=True dead=True no_edge=False no_separating=True hard_orbits=0 hard_max_delta=0
+  best_boundary_cut=gate=[8/49,97/588] kind=B1|E labels=('B0:13', 'B1:7') removed_edges=20 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  min_e_branch_orbit=typed_pair=('B1:7|E:0', 'E:0|B0:7') structural_pair=(('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)) components=(3, 22) min_length=1/588
+row=random_covering_001 route=small_touch_no_hard_current_exception
+  flags=ap84=False dead=True no_edge=True no_separating=True hard_orbits=0 hard_max_delta=0
+  best_boundary_cut=gate=[1/98,2/189] kind=E|B1 labels=('B0:165', 'B0:179', 'B1:81') removed_edges=0 largest_drop=0 component_gain=0 current=(2,1) delta=(2,1)
+  min_e_branch_orbit=typed_pair=('B0:11|E:6', 'E:6|B1:11') structural_pair=(('B0|E', 'branch0', 'left_bad_edge', 1, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 1)) components=(26, 73) min_length=1/15330
+row=random_covering_022 route=hard_mirror_orbit_with_separating_current
+  flags=ap84=False dead=True no_edge=False no_separating=False hard_orbits=2 hard_max_delta=8
+  best_boundary_cut=gate=[127/350,216/595] kind=E|B1 labels=('B0:77', 'B0:93', 'B1:117', 'B1:85') removed_edges=14 largest_drop=7 component_gain=5 current=(2,2) delta=(2,2)
+  min_e_branch_orbit=typed_pair=('B0:1|E:8', 'E:8|B1:1') structural_pair=(('B0|E', 'branch0', 'left_bad_edge', 2, 2), ('E|B1', 'branch1', 'right_bad_edge', 2, 2)) components=(36, 65) min_length=1/5950
+  hard_orbit=delta=7 components=(10, 91) typed_pair=('B0:5|B0:3', 'B1:3|B1:5') structural_pair=(('B0|B0', 'branch0', 'two_sided', 3, 4), ('B1|B1', 'branch1', 'two_sided', 4, 3)) intervals=('[40/399,104/1015]', '[911/1015,359/399]')
+  hard_orbit=delta=8 components=(17, 84) typed_pair=('B0:7|B0:3', 'B1:3|B1:7') structural_pair=(('B0|B0', 'both', 'two_sided', 4, 4), ('B1|B1', 'both', 'two_sided', 4, 4)) intervals=('[9/49,223/1197]', '[974/1197,40/49]')
+row=random_covering_031 route=random031_overlap_hard_and_currentless
+  flags=ap84=False dead=True no_edge=True no_separating=True hard_orbits=1 hard_max_delta=7
+  best_boundary_cut=gate=[59/168,426/1211] kind=E|B1 labels=('B0:23', 'B0:45', 'B1:93') removed_edges=0 largest_drop=0 component_gain=0 current=(2,1) delta=(2,2)
+  min_e_branch_orbit=typed_pair=('B1:1|E:8', 'E:8|B0:1') structural_pair=(('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)) components=(14, 83) min_length=1/28392
+  hard_orbit=delta=7 components=(43, 54) typed_pair=('B0:9|B0:1', 'B1:1|B1:9') structural_pair=(('B0|B0', 'branch0', 'two_sided', 3, 4), ('B1|B1', 'branch1', 'two_sided', 4, 3)) intervals=('[71/161,349/791]', '[442/791,90/161]')
+row=random_covering_039 route=small_touch_no_hard_current_exception
+  flags=ap84=False dead=True no_edge=True no_separating=True hard_orbits=0 hard_max_delta=0
+  best_boundary_cut=gate=[3/224,13/903] kind=E|B0 labels=('B0:129', 'B1:63') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  min_e_branch_orbit=typed_pair=('B1:11|E:2', 'E:2|B0:11') structural_pair=(('B1|E', 'branch1', 'left_bad_edge', 2, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 2)) components=(41, 52) min_length=1/12012
+row=random_covering_049 route=hard_mirror_orbit_with_separating_current
+  flags=ap84=False dead=True no_edge=False no_separating=False hard_orbits=1 hard_max_delta=7
+  best_boundary_cut=gate=[169/924,125/679] kind=E|B0 labels=('B0:97', 'B1:5') removed_edges=18 largest_drop=3 component_gain=2 current=(1,1) delta=(1,1)
+  min_e_branch_orbit=typed_pair=('B0:3|E:6', 'E:6|B1:3') structural_pair=(('B0|E', 'branch0', 'left_bad_edge', 1, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 1)) components=(11, 96) min_length=1/16352
+  hard_orbit=delta=7 components=(7, 100) typed_pair=('B0:1|B0:5', 'B1:5|B1:1') structural_pair=(('B0|B0', 'both', 'two_sided', 3, 4), ('B1|B1', 'both', 'two_sided', 4, 3)) intervals=('[71/1085,55/819]', '[764/819,1014/1085]')
+row=random_covering_062 route=small_touch_no_hard_current_exception
+  flags=ap84=False dead=True no_edge=True no_separating=True hard_orbits=0 hard_max_delta=0
+  best_boundary_cut=gate=[134/567,83/350] kind=B1|E labels=('B0:9', 'B1:81') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  min_e_branch_orbit=typed_pair=('B1:3|E:0', 'E:0|B0:3') structural_pair=(('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)) components=(45, 84) min_length=11/83790
+row=random_covering_074 route=small_touch_no_hard_current_exception
+  flags=ap84=False dead=True no_edge=True no_separating=True hard_orbits=0 hard_max_delta=0
+  best_boundary_cut=gate=[47/231,153/728] kind=B0|E labels=('B0:99', 'B1:15') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  min_e_branch_orbit=typed_pair=('B0:3|E:6', 'E:6|B1:3') structural_pair=(('B0|E', 'branch0', 'left_bad_edge', 1, 2), ('E|B1', 'branch1', 'right_bad_edge', 2, 1)) components=(10, 73) min_length=5/93912
+row=random_covering_078 route=hard_mirror_orbit_with_separating_current
+  flags=ap84=False dead=True no_edge=False no_separating=False hard_orbits=1 hard_max_delta=7
+  best_boundary_cut=gate=[22/189,41/350] kind=B1|E labels=('B0:17', 'B1:27') removed_edges=19 largest_drop=2 component_gain=2 current=(1,1) delta=(1,1)
+  min_e_branch_orbit=typed_pair=('B1:13|E:10', 'E:10|B0:13') structural_pair=(('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)) components=(12, 85) min_length=1/14000
+  hard_orbit=delta=7 components=(19, 78) typed_pair=('B0:11|B1:13', 'B0:13|B1:11') structural_pair=(('B0|B1', 'branch0', 'two_sided', 4, 3), ('B0|B1', 'branch1', 'two_sided', 3, 4)) intervals=('[183/875,244/1155]', '[911/1155,692/875]')
+row=random_covering_080 route=hard_mirror_orbit_with_separating_current
+  flags=ap84=False dead=True no_edge=False no_separating=False hard_orbits=1 hard_max_delta=7
+  best_boundary_cut=gate=[152/315,223/462] kind=B1|E labels=('B0:25', 'B0:63', 'B1:135', 'B1:19') removed_edges=31 largest_drop=4 component_gain=4 current=(2,2) delta=(2,2)
+  min_e_branch_orbit=typed_pair=('B0:9|E:0', 'E:0|B1:9') structural_pair=(('B0|E', 'branch0', 'left_bad_edge', 1, 1), ('E|B1', 'branch1', 'right_bad_edge', 1, 1)) components=(29, 76) min_length=1/13230
+  hard_orbit=delta=7 components=(33, 72) typed_pair=('B0:1|B0:9', 'B1:9|B1:1') structural_pair=(('B0|B0', 'branch0', 'two_sided', 4, 3), ('B1|B1', 'branch1', 'two_sided', 3, 4)) intervals=('[302/945,286/889]', '[603/889,643/945]')
+row=random_covering_085 route=hard_mirror_orbit_with_separating_current
+  flags=ap84=False dead=True no_edge=False no_separating=False hard_orbits=1 hard_max_delta=7
+  best_boundary_cut=gate=[13/56,83/357] kind=E|B0 labels=('B0:51', 'B1:39') removed_edges=21 largest_drop=3 component_gain=3 current=(1,1) delta=(1,1)
+  min_e_branch_orbit=typed_pair=('B1:11|E:6', 'E:6|B0:11') structural_pair=(('B1|E', 'branch1', 'left_bad_edge', 1, 2), ('E|B0', 'branch0', 'right_bad_edge', 2, 1)) components=(18, 133) min_length=1/10920
+  hard_orbit=delta=7 components=(3, 148) typed_pair=('B0:13|B1:1', 'B0:1|B1:13') structural_pair=(('B0|B1', 'branch0', 'two_sided', 3, 4), ('B0|B1', 'branch1', 'two_sided', 4, 3)) intervals=('[15/497,2/63]', '[61/63,482/497]')
+row=random_covering_086 route=small_touch_no_hard_current_exception
+  flags=ap84=False dead=True no_edge=True no_separating=True hard_orbits=0 hard_max_delta=0
+  best_boundary_cut=gate=[106/1183,69/770] kind=B1|E labels=('B0:133', 'B1:169') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  min_e_branch_orbit=typed_pair=('B1:1|E:12', 'E:12|B0:1') structural_pair=(('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)) components=(9, 132) min_length=1/130130
+row=random_covering_101 route=small_touch_no_hard_current_exception
+  flags=ap84=False dead=True no_edge=True no_separating=True hard_orbits=0 hard_max_delta=0
+  best_boundary_cut=gate=[31/210,181/1225] kind=E|B0 labels=('B0:175', 'B1:7') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1) delta=(1,1)
+  min_e_branch_orbit=typed_pair=('B1:13|E:4', 'E:4|B0:13') structural_pair=(('B1|E', 'branch1', 'left_bad_edge', 1, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 1)) components=(47, 74) min_length=11/151970
+row=random_covering_113 route=hard_mirror_orbit_with_separating_current
+  flags=ap84=False dead=True no_edge=False no_separating=False hard_orbits=1 hard_max_delta=7
+  best_boundary_cut=gate=[19/308,23/371] kind=E|B0 labels=('B0:125', 'B0:159', 'B0:91', 'B1:143', 'B1:77') removed_edges=10 largest_drop=7 component_gain=4 current=(3,2) delta=(3,2)
+  min_e_branch_orbit=typed_pair=('B1:13|E:0', 'E:0|B0:13') structural_pair=(('B1|E', 'branch1', 'left_bad_edge', 2, 1), ('E|B0', 'branch0', 'right_bad_edge', 1, 2)) components=(56, 101) min_length=1/130928
+  hard_orbit=delta=7 components=(33, 124) typed_pair=('B0:5|B0:3', 'B1:3|B1:5') structural_pair=(('B0|B0', 'both', 'two_sided', 4, 3), ('B1|B1', 'both', 'two_sided', 3, 4)) intervals=('[204/1001,230/1113]', '[883/1113,797/1001]')
+
+## Quotient Guardrail
+target=terminal_route_packet
+distribution={'ap84_edge_cut_without_separating_current': 2, 'hard_mirror_orbit_with_separating_current': 6, 'nondead': 5, 'ordinary_separating_current': 115, 'random031_overlap_hard_and_currentless': 1, 'small_touch_no_hard_current_exception': 6}
+fewest_axis_route_pure=none among axes=('K', 'N', 'T', 'S', 'F', 'C', 'M', 'A')
+most_compressed_route_pure=none among existing colored-gate axes
+required_sidecar_R=terminal_route_packet fibers=6 max_fiber=115
+
+## Lemma Target
+Finite audited form:
+  The HYP-3472 currentless frontier and HYP-3475 hard-orbit frontier
+  intersect only at random_covering_031.
+  The six hard rows outside random031 already have a separating
+  E/branch boundary current, so hard mirror debt need not be the
+  terminal obstruction there.
+  The six non-AP currentless rows outside random031 have no hard
+  mirror orbit; their best touching gates have total adjacent-delta <= 3.
+  The two AP84 currentless rows have projection edge cuts and are routed
+  to the closed AP84 endpoint/corridor/color packet.
+  Thus only random031 carries both defects, matching HYP-3455/HYP-3460.
+  No existing HYP-3474 colored-gate quotient axis subset preserves this
+  six-label terminal route partition; a later proof must carry the route
+  sidecar R or prove a reconstruction theorem for it.
+
+## Tournament Analysis
+vertices=terminal exception packets, not runners or raw exception names
+pairwise_observable=frontier partition + boundary-current payload + mirror-orbit payload + AP84 splice + random031 gluing + quotient firewall
+switch=higher retained-proof-predicate score; ties use declared route order
+axes=('frontier_partition', 'boundary_current_payload', 'mirror_orbit_payload', 'ap84_splice', 'random031_gluing', 'quotient_firewall')
+score_hist={12: 1, 45: 1, 46: 2, 49: 1, 54: 1, 58: 1}
+directed_3cycles=0
+hamiltonian_path=R00_orthogonal_exception_packet_theorem -> R01_unique_overlap_random031_clause -> R02_hard_orbit_with_separating_current -> R04_ap84_edge_only_closed_packet -> R05_partition_lattice_route_label -> R03_small_touch_no_hard_boundary_rows -> R06_raw_exception_name_list

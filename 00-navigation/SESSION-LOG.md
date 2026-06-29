@@ -19,6 +19,54 @@ two extra separating-current exceptions.  Enumerate pairs of low-rank E/branch
 survivor gates, remove the union of their adjacent blocker labels from the
 HYP-3451 dead-cover projection, and score projection cuts, branch-separated
 currents, component drops, and HYP-3475 mirror-pair status.
+## codex-2026-06-29 -- HYP-3476 exception-frontier router
+
+Prompt: keep pushing creative LRC14 proof angles after HYP-3475.  Pulled the
+incoming mirror-orbit work, then tested whether HYP-3472 boundary-current
+exceptions and HYP-3475 hard mirror-orbit debt describe the same obstruction.
+
+Added HYP-3476/T1436/LTI-436/LTT-336 plus script/result/reflection:
+
+```text
+04-computation/lrc14_exception_frontier_router_codex_20260629.py
+05-knowledge/results/lrc14_exception_frontier_router_codex_20260629.out
+05-knowledge/hypotheses/HYP-3476-lrc14-exception-frontier-router.md
+07-reflections/lrc14-exception-frontier-router-codex-20260629.md
+```
+
+Core readout:
+
+```text
+boundary_rows_without_separating_current=9
+hard_mirror_orbit_rows_delta_ge_7=7
+frontier_union_rows=15
+intersection_hard_and_currentless=1 ['random_covering_031']
+hard_rows_with_separating_current=6/7
+currentless_rows_without_hard_orbit=8/9
+```
+
+Interpretation: large mirror debt and failed separating current are orthogonal
+except at `random_covering_031`, already HYP-3455/HYP-3460 debt.  The six hard
+rows outside random031 already have separating E/branch currents.  The six
+non-AP currentless rows outside random031 have no hard orbit and best
+touching-gate adjacent delta in `{2,3}`.  The two AP84 currentless rows have
+projection edge cuts and route to the closed AP84 packet.
+
+Quotient lesson: no subset of HYP-3474 axes `K,N,T,S,F,C,M,A` preserves the
+six-label terminal route partition.  A proof must carry route sidecar `R`, or
+prove reconstruction for it.
+
+Rebase integration: incoming S319 gate unit-delta split uses a conflicting
+local `HYP-3472` name, so treat it as S319 until the namespace is reconciled.
+Its `19`-row delta-sidecar packet intersects the HYP-3476 frontier at
+`random_covering_022`, `random_covering_039`, `random_covering_074`,
+`random_covering_085`, and `random_covering_113`.  This is an upstream
+gate-kind coordinate, not a replacement for terminal route sidecar `R`.
+
+Next hook: prove the six small-touch/no-hard rows harmless by bounded
+owner-current, endpoint-spine, two-adic, exact-period, or signed-SPEC debt:
+`random_covering_001`, `random_covering_039`, `random_covering_062`,
+`random_covering_074`, `random_covering_086`, and `random_covering_101`.
 
 ## codex-2026-06-29 -- HYP-3472 dead-cover boundary-current audit
 

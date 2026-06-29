@@ -1,5 +1,43 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3476 exception-frontier router addendum:**
+HYP-3476 compares the HYP-3472 boundary-current exception frontier with the
+HYP-3475 hard mirror-orbit frontier.  Exact readout:
+
+```text
+boundary_rows_without_separating_current=9
+hard_mirror_orbit_rows_delta_ge_7=7
+frontier_union_rows=15
+intersection_hard_and_currentless=1 ['random_covering_031']
+hard_rows_with_separating_current=6/7
+currentless_rows_without_hard_orbit=8/9
+```
+
+The unique overlap is `random_covering_031`, already HYP-3455/HYP-3460 debt.
+The six hard rows outside random031 already have separating E/branch currents,
+while the six non-AP currentless rows outside random031 have no hard mirror
+orbit and best touching-gate adjacent delta in `{2,3}`.  The AP84 currentless
+pair is edge-only and routes to the closed AP84 packet.
+
+Open proof task: prove the six small-touch/no-hard rows are harmless using a
+bounded owner-current, endpoint-spine, two-adic, exact-period, or signed-SPEC
+lemma:
+
+```text
+random_covering_001
+random_covering_039
+random_covering_062
+random_covering_074
+random_covering_086
+random_covering_101
+```
+
+Guardrail: no subset of HYP-3474 axes `K,N,T,S,F,C,M,A` preserves the
+six-label terminal route partition.  Carry route sidecar `R`, or prove a
+reconstruction theorem for it. -> HYP-3476, HYP-3475, HYP-3474, HYP-3473,
+HYP-3472, HYP-3455, HYP-3453, HYP-3451, THM-523, LTI-436, LTT-336, T1436,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3473 colored gate formalization addendum:**
 HYP-3473 turns HYP-3471's colored gate-reservoir route into a Lean interface,
 not a proof.  The module `TournamentH7.LRCColoredGateFormalization` defines
