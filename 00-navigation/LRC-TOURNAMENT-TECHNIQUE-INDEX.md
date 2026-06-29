@@ -124,6 +124,25 @@ obligations, and proof-carrier interfaces.
 - **Pointers:** HYP-3523, HYP-3521, HYP-3520, HYP-3512, HYP-3511, HYP-3510,
   HYP-3494, HYP-3490, HYP-3486, T1523, LTI-523.
 
+## LTT-424 - Spigot/Hydrotope Residual Tournament
+
+- **Move:** Orient proof emitters and quotient sidecars by whether they shrink
+  the random031 owner tail while preserving owner labels and route sidecar `R`.
+- **LRC use:** HYP-3524 turns HYP-3522's filtration into a monotone spigot
+  schedule: emit transport `(23,93,113)`, emit bracket lift `(147,169)`, then
+  prove residual tail `(45,173)`.
+- **Preserves:** emitted owner digits, residual tail, branch-boundary
+  certificate, owner-support chamber uniqueness, and HYP-3513 route sidecar
+  `R`.
+- **Forgets / guardrail:** residue chamber signs, sliced-box volumes, and raw
+  owner counts are diagnostic shadows unless they reconstruct the labelled
+  owner tail.
+- **Next pull:** Prove the no-hidden-tail residual lemma and reject any
+  downstream quotient that identifies `(45,173)` with residue chamber-mates
+  like `(113,147)` or `(147,169)`.
+- **Pointers:** HYP-3524, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+  HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486, T1524, LTI-524.
+
 ## Fast Routing Map
 
 - Need to separate strict-open mass from endpoint-only equality:
@@ -10504,6 +10523,36 @@ quotient_legality_status
   HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484,
   HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, THM-523,
   LTI-522, LTT-422, T1522, OPEN-Q-108.
+
+## LTT-424: Random031 Spigot/Hydrotope Residual Tournament
+
+- **Move:** Use proof emitters and quotient sidecars as tournament vertices:
+  forbidden seam input, transport emitter, branch-boundary lift emitter,
+  residual tail, hydrotope chamber signature, sliced-box volume shadow, and
+  route sidecar `R`.
+- **LRC use:** HYP-3524 recasts HYP-3522's owner filtration as an online
+  emitter theorem.  The legal proof schedule is:
+  `seven-owner seam -> emit (23,93,113) -> emit (147,169) -> residual (45,173)`.
+- **Preserves:** monotone tail shrinkage, emitted owner labels, residual pair,
+  branch-boundary certificate, owner-support-cell chamber uniqueness, and
+  HYP-3513 route sidecar `R`.
+- **Forgets / guardrail:** Residue chamber signs and sliced-box volumes are
+  canaries.  `residue_mod14` already mixes `(45,173)` with `(113,147)` and
+  `(147,169)`, so residue-sign quotients cannot close the residual lemma.
+- **Pairwise observable:** tail shrinkage, owner-label reconstruction,
+  route-sidecar legality, and scalar-forgetting penalty.
+- **Switch/gauge:** orient toward the carrier that preserves more terminal
+  proof payload; ties follow the emitter order.
+- **Fingerprint:** score histogram
+  `{100:1,94:1,89:1,83:1,78:1,39:1,31:1,13:1}`, no directed `3`-cycles,
+  singleton SCCs, and Hamiltonian path
+  `full_filtration_spigot_packet -> residual_pair_tail_lemma -> transport_plus_boundary_emitter -> hydrotope_chamber_audit_with_owner_labels -> route_sidecar_R_guard -> sliced_box_volume_shadow -> raw_threshold_sign_shadow -> raw_owner_count_shadow`.
+- **Next hook:** Formalize an `EmitterState` recursion
+  `State 7 -> State 4 -> State 2 -> terminal discharge`, retaining route
+  sidecar `R` and rejecting scalar chamber/volume shadows.
+- **Pointers:** HYP-3524, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+  HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486, THM-523, LTI-524,
+  LTT-424, T1524, OPEN-Q-108.
 
 ## LTT-411: Random031 Free-Hole Bracket Atlas Tournament
 

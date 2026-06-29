@@ -1,5 +1,29 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3524 spigot/hydrotope residual addendum:** Can the
+random031 residual pair `(45,173)` be proved to be a no-hidden-tail terminal
+after transport and branch-boundary emitters fire?
+
+HYP-3524 packages HYP-3522 as an online emitter schedule:
+
+```text
+seven-owner seam
+  -> emit transport (23,93,113)
+  -> emit bracket lift (147,169)
+  -> residual tail (45,173)
+```
+
+The finite safety checks are monotone tail sizes `(7,4,2,2)`, monotone
+cumulative sizes `(0,3,5,5)`, no duplicate emitted owners, and residual tail
+`(45,173)`.  Hydrotope-style chamber signs show the guardrail: residue
+quotients mix `(45,173)` with `(113,147)` and `(147,169)`, while
+owner-support-cell chambers isolate the live targets.  The open proof task is
+to show that every later legal quotient with route sidecar `R` still
+reconstructs residual `(45,173)` and does not replace it by sliced-box volume,
+owner count, or residue-chamber shadows. -> HYP-3524, HYP-3522, HYP-3521,
+HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3490,
+HYP-3486, LTI-524, LTT-424, T1524.
+
 **OPEN-Q-108 HYP-3522 owner-boundary filtration addendum:** Can the random031
 pure-bypass owner-boundary lemma be reduced from HYP-3520's four-owner current
 debt to the residual pair `(45,173)`?

@@ -1,5 +1,20 @@
 # Investigation Backlog
 
+**HYP-3524 random031 spigot/hydrotope residual scout.**  Turn the HYP-3524
+emitter schedule into a no-hidden-tail lemma.  Exact schedule:
+`(23,45,93,113,147,169,173)` seam input, transport emit `(23,93,113)`,
+branch-boundary emit `(147,169)`, residual tail `(45,173)`.  Safety:
+cumulative sizes `(0,3,5,5)`, tail sizes `(7,4,2,2)`, monotone tail, no
+duplicate emits.  Hydrotope canary: residue chambers mix the residual with
+`(113,147)` and `(147,169)`, centered residues mix more, and filtration-layer
+weights mix heavily; only owner-support-cell weights isolate transport,
+transport-plus-boundary, and residual as singleton chambers.  Next task:
+formalize the online emitter state and prove every downstream quotient with
+HYP-3513 route sidecar `R` still sees residual `(45,173)` rather than a scalar
+volume/count/chamber shadow. -> HYP-3524, HYP-3522, HYP-3521, HYP-3520,
+HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
+LTI-524, LTT-424, T1524, OPEN-Q-108.
+
 **HYP-3522 random031 owner-boundary bracket filtration.**  Turn the HYP-3522
 filtration into the next terminal owner-boundary lemma.  Exact readout:
 forbidden seam owners `(23,45,93,113,147,169,173)`, pure bypass transport

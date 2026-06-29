@@ -1,3 +1,37 @@
+## codex-2026-06-29 -- HYP-3524 random031 spigot/hydrotope scout
+
+Prompt: integrate spigot algorithms and arXiv:2606.28280 as inspiration for
+new proof angles around the remaining LRC14 target.
+
+Pulled the concurrent random031 owner-boundary work through HYP-3522 and added
+a finite scout:
+
+```text
+04-computation/lrc14_random031_spigot_hydrotope_scout_codex_20260629.py
+05-knowledge/results/lrc14_random031_spigot_hydrotope_scout_codex_20260629.out
+05-knowledge/hypotheses/HYP-3524-lrc14-random031-spigot-hydrotope-scout.md
+07-reflections/lrc14-random031-spigot-hydrotope-scout-codex-20260629.md
+```
+
+Main reframe: HYP-3522's owner filtration is an online emitter theorem.  Start
+from seam owners `(23,45,93,113,147,169,173)`, emit stable transport
+`(23,93,113)`, emit branch-boundary lift `(147,169)`, and leave residual tail
+`(45,173)`.  The finite safety checks are monotone cumulative sizes
+`(0,3,5,5)`, monotone tail sizes `(7,4,2,2)`, no duplicate emits, and
+unemitted tail `(45,173)`.
+
+Hydrotope chamber audit: residue shadows are unsafe canaries.  `residue_mod14`
+puts residual `(45,173)` in a bucket with `(113,147)` and `(147,169)`,
+centered residue mixes five target-like subsets, and filtration-layer weights
+mix fifteen.  Owner-support-cell weights
+`{23:82,45:60,93:112,113:96,147:122,169:102,173:114}` isolate transport,
+transport-plus-boundary, and residual as singleton chambers.  Sliced-box
+volumes are diagnostic scalars only; they forget owner identity.
+
+Proof pull: formalize a no-hidden-tail lemma saying that after the transport
+and bracket emitters fire, every legal downstream quotient with HYP-3513 route
+sidecar `R` still reconstructs residual pair `(45,173)`.
+
 ## codex-2026-06-29 -- HYP-3520 random031 owner-boundary persistence
 
 Prompt: work creatively on owner-boundary persistence after the incoming

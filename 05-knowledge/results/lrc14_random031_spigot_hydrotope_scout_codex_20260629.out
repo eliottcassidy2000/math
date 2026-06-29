@@ -1,0 +1,94 @@
+HYP-3524 RANDOM031 SPIGOT/HYDROTOPE SCOUT
+status=EVIDENCE / spigot-emitter and sliced-box chamber scout; not an LRC14 proof
+row=random_covering_031
+sources=spigot_algorithm + hydrotope two-minus amplitude chamber-volume analogy
+
+## Live Owner Target
+seam_owners=(23, 45, 93, 113, 147, 169, 173)
+transport_owners=(23, 93, 113)
+branch_boundary_owners=(23, 93, 147, 169)
+bracket_lift=(147, 169)
+transport_plus_boundary=(23, 93, 113, 147, 169)
+residual_after_transport=(45, 147, 169, 173)
+residual_after_branch_boundary=(45, 173)
+reading=spigot view emits stable owner digits only after their local certificate is present; the un-emitted tail is exactly (45,173).
+
+## Spigot Emitter Schedule
+S0_forbidden_seam_input: emitted=() cumulative=() tail=(23, 45, 93, 113, 147, 169, 173) certificate=seven-owner forbidden seam is retained, not emitted
+S1_transport_emitter: emitted=(23, 93, 113) cumulative=(23, 93, 113) tail=(45, 147, 169, 173) certificate=HYP-3522 transport-word constancy on the pure bypass
+S2_branch_boundary_lift_emitter: emitted=(147, 169) cumulative=(23, 93, 113, 147, 169) tail=(45, 173) certificate=HYP-3522 adjacent ordinary branch-boundary bracket lift
+S3_residual_tail: emitted=() cumulative=(23, 93, 113, 147, 169) tail=(45, 173) certificate=remaining two-owner puncture/apex boundary lemma
+spigot_safety={'cumulative_sizes': (0, 3, 5, 5), 'tail_sizes': (7, 4, 2, 2), 'monotone_cumulative': True, 'monotone_tail': True, 'no_duplicate_emit': True, 'emitted_owners': (23, 93, 113, 147, 169), 'unemitted_tail': (45, 173)}
+
+## Branch Boundary / Mirror Cross-Check
+branch=0 bypass_u=(679, 680, 681, 682, 683, 684) phases=(7, 8, 9, 10, 11, 12) left_owners=(93, 147, 169) right_owners=(23, 169) intersection=(169,)
+branch=1 bypass_u=(527, 528, 529, 530, 531, 532) phases=(2, 3, 4, 5, 6, 7) left_owners=(23, 169) right_owners=(93, 147, 169) intersection=(169,)
+mirror_pair_owner_words={(23, 93, 113): 6}
+
+## Hydrotope Chamber Diagnostic
+system=residue_mod14
+  weights={23: 9, 45: 3, 93: 9, 113: 1, 147: 7, 169: 1, 173: 5}
+  volumes: V_transport=5353253/8573040 V_boundary=1687387/1714608 V_residual=27221/1714608 bracket_slab=73421/204120 tail_after_boundary=27221/1714608
+  signature_bucket_hist={13: 2, 3: 2, 35: 1, 55: 1, 6: 1}
+  target=transport sum=19 signature=(0, -1, 1) bucket_size=6 examples=((23, 45, 147), (23, 93, 113), (23, 93, 169), (45, 93, 147), (23, 45, 113, 169, 173))
+  target=transport_plus_boundary sum=27 signature=(1, 0, 1) bucket_size=3 examples=((23, 45, 93, 113, 173), (23, 45, 93, 169, 173), (23, 93, 113, 147, 169))
+  target=bracket_lift sum=8 signature=(-1, -1, 0) bucket_size=3 examples=((45, 173), (113, 147), (147, 169))
+  target=residual sum=8 signature=(-1, -1, 0) bucket_size=3 examples=((45, 173), (113, 147), (147, 169))
+system=centered_residue
+  weights={23: 5, 45: 3, 93: 5, 113: 1, 147: 7, 169: 1, 173: 5}
+  volumes: V_transport=311359/1323000 V_boundary=12553339/13230000 V_residual=676661/13230000 bracket_slab=1048861/1470000 tail_after_boundary=676661/13230000
+  signature_bucket_hist={14: 1, 21: 2, 5: 2, 54: 1, 8: 1}
+  target=transport sum=11 signature=(0, -1, 1) bucket_size=8 examples=((23, 93, 113), (23, 93, 169), (23, 113, 173), (23, 169, 173), (45, 113, 147))
+  target=transport_plus_boundary sum=19 signature=(1, 0, 1) bucket_size=5 examples=((23, 45, 93, 113, 173), (23, 45, 93, 169, 173), (23, 93, 113, 147, 169), (23, 113, 147, 169, 173), (93, 113, 147, 169, 173))
+  target=bracket_lift sum=8 signature=(-1, -1, 0) bucket_size=5 examples=((23, 45), (45, 93), (45, 173), (113, 147), (147, 169))
+  target=residual sum=8 signature=(-1, -1, 0) bucket_size=5 examples=((23, 45), (45, 93), (45, 173), (113, 147), (147, 169))
+system=owner_support_cells
+  weights={23: 82, 45: 60, 93: 112, 113: 96, 147: 122, 169: 102, 173: 114}
+  volumes: V_transport=36194029738549/147743976360960 V_boundary=1459908749489263/1477439763609600 V_residual=17531014120337/1477439763609600 bracket_slab=121996494678197/164159973734400 tail_after_boundary=17531014120337/1477439763609600
+  signature_bucket_hist={1: 3, 12: 2, 30: 1, 71: 1}
+  target=transport sum=290 signature=(0, -1, 1) bucket_size=1 examples=((23, 93, 113),)
+  target=transport_plus_boundary sum=514 signature=(1, 0, 1) bucket_size=1 examples=((23, 93, 113, 147, 169),)
+  target=bracket_lift sum=224 signature=(-1, -1, 1) bucket_size=30 examples=((23, 93), (23, 113), (23, 147), (23, 169), (23, 173))
+  target=residual sum=174 signature=(-1, -1, 0) bucket_size=1 examples=((45, 173),)
+system=filtration_layer
+  weights={23: 1, 45: 4, 93: 1, 113: 1, 147: 2, 169: 2, 173: 4}
+  volumes: V_transport=451/80640 V_boundary=16139/40320 V_residual=24181/40320 bracket_slab=10609/26880 tail_after_boundary=24181/40320
+  signature_bucket_hist={15: 2, 33: 1, 49: 1, 7: 1, 9: 1}
+  target=transport sum=3 signature=(0, -1, -1) bucket_size=7 examples=((23, 147), (23, 169), (93, 147), (93, 169), (113, 147))
+  target=transport_plus_boundary sum=7 signature=(1, 0, -1) bucket_size=15 examples=((23, 45, 147), (23, 45, 169), (23, 147, 173), (23, 169, 173), (45, 93, 147))
+  target=bracket_lift sum=4 signature=(1, -1, -1) bucket_size=33 examples=((45,), (173,), (23, 45), (23, 173), (45, 93))
+  target=residual sum=8 signature=(1, 1, 0) bucket_size=15 examples=((45, 173), (45, 147, 169), (147, 169, 173), (23, 45, 93, 147), (23, 45, 93, 169))
+hydrotope_guardrail=chamber signs and sliced-box volumes are useful alarms for when a threshold crosses transport/bracket/residual layers, but scalar volumes alone are illegal proof quotients.
+
+## Quotient Safety
+full_filtration_word: safe=True reconstructs=('transport', 'bracket_lift', 'residual') warning=proof-facing sidecar; keeps all emitted/tail owner labels
+transport_plus_boundary_word: safe=True reconstructs=('transport_plus_boundary', 'residual') warning=safe only with transport/bracket split or HYP-3522 reconstruction
+bypass_owner_word_only: safe=False reconstructs=('transport',) warning=cannot see bracket lift or residual pair
+hydrotope_signature_residue_mod14: safe=False reconstructs=('chamber_signs',) warning=mixed buckets: residual=3, boundary=3
+sliced_box_volume_residue_mod14: safe=False reconstructs=('scalar_volume',) warning=volume is a diagnostic scalar; it forgets owner identities
+hydrotope_signature_centered_residue: safe=False reconstructs=('chamber_signs',) warning=mixed buckets: residual=5, boundary=5
+sliced_box_volume_centered_residue: safe=False reconstructs=('scalar_volume',) warning=volume is a diagnostic scalar; it forgets owner identities
+hydrotope_signature_owner_support_cells: safe=True reconstructs=('chamber_signs',) warning=label-unique chamber
+sliced_box_volume_owner_support_cells: safe=False reconstructs=('scalar_volume',) warning=volume is a diagnostic scalar; it forgets owner identities
+hydrotope_signature_filtration_layer: safe=False reconstructs=('chamber_signs',) warning=mixed buckets: residual=15, boundary=15
+sliced_box_volume_filtration_layer: safe=False reconstructs=('scalar_volume',) warning=volume is a diagnostic scalar; it forgets owner identities
+raw_counts_7_5_2: safe=False reconstructs=('owner_counts',) warning=counts see 7->5->2 but forget labels
+route_sidecar_R: safe=True reconstructs=('HYP-3490 route',) warning=required by HYP-3513 unless route reconstruction is proved
+
+## Proof Pull
+P1: State the random031 owner lemma as an online emitter theorem: transport emits (23,93,113), branch brackets emit (147,169), and all later proof stages see only residual tail (45,173).
+P2: Use hydrotope chamber signs only as a finite chamber audit.  If a weight system gives mixed residual or boundary buckets, it is a canary that the quotient is forgetting labels.
+P3: The residual lemma should be a two-owner boundary/no-hidden-tail statement with route sidecar R, not a scalar volume or owner-count inequality.
+P4: A Lean-facing theorem can expose a recursive interface: each emitter consumes one certified sidecar and returns a smaller tail; termination is the residual pair plus HYP-3490/HYP-3513 firewall route.
+
+## Tournament Analysis
+vertices=proof emitters and quotient sidecars, not runners or raw arcs
+pairwise_observable=tail shrinkage + owner-label reconstruction + route-sidecar legality + scalar-forgetting penalty
+switch=higher retained proof payload; ties use emitter order
+score_hist={100: 1, 13: 1, 31: 1, 39: 1, 78: 1, 83: 1, 89: 1, 94: 1}
+directed_3cycles=0
+hamiltonian_path=full_filtration_spigot_packet -> residual_pair_tail_lemma -> transport_plus_boundary_emitter -> hydrotope_chamber_audit_with_owner_labels -> route_sidecar_R_guard -> sliced_box_volume_shadow -> raw_threshold_sign_shadow -> raw_owner_count_shadow
+
+## Assumption Challenge
+Candidate vertices considered: owners, emitted digits, branch boundary events, hydrotope chambers, sliced-box thresholds, u-fibers, mirror pairs, route sidecars, and proof obligations.
+Chosen vertices are proof emitters and quotient sidecars.  The quotient preserves the LRC random031 residual predicate only when emitted owner digits and the route sidecar can be reconstructed; scalar chamber volumes deliberately destroy that information and remain diagnostics.
