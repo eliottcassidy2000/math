@@ -1,0 +1,38 @@
+==============================================================================
+(A) PERFECT NUMBER = arc-hypercube dim d=C(n,2) at FORCADE orders n=2^p
+==============================================================================
+ p  n=2^p  d=C(n,2)  =2^(p-1)(2^p-1) 2^p-1 prime?  perfect?
+ 2      4         6                6        PRIME   PERFECT
+ 3      8        28               28        PRIME   PERFECT
+ 4     16       120              120         comp         -
+ 5     32       496              496        PRIME   PERFECT
+ 6     64      2016             2016         comp         -
+ 7    128      8128             8128        PRIME   PERFECT
+
+  => d=C(2^p,2) is PERFECT exactly when 2^p-1 is a Mersenne prime (p=2,3,5,7).
+  These n=4,8,32,128 are the Forcade all-types-odd orders.
+  LRC(14): apex prime 7=2^3-1 (Mersenne) -> Forcade order 8 -> d=28=2*14 (perfect).
+  n=8 = Havet-Thomasse/Rosenfeld threshold = arXiv:2512 arc-deletion threshold.
+
+==============================================================================
+(B) ARC-FLIP (Q_d-edge) invariance of N_tau mod 2  (n=5, all tournaments)
+==============================================================================
+  checked 10240 (tournament, arc-flip) pairs; parity-CHANGING flips: 0
+  => single arc-flip preserves N_tau mod 2 for ALL types: CONFIRMED
+  Q_d is connected by arc-flips => N_tau mod 2 is CONSTANT = Forcade.
+  i.e. Forcade's theorem = Q_d-EDGE-invariance of the graded Ky Fan count.
+
+==============================================================================
+(C) MERSENNE-DRT doubling gauge: Paley T_7 (=DRT on 7=2^3-1) and B_0(T_7)
+==============================================================================
+  Paley T_7: out-nbhd of vertex 0 = [1, 2, 4] (size 3 = (7-1)/2 = 3).
+  induced sub-tournament on out-nbhd: out-degrees [1, 1, 1] => 3-CYCLE (=T_3, the Mersenne doubling B_0(T_7)=T_3)
+  Paley T_7 per-type counts: 62 types present, 32 odd; mean=81.3, stdev=41.9 (DRT = maximally balanced gauge).
+  score sequence (all equal = regular = Ham-Sandwich score-bisection fixed locus): [3, 3, 3, 3, 3, 3, 3]
+
+==============================================================================
+MERGE: the Forcade/Ky-Fan all-odd orders n=2^p are the PERFECT-NUMBER arc-hypercube
+dimensions d=C(n,2)=2^{p-1}(2^p-1) (Mersenne-prime p); arc-flip = Q_d edge realizes
+Forcade as discrete Ky Fan; the DRT is the Ham-Sandwich-balanced gauge; the Mersenne
+doubling B_0 descends it. LRC apex 7 -> order 8 -> perfect 28 = 2*14.
+==============================================================================

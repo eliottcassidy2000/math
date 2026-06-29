@@ -1,3 +1,34 @@
+## mac-mini-2026-06-29-S13 -- perfect numbers are Forcade arc-hypercube dimensions; arc-flip = Q_d-edge = discrete Ky Fan; Mersenne-DRT gauge (HYP-3546)
+
+Prompt: work the next open piece (OPEN-Q-059) + leverage unused opportunities + think symmetry gauge, Mersenne DRT, perfect numbers.
+
+FIRST: collision cleanup. klein-S2 independently (a) PROVED THM-587 (the per-level SIGNED CYCLE INDEX
+P_n(x) = (1/n!) sum_sigma prod (1+s_c x^ell_c), closing HYP-3540 -- credits my signed-Burnside diagnosis;
+P_n(1)=A000568, P_n(-1)=SC = antipodal Euler number) and (b) created a COLLIDING HYP-3544 (equivariant
+homology / Z_2-Betti numbers). Ceded HYP-3544 to klein, renumbered mine HYP-3544->HYP-3545. We converged
+hard on the Borsuk-Ulam/Ky-Fan/Kaczynski merge. (Also recovered a messy autostash/rebase conflict via
+reset --hard; stashes preserved, not lost.)
+
+NEW (HYP-3546):
+(A) THEOREM (Euclid-Euler through tournaments): at the FORCADE orders n=2^p (all oriented types odd,
+HYP-3545), the arc-hypercube dim d=C(2^p,2)=2^{p-1}(2^p-1) is a PERFECT NUMBER exactly when 2^p-1 is a
+Mersenne prime. So even perfect numbers = arc-counts of the Forcade/Mersenne tournaments: 6=C(4,2),
+28=C(8,2), 496=C(32,2), 8128=C(128,2). The "all types odd" and "perfect" are ONE 2-adic shadow of n=2^p.
+(B) VERIFIED (n=5 exhaustive, 10240 (tournament, arc-flip) pairs, 0 violations): single arc-flip preserves
+N_tau mod 2 => Forcade's theorem IS the Q_d-EDGE-invariance of the graded Ky Fan count (grounds OPEN-Q-059
+structurally; complement-antipodal Z_2 = THM-584, GF = THM-587). Remaining elementary piece: the explicit
+single-flip involution (Prescott-Su bistellar move).
+(C) VERIFIED Mersenne doubling B_0(T_7)=T_3: out-nbhd of vertex 0 in Paley T_7 = {1,2,4} = QRs mod 7,
+inducing the 3-cycle; DRT (all scores 3) = Ham-Sandwich score-bisection fixed locus (the descending gauge);
+28->6 perfect descent shadows 7->3 apex doubling.
+(D) LRC(14): apex 7 -> Forcade order 8 -> perfect 28 = 2*14; n=8 = Havet-Thomasse/Rosenfeld threshold =
+arXiv:2512 arc-deletion threshold; divisors of 28 = {2^j}U{2^j*7} = the apex order-tower (7,14).
+
+Files: HYP-3546, reflection perfect-numbers-are-the-arc-counts-of-forcade-tournaments.md, script
+perfect_number_forcade_gauge_macmini_20260629.py (+.out), OPEN-Q-059 advanced, INDEX updated. Leverage
+flagged: Ham Sandwich on M_odd, Tucker Z_2-labeling of Q_d. Messaged klein. Builds on klein THM-584/587/
+HYP-3544 + my HYP-3545/THM-585/586/THM-448. No canon overridden.
+
 ## mac-mini-2026-06-29-S12 -- oriented-path parity IS the graded Ky Fan / Borsuk-Ulam count; the topological toolkit merged (HYP-3545)
 
 Prompt: merge into the per-level signed-cycle-index investigation ideas from Borsuk-Ulam + Kaczynski + Ky Fan + Ham Sandwich + arXiv:2512.09332.
