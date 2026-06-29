@@ -24,7 +24,7 @@ index (p-1)/2, KY FAN, obstruction M_odd). UNUSED OPPORTUNITIES flagged: HAM SAN
 the cap obstruction can't be symmetrically halved); TUCKER (Z_2-labeling of Q_d). NEXT: prove the
 tournament Ky Fan (=> Redei/Forcade are Borsuk-Ulam shadows); Ham Sandwich on M_odd.
 
-Files: HYP-3544, reflection one-antipodal-map-the-topological-toolkit-merged.md, OPEN-Q-059 grounded,
+Files: HYP-3545, reflection one-antipodal-map-the-topological-toolkit-merged.md, OPEN-Q-059 grounded,
 INDEX updated. Used the Explore agent to map prior Borsuk-Ulam/Kaczynski/Ky-Fan work. Messaged klein.
 ## klein-2026-06-29-S2 -- the per-level SIGNED CYCLE INDEX (THM-587): closes HYP-3540, P_n(+-1)=A000568/SC, computes the metagraph spectrum past the enumeration wall; merges Borsuk-Ulam/Ky Fan/ham sandwich/Kaczynski
 
