@@ -43,6 +43,20 @@ vertical-halfturn sidecar, relative-H1 class, and PGF
 bucket, then prove owner-boundary persistence for the pure bypass or name the
 missing sidecar. -> HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3428, HYP-3300, HYP-3402,
 HYP-3034, HYP-3140, LTI-454, LTT-354, T1454, OPEN-Q-108.
+**HYP-3512 random031 niche-history connection scanner.**  Convert the
+repo-history connection scan into executable random031 packet tests.  The top
+imports are coordinate resurrection, observer-cut payload orbits, finite-address
+receivers, relative Cech/barcode topology, endpoint/Farkas duals, fiber-PGF
+sheet counts, C=27 resource descent, proof-circuit missing-input ledgers,
+ET/Hensel fiber zippers, chiral mirror guards, and exact-period packets.  Next work: define
+`Random031SeamComplementPacket` for all HYP-3486 witness cells; run quotient
+resurrection audits for mirror, vertical half-turn, raw u-fiber, owner-count,
+and raw witness-count quotients; compute a class-conditioned fiber PGF; build
+relative Cech/H1 with rank-2 exits plus deleted seam as boundary; and turn
+rank-2 routed cells into endpoint-credit/Farkas certificates. -> HYP-3512,
+HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
+HYP-3140, HYP-3120, HYP-3119, HYP-3118, HYP-3117, HYP-3116, HYP-3034,
+HYP-3023, HYP-2936, LTI-512, LTT-412, T1512, OPEN-Q-108.
 
 **HYP-3485 random031 seam-complement connection atlas.**  Convert the
 HYP-3481/HYP-3482/HYP-3483 picture into the next executable audit.  Build a

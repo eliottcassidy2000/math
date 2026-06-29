@@ -32,6 +32,16 @@ Useful synthetic maps added later:
   the seam-complement phase flow, with two-adic loss, observability/Morse,
   owner-current, relative-H1, zipper, conductance, and PGF sidecars as the
   next proof interface.
+- `07-reflections/lrc14-random031-niche-history-connections-codex-20260629.md`:
+  HYP-3512/T1512 searches older niche repo machinery for connections to the
+  HYP-3486/HYP-3485 random031 seam-complement packet.  The useful signal is a
+  receiver order, not an analogy list: coordinate resurrection, observer-cut
+  payloads, finite-address packets, relative Cech/barcode topology,
+  endpoint/Farkas duals, fiber-PGF sheet counts, C=27 resource descent,
+  proof-circuit missing inputs, ET/Hensel zippers, chiral mirror guards, and
+  exact-period packets.
+  Use these as coordinate-restoration tools before allowing any quotient or
+  scalar shortcut into the random031 proof route.
 - `07-reflections/lrc14-random031-seam-complement-fiber-graph-codex-20260629.md`:
   HYP-3486/T1446 executes the HYP-3482 seam-complement graph target in the
   two-adic cylinder coordinate `u=2t mod 1`.  The useful signal is the

@@ -10556,6 +10556,56 @@ quotient_legality_status
   HYP-3300, HYP-3402, HYP-3243, HYP-3437, HYP-3034, HYP-3422, HYP-3023,
   HYP-3451, HYP-3140, THM-523, LTI-454, LTT-354, T1454, OPEN-Q-108.
 
+## LTT-412: Random031 Niche-History Connection Tournament
+
+- **Move:** Treat old niche topics as tournament vertices only after they are
+  proof carriers.  The chosen vertices are coordinate resurrection,
+  observer-cut payload orbit, finite-address receiver, relative Cech/barcode
+  topology, endpoint/Farkas dual, fiber-PGF sheet count, C=27 resource descent,
+  proof-circuit missing input, ET/Hensel zipper, chiral guard, exact-period
+  packet, and late-stage residual carriers.
+- **LRC use:** HYP-3512 searches `26501` tracked archive files plus `6371`
+  commit subjects and `50836` historical path events for niche topics that
+  connect to random031, with HYP-3494's local PGF / quotient-price lane now
+  folded in as a companion.  The
+  result is a receiver order: old work is useful when it restores a destroyed
+  random031 coordinate such as free-hole status, branch sheet, bypass purity,
+  endpoint rank, owner seam word, private-label firewall status, mirror
+  legality, or terminal exit.
+- **Preserves:** random031 terminal discharge predicate after hard-seam
+  deletion, HYP-3490 private-label firewall, HYP-3486 rank-2/free-hole/bypass
+  trichotomy, seam-owner debt, and quotient-legality guardrails.
+- **Forgets / guardrail:** raw old analogy labels, raw witness counts, raw row
+  names, raw H/OCF values, residue-sieve echoes, and mature-but-untyped
+  concepts are illegal unless they reconstruct a receiver field.
+- **Pairwise observable:** retained random031 receiver payload across
+  seam-complement topology, bypass flow, private-label firewall, owner
+  monodromy, quotient guardrail, two-adic recursion, rank-2 escape dual,
+  formal receiver readiness, and false-positive control.
+- **Switch/gauge:** higher weighted receiver score wins; archive hit counts,
+  commit-subject sightings, and historical-path sightings are weak
+  tie-breakers only.
+- **Fingerprint:** `17` vertices, score histogram
+  `{26:1,33:1,35:1,36:1,39:1,42:1,43:2,44:1,47:1,48:3,49:1,50:1,51:2}`,
+  no directed `3`-cycles, singleton SCCs, and one Hamiltonian path under the
+  fixed tie path.
+- **Hamiltonian path:** `coordinate_resurrection_sheaf ->
+  observer_cut_payload_orbit -> finite_address_phi_tuple ->
+  normal_fan_cech_barcode -> endpoint_credit_farkas ->
+  fiber_pgf_sheet_count -> q27_q31_resource_descent ->
+  proof_circuit_missing_input -> et_hensel_fiber_zipper ->
+  chiral_stalk_cech_guard -> exact_period_totient_packet ->
+  resolvent_middle_layer_packet -> signed_polymer_dirichlet_network ->
+  vitali_antipoisson_width -> ocf_forbidden_h7_packet ->
+  zeckendorf_partial_cube_shadow -> sexy_prime_residue_sieve_echo`.
+- **Next hook:** define `Random031SeamComplementPacket`, then run quotient
+  resurrection, fiber-PGF, relative Cech/H1, and endpoint/Farkas tests on the
+  HYP-3486 cells.
+- **Pointers:** HYP-3512, HYP-3494, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482,
+  HYP-3481, HYP-3480, HYP-3140, HYP-3120, HYP-3119, HYP-3118, HYP-3117,
+  HYP-3116, HYP-3034, HYP-3023, HYP-2936, THM-523, LTI-512, LTT-412, T1512,
+  OPEN-Q-108.
+
 ## LTT-345: Random031 Seam-Complement Connection Tournament
 
 - **Move:** Treat the seam-complement proof route as the tournament carrier.

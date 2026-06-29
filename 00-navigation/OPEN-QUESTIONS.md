@@ -15,6 +15,20 @@ HYP-3153, HYP-3148, HYP-3023, HYP-2989, LTI-452, LTT-352, T1452.
 Can the three concurrent random031 packets be glued into a local-to-global
 relative seam-sheaf theorem?  The executable scaffold now builds the proposed
 object
+**OPEN-Q-108 HYP-3512 random031 niche-history scanner addendum:**
+HYP-3512 searched the repo's older niche machinery for connections that remain
+legal after HYP-3486/HYP-3490.  The useful carriers are not new scalar
+analogies.  They are coordinate-restoration tools for random031:
+coordinate-resurrection quotient audits, observer-cut seam payloads,
+finite-address packet fields, relative Cech/barcode topology,
+endpoint-credit/Farkas rank-2 exits, C=27 owner/phase resource descent,
+fiber-PGF sheet counts, proof-circuit missing-input ledgers, ET/Hensel
+u-fiber zippers, and exact-period packets.  Open proof task: define the
+`Random031SeamComplementPacket` and test whether every quotient or shortcut
+names the sidecar it destroys before it is allowed into the seam-complement
+proof. -> HYP-3512, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483,
+HYP-3482, HYP-3481, HYP-3140, HYP-3120, HYP-3119, HYP-3118, HYP-3117,
+HYP-3116, HYP-3034, HYP-3023, HYP-2936, LTI-512, LTT-412, T1512.
 
 ```text
 relative_seam_sheaf_cell =

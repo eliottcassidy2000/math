@@ -1,0 +1,301 @@
+HYP-3512 RANDOM031 NICHE-HISTORY CONNECTION SCANNER
+status=EVIDENCE / repo-history synthesis scout; not an LRC14 proof
+tracked_files_scanned=26501
+history_commits_scanned=6371
+history_path_events_scanned=50836
+history_unique_paths_scanned=27018
+carrier_count=17
+receiver_axes=seam_complement_topology,bypass_phase_flow,private_label_firewall,owner_monodromy_charge,quotient_guardrail,two_adic_recursion,rank2_escape_dual,formal_receiver_readiness,false_positive_control
+
+## Top carrier bridges
+rank | carrier | base | evidence_bonus | total | archive_hits | archive_files | history_subject_hits | history_path_hits
+01 | coordinate_resurrection_sheaf | 40 | 11 | 51 | 368 | 60 | 2 | 39
+02 | observer_cut_payload_orbit | 39 | 12 | 51 | 903 | 164 | 6 | 11
+03 | finite_address_phi_tuple | 38 | 12 | 50 | 1058 | 155 | 7 | 20
+04 | normal_fan_cech_barcode | 37 | 12 | 49 | 3308 | 252 | 6 | 33
+05 | endpoint_credit_farkas | 36 | 12 | 48 | 3010 | 471 | 8 | 41
+06 | fiber_pgf_sheet_count | 36 | 12 | 48 | 280 | 62 | 5 | 8
+07 | q27_q31_resource_descent | 36 | 12 | 48 | 5410 | 648 | 8 | 47
+08 | proof_circuit_missing_input | 35 | 12 | 47 | 447 | 67 | 4 | 10
+09 | et_hensel_fiber_zipper | 33 | 11 | 44 | 832 | 112 | 2 | 7
+10 | chiral_stalk_cech_guard | 34 | 9 | 43 | 79 | 23 | 1 | 41
+11 | exact_period_totient_packet | 31 | 12 | 43 | 3371 | 665 | 8 | 105
+12 | resolvent_middle_layer_packet | 30 | 12 | 42 | 34031 | 5968 | 8 | 840
+
+## Tournament Analysis
+vertices=17
+score_hist={26: 1, 33: 1, 35: 1, 36: 1, 39: 1, 42: 1, 43: 2, 44: 1, 47: 1, 48: 3, 49: 1, 50: 1, 51: 2}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count_under_fixed_tie_path=1
+edge_flips_against_tie_path=0
+hamiltonian_path=coordinate_resurrection_sheaf -> observer_cut_payload_orbit -> finite_address_phi_tuple -> normal_fan_cech_barcode -> endpoint_credit_farkas -> fiber_pgf_sheet_count -> q27_q31_resource_descent -> proof_circuit_missing_input -> et_hensel_fiber_zipper -> chiral_stalk_cech_guard -> exact_period_totient_packet -> resolvent_middle_layer_packet -> signed_polymer_dirichlet_network -> vitali_antipoisson_width -> ocf_forbidden_h7_packet -> zeckendorf_partial_cube_shadow -> sexy_prime_residue_sieve_echo
+
+## Top bridge details
+
+### 01. coordinate_resurrection_sheaf
+anchors=HYP-3118,HYP-3120,LRC-LENS-MAP
+score_vector={'seam_complement_topology': 5, 'bypass_phase_flow': 4, 'private_label_firewall': 4, 'owner_monodromy_charge': 4, 'quotient_guardrail': 5, 'two_adic_recursion': 4, 'rank2_escape_dual': 4, 'formal_receiver_readiness': 5, 'false_positive_control': 5}
+connection=The vertical half-turn and any seam-complement quotient must name the first destroyed coordinate: free-hole status, branch sheet, bypass purity, or endpoint rank.
+guardrail=Do not use coordinate resurrection as a slogan; require cover rank, live section, and terminal exit/debt.
+next_experiment=Add a random031 quotient-audit table with destroyed fields and minimal repair sidecars for mirror, vertical half-turn, owner-word, and u-fiber quotients.
+current_hits=368 current_files=60
+top_files=[('00-navigation/LRC-TECHNIQUE-INDEX.md', 34), ('05-knowledge/hypotheses/INDEX.md', 32), ('05-knowledge/results/INDEX.md', 23), ('00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md', 20), ('04-computation/lrc14_tournament_edge_witness_tip_tail_codex_20260627.py', 20)]
+history_subject_hits=2 history_path_hits=39 history_path_files=5
+samples:
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:38: receiver order, not an analogy list: coordinate resurrection, observer-cut
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:214: endpoint circuit gates, HYP-3118 coordinate resurrection, HYP-3110 theta /
+  - 00-navigation/INVESTIGATION-BACKLOG.md:48: imports are coordinate resurrection, observer-cut payload orbits, finite-address
+  - 00-navigation/INVESTIGATION-BACKLOG.md:2913: ## Lead codex-2026-06-27-k8-reflection-fold: k=8 reflection-fold coordinate resurrection
+  - 00-navigation/INVESTIGATION-BACKLOG.md:2935: exits need either the odd-coordinate resurrection table or named debt.
+commit_subject_hits:
+  - 7d16763b4	2026-06-27	codex-2026-06-27-S267: complete coordinate resurrection scout
+  - bba577212	2026-06-27	codex-2026-06-27-S267: reserve coordinate resurrection lane
+history_path_samples:
+  - 00-navigation/LRC-LENS-MAP.md
+  - 04-computation/lrc14_coordinate_resurrection_sheaf_codex_s267.py
+  - 05-knowledge/hypotheses/HYP-3118-lrc14-coordinate-resurrection-sheaf.md
+  - 05-knowledge/hypotheses/HYP-3120-lrc14-niche-past-work-closure-bridge.md
+
+### 02. observer_cut_payload_orbit
+anchors=HYP-3054,HYP-3056,HYP-3102,HYP-3119
+score_vector={'seam_complement_topology': 4, 'bypass_phase_flow': 4, 'private_label_firewall': 4, 'owner_monodromy_charge': 5, 'quotient_guardrail': 5, 'two_adic_recursion': 3, 'rank2_escape_dual': 4, 'formal_receiver_readiness': 5, 'false_positive_control': 5}
+connection=The seven-owner seam is an observer-cut payload orbit: deleting the seam is legal only if the complement remembers the owner charge crossing it.
+guardrail=A visible phase route without the observer payload cannot account for seam-only owners `(45,147,169,173)`.
+next_experiment=Attach observer-cut payload orbits to the pure 12-cell bypass component and compare bypass owners `(23,93,113)` with seam-only owners.
+current_hits=903 current_files=164
+top_files=[('05-knowledge/hypotheses/INDEX.md', 65), ('00-navigation/LRC-TECHNIQUE-INDEX.md', 54), ('00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md', 53), ('00-navigation/SESSION-LOG.md', 48), ('05-knowledge/results/lrc14_coordinate_resurrection_sheaf_codex_s267.out', 46)]
+history_subject_hits=6 history_path_hits=11 history_path_files=10
+samples:
+  - 00-navigation/CONCEPT-MAP.md:62: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:64: **Current LRC tournament technique index addenda:** T1123/HYP-3042/LTI-190/LTT-088 adds owner-strip filtration tournaments: residual proof pages, not runners, are the vertices, and
+  - 00-navigation/CONCEPT-MAP.md:70: **S221-S250 value-origin, observer-cut, hyperbolic, finalizer, geometry, Diophantine-lattice, partial-cube, bridge-rank, Toeplitz, exact-audit, Hodge-cycle, Desargues-median, owner
+  - 00-navigation/CONCEPT-MAP.md:71: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:73: **Current LRC tournament technique index addenda:** T1123/HYP-3042/LTI-190/LTT-088 adds owner-strip filtration tournaments: residual proof pages, not runners, are the vertices, and
+commit_subject_hits:
+  - e706c1990	2026-06-26	codex-S223: audit twelve-layer observer cut payload
+  - 9f9b3676b	2026-06-26	codex-s220: add observer cut orbit ledger
+  - 46adf7932	2026-06-26	codex-S219: add duodecimal observer payload
+  - ac3dce447	2026-06-26	codex-S218: add observer cut payload calculus
+history_path_samples:
+  - 04-computation/lrc14_observer_gluing_ledger_codex_s258.py
+  - 05-knowledge/hypotheses/HYP-3054-observer-extension-cut-calculus.md
+  - 05-knowledge/hypotheses/HYP-3056-observer-cut-orbit-ledger.md
+  - 05-knowledge/hypotheses/HYP-3059-twelve-layer-observer-cut-audit.md
+
+### 03. finite_address_phi_tuple
+anchors=HYP-3083,HYP-3091,HYP-3119,HYP-3120
+score_vector={'seam_complement_topology': 4, 'bypass_phase_flow': 4, 'private_label_firewall': 4, 'owner_monodromy_charge': 4, 'quotient_guardrail': 5, 'two_adic_recursion': 4, 'rank2_escape_dual': 4, 'formal_receiver_readiness': 5, 'false_positive_control': 4}
+connection=Random031 needs a receiver tuple: seam status, u-index, branch, mirror mate, hit rank, owner word, firewall status, and terminal exit.
+guardrail=A finite address without the endpoint/owner payload becomes another row hash.
+next_experiment=Define `Random031SeamComplementPacket` fields and check that HYP-3486 cells instantiate them without raw witness-count shortcuts.
+current_hits=1058 current_files=155
+top_files=[('05-knowledge/hypotheses/INDEX.md', 93), ('00-navigation/SESSION-LOG.md', 74), ('00-navigation/LRC-TECHNIQUE-INDEX.md', 60), ('00-navigation/TANGENTS.md', 49), ('00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md', 48)]
+history_subject_hits=7 history_path_hits=20 history_path_files=9
+samples:
+  - 00-navigation/CONCEPT-MAP.md:50: exact `M`, and finite-address exits. Algebraic near misses use
+  - 00-navigation/CONCEPT-MAP.md:62: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:66: **Latest LRC q-cusp, sixth-power, branch, branch-kernel, and finite-address addenda:** T1162/HYP-3078/LTI-227/LTT-125 is the canonical S246 q-Pochhammer principal-part computation:
+  - 00-navigation/CONCEPT-MAP.md:75: **Latest LRC q-cusp, branch, and branch-kernel addenda:** T1162/HYP-3078/LTI-227/LTT-125 is the canonical S246 q-Pochhammer principal-part computation: product, partition, divisor-
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:39: payloads, finite-address packets, relative Cech/barcode topology,
+commit_subject_hits:
+  - d6fe8d78f	2026-06-27	codex-S252: synthesize Hurwitz finite-address branch closure
+  - 2bdf0265d	2026-06-27	mac-mini-2026-06-27-S62: three-sameness fiber on the LRC lonely set (HYP-3091 + reflection) -- equidist meas=0<=>tight; equinum=cardinal shadow (predicate-blind); equidecomp splits into D=mod-41 (bounded core) + 1/lmax=V* (apex), the two Dehn invariants; the fiber Phi(S) is the fundamental invariant
+  - 1090023af	2026-06-27	codex-S257: checkpoint existing finite-address edits before equivalence triad
+  - 533265643	2026-06-27	codex-S254: formalize LRC14 finite-address branch packets
+history_path_samples:
+  - 05-knowledge/hypotheses/HYP-3083-lrc14-hurwitz-finite-address-branch-closure-spine.md
+  - 05-knowledge/hypotheses/HYP-3091-equivalence-triad-forgetting-cost-invariant.md
+  - 05-knowledge/hypotheses/HYP-3091-lrc14-three-equivalence-shadows-pascal-pair-mass.md
+  - 05-knowledge/hypotheses/HYP-3091-three-sameness-fiber-on-the-lonely-set.md
+
+### 04. normal_fan_cech_barcode
+anchors=HYP-3034,HYP-3096,HYP-3101,LTI-345
+score_vector={'seam_complement_topology': 5, 'bypass_phase_flow': 4, 'private_label_firewall': 3, 'owner_monodromy_charge': 4, 'quotient_guardrail': 5, 'two_adic_recursion': 3, 'rank2_escape_dual': 4, 'formal_receiver_readiness': 4, 'false_positive_control': 5}
+connection=The four dead islands and 14 free-hole packets want a relative Cech/barcode test on the seam complement, not another projection-edge search.
+guardrail=Topology alone forgets owner labels and branch legality unless barcode components retain owner and mirror words.
+next_experiment=Build a relative Cech/H1 complex whose boundary is rank-2 escape plus forbidden seam, then test owner-deletion persistence on bypass/free-hole components.
+current_hits=3308 current_files=252
+top_files=[('00-navigation/TANGENTS.md', 232), ('00-navigation/LRC-TECHNIQUE-INDEX.md', 226), ('05-knowledge/hypotheses/INDEX.md', 194), ('00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md', 192), ('00-navigation/SESSION-LOG.md', 180)]
+history_subject_hits=6 history_path_hits=33 history_path_files=24
+samples:
+  - 00-navigation/CONCEPT-MAP.md:62: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:71: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:145: | **LRC14 median owner/root sidecar spine** | Owner/root-aware medianization table for proof-state route triples | HYP-3068/S234 extends the S233 Desargues-median finalization lens
+  - 00-navigation/CONCEPT-MAP.md:149: | **LRC14 owner-strip filtration** | Residual proof-page filtration connecting primitive safe decks, Haar/drop-add zeta, and endpoint-owner strip currents | HYP-3042/T1123/LTI-190/
+  - 00-navigation/CONCEPT-MAP.md:156: | **LRC14 creative angle atlas** | Exact packet-lens guardrail for speculative LRC routes such as Cech nerves, tropical slack, CRT charts, endpoint currents, danger-count distribut
+commit_subject_hits:
+  - cb1dfb4ea	2026-06-27	codex-s270: add chiral cech proof angles
+  - fcec2d8fa	2026-06-27	kps-2026-06-27-S31ah: CLOSE -- Tournament Proof Toolkit (engine+generator+12-technique catalog+6 applications); HYP-3101 (Ham-path spectrum={odd}\{7,21}, K_m=Omega iff m not in {3,10}); THM-115 corroborated; 3-agent convergence (apex-7=coincidence, antipodal lever=HYP-3093); SESSION-LOG + memory
+  - 4be943c99	2026-06-26	codex-s174: add LRC14 arc-Cech nerve carrier
+  - 15c8e8938	2026-06-26	codex-2026-06-26-S182: add LRC14 normal-fan carrier
+history_path_samples:
+  - 04-computation/lrc14_arc_cech_nerve_carrier_codex_s174.py
+  - 04-computation/lrc14_chiral_cech_proof_angles_codex_20260627.py
+  - 04-computation/lrc14_lonely_profile_persistence_barcode_codex_s179.py
+  - 04-computation/lrc14_pair_good_decoy_barcode_normal_fan_codex_s186.py
+
+### 05. endpoint_credit_farkas
+anchors=HYP-3437,HYP-3451,HYP-3417,HYP-3120
+score_vector={'seam_complement_topology': 3, 'bypass_phase_flow': 4, 'private_label_firewall': 4, 'owner_monodromy_charge': 4, 'quotient_guardrail': 4, 'two_adic_recursion': 3, 'rank2_escape_dual': 5, 'formal_receiver_readiness': 4, 'false_positive_control': 5}
+connection=Rank-2 seam-complement routing should become a dual certificate: every routed cell has one rank-2 endpoint gate, and free holes are named exceptions.
+guardrail=A max-flow/min-cut shadow is illegal if it forgets private labels or owner monodromy.
+next_experiment=Turn the HYP-3486 rank-2 exits into an endpoint-credit/Farkas ledger over components, with separate free-hole and bypass rows.
+current_hits=3010 current_files=471
+top_files=[('00-navigation/LRC-TECHNIQUE-INDEX.md', 214), ('00-navigation/SESSION-LOG.md', 178), ('05-knowledge/hypotheses/INDEX.md', 178), ('00-navigation/TANGENTS.md', 157), ('00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md', 153)]
+history_subject_hits=8 history_path_hits=41 history_path_files=30
+samples:
+  - 00-navigation/CONCEPT-MAP.md:62: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:71: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:171: | **LRC14 residual certificate teeth** | Stored-ledger route scheduler for the status-pure residual coarse ET+unit fibers | HYP-3033/T1114/LTI-181/LTT-079 parses the S194 residual 
+  - 00-navigation/CONCEPT-MAP.md:172: | **LRC14 residual tooth atlas** | First-tooth manifest for the `15` coarse ET+unit route-mixed open residual fibers | HYP-3035/T1116/LTI-183/LTT-081 parses S194's stored residual-
+  - 00-navigation/CONCEPT-MAP.md:174: | **LRC14 residual capacitor flow cuts** | Max-flow/min-cut framing for mixed open-route fibers after status protection | HYP-3037/T1118/LTI-185/LTT-083 audits the two HYP-3027 res
+commit_subject_hits:
+  - 013311fcf	2026-06-28	codex-2026-06-29: add HYP-3437 overlap-tax cut certificate
+  - 8d4329430	2026-06-28	codex-2026-06-28: checkpoint - renumber overlap cut route to HYP-3437
+  - 23292844d	2026-06-28	codex-2026-06-28: checkpoint - claim HYP-3436 overlap Menger-cut certificate
+  - 3941a5f71	2026-06-28	codex: add HYP-3417 owner-cut dual certificates
+history_path_samples:
+  - 04-computation/lrc14_bring_sc_bdh_menger_charal_recursion_codex_20260628.py
+  - 04-computation/lrc14_bring_sc_menger_charal_signatures_codex_20260628.py
+  - 04-computation/lrc14_green_conductance_connectivity_codex_20260628.py
+  - 04-computation/lrc14_green_lorentzian_trap_fingerprints_codex_20260628.py
+
+### 06. fiber_pgf_sheet_count
+anchors=HYP-3140,HYP-3137,HYP-3136,HYP-3485
+score_vector={'seam_complement_topology': 4, 'bypass_phase_flow': 5, 'private_label_firewall': 2, 'owner_monodromy_charge': 3, 'quotient_guardrail': 5, 'two_adic_recursion': 5, 'rank2_escape_dual': 3, 'formal_receiver_readiness': 4, 'false_positive_control': 5}
+connection=HYP-3486's 258 occupied fibers and 24 double fibers are exactly the kind of sheet-count packet HYP-3140 warned not to scalarize.
+guardrail=Raw `282` or raw `12` hides which fibers are bypass, free-hole, or ordinary and whether vertical gluing is legal.
+next_experiment=Compute a class-conditioned fiber PGF for random031: bypass/free-hole/ordinary by branch, mirror orbit, endpoint rank, and owner word.
+current_hits=280 current_files=62
+top_files=[('00-navigation/LRC-TECHNIQUE-INDEX.md', 32), ('00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md', 20), ('00-navigation/SESSION-LOG.md', 20), ('00-navigation/INVESTIGATION-BACKLOG.md', 19), ('00-navigation/TANGENTS.md', 18)]
+history_subject_hits=5 history_path_hits=8 history_path_files=5
+samples:
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:40: endpoint/Farkas duals, fiber-PGF sheet counts, C=27 resource descent,
+  - 00-navigation/INVESTIGATION-BACKLOG.md:49: receivers, relative Cech/barcode topology, endpoint/Farkas duals, fiber-PGF
+  - 00-navigation/INVESTIGATION-BACKLOG.md:50: sheet counts, C=27 resource descent, proof-circuit missing-input ledgers,
+  - 00-navigation/INVESTIGATION-BACKLOG.md:54: and raw witness-count quotients; compute a class-conditioned fiber PGF; build
+  - 00-navigation/INVESTIGATION-BACKLOG.md:71: Menger/Green/current cut tests, and HYP-3140 sheet-count moments.
+commit_subject_hits:
+  - b08451dc3	2026-06-29	codex-2026-06-29: connect HYP-3485 atlas to HYP-3490
+  - 3a6fbb013	2026-06-29	codex: add HYP-3485 random031 seam bridge
+  - ebc67074a	2026-06-27	codex-2026-06-27-S273: add LRC14 fiber PGF certificate
+  - ed0f6b3fa	2026-06-22	kind-mendel-S3: Node-1 swing — elementary closure of the pure-dilation coordinated-growth core (decoupling floor + sheet-counting), exact-verified (HYP-2848)
+history_path_samples:
+  - 05-knowledge/hypotheses/HYP-3136-lrc14-integrated-multifar-floor-closure.md
+  - 05-knowledge/hypotheses/HYP-3137-lrc14-generating-function-payload-atlas.md
+  - 05-knowledge/hypotheses/HYP-3140-lrc14-fiber-pgf-rprime-certificate.md
+  - 05-knowledge/hypotheses/HYP-3485-lrc14-random031-seam-complement-connection-atlas.md
+
+### 07. q27_q31_resource_descent
+anchors=HYP-2470,HYP-2471,HYP-2480,HYP-3483,HYP-3484
+score_vector={'seam_complement_topology': 4, 'bypass_phase_flow': 4, 'private_label_firewall': 3, 'owner_monodromy_charge': 5, 'quotient_guardrail': 4, 'two_adic_recursion': 5, 'rank2_escape_dual': 3, 'formal_receiver_readiness': 4, 'false_positive_control': 4}
+connection=`C=2n-1=27` already sits at the seam: additive owner debt is n+2-like while phase flow is n*2-like.
+guardrail=Resource descent is not a proof unless it names the exact owner/bypass fields it normalizes.
+next_experiment=Compare the seven-owner seam word to the C=27 carry/doubling split and ask which owners are stationary boundary debt versus moving phase carriers.
+current_hits=5410 current_files=648
+top_files=[('05-knowledge/hypotheses/INDEX.md', 303), ('00-navigation/SESSION-LOG.md', 288), ('00-navigation/TANGENTS.md', 197), ('00-navigation/OPEN-QUESTIONS.md', 175), ('05-knowledge/results/INDEX.md', 173)]
+history_subject_hits=8 history_path_hits=47 history_path_files=38
+samples:
+  - 00-navigation/CONCEPT-MAP.md:62: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:71: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:153: | **LRC14 Fermat-Catalan automatic-gap extension** | Finite-automaton, lacunary-gap, and perfect-power guardrail for labelled packets | HYP-3009/S178 extends HYP-3008 by treating M
+  - 00-navigation/CONCEPT-MAP.md:170: | **LRC14 analytic sieve-clock bridge** | Analytic proof clocks used as repair-ladder sidecars rather than scalar LRC quotients | HYP-3032/T1113/LTI-180/LTT-078 repairs the namespa
+  - 00-navigation/CONCEPT-MAP.md:185: | **LRC14 residual-section packet grid** | Executable section map from HYP-2963 packet routes to HYP-2989 Haar-product exits | HYP-2996/S168 imports the HYP-2963 labelled-packet ba
+commit_subject_hits:
+  - ed060ef30	2026-06-29	codex: add HYP-3484 random031 forbidden seam flow
+  - 829a491b5	2026-06-29	codex-2026-06-29: add HYP-3483 random031 recursion flow
+  - d08b8474b	2026-06-24	codex-S140: synthesize C27 unital block lift
+  - 8f0f62804	2026-06-24	codex-S140: checkpoint - q3 unital C27 transfer block lift
+history_path_samples:
+  - 04-computation/lrc14_below_nine_core_q27_budget5_codex.py
+  - 04-computation/lrc14_c27_shell_transfer_spectrum_codex_s136.py
+  - 04-computation/lrc14_c27_two_swap_frontier_codex_s138.py
+  - 04-computation/lrc14_c27_unital_block_lift_codex_s140.py
+
+### 08. proof_circuit_missing_input
+anchors=HYP-3116,HYP-3117,HYP-3120,LTI-512
+score_vector={'seam_complement_topology': 3, 'bypass_phase_flow': 3, 'private_label_firewall': 4, 'owner_monodromy_charge': 4, 'quotient_guardrail': 4, 'two_adic_recursion': 3, 'rank2_escape_dual': 4, 'formal_receiver_readiness': 5, 'false_positive_control': 5}
+connection=Every tempting random031 shortcut has a missing-input vector: branch, u, mirror, owner, firewall, rank, and free-hole status.
+guardrail=A small Boolean closure over raw flags will overfit unless all essential sidecars are marked.
+next_experiment=Run a missing-input audit for candidate random031 lemmas: rank-2 route, free-hole packet, pure bypass, and private firewall.
+current_hits=447 current_files=67
+top_files=[('00-navigation/LRC-TECHNIQUE-INDEX.md', 46), ('05-knowledge/hypotheses/INDEX.md', 40), ('00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md', 36), ('00-navigation/SESSION-LOG.md', 34), ('00-navigation/TANGENTS.md', 31)]
+history_subject_hits=4 history_path_hits=10 history_path_files=6
+samples:
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:41: proof-circuit missing inputs, ET/Hensel zippers, chiral mirror guards, and
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:173: finite-bank classifiers are not proof circuits unless uniformity and
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:1435: proof-circuit size/depth `8/4`, unit-circle finite Ising zeros, and exact
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:1446: ## T1191: Circuit missing-input kernel ledger (codex-2026-06-27-S266)
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:1455: The S266 executable ledger mines `13` proof gates. Top missing inputs are
+commit_subject_hits:
+  - 1b516c253	2026-06-27	codex-s266b: augment circuit missing-input ledger
+  - ee6fe05e2	2026-06-27	codex: add proof-circuit past-work scout
+  - 3bae29f62	2026-06-27	codex-s266: add circuit missing-input ledger
+  - 97500e485	2026-06-27	codex-s266: reserve circuit missing-input ledger
+history_path_samples:
+  - 05-knowledge/hypotheses/HYP-3116-lrc14-circuit-lower-bound-missing-input-ledger.md
+  - 05-knowledge/hypotheses/HYP-3117-lrc14-proof-circuit-past-work-recompilation.md
+  - 05-knowledge/hypotheses/HYP-3120-lrc14-niche-past-work-closure-bridge.md
+  - 07-reflections/lrc14-circuit-lower-bound-missing-input-ledger-codex-s266.md
+
+### 09. et_hensel_fiber_zipper
+anchors=HYP-3020,HYP-3024,HYP-3119
+score_vector={'seam_complement_topology': 3, 'bypass_phase_flow': 4, 'private_label_firewall': 3, 'owner_monodromy_charge': 3, 'quotient_guardrail': 5, 'two_adic_recursion': 4, 'rank2_escape_dual': 3, 'formal_receiver_readiness': 4, 'false_positive_control': 4}
+connection=The two-adic cylinder coordinate is a coarse-to-exact zipper: u-fibers split by branch and legality, not by raw residue alone.
+guardrail=Hensel language is only useful if it distinguishes legal mirror from illegal vertical half-turn gluing.
+next_experiment=Test whether u-fiber classes form a zipper: singleton/double fibers, branch sheet, hit rank, free-hole status, and mirror mate.
+current_hits=832 current_files=112
+top_files=[('00-navigation/SESSION-LOG.md', 45), ('04-computation/lrc14_fiber_zipper_convergence_codex_s188.py', 44), ('05-knowledge/hypotheses/INDEX.md', 44), ('05-knowledge/results/lrc14_discrepancy_height_carrier_codex_s184.out', 44), ('00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md', 40)]
+history_subject_hits=2 history_path_hits=7 history_path_files=4
+samples:
+  - 00-navigation/CONCEPT-MAP.md:62: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:71: **Current LRC tournament technique index:** `00-navigation/LRC-TOURNAMENT-TECHNIQUE-INDEX.md` is the S166/T1078 tournament-specific companion to the broader `00-navigation/LRC-TECH
+  - 00-navigation/CONCEPT-MAP.md:143: | **Observer-extension/cut payload** | Minimal sidecar coordinate needed when a rooted/observer quotient forgets real extension data | HYP-3054/S218 corrects the first shifted A000
+  - 00-navigation/CONCEPT-MAP.md:158: | **LRC14 discrepancy-height trident** | Composite proof carrier using residue discrepancy, Erdos-Turan bins, Mahler/Farey height, and Hensel singular-lift counts | HYP-3020/S184 t
+  - 00-navigation/CONCEPT-MAP.md:159: | **LRC14 automatic fiber zipper** | Full-bank proof ladder showing where automatic/residue fibers become route-pure | HYP-3023/S187 runs the default HYP-2963 `21913`-packet bank t
+commit_subject_hits:
+  - a3e0b55e6	2026-06-26	codex-S188: post ET Hensel zipper synthesis
+  - c1ccd37c1	2026-06-26	codex-2026-06-26-S187: add LRC14 automatic fiber zipper
+history_path_samples:
+  - 05-knowledge/hypotheses/HYP-3020-lrc14-discrepancy-height-carrier.md
+  - 05-knowledge/hypotheses/HYP-3024-lrc14-fiber-zipper-convergence.md
+  - 05-knowledge/hypotheses/HYP-3119-lrc14-niche-archive-bridge-ledger.md
+  - 05-knowledge/hypotheses/HYP-3119-lrc14-tournament-edge-witness-recursion.md
+
+### 10. chiral_stalk_cech_guard
+anchors=HYP-3123,LRC-LENS-MAP,HYP-3486
+score_vector={'seam_complement_topology': 4, 'bypass_phase_flow': 4, 'private_label_firewall': 3, 'owner_monodromy_charge': 3, 'quotient_guardrail': 5, 'two_adic_recursion': 4, 'rank2_escape_dual': 3, 'formal_receiver_readiness': 4, 'false_positive_control': 4}
+connection=The mirror-paired bypass blocks are oriented: mirror is legal and class-preserving, vertical half-turn is not.
+guardrail=A mirror quotient that ignores chirality can mix free-hole and ordinary cells.
+next_experiment=Add a chiral guard word to each random031 component: mirror mate, branch orientation, vertical-halfturn legality, and class preservation.
+current_hits=79 current_files=23
+top_files=[('00-navigation/LRC-TECHNIQUE-INDEX.md', 7), ('05-knowledge/hypotheses/HYP-3123-lrc14-chiral-stalk-cech-proof-angles.md', 7), ('00-navigation/TANGENTS.md', 6), ('05-knowledge/hypotheses/INDEX.md', 6), ('07-reflections/lrc14-chiral-stalk-cech-proof-angles-codex-20260627.md', 6)]
+history_subject_hits=1 history_path_hits=41 history_path_files=4
+samples:
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:181: - `07-reflections/lrc14-chiral-stalk-cech-proof-angles-codex-20260627.md`:
+  - 00-navigation/HISTORIAN-TANGENT-INDEX.md:183: Z/2 chiral base-stalk guard for mirror/converse/rootless quotient collapse
+  - 00-navigation/INVESTIGATION-BACKLOG.md:3179: cross-sector orientation payload. Class-deck audit: `n=3,4,5` all tested
+  - 00-navigation/INVESTIGATION-BACKLOG.md:3207: `05-knowledge/hypotheses/HYP-3123-lrc14-chiral-stalk-cech-proof-angles.md`,
+  - 00-navigation/INVESTIGATION-BACKLOG.md:3210: and `07-reflections/lrc14-chiral-stalk-cech-proof-angles-codex-20260627.md`.
+commit_subject_hits:
+  - 0e48f2e6d	2026-06-29	codex: add HYP-3486 random031 fiber graph
+history_path_samples:
+  - 00-navigation/LRC-LENS-MAP.md
+  - 05-knowledge/hypotheses/HYP-3123-lrc14-chiral-stalk-cech-proof-angles.md
+  - 05-knowledge/hypotheses/HYP-3486-lrc14-random031-seam-complement-fiber-graph.md
+  - 07-reflections/lrc14-chiral-stalk-cech-proof-angles-codex-20260627.md
+
+## False friends and late-stage carriers
+- signed_polymer_dirichlet_network: Energy/conductance analogies are late-stage tests, not carriers for the random031 topology itself.
+- vitali_antipoisson_width: Does not directly see branch legality, private labels, or owner seam charges.
+- ocf_forbidden_h7_packet: Raw H-values are too late and too coarse for the seam-complement geometry.
+- zeckendorf_partial_cube_shadow: Sequence automata do not know random031 owner labels unless lifted into a cut carrier.
+- sexy_prime_residue_sieve_echo: No direct random031 proof content without analytic distribution input.
+
+## Assumption Challenge
+considered_vertices=runners,gaps,fixed_circle_sections,section_boundaries,wall_crossing_events,residues,cover_arcs,Fourier_modes,matroid_circuits,u_fibers,mirror_pairs,free_hole_packets,owner_labels,proof_obligations
+chosen_vertices=niche_proof_carriers
+preserved_predicate=random031 terminal discharge after hard-seam deletion, with private-label firewall and seam-owner debt retained
+destroyed_information=raw runner order, raw row names, raw witness counts, old analogy labels, and scalar maturity unless reconstructed by receiver fields
+challenged_assumption=older niche topics should not be ranked by age, popularity, or scalar elegance; they should be ranked by which random031 seam-complement coordinate they can legally restore

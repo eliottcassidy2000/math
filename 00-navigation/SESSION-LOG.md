@@ -145,6 +145,34 @@ HYP-3511 brackets the `40` no-gate/free-hole cells as `10` ordinary-bracketed
 packets plus `2` same-branch doublets.  HYP-3494 now reads the right boundary
 as three local lemmas: rank-2 route, free-hole bracket, and pure-bypass
 owner-boundary persistence.
+## codex-2026-06-29 -- HYP-3512 random031 niche-history connection scanner
+
+Prompt: search back through the repo history comprehensively for niche topics
+that may provide insightful connections.  Added
+`04-computation/lrc14_random031_niche_history_scanner_codex_20260629.py` and
+stored `05-knowledge/results/lrc14_random031_niche_history_scanner_codex_20260629.out`,
+plus HYP-3512/T1512/LTI-512/LTT-412 and reflection.  After fetch, this lane
+is the random031-specific executable scanner complementing incoming HYP-3491
+history-recall, HYP-3492 repo-history atlas, HYP-3493 seam-sheaf, HYP-3510
+coarse seam-flow, HYP-3511 free-hole bracket work, and HYP-3494 local
+PGF/quotient-price specialization.
+
+The scanner searched `26501` tracked archive files plus `6371` commit subjects
+and `50836` historical path events, then scored `17` older niche carrier
+families against the current random031 receiver axes.  Top path: coordinate
+resurrection -> observer-cut payload orbit -> finite-address `Phi` tuple ->
+normal-fan/Cech/barcode topology ->
+endpoint-credit/Farkas -> fiber-PGF sheet count -> C=27/Q27 resource descent
+-> proof-circuit missing input -> ET/Hensel fiber zipper -> chiral mirror
+guard -> exact-period packet.  Main synthesis: older niche topics should be
+imported only as coordinate-restoration tools for HYP-3486/HYP-3485/HYP-3490.
+HYP-3494 gives the local escape-polynomial specialization; HYP-3512 keeps the
+broader carrier-family order around it.
+Next executable
+tasks are a random031 quotient-resurrection audit, `Random031SeamComplementPacket`,
+class-conditioned fiber PGF, relative Cech/H1 with rank-2 exits plus deleted
+seam as boundary, and endpoint-credit/Farkas certificates for the `242`
+routed cells.
 
 ## codex-2026-06-29 -- HYP-3485 random031 seam-complement connection atlas
 
