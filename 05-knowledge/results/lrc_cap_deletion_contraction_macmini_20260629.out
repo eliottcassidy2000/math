@@ -1,0 +1,46 @@
+====================================================================================
+LRC cap deletion-contraction = measure-valued Claim A (mac-mini-S7)
+====================================================================================
+
+--- n=6, S=(1, 2, 3, 4, 5) ---
+  delete s=5: cap(S\s)-cap(S) = 5/36 ; marginal danger = 5/36  [DC OK]
+      factor-2 (sigma): marg = 2*half? half=5/72  [OK]  ; tooth-sum decomposition [OK], #teeth=6
+      mu_LRC(s,k) nonzero teeth (half-circle): [(1, 0.041666666666666664), (2, 0.027777777777777776)]
+  delete s=3: cap(S\s)-cap(S) = 3/20 ; marginal danger = 3/20  [DC OK]
+      factor-2 (sigma): marg = 2*half? half=3/40  [OK]  ; tooth-sum decomposition [OK], #teeth=4
+      mu_LRC(s,k) nonzero teeth (half-circle): [(1, 0.075)]
+  chain rule: 1 - sum(conditional dangers) = 0 ; cap(S) = 0  [OK]
+
+--- n=8, S=(1, 2, 3, 4, 5, 6, 7) ---
+  delete s=7: cap(S\s)-cap(S) = 7/80 ; marginal danger = 7/80  [DC OK]
+      factor-2 (sigma): marg = 2*half? half=7/160  [OK]  ; tooth-sum decomposition [OK], #teeth=8
+      mu_LRC(s,k) nonzero teeth (half-circle): [(1, 0.020833333333333332), (2, 0.010416666666666666), (3, 0.0125)]
+  delete s=4: cap(S\s)-cap(S) = 3/35 ; marginal danger = 3/35  [DC OK]
+      factor-2 (sigma): marg = 2*half? half=3/70  [OK]  ; tooth-sum decomposition [OK], #teeth=5
+      mu_LRC(s,k) nonzero teeth (half-circle): [(1, 0.04285714285714286)]
+  chain rule: 1 - sum(conditional dangers) = 0 ; cap(S) = 0  [OK]
+
+--- n=10, S=(1, 2, 3, 4, 5, 6, 7, 8, 9) ---
+  delete s=9: cap(S\s)-cap(S) = 69/1400 ; marginal danger = 69/1400  [DC OK]
+      factor-2 (sigma): marg = 2*half? half=69/2800  [OK]  ; tooth-sum decomposition [OK], #teeth=10
+      mu_LRC(s,k) nonzero teeth (half-circle): [(1, 0.0125), (2, 0.005), (4, 0.007142857142857143)]
+  delete s=5: cap(S\s)-cap(S) = 55/504 ; marginal danger = 55/504  [DC OK]
+      factor-2 (sigma): marg = 2*half? half=55/1008  [OK]  ; tooth-sum decomposition [OK], #teeth=6
+      mu_LRC(s,k) nonzero teeth (half-circle): [(1, 0.027777777777777776), (2, 0.026785714285714284)]
+  chain rule: 1 - sum(conditional dangers) = 0 ; cap(S) = 0  [OK]
+
+--- n=14, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) ---
+  delete s=13: cap(S\s)-cap(S) = 6617/194040 ; marginal danger = 6617/194040  [DC OK]
+      factor-2 (sigma): marg = 2*half? half=6617/388080  [OK]  ; tooth-sum decomposition [OK], #teeth=14
+      mu_LRC(s,k) nonzero teeth (half-circle): [(1, 0.005952380952380952), (2, 0.0017006802721088435), (3, 0.001984126984126984), (4, 0.002380952380952381), (5, 0.0017857142857142857), (6, 0.003246753246753247)]
+  delete s=7: cap(S\s)-cap(S) = 4319/51480 ; marginal danger = 4319/51480  [DC OK]
+      factor-2 (sigma): marg = 2*half? half=4319/102960  [OK]  ; tooth-sum decomposition [OK], #teeth=8
+      mu_LRC(s,k) nonzero teeth (half-circle): [(1, 0.014423076923076924), (2, 0.013636363636363636), (3, 0.013888888888888888)]
+  chain rule: 1 - sum(conditional dangers) = 0 ; cap(S) = 0  [OK]
+
+====================================================================================
+Reframe: the LRC cap satisfies a deletion-contraction cap(S\s)-cap(S) =
+2 * sum_teeth mu_LRC -- the measure-valued analog of Claim A H(T)-H(T-v)=2 sum_C mu(C).
+The s teeth are the 'odd cycles through s'; the 2 is the complement Z_2 (sigma).
+The chain rule cap = 1 - sum(conditional dangers) is the measure-valued OCF/Redei.
+====================================================================================
