@@ -13,6 +13,17 @@ of 2026-05-30.
 
 Useful synthetic maps added later:
 
+- `07-reflections/lrc14-ap84-color-grid-bridge-codex-20260629.md`:
+  HYP-3470/T1430 returns to the old phase-color CRT reservoir for the
+  canonical AP84 tail, as the exact placement sidecar under HYP-3459's AP84
+  color-packet legality audit, next to HYP-3460's phase-branch pullback, and
+  downstream of HYP-3461's colored-extension gate carrier.
+  It finds that color mass is blind: color `0` dies and
+  colors `1..13` share four fixed live intervals.  The useful signal is the
+  shifted grid: total closed CRT counts have affine period `385`, live colors
+  have period `5005`, and the closed-boundary bonus is `0` exactly at `7|m`.
+  Use it as the exact colored `q=14V` placement sidecar, separate from
+  HYP-3456's period-`35` component/corridor escape count.
 - `07-reflections/lrc14-survivor-gate-word-audit-codex-20260629.md`:
   HYP-3438/T1399 turns HYP-3436 survivor mass into exact local gate words.
   It finds `8702` survivor gates, dominated by `5950` edge singleton-parent

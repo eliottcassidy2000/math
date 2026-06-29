@@ -9575,3 +9575,42 @@ quotient_legality_status
   HYP-3454, HYP-3453, HYP-3439, HYP-3438, HYP-3436, HYP-3425, HYP-3134,
   HYP-3133, HYP-3056, HYP-3054, HYP-2595, HYP-2594, HYP-2593, HYP-2250,
   HYP-2247, LTI-421, LTT-321, T1421, OPEN-Q-108.
+
+## LTT-330: AP84 Phase-Color Grid Tournament
+
+- **Move:** Treat AP84 colored CRT placement as a tournament over color-grid
+  proof carriers.  Vertices are exact HYP-2593 CRT color predicate, closed
+  grid floor formula, total period-`385` discrepancy, color-vector
+  period-`5005` sidecar, mod-`7` boundary bonus, HYP-3456 period-`35`
+  component bridge, and raw live-layer mass scalar.
+- **LRC use:** HYP-3470 separates phase-color mass from grid discrepancy for
+  `S_m={1,2,...,11,13,84m}`.  Color `0` is dead and live colors share the
+  fixed intervals `[15/182,13/154]`, `[29/70,41/98]`, `[57/98,41/70]`, and
+  `[141/154,167/182]`; direct CRT validation has no sample failures.  The
+  total closed count satisfies `A(m+385)-A(m)=5112`, but individual colors need
+  period `5005`.  This is the exact canonical AP84 CRT-placement sidecar under
+  HYP-3459's color-packet legality audit, complementary to HYP-3460's
+  phase-branch pullback, downstream of HYP-3461's colored-extension gate
+  carrier, and the placement sibling of HYP-3458's
+  coloring-recursion state.
+- **Preserves:** exact `q=14V` CRT placement, phase-color residue sidecar,
+  closed-boundary hits, total discrepancy period, live-color symmetry, and
+  compatibility with HYP-3456.
+- **Forgets / guardrail:** branch-cover geometry and component adjacency are
+  discarded.  Do not use this as a substitute for HYP-3456's component/corridor
+  escape count.
+- **Pairwise observable:** CRT exactness, grid formula exactness, discrepancy
+  period, color-sidecar retention, boundary-clock payload, HYP-3456
+  compatibility, and scalarization loss.
+- **Switch/gauge:** higher retained proof payload first; ties follow the
+  AP-tail color-grid bridge route.
+- **Fingerprint:** `7` vertices, score histogram
+  `{17:1,47:1,48:1,52:1,55:1,58:1,60:1}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `exact_H2593_CRT_color_predicate -> closed_color_grid_floor_formula -> total_period385_discrepancy_clock -> color_vector_period5005_sidecar -> mod7_boundary_bonus_gate -> H3456_period35_component_bridge -> raw_live_layer_mass_scalar`.
+- **Next hook:** prove the four fixed live intervals and floor/ceiling color
+  count symbolically, then attach the period-`385`/`5005` sidecar only when an
+  AP-tail proof needs actual colored CRT witnesses.
+- **Pointers:** HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3454, HYP-3452, HYP-2595,
+  HYP-2594, HYP-2593, HYP-3439, THM-523, LTI-430, LTT-330, T1430,
+  OPEN-Q-108.

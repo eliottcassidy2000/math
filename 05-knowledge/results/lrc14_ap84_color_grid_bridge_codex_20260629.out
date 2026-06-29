@@ -1,0 +1,99 @@
+HYP-3470 AP84 PHASE-COLOR GRID BRIDGE
+========================================================================
+status=EVIDENCE / exact AP-tail color-grid discrepancy bridge; not an LRC14 proof
+source=HYP-2593/HYP-2594 reservoir + HYP-3459 color packet + HYP-3460 pullback + HYP-3461 extension carrier + AP84 sidecars
+
+A. Phase-color reservoir collapse
+  family=S_m={1,2,...,11,13,84m}
+  H2593 form: P={1,...,11,13}, E={0}, V=84m
+  sigma=426/2695
+  K=52
+  live_color_measure=426/35035
+  color0_measure=0; colors 1..13 have the same fixed live layer
+  live_intervals:
+    [15/182,13/154] length=2/1001
+    [29/70,41/98] length=1/245
+    [57/98,41/70] length=1/245
+    [141/154,167/182] length=2/1001
+  expected_total_hits=V*sigma=(5112/385)*m
+  expected_live_color_hits=(5112/5005)*m
+
+B. Closed grid count validation
+  closed_count uses ceil/floor on fixed live intervals and counts boundary hits.
+  sample: m | closed | open | direct_CRT | boundary_bonus | expected-closed
+    1 |     12 |   10 |         12 |              2 | 492/385
+    2 |     26 |   24 |         26 |              2 | 214/385
+    3 |     40 |   38 |         40 |              2 | -64/385
+    4 |     56 |   54 |         56 |              2 | -1112/385
+    5 |     68 |   66 |         68 |              2 | -124/77
+    7 |     92 |   92 |         92 |              0 | 52/55
+   12 |    160 |  158 |        160 |              2 | -256/385
+   35 |    464 |  464 |        464 |              0 | 8/11
+   36 |    476 |  474 |        476 |              2 | 772/385
+   70 |    930 |  930 |        930 |              0 | -6/11
+  direct_validation_failures=[]
+
+C. Discrepancy clocks
+  actual_first35=[12, 26, 40, 56, 68, 80, 92, 108, 122, 134, 146, 160, 174, 186, 200, 212, 226, 240, 256, 268, 278, 292, 306, 320, 332, 346, 360, 372, 386, 400, 412, 426, 440, 454, 464]
+  shift_by_35_first35=[464, 466, 466, 464, 464, 466, 466, 464, 464, 464, 464, 464, 466, 466, 464, 464, 466, 466, 464, 464, 464, 464, 464, 466, 466, 464, 464, 466, 466, 464, 464, 464, 464, 464, 466]
+  total affine period: A(m+385)-A(m)=5112
+  total_period385_failures_m_1_to_770=[]
+  residual R(m)=5112m-385A(m): min=-1542 at m=[349], max=882 at m=[91]
+  residual_first35=[492, 214, -64, -1112, -620, -128, 364, -684, -962, -470, 22, -256, -534, -42, -320, 172, -106, -384, -1432, -940, 322, 44, -234, -512, -20, -298, -576, -84, -362, -640, -148, -426, -704, -982, 280]
+
+D. Color-sidecar and boundary resonance
+  mirror_color_failures_m_1_to_385=[]
+  color_shift_m1_to_m386=(0, 392, 393, 393, 393, 394, 394, 394, 394, 394, 393, 393, 393, 392)
+  individual live colors have uniform affine period 5005:
+  color_period5005_failures_m_1_to_100=[]
+  boundary_bonus_hist_m_1_to_385={0: 55, 2: 330}
+  boundary bonus rule: bonus=0 iff 7 divides m, otherwise bonus=2
+  boundary_bonus_rule_failures_m_1_to_770=[]
+  live color discrepancy over one color period: b | max_abs | max | min
+   1 | 14908/5005 | 14908/5005 | -14908/5005
+   2 | 13228/5005 | 11798/5005 | -13228/5005
+   3 |  9117/5005 |  9117/5005 | -9117/5005
+   4 |  9902/5005 |  8472/5005 | -9902/5005
+   5 | 10672/5005 | 10672/5005 | -10672/5005
+   6 | 15784/5005 | 14354/5005 | -15784/5005
+   7 | 17464/5005 | 17464/5005 | -17464/5005
+   8 | 15784/5005 | 14354/5005 | -15784/5005
+   9 | 10672/5005 | 10672/5005 | -10672/5005
+  10 |  9902/5005 |  8472/5005 | -9902/5005
+  11 |  9117/5005 |  9117/5005 | -9117/5005
+  12 | 13228/5005 | 11798/5005 | -13228/5005
+  13 | 14908/5005 | 14908/5005 | -14908/5005
+
+E. Proof pull
+  The old phase-color exactness is useful here, but the continuous mass
+  does not see the AP84 mod-35 component clock: E={0} kills color 0 and
+  leaves thirteen identical live layers.  The AP-tail coloring signal is
+  the shifted grid and boundary sidecar.  HYP-3456's period-35 escape
+  clock remains a component/corridor count; HYP-3459 records the legal
+  AP84 color-packet quotient, HYP-3460 records the phase-branch
+  pullback, and HYP-3461 records the colored-extension carrier,
+  with HYP-3458 retaining the
+  35-state coloring-recursion packet.  HYP-3470 supplies the exact q=14V
+  color-grid placement clock that should be carried if the AP-tail splice
+  uses CRT witnesses rather than branch-union components.
+  Next theorem target: prove the fixed four-interval color-grid formula
+  symbolically and attach its period-385/5005 sidecar to the HYP-3439
+  AP-tail descent only when actual q=14V witness placement is needed.
+
+F. Tournament Analysis
+  vertices=color-grid proof carriers, not runners or raw arcs
+  pairwise_observable=CRT exactness + grid formula + discrepancy period + color sidecar + HYP-3456 compatibility
+  switch=higher retained proof payload; ties by AP-tail color-grid bridge route
+  score_hist={17: 1, 47: 1, 48: 1, 52: 1, 55: 1, 58: 1, 60: 1}
+  directed_3cycles=0
+  hamiltonian_path=exact_H2593_CRT_color_predicate -> closed_color_grid_floor_formula -> total_period385_discrepancy_clock -> color_vector_period5005_sidecar -> mod7_boundary_bonus_gate -> H3456_period35_component_bridge -> raw_live_layer_mass_scalar
+
+G. Assumption Challenge
+  Considered vertices: runners, phase colors, color residues, fixed live
+  intervals, interval endpoints, boundary hits, AP-tail m residues,
+  HYP-3456 high gaps, Fourier modes, and proof obligations.  The chosen
+  quotient preserves the exact q=14V CRT placement predicate and color-grid
+  discrepancy.  It destroys branch-cover geometry and component adjacency.
+  The challenged assumption is that reservoir mass should detect the AP-tail
+  mod-35 clock; in this AP84 specialization, mass is blind and the useful
+  color information is the boundary/grid discrepancy sidecar.

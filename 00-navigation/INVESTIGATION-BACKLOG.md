@@ -108,6 +108,46 @@ low-rank escape id, and discharge mode.  Desired outcome: every large orbit
 has a rank-2 escape, while the few unescaped orbits are exactly the AP84 and
 random031 packets already named.
 
+## Lead codex-2026-06-29: AP84 phase-color grid bridge
+
+**Status:** EVIDENCE / exact AP-tail color-grid discrepancy bridge; not proof
+(HYP-3470/T1430/LTI-430/LTT-330), reconnecting HYP-2593/HYP-2594 phase-color
+CRT placement to the HYP-3454/HYP-3456/HYP-3457 AP-tail sidecars as the exact
+canonical AP84 placement sidecar under HYP-3459's color-packet legality audit,
+complementary to HYP-3460's phase-branch pullback, downstream of HYP-3461's
+colored-extension gate carrier, and the placement sibling of HYP-3458's
+coloring-recursion state.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3470-lrc14-ap84-color-grid-bridge.md`,
+script
+`04-computation/lrc14_ap84_color_grid_bridge_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_ap84_color_grid_bridge_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-ap84-color-grid-bridge-codex-20260629.md`.
+
+Readout: for `{1,2,...,11,13,84m}`, the HYP-2593 form is
+`P={1,...,11,13}`, `E={0}`, `V=84m`.  Color `0` is dead and colors `1..13`
+share fixed live intervals `[15/182,13/154]`, `[29/70,41/98]`,
+`[57/98,41/70]`, and `[141/154,167/182]`; `sigma=426/2695` and `K=52`.
+Closed-grid counts validate against direct CRT counts on sample rows through
+`m=70`, with `direct_validation_failures=[]`.
+
+The total closed color-grid count has affine period `385`:
+`A(m+385)-A(m)=5112`, with no failures for `m=1..770`.  Individual live colors
+need period `5005`; the closed-boundary bonus is `0` exactly when `7|m` and
+`2` otherwise.  Thus HYP-3456 remains the component/corridor period-`35`
+escape clock, while HYP-3470 is the colored `q=14V` CRT placement sidecar
+parallel to HYP-3458's coloring-recursion state and subordinate to HYP-3459's
+larger color-packet quotient guardrail.  HYP-3460 is the noncanonical
+phase-branch pullback sibling; HYP-3461 is the colored-extension gate carrier;
+HYP-3470 is the canonical AP84 grid-placement specialization.
+
+Next: prove the four live intervals and the floor/ceiling count symbolically,
+then carry the period-`385`/`5005` sidecar only in AP-tail subproofs that need
+actual colored CRT placement rather than branch-union component escapes.
+
 ## Lead codex-2026-06-29: AP84 finite transient closure
 
 **Status:** EVIDENCE / finite mixed AP-tail transient certificate; not proof

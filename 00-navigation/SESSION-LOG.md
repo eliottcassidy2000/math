@@ -136,6 +136,41 @@ Next proof obligation: instantiate colored gate-extension orbit rows on actual
 HYP-3438 gates, then prove the HYP-3455 seven-owner mirror clause and splice
 AP84 HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through HYP-3431/HYP-3439.
 
+## codex-2026-06-29 -- HYP-3470 AP84 phase-color grid bridge
+
+Returned to the older HYP-2593/HYP-2594 color CRT reservoir and connected it
+to the AP84 tail sidecars HYP-3454/HYP-3456/HYP-3457, as the exact placement
+sidecar under HYP-3459's color-packet legality audit, complementary to
+HYP-3460's phase-branch pullback, downstream of HYP-3461's colored-extension
+gate carrier, and the placement sibling of HYP-3458's coloring-recursion
+state.  Added
+HYP-3470/T1430/LTI-430/LTT-330 plus script/result/reflection:
+
+```text
+04-computation/lrc14_ap84_color_grid_bridge_codex_20260629.py
+05-knowledge/results/lrc14_ap84_color_grid_bridge_codex_20260629.out
+05-knowledge/hypotheses/HYP-3470-lrc14-ap84-color-grid-bridge.md
+07-reflections/lrc14-ap84-color-grid-bridge-codex-20260629.md
+```
+
+For `S_m={1,2,...,11,13,84m}`, the HYP-2593 form is
+`P={1,...,11,13}`, `E={0}`, `V=84m`.  Color `0` is dead and every live color
+has the same four fixed intervals: `[15/182,13/154]`, `[29/70,41/98]`,
+`[57/98,41/70]`, and `[141/154,167/182]`.  Thus phase-color mass is blind to
+the AP84 period-`35` component clock.
+
+The exact color-grid signal is discrepancy: direct CRT validation has no
+sample failures, total closed counts satisfy `A(m+385)-A(m)=5112` with no
+checked failures for `m=1..770`, individual live colors require period `5005`,
+and the closed-boundary bonus is `0` iff `7|m`, otherwise `2`.
+
+Proof pull: HYP-3459 gives the legal color-packet quotient guardrail, HYP-3460
+pulls phase colors back to branch/gate carriers, HYP-3461 supplies the
+colored-extension gate-carrier language, HYP-3456 remains the component/corridor
+escape count, and HYP-3458 records its coloring-recursion state.  HYP-3470 is
+the colored `q=14V` placement sidecar to carry only when actual CRT witnesses
+are needed in the HYP-3439 AP-tail splice.
+
 ## codex-2026-06-29 -- HYP-3456 AP84 mod-35 floor-count closure
 
 Continued the HYP-3454 endpoint-clock certificate by deriving the sampled

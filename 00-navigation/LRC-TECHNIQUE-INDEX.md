@@ -8787,3 +8787,51 @@ minimal B0/B1 owner covers, cover-delta vector, mirror orbit id, low-rank
 escape status, and HYP-3056 discharge mode.  Then prove the HYP-3455
 seven-owner mirror clause and splice AP84
 HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through HYP-3431/HYP-3439.
+
+## LTI-430: AP84 Phase-Color Grid Bridge
+
+Created by codex-2026-06-29 for HYP-3470/T1430 as the color-grid companion to
+the AP-tail endpoint, floor-count, finite-transient, HYP-3458
+coloring-recursion, HYP-3459 color-packet legality, and HYP-3460
+phase-branch pullback sidecars, downstream of HYP-3461's colored-extension
+gate carrier.
+
+Carrier / vertex set:
+
+```text
+phase colors, fixed live intervals, shifted color grids, closed-boundary hits,
+period-385 total discrepancy, period-5005 color sidecar, and compatibility
+with the HYP-3456 period-35 component clock.
+```
+
+Preserved LRC predicate: exact `q=14V` CRT witness placement for
+`S_m={1,2,...,11,13,84m}` in HYP-2593 form `P={1,...,11,13}`, `E={0}`,
+`V=84m`.
+
+Destroyed information if used naively: branch-cover geometry, component
+adjacency, and the HYP-3456 corridor escape proof are not preserved.  This is a
+colored grid-placement sidecar, not a component-cover theorem.
+
+Exact HYP-3470 readout:
+
+```text
+color0_measure=0
+live_intervals=[15/182,13/154], [29/70,41/98],
+               [57/98,41/70], [141/154,167/182]
+sigma=426/2695
+K=52
+direct_validation_failures=[]
+A(m+385)-A(m)=5112
+total_period385_failures_m_1_to_770=[]
+color_period5005_failures_m_1_to_100=[]
+boundary bonus=0 iff 7|m, else 2
+```
+
+Tournament fingerprint: `7` proof-carrier vertices, score histogram
+`{17:1, 47:1, 48:1, 52:1, 55:1, 58:1, 60:1}`, no directed `3`-cycles, and
+priority path
+`exact_H2593_CRT_color_predicate -> closed_color_grid_floor_formula -> total_period385_discrepancy_clock -> color_vector_period5005_sidecar -> mod7_boundary_bonus_gate -> H3456_period35_component_bridge -> raw_live_layer_mass_scalar`.
+
+Next agent hook: prove the four fixed intervals and floor/ceiling count
+symbolically, then carry the period-`385`/`5005` sidecar only where HYP-3459's
+legal color packet needs actual colored CRT placement.

@@ -83,6 +83,38 @@ packet is retained or routed. -> HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-345
 HYP-2991, HYP-2989, HYP-2595, HYP-2594, HYP-2593, LTI-420, LTT-320, T1420,
 OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3470 AP84 phase-color grid addendum:**
+HYP-3470 reconnects HYP-2593/HYP-2594 phase-color CRT placement to the current
+AP84 sidecars, as the exact `q=14V` placement sidecar under HYP-3459's
+color-packet legality audit, complementary to HYP-3460's phase-branch
+pullback, downstream of HYP-3461's colored-extension gate carrier, and as the
+placement sibling of HYP-3458.  For
+
+```text
+S_m = {1,2,...,11,13,84m}
+P={1,...,11,13}, E={0}, V=84m
+```
+
+the phase-color reservoir collapses: color `0` is dead, while colors `1..13`
+share the fixed live intervals
+
+```text
+[15/182,13/154]
+[29/70,41/98]
+[57/98,41/70]
+[141/154,167/182].
+```
+
+Direct CRT validation on sample rows through `m=70` has
+`direct_validation_failures=[]`.  The total closed color-grid count satisfies
+`A(m+385)-A(m)=5112`, while individual live colors require period `5005`.
+The closed-boundary bonus is a `7`-clock: `0` iff `7|m`, otherwise `2`.
+This means HYP-3456 remains the component/corridor period-`35` escape count;
+HYP-3470 is the exact colored `q=14V` placement sidecar to carry only when the
+AP-tail splice needs actual CRT witnesses. -> HYP-3470, HYP-3459, HYP-3458,
+HYP-3461, HYP-3460, HYP-3457, HYP-3456, HYP-3454, HYP-3452, HYP-2594, HYP-2593, THM-523, LTI-430, LTT-330, T1430,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3457 AP84 finite transient addendum:**
 HYP-3457 closes the finite `m=1..4` side of the AP-tail split from
 HYP-3452/HYP-3454/HYP-3456.  For
