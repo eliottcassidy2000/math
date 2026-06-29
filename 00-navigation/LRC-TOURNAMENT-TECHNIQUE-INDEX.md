@@ -79,6 +79,11 @@ obligations, and proof-carrier interfaces.
   reproduction, two-adic descent, owner-current routing, scalar-firewall
   compliance, and signed-SPEC exits the vertices.  Raw branch measure is only
   a shadow.
+- Need to invert the branch-cover certificate into obstruction packets:
+  use LTT-297 after LTT-296 and make proof obligations, bad-core interval
+  covers, endpoint events, odd-owner cover tokens, and safe-component
+  addresses the vertices.  A scalar branch measure or raw runner tournament is
+  a lossy shadow until the minimal cover packet has been classified.
 - Need to prove HYP-3434's overlap-tax rescue structurally:
   use LTT-298 after LTT-295/LTT-296 and make atomic interval arrangements,
   odd-blocker cut cores, endpoint-spine lifts, two-adic induction, BDH
@@ -8554,57 +8559,55 @@ quotient_legality_status
   `{-5:1, 51:1, 69:2, 77:1, 90:1, 93:1, 97:1}`, no directed `3`-cycles, and
   Hamiltonian path
   `C00_finite_ruler_branch_cell_certificate -> C01_helly_interval_overlap_theorem -> C02_two_adic_descent_induction -> C03_active_constraint_sensitivity_ledger -> C04_owner_current_exception_router -> C05_signed_SPEC_constant_chase -> C06_topology_magnitude_guardrail -> C07_raw_branch_measure_scalar`.
-- **Next hook:** write the minimal-cover extractor.  For each `E_safe`
-  component, enumerate all odd low-bad and odd high-bad subintervals and emit
-  the smallest endpoint-gate cover if they cover the component.  Then prove
-  each emitted certificate descends two-adically, routes through owner-current,
-  violates HYP-3423 quotient legality, or feeds HYP-3421/HYP-3129 signed-SPEC.
+- **Next hook:** HYP-3436/LTT-297 now supplies the minimal-cover extractor.
+  Use it to prove each emitted local bad-core cover either descends
+  two-adically, routes through owner-current, violates HYP-3423 quotient
+  legality, feeds HYP-3421/HYP-3129 signed-SPEC, or exposes a survivor.
 - **Pointers:** HYP-3435, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3421, HYP-3420,
   HYP-3419, HYP-3418, HYP-3417, HYP-3416, HYP-3415, HYP-3129, HYP-2963,
   THM-523, LTI-396, LTT-296, T1396, LTI-393, LTT-293, T1393, LTI-392,
   LTT-292, T1392, OPEN-Q-108.
 
-## LTT-297: Minimal Bad-Core Cover Extractor Tournament
+## LTT-297: Minimal Bad-Core Cover Tournament
 
-- **Move:** Invert the branch-cover witness tournament.  Vertices are local
-  bad-core component ledgers, minimal odd-owner subcovers, endpoint gate/wall
-  labels, survivor-gap tax certificates, overlap-tax bridge, owner-current
-  exception router, two-adic descent loss ledger, topology/magnitude legality
-  guard, and raw bad-measure shortcut as a negative control.
-- **LRC use:** HYP-3436 classifies the obstruction
-  `E_safe cap B0_odd cap B1_odd` after HYP-3435.  On `135` primitive covering
-  rows, all rows still have survivors, but the bad-core complement now has an
-  exact local cover language: `11670` bad-core components, mostly `(1,1)`
-  branch-owner covers, with maximum total cover size `6` and endpoint support
-  size `<=3`.  A counterexample must glue these local ledgers across every
-  even-safe component without leaving a survivor or named sidecar debt.
-- **Preserves:** two-adic branch-overlap predicate, branch color, minimal
-  B0/B1 odd-owner words, even endpoint gates, survivor gaps, and routing hooks.
-- **Forgets / guardrail:** raw runner identity inside a component is secondary,
-  but scalarizing to bad-core mass, harmonic tails, endpoint budget, or
-  topology class destroys the actual cover ledger.  Those scalars are allowed
-  only as ordering or calibration sidecars.
-- **Pairwise observable:** predicate retention, cover exactness, endpoint
-  payload, two-adic compatibility, owner-current route value,
-  topology-legality, and scalar-firewall safety.
-- **Switch/gauge:** higher proof-facing weighted score first; ties use declared
+- **Move:** Invert the branch-cover certificate into a tournament over proof
+  obligations and local obstruction packets.  Vertices are minimal bad-core
+  cover extraction, two-color failure normal form, endpoint-owner set-cover
+  lemma, overlap-tax discharge bridge, component-spine router, two-adic
+  descent induction, owner-current exception exit, harmonic scalar sidecar,
+  and raw topology/named-constant negative control.
+- **LRC use:** HYP-3436 decomposes `E_safe cap B0_odd cap B1_odd` into exact
+  bad-core intervals and computes the minimal branch-0/branch-1 odd-owner
+  cover for each.  On the HYP-3435 `135`-row bank it finds positive survivors
+  and branch-union measure identity `135/135`; `10288/11670` bad-core
+  components are `(1,1)` covers, maximum minimal two-color owner count is `6`,
+  and endpoint support is `(1,1)` for `11634/11670`.
+- **Preserves:** exact `E_safe minus B0_odd cap B1_odd` survivor predicate,
+  branch color, odd owner, endpoint label, safe-component address, and named
+  proof-debt exits.
+- **Forgets / guardrail:** raw runner order and open-endpoint conventions may
+  be forgotten.  Raw branch mass, raw topology, and named constants may not
+  claim the floor without the minimal cover packet or a named sidecar.
+- **Pairwise observable:** exactness, predicate retention, endpoint-owner
+  recoverability, two-adic induction payload, overlap-tax compatibility,
+  owner-current routing value, and scalar-firewall compliance.
+- **Switch/gauge:** higher weighted proof-facing score first; ties use declared
   code order.
 - **Fingerprint:** `9` vertices, score histogram
-  `{-3:1,66:1,77:1,78:1,84:1,91:1,95:1,97:1,99:1}`, no directed `3`-cycles,
-  and Hamiltonian path
-  `B00_local_bad_core_component_ledger -> B01_minimal_odd_owner_subcovers -> B02_endpoint_gate_wall_labels -> B03_survivor_gap_tax_certificate -> B04_overlap_tax_bridge -> B05_owner_current_exception_router -> B06_two_adic_descent_loss_ledger -> B07_topology_magnitude_legality_guard -> B08_scalar_bad_measure_shortcut`.
-- **Next hook:** prove a local-to-global gluing impossibility for the emitted
-  bad-core covers; if gluing survives, route the first compatible full cover to
-  HYP-3431 corridor-fence structure, HYP-3429 endpoint spines, HYP-3428
-  two-adic loss debt, HYP-3417/HYP-3420 owner-current, HYP-3423 legality, or
-  HYP-3437 overlap-tax Menger cuts, HYP-3421/HYP-3129 signed-SPEC/Rprime.
+  `{-1:1,45:1,97:1,102:1,106:1,109:1,116:1,122:1,130:1}`, no directed
+  `3`-cycles, and Hamiltonian path
+  `B00_minimal_bad_core_cover_extractor -> B01_two_color_failure_normal_form -> B02_endpoint_owner_set_cover_lemma -> B03_overlap_tax_discharge_bridge -> B04_component_spine_router -> B05_two_adic_descent_induction -> B06_owner_current_exception_exit -> B07_harmonic_scalar_sidecar -> B08_raw_topology_or_named_constant`.
+- **Next hook:** prove the canonical singleton-tail law for
+  `{1..11,13,84m}` for all `m>=3`, then build the general component-chain
+  owner-cover graph and prove an all-covered chain emits owner-current,
+  endpoint-spine, HYP-3437 overlap-tax/Menger cuts, two-adic, exact-period,
+  state-lift, or signed-SPEC/Rprime debt.
 - **Rebase integration:** HYP-3437 reserves the overlap-tax Menger-cut
   certificate.  It should consume HYP-3436 bad-core atoms as the graph
   incidence layer for no-gluing/overlap-tax certificates.
-- **Pointers:** HYP-3436, HYP-3437, HYP-3435, HYP-3434, HYP-3433, HYP-3432, HYP-3431,
-  HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424,
-  HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3417, HYP-3129, HYP-2963,
-  THM-523, LTI-397, LTT-297, T1397, OPEN-Q-108.
+- **Pointers:** HYP-3436, HYP-3437, HYP-3435, HYP-3434, HYP-3432, HYP-3431,
+  HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963,
+  THM-523, LTI-397, LTT-297, T1397, LTI-396, LTT-296, T1396, OPEN-Q-108.
 
 ## LTT-298: Overlap-Tax Menger-Cut Certificate Tournament
 

@@ -16,6 +16,9 @@ HYP-3436/T1397/LTI-397/LTT-297 plus script/result/reflection:
 Continued the HYP-3435 two-adic branch-cover certificate route and completed
 the reserved HYP-3436/T1397/LTI-397/LTT-297 obstruction-side packet.  Added
 script/result/reflection:
+Continued after HYP-3435 by inverting the branch-cover witness into a local
+obstruction classifier.  Added HYP-3436/T1397/LTI-397/LTT-297 plus
+script/result/reflection/forum post:
 
 ```text
 04-computation/lrc14_minimal_bad_core_cover_extractor_codex_20260629.py
@@ -57,6 +60,22 @@ Rebase integration: incoming HYP-3437 reserves the overlap-tax Menger-cut
 certificate.  This is the graph-cut sibling of HYP-3436: use the bad-core atoms
 and local cover signatures here as the incidence layer for HYP-3437's
 overlap-tax/no-gluing cuts.
+poke-forum/posts/20260629-lrc14-minimal-bad-core-cover-extractor/post.md
+```
+
+The exact scout decomposes `E_safe cap B0_odd cap B1_odd` and computes minimal
+branch-0/branch-1 odd-owner covers for every bad-core interval.  On the
+HYP-3435 `135`-row bank: branch-union measure identity `135/135`, positive
+survivors `135/135`, `17164` even-safe components, `11670` bad-core
+components, `15868` survivor components, max minimal two-color owner count
+`6`, `(1,1)` cover signature `10288/11670`, and endpoint support `(1,1)` on
+`11634/11670`.
+
+Canonical tail clue: for `{1..11,13,84m}`, no failures through `m=30`, and all
+bad-core components are singleton/singleton from `m=3`.  Next proof target:
+prove that local minimal bad-cover packets cannot concatenate into a global
+cover of `E_safe` unless owner-current, endpoint-spine, overlap-tax, two-adic,
+exact-period, or state-lift debt is emitted.
 
 ## codex-2026-06-28 -- HYP-3432 Euler-Mascheroni harmonic wall-budget sidecar
 

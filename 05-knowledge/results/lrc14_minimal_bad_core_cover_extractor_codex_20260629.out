@@ -1,253 +1,146 @@
 HYP-3436 MINIMAL BAD-CORE COVER EXTRACTOR
-status=EVIDENCE / exact interval-cover classification; not a proof
-source=HYP-3435 inversion of HYP-3422/HYP-3425 two-adic bad-core chain, with HYP-3431 corridor-fence base case and HYP-3430 scalar-firewall guardrail
+status=EVIDENCE / exact local obstruction classifier; not an LRC14 proof
+source=HYP-3435 inverted through the HYP-3425 two-color bad-core identity
 
-## Assumption Challenge
-  alternate vertices considered: runners, gaps, fixed sections, section boundaries,
-  wall-crossing events, residues, endpoint owners, branch bad intervals,
-  even-safe components, bad-core components, survivor gaps, and proof obligations.
-  chosen carrier vertices: proof obligations and exact interval-cover components.
-  preserved predicate: whether E_safe is swallowed by B0_odd cap B1_odd,
-  hence whether a two-adic branch relocation witness survives.
-  destroyed by scalarization: which odd owners cover each bad component,
-  which even gates define it, and which survivor gaps remain.
-
-## Aggregate Bad-Core Cover Audit
+## Aggregate Bad-Core Classification
 rows_audited=135
 structured_rows=15
 random_rows=120
-rows_with_survivor=135/135
-total_E_components=17164
-E_components_fully_bad=3770
-E_components_mixed=6228
-E_components_clean=7166
-bad_core_components=11670
-survivor_components=15868
-cover_pair_hist={(1, 1): 10288, (1, 2): 531, (1, 3): 35, (1, 4): 5, (1, 5): 2, (2, 1): 531, (2, 2): 184, (2, 3): 22, (2, 4): 1, (3, 1): 35, (3, 2): 22, (3, 3): 6, (4, 1): 5, (4, 2): 1, (5, 1): 2}
-endpoint_support_size_hist={1: 2204, 2: 9432, 3: 34}
-max_cover_total=6
-max_endpoint_support_size=3
+branch_union_measure_identity=135/135
+positive_survivor_rows=135/135
+total_even_safe_components=17164
+total_fully_bad_safe_components=3770
+total_positive_safe_components=13394
+total_bad_core_components=11670
+total_survivor_components=15868
+max_minimal_two_color_owner_count=6
+minimal_cover_size_hist={(1, 1): 10288, (1, 2): 531, (1, 3): 35, (1, 4): 5, (1, 5): 2, (2, 1): 531, (2, 2): 184, (2, 3): 22, (2, 4): 1, (3, 1): 35, (3, 2): 22, (3, 3): 6, (4, 1): 5, (4, 2): 1, (5, 1): 2}
+endpoint_support_hist={(1, 1): 11634, (1, 2): 18, (2, 1): 18}
+owner_role_signature_top=[(('B0:odd_unit', 'B1:odd_unit'), 6622), (('B0:odd_unit', 'B1:seven_R'), 1660), (('B0:seven_R', 'B1:odd_unit'), 1660), (('B0:seven_R', 'B1:seven_R'), 346), (('B0:odd_unit', 'B1:odd_unit', 'B1:odd_unit'), 288), (('B0:odd_unit', 'B0:odd_unit', 'B1:odd_unit'), 288), (('B0:odd_unit', 'B1:odd_unit', 'B1:seven_R'), 124), (('B0:odd_unit', 'B0:seven_R', 'B1:odd_unit'), 124)]
 
-## Tight Canonical Bad-Core Decomposition
+## Tightest Survivor Rows
   covering_AP_with_84
     speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
-    even_safe=107/245 in 26 components; bad_core=314/735 in 26 components; survivor=1/105 in 4 components
-    E components: full_bad=22, mixed=4, clean=0; min_survivor_gap=1/588; max_cover_total=3
-    cover_pair_hist={(1, 1): 14, (1, 2): 6, (2, 1): 6}
-    [43/588, 55/588] len=1/49 B0=(1,) B1=(11, 13)
-      left=('E:84',) right=('E:84',)
-    [71/588, 83/588] len=1/49 B0=(1,) B1=(7, 9)
-      left=('E:84',) right=('E:84',)
-    [169/588, 181/588] len=1/49 B0=(7, 13) B1=(3,)
-      left=('E:84',) right=('E:84',)
-    [211/588, 223/588] len=1/49 B0=(5, 11) B1=(3,)
-      left=('E:84',) right=('E:84',)
-
-## Smallest Survivor Measures
-  covering_AP_with_84
-    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
-    even_safe=107/245 in 26 components; bad_core=314/735 in 26 components; survivor=1/105 in 4 components
-    E components: full_bad=22, mixed=4, clean=0; min_survivor_gap=1/588; max_cover_total=3
-    cover_pair_hist={(1, 1): 14, (1, 2): 6, (2, 1): 6}
-    [43/588, 55/588] len=1/49 B0=(1,) B1=(11, 13)
-      left=('E:84',) right=('E:84',)
-    [71/588, 83/588] len=1/49 B0=(1,) B1=(7, 9)
-      left=('E:84',) right=('E:84',)
-    [169/588, 181/588] len=1/49 B0=(7, 13) B1=(3,)
-      left=('E:84',) right=('E:84',)
-    [211/588, 223/588] len=1/49 B0=(5, 11) B1=(3,)
-      left=('E:84',) right=('E:84',)
+    odd=7, even=6, E_safe=107/245 in 26 components
+    bad_core=314/735 in 26 components, survivor=1/105 in 4 components
+    fully_bad_safe_components=22, positive_safe_components=4, min_survivor_cell=1/588, max_core_cell=1/49
+    cover_size_hist={(1, 1): 14, (1, 2): 6, (2, 1): 6}, branch_union_identity=True
+    core [43/588,55/588] len=1/49 B0=(1,) B1=(11, 13) L=('E:84',) R=('E:84',)
+    core [19/196,23/196] len=1/49 B0=(1,) B1=(9,) L=('E:84',) R=('E:84',)
+    core [71/588,83/588] len=1/49 B0=(1,) B1=(7, 9) L=('E:84',) R=('E:84',)
+    core [169/588,181/588] len=1/49 B0=(7, 13) B1=(3,) L=('E:84',) R=('E:84',)
   ap_omit_12_tail_84x01
     speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
-    even_safe=107/245 in 26 components; bad_core=314/735 in 26 components; survivor=1/105 in 4 components
-    E components: full_bad=22, mixed=4, clean=0; min_survivor_gap=1/588; max_cover_total=3
-    cover_pair_hist={(1, 1): 14, (1, 2): 6, (2, 1): 6}
-    [43/588, 55/588] len=1/49 B0=(1,) B1=(11, 13)
-      left=('E:84',) right=('E:84',)
-    [71/588, 83/588] len=1/49 B0=(1,) B1=(7, 9)
-      left=('E:84',) right=('E:84',)
-    [169/588, 181/588] len=1/49 B0=(7, 13) B1=(3,)
-      left=('E:84',) right=('E:84',)
-    [211/588, 223/588] len=1/49 B0=(5, 11) B1=(3,)
-      left=('E:84',) right=('E:84',)
+    odd=7, even=6, E_safe=107/245 in 26 components
+    bad_core=314/735 in 26 components, survivor=1/105 in 4 components
+    fully_bad_safe_components=22, positive_safe_components=4, min_survivor_cell=1/588, max_core_cell=1/49
+    cover_size_hist={(1, 1): 14, (1, 2): 6, (2, 1): 6}, branch_union_identity=True
+    core [43/588,55/588] len=1/49 B0=(1,) B1=(11, 13) L=('E:84',) R=('E:84',)
+    core [19/196,23/196] len=1/49 B0=(1,) B1=(9,) L=('E:84',) R=('E:84',)
+    core [71/588,83/588] len=1/49 B0=(1,) B1=(7, 9) L=('E:84',) R=('E:84',)
+    core [169/588,181/588] len=1/49 B0=(7, 13) B1=(3,) L=('E:84',) R=('E:84',)
   ap_omit_12_tail_84x02
     speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168)
-    even_safe=423/980 in 48 components; bad_core=1231/2940 in 48 components; survivor=19/1470 in 4 components
-    E components: full_bad=44, mixed=4, clean=0; min_survivor_gap=1/392; max_cover_total=3
-    cover_pair_hist={(1, 1): 42, (1, 2): 3, (2, 1): 3}
-    [47/392, 51/392] len=1/98 B0=(1,) B1=(7, 9)
-      left=('E:168',) right=('E:168',)
-    [145/392, 149/392] len=1/98 B0=(5, 11) B1=(3,)
-      left=('E:168',) right=('E:168',)
-    [173/392, 177/392] len=1/98 B0=(9,) B1=(7, 11)
-      left=('E:168',) right=('E:168',)
-    [215/392, 219/392] len=1/98 B0=(7, 11) B1=(9,)
-      left=('E:168',) right=('E:168',)
+    odd=7, even=6, E_safe=423/980 in 48 components
+    bad_core=1231/2940 in 48 components, survivor=19/1470 in 4 components
+    fully_bad_safe_components=44, positive_safe_components=4, min_survivor_cell=1/392, max_core_cell=1/98
+    cover_size_hist={(1, 1): 42, (1, 2): 3, (2, 1): 3}, branch_union_identity=True
+    core [85/1176,97/1176] len=1/98 B0=(1,) B1=(13,) L=('E:168',) R=('E:168',)
+    core [33/392,37/392] len=1/98 B0=(1,) B1=(11,) L=('E:168',) R=('E:168',)
+    core [113/1176,125/1176] len=1/98 B0=(1,) B1=(9,) L=('E:168',) R=('E:168',)
+    core [127/1176,139/1176] len=1/98 B0=(1,) B1=(9,) L=('E:168',) R=('E:168',)
   ap_omit_12_tail_84x08
     speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 672)
-    even_safe=1697/3920 in 172 components; bad_core=1643/3920 in 168 components; survivor=27/1960 in 8 components
-    E components: full_bad=164, mixed=4, clean=4; min_survivor_gap=1/4704; max_cover_total=2
-    cover_pair_hist={(1, 1): 168}
-    [337/4704, 349/4704] len=1/392 B0=(1,) B1=(13,)
-      left=('E:672',) right=('E:672',)
-    [117/1568, 121/1568] len=1/392 B0=(1,) B1=(13,)
-      left=('E:672',) right=('E:672',)
-    [365/4704, 377/4704] len=1/392 B0=(1,) B1=(13,)
-      left=('E:672',) right=('E:672',)
-    [379/4704, 391/4704] len=1/392 B0=(1,) B1=(11,)
-      left=('E:672',) right=('E:672',)
+    odd=7, even=6, E_safe=1697/3920 in 172 components
+    bad_core=1643/3920 in 168 components, survivor=27/1960 in 8 components
+    fully_bad_safe_components=164, positive_safe_components=8, min_survivor_cell=1/4704, max_core_cell=1/392
+    cover_size_hist={(1, 1): 168}, branch_union_identity=True
+    core [337/4704,349/4704] len=1/392 B0=(1,) B1=(13,) L=('E:672',) R=('E:672',)
+    core [117/1568,121/1568] len=1/392 B0=(1,) B1=(13,) L=('E:672',) R=('E:672',)
+    core [365/4704,377/4704] len=1/392 B0=(1,) B1=(13,) L=('E:672',) R=('E:672',)
+    core [379/4704,391/4704] len=1/392 B0=(1,) B1=(11,) L=('E:672',) R=('E:672',)
   ap_omit_12_tail_84x11
     speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 924)
-    even_safe=3496/8085 in 240 components; bad_core=1128/2695 in 234 components; survivor=16/1155 in 10 components
-    E components: full_bad=230, mixed=4, clean=6; min_survivor_gap=3/10780; max_cover_total=2
-    cover_pair_hist={(1, 1): 234}
-    [463/6468, 475/6468] len=1/539 B0=(1,) B1=(13,)
-      left=('E:924',) right=('E:924',)
-    [159/2156, 163/2156] len=1/539 B0=(1,) B1=(13,)
-      left=('E:924',) right=('E:924',)
-    [491/6468, 503/6468] len=1/539 B0=(1,) B1=(13,)
-      left=('E:924',) right=('E:924',)
-    [505/6468, 47/588] len=1/539 B0=(1,) B1=(11,)
-      left=('E:924',) right=('E:924',)
+    odd=7, even=6, E_safe=3496/8085 in 240 components
+    bad_core=1128/2695 in 234 components, survivor=16/1155 in 10 components
+    fully_bad_safe_components=230, positive_safe_components=10, min_survivor_cell=3/10780, max_core_cell=1/539
+    cover_size_hist={(1, 1): 234}, branch_union_identity=True
+    core [463/6468,475/6468] len=1/539 B0=(1,) B1=(13,) L=('E:924',) R=('E:924',)
+    core [159/2156,163/2156] len=1/539 B0=(1,) B1=(13,) L=('E:924',) R=('E:924',)
+    core [491/6468,503/6468] len=1/539 B0=(1,) B1=(13,) L=('E:924',) R=('E:924',)
+    core [505/6468,47/588] len=1/539 B0=(1,) B1=(11,) L=('E:924',) R=('E:924',)
+  ap_omit_12_tail_84x07
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 588)
+    odd=7, even=6, E_safe=2222/5145 in 156 components
+    bad_core=4301/10290 in 152 components, survivor=143/10290 in 6 components
+    fully_bad_safe_components=150, positive_safe_components=6, min_survivor_cell=23/20580, max_core_cell=1/343
+    cover_size_hist={(1, 1): 152}, branch_union_identity=True
+    core [295/4116,307/4116] len=1/343 B0=(1,) B1=(13,) L=('E:588',) R=('E:588',)
+    core [103/1372,107/1372] len=1/343 B0=(1,) B1=(13,) L=('E:588',) R=('E:588',)
+    core [323/4116,335/4116] len=1/343 B0=(1,) B1=(11,) L=('E:588',) R=('E:588',)
+    core [337/4116,349/4116] len=1/343 B0=(1,) B1=(11,) L=('E:588',) R=('E:588',)
 
-## Hardest Local Minimal Covers
-  random_covering_013
-    speeds=(35, 36, 65, 91, 103, 117, 119, 120, 132, 143, 156, 160, 168)
-    even_safe=8707/24255 in 200 components; bad_core=108326789/630990360 in 142 components; survivor=165458401/883386504 in 158 components
-    E components: full_bad=52, mixed=74, clean=74; min_survivor_gap=1/40040; max_cover_total=6
-    cover_pair_hist={(1, 1): 114, (1, 2): 10, (2, 1): 10, (2, 2): 4, (2, 3): 1, (2, 4): 1, (3, 2): 1, (4, 2): 1}
-    [244/721, 135/392] len=241/40376 B0=(35, 65) B1=(91, 103, 119, 143)
-      left=('B1:103',) right=('E:168',)
-    [257/392, 477/721] len=241/40376 B0=(91, 103, 119, 143) B1=(35, 65)
-      left=('E:168',) right=('B0:103',)
-    [41/1001, 41/924] len=41/12012 B0=(91, 143) B1=(65, 117, 119)
-      left=('B0:143',) right=('E:132',)
-    [883/924, 960/1001] len=41/12012 B0=(65, 117, 119) B1=(91, 143)
-      left=('E:132',) right=('B1:143',)
-  random_covering_031
-    speeds=(12, 23, 45, 55, 58, 70, 84, 93, 113, 120, 147, 169, 173)
-    even_safe=7543/17052 in 98 components; bad_core=60530168460523/237915905951724 in 138 components; survivor=3726049955064/19826325495977 in 148 components
-    E components: full_bad=4, mixed=84, clean=10; min_survivor_gap=2/178017; max_cover_total=6
-    cover_pair_hist={(1, 1): 104, (1, 2): 8, (1, 3): 3, (2, 1): 8, (2, 2): 8, (2, 3): 1, (3, 1): 3, (3, 2): 1, (3, 3): 2}
-    [61/280, 267/1183] len=53/6760 B0=(45, 55, 169) B1=(23, 93, 147)
-      left=('E:120',) right=('B0:169',)
-    [916/1183, 219/280] len=53/6760 B0=(23, 93, 147) B1=(45, 55, 169)
-      left=('B1:169',) right=('E:120',)
-    [349/791, 181/406] len=211/45878 B0=(45, 113) B1=(147, 169, 173)
-      left=('B0:113',) right=('E:58',)
-    [225/406, 442/791] len=211/45878 B0=(147, 169, 173) B1=(45, 113)
-      left=('E:58',) right=('B1:113',)
-  random_covering_109
-    speeds=(2, 4, 71, 112, 119, 123, 132, 138, 141, 161, 169, 170, 171)
-    even_safe=10555021/25289880 in 136 components; bad_core=822245136708577/4166375467088835 in 174 components; survivor=1466622994561553/6666200747342136 in 196 components
-    E components: full_bad=10, mixed=108, clean=18; min_survivor_gap=1/146370; max_cover_total=6
-    cover_pair_hist={(1, 1): 130, (1, 2): 16, (1, 3): 1, (2, 1): 16, (2, 2): 8, (3, 1): 1, (3, 3): 2}
-    [365/924, 53/133] len=61/17556 B0=(71, 141, 171) B1=(119, 123, 169)
-      left=('E:132',) right=('B0:171',)
-    [80/133, 559/924] len=61/17556 B0=(119, 123, 169) B1=(71, 141, 171)
-      left=('B1:171',) right=('E:132',)
-    [48/497, 97/966] len=263/68586 B0=(119, 123, 141) B1=(71,)
-      left=('B1:71',) right=('E:138',)
-    [869/966, 449/497] len=263/68586 B0=(71,) B1=(119, 123, 141)
-      left=('E:138',) right=('B0:71',)
-  random_covering_082
-    speeds=(35, 36, 42, 63, 69, 77, 89, 105, 111, 118, 120, 125, 156)
-    even_safe=148510/338247 in 138 components; bad_core=7909219121/36597842190 in 130 components; survivor=57115455053/256184895330 in 120 components
-    E components: full_bad=32, mixed=78, clean=28; min_survivor_gap=1/86730; max_cover_total=6
-    cover_pair_hist={(1, 1): 106, (1, 2): 4, (1, 3): 1, (2, 1): 4, (2, 2): 12, (3, 1): 1, (3, 3): 2}
-    [131/364, 307/840] len=61/10920 B0=(77, 89, 105) B1=(63, 69, 125)
-      left=('E:156',) right=('E:120',)
-    [533/840, 233/364] len=61/10920 B0=(63, 69, 125) B1=(77, 89, 105)
-      left=('E:120',) right=('E:156',)
-    [141/826, 26/147] len=107/17346 B0=(35, 125) B1=(63, 111)
-      left=('E:118',) right=('B1:63',)
-    [121/147, 685/826] len=107/17346 B0=(63, 111) B1=(35, 125)
-      left=('B0:63',) right=('E:118',)
-  random_covering_097
-    speeds=(1, 11, 49, 60, 72, 75, 84, 89, 101, 129, 130, 140, 165)
-    even_safe=571/1260 in 152 components; bad_core=133685544547/609388805025 in 140 components; survivor=189965313799/812518406700 in 142 components
-    E components: full_bad=38, mixed=72, clean=42; min_survivor_gap=1/32340; max_cover_total=6
-    cover_pair_hist={(1, 1): 120, (1, 2): 9, (1, 5): 1, (2, 1): 9, (5, 1): 1}
-    [2/385, 13/980] len=87/10780 B0=(1,) B1=(75, 89, 101, 129, 165)
-      left=('B1:165',) right=('E:140',)
-    [967/980, 383/385] len=87/10780 B0=(75, 89, 101, 129, 165) B1=(1,)
-      left=('E:140',) right=('B0:165',)
-    [4/231, 13/588] len=31/6468 B0=(1,) B1=(49, 165)
-      left=('B1:165',) right=('E:84',)
-    [575/588, 227/231] len=31/6468 B0=(49, 165) B1=(1,)
-      left=('E:84',) right=('B0:165',)
-
-## Largest Bad-Core Ratios
-  ap_omit_12_tail_84x01: bad/even_safe=314/321
-  ap_omit_12_tail_84x01
-    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
-    even_safe=107/245 in 26 components; bad_core=314/735 in 26 components; survivor=1/105 in 4 components
-    E components: full_bad=22, mixed=4, clean=0; min_survivor_gap=1/588; max_cover_total=3
-    cover_pair_hist={(1, 1): 14, (1, 2): 6, (2, 1): 6}
-    [43/588, 55/588] len=1/49 B0=(1,) B1=(11, 13)
-      left=('E:84',) right=('E:84',)
-    [71/588, 83/588] len=1/49 B0=(1,) B1=(7, 9)
-      left=('E:84',) right=('E:84',)
-    [169/588, 181/588] len=1/49 B0=(7, 13) B1=(3,)
-      left=('E:84',) right=('E:84',)
-    [211/588, 223/588] len=1/49 B0=(5, 11) B1=(3,)
-      left=('E:84',) right=('E:84',)
-  covering_AP_with_84: bad/even_safe=314/321
-  covering_AP_with_84
-    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
-    even_safe=107/245 in 26 components; bad_core=314/735 in 26 components; survivor=1/105 in 4 components
-    E components: full_bad=22, mixed=4, clean=0; min_survivor_gap=1/588; max_cover_total=3
-    cover_pair_hist={(1, 1): 14, (1, 2): 6, (2, 1): 6}
-    [43/588, 55/588] len=1/49 B0=(1,) B1=(11, 13)
-      left=('E:84',) right=('E:84',)
-    [71/588, 83/588] len=1/49 B0=(1,) B1=(7, 9)
-      left=('E:84',) right=('E:84',)
-    [169/588, 181/588] len=1/49 B0=(7, 13) B1=(3,)
-      left=('E:84',) right=('E:84',)
-    [211/588, 223/588] len=1/49 B0=(5, 11) B1=(3,)
-      left=('E:84',) right=('E:84',)
-  ap_omit_12_tail_84x02: bad/even_safe=1231/1269
-  ap_omit_12_tail_84x02
-    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168)
-    even_safe=423/980 in 48 components; bad_core=1231/2940 in 48 components; survivor=19/1470 in 4 components
-    E components: full_bad=44, mixed=4, clean=0; min_survivor_gap=1/392; max_cover_total=3
-    cover_pair_hist={(1, 1): 42, (1, 2): 3, (2, 1): 3}
-    [47/392, 51/392] len=1/98 B0=(1,) B1=(7, 9)
-      left=('E:168',) right=('E:168',)
-    [145/392, 149/392] len=1/98 B0=(5, 11) B1=(3,)
-      left=('E:168',) right=('E:168',)
-    [173/392, 177/392] len=1/98 B0=(9,) B1=(7, 11)
-      left=('E:168',) right=('E:168',)
-    [215/392, 219/392] len=1/98 B0=(7, 11) B1=(9,)
-      left=('E:168',) right=('E:168',)
-  ap_omit_12_tail_84x08: bad/even_safe=1643/1697
-  ap_omit_12_tail_84x08
-    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 672)
-    even_safe=1697/3920 in 172 components; bad_core=1643/3920 in 168 components; survivor=27/1960 in 8 components
-    E components: full_bad=164, mixed=4, clean=4; min_survivor_gap=1/4704; max_cover_total=2
-    cover_pair_hist={(1, 1): 168}
-    [337/4704, 349/4704] len=1/392 B0=(1,) B1=(13,)
-      left=('E:672',) right=('E:672',)
-    [117/1568, 121/1568] len=1/392 B0=(1,) B1=(13,)
-      left=('E:672',) right=('E:672',)
-    [365/4704, 377/4704] len=1/392 B0=(1,) B1=(13,)
-      left=('E:672',) right=('E:672',)
-    [379/4704, 391/4704] len=1/392 B0=(1,) B1=(11,)
-      left=('E:672',) right=('E:672',)
-  ap_omit_12_tail_84x11: bad/even_safe=423/437
-  ap_omit_12_tail_84x11
-    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 924)
-    even_safe=3496/8085 in 240 components; bad_core=1128/2695 in 234 components; survivor=16/1155 in 10 components
-    E components: full_bad=230, mixed=4, clean=6; min_survivor_gap=3/10780; max_cover_total=2
-    cover_pair_hist={(1, 1): 234}
-    [463/6468, 475/6468] len=1/539 B0=(1,) B1=(13,)
-      left=('E:924',) right=('E:924',)
-    [159/2156, 163/2156] len=1/539 B0=(1,) B1=(13,)
-      left=('E:924',) right=('E:924',)
-    [491/6468, 503/6468] len=1/539 B0=(1,) B1=(13,)
-      left=('E:924',) right=('E:924',)
-    [505/6468, 47/588] len=1/539 B0=(1,) B1=(11,)
-      left=('E:924',) right=('E:924',)
+## Smallest Individual Survivor Cells
+  random_covering_116
+    speeds=(50, 88, 91, 94, 112, 120, 130, 135, 155, 161, 168, 172, 176)
+    odd=4, even=9, E_safe=14345637/54465950 in 168 components
+    bad_core=34986928363/699016002300 in 70 components, survivor=29824995379/139803200460 in 178 components
+    fully_bad_safe_components=16, positive_safe_components=152, min_survivor_cell=1/162540, max_core_cell=129/40040
+    cover_size_hist={(1, 1): 68, (2, 2): 2}, branch_union_identity=True
+    core [99/910,69/616] len=129/40040 B0=(91, 161) B1=(135, 155) L=('E:130',) R=('E:88',)
+    core [547/616,811/910] len=129/40040 B0=(135, 155) B1=(91, 161) L=('E:88',) R=('E:130',)
+    core [475/1127,477/1127] len=2/1127 B0=(161,) B1=(135,) L=('B0:161',) R=('B0:161',)
+    core [531/1127,533/1127] len=2/1127 B0=(161,) B1=(91,) L=('B0:161',) R=('B0:161',)
+  random_covering_059
+    speeds=(13, 51, 56, 65, 78, 80, 109, 128, 132, 134, 141, 144, 173)
+    odd=6, even=7, E_safe=12670837/40971840 in 152 components
+    bad_core=30482901755216/318301594626015 in 92 components, survivor=621295194557797/2910186008009280 in 134 components
+    fully_bad_safe_components=30, positive_safe_components=122, min_survivor_cell=1/162274, max_core_cell=730/131999
+    cover_size_hist={(1, 1): 82, (1, 2): 3, (1, 3): 1, (2, 1): 3, (2, 2): 2, (3, 1): 1}, branch_union_identity=True
+    core [6/1211,8/763] len=730/131999 B0=(13,) B1=(109, 141, 173) L=('B1:173',) R=('B1:109',)
+    core [755/763,1205/1211] len=730/131999 B0=(109, 141, 173) B1=(13,) L=('B0:109',) R=('B0:173',)
+    core [258/763,337/987] len=355/107583 B0=(65, 141) B1=(109, 173) L=('B1:109',) R=('B0:141',)
+    core [650/987,505/763] len=355/107583 B0=(109, 173) B1=(65, 141) L=('B1:141',) R=('B0:109',)
+  random_covering_064
+    speeds=(6, 54, 56, 62, 84, 87, 115, 119, 143, 150, 152, 162, 175)
+    odd=5, even=8, E_safe=34351843/116887050 in 120 components
+    bad_core=31756478663029/379059326345700 in 86 components, survivor=11377852571599/54151332335100 in 140 components
+    fully_bad_safe_components=8, positive_safe_components=112, min_survivor_cell=1/150150, max_core_cell=29/10584
+    cover_size_hist={(1, 1): 70, (1, 2): 7, (1, 3): 1, (2, 1): 7, (3, 1): 1}, branch_union_identity=True
+    core [85/392,83/378] len=29/10584 B0=(119, 175) B1=(87,) L=('E:56',) R=('E:54',)
+    core [295/378,307/392] len=29/10584 B0=(87,) B1=(119, 175) L=('E:54',) R=('E:56',)
+    core [62/609,111/1064] len=233/92568 B0=(115, 119, 175) B1=(87,) L=('B1:87',) R=('E:152',)
+    core [953/1064,547/609] len=233/92568 B0=(87,) B1=(115, 119, 175) L=('E:152',) R=('B0:87',)
+  random_covering_107
+    speeds=(3, 9, 11, 70, 77, 95, 96, 104, 108, 125, 139, 154, 167)
+    odd=8, even=5, E_safe=695087/1513512 in 140 components
+    bad_core=5564985792739/27813746961000 in 130 components, survivor=5406449283227/20860310220750 in 146 components
+    fully_bad_safe_components=24, positive_safe_components=116, min_survivor_cell=1/149842, max_core_cell=457/58212
+    cover_size_hist={(1, 1): 112, (1, 2): 6, (1, 3): 1, (1, 5): 1, (2, 1): 6, (2, 2): 2, (3, 1): 1, (5, 1): 1}, branch_union_identity=True
+    core [337/756,489/1078] len=457/58212 B0=(9,) B1=(11,) L=('E:108',) R=('E:154',)
+    core [589/1078,419/756] len=457/58212 B0=(11,) B1=(9,) L=('E:154',) R=('E:108',)
+    core [239/672,391/1078] len=365/51744 B0=(11,) B1=(3,) L=('E:96',) R=('E:154',)
+    core [687/1078,433/672] len=365/51744 B0=(3,) B1=(11,) L=('E:154',) R=('E:96',)
+  random_covering_102
+    speeds=(7, 21, 26, 84, 108, 109, 110, 120, 127, 130, 133, 150, 160)
+    odd=5, even=8, E_safe=300709/1081080 in 148 components
+    bad_core=464880621239/6634656428400 in 64 components, survivor=4141768669993/19903969285200 in 150 components
+    fully_bad_safe_components=12, positive_safe_components=136, min_survivor_cell=1/148960, max_core_cell=410/101479
+    cover_size_hist={(1, 1): 56, (1, 2): 4, (2, 1): 4}, branch_union_identity=True
+    core [6/931,8/763] len=410/101479 B0=(7,) B1=(109, 133) L=('B1:133',) R=('B1:109',)
+    core [755/763,925/931] len=410/101479 B0=(109, 133) B1=(7,) L=('B0:109',) R=('B0:133',)
+    core [391/931,323/763] len=340/101479 B0=(109, 133) B1=(7,) L=('B0:133',) R=('B0:109',)
+    core [440/763,540/931] len=340/101479 B0=(7,) B1=(109, 133) L=('B1:109',) R=('B1:133',)
+  random_covering_095
+    speeds=(24, 25, 42, 55, 63, 76, 80, 82, 109, 129, 130, 153, 163)
+    odd=7, even=6, E_safe=58627/152684 in 106 components
+    bad_core=152118091785133/1037453041224600 in 106 components, survivor=10095800408634097/42535574690208600 in 126 components
+    fully_bad_safe_components=14, positive_safe_components=92, min_survivor_cell=1/148330, max_core_cell=157/26775
+    cover_size_hist={(1, 1): 82, (1, 2): 10, (1, 3): 1, (2, 1): 10, (2, 2): 2, (3, 1): 1}, branch_union_identity=True
+    core [6/175,43/1071] len=157/26775 B0=(55, 153) B1=(25,) L=('B1:25',) R=('B0:153',)
+    core [1028/1071,169/175] len=157/26775 B0=(25,) B1=(55, 153) L=('B1:153',) R=('B0:25',)
+    core [253/574,81/182] len=16/3731 B0=(63, 109, 163) B1=(25,) L=('E:82',) R=('E:130',)
+    core [101/182,321/574] len=16/3731 B0=(25,) B1=(63, 109, 163) L=('E:130',) R=('E:82',)
 
 ## Extracted Lemma Shape
   For every audited primitive covering row, E_safe has at least one survivor
@@ -263,10 +156,136 @@ max_endpoint_support_size=3
   bad-core atoms; wide residuals should route to signed-SPEC/Rprime,
   exact-period, state-lift, or two-adic loss debt.
 
+## Rows With Most Fully Bad E-Safe Components
+  ap_omit_12_tail_84x12
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 1008)
+    odd=7, even=6, E_safe=2543/5880 in 258 components
+    bad_core=7381/17640 in 252 components, survivor=31/2205 in 10 components
+    fully_bad_safe_components=248, positive_safe_components=10, min_survivor_cell=23/35280, max_core_cell=1/588
+    cover_size_hist={(1, 1): 252}, branch_union_identity=True
+    core [505/7056,517/7056] len=1/588 B0=(1,) B1=(13,) L=('E:1008',) R=('E:1008',)
+    core [173/2352,59/784] len=1/588 B0=(1,) B1=(13,) L=('E:1008',) R=('E:1008',)
+    core [533/7056,545/7056] len=1/588 B0=(1,) B1=(13,) L=('E:1008',) R=('E:1008',)
+    core [547/7056,559/7056] len=1/588 B0=(1,) B1=(13,) L=('E:1008',) R=('E:1008',)
+  ap_omit_12_tail_84x11
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 924)
+    odd=7, even=6, E_safe=3496/8085 in 240 components
+    bad_core=1128/2695 in 234 components, survivor=16/1155 in 10 components
+    fully_bad_safe_components=230, positive_safe_components=10, min_survivor_cell=3/10780, max_core_cell=1/539
+    cover_size_hist={(1, 1): 234}, branch_union_identity=True
+    core [463/6468,475/6468] len=1/539 B0=(1,) B1=(13,) L=('E:924',) R=('E:924',)
+    core [159/2156,163/2156] len=1/539 B0=(1,) B1=(13,) L=('E:924',) R=('E:924',)
+    core [491/6468,503/6468] len=1/539 B0=(1,) B1=(13,) L=('E:924',) R=('E:924',)
+    core [505/6468,47/588] len=1/539 B0=(1,) B1=(11,) L=('E:924',) R=('E:924',)
+  ap_omit_12_tail_84x10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 840)
+    odd=7, even=6, E_safe=106/245 in 214 components
+    bad_core=1231/2940 in 208 components, survivor=41/2940 in 8 components
+    fully_bad_safe_components=206, positive_safe_components=8, min_survivor_cell=1/1176, max_core_cell=1/490
+    cover_size_hist={(1, 1): 208}, branch_union_identity=True
+    core [421/5880,433/5880] len=1/490 B0=(1,) B1=(13,) L=('E:840',) R=('E:840',)
+    core [29/392,149/1960] len=1/490 B0=(1,) B1=(13,) L=('E:840',) R=('E:840',)
+    core [449/5880,461/5880] len=1/490 B0=(1,) B1=(13,) L=('E:840',) R=('E:840',)
+    core [463/5880,95/1176] len=1/490 B0=(1,) B1=(11,) L=('E:840',) R=('E:840',)
+  ap_omit_12_tail_84x09
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 756)
+    odd=7, even=6, E_safe=2864/6615 in 196 components
+    bad_core=2771/6615 in 192 components, survivor=31/2205 in 8 components
+    fully_bad_safe_components=188, positive_safe_components=8, min_survivor_cell=1/1764, max_core_cell=1/441
+    cover_size_hist={(1, 1): 192}, branch_union_identity=True
+    core [379/5292,391/5292] len=1/441 B0=(1,) B1=(13,) L=('E:756',) R=('E:756',)
+    core [131/1764,15/196] len=1/441 B0=(1,) B1=(13,) L=('E:756',) R=('E:756',)
+    core [407/5292,419/5292] len=1/441 B0=(1,) B1=(13,) L=('E:756',) R=('E:756',)
+    core [421/5292,433/5292] len=1/441 B0=(1,) B1=(11,) L=('E:756',) R=('E:756',)
+  ap_omit_12_tail_84x08
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 672)
+    odd=7, even=6, E_safe=1697/3920 in 172 components
+    bad_core=1643/3920 in 168 components, survivor=27/1960 in 8 components
+    fully_bad_safe_components=164, positive_safe_components=8, min_survivor_cell=1/4704, max_core_cell=1/392
+    cover_size_hist={(1, 1): 168}, branch_union_identity=True
+    core [337/4704,349/4704] len=1/392 B0=(1,) B1=(13,) L=('E:672',) R=('E:672',)
+    core [117/1568,121/1568] len=1/392 B0=(1,) B1=(13,) L=('E:672',) R=('E:672',)
+    core [365/4704,377/4704] len=1/392 B0=(1,) B1=(13,) L=('E:672',) R=('E:672',)
+    core [379/4704,391/4704] len=1/392 B0=(1,) B1=(11,) L=('E:672',) R=('E:672',)
+
+## Canonical AP-with-84 Readout
+  covering_AP_with_84
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    odd=7, even=6, E_safe=107/245 in 26 components
+    bad_core=314/735 in 26 components, survivor=1/105 in 4 components
+    fully_bad_safe_components=22, positive_safe_components=4, min_survivor_cell=1/588, max_core_cell=1/49
+    cover_size_hist={(1, 1): 14, (1, 2): 6, (2, 1): 6}, branch_union_identity=True
+    core [43/588,55/588] len=1/49 B0=(1,) B1=(11, 13) L=('E:84',) R=('E:84',)
+    core [19/196,23/196] len=1/49 B0=(1,) B1=(9,) L=('E:84',) R=('E:84',)
+    core [71/588,83/588] len=1/49 B0=(1,) B1=(7, 9) L=('E:84',) R=('E:84',)
+    core [169/588,181/588] len=1/49 B0=(7, 13) B1=(3,) L=('E:84',) R=('E:84',)
+    E_safe_minus_bad_core=1/105
+    bad_core_expected_HYP3425=314/735, observed=314/735
+
+## Finite Stress-Bank Lower/Upper Bounds
+min_survivor_measure=1/105
+min_survivor_cell=1/162540
+min_positive_safe_components=4
+max_fully_bad_safe_components=248
+
+## Canonical 84m Minimal-Cover Tail Probe
+family=(1,2,3,4,5,6,7,8,9,10,11,13,84m), scanned_m=1..30
+first_all_core_components_singleton_singleton=3
+canonical_failures=[]
+m survivor bad_core core_components fully_bad positive_components all_singleton
+1 1/105 314/735 26 22 4 False
+2 19/1470 1231/2940 48 44 4 False
+3 31/2205 922/2205 70 66 4 True
+4 43/2940 117/280 88 84 4 True
+5 1/70 44/105 106 104 4 True
+6 31/2205 1231/2940 130 126 6 True
+7 143/10290 4301/10290 152 150 6 True
+8 27/1960 1643/3920 168 164 8 True
+9 31/2205 2771/6615 192 188 8 True
+10 41/2940 1231/2940 208 206 8 True
+11 16/1155 1128/2695 234 230 10 True
+12 31/2205 7381/17640 252 248 10 True
+13 136/9555 1334/3185 274 270 10 True
+14 97/6860 2153/5145 294 292 10 True
+15 61/4410 923/2205 312 310 12 True
+16 27/1960 9853/23520 332 328 14 True
+17 58/4165 5233/12495 356 352 14 True
+18 31/2205 1231/2940 376 372 14 True
+19 66/4655 1947/4655 400 396 14 True
+20 83/5880 2461/5880 412 410 14 True
+21 143/10290 1437/3430 436 434 16 True
+22 16/1155 1231/2940 458 454 18 True
+23 236/16905 337/805 480 476 18 True
+24 31/2205 14767/35280 498 494 18 True
+25 103/7350 513/1225 516 514 18 True
+26 89/6370 1231/2940 540 536 20 True
+27 31/2205 8303/19845 564 560 20 True
+28 577/41160 1231/2940 578 576 20 True
+29 298/21315 8926/21315 602 598 22 True
+30 41/2940 1231/2940 618 616 22 True
+
+## Proof Interpretation
+The bad core exists in many local cells, but every audited row leaves at least one survivor.
+Every local core interval is covered by small odd-owner sets in each branch; the global task is to show these local covers cannot concatenate across all E_safe components.
+This is a sharper target than a scalar union bound: HYP-3434's overlap tax is the branch-one-dimensional shadow of the same owner-cover compression.
+Endpoint labels show what the quotient is allowed to forget: raw order and endpoint openness may be forgotten, but branch color, owner speed, and E-safe component address may not.
+
 ## Tournament Analysis
-vertices=proof obligations / exact interval-cover ledgers, not runners
-pairwise_observable=predicate retention + cover exactness + endpoint payload + two-adic compatibility + scalar-firewall safety
-switch=higher proof-facing weighted score; ties use declared code order
-score_hist={-3: 1, 66: 1, 77: 1, 78: 1, 84: 1, 91: 1, 95: 1, 97: 1, 99: 1}
+vertices=proof obligations/certificate interfaces; alternate vertex sets considered: safe components, bad-core intervals, endpoint events, odd-owner cover tokens, Fourier modes, and runners
+chosen_vertex_set=proof obligations plus interval-cover certificate interfaces
+pairwise_observable=exactness + predicate retention + endpoint-owner recoverability + two-adic induction payload + scalar-firewall compliance
+switch=higher weighted proof-facing score; ties by declared code order
+tie_hamiltonian_path=B00_minimal_bad_core_cover_extractor -> B01_two_color_failure_normal_form -> B02_endpoint_owner_set_cover_lemma -> B03_overlap_tax_discharge_bridge -> B04_component_spine_router -> B05_two_adic_descent_induction -> B06_owner_current_exception_exit -> B07_harmonic_scalar_sidecar -> B08_raw_topology_or_named_constant
+score_hist={-1: 1, 45: 1, 97: 1, 102: 1, 106: 1, 109: 1, 116: 1, 122: 1, 130: 1}
 directed_3cycles=0
-hamiltonian_path=B00_local_bad_core_component_ledger -> B01_minimal_odd_owner_subcovers -> B02_endpoint_gate_wall_labels -> B03_survivor_gap_tax_certificate -> B04_overlap_tax_bridge -> B05_owner_current_exception_router -> B06_two_adic_descent_loss_ledger -> B07_topology_magnitude_legality_guard -> B08_scalar_bad_measure_shortcut
+edge_flips_against_scalar_first=36
+quotient_preserves=exact E_safe minus B0_odd cap B1_odd survivor predicate
+quotient_destroys=open endpoint convention and raw runner ordering only
+challenged_assumption=tournament vertices need not be runners/arcs; the useful tournament is over proof obligations and cover certificates
+
+## Candidate Lemma
+For every primitive covering row S=O union 2E with |S|=13, the local minimal covers of
+E_safe cap B0_odd cap B1_odd cannot form a connected all-component cover unless an
+owner-current exception, endpoint-spine failure, or two-adic descent debt is emitted.
+A proof can now aim at a finite labelled packet theorem over minimal branch-owner covers
+instead of attempting to prove a uniform positive branch-measure lower bound first.

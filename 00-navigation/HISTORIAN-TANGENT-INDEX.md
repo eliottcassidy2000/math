@@ -13,6 +13,15 @@ of 2026-05-30.
 
 Useful synthetic maps added later:
 
+- `07-reflections/lrc14-minimal-bad-core-cover-extractor-codex-20260629.md`:
+  HYP-3436/T1397 inverts the two-adic branch-cover certificate into exact
+  local bad-core cover packets.  It records that `10288/11670` bad-core
+  intervals are singleton/singleton odd-owner covers, endpoint support is
+  almost always `(1,1)`, and the canonical `{1..11,13,84m}` tail is
+  singleton/singleton from `m=3` through checked `m=30`.  The creative proof
+  target is a labelled packet theorem forbidding local minimal bad-cover
+  packets from concatenating into a global `E_safe` cover without named
+  owner-current, endpoint-spine, overlap-tax, two-adic, or state-lift debt.
 - `07-reflections/breakthrough-candidate-map.md`: outward-facing triage of
   famous/open problem families where this repo might have leverage, including
   Erdős tournament problems, Hamiltonian-path maximization, real-root failure

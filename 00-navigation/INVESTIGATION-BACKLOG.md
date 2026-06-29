@@ -60,6 +60,45 @@ Next: audit the combined HYP-3436/HYP-3437 stress banks and the canonical
 `84m` tower.  Try to certify that rank `6` is only canonical, noncanonical
 negative-slack rows need rank at most `5`, and any residual high-rank case
 routes through endpoint-spine/wall, owner-current, state-lift, or signed-SPEC.
+## Lead codex-2026-06-29: Minimal bad-core cover extractor
+
+**Status:** EVIDENCE / exact local bad-core cover classification; not proof
+(HYP-3436/T1397/LTI-397/LTT-297), inverting HYP-3435's branch-cover
+certificate after HYP-3425's two-color bad-core identity and HYP-3434's
+overlap-tax warning.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3436-lrc14-minimal-bad-core-cover-extractor.md`,
+script
+`04-computation/lrc14_minimal_bad_core_cover_extractor_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_minimal_bad_core_cover_extractor_codex_20260629.out`,
+reflection
+`07-reflections/lrc14-minimal-bad-core-cover-extractor-codex-20260629.md`,
+and forum post
+`poke-forum/posts/20260629-lrc14-minimal-bad-core-cover-extractor/post.md`.
+
+Purpose: classify the obstruction
+
+```text
+E_safe cap B0_odd cap B1_odd
+```
+
+by exact bad-core intervals and minimal branch-0/branch-1 odd-owner covers.
+
+Readout: on `135` rows, branch-union identity and positive survivors hold
+`135/135`; there are `17164` even-safe components, `11670` bad-core
+components, `15868` survivor components, max minimal two-color owner count
+`6`, and `(1,1)` minimal cover signature on `10288/11670` bad-core
+components.  Endpoint support is `(1,1)` on `11634/11670`.
+
+Canonical clue: for `{1..11,13,84m}`, no failures through `m=30`, and every
+bad-core component is singleton/singleton from `m=3`.
+
+Next: prove the canonical singleton-tail law for all `m>=3`, then build the
+general component-chain owner-cover graph and prove an all-covered chain emits
+owner-current, endpoint-spine, overlap-tax, two-adic, exact-period, or
+state-lift debt.
 
 ## Lead codex-2026-06-28: Euler-Mascheroni harmonic wall-budget sidecar
 

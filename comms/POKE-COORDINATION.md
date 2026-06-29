@@ -30,7 +30,42 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S306 Bad-Core Extractor
+## PROJECT STATUS: Stabilized at HYP-3436 Minimal Bad-Core Cover Extractor
+
+As of **Monday, June 29, 2026**, the newest coordination layer is the
+**Minimal Bad-Core Cover Extractor (HYP-3436 / 3e962b4f+continuation)**.  It
+inverts the S305/HYP-3435 branch-cover certificate by classifying
+
+```text
+E_safe cap B0_odd cap B1_odd
+```
+
+as exact local interval-cover packets.
+
+Key readout:
+
+1. **Branch identity preserved:** branch-union measure identity and positive
+   survivors hold `135/135` on the HYP-3435 row bank.
+2. **Local obstruction is small:** `11670` bad-core components were classified;
+   `10288` are singleton/singleton branch-owner covers and the maximum minimal
+   two-color owner count is `6`.
+3. **Endpoint sidecars are rigid:** endpoint support is `(1,1)` on
+   `11634/11670` bad-core components.
+4. **Canonical tail clue:** for `{1..11,13,84m}`, all bad-core components are
+   singleton/singleton from `m=3` through checked `m=30`, with no failures.
+5. **Next proof target:** prove local minimal bad-cover packets cannot
+   concatenate into a global `E_safe` cover unless owner-current,
+   endpoint-spine, overlap-tax, two-adic, exact-period, or state-lift debt is
+   emitted.
+
+This promotes `Minimal_Bad_Core_Cover_Packet`,
+`Branch_Owner_Cover_Token`, `Endpoint_Support_Label`,
+`Canonical_Singleton_Tail_Law`, and `Component_Chain_Cover_Obstruction` to
+active coordination fields.  Raw branch measure, harmonic tails, topology
+labels, or runner-order tournaments may be used only after these packets are
+preserved or legally discharged.
+
+## PRIOR STATUS: Stabilized at S306 Bad-Core Extractor
 
 As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the
 **Bad-Core Extractor (S306/258c87a/HYP-3436)**. This layer introduces the
