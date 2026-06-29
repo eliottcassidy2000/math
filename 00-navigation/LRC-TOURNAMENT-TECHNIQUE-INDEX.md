@@ -109,6 +109,21 @@ obligations, and proof-carrier interfaces.
   HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, T1522,
   LTI-522.
 
+## LTT-423 - Certificate-Spigot Carry Tournament
+
+- **Move:** Treat random031 terminal certificates as stream outputs and orient
+  edges by which output state can be emitted with less unresolved carry.
+- **LRC use:** Tests whether HYP-3521 is a no-backtracking terminal proof
+  procedure or only a static ledger.
+- **Preserves:** Branch/u order, terminal class, bracket/doublet carry,
+  owner-boundary carry, private-firewall guard, and vertical-halfturn guard.
+- **Forgets / guardrail:** Raw emitted counts forget predigits and possible
+  carry from free-hole or owner-boundary debt.
+- **Next pull:** Execute the HYP-3523 certificate spigot and use remaining
+  predigits as named missing proof inputs.
+- **Pointers:** HYP-3523, HYP-3521, HYP-3520, HYP-3512, HYP-3511, HYP-3510,
+  HYP-3494, HYP-3490, HYP-3486, T1523, LTI-523.
+
 ## Fast Routing Map
 
 - Need to separate strict-open mass from endpoint-only equality:

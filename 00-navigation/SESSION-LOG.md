@@ -52,6 +52,20 @@ therefore supplies the persistence/quotient guardrail, while HYP-3522 supplies
 the next filtration lemma shape.
 
 ## codex-2026-06-29 -- HYP-3522 random031 owner-boundary bracket filtration
+## codex-2026-06-29 -- HYP-3523 certificate spigot reservation
+
+Prompt: use the spigot algorithm page as inspiration for related proof routes.
+
+Reserved HYP-3523/T1523/LTI-523/LTT-423 for a random031 certificate-spigot
+experiment.  Proposed analogy: mixed-radix reduce-and-carry becomes terminal
+discharge plus named debt propagation; predigits become certificates waiting
+for free-hole or owner-boundary carry; safe digit output becomes proof
+certificate emission without future invalidation.  Planned executable streams
+the HYP-3521 terminal certificates in branch/u order and audits carry buffers
+from HYP-3511 free-hole brackets, HYP-3520 owner-current, HYP-3490 firewall,
+and vertical-halfturn quotient guards.
+
+## codex-2026-06-29 -- HYP-3520 owner-boundary persistence reservation
 
 Prompt: work creatively on owner-boundary persistence.
 

@@ -34,6 +34,26 @@ safe components, gaps, sections, endpoints, residues, wall crossings, exact
 period packets, Fourier modes, Haar tiles, quotient fibers, state-lift sectors,
 and proof obligations first.
 
+## LTI-523 - Random031 certificate spigot
+
+Carrier / vertex set: proof-output states in a terminal certificate stream:
+ordinary route emissions, free-hole predigits, doublet carry buffers, pure
+bypass owner-boundary carry, private-firewall guard, vertical-halfturn guard,
+and raw scalar shadows.
+Pairwise observable: whether a terminal certificate can be emitted without
+future invalidation by unresolved carry/debt.
+Preserved LRC predicate: no-backtracking random031 terminal dispatch.
+Destroyed information: branch/u order, owner-boundary charge, and free-hole
+bracket status if the stream is scalarized.
+Best use: convert HYP-3521's terminal ledger into a proof procedure with
+explicit carry buffers.
+Failure mode: emitting a bypass or free-hole "digit" before its owner or
+bracket carry is discharged.
+Anchors: HYP-3523, HYP-3521, HYP-3520, HYP-3512, HYP-3511, HYP-3510,
+HYP-3494, HYP-3490, HYP-3486, T1523, LTT-423.
+Next agent hook: implement the certificate stream and report safe emissions,
+predigit buffers, and residual debt.
+
 ## LTI-520 - Random031 owner-boundary persistence
 
 Carrier / vertex set: quotient sidecars for the pure bypass together with
