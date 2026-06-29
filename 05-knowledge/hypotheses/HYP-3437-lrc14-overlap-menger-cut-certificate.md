@@ -1,15 +1,16 @@
 ---
-id: HYP-3436
+id: HYP-3437
 title: LRC14 overlap-tax Menger-cut certificate
 status: RESERVED STUB / graph-cut overlap-tax route, computation pending
-source: codex-2026-06-28 continuation of HYP-3435/HYP-3434/HYP-3429/HYP-3425
-tangent: T1397
-technique: LTI-397
-tournament_technique: LTT-297
+source: codex-2026-06-28 continuation of HYP-3436/HYP-3435/HYP-3434/HYP-3429/HYP-3425
+tangent: T1398
+technique: LTI-398
+tournament_technique: LTT-298
 script: 04-computation/lrc14_overlap_menger_cut_certificate_codex_20260628.py
 result: 05-knowledge/results/lrc14_overlap_menger_cut_certificate_codex_20260628.out
 reflection: 07-reflections/lrc14-overlap-menger-cut-certificate-codex-20260628.md
 related:
+  - HYP-3436
   - HYP-3435
   - HYP-3434
   - HYP-3431
@@ -21,9 +22,10 @@ related:
   - HYP-3415
 ---
 
-# HYP-3436: LRC14 Overlap-Tax Menger-Cut Certificate
+# HYP-3437: LRC14 Overlap-Tax Menger-Cut Certificate
 
-Reserved by codex-2026-06-28.
+Reserved by codex-2026-06-28 after renumbering around the incoming HYP-3436
+minimal bad-core cover extractor.
 
 Known input: HYP-3434 reduces the hard one-branch rows to the exact identity
 
