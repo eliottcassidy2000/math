@@ -4273,3 +4273,40 @@ HYP-3454/HYP-3456/HYP-3457/HYP-3458/HYP-3459/HYP-3460 through HYP-3431/HYP-3439.
 -> HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
 HYP-3439, HYP-3438, HYP-3436, HYP-3425, HYP-3134, HYP-3133, HYP-3056,
 HYP-2595, HYP-2594, HYP-2250, HYP-2247, LTI-421, LTT-321, OPEN-Q-108.
+
+## T1434: LRC14 Colored Gate Partition-Lattice
+
+HYP-3474 continues HYP-3471 and complements HYP-3472/HYP-3473 by asking which colored-gate quotients are allowed
+to forget route data.  The finite audit treats row-level quotient fibers as
+the carrier and tests target-purity for route flags and dead minimum gate
+families.
+
+Exact readout:
+
+```text
+rows=135
+theorem_failures=0
+K mixed_route_rows=132
+S mixed_route_rows=32
+M mixed_route_rows=124
+A mixed_route_rows=135
+C route-pure fibers=122
+N/T/F route-pure fibers=123
+(C,M), (N,M), (T,M), (F,M) dead-min-family-pure fibers=125
+```
+
+Interpretation: the HYP-3471 implication is preserved as a bank fact by every
+quotient because the failure predicate is empty, but proof routing is preserved
+only by target-pure partitions.  The count-profile axis `C` is an intriguing
+finite lead, mostly collapsing AP-tail duplicate fibers, but it is not yet a
+legal theorem quotient without a reconstruction theorem.
+
+Next hook: generalize the partition-lattice audit to new banks and try to
+prove a colored-gate Nerode theorem: after a dead row emits an E/branch gate,
+every subsequent compression must refine route flags or attach a named
+sidecar/debt.
+
+-> HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3470, HYP-3462, HYP-3461, HYP-3460, HYP-3459,
+HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3451,
+HYP-3450, HYP-3439, HYP-3438, HYP-3436, HYP-3431, LTI-434, LTT-334,
+OPEN-Q-108.

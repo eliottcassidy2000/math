@@ -157,6 +157,37 @@ HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431,
 HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129,
 HYP-2963, THM-523, LTI-422, LTT-322, T1422, OPEN-Q-108.
 
+**OPEN-Q-108 HYP-3474 colored-gate partition-lattice addendum:**
+HYP-3474 turns the HYP-3471 colored gate-reservoir into a finite
+quotient-legality audit.  It declares axes
+
+```text
+K endpoint-kind set
+N numeric mod-14 set
+T typed mod-14 set
+S structural sidecar set
+F full colored-gate set
+C low-rank count profile
+M minimum E/branch structural gate
+A AP84 palette bit
+```
+
+and tests which quotient fibers are pure for route flags and dead minimum gate
+families.  The audited implication has no failures, but route data is heavily
+mixed by coarse quotients: `K` mixes `132` rows, `S` mixes `32`, `M` mixes
+`124`, and `A` mixes `135`.  Route flags are pure for `C` (`122` fibers) and
+for `N/T/F` (`123` fibers), while the dead minimum gate family needs `(C,M)`,
+`(N,M)`, `(T,M)`, or `(F,M)`.
+
+Open proof task: prove a colored-gate Nerode packet theorem.  Once a dead row
+is compressed to a rank-`<=2` E/branch gate, every later quotient must refine
+the relevant route partition, or else attach a reconstruction sidecar and
+route the first mixed fiber to AP84 closure, same/cross-branch gluing,
+endpoint-owner current, two-adic descent, or signed-SPEC/Rprime debt. ->
+HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3470, HYP-3462, HYP-3461, HYP-3460, HYP-3459,
+HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438, LTI-434, LTT-334, T1434,
+OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3460 phase-branch color-pullback addendum:**
 HYP-3460 reconnects the regular circular-coloring / phase-color CRT route to
 the two-adic branch-gate route.  For `random_covering_031` as an S3 row with

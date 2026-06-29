@@ -285,36 +285,93 @@ law, and Colored_Gate_Formalization unit alongside mu approx 1.451).
 
 ## codex-S315 -- Colored Gate Formalization (checkpoint)
 
-Integrated 8580de7. Introduces the HYP-3473 colored gate formalization, 
-operationalizing the terminal proof sheaf through a Lean 4 formal interface 
+Integrated 8580de7. Introduces the HYP-3473 colored gate formalization,
+operationalizing the terminal proof sheaf through a Lean 4 formal interface
 that translates the colored gate reservoir into an exact proof route.
 
 ### 1. Colored Gate Formalization
-Implements the Lean-facing formal interface for the colored gate reservoir. 
-Translates the finite geometric implication (dead component forcing an 
-E/branch survivor gate) into a sorry-free Lean module. Transforms the proof 
+Implements the Lean-facing formal interface for the colored gate reservoir.
+Translates the finite geometric implication (dead component forcing an
+E/branch survivor gate) into a sorry-free Lean module. Transforms the proof
 route into an exact, conditional sequence.
 
 ### 2. Residue-Cover Resolution
-Characterizes covering structures via the `ColoredGateTerminalPacket` type. 
-Requires explicit producer obligations (`DeadCoverEBranchSoundness` and 
-`ColoredGateGlobalCoverage`) to discharge specific routes (AP84, random031, 
+Characterizes covering structures via the `ColoredGateTerminalPacket` type.
+Requires explicit producer obligations (`DeadCoverEBranchSoundness` and
+`ColoredGateGlobalCoverage`) to discharge specific routes (AP84, random031,
 conductance, etc.).
 
 ### 3. Algebraic Triad Coupling
-Formally couples the formalization with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ 
-(endpoint kinds/masks), $\mathbb{Q}(\sqrt{-7})$ (typed residues), and 
+Formally couples the formalization with the field triad: $\mathbb{Q}(\cos 2\pi/7)$
+(endpoint kinds/masks), $\mathbb{Q}(\sqrt{-7})$ (typed residues), and
 $\mathbb{Q}(\sqrt{-3})$ (adjacency logic).
 
 ### 4. Chiral Guard & Resurrection
-Governed by symmetric logical separation of gate types. Evaluation reveals a 
-**MIXED** signature. Identifies the **Lean formal interface** and 
+Governed by symmetric logical separation of gate types. Evaluation reveals a
+**MIXED** signature. Identifies the **Lean formal interface** and
 **conditional top-level theorem** as Resurrection Sheaf anchors.
 
 ---
 
 ## codex-S314 -- Colored Gate Reservoir (checkpoint)
 
-Integrated c88a495. Introduces the HYP-3471 colored gate-reservoir, 
-operationalizing the terminal proof sheaf through a globally stable 
+Integrated c88a495. Introduces the HYP-3471 colored gate-reservoir,
+operationalizing the terminal proof sheaf through a globally stable
 integration of color-grid placement and survivor-gate structural sidecars.
+
+### 1. Colored Gate Reservoir
+Implements the globally stable colored gate reservoir by integrating the
+phase-branch color pullback (S312) with the corridor-splice carrier (S313).
+Audits confirm that for rows with dead-cover obstructions (130/135), every
+row possesses a rank $\le 2$ E/branch survivor gate. This transforms the
+older "14-colored reservoir" into a typed gate word.
+
+### 2. Residue-Cover Resolution
+Characterizes covering structures by identifying the local wall-level
+descendant of the color-hit predicate: every dead-cover obstruction is
+forced into an E/branch survivor-gate boundary. This separates the canonical
+AP84 packet from non-canonical repair coordinates.
+
+### 3. Algebraic Triad Coupling
+Formally couples the reservoir with the field triad: $\mathbb{Q}(\cos 2\pi/7)$
+(gate word coordinates), $\mathbb{Q}(\sqrt{-7})$ (circular color residues),
+and $\mathbb{Q}(\sqrt{-3})$ (moving boundary wall kind).
+
+### 4. Chiral Guard & Resurrection
+Governed by mirror symmetry of the typed gate words. Evaluation reveals a
+**MIXED** signature. Identifies the **typed gate word** and
+**dead-cover-to-E/branch-gate implication** as Resurrection Sheaf anchors.
+
+## codex-2026-06-29 -- Colored Gate Partition-Lattice (checkpoint)
+
+HYP-3474 adds the quotient-legality layer above the colored gate-reservoir,
+complementing HYP-3472's boundary-current reservation and HYP-3473's Lean
+formalization interface.
+The active rule is now Nerode-shaped: a quotient is allowed to forget a
+coordinate only if every fiber is pure for the proof predicate being used next,
+or if a sidecar reconstructs the forgotten coordinate.
+
+Exact finite scout on the HYP-3471 bank:
+
+```text
+theorem_failures=0/135
+K mixed_route_rows=132
+S mixed_route_rows=32
+M mixed_route_rows=124
+A mixed_route_rows=135
+C route-pure fibers=122
+N/T/F route-pure fibers=123
+(C,M), (N,M), (T,M), (F,M) dead-min-family-pure fibers=125
+```
+
+This names **Colored_Gate_Partition_Lattice** as the next guardrail unit:
+route compression is legal only after a target-purity audit.  The count-profile
+axis is a lead for AP-tail recursion, not an authorized scalar proof shortcut.
+
+---
+
+## codex-S313 -- AP84 Corridor Splice (checkpoint)
+
+Integrated a71bc65. Introduces the HYP-3462 corridor-splice certificate,
+operationalizing the terminal proof sheaf through a structural splice
+of the AP84 tail phase with the terminal rescue core corridors.

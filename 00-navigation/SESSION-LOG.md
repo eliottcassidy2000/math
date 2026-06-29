@@ -34167,3 +34167,44 @@ pure `E:84m/E:84m` phase.  So the AP-tail split now has named sidecars:
 HYP-3457 for finite transients, HYP-3454 for the endpoint interval, and
 HYP-3456 for the mod-`35` escape count.  HYP-3462 now closes the AP-tail carrier/splice.  The remaining task is
 non-AP transfer through HYP-3453/HYP-3451/HYP-3455.
+
+## codex-2026-06-29 -- Colored gate partition-lattice -- HYP-3474
+
+Added `04-computation/lrc14_colored_gate_partition_lattice_codex_20260629.py`,
+stored `05-knowledge/results/lrc14_colored_gate_partition_lattice_codex_20260629.out`,
+and recorded HYP-3474/T1434/LTI-434/LTT-334 plus a reflection.
+
+This session continued the HYP-3471 colored gate-reservoir in a different
+direction: instead of asking for more colors, it asks which color quotients are
+lawful.  The script builds a finite partition lattice over axes
+`K,N,T,S,F,C,M,A`:
+
+```text
+K endpoint-kind set
+N numeric mod-14 set
+T typed mod-14 set
+S structural sidecar set
+F full colored-gate set
+C low-rank count profile
+M minimum E/branch structural gate
+A AP84 palette bit
+```
+
+Exact readout: `rows=135`, `dead_rows=130`, and the theorem-failure bit
+`dead and not has_e_branch` is false on `135/135`.  But route data is mixed by
+coarse quotients: `K` mixes route flags across `132` rows, `S` across `32`,
+`M` across `124`, and `A` across `135`.  The coarsest route-pure axes in the
+declared family are `C` with `122` fibers and `N/T/F` with `123`; the dead
+minimum gate family becomes pure with `(C,M)`, `(N,M)`, `(T,M)`, or `(F,M)`,
+each with `125` fibers and max fiber size `7`.
+
+Conclusion: the next proof object should be a colored-gate Nerode packet
+theorem.  After proving the HYP-3471 implication structurally, every later
+quotient must refine the relevant route partition or attach a reconstruction
+sidecar.  The count-profile axis is a strong finite lead, mostly collapsing
+AP-tail duplicate fibers, but it is not yet a legal scalar proof quotient.
+Tournament Analysis uses quotient carriers, not runners/arcs, with Hamiltonian
+path `count_profile -> full_color_set -> numeric_mod14_set -> typed_mod14_set
+-> all_color_sidecars -> full_plus_min_struct -> typed_plus_min_struct ->
+structural_plus_ap_bit -> structural_set -> endpoint_kind_set ->
+ap84_presence_bit -> min_e_branch_struct`.

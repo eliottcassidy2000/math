@@ -9771,3 +9771,41 @@ quotient_legality_status
 - **Pointers:** HYP-3473, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460,
   HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-3436,
   THM-523, LTI-433, LTT-333, T1433, OPEN-Q-108.
+
+## LTT-334: Colored Gate Partition-Lattice Tournament
+
+- **Move:** Treat quotient candidates as tournament vertices.  A vertex is not
+  a runner, arc, or raw color; it is a selected sidecar set such as
+  endpoint-kind set, numeric residue set, typed residue set, structural set,
+  full colored-gate set, count profile, minimum E/branch structural gate, or a
+  packet combination.  Edges point toward the quotient with better
+  proof-predicate purity after mixed-fiber penalties and compression bonuses.
+- **LRC use:** HYP-3474 turns HYP-3471's colored gate-reservoir, HYP-3472's
+  boundary-current sibling, and HYP-3473's Lean formalization into a
+  Myhill-Nerode-style legality audit.  The theorem-failure bit is absent on
+  the bank, but route data is mixed by many attractive quotients:
+  endpoint-kind `K` mixes `132` rows, structural set `S` mixes `32`, minimum
+  E/branch gate `M` mixes `124`, and AP bit `A` mixes `135`.  The route-pure
+  axes are `C` (`122` fibers) and `N/T/F` (`123`), while the dead minimum gate
+  family needs `(C,M)`, `(N,M)`, `(T,M)`, or `(F,M)`.
+- **Preserves:** target-purity of route flags and dead minimum gate family
+  once a chosen quotient refines the relevant partition.
+- **Forgets / guardrail:** scalar count and color-profile purity are finite
+  telemetry unless a reconstruction map or dual certificate restores interval
+  geometry, component adjacency, owner-current routing, and row identity.
+- **Pairwise observable:** route-predicate purity, mixed-fiber penalty,
+  mixed-row penalty, compression bonus, and max-fiber penalty.
+- **Switch/gauge:** higher aggregate proof-facing score first; ties use the
+  carrier name.
+- **Fingerprint:** `12` vertices, score histogram
+  `{53:1,83:1,106:1,148:1,184:1,208:3,209:4}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `count_profile -> full_color_set -> numeric_mod14_set -> typed_mod14_set -> all_color_sidecars -> full_plus_min_struct -> typed_plus_min_struct -> structural_plus_ap_bit -> structural_set -> endpoint_kind_set -> ap84_presence_bit -> min_e_branch_struct`.
+- **Next hook:** generalize the partition-lattice audit beyond the current
+  bank.  If `C` remains route-pure, attempt a count-profile reconstruction
+  theorem; if it fails, record the first mixed fiber and route it to AP84,
+  same/cross-branch gluing, owner-current, two-adic, or signed-SPEC debt.
+- **Pointers:** HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3470, HYP-3462,
+  HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
+  HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3436, HYP-3431, HYP-2595,
+  HYP-2594, HYP-2593, THM-523, LTI-434, LTT-334, T1434, OPEN-Q-108.

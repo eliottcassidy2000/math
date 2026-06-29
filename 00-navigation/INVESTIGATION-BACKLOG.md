@@ -7525,3 +7525,24 @@ on `Phi`, not as a standalone scalar proof.
   color and route it to HYP-3453/HYP-3455, owner-current, two-adic descent,
   exact-period/state-lift, or SPEC debt.  Do not replace this with a scalar
   color balance claim.
+
+## LEAD (codex-2026-06-29): colored-gate Nerode quotient theorem
+
+- **Source:** HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460,
+  HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438.
+- **Status:** OPEN.  HYP-3474 is a finite partition-lattice scout, not a
+  theorem.
+- **Readout:** On the `135`-row HYP-3471 bank, the theorem-failure bit
+  `dead and not has_e_branch` is empty, but route data is mixed by several
+  attractive quotients: endpoint-kind `K` mixes `132` rows, structural set `S`
+  mixes `32`, minimum E/branch structural gate `M` mixes `124`, and AP bit `A`
+  mixes `135`.  Route flags are pure for `C` (`122` fibers) and `N/T/F`
+  (`123` fibers), while the dead minimum gate family needs `(C,M)`, `(N,M)`,
+  `(T,M)`, or `(F,M)` (`125` fibers, max fiber `7`).
+- **Next steps:** Extend the audit to fresh banks and prove or refute the
+  count-profile reconstruction lead.  The theorem target is: after
+  `dead_components(row)>0 => rank<=2 E/branch survivor gate`, every quotient
+  used by the proof must refine the relevant route partition or attach a
+  sidecar reconstructing the forgotten coordinate.  First mixed fibers should
+  be routed to AP84 packet closure, same/cross-branch gluing, endpoint-owner
+  current, two-adic floor descent, or signed-SPEC/Rprime debt.

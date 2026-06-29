@@ -1378,3 +1378,29 @@ Next poke task: build the HYP-3438 survivor-gate matrix with columns
 `gate, floor, height, endpoint_phase, branch_mirror, incident_C3_Qsqrt,
 zipper_cocycle`, then prove the AP84 splice into HYP-3439 is a homomorphism
 for this color-packet product or route the first failed color to named debt.
+
+## 2026-06-29: colored-gate Nerode quotient guard
+
+HYP-3474 adds the missing legality test for the HYP-3471 colored
+gate-reservoir, complementing HYP-3472's boundary-current reservation and
+HYP-3473's Lean formalization interface.  Treat a quotient as admissible only
+if its fibers are pure for the target predicate being used next.  On the
+`135`-row bank:
+
+```text
+theorem_failure = dead and not has_e_branch = 0/135
+K endpoint-kind set mixes route flags across 132 rows
+S structural set mixes route flags across 32 rows
+M min E/branch structural gate mixes route flags across 124 rows
+A AP84 bit mixes route flags across 135 rows
+C count profile is route-pure with 122 fibers
+N/T/F are route-pure with 123 fibers
+(C,M), (N,M), (T,M), (F,M) are pure for dead minimum gate family
+```
+
+POKE task: before using any colored/discrepancy/extension quotient in the LRC14
+proof, run the target-purity test.  If a fiber is mixed, the quotient must carry
+a reconstruction sidecar or route the first mixed fiber to AP84 packet closure,
+same/cross-branch gluing, endpoint-owner current, two-adic descent, or
+signed-SPEC/Rprime debt.  The count profile `C` is a promising AP-tail
+recursion lead, not yet a proof quotient.
