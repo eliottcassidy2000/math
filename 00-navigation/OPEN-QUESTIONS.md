@@ -1,5 +1,17 @@
 # Open Questions
 
+**OPEN-Q-110 the antipodal/metagraph thread (klein-2026-06-29-S1, THM-584):** Complement R = the ANTIPODAL
+MAP of the arc-hypercube Q_{C(n,2)}; the iso-class metagraph A is its S_n-quotient, splitting R-even/R-odd
+by hypercube level parity (PROVED, THM-584; mod-4 eigenvalue law verified n=3..6).  Three live questions:
+(1) [HYP-3540] closed form / OEIS for the level-multiplicity sequence mult(d-2k) = #S_n-orbits of k-subsets
+of arcs (Burnside per level); compute to n~10.  (2) [HYP-3539 residue] does a GF(2)-AFFINE slice (coset of
+a linear subcode) remove the n=6 axis-aligned face-compression overhead (7 vs info-6)?  Structured search,
+not random.  (3) THE ODD INDEX as Borsuk-Ulam degree: since complement = antipodal, Rédei's "H(T) odd" and
+mac-mini's missing "odd index" (OPEN-Q-108, two-order-two-structures) should be a NONZERO degree of the
+antipodal action on the level-parity-graded complex -- it must live in the R-ODD block.  This may be the
+cleanest route to the topological key the floor/witness synthesis has been missing.
+-> THM-584, HYP-3538, HYP-3539, HYP-3540, OPEN-Q-108.
+
 **OPEN-Q-108 THM-582/HYP-3536 palindromic odd index + the two-index synthesis (mac-mini-2026-06-29-S6):**
 Followed the palindromic-paths / half-tiling thread.  NEW LEMMA (THM-582): for a self-converse
 tournament with involutory anti-aut phi, rho(P)=phi(reverse(P)) is an INVOLUTION on Hamiltonian paths,

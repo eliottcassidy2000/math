@@ -1,0 +1,58 @@
+========================================================================
+ CENSUS: SC/NS and R-even/R-odd dimensions
+========================================================================
+  n=3: A=   2  SC=  2  NS-pairs=  0  R-even dim V_merged=  2  R-odd dim=  0   [(A+SC)/2=2]
+  n=4: A=   4  SC=  2  NS-pairs=  1  R-even dim V_merged=  3  R-odd dim=  1   [(A+SC)/2=3]
+  n=5: A=  12  SC=  8  NS-pairs=  2  R-even dim V_merged= 10  R-odd dim=  2   [(A+SC)/2=10]
+  n=6: A=  56  SC= 12  NS-pairs= 22  R-even dim V_merged= 34  R-odd dim= 22   [(A+SC)/2=34]
+  expected (CLAUDE.md): SC n=3..6 = 2,2,8,12 ; NS-merged = 0,1,2,22 ; V_merged = 2,3,10,34
+
+ N4-UW: explicit R-even u and R-odd w at n=4
+    T : u(R-even)=0  w(R-odd)=+0   complement-> T   u'=0 w'=+0
+    - : u(R-even)=1  w(R-odd)=-1   complement-> +   u'=1 w'=+1
+    S : u(R-even)=2  w(R-odd)=+0   complement-> S   u'=2 w'=+0
+    + : u(R-even)=1  w(R-odd)=+1   complement-> -   u'=1 w'=-1
+    => u is R-invariant (u'=u everywhere); w flips sign (w'=-w): the +/-1 split.
+
+========================================================================
+ HYP-A: compression overhead vs the R-odd coordinate
+========================================================================
+
+ HYP-A: full vs complement-merged minimum covering face (n=4)
+    ALL    classes: info=2  min face=2  tight=True
+    MERGED classes: info=2  min face=2  tight=True
+    => no overhead at this n
+
+ HYP-A: full vs complement-merged minimum covering face (n=5)
+    ALL    classes: info=4  min face=4  tight=True
+    MERGED classes: info=4  min face=4  tight=True
+    => no overhead at this n
+
+ HYP-A: full vs complement-merged minimum covering face (n=6)
+    ALL    classes: info=6  min face=7  tight=False
+    MERGED classes: info=6  min face=7  tight=False
+    => overhead NOT explained by R-odd alone
+
+========================================================================
+ HYP-B: complement symmetry of the arc-flip metagraph
+========================================================================
+
+ HYP-B: complement is an automorphism of the arc-flip iso-class adjacency (n=3)
+    commute A o sigma == sigma o A : True   (so A block-diagonalizes into R-even (+) R-odd)
+    R-even block dim=2   R-odd block dim=0
+    spectrum(A) (row-sum=3): min=-1.0, max=3.0, distinct~2
+
+ HYP-B: complement is an automorphism of the arc-flip iso-class adjacency (n=4)
+    commute A o sigma == sigma o A : True   (so A block-diagonalizes into R-even (+) R-odd)
+    R-even block dim=3   R-odd block dim=1
+    spectrum(A) (row-sum=6): min=-2.0, max=6.0, distinct~4
+
+ HYP-B: complement is an automorphism of the arc-flip iso-class adjacency (n=5)
+    commute A o sigma == sigma o A : True   (so A block-diagonalizes into R-even (+) R-odd)
+    R-even block dim=10   R-odd block dim=2
+    spectrum(A) (row-sum=10): min=-6.0, max=10.0, distinct~7
+
+ HYP-B: complement is an automorphism of the arc-flip iso-class adjacency (n=6)
+    commute A o sigma == sigma o A : True   (so A block-diagonalizes into R-even (+) R-odd)
+    R-even block dim=34   R-odd block dim=22
+    spectrum(A) (row-sum=15): min=-9.0, max=15.0, distinct~12

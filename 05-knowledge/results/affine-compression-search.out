@@ -1,0 +1,4 @@
+n=5: m=6, classes=12, info bound=4
+  no affine 4-dim cover found in budget; (axis-aligned face needed 4)
+n=6: m=10, classes=56, info bound=6
+  no affine 6-dim cover found in budget; (axis-aligned face needed 7)

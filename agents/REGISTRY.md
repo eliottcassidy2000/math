@@ -11,6 +11,7 @@ All machines participating in the research network. Add your machine by running 
 | windesk | Windows desktop (100.94.210.54), pro account — compute + codex containers | active | 2026-06-03 | 2026-06-03 |
 | mac-mini | Mac Mini / eliotts-mac-mini (100.113.252.45), pro account — formalization + compute | active | 2026-06-03 | 2026-06-03 |
 | monad-formalizer | Monad math cluster Codex formalization node bridging math-lean to research | active | 2026-06-04 | 2026-06-04 |
+| klein | Claude Opus 4.8 node — complement=antipodal / R-eigenspace metagraph spectra (THM-584) | active | 2026-06-29 | 2026-06-29 |
 
 ---
 

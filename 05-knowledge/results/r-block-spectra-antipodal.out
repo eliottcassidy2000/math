@@ -1,0 +1,28 @@
+
+ n=3: d=C(n,2)=3,  classes N=2 (A000568), SC=2, R-even dim=2, R-odd dim=0
+   R-even block spectrum: [-1.0, 3.0]
+   R-odd  block spectrum: []
+   predicted residues: R-even = d%4 = 3 ; R-odd = (d-2)%4 = 1
+   observed  residues: R-even = {3} ; R-odd = set()   => antipodal/level-parity law HOLDS
+   Perron 3 in R-even: True ; global min eig = -1.0  in R-even
+
+ n=4: d=C(n,2)=6,  classes N=4 (A000568), SC=2, R-even dim=3, R-odd dim=1
+   R-even block spectrum: [-2.0, 2.0, 6.0]
+   R-odd  block spectrum: [0.0]
+   predicted residues: R-even = d%4 = 2 ; R-odd = (d-2)%4 = 0
+   observed  residues: R-even = {2} ; R-odd = {0}   => antipodal/level-parity law HOLDS
+   Perron 6 in R-even: True ; global min eig = -2.0  in R-even
+
+ n=5: d=C(n,2)=10,  classes N=12 (A000568), SC=8, R-even dim=10, R-odd dim=2
+   R-even block spectrum: [-6.0, -2.0, -2.0, -2.0, 2.0, 2.0, 2.0, 2.0, 6.0, 10.0]
+   R-odd  block spectrum: [0.0, 4.0]
+   predicted residues: R-even = d%4 = 2 ; R-odd = (d-2)%4 = 0
+   observed  residues: R-even = {2} ; R-odd = {0}   => antipodal/level-parity law HOLDS
+   Perron 10 in R-even: True ; global min eig = -6.0  in R-even
+
+ n=6: d=C(n,2)=15,  classes N=56 (A000568), SC=12, R-even dim=34, R-odd dim=22
+   R-even block spectrum: [-9.0, -5.0, -5.0, -5.0, -5.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 7.0, 7.0, 7.0, 7.0, 7.0, 11.0, 15.0]
+   R-odd  block spectrum: [-7.0, -7.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 5.0, 5.0, 5.0, 5.0, 5.0, 9.0]
+   predicted residues: R-even = d%4 = 3 ; R-odd = (d-2)%4 = 1
+   observed  residues: R-even = {3} ; R-odd = {1}   => antipodal/level-parity law HOLDS
+   Perron 15 in R-even: True ; global min eig = -9.0  in R-even

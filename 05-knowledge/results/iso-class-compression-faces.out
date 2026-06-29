@@ -1,0 +1,74 @@
+
+======================================================================
+ n = 4   (m = C(n-1,2) = 3 tiles,  2^m = 8 tilings)
+======================================================================
+ iso classes found: 4   (A000568(4) = 4)   OK
+ fiber sizes (tilings per class), sorted: [5, 1, 1, 1]
+
+ --- n=4 detailed structure ---
+  single-tile flips:  flip a -> +  flip b -> -  flip c -> S   (expected +,-,S)
+
+  Scheme 1 (tiling model, generators a,b,c):
+    *  | E  a  b  c
+    E  | T  +  -  S
+    a  | +  T  S  S
+    b  | -  S  T  S
+    c  | S  S  S  T
+
+  Scheme 2 (compressed, x=a, y=b, tile c fixed=0):
+    *  | E  x  y
+    E  | T  +  -
+    x  | +  T  S
+    y  | -  S  T
+
+  c=0 face  (00,10,01,11) -> classes: ['T', '+', '-', 'S']   bijection: True
+  partial score sequence of frame (base path + c): (0, 1, 1, 2)   (user said 0,1,1,2)
+
+  complement (reverse all arcs) action & SC/NS:
+    T  -> complement -> T    SC (self-complementary)
+    -  -> complement -> +    NS
+    S  -> complement -> S    SC (self-complementary)
+    +  -> complement -> -    NS
+
+ --- compression / minimal covering face (n=4) ---
+   classes=4,  info bound ceil(log2)=2,  m=3,  redundancy budget log2(n!/2^(n-1))=1.58
+   MINIMUM covering face dimension = 2  (fix 1 tiles, free 2);  2^2=4 tilings cover all 4 classes
+   tight to info bound: True
+   example: free tiles (indices) [0, 2], fixed tiles [1] at pattern (0,)
+
+======================================================================
+ n = 5   (m = C(n-1,2) = 6 tiles,  2^m = 64 tilings)
+======================================================================
+ iso classes found: 12   (A000568(5) = 12)   OK
+ fiber sizes (tilings per class), sorted: [13, 11, 9, 9, 5, 5, 5, 3, 1, 1, 1, 1]
+
+ --- compression / minimal covering face (n=5) ---
+   classes=12,  info bound ceil(log2)=4,  m=6,  redundancy budget log2(n!/2^(n-1))=2.91
+   MINIMUM covering face dimension = 4  (fix 2 tiles, free 4);  2^4=16 tilings cover all 12 classes
+   tight to info bound: True
+   example: free tiles (indices) [0, 2, 3, 5], fixed tiles [1, 4] at pattern (0, 0)
+
+======================================================================
+ n = 6   (m = C(n-1,2) = 10 tiles,  2^m = 1024 tilings)
+======================================================================
+ iso classes found: 56   (A000568(6) = 56)   OK
+ fiber sizes (tilings per class), sorted: [43, 43, 41, 37, 37, 37, 37, 37, 33, 33, 33, 31, 31, 29, 29, 29, 29, 25, 25, 23, 23, 23, 23, 19, 19, 17, 17, 15, 15, 15, 15, 13, 13, 11, 11, 11, 11, 9, 9, 9, 9, 9, 9, 5, 5, 5, 5, 5, 3, 3, 1, 1, 1, 1, 1, 1]
+
+ --- compression / minimal covering face (n=6) ---
+   classes=56,  info bound ceil(log2)=6,  m=10,  redundancy budget log2(n!/2^(n-1))=4.49
+   MINIMUM covering face dimension = 7  (fix 3 tiles, free 7);  2^7=128 tilings cover all 56 classes
+   tight to info bound: False
+   example: free tiles (indices) [0, 2, 3, 4, 6, 7, 9], fixed tiles [1, 5, 8] at pattern (0, 0, 0)
+
+======================================================================
+ compression budget across n (info-theoretic)
+======================================================================
+   n  classes A000568  m=C(n-1,2)  ceil log2 budget=m-ceil  log2(n!/2^(n-1))
+   3                2           1          1             0              0.58
+   4                4           3          2             1              1.58
+   5               12           6          4             2              2.91
+   6               56          10          6             4              4.49
+   7              456          15          9             6              6.30
+   8             6880          21         13             8              8.30
+   9           191536          28         18            10             10.47
+  10          9733056          36         24            12             12.79

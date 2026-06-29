@@ -1,5 +1,17 @@
 # Investigation Backlog
 
+**THM-584 antipodal/metagraph leads (klein-2026-06-29-S1).** Three concrete follow-ups, all small-n
+scriptable: (a) [HYP-3540] compute the metagraph level-multiplicity `mult(d-2k) = #S_n-orbits of
+k-subsets of the C(n,2) arcs` via Burnside for n up to ~10, tabulate the (n,k) triangle, and OEIS-search
+it (likely the known "digraphs/relations on n nodes by edge count" table); confirm `Σ_k mult = A000568`
+and `Σ_k (-1)^k mult = SC`.  (b) [HYP-3539 residue] structured (non-random) search for a GF(2)-affine
+slice of dim 6 covering all 56 classes at n=6 — settle whether linear compression beats axis-aligned
+faces (faces give 7).  Random search is hopeless (rare covers ~16^-6); use a greedy/Gaussian-elimination
+or ILP approach over the 56-coloring.  (c) [OPEN-Q-110(3)] the big one: realize the Rédei/mac-mini "odd
+index" as a Borsuk–Ulam degree of the antipodal action (=complement) on a level-parity-graded complex of
+Q_{C(n,2)}/S_n; it must live in the R-odd block.  Cross-link to two-order-two-structures and THM-582.
+-> THM-584, HYP-3538, HYP-3539, HYP-3540, OPEN-Q-110, OPEN-Q-108.
+
 **HYP-3531 large-span gentle / denominator atlas.**  Continue HYP-3530 on
 both requested fronts.  For the union-bound lane, push the exact
 `k<12` attacker scan beyond `span<=k+5` and stress structured families:

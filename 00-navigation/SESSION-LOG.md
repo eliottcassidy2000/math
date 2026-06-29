@@ -21,6 +21,48 @@ TAKEAWAY for the proof: LRC floor = totient/zeta(2) density surviving the coveri
 the Sum phi(b)/b^2=1/zeta(2) positivity); cap obstruction = mu^2/phi capacity at apex prime 7 (= HYP-3538 R-odd
 eigenspace); witness f lives on (p-1)/2=phi(p)/2 pairs (Q(sqrt-p)). Files: THM-584, HYP-3539, reflection, scripts
 paley_tournament_number_theory + paley_dihedral_burnside.
+## klein-2026-06-29-S1 -- complement = the ANTIPODAL MAP of the arc-hypercube; the metagraph spectrum splits R-even/R-odd by level parity (THM-584); Klein-V4 is the n=4 seed
+
+Prompt: synthesize a user observation (the n=4 classes T/+/-/S form the Klein four-group V4 under XOR of two
+"source-killed / sink-killed" bits, with complement = the coordinate swap) with the project's R-eigenspace
+organizing principle (HYP-3538); then a full session of exploration + hypothesis testing; follow where compelled.
+
+NEW MACHINE: registered `klein`. Synced origin/main (19 commits, incl. THM-583 + HYP-3538 reflections).
+
+THE SYNTHESIS (THM-584, PROVED + verified n=3..6): a labeled tournament = a vertex of the hypercube Q_d,
+d=C(n,2), one bit/arc. One arc reversal = one cube edge (arc-flip graph = Q_d). S_n permutes coordinates
+(preserves Hamming LEVEL). Complement R = reverse all arcs = flip all bits = the ANTIPODAL MAP of Q_d
+(acting (-1)^k on level k). So the iso-class metagraph adjacency A = the S_n-quotient of Q_d: eigenvalues
+d-2k, COMMUTES with R (verified n=3..6), block-diagonalizes R-even (+) R-odd = EVEN/ODD levels.
+dim R-even = V_merged = (A000568+SC)/2; dim R-odd = (A000568-SC)/2 = #NS pairs. mod-4 LAW (verified):
+R-even eigs = d mod4, R-odd = d-2 mod4; Perron d always R-even (level 0 = the SOS/Brouwer bulk).
+=> merged metagraph G_n/Z_2 IS the R-even projection; folding by complement discards the odd-level coord.
+This is the METAGRAPH-side twin of THM-583's witness side. Borsuk-Ulam = the theorem about this antipodal map.
+
+CENSUS verified vs CLAUDE.md: SC = 2,2,8,12 (n=3..6), NS-pairs = 0,1,2,22, V_merged = 2,3,10,34.
+KLEIN n=4 seed: u=#defects in{0,1,2} (R-even, the level grading, = G_4/Z2 = {T,[+/-],S}); w=source-sink
+in{-1,0,+1} (R-odd, signed, zero on SC {T,S}, +/-1 on NS pair {+,-}); complement = swap x<->y. V4 x| swap = D_4.
+
+HYP-3539 (REFUTED): the n=6 axis-aligned face-compression overhead (needs 7 free tiles, info allows 6) is
+NOT the cost of the R-odd coordinate -- covering the complement-MERGED classes ALSO needs a 7-face at n=6.
+The overhead is a covering/packing deficiency of the R-EVEN bulk, not a signed obstruction. (Compression
+info-tight at n=4,5.)  HYP-3540 (OPEN): metagraph eigenvalue d-2k mult = #S_n-orbits of k-subsets of arcs
+(per-level Burnside); closed form / OEIS unidentified.
+
+Scripts: 04-computation/{iso-class-compression-faces, r-eigenspace-merged-compression, r-block-spectra-antipodal}.py
+(+ affine-compression-search.py, inconclusive). Outputs in 05-knowledge/results/.
+
+NEXT: (1) HYP-3540 Burnside level-multiplicity to n~10 + OEIS. (2) Does a GF(2)-AFFINE slice remove the n=6
+compression overhead (structured search, not random)? (3) The odd index / Rédei "H(T) odd" as a NONZERO
+Borsuk-Ulam degree of the antipodal action on the level-parity-graded complex -- the R-odd block is where
+it must live (ties to mac-mini's missing odd index in two-order-two-structures). (4) Apply the mod-4 law as
+a free audit on existing metagraph spectral computations.
+
+Handoff to mac-mini/kind-pasteur: THM-584 puts your HYP-3538 R-split on the metagraph with an explicit
+level-parity model + a mod-4 eigenvalue audit; the antipodal=complement identity may be the cleanest route
+to the "odd index" you flagged as the missing topological key.
+
+---
 
 ## mac-mini-2026-06-29-S8 -- the two tasks: f via the half-system (THM-583) + the R +-1 eigenspace split of the cap is the two-index split (HYP-3538)
 
