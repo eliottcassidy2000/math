@@ -1,0 +1,147 @@
+HYP-3439 RESCUE-CORE BRIDGE CERTIFICATE
+==============================================================================
+Bridge target:
+  join HYP-3437 one-branch overlap rescue cores with HYP-3438
+  survivor gates and HYP-3450/HYP-3451 two-colour component escapes.
+
+A. HYP-3437 one-branch bank recap
+  rows_audited=150
+  negative_naive_slack_rows=59
+  negative_rows_with_rescue=59/59
+  all_row_rescue_rank_hist={0: 91, 2: 7, 4: 2, 5: 48, 6: 2}
+  negative_row_rescue_rank_hist={2: 7, 4: 2, 5: 48, 6: 2}
+  max_minimum_rescue_rank=6
+  max_rank_rows=['covering_AP_with_84', 'canonical_84m_01']
+
+B. AP/84m bridge summary
+  bridge_rows=14
+  unique_speed_rows=13
+  negative_bridge_rows=13/14
+  bridge_rescue_rank_hist={0: 1, 5: 11, 6: 2}
+  bridge_route_hist={'ap_tail_rank5_overlap_core_with_two_color_escape': 11, 'canonical_rank6_corridor_fence_with_two_color_escape': 2, 'nonnegative_one_branch_control_with_two_color_escape': 1}
+  rank6_bridge_rows=['covering_AP_with_84', 'ap_omit_12_tail_84x01']
+  aggregate_survivor_branch_mask_hist={'branch0': 27, 'branch1': 27}
+  low_rank_escape_range=[4,22]
+  max_danger_bridge=ap_omit_12_tail_84x02 danger_score=0.687500 dead_fraction=0.916667
+
+C. Canonical and AP-tail bridge rows
+  covering_AP_with_84
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    one_branch: negative=True, rank=6, subset=(3, 5, 7, 9, 11, 13), naive_slack=-18586/315315, branch0=563/105105, margin=563/105105
+    two_color: low_rank_escape=4, dead=22/26, max_dead_pair_rank=3, danger_score=0.634615
+    survivor_gates: mixed_components=4, gates=4, branch_masks={branch0:2, branch1:2}
+    route=canonical_rank6_corridor_fence_with_two_color_escape
+  ap_omit_12_tail_84x01
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    one_branch: negative=True, rank=6, subset=(3, 5, 7, 9, 11, 13), naive_slack=-18586/315315, branch0=563/105105, margin=563/105105
+    two_color: low_rank_escape=4, dead=22/26, max_dead_pair_rank=3, danger_score=0.634615
+    survivor_gates: mixed_components=4, gates=4, branch_masks={branch0:2, branch1:2}
+    route=canonical_rank6_corridor_fence_with_two_color_escape
+  ap_omit_12_tail_84x02
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-67909/1261260, branch0=263/30030, margin=1919/840840
+    two_color: low_rank_escape=4, dead=44/48, max_dead_pair_rank=3, danger_score=0.687500
+    survivor_gates: mixed_components=4, gates=4, branch_masks={branch0:2, branch1:2}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+  ap_omit_12_tail_84x03
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 252)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-5242/105105, branch0=3119/315315, margin=439/140140
+    two_color: low_rank_escape=4, dead=66/70, max_dead_pair_rank=2, danger_score=0.471429
+    survivor_gates: mixed_components=4, gates=4, branch_masks={branch0:2, branch1:2}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+  ap_omit_12_tail_84x04
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 336)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-125093/2522520, branch0=4397/420420, margin=353/80080
+    two_color: low_rank_escape=4, dead=84/88, max_dead_pair_rank=2, danger_score=0.477273
+    survivor_gates: mixed_components=4, gates=4, branch_masks={branch0:2, branch1:2}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+  ap_omit_12_tail_84x05
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 420)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-63619/1261260, branch0=4397/420420, margin=291/70070
+    two_color: low_rank_escape=4, dead=104/108, max_dead_pair_rank=2, danger_score=0.481481
+    survivor_gates: mixed_components=2, gates=2, branch_masks={branch0:1, branch1:1}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+  ap_omit_12_tail_84x06
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 504)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-5242/105105, branch0=4397/420420, margin=3349/840840
+    two_color: low_rank_escape=6, dead=126/132, max_dead_pair_rank=2, danger_score=0.318182
+    survivor_gates: mixed_components=4, gates=4, branch_masks={branch0:2, branch1:2}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+  ap_omit_12_tail_84x07
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 588)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-110797/2207205, branch0=4397/420420, margin=6397/1471470
+    two_color: low_rank_escape=6, dead=150/156, max_dead_pair_rank=2, danger_score=0.320513
+    survivor_gates: mixed_components=2, gates=2, branch_masks={branch0:1, branch1:1}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+  ap_omit_12_tail_84x08
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 672)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-129383/2522520, branch0=4397/420420, margin=14111/3363360
+    two_color: low_rank_escape=8, dead=164/172, max_dead_pair_rank=2, danger_score=0.238372
+    survivor_gates: mixed_components=4, gates=4, branch_masks={branch0:2, branch1:2}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+  ap_omit_12_tail_84x09
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 756)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-47893/945945, branch0=10072/945945, margin=5381/1261260
+    two_color: low_rank_escape=8, dead=188/196, max_dead_pair_rank=2, danger_score=0.239796
+    survivor_gates: mixed_components=4, gates=4, branch_masks={branch0:2, branch1:2}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+  ap_omit_12_tail_84x10
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 840)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-126809/2522520, branch0=2979/280280, margin=1889/420420
+    two_color: low_rank_escape=8, dead=206/214, max_dead_pair_rank=2, danger_score=0.240654
+    survivor_gates: mixed_components=2, gates=2, branch_masks={branch0:1, branch1:1}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+  ap_omit_12_tail_84x11
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 924)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-5819/114660, branch0=4397/420420, margin=443/105105
+    two_color: low_rank_escape=10, dead=230/240, max_dead_pair_rank=2, danger_score=0.191667
+    survivor_gates: mixed_components=4, gates=4, branch_masks={branch0:2, branch1:2}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+  ap_omit_12_tail_84x12
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 1008)
+    one_branch: negative=True, rank=5, subset=(5, 7, 9, 11, 13), naive_slack=-63619/1261260, branch0=4397/420420, margin=20809/5045040
+    two_color: low_rank_escape=10, dead=248/258, max_dead_pair_rank=2, danger_score=0.192248
+    survivor_gates: mixed_components=4, gates=4, branch_masks={branch0:2, branch1:2}
+    route=ap_tail_rank5_overlap_core_with_two_color_escape
+
+D. Nonnegative control row
+  multi_far_84_154
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13, 84, 154)
+    one_branch: negative=False, rank=0, subset=(), naive_slack=14699/504504, branch0=47857/840840, margin=47857/840840
+    two_color: low_rank_escape=22, dead=30/52, max_dead_pair_rank=3, danger_score=0.078671
+    survivor_gates: mixed_components=8, gates=8, branch_masks={branch0:4, branch1:4}
+    route=nonnegative_one_branch_control_with_two_color_escape
+
+E. Proof-facing bridge lemma
+  The only selected AP/84m row requiring a rank-6 one-branch rescue core
+  is the canonical covering row m=1, duplicated as ap_omit_12_tail_84x01.
+  Every AP tail m=2..12 keeps negative naive slack but drops to the
+  rank-5 core (5,7,9,11,13) and still has low-rank two-colour
+  component escapes.  Thus the bridge target is not a new scalar
+  inequality: it is a finite interface between overlap-tax cuts,
+  survivor-gate words, and component-cover escape vertices.
+  The nonnegative multi_far_84_154 row is a control: it has no one-branch
+  deficit and has many two-colour low-rank escapes.
+
+F. Tournament Analysis
+  vertices=bridge proof obligations, not runners or raw arcs
+  pairwise_observable=predicate retention + one-branch cut exactness + two-colour escape payload + survivor-gate route + scalar-firewall safety
+  switch_gauge=higher proof-facing score; ties by declared carrier order
+  score_hist={21: 1, 54: 1, 55: 2, 57: 2, 58: 1, 59: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  hamiltonian_path=canonical_corridor_rank6_bridge -> two_color_component_escape -> one_branch_overlap_rescue_cut -> survivor_gate_word_route -> ap_tail_rank5_descent -> component_conductance_router -> endpoint_spine_wall_handoff -> raw_rescue_rank_scalar
+
+G. Assumption challenge
+  Considered vertices: runners, odd blockers, even-half gates, gaps,
+  fixed circle sections, section boundaries, wall-crossing events,
+  residues, cover arcs, Fourier modes, matroid circuits, survivor gates,
+  component-cover graph nodes, endpoint walls, and proof obligations.
+  Chosen vertices: bridge obligations between one-branch rescue cuts,
+  survivor-gate words, and two-colour component escape certificates.
+  Preserves: negative one-branch slack is routed to an exact overlap core
+  plus a named two-colour survivor/component escape.
+  Destroys: raw runner order, raw rescue-rank scalar meaning, and most
+  interval geometry unless endpoint labels and component addresses are
+  restored.  Challenged assumption: a rank-6 rescue core signals a broad
+  noncanonical obstruction; on this bridge it is the canonical m=1 fence.

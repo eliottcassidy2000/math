@@ -45,9 +45,10 @@ endpoint-spine, owner-current, overlap-cut, two-adic loss, signed-SPEC, or a
 new named residual before any scalar compression is allowed.
 ## Lead codex-2026-06-29: Rescue-core bridge certificate
 
-**Status:** RESERVED STUB / computation pending; not proof
+**Status:** EVIDENCE / AP-tail bridge audit; not proof
 (HYP-3439/T1400/LTI-400/LTT-300), continuing HYP-3437's one-branch
-overlap-tax cut certificate and HYP-3436's two-color bad-core cover extractor.
+overlap-tax cut certificate, HYP-3438's survivor gates, and HYP-3450/HYP-3451's
+component-cover escape router.
 
 Claimed files:
 `05-knowledge/hypotheses/HYP-3439-lrc14-rescue-core-bridge-certificate.md`,
@@ -58,14 +59,21 @@ result
 and
 `07-reflections/lrc14-rescue-core-bridge-certificate-codex-20260629.md`.
 
-Purpose: join the one-branch rescue-core ledger to the two-color survivor
-ledger.  The first proof-facing split to test is canonical corridor-fence
-family versus noncanonical bounded rescue-core compression.
+Readout: HYP-3437's `150`-row recap has `59` negative naive-slack rows, all
+rescued, with rescue-rank histogram `{0:91,2:7,4:2,5:48,6:2}` and rank `6`
+only at `covering_AP_with_84` / `canonical_84m_01`.  The AP/84m bridge audits
+`14` displayed rows (`13` unique speeds): rank histogram `{0:1,5:11,6:2}`,
+rank `6` only for `covering_AP_with_84` / `ap_omit_12_tail_84x01`, and tails
+`84x02..84x12` drop to the rank-`5` core `(5,7,9,11,13)` while keeping
+HYP-3450/HYP-3451 low-rank two-colour escapes.  HYP-3452 now sharpens the
+tail handoff: finite transients `m=1..4`, rank-one `E:84m/E:84m` endpoint
+phase for `m>=5`, paired dead-cover rank `<=2` from `m>=3`, and a mod-`35`
+Beatty escape clock.
 
-Next: audit the combined HYP-3436/HYP-3437 stress banks and the canonical
-`84m` tower.  Try to certify that rank `6` is only canonical, noncanonical
-negative-slack rows need rank at most `5`, and any residual high-rank case
-routes through endpoint-spine/wall, owner-current, state-lift, or signed-SPEC.
+Next: prove the canonical rank-`6` base case using HYP-3431 plus the
+HYP-3450/HYP-3451 four-escape component graph, use HYP-3452 for the rank-`5`
+AP-tail descent, then extend the bridge to arbitrary primitive covering rows
+or name the first residual high-rank sidecar.
 ## Lead codex-2026-06-29: Minimal bad-core cover extractor
 
 **Status:** EVIDENCE / exact local bad-core cover classification; not proof

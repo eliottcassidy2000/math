@@ -33,6 +33,37 @@ artifact `m=35`, while the proof clock begins at `m=5`. -> HYP-3452,
 HYP-3451, HYP-3450, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431,
 HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129,
 HYP-2963, THM-523, LTI-412, LTT-312, T1412, OPEN-Q-108.
+**OPEN-Q-108 HYP-3439 rescue-core bridge addendum:**
+HYP-3439 joins the HYP-3437 one-branch overlap rescue ledger to HYP-3438
+survivor gates and HYP-3450/HYP-3451 component-cover escapes.  The AP/84m
+bridge says the rank-`6` rescue-core issue is local, not a broad new
+noncanonical obstruction:
+
+```text
+HYP-3437 recap:
+  rows_audited=150
+  negative_naive_slack_rows=59
+  negative_rows_with_rescue=59/59
+  all_row_rescue_rank_hist={0:91, 2:7, 4:2, 5:48, 6:2}
+  max_rank_rows=['covering_AP_with_84', 'canonical_84m_01']
+
+AP/84m bridge:
+  bridge_rows=14
+  bridge_rescue_rank_hist={0:1, 5:11, 6:2}
+  rank6_bridge_rows=['covering_AP_with_84', 'ap_omit_12_tail_84x01']
+```
+
+Concrete task: prove the canonical rank-`6` base case using HYP-3431 plus the
+HYP-3450/HYP-3451 four-escape component graph, then use HYP-3452 for the
+rank-`5` AP-tail descent: finite transients `m=1..4`, rank-one endpoint phase
+for `m>=5`, paired-cover rank `<=2` from `m>=3`, and the mod-`35` escape
+clock.  Any general primitive covering row must then either fit this bounded
+bridge or emit endpoint-spine/wall, owner-current, exact-period/state-lift,
+two-adic loss, or signed-SPEC debt. -> HYP-3439, HYP-3452, HYP-3451,
+HYP-3450, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
+HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415, THM-523,
+LTI-400, LTT-300, T1400, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3438 survivor-gate word audit addendum:**
 HYP-3438 turns HYP-3436's survivor gaps into exact gate words.  On the
 `135`-row bank, `6228` mixed `E_safe` components emit `8702` survivor gates:

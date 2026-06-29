@@ -33513,26 +33513,41 @@ exact-period/state-lift, or signed-SPEC debt.  Tournament Analysis uses proof
 carriers, not runners; priority path begins
 `atomic_interval_arrangement -> overlap_tax_menger_core -> endpoint_spine_cut_lift`.
 
-## codex-2026-06-29 -- reserve rescue-core bridge certificate -- HYP-3439
+## codex-2026-06-29 -- rescue-core bridge certificate -- HYP-3439
 
-Reserved HYP-3439/T1400/LTI-400/LTT-300 for the next finite bridge after
-HYP-3437 and HYP-3436.  The planned computation will join HYP-3437's
-one-branch overlap rescue cores with HYP-3436's two-color bad-core survivor
-ledger, then separate the canonical HYP-3431 corridor-fence family from
-noncanonical rows.
+Executed HYP-3439/T1400/LTI-400/LTT-300 as the finite bridge after HYP-3437,
+HYP-3438, HYP-3450, and HYP-3451.  Added
+`04-computation/lrc14_rescue_core_bridge_certificate_codex_20260629.py` and
+stored `05-knowledge/results/lrc14_rescue_core_bridge_certificate_codex_20260629.out`.
+The script joins one-branch overlap rescue cores with survivor-gate words and
+component-cover escapes on the AP/84m corridor spine.
 
-Honest status: stub only at reservation time.  No computation has yet been run
-under HYP-3439.  Claimed artifacts:
-`04-computation/lrc14_rescue_core_bridge_certificate_codex_20260629.py`,
-`05-knowledge/results/lrc14_rescue_core_bridge_certificate_codex_20260629.out`,
-and
-`07-reflections/lrc14-rescue-core-bridge-certificate-codex-20260629.md`.
+Exact readout: the HYP-3437 recap has `150` rows, `59` negative naive-slack
+rows, all rescued, rescue-rank histogram `{0:91,2:7,4:2,5:48,6:2}`, and rank
+`6` only at `covering_AP_with_84` / `canonical_84m_01`.  The AP/84m bridge has
+`14` displayed rows (`13` unique speeds), rank histogram `{0:1,5:11,6:2}`, and
+route histogram `{canonical_rank6_corridor_fence_with_two_color_escape:2,
+ap_tail_rank5_overlap_core_with_two_color_escape:11,
+nonnegative_one_branch_control_with_two_color_escape:1}`.  The only bridge
+rank-`6` rows are `covering_AP_with_84` and duplicate `ap_omit_12_tail_84x01`;
+AP tails `84x02..84x12` drop to rank-`5` core `(5,7,9,11,13)` and keep
+low-rank two-colour escapes.
 
-Proof target: every primitive covering row with negative one-branch naive slack
-is either canonical corridor-fence, has a noncanonical bounded rescue core, or
-routes through HYP-3436 survivors, endpoint-spine/wall ledgers, owner-current,
-exact-period/state-lift, or signed-SPEC.  Tournament vertices will be proof
-obligations/bridge carriers rather than runners or scalar masses.
+Proof target: formalize the canonical rank-`6` base case using HYP-3431 plus
+the HYP-3450/HYP-3451 component graph, prove the rank-`5` AP-tail descent for
+`m>=2`, then extend the bridge to arbitrary primitive covering rows or name
+the first residual sidecar.  Tournament vertices are bridge obligations:
+`canonical_corridor_rank6_bridge -> two_color_component_escape ->
+one_branch_overlap_rescue_cut -> survivor_gate_word_route ->
+ap_tail_rank5_descent -> component_conductance_router ->
+endpoint_spine_wall_handoff -> raw_rescue_rank_scalar`.
+
+After fetching, rebased over the incoming HYP-3452 AP84 tail component-phase
+audit and integrated it into the HYP-3439 handoff.  The AP-tail rank-`5`
+descent should now use HYP-3452's split: finite mixed transients `m=1..4`,
+rank-one `E:84m/E:84m` endpoint phase for `m>=5`, paired dead-cover rank
+`<=2` from `m>=3`, and the mod-`35` Beatty escape clock.  This avoids
+duplicating the AP-tail phase computation in the next bridge session.
 ## codex-2026-06-28 -- Bring/SC/Menger Charal signature router -- HYP-3429
 
 Started from current `origin/main` after integrating HYP-3403 through HYP-3406.

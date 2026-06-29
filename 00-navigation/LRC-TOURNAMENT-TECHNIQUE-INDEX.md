@@ -8688,34 +8688,42 @@ quotient_legality_status
 ## LTT-300: Rescue-Core Bridge Tournament
 
 - **Move:** Use proof obligations and bridge carriers as vertices: canonical
-  corridor-fence recognizer, noncanonical bounded rescue core, HYP-3436
-  survivor-gate route, endpoint-spine/wall route, owner-current route,
-  exact-period/state-lift debt, signed-SPEC/Rprime debt, and raw rescue-rank
-  shortcut as a negative control.
-- **LRC use:** HYP-3439 is reserved to connect HYP-3437's one-branch
-  overlap-tax rescue cores with HYP-3436's two-color bad-core/survivor ledger.
-  The target is to separate the canonical HYP-3431 rank-`6` family from
-  noncanonical negative-slack rows that should compress to bounded rank or
-  route to named debt.
+  corridor-fence rank-`6` bridge, two-colour component escape, one-branch
+  overlap rescue cut, survivor-gate word route, AP-tail rank-`5` descent,
+  component-conductance router, endpoint-spine/wall handoff, and raw
+  rescue-rank shortcut as a negative control.
+- **LRC use:** HYP-3439 connects HYP-3437's one-branch overlap-tax rescue
+  cores with HYP-3438 survivor gates and HYP-3450/HYP-3451 component-cover
+  escapes on the AP/84m spine.  The executed audit finds rank `6` only at
+  `covering_AP_with_84` / `ap_omit_12_tail_84x01`, while AP tails drop to rank
+  `5` core `(5,7,9,11,13)` and keep low-rank two-colour escapes.  HYP-3452
+  sharpens that tail clause into finite transients `m=1..4`, a rank-one
+  endpoint phase for `m>=5`, pair-rank `<=2` from `m>=3`, and a mod-`35`
+  Beatty escape clock.
 - **Preserves:** negative-slack rescue predicate, endpoint-labelled overlap
   core, bad-core/survivor context, canonical corridor-fence status, and legal
   residual route.
 - **Forgets / guardrail:** raw rank, scalar overlap mass, harmonic budgets, and
   gamma/Mertens priorities cannot certify rescue unless the endpoint labels and
   survivor-gate sidecars survive or are routed.
-- **Pairwise observable:** retained rescue predicate plus endpoint/survivor
-  payload minus scalar-forgetting debt.
+- **Pairwise observable:** retained rescue predicate plus endpoint/survivor/
+  component payload minus scalar-forgetting debt.
 - **Switch/gauge:** higher proof-facing score wins; ties use declared carrier
   order.
-- **Tie Hamiltonian path:** canonical corridor-fence recognizer ->
-  noncanonical bounded rescue core -> survivor-gate route -> endpoint-spine
-  route -> owner-current route -> exact-period/state-lift debt ->
-  signed-SPEC/Rprime debt -> raw rescue-rank shortcut.
-- **Next hook:** build the HYP-3439 bridge audit over the HYP-3436/HYP-3437
-  banks and the canonical `84m` tower.
-- **Pointers:** HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434,
-  HYP-3431, HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415,
-  THM-523, LTI-400, LTT-300, T1400, OPEN-Q-108.
+- **Fingerprint:** score histogram `{21:1,54:1,55:2,57:2,58:1,59:1}`;
+  directed `3`-cycles `0`; Hamiltonian path count `1`.
+- **Tie Hamiltonian path:** canonical_corridor_rank6_bridge ->
+  two_color_component_escape -> one_branch_overlap_rescue_cut ->
+  survivor_gate_word_route -> ap_tail_rank5_descent ->
+  component_conductance_router -> endpoint_spine_wall_handoff ->
+  raw_rescue_rank_scalar.
+- **Next hook:** formalize the canonical rank-`6` base case, use HYP-3452 for
+  the rank-`5` AP-tail descent, then extend the bounded bridge to arbitrary
+  primitive covering rows or name the first residual sidecar.
+- **Pointers:** HYP-3439, HYP-3452, HYP-3451, HYP-3450, HYP-3438, HYP-3437,
+  HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3425,
+  HYP-3422, HYP-3418, HYP-3415, THM-523, LTI-400, LTI-412, LTT-300, T1400,
+  OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 
