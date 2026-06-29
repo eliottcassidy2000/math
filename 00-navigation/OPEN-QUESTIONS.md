@@ -45,6 +45,15 @@ named private-label/owner-current/two-adic/SPEC debt.  -> HYP-3485, HYP-3490,
 HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455,
 HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3023,
 LTI-445, LTT-345, T1445.
+**OPEN-Q-108 HYP-3491 history niche-carrier recall addendum:**
+Can HYP-3474's colored Nerode quotient audit reconstruct HYP-3490's
+`private_firewall_status` from existing colored-gate axes plus route/component
+label incidence?  If yes, the private-label firewall becomes part of the
+existing formal colored-gate interface.  Parallel tasks: prove the
+multiplicity-one incidence cut lemma, stress HYP-3484's `C=27` seam/bypass
+packet, and run a function-compression constancy table for the
+projection-edge-deletion target. -> HYP-3491, HYP-3490, HYP-3484, HYP-3474,
+HYP-3437, HYP-3419, HYP-3151, HYP-3150, LTI-451, LTT-351, T1451.
 
 **OPEN-Q-108 HYP-3483 random031 recursion addendum:**
 HYP-3483 answers the `n+2` versus `n*2` prompt by refusing the false choice.

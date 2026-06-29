@@ -50,6 +50,29 @@ one pure `12`-cell bypass component on hard components `(43,54)` with owners
 `(23,93,113)`, and `14` mirror-closed free-hole packets.  Mirror is a legal
 class-preserving move; vertical half-turn gluing is only an `n*2` address
 sidecar because it mixes free-hole and ordinary cells.
+## codex-2026-06-29 -- HYP-3491 history niche-carrier recall atlas
+
+Prompt: look back through repo history for missed niche topics and connections
+to extend the LRC proof work.
+
+Scanned git history, high-signal reflections, recent hypothesis packets, and
+the obscure synthesis prompt material around p-adic/discrepancy vocabulary.
+Added HYP-3491/T1451/LTI-451/LTT-351 plus reflection
+`07-reflections/lrc14-history-niche-carrier-recall-codex-20260629.md`.
+
+Core finding: the useful missed material is a set of exact old carriers, not
+new famous-topic analogies.  The top bridge is HYP-3474 colored Nerode /
+partition-lattice quotient legality applied to HYP-3490's
+`private_firewall_status`; the next bridge is a HYP-3437/HYP-3236
+Menger/Green incidence-cut reading of label multiplicity.  Secondary carriers
+are HYP-3484 `C=27` carry stress, HYP-3150/HYP-3151 function-compression
+constancy, HYP-3419 owner-cut/SC charal transversals, and HYP-3222/HYP-3153
+root-motion guardrails.
+
+Next proof move: build the firewall Nerode audit, then prove the
+multiplicity-one incidence cut lemma.  Broad p-adic, discrepancy,
+Schwarz-Christoffel, BDH, Lee-Yang, and famous-constant language should enter
+only after being converted into exact sidecars.
 
 ## codex-2026-06-29 -- HYP-3483 random031 recursion-flow comparator
 

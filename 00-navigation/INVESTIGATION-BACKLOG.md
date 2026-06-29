@@ -56,6 +56,21 @@ LTI-443, LTT-343, OPEN-Q-108.
 
 ---
 
+## Lead codex-2026-06-29: history niche-carrier recall atlas
+
+**Status:** SYNTHESIS / repo-history proof-route mining; not proof
+(HYP-3491/T1451/LTI-451/LTT-351).
+
+HYP-3491 looks back through older LRC work for missed bridges into the
+HYP-3490/HYP-3484 frontier.  Best current targets: (1) extend HYP-3474 colored
+Nerode partition-lattice audit with `private_firewall_status`; (2) prove the
+HYP-3490 multiplicity-one incidence cut lemma in the label-component graph;
+(3) stress HYP-3484 seam/bypass under `C=27`, endpoint mod-14, and mod-8
+two-adic sidecars.  Guardrail: obscure prompts and famous constants enter only
+after becoming exact sidecars, never as scalar substitutes. -> HYP-3491,
+HYP-3490, HYP-3484, HYP-3474, HYP-3437, HYP-3419, HYP-3236, HYP-3222,
+HYP-3153, HYP-3151, HYP-3150, LTI-451, LTT-351, OPEN-Q-108.
+
 ## Lead codex-2026-06-29: random031 topology atlas
 ## Lead codex-2026-06-29: random031 forbidden-seam flow geometry
 

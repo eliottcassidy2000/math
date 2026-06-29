@@ -247,6 +247,12 @@ obligations, and proof-carrier interfaces.
   exits the vertices.  HYP-3490 shows the seven random edge exceptions are
   exactly the rows where every E/branch-touched label has multiplicity `1`,
   so no union of adjacent E/branch labels can remove a projection edge.
+- Need to reattach older niche carriers to the current firewall/seam frontier:
+  use LTT-351 after LTT-350/LTT-344/LTT-343/LTT-342/LTT-340/LTT-334/LTT-301/LTT-236/LTT-177/LTT-175 and make historical
+  proof carriers, not runners, the vertices.  The quotient preserves current
+  terminal predicates only when it retains colored Nerode purity,
+  label-component cut incidence, carry residues, compression constancy,
+  owner-cut transversals, or root-motion guardrails.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -10375,3 +10381,36 @@ quotient_legality_status
 - **Pointers:** HYP-3485, HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477,
   HYP-3460, HYP-3455, HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140,
   HYP-3034, HYP-3023, THM-523, LTI-445, LTT-345, T1445, OPEN-Q-108.
+
+## LTT-351: History Niche-Carrier Recall Tournament
+
+- **Move:** Treat older proof carriers as tournament vertices and rank them
+  by their ability to preserve or reconstruct the current HYP-3490/HYP-3484
+  terminal predicates.
+- **LRC use:** HYP-3491 prevents another broad analogy sweep by extracting
+  six reusable carriers from repo history: colored Nerode quotient legality,
+  label-component Menger/Green cuts, `C=27` carry-lift stress,
+  function-compression constancy, owner-cut/SC charal transversals, and
+  Joukowski/HB/Perron bulk guardrails.
+- **Preserves:** `private_firewall_status`, route sidecar `R`,
+  component-label incidence, seam/bypass distinction, carry residues,
+  owner-transversal data, and root-motion/bulk guardrail payload.
+- **Forgets / guardrail:** chronology, author/session identity, and famous
+  topic names.  Broad p-adic, discrepancy, SC, BDH, Lee-Yang, or constant
+  language is illegal unless converted into an exact sidecar.
+- **Pairwise observable:** immediate HYP-3490/HYP-3484 predicate retention,
+  existing finite artifact strength, theorem-shaped next lemma, and
+  scalarization-risk penalty.
+- **Switch/gauge:** prefer the carrier that preserves more of the current
+  terminal predicate; ties prefer executable finite audits over broad
+  analogies.
+- **Fingerprint:** hand-ranked transitive carrier tournament, no directed
+  `3`-cycles, Hamiltonian path
+  `R00_colored_Nerode_firewall_reconstruction -> R01_label_component_Menger_Green_cut -> R02_C27_twoadic_carry_lift_stress -> R03_function_compression_constancy_certificate -> R04_owner_cut_SC_charal_resurrection -> R05_Joukowski_HB_root_motion_bulk_guardrail -> R06_obscure_prompt_import_firewall`.
+- **Next hook:** extend the HYP-3474 partition-lattice script with target
+  `private_firewall_status`, test whether `(C,M,R)`, the full colored gate
+  word, or component-label incidence is the minimal reconstructing packet,
+  then prove the multiplicity-one incidence cut lemma.
+- **Pointers:** HYP-3491, HYP-3490, HYP-3484, HYP-3474, HYP-3473, HYP-3461,
+  HYP-3437, HYP-3419, HYP-3236, HYP-3222, HYP-3153, HYP-3151, HYP-3150,
+  THM-523, LTI-451, LTT-351, T1451, OPEN-Q-108.
