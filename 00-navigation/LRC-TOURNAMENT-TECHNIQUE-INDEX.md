@@ -147,6 +147,27 @@ obligations, and proof-carrier interfaces.
 - **Pointers:** HYP-3524, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
   HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486, T1524, LTI-524.
 
+## LTT-425 - Spigot Guarded-Emission Tournament
+
+- **Move:** Treat proof-token emission rules as tournament vertices.  A token
+  can print only when its visible quotient fiber is constant over all legal
+  hidden tails; otherwise the first missing route/owner sidecar is retained as
+  a predigit/carry.
+- **LRC use:** Operationalizes "emit named debt" for random031.  It decides
+  when private status, HYP-3490 route, terminal class, or owner residual
+  `(45,173)` can be theorem-facing instead of a checksum shadow.
+- **Preserves:** target fiber constancy, route `R`, owner filtration,
+  safe seam-sheaf heads, terminal split branches, and exact interval/LFT
+  state before any scalar printout.
+- **Forgets / guardrail:** raw counts `12/40/79/242/282` and scalar quotient
+  shadows are not legal proof tokens until a guard shows they are constant on
+  the relevant hidden completions.
+- **Next pull:** Build `GuardedEmission(target, visible_columns,
+  hidden_tail_columns)` as a reusable packet checker for HYP-3513, HYP-3520,
+  HYP-3521, HYP-3522, and older route/status banks.
+- **Pointers:** HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3493,
+  HYP-3490, HYP-3486, HYP-3511, HYP-3510, T1525, LTI-525.
+
 ## Fast Routing Map
 
 - Need to separate strict-open mass from endpoint-only equality:
@@ -375,6 +396,11 @@ obligations, and proof-carrier interfaces.
   branch-boundary bracket lift `(147,169)`, and residual pair `(45,173)`, so
   the next proof should target a two-owner residual boundary lemma with
   HYP-3513 route sidecar `R` rather than re-gluing the whole seven-owner seam.
+- Need to decide whether a proof token may be emitted yet:
+  use LTT-425 after LTT-422/LTT-421/LTT-420/LTT-413 and make emission rules
+  the vertices.  HYP-3525 says a route/owner/terminal token is legal only when
+  the visible packet is constant over all legal hidden tails, otherwise hold
+  the first missing sidecar.  Raw counts are checksums.
 - Need to explain why random pair-currents cannot work:
   use LTT-350 after LTT-336/LTT-337/LTT-338/LTT-339/LTT-340/LTT-341/LTT-342/LTT-343/LTT-344 and make dead-cover
   blocker labels with multiplicity sidecars, E/branch-touched private labels,
@@ -10557,6 +10583,41 @@ quotient_legality_status
 - **Pointers:** HYP-3524, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
   HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486, THM-523, LTI-524,
   LTT-424, T1524, OPEN-Q-108.
+
+## LTT-425: Spigot Guarded-Emission Tournament
+
+- **Move:** Use proof-token emission rules as tournament vertices:
+  guarded route emission, owner filtration digit, safe seam-sheaf quotient,
+  terminal split digit, BBP-style target-local extraction, coinductive family
+  spigot, exact LFT interval state, and raw digit/count shadow.
+- **LRC use:** HYP-3525 extends HYP-3523's certificate-spigot stream and
+  HYP-3524's hydrotope scout with a precise random031 rule for when a route,
+  owner, terminal, or residual token can be printed into the proof.  The
+  visible packet must force the same target over every legal hidden-tail
+  completion.
+- **Preserves:** private firewall status, HYP-3490 route `R`, HYP-3520 safe
+  seam-sheaf quotient heads, HYP-3521 terminal split, HYP-3522 owner
+  filtration, and exact interval head state.
+- **Forgets / guardrail:** Raw `12`, `40`, `79`, `242`, and `282` are digit
+  shadows.  They may verify a completed packet but cannot replace route,
+  owner word, free-hole type, or terminal-exit coordinates.
+- **Pairwise observable:** proof-token payload, guard strength, random031 fit,
+  and scalarization risk.
+- **Switch/gauge:** orient toward the carrier with larger guarded-emission
+  score; ties prefer payload, guard, random031 fit, lower scalar risk, then
+  name.
+- **Fingerprint:** score histogram
+  `{-7:1,53:1,55:1,62:1,70:1,75:1,84:1,86:1}`, no directed `3`-cycles,
+  singleton SCCs, and Hamiltonian path
+  `guarded_route_emission_R -> owner_filtration_digit -> safe_seam_sheaf_quotient -> terminal_split_digit -> bbp_random_access_route -> unbounded_coinductive_spigot -> continued_fraction_lft_state -> raw_digit_stream_shadow`.
+- **Next hook:** Implement the generic `GuardedEmission` fiber checker and
+  report, for each mixed visible fiber, the first missing sidecar.  Start with
+  HYP-3513 route/status, HYP-3520 safe quotients, HYP-3521 terminal split, and
+  HYP-3522 residual `(45,173)`.
+- **Pointers:** HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+  HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3511, HYP-3510, HYP-3036,
+  HYP-3024, HYP-3023, HYP-3006, HYP-2990, THM-523, LTI-525, LTT-425, T1525,
+  OPEN-Q-108.
 
 ## LTT-411: Random031 Free-Hole Bracket Atlas Tournament
 

@@ -1,0 +1,124 @@
+HYP-3525 SPIGOT-STYLE GUARDED EMISSION ATLAS
+status=SYNTHESIS / executable proof-carrier atlas; not an LRC14 proof
+seed=https://en.wikipedia.org/wiki/Spigot_algorithm
+
+## Spigot -> LRC Dictionary
+digit                  -> route/owner/terminal proof token
+head state             -> visible quotient fields retained by the packet
+tail bound             -> sidecar theorem proving all hidden completions agree
+carry/predigit         -> unresolved route or owner ambiguity
+safe emission          -> quotient fiber is constant for the target predicate
+bounded spigot         -> finite audit with named family theorem debt
+unbounded spigot       -> coinductive packet stream with a repeated guard
+BBP-style extraction   -> target-local certificate extraction without whole-bank enumeration
+
+## Random031 Emission Tests
+colored_private_only: visible=('C',)
+  emit:private_firewall_status
+  hold:h3490_route:missing=route sidecar R
+  hold:random031_terminal_class:missing=('allowed_exit', 'flow_class', 'sheet_pgf_bucket')
+  hold:owner_residual_pair:missing=('R', 'branch_boundary_lift', 'residual_pair', 'transport_word')
+  hold:raw_count:missing=never theorem-facing by itself
+route_sidecar: visible=('R',)
+  emit:private_firewall_status
+  emit:h3490_route
+  hold:random031_terminal_class:missing=('allowed_exit', 'flow_class', 'sheet_pgf_bucket')
+  hold:owner_residual_pair:missing=('branch_boundary_lift', 'residual_pair', 'transport_word')
+  hold:raw_count:missing=never theorem-facing by itself
+safe_sheaf_head: visible=('allowed_exit', 'flow_class', 'sheet_pgf_bucket')
+  hold:private_firewall_status:missing=colored axis or incidence/projection sidecar
+  hold:h3490_route:missing=route sidecar R
+  emit:random031_terminal_class
+  hold:owner_residual_pair:missing=('R', 'branch_boundary_lift', 'residual_pair', 'transport_word')
+  hold:raw_count:missing=never theorem-facing by itself
+owner_filtration_ready: visible=('R', 'branch_boundary_lift', 'residual_pair', 'transport_word')
+  emit:private_firewall_status
+  emit:h3490_route
+  hold:random031_terminal_class:missing=('allowed_exit', 'flow_class', 'sheet_pgf_bucket')
+  emit:owner_residual_pair
+  hold:raw_count:missing=never theorem-facing by itself
+raw_count_shadow: visible=('checksum_only',)
+  hold:private_firewall_status:missing=colored axis or incidence/projection sidecar
+  hold:h3490_route:missing=route sidecar R
+  hold:random031_terminal_class:missing=('allowed_exit', 'flow_class', 'sheet_pgf_bucket')
+  hold:owner_residual_pair:missing=('R', 'branch_boundary_lift', 'residual_pair', 'transport_word')
+  emit:raw_count
+danger_endpoint_rank: visible=('endpoint_ranks',)
+  hold:private_firewall_status:missing=colored axis or incidence/projection sidecar
+  hold:h3490_route:missing=route sidecar R
+  hold:random031_terminal_class:missing=('allowed_exit', 'flow_class', 'sheet_pgf_bucket')
+  hold:owner_residual_pair:missing=('R', 'branch_boundary_lift', 'residual_pair', 'transport_word')
+  hold:raw_count:missing=never theorem-facing by itself
+
+## Safe / Unsafe Quotient Canary
+safe_quotients=('flow_class', 'allowed_exit', 'owner_union', 'sheet_pgf_bucket')
+unsafe_quotients=('owner_union_size', 'endpoint_ranks', 'branch_hist', 'size', 'mirror_closed')
+reading=HYP-3520 already supplies the tail-error guard: safe quotients can emit terminal class; unsafe scalar quotients must hold sidecars.
+
+## Carrier Tournament
+score_hist={-7: 1, 53: 1, 55: 1, 62: 1, 70: 1, 75: 1, 84: 1, 86: 1}
+directed_3cycles=0
+hamiltonian_path=guarded_route_emission_R -> owner_filtration_digit -> safe_seam_sheaf_quotient -> terminal_split_digit -> bbp_random_access_route -> unbounded_coinductive_spigot -> continued_fraction_lft_state -> raw_digit_stream_shadow
+
+- guarded_route_emission_R
+  score=86 payload=10 guard=10 random031_fit=9 scalar_risk=1
+  spigot_motif=emit a digit only after carry ambiguity is impossible
+  lrc_translation=HYP-3513 says private status can be compressed, but the full HYP-3490 route is safely emitted only with route sidecar R or a route theorem
+  preserved=('h3490_route', 'private_firewall_status', 'random031_named_route')
+  destroyed=('row_name', 'raw_gate_order')
+  next_hook=Prove route reconstruction, or keep R in every random031 terminal packet.
+- owner_filtration_digit
+  score=84 payload=9 guard=10 random031_fit=10 scalar_risk=1
+  spigot_motif=predigit holdback until the next carry resolves
+  lrc_translation=HYP-3522 splits seam owners into transport (23,93,113), branch-boundary lift (147,169), and residual (45,173)
+  preserved=('transport_word', 'branch_boundary_lift', 'residual_owner_pair', 'route_R')
+  destroyed=('raw_seven_owner_shadow',)
+  next_hook=Formalize the residual (45,173) lemma after transport, bracket, and route sidecars.
+- safe_seam_sheaf_quotient
+  score=75 payload=8 guard=9 random031_fit=10 scalar_risk=2
+  spigot_motif=tail-error bound certifies the current digit
+  lrc_translation=HYP-3520's canary allows flow_class, allowed_exit, owner_union, and sheet_pgf_bucket as safe component quotients
+  preserved=('flow_class', 'allowed_exit', 'owner_union', 'sheet_pgf_bucket')
+  destroyed=('component_size', 'branch_hist', 'endpoint_rank_scalar')
+  next_hook=Use these quotients as the allowed head state for random031 terminal emission.
+- terminal_split_digit
+  score=70 payload=8 guard=8 random031_fit=9 scalar_risk=2
+  spigot_motif=bounded spigot preallocates enough terms before output
+  lrc_translation=HYP-3521 emits the terminal split 282=230 ordinary + 40 free-hole + 12 pure bypass only after HYP-3486/HYP-3511/HYP-3510/HYP-3490 are attached
+  preserved=('ordinary_route', 'free_hole_bracket', 'pure_bypass', 'firewall_guard')
+  destroyed=('raw_242_gate_routed_slogan',)
+  next_hook=Turn the split into a finite theorem interface with three emission branches.
+- bbp_random_access_route
+  score=62 payload=7 guard=8 random031_fit=7 scalar_risk=2
+  spigot_motif=extract one digit by modular head plus bounded tail
+  lrc_translation=For a target packet, compute only the local route token needed: owner residual, endpoint route, private firewall bit, or terminal class
+  preserved=('target_digit_address', 'local_tail_bound', 'proof_token')
+  destroyed=('global_enumeration_order',)
+  next_hook=Build target-local certificate extractors for residual packets instead of whole-bank scans.
+- unbounded_coinductive_spigot
+  score=55 payload=7 guard=7 random031_fit=6 scalar_risk=3
+  spigot_motif=produce an infinite stream by repeatedly proving the next digit safe
+  lrc_translation=A family proof can emit one packet token at a time if each token has a uniform sidecar bound and a tail theorem for all later rows
+  preserved=('family_tail_theorem', 'token_order', 'holdback_state')
+  destroyed=('finite_bank_completeness_slogan',)
+  next_hook=State random031-style guards as reusable emission rules for future exception families.
+- continued_fraction_lft_state
+  score=53 payload=6 guard=7 random031_fit=6 scalar_risk=2
+  spigot_motif=linear-fractional state transformation keeps interval enclosures exact
+  lrc_translation=Use LFT/interval heads for Farey, u=2t, and owner-current transports rather than decimalizing to floating proof scores
+  preserved=('exact_interval_head', 'farey_address', 'two_adic_branch')
+  destroyed=('floating_score',)
+  next_hook=Attach exact interval heads to route-emission tests before Fejer or Haar smoothing.
+- raw_digit_stream_shadow
+  score=-7 payload=1 guard=1 random031_fit=3 scalar_risk=10
+  spigot_motif=digits without carry guard
+  lrc_translation=Raw counts such as 12, 40, 79, 242, or 282 are output shadows; they are not legal proof digits until sidecars certify the route
+  preserved=('count_shadow',)
+  destroyed=('route', 'owner_word', 'free_hole_type', 'terminal_exit')
+  next_hook=Use raw counts only as checksums after guarded emission succeeds.
+
+## Proof Pull
+P1: State a GuardedEmission lemma: a proof token is legal only when the visible quotient is constant over all hidden tails, or a named holdback sidecar is carried.
+P2: Apply it to random031: private status may emit through C/F/N/T or I/Q, but full route emission needs R or route reconstruction.
+P3: Apply it to HYP-3520/HYP-3522: owner residual (45,173) may emit only after transport word, branch-boundary lift, residual pair, and route R are visible.
+P4: Treat raw counts 12/40/79/242/282 as checksums, never as theorem-facing digits before guarded emission.

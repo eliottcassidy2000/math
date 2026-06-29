@@ -46,6 +46,28 @@ the HYP-3513 route sidecar `R` plus vertical-halfturn guard.  The residual
 boundary pair `(45,173)` must remain typed proof debt until the owner-boundary
 lemma is closed. -> HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513,
 HYP-3511, HYP-3510, HYP-3490, HYP-3486, LTI-523, LTT-423, T1523.
+**OPEN-Q-108 HYP-3525 guarded-emission addendum:** Can the random031 terminal
+proof be rewritten as a generic `GuardedEmission` fiber-constancy theorem?
+
+The proposed rule is:
+
+```text
+emit target iff every legal hidden-tail completion of the visible packet
+lands in the same target class;
+otherwise hold the first missing sidecar or emit named debt.
+```
+
+Current readout: private firewall status emits through `C/F/N/T` or `I/Q`;
+full route emits only with `R` or route reconstruction; terminal class emits
+through `flow_class`/`allowed_exit`/`owner_union`/`sheet_pgf_bucket`; owner
+residual `(45,173)` emits only with `transport_word`,
+`branch_boundary_lift`, `residual_pair`, and `R`.  Open task: build the
+generic checker and run it on random031 terminal, owner-boundary, and older
+HYP-2963 route/status banks, reporting mixed fibers and first missing
+sidecars rather than raw counts. -> HYP-3525, HYP-3524, HYP-3523, HYP-3522,
+HYP-3521, HYP-3520, HYP-3513, HYP-3493, HYP-3490, HYP-3486, HYP-3511,
+HYP-3510, LTI-525,
+LTT-425, T1525.
 
 **OPEN-Q-108 HYP-3522 owner-boundary filtration addendum:** Can the random031
 pure-bypass owner-boundary lemma be reduced from HYP-3520's four-owner current

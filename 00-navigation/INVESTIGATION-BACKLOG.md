@@ -14,6 +14,17 @@ HYP-3513 route sidecar `R` still sees residual `(45,173)` rather than a scalar
 volume/count/chamber shadow. -> HYP-3524, HYP-3522, HYP-3521, HYP-3520,
 HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
 LTI-524, LTT-424, T1524, OPEN-Q-108.
+**HYP-3525 spigot-style guarded emission.**  Turn the synthesis atlas into an
+actual proof checker.  Implement `GuardedEmission(target, visible_columns,
+hidden_tail_columns)` over packet rows: if a visible fiber has one target
+class, emit the target token; if mixed, report the first missing route/owner
+sidecar and forbid theorem-facing emission.  First targets: HYP-3513 private
+status versus route `R`, HYP-3520 safe seam-sheaf quotients, HYP-3521 terminal
+split, HYP-3522 residual `(45,173)`, and older HYP-2963 route/status banks.
+Keep tournament vertices as emission rules/proof obligations, not runners.
+Use raw `12/40/79/242/282` only as checksums after the guard succeeds. ->
+HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3493, HYP-3490,
+HYP-3486, HYP-3511, HYP-3510, LTI-525, LTT-425, T1525, OPEN-Q-108.
 
 **HYP-3522 random031 owner-boundary bracket filtration.**  Turn the HYP-3522
 filtration into the next terminal owner-boundary lemma.  Exact readout:

@@ -50,6 +50,50 @@ volumes are diagnostic scalars only; they forget owner identity.
 Proof pull: formalize a no-hidden-tail lemma saying that after the transport
 and bracket emitters fire, every legal downstream quotient with HYP-3513 route
 sidecar `R` still reconstructs residual pair `(45,173)`.
+## codex-2026-06-29 -- HYP-3525 spigot guarded emission atlas
+
+Prompt: use the spigot-algorithm page as inspiration for connecting related
+and not-so-related proof topics toward the LRC14 frontier.
+
+During sync, other agents reserved HYP-3523/T1523/LTI-523/LTT-423 for the
+concrete random031 certificate-spigot stream and HYP-3524 for a hydrotope
+scout.  This session therefore keeps those as narrower spigot layers and
+records the broader guard rule as HYP-3525/T1525/LTI-525/LTT-425.
+
+Added:
+
+```text
+04-computation/lrc14_spigot_guarded_emission_atlas_codex_20260629.py
+05-knowledge/results/lrc14_spigot_guarded_emission_atlas_codex_20260629.out
+05-knowledge/hypotheses/HYP-3525-lrc14-spigot-guarded-emission.md
+07-reflections/lrc14-spigot-guarded-emission-codex-20260629.md
+```
+
+Core reframe: a theorem-facing proof token should be treated like a spigot
+digit.  It can be emitted only when the visible packet plus a hidden-tail
+guard proves the target constant over all legal completions.  If not, the
+proof must keep a predigit/carry sidecar: route `R`, owner word,
+branch-boundary lift, sheet-PGF bucket, or named residual debt.
+
+Random031 readout: HYP-3513 axes `C/F/N/T` and sidecars `I/Q` can emit
+private firewall status, but full HYP-3490 route still needs `R` or route
+reconstruction.  HYP-3520 safe quotients `flow_class`, `allowed_exit`,
+`owner_union`, and `sheet_pgf_bucket` can emit terminal class; unsafe scalar
+quotients `owner_union_size`, `endpoint_ranks`, `branch_hist`, `size`, and
+`mirror_closed` must hold sidecars.  HYP-3522's owner residual `(45,173)` can
+emit only after `transport_word + branch_boundary_lift + residual_pair + R`
+is visible.  Raw counts `12/40/79/242/282` are checksums only.
+
+Tournament carrier path: `guarded_route_emission_R -> owner_filtration_digit
+-> safe_seam_sheaf_quotient -> terminal_split_digit ->
+bbp_random_access_route -> unbounded_coinductive_spigot ->
+continued_fraction_lft_state -> raw_digit_stream_shadow`, with no directed
+`3`-cycles.
+
+Next proof target: implement a generic `GuardedEmission(target,
+visible_packet, hidden_tail)` checker over random031 packet rows, then use it
+to replace informal "emit named debt" language by explicit fiber-constancy or
+first-missing-sidecar certificates.
 
 ## codex-2026-06-29 -- HYP-3520 random031 owner-boundary persistence
 

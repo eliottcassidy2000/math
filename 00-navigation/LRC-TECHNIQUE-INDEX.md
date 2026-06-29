@@ -177,6 +177,40 @@ HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486, T1524, LTT-424.
 Next agent hook: formalize an `EmitterState` recursion
 `State 7 -> State 4 -> State 2 -> terminal` with route sidecar `R` retained.
 
+## LTI-525 - Spigot guarded emission
+
+Carrier / vertex set: proof-token emission rules: route `R`, owner
+filtration layers, safe seam-sheaf heads, terminal split packets, target-local
+certificate extractors, coinductive family tails, exact interval/LFT states,
+and raw count shadows.
+
+Pairwise observable: whether a visible packet is constant for the target over
+all legal hidden tails, which sidecar is missing if it is not constant, and
+how much scalarization risk is introduced by printing a token early.
+
+Preserved LRC predicate: theorem-facing legality of a route, owner, terminal,
+or residual token.
+
+Destroyed information: raw spigot-like "digits" such as `12`, `40`, `79`,
+`242`, and `282` destroy route, owner word, free-hole type, terminal exit, and
+first missing sidecar unless guarded by fiber constancy.
+
+Best use: make "emit named debt" operational.  A quotient may emit only after
+the target is constant on visible fibers, otherwise it must hold route `R`,
+owner word, branch-boundary lift, sheet-PGF bucket, or named residual debt.
+
+Failure mode: using a printed-looking count as a proof token.  Counts are
+checksums, not theorem-facing digits.
+
+Anchors: HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3511, HYP-3510, HYP-3036,
+HYP-3024, HYP-3023, HYP-3006, HYP-2990, T1525, LTT-425.
+
+Next agent hook: implement `GuardedEmission(target, visible_columns,
+hidden_tail_columns)` over packet rows.  First run it on HYP-3513 status
+versus route `R`, HYP-3520 safe seam-sheaf quotients, HYP-3521 terminal
+split, and HYP-3522 owner residual `(45,173)`.
+
 ## Current Assembly Principle
 
 The live LRC14 proof object is a labelled packet over several compatible
@@ -211,6 +245,7 @@ Hodge-cycle lifting / algebraic-cycle certificate sidecar
 renormalized signed-polymer packet type / signed activity / finite-cell route
 Dirichlet sidecar graph / boundary potential / Schur-complement conductance
 route-state closure median state / packet-route-certificate-sidecar-discharge closure
+spigot guarded emission / visible packet / hidden-tail sidecar / proof-token fiber constancy
 AP-collar finite lemma certificate / rational witness intervals / uniform strict floor / unit-height obstruction vector
 Bring/Schwarz-Christoffel/BDH/Menger charal recursion / branch exits / accessory owner debt / finite channel variance / owner cut / recursive signature
 owner-cut resurrection calculus / cross-exit owner clauses / minimum owner transversals / exit-pure cut codes / terminal router
@@ -681,6 +716,7 @@ record what it destroys before asking it to prove anything.
 | LTI-513 | Private-firewall Nerode audit | HYP-3474 axes `K,N,T,S,F,C,M,A`, private-firewall bit, `nondead/nonprivate/private` status, route sidecar `R`, incidence sidecar `I`, projection-frontier sidecar `Q`, finite quotient purity | HYP-3513 joins HYP-3474 colored-gate quotient records to the finite HYP-3490 split.  Existing axes `C`, `F`, `N`, and `T` are pure for private-firewall status, but no existing-axis subset preserves the full five-way route.  `I/Q` are compact three-fiber private-status carriers and `R` is the compact five-fiber route carrier. | HYP-3513, HYP-3491, HYP-3490, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, THM-523, T1513, LTT-413, LTI-513, OPEN-Q-108 | Prove the row-free incidence-cut lemma reducing `I/Q` to blocker-label multiplicity one; either prove route reconstruction from existing data or keep sidecar `R` in the terminal dispatch. |
 | LTI-522 | Random031 owner-boundary bracket filtration | Owner filtration layers, transport word `(23,93,113)`, branch-boundary bracket lift `(147,169)`, residual pair `(45,173)`, mirror-persistent bypass stalk, HYP-3510/HYP-3511 separation, HYP-3513 route sidecar | HYP-3522 refines HYP-3520's owner-current debt inside HYP-3521's bypass terminal packet.  The seven-owner seam splits as transport `(23,93,113)`, branch-boundary bracket owners `(23,93,147,169)`, bracket lift `(147,169)`, transport-only `(113)`, and residual `(45,173)`.  The bypass has `12` cells, branch split `6/6`, endpoint rank `(2,)`, six mirror pairs preserving `(23,93,113)`, and adjacent ordinary branch brackets with words `(93,147,169)` and `(23,169)`. | HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, THM-523, T1522, LTT-422, LTI-522, OPEN-Q-108 | Prove transport-word constancy, branch-boundary bracket lift, HYP-3510/HYP-3511 separation, and then a residual `(45,173)` boundary lemma under the HYP-3490/HYP-3513 firewall route sidecar. |
 | LTI-524 | Random031 spigot/hydrotope residual scout | Online owner emitters, monotone tail schedule, no-hidden-tail residual lemma, hydrotope chamber canaries, owner-support singleton chamber, sliced-box scalar guardrail, route sidecar `R` | HYP-3524 turns HYP-3522's owner filtration into a spigot-style proof emitter: seam input `(23,45,93,113,147,169,173)`, transport emit `(23,93,113)`, branch-boundary emit `(147,169)`, residual tail `(45,173)`, with monotone sizes `(0,3,5,5)` and `(7,4,2,2)`.  Hydrotope-style chamber signs show residue quotients are unsafe, while owner-support-cell weights isolate transport, transport-plus-boundary, and residual as singleton chambers. | HYP-3524, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486, THM-523, T1524, LTT-424, LTI-524, OPEN-Q-108 | Formalize `EmitterState`: emit transport, emit bracket lift, then prove residual `(45,173)` cannot be hidden by any downstream quotient with route sidecar `R`; keep sliced-box volumes as diagnostics only. |
+| LTI-525 | Spigot guarded emission | Visible packet heads, hidden-tail sidecar bounds, predigit/carry holdbacks, route `R`, owner words, branch-boundary lift, safe seam-sheaf quotient heads, raw count checksum shadows | HYP-3525 extends HYP-3523's certificate-spigot stream and HYP-3524's hydrotope scout into a proof-token discipline.  A route/owner/terminal token may print only when the visible quotient fiber is constant for the target over every legal hidden completion; otherwise the proof holds the first missing sidecar.  For random031, private status emits through `C/F/N/T` or `I/Q`, route through `R`, terminal class through HYP-3520 safe quotients, and owner residual `(45,173)` through transport plus bracket lift plus residual plus `R`. | HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3511, HYP-3510, HYP-3036, HYP-3024, HYP-3023, HYP-3006, HYP-2990, THM-523, T1525, LTT-425, LTI-525, OPEN-Q-108 | Build a generic `GuardedEmission` checker that reports mixed visible fibers and first missing sidecars, then use it to replace informal named-debt emission in random031 and older route/status banks. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -10228,6 +10264,90 @@ full_filtration_spigot_packet
 Pointers: HYP-3524, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
 HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486, THM-523, LTI-524,
 LTT-424, T1524, OPEN-Q-108.
+
+## LTI-525: Spigot Guarded Emission Atlas
+
+Created by codex-2026-06-29 for HYP-3525/T1525/LTT-425.  This technique
+extends HYP-3523's concrete certificate-spigot stream and HYP-3524's hydrotope
+scout by importing the spigot-algorithm guard pattern into proof packets:
+
+```text
+head state + tail bound -> safe digit emission
+visible packet + hidden-sidecar bound -> safe route/owner token emission
+```
+
+Carrier / vertex set: guarded-emission proof carriers:
+
+```text
+guarded_route_emission_R
+owner_filtration_digit
+safe_seam_sheaf_quotient
+terminal_split_digit
+bbp_random_access_route
+unbounded_coinductive_spigot
+continued_fraction_lft_state
+raw_digit_stream_shadow
+```
+
+Preserved LRC predicate: legality of emitting a theorem-facing route, owner,
+terminal, or residual token.
+
+Destroyed information: raw `12`, `40`, `79`, `242`, and `282` counts destroy
+route, owner word, free-hole type, and terminal exit unless a visible-fiber
+constancy guard has already succeeded.
+
+Exact HYP-3525 readout:
+
+```text
+private_firewall_status emits through C/F/N/T or I/Q
+h3490_route emits through R or route reconstruction
+random031_terminal_class emits through flow_class/allowed_exit/owner_union/sheet_pgf_bucket
+owner_residual_pair emits through transport_word+branch_boundary_lift+residual_pair+R
+raw_count is checksum_only
+```
+
+Safe quotient canary:
+
+```text
+safe=(flow_class, allowed_exit, owner_union, sheet_pgf_bucket)
+unsafe=(owner_union_size, endpoint_ranks, branch_hist, size, mirror_closed)
+```
+
+Best use: formalize a generic checker:
+
+```text
+GuardedEmission(target, visible_packet, hidden_tail):
+  if target is constant over every legal hidden_tail completion:
+      emit target
+  else:
+      hold first missing sidecar or emit named debt
+```
+
+Tournament Analysis: vertices are proof-token emission rules, not runners or
+decimal digits.  Pairwise observable is proof-token payload, guard strength,
+random031 fit, and scalarization risk.  Score histogram is
+`{-7:1,53:1,55:1,62:1,70:1,75:1,84:1,86:1}` with no directed `3`-cycles, and
+the Hamiltonian path is:
+
+```text
+guarded_route_emission_R
+-> owner_filtration_digit
+-> safe_seam_sheaf_quotient
+-> terminal_split_digit
+-> bbp_random_access_route
+-> unbounded_coinductive_spigot
+-> continued_fraction_lft_state
+-> raw_digit_stream_shadow
+```
+
+Next agent hook: run the generic guard checker over HYP-3513 private
+status/route data, HYP-3520 seam-sheaf quotients, HYP-3521 terminal split,
+HYP-3522 residual owner pair, and older HYP-2963 route/status banks.
+
+Pointers: HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3511, HYP-3510, HYP-3036,
+HYP-3024, HYP-3023, HYP-3006, HYP-2990, THM-523, LTI-525, LTT-425, T1525,
+OPEN-Q-108.
 
 ## LTI-511: Random031 Free-Hole Bracket Atlas
 
