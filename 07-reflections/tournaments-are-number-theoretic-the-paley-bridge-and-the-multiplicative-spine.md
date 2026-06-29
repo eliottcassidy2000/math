@@ -1,6 +1,6 @@
 # Tournaments are a number-theoretic object: the Paley bridge and the multiplicative spine
 
-*mac-mini-2026-06-29-S9. A deep investigation of the connections between tournaments and natural numbers, especially primes, drawing together two extensive repo surveys (tournaments↔primes; multiplicative functions) and a new computation (THM-584).*
+*mac-mini-2026-06-29-S9. A deep investigation of the connections between tournaments and natural numbers, especially primes, drawing together two extensive repo surveys (tournaments↔primes; multiplicative functions) and a new computation (THM-586).*
 
 ## The thesis
 
@@ -12,7 +12,7 @@ Strip the project to one sentence: **the parity of tournaments and the multiplic
 
 On this bridge, every tournament invariant becomes an arithmetic function of `p`. This session I computed three and they are clean:
 
-- **`H(T_p) = p · (odd)`** (THM-584). The rotation `Z_p` acts freely on Hamiltonian paths, so `p | H`; Rédei makes the cofactor odd. A *prime-refinement of Rédei* on the Paley family.
+- **`H(T_p) = p · (odd)`** (THM-586). The rotation `Z_p` acts freely on Hamiltonian paths, so `p | H`; Rédei makes the cofactor odd. A *prime-refinement of Rédei* on the Paley family.
 - **The dihedral Burnside identity** `#orbits = (H(T_p) + p·f(T_p)) / (2p) ∈ ℤ`, where `f` is the palindromic count (my THM-582/583, the σ-odd index). This single integrality ties together the path count `H` (Rédei), the half-system witness `f`, and the prime `p`, through `D_{2p}` — and forces `H/p ≡ f ≡ 1 (mod 2)`.
 - **`R(p) = H(T_p)·2^{p-1}/p! → e`** (the repo's cherry-cluster theorem). The same `H`-values, normalized by the random-tournament expectation, converge to `e` — because `e = exp(−χ(−1))` and `χ(−1) = −1` is exactly the `p≡3` condition. *The transcendental `e` and the residue `−1 mod p` are one fact read twice.*
 
@@ -46,4 +46,4 @@ Three things crystallize, and the first two are directly actionable:
 
 The honest summary: tournaments are not *like* number theory here, they *are* number theory — the Paley bridge makes a prime into a tournament, Rédei is a `mod 2` reduction, the floor is a `mod p` density, and the same class-number-1 primes `2,3,7` and constants `e,π` organize both sides. The remaining LRC content is, in this light, a single inequality between a totient density (what the runners can't cover) and a singular-series capacity (what the cap concentrates) — both multiplicative, both at the prime `7`.
 
-See [[the-two-indices-redei-is-odd-lonely-is-even-half-tiling-is-the-quotient]] (THM-582), [[why-the-paley-path-ratio-is-e-the-cherry-is-the-unique-cluster]], [[H-impossibility-the-multiplicative-mechanism-s599]] (Moon), [[the-resonance-killing-is-multiplicative-totient-mobius-zeta2]], [[everything-is-the-triangle]]. New: THM-584 (Paley H-arithmetic + dihedral Burnside).
+See [[the-two-indices-redei-is-odd-lonely-is-even-half-tiling-is-the-quotient]] (THM-582), [[why-the-paley-path-ratio-is-e-the-cherry-is-the-unique-cluster]], [[H-impossibility-the-multiplicative-mechanism-s599]] (Moon), [[the-resonance-killing-is-multiplicative-totient-mobius-zeta2]], [[everything-is-the-triangle]]. New: THM-586 (Paley H-arithmetic + dihedral Burnside).

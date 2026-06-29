@@ -1,10 +1,10 @@
 ---
 id: THM-585
-title: Vertex-transitive tournaments have n | H(T) = n*(odd) (generalizing the Paley p|H of THM-584); the divisibility of A038375 (max H) by n is a SHADOW of the maximizer's symmetry -- n | a(n) exactly for n=1,3,5,7,9,11 (the circulant-optimal regime, THM-338), failing at n=13 where the maximizer is non-circulant (13 | opt_circ(13)=3711175 but 13 nmid a(13)); and the skew-Hadamard doubling tower (THM-448) revives n|H at the Mersenne numbers via DRT regularity (15 | H(T_15)) with the self-similar recursion B_0(T_{2m-1})=T_{m-1}
+title: Vertex-transitive tournaments have n | H(T) = n*(odd) (generalizing the Paley p|H of THM-586); the divisibility of A038375 (max H) by n is a SHADOW of the maximizer's symmetry -- n | a(n) exactly for n=1,3,5,7,9,11 (the circulant-optimal regime, THM-338), failing at n=13 where the maximizer is non-circulant (13 | opt_circ(13)=3711175 but 13 nmid a(13)); and the skew-Hadamard doubling tower (THM-448) revives n|H at the Mersenne numbers via DRT regularity (15 | H(T_15)) with the self-similar recursion B_0(T_{2m-1})=T_{m-1}
 status: PROVED (the vertex-transitive lemma); VERIFIED (n|H for ALL circulant tournaments n=3..13; A038375 divisibility n=1..13 with opt_circ(13)=3711175 exact; doubling tower B_0 self-similarity and H-values to T_15).
 source: mac-mini-2026-06-29-S10
 depends_on:
-  - THM-584   # Paley p|H + dihedral Burnside (this generalizes the p|H to all vertex-transitive)
+  - THM-586   # Paley p|H + dihedral Burnside (this generalizes the p|H to all vertex-transitive)
   - THM-338   # circulant optimality threshold: a(n)=opt_circ(n) for n<=11, gap at 13
   - THM-448   # the DRT/Mersenne skew-Hadamard doubling tower + B_0 self-similarity
 related:
@@ -19,13 +19,13 @@ results:
 
 # THM-585 -- rotational H-divisibility and the symmetry shadow of A038375
 
-## 1. The vertex-transitive lemma (PROVED; generalizes THM-584)
+## 1. The vertex-transitive lemma (PROVED; generalizes THM-586)
 > For any VERTEX-TRANSITIVE tournament `T` on `n` vertices, the number of directed Hamiltonian
 > paths STARTING at a fixed vertex is `H(T)/n` (by transitivity, equal for all start vertices), so
 > **`n | H(T)`**; with Rédei (`H` odd), **`H(T) = n * (odd)`**.
 
 Rotational/circulant tournaments `R_n` (`i->j` iff `(j-i) mod n in S`, `S` antisymmetric) are
-vertex-transitive (`Z_n` acts), so `n | H(R_n)`.  This generalizes THM-584's free-rotation `p|H` for
+vertex-transitive (`Z_n` acts), so `n | H(R_n)`.  This generalizes THM-586's free-rotation `p|H` for
 Paley (a special `R_n` with `S=QR`) to ALL rotational tournaments.  VERIFIED: `n | H` for every one of
 the `2^{(n-1)/2}` circulant tournaments, `n = 3,5,7,9,11,13`.
 
@@ -58,7 +58,7 @@ Mersenne number 15, past the circulant threshold 11 -- the two structures (verte
 and Mersenne doubling DRT) are the two sources of `n | a(n)`.
 
 ## Significance: two recursive towers, one arithmetic
-Merging THM-584 (Paley) with `R_n` and A038375: the Hamiltonian-path count of a maximally-symmetric
+Merging THM-586 (Paley) with `R_n` and A038375: the Hamiltonian-path count of a maximally-symmetric
 tournament is `n*(odd)`, and this divisibility is visible in the OEIS max-H sequence as a symmetry
 detector.  Two towers organize the symmetric maximizers: the **Paley tower** (primes `p=3 mod4`:
 `3,7,11,19,23,31,...`, vertex-transitive, `p|H`, achieving `a(p)`) and the **Mersenne doubling tower**
@@ -69,4 +69,4 @@ primes the Paley tournament (more symmetric, `|Aut|=p(p-1)/2`) likely out-maximi
 mechanisms)?  Verified for all computed DRTs (Paley `3,7,11`; tower `3,7,15`).
 
 Scripts: `rotational_tournament_arithmetic_macmini_20260629.py` (this);
-`paley_dihedral_burnside_macmini_20260629.py` (THM-584).
+`paley_dihedral_burnside_macmini_20260629.py` (THM-586).

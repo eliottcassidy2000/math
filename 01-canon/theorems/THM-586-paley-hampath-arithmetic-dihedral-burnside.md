@@ -1,5 +1,5 @@
 ---
-id: THM-584
+id: THM-586
 title: The arithmetic of the Paley-tournament Hamiltonian-path count -- for p prime = 3 mod 4, the free Z_p rotation gives p | H(T_p) with v_p=1, so H(T_p) = p*(odd) (a Paley refinement of Rédei); the full dihedral D_{2p} gives the Burnside identity #orbits = (H(T_p) + p*f(T_p))/(2p) in Z, where f is the palindromic count (THM-583), forcing H(T_p)/p == f (mod 2); R(p)=H*2^{p-1}/p! -> e; and the conjecture H = |Aut|*3^{(p-3)/2} is FALSE (fails at p=11, cofactor 1729=7*13*19, not 81)
 status: PROVED (Z_p free action and Burnside on D_{2p}; the equal-fix of all p reflections is conjugacy in D_p, p odd). VERIFIED exhaustively p=3,7,11 (H=3,189,95095; f=1,9,185; #orbits=1,18,4415) and H/f data computed to p=31.
 source: mac-mini-2026-06-29-S9
