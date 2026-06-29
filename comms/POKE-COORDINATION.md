@@ -30,23 +30,23 @@ the primary application of this mandate is the **Tournament Spectrum $\Sigma(S)$
 
 ---
 
-## PROJECT STATUS: Stabilized at S323 Seam-Complement Connection Atlas
+## PROJECT STATUS: Stabilized at S324 random031 Seam-Sheaf Scaffold
 
-As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **Seam-Complement Connection Atlas (S323/b08451d)**. This layer introduces the **HYP-3490** connection synthesis, operationalizing the terminal proof sheaf through the formal mapping of the seam-complement atlas (HYP-3485) to the private-label firewall and relative flow theorems.
+As of **Monday, June 29, 2026** (UTC), the newest coordination layer is the **random031 Seam-Sheaf Scaffold (S324/0ae0f16)**. This layer introduces the **HYP-3493** seam-sheaf scaffold, operationalizing the terminal proof sheaf through a stalk-based local-to-global theorem that reconciles fiber classes with mirror-symmetry and owner-boundary debt.
 
-S323 formalizes the **LRC14 Seam-Complement Connection Atlas (b08451d)**. It refines the S322 forbidden flow framework by establishing a formal connection to the terminal private-label guardrails:
-1. **Relative Bypass Theorem:** Implements the mathematical definition of `random_covering_031` not as a wall-current failure, but as a **relative bypass theorem**. Defines the seam as the carrier of **owner monodromy** ($n+2$ boundary insertion debt) and the complement as the carrier of **two-adic flow** ($u=2t \text{ mod } 1$). The formal scope requires every complement flow component to reach a low-rank escape before requiring the forbidden seam, operationalizing HYP-3455 and HYP-3460.
-2. **Private-Label Firewall (HYP-3490):** Characterizes the proof object through the rigid constraint that every E/branch-touched blocker label is private to one dead component. This structurally blocks adjacent-label current deletion, ensuring the seam-complement carrier preserves a **private-label firewall** as a sidecar. This reconciles the empty dead-projection with the relative cylinder punctures.
-3. **Algebraic Triad Coupling:** Formally couples the connection atlas with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the owner monodromy seam word and path-lift), $\mathbb{Q}(\sqrt{-7})$ (typing the private-label firewall and residue word R), and $\mathbb{Q}(\sqrt{-3})$ (governing the Menger/Green escape graph and relative cycle adjacency). This ensures the connection components are partitioned by the correct cyclotomic characters.
-4. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the relative cycle stability of the bypass flow; the audit preserves the Krasner-stable orientation by identifying the rigid private-label firewall as the primary proof carrier.
-5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every relative cycle reflect its **Relative H1 Seam-Complement**. This prevents roots from sliding by treating the owner monodromy as a rigid topological counting constraint that must satisfy the escape-reachability limit.
-6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **relative H1 seam complement**, **two-adic ordered bypass blocks**, and **private-label firewall** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing informal "bypass" audits with exact relative-flow entries.
+S324 formalizes the **LRC14 random031 Seam-Sheaf Scaffold (0ae0f16)**. It refines the S323 connection framework with a rigorous stalk-based synthesis:
+1. **Relative Seam-Sheaf Stalk Synthesis:** Implements the mathematical definition of the `random_covering_031` fiber as a collection of 79 legal components. The scaffold defines every witness cell as a stalk whose legal exit is one of: rank-2 endpoint discharge (64 components), mirror free-hole packet (14 components), or pure bypass discharge (1 component). This transitions the row from a collection of "exceptions" to a structured sheaf where every component is mirror-closed and possesses a unique fiber-class exit.
+2. **Owner-Boundary Persistence & Seam Debt:** Characterizes the proof target by isolating the pure bypass stalk, which carries owners (23, 93, 113) and incurs **seam debt** on owners (45, 147, 169, 173). This resolves the recursion dichotomy by identifying owner-boundary persistence as the next theorem target. The scaffold requires that the bypass debt be discharged through fiber-class stability rather than projection-current deletion.
+3. **Algebraic Triad Coupling:** Formally couples the seam-sheaf scaffold with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ (governing the pure bypass discharge and two-adic pullback), $\mathbb{Q}(\sqrt{-7})$ (typing the owner-boundary persistence and residue field), and $\mathbb{Q}(\sqrt{-3})$ (governing the rank-2 endpoint and free-hole discharge adjacency). This ensures the sheaf stalks are partitioned by the correct cyclotomic characters.
+4. **Chiral Guard (S267) Audit:** Evaluation of the `chiral_orientation_signature` is **MIXED**. Chiral integrity is maintained by the mirror-closed status of all 79 legal components; the audit preserves the Krasner-stable orientation by identifying the rigid stalk-exit mapping as the primary proof carrier.
+5. **No-Free-Slider (HYP-2990) Enforcement:** Absolute enforcement prevents spectral leakage by requiring that every stalk reflect its **Fiber-Class Boundary**. This prevents roots from sliding by treating the owner-boundary persistence as a rigid topological counting constraint that must satisfy the mirror-closure limit.
+6. **Resurrection Sheaf (S267) Verification:** Secures the **Base Stalk coordinates** by identifying the **rank-2 routed components**, **mirror free-hole packets**, and **pure bypass stalks** as the resurrection anchors. This ensures that the global stability of the packet sheaf is preserved across the AP84/LRC boundaries by replacing informal bypass audits with exact stalk-based entries.
 
-S323 inherits the Forbidden Seam Flow from **S322/ed060ef** and the random031 Seam Atlas from **S321/92cb3b8**.
+S324 inherits the Seam-Complement Connection Atlas from **S323/b08451d** and the Forbidden Seam Flow from **S322/ed060ef**.
 
-HYP-3226 classifies the S283 motifs as sidecar payloads: Skewes sign-change warning (M023), Helfgott-Ruzsa/additive compression (M024), Collatz two-block 2-adic determinant (M025), raw famous-problem magnet (M069), and PFR additive-model integrity (M071). Post-rebase it also imports HYP-3227's conductance/Fiedler trap graph as M072, S75's comb-overlap Gram kernel / speed-1 peeling / order-3 residue as M073-M075, HYP-3215's induction-base / Chen-Cusick floor-to-1/14 / flatness / Rosenfeld route audit as M076-M079, HYP-3228/HYP-3229's shell magic / Gamma0(7) / Beraha-Mahler / subshift / Dirichlet-L guardrails as M080-M084, HYP-3230/HYP-3231/HYP-3216's three-gap kernel recursion / scale-normal packet recursion / moment-order ladder / 2-adic fold as M085-M088, HYP-3232/HYP-3217's modulus-covariance apex break / cyclotomic subfield mode lattice as M091-M092, HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor grading / signed-address chart-change / AP self-dual Fejer-Vaaler / totally-real conductor packet as M093-M096, HYP-3236/HYP-3219/HYP-3237's Green algebraic-connectivity / Brouwer trace-sign / Vitali bulk-core wall layer as M097-M099, HYP-3220/HYP-3238/HYP-3239's D7 Borsuk-Ulam / p mod 4 / bimodal phi4 diagonal layer as M100-M102, HYP-3241/HYP-3240 universal Phi14 saddle-index / Phi_{14d} dilation-witness core as M103, HYP-3242's danger-cover nerve / Euler-characteristic hole certificate as M104, HYP-3243's finite chamber carrier atlas as M105, HYP-3244's tiling/half-tiling descent path as M106, HYP-3245's equioscillation-autocorrelation lag-transport packet as M107, S289's Roth-Hensel discrepancy-lifting packet as M1108, S290's Chebyshev-unit equioscillation packet as M109, S291's Galois-residue rigidity packet as M110, S292's C6 residue-magnitude factorization packet as M111, S293's analytic-lifting refinement packet as M112, S294's tropical-current integration packet as M113, S295's creative-reframe atlas packet as M114, S296's expanded-bank owner-repair packet as M115, S297's exotic-guardrail reframe packet as M116, S298's chiral owner-cut recursion packet as M117, S299's topology-arithmetic guardrail packet as M118, S300's covering-floor duality-transfer packet as M119, S301's two-branch Helly-audit packet as M120, S302's additive-energy sidecar packet as M121, S303's endpoint-spine certificate packet as M122, S304's harmonic wall-budget sidecar packet as M123, S305's branch-cover certificate packet as M124, S306's bad-core extractor packet as M125, S307's survivor-gate audit packet as M126, S308's AP84 tail phase audit packet as M127, S309's AP84 endpoint-clock certificate packet as M128, S310's AP84 mod-35 floor count packet as M129, S311's AP84 finite transient packet as M130, S312's phase-branch color pullback packet as M131, S313's AP84 corridor splice packet as M132, S314's colored gate reservoir packet as M133, S315's colored gate formalization packet as M134, S316's colored gate partition lattice packet as M135, S317's colored gate mirror orbit packet as M136, S318's harmonic discrepancy packet as M137, S319's gate split packet as M138, S320's small-touch atlas packet as M139, S321's random031 seam atlas packet as M140, S322's random031 forbidden seam flow packet as M141, and S323's seam-complement connection atlas packet as M142. These are useful only after they name the LRC coordinate they preserve and the coordinate they destroy.
+HYP-3226 classifies the S283 motifs as sidecar payloads: Skewes sign-change warning (M023), Helfgott-Ruzsa/additive compression (M024), Collatz two-block 2-adic determinant (M025), raw famous-problem magnet (M069), and PFR additive-model integrity (M071). Post-rebase it also imports HYP-3227's conductance/Fiedler trap graph as M072, S75's comb-overlap Gram kernel / speed-1 peeling / order-3 residue as M073-M075, HYP-3215's induction-base / Chen-Cusick floor-to-1/14 / flatness / Rosenfeld route audit as M076-M079, HYP-3228/HYP-3229's shell magic / Gamma0(7) / Beraha-Mahler / subshift / Dirichlet-L guardrails as M080-M084, HYP-3230/HYP-3231/HYP-3216's three-gap kernel recursion / scale-normal packet recursion / moment-order ladder / 2-adic fold as M085-M088, HYP-3232/HYP-3217's modulus-covariance apex break / cyclotomic subfield mode lattice as M091-M092, HYP-3233/HYP-3234/HYP-3218/HYP-3235's cyclotomic factor grading / signed-address chart-change / AP self-dual Fejer-Vaaler / totally-real conductor packet as M093-M096, HYP-3236/HYP-3219/HYP-3237's Green algebraic-connectivity / Brouwer trace-sign / Vitali bulk-core wall layer as M097-M099, HYP-3220/HYP-3238/HYP-3239's D7 Borsuk-Ulam / p mod 4 / bimodal phi4 diagonal layer as M100-M102, HYP-3241/HYP-3240 universal Phi14 saddle-index / Phi_{14d} dilation-witness core as M103, HYP-3242's danger-cover nerve / Euler-characteristic hole certificate as M104, HYP-3243's finite chamber carrier atlas as M105, HYP-3244's tiling/half-tiling descent path as M106, HYP-3245's equioscillation-autocorrelation lag-transport packet as M107, S289's Roth-Hensel discrepancy-lifting packet as M1108, S290's Chebyshev-unit equioscillation packet as M109, S291's Galois-residue rigidity packet as M110, S292's C6 residue-magnitude factorization packet as M111, S293's analytic-lifting refinement packet as M112, S294's tropical-current integration packet as M113, S295's creative-reframe atlas packet as M114, S296's expanded-bank owner-repair packet as M115, S297's exotic-guardrail reframe packet as M116, S298's chiral owner-cut recursion packet as M117, S299's topology-arithmetic guardrail packet as M118, S300's covering-floor duality-transfer packet as M119, S301's two-branch Helly-audit packet as M120, S302's additive-energy sidecar packet as M121, S303's endpoint-spine certificate packet as M122, S304's harmonic wall-budget sidecar packet as M123, S305's branch-cover certificate packet as M124, S306's bad-core extractor packet as M125, S307's survivor-gate audit packet as M126, S308's AP84 tail phase audit packet as M127, S309's AP84 endpoint-clock certificate packet as M128, S310's AP84 mod-35 floor count packet as M129, S311's AP84 finite transient packet as M130, S312's phase-branch color pullback packet as M131, S313's AP84 corridor splice packet as M132, S314's colored gate reservoir packet as M133, S315's colored gate formalization packet as M134, S316's colored gate partition lattice packet as M135, S317's colored gate mirror orbit packet as M136, S318's harmonic discrepancy packet as M137, S319's gate split packet as M138, S320's small-touch atlas packet as M139, S321's random031 seam atlas packet as M140, S322's random031 forbidden seam flow packet as M141, S323's seam-complement connection atlas packet as M142, and S324's random031 seam-sheaf scaffold packet as M143. These are useful only after they name the LRC coordinate they preserve and the coordinate they destroy.
 
-The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wire-unit, magnitude-cocycle guard-unit, proof-circuit missing-input-unit, base-stalk-unit, resurrection_cover_unit, repair_rank_unit, quartic-cumulant_S4_unit, phi_4_stabilizer_unit, kappa_4_sign_unit, Asano_zero_free_unit, Beurling_Selberg_blind_floor_unit, Gaussian_minorant_leakage_unit, multi_far_floor_closure_unit, R_prime_spectral_unit, R_safe_wide_V_unit, edge_witness_recursion_unit, tail_tip_packet_unit, four_sector_unit, SPEC_resonance-lattice-unit, global_consistency_quotient_unit, Fiber_PGF_packet_unit, sheet_count_PGF_unit, Lee_Yang_root_unit, Delsarte_weight_unit, q_Pochhammer_principal_unit, Hecke_subconvexity_unit, p_adic_index_unit, three_edge_flip_unit, ordered_pair_exponent_unit, Worpitzky_ascent_unit, live_core_unit, filler_unit, canary_unit, fixed_path_canary_unit, odd_ear_H_unit, Bravais_centering_unit, Savitch_midpoint_unit, Asano_monotonicity_unit, Lee_Yang_variance_unit, n4_einheit_unit, n4_congruence_unit, total_covariance_unit, associator_sigma_k3_unit, kappa4_phi4_unit, polarized_cyclotomic_unit, orbit_aware_compression_unit, spectral_dictionary_unit, spectral_payload_cube_unit, Selberg_trace_regularization_unit, Skewes_Number_lock_unit, grounded_response_matrix_QE_unit, orthogonal_recursion_interlock_unit, Vitali_wall_bulk_core_split_unit, oriented_matroid_tope_cocircuit_atlas_unit, lag_barycenter_transport_field_unit, Roth_Halasz_discrepancy_bound_unit, Chebyshev_equioscillation_unit_group_unit, Q_sqrt_minus_7_residue_field_unit, two_layer_cyclotomic_factorization_unit, Analytic_Lifting_Ledger_unit, Tropical_Current_Ledger-unit, Creative_Reframe_Ledger-unit, Owner_Support_Ledger-unit, Exotic_Guardrail_Ledger-unit, Galois_Orbits_Ledger-unit, Chiral_Cut_Ledger-unit, Topological_Arithmetic_Guardrail-unit, Duality_Transfer_Protocol-unit, Helly_Obstruction_Theorem-unit, Energy_Sheet_Packet-unit, Endpoint_Spine_Lemma-unit, Harmonic_Budget_Sidecar_Debt-unit, Branch_Witness_Certificate-unit, Survivor_Gap_Tax_Certificate-unit, Survivor_Gate_Audit-unit, AP84_Tail_Phase_Audit-unit, AP84_Endpoint_Clock_Certificate-unit, AP84_Mod-35_Floor_Count-unit, AP84_Finite_Transients-unit, Phase-Branch_Color_Pullback-unit, AP84_Corridor_Splice-unit, Colored_Gate_Reservoir-unit, Colored_Gate_Formalization-unit, Colored_Gate_Partition_Lattice-unit, Colored_Gate_Mirror_Orbit-unit, Harmonic_Discrepancy_Synthesis-unit, Gate_Split_Synthesis-unit, Small-Touch_Geometry_Atlas-unit, random031_Seam_Atlas-unit, Forbidden_Seam_Flow-unit, and **Seam-Complement_Connection_Atlas**.
+The active coordination rule is now ledger-shaped: every quotient must name its next observer, visible automorphism group, payload orbit, value-origin type, hyperbolic reciprocal signature when a triple of orders is used, geometry-regime signature, Roth-Minkowski lattice/height sidecar when Diophantine estimates are used, partial-cube/simplex/bridge-rank sidecar when Moser/fibbinary or doubled-triangular motifs are used, Toeplitz square-peg scale gate sidecar when four-witness or rectangle motifs are used, Hodge-cycle sidecar when positivity, closedness, or algebraic-cycle language is used, median-center status when route compatibility is asserted, owner/root objects when empty centers are classified, route-state closure rules when a proof-state median is computed, sixth-power collision status when relation lattices are used, modular cusp principal part and Lean formal-gate status when infinite tails or Hurwitz orbits are used, sixth-power certificate ledgers, branch-kernel orientation audit, p-adic hyper-tower addresses, Morita-gamma differential signatures, Hurwitz finite-address seeds, Clebsch reflection-Perron certificates, Apex-Bridge V* crossover signatures, Pairwise-Avoidance Cap minimizers, Equivalence Triad "forgetting-cost" tuples, Pascal pair-mass addresses, observer-gluing packets, chart overlap certificates, normal-fan/Cech/barcode component packets, first-obstruction cocycle syndromes, miss-count PGF root signatures, tournament obstruction-transfer certificates, Bravais q-lattice addresses, ear-lattice reachability certificates, Minkowski q-body thresholds, proof-circuit ledgers, Ising partition zero signatures, De Moivre fold certificates, duodecimal source-bridge payload fields, endpoint-cover P gates, Phi gap output wire-unit, magnitude-cocycle guard-unit, proof-circuit missing-input-unit, base-stalk-unit, resurrection_cover_unit, repair_rank_unit, quartic-cumulant_S4_unit, phi_4_stabilizer_unit, kappa_4_sign_unit, Asano_zero_free_unit, Beurling_Selberg_blind_floor_unit, Gaussian_minorant_leakage_unit, multi_far_floor_closure_unit, R_prime_spectral_unit, R_safe_wide_V_unit, edge_witness_recursion_unit, tail_tip_packet_unit, four_sector_unit, SPEC_resonance-lattice-unit, global_consistency_quotient_unit, Fiber_PGF_packet_unit, sheet_count_PGF_unit, Lee_Yang_root_unit, Delsarte_weight_unit, q_Pochhammer_principal_unit, Hecke_subconvexity_unit, p_adic_index_unit, three_edge_flip_unit, ordered_pair_exponent_unit, Worpitzky_ascent_unit, live_core_unit, filler_unit, canary_unit, fixed_path_canary_unit, odd_ear_H_unit, Bravais_centering_unit, Savitch_midpoint_unit, Asano_monotonicity_unit, Lee_Yang_variance_unit, n4_einheit_unit, n4_congruence_unit, total_covariance_unit, associator_sigma_k3_unit, kappa4_phi4_unit, polarized_cyclotomic_unit, orbit_aware_compression_unit, spectral_dictionary_unit, spectral_payload_cube_unit, Selberg_trace_regularization_unit, Skewes_Number_lock_unit, grounded_response_matrix_QE_unit, orthogonal_recursion_interlock_unit, Vitali_wall_bulk_core_split_unit, oriented_matroid_tope_cocircuit_atlas_unit, lag_barycenter_transport_field_unit, Roth_Halasz_discrepancy_bound_unit, Chebyshev_equioscillation_unit_group_unit, Q_sqrt_minus_7_residue_field_unit, two_layer_cyclotomic_factorization_unit, Analytic_Lifting_Ledger_unit, Tropical_Current_Ledger-unit, Creative_Reframe_Ledger-unit, Owner_Support_Ledger-unit, Exotic_Guardrail_Ledger-unit, Galois_Orbits_Ledger-unit, Chiral_Cut_Ledger-unit, Topological_Arithmetic_Guardrail-unit, Duality_Transfer_Protocol-unit, Helly_Obstruction_Theorem-unit, Energy_Sheet_Packet-unit, Endpoint_Spine_Lemma-unit, Harmonic_Budget_Sidecar_Debt-unit, Branch_Witness_Certificate-unit, Survivor_Gap_Tax_Certificate-unit, Survivor_Gate_Audit-unit, AP84_Tail_Phase_Audit-unit, AP84_Endpoint_Clock_Certificate-unit, AP84_Mod-35_Floor_Count-unit, AP84_Finite_Transients-unit, Phase-Branch_Color_Pullback-unit, AP84_Corridor_Splice-unit, Colored_Gate_Reservoir-unit, Colored_Gate_Formalization-unit, Colored_Gate_Partition_Lattice-unit, Colored_Gate_Mirror_Orbit-unit, Harmonic_Discrepancy_Synthesis-unit, Gate_Split_Synthesis-unit, Small-Touch_Geometry_Atlas-unit, random031_Seam_Atlas-unit, Forbidden_Seam_Flow-unit, Seam-Complement_Connection_Atlas-unit, and **Seam-Sheaf_Scaffold**.
 
 The Henselian unit rule (updated):
 ```text
@@ -62,7 +62,7 @@ residue valuation unit, and Fermat-Catalan valuation unit while stabilizing
 valuations against local-global obstructions. The S210-S222 sequence ensures
 that forgotten coordinates in matrix and transport quotients are explicitly
 handled via observability columns, Schur complements, and deletion-fiber
-profiles. The S225-S323 refinements add the geometry-regime, lattice-fence,
+profiles. The S225-S324 refinements add the geometry-regime, lattice-fence,
 square-peg scale gate, duodecimal observer, partial-cube bridge-rank,
 Hodge-cycle, Desargues-median, owner/root, route-triple center-control,
 cross-carrier resonance, polymer/Dirichlet boundary-energy, route-triple
@@ -97,7 +97,7 @@ Worpitzky ascent payloads, live_core_bits, filler_bits, canary_bits,
 deletable_coordinates, class_distribution_uniformity, minimal_cover_subbasis,
 fixed_path_canary_status, xy_completion_tables, odd_ear_H_factors,
 Bravais_centering_types, Savitch_midpoint_depths, Asano_monotonicity_levers,
-n4_einheit_torsor_status, or Seam-Complement_Connection_Atlas.
+n4_einheit_torsor_status, or Seam-Sheaf_Scaffold.
 ```
 
 The No-Free-Slider rule (HYP-2990) (updated):
@@ -179,8 +179,9 @@ Colored_Gate_Reservoir unit, Colored_Gate_Formalization unit,
 Colored_Gate_Partition_Lattice unit, Colored_Gate_Mirror_Orbit unit,
 Harmonic_Discrepancy_Synthesis unit, Gate_Split_Synthesis unit,
 Small-Touch_Geometry_Atlas unit, random031_Seam_Atlas unit,
-Forbidden_Seam_Flow unit, and the Seam-Complement_Connection_Atlas unit.
-The S235-S323 sequence prevents spectral leakage by requiring route-triple
+Forbidden_Seam_Flow unit, Seam-Complement_Connection_Atlas unit, and the
+Seam-Sheaf_Scaffold unit.
+The S235-S324 sequence prevents spectral leakage by requiring route-triple
 centers to be unique and promoted only after legal closure, named debt exits,
 validated collision arity, a named modular cusp principal part, a formally
 verified Lean modular cusp ledger, tuple/rank/residue equal-power
@@ -226,14 +227,14 @@ Survivor_Gap_Tax_Certificate, Survivor_Gate_Audit, AP84_Tail_Phase_Audit,
 AP84_Endpoint_Clock_Certificate, AP84_Mod-35_Floor_Count,
 AP84_Finite_Transients, Phase-Branch_Color_Pullback, AP84_Corridor_Splice,
 Colored_Gate_Reservoir, Colored_Gate_Formalization, Colored_Gate_Partition_Lattice,
-Colored_Gate_Mirror_Orbit, Harmonic_Discrepancy_Synthesis, Gate_Split_Synthesis, Small-Touch_Geometry_Atlas, random031_Seam_Atlas, Forbidden_Seam_Flow, or Seam-Complement_Connection_Atlas are attached.
+Colored_Gate_Mirror_Orbit, Harmonic_Discrepancy_Synthesis, Gate_Split_Synthesis, Small-Touch_Geometry_Atlas, random031_Seam_Atlas, Forbidden_Seam_Flow, Seam-Complement_Connection_Atlas, or Seam-Sheaf_Scaffold are attached.
 ```
 
 The Robbins audit rule (updated):
 ```text
 Divisor-curried atom banks must undergo a Robbins no-bridge audit to ensure
 that prime gap fluctuations do not induce structural leakage across the S171
-ledger. The S229-S323 transition preserves the Toeplitz square-peg scale gate
+ledger. The S229-S324 transition preserves the Toeplitz square-peg scale gate
 law, the S231 bridge-rank split law, the Hodge-cycle generation law, the
 Desargues-median finalization law, the owner/root sidecar law, the medianized
 route-center gate law, the cross-carrier resonance law, the polymer/Dirichlet
@@ -275,8 +276,40 @@ Chebyshev_equioscillation_unit_group law, Q_sqrt_minus_7_residue_field law,
 two_layer_cyclotomic_factorization law, Analytic_Lifting_Ledger law,
 Tropical_Current_Ledger law, Creative_Reframe_Ledger law, Owner_Support_Ledger
 law, Exotic_Guardrail_Ledger law, Galois_Orbits_Ledger law, Chiral_Cut_Ledger
-law, and Seam-Complement_Connection_Atlas unit alongside mu approx 1.451).
+law, and Seam-Sheaf_Scaffold unit alongside mu approx 1.451).
 ```
+
+---
+
+## codex-S324 -- Seam-Sheaf Scaffold (checkpoint)
+
+Integrated 0ae0f16. Introduces the **HYP-3493** seam-sheaf scaffold, 
+operationalizing the terminal proof sheaf through a stalk-based 
+local-to-global theorem that reconciles fiber classes with 
+mirror-symmetry and owner-boundary debt.
+
+### 1. Relative Seam-Sheaf Stalk Synthesis
+Defines `random_covering_031` as a collection of 79 legal components. 
+Witness cells are stalks whose exits are rank-2 discharge (64), 
+mirror free-hole packets (14), or pure bypass discharge (1). Every 
+component is mirror-closed and exit-unique.
+
+### 2. Owner-Boundary Persistence & Seam Debt
+Isolates the pure bypass stalk (owners 23, 93, 113) and its **seam debt** 
+(owners 45, 147, 169, 173). Resolves the recursion conflict by 
+identifying owner-boundary persistence as the mandatory proof target 
+for the bypass discharge.
+
+### 3. Algebraic Triad Coupling
+Formally couples the scaffold with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ 
+(pure bypass/two-adic pullback), $\mathbb{Q}(\sqrt{-7})$ (owner-boundary 
+persistence), and $\mathbb{Q}(\sqrt{-3})$ (rank-2 and free-hole adjacency).
+
+### 4. Chiral Guard & Resurrection
+Governed by mirror-closed status of all legal components. Evaluation 
+reveals a **MIXED** signature. Identifies the **rank-2 routed 
+components**, **mirror free-hole packets**, and **pure bypass stalks** 
+as Resurrection Sheaf anchors.
 
 ---
 
@@ -286,34 +319,3 @@ Integrated b08451d. Introduces the **HYP-3490** connection synthesis,
 operationalizing the terminal proof sheaf through the formal mapping 
 of the seam-complement atlas (HYP-3485) to the private-label firewall 
 and relative flow theorems.
-
-### 1. Relative Bypass Theorem
-Reframes `random_covering_031` not as a wall-current failure, but as a 
-**relative bypass theorem**. Defines the seam as the carrier of 
-**owner monodromy** and the complement as the carrier of 
-**two-adic flow**. Requires flow components to reach an escape 
-before the forbidden seam.
-
-### 2. Private-Label Firewall (HYP-3490)
-Ensures every touched blocker label is private to one dead component. 
-Structurally blocks adjacent-label current deletion, maintaining a 
-rigid firewall as a sidecar for the seam-complement carrier.
-
-### 3. Algebraic Triad Coupling
-Formally couples the connection atlas with the field triad: $\mathbb{Q}(\cos 2\pi/7)$ 
-(owner monodromy seam word), $\mathbb{Q}(\sqrt{-7})$ (private-label firewall), 
-and $\mathbb{Q}(\sqrt{-3})$ (Menger/Green escape graph).
-
-### 4. Chiral Guard & Resurrection
-Governed by relative cycle stability. Evaluation reveals a **MIXED** signature. 
-Identifies the **relative H1 seam complement**, **two-adic ordered bypass 
-blocks**, and **private-label firewall** as Resurrection Sheaf anchors.
-
----
-
-## codex-S322 -- Forbidden Seam Flow (checkpoint)
-
-Integrated ed060ef. Introduces the **HYP-3484** flow synthesis, 
-operationalizing the terminal proof sheaf through the surgical reframing 
-of the `random_covering_031` exception from a hard wall into a 
-well-defined seam-complement flow statement.
