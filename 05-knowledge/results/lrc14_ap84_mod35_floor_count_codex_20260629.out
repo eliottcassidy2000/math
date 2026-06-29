@@ -1,0 +1,100 @@
+HYP-3456 AP84 MOD-35 FLOOR-COUNT CLOSURE
+========================================================================
+status=EVIDENCE / floor-count derivation of AP-tail escape clock; not an LRC14 proof
+source=HYP-3431 fixed corridors + HYP-3454 endpoint clock + HYP-3452 validation
+
+A. Corridor floor-count formula
+  fixed_corridors=[8/49,6/35] and [29/35,41/49]
+  high_gap=G_k(m)=[(14k+1)/(588m),(14k+13)/(588m)]
+  C1 intersection inequalities:
+    (14k+13)/(588m) > 8/49
+    (14k+1)/(588m)  < 6/35
+  count_per_corridor N(m)=floor((504m-6)/70)-floor((96m-13)/14)
+  escapes(m)=2*N(m)
+
+B. Validation against component audit
+  checked_m=1..70
+  mirror_failures=[]
+  formula_failures=[]
+  component_audit_failures=[]
+  samples: m | C1 | C0 | N(m) | predicted_escapes | audited_escapes
+    1 |  2 |  2 |    2 |                 4 |              4
+    2 |  2 |  2 |    2 |                 4 |              4
+    3 |  2 |  2 |    2 |                 4 |              4
+    4 |  2 |  2 |    2 |                 4 |              4
+    5 |  2 |  2 |    2 |                 4 |              4
+    6 |  3 |  3 |    3 |                 6 |              6
+    7 |  3 |  3 |    3 |                 6 |              6
+    8 |  4 |  4 |    4 |                 8 |              8
+   12 |  5 |  5 |    5 |                10 |             10
+   21 |  8 |  8 |    8 |                16 |             16
+   35 | 12 | 12 |   12 |                24 |             24
+   36 | 14 | 14 |   14 |                28 |             28
+   70 | 24 | 24 |   24 |                48 |             48
+
+C. Period-35 correction
+  N(m)=floor(12m/35)+d[(m-1) mod 35]
+  correction_vector=[2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 1, 0]
+  residue_failures=[]
+  closed_shift: N(m+35)-N(m)=12, hence escapes(m+35)-escapes(m)=24
+  shift_failures_m_1_to_210=[]
+  residue table: r | N(r) | floor(12r/35) | d_r | escapes(r)
+   1 |    2 |             0 |   2 |          4
+   2 |    2 |             0 |   2 |          4
+   3 |    2 |             1 |   1 |          4
+   4 |    2 |             1 |   1 |          4
+   5 |    2 |             1 |   1 |          4
+   6 |    3 |             2 |   1 |          6
+   7 |    3 |             2 |   1 |          6
+   8 |    4 |             2 |   2 |          8
+   9 |    4 |             3 |   1 |          8
+  10 |    4 |             3 |   1 |          8
+  11 |    5 |             3 |   2 |         10
+  12 |    5 |             4 |   1 |         10
+  13 |    5 |             4 |   1 |         10
+  14 |    5 |             4 |   1 |         10
+  15 |    6 |             5 |   1 |         12
+  16 |    7 |             5 |   2 |         14
+  17 |    7 |             5 |   2 |         14
+  18 |    7 |             6 |   1 |         14
+  19 |    7 |             6 |   1 |         14
+  20 |    7 |             6 |   1 |         14
+  21 |    8 |             7 |   1 |         16
+  22 |    9 |             7 |   2 |         18
+  23 |    9 |             7 |   2 |         18
+  24 |    9 |             8 |   1 |         18
+  25 |    9 |             8 |   1 |         18
+  26 |   10 |             8 |   2 |         20
+  27 |   10 |             9 |   1 |         20
+  28 |   10 |             9 |   1 |         20
+  29 |   11 |             9 |   2 |         22
+  30 |   11 |            10 |   1 |         22
+  31 |   12 |            10 |   2 |         24
+  32 |   12 |            10 |   2 |         24
+  33 |   12 |            11 |   1 |         24
+  34 |   12 |            11 |   1 |         24
+  35 |   12 |            12 |   0 |         24
+
+D. Proof pull
+  HYP-3454's sampled mod-35 clock is now a floor-count formula over the
+  two HYP-3431 low corridors.  The remaining AP-tail bridge is reduced to
+  proving that these fixed corridors are the complete low branch-union
+  carrier for the canonical family, plus the finite m=1..4 mixed cases.
+  The component audit through m=70 validates that the floor count matches
+  HYP-3452's escape components.
+
+E. Tournament Analysis
+  vertices=floor-count proof obligations, not runners or raw components
+  pairwise_observable=fixed-corridor retention + high-gap count exactness + residue payload + audit validation
+  switch=higher retained proof payload; ties by floor-count route
+  score_hist={13: 1, 28: 1, 47: 1, 52: 1, 55: 1, 57: 1, 59: 1}
+  directed_3cycles=0
+  hamiltonian_path=gap_intersection_floor_count -> fixed_low_corridor_identity -> period35_residue_vector -> mirror_two_corridor_doubling -> component_audit_validation -> raw_beatty_fit -> raw_dead_fraction_peak
+
+F. Assumption Challenge
+  Considered vertices: runners, m-values, residues mod 35, high-grid gaps,
+  fixed low corridor sections, endpoint walls, component-cover graph nodes,
+  and proof obligations.  The chosen quotient preserves the exact AP-tail
+  escape count and endpoint-wall clock, but destroys non-AP wall geometry
+  and dead-cover adjacency.  It is an AP-tail floor-count lemma, not a
+  global primitive-row theorem.

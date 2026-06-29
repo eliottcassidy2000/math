@@ -96,6 +96,22 @@ obligations, and proof-carrier interfaces.
   HYP-3453 gate-transversal candidates, HYP-3454 endpoint-clock handoffs, and
   HYP-3455 finite gate-gluing clauses the vertices.  Incident tax is a
   router until co-owner multiplicity is reconstructed.
+- Need to invert branch-cover survival into a component-level finite
+  obstruction:
+  use LTT-310 after LTT-299/LTT-298/LTT-297/LTT-296 and make `E_safe`
+  components, paired odd-bad covers, endpoint ranks, even endpoint gates, and
+  forbidden full-saturation obligations the vertices.
+- Need graph proof routing for the component-cover obstruction:
+  use LTT-311 after LTT-310 and make branch-coloured blocker projections,
+  Menger cuts, Green-current certificates, blocker entropy, and algebraic
+  connectivity the vertices.  AP-with-`84m` tails are the danger base cases;
+  high cover-rank random rows are negative controls unless escape count is low.
+- Need to derive the AP84 mod-`35` escape clock instead of treating it as a
+  sampled Beatty pattern:
+  use LTT-316 after LTT-314 and make fixed low corridors, moving high-grid
+  gaps, integer intersection inequalities, mirror doubling, residue vectors,
+  and component-audit validation the vertices.  The quotient is AP-tail local:
+  it keeps the escape count but forgets non-AP wall geometry.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9197,10 +9213,10 @@ quotient_legality_status
   Hamiltonian path
   `m5_rank_one_endpoint_phase -> H3433_tail_address_certificate -> connected_dead_projection_family -> mod35_beatty_escape_clock -> m3_dead_pair_rank_drop -> dead_fraction_peak_scalar -> raw_component_count_slope`.
 - **Next hook:** prove finite transients `m=1..4`, prove the rank-one
-  `E:84m/E:84m` endpoint interval for every `m>=5`, and derive the period-`35`
-  Beatty escape clock from low-corridor floor counts before using Menger,
-  Green-current, or conductance sidecars.
-- **Pointers:** HYP-3452, HYP-3451, HYP-3450, HYP-3436, HYP-3435, HYP-3434,
+  `E:84m/E:84m` endpoint interval for every `m>=5`, and use HYP-3456's
+  low-corridor floor count for the period-`35` Beatty escape clock before
+  using Menger, Green-current, or conductance sidecars.
+- **Pointers:** HYP-3456, HYP-3452, HYP-3451, HYP-3450, HYP-3436, HYP-3435, HYP-3434,
   HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422,
   HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-412, LTT-312, T1412,
   OPEN-Q-108.
@@ -9256,7 +9272,8 @@ quotient_legality_status
   lies inside `[8/49,6/35]`, has length `1/(49m)`, and is the rank-one
   `L[E:84m] R[E:84m]` component-cover escape.  Transients `m=1..4` are finite
   mixed `E/B1` cases, and the escape count has a checked period-`35` clock
-  with shift `+24` under `m -> m+35`.
+  with shift `+24` under `m -> m+35`; HYP-3456 derives that clock as a
+  fixed-corridor floor count.
 - **Preserves:** endpoint labels, low-corridor containment margins, moving
   even-wall gap address, branch-union escape predicate, and residue-count
   sidecar.
@@ -9271,10 +9288,9 @@ quotient_legality_status
   `{15:1,45:1,50:2,55:1,56:1,58:1}`, no directed `3`-cycles, and Hamiltonian
   path
   `closed_form_endpoint_interval -> low_corridor_containment_inequalities -> moving_E84m_gap_certificate -> finite_transients_m1_to_m4 -> mod35_escape_boundary_clock -> component_cover_reaudit -> raw_dead_fraction_peak`.
-- **Next hook:** prove the mod-`35` floor-count lemma for alive component
-  boundaries, then splice the endpoint-clock clause into the HYP-3439 rank-`5`
-  AP-tail descent.
-- **Pointers:** HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438,
+- **Next hook:** splice the HYP-3454 endpoint-clock clause and HYP-3456
+  boundary-count clause into the HYP-3439 rank-`5` AP-tail descent.
+- **Pointers:** HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438,
   HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429,
   HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963,
   THM-523, LTI-414, LTT-314, T1414, OPEN-Q-108.
@@ -9315,3 +9331,43 @@ quotient_legality_status
   HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427,
   HYP-3425, HYP-3422, HYP-3418, HYP-3415, THM-523, LTI-415, LTT-315, T1415,
   OPEN-Q-108.
+
+## LTT-316: AP84 Mod-35 Floor-Count Tournament
+
+- **Move:** Treat the AP-tail escape clock as a floor-count tournament over
+  proof obligations.  Vertices are the HYP-3431 fixed low-corridor identity,
+  high-gap intersection floor count, period-`35` residue vector, mirror
+  two-corridor doubling, HYP-3452 component-audit validation, raw Beatty fit,
+  and raw dead-fraction scalar.
+- **LRC use:** HYP-3456 derives the HYP-3454 sampled clock.  For
+  `C1=[8/49,6/35]`, the moving high safe gaps
+  `G_k(m)=[(14k+1)/(588m),(14k+13)/(588m)]` intersect the corridor exactly
+  when
+  `N(m)=floor((504m-6)/70)-floor((96m-13)/14)` counts the admissible `k`.
+  The mirror corridor `C0=[29/35,41/49]` gives the same count, so
+  `escapes(m)=2*N(m)`.  Validation against HYP-3452 through `m=70` has no
+  mirror, formula, or component-audit failures, and the closed shift is
+  `escapes(m+35)-escapes(m)=24`.
+- **Preserves:** fixed corridor endpoints, moving high-grid gap addresses,
+  exact AP-tail escape count, mirror symmetry, period residue payload, and
+  component-audit compatibility.
+- **Forgets / guardrail:** non-AP wall geometry, dead-cover adjacency, and the
+  global primitive-row obstruction graph are discarded.  Use this only as the
+  AP84 tail floor-count lemma feeding HYP-3439/HYP-3454.
+- **Pairwise observable:** fixed-corridor retention, high-gap count exactness,
+  residue payload, mirror legality, component-audit validation, and scalar
+  firewall.
+- **Switch/gauge:** higher retained proof payload first; ties use the
+  floor-count route.
+- **Fingerprint:** `7` vertices, score histogram
+  `{13:1,28:1,47:1,52:1,55:1,57:1,59:1}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `gap_intersection_floor_count -> fixed_low_corridor_identity -> period35_residue_vector -> mirror_two_corridor_doubling -> component_audit_validation -> raw_beatty_fit -> raw_dead_fraction_peak`.
+- **Next hook:** import or prove the HYP-3431 fixed-corridor identity as the
+  complete low branch-union carrier for the canonical AP-tail family, then
+  dispatch the finite mixed transients `m=1..4` and splice the result into the
+  HYP-3439 rank-`5` descent.
+- **Pointers:** HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450,
+  HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433,
+  HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
+  HYP-3129, HYP-2963, THM-523, LTI-416, LTT-316, T1416, OPEN-Q-108.

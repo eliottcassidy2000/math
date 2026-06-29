@@ -20,10 +20,9 @@ eventual endpoint gate has a closed-form clock.
 
 The remaining work is now better separated.  The four transients `m=1..4`
 are finite mixed `E/B1` cases.  The infinite endpoint tail is a closed-form
-wall inequality.  The only still-experimental infinite ingredient is the
-period-`35` escape count; HYP-3454 reduces it to one correction vector and a
-period shift by `24`, but the actual component-boundary count still needs a
-floor proof.
+wall inequality.  HYP-3456 now removes the still-experimental infinite
+ingredient by deriving the period-`35` escape count from HYP-3431 fixed low
+corridors and the moving high-grid gaps.
 
 For the LRC14 proof route, this should feed HYP-3439 exactly where its AP-tail
 rank-`5` descent was vague.  Instead of saying "use HYP-3452 for the tail",
@@ -32,7 +31,7 @@ the bridge can require:
 ```text
 finite m=1..4 cases
 closed-form endpoint interval for m>=5
-mod-35 boundary count lemma
+HYP-3456 mod-35 boundary count lemma
 ```
 
 The challenged assumption was that the AP-tail should be organized by raw

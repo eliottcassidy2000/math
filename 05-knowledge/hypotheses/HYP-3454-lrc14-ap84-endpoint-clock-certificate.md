@@ -10,6 +10,7 @@ script: 04-computation/lrc14_ap84_endpoint_clock_certificate_codex_20260629.py
 result: 05-knowledge/results/lrc14_ap84_endpoint_clock_certificate_codex_20260629.out
 reflection: 07-reflections/lrc14-ap84-endpoint-clock-certificate-codex-20260629.md
 related:
+  - HYP-3456
   - HYP-3453
   - HYP-3452
   - HYP-3451
@@ -64,6 +65,8 @@ component-cover escape and priced against the HYP-3431 low corridor.
 Incoming HYP-3453 supplies the bank-level gate-escape transversal companion:
 when a dead-cover obstruction exists, it should route through a low-rank
 survivor gate.  HYP-3454 is the AP-tail endpoint-clock clause for that route.
+HYP-3456 now supplies the floor-count derivation of the residue boundary
+clock that HYP-3454 left as a sampled sidecar.
 
 ## Exact Readout
 
@@ -138,9 +141,8 @@ The formula itself has the symbolic shift
 floor(12*(m+35)/35)=floor(12m/35)+12,
 ```
 
-so predicted escapes shift by `24`.  The remaining all-`m` proof is to derive
-this residue clock as the actual component-boundary count, not merely as a
-checked formula.
+so predicted escapes shift by `24`.  HYP-3456 derives this residue clock as
+the actual high-gap floor count over the HYP-3431 fixed low corridors.
 
 ## Proof Pull
 
@@ -152,14 +154,16 @@ HYP-3454 makes the descent sharper:
 1. Prove the four mixed transients m=1..4 directly.
 2. Prove the closed-form endpoint interval I_m for every m>=5 by low-corridor
    containment and moving E:84m gap inequalities.
-3. Prove the period-35 escape clock by a finite floor-count over the remaining
-   component boundaries.
+3. Use HYP-3456's period-35 floor count for the remaining component
+   boundaries.
 ```
 
 This is still not a proof of LRC14.  It is a smaller bridge lemma for the
 current AP-tail/rescue-core corridor.  Raw dead fraction remains a scalar
 warning only: HYP-3452 already showed that its checked maximum is a residue
 artifact at `m=35`, while the proof clock starts at the endpoint phase `m=5`.
+After HYP-3456, the remaining AP-tail bookkeeping is the HYP-3431 fixed
+corridor carrier and the finite mixed transients.
 
 ## Tournament Analysis
 

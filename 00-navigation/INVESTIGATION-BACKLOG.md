@@ -15,6 +15,37 @@
 
 ---
 
+## Lead codex-2026-06-29: AP84 mod-35 floor-count closure
+
+**Status:** EVIDENCE / floor-count derivation of AP-tail escape clock; not
+proof (HYP-3456/T1416/LTI-416/LTT-316), closing the sampled clock left by
+HYP-3454 and validating against HYP-3452.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3456-lrc14-ap84-mod35-floor-count.md`,
+script
+`04-computation/lrc14_ap84_mod35_floor_count_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_ap84_mod35_floor_count_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-ap84-mod35-floor-count-codex-20260629.md`.
+
+Readout: HYP-3431 gives fixed low corridors `C1=[8/49,6/35]` and
+`C0=[29/35,41/49]`.  The moving high gaps
+`G_k(m)=[(14k+1)/(588m),(14k+13)/(588m)]` meet `C1` in
+`N(m)=floor((504m-6)/70)-floor((96m-13)/14)` positions, and `C0` mirrors the
+same count, so `escapes(m)=2*N(m)`.  Against the HYP-3452 component audit
+through `m=70`, `mirror_failures=[]`, `formula_failures=[]`, and
+`component_audit_failures=[]`.  The period correction vector matches HYP-3454,
+with closed shift `N(m+35)-N(m)=12`, hence
+`escapes(m+35)-escapes(m)=24`.
+
+Next: finish the AP-tail bridge by importing or proving the HYP-3431
+fixed-corridor identity as the complete low branch-union carrier, dispatch
+finite mixed cases `m=1..4`, and splice HYP-3454/HYP-3456 into the HYP-3439
+rank-`5` descent before returning to the HYP-3453/HYP-3451 gate-conductance
+route.
+
 ## Lead codex-2026-06-29: HYP-3453 gate-escape transversal
 
 Prove the gate-transversal implication exposed by
@@ -66,10 +97,10 @@ low corridor `[8/49,6/35]`, has length `1/(49m)`, and is the rank-one
 `1/41160` and `1/2940`.  The transients `m=1..4` are finite mixed
 `E:84m/B1:5` cases.
 
-Next: prove the mod-`35` component-boundary clock as an all-`m` floor-count
-lemma.  The checked law has no failures and shifts by `+24` escapes under
-`m -> m+35`; once proved, it supplies the AP-tail clause needed by the
-HYP-3439 bridge.
+Next: use HYP-3456's floor-count derivation of the mod-`35`
+component-boundary clock, then splice the HYP-3454 endpoint interval and
+HYP-3456 count into the HYP-3439 bridge.  The remaining AP-tail work is the
+fixed-corridor carrier proof/import and the finite `m=1..4` mixed cases.
 
 ## Lead codex-2026-06-29: HYP-3441 incident tax-core residue router
 

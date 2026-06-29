@@ -1,3 +1,32 @@
+## codex-2026-06-29 -- HYP-3456 AP84 mod-35 floor-count closure
+
+Continued the HYP-3454 endpoint-clock certificate by deriving the sampled
+period-`35` escape clock from the HYP-3431 fixed low corridors.  Added
+HYP-3456/T1416/LTI-416/LTT-316 plus script/result/reflection:
+
+```text
+04-computation/lrc14_ap84_mod35_floor_count_codex_20260629.py
+05-knowledge/results/lrc14_ap84_mod35_floor_count_codex_20260629.out
+05-knowledge/hypotheses/HYP-3456-lrc14-ap84-mod35-floor-count.md
+07-reflections/lrc14-ap84-mod35-floor-count-codex-20260629.md
+```
+
+Exact formula for `{1,2,...,11,13,84m}`: HYP-3431 gives low corridors
+`C1=[8/49,6/35]` and `C0=[29/35,41/49]`; high safe gaps are
+`G_k(m)=[(14k+1)/(588m),(14k+13)/(588m)]`.  The number meeting `C1` is
+`N(m)=floor((504m-6)/70)-floor((96m-13)/14)`, and the mirror corridor doubles
+it, so `escapes(m)=2*N(m)`.
+
+Validation against HYP-3452 through `m=70`: `mirror_failures=[]`,
+`formula_failures=[]`, and `component_audit_failures=[]`.  The correction
+vector matches HYP-3454, and the closed shift is
+`N(m+35)-N(m)=12`, hence `escapes(m+35)-escapes(m)=24`.
+
+The AP-tail bridge is now reduced to importing/proving the HYP-3431 fixed
+corridor identity as the complete low branch-union carrier, dispatching the
+finite mixed transients `m=1..4`, and splicing HYP-3454/HYP-3456 into the
+HYP-3439 rank-`5` descent.
+
 ## codex-2026-06-29 -- HYP-3454 AP84 endpoint-clock certificate
 
 Continued the AP-tail bridge after HYP-3439/HYP-3452 by adding
@@ -20,8 +49,9 @@ low corridor `[8/49,6/35]`, has length `1/(49m)`, and carries rank-one labels
 The escape count is reduced to a period-`35` boundary clock:
 `escapes(m)=2*(floor(12m/35)+d[(m-1) mod 35])`, with no checked failures and
 no checked period-shift failures; the formula shifts by `+24` under
-`m -> m+35`.  Next proof hook: prove that clock as a floor-count lemma, then
-splice it into the HYP-3439 rank-`5` AP-tail descent.
+`m -> m+35`.  HYP-3456 now derives that clock as a floor-count lemma, so the
+next proof hook is to splice HYP-3454/HYP-3456 into the HYP-3439 rank-`5`
+AP-tail descent.
 
 Rebase integration note: incoming HYP-3453 is the broader gate-escape
 transversal router.  HYP-3454 should be used as its AP-tail endpoint-clock
