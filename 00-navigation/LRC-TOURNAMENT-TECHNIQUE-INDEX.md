@@ -145,6 +145,12 @@ obligations, and proof-carrier interfaces.
   random031 gluing clauses, typed gate words, and scalar shadows the vertices.
   Raw gate counts and dead fractions are telemetry unless the dead-cover
   blocker projection is retained.
+- Need to formalize the colored gate route without hiding the missing
+  geometry:
+  use LTT-333 after LTT-331 and make Lean producer obligations, terminal
+  packets, count ledgers, and global coverage fields the vertices.  Runners,
+  raw colors, and raw gates are only shadows unless they produce
+  `Mreach >= 1/14`.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9731,3 +9737,35 @@ quotient_legality_status
   HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438,
   HYP-3437, HYP-3436, HYP-3417, HYP-3129, THM-523, LTI-432, LTT-332, T1432,
   OPEN-Q-108.
+
+## LTT-333: Colored Gate Formalization Tournament
+
+- **Move:** Promote the HYP-3471 colored gate-reservoir route into a Lean
+  proof-obligation tournament.  Vertices are formal producers and terminal
+  packets, not runners, arcs, residues, or raw gate counts.
+- **LRC use:** HYP-3473 defines `DeadCoverEBranchSoundness`,
+  `ColoredGateTerminalPacket`, and `ColoredGateGlobalCoverage`, then proves the
+  conditional assembly `ColoredGateGlobalCoverage -> LRC14Statement`.  This
+  gives the colored route a precise formal target without asserting the finite
+  geometry.
+- **Preserves:** endpoint kind, typed endpoint residue, branch mask,
+  adjacency, cover deltas, exact count ledger, terminal exit type, and the
+  final Mreach floor field.
+- **Forgets / guardrail:** the Lean interface abstracts away row enumeration,
+  interval geometry, owner multiplicities, and global coverage.  Those are not
+  silently assumed; they are the producer obligations to instantiate.
+- **Pairwise observable:** retained theorem predicate, terminal-route
+  availability, formal producibility, scalar-loss penalty, and whether the
+  carrier can yield `Mreach >= 1/14`.
+- **Switch/gauge:** a carrier wins if it retains a stronger formal proof field
+  closer to `LRC14Statement`; ties follow the colored-gate route order.
+- **Fingerprint:** Lean records `8` carriers with score ledger
+  `{7:1,31:1,42:1,54:1,58:1,61:1,66:2}` and proves carrier count, maximality
+  of the dead-positive E/branch target, minimality of raw color count, and the
+  full-word/top-target tie.
+- **Next hook:** instantiate `DeadCoverEBranchSoundness` from exact
+  HYP-3438/HYP-3453 geometry, then fill AP84/random/conductance/owner-current/
+  two-adic/SPEC terminal packets before proving `ColoredGateGlobalCoverage`.
+- **Pointers:** HYP-3473, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460,
+  HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-3436,
+  THM-523, LTI-433, LTT-333, T1433, OPEN-Q-108.

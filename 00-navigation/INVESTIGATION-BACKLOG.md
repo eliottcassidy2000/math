@@ -42,6 +42,34 @@ balance, and AP84/non-AP exceptions.  Tournament vertices should be proof
 carriers and obligations, not runners: projection cut, separating current,
 E/branch implication, AP84 closed packet, random031 seven-owner gluing clause,
 typed gate word, raw gate count, and raw dead fraction.
+## Lead codex-2026-06-29: colored gate formalization interface
+
+**Status:** FORMALIZATION / Lean interface and conditional assembly; not proof
+(HYP-3473/T1433/LTI-433/LTT-333), turning HYP-3471's colored gate-reservoir
+theorem target into a sorry-free formal packet.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3473-lrc14-colored-gate-formalization.md`,
+Lean module
+`04-computation/lean/TournamentH7/TournamentH7/LRCColoredGateFormalization.lean`,
+result
+`05-knowledge/results/lrc14_colored_gate_formalization_lean_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-colored-gate-formalization-codex-20260629.md`.
+
+Readout: the Lean interface defines colored gate endpoint kinds, typed
+endpoint residues, low-rank E/branch gates, `DeadCoverEBranchSoundness`, exact
+HYP-3471 count ledger, terminal exits, `ColoredGateGlobalCoverage`, and proves
+the conditional assembly `ColoredGateGlobalCoverage -> LRC14Statement`.  The
+carrier ledger uses proof obligations and terminal packets as vertices rather
+than runners, arcs, residues, or raw gate counts.
+
+Next: instantiate `DeadCoverEBranchSoundness` for the HYP-3438/HYP-3453 exact
+gate bank.  The strongest route remains a HYP-3451 current/cut proof: a dead
+component with no low-rank E/branch leak should force impossible branch-current
+divergence or a Menger cut with typed gate-boundary terminals.  Then fill the
+legal terminal packets through HYP-3462, HYP-3470, HYP-3461, HYP-3460,
+HYP-3459, HYP-3458, HYP-3455, HYP-3451, two-adic descent, or signed SPEC.
 
 ## Lead codex-2026-06-29: AP84 coloring-recursion bridge
 

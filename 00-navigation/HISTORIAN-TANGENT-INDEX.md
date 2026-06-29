@@ -13,6 +13,13 @@ of 2026-05-30.
 
 Useful synthetic maps added later:
 
+- `07-reflections/lrc14-colored-gate-formalization-codex-20260629.md`:
+  HYP-3473/T1433 turns HYP-3471's colored gate-reservoir route into a Lean
+  proof-obligation interface.  It is useful as a map of what the color route
+  still owes: `DeadCoverEBranchSoundness` for the finite E/branch gate theorem,
+  terminal packets carrying `Mreach >= 1/14`, and `ColoredGateGlobalCoverage`
+  for the global LRC14 handoff.  The creative guardrail is that proof
+  obligations, not runners or raw colors, are the tournament vertices.
 - `07-reflections/lrc14-ap84-color-grid-bridge-codex-20260629.md`:
   HYP-3470/T1430 returns to the old phase-color CRT reservoir for the
   canonical AP84 tail, as the exact placement sidecar under HYP-3459's AP84

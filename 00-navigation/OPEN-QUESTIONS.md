@@ -1,5 +1,35 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3473 colored gate formalization addendum:**
+HYP-3473 turns HYP-3471's colored gate-reservoir route into a Lean interface,
+not a proof.  The module `TournamentH7.LRCColoredGateFormalization` defines
+the exact missing producers:
+
+```text
+DeadCoverEBranchSoundness Row gates hasDeadComponent
+ColoredGateGlobalCoverage
+```
+
+The first should prove the finite theorem target
+
+```text
+dead_components(row)>0 => rank<=2 E/branch survivor gate,
+```
+
+and the second should give every LRC14 speed row a terminal packet carrying
+`Mreach >= 1/14`.  Once `ColoredGateGlobalCoverage` is supplied, Lean already
+proves `LRC14Statement` by the existing Mreach skeleton.
+
+Open proof task: instantiate the finite producer from exact HYP-3438/HYP-3453
+geometry, preferably by a HYP-3451 current/cut or Menger obstruction proof, and
+then fill terminal exits for AP84 corridor splice, AP84 color-grid placement,
+random031 gluing, component conductance, owner-current, two-adic descent, and
+signed-SPEC/Rprime routes.  The formalization makes raw color counts and raw
+gate counts unusable as terminal proof objects unless they produce one of
+these packets. -> HYP-3473, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460,
+HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-3436,
+THM-523, LTI-433, LTT-333, T1433, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3458 AP84 coloring-recursion addendum:**
 HYP-3458 reconnects the AP84 endpoint-clock work with HYP-2247/HYP-2243
 coloring recursion.  For

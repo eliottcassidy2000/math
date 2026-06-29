@@ -23,6 +23,34 @@ blocker labels, remove those labels from the projection, and measure whether
 the gate is a projection cut, a separating boundary current, or only a local
 gate touch.  The run should report current vectors, row exceptions, AP84 versus
 non-AP split, and a Tournament Analysis over proof carriers rather than runners.
+## codex-2026-06-29 -- HYP-3473 colored gate formalization interface
+
+Prompt: another formalization session.  Continued from HYP-3471's colored
+gate-reservoir audit and added a sorry-free Lean interface for the proof
+target:
+
+```text
+04-computation/lean/TournamentH7/TournamentH7/LRCColoredGateFormalization.lean
+05-knowledge/results/lrc14_colored_gate_formalization_lean_codex_20260629.out
+05-knowledge/hypotheses/HYP-3473-lrc14-colored-gate-formalization.md
+07-reflections/lrc14-colored-gate-formalization-codex-20260629.md
+```
+
+The module defines endpoint kinds, typed mod-`14` residues, colored survivor
+gates, low-rank E/branch predicates, the finite producer obligation
+`DeadCoverEBranchSoundness`, the exact HYP-3471 count ledger, legal terminal
+exits, and the global producer `ColoredGateGlobalCoverage`.  It proves the
+basic same/cross-branch separation, rank projection, HYP-3471 count equalities,
+payload-retention check, carrier count/score facts, and the conditional theorem
+`ColoredGateGlobalCoverage -> LRC14Statement`.
+
+Verification: `lake build TournamentH7.LRCColoredGateFormalization` passed.
+The stored output includes `#print axioms` hooks; the count and packet-interface
+lemmas are sorry-free, while the top-level conditional theorem uses the
+existing `LRCFourteenSkeleton` foundations.  Next pull: instantiate
+`DeadCoverEBranchSoundness` from exact component/gate geometry, then fill AP84,
+random031, conductance, owner-current, two-adic, and signed-SPEC terminal
+packets before applying the global coverage theorem.
 
 ## codex-2026-06-29 -- HYP-3458 AP84 coloring-recursion bridge
 
