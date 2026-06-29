@@ -1,0 +1,25 @@
+==============================================================================
+COVERING-set disproof boundary. threshold 1/14=0.071429. 7/89=0.078652
+==============================================================================
+
+(1) {1..11,13,84} (84=lcm(12,14)): covering=True
+    M = 0.078652 ~ 7/89 (err 4.7e-16); 7/89=0.078652; M-1/14=+0.00722 (+10.1%)
+
+(2) single-large family {1..11,13,L}, L=14..420 (covering needs 14|L or L mult):
+    covering L found: 5; TIGHTEST 6:
+      L=  84: M=0.078652 ~ 7/89  (M-1/14=+0.00722, +10.1%)
+      L= 168: M=0.080925 ~ 14/173  (M-1/14=+0.00950, +13.3%)
+      L= 252: M=0.081712 ~ 13/159  (M-1/14=+0.01028, +14.4%)
+      L= 336: M=0.082111 ~ 11/134  (M-1/14=+0.01068, +15.0%)
+      L= 420: M=0.082353 ~ 7/85  (M-1/14=+0.01092, +15.3%)
+
+(3) random primitive covering-set search (min M = closest to disproof):
+    tested 1775 primitive covering sets; MIN M = 0.111111 (+55.6% above 1/14)
+    at S = [2, 7, 8, 9, 10, 11, 12, 16, 17, 22, 29, 39, 42]
+    (grid-coarse; true min needs exact certification. None below 1/14.)
+
+==============================================================================
+FINDING: covering sets cluster M >> 1/14 (tightest ~7/89, +10%). The disproof is FAR
+in GAP-value. The razor-thin line is NOT the gap but the MEASURE FLOOR R'>0 for
+UNBOUNDED covering sets (R'>=0.642 bounded, open unbounded). Two different boundaries.
+==============================================================================

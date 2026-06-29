@@ -1,0 +1,35 @@
+==============================================================================
+LRC(14): threshold 1/14 = 0.071429. DISPROOF needs M(S) < 1/14.
+==============================================================================
+
+(1) EXTREMAL S={1,...,13}: M = 0.071429, argmax t* = 0.071429 (= 1/14 = 0.071429)
+    M - 1/14 = +0.000000e+00  => TIGHT (equality). LRC holds at EXACTLY 1/14.
+    lonely points (min dist >= 1/14) at a/14: [('1/14', 0.071429, [1, 13]), ('3/14', 0.071429, [5, 9]), ('5/14', 0.071429, [3, 11]), ('9/14', 0.071429, [3, 11]), ('11/14', 0.071429, [5, 9]), ('13/14', 0.071429, [1, 13])]
+    => the lonely SET is isolated rational points (measure 0, NONEMPTY). The boundary.
+
+(2) MARGINS of structured 13-speed families (M and M-1/14):
+    {1..13}                 : M=0.071429  M-1/14=-0.00000  = tight
+    {1..12,14}              : M=0.076923  M-1/14=+0.00549
+    {2,3,...,14} (1+i)      : M=0.125000  M-1/14=+0.05357
+    odds {1,3,..,25}        : M=0.500000  M-1/14=+0.42857
+    {1..6,8..14} (no7)      : M=0.090909  M-1/14=+0.01948
+    all even-ish 2*{1..13}  : M=0.071429  M-1/14=-0.00000  = tight
+    {1,2,3,5,6,9,11,...}    : M=0.250000  M-1/14=+0.17857
+    {1..7,9..14} (no8)      : M=0.125000  M-1/14=+0.05357
+
+(3) SECTOR pattern at t*=1/14 for {1..13}: v_i*14*t = i mod 14
+    odd residues  (apex-7 face): [1, 3, 5, 7, 9, 11, 13]  -> incl boundary runners 1,13 (the touching pair)
+    even residues (2*apex face): [2, 4, 6, 8, 10, 12]  = 2*{1,2,3,4,5,6} (the 2-adic-descended core)
+    the EXACT-TOUCHING runners at 1/14 are i=1 and i=13 (= +-1 mod 14, the units).
+    => a disproof must KILL the t=1/14 lonely point = cover where runners 1,13 touch.
+
+(4) RIGIDITY: replace one speed of {1..13} by a larger integer; track M vs 1/14:
+    perturbations dipping below 1/14: 0  (0 expected if LRC holds)
+    (note: grid resolution ~1e-6; a true sub-1/14 needs exact certification, not grid.)
+
+==============================================================================
+THE LINE: M(S)=1/14 is achieved with EQUALITY and an ISOLATED (measure-0) lonely set
+at the extremal {1..13}, touching at runners +-1 mod 14 (the units). A disproof must
+push M strictly below 1/14 = destroy that isolated touching point. The proof target is
+the STRICT inequality at the measure-zero boundary, not a bulk measure bound.
+==============================================================================

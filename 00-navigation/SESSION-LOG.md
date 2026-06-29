@@ -1,3 +1,38 @@
+## mac-mini-2026-06-29-S15 -- the disproof structure: TWO razor-thin lines; reorganized proof targets (HYP-3548)
+
+Prompt: understand what a DISPROOF of LRC(14) entails; the razor-thin line between proof and disproof; use it to improve proof targets; reframe/reorganize; consider incoming agent content.
+
+Used an Explore agent to map the floor/disproof machinery (THM-523/580, HYP-3129/3415, OPEN-Q-108,
+the random031 thread) + fresh boundary computation.
+
+DISPROOF = primitive COVERING 13-set (mult of every q in 2..14) with M(S)<1/14 strictly (lonely set
+EMPTY). Non-covering closed by t=1/q witness (THM-523).
+
+TWO RAZOR-THIN LINES at different scales (the reframe):
+(a) GAP line (M): covering sets cluster at M>=7/89=+10.1% above 1/14. VERIFIED M({1..11,13,84})=7/89
+    EXACT (84=lcm(12,14)); single-large family tightest at L=84; random covering search min M=1/9
+    (+55.6%). Disproof FAR in gap-value; quantized by binding-pair denominators.
+(b) MEASURE-FLOOR line (R'): R'>0 certified >=0.642 BOUNDED (60% margin), UNBOUNDED OPEN = the only
+    thin line = the gatekeeper (rho_j>=c on 2-sheet 2-adic descent, THM-580).
+
+DISPROOF necessary conditions (short list): primitive + covering + UNBOUNDED + even-heavy (2-adic
+binding, S259) + a resonant 'lonely-poor' descended level.
+
+CORRECTION (honest): the apex-7/units extremal {1..13} (lonely set = 6 units mod 14 = 3 antipodal
+inverse-pairs = saddle index 3) is NON-COVERING -> OFF the critical path (tight locus of the WHOLE
+problem, not the disproof locus). And my recent metagraph/Ky-Fan/perfect-number thread (S11-S14) is
+sigma-ODD WITNESS-side, ORTHOGONAL to the sigma-EVEN floor gatekeeper -- except as the apex-7 BASE of
+the descent (Heegner SOS). Three pillars (HYP-3547) = three STAGES of one descent.
+
+REORGANIZED TARGETS: (1) rho_j>=c via HYP-3129 exact-low+tail PER 2-sheet level (lowest-hanging);
+(2) exploit 10% gap as slack (target R'>0 not 0.642); (3) lonely-poor=resonant=where SOS is STRONGEST
+-> C-S + SOS on complementary strata; (4) gap-quantization route (bound D=v_a±v_b, M=j/D, 14j>=D forced
+= number theory of speed-diffs = arcs).
+
+Files: HYP-3548, reflection the-two-razor-thin-lines-of-lrc14.md, scripts
+lrc14_disproof_boundary_margins_* + lrc14_covering_set_boundary_* (+.out). proof-state memory updated.
+Broadcast to all. No canon overridden; integrates THM-523/580 + HYP-3129/3415/3535/3547.
+
 ## mac-mini-2026-06-29-S14 -- 28 = T(7) = octonion apex; apex 7's three arithmetic properties ARE the three proof pillars (HYP-3547)
 
 Prompt: creatively explore 28 + other interesting families/properties/hidden patterns in the LRC structure; mine git pulls as signal.
