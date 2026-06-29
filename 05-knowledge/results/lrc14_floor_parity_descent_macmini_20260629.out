@@ -1,0 +1,46 @@
+====================================================================================
+LRC14 floor: parity/index + 2-adic descent (mac-mini-S4)
+====================================================================================
+
+[ANGLE 1] #lonely-components, measure, and parity over covering 13-sets:
+S (sorted)                                     #comp  meas>0        meas
+(7, 8, 13, 14, 17, 20, 21, 24, 26, 28, 30, 33, 36)    40     YES    0.147040
+(6, 11, 12, 13, 14, 16, 17, 18, 27, 28, 30, 39, 40)    38     YES    0.111531
+(4, 5, 8, 13, 14, 21, 25, 27, 33, 35, 36, 39, 40)    54     YES    0.102474
+(2, 4, 16, 18, 24, 26, 28, 30, 31, 33, 35, 36, 40)    44     YES    0.100925
+(4, 8, 9, 11, 12, 13, 14, 17, 19, 24, 28, 30, 37)    36     YES    0.088011
+(2, 6, 8, 14, 17, 18, 23, 24, 26, 30, 31, 33, 36)    32     YES    0.090535
+(3, 9, 13, 15, 17, 22, 24, 27, 28, 33, 36, 38, 40)    36     YES    0.097022
+(4, 5, 9, 10, 11, 13, 22, 26, 28, 32, 35, 36, 38)    40     YES    0.107659
+(8, 9, 11, 14, 16, 18, 20, 24, 26, 30, 35, 39, 40)    38     YES    0.140631
+(5, 9, 12, 14, 16, 17, 19, 22, 24, 26, 30, 35, 40)    26     YES    0.084689
+(8, 9, 11, 13, 14, 15, 20, 23, 24, 25, 28, 30, 36)    32     YES    0.125139
+(2, 13, 14, 15, 18, 20, 22, 24, 26, 32, 35, 37, 38)    38     YES    0.057248
+
+  component-count parities: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  all even? True;  any zero-measure? False
+  min #components = 26 (=> floor holds if always >=1)
+
+[ANGLE 2] 2-adic descent: even e=2e' => ||e t||=||e'(2t)||.
+  For covering S, split S = S_odd U 2*S' (S' = halves of even speeds).
+  Test: meas(lonely(S)) vs the descended measure structure.
+  S=(7, 8, 13, 14, 17, 20, 21, 24, 26, 28, 30, 33, 36)
+    |S_odd|=5 |S_even|=8  meas(lonely S)=0.14704  meas(lonely S_odd)=0.46873  meas(lonely halves)=0.29330
+  S=(6, 11, 12, 13, 14, 16, 17, 18, 27, 28, 30, 39, 40)
+    |S_odd|=5 |S_even|=8  meas(lonely S)=0.11153  meas(lonely S_odd)=0.46869  meas(lonely halves)=0.30261
+  S=(4, 5, 8, 13, 14, 21, 25, 27, 33, 35, 36, 39, 40)
+    |S_odd|=8 |S_even|=5  meas(lonely S)=0.10247  meas(lonely S_odd)=0.30115  meas(lonely halves)=0.45567
+  S=(2, 4, 16, 18, 24, 26, 28, 30, 31, 33, 35, 36, 40)
+    |S_odd|=3 |S_even|=10  meas(lonely S)=0.10092  meas(lonely S_odd)=0.62237  meas(lonely halves)=0.17404
+  S=(4, 8, 9, 11, 12, 13, 14, 17, 19, 24, 28, 30, 37)
+    |S_odd|=6 |S_even|=7  meas(lonely S)=0.08801  meas(lonely S_odd)=0.36637  meas(lonely halves)=0.40068
+  S=(2, 6, 8, 14, 17, 18, 23, 24, 26, 30, 31, 33, 36)
+    |S_odd|=4 |S_even|=9  meas(lonely S)=0.09054  meas(lonely S_odd)=0.53669  meas(lonely halves)=0.22056
+
+[CONNECTION] symmetry t->1-t (parity) and flow t->2t on lonely(S):
+  S=(7, 8, 13, 14, 17, 20, 21, 24, 26, 28, 30, 33, 36): lonely symmetric under t->1-t? True  (#comp=40)
+  S=(6, 11, 12, 13, 14, 16, 17, 18, 27, 28, 30, 39, 40): lonely symmetric under t->1-t? True  (#comp=38)
+  S=(4, 5, 8, 13, 14, 21, 25, 27, 33, 35, 36, 39, 40): lonely symmetric under t->1-t? True  (#comp=54)
+  S=(2, 4, 16, 18, 24, 26, 28, 30, 31, 33, 35, 36, 40): lonely symmetric under t->1-t? True  (#comp=44)
+
+====================================================================================
