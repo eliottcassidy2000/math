@@ -158,6 +158,69 @@ owner-current, endpoint-spine, two-adic, exact-period, or signed-SPEC debt:
 `random_covering_001`, `random_covering_039`, `random_covering_062`,
 `random_covering_074`, `random_covering_086`, and `random_covering_101`.
 
+Result: the targeted run audited `330` single E/branch cuts and `9113` pair
+cuts over the nine exception rows.  Pair current closes the two AP
+separating-only rows: `covering_AP_with_84` and `ap_omit_12_tail_84x01` each
+have a non-mirror pair with `removed_edges=36`, `largest_drop=2`, and
+`component_gain=2`; their exact mirror pair removes `40` edges but does not
+separate.  None of the seven random HYP-3472 edge exceptions closes under any
+E/branch pair.
+
+Key diagnostic: the seven random exceptions are edgeless singleton dead-cover
+projections, not connected projections missing the right two-gate cut.  Each
+has `projection_baseline.edges=0`, `edge_support_labels=()`, and
+`gate_edge_support_labels=()`.  The next route is therefore a zero-edge
+singleton-current/owner-current terminal packet, not bigger E/branch pair
+enumeration.
+
+After pulling the next mainline update, this connects to two incoming threads:
+HYP-3477's hard mirror-orbit discharge reservation intersects the seven
+zero-edge random rows at `random_covering_031`, while the colored gate
+unit-delta split's 19-row cover-delta sidecar intersects them at
+`random_covering_039` and `random_covering_074`.  The remaining zero-edge
+rows `random_covering_001`, `random_covering_062`, `random_covering_086`, and
+`random_covering_101` are the cleanest singleton-current test cases.
+## codex-2026-06-29 -- HYP-3479 hard orbit / boundary-current join
+
+Prompt: keep working on critical and exploratory LRC14 tasks.  Rebased over
+the incoming HYP-3472/HYP-3473/HYP-3474/HYP-3475 stack, then integrated the
+new HYP-3476 exception-frontier router and HYP-3477 hard mirror-orbit
+discharge audit.  HYP-3479 is the Lean-backed ledger join for those route
+splits, not a competing namespace.
+
+Added HYP-3479/T1439/LTI-439/LTT-339 plus script/result/reflection:
+
+```text
+04-computation/lrc14_hard_orbit_current_join_codex_20260629.py
+05-knowledge/results/lrc14_hard_orbit_current_join_codex_20260629.out
+04-computation/lean/TournamentH7/TournamentH7/LRCHardOrbitCurrentJoin.lean
+05-knowledge/results/lrc14_hard_orbit_current_join_lean_codex_20260629.out
+05-knowledge/hypotheses/HYP-3479-lrc14-hard-orbit-current-join-lean-ledger.md
+07-reflections/lrc14-hard-orbit-current-join-codex-20260629.md
+```
+
+Core readout: HYP-3475 has `8` hard mirror orbits with cover-delta `>=7` on
+seven random rows.  Joining to HYP-3472's row-local current status gives
+`hard_rows_with_projection_edge_cut=6/7`, `hard_rows_with_separating_current=6/7`,
+and `hard_orbits_with_separating_current=7/8`.  The only hard row without a
+projection edge cut or separating current is `random_covering_031`, with hard
+components `(43,54)`.  AP84 has no hard-orbit rows.
+
+Proof pull: the hard-orbit discharge is now narrower:
+
+```text
+hard_orbit_discharge <= separating_current_transfer + random031_named_clause
+```
+
+The two AP84 nonseparating rows and the six other random current exceptions
+are not hard-orbit debt; route them as AP84 or low-delta owner-current /
+two-adic / signed-SPEC / state-lift sidecar debt.
+
+Lean: added `TournamentH7.LRCHardOrbitCurrentJoin`, which records the finite
+count partition and `7+1=8` dispatch arithmetic sorry-free.  Verification:
+`lake build TournamentH7.LRCHardOrbitCurrentJoin` passed; stored output reports
+no axioms for the main partition/dispatch lemmas.
+
 ## codex-2026-06-29 -- HYP-3472 dead-cover boundary-current audit
 
 Prompt: spend another similar session pushing different directions on similar

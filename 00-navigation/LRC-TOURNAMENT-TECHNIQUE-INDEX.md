@@ -181,6 +181,13 @@ obligations, and proof-carrier interfaces.
   terminal proof obligations the vertices.  The quotient preserves the
   zero-edge singleton-current discharge predicate and must retain interval,
   branch, and owner locality before naming a finite proof packet.
+- Need to dispatch hard mirror-orbit debt through graph currents:
+  use LTT-339 after LTT-337/LTT-336/LTT-335/LTT-332/LTT-315/LTT-320 and make
+  hard-orbit rows, projection-cut status, separating-current status,
+  singleton intersection, AP84 sidecar status, and random031 named debt the
+  vertices.
+  Raw overlap of exception sets is only useful after the retained current and
+  orbit payloads are attached.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9959,3 +9966,35 @@ quotient_legality_status
 - **Pointers:** HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
   HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, LTI-438,
   LTT-338, T1438, OPEN-Q-108.
+
+## LTT-339: Hard Orbit / Boundary-Current Join Tournament
+
+- **Move:** Use joined proof carriers as vertices: hard mirror-orbit current
+  join, singleton intersection ledger, separating-current transfer,
+  random031 named debt, hard mirror-orbit ledger, universal touch lemma, raw
+  exception-set overlap, and raw hard-delta count.
+- **LRC use:** HYP-3479 shows that HYP-3475's hard mirror-orbit debt and
+  HYP-3472's boundary-current failure have singleton intersection at
+  `random_covering_031` on the current bank.  Seven of eight hard mirror
+  orbits already have separating E/branch currents, and AP84 has no hard
+  orbit debt.  It is downstream of the HYP-3476 exception-frontier router and
+  HYP-3477 hard-orbit discharge audit.
+- **Preserves:** hard orbit class and typed/structural sidecar, projection-cut
+  status, separating-current status, AP84/non-AP dispatch, and named terminal
+  debt.
+- **Forgets / guardrail:** raw exception-set overlap forgets whether the
+  exception is high-delta hard orbit debt or low-delta current debt.  Do not
+  merge AP84 base rows, six non-hard random current exceptions, and
+  `random_covering_031` into one scalar exception class.
+- **Pairwise observable:** predicate retention, hard payload, current payload,
+  exception localization, terminal-dispatch value, and scalar penalty.
+- **Switch/gauge:** higher retained proof payload first; ties follow the
+  declared dispatch route.
+- **Fingerprint:** `8` vertices, score histogram
+  `{19:1,29:1,42:1,47:1,54:2,58:1,60:1}`, no directed `3`-cycles, and path
+  `J00_hard_orbit_current_join -> J01_singleton_intersection_ledger -> J02_separating_current_transfer -> J03_random031_named_gluing_debt -> J04_hard_mirror_orbit_ledger -> J05_dead_touch_gate_universal_lemma -> J06_raw_exception_set_overlap -> J07_raw_hard_delta_count`.
+- **Next hook:** prove separating-current transfer.  Then hard-orbit discharge
+  reduces to that transfer plus HYP-3455/HYP-3460 for `random_covering_031`.
+- **Pointers:** HYP-3479, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
+  HYP-3462, HYP-3470, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438,
+  HYP-3436, THM-523, LTI-439, LTT-339, T1439, OPEN-Q-108.

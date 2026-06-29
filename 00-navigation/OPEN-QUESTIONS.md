@@ -187,6 +187,28 @@ mirror lane, the colored gate unit-delta split flags `random_covering_039` and
 `random_covering_101` are the pure unit-delta singleton-current tests. -> HYP-3476,
 HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3455, HYP-3453,
 HYP-3451, HYP-3438, THM-523, LTI-436, LTT-336, T1436, OPEN-Q-108.
+**OPEN-Q-108 HYP-3479 hard orbit/current join addendum:**
+HYP-3479 joins HYP-3475's hard mirror-orbit ledger with HYP-3472's
+boundary-current exceptions, as a Lean-backed ledger for the HYP-3476
+singleton-overlap route and HYP-3477 hard-family split.  The current-bank hard
+orbit family is no longer a seven-row independent proof debt:
+
+```text
+hard_orbits_delta_ge_7=8
+hard_rows_with_separating_current=6/7
+hard_orbits_with_separating_current=7/8
+hard_rows_without_separating_current=[random_covering_031]
+ap84_hard_rows=[]
+```
+
+Open proof task: prove separating-current transfer.  With that lemma, the
+hard-orbit discharge reduces to separating current plus the already named
+HYP-3455/HYP-3460 `random_covering_031` clause.  AP84 base rows and the six
+other random current exceptions should be kept as non-hard sidecar debt rather
+than folded into the hard-orbit ledger. -> HYP-3479, HYP-3477, HYP-3476,
+HYP-3475, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3460, HYP-3455,
+HYP-3453, HYP-3451, HYP-3438, HYP-3436, THM-523, LTI-439, LTT-339, T1439,
+OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3458 AP84 coloring-recursion addendum:**
 HYP-3458 reconnects the AP84 endpoint-clock work with HYP-2247/HYP-2243

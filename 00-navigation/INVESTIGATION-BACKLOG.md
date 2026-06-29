@@ -223,6 +223,42 @@ cover-delta `>=7`, on rows `random_covering_022`, `random_covering_031`,
 HYP-3455/HYP-3451, endpoint-spine/wall, owner-current, two-adic descent,
 HYP-3460 phase-branch bypass, or signed-SPEC/Rprime debt.
 
+## Lead codex-2026-06-29: Hard orbit / boundary-current join
+
+**Status:** EVIDENCE / finite ledger join; not proof
+(HYP-3479/T1439/LTI-439/LTT-339), joining HYP-3475's hard mirror-orbit debt
+with HYP-3472's boundary-current exception ledger.  This is the Lean-backed
+ledger/check for the incoming HYP-3476 exception-frontier router and HYP-3477
+hard-orbit discharge split.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3479-lrc14-hard-orbit-current-join-lean-ledger.md`,
+script
+`04-computation/lrc14_hard_orbit_current_join_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_hard_orbit_current_join_codex_20260629.out`,
+Lean ledger
+`04-computation/lean/TournamentH7/TournamentH7/LRCHardOrbitCurrentJoin.lean`,
+Lean result
+`05-knowledge/results/lrc14_hard_orbit_current_join_lean_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-hard-orbit-current-join-codex-20260629.md`.
+
+Readout: the hard orbit family has `8` delta-`>=7` orbits on seven random
+rows.  Six of seven hard rows have projection-edge cuts and separating
+currents, so `7/8` hard orbits already have a separating E/branch current
+exit.  The only hard current exception is `random_covering_031`; AP84 has no
+hard orbit rows.
+
+Next: prove separating-current transfer.  Then hard-orbit discharge reduces to
+that transfer plus the HYP-3455/HYP-3460 `random_covering_031` clause, while
+AP84 and the six other random current exceptions remain separate non-hard
+sidecar debt.
+
+Lean status: `TournamentH7.LRCHardOrbitCurrentJoin` builds and proves the
+finite dispatch arithmetic; the geometric separating-current transfer remains
+the open producer.
+
 ## Lead codex-2026-06-29: AP84 coloring-recursion bridge
 
 **Status:** EVIDENCE / exact coloring-recursion sidecar for AP-tail bridge; not

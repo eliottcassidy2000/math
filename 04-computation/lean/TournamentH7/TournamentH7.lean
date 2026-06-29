@@ -119,6 +119,9 @@
     · TournamentH7.LRCColoredGateFormalization — HYP-3473 colored-gate
                                       interface for HYP-3471's low-rank
                                       E/branch producer and terminal packets.
+    · TournamentH7.LRCHardOrbitCurrentJoin — HYP-3479 finite ledger joining
+                                      hard mirror-orbit debt to
+                                      boundary-current dispatch.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -209,5 +212,6 @@ import TournamentH7.LRCObserverGluingLedger
 import TournamentH7.LRCBleedingEdgeFrontier
 import TournamentH7.LRCProofFrontier
 import TournamentH7.LRCColoredGateFormalization
+import TournamentH7.LRCHardOrbitCurrentJoin
 import TournamentH7.LRCCrystallographicThetaFrontier
 import TournamentH7.Verify
