@@ -1,5 +1,20 @@
 # Open Questions
 
+**OPEN-Q-108 THM-580/HYP-3534 2-adic PARITY DESCENT for the covering floor (mac-mini-2026-06-29-S4):**
+EXACT recursion (verified 30/30): split S=O u E (odd/even), S'=E/2; since `meas(lonely E)=meas(lonely S')`
+(measure-preserving u=2t) and `lonely(S)=lonely(O) cap lonely(E)`, unrolling gives
+`meas(lonely S) = PROD_j rho_j . PROD_j meas(lonely O_j)`.  Reduces the covering floor to (a) per-level
+`rho_j >= c` (a 2-SHEET decorrelation between an odd set and a descended set; resonance on 2Z, so the
+CV certificate uses the 2-sheet count, not 14) and (b) odd caps `meas(lonely O_j) >= cap > 0`.  Swept:
+min rho_j=0.515, mean 0.97, min odd-base=0.237 over 3142 levels.  RESOLVES kps-S259's "2-adic descent:
+odd part couples, not clean yet" (the coupling IS rho_j; the recursion is an exact product) and
+DISSOLVES HYP-3533's even-speed super-binomiality (evens peeled exactly; all-odd base = apex-7 face).
+The descent factorizes the PROOF along 14=2.7.  OPEN: prove `rho_j >= c` uniformly (2-sheet C-S too
+lossy for lonely-poor descended sets -> use HYP-3129 exact-low per level, cheaper on 2 sheets); bound
+descent depth from THM-526.  Companion (parity/Borsuk-Ulam) lead: an ODD index (Redei H(T) mod 2
+counting lonely intervals) would force the floor non-constructively -- lonely set has EVEN #components
+under t->1-t, so a naive parity does not.  -> THM-580, HYP-3534, HYP-3533, THM-579, HYP-3415, HYP-3129, THM-526, OPEN-Q-108.
+
 **OPEN-Q-108 THM-579/HYP-3532 covering-FLOOR sheet-count criterion addendum (mac-mini-2026-06-29-S2):**
 Directly advances kps's CRITICAL PATH (HYP-3415: LRC14 = q-witness + LRC<=13 + covering floor R'>0).
 THM-579: one Cauchy-Schwarz on `SPEC = sum_{n!=0} chat(n)conj(ghat(n))`, using that `ghat` is

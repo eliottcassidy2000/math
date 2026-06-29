@@ -1,3 +1,38 @@
+## mac-mini-2026-06-29-S4 -- creative reframes of the remaining LRC problems; 2-ADIC PARITY DESCENT gives an exact recursion for the floor (THM-580)
+
+Prompt: reframe each remaining problem 2-3 ways (out-of-the-box), then investigate the favorite two and their connections.
+
+REFRAMINGS of the 3 remaining problems (P1 floor, P2 cap, P3 discharge):
+ P1: (a) topology/parity (Borsuk-Ulam, t->1-t, source-in-tournament), (b) Lee-Yang partition function
+     P(z)=sum(-z)^k S_k positivity, (c) additive-combinatorics resonant-energy/additive-energy.
+ P2: (a) Hankel/moment problem (order-3 = Hankel sign change), (b) Lasserre/SOS level-2->3 gap,
+     (c) pair-avoidance design / forbidden-triple.
+ P3: (a) renormalization / 2-adic descent transfer operator, (b) quantitative equidistribution.
+Favorites: P1-topology/parity + P3-2-adic-descent (both = the "2" of 14=2.7).
+
+INVESTIGATION (THM-580, HYP-3534): the 2-adic PARITY DESCENT. Split S=O u E (odd/even), S'=E/2;
+lonely(S)=lonely(O) cap lonely(E), meas(lonely E)=meas(lonely S') EXACT (u=2t measure-preserving).
+Unrolling gives the EXACT recursion meas(lonely S) = PROD_j rho_j . PROD_j meas(lonely O_j) (verified
+30/30). Reduces the floor to (a) per-level rho_j>=c (a 2-SHEET decorrelation, resonance on 2Z not 14Z)
++ (b) odd caps. Swept: min rho_j=0.515, mean 0.97, min odd-base meas=0.237 over 3142 levels/600
+adversarial covering sets. This RESOLVES kps-S259's "2-adic descent, odd part couples, not clean yet"
+(coupling = rho_j, recursion is a product) and DISSOLVES HYP-3533's even-speed super-binomiality
+(evens peeled exactly; all-odd base = the apex-7 face). The 2-sheet Cauchy-Schwarz certificate is too
+lossy when the descended set is lonely-poor -> remaining work is rho_j>=c per level via HYP-3129
+exact-low (cheaper on 2 sheets).
+
+CONNECTION (reflection two-order-two-structures-parity-and-descent.md): t->1-t (reflection, Z2) and
+t->2t (doubling, 2-adic) are the circle's two order-2 maps = the 2 of 14=2.7. Reflection is diagnostic
+(lonely set has EVEN #components, no odd index -> doesn't force nonempty); doubling is constructive
+(the product proves positivity, sidestepping the missing odd index). The descent factorizes the PROOF
+along 14=2.7: doubling eats the 2, the odd residue is the 7-face. Meta-lesson: prefer the structure
+that lets you compute a positive lower bound over the one that asks you to find an invariant.
+
+NEXT: prove rho_j>=c uniformly (HYP-3129 exact-low on the 2-sheet odd-vs-descended object); bound
+descent depth from THM-526. The Borsuk-Ulam ODD-INDEX (a Redei H(T) mod 2 counting lonely intervals)
+stays open as the elegant non-constructive alternative. Files: THM-580, HYP-3534,
+04-computation/lrc14_twoadic_parity_descent_floor_macmini_20260629.py (+ parity_descent, rho_sweep).
+
 ## mac-mini-2026-06-29-S3 -- floor = RESONANT ENERGY; even speeds are super-binomial (the 2-adic mechanism, quantified)
 
 Prompt: keep working even more creative angles to advance the LRC proof.
