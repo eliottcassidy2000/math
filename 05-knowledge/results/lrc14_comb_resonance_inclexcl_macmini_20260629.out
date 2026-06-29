@@ -1,0 +1,38 @@
+==============================================================================
+LRC14 comb-resonance reformulation (mac-mini-2026-06-29-S2)
+==============================================================================
+
+[1] Cap minima  min_{|P|=j} meas(lonely(P))  vs  C(14-j,2)/91
+  j=1: min=6/7 (0.857143)  C(14-j,2)/91=6/7  argmin=(1,)  dev=0
+  j=2: min=66/91 (0.725275)  C(14-j,2)/91=66/91  argmin=(1, 13)  dev=0
+  j=3: min=55/91 (0.604396)  C(14-j,2)/91=55/91  argmin=(1, 12, 13)  dev=0
+  j=4: min=1979/4004 (0.494256)  C(14-j,2)/91=45/91  argmin=(1, 11, 12, 13)  dev=-1/4004
+  j=5: min=2243/5880 (0.381463)  C(14-j,2)/91=36/91  argmin=(1, 5, 7, 8, 9)  dev=-1081/76440
+
+[2] Pairwise W({p,q}) = meas(D_p cap D_q): exact vs Fourier resonance
+  {1,13}: exact=1/91 (0.010989)  Fourier~0.010990  diff=1.30e-06
+  {1,2}: exact=1/14 (0.071429)  Fourier~0.071429  diff=9.53e-10
+  {1,12}: exact=1/84 (0.011905)  Fourier~0.011905  diff=1.59e-10
+  {5,9}: exact=1/63 (0.015873)  Fourier~0.015873  diff=3.75e-07
+  {7,8}: exact=1/49 (0.020408)  Fourier~0.020408  diff=0.00e+00
+  {1,7}: exact=1/49 (0.020408)  Fourier~0.020408  diff=0.00e+00
+
+[3] pairwise-only lonely value  1 - j/7 + sum_{p<q} W(p,q)  vs exact (j<=3 vs j=4,5)
+  j=1 P=[1]: exact=0.857143  pairwise(1-S1+S2)=0.857143  S3(triples)=0 (0.000000)  exact-pairwise=+0.000000
+  j=2 P=[1, 13]: exact=0.725275  pairwise(1-S1+S2)=0.725275  S3(triples)=0 (0.000000)  exact-pairwise=+0.000000
+  j=3 P=[1, 12, 13]: exact=0.604396  pairwise(1-S1+S2)=0.615385  S3(triples)=1/91 (0.010989)  exact-pairwise=-0.010989
+  j=4 P=[1, 11, 12, 13]: exact=0.494256  pairwise(1-S1+S2)=0.528139  S3(triples)=7/156 (0.044872)  exact-pairwise=-0.033883
+  j=5 P=[1, 5, 7, 8, 9]: exact=0.381463  pairwise(1-S1+S2)=0.485204  S3(triples)=199/1176 (0.169218)  exact-pairwise=-0.103741
+
+[4] j=4,5 deviation = -S3 + S4 - ... (order>=3). Exact inclusion-exclusion residual:
+  j=4 P=[1, 11, 12, 13]: dev=exact-C(14-j,2)/91=-1/4004 (-0.000250)
+       inclusion-exclusion S_t: S1=0.57143, S2=0.09957, S3=0.04487, S4=0.01099  (check IE=1979/4004==1979/4004: True)
+  j=5 P=[1, 5, 7, 8, 9]: dev=exact-C(14-j,2)/91=-1081/76440 (-0.014142)
+       inclusion-exclusion S_t: S1=0.71429, S2=0.19949, S3=0.16922, S4=0.08135, S5=0.01587  (check IE=2243/5880==2243/5880: True)
+
+==============================================================================
+Takeaway: lonely measure = inclusion-exclusion of comb overlaps;
+each overlap is a Fourier RESONANCE sum (same object as THM-578 R-tail
+and the covering-floor SPEC).  Pairwise exact through j=3 because the
+{1}+top minimizer has NO triple comb-resonance; j=4,5 = order-3 onset.
+==============================================================================
