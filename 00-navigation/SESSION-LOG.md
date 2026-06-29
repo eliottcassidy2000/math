@@ -1,3 +1,35 @@
+## mac-mini-2026-06-29-S16 -- the disproof candidate across all LRC forms; the boundary is (Z/n)^* (HYP-3549)
+
+Prompt: what would the set of disproof candidates look like in ALL analogous forms of the LRC (esp. geometric); notice patterns.
+
+Incoming signal: a 'math synthesis' forum seed flagged the LITTLEWOOD conjecture discrepancy bounds --
+the simultaneous-approximation sibling of the LRC geometric form (the equidistribution dichotomy).
+
+A disproof candidate in each form: Diophantine (covering set, M<1/n); VIEW-OBSTRUCTION (closed geodesic
+on T^{n-1} avoids central cube C_n=[1/n,1-1/n]^{n-1}); BILLIARD (trapped in wall-slab); LATTICE/
+Littlewood-sibling (rational direction hugging the coordinate-wall arrangement); tournament (empty
+lonely set).
+
+VERIFIED PATTERNS (n=4..14):
+[P1] equidistribution dichotomy: vol(C_n)=(1-2/n)^{n-1} -> e^-2=0.1353 > 0, so irrational directions
+     EQUIDISTRIBUTE (Weyl) and visit C_n => DISPROOF CANDIDATES ARE RATIONAL/closed-geodesic ONLY.
+[P3] universal extremal = AP/staircase {1..n-1}; lonely set = EXACTLY the phi(n) UNITS mod n (t=a/n
+     lonely iff gcd(a,n)=1; else runner n/g hits 0), in phi(n)/2 ANTIPODAL pairs = the SADDLE INDEX,
+     touching at a^{-1} mod n. n=14: 6 units {1,3,5,9,11,13}, 3 pairs.
+[P4] covering = ADDITIVE pinning to walls at Farey points 1/q (q<=n); non-covering killed by t=1/q
+     witness (verified 683/683).
+[P2/P6] hyperoctahedral B_{n-1} symmetry; global reflection x->1-x = t->-t = COMPLEMENT R (central-cube
+     antipodal = klein THM-584); same signed-perm theme as the metagraph signed cycle index (THM-587).
+
+META-PATTERN: the boundary SHAPE is the MULTIPLICATIVE GROUP (Z/n)^* (units=lonely set, /{+-1}=saddle
+index, inversion=touch). A disproof must be at once ADDITIVE (covering: hit every 1/q) and
+ANTI-MULTIPLICATIVE (cover the units a/n) -- the additive/multiplicative tension, hardest where (Z/n)^*
+is rich (n=2p, p Mersenne/Heegner; (Z/14)^*=(Z/7)^* = apex-7 cyclotomic group). LRC(2p) inherits saddle
+phi(2p)/2=(p-1)/2 from apex p (verified p=3..13) = the geometric 2-adic FOLD T^{2p-1}->T^{p-1} = THM-580.
+
+Files: HYP-3549, reflection the-shape-of-the-disproof-boundary-across-the-lrc-forms.md, script
+lrc_disproof_geometry_across_forms_macmini (+.out). Broadcast. Builds on HYP-3547/3548 + THM-580/581/584.
+
 ## mac-mini-2026-06-29-S15 -- the disproof structure: TWO razor-thin lines; reorganized proof targets (HYP-3548)
 
 Prompt: understand what a DISPROOF of LRC(14) entails; the razor-thin line between proof and disproof; use it to improve proof targets; reframe/reorganize; consider incoming agent content.

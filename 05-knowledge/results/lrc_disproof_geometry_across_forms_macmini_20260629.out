@@ -1,0 +1,66 @@
+================================================================================
+DISPROOF candidates across the analogous forms of the LRC, and the patterns
+================================================================================
+
+[P1] EQUIDISTRIBUTION DICHOTOMY: central cube C_n=[1/n,1-1/n]^{n-1}, vol=(1-2/n)^{n-1}
+       n   vol(C_n)   (-> e^-2 = 0.13534)
+       4    0.12500
+       6    0.13169
+       8    0.13348
+      14    0.13480
+      30    0.13523
+     100    0.13533
+     1000    0.13534
+     vol>0 always => irrational directions EQUIDISTRIBUTE (Weyl) & VISIT C_n => not
+     disproofs. DISPROOF CANDIDATES = rational/integer directions ONLY (closed geodesics).
+     [Littlewood-sibling: a disproof = a direction badly-distributed toward the walls.]
+
+[P3] UNIVERSAL EXTREMAL = AP {1..n-1}; lonely set = UNITS mod n, phi(n)/2 antipodal pairs:
+       n phi(n) #pairs       lonely a (units) saddle idx phi/2
+       4      2      1                 [1, 3]                1
+       5      4      2           [1, 2, 3, 4]                2
+       6      2      1                 [1, 5]                1
+       7      6      3     [1, 2, 3, 4, 5, 6]                3
+       8      4      2           [1, 3, 5, 7]                2
+       9      6      3     [1, 2, 4, 5, 7, 8]                3
+      10      4      2           [1, 3, 7, 9]                2
+      11     10      5 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]                5
+      12      4      2          [1, 5, 7, 11]                2
+      13     12      6 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]                6
+      14      6      3   [1, 3, 5, 9, 11, 13]                3
+     PATTERN: lonely set of the AP = EXACTLY the phi(n) units mod n (proof: t=a/n is
+     lonely iff gcd(a,n)=1, since gcd=g>1 gives runner i=n/g hitting 0). Touch at i=a^{-1}.
+     saddle index = phi(n)/2 = #antipodal unit pairs. n=14: 3 = (7-1)/2 (apex 7).
+
+     n=14 inverse-touch detail (a, touching runners = +-a^{-1} mod 14):
+       t=1/14: runners [1, 13] touch (a^{-1} mod 14 = 1)
+       t=3/14: runners [5, 9] touch (a^{-1} mod 14 = 5)
+       t=5/14: runners [3, 11] touch (a^{-1} mod 14 = 3)
+       t=9/14: runners [3, 11] touch (a^{-1} mod 14 = 11)
+       t=11/14: runners [5, 9] touch (a^{-1} mod 14 = 9)
+       t=13/14: runners [1, 13] touch (a^{-1} mod 14 = 13)
+
+[P4] COVERING = geodesic PINNED to walls at Farey points 1/q (q<=n):
+     non-covering S (omits all multiples of some q<=n) is killed by the t=1/q WITNESS:
+     at t=1/q, every v in S has v/q non-integer => ||v/q|| >= 1/q >= 1/n. Verify:
+     non-covering sets tested: 683; witness t=1/q gives min-dist >= 1/14: 683/683 (CONFIRMED)
+     => a DISPROOF geodesic must pass through a wall at EVERY Farey point 1/2,1/3,...,1/n
+     (covering) AND stay in the wall-tube between them (M<1/n). Pinned + trapped.
+
+[P2/P6] SYMMETRY of the central cube C_n (and the disproof-candidate set):
+     hyperoctahedral B_{n-1} = (Z/2)^{n-1} >| S_{n-1}, order 2^{n-1}(n-1)!:
+       - S_{n-1}: permute coordinates = relabel speeds.
+       - (Z/2)^{n-1}: reflect x_i->1-x_i = flip speed sign v_i->-v_i.
+     The GLOBAL reflection x->1-x (all coords) = t->-t = the COMPLEMENT/REVERSAL R.
+     => the lonely set is R-symmetric (verified S15); the central-cube antipodal map IS
+     the tournament complement (klein THM-584). Disproof candidates = B_{n-1}-orbits of
+     rational directions, R-antipodally paired -- the SAME signed-permutation theme as
+     the tournament metagraph signed cycle index (klein THM-587).
+
+================================================================================
+CROSS-FORM PATTERNS: disproof candidates are (P1) rational/integer directions only
+(closed geodesics; irrationals equidistribute into the vol->e^-2 central cube); (P3)
+extremal = AP/staircase, lonely set = phi(n) units in phi(n)/2 antipodal pairs; (P4)
+covering = pinned to walls at Farey points 1/q + trapped in the wall-tube; (P2/P6)
+organized by hyperoctahedral B_{n-1} with the R-antipodal (=complement) involution.
+================================================================================
