@@ -180,7 +180,9 @@ obligations, and proof-carrier interfaces.
   boundaries, touching gate events, unit-delta/cover-delta sidecars, and
   terminal proof obligations the vertices.  The quotient preserves the
   zero-edge singleton-current discharge predicate and must retain interval,
-  branch, and owner locality before naming a finite proof packet.
+  branch, and owner locality before naming a finite proof packet.  HYP-3478
+  verifies that all six rows are mirror-balanced singleton packets and splits
+  them into two cover-delta rows plus four unit-delta rows.
 - Need to dispatch hard mirror-orbit debt through graph currents:
   use LTT-339 after LTT-337/LTT-336/LTT-335/LTT-332/LTT-315/LTT-320 and make
   hard-orbit rows, projection-cut status, separating-current status,
@@ -9937,12 +9939,16 @@ quotient_legality_status
   and proof obligations as vertices.  The exact computed carrier tournament
   uses zero-edge singleton geometry, mirror-pair component atlas, owner-pair
   residue/span word, complete gate-touch sidecar, S319 unit-delta versus
-  cover-delta split, single best-gate shadow, and raw row-name list.
+  cover-delta split, component-current locality, single best-gate shadow, and
+  raw row-name list.  Runners, arcs, raw row names, and raw gate counts are
+  shadows unless they preserve the same terminal discharge predicate.
 - **LRC use:** HYP-3478 turns the six small-touch/no-hard rows from a
   graph-current exception into a finite singleton-pocket packet.  Every dead
   component is an isolated rank-2 pocket with one B0 and one B1 owner, an exact
-  mirror partner, and at least two complete E/branch gate touches.  The audit
-  confirms the expected split: `random_covering_039` and
+  mirror partner, no row-wise owner imbalance, and at least two complete
+  E/branch gate touches; the companion current audit gives E/branch touching
+  counts `56,12,26,42,34,30`.  The audit confirms the expected split:
+  `random_covering_039` and
   `random_covering_074` are cover-delta sidecar rows; `random_covering_001`,
   `random_covering_062`, `random_covering_086`, and `random_covering_101` are
   branch-unit singleton-current rows.
@@ -9965,6 +9971,10 @@ quotient_legality_status
   `{7:1,38:1,55:1,59:2,62:1,65:1}`, no directed `3`-cycles, and Hamiltonian
   path
   `G00_zero_edge_singleton_pocket_geometry -> G01_mirror_pair_dead_component_atlas -> G02_owner_pair_residue_span_word -> G03_gate_touch_complete_pocket_sidecar -> G04_s319_unit_delta_vs_delta_sidecar_split -> G05_single_best_gate_shadow -> G06_raw_row_name_exception_list`.
+  Companion current-carrier tournament has `8` vertices, score histogram
+  `{4:1,10:1,46:1,56:1,60:1,62:1,63:1,65:1}`, no directed `3`-cycles, and
+  path
+  `S00_mirror_singleton_geometry_packet -> S01_owner_current_locality_packet -> S02_touching_gate_sidecar_packet -> S03_unit_delta_vs_cover_delta_split -> S04_section_boundary_interval_word -> S05_residue_owner_pair_shadow -> S06_raw_zero_edge_count -> S07_raw_row_name_list`.
 - **Next hook:** prove the four branch-unit singleton rows first, then add the
   cover-delta sidecar for `random_covering_039` and `random_covering_074`.
 - **Pointers:** HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,

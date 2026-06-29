@@ -20,6 +20,8 @@
 **Status:** EVIDENCE / finite geometry atlas; not proof
 (HYP-3478/T1438/LTI-438/LTT-338), downstream of HYP-3476 pair-current,
 HYP-3477 hard-mirror discharge, and the S319 colored gate unit-delta split.
+**Status:** EVIDENCE / exact six-row geometry audit; not proof
+(HYP-3478/T1438/LTI-438/LTT-338), downstream of HYP-3476 and HYP-3477.
 
 HYP-3478 audits the six small-touch/no-hard rows directly:
 `random_covering_001`, `random_covering_039`, `random_covering_062`,
@@ -42,6 +44,25 @@ Next proof task: prove the four branch-unit singleton rows (`001`, `062`,
 cover-delta sidecar for `039` and `074`.  Do not spend the next session on
 larger pair-current searches unless a new coordinate creates nontrivial
 component support.
+Readout: all six rows have edgeless dead-cover projections, but all six have
+touching E/branch gates.  Across the packet there are `14` dead components,
+all singleton `B0`/`B1` owner-pair components; every component has an exact
+interval mirror with the branch owners swapped.  There are no singleton-cover,
+mirror, or owner-balance failures.
+
+The split is now explicit: cover-delta sidecar rows
+`random_covering_039`, `random_covering_074`; clean unit-delta singleton rows
+`random_covering_001`, `random_covering_062`, `random_covering_086`, and
+`random_covering_101`.  `random_covering_101` has a shortest E/branch gate
+that does not touch dead labels, but it has a slightly longer touching
+unit-delta gate, so it remains in the unit-delta singleton packet.
+
+Next: prove a finite mirror-singleton current lemma, likely split into the
+two cover-delta rows and four unit-delta rows.  Use tournament vertices as
+singleton components, mirror-paired components, owner-pair labels, fixed
+section boundaries, touching gate events, residues, cover arcs, color/Fourier
+modes, and proof obligations.  The quotient must preserve the terminal
+discharge predicate and say what interval/branch/owner geometry it destroys.
 
 ## Lead codex-2026-06-29: hard mirror-orbit discharge audit
 

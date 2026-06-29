@@ -13,6 +13,14 @@ of 2026-05-30.
 
 Useful synthetic maps added later:
 
+- `07-reflections/lrc14-small-touch-no-hard-geometry-codex-20260629.md`:
+  HYP-3478/T1438 resolves the geometry of the six HYP-3476 small-touch rows
+  outside AP84 and hard mirror-orbit debt.  The useful signal is that all
+  `14` dead components are singleton `B0`/`B1` owner-pair components with
+  exact mirror-swapped partners, no projection edges, and no row-wise owner
+  imbalance, while E/branch gates still touch every row.  The next proof
+  packet is a mirror-singleton current lemma, split if needed into two
+  cover-delta rows and four unit-delta rows.
 - `07-reflections/lrc14-colored-gate-formalization-codex-20260629.md`:
   HYP-3473/T1433 turns HYP-3471's colored gate-reservoir route into a Lean
   proof-obligation interface.  It is useful as a map of what the color route

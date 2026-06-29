@@ -4,6 +4,9 @@
 HYP-3478 identifies the geometry of the six small-touch/no-hard rows left
 after HYP-3476 pair-current and HYP-3477 hard-mirror discharge.  They are not
 weak projection graphs.  Their dead-cover projections have no edges:
+**OPEN-Q-108 HYP-3478 small-touch/no-hard geometry addendum:**
+HYP-3478 records the direct geometry audit for the six HYP-3476 rows that are
+currentless, non-AP, and outside HYP-3477 hard mirror-orbit debt:
 
 ```text
 projection_edge_hist={0:6}
@@ -35,6 +38,21 @@ edge unless they add a new component coordinate.  Retain the mirror partner,
 owner-pair residue/span word, complete gate touches, and S319 gate-kind class.
 -> HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3455,
 HYP-3453, HYP-3451, THM-523, LTI-438, LTT-338, T1438, OPEN-Q-108.
+HYP-3478 answers the geometry part: these are all mirror-balanced singleton
+dead-component packets.  Exact readout: `14` dead components,
+`projection_edge_rows=[]`, `singleton_cover_fail_rows=[]`,
+`mirror_failure_rows=[]`, and `owner_unbalanced_rows=[]`; E/branch touching
+counts are `56,12,26,42,34,30`.  The terminal packet splits into cover-delta
+sidecar rows `random_covering_039`, `random_covering_074` and unit-delta rows
+`random_covering_001`, `random_covering_062`, `random_covering_086`,
+`random_covering_101`.
+
+Open proof task: prove the finite mirror-singleton current lemma, possibly
+with a two-row/four-row split.  The lemma should retain dead intervals,
+blocker-owner pairs, touching gate words, and owner-current locality rather
+than collapsing to raw row names, edge-support zero, or gate counts. -> HYP-3478, HYP-3477,
+HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451,
+HYP-3450, HYP-3438, THM-523, LTI-438, LTT-338, T1438, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3476 exception-frontier router addendum:**
 HYP-3476 compares the HYP-3472 boundary-current exception frontier with the

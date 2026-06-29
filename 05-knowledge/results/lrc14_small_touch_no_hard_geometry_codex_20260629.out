@@ -1,0 +1,109 @@
+HYP-3478 SMALL-TOUCH / NO-HARD GEOMETRY AUDIT
+status=EVIDENCE / exact six-row geometry audit; not an LRC14 proof
+source=HYP-3450/HYP-3453 component-gate bank + HYP-3472/HYP-3476 current utilities
+target_rows=('random_covering_001', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101')
+
+## Aggregate Geometry
+rows=6
+dead_count_hist={2: 5, 4: 1}
+total_dead_components=14
+projection_edge_rows=[]
+singleton_cover_fail_rows=[]
+mirror_failure_rows=[]
+owner_unbalanced_rows=[]
+min_gate_kind_hist={'branch_unit_delta': 4, 'delta_sidecar_packet': 2}
+touching_e_branch_counts={'random_covering_001': 56, 'random_covering_039': 12, 'random_covering_062': 26, 'random_covering_074': 42, 'random_covering_086': 34, 'random_covering_101': 30}
+min_gate_not_touching_dead_labels=['random_covering_101']
+cover_delta_sidecar_rows=('random_covering_039', 'random_covering_074')
+clean_unit_delta_rows=('random_covering_001', 'random_covering_062', 'random_covering_086', 'random_covering_101')
+
+## Row random_covering_001
+speeds=(14, 30, 38, 64, 66, 81, 96, 104, 132, 146, 153, 165, 179)
+components=100 dead=4 low_rank_gates=60 e_branch_gates=56 touching_e_branch=56 edge_cuts=0 separating=0
+projection=components:4 largest:1 edges:0 dead_labels=('B0:153', 'B0:165', 'B0:179', 'B0:81', 'B1:153', 'B1:165', 'B1:179', 'B1:81')
+singleton_dead=4/4 mirror_failures=() owner_balance={}
+min_gate_kind=branch_unit_delta packet_note=unit_delta_singleton
+min_gate=component=26 gate=[253/1022,26/105] typed=E:6|B1:11 structural=('E|B1', 'branch1', 'right_bad_edge', 1, 1) len=1/15330 labels=('B0:81', 'B1:165')
+min_gate_touching_labels=('B0:81', 'B1:165') removes_edges=0 component_gain=0 largest_drop=0
+touching_label_hist_top={('B0:165', 'B1:179'): 8, ('B0:179', 'B1:165'): 8, ('B0:153', 'B1:179'): 5, ('B0:179', 'B1:153'): 5, ('B0:153', 'B1:165'): 4, ('B0:165', 'B1:153'): 4, ('B0:179', 'B1:81'): 3, ('B0:81', 'B1:179'): 3 ...}
+    dead[0] interval=[211/1022,55/266] len=3/9709 mid=2006/9709 mirror=3 owner_pair=B0:165/B1:179 residues=((11,), (11,)) labels=('B0:165', 'B1:179')
+    dead[1] interval=[211/462,307/672] len=1/7392 mid=2251/4928 mirror=2 owner_pair=B0:153/B1:81 residues=((13,), (11,)) labels=('B0:153', 'B1:81')
+    dead[2] interval=[365/672,251/462] len=1/7392 mid=2677/4928 mirror=1 owner_pair=B0:81/B1:153 residues=((11,), (13,)) labels=('B0:81', 'B1:153')
+    dead[3] interval=[211/266,811/1022] len=3/9709 mid=7703/9709 mirror=0 owner_pair=B0:179/B1:165 residues=((11,), (11,)) labels=('B0:179', 'B1:165')
+
+## Row random_covering_039
+speeds=(36, 39, 42, 44, 52, 58, 63, 66, 98, 102, 129, 160, 180)
+components=94 dead=2 low_rank_gates=12 e_branch_gates=12 touching_e_branch=12 edge_cuts=0 separating=0
+projection=components:2 largest:1 edges:0 dead_labels=('B0:129', 'B0:63', 'B1:129', 'B1:63')
+singleton_dead=2/2 mirror_failures=() owner_balance={}
+min_gate_kind=delta_sidecar_packet packet_note=cover_delta_sidecar
+min_gate=component=41 gate=[141/308,125/273] typed=E:2|B0:11 structural=('E|B0', 'branch0', 'right_bad_edge', 1, 2) len=1/12012 labels=('B0:39', 'B1:129', 'B1:63')
+min_gate_touching_labels=('B1:129', 'B1:63') removes_edges=0 component_gain=0 largest_drop=0
+touching_label_hist_top={('B0:129', 'B1:63'): 2, ('B1:129',): 2, ('B0:129',): 2, ('B0:63', 'B1:129'): 2, ('B0:63',): 1, ('B1:129', 'B1:63'): 1, ('B0:129', 'B0:63'): 1, ('B1:63',): 1}
+    dead[0] interval=[127/364,391/1120] len=3/14560 mid=10163/29120 mirror=1 owner_pair=B0:63/B1:129 residues=((7,), (3,)) labels=('B0:63', 'B1:129')
+    dead[1] interval=[729/1120,237/364] len=3/14560 mid=18957/29120 mirror=0 owner_pair=B0:129/B1:63 residues=((3,), (7,)) labels=('B0:129', 'B1:63')
+
+## Row random_covering_062
+speeds=(9, 12, 48, 50, 70, 81, 96, 138, 140, 154, 156, 171, 174)
+components=130 dead=2 low_rank_gates=26 e_branch_gates=26 touching_e_branch=26 edge_cuts=0 separating=0
+projection=components:2 largest:1 edges:0 dead_labels=('B0:81', 'B0:9', 'B1:81', 'B1:9')
+singleton_dead=2/2 mirror_failures=() owner_balance={}
+min_gate_kind=branch_unit_delta packet_note=unit_delta_singleton
+min_gate=component=45 gate=[442/1197,181/490] typed=B1:3|E:0 structural=('B1|E', 'branch1', 'left_bad_edge', 1, 1) len=11/83790 labels=('B0:81', 'B1:171')
+min_gate_touching_labels=('B0:81',) removes_edges=0 component_gain=0 largest_drop=0
+touching_label_hist_top={('B1:81',): 7, ('B0:81',): 7, ('B0:81', 'B1:9'): 3, ('B1:9',): 3, ('B0:9', 'B1:81'): 3, ('B0:9',): 3}
+    dead[0] interval=[211/490,419/966] len=53/16905 mid=7306/16905 mirror=1 owner_pair=B0:9/B1:81 residues=((9,), (11,)) labels=('B0:9', 'B1:81')
+    dead[1] interval=[547/966,279/490] len=53/16905 mid=9599/16905 mirror=0 owner_pair=B0:81/B1:9 residues=((11,), (9,)) labels=('B0:81', 'B1:9')
+
+## Row random_covering_074
+speeds=(2, 15, 42, 44, 56, 62, 75, 80, 99, 104, 120, 129, 159)
+components=84 dead=2 low_rank_gates=72 e_branch_gates=58 touching_e_branch=42 edge_cuts=0 separating=0
+projection=components:2 largest:1 edges:0 dead_labels=('B0:15', 'B0:99', 'B1:15', 'B1:99')
+singleton_dead=2/2 mirror_failures=() owner_balance={}
+min_gate_kind=delta_sidecar_packet packet_note=cover_delta_sidecar
+min_gate=component=10 gate=[155/903,125/728] typed=B0:3|E:6 structural=('B0|E', 'branch0', 'left_bad_edge', 1, 2) len=5/93912 labels=('B0:129', 'B1:159', 'B1:99')
+min_gate_touching_labels=('B1:99',) removes_edges=0 component_gain=0 largest_drop=0
+touching_label_hist_top={('B0:99',): 17, ('B1:99',): 17, ('B0:99', 'B1:15'): 3, ('B0:15', 'B1:99'): 3, ('B0:15',): 1, ('B1:15',): 1}
+    dead[0] interval=[57/434,37/280] len=1/1240 mid=2287/17360 mirror=1 owner_pair=B0:15/B1:99 residues=((1,), (1,)) labels=('B0:15', 'B1:99')
+    dead[1] interval=[243/280,377/434] len=1/1240 mid=15073/17360 mirror=0 owner_pair=B0:99/B1:15 residues=((1,), (1,)) labels=('B0:99', 'B1:15')
+
+## Row random_covering_086
+speeds=(40, 48, 103, 108, 110, 132, 133, 140, 146, 164, 169, 170, 176)
+components=142 dead=2 low_rank_gates=34 e_branch_gates=34 touching_e_branch=34 edge_cuts=0 separating=0
+projection=components:2 largest:1 edges:0 dead_labels=('B0:133', 'B0:169', 'B1:133', 'B1:169')
+singleton_dead=2/2 mirror_failures=() owner_balance={}
+min_gate_kind=branch_unit_delta packet_note=unit_delta_singleton
+min_gate=component=9 gate=[106/1183,69/770] typed=B1:1|E:12 structural=('B1|E', 'branch1', 'left_bad_edge', 1, 1) len=1/130130 labels=('B0:133', 'B1:169')
+min_gate_touching_labels=('B0:133', 'B1:169') removes_edges=0 component_gain=0 largest_drop=0
+touching_label_hist_top={('B1:169',): 6, ('B0:133', 'B1:169'): 6, ('B0:169',): 6, ('B0:169', 'B1:133'): 6, ('B1:133',): 5, ('B0:133',): 5}
+    dead[0] interval=[379/1232,237/770] len=1/6160 mid=3791/12320 mirror=1 owner_pair=B0:169/B1:133 residues=((1,), (7,)) labels=('B0:169', 'B1:133')
+    dead[1] interval=[533/770,853/1232] len=1/6160 mid=8529/12320 mirror=0 owner_pair=B0:133/B1:169 residues=((7,), (1,)) labels=('B0:133', 'B1:169')
+
+## Row random_covering_101
+speeds=(7, 10, 35, 44, 56, 64, 74, 90, 120, 130, 150, 167, 175)
+components=122 dead=2 low_rank_gates=50 e_branch_gates=48 touching_e_branch=30 edge_cuts=0 separating=0
+projection=components:2 largest:1 edges:0 dead_labels=('B0:175', 'B0:7', 'B1:175', 'B1:7')
+singleton_dead=2/2 mirror_failures=() owner_balance={}
+min_gate_kind=branch_unit_delta packet_note=unit_delta_singleton
+min_gate=component=47 gate=[337/910,433/1169] typed=E:4|B0:13 structural=('E|B0', 'branch0', 'right_bad_edge', 1, 1) len=11/151970 labels=('B0:167', 'B1:35')
+min_gate_touching_labels=() removes_edges=0 component_gain=0 largest_drop=0
+min_touching_gate=component=21 gate=[31/210,181/1225] typed=E:10|B0:7 structural=('E|B0', 'branch0', 'right_bad_edge', 1, 1) len=1/7350 labels=('B0:175', 'B1:7')
+min_touching_gate_labels=('B0:175', 'B1:7') removes_edges=0 component_gain=0 largest_drop=0
+touching_label_hist_top={('B1:175',): 6, ('B0:175',): 6, ('B0:7',): 5, ('B1:7',): 5, ('B0:175', 'B1:7'): 4, ('B0:7', 'B1:175'): 4}
+    dead[0] interval=[169/630,139/518] len=1/11655 mid=3127/11655 mirror=1 owner_pair=B0:7/B1:175 residues=((7,), (7,)) labels=('B0:7', 'B1:175')
+    dead[1] interval=[379/518,461/630] len=1/11655 mid=8528/11655 mirror=0 owner_pair=B0:175/B1:7 residues=((7,), (7,)) labels=('B0:175', 'B1:7')
+
+## Geometry Consequence
+All six rows have edgeless dead-cover projections, but their E/branch gates do touch the singleton dead labels.  The obstruction is therefore not 'find a larger projection cut'; there is no edge to cut.
+Every dead component is a singleton B0/B1 owner-pair component, and the exact interval mirror swaps the B0 and B1 owners.  The signed owner balance cancels row-by-row, so any useful current must be local to mirror pairs or touching gates rather than a raw global owner imbalance.
+The finite terminal packet splits cleanly: rows 039 and 074 have minimum E/branch gates in the cover-delta sidecar packet, while rows 001, 062, 086, and 101 have branch-specific unit-delta minima.
+
+## Tournament Analysis
+vertices=['S00_mirror_singleton_geometry_packet', 'S01_owner_current_locality_packet', 'S02_touching_gate_sidecar_packet', 'S03_unit_delta_vs_cover_delta_split', 'S04_section_boundary_interval_word', 'S05_residue_owner_pair_shadow', 'S06_raw_zero_edge_count', 'S07_raw_row_name_list']
+axes=('predicate_retention', 'mirror_component_payload', 'owner_pair_payload', 'touching_gate_payload', 'delta_sidecar_payload', 'formal_packet_fit', 'scalar_firewall')
+pairwise_observable=predicate retention + mirror component payload + owner-pair payload + touching-gate payload + delta-sidecar payload + scalar firewall
+switch_gauge=higher retained local proof payload first; ties follow mirror singleton geometry -> owner current -> gate touch -> delta split -> formal packet
+score_hist={4: 1, 10: 1, 46: 1, 56: 1, 60: 1, 62: 1, 63: 1, 65: 1}
+directed_3cycles=0
+hamiltonian_path=S00_mirror_singleton_geometry_packet -> S01_owner_current_locality_packet -> S02_touching_gate_sidecar_packet -> S03_unit_delta_vs_cover_delta_split -> S04_section_boundary_interval_word -> S05_residue_owner_pair_shadow -> S06_raw_zero_edge_count -> S07_raw_row_name_list
+assumption_challenge=considered runners, arcs, singleton components, mirror-paired components, owner pairs, fixed circle sections, section boundaries, touching gate events, residues, cover arcs, Fourier/color modes, and proof obligations.  Chosen carrier preserves the terminal singleton-current discharge predicate and destroys raw runner order, full interval order unless retained, and scalar gate-count shadows.

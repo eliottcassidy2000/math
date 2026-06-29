@@ -41,6 +41,29 @@ This makes the next proof target narrower: prove the six small-touch
 zero-edge rows harmless, then close the random031 gluing clause without
 forgetting route sidecar `R`.
 
+Result: added the script/result/reflection:
+
+```text
+04-computation/lrc14_small_touch_no_hard_geometry_codex_20260629.py
+05-knowledge/results/lrc14_small_touch_no_hard_geometry_codex_20260629.out
+07-reflections/lrc14-small-touch-no-hard-geometry-codex-20260629.md
+```
+
+Exact readout: `rows=6`, `total_dead_components=14`,
+`dead_count_hist={2:5,4:1}`, `projection_edge_rows=[]`,
+`singleton_cover_fail_rows=[]`, `mirror_failure_rows=[]`, and
+`owner_unbalanced_rows=[]`.  Every dead component is a singleton `B0`/`B1`
+owner-pair component with exact mirror-swapped partner.  E/branch touching
+counts are `56,12,26,42,34,30`, so the gates see the packet even though there
+are no projection edges to cut.
+
+The proof packet splits into two cover-delta sidecar rows
+(`random_covering_039`, `random_covering_074`) and four branch-unit-delta rows
+(`random_covering_001`, `random_covering_062`, `random_covering_086`,
+`random_covering_101`).  The next proof target is a finite mirror-singleton
+current lemma, probably split two-row/four-row, not larger E/branch pair
+enumeration.
+
 ## codex-2026-06-29 -- HYP-3477 hard mirror-orbit discharge audit
 
 Continued from HYP-3475 after rebasing over the incoming HYP-3476
