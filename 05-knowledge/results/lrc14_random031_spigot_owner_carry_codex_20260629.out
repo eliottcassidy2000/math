@@ -1,0 +1,84 @@
+HYP-3523 RANDOM031 SPIGOT OWNER-CARRY AUDIT
+status=EVIDENCE / streaming proof-interface scout; not an LRC14 proof
+row=random_covering_031
+source_inspiration=https://en.wikipedia.org/wiki/Spigot_algorithm
+spigot_reading=emit only locally stable owner certificates; keep the unemitted owner-boundary debt as bounded carry.
+
+## Input Certificates
+seam_owner_word=(23, 45, 93, 113, 147, 169, 173)
+transport_owner_word=(23, 93, 113)
+lower_bypass_owner_word=(23, 93, 113)
+branch_boundary_owner_word=(23, 93, 147, 169)
+branch_boundary_by_branch={0: (23, 93, 147, 169), 1: (23, 93, 147, 169)}
+branch_boundary_intersections={0: (169,), 1: (169,)}
+branch_lift=(147, 169)
+transport_only=(113,)
+residual_after_transport=(45, 147, 169, 173)
+residual_after_branch=(45, 173)
+owner_boundary_persistence_word=PDPPOOO
+mirror_owner_persistent=True
+bypass_owner_word_hist={(23, 93, 113): 12}
+lower_bypass_matches_transport=True
+branch_word_constant=True
+branch_intersection_constant=True
+
+## Spigot Emission Schedule
+S0_load_forbidden_seam observer=max_delta_seam_owner_word emitted=() incoming_carry=() outgoing_carry=(23, 45, 93, 113, 147, 169, 173) stable=True
+  certificate=two mirror seam gates on components (43,54)
+  destroys=phase order until u/branch sidecar is attached
+  proof_pull=establish the seven-owner initial payload
+S1_emit_transport_word observer=lower_delta_bypass_stalk emitted=(23, 93, 113) incoming_carry=(23, 45, 93, 113, 147, 169, 173) outgoing_carry=(45, 147, 169, 173) stable=True
+  certificate=all 12 bypass cells and six mirror pairs carry (23,93,113)
+  destroys=seam-only owners unless carry is retained
+  proof_pull=prove transport-word constancy
+S2_emit_branch_bracket_lift observer=ordinary_neighbors_of_bypass_interval emitted=(147, 169) incoming_carry=(45, 147, 169, 173) outgoing_carry=(45, 173) stable=True
+  certificate=both branch sheets have boundary word (23,93,147,169) and intersection (169,)
+  destroys=raw branch order after the bracket sidecar is emitted
+  proof_pull=prove branch-boundary bracket lift
+S3_emit_free_hole_cap_certificates observer=HYP-3511_bracketed_free_holes emitted=() incoming_carry=(45, 173) outgoing_carry=(45, 173) stable=True
+  certificate=14 free-hole packets are bracketed as 10 singles plus 2 half-open doublets
+  destroys=free-hole cell order after bracket/doublet id is retained
+  proof_pull=splice HYP-3511 into the owner-boundary terminal dispatch
+S4_defer_residual_pair observer=puncture_apex_owner_carry emitted=() incoming_carry=(45, 173) outgoing_carry=(45, 173) stable=True
+  certificate=residual carry is the two-owner pair (45,173)
+  destroys=terminal closure until the HYP-3490/HYP-3513 route sidecar is proved
+  proof_pull=prove the residual two-owner boundary lemma
+carry_widths=(7, 4, 2, 2, 2)
+emitted_widths=(0, 3, 2, 0, 0)
+carry_monotone_after_load=True
+bounded_carry_max_after_transport=4
+terminal_residual_closed=False
+reading=HYP-3522 converts the HYP-3520 four-owner carry into a two-owner residual carry; it does not close that residual by itself.
+
+## Binary Relations
+emit_precedence=S0_load_forbidden_seam < S1_emit_transport_word < S2_emit_branch_bracket_lift < S3_emit_free_hole_cap_certificates < S4_defer_residual_pair
+carry_refinement=(23, 45, 93, 113, 147, 169, 173) -> (45, 147, 169, 173) -> (45, 173)
+safe_forget_relation=('flow_class', 'owner_boundary_persistence_class', 'owner_presence_word', 'seam_debt_word')
+forbidden_forget_relation=('component_size', 'endpoint_rank_word', 'mirror_closed_shadow', 'raw_owner_count', 'seam_owner_count')
+contaminated_global_flow_minus_bypass=(45, 55, 147, 169, 173)
+
+## Stream Interface Tournament
+interface | score | stable | emitted | residual | contaminant | destroys | repair
+exact_spigot_owner_state | 110 | True | (23, 93, 113, 147, 169) | (45, 173) | () | nothing terminal; keeps transport, lift, residual, and route hook | formalize as finite-state owner-carry transducer
+transport_branch_residual_words | 109 | True | (23, 93, 113, 147, 169) | (45, 173) | () | raw u-order and individual cell ids | attach HYP-3486 cell packet only inside local lemmas
+owner_boundary_persistence_word | 92 | True | () | (45, 173) | () | which owner was emitted in which stage | expand PDPPOOO by HYP-3522 filtration when proving residual
+seam_and_bypass_owner_words | 91 | True | (23, 93, 113) | (45, 147, 169, 173) | () | branch-boundary lift (147,169) | add ordinary-neighbor bracket sidecar
+flow_class_owner_union_sheet_pgf | 90 | True | (23, 93, 113) | (45, 147, 169, 173) | () | owner-current order inside the pure bypass | attach HYP-3522 filtration before residual lemma
+bypass_owner_word_only | 27 | False | (23, 93, 113) | () | () | all stationary owner-boundary carry | add forbidden seam owner word
+raw_owner_count_shadow | 10 | False | () | () | () | which three owners and whether they are discharged | replace count by owner_union
+global_flow_minus_bypass | 9 | False | (23, 93, 113) | (45, 55, 147, 169, 173) | (55,) | pure-bypass locality | remove contaminant 55 with hard-component owner map
+endpoint_rank_shadow | 9 | False | () | () | () | owner labels and terminal class | replace with owner_presence_word or seam_debt_word
+score_hist={9: 2, 10: 1, 27: 1, 90: 1, 91: 1, 92: 1, 109: 1, 110: 1}
+directed_3cycles=0
+hamiltonian_path=exact_spigot_owner_state -> transport_branch_residual_words -> owner_boundary_persistence_word -> seam_and_bypass_owner_words -> flow_class_owner_union_sheet_pgf -> bypass_owner_word_only -> raw_owner_count_shadow -> global_flow_minus_bypass -> endpoint_rank_shadow
+
+## Proof Pull
+P1: State the random031 pure-bypass proof as a bounded owner-carry transducer: seam payload in, transport digit out, branch-lift digit out, residual carry (45,173) retained.
+P2: Treat the spigot safety predicate as quotient constancy: a digit may be emitted only when all observers in its fiber agree.
+P3: Raw owner count, endpoint rank, component size, and mirror closure are illegal emitters because HYP-3520 shows they mix terminal classes.
+P4: The next terminal lemma should be phrased as 'no legal residual two-owner carry survives the route sidecar R', not as a search for more bypass hits.
+
+## Assumption Challenge
+Considered vertices: runners, arcs, hard gates, bypass cells, branch boundaries, owner labels, free-hole packets, u-fibers, carry states, quotient observers, and proof obligations.
+Chosen vertices are streaming proof interfaces.  This preserves the random031 terminal owner predicate and intentionally destroys raw phase order only after the emitted owner word and residual carry have been recorded.
+Challenged assumption: the pure bypass is not a wall-crossing event that must carry all seven owners.  It is a finite-state emitter whose stable output is (23,93,113)+(147,169), with carry (45,173).

@@ -10,6 +10,7 @@ script: 04-computation/lrc14_random031_owner_boundary_filtration_codex_20260629.
 result: 05-knowledge/results/lrc14_random031_owner_boundary_filtration_codex_20260629.out
 reflection: 07-reflections/lrc14-random031-owner-boundary-filtration-codex-20260629.md
 related:
+  - HYP-3523
   - HYP-3521
   - HYP-3520
   - HYP-3513
@@ -169,6 +170,11 @@ The sharpened random031 terminal interface is now four lemmas:
 
 This gives a proof-facing target that is both smaller and more legal than the
 old seven-owner gluing clause.
+
+HYP-3523 packages this filtration as a spigot-style owner-carry interface:
+transport `(23,93,113)` and branch lift `(147,169)` are stable emissions, and
+the pair `(45,173)` is the residual carry.  That does not close the terminal
+lemma, but it gives a finite-state statement for the next proof attempt.
 
 ## Why This Matters
 

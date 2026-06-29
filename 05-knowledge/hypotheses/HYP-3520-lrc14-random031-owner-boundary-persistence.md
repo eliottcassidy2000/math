@@ -10,6 +10,7 @@ script: 04-computation/lrc14_random031_owner_boundary_persistence_codex_20260629
 result: 05-knowledge/results/lrc14_random031_owner_boundary_persistence_codex_20260629.out
 reflection: 07-reflections/lrc14-random031-owner-boundary-persistence-codex-20260629.md
 related:
+  - HYP-3523
   - HYP-3522
   - HYP-3513
   - HYP-3512
@@ -260,6 +261,9 @@ filtration keeps the transport word `(23,93,113)`, uses adjacent ordinary
 branch-boundary cells to lift `(147,169)`, and leaves a residual pair
 `(45,173)`.  HYP-3520 is therefore the persistence/quotient guardrail for the
 whole boundary word; HYP-3522 is the next lemma shape for splitting that word.
+HYP-3523 then packages the split as a bounded owner-carry transducer: stable
+emissions `(23,93,113)` and `(147,169)`, residual carry `(45,173)`, and no
+permission for scalar shadows to emit terminal proof digits.
 
 ## Reframe
 

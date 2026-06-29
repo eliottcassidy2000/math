@@ -93,28 +93,76 @@ Next agent hook: formalize `ordinary_route_emit`, `free_hole_single_emit`,
 and `free_hole_doublet_buffer_emit`; then close `residual_pair_close_tail` by
 proving the two-owner `(45,173)` no-hidden-tail boundary lemma with route `R`.
 
-## LTI-523 - Random031 certificate spigot
+## LTI-523 - Random031 certificate spigot / owner-carry
 
-Carrier / vertex set: proof-output states in a terminal certificate stream:
-ordinary route emissions, free-hole predigits, doublet carry buffers, pure
-bypass owner-boundary carry, private-firewall guard, vertical-halfturn guard,
-and raw scalar shadows.
+Carrier / vertex set: proof-output states in a terminal certificate stream and
+streaming proof interfaces for the random031 owner-boundary packet: ordinary
+route emissions, free-hole predigits, doublet carry buffers, exact spigot
+owner state, transport/branch/residual words, owner-boundary persistence word,
+seam/bypass owner words, flow-class/owner-union/sheet-PGF packet, bypass-only
+word, raw owner count, global-flow shortcut, endpoint-rank shadow,
+private-firewall guard, and vertical-halfturn guard.
+
 Pairwise observable: whether a terminal certificate can be emitted without
-future invalidation by unresolved carry/debt.
-Preserved LRC predicate: no-backtracking random031 terminal dispatch.
+future invalidation by unresolved carry/debt, plus locally stable emitted owner
+word, residual carry width, quotient safety, contaminant owner penalty, and
+sidecar cost.
+
+Binary relation or gauge: `A -> B` when `A` emits a stable owner certificate
+with no larger residual carry and no worse contaminant set; ties follow the
+declared sidecar path.
+
+Preserved LRC predicate: no-backtracking random031 terminal dispatch.  For the
+pure-bypass hard substream, the predicate after HYP-3522 is:
+
+```text
+emit transport (23,93,113)
+emit branch lift (147,169)
+retain residual carry (45,173)
+```
+
 Destroyed information: branch/u order, owner-boundary charge, and free-hole
-bracket status if the stream is scalarized.
+bracket status if the stream is scalarized.  Raw phase order, individual cell
+ids, and free-hole cell order may be forgotten only after the emitted owner
+word and residual carry are retained.  Owner count, endpoint rank, component
+size, mirror closure, seam-owner count, and global-flow owner union are unsafe
+emitters.
+
+Exact HYP-3523 readout:
+
+```text
+carry_widths=(7,4,2,2,2)
+bounded_carry_max_after_transport=4
+terminal_residual_closed=False
+safe_forget_relation=('flow_class','owner_boundary_persistence_class',
+                      'owner_presence_word','seam_debt_word')
+forbidden_forget_relation=('component_size','endpoint_rank_word',
+                           'mirror_closed_shadow','raw_owner_count',
+                           'seam_owner_count')
+global_flow_minus_bypass=(45,55,147,169,173)
+```
+
 Best use: convert HYP-3521's terminal ledger into a proof procedure with
 explicit carry buffers.  HYP-3523 now emits `77` terminal certificates from
 `79` component events while covering all `282` cells, with no untyped pending
-carry.
-Failure mode: emitting a bypass or free-hole "digit" before its owner or
-bracket carry is discharged.
-Anchors: HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
-HYP-3511, HYP-3510, HYP-3494, HYP-3490, HYP-3486, T1523, LTT-423.
+carry; the pure-bypass hard substream remains a finite owner-carry transducer
+with residual `(45,173)` under the HYP-3490/HYP-3513 route sidecar.
+
+Failure mode: emitting a bypass or free-hole digit before its owner or bracket
+carry is discharged.  Treating the bypass owner word or any scalar count as an
+emitted terminal digit erases the stationary carry; using global flow adds
+contaminant `55`.
+
+Anchors: HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513,
+HYP-3512, HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490, HYP-3486,
+T1523, LTT-423, OPEN-Q-108.
+
 Next agent hook: formalize the emitted stream: ordinary digits, HYP-3511
 doublet buffering, HYP-3522 owner-filtration carry, HYP-3513 route sidecar
-`R`, vertical guard, and residual `(45,173)` boundary debt.
+`R`, vertical guard, and residual `(45,173)` boundary debt.  If a smaller
+formal target is needed, use the state tuple `(seam_payload,
+emitted_transport, emitted_branch_lift, free_hole_cap_status, residual_pair,
+route_sidecar)`.
 
 ## LTI-520 - Random031 owner-boundary persistence
 
@@ -191,27 +239,6 @@ free-hole bracket, or pure-bypass sidecar.  Then turn
 `45:+1,147:+1,169:+1,173:+1` into a Lean-facing owner-current/relative-H1
 boundary lemma while retaining `PDPPOOO`, the pure-bypass exit label, owner
 union, or legal sheet-PGF bucket across any component quotient.
-
-## LTI-523 - Random031 spigot-style terminal stream
-
-Carrier / vertex set: terminal stream states for HYP-3521 certificates, with
-predigit buffer, owner carry, emitted prefix, and HYP-3513 route sidecar `R`.
-Pairwise observable: whether the carrier preserves stream action, bounded
-carry, terminal discharge, and firewall route attachment.
-Preserved LRC predicate: random031 terminal-discharge predicate after ordinary
-route, free-hole bracket, and bypass owner-boundary certificates emit.
-Destroyed information: raw component identity and raw runner order after a
-certificate emits; terminal class alone is too coarse unless spigot state is
-attached.
-Best use: formalize a bounded-state scheduler:
-`emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`.
-Failure mode: using component type, terminal class, or terminal class plus
-cluster as the quotient; all mix stream actions before the predigit/carry state
-is named.
-Anchors: HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511,
-HYP-3510, HYP-3490, HYP-3486, T1523, LTT-423.
-Next agent hook: turn the stream audit into a Lean-facing state machine lemma,
-then isolate the residual `(45,173)` owner-boundary proof.
 
 ## LTI-522 - Random031 owner-boundary bracket filtration
 

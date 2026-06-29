@@ -96,6 +96,40 @@ obligations, and proof-carrier interfaces.
   HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
   T1527, LTI-527.
 
+## LTT-423 - Certificate-Spigot / Owner-Carry Tournament
+
+- **Move:** Treat random031 terminal certificates and owner-boundary proof
+  states as a spigot-style streaming tournament.  A vertex may emit a digit
+  only when the relevant observer fiber is stable, and it must retain any
+  unresolved proof debt as explicit carry.
+- **LRC use:** HYP-3523 streams HYP-3521's ledger as `79` component events
+  emitting `77` terminal certificates covering all `282` cells, with no
+  untyped pending carry.  Its pure-bypass substream turns HYP-3520/HYP-3522
+  into a finite-state owner interface: seam `(23,45,93,113,147,169,173)` emits
+  transport `(23,93,113)`, then branch lift `(147,169)`, leaving residual
+  carry `(45,173)` for the next terminal lemma.
+- **Preserves:** branch/u order, terminal class, bracket/doublet carry,
+  emitted owner word, residual carry, HYP-3511 free-hole cap status, HYP-3520
+  quotient safety, HYP-3513 route sidecar `R`, and the vertical-halfturn guard.
+- **Forgets / guardrail:** raw phase order and cell ids are forgettable only
+  after emission and carry are recorded.  Owner count, endpoint rank, component
+  size, mirror closure, seam-owner count, and global-flow union are illegal
+  emitters; global-flow-minus-bypass adds contaminant `55`.
+- **Pairwise observable:** stable emitted owner word, residual carry width,
+  quotient safety, sidecar cost, and contaminant penalty.
+- **Switch/gauge:** safe emission first, then smaller residual carry, then
+  lower sidecar cost.  Fixed path begins with the exact state before legal
+  compressed shadows.
+- **Fingerprint:** score histogram
+  `{9:2,10:1,27:1,90:1,91:1,92:1,109:1,110:1}`, no directed `3`-cycles, and
+  path `exact_spigot_owner_state -> transport_branch_residual_words -> owner_boundary_persistence_word -> seam_and_bypass_owner_words -> flow_class_owner_union_sheet_pgf -> bypass_owner_word_only -> raw_owner_count_shadow -> global_flow_minus_bypass -> endpoint_rank_shadow`.
+- **Next pull:** Formalize ordinary-route digits, HYP-3511 doublet buffering,
+  HYP-3522 owner-filtration carry, HYP-3513 route sidecar `R`, vertical guard,
+  and the residual `(45,173)` no-survival lemma.
+- **Pointers:** HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513,
+  HYP-3512, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, T1523,
+  LTI-523, OPEN-Q-108.
+
 ## LTT-420 - Owner-Boundary Sidecar Tournament
 
 - **Move:** Use owner-boundary proof carriers as vertices:
@@ -146,23 +180,6 @@ obligations, and proof-carrier interfaces.
   HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3483, HYP-3402, HYP-3034,
   T1520, LTI-520.
 
-## LTT-423 - Spigot-Stream Certificate Tournament
-
-- **Move:** Orient terminal stream states by their ability to emit random031
-  certificates while retaining only bounded predigit/carry state.
-- **LRC use:** HYP-3523 turns the HYP-3521/HYP-3522 terminal packet into
-  `79` component events emitting `77` certificates, with one-component
-  doublet buffers and owner carry `(45,147,169,173)->(45,173)`.
-- **Preserves:** Stream action, free-hole doublet closure, HYP-3522 branch
-  lift, residual owner pair, and HYP-3513 route sidecar `R`.
-- **Forgets / guardrail:** Component type, terminal class, and
-  terminal-class-plus-cluster all mix stream actions; `terminal_class+spigot_state`
-  is the first pure compressed carrier.
-- **Next pull:** Prove the Lean-facing stream state
-  `emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`.
-- **Pointers:** HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511,
-  HYP-3510, HYP-3490, HYP-3486, T1523, LTI-523.
-
 ## LTT-422 - Owner-Boundary Bracket-Filtration Tournament
 
 - **Move:** Orient owner-boundary proof carriers by how much of the
@@ -182,25 +199,6 @@ obligations, and proof-carrier interfaces.
 - **Pointers:** HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494,
   HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485, T1522,
   LTI-522.
-
-## LTT-423 - Certificate-Spigot Carry Tournament
-
-- **Move:** Treat random031 terminal certificates as stream outputs and orient
-  edges by which output state can be emitted with less unresolved carry.
-- **LRC use:** Tests whether HYP-3521 is a no-backtracking terminal proof
-  procedure or only a static ledger.
-- **Preserves:** Branch/u order, terminal class, bracket/doublet carry,
-  owner-boundary carry, private-firewall guard, and vertical-halfturn guard.
-- **Forgets / guardrail:** Raw emitted counts forget predigits and possible
-  carry from free-hole or owner-boundary debt.
-- **Readout:** HYP-3523 emits `77` terminal certificates from `79` component
-  events covering all `282` cells; the two held free-hole predigits are later
-  emitted, and the only remaining carry is typed residual boundary `(45,173)`.
-- **Next pull:** Formalize the emitted stream as ordinary-route, HYP-3511
-  bracket/doublet, HYP-3522 owner-filtration, HYP-3513 route-sidecar, and
-  vertical-guard lemmas.
-- **Pointers:** HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
-  HYP-3511, HYP-3510, HYP-3494, HYP-3490, HYP-3486, T1523, LTI-523.
 
 ## LTT-424 - Spigot/Hydrotope Residual Tournament
 

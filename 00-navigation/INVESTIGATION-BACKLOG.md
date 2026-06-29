@@ -61,19 +61,6 @@ Keep tournament vertices as emission rules/proof obligations, not runners.
 Use raw `12/40/79/242/282` only as checksums after the guard succeeds. ->
 HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3493, HYP-3490,
 HYP-3486, HYP-3511, HYP-3510, LTI-525, LTT-425, T1525, OPEN-Q-108.
-**HYP-3523 random031 spigot-style terminal stream.**  Turn the HYP-3521/HYP-3522
-random031 terminal packet into a Lean-facing bounded-state scheduler.  Exact
-readout: `79` component events emit `77` terminal certificates; `64` ordinary
-route components and `10` free-hole singles emit immediately; HYP-3511 doublet
-clusters `(8,13)` and `(2,3)` each use a one-component predigit buffer and close
-at the next event; the bypass opens owner carry `(45,147,169,173)` at rank `45`,
-the branch-boundary ordinary component at rank `46` applies lift `(147,169)`,
-and the residual carry is `(45,173)`.  Next tasks: formalize the stream state
-`emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`; prove
-terminal-class compression is legal only after adding spigot state; then use
-the scheduler to isolate the residual two-owner boundary lemma. -> HYP-3523,
-HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490,
-HYP-3486, LTI-523, LTT-423, T1523, OPEN-Q-108.
 **HYP-3526 spigot route-sidecar dispatch.**  Turn the current HYP-3513 guardrail
 into a formal proof interface.  Exact finite readout: `I/Q` preserve
 private-firewall status and private/dead/nondead status, but `I`, `Q`, `I+Q`,
@@ -87,6 +74,35 @@ dispatch lemma; express random031 terminal emission as a bounded-carry
 spigot-style step rather than a row-name exception list. -> HYP-3526, HYP-3522,
 HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3490, HYP-3486,
 HYP-3485, LTI-526, LTT-426, T1526, OPEN-Q-108.
+**HYP-3523 random031 certificate spigot / owner-carry.**  Promote the
+spigot-inspired terminal procedure to formal lemmas.  Exact terminal stream:
+`79` component events emit `77` terminal certificates covering all `282` cells,
+with `64` ordinary immediate route digits, `10` free-hole single bracket
+digits, two HYP-3511 free-hole doublet predigit buffers later emitted as
+collapsed doublet certificates, and one pure-bypass owner-filtration digit.
+Carry readout: the bypass opens owner carry `(45,147,169,173)` at rank `45`,
+the branch-boundary ordinary component at rank `46` applies HYP-3522 lift
+`(147,169)`, and the residual carry is `(45,173)` with
+`untyped_pending_carry=0`.  Companion owner-carry stream:
+`(23,45,93,113,147,169,173) -> (45,147,169,173) -> (45,173)` after emitting
+transport `(23,93,113)` and branch lift `(147,169)`, with carry widths
+`(7,4,2,2,2)`, carry-neutral HYP-3511 cap emission, persistence word
+`PDPPOOO`, and contaminant shortcut
+`global_flow_minus_bypass=(45,55,147,169,173)`.  Next tasks: formalize
+ordinary emission, HYP-3511 doublet buffering, HYP-3522 bypass carry,
+HYP-3513 route sidecar `R`, the vertical-halfturn guard, quotient-fiber
+constancy for owner emissions, and the residual `(45,173)` no-hidden-tail
+lemma.  HYP-3526 now supplies the route-dispatch guard: `I/Q` may discharge
+the row-free private cut, but terminal emission still carries `R` until route
+reconstruction is proved.  HYP-3527 packages these emissions as proof
+contracts, and HYP-3528 re-executes the router as the one-red-clause ABI:
+close `residual_pair_close_tail` for `(45,173)` with `R` and
+`no_hidden_tail_guard`.
+Tournament vertices are output states and carry buffers, not
+runners/arcs/raw counts. -> HYP-3523, HYP-3522, HYP-3521, HYP-3520,
+HYP-3528, HYP-3527, HYP-3526, HYP-3513, HYP-3512, HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490,
+HYP-3486, HYP-3485, HYP-3483, HYP-3482, HYP-3481, HYP-3402, HYP-3034,
+LTI-523, LTT-423, T1523, OPEN-Q-108.
 
 **HYP-3522 random031 owner-boundary bracket filtration.**  Turn the HYP-3522
 filtration into the next terminal owner-boundary lemma.  Exact readout:
@@ -104,35 +120,6 @@ HYP-3490/HYP-3513 private-label firewall route sidecar. -> HYP-3522, HYP-3521, H
 HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485,
 HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455,
 HYP-3402, HYP-3034, LTI-522, LTT-422, T1522, OPEN-Q-108.
-**HYP-3523 random031 certificate spigot.**  Promote the spigot-inspired
-terminal procedure to formal lemmas.  Exact stream: `79` component events emit
-`77` terminal certificates covering all `282` cells, with `64` ordinary
-immediate route digits, `10` free-hole single bracket digits, two free-hole
-doublet predigit buffers later emitted as collapsed doublet certificates, and
-one pure-bypass owner-filtration digit.  Carry readout: `untyped_pending_carry=0`
-and typed residual `(45,173)` after transport `(23,93,113)` plus bracket lift
-`(147,169)`.  Next tasks: formalize ordinary emission, HYP-3511 doublet
-buffering, HYP-3522 bypass carry, HYP-3513 route sidecar `R`, and the
-vertical-halfturn guard.  Tournament vertices are output states and carry
-buffers, not runners/arcs/raw counts. -> HYP-3523, HYP-3522, HYP-3521,
-HYP-3520, HYP-3513, HYP-3512, HYP-3511, HYP-3510, HYP-3494, HYP-3493,
-HYP-3490, HYP-3486, HYP-3483, LTI-523, LTT-423, T1523, OPEN-Q-108.
-
-**HYP-3520 random031 owner-boundary persistence.**  The quotient-price matrix
-is now executable.  Exact readout: the forbidden seam on `(43,54)` carries
-`(23,45,93,113,147,169,173)`, the lower-delta bypass on the same components
-carries `(23,93,113)`, pure bypass stalk `R01` has `12` cells, branch split
-`6/6`, endpoint rank `(2,)`, and `external_horizontal_ports=0`, and the
-owner-current signature is `45:+1,147:+1,169:+1,173:+1`.  Next task:
-formalize a terminal owner-current/relative-H1 lemma compatible with the
-HYP-3490 private-label firewall and HYP-3493 seam-sheaf table.  Guardrails:
-raw `12`, raw `282`, component-pair, delta-route, bypass-owner-only,
-dead-island-only, and global-flow quotients do not preserve the exact boundary
-word; HYP-3493's component canary also marks owner count, endpoint rank,
-branch histogram, size, and mirror closure as unsafe because they mix pure
-bypass debt with discharged context. -> HYP-3520, HYP-3512, HYP-3494, HYP-3493, HYP-3511, HYP-3510,
-HYP-3490, HYP-3486, HYP-3483, HYP-3481, HYP-3402, HYP-3034, LTI-520,
-LTT-420, T1520, OPEN-Q-108.
 **HYP-3520 random031 owner-boundary persistence.**  The owner-boundary
 certificate is now executable at seam-local, component-persistence, and
 seam-sheaf canary levels.  Exact seam readout: the forbidden seam on `(43,54)`

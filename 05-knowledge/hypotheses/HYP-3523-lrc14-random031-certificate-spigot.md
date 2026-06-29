@@ -1,26 +1,39 @@
 ---
 id: HYP-3523
 title: LRC14 random031 spigot-style terminal certificate stream
-status: EVIDENCE / finite streaming certificate scheduler; not an LRC14 proof
-source: codex-2026-06-29 spigot-inspired continuation of HYP-3522, HYP-3521, HYP-3520, and HYP-3513
+status: EVIDENCE / finite streaming certificate scheduler plus owner-carry quotient subaudit; not an LRC14 proof
+source: codex-2026-06-29 spigot-inspired continuation of HYP-3522, HYP-3521, HYP-3520, HYP-3513, extended by HYP-3525 guarded emission, HYP-3526 route-sidecar dispatch, HYP-3527 proof-contract routing, HYP-3528 one-red-clause execution, and the exact owner-carry companion audit
 tangent: T1523
 technique: LTI-523
 tournament_technique: LTT-423
 script: 04-computation/lrc14_random031_certificate_spigot_codex_20260629.py
 result: 05-knowledge/results/lrc14_random031_certificate_spigot_codex_20260629.out
+companion_script: 04-computation/lrc14_random031_spigot_owner_carry_codex_20260629.py
+companion_result: 05-knowledge/results/lrc14_random031_spigot_owner_carry_codex_20260629.out
 reflection: 07-reflections/lrc14-random031-certificate-spigot-codex-20260629.md
 related:
+  - HYP-3528
+  - HYP-3527
+  - HYP-3526
+  - HYP-3525
+  - HYP-3524
   - HYP-3522
   - HYP-3521
   - HYP-3520
   - HYP-3513
+  - HYP-3512
   - HYP-3511
   - HYP-3510
+  - HYP-3494
+  - HYP-3493
   - HYP-3490
   - HYP-3486
   - HYP-3485
   - HYP-3483
+  - HYP-3482
   - HYP-3481
+  - HYP-3402
+  - HYP-3034
   - THM-523
   - OPEN-Q-108
 ---
@@ -53,15 +66,39 @@ ordinary component reduces it to `(45,173)`.
 
 This does not prove LRC14.  It gives a compact scheduler for the remaining
 random031 proof obligations and prevents the proof from retaining the whole
-component table after certificates have already emitted.
+component table after certificates have already emitted.  HYP-3525 supplies the
+general guard rule: a proof token may emit only when every hidden tail
+compatible with the visible quotient has the same terminal/route/owner target.
+Incoming HYP-3526 supplies the concrete route-sidecar guardrail: `I/Q` can be
+used as a row-free private-cut interface, but current data does not reconstruct
+the HYP-3490 route from `I/Q` or from the tested colored axes plus `I/Q`, so
+terminal dispatch still carries route sidecar `R`.
+Incoming HYP-3527 then consumes the HYP-3523 stream/carry state as part of the
+finite proof-contract router: three interfaces are formal-ready, four clauses
+carry required sidecars, and the only open tail lemma is the residual
+`(45,173)` no-hidden-tail boundary clause.
+Incoming HYP-3528 re-executes that router as a sidecars-to-safe-emission ABI
+and makes the remaining red clause unique:
+`residual_pair_close_tail = residual (45,173) + R + no_hidden_tail_guard`.
+Concurrent THM-578/HYP-3529 is not a random031 dependency, but it reinforces
+the same proof discipline on a different LRC14 doublet: exact decomposition
+and bounded tail are enough; sharp scalar constants are not substitutes for a
+typed residual.
 
 ## Exact Readout
 
-Computed by:
+Primary stream computation:
 
 ```text
 04-computation/lrc14_random031_certificate_spigot_codex_20260629.py
 05-knowledge/results/lrc14_random031_certificate_spigot_codex_20260629.out
+```
+
+Companion owner-carry quotient audit:
+
+```text
+04-computation/lrc14_random031_spigot_owner_carry_codex_20260629.py
+05-knowledge/results/lrc14_random031_spigot_owner_carry_codex_20260629.out
 ```
 
 Stream summary:
@@ -124,6 +161,44 @@ rank=45 open_owner_carry carry=(45,147,169,173)
 rank=46 apply_branch_boundary_lift carry=(45,173)
 ```
 
+## Owner-Carry Companion
+
+The companion audit checks that the owner-carry emissions are locally stable
+before they are treated as proof digits:
+
+```text
+mirror_owner_persistent=True
+bypass_owner_word_hist={(23,93,113):12}
+lower_bypass_matches_transport=True
+branch_word_constant=True
+branch_intersection_constant=True
+carry_widths=(7,4,2,2,2)
+bounded_carry_max_after_transport=4
+terminal_residual_closed=False
+owner_boundary_persistence_word=PDPPOOO
+global_flow_minus_bypass=(45,55,147,169,173)
+```
+
+The extra owner `55` warns that global flow is not the local bypass emitter.
+The safe forgetful relations for the owner target are:
+
+```text
+flow_class
+owner_boundary_persistence_class
+owner_presence_word
+seam_debt_word
+```
+
+The forbidden shortcuts are:
+
+```text
+component_size
+endpoint_rank_word
+mirror_closed_shadow
+raw_owner_count
+seam_owner_count
+```
+
 ## Quotient Result
 
 Target: preserve the stream action at each component event.
@@ -149,8 +224,8 @@ state restores purity without falling back to raw component identity.
 ## Micro Release Test
 
 A second, smaller quotient test is useful for future proof compression.  The
-safe bypass packet is the only carrier in the tested family that both emits
-the certified prefix and keeps all typed carry:
+safe bypass packet is the only carrier in the tested family that both emits the
+certified prefix and keeps all typed carry:
 
 ```text
 full_spigot_packet              score=87
@@ -169,7 +244,7 @@ named.
 
 ## Proof Pull
 
-HYP-3523 turns the HYP-3521/HYP-3522 terminal interface into five proof tasks:
+HYP-3523 turns the HYP-3521/HYP-3522 terminal interface into six proof tasks:
 
 1. Treat the `77` random031 terminal certificates as a left-to-right stream over
    component events.
@@ -182,6 +257,15 @@ HYP-3523 turns the HYP-3521/HYP-3522 terminal interface into five proof tasks:
 5. Attach the HYP-3513 route sidecar `R` or prove route reconstruction; the
    final non-streamed proof object is the residual owner pair `(45,173)`, not
    the full seven-owner seam.
+6. Use HYP-3526's route-dispatch check to keep `R` in every terminal emission
+   until a genuine route-reconstruction theorem replaces it.
+7. Use HYP-3525 guarded emission to state which visible packets may emit route,
+   terminal, or owner tokens and which must hold the first missing sidecar.
+8. Feed these clauses to HYP-3527's proof-contract router, whose ledger leaves
+   exactly one open tail: residual `(45,173)` with route `R`.
+9. Use HYP-3528's one-red-clause execution as the closeout target: every
+   other contract row is finite evidence plus formalization debt, so the next
+   theorem-facing move is only `residual_pair_close_tail`.
 
 The proof-facing invariant is:
 
@@ -197,12 +281,12 @@ at most `4` labels before reducing to the two-owner residual.
 Vertices are stream states and proof-carrier buffers, not runners or raw arcs.
 
 Pairwise observable: streamability, bounded carry, terminal predicate retention,
-and route/firewall sidecar retention.
+owner-emission stability, and route/firewall sidecar retention.
 
 Switch/gauge: higher proof-facing stream score; ties use the fixed carrier
 order.
 
-Fingerprint:
+Primary stream fingerprint:
 
 ```text
 score_hist={10:1, 41:1, 63:1, 80:1, 86:1, 92:1, 98:1, 104:1}
@@ -218,19 +302,40 @@ hamiltonian_path=
   -> raw_cell_count_shadow
 ```
 
+Owner-carry companion fingerprint:
+
+```text
+score_hist={9:2,10:1,27:1,90:1,91:1,92:1,109:1,110:1}
+directed_3cycles=0
+hamiltonian_path=
+  exact_spigot_owner_state
+  -> transport_branch_residual_words
+  -> owner_boundary_persistence_word
+  -> seam_and_bypass_owner_words
+  -> flow_class_owner_union_sheet_pgf
+  -> bypass_owner_word_only
+  -> raw_owner_count_shadow
+  -> global_flow_minus_bypass
+  -> endpoint_rank_shadow
+```
+
 ## Assumption Challenge
 
 Candidate vertices considered: runners, gaps, fixed circle sections, section
 boundaries, wall-crossing events, residues, cover arcs, Fourier modes, matroid
-circuits, proof obligations, and stream states.
+circuits, proof obligations, output certificates, carry states, quotient
+guards, owner rows, free-hole packets, and stream states.
 
-Chosen vertices are terminal stream states plus predigit/carry buffers.  This
-preserves the random031 terminal-discharge predicate, free-hole doublet
-collapse, owner residual, and firewall route sidecar.  It deliberately destroys
-raw runner order, raw component index after emission, and scalar cell-count
-shadows.
+Chosen vertices are stream states with predigit/carry buffers.  They preserve
+the random031 terminal predicate because each emitted token is a HYP-3521
+terminal certificate, HYP-3511 doublet collapse is handled before emission, and
+HYP-3522 owner carry is retained until the branch-boundary lift reduces it.
 
-The challenged assumption is that the terminal proof must keep the whole
-random031 component table live until the end.  The audit shows all emitted
-ordinary/single/doublet certificates can stream away, leaving only bounded
-carry plus the residual two-owner lemma and route sidecar.
+What this destroys: raw runner order, raw component index after emission, full
+row-name memory, and scalar cell-count shadows.  That destruction is legal only
+because the stream state keeps the predigit/carry information and because
+HYP-3513 says route sidecar `R` is still required unless reconstructed.  The
+challenged assumption is that the terminal proof must keep the whole random031
+component table live until the end; the audit shows all emitted certificates
+can stream away, leaving only bounded carry plus the residual two-owner lemma
+and route sidecar.

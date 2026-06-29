@@ -109,9 +109,9 @@ reconstructs residual `(45,173)` and does not replace it by sliced-box volume,
 owner count, or residue-chamber shadows. -> HYP-3524, HYP-3522, HYP-3521,
 HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3490,
 HYP-3486, LTI-524, LTT-424, T1524.
-**OPEN-Q-108 HYP-3523 certificate-spigot addendum:** Can the random031
-terminal ledger be promoted from a streaming audit to a formal no-backtracking
-proof procedure?
+**OPEN-Q-108 HYP-3523 certificate-spigot / owner-carry addendum:** Can the
+random031 terminal ledger and pure-bypass owner carry be promoted from
+streaming audits to a formal no-backtracking proof procedure?
 
 HYP-3523 now gives the finite stream:
 
@@ -125,12 +125,37 @@ untyped_pending_carry=0
 typed_residual_carry=(45,173)
 ```
 
+The companion owner-carry stream is:
+
+```text
+seam payload              = (23,45,93,113,147,169,173)
+transport emission        = (23,93,113)
+carry after transport     = (45,147,169,173)
+branch-lift emission      = (147,169)
+carry after branch lift   = (45,173)
+terminal_residual_closed  = False
+```
+
+The bounded scheduler view is the same audit in component order: `79`
+component events emit `77` terminal certificates, `64` ordinary route and
+`10` free-hole single certificates emit immediately, two HYP-3511 doublets use
+a one-component predigit buffer, owner carry opens at rank `45`, the
+branch-boundary lift applies at rank `46`, and final owner carry is
+`(45,173)`.  The companion quotient check gives
+`owner_boundary_persistence_word=PDPPOOO` and marks
+`global_flow_minus_bypass=(45,55,147,169,173)` as the contaminant shortcut.
 The open proof task is to formalize four emission clauses: immediate ordinary
 rank-2 route digits; HYP-3511 free-hole single and doublet carry; HYP-3522
 bypass carry through transport `(23,93,113)` and bracket lift `(147,169)`; and
 the HYP-3513 route sidecar `R` plus vertical-halfturn guard.  The residual
 boundary pair `(45,173)` must remain typed proof debt until the owner-boundary
-lemma is closed. -> HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513,
+lemma is closed, and HYP-3526 says `R` must stay attached to terminal dispatch
+unless route reconstruction is proved.  HYP-3527 turns this into the current
+contract ledger: three clauses formal-ready, four carry-required, and one
+open-tail residual lemma.  HYP-3528 re-executes the ledger as a
+sidecars-to-safe-emission ABI whose only red clause is
+`residual_pair_close_tail`. -> HYP-3523, HYP-3528, HYP-3527, HYP-3526, HYP-3522,
+HYP-3521, HYP-3520, HYP-3513,
 HYP-3511, HYP-3510, HYP-3490, HYP-3486, LTI-523, LTT-423, T1523.
 **OPEN-Q-108 HYP-3525 guarded-emission addendum:** Can the random031 terminal
 proof be rewritten as a generic `GuardedEmission` fiber-constancy theorem?
@@ -154,30 +179,6 @@ sidecars rather than raw counts. -> HYP-3525, HYP-3524, HYP-3523, HYP-3522,
 HYP-3521, HYP-3520, HYP-3513, HYP-3493, HYP-3490, HYP-3486, HYP-3511,
 HYP-3510, LTI-525,
 LTT-425, T1525.
-**OPEN-Q-108 HYP-3523 spigot-stream addendum:** Can the random031 terminal
-packet be formalized as a bounded-state streaming scheduler rather than as a
-full live component table?
-
-HYP-3523 gives the exact finite scheduler:
-
-```text
-79 component events -> 77 terminal certificates
-immediate ordinary route certificates = 64
-immediate free-hole single certificates = 10
-max free-hole predigit buffer = 1 component
-owner carry opens at rank 45 as (45,147,169,173)
-branch-boundary lift applies at rank 46
-final owner carry = (45,173)
-```
-
-The open proof task is to prove the stream invariant
-`emitted_prefix + predigit_buffer + owner_carry + route_sidecar_R`: emitted
-ordinary/single/doublet certificates can be discarded after emission, the two
-HYP-3511 doublets close after one pending event, the HYP-3522 bypass carry
-shrinks after one event to `(45,173)`, and HYP-3513 route sidecar `R` remains
-attached unless route reconstruction is proved. -> HYP-3523, HYP-3522,
-HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
-LTI-523, LTT-423, T1523.
 **OPEN-Q-108 HYP-3526 spigot route-sidecar dispatch addendum:** Can the
 row-free private-firewall incidence cut be proved while keeping terminal route
 dispatch explicit?
