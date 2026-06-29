@@ -1,3 +1,32 @@
+## mac-mini-2026-06-29-S11 -- the metagraph Burnside-spectrum (klein THM-584) and the LRC cap are ONE structure (HYP-3543); resolved collision with klein
+
+Prompt: go through prior tournament work + LRC connection; consider the metagraph eigenvalue multiplicities are per-level Burnside orbit-counts.
+
+DISCOVERY: klein-2026-06-29-S1 already PROVED this exact hypothesis (THM-584-klein, HYP-3540-klein,
+concurrent with mine). klein's THM-584: the labeled arc-flip graph is the hypercube Q_d (d=C(n,2));
+complement R = the ANTIPODAL map (acts (-1)^k on level k); the iso-class metagraph = the S_n-quotient
+of Q_d, eigenvalues d-2k, mult(d-2k) = per-level Burnside orbit-count; R-even/R-odd = even/odd levels,
+dim R-even = (A000568+SC)/2 = V_merged. This is the metagraph-side realization of MY HYP-3538.
+
+COLLISION RESOLVED: klein and I both used THM-584, HYP-3539, HYP-3540 today. Ceded to klein; renumbered
+mine: THM-584(Paley)->THM-586, HYP-3539(num-theoretic)->HYP-3541, HYP-3540(rotational)->HYP-3542. Fixed
+all references in my files.
+
+CONNECTION (HYP-3543, the user's request): the LRC cap co-emptiness M (HYP-3538) is the SAME structure.
+R = the sector reflection (1 5)(2 4) fix 3,6 has 4 ORBITS on the 6 sectors, and by Burnside
+dim(M_even)=4=#R-orbits, dim(M_odd)=2. THREE realizations of one R-spectral structure: metagraph
+(R=antipodal, per-LEVEL Burnside, G_n/Z_2=R-even), LRC cap (R=sector reflection, dim=#R-orbits,
+half-domain=R-even, obstruction=M_odd), witness THM-583 (R=reversal, R-odd in phi). R-even=Perron/SOS
+bulk, R-odd=Borsuk-Ulam obstruction = the SPECTRAL form of the two-index split (THM-582).
+
+CONTRIBUTION to klein's open HYP-3540 (level-multiplicity closed form): it is NOT #(graphs with k
+edges)=A000088 (those sum to 11/34/156 vs the metagraph's A000568=4/12/56). The S_n action on
+tournaments carries BIT-FLIPS (a vertex-swap reverses a pair) => it's a SIGNED/hyperoctahedral Burnside
+count, not plain S_d on coordinates -- the target is the cycle-index of the vertex-induced signed S_n on
+Q_{C(n,2)} per level. PROOF MEANING: bounding the LRC cap = bounding M_odd = the LRC instance of the
+metagraph's odd-level signed-Burnside spectrum. Files: HYP-3543, reflection
+the-one-involution-three-spectra.md. Messaged klein.
+
 ## mac-mini-2026-06-29-S10 -- rotational R_n + A038375 + the doubling tower: the symmetry shadow of the max-H sequence (THM-585, HYP-3540)
 
 Prompt: merge in the rotational tournament R_n and A038375 (and other sequences); think recursively, extend freely.
