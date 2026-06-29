@@ -26,6 +26,47 @@ tournament Ky Fan (=> Redei/Forcade are Borsuk-Ulam shadows); Ham Sandwich on M_
 
 Files: HYP-3544, reflection one-antipodal-map-the-topological-toolkit-merged.md, OPEN-Q-059 grounded,
 INDEX updated. Used the Explore agent to map prior Borsuk-Ulam/Kaczynski/Ky-Fan work. Messaged klein.
+## klein-2026-06-29-S2 -- the per-level SIGNED CYCLE INDEX (THM-587): closes HYP-3540, P_n(+-1)=A000568/SC, computes the metagraph spectrum past the enumeration wall; merges Borsuk-Ulam/Ky Fan/ham sandwich/Kaczynski
+
+Prompt: merge the per-level signed cycle index into the continued investigation w/ Borsuk-Ulam, prior Ky Fan /
+ham sandwich / Kaczynski work, and arXiv:2512.09332. Follow where compelled.
+
+Synced (4 commits): mac-mini-S11 ALREADY responded to my THM-584 -- HYP-3543 (metagraph spectrum = LRC cap
+spectrum, "one R three spectra") + flagged HYP-3540 is a SIGNED-Burnside count (not graph-by-edges). Triple
+convergence with the owner's "per-level signed cycle index". Collision: I keep 584/3539/3540; mac-mini took
+585(no, that's rotational)/586. New ids this session: THM-587, HYP-3544.
+
+THM-587 (PROVED + verified n=3..8): the metagraph eigenvalue multiplicities (THM-584) = coeffs of the
+per-level SIGNED CYCLE INDEX P_n(x) = (1/n!) sum_sigma prod_cycles (1 + s_c x^{ell_c}), s_c = pair-cycle
+orientation sign of the vertex-induced signed S_n action on the C(n,2) arcs. TWO ANTIPODAL EVALUATIONS:
+P_n(1)=A000568 (all-odd-cycle tournament Burnside), P_n(-1)=SC(n)=2,2,8,12,88,176 (self-converse count =
+ANTIPODAL EULER/LEFSCHETZ number = trace(R) = dim V_+ - dim V_-). PROOF: Molien for the level-graded
+character (each cycle factor 1+s_c x^ell) + Lefschetz fixed-point count for P_n(-1). The bit-flip is the
+crux: signs make it A000568 not A000088. CROSS-CHECK: reproduces verified n<=6 block spectra exactly; SC vs
+CLAUDE.md NS-merged 0,1,2,22,184 matches n=3..7. PAYOFF: computes the FULL metagraph spectrum from n! perms,
+past the 2^{C(n,2)} wall -- n=7 (2^21), n=8 (2^28) spectra now known; SC(7)=88, SC(8)=176 extend the table.
+Closes HYP-3540 (the earlier graph-by-edges guess was WRONG -- signed action).
+
+SYNTHESIS (reflection the-per-level-signed-cycle-index-borsuk-ulam-ky-fan): complement R is FREE on labeled
+tournaments (x != x XOR 1) => (Q_d,R) is a free Z_2-space = the Borsuk-Ulam setting; P_n(-1)=SC = the
+equivariant Euler number; the R-ODD block (odd levels, (A-SC)/2 = #NS) is where the BU obstruction lives.
+KY FAN: P_n is a sign(level-parity)-graded alternating count, P_n(-1) its alternating sum; "no complementary
+edge" = R free; SC>0 = the forced-nonzero alternating value. HAM SANDWICH: the cut-side balance, regular
+tournament (n odd, scores (n-1)/2) = the score-measure bisection / antipodal fixed locus. KACZYNSKI: SC=chi
+refines into Z_2-equivariant Betti numbers of the level-graded invariant complex (boundary = cube
+down-op twisted by antipodal) -- HYP-3544, the computational-homology deliverable (KMM / circulant_homology /
+THM-224); meets the repo's prior Kaczynski (HYP-2983) at the Reynolds/Kaczmarz projection (I+R)/2 onto R-even.
+arXiv:2512.09332 (El Sahili-El Zein): arc-DELETION stability of oriented-Ham-path content (n>=8) = robustness
+of H under one cube move; their n>=8 is where THM-587's spectrum now reaches. Added to bib backlog.
+
+Scripts: 04-computation/signed-cycle-index-metagraph-spectrum.py (+ prior S1 scripts). Out in 05-knowledge/results/.
+Replied to mac-mini. No court cases; no canon overridden (builds on THM-584/HYP-3538/3543).
+
+NEXT: (1) HYP-3544 compute the equivariant Betti numbers (boundary partial^2=0, split by R-parity) -- is
+b_k^odd the odd index? (2) closed form / OEIS for individual rows mult(k)(n). (3) the Ky-Fan/Tucker
+combinatorial-BU proof that SC>0 as a degree. (4) deletion-contraction reading of H across levels (arXiv paper).
+
+---
 
 ## mac-mini-2026-06-29-S11 -- the metagraph Burnside-spectrum (klein THM-584) and the LRC cap are ONE structure (HYP-3543); resolved collision with klein
 

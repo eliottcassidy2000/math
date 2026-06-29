@@ -1,7 +1,7 @@
 ---
 id: HYP-3540
 title: The iso-class arc-flip metagraph eigenvalue d-2k has multiplicity = dim of S_n-invariants at level k of Q_{C(n,2)}; this level-multiplicity profile is a Burnside/orbit-counting sequence with a closed form
-status: OPEN (klein-2026-06-29-S1) — multiplicities computed exactly n=3..6; closed form / OEIS match not yet identified
+status: CONFIRMED / CLOSED (klein-2026-06-29-S2, THM-587) — the closed form is the per-level SIGNED CYCLE INDEX P_n(x) = (1/n!) sum_sigma prod_cycles (1 + s_c x^{ell_c}); P_n(1)=A000568, P_n(-1)=SC(n); the earlier "graph-by-edges" guess was WRONG (the S_n action on the arc-cube is SIGNED, not a plain coordinate permutation — mac-mini HYP-3543)
 source: klein-2026-06-29-S1
 depends_on:
   - THM-584
@@ -54,10 +54,27 @@ itself (`Fix(σ)` over S_n), now refined by edge-count `k`. A closed form would 
   (`= Σ_k (-1)^k mult(d-2k) = dim V_+ − dim V_-`, the signed/antipodal Euler characteristic — this one
   is automatic from the block dimensions, verified 2,2,8,12 for n=3..6, not open).
 
-## Next steps
+## RESOLUTION (klein-2026-06-29-S2, THM-587)
 
-1. Compute `mult(d-2k)` = #S_n-orbits of k-subsets of `C(n,2)` arcs via Burnside, n up to ~10, and
-   search OEIS (this is "number of graphs/digraph-edge-patterns on n labeled-then-quotiented nodes
-   with k arcs" — likely a known 2-variable table).
-2. Verify the signed identity `SC(n) = Σ_k (-1)^k mult(d-2k)` (antipodal Lefschetz/Euler relation).
-3. Connect to THM-584's mod-4 law and to the merged-metagraph invariants reflection.
+The closed form is the **per-level signed cycle index**
+
+```
+P_n(x) = sum_k mult(k) x^k = (1/n!) sum_{sigma in S_n} prod_{cycles c} (1 + s_c x^{ell_c}),
+```
+
+`s_c` the orientation sign of each pair-cycle. The earlier guess (#graphs by edge count) was WRONG: it
+sums to A000088 (11,34,156), but the multiplicities sum to A000568 (4,12,56). The discrepancy is the
+**bit-flip** — a vertex swap reverses the pair it touches, so the group is the SIGNED (hyperoctahedral)
+vertex-induced action, not a plain coordinate permutation. mac-mini (HYP-3543) diagnosed this; THM-587
+gives the generating function and proves the two antipodal evaluations:
+
+- `P_n(1)  = A000568(n)` (tournament Burnside, all-odd-cycle survivors);
+- `P_n(-1) = SC(n)` (self-converse count = antipodal Lefschetz/Euler number) = `2,2,8,12,88,176` (n=3..8).
+
+The signed identity `SC = Σ(-1)^k mult(k)` is automatic (`= dim V_+ - dim V_-`, the Lefschetz trace).
+The generating function computes the full metagraph spectrum from `n!` permutations, reaching n=7,8 past
+the `2^{C(n,2)}` enumeration wall (script: `signed-cycle-index-metagraph-spectrum.py`).
+
+Remaining genuinely-open piece (spun out): is there a hypergeometric / OEIS closed form for the
+individual rows `mult(k)` as functions of `(n,k)`? And the homological refinement of `P_n(-1)=SC(n)` into
+`Z_2`-equivariant Betti numbers (HYP-3544, the Kaczynski computational-homology deliverable).

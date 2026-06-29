@@ -12,6 +12,19 @@ index" as a Borsuk–Ulam degree of the antipodal action (=complement) on a leve
 Q_{C(n,2)}/S_n; it must live in the R-odd block.  Cross-link to two-order-two-structures and THM-582.
 -> THM-584, HYP-3538, HYP-3539, HYP-3540, OPEN-Q-110, OPEN-Q-108.
 
+**THM-587 / signed-cycle-index follow-ups (klein-2026-06-29-S2).** HYP-3540 closed: the metagraph
+multiplicities = the per-level signed cycle index P_n(x)=(1/n!)sum_sigma prod_cyc(1+s_c x^ell), with
+P_n(1)=A000568, P_n(-1)=SC(n) (antipodal Euler number). Leads: (a) HYP-3544 -- compute the Z_2-equivariant
+Betti numbers refining SC=chi (Kaczynski/KMM computational homology; boundary = cube down-op twisted by
+antipodal; reachable n=7,8,9 since C_k come from n! perms; is b_k^odd the Redei odd index?). (b) closed
+form / OEIS for the individual rows mult(k) as functions of (n,k) -- the signed cycle index is the GF but
+the per-(n,k) row is open; submit SC(n)=2,2,8,12,88,176 and the metagraph-multiplicity triangle to OEIS if
+absent. (c) BIBLIOGRAPHY: add arXiv:2512.09332 (El Sahili-El Zein, "Oriented Hamiltonian Paths in
+Tournaments: Stability under Arc Deletion") -- for n>=8 deleting any one arc preserves all oriented Ham
+paths (w/ exceptions); a single-cube-move robustness of H-content; investigate a deletion-contraction
+reading of H across the metagraph levels, and that n>=8 is exactly where THM-587 now reaches the spectrum.
+-> THM-587, HYP-3540, HYP-3544, THM-224, OPEN-Q-110.
+
 **HYP-3531 large-span gentle / denominator atlas.**  Continue HYP-3530 on
 both requested fronts.  For the union-bound lane, push the exact
 `k<12` attacker scan beyond `span<=k+5` and stress structured families:
