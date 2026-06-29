@@ -1,3 +1,38 @@
+## mac-mini-2026-06-29-S6 -- PALINDROMIC Ham-path ODD INDEX (THM-582); the two-index synthesis (Redei=odd, lonely=even, half-tiling=quotient)
+
+Prompt: explore palindromic Hamiltonian paths and their relation to the half-tiling model; synthesize/investigate/test toward finishing proofs; think abstractly and freely in surmising.
+
+Mined the palindromic/half-tiling/parity canon (THM-550 half-tiling parity recurrence, THM-549
+complement-quotient, THM-280 grid-reflection=complement, THM-281 SC fibers odd, THM-088 signed-F
+palindromic, THM-027 tr(M)=H for odd n) + the Euler-char reflection (HYP-3242: cap=chi_meas(nerve)).
+
+NEW LEMMA (THM-582, the long-sought "odd index"): for a self-converse tournament with involutory
+anti-aut phi, rho(P)=phi(reverse(P)) is an INVOLUTION on Hamiltonian paths => H(T)==#{phi-palindromic
+paths} (mod2); by Redei (H odd) => ODD number of palindromic Ham paths >=1. VERIFIED Paley
+T_3/T_7/T_11 (H=3/189/95095, palindromic=1/9/185 all odd) + all SC tournaments n=4,5. This is the
+Ham-path twin of THM-281 (SC tiling fibers odd via grid-sym tilings).
+
+TWO-INDEX SYNTHESIS: the complement/reversal sigma=Z_2 splits parity into:
+ (a) sigma-ODD = WITNESS side = palindromic Ham-path count (THM-582) = grid-sym tiling count (THM-281)
+     = kps Borsuk-Ulam sign isotype (HYP-3239) -- all ODD = fixed-point parity of reversal = Redei.
+ (b) sigma-EVEN = EXISTENCE side = LRC lonely measure = Euler char of the danger-cover nerve
+     (HYP-3242/THM-581) -- sigma-invariant, no sign part = Brouwer/SOS.
+CRUCIAL: a LONELY tournament has observer=SOURCE; converse sends source->sink => lonely tournament is
+NOT self-converse => THM-582 does NOT apply => the floor is purely sigma-EVEN. So the odd index EXISTS
+but is the WITNESS/Redei datum, NOT the floor. This REDIRECTS floor closure to the even-category route
+(descent THM-580 + cyclotomic SOS S75e), confirming S5. The half-tiling (THM-549/550) is the
+sigma-fundamental domain housing both indices; its fixed diagonal (SC spine) is the palindromic/odd locus.
+
+BOLD SURMISE (reflection the-two-indices-redei-is-odd-lonely-is-even-half-tiling-is-the-quotient.md):
+Redei (odd) and LRC (even) are the two isotypic halves of ONE sigma-equivariant Euler characteristic of
+a conflict-cover complex (Omega for tournaments, the danger-cover nerve for runners); the half-tiling is
+the quotient separating them. Proving LRC(14) = the even projection is positive (descent+SOS); Redei =
+the odd projection is odd (palindromic, done).
+
+NEXT: the LRC floor's remaining content is entirely even-category -- finish the per-level cyclotomic SOS
+rho_j>=c (descent THM-580). The odd index (THM-582) is a clean tournament-side result on its own.
+Files: THM-582, HYP-3536, reflection, palindromic_hampath_parity_macmini_20260629.py.
+
 ## mac-mini-2026-06-29-S5 -- DIHEDRAL synthesis: the floor is EVEN-CATEGORY (existence), Borsuk-Ulam is for the WITNESS; descent validated across the n=2p family (THM-581)
 
 Prompt: explore connections to past work on dihedral groups and their relation to tournaments; synthesize/investigate/hypothesis-test toward finishing proofs; think recursively.

@@ -1,5 +1,20 @@
 # Open Questions
 
+**OPEN-Q-108 THM-582/HYP-3536 palindromic odd index + the two-index synthesis (mac-mini-2026-06-29-S6):**
+Followed the palindromic-paths / half-tiling thread.  NEW LEMMA (THM-582): for a self-converse
+tournament with involutory anti-aut phi, rho(P)=phi(reverse(P)) is an INVOLUTION on Hamiltonian paths,
+so H(T)==#{palindromic paths} (mod2); by Redei (H odd) => ODD number of palindromic Ham paths >=1
+(verified Paley T_3/7/11, all SC n=4,5).  This is the Ham-path twin of THM-281 and SETTLES the
+long-sought "odd index".  TWO-INDEX SYNTHESIS: the complement/reversal sigma=Z_2 splits parity into
+ODD (witness side: palindromic paths/grid-sym tilings/Borsuk-Ulam sign isotype = Redei) and EVEN
+(existence side: LRC lonely measure = Euler char of the danger-cover nerve, HYP-3242/THM-581).
+CRUCIAL: a lonely tournament has observer=SOURCE (converse=>sink), so it is NOT self-converse =>
+THM-582 does NOT apply => the floor is purely sigma-EVEN.  So the odd index belongs to the WITNESS/Redei
+side, NOT the floor; floor closure stays even-category (descent THM-580 + cyclotomic SOS S75e).  SURMISE:
+Redei (odd) and LRC (even) are the two isotypic halves of ONE sigma-equivariant Euler characteristic of a
+conflict-cover complex; the half-tiling (THM-549/550) is the quotient.  REMAINING LRC content is entirely
+even-category: finish per-level cyclotomic SOS rho_j>=c.  -> THM-582, THM-581, THM-281, THM-549, THM-088, HYP-3536, HYP-3242, OPEN-Q-108.
+
 **OPEN-Q-108 THM-581/HYP-3535 the floor is EVEN-CATEGORY; dihedral family; descent=constructive degree (mac-mini-2026-06-29-S5):**
 Synthesis of the dihedral thread.  14=|D_7|; the cover bound = D_7 isotypes (trivial + SIGN + three
 2-dim de Moivre); Paley T_p has symmetry D_{2p}.  CLARIFICATION: EXISTENCE of a lonely time (the floor)
