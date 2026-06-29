@@ -138,16 +138,28 @@ HYP-3436, HYP-2595, THM-523, LTI-435, LTT-335, T1435, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3476 pair-current addendum:**
 HYP-3476 tests whether HYP-3472's single-gate exceptions are artifacts of a
-too-small boundary-current carrier.  On the seven projection-edge exceptions
-and the two extra separating-current exceptions, enumerate pairs of low-rank
-E/branch survivor gates and remove the union of their adjacent blocker labels
-from the HYP-3451 dead-cover projection.  The open question is whether every
-target row has a `<=2`-gate projection-edge cut or branch-separated current,
-especially when pairs are compared against HYP-3475 mirror orbits.
+too-small boundary-current carrier.  The answer is split.  On the two AP
+separating-only rows, a selected non-mirror pair removes `36` projection edges
+and gives `largest_drop=2`, `component_gain=2`; the exact AP mirror pair
+removes `40` edges but does not separate.  On the seven random projection-edge
+exceptions, no E/branch pair can help because the dead-cover projection is
+already edgeless:
 
-Guardrail: the pair-current quotient preserves only the finite cut/current
-predicate.  It forgets interval geometry and branch order unless typed
-endpoint, blocker-label, and mirror sidecars are retained. -> HYP-3476,
+```text
+edge_exception_rows_closed_by_pair_edge_cut=0/7
+audited_rows_without_gate_touching_edge_support_label=random seven
+edge_support_label_count_hist={0:7,14:2}
+```
+
+Open proof task: replace the random exception route by a zero-edge singleton
+current packet.  Candidate exits are isolated dead-component owner-current
+imbalance, HYP-3455/HYP-3451 gluing/conductance, HYP-3460 phase-branch bypass,
+two-adic descent, signed-SPEC/Rprime, or state-lift debt.  Incoming mainline
+work splits that random debt: HYP-3477 covers the `random_covering_031` hard
+mirror lane, the colored gate unit-delta split flags `random_covering_039` and
+`random_covering_074` as cover-delta sidecar rows, and
+`random_covering_001`, `random_covering_062`, `random_covering_086`,
+`random_covering_101` are the pure unit-delta singleton-current tests. -> HYP-3476,
 HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3455, HYP-3453,
 HYP-3451, HYP-3438, THM-523, LTI-436, LTT-336, T1436, OPEN-Q-108.
 

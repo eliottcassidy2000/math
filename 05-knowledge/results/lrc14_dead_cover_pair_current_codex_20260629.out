@@ -1,0 +1,287 @@
+HYP-3476 DEAD-COVER PAIR-CURRENT EXCEPTION AUDIT
+status=EVIDENCE / two-gate graph-current audit; not an LRC14 proof
+source=HYP-3472 dead-cover projection + HYP-3475 mirror-orbit rule
+
+## Assumption Challenge
+alternate vertices considered: runners, gaps, fixed circle sections,
+section boundaries, wall-crossing events, residues, cover arcs, Fourier
+modes, matroid circuits, survivor gates, mirror orbits, gate pairs,
+blocker labels, graph cuts, and formal proof obligations.
+chosen carrier vertices: low-rank E/branch gate pairs and pair-current
+cut obligations in the dead-cover blocker projection.
+preserved predicate: target row has a <=2-gate boundary-current carrier
+after deleting adjacent blocker labels.
+destroyed if scalarized: interval geometry, ordered branch orientation,
+and typed endpoint sidecars; HYP-3474 warns against count/color shadows.
+
+## Aggregate Pair-Current Ledger
+bank_rows=135
+bank_dead_rows=130
+audit_scope=hyp3472_exception_targets
+audited_dead_rows=9
+audited_single_e_branch_cuts=330
+audited_pair_e_branch_cuts=9113
+exact_mirror_pairs=165
+exact_mirror_pairs_with_edge_cut=4
+exact_mirror_pairs_with_separating_current=0
+pair_count_hist={6: 2, 1540: 1, 3828: 1, 66: 1, 325: 1, 1653: 1, 561: 1, 1128: 1}
+mirror_pair_count_hist={2: 2, 28: 1, 44: 1, 6: 1, 13: 1, 29: 1, 17: 1, 24: 1}
+
+## Edge-Support Label Gap
+audited_rows_with_gate_touching_edge_support_label=2/9
+audited_rows_without_gate_touching_edge_support_label=['random_covering_001', 'random_covering_031', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+edge_support_label_count_hist={0: 7, 14: 2}
+gate_touch_label_union_count_hist={4: 5, 8: 4}
+gate_edge_support_label_count_hist={0: 7, 8: 2}
+
+## Coverage Upgrade
+reference_hyp3472_full_bank_single_edge_cut=123/130
+reference_hyp3472_full_bank_single_separating_current=121/130
+audited_rows_with_single_projection_edge_cut=2/9
+audited_rows_with_pair_projection_edge_cut=2/9
+audited_rows_with_single_separating_current=0/9
+audited_rows_with_pair_separating_current=2/9
+audited_rows_with_mirror_pair_projection_edge_cut=2/9
+audited_rows_with_mirror_pair_separating_current=0/9
+single_edge_not_pair_edge=[]
+single_separating_not_pair_separating=[]
+pair_edge_not_single_edge=[]
+pair_separating_not_single_separating=['covering_AP_with_84', 'ap_omit_12_tail_84x01']
+
+## HYP-3472 Exception Closure
+target_edge_exception_rows=['random_covering_001', 'random_covering_031', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+edge_exception_rows_closed_by_pair_edge_cut=0/7 []
+edge_exception_rows_closed_by_pair_separating_current=0/7 []
+edge_exception_rows_remaining_without_pair_edge_cut=['random_covering_001', 'random_covering_031', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+edge_exception_rows_remaining_without_pair_separating_current=['random_covering_001', 'random_covering_031', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+target_separating_exception_rows=['random_covering_001', 'random_covering_031', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101', 'covering_AP_with_84', 'ap_omit_12_tail_84x01']
+separating_exception_rows_closed_by_pair_separating_current=2/9 ['covering_AP_with_84', 'ap_omit_12_tail_84x01']
+separating_exception_rows_closed_by_pair_edge_cut=2/9 ['covering_AP_with_84', 'ap_omit_12_tail_84x01']
+separating_exception_rows_remaining_without_pair_separating_current=['random_covering_001', 'random_covering_031', 'random_covering_039', 'random_covering_062', 'random_covering_074', 'random_covering_086', 'random_covering_101']
+h3472_edge_exceptions_h3475_hard_mirror_intersection=['random_covering_031']
+h3476_targets_h3475_hard_mirror_intersection=['random_covering_031']
+
+## Pair Fingerprints
+pair_label_count_hist={2: 3337, 1: 2466, 3: 1492, 4: 1181, 0: 393, 5: 220, 6: 24}
+pair_touch_label_count_hist={2: 3337, 1: 2466, 3: 1492, 4: 1181, 0: 393, 5: 220, 6: 24}
+pair_removed_edges_hist={0: 9101, 36: 8, 40: 2, 32: 2}
+pair_largest_drop_hist={0: 9105, 2: 8}
+pair_component_gain_hist={0: 9105, 2: 8}
+pair_current_hist={(1, 1): 2551, (0, 1): 1233, (1, 0): 1233, (2, 2): 1063, (2, 1): 746, (1, 2): 746, (0, 2): 393, (2, 0): 393, (0, 0): 393, (3, 2): 110, (2, 3): 110, (3, 1): 59 ...}
+pair_endpoint_kind_hist={('B1|E', 'E|B0'): 1278, ('B1|E', 'E|B1'): 1132, ('E|B0', 'E|B1'): 1132, ('B0|E', 'B1|E'): 1132, ('B0|E', 'E|B0'): 1132, ('B0|E', 'E|B1'): 1097, ('B1|E', 'B1|E'): 596, ('E|B0', 'E|B0'): 596, ('E|B1', 'E|B1'): 509, ('B0|E', 'B0|E'): 509}
+mirror_pair_endpoint_kind_hist={('B1|E', 'E|B0'): 86, ('B0|E', 'E|B1'): 79}
+
+## Strongest Pair Per Row
+strongest_pair_removed_edges_hist={0: 7, 36: 2}
+strongest_pair_largest_drop_hist={0: 7, 2: 2}
+strongest_pair_component_gain_hist={0: 7, 2: 2}
+strongest_pair_current_hist={(2, 2): 3, (0, 0): 3, (1, 1): 3}
+
+## Target Row Detail
+row=random_covering_001
+  gates=56 pairs=1540 mirror_pairs=28 single_edge=False pair_edge=False single_sep=False pair_sep=False
+  projection_baseline=components:4 largest:1 edges:0
+  dead_label_support={'B0:165': 1, 'B1:179': 1, 'B0:153': 1, 'B1:81': 1, 'B0:81': 1, 'B1:153': 1, 'B0:179': 1, 'B1:165': 1}
+  edge_support_labels=()
+  gate_touch_labels=('B0:153', 'B0:165', 'B0:179', 'B0:81', 'B1:153', 'B1:165', 'B1:179', 'B1:81')
+  gate_edge_support_labels=()
+  single c0:[1/98,2/189]:E|B1:d(2,1) labels=('B0:165', 'B0:179', 'B1:81') removed_edges=0 largest_drop=0 component_gain=0 current=(2,1)
+  minimal_edge_pair:
+    None
+  minimal_separating_pair:
+    None
+  strongest_pair:
+    pair mirror=True labels=('B0:165', 'B0:81', 'B1:165', 'B1:81') removed_edges=0 largest_drop=0 component_gain=0 current=(2,2)
+      a=c26:[253/1022,26/105]:E|B1:d(1,1)
+      b=c73:[79/105,769/1022]:B0|E:d(1,1)
+row=random_covering_031
+  gates=88 pairs=3828 mirror_pairs=44 single_edge=False pair_edge=False single_sep=False pair_sep=False
+  projection_baseline=components:4 largest:1 edges:0
+  dead_label_support={'B0:45': 1, 'B1:23': 1, 'B0:113': 1, 'B1:93': 1, 'B0:93': 1, 'B1:113': 1, 'B0:23': 1, 'B1:45': 1}
+  edge_support_labels=()
+  gate_touch_labels=('B0:113', 'B0:23', 'B0:45', 'B0:93', 'B1:113', 'B1:23', 'B1:45', 'B1:93')
+  gate_edge_support_labels=()
+  single c34:[59/168,426/1211]:E|B1:d(2,2) labels=('B0:23', 'B0:45', 'B1:93') removed_edges=0 largest_drop=0 component_gain=0 current=(2,1)
+  minimal_edge_pair:
+    None
+  minimal_separating_pair:
+    None
+  strongest_pair:
+    pair mirror=True labels=() removed_edges=0 largest_drop=0 component_gain=0 current=(0,0)
+      a=c14:[176/1183,25/168]:B1|E:d(1,1)
+      b=c83:[143/168,1007/1183]:E|B0:d(1,1)
+row=random_covering_039
+  gates=12 pairs=66 mirror_pairs=6 single_edge=False pair_edge=False single_sep=False pair_sep=False
+  projection_baseline=components:2 largest:1 edges:0
+  dead_label_support={'B0:63': 1, 'B1:129': 1, 'B0:129': 1, 'B1:63': 1}
+  edge_support_labels=()
+  gate_touch_labels=('B0:129', 'B0:63', 'B1:129', 'B1:63')
+  gate_edge_support_labels=()
+  single c1:[3/224,13/903]:E|B0:d(1,1) labels=('B0:129', 'B1:63') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1)
+  minimal_edge_pair:
+    None
+  minimal_separating_pair:
+    None
+  strongest_pair:
+    pair mirror=True labels=('B0:129', 'B1:129') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1)
+      a=c39:[131/301,489/1120]:B0|E:d(1,1)
+      b=c54:[631/1120,170/301]:E|B1:d(1,1)
+row=random_covering_062
+  gates=26 pairs=325 mirror_pairs=13 single_edge=False pair_edge=False single_sep=False pair_sep=False
+  projection_baseline=components:2 largest:1 edges:0
+  dead_label_support={'B0:9': 1, 'B1:81': 1, 'B0:81': 1, 'B1:9': 1}
+  edge_support_labels=()
+  gate_touch_labels=('B0:81', 'B0:9', 'B1:81', 'B1:9')
+  gate_edge_support_labels=()
+  single c28:[134/567,83/350]:B1|E:d(1,1) labels=('B0:9', 'B1:81') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1)
+  minimal_edge_pair:
+    None
+  minimal_separating_pair:
+    None
+  strongest_pair:
+    pair mirror=True labels=('B0:81', 'B1:81') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1)
+      a=c45:[442/1197,181/490]:B1|E:d(1,1)
+      b=c84:[309/490,755/1197]:E|B0:d(1,1)
+row=random_covering_074
+  gates=58 pairs=1653 mirror_pairs=29 single_edge=False pair_edge=False single_sep=False pair_sep=False
+  projection_baseline=components:2 largest:1 edges:0
+  dead_label_support={'B0:15': 1, 'B1:99': 1, 'B0:99': 1, 'B1:15': 1}
+  edge_support_labels=()
+  gate_touch_labels=('B0:15', 'B0:99', 'B1:15', 'B1:99')
+  gate_edge_support_labels=()
+  single c13:[47/231,153/728]:B0|E:d(1,1) labels=('B0:99', 'B1:15') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1)
+  minimal_edge_pair:
+    None
+  minimal_separating_pair:
+    None
+  strongest_pair:
+    pair mirror=True labels=() removed_edges=0 largest_drop=0 component_gain=0 current=(0,0)
+      a=c25:[253/728,314/903]:E|B1:d(1,1)
+      b=c58:[589/903,475/728]:B0|E:d(1,1)
+row=random_covering_086
+  gates=34 pairs=561 mirror_pairs=17 single_edge=False pair_edge=False single_sep=False pair_sep=False
+  projection_baseline=components:2 largest:1 edges:0
+  dead_label_support={'B0:169': 1, 'B1:133': 1, 'B0:133': 1, 'B1:169': 1}
+  edge_support_labels=()
+  gate_touch_labels=('B0:133', 'B0:169', 'B1:133', 'B1:169')
+  gate_edge_support_labels=()
+  single c9:[106/1183,69/770]:B1|E:d(1,1) labels=('B0:133', 'B1:169') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1)
+  minimal_edge_pair:
+    None
+  minimal_separating_pair:
+    None
+  strongest_pair:
+    pair mirror=True labels=('B0:133', 'B1:133') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1)
+      a=c5:[36/931,13/336]:B1|E:d(1,1)
+      b=c136:[323/336,895/931]:E|B0:d(1,1)
+row=random_covering_101
+  gates=48 pairs=1128 mirror_pairs=24 single_edge=False pair_edge=False single_sep=False pair_sep=False
+  projection_baseline=components:2 largest:1 edges:0
+  dead_label_support={'B0:7': 1, 'B1:175': 1, 'B0:175': 1, 'B1:7': 1}
+  edge_support_labels=()
+  gate_touch_labels=('B0:175', 'B0:7', 'B1:175', 'B1:7')
+  gate_edge_support_labels=()
+  single c21:[31/210,181/1225]:E|B0:d(1,1) labels=('B0:175', 'B1:7') removed_edges=0 largest_drop=0 component_gain=0 current=(1,1)
+  minimal_edge_pair:
+    None
+  minimal_separating_pair:
+    None
+  strongest_pair:
+    pair mirror=True labels=() removed_edges=0 largest_drop=0 component_gain=0 current=(0,0)
+      a=c47:[337/910,433/1169]:E|B0:d(1,1)
+      b=c74:[736/1169,573/910]:B1|E:d(1,1)
+row=covering_AP_with_84
+  gates=4 pairs=6 mirror_pairs=2 single_edge=True pair_edge=True single_sep=False pair_sep=True
+  projection_baseline=components:1 largest:22 edges:90
+  dead_label_support={'B1:11': 5, 'B1:13': 5, 'B1:7': 5, 'B0:7': 5, 'B0:13': 5, 'B0:11': 5, 'B1:9': 4, 'B0:9': 4, 'B1:5': 4, 'B0:5': 4, 'B0:1': 3, 'B1:1': 3 ...}
+  edge_support_labels=('B0:1', 'B0:11', 'B0:13', 'B0:3', 'B0:5', 'B0:7', 'B0:9', 'B1:1', 'B1:11', 'B1:13', 'B1:3', 'B1:5', 'B1:7', 'B1:9')
+  gate_touch_labels=('B0:11', 'B0:13', 'B0:5', 'B0:7', 'B1:11', 'B1:13', 'B1:5', 'B1:7')
+  gate_edge_support_labels=('B0:11', 'B0:13', 'B0:5', 'B0:7', 'B1:11', 'B1:13', 'B1:5', 'B1:7')
+  single c3:[8/49,97/588]:B1|E:d(1,1) labels=('B0:13', 'B1:7') removed_edges=20 largest_drop=0 component_gain=0 current=(1,1)
+  minimal_edge_pair:
+    pair mirror=True labels=('B0:13', 'B0:7', 'B1:13', 'B1:7') removed_edges=40 largest_drop=0 component_gain=0 current=(2,2)
+      a=c3:[8/49,97/588]:B1|E:d(1,1)
+      b=c22:[491/588,41/49]:E|B0:d(1,1)
+  minimal_separating_pair:
+    pair mirror=False labels=('B0:11', 'B0:13', 'B1:5', 'B1:7') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+      a=c3:[8/49,97/588]:B1|E:d(1,1)
+      b=c4:[33/196,6/35]:E|B1:d(1,1)
+  strongest_pair:
+    pair mirror=False labels=('B0:11', 'B0:13', 'B1:5', 'B1:7') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+      a=c3:[8/49,97/588]:B1|E:d(1,1)
+      b=c4:[33/196,6/35]:E|B1:d(1,1)
+row=ap_omit_12_tail_84x01
+  gates=4 pairs=6 mirror_pairs=2 single_edge=True pair_edge=True single_sep=False pair_sep=True
+  projection_baseline=components:1 largest:22 edges:90
+  dead_label_support={'B1:11': 5, 'B1:13': 5, 'B1:7': 5, 'B0:7': 5, 'B0:13': 5, 'B0:11': 5, 'B1:9': 4, 'B0:9': 4, 'B1:5': 4, 'B0:5': 4, 'B0:1': 3, 'B1:1': 3 ...}
+  edge_support_labels=('B0:1', 'B0:11', 'B0:13', 'B0:3', 'B0:5', 'B0:7', 'B0:9', 'B1:1', 'B1:11', 'B1:13', 'B1:3', 'B1:5', 'B1:7', 'B1:9')
+  gate_touch_labels=('B0:11', 'B0:13', 'B0:5', 'B0:7', 'B1:11', 'B1:13', 'B1:5', 'B1:7')
+  gate_edge_support_labels=('B0:11', 'B0:13', 'B0:5', 'B0:7', 'B1:11', 'B1:13', 'B1:5', 'B1:7')
+  single c3:[8/49,97/588]:B1|E:d(1,1) labels=('B0:13', 'B1:7') removed_edges=20 largest_drop=0 component_gain=0 current=(1,1)
+  minimal_edge_pair:
+    pair mirror=True labels=('B0:13', 'B0:7', 'B1:13', 'B1:7') removed_edges=40 largest_drop=0 component_gain=0 current=(2,2)
+      a=c3:[8/49,97/588]:B1|E:d(1,1)
+      b=c22:[491/588,41/49]:E|B0:d(1,1)
+  minimal_separating_pair:
+    pair mirror=False labels=('B0:11', 'B0:13', 'B1:5', 'B1:7') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+      a=c3:[8/49,97/588]:B1|E:d(1,1)
+      b=c4:[33/196,6/35]:E|B1:d(1,1)
+  strongest_pair:
+    pair mirror=False labels=('B0:11', 'B0:13', 'B1:5', 'B1:7') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+      a=c3:[8/49,97/588]:B1|E:d(1,1)
+      b=c4:[33/196,6/35]:E|B1:d(1,1)
+
+## Top Pair Cuts
+  pair mirror=True labels=('B0:13', 'B0:7', 'B1:13', 'B1:7') removed_edges=40 largest_drop=0 component_gain=0 current=(2,2)
+    a=c3:[8/49,97/588]:B1|E:d(1,1)
+    b=c22:[491/588,41/49]:E|B0:d(1,1)
+  pair mirror=True labels=('B0:13', 'B0:7', 'B1:13', 'B1:7') removed_edges=40 largest_drop=0 component_gain=0 current=(2,2)
+    a=c3:[8/49,97/588]:B1|E:d(1,1)
+    b=c22:[491/588,41/49]:E|B0:d(1,1)
+  pair mirror=False labels=('B0:11', 'B0:13', 'B1:5', 'B1:7') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+    a=c3:[8/49,97/588]:B1|E:d(1,1)
+    b=c4:[33/196,6/35]:E|B1:d(1,1)
+  pair mirror=False labels=('B0:13', 'B0:5', 'B1:11', 'B1:7') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+    a=c3:[8/49,97/588]:B1|E:d(1,1)
+    b=c21:[29/35,163/196]:B0|E:d(1,1)
+  pair mirror=False labels=('B0:11', 'B0:7', 'B1:13', 'B1:5') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+    a=c4:[33/196,6/35]:E|B1:d(1,1)
+    b=c22:[491/588,41/49]:E|B0:d(1,1)
+  pair mirror=False labels=('B0:5', 'B0:7', 'B1:11', 'B1:13') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+    a=c21:[29/35,163/196]:B0|E:d(1,1)
+    b=c22:[491/588,41/49]:E|B0:d(1,1)
+  pair mirror=False labels=('B0:11', 'B0:13', 'B1:5', 'B1:7') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+    a=c3:[8/49,97/588]:B1|E:d(1,1)
+    b=c4:[33/196,6/35]:E|B1:d(1,1)
+  pair mirror=False labels=('B0:13', 'B0:5', 'B1:11', 'B1:7') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+    a=c3:[8/49,97/588]:B1|E:d(1,1)
+    b=c21:[29/35,163/196]:B0|E:d(1,1)
+  pair mirror=False labels=('B0:11', 'B0:7', 'B1:13', 'B1:5') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+    a=c4:[33/196,6/35]:E|B1:d(1,1)
+    b=c22:[491/588,41/49]:E|B0:d(1,1)
+  pair mirror=False labels=('B0:5', 'B0:7', 'B1:11', 'B1:13') removed_edges=36 largest_drop=2 component_gain=2 current=(2,2)
+    a=c21:[29/35,163/196]:B0|E:d(1,1)
+    b=c22:[491/588,41/49]:E|B0:d(1,1)
+  pair mirror=True labels=('B0:11', 'B0:5', 'B1:11', 'B1:5') removed_edges=32 largest_drop=0 component_gain=0 current=(2,2)
+    a=c4:[33/196,6/35]:E|B1:d(1,1)
+    b=c21:[29/35,163/196]:B0|E:d(1,1)
+  pair mirror=True labels=('B0:11', 'B0:5', 'B1:11', 'B1:5') removed_edges=32 largest_drop=0 component_gain=0 current=(2,2)
+    a=c4:[33/196,6/35]:E|B1:d(1,1)
+    b=c21:[29/35,163/196]:B0|E:d(1,1)
+
+## Lemma Target
+Finite audited form:
+  HYP-3472's single-gate exception set can be replaced by the rows that
+  still lack a two-gate projection cut or separating current above.
+  If the remaining set is empty, HYP-3473 can expose a <=2-gate terminal
+  boundary-current packet.  If not, the remaining rows are the sharper
+  finite debt for HYP-3455/HYP-3451/HYP-3460/two-adic/SPEC routes.
+
+## Tournament Analysis
+vertices=pair-current proof carriers, not runners, arcs, or raw counts
+pairwise_observable=predicate retention + pair current payload + mirror payload + cut strength + formal packet fit + quotient guardrail
+switch=higher proof-facing carrier score; ties use declared route order
+axes=predicate_retention,pair_current_payload,mirror_payload,cut_strength,formal_packet_fit,quotient_guardrail,scalar_firewall
+score_hist={7: 1, 11: 1, 50: 1, 56: 1, 58: 2, 60: 1, 66: 2}
+directed_3cycles=0
+hamiltonian_path=P00_two_gate_pair_current_terminal -> P01_mirror_pair_current_terminal -> P03_colored_gate_formal_packet -> P02_single_gate_boundary_current -> P05_hard_mirror_orbit_discharge -> P04_partition_lattice_guardrail -> P06_typed_gate_pair_word -> P07_raw_pair_count -> P08_raw_label_union_size

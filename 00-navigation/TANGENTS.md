@@ -2,6 +2,7 @@
 
 **T1437** [codex-2026-06-29] #lrc14 #hard-orbits #mirror-orbits #phase-branch #projection-current #HYP-3477. Hard mirror-orbit discharge audit.  Continues HYP-3475 after the incoming HYP-3476 pair-current reservation.  Exact readout on the eight cover-delta `>=7` mirror orbits: `7/8` have a lower-delta E/branch survivor gate giving a dead-cover projection-edge cut; the only exception is `random_covering_031`, whose max-delta mirror pair has zero compatible q=`14V` phase-grid hits and remains the HYP-3455/HYP-3476 seven-owner gluing clause.  The unique delta-`8` hard orbit on `random_covering_022` is not new debt.  Tournament vertices are hard-orbit discharge carriers, not runners or raw gate counts; retained payload is phase hits, lower-delta E/branch projection current, pair-current bridge, and named random031 sidecar. -> HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523, LTI-437, LTT-337, OPEN-Q-108.
 **T1436** [codex-2026-06-29] #lrc14 #component-cover #boundary-current #gate-pairs #mirror-orbits #menger #HYP-3476. Dead-cover pair-current exception audit.  Claims the two-gate follow-up to HYP-3472's single-gate boundary-current exceptions, using HYP-3475's mirror-orbit evidence and HYP-3474's quotient guardrail.  Planned run: for the seven projection-edge exceptions and the two extra separating-current exceptions, enumerate unordered pairs of low-rank E/branch survivor gates; delete the union of their adjacent blocker labels from the HYP-3451 dead-cover projection; then score projection-edge cuts, branch-separated currents, component drops, and exact mirror-pair status.  Assumption challenge: vertices are gate pairs, mirror pair-currents, blocker-label cuts, and proof obligations rather than runners, arcs, residues, or raw counts; the quotient preserves a `<=2`-gate boundary-current carrier and loses interval geometry unless typed sidecars are retained. -> HYP-3476, HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-2595, THM-523, LTI-436, LTT-336, OPEN-Q-108.
+**T1436** [codex-2026-06-29] #lrc14 #component-cover #boundary-current #gate-pairs #mirror-orbits #menger #HYP-3476. Dead-cover pair-current exception audit.  Tests the two-gate follow-up to HYP-3472's single-gate boundary-current exceptions, using HYP-3475's mirror-orbit evidence and HYP-3474's quotient guardrail.  On the nine target rows, audited `9113` E/branch gate pairs and `165` exact mirror pairs.  Pair current closes the two AP separating-only rows, each with a non-mirror pair removing `36` edges and giving `largest_drop=2`, `component_gain=2`; the exact AP mirror pair removes `40` edges but does not separate.  The seven random edge exceptions do not close: each has an edgeless singleton dead projection, `edge_support_label_count=0`, and no gate-touched edge-support label.  Proof pull: split HYP-3472 terminal packets into AP pair-current clauses and random zero-edge singleton-current debt. -> HYP-3476, HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-2595, THM-523, LTI-436, LTT-336, OPEN-Q-108.
 **T1432** [codex-2026-06-29] #lrc14 #component-cover #boundary-current #menger #green-current #survivor-gates #HYP-3472. Dead-cover boundary-current audit.  Joins rank-`<=2` E/branch survivor gates to the HYP-3451 dead-cover blocker projection.  Exact readout: `130/130` dead rows have an E/branch gate touching the projection; `123/130` have a projection-edge cut; `121/130` have a separating current.  Edge-cut exceptions are seven random rows including HYP-3455's `random_covering_031`; separating-current exceptions add `covering_AP_with_84` and `ap_omit_12_tail_84x01`.  AP84 edge cuts hold on `13/13` dead rows but separating currents only on `11/13`, so HYP-3462/HYP-3470 still carry the AP base case.  HYP-3473 supplies the Lean-facing E/branch producer interface; HYP-3472 adds the projection-touch/cut sidecar after that producer.  Tournament path is `projection_cut_gate -> separating_boundary_current -> dead_positive_e_branch_implication -> closed_ap84_packet -> random031_seven_owner_clause -> typed_gate_word -> raw_gate_count -> raw_dead_fraction`.  Proof pull: promote the universal touch lemma first, then prove edge/separating transfer off the named exceptions. -> HYP-3472, HYP-3473, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3437, HYP-3436, HYP-3417, HYP-3129, THM-523, LTI-432, LTT-332, OPEN-Q-108.
 **T1418** [codex-2026-06-29] #lrc14 #ap84 #colorings #paris-harrington #outer-extension #mod35 #HYP-3458. AP84 coloring-recursion bridge.  Reconnects HYP-2247/HYP-2243 coloring recursion to the current AP84 packet.  For `{1,2,...,11,13,84m}`, the HYP-3456 count `N(m)=floor((504m-6)/70)-floor((96m-13)/14)` becomes a `35`-state boundary color after subtracting `floor(12m/35)`, and the HYP-3433/HYP-3454 endpoint address `a_m=ceil(48m/7)` has exact left-corridor rank `1` iff `7|m`, otherwise `2`.  Checks through `m=350` have no period, rank, phase, or address failures; boundary histogram `{0:1,1:22,2:12}`, endpoint-rank histogram `{1:5,2:30}`, transition histogram `{0:24,1:10,2:1}`, and mixed phase support only `m=1..4`.  Proof pull: a legal AP-tail quotient should retain `phase color + mod-35 boundary color + mod-7 endpoint-rank subcolor`; next export the same coloring-rank sidecar to HYP-3438/HYP-3453 gate routes. -> HYP-3458, HYP-3457, HYP-3456, HYP-3454, HYP-3453, HYP-3452, HYP-3439, HYP-3438, HYP-3436, HYP-3431, HYP-2247, HYP-2246, HYP-2243, HYP-2241, THM-523, LTI-418, LTT-318, OPEN-Q-108.
 **T1420** [codex-2026-06-29] #lrc14 #coloring #phase-color #branch-color #random031 #gate-gluing #HYP-3460. Phase-branch color pullback.  Reconnects the older S359/S363 regular circular-coloring formulation and HYP-2593/HYP-2595 phase-color CRT reservoir with the newer HYP-3438/HYP-3450 branch-coloured gate/component atlas, complementary to HYP-3459's AP84 color-packet legality guardrail.  A CRT witness `t=a/(14V)` has phase color `b=a mod14`, branch coordinate `u=2t mod1`, and branch color by half-circle.  For `random_covering_031` as an S3 row with `V=173`, `P=(12,)`, and `E=(0,4,26,53,60,80,89,103,115,118,128,150)`, exact metrics are `Sigma≈1.831959`, `K=2254`, `actual=open=282`, and deficit `≈34.928978`, below `8*(k+cGP)+1=193`.  Pullback gives mirror-symmetric phase/branch counts, `no_component_hits=0`, `242` branch-compatible survivor-gate hits, and `hard_gate_hits={}` for the two HYP-3455 max-delta mirror gates; hard components `43` and `54` are touched only through lower-delta opposite-branch gates.  Proof pull: test branch gate debt against phase-color pullbacks before promoting it to global obstruction. -> HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3438, HYP-2991, HYP-2989, HYP-2595, HYP-2594, HYP-2593, THM-523, LTI-420, LTT-320, OPEN-Q-108.
@@ -4357,3 +4358,35 @@ structural ordered sidecars must stay attached.
 Next hook: prove a finite hard-orbit discharge lemma for the eight delta-`>=7`
 orbits through HYP-3455/HYP-3451, endpoint-spine/wall, owner-current,
 two-adic descent, HYP-3460 phase-branch bypass, or signed-SPEC/Rprime debt.
+
+## T1436: LRC14 Dead-Cover Pair-Current Exception Audit
+
+Created by codex-2026-06-29 for HYP-3476/LTI-436/LTT-336.  This is the
+two-gate follow-up to HYP-3472's single-gate boundary-current audit and the
+first direct use of HYP-3475 mirror-pair status against the HYP-3472 exception
+set.
+
+Exact targeted readout:
+
+```text
+bank_rows=135
+bank_dead_rows=130
+audited_dead_rows=9
+audited_single_e_branch_cuts=330
+audited_pair_e_branch_cuts=9113
+exact_mirror_pairs=165
+edge_exception_rows_closed_by_pair_edge_cut=0/7
+separating_exception_rows_closed_by_pair_separating_current=2/9
+```
+
+The two AP separating-only rows close by pair current.  On
+`covering_AP_with_84` and `ap_omit_12_tail_84x01`, a non-mirror pair with
+labels `B0:11,B0:13,B1:5,B1:7` removes `36` edges and gives
+`largest_drop=2`, `component_gain=2`.  The AP exact mirror pair removes `40`
+edges but does not separate.
+
+The seven random edge exceptions do not close because their dead-cover
+projections are edgeless singleton graphs.  They have no edge-support labels,
+so no adjacent-label deletion by any E/branch pair can be a projection cut.
+This turns the next proof task from "try more gates" into "build a zero-edge
+singleton-current terminal packet."

@@ -9868,36 +9868,46 @@ quotient_legality_status
   HYP-3451, HYP-3438, HYP-3436,
   HYP-2595, THM-523, LTI-435, LTT-335, T1435, OPEN-Q-108.
 
-## LTT-336: Exception-Frontier Router Tournament
+## LTT-336: Dead-Cover Exception-Frontier / Pair-Current Tournament
 
-- **Move:** Make the tournament vertices terminal exception packets, not
-  runners, arcs, raw row names, or individual hard gates.  The live vertices
-  are orthogonal packet theorem, unique random031 overlap, hard-orbit rows with
-  separating current, AP84 edge-only packet, route-label sidecar, small-touch
-  no-hard rows, and raw exception list.
-- **LRC use:** HYP-3476 compares HYP-3472's boundary-current exception set
-  with HYP-3475's hard mirror-orbit set and proves, on the current bank, that
-  their overlap is only `random_covering_031`.  This turns a messy exception
-  frontier into labelled packets.
-- **Preserves:** terminal discharge lane after the low-rank E/branch gate
-  producer fires, including whether the row is ordinary-current,
-  hard-currented, small-touch/no-hard, AP84 edge-only, random031 overlap, or
-  nondead.
+- **Move:** Treat terminal exception packets and pair-current proof carriers as
+  tournament vertices, not runners, arcs, raw row names, raw pair counts, or
+  individual hard gates.  The route-partition vertices are orthogonal packet
+  theorem, unique random031 overlap, hard-currented mirror rows, AP pair-current
+  packet, route-label sidecar, small-touch/no-hard rows, and raw exception list.
+  The pair-current vertices are two-gate pair current, mirror-pair current,
+  colored gate formal packet, single-gate current, hard mirror discharge,
+  partition-lattice guardrail, typed gate-pair word, and scalar shadows.
+- **LRC use:** HYP-3476 compares HYP-3472's boundary-current exception set with
+  HYP-3475's hard mirror-orbit set and finds their overlap is only
+  `random_covering_031`.  It also enumerates `9113` E/branch gate pairs on the
+  nine currentless rows.  Pair current closes the two AP separating-only rows,
+  but none of the seven random projection-edge exceptions, because those random
+  projections are edgeless singleton graphs.
+- **Preserves:** terminal discharge lane after the low-rank E/branch producer
+  fires, finite pair cut/current predicate, adjacent blocker-label union,
+  mirror-pair status, AP pair-current separation, and formal packet split.
 - **Forgets / guardrail:** HYP-3474's axes `K,N,T,S,F,C,M,A` do not preserve
-  this six-label route partition.  Carry sidecar `R` or prove reconstruction.
+  the six-label route partition.  Pair counts and label-union size are scalar
+  shadows unless route sidecar `R`, endpoint sidecars, branch order, and
+  owner-current data are retained or reconstructed.
 - **Pairwise observable:** frontier partition, boundary-current payload,
-  mirror-orbit payload, AP84 splice value, random031 gluing value, and quotient
-  firewall.
+  pair-current payload, mirror-orbit payload, AP splice value, random031
+  gluing value, formal packet fit, and quotient firewall.
 - **Switch/gauge:** higher retained terminal-proof predicate score first; ties
   follow declared packet route order.
-- **Fingerprint:** `7` vertices, score histogram
+- **Fingerprint:** route tournament has `7` vertices, score histogram
   `{12:1,45:1,46:2,49:1,54:1,58:1}`, no directed `3`-cycles, and Hamiltonian
   path
   `R00_orthogonal_exception_packet_theorem -> R01_unique_overlap_random031_clause -> R02_hard_orbit_with_separating_current -> R04_ap84_edge_only_closed_packet -> R05_partition_lattice_route_label -> R03_small_touch_no_hard_boundary_rows -> R06_raw_exception_name_list`.
-- **Next hook:** attack the six small-touch/no-hard rows with a bounded
-  owner-current, endpoint-spine, two-adic, exact-period, or signed-SPEC lemma;
-  do not spend that proof effort on the six hard rows, since they already have
-  separating currents in this bank.
-- **Pointers:** HYP-3476, HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471,
-  HYP-3470, HYP-3462, HYP-3460, HYP-3455, HYP-3453, HYP-3451, THM-523,
-  LTI-436, LTT-336, T1436, OPEN-Q-108.
+  Pair-current tournament has `9` vertices, score histogram
+  `{7:1,11:1,50:1,56:1,58:2,60:1,66:2}`, no directed `3`-cycles, and path
+  `P00_two_gate_pair_current_terminal -> P01_mirror_pair_current_terminal -> P03_colored_gate_formal_packet -> P02_single_gate_boundary_current -> P05_hard_mirror_orbit_discharge -> P04_partition_lattice_guardrail -> P06_typed_gate_pair_word -> P07_raw_pair_count -> P08_raw_label_union_size`.
+- **Next hook:** formalize the AP pair-current packet, attack the six
+  small-touch/no-hard rows with bounded owner-current, endpoint-spine,
+  two-adic, exact-period, signed-SPEC, or state-lift debt, and route the unique
+  random031 overlap through HYP-3455/HYP-3477/HYP-3460.
+- **Pointers:** HYP-3476, HYP-3477, HYP-3475, HYP-3474, HYP-3473, HYP-3472,
+  HYP-3471, HYP-3470, HYP-3462, HYP-3461, HYP-3460, HYP-3459, HYP-3458,
+  HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-2595,
+  THM-523, LTI-436, LTT-336, T1436, OPEN-Q-108.

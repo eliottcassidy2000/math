@@ -514,7 +514,7 @@ record what it destroys before asking it to prove anything.
 | LTI-432 | Dead-cover boundary-current audit | Dead-cover blocker projection, E/branch survivor gates, adjacent blocker labels, projection-cut test, branch-current balance, AP84/non-AP split, scalar-current firewall | HYP-3472 is the graph-current sibling to HYP-3471.  It joins rank-`<=2` E/branch gates to HYP-3451's dead-cover blocker graph, removes each gate's adjacent blocker labels from the projection, and tests projection-edge cuts and separating currents.  Exact bank: `130/130` dead rows have a touching E/branch gate, `123/130` have a projection-edge cut, and `121/130` have a separating current; edge-cut exceptions are seven random rows including HYP-3455's `random_covering_031`, while separating-current exceptions add `covering_AP_with_84` and `ap_omit_12_tail_84x01`. | HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3437, HYP-3436, HYP-3417, HYP-3129, THM-523, T1432, LTT-332, LTI-432, OPEN-Q-108 | Prove the universal touch lemma, then edge-cut/separating-current transfer off the named exceptions.  Route `random_covering_031` through HYP-3455, AP84 base rows through HYP-3462/HYP-3470, and remaining random exceptions through owner-current/two-adic/signed-SPEC/state-lift debt. |
 | LTI-433 | Colored gate formalization interface | Lean proof obligations, colored survivor gate payload, exact count ledger, terminal packet exits, `ColoredGateGlobalCoverage` | HYP-3473 turns HYP-3471 into a sorry-free Lean interface and is the natural formal target for HYP-3472's universal touch lemma.  It defines endpoint kinds, typed endpoint residues, E/branch low-rank predicates, `DeadCoverEBranchSoundness`, terminal exits, exact HYP-3471 counts, and the conditional assembly `ColoredGateGlobalCoverage -> LRC14Statement`. | HYP-3473, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-3436, THM-523, T1433, LTT-333, LTI-433, OPEN-Q-108 | Instantiate `DeadCoverEBranchSoundness` from exact gate geometry, add HYP-3472's dead-cover projection-touch/cut sidecar, fill terminal packets through AP84/random/conductance/owner-current/two-adic/SPEC exits, then apply `lrc14_from_colored_gate_global_coverage`. |
 | LTI-435 | Colored gate mirror-orbit audit | Exact mirror involution on survivor gates, typed endpoint-pair orbit colors, structural orbit sidecars, hard delta orbit ledger, AP84 two-orbit packet | HYP-3475 instantiates HYP-3461's mirror-orbit coordinate on top of HYP-3471, complementary to HYP-3472/HYP-3473/HYP-3474.  All `8702` survivor gates form `4351` two-gate orbits with no fixed/unpaired gates; `130/130` dead rows retain a low-rank E/branch mirror orbit.  Hard cover-delta debt `>=7` is confined to `8` mirror orbits on `7` random rows. | HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3470, HYP-3462, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-3436, HYP-2595, THM-523, T1435, LTT-335, LTI-435, OPEN-Q-108 | Prove the finite hard-orbit discharge for the eight delta-`>=7` mirror orbits; route them through HYP-3455/HYP-3451, endpoint-spine/wall, owner-current, two-adic descent, HYP-3460 phase-branch bypass, or signed-SPEC/Rprime debt. |
-| LTI-436 | Dead-cover pair-current exception audit | Two-gate E/branch pairs, union adjacent blocker deletion, projection-cut recovery, branch-separated current recovery, mirror-pair status, HYP-3474 quotient guardrail | HYP-3476 tests whether HYP-3472's single-gate projection-edge and separating-current exceptions disappear when the current carrier is a pair of low-rank E/branch gates or a HYP-3475 mirror-aware pair.  The carrier is a finite pair-current proof obligation, not a runner, arc, residue, raw count, or scalar color. | HYP-3476, HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-2595, THM-523, T1436, LTT-336, LTI-436, OPEN-Q-108 | Run the pair-current audit on the seven HYP-3472 edge exceptions and two separating-only exceptions.  If all close, expose a `<=2`-gate boundary-current terminal packet for HYP-3473; otherwise route the remaining finite rows through HYP-3455/HYP-3451, AP84 sidecars, phase-branch bypass, owner-current, two-adic descent, signed-SPEC/Rprime, or state-lift debt. |
+| LTI-436 | Dead-cover pair-current exception audit | Two-gate E/branch pairs, union adjacent blocker deletion, AP pair-current separation, random zero-edge singleton obstruction, mirror-pair status, HYP-3474 quotient guardrail | HYP-3476 tests whether HYP-3472's single-gate projection-edge and separating-current exceptions disappear when the current carrier is a pair of low-rank E/branch gates or a HYP-3475 mirror-aware pair.  On nine target rows it audits `9113` pairs.  AP separating-only rows close by non-mirror pair current; the seven random edge exceptions do not close because their dead-cover projections have no edges and no edge-support labels. | HYP-3476, HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, HYP-3436, HYP-2595, THM-523, T1436, LTT-336, LTI-436, OPEN-Q-108 | Split the terminal packet: AP rows use pair-current separation; random rows require a zero-edge singleton-current route through HYP-3455/HYP-3451, phase-branch bypass, owner-current, two-adic descent, signed-SPEC/Rprime, or state-lift debt. |
 | LTI-437 | Hard mirror-orbit discharge audit | HYP-3475 delta-`>=7` mirror orbits, q=`14V` phase-grid hits, lower-delta E/branch projection currents, bounded pair-current sidecar, random031 gluing exception | HYP-3477 audits the complete hard mirror-orbit family.  Exact split: seven hard orbits have lower-delta E/branch projection-edge cuts, while the only exception is `random_covering_031`, whose max-delta pair has zero compatible q=`14V` hits and remains the HYP-3455/HYP-3476 gluing clause. | HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523, T1437, LTT-337, LTI-437, OPEN-Q-108 | Prove the non-random031 lower-delta projection-current discharge and route random031 through HYP-3455/HYP-3476, owner-current, two-adic descent, signed-SPEC/Rprime, or state-lift debt. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
@@ -9226,22 +9226,28 @@ Next agent hook: discharge the eight delta-`>=7` mirror orbits on rows
 `random_covering_113`.  HYP-3455's random031 clause is one member of this
 family; the unique delta-`8` orbit is on `random_covering_022`.
 
-## LTI-436: Exception-Frontier Router Sidecar
+## LTI-436: Dead-Cover Pair-Current / Exception-Frontier Router
 
-Created by codex-2026-06-29 for HYP-3476/T1436/LTT-336 as the packet-router
-layer joining HYP-3472's boundary-current exceptions and HYP-3475's hard
-mirror-orbit ledger.
+Created by codex-2026-06-29 for HYP-3476/T1436/LTT-336.  This technique now
+has two compatible layers: the exception-frontier router joining HYP-3472's
+currentless rows to HYP-3475's hard mirror-orbit ledger, and the pair-current
+audit testing whether HYP-3472's one-gate exceptions disappear under two
+low-rank E/branch gates.
 
-Carrier / vertex set: terminal route packets in the union of currentless rows
-and hard mirror-orbit rows, not runners, raw row names, or individual gates.
+Carrier / vertex set: terminal route packets and pair-current carriers, not
+runners, raw row names, raw pair counts, or individual hard gates.
 
 Preserved LRC predicate: which legal terminal discharge lane remains available
-after the universal low-rank E/branch gate producer has fired.
+after the universal low-rank E/branch gate producer has fired, including
+whether AP pair current, hard mirror debt, small-touch singleton current, or
+ordinary separating current is the right packet.
 
-Destroyed information: full row geometry and terminal lane identity if the
-route packet is collapsed to the existing colored-gate axes.
+Destroyed information: full row geometry, branch order, endpoint sidecars, and
+owner-current data if the route packet is collapsed to HYP-3474's existing
+colored-gate axes.  A proof must carry terminal route sidecar `R`, pair-current
+payload, or a reconstruction theorem.
 
-Exact HYP-3476 readout:
+Exception-frontier readout:
 
 ```text
 boundary_rows_without_separating_current=9
@@ -9252,6 +9258,16 @@ hard_rows_with_separating_current=6/7
 currentless_rows_without_hard_orbit=8/9
 ```
 
+Pair-current readout:
+
+```text
+audited_dead_rows=9
+audited_pair_e_branch_cuts=9113
+exact_mirror_pairs=165
+edge_exception_rows_closed_by_pair_edge_cut=0/7
+separating_exception_rows_closed_by_pair_separating_current=2/9
+```
+
 Packet split:
 
 ```text
@@ -9259,27 +9275,38 @@ ordinary_separating_current: 115
 nondead: 5
 hard_mirror_orbit_with_separating_current: 6
 small_touch_no_hard_current_exception: 6
-ap84_edge_cut_without_separating_current: 2
+ap84_pair_current_separator: 2
 random031_overlap_hard_and_currentless: 1
 ```
 
-Guardrail: no subset of HYP-3474 axes `K,N,T,S,F,C,M,A` preserves this
-six-label route partition.  A proof must carry terminal route sidecar `R` or
-prove a reconstruction theorem.
+The two AP rows `covering_AP_with_84` and `ap_omit_12_tail_84x01` close by a
+selected non-mirror pair current with `removed_edges=36`, `largest_drop=2`,
+and `component_gain=2`.  Their exact mirror pair removes `40` edges but does
+not separate.
+
+The seven random rows remain zero-edge singleton cases under E/branch pair
+current:
+
+```text
+projection edges = 0
+edge_support_labels = ()
+gate_edge_support_labels = ()
+```
 
 Best use: split the remaining finite LRC14 proof work into packet lemmas:
-separating-current rows, hard-currented mirror debt, small-touch/no-hard rows,
-AP84 edge-only rows, and the unique random031 overlap clause.
+ordinary separating-current rows, hard-currented mirror debt, AP pair-current
+rows, the unique random031 overlap clause, and six small-touch/no-hard rows.
 
-Failure mode: trying to discharge hard mirror debt and failed separating
-current with one scalar invariant.  They are orthogonal in the current bank
-except at random031.
-
-Next agent hook: prove the six small-touch rows are harmless via a bounded
-owner-current, endpoint-spine, two-adic, exact-period, or signed-SPEC lemma:
+Next agent hook: prove the six small-touch rows harmless via bounded
+owner-current, endpoint-spine, two-adic, exact-period, signed-SPEC, or
+state-lift debt:
 `random_covering_001`, `random_covering_039`, `random_covering_062`,
 `random_covering_074`, `random_covering_086`, and `random_covering_101`.
+The incoming unit-delta split marks `random_covering_039` and
+`random_covering_074` as cover-delta sidecar rows, leaving
+`random_covering_001`, `random_covering_062`, `random_covering_086`, and
+`random_covering_101` as the cleanest unit-delta singleton-current tests.
 
-Pointers: HYP-3476, HYP-3475, HYP-3474, HYP-3473, HYP-3472, HYP-3471,
-HYP-3470, HYP-3462, HYP-3460, HYP-3455, HYP-3453, HYP-3451, THM-523,
-LTI-436, LTT-336, T1436, OPEN-Q-108.
+Pointers: HYP-3476, HYP-3477, HYP-3475, HYP-3474, HYP-3473, HYP-3472,
+HYP-3471, HYP-3470, HYP-3462, HYP-3460, HYP-3455, HYP-3453, HYP-3451,
+THM-523, LTI-436, LTT-336, T1436, OPEN-Q-108.

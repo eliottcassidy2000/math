@@ -34,7 +34,7 @@ gluing / pair-current / owner-current / two-adic / signed-SPEC exits.
 
 ## Lead codex-2026-06-29: dead-cover pair-current exception audit
 
-**Status:** RESERVED STUB / computation in progress; not proof
+**Status:** EVIDENCE / targeted two-gate graph-current audit; not proof
 (HYP-3476/T1436/LTI-436/LTT-336), the two-gate follow-up to HYP-3472's
 single-gate boundary-current exceptions and HYP-3475's mirror-orbit quotient.
 
@@ -47,13 +47,17 @@ result
 and reflection
 `07-reflections/lrc14-dead-cover-pair-current-codex-20260629.md`.
 
-Planned audit: on the HYP-3472 edge-cut exceptions
+Readout: on the HYP-3472 edge-cut exceptions
 `random_covering_001`, `random_covering_031`, `random_covering_039`,
 `random_covering_062`, `random_covering_074`, `random_covering_086`, and
 `random_covering_101`, plus separating-only exceptions `covering_AP_with_84`
-and `ap_omit_12_tail_84x01`, enumerate low-rank E/branch gate pairs and test
-whether the union of adjacent blocker labels gives a projection-edge cut or a
-branch-separated current.
+and `ap_omit_12_tail_84x01`, the script enumerates `9113` low-rank E/branch
+gate pairs and `165` exact mirror pairs.  Pair current closes the two AP rows
+but none of the seven random rows.  The reason is structural: the random
+exception dead-cover projections are edgeless singleton projections
+(`edge_support_label_count=0`), so no adjacent-label deletion can cut them.
+The AP rows have connected `90`-edge projections and separate under selected
+two-gate pairs.
 
 Tournament vertices should be proof carriers and obligations: pair-current
 cut, mirror-pair current, single-gate current, HYP-3473 formal packet,
@@ -88,6 +92,17 @@ owner-current, endpoint-spine, two-adic, exact-period, or signed-SPEC debt:
 `random_covering_074`, `random_covering_086`, and `random_covering_101`.
 Use tournament vertices as terminal proof packets, not runners or raw row
 names.
+Next: add a zero-edge singleton-current terminal packet for the seven random
+rows.  Candidate carriers are isolated dead-component owner-current imbalance,
+HYP-3455/HYP-3451 gluing/conductance, HYP-3460 phase-branch bypass, two-adic
+descent, signed-SPEC/Rprime, or state-lift debt.  Do not keep trying larger
+E/branch gate pairs unless they add a new edge-support label coordinate.
+Incoming connections: HYP-3477 claims the hard mirror-orbit lane and intersects
+this zero-edge set at `random_covering_031`; the colored gate unit-delta split
+intersects it at cover-delta sidecar rows `random_covering_039` and
+`random_covering_074`.  Test `random_covering_001`, `random_covering_062`,
+`random_covering_086`, and `random_covering_101` first for the pure
+unit-delta singleton-current packet.
 
 ## Lead codex-2026-06-29: dead-cover boundary-current audit
 
