@@ -1,1 +1,130 @@
-HYP-3437 reserved stub: computation pending
+HYP-3437 OVERLAP-TAX MENGER-CUT CERTIFICATE
+==============================================================================
+Identity:
+  branch0 = naive_slack + overlap_tax
+  naive_slack = |E_safe| - sum_o |E_safe cap B0_o|
+  overlap_tax = sum_atoms max(multiplicity(atom)-1,0)*length(atom)
+  A rescue cut is a small odd-blocker subset with subset_overlap_tax > -naive_slack.
+
+A. Aggregate exact atom/cut audit
+  rows audited:                         150
+  branch0 positive rows:                150/150
+  naive slack positive/nonnegative:     91/150
+  naive slack negative rows:            59/150
+  negative rows with rescue cut:        59/59
+  all-row rescue rank histogram:        {0: 91, 2: 7, 4: 2, 5: 48, 6: 2}
+  negative-row rescue rank histogram:   {2: 7, 4: 2, 5: 48, 6: 2}
+  max minimum rescue rank:              6 (covering_AP_with_84)
+  smallest rescue margin:               724590768379/1008622450475640 (random_spine_02)
+  atom count range:                     37 (covering_AP_with_12_and_84) to 1038 (canonical_84m_ext_48)
+  aggregate multiplicity measure:       0:490162931066422469126911248328184136980869345030278775891561839809133407967380930839310905867/41514715333699239157595368241790360858733870505050707567750104911735139119848731005485112704, 1:25908527391211602118355057613445921448198648333123190235005542130844376930621472487102044427/767199795492667784550476201984594190913916885442244004430627308392503310168700676476292000, 2:562836946374435929803373829459356407230348317905896192724826634726141759511231618447906392013/83699022850200078946764855326190243666802158276311910418851017967207941773888570575574824000, 3:733958202215975693042922219306127726178409821138417227872757054238487644277860194285777/1102267182096138620138291822817795003893842154178876012923181763411645839161739402696000, 4:31631441652860212519802332437732586080728818862642696440541795194982143/467649587558875572031839142812451308691665698603848738632416368634203200, 5:38294881016439518372170485507881437/3588589473042374076027529371959164800, 6:82/246841
+
+B. Critical graph/cut rows
+  tightest_branch0: covering_AP_with_84
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    odd=7, even_half=6, E_components=26, atoms=46
+    measures: |E|=107/245, single_sum=31259/63063, union=9068/21021, branch0=563/105105
+    rescue: naive_slack=-18586/315315, overlap_tax=4055/63063, deficit=18586/315315, tax/deficit=1.090875
+    cut_core: rank=6, subset=(3, 5, 7, 9, 11, 13), subset_tax=4055/63063, margin=563/105105
+    graph: pair_edges=9, pair_component_sizes=(6,), top_edges=11-13:10/1001, 7-13:6/637, 5-13:4/455, 7-11:4/539, 9-11:15/2156
+    multiplicity_measure=0:563/105105, 1:3307/9009, 2:4055/63063
+    largest_gap=(Fraction(29, 35), Fraction(163, 196)), labels=(('B0', 5), ('E', 84))
+    charal_signature=odd14=1:1.3:1.5:1.7:1.9:1.11:1.13:1;roles=14Q:1.even_R:5.odd_unit:6.seven_R:1;mu=0:563/105105.1:3307/9009.2:4055/63063;cut=3,5,7,9,11,13;gap=B05.E84
+  worst_naive_slack: random_covering_12
+    speeds=(27, 32, 33, 41, 47, 62, 63, 91, 112, 119, 132, 137, 170)
+    odd=8, even_half=5, E_components=132, atoms=399
+    measures: |E|=1058429/2272424, single_sum=13843356478687/25679402428680, union=5653296500083/16711992056760, branch0=219332985673/1720352123490
+    rescue: naive_slack=-941318888891/12839701214340, overlap_tax=105709968060469/526427749787940, deficit=941318888891/12839701214340, tax/deficit=2.739021
+    cut_core: rank=5, subset=(27, 47, 63, 119, 137), subset_tax=191634350023/1975338648360, margin=202869590839/8559800809560
+    graph: pair_edges=28, pair_component_sizes=(8,), top_edges=47-137:18685913/1416013368, 27-119:352477/27269088, 91-137:127943171/10117967860, 27-63:5549/439824, 27-47:1064411/84566160
+    multiplicity_measure=0:219332985673/1720352123490, 1:392572094546003/2105710999151760, 2:7334765123113/67926161262960, 3:27617865133681/701903666383920, 4:1158055909/294052646160, 5:4/6909
+    largest_gap=(Fraction(1, 189), Fraction(13, 1190)), labels=(('B0', 27), ('E', 170))
+    charal_signature=odd14=5:2.7:3.11:1.13:2;roles=14Q:1.even_R:4.odd_unit:5.seven_R:3;mu=0:219332985673/1720352123490.1:392572094546003/2105710999151760.2:7334765123113/67926161262960.3:27617865133681/701903666383920.4:1158055909/294052646160.5:4/6909;cut=27,47,63,119,137;gap=B027.E170
+  highest_minimum_cut_rank: covering_AP_with_84
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    odd=7, even_half=6, E_components=26, atoms=46
+    measures: |E|=107/245, single_sum=31259/63063, union=9068/21021, branch0=563/105105
+    rescue: naive_slack=-18586/315315, overlap_tax=4055/63063, deficit=18586/315315, tax/deficit=1.090875
+    cut_core: rank=6, subset=(3, 5, 7, 9, 11, 13), subset_tax=4055/63063, margin=563/105105
+    graph: pair_edges=9, pair_component_sizes=(6,), top_edges=11-13:10/1001, 7-13:6/637, 5-13:4/455, 7-11:4/539, 9-11:15/2156
+    multiplicity_measure=0:563/105105, 1:3307/9009, 2:4055/63063
+    largest_gap=(Fraction(29, 35), Fraction(163, 196)), labels=(('B0', 5), ('E', 84))
+    charal_signature=odd14=1:1.3:1.5:1.7:1.9:1.11:1.13:1;roles=14Q:1.even_R:5.odd_unit:6.seven_R:1;mu=0:563/105105.1:3307/9009.2:4055/63063;cut=3,5,7,9,11,13;gap=B05.E84
+  smallest_rescue_margin: random_spine_02
+    speeds=(8, 17, 23, 29, 55, 84, 87, 91, 92, 130, 179, 197, 198)
+    odd=8, even_half=5, E_components=138, atoms=441
+    measures: |E|=4319059/9669660, single_sum=170605443515753/336207483491880, union=31287715656139/100862245047564, branch0=17204381366737/126077806309455
+    rescue: naive_slack=-6811569227997/112069161163960, overlap_tax=198939173985869/1008622450475640, deficit=6811569227997/112069161163960, tax/deficit=3.245119
+    cut_core: rank=4, subset=(17, 29, 87, 91), subset_tax=219878888/3575356785, margin=724590768379/1008622450475640
+    graph: pair_edges=28, pair_component_sizes=(8,), top_edges=29-87:13081931/560840280, 17-55:103501/7827820, 17-87:4583701/397261865, 55-91:333721/29008980, 91-197:236116/20705685
+    multiplicity_measure=0:17204381366737/126077806309455, 1:128330665861/790456465890, 2:15698675017789/144088921496520, 3:1862170463431/59330732380920, 4:31530926809/6465528528690, 5:3523814137/1528215834054 ...
+    largest_gap=(Fraction(435, 1379), Fraction(65, 203)), labels=(('B0', 87), ('B0', 197))
+    charal_signature=odd14=1:2.3:2.7:1.9:1.11:1.13:1;roles=14Q:1.even_R:4.odd_unit:7.seven_R:1;mu=0:17204381366737/126077806309455.1:128330665861/790456465890.2:15698675017789/144088921496520.3:1862170463431/59330732380920.4:31530926809/6465528528690.5:3523814137/1528215834054.6:82/246841;cut=17,29,87,91;gap=B087.B0197
+  largest_pair_graph: random_spine_02
+    speeds=(8, 17, 23, 29, 55, 84, 87, 91, 92, 130, 179, 197, 198)
+    odd=8, even_half=5, E_components=138, atoms=441
+    measures: |E|=4319059/9669660, single_sum=170605443515753/336207483491880, union=31287715656139/100862245047564, branch0=17204381366737/126077806309455
+    rescue: naive_slack=-6811569227997/112069161163960, overlap_tax=198939173985869/1008622450475640, deficit=6811569227997/112069161163960, tax/deficit=3.245119
+    cut_core: rank=4, subset=(17, 29, 87, 91), subset_tax=219878888/3575356785, margin=724590768379/1008622450475640
+    graph: pair_edges=28, pair_component_sizes=(8,), top_edges=29-87:13081931/560840280, 17-55:103501/7827820, 17-87:4583701/397261865, 55-91:333721/29008980, 91-197:236116/20705685
+    multiplicity_measure=0:17204381366737/126077806309455, 1:128330665861/790456465890, 2:15698675017789/144088921496520, 3:1862170463431/59330732380920, 4:31530926809/6465528528690, 5:3523814137/1528215834054 ...
+    largest_gap=(Fraction(435, 1379), Fraction(65, 203)), labels=(('B0', 87), ('B0', 197))
+    charal_signature=odd14=1:2.3:2.7:1.9:1.11:1.13:1;roles=14Q:1.even_R:4.odd_unit:7.seven_R:1;mu=0:17204381366737/126077806309455.1:128330665861/790456465890.2:15698675017789/144088921496520.3:1862170463431/59330732380920.4:31530926809/6465528528690.5:3523814137/1528215834054.6:82/246841;cut=17,29,87,91;gap=B087.B0197
+
+C. Canonical 84m tower one-branch cut profile
+  m | branch0 | naive_slack | overlap_tax | rescue_rank | rescue_subset | margin
+   1 | 563/105105 | -18586/315315 |  4055/63063 |           6 | (3, 5, 7, 9, 11, 13) | 563/105105
+   2 |  263/30030 | -67909/1261260 | 15791/252252 |           5 | (5, 7, 9, 11, 13) | 1919/840840
+   3 | 3119/315315 | -5242/105105 |  3769/63063 |           5 | (5, 7, 9, 11, 13) | 439/140140
+   4 | 4397/420420 | -125093/2522520 | 30295/504504 |           5 | (5, 7, 9, 11, 13) | 353/80080
+   5 | 4397/420420 | -63619/1261260 | 7681/126126 |           5 | (5, 7, 9, 11, 13) | 291/70070
+   6 | 4397/420420 | -5242/105105 |  1691/28028 |           5 | (5, 7, 9, 11, 13) | 3349/840840
+   7 | 4397/420420 | -110797/2207205 | 107105/1765764 |           5 | (5, 7, 9, 11, 13) | 6397/1471470
+   8 | 4397/420420 | -129383/2522520 | 31153/504504 |           5 | (5, 7, 9, 11, 13) | 14111/3363360
+  12 | 4397/420420 | -63619/1261260 | 7681/126126 |           5 | (5, 7, 9, 11, 13) | 20809/5045040
+  18 | 4397/420420 | -63619/1261260 | 7681/126126 |           5 | (5, 7, 9, 11, 13) | 31571/7567560
+  24 | 4397/420420 |  -2031/40040 | 10289/168168 |           5 | (5, 7, 9, 11, 13) | 14111/3363360
+  36 | 78431/7567560 | -47893/945945 | 92315/1513512 |           5 | (5, 7, 9, 11, 13) | 20809/5045040
+  48 | 4397/420420 | -169889/3363360 |    279/4576 |           5 | (5, 7, 9, 11, 13) | 11993/2882880
+
+D. Proof-facing cut lemma
+  Atomize each E_safe component by even gates and odd branch-0 bad endpoints.
+  Scalar overcount is legal only after the multiplicity sidecar is retained:
+    uncovered atoms give branch0, multiplicity>=2 atoms give overlap tax.
+  In this bank, every negative naive-slack row has a small odd-blocker
+  rescue core whose own overlap tax beats the scalar deficit.  This is the
+  Menger-cut target: prove that a primitive covering row either has
+  nonnegative naive slack or has a bounded endpoint-labelled overlap core.
+  HYP-3436 should supply the complementary two-color bad-core cover ledger;
+  HYP-3437 supplies the one-branch overlap-tax lower-bound ledger.
+
+E. Creative route interpretation
+  Schwarz-Christoffel prevertices are the interval endpoints: useful as an
+  arrangement/uniformization model, not as a continuous shortcut.
+  Bring-radical language marks branch-monodromy debt: if a row needs a
+  high-rank rescue core, do not solve it by scalar radicals; retain cuts.
+  BDH/Mertens averaging can enter only as a mean-square theorem for the
+  residue classes of these cut cores after endpoint exceptions are removed.
+  The AP six-touch equioscillation becomes a boundary prevertex model for
+  equality; the covering floor here is moved by the 2-adic branch atoms.
+
+F. Tournament Analysis
+  vertices=proof carriers and cut interfaces, not runners/arcs/raw rows
+  pairwise_observable=retained LRC predicate + overlap-tax payload + scalar-forgetting debt
+  switch_gauge=higher weighted proof-facing score; ties by declared carrier order
+  axes=predicate_retention,finite_exactness,overlap_tax_payload,menger_cut_core,endpoint_spine_interface,two_adic_induction,scalar_firewall_compliance
+  score_hist={21: 1, 49: 1, 53: 1, 54: 1, 61: 1, 65: 1, 66: 2}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  hamiltonian_path=atomic_interval_arrangement -> overlap_tax_menger_core -> endpoint_spine_cut_lift -> two_adic_branch_induction -> bdh_mean_square_sidecar -> schwarz_christoffel_prevertex_model -> bring_monodromy_branch_guard -> raw_harmonic_scalar
+
+G. Assumption challenge
+  Considered vertices: runners, odd blockers, even-half gates, E_safe
+  components, atomic cells, endpoint labels, wall-crossing events, residues,
+  cover arcs, Fourier modes, matroid circuits, graph cuts, and proof
+  obligations.  Chosen vertices: atomic cells plus proof-carrier cuts.
+  This preserves the one-branch LRC predicate exactly because branch0 and
+  overlap_tax are reconstructed from atom multiplicities.  It destroys raw
+  runner order and most continuous geometry.  Challenged assumption: the
+  overlap correction is diffuse harmonic noise; the audit says it has a
+  small labelled cut core in every hard row scanned.

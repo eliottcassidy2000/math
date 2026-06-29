@@ -33357,3 +33357,35 @@ priority path is `two_adic_descent_loss_ledger -> owner_current_even_hinge ->
 even_child_induction_packet -> odd_half_witness_failure_gate ->
 q_witness_noncovering_exit -> apex7_census_offpath_guard ->
 raw_coprime_to_14_reduction`.
+
+## codex-2026-06-29 -- overlap-tax Menger-cut certificate -- HYP-3437
+
+Continued the LRC14 covering-floor push after syncing HYP-3432 through
+HYP-3436.  A collision occurred because incoming mainline had already reserved
+HYP-3436 for a minimal bad-core extractor; the local overlap route was
+renumbered to HYP-3437/T1398/LTI-398/LTT-298 and pushed.
+
+New exact scout:
+`04-computation/lrc14_overlap_menger_cut_certificate_codex_20260628.py`.
+Stored output:
+`05-knowledge/results/lrc14_overlap_menger_cut_certificate_codex_20260628.out`.
+New hypothesis and reflection:
+`05-knowledge/hypotheses/HYP-3437-lrc14-overlap-menger-cut-certificate.md`
+and
+`07-reflections/lrc14-overlap-menger-cut-certificate-codex-20260628.md`.
+
+Core result: atomizing `E_safe` by branch-0 odd-bad endpoints turns
+HYP-3434's overlap tax into a cut object.  On the same `150`-row bank,
+branch0 is positive `150/150`; naive slack is negative on `59/150`; every
+negative row has a strict rescue cut `59/59`.  Rescue rank histogram is
+`{0:91, 2:7, 4:2, 5:48, 6:2}`.  The only rank-`6` stress is the canonical
+AP-with-84 duplicate, with core `(3,5,7,9,11,13)` and margin `563/105105`;
+noncanonical rows in the bank need rank at most `5`.
+
+Proof target: every primitive covering row either has nonnegative naive slack,
+a bounded endpoint-labelled odd-blocker overlap core, or routes to HYP-3436's
+two-color bad-core extractor, HYP-3431 corridor-fence, HYP-3429 endpoint
+spines, HYP-3427 wall words, HYP-3428 loss ledgers, owner-current,
+exact-period/state-lift, or signed-SPEC debt.  Tournament Analysis uses proof
+carriers, not runners; priority path begins
+`atomic_interval_arrangement -> overlap_tax_menger_core -> endpoint_spine_cut_lift`.

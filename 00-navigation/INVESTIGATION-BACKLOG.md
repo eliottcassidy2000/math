@@ -6820,3 +6820,19 @@ on `Phi`, not as a standalone scalar proof.
   endpoint owners.  If these sidecars stay stable under bank enlargement, ask
   for a BDH/Mertens mean-square theorem with the known exceptional fibers
   removed.
+
+## LEAD (codex-2026-06-29): prove bounded overlap-tax cut cores
+- **Source:** HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,
+  HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415.
+- **Status:** OPEN.  HYP-3437 is an exact finite stress audit, not yet a
+  theorem.
+- **Readout:** On the `150`-row HYP-3429 bank, the one-branch overlap-tax
+  atomization has branch0 positive `150/150`; the `59` negative naive-slack
+  rows all have strict rescue cuts; rank histogram is
+  `{0:91,2:7,4:2,5:48,6:2}`.  The rank-`6` stress is only the canonical
+  AP-with-84 duplicate, with core `(3,5,7,9,11,13)` and margin `563/105105`.
+- **Next steps:** Prove the rank-`6` canonical core is exactly HYP-3431's
+  corridor-fence family.  Then prove noncanonical negative-slack rows have a
+  rank-`<=5` endpoint-labelled odd-blocker overlap core, or find and name the
+  first exception.  Attach HYP-3429/HYP-3427 endpoint/wall labels to the cut
+  core so HYP-3436's two-color bad-core extractor can use the same sidecar.

@@ -79,6 +79,11 @@ obligations, and proof-carrier interfaces.
   reproduction, two-adic descent, owner-current routing, scalar-firewall
   compliance, and signed-SPEC exits the vertices.  Raw branch measure is only
   a shadow.
+- Need to prove HYP-3434's overlap-tax rescue structurally:
+  use LTT-298 after LTT-295/LTT-296 and make atomic interval arrangements,
+  odd-blocker cut cores, endpoint-spine lifts, two-adic induction, BDH
+  mean-square sidecars, Schwarz-Christoffel prevertex ledgers, Bring
+  monodromy guards, and raw harmonic scalars the vertices.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -8595,6 +8600,41 @@ quotient_legality_status
   HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424,
   HYP-3423, HYP-3422, HYP-3421, HYP-3420, HYP-3417, HYP-3129, HYP-2963,
   THM-523, LTI-397, LTT-297, T1397, OPEN-Q-108.
+
+## LTT-298: Overlap-Tax Menger-Cut Certificate Tournament
+
+- **Move:** Use proof carriers and cut interfaces as vertices for the
+  one-branch overlap-tax rescue: atomic interval arrangement, overlap-tax
+  Menger core, endpoint-spine cut lift, two-adic branch induction, BDH
+  mean-square sidecar, Schwarz-Christoffel prevertex model, Bring monodromy
+  branch guard, and raw harmonic scalar as negative control.
+- **LRC use:** HYP-3437 makes HYP-3434's identity
+  `branch0 = naive_slack + overlap_tax` proof-facing.  The tournament asks
+  which carrier retains enough structure to prove that a negative scalar
+  slack has a bounded odd-blocker overlap core.  It keeps HYP-3436 separate:
+  HYP-3436 extracts two-color bad cores, while HYP-3437 proves one-branch
+  overlap-tax lower bounds.
+- **Preserves:** exact one-branch floor predicate through atom multiplicity,
+  endpoint labels, odd-blocker cut core, and routing hooks for HYP-3431,
+  HYP-3429/HYP-3427, owner-current, exact-period/state-lift, and signed-SPEC.
+- **Forgets / guardrail:** raw runner order, unlabelled harmonic mass,
+  continuous SC geometry without prevertices, and branch-monodromy claims that
+  do not keep the finite cut.
+- **Pairwise observable:** retained LRC predicate, overlap-tax payload,
+  endpoint-spine liftability, two-adic induction payload, and scalar-forgetting
+  debt.
+- **Switch/gauge:** higher weighted proof-facing score; ties by declared
+  carrier order.
+- **Fingerprint:** `8` vertices, score histogram
+  `{21:1,49:1,53:1,54:1,61:1,65:1,66:2}`, no directed `3`-cycles,
+  Hamiltonian path count `1`, and path
+  `atomic_interval_arrangement -> overlap_tax_menger_core -> endpoint_spine_cut_lift -> two_adic_branch_induction -> bdh_mean_square_sidecar -> schwarz_christoffel_prevertex_model -> bring_monodromy_branch_guard -> raw_harmonic_scalar`.
+- **Next hook:** prove the rank-`6` canonical cut core is exactly HYP-3431's
+  corridor-fence case, then prove rank `<=5` or emit the first named exception
+  for noncanonical negative-slack rows.
+- **Pointers:** HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3430,
+  HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3418,
+  HYP-3415, HYP-3129, THM-523, LTI-398, LTT-298, T1398, OPEN-Q-108.
 
 ## LTT-273: Special-Function Cut Signature Recursion Tournament
 
