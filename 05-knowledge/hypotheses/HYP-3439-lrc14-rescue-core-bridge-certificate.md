@@ -10,6 +10,10 @@ script: 04-computation/lrc14_rescue_core_bridge_certificate_codex_20260629.py
 result: 05-knowledge/results/lrc14_rescue_core_bridge_certificate_codex_20260629.out
 reflection: 07-reflections/lrc14-rescue-core-bridge-certificate-codex-20260629.md
 related:
+  - HYP-3457
+  - HYP-3456
+  - HYP-3454
+  - HYP-3453
   - HYP-3452
   - HYP-3451
   - HYP-3450
@@ -115,8 +119,10 @@ and each row keeps HYP-3450/HYP-3451 low-rank two-colour escapes.  Incoming
 HYP-3452 sharpens this AP-tail clause: for the full canonical tail
 `{1,...,11,13,84m}`, `m=1..4` are finite mixed transients, `m>=5` enters the
 rank-one `E:84m/E:84m` endpoint phase, paired dead-cover rank is already
-`<=2` for `m>=3`, and escape counts follow a mod-`35` Beatty correction.  The
-nonnegative control `multi_far_84_154` has `rank=0`, positive naive slack
+`<=2` for `m>=3`, and escape counts follow a mod-`35` Beatty correction.
+HYP-3454 closes the endpoint interval, HYP-3456 derives the mod-`35` floor
+count, and HYP-3457 closes the finite transient packet.  The nonnegative
+control `multi_far_84_154` has `rank=0`, positive naive slack
 `14699/504504`, `22` low-rank escapes, and only low danger score `0.078671`.
 
 ## Proof Pull
@@ -137,7 +143,7 @@ canonical `m=1` fence.  The next theorem target is therefore:
 
 ```text
 prove the canonical rank-6 base case by HYP-3431/HYP-3450/HYP-3451,
-prove the rank-5 AP-tail descent using HYP-3452's m=1..4 / m>=5 phase split,
+prove the rank-5 AP-tail descent using HYP-3454/HYP-3456/HYP-3457,
 then generalize the bridge to arbitrary primitive covering rows.
 ```
 

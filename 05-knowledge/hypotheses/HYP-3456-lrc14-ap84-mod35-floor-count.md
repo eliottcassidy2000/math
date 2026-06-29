@@ -10,6 +10,7 @@ script: 04-computation/lrc14_ap84_mod35_floor_count_codex_20260629.py
 result: 05-knowledge/results/lrc14_ap84_mod35_floor_count_codex_20260629.out
 reflection: 07-reflections/lrc14-ap84-mod35-floor-count-codex-20260629.md
 related:
+  - HYP-3457
   - HYP-3455
   - HYP-3454
   - HYP-3453
@@ -146,18 +147,20 @@ mod-35 boundary-count lemma
 ```
 
 HYP-3456 supplies the boundary-count lemma, conditional on the HYP-3431 fixed
-low-corridor identity.  The AP-tail bridge is now down to:
+low-corridor identity.  HYP-3457 now supplies the finite transient packet.  The
+AP-tail bridge is now down to:
 
 ```text
 1. use HYP-3431 to keep C1 and C0 as the complete low branch-union carrier;
 2. use HYP-3454 for the rank-one endpoint interval inside those corridors;
 3. use HYP-3456 to count every moving high-grid escape;
-4. handle m=1..4 as finite mixed E/B1 transients.
+4. splice the named finite transients from HYP-3457.
 ```
 
 This does not prove arbitrary primitive rows.  It closes the AP84 tail clock
 needed by HYP-3439/HYP-3454 and hands HYP-3453/HYP-3451 a cleaner local gate
-input.
+input.  The remaining AP-tail work is the fixed-corridor carrier/splice step,
+not another sampled clock or unnamed finite transient check.
 
 Rebase integration: incoming HYP-3455 is the noncanonical
 `random_covering_031` gate-gluing clause.  HYP-3456 is the canonical AP-tail

@@ -10,6 +10,10 @@ script: 04-computation/lrc14_ap84_tail_component_phase_codex_20260629.py
 result: 05-knowledge/results/lrc14_ap84_tail_component_phase_codex_20260629.out
 reflection: 07-reflections/lrc14-ap84-tail-component-phase-codex-20260629.md
 related:
+  - HYP-3457
+  - HYP-3456
+  - HYP-3454
+  - HYP-3453
   - HYP-3451
   - HYP-3450
   - HYP-3436
@@ -65,8 +69,8 @@ m=1..4: best escape is mixed E:84m/B1:5
 m>=5:  best escape is pure E:84m/E:84m
 ```
 
-Thus the AP-tail graph proof can split into `m=1..4` finite cases plus a
-rank-one harmonic tail for `m>=5`.
+Thus the AP-tail graph proof can split into the HYP-3457 finite packet for
+`m=1..4` plus a rank-one harmonic tail for `m>=5`.
 
 ## Exact Readout
 
@@ -134,9 +138,9 @@ two-branch bad cover.  Equivalently, prove that the HYP-3433 endpoint interval
 is not only an endpoint-spine winner but also the HYP-3450 component-cover
 escape.
 
-Then prove the small transients `m=1..4` separately, where the best component
-is still mixed against `B1:5`.  The paired-cover graph side of the proof should
-use:
+HYP-3457 proves the small transients `m=1..4` separately, where the best
+component is still mixed against `B1:5`.  The paired-cover graph side of the
+proof should use:
 
 ```text
 dead projection connected for all checked m
@@ -144,10 +148,10 @@ max paired dead-cover rank <= 2 for m>=3
 mod-35 escape count clock for the remaining component boundary count
 ```
 
-The likely all-`m` proof is a floor-count over the HYP-3431 low corridors cut
+HYP-3456 supplies the all-`m` floor count over the HYP-3431 low corridors cut
 by the moving tail period.  The denominator `35` is the residue clock produced
-by the low corridor endpoints against `42m`; it should be proved as a finite
-floor identity rather than treated as an analytic density.
+by the low corridor endpoints against `42m`; it is now a finite floor identity
+rather than an analytic density.
 
 ## Proof Use
 
@@ -156,7 +160,7 @@ AP-with-`84` base case and then vaguely "lift to AP-with-`84m`", the proof can
 aim for a three-part AP-tail theorem:
 
 ```text
-finite transient: m=1..4
+finite transient: HYP-3457 packet for m=1..4
 rank-one harmonic tail: m>=5
 residue boundary count: mod-35 Beatty correction
 ```

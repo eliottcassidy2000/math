@@ -22,10 +22,9 @@ Validation against HYP-3452 through `m=70`: `mirror_failures=[]`,
 vector matches HYP-3454, and the closed shift is
 `N(m+35)-N(m)=12`, hence `escapes(m+35)-escapes(m)=24`.
 
-The AP-tail bridge is now reduced to importing/proving the HYP-3431 fixed
-corridor identity as the complete low branch-union carrier, dispatching the
-finite mixed transients `m=1..4`, and splicing HYP-3454/HYP-3456 into the
-HYP-3439 rank-`5` descent.
+After HYP-3457, the AP-tail bridge is reduced to importing/proving the
+HYP-3431 fixed corridor identity as the complete low branch-union carrier and
+splicing HYP-3454/HYP-3456/HYP-3457 into the HYP-3439 rank-`5` descent.
 
 ## codex-2026-06-29 -- HYP-3454 AP84 endpoint-clock certificate
 
@@ -44,14 +43,15 @@ the checked tail `m>=5`; the interval
 `[(14ceil(48m/7)+1)/(588m),(14ceil(48m/7)+13)/(588m)]` lies inside the fixed
 low corridor `[8/49,6/35]`, has length `1/(49m)`, and carries rank-one labels
 `L[E:84m] R[E:84m]`.  Minimum low-corridor margins are `1/41160` and
-`1/2940`.  The finite transients `m=1..4` remain mixed `E:84m/B1:5`.
+`1/2940`.  HYP-3457 now closes the finite transients `m=1..4` as mixed
+`E:84m/B1:5` packets.
 
 The escape count is reduced to a period-`35` boundary clock:
 `escapes(m)=2*(floor(12m/35)+d[(m-1) mod 35])`, with no checked failures and
 no checked period-shift failures; the formula shifts by `+24` under
-`m -> m+35`.  HYP-3456 now derives that clock as a floor-count lemma, so the
-next proof hook is to splice HYP-3454/HYP-3456 into the HYP-3439 rank-`5`
-AP-tail descent.
+`m -> m+35`.  HYP-3456 now derives that clock as a floor-count lemma, and
+HYP-3457 closes the finite transient packet, so the next proof hook is to
+splice HYP-3454/HYP-3456/HYP-3457 into the HYP-3439 rank-`5` AP-tail descent.
 
 Rebase integration note: incoming HYP-3453 is the broader gate-escape
 transversal router.  HYP-3454 should be used as its AP-tail endpoint-clock
@@ -33811,3 +33811,34 @@ conductance; route the canonical AP tower through HYP-3431/HYP-3452/HYP-3454;
 route the named noncanonical rank-`6` obstruction through HYP-3455's finite
 gate-gluing clause; any remaining failure must emit endpoint-spine,
 owner-current, exact-period, state-lift, signed-SPEC, or two-adic debt.
+
+## codex-2026-06-29 -- AP84 finite transient closure -- HYP-3457
+
+Added `04-computation/lrc14_ap84_finite_transients_codex_20260629.py`,
+`05-knowledge/hypotheses/HYP-3457-lrc14-ap84-finite-transients.md`,
+stored `05-knowledge/results/lrc14_ap84_finite_transients_codex_20260629.out`,
+and `07-reflections/lrc14-ap84-finite-transients-codex-20260629.md`.
+
+Readout: for `{1,2,...,11,13,84m}` and `m=1..4`, the four survivor windows
+are
+`[8/49,(98m-1)/(588m)]`,
+`[(98m+1)/(588m),6/35]`,
+`[29/35,(490m-1)/(588m)]`, and
+`[(490m+1)/(588m),41/49]`, with endpoint labels
+`B1:7/E:84m`, `E:84m/B1:5`, `B0:5/E:84m`, and `E:84m/B0:7`.
+Validation against HYP-3452 gives `exact_window_failures=[]`,
+`closure_failures=[]`, `rank_drop_failures_for_m_ge_3=[]`, and
+`inequality_failures=[]`; each transient row has exactly `4` escapes and
+`low_rank_escape=4`.
+
+The phase break is explicit:
+
+```text
+(98m+13)/(588m)-6/35=(455-98m)/(2940m)
+```
+
+positive for `m=1..4`, then reversed at `m=5`, which is exactly the HYP-3454
+pure `E:84m/E:84m` phase.  So the AP-tail split now has named sidecars:
+HYP-3457 for finite transients, HYP-3454 for the endpoint interval, and
+HYP-3456 for the mod-`35` escape count.  The remaining AP-tail task is the
+HYP-3431 fixed-corridor carrier plus the HYP-3439 rank-`5` splice.

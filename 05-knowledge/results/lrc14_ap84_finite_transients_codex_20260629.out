@@ -1,0 +1,84 @@
+HYP-3457 AP84 FINITE TRANSIENT CLOSURE
+========================================================================
+status=EVIDENCE / finite mixed AP-tail transient certificate; not an LRC14 proof
+source=HYP-3452 component phase + HYP-3454 endpoint clock + HYP-3456 floor-count handoff
+
+A. Four-window transient formula
+  family=S_m={1,2,...,11,13,84m}, transient_m=1..4
+  fixed low corridors=[8/49,6/35] and [29/35,41/49]
+  expected survivor windows:
+    outer_left  = [8/49,(98m-1)/(588m)]
+    inner_left  = [(98m+1)/(588m),6/35]
+    inner_right = [29/35,(490m-1)/(588m)]
+    outer_right = [(490m+1)/(588m),41/49]
+
+B. Component-audit validation
+  exact_window_failures=[]
+  closure_failures=[]
+  rank_drop_failures_for_m_ge_3=[]
+  inequality_failures=[]
+  row summary: m | components | dead | escapes | low_rank_escape | max_pair | projection
+  1 |         26 |   22 |       4 |               4 |        3 | 1/22
+  2 |         48 |   44 |       4 |               4 |        3 | 1/44
+  3 |         70 |   66 |       4 |               4 |        2 | 1/66
+  4 |         88 |   84 |       4 |               4 |        2 | 1/84
+
+C. Exact survivor windows
+  m=1:
+    outer_left       [8/49,97/588] len=   1/588 rank=2 labels=L[B1:7] R[E:84]
+    inner_left       [33/196,6/35] len=   3/980 rank=2 labels=L[E:84] R[B1:5]
+    inner_right    [29/35,163/196] len=   3/980 rank=2 labels=L[B0:5] R[E:84]
+    outer_right    [491/588,41/49] len=   1/588 rank=2 labels=L[E:84] R[B0:7]
+    best=[33/196,6/35] len=3/980 rank=2 labels=L[E:84] R[B1:5]
+  m=2:
+    outer_left       [8/49,65/392] len=   1/392 rank=2 labels=L[B1:7] R[E:168]
+    inner_left     [197/1176,6/35] len= 23/5880 rank=2 labels=L[E:168] R[B1:5]
+    inner_right   [29/35,979/1176] len= 23/5880 rank=2 labels=L[B0:5] R[E:168]
+    outer_right    [327/392,41/49] len=   1/392 rank=2 labels=L[E:168] R[B0:7]
+    best=[197/1176,6/35] len=23/5880 rank=2 labels=L[E:168] R[B1:5]
+  m=3:
+    outer_left     [8/49,293/1764] len=  5/1764 rank=2 labels=L[B1:7] R[E:252]
+    inner_left     [295/1764,6/35] len= 37/8820 rank=2 labels=L[E:252] R[B1:5]
+    inner_right  [29/35,1469/1764] len= 37/8820 rank=2 labels=L[B0:5] R[E:252]
+    outer_right  [1471/1764,41/49] len=  5/1764 rank=2 labels=L[E:252] R[B0:7]
+    best=[295/1764,6/35] len=37/8820 rank=2 labels=L[E:252] R[B1:5]
+  m=4:
+    outer_left     [8/49,391/2352] len=   1/336 rank=2 labels=L[B1:7] R[E:336]
+    inner_left      [131/784,6/35] len= 17/3920 rank=2 labels=L[E:336] R[B1:5]
+    inner_right    [29/35,653/784] len= 17/3920 rank=2 labels=L[B0:5] R[E:336]
+    outer_right  [1961/2352,41/49] len=   1/336 rank=2 labels=L[E:336] R[B0:7]
+    best=[131/784,6/35] len=17/3920 rank=2 labels=L[E:336] R[B1:5]
+
+D. Endpoint inequalities
+  For m=1..4, the high right endpoint still lies beyond the B1:5 wall:
+    (98m+13)/(588m) - 6/35 = (455-98m)/(2940m) > 0.
+  At m=5 this sign changes, which is exactly the HYP-3454 pure E/E phase.
+  margins: m | high_right-B1:5 | inner_margin | outer_len | inner_len
+  1 |            17/140 |        1/196 |     1/588 |     3/980
+  2 |            37/840 |       5/1176 |     1/392 |   23/5880
+  3 |           23/1260 |        1/252 |    5/1764 |   37/8820
+  4 |             3/560 |        3/784 |     1/336 |   17/3920
+
+E. Proof pull
+  The finite mixed side of the AP-tail bridge is now an explicit four-row
+  certificate: exactly four low-rank escapes survive in each transient row,
+  with mirror-paired endpoint labels and no component-audit failures.  After
+  HYP-3456 closed the escape-count clock, the remaining AP-tail work is to
+  import/prove the HYP-3431 fixed-corridor carrier as the low branch-union
+  theorem and splice HYP-3454/HYP-3456/HYP-3457 into HYP-3439.
+
+F. Tournament Analysis
+  vertices=finite transient proof obligations, not runners or raw arcs
+  pairwise_observable=exact window match + endpoint labels + mirror pairing + rank payload
+  switch=higher retained AP-tail proof payload; ties by transient route
+  score_hist={21: 1, 43: 1, 51: 1, 52: 1, 55: 1, 59: 1}
+  directed_3cycles=0
+  hamiltonian_path=four_window_explicit_packet -> component_audit_exact_match -> mirror_pairing -> mixed_endpoint_clip_inequalities -> rank_drop_m3_to_m4 -> raw_transient_sample_rows
+
+G. Assumption Challenge
+  Considered vertices: runners, m-values, four survivor windows, fixed
+  corridor sections, high-grid wall events, endpoint walls, dead-cover graph
+  summaries, and proof obligations.  The chosen quotient preserves the
+  finite AP-tail branch-union survivor predicate and endpoint labels, but
+  destroys arbitrary non-AP component geometry.  It is only the finite
+  transient sidecar for the AP-tail bridge.

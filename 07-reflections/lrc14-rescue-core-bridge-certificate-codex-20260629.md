@@ -19,12 +19,12 @@ rank-5 AP-tail descent for m>=2
 component-cover escape obstruction for arbitrary primitive rows
 ```
 
-After rebasing over HYP-3452, the AP-tail clause is sharper than the original
-HYP-3439 bridge.  HYP-3452 turns the rank-5 descent into a phase theorem:
-`m=1..4` are finite mixed transients, `m>=5` has the rank-one `E:84m/E:84m`
-endpoint component, paired dead-cover rank is already `<=2` from `m>=3`, and
-escape counts follow a mod-35 Beatty correction.  That result should be used
-as the AP-tail proof skeleton rather than re-scanning the bridge rows.
+After HYP-3452/HYP-3454/HYP-3456/HYP-3457, the AP-tail clause is sharper than
+the original HYP-3439 bridge.  HYP-3457 closes `m=1..4` as finite mixed
+transients, HYP-3454 gives the rank-one `E:84m/E:84m` endpoint component for
+`m>=5`, paired dead-cover rank is already `<=2` from `m>=3`, and HYP-3456
+derives the mod-35 escape count.  Those sidecars should be used as the AP-tail
+proof skeleton rather than re-scanning the bridge rows.
 
 The nonnegative control `multi_far_84_154` also matters.  It shows the bridge
 can route a row with no one-branch deficit while the component-cover ledger
@@ -43,6 +43,5 @@ component addresses must remain sidecars.
 
 Next pull: formalize the canonical rank-`6` base case by combining HYP-3431's
 corridor fence with HYP-3450/HYP-3451's four low-rank component escapes; then
-use HYP-3452 to prove the rank-`5` AP-tail descent through finite transients
-`m=1..4`, the rank-one `m>=5` phase, and the mod-35 escape clock.  Only after
-that should the bridge be broadened to arbitrary primitive covering rows.
+splice HYP-3454/HYP-3456/HYP-3457 into the rank-`5` AP-tail descent.  Only
+after that should the bridge be broadened to arbitrary primitive covering rows.

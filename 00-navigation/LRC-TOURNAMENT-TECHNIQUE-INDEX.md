@@ -112,6 +112,11 @@ obligations, and proof-carrier interfaces.
   gaps, integer intersection inequalities, mirror doubling, residue vectors,
   and component-audit validation the vertices.  The quotient is AP-tail local:
   it keeps the escape count but forgets non-AP wall geometry.
+- Need to close the finite AP84 transient rows before splicing the AP tail:
+  use LTT-317 after LTT-312/LTT-314/LTT-316 and make the four survivor windows,
+  endpoint labels, mirror pairs, rank payloads, sign-change inequality, and
+  component-audit match the vertices.  This closes `m=1..4` only; it forgets
+  arbitrary non-AP component geometry.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9212,11 +9217,11 @@ quotient_legality_status
   `{20:1, 23:1, 49:1, 51:1, 55:1, 56:1, 58:1}`, no directed `3`-cycles, and
   Hamiltonian path
   `m5_rank_one_endpoint_phase -> H3433_tail_address_certificate -> connected_dead_projection_family -> mod35_beatty_escape_clock -> m3_dead_pair_rank_drop -> dead_fraction_peak_scalar -> raw_component_count_slope`.
-- **Next hook:** prove finite transients `m=1..4`, prove the rank-one
-  `E:84m/E:84m` endpoint interval for every `m>=5`, and use HYP-3456's
-  low-corridor floor count for the period-`35` Beatty escape clock before
-  using Menger, Green-current, or conductance sidecars.
-- **Pointers:** HYP-3456, HYP-3452, HYP-3451, HYP-3450, HYP-3436, HYP-3435, HYP-3434,
+- **Next hook:** use HYP-3457 for finite transients `m=1..4`, prove/import the
+  rank-one `E:84m/E:84m` endpoint interval for every `m>=5`, and use
+  HYP-3456's low-corridor floor count for the period-`35` Beatty escape clock
+  before using Menger, Green-current, or conductance sidecars.
+- **Pointers:** HYP-3457, HYP-3456, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3436, HYP-3435, HYP-3434,
   HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422,
   HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-412, LTT-312, T1412,
   OPEN-Q-108.
@@ -9288,9 +9293,10 @@ quotient_legality_status
   `{15:1,45:1,50:2,55:1,56:1,58:1}`, no directed `3`-cycles, and Hamiltonian
   path
   `closed_form_endpoint_interval -> low_corridor_containment_inequalities -> moving_E84m_gap_certificate -> finite_transients_m1_to_m4 -> mod35_escape_boundary_clock -> component_cover_reaudit -> raw_dead_fraction_peak`.
-- **Next hook:** splice the HYP-3454 endpoint-clock clause and HYP-3456
-  boundary-count clause into the HYP-3439 rank-`5` AP-tail descent.
-- **Pointers:** HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438,
+- **Next hook:** splice the HYP-3454 endpoint-clock clause, HYP-3456
+  boundary-count clause, and HYP-3457 finite-transient clause into the
+  HYP-3439 rank-`5` AP-tail descent.
+- **Pointers:** HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438,
   HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429,
   HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963,
   THM-523, LTI-414, LTT-314, T1414, OPEN-Q-108.
@@ -9365,9 +9371,42 @@ quotient_legality_status
   `gap_intersection_floor_count -> fixed_low_corridor_identity -> period35_residue_vector -> mirror_two_corridor_doubling -> component_audit_validation -> raw_beatty_fit -> raw_dead_fraction_peak`.
 - **Next hook:** import or prove the HYP-3431 fixed-corridor identity as the
   complete low branch-union carrier for the canonical AP-tail family, then
-  dispatch the finite mixed transients `m=1..4` and splice the result into the
-  HYP-3439 rank-`5` descent.
-- **Pointers:** HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450,
+  splice HYP-3454/HYP-3456/HYP-3457 into the HYP-3439 rank-`5` descent.
+- **Pointers:** HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450,
   HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433,
   HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
   HYP-3129, HYP-2963, THM-523, LTI-416, LTT-316, T1416, OPEN-Q-108.
+
+## LTT-317: AP84 Finite Transient Tournament
+
+- **Move:** Treat the `m=1..4` AP84 transient proof as a tournament over
+  finite proof obligations.  Vertices are the four explicit survivor windows,
+  component-audit exact match, mirror pairing, mixed endpoint clip
+  inequalities, rank drop from `m=3`, and raw transient sample rows.
+- **LRC use:** HYP-3457 closes the finite side of HYP-3452/HYP-3454.  For
+  `{1,2,...,11,13,84m}` and `m=1..4`, the survivor windows are
+  `[8/49,(98m-1)/(588m)]`, `[(98m+1)/(588m),6/35]`,
+  `[29/35,(490m-1)/(588m)]`, and `[(490m+1)/(588m),41/49]`, with endpoint
+  labels `B1:7/E:84m`, `E:84m/B1:5`, `B0:5/E:84m`, and `E:84m/B0:7`.
+- **Preserves:** finite AP-tail branch-union survivor predicate, endpoint
+  labels, mirror pairing, rank-`2` component escapes, and component-audit
+  compatibility.
+- **Forgets / guardrail:** arbitrary non-AP component geometry, full
+  primitive-row obstruction graphs, and scalar dead fraction are discarded.
+  Use only as the finite AP84 sidecar.
+- **Pairwise observable:** exact window match, endpoint labels, mirror pairing,
+  mixed-clip inequality, rank payload, and scalar-sample penalty.
+- **Switch/gauge:** higher retained AP-tail proof payload first; ties use the
+  finite-transient route.
+- **Fingerprint:** `6` vertices, score histogram
+  `{21:1,43:1,51:1,52:1,55:1,59:1}`, no directed `3`-cycles, and Hamiltonian
+  path
+  `four_window_explicit_packet -> component_audit_exact_match -> mirror_pairing -> mixed_endpoint_clip_inequalities -> rank_drop_m3_to_m4 -> raw_transient_sample_rows`.
+- **Next hook:** treat finite AP84 transients as closed.  The remaining AP-tail
+  bridge is the HYP-3431 fixed-corridor carrier and HYP-3439 splice of
+  HYP-3454/HYP-3456/HYP-3457.
+- **Pointers:** HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451,
+  HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434,
+  HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422,
+  HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-417, LTT-317, T1417,
+  OPEN-Q-108.

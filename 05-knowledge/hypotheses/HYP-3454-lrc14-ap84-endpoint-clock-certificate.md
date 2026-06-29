@@ -10,6 +10,7 @@ script: 04-computation/lrc14_ap84_endpoint_clock_certificate_codex_20260629.py
 result: 05-knowledge/results/lrc14_ap84_endpoint_clock_certificate_codex_20260629.out
 reflection: 07-reflections/lrc14-ap84-endpoint-clock-certificate-codex-20260629.md
 related:
+  - HYP-3457
   - HYP-3456
   - HYP-3453
   - HYP-3452
@@ -66,7 +67,8 @@ Incoming HYP-3453 supplies the bank-level gate-escape transversal companion:
 when a dead-cover obstruction exists, it should route through a low-rank
 survivor gate.  HYP-3454 is the AP-tail endpoint-clock clause for that route.
 HYP-3456 now supplies the floor-count derivation of the residue boundary
-clock that HYP-3454 left as a sampled sidecar.
+clock that HYP-3454 left as a sampled sidecar, and HYP-3457 closes the finite
+mixed transient packet `m=1..4`.
 
 ## Exact Readout
 
@@ -105,7 +107,7 @@ corridor `[8/49,6/35]`, while its endpoints are exactly adjacent moving
 sampling phenomenon: it has a closed-form address and exact containment
 margins.
 
-The transient side remains finite:
+The transient side is now the HYP-3457 finite packet:
 
 ```text
 m=1: L[E:84]  R[B1:5], rank=2, best=[33/196,6/35]
@@ -151,7 +153,7 @@ base case plus rank-`5` AP-tail descent.  HYP-3452 found the phase split.
 HYP-3454 makes the descent sharper:
 
 ```text
-1. Prove the four mixed transients m=1..4 directly.
+1. Use HYP-3457 for the four mixed transients m=1..4.
 2. Prove the closed-form endpoint interval I_m for every m>=5 by low-corridor
    containment and moving E:84m gap inequalities.
 3. Use HYP-3456's period-35 floor count for the remaining component
@@ -162,8 +164,8 @@ This is still not a proof of LRC14.  It is a smaller bridge lemma for the
 current AP-tail/rescue-core corridor.  Raw dead fraction remains a scalar
 warning only: HYP-3452 already showed that its checked maximum is a residue
 artifact at `m=35`, while the proof clock starts at the endpoint phase `m=5`.
-After HYP-3456, the remaining AP-tail bookkeeping is the HYP-3431 fixed
-corridor carrier and the finite mixed transients.
+After HYP-3456 and HYP-3457, the remaining AP-tail bookkeeping is the
+HYP-3431 fixed-corridor carrier plus the HYP-3439 rank-`5` splice.
 
 ## Tournament Analysis
 

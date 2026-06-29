@@ -27,8 +27,9 @@ and the mirror corridor doubles it.  This recovers the HYP-3452/HYP-3454
 escape count through `m=70` with no component-audit failures and gives the
 closed shift `escapes(m+35)-escapes(m)=24`.
 
-The remaining AP-tail proof is now mostly bookkeeping: prove or import the
-HYP-3431 fixed-corridor identity as the low branch-union carrier, use HYP-3454
-for the endpoint interval, and handle `m=1..4` as finite mixed cases.  This is
-still local to the AP84 tail, but it removes one sampled ingredient from the
-HYP-3439 descent.
+HYP-3457 now closes the finite `m=1..4` mixed cases as explicit four-window
+packets.  The remaining AP-tail proof is mostly carrier bookkeeping: prove or
+import the HYP-3431 fixed-corridor identity as the low branch-union carrier,
+use HYP-3454 for the endpoint interval, use HYP-3456 for the escape count, and
+splice those named sidecars into HYP-3439.  This is still local to the AP84
+tail, but it removes the sampled ingredients from the HYP-3439 descent.

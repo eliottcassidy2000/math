@@ -1,5 +1,34 @@
 # Open Questions
 
+**OPEN-Q-108 HYP-3457 AP84 finite transient addendum:**
+HYP-3457 closes the finite `m=1..4` side of the AP-tail split from
+HYP-3452/HYP-3454/HYP-3456.  For
+
+```text
+S_m = {1,2,...,11,13,84m}
+```
+
+the four transient survivor windows are
+
+```text
+[8/49,(98m-1)/(588m)]       L[B1:7]  R[E:84m]
+[(98m+1)/(588m),6/35]       L[E:84m] R[B1:5]
+[29/35,(490m-1)/(588m)]     L[B0:5]  R[E:84m]
+[(490m+1)/(588m),41/49]     L[E:84m] R[B0:7].
+```
+
+Validation against HYP-3452 gives `exact_window_failures=[]`,
+`closure_failures=[]`, `rank_drop_failures_for_m_ge_3=[]`, and
+`inequality_failures=[]`; every transient row has `escapes=4` and
+`low_rank_escape=4`.  The phase break is the sign of
+`(98m+13)/(588m)-6/35=(455-98m)/(2940m)`, positive for `m=1..4` and reversed
+at `m=5`.  The remaining AP-tail task is the HYP-3431 fixed-corridor carrier
+and the HYP-3439 splice, not another finite transient check. -> HYP-3457,
+HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450,
+HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433,
+HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417,
+HYP-3129, HYP-2963, THM-523, LTI-417, LTT-317, T1417, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3456 AP84 mod-35 floor-count addendum:**
 HYP-3456 closes the sampled period-`35` AP-tail escape clock from
 HYP-3454 into a floor-count formula over the HYP-3431 fixed low corridors.
@@ -28,10 +57,10 @@ Validation against the HYP-3452 component audit through `m=70` gives
 `mirror_failures=[]`, `formula_failures=[]`, and
 `component_audit_failures=[]`.  The correction vector matches HYP-3454, and
 the closed shift is `N(m+35)-N(m)=12`, hence
-`escapes(m+35)-escapes(m)=24`.  The remaining AP-tail task is now to import or
-prove the HYP-3431 fixed-corridor identity as the complete low branch-union
-carrier, handle `m=1..4` finite mixed cases, and splice this floor-count lemma
-into the HYP-3439 rank-`5` descent. -> HYP-3456, HYP-3455, HYP-3454, HYP-3453,
+`escapes(m+35)-escapes(m)=24`.  HYP-3457 closes the finite `m=1..4` mixed
+cases.  The remaining AP-tail task is now to import or prove the HYP-3431
+fixed-corridor identity as the complete low branch-union carrier and splice the
+named AP-tail sidecars into the HYP-3439 rank-`5` descent. -> HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453,
 HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436,
 HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426,
 HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-416, LTT-316,
@@ -53,12 +82,11 @@ I_m=[(14ceil(48m/7)+1)/(588m),(14ceil(48m/7)+13)/(588m)].
 
 The interval lies inside the fixed low corridor `[8/49,6/35]`, has length
 `1/(49m)`, and carries endpoint labels `L[E:84m] R[E:84m]` with endpoint rank
-`1`.  The transients `m=1..4` are now isolated finite mixed `E:84m/B1:5`
-cases.  HYP-3456 supplies the missing component-boundary count by deriving
+`1`.  HYP-3457 supplies the isolated finite mixed `m=1..4` packet.  HYP-3456 supplies the missing component-boundary count by deriving
 the period-`35` clock
 `escapes(m)=2*(floor(12m/35)+d[(m-1) mod 35])` from the fixed low corridors
 and moving high-grid gaps.  Splice the endpoint clock and HYP-3456 floor
-count into the HYP-3439 rank-`5` AP-tail descent. -> HYP-3456, HYP-3455, HYP-3454,
+count into the HYP-3439 rank-`5` AP-tail descent. -> HYP-3457, HYP-3456, HYP-3455, HYP-3454,
 HYP-3452, HYP-3453, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437,
 HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427,
 HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523,
@@ -88,8 +116,8 @@ I_m=[(14ceil(48m/7)+1)/(588m),(14ceil(48m/7)+13)/(588m)]
 ```
 
 with endpoint labels `E:84m/E:84m` and length `1/(49m)`.  Concrete task:
-prove this interval survives all fixed odd/even walls for every `m>=5`, then
-handle `m=1..4` as finite mixed `E/B1` transients.  HYP-3456 supplies the
+prove this interval survives all fixed odd/even walls for every `m>=5`, with
+HYP-3457 now handling `m=1..4` as finite mixed `E/B1` transients.  HYP-3456 supplies the
 component-boundary count by deriving the checked period-`35` Beatty law
 `escapes(m)=2*(floor(12m/35)+d[m mod 35])`.  Raw dead fraction is a warning
 shadow: extending the AP-tail range moves its checked maximum to residue
@@ -118,12 +146,13 @@ AP/84m bridge:
 ```
 
 Concrete task: prove the canonical rank-`6` base case using HYP-3431 plus the
-HYP-3450/HYP-3451 four-escape component graph, then use HYP-3452 for the
-rank-`5` AP-tail descent: finite transients `m=1..4`, rank-one endpoint phase
-for `m>=5`, paired-cover rank `<=2` from `m>=3`, and the mod-`35` escape
-clock.  Any general primitive covering row must then either fit this bounded
-bridge or emit endpoint-spine/wall, owner-current, exact-period/state-lift,
-two-adic loss, or signed-SPEC debt. -> HYP-3439, HYP-3452, HYP-3451,
+HYP-3450/HYP-3451 four-escape component graph, then use
+HYP-3454/HYP-3456/HYP-3457 for the rank-`5` AP-tail descent: finite transients,
+rank-one endpoint phase for `m>=5`, paired-cover rank `<=2` from `m>=3`, and
+the mod-`35` escape clock.  Any general primitive covering row must then either
+fit this bounded bridge or emit endpoint-spine/wall, owner-current,
+exact-period/state-lift, two-adic loss, or signed-SPEC debt. -> HYP-3439,
+HYP-3457, HYP-3456, HYP-3454, HYP-3453, HYP-3452, HYP-3451,
 HYP-3450, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
 HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415, THM-523,
 LTI-400, LTT-300, T1400, OPEN-Q-108.
