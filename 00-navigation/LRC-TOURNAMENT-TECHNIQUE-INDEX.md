@@ -9236,3 +9236,40 @@ quotient_legality_status
   HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429,
   HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963,
   THM-523, LTI-414, LTT-314, T1414, OPEN-Q-108.
+
+## LTT-315: Random031 Gate-Gluing Tournament
+
+- **Move:** Treat the `random_covering_031` noncanonical rank-`6` row as a
+  finite gate-gluing tournament.  Vertices are the max-delta survivor-gate
+  mirror pair, rank-`6` rescue overlap graph, two-colour component escape
+  router, owner-delta gluing clause, mirror involution cut word,
+  endpoint-spine/wall lift, BDH/signed-SPEC sidecar, and raw rank scalar.
+- **LRC use:** HYP-3455 isolates the broad HYP-3439 noncanonical rank-`6`
+  exception.  The rescue subset `(23,45,93,113,147,169)` forms a connected
+  `15`-edge overlap graph.  HYP-3438 gives `84` mixed components and `138`
+  survivor gates; only components `43` and `54` have max total cover delta
+  `7`, and they form a mirror pair with deltas `(3,4)` and `(4,3)`.  Their
+  owner union `(23,45,93,113,147,169,173)` contains the whole rescue subset.
+- **Preserves:** rescue-owner graph connectivity, survivor-gate word, adjacent
+  cover deltas, branch mask, endpoint labels, mirror pairing, component-cover
+  escape count, and scalar-firewall warning.
+- **Forgets / guardrail:** raw rescue rank, raw survivor mass, raw dead
+  fraction, and runner order are lossy.  They do not retain the seven-owner
+  gluing clause or the `94` low-rank component escapes.
+- **Pairwise observable:** rank-`6` graph payload, max-delta gate payload,
+  two-colour escape payload, mirror symmetry, and scalar-risk penalty.
+- **Switch/gauge:** higher retained-predicate score first; ties use the
+  declared gate-gluing route.
+- **Fingerprint:** `8` vertices, score histogram
+  `{10:1, 52:1, 59:1, 63:1, 65:1, 66:2, 67:1}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `max_delta_survivor_gate_pair -> rank6_rescue_overlap_graph -> two_color_component_escape_router -> owner_delta_gluing_clause -> mirror_involution_cut_word -> endpoint_spine_wall_lift -> bdh_signed_spec_sidecar -> raw_rank6_scalar`.
+- **Next hook:** prove the seven-owner gluing lemma.  Treat components `43`
+  and `54` as terminals in a Menger/Green-current/Schwarz-Christoffel boundary
+  word; prove a full two-colour saturation must expose a low-rank component
+  escape, endpoint-spine/wall route, owner-current imbalance, two-adic descent,
+  or signed-SPEC/Rprime debt.
+- **Pointers:** HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438,
+  HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427,
+  HYP-3425, HYP-3422, HYP-3418, HYP-3415, THM-523, LTI-415, LTT-315, T1415,
+  OPEN-Q-108.

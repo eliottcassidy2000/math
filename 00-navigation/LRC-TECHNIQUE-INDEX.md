@@ -500,6 +500,7 @@ record what it destroys before asking it to prove anything.
 | LTI-412 | AP84 tail component phase | Canonical AP-with-`84m` family, rank-one `E:84m/E:84m` endpoint phase, finite mixed transients, paired-cover rank drop, connected dead projection, mod-35 Beatty escape clock | HYP-3452 stitches HYP-3433's endpoint-spine law to HYP-3450/HYP-3451's component-cover graph router on `{1,2,...,11,13,84m}`.  Exact audit through `m=70`: rank-one `E:84m/E:84m` component phase starts at `m=5`, no HYP-3433 interval failures after that, max paired dead-cover rank drops to `<=2` at `m=3`, the dead projection is connected from `m=1`, and every alive component is a low-rank escape.  Escape counts obey the checked period-`35` Beatty correction `escapes(m)=2*(floor(12m/35)+d[m mod 35])`, while raw dead fraction peaks at residue artifact `m=35` in the checked range. | HYP-3452, HYP-3451, HYP-3450, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1412, LTT-312, LTI-412, OPEN-Q-108 | Prove the AP-tail theorem as: finite transients `m=1..4`, rank-one harmonic endpoint interval for all `m>=5`, and a floor-count proof of the mod-35 escape clock.  Use connected dead projection and pair-rank `<=2` as graph sidecars, not as scalar replacements for the interval certificate. |
 | LTI-413 | Gate-escape transversal router | Component/gate join, clean low-rank exits, rank-`<=2` survivor gates, dead-cover obstruction split, endpoint/cover-delta payload, graph-composable escape certificate | HYP-3453 joins HYP-3438 survivor gates to HYP-3450/HYP-3451 component-cover data, complementing HYP-3452's AP-with-`84m` phase audit and HYP-3439's rescue-core bridge.  Exact bank: `rows_with_low_rank_component=135/135`, `rows_with_low_rank_gate=133/135`, `rows_with_dead_components=130/135`, and `rows_with_dead_components_and_low_rank_gate=130/130`; the only rows without a low-rank gate are `random_covering_044` and `random_covering_053`, both with `dead=0` and `gates=0`.  Gate endpoint-rank histogram is `{2:8666,3:36}`. | HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1413, LTT-313, LTI-413, OPEN-Q-108 | Prove the gate-transversal implication: if a primitive covering row has any `dead_both` component, then it has a rank-`<=2` survivor gate; if no such gate exists, the dead-cover obstruction is empty.  Then feed that gate into HYP-3451's Menger/Green-current/conductance route. |
 | LTI-414 | AP84 endpoint-clock certificate | Closed-form endpoint interval `I_m`, low-corridor containment margins, moving `E:84m` gap labels, finite mixed transients, period-35 escape boundary clock | HYP-3454 narrows HYP-3452 into exact endpoint inequalities and a residue clock, as the AP-tail endpoint-clock sidecar to HYP-3453's bank-level gate-escape transversal.  Through `m=70`, every checked `m>=5` has no endpoint failures: `I_m=[(14ceil(48m/7)+1)/(588m),(14ceil(48m/7)+13)/(588m)]` lies inside `[8/49,6/35]`, has length `1/(49m)`, and is the rank-one `L[E:84m] R[E:84m]` component-cover escape.  Transients `m=1..4` are finite mixed `E/B1` cases.  The checked escape law has correction vector of period `35`, no failures, and shift `+24` under `m -> m+35`. | HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1414, LTT-314, LTI-414, OPEN-Q-108 | Prove the mod-`35` floor-count lemma for the remaining alive component boundaries, then use HYP-3454 as the AP-tail endpoint-clock clause inside the HYP-3439 rank-`5` descent. |
+| LTI-415 | Random031 gate-gluing obstruction | Connected rank-`6` rescue graph, max-delta survivor-gate mirror pair, owner-delta union, component-cover escapes, seven-owner gluing clause, scalar firewall | HYP-3455 isolates the broad HYP-3439 noncanonical rank-`6` exception `random_covering_031` as a finite local obstruction.  The rescue subset is `(23,45,93,113,147,169)`, the rescue graph has `15` connected edges, and HYP-3438 gives `84` mixed components with `138` survivor gates.  The only max-total-delta gates are mirror components `43` and `54`, both word `B-S-B-S-B`, with deltas `(3,4)` and `(4,3)`; their owner union `(23,45,93,113,147,169,173)` contains all rescue owners.  HYP-3450 gives `94` low-rank escapes against only `4` dead components. | HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415, THM-523, T1415, LTT-315, LTI-415, OPEN-Q-108 | Prove the seven-owner gluing lemma: the two mirror max-delta gates cannot saturate the row without exposing a low-rank component escape, endpoint-spine/wall route, owner-current imbalance, two-adic descent, or signed-SPEC debt. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -8416,3 +8417,68 @@ boundary between dead and nondead structure contains an exact HYP-3438 survivor
 gate with endpoint rank at most `2`; if no such gate exists, prove the
 dead-cover obstruction is empty.  Then hand the gate to HYP-3451's
 Menger/Green-current/conductance graph.
+
+## LTI-415: Random031 Gate-Gluing Obstruction
+
+Created by codex-2026-06-29 for HYP-3455/T1415 as the noncanonical rank-`6`
+follow-up to HYP-3439.  The technique converts `random_covering_031` from a
+rank scalar into a finite gate-gluing clause.
+
+Carrier / vertex set:
+
+```text
+rank-6 rescue owners, induced overlap graph, max-delta survivor gates,
+adjacent B0/B1 cover deltas, mirror involution, component-cover escapes,
+and the seven-owner local gluing clause.
+```
+
+Preserved LRC predicate: the branch-relocation survivor predicate after
+one-branch overlap rescue and two-colour component escape data are both kept.
+
+Destroyed information if used naively: raw rank, raw survivor mass, raw dead
+fraction, and runner order.  The proof object is the labelled gate pair plus
+component-cover escape payload.
+
+Exact HYP-3455 readout:
+
+```text
+row=random_covering_031
+rescue_subset=(23,45,93,113,147,169)
+rescue_graph_edges=15
+rescue_graph_connected=True
+mixed_components=84
+survivor_gates=138
+max_total_delta=7
+max_delta_gate_count=2
+max_delta_mirror_pairs=[(43,54)]
+max_delta_owner_union=(23,45,93,113,147,169,173)
+rescue_subset_inside_max_delta_owner_union=True
+components=98
+dead_components=4
+low_rank_escape=94
+max_dead_pair_rank=2
+danger_score=0.000868
+```
+
+Hard gates:
+
+```text
+component 43: word=B-S-B-S-B, branch_mask=branch0,
+  labels=B0:23|B0:113, delta=(3,4),
+  covers=B0(23):B1(93)->B0(45,113):B1(147,169,173)
+
+component 54: word=B-S-B-S-B, branch_mask=branch1,
+  labels=B1:113|B1:23, delta=(4,3),
+  covers=B0(147,169,173):B1(45,113)->B0(93):B1(23)
+```
+
+Tournament fingerprint: `8` proof-carrier vertices, score histogram
+`{10:1, 52:1, 59:1, 63:1, 65:1, 66:2, 67:1}`, no directed `3`-cycles, and
+priority path
+`max_delta_survivor_gate_pair -> rank6_rescue_overlap_graph -> two_color_component_escape_router -> owner_delta_gluing_clause -> mirror_involution_cut_word -> endpoint_spine_wall_lift -> bdh_signed_spec_sidecar -> raw_rank6_scalar`.
+
+Next agent hook: prove the seven-owner gluing lemma.  The two max-delta mirror
+gates should be treated as terminals in a Menger/Green-current/SC boundary
+word.  Any attempted full two-colour saturation must expose one of the `94`
+low-rank component escapes, an endpoint-spine/wall certificate, an owner-current
+imbalance, a two-adic descent exit, or signed-SPEC/Rprime debt.

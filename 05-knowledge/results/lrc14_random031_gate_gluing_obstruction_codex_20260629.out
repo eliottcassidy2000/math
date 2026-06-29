@@ -1,0 +1,94 @@
+HYP-3455 RANDOM031 GATE-GLUING OBSTRUCTION
+==============================================================================
+status=EVIDENCE / exact single-row obstruction isolator; not an LRC14 proof
+source=HYP-3437 + HYP-3438 + HYP-3450/HYP-3451 on random_covering_031
+
+A. Row and rank-6 rescue core
+  row=random_covering_031
+  speeds=(12, 23, 45, 55, 58, 70, 84, 93, 113, 120, 147, 169, 173)
+  odd=(23, 45, 55, 93, 113, 147, 169, 173)
+  even_half=(6, 29, 35, 42, 60)
+  branch0_measure=18860031217607/184101593891215
+  naive_slack=-130807232086254/1288711157238505
+  deficit=130807232086254/1288711157238505
+  rescue_rank=6
+  rescue_subset=(23, 45, 93, 113, 147, 169)
+  rescue_tax=6147569515583/48758383248120
+  rescue_margin=2280704077944161/92787203321172360
+  rescue_graph_edges=15
+  rescue_graph_connected=True
+  rescue_graph_components=(6,)
+  rescue_graph_top_edges=45-93:2473/188790, 45-113:1377/110740, 23-169:4041013/331405620, 93-169:11955/1026844, 23-147:39/3430, 93-113:6570953/597331560
+
+B. Survivor-gate localization
+  mixed_components=84
+  survivor_gates=138
+  gate_word_hist={'B-S': 19, 'B-S-B': 8, 'B-S-B-S': 7, 'B-S-B-S-B': 2, 'B-S-B-S-B-S': 4, 'S-B': 19, 'S-B-S': 6, 'S-B-S-B': 7, 'S-B-S-B-S': 8, 'S-B-S-B-S-B': 4}
+  branch_mask_hist={'both': 8, 'branch0': 65, 'branch1': 65}
+  adjacency_hist={'left_bad_edge': 44, 'right_bad_edge': 44, 'two_sided': 50}
+  endpoint_kind_hist={'B0|B0': 22, 'B0|E': 21, 'B1|B0': 6, 'B1|B1': 22, 'B1|E': 23, 'E|B0': 23, 'E|B1': 21}
+  max_total_delta=7
+  max_delta_gate_count=2
+  max_delta_owner_union=(23, 45, 93, 113, 147, 169, 173)
+  rescue_subset_inside_max_delta_owner_union=True
+  extra_max_delta_owners=(173,)
+  max_delta_mirror_pairs=[(43, 54)]
+  hardest gates:
+    component=43 word=B-S-B-S-B survivor=[71/161,349/791] len=4/18193 mask=branch0 labels=B0:23|B0:113 adjacency=two_sided delta=(3,4) owners=(23, 45, 93, 113, 147, 169, 173) covers=B0(23):B1(93)->B0(45,113):B1(147,169,173)
+    component=54 word=B-S-B-S-B survivor=[442/791,90/161] len=4/18193 mask=branch1 labels=B1:113|B1:23 adjacency=two_sided delta=(4,3) owners=(23, 45, 93, 113, 147, 169, 173) covers=B0(147,169,173):B1(45,113)->B0(93):B1(23)
+    component=21 word=B-S survivor=[267/1183,111/490] len=69/82810 mask=branch0 labels=B0:169|E:70 adjacency=left_bad_edge delta=(3,3) owners=(23, 45, 55, 93, 147, 169) covers=B0(45,55,169):B1(23,93,147)->edge
+    component=76 word=S-B survivor=[379/490,916/1183] len=69/82810 mask=branch1 labels=E:70|B1:169 adjacency=right_bad_edge delta=(3,3) owners=(23, 45, 55, 93, 147, 169) covers=edge->B0(23,93,147):B1(45,55,169)
+    component=30 word=S-B-S-B-S-B survivor=[302/1029,349/1183] len=265/173901 mask=branch0 labels=B1:147|B0:169 adjacency=two_sided delta=(3,3) owners=(45, 55, 147, 169, 173) covers=B0(55,173):B1(45,147)->B0(169):B1(173)
+    component=67 word=B-S-B-S-B-S survivor=[834/1183,727/1029] len=265/173901 mask=branch1 labels=B1:169|B0:147 adjacency=two_sided delta=(3,3) owners=(45, 55, 147, 169, 173) covers=B0(173):B1(169)->B0(45,147):B1(55,173)
+
+C. Component-cover/conductance router
+  components=98
+  dead_components=4
+  alive_components=94
+  low_rank_escape=94
+  max_dead_pair_rank=2
+  class_hist={'both_alive': 50, 'branch0_only': 22, 'branch1_only': 22, 'dead_both': 4}
+  best_rank=2
+  best_survivor=[29/385,97/1211]
+  best_labels=L[B0:55] R[B0:173]
+  blocker_top=[('B0:45', 1), ('B1:23', 1), ('B0:113', 1), ('B1:93', 1), ('B0:93', 1), ('B1:113', 1), ('B0:23', 1), ('B1:45', 1)]
+  blocker_entropy=3.000000
+  effective_blockers=8.000000
+  projection_components=4
+  projection_largest=1
+  danger_score=0.000868
+
+D. Proof-facing obstruction
+  The broad-rank-6 hope is false, but the exception is finite:
+    the six rescue owners form a connected overlap graph, and the
+    maximal gate toggles are a mirror pair whose adjacent cover owners
+    contain the whole rescue subset.  The only extra max-delta owner is
+    173, so the gluing problem is a seven-owner local clause, not a
+    global scalar obstruction.
+  Menger cut route: treat the two max-delta survivor gates as terminals
+    in the branch-coloured blocker graph and prove any full saturation
+    would cut off the low-rank HYP-3450/HYP-3451 escape component.
+  Schwarz-Christoffel route: the gate endpoints are labelled prevertices;
+    the mirror pair supplies the boundary-order involution, while cover
+    delta (3,4)/(4,3) is the accessory-parameter payload.
+  Bring/BDH/SPEC route: any monodromy or averaging sidecar is legal only
+    after this finite seven-owner clause is retained.
+
+E. Tournament Analysis
+  vertices=proof obligations and finite gate/gluing carriers, not runners
+  pairwise_observable=rank6 graph + max-delta gates + two-color escape payload
+  switch=higher retained-predicate score; ties by declared carrier order
+  score_hist={10: 1, 52: 1, 59: 1, 63: 1, 65: 1, 66: 2, 67: 1}
+  directed_3cycles=0
+  hamiltonian_path=max_delta_survivor_gate_pair -> rank6_rescue_overlap_graph -> two_color_component_escape_router -> owner_delta_gluing_clause -> mirror_involution_cut_word -> endpoint_spine_wall_lift -> bdh_signed_spec_sidecar -> raw_rank6_scalar
+
+F. Assumption challenge
+  Considered vertices: runners, rescue owners, gaps, survivor gates,
+  fixed circle sections, section boundaries, wall events, residues, cover
+  arcs, endpoint labels, component-cover graph nodes, Fourier modes,
+  matroid circuits, and proof obligations.  Chosen vertices: the rank-6
+  rescue graph, the two max-delta survivor gates, and component-cover
+  escape nodes.  This preserves the LRC branch-relocation predicate and
+  destroys raw runner order and scalar mass.  Challenged assumption:
+  noncanonical rank-6 means an uncontrolled family; here it is a finite
+  mirror-symmetric gate-gluing clause.

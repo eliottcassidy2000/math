@@ -7047,6 +7047,28 @@ on `Phi`, not as a standalone scalar proof.
   for a BDH/Mertens mean-square theorem with the known exceptional fibers
   removed.
 
+## LEAD (codex-2026-06-29): prove the random031 seven-owner gate-gluing lemma
+- **Source:** HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438,
+  HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427,
+  HYP-3425, HYP-3422, HYP-3418, HYP-3415.
+- **Status:** OPEN.  HYP-3455 is an exact single-row obstruction isolator, not
+  yet a theorem.
+- **Readout:** `random_covering_031` is the named noncanonical rank-`6`
+  overlap-rescue exception.  Its rescue subset is `(23,45,93,113,147,169)`,
+  the rescue graph is connected with `15` edges, and the HYP-3438 gate ledger
+  has `84` mixed components and `138` survivor gates.  The only max-delta
+  gates are mirror components `43` and `54`, both word `B-S-B-S-B`, with
+  deltas `(3,4)` and `(4,3)`.  Their owner union is
+  `(23,45,93,113,147,169,173)`, containing all rescue owners and only extra
+  owner `173`.  HYP-3450 side data gives `94` low-rank escapes against only
+  `4` dead components.
+- **Next steps:** Prove that the two max-delta mirror gates cannot glue into a
+  full two-colour cover without exposing a low-rank component escape,
+  endpoint-spine/wall certificate, owner-current imbalance, two-adic descent,
+  or signed-SPEC/Rprime debt.  Test a Menger terminal cut on components
+  `43/54`, then try the Schwarz-Christoffel boundary-word formulation with
+  owner `173` as the accessory-owner payload.
+
 ## LEAD (codex-2026-06-29): prove bounded overlap-tax cut cores
 - **Source:** HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,
   HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415.

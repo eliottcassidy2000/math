@@ -33695,3 +33695,28 @@ endpoint cut is retained,
 and none replace the HYP-3415/HYP-3418 floor inequality.  Also recorded the
 correction that the forum HLW note should be read as a
 transcendence/linear-independence guard, not an algebraic-independence theorem.
+
+## codex-2026-06-29: HYP-3455 random031 gate-gluing obstruction
+
+Added `04-computation/lrc14_random031_gate_gluing_obstruction_codex_20260629.py`
+and stored `05-knowledge/results/lrc14_random031_gate_gluing_obstruction_codex_20260629.out`.
+This follows the pushed HYP-3439 AP/84m bridge without overwriting it: the
+broad critical-bank check exposed `random_covering_031` as the named
+noncanonical rank-`6` exception, so HYP-3455 isolates that row as a finite
+gate-gluing problem.
+
+Exact readout: rescue subset `(23,45,93,113,147,169)`, connected rescue graph
+with `15` edges, `84` mixed components, and `138` survivor gates.  The only
+max-delta gates are mirror components `43` and `54`, both word `B-S-B-S-B`,
+with deltas `(3,4)` and `(4,3)`; their owner union is
+`(23,45,93,113,147,169,173)`, containing all rescue owners and only extra
+owner `173`.  HYP-3450 side data gives `98` components, `4` dead, `94`
+low-rank escapes, max dead-pair rank `2`, and danger score `0.000868`.
+
+Proof pull: replace the broad "noncanonical rank 6" worry with the seven-owner
+gluing lemma.  Components `43/54` should be terminals for a Menger/Green-current
+or Schwarz-Christoffel boundary-word proof; any full two-colour saturation must
+emit a low-rank escape, endpoint-spine/wall route, owner-current imbalance,
+two-adic descent, or signed-SPEC/Rprime debt.  Tournament Analysis records
+proof obligations/gate carriers as vertices and explicitly rejects raw rank,
+survivor mass, or runner order as sufficient vertices.
