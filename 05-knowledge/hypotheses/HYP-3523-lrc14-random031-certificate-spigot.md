@@ -1,7 +1,7 @@
 ---
 id: HYP-3523
 title: LRC14 random031 certificate spigot
-status: RESERVED / spigot-inspired terminal-dispatch experiment; not an LRC14 proof
+status: EVIDENCE / streaming terminal-certificate carry audit; not an LRC14 proof
 source: codex-2026-06-29 spigot-algorithm reframe after HYP-3521/HYP-3520
 tangent: T1523
 technique: LTI-523
@@ -26,7 +26,7 @@ related:
 
 # HYP-3523: Random031 Certificate Spigot
 
-## Claim Reservation
+## Claim
 
 The spigot-algorithm prompt suggests a proof discipline for
 `random_covering_031`:
@@ -39,32 +39,68 @@ safe digit emission   -> proof certificate whose future debt is bounded
 tail error            -> unprocessed owner/free-hole/quotient debt
 ```
 
-This packet reserves an executable test of that analogy.  The target is a
-certificate spigot over HYP-3521's `77` terminal certificates: ordinary
-rank-2 routes should emit immediately, free-hole packets should emit after
-their bracket/doublet carry is resolved, and the pure bypass should emit only
-with the HYP-3520 owner-boundary sidecar
-`45:+1,147:+1,169:+1,173:+1`.
+The executable test supports the analogy.  HYP-3521's `79` legal component
+events stream in branch/u order to `77` emitted terminal certificates covering
+all `282` cells.  Ordinary rank-2 route components emit immediately.  The
+`10` free-hole singles emit after ordinary bracket carry.  The two free-hole
+doublets each hold one predigit event and then emit one collapsed certificate
+when the mate arrives.  The unique pure bypass emits only with HYP-3520 and
+HYP-3522 owner-filtration sidecars.
 
-## Missing
-
-The missing finite object is a streaming audit that records, at each emitted
-certificate, the current carry buffer:
+Key readout:
 
 ```text
-free_hole_carry
-owner_boundary_carry
-private_firewall_guard
-vertical_halfturn_guard
+component_events=79
+emitted_certificates=77
+component_cells_covered=282
+emitted_certificate_cells=282
+held_predigit_events=2
+held_predigit_buffer_cells=4
+untyped_pending_carry=0
+typed_residual_carry=(45,173)
 ```
 
-The experiment should test whether HYP-3521 already gives a no-backtracking
-terminal spigot, or whether some certificate remains a predigit that cannot be
-safely emitted without a new sidecar.
+The bypass carry is:
+
+```text
+seam_owners=(23,45,93,113,147,169,173)
+transport_word=(23,93,113)
+branch_boundary_owners=(23,93,147,169)
+bracket_lift=(147,169)
+residual_after_branch_boundary=(45,173)
+```
+
+## Interpretation
+
+This reframe changes the random031 terminal packet from a static ledger into a
+no-backtracking proof procedure.  The hard pair is not treated as a wall.  It
+is a forbidden seam whose complement carries phase flow, while the certificate
+stream records the delayed proof carry required to emit across nearby
+features.
+
+There is no untyped terminal carry left in the stream.  What remains is typed:
+formalize ordinary route emissions, HYP-3511 doublet buffering, HYP-3522
+owner-filtration carry through transport `(23,93,113)` and bracket lift
+`(147,169)`, and then discharge the residual pair `(45,173)` under the
+HYP-3490/HYP-3513 private-firewall route sidecar.  Every emitted certificate
+also carries the vertical-halfturn guard; the vertical address projection is
+not a legal sheet gluing.
+
+## Proof Pull
+
+1. Formalize ordinary route certificates as immediate spigot digits.
+2. Formalize HYP-3511 doublet buffering: first half is a predigit, second half
+   emits the doublet certificate.
+3. Formalize bypass emission as owner-filtration carry: transport
+   `(23,93,113)`, bracket lift `(147,169)`, residual `(45,173)`.
+4. Attach HYP-3513 route sidecar `R` and the vertical guard to every emitted
+   certificate before any quotient compression.
 
 ## Assumption Challenge
 
-Tournament vertices should be proof-output states and carry buffers, not
-runners, arcs, or scalar counts.  The preserved predicate is terminal
-certificate emission without later invalidation.  Destroyed information should
-be named as carry/debt rather than silently dropped.
+Tournament vertices are proof-output states and carry buffers, not runners,
+arcs, raw witnesses, or scalar counts.  The preserved predicate is terminal
+certificate emission without later invalidation.  Destroyed information is
+named as carry/debt rather than silently dropped: branch/u order, terminal
+class, bracket carry, owner carry, route guard, and vertical guard must be
+present before scalar compression.

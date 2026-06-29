@@ -119,10 +119,14 @@ obligations, and proof-carrier interfaces.
   owner-boundary carry, private-firewall guard, and vertical-halfturn guard.
 - **Forgets / guardrail:** Raw emitted counts forget predigits and possible
   carry from free-hole or owner-boundary debt.
-- **Next pull:** Execute the HYP-3523 certificate spigot and use remaining
-  predigits as named missing proof inputs.
-- **Pointers:** HYP-3523, HYP-3521, HYP-3520, HYP-3512, HYP-3511, HYP-3510,
-  HYP-3494, HYP-3490, HYP-3486, T1523, LTI-523.
+- **Readout:** HYP-3523 emits `77` terminal certificates from `79` component
+  events covering all `282` cells; the two held free-hole predigits are later
+  emitted, and the only remaining carry is typed residual boundary `(45,173)`.
+- **Next pull:** Formalize the emitted stream as ordinary-route, HYP-3511
+  bracket/doublet, HYP-3522 owner-filtration, HYP-3513 route-sidecar, and
+  vertical-guard lemmas.
+- **Pointers:** HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+  HYP-3511, HYP-3510, HYP-3494, HYP-3490, HYP-3486, T1523, LTI-523.
 
 ## LTT-424 - Spigot/Hydrotope Residual Tournament
 

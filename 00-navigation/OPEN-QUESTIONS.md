@@ -23,6 +23,29 @@ reconstructs residual `(45,173)` and does not replace it by sliced-box volume,
 owner count, or residue-chamber shadows. -> HYP-3524, HYP-3522, HYP-3521,
 HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3511, HYP-3510, HYP-3490,
 HYP-3486, LTI-524, LTT-424, T1524.
+**OPEN-Q-108 HYP-3523 certificate-spigot addendum:** Can the random031
+terminal ledger be promoted from a streaming audit to a formal no-backtracking
+proof procedure?
+
+HYP-3523 now gives the finite stream:
+
+```text
+component_events=79
+emitted_certificates=77
+component_cells_covered=282
+emitted_certificate_cells=282
+held_predigit_events=2
+untyped_pending_carry=0
+typed_residual_carry=(45,173)
+```
+
+The open proof task is to formalize four emission clauses: immediate ordinary
+rank-2 route digits; HYP-3511 free-hole single and doublet carry; HYP-3522
+bypass carry through transport `(23,93,113)` and bracket lift `(147,169)`; and
+the HYP-3513 route sidecar `R` plus vertical-halfturn guard.  The residual
+boundary pair `(45,173)` must remain typed proof debt until the owner-boundary
+lemma is closed. -> HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513,
+HYP-3511, HYP-3510, HYP-3490, HYP-3486, LTI-523, LTT-423, T1523.
 
 **OPEN-Q-108 HYP-3522 owner-boundary filtration addendum:** Can the random031
 pure-bypass owner-boundary lemma be reduced from HYP-3520's four-owner current

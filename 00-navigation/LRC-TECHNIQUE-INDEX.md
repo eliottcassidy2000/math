@@ -46,13 +46,16 @@ Preserved LRC predicate: no-backtracking random031 terminal dispatch.
 Destroyed information: branch/u order, owner-boundary charge, and free-hole
 bracket status if the stream is scalarized.
 Best use: convert HYP-3521's terminal ledger into a proof procedure with
-explicit carry buffers.
+explicit carry buffers.  HYP-3523 now emits `77` terminal certificates from
+`79` component events while covering all `282` cells, with no untyped pending
+carry.
 Failure mode: emitting a bypass or free-hole "digit" before its owner or
 bracket carry is discharged.
-Anchors: HYP-3523, HYP-3521, HYP-3520, HYP-3512, HYP-3511, HYP-3510,
-HYP-3494, HYP-3490, HYP-3486, T1523, LTT-423.
-Next agent hook: implement the certificate stream and report safe emissions,
-predigit buffers, and residual debt.
+Anchors: HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+HYP-3511, HYP-3510, HYP-3494, HYP-3490, HYP-3486, T1523, LTT-423.
+Next agent hook: formalize the emitted stream: ordinary digits, HYP-3511
+doublet buffering, HYP-3522 owner-filtration carry, HYP-3513 route sidecar
+`R`, vertical guard, and residual `(45,173)` boundary debt.
 
 ## LTI-520 - Random031 owner-boundary persistence
 

@@ -86,18 +86,36 @@ therefore supplies the persistence/quotient guardrail, while HYP-3522 supplies
 the next filtration lemma shape.
 
 ## codex-2026-06-29 -- HYP-3522 random031 owner-boundary bracket filtration
-## codex-2026-06-29 -- HYP-3523 certificate spigot reservation
+## codex-2026-06-29 -- HYP-3523 certificate spigot evidence
 
 Prompt: use the spigot algorithm page as inspiration for related proof routes.
 
-Reserved HYP-3523/T1523/LTI-523/LTT-423 for a random031 certificate-spigot
-experiment.  Proposed analogy: mixed-radix reduce-and-carry becomes terminal
-discharge plus named debt propagation; predigits become certificates waiting
-for free-hole or owner-boundary carry; safe digit output becomes proof
-certificate emission without future invalidation.  Planned executable streams
-the HYP-3521 terminal certificates in branch/u order and audits carry buffers
-from HYP-3511 free-hole brackets, HYP-3520 owner-current, HYP-3490 firewall,
-and vertical-halfturn quotient guards.
+Executed HYP-3523/T1523/LTI-523/LTT-423 as a random031 certificate-spigot
+experiment:
+
+```text
+04-computation/lrc14_random031_certificate_spigot_codex_20260629.py
+05-knowledge/results/lrc14_random031_certificate_spigot_codex_20260629.out
+05-knowledge/hypotheses/HYP-3523-lrc14-random031-certificate-spigot.md
+07-reflections/lrc14-random031-certificate-spigot-codex-20260629.md
+```
+
+The analogy is operational, not numerological: mixed-radix reduce-and-carry
+becomes terminal discharge plus named debt propagation; predigits become
+certificates waiting for free-hole or owner-boundary carry; safe digit output
+becomes proof certificate emission without future invalidation.
+
+Exact readout: `79` component events emit `77` terminal certificates covering
+all `282` cells.  There are `64` ordinary immediate route digits, `10`
+free-hole single bracket digits, two held free-hole doublet predigits that are
+later emitted as collapsed certificates, and one pure-bypass owner-filtration
+digit.  The stream has `untyped_pending_carry=0`; the remaining typed carry is
+the residual boundary pair `(45,173)` after transport `(23,93,113)` plus
+bracket lift `(147,169)`.
+
+Next proof pull: formalize ordinary emission, HYP-3511 doublet buffering,
+HYP-3522 bypass carry, HYP-3513 route sidecar `R`, and the vertical-halfturn
+guard.
 
 ## codex-2026-06-29 -- HYP-3520 owner-boundary persistence reservation
 

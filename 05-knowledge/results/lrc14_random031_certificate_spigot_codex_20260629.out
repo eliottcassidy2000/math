@@ -1,0 +1,141 @@
+HYP-3523 RANDOM031 CERTIFICATE SPIGOT
+status=EVIDENCE / streaming terminal-certificate carry audit; not an LRC14 proof
+row=random_covering_031
+
+## Spigot Analogy
+mixed_radix_state=HYP-3521 terminal certificate ledger
+reduce_and_carry=emit certificate plus named proof-debt carry
+predigit_buffer=free-hole doublet or owner-boundary packet waiting for sidecar
+safe_digit=terminal certificate emitted with no untyped future invalidation
+
+## Owner Filtration Carry
+seam_owners=(23, 45, 93, 113, 147, 169, 173)
+transport_word=(23, 93, 113)
+branch_boundary_owners=(23, 93, 147, 169)
+bracket_lift=(147, 169)
+residual_after_transport=(45, 147, 169, 173)
+residual_after_branch_boundary=(45, 173)
+reading=the bypass output is a valid predigit only after transport, bracket lift, and residual boundary carry are named.
+
+## Stream Summary
+component_events=79
+emitted_certificates=77
+component_cells_covered=282
+emitted_certificate_cells=282
+held_predigit_events=2
+held_predigit_buffer_cells=4
+terminal_class_hist={'free_hole_doublet_packet': 4, 'free_hole_single_bracket_packet': 10, 'ordinary_rank2_route_component': 64, 'pure_bypass_owner_boundary_component': 1}
+action_hist={'emit_after_single_bracket_carry': 10, 'emit_bypass_after_owner_filtration_carry': 1, 'emit_doublet_after_predigit_carry': 2, 'emit_ordinary_digit': 64, 'hold_doublet_predigit': 2}
+carry_in_hist={'free_hole_doublet_pending=(2, 3)': 1, 'free_hole_doublet_pending=(8, 13)': 1, 'free_hole_predigit': 10, 'owner_boundary_predigit=(45,147,169,173)': 1}
+carry_out_hist={'free_hole_doublet_pending=(2, 3)': 1, 'free_hole_doublet_pending=(8, 13)': 1, 'typed_residual_boundary=(45,173)': 1}
+typed_residual_boundary_events=1
+sidecar_hist={'HYP3511_doublet_wait': 2, 'HYP3511_same_branch_doublet': 2, 'HYP3511_single_bracket': 10, 'HYP3520_owner_current': 1, 'HYP3522_owner_filtration': 1, 'endpoint_rank2_route': 64, 'private_firewall_route_R': 79, 'vertical_halfturn_not_glued': 79}
+spigot_identity=79 component events -> 77 emitted terminal certificates
+
+## Stream Events
+00 component=C07 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C07 branches=(0, 1) u=(15, 1196) component_cells=8 emitted_cells=8 carry_in=() carry_resolved=() carry_out=()
+01 component=C35 class=free_hole_single_bracket_packet action=emit_after_single_bracket_carry emits=True key=C35 branches=(0, 1) u=(18, 1193) component_cells=2 emitted_cells=2 carry_in=('free_hole_predigit',) carry_resolved=('ordinary_bracket_single',) carry_out=()
+02 component=C14 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C14 branches=(0, 1) u=(23, 1188) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+03 component=C36 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C36 branches=(0, 1) u=(31, 1180) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+04 component=C37 class=free_hole_single_bracket_packet action=emit_after_single_bracket_carry emits=True key=C37 branches=(0, 1) u=(38, 1173) component_cells=2 emitted_cells=2 carry_in=('free_hole_predigit',) carry_resolved=('ordinary_bracket_single',) carry_out=()
+05 component=C78 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C78 branches=(0, 1) u=(45, 1166) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+06 component=C38 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C38 branches=(0, 1) u=(48, 1163) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+07 component=C39 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C39 branches=(0, 1) u=(62, 1149) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+08 component=C77 class=free_hole_doublet_packet action=hold_doublet_predigit emits=False key=FH2_3 branches=(0, 1) u=(62, 1149) component_cells=2 emitted_cells=0 carry_in=() carry_resolved=() carry_out=('free_hole_doublet_pending=(2, 3)',)
+09 component=C76 class=free_hole_doublet_packet action=emit_doublet_after_predigit_carry emits=True key=FH2_3 branches=(0, 1) u=(72, 1139) component_cells=2 emitted_cells=4 carry_in=('free_hole_doublet_pending=(2, 3)',) carry_resolved=('free_hole_doublet_cluster=(2, 3)', 'prior_component=C77') carry_out=()
+10 component=C03 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C03 branches=(0, 1) u=(73, 1138) component_cells=8 emitted_cells=8 carry_in=() carry_resolved=() carry_out=()
+11 component=C75 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C75 branches=(0, 1) u=(89, 1122) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+12 component=C00 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C00 branches=(0, 1) u=(92, 1119) component_cells=12 emitted_cells=12 carry_in=() carry_resolved=() carry_out=()
+13 component=C34 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C34 branches=(0, 1) u=(98, 1113) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+14 component=C40 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C40 branches=(0, 1) u=(113, 1098) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+15 component=C15 class=free_hole_single_bracket_packet action=emit_after_single_bracket_carry emits=True key=C15 branches=(0, 1) u=(118, 1093) component_cells=4 emitted_cells=4 carry_in=('free_hole_predigit',) carry_resolved=('ordinary_bracket_single',) carry_out=()
+16 component=C33 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C33 branches=(0, 1) u=(129, 1082) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+17 component=C41 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C41 branches=(0, 1) u=(147, 1064) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+18 component=C32 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C32 branches=(0, 1) u=(148, 1063) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+19 component=C16 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C16 branches=(0, 1) u=(152, 1059) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+20 component=C13 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C13 branches=(0, 1) u=(176, 1035) component_cells=6 emitted_cells=6 carry_in=() carry_resolved=() carry_out=()
+21 component=C42 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C42 branches=(0, 1) u=(180, 1031) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+22 component=C74 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C74 branches=(0, 1) u=(184, 1027) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+23 component=C43 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C43 branches=(0, 1) u=(185, 1026) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+24 component=C31 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C31 branches=(0, 1) u=(218, 993) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+25 component=C04 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C04 branches=(0, 1) u=(225, 986) component_cells=8 emitted_cells=8 carry_in=() carry_resolved=() carry_out=()
+26 component=C30 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C30 branches=(0, 1) u=(227, 984) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+27 component=C12 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C12 branches=(0, 1) u=(233, 978) component_cells=6 emitted_cells=6 carry_in=() carry_resolved=() carry_out=()
+28 component=C44 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C44 branches=(0, 1) u=(239, 972) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+29 component=C45 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C45 branches=(0, 1) u=(245, 966) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+30 component=C73 class=free_hole_single_bracket_packet action=emit_after_single_bracket_carry emits=True key=C73 branches=(0, 1) u=(254, 957) component_cells=2 emitted_cells=2 carry_in=('free_hole_predigit',) carry_resolved=('ordinary_bracket_single',) carry_out=()
+31 component=C17 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C17 branches=(0, 1) u=(254, 957) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+32 component=C46 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C46 branches=(0, 1) u=(274, 937) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+33 component=C72 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C72 branches=(0, 1) u=(281, 930) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+34 component=C47 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C47 branches=(0, 1) u=(298, 913) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+35 component=C48 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C48 branches=(0, 1) u=(305, 906) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+36 component=C29 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C29 branches=(0, 1) u=(306, 905) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+37 component=C71 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C71 branches=(0, 1) u=(314, 897) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+38 component=C70 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C70 branches=(0, 1) u=(320, 891) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+39 component=C18 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C18 branches=(0, 1) u=(327, 884) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+40 component=C49 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C49 branches=(0, 1) u=(331, 880) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+41 component=C11 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C11 branches=(0, 1) u=(339, 872) component_cells=6 emitted_cells=6 carry_in=() carry_resolved=() carry_out=()
+42 component=C50 class=free_hole_single_bracket_packet action=emit_after_single_bracket_carry emits=True key=C50 branches=(0, 1) u=(341, 870) component_cells=2 emitted_cells=2 carry_in=('free_hole_predigit',) carry_resolved=('ordinary_bracket_single',) carry_out=()
+43 component=C51 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C51 branches=(0, 1) u=(349, 862) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+44 component=C69 class=free_hole_single_bracket_packet action=emit_after_single_bracket_carry emits=True key=C69 branches=(0, 1) u=(356, 855) component_cells=2 emitted_cells=2 carry_in=('free_hole_predigit',) carry_resolved=('ordinary_bracket_single',) carry_out=()
+45 component=C19 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C19 branches=(0, 1) u=(356, 855) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+46 component=C06 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C06 branches=(0, 1) u=(358, 853) component_cells=8 emitted_cells=8 carry_in=() carry_resolved=() carry_out=()
+47 component=C20 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C20 branches=(0, 1) u=(360, 851) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+48 component=C02 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C02 branches=(0, 1) u=(367, 844) component_cells=10 emitted_cells=10 carry_in=() carry_resolved=() carry_out=()
+49 component=C68 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C68 branches=(0, 1) u=(386, 825) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+50 component=C52 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C52 branches=(0, 1) u=(388, 823) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+51 component=C67 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C67 branches=(0, 1) u=(389, 822) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+52 component=C66 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C66 branches=(0, 1) u=(426, 785) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+53 component=C65 class=free_hole_single_bracket_packet action=emit_after_single_bracket_carry emits=True key=C65 branches=(0, 1) u=(435, 776) component_cells=2 emitted_cells=2 carry_in=('free_hole_predigit',) carry_resolved=('ordinary_bracket_single',) carry_out=()
+54 component=C08 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C08 branches=(0, 1) u=(435, 776) component_cells=6 emitted_cells=6 carry_in=() carry_resolved=() carry_out=()
+55 component=C64 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C64 branches=(0, 1) u=(442, 769) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+56 component=C28 class=free_hole_single_bracket_packet action=emit_after_single_bracket_carry emits=True key=C28 branches=(0, 1) u=(446, 765) component_cells=4 emitted_cells=4 carry_in=('free_hole_predigit',) carry_resolved=('ordinary_bracket_single',) carry_out=()
+57 component=C53 class=free_hole_doublet_packet action=hold_doublet_predigit emits=False key=FH8_13 branches=(0, 1) u=(447, 764) component_cells=2 emitted_cells=0 carry_in=() carry_resolved=() carry_out=('free_hole_doublet_pending=(8, 13)',)
+58 component=C05 class=free_hole_doublet_packet action=emit_doublet_after_predigit_carry emits=True key=FH8_13 branches=(0, 1) u=(453, 758) component_cells=8 emitted_cells=10 carry_in=('free_hole_doublet_pending=(8, 13)',) carry_resolved=('free_hole_doublet_cluster=(8, 13)', 'prior_component=C53') carry_out=()
+59 component=C54 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C54 branches=(0, 1) u=(466, 745) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+60 component=C21 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C21 branches=(0, 1) u=(474, 737) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+61 component=C22 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C22 branches=(0, 1) u=(479, 732) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+62 component=C63 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C63 branches=(0, 1) u=(488, 723) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+63 component=C62 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C62 branches=(0, 1) u=(493, 718) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+64 component=C61 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C61 branches=(0, 1) u=(496, 715) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+65 component=C23 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C23 branches=(0, 1) u=(497, 714) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+66 component=C60 class=free_hole_single_bracket_packet action=emit_after_single_bracket_carry emits=True key=C60 branches=(0, 1) u=(498, 713) component_cells=2 emitted_cells=2 carry_in=('free_hole_predigit',) carry_resolved=('ordinary_bracket_single',) carry_out=()
+67 component=C09 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C09 branches=(0, 1) u=(507, 704) component_cells=6 emitted_cells=6 carry_in=() carry_resolved=() carry_out=()
+68 component=C55 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C55 branches=(0, 1) u=(512, 699) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+69 component=C59 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C59 branches=(0, 1) u=(516, 695) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+70 component=C58 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C58 branches=(0, 1) u=(522, 689) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+71 component=C01 class=pure_bypass_owner_boundary_component action=emit_bypass_after_owner_filtration_carry emits=True key=C01 branches=(0, 1) u=(527, 684) component_cells=12 emitted_cells=12 carry_in=('owner_boundary_predigit=(45,147,169,173)',) carry_resolved=('transport_word=(23,93,113)', 'branch_boundary_lift=(147,169)') carry_out=('typed_residual_boundary=(45,173)',)
+72 component=C24 class=free_hole_single_bracket_packet action=emit_after_single_bracket_carry emits=True key=C24 branches=(0, 1) u=(550, 661) component_cells=4 emitted_cells=4 carry_in=('free_hole_predigit',) carry_resolved=('ordinary_bracket_single',) carry_out=()
+73 component=C27 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C27 branches=(0, 1) u=(557, 654) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+74 component=C25 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C25 branches=(0, 1) u=(562, 649) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+75 component=C10 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C10 branches=(0, 1) u=(567, 644) component_cells=6 emitted_cells=6 carry_in=() carry_resolved=() carry_out=()
+76 component=C26 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C26 branches=(0, 1) u=(570, 641) component_cells=4 emitted_cells=4 carry_in=() carry_resolved=() carry_out=()
+77 component=C56 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C56 branches=(0, 1) u=(581, 630) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+78 component=C57 class=ordinary_rank2_route_component action=emit_ordinary_digit emits=True key=C57 branches=(0, 1) u=(591, 620) component_cells=2 emitted_cells=2 carry_in=() carry_resolved=() carry_out=()
+
+## Predigit / Carry Verdict
+free_hole_doublet_predigits=2 held events, both later emitted as 2 doublet certificates
+owner_boundary_predigits=1 bypass event, emitted only with HYP-3520/HYP-3522 sidecars
+untyped_pending_carry=0
+typed_residual_carry=(45,173)
+route_guard=HYP-3513 requires route sidecar R unless route reconstruction is proved
+vertical_guard=vertical halfturn remains an address projection, not a sheet gluing
+
+## Proof Pull
+P1: Formalize ordinary route certificates as immediate spigot digits.
+P2: Formalize HYP-3511 doublet buffering: first half is a predigit, second half emits the doublet certificate.
+P3: Formalize bypass emission as owner-filtration carry: transport (23,93,113), bracket lift (147,169), residual (45,173).
+P4: Attach HYP-3513 route sidecar R and vertical guard to every emitted certificate before any quotient compression.
+
+## Tournament Analysis
+vertices=proof-output states and carry buffers, not runners, arcs, or raw witness counts
+pairwise_observable=no-backtracking terminal emission with named carry
+switch=higher emission safety and lower unresolved carry
+score_hist={10: 1, 100: 1, 61: 1, 77: 1, 82: 1, 86: 1, 91: 1, 93: 1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1,1,1]
+hamiltonian_path=certificate_spigot_state_machine -> free_hole_doublet_predigit_buffer -> owner_filtration_carry_buffer -> private_firewall_route_guard -> vertical_halfturn_guard -> ordinary_immediate_route_digit -> static_terminal_ledger -> raw_count_shadow
+
+## Assumption Challenge
+Considered vertices: runners, raw arcs, witness cells, legal components, terminal certificates, output positions, carry buffers, free-hole packets, owner rows, route sidecars, vertical quotient guards, and proof obligations.
+Chosen vertices are output states plus carry buffers.  This preserves the random031 terminal predicate while deliberately forgetting raw runner order only after branch/u order, terminal class, owner carry, bracket carry, route guard, and vertical guard are retained.

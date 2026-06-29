@@ -31,14 +31,18 @@ HYP-3490/HYP-3513 private-label firewall route sidecar. -> HYP-3522, HYP-3521, H
 HYP-3494, HYP-3511, HYP-3510, HYP-3493, HYP-3490, HYP-3486, HYP-3485,
 HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455,
 HYP-3402, HYP-3034, LTI-522, LTT-422, T1522, OPEN-Q-108.
-**HYP-3523 random031 certificate spigot.**  Claim a spigot-inspired terminal
-procedure after HYP-3521/HYP-3520.  Stream terminal certificates in branch/u
-order and classify each output as safe emission, predigit with bounded carry,
-or unsafe output.  Carry buffers should include free-hole bracket debt,
-same-branch doublet carry, owner-boundary carry `45:+1,147:+1,169:+1,173:+1`,
-private-firewall guard, and vertical-halfturn guard.  Tournament vertices are
-output states and carry buffers, not runners/arcs/raw counts. -> HYP-3523,
-HYP-3521, HYP-3520, HYP-3512, HYP-3511, HYP-3510, HYP-3494, HYP-3493,
+**HYP-3523 random031 certificate spigot.**  Promote the spigot-inspired
+terminal procedure to formal lemmas.  Exact stream: `79` component events emit
+`77` terminal certificates covering all `282` cells, with `64` ordinary
+immediate route digits, `10` free-hole single bracket digits, two free-hole
+doublet predigit buffers later emitted as collapsed doublet certificates, and
+one pure-bypass owner-filtration digit.  Carry readout: `untyped_pending_carry=0`
+and typed residual `(45,173)` after transport `(23,93,113)` plus bracket lift
+`(147,169)`.  Next tasks: formalize ordinary emission, HYP-3511 doublet
+buffering, HYP-3522 bypass carry, HYP-3513 route sidecar `R`, and the
+vertical-halfturn guard.  Tournament vertices are output states and carry
+buffers, not runners/arcs/raw counts. -> HYP-3523, HYP-3522, HYP-3521,
+HYP-3520, HYP-3513, HYP-3512, HYP-3511, HYP-3510, HYP-3494, HYP-3493,
 HYP-3490, HYP-3486, HYP-3483, LTI-523, LTT-423, T1523, OPEN-Q-108.
 
 **HYP-3520 random031 owner-boundary persistence.**  The quotient-price matrix
