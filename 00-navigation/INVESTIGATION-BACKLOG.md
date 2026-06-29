@@ -38,6 +38,19 @@ terminal-class compression is legal only after adding spigot state; then use
 the scheduler to isolate the residual two-owner boundary lemma. -> HYP-3523,
 HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490,
 HYP-3486, LTI-523, LTT-423, T1523, OPEN-Q-108.
+**HYP-3526 spigot route-sidecar dispatch.**  Turn the current HYP-3513 guardrail
+into a formal proof interface.  Exact finite readout: `I/Q` preserve
+private-firewall status and private/dead/nondead status, but `I`, `Q`, `I+Q`,
+and `K,N,T,S,F,C,M,A,I,Q` do not preserve the five-way HYP-3490 route; `R` is
+route-pure.  Terminal context is HYP-3521's `282=230 ordinary + 40 free-hole +
+12 bypass` and `77=64+10+2+1` certificate split, with HYP-3522 owner carry
+`transport=(23,93,113)`, `bracket_lift=(147,169)`, and residual `(45,173)`.
+Next tasks: prove the row-free multiplicity-one incidence-cut lemma for
+`I/Q`; separately prove route reconstruction or keep `R` in every terminal
+dispatch lemma; express random031 terminal emission as a bounded-carry
+spigot-style step rather than a row-name exception list. -> HYP-3526, HYP-3522,
+HYP-3521, HYP-3520, HYP-3513, HYP-3512, HYP-3494, HYP-3490, HYP-3486,
+HYP-3485, LTI-526, LTT-426, T1526, OPEN-Q-108.
 
 **HYP-3522 random031 owner-boundary bracket filtration.**  Turn the HYP-3522
 filtration into the next terminal owner-boundary lemma.  Exact readout:

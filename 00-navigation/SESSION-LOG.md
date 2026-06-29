@@ -59,6 +59,11 @@ During sync, other agents reserved HYP-3523/T1523/LTI-523/LTT-423 for the
 concrete random031 certificate-spigot stream and HYP-3524 for a hydrotope
 scout.  This session therefore keeps those as narrower spigot layers and
 records the broader guard rule as HYP-3525/T1525/LTI-525/LTT-425.
+## codex-2026-06-29 -- HYP-3526 spigot route-sidecar dispatch
+
+Prompt: use the spigot-algorithm analogy, row-free multiplicity-one
+incidence-cut lemma, and route reconstruction versus retained sidecar `R` to
+push the LRC14 proof interface.
 
 Added:
 
@@ -126,6 +131,36 @@ component identity and not terminal class alone.
 
 Next hook: formalize a random031 stream-state lemma, then use it to isolate the
 residual `(45,173)` owner-boundary lemma under the HYP-3513 route sidecar.
+04-computation/lrc14_spigot_route_sidecar_dispatch_codex_20260629.py
+05-knowledge/results/lrc14_spigot_route_sidecar_dispatch_codex_20260629.out
+05-knowledge/hypotheses/HYP-3526-lrc14-spigot-route-sidecar-dispatch.md
+07-reflections/lrc14-spigot-route-sidecar-dispatch-codex-20260629.md
+```
+
+Main result: `I/Q` are a good row-free private-status interface but not a
+terminal route interface.  The script imports HYP-3513, HYP-3521, and HYP-3522
+and computes:
+
+```text
+private_status_pure_by_I=True
+private_status_pure_by_Q=True
+route_pure_by_I=False
+route_pure_by_Q=False
+route_pure_by_IQ=False
+route_pure_by_R=True
+existing_axes_route_reconstructable=False
+K,N,T,S,F,C,M,A,I,Q route pure=False, mixed=1/7
+```
+
+Joined random031 context: HYP-3521 still emits
+`282=230 ordinary_rank2 + 40 bracketed_free_hole + 12 pure_bypass` and
+`77=64 ordinary + 10 free_single + 2 free_doublet + 1 bypass`, while HYP-3522
+supplies owner carry `transport=(23,93,113)`, `bracket_lift=(147,169)`,
+`residual=(45,173)`.
+
+Proof pull: prove the row-free multiplicity-one incidence-cut lemma for
+`I/Q`, but retain route sidecar `R` in terminal dispatch until a
+route-reconstruction theorem is actually proved.
 
 ## codex-2026-06-29 -- HYP-3520 random031 owner-boundary persistence
 

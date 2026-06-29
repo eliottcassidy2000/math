@@ -92,6 +92,29 @@ shrinks after one event to `(45,173)`, and HYP-3513 route sidecar `R` remains
 attached unless route reconstruction is proved. -> HYP-3523, HYP-3522,
 HYP-3521, HYP-3520, HYP-3513, HYP-3511, HYP-3510, HYP-3490, HYP-3486,
 LTI-523, LTT-423, T1523.
+**OPEN-Q-108 HYP-3526 spigot route-sidecar dispatch addendum:** Can the
+row-free private-firewall incidence cut be proved while keeping terminal route
+dispatch explicit?
+
+HYP-3526 gives the finite guardrail:
+
+```text
+private_status_pure_by_I=True
+private_status_pure_by_Q=True
+route_pure_by_I=False
+route_pure_by_Q=False
+route_pure_by_IQ=False
+route_pure_by_R=True
+all_existing_axes_plus_IQ_route_pure=False
+```
+
+The open proof task is to prove the multiplicity-one incidence-cut lemma for
+`I/Q` without row names, then either prove route reconstruction or keep route
+sidecar `R` in terminal dispatch.  For current data, HYP-3521 emits the
+`282=230+40+12` terminal certificate split and HYP-3522 supplies owner carry
+`transport=(23,93,113)`, `bracket_lift=(147,169)`, `residual=(45,173)`, but
+neither replaces `R`. -> HYP-3526, HYP-3522, HYP-3521, HYP-3520, HYP-3513,
+HYP-3512, HYP-3494, HYP-3490, HYP-3486, HYP-3485, LTI-526, LTT-426, T1526.
 
 **OPEN-Q-108 HYP-3522 owner-boundary filtration addendum:** Can the random031
 pure-bypass owner-boundary lemma be reduced from HYP-3520's four-owner current

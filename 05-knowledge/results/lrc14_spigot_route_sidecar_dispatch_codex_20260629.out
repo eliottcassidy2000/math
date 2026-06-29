@@ -1,0 +1,75 @@
+## HYP-3526 Spigot Route-Sidecar Dispatch
+source=HYP-3513 + HYP-3521 + HYP-3522
+analogy=spigot emits next terminal certificate from bounded carry state
+
+## HYP-3513 I/Q and R Purity
+axes=('I',) target=private_firewall_bit fibers=3 max_fiber=123 mixed=0/0 pure=True
+axes=('Q',) target=private_firewall_bit fibers=3 max_fiber=123 mixed=0/0 pure=True
+axes=('I',) target=private_dead_status fibers=3 max_fiber=123 mixed=0/0 pure=True
+axes=('Q',) target=private_dead_status fibers=3 max_fiber=123 mixed=0/0 pure=True
+axes=('I',) target=h3490_route fibers=3 max_fiber=123 mixed=2/130 pure=False
+axes=('Q',) target=h3490_route fibers=3 max_fiber=123 mixed=2/130 pure=False
+axes=('I', 'Q') target=h3490_route fibers=3 max_fiber=123 mixed=2/130 pure=False
+axes=('K', 'N', 'T', 'S', 'F', 'C', 'M', 'A', 'I', 'Q') target=h3490_route fibers=125 max_fiber=7 mixed=1/7 pure=False
+axes=('R',) target=h3490_route fibers=5 max_fiber=121 mixed=0/0 pure=True
+existing_axes_route_reconstructable=False
+existing_axes_route_reconstruction_witness=None
+
+## Row-Free Incidence-Cut Lemma Shape
+lemma_name=row_free_multiplicity_one_incidence_cut
+input_sidecars=I/Q
+predicate=every E/branch-touched blocker label has dead-component multiplicity one
+private_status_pure_by_I=True
+private_status_pure_by_Q=True
+route_pure_by_I=False
+route_pure_by_Q=False
+route_pure_by_IQ=False
+route_pure_by_R=True
+
+## Random031 Terminal Certificate Inputs
+cell_terminal_hist={'free_hole_doublet_packet': 14, 'free_hole_single_bracket_packet': 26, 'ordinary_rank2_route_component': 230, 'pure_bypass_owner_boundary_component': 12}
+component_terminal_hist={'free_hole_doublet_packet': 4, 'free_hole_single_bracket_packet': 10, 'ordinary_rank2_route_component': 64, 'pure_bypass_owner_boundary_component': 1}
+terminal_certificate_count_after_doublet_collapse=77
+identity_282=230 ordinary_rank2 + 40 bracketed_free_hole + 12 pure_bypass
+identity_77=64 ordinary + 10 free_single + 2 free_doublet + 1 bypass
+
+## HYP-3522 Owner-Filtration Carry
+seam_owners=(23, 45, 93, 113, 147, 169, 173)
+transport_owners=(23, 93, 113)
+branch_boundary_owners=(23, 93, 147, 169)
+bracket_lift_owners=(147, 169)
+residual_after_branch_boundary=(45, 173)
+bypass_size=12
+mirror_pair_count=6
+
+## Dispatch Decision
+row_free_dispatch_rule=I/Q may reduce the private cut only before terminal route is supplied
+current_route_reconstruction_from_existing_data=False
+terminal_dispatch=retain_R
+spigot_carry=R
+spigot_output=terminal_certificate
+proof_obligation=prove route reconstruction, or explicitly keep R in every terminal dispatch lemma
+
+## Tournament Analysis
+vertices=dispatch compressors, not runners, arcs, row names, or raw counts
+pairwise_observable=private purity + route purity + row-free compression + bounded carry + random031 compatibility
+switch=higher dispatch score; ties use candidate name
+score_hist={-53: 1, -82: 1, 151: 1, 156: 1, 159: 1, 210: 1, 218: 1, 226: 1}
+directed_3cycles=0
+sccs=8 singleton SCCs
+hamiltonian_path=IQ_plus_R_terminal_spigot -> terminal_certificate_ledger_plus_R -> owner_filtration_plus_R -> IQ_without_R_private_only -> row_name_exception_list -> raw_private_bit -> all_colored_plus_IQ_route_reconstruction -> raw_count_shadow
+candidate=IQ_plus_R_terminal_spigot score=226 legal_now=True retained=('I', 'Q', 'R') private_pure=True route_pure=True row_free=True retains_R=True reconstructs_route=False note=current legal dispatch: row-free private cut plus explicit route carry
+candidate=terminal_certificate_ledger_plus_R score=218 legal_now=True retained=('terminal_certificate', 'R') private_pure=True route_pure=True row_free=True retains_R=True reconstructs_route=False note=HYP-3521 emits 64+10+2+1 terminal certificates with route carry
+candidate=owner_filtration_plus_R score=210 legal_now=True retained=('transport', 'branch_boundary', 'residual', 'R') private_pure=True route_pure=True row_free=True retains_R=True reconstructs_route=False note=HYP-3522 bypass subdispatch: transport, bracket lift, residual pair, route carry
+candidate=IQ_without_R_private_only score=159 legal_now=True retained=('I', 'Q') private_pure=True route_pure=False row_free=True retains_R=False reconstructs_route=False note=legal for the private-firewall bit, not for terminal route dispatch
+candidate=row_name_exception_list score=156 legal_now=True retained=('row_name',) private_pure=True route_pure=True row_free=False retains_R=False reconstructs_route=True note=decides the split but is not a row-free proof interface
+candidate=raw_private_bit score=151 legal_now=True retained=('private_firewall_bit',) private_pure=True route_pure=False row_free=True retains_R=False reconstructs_route=False note=too lossy: merges six singleton-current rows with random031 hard overlap
+candidate=all_colored_plus_IQ_route_reconstruction score=-53 legal_now=False retained=('K', 'N', 'T', 'S', 'F', 'C', 'M', 'A', 'I', 'Q') private_pure=True route_pure=False row_free=True retains_R=False reconstructs_route=False note=conditional ideal; legal only if these fields reconstruct the five-way route
+candidate=raw_count_shadow score=-82 legal_now=False retained=('raw_counts',) private_pure=False route_pure=False row_free=True retains_R=False reconstructs_route=False note=scalar counts forget the private cut and the route
+
+## Proof Pull
+P1: Prove I/Q as a row-free multiplicity-one incidence-cut lemma.
+P2: Do not let I/Q stand in for the HYP-3490 five-way route.
+P3: For current data, terminal random031 dispatch must retain R.
+P4: HYP-3521 emits the next certificate, while HYP-3522 supplies the owner carry.
+P5: A future route-reconstruction theorem may delete R; until then R is the spigot carry.

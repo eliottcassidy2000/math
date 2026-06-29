@@ -197,6 +197,42 @@ Anchors: HYP-3524, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
 HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486, T1524, LTT-424.
 Next agent hook: formalize an `EmitterState` recursion
 `State 7 -> State 4 -> State 2 -> terminal` with route sidecar `R` retained.
+## LTI-526 - Spigot route-sidecar dispatch
+
+Carrier / vertex set: bounded terminal dispatch compressors: `I/Q` incidence
+classes, route sidecar `R`, HYP-3521 terminal certificates, HYP-3522 owner
+filtration layers, route-reconstruction theorem slots, row-name exception
+lists, raw private bits, and raw count shadows.
+
+Pairwise observable: private-status purity, HYP-3490 route purity, row-free
+compression, bounded carry, random031 terminal compatibility, incidence-cut
+readiness, and scalar/row-name penalties.
+
+Preserved LRC predicate: the private-firewall status is preserved by `I/Q`,
+while the terminal five-way HYP-3490 route is preserved only by `R` or by a
+future route-reconstruction theorem.
+
+Destroyed information: `I/Q` destroy the terminal route.  The combined
+existing packet `K,N,T,S,F,C,M,A,I,Q` still has a mixed HYP-3490 route fiber,
+so private purity must not be treated as terminal-route purity.
+
+Best use: state terminal lemmas as spigot-style bounded-carry emissions:
+prove the row-free multiplicity-one incidence-cut lemma for `I/Q`, then emit
+HYP-3521 terminal certificates while retaining `R` and HYP-3522 owner carry.
+
+Failure mode: deleting `R` because the private firewall bit is already
+row-free.  HYP-3526 computes `route_pure_by_I=False`,
+`route_pure_by_Q=False`, `route_pure_by_IQ=False`, and
+`all_existing_axes_plus_IQ` still `mixed=1/7` for route.
+
+Anchors: HYP-3526, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3474,
+T1526, LTT-426.
+
+Next agent hook: prove the row-free incidence-cut lemma reducing `I/Q` to
+dead-component/blocker-label multiplicity one, or prove a route-reconstruction
+theorem strong enough to delete `R`; until then, retain `R` in terminal
+dispatch statements.
 
 ## LTI-525 - Spigot guarded emission
 
@@ -10335,6 +10371,54 @@ full_filtration_spigot_packet
 Pointers: HYP-3524, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
 HYP-3494, HYP-3511, HYP-3510, HYP-3490, HYP-3486, THM-523, LTI-524,
 LTT-424, T1524, OPEN-Q-108.
+## LTI-526: Spigot Route-Sidecar Dispatch
+
+Created by codex-2026-06-29 for HYP-3526/T1526/LTT-426.  This technique
+turns the spigot-algorithm prompt into a bounded-carry proof rule for the
+HYP-3513/HYP-3521/HYP-3522 frontier.
+
+Carrier / vertex set: dispatch compressors, not runners or row names.  The
+live vertices are `IQ_plus_R_terminal_spigot`,
+`terminal_certificate_ledger_plus_R`, `owner_filtration_plus_R`,
+`IQ_without_R_private_only`, `row_name_exception_list`, `raw_private_bit`,
+`all_colored_plus_IQ_route_reconstruction`, and `raw_count_shadow`.
+
+Pairwise observable: private purity, route purity, row-free compression,
+bounded carry, random031 terminal compatibility, incidence-cut readiness, and
+penalties for row-name/scalar shortcuts.
+
+Binary relation or gauge: prefer higher dispatch score.  Terminal use requires
+route purity; private-only use may stop at `I/Q`.
+
+Preserved LRC predicate: `I/Q` preserve the private-firewall predicate and
+private/dead/nondead status.  The terminal route is preserved by `R` unless a
+future route-reconstruction theorem replaces it.
+
+Destroyed information: `I/Q` forget the HYP-3490 route; even the packet
+`K,N,T,S,F,C,M,A,I,Q` has one mixed route fiber over seven rows.  Raw private
+bits merge six singleton-current rows with random031; raw counts forget both
+private status and route.
+
+Best use: prove the row-free multiplicity-one incidence-cut lemma for `I/Q`,
+then emit HYP-3521 terminal certificates with route sidecar `R` and HYP-3522
+owner carry.
+
+Failure mode: using private-status purity as route purity.  HYP-3526 computes
+`route_pure_by_I=False`, `route_pure_by_Q=False`, `route_pure_by_IQ=False`,
+and `route_pure_by_R=True`.
+
+Tournament Analysis: score histogram
+`{-82:1,-53:1,151:1,156:1,159:1,210:1,218:1,226:1}`, no directed
+`3`-cycles, singleton SCCs, and Hamiltonian path
+`IQ_plus_R_terminal_spigot -> terminal_certificate_ledger_plus_R -> owner_filtration_plus_R -> IQ_without_R_private_only -> row_name_exception_list -> raw_private_bit -> all_colored_plus_IQ_route_reconstruction -> raw_count_shadow`.
+
+Next agent hook: either prove route reconstruction strongly enough to delete
+`R`, or keep `R` explicitly in every terminal dispatch lemma while the
+row-free incidence-cut lemma closes the private predicate.
+
+Pointers: HYP-3526, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3474,
+THM-523, LTI-526, LTT-426, T1526, OPEN-Q-108.
 
 ## LTI-525: Spigot Guarded Emission Atlas
 

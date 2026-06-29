@@ -185,6 +185,37 @@ obligations, and proof-carrier interfaces.
 - **Pointers:** HYP-3525, HYP-3524, HYP-3523, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3493,
   HYP-3490, HYP-3486, HYP-3511, HYP-3510, T1525, LTI-525.
 
+## LTT-426 - Spigot Route-Sidecar Dispatch Tournament
+
+- **Move:** Use dispatch compressors as tournament vertices: `I/Q`, `R`,
+  terminal certificates, owner filtration, route-reconstruction theorem slots,
+  row-name exception lists, private-bit shadows, and raw count shadows.
+- **LRC use:** HYP-3526 turns the HYP-3513/HYP-3521/HYP-3522 frontier into a
+  bounded-carry terminal emission rule.  `I/Q` close private status but do not
+  close terminal route; `R` is the current route carry.
+- **Preserves:** private-firewall status, private/dead/nondead status,
+  HYP-3490 route when `R` is retained, HYP-3521 terminal certificates, and
+  HYP-3522 owner carry.
+- **Forgets / guardrail:** `I/Q` forget route; `K,N,T,S,F,C,M,A,I,Q` still
+  has one mixed route fiber over seven rows.  Row names decide the split but
+  are not a row-free proof interface; raw counts and raw private bits are too
+  lossy for terminal dispatch.
+- **Pairwise observable:** private purity, route purity, row-free compression,
+  bounded carry, random031 terminal compatibility, incidence-cut readiness,
+  and penalties for row-name/scalar shortcuts.
+- **Switch/gauge:** prefer higher dispatch score; terminal use requires route
+  purity.
+- **Fingerprint:** score histogram
+  `{-82:1,-53:1,151:1,156:1,159:1,210:1,218:1,226:1}`, no directed
+  `3`-cycles, singleton SCCs, Hamiltonian path
+  `IQ_plus_R_terminal_spigot -> terminal_certificate_ledger_plus_R -> owner_filtration_plus_R -> IQ_without_R_private_only -> row_name_exception_list -> raw_private_bit -> all_colored_plus_IQ_route_reconstruction -> raw_count_shadow`.
+- **Next pull:** prove the row-free multiplicity-one incidence-cut lemma for
+  `I/Q`; retain route sidecar `R` in terminal dispatch unless route
+  reconstruction is proved.
+- **Pointers:** HYP-3526, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+  HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3474,
+  THM-523, LTI-526, LTT-426, T1526, OPEN-Q-108.
+
 ## Fast Routing Map
 
 - Need to separate strict-open mass from endpoint-only equality:
@@ -418,6 +449,12 @@ obligations, and proof-carrier interfaces.
   the vertices.  HYP-3525 says a route/owner/terminal token is legal only when
   the visible packet is constant over all legal hidden tails, otherwise hold
   the first missing sidecar.  Raw counts are checksums.
+- Need to keep row-free private cuts separate from terminal route dispatch:
+  use LTT-426 after LTT-413/LTT-421/LTT-422 and make dispatch compressors the
+  vertices.  HYP-3526 shows `I/Q` are compact private-status carriers, but
+  neither `I/Q` nor `K,N,T,S,F,C,M,A,I,Q` reconstructs the HYP-3490 route;
+  terminal spigot dispatch must retain `R` unless a route-reconstruction
+  theorem is proved.
 - Need to explain why random pair-currents cannot work:
   use LTT-350 after LTT-336/LTT-337/LTT-338/LTT-339/LTT-340/LTT-341/LTT-342/LTT-343/LTT-344 and make dead-cover
   blocker labels with multiplicity sidecars, E/branch-touched private labels,
@@ -10675,6 +10712,34 @@ hamiltonian_path=
   HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3511, HYP-3510, HYP-3036,
   HYP-3024, HYP-3023, HYP-3006, HYP-2990, THM-523, LTI-525, LTT-425, T1525,
   OPEN-Q-108.
+
+## LTT-426: Spigot Route-Sidecar Dispatch Tournament
+
+- **Move:** Rank terminal dispatch compressors by whether they can emit the
+  next certificate from bounded state without row names.
+- **LRC use:** HYP-3526 joins HYP-3513, HYP-3521, and HYP-3522.  It proves
+  the current rule: `I/Q` are row-free private-status carriers, but terminal
+  route emission must keep sidecar `R` unless route reconstruction is proved.
+- **Preserves:** private-firewall status, private/dead/nondead status,
+  HYP-3490 route when `R` is retained, HYP-3521 terminal certificate class,
+  and HYP-3522 owner carry.
+- **Forgets / guardrail:** `I/Q` are not route-pure, and
+  `K,N,T,S,F,C,M,A,I,Q` still has `mixed=1/7` for route.  Row names are
+  route-pure but not row-free; raw private bits and raw counts are too lossy.
+- **Pairwise observable:** private purity, route purity, row-free compression,
+  bounded carry, random031 compatibility, incidence-cut readiness, and
+  scalar/row-name penalties.
+- **Switch/gauge:** higher dispatch score; terminal use requires route purity.
+- **Fingerprint:** score histogram
+  `{-82:1,-53:1,151:1,156:1,159:1,210:1,218:1,226:1}`, no directed
+  `3`-cycles, singleton SCCs, Hamiltonian path
+  `IQ_plus_R_terminal_spigot -> terminal_certificate_ledger_plus_R -> owner_filtration_plus_R -> IQ_without_R_private_only -> row_name_exception_list -> raw_private_bit -> all_colored_plus_IQ_route_reconstruction -> raw_count_shadow`.
+- **Next hook:** prove the row-free incidence-cut lemma for `I/Q`; either
+  prove route reconstruction or keep `R` explicit in every terminal dispatch
+  lemma.
+- **Pointers:** HYP-3526, HYP-3522, HYP-3521, HYP-3520, HYP-3513, HYP-3512,
+  HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3485, HYP-3480, HYP-3474,
+  THM-523, LTI-526, LTT-426, T1526, OPEN-Q-108.
 
 ## LTT-411: Random031 Free-Hole Bracket Atlas Tournament
 
