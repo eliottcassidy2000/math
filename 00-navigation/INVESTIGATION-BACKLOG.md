@@ -15,6 +15,34 @@
 
 ---
 
+## Lead codex-2026-06-29: HYP-3453 gate-escape transversal
+
+Prove the gate-transversal implication exposed by
+`04-computation/lrc14_gate_escape_transversal_router_codex_20260629.py`,
+using incoming HYP-3452's AP-with-`84m` phase audit as the canonical-tail
+base companion and HYP-3439's rescue-core bridge as the one-branch overlap
+interface.
+
+Current evidence: on the `135`-row bank,
+`rows_with_dead_components_and_low_rank_gate=130/130` and
+`rows_dead_without_low_rank_gate=[]`.  The only rows without a low-rank gate
+are clean-only rows with `dead=0` and `gates=0`.
+
+Concrete proof route:
+
+1. Show a nonempty dead-cover obstruction forces a boundary mixed component.
+2. Apply the HYP-3438 exact gate-word decomposition to that boundary.
+3. Use endpoint-spine/corridor-fence parity to force endpoint rank `<=2`, or
+   discharge the row as a clean obstruction-empty exit.
+
+Artifacts: `05-knowledge/hypotheses/HYP-3453-lrc14-gate-escape-transversal-router.md`,
+`05-knowledge/results/lrc14_gate_escape_transversal_router_codex_20260629.out`,
+and `07-reflections/lrc14-gate-escape-transversal-router-codex-20260629.md`.
+
+Next step: formalize the boundary-mixed-component step and test it first on
+the AP-with-`84m` family, where the gates are exactly the corridor-fence
+endpoints `B1:7|E`, `E|B1:5`, `B0:5|E`, and `E|B0:7`.
+
 ## Lead codex-2026-06-29: HYP-3438 survivor-gate word audit
 
 **Status:** EVIDENCE / exact survivor-gap gate-word classification; not proof

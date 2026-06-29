@@ -63,6 +63,27 @@ two-adic loss, or signed-SPEC debt. -> HYP-3439, HYP-3452, HYP-3451,
 HYP-3450, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431,
 HYP-3429, HYP-3427, HYP-3425, HYP-3422, HYP-3418, HYP-3415, THM-523,
 LTI-400, LTT-300, T1400, OPEN-Q-108.
+**OPEN-Q-108 HYP-3453 gate-escape transversal addendum:**
+HYP-3453 joins HYP-3438 survivor gates to HYP-3450/HYP-3451 component-cover
+data, as the bank-level companion to HYP-3452's AP-with-`84m` phase audit and
+HYP-3439's rescue-core bridge.
+The exact bank now supports the sharper local target
+
+```text
+dead_components(row) > 0  =>  rank <= 2 survivor gate exists.
+no rank <= 2 survivor gate => dead_components(row) = 0.
+```
+
+Readout: `rows_with_low_rank_component=135/135`,
+`rows_with_low_rank_gate=133/135`, `rows_with_dead_components=130/135`, and
+`rows_with_dead_components_and_low_rank_gate=130/130`.  The only rows without a
+low-rank gate are `random_covering_044` and `random_covering_053`, both
+clean-only with `dead=0` and `gates=0`.  Next question: prove this
+gate-transversal implication for arbitrary primitive covering rows, then feed
+the gate into the HYP-3451 Menger/Green-current/conductance obstruction. ->
+HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3436, HYP-3435, HYP-3434,
+HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129,
+HYP-2963, THM-523, T1413, LTI-413, LTT-313.
 
 **OPEN-Q-108 HYP-3438 survivor-gate word audit addendum:**
 HYP-3438 turns HYP-3436's survivor gaps into exact gate words.  On the

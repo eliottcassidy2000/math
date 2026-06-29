@@ -23,6 +23,37 @@ New proof hook: split the AP-tail graph theorem into finite transients
 identity `escapes(m)=2*(floor(12m/35)+d[m mod 35])`.  Raw dead fraction is now
 known to be a residue shadow: in the checked range it peaks at `m=35`, not at
 the proof transition `m=5`.
+## codex-2026-06-29 -- HYP-3453 gate-escape transversal router
+
+Built and ran `04-computation/lrc14_gate_escape_transversal_router_codex_20260629.py`,
+joining HYP-3438 survivor-gate words to HYP-3450/HYP-3451 component-cover
+data.
+
+Rebased over incoming HYP-3452 AP84 tail component phase audit and HYP-3439
+rescue-core bridge; the routes are compatible.  HYP-3452 supplies the canonical
+AP-with-`84m` phase law, HYP-3439 joins one-branch rescue cores to survivor
+routes, and HYP-3453 supplies the broader gate-versus-clean escape split.
+
+New artifacts:
+
+```text
+04-computation/lrc14_gate_escape_transversal_router_codex_20260629.py
+05-knowledge/results/lrc14_gate_escape_transversal_router_codex_20260629.out
+05-knowledge/hypotheses/HYP-3453-lrc14-gate-escape-transversal-router.md
+07-reflections/lrc14-gate-escape-transversal-router-codex-20260629.md
+```
+
+Exact readout: `rows_with_low_rank_component=135/135`,
+`rows_with_low_rank_gate=133/135`, `rows_with_dead_components=130/135`, and
+`rows_with_dead_components_and_low_rank_gate=130/130`.  The only rows without a
+low-rank gate are `random_covering_044` and `random_covering_053`, and both
+are clean-only with `dead=0` and `gates=0`.
+
+Proof target sharpened: prove
+`dead_components(row)>0 => rank<=2 survivor gate`; absence of such a gate
+should imply the dead-cover obstruction is empty.  This makes the next
+HYP-3451 Menger/Green-current/conductance step local and graph-composable
+instead of depending on raw low-rank component counts.
 
 ## codex-2026-06-29 -- HYP-3438 survivor-gate word audit
 

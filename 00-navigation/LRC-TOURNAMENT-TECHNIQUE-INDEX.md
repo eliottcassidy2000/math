@@ -9162,3 +9162,42 @@ quotient_legality_status
   HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422,
   HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-412, LTT-312, T1412,
   OPEN-Q-108.
+
+## LTT-313: Gate-Escape Transversal Tournament
+
+- **Move:** Treat escape certificates as tournament vertices.  The candidates
+  are the dead-positive rank-`2` gate transversal, clean-obstruction-empty
+  exit, gate endpoint/delta spine, component-cover conductance join, low-rank
+  component shadow, and raw survivor measure as negative control.
+- **LRC use:** HYP-3453 joins HYP-3438 survivor gates to HYP-3450/HYP-3451
+  component-cover data, complementing HYP-3452's AP-with-`84m` phase audit and
+  HYP-3439's rescue-core bridge.
+  It sharpens the finite lemma: in the audited bank,
+  every row with at least one `dead_both` component has a rank-`<=2` survivor
+  gate, and the only rows without such a gate have no dead components at all.
+  Thus a future full-saturation obstruction cannot hide in clean low-rank
+  components; it must expose a graph-composable gate or discharge as clean.
+- **Preserves:** component/gate join, dead-cover status, endpoint labels,
+  branch mask, adjacent cover deltas, parent even wall, and clean-case exit.
+- **Forgets / guardrail:** raw survivor mass and raw low-rank component count
+  forget whether the escape is clean-only or attached to bad-core/dead-cover
+  boundary data.  This is the component/gate analogue of the HYP-3434 overlap
+  tax: the compressed statement is true but may not compose with the proof
+  graph.
+- **Pairwise observable:** predicate retention, component/gate join,
+  cut-graph composability, clean-case exit, endpoint payload, and scalar
+  firewall.
+- **Switch/gauge:** higher proof-facing carrier score; ties use declared route
+  order.
+- **Fingerprint:** `6` vertices, score histogram
+  `{10:1, 38:1, 52:1, 55:2, 59:1}`, no directed `3`-cycles, and Hamiltonian
+  path
+  `E00_dead_positive_rank2_gate_transversal -> E01_clean_obstruction_empty_exit -> E02_gate_endpoint_delta_spine -> E03_component_cover_conductance_join -> E04_low_rank_component_shadow -> E05_raw_survivor_measure`.
+- **Next hook:** prove `dead_components(row)>0 => rank<=2 survivor gate` as a
+  finite interval lemma, then feed the gate into HYP-3451's
+  Menger/Green-current/conductance route for the AP-with-`84m` base family and
+  arbitrary primitive rows.
+- **Pointers:** HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436,
+  HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425,
+  HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, LTI-413, LTT-313, T1413,
+  OPEN-Q-108.

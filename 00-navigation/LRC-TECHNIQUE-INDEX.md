@@ -498,6 +498,7 @@ record what it destroys before asking it to prove anything.
 | LTI-410 | Component-cover obstruction extractor | Component-local `E_safe` classes, branch0/branch1 survivor status, paired minimal odd-bad subcovers, survivor endpoint ranks, endpoint labels, forbidden full-saturation target | HYP-3450 refines HYP-3438/HYP-3436/HYP-3435/HYP-3434 by auditing each `E_safe` component as alive/dead by branch rather than only as bad-core mass or gate-word promise.  Exact bank: `135` rows, `17164` components, `rows_with_branch_survivor=135/135`, `rows_with_endpoint_rank_le_2_survivor=135/135`, classes `both_alive=6492`, `branch0_only=3451`, `branch1_only=3451`, `dead_both=3770`; every dead component has paired minimal covers and pair-rank histogram `{2:3492,3:222,4:44,5:10,6:2}`.  The tight `{1..11,13,84}` row has `22` dead-both components and four rank-`2` escape windows. | HYP-3450, HYP-3440, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3432, HYP-3431, HYP-3430, HYP-3429, HYP-3428, HYP-3427, HYP-3426, HYP-3425, HYP-3424, HYP-3423, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1410, LTT-310, LTI-410, OPEN-Q-108 | Prove the contrapositive: if every `E_safe` component is `dead_both`, then the paired odd-bad covers plus even endpoint gates form a forbidden finite obstruction.  Start with the canonical row and `random_covering_082`; route through Menger cuts, Green currents, conductance, endpoint-spine, owner-current, or two-adic descent. |
 | LTI-411 | Component-cover conductance router | Branch-coloured component/blocker projection graph, blocker entropy, connected dead-cover projection, algebraic-connectivity proxy, Menger/Green-current escape route, AP-tail danger ranking | HYP-3451 converts HYP-3450 paired covers into a graph router.  Dead components are adjacent if their minimal branch-coloured covers share a blocker.  Audit: `rows_audited=135`, `rows_with_low_rank_escape=135/135`, max pair rank `6` at `random_covering_082`, max dead fraction `0.962963` at `ap_omit_12_tail_84x05`, blocker entropy range `[2.000000,3.872947]`.  The rank-`6` row has `106` low-rank escapes and low danger; AP-with-`84m` tails have connected dead-cover projections and only four escapes, so they are the proof-facing graph base cases. | HYP-3451, HYP-3450, HYP-3440, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3432, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1411, LTT-311, LTI-411, OPEN-Q-108 | Prove full two-colour blocker saturation of `E_safe` is impossible.  For `{1..11,13,84}`, use the connected `22`-dead-component projection and four rank-`2` escapes to build a bounded Menger cut, Green-current boundary imbalance, or algebraic-connectivity obstruction; then lift to AP tails and arbitrary primitive rows. |
 | LTI-412 | AP84 tail component phase | Canonical AP-with-`84m` family, rank-one `E:84m/E:84m` endpoint phase, finite mixed transients, paired-cover rank drop, connected dead projection, mod-35 Beatty escape clock | HYP-3452 stitches HYP-3433's endpoint-spine law to HYP-3450/HYP-3451's component-cover graph router on `{1,2,...,11,13,84m}`.  Exact audit through `m=70`: rank-one `E:84m/E:84m` component phase starts at `m=5`, no HYP-3433 interval failures after that, max paired dead-cover rank drops to `<=2` at `m=3`, the dead projection is connected from `m=1`, and every alive component is a low-rank escape.  Escape counts obey the checked period-`35` Beatty correction `escapes(m)=2*(floor(12m/35)+d[m mod 35])`, while raw dead fraction peaks at residue artifact `m=35` in the checked range. | HYP-3452, HYP-3451, HYP-3450, HYP-3436, HYP-3435, HYP-3434, HYP-3433, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1412, LTT-312, LTI-412, OPEN-Q-108 | Prove the AP-tail theorem as: finite transients `m=1..4`, rank-one harmonic endpoint interval for all `m>=5`, and a floor-count proof of the mod-35 escape clock.  Use connected dead projection and pair-rank `<=2` as graph sidecars, not as scalar replacements for the interval certificate. |
+| LTI-413 | Gate-escape transversal router | Component/gate join, clean low-rank exits, rank-`<=2` survivor gates, dead-cover obstruction split, endpoint/cover-delta payload, graph-composable escape certificate | HYP-3453 joins HYP-3438 survivor gates to HYP-3450/HYP-3451 component-cover data, complementing HYP-3452's AP-with-`84m` phase audit and HYP-3439's rescue-core bridge.  Exact bank: `rows_with_low_rank_component=135/135`, `rows_with_low_rank_gate=133/135`, `rows_with_dead_components=130/135`, and `rows_with_dead_components_and_low_rank_gate=130/130`; the only rows without a low-rank gate are `random_covering_044` and `random_covering_053`, both with `dead=0` and `gates=0`.  Gate endpoint-rank histogram is `{2:8666,3:36}`. | HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439, HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429, HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3417, HYP-3129, HYP-2963, THM-523, T1413, LTT-313, LTI-413, OPEN-Q-108 | Prove the gate-transversal implication: if a primitive covering row has any `dead_both` component, then it has a rank-`<=2` survivor gate; if no such gate exists, the dead-cover obstruction is empty.  Then feed that gate into HYP-3451's Menger/Green-current/conductance route. |
 | LTI-360 | C6 residue-magnitude factorization | Units `(Z/14)*`, antipodal binder slots, `C6=C2 x C3` cyclotomic package, CRT nonunit cover branches, apex-7 ramification flag, 2-adic magnitude/hinge sidecar, observability/Morse glue | HYP-3310 factors the AP/Goddyn-Wong skeleton into a 7-adic residue layer and a 2-adic magnitude layer.  Binding runners are the units and form the `C6`/`C3` contact skeleton; covering runners are evens plus apex `7`; `12->24` raises `v2` by one but changes residue `12 mod14` to `10 mod14`, so the equality hinge is magnitude-side rather than residue-only.  Rebased over HYP-3266, the packet feeds O15 tight-locus rigidity, O12 off-grid bulk, and O16 `Q(sqrt(-7))` signed-floor reorganization. | HYP-3310, HYP-3300, HYP-3266, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3256, HYP-3255, HYP-3254, HYP-3253, HYP-3250, HYP-3248, HYP-3246, HYP-3243, HYP-3242, HYP-3241, HYP-3240, HYP-2909, THM-523, T1360, LTT-260, LTI-360, OPEN-Q-108 | Prove one binding pair and transport by `C3`; split even-cover/apex-7 floor; classify the `12->24` magnitude hinge; then use observability/Morse/obligation columns to prevent residue/magnitude/ramification/off-grid-floor forgetting. |
 | LTI-356 | Sheaf exactness and Farey-cusp transfer | Quotient/observer overlap cocycles, `zeta_7` contact holonomy, endpoint lifts, exact-period boundaries, boundary-moment images, cusp principal parts, AP/GW kernel status, K33/H7 debt | HYP-3301 reframes two remaining proof angles away from scalar extremality and away from HYP-3300's observability/Morse pair.  The first theorem target is exactness of the first-obstruction sheaf: every hidden quotient payload must be exact, holonomy-repaired, endpoint-lifted, descended, stopped at AP/GW, or named as debt.  The second target is a Farey-cusp transfer for `qdiv>14`: exact-period boundary maps to positive boundary-moment floor, impossible AP/GW kernel, K33/H7 named debt, or the first real unknown zero-open kernel. | HYP-3301, HYP-3300, HYP-3265, HYP-3257, HYP-3255, HYP-3253, HYP-3247, HYP-3246, HYP-3243, HYP-3242, HYP-3234, HYP-3231, HYP-3230, HYP-3102, HYP-2969, HYP-2963, HYP-2954, HYP-2704, THM-573, THM-523, T1356, LTT-256, LTI-356, OPEN-Q-108 | Instantiate the exactness rows on HYP-2963/HYP-2969/HYP-3253/HYP-3265 packet data; then classify the `qdiv>14` boundary-moment kernel as positive, AP/GW-impossible, K33/H7 debt, or a named new zero-open sidecar. |
 | LTI-361 | CRT/Galois census factorization | CRT classes, unit pairs, C3 real-cubic binding quotient, `Q(sqrt(-7))` quadratic sidecar, even shadow `2U`, ramified apex `7`, and 2-adic height/flex ledger | HYP-3311 is the exact sidecar audit for HYP-3310's C6 residue-magnitude frame, a small input chart for HYP-3301's first-obstruction sheaf route, and a concrete HYP-3400 no-naked-quotient test.  It verifies the nonzero mod-14 split `U union 2U union {7}`.  Binding lives on the unit skeleton `U=(Z/14)^*`; covering lives on `2U+{7}`; `u -> 2u mod14` is a bijection from binding units to even covering classes; and the apex `7` is ramified.  In `Gal(Q(zeta_7)/Q)=C6=C2 x C3`, the C3 quotient gives the binding-pair orbit while the quadratic `Q(sqrt(-7))` character is transverse, so the proof must retain both before touching height/flex. | HYP-3311, HYP-3400, HYP-3310, HYP-3301, HYP-3265, HYP-3259, HYP-3258, HYP-3257, HYP-3255, HYP-3253, HYP-3250, HYP-3300, HYP-2909, HYP-3087, THM-523, T1361, LTT-261, LTI-361, OPEN-Q-108 | Prove the labelled packet theorem: C3/HYP-2909 forces unit-contact rigidity; killed contacts route through HYP-3265/HYP-3300 off-unit chambers or HYP-3301 exactness/transfer kernels; HYP-3400 prices any scalar shadow that forgets these coordinates; and the covering layer `2U+{7}` has only the AP/Goddyn-Wong `12->24` integer tight hinge. |
@@ -8351,3 +8352,66 @@ components form one blocker-projection component, but four endpoint-rank `2`
 escape components remain.  A proof should expose these escapes by a bounded
 Menger cut, a Green-current boundary imbalance, or an algebraic-connectivity
 obstruction, then lift to the AP-with-`84m` tails and arbitrary primitive rows.
+
+## LTI-413: Gate-Escape Transversal Router
+
+Created by codex-2026-06-29 for HYP-3453/T1413 as the component/gate join
+between HYP-3438's survivor-gate word audit and HYP-3450/HYP-3451's
+component-cover obstruction graph.  It was rebased over HYP-3452, whose
+AP-with-`84m` phase audit supplies the canonical-tail companion case.
+
+Carrier / vertex set:
+
+```text
+survivor gates, clean low-rank components, dead_both components,
+branch-coloured blockers, endpoint labels, branch masks, adjacent cover deltas,
+and parent even walls.
+```
+
+Preserved LRC predicate:
+
+```text
+if a component-cover obstruction exists, it has a rank <= 2 gate escape.
+```
+
+Destroyed information if used naively: a low-rank component may be a clean
+exit or a gate boundary.  Scalar survivor mass and even component endpoint rank
+forget whether the escape can compose with the HYP-3451 dead-cover graph.
+
+Exact HYP-3453 readout:
+
+```text
+rows_audited=135
+rows_with_low_rank_component=135/135
+rows_with_low_rank_gate=133/135
+rows_with_dead_components=130/135
+rows_with_dead_components_and_low_rank_gate=130/130
+rows_dead_without_low_rank_gate=[]
+dead_zero_clean_only_rows=[random_covering_044, random_covering_053]
+all_survivor_gates=8702
+low_rank_gates=8666
+gate_endpoint_rank_hist={2:8666, 3:36}
+```
+
+AP-tail base case:
+
+```text
+covering_AP_with_84:
+  components=26
+  dead=22
+  gates=4
+  low_rank_gates=4
+  gate labels: B1:7|E:84, E:84|B1:5, B0:5|E:84, E:84|B0:7
+  all gate deltas=(1,1)
+```
+
+Tournament fingerprint: `6` escape-proof vertices, score histogram
+`{10:1, 38:1, 52:1, 55:2, 59:1}`, no directed `3`-cycles, and priority path
+`E00_dead_positive_rank2_gate_transversal -> E01_clean_obstruction_empty_exit -> E02_gate_endpoint_delta_spine -> E03_component_cover_conductance_join -> E04_low_rank_component_shadow -> E05_raw_survivor_measure`.
+
+Next agent hook: prove the gate-transversal implication for arbitrary
+primitive covering rows.  If a row has any `dead_both` component, show the
+boundary between dead and nondead structure contains an exact HYP-3438 survivor
+gate with endpoint rank at most `2`; if no such gate exists, prove the
+dead-cover obstruction is empty.  Then hand the gate to HYP-3451's
+Menger/Green-current/conductance graph.
