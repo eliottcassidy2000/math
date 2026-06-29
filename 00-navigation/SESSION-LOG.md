@@ -24,6 +24,27 @@ seam and twelve hits on lower-delta bypass gates on the same components.
 Next proof move: formalize the mirror-puncture island-current lemma and the
 bypassed-saddle lemma, retaining island intervals, mirror pairs, branch masks,
 phase-flow hits, and owner-boundary debt before any scalar quotient is trusted.
+## codex-2026-06-29 -- HYP-3478 best-touch singleton-current refinement
+
+Rebased over the HYP-3478 small-touch geometry atlas and kept it as the
+canonical finite singleton-pocket record.  Added a companion best-touch audit:
+
+```text
+04-computation/lrc14_small_touch_singleton_current_codex_20260629.py
+05-knowledge/results/lrc14_small_touch_singleton_current_codex_20260629.out
+07-reflections/lrc14-small-touch-singleton-current-codex-20260629.md
+```
+
+The audit preserves the atlas carrier: six small-touch/no-hard rows, all with
+zero-edge dead-cover projections and no repeated dead labels.  It refines the
+next proof order: `random_covering_062`, `random_covering_086`, and
+`random_covering_101` have clean best current `(1,1)`; `random_covering_039`
+and `random_covering_074` are delta-sidecar singleton-current rows; and
+`random_covering_001` is the asymmetric branch-unit row with four isolated
+dead components and best current `(2,1)`.
+
+Proof pull: prove the three clean best-touch singleton rows first, then the
+asymmetric `001` subcase, then the cover-delta sidecar rows.
 
 ## codex-2026-06-29 -- HYP-3478 small-touch/no-hard geometry reservation
 

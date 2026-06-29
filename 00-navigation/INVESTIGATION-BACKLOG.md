@@ -40,13 +40,12 @@ Next: prove the mirror-puncture island-current lemma and the bypassed-saddle
 lemma.  Tournament vertices should be islands, seams, phase-flow bypasses,
 owner boundaries, and proof obligations, not runners or raw gate counts.
 
-## Lead codex-2026-06-29: small-touch singleton-pocket geometry atlas
+## Lead codex-2026-06-29: small-touch/no-hard singleton geometry
 
-**Status:** EVIDENCE / finite geometry atlas; not proof
-(HYP-3478/T1438/LTI-438/LTT-338), downstream of HYP-3476 pair-current,
-HYP-3477 hard-mirror discharge, and the S319 colored gate unit-delta split.
-**Status:** EVIDENCE / exact six-row geometry audit; not proof
-(HYP-3478/T1438/LTI-438/LTT-338), downstream of HYP-3476 and HYP-3477.
+**Status:** EVIDENCE / exact six-row geometry audit plus best-touch refinement;
+not proof (HYP-3478/T1438/LTI-438/LTT-338), downstream of HYP-3476
+pair-current, HYP-3477 hard-mirror discharge, and the S319 colored gate
+unit-delta split.
 
 HYP-3478 audits the six small-touch/no-hard rows directly:
 `random_covering_001`, `random_covering_039`, `random_covering_062`,
@@ -64,11 +63,6 @@ two complete E/branch gate touches.  The owner-pair grammar is:
 101: (7,175)
 ```
 
-Next proof task: prove the four branch-unit singleton rows (`001`, `062`,
-`086`, `101`) by a component-local mirror-pocket theorem, then add the S319
-cover-delta sidecar for `039` and `074`.  Do not spend the next session on
-larger pair-current searches unless a new coordinate creates nontrivial
-component support.
 Readout: all six rows have edgeless dead-cover projections, but all six have
 touching E/branch gates.  Across the packet there are `14` dead components,
 all singleton `B0`/`B1` owner-pair components; every component has an exact
@@ -76,18 +70,27 @@ interval mirror with the branch owners swapped.  There are no singleton-cover,
 mirror, or owner-balance failures.
 
 The split is now explicit: cover-delta sidecar rows
-`random_covering_039`, `random_covering_074`; clean unit-delta singleton rows
+`random_covering_039`, `random_covering_074`; branch-unit singleton rows
 `random_covering_001`, `random_covering_062`, `random_covering_086`, and
 `random_covering_101`.  `random_covering_101` has a shortest E/branch gate
 that does not touch dead labels, but it has a slightly longer touching
 unit-delta gate, so it remains in the unit-delta singleton packet.
 
+Best-touch refinement:
+`04-computation/lrc14_small_touch_singleton_current_codex_20260629.py` shows
+that the first branch-unit theorem should probably start with `062`, `086`,
+and `101`, which have clean best current `(1,1)`.  The row `001` remains in
+the branch-unit atlas class but has four isolated dead components and best
+current `(2,1)`, so it should be the asymmetric subcase before the
+delta-sidecar rows `039` and `074`.
+
 Next: prove a finite mirror-singleton current lemma, likely split into the
-two cover-delta rows and four unit-delta rows.  Use tournament vertices as
-singleton components, mirror-paired components, owner-pair labels, fixed
-section boundaries, touching gate events, residues, cover arcs, color/Fourier
-modes, and proof obligations.  The quotient must preserve the terminal
-discharge predicate and say what interval/branch/owner geometry it destroys.
+three clean best-touch rows, asymmetric `001`, and the two cover-delta rows.
+Use tournament vertices as singleton components, mirror-paired components,
+owner-pair labels, fixed section boundaries, touching gate events, residues,
+cover arcs, color/Fourier modes, and proof obligations.  The quotient must
+preserve the terminal discharge predicate and say what interval/branch/owner
+geometry it destroys.
 
 ## Lead codex-2026-06-29: zero-edge singleton-current audit
 

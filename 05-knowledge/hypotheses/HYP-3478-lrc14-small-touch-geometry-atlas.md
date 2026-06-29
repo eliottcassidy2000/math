@@ -140,6 +140,44 @@ delta_sidecar rows:
 Thus the cleanest next proof target is the four branch-unit singleton rows;
 the two S319 delta-sidecar rows should carry their extra cover-delta payload.
 
+## Best-Touch Refinement
+
+A companion audit refines the branch-unit packet without replacing this atlas:
+
+```text
+04-computation/lrc14_small_touch_singleton_current_codex_20260629.py
+05-knowledge/results/lrc14_small_touch_singleton_current_codex_20260629.out
+```
+
+It keeps the same zero-edge singleton-pocket carrier and then asks which
+touching gate gives the smallest local current payload.  The split is:
+
+```text
+clean best-touch singleton current:
+  random_covering_062
+  random_covering_086
+  random_covering_101
+
+delta-sidecar singleton current:
+  random_covering_039
+  random_covering_074
+
+asymmetric best-touch singleton current:
+  random_covering_001
+```
+
+Aggregate refinement:
+
+```text
+best_delta_hist={(1,1):5,(2,1):1}
+best_current_hist={(1,1):5,(2,1):1}
+```
+
+This does not contradict the S319 split.  `random_covering_001` is still a
+branch-unit singleton row by the minimum gate-kind atlas, but it is not one of
+the three clean best-touch rows: it has two mirror pairs, four isolated dead
+components, and best touching current `(2,1)`.
+
 ## Proof Pull
 
 Replace graph edge-current by a component-local lemma:

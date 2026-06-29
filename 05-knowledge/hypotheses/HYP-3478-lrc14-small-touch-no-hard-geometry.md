@@ -92,6 +92,19 @@ touch dead labels, but it also has a shortest touching unit-delta E/branch
 gate at component `21`, interval `[31/210,181/1225]`, with labels
 `('B0:175','B1:7')`.
 
+A best-touch companion refines this four-row unit-delta packet:
+
+```text
+04-computation/lrc14_small_touch_singleton_current_codex_20260629.py
+05-knowledge/results/lrc14_small_touch_singleton_current_codex_20260629.out
+```
+
+It keeps the same zero-edge singleton-pocket carrier but separates
+`random_covering_062`, `random_covering_086`, and `random_covering_101` as the
+clean `(1,1)` best-current tests.  The row `random_covering_001` stays in the
+branch-unit atlas class, but it is the asymmetric best-touch subcase: four
+isolated dead components and best current `(2,1)`.
+
 ## Assumption Challenge
 
 Do not assume the tournament vertices are runners, arcs, or raw row names.
@@ -109,8 +122,9 @@ The six rows reduce to mirror-paired singleton components.  Five rows have one
 mirror pair and `random_covering_001` has two.  All dead-cover projections
 have zero edges, all hard-orbit counts are zero, and every pocket has complete
 or touching E/branch gate sidecars.  The next proof target is a finite
-singleton-current lemma for the four branch-unit rows (`001`, `062`, `086`,
-`101`), followed by the cover-delta sidecar clause for `039` and `074`.
+singleton-current lemma for the three clean branch-unit rows (`062`, `086`,
+`101`), then the asymmetric branch-unit row `001`, followed by the cover-delta
+sidecar clause for `039` and `074`.
 
 Do not keep enlarging E/branch pair-current searches unless a new invariant
 creates projection edges.

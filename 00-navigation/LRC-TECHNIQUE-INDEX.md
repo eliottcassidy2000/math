@@ -9374,6 +9374,12 @@ Next agent hook: prove the four branch-unit singleton rows first:
 have distinct minimum E/branch deltas, so a two-row sidecar plus four-row
 unit-delta clause is the likely formal shape.
 
+Best-touch refinement: within the four branch-unit rows, `random_covering_062`,
+`random_covering_086`, and `random_covering_101` are the clean `(1,1)`
+current tests.  `random_covering_001` remains branch-unit by S319 gate class
+but is the asymmetric subcase, with four isolated dead components and best
+current `(2,1)`.
+
 Pointers: HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
 HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, LTI-438, LTT-338,
 T1438, OPEN-Q-108.

@@ -55,6 +55,13 @@ So the next proof attempt should not start with all six.  Prove the four
 branch-unit rows first as the pure singleton-current packet, then add the
 cover-delta sidecar needed for `039` and `074`.
 
+A companion best-touch audit narrows the first packet further.  Within the
+four branch-unit rows, `062`, `086`, and `101` have clean best current
+`(1,1)`, while `001` has four isolated components and best touching current
+`(2,1)`.  The most efficient order is therefore: prove the three clean
+best-touch rows, then the asymmetric branch-unit row `001`, then the two
+delta-sidecar rows `039` and `074`.
+
 The guardrail stays the same as HYP-3474/HYP-3476: raw row names, gate counts,
 or color counts are shadows.  The proof object must retain the dead-pocket
 interval, mirror partner, owner pair, residue/span word, and complete gate

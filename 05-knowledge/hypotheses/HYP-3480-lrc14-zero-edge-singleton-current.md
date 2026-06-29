@@ -62,6 +62,14 @@ the zero-edge rows are carried by a small owner-label involution, unit-delta
 singleton-current packet, endpoint-spine certificate, two-adic residue class,
 or named hard/gluing exception.
 
+Existing HYP-3478 companions already split the six primary rows into three
+clean best-touch rows (`062`, `086`, `101`), asymmetric branch-unit row `001`,
+and cover-delta sidecar rows `039`, `074`.  HYP-3480 should preserve that split
+while adding the `random_covering_031` hard/currentless control and route flags.
+HYP-3481 now supplies that control as a mirror-punctured annulus plus bypassed
+saddle atlas, so the combined audit should keep random031 topological payloads
+separate from the six-row singleton-current packet.
+
 ## Tournament Analysis Plan
 
 Vertices are terminal singleton-current proof carriers, not runners, raw row

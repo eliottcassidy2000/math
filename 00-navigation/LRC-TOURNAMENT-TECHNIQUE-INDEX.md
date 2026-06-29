@@ -9993,6 +9993,9 @@ quotient_legality_status
   `S00_mirror_singleton_geometry_packet -> S01_owner_current_locality_packet -> S02_touching_gate_sidecar_packet -> S03_unit_delta_vs_cover_delta_split -> S04_section_boundary_interval_word -> S05_residue_owner_pair_shadow -> S06_raw_zero_edge_count -> S07_raw_row_name_list`.
 - **Next hook:** prove the four branch-unit singleton rows first, then add the
   cover-delta sidecar for `random_covering_039` and `random_covering_074`.
+- **Best-touch refinement:** the branch-unit packet itself splits into three
+  clean `(1,1)` best-current rows (`062`, `086`, `101`) and the asymmetric
+  row `001`, whose best touching current is `(2,1)`.
 - **Pointers:** HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
   HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, LTI-438,
   LTT-338, T1438, OPEN-Q-108.
