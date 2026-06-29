@@ -1,3 +1,29 @@
+## mac-mini-2026-06-29-S14 -- 28 = T(7) = octonion apex; apex 7's three arithmetic properties ARE the three proof pillars (HYP-3547)
+
+Prompt: creatively explore 28 + other interesting families/properties/hidden patterns in the LRC structure; mine git pulls as signal.
+
+Git signal: klein THM-587 (n=8 metagraph spectrum now reachable); codex S336/S337 = coordination syncs only.
+
+NEW (HYP-3547), creative exploration of 28 (= C(8,2) = LRC(14) Forcade arc-count, HYP-3546):
+(1) THEOREM: even perfect numbers = T(Mersenne prime) = C(Mp+1,2). 6=T(3),28=T(7),496=T(31),8128=T(127).
+    28=T(7)=C(8,2)=dim so(8) is LRC(14)'s arc-count; Mersenne apices 3,7,31,127 -> LRC(6,14,62,254).
+(2) SOLID structural: apex 7 carries OCTONION structure. QR mod 7 = {1,2,4} = Paley T_7 arc rule =
+    B_0(T_7) (Mersenne doubling) = a Fano-plane line = the octonion multiplication triple. LRC(14)'s
+    7 sectors <-> 7 Fano points <-> 7 imaginary octonion units; the danger-comb alphabet = octonion product.
+(3) 7-14-21-28 tower = dim Im(O)/G2/so(7)/so(8); 28=21+7 = cut(7 scores)+cycle(21 tiles) = the real
+    GF(2) split mirroring so(8)=so(7)+R^7; order 14 = dim G2 (resonance, flagged).
+(4) KEY MECHANISM: Mersenne ∩ Heegner ∩ 3mod4 primes = EXACTLY {3,7} -> only LRC(6),(14). The THREE
+    arithmetic properties of apex 7 ARE the three PROOF PILLARS: 7≡3mod4 -> THM-581 Borsuk-Ulam witness
+    (saddle index (7-1)/2=3 odd); 7 Heegner (Q(sqrt-7) h=1) -> S75e Fejer-Bochner SOS floor (HYP-3535);
+    7 Mersenne (14=2*7) -> THM-580 2-adic descent. LRC(14) = first OPEN + LAST small case with all three;
+    next Mersenne 31,127 LOSE Heegner so the bespoke 14-strategy doesn't transfer. Reframes "why 14
+    special" from numerology to mechanism: the proof tools = the apex's arithmetic.
+
+Files: HYP-3547, reflection twentyeight-the-octonion-apex-and-the-three-pillars.md, script
+twentyeight_octonion_heegner_macmini_20260629.py (+.out). Cataloged 14/28 facts (phi(14)=6 witnesses,
+units sum 42=3*14, 28=2+3+5+7+11). Messaged kind-pasteur (owns the dihedral/Heegner/SOS thread).
+No canon overridden; builds on HYP-3546 + THM-580/581/586/448 + HYP-3535.
+
 ## mac-mini-2026-06-29-S13 -- perfect numbers are Forcade arc-hypercube dimensions; arc-flip = Q_d-edge = discrete Ky Fan; Mersenne-DRT gauge (HYP-3546)
 
 Prompt: work the next open piece (OPEN-Q-059) + leverage unused opportunities + think symmetry gauge, Mersenne DRT, perfect numbers.

@@ -1,0 +1,58 @@
+============================================================================
+(1) EVEN PERFECT NUMBER = T(Mersenne prime); 28 = T(7), apex of LRC(14)
+============================================================================
+  p  Mp=2^p-1 prime? perfect=2^(p-1)Mp  =T(Mp)? =C(Mp+1,2)? LRC(2*Mp)
+  2         3  PRIME                 6      YES         YES    LRC(6)
+  3         7  PRIME                28      YES         YES   LRC(14)
+  4        15   comp               120      YES         YES         -
+  5        31  PRIME               496      YES         YES   LRC(62)
+  6        63   comp              2016      YES         YES         -
+  7       127  PRIME              8128      YES         YES  LRC(254)
+
+  Even perfect numbers ARE the triangular numbers of Mersenne primes:
+  6=T(3), 28=T(7), 496=T(31), 8128=T(127). 28=T(7): 7=LRC(14) apex prime.
+  T(Mp)=C(Mp+1,2)=arcs of the order-(Mp+1) tournament (Mp+1=2^p Forcade order).
+
+============================================================================
+(2) The apex 7: QR{1,2,4} = Fano line = octonion rule = B_0(Paley T_7)
+============================================================================
+  QR mod 7 = [1, 2, 4]  (the Paley arc set / the 'doubling' orbit 1->2->4->1).
+  Fano plane lines (translates of {1,2,4} mod 7): 7 lines, each |line|=3; 7 points, 7 lines (PG(2,2)).
+  Octonion imaginary units e_1..e_7: the 7 associative triples = the 7 Fano lines
+  = translates of the QR set {1,2,4}. So Im(O) multiplication = Paley T_7 / QR structure.
+  B_0(T_7) = out-nbhd of vertex 0 = [1, 2, 4] = QR{1,2,4} (Mersenne doubling -> Fano line).
+  => LRC(14)'s 7 sectors <-> 7 Fano points <-> 7 imaginary octonion units.
+
+============================================================================
+(3) The 7-14-21-28 tower: Im(O), G2, so(7), so(8); 28 = cut (+) cycle of an 8-tournament
+============================================================================
+    7 : Im(O) / Fano pts / LRC sectors / apex prime / cut-space dim (scores) of 8-tourn
+   14 : dim G2 = Aut(O) / LRC(14) ORDER / 2*apex
+   21 : dim so(7) = C(7,2) = CYCLE-space (tiles) of an 8-tournament = T(6)
+   28 : dim so(8) = C(8,2) = ARC count = perfect number = T(7)
+
+  8-tournament arc space d=C(8,2)=28: cut(scores)=7 (+) cycle(tiles)=21.
+  so(8) = so(7) (+) R^7  <=>  28 = 21 + 7  <=>  arcs = tiles (+) scores (cut(+)cycle).
+  so(7) = G2 (+) (7-coset)  <=>  21 = 14 + 7  <=>  tiles = G2 (+) sectors.
+  Tower 7,14,21,28 = 7*{1,2,3,4}; LRC order 14 sits at G2; arcs 28 at so(8).
+
+============================================================================
+(4) Apex p both MERSENNE and HEEGNER => only {3,7} => only LRC(6), LRC(14)
+============================================================================
+  Heegner primes (Q(sqrt(-p)) h=1, odd): [3, 7, 11, 19, 43, 67, 163]  -- all = 3 mod 4
+  Mersenne primes 2^k-1: [3, 7, 31, 127, 8191]  -- all = 3 mod 4 (2^k-1 = 3 mod 4, k>=2)
+  MERSENNE and HEEGNER: [3, 7]  => LRC orders 2p = [6, 14]
+
+  For apex p in [3, 7]: (a) p=3 mod 4 => Paley T_p exists, saddle index (p-1)/2 ODD
+  => Borsuk-Ulam regime; (b) p Heegner => Q(sqrt(-p)) h=1 = the GENTLEST cyclotomic
+  Fejer-Bochner SOS; (c) p Mersenne => arc count C(p+1,2) = PERFECT number = T(p).
+  LRC(6) is PROVED; LRC(14) is the FIRST OPEN and the LAST small case with all three.
+  saddle index (p-1)/2: p=3->1, p=7->3 (both odd); next Mersenne 31->15, 127->63 (odd).
+
+============================================================================
+SYNTHESIS: 28 = T(7) = C(8,2) = dim so(8) = 2nd perfect number is the arc-count of
+LRC(14)'s Forcade order 8; its apex 7 = Im(O)=Fano=QR{1,2,4}=B_0(T_7); the tower
+7-14-21-28 = Im(O),G2,so(7),so(8) with 14=LRC order=dim G2; and apex 7 is one of only
+TWO primes (3,7) that are simultaneously Mersenne (perfect arcs) and Heegner (h=1),
+singling out LRC(6) and LRC(14). 14 is the octonion/G2 order; 28 its triality so(8).
+============================================================================
