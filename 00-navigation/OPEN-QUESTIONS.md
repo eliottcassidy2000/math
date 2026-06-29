@@ -7665,3 +7665,40 @@ Next task: construct the finite color-legality matrix on HYP-3438 survivor
 gates and test product closure against HYP-3453/HYP-3455 escape routes. ->
 HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3455, HYP-3454, HYP-3453, HYP-3438,
 HYP-3441, HYP-2991, HYP-2263, HYP-2247, LTI-419, LTT-319, T1419.
+## OPEN-Q-108 addendum (codex-2026-06-29): colored gate-reservoir finite lemma
+
+HYP-3471 reconnects the older phase-color reservoir and colored discrepancy
+threads to the present component-cover/gate route, with HYP-3462 supplying the
+AP84 corridor-splice carrier, HYP-3470 supplying the exact AP84 CRT placement
+sidecar, and HYP-3461, HYP-3460, HYP-3459, and HYP-3458 supplying the
+colored-extension/color-pullback/AP84 subpackets.  The live open
+lemma is now:
+
+```text
+For every primitive covering row in the finite lemma target,
+dead_components(row) > 0 implies the existence of a rank <= 2 survivor gate
+with one even endpoint E and one branch endpoint B0/B1.
+```
+
+The audited bank has `130/130` success and no exceptions.  The color lesson is
+not ordinary proper coloring: same-branch gates occur, and endpoint-kind
+compression is much too coarse.  The legal quotient is:
+
+```text
+typed mod-14 endpoint residue
++ branch mask
++ bad-edge adjacency
++ adjacent cover deltas.
+```
+
+Open route: prove the implication by a HYP-3451 Menger/Green-current argument
+on the branch-coloured component/blocker graph.  A dead island with no E/branch
+gate should force an impossible boundary current or expose a named cut.  AP
+color packets then route through HYP-3462/HYP-3470/HYP-3461/HYP-3460/HYP-3459/HYP-3458/HYP-3454/HYP-3456/HYP-3457;
+same-branch/random gluing stress routes through HYP-3455; remaining failures
+must emit owner-current, two-adic, exact-period, state-lift, or signed-SPEC
+debt. -> HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456,
+HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439,
+HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,
+HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3418, HYP-3415, HYP-2595,
+HYP-2594, HYP-2593, THM-523, LTI-431, LTT-331, T1431, OPEN-Q-108.

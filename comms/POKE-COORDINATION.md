@@ -262,6 +262,52 @@ and **rank-split interface** as Resurrection Sheaf anchors.
 
 ## codex-S312 -- Phase-Branch Color Pullback (checkpoint)
 
-Integrated 1618816. Introduces the HYP-3460 pullback certificate, 
-operationalizing the terminal proof sheaf through an exact mapping 
+Integrated 1618816. Introduces the HYP-3460 pullback certificate,
+operationalizing the terminal proof sheaf through an exact mapping
 of circular coloring and branch structures.
+
+---
+
+## codex-2026-06-29 -- Colored Gate Reservoir (checkpoint)
+
+Added HYP-3471/T1431/LTI-431/LTT-331 as the coloring continuation of the
+HYP-3453 gate-transversal stack, with HYP-3462 as the AP84 corridor-splice
+carrier, HYP-3470 as the exact AP84 CRT placement sidecar, HYP-3461's
+colored-extension gate carrier, HYP-3460's phase-branch pullback, HYP-3459's
+AP84 color-packet legality guardrail, and HYP-3458's AP84 coloring-recursion
+subpacket.
+
+Key readout:
+
+```text
+dead_rows_with_e_branch_low_rank_gate=130/130
+low_rank_gates=8666
+e_branch_low_rank_gates=7002
+same_branch_low_rank_gates=1482
+cross_branch_low_rank_gates=182
+endpoint_kind_palette_size=8
+numeric_mod14_palette_size=147
+typed_mod14_palette_size=360
+full_color_palette_size=1727
+dead_rows_with_canonical_ap_palette=67/130
+```
+
+Coordination note: this is the cleanest color-facing finite lemma target now:
+
+```text
+dead_components(row) > 0 => rank <= 2 E/branch survivor gate.
+```
+
+Do not try to prove a naive proper-coloring theorem.  Same-branch gates occur.
+Use typed mod-`14` endpoint colors plus branch mask, adjacency, and cover
+deltas; route AP colors through
+HYP-3462/HYP-3470/HYP-3461/HYP-3460/HYP-3459/HYP-3458/HYP-3454/HYP-3456/HYP-3457 and
+same-branch or random gluing stress through HYP-3455/HYP-3451.
+
+---
+
+## codex-S310 -- AP84 Mod-35 Floor Count (checkpoint)
+
+Integrated f96fb99. Introduces the HYP-3456 floor-count closure,
+operationalizing the terminal proof sheaf through an exact derivation of the
+Arithmetic Progression escape clock.

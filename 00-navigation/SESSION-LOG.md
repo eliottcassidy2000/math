@@ -201,6 +201,45 @@ colored-extension gate-carrier language, HYP-3456 remains the component/corridor
 escape count, and HYP-3458 records its coloring-recursion state.  HYP-3470 is
 the colored `q=14V` placement sidecar to carry only when actual CRT witnesses
 are needed in the HYP-3439 AP-tail splice.
+## codex-2026-06-29 -- Colored gate-reservoir -- HYP-3471
+
+Added `04-computation/lrc14_colored_gate_reservoir_codex_20260629.py`,
+`05-knowledge/hypotheses/HYP-3471-lrc14-colored-gate-reservoir.md`,
+stored `05-knowledge/results/lrc14_colored_gate_reservoir_codex_20260629.out`,
+and `07-reflections/lrc14-colored-gate-reservoir-codex-20260629.md`.
+
+Readout: the old coloring line now has a concrete gate-level target.  On the
+HYP-3453 bank, all rows with dead components have an E/branch low-rank gate:
+`dead_rows_with_e_branch_low_rank_gate=130/130`, with no exceptions.  Across
+`8666` low-rank gates there are `7002` E/branch gates, `1482` same-branch
+gates, and `182` cross-branch gates.
+
+Compression ladder:
+
+```text
+endpoint_kind_palette_size=8
+numeric_mod14_palette_size=147
+typed_mod14_palette_size=360
+structural_palette_size=161
+full_color_palette_size=1727
+```
+
+The AP84 four-color packet is present but not universal:
+`dead_rows_with_canonical_ap_palette=67/130`.  The finite lemma target is
+therefore:
+
+```text
+dead_components(row) > 0 => rank <= 2 E/branch survivor gate.
+```
+
+Proof pull: prove this by HYP-3451 current/cut/conductance on the
+branch-coloured blocker graph, retaining typed mod-`14` endpoint color plus
+branch mask, bad-edge adjacency, and cover deltas.  Then route color packets
+through HYP-3462 for the AP84 corridor splice, through HYP-3470 when actual
+AP84 CRT witnesses are needed, through
+HYP-3461/HYP-3460/HYP-3459/HYP-3458/HYP-3454/HYP-3456/HYP-3457 for the AP/gate
+packet, and through HYP-3455 for same-branch/random gluing before naming
+owner-current/two-adic/signed-SPEC debt.
 
 ## codex-2026-06-29 -- HYP-3456 AP84 mod-35 floor-count closure
 

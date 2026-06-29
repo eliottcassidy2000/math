@@ -180,6 +180,46 @@ Next: prove the four live intervals and the floor/ceiling count symbolically,
 then carry the period-`385`/`5005` sidecar only in AP-tail subproofs that need
 actual colored CRT placement rather than branch-union component escapes.
 
+## Lead codex-2026-06-29: colored gate-reservoir finite lemma
+
+**Status:** EVIDENCE / exact colored gate quotient audit; not proof
+(HYP-3471/T1431/LTI-431/LTT-331), sharpening HYP-3453's gate-escape
+transversal with the prior color-reservoir and colored-discrepancy routes, and
+using HYP-3462 as the AP84 corridor-splice carrier, HYP-3470 as the exact
+AP84 color-grid placement sidecar, and HYP-3461, HYP-3460, HYP-3459, and
+HYP-3458 as colored-extension/color-pullback/AP84 subpackets.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3471-lrc14-colored-gate-reservoir.md`,
+script
+`04-computation/lrc14_colored_gate_reservoir_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_colored_gate_reservoir_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-colored-gate-reservoir-codex-20260629.md`.
+
+Readout: on the `135`-row HYP-3453 bank, `130/130` rows with dead components
+have a rank-`<=2` E/branch survivor gate.  Low-rank gates split as `7002`
+E/branch, `1482` same-branch, and `182` cross-branch.  Endpoint kind has only
+`8` colors, numeric mod-`14` has `147`, typed mod-`14` has `360`, structural
+sidecars have `161`, and full colored gate words have `1727`.  The AP84
+four-color packet covers only `67/130` dead rows, so it is a terminal packet,
+not a universal color law.
+
+Next steps: prove the finite implication
+
+```text
+dead_components(row) > 0 => rank <= 2 E/branch survivor gate.
+```
+
+Try a HYP-3451 component-cover current/cut proof: a dead island with no
+E/branch leak should create impossible boundary divergence or a Menger cut in
+the branch-coloured blocker graph.  Retain typed endpoint residue plus branch
+mask, bad-edge adjacency, and cover deltas until AP packets route through
+HYP-3462/HYP-3470/HYP-3461/HYP-3460/HYP-3459/HYP-3458/HYP-3454/HYP-3456/HYP-3457,
+same-branch/random gluing routes through HYP-3455, or genuine
+owner-current/two-adic/signed-SPEC debt is emitted.
+
 ## Lead codex-2026-06-29: AP84 finite transient closure
 
 **Status:** EVIDENCE / finite mixed AP-tail transient certificate; not proof

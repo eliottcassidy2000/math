@@ -133,6 +133,12 @@ obligations, and proof-carrier interfaces.
   observer-cut discharge modes, AP84 sidecars, and the random031 mirror clause
   the vertices.  The quotient keeps gluing/escape predicates and demotes raw
   gate words, A000568 shadows, and component counts to telemetry.
+- Need to reconnect colorings to the current gate/component stack:
+  use LTT-331 after LTT-313/LTT-311/LTT-315/LTT-318/LTT-319/LTT-320/LTT-321/LTT-322/LTT-330 and make
+  colored proof carriers, not runners or raw color counts, the vertices.
+  Endpoint kind and numeric residue are lossy; typed mod-`14` plus branch mask,
+  adjacency, and cover deltas is the legal gate word until
+  HYP-3451/HYP-3454/HYP-3455 routes it.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9511,7 +9517,7 @@ quotient_legality_status
   HYP-3458's AP84 coloring recursion and HYP-3459's AP84 color-packet
   legality guardrail.  For `random_covering_031` as `V=173`,
   `P=(12,)`, `E=(0,4,26,53,60,80,89,103,115,118,128,150)`, the phase-color
-  layer has `Sigma≈1.831959`, `actual=open=282`, deficit `≈34.928978`, and
+  layer has `Sigma~=1.831959`, `actual=open=282`, deficit `~=34.928978`, and
   candidate bound `8*(k+cGP)+1=193`.  Pullback by `u=2t mod1` gives
   mirror-symmetric phase/branch counts, `no_component_hits=0`, `242`
   branch-compatible gate hits, and `hard_gate_hits={}` for the two HYP-3455
@@ -9652,3 +9658,44 @@ quotient_legality_status
 - **Pointers:** HYP-3470, HYP-3462, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456, HYP-3454, HYP-3452, HYP-2595,
   HYP-2594, HYP-2593, HYP-3439, THM-523, LTI-430, LTT-330, T1430,
   OPEN-Q-108.
+
+## LTT-331: Colored Gate-Reservoir Tournament
+
+- **Move:** Treat coloring as a controlled-compression tournament over proof
+  carriers.  Vertices are the strengthened E/branch gate implication, full
+  colored gate word, structural color sidecar, typed mod-`14` gate word, AP84
+  four-color packet, endpoint-kind coloring, numeric mod-`14` residue, and raw
+  color count.
+- **LRC use:** HYP-3471 sharpens HYP-3453 by showing, on the current bank, that
+  every dead-component row has a rank-`<=2` E/branch survivor gate, while
+  HYP-3462 supplies the AP84 corridor-splice carrier, HYP-3470 supplies exact AP84 CRT placement, and
+  HYP-3461/HYP-3460/HYP-3459/HYP-3458 supply the colored-extension/color-pullback/AP84
+  subpackets: `dead_rows_with_e_branch_low_rank_gate=130/130`.  The bank has
+  `8666` low-rank gates, split into `7002` E/branch, `1482` same-branch, and
+  `182` cross-branch gates.
+- **Preserves:** typed endpoint residues, endpoint kind, branch mask, bad-edge
+  adjacency, adjacent cover deltas, AP84 color packet when present, and the
+  graph-composable gate predicate needed by HYP-3451.
+- **Forgets / guardrail:** ordinary proper-coloring language is false here:
+  same-branch gates `B0|B0` and `B1|B1` occur.  Endpoint-kind coloring has only
+  `8` colors and numeric mod-`14` collapses typed branch information; use them
+  only as diagnostics.
+- **Pairwise observable:** predicate retention, typed color payload,
+  branch-graph composability, compression-firewall score, AP packet splice
+  value, random-gluing sidecar value, and scalar penalty.
+- **Switch/gauge:** higher retained proof payload first; ties use the declared
+  colored-gate route.
+- **Fingerprint:** `8` vertices, score histogram
+  `{7:1,31:1,42:1,54:1,58:1,61:1,66:2}`, no directed `3`-cycles, and
+  Hamiltonian path
+  `dead_positive_e_branch_gate -> full_colored_gate_word -> structural_color_sidecar -> typed_mod14_gate_word -> ap84_four_color_packet -> endpoint_kind_coloring -> numeric_14_residue -> raw_color_count`.
+- **Next hook:** prove the strengthened finite implication
+  `dead_components(row)>0 => rank<=2 E/branch survivor gate`.  Then route AP
+  color packets through HYP-3462/HYP-3470/HYP-3461/HYP-3460/HYP-3459/HYP-3458/HYP-3454/HYP-3456/HYP-3457,
+  same-branch/random gluing through HYP-3455, and general graph pressure
+  through HYP-3451 before naming owner-current/two-adic/signed-SPEC debt.
+- **Pointers:** HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460, HYP-3459, HYP-3458, HYP-3457, HYP-3456,
+  HYP-3455, HYP-3454, HYP-3453, HYP-3452, HYP-3451, HYP-3450, HYP-3439,
+  HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,
+  HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3418, HYP-3415, HYP-2595,
+  HYP-2594, HYP-2593, THM-523, LTI-431, LTT-331, T1431, OPEN-Q-108.
