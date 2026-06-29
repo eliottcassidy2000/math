@@ -1,3 +1,29 @@
+## codex-2026-06-29 -- HYP-3472 dead-cover boundary-current reservation
+
+Prompt: spend another similar session pushing different directions on similar
+questions.  Claimed a graph/current direction rather than another color packet:
+HYP-3472/T1432/LTI-432/LTT-332.
+
+Reserved files:
+
+```text
+04-computation/lrc14_dead_cover_boundary_current_codex_20260629.py
+05-knowledge/results/lrc14_dead_cover_boundary_current_codex_20260629.out
+05-knowledge/hypotheses/HYP-3472-lrc14-dead-cover-boundary-current.md
+07-reflections/lrc14-dead-cover-boundary-current-codex-20260629.md
+```
+
+Known input: HYP-3451 supplies the dead-cover blocker projection, HYP-3453
+supplies dead-row low-rank survivor gates, and HYP-3471 strengthens that to
+`dead_components(row)>0 => rank<=2 E/branch survivor gate` on the 135-row
+bank.  HYP-3462/HYP-3470 supply the closed AP84 sidecars.
+
+Planned audit: join each E/branch gate to the dead-cover projection by adjacent
+blocker labels, remove those labels from the projection, and measure whether
+the gate is a projection cut, a separating boundary current, or only a local
+gate touch.  The run should report current vectors, row exceptions, AP84 versus
+non-AP split, and a Tournament Analysis over proof carriers rather than runners.
+
 ## codex-2026-06-29 -- HYP-3458 AP84 coloring-recursion bridge
 
 Prompt: go back and connect with prior work on colorings and extend/explore.

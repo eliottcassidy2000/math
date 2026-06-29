@@ -15,6 +15,34 @@
 
 ---
 
+## Lead codex-2026-06-29: dead-cover boundary-current audit
+
+**Status:** RESERVED STUB / graph-current audit pending; not proof
+(HYP-3472/T1432/LTI-432/LTT-332), claiming the graph/current sibling to
+HYP-3471 after HYP-3462 closed the AP84 corridor-splice packet.
+
+Claimed files:
+`05-knowledge/hypotheses/HYP-3472-lrc14-dead-cover-boundary-current.md`,
+script
+`04-computation/lrc14_dead_cover_boundary_current_codex_20260629.py`,
+result
+`05-knowledge/results/lrc14_dead_cover_boundary_current_codex_20260629.out`,
+and reflection
+`07-reflections/lrc14-dead-cover-boundary-current-codex-20260629.md`.
+
+Known input: HYP-3451 projects dead components into a branch-coloured blocker
+graph; HYP-3453 gives every dead-component row a rank-`<=2` survivor gate; and
+HYP-3471 strengthens that to a rank-`<=2` E/branch survivor gate on all
+`130/130` dead rows in the current bank.
+
+Next: run the boundary-current audit.  For each low-rank E/branch gate, record
+adjacent blocker labels, remove them from the dead-cover incidence graph, and
+report projection-cut strength, separating-current failures, branch-current
+balance, and AP84/non-AP exceptions.  Tournament vertices should be proof
+carriers and obligations, not runners: projection cut, separating current,
+E/branch implication, AP84 closed packet, random031 seven-owner gluing clause,
+typed gate word, raw gate count, and raw dead fraction.
+
 ## Lead codex-2026-06-29: AP84 coloring-recursion bridge
 
 **Status:** EVIDENCE / exact coloring-recursion sidecar for AP-tail bridge; not

@@ -139,6 +139,12 @@ obligations, and proof-carrier interfaces.
   Endpoint kind and numeric residue are lossy; typed mod-`14` plus branch mask,
   adjacency, and cover deltas is the legal gate word until
   HYP-3451/HYP-3454/HYP-3455 routes it.
+- Need to turn E/branch gate existence into graph-current transfer:
+  use LTT-332 after LTT-311/LTT-313/LTT-315/LTT-322/LTT-331 and make
+  projection cuts, branch-current vectors, E/branch implications, AP84 packets,
+  random031 gluing clauses, typed gate words, and scalar shadows the vertices.
+  Raw gate counts and dead fractions are telemetry unless the dead-cover
+  blocker projection is retained.
 - Need Boolean route centers after owner/root sidecars:
   use LTT-114 after LTT-112/LTT-113 and attach packet/route/
   certificate/sidecar/discharge fields until the route-triple median center
@@ -9699,3 +9705,29 @@ quotient_legality_status
   HYP-3438, HYP-3437, HYP-3436, HYP-3435, HYP-3434, HYP-3431, HYP-3429,
   HYP-3427, HYP-3426, HYP-3425, HYP-3422, HYP-3418, HYP-3415, HYP-2595,
   HYP-2594, HYP-2593, THM-523, LTI-431, LTT-331, T1431, OPEN-Q-108.
+
+## LTT-332: Dead-Cover Boundary-Current Tournament
+
+- **Move:** Treat the non-AP transfer question as a tournament over graph and
+  current proof carriers, not over runners or scalar gate counts. Vertices are
+  projection-cut gate, separating boundary current, low-rank E/branch
+  implication, closed AP84 packet, random031 seven-owner gluing clause, typed
+  gate word, raw gate count, and raw dead fraction.
+- **LRC use:** HYP-3472 is reserved to test whether HYP-3471's universal
+  E/branch gate implication touches HYP-3451's dead-cover blocker graph as a
+  small cut. If it does, the non-AP transfer can be phrased as a
+  Menger/Green-current boundary lemma. If it does not, the audit should name
+  exact exception rows and route them to HYP-3455, owner-current, two-adic,
+  signed-SPEC, or state-lift debt.
+- **Pairwise observable:** preservation of dead-cover-to-gate predicate,
+  projection-cut strength, separating-current strength, AP84 splice value,
+  random031 gluing value, typed gate payload, and scalar-forgetting penalty.
+- **Switch/gauge:** prefer carriers that preserve the dead-cover projection and
+  expose a cut; ties use lower-rank E/branch gates before typed sidecars and
+  demote raw counts.
+- **Fingerprint:** pending until
+  `04-computation/lrc14_dead_cover_boundary_current_codex_20260629.py` runs.
+- **Pointers:** HYP-3472, HYP-3471, HYP-3462, HYP-3470, HYP-3461, HYP-3460,
+  HYP-3459, HYP-3458, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438,
+  HYP-3437, HYP-3436, HYP-3417, HYP-3129, THM-523, LTI-432, LTT-332, T1432,
+  OPEN-Q-108.
