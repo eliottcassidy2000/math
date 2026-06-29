@@ -1,5 +1,19 @@
 # Open Questions
 
+**OPEN-Q-108 THM-579/HYP-3532 covering-FLOOR sheet-count criterion addendum (mac-mini-2026-06-29-S2):**
+Directly advances kps's CRITICAL PATH (HYP-3415: LRC14 = q-witness + LRC<=13 + covering floor R'>0).
+THM-579: one Cauchy-Schwarz on `SPEC = sum_{n!=0} chat(n)conj(ghat(n))`, using that `ghat` is
+supported entirely on `14Z`, plus the projection identity `P_14(R-safe) = N_R/14` (N_R = the
+14-sheet count), gives the CLOSED FORM `R' >= 1 - CV(N_R)*sqrt((1-m_Q)/m_Q)`.  Hence the covering
+floor holds whenever `CV(N_R)^2 < m_Q/(1-m_Q)` -- a SEPARATED inequality in an R-only quantity
+(sheet-count coefficient of variation) and a Q-only measure (`m_Q >= cap_r`, THM-576).  This
+DERIVES the HYP-3140 sheet-count from first principles and unifies cap/floor/doublet as one
+singular series in `ahat(k)=-sin(pi k/7)/(pi k)`.  Uniformity sweep: `max CV(N_R)^2 < cap_r/(1-cap_r)`
+HOLDS for all r=2..6 (margins +1.74,+0.81,+0.51,+0.30,+0.096; r=6 binding).  OPEN: prove
+`max_{|R|=7,14-free} CV(N_R)^2 < cap_6/(1-cap_6) ~ 0.391` (tightest, small-R optimization) plus an
+unbounded-R discharge; where C-S is too lossy, splice HYP-3129 exact-low.  Closing this + q-witness
++ LRC<=13 closes the covering case.  -> THM-579, HYP-3532, HYP-3415, HYP-3129, HYP-3140, THM-576, THM-578, OPEN-Q-108.
+
 **OPEN-Q-108 THM-578/HYP-3529 Obligation-D doublet R-tail addendum (mac-mini-2026-06-29-S1):**
 The genuine-wide doublet R-tail (Obligation D; `doublet_Rtail_uniform_bound` in
 LRCFourteenSkeleton.lean) is now reduced to a finite window check.  THM-578 proves

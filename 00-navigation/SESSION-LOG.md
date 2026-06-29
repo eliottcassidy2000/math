@@ -1,3 +1,36 @@
+## mac-mini-2026-06-29-S2 -- THM-579/HYP-3532: the covering FLOOR (critical path) = a sheet-count CV criterion; cap+floor+doublet are one singular series
+
+Prompt: work on the next high-value steps; mine incoming agent work for signal; be free in thinking.
+
+Mined kps's incoming messages (MSG-292/293, S255-S259): the LRC14 critical path is
+kps HYP-3415's reduction LRC14 = [q-witness] + [LRC<=13] + [covering FLOOR R'>0], the
+floor being `R' = 1 + SPEC/product`, `SPEC = sum_{n!=0} chat(n)conj(ghat(n))` (certified
+R'>=0.642 numerically, HYP-3129; open as closed-form). S259: binding obstruction is the
+EVEN/2-adic speeds. Recognized that kps's `ahat(k)=-sin(pi k/7)/(pi k)` IS my comb Fourier
+coefficient -- the cap (THM-576), floor (SPEC), and doublet R-tail (THM-578) are the SAME
+singular series. Verified the comb-resonance reformulation (reproduces THM-576 caps exactly;
+resonance formula matches exact overlaps to 1e-6).
+
+HEADLINE (THM-579, HYP-3532): a closed-form sufficient floor criterion. One Cauchy-Schwarz on
+SPEC, using that `ghat` lives entirely on `14Z`, plus the projection identity
+`P_14(R-safe) = N_R/14` (N_R = the 14-sheet count), gives
+`Sum_{N!=0}|chat(14N)|^2 = Var(N_R)/196`, hence
+   R' >= 1 - CV(N_R) * sqrt((1-m_Q)/m_Q).
+So the floor R'>0 holds whenever `CV(N_R)^2 < m_Q/(1-m_Q)` -- a SEPARATED inequality: an R-only
+sheet-count coefficient of variation (finite 14-grid) vs a Q-only measure (m_Q >= cap_r, THM-576).
+This DERIVES HYP-3140's sheet-count/fiber-PGF object from first principles.
+- Verified bound>0 for the binding consec family r=2..6 AND even-heavy R (the 2-adic worry
+  softens: even-heavy R has larger m_R -> smaller CV -> higher bound).
+- Uniformity sweep (~500 R per r): `max CV(N_R)^2 < cap_r/(1-cap_r)` HOLDS all r=2..6, margins
+  +1.74,+0.81,+0.51,+0.30,+0.096. r=6 is the binding case (|Q|=6, margin +0.096).
+Reflection: 07-reflections/comb-resonance-cap-floor-doublet-one-singular-series.md.
+
+NEXT AGENT: (1) Close the floor by proving `max_{|R|=7, 14-free} CV(N_R)^2 < cap_6/(1-cap_6)~0.391`
+(small-R optimization, tightest case) + an unbounded-R discharge (large speeds equidistribute off
+the 14-grid -> CV should drop). (2) Where C-S is too lossy, splice in HYP-3129's exact-low. (3) This
++ q-witness + LRC<=13 would CLOSE the covering case. Files: THM-579, HYP-3532,
+04-computation/lrc14_{floor_CV_sheetcount_bound,floor_CV_uniformity_sweep,comb_resonance_inclexcl}_macmini_20260629.py.
+
 ## mac-mini-2026-06-29-S1 -- THM-578/HYP-3529 Obligation D (doublet R-tail) closed to a finite window
 
 Prompt: come to a deep understanding of our novel work and strategies and the

@@ -1,0 +1,22 @@
+==============================================================================
+LRC14 floor CV uniformity sweep (mac-mini-S2)
+==============================================================================
+
+r=2 (|R|=11): cap_r=66/91 (0.7253) threshold cap/(1-cap)=2.6400
+   max CV(N_R)^2 over 404 configs = 0.9010  at R=(7, 9, 12, 17, 27, 30, 33, 39, 51, 59, 69)
+   criterion max CV^2 < threshold : HOLDS (margin +1.7390)
+
+r=3 (|R|=10): cap_r=55/91 (0.6044) threshold cap/(1-cap)=1.5278
+   max CV(N_R)^2 over 404 configs = 0.7138  at R=(1, 8, 9, 10, 29, 34, 36, 44, 52, 68)
+   criterion max CV^2 < threshold : HOLDS (margin +0.8139)
+
+r=4 (|R|=9): cap_r=1979/4004 (0.4943) threshold cap/(1-cap)=0.9773
+   max CV(N_R)^2 over 405 configs = 0.4657  at R=(1, 6, 20, 23, 25, 26, 29, 36, 64)
+   criterion max CV^2 < threshold : HOLDS (margin +0.5116)
+
+r=5 (|R|=8): cap_r=2243/5880 (0.3815) threshold cap/(1-cap)=0.6167
+   max CV(N_R)^2 over 405 configs = 0.3183  at R=(2, 7, 9, 49, 53, 55, 58, 60)
+   criterion max CV^2 < threshold : HOLDS (margin +0.2985)
+r=6 (|R|=7): cap_6=3029/10780 (0.2810) thr=0.3908
+  max CV^2 over 503 = 0.2949 at (7, 16, 21, 27, 36, 49, 51)
+  criterion: HOLDS (margin +0.0959)
