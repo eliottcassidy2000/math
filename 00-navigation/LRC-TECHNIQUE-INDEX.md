@@ -46,14 +46,16 @@ bypass stalk.
 Preserved LRC predicate: random031 pure-bypass discharge after deleting the
 forbidden max-delta seam.
 Destroyed information: scalar and component-only quotients erase the seam-only
-owner word.
-Best use: prove owner-boundary persistence, or name the first missing sidecar.
+owner word; global-flow owner union contaminates the boundary with owner `55`;
+dead-island owner union recovers only `45`.
+Best use: feed a formal owner-current terminal lemma for the HYP-3490/HYP-3493
+random031 seam-cobordism packet.
 Failure mode: treating the hard pair as a wall instead of a forbidden seam
 whose complement carries phase flow.
-Anchors: HYP-3520, HYP-3494, HYP-3493, HYP-3510, HYP-3511, HYP-3486,
-HYP-3402, HYP-3034, T1520, LTT-420.
-Next agent hook: execute the quotient-price matrix and turn the surviving
-owner-current word into a finite lemma statement.
+Anchors: HYP-3520, HYP-3512, HYP-3494, HYP-3493, HYP-3510, HYP-3511,
+HYP-3486, HYP-3402, HYP-3034, T1520, LTT-420.
+Next agent hook: turn `45:+1,147:+1,169:+1,173:+1` into a Lean-facing
+owner-current/relative-H1 boundary lemma.
 
 ## Current Assembly Principle
 

@@ -48,11 +48,12 @@ obligations, and proof-carrier interfaces.
 - **Preserves:** The seam owner word, bypass flow-owner word, hard-component
   support `(43,54)`, and local `12`-cell pure-bypass stalk.
 - **Forgets / guardrail:** Raw witness counts, component pairs, and bypass
-  owner words alone forget the four seam-only owners.
-- **Next pull:** Build the HYP-3520 quotient-price matrix and use the winning
-  sidecars as the exact owner-current cobordism interface.
-- **Pointers:** HYP-3520, HYP-3494, HYP-3493, HYP-3510, HYP-3511, HYP-3486,
-  HYP-3483, HYP-3402, HYP-3034, T1520, LTI-520.
+  owner words alone forget the four seam-only owners; global flow owner union
+  adds contaminant `55`.
+- **Next pull:** Use the HYP-3520 matrix to formalize the owner-current
+  terminal sidecar: `45:+1,147:+1,169:+1,173:+1`.
+- **Pointers:** HYP-3520, HYP-3512, HYP-3494, HYP-3493, HYP-3510,
+  HYP-3511, HYP-3486, HYP-3483, HYP-3402, HYP-3034, T1520, LTI-520.
 
 ## Fast Routing Map
 

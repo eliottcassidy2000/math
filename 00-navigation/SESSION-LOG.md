@@ -32,6 +32,27 @@ HYP-3511 doublet collapse: `64` ordinary routes, `10` free-hole singles,
 Proof target: ordinary route lemma, free-hole bracket lemma, pure bypass
 owner-boundary lemma, HYP-3490 firewall compatibility, and HYP-3486
 vertical-halfturn guardrail.
+Reserved and then executed HYP-3520/T1520/LTI-520/LTT-420 for the random031
+owner-cobordism certificate.  Added:
+
+```text
+04-computation/lrc14_random031_owner_boundary_persistence_codex_20260629.py
+05-knowledge/results/lrc14_random031_owner_boundary_persistence_codex_20260629.out
+05-knowledge/hypotheses/HYP-3520-lrc14-random031-owner-boundary-persistence.md
+07-reflections/lrc14-random031-owner-boundary-persistence-codex-20260629.md
+```
+
+Exact readout: the max-delta forbidden seam on components `(43,54)` carries
+`(23,45,93,113,147,169,173)`, the lower-delta pure bypass on the same
+components carries `(23,93,113)`, and pure bypass stalk `R01` has `12` cells,
+branch split `6/6`, endpoint rank `(2,)`, and zero external horizontal ports.
+The owner-current boundary signature is `45:+1,147:+1,169:+1,173:+1`.
+
+The quotient-price audit made the loss explicit: raw `12`, raw `282`,
+component-pair, delta-route, bypass-owner-only, dead-island-only, and
+global-flow owner quotients fail or contaminate the boundary word.  Next formal
+hook: turn this owner-current matrix into the pure-bypass terminal lemma beside
+HYP-3490 private-label firewall and HYP-3493 seam-sheaf dispatch.
 
 ## codex-2026-06-29 -- HYP-3490 Lean private-label firewall ledger
 

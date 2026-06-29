@@ -1,0 +1,92 @@
+HYP-3520 RANDOM031 OWNER-BOUNDARY PERSISTENCE
+status=EVIDENCE / finite owner-cobordism and quotient-price certificate; not an LRC14 proof
+row=random_covering_031
+
+## Seam-Complement Receiver
+witness_cells=282
+cell_class_hist={'bypass': 12, 'free_hole': 40, 'ordinary': 230}
+legal_component_count=79
+legal_component_type_hist={'bypass': 1, 'free_hole': 14, 'ordinary': 64}
+hard_components=(43, 54)
+hard_seam_gate_count=2 mirror_pair=True
+bypass_gate_count=2 mirror_pair=True
+
+## Forbidden Seam Gates
+  component=43 interval=[71/161,349/791] mask=branch0 delta=7 route=mixed_owner_residual owners=(23, 45, 93, 113, 147, 169, 173)
+  component=54 interval=[442/791,90/161] mask=branch1 delta=7 route=mixed_owner_residual owners=(23, 45, 93, 113, 147, 169, 173)
+forbidden_seam_owner_word=(23, 45, 93, 113, 147, 169, 173)
+
+## Lower-Delta Bypass Gates
+  component=43 interval=[344/791,286/651] mask=branch1 delta=2 route=owner_current_small_delta owners=(23, 93, 113)
+  component=54 interval=[365/651,447/791] mask=branch0 delta=2 route=owner_current_small_delta owners=(23, 93, 113)
+bypass_gate_owner_word=(23, 93, 113)
+
+## Pure Bypass Stalk
+rel_id=R01
+size=12
+nodes=((527, 1), (528, 1), (529, 1), (530, 1), (531, 1), (532, 1), (679, 0), (680, 0), (681, 0), (682, 0), (683, 0), (684, 0))
+branch_hist={0: 6, 1: 6}
+phase_hist={10: 1, 11: 1, 12: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 2, 8: 1, 9: 1}
+hit_components=(43, 54)
+endpoint_ranks=(2,)
+pure_bypass_owner_word=(23, 93, 113)
+external_horizontal_ports=0
+component_branch_phase_hits={(43, 1, 2): 1, (43, 1, 3): 1, (43, 1, 4): 1, (43, 1, 5): 1, (43, 1, 6): 1, (43, 1, 7): 1, (54, 0, 10): 1, (54, 0, 11): 1, (54, 0, 12): 1, (54, 0, 7): 1, (54, 0, 8): 1, (54, 0, 9): 1}
+local_reading=pure 12-cell lower-delta flow stalk on the same two hard components
+
+## Owner Boundary Matrix
+dead_island_owner_words=((0, (23, 45)), (1, (93, 113)), (2, (93, 113)), (3, (23, 45)))
+dead_island_owner_union=(23, 45, 93, 113)
+ordinary_flow_owner_union=(23, 45, 55, 93, 113, 147, 169, 173)
+global_flow_owner_union=(23, 45, 55, 93, 113, 147, 169, 173)
+owner | seam_boundary | bypass_flow | boundary_debt | dead_island | global_flow | seam-minus-bypass
+   23 |             1 |           1 |             0 |           1 |           1 |                 0
+   45 |             1 |           0 |             1 |           1 |           1 |                 1
+   55 |             0 |           0 |             0 |           0 |           1 |                 0
+   93 |             1 |           1 |             0 |           1 |           1 |                 0
+  113 |             1 |           1 |             0 |           1 |           1 |                 0
+  147 |             1 |           0 |             1 |           0 |           1 |                 1
+  169 |             1 |           0 |             1 |           0 |           1 |                 1
+  173 |             1 |           0 |             1 |           0 |           1 |                 1
+owner_boundary_debt=(45, 147, 169, 173)
+owner_current_signature=45:+1,147:+1,169:+1,173:+1
+
+## Hard-Component Owner Map
+component=43 seam=(23, 45, 93, 113, 147, 169, 173) bypass=(23, 93, 113) debt=(45, 147, 169, 173)
+component=54 seam=(23, 45, 93, 113, 147, 169, 173) bypass=(23, 93, 113) debt=(45, 147, 169, 173)
+same_component_verdict=seam and bypass live on the same mirror-paired hard components
+
+## Quotient-Price Matrix
+candidate | score | exact | reconstructed_debt | missing | extra | retained | repair
+seam_and_bypass_owner_words | 94 | True | (45, 147, 169, 173) | () | () | forbidden seam word plus pure bypass flow word | attach hard components (43,54) and R01 stalk id
+owner_current_cobordism_matrix | 93 | True | (45, 147, 169, 173) | () | () | owner x {seam_boundary,bypass_flow,boundary_debt} | finite owner-current lemma over the forbidden seam
+hard_component_owner_map | 92 | True | (45, 147, 169, 173) | () | () | per-hard-component seam/bypass owner words | attach HYP-3510 carrier id and HYP-3511 free-hole bracket sidecar
+observer_cut_payload_orbit | 92 | True | (45, 147, 169, 173) | () | () | seven-owner seam as stationary observer-cut payload | attach HYP-3486 u_index/branch packet if formalizing cells
+symbolic_relative_H1_boundary_class | 91 | True | (45, 147, 169, 173) | () | () | relative boundary word [seam]-[bypass] | expand to the owner-current matrix above
+bypass_owner_word_only | 31 | False | () | (45, 147, 169, 173) | () | pure bypass owners (23,93,113) | add the forbidden seam owner word
+delta_route_phase_blocks | 31 | False | () | (45, 147, 169, 173) | () | delta=2, branch split 6/6, phases on components 43/54 | attach owner payload to the two-adic phase carrier
+dead_island_owner_union_minus_bypass | 26 | False | (45,) | (147, 169, 173) | () | four puncture owners minus bypass owners | restore the seven-owner forbidden seam payload
+global_flow_owner_union_minus_bypass | 16 | False | (45, 55, 147, 169, 173) | () | (55,) | all nonfree flow owners minus bypass owners | remove ordinary-owner contaminant 55 by hard-component sidecar
+raw_bypass_count_12 | 12 | False | () | (45, 147, 169, 173) | () | 12 bypass witnesses | lift count to HYP-3486 witness packets
+raw_282_witness_count | 12 | False | () | (45, 147, 169, 173) | () | 282 phase witnesses | lift count to seam-complement receiver packets
+component_pair_only | 11 | False | () | (45, 147, 169, 173) | () | hard component pair (43,54) | attach seam/bypass gate words
+
+## Reframe
+R1: The hard pair is not a wall for phase flow.  It is a forbidden seam; the complement carries all 282 phase witnesses, with the lower-delta bypass hit exactly 12 times.
+R2: The four missing owners are not failed bypass flow.  They are the stationary owner-boundary current left after subtracting the moving bypass owner word from the seven-owner seam word.
+R3: The n*2 recursion is the u=2t phase address.  The n+2 recursion is the owner-boundary seam insertion.  HYP-3520 should prove the span, not choose one recursion and erase the other.
+
+## Tournament Analysis
+vertices=quotient sidecars/proof interfaces, not runners, arcs, or raw witnesses
+pairwise_observable=exact boundary-debt reconstruction + local 12-cell bypass retention
+switch=higher owner-boundary score; fixed sidecar-cost tie path
+score_hist={11: 1, 12: 2, 16: 1, 26: 1, 31: 2, 91: 1, 92: 2, 93: 1, 94: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_path_count_under_fixed_tie_path=1
+hamiltonian_path=seam_and_bypass_owner_words -> owner_current_cobordism_matrix -> hard_component_owner_map -> observer_cut_payload_orbit -> symbolic_relative_H1_boundary_class -> bypass_owner_word_only -> delta_route_phase_blocks -> dead_island_owner_union_minus_bypass -> global_flow_owner_union_minus_bypass -> raw_bypass_count_12 -> raw_282_witness_count -> component_pair_only
+
+## Assumption Challenge
+Considered vertices: runners, raw gates, arcs, u-fibers, fixed circle sections, section boundaries, wall-crossing events, residues, cover arcs, free-hole packets, owner rows, hard-component owner maps, relative-H1 boundary classes, and proof obligations.
+Chosen vertices: quotient sidecars.  This preserves the LRC predicate needed here--pure-bypass discharge with exact owner-boundary debt--and intentionally destroys raw runner order, raw phase count, and ordinary flow owner noise.
+Challenged assumption: the owner-boundary proof is not a search for more bypass witnesses.  The bypass is already local and isolated; the live question is which sidecar prevents the seam-only owners from being forgotten.

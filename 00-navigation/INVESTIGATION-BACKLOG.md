@@ -1,13 +1,16 @@
 # Investigation Backlog
 
-**HYP-3520 random031 owner-boundary persistence.**  Reserved as the immediate
-HYP-3494 continuation.  Build the executable quotient-price matrix for the
-pure bypass: seam owner word `(23,45,93,113,147,169,173)`, bypass flow-owner
-word `(23,93,113)`, hard components `(43,54)`, exact `12` phase hits, and
-boundary debt `(45,147,169,173)`.  Treat tournament vertices as sidecars and
-proof interfaces, not runners/arcs/raw witnesses.  Success means a finite
-owner-current/relative-H1 cobordism lemma; failure should name the first
-missing sidecar. -> HYP-3520, HYP-3494, HYP-3493, HYP-3511, HYP-3510,
+**HYP-3520 random031 owner-boundary persistence.**  The quotient-price matrix
+is now executable.  Exact readout: the forbidden seam on `(43,54)` carries
+`(23,45,93,113,147,169,173)`, the lower-delta bypass on the same components
+carries `(23,93,113)`, pure bypass stalk `R01` has `12` cells, branch split
+`6/6`, endpoint rank `(2,)`, and `external_horizontal_ports=0`, and the
+owner-current signature is `45:+1,147:+1,169:+1,173:+1`.  Next task:
+formalize a terminal owner-current/relative-H1 lemma compatible with the
+HYP-3490 private-label firewall and HYP-3493 seam-sheaf table.  Guardrails:
+raw `12`, raw `282`, component-pair, delta-route, bypass-owner-only,
+dead-island-only, and global-flow quotients do not preserve the exact boundary
+word. -> HYP-3520, HYP-3512, HYP-3494, HYP-3493, HYP-3511, HYP-3510,
 HYP-3490, HYP-3486, HYP-3483, HYP-3481, HYP-3402, HYP-3034, LTI-520,
 LTT-420, T1520, OPEN-Q-108.
 **HYP-3521 random031 terminal certificate ledger.**  Formalize the terminal

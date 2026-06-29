@@ -18,6 +18,19 @@ or emits named debt; HYP-3490 blocks projection-current replacement; and
 HYP-3486 blocks vertical-halfturn quotienting without sidecars. -> HYP-3521,
 HYP-3511, HYP-3510, HYP-3494, HYP-3493, HYP-3490, HYP-3486, HYP-3485,
 LTI-521, LTT-421, T1521.
+**OPEN-Q-108 HYP-3520 owner-boundary persistence addendum:** HYP-3520 now
+executes the random031 owner-boundary quotient-price matrix.  Exact surviving
+boundary signature: `45:+1,147:+1,169:+1,173:+1`, obtained by subtracting pure
+bypass owners `(23,93,113)` from the forbidden seam owners
+`(23,45,93,113,147,169,173)` on the same hard components `(43,54)`.  Pure
+bypass stalk `R01` has `12` cells, branch split `6/6`, endpoint rank `(2,)`,
+and `external_horizontal_ports=0`.  Open proof task: formalize a terminal
+owner-current/relative-H1 lemma compatible with HYP-3490 and HYP-3493; do not
+use raw `12`, raw `282`, component-pair, delta-route, bypass-owner-only,
+dead-island-only, or global-flow quotients unless they explicitly repair the
+destroyed owner-boundary coordinate. -> HYP-3520, HYP-3512, HYP-3494,
+HYP-3493, HYP-3511, HYP-3510, HYP-3490, HYP-3486, HYP-3483, HYP-3481,
+HYP-3402, HYP-3034, LTI-520, LTT-420, T1520.
 
 **OPEN-Q-108 HYP-3492 repo-history niche atlas addendum:** Which old niche
 topic can be made exact enough to close the HYP-3486 random031 packet first?
