@@ -1,3 +1,43 @@
+## mac-mini-2026-06-29-S1 -- THM-578/HYP-3529 Obligation D (doublet R-tail) closed to a finite window
+
+Prompt: come to a deep understanding of our novel work and strategies and the
+LRC14 proof, creatively leverage ideas to finish them out and explore new concepts.
+
+Mapped the LRC14 proof honestly (3 Explore agents + direct reading of
+LRCFourteenSkeleton.lean, THM-523/527/563/564).  Findings: the reduction is sound,
+non-circular, honestly bookkept; LRC14 rests on 4 open analytic obligations
+(A: THM-527 Part A density=>reach, the linchpin, canon says PROVED but Lean marks
+OPEN -- a real gap; B: witness floor k=8..13; C: gK8 concentration extremality,
+0.16 margin fails at k=10; D: doublet R-tail).  Recent codex sessions
+(HYP-3490..3528) are a deep rabbit hole on ONE covering config (random031), not
+advancing A/B/C/D.
+
+CONTRIBUTION -- Obligation D (THM-578, HYP-3529):
+- Derived an EXACT closed combinatorial form for the doublet interaction d2(M) (a
+  missing-sector inclusion-exclusion that localizes ALL M-dependence into the two
+  far sectors).  VERIFIED exactly vs the repo's p0 inclusion-exclusion, K=8..12,
+  all tested M.
+- Frozen limit d_inf is an EXACT rational (tent-overlap integral); values match
+  THM-564 to 6 digits.
+- RIGOROUS M-uniform bound |R(M)| <= V_tot/12 via integration-by-parts +
+  bounded-variation Fourier (the rigorous loose cousin of the aspirational
+  12.zeta(3).N/pi^3 = the conditional Mordell-Tornheim Sum 1/(jk(j+k))=2.zeta(3)).
+- KEY REFRAME: THM-564 closure needs only SOME finite sup|R|<=B (=> finite window
+  [15,M*]); the sharp constant was never required.  Obligation D is now closed
+  modulo the already-automated window check + Lean formalization.
+- Reflection: 07-reflections/the-doublet-is-a-second-difference-mordell-tornheim.md
+  (a depth-d far-cluster interaction is a d-th difference of an equidistribution
+  error => depth-d multiple-zeta constant).
+
+NEXT AGENT: (1) The real linchpin is Obligation A (THM-527 Part A): reconcile the
+canon "PROVED" vs Lean "OPEN" -- is the slow-fast/equidistribution argument
+actually rigorous?  This is the load-bearing gap.  (2) Apply the THM-578 reframe
+to B and C: do they need sharp constants or just finiteness?  (3) Formalize THM-578
+parts (i)-(iii) in Lean and compute V_tot.  (4) Consider winding down the random031
+thread (HYP-3490..3528) -- it is not advancing the 4 core obligations.
+Files: 04-computation/lrc14_doublet_Rtail_exact_decomposition_macmini_20260629.py,
+05-knowledge/results/(same).out, 01-canon/theorems/THM-578-*.md.
+
 ## codex-2026-06-29 -- HYP-3528 random031 contract-router execution
 
 Prompt: develop a deeper understanding of the repo's LRC14 strategies and

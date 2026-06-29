@@ -1,5 +1,24 @@
 # Open Questions
 
+**OPEN-Q-108 THM-578/HYP-3529 Obligation-D doublet R-tail addendum (mac-mini-2026-06-29-S1):**
+The genuine-wide doublet R-tail (Obligation D; `doublet_Rtail_uniform_bound` in
+LRCFourteenSkeleton.lean) is now reduced to a finite window check.  THM-578 proves
+(i) an EXACT closed form for the far-far interaction
+`d2(M) = -meas{x:|Miss(x)|=1, both far phases hit the one missing inner sector}
++ meas{x:|Miss(x)|=2, far sectors = Miss(x)}` (verified K=8..12), (ii) the frozen
+limit `d_inf` is an EXACT rational, and (iii) a RIGOROUS M-uniform bound
+`|R(M)| <= V_tot/12` via integration-by-parts + bounded-variation Fourier.  The
+strategic point: THM-564's closure consumes only SOME finite `sup|R|<=B`, so a
+finite bound makes the cutoff `M* = ceil((period-max(P)+B)/H_K)` finite and the
+genuine-wide leg closes on the finite window `[15,M*]`.  The aspirational
+`12.zeta(3).N/pi^3` (the conditional Mordell-Tornheim value `Sum 1/(jk(j+k))=2.zeta(3)`)
+is a sharpness, NOT a requirement.  Remaining (HYP-3529): compute `V_tot` explicitly
+per K and formalize parts (i)-(iii) in Lean (only the integration-by-parts step is
+non-finite).  General principle worth applying to the OTHER obligations: check
+whether the downstream consumer needs a sharp constant (strict inequality) or only
+finiteness (finite cutoff) before chasing the sharp constant.
+-> THM-578, THM-564, THM-563, HYP-3529, OPEN-Q-108.
+
 **OPEN-Q-108 HYP-3527 proof-contract router addendum:** Can the random031
 proof be closed by formalizing the eight contract clauses and proving the
 single residual close-tail lemma?
