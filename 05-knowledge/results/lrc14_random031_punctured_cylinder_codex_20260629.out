@@ -1,0 +1,106 @@
+HYP-3482 RANDOM031 PUNCTURED-CYLINDER / FORBIDDEN-SEAM ATLAS
+status=EVIDENCE / topology reframe and experiment design; not an LRC14 proof
+source=HYP-3455 + HYP-3460 + HYP-3477 + HYP-3479
+
+## Assumption Challenge
+alternate vertices considered: runners, residues, dead islands, seam gates,
+phase-flow worldlines, branch sheets, owner labels, fixed circle sections,
+section boundaries, wall-crossing events, cover arcs, Fourier modes, and
+terminal proof obligations.
+chosen carrier vertices: punctures/islands, forbidden seam, seam-complement
+phase flow, and owner-layer words.  This preserves the random031 terminal
+clause predicate and destroys raw runner order, raw gate count, and scalar
+rank-6 danger unless the seam, puncture, and phase-flow sidecars are kept.
+
+## Base Row
+row=random_covering_031
+speeds=(12, 23, 45, 55, 58, 70, 84, 93, 113, 120, 147, 169, 173)
+V=173
+S3_P=(12,)
+S3_E=(0, 4, 26, 53, 60, 80, 89, 103, 115, 118, 128, 150)
+components=98 dead_components=4
+class_hist={'both_alive': 50, 'branch0_only': 22, 'branch1_only': 22, 'dead_both': 4}
+low_rank_escape=94
+
+## Punctured-Cylinder Model
+cell_model=cylinder chi=0; four isolated dead islands puncture it, so chi_model=-4
+puncture_count=4
+mirror_puncture_pairs=2
+dead_islands:
+  island=0 interval=[113/840,55/406] mirror=3 owners=(23, 45) residues=(9, 3) span=22 B0=(45,) B1=(23,)
+  island=1 interval=[57/406,69/490] mirror=2 owners=(93, 113) residues=(9, 1) span=20 B0=(113,) B1=(93,)
+  island=2 interval=[421/490,349/406] mirror=1 owners=(93, 113) residues=(9, 1) span=20 B0=(93,) B1=(113,)
+  island=3 interval=[351/406,727/840] mirror=0 owners=(23, 45) residues=(9, 3) span=22 B0=(23,) B1=(45,)
+dead_owner_union=(23, 45, 93, 113)
+dead_owner_span_word=(22, 20, 20, 22)
+
+## Forbidden Seam
+hard_orbit_components=(43, 54)
+hard_orbit_delta=7
+hard_orbit_typed_pair=('B0:9|B0:1', 'B1:1|B1:9')
+hard_orbit_structural_pair=(('B0|B0', 'branch0', 'two_sided', 3, 4), ('B1|B1', 'branch1', 'two_sided', 4, 3))
+hard_orbit_intervals=('[71/161,349/791]', '[442/791,90/161]')
+hard_seam_owner_union=(23, 45, 93, 113, 147, 169, 173)
+rescue_subset=(23, 45, 93, 113, 147, 169)
+dead_island_owners_inside_seam=True
+rescue_subset_inside_seam=True
+rescue_only_outer_owners=(147, 169)
+apex_owner_layer=(173,)
+rescue_graph_edges=15
+rescue_graph_connected=True
+rescue_graph_components=(6,)
+  seam_gate component=43 interval=[71/161,349/791] branch=branch0 delta=(3,4) owners=(23, 45, 93, 113, 147, 169, 173)
+  seam_gate component=54 interval=[442/791,90/161] branch=branch1 delta=(4,3) owners=(23, 45, 93, 113, 147, 169, 173)
+
+## Phase Flow In The Seam Complement
+phase_witnesses=282
+phase_actual_count=282
+phase_open_count=282
+phase_deficit=41651852906953/1192472694400
+phase_counts={1: 21, 2: 16, 3: 23, 4: 27, 5: 22, 6: 21, 7: 22, 8: 21, 9: 22, 10: 27, 11: 23, 12: 16, 13: 21}
+phase_branch_mirror_failures=()
+hard_gate_hits=0
+same_component_lower_delta_hits=12
+hard_component_hit_counter={(54, 'branch0', 2): 6, (43, 'branch1', 2): 6}
+gate_delta_counter_on_phase_flow={2: 118, 3: 40, 4: 62, 5: 16, 6: 6}
+gate_route_counter_on_phase_flow={'edge_singleton_parent_gate': 76, 'edge_survivor_residual': 58, 'mixed_owner_residual': 66, 'owner_current_small_delta': 42}
+no_gate_hits=40
+interpretation=the max-delta seam is forbidden to phase flow; the same
+hard components are touched 12 times through branch-opposite lower-delta
+gates, so the complement carries the actual flow.
+
+## Additive Rim vs Doubling Fold
+additive_owner_rim_pairs=(23,45),(93,113),(147,169) plus apex 173
+additive_owner_rim_spans=(22, 20, 22)
+E_complement_pairs=((150, 128), (80, 60), (26, 4)) plus apex_complement=0
+readout=the additive rim is a +22,+20,+22 word in owner space, while
+the multiplicative fold is the two-adic map u=2t mod1 used by the
+phase pullback.  In this row, n+2-style rim data names the seam owners;
+n*2-style folding names the branch sheet on which the phase flow bypasses
+the seam.
+
+## Bold Reframes
+1. Forbidden-seam theorem target:
+   If a max-delta mirror seam has zero compatible q=14V phase hits and
+   its complement has mirror-balanced lower-delta same-component hits,
+   then the seam is a boundary-gluing clause, not a wall obstruction.
+2. Punctured-cylinder theorem target:
+   A hard/currentless row with four mirror-paired dead islands, connected
+   rescue graph, and a seven-owner seam should discharge by proving that
+   every attempted seam saturation cuts off one of the 94 low-rank escapes
+   or violates the phase-branch mirror flow.
+3. Experiment design:
+   Build a seam-complement graph whose vertices are survivor gates minus
+   the hard seam.  Send the 282 phase witnesses through it and test whether
+   every connected phase-flow component reaches a low-rank escape before
+   it can cross the forbidden seam.  Then repeat on all hard orbits and
+   classify zero-hit seams versus genuine phase walls.
+
+## Tournament Analysis
+vertices=topological proof carriers, not runners or raw gates
+pairwise_observable=predicate retention + topology + seam + phase flow + recursion lens + owner current + scalar firewall
+switch=higher retained proof payload; ties use declared route order
+axes=('predicate_retention', 'topology_payload', 'seam_payload', 'phase_flow_payload', 'recursion_payload', 'owner_current_payload', 'scalar_firewall')
+score_hist={8: 1, 55: 1, 56: 1, 60: 1, 64: 2, 67: 1}
+directed_3cycles=0
+hamiltonian_path=C00_forbidden_seam_complement_flow -> C01_mirror_punctured_cylinder_model -> C02_seven_owner_layered_seam_word -> C03_phase_branch_bypass_worldlines -> C04_additive_rim_vs_doubling_fold_lens -> C05_dead_island_owner_pairs -> C06_raw_counts_shadow

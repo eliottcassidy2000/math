@@ -23,6 +23,37 @@ pairs, branch masks, phase-flow hit data, and owner boundary sidecars; raw
 projection edge counts and raw row names are only shadows. -> HYP-3481,
 HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460, HYP-3455,
 HYP-3451, HYP-3438, THM-523, LTI-441, LTT-341, T1441, OPEN-Q-108.
+**OPEN-Q-108 HYP-3482 random031 punctured-cylinder addendum:**
+HYP-3482 extends the HYP-3481 topology atlas for the unique hard/currentless
+overlap `random_covering_031`, with HYP-3480 retained for the sibling
+zero-edge singleton-current audit.
+It is best read as a mirror-punctured cylinder with four isolated dead islands
+and a max-delta forbidden seam:
+
+```text
+components=98
+dead_components=4
+component_class_hist={'both_alive':50,'branch0_only':22,'branch1_only':22,'dead_both':4}
+dead_owner_union=(23,45,93,113)
+dead_owner_span_word=(22,20,20,22)
+hard_orbit_components=(43,54)
+hard_seam_owner_union=(23,45,93,113,147,169,173)
+phase_witnesses=282
+hard_gate_hits=0
+same_component_lower_delta_hits=12
+```
+
+Open proof task: build the seam-complement graph by deleting the max-delta
+hard pair, route the `282` q=`14V` phase witnesses through lower-delta
+branch-compatible gates, and prove every connected phase-flow component reaches
+a low-rank escape before it would need a forbidden seam crossing.
+
+Guardrail: do not compress `random031` to hard-delta count, dead-component
+count, or raw phase-hit count.  A legal quotient must preserve or reconstruct
+the four mirror-paired punctures, seven-owner seam layer, connected rescue
+graph, lower-delta bypass, and additive-rim/two-adic-fold split. -> HYP-3482,
+HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3460,
+HYP-3455, HYP-3451, THM-523, LTI-442, LTT-342, T1442, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3478 small-touch/no-hard geometry addendum:**
 HYP-3478 records the direct geometry audit for the six HYP-3476 rows that are

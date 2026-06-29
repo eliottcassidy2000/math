@@ -39,6 +39,33 @@ phase flow has `282` witnesses, `hard_gate_hits=0`, and
 Next: prove the mirror-puncture island-current lemma and the bypassed-saddle
 lemma.  Tournament vertices should be islands, seams, phase-flow bypasses,
 owner boundaries, and proof obligations, not runners or raw gate counts.
+## Lead codex-2026-06-29: random031 punctured-cylinder forbidden-seam atlas
+
+**Status:** EVIDENCE / finite topological atlas; not proof
+(HYP-3482/T1442/LTI-442/LTT-342), downstream of HYP-3481 random031 topology
+atlas, HYP-3480 singleton-current reservation, HYP-3479 hard/current join,
+HYP-3477 hard-orbit discharge, HYP-3478 small-touch geometry, HYP-3460
+phase-branch pullback, and HYP-3455 random031 gluing.
+
+HYP-3482 reframes `random_covering_031` as a mirror-punctured cylinder.  The
+four dead components are isolated mirror-paired punctures with owner spans
+`(22,20,20,22)`.  The hard pair `(43,54)` is a max-delta forbidden seam
+carrying all seven owner labels `(23,45,93,113,147,169,173)`.  The exact
+phase-flow side is the important surprise: `282` q=`14V` witnesses, zero
+hard-seam hits, and `12` lower-delta same-component bypass hits, six on each
+mirror branch.
+
+Next proof task: build the seam-complement graph.  Delete the max-delta hard
+seam, route the phase witnesses through lower-delta branch-compatible gates,
+and test whether every connected phase-flow component reaches one of the `94`
+low-rank escape components.  Then run the same audit on the other HYP-3477
+hard mirror orbits to separate zero-hit forbidden seams from genuine phase
+walls.
+
+Connection to old recursion work: the owner rim is additive, with pairs
+`(23,45)`, `(93,113)`, `(147,169)` plus apex `173`; the branch coordinate is
+the two-adic fold `u=2t mod 1`.  Treat this as the concrete `n+2` versus
+`n*2` recursion collision point in the current LRC14 proof stack.
 
 ## Lead codex-2026-06-29: small-touch/no-hard singleton geometry
 

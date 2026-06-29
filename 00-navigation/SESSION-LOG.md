@@ -34630,3 +34630,39 @@ is now a singleton-pocket theorem: handle branch-unit rows `001`, `062`,
 `074`.  Tournament Analysis uses geometric proof carriers as vertices, with
 Hamiltonian path
 `G00_zero_edge_singleton_pocket_geometry -> G01_mirror_pair_dead_component_atlas -> G02_owner_pair_residue_span_word -> G03_gate_touch_complete_pocket_sidecar -> G04_s319_unit_delta_vs_delta_sidecar_split -> G05_single_best_gate_shadow -> G06_raw_row_name_exception_list`.
+
+## codex-2026-06-29 -- random031 punctured-cylinder forbidden-seam atlas -- HYP-3482
+
+Continued from the HYP-3479 hard/current join and HYP-3478 small-touch atlas,
+then rebased over the incoming HYP-3480 zero-edge singleton-current
+reservation and HYP-3481 random031 topology atlas.  Focused on the user's
+prompt to see `random_covering_031` as a mirror-punctured cylinder with a
+forbidden seam.  Added
+`04-computation/lrc14_random031_punctured_cylinder_codex_20260629.py`,
+`05-knowledge/hypotheses/HYP-3482-lrc14-random031-punctured-cylinder.md`,
+stored
+`05-knowledge/results/lrc14_random031_punctured_cylinder_codex_20260629.out`,
+and wrote
+`07-reflections/lrc14-random031-punctured-cylinder-codex-20260629.md`.
+
+Exact readout:
+
+```text
+components=98
+dead_components=4
+component_class_hist={'both_alive':50,'branch0_only':22,'branch1_only':22,'dead_both':4}
+dead_owner_span_word=(22,20,20,22)
+hard_orbit_components=(43,54)
+hard_seam_owner_union=(23,45,93,113,147,169,173)
+phase_witnesses=282
+hard_gate_hits=0
+same_component_lower_delta_hits=12
+```
+
+The proof picture is now: four isolated mirror-paired dead islands are
+punctures; the max-delta hard pair is a forbidden seam; the phase flow lives
+on the seam complement and touches the hard components only through a
+lower-delta mirror bypass.  The additive owner rim
+`(23,45),(93,113),(147,169)+173` and doubling branch fold `u=2t mod 1` give a
+concrete `n+2` versus `n*2` recursion collision.  Next task is a
+seam-complement flow audit routing the `282` witnesses to low-rank escapes.

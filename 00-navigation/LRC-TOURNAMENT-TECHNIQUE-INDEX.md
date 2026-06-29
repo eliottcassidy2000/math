@@ -10066,3 +10066,40 @@ quotient_legality_status
 - **Pointers:** HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476,
   HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523,
   LTI-441, LTT-341, T1441, OPEN-Q-108.
+
+## LTT-342: Random031 Punctured-Cylinder / Seam-Complement Tournament
+
+- **Move:** Treat topological proof carriers as tournament vertices: forbidden
+  seam complement flow, mirror-punctured cylinder model, seven-owner seam word,
+  phase-branch bypass worldlines, additive-rim versus doubling-fold lens,
+  dead-island owner pairs, and raw-count shadow.
+- **LRC use:** HYP-3482 extends the HYP-3481 topology atlas for the unique
+  HYP-3479 hard/currentless overlap, `random_covering_031`, as a finite
+  seam-complement theorem target.  The
+  hard pair `(43,54)` is a max-delta seam with zero q=`14V` phase hits, while
+  the same components receive `12` lower-delta opposite-branch hits.  The four
+  dead islands are mirror-paired punctures, not projection-current edges.
+- **Preserves:** component interval addresses, mirror partners, owner-pair
+  spans `(22,20,20,22)`, seven-owner seam layer, connected rescue graph,
+  phase witness count, zero hard-seam hit status, lower-delta bypass hits, and
+  the additive owner-rim / two-adic branch-fold split.
+- **Forgets / guardrail:** raw component count, hard-delta count, and total
+  phase-hit count forget whether the flow crosses the seam or bypasses it.
+  Any quotient must reconstruct the seam, punctures, lower-delta bypass, and
+  owner layers before claiming a random031 proof packet.
+- **Pairwise observable:** terminal predicate retention, exact component
+  geometry, phase-flow compatibility, owner-layer detail, recursion
+  interpretability, and scalar-forgetting penalty.
+- **Switch/gauge:** orient toward the carrier that keeps more of the terminal
+  random031 discharge predicate; ties follow the seam-complement proof route.
+- **Fingerprint:** `7` vertices, score histogram
+  `{8:1,55:1,56:1,60:1,64:2,67:1}`, and Hamiltonian path
+  `C00_forbidden_seam_complement_flow -> C01_mirror_punctured_cylinder_model -> C02_seven_owner_layered_seam_word -> C03_phase_branch_bypass_worldlines -> C04_additive_rim_vs_doubling_fold_lens -> C05_dead_island_owner_pairs -> C06_raw_counts_shadow`.
+- **Next hook:** build the seam-complement graph, route all `282` phase
+  witnesses through lower-delta branch-compatible gates, and test whether each
+  connected phase-flow component reaches a low-rank escape before it would
+  require a forbidden max-delta seam crossing.
+- **Pointers:** HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478,
+  HYP-3477, HYP-3476, HYP-3460, HYP-3455, HYP-3451, HYP-3438, THM-523,
+  LTI-442, LTT-342, T1442,
+  OPEN-Q-108.
