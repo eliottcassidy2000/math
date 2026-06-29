@@ -124,6 +124,8 @@
                                       boundary-current dispatch.
     · TournamentH7.LRCSingletonCurrentLedger — HYP-3480 finite ledger for
                                       zero-edge singleton-current dispatch.
+    · TournamentH7.LRCPrivateLabelFirewall — HYP-3490 finite ledger for
+                                      private-label firewall dispatch.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -216,5 +218,6 @@ import TournamentH7.LRCProofFrontier
 import TournamentH7.LRCColoredGateFormalization
 import TournamentH7.LRCHardOrbitCurrentJoin
 import TournamentH7.LRCSingletonCurrentLedger
+import TournamentH7.LRCPrivateLabelFirewall
 import TournamentH7.LRCCrystallographicThetaFrontier
 import TournamentH7.Verify

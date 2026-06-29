@@ -1,3 +1,18 @@
+## codex-2026-06-29 -- HYP-3490 Lean private-label firewall ledger
+
+Added `TournamentH7.LRCPrivateLabelFirewall` and stored
+`05-knowledge/results/lrc14_private_label_firewall_lean_codex_20260629.out`.
+The module is a sorry-free finite ledger for the HYP-3490 private-label
+firewall packet: seven private rows, unique `random031` private/hard overlap,
+projection-frontier partition `123+7=130`, route split `121+2+1+6=130`,
+private route split `1+6=7`, and the seven-vertex carrier-score tournament.
+
+Updated the HYP-3490 detail, result index, tangent/technique maps, backlog,
+open question, historian note, and reflection so the next formal task is now
+precise: prove the private-label projection lemma, then feed random031 through
+HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481 and the other six
+private/no-hard rows through HYP-3480/HYP-3478.
+
 ## codex-2026-06-29 -- HYP-3485 random031 seam-complement connection atlas
 
 Prompt: look through past possible connections for seam complement or bypass

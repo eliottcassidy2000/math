@@ -1,15 +1,19 @@
 ---
 id: HYP-3490
 title: LRC14 private-label firewall audit
-status: EVIDENCE / all-union currentless-row firewall; not an LRC14 proof
-source: codex-2026-06-29 continuation of HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3472, HYP-3476, HYP-3477, HYP-3475, and HYP-3451
+status: EVIDENCE / all-union currentless-row firewall plus Lean ledger; not an LRC14 proof
+source: codex-2026-06-29 continuation of HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3472, HYP-3476, HYP-3477, HYP-3475, and HYP-3451
 tangent: T1450
 technique: LTI-450
 tournament_technique: LTT-350
 script: 04-computation/lrc14_private_label_firewall_codex_20260629.py
 result: 05-knowledge/results/lrc14_private_label_firewall_codex_20260629.out
+lean_module: 04-computation/lean/TournamentH7/TournamentH7/LRCPrivateLabelFirewall.lean
+lean_result: 05-knowledge/results/lrc14_private_label_firewall_lean_codex_20260629.out
 reflection: 07-reflections/lrc14-private-label-firewall-codex-20260629.md
 related:
+  - HYP-3486
+  - HYP-3485
   - HYP-3484
   - HYP-3483
   - HYP-3482
@@ -60,6 +64,13 @@ Stored output:
 
 ```text
 05-knowledge/results/lrc14_private_label_firewall_codex_20260629.out
+```
+
+Lean ledger:
+
+```text
+TournamentH7.LRCPrivateLabelFirewall
+05-knowledge/results/lrc14_private_label_firewall_lean_codex_20260629.out
 ```
 
 Aggregate ledger:
@@ -125,7 +136,14 @@ branch-unit gate pairs.  The executable split is now clean rows
 `random_covering_062`, `random_covering_086`, `random_covering_101`,
 asymmetric row `random_covering_001`, and cover-delta minimum-shadow rows
 `random_covering_039`, `random_covering_074`; `random_covering_031` remains
-the `0/4` complete-branch-unit hard control routed through HYP-3484/HYP-3483/HYP-3482/HYP-3481.
+the `0/4` complete-branch-unit hard control routed through
+HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481.
+
+Lean module `TournamentH7.LRCPrivateLabelFirewall` records the finite HYP-3490
+premise as a sorry-free ledger: the seven private rows, the unique
+`random031` private/hard overlap, the projection frontier split `123+7=130`,
+the route split `121+2+1+6=130`, the private route split `1+6=7`, and the
+label-multiplicity tournament carrier scores.
 
 ## Assumption Challenge
 
@@ -157,6 +175,8 @@ AP currentless rows
 
 random031
   -> private-label firewall + hard mirror orbit
+  -> HYP-3486 seam-complement fiber graph
+  -> HYP-3485 seam-complement connection atlas
   -> HYP-3484 forbidden-seam flow geometry
   -> HYP-3483 recursion-flow comparator
   -> HYP-3482 forbidden-seam atlas
@@ -172,10 +192,10 @@ six remaining random currentless rows
   -> finite singleton-current, endpoint-spine, exact-period, or state-lift exit
 ```
 
-HYP-3490 is especially useful for formalization: it replaces a large pair
-enumeration by a label-multiplicity lemma.  If every touched label has
-multiplicity `1`, deleting any set of such labels cannot alter the unlabelled
-dead-cover projection graph.
+HYP-3490 is especially useful for formalization: the Lean ledger fixes the
+finite row/count/route arithmetic, leaving one graph lemma as the producer
+obligation.  If every touched label has multiplicity `1`, deleting any set of
+such labels cannot alter the unlabelled dead-cover projection graph.
 
 ## Tournament Analysis
 

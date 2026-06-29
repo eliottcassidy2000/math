@@ -176,10 +176,6 @@ predicts seam/bypass stability better than raw max-delta or owner count.
 -> HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476,
 HYP-3460, HYP-3455, HYP-3451, THM-523, LTI-444, LTT-344, T1444, OPEN-Q-108.
 
-**OPEN-Q-108 HYP-3478 small-touch singleton-pocket addendum:**
-HYP-3478 identifies the geometry of the six small-touch/no-hard rows left
-after HYP-3476 pair-current and HYP-3477 hard-mirror discharge.  They are not
-weak projection graphs.  Their dead-cover projections have no edges:
 **OPEN-Q-108 HYP-3478 small-touch/no-hard geometry addendum:**
 HYP-3478 records the direct geometry audit for the six HYP-3476 rows that are
 currentless, non-AP, and outside HYP-3477 hard mirror-orbit debt.  They are
@@ -192,19 +188,6 @@ dead_component_count_hist={2:5,4:1}
 mirror_pair_count_hist={1:5,2:1}
 all_dead_components_singleton=True
 owner_unbalanced_rows=[]
-random_covering_001
-**OPEN-Q-108 HYP-3490 private-label firewall addendum:**
-HYP-3490 explains the remaining random HYP-3472/HYP-3476 currentless rows by
-label multiplicity.  The private-firewall rows are exactly
-
-```text
-random_covering_001
-random_covering_031
-random_covering_039
-random_covering_062
-random_covering_074
-random_covering_086
-random_covering_101
 ```
 
 The terminal packet splits into cover-delta sidecar rows
@@ -221,23 +204,31 @@ locality rather than collapsing to raw row names, edge-support zero, or gate
 counts. -> HYP-3478, HYP-3477, HYP-3476, HYP-3475, HYP-3472, HYP-3471,
 HYP-3455, HYP-3453, HYP-3451, HYP-3450, HYP-3438, THM-523, LTI-438,
 LTT-338, T1438, OPEN-Q-108.
-with a two-row/four-row split.  The lemma should retain dead intervals,
-blocker-owner pairs, touching gate words, and owner-current locality rather
-than collapsing to raw row names, edge-support zero, or gate counts. -> HYP-3478, HYP-3477,
-HYP-3476, HYP-3475, HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451,
-HYP-3450, HYP-3438, THM-523, LTI-438, LTT-338, T1438, OPEN-Q-108.
-and every blocker label touched by every low-rank E/branch gate on those rows
-has dead-cover multiplicity `1`.  Therefore no union of adjacent E/branch gate
-labels can delete a dead-cover projection edge.
 
-Open proof task: formalize the private-label lemma, then route
-`random_covering_031` through HYP-3484 forbidden-seam flow, HYP-3483 recursion flow, HYP-3482 seam, HYP-3481 topology, and HYP-3455 seven-owner gluing,
-and route the other six small-touch/no-hard rows through HYP-3480's singleton-current audit over
-HYP-3478 geometry, then owner-current, endpoint-spine, exact-period/state-lift,
-two-adic, or signed-SPEC exits.  This replaces "try a larger pair-current" with
+**OPEN-Q-108 HYP-3490 private-label firewall addendum:**
+HYP-3490 explains the remaining random HYP-3472/HYP-3476 currentless rows by
+label multiplicity.  The private-firewall rows are exactly
+`random_covering_001`, `random_covering_031`, `random_covering_039`,
+`random_covering_062`, `random_covering_074`, `random_covering_086`, and
+`random_covering_101`, and every blocker label touched by every low-rank
+E/branch gate on those rows has dead-cover multiplicity `1`.  Therefore no
+union of adjacent E/branch gate labels can delete a dead-cover projection edge.
+
+Lean checkpoint: `TournamentH7.LRCPrivateLabelFirewall` records the seven-row
+firewall enumeration, the unique `random031` private/hard overlap,
+`123+7=130` projection-frontier partition, `121+2+1+6=130` route split, and
+the HYP-3490 carrier-score tournament.
+
+Open proof task: prove the private-label projection lemma, then route
+`random_covering_031` through HYP-3486 seam-complement fiber graph, HYP-3485
+connection atlas, HYP-3484 forbidden-seam flow, HYP-3483 recursion flow,
+HYP-3482 seam, HYP-3481 topology, and HYP-3455 seven-owner gluing, and route
+the other six small-touch/no-hard rows through HYP-3480's singleton-current
+audit over HYP-3478 geometry.  This replaces "try a larger pair-current" with
 a structural no-go for the whole adjacent-label carrier. -> HYP-3490,
-HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3472, HYP-3455,
-HYP-3453, HYP-3451, THM-523, LTI-450, LTT-350, T1450, OPEN-Q-108.
+HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480,
+HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3472, HYP-3455, HYP-3453,
+HYP-3451, THM-523, LTI-450, LTT-350, T1450, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3476 exception-frontier router addendum:**
 HYP-3476 compares the HYP-3472 boundary-current exception frontier with the

@@ -10311,6 +10311,8 @@ quotient_legality_status
   HYP-3472 projection-edge exceptions are exactly the rows where every
   E/branch-touched blocker label has dead-cover multiplicity `1`; hence no
   union of adjacent E/branch gate labels can delete a projection edge.
+  `TournamentH7.LRCPrivateLabelFirewall` records the finite seven-row,
+  projection-frontier, route-split, and carrier-score arithmetic.
 - **Preserves:** terminal edge-deletion predicate, blocker-label multiplicity,
   E/branch touch set, random031 hard-overlap status, small-touch/no-hard
   status, and AP pair-current/non-private split.
@@ -10329,7 +10331,8 @@ quotient_legality_status
   path
   `F00_private_label_firewall_theorem -> F01_random031_private_hard_overlap -> F02_small_touch_private_packet -> F03_ap84_nonprivate_pair_current -> F04_edge_support_label_axis -> F05_raw_pair_current_count -> F06_raw_exception_name`.
 - **Next hook:** formalize the multiplicity-one projection lemma, then route
-  `random_covering_031` through HYP-3484 forbidden-seam flow plus HYP-3483
+  `random_covering_031` through HYP-3486 seam-complement fiber graph plus
+  HYP-3485 connection atlas plus HYP-3484 forbidden-seam flow plus HYP-3483
   recursion flow plus HYP-3482 seam plus HYP-3481 topology plus
   HYP-3455/HYP-3477/HYP-3460 and the other six
   private-firewall rows through HYP-3480's singleton-current audit over
@@ -10338,7 +10341,8 @@ quotient_legality_status
   pairs, clean rows `062/086/101`, asymmetric row `001`, and cover-delta
   minimum-shadow rows `039/074`, then owner-current, endpoint-spine,
   exact-period/state-lift, two-adic, or signed-SPEC debt.
-- **Pointers:** HYP-3490, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475,
+- **Pointers:** HYP-3490, HYP-3486, HYP-3485, HYP-3484, HYP-3483, HYP-3482,
+  HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475,
   HYP-3472, HYP-3471, HYP-3455, HYP-3453, HYP-3451, HYP-3438, THM-523,
   LTI-450, LTT-350, T1450, OPEN-Q-108.
 

@@ -210,12 +210,13 @@ preserve the terminal discharge predicate and say what interval/branch/owner
 geometry it destroys.
 ## Lead codex-2026-06-29: private-label firewall audit
 
-**Status:** EVIDENCE / all-union currentless-row firewall; not proof
+**Status:** EVIDENCE / all-union currentless-row firewall plus Lean ledger; not proof
 (HYP-3490/T1450/LTI-450/LTT-350), downstream of HYP-3472 boundary currents,
 HYP-3476 pair currents, HYP-3477 hard frontier routing, HYP-3478 geometry,
 HYP-3479 hard/current join, HYP-3480 singleton-current reservation, and
-HYP-3481/HYP-3482/HYP-3483/HYP-3484 random031 topology, seam, recursion-flow,
-and forbidden-seam-flow atlases.
+HYP-3481/HYP-3482/HYP-3483/HYP-3484/HYP-3485/HYP-3486 random031 topology,
+seam, recursion-flow, forbidden-seam-flow, connection, and seam-complement
+fiber graph atlases.
 
 HYP-3490 tests the label-multiplicity reason HYP-3476 cannot close the seven
 random projection-edge exceptions.  Result: `private_firewall_rows=7/130`,
@@ -224,11 +225,16 @@ exactly `random_covering_001`, `random_covering_031`, `random_covering_039`,
 `random_covering_101`; `mismatch_private_firewall_vs_no_edge_cut=[]`.  Every
 E/branch-touched blocker label on those rows has dead-cover multiplicity `1`,
 so no union of adjacent E/branch gate labels can remove a projection edge.
+`TournamentH7.LRCPrivateLabelFirewall` now records the seven-row enumeration,
+unique `random031` private/hard overlap, projection-frontier partition,
+route split, private route split, and carrier-score tournament in Lean.
 
 Next proof task: prove the label-multiplicity lemma abstractly and use it to
 replace pair enumeration in the formal route.  Then route random031 through
-HYP-3484 forbidden-seam flow/HYP-3483 recursion flow/HYP-3482 seam/HYP-3481 topology/HYP-3455 gluing and the other six private/no-hard rows
-through HYP-3480's singleton-current audit over HYP-3478 geometry, then owner-current,
+HYP-3486 seam-complement fiber graph/HYP-3485 connection atlas/HYP-3484
+forbidden-seam flow/HYP-3483 recursion flow/HYP-3482 seam/HYP-3481
+topology/HYP-3455 gluing and the other six private/no-hard rows through
+HYP-3480's singleton-current audit over HYP-3478 geometry, then owner-current,
 endpoint-spine, exact-period/state-lift, two-adic, or signed-SPEC exits.
 
 ## Lead codex-2026-06-29: zero-edge singleton-current audit

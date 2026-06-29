@@ -49,6 +49,15 @@ Useful synthetic maps added later:
   HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481
   seam-complement/fiber/topology control clause, after HYP-3490's private-label
   firewall split.
+- `07-reflections/lrc14-private-label-firewall-codex-20260629.md`:
+  HYP-3490/T1450 explains the seven random HYP-3472/HYP-3476 currentless rows
+  by dead-cover label multiplicity rather than by missing pair-current search.
+  `TournamentH7.LRCPrivateLabelFirewall` now records the finite seven-row
+  firewall enumeration, unique `random031` private/hard overlap, `123+7=130`
+  projection frontier split, `121+2+1+6=130` route split, and carrier-score
+  tournament.  The useful next hook is a private-label projection lemma feeding
+  HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481 for random031 and
+  HYP-3480/HYP-3478 for the other six private rows.
 - `07-reflections/lrc14-small-touch-no-hard-geometry-codex-20260629.md`:
   HYP-3478/T1438 resolves the geometry of the six HYP-3476 small-touch rows
   outside AP84 and hard mirror-orbit debt.  The useful signal is that all

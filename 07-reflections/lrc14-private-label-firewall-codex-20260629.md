@@ -15,7 +15,8 @@ remember endpoint color but not shared projection support.
 The result also keeps the terminal split clean.  AP currentless rows are
 non-private and close under HYP-3476 two-gate currents.  `random_covering_031`
 is the unique private row that also carries hard mirror-orbit debt, so it
-now routes through the HYP-3484 forbidden-seam flow geometry, HYP-3483
+now routes through the HYP-3486 seam-complement fiber graph, HYP-3485
+connection atlas, HYP-3484 forbidden-seam flow geometry, HYP-3483
 recursion-flow comparator, HYP-3482 seam atlas, HYP-3481 topology atlas, and
 HYP-3455 gluing clause.
 The other six private rows have no hard orbit.  After the completed HYP-3478
@@ -31,7 +32,11 @@ deletion over the same labels.
 
 Formalization hook: add a producer lemma of the form "if all labels in the
 chosen deletion set have dead-cover multiplicity one, then the dead-cover
-projection edge set is unchanged."  Then HYP-3490 supplies the finite premise
-for exactly the seven random rows; HYP-3484/HYP-3483/HYP-3482/HYP-3481
-supplies the random031 forbidden-seam-flow/recursion/seam/topology packet and
+projection edge set is unchanged."  `TournamentH7.LRCPrivateLabelFirewall`
+now supplies the finite premise and route arithmetic as a sorry-free Lean
+ledger: seven private rows, unique `random031` private/hard overlap,
+`123+7=130` projection-frontier partition, `121+2+1+6=130` route split, and
+the HYP-3490 carrier-score tournament.  The remaining formal producer is the
+private-label projection lemma; HYP-3486/HYP-3485/HYP-3484/HYP-3483/HYP-3482/HYP-3481
+supplies the random031 seam-complement/fiber/forbidden-seam/topology packet and
 HYP-3480/HYP-3478 supplies the geometric terminal packet for six of them.
