@@ -228,6 +228,15 @@ obligations, and proof-carrier interfaces.
   carry/doubling split, seven-owner gluing charge, and scalar shadows the
   vertices.  The quotient preserves the seam/complement distinction and must
   retain the `12` bypass hits separately from the zero hard-seam hits.
+- Need the exact random031 seam-complement fiber graph:
+  use LTT-346 after LTT-343/LTT-342/LTT-341 and make witness cells,
+  horizontal+mirror flow components, endpoint-rank exits, pure bypass
+  component, free-hole packets, vertical half-turn guardrail, and raw witness
+  shadows the vertices.  HYP-3486 shows that hard-seam deletion leaves `242`
+  gate-routed rank-2 cells, `40` free-hole cells in `14` mirror packets, and
+  one pure `12`-cell bypass component.  The legal quotient is mirror, not
+  vertical half-turn gluing; `n*2` is an address sidecar that must remember
+  sheet occupancy.
 - Need to explain why random pair-currents cannot work:
   use LTT-350 after LTT-336/LTT-337/LTT-338/LTT-339/LTT-340/LTT-341/LTT-342/LTT-343/LTT-344 and make dead-cover
   blocker labels with multiplicity sidecars, E/branch-touched private labels,
@@ -10241,6 +10250,39 @@ quotient_legality_status
 - **Pointers:** HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3478, HYP-3477, HYP-3476, HYP-3475,
   HYP-3472, HYP-3460, HYP-3455, HYP-3453, HYP-3451, HYP-3438, HYP-2241,
   THM-523, LTI-444, LTT-344, T1444, OPEN-Q-108.
+
+## LTT-346: Random031 Seam-Complement Fiber Graph Tournament
+
+- **Move:** Use fiber-graph proof carriers as vertices: rank-2
+  seam-complement discharge, legal mirror-run graph, pure 12-cell bypass
+  component, free-hole mirror packets, vertical half-turn guardrail, fiber
+  occupancy word, and raw 282-witness count.
+- **LRC use:** HYP-3486 executes the HYP-3482 graph target.  After deleting
+  the hard seam, the q=`14V` witnesses split into `242` endpoint-rank-2
+  gate-routed cells and `40` free-hole cells.  The legal horizontal+mirror
+  graph has `79` components: `64` ordinary rank-2 components, one pure
+  `12`-cell bypass component, and `14` free-hole packets.
+- **Preserves:** u-index, branch sheet, mirror mate, endpoint rank,
+  component exit, bypass purity, free-hole status, and the distinction between
+  legal mirror topology and vertical `n*2` address projection.
+- **Forgets / guardrail:** raw witness count, raw bypass count, or vertical
+  half-turn quotient forgets class.  Vertical gluing mixes free-hole and
+  ordinary cells and never carries the bypass, so it must remain a sidecar.
+- **Pairwise observable:** terminal discharge retention, rank-2 escape
+  payload, legal mirror topology, bypass purity, free-hole payload, and
+  quotient safety.
+- **Switch/gauge:** orient toward the carrier with higher retained terminal
+  random031 proof payload.
+- **Fingerprint:** `7` vertices, score histogram
+  `{12:1,65:1,71:1,75:1,82:1,88:1,96:1}`, no directed `3`-cycles, and path
+  `rank2_seam_complement_discharge -> legal_mirror_run_graph -> pure_twelve_cell_bypass_component -> free_hole_mirror_packets -> vertical_halfturn_guardrail -> fiber_occupancy_word -> raw_282_witness_count`.
+- **Next hook:** formalize the rank-2 route lemma, mirror free-hole lemma, and
+  pure bypass discharge lemma; then repeat the fiber graph on the other
+  HYP-3477 hard mirror orbits and splice with HYP-3490's private-label
+  firewall explanation.
+- **Pointers:** HYP-3486, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481,
+  HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, THM-523, LTI-446,
+  LTT-346, T1446, OPEN-Q-108.
 
 ## LTT-350: Private-Label Firewall Tournament
 

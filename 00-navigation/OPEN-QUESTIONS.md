@@ -25,6 +25,19 @@ component reaches escape before a forbidden seam crossing is needed.  -> HYP-348
 HYP-3483, HYP-3482, HYP-3481, HYP-3477, HYP-3460, HYP-3455, HYP-3451,
 HYP-3437, HYP-3428, HYP-3422, HYP-3140, HYP-3034, HYP-3023, LTI-445,
 LTT-345, T1445.
+**OPEN-Q-108 HYP-3486 random031 fiber-graph addendum:**
+HYP-3486 sharpens the seam-complement proof target.  It is not necessary, and
+not exact, to force all `282` q=`14V` witnesses through survivor gates.  After
+the max-delta seam is deleted, `242` cells route through endpoint-rank-`2`
+gates and the remaining `40` cells are mirror-closed free-hole witnesses in
+`14` packets.  The lower-delta bypass is one pure `12`-cell mirror component
+on hard components `(43,54)` with owners `(23,93,113)`.  Open proof task:
+prove the rank-2 route lemma, the mirror free-hole lemma, and the pure bypass
+discharge lemma, then repeat the fiber-graph audit on the other HYP-3477 hard
+mirror orbits.  Guardrail: vertical half-turn gluing is not class-preserving,
+so `n*2` must be carried as an address sidecar, not a topology quotient. ->
+HYP-3486, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3480, HYP-3479, HYP-3477,
+HYP-3460, HYP-3455, LTI-446, LTT-346, OPEN-Q-108.
 
 **OPEN-Q-108 HYP-3483 random031 recursion addendum:**
 HYP-3483 answers the `n+2` versus `n*2` prompt by refusing the false choice.

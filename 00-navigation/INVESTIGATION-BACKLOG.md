@@ -12,6 +12,21 @@ relocation, HYP-3437/HYP-3451 Menger/Green/current cut tests, and HYP-3140
 sheet-count moments. -> HYP-3485, HYP-3484, HYP-3483, HYP-3482, HYP-3481, HYP-3477,
 HYP-3460, HYP-3455, HYP-3451, HYP-3437, HYP-3428, HYP-3422, HYP-3140,
 HYP-3034, HYP-3023, LTI-445, LTT-345, T1445, OPEN-Q-108.
+**HYP-3486 random031 seam-complement fiber graph.**  HYP-3486 executes the
+HYP-3482 graph target in the two-adic cylinder coordinate `u=2t mod 1`.
+Exact answer: q=`2422`, base `1211`, `282` witness cells on `258` occupied
+fibers.  After deleting the max-delta seam, `242` cells route through exactly
+one endpoint-rank-`2` seam-complement gate and `40` cells are already
+free-hole witnesses.  The legal horizontal+mirror graph has `79` components:
+`64` ordinary rank-2 components, one pure `12`-cell bypass component on
+components `(43,54)` with owners `(23,93,113)`, and `14` mirror-closed
+free-hole packets.  Guardrail: mirror is class-preserving, but vertical
+half-turn gluing mixes free-hole and ordinary cells, so `n*2` is an address
+projection rather than a legal sheet quotient.  Next proof target: formalize
+the rank-2 routing/free-hole/pure-bypass trichotomy and run the same graph on
+the other HYP-3477 hard mirror orbits. -> HYP-3486, HYP-3490, HYP-3485, HYP-3484, HYP-3483, HYP-3482,
+HYP-3481, HYP-3480, HYP-3479, HYP-3477, HYP-3460, HYP-3455, LTI-446,
+LTT-346, OPEN-Q-108.
 
 **HYP-3483 random031 recursion-flow comparator.**  HYP-3481 makes
 `random_covering_031` a mirror-punctured annulus with a bypassed saddle seam;

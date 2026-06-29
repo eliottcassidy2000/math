@@ -28,6 +28,24 @@ Next executable hook: build the seam-complement graph or relative H1 complex,
 delete seam gates `(43,54)`, mark low-rank escapes as boundary, and prove
 every q=`14V` phase-flow component reaches escape before needing the forbidden
 seam.
+## codex-2026-06-29 -- HYP-3486 random031 seam-complement fiber graph
+
+Built the exact seam-complement graph requested after HYP-3482/HYP-3483:
+`04-computation/lrc14_random031_seam_complement_fiber_graph_codex_20260629.py`
+with stored output
+`05-knowledge/results/lrc14_random031_seam_complement_fiber_graph_codex_20260629.out`,
+plus HYP-3486/T1446/LTI-446/LTT-346 and reflection
+`07-reflections/lrc14-random031-seam-complement-fiber-graph-codex-20260629.md`.
+
+Exact finding: in the two-adic cylinder coordinate `u=2t mod 1`, the `282`
+q=`14V` witnesses occupy `258` of `1211` base fibers.  After deleting the
+max-delta hard seam, `242` cells hit exactly one endpoint-rank-`2`
+seam-complement gate and `40` cells are free-hole witnesses.  The legal
+horizontal+mirror graph has `79` components: `64` ordinary rank-2 components,
+one pure `12`-cell bypass component on hard components `(43,54)` with owners
+`(23,93,113)`, and `14` mirror-closed free-hole packets.  Mirror is a legal
+class-preserving move; vertical half-turn gluing is only an `n*2` address
+sidecar because it mixes free-hole and ordinary cells.
 
 ## codex-2026-06-29 -- HYP-3483 random031 recursion-flow comparator
 

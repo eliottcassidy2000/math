@@ -13,6 +13,15 @@ of 2026-05-30.
 
 Useful synthetic maps added later:
 
+- `07-reflections/lrc14-random031-seam-complement-fiber-graph-codex-20260629.md`:
+  HYP-3486/T1446 executes the HYP-3482 seam-complement graph target in the
+  two-adic cylinder coordinate `u=2t mod 1`.  The useful signal is the
+  trichotomy after hard-seam deletion: `242` witnesses route through
+  endpoint-rank-2 gates, `40` witnesses are mirror-closed free-hole cells, and
+  the lower-delta bypass is one pure `12`-cell component on hard components
+  `(43,54)` with owners `(23,93,113)`.  Mirror is class-preserving; vertical
+  half-turn gluing is only an address sidecar because it mixes free-hole and
+  ordinary cells.
 - `07-reflections/lrc14-random031-topology-atlas-codex-20260629.md`:
   HYP-3481/T1441 reframes the hard-control row `random_covering_031` as a
   mirror-punctured annulus plus bypassed saddle seam.  The useful signal is
