@@ -1,3 +1,23 @@
+## mac-mini-2026-06-29-S7 -- niche reframe: the LRC cap is a measure-valued CLAIM A (deletion-contraction, factor 2, teeth=cycles)
+
+Prompt: look for even more creative reframes (even niche/small topics); explore for ideas as you improve proofs.
+
+Found THM-016 (the tournament x=-1 alternating-sum identity) is the even-index twin of OCF (H=I(Omega,2),
+x=2). This sharpened a niche reframe (HYP-3537, verified n=6,8,10,14): the LRC cap obeys a measure-valued
+CLAIM A:
+   cap(S\{s}) - cap(S) = meas(lonely(S\{s}) cap D_s) = 2 * sum_teeth mu_LRC(s,k),
+the EXACT analog of Claim A H(T)-H(T-v)=2 sum_C mu(C) (THM-070): the s teeth of D_s = the "odd cycles
+through s", the factor 2 = the complement Z_2 (lonely cap D_s is sigma-symmetric). Chain rule
+cap(S)=1 - sum(conditional dangers) = the measure-valued OCF; floor <=> sum(conditional dangers) < 1.
+BUT the proof mechanisms diverge along the two-index split (THM-582): tournament (x=2) closes by PARITY
+(Redei: odd + even stays odd); LRC (x=-1) is a measure with no parity, closing by the conditional
+union bound. So the LRC cap is "Claim A without the parity" -- the even-category twin. This CONFIRMS the
+two-index picture and connects the LRC directly to the project's OCF/Redei core.
+
+Potential route: order the peel odd-then-even (matching descent THM-580) and bound the per-tooth
+conditional dangers (circular-arc/Diophantine) to get sum<1 -- a sibling of the descent route.
+Files: HYP-3537, lrc_cap_deletion_contraction_macmini_20260629.py.
+
 ## mac-mini-2026-06-29-S6 -- PALINDROMIC Ham-path ODD INDEX (THM-582); the two-index synthesis (Redei=odd, lonely=even, half-tiling=quotient)
 
 Prompt: explore palindromic Hamiltonian paths and their relation to the half-tiling model; synthesize/investigate/test toward finishing proofs; think abstractly and freely in surmising.
